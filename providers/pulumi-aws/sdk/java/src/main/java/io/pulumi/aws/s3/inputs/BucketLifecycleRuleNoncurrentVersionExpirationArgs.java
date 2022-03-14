@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.s3.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
@@ -19,18 +19,18 @@ public final class BucketLifecycleRuleNoncurrentVersionExpirationArgs extends io
      * 
      */
     @InputImport(name="days")
-      private final @Nullable Input<Integer> days;
+      private final @Nullable Output<Integer> days;
 
-    public Input<Integer> getDays() {
-        return this.days == null ? Input.empty() : this.days;
+    public Output<Integer> getDays() {
+        return this.days == null ? Output.empty() : this.days;
     }
 
-    public BucketLifecycleRuleNoncurrentVersionExpirationArgs(@Nullable Input<Integer> days) {
+    public BucketLifecycleRuleNoncurrentVersionExpirationArgs(@Nullable Output<Integer> days) {
         this.days = days;
     }
 
     private BucketLifecycleRuleNoncurrentVersionExpirationArgs() {
-        this.days = Input.empty();
+        this.days = Output.empty();
     }
 
     public static Builder builder() {
@@ -42,7 +42,7 @@ public final class BucketLifecycleRuleNoncurrentVersionExpirationArgs extends io
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> days;
+        private @Nullable Output<Integer> days;
 
         public Builder() {
     	      // Empty
@@ -53,13 +53,13 @@ public final class BucketLifecycleRuleNoncurrentVersionExpirationArgs extends io
     	      this.days = defaults.days;
         }
 
-        public Builder days(@Nullable Input<Integer> days) {
+        public Builder days(@Nullable Output<Integer> days) {
             this.days = days;
             return this;
         }
 
         public Builder days(@Nullable Integer days) {
-            this.days = Input.ofNullable(days);
+            this.days = Output.ofNullable(days);
             return this;
         }
         public BucketLifecycleRuleNoncurrentVersionExpirationArgs build() {

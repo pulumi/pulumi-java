@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.healthcare.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class Hl7StoreNotificationConfigGetArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="pubsubTopic", required=true)
-      private final Input<String> pubsubTopic;
+      private final Output<String> pubsubTopic;
 
-    public Input<String> getPubsubTopic() {
+    public Output<String> getPubsubTopic() {
         return this.pubsubTopic;
     }
 
-    public Hl7StoreNotificationConfigGetArgs(Input<String> pubsubTopic) {
+    public Hl7StoreNotificationConfigGetArgs(Output<String> pubsubTopic) {
         this.pubsubTopic = Objects.requireNonNull(pubsubTopic, "expected parameter 'pubsubTopic' to be non-null");
     }
 
     private Hl7StoreNotificationConfigGetArgs() {
-        this.pubsubTopic = Input.empty();
+        this.pubsubTopic = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class Hl7StoreNotificationConfigGetArgs extends io.pulumi.resources
     }
 
     public static final class Builder {
-        private Input<String> pubsubTopic;
+        private Output<String> pubsubTopic;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class Hl7StoreNotificationConfigGetArgs extends io.pulumi.resources
     	      this.pubsubTopic = defaults.pubsubTopic;
         }
 
-        public Builder pubsubTopic(Input<String> pubsubTopic) {
+        public Builder pubsubTopic(Output<String> pubsubTopic) {
             this.pubsubTopic = Objects.requireNonNull(pubsubTopic);
             return this;
         }
 
         public Builder pubsubTopic(String pubsubTopic) {
-            this.pubsubTopic = Input.of(Objects.requireNonNull(pubsubTopic));
+            this.pubsubTopic = Output.of(Objects.requireNonNull(pubsubTopic));
             return this;
         }
         public Hl7StoreNotificationConfigGetArgs build() {

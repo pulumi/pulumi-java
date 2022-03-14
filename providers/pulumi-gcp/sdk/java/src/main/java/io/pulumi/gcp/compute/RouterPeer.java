@@ -3,7 +3,6 @@
 
 package io.pulumi.gcp.compute;
 
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -366,14 +365,14 @@ public class RouterPeer extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public RouterPeer(String name, RouterPeerArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:compute/routerPeer:RouterPeer", name, args == null ? RouterPeerArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("gcp:compute/routerPeer:RouterPeer", name, args == null ? RouterPeerArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private RouterPeer(String name, Input<String> id, @Nullable RouterPeerState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private RouterPeer(String name, Output<String> id, @Nullable RouterPeerState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("gcp:compute/routerPeer:RouterPeer", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -389,7 +388,7 @@ public class RouterPeer extends io.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static RouterPeer get(String name, Input<String> id, @Nullable RouterPeerState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static RouterPeer get(String name, Output<String> id, @Nullable RouterPeerState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new RouterPeer(name, id, state, options);
     }
 }

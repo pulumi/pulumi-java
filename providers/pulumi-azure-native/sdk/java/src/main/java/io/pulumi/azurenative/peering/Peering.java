@@ -9,7 +9,6 @@ import io.pulumi.azurenative.peering.outputs.PeeringPropertiesDirectResponse;
 import io.pulumi.azurenative.peering.outputs.PeeringPropertiesExchangeResponse;
 import io.pulumi.azurenative.peering.outputs.PeeringSkuResponse;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -214,24 +213,24 @@ public class Peering extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Peering(String name, PeeringArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:peering:Peering", name, args == null ? PeeringArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("azure-native:peering:Peering", name, args == null ? PeeringArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private Peering(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private Peering(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:peering:Peering", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:peering/v20190801preview:Peering").build()),
-                Input.of(Alias.builder().setType("azure-native:peering/v20190901preview:Peering").build()),
-                Input.of(Alias.builder().setType("azure-native:peering/v20200101preview:Peering").build()),
-                Input.of(Alias.builder().setType("azure-native:peering/v20200401:Peering").build()),
-                Input.of(Alias.builder().setType("azure-native:peering/v20201001:Peering").build()),
-                Input.of(Alias.builder().setType("azure-native:peering/v20210101:Peering").build()),
-                Input.of(Alias.builder().setType("azure-native:peering/v20210601:Peering").build())
+                Output.of(Alias.builder().setType("azure-native:peering/v20190801preview:Peering").build()),
+                Output.of(Alias.builder().setType("azure-native:peering/v20190901preview:Peering").build()),
+                Output.of(Alias.builder().setType("azure-native:peering/v20200101preview:Peering").build()),
+                Output.of(Alias.builder().setType("azure-native:peering/v20200401:Peering").build()),
+                Output.of(Alias.builder().setType("azure-native:peering/v20201001:Peering").build()),
+                Output.of(Alias.builder().setType("azure-native:peering/v20210101:Peering").build()),
+                Output.of(Alias.builder().setType("azure-native:peering/v20210601:Peering").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -245,7 +244,7 @@ public class Peering extends io.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static Peering get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static Peering get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Peering(name, id, options);
     }
 }

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.storage;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,9 +19,9 @@ public final class BucketAccessControlArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="bucket", required=true)
-      private final Input<String> bucket;
+      private final Output<String> bucket;
 
-    public Input<String> getBucket() {
+    public Output<String> getBucket() {
         return this.bucket;
     }
 
@@ -44,9 +44,9 @@ public final class BucketAccessControlArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="entity", required=true)
-      private final Input<String> entity;
+      private final Output<String> entity;
 
-    public Input<String> getEntity() {
+    public Output<String> getEntity() {
         return this.entity;
     }
 
@@ -56,25 +56,25 @@ public final class BucketAccessControlArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="role")
-      private final @Nullable Input<String> role;
+      private final @Nullable Output<String> role;
 
-    public Input<String> getRole() {
-        return this.role == null ? Input.empty() : this.role;
+    public Output<String> getRole() {
+        return this.role == null ? Output.empty() : this.role;
     }
 
     public BucketAccessControlArgs(
-        Input<String> bucket,
-        Input<String> entity,
-        @Nullable Input<String> role) {
+        Output<String> bucket,
+        Output<String> entity,
+        @Nullable Output<String> role) {
         this.bucket = Objects.requireNonNull(bucket, "expected parameter 'bucket' to be non-null");
         this.entity = Objects.requireNonNull(entity, "expected parameter 'entity' to be non-null");
         this.role = role;
     }
 
     private BucketAccessControlArgs() {
-        this.bucket = Input.empty();
-        this.entity = Input.empty();
-        this.role = Input.empty();
+        this.bucket = Output.empty();
+        this.entity = Output.empty();
+        this.role = Output.empty();
     }
 
     public static Builder builder() {
@@ -86,9 +86,9 @@ public final class BucketAccessControlArgs extends io.pulumi.resources.ResourceA
     }
 
     public static final class Builder {
-        private Input<String> bucket;
-        private Input<String> entity;
-        private @Nullable Input<String> role;
+        private Output<String> bucket;
+        private Output<String> entity;
+        private @Nullable Output<String> role;
 
         public Builder() {
     	      // Empty
@@ -101,33 +101,33 @@ public final class BucketAccessControlArgs extends io.pulumi.resources.ResourceA
     	      this.role = defaults.role;
         }
 
-        public Builder bucket(Input<String> bucket) {
+        public Builder bucket(Output<String> bucket) {
             this.bucket = Objects.requireNonNull(bucket);
             return this;
         }
 
         public Builder bucket(String bucket) {
-            this.bucket = Input.of(Objects.requireNonNull(bucket));
+            this.bucket = Output.of(Objects.requireNonNull(bucket));
             return this;
         }
 
-        public Builder entity(Input<String> entity) {
+        public Builder entity(Output<String> entity) {
             this.entity = Objects.requireNonNull(entity);
             return this;
         }
 
         public Builder entity(String entity) {
-            this.entity = Input.of(Objects.requireNonNull(entity));
+            this.entity = Output.of(Objects.requireNonNull(entity));
             return this;
         }
 
-        public Builder role(@Nullable Input<String> role) {
+        public Builder role(@Nullable Output<String> role) {
             this.role = role;
             return this;
         }
 
         public Builder role(@Nullable String role) {
-            this.role = Input.ofNullable(role);
+            this.role = Output.ofNullable(role);
             return this;
         }
         public BucketAccessControlArgs build() {

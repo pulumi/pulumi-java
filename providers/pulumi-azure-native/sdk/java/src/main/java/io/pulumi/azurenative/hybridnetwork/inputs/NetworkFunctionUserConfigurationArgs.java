@@ -5,7 +5,7 @@ package io.pulumi.azurenative.hybridnetwork.inputs;
 
 import io.pulumi.azurenative.hybridnetwork.inputs.NetworkFunctionUserConfigurationOsProfileArgs;
 import io.pulumi.azurenative.hybridnetwork.inputs.NetworkInterfaceArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
@@ -27,10 +27,10 @@ public final class NetworkFunctionUserConfigurationArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="networkInterfaces")
-      private final @Nullable Input<List<NetworkInterfaceArgs>> networkInterfaces;
+      private final @Nullable Output<List<NetworkInterfaceArgs>> networkInterfaces;
 
-    public Input<List<NetworkInterfaceArgs>> getNetworkInterfaces() {
-        return this.networkInterfaces == null ? Input.empty() : this.networkInterfaces;
+    public Output<List<NetworkInterfaceArgs>> getNetworkInterfaces() {
+        return this.networkInterfaces == null ? Output.empty() : this.networkInterfaces;
     }
 
     /**
@@ -38,10 +38,10 @@ public final class NetworkFunctionUserConfigurationArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="osProfile")
-      private final @Nullable Input<NetworkFunctionUserConfigurationOsProfileArgs> osProfile;
+      private final @Nullable Output<NetworkFunctionUserConfigurationOsProfileArgs> osProfile;
 
-    public Input<NetworkFunctionUserConfigurationOsProfileArgs> getOsProfile() {
-        return this.osProfile == null ? Input.empty() : this.osProfile;
+    public Output<NetworkFunctionUserConfigurationOsProfileArgs> getOsProfile() {
+        return this.osProfile == null ? Output.empty() : this.osProfile;
     }
 
     /**
@@ -49,10 +49,10 @@ public final class NetworkFunctionUserConfigurationArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="roleName")
-      private final @Nullable Input<String> roleName;
+      private final @Nullable Output<String> roleName;
 
-    public Input<String> getRoleName() {
-        return this.roleName == null ? Input.empty() : this.roleName;
+    public Output<String> getRoleName() {
+        return this.roleName == null ? Output.empty() : this.roleName;
     }
 
     /**
@@ -60,17 +60,17 @@ public final class NetworkFunctionUserConfigurationArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="userDataParameters")
-      private final @Nullable Input<Object> userDataParameters;
+      private final @Nullable Output<Object> userDataParameters;
 
-    public Input<Object> getUserDataParameters() {
-        return this.userDataParameters == null ? Input.empty() : this.userDataParameters;
+    public Output<Object> getUserDataParameters() {
+        return this.userDataParameters == null ? Output.empty() : this.userDataParameters;
     }
 
     public NetworkFunctionUserConfigurationArgs(
-        @Nullable Input<List<NetworkInterfaceArgs>> networkInterfaces,
-        @Nullable Input<NetworkFunctionUserConfigurationOsProfileArgs> osProfile,
-        @Nullable Input<String> roleName,
-        @Nullable Input<Object> userDataParameters) {
+        @Nullable Output<List<NetworkInterfaceArgs>> networkInterfaces,
+        @Nullable Output<NetworkFunctionUserConfigurationOsProfileArgs> osProfile,
+        @Nullable Output<String> roleName,
+        @Nullable Output<Object> userDataParameters) {
         this.networkInterfaces = networkInterfaces;
         this.osProfile = osProfile;
         this.roleName = roleName;
@@ -78,10 +78,10 @@ public final class NetworkFunctionUserConfigurationArgs extends io.pulumi.resour
     }
 
     private NetworkFunctionUserConfigurationArgs() {
-        this.networkInterfaces = Input.empty();
-        this.osProfile = Input.empty();
-        this.roleName = Input.empty();
-        this.userDataParameters = Input.empty();
+        this.networkInterfaces = Output.empty();
+        this.osProfile = Output.empty();
+        this.roleName = Output.empty();
+        this.userDataParameters = Output.empty();
     }
 
     public static Builder builder() {
@@ -93,10 +93,10 @@ public final class NetworkFunctionUserConfigurationArgs extends io.pulumi.resour
     }
 
     public static final class Builder {
-        private @Nullable Input<List<NetworkInterfaceArgs>> networkInterfaces;
-        private @Nullable Input<NetworkFunctionUserConfigurationOsProfileArgs> osProfile;
-        private @Nullable Input<String> roleName;
-        private @Nullable Input<Object> userDataParameters;
+        private @Nullable Output<List<NetworkInterfaceArgs>> networkInterfaces;
+        private @Nullable Output<NetworkFunctionUserConfigurationOsProfileArgs> osProfile;
+        private @Nullable Output<String> roleName;
+        private @Nullable Output<Object> userDataParameters;
 
         public Builder() {
     	      // Empty
@@ -110,43 +110,43 @@ public final class NetworkFunctionUserConfigurationArgs extends io.pulumi.resour
     	      this.userDataParameters = defaults.userDataParameters;
         }
 
-        public Builder networkInterfaces(@Nullable Input<List<NetworkInterfaceArgs>> networkInterfaces) {
+        public Builder networkInterfaces(@Nullable Output<List<NetworkInterfaceArgs>> networkInterfaces) {
             this.networkInterfaces = networkInterfaces;
             return this;
         }
 
         public Builder networkInterfaces(@Nullable List<NetworkInterfaceArgs> networkInterfaces) {
-            this.networkInterfaces = Input.ofNullable(networkInterfaces);
+            this.networkInterfaces = Output.ofNullable(networkInterfaces);
             return this;
         }
 
-        public Builder osProfile(@Nullable Input<NetworkFunctionUserConfigurationOsProfileArgs> osProfile) {
+        public Builder osProfile(@Nullable Output<NetworkFunctionUserConfigurationOsProfileArgs> osProfile) {
             this.osProfile = osProfile;
             return this;
         }
 
         public Builder osProfile(@Nullable NetworkFunctionUserConfigurationOsProfileArgs osProfile) {
-            this.osProfile = Input.ofNullable(osProfile);
+            this.osProfile = Output.ofNullable(osProfile);
             return this;
         }
 
-        public Builder roleName(@Nullable Input<String> roleName) {
+        public Builder roleName(@Nullable Output<String> roleName) {
             this.roleName = roleName;
             return this;
         }
 
         public Builder roleName(@Nullable String roleName) {
-            this.roleName = Input.ofNullable(roleName);
+            this.roleName = Output.ofNullable(roleName);
             return this;
         }
 
-        public Builder userDataParameters(@Nullable Input<Object> userDataParameters) {
+        public Builder userDataParameters(@Nullable Output<Object> userDataParameters) {
             this.userDataParameters = userDataParameters;
             return this;
         }
 
         public Builder userDataParameters(@Nullable Object userDataParameters) {
-            this.userDataParameters = Input.ofNullable(userDataParameters);
+            this.userDataParameters = Output.ofNullable(userDataParameters);
             return this;
         }
         public NetworkFunctionUserConfigurationArgs build() {

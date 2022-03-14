@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.elasticsearch.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
@@ -18,18 +18,18 @@ public final class DomainSnapshotOptionsArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="automatedSnapshotStartHour", required=true)
-      private final Input<Integer> automatedSnapshotStartHour;
+      private final Output<Integer> automatedSnapshotStartHour;
 
-    public Input<Integer> getAutomatedSnapshotStartHour() {
+    public Output<Integer> getAutomatedSnapshotStartHour() {
         return this.automatedSnapshotStartHour;
     }
 
-    public DomainSnapshotOptionsArgs(Input<Integer> automatedSnapshotStartHour) {
+    public DomainSnapshotOptionsArgs(Output<Integer> automatedSnapshotStartHour) {
         this.automatedSnapshotStartHour = Objects.requireNonNull(automatedSnapshotStartHour, "expected parameter 'automatedSnapshotStartHour' to be non-null");
     }
 
     private DomainSnapshotOptionsArgs() {
-        this.automatedSnapshotStartHour = Input.empty();
+        this.automatedSnapshotStartHour = Output.empty();
     }
 
     public static Builder builder() {
@@ -41,7 +41,7 @@ public final class DomainSnapshotOptionsArgs extends io.pulumi.resources.Resourc
     }
 
     public static final class Builder {
-        private Input<Integer> automatedSnapshotStartHour;
+        private Output<Integer> automatedSnapshotStartHour;
 
         public Builder() {
     	      // Empty
@@ -52,13 +52,13 @@ public final class DomainSnapshotOptionsArgs extends io.pulumi.resources.Resourc
     	      this.automatedSnapshotStartHour = defaults.automatedSnapshotStartHour;
         }
 
-        public Builder automatedSnapshotStartHour(Input<Integer> automatedSnapshotStartHour) {
+        public Builder automatedSnapshotStartHour(Output<Integer> automatedSnapshotStartHour) {
             this.automatedSnapshotStartHour = Objects.requireNonNull(automatedSnapshotStartHour);
             return this;
         }
 
         public Builder automatedSnapshotStartHour(Integer automatedSnapshotStartHour) {
-            this.automatedSnapshotStartHour = Input.of(Objects.requireNonNull(automatedSnapshotStartHour));
+            this.automatedSnapshotStartHour = Output.of(Objects.requireNonNull(automatedSnapshotStartHour));
             return this;
         }
         public DomainSnapshotOptionsArgs build() {

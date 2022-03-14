@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.servicefabricmesh.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class AzureInternalMonitoringPipelineSinkDescriptionArgs extends io
      * 
      */
     @InputImport(name="accountName")
-      private final @Nullable Input<String> accountName;
+      private final @Nullable Output<String> accountName;
 
-    public Input<String> getAccountName() {
-        return this.accountName == null ? Input.empty() : this.accountName;
+    public Output<String> getAccountName() {
+        return this.accountName == null ? Output.empty() : this.accountName;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class AzureInternalMonitoringPipelineSinkDescriptionArgs extends io
      * 
      */
     @InputImport(name="autoKeyConfigUrl")
-      private final @Nullable Input<String> autoKeyConfigUrl;
+      private final @Nullable Output<String> autoKeyConfigUrl;
 
-    public Input<String> getAutoKeyConfigUrl() {
-        return this.autoKeyConfigUrl == null ? Input.empty() : this.autoKeyConfigUrl;
+    public Output<String> getAutoKeyConfigUrl() {
+        return this.autoKeyConfigUrl == null ? Output.empty() : this.autoKeyConfigUrl;
     }
 
     /**
@@ -46,10 +46,10 @@ public final class AzureInternalMonitoringPipelineSinkDescriptionArgs extends io
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -57,10 +57,10 @@ public final class AzureInternalMonitoringPipelineSinkDescriptionArgs extends io
      * 
      */
     @InputImport(name="fluentdConfigUrl")
-      private final @Nullable Input<Object> fluentdConfigUrl;
+      private final @Nullable Output<Object> fluentdConfigUrl;
 
-    public Input<Object> getFluentdConfigUrl() {
-        return this.fluentdConfigUrl == null ? Input.empty() : this.fluentdConfigUrl;
+    public Output<Object> getFluentdConfigUrl() {
+        return this.fluentdConfigUrl == null ? Output.empty() : this.fluentdConfigUrl;
     }
 
     /**
@@ -69,9 +69,9 @@ public final class AzureInternalMonitoringPipelineSinkDescriptionArgs extends io
      * 
      */
     @InputImport(name="kind", required=true)
-      private final Input<String> kind;
+      private final Output<String> kind;
 
-    public Input<String> getKind() {
+    public Output<String> getKind() {
         return this.kind;
     }
 
@@ -80,10 +80,10 @@ public final class AzureInternalMonitoringPipelineSinkDescriptionArgs extends io
      * 
      */
     @InputImport(name="maConfigUrl")
-      private final @Nullable Input<String> maConfigUrl;
+      private final @Nullable Output<String> maConfigUrl;
 
-    public Input<String> getMaConfigUrl() {
-        return this.maConfigUrl == null ? Input.empty() : this.maConfigUrl;
+    public Output<String> getMaConfigUrl() {
+        return this.maConfigUrl == null ? Output.empty() : this.maConfigUrl;
     }
 
     /**
@@ -91,10 +91,10 @@ public final class AzureInternalMonitoringPipelineSinkDescriptionArgs extends io
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -102,21 +102,21 @@ public final class AzureInternalMonitoringPipelineSinkDescriptionArgs extends io
      * 
      */
     @InputImport(name="namespace")
-      private final @Nullable Input<String> namespace;
+      private final @Nullable Output<String> namespace;
 
-    public Input<String> getNamespace() {
-        return this.namespace == null ? Input.empty() : this.namespace;
+    public Output<String> getNamespace() {
+        return this.namespace == null ? Output.empty() : this.namespace;
     }
 
     public AzureInternalMonitoringPipelineSinkDescriptionArgs(
-        @Nullable Input<String> accountName,
-        @Nullable Input<String> autoKeyConfigUrl,
-        @Nullable Input<String> description,
-        @Nullable Input<Object> fluentdConfigUrl,
-        Input<String> kind,
-        @Nullable Input<String> maConfigUrl,
-        @Nullable Input<String> name,
-        @Nullable Input<String> namespace) {
+        @Nullable Output<String> accountName,
+        @Nullable Output<String> autoKeyConfigUrl,
+        @Nullable Output<String> description,
+        @Nullable Output<Object> fluentdConfigUrl,
+        Output<String> kind,
+        @Nullable Output<String> maConfigUrl,
+        @Nullable Output<String> name,
+        @Nullable Output<String> namespace) {
         this.accountName = accountName;
         this.autoKeyConfigUrl = autoKeyConfigUrl;
         this.description = description;
@@ -128,14 +128,14 @@ public final class AzureInternalMonitoringPipelineSinkDescriptionArgs extends io
     }
 
     private AzureInternalMonitoringPipelineSinkDescriptionArgs() {
-        this.accountName = Input.empty();
-        this.autoKeyConfigUrl = Input.empty();
-        this.description = Input.empty();
-        this.fluentdConfigUrl = Input.empty();
-        this.kind = Input.empty();
-        this.maConfigUrl = Input.empty();
-        this.name = Input.empty();
-        this.namespace = Input.empty();
+        this.accountName = Output.empty();
+        this.autoKeyConfigUrl = Output.empty();
+        this.description = Output.empty();
+        this.fluentdConfigUrl = Output.empty();
+        this.kind = Output.empty();
+        this.maConfigUrl = Output.empty();
+        this.name = Output.empty();
+        this.namespace = Output.empty();
     }
 
     public static Builder builder() {
@@ -147,14 +147,14 @@ public final class AzureInternalMonitoringPipelineSinkDescriptionArgs extends io
     }
 
     public static final class Builder {
-        private @Nullable Input<String> accountName;
-        private @Nullable Input<String> autoKeyConfigUrl;
-        private @Nullable Input<String> description;
-        private @Nullable Input<Object> fluentdConfigUrl;
-        private Input<String> kind;
-        private @Nullable Input<String> maConfigUrl;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> namespace;
+        private @Nullable Output<String> accountName;
+        private @Nullable Output<String> autoKeyConfigUrl;
+        private @Nullable Output<String> description;
+        private @Nullable Output<Object> fluentdConfigUrl;
+        private Output<String> kind;
+        private @Nullable Output<String> maConfigUrl;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> namespace;
 
         public Builder() {
     	      // Empty
@@ -172,83 +172,83 @@ public final class AzureInternalMonitoringPipelineSinkDescriptionArgs extends io
     	      this.namespace = defaults.namespace;
         }
 
-        public Builder accountName(@Nullable Input<String> accountName) {
+        public Builder accountName(@Nullable Output<String> accountName) {
             this.accountName = accountName;
             return this;
         }
 
         public Builder accountName(@Nullable String accountName) {
-            this.accountName = Input.ofNullable(accountName);
+            this.accountName = Output.ofNullable(accountName);
             return this;
         }
 
-        public Builder autoKeyConfigUrl(@Nullable Input<String> autoKeyConfigUrl) {
+        public Builder autoKeyConfigUrl(@Nullable Output<String> autoKeyConfigUrl) {
             this.autoKeyConfigUrl = autoKeyConfigUrl;
             return this;
         }
 
         public Builder autoKeyConfigUrl(@Nullable String autoKeyConfigUrl) {
-            this.autoKeyConfigUrl = Input.ofNullable(autoKeyConfigUrl);
+            this.autoKeyConfigUrl = Output.ofNullable(autoKeyConfigUrl);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder fluentdConfigUrl(@Nullable Input<Object> fluentdConfigUrl) {
+        public Builder fluentdConfigUrl(@Nullable Output<Object> fluentdConfigUrl) {
             this.fluentdConfigUrl = fluentdConfigUrl;
             return this;
         }
 
         public Builder fluentdConfigUrl(@Nullable Object fluentdConfigUrl) {
-            this.fluentdConfigUrl = Input.ofNullable(fluentdConfigUrl);
+            this.fluentdConfigUrl = Output.ofNullable(fluentdConfigUrl);
             return this;
         }
 
-        public Builder kind(Input<String> kind) {
+        public Builder kind(Output<String> kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
         public Builder kind(String kind) {
-            this.kind = Input.of(Objects.requireNonNull(kind));
+            this.kind = Output.of(Objects.requireNonNull(kind));
             return this;
         }
 
-        public Builder maConfigUrl(@Nullable Input<String> maConfigUrl) {
+        public Builder maConfigUrl(@Nullable Output<String> maConfigUrl) {
             this.maConfigUrl = maConfigUrl;
             return this;
         }
 
         public Builder maConfigUrl(@Nullable String maConfigUrl) {
-            this.maConfigUrl = Input.ofNullable(maConfigUrl);
+            this.maConfigUrl = Output.ofNullable(maConfigUrl);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder namespace(@Nullable Input<String> namespace) {
+        public Builder namespace(@Nullable Output<String> namespace) {
             this.namespace = namespace;
             return this;
         }
 
         public Builder namespace(@Nullable String namespace) {
-            this.namespace = Input.ofNullable(namespace);
+            this.namespace = Output.ofNullable(namespace);
             return this;
         }
         public AzureInternalMonitoringPipelineSinkDescriptionArgs build() {

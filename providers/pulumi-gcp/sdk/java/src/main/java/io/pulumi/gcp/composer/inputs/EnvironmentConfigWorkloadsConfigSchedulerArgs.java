@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.composer.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.Integer;
@@ -16,38 +16,38 @@ public final class EnvironmentConfigWorkloadsConfigSchedulerArgs extends io.pulu
     public static final EnvironmentConfigWorkloadsConfigSchedulerArgs Empty = new EnvironmentConfigWorkloadsConfigSchedulerArgs();
 
     @InputImport(name="count")
-      private final @Nullable Input<Integer> count;
+      private final @Nullable Output<Integer> count;
 
-    public Input<Integer> getCount() {
-        return this.count == null ? Input.empty() : this.count;
+    public Output<Integer> getCount() {
+        return this.count == null ? Output.empty() : this.count;
     }
 
     @InputImport(name="cpu")
-      private final @Nullable Input<Double> cpu;
+      private final @Nullable Output<Double> cpu;
 
-    public Input<Double> getCpu() {
-        return this.cpu == null ? Input.empty() : this.cpu;
+    public Output<Double> getCpu() {
+        return this.cpu == null ? Output.empty() : this.cpu;
     }
 
     @InputImport(name="memoryGb")
-      private final @Nullable Input<Double> memoryGb;
+      private final @Nullable Output<Double> memoryGb;
 
-    public Input<Double> getMemoryGb() {
-        return this.memoryGb == null ? Input.empty() : this.memoryGb;
+    public Output<Double> getMemoryGb() {
+        return this.memoryGb == null ? Output.empty() : this.memoryGb;
     }
 
     @InputImport(name="storageGb")
-      private final @Nullable Input<Double> storageGb;
+      private final @Nullable Output<Double> storageGb;
 
-    public Input<Double> getStorageGb() {
-        return this.storageGb == null ? Input.empty() : this.storageGb;
+    public Output<Double> getStorageGb() {
+        return this.storageGb == null ? Output.empty() : this.storageGb;
     }
 
     public EnvironmentConfigWorkloadsConfigSchedulerArgs(
-        @Nullable Input<Integer> count,
-        @Nullable Input<Double> cpu,
-        @Nullable Input<Double> memoryGb,
-        @Nullable Input<Double> storageGb) {
+        @Nullable Output<Integer> count,
+        @Nullable Output<Double> cpu,
+        @Nullable Output<Double> memoryGb,
+        @Nullable Output<Double> storageGb) {
         this.count = count;
         this.cpu = cpu;
         this.memoryGb = memoryGb;
@@ -55,10 +55,10 @@ public final class EnvironmentConfigWorkloadsConfigSchedulerArgs extends io.pulu
     }
 
     private EnvironmentConfigWorkloadsConfigSchedulerArgs() {
-        this.count = Input.empty();
-        this.cpu = Input.empty();
-        this.memoryGb = Input.empty();
-        this.storageGb = Input.empty();
+        this.count = Output.empty();
+        this.cpu = Output.empty();
+        this.memoryGb = Output.empty();
+        this.storageGb = Output.empty();
     }
 
     public static Builder builder() {
@@ -70,10 +70,10 @@ public final class EnvironmentConfigWorkloadsConfigSchedulerArgs extends io.pulu
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> count;
-        private @Nullable Input<Double> cpu;
-        private @Nullable Input<Double> memoryGb;
-        private @Nullable Input<Double> storageGb;
+        private @Nullable Output<Integer> count;
+        private @Nullable Output<Double> cpu;
+        private @Nullable Output<Double> memoryGb;
+        private @Nullable Output<Double> storageGb;
 
         public Builder() {
     	      // Empty
@@ -87,43 +87,43 @@ public final class EnvironmentConfigWorkloadsConfigSchedulerArgs extends io.pulu
     	      this.storageGb = defaults.storageGb;
         }
 
-        public Builder count(@Nullable Input<Integer> count) {
+        public Builder count(@Nullable Output<Integer> count) {
             this.count = count;
             return this;
         }
 
         public Builder count(@Nullable Integer count) {
-            this.count = Input.ofNullable(count);
+            this.count = Output.ofNullable(count);
             return this;
         }
 
-        public Builder cpu(@Nullable Input<Double> cpu) {
+        public Builder cpu(@Nullable Output<Double> cpu) {
             this.cpu = cpu;
             return this;
         }
 
         public Builder cpu(@Nullable Double cpu) {
-            this.cpu = Input.ofNullable(cpu);
+            this.cpu = Output.ofNullable(cpu);
             return this;
         }
 
-        public Builder memoryGb(@Nullable Input<Double> memoryGb) {
+        public Builder memoryGb(@Nullable Output<Double> memoryGb) {
             this.memoryGb = memoryGb;
             return this;
         }
 
         public Builder memoryGb(@Nullable Double memoryGb) {
-            this.memoryGb = Input.ofNullable(memoryGb);
+            this.memoryGb = Output.ofNullable(memoryGb);
             return this;
         }
 
-        public Builder storageGb(@Nullable Input<Double> storageGb) {
+        public Builder storageGb(@Nullable Output<Double> storageGb) {
             this.storageGb = storageGb;
             return this;
         }
 
         public Builder storageGb(@Nullable Double storageGb) {
-            this.storageGb = Input.ofNullable(storageGb);
+            this.storageGb = Output.ofNullable(storageGb);
             return this;
         }
         public EnvironmentConfigWorkloadsConfigSchedulerArgs build() {

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.apimanagement;
 
 import io.pulumi.azurenative.apimanagement.enums.ProductState;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -22,10 +22,10 @@ public final class ProductArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="approvalRequired")
-      private final @Nullable Input<Boolean> approvalRequired;
+      private final @Nullable Output<Boolean> approvalRequired;
 
-    public Input<Boolean> getApprovalRequired() {
-        return this.approvalRequired == null ? Input.empty() : this.approvalRequired;
+    public Output<Boolean> getApprovalRequired() {
+        return this.approvalRequired == null ? Output.empty() : this.approvalRequired;
     }
 
     /**
@@ -33,10 +33,10 @@ public final class ProductArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -44,9 +44,9 @@ public final class ProductArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName", required=true)
-      private final Input<String> displayName;
+      private final Output<String> displayName;
 
-    public Input<String> getDisplayName() {
+    public Output<String> getDisplayName() {
         return this.displayName;
     }
 
@@ -55,10 +55,10 @@ public final class ProductArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="productId")
-      private final @Nullable Input<String> productId;
+      private final @Nullable Output<String> productId;
 
-    public Input<String> getProductId() {
-        return this.productId == null ? Input.empty() : this.productId;
+    public Output<String> getProductId() {
+        return this.productId == null ? Output.empty() : this.productId;
     }
 
     /**
@@ -66,9 +66,9 @@ public final class ProductArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -77,9 +77,9 @@ public final class ProductArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serviceName", required=true)
-      private final Input<String> serviceName;
+      private final Output<String> serviceName;
 
-    public Input<String> getServiceName() {
+    public Output<String> getServiceName() {
         return this.serviceName;
     }
 
@@ -88,10 +88,10 @@ public final class ProductArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="state")
-      private final @Nullable Input<ProductState> state;
+      private final @Nullable Output<ProductState> state;
 
-    public Input<ProductState> getState() {
-        return this.state == null ? Input.empty() : this.state;
+    public Output<ProductState> getState() {
+        return this.state == null ? Output.empty() : this.state;
     }
 
     /**
@@ -99,10 +99,10 @@ public final class ProductArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="subscriptionRequired")
-      private final @Nullable Input<Boolean> subscriptionRequired;
+      private final @Nullable Output<Boolean> subscriptionRequired;
 
-    public Input<Boolean> getSubscriptionRequired() {
-        return this.subscriptionRequired == null ? Input.empty() : this.subscriptionRequired;
+    public Output<Boolean> getSubscriptionRequired() {
+        return this.subscriptionRequired == null ? Output.empty() : this.subscriptionRequired;
     }
 
     /**
@@ -110,10 +110,10 @@ public final class ProductArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="subscriptionsLimit")
-      private final @Nullable Input<Integer> subscriptionsLimit;
+      private final @Nullable Output<Integer> subscriptionsLimit;
 
-    public Input<Integer> getSubscriptionsLimit() {
-        return this.subscriptionsLimit == null ? Input.empty() : this.subscriptionsLimit;
+    public Output<Integer> getSubscriptionsLimit() {
+        return this.subscriptionsLimit == null ? Output.empty() : this.subscriptionsLimit;
     }
 
     /**
@@ -121,23 +121,23 @@ public final class ProductArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="terms")
-      private final @Nullable Input<String> terms;
+      private final @Nullable Output<String> terms;
 
-    public Input<String> getTerms() {
-        return this.terms == null ? Input.empty() : this.terms;
+    public Output<String> getTerms() {
+        return this.terms == null ? Output.empty() : this.terms;
     }
 
     public ProductArgs(
-        @Nullable Input<Boolean> approvalRequired,
-        @Nullable Input<String> description,
-        Input<String> displayName,
-        @Nullable Input<String> productId,
-        Input<String> resourceGroupName,
-        Input<String> serviceName,
-        @Nullable Input<ProductState> state,
-        @Nullable Input<Boolean> subscriptionRequired,
-        @Nullable Input<Integer> subscriptionsLimit,
-        @Nullable Input<String> terms) {
+        @Nullable Output<Boolean> approvalRequired,
+        @Nullable Output<String> description,
+        Output<String> displayName,
+        @Nullable Output<String> productId,
+        Output<String> resourceGroupName,
+        Output<String> serviceName,
+        @Nullable Output<ProductState> state,
+        @Nullable Output<Boolean> subscriptionRequired,
+        @Nullable Output<Integer> subscriptionsLimit,
+        @Nullable Output<String> terms) {
         this.approvalRequired = approvalRequired;
         this.description = description;
         this.displayName = Objects.requireNonNull(displayName, "expected parameter 'displayName' to be non-null");
@@ -151,16 +151,16 @@ public final class ProductArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ProductArgs() {
-        this.approvalRequired = Input.empty();
-        this.description = Input.empty();
-        this.displayName = Input.empty();
-        this.productId = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.serviceName = Input.empty();
-        this.state = Input.empty();
-        this.subscriptionRequired = Input.empty();
-        this.subscriptionsLimit = Input.empty();
-        this.terms = Input.empty();
+        this.approvalRequired = Output.empty();
+        this.description = Output.empty();
+        this.displayName = Output.empty();
+        this.productId = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.serviceName = Output.empty();
+        this.state = Output.empty();
+        this.subscriptionRequired = Output.empty();
+        this.subscriptionsLimit = Output.empty();
+        this.terms = Output.empty();
     }
 
     public static Builder builder() {
@@ -172,16 +172,16 @@ public final class ProductArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> approvalRequired;
-        private @Nullable Input<String> description;
-        private Input<String> displayName;
-        private @Nullable Input<String> productId;
-        private Input<String> resourceGroupName;
-        private Input<String> serviceName;
-        private @Nullable Input<ProductState> state;
-        private @Nullable Input<Boolean> subscriptionRequired;
-        private @Nullable Input<Integer> subscriptionsLimit;
-        private @Nullable Input<String> terms;
+        private @Nullable Output<Boolean> approvalRequired;
+        private @Nullable Output<String> description;
+        private Output<String> displayName;
+        private @Nullable Output<String> productId;
+        private Output<String> resourceGroupName;
+        private Output<String> serviceName;
+        private @Nullable Output<ProductState> state;
+        private @Nullable Output<Boolean> subscriptionRequired;
+        private @Nullable Output<Integer> subscriptionsLimit;
+        private @Nullable Output<String> terms;
 
         public Builder() {
     	      // Empty
@@ -201,103 +201,103 @@ public final class ProductArgs extends io.pulumi.resources.ResourceArgs {
     	      this.terms = defaults.terms;
         }
 
-        public Builder approvalRequired(@Nullable Input<Boolean> approvalRequired) {
+        public Builder approvalRequired(@Nullable Output<Boolean> approvalRequired) {
             this.approvalRequired = approvalRequired;
             return this;
         }
 
         public Builder approvalRequired(@Nullable Boolean approvalRequired) {
-            this.approvalRequired = Input.ofNullable(approvalRequired);
+            this.approvalRequired = Output.ofNullable(approvalRequired);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder displayName(Input<String> displayName) {
+        public Builder displayName(Output<String> displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
         public Builder displayName(String displayName) {
-            this.displayName = Input.of(Objects.requireNonNull(displayName));
+            this.displayName = Output.of(Objects.requireNonNull(displayName));
             return this;
         }
 
-        public Builder productId(@Nullable Input<String> productId) {
+        public Builder productId(@Nullable Output<String> productId) {
             this.productId = productId;
             return this;
         }
 
         public Builder productId(@Nullable String productId) {
-            this.productId = Input.ofNullable(productId);
+            this.productId = Output.ofNullable(productId);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder serviceName(Input<String> serviceName) {
+        public Builder serviceName(Output<String> serviceName) {
             this.serviceName = Objects.requireNonNull(serviceName);
             return this;
         }
 
         public Builder serviceName(String serviceName) {
-            this.serviceName = Input.of(Objects.requireNonNull(serviceName));
+            this.serviceName = Output.of(Objects.requireNonNull(serviceName));
             return this;
         }
 
-        public Builder state(@Nullable Input<ProductState> state) {
+        public Builder state(@Nullable Output<ProductState> state) {
             this.state = state;
             return this;
         }
 
         public Builder state(@Nullable ProductState state) {
-            this.state = Input.ofNullable(state);
+            this.state = Output.ofNullable(state);
             return this;
         }
 
-        public Builder subscriptionRequired(@Nullable Input<Boolean> subscriptionRequired) {
+        public Builder subscriptionRequired(@Nullable Output<Boolean> subscriptionRequired) {
             this.subscriptionRequired = subscriptionRequired;
             return this;
         }
 
         public Builder subscriptionRequired(@Nullable Boolean subscriptionRequired) {
-            this.subscriptionRequired = Input.ofNullable(subscriptionRequired);
+            this.subscriptionRequired = Output.ofNullable(subscriptionRequired);
             return this;
         }
 
-        public Builder subscriptionsLimit(@Nullable Input<Integer> subscriptionsLimit) {
+        public Builder subscriptionsLimit(@Nullable Output<Integer> subscriptionsLimit) {
             this.subscriptionsLimit = subscriptionsLimit;
             return this;
         }
 
         public Builder subscriptionsLimit(@Nullable Integer subscriptionsLimit) {
-            this.subscriptionsLimit = Input.ofNullable(subscriptionsLimit);
+            this.subscriptionsLimit = Output.ofNullable(subscriptionsLimit);
             return this;
         }
 
-        public Builder terms(@Nullable Input<String> terms) {
+        public Builder terms(@Nullable Output<String> terms) {
             this.terms = terms;
             return this;
         }
 
         public Builder terms(@Nullable String terms) {
-            this.terms = Input.ofNullable(terms);
+            this.terms = Output.ofNullable(terms);
             return this;
         }
         public ProductArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.automation.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class FieldDefinitionArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="isEncrypted")
-      private final @Nullable Input<Boolean> isEncrypted;
+      private final @Nullable Output<Boolean> isEncrypted;
 
-    public Input<Boolean> getIsEncrypted() {
-        return this.isEncrypted == null ? Input.empty() : this.isEncrypted;
+    public Output<Boolean> getIsEncrypted() {
+        return this.isEncrypted == null ? Output.empty() : this.isEncrypted;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class FieldDefinitionArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="isOptional")
-      private final @Nullable Input<Boolean> isOptional;
+      private final @Nullable Output<Boolean> isOptional;
 
-    public Input<Boolean> getIsOptional() {
-        return this.isOptional == null ? Input.empty() : this.isOptional;
+    public Output<Boolean> getIsOptional() {
+        return this.isOptional == null ? Output.empty() : this.isOptional;
     }
 
     /**
@@ -46,25 +46,25 @@ public final class FieldDefinitionArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<String> type;
+      private final Output<String> type;
 
-    public Input<String> getType() {
+    public Output<String> getType() {
         return this.type;
     }
 
     public FieldDefinitionArgs(
-        @Nullable Input<Boolean> isEncrypted,
-        @Nullable Input<Boolean> isOptional,
-        Input<String> type) {
+        @Nullable Output<Boolean> isEncrypted,
+        @Nullable Output<Boolean> isOptional,
+        Output<String> type) {
         this.isEncrypted = isEncrypted;
         this.isOptional = isOptional;
         this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
     }
 
     private FieldDefinitionArgs() {
-        this.isEncrypted = Input.empty();
-        this.isOptional = Input.empty();
-        this.type = Input.empty();
+        this.isEncrypted = Output.empty();
+        this.isOptional = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -76,9 +76,9 @@ public final class FieldDefinitionArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> isEncrypted;
-        private @Nullable Input<Boolean> isOptional;
-        private Input<String> type;
+        private @Nullable Output<Boolean> isEncrypted;
+        private @Nullable Output<Boolean> isOptional;
+        private Output<String> type;
 
         public Builder() {
     	      // Empty
@@ -91,33 +91,33 @@ public final class FieldDefinitionArgs extends io.pulumi.resources.ResourceArgs 
     	      this.type = defaults.type;
         }
 
-        public Builder isEncrypted(@Nullable Input<Boolean> isEncrypted) {
+        public Builder isEncrypted(@Nullable Output<Boolean> isEncrypted) {
             this.isEncrypted = isEncrypted;
             return this;
         }
 
         public Builder isEncrypted(@Nullable Boolean isEncrypted) {
-            this.isEncrypted = Input.ofNullable(isEncrypted);
+            this.isEncrypted = Output.ofNullable(isEncrypted);
             return this;
         }
 
-        public Builder isOptional(@Nullable Input<Boolean> isOptional) {
+        public Builder isOptional(@Nullable Output<Boolean> isOptional) {
             this.isOptional = isOptional;
             return this;
         }
 
         public Builder isOptional(@Nullable Boolean isOptional) {
-            this.isOptional = Input.ofNullable(isOptional);
+            this.isOptional = Output.ofNullable(isOptional);
             return this;
         }
 
-        public Builder type(Input<String> type) {
+        public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(String type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
         public FieldDefinitionArgs build() {

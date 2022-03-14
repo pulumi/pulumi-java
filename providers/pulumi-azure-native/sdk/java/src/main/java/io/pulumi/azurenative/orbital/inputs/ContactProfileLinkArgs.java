@@ -7,7 +7,7 @@ import io.pulumi.azurenative.orbital.enums.Direction;
 import io.pulumi.azurenative.orbital.enums.Polarization;
 import io.pulumi.azurenative.orbital.inputs.ContactProfileLinkChannelArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.String;
@@ -29,9 +29,9 @@ public final class ContactProfileLinkArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="channels", required=true)
-      private final Input<List<ContactProfileLinkChannelArgs>> channels;
+      private final Output<List<ContactProfileLinkChannelArgs>> channels;
 
-    public Input<List<ContactProfileLinkChannelArgs>> getChannels() {
+    public Output<List<ContactProfileLinkChannelArgs>> getChannels() {
         return this.channels;
     }
 
@@ -40,9 +40,9 @@ public final class ContactProfileLinkArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="direction", required=true)
-      private final Input<Either<String,Direction>> direction;
+      private final Output<Either<String,Direction>> direction;
 
-    public Input<Either<String,Direction>> getDirection() {
+    public Output<Either<String,Direction>> getDirection() {
         return this.direction;
     }
 
@@ -51,10 +51,10 @@ public final class ContactProfileLinkArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="eirpdBW")
-      private final @Nullable Input<Double> eirpdBW;
+      private final @Nullable Output<Double> eirpdBW;
 
-    public Input<Double> getEirpdBW() {
-        return this.eirpdBW == null ? Input.empty() : this.eirpdBW;
+    public Output<Double> getEirpdBW() {
+        return this.eirpdBW == null ? Output.empty() : this.eirpdBW;
     }
 
     /**
@@ -62,10 +62,10 @@ public final class ContactProfileLinkArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="gainOverTemperature")
-      private final @Nullable Input<Double> gainOverTemperature;
+      private final @Nullable Output<Double> gainOverTemperature;
 
-    public Input<Double> getGainOverTemperature() {
-        return this.gainOverTemperature == null ? Input.empty() : this.gainOverTemperature;
+    public Output<Double> getGainOverTemperature() {
+        return this.gainOverTemperature == null ? Output.empty() : this.gainOverTemperature;
     }
 
     /**
@@ -73,18 +73,18 @@ public final class ContactProfileLinkArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="polarization", required=true)
-      private final Input<Either<String,Polarization>> polarization;
+      private final Output<Either<String,Polarization>> polarization;
 
-    public Input<Either<String,Polarization>> getPolarization() {
+    public Output<Either<String,Polarization>> getPolarization() {
         return this.polarization;
     }
 
     public ContactProfileLinkArgs(
-        Input<List<ContactProfileLinkChannelArgs>> channels,
-        Input<Either<String,Direction>> direction,
-        @Nullable Input<Double> eirpdBW,
-        @Nullable Input<Double> gainOverTemperature,
-        Input<Either<String,Polarization>> polarization) {
+        Output<List<ContactProfileLinkChannelArgs>> channels,
+        Output<Either<String,Direction>> direction,
+        @Nullable Output<Double> eirpdBW,
+        @Nullable Output<Double> gainOverTemperature,
+        Output<Either<String,Polarization>> polarization) {
         this.channels = Objects.requireNonNull(channels, "expected parameter 'channels' to be non-null");
         this.direction = Objects.requireNonNull(direction, "expected parameter 'direction' to be non-null");
         this.eirpdBW = eirpdBW;
@@ -93,11 +93,11 @@ public final class ContactProfileLinkArgs extends io.pulumi.resources.ResourceAr
     }
 
     private ContactProfileLinkArgs() {
-        this.channels = Input.empty();
-        this.direction = Input.empty();
-        this.eirpdBW = Input.empty();
-        this.gainOverTemperature = Input.empty();
-        this.polarization = Input.empty();
+        this.channels = Output.empty();
+        this.direction = Output.empty();
+        this.eirpdBW = Output.empty();
+        this.gainOverTemperature = Output.empty();
+        this.polarization = Output.empty();
     }
 
     public static Builder builder() {
@@ -109,11 +109,11 @@ public final class ContactProfileLinkArgs extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private Input<List<ContactProfileLinkChannelArgs>> channels;
-        private Input<Either<String,Direction>> direction;
-        private @Nullable Input<Double> eirpdBW;
-        private @Nullable Input<Double> gainOverTemperature;
-        private Input<Either<String,Polarization>> polarization;
+        private Output<List<ContactProfileLinkChannelArgs>> channels;
+        private Output<Either<String,Direction>> direction;
+        private @Nullable Output<Double> eirpdBW;
+        private @Nullable Output<Double> gainOverTemperature;
+        private Output<Either<String,Polarization>> polarization;
 
         public Builder() {
     	      // Empty
@@ -128,53 +128,53 @@ public final class ContactProfileLinkArgs extends io.pulumi.resources.ResourceAr
     	      this.polarization = defaults.polarization;
         }
 
-        public Builder channels(Input<List<ContactProfileLinkChannelArgs>> channels) {
+        public Builder channels(Output<List<ContactProfileLinkChannelArgs>> channels) {
             this.channels = Objects.requireNonNull(channels);
             return this;
         }
 
         public Builder channels(List<ContactProfileLinkChannelArgs> channels) {
-            this.channels = Input.of(Objects.requireNonNull(channels));
+            this.channels = Output.of(Objects.requireNonNull(channels));
             return this;
         }
 
-        public Builder direction(Input<Either<String,Direction>> direction) {
+        public Builder direction(Output<Either<String,Direction>> direction) {
             this.direction = Objects.requireNonNull(direction);
             return this;
         }
 
         public Builder direction(Either<String,Direction> direction) {
-            this.direction = Input.of(Objects.requireNonNull(direction));
+            this.direction = Output.of(Objects.requireNonNull(direction));
             return this;
         }
 
-        public Builder eirpdBW(@Nullable Input<Double> eirpdBW) {
+        public Builder eirpdBW(@Nullable Output<Double> eirpdBW) {
             this.eirpdBW = eirpdBW;
             return this;
         }
 
         public Builder eirpdBW(@Nullable Double eirpdBW) {
-            this.eirpdBW = Input.ofNullable(eirpdBW);
+            this.eirpdBW = Output.ofNullable(eirpdBW);
             return this;
         }
 
-        public Builder gainOverTemperature(@Nullable Input<Double> gainOverTemperature) {
+        public Builder gainOverTemperature(@Nullable Output<Double> gainOverTemperature) {
             this.gainOverTemperature = gainOverTemperature;
             return this;
         }
 
         public Builder gainOverTemperature(@Nullable Double gainOverTemperature) {
-            this.gainOverTemperature = Input.ofNullable(gainOverTemperature);
+            this.gainOverTemperature = Output.ofNullable(gainOverTemperature);
             return this;
         }
 
-        public Builder polarization(Input<Either<String,Polarization>> polarization) {
+        public Builder polarization(Output<Either<String,Polarization>> polarization) {
             this.polarization = Objects.requireNonNull(polarization);
             return this;
         }
 
         public Builder polarization(Either<String,Polarization> polarization) {
-            this.polarization = Input.of(Objects.requireNonNull(polarization));
+            this.polarization = Output.of(Objects.requireNonNull(polarization));
             return this;
         }
         public ContactProfileLinkArgs build() {

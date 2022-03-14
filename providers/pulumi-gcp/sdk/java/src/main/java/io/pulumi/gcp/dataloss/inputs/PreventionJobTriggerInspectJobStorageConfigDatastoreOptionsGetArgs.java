@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.dataloss.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.dataloss.inputs.PreventionJobTriggerInspectJobStorageConfigDatastoreOptionsKindGetArgs;
 import io.pulumi.gcp.dataloss.inputs.PreventionJobTriggerInspectJobStorageConfigDatastoreOptionsPartitionIdGetArgs;
@@ -20,9 +20,9 @@ public final class PreventionJobTriggerInspectJobStorageConfigDatastoreOptionsGe
      * 
      */
     @InputImport(name="kind", required=true)
-      private final Input<PreventionJobTriggerInspectJobStorageConfigDatastoreOptionsKindGetArgs> kind;
+      private final Output<PreventionJobTriggerInspectJobStorageConfigDatastoreOptionsKindGetArgs> kind;
 
-    public Input<PreventionJobTriggerInspectJobStorageConfigDatastoreOptionsKindGetArgs> getKind() {
+    public Output<PreventionJobTriggerInspectJobStorageConfigDatastoreOptionsKindGetArgs> getKind() {
         return this.kind;
     }
 
@@ -33,22 +33,22 @@ public final class PreventionJobTriggerInspectJobStorageConfigDatastoreOptionsGe
      * 
      */
     @InputImport(name="partitionId", required=true)
-      private final Input<PreventionJobTriggerInspectJobStorageConfigDatastoreOptionsPartitionIdGetArgs> partitionId;
+      private final Output<PreventionJobTriggerInspectJobStorageConfigDatastoreOptionsPartitionIdGetArgs> partitionId;
 
-    public Input<PreventionJobTriggerInspectJobStorageConfigDatastoreOptionsPartitionIdGetArgs> getPartitionId() {
+    public Output<PreventionJobTriggerInspectJobStorageConfigDatastoreOptionsPartitionIdGetArgs> getPartitionId() {
         return this.partitionId;
     }
 
     public PreventionJobTriggerInspectJobStorageConfigDatastoreOptionsGetArgs(
-        Input<PreventionJobTriggerInspectJobStorageConfigDatastoreOptionsKindGetArgs> kind,
-        Input<PreventionJobTriggerInspectJobStorageConfigDatastoreOptionsPartitionIdGetArgs> partitionId) {
+        Output<PreventionJobTriggerInspectJobStorageConfigDatastoreOptionsKindGetArgs> kind,
+        Output<PreventionJobTriggerInspectJobStorageConfigDatastoreOptionsPartitionIdGetArgs> partitionId) {
         this.kind = Objects.requireNonNull(kind, "expected parameter 'kind' to be non-null");
         this.partitionId = Objects.requireNonNull(partitionId, "expected parameter 'partitionId' to be non-null");
     }
 
     private PreventionJobTriggerInspectJobStorageConfigDatastoreOptionsGetArgs() {
-        this.kind = Input.empty();
-        this.partitionId = Input.empty();
+        this.kind = Output.empty();
+        this.partitionId = Output.empty();
     }
 
     public static Builder builder() {
@@ -60,8 +60,8 @@ public final class PreventionJobTriggerInspectJobStorageConfigDatastoreOptionsGe
     }
 
     public static final class Builder {
-        private Input<PreventionJobTriggerInspectJobStorageConfigDatastoreOptionsKindGetArgs> kind;
-        private Input<PreventionJobTriggerInspectJobStorageConfigDatastoreOptionsPartitionIdGetArgs> partitionId;
+        private Output<PreventionJobTriggerInspectJobStorageConfigDatastoreOptionsKindGetArgs> kind;
+        private Output<PreventionJobTriggerInspectJobStorageConfigDatastoreOptionsPartitionIdGetArgs> partitionId;
 
         public Builder() {
     	      // Empty
@@ -73,23 +73,23 @@ public final class PreventionJobTriggerInspectJobStorageConfigDatastoreOptionsGe
     	      this.partitionId = defaults.partitionId;
         }
 
-        public Builder kind(Input<PreventionJobTriggerInspectJobStorageConfigDatastoreOptionsKindGetArgs> kind) {
+        public Builder kind(Output<PreventionJobTriggerInspectJobStorageConfigDatastoreOptionsKindGetArgs> kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
         public Builder kind(PreventionJobTriggerInspectJobStorageConfigDatastoreOptionsKindGetArgs kind) {
-            this.kind = Input.of(Objects.requireNonNull(kind));
+            this.kind = Output.of(Objects.requireNonNull(kind));
             return this;
         }
 
-        public Builder partitionId(Input<PreventionJobTriggerInspectJobStorageConfigDatastoreOptionsPartitionIdGetArgs> partitionId) {
+        public Builder partitionId(Output<PreventionJobTriggerInspectJobStorageConfigDatastoreOptionsPartitionIdGetArgs> partitionId) {
             this.partitionId = Objects.requireNonNull(partitionId);
             return this;
         }
 
         public Builder partitionId(PreventionJobTriggerInspectJobStorageConfigDatastoreOptionsPartitionIdGetArgs partitionId) {
-            this.partitionId = Input.of(Objects.requireNonNull(partitionId));
+            this.partitionId = Output.of(Objects.requireNonNull(partitionId));
             return this;
         }
         public PreventionJobTriggerInspectJobStorageConfigDatastoreOptionsGetArgs build() {

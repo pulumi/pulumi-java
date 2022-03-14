@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dataproc_v1beta2.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dataproc_v1beta2.enums.InstanceGroupConfigPreemptibility;
 import io.pulumi.googlenative.dataproc_v1beta2.inputs.AcceleratorConfigArgs;
@@ -28,10 +28,10 @@ public final class InstanceGroupConfigArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="accelerators")
-      private final @Nullable Input<List<AcceleratorConfigArgs>> accelerators;
+      private final @Nullable Output<List<AcceleratorConfigArgs>> accelerators;
 
-    public Input<List<AcceleratorConfigArgs>> getAccelerators() {
-        return this.accelerators == null ? Input.empty() : this.accelerators;
+    public Output<List<AcceleratorConfigArgs>> getAccelerators() {
+        return this.accelerators == null ? Output.empty() : this.accelerators;
     }
 
     /**
@@ -39,10 +39,10 @@ public final class InstanceGroupConfigArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="diskConfig")
-      private final @Nullable Input<DiskConfigArgs> diskConfig;
+      private final @Nullable Output<DiskConfigArgs> diskConfig;
 
-    public Input<DiskConfigArgs> getDiskConfig() {
-        return this.diskConfig == null ? Input.empty() : this.diskConfig;
+    public Output<DiskConfigArgs> getDiskConfig() {
+        return this.diskConfig == null ? Output.empty() : this.diskConfig;
     }
 
     /**
@@ -50,10 +50,10 @@ public final class InstanceGroupConfigArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="imageUri")
-      private final @Nullable Input<String> imageUri;
+      private final @Nullable Output<String> imageUri;
 
-    public Input<String> getImageUri() {
-        return this.imageUri == null ? Input.empty() : this.imageUri;
+    public Output<String> getImageUri() {
+        return this.imageUri == null ? Output.empty() : this.imageUri;
     }
 
     /**
@@ -61,10 +61,10 @@ public final class InstanceGroupConfigArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="machineTypeUri")
-      private final @Nullable Input<String> machineTypeUri;
+      private final @Nullable Output<String> machineTypeUri;
 
-    public Input<String> getMachineTypeUri() {
-        return this.machineTypeUri == null ? Input.empty() : this.machineTypeUri;
+    public Output<String> getMachineTypeUri() {
+        return this.machineTypeUri == null ? Output.empty() : this.machineTypeUri;
     }
 
     /**
@@ -72,10 +72,10 @@ public final class InstanceGroupConfigArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="minCpuPlatform")
-      private final @Nullable Input<String> minCpuPlatform;
+      private final @Nullable Output<String> minCpuPlatform;
 
-    public Input<String> getMinCpuPlatform() {
-        return this.minCpuPlatform == null ? Input.empty() : this.minCpuPlatform;
+    public Output<String> getMinCpuPlatform() {
+        return this.minCpuPlatform == null ? Output.empty() : this.minCpuPlatform;
     }
 
     /**
@@ -83,10 +83,10 @@ public final class InstanceGroupConfigArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="numInstances")
-      private final @Nullable Input<Integer> numInstances;
+      private final @Nullable Output<Integer> numInstances;
 
-    public Input<Integer> getNumInstances() {
-        return this.numInstances == null ? Input.empty() : this.numInstances;
+    public Output<Integer> getNumInstances() {
+        return this.numInstances == null ? Output.empty() : this.numInstances;
     }
 
     /**
@@ -94,20 +94,20 @@ public final class InstanceGroupConfigArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="preemptibility")
-      private final @Nullable Input<InstanceGroupConfigPreemptibility> preemptibility;
+      private final @Nullable Output<InstanceGroupConfigPreemptibility> preemptibility;
 
-    public Input<InstanceGroupConfigPreemptibility> getPreemptibility() {
-        return this.preemptibility == null ? Input.empty() : this.preemptibility;
+    public Output<InstanceGroupConfigPreemptibility> getPreemptibility() {
+        return this.preemptibility == null ? Output.empty() : this.preemptibility;
     }
 
     public InstanceGroupConfigArgs(
-        @Nullable Input<List<AcceleratorConfigArgs>> accelerators,
-        @Nullable Input<DiskConfigArgs> diskConfig,
-        @Nullable Input<String> imageUri,
-        @Nullable Input<String> machineTypeUri,
-        @Nullable Input<String> minCpuPlatform,
-        @Nullable Input<Integer> numInstances,
-        @Nullable Input<InstanceGroupConfigPreemptibility> preemptibility) {
+        @Nullable Output<List<AcceleratorConfigArgs>> accelerators,
+        @Nullable Output<DiskConfigArgs> diskConfig,
+        @Nullable Output<String> imageUri,
+        @Nullable Output<String> machineTypeUri,
+        @Nullable Output<String> minCpuPlatform,
+        @Nullable Output<Integer> numInstances,
+        @Nullable Output<InstanceGroupConfigPreemptibility> preemptibility) {
         this.accelerators = accelerators;
         this.diskConfig = diskConfig;
         this.imageUri = imageUri;
@@ -118,13 +118,13 @@ public final class InstanceGroupConfigArgs extends io.pulumi.resources.ResourceA
     }
 
     private InstanceGroupConfigArgs() {
-        this.accelerators = Input.empty();
-        this.diskConfig = Input.empty();
-        this.imageUri = Input.empty();
-        this.machineTypeUri = Input.empty();
-        this.minCpuPlatform = Input.empty();
-        this.numInstances = Input.empty();
-        this.preemptibility = Input.empty();
+        this.accelerators = Output.empty();
+        this.diskConfig = Output.empty();
+        this.imageUri = Output.empty();
+        this.machineTypeUri = Output.empty();
+        this.minCpuPlatform = Output.empty();
+        this.numInstances = Output.empty();
+        this.preemptibility = Output.empty();
     }
 
     public static Builder builder() {
@@ -136,13 +136,13 @@ public final class InstanceGroupConfigArgs extends io.pulumi.resources.ResourceA
     }
 
     public static final class Builder {
-        private @Nullable Input<List<AcceleratorConfigArgs>> accelerators;
-        private @Nullable Input<DiskConfigArgs> diskConfig;
-        private @Nullable Input<String> imageUri;
-        private @Nullable Input<String> machineTypeUri;
-        private @Nullable Input<String> minCpuPlatform;
-        private @Nullable Input<Integer> numInstances;
-        private @Nullable Input<InstanceGroupConfigPreemptibility> preemptibility;
+        private @Nullable Output<List<AcceleratorConfigArgs>> accelerators;
+        private @Nullable Output<DiskConfigArgs> diskConfig;
+        private @Nullable Output<String> imageUri;
+        private @Nullable Output<String> machineTypeUri;
+        private @Nullable Output<String> minCpuPlatform;
+        private @Nullable Output<Integer> numInstances;
+        private @Nullable Output<InstanceGroupConfigPreemptibility> preemptibility;
 
         public Builder() {
     	      // Empty
@@ -159,73 +159,73 @@ public final class InstanceGroupConfigArgs extends io.pulumi.resources.ResourceA
     	      this.preemptibility = defaults.preemptibility;
         }
 
-        public Builder accelerators(@Nullable Input<List<AcceleratorConfigArgs>> accelerators) {
+        public Builder accelerators(@Nullable Output<List<AcceleratorConfigArgs>> accelerators) {
             this.accelerators = accelerators;
             return this;
         }
 
         public Builder accelerators(@Nullable List<AcceleratorConfigArgs> accelerators) {
-            this.accelerators = Input.ofNullable(accelerators);
+            this.accelerators = Output.ofNullable(accelerators);
             return this;
         }
 
-        public Builder diskConfig(@Nullable Input<DiskConfigArgs> diskConfig) {
+        public Builder diskConfig(@Nullable Output<DiskConfigArgs> diskConfig) {
             this.diskConfig = diskConfig;
             return this;
         }
 
         public Builder diskConfig(@Nullable DiskConfigArgs diskConfig) {
-            this.diskConfig = Input.ofNullable(diskConfig);
+            this.diskConfig = Output.ofNullable(diskConfig);
             return this;
         }
 
-        public Builder imageUri(@Nullable Input<String> imageUri) {
+        public Builder imageUri(@Nullable Output<String> imageUri) {
             this.imageUri = imageUri;
             return this;
         }
 
         public Builder imageUri(@Nullable String imageUri) {
-            this.imageUri = Input.ofNullable(imageUri);
+            this.imageUri = Output.ofNullable(imageUri);
             return this;
         }
 
-        public Builder machineTypeUri(@Nullable Input<String> machineTypeUri) {
+        public Builder machineTypeUri(@Nullable Output<String> machineTypeUri) {
             this.machineTypeUri = machineTypeUri;
             return this;
         }
 
         public Builder machineTypeUri(@Nullable String machineTypeUri) {
-            this.machineTypeUri = Input.ofNullable(machineTypeUri);
+            this.machineTypeUri = Output.ofNullable(machineTypeUri);
             return this;
         }
 
-        public Builder minCpuPlatform(@Nullable Input<String> minCpuPlatform) {
+        public Builder minCpuPlatform(@Nullable Output<String> minCpuPlatform) {
             this.minCpuPlatform = minCpuPlatform;
             return this;
         }
 
         public Builder minCpuPlatform(@Nullable String minCpuPlatform) {
-            this.minCpuPlatform = Input.ofNullable(minCpuPlatform);
+            this.minCpuPlatform = Output.ofNullable(minCpuPlatform);
             return this;
         }
 
-        public Builder numInstances(@Nullable Input<Integer> numInstances) {
+        public Builder numInstances(@Nullable Output<Integer> numInstances) {
             this.numInstances = numInstances;
             return this;
         }
 
         public Builder numInstances(@Nullable Integer numInstances) {
-            this.numInstances = Input.ofNullable(numInstances);
+            this.numInstances = Output.ofNullable(numInstances);
             return this;
         }
 
-        public Builder preemptibility(@Nullable Input<InstanceGroupConfigPreemptibility> preemptibility) {
+        public Builder preemptibility(@Nullable Output<InstanceGroupConfigPreemptibility> preemptibility) {
             this.preemptibility = preemptibility;
             return this;
         }
 
         public Builder preemptibility(@Nullable InstanceGroupConfigPreemptibility preemptibility) {
-            this.preemptibility = Input.ofNullable(preemptibility);
+            this.preemptibility = Output.ofNullable(preemptibility);
             return this;
         }
         public InstanceGroupConfigArgs build() {

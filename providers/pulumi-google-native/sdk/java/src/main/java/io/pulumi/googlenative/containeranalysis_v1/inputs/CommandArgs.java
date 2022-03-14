@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -24,10 +24,10 @@ public final class CommandArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="args")
-      private final @Nullable Input<List<String>> args;
+      private final @Nullable Output<List<String>> args;
 
-    public Input<List<String>> getArgs() {
-        return this.args == null ? Input.empty() : this.args;
+    public Output<List<String>> getArgs() {
+        return this.args == null ? Output.empty() : this.args;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class CommandArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dir")
-      private final @Nullable Input<String> dir;
+      private final @Nullable Output<String> dir;
 
-    public Input<String> getDir() {
-        return this.dir == null ? Input.empty() : this.dir;
+    public Output<String> getDir() {
+        return this.dir == null ? Output.empty() : this.dir;
     }
 
     /**
@@ -46,10 +46,10 @@ public final class CommandArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="env")
-      private final @Nullable Input<List<String>> env;
+      private final @Nullable Output<List<String>> env;
 
-    public Input<List<String>> getEnv() {
-        return this.env == null ? Input.empty() : this.env;
+    public Output<List<String>> getEnv() {
+        return this.env == null ? Output.empty() : this.env;
     }
 
     /**
@@ -57,10 +57,10 @@ public final class CommandArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="id")
-      private final @Nullable Input<String> id;
+      private final @Nullable Output<String> id;
 
-    public Input<String> getId() {
-        return this.id == null ? Input.empty() : this.id;
+    public Output<String> getId() {
+        return this.id == null ? Output.empty() : this.id;
     }
 
     /**
@@ -68,9 +68,9 @@ public final class CommandArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name", required=true)
-      private final Input<String> name;
+      private final Output<String> name;
 
-    public Input<String> getName() {
+    public Output<String> getName() {
         return this.name;
     }
 
@@ -79,19 +79,19 @@ public final class CommandArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="waitFor")
-      private final @Nullable Input<List<String>> waitFor;
+      private final @Nullable Output<List<String>> waitFor;
 
-    public Input<List<String>> getWaitFor() {
-        return this.waitFor == null ? Input.empty() : this.waitFor;
+    public Output<List<String>> getWaitFor() {
+        return this.waitFor == null ? Output.empty() : this.waitFor;
     }
 
     public CommandArgs(
-        @Nullable Input<List<String>> args,
-        @Nullable Input<String> dir,
-        @Nullable Input<List<String>> env,
-        @Nullable Input<String> id,
-        Input<String> name,
-        @Nullable Input<List<String>> waitFor) {
+        @Nullable Output<List<String>> args,
+        @Nullable Output<String> dir,
+        @Nullable Output<List<String>> env,
+        @Nullable Output<String> id,
+        Output<String> name,
+        @Nullable Output<List<String>> waitFor) {
         this.args = args;
         this.dir = dir;
         this.env = env;
@@ -101,12 +101,12 @@ public final class CommandArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private CommandArgs() {
-        this.args = Input.empty();
-        this.dir = Input.empty();
-        this.env = Input.empty();
-        this.id = Input.empty();
-        this.name = Input.empty();
-        this.waitFor = Input.empty();
+        this.args = Output.empty();
+        this.dir = Output.empty();
+        this.env = Output.empty();
+        this.id = Output.empty();
+        this.name = Output.empty();
+        this.waitFor = Output.empty();
     }
 
     public static Builder builder() {
@@ -118,12 +118,12 @@ public final class CommandArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> args;
-        private @Nullable Input<String> dir;
-        private @Nullable Input<List<String>> env;
-        private @Nullable Input<String> id;
-        private Input<String> name;
-        private @Nullable Input<List<String>> waitFor;
+        private @Nullable Output<List<String>> args;
+        private @Nullable Output<String> dir;
+        private @Nullable Output<List<String>> env;
+        private @Nullable Output<String> id;
+        private Output<String> name;
+        private @Nullable Output<List<String>> waitFor;
 
         public Builder() {
     	      // Empty
@@ -139,63 +139,63 @@ public final class CommandArgs extends io.pulumi.resources.ResourceArgs {
     	      this.waitFor = defaults.waitFor;
         }
 
-        public Builder args(@Nullable Input<List<String>> args) {
+        public Builder args(@Nullable Output<List<String>> args) {
             this.args = args;
             return this;
         }
 
         public Builder args(@Nullable List<String> args) {
-            this.args = Input.ofNullable(args);
+            this.args = Output.ofNullable(args);
             return this;
         }
 
-        public Builder dir(@Nullable Input<String> dir) {
+        public Builder dir(@Nullable Output<String> dir) {
             this.dir = dir;
             return this;
         }
 
         public Builder dir(@Nullable String dir) {
-            this.dir = Input.ofNullable(dir);
+            this.dir = Output.ofNullable(dir);
             return this;
         }
 
-        public Builder env(@Nullable Input<List<String>> env) {
+        public Builder env(@Nullable Output<List<String>> env) {
             this.env = env;
             return this;
         }
 
         public Builder env(@Nullable List<String> env) {
-            this.env = Input.ofNullable(env);
+            this.env = Output.ofNullable(env);
             return this;
         }
 
-        public Builder id(@Nullable Input<String> id) {
+        public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
 
         public Builder id(@Nullable String id) {
-            this.id = Input.ofNullable(id);
+            this.id = Output.ofNullable(id);
             return this;
         }
 
-        public Builder name(Input<String> name) {
+        public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(String name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder waitFor(@Nullable Input<List<String>> waitFor) {
+        public Builder waitFor(@Nullable Output<List<String>> waitFor) {
             this.waitFor = waitFor;
             return this;
         }
 
         public Builder waitFor(@Nullable List<String> waitFor) {
-            this.waitFor = Input.ofNullable(waitFor);
+            this.waitFor = Output.ofNullable(waitFor);
             return this;
         }
         public CommandArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datafactory.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class SkipErrorFileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dataInconsistency")
-      private final @Nullable Input<Object> dataInconsistency;
+      private final @Nullable Output<Object> dataInconsistency;
 
-    public Input<Object> getDataInconsistency() {
-        return this.dataInconsistency == null ? Input.empty() : this.dataInconsistency;
+    public Output<Object> getDataInconsistency() {
+        return this.dataInconsistency == null ? Output.empty() : this.dataInconsistency;
     }
 
     /**
@@ -34,22 +34,22 @@ public final class SkipErrorFileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="fileMissing")
-      private final @Nullable Input<Object> fileMissing;
+      private final @Nullable Output<Object> fileMissing;
 
-    public Input<Object> getFileMissing() {
-        return this.fileMissing == null ? Input.empty() : this.fileMissing;
+    public Output<Object> getFileMissing() {
+        return this.fileMissing == null ? Output.empty() : this.fileMissing;
     }
 
     public SkipErrorFileArgs(
-        @Nullable Input<Object> dataInconsistency,
-        @Nullable Input<Object> fileMissing) {
+        @Nullable Output<Object> dataInconsistency,
+        @Nullable Output<Object> fileMissing) {
         this.dataInconsistency = dataInconsistency;
         this.fileMissing = fileMissing;
     }
 
     private SkipErrorFileArgs() {
-        this.dataInconsistency = Input.empty();
-        this.fileMissing = Input.empty();
+        this.dataInconsistency = Output.empty();
+        this.fileMissing = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class SkipErrorFileArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Object> dataInconsistency;
-        private @Nullable Input<Object> fileMissing;
+        private @Nullable Output<Object> dataInconsistency;
+        private @Nullable Output<Object> fileMissing;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class SkipErrorFileArgs extends io.pulumi.resources.ResourceArgs {
     	      this.fileMissing = defaults.fileMissing;
         }
 
-        public Builder dataInconsistency(@Nullable Input<Object> dataInconsistency) {
+        public Builder dataInconsistency(@Nullable Output<Object> dataInconsistency) {
             this.dataInconsistency = dataInconsistency;
             return this;
         }
 
         public Builder dataInconsistency(@Nullable Object dataInconsistency) {
-            this.dataInconsistency = Input.ofNullable(dataInconsistency);
+            this.dataInconsistency = Output.ofNullable(dataInconsistency);
             return this;
         }
 
-        public Builder fileMissing(@Nullable Input<Object> fileMissing) {
+        public Builder fileMissing(@Nullable Output<Object> fileMissing) {
             this.fileMissing = fileMissing;
             return this;
         }
 
         public Builder fileMissing(@Nullable Object fileMissing) {
-            this.fileMissing = Input.ofNullable(fileMissing);
+            this.fileMissing = Output.ofNullable(fileMissing);
             return this;
         }
         public SkipErrorFileArgs build() {

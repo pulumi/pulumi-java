@@ -5,7 +5,7 @@ package io.pulumi.azurenative.automanage.inputs;
 
 import io.pulumi.azurenative.automanage.enums.ConfigurationProfile;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -25,10 +25,10 @@ public final class ConfigurationProfileAssignmentPropertiesArgs extends io.pulum
      * 
      */
     @InputImport(name="accountId")
-      private final @Nullable Input<String> accountId;
+      private final @Nullable Output<String> accountId;
 
-    public Input<String> getAccountId() {
-        return this.accountId == null ? Input.empty() : this.accountId;
+    public Output<String> getAccountId() {
+        return this.accountId == null ? Output.empty() : this.accountId;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class ConfigurationProfileAssignmentPropertiesArgs extends io.pulum
      * 
      */
     @InputImport(name="configurationProfile")
-      private final @Nullable Input<Either<String,ConfigurationProfile>> configurationProfile;
+      private final @Nullable Output<Either<String,ConfigurationProfile>> configurationProfile;
 
-    public Input<Either<String,ConfigurationProfile>> getConfigurationProfile() {
-        return this.configurationProfile == null ? Input.empty() : this.configurationProfile;
+    public Output<Either<String,ConfigurationProfile>> getConfigurationProfile() {
+        return this.configurationProfile == null ? Output.empty() : this.configurationProfile;
     }
 
     /**
@@ -47,10 +47,10 @@ public final class ConfigurationProfileAssignmentPropertiesArgs extends io.pulum
      * 
      */
     @InputImport(name="configurationProfilePreferenceId")
-      private final @Nullable Input<String> configurationProfilePreferenceId;
+      private final @Nullable Output<String> configurationProfilePreferenceId;
 
-    public Input<String> getConfigurationProfilePreferenceId() {
-        return this.configurationProfilePreferenceId == null ? Input.empty() : this.configurationProfilePreferenceId;
+    public Output<String> getConfigurationProfilePreferenceId() {
+        return this.configurationProfilePreferenceId == null ? Output.empty() : this.configurationProfilePreferenceId;
     }
 
     /**
@@ -58,17 +58,17 @@ public final class ConfigurationProfileAssignmentPropertiesArgs extends io.pulum
      * 
      */
     @InputImport(name="targetId")
-      private final @Nullable Input<String> targetId;
+      private final @Nullable Output<String> targetId;
 
-    public Input<String> getTargetId() {
-        return this.targetId == null ? Input.empty() : this.targetId;
+    public Output<String> getTargetId() {
+        return this.targetId == null ? Output.empty() : this.targetId;
     }
 
     public ConfigurationProfileAssignmentPropertiesArgs(
-        @Nullable Input<String> accountId,
-        @Nullable Input<Either<String,ConfigurationProfile>> configurationProfile,
-        @Nullable Input<String> configurationProfilePreferenceId,
-        @Nullable Input<String> targetId) {
+        @Nullable Output<String> accountId,
+        @Nullable Output<Either<String,ConfigurationProfile>> configurationProfile,
+        @Nullable Output<String> configurationProfilePreferenceId,
+        @Nullable Output<String> targetId) {
         this.accountId = accountId;
         this.configurationProfile = configurationProfile;
         this.configurationProfilePreferenceId = configurationProfilePreferenceId;
@@ -76,10 +76,10 @@ public final class ConfigurationProfileAssignmentPropertiesArgs extends io.pulum
     }
 
     private ConfigurationProfileAssignmentPropertiesArgs() {
-        this.accountId = Input.empty();
-        this.configurationProfile = Input.empty();
-        this.configurationProfilePreferenceId = Input.empty();
-        this.targetId = Input.empty();
+        this.accountId = Output.empty();
+        this.configurationProfile = Output.empty();
+        this.configurationProfilePreferenceId = Output.empty();
+        this.targetId = Output.empty();
     }
 
     public static Builder builder() {
@@ -91,10 +91,10 @@ public final class ConfigurationProfileAssignmentPropertiesArgs extends io.pulum
     }
 
     public static final class Builder {
-        private @Nullable Input<String> accountId;
-        private @Nullable Input<Either<String,ConfigurationProfile>> configurationProfile;
-        private @Nullable Input<String> configurationProfilePreferenceId;
-        private @Nullable Input<String> targetId;
+        private @Nullable Output<String> accountId;
+        private @Nullable Output<Either<String,ConfigurationProfile>> configurationProfile;
+        private @Nullable Output<String> configurationProfilePreferenceId;
+        private @Nullable Output<String> targetId;
 
         public Builder() {
     	      // Empty
@@ -108,43 +108,43 @@ public final class ConfigurationProfileAssignmentPropertiesArgs extends io.pulum
     	      this.targetId = defaults.targetId;
         }
 
-        public Builder accountId(@Nullable Input<String> accountId) {
+        public Builder accountId(@Nullable Output<String> accountId) {
             this.accountId = accountId;
             return this;
         }
 
         public Builder accountId(@Nullable String accountId) {
-            this.accountId = Input.ofNullable(accountId);
+            this.accountId = Output.ofNullable(accountId);
             return this;
         }
 
-        public Builder configurationProfile(@Nullable Input<Either<String,ConfigurationProfile>> configurationProfile) {
+        public Builder configurationProfile(@Nullable Output<Either<String,ConfigurationProfile>> configurationProfile) {
             this.configurationProfile = configurationProfile;
             return this;
         }
 
         public Builder configurationProfile(@Nullable Either<String,ConfigurationProfile> configurationProfile) {
-            this.configurationProfile = Input.ofNullable(configurationProfile);
+            this.configurationProfile = Output.ofNullable(configurationProfile);
             return this;
         }
 
-        public Builder configurationProfilePreferenceId(@Nullable Input<String> configurationProfilePreferenceId) {
+        public Builder configurationProfilePreferenceId(@Nullable Output<String> configurationProfilePreferenceId) {
             this.configurationProfilePreferenceId = configurationProfilePreferenceId;
             return this;
         }
 
         public Builder configurationProfilePreferenceId(@Nullable String configurationProfilePreferenceId) {
-            this.configurationProfilePreferenceId = Input.ofNullable(configurationProfilePreferenceId);
+            this.configurationProfilePreferenceId = Output.ofNullable(configurationProfilePreferenceId);
             return this;
         }
 
-        public Builder targetId(@Nullable Input<String> targetId) {
+        public Builder targetId(@Nullable Output<String> targetId) {
             this.targetId = targetId;
             return this;
         }
 
         public Builder targetId(@Nullable String targetId) {
-            this.targetId = Input.ofNullable(targetId);
+            this.targetId = Output.ofNullable(targetId);
             return this;
         }
         public ConfigurationProfileAssignmentPropertiesArgs build() {

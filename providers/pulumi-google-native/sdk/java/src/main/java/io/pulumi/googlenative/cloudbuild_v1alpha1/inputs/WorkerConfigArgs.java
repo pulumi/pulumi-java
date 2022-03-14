@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudbuild_v1alpha1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.cloudbuild_v1alpha1.inputs.NetworkArgs;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class WorkerConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="diskSizeGb")
-      private final @Nullable Input<String> diskSizeGb;
+      private final @Nullable Output<String> diskSizeGb;
 
-    public Input<String> getDiskSizeGb() {
-        return this.diskSizeGb == null ? Input.empty() : this.diskSizeGb;
+    public Output<String> getDiskSizeGb() {
+        return this.diskSizeGb == null ? Output.empty() : this.diskSizeGb;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class WorkerConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="machineType")
-      private final @Nullable Input<String> machineType;
+      private final @Nullable Output<String> machineType;
 
-    public Input<String> getMachineType() {
-        return this.machineType == null ? Input.empty() : this.machineType;
+    public Output<String> getMachineType() {
+        return this.machineType == null ? Output.empty() : this.machineType;
     }
 
     /**
@@ -46,10 +46,10 @@ public final class WorkerConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="network")
-      private final @Nullable Input<NetworkArgs> network;
+      private final @Nullable Output<NetworkArgs> network;
 
-    public Input<NetworkArgs> getNetwork() {
-        return this.network == null ? Input.empty() : this.network;
+    public Output<NetworkArgs> getNetwork() {
+        return this.network == null ? Output.empty() : this.network;
     }
 
     /**
@@ -57,17 +57,17 @@ public final class WorkerConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tag")
-      private final @Nullable Input<String> tag;
+      private final @Nullable Output<String> tag;
 
-    public Input<String> getTag() {
-        return this.tag == null ? Input.empty() : this.tag;
+    public Output<String> getTag() {
+        return this.tag == null ? Output.empty() : this.tag;
     }
 
     public WorkerConfigArgs(
-        @Nullable Input<String> diskSizeGb,
-        @Nullable Input<String> machineType,
-        @Nullable Input<NetworkArgs> network,
-        @Nullable Input<String> tag) {
+        @Nullable Output<String> diskSizeGb,
+        @Nullable Output<String> machineType,
+        @Nullable Output<NetworkArgs> network,
+        @Nullable Output<String> tag) {
         this.diskSizeGb = diskSizeGb;
         this.machineType = machineType;
         this.network = network;
@@ -75,10 +75,10 @@ public final class WorkerConfigArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private WorkerConfigArgs() {
-        this.diskSizeGb = Input.empty();
-        this.machineType = Input.empty();
-        this.network = Input.empty();
-        this.tag = Input.empty();
+        this.diskSizeGb = Output.empty();
+        this.machineType = Output.empty();
+        this.network = Output.empty();
+        this.tag = Output.empty();
     }
 
     public static Builder builder() {
@@ -90,10 +90,10 @@ public final class WorkerConfigArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> diskSizeGb;
-        private @Nullable Input<String> machineType;
-        private @Nullable Input<NetworkArgs> network;
-        private @Nullable Input<String> tag;
+        private @Nullable Output<String> diskSizeGb;
+        private @Nullable Output<String> machineType;
+        private @Nullable Output<NetworkArgs> network;
+        private @Nullable Output<String> tag;
 
         public Builder() {
     	      // Empty
@@ -107,43 +107,43 @@ public final class WorkerConfigArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tag = defaults.tag;
         }
 
-        public Builder diskSizeGb(@Nullable Input<String> diskSizeGb) {
+        public Builder diskSizeGb(@Nullable Output<String> diskSizeGb) {
             this.diskSizeGb = diskSizeGb;
             return this;
         }
 
         public Builder diskSizeGb(@Nullable String diskSizeGb) {
-            this.diskSizeGb = Input.ofNullable(diskSizeGb);
+            this.diskSizeGb = Output.ofNullable(diskSizeGb);
             return this;
         }
 
-        public Builder machineType(@Nullable Input<String> machineType) {
+        public Builder machineType(@Nullable Output<String> machineType) {
             this.machineType = machineType;
             return this;
         }
 
         public Builder machineType(@Nullable String machineType) {
-            this.machineType = Input.ofNullable(machineType);
+            this.machineType = Output.ofNullable(machineType);
             return this;
         }
 
-        public Builder network(@Nullable Input<NetworkArgs> network) {
+        public Builder network(@Nullable Output<NetworkArgs> network) {
             this.network = network;
             return this;
         }
 
         public Builder network(@Nullable NetworkArgs network) {
-            this.network = Input.ofNullable(network);
+            this.network = Output.ofNullable(network);
             return this;
         }
 
-        public Builder tag(@Nullable Input<String> tag) {
+        public Builder tag(@Nullable Output<String> tag) {
             this.tag = tag;
             return this;
         }
 
         public Builder tag(@Nullable String tag) {
-            this.tag = Input.ofNullable(tag);
+            this.tag = Output.ofNullable(tag);
             return this;
         }
         public WorkerConfigArgs build() {

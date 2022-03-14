@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.media.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class IPRangeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="address")
-      private final @Nullable Input<String> address;
+      private final @Nullable Output<String> address;
 
-    public Input<String> getAddress() {
-        return this.address == null ? Input.empty() : this.address;
+    public Output<String> getAddress() {
+        return this.address == null ? Output.empty() : this.address;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class IPRangeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -46,25 +46,25 @@ public final class IPRangeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="subnetPrefixLength")
-      private final @Nullable Input<Integer> subnetPrefixLength;
+      private final @Nullable Output<Integer> subnetPrefixLength;
 
-    public Input<Integer> getSubnetPrefixLength() {
-        return this.subnetPrefixLength == null ? Input.empty() : this.subnetPrefixLength;
+    public Output<Integer> getSubnetPrefixLength() {
+        return this.subnetPrefixLength == null ? Output.empty() : this.subnetPrefixLength;
     }
 
     public IPRangeArgs(
-        @Nullable Input<String> address,
-        @Nullable Input<String> name,
-        @Nullable Input<Integer> subnetPrefixLength) {
+        @Nullable Output<String> address,
+        @Nullable Output<String> name,
+        @Nullable Output<Integer> subnetPrefixLength) {
         this.address = address;
         this.name = name;
         this.subnetPrefixLength = subnetPrefixLength;
     }
 
     private IPRangeArgs() {
-        this.address = Input.empty();
-        this.name = Input.empty();
-        this.subnetPrefixLength = Input.empty();
+        this.address = Output.empty();
+        this.name = Output.empty();
+        this.subnetPrefixLength = Output.empty();
     }
 
     public static Builder builder() {
@@ -76,9 +76,9 @@ public final class IPRangeArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> address;
-        private @Nullable Input<String> name;
-        private @Nullable Input<Integer> subnetPrefixLength;
+        private @Nullable Output<String> address;
+        private @Nullable Output<String> name;
+        private @Nullable Output<Integer> subnetPrefixLength;
 
         public Builder() {
     	      // Empty
@@ -91,33 +91,33 @@ public final class IPRangeArgs extends io.pulumi.resources.ResourceArgs {
     	      this.subnetPrefixLength = defaults.subnetPrefixLength;
         }
 
-        public Builder address(@Nullable Input<String> address) {
+        public Builder address(@Nullable Output<String> address) {
             this.address = address;
             return this;
         }
 
         public Builder address(@Nullable String address) {
-            this.address = Input.ofNullable(address);
+            this.address = Output.ofNullable(address);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder subnetPrefixLength(@Nullable Input<Integer> subnetPrefixLength) {
+        public Builder subnetPrefixLength(@Nullable Output<Integer> subnetPrefixLength) {
             this.subnetPrefixLength = subnetPrefixLength;
             return this;
         }
 
         public Builder subnetPrefixLength(@Nullable Integer subnetPrefixLength) {
-            this.subnetPrefixLength = Input.ofNullable(subnetPrefixLength);
+            this.subnetPrefixLength = Output.ofNullable(subnetPrefixLength);
             return this;
         }
         public IPRangeArgs build() {

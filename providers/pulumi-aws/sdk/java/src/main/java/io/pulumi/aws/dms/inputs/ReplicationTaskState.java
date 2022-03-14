@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.dms.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -20,10 +20,10 @@ public final class ReplicationTaskState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="cdcStartPosition")
-      private final @Nullable Input<String> cdcStartPosition;
+      private final @Nullable Output<String> cdcStartPosition;
 
-    public Input<String> getCdcStartPosition() {
-        return this.cdcStartPosition == null ? Input.empty() : this.cdcStartPosition;
+    public Output<String> getCdcStartPosition() {
+        return this.cdcStartPosition == null ? Output.empty() : this.cdcStartPosition;
     }
 
     /**
@@ -31,10 +31,10 @@ public final class ReplicationTaskState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="cdcStartTime")
-      private final @Nullable Input<String> cdcStartTime;
+      private final @Nullable Output<String> cdcStartTime;
 
-    public Input<String> getCdcStartTime() {
-        return this.cdcStartTime == null ? Input.empty() : this.cdcStartTime;
+    public Output<String> getCdcStartTime() {
+        return this.cdcStartTime == null ? Output.empty() : this.cdcStartTime;
     }
 
     /**
@@ -42,10 +42,10 @@ public final class ReplicationTaskState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="migrationType")
-      private final @Nullable Input<String> migrationType;
+      private final @Nullable Output<String> migrationType;
 
-    public Input<String> getMigrationType() {
-        return this.migrationType == null ? Input.empty() : this.migrationType;
+    public Output<String> getMigrationType() {
+        return this.migrationType == null ? Output.empty() : this.migrationType;
     }
 
     /**
@@ -53,10 +53,10 @@ public final class ReplicationTaskState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="replicationInstanceArn")
-      private final @Nullable Input<String> replicationInstanceArn;
+      private final @Nullable Output<String> replicationInstanceArn;
 
-    public Input<String> getReplicationInstanceArn() {
-        return this.replicationInstanceArn == null ? Input.empty() : this.replicationInstanceArn;
+    public Output<String> getReplicationInstanceArn() {
+        return this.replicationInstanceArn == null ? Output.empty() : this.replicationInstanceArn;
     }
 
     /**
@@ -64,10 +64,10 @@ public final class ReplicationTaskState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="replicationTaskArn")
-      private final @Nullable Input<String> replicationTaskArn;
+      private final @Nullable Output<String> replicationTaskArn;
 
-    public Input<String> getReplicationTaskArn() {
-        return this.replicationTaskArn == null ? Input.empty() : this.replicationTaskArn;
+    public Output<String> getReplicationTaskArn() {
+        return this.replicationTaskArn == null ? Output.empty() : this.replicationTaskArn;
     }
 
     /**
@@ -75,10 +75,10 @@ public final class ReplicationTaskState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="replicationTaskId")
-      private final @Nullable Input<String> replicationTaskId;
+      private final @Nullable Output<String> replicationTaskId;
 
-    public Input<String> getReplicationTaskId() {
-        return this.replicationTaskId == null ? Input.empty() : this.replicationTaskId;
+    public Output<String> getReplicationTaskId() {
+        return this.replicationTaskId == null ? Output.empty() : this.replicationTaskId;
     }
 
     /**
@@ -86,10 +86,10 @@ public final class ReplicationTaskState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="replicationTaskSettings")
-      private final @Nullable Input<String> replicationTaskSettings;
+      private final @Nullable Output<String> replicationTaskSettings;
 
-    public Input<String> getReplicationTaskSettings() {
-        return this.replicationTaskSettings == null ? Input.empty() : this.replicationTaskSettings;
+    public Output<String> getReplicationTaskSettings() {
+        return this.replicationTaskSettings == null ? Output.empty() : this.replicationTaskSettings;
     }
 
     /**
@@ -97,10 +97,10 @@ public final class ReplicationTaskState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="sourceEndpointArn")
-      private final @Nullable Input<String> sourceEndpointArn;
+      private final @Nullable Output<String> sourceEndpointArn;
 
-    public Input<String> getSourceEndpointArn() {
-        return this.sourceEndpointArn == null ? Input.empty() : this.sourceEndpointArn;
+    public Output<String> getSourceEndpointArn() {
+        return this.sourceEndpointArn == null ? Output.empty() : this.sourceEndpointArn;
     }
 
     /**
@@ -108,10 +108,10 @@ public final class ReplicationTaskState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="tableMappings")
-      private final @Nullable Input<String> tableMappings;
+      private final @Nullable Output<String> tableMappings;
 
-    public Input<String> getTableMappings() {
-        return this.tableMappings == null ? Input.empty() : this.tableMappings;
+    public Output<String> getTableMappings() {
+        return this.tableMappings == null ? Output.empty() : this.tableMappings;
     }
 
     /**
@@ -119,10 +119,10 @@ public final class ReplicationTaskState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -130,10 +130,10 @@ public final class ReplicationTaskState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="tagsAll")
-      private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Input<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Input.empty() : this.tagsAll;
+    public Output<Map<String,String>> getTagsAll() {
+        return this.tagsAll == null ? Output.empty() : this.tagsAll;
     }
 
     /**
@@ -141,25 +141,25 @@ public final class ReplicationTaskState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="targetEndpointArn")
-      private final @Nullable Input<String> targetEndpointArn;
+      private final @Nullable Output<String> targetEndpointArn;
 
-    public Input<String> getTargetEndpointArn() {
-        return this.targetEndpointArn == null ? Input.empty() : this.targetEndpointArn;
+    public Output<String> getTargetEndpointArn() {
+        return this.targetEndpointArn == null ? Output.empty() : this.targetEndpointArn;
     }
 
     public ReplicationTaskState(
-        @Nullable Input<String> cdcStartPosition,
-        @Nullable Input<String> cdcStartTime,
-        @Nullable Input<String> migrationType,
-        @Nullable Input<String> replicationInstanceArn,
-        @Nullable Input<String> replicationTaskArn,
-        @Nullable Input<String> replicationTaskId,
-        @Nullable Input<String> replicationTaskSettings,
-        @Nullable Input<String> sourceEndpointArn,
-        @Nullable Input<String> tableMappings,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<Map<String,String>> tagsAll,
-        @Nullable Input<String> targetEndpointArn) {
+        @Nullable Output<String> cdcStartPosition,
+        @Nullable Output<String> cdcStartTime,
+        @Nullable Output<String> migrationType,
+        @Nullable Output<String> replicationInstanceArn,
+        @Nullable Output<String> replicationTaskArn,
+        @Nullable Output<String> replicationTaskId,
+        @Nullable Output<String> replicationTaskSettings,
+        @Nullable Output<String> sourceEndpointArn,
+        @Nullable Output<String> tableMappings,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<Map<String,String>> tagsAll,
+        @Nullable Output<String> targetEndpointArn) {
         this.cdcStartPosition = cdcStartPosition;
         this.cdcStartTime = cdcStartTime;
         this.migrationType = migrationType;
@@ -175,18 +175,18 @@ public final class ReplicationTaskState extends io.pulumi.resources.ResourceArgs
     }
 
     private ReplicationTaskState() {
-        this.cdcStartPosition = Input.empty();
-        this.cdcStartTime = Input.empty();
-        this.migrationType = Input.empty();
-        this.replicationInstanceArn = Input.empty();
-        this.replicationTaskArn = Input.empty();
-        this.replicationTaskId = Input.empty();
-        this.replicationTaskSettings = Input.empty();
-        this.sourceEndpointArn = Input.empty();
-        this.tableMappings = Input.empty();
-        this.tags = Input.empty();
-        this.tagsAll = Input.empty();
-        this.targetEndpointArn = Input.empty();
+        this.cdcStartPosition = Output.empty();
+        this.cdcStartTime = Output.empty();
+        this.migrationType = Output.empty();
+        this.replicationInstanceArn = Output.empty();
+        this.replicationTaskArn = Output.empty();
+        this.replicationTaskId = Output.empty();
+        this.replicationTaskSettings = Output.empty();
+        this.sourceEndpointArn = Output.empty();
+        this.tableMappings = Output.empty();
+        this.tags = Output.empty();
+        this.tagsAll = Output.empty();
+        this.targetEndpointArn = Output.empty();
     }
 
     public static Builder builder() {
@@ -198,18 +198,18 @@ public final class ReplicationTaskState extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private @Nullable Input<String> cdcStartPosition;
-        private @Nullable Input<String> cdcStartTime;
-        private @Nullable Input<String> migrationType;
-        private @Nullable Input<String> replicationInstanceArn;
-        private @Nullable Input<String> replicationTaskArn;
-        private @Nullable Input<String> replicationTaskId;
-        private @Nullable Input<String> replicationTaskSettings;
-        private @Nullable Input<String> sourceEndpointArn;
-        private @Nullable Input<String> tableMappings;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<Map<String,String>> tagsAll;
-        private @Nullable Input<String> targetEndpointArn;
+        private @Nullable Output<String> cdcStartPosition;
+        private @Nullable Output<String> cdcStartTime;
+        private @Nullable Output<String> migrationType;
+        private @Nullable Output<String> replicationInstanceArn;
+        private @Nullable Output<String> replicationTaskArn;
+        private @Nullable Output<String> replicationTaskId;
+        private @Nullable Output<String> replicationTaskSettings;
+        private @Nullable Output<String> sourceEndpointArn;
+        private @Nullable Output<String> tableMappings;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<Map<String,String>> tagsAll;
+        private @Nullable Output<String> targetEndpointArn;
 
         public Builder() {
     	      // Empty
@@ -231,123 +231,123 @@ public final class ReplicationTaskState extends io.pulumi.resources.ResourceArgs
     	      this.targetEndpointArn = defaults.targetEndpointArn;
         }
 
-        public Builder cdcStartPosition(@Nullable Input<String> cdcStartPosition) {
+        public Builder cdcStartPosition(@Nullable Output<String> cdcStartPosition) {
             this.cdcStartPosition = cdcStartPosition;
             return this;
         }
 
         public Builder cdcStartPosition(@Nullable String cdcStartPosition) {
-            this.cdcStartPosition = Input.ofNullable(cdcStartPosition);
+            this.cdcStartPosition = Output.ofNullable(cdcStartPosition);
             return this;
         }
 
-        public Builder cdcStartTime(@Nullable Input<String> cdcStartTime) {
+        public Builder cdcStartTime(@Nullable Output<String> cdcStartTime) {
             this.cdcStartTime = cdcStartTime;
             return this;
         }
 
         public Builder cdcStartTime(@Nullable String cdcStartTime) {
-            this.cdcStartTime = Input.ofNullable(cdcStartTime);
+            this.cdcStartTime = Output.ofNullable(cdcStartTime);
             return this;
         }
 
-        public Builder migrationType(@Nullable Input<String> migrationType) {
+        public Builder migrationType(@Nullable Output<String> migrationType) {
             this.migrationType = migrationType;
             return this;
         }
 
         public Builder migrationType(@Nullable String migrationType) {
-            this.migrationType = Input.ofNullable(migrationType);
+            this.migrationType = Output.ofNullable(migrationType);
             return this;
         }
 
-        public Builder replicationInstanceArn(@Nullable Input<String> replicationInstanceArn) {
+        public Builder replicationInstanceArn(@Nullable Output<String> replicationInstanceArn) {
             this.replicationInstanceArn = replicationInstanceArn;
             return this;
         }
 
         public Builder replicationInstanceArn(@Nullable String replicationInstanceArn) {
-            this.replicationInstanceArn = Input.ofNullable(replicationInstanceArn);
+            this.replicationInstanceArn = Output.ofNullable(replicationInstanceArn);
             return this;
         }
 
-        public Builder replicationTaskArn(@Nullable Input<String> replicationTaskArn) {
+        public Builder replicationTaskArn(@Nullable Output<String> replicationTaskArn) {
             this.replicationTaskArn = replicationTaskArn;
             return this;
         }
 
         public Builder replicationTaskArn(@Nullable String replicationTaskArn) {
-            this.replicationTaskArn = Input.ofNullable(replicationTaskArn);
+            this.replicationTaskArn = Output.ofNullable(replicationTaskArn);
             return this;
         }
 
-        public Builder replicationTaskId(@Nullable Input<String> replicationTaskId) {
+        public Builder replicationTaskId(@Nullable Output<String> replicationTaskId) {
             this.replicationTaskId = replicationTaskId;
             return this;
         }
 
         public Builder replicationTaskId(@Nullable String replicationTaskId) {
-            this.replicationTaskId = Input.ofNullable(replicationTaskId);
+            this.replicationTaskId = Output.ofNullable(replicationTaskId);
             return this;
         }
 
-        public Builder replicationTaskSettings(@Nullable Input<String> replicationTaskSettings) {
+        public Builder replicationTaskSettings(@Nullable Output<String> replicationTaskSettings) {
             this.replicationTaskSettings = replicationTaskSettings;
             return this;
         }
 
         public Builder replicationTaskSettings(@Nullable String replicationTaskSettings) {
-            this.replicationTaskSettings = Input.ofNullable(replicationTaskSettings);
+            this.replicationTaskSettings = Output.ofNullable(replicationTaskSettings);
             return this;
         }
 
-        public Builder sourceEndpointArn(@Nullable Input<String> sourceEndpointArn) {
+        public Builder sourceEndpointArn(@Nullable Output<String> sourceEndpointArn) {
             this.sourceEndpointArn = sourceEndpointArn;
             return this;
         }
 
         public Builder sourceEndpointArn(@Nullable String sourceEndpointArn) {
-            this.sourceEndpointArn = Input.ofNullable(sourceEndpointArn);
+            this.sourceEndpointArn = Output.ofNullable(sourceEndpointArn);
             return this;
         }
 
-        public Builder tableMappings(@Nullable Input<String> tableMappings) {
+        public Builder tableMappings(@Nullable Output<String> tableMappings) {
             this.tableMappings = tableMappings;
             return this;
         }
 
         public Builder tableMappings(@Nullable String tableMappings) {
-            this.tableMappings = Input.ofNullable(tableMappings);
+            this.tableMappings = Output.ofNullable(tableMappings);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Input.ofNullable(tagsAll);
+            this.tagsAll = Output.ofNullable(tagsAll);
             return this;
         }
 
-        public Builder targetEndpointArn(@Nullable Input<String> targetEndpointArn) {
+        public Builder targetEndpointArn(@Nullable Output<String> targetEndpointArn) {
             this.targetEndpointArn = targetEndpointArn;
             return this;
         }
 
         public Builder targetEndpointArn(@Nullable String targetEndpointArn) {
-            this.targetEndpointArn = Input.ofNullable(targetEndpointArn);
+            this.targetEndpointArn = Output.ofNullable(targetEndpointArn);
             return this;
         }
         public ReplicationTaskState build() {

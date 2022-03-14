@@ -5,7 +5,7 @@ package io.pulumi.azurenative.costmanagement.inputs;
 
 import io.pulumi.azurenative.costmanagement.enums.ReportColumnType;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -24,9 +24,9 @@ public final class ReportGroupingArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name", required=true)
-      private final Input<String> name;
+      private final Output<String> name;
 
-    public Input<String> getName() {
+    public Output<String> getName() {
         return this.name;
     }
 
@@ -35,22 +35,22 @@ public final class ReportGroupingArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<Either<String,ReportColumnType>> type;
+      private final Output<Either<String,ReportColumnType>> type;
 
-    public Input<Either<String,ReportColumnType>> getType() {
+    public Output<Either<String,ReportColumnType>> getType() {
         return this.type;
     }
 
     public ReportGroupingArgs(
-        Input<String> name,
-        Input<Either<String,ReportColumnType>> type) {
+        Output<String> name,
+        Output<Either<String,ReportColumnType>> type) {
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
         this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
     }
 
     private ReportGroupingArgs() {
-        this.name = Input.empty();
-        this.type = Input.empty();
+        this.name = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class ReportGroupingArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> name;
-        private Input<Either<String,ReportColumnType>> type;
+        private Output<String> name;
+        private Output<Either<String,ReportColumnType>> type;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class ReportGroupingArgs extends io.pulumi.resources.ResourceArgs {
     	      this.type = defaults.type;
         }
 
-        public Builder name(Input<String> name) {
+        public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(String name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder type(Input<Either<String,ReportColumnType>> type) {
+        public Builder type(Output<Either<String,ReportColumnType>> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(Either<String,ReportColumnType> type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
         public ReportGroupingArgs build() {

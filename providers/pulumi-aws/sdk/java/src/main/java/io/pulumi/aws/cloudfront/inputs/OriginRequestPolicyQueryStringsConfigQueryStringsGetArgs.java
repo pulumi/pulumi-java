@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.cloudfront.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -16,18 +16,18 @@ public final class OriginRequestPolicyQueryStringsConfigQueryStringsGetArgs exte
     public static final OriginRequestPolicyQueryStringsConfigQueryStringsGetArgs Empty = new OriginRequestPolicyQueryStringsConfigQueryStringsGetArgs();
 
     @InputImport(name="items")
-      private final @Nullable Input<List<String>> items;
+      private final @Nullable Output<List<String>> items;
 
-    public Input<List<String>> getItems() {
-        return this.items == null ? Input.empty() : this.items;
+    public Output<List<String>> getItems() {
+        return this.items == null ? Output.empty() : this.items;
     }
 
-    public OriginRequestPolicyQueryStringsConfigQueryStringsGetArgs(@Nullable Input<List<String>> items) {
+    public OriginRequestPolicyQueryStringsConfigQueryStringsGetArgs(@Nullable Output<List<String>> items) {
         this.items = items;
     }
 
     private OriginRequestPolicyQueryStringsConfigQueryStringsGetArgs() {
-        this.items = Input.empty();
+        this.items = Output.empty();
     }
 
     public static Builder builder() {
@@ -39,7 +39,7 @@ public final class OriginRequestPolicyQueryStringsConfigQueryStringsGetArgs exte
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> items;
+        private @Nullable Output<List<String>> items;
 
         public Builder() {
     	      // Empty
@@ -50,13 +50,13 @@ public final class OriginRequestPolicyQueryStringsConfigQueryStringsGetArgs exte
     	      this.items = defaults.items;
         }
 
-        public Builder items(@Nullable Input<List<String>> items) {
+        public Builder items(@Nullable Output<List<String>> items) {
             this.items = items;
             return this;
         }
 
         public Builder items(@Nullable List<String> items) {
-            this.items = Input.ofNullable(items);
+            this.items = Output.ofNullable(items);
             return this;
         }
         public OriginRequestPolicyQueryStringsConfigQueryStringsGetArgs build() {

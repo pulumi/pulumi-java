@@ -4,7 +4,7 @@
 package io.pulumi.aws.sagemaker;
 
 import io.pulumi.aws.sagemaker.inputs.AppResourceSpecArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -21,9 +21,9 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="appName", required=true)
-      private final Input<String> appName;
+      private final Output<String> appName;
 
-    public Input<String> getAppName() {
+    public Output<String> getAppName() {
         return this.appName;
     }
 
@@ -32,9 +32,9 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="appType", required=true)
-      private final Input<String> appType;
+      private final Output<String> appType;
 
-    public Input<String> getAppType() {
+    public Output<String> getAppType() {
         return this.appType;
     }
 
@@ -43,9 +43,9 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="domainId", required=true)
-      private final Input<String> domainId;
+      private final Output<String> domainId;
 
-    public Input<String> getDomainId() {
+    public Output<String> getDomainId() {
         return this.domainId;
     }
 
@@ -54,10 +54,10 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceSpec")
-      private final @Nullable Input<AppResourceSpecArgs> resourceSpec;
+      private final @Nullable Output<AppResourceSpecArgs> resourceSpec;
 
-    public Input<AppResourceSpecArgs> getResourceSpec() {
-        return this.resourceSpec == null ? Input.empty() : this.resourceSpec;
+    public Output<AppResourceSpecArgs> getResourceSpec() {
+        return this.resourceSpec == null ? Output.empty() : this.resourceSpec;
     }
 
     /**
@@ -65,10 +65,10 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -76,19 +76,19 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="userProfileName", required=true)
-      private final Input<String> userProfileName;
+      private final Output<String> userProfileName;
 
-    public Input<String> getUserProfileName() {
+    public Output<String> getUserProfileName() {
         return this.userProfileName;
     }
 
     public AppArgs(
-        Input<String> appName,
-        Input<String> appType,
-        Input<String> domainId,
-        @Nullable Input<AppResourceSpecArgs> resourceSpec,
-        @Nullable Input<Map<String,String>> tags,
-        Input<String> userProfileName) {
+        Output<String> appName,
+        Output<String> appType,
+        Output<String> domainId,
+        @Nullable Output<AppResourceSpecArgs> resourceSpec,
+        @Nullable Output<Map<String,String>> tags,
+        Output<String> userProfileName) {
         this.appName = Objects.requireNonNull(appName, "expected parameter 'appName' to be non-null");
         this.appType = Objects.requireNonNull(appType, "expected parameter 'appType' to be non-null");
         this.domainId = Objects.requireNonNull(domainId, "expected parameter 'domainId' to be non-null");
@@ -98,12 +98,12 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private AppArgs() {
-        this.appName = Input.empty();
-        this.appType = Input.empty();
-        this.domainId = Input.empty();
-        this.resourceSpec = Input.empty();
-        this.tags = Input.empty();
-        this.userProfileName = Input.empty();
+        this.appName = Output.empty();
+        this.appType = Output.empty();
+        this.domainId = Output.empty();
+        this.resourceSpec = Output.empty();
+        this.tags = Output.empty();
+        this.userProfileName = Output.empty();
     }
 
     public static Builder builder() {
@@ -115,12 +115,12 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> appName;
-        private Input<String> appType;
-        private Input<String> domainId;
-        private @Nullable Input<AppResourceSpecArgs> resourceSpec;
-        private @Nullable Input<Map<String,String>> tags;
-        private Input<String> userProfileName;
+        private Output<String> appName;
+        private Output<String> appType;
+        private Output<String> domainId;
+        private @Nullable Output<AppResourceSpecArgs> resourceSpec;
+        private @Nullable Output<Map<String,String>> tags;
+        private Output<String> userProfileName;
 
         public Builder() {
     	      // Empty
@@ -136,63 +136,63 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
     	      this.userProfileName = defaults.userProfileName;
         }
 
-        public Builder appName(Input<String> appName) {
+        public Builder appName(Output<String> appName) {
             this.appName = Objects.requireNonNull(appName);
             return this;
         }
 
         public Builder appName(String appName) {
-            this.appName = Input.of(Objects.requireNonNull(appName));
+            this.appName = Output.of(Objects.requireNonNull(appName));
             return this;
         }
 
-        public Builder appType(Input<String> appType) {
+        public Builder appType(Output<String> appType) {
             this.appType = Objects.requireNonNull(appType);
             return this;
         }
 
         public Builder appType(String appType) {
-            this.appType = Input.of(Objects.requireNonNull(appType));
+            this.appType = Output.of(Objects.requireNonNull(appType));
             return this;
         }
 
-        public Builder domainId(Input<String> domainId) {
+        public Builder domainId(Output<String> domainId) {
             this.domainId = Objects.requireNonNull(domainId);
             return this;
         }
 
         public Builder domainId(String domainId) {
-            this.domainId = Input.of(Objects.requireNonNull(domainId));
+            this.domainId = Output.of(Objects.requireNonNull(domainId));
             return this;
         }
 
-        public Builder resourceSpec(@Nullable Input<AppResourceSpecArgs> resourceSpec) {
+        public Builder resourceSpec(@Nullable Output<AppResourceSpecArgs> resourceSpec) {
             this.resourceSpec = resourceSpec;
             return this;
         }
 
         public Builder resourceSpec(@Nullable AppResourceSpecArgs resourceSpec) {
-            this.resourceSpec = Input.ofNullable(resourceSpec);
+            this.resourceSpec = Output.ofNullable(resourceSpec);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder userProfileName(Input<String> userProfileName) {
+        public Builder userProfileName(Output<String> userProfileName) {
             this.userProfileName = Objects.requireNonNull(userProfileName);
             return this;
         }
 
         public Builder userProfileName(String userProfileName) {
-            this.userProfileName = Input.of(Objects.requireNonNull(userProfileName));
+            this.userProfileName = Output.of(Objects.requireNonNull(userProfileName));
             return this;
         }
         public AppArgs build() {

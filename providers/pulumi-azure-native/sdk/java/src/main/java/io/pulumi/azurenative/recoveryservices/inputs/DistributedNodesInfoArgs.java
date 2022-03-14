@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.recoveryservices.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class DistributedNodesInfoArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="nodeName")
-      private final @Nullable Input<String> nodeName;
+      private final @Nullable Output<String> nodeName;
 
-    public Input<String> getNodeName() {
-        return this.nodeName == null ? Input.empty() : this.nodeName;
+    public Output<String> getNodeName() {
+        return this.nodeName == null ? Output.empty() : this.nodeName;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class DistributedNodesInfoArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="status")
-      private final @Nullable Input<String> status;
+      private final @Nullable Output<String> status;
 
-    public Input<String> getStatus() {
-        return this.status == null ? Input.empty() : this.status;
+    public Output<String> getStatus() {
+        return this.status == null ? Output.empty() : this.status;
     }
 
     public DistributedNodesInfoArgs(
-        @Nullable Input<String> nodeName,
-        @Nullable Input<String> status) {
+        @Nullable Output<String> nodeName,
+        @Nullable Output<String> status) {
         this.nodeName = nodeName;
         this.status = status;
     }
 
     private DistributedNodesInfoArgs() {
-        this.nodeName = Input.empty();
-        this.status = Input.empty();
+        this.nodeName = Output.empty();
+        this.status = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class DistributedNodesInfoArgs extends io.pulumi.resources.Resource
     }
 
     public static final class Builder {
-        private @Nullable Input<String> nodeName;
-        private @Nullable Input<String> status;
+        private @Nullable Output<String> nodeName;
+        private @Nullable Output<String> status;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class DistributedNodesInfoArgs extends io.pulumi.resources.Resource
     	      this.status = defaults.status;
         }
 
-        public Builder nodeName(@Nullable Input<String> nodeName) {
+        public Builder nodeName(@Nullable Output<String> nodeName) {
             this.nodeName = nodeName;
             return this;
         }
 
         public Builder nodeName(@Nullable String nodeName) {
-            this.nodeName = Input.ofNullable(nodeName);
+            this.nodeName = Output.ofNullable(nodeName);
             return this;
         }
 
-        public Builder status(@Nullable Input<String> status) {
+        public Builder status(@Nullable Output<String> status) {
             this.status = status;
             return this;
         }
 
         public Builder status(@Nullable String status) {
-            this.status = Input.ofNullable(status);
+            this.status = Output.ofNullable(status);
             return this;
         }
         public DistributedNodesInfoArgs build() {

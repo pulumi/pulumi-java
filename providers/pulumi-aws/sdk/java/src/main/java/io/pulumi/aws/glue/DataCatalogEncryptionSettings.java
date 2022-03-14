@@ -7,7 +7,6 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.glue.DataCatalogEncryptionSettingsArgs;
 import io.pulumi.aws.glue.inputs.DataCatalogEncryptionSettingsState;
 import io.pulumi.aws.glue.outputs.DataCatalogEncryptionSettingsDataCatalogEncryptionSettings;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -97,14 +96,14 @@ public class DataCatalogEncryptionSettings extends io.pulumi.resources.CustomRes
      * @param options A bag of options that control this resource's behavior.
      */
     public DataCatalogEncryptionSettings(String name, DataCatalogEncryptionSettingsArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:glue/dataCatalogEncryptionSettings:DataCatalogEncryptionSettings", name, args == null ? DataCatalogEncryptionSettingsArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws:glue/dataCatalogEncryptionSettings:DataCatalogEncryptionSettings", name, args == null ? DataCatalogEncryptionSettingsArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private DataCatalogEncryptionSettings(String name, Input<String> id, @Nullable DataCatalogEncryptionSettingsState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private DataCatalogEncryptionSettings(String name, Output<String> id, @Nullable DataCatalogEncryptionSettingsState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws:glue/dataCatalogEncryptionSettings:DataCatalogEncryptionSettings", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -120,7 +119,7 @@ public class DataCatalogEncryptionSettings extends io.pulumi.resources.CustomRes
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static DataCatalogEncryptionSettings get(String name, Input<String> id, @Nullable DataCatalogEncryptionSettingsState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static DataCatalogEncryptionSettings get(String name, Output<String> id, @Nullable DataCatalogEncryptionSettingsState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new DataCatalogEncryptionSettings(name, id, state, options);
     }
 }

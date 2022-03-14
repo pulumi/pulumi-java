@@ -6,7 +6,7 @@ package io.pulumi.awsnative.wafv2.inputs;
 import io.pulumi.awsnative.wafv2.enums.LoggingConfigurationFieldToMatchJsonBodyPropertiesInvalidFallbackBehavior;
 import io.pulumi.awsnative.wafv2.enums.LoggingConfigurationFieldToMatchJsonBodyPropertiesMatchScope;
 import io.pulumi.awsnative.wafv2.inputs.LoggingConfigurationFieldToMatchJsonBodyPropertiesMatchPatternPropertiesArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,10 +25,10 @@ public final class LoggingConfigurationFieldToMatchJsonBodyPropertiesArgs extend
      * 
      */
     @InputImport(name="invalidFallbackBehavior")
-      private final @Nullable Input<LoggingConfigurationFieldToMatchJsonBodyPropertiesInvalidFallbackBehavior> invalidFallbackBehavior;
+      private final @Nullable Output<LoggingConfigurationFieldToMatchJsonBodyPropertiesInvalidFallbackBehavior> invalidFallbackBehavior;
 
-    public Input<LoggingConfigurationFieldToMatchJsonBodyPropertiesInvalidFallbackBehavior> getInvalidFallbackBehavior() {
-        return this.invalidFallbackBehavior == null ? Input.empty() : this.invalidFallbackBehavior;
+    public Output<LoggingConfigurationFieldToMatchJsonBodyPropertiesInvalidFallbackBehavior> getInvalidFallbackBehavior() {
+        return this.invalidFallbackBehavior == null ? Output.empty() : this.invalidFallbackBehavior;
     }
 
     /**
@@ -36,9 +36,9 @@ public final class LoggingConfigurationFieldToMatchJsonBodyPropertiesArgs extend
      * 
      */
     @InputImport(name="matchPattern", required=true)
-      private final Input<LoggingConfigurationFieldToMatchJsonBodyPropertiesMatchPatternPropertiesArgs> matchPattern;
+      private final Output<LoggingConfigurationFieldToMatchJsonBodyPropertiesMatchPatternPropertiesArgs> matchPattern;
 
-    public Input<LoggingConfigurationFieldToMatchJsonBodyPropertiesMatchPatternPropertiesArgs> getMatchPattern() {
+    public Output<LoggingConfigurationFieldToMatchJsonBodyPropertiesMatchPatternPropertiesArgs> getMatchPattern() {
         return this.matchPattern;
     }
 
@@ -47,25 +47,25 @@ public final class LoggingConfigurationFieldToMatchJsonBodyPropertiesArgs extend
      * 
      */
     @InputImport(name="matchScope", required=true)
-      private final Input<LoggingConfigurationFieldToMatchJsonBodyPropertiesMatchScope> matchScope;
+      private final Output<LoggingConfigurationFieldToMatchJsonBodyPropertiesMatchScope> matchScope;
 
-    public Input<LoggingConfigurationFieldToMatchJsonBodyPropertiesMatchScope> getMatchScope() {
+    public Output<LoggingConfigurationFieldToMatchJsonBodyPropertiesMatchScope> getMatchScope() {
         return this.matchScope;
     }
 
     public LoggingConfigurationFieldToMatchJsonBodyPropertiesArgs(
-        @Nullable Input<LoggingConfigurationFieldToMatchJsonBodyPropertiesInvalidFallbackBehavior> invalidFallbackBehavior,
-        Input<LoggingConfigurationFieldToMatchJsonBodyPropertiesMatchPatternPropertiesArgs> matchPattern,
-        Input<LoggingConfigurationFieldToMatchJsonBodyPropertiesMatchScope> matchScope) {
+        @Nullable Output<LoggingConfigurationFieldToMatchJsonBodyPropertiesInvalidFallbackBehavior> invalidFallbackBehavior,
+        Output<LoggingConfigurationFieldToMatchJsonBodyPropertiesMatchPatternPropertiesArgs> matchPattern,
+        Output<LoggingConfigurationFieldToMatchJsonBodyPropertiesMatchScope> matchScope) {
         this.invalidFallbackBehavior = invalidFallbackBehavior;
         this.matchPattern = Objects.requireNonNull(matchPattern, "expected parameter 'matchPattern' to be non-null");
         this.matchScope = Objects.requireNonNull(matchScope, "expected parameter 'matchScope' to be non-null");
     }
 
     private LoggingConfigurationFieldToMatchJsonBodyPropertiesArgs() {
-        this.invalidFallbackBehavior = Input.empty();
-        this.matchPattern = Input.empty();
-        this.matchScope = Input.empty();
+        this.invalidFallbackBehavior = Output.empty();
+        this.matchPattern = Output.empty();
+        this.matchScope = Output.empty();
     }
 
     public static Builder builder() {
@@ -77,9 +77,9 @@ public final class LoggingConfigurationFieldToMatchJsonBodyPropertiesArgs extend
     }
 
     public static final class Builder {
-        private @Nullable Input<LoggingConfigurationFieldToMatchJsonBodyPropertiesInvalidFallbackBehavior> invalidFallbackBehavior;
-        private Input<LoggingConfigurationFieldToMatchJsonBodyPropertiesMatchPatternPropertiesArgs> matchPattern;
-        private Input<LoggingConfigurationFieldToMatchJsonBodyPropertiesMatchScope> matchScope;
+        private @Nullable Output<LoggingConfigurationFieldToMatchJsonBodyPropertiesInvalidFallbackBehavior> invalidFallbackBehavior;
+        private Output<LoggingConfigurationFieldToMatchJsonBodyPropertiesMatchPatternPropertiesArgs> matchPattern;
+        private Output<LoggingConfigurationFieldToMatchJsonBodyPropertiesMatchScope> matchScope;
 
         public Builder() {
     	      // Empty
@@ -92,33 +92,33 @@ public final class LoggingConfigurationFieldToMatchJsonBodyPropertiesArgs extend
     	      this.matchScope = defaults.matchScope;
         }
 
-        public Builder invalidFallbackBehavior(@Nullable Input<LoggingConfigurationFieldToMatchJsonBodyPropertiesInvalidFallbackBehavior> invalidFallbackBehavior) {
+        public Builder invalidFallbackBehavior(@Nullable Output<LoggingConfigurationFieldToMatchJsonBodyPropertiesInvalidFallbackBehavior> invalidFallbackBehavior) {
             this.invalidFallbackBehavior = invalidFallbackBehavior;
             return this;
         }
 
         public Builder invalidFallbackBehavior(@Nullable LoggingConfigurationFieldToMatchJsonBodyPropertiesInvalidFallbackBehavior invalidFallbackBehavior) {
-            this.invalidFallbackBehavior = Input.ofNullable(invalidFallbackBehavior);
+            this.invalidFallbackBehavior = Output.ofNullable(invalidFallbackBehavior);
             return this;
         }
 
-        public Builder matchPattern(Input<LoggingConfigurationFieldToMatchJsonBodyPropertiesMatchPatternPropertiesArgs> matchPattern) {
+        public Builder matchPattern(Output<LoggingConfigurationFieldToMatchJsonBodyPropertiesMatchPatternPropertiesArgs> matchPattern) {
             this.matchPattern = Objects.requireNonNull(matchPattern);
             return this;
         }
 
         public Builder matchPattern(LoggingConfigurationFieldToMatchJsonBodyPropertiesMatchPatternPropertiesArgs matchPattern) {
-            this.matchPattern = Input.of(Objects.requireNonNull(matchPattern));
+            this.matchPattern = Output.of(Objects.requireNonNull(matchPattern));
             return this;
         }
 
-        public Builder matchScope(Input<LoggingConfigurationFieldToMatchJsonBodyPropertiesMatchScope> matchScope) {
+        public Builder matchScope(Output<LoggingConfigurationFieldToMatchJsonBodyPropertiesMatchScope> matchScope) {
             this.matchScope = Objects.requireNonNull(matchScope);
             return this;
         }
 
         public Builder matchScope(LoggingConfigurationFieldToMatchJsonBodyPropertiesMatchScope matchScope) {
-            this.matchScope = Input.of(Objects.requireNonNull(matchScope));
+            this.matchScope = Output.of(Objects.requireNonNull(matchScope));
             return this;
         }
         public LoggingConfigurationFieldToMatchJsonBodyPropertiesArgs build() {

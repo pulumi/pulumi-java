@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.domains_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.domains_v1.enums.ManagementSettingsTransferLockState;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class ManagementSettingsArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="transferLockState")
-      private final @Nullable Input<ManagementSettingsTransferLockState> transferLockState;
+      private final @Nullable Output<ManagementSettingsTransferLockState> transferLockState;
 
-    public Input<ManagementSettingsTransferLockState> getTransferLockState() {
-        return this.transferLockState == null ? Input.empty() : this.transferLockState;
+    public Output<ManagementSettingsTransferLockState> getTransferLockState() {
+        return this.transferLockState == null ? Output.empty() : this.transferLockState;
     }
 
-    public ManagementSettingsArgs(@Nullable Input<ManagementSettingsTransferLockState> transferLockState) {
+    public ManagementSettingsArgs(@Nullable Output<ManagementSettingsTransferLockState> transferLockState) {
         this.transferLockState = transferLockState;
     }
 
     private ManagementSettingsArgs() {
-        this.transferLockState = Input.empty();
+        this.transferLockState = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class ManagementSettingsArgs extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private @Nullable Input<ManagementSettingsTransferLockState> transferLockState;
+        private @Nullable Output<ManagementSettingsTransferLockState> transferLockState;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class ManagementSettingsArgs extends io.pulumi.resources.ResourceAr
     	      this.transferLockState = defaults.transferLockState;
         }
 
-        public Builder transferLockState(@Nullable Input<ManagementSettingsTransferLockState> transferLockState) {
+        public Builder transferLockState(@Nullable Output<ManagementSettingsTransferLockState> transferLockState) {
             this.transferLockState = transferLockState;
             return this;
         }
 
         public Builder transferLockState(@Nullable ManagementSettingsTransferLockState transferLockState) {
-            this.transferLockState = Input.ofNullable(transferLockState);
+            this.transferLockState = Output.ofNullable(transferLockState);
             return this;
         }
         public ManagementSettingsArgs build() {

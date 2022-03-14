@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.bigquery.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -20,9 +20,9 @@ public final class TableViewArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="query", required=true)
-      private final Input<String> query;
+      private final Output<String> query;
 
-    public Input<String> getQuery() {
+    public Output<String> getQuery() {
         return this.query;
     }
 
@@ -32,22 +32,22 @@ public final class TableViewArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="useLegacySql")
-      private final @Nullable Input<Boolean> useLegacySql;
+      private final @Nullable Output<Boolean> useLegacySql;
 
-    public Input<Boolean> getUseLegacySql() {
-        return this.useLegacySql == null ? Input.empty() : this.useLegacySql;
+    public Output<Boolean> getUseLegacySql() {
+        return this.useLegacySql == null ? Output.empty() : this.useLegacySql;
     }
 
     public TableViewArgs(
-        Input<String> query,
-        @Nullable Input<Boolean> useLegacySql) {
+        Output<String> query,
+        @Nullable Output<Boolean> useLegacySql) {
         this.query = Objects.requireNonNull(query, "expected parameter 'query' to be non-null");
         this.useLegacySql = useLegacySql;
     }
 
     private TableViewArgs() {
-        this.query = Input.empty();
-        this.useLegacySql = Input.empty();
+        this.query = Output.empty();
+        this.useLegacySql = Output.empty();
     }
 
     public static Builder builder() {
@@ -59,8 +59,8 @@ public final class TableViewArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> query;
-        private @Nullable Input<Boolean> useLegacySql;
+        private Output<String> query;
+        private @Nullable Output<Boolean> useLegacySql;
 
         public Builder() {
     	      // Empty
@@ -72,23 +72,23 @@ public final class TableViewArgs extends io.pulumi.resources.ResourceArgs {
     	      this.useLegacySql = defaults.useLegacySql;
         }
 
-        public Builder query(Input<String> query) {
+        public Builder query(Output<String> query) {
             this.query = Objects.requireNonNull(query);
             return this;
         }
 
         public Builder query(String query) {
-            this.query = Input.of(Objects.requireNonNull(query));
+            this.query = Output.of(Objects.requireNonNull(query));
             return this;
         }
 
-        public Builder useLegacySql(@Nullable Input<Boolean> useLegacySql) {
+        public Builder useLegacySql(@Nullable Output<Boolean> useLegacySql) {
             this.useLegacySql = useLegacySql;
             return this;
         }
 
         public Builder useLegacySql(@Nullable Boolean useLegacySql) {
-            this.useLegacySql = Input.ofNullable(useLegacySql);
+            this.useLegacySql = Output.ofNullable(useLegacySql);
             return this;
         }
         public TableViewArgs build() {

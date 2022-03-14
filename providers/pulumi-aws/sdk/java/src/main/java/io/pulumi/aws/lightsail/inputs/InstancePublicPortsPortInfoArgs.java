@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.lightsail.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -21,10 +21,10 @@ public final class InstancePublicPortsPortInfoArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="cidrs")
-      private final @Nullable Input<List<String>> cidrs;
+      private final @Nullable Output<List<String>> cidrs;
 
-    public Input<List<String>> getCidrs() {
-        return this.cidrs == null ? Input.empty() : this.cidrs;
+    public Output<List<String>> getCidrs() {
+        return this.cidrs == null ? Output.empty() : this.cidrs;
     }
 
     /**
@@ -32,9 +32,9 @@ public final class InstancePublicPortsPortInfoArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="fromPort", required=true)
-      private final Input<Integer> fromPort;
+      private final Output<Integer> fromPort;
 
-    public Input<Integer> getFromPort() {
+    public Output<Integer> getFromPort() {
         return this.fromPort;
     }
 
@@ -43,9 +43,9 @@ public final class InstancePublicPortsPortInfoArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="protocol", required=true)
-      private final Input<String> protocol;
+      private final Output<String> protocol;
 
-    public Input<String> getProtocol() {
+    public Output<String> getProtocol() {
         return this.protocol;
     }
 
@@ -54,17 +54,17 @@ public final class InstancePublicPortsPortInfoArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="toPort", required=true)
-      private final Input<Integer> toPort;
+      private final Output<Integer> toPort;
 
-    public Input<Integer> getToPort() {
+    public Output<Integer> getToPort() {
         return this.toPort;
     }
 
     public InstancePublicPortsPortInfoArgs(
-        @Nullable Input<List<String>> cidrs,
-        Input<Integer> fromPort,
-        Input<String> protocol,
-        Input<Integer> toPort) {
+        @Nullable Output<List<String>> cidrs,
+        Output<Integer> fromPort,
+        Output<String> protocol,
+        Output<Integer> toPort) {
         this.cidrs = cidrs;
         this.fromPort = Objects.requireNonNull(fromPort, "expected parameter 'fromPort' to be non-null");
         this.protocol = Objects.requireNonNull(protocol, "expected parameter 'protocol' to be non-null");
@@ -72,10 +72,10 @@ public final class InstancePublicPortsPortInfoArgs extends io.pulumi.resources.R
     }
 
     private InstancePublicPortsPortInfoArgs() {
-        this.cidrs = Input.empty();
-        this.fromPort = Input.empty();
-        this.protocol = Input.empty();
-        this.toPort = Input.empty();
+        this.cidrs = Output.empty();
+        this.fromPort = Output.empty();
+        this.protocol = Output.empty();
+        this.toPort = Output.empty();
     }
 
     public static Builder builder() {
@@ -87,10 +87,10 @@ public final class InstancePublicPortsPortInfoArgs extends io.pulumi.resources.R
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> cidrs;
-        private Input<Integer> fromPort;
-        private Input<String> protocol;
-        private Input<Integer> toPort;
+        private @Nullable Output<List<String>> cidrs;
+        private Output<Integer> fromPort;
+        private Output<String> protocol;
+        private Output<Integer> toPort;
 
         public Builder() {
     	      // Empty
@@ -104,43 +104,43 @@ public final class InstancePublicPortsPortInfoArgs extends io.pulumi.resources.R
     	      this.toPort = defaults.toPort;
         }
 
-        public Builder cidrs(@Nullable Input<List<String>> cidrs) {
+        public Builder cidrs(@Nullable Output<List<String>> cidrs) {
             this.cidrs = cidrs;
             return this;
         }
 
         public Builder cidrs(@Nullable List<String> cidrs) {
-            this.cidrs = Input.ofNullable(cidrs);
+            this.cidrs = Output.ofNullable(cidrs);
             return this;
         }
 
-        public Builder fromPort(Input<Integer> fromPort) {
+        public Builder fromPort(Output<Integer> fromPort) {
             this.fromPort = Objects.requireNonNull(fromPort);
             return this;
         }
 
         public Builder fromPort(Integer fromPort) {
-            this.fromPort = Input.of(Objects.requireNonNull(fromPort));
+            this.fromPort = Output.of(Objects.requireNonNull(fromPort));
             return this;
         }
 
-        public Builder protocol(Input<String> protocol) {
+        public Builder protocol(Output<String> protocol) {
             this.protocol = Objects.requireNonNull(protocol);
             return this;
         }
 
         public Builder protocol(String protocol) {
-            this.protocol = Input.of(Objects.requireNonNull(protocol));
+            this.protocol = Output.of(Objects.requireNonNull(protocol));
             return this;
         }
 
-        public Builder toPort(Input<Integer> toPort) {
+        public Builder toPort(Output<Integer> toPort) {
             this.toPort = Objects.requireNonNull(toPort);
             return this;
         }
 
         public Builder toPort(Integer toPort) {
-            this.toPort = Input.of(Objects.requireNonNull(toPort));
+            this.toPort = Output.of(Objects.requireNonNull(toPort));
             return this;
         }
         public InstancePublicPortsPortInfoArgs build() {

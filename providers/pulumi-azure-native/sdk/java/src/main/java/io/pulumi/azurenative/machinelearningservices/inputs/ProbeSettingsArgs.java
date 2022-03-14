@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.machinelearningservices.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class ProbeSettingsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="failureThreshold")
-      private final @Nullable Input<Integer> failureThreshold;
+      private final @Nullable Output<Integer> failureThreshold;
 
-    public Input<Integer> getFailureThreshold() {
-        return this.failureThreshold == null ? Input.empty() : this.failureThreshold;
+    public Output<Integer> getFailureThreshold() {
+        return this.failureThreshold == null ? Output.empty() : this.failureThreshold;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class ProbeSettingsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="initialDelay")
-      private final @Nullable Input<String> initialDelay;
+      private final @Nullable Output<String> initialDelay;
 
-    public Input<String> getInitialDelay() {
-        return this.initialDelay == null ? Input.empty() : this.initialDelay;
+    public Output<String> getInitialDelay() {
+        return this.initialDelay == null ? Output.empty() : this.initialDelay;
     }
 
     /**
@@ -46,10 +46,10 @@ public final class ProbeSettingsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="period")
-      private final @Nullable Input<String> period;
+      private final @Nullable Output<String> period;
 
-    public Input<String> getPeriod() {
-        return this.period == null ? Input.empty() : this.period;
+    public Output<String> getPeriod() {
+        return this.period == null ? Output.empty() : this.period;
     }
 
     /**
@@ -57,10 +57,10 @@ public final class ProbeSettingsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="successThreshold")
-      private final @Nullable Input<Integer> successThreshold;
+      private final @Nullable Output<Integer> successThreshold;
 
-    public Input<Integer> getSuccessThreshold() {
-        return this.successThreshold == null ? Input.empty() : this.successThreshold;
+    public Output<Integer> getSuccessThreshold() {
+        return this.successThreshold == null ? Output.empty() : this.successThreshold;
     }
 
     /**
@@ -68,18 +68,18 @@ public final class ProbeSettingsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="timeout")
-      private final @Nullable Input<String> timeout;
+      private final @Nullable Output<String> timeout;
 
-    public Input<String> getTimeout() {
-        return this.timeout == null ? Input.empty() : this.timeout;
+    public Output<String> getTimeout() {
+        return this.timeout == null ? Output.empty() : this.timeout;
     }
 
     public ProbeSettingsArgs(
-        @Nullable Input<Integer> failureThreshold,
-        @Nullable Input<String> initialDelay,
-        @Nullable Input<String> period,
-        @Nullable Input<Integer> successThreshold,
-        @Nullable Input<String> timeout) {
+        @Nullable Output<Integer> failureThreshold,
+        @Nullable Output<String> initialDelay,
+        @Nullable Output<String> period,
+        @Nullable Output<Integer> successThreshold,
+        @Nullable Output<String> timeout) {
         this.failureThreshold = failureThreshold;
         this.initialDelay = initialDelay;
         this.period = period;
@@ -88,11 +88,11 @@ public final class ProbeSettingsArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ProbeSettingsArgs() {
-        this.failureThreshold = Input.empty();
-        this.initialDelay = Input.empty();
-        this.period = Input.empty();
-        this.successThreshold = Input.empty();
-        this.timeout = Input.empty();
+        this.failureThreshold = Output.empty();
+        this.initialDelay = Output.empty();
+        this.period = Output.empty();
+        this.successThreshold = Output.empty();
+        this.timeout = Output.empty();
     }
 
     public static Builder builder() {
@@ -104,11 +104,11 @@ public final class ProbeSettingsArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> failureThreshold;
-        private @Nullable Input<String> initialDelay;
-        private @Nullable Input<String> period;
-        private @Nullable Input<Integer> successThreshold;
-        private @Nullable Input<String> timeout;
+        private @Nullable Output<Integer> failureThreshold;
+        private @Nullable Output<String> initialDelay;
+        private @Nullable Output<String> period;
+        private @Nullable Output<Integer> successThreshold;
+        private @Nullable Output<String> timeout;
 
         public Builder() {
     	      // Empty
@@ -123,53 +123,53 @@ public final class ProbeSettingsArgs extends io.pulumi.resources.ResourceArgs {
     	      this.timeout = defaults.timeout;
         }
 
-        public Builder failureThreshold(@Nullable Input<Integer> failureThreshold) {
+        public Builder failureThreshold(@Nullable Output<Integer> failureThreshold) {
             this.failureThreshold = failureThreshold;
             return this;
         }
 
         public Builder failureThreshold(@Nullable Integer failureThreshold) {
-            this.failureThreshold = Input.ofNullable(failureThreshold);
+            this.failureThreshold = Output.ofNullable(failureThreshold);
             return this;
         }
 
-        public Builder initialDelay(@Nullable Input<String> initialDelay) {
+        public Builder initialDelay(@Nullable Output<String> initialDelay) {
             this.initialDelay = initialDelay;
             return this;
         }
 
         public Builder initialDelay(@Nullable String initialDelay) {
-            this.initialDelay = Input.ofNullable(initialDelay);
+            this.initialDelay = Output.ofNullable(initialDelay);
             return this;
         }
 
-        public Builder period(@Nullable Input<String> period) {
+        public Builder period(@Nullable Output<String> period) {
             this.period = period;
             return this;
         }
 
         public Builder period(@Nullable String period) {
-            this.period = Input.ofNullable(period);
+            this.period = Output.ofNullable(period);
             return this;
         }
 
-        public Builder successThreshold(@Nullable Input<Integer> successThreshold) {
+        public Builder successThreshold(@Nullable Output<Integer> successThreshold) {
             this.successThreshold = successThreshold;
             return this;
         }
 
         public Builder successThreshold(@Nullable Integer successThreshold) {
-            this.successThreshold = Input.ofNullable(successThreshold);
+            this.successThreshold = Output.ofNullable(successThreshold);
             return this;
         }
 
-        public Builder timeout(@Nullable Input<String> timeout) {
+        public Builder timeout(@Nullable Output<String> timeout) {
             this.timeout = timeout;
             return this;
         }
 
         public Builder timeout(@Nullable String timeout) {
-            this.timeout = Input.ofNullable(timeout);
+            this.timeout = Output.ofNullable(timeout);
             return this;
         }
         public ProbeSettingsArgs build() {

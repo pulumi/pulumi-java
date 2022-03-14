@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.securityhub;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
@@ -18,18 +18,18 @@ public final class OrganizationConfigurationArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="autoEnable", required=true)
-      private final Input<Boolean> autoEnable;
+      private final Output<Boolean> autoEnable;
 
-    public Input<Boolean> getAutoEnable() {
+    public Output<Boolean> getAutoEnable() {
         return this.autoEnable;
     }
 
-    public OrganizationConfigurationArgs(Input<Boolean> autoEnable) {
+    public OrganizationConfigurationArgs(Output<Boolean> autoEnable) {
         this.autoEnable = Objects.requireNonNull(autoEnable, "expected parameter 'autoEnable' to be non-null");
     }
 
     private OrganizationConfigurationArgs() {
-        this.autoEnable = Input.empty();
+        this.autoEnable = Output.empty();
     }
 
     public static Builder builder() {
@@ -41,7 +41,7 @@ public final class OrganizationConfigurationArgs extends io.pulumi.resources.Res
     }
 
     public static final class Builder {
-        private Input<Boolean> autoEnable;
+        private Output<Boolean> autoEnable;
 
         public Builder() {
     	      // Empty
@@ -52,13 +52,13 @@ public final class OrganizationConfigurationArgs extends io.pulumi.resources.Res
     	      this.autoEnable = defaults.autoEnable;
         }
 
-        public Builder autoEnable(Input<Boolean> autoEnable) {
+        public Builder autoEnable(Output<Boolean> autoEnable) {
             this.autoEnable = Objects.requireNonNull(autoEnable);
             return this;
         }
 
         public Builder autoEnable(Boolean autoEnable) {
-            this.autoEnable = Input.of(Objects.requireNonNull(autoEnable));
+            this.autoEnable = Output.of(Objects.requireNonNull(autoEnable));
             return this;
         }
         public OrganizationConfigurationArgs build() {

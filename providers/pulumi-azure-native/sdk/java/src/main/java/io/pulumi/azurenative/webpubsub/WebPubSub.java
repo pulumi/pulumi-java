@@ -15,7 +15,6 @@ import io.pulumi.azurenative.webpubsub.outputs.WebPubSubFeatureResponse;
 import io.pulumi.azurenative.webpubsub.outputs.WebPubSubNetworkACLsResponse;
 import io.pulumi.azurenative.webpubsub.outputs.WebPubSubTlsSettingsResponse;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -375,21 +374,21 @@ public class WebPubSub extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public WebPubSub(String name, WebPubSubArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:webpubsub:WebPubSub", name, args == null ? WebPubSubArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("azure-native:webpubsub:WebPubSub", name, args == null ? WebPubSubArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private WebPubSub(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private WebPubSub(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:webpubsub:WebPubSub", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:webpubsub/v20210401preview:WebPubSub").build()),
-                Input.of(Alias.builder().setType("azure-native:webpubsub/v20210601preview:WebPubSub").build()),
-                Input.of(Alias.builder().setType("azure-native:webpubsub/v20210901preview:WebPubSub").build()),
-                Input.of(Alias.builder().setType("azure-native:webpubsub/v20211001:WebPubSub").build())
+                Output.of(Alias.builder().setType("azure-native:webpubsub/v20210401preview:WebPubSub").build()),
+                Output.of(Alias.builder().setType("azure-native:webpubsub/v20210601preview:WebPubSub").build()),
+                Output.of(Alias.builder().setType("azure-native:webpubsub/v20210901preview:WebPubSub").build()),
+                Output.of(Alias.builder().setType("azure-native:webpubsub/v20211001:WebPubSub").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -403,7 +402,7 @@ public class WebPubSub extends io.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static WebPubSub get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static WebPubSub get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new WebPubSub(name, id, options);
     }
 }

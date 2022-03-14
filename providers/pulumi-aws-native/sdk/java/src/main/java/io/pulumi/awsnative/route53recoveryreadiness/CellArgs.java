@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.route53recoveryreadiness;
 
 import io.pulumi.awsnative.route53recoveryreadiness.inputs.CellTagArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -21,10 +21,10 @@ public final class CellArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="cellName")
-      private final @Nullable Input<String> cellName;
+      private final @Nullable Output<String> cellName;
 
-    public Input<String> getCellName() {
-        return this.cellName == null ? Input.empty() : this.cellName;
+    public Output<String> getCellName() {
+        return this.cellName == null ? Output.empty() : this.cellName;
     }
 
     /**
@@ -32,10 +32,10 @@ public final class CellArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="cells")
-      private final @Nullable Input<List<String>> cells;
+      private final @Nullable Output<List<String>> cells;
 
-    public Input<List<String>> getCells() {
-        return this.cells == null ? Input.empty() : this.cells;
+    public Output<List<String>> getCells() {
+        return this.cells == null ? Output.empty() : this.cells;
     }
 
     /**
@@ -43,25 +43,25 @@ public final class CellArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<List<CellTagArgs>> tags;
+      private final @Nullable Output<List<CellTagArgs>> tags;
 
-    public Input<List<CellTagArgs>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<List<CellTagArgs>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public CellArgs(
-        @Nullable Input<String> cellName,
-        @Nullable Input<List<String>> cells,
-        @Nullable Input<List<CellTagArgs>> tags) {
+        @Nullable Output<String> cellName,
+        @Nullable Output<List<String>> cells,
+        @Nullable Output<List<CellTagArgs>> tags) {
         this.cellName = cellName;
         this.cells = cells;
         this.tags = tags;
     }
 
     private CellArgs() {
-        this.cellName = Input.empty();
-        this.cells = Input.empty();
-        this.tags = Input.empty();
+        this.cellName = Output.empty();
+        this.cells = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -73,9 +73,9 @@ public final class CellArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> cellName;
-        private @Nullable Input<List<String>> cells;
-        private @Nullable Input<List<CellTagArgs>> tags;
+        private @Nullable Output<String> cellName;
+        private @Nullable Output<List<String>> cells;
+        private @Nullable Output<List<CellTagArgs>> tags;
 
         public Builder() {
     	      // Empty
@@ -88,33 +88,33 @@ public final class CellArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder cellName(@Nullable Input<String> cellName) {
+        public Builder cellName(@Nullable Output<String> cellName) {
             this.cellName = cellName;
             return this;
         }
 
         public Builder cellName(@Nullable String cellName) {
-            this.cellName = Input.ofNullable(cellName);
+            this.cellName = Output.ofNullable(cellName);
             return this;
         }
 
-        public Builder cells(@Nullable Input<List<String>> cells) {
+        public Builder cells(@Nullable Output<List<String>> cells) {
             this.cells = cells;
             return this;
         }
 
         public Builder cells(@Nullable List<String> cells) {
-            this.cells = Input.ofNullable(cells);
+            this.cells = Output.ofNullable(cells);
             return this;
         }
 
-        public Builder tags(@Nullable Input<List<CellTagArgs>> tags) {
+        public Builder tags(@Nullable Output<List<CellTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable List<CellTagArgs> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public CellArgs build() {

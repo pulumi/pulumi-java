@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.s3.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,9 +19,9 @@ public final class BucketLoggingGetArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="targetBucket", required=true)
-      private final Input<String> targetBucket;
+      private final Output<String> targetBucket;
 
-    public Input<String> getTargetBucket() {
+    public Output<String> getTargetBucket() {
         return this.targetBucket;
     }
 
@@ -30,22 +30,22 @@ public final class BucketLoggingGetArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="targetPrefix")
-      private final @Nullable Input<String> targetPrefix;
+      private final @Nullable Output<String> targetPrefix;
 
-    public Input<String> getTargetPrefix() {
-        return this.targetPrefix == null ? Input.empty() : this.targetPrefix;
+    public Output<String> getTargetPrefix() {
+        return this.targetPrefix == null ? Output.empty() : this.targetPrefix;
     }
 
     public BucketLoggingGetArgs(
-        Input<String> targetBucket,
-        @Nullable Input<String> targetPrefix) {
+        Output<String> targetBucket,
+        @Nullable Output<String> targetPrefix) {
         this.targetBucket = Objects.requireNonNull(targetBucket, "expected parameter 'targetBucket' to be non-null");
         this.targetPrefix = targetPrefix;
     }
 
     private BucketLoggingGetArgs() {
-        this.targetBucket = Input.empty();
-        this.targetPrefix = Input.empty();
+        this.targetBucket = Output.empty();
+        this.targetPrefix = Output.empty();
     }
 
     public static Builder builder() {
@@ -57,8 +57,8 @@ public final class BucketLoggingGetArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private Input<String> targetBucket;
-        private @Nullable Input<String> targetPrefix;
+        private Output<String> targetBucket;
+        private @Nullable Output<String> targetPrefix;
 
         public Builder() {
     	      // Empty
@@ -70,23 +70,23 @@ public final class BucketLoggingGetArgs extends io.pulumi.resources.ResourceArgs
     	      this.targetPrefix = defaults.targetPrefix;
         }
 
-        public Builder targetBucket(Input<String> targetBucket) {
+        public Builder targetBucket(Output<String> targetBucket) {
             this.targetBucket = Objects.requireNonNull(targetBucket);
             return this;
         }
 
         public Builder targetBucket(String targetBucket) {
-            this.targetBucket = Input.of(Objects.requireNonNull(targetBucket));
+            this.targetBucket = Output.of(Objects.requireNonNull(targetBucket));
             return this;
         }
 
-        public Builder targetPrefix(@Nullable Input<String> targetPrefix) {
+        public Builder targetPrefix(@Nullable Output<String> targetPrefix) {
             this.targetPrefix = targetPrefix;
             return this;
         }
 
         public Builder targetPrefix(@Nullable String targetPrefix) {
-            this.targetPrefix = Input.ofNullable(targetPrefix);
+            this.targetPrefix = Output.ofNullable(targetPrefix);
             return this;
         }
         public BucketLoggingGetArgs build() {

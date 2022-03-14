@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.container.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -18,18 +18,18 @@ public final class AwsClusterControlPlaneConfigEncryptionArgs extends io.pulumi.
      * 
      */
     @InputImport(name="kmsKeyArn", required=true)
-      private final Input<String> kmsKeyArn;
+      private final Output<String> kmsKeyArn;
 
-    public Input<String> getKmsKeyArn() {
+    public Output<String> getKmsKeyArn() {
         return this.kmsKeyArn;
     }
 
-    public AwsClusterControlPlaneConfigEncryptionArgs(Input<String> kmsKeyArn) {
+    public AwsClusterControlPlaneConfigEncryptionArgs(Output<String> kmsKeyArn) {
         this.kmsKeyArn = Objects.requireNonNull(kmsKeyArn, "expected parameter 'kmsKeyArn' to be non-null");
     }
 
     private AwsClusterControlPlaneConfigEncryptionArgs() {
-        this.kmsKeyArn = Input.empty();
+        this.kmsKeyArn = Output.empty();
     }
 
     public static Builder builder() {
@@ -41,7 +41,7 @@ public final class AwsClusterControlPlaneConfigEncryptionArgs extends io.pulumi.
     }
 
     public static final class Builder {
-        private Input<String> kmsKeyArn;
+        private Output<String> kmsKeyArn;
 
         public Builder() {
     	      // Empty
@@ -52,13 +52,13 @@ public final class AwsClusterControlPlaneConfigEncryptionArgs extends io.pulumi.
     	      this.kmsKeyArn = defaults.kmsKeyArn;
         }
 
-        public Builder kmsKeyArn(Input<String> kmsKeyArn) {
+        public Builder kmsKeyArn(Output<String> kmsKeyArn) {
             this.kmsKeyArn = Objects.requireNonNull(kmsKeyArn);
             return this;
         }
 
         public Builder kmsKeyArn(String kmsKeyArn) {
-            this.kmsKeyArn = Input.of(Objects.requireNonNull(kmsKeyArn));
+            this.kmsKeyArn = Output.of(Objects.requireNonNull(kmsKeyArn));
             return this;
         }
         public AwsClusterControlPlaneConfigEncryptionArgs build() {

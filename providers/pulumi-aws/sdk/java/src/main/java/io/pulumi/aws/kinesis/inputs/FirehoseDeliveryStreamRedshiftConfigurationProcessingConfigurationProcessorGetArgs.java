@@ -4,7 +4,7 @@
 package io.pulumi.aws.kinesis.inputs;
 
 import io.pulumi.aws.kinesis.inputs.FirehoseDeliveryStreamRedshiftConfigurationProcessingConfigurationProcessorParameterGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -21,10 +21,10 @@ public final class FirehoseDeliveryStreamRedshiftConfigurationProcessingConfigur
      * 
      */
     @InputImport(name="parameters")
-      private final @Nullable Input<List<FirehoseDeliveryStreamRedshiftConfigurationProcessingConfigurationProcessorParameterGetArgs>> parameters;
+      private final @Nullable Output<List<FirehoseDeliveryStreamRedshiftConfigurationProcessingConfigurationProcessorParameterGetArgs>> parameters;
 
-    public Input<List<FirehoseDeliveryStreamRedshiftConfigurationProcessingConfigurationProcessorParameterGetArgs>> getParameters() {
-        return this.parameters == null ? Input.empty() : this.parameters;
+    public Output<List<FirehoseDeliveryStreamRedshiftConfigurationProcessingConfigurationProcessorParameterGetArgs>> getParameters() {
+        return this.parameters == null ? Output.empty() : this.parameters;
     }
 
     /**
@@ -32,22 +32,22 @@ public final class FirehoseDeliveryStreamRedshiftConfigurationProcessingConfigur
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<String> type;
+      private final Output<String> type;
 
-    public Input<String> getType() {
+    public Output<String> getType() {
         return this.type;
     }
 
     public FirehoseDeliveryStreamRedshiftConfigurationProcessingConfigurationProcessorGetArgs(
-        @Nullable Input<List<FirehoseDeliveryStreamRedshiftConfigurationProcessingConfigurationProcessorParameterGetArgs>> parameters,
-        Input<String> type) {
+        @Nullable Output<List<FirehoseDeliveryStreamRedshiftConfigurationProcessingConfigurationProcessorParameterGetArgs>> parameters,
+        Output<String> type) {
         this.parameters = parameters;
         this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
     }
 
     private FirehoseDeliveryStreamRedshiftConfigurationProcessingConfigurationProcessorGetArgs() {
-        this.parameters = Input.empty();
-        this.type = Input.empty();
+        this.parameters = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -59,8 +59,8 @@ public final class FirehoseDeliveryStreamRedshiftConfigurationProcessingConfigur
     }
 
     public static final class Builder {
-        private @Nullable Input<List<FirehoseDeliveryStreamRedshiftConfigurationProcessingConfigurationProcessorParameterGetArgs>> parameters;
-        private Input<String> type;
+        private @Nullable Output<List<FirehoseDeliveryStreamRedshiftConfigurationProcessingConfigurationProcessorParameterGetArgs>> parameters;
+        private Output<String> type;
 
         public Builder() {
     	      // Empty
@@ -72,23 +72,23 @@ public final class FirehoseDeliveryStreamRedshiftConfigurationProcessingConfigur
     	      this.type = defaults.type;
         }
 
-        public Builder parameters(@Nullable Input<List<FirehoseDeliveryStreamRedshiftConfigurationProcessingConfigurationProcessorParameterGetArgs>> parameters) {
+        public Builder parameters(@Nullable Output<List<FirehoseDeliveryStreamRedshiftConfigurationProcessingConfigurationProcessorParameterGetArgs>> parameters) {
             this.parameters = parameters;
             return this;
         }
 
         public Builder parameters(@Nullable List<FirehoseDeliveryStreamRedshiftConfigurationProcessingConfigurationProcessorParameterGetArgs> parameters) {
-            this.parameters = Input.ofNullable(parameters);
+            this.parameters = Output.ofNullable(parameters);
             return this;
         }
 
-        public Builder type(Input<String> type) {
+        public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(String type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
         public FirehoseDeliveryStreamRedshiftConfigurationProcessingConfigurationProcessorGetArgs build() {

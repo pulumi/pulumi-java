@@ -5,7 +5,7 @@ package io.pulumi.azurenative.sqlvirtualmachine.inputs;
 
 import io.pulumi.azurenative.sqlvirtualmachine.enums.SqlWorkloadType;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -25,18 +25,18 @@ public final class SqlWorkloadTypeUpdateSettingsArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="sqlWorkloadType")
-      private final @Nullable Input<Either<String,SqlWorkloadType>> sqlWorkloadType;
+      private final @Nullable Output<Either<String,SqlWorkloadType>> sqlWorkloadType;
 
-    public Input<Either<String,SqlWorkloadType>> getSqlWorkloadType() {
-        return this.sqlWorkloadType == null ? Input.empty() : this.sqlWorkloadType;
+    public Output<Either<String,SqlWorkloadType>> getSqlWorkloadType() {
+        return this.sqlWorkloadType == null ? Output.empty() : this.sqlWorkloadType;
     }
 
-    public SqlWorkloadTypeUpdateSettingsArgs(@Nullable Input<Either<String,SqlWorkloadType>> sqlWorkloadType) {
+    public SqlWorkloadTypeUpdateSettingsArgs(@Nullable Output<Either<String,SqlWorkloadType>> sqlWorkloadType) {
         this.sqlWorkloadType = sqlWorkloadType;
     }
 
     private SqlWorkloadTypeUpdateSettingsArgs() {
-        this.sqlWorkloadType = Input.empty();
+        this.sqlWorkloadType = Output.empty();
     }
 
     public static Builder builder() {
@@ -48,7 +48,7 @@ public final class SqlWorkloadTypeUpdateSettingsArgs extends io.pulumi.resources
     }
 
     public static final class Builder {
-        private @Nullable Input<Either<String,SqlWorkloadType>> sqlWorkloadType;
+        private @Nullable Output<Either<String,SqlWorkloadType>> sqlWorkloadType;
 
         public Builder() {
     	      // Empty
@@ -59,13 +59,13 @@ public final class SqlWorkloadTypeUpdateSettingsArgs extends io.pulumi.resources
     	      this.sqlWorkloadType = defaults.sqlWorkloadType;
         }
 
-        public Builder sqlWorkloadType(@Nullable Input<Either<String,SqlWorkloadType>> sqlWorkloadType) {
+        public Builder sqlWorkloadType(@Nullable Output<Either<String,SqlWorkloadType>> sqlWorkloadType) {
             this.sqlWorkloadType = sqlWorkloadType;
             return this;
         }
 
         public Builder sqlWorkloadType(@Nullable Either<String,SqlWorkloadType> sqlWorkloadType) {
-            this.sqlWorkloadType = Input.ofNullable(sqlWorkloadType);
+            this.sqlWorkloadType = Output.ofNullable(sqlWorkloadType);
             return this;
         }
         public SqlWorkloadTypeUpdateSettingsArgs build() {

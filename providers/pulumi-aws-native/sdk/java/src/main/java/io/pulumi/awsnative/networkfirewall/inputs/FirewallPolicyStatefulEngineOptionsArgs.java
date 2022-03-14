@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.networkfirewall.inputs;
 
 import io.pulumi.awsnative.networkfirewall.enums.FirewallPolicyRuleOrder;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -15,18 +15,18 @@ public final class FirewallPolicyStatefulEngineOptionsArgs extends io.pulumi.res
     public static final FirewallPolicyStatefulEngineOptionsArgs Empty = new FirewallPolicyStatefulEngineOptionsArgs();
 
     @InputImport(name="ruleOrder")
-      private final @Nullable Input<FirewallPolicyRuleOrder> ruleOrder;
+      private final @Nullable Output<FirewallPolicyRuleOrder> ruleOrder;
 
-    public Input<FirewallPolicyRuleOrder> getRuleOrder() {
-        return this.ruleOrder == null ? Input.empty() : this.ruleOrder;
+    public Output<FirewallPolicyRuleOrder> getRuleOrder() {
+        return this.ruleOrder == null ? Output.empty() : this.ruleOrder;
     }
 
-    public FirewallPolicyStatefulEngineOptionsArgs(@Nullable Input<FirewallPolicyRuleOrder> ruleOrder) {
+    public FirewallPolicyStatefulEngineOptionsArgs(@Nullable Output<FirewallPolicyRuleOrder> ruleOrder) {
         this.ruleOrder = ruleOrder;
     }
 
     private FirewallPolicyStatefulEngineOptionsArgs() {
-        this.ruleOrder = Input.empty();
+        this.ruleOrder = Output.empty();
     }
 
     public static Builder builder() {
@@ -38,7 +38,7 @@ public final class FirewallPolicyStatefulEngineOptionsArgs extends io.pulumi.res
     }
 
     public static final class Builder {
-        private @Nullable Input<FirewallPolicyRuleOrder> ruleOrder;
+        private @Nullable Output<FirewallPolicyRuleOrder> ruleOrder;
 
         public Builder() {
     	      // Empty
@@ -49,13 +49,13 @@ public final class FirewallPolicyStatefulEngineOptionsArgs extends io.pulumi.res
     	      this.ruleOrder = defaults.ruleOrder;
         }
 
-        public Builder ruleOrder(@Nullable Input<FirewallPolicyRuleOrder> ruleOrder) {
+        public Builder ruleOrder(@Nullable Output<FirewallPolicyRuleOrder> ruleOrder) {
             this.ruleOrder = ruleOrder;
             return this;
         }
 
         public Builder ruleOrder(@Nullable FirewallPolicyRuleOrder ruleOrder) {
-            this.ruleOrder = Input.ofNullable(ruleOrder);
+            this.ruleOrder = Output.ofNullable(ruleOrder);
             return this;
         }
         public FirewallPolicyStatefulEngineOptionsArgs build() {

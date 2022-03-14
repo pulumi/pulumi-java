@@ -6,7 +6,6 @@ package io.pulumi.aws.appconfig;
 import io.pulumi.aws.Utilities;
 import io.pulumi.aws.appconfig.HostedConfigurationVersionArgs;
 import io.pulumi.aws.appconfig.inputs.HostedConfigurationVersionState;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -167,14 +166,14 @@ public class HostedConfigurationVersion extends io.pulumi.resources.CustomResour
      * @param options A bag of options that control this resource's behavior.
      */
     public HostedConfigurationVersion(String name, HostedConfigurationVersionArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:appconfig/hostedConfigurationVersion:HostedConfigurationVersion", name, args == null ? HostedConfigurationVersionArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws:appconfig/hostedConfigurationVersion:HostedConfigurationVersion", name, args == null ? HostedConfigurationVersionArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private HostedConfigurationVersion(String name, Input<String> id, @Nullable HostedConfigurationVersionState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private HostedConfigurationVersion(String name, Output<String> id, @Nullable HostedConfigurationVersionState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws:appconfig/hostedConfigurationVersion:HostedConfigurationVersion", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -190,7 +189,7 @@ public class HostedConfigurationVersion extends io.pulumi.resources.CustomResour
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static HostedConfigurationVersion get(String name, Input<String> id, @Nullable HostedConfigurationVersionState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static HostedConfigurationVersion get(String name, Output<String> id, @Nullable HostedConfigurationVersionState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new HostedConfigurationVersion(name, id, state, options);
     }
 }

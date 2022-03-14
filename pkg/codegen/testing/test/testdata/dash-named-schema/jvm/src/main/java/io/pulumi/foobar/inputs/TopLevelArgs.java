@@ -3,7 +3,7 @@
 
 package io.pulumi.foobar.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -15,18 +15,18 @@ public final class TopLevelArgs extends io.pulumi.resources.ResourceArgs {
     public static final TopLevelArgs Empty = new TopLevelArgs();
 
     @InputImport(name="buzz")
-      private final @Nullable Input<String> buzz;
+      private final @Nullable Output<String> buzz;
 
-    public Input<String> getBuzz() {
-        return this.buzz == null ? Input.empty() : this.buzz;
+    public Output<String> getBuzz() {
+        return this.buzz == null ? Output.empty() : this.buzz;
     }
 
-    public TopLevelArgs(@Nullable Input<String> buzz) {
+    public TopLevelArgs(@Nullable Output<String> buzz) {
         this.buzz = buzz;
     }
 
     private TopLevelArgs() {
-        this.buzz = Input.empty();
+        this.buzz = Output.empty();
     }
 
     public static Builder builder() {
@@ -38,7 +38,7 @@ public final class TopLevelArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> buzz;
+        private @Nullable Output<String> buzz;
 
         public Builder() {
     	      // Empty
@@ -49,13 +49,13 @@ public final class TopLevelArgs extends io.pulumi.resources.ResourceArgs {
     	      this.buzz = defaults.buzz;
         }
 
-        public Builder buzz(@Nullable Input<String> buzz) {
+        public Builder buzz(@Nullable Output<String> buzz) {
             this.buzz = buzz;
             return this;
         }
 
         public Builder buzz(@Nullable String buzz) {
-            this.buzz = Input.ofNullable(buzz);
+            this.buzz = Output.ofNullable(buzz);
             return this;
         }
         public TopLevelArgs build() {

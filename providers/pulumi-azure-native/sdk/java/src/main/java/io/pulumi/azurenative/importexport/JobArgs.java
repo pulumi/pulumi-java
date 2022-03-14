@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.importexport;
 
 import io.pulumi.azurenative.importexport.inputs.JobDetailsArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
@@ -21,10 +21,10 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="jobName")
-      private final @Nullable Input<String> jobName;
+      private final @Nullable Output<String> jobName;
 
-    public Input<String> getJobName() {
-        return this.jobName == null ? Input.empty() : this.jobName;
+    public Output<String> getJobName() {
+        return this.jobName == null ? Output.empty() : this.jobName;
     }
 
     /**
@@ -32,10 +32,10 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -43,10 +43,10 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="properties")
-      private final @Nullable Input<JobDetailsArgs> properties;
+      private final @Nullable Output<JobDetailsArgs> properties;
 
-    public Input<JobDetailsArgs> getProperties() {
-        return this.properties == null ? Input.empty() : this.properties;
+    public Output<JobDetailsArgs> getProperties() {
+        return this.properties == null ? Output.empty() : this.properties;
     }
 
     /**
@@ -54,9 +54,9 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -65,18 +65,18 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Object> tags;
+      private final @Nullable Output<Object> tags;
 
-    public Input<Object> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Object> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public JobArgs(
-        @Nullable Input<String> jobName,
-        @Nullable Input<String> location,
-        @Nullable Input<JobDetailsArgs> properties,
-        Input<String> resourceGroupName,
-        @Nullable Input<Object> tags) {
+        @Nullable Output<String> jobName,
+        @Nullable Output<String> location,
+        @Nullable Output<JobDetailsArgs> properties,
+        Output<String> resourceGroupName,
+        @Nullable Output<Object> tags) {
         this.jobName = jobName;
         this.location = location;
         this.properties = properties;
@@ -85,11 +85,11 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private JobArgs() {
-        this.jobName = Input.empty();
-        this.location = Input.empty();
-        this.properties = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.tags = Input.empty();
+        this.jobName = Output.empty();
+        this.location = Output.empty();
+        this.properties = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -101,11 +101,11 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> jobName;
-        private @Nullable Input<String> location;
-        private @Nullable Input<JobDetailsArgs> properties;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<Object> tags;
+        private @Nullable Output<String> jobName;
+        private @Nullable Output<String> location;
+        private @Nullable Output<JobDetailsArgs> properties;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<Object> tags;
 
         public Builder() {
     	      // Empty
@@ -120,53 +120,53 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder jobName(@Nullable Input<String> jobName) {
+        public Builder jobName(@Nullable Output<String> jobName) {
             this.jobName = jobName;
             return this;
         }
 
         public Builder jobName(@Nullable String jobName) {
-            this.jobName = Input.ofNullable(jobName);
+            this.jobName = Output.ofNullable(jobName);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder properties(@Nullable Input<JobDetailsArgs> properties) {
+        public Builder properties(@Nullable Output<JobDetailsArgs> properties) {
             this.properties = properties;
             return this;
         }
 
         public Builder properties(@Nullable JobDetailsArgs properties) {
-            this.properties = Input.ofNullable(properties);
+            this.properties = Output.ofNullable(properties);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder tags(@Nullable Input<Object> tags) {
+        public Builder tags(@Nullable Output<Object> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Object tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public JobArgs build() {

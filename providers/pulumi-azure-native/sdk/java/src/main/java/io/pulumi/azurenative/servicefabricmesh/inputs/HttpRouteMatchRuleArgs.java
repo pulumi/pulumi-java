@@ -5,7 +5,7 @@ package io.pulumi.azurenative.servicefabricmesh.inputs;
 
 import io.pulumi.azurenative.servicefabricmesh.inputs.HttpRouteMatchHeaderArgs;
 import io.pulumi.azurenative.servicefabricmesh.inputs.HttpRouteMatchPathArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
@@ -25,10 +25,10 @@ public final class HttpRouteMatchRuleArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="headers")
-      private final @Nullable Input<List<HttpRouteMatchHeaderArgs>> headers;
+      private final @Nullable Output<List<HttpRouteMatchHeaderArgs>> headers;
 
-    public Input<List<HttpRouteMatchHeaderArgs>> getHeaders() {
-        return this.headers == null ? Input.empty() : this.headers;
+    public Output<List<HttpRouteMatchHeaderArgs>> getHeaders() {
+        return this.headers == null ? Output.empty() : this.headers;
     }
 
     /**
@@ -36,22 +36,22 @@ public final class HttpRouteMatchRuleArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="path", required=true)
-      private final Input<HttpRouteMatchPathArgs> path;
+      private final Output<HttpRouteMatchPathArgs> path;
 
-    public Input<HttpRouteMatchPathArgs> getPath() {
+    public Output<HttpRouteMatchPathArgs> getPath() {
         return this.path;
     }
 
     public HttpRouteMatchRuleArgs(
-        @Nullable Input<List<HttpRouteMatchHeaderArgs>> headers,
-        Input<HttpRouteMatchPathArgs> path) {
+        @Nullable Output<List<HttpRouteMatchHeaderArgs>> headers,
+        Output<HttpRouteMatchPathArgs> path) {
         this.headers = headers;
         this.path = Objects.requireNonNull(path, "expected parameter 'path' to be non-null");
     }
 
     private HttpRouteMatchRuleArgs() {
-        this.headers = Input.empty();
-        this.path = Input.empty();
+        this.headers = Output.empty();
+        this.path = Output.empty();
     }
 
     public static Builder builder() {
@@ -63,8 +63,8 @@ public final class HttpRouteMatchRuleArgs extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private @Nullable Input<List<HttpRouteMatchHeaderArgs>> headers;
-        private Input<HttpRouteMatchPathArgs> path;
+        private @Nullable Output<List<HttpRouteMatchHeaderArgs>> headers;
+        private Output<HttpRouteMatchPathArgs> path;
 
         public Builder() {
     	      // Empty
@@ -76,23 +76,23 @@ public final class HttpRouteMatchRuleArgs extends io.pulumi.resources.ResourceAr
     	      this.path = defaults.path;
         }
 
-        public Builder headers(@Nullable Input<List<HttpRouteMatchHeaderArgs>> headers) {
+        public Builder headers(@Nullable Output<List<HttpRouteMatchHeaderArgs>> headers) {
             this.headers = headers;
             return this;
         }
 
         public Builder headers(@Nullable List<HttpRouteMatchHeaderArgs> headers) {
-            this.headers = Input.ofNullable(headers);
+            this.headers = Output.ofNullable(headers);
             return this;
         }
 
-        public Builder path(Input<HttpRouteMatchPathArgs> path) {
+        public Builder path(Output<HttpRouteMatchPathArgs> path) {
             this.path = Objects.requireNonNull(path);
             return this;
         }
 
         public Builder path(HttpRouteMatchPathArgs path) {
-            this.path = Input.of(Objects.requireNonNull(path));
+            this.path = Output.of(Objects.requireNonNull(path));
             return this;
         }
         public HttpRouteMatchRuleArgs build() {

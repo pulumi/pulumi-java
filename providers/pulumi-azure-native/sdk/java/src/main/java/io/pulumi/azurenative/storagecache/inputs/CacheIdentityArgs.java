@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.storagecache.inputs;
 
 import io.pulumi.azurenative.storagecache.enums.CacheIdentityType;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,18 +23,18 @@ public final class CacheIdentityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type")
-      private final @Nullable Input<CacheIdentityType> type;
+      private final @Nullable Output<CacheIdentityType> type;
 
-    public Input<CacheIdentityType> getType() {
-        return this.type == null ? Input.empty() : this.type;
+    public Output<CacheIdentityType> getType() {
+        return this.type == null ? Output.empty() : this.type;
     }
 
-    public CacheIdentityArgs(@Nullable Input<CacheIdentityType> type) {
+    public CacheIdentityArgs(@Nullable Output<CacheIdentityType> type) {
         this.type = type;
     }
 
     private CacheIdentityArgs() {
-        this.type = Input.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class CacheIdentityArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<CacheIdentityType> type;
+        private @Nullable Output<CacheIdentityType> type;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class CacheIdentityArgs extends io.pulumi.resources.ResourceArgs {
     	      this.type = defaults.type;
         }
 
-        public Builder type(@Nullable Input<CacheIdentityType> type) {
+        public Builder type(@Nullable Output<CacheIdentityType> type) {
             this.type = type;
             return this;
         }
 
         public Builder type(@Nullable CacheIdentityType type) {
-            this.type = Input.ofNullable(type);
+            this.type = Output.ofNullable(type);
             return this;
         }
         public CacheIdentityArgs build() {

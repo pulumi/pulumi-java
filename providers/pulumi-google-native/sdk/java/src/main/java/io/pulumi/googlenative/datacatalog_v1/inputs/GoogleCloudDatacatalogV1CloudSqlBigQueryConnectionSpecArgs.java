@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.datacatalog_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.datacatalog_v1.enums.GoogleCloudDatacatalogV1CloudSqlBigQueryConnectionSpecType;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class GoogleCloudDatacatalogV1CloudSqlBigQueryConnectionSpecArgs ex
      * 
      */
     @InputImport(name="database")
-      private final @Nullable Input<String> database;
+      private final @Nullable Output<String> database;
 
-    public Input<String> getDatabase() {
-        return this.database == null ? Input.empty() : this.database;
+    public Output<String> getDatabase() {
+        return this.database == null ? Output.empty() : this.database;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class GoogleCloudDatacatalogV1CloudSqlBigQueryConnectionSpecArgs ex
      * 
      */
     @InputImport(name="instanceId")
-      private final @Nullable Input<String> instanceId;
+      private final @Nullable Output<String> instanceId;
 
-    public Input<String> getInstanceId() {
-        return this.instanceId == null ? Input.empty() : this.instanceId;
+    public Output<String> getInstanceId() {
+        return this.instanceId == null ? Output.empty() : this.instanceId;
     }
 
     /**
@@ -46,25 +46,25 @@ public final class GoogleCloudDatacatalogV1CloudSqlBigQueryConnectionSpecArgs ex
      * 
      */
     @InputImport(name="type")
-      private final @Nullable Input<GoogleCloudDatacatalogV1CloudSqlBigQueryConnectionSpecType> type;
+      private final @Nullable Output<GoogleCloudDatacatalogV1CloudSqlBigQueryConnectionSpecType> type;
 
-    public Input<GoogleCloudDatacatalogV1CloudSqlBigQueryConnectionSpecType> getType() {
-        return this.type == null ? Input.empty() : this.type;
+    public Output<GoogleCloudDatacatalogV1CloudSqlBigQueryConnectionSpecType> getType() {
+        return this.type == null ? Output.empty() : this.type;
     }
 
     public GoogleCloudDatacatalogV1CloudSqlBigQueryConnectionSpecArgs(
-        @Nullable Input<String> database,
-        @Nullable Input<String> instanceId,
-        @Nullable Input<GoogleCloudDatacatalogV1CloudSqlBigQueryConnectionSpecType> type) {
+        @Nullable Output<String> database,
+        @Nullable Output<String> instanceId,
+        @Nullable Output<GoogleCloudDatacatalogV1CloudSqlBigQueryConnectionSpecType> type) {
         this.database = database;
         this.instanceId = instanceId;
         this.type = type;
     }
 
     private GoogleCloudDatacatalogV1CloudSqlBigQueryConnectionSpecArgs() {
-        this.database = Input.empty();
-        this.instanceId = Input.empty();
-        this.type = Input.empty();
+        this.database = Output.empty();
+        this.instanceId = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -76,9 +76,9 @@ public final class GoogleCloudDatacatalogV1CloudSqlBigQueryConnectionSpecArgs ex
     }
 
     public static final class Builder {
-        private @Nullable Input<String> database;
-        private @Nullable Input<String> instanceId;
-        private @Nullable Input<GoogleCloudDatacatalogV1CloudSqlBigQueryConnectionSpecType> type;
+        private @Nullable Output<String> database;
+        private @Nullable Output<String> instanceId;
+        private @Nullable Output<GoogleCloudDatacatalogV1CloudSqlBigQueryConnectionSpecType> type;
 
         public Builder() {
     	      // Empty
@@ -91,33 +91,33 @@ public final class GoogleCloudDatacatalogV1CloudSqlBigQueryConnectionSpecArgs ex
     	      this.type = defaults.type;
         }
 
-        public Builder database(@Nullable Input<String> database) {
+        public Builder database(@Nullable Output<String> database) {
             this.database = database;
             return this;
         }
 
         public Builder database(@Nullable String database) {
-            this.database = Input.ofNullable(database);
+            this.database = Output.ofNullable(database);
             return this;
         }
 
-        public Builder instanceId(@Nullable Input<String> instanceId) {
+        public Builder instanceId(@Nullable Output<String> instanceId) {
             this.instanceId = instanceId;
             return this;
         }
 
         public Builder instanceId(@Nullable String instanceId) {
-            this.instanceId = Input.ofNullable(instanceId);
+            this.instanceId = Output.ofNullable(instanceId);
             return this;
         }
 
-        public Builder type(@Nullable Input<GoogleCloudDatacatalogV1CloudSqlBigQueryConnectionSpecType> type) {
+        public Builder type(@Nullable Output<GoogleCloudDatacatalogV1CloudSqlBigQueryConnectionSpecType> type) {
             this.type = type;
             return this;
         }
 
         public Builder type(@Nullable GoogleCloudDatacatalogV1CloudSqlBigQueryConnectionSpecType type) {
-            this.type = Input.ofNullable(type);
+            this.type = Output.ofNullable(type);
             return this;
         }
         public GoogleCloudDatacatalogV1CloudSqlBigQueryConnectionSpecArgs build() {

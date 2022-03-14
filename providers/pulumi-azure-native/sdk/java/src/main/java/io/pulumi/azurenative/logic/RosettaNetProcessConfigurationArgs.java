@@ -5,7 +5,7 @@ package io.pulumi.azurenative.logic;
 
 import io.pulumi.azurenative.logic.inputs.RosettaNetPipActivitySettingsArgs;
 import io.pulumi.azurenative.logic.inputs.RosettaNetPipRoleSettingsArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -22,9 +22,9 @@ public final class RosettaNetProcessConfigurationArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="activitySettings", required=true)
-      private final Input<RosettaNetPipActivitySettingsArgs> activitySettings;
+      private final Output<RosettaNetPipActivitySettingsArgs> activitySettings;
 
-    public Input<RosettaNetPipActivitySettingsArgs> getActivitySettings() {
+    public Output<RosettaNetPipActivitySettingsArgs> getActivitySettings() {
         return this.activitySettings;
     }
 
@@ -33,10 +33,10 @@ public final class RosettaNetProcessConfigurationArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -44,9 +44,9 @@ public final class RosettaNetProcessConfigurationArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="initiatorRoleSettings", required=true)
-      private final Input<RosettaNetPipRoleSettingsArgs> initiatorRoleSettings;
+      private final Output<RosettaNetPipRoleSettingsArgs> initiatorRoleSettings;
 
-    public Input<RosettaNetPipRoleSettingsArgs> getInitiatorRoleSettings() {
+    public Output<RosettaNetPipRoleSettingsArgs> getInitiatorRoleSettings() {
         return this.initiatorRoleSettings;
     }
 
@@ -55,9 +55,9 @@ public final class RosettaNetProcessConfigurationArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="integrationAccountName", required=true)
-      private final Input<String> integrationAccountName;
+      private final Output<String> integrationAccountName;
 
-    public Input<String> getIntegrationAccountName() {
+    public Output<String> getIntegrationAccountName() {
         return this.integrationAccountName;
     }
 
@@ -66,10 +66,10 @@ public final class RosettaNetProcessConfigurationArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -77,10 +77,10 @@ public final class RosettaNetProcessConfigurationArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="metadata")
-      private final @Nullable Input<Map<String,String>> metadata;
+      private final @Nullable Output<Map<String,String>> metadata;
 
-    public Input<Map<String,String>> getMetadata() {
-        return this.metadata == null ? Input.empty() : this.metadata;
+    public Output<Map<String,String>> getMetadata() {
+        return this.metadata == null ? Output.empty() : this.metadata;
     }
 
     /**
@@ -88,9 +88,9 @@ public final class RosettaNetProcessConfigurationArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="processCode", required=true)
-      private final Input<String> processCode;
+      private final Output<String> processCode;
 
-    public Input<String> getProcessCode() {
+    public Output<String> getProcessCode() {
         return this.processCode;
     }
 
@@ -99,9 +99,9 @@ public final class RosettaNetProcessConfigurationArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="processName", required=true)
-      private final Input<String> processName;
+      private final Output<String> processName;
 
-    public Input<String> getProcessName() {
+    public Output<String> getProcessName() {
         return this.processName;
     }
 
@@ -110,9 +110,9 @@ public final class RosettaNetProcessConfigurationArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="processVersion", required=true)
-      private final Input<String> processVersion;
+      private final Output<String> processVersion;
 
-    public Input<String> getProcessVersion() {
+    public Output<String> getProcessVersion() {
         return this.processVersion;
     }
 
@@ -121,9 +121,9 @@ public final class RosettaNetProcessConfigurationArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -132,9 +132,9 @@ public final class RosettaNetProcessConfigurationArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="responderRoleSettings", required=true)
-      private final Input<RosettaNetPipRoleSettingsArgs> responderRoleSettings;
+      private final Output<RosettaNetPipRoleSettingsArgs> responderRoleSettings;
 
-    public Input<RosettaNetPipRoleSettingsArgs> getResponderRoleSettings() {
+    public Output<RosettaNetPipRoleSettingsArgs> getResponderRoleSettings() {
         return this.responderRoleSettings;
     }
 
@@ -143,10 +143,10 @@ public final class RosettaNetProcessConfigurationArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="rosettaNetProcessConfigurationName")
-      private final @Nullable Input<String> rosettaNetProcessConfigurationName;
+      private final @Nullable Output<String> rosettaNetProcessConfigurationName;
 
-    public Input<String> getRosettaNetProcessConfigurationName() {
-        return this.rosettaNetProcessConfigurationName == null ? Input.empty() : this.rosettaNetProcessConfigurationName;
+    public Output<String> getRosettaNetProcessConfigurationName() {
+        return this.rosettaNetProcessConfigurationName == null ? Output.empty() : this.rosettaNetProcessConfigurationName;
     }
 
     /**
@@ -154,26 +154,26 @@ public final class RosettaNetProcessConfigurationArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public RosettaNetProcessConfigurationArgs(
-        Input<RosettaNetPipActivitySettingsArgs> activitySettings,
-        @Nullable Input<String> description,
-        Input<RosettaNetPipRoleSettingsArgs> initiatorRoleSettings,
-        Input<String> integrationAccountName,
-        @Nullable Input<String> location,
-        @Nullable Input<Map<String,String>> metadata,
-        Input<String> processCode,
-        Input<String> processName,
-        Input<String> processVersion,
-        Input<String> resourceGroupName,
-        Input<RosettaNetPipRoleSettingsArgs> responderRoleSettings,
-        @Nullable Input<String> rosettaNetProcessConfigurationName,
-        @Nullable Input<Map<String,String>> tags) {
+        Output<RosettaNetPipActivitySettingsArgs> activitySettings,
+        @Nullable Output<String> description,
+        Output<RosettaNetPipRoleSettingsArgs> initiatorRoleSettings,
+        Output<String> integrationAccountName,
+        @Nullable Output<String> location,
+        @Nullable Output<Map<String,String>> metadata,
+        Output<String> processCode,
+        Output<String> processName,
+        Output<String> processVersion,
+        Output<String> resourceGroupName,
+        Output<RosettaNetPipRoleSettingsArgs> responderRoleSettings,
+        @Nullable Output<String> rosettaNetProcessConfigurationName,
+        @Nullable Output<Map<String,String>> tags) {
         this.activitySettings = Objects.requireNonNull(activitySettings, "expected parameter 'activitySettings' to be non-null");
         this.description = description;
         this.initiatorRoleSettings = Objects.requireNonNull(initiatorRoleSettings, "expected parameter 'initiatorRoleSettings' to be non-null");
@@ -190,19 +190,19 @@ public final class RosettaNetProcessConfigurationArgs extends io.pulumi.resource
     }
 
     private RosettaNetProcessConfigurationArgs() {
-        this.activitySettings = Input.empty();
-        this.description = Input.empty();
-        this.initiatorRoleSettings = Input.empty();
-        this.integrationAccountName = Input.empty();
-        this.location = Input.empty();
-        this.metadata = Input.empty();
-        this.processCode = Input.empty();
-        this.processName = Input.empty();
-        this.processVersion = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.responderRoleSettings = Input.empty();
-        this.rosettaNetProcessConfigurationName = Input.empty();
-        this.tags = Input.empty();
+        this.activitySettings = Output.empty();
+        this.description = Output.empty();
+        this.initiatorRoleSettings = Output.empty();
+        this.integrationAccountName = Output.empty();
+        this.location = Output.empty();
+        this.metadata = Output.empty();
+        this.processCode = Output.empty();
+        this.processName = Output.empty();
+        this.processVersion = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.responderRoleSettings = Output.empty();
+        this.rosettaNetProcessConfigurationName = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -214,19 +214,19 @@ public final class RosettaNetProcessConfigurationArgs extends io.pulumi.resource
     }
 
     public static final class Builder {
-        private Input<RosettaNetPipActivitySettingsArgs> activitySettings;
-        private @Nullable Input<String> description;
-        private Input<RosettaNetPipRoleSettingsArgs> initiatorRoleSettings;
-        private Input<String> integrationAccountName;
-        private @Nullable Input<String> location;
-        private @Nullable Input<Map<String,String>> metadata;
-        private Input<String> processCode;
-        private Input<String> processName;
-        private Input<String> processVersion;
-        private Input<String> resourceGroupName;
-        private Input<RosettaNetPipRoleSettingsArgs> responderRoleSettings;
-        private @Nullable Input<String> rosettaNetProcessConfigurationName;
-        private @Nullable Input<Map<String,String>> tags;
+        private Output<RosettaNetPipActivitySettingsArgs> activitySettings;
+        private @Nullable Output<String> description;
+        private Output<RosettaNetPipRoleSettingsArgs> initiatorRoleSettings;
+        private Output<String> integrationAccountName;
+        private @Nullable Output<String> location;
+        private @Nullable Output<Map<String,String>> metadata;
+        private Output<String> processCode;
+        private Output<String> processName;
+        private Output<String> processVersion;
+        private Output<String> resourceGroupName;
+        private Output<RosettaNetPipRoleSettingsArgs> responderRoleSettings;
+        private @Nullable Output<String> rosettaNetProcessConfigurationName;
+        private @Nullable Output<Map<String,String>> tags;
 
         public Builder() {
     	      // Empty
@@ -249,133 +249,133 @@ public final class RosettaNetProcessConfigurationArgs extends io.pulumi.resource
     	      this.tags = defaults.tags;
         }
 
-        public Builder activitySettings(Input<RosettaNetPipActivitySettingsArgs> activitySettings) {
+        public Builder activitySettings(Output<RosettaNetPipActivitySettingsArgs> activitySettings) {
             this.activitySettings = Objects.requireNonNull(activitySettings);
             return this;
         }
 
         public Builder activitySettings(RosettaNetPipActivitySettingsArgs activitySettings) {
-            this.activitySettings = Input.of(Objects.requireNonNull(activitySettings));
+            this.activitySettings = Output.of(Objects.requireNonNull(activitySettings));
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder initiatorRoleSettings(Input<RosettaNetPipRoleSettingsArgs> initiatorRoleSettings) {
+        public Builder initiatorRoleSettings(Output<RosettaNetPipRoleSettingsArgs> initiatorRoleSettings) {
             this.initiatorRoleSettings = Objects.requireNonNull(initiatorRoleSettings);
             return this;
         }
 
         public Builder initiatorRoleSettings(RosettaNetPipRoleSettingsArgs initiatorRoleSettings) {
-            this.initiatorRoleSettings = Input.of(Objects.requireNonNull(initiatorRoleSettings));
+            this.initiatorRoleSettings = Output.of(Objects.requireNonNull(initiatorRoleSettings));
             return this;
         }
 
-        public Builder integrationAccountName(Input<String> integrationAccountName) {
+        public Builder integrationAccountName(Output<String> integrationAccountName) {
             this.integrationAccountName = Objects.requireNonNull(integrationAccountName);
             return this;
         }
 
         public Builder integrationAccountName(String integrationAccountName) {
-            this.integrationAccountName = Input.of(Objects.requireNonNull(integrationAccountName));
+            this.integrationAccountName = Output.of(Objects.requireNonNull(integrationAccountName));
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder metadata(@Nullable Input<Map<String,String>> metadata) {
+        public Builder metadata(@Nullable Output<Map<String,String>> metadata) {
             this.metadata = metadata;
             return this;
         }
 
         public Builder metadata(@Nullable Map<String,String> metadata) {
-            this.metadata = Input.ofNullable(metadata);
+            this.metadata = Output.ofNullable(metadata);
             return this;
         }
 
-        public Builder processCode(Input<String> processCode) {
+        public Builder processCode(Output<String> processCode) {
             this.processCode = Objects.requireNonNull(processCode);
             return this;
         }
 
         public Builder processCode(String processCode) {
-            this.processCode = Input.of(Objects.requireNonNull(processCode));
+            this.processCode = Output.of(Objects.requireNonNull(processCode));
             return this;
         }
 
-        public Builder processName(Input<String> processName) {
+        public Builder processName(Output<String> processName) {
             this.processName = Objects.requireNonNull(processName);
             return this;
         }
 
         public Builder processName(String processName) {
-            this.processName = Input.of(Objects.requireNonNull(processName));
+            this.processName = Output.of(Objects.requireNonNull(processName));
             return this;
         }
 
-        public Builder processVersion(Input<String> processVersion) {
+        public Builder processVersion(Output<String> processVersion) {
             this.processVersion = Objects.requireNonNull(processVersion);
             return this;
         }
 
         public Builder processVersion(String processVersion) {
-            this.processVersion = Input.of(Objects.requireNonNull(processVersion));
+            this.processVersion = Output.of(Objects.requireNonNull(processVersion));
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder responderRoleSettings(Input<RosettaNetPipRoleSettingsArgs> responderRoleSettings) {
+        public Builder responderRoleSettings(Output<RosettaNetPipRoleSettingsArgs> responderRoleSettings) {
             this.responderRoleSettings = Objects.requireNonNull(responderRoleSettings);
             return this;
         }
 
         public Builder responderRoleSettings(RosettaNetPipRoleSettingsArgs responderRoleSettings) {
-            this.responderRoleSettings = Input.of(Objects.requireNonNull(responderRoleSettings));
+            this.responderRoleSettings = Output.of(Objects.requireNonNull(responderRoleSettings));
             return this;
         }
 
-        public Builder rosettaNetProcessConfigurationName(@Nullable Input<String> rosettaNetProcessConfigurationName) {
+        public Builder rosettaNetProcessConfigurationName(@Nullable Output<String> rosettaNetProcessConfigurationName) {
             this.rosettaNetProcessConfigurationName = rosettaNetProcessConfigurationName;
             return this;
         }
 
         public Builder rosettaNetProcessConfigurationName(@Nullable String rosettaNetProcessConfigurationName) {
-            this.rosettaNetProcessConfigurationName = Input.ofNullable(rosettaNetProcessConfigurationName);
+            this.rosettaNetProcessConfigurationName = Output.ofNullable(rosettaNetProcessConfigurationName);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public RosettaNetProcessConfigurationArgs build() {

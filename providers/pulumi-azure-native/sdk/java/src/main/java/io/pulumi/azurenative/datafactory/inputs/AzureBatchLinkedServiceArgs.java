@@ -10,7 +10,7 @@ import io.pulumi.azurenative.datafactory.inputs.LinkedServiceReferenceArgs;
 import io.pulumi.azurenative.datafactory.inputs.ParameterSpecificationArgs;
 import io.pulumi.azurenative.datafactory.inputs.SecureStringArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
@@ -33,10 +33,10 @@ public final class AzureBatchLinkedServiceArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="accessKey")
-      private final @Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> accessKey;
+      private final @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> accessKey;
 
-    public Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> getAccessKey() {
-        return this.accessKey == null ? Input.empty() : this.accessKey;
+    public Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> getAccessKey() {
+        return this.accessKey == null ? Output.empty() : this.accessKey;
     }
 
     /**
@@ -44,9 +44,9 @@ public final class AzureBatchLinkedServiceArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="accountName", required=true)
-      private final Input<Object> accountName;
+      private final Output<Object> accountName;
 
-    public Input<Object> getAccountName() {
+    public Output<Object> getAccountName() {
         return this.accountName;
     }
 
@@ -55,10 +55,10 @@ public final class AzureBatchLinkedServiceArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="annotations")
-      private final @Nullable Input<List<Object>> annotations;
+      private final @Nullable Output<List<Object>> annotations;
 
-    public Input<List<Object>> getAnnotations() {
-        return this.annotations == null ? Input.empty() : this.annotations;
+    public Output<List<Object>> getAnnotations() {
+        return this.annotations == null ? Output.empty() : this.annotations;
     }
 
     /**
@@ -66,9 +66,9 @@ public final class AzureBatchLinkedServiceArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="batchUri", required=true)
-      private final Input<Object> batchUri;
+      private final Output<Object> batchUri;
 
-    public Input<Object> getBatchUri() {
+    public Output<Object> getBatchUri() {
         return this.batchUri;
     }
 
@@ -77,10 +77,10 @@ public final class AzureBatchLinkedServiceArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="connectVia")
-      private final @Nullable Input<IntegrationRuntimeReferenceArgs> connectVia;
+      private final @Nullable Output<IntegrationRuntimeReferenceArgs> connectVia;
 
-    public Input<IntegrationRuntimeReferenceArgs> getConnectVia() {
-        return this.connectVia == null ? Input.empty() : this.connectVia;
+    public Output<IntegrationRuntimeReferenceArgs> getConnectVia() {
+        return this.connectVia == null ? Output.empty() : this.connectVia;
     }
 
     /**
@@ -88,10 +88,10 @@ public final class AzureBatchLinkedServiceArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="credential")
-      private final @Nullable Input<CredentialReferenceArgs> credential;
+      private final @Nullable Output<CredentialReferenceArgs> credential;
 
-    public Input<CredentialReferenceArgs> getCredential() {
-        return this.credential == null ? Input.empty() : this.credential;
+    public Output<CredentialReferenceArgs> getCredential() {
+        return this.credential == null ? Output.empty() : this.credential;
     }
 
     /**
@@ -99,10 +99,10 @@ public final class AzureBatchLinkedServiceArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -110,10 +110,10 @@ public final class AzureBatchLinkedServiceArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="encryptedCredential")
-      private final @Nullable Input<Object> encryptedCredential;
+      private final @Nullable Output<Object> encryptedCredential;
 
-    public Input<Object> getEncryptedCredential() {
-        return this.encryptedCredential == null ? Input.empty() : this.encryptedCredential;
+    public Output<Object> getEncryptedCredential() {
+        return this.encryptedCredential == null ? Output.empty() : this.encryptedCredential;
     }
 
     /**
@@ -121,9 +121,9 @@ public final class AzureBatchLinkedServiceArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="linkedServiceName", required=true)
-      private final Input<LinkedServiceReferenceArgs> linkedServiceName;
+      private final Output<LinkedServiceReferenceArgs> linkedServiceName;
 
-    public Input<LinkedServiceReferenceArgs> getLinkedServiceName() {
+    public Output<LinkedServiceReferenceArgs> getLinkedServiceName() {
         return this.linkedServiceName;
     }
 
@@ -132,10 +132,10 @@ public final class AzureBatchLinkedServiceArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="parameters")
-      private final @Nullable Input<Map<String,ParameterSpecificationArgs>> parameters;
+      private final @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters;
 
-    public Input<Map<String,ParameterSpecificationArgs>> getParameters() {
-        return this.parameters == null ? Input.empty() : this.parameters;
+    public Output<Map<String,ParameterSpecificationArgs>> getParameters() {
+        return this.parameters == null ? Output.empty() : this.parameters;
     }
 
     /**
@@ -143,9 +143,9 @@ public final class AzureBatchLinkedServiceArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="poolName", required=true)
-      private final Input<Object> poolName;
+      private final Output<Object> poolName;
 
-    public Input<Object> getPoolName() {
+    public Output<Object> getPoolName() {
         return this.poolName;
     }
 
@@ -155,25 +155,25 @@ public final class AzureBatchLinkedServiceArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<String> type;
+      private final Output<String> type;
 
-    public Input<String> getType() {
+    public Output<String> getType() {
         return this.type;
     }
 
     public AzureBatchLinkedServiceArgs(
-        @Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> accessKey,
-        Input<Object> accountName,
-        @Nullable Input<List<Object>> annotations,
-        Input<Object> batchUri,
-        @Nullable Input<IntegrationRuntimeReferenceArgs> connectVia,
-        @Nullable Input<CredentialReferenceArgs> credential,
-        @Nullable Input<String> description,
-        @Nullable Input<Object> encryptedCredential,
-        Input<LinkedServiceReferenceArgs> linkedServiceName,
-        @Nullable Input<Map<String,ParameterSpecificationArgs>> parameters,
-        Input<Object> poolName,
-        Input<String> type) {
+        @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> accessKey,
+        Output<Object> accountName,
+        @Nullable Output<List<Object>> annotations,
+        Output<Object> batchUri,
+        @Nullable Output<IntegrationRuntimeReferenceArgs> connectVia,
+        @Nullable Output<CredentialReferenceArgs> credential,
+        @Nullable Output<String> description,
+        @Nullable Output<Object> encryptedCredential,
+        Output<LinkedServiceReferenceArgs> linkedServiceName,
+        @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters,
+        Output<Object> poolName,
+        Output<String> type) {
         this.accessKey = accessKey;
         this.accountName = Objects.requireNonNull(accountName, "expected parameter 'accountName' to be non-null");
         this.annotations = annotations;
@@ -189,18 +189,18 @@ public final class AzureBatchLinkedServiceArgs extends io.pulumi.resources.Resou
     }
 
     private AzureBatchLinkedServiceArgs() {
-        this.accessKey = Input.empty();
-        this.accountName = Input.empty();
-        this.annotations = Input.empty();
-        this.batchUri = Input.empty();
-        this.connectVia = Input.empty();
-        this.credential = Input.empty();
-        this.description = Input.empty();
-        this.encryptedCredential = Input.empty();
-        this.linkedServiceName = Input.empty();
-        this.parameters = Input.empty();
-        this.poolName = Input.empty();
-        this.type = Input.empty();
+        this.accessKey = Output.empty();
+        this.accountName = Output.empty();
+        this.annotations = Output.empty();
+        this.batchUri = Output.empty();
+        this.connectVia = Output.empty();
+        this.credential = Output.empty();
+        this.description = Output.empty();
+        this.encryptedCredential = Output.empty();
+        this.linkedServiceName = Output.empty();
+        this.parameters = Output.empty();
+        this.poolName = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -212,18 +212,18 @@ public final class AzureBatchLinkedServiceArgs extends io.pulumi.resources.Resou
     }
 
     public static final class Builder {
-        private @Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> accessKey;
-        private Input<Object> accountName;
-        private @Nullable Input<List<Object>> annotations;
-        private Input<Object> batchUri;
-        private @Nullable Input<IntegrationRuntimeReferenceArgs> connectVia;
-        private @Nullable Input<CredentialReferenceArgs> credential;
-        private @Nullable Input<String> description;
-        private @Nullable Input<Object> encryptedCredential;
-        private Input<LinkedServiceReferenceArgs> linkedServiceName;
-        private @Nullable Input<Map<String,ParameterSpecificationArgs>> parameters;
-        private Input<Object> poolName;
-        private Input<String> type;
+        private @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> accessKey;
+        private Output<Object> accountName;
+        private @Nullable Output<List<Object>> annotations;
+        private Output<Object> batchUri;
+        private @Nullable Output<IntegrationRuntimeReferenceArgs> connectVia;
+        private @Nullable Output<CredentialReferenceArgs> credential;
+        private @Nullable Output<String> description;
+        private @Nullable Output<Object> encryptedCredential;
+        private Output<LinkedServiceReferenceArgs> linkedServiceName;
+        private @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters;
+        private Output<Object> poolName;
+        private Output<String> type;
 
         public Builder() {
     	      // Empty
@@ -245,123 +245,123 @@ public final class AzureBatchLinkedServiceArgs extends io.pulumi.resources.Resou
     	      this.type = defaults.type;
         }
 
-        public Builder accessKey(@Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> accessKey) {
+        public Builder accessKey(@Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> accessKey) {
             this.accessKey = accessKey;
             return this;
         }
 
         public Builder accessKey(@Nullable Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs> accessKey) {
-            this.accessKey = Input.ofNullable(accessKey);
+            this.accessKey = Output.ofNullable(accessKey);
             return this;
         }
 
-        public Builder accountName(Input<Object> accountName) {
+        public Builder accountName(Output<Object> accountName) {
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
 
         public Builder accountName(Object accountName) {
-            this.accountName = Input.of(Objects.requireNonNull(accountName));
+            this.accountName = Output.of(Objects.requireNonNull(accountName));
             return this;
         }
 
-        public Builder annotations(@Nullable Input<List<Object>> annotations) {
+        public Builder annotations(@Nullable Output<List<Object>> annotations) {
             this.annotations = annotations;
             return this;
         }
 
         public Builder annotations(@Nullable List<Object> annotations) {
-            this.annotations = Input.ofNullable(annotations);
+            this.annotations = Output.ofNullable(annotations);
             return this;
         }
 
-        public Builder batchUri(Input<Object> batchUri) {
+        public Builder batchUri(Output<Object> batchUri) {
             this.batchUri = Objects.requireNonNull(batchUri);
             return this;
         }
 
         public Builder batchUri(Object batchUri) {
-            this.batchUri = Input.of(Objects.requireNonNull(batchUri));
+            this.batchUri = Output.of(Objects.requireNonNull(batchUri));
             return this;
         }
 
-        public Builder connectVia(@Nullable Input<IntegrationRuntimeReferenceArgs> connectVia) {
+        public Builder connectVia(@Nullable Output<IntegrationRuntimeReferenceArgs> connectVia) {
             this.connectVia = connectVia;
             return this;
         }
 
         public Builder connectVia(@Nullable IntegrationRuntimeReferenceArgs connectVia) {
-            this.connectVia = Input.ofNullable(connectVia);
+            this.connectVia = Output.ofNullable(connectVia);
             return this;
         }
 
-        public Builder credential(@Nullable Input<CredentialReferenceArgs> credential) {
+        public Builder credential(@Nullable Output<CredentialReferenceArgs> credential) {
             this.credential = credential;
             return this;
         }
 
         public Builder credential(@Nullable CredentialReferenceArgs credential) {
-            this.credential = Input.ofNullable(credential);
+            this.credential = Output.ofNullable(credential);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder encryptedCredential(@Nullable Input<Object> encryptedCredential) {
+        public Builder encryptedCredential(@Nullable Output<Object> encryptedCredential) {
             this.encryptedCredential = encryptedCredential;
             return this;
         }
 
         public Builder encryptedCredential(@Nullable Object encryptedCredential) {
-            this.encryptedCredential = Input.ofNullable(encryptedCredential);
+            this.encryptedCredential = Output.ofNullable(encryptedCredential);
             return this;
         }
 
-        public Builder linkedServiceName(Input<LinkedServiceReferenceArgs> linkedServiceName) {
+        public Builder linkedServiceName(Output<LinkedServiceReferenceArgs> linkedServiceName) {
             this.linkedServiceName = Objects.requireNonNull(linkedServiceName);
             return this;
         }
 
         public Builder linkedServiceName(LinkedServiceReferenceArgs linkedServiceName) {
-            this.linkedServiceName = Input.of(Objects.requireNonNull(linkedServiceName));
+            this.linkedServiceName = Output.of(Objects.requireNonNull(linkedServiceName));
             return this;
         }
 
-        public Builder parameters(@Nullable Input<Map<String,ParameterSpecificationArgs>> parameters) {
+        public Builder parameters(@Nullable Output<Map<String,ParameterSpecificationArgs>> parameters) {
             this.parameters = parameters;
             return this;
         }
 
         public Builder parameters(@Nullable Map<String,ParameterSpecificationArgs> parameters) {
-            this.parameters = Input.ofNullable(parameters);
+            this.parameters = Output.ofNullable(parameters);
             return this;
         }
 
-        public Builder poolName(Input<Object> poolName) {
+        public Builder poolName(Output<Object> poolName) {
             this.poolName = Objects.requireNonNull(poolName);
             return this;
         }
 
         public Builder poolName(Object poolName) {
-            this.poolName = Input.of(Objects.requireNonNull(poolName));
+            this.poolName = Output.of(Objects.requireNonNull(poolName));
             return this;
         }
 
-        public Builder type(Input<String> type) {
+        public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(String type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
         public AzureBatchLinkedServiceArgs build() {

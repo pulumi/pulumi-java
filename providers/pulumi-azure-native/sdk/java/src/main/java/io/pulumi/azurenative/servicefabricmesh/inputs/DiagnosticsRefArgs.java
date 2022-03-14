@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.servicefabricmesh.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -25,10 +25,10 @@ public final class DiagnosticsRefArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enabled")
-      private final @Nullable Input<Boolean> enabled;
+      private final @Nullable Output<Boolean> enabled;
 
-    public Input<Boolean> getEnabled() {
-        return this.enabled == null ? Input.empty() : this.enabled;
+    public Output<Boolean> getEnabled() {
+        return this.enabled == null ? Output.empty() : this.enabled;
     }
 
     /**
@@ -36,22 +36,22 @@ public final class DiagnosticsRefArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sinkRefs")
-      private final @Nullable Input<List<String>> sinkRefs;
+      private final @Nullable Output<List<String>> sinkRefs;
 
-    public Input<List<String>> getSinkRefs() {
-        return this.sinkRefs == null ? Input.empty() : this.sinkRefs;
+    public Output<List<String>> getSinkRefs() {
+        return this.sinkRefs == null ? Output.empty() : this.sinkRefs;
     }
 
     public DiagnosticsRefArgs(
-        @Nullable Input<Boolean> enabled,
-        @Nullable Input<List<String>> sinkRefs) {
+        @Nullable Output<Boolean> enabled,
+        @Nullable Output<List<String>> sinkRefs) {
         this.enabled = enabled;
         this.sinkRefs = sinkRefs;
     }
 
     private DiagnosticsRefArgs() {
-        this.enabled = Input.empty();
-        this.sinkRefs = Input.empty();
+        this.enabled = Output.empty();
+        this.sinkRefs = Output.empty();
     }
 
     public static Builder builder() {
@@ -63,8 +63,8 @@ public final class DiagnosticsRefArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> enabled;
-        private @Nullable Input<List<String>> sinkRefs;
+        private @Nullable Output<Boolean> enabled;
+        private @Nullable Output<List<String>> sinkRefs;
 
         public Builder() {
     	      // Empty
@@ -76,23 +76,23 @@ public final class DiagnosticsRefArgs extends io.pulumi.resources.ResourceArgs {
     	      this.sinkRefs = defaults.sinkRefs;
         }
 
-        public Builder enabled(@Nullable Input<Boolean> enabled) {
+        public Builder enabled(@Nullable Output<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
 
         public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Input.ofNullable(enabled);
+            this.enabled = Output.ofNullable(enabled);
             return this;
         }
 
-        public Builder sinkRefs(@Nullable Input<List<String>> sinkRefs) {
+        public Builder sinkRefs(@Nullable Output<List<String>> sinkRefs) {
             this.sinkRefs = sinkRefs;
             return this;
         }
 
         public Builder sinkRefs(@Nullable List<String> sinkRefs) {
-            this.sinkRefs = Input.ofNullable(sinkRefs);
+            this.sinkRefs = Output.ofNullable(sinkRefs);
             return this;
         }
         public DiagnosticsRefArgs build() {

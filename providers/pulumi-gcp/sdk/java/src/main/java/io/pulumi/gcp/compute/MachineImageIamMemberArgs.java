@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.compute.inputs.MachineImageIamMemberConditionArgs;
 import java.lang.String;
@@ -21,10 +21,10 @@ public final class MachineImageIamMemberArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="condition")
-      private final @Nullable Input<MachineImageIamMemberConditionArgs> condition;
+      private final @Nullable Output<MachineImageIamMemberConditionArgs> condition;
 
-    public Input<MachineImageIamMemberConditionArgs> getCondition() {
-        return this.condition == null ? Input.empty() : this.condition;
+    public Output<MachineImageIamMemberConditionArgs> getCondition() {
+        return this.condition == null ? Output.empty() : this.condition;
     }
 
     /**
@@ -32,16 +32,16 @@ public final class MachineImageIamMemberArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="machineImage", required=true)
-      private final Input<String> machineImage;
+      private final Output<String> machineImage;
 
-    public Input<String> getMachineImage() {
+    public Output<String> getMachineImage() {
         return this.machineImage;
     }
 
     @InputImport(name="member", required=true)
-      private final Input<String> member;
+      private final Output<String> member;
 
-    public Input<String> getMember() {
+    public Output<String> getMember() {
         return this.member;
     }
 
@@ -51,10 +51,10 @@ public final class MachineImageIamMemberArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -64,18 +64,18 @@ public final class MachineImageIamMemberArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="role", required=true)
-      private final Input<String> role;
+      private final Output<String> role;
 
-    public Input<String> getRole() {
+    public Output<String> getRole() {
         return this.role;
     }
 
     public MachineImageIamMemberArgs(
-        @Nullable Input<MachineImageIamMemberConditionArgs> condition,
-        Input<String> machineImage,
-        Input<String> member,
-        @Nullable Input<String> project,
-        Input<String> role) {
+        @Nullable Output<MachineImageIamMemberConditionArgs> condition,
+        Output<String> machineImage,
+        Output<String> member,
+        @Nullable Output<String> project,
+        Output<String> role) {
         this.condition = condition;
         this.machineImage = Objects.requireNonNull(machineImage, "expected parameter 'machineImage' to be non-null");
         this.member = Objects.requireNonNull(member, "expected parameter 'member' to be non-null");
@@ -84,11 +84,11 @@ public final class MachineImageIamMemberArgs extends io.pulumi.resources.Resourc
     }
 
     private MachineImageIamMemberArgs() {
-        this.condition = Input.empty();
-        this.machineImage = Input.empty();
-        this.member = Input.empty();
-        this.project = Input.empty();
-        this.role = Input.empty();
+        this.condition = Output.empty();
+        this.machineImage = Output.empty();
+        this.member = Output.empty();
+        this.project = Output.empty();
+        this.role = Output.empty();
     }
 
     public static Builder builder() {
@@ -100,11 +100,11 @@ public final class MachineImageIamMemberArgs extends io.pulumi.resources.Resourc
     }
 
     public static final class Builder {
-        private @Nullable Input<MachineImageIamMemberConditionArgs> condition;
-        private Input<String> machineImage;
-        private Input<String> member;
-        private @Nullable Input<String> project;
-        private Input<String> role;
+        private @Nullable Output<MachineImageIamMemberConditionArgs> condition;
+        private Output<String> machineImage;
+        private Output<String> member;
+        private @Nullable Output<String> project;
+        private Output<String> role;
 
         public Builder() {
     	      // Empty
@@ -119,53 +119,53 @@ public final class MachineImageIamMemberArgs extends io.pulumi.resources.Resourc
     	      this.role = defaults.role;
         }
 
-        public Builder condition(@Nullable Input<MachineImageIamMemberConditionArgs> condition) {
+        public Builder condition(@Nullable Output<MachineImageIamMemberConditionArgs> condition) {
             this.condition = condition;
             return this;
         }
 
         public Builder condition(@Nullable MachineImageIamMemberConditionArgs condition) {
-            this.condition = Input.ofNullable(condition);
+            this.condition = Output.ofNullable(condition);
             return this;
         }
 
-        public Builder machineImage(Input<String> machineImage) {
+        public Builder machineImage(Output<String> machineImage) {
             this.machineImage = Objects.requireNonNull(machineImage);
             return this;
         }
 
         public Builder machineImage(String machineImage) {
-            this.machineImage = Input.of(Objects.requireNonNull(machineImage));
+            this.machineImage = Output.of(Objects.requireNonNull(machineImage));
             return this;
         }
 
-        public Builder member(Input<String> member) {
+        public Builder member(Output<String> member) {
             this.member = Objects.requireNonNull(member);
             return this;
         }
 
         public Builder member(String member) {
-            this.member = Input.of(Objects.requireNonNull(member));
+            this.member = Output.of(Objects.requireNonNull(member));
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder role(Input<String> role) {
+        public Builder role(Output<String> role) {
             this.role = Objects.requireNonNull(role);
             return this;
         }
 
         public Builder role(String role) {
-            this.role = Input.of(Objects.requireNonNull(role));
+            this.role = Output.of(Objects.requireNonNull(role));
             return this;
         }
         public MachineImageIamMemberArgs build() {

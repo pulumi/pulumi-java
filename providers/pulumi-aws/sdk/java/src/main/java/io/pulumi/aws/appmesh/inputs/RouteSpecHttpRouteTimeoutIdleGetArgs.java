@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.appmesh.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -19,9 +19,9 @@ public final class RouteSpecHttpRouteTimeoutIdleGetArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="unit", required=true)
-      private final Input<String> unit;
+      private final Output<String> unit;
 
-    public Input<String> getUnit() {
+    public Output<String> getUnit() {
         return this.unit;
     }
 
@@ -30,22 +30,22 @@ public final class RouteSpecHttpRouteTimeoutIdleGetArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="value", required=true)
-      private final Input<Integer> value;
+      private final Output<Integer> value;
 
-    public Input<Integer> getValue() {
+    public Output<Integer> getValue() {
         return this.value;
     }
 
     public RouteSpecHttpRouteTimeoutIdleGetArgs(
-        Input<String> unit,
-        Input<Integer> value) {
+        Output<String> unit,
+        Output<Integer> value) {
         this.unit = Objects.requireNonNull(unit, "expected parameter 'unit' to be non-null");
         this.value = Objects.requireNonNull(value, "expected parameter 'value' to be non-null");
     }
 
     private RouteSpecHttpRouteTimeoutIdleGetArgs() {
-        this.unit = Input.empty();
-        this.value = Input.empty();
+        this.unit = Output.empty();
+        this.value = Output.empty();
     }
 
     public static Builder builder() {
@@ -57,8 +57,8 @@ public final class RouteSpecHttpRouteTimeoutIdleGetArgs extends io.pulumi.resour
     }
 
     public static final class Builder {
-        private Input<String> unit;
-        private Input<Integer> value;
+        private Output<String> unit;
+        private Output<Integer> value;
 
         public Builder() {
     	      // Empty
@@ -70,23 +70,23 @@ public final class RouteSpecHttpRouteTimeoutIdleGetArgs extends io.pulumi.resour
     	      this.value = defaults.value;
         }
 
-        public Builder unit(Input<String> unit) {
+        public Builder unit(Output<String> unit) {
             this.unit = Objects.requireNonNull(unit);
             return this;
         }
 
         public Builder unit(String unit) {
-            this.unit = Input.of(Objects.requireNonNull(unit));
+            this.unit = Output.of(Objects.requireNonNull(unit));
             return this;
         }
 
-        public Builder value(Input<Integer> value) {
+        public Builder value(Output<Integer> value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }
 
         public Builder value(Integer value) {
-            this.value = Input.of(Objects.requireNonNull(value));
+            this.value = Output.of(Objects.requireNonNull(value));
             return this;
         }
         public RouteSpecHttpRouteTimeoutIdleGetArgs build() {

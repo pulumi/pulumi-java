@@ -5,7 +5,7 @@ package io.pulumi.awsnative.sagemaker.inputs;
 
 import io.pulumi.awsnative.sagemaker.inputs.DomainCustomImageArgs;
 import io.pulumi.awsnative.sagemaker.inputs.DomainResourceSpecArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
@@ -25,10 +25,10 @@ public final class DomainKernelGatewayAppSettingsArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="customImages")
-      private final @Nullable Input<List<DomainCustomImageArgs>> customImages;
+      private final @Nullable Output<List<DomainCustomImageArgs>> customImages;
 
-    public Input<List<DomainCustomImageArgs>> getCustomImages() {
-        return this.customImages == null ? Input.empty() : this.customImages;
+    public Output<List<DomainCustomImageArgs>> getCustomImages() {
+        return this.customImages == null ? Output.empty() : this.customImages;
     }
 
     /**
@@ -36,22 +36,22 @@ public final class DomainKernelGatewayAppSettingsArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="defaultResourceSpec")
-      private final @Nullable Input<DomainResourceSpecArgs> defaultResourceSpec;
+      private final @Nullable Output<DomainResourceSpecArgs> defaultResourceSpec;
 
-    public Input<DomainResourceSpecArgs> getDefaultResourceSpec() {
-        return this.defaultResourceSpec == null ? Input.empty() : this.defaultResourceSpec;
+    public Output<DomainResourceSpecArgs> getDefaultResourceSpec() {
+        return this.defaultResourceSpec == null ? Output.empty() : this.defaultResourceSpec;
     }
 
     public DomainKernelGatewayAppSettingsArgs(
-        @Nullable Input<List<DomainCustomImageArgs>> customImages,
-        @Nullable Input<DomainResourceSpecArgs> defaultResourceSpec) {
+        @Nullable Output<List<DomainCustomImageArgs>> customImages,
+        @Nullable Output<DomainResourceSpecArgs> defaultResourceSpec) {
         this.customImages = customImages;
         this.defaultResourceSpec = defaultResourceSpec;
     }
 
     private DomainKernelGatewayAppSettingsArgs() {
-        this.customImages = Input.empty();
-        this.defaultResourceSpec = Input.empty();
+        this.customImages = Output.empty();
+        this.defaultResourceSpec = Output.empty();
     }
 
     public static Builder builder() {
@@ -63,8 +63,8 @@ public final class DomainKernelGatewayAppSettingsArgs extends io.pulumi.resource
     }
 
     public static final class Builder {
-        private @Nullable Input<List<DomainCustomImageArgs>> customImages;
-        private @Nullable Input<DomainResourceSpecArgs> defaultResourceSpec;
+        private @Nullable Output<List<DomainCustomImageArgs>> customImages;
+        private @Nullable Output<DomainResourceSpecArgs> defaultResourceSpec;
 
         public Builder() {
     	      // Empty
@@ -76,23 +76,23 @@ public final class DomainKernelGatewayAppSettingsArgs extends io.pulumi.resource
     	      this.defaultResourceSpec = defaults.defaultResourceSpec;
         }
 
-        public Builder customImages(@Nullable Input<List<DomainCustomImageArgs>> customImages) {
+        public Builder customImages(@Nullable Output<List<DomainCustomImageArgs>> customImages) {
             this.customImages = customImages;
             return this;
         }
 
         public Builder customImages(@Nullable List<DomainCustomImageArgs> customImages) {
-            this.customImages = Input.ofNullable(customImages);
+            this.customImages = Output.ofNullable(customImages);
             return this;
         }
 
-        public Builder defaultResourceSpec(@Nullable Input<DomainResourceSpecArgs> defaultResourceSpec) {
+        public Builder defaultResourceSpec(@Nullable Output<DomainResourceSpecArgs> defaultResourceSpec) {
             this.defaultResourceSpec = defaultResourceSpec;
             return this;
         }
 
         public Builder defaultResourceSpec(@Nullable DomainResourceSpecArgs defaultResourceSpec) {
-            this.defaultResourceSpec = Input.ofNullable(defaultResourceSpec);
+            this.defaultResourceSpec = Output.ofNullable(defaultResourceSpec);
             return this;
         }
         public DomainKernelGatewayAppSettingsArgs build() {

@@ -4,7 +4,7 @@
 package io.pulumi.aws.imagebuilder.inputs;
 
 import io.pulumi.aws.imagebuilder.inputs.DistributionConfigurationDistributionAmiDistributionConfigurationLaunchPermissionGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -22,10 +22,10 @@ public final class DistributionConfigurationDistributionAmiDistributionConfigura
      * 
      */
     @InputImport(name="amiTags")
-      private final @Nullable Input<Map<String,String>> amiTags;
+      private final @Nullable Output<Map<String,String>> amiTags;
 
-    public Input<Map<String,String>> getAmiTags() {
-        return this.amiTags == null ? Input.empty() : this.amiTags;
+    public Output<Map<String,String>> getAmiTags() {
+        return this.amiTags == null ? Output.empty() : this.amiTags;
     }
 
     /**
@@ -33,10 +33,10 @@ public final class DistributionConfigurationDistributionAmiDistributionConfigura
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -44,10 +44,10 @@ public final class DistributionConfigurationDistributionAmiDistributionConfigura
      * 
      */
     @InputImport(name="kmsKeyId")
-      private final @Nullable Input<String> kmsKeyId;
+      private final @Nullable Output<String> kmsKeyId;
 
-    public Input<String> getKmsKeyId() {
-        return this.kmsKeyId == null ? Input.empty() : this.kmsKeyId;
+    public Output<String> getKmsKeyId() {
+        return this.kmsKeyId == null ? Output.empty() : this.kmsKeyId;
     }
 
     /**
@@ -55,10 +55,10 @@ public final class DistributionConfigurationDistributionAmiDistributionConfigura
      * 
      */
     @InputImport(name="launchPermission")
-      private final @Nullable Input<DistributionConfigurationDistributionAmiDistributionConfigurationLaunchPermissionGetArgs> launchPermission;
+      private final @Nullable Output<DistributionConfigurationDistributionAmiDistributionConfigurationLaunchPermissionGetArgs> launchPermission;
 
-    public Input<DistributionConfigurationDistributionAmiDistributionConfigurationLaunchPermissionGetArgs> getLaunchPermission() {
-        return this.launchPermission == null ? Input.empty() : this.launchPermission;
+    public Output<DistributionConfigurationDistributionAmiDistributionConfigurationLaunchPermissionGetArgs> getLaunchPermission() {
+        return this.launchPermission == null ? Output.empty() : this.launchPermission;
     }
 
     /**
@@ -66,10 +66,10 @@ public final class DistributionConfigurationDistributionAmiDistributionConfigura
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -77,19 +77,19 @@ public final class DistributionConfigurationDistributionAmiDistributionConfigura
      * 
      */
     @InputImport(name="targetAccountIds")
-      private final @Nullable Input<List<String>> targetAccountIds;
+      private final @Nullable Output<List<String>> targetAccountIds;
 
-    public Input<List<String>> getTargetAccountIds() {
-        return this.targetAccountIds == null ? Input.empty() : this.targetAccountIds;
+    public Output<List<String>> getTargetAccountIds() {
+        return this.targetAccountIds == null ? Output.empty() : this.targetAccountIds;
     }
 
     public DistributionConfigurationDistributionAmiDistributionConfigurationGetArgs(
-        @Nullable Input<Map<String,String>> amiTags,
-        @Nullable Input<String> description,
-        @Nullable Input<String> kmsKeyId,
-        @Nullable Input<DistributionConfigurationDistributionAmiDistributionConfigurationLaunchPermissionGetArgs> launchPermission,
-        @Nullable Input<String> name,
-        @Nullable Input<List<String>> targetAccountIds) {
+        @Nullable Output<Map<String,String>> amiTags,
+        @Nullable Output<String> description,
+        @Nullable Output<String> kmsKeyId,
+        @Nullable Output<DistributionConfigurationDistributionAmiDistributionConfigurationLaunchPermissionGetArgs> launchPermission,
+        @Nullable Output<String> name,
+        @Nullable Output<List<String>> targetAccountIds) {
         this.amiTags = amiTags;
         this.description = description;
         this.kmsKeyId = kmsKeyId;
@@ -99,12 +99,12 @@ public final class DistributionConfigurationDistributionAmiDistributionConfigura
     }
 
     private DistributionConfigurationDistributionAmiDistributionConfigurationGetArgs() {
-        this.amiTags = Input.empty();
-        this.description = Input.empty();
-        this.kmsKeyId = Input.empty();
-        this.launchPermission = Input.empty();
-        this.name = Input.empty();
-        this.targetAccountIds = Input.empty();
+        this.amiTags = Output.empty();
+        this.description = Output.empty();
+        this.kmsKeyId = Output.empty();
+        this.launchPermission = Output.empty();
+        this.name = Output.empty();
+        this.targetAccountIds = Output.empty();
     }
 
     public static Builder builder() {
@@ -116,12 +116,12 @@ public final class DistributionConfigurationDistributionAmiDistributionConfigura
     }
 
     public static final class Builder {
-        private @Nullable Input<Map<String,String>> amiTags;
-        private @Nullable Input<String> description;
-        private @Nullable Input<String> kmsKeyId;
-        private @Nullable Input<DistributionConfigurationDistributionAmiDistributionConfigurationLaunchPermissionGetArgs> launchPermission;
-        private @Nullable Input<String> name;
-        private @Nullable Input<List<String>> targetAccountIds;
+        private @Nullable Output<Map<String,String>> amiTags;
+        private @Nullable Output<String> description;
+        private @Nullable Output<String> kmsKeyId;
+        private @Nullable Output<DistributionConfigurationDistributionAmiDistributionConfigurationLaunchPermissionGetArgs> launchPermission;
+        private @Nullable Output<String> name;
+        private @Nullable Output<List<String>> targetAccountIds;
 
         public Builder() {
     	      // Empty
@@ -137,63 +137,63 @@ public final class DistributionConfigurationDistributionAmiDistributionConfigura
     	      this.targetAccountIds = defaults.targetAccountIds;
         }
 
-        public Builder amiTags(@Nullable Input<Map<String,String>> amiTags) {
+        public Builder amiTags(@Nullable Output<Map<String,String>> amiTags) {
             this.amiTags = amiTags;
             return this;
         }
 
         public Builder amiTags(@Nullable Map<String,String> amiTags) {
-            this.amiTags = Input.ofNullable(amiTags);
+            this.amiTags = Output.ofNullable(amiTags);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder kmsKeyId(@Nullable Input<String> kmsKeyId) {
+        public Builder kmsKeyId(@Nullable Output<String> kmsKeyId) {
             this.kmsKeyId = kmsKeyId;
             return this;
         }
 
         public Builder kmsKeyId(@Nullable String kmsKeyId) {
-            this.kmsKeyId = Input.ofNullable(kmsKeyId);
+            this.kmsKeyId = Output.ofNullable(kmsKeyId);
             return this;
         }
 
-        public Builder launchPermission(@Nullable Input<DistributionConfigurationDistributionAmiDistributionConfigurationLaunchPermissionGetArgs> launchPermission) {
+        public Builder launchPermission(@Nullable Output<DistributionConfigurationDistributionAmiDistributionConfigurationLaunchPermissionGetArgs> launchPermission) {
             this.launchPermission = launchPermission;
             return this;
         }
 
         public Builder launchPermission(@Nullable DistributionConfigurationDistributionAmiDistributionConfigurationLaunchPermissionGetArgs launchPermission) {
-            this.launchPermission = Input.ofNullable(launchPermission);
+            this.launchPermission = Output.ofNullable(launchPermission);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder targetAccountIds(@Nullable Input<List<String>> targetAccountIds) {
+        public Builder targetAccountIds(@Nullable Output<List<String>> targetAccountIds) {
             this.targetAccountIds = targetAccountIds;
             return this;
         }
 
         public Builder targetAccountIds(@Nullable List<String> targetAccountIds) {
-            this.targetAccountIds = Input.ofNullable(targetAccountIds);
+            this.targetAccountIds = Output.ofNullable(targetAccountIds);
             return this;
         }
         public DistributionConfigurationDistributionAmiDistributionConfigurationGetArgs build() {

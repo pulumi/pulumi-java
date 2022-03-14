@@ -4,7 +4,7 @@
 package io.pulumi.aws.autoscaling.inputs;
 
 import io.pulumi.aws.autoscaling.inputs.GroupInstanceRefreshPreferencesGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -21,10 +21,10 @@ public final class GroupInstanceRefreshGetArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="preferences")
-      private final @Nullable Input<GroupInstanceRefreshPreferencesGetArgs> preferences;
+      private final @Nullable Output<GroupInstanceRefreshPreferencesGetArgs> preferences;
 
-    public Input<GroupInstanceRefreshPreferencesGetArgs> getPreferences() {
-        return this.preferences == null ? Input.empty() : this.preferences;
+    public Output<GroupInstanceRefreshPreferencesGetArgs> getPreferences() {
+        return this.preferences == null ? Output.empty() : this.preferences;
     }
 
     /**
@@ -32,9 +32,9 @@ public final class GroupInstanceRefreshGetArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="strategy", required=true)
-      private final Input<String> strategy;
+      private final Output<String> strategy;
 
-    public Input<String> getStrategy() {
+    public Output<String> getStrategy() {
         return this.strategy;
     }
 
@@ -43,25 +43,25 @@ public final class GroupInstanceRefreshGetArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="triggers")
-      private final @Nullable Input<List<String>> triggers;
+      private final @Nullable Output<List<String>> triggers;
 
-    public Input<List<String>> getTriggers() {
-        return this.triggers == null ? Input.empty() : this.triggers;
+    public Output<List<String>> getTriggers() {
+        return this.triggers == null ? Output.empty() : this.triggers;
     }
 
     public GroupInstanceRefreshGetArgs(
-        @Nullable Input<GroupInstanceRefreshPreferencesGetArgs> preferences,
-        Input<String> strategy,
-        @Nullable Input<List<String>> triggers) {
+        @Nullable Output<GroupInstanceRefreshPreferencesGetArgs> preferences,
+        Output<String> strategy,
+        @Nullable Output<List<String>> triggers) {
         this.preferences = preferences;
         this.strategy = Objects.requireNonNull(strategy, "expected parameter 'strategy' to be non-null");
         this.triggers = triggers;
     }
 
     private GroupInstanceRefreshGetArgs() {
-        this.preferences = Input.empty();
-        this.strategy = Input.empty();
-        this.triggers = Input.empty();
+        this.preferences = Output.empty();
+        this.strategy = Output.empty();
+        this.triggers = Output.empty();
     }
 
     public static Builder builder() {
@@ -73,9 +73,9 @@ public final class GroupInstanceRefreshGetArgs extends io.pulumi.resources.Resou
     }
 
     public static final class Builder {
-        private @Nullable Input<GroupInstanceRefreshPreferencesGetArgs> preferences;
-        private Input<String> strategy;
-        private @Nullable Input<List<String>> triggers;
+        private @Nullable Output<GroupInstanceRefreshPreferencesGetArgs> preferences;
+        private Output<String> strategy;
+        private @Nullable Output<List<String>> triggers;
 
         public Builder() {
     	      // Empty
@@ -88,33 +88,33 @@ public final class GroupInstanceRefreshGetArgs extends io.pulumi.resources.Resou
     	      this.triggers = defaults.triggers;
         }
 
-        public Builder preferences(@Nullable Input<GroupInstanceRefreshPreferencesGetArgs> preferences) {
+        public Builder preferences(@Nullable Output<GroupInstanceRefreshPreferencesGetArgs> preferences) {
             this.preferences = preferences;
             return this;
         }
 
         public Builder preferences(@Nullable GroupInstanceRefreshPreferencesGetArgs preferences) {
-            this.preferences = Input.ofNullable(preferences);
+            this.preferences = Output.ofNullable(preferences);
             return this;
         }
 
-        public Builder strategy(Input<String> strategy) {
+        public Builder strategy(Output<String> strategy) {
             this.strategy = Objects.requireNonNull(strategy);
             return this;
         }
 
         public Builder strategy(String strategy) {
-            this.strategy = Input.of(Objects.requireNonNull(strategy));
+            this.strategy = Output.of(Objects.requireNonNull(strategy));
             return this;
         }
 
-        public Builder triggers(@Nullable Input<List<String>> triggers) {
+        public Builder triggers(@Nullable Output<List<String>> triggers) {
             this.triggers = triggers;
             return this;
         }
 
         public Builder triggers(@Nullable List<String> triggers) {
-            this.triggers = Input.ofNullable(triggers);
+            this.triggers = Output.ofNullable(triggers);
             return this;
         }
         public GroupInstanceRefreshGetArgs build() {

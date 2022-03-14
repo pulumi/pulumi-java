@@ -4,7 +4,7 @@
 package io.pulumi.aws.lex.inputs;
 
 import io.pulumi.aws.lex.inputs.BotAliasConversationLogsGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -20,10 +20,10 @@ public final class BotAliasState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arn")
-      private final @Nullable Input<String> arn;
+      private final @Nullable Output<String> arn;
 
-    public Input<String> getArn() {
-        return this.arn == null ? Input.empty() : this.arn;
+    public Output<String> getArn() {
+        return this.arn == null ? Output.empty() : this.arn;
     }
 
     /**
@@ -31,10 +31,10 @@ public final class BotAliasState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="botName")
-      private final @Nullable Input<String> botName;
+      private final @Nullable Output<String> botName;
 
-    public Input<String> getBotName() {
-        return this.botName == null ? Input.empty() : this.botName;
+    public Output<String> getBotName() {
+        return this.botName == null ? Output.empty() : this.botName;
     }
 
     /**
@@ -42,10 +42,10 @@ public final class BotAliasState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="botVersion")
-      private final @Nullable Input<String> botVersion;
+      private final @Nullable Output<String> botVersion;
 
-    public Input<String> getBotVersion() {
-        return this.botVersion == null ? Input.empty() : this.botVersion;
+    public Output<String> getBotVersion() {
+        return this.botVersion == null ? Output.empty() : this.botVersion;
     }
 
     /**
@@ -53,10 +53,10 @@ public final class BotAliasState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="checksum")
-      private final @Nullable Input<String> checksum;
+      private final @Nullable Output<String> checksum;
 
-    public Input<String> getChecksum() {
-        return this.checksum == null ? Input.empty() : this.checksum;
+    public Output<String> getChecksum() {
+        return this.checksum == null ? Output.empty() : this.checksum;
     }
 
     /**
@@ -64,10 +64,10 @@ public final class BotAliasState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="conversationLogs")
-      private final @Nullable Input<BotAliasConversationLogsGetArgs> conversationLogs;
+      private final @Nullable Output<BotAliasConversationLogsGetArgs> conversationLogs;
 
-    public Input<BotAliasConversationLogsGetArgs> getConversationLogs() {
-        return this.conversationLogs == null ? Input.empty() : this.conversationLogs;
+    public Output<BotAliasConversationLogsGetArgs> getConversationLogs() {
+        return this.conversationLogs == null ? Output.empty() : this.conversationLogs;
     }
 
     /**
@@ -75,10 +75,10 @@ public final class BotAliasState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="createdDate")
-      private final @Nullable Input<String> createdDate;
+      private final @Nullable Output<String> createdDate;
 
-    public Input<String> getCreatedDate() {
-        return this.createdDate == null ? Input.empty() : this.createdDate;
+    public Output<String> getCreatedDate() {
+        return this.createdDate == null ? Output.empty() : this.createdDate;
     }
 
     /**
@@ -86,10 +86,10 @@ public final class BotAliasState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -97,10 +97,10 @@ public final class BotAliasState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="lastUpdatedDate")
-      private final @Nullable Input<String> lastUpdatedDate;
+      private final @Nullable Output<String> lastUpdatedDate;
 
-    public Input<String> getLastUpdatedDate() {
-        return this.lastUpdatedDate == null ? Input.empty() : this.lastUpdatedDate;
+    public Output<String> getLastUpdatedDate() {
+        return this.lastUpdatedDate == null ? Output.empty() : this.lastUpdatedDate;
     }
 
     /**
@@ -108,22 +108,22 @@ public final class BotAliasState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     public BotAliasState(
-        @Nullable Input<String> arn,
-        @Nullable Input<String> botName,
-        @Nullable Input<String> botVersion,
-        @Nullable Input<String> checksum,
-        @Nullable Input<BotAliasConversationLogsGetArgs> conversationLogs,
-        @Nullable Input<String> createdDate,
-        @Nullable Input<String> description,
-        @Nullable Input<String> lastUpdatedDate,
-        @Nullable Input<String> name) {
+        @Nullable Output<String> arn,
+        @Nullable Output<String> botName,
+        @Nullable Output<String> botVersion,
+        @Nullable Output<String> checksum,
+        @Nullable Output<BotAliasConversationLogsGetArgs> conversationLogs,
+        @Nullable Output<String> createdDate,
+        @Nullable Output<String> description,
+        @Nullable Output<String> lastUpdatedDate,
+        @Nullable Output<String> name) {
         this.arn = arn;
         this.botName = botName;
         this.botVersion = botVersion;
@@ -136,15 +136,15 @@ public final class BotAliasState extends io.pulumi.resources.ResourceArgs {
     }
 
     private BotAliasState() {
-        this.arn = Input.empty();
-        this.botName = Input.empty();
-        this.botVersion = Input.empty();
-        this.checksum = Input.empty();
-        this.conversationLogs = Input.empty();
-        this.createdDate = Input.empty();
-        this.description = Input.empty();
-        this.lastUpdatedDate = Input.empty();
-        this.name = Input.empty();
+        this.arn = Output.empty();
+        this.botName = Output.empty();
+        this.botVersion = Output.empty();
+        this.checksum = Output.empty();
+        this.conversationLogs = Output.empty();
+        this.createdDate = Output.empty();
+        this.description = Output.empty();
+        this.lastUpdatedDate = Output.empty();
+        this.name = Output.empty();
     }
 
     public static Builder builder() {
@@ -156,15 +156,15 @@ public final class BotAliasState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> arn;
-        private @Nullable Input<String> botName;
-        private @Nullable Input<String> botVersion;
-        private @Nullable Input<String> checksum;
-        private @Nullable Input<BotAliasConversationLogsGetArgs> conversationLogs;
-        private @Nullable Input<String> createdDate;
-        private @Nullable Input<String> description;
-        private @Nullable Input<String> lastUpdatedDate;
-        private @Nullable Input<String> name;
+        private @Nullable Output<String> arn;
+        private @Nullable Output<String> botName;
+        private @Nullable Output<String> botVersion;
+        private @Nullable Output<String> checksum;
+        private @Nullable Output<BotAliasConversationLogsGetArgs> conversationLogs;
+        private @Nullable Output<String> createdDate;
+        private @Nullable Output<String> description;
+        private @Nullable Output<String> lastUpdatedDate;
+        private @Nullable Output<String> name;
 
         public Builder() {
     	      // Empty
@@ -183,93 +183,93 @@ public final class BotAliasState extends io.pulumi.resources.ResourceArgs {
     	      this.name = defaults.name;
         }
 
-        public Builder arn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
 
         public Builder arn(@Nullable String arn) {
-            this.arn = Input.ofNullable(arn);
+            this.arn = Output.ofNullable(arn);
             return this;
         }
 
-        public Builder botName(@Nullable Input<String> botName) {
+        public Builder botName(@Nullable Output<String> botName) {
             this.botName = botName;
             return this;
         }
 
         public Builder botName(@Nullable String botName) {
-            this.botName = Input.ofNullable(botName);
+            this.botName = Output.ofNullable(botName);
             return this;
         }
 
-        public Builder botVersion(@Nullable Input<String> botVersion) {
+        public Builder botVersion(@Nullable Output<String> botVersion) {
             this.botVersion = botVersion;
             return this;
         }
 
         public Builder botVersion(@Nullable String botVersion) {
-            this.botVersion = Input.ofNullable(botVersion);
+            this.botVersion = Output.ofNullable(botVersion);
             return this;
         }
 
-        public Builder checksum(@Nullable Input<String> checksum) {
+        public Builder checksum(@Nullable Output<String> checksum) {
             this.checksum = checksum;
             return this;
         }
 
         public Builder checksum(@Nullable String checksum) {
-            this.checksum = Input.ofNullable(checksum);
+            this.checksum = Output.ofNullable(checksum);
             return this;
         }
 
-        public Builder conversationLogs(@Nullable Input<BotAliasConversationLogsGetArgs> conversationLogs) {
+        public Builder conversationLogs(@Nullable Output<BotAliasConversationLogsGetArgs> conversationLogs) {
             this.conversationLogs = conversationLogs;
             return this;
         }
 
         public Builder conversationLogs(@Nullable BotAliasConversationLogsGetArgs conversationLogs) {
-            this.conversationLogs = Input.ofNullable(conversationLogs);
+            this.conversationLogs = Output.ofNullable(conversationLogs);
             return this;
         }
 
-        public Builder createdDate(@Nullable Input<String> createdDate) {
+        public Builder createdDate(@Nullable Output<String> createdDate) {
             this.createdDate = createdDate;
             return this;
         }
 
         public Builder createdDate(@Nullable String createdDate) {
-            this.createdDate = Input.ofNullable(createdDate);
+            this.createdDate = Output.ofNullable(createdDate);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder lastUpdatedDate(@Nullable Input<String> lastUpdatedDate) {
+        public Builder lastUpdatedDate(@Nullable Output<String> lastUpdatedDate) {
             this.lastUpdatedDate = lastUpdatedDate;
             return this;
         }
 
         public Builder lastUpdatedDate(@Nullable String lastUpdatedDate) {
-            this.lastUpdatedDate = Input.ofNullable(lastUpdatedDate);
+            this.lastUpdatedDate = Output.ofNullable(lastUpdatedDate);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
         public BotAliasState build() {

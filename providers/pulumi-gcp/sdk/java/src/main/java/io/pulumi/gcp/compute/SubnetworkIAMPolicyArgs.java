@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -20,9 +20,9 @@ public final class SubnetworkIAMPolicyArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="policyData", required=true)
-      private final Input<String> policyData;
+      private final Output<String> policyData;
 
-    public Input<String> getPolicyData() {
+    public Output<String> getPolicyData() {
         return this.policyData;
     }
 
@@ -32,10 +32,10 @@ public final class SubnetworkIAMPolicyArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -46,10 +46,10 @@ public final class SubnetworkIAMPolicyArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="region")
-      private final @Nullable Input<String> region;
+      private final @Nullable Output<String> region;
 
-    public Input<String> getRegion() {
-        return this.region == null ? Input.empty() : this.region;
+    public Output<String> getRegion() {
+        return this.region == null ? Output.empty() : this.region;
     }
 
     /**
@@ -57,17 +57,17 @@ public final class SubnetworkIAMPolicyArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="subnetwork", required=true)
-      private final Input<String> subnetwork;
+      private final Output<String> subnetwork;
 
-    public Input<String> getSubnetwork() {
+    public Output<String> getSubnetwork() {
         return this.subnetwork;
     }
 
     public SubnetworkIAMPolicyArgs(
-        Input<String> policyData,
-        @Nullable Input<String> project,
-        @Nullable Input<String> region,
-        Input<String> subnetwork) {
+        Output<String> policyData,
+        @Nullable Output<String> project,
+        @Nullable Output<String> region,
+        Output<String> subnetwork) {
         this.policyData = Objects.requireNonNull(policyData, "expected parameter 'policyData' to be non-null");
         this.project = project;
         this.region = region;
@@ -75,10 +75,10 @@ public final class SubnetworkIAMPolicyArgs extends io.pulumi.resources.ResourceA
     }
 
     private SubnetworkIAMPolicyArgs() {
-        this.policyData = Input.empty();
-        this.project = Input.empty();
-        this.region = Input.empty();
-        this.subnetwork = Input.empty();
+        this.policyData = Output.empty();
+        this.project = Output.empty();
+        this.region = Output.empty();
+        this.subnetwork = Output.empty();
     }
 
     public static Builder builder() {
@@ -90,10 +90,10 @@ public final class SubnetworkIAMPolicyArgs extends io.pulumi.resources.ResourceA
     }
 
     public static final class Builder {
-        private Input<String> policyData;
-        private @Nullable Input<String> project;
-        private @Nullable Input<String> region;
-        private Input<String> subnetwork;
+        private Output<String> policyData;
+        private @Nullable Output<String> project;
+        private @Nullable Output<String> region;
+        private Output<String> subnetwork;
 
         public Builder() {
     	      // Empty
@@ -107,43 +107,43 @@ public final class SubnetworkIAMPolicyArgs extends io.pulumi.resources.ResourceA
     	      this.subnetwork = defaults.subnetwork;
         }
 
-        public Builder policyData(Input<String> policyData) {
+        public Builder policyData(Output<String> policyData) {
             this.policyData = Objects.requireNonNull(policyData);
             return this;
         }
 
         public Builder policyData(String policyData) {
-            this.policyData = Input.of(Objects.requireNonNull(policyData));
+            this.policyData = Output.of(Objects.requireNonNull(policyData));
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder region(@Nullable Input<String> region) {
+        public Builder region(@Nullable Output<String> region) {
             this.region = region;
             return this;
         }
 
         public Builder region(@Nullable String region) {
-            this.region = Input.ofNullable(region);
+            this.region = Output.ofNullable(region);
             return this;
         }
 
-        public Builder subnetwork(Input<String> subnetwork) {
+        public Builder subnetwork(Output<String> subnetwork) {
             this.subnetwork = Objects.requireNonNull(subnetwork);
             return this;
         }
 
         public Builder subnetwork(String subnetwork) {
-            this.subnetwork = Input.of(Objects.requireNonNull(subnetwork));
+            this.subnetwork = Output.of(Objects.requireNonNull(subnetwork));
             return this;
         }
         public SubnetworkIAMPolicyArgs build() {

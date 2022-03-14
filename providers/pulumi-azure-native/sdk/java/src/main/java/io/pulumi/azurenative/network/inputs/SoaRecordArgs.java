@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class SoaRecordArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="email")
-      private final @Nullable Input<String> email;
+      private final @Nullable Output<String> email;
 
-    public Input<String> getEmail() {
-        return this.email == null ? Input.empty() : this.email;
+    public Output<String> getEmail() {
+        return this.email == null ? Output.empty() : this.email;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class SoaRecordArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="expireTime")
-      private final @Nullable Input<Double> expireTime;
+      private final @Nullable Output<Double> expireTime;
 
-    public Input<Double> getExpireTime() {
-        return this.expireTime == null ? Input.empty() : this.expireTime;
+    public Output<Double> getExpireTime() {
+        return this.expireTime == null ? Output.empty() : this.expireTime;
     }
 
     /**
@@ -46,10 +46,10 @@ public final class SoaRecordArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="host")
-      private final @Nullable Input<String> host;
+      private final @Nullable Output<String> host;
 
-    public Input<String> getHost() {
-        return this.host == null ? Input.empty() : this.host;
+    public Output<String> getHost() {
+        return this.host == null ? Output.empty() : this.host;
     }
 
     /**
@@ -57,10 +57,10 @@ public final class SoaRecordArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="minimumTtl")
-      private final @Nullable Input<Double> minimumTtl;
+      private final @Nullable Output<Double> minimumTtl;
 
-    public Input<Double> getMinimumTtl() {
-        return this.minimumTtl == null ? Input.empty() : this.minimumTtl;
+    public Output<Double> getMinimumTtl() {
+        return this.minimumTtl == null ? Output.empty() : this.minimumTtl;
     }
 
     /**
@@ -68,10 +68,10 @@ public final class SoaRecordArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="refreshTime")
-      private final @Nullable Input<Double> refreshTime;
+      private final @Nullable Output<Double> refreshTime;
 
-    public Input<Double> getRefreshTime() {
-        return this.refreshTime == null ? Input.empty() : this.refreshTime;
+    public Output<Double> getRefreshTime() {
+        return this.refreshTime == null ? Output.empty() : this.refreshTime;
     }
 
     /**
@@ -79,10 +79,10 @@ public final class SoaRecordArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="retryTime")
-      private final @Nullable Input<Double> retryTime;
+      private final @Nullable Output<Double> retryTime;
 
-    public Input<Double> getRetryTime() {
-        return this.retryTime == null ? Input.empty() : this.retryTime;
+    public Output<Double> getRetryTime() {
+        return this.retryTime == null ? Output.empty() : this.retryTime;
     }
 
     /**
@@ -90,20 +90,20 @@ public final class SoaRecordArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serialNumber")
-      private final @Nullable Input<Double> serialNumber;
+      private final @Nullable Output<Double> serialNumber;
 
-    public Input<Double> getSerialNumber() {
-        return this.serialNumber == null ? Input.empty() : this.serialNumber;
+    public Output<Double> getSerialNumber() {
+        return this.serialNumber == null ? Output.empty() : this.serialNumber;
     }
 
     public SoaRecordArgs(
-        @Nullable Input<String> email,
-        @Nullable Input<Double> expireTime,
-        @Nullable Input<String> host,
-        @Nullable Input<Double> minimumTtl,
-        @Nullable Input<Double> refreshTime,
-        @Nullable Input<Double> retryTime,
-        @Nullable Input<Double> serialNumber) {
+        @Nullable Output<String> email,
+        @Nullable Output<Double> expireTime,
+        @Nullable Output<String> host,
+        @Nullable Output<Double> minimumTtl,
+        @Nullable Output<Double> refreshTime,
+        @Nullable Output<Double> retryTime,
+        @Nullable Output<Double> serialNumber) {
         this.email = email;
         this.expireTime = expireTime;
         this.host = host;
@@ -114,13 +114,13 @@ public final class SoaRecordArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private SoaRecordArgs() {
-        this.email = Input.empty();
-        this.expireTime = Input.empty();
-        this.host = Input.empty();
-        this.minimumTtl = Input.empty();
-        this.refreshTime = Input.empty();
-        this.retryTime = Input.empty();
-        this.serialNumber = Input.empty();
+        this.email = Output.empty();
+        this.expireTime = Output.empty();
+        this.host = Output.empty();
+        this.minimumTtl = Output.empty();
+        this.refreshTime = Output.empty();
+        this.retryTime = Output.empty();
+        this.serialNumber = Output.empty();
     }
 
     public static Builder builder() {
@@ -132,13 +132,13 @@ public final class SoaRecordArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> email;
-        private @Nullable Input<Double> expireTime;
-        private @Nullable Input<String> host;
-        private @Nullable Input<Double> minimumTtl;
-        private @Nullable Input<Double> refreshTime;
-        private @Nullable Input<Double> retryTime;
-        private @Nullable Input<Double> serialNumber;
+        private @Nullable Output<String> email;
+        private @Nullable Output<Double> expireTime;
+        private @Nullable Output<String> host;
+        private @Nullable Output<Double> minimumTtl;
+        private @Nullable Output<Double> refreshTime;
+        private @Nullable Output<Double> retryTime;
+        private @Nullable Output<Double> serialNumber;
 
         public Builder() {
     	      // Empty
@@ -155,73 +155,73 @@ public final class SoaRecordArgs extends io.pulumi.resources.ResourceArgs {
     	      this.serialNumber = defaults.serialNumber;
         }
 
-        public Builder email(@Nullable Input<String> email) {
+        public Builder email(@Nullable Output<String> email) {
             this.email = email;
             return this;
         }
 
         public Builder email(@Nullable String email) {
-            this.email = Input.ofNullable(email);
+            this.email = Output.ofNullable(email);
             return this;
         }
 
-        public Builder expireTime(@Nullable Input<Double> expireTime) {
+        public Builder expireTime(@Nullable Output<Double> expireTime) {
             this.expireTime = expireTime;
             return this;
         }
 
         public Builder expireTime(@Nullable Double expireTime) {
-            this.expireTime = Input.ofNullable(expireTime);
+            this.expireTime = Output.ofNullable(expireTime);
             return this;
         }
 
-        public Builder host(@Nullable Input<String> host) {
+        public Builder host(@Nullable Output<String> host) {
             this.host = host;
             return this;
         }
 
         public Builder host(@Nullable String host) {
-            this.host = Input.ofNullable(host);
+            this.host = Output.ofNullable(host);
             return this;
         }
 
-        public Builder minimumTtl(@Nullable Input<Double> minimumTtl) {
+        public Builder minimumTtl(@Nullable Output<Double> minimumTtl) {
             this.minimumTtl = minimumTtl;
             return this;
         }
 
         public Builder minimumTtl(@Nullable Double minimumTtl) {
-            this.minimumTtl = Input.ofNullable(minimumTtl);
+            this.minimumTtl = Output.ofNullable(minimumTtl);
             return this;
         }
 
-        public Builder refreshTime(@Nullable Input<Double> refreshTime) {
+        public Builder refreshTime(@Nullable Output<Double> refreshTime) {
             this.refreshTime = refreshTime;
             return this;
         }
 
         public Builder refreshTime(@Nullable Double refreshTime) {
-            this.refreshTime = Input.ofNullable(refreshTime);
+            this.refreshTime = Output.ofNullable(refreshTime);
             return this;
         }
 
-        public Builder retryTime(@Nullable Input<Double> retryTime) {
+        public Builder retryTime(@Nullable Output<Double> retryTime) {
             this.retryTime = retryTime;
             return this;
         }
 
         public Builder retryTime(@Nullable Double retryTime) {
-            this.retryTime = Input.ofNullable(retryTime);
+            this.retryTime = Output.ofNullable(retryTime);
             return this;
         }
 
-        public Builder serialNumber(@Nullable Input<Double> serialNumber) {
+        public Builder serialNumber(@Nullable Output<Double> serialNumber) {
             this.serialNumber = serialNumber;
             return this;
         }
 
         public Builder serialNumber(@Nullable Double serialNumber) {
-            this.serialNumber = Input.ofNullable(serialNumber);
+            this.serialNumber = Output.ofNullable(serialNumber);
             return this;
         }
         public SoaRecordArgs build() {

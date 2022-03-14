@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.core_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -24,18 +24,18 @@ public final class PodIPArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ip")
-      private final @Nullable Input<String> ip;
+      private final @Nullable Output<String> ip;
 
-    public Input<String> getIp() {
-        return this.ip == null ? Input.empty() : this.ip;
+    public Output<String> getIp() {
+        return this.ip == null ? Output.empty() : this.ip;
     }
 
-    public PodIPArgs(@Nullable Input<String> ip) {
+    public PodIPArgs(@Nullable Output<String> ip) {
         this.ip = ip;
     }
 
     private PodIPArgs() {
-        this.ip = Input.empty();
+        this.ip = Output.empty();
     }
 
     public static Builder builder() {
@@ -47,7 +47,7 @@ public final class PodIPArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> ip;
+        private @Nullable Output<String> ip;
 
         public Builder() {
     	      // Empty
@@ -58,13 +58,13 @@ public final class PodIPArgs extends io.pulumi.resources.ResourceArgs {
     	      this.ip = defaults.ip;
         }
 
-        public Builder ip(@Nullable Input<String> ip) {
+        public Builder ip(@Nullable Output<String> ip) {
             this.ip = ip;
             return this;
         }
 
         public Builder ip(@Nullable String ip) {
-            this.ip = Input.ofNullable(ip);
+            this.ip = Output.ofNullable(ip);
             return this;
         }
         public PodIPArgs build() {

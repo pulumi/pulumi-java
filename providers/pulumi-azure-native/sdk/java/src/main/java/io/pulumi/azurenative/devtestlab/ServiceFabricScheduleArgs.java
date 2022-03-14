@@ -9,7 +9,7 @@ import io.pulumi.azurenative.devtestlab.inputs.HourDetailsArgs;
 import io.pulumi.azurenative.devtestlab.inputs.NotificationSettingsArgs;
 import io.pulumi.azurenative.devtestlab.inputs.WeekDetailsArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -26,10 +26,10 @@ public final class ServiceFabricScheduleArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="dailyRecurrence")
-      private final @Nullable Input<DayDetailsArgs> dailyRecurrence;
+      private final @Nullable Output<DayDetailsArgs> dailyRecurrence;
 
-    public Input<DayDetailsArgs> getDailyRecurrence() {
-        return this.dailyRecurrence == null ? Input.empty() : this.dailyRecurrence;
+    public Output<DayDetailsArgs> getDailyRecurrence() {
+        return this.dailyRecurrence == null ? Output.empty() : this.dailyRecurrence;
     }
 
     /**
@@ -37,10 +37,10 @@ public final class ServiceFabricScheduleArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="hourlyRecurrence")
-      private final @Nullable Input<HourDetailsArgs> hourlyRecurrence;
+      private final @Nullable Output<HourDetailsArgs> hourlyRecurrence;
 
-    public Input<HourDetailsArgs> getHourlyRecurrence() {
-        return this.hourlyRecurrence == null ? Input.empty() : this.hourlyRecurrence;
+    public Output<HourDetailsArgs> getHourlyRecurrence() {
+        return this.hourlyRecurrence == null ? Output.empty() : this.hourlyRecurrence;
     }
 
     /**
@@ -48,9 +48,9 @@ public final class ServiceFabricScheduleArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="labName", required=true)
-      private final Input<String> labName;
+      private final Output<String> labName;
 
-    public Input<String> getLabName() {
+    public Output<String> getLabName() {
         return this.labName;
     }
 
@@ -59,10 +59,10 @@ public final class ServiceFabricScheduleArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -70,10 +70,10 @@ public final class ServiceFabricScheduleArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -81,10 +81,10 @@ public final class ServiceFabricScheduleArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="notificationSettings")
-      private final @Nullable Input<NotificationSettingsArgs> notificationSettings;
+      private final @Nullable Output<NotificationSettingsArgs> notificationSettings;
 
-    public Input<NotificationSettingsArgs> getNotificationSettings() {
-        return this.notificationSettings == null ? Input.empty() : this.notificationSettings;
+    public Output<NotificationSettingsArgs> getNotificationSettings() {
+        return this.notificationSettings == null ? Output.empty() : this.notificationSettings;
     }
 
     /**
@@ -92,9 +92,9 @@ public final class ServiceFabricScheduleArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -103,9 +103,9 @@ public final class ServiceFabricScheduleArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="serviceFabricName", required=true)
-      private final Input<String> serviceFabricName;
+      private final Output<String> serviceFabricName;
 
-    public Input<String> getServiceFabricName() {
+    public Output<String> getServiceFabricName() {
         return this.serviceFabricName;
     }
 
@@ -114,10 +114,10 @@ public final class ServiceFabricScheduleArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="status")
-      private final @Nullable Input<Either<String,EnableStatus>> status;
+      private final @Nullable Output<Either<String,EnableStatus>> status;
 
-    public Input<Either<String,EnableStatus>> getStatus() {
-        return this.status == null ? Input.empty() : this.status;
+    public Output<Either<String,EnableStatus>> getStatus() {
+        return this.status == null ? Output.empty() : this.status;
     }
 
     /**
@@ -125,10 +125,10 @@ public final class ServiceFabricScheduleArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -136,10 +136,10 @@ public final class ServiceFabricScheduleArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="targetResourceId")
-      private final @Nullable Input<String> targetResourceId;
+      private final @Nullable Output<String> targetResourceId;
 
-    public Input<String> getTargetResourceId() {
-        return this.targetResourceId == null ? Input.empty() : this.targetResourceId;
+    public Output<String> getTargetResourceId() {
+        return this.targetResourceId == null ? Output.empty() : this.targetResourceId;
     }
 
     /**
@@ -147,10 +147,10 @@ public final class ServiceFabricScheduleArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="taskType")
-      private final @Nullable Input<String> taskType;
+      private final @Nullable Output<String> taskType;
 
-    public Input<String> getTaskType() {
-        return this.taskType == null ? Input.empty() : this.taskType;
+    public Output<String> getTaskType() {
+        return this.taskType == null ? Output.empty() : this.taskType;
     }
 
     /**
@@ -158,10 +158,10 @@ public final class ServiceFabricScheduleArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="timeZoneId")
-      private final @Nullable Input<String> timeZoneId;
+      private final @Nullable Output<String> timeZoneId;
 
-    public Input<String> getTimeZoneId() {
-        return this.timeZoneId == null ? Input.empty() : this.timeZoneId;
+    public Output<String> getTimeZoneId() {
+        return this.timeZoneId == null ? Output.empty() : this.timeZoneId;
     }
 
     /**
@@ -169,9 +169,9 @@ public final class ServiceFabricScheduleArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="userName", required=true)
-      private final Input<String> userName;
+      private final Output<String> userName;
 
-    public Input<String> getUserName() {
+    public Output<String> getUserName() {
         return this.userName;
     }
 
@@ -180,28 +180,28 @@ public final class ServiceFabricScheduleArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="weeklyRecurrence")
-      private final @Nullable Input<WeekDetailsArgs> weeklyRecurrence;
+      private final @Nullable Output<WeekDetailsArgs> weeklyRecurrence;
 
-    public Input<WeekDetailsArgs> getWeeklyRecurrence() {
-        return this.weeklyRecurrence == null ? Input.empty() : this.weeklyRecurrence;
+    public Output<WeekDetailsArgs> getWeeklyRecurrence() {
+        return this.weeklyRecurrence == null ? Output.empty() : this.weeklyRecurrence;
     }
 
     public ServiceFabricScheduleArgs(
-        @Nullable Input<DayDetailsArgs> dailyRecurrence,
-        @Nullable Input<HourDetailsArgs> hourlyRecurrence,
-        Input<String> labName,
-        @Nullable Input<String> location,
-        @Nullable Input<String> name,
-        @Nullable Input<NotificationSettingsArgs> notificationSettings,
-        Input<String> resourceGroupName,
-        Input<String> serviceFabricName,
-        @Nullable Input<Either<String,EnableStatus>> status,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<String> targetResourceId,
-        @Nullable Input<String> taskType,
-        @Nullable Input<String> timeZoneId,
-        Input<String> userName,
-        @Nullable Input<WeekDetailsArgs> weeklyRecurrence) {
+        @Nullable Output<DayDetailsArgs> dailyRecurrence,
+        @Nullable Output<HourDetailsArgs> hourlyRecurrence,
+        Output<String> labName,
+        @Nullable Output<String> location,
+        @Nullable Output<String> name,
+        @Nullable Output<NotificationSettingsArgs> notificationSettings,
+        Output<String> resourceGroupName,
+        Output<String> serviceFabricName,
+        @Nullable Output<Either<String,EnableStatus>> status,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<String> targetResourceId,
+        @Nullable Output<String> taskType,
+        @Nullable Output<String> timeZoneId,
+        Output<String> userName,
+        @Nullable Output<WeekDetailsArgs> weeklyRecurrence) {
         this.dailyRecurrence = dailyRecurrence;
         this.hourlyRecurrence = hourlyRecurrence;
         this.labName = Objects.requireNonNull(labName, "expected parameter 'labName' to be non-null");
@@ -210,7 +210,7 @@ public final class ServiceFabricScheduleArgs extends io.pulumi.resources.Resourc
         this.notificationSettings = notificationSettings;
         this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
         this.serviceFabricName = Objects.requireNonNull(serviceFabricName, "expected parameter 'serviceFabricName' to be non-null");
-        this.status = status == null ? Input.ofLeft("Disabled") : status;
+        this.status = status == null ? Output.ofLeft("Disabled") : status;
         this.tags = tags;
         this.targetResourceId = targetResourceId;
         this.taskType = taskType;
@@ -220,21 +220,21 @@ public final class ServiceFabricScheduleArgs extends io.pulumi.resources.Resourc
     }
 
     private ServiceFabricScheduleArgs() {
-        this.dailyRecurrence = Input.empty();
-        this.hourlyRecurrence = Input.empty();
-        this.labName = Input.empty();
-        this.location = Input.empty();
-        this.name = Input.empty();
-        this.notificationSettings = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.serviceFabricName = Input.empty();
-        this.status = Input.empty();
-        this.tags = Input.empty();
-        this.targetResourceId = Input.empty();
-        this.taskType = Input.empty();
-        this.timeZoneId = Input.empty();
-        this.userName = Input.empty();
-        this.weeklyRecurrence = Input.empty();
+        this.dailyRecurrence = Output.empty();
+        this.hourlyRecurrence = Output.empty();
+        this.labName = Output.empty();
+        this.location = Output.empty();
+        this.name = Output.empty();
+        this.notificationSettings = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.serviceFabricName = Output.empty();
+        this.status = Output.empty();
+        this.tags = Output.empty();
+        this.targetResourceId = Output.empty();
+        this.taskType = Output.empty();
+        this.timeZoneId = Output.empty();
+        this.userName = Output.empty();
+        this.weeklyRecurrence = Output.empty();
     }
 
     public static Builder builder() {
@@ -246,21 +246,21 @@ public final class ServiceFabricScheduleArgs extends io.pulumi.resources.Resourc
     }
 
     public static final class Builder {
-        private @Nullable Input<DayDetailsArgs> dailyRecurrence;
-        private @Nullable Input<HourDetailsArgs> hourlyRecurrence;
-        private Input<String> labName;
-        private @Nullable Input<String> location;
-        private @Nullable Input<String> name;
-        private @Nullable Input<NotificationSettingsArgs> notificationSettings;
-        private Input<String> resourceGroupName;
-        private Input<String> serviceFabricName;
-        private @Nullable Input<Either<String,EnableStatus>> status;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<String> targetResourceId;
-        private @Nullable Input<String> taskType;
-        private @Nullable Input<String> timeZoneId;
-        private Input<String> userName;
-        private @Nullable Input<WeekDetailsArgs> weeklyRecurrence;
+        private @Nullable Output<DayDetailsArgs> dailyRecurrence;
+        private @Nullable Output<HourDetailsArgs> hourlyRecurrence;
+        private Output<String> labName;
+        private @Nullable Output<String> location;
+        private @Nullable Output<String> name;
+        private @Nullable Output<NotificationSettingsArgs> notificationSettings;
+        private Output<String> resourceGroupName;
+        private Output<String> serviceFabricName;
+        private @Nullable Output<Either<String,EnableStatus>> status;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<String> targetResourceId;
+        private @Nullable Output<String> taskType;
+        private @Nullable Output<String> timeZoneId;
+        private Output<String> userName;
+        private @Nullable Output<WeekDetailsArgs> weeklyRecurrence;
 
         public Builder() {
     	      // Empty
@@ -285,153 +285,153 @@ public final class ServiceFabricScheduleArgs extends io.pulumi.resources.Resourc
     	      this.weeklyRecurrence = defaults.weeklyRecurrence;
         }
 
-        public Builder dailyRecurrence(@Nullable Input<DayDetailsArgs> dailyRecurrence) {
+        public Builder dailyRecurrence(@Nullable Output<DayDetailsArgs> dailyRecurrence) {
             this.dailyRecurrence = dailyRecurrence;
             return this;
         }
 
         public Builder dailyRecurrence(@Nullable DayDetailsArgs dailyRecurrence) {
-            this.dailyRecurrence = Input.ofNullable(dailyRecurrence);
+            this.dailyRecurrence = Output.ofNullable(dailyRecurrence);
             return this;
         }
 
-        public Builder hourlyRecurrence(@Nullable Input<HourDetailsArgs> hourlyRecurrence) {
+        public Builder hourlyRecurrence(@Nullable Output<HourDetailsArgs> hourlyRecurrence) {
             this.hourlyRecurrence = hourlyRecurrence;
             return this;
         }
 
         public Builder hourlyRecurrence(@Nullable HourDetailsArgs hourlyRecurrence) {
-            this.hourlyRecurrence = Input.ofNullable(hourlyRecurrence);
+            this.hourlyRecurrence = Output.ofNullable(hourlyRecurrence);
             return this;
         }
 
-        public Builder labName(Input<String> labName) {
+        public Builder labName(Output<String> labName) {
             this.labName = Objects.requireNonNull(labName);
             return this;
         }
 
         public Builder labName(String labName) {
-            this.labName = Input.of(Objects.requireNonNull(labName));
+            this.labName = Output.of(Objects.requireNonNull(labName));
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder notificationSettings(@Nullable Input<NotificationSettingsArgs> notificationSettings) {
+        public Builder notificationSettings(@Nullable Output<NotificationSettingsArgs> notificationSettings) {
             this.notificationSettings = notificationSettings;
             return this;
         }
 
         public Builder notificationSettings(@Nullable NotificationSettingsArgs notificationSettings) {
-            this.notificationSettings = Input.ofNullable(notificationSettings);
+            this.notificationSettings = Output.ofNullable(notificationSettings);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder serviceFabricName(Input<String> serviceFabricName) {
+        public Builder serviceFabricName(Output<String> serviceFabricName) {
             this.serviceFabricName = Objects.requireNonNull(serviceFabricName);
             return this;
         }
 
         public Builder serviceFabricName(String serviceFabricName) {
-            this.serviceFabricName = Input.of(Objects.requireNonNull(serviceFabricName));
+            this.serviceFabricName = Output.of(Objects.requireNonNull(serviceFabricName));
             return this;
         }
 
-        public Builder status(@Nullable Input<Either<String,EnableStatus>> status) {
+        public Builder status(@Nullable Output<Either<String,EnableStatus>> status) {
             this.status = status;
             return this;
         }
 
         public Builder status(@Nullable Either<String,EnableStatus> status) {
-            this.status = Input.ofNullable(status);
+            this.status = Output.ofNullable(status);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder targetResourceId(@Nullable Input<String> targetResourceId) {
+        public Builder targetResourceId(@Nullable Output<String> targetResourceId) {
             this.targetResourceId = targetResourceId;
             return this;
         }
 
         public Builder targetResourceId(@Nullable String targetResourceId) {
-            this.targetResourceId = Input.ofNullable(targetResourceId);
+            this.targetResourceId = Output.ofNullable(targetResourceId);
             return this;
         }
 
-        public Builder taskType(@Nullable Input<String> taskType) {
+        public Builder taskType(@Nullable Output<String> taskType) {
             this.taskType = taskType;
             return this;
         }
 
         public Builder taskType(@Nullable String taskType) {
-            this.taskType = Input.ofNullable(taskType);
+            this.taskType = Output.ofNullable(taskType);
             return this;
         }
 
-        public Builder timeZoneId(@Nullable Input<String> timeZoneId) {
+        public Builder timeZoneId(@Nullable Output<String> timeZoneId) {
             this.timeZoneId = timeZoneId;
             return this;
         }
 
         public Builder timeZoneId(@Nullable String timeZoneId) {
-            this.timeZoneId = Input.ofNullable(timeZoneId);
+            this.timeZoneId = Output.ofNullable(timeZoneId);
             return this;
         }
 
-        public Builder userName(Input<String> userName) {
+        public Builder userName(Output<String> userName) {
             this.userName = Objects.requireNonNull(userName);
             return this;
         }
 
         public Builder userName(String userName) {
-            this.userName = Input.of(Objects.requireNonNull(userName));
+            this.userName = Output.of(Objects.requireNonNull(userName));
             return this;
         }
 
-        public Builder weeklyRecurrence(@Nullable Input<WeekDetailsArgs> weeklyRecurrence) {
+        public Builder weeklyRecurrence(@Nullable Output<WeekDetailsArgs> weeklyRecurrence) {
             this.weeklyRecurrence = weeklyRecurrence;
             return this;
         }
 
         public Builder weeklyRecurrence(@Nullable WeekDetailsArgs weeklyRecurrence) {
-            this.weeklyRecurrence = Input.ofNullable(weeklyRecurrence);
+            this.weeklyRecurrence = Output.ofNullable(weeklyRecurrence);
             return this;
         }
         public ServiceFabricScheduleArgs build() {

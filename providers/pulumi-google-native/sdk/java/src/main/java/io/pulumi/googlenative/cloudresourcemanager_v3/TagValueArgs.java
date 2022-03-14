@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudresourcemanager_v3;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class TagValueArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -30,10 +30,10 @@ public final class TagValueArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="etag")
-      private final @Nullable Input<String> etag;
+      private final @Nullable Output<String> etag;
 
-    public Input<String> getEtag() {
-        return this.etag == null ? Input.empty() : this.etag;
+    public Output<String> getEtag() {
+        return this.etag == null ? Output.empty() : this.etag;
     }
 
     /**
@@ -41,10 +41,10 @@ public final class TagValueArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -52,10 +52,10 @@ public final class TagValueArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="parent")
-      private final @Nullable Input<String> parent;
+      private final @Nullable Output<String> parent;
 
-    public Input<String> getParent() {
-        return this.parent == null ? Input.empty() : this.parent;
+    public Output<String> getParent() {
+        return this.parent == null ? Output.empty() : this.parent;
     }
 
     /**
@@ -63,26 +63,26 @@ public final class TagValueArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="shortName", required=true)
-      private final Input<String> shortName;
+      private final Output<String> shortName;
 
-    public Input<String> getShortName() {
+    public Output<String> getShortName() {
         return this.shortName;
     }
 
     @InputImport(name="validateOnly")
-      private final @Nullable Input<String> validateOnly;
+      private final @Nullable Output<String> validateOnly;
 
-    public Input<String> getValidateOnly() {
-        return this.validateOnly == null ? Input.empty() : this.validateOnly;
+    public Output<String> getValidateOnly() {
+        return this.validateOnly == null ? Output.empty() : this.validateOnly;
     }
 
     public TagValueArgs(
-        @Nullable Input<String> description,
-        @Nullable Input<String> etag,
-        @Nullable Input<String> name,
-        @Nullable Input<String> parent,
-        Input<String> shortName,
-        @Nullable Input<String> validateOnly) {
+        @Nullable Output<String> description,
+        @Nullable Output<String> etag,
+        @Nullable Output<String> name,
+        @Nullable Output<String> parent,
+        Output<String> shortName,
+        @Nullable Output<String> validateOnly) {
         this.description = description;
         this.etag = etag;
         this.name = name;
@@ -92,12 +92,12 @@ public final class TagValueArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private TagValueArgs() {
-        this.description = Input.empty();
-        this.etag = Input.empty();
-        this.name = Input.empty();
-        this.parent = Input.empty();
-        this.shortName = Input.empty();
-        this.validateOnly = Input.empty();
+        this.description = Output.empty();
+        this.etag = Output.empty();
+        this.name = Output.empty();
+        this.parent = Output.empty();
+        this.shortName = Output.empty();
+        this.validateOnly = Output.empty();
     }
 
     public static Builder builder() {
@@ -109,12 +109,12 @@ public final class TagValueArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> description;
-        private @Nullable Input<String> etag;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> parent;
-        private Input<String> shortName;
-        private @Nullable Input<String> validateOnly;
+        private @Nullable Output<String> description;
+        private @Nullable Output<String> etag;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> parent;
+        private Output<String> shortName;
+        private @Nullable Output<String> validateOnly;
 
         public Builder() {
     	      // Empty
@@ -130,63 +130,63 @@ public final class TagValueArgs extends io.pulumi.resources.ResourceArgs {
     	      this.validateOnly = defaults.validateOnly;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder etag(@Nullable Input<String> etag) {
+        public Builder etag(@Nullable Output<String> etag) {
             this.etag = etag;
             return this;
         }
 
         public Builder etag(@Nullable String etag) {
-            this.etag = Input.ofNullable(etag);
+            this.etag = Output.ofNullable(etag);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder parent(@Nullable Input<String> parent) {
+        public Builder parent(@Nullable Output<String> parent) {
             this.parent = parent;
             return this;
         }
 
         public Builder parent(@Nullable String parent) {
-            this.parent = Input.ofNullable(parent);
+            this.parent = Output.ofNullable(parent);
             return this;
         }
 
-        public Builder shortName(Input<String> shortName) {
+        public Builder shortName(Output<String> shortName) {
             this.shortName = Objects.requireNonNull(shortName);
             return this;
         }
 
         public Builder shortName(String shortName) {
-            this.shortName = Input.of(Objects.requireNonNull(shortName));
+            this.shortName = Output.of(Objects.requireNonNull(shortName));
             return this;
         }
 
-        public Builder validateOnly(@Nullable Input<String> validateOnly) {
+        public Builder validateOnly(@Nullable Output<String> validateOnly) {
             this.validateOnly = validateOnly;
             return this;
         }
 
         public Builder validateOnly(@Nullable String validateOnly) {
-            this.validateOnly = Input.ofNullable(validateOnly);
+            this.validateOnly = Output.ofNullable(validateOnly);
             return this;
         }
         public TagValueArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.autoscaling_v2beta1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.kubernetes.meta_v1.inputs.LabelSelectorArgs;
 import java.lang.String;
@@ -24,9 +24,9 @@ public final class PodsMetricSourceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="metricName", required=true)
-      private final Input<String> metricName;
+      private final Output<String> metricName;
 
-    public Input<String> getMetricName() {
+    public Output<String> getMetricName() {
         return this.metricName;
     }
 
@@ -35,10 +35,10 @@ public final class PodsMetricSourceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="selector")
-      private final @Nullable Input<LabelSelectorArgs> selector;
+      private final @Nullable Output<LabelSelectorArgs> selector;
 
-    public Input<LabelSelectorArgs> getSelector() {
-        return this.selector == null ? Input.empty() : this.selector;
+    public Output<LabelSelectorArgs> getSelector() {
+        return this.selector == null ? Output.empty() : this.selector;
     }
 
     /**
@@ -46,25 +46,25 @@ public final class PodsMetricSourceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="targetAverageValue", required=true)
-      private final Input<String> targetAverageValue;
+      private final Output<String> targetAverageValue;
 
-    public Input<String> getTargetAverageValue() {
+    public Output<String> getTargetAverageValue() {
         return this.targetAverageValue;
     }
 
     public PodsMetricSourceArgs(
-        Input<String> metricName,
-        @Nullable Input<LabelSelectorArgs> selector,
-        Input<String> targetAverageValue) {
+        Output<String> metricName,
+        @Nullable Output<LabelSelectorArgs> selector,
+        Output<String> targetAverageValue) {
         this.metricName = Objects.requireNonNull(metricName, "expected parameter 'metricName' to be non-null");
         this.selector = selector;
         this.targetAverageValue = Objects.requireNonNull(targetAverageValue, "expected parameter 'targetAverageValue' to be non-null");
     }
 
     private PodsMetricSourceArgs() {
-        this.metricName = Input.empty();
-        this.selector = Input.empty();
-        this.targetAverageValue = Input.empty();
+        this.metricName = Output.empty();
+        this.selector = Output.empty();
+        this.targetAverageValue = Output.empty();
     }
 
     public static Builder builder() {
@@ -76,9 +76,9 @@ public final class PodsMetricSourceArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private Input<String> metricName;
-        private @Nullable Input<LabelSelectorArgs> selector;
-        private Input<String> targetAverageValue;
+        private Output<String> metricName;
+        private @Nullable Output<LabelSelectorArgs> selector;
+        private Output<String> targetAverageValue;
 
         public Builder() {
     	      // Empty
@@ -91,33 +91,33 @@ public final class PodsMetricSourceArgs extends io.pulumi.resources.ResourceArgs
     	      this.targetAverageValue = defaults.targetAverageValue;
         }
 
-        public Builder metricName(Input<String> metricName) {
+        public Builder metricName(Output<String> metricName) {
             this.metricName = Objects.requireNonNull(metricName);
             return this;
         }
 
         public Builder metricName(String metricName) {
-            this.metricName = Input.of(Objects.requireNonNull(metricName));
+            this.metricName = Output.of(Objects.requireNonNull(metricName));
             return this;
         }
 
-        public Builder selector(@Nullable Input<LabelSelectorArgs> selector) {
+        public Builder selector(@Nullable Output<LabelSelectorArgs> selector) {
             this.selector = selector;
             return this;
         }
 
         public Builder selector(@Nullable LabelSelectorArgs selector) {
-            this.selector = Input.ofNullable(selector);
+            this.selector = Output.ofNullable(selector);
             return this;
         }
 
-        public Builder targetAverageValue(Input<String> targetAverageValue) {
+        public Builder targetAverageValue(Output<String> targetAverageValue) {
             this.targetAverageValue = Objects.requireNonNull(targetAverageValue);
             return this;
         }
 
         public Builder targetAverageValue(String targetAverageValue) {
-            this.targetAverageValue = Input.of(Objects.requireNonNull(targetAverageValue));
+            this.targetAverageValue = Output.of(Objects.requireNonNull(targetAverageValue));
             return this;
         }
         public PodsMetricSourceArgs build() {

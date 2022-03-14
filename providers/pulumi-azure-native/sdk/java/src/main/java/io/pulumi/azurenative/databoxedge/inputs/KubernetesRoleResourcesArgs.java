@@ -5,7 +5,7 @@ package io.pulumi.azurenative.databoxedge.inputs;
 
 import io.pulumi.azurenative.databoxedge.inputs.KubernetesRoleComputeArgs;
 import io.pulumi.azurenative.databoxedge.inputs.KubernetesRoleStorageArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,9 +24,9 @@ public final class KubernetesRoleResourcesArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="compute", required=true)
-      private final Input<KubernetesRoleComputeArgs> compute;
+      private final Output<KubernetesRoleComputeArgs> compute;
 
-    public Input<KubernetesRoleComputeArgs> getCompute() {
+    public Output<KubernetesRoleComputeArgs> getCompute() {
         return this.compute;
     }
 
@@ -35,22 +35,22 @@ public final class KubernetesRoleResourcesArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="storage")
-      private final @Nullable Input<KubernetesRoleStorageArgs> storage;
+      private final @Nullable Output<KubernetesRoleStorageArgs> storage;
 
-    public Input<KubernetesRoleStorageArgs> getStorage() {
-        return this.storage == null ? Input.empty() : this.storage;
+    public Output<KubernetesRoleStorageArgs> getStorage() {
+        return this.storage == null ? Output.empty() : this.storage;
     }
 
     public KubernetesRoleResourcesArgs(
-        Input<KubernetesRoleComputeArgs> compute,
-        @Nullable Input<KubernetesRoleStorageArgs> storage) {
+        Output<KubernetesRoleComputeArgs> compute,
+        @Nullable Output<KubernetesRoleStorageArgs> storage) {
         this.compute = Objects.requireNonNull(compute, "expected parameter 'compute' to be non-null");
         this.storage = storage;
     }
 
     private KubernetesRoleResourcesArgs() {
-        this.compute = Input.empty();
-        this.storage = Input.empty();
+        this.compute = Output.empty();
+        this.storage = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class KubernetesRoleResourcesArgs extends io.pulumi.resources.Resou
     }
 
     public static final class Builder {
-        private Input<KubernetesRoleComputeArgs> compute;
-        private @Nullable Input<KubernetesRoleStorageArgs> storage;
+        private Output<KubernetesRoleComputeArgs> compute;
+        private @Nullable Output<KubernetesRoleStorageArgs> storage;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class KubernetesRoleResourcesArgs extends io.pulumi.resources.Resou
     	      this.storage = defaults.storage;
         }
 
-        public Builder compute(Input<KubernetesRoleComputeArgs> compute) {
+        public Builder compute(Output<KubernetesRoleComputeArgs> compute) {
             this.compute = Objects.requireNonNull(compute);
             return this;
         }
 
         public Builder compute(KubernetesRoleComputeArgs compute) {
-            this.compute = Input.of(Objects.requireNonNull(compute));
+            this.compute = Output.of(Objects.requireNonNull(compute));
             return this;
         }
 
-        public Builder storage(@Nullable Input<KubernetesRoleStorageArgs> storage) {
+        public Builder storage(@Nullable Output<KubernetesRoleStorageArgs> storage) {
             this.storage = storage;
             return this;
         }
 
         public Builder storage(@Nullable KubernetesRoleStorageArgs storage) {
-            this.storage = Input.ofNullable(storage);
+            this.storage = Output.ofNullable(storage);
             return this;
         }
         public KubernetesRoleResourcesArgs build() {

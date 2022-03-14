@@ -5,7 +5,7 @@ package io.pulumi.aws.kinesis.inputs;
 
 import io.pulumi.aws.kinesis.inputs.AnalyticsApplicationInputsSchemaRecordColumnGetArgs;
 import io.pulumi.aws.kinesis.inputs.AnalyticsApplicationInputsSchemaRecordFormatGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -23,9 +23,9 @@ public final class AnalyticsApplicationInputsSchemaGetArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="recordColumns", required=true)
-      private final Input<List<AnalyticsApplicationInputsSchemaRecordColumnGetArgs>> recordColumns;
+      private final Output<List<AnalyticsApplicationInputsSchemaRecordColumnGetArgs>> recordColumns;
 
-    public Input<List<AnalyticsApplicationInputsSchemaRecordColumnGetArgs>> getRecordColumns() {
+    public Output<List<AnalyticsApplicationInputsSchemaRecordColumnGetArgs>> getRecordColumns() {
         return this.recordColumns;
     }
 
@@ -34,10 +34,10 @@ public final class AnalyticsApplicationInputsSchemaGetArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="recordEncoding")
-      private final @Nullable Input<String> recordEncoding;
+      private final @Nullable Output<String> recordEncoding;
 
-    public Input<String> getRecordEncoding() {
-        return this.recordEncoding == null ? Input.empty() : this.recordEncoding;
+    public Output<String> getRecordEncoding() {
+        return this.recordEncoding == null ? Output.empty() : this.recordEncoding;
     }
 
     /**
@@ -46,25 +46,25 @@ public final class AnalyticsApplicationInputsSchemaGetArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="recordFormat", required=true)
-      private final Input<AnalyticsApplicationInputsSchemaRecordFormatGetArgs> recordFormat;
+      private final Output<AnalyticsApplicationInputsSchemaRecordFormatGetArgs> recordFormat;
 
-    public Input<AnalyticsApplicationInputsSchemaRecordFormatGetArgs> getRecordFormat() {
+    public Output<AnalyticsApplicationInputsSchemaRecordFormatGetArgs> getRecordFormat() {
         return this.recordFormat;
     }
 
     public AnalyticsApplicationInputsSchemaGetArgs(
-        Input<List<AnalyticsApplicationInputsSchemaRecordColumnGetArgs>> recordColumns,
-        @Nullable Input<String> recordEncoding,
-        Input<AnalyticsApplicationInputsSchemaRecordFormatGetArgs> recordFormat) {
+        Output<List<AnalyticsApplicationInputsSchemaRecordColumnGetArgs>> recordColumns,
+        @Nullable Output<String> recordEncoding,
+        Output<AnalyticsApplicationInputsSchemaRecordFormatGetArgs> recordFormat) {
         this.recordColumns = Objects.requireNonNull(recordColumns, "expected parameter 'recordColumns' to be non-null");
         this.recordEncoding = recordEncoding;
         this.recordFormat = Objects.requireNonNull(recordFormat, "expected parameter 'recordFormat' to be non-null");
     }
 
     private AnalyticsApplicationInputsSchemaGetArgs() {
-        this.recordColumns = Input.empty();
-        this.recordEncoding = Input.empty();
-        this.recordFormat = Input.empty();
+        this.recordColumns = Output.empty();
+        this.recordEncoding = Output.empty();
+        this.recordFormat = Output.empty();
     }
 
     public static Builder builder() {
@@ -76,9 +76,9 @@ public final class AnalyticsApplicationInputsSchemaGetArgs extends io.pulumi.res
     }
 
     public static final class Builder {
-        private Input<List<AnalyticsApplicationInputsSchemaRecordColumnGetArgs>> recordColumns;
-        private @Nullable Input<String> recordEncoding;
-        private Input<AnalyticsApplicationInputsSchemaRecordFormatGetArgs> recordFormat;
+        private Output<List<AnalyticsApplicationInputsSchemaRecordColumnGetArgs>> recordColumns;
+        private @Nullable Output<String> recordEncoding;
+        private Output<AnalyticsApplicationInputsSchemaRecordFormatGetArgs> recordFormat;
 
         public Builder() {
     	      // Empty
@@ -91,33 +91,33 @@ public final class AnalyticsApplicationInputsSchemaGetArgs extends io.pulumi.res
     	      this.recordFormat = defaults.recordFormat;
         }
 
-        public Builder recordColumns(Input<List<AnalyticsApplicationInputsSchemaRecordColumnGetArgs>> recordColumns) {
+        public Builder recordColumns(Output<List<AnalyticsApplicationInputsSchemaRecordColumnGetArgs>> recordColumns) {
             this.recordColumns = Objects.requireNonNull(recordColumns);
             return this;
         }
 
         public Builder recordColumns(List<AnalyticsApplicationInputsSchemaRecordColumnGetArgs> recordColumns) {
-            this.recordColumns = Input.of(Objects.requireNonNull(recordColumns));
+            this.recordColumns = Output.of(Objects.requireNonNull(recordColumns));
             return this;
         }
 
-        public Builder recordEncoding(@Nullable Input<String> recordEncoding) {
+        public Builder recordEncoding(@Nullable Output<String> recordEncoding) {
             this.recordEncoding = recordEncoding;
             return this;
         }
 
         public Builder recordEncoding(@Nullable String recordEncoding) {
-            this.recordEncoding = Input.ofNullable(recordEncoding);
+            this.recordEncoding = Output.ofNullable(recordEncoding);
             return this;
         }
 
-        public Builder recordFormat(Input<AnalyticsApplicationInputsSchemaRecordFormatGetArgs> recordFormat) {
+        public Builder recordFormat(Output<AnalyticsApplicationInputsSchemaRecordFormatGetArgs> recordFormat) {
             this.recordFormat = Objects.requireNonNull(recordFormat);
             return this;
         }
 
         public Builder recordFormat(AnalyticsApplicationInputsSchemaRecordFormatGetArgs recordFormat) {
-            this.recordFormat = Input.of(Objects.requireNonNull(recordFormat));
+            this.recordFormat = Output.of(Objects.requireNonNull(recordFormat));
             return this;
         }
         public AnalyticsApplicationInputsSchemaGetArgs build() {

@@ -5,7 +5,7 @@ package io.pulumi.azurenative.insights.inputs;
 
 import io.pulumi.azurenative.insights.enums.KnownWindowsEventLogDataSourceStreams;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -28,10 +28,10 @@ public final class WindowsEventLogDataSourceArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -40,10 +40,10 @@ public final class WindowsEventLogDataSourceArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="streams")
-      private final @Nullable Input<List<Either<String,KnownWindowsEventLogDataSourceStreams>>> streams;
+      private final @Nullable Output<List<Either<String,KnownWindowsEventLogDataSourceStreams>>> streams;
 
-    public Input<List<Either<String,KnownWindowsEventLogDataSourceStreams>>> getStreams() {
-        return this.streams == null ? Input.empty() : this.streams;
+    public Output<List<Either<String,KnownWindowsEventLogDataSourceStreams>>> getStreams() {
+        return this.streams == null ? Output.empty() : this.streams;
     }
 
     /**
@@ -51,25 +51,25 @@ public final class WindowsEventLogDataSourceArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="xPathQueries")
-      private final @Nullable Input<List<String>> xPathQueries;
+      private final @Nullable Output<List<String>> xPathQueries;
 
-    public Input<List<String>> getXPathQueries() {
-        return this.xPathQueries == null ? Input.empty() : this.xPathQueries;
+    public Output<List<String>> getXPathQueries() {
+        return this.xPathQueries == null ? Output.empty() : this.xPathQueries;
     }
 
     public WindowsEventLogDataSourceArgs(
-        @Nullable Input<String> name,
-        @Nullable Input<List<Either<String,KnownWindowsEventLogDataSourceStreams>>> streams,
-        @Nullable Input<List<String>> xPathQueries) {
+        @Nullable Output<String> name,
+        @Nullable Output<List<Either<String,KnownWindowsEventLogDataSourceStreams>>> streams,
+        @Nullable Output<List<String>> xPathQueries) {
         this.name = name;
         this.streams = streams;
         this.xPathQueries = xPathQueries;
     }
 
     private WindowsEventLogDataSourceArgs() {
-        this.name = Input.empty();
-        this.streams = Input.empty();
-        this.xPathQueries = Input.empty();
+        this.name = Output.empty();
+        this.streams = Output.empty();
+        this.xPathQueries = Output.empty();
     }
 
     public static Builder builder() {
@@ -81,9 +81,9 @@ public final class WindowsEventLogDataSourceArgs extends io.pulumi.resources.Res
     }
 
     public static final class Builder {
-        private @Nullable Input<String> name;
-        private @Nullable Input<List<Either<String,KnownWindowsEventLogDataSourceStreams>>> streams;
-        private @Nullable Input<List<String>> xPathQueries;
+        private @Nullable Output<String> name;
+        private @Nullable Output<List<Either<String,KnownWindowsEventLogDataSourceStreams>>> streams;
+        private @Nullable Output<List<String>> xPathQueries;
 
         public Builder() {
     	      // Empty
@@ -96,33 +96,33 @@ public final class WindowsEventLogDataSourceArgs extends io.pulumi.resources.Res
     	      this.xPathQueries = defaults.xPathQueries;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder streams(@Nullable Input<List<Either<String,KnownWindowsEventLogDataSourceStreams>>> streams) {
+        public Builder streams(@Nullable Output<List<Either<String,KnownWindowsEventLogDataSourceStreams>>> streams) {
             this.streams = streams;
             return this;
         }
 
         public Builder streams(@Nullable List<Either<String,KnownWindowsEventLogDataSourceStreams>> streams) {
-            this.streams = Input.ofNullable(streams);
+            this.streams = Output.ofNullable(streams);
             return this;
         }
 
-        public Builder xPathQueries(@Nullable Input<List<String>> xPathQueries) {
+        public Builder xPathQueries(@Nullable Output<List<String>> xPathQueries) {
             this.xPathQueries = xPathQueries;
             return this;
         }
 
         public Builder xPathQueries(@Nullable List<String> xPathQueries) {
-            this.xPathQueries = Input.ofNullable(xPathQueries);
+            this.xPathQueries = Output.ofNullable(xPathQueries);
             return this;
         }
         public WindowsEventLogDataSourceArgs build() {

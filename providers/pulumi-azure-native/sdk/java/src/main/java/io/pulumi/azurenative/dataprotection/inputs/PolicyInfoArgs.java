@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.dataprotection.inputs;
 
 import io.pulumi.azurenative.dataprotection.inputs.PolicyParametersArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -20,9 +20,9 @@ public final class PolicyInfoArgs extends io.pulumi.resources.ResourceArgs {
     public static final PolicyInfoArgs Empty = new PolicyInfoArgs();
 
     @InputImport(name="policyId", required=true)
-      private final Input<String> policyId;
+      private final Output<String> policyId;
 
-    public Input<String> getPolicyId() {
+    public Output<String> getPolicyId() {
         return this.policyId;
     }
 
@@ -31,22 +31,22 @@ public final class PolicyInfoArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="policyParameters")
-      private final @Nullable Input<PolicyParametersArgs> policyParameters;
+      private final @Nullable Output<PolicyParametersArgs> policyParameters;
 
-    public Input<PolicyParametersArgs> getPolicyParameters() {
-        return this.policyParameters == null ? Input.empty() : this.policyParameters;
+    public Output<PolicyParametersArgs> getPolicyParameters() {
+        return this.policyParameters == null ? Output.empty() : this.policyParameters;
     }
 
     public PolicyInfoArgs(
-        Input<String> policyId,
-        @Nullable Input<PolicyParametersArgs> policyParameters) {
+        Output<String> policyId,
+        @Nullable Output<PolicyParametersArgs> policyParameters) {
         this.policyId = Objects.requireNonNull(policyId, "expected parameter 'policyId' to be non-null");
         this.policyParameters = policyParameters;
     }
 
     private PolicyInfoArgs() {
-        this.policyId = Input.empty();
-        this.policyParameters = Input.empty();
+        this.policyId = Output.empty();
+        this.policyParameters = Output.empty();
     }
 
     public static Builder builder() {
@@ -58,8 +58,8 @@ public final class PolicyInfoArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> policyId;
-        private @Nullable Input<PolicyParametersArgs> policyParameters;
+        private Output<String> policyId;
+        private @Nullable Output<PolicyParametersArgs> policyParameters;
 
         public Builder() {
     	      // Empty
@@ -71,23 +71,23 @@ public final class PolicyInfoArgs extends io.pulumi.resources.ResourceArgs {
     	      this.policyParameters = defaults.policyParameters;
         }
 
-        public Builder policyId(Input<String> policyId) {
+        public Builder policyId(Output<String> policyId) {
             this.policyId = Objects.requireNonNull(policyId);
             return this;
         }
 
         public Builder policyId(String policyId) {
-            this.policyId = Input.of(Objects.requireNonNull(policyId));
+            this.policyId = Output.of(Objects.requireNonNull(policyId));
             return this;
         }
 
-        public Builder policyParameters(@Nullable Input<PolicyParametersArgs> policyParameters) {
+        public Builder policyParameters(@Nullable Output<PolicyParametersArgs> policyParameters) {
             this.policyParameters = policyParameters;
             return this;
         }
 
         public Builder policyParameters(@Nullable PolicyParametersArgs policyParameters) {
-            this.policyParameters = Input.ofNullable(policyParameters);
+            this.policyParameters = Output.ofNullable(policyParameters);
             return this;
         }
         public PolicyInfoArgs build() {

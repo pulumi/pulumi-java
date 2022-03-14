@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.vertex.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
@@ -18,18 +18,18 @@ public final class AiFeatureStoreOnlineServingConfigGetArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="fixedNodeCount", required=true)
-      private final Input<Integer> fixedNodeCount;
+      private final Output<Integer> fixedNodeCount;
 
-    public Input<Integer> getFixedNodeCount() {
+    public Output<Integer> getFixedNodeCount() {
         return this.fixedNodeCount;
     }
 
-    public AiFeatureStoreOnlineServingConfigGetArgs(Input<Integer> fixedNodeCount) {
+    public AiFeatureStoreOnlineServingConfigGetArgs(Output<Integer> fixedNodeCount) {
         this.fixedNodeCount = Objects.requireNonNull(fixedNodeCount, "expected parameter 'fixedNodeCount' to be non-null");
     }
 
     private AiFeatureStoreOnlineServingConfigGetArgs() {
-        this.fixedNodeCount = Input.empty();
+        this.fixedNodeCount = Output.empty();
     }
 
     public static Builder builder() {
@@ -41,7 +41,7 @@ public final class AiFeatureStoreOnlineServingConfigGetArgs extends io.pulumi.re
     }
 
     public static final class Builder {
-        private Input<Integer> fixedNodeCount;
+        private Output<Integer> fixedNodeCount;
 
         public Builder() {
     	      // Empty
@@ -52,13 +52,13 @@ public final class AiFeatureStoreOnlineServingConfigGetArgs extends io.pulumi.re
     	      this.fixedNodeCount = defaults.fixedNodeCount;
         }
 
-        public Builder fixedNodeCount(Input<Integer> fixedNodeCount) {
+        public Builder fixedNodeCount(Output<Integer> fixedNodeCount) {
             this.fixedNodeCount = Objects.requireNonNull(fixedNodeCount);
             return this;
         }
 
         public Builder fixedNodeCount(Integer fixedNodeCount) {
-            this.fixedNodeCount = Input.of(Objects.requireNonNull(fixedNodeCount));
+            this.fixedNodeCount = Output.of(Objects.requireNonNull(fixedNodeCount));
             return this;
         }
         public AiFeatureStoreOnlineServingConfigGetArgs build() {

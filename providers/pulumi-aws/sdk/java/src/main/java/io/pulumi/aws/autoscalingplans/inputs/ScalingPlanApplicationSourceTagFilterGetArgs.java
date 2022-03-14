@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.autoscalingplans.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -20,9 +20,9 @@ public final class ScalingPlanApplicationSourceTagFilterGetArgs extends io.pulum
      * 
      */
     @InputImport(name="key", required=true)
-      private final Input<String> key;
+      private final Output<String> key;
 
-    public Input<String> getKey() {
+    public Output<String> getKey() {
         return this.key;
     }
 
@@ -31,22 +31,22 @@ public final class ScalingPlanApplicationSourceTagFilterGetArgs extends io.pulum
      * 
      */
     @InputImport(name="values")
-      private final @Nullable Input<List<String>> values;
+      private final @Nullable Output<List<String>> values;
 
-    public Input<List<String>> getValues() {
-        return this.values == null ? Input.empty() : this.values;
+    public Output<List<String>> getValues() {
+        return this.values == null ? Output.empty() : this.values;
     }
 
     public ScalingPlanApplicationSourceTagFilterGetArgs(
-        Input<String> key,
-        @Nullable Input<List<String>> values) {
+        Output<String> key,
+        @Nullable Output<List<String>> values) {
         this.key = Objects.requireNonNull(key, "expected parameter 'key' to be non-null");
         this.values = values;
     }
 
     private ScalingPlanApplicationSourceTagFilterGetArgs() {
-        this.key = Input.empty();
-        this.values = Input.empty();
+        this.key = Output.empty();
+        this.values = Output.empty();
     }
 
     public static Builder builder() {
@@ -58,8 +58,8 @@ public final class ScalingPlanApplicationSourceTagFilterGetArgs extends io.pulum
     }
 
     public static final class Builder {
-        private Input<String> key;
-        private @Nullable Input<List<String>> values;
+        private Output<String> key;
+        private @Nullable Output<List<String>> values;
 
         public Builder() {
     	      // Empty
@@ -71,23 +71,23 @@ public final class ScalingPlanApplicationSourceTagFilterGetArgs extends io.pulum
     	      this.values = defaults.values;
         }
 
-        public Builder key(Input<String> key) {
+        public Builder key(Output<String> key) {
             this.key = Objects.requireNonNull(key);
             return this;
         }
 
         public Builder key(String key) {
-            this.key = Input.of(Objects.requireNonNull(key));
+            this.key = Output.of(Objects.requireNonNull(key));
             return this;
         }
 
-        public Builder values(@Nullable Input<List<String>> values) {
+        public Builder values(@Nullable Output<List<String>> values) {
             this.values = values;
             return this;
         }
 
         public Builder values(@Nullable List<String> values) {
-            this.values = Input.ofNullable(values);
+            this.values = Output.ofNullable(values);
             return this;
         }
         public ScalingPlanApplicationSourceTagFilterGetArgs build() {

@@ -4,7 +4,7 @@
 package io.pulumi.aws.datasync.inputs;
 
 import io.pulumi.aws.datasync.inputs.LocationSmbMountOptionsGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -22,10 +22,10 @@ public final class LocationSmbState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="agentArns")
-      private final @Nullable Input<List<String>> agentArns;
+      private final @Nullable Output<List<String>> agentArns;
 
-    public Input<List<String>> getAgentArns() {
-        return this.agentArns == null ? Input.empty() : this.agentArns;
+    public Output<List<String>> getAgentArns() {
+        return this.agentArns == null ? Output.empty() : this.agentArns;
     }
 
     /**
@@ -33,10 +33,10 @@ public final class LocationSmbState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arn")
-      private final @Nullable Input<String> arn;
+      private final @Nullable Output<String> arn;
 
-    public Input<String> getArn() {
-        return this.arn == null ? Input.empty() : this.arn;
+    public Output<String> getArn() {
+        return this.arn == null ? Output.empty() : this.arn;
     }
 
     /**
@@ -44,10 +44,10 @@ public final class LocationSmbState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="domain")
-      private final @Nullable Input<String> domain;
+      private final @Nullable Output<String> domain;
 
-    public Input<String> getDomain() {
-        return this.domain == null ? Input.empty() : this.domain;
+    public Output<String> getDomain() {
+        return this.domain == null ? Output.empty() : this.domain;
     }
 
     /**
@@ -55,10 +55,10 @@ public final class LocationSmbState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="mountOptions")
-      private final @Nullable Input<LocationSmbMountOptionsGetArgs> mountOptions;
+      private final @Nullable Output<LocationSmbMountOptionsGetArgs> mountOptions;
 
-    public Input<LocationSmbMountOptionsGetArgs> getMountOptions() {
-        return this.mountOptions == null ? Input.empty() : this.mountOptions;
+    public Output<LocationSmbMountOptionsGetArgs> getMountOptions() {
+        return this.mountOptions == null ? Output.empty() : this.mountOptions;
     }
 
     /**
@@ -66,10 +66,10 @@ public final class LocationSmbState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="password")
-      private final @Nullable Input<String> password;
+      private final @Nullable Output<String> password;
 
-    public Input<String> getPassword() {
-        return this.password == null ? Input.empty() : this.password;
+    public Output<String> getPassword() {
+        return this.password == null ? Output.empty() : this.password;
     }
 
     /**
@@ -77,10 +77,10 @@ public final class LocationSmbState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serverHostname")
-      private final @Nullable Input<String> serverHostname;
+      private final @Nullable Output<String> serverHostname;
 
-    public Input<String> getServerHostname() {
-        return this.serverHostname == null ? Input.empty() : this.serverHostname;
+    public Output<String> getServerHostname() {
+        return this.serverHostname == null ? Output.empty() : this.serverHostname;
     }
 
     /**
@@ -88,10 +88,10 @@ public final class LocationSmbState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="subdirectory")
-      private final @Nullable Input<String> subdirectory;
+      private final @Nullable Output<String> subdirectory;
 
-    public Input<String> getSubdirectory() {
-        return this.subdirectory == null ? Input.empty() : this.subdirectory;
+    public Output<String> getSubdirectory() {
+        return this.subdirectory == null ? Output.empty() : this.subdirectory;
     }
 
     /**
@@ -99,10 +99,10 @@ public final class LocationSmbState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -110,17 +110,17 @@ public final class LocationSmbState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tagsAll")
-      private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Input<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Input.empty() : this.tagsAll;
+    public Output<Map<String,String>> getTagsAll() {
+        return this.tagsAll == null ? Output.empty() : this.tagsAll;
     }
 
     @InputImport(name="uri")
-      private final @Nullable Input<String> uri;
+      private final @Nullable Output<String> uri;
 
-    public Input<String> getUri() {
-        return this.uri == null ? Input.empty() : this.uri;
+    public Output<String> getUri() {
+        return this.uri == null ? Output.empty() : this.uri;
     }
 
     /**
@@ -128,24 +128,24 @@ public final class LocationSmbState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="user")
-      private final @Nullable Input<String> user;
+      private final @Nullable Output<String> user;
 
-    public Input<String> getUser() {
-        return this.user == null ? Input.empty() : this.user;
+    public Output<String> getUser() {
+        return this.user == null ? Output.empty() : this.user;
     }
 
     public LocationSmbState(
-        @Nullable Input<List<String>> agentArns,
-        @Nullable Input<String> arn,
-        @Nullable Input<String> domain,
-        @Nullable Input<LocationSmbMountOptionsGetArgs> mountOptions,
-        @Nullable Input<String> password,
-        @Nullable Input<String> serverHostname,
-        @Nullable Input<String> subdirectory,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<Map<String,String>> tagsAll,
-        @Nullable Input<String> uri,
-        @Nullable Input<String> user) {
+        @Nullable Output<List<String>> agentArns,
+        @Nullable Output<String> arn,
+        @Nullable Output<String> domain,
+        @Nullable Output<LocationSmbMountOptionsGetArgs> mountOptions,
+        @Nullable Output<String> password,
+        @Nullable Output<String> serverHostname,
+        @Nullable Output<String> subdirectory,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<Map<String,String>> tagsAll,
+        @Nullable Output<String> uri,
+        @Nullable Output<String> user) {
         this.agentArns = agentArns;
         this.arn = arn;
         this.domain = domain;
@@ -160,17 +160,17 @@ public final class LocationSmbState extends io.pulumi.resources.ResourceArgs {
     }
 
     private LocationSmbState() {
-        this.agentArns = Input.empty();
-        this.arn = Input.empty();
-        this.domain = Input.empty();
-        this.mountOptions = Input.empty();
-        this.password = Input.empty();
-        this.serverHostname = Input.empty();
-        this.subdirectory = Input.empty();
-        this.tags = Input.empty();
-        this.tagsAll = Input.empty();
-        this.uri = Input.empty();
-        this.user = Input.empty();
+        this.agentArns = Output.empty();
+        this.arn = Output.empty();
+        this.domain = Output.empty();
+        this.mountOptions = Output.empty();
+        this.password = Output.empty();
+        this.serverHostname = Output.empty();
+        this.subdirectory = Output.empty();
+        this.tags = Output.empty();
+        this.tagsAll = Output.empty();
+        this.uri = Output.empty();
+        this.user = Output.empty();
     }
 
     public static Builder builder() {
@@ -182,17 +182,17 @@ public final class LocationSmbState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> agentArns;
-        private @Nullable Input<String> arn;
-        private @Nullable Input<String> domain;
-        private @Nullable Input<LocationSmbMountOptionsGetArgs> mountOptions;
-        private @Nullable Input<String> password;
-        private @Nullable Input<String> serverHostname;
-        private @Nullable Input<String> subdirectory;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<Map<String,String>> tagsAll;
-        private @Nullable Input<String> uri;
-        private @Nullable Input<String> user;
+        private @Nullable Output<List<String>> agentArns;
+        private @Nullable Output<String> arn;
+        private @Nullable Output<String> domain;
+        private @Nullable Output<LocationSmbMountOptionsGetArgs> mountOptions;
+        private @Nullable Output<String> password;
+        private @Nullable Output<String> serverHostname;
+        private @Nullable Output<String> subdirectory;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<Map<String,String>> tagsAll;
+        private @Nullable Output<String> uri;
+        private @Nullable Output<String> user;
 
         public Builder() {
     	      // Empty
@@ -213,113 +213,113 @@ public final class LocationSmbState extends io.pulumi.resources.ResourceArgs {
     	      this.user = defaults.user;
         }
 
-        public Builder agentArns(@Nullable Input<List<String>> agentArns) {
+        public Builder agentArns(@Nullable Output<List<String>> agentArns) {
             this.agentArns = agentArns;
             return this;
         }
 
         public Builder agentArns(@Nullable List<String> agentArns) {
-            this.agentArns = Input.ofNullable(agentArns);
+            this.agentArns = Output.ofNullable(agentArns);
             return this;
         }
 
-        public Builder arn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
 
         public Builder arn(@Nullable String arn) {
-            this.arn = Input.ofNullable(arn);
+            this.arn = Output.ofNullable(arn);
             return this;
         }
 
-        public Builder domain(@Nullable Input<String> domain) {
+        public Builder domain(@Nullable Output<String> domain) {
             this.domain = domain;
             return this;
         }
 
         public Builder domain(@Nullable String domain) {
-            this.domain = Input.ofNullable(domain);
+            this.domain = Output.ofNullable(domain);
             return this;
         }
 
-        public Builder mountOptions(@Nullable Input<LocationSmbMountOptionsGetArgs> mountOptions) {
+        public Builder mountOptions(@Nullable Output<LocationSmbMountOptionsGetArgs> mountOptions) {
             this.mountOptions = mountOptions;
             return this;
         }
 
         public Builder mountOptions(@Nullable LocationSmbMountOptionsGetArgs mountOptions) {
-            this.mountOptions = Input.ofNullable(mountOptions);
+            this.mountOptions = Output.ofNullable(mountOptions);
             return this;
         }
 
-        public Builder password(@Nullable Input<String> password) {
+        public Builder password(@Nullable Output<String> password) {
             this.password = password;
             return this;
         }
 
         public Builder password(@Nullable String password) {
-            this.password = Input.ofNullable(password);
+            this.password = Output.ofNullable(password);
             return this;
         }
 
-        public Builder serverHostname(@Nullable Input<String> serverHostname) {
+        public Builder serverHostname(@Nullable Output<String> serverHostname) {
             this.serverHostname = serverHostname;
             return this;
         }
 
         public Builder serverHostname(@Nullable String serverHostname) {
-            this.serverHostname = Input.ofNullable(serverHostname);
+            this.serverHostname = Output.ofNullable(serverHostname);
             return this;
         }
 
-        public Builder subdirectory(@Nullable Input<String> subdirectory) {
+        public Builder subdirectory(@Nullable Output<String> subdirectory) {
             this.subdirectory = subdirectory;
             return this;
         }
 
         public Builder subdirectory(@Nullable String subdirectory) {
-            this.subdirectory = Input.ofNullable(subdirectory);
+            this.subdirectory = Output.ofNullable(subdirectory);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Input.ofNullable(tagsAll);
+            this.tagsAll = Output.ofNullable(tagsAll);
             return this;
         }
 
-        public Builder uri(@Nullable Input<String> uri) {
+        public Builder uri(@Nullable Output<String> uri) {
             this.uri = uri;
             return this;
         }
 
         public Builder uri(@Nullable String uri) {
-            this.uri = Input.ofNullable(uri);
+            this.uri = Output.ofNullable(uri);
             return this;
         }
 
-        public Builder user(@Nullable Input<String> user) {
+        public Builder user(@Nullable Output<String> user) {
             this.user = user;
             return this;
         }
 
         public Builder user(@Nullable String user) {
-            this.user = Input.ofNullable(user);
+            this.user = Output.ofNullable(user);
             return this;
         }
         public LocationSmbState build() {

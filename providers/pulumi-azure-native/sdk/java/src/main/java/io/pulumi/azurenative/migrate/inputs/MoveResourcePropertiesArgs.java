@@ -17,7 +17,7 @@ import io.pulumi.azurenative.migrate.inputs.SqlElasticPoolResourceSettingsArgs;
 import io.pulumi.azurenative.migrate.inputs.SqlServerResourceSettingsArgs;
 import io.pulumi.azurenative.migrate.inputs.VirtualMachineResourceSettingsArgs;
 import io.pulumi.azurenative.migrate.inputs.VirtualNetworkResourceSettingsArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
@@ -39,10 +39,10 @@ public final class MoveResourcePropertiesArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="dependsOnOverrides")
-      private final @Nullable Input<List<MoveResourceDependencyOverrideArgs>> dependsOnOverrides;
+      private final @Nullable Output<List<MoveResourceDependencyOverrideArgs>> dependsOnOverrides;
 
-    public Input<List<MoveResourceDependencyOverrideArgs>> getDependsOnOverrides() {
-        return this.dependsOnOverrides == null ? Input.empty() : this.dependsOnOverrides;
+    public Output<List<MoveResourceDependencyOverrideArgs>> getDependsOnOverrides() {
+        return this.dependsOnOverrides == null ? Output.empty() : this.dependsOnOverrides;
     }
 
     /**
@@ -50,10 +50,10 @@ public final class MoveResourcePropertiesArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="existingTargetId")
-      private final @Nullable Input<String> existingTargetId;
+      private final @Nullable Output<String> existingTargetId;
 
-    public Input<String> getExistingTargetId() {
-        return this.existingTargetId == null ? Input.empty() : this.existingTargetId;
+    public Output<String> getExistingTargetId() {
+        return this.existingTargetId == null ? Output.empty() : this.existingTargetId;
     }
 
     /**
@@ -61,10 +61,10 @@ public final class MoveResourcePropertiesArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="resourceSettings")
-      private final @Nullable Input<Object> resourceSettings;
+      private final @Nullable Output<Object> resourceSettings;
 
-    public Input<Object> getResourceSettings() {
-        return this.resourceSettings == null ? Input.empty() : this.resourceSettings;
+    public Output<Object> getResourceSettings() {
+        return this.resourceSettings == null ? Output.empty() : this.resourceSettings;
     }
 
     /**
@@ -72,17 +72,17 @@ public final class MoveResourcePropertiesArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="sourceId", required=true)
-      private final Input<String> sourceId;
+      private final Output<String> sourceId;
 
-    public Input<String> getSourceId() {
+    public Output<String> getSourceId() {
         return this.sourceId;
     }
 
     public MoveResourcePropertiesArgs(
-        @Nullable Input<List<MoveResourceDependencyOverrideArgs>> dependsOnOverrides,
-        @Nullable Input<String> existingTargetId,
-        @Nullable Input<Object> resourceSettings,
-        Input<String> sourceId) {
+        @Nullable Output<List<MoveResourceDependencyOverrideArgs>> dependsOnOverrides,
+        @Nullable Output<String> existingTargetId,
+        @Nullable Output<Object> resourceSettings,
+        Output<String> sourceId) {
         this.dependsOnOverrides = dependsOnOverrides;
         this.existingTargetId = existingTargetId;
         this.resourceSettings = resourceSettings;
@@ -90,10 +90,10 @@ public final class MoveResourcePropertiesArgs extends io.pulumi.resources.Resour
     }
 
     private MoveResourcePropertiesArgs() {
-        this.dependsOnOverrides = Input.empty();
-        this.existingTargetId = Input.empty();
-        this.resourceSettings = Input.empty();
-        this.sourceId = Input.empty();
+        this.dependsOnOverrides = Output.empty();
+        this.existingTargetId = Output.empty();
+        this.resourceSettings = Output.empty();
+        this.sourceId = Output.empty();
     }
 
     public static Builder builder() {
@@ -105,10 +105,10 @@ public final class MoveResourcePropertiesArgs extends io.pulumi.resources.Resour
     }
 
     public static final class Builder {
-        private @Nullable Input<List<MoveResourceDependencyOverrideArgs>> dependsOnOverrides;
-        private @Nullable Input<String> existingTargetId;
-        private @Nullable Input<Object> resourceSettings;
-        private Input<String> sourceId;
+        private @Nullable Output<List<MoveResourceDependencyOverrideArgs>> dependsOnOverrides;
+        private @Nullable Output<String> existingTargetId;
+        private @Nullable Output<Object> resourceSettings;
+        private Output<String> sourceId;
 
         public Builder() {
     	      // Empty
@@ -122,43 +122,43 @@ public final class MoveResourcePropertiesArgs extends io.pulumi.resources.Resour
     	      this.sourceId = defaults.sourceId;
         }
 
-        public Builder dependsOnOverrides(@Nullable Input<List<MoveResourceDependencyOverrideArgs>> dependsOnOverrides) {
+        public Builder dependsOnOverrides(@Nullable Output<List<MoveResourceDependencyOverrideArgs>> dependsOnOverrides) {
             this.dependsOnOverrides = dependsOnOverrides;
             return this;
         }
 
         public Builder dependsOnOverrides(@Nullable List<MoveResourceDependencyOverrideArgs> dependsOnOverrides) {
-            this.dependsOnOverrides = Input.ofNullable(dependsOnOverrides);
+            this.dependsOnOverrides = Output.ofNullable(dependsOnOverrides);
             return this;
         }
 
-        public Builder existingTargetId(@Nullable Input<String> existingTargetId) {
+        public Builder existingTargetId(@Nullable Output<String> existingTargetId) {
             this.existingTargetId = existingTargetId;
             return this;
         }
 
         public Builder existingTargetId(@Nullable String existingTargetId) {
-            this.existingTargetId = Input.ofNullable(existingTargetId);
+            this.existingTargetId = Output.ofNullable(existingTargetId);
             return this;
         }
 
-        public Builder resourceSettings(@Nullable Input<Object> resourceSettings) {
+        public Builder resourceSettings(@Nullable Output<Object> resourceSettings) {
             this.resourceSettings = resourceSettings;
             return this;
         }
 
         public Builder resourceSettings(@Nullable Object resourceSettings) {
-            this.resourceSettings = Input.ofNullable(resourceSettings);
+            this.resourceSettings = Output.ofNullable(resourceSettings);
             return this;
         }
 
-        public Builder sourceId(Input<String> sourceId) {
+        public Builder sourceId(Output<String> sourceId) {
             this.sourceId = Objects.requireNonNull(sourceId);
             return this;
         }
 
         public Builder sourceId(String sourceId) {
-            this.sourceId = Input.of(Objects.requireNonNull(sourceId));
+            this.sourceId = Output.of(Objects.requireNonNull(sourceId));
             return this;
         }
         public MoveResourcePropertiesArgs build() {

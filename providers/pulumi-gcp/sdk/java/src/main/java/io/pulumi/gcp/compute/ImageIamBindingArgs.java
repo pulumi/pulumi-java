@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.compute.inputs.ImageIamBindingConditionArgs;
 import java.lang.String;
@@ -22,10 +22,10 @@ public final class ImageIamBindingArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="condition")
-      private final @Nullable Input<ImageIamBindingConditionArgs> condition;
+      private final @Nullable Output<ImageIamBindingConditionArgs> condition;
 
-    public Input<ImageIamBindingConditionArgs> getCondition() {
-        return this.condition == null ? Input.empty() : this.condition;
+    public Output<ImageIamBindingConditionArgs> getCondition() {
+        return this.condition == null ? Output.empty() : this.condition;
     }
 
     /**
@@ -33,16 +33,16 @@ public final class ImageIamBindingArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="image", required=true)
-      private final Input<String> image;
+      private final Output<String> image;
 
-    public Input<String> getImage() {
+    public Output<String> getImage() {
         return this.image;
     }
 
     @InputImport(name="members", required=true)
-      private final Input<List<String>> members;
+      private final Output<List<String>> members;
 
-    public Input<List<String>> getMembers() {
+    public Output<List<String>> getMembers() {
         return this.members;
     }
 
@@ -52,10 +52,10 @@ public final class ImageIamBindingArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -65,18 +65,18 @@ public final class ImageIamBindingArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="role", required=true)
-      private final Input<String> role;
+      private final Output<String> role;
 
-    public Input<String> getRole() {
+    public Output<String> getRole() {
         return this.role;
     }
 
     public ImageIamBindingArgs(
-        @Nullable Input<ImageIamBindingConditionArgs> condition,
-        Input<String> image,
-        Input<List<String>> members,
-        @Nullable Input<String> project,
-        Input<String> role) {
+        @Nullable Output<ImageIamBindingConditionArgs> condition,
+        Output<String> image,
+        Output<List<String>> members,
+        @Nullable Output<String> project,
+        Output<String> role) {
         this.condition = condition;
         this.image = Objects.requireNonNull(image, "expected parameter 'image' to be non-null");
         this.members = Objects.requireNonNull(members, "expected parameter 'members' to be non-null");
@@ -85,11 +85,11 @@ public final class ImageIamBindingArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private ImageIamBindingArgs() {
-        this.condition = Input.empty();
-        this.image = Input.empty();
-        this.members = Input.empty();
-        this.project = Input.empty();
-        this.role = Input.empty();
+        this.condition = Output.empty();
+        this.image = Output.empty();
+        this.members = Output.empty();
+        this.project = Output.empty();
+        this.role = Output.empty();
     }
 
     public static Builder builder() {
@@ -101,11 +101,11 @@ public final class ImageIamBindingArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private @Nullable Input<ImageIamBindingConditionArgs> condition;
-        private Input<String> image;
-        private Input<List<String>> members;
-        private @Nullable Input<String> project;
-        private Input<String> role;
+        private @Nullable Output<ImageIamBindingConditionArgs> condition;
+        private Output<String> image;
+        private Output<List<String>> members;
+        private @Nullable Output<String> project;
+        private Output<String> role;
 
         public Builder() {
     	      // Empty
@@ -120,53 +120,53 @@ public final class ImageIamBindingArgs extends io.pulumi.resources.ResourceArgs 
     	      this.role = defaults.role;
         }
 
-        public Builder condition(@Nullable Input<ImageIamBindingConditionArgs> condition) {
+        public Builder condition(@Nullable Output<ImageIamBindingConditionArgs> condition) {
             this.condition = condition;
             return this;
         }
 
         public Builder condition(@Nullable ImageIamBindingConditionArgs condition) {
-            this.condition = Input.ofNullable(condition);
+            this.condition = Output.ofNullable(condition);
             return this;
         }
 
-        public Builder image(Input<String> image) {
+        public Builder image(Output<String> image) {
             this.image = Objects.requireNonNull(image);
             return this;
         }
 
         public Builder image(String image) {
-            this.image = Input.of(Objects.requireNonNull(image));
+            this.image = Output.of(Objects.requireNonNull(image));
             return this;
         }
 
-        public Builder members(Input<List<String>> members) {
+        public Builder members(Output<List<String>> members) {
             this.members = Objects.requireNonNull(members);
             return this;
         }
 
         public Builder members(List<String> members) {
-            this.members = Input.of(Objects.requireNonNull(members));
+            this.members = Output.of(Objects.requireNonNull(members));
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder role(Input<String> role) {
+        public Builder role(Output<String> role) {
             this.role = Objects.requireNonNull(role);
             return this;
         }
 
         public Builder role(String role) {
-            this.role = Input.of(Objects.requireNonNull(role));
+            this.role = Output.of(Objects.requireNonNull(role));
             return this;
         }
         public ImageIamBindingArgs build() {

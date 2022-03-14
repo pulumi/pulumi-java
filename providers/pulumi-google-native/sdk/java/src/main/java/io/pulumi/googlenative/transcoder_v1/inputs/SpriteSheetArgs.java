@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.transcoder_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class SpriteSheetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="columnCount")
-      private final @Nullable Input<Integer> columnCount;
+      private final @Nullable Output<Integer> columnCount;
 
-    public Input<Integer> getColumnCount() {
-        return this.columnCount == null ? Input.empty() : this.columnCount;
+    public Output<Integer> getColumnCount() {
+        return this.columnCount == null ? Output.empty() : this.columnCount;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class SpriteSheetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="endTimeOffset")
-      private final @Nullable Input<String> endTimeOffset;
+      private final @Nullable Output<String> endTimeOffset;
 
-    public Input<String> getEndTimeOffset() {
-        return this.endTimeOffset == null ? Input.empty() : this.endTimeOffset;
+    public Output<String> getEndTimeOffset() {
+        return this.endTimeOffset == null ? Output.empty() : this.endTimeOffset;
     }
 
     /**
@@ -46,9 +46,9 @@ public final class SpriteSheetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="filePrefix", required=true)
-      private final Input<String> filePrefix;
+      private final Output<String> filePrefix;
 
-    public Input<String> getFilePrefix() {
+    public Output<String> getFilePrefix() {
         return this.filePrefix;
     }
 
@@ -57,10 +57,10 @@ public final class SpriteSheetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="format")
-      private final @Nullable Input<String> format;
+      private final @Nullable Output<String> format;
 
-    public Input<String> getFormat() {
-        return this.format == null ? Input.empty() : this.format;
+    public Output<String> getFormat() {
+        return this.format == null ? Output.empty() : this.format;
     }
 
     /**
@@ -68,10 +68,10 @@ public final class SpriteSheetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="interval")
-      private final @Nullable Input<String> interval;
+      private final @Nullable Output<String> interval;
 
-    public Input<String> getInterval() {
-        return this.interval == null ? Input.empty() : this.interval;
+    public Output<String> getInterval() {
+        return this.interval == null ? Output.empty() : this.interval;
     }
 
     /**
@@ -79,10 +79,10 @@ public final class SpriteSheetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="quality")
-      private final @Nullable Input<Integer> quality;
+      private final @Nullable Output<Integer> quality;
 
-    public Input<Integer> getQuality() {
-        return this.quality == null ? Input.empty() : this.quality;
+    public Output<Integer> getQuality() {
+        return this.quality == null ? Output.empty() : this.quality;
     }
 
     /**
@@ -90,10 +90,10 @@ public final class SpriteSheetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="rowCount")
-      private final @Nullable Input<Integer> rowCount;
+      private final @Nullable Output<Integer> rowCount;
 
-    public Input<Integer> getRowCount() {
-        return this.rowCount == null ? Input.empty() : this.rowCount;
+    public Output<Integer> getRowCount() {
+        return this.rowCount == null ? Output.empty() : this.rowCount;
     }
 
     /**
@@ -101,9 +101,9 @@ public final class SpriteSheetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="spriteHeightPixels", required=true)
-      private final Input<Integer> spriteHeightPixels;
+      private final Output<Integer> spriteHeightPixels;
 
-    public Input<Integer> getSpriteHeightPixels() {
+    public Output<Integer> getSpriteHeightPixels() {
         return this.spriteHeightPixels;
     }
 
@@ -112,9 +112,9 @@ public final class SpriteSheetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="spriteWidthPixels", required=true)
-      private final Input<Integer> spriteWidthPixels;
+      private final Output<Integer> spriteWidthPixels;
 
-    public Input<Integer> getSpriteWidthPixels() {
+    public Output<Integer> getSpriteWidthPixels() {
         return this.spriteWidthPixels;
     }
 
@@ -123,10 +123,10 @@ public final class SpriteSheetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="startTimeOffset")
-      private final @Nullable Input<String> startTimeOffset;
+      private final @Nullable Output<String> startTimeOffset;
 
-    public Input<String> getStartTimeOffset() {
-        return this.startTimeOffset == null ? Input.empty() : this.startTimeOffset;
+    public Output<String> getStartTimeOffset() {
+        return this.startTimeOffset == null ? Output.empty() : this.startTimeOffset;
     }
 
     /**
@@ -134,24 +134,24 @@ public final class SpriteSheetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="totalCount")
-      private final @Nullable Input<Integer> totalCount;
+      private final @Nullable Output<Integer> totalCount;
 
-    public Input<Integer> getTotalCount() {
-        return this.totalCount == null ? Input.empty() : this.totalCount;
+    public Output<Integer> getTotalCount() {
+        return this.totalCount == null ? Output.empty() : this.totalCount;
     }
 
     public SpriteSheetArgs(
-        @Nullable Input<Integer> columnCount,
-        @Nullable Input<String> endTimeOffset,
-        Input<String> filePrefix,
-        @Nullable Input<String> format,
-        @Nullable Input<String> interval,
-        @Nullable Input<Integer> quality,
-        @Nullable Input<Integer> rowCount,
-        Input<Integer> spriteHeightPixels,
-        Input<Integer> spriteWidthPixels,
-        @Nullable Input<String> startTimeOffset,
-        @Nullable Input<Integer> totalCount) {
+        @Nullable Output<Integer> columnCount,
+        @Nullable Output<String> endTimeOffset,
+        Output<String> filePrefix,
+        @Nullable Output<String> format,
+        @Nullable Output<String> interval,
+        @Nullable Output<Integer> quality,
+        @Nullable Output<Integer> rowCount,
+        Output<Integer> spriteHeightPixels,
+        Output<Integer> spriteWidthPixels,
+        @Nullable Output<String> startTimeOffset,
+        @Nullable Output<Integer> totalCount) {
         this.columnCount = columnCount;
         this.endTimeOffset = endTimeOffset;
         this.filePrefix = Objects.requireNonNull(filePrefix, "expected parameter 'filePrefix' to be non-null");
@@ -166,17 +166,17 @@ public final class SpriteSheetArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private SpriteSheetArgs() {
-        this.columnCount = Input.empty();
-        this.endTimeOffset = Input.empty();
-        this.filePrefix = Input.empty();
-        this.format = Input.empty();
-        this.interval = Input.empty();
-        this.quality = Input.empty();
-        this.rowCount = Input.empty();
-        this.spriteHeightPixels = Input.empty();
-        this.spriteWidthPixels = Input.empty();
-        this.startTimeOffset = Input.empty();
-        this.totalCount = Input.empty();
+        this.columnCount = Output.empty();
+        this.endTimeOffset = Output.empty();
+        this.filePrefix = Output.empty();
+        this.format = Output.empty();
+        this.interval = Output.empty();
+        this.quality = Output.empty();
+        this.rowCount = Output.empty();
+        this.spriteHeightPixels = Output.empty();
+        this.spriteWidthPixels = Output.empty();
+        this.startTimeOffset = Output.empty();
+        this.totalCount = Output.empty();
     }
 
     public static Builder builder() {
@@ -188,17 +188,17 @@ public final class SpriteSheetArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> columnCount;
-        private @Nullable Input<String> endTimeOffset;
-        private Input<String> filePrefix;
-        private @Nullable Input<String> format;
-        private @Nullable Input<String> interval;
-        private @Nullable Input<Integer> quality;
-        private @Nullable Input<Integer> rowCount;
-        private Input<Integer> spriteHeightPixels;
-        private Input<Integer> spriteWidthPixels;
-        private @Nullable Input<String> startTimeOffset;
-        private @Nullable Input<Integer> totalCount;
+        private @Nullable Output<Integer> columnCount;
+        private @Nullable Output<String> endTimeOffset;
+        private Output<String> filePrefix;
+        private @Nullable Output<String> format;
+        private @Nullable Output<String> interval;
+        private @Nullable Output<Integer> quality;
+        private @Nullable Output<Integer> rowCount;
+        private Output<Integer> spriteHeightPixels;
+        private Output<Integer> spriteWidthPixels;
+        private @Nullable Output<String> startTimeOffset;
+        private @Nullable Output<Integer> totalCount;
 
         public Builder() {
     	      // Empty
@@ -219,113 +219,113 @@ public final class SpriteSheetArgs extends io.pulumi.resources.ResourceArgs {
     	      this.totalCount = defaults.totalCount;
         }
 
-        public Builder columnCount(@Nullable Input<Integer> columnCount) {
+        public Builder columnCount(@Nullable Output<Integer> columnCount) {
             this.columnCount = columnCount;
             return this;
         }
 
         public Builder columnCount(@Nullable Integer columnCount) {
-            this.columnCount = Input.ofNullable(columnCount);
+            this.columnCount = Output.ofNullable(columnCount);
             return this;
         }
 
-        public Builder endTimeOffset(@Nullable Input<String> endTimeOffset) {
+        public Builder endTimeOffset(@Nullable Output<String> endTimeOffset) {
             this.endTimeOffset = endTimeOffset;
             return this;
         }
 
         public Builder endTimeOffset(@Nullable String endTimeOffset) {
-            this.endTimeOffset = Input.ofNullable(endTimeOffset);
+            this.endTimeOffset = Output.ofNullable(endTimeOffset);
             return this;
         }
 
-        public Builder filePrefix(Input<String> filePrefix) {
+        public Builder filePrefix(Output<String> filePrefix) {
             this.filePrefix = Objects.requireNonNull(filePrefix);
             return this;
         }
 
         public Builder filePrefix(String filePrefix) {
-            this.filePrefix = Input.of(Objects.requireNonNull(filePrefix));
+            this.filePrefix = Output.of(Objects.requireNonNull(filePrefix));
             return this;
         }
 
-        public Builder format(@Nullable Input<String> format) {
+        public Builder format(@Nullable Output<String> format) {
             this.format = format;
             return this;
         }
 
         public Builder format(@Nullable String format) {
-            this.format = Input.ofNullable(format);
+            this.format = Output.ofNullable(format);
             return this;
         }
 
-        public Builder interval(@Nullable Input<String> interval) {
+        public Builder interval(@Nullable Output<String> interval) {
             this.interval = interval;
             return this;
         }
 
         public Builder interval(@Nullable String interval) {
-            this.interval = Input.ofNullable(interval);
+            this.interval = Output.ofNullable(interval);
             return this;
         }
 
-        public Builder quality(@Nullable Input<Integer> quality) {
+        public Builder quality(@Nullable Output<Integer> quality) {
             this.quality = quality;
             return this;
         }
 
         public Builder quality(@Nullable Integer quality) {
-            this.quality = Input.ofNullable(quality);
+            this.quality = Output.ofNullable(quality);
             return this;
         }
 
-        public Builder rowCount(@Nullable Input<Integer> rowCount) {
+        public Builder rowCount(@Nullable Output<Integer> rowCount) {
             this.rowCount = rowCount;
             return this;
         }
 
         public Builder rowCount(@Nullable Integer rowCount) {
-            this.rowCount = Input.ofNullable(rowCount);
+            this.rowCount = Output.ofNullable(rowCount);
             return this;
         }
 
-        public Builder spriteHeightPixels(Input<Integer> spriteHeightPixels) {
+        public Builder spriteHeightPixels(Output<Integer> spriteHeightPixels) {
             this.spriteHeightPixels = Objects.requireNonNull(spriteHeightPixels);
             return this;
         }
 
         public Builder spriteHeightPixels(Integer spriteHeightPixels) {
-            this.spriteHeightPixels = Input.of(Objects.requireNonNull(spriteHeightPixels));
+            this.spriteHeightPixels = Output.of(Objects.requireNonNull(spriteHeightPixels));
             return this;
         }
 
-        public Builder spriteWidthPixels(Input<Integer> spriteWidthPixels) {
+        public Builder spriteWidthPixels(Output<Integer> spriteWidthPixels) {
             this.spriteWidthPixels = Objects.requireNonNull(spriteWidthPixels);
             return this;
         }
 
         public Builder spriteWidthPixels(Integer spriteWidthPixels) {
-            this.spriteWidthPixels = Input.of(Objects.requireNonNull(spriteWidthPixels));
+            this.spriteWidthPixels = Output.of(Objects.requireNonNull(spriteWidthPixels));
             return this;
         }
 
-        public Builder startTimeOffset(@Nullable Input<String> startTimeOffset) {
+        public Builder startTimeOffset(@Nullable Output<String> startTimeOffset) {
             this.startTimeOffset = startTimeOffset;
             return this;
         }
 
         public Builder startTimeOffset(@Nullable String startTimeOffset) {
-            this.startTimeOffset = Input.ofNullable(startTimeOffset);
+            this.startTimeOffset = Output.ofNullable(startTimeOffset);
             return this;
         }
 
-        public Builder totalCount(@Nullable Input<Integer> totalCount) {
+        public Builder totalCount(@Nullable Output<Integer> totalCount) {
             this.totalCount = totalCount;
             return this;
         }
 
         public Builder totalCount(@Nullable Integer totalCount) {
-            this.totalCount = Input.ofNullable(totalCount);
+            this.totalCount = Output.ofNullable(totalCount);
             return this;
         }
         public SpriteSheetArgs build() {

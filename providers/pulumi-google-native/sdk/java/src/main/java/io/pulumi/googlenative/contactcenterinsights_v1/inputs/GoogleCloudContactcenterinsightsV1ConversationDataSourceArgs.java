@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.contactcenterinsights_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.contactcenterinsights_v1.inputs.GoogleCloudContactcenterinsightsV1DialogflowSourceArgs;
 import io.pulumi.googlenative.contactcenterinsights_v1.inputs.GoogleCloudContactcenterinsightsV1GcsSourceArgs;
@@ -24,10 +24,10 @@ public final class GoogleCloudContactcenterinsightsV1ConversationDataSourceArgs 
      * 
      */
     @InputImport(name="dialogflowSource")
-      private final @Nullable Input<GoogleCloudContactcenterinsightsV1DialogflowSourceArgs> dialogflowSource;
+      private final @Nullable Output<GoogleCloudContactcenterinsightsV1DialogflowSourceArgs> dialogflowSource;
 
-    public Input<GoogleCloudContactcenterinsightsV1DialogflowSourceArgs> getDialogflowSource() {
-        return this.dialogflowSource == null ? Input.empty() : this.dialogflowSource;
+    public Output<GoogleCloudContactcenterinsightsV1DialogflowSourceArgs> getDialogflowSource() {
+        return this.dialogflowSource == null ? Output.empty() : this.dialogflowSource;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class GoogleCloudContactcenterinsightsV1ConversationDataSourceArgs 
      * 
      */
     @InputImport(name="gcsSource")
-      private final @Nullable Input<GoogleCloudContactcenterinsightsV1GcsSourceArgs> gcsSource;
+      private final @Nullable Output<GoogleCloudContactcenterinsightsV1GcsSourceArgs> gcsSource;
 
-    public Input<GoogleCloudContactcenterinsightsV1GcsSourceArgs> getGcsSource() {
-        return this.gcsSource == null ? Input.empty() : this.gcsSource;
+    public Output<GoogleCloudContactcenterinsightsV1GcsSourceArgs> getGcsSource() {
+        return this.gcsSource == null ? Output.empty() : this.gcsSource;
     }
 
     public GoogleCloudContactcenterinsightsV1ConversationDataSourceArgs(
-        @Nullable Input<GoogleCloudContactcenterinsightsV1DialogflowSourceArgs> dialogflowSource,
-        @Nullable Input<GoogleCloudContactcenterinsightsV1GcsSourceArgs> gcsSource) {
+        @Nullable Output<GoogleCloudContactcenterinsightsV1DialogflowSourceArgs> dialogflowSource,
+        @Nullable Output<GoogleCloudContactcenterinsightsV1GcsSourceArgs> gcsSource) {
         this.dialogflowSource = dialogflowSource;
         this.gcsSource = gcsSource;
     }
 
     private GoogleCloudContactcenterinsightsV1ConversationDataSourceArgs() {
-        this.dialogflowSource = Input.empty();
-        this.gcsSource = Input.empty();
+        this.dialogflowSource = Output.empty();
+        this.gcsSource = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class GoogleCloudContactcenterinsightsV1ConversationDataSourceArgs 
     }
 
     public static final class Builder {
-        private @Nullable Input<GoogleCloudContactcenterinsightsV1DialogflowSourceArgs> dialogflowSource;
-        private @Nullable Input<GoogleCloudContactcenterinsightsV1GcsSourceArgs> gcsSource;
+        private @Nullable Output<GoogleCloudContactcenterinsightsV1DialogflowSourceArgs> dialogflowSource;
+        private @Nullable Output<GoogleCloudContactcenterinsightsV1GcsSourceArgs> gcsSource;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class GoogleCloudContactcenterinsightsV1ConversationDataSourceArgs 
     	      this.gcsSource = defaults.gcsSource;
         }
 
-        public Builder dialogflowSource(@Nullable Input<GoogleCloudContactcenterinsightsV1DialogflowSourceArgs> dialogflowSource) {
+        public Builder dialogflowSource(@Nullable Output<GoogleCloudContactcenterinsightsV1DialogflowSourceArgs> dialogflowSource) {
             this.dialogflowSource = dialogflowSource;
             return this;
         }
 
         public Builder dialogflowSource(@Nullable GoogleCloudContactcenterinsightsV1DialogflowSourceArgs dialogflowSource) {
-            this.dialogflowSource = Input.ofNullable(dialogflowSource);
+            this.dialogflowSource = Output.ofNullable(dialogflowSource);
             return this;
         }
 
-        public Builder gcsSource(@Nullable Input<GoogleCloudContactcenterinsightsV1GcsSourceArgs> gcsSource) {
+        public Builder gcsSource(@Nullable Output<GoogleCloudContactcenterinsightsV1GcsSourceArgs> gcsSource) {
             this.gcsSource = gcsSource;
             return this;
         }
 
         public Builder gcsSource(@Nullable GoogleCloudContactcenterinsightsV1GcsSourceArgs gcsSource) {
-            this.gcsSource = Input.ofNullable(gcsSource);
+            this.gcsSource = Output.ofNullable(gcsSource);
             return this;
         }
         public GoogleCloudContactcenterinsightsV1ConversationDataSourceArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.directconnect;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -18,18 +18,18 @@ public final class ConnectionConfirmationArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="connectionId", required=true)
-      private final Input<String> connectionId;
+      private final Output<String> connectionId;
 
-    public Input<String> getConnectionId() {
+    public Output<String> getConnectionId() {
         return this.connectionId;
     }
 
-    public ConnectionConfirmationArgs(Input<String> connectionId) {
+    public ConnectionConfirmationArgs(Output<String> connectionId) {
         this.connectionId = Objects.requireNonNull(connectionId, "expected parameter 'connectionId' to be non-null");
     }
 
     private ConnectionConfirmationArgs() {
-        this.connectionId = Input.empty();
+        this.connectionId = Output.empty();
     }
 
     public static Builder builder() {
@@ -41,7 +41,7 @@ public final class ConnectionConfirmationArgs extends io.pulumi.resources.Resour
     }
 
     public static final class Builder {
-        private Input<String> connectionId;
+        private Output<String> connectionId;
 
         public Builder() {
     	      // Empty
@@ -52,13 +52,13 @@ public final class ConnectionConfirmationArgs extends io.pulumi.resources.Resour
     	      this.connectionId = defaults.connectionId;
         }
 
-        public Builder connectionId(Input<String> connectionId) {
+        public Builder connectionId(Output<String> connectionId) {
             this.connectionId = Objects.requireNonNull(connectionId);
             return this;
         }
 
         public Builder connectionId(String connectionId) {
-            this.connectionId = Input.of(Objects.requireNonNull(connectionId));
+            this.connectionId = Output.of(Objects.requireNonNull(connectionId));
             return this;
         }
         public ConnectionConfirmationArgs build() {

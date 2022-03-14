@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class FirewallPolicyAssociationState extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="attachmentTarget")
-      private final @Nullable Input<String> attachmentTarget;
+      private final @Nullable Output<String> attachmentTarget;
 
-    public Input<String> getAttachmentTarget() {
-        return this.attachmentTarget == null ? Input.empty() : this.attachmentTarget;
+    public Output<String> getAttachmentTarget() {
+        return this.attachmentTarget == null ? Output.empty() : this.attachmentTarget;
     }
 
     /**
@@ -30,10 +30,10 @@ public final class FirewallPolicyAssociationState extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="firewallPolicy")
-      private final @Nullable Input<String> firewallPolicy;
+      private final @Nullable Output<String> firewallPolicy;
 
-    public Input<String> getFirewallPolicy() {
-        return this.firewallPolicy == null ? Input.empty() : this.firewallPolicy;
+    public Output<String> getFirewallPolicy() {
+        return this.firewallPolicy == null ? Output.empty() : this.firewallPolicy;
     }
 
     /**
@@ -41,10 +41,10 @@ public final class FirewallPolicyAssociationState extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -52,17 +52,17 @@ public final class FirewallPolicyAssociationState extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="shortName")
-      private final @Nullable Input<String> shortName;
+      private final @Nullable Output<String> shortName;
 
-    public Input<String> getShortName() {
-        return this.shortName == null ? Input.empty() : this.shortName;
+    public Output<String> getShortName() {
+        return this.shortName == null ? Output.empty() : this.shortName;
     }
 
     public FirewallPolicyAssociationState(
-        @Nullable Input<String> attachmentTarget,
-        @Nullable Input<String> firewallPolicy,
-        @Nullable Input<String> name,
-        @Nullable Input<String> shortName) {
+        @Nullable Output<String> attachmentTarget,
+        @Nullable Output<String> firewallPolicy,
+        @Nullable Output<String> name,
+        @Nullable Output<String> shortName) {
         this.attachmentTarget = attachmentTarget;
         this.firewallPolicy = firewallPolicy;
         this.name = name;
@@ -70,10 +70,10 @@ public final class FirewallPolicyAssociationState extends io.pulumi.resources.Re
     }
 
     private FirewallPolicyAssociationState() {
-        this.attachmentTarget = Input.empty();
-        this.firewallPolicy = Input.empty();
-        this.name = Input.empty();
-        this.shortName = Input.empty();
+        this.attachmentTarget = Output.empty();
+        this.firewallPolicy = Output.empty();
+        this.name = Output.empty();
+        this.shortName = Output.empty();
     }
 
     public static Builder builder() {
@@ -85,10 +85,10 @@ public final class FirewallPolicyAssociationState extends io.pulumi.resources.Re
     }
 
     public static final class Builder {
-        private @Nullable Input<String> attachmentTarget;
-        private @Nullable Input<String> firewallPolicy;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> shortName;
+        private @Nullable Output<String> attachmentTarget;
+        private @Nullable Output<String> firewallPolicy;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> shortName;
 
         public Builder() {
     	      // Empty
@@ -102,43 +102,43 @@ public final class FirewallPolicyAssociationState extends io.pulumi.resources.Re
     	      this.shortName = defaults.shortName;
         }
 
-        public Builder attachmentTarget(@Nullable Input<String> attachmentTarget) {
+        public Builder attachmentTarget(@Nullable Output<String> attachmentTarget) {
             this.attachmentTarget = attachmentTarget;
             return this;
         }
 
         public Builder attachmentTarget(@Nullable String attachmentTarget) {
-            this.attachmentTarget = Input.ofNullable(attachmentTarget);
+            this.attachmentTarget = Output.ofNullable(attachmentTarget);
             return this;
         }
 
-        public Builder firewallPolicy(@Nullable Input<String> firewallPolicy) {
+        public Builder firewallPolicy(@Nullable Output<String> firewallPolicy) {
             this.firewallPolicy = firewallPolicy;
             return this;
         }
 
         public Builder firewallPolicy(@Nullable String firewallPolicy) {
-            this.firewallPolicy = Input.ofNullable(firewallPolicy);
+            this.firewallPolicy = Output.ofNullable(firewallPolicy);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder shortName(@Nullable Input<String> shortName) {
+        public Builder shortName(@Nullable Output<String> shortName) {
             this.shortName = shortName;
             return this;
         }
 
         public Builder shortName(@Nullable String shortName) {
-            this.shortName = Input.ofNullable(shortName);
+            this.shortName = Output.ofNullable(shortName);
             return this;
         }
         public FirewallPolicyAssociationState build() {

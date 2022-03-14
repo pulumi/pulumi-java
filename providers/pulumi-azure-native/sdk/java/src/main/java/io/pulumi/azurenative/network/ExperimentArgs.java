@@ -6,7 +6,7 @@ package io.pulumi.azurenative.network;
 import io.pulumi.azurenative.network.enums.State;
 import io.pulumi.azurenative.network.inputs.ExperimentEndpointArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -23,10 +23,10 @@ public final class ExperimentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class ExperimentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enabledState")
-      private final @Nullable Input<Either<String,State>> enabledState;
+      private final @Nullable Output<Either<String,State>> enabledState;
 
-    public Input<Either<String,State>> getEnabledState() {
-        return this.enabledState == null ? Input.empty() : this.enabledState;
+    public Output<Either<String,State>> getEnabledState() {
+        return this.enabledState == null ? Output.empty() : this.enabledState;
     }
 
     /**
@@ -45,10 +45,10 @@ public final class ExperimentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="endpointA")
-      private final @Nullable Input<ExperimentEndpointArgs> endpointA;
+      private final @Nullable Output<ExperimentEndpointArgs> endpointA;
 
-    public Input<ExperimentEndpointArgs> getEndpointA() {
-        return this.endpointA == null ? Input.empty() : this.endpointA;
+    public Output<ExperimentEndpointArgs> getEndpointA() {
+        return this.endpointA == null ? Output.empty() : this.endpointA;
     }
 
     /**
@@ -56,10 +56,10 @@ public final class ExperimentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="endpointB")
-      private final @Nullable Input<ExperimentEndpointArgs> endpointB;
+      private final @Nullable Output<ExperimentEndpointArgs> endpointB;
 
-    public Input<ExperimentEndpointArgs> getEndpointB() {
-        return this.endpointB == null ? Input.empty() : this.endpointB;
+    public Output<ExperimentEndpointArgs> getEndpointB() {
+        return this.endpointB == null ? Output.empty() : this.endpointB;
     }
 
     /**
@@ -67,10 +67,10 @@ public final class ExperimentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="experimentName")
-      private final @Nullable Input<String> experimentName;
+      private final @Nullable Output<String> experimentName;
 
-    public Input<String> getExperimentName() {
-        return this.experimentName == null ? Input.empty() : this.experimentName;
+    public Output<String> getExperimentName() {
+        return this.experimentName == null ? Output.empty() : this.experimentName;
     }
 
     /**
@@ -78,10 +78,10 @@ public final class ExperimentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -89,9 +89,9 @@ public final class ExperimentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="profileName", required=true)
-      private final Input<String> profileName;
+      private final Output<String> profileName;
 
-    public Input<String> getProfileName() {
+    public Output<String> getProfileName() {
         return this.profileName;
     }
 
@@ -100,9 +100,9 @@ public final class ExperimentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -111,22 +111,22 @@ public final class ExperimentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public ExperimentArgs(
-        @Nullable Input<String> description,
-        @Nullable Input<Either<String,State>> enabledState,
-        @Nullable Input<ExperimentEndpointArgs> endpointA,
-        @Nullable Input<ExperimentEndpointArgs> endpointB,
-        @Nullable Input<String> experimentName,
-        @Nullable Input<String> location,
-        Input<String> profileName,
-        Input<String> resourceGroupName,
-        @Nullable Input<Map<String,String>> tags) {
+        @Nullable Output<String> description,
+        @Nullable Output<Either<String,State>> enabledState,
+        @Nullable Output<ExperimentEndpointArgs> endpointA,
+        @Nullable Output<ExperimentEndpointArgs> endpointB,
+        @Nullable Output<String> experimentName,
+        @Nullable Output<String> location,
+        Output<String> profileName,
+        Output<String> resourceGroupName,
+        @Nullable Output<Map<String,String>> tags) {
         this.description = description;
         this.enabledState = enabledState;
         this.endpointA = endpointA;
@@ -139,15 +139,15 @@ public final class ExperimentArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ExperimentArgs() {
-        this.description = Input.empty();
-        this.enabledState = Input.empty();
-        this.endpointA = Input.empty();
-        this.endpointB = Input.empty();
-        this.experimentName = Input.empty();
-        this.location = Input.empty();
-        this.profileName = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.tags = Input.empty();
+        this.description = Output.empty();
+        this.enabledState = Output.empty();
+        this.endpointA = Output.empty();
+        this.endpointB = Output.empty();
+        this.experimentName = Output.empty();
+        this.location = Output.empty();
+        this.profileName = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -159,15 +159,15 @@ public final class ExperimentArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> description;
-        private @Nullable Input<Either<String,State>> enabledState;
-        private @Nullable Input<ExperimentEndpointArgs> endpointA;
-        private @Nullable Input<ExperimentEndpointArgs> endpointB;
-        private @Nullable Input<String> experimentName;
-        private @Nullable Input<String> location;
-        private Input<String> profileName;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<Map<String,String>> tags;
+        private @Nullable Output<String> description;
+        private @Nullable Output<Either<String,State>> enabledState;
+        private @Nullable Output<ExperimentEndpointArgs> endpointA;
+        private @Nullable Output<ExperimentEndpointArgs> endpointB;
+        private @Nullable Output<String> experimentName;
+        private @Nullable Output<String> location;
+        private Output<String> profileName;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<Map<String,String>> tags;
 
         public Builder() {
     	      // Empty
@@ -186,93 +186,93 @@ public final class ExperimentArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder enabledState(@Nullable Input<Either<String,State>> enabledState) {
+        public Builder enabledState(@Nullable Output<Either<String,State>> enabledState) {
             this.enabledState = enabledState;
             return this;
         }
 
         public Builder enabledState(@Nullable Either<String,State> enabledState) {
-            this.enabledState = Input.ofNullable(enabledState);
+            this.enabledState = Output.ofNullable(enabledState);
             return this;
         }
 
-        public Builder endpointA(@Nullable Input<ExperimentEndpointArgs> endpointA) {
+        public Builder endpointA(@Nullable Output<ExperimentEndpointArgs> endpointA) {
             this.endpointA = endpointA;
             return this;
         }
 
         public Builder endpointA(@Nullable ExperimentEndpointArgs endpointA) {
-            this.endpointA = Input.ofNullable(endpointA);
+            this.endpointA = Output.ofNullable(endpointA);
             return this;
         }
 
-        public Builder endpointB(@Nullable Input<ExperimentEndpointArgs> endpointB) {
+        public Builder endpointB(@Nullable Output<ExperimentEndpointArgs> endpointB) {
             this.endpointB = endpointB;
             return this;
         }
 
         public Builder endpointB(@Nullable ExperimentEndpointArgs endpointB) {
-            this.endpointB = Input.ofNullable(endpointB);
+            this.endpointB = Output.ofNullable(endpointB);
             return this;
         }
 
-        public Builder experimentName(@Nullable Input<String> experimentName) {
+        public Builder experimentName(@Nullable Output<String> experimentName) {
             this.experimentName = experimentName;
             return this;
         }
 
         public Builder experimentName(@Nullable String experimentName) {
-            this.experimentName = Input.ofNullable(experimentName);
+            this.experimentName = Output.ofNullable(experimentName);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder profileName(Input<String> profileName) {
+        public Builder profileName(Output<String> profileName) {
             this.profileName = Objects.requireNonNull(profileName);
             return this;
         }
 
         public Builder profileName(String profileName) {
-            this.profileName = Input.of(Objects.requireNonNull(profileName));
+            this.profileName = Output.of(Objects.requireNonNull(profileName));
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public ExperimentArgs build() {

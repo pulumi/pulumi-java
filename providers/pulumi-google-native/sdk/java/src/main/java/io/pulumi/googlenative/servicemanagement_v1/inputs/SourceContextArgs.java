@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.servicemanagement_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class SourceContextArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="fileName")
-      private final @Nullable Input<String> fileName;
+      private final @Nullable Output<String> fileName;
 
-    public Input<String> getFileName() {
-        return this.fileName == null ? Input.empty() : this.fileName;
+    public Output<String> getFileName() {
+        return this.fileName == null ? Output.empty() : this.fileName;
     }
 
-    public SourceContextArgs(@Nullable Input<String> fileName) {
+    public SourceContextArgs(@Nullable Output<String> fileName) {
         this.fileName = fileName;
     }
 
     private SourceContextArgs() {
-        this.fileName = Input.empty();
+        this.fileName = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class SourceContextArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> fileName;
+        private @Nullable Output<String> fileName;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class SourceContextArgs extends io.pulumi.resources.ResourceArgs {
     	      this.fileName = defaults.fileName;
         }
 
-        public Builder fileName(@Nullable Input<String> fileName) {
+        public Builder fileName(@Nullable Output<String> fileName) {
             this.fileName = fileName;
             return this;
         }
 
         public Builder fileName(@Nullable String fileName) {
-            this.fileName = Input.ofNullable(fileName);
+            this.fileName = Output.ofNullable(fileName);
             return this;
         }
         public SourceContextArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.lightsail.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Double;
@@ -24,10 +24,10 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arn")
-      private final @Nullable Input<String> arn;
+      private final @Nullable Output<String> arn;
 
-    public Input<String> getArn() {
-        return this.arn == null ? Input.empty() : this.arn;
+    public Output<String> getArn() {
+        return this.arn == null ? Output.empty() : this.arn;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="availabilityZone")
-      private final @Nullable Input<String> availabilityZone;
+      private final @Nullable Output<String> availabilityZone;
 
-    public Input<String> getAvailabilityZone() {
-        return this.availabilityZone == null ? Input.empty() : this.availabilityZone;
+    public Output<String> getAvailabilityZone() {
+        return this.availabilityZone == null ? Output.empty() : this.availabilityZone;
     }
 
     /**
@@ -47,10 +47,10 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="blueprintId")
-      private final @Nullable Input<String> blueprintId;
+      private final @Nullable Output<String> blueprintId;
 
-    public Input<String> getBlueprintId() {
-        return this.blueprintId == null ? Input.empty() : this.blueprintId;
+    public Output<String> getBlueprintId() {
+        return this.blueprintId == null ? Output.empty() : this.blueprintId;
     }
 
     /**
@@ -58,10 +58,10 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="bundleId")
-      private final @Nullable Input<String> bundleId;
+      private final @Nullable Output<String> bundleId;
 
-    public Input<String> getBundleId() {
-        return this.bundleId == null ? Input.empty() : this.bundleId;
+    public Output<String> getBundleId() {
+        return this.bundleId == null ? Output.empty() : this.bundleId;
     }
 
     /**
@@ -69,10 +69,10 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="cpuCount")
-      private final @Nullable Input<Integer> cpuCount;
+      private final @Nullable Output<Integer> cpuCount;
 
-    public Input<Integer> getCpuCount() {
-        return this.cpuCount == null ? Input.empty() : this.cpuCount;
+    public Output<Integer> getCpuCount() {
+        return this.cpuCount == null ? Output.empty() : this.cpuCount;
     }
 
     /**
@@ -80,10 +80,10 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="createdAt")
-      private final @Nullable Input<String> createdAt;
+      private final @Nullable Output<String> createdAt;
 
-    public Input<String> getCreatedAt() {
-        return this.createdAt == null ? Input.empty() : this.createdAt;
+    public Output<String> getCreatedAt() {
+        return this.createdAt == null ? Output.empty() : this.createdAt;
     }
 
     /**
@@ -95,11 +95,11 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      */
     @Deprecated /* use `ipv6_addresses` attribute instead */
     @InputImport(name="ipv6Address")
-      private final @Nullable Input<String> ipv6Address;
+      private final @Nullable Output<String> ipv6Address;
 
     @Deprecated /* use `ipv6_addresses` attribute instead */
-    public Input<String> getIpv6Address() {
-        return this.ipv6Address == null ? Input.empty() : this.ipv6Address;
+    public Output<String> getIpv6Address() {
+        return this.ipv6Address == null ? Output.empty() : this.ipv6Address;
     }
 
     /**
@@ -107,10 +107,10 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ipv6Addresses")
-      private final @Nullable Input<List<String>> ipv6Addresses;
+      private final @Nullable Output<List<String>> ipv6Addresses;
 
-    public Input<List<String>> getIpv6Addresses() {
-        return this.ipv6Addresses == null ? Input.empty() : this.ipv6Addresses;
+    public Output<List<String>> getIpv6Addresses() {
+        return this.ipv6Addresses == null ? Output.empty() : this.ipv6Addresses;
     }
 
     /**
@@ -118,10 +118,10 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="isStaticIp")
-      private final @Nullable Input<Boolean> isStaticIp;
+      private final @Nullable Output<Boolean> isStaticIp;
 
-    public Input<Boolean> getIsStaticIp() {
-        return this.isStaticIp == null ? Input.empty() : this.isStaticIp;
+    public Output<Boolean> getIsStaticIp() {
+        return this.isStaticIp == null ? Output.empty() : this.isStaticIp;
     }
 
     /**
@@ -130,10 +130,10 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="keyPairName")
-      private final @Nullable Input<String> keyPairName;
+      private final @Nullable Output<String> keyPairName;
 
-    public Input<String> getKeyPairName() {
-        return this.keyPairName == null ? Input.empty() : this.keyPairName;
+    public Output<String> getKeyPairName() {
+        return this.keyPairName == null ? Output.empty() : this.keyPairName;
     }
 
     /**
@@ -141,10 +141,10 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -152,10 +152,10 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="privateIpAddress")
-      private final @Nullable Input<String> privateIpAddress;
+      private final @Nullable Output<String> privateIpAddress;
 
-    public Input<String> getPrivateIpAddress() {
-        return this.privateIpAddress == null ? Input.empty() : this.privateIpAddress;
+    public Output<String> getPrivateIpAddress() {
+        return this.privateIpAddress == null ? Output.empty() : this.privateIpAddress;
     }
 
     /**
@@ -163,10 +163,10 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="publicIpAddress")
-      private final @Nullable Input<String> publicIpAddress;
+      private final @Nullable Output<String> publicIpAddress;
 
-    public Input<String> getPublicIpAddress() {
-        return this.publicIpAddress == null ? Input.empty() : this.publicIpAddress;
+    public Output<String> getPublicIpAddress() {
+        return this.publicIpAddress == null ? Output.empty() : this.publicIpAddress;
     }
 
     /**
@@ -174,10 +174,10 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ramSize")
-      private final @Nullable Input<Double> ramSize;
+      private final @Nullable Output<Double> ramSize;
 
-    public Input<Double> getRamSize() {
-        return this.ramSize == null ? Input.empty() : this.ramSize;
+    public Output<Double> getRamSize() {
+        return this.ramSize == null ? Output.empty() : this.ramSize;
     }
 
     /**
@@ -185,10 +185,10 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -196,10 +196,10 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tagsAll")
-      private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Input<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Input.empty() : this.tagsAll;
+    public Output<Map<String,String>> getTagsAll() {
+        return this.tagsAll == null ? Output.empty() : this.tagsAll;
     }
 
     /**
@@ -207,10 +207,10 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="userData")
-      private final @Nullable Input<String> userData;
+      private final @Nullable Output<String> userData;
 
-    public Input<String> getUserData() {
-        return this.userData == null ? Input.empty() : this.userData;
+    public Output<String> getUserData() {
+        return this.userData == null ? Output.empty() : this.userData;
     }
 
     /**
@@ -218,31 +218,31 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="username")
-      private final @Nullable Input<String> username;
+      private final @Nullable Output<String> username;
 
-    public Input<String> getUsername() {
-        return this.username == null ? Input.empty() : this.username;
+    public Output<String> getUsername() {
+        return this.username == null ? Output.empty() : this.username;
     }
 
     public InstanceState(
-        @Nullable Input<String> arn,
-        @Nullable Input<String> availabilityZone,
-        @Nullable Input<String> blueprintId,
-        @Nullable Input<String> bundleId,
-        @Nullable Input<Integer> cpuCount,
-        @Nullable Input<String> createdAt,
-        @Nullable Input<String> ipv6Address,
-        @Nullable Input<List<String>> ipv6Addresses,
-        @Nullable Input<Boolean> isStaticIp,
-        @Nullable Input<String> keyPairName,
-        @Nullable Input<String> name,
-        @Nullable Input<String> privateIpAddress,
-        @Nullable Input<String> publicIpAddress,
-        @Nullable Input<Double> ramSize,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<Map<String,String>> tagsAll,
-        @Nullable Input<String> userData,
-        @Nullable Input<String> username) {
+        @Nullable Output<String> arn,
+        @Nullable Output<String> availabilityZone,
+        @Nullable Output<String> blueprintId,
+        @Nullable Output<String> bundleId,
+        @Nullable Output<Integer> cpuCount,
+        @Nullable Output<String> createdAt,
+        @Nullable Output<String> ipv6Address,
+        @Nullable Output<List<String>> ipv6Addresses,
+        @Nullable Output<Boolean> isStaticIp,
+        @Nullable Output<String> keyPairName,
+        @Nullable Output<String> name,
+        @Nullable Output<String> privateIpAddress,
+        @Nullable Output<String> publicIpAddress,
+        @Nullable Output<Double> ramSize,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<Map<String,String>> tagsAll,
+        @Nullable Output<String> userData,
+        @Nullable Output<String> username) {
         this.arn = arn;
         this.availabilityZone = availabilityZone;
         this.blueprintId = blueprintId;
@@ -264,24 +264,24 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
     }
 
     private InstanceState() {
-        this.arn = Input.empty();
-        this.availabilityZone = Input.empty();
-        this.blueprintId = Input.empty();
-        this.bundleId = Input.empty();
-        this.cpuCount = Input.empty();
-        this.createdAt = Input.empty();
-        this.ipv6Address = Input.empty();
-        this.ipv6Addresses = Input.empty();
-        this.isStaticIp = Input.empty();
-        this.keyPairName = Input.empty();
-        this.name = Input.empty();
-        this.privateIpAddress = Input.empty();
-        this.publicIpAddress = Input.empty();
-        this.ramSize = Input.empty();
-        this.tags = Input.empty();
-        this.tagsAll = Input.empty();
-        this.userData = Input.empty();
-        this.username = Input.empty();
+        this.arn = Output.empty();
+        this.availabilityZone = Output.empty();
+        this.blueprintId = Output.empty();
+        this.bundleId = Output.empty();
+        this.cpuCount = Output.empty();
+        this.createdAt = Output.empty();
+        this.ipv6Address = Output.empty();
+        this.ipv6Addresses = Output.empty();
+        this.isStaticIp = Output.empty();
+        this.keyPairName = Output.empty();
+        this.name = Output.empty();
+        this.privateIpAddress = Output.empty();
+        this.publicIpAddress = Output.empty();
+        this.ramSize = Output.empty();
+        this.tags = Output.empty();
+        this.tagsAll = Output.empty();
+        this.userData = Output.empty();
+        this.username = Output.empty();
     }
 
     public static Builder builder() {
@@ -293,24 +293,24 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> arn;
-        private @Nullable Input<String> availabilityZone;
-        private @Nullable Input<String> blueprintId;
-        private @Nullable Input<String> bundleId;
-        private @Nullable Input<Integer> cpuCount;
-        private @Nullable Input<String> createdAt;
-        private @Nullable Input<String> ipv6Address;
-        private @Nullable Input<List<String>> ipv6Addresses;
-        private @Nullable Input<Boolean> isStaticIp;
-        private @Nullable Input<String> keyPairName;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> privateIpAddress;
-        private @Nullable Input<String> publicIpAddress;
-        private @Nullable Input<Double> ramSize;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<Map<String,String>> tagsAll;
-        private @Nullable Input<String> userData;
-        private @Nullable Input<String> username;
+        private @Nullable Output<String> arn;
+        private @Nullable Output<String> availabilityZone;
+        private @Nullable Output<String> blueprintId;
+        private @Nullable Output<String> bundleId;
+        private @Nullable Output<Integer> cpuCount;
+        private @Nullable Output<String> createdAt;
+        private @Nullable Output<String> ipv6Address;
+        private @Nullable Output<List<String>> ipv6Addresses;
+        private @Nullable Output<Boolean> isStaticIp;
+        private @Nullable Output<String> keyPairName;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> privateIpAddress;
+        private @Nullable Output<String> publicIpAddress;
+        private @Nullable Output<Double> ramSize;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<Map<String,String>> tagsAll;
+        private @Nullable Output<String> userData;
+        private @Nullable Output<String> username;
 
         public Builder() {
     	      // Empty
@@ -338,183 +338,183 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
     	      this.username = defaults.username;
         }
 
-        public Builder arn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
 
         public Builder arn(@Nullable String arn) {
-            this.arn = Input.ofNullable(arn);
+            this.arn = Output.ofNullable(arn);
             return this;
         }
 
-        public Builder availabilityZone(@Nullable Input<String> availabilityZone) {
+        public Builder availabilityZone(@Nullable Output<String> availabilityZone) {
             this.availabilityZone = availabilityZone;
             return this;
         }
 
         public Builder availabilityZone(@Nullable String availabilityZone) {
-            this.availabilityZone = Input.ofNullable(availabilityZone);
+            this.availabilityZone = Output.ofNullable(availabilityZone);
             return this;
         }
 
-        public Builder blueprintId(@Nullable Input<String> blueprintId) {
+        public Builder blueprintId(@Nullable Output<String> blueprintId) {
             this.blueprintId = blueprintId;
             return this;
         }
 
         public Builder blueprintId(@Nullable String blueprintId) {
-            this.blueprintId = Input.ofNullable(blueprintId);
+            this.blueprintId = Output.ofNullable(blueprintId);
             return this;
         }
 
-        public Builder bundleId(@Nullable Input<String> bundleId) {
+        public Builder bundleId(@Nullable Output<String> bundleId) {
             this.bundleId = bundleId;
             return this;
         }
 
         public Builder bundleId(@Nullable String bundleId) {
-            this.bundleId = Input.ofNullable(bundleId);
+            this.bundleId = Output.ofNullable(bundleId);
             return this;
         }
 
-        public Builder cpuCount(@Nullable Input<Integer> cpuCount) {
+        public Builder cpuCount(@Nullable Output<Integer> cpuCount) {
             this.cpuCount = cpuCount;
             return this;
         }
 
         public Builder cpuCount(@Nullable Integer cpuCount) {
-            this.cpuCount = Input.ofNullable(cpuCount);
+            this.cpuCount = Output.ofNullable(cpuCount);
             return this;
         }
 
-        public Builder createdAt(@Nullable Input<String> createdAt) {
+        public Builder createdAt(@Nullable Output<String> createdAt) {
             this.createdAt = createdAt;
             return this;
         }
 
         public Builder createdAt(@Nullable String createdAt) {
-            this.createdAt = Input.ofNullable(createdAt);
+            this.createdAt = Output.ofNullable(createdAt);
             return this;
         }
 
-        public Builder ipv6Address(@Nullable Input<String> ipv6Address) {
+        public Builder ipv6Address(@Nullable Output<String> ipv6Address) {
             this.ipv6Address = ipv6Address;
             return this;
         }
 
         public Builder ipv6Address(@Nullable String ipv6Address) {
-            this.ipv6Address = Input.ofNullable(ipv6Address);
+            this.ipv6Address = Output.ofNullable(ipv6Address);
             return this;
         }
 
-        public Builder ipv6Addresses(@Nullable Input<List<String>> ipv6Addresses) {
+        public Builder ipv6Addresses(@Nullable Output<List<String>> ipv6Addresses) {
             this.ipv6Addresses = ipv6Addresses;
             return this;
         }
 
         public Builder ipv6Addresses(@Nullable List<String> ipv6Addresses) {
-            this.ipv6Addresses = Input.ofNullable(ipv6Addresses);
+            this.ipv6Addresses = Output.ofNullable(ipv6Addresses);
             return this;
         }
 
-        public Builder isStaticIp(@Nullable Input<Boolean> isStaticIp) {
+        public Builder isStaticIp(@Nullable Output<Boolean> isStaticIp) {
             this.isStaticIp = isStaticIp;
             return this;
         }
 
         public Builder isStaticIp(@Nullable Boolean isStaticIp) {
-            this.isStaticIp = Input.ofNullable(isStaticIp);
+            this.isStaticIp = Output.ofNullable(isStaticIp);
             return this;
         }
 
-        public Builder keyPairName(@Nullable Input<String> keyPairName) {
+        public Builder keyPairName(@Nullable Output<String> keyPairName) {
             this.keyPairName = keyPairName;
             return this;
         }
 
         public Builder keyPairName(@Nullable String keyPairName) {
-            this.keyPairName = Input.ofNullable(keyPairName);
+            this.keyPairName = Output.ofNullable(keyPairName);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder privateIpAddress(@Nullable Input<String> privateIpAddress) {
+        public Builder privateIpAddress(@Nullable Output<String> privateIpAddress) {
             this.privateIpAddress = privateIpAddress;
             return this;
         }
 
         public Builder privateIpAddress(@Nullable String privateIpAddress) {
-            this.privateIpAddress = Input.ofNullable(privateIpAddress);
+            this.privateIpAddress = Output.ofNullable(privateIpAddress);
             return this;
         }
 
-        public Builder publicIpAddress(@Nullable Input<String> publicIpAddress) {
+        public Builder publicIpAddress(@Nullable Output<String> publicIpAddress) {
             this.publicIpAddress = publicIpAddress;
             return this;
         }
 
         public Builder publicIpAddress(@Nullable String publicIpAddress) {
-            this.publicIpAddress = Input.ofNullable(publicIpAddress);
+            this.publicIpAddress = Output.ofNullable(publicIpAddress);
             return this;
         }
 
-        public Builder ramSize(@Nullable Input<Double> ramSize) {
+        public Builder ramSize(@Nullable Output<Double> ramSize) {
             this.ramSize = ramSize;
             return this;
         }
 
         public Builder ramSize(@Nullable Double ramSize) {
-            this.ramSize = Input.ofNullable(ramSize);
+            this.ramSize = Output.ofNullable(ramSize);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Input.ofNullable(tagsAll);
+            this.tagsAll = Output.ofNullable(tagsAll);
             return this;
         }
 
-        public Builder userData(@Nullable Input<String> userData) {
+        public Builder userData(@Nullable Output<String> userData) {
             this.userData = userData;
             return this;
         }
 
         public Builder userData(@Nullable String userData) {
-            this.userData = Input.ofNullable(userData);
+            this.userData = Output.ofNullable(userData);
             return this;
         }
 
-        public Builder username(@Nullable Input<String> username) {
+        public Builder username(@Nullable Output<String> username) {
             this.username = username;
             return this;
         }
 
         public Builder username(@Nullable String username) {
-            this.username = Input.ofNullable(username);
+            this.username = Output.ofNullable(username);
             return this;
         }
         public InstanceState build() {

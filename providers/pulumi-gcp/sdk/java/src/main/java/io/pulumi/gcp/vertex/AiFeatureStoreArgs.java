@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.vertex;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.vertex.inputs.AiFeatureStoreOnlineServingConfigArgs;
 import java.lang.Boolean;
@@ -22,10 +22,10 @@ public final class AiFeatureStoreArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="forceDestroy")
-      private final @Nullable Input<Boolean> forceDestroy;
+      private final @Nullable Output<Boolean> forceDestroy;
 
-    public Input<Boolean> getForceDestroy() {
-        return this.forceDestroy == null ? Input.empty() : this.forceDestroy;
+    public Output<Boolean> getForceDestroy() {
+        return this.forceDestroy == null ? Output.empty() : this.forceDestroy;
     }
 
     /**
@@ -33,10 +33,10 @@ public final class AiFeatureStoreArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labels")
-      private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Output<Map<String,String>> labels;
 
-    public Input<Map<String,String>> getLabels() {
-        return this.labels == null ? Input.empty() : this.labels;
+    public Output<Map<String,String>> getLabels() {
+        return this.labels == null ? Output.empty() : this.labels;
     }
 
     /**
@@ -44,10 +44,10 @@ public final class AiFeatureStoreArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -56,10 +56,10 @@ public final class AiFeatureStoreArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="onlineServingConfig")
-      private final @Nullable Input<AiFeatureStoreOnlineServingConfigArgs> onlineServingConfig;
+      private final @Nullable Output<AiFeatureStoreOnlineServingConfigArgs> onlineServingConfig;
 
-    public Input<AiFeatureStoreOnlineServingConfigArgs> getOnlineServingConfig() {
-        return this.onlineServingConfig == null ? Input.empty() : this.onlineServingConfig;
+    public Output<AiFeatureStoreOnlineServingConfigArgs> getOnlineServingConfig() {
+        return this.onlineServingConfig == null ? Output.empty() : this.onlineServingConfig;
     }
 
     /**
@@ -68,10 +68,10 @@ public final class AiFeatureStoreArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -79,19 +79,19 @@ public final class AiFeatureStoreArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="region")
-      private final @Nullable Input<String> region;
+      private final @Nullable Output<String> region;
 
-    public Input<String> getRegion() {
-        return this.region == null ? Input.empty() : this.region;
+    public Output<String> getRegion() {
+        return this.region == null ? Output.empty() : this.region;
     }
 
     public AiFeatureStoreArgs(
-        @Nullable Input<Boolean> forceDestroy,
-        @Nullable Input<Map<String,String>> labels,
-        @Nullable Input<String> name,
-        @Nullable Input<AiFeatureStoreOnlineServingConfigArgs> onlineServingConfig,
-        @Nullable Input<String> project,
-        @Nullable Input<String> region) {
+        @Nullable Output<Boolean> forceDestroy,
+        @Nullable Output<Map<String,String>> labels,
+        @Nullable Output<String> name,
+        @Nullable Output<AiFeatureStoreOnlineServingConfigArgs> onlineServingConfig,
+        @Nullable Output<String> project,
+        @Nullable Output<String> region) {
         this.forceDestroy = forceDestroy;
         this.labels = labels;
         this.name = name;
@@ -101,12 +101,12 @@ public final class AiFeatureStoreArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private AiFeatureStoreArgs() {
-        this.forceDestroy = Input.empty();
-        this.labels = Input.empty();
-        this.name = Input.empty();
-        this.onlineServingConfig = Input.empty();
-        this.project = Input.empty();
-        this.region = Input.empty();
+        this.forceDestroy = Output.empty();
+        this.labels = Output.empty();
+        this.name = Output.empty();
+        this.onlineServingConfig = Output.empty();
+        this.project = Output.empty();
+        this.region = Output.empty();
     }
 
     public static Builder builder() {
@@ -118,12 +118,12 @@ public final class AiFeatureStoreArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> forceDestroy;
-        private @Nullable Input<Map<String,String>> labels;
-        private @Nullable Input<String> name;
-        private @Nullable Input<AiFeatureStoreOnlineServingConfigArgs> onlineServingConfig;
-        private @Nullable Input<String> project;
-        private @Nullable Input<String> region;
+        private @Nullable Output<Boolean> forceDestroy;
+        private @Nullable Output<Map<String,String>> labels;
+        private @Nullable Output<String> name;
+        private @Nullable Output<AiFeatureStoreOnlineServingConfigArgs> onlineServingConfig;
+        private @Nullable Output<String> project;
+        private @Nullable Output<String> region;
 
         public Builder() {
     	      // Empty
@@ -139,63 +139,63 @@ public final class AiFeatureStoreArgs extends io.pulumi.resources.ResourceArgs {
     	      this.region = defaults.region;
         }
 
-        public Builder forceDestroy(@Nullable Input<Boolean> forceDestroy) {
+        public Builder forceDestroy(@Nullable Output<Boolean> forceDestroy) {
             this.forceDestroy = forceDestroy;
             return this;
         }
 
         public Builder forceDestroy(@Nullable Boolean forceDestroy) {
-            this.forceDestroy = Input.ofNullable(forceDestroy);
+            this.forceDestroy = Output.ofNullable(forceDestroy);
             return this;
         }
 
-        public Builder labels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
         public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Input.ofNullable(labels);
+            this.labels = Output.ofNullable(labels);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder onlineServingConfig(@Nullable Input<AiFeatureStoreOnlineServingConfigArgs> onlineServingConfig) {
+        public Builder onlineServingConfig(@Nullable Output<AiFeatureStoreOnlineServingConfigArgs> onlineServingConfig) {
             this.onlineServingConfig = onlineServingConfig;
             return this;
         }
 
         public Builder onlineServingConfig(@Nullable AiFeatureStoreOnlineServingConfigArgs onlineServingConfig) {
-            this.onlineServingConfig = Input.ofNullable(onlineServingConfig);
+            this.onlineServingConfig = Output.ofNullable(onlineServingConfig);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder region(@Nullable Input<String> region) {
+        public Builder region(@Nullable Output<String> region) {
             this.region = region;
             return this;
         }
 
         public Builder region(@Nullable String region) {
-            this.region = Input.ofNullable(region);
+            this.region = Output.ofNullable(region);
             return this;
         }
         public AiFeatureStoreArgs build() {

@@ -5,7 +5,7 @@ package io.pulumi.aws.kinesisanalyticsv2;
 
 import io.pulumi.aws.kinesisanalyticsv2.inputs.ApplicationApplicationConfigurationArgs;
 import io.pulumi.aws.kinesisanalyticsv2.inputs.ApplicationCloudwatchLoggingOptionsArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -23,10 +23,10 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="applicationConfiguration")
-      private final @Nullable Input<ApplicationApplicationConfigurationArgs> applicationConfiguration;
+      private final @Nullable Output<ApplicationApplicationConfigurationArgs> applicationConfiguration;
 
-    public Input<ApplicationApplicationConfigurationArgs> getApplicationConfiguration() {
-        return this.applicationConfiguration == null ? Input.empty() : this.applicationConfiguration;
+    public Output<ApplicationApplicationConfigurationArgs> getApplicationConfiguration() {
+        return this.applicationConfiguration == null ? Output.empty() : this.applicationConfiguration;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="cloudwatchLoggingOptions")
-      private final @Nullable Input<ApplicationCloudwatchLoggingOptionsArgs> cloudwatchLoggingOptions;
+      private final @Nullable Output<ApplicationCloudwatchLoggingOptionsArgs> cloudwatchLoggingOptions;
 
-    public Input<ApplicationCloudwatchLoggingOptionsArgs> getCloudwatchLoggingOptions() {
-        return this.cloudwatchLoggingOptions == null ? Input.empty() : this.cloudwatchLoggingOptions;
+    public Output<ApplicationCloudwatchLoggingOptionsArgs> getCloudwatchLoggingOptions() {
+        return this.cloudwatchLoggingOptions == null ? Output.empty() : this.cloudwatchLoggingOptions;
     }
 
     /**
@@ -45,10 +45,10 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -56,10 +56,10 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="forceStop")
-      private final @Nullable Input<Boolean> forceStop;
+      private final @Nullable Output<Boolean> forceStop;
 
-    public Input<Boolean> getForceStop() {
-        return this.forceStop == null ? Input.empty() : this.forceStop;
+    public Output<Boolean> getForceStop() {
+        return this.forceStop == null ? Output.empty() : this.forceStop;
     }
 
     /**
@@ -67,10 +67,10 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -78,9 +78,9 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="runtimeEnvironment", required=true)
-      private final Input<String> runtimeEnvironment;
+      private final Output<String> runtimeEnvironment;
 
-    public Input<String> getRuntimeEnvironment() {
+    public Output<String> getRuntimeEnvironment() {
         return this.runtimeEnvironment;
     }
 
@@ -89,9 +89,9 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serviceExecutionRole", required=true)
-      private final Input<String> serviceExecutionRole;
+      private final Output<String> serviceExecutionRole;
 
-    public Input<String> getServiceExecutionRole() {
+    public Output<String> getServiceExecutionRole() {
         return this.serviceExecutionRole;
     }
 
@@ -100,10 +100,10 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="startApplication")
-      private final @Nullable Input<Boolean> startApplication;
+      private final @Nullable Output<Boolean> startApplication;
 
-    public Input<Boolean> getStartApplication() {
-        return this.startApplication == null ? Input.empty() : this.startApplication;
+    public Output<Boolean> getStartApplication() {
+        return this.startApplication == null ? Output.empty() : this.startApplication;
     }
 
     /**
@@ -111,22 +111,22 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public ApplicationArgs(
-        @Nullable Input<ApplicationApplicationConfigurationArgs> applicationConfiguration,
-        @Nullable Input<ApplicationCloudwatchLoggingOptionsArgs> cloudwatchLoggingOptions,
-        @Nullable Input<String> description,
-        @Nullable Input<Boolean> forceStop,
-        @Nullable Input<String> name,
-        Input<String> runtimeEnvironment,
-        Input<String> serviceExecutionRole,
-        @Nullable Input<Boolean> startApplication,
-        @Nullable Input<Map<String,String>> tags) {
+        @Nullable Output<ApplicationApplicationConfigurationArgs> applicationConfiguration,
+        @Nullable Output<ApplicationCloudwatchLoggingOptionsArgs> cloudwatchLoggingOptions,
+        @Nullable Output<String> description,
+        @Nullable Output<Boolean> forceStop,
+        @Nullable Output<String> name,
+        Output<String> runtimeEnvironment,
+        Output<String> serviceExecutionRole,
+        @Nullable Output<Boolean> startApplication,
+        @Nullable Output<Map<String,String>> tags) {
         this.applicationConfiguration = applicationConfiguration;
         this.cloudwatchLoggingOptions = cloudwatchLoggingOptions;
         this.description = description;
@@ -139,15 +139,15 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ApplicationArgs() {
-        this.applicationConfiguration = Input.empty();
-        this.cloudwatchLoggingOptions = Input.empty();
-        this.description = Input.empty();
-        this.forceStop = Input.empty();
-        this.name = Input.empty();
-        this.runtimeEnvironment = Input.empty();
-        this.serviceExecutionRole = Input.empty();
-        this.startApplication = Input.empty();
-        this.tags = Input.empty();
+        this.applicationConfiguration = Output.empty();
+        this.cloudwatchLoggingOptions = Output.empty();
+        this.description = Output.empty();
+        this.forceStop = Output.empty();
+        this.name = Output.empty();
+        this.runtimeEnvironment = Output.empty();
+        this.serviceExecutionRole = Output.empty();
+        this.startApplication = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -159,15 +159,15 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<ApplicationApplicationConfigurationArgs> applicationConfiguration;
-        private @Nullable Input<ApplicationCloudwatchLoggingOptionsArgs> cloudwatchLoggingOptions;
-        private @Nullable Input<String> description;
-        private @Nullable Input<Boolean> forceStop;
-        private @Nullable Input<String> name;
-        private Input<String> runtimeEnvironment;
-        private Input<String> serviceExecutionRole;
-        private @Nullable Input<Boolean> startApplication;
-        private @Nullable Input<Map<String,String>> tags;
+        private @Nullable Output<ApplicationApplicationConfigurationArgs> applicationConfiguration;
+        private @Nullable Output<ApplicationCloudwatchLoggingOptionsArgs> cloudwatchLoggingOptions;
+        private @Nullable Output<String> description;
+        private @Nullable Output<Boolean> forceStop;
+        private @Nullable Output<String> name;
+        private Output<String> runtimeEnvironment;
+        private Output<String> serviceExecutionRole;
+        private @Nullable Output<Boolean> startApplication;
+        private @Nullable Output<Map<String,String>> tags;
 
         public Builder() {
     	      // Empty
@@ -186,93 +186,93 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder applicationConfiguration(@Nullable Input<ApplicationApplicationConfigurationArgs> applicationConfiguration) {
+        public Builder applicationConfiguration(@Nullable Output<ApplicationApplicationConfigurationArgs> applicationConfiguration) {
             this.applicationConfiguration = applicationConfiguration;
             return this;
         }
 
         public Builder applicationConfiguration(@Nullable ApplicationApplicationConfigurationArgs applicationConfiguration) {
-            this.applicationConfiguration = Input.ofNullable(applicationConfiguration);
+            this.applicationConfiguration = Output.ofNullable(applicationConfiguration);
             return this;
         }
 
-        public Builder cloudwatchLoggingOptions(@Nullable Input<ApplicationCloudwatchLoggingOptionsArgs> cloudwatchLoggingOptions) {
+        public Builder cloudwatchLoggingOptions(@Nullable Output<ApplicationCloudwatchLoggingOptionsArgs> cloudwatchLoggingOptions) {
             this.cloudwatchLoggingOptions = cloudwatchLoggingOptions;
             return this;
         }
 
         public Builder cloudwatchLoggingOptions(@Nullable ApplicationCloudwatchLoggingOptionsArgs cloudwatchLoggingOptions) {
-            this.cloudwatchLoggingOptions = Input.ofNullable(cloudwatchLoggingOptions);
+            this.cloudwatchLoggingOptions = Output.ofNullable(cloudwatchLoggingOptions);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder forceStop(@Nullable Input<Boolean> forceStop) {
+        public Builder forceStop(@Nullable Output<Boolean> forceStop) {
             this.forceStop = forceStop;
             return this;
         }
 
         public Builder forceStop(@Nullable Boolean forceStop) {
-            this.forceStop = Input.ofNullable(forceStop);
+            this.forceStop = Output.ofNullable(forceStop);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder runtimeEnvironment(Input<String> runtimeEnvironment) {
+        public Builder runtimeEnvironment(Output<String> runtimeEnvironment) {
             this.runtimeEnvironment = Objects.requireNonNull(runtimeEnvironment);
             return this;
         }
 
         public Builder runtimeEnvironment(String runtimeEnvironment) {
-            this.runtimeEnvironment = Input.of(Objects.requireNonNull(runtimeEnvironment));
+            this.runtimeEnvironment = Output.of(Objects.requireNonNull(runtimeEnvironment));
             return this;
         }
 
-        public Builder serviceExecutionRole(Input<String> serviceExecutionRole) {
+        public Builder serviceExecutionRole(Output<String> serviceExecutionRole) {
             this.serviceExecutionRole = Objects.requireNonNull(serviceExecutionRole);
             return this;
         }
 
         public Builder serviceExecutionRole(String serviceExecutionRole) {
-            this.serviceExecutionRole = Input.of(Objects.requireNonNull(serviceExecutionRole));
+            this.serviceExecutionRole = Output.of(Objects.requireNonNull(serviceExecutionRole));
             return this;
         }
 
-        public Builder startApplication(@Nullable Input<Boolean> startApplication) {
+        public Builder startApplication(@Nullable Output<Boolean> startApplication) {
             this.startApplication = startApplication;
             return this;
         }
 
         public Builder startApplication(@Nullable Boolean startApplication) {
-            this.startApplication = Input.ofNullable(startApplication);
+            this.startApplication = Output.ofNullable(startApplication);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public ApplicationArgs build() {

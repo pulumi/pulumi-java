@@ -5,7 +5,7 @@ package io.pulumi.aws.appmesh.inputs;
 
 import io.pulumi.aws.appmesh.inputs.VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationSubjectAlternativeNamesGetArgs;
 import io.pulumi.aws.appmesh.inputs.VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,10 +20,10 @@ public final class VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationGetArg
      * 
      */
     @InputImport(name="subjectAlternativeNames")
-      private final @Nullable Input<VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationSubjectAlternativeNamesGetArgs> subjectAlternativeNames;
+      private final @Nullable Output<VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationSubjectAlternativeNamesGetArgs> subjectAlternativeNames;
 
-    public Input<VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationSubjectAlternativeNamesGetArgs> getSubjectAlternativeNames() {
-        return this.subjectAlternativeNames == null ? Input.empty() : this.subjectAlternativeNames;
+    public Output<VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationSubjectAlternativeNamesGetArgs> getSubjectAlternativeNames() {
+        return this.subjectAlternativeNames == null ? Output.empty() : this.subjectAlternativeNames;
     }
 
     /**
@@ -31,22 +31,22 @@ public final class VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationGetArg
      * 
      */
     @InputImport(name="trust", required=true)
-      private final Input<VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustGetArgs> trust;
+      private final Output<VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustGetArgs> trust;
 
-    public Input<VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustGetArgs> getTrust() {
+    public Output<VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustGetArgs> getTrust() {
         return this.trust;
     }
 
     public VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationGetArgs(
-        @Nullable Input<VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationSubjectAlternativeNamesGetArgs> subjectAlternativeNames,
-        Input<VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustGetArgs> trust) {
+        @Nullable Output<VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationSubjectAlternativeNamesGetArgs> subjectAlternativeNames,
+        Output<VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustGetArgs> trust) {
         this.subjectAlternativeNames = subjectAlternativeNames;
         this.trust = Objects.requireNonNull(trust, "expected parameter 'trust' to be non-null");
     }
 
     private VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationGetArgs() {
-        this.subjectAlternativeNames = Input.empty();
-        this.trust = Input.empty();
+        this.subjectAlternativeNames = Output.empty();
+        this.trust = Output.empty();
     }
 
     public static Builder builder() {
@@ -58,8 +58,8 @@ public final class VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationGetArg
     }
 
     public static final class Builder {
-        private @Nullable Input<VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationSubjectAlternativeNamesGetArgs> subjectAlternativeNames;
-        private Input<VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustGetArgs> trust;
+        private @Nullable Output<VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationSubjectAlternativeNamesGetArgs> subjectAlternativeNames;
+        private Output<VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustGetArgs> trust;
 
         public Builder() {
     	      // Empty
@@ -71,23 +71,23 @@ public final class VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationGetArg
     	      this.trust = defaults.trust;
         }
 
-        public Builder subjectAlternativeNames(@Nullable Input<VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationSubjectAlternativeNamesGetArgs> subjectAlternativeNames) {
+        public Builder subjectAlternativeNames(@Nullable Output<VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationSubjectAlternativeNamesGetArgs> subjectAlternativeNames) {
             this.subjectAlternativeNames = subjectAlternativeNames;
             return this;
         }
 
         public Builder subjectAlternativeNames(@Nullable VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationSubjectAlternativeNamesGetArgs subjectAlternativeNames) {
-            this.subjectAlternativeNames = Input.ofNullable(subjectAlternativeNames);
+            this.subjectAlternativeNames = Output.ofNullable(subjectAlternativeNames);
             return this;
         }
 
-        public Builder trust(Input<VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustGetArgs> trust) {
+        public Builder trust(Output<VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustGetArgs> trust) {
             this.trust = Objects.requireNonNull(trust);
             return this;
         }
 
         public Builder trust(VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustGetArgs trust) {
-            this.trust = Input.of(Objects.requireNonNull(trust));
+            this.trust = Output.of(Objects.requireNonNull(trust));
             return this;
         }
         public VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationGetArgs build() {

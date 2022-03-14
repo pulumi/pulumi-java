@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.certificateauthority.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,9 +19,9 @@ public final class AuthorityConfigSubjectConfigSubjectGetArgs extends io.pulumi.
      * 
      */
     @InputImport(name="commonName", required=true)
-      private final Input<String> commonName;
+      private final Output<String> commonName;
 
-    public Input<String> getCommonName() {
+    public Output<String> getCommonName() {
         return this.commonName;
     }
 
@@ -30,10 +30,10 @@ public final class AuthorityConfigSubjectConfigSubjectGetArgs extends io.pulumi.
      * 
      */
     @InputImport(name="countryCode")
-      private final @Nullable Input<String> countryCode;
+      private final @Nullable Output<String> countryCode;
 
-    public Input<String> getCountryCode() {
-        return this.countryCode == null ? Input.empty() : this.countryCode;
+    public Output<String> getCountryCode() {
+        return this.countryCode == null ? Output.empty() : this.countryCode;
     }
 
     /**
@@ -41,10 +41,10 @@ public final class AuthorityConfigSubjectConfigSubjectGetArgs extends io.pulumi.
      * 
      */
     @InputImport(name="locality")
-      private final @Nullable Input<String> locality;
+      private final @Nullable Output<String> locality;
 
-    public Input<String> getLocality() {
-        return this.locality == null ? Input.empty() : this.locality;
+    public Output<String> getLocality() {
+        return this.locality == null ? Output.empty() : this.locality;
     }
 
     /**
@@ -52,9 +52,9 @@ public final class AuthorityConfigSubjectConfigSubjectGetArgs extends io.pulumi.
      * 
      */
     @InputImport(name="organization", required=true)
-      private final Input<String> organization;
+      private final Output<String> organization;
 
-    public Input<String> getOrganization() {
+    public Output<String> getOrganization() {
         return this.organization;
     }
 
@@ -63,10 +63,10 @@ public final class AuthorityConfigSubjectConfigSubjectGetArgs extends io.pulumi.
      * 
      */
     @InputImport(name="organizationalUnit")
-      private final @Nullable Input<String> organizationalUnit;
+      private final @Nullable Output<String> organizationalUnit;
 
-    public Input<String> getOrganizationalUnit() {
-        return this.organizationalUnit == null ? Input.empty() : this.organizationalUnit;
+    public Output<String> getOrganizationalUnit() {
+        return this.organizationalUnit == null ? Output.empty() : this.organizationalUnit;
     }
 
     /**
@@ -74,10 +74,10 @@ public final class AuthorityConfigSubjectConfigSubjectGetArgs extends io.pulumi.
      * 
      */
     @InputImport(name="postalCode")
-      private final @Nullable Input<String> postalCode;
+      private final @Nullable Output<String> postalCode;
 
-    public Input<String> getPostalCode() {
-        return this.postalCode == null ? Input.empty() : this.postalCode;
+    public Output<String> getPostalCode() {
+        return this.postalCode == null ? Output.empty() : this.postalCode;
     }
 
     /**
@@ -85,10 +85,10 @@ public final class AuthorityConfigSubjectConfigSubjectGetArgs extends io.pulumi.
      * 
      */
     @InputImport(name="province")
-      private final @Nullable Input<String> province;
+      private final @Nullable Output<String> province;
 
-    public Input<String> getProvince() {
-        return this.province == null ? Input.empty() : this.province;
+    public Output<String> getProvince() {
+        return this.province == null ? Output.empty() : this.province;
     }
 
     /**
@@ -96,21 +96,21 @@ public final class AuthorityConfigSubjectConfigSubjectGetArgs extends io.pulumi.
      * 
      */
     @InputImport(name="streetAddress")
-      private final @Nullable Input<String> streetAddress;
+      private final @Nullable Output<String> streetAddress;
 
-    public Input<String> getStreetAddress() {
-        return this.streetAddress == null ? Input.empty() : this.streetAddress;
+    public Output<String> getStreetAddress() {
+        return this.streetAddress == null ? Output.empty() : this.streetAddress;
     }
 
     public AuthorityConfigSubjectConfigSubjectGetArgs(
-        Input<String> commonName,
-        @Nullable Input<String> countryCode,
-        @Nullable Input<String> locality,
-        Input<String> organization,
-        @Nullable Input<String> organizationalUnit,
-        @Nullable Input<String> postalCode,
-        @Nullable Input<String> province,
-        @Nullable Input<String> streetAddress) {
+        Output<String> commonName,
+        @Nullable Output<String> countryCode,
+        @Nullable Output<String> locality,
+        Output<String> organization,
+        @Nullable Output<String> organizationalUnit,
+        @Nullable Output<String> postalCode,
+        @Nullable Output<String> province,
+        @Nullable Output<String> streetAddress) {
         this.commonName = Objects.requireNonNull(commonName, "expected parameter 'commonName' to be non-null");
         this.countryCode = countryCode;
         this.locality = locality;
@@ -122,14 +122,14 @@ public final class AuthorityConfigSubjectConfigSubjectGetArgs extends io.pulumi.
     }
 
     private AuthorityConfigSubjectConfigSubjectGetArgs() {
-        this.commonName = Input.empty();
-        this.countryCode = Input.empty();
-        this.locality = Input.empty();
-        this.organization = Input.empty();
-        this.organizationalUnit = Input.empty();
-        this.postalCode = Input.empty();
-        this.province = Input.empty();
-        this.streetAddress = Input.empty();
+        this.commonName = Output.empty();
+        this.countryCode = Output.empty();
+        this.locality = Output.empty();
+        this.organization = Output.empty();
+        this.organizationalUnit = Output.empty();
+        this.postalCode = Output.empty();
+        this.province = Output.empty();
+        this.streetAddress = Output.empty();
     }
 
     public static Builder builder() {
@@ -141,14 +141,14 @@ public final class AuthorityConfigSubjectConfigSubjectGetArgs extends io.pulumi.
     }
 
     public static final class Builder {
-        private Input<String> commonName;
-        private @Nullable Input<String> countryCode;
-        private @Nullable Input<String> locality;
-        private Input<String> organization;
-        private @Nullable Input<String> organizationalUnit;
-        private @Nullable Input<String> postalCode;
-        private @Nullable Input<String> province;
-        private @Nullable Input<String> streetAddress;
+        private Output<String> commonName;
+        private @Nullable Output<String> countryCode;
+        private @Nullable Output<String> locality;
+        private Output<String> organization;
+        private @Nullable Output<String> organizationalUnit;
+        private @Nullable Output<String> postalCode;
+        private @Nullable Output<String> province;
+        private @Nullable Output<String> streetAddress;
 
         public Builder() {
     	      // Empty
@@ -166,83 +166,83 @@ public final class AuthorityConfigSubjectConfigSubjectGetArgs extends io.pulumi.
     	      this.streetAddress = defaults.streetAddress;
         }
 
-        public Builder commonName(Input<String> commonName) {
+        public Builder commonName(Output<String> commonName) {
             this.commonName = Objects.requireNonNull(commonName);
             return this;
         }
 
         public Builder commonName(String commonName) {
-            this.commonName = Input.of(Objects.requireNonNull(commonName));
+            this.commonName = Output.of(Objects.requireNonNull(commonName));
             return this;
         }
 
-        public Builder countryCode(@Nullable Input<String> countryCode) {
+        public Builder countryCode(@Nullable Output<String> countryCode) {
             this.countryCode = countryCode;
             return this;
         }
 
         public Builder countryCode(@Nullable String countryCode) {
-            this.countryCode = Input.ofNullable(countryCode);
+            this.countryCode = Output.ofNullable(countryCode);
             return this;
         }
 
-        public Builder locality(@Nullable Input<String> locality) {
+        public Builder locality(@Nullable Output<String> locality) {
             this.locality = locality;
             return this;
         }
 
         public Builder locality(@Nullable String locality) {
-            this.locality = Input.ofNullable(locality);
+            this.locality = Output.ofNullable(locality);
             return this;
         }
 
-        public Builder organization(Input<String> organization) {
+        public Builder organization(Output<String> organization) {
             this.organization = Objects.requireNonNull(organization);
             return this;
         }
 
         public Builder organization(String organization) {
-            this.organization = Input.of(Objects.requireNonNull(organization));
+            this.organization = Output.of(Objects.requireNonNull(organization));
             return this;
         }
 
-        public Builder organizationalUnit(@Nullable Input<String> organizationalUnit) {
+        public Builder organizationalUnit(@Nullable Output<String> organizationalUnit) {
             this.organizationalUnit = organizationalUnit;
             return this;
         }
 
         public Builder organizationalUnit(@Nullable String organizationalUnit) {
-            this.organizationalUnit = Input.ofNullable(organizationalUnit);
+            this.organizationalUnit = Output.ofNullable(organizationalUnit);
             return this;
         }
 
-        public Builder postalCode(@Nullable Input<String> postalCode) {
+        public Builder postalCode(@Nullable Output<String> postalCode) {
             this.postalCode = postalCode;
             return this;
         }
 
         public Builder postalCode(@Nullable String postalCode) {
-            this.postalCode = Input.ofNullable(postalCode);
+            this.postalCode = Output.ofNullable(postalCode);
             return this;
         }
 
-        public Builder province(@Nullable Input<String> province) {
+        public Builder province(@Nullable Output<String> province) {
             this.province = province;
             return this;
         }
 
         public Builder province(@Nullable String province) {
-            this.province = Input.ofNullable(province);
+            this.province = Output.ofNullable(province);
             return this;
         }
 
-        public Builder streetAddress(@Nullable Input<String> streetAddress) {
+        public Builder streetAddress(@Nullable Output<String> streetAddress) {
             this.streetAddress = streetAddress;
             return this;
         }
 
         public Builder streetAddress(@Nullable String streetAddress) {
-            this.streetAddress = Input.ofNullable(streetAddress);
+            this.streetAddress = Output.ofNullable(streetAddress);
             return this;
         }
         public AuthorityConfigSubjectConfigSubjectGetArgs build() {

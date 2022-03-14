@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class ScopeConnectionArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -30,9 +30,9 @@ public final class ScopeConnectionArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="networkManagerName", required=true)
-      private final Input<String> networkManagerName;
+      private final Output<String> networkManagerName;
 
-    public Input<String> getNetworkManagerName() {
+    public Output<String> getNetworkManagerName() {
         return this.networkManagerName;
     }
 
@@ -41,9 +41,9 @@ public final class ScopeConnectionArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -52,10 +52,10 @@ public final class ScopeConnectionArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="resourceId")
-      private final @Nullable Input<String> resourceId;
+      private final @Nullable Output<String> resourceId;
 
-    public Input<String> getResourceId() {
-        return this.resourceId == null ? Input.empty() : this.resourceId;
+    public Output<String> getResourceId() {
+        return this.resourceId == null ? Output.empty() : this.resourceId;
     }
 
     /**
@@ -63,10 +63,10 @@ public final class ScopeConnectionArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="scopeConnectionName")
-      private final @Nullable Input<String> scopeConnectionName;
+      private final @Nullable Output<String> scopeConnectionName;
 
-    public Input<String> getScopeConnectionName() {
-        return this.scopeConnectionName == null ? Input.empty() : this.scopeConnectionName;
+    public Output<String> getScopeConnectionName() {
+        return this.scopeConnectionName == null ? Output.empty() : this.scopeConnectionName;
     }
 
     /**
@@ -74,19 +74,19 @@ public final class ScopeConnectionArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="tenantId")
-      private final @Nullable Input<String> tenantId;
+      private final @Nullable Output<String> tenantId;
 
-    public Input<String> getTenantId() {
-        return this.tenantId == null ? Input.empty() : this.tenantId;
+    public Output<String> getTenantId() {
+        return this.tenantId == null ? Output.empty() : this.tenantId;
     }
 
     public ScopeConnectionArgs(
-        @Nullable Input<String> description,
-        Input<String> networkManagerName,
-        Input<String> resourceGroupName,
-        @Nullable Input<String> resourceId,
-        @Nullable Input<String> scopeConnectionName,
-        @Nullable Input<String> tenantId) {
+        @Nullable Output<String> description,
+        Output<String> networkManagerName,
+        Output<String> resourceGroupName,
+        @Nullable Output<String> resourceId,
+        @Nullable Output<String> scopeConnectionName,
+        @Nullable Output<String> tenantId) {
         this.description = description;
         this.networkManagerName = Objects.requireNonNull(networkManagerName, "expected parameter 'networkManagerName' to be non-null");
         this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
@@ -96,12 +96,12 @@ public final class ScopeConnectionArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private ScopeConnectionArgs() {
-        this.description = Input.empty();
-        this.networkManagerName = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.resourceId = Input.empty();
-        this.scopeConnectionName = Input.empty();
-        this.tenantId = Input.empty();
+        this.description = Output.empty();
+        this.networkManagerName = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.resourceId = Output.empty();
+        this.scopeConnectionName = Output.empty();
+        this.tenantId = Output.empty();
     }
 
     public static Builder builder() {
@@ -113,12 +113,12 @@ public final class ScopeConnectionArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private @Nullable Input<String> description;
-        private Input<String> networkManagerName;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<String> resourceId;
-        private @Nullable Input<String> scopeConnectionName;
-        private @Nullable Input<String> tenantId;
+        private @Nullable Output<String> description;
+        private Output<String> networkManagerName;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<String> resourceId;
+        private @Nullable Output<String> scopeConnectionName;
+        private @Nullable Output<String> tenantId;
 
         public Builder() {
     	      // Empty
@@ -134,63 +134,63 @@ public final class ScopeConnectionArgs extends io.pulumi.resources.ResourceArgs 
     	      this.tenantId = defaults.tenantId;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder networkManagerName(Input<String> networkManagerName) {
+        public Builder networkManagerName(Output<String> networkManagerName) {
             this.networkManagerName = Objects.requireNonNull(networkManagerName);
             return this;
         }
 
         public Builder networkManagerName(String networkManagerName) {
-            this.networkManagerName = Input.of(Objects.requireNonNull(networkManagerName));
+            this.networkManagerName = Output.of(Objects.requireNonNull(networkManagerName));
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder resourceId(@Nullable Input<String> resourceId) {
+        public Builder resourceId(@Nullable Output<String> resourceId) {
             this.resourceId = resourceId;
             return this;
         }
 
         public Builder resourceId(@Nullable String resourceId) {
-            this.resourceId = Input.ofNullable(resourceId);
+            this.resourceId = Output.ofNullable(resourceId);
             return this;
         }
 
-        public Builder scopeConnectionName(@Nullable Input<String> scopeConnectionName) {
+        public Builder scopeConnectionName(@Nullable Output<String> scopeConnectionName) {
             this.scopeConnectionName = scopeConnectionName;
             return this;
         }
 
         public Builder scopeConnectionName(@Nullable String scopeConnectionName) {
-            this.scopeConnectionName = Input.ofNullable(scopeConnectionName);
+            this.scopeConnectionName = Output.ofNullable(scopeConnectionName);
             return this;
         }
 
-        public Builder tenantId(@Nullable Input<String> tenantId) {
+        public Builder tenantId(@Nullable Output<String> tenantId) {
             this.tenantId = tenantId;
             return this;
         }
 
         public Builder tenantId(@Nullable String tenantId) {
-            this.tenantId = Input.ofNullable(tenantId);
+            this.tenantId = Output.ofNullable(tenantId);
             return this;
         }
         public ScopeConnectionArgs build() {

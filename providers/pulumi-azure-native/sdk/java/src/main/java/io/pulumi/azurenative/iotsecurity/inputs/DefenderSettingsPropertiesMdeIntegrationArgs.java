@@ -5,7 +5,7 @@ package io.pulumi.azurenative.iotsecurity.inputs;
 
 import io.pulumi.azurenative.iotsecurity.enums.MdeIntegration;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -24,18 +24,18 @@ public final class DefenderSettingsPropertiesMdeIntegrationArgs extends io.pulum
      * 
      */
     @InputImport(name="status", required=true)
-      private final Input<Either<String,MdeIntegration>> status;
+      private final Output<Either<String,MdeIntegration>> status;
 
-    public Input<Either<String,MdeIntegration>> getStatus() {
+    public Output<Either<String,MdeIntegration>> getStatus() {
         return this.status;
     }
 
-    public DefenderSettingsPropertiesMdeIntegrationArgs(Input<Either<String,MdeIntegration>> status) {
+    public DefenderSettingsPropertiesMdeIntegrationArgs(Output<Either<String,MdeIntegration>> status) {
         this.status = Objects.requireNonNull(status, "expected parameter 'status' to be non-null");
     }
 
     private DefenderSettingsPropertiesMdeIntegrationArgs() {
-        this.status = Input.empty();
+        this.status = Output.empty();
     }
 
     public static Builder builder() {
@@ -47,7 +47,7 @@ public final class DefenderSettingsPropertiesMdeIntegrationArgs extends io.pulum
     }
 
     public static final class Builder {
-        private Input<Either<String,MdeIntegration>> status;
+        private Output<Either<String,MdeIntegration>> status;
 
         public Builder() {
     	      // Empty
@@ -58,13 +58,13 @@ public final class DefenderSettingsPropertiesMdeIntegrationArgs extends io.pulum
     	      this.status = defaults.status;
         }
 
-        public Builder status(Input<Either<String,MdeIntegration>> status) {
+        public Builder status(Output<Either<String,MdeIntegration>> status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
 
         public Builder status(Either<String,MdeIntegration> status) {
-            this.status = Input.of(Objects.requireNonNull(status));
+            this.status = Output.of(Objects.requireNonNull(status));
             return this;
         }
         public DefenderSettingsPropertiesMdeIntegrationArgs build() {

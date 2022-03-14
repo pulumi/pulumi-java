@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.importexport.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,9 +23,9 @@ public final class ReturnAddressArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="city", required=true)
-      private final Input<String> city;
+      private final Output<String> city;
 
-    public Input<String> getCity() {
+    public Output<String> getCity() {
         return this.city;
     }
 
@@ -34,9 +34,9 @@ public final class ReturnAddressArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="countryOrRegion", required=true)
-      private final Input<String> countryOrRegion;
+      private final Output<String> countryOrRegion;
 
-    public Input<String> getCountryOrRegion() {
+    public Output<String> getCountryOrRegion() {
         return this.countryOrRegion;
     }
 
@@ -45,9 +45,9 @@ public final class ReturnAddressArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="email", required=true)
-      private final Input<String> email;
+      private final Output<String> email;
 
-    public Input<String> getEmail() {
+    public Output<String> getEmail() {
         return this.email;
     }
 
@@ -56,9 +56,9 @@ public final class ReturnAddressArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="phone", required=true)
-      private final Input<String> phone;
+      private final Output<String> phone;
 
-    public Input<String> getPhone() {
+    public Output<String> getPhone() {
         return this.phone;
     }
 
@@ -67,9 +67,9 @@ public final class ReturnAddressArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="postalCode", required=true)
-      private final Input<String> postalCode;
+      private final Output<String> postalCode;
 
-    public Input<String> getPostalCode() {
+    public Output<String> getPostalCode() {
         return this.postalCode;
     }
 
@@ -78,9 +78,9 @@ public final class ReturnAddressArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="recipientName", required=true)
-      private final Input<String> recipientName;
+      private final Output<String> recipientName;
 
-    public Input<String> getRecipientName() {
+    public Output<String> getRecipientName() {
         return this.recipientName;
     }
 
@@ -89,10 +89,10 @@ public final class ReturnAddressArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="stateOrProvince")
-      private final @Nullable Input<String> stateOrProvince;
+      private final @Nullable Output<String> stateOrProvince;
 
-    public Input<String> getStateOrProvince() {
-        return this.stateOrProvince == null ? Input.empty() : this.stateOrProvince;
+    public Output<String> getStateOrProvince() {
+        return this.stateOrProvince == null ? Output.empty() : this.stateOrProvince;
     }
 
     /**
@@ -100,9 +100,9 @@ public final class ReturnAddressArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="streetAddress1", required=true)
-      private final Input<String> streetAddress1;
+      private final Output<String> streetAddress1;
 
-    public Input<String> getStreetAddress1() {
+    public Output<String> getStreetAddress1() {
         return this.streetAddress1;
     }
 
@@ -111,22 +111,22 @@ public final class ReturnAddressArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="streetAddress2")
-      private final @Nullable Input<String> streetAddress2;
+      private final @Nullable Output<String> streetAddress2;
 
-    public Input<String> getStreetAddress2() {
-        return this.streetAddress2 == null ? Input.empty() : this.streetAddress2;
+    public Output<String> getStreetAddress2() {
+        return this.streetAddress2 == null ? Output.empty() : this.streetAddress2;
     }
 
     public ReturnAddressArgs(
-        Input<String> city,
-        Input<String> countryOrRegion,
-        Input<String> email,
-        Input<String> phone,
-        Input<String> postalCode,
-        Input<String> recipientName,
-        @Nullable Input<String> stateOrProvince,
-        Input<String> streetAddress1,
-        @Nullable Input<String> streetAddress2) {
+        Output<String> city,
+        Output<String> countryOrRegion,
+        Output<String> email,
+        Output<String> phone,
+        Output<String> postalCode,
+        Output<String> recipientName,
+        @Nullable Output<String> stateOrProvince,
+        Output<String> streetAddress1,
+        @Nullable Output<String> streetAddress2) {
         this.city = Objects.requireNonNull(city, "expected parameter 'city' to be non-null");
         this.countryOrRegion = Objects.requireNonNull(countryOrRegion, "expected parameter 'countryOrRegion' to be non-null");
         this.email = Objects.requireNonNull(email, "expected parameter 'email' to be non-null");
@@ -139,15 +139,15 @@ public final class ReturnAddressArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ReturnAddressArgs() {
-        this.city = Input.empty();
-        this.countryOrRegion = Input.empty();
-        this.email = Input.empty();
-        this.phone = Input.empty();
-        this.postalCode = Input.empty();
-        this.recipientName = Input.empty();
-        this.stateOrProvince = Input.empty();
-        this.streetAddress1 = Input.empty();
-        this.streetAddress2 = Input.empty();
+        this.city = Output.empty();
+        this.countryOrRegion = Output.empty();
+        this.email = Output.empty();
+        this.phone = Output.empty();
+        this.postalCode = Output.empty();
+        this.recipientName = Output.empty();
+        this.stateOrProvince = Output.empty();
+        this.streetAddress1 = Output.empty();
+        this.streetAddress2 = Output.empty();
     }
 
     public static Builder builder() {
@@ -159,15 +159,15 @@ public final class ReturnAddressArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> city;
-        private Input<String> countryOrRegion;
-        private Input<String> email;
-        private Input<String> phone;
-        private Input<String> postalCode;
-        private Input<String> recipientName;
-        private @Nullable Input<String> stateOrProvince;
-        private Input<String> streetAddress1;
-        private @Nullable Input<String> streetAddress2;
+        private Output<String> city;
+        private Output<String> countryOrRegion;
+        private Output<String> email;
+        private Output<String> phone;
+        private Output<String> postalCode;
+        private Output<String> recipientName;
+        private @Nullable Output<String> stateOrProvince;
+        private Output<String> streetAddress1;
+        private @Nullable Output<String> streetAddress2;
 
         public Builder() {
     	      // Empty
@@ -186,93 +186,93 @@ public final class ReturnAddressArgs extends io.pulumi.resources.ResourceArgs {
     	      this.streetAddress2 = defaults.streetAddress2;
         }
 
-        public Builder city(Input<String> city) {
+        public Builder city(Output<String> city) {
             this.city = Objects.requireNonNull(city);
             return this;
         }
 
         public Builder city(String city) {
-            this.city = Input.of(Objects.requireNonNull(city));
+            this.city = Output.of(Objects.requireNonNull(city));
             return this;
         }
 
-        public Builder countryOrRegion(Input<String> countryOrRegion) {
+        public Builder countryOrRegion(Output<String> countryOrRegion) {
             this.countryOrRegion = Objects.requireNonNull(countryOrRegion);
             return this;
         }
 
         public Builder countryOrRegion(String countryOrRegion) {
-            this.countryOrRegion = Input.of(Objects.requireNonNull(countryOrRegion));
+            this.countryOrRegion = Output.of(Objects.requireNonNull(countryOrRegion));
             return this;
         }
 
-        public Builder email(Input<String> email) {
+        public Builder email(Output<String> email) {
             this.email = Objects.requireNonNull(email);
             return this;
         }
 
         public Builder email(String email) {
-            this.email = Input.of(Objects.requireNonNull(email));
+            this.email = Output.of(Objects.requireNonNull(email));
             return this;
         }
 
-        public Builder phone(Input<String> phone) {
+        public Builder phone(Output<String> phone) {
             this.phone = Objects.requireNonNull(phone);
             return this;
         }
 
         public Builder phone(String phone) {
-            this.phone = Input.of(Objects.requireNonNull(phone));
+            this.phone = Output.of(Objects.requireNonNull(phone));
             return this;
         }
 
-        public Builder postalCode(Input<String> postalCode) {
+        public Builder postalCode(Output<String> postalCode) {
             this.postalCode = Objects.requireNonNull(postalCode);
             return this;
         }
 
         public Builder postalCode(String postalCode) {
-            this.postalCode = Input.of(Objects.requireNonNull(postalCode));
+            this.postalCode = Output.of(Objects.requireNonNull(postalCode));
             return this;
         }
 
-        public Builder recipientName(Input<String> recipientName) {
+        public Builder recipientName(Output<String> recipientName) {
             this.recipientName = Objects.requireNonNull(recipientName);
             return this;
         }
 
         public Builder recipientName(String recipientName) {
-            this.recipientName = Input.of(Objects.requireNonNull(recipientName));
+            this.recipientName = Output.of(Objects.requireNonNull(recipientName));
             return this;
         }
 
-        public Builder stateOrProvince(@Nullable Input<String> stateOrProvince) {
+        public Builder stateOrProvince(@Nullable Output<String> stateOrProvince) {
             this.stateOrProvince = stateOrProvince;
             return this;
         }
 
         public Builder stateOrProvince(@Nullable String stateOrProvince) {
-            this.stateOrProvince = Input.ofNullable(stateOrProvince);
+            this.stateOrProvince = Output.ofNullable(stateOrProvince);
             return this;
         }
 
-        public Builder streetAddress1(Input<String> streetAddress1) {
+        public Builder streetAddress1(Output<String> streetAddress1) {
             this.streetAddress1 = Objects.requireNonNull(streetAddress1);
             return this;
         }
 
         public Builder streetAddress1(String streetAddress1) {
-            this.streetAddress1 = Input.of(Objects.requireNonNull(streetAddress1));
+            this.streetAddress1 = Output.of(Objects.requireNonNull(streetAddress1));
             return this;
         }
 
-        public Builder streetAddress2(@Nullable Input<String> streetAddress2) {
+        public Builder streetAddress2(@Nullable Output<String> streetAddress2) {
             this.streetAddress2 = streetAddress2;
             return this;
         }
 
         public Builder streetAddress2(@Nullable String streetAddress2) {
-            this.streetAddress2 = Input.ofNullable(streetAddress2);
+            this.streetAddress2 = Output.ofNullable(streetAddress2);
             return this;
         }
         public ReturnAddressArgs build() {

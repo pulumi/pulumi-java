@@ -6,7 +6,7 @@ package io.pulumi.aws.s3.inputs;
 import io.pulumi.aws.s3.inputs.BucketNotificationLambdaFunctionGetArgs;
 import io.pulumi.aws.s3.inputs.BucketNotificationQueueGetArgs;
 import io.pulumi.aws.s3.inputs.BucketNotificationTopicGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class BucketNotificationState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="bucket")
-      private final @Nullable Input<String> bucket;
+      private final @Nullable Output<String> bucket;
 
-    public Input<String> getBucket() {
-        return this.bucket == null ? Input.empty() : this.bucket;
+    public Output<String> getBucket() {
+        return this.bucket == null ? Output.empty() : this.bucket;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class BucketNotificationState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="eventbridge")
-      private final @Nullable Input<Boolean> eventbridge;
+      private final @Nullable Output<Boolean> eventbridge;
 
-    public Input<Boolean> getEventbridge() {
-        return this.eventbridge == null ? Input.empty() : this.eventbridge;
+    public Output<Boolean> getEventbridge() {
+        return this.eventbridge == null ? Output.empty() : this.eventbridge;
     }
 
     /**
@@ -46,10 +46,10 @@ public final class BucketNotificationState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="lambdaFunctions")
-      private final @Nullable Input<List<BucketNotificationLambdaFunctionGetArgs>> lambdaFunctions;
+      private final @Nullable Output<List<BucketNotificationLambdaFunctionGetArgs>> lambdaFunctions;
 
-    public Input<List<BucketNotificationLambdaFunctionGetArgs>> getLambdaFunctions() {
-        return this.lambdaFunctions == null ? Input.empty() : this.lambdaFunctions;
+    public Output<List<BucketNotificationLambdaFunctionGetArgs>> getLambdaFunctions() {
+        return this.lambdaFunctions == null ? Output.empty() : this.lambdaFunctions;
     }
 
     /**
@@ -57,10 +57,10 @@ public final class BucketNotificationState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="queues")
-      private final @Nullable Input<List<BucketNotificationQueueGetArgs>> queues;
+      private final @Nullable Output<List<BucketNotificationQueueGetArgs>> queues;
 
-    public Input<List<BucketNotificationQueueGetArgs>> getQueues() {
-        return this.queues == null ? Input.empty() : this.queues;
+    public Output<List<BucketNotificationQueueGetArgs>> getQueues() {
+        return this.queues == null ? Output.empty() : this.queues;
     }
 
     /**
@@ -68,18 +68,18 @@ public final class BucketNotificationState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="topics")
-      private final @Nullable Input<List<BucketNotificationTopicGetArgs>> topics;
+      private final @Nullable Output<List<BucketNotificationTopicGetArgs>> topics;
 
-    public Input<List<BucketNotificationTopicGetArgs>> getTopics() {
-        return this.topics == null ? Input.empty() : this.topics;
+    public Output<List<BucketNotificationTopicGetArgs>> getTopics() {
+        return this.topics == null ? Output.empty() : this.topics;
     }
 
     public BucketNotificationState(
-        @Nullable Input<String> bucket,
-        @Nullable Input<Boolean> eventbridge,
-        @Nullable Input<List<BucketNotificationLambdaFunctionGetArgs>> lambdaFunctions,
-        @Nullable Input<List<BucketNotificationQueueGetArgs>> queues,
-        @Nullable Input<List<BucketNotificationTopicGetArgs>> topics) {
+        @Nullable Output<String> bucket,
+        @Nullable Output<Boolean> eventbridge,
+        @Nullable Output<List<BucketNotificationLambdaFunctionGetArgs>> lambdaFunctions,
+        @Nullable Output<List<BucketNotificationQueueGetArgs>> queues,
+        @Nullable Output<List<BucketNotificationTopicGetArgs>> topics) {
         this.bucket = bucket;
         this.eventbridge = eventbridge;
         this.lambdaFunctions = lambdaFunctions;
@@ -88,11 +88,11 @@ public final class BucketNotificationState extends io.pulumi.resources.ResourceA
     }
 
     private BucketNotificationState() {
-        this.bucket = Input.empty();
-        this.eventbridge = Input.empty();
-        this.lambdaFunctions = Input.empty();
-        this.queues = Input.empty();
-        this.topics = Input.empty();
+        this.bucket = Output.empty();
+        this.eventbridge = Output.empty();
+        this.lambdaFunctions = Output.empty();
+        this.queues = Output.empty();
+        this.topics = Output.empty();
     }
 
     public static Builder builder() {
@@ -104,11 +104,11 @@ public final class BucketNotificationState extends io.pulumi.resources.ResourceA
     }
 
     public static final class Builder {
-        private @Nullable Input<String> bucket;
-        private @Nullable Input<Boolean> eventbridge;
-        private @Nullable Input<List<BucketNotificationLambdaFunctionGetArgs>> lambdaFunctions;
-        private @Nullable Input<List<BucketNotificationQueueGetArgs>> queues;
-        private @Nullable Input<List<BucketNotificationTopicGetArgs>> topics;
+        private @Nullable Output<String> bucket;
+        private @Nullable Output<Boolean> eventbridge;
+        private @Nullable Output<List<BucketNotificationLambdaFunctionGetArgs>> lambdaFunctions;
+        private @Nullable Output<List<BucketNotificationQueueGetArgs>> queues;
+        private @Nullable Output<List<BucketNotificationTopicGetArgs>> topics;
 
         public Builder() {
     	      // Empty
@@ -123,53 +123,53 @@ public final class BucketNotificationState extends io.pulumi.resources.ResourceA
     	      this.topics = defaults.topics;
         }
 
-        public Builder bucket(@Nullable Input<String> bucket) {
+        public Builder bucket(@Nullable Output<String> bucket) {
             this.bucket = bucket;
             return this;
         }
 
         public Builder bucket(@Nullable String bucket) {
-            this.bucket = Input.ofNullable(bucket);
+            this.bucket = Output.ofNullable(bucket);
             return this;
         }
 
-        public Builder eventbridge(@Nullable Input<Boolean> eventbridge) {
+        public Builder eventbridge(@Nullable Output<Boolean> eventbridge) {
             this.eventbridge = eventbridge;
             return this;
         }
 
         public Builder eventbridge(@Nullable Boolean eventbridge) {
-            this.eventbridge = Input.ofNullable(eventbridge);
+            this.eventbridge = Output.ofNullable(eventbridge);
             return this;
         }
 
-        public Builder lambdaFunctions(@Nullable Input<List<BucketNotificationLambdaFunctionGetArgs>> lambdaFunctions) {
+        public Builder lambdaFunctions(@Nullable Output<List<BucketNotificationLambdaFunctionGetArgs>> lambdaFunctions) {
             this.lambdaFunctions = lambdaFunctions;
             return this;
         }
 
         public Builder lambdaFunctions(@Nullable List<BucketNotificationLambdaFunctionGetArgs> lambdaFunctions) {
-            this.lambdaFunctions = Input.ofNullable(lambdaFunctions);
+            this.lambdaFunctions = Output.ofNullable(lambdaFunctions);
             return this;
         }
 
-        public Builder queues(@Nullable Input<List<BucketNotificationQueueGetArgs>> queues) {
+        public Builder queues(@Nullable Output<List<BucketNotificationQueueGetArgs>> queues) {
             this.queues = queues;
             return this;
         }
 
         public Builder queues(@Nullable List<BucketNotificationQueueGetArgs> queues) {
-            this.queues = Input.ofNullable(queues);
+            this.queues = Output.ofNullable(queues);
             return this;
         }
 
-        public Builder topics(@Nullable Input<List<BucketNotificationTopicGetArgs>> topics) {
+        public Builder topics(@Nullable Output<List<BucketNotificationTopicGetArgs>> topics) {
             this.topics = topics;
             return this;
         }
 
         public Builder topics(@Nullable List<BucketNotificationTopicGetArgs> topics) {
-            this.topics = Input.ofNullable(topics);
+            this.topics = Output.ofNullable(topics);
             return this;
         }
         public BucketNotificationState build() {

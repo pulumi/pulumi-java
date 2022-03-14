@@ -4,7 +4,7 @@
 package io.pulumi.aws.cloudfront.inputs;
 
 import io.pulumi.aws.cloudfront.inputs.DistributionOrderedCacheBehaviorForwardedValuesCookiesGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -23,9 +23,9 @@ public final class DistributionOrderedCacheBehaviorForwardedValuesGetArgs extend
      * 
      */
     @InputImport(name="cookies", required=true)
-      private final Input<DistributionOrderedCacheBehaviorForwardedValuesCookiesGetArgs> cookies;
+      private final Output<DistributionOrderedCacheBehaviorForwardedValuesCookiesGetArgs> cookies;
 
-    public Input<DistributionOrderedCacheBehaviorForwardedValuesCookiesGetArgs> getCookies() {
+    public Output<DistributionOrderedCacheBehaviorForwardedValuesCookiesGetArgs> getCookies() {
         return this.cookies;
     }
 
@@ -36,10 +36,10 @@ public final class DistributionOrderedCacheBehaviorForwardedValuesGetArgs extend
      * 
      */
     @InputImport(name="headers")
-      private final @Nullable Input<List<String>> headers;
+      private final @Nullable Output<List<String>> headers;
 
-    public Input<List<String>> getHeaders() {
-        return this.headers == null ? Input.empty() : this.headers;
+    public Output<List<String>> getHeaders() {
+        return this.headers == null ? Output.empty() : this.headers;
     }
 
     /**
@@ -48,9 +48,9 @@ public final class DistributionOrderedCacheBehaviorForwardedValuesGetArgs extend
      * 
      */
     @InputImport(name="queryString", required=true)
-      private final Input<Boolean> queryString;
+      private final Output<Boolean> queryString;
 
-    public Input<Boolean> getQueryString() {
+    public Output<Boolean> getQueryString() {
         return this.queryString;
     }
 
@@ -62,17 +62,17 @@ public final class DistributionOrderedCacheBehaviorForwardedValuesGetArgs extend
      * 
      */
     @InputImport(name="queryStringCacheKeys")
-      private final @Nullable Input<List<String>> queryStringCacheKeys;
+      private final @Nullable Output<List<String>> queryStringCacheKeys;
 
-    public Input<List<String>> getQueryStringCacheKeys() {
-        return this.queryStringCacheKeys == null ? Input.empty() : this.queryStringCacheKeys;
+    public Output<List<String>> getQueryStringCacheKeys() {
+        return this.queryStringCacheKeys == null ? Output.empty() : this.queryStringCacheKeys;
     }
 
     public DistributionOrderedCacheBehaviorForwardedValuesGetArgs(
-        Input<DistributionOrderedCacheBehaviorForwardedValuesCookiesGetArgs> cookies,
-        @Nullable Input<List<String>> headers,
-        Input<Boolean> queryString,
-        @Nullable Input<List<String>> queryStringCacheKeys) {
+        Output<DistributionOrderedCacheBehaviorForwardedValuesCookiesGetArgs> cookies,
+        @Nullable Output<List<String>> headers,
+        Output<Boolean> queryString,
+        @Nullable Output<List<String>> queryStringCacheKeys) {
         this.cookies = Objects.requireNonNull(cookies, "expected parameter 'cookies' to be non-null");
         this.headers = headers;
         this.queryString = Objects.requireNonNull(queryString, "expected parameter 'queryString' to be non-null");
@@ -80,10 +80,10 @@ public final class DistributionOrderedCacheBehaviorForwardedValuesGetArgs extend
     }
 
     private DistributionOrderedCacheBehaviorForwardedValuesGetArgs() {
-        this.cookies = Input.empty();
-        this.headers = Input.empty();
-        this.queryString = Input.empty();
-        this.queryStringCacheKeys = Input.empty();
+        this.cookies = Output.empty();
+        this.headers = Output.empty();
+        this.queryString = Output.empty();
+        this.queryStringCacheKeys = Output.empty();
     }
 
     public static Builder builder() {
@@ -95,10 +95,10 @@ public final class DistributionOrderedCacheBehaviorForwardedValuesGetArgs extend
     }
 
     public static final class Builder {
-        private Input<DistributionOrderedCacheBehaviorForwardedValuesCookiesGetArgs> cookies;
-        private @Nullable Input<List<String>> headers;
-        private Input<Boolean> queryString;
-        private @Nullable Input<List<String>> queryStringCacheKeys;
+        private Output<DistributionOrderedCacheBehaviorForwardedValuesCookiesGetArgs> cookies;
+        private @Nullable Output<List<String>> headers;
+        private Output<Boolean> queryString;
+        private @Nullable Output<List<String>> queryStringCacheKeys;
 
         public Builder() {
     	      // Empty
@@ -112,43 +112,43 @@ public final class DistributionOrderedCacheBehaviorForwardedValuesGetArgs extend
     	      this.queryStringCacheKeys = defaults.queryStringCacheKeys;
         }
 
-        public Builder cookies(Input<DistributionOrderedCacheBehaviorForwardedValuesCookiesGetArgs> cookies) {
+        public Builder cookies(Output<DistributionOrderedCacheBehaviorForwardedValuesCookiesGetArgs> cookies) {
             this.cookies = Objects.requireNonNull(cookies);
             return this;
         }
 
         public Builder cookies(DistributionOrderedCacheBehaviorForwardedValuesCookiesGetArgs cookies) {
-            this.cookies = Input.of(Objects.requireNonNull(cookies));
+            this.cookies = Output.of(Objects.requireNonNull(cookies));
             return this;
         }
 
-        public Builder headers(@Nullable Input<List<String>> headers) {
+        public Builder headers(@Nullable Output<List<String>> headers) {
             this.headers = headers;
             return this;
         }
 
         public Builder headers(@Nullable List<String> headers) {
-            this.headers = Input.ofNullable(headers);
+            this.headers = Output.ofNullable(headers);
             return this;
         }
 
-        public Builder queryString(Input<Boolean> queryString) {
+        public Builder queryString(Output<Boolean> queryString) {
             this.queryString = Objects.requireNonNull(queryString);
             return this;
         }
 
         public Builder queryString(Boolean queryString) {
-            this.queryString = Input.of(Objects.requireNonNull(queryString));
+            this.queryString = Output.of(Objects.requireNonNull(queryString));
             return this;
         }
 
-        public Builder queryStringCacheKeys(@Nullable Input<List<String>> queryStringCacheKeys) {
+        public Builder queryStringCacheKeys(@Nullable Output<List<String>> queryStringCacheKeys) {
             this.queryStringCacheKeys = queryStringCacheKeys;
             return this;
         }
 
         public Builder queryStringCacheKeys(@Nullable List<String> queryStringCacheKeys) {
-            this.queryStringCacheKeys = Input.ofNullable(queryStringCacheKeys);
+            this.queryStringCacheKeys = Output.ofNullable(queryStringCacheKeys);
             return this;
         }
         public DistributionOrderedCacheBehaviorForwardedValuesGetArgs build() {

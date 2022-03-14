@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.directconnect;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -21,10 +21,10 @@ public final class LinkAggregationGroupArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="connectionId")
-      private final @Nullable Input<String> connectionId;
+      private final @Nullable Output<String> connectionId;
 
-    public Input<String> getConnectionId() {
-        return this.connectionId == null ? Input.empty() : this.connectionId;
+    public Output<String> getConnectionId() {
+        return this.connectionId == null ? Output.empty() : this.connectionId;
     }
 
     /**
@@ -32,9 +32,9 @@ public final class LinkAggregationGroupArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="connectionsBandwidth", required=true)
-      private final Input<String> connectionsBandwidth;
+      private final Output<String> connectionsBandwidth;
 
-    public Input<String> getConnectionsBandwidth() {
+    public Output<String> getConnectionsBandwidth() {
         return this.connectionsBandwidth;
     }
 
@@ -43,10 +43,10 @@ public final class LinkAggregationGroupArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="forceDestroy")
-      private final @Nullable Input<Boolean> forceDestroy;
+      private final @Nullable Output<Boolean> forceDestroy;
 
-    public Input<Boolean> getForceDestroy() {
-        return this.forceDestroy == null ? Input.empty() : this.forceDestroy;
+    public Output<Boolean> getForceDestroy() {
+        return this.forceDestroy == null ? Output.empty() : this.forceDestroy;
     }
 
     /**
@@ -54,9 +54,9 @@ public final class LinkAggregationGroupArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="location", required=true)
-      private final Input<String> location;
+      private final Output<String> location;
 
-    public Input<String> getLocation() {
+    public Output<String> getLocation() {
         return this.location;
     }
 
@@ -65,10 +65,10 @@ public final class LinkAggregationGroupArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -76,10 +76,10 @@ public final class LinkAggregationGroupArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="providerName")
-      private final @Nullable Input<String> providerName;
+      private final @Nullable Output<String> providerName;
 
-    public Input<String> getProviderName() {
-        return this.providerName == null ? Input.empty() : this.providerName;
+    public Output<String> getProviderName() {
+        return this.providerName == null ? Output.empty() : this.providerName;
     }
 
     /**
@@ -87,20 +87,20 @@ public final class LinkAggregationGroupArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public LinkAggregationGroupArgs(
-        @Nullable Input<String> connectionId,
-        Input<String> connectionsBandwidth,
-        @Nullable Input<Boolean> forceDestroy,
-        Input<String> location,
-        @Nullable Input<String> name,
-        @Nullable Input<String> providerName,
-        @Nullable Input<Map<String,String>> tags) {
+        @Nullable Output<String> connectionId,
+        Output<String> connectionsBandwidth,
+        @Nullable Output<Boolean> forceDestroy,
+        Output<String> location,
+        @Nullable Output<String> name,
+        @Nullable Output<String> providerName,
+        @Nullable Output<Map<String,String>> tags) {
         this.connectionId = connectionId;
         this.connectionsBandwidth = Objects.requireNonNull(connectionsBandwidth, "expected parameter 'connectionsBandwidth' to be non-null");
         this.forceDestroy = forceDestroy;
@@ -111,13 +111,13 @@ public final class LinkAggregationGroupArgs extends io.pulumi.resources.Resource
     }
 
     private LinkAggregationGroupArgs() {
-        this.connectionId = Input.empty();
-        this.connectionsBandwidth = Input.empty();
-        this.forceDestroy = Input.empty();
-        this.location = Input.empty();
-        this.name = Input.empty();
-        this.providerName = Input.empty();
-        this.tags = Input.empty();
+        this.connectionId = Output.empty();
+        this.connectionsBandwidth = Output.empty();
+        this.forceDestroy = Output.empty();
+        this.location = Output.empty();
+        this.name = Output.empty();
+        this.providerName = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -129,13 +129,13 @@ public final class LinkAggregationGroupArgs extends io.pulumi.resources.Resource
     }
 
     public static final class Builder {
-        private @Nullable Input<String> connectionId;
-        private Input<String> connectionsBandwidth;
-        private @Nullable Input<Boolean> forceDestroy;
-        private Input<String> location;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> providerName;
-        private @Nullable Input<Map<String,String>> tags;
+        private @Nullable Output<String> connectionId;
+        private Output<String> connectionsBandwidth;
+        private @Nullable Output<Boolean> forceDestroy;
+        private Output<String> location;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> providerName;
+        private @Nullable Output<Map<String,String>> tags;
 
         public Builder() {
     	      // Empty
@@ -152,73 +152,73 @@ public final class LinkAggregationGroupArgs extends io.pulumi.resources.Resource
     	      this.tags = defaults.tags;
         }
 
-        public Builder connectionId(@Nullable Input<String> connectionId) {
+        public Builder connectionId(@Nullable Output<String> connectionId) {
             this.connectionId = connectionId;
             return this;
         }
 
         public Builder connectionId(@Nullable String connectionId) {
-            this.connectionId = Input.ofNullable(connectionId);
+            this.connectionId = Output.ofNullable(connectionId);
             return this;
         }
 
-        public Builder connectionsBandwidth(Input<String> connectionsBandwidth) {
+        public Builder connectionsBandwidth(Output<String> connectionsBandwidth) {
             this.connectionsBandwidth = Objects.requireNonNull(connectionsBandwidth);
             return this;
         }
 
         public Builder connectionsBandwidth(String connectionsBandwidth) {
-            this.connectionsBandwidth = Input.of(Objects.requireNonNull(connectionsBandwidth));
+            this.connectionsBandwidth = Output.of(Objects.requireNonNull(connectionsBandwidth));
             return this;
         }
 
-        public Builder forceDestroy(@Nullable Input<Boolean> forceDestroy) {
+        public Builder forceDestroy(@Nullable Output<Boolean> forceDestroy) {
             this.forceDestroy = forceDestroy;
             return this;
         }
 
         public Builder forceDestroy(@Nullable Boolean forceDestroy) {
-            this.forceDestroy = Input.ofNullable(forceDestroy);
+            this.forceDestroy = Output.ofNullable(forceDestroy);
             return this;
         }
 
-        public Builder location(Input<String> location) {
+        public Builder location(Output<String> location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
         public Builder location(String location) {
-            this.location = Input.of(Objects.requireNonNull(location));
+            this.location = Output.of(Objects.requireNonNull(location));
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder providerName(@Nullable Input<String> providerName) {
+        public Builder providerName(@Nullable Output<String> providerName) {
             this.providerName = providerName;
             return this;
         }
 
         public Builder providerName(@Nullable String providerName) {
-            this.providerName = Input.ofNullable(providerName);
+            this.providerName = Output.ofNullable(providerName);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public LinkAggregationGroupArgs build() {

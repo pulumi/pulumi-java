@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.eks.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -20,9 +20,9 @@ public final class IdentityProviderConfigOidcGetArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="clientId", required=true)
-      private final Input<String> clientId;
+      private final Output<String> clientId;
 
-    public Input<String> getClientId() {
+    public Output<String> getClientId() {
         return this.clientId;
     }
 
@@ -31,10 +31,10 @@ public final class IdentityProviderConfigOidcGetArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="groupsClaim")
-      private final @Nullable Input<String> groupsClaim;
+      private final @Nullable Output<String> groupsClaim;
 
-    public Input<String> getGroupsClaim() {
-        return this.groupsClaim == null ? Input.empty() : this.groupsClaim;
+    public Output<String> getGroupsClaim() {
+        return this.groupsClaim == null ? Output.empty() : this.groupsClaim;
     }
 
     /**
@@ -42,10 +42,10 @@ public final class IdentityProviderConfigOidcGetArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="groupsPrefix")
-      private final @Nullable Input<String> groupsPrefix;
+      private final @Nullable Output<String> groupsPrefix;
 
-    public Input<String> getGroupsPrefix() {
-        return this.groupsPrefix == null ? Input.empty() : this.groupsPrefix;
+    public Output<String> getGroupsPrefix() {
+        return this.groupsPrefix == null ? Output.empty() : this.groupsPrefix;
     }
 
     /**
@@ -53,9 +53,9 @@ public final class IdentityProviderConfigOidcGetArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="identityProviderConfigName", required=true)
-      private final Input<String> identityProviderConfigName;
+      private final Output<String> identityProviderConfigName;
 
-    public Input<String> getIdentityProviderConfigName() {
+    public Output<String> getIdentityProviderConfigName() {
         return this.identityProviderConfigName;
     }
 
@@ -64,9 +64,9 @@ public final class IdentityProviderConfigOidcGetArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="issuerUrl", required=true)
-      private final Input<String> issuerUrl;
+      private final Output<String> issuerUrl;
 
-    public Input<String> getIssuerUrl() {
+    public Output<String> getIssuerUrl() {
         return this.issuerUrl;
     }
 
@@ -75,10 +75,10 @@ public final class IdentityProviderConfigOidcGetArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="requiredClaims")
-      private final @Nullable Input<Map<String,String>> requiredClaims;
+      private final @Nullable Output<Map<String,String>> requiredClaims;
 
-    public Input<Map<String,String>> getRequiredClaims() {
-        return this.requiredClaims == null ? Input.empty() : this.requiredClaims;
+    public Output<Map<String,String>> getRequiredClaims() {
+        return this.requiredClaims == null ? Output.empty() : this.requiredClaims;
     }
 
     /**
@@ -86,10 +86,10 @@ public final class IdentityProviderConfigOidcGetArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="usernameClaim")
-      private final @Nullable Input<String> usernameClaim;
+      private final @Nullable Output<String> usernameClaim;
 
-    public Input<String> getUsernameClaim() {
-        return this.usernameClaim == null ? Input.empty() : this.usernameClaim;
+    public Output<String> getUsernameClaim() {
+        return this.usernameClaim == null ? Output.empty() : this.usernameClaim;
     }
 
     /**
@@ -97,21 +97,21 @@ public final class IdentityProviderConfigOidcGetArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="usernamePrefix")
-      private final @Nullable Input<String> usernamePrefix;
+      private final @Nullable Output<String> usernamePrefix;
 
-    public Input<String> getUsernamePrefix() {
-        return this.usernamePrefix == null ? Input.empty() : this.usernamePrefix;
+    public Output<String> getUsernamePrefix() {
+        return this.usernamePrefix == null ? Output.empty() : this.usernamePrefix;
     }
 
     public IdentityProviderConfigOidcGetArgs(
-        Input<String> clientId,
-        @Nullable Input<String> groupsClaim,
-        @Nullable Input<String> groupsPrefix,
-        Input<String> identityProviderConfigName,
-        Input<String> issuerUrl,
-        @Nullable Input<Map<String,String>> requiredClaims,
-        @Nullable Input<String> usernameClaim,
-        @Nullable Input<String> usernamePrefix) {
+        Output<String> clientId,
+        @Nullable Output<String> groupsClaim,
+        @Nullable Output<String> groupsPrefix,
+        Output<String> identityProviderConfigName,
+        Output<String> issuerUrl,
+        @Nullable Output<Map<String,String>> requiredClaims,
+        @Nullable Output<String> usernameClaim,
+        @Nullable Output<String> usernamePrefix) {
         this.clientId = Objects.requireNonNull(clientId, "expected parameter 'clientId' to be non-null");
         this.groupsClaim = groupsClaim;
         this.groupsPrefix = groupsPrefix;
@@ -123,14 +123,14 @@ public final class IdentityProviderConfigOidcGetArgs extends io.pulumi.resources
     }
 
     private IdentityProviderConfigOidcGetArgs() {
-        this.clientId = Input.empty();
-        this.groupsClaim = Input.empty();
-        this.groupsPrefix = Input.empty();
-        this.identityProviderConfigName = Input.empty();
-        this.issuerUrl = Input.empty();
-        this.requiredClaims = Input.empty();
-        this.usernameClaim = Input.empty();
-        this.usernamePrefix = Input.empty();
+        this.clientId = Output.empty();
+        this.groupsClaim = Output.empty();
+        this.groupsPrefix = Output.empty();
+        this.identityProviderConfigName = Output.empty();
+        this.issuerUrl = Output.empty();
+        this.requiredClaims = Output.empty();
+        this.usernameClaim = Output.empty();
+        this.usernamePrefix = Output.empty();
     }
 
     public static Builder builder() {
@@ -142,14 +142,14 @@ public final class IdentityProviderConfigOidcGetArgs extends io.pulumi.resources
     }
 
     public static final class Builder {
-        private Input<String> clientId;
-        private @Nullable Input<String> groupsClaim;
-        private @Nullable Input<String> groupsPrefix;
-        private Input<String> identityProviderConfigName;
-        private Input<String> issuerUrl;
-        private @Nullable Input<Map<String,String>> requiredClaims;
-        private @Nullable Input<String> usernameClaim;
-        private @Nullable Input<String> usernamePrefix;
+        private Output<String> clientId;
+        private @Nullable Output<String> groupsClaim;
+        private @Nullable Output<String> groupsPrefix;
+        private Output<String> identityProviderConfigName;
+        private Output<String> issuerUrl;
+        private @Nullable Output<Map<String,String>> requiredClaims;
+        private @Nullable Output<String> usernameClaim;
+        private @Nullable Output<String> usernamePrefix;
 
         public Builder() {
     	      // Empty
@@ -167,83 +167,83 @@ public final class IdentityProviderConfigOidcGetArgs extends io.pulumi.resources
     	      this.usernamePrefix = defaults.usernamePrefix;
         }
 
-        public Builder clientId(Input<String> clientId) {
+        public Builder clientId(Output<String> clientId) {
             this.clientId = Objects.requireNonNull(clientId);
             return this;
         }
 
         public Builder clientId(String clientId) {
-            this.clientId = Input.of(Objects.requireNonNull(clientId));
+            this.clientId = Output.of(Objects.requireNonNull(clientId));
             return this;
         }
 
-        public Builder groupsClaim(@Nullable Input<String> groupsClaim) {
+        public Builder groupsClaim(@Nullable Output<String> groupsClaim) {
             this.groupsClaim = groupsClaim;
             return this;
         }
 
         public Builder groupsClaim(@Nullable String groupsClaim) {
-            this.groupsClaim = Input.ofNullable(groupsClaim);
+            this.groupsClaim = Output.ofNullable(groupsClaim);
             return this;
         }
 
-        public Builder groupsPrefix(@Nullable Input<String> groupsPrefix) {
+        public Builder groupsPrefix(@Nullable Output<String> groupsPrefix) {
             this.groupsPrefix = groupsPrefix;
             return this;
         }
 
         public Builder groupsPrefix(@Nullable String groupsPrefix) {
-            this.groupsPrefix = Input.ofNullable(groupsPrefix);
+            this.groupsPrefix = Output.ofNullable(groupsPrefix);
             return this;
         }
 
-        public Builder identityProviderConfigName(Input<String> identityProviderConfigName) {
+        public Builder identityProviderConfigName(Output<String> identityProviderConfigName) {
             this.identityProviderConfigName = Objects.requireNonNull(identityProviderConfigName);
             return this;
         }
 
         public Builder identityProviderConfigName(String identityProviderConfigName) {
-            this.identityProviderConfigName = Input.of(Objects.requireNonNull(identityProviderConfigName));
+            this.identityProviderConfigName = Output.of(Objects.requireNonNull(identityProviderConfigName));
             return this;
         }
 
-        public Builder issuerUrl(Input<String> issuerUrl) {
+        public Builder issuerUrl(Output<String> issuerUrl) {
             this.issuerUrl = Objects.requireNonNull(issuerUrl);
             return this;
         }
 
         public Builder issuerUrl(String issuerUrl) {
-            this.issuerUrl = Input.of(Objects.requireNonNull(issuerUrl));
+            this.issuerUrl = Output.of(Objects.requireNonNull(issuerUrl));
             return this;
         }
 
-        public Builder requiredClaims(@Nullable Input<Map<String,String>> requiredClaims) {
+        public Builder requiredClaims(@Nullable Output<Map<String,String>> requiredClaims) {
             this.requiredClaims = requiredClaims;
             return this;
         }
 
         public Builder requiredClaims(@Nullable Map<String,String> requiredClaims) {
-            this.requiredClaims = Input.ofNullable(requiredClaims);
+            this.requiredClaims = Output.ofNullable(requiredClaims);
             return this;
         }
 
-        public Builder usernameClaim(@Nullable Input<String> usernameClaim) {
+        public Builder usernameClaim(@Nullable Output<String> usernameClaim) {
             this.usernameClaim = usernameClaim;
             return this;
         }
 
         public Builder usernameClaim(@Nullable String usernameClaim) {
-            this.usernameClaim = Input.ofNullable(usernameClaim);
+            this.usernameClaim = Output.ofNullable(usernameClaim);
             return this;
         }
 
-        public Builder usernamePrefix(@Nullable Input<String> usernamePrefix) {
+        public Builder usernamePrefix(@Nullable Output<String> usernamePrefix) {
             this.usernamePrefix = usernamePrefix;
             return this;
         }
 
         public Builder usernamePrefix(@Nullable String usernamePrefix) {
-            this.usernamePrefix = Input.ofNullable(usernamePrefix);
+            this.usernamePrefix = Output.ofNullable(usernamePrefix);
             return this;
         }
         public IdentityProviderConfigOidcGetArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.databrew.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,18 +19,18 @@ public final class DatasetMetadataArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="sourceArn")
-      private final @Nullable Input<String> sourceArn;
+      private final @Nullable Output<String> sourceArn;
 
-    public Input<String> getSourceArn() {
-        return this.sourceArn == null ? Input.empty() : this.sourceArn;
+    public Output<String> getSourceArn() {
+        return this.sourceArn == null ? Output.empty() : this.sourceArn;
     }
 
-    public DatasetMetadataArgs(@Nullable Input<String> sourceArn) {
+    public DatasetMetadataArgs(@Nullable Output<String> sourceArn) {
         this.sourceArn = sourceArn;
     }
 
     private DatasetMetadataArgs() {
-        this.sourceArn = Input.empty();
+        this.sourceArn = Output.empty();
     }
 
     public static Builder builder() {
@@ -42,7 +42,7 @@ public final class DatasetMetadataArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private @Nullable Input<String> sourceArn;
+        private @Nullable Output<String> sourceArn;
 
         public Builder() {
     	      // Empty
@@ -53,13 +53,13 @@ public final class DatasetMetadataArgs extends io.pulumi.resources.ResourceArgs 
     	      this.sourceArn = defaults.sourceArn;
         }
 
-        public Builder sourceArn(@Nullable Input<String> sourceArn) {
+        public Builder sourceArn(@Nullable Output<String> sourceArn) {
             this.sourceArn = sourceArn;
             return this;
         }
 
         public Builder sourceArn(@Nullable String sourceArn) {
-            this.sourceArn = Input.ofNullable(sourceArn);
+            this.sourceArn = Output.ofNullable(sourceArn);
             return this;
         }
         public DatasetMetadataArgs build() {

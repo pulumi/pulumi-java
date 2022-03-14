@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.osconfig_v1beta;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.osconfig_v1beta.inputs.AssignmentArgs;
 import io.pulumi.googlenative.osconfig_v1beta.inputs.PackageArgs;
@@ -24,9 +24,9 @@ public final class GuestPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="assignment", required=true)
-      private final Input<AssignmentArgs> assignment;
+      private final Output<AssignmentArgs> assignment;
 
-    public Input<AssignmentArgs> getAssignment() {
+    public Output<AssignmentArgs> getAssignment() {
         return this.assignment;
     }
 
@@ -35,10 +35,10 @@ public final class GuestPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -46,16 +46,16 @@ public final class GuestPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="etag")
-      private final @Nullable Input<String> etag;
+      private final @Nullable Output<String> etag;
 
-    public Input<String> getEtag() {
-        return this.etag == null ? Input.empty() : this.etag;
+    public Output<String> getEtag() {
+        return this.etag == null ? Output.empty() : this.etag;
     }
 
     @InputImport(name="guestPolicyId", required=true)
-      private final Input<String> guestPolicyId;
+      private final Output<String> guestPolicyId;
 
-    public Input<String> getGuestPolicyId() {
+    public Output<String> getGuestPolicyId() {
         return this.guestPolicyId;
     }
 
@@ -64,10 +64,10 @@ public final class GuestPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -75,10 +75,10 @@ public final class GuestPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="packageRepositories")
-      private final @Nullable Input<List<PackageRepositoryArgs>> packageRepositories;
+      private final @Nullable Output<List<PackageRepositoryArgs>> packageRepositories;
 
-    public Input<List<PackageRepositoryArgs>> getPackageRepositories() {
-        return this.packageRepositories == null ? Input.empty() : this.packageRepositories;
+    public Output<List<PackageRepositoryArgs>> getPackageRepositories() {
+        return this.packageRepositories == null ? Output.empty() : this.packageRepositories;
     }
 
     /**
@@ -86,17 +86,17 @@ public final class GuestPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="packages")
-      private final @Nullable Input<List<PackageArgs>> packages;
+      private final @Nullable Output<List<PackageArgs>> packages;
 
-    public Input<List<PackageArgs>> getPackages() {
-        return this.packages == null ? Input.empty() : this.packages;
+    public Output<List<PackageArgs>> getPackages() {
+        return this.packages == null ? Output.empty() : this.packages;
     }
 
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -104,22 +104,22 @@ public final class GuestPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="recipes")
-      private final @Nullable Input<List<SoftwareRecipeArgs>> recipes;
+      private final @Nullable Output<List<SoftwareRecipeArgs>> recipes;
 
-    public Input<List<SoftwareRecipeArgs>> getRecipes() {
-        return this.recipes == null ? Input.empty() : this.recipes;
+    public Output<List<SoftwareRecipeArgs>> getRecipes() {
+        return this.recipes == null ? Output.empty() : this.recipes;
     }
 
     public GuestPolicyArgs(
-        Input<AssignmentArgs> assignment,
-        @Nullable Input<String> description,
-        @Nullable Input<String> etag,
-        Input<String> guestPolicyId,
-        @Nullable Input<String> name,
-        @Nullable Input<List<PackageRepositoryArgs>> packageRepositories,
-        @Nullable Input<List<PackageArgs>> packages,
-        @Nullable Input<String> project,
-        @Nullable Input<List<SoftwareRecipeArgs>> recipes) {
+        Output<AssignmentArgs> assignment,
+        @Nullable Output<String> description,
+        @Nullable Output<String> etag,
+        Output<String> guestPolicyId,
+        @Nullable Output<String> name,
+        @Nullable Output<List<PackageRepositoryArgs>> packageRepositories,
+        @Nullable Output<List<PackageArgs>> packages,
+        @Nullable Output<String> project,
+        @Nullable Output<List<SoftwareRecipeArgs>> recipes) {
         this.assignment = Objects.requireNonNull(assignment, "expected parameter 'assignment' to be non-null");
         this.description = description;
         this.etag = etag;
@@ -132,15 +132,15 @@ public final class GuestPolicyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private GuestPolicyArgs() {
-        this.assignment = Input.empty();
-        this.description = Input.empty();
-        this.etag = Input.empty();
-        this.guestPolicyId = Input.empty();
-        this.name = Input.empty();
-        this.packageRepositories = Input.empty();
-        this.packages = Input.empty();
-        this.project = Input.empty();
-        this.recipes = Input.empty();
+        this.assignment = Output.empty();
+        this.description = Output.empty();
+        this.etag = Output.empty();
+        this.guestPolicyId = Output.empty();
+        this.name = Output.empty();
+        this.packageRepositories = Output.empty();
+        this.packages = Output.empty();
+        this.project = Output.empty();
+        this.recipes = Output.empty();
     }
 
     public static Builder builder() {
@@ -152,15 +152,15 @@ public final class GuestPolicyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<AssignmentArgs> assignment;
-        private @Nullable Input<String> description;
-        private @Nullable Input<String> etag;
-        private Input<String> guestPolicyId;
-        private @Nullable Input<String> name;
-        private @Nullable Input<List<PackageRepositoryArgs>> packageRepositories;
-        private @Nullable Input<List<PackageArgs>> packages;
-        private @Nullable Input<String> project;
-        private @Nullable Input<List<SoftwareRecipeArgs>> recipes;
+        private Output<AssignmentArgs> assignment;
+        private @Nullable Output<String> description;
+        private @Nullable Output<String> etag;
+        private Output<String> guestPolicyId;
+        private @Nullable Output<String> name;
+        private @Nullable Output<List<PackageRepositoryArgs>> packageRepositories;
+        private @Nullable Output<List<PackageArgs>> packages;
+        private @Nullable Output<String> project;
+        private @Nullable Output<List<SoftwareRecipeArgs>> recipes;
 
         public Builder() {
     	      // Empty
@@ -179,93 +179,93 @@ public final class GuestPolicyArgs extends io.pulumi.resources.ResourceArgs {
     	      this.recipes = defaults.recipes;
         }
 
-        public Builder assignment(Input<AssignmentArgs> assignment) {
+        public Builder assignment(Output<AssignmentArgs> assignment) {
             this.assignment = Objects.requireNonNull(assignment);
             return this;
         }
 
         public Builder assignment(AssignmentArgs assignment) {
-            this.assignment = Input.of(Objects.requireNonNull(assignment));
+            this.assignment = Output.of(Objects.requireNonNull(assignment));
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder etag(@Nullable Input<String> etag) {
+        public Builder etag(@Nullable Output<String> etag) {
             this.etag = etag;
             return this;
         }
 
         public Builder etag(@Nullable String etag) {
-            this.etag = Input.ofNullable(etag);
+            this.etag = Output.ofNullable(etag);
             return this;
         }
 
-        public Builder guestPolicyId(Input<String> guestPolicyId) {
+        public Builder guestPolicyId(Output<String> guestPolicyId) {
             this.guestPolicyId = Objects.requireNonNull(guestPolicyId);
             return this;
         }
 
         public Builder guestPolicyId(String guestPolicyId) {
-            this.guestPolicyId = Input.of(Objects.requireNonNull(guestPolicyId));
+            this.guestPolicyId = Output.of(Objects.requireNonNull(guestPolicyId));
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder packageRepositories(@Nullable Input<List<PackageRepositoryArgs>> packageRepositories) {
+        public Builder packageRepositories(@Nullable Output<List<PackageRepositoryArgs>> packageRepositories) {
             this.packageRepositories = packageRepositories;
             return this;
         }
 
         public Builder packageRepositories(@Nullable List<PackageRepositoryArgs> packageRepositories) {
-            this.packageRepositories = Input.ofNullable(packageRepositories);
+            this.packageRepositories = Output.ofNullable(packageRepositories);
             return this;
         }
 
-        public Builder packages(@Nullable Input<List<PackageArgs>> packages) {
+        public Builder packages(@Nullable Output<List<PackageArgs>> packages) {
             this.packages = packages;
             return this;
         }
 
         public Builder packages(@Nullable List<PackageArgs> packages) {
-            this.packages = Input.ofNullable(packages);
+            this.packages = Output.ofNullable(packages);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder recipes(@Nullable Input<List<SoftwareRecipeArgs>> recipes) {
+        public Builder recipes(@Nullable Output<List<SoftwareRecipeArgs>> recipes) {
             this.recipes = recipes;
             return this;
         }
 
         public Builder recipes(@Nullable List<SoftwareRecipeArgs> recipes) {
-            this.recipes = Input.ofNullable(recipes);
+            this.recipes = Output.ofNullable(recipes);
             return this;
         }
         public GuestPolicyArgs build() {

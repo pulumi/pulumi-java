@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.firestore_v1beta2;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.firestore_v1beta2.enums.IndexQueryScope;
 import io.pulumi.googlenative.firestore_v1beta2.inputs.GoogleFirestoreAdminV1beta2IndexFieldArgs;
@@ -18,16 +18,16 @@ public final class IndexArgs extends io.pulumi.resources.ResourceArgs {
     public static final IndexArgs Empty = new IndexArgs();
 
     @InputImport(name="collectionGroupId", required=true)
-      private final Input<String> collectionGroupId;
+      private final Output<String> collectionGroupId;
 
-    public Input<String> getCollectionGroupId() {
+    public Output<String> getCollectionGroupId() {
         return this.collectionGroupId;
     }
 
     @InputImport(name="databaseId", required=true)
-      private final Input<String> databaseId;
+      private final Output<String> databaseId;
 
-    public Input<String> getDatabaseId() {
+    public Output<String> getDatabaseId() {
         return this.databaseId;
     }
 
@@ -36,17 +36,17 @@ public final class IndexArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="fields")
-      private final @Nullable Input<List<GoogleFirestoreAdminV1beta2IndexFieldArgs>> fields;
+      private final @Nullable Output<List<GoogleFirestoreAdminV1beta2IndexFieldArgs>> fields;
 
-    public Input<List<GoogleFirestoreAdminV1beta2IndexFieldArgs>> getFields() {
-        return this.fields == null ? Input.empty() : this.fields;
+    public Output<List<GoogleFirestoreAdminV1beta2IndexFieldArgs>> getFields() {
+        return this.fields == null ? Output.empty() : this.fields;
     }
 
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -54,18 +54,18 @@ public final class IndexArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="queryScope")
-      private final @Nullable Input<IndexQueryScope> queryScope;
+      private final @Nullable Output<IndexQueryScope> queryScope;
 
-    public Input<IndexQueryScope> getQueryScope() {
-        return this.queryScope == null ? Input.empty() : this.queryScope;
+    public Output<IndexQueryScope> getQueryScope() {
+        return this.queryScope == null ? Output.empty() : this.queryScope;
     }
 
     public IndexArgs(
-        Input<String> collectionGroupId,
-        Input<String> databaseId,
-        @Nullable Input<List<GoogleFirestoreAdminV1beta2IndexFieldArgs>> fields,
-        @Nullable Input<String> project,
-        @Nullable Input<IndexQueryScope> queryScope) {
+        Output<String> collectionGroupId,
+        Output<String> databaseId,
+        @Nullable Output<List<GoogleFirestoreAdminV1beta2IndexFieldArgs>> fields,
+        @Nullable Output<String> project,
+        @Nullable Output<IndexQueryScope> queryScope) {
         this.collectionGroupId = Objects.requireNonNull(collectionGroupId, "expected parameter 'collectionGroupId' to be non-null");
         this.databaseId = Objects.requireNonNull(databaseId, "expected parameter 'databaseId' to be non-null");
         this.fields = fields;
@@ -74,11 +74,11 @@ public final class IndexArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private IndexArgs() {
-        this.collectionGroupId = Input.empty();
-        this.databaseId = Input.empty();
-        this.fields = Input.empty();
-        this.project = Input.empty();
-        this.queryScope = Input.empty();
+        this.collectionGroupId = Output.empty();
+        this.databaseId = Output.empty();
+        this.fields = Output.empty();
+        this.project = Output.empty();
+        this.queryScope = Output.empty();
     }
 
     public static Builder builder() {
@@ -90,11 +90,11 @@ public final class IndexArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> collectionGroupId;
-        private Input<String> databaseId;
-        private @Nullable Input<List<GoogleFirestoreAdminV1beta2IndexFieldArgs>> fields;
-        private @Nullable Input<String> project;
-        private @Nullable Input<IndexQueryScope> queryScope;
+        private Output<String> collectionGroupId;
+        private Output<String> databaseId;
+        private @Nullable Output<List<GoogleFirestoreAdminV1beta2IndexFieldArgs>> fields;
+        private @Nullable Output<String> project;
+        private @Nullable Output<IndexQueryScope> queryScope;
 
         public Builder() {
     	      // Empty
@@ -109,53 +109,53 @@ public final class IndexArgs extends io.pulumi.resources.ResourceArgs {
     	      this.queryScope = defaults.queryScope;
         }
 
-        public Builder collectionGroupId(Input<String> collectionGroupId) {
+        public Builder collectionGroupId(Output<String> collectionGroupId) {
             this.collectionGroupId = Objects.requireNonNull(collectionGroupId);
             return this;
         }
 
         public Builder collectionGroupId(String collectionGroupId) {
-            this.collectionGroupId = Input.of(Objects.requireNonNull(collectionGroupId));
+            this.collectionGroupId = Output.of(Objects.requireNonNull(collectionGroupId));
             return this;
         }
 
-        public Builder databaseId(Input<String> databaseId) {
+        public Builder databaseId(Output<String> databaseId) {
             this.databaseId = Objects.requireNonNull(databaseId);
             return this;
         }
 
         public Builder databaseId(String databaseId) {
-            this.databaseId = Input.of(Objects.requireNonNull(databaseId));
+            this.databaseId = Output.of(Objects.requireNonNull(databaseId));
             return this;
         }
 
-        public Builder fields(@Nullable Input<List<GoogleFirestoreAdminV1beta2IndexFieldArgs>> fields) {
+        public Builder fields(@Nullable Output<List<GoogleFirestoreAdminV1beta2IndexFieldArgs>> fields) {
             this.fields = fields;
             return this;
         }
 
         public Builder fields(@Nullable List<GoogleFirestoreAdminV1beta2IndexFieldArgs> fields) {
-            this.fields = Input.ofNullable(fields);
+            this.fields = Output.ofNullable(fields);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder queryScope(@Nullable Input<IndexQueryScope> queryScope) {
+        public Builder queryScope(@Nullable Output<IndexQueryScope> queryScope) {
             this.queryScope = queryScope;
             return this;
         }
 
         public Builder queryScope(@Nullable IndexQueryScope queryScope) {
-            this.queryScope = Input.ofNullable(queryScope);
+            this.queryScope = Output.ofNullable(queryScope);
             return this;
         }
         public IndexArgs build() {

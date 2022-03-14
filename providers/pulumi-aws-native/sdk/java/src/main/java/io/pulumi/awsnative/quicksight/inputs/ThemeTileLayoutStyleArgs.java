@@ -5,7 +5,7 @@ package io.pulumi.awsnative.quicksight.inputs;
 
 import io.pulumi.awsnative.quicksight.inputs.ThemeGutterStyleArgs;
 import io.pulumi.awsnative.quicksight.inputs.ThemeMarginStyleArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,29 +20,29 @@ public final class ThemeTileLayoutStyleArgs extends io.pulumi.resources.Resource
     public static final ThemeTileLayoutStyleArgs Empty = new ThemeTileLayoutStyleArgs();
 
     @InputImport(name="gutter")
-      private final @Nullable Input<ThemeGutterStyleArgs> gutter;
+      private final @Nullable Output<ThemeGutterStyleArgs> gutter;
 
-    public Input<ThemeGutterStyleArgs> getGutter() {
-        return this.gutter == null ? Input.empty() : this.gutter;
+    public Output<ThemeGutterStyleArgs> getGutter() {
+        return this.gutter == null ? Output.empty() : this.gutter;
     }
 
     @InputImport(name="margin")
-      private final @Nullable Input<ThemeMarginStyleArgs> margin;
+      private final @Nullable Output<ThemeMarginStyleArgs> margin;
 
-    public Input<ThemeMarginStyleArgs> getMargin() {
-        return this.margin == null ? Input.empty() : this.margin;
+    public Output<ThemeMarginStyleArgs> getMargin() {
+        return this.margin == null ? Output.empty() : this.margin;
     }
 
     public ThemeTileLayoutStyleArgs(
-        @Nullable Input<ThemeGutterStyleArgs> gutter,
-        @Nullable Input<ThemeMarginStyleArgs> margin) {
+        @Nullable Output<ThemeGutterStyleArgs> gutter,
+        @Nullable Output<ThemeMarginStyleArgs> margin) {
         this.gutter = gutter;
         this.margin = margin;
     }
 
     private ThemeTileLayoutStyleArgs() {
-        this.gutter = Input.empty();
-        this.margin = Input.empty();
+        this.gutter = Output.empty();
+        this.margin = Output.empty();
     }
 
     public static Builder builder() {
@@ -54,8 +54,8 @@ public final class ThemeTileLayoutStyleArgs extends io.pulumi.resources.Resource
     }
 
     public static final class Builder {
-        private @Nullable Input<ThemeGutterStyleArgs> gutter;
-        private @Nullable Input<ThemeMarginStyleArgs> margin;
+        private @Nullable Output<ThemeGutterStyleArgs> gutter;
+        private @Nullable Output<ThemeMarginStyleArgs> margin;
 
         public Builder() {
     	      // Empty
@@ -67,23 +67,23 @@ public final class ThemeTileLayoutStyleArgs extends io.pulumi.resources.Resource
     	      this.margin = defaults.margin;
         }
 
-        public Builder gutter(@Nullable Input<ThemeGutterStyleArgs> gutter) {
+        public Builder gutter(@Nullable Output<ThemeGutterStyleArgs> gutter) {
             this.gutter = gutter;
             return this;
         }
 
         public Builder gutter(@Nullable ThemeGutterStyleArgs gutter) {
-            this.gutter = Input.ofNullable(gutter);
+            this.gutter = Output.ofNullable(gutter);
             return this;
         }
 
-        public Builder margin(@Nullable Input<ThemeMarginStyleArgs> margin) {
+        public Builder margin(@Nullable Output<ThemeMarginStyleArgs> margin) {
             this.margin = margin;
             return this;
         }
 
         public Builder margin(@Nullable ThemeMarginStyleArgs margin) {
-            this.margin = Input.ofNullable(margin);
+            this.margin = Output.ofNullable(margin);
             return this;
         }
         public ThemeTileLayoutStyleArgs build() {

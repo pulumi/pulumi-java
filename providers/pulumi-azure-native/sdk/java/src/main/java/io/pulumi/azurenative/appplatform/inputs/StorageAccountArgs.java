@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.appplatform.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -22,9 +22,9 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="accountKey", required=true)
-      private final Input<String> accountKey;
+      private final Output<String> accountKey;
 
-    public Input<String> getAccountKey() {
+    public Output<String> getAccountKey() {
         return this.accountKey;
     }
 
@@ -33,9 +33,9 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="accountName", required=true)
-      private final Input<String> accountName;
+      private final Output<String> accountName;
 
-    public Input<String> getAccountName() {
+    public Output<String> getAccountName() {
         return this.accountName;
     }
 
@@ -45,25 +45,25 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="storageType", required=true)
-      private final Input<String> storageType;
+      private final Output<String> storageType;
 
-    public Input<String> getStorageType() {
+    public Output<String> getStorageType() {
         return this.storageType;
     }
 
     public StorageAccountArgs(
-        Input<String> accountKey,
-        Input<String> accountName,
-        Input<String> storageType) {
+        Output<String> accountKey,
+        Output<String> accountName,
+        Output<String> storageType) {
         this.accountKey = Objects.requireNonNull(accountKey, "expected parameter 'accountKey' to be non-null");
         this.accountName = Objects.requireNonNull(accountName, "expected parameter 'accountName' to be non-null");
         this.storageType = Objects.requireNonNull(storageType, "expected parameter 'storageType' to be non-null");
     }
 
     private StorageAccountArgs() {
-        this.accountKey = Input.empty();
-        this.accountName = Input.empty();
-        this.storageType = Input.empty();
+        this.accountKey = Output.empty();
+        this.accountName = Output.empty();
+        this.storageType = Output.empty();
     }
 
     public static Builder builder() {
@@ -75,9 +75,9 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> accountKey;
-        private Input<String> accountName;
-        private Input<String> storageType;
+        private Output<String> accountKey;
+        private Output<String> accountName;
+        private Output<String> storageType;
 
         public Builder() {
     	      // Empty
@@ -90,33 +90,33 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
     	      this.storageType = defaults.storageType;
         }
 
-        public Builder accountKey(Input<String> accountKey) {
+        public Builder accountKey(Output<String> accountKey) {
             this.accountKey = Objects.requireNonNull(accountKey);
             return this;
         }
 
         public Builder accountKey(String accountKey) {
-            this.accountKey = Input.of(Objects.requireNonNull(accountKey));
+            this.accountKey = Output.of(Objects.requireNonNull(accountKey));
             return this;
         }
 
-        public Builder accountName(Input<String> accountName) {
+        public Builder accountName(Output<String> accountName) {
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
 
         public Builder accountName(String accountName) {
-            this.accountName = Input.of(Objects.requireNonNull(accountName));
+            this.accountName = Output.of(Objects.requireNonNull(accountName));
             return this;
         }
 
-        public Builder storageType(Input<String> storageType) {
+        public Builder storageType(Output<String> storageType) {
             this.storageType = Objects.requireNonNull(storageType);
             return this;
         }
 
         public Builder storageType(String storageType) {
-            this.storageType = Input.of(Objects.requireNonNull(storageType));
+            this.storageType = Output.of(Objects.requireNonNull(storageType));
             return this;
         }
         public StorageAccountArgs build() {

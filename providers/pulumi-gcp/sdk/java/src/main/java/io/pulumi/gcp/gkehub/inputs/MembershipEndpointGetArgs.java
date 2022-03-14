@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.gkehub.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.gkehub.inputs.MembershipEndpointGkeClusterGetArgs;
 import java.util.Objects;
@@ -20,18 +20,18 @@ public final class MembershipEndpointGetArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="gkeCluster")
-      private final @Nullable Input<MembershipEndpointGkeClusterGetArgs> gkeCluster;
+      private final @Nullable Output<MembershipEndpointGkeClusterGetArgs> gkeCluster;
 
-    public Input<MembershipEndpointGkeClusterGetArgs> getGkeCluster() {
-        return this.gkeCluster == null ? Input.empty() : this.gkeCluster;
+    public Output<MembershipEndpointGkeClusterGetArgs> getGkeCluster() {
+        return this.gkeCluster == null ? Output.empty() : this.gkeCluster;
     }
 
-    public MembershipEndpointGetArgs(@Nullable Input<MembershipEndpointGkeClusterGetArgs> gkeCluster) {
+    public MembershipEndpointGetArgs(@Nullable Output<MembershipEndpointGkeClusterGetArgs> gkeCluster) {
         this.gkeCluster = gkeCluster;
     }
 
     private MembershipEndpointGetArgs() {
-        this.gkeCluster = Input.empty();
+        this.gkeCluster = Output.empty();
     }
 
     public static Builder builder() {
@@ -43,7 +43,7 @@ public final class MembershipEndpointGetArgs extends io.pulumi.resources.Resourc
     }
 
     public static final class Builder {
-        private @Nullable Input<MembershipEndpointGkeClusterGetArgs> gkeCluster;
+        private @Nullable Output<MembershipEndpointGkeClusterGetArgs> gkeCluster;
 
         public Builder() {
     	      // Empty
@@ -54,13 +54,13 @@ public final class MembershipEndpointGetArgs extends io.pulumi.resources.Resourc
     	      this.gkeCluster = defaults.gkeCluster;
         }
 
-        public Builder gkeCluster(@Nullable Input<MembershipEndpointGkeClusterGetArgs> gkeCluster) {
+        public Builder gkeCluster(@Nullable Output<MembershipEndpointGkeClusterGetArgs> gkeCluster) {
             this.gkeCluster = gkeCluster;
             return this;
         }
 
         public Builder gkeCluster(@Nullable MembershipEndpointGkeClusterGetArgs gkeCluster) {
-            this.gkeCluster = Input.ofNullable(gkeCluster);
+            this.gkeCluster = Output.ofNullable(gkeCluster);
             return this;
         }
         public MembershipEndpointGetArgs build() {

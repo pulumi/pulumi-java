@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.lakeformation.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -20,10 +20,10 @@ public final class DataLakeSettingsCreateTableDefaultPermissionArgs extends io.p
      * 
      */
     @InputImport(name="permissions")
-      private final @Nullable Input<List<String>> permissions;
+      private final @Nullable Output<List<String>> permissions;
 
-    public Input<List<String>> getPermissions() {
-        return this.permissions == null ? Input.empty() : this.permissions;
+    public Output<List<String>> getPermissions() {
+        return this.permissions == null ? Output.empty() : this.permissions;
     }
 
     /**
@@ -31,22 +31,22 @@ public final class DataLakeSettingsCreateTableDefaultPermissionArgs extends io.p
      * 
      */
     @InputImport(name="principal")
-      private final @Nullable Input<String> principal;
+      private final @Nullable Output<String> principal;
 
-    public Input<String> getPrincipal() {
-        return this.principal == null ? Input.empty() : this.principal;
+    public Output<String> getPrincipal() {
+        return this.principal == null ? Output.empty() : this.principal;
     }
 
     public DataLakeSettingsCreateTableDefaultPermissionArgs(
-        @Nullable Input<List<String>> permissions,
-        @Nullable Input<String> principal) {
+        @Nullable Output<List<String>> permissions,
+        @Nullable Output<String> principal) {
         this.permissions = permissions;
         this.principal = principal;
     }
 
     private DataLakeSettingsCreateTableDefaultPermissionArgs() {
-        this.permissions = Input.empty();
-        this.principal = Input.empty();
+        this.permissions = Output.empty();
+        this.principal = Output.empty();
     }
 
     public static Builder builder() {
@@ -58,8 +58,8 @@ public final class DataLakeSettingsCreateTableDefaultPermissionArgs extends io.p
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> permissions;
-        private @Nullable Input<String> principal;
+        private @Nullable Output<List<String>> permissions;
+        private @Nullable Output<String> principal;
 
         public Builder() {
     	      // Empty
@@ -71,23 +71,23 @@ public final class DataLakeSettingsCreateTableDefaultPermissionArgs extends io.p
     	      this.principal = defaults.principal;
         }
 
-        public Builder permissions(@Nullable Input<List<String>> permissions) {
+        public Builder permissions(@Nullable Output<List<String>> permissions) {
             this.permissions = permissions;
             return this;
         }
 
         public Builder permissions(@Nullable List<String> permissions) {
-            this.permissions = Input.ofNullable(permissions);
+            this.permissions = Output.ofNullable(permissions);
             return this;
         }
 
-        public Builder principal(@Nullable Input<String> principal) {
+        public Builder principal(@Nullable Output<String> principal) {
             this.principal = principal;
             return this;
         }
 
         public Builder principal(@Nullable String principal) {
-            this.principal = Input.ofNullable(principal);
+            this.principal = Output.ofNullable(principal);
             return this;
         }
         public DataLakeSettingsCreateTableDefaultPermissionArgs build() {

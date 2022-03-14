@@ -6,7 +6,7 @@ package io.pulumi.azurenative.datafactory;
 import io.pulumi.azurenative.datafactory.inputs.FlowletArgs;
 import io.pulumi.azurenative.datafactory.inputs.MappingDataFlowArgs;
 import io.pulumi.azurenative.datafactory.inputs.WranglingDataFlowArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
@@ -23,10 +23,10 @@ public final class DataFlowArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dataFlowName")
-      private final @Nullable Input<String> dataFlowName;
+      private final @Nullable Output<String> dataFlowName;
 
-    public Input<String> getDataFlowName() {
-        return this.dataFlowName == null ? Input.empty() : this.dataFlowName;
+    public Output<String> getDataFlowName() {
+        return this.dataFlowName == null ? Output.empty() : this.dataFlowName;
     }
 
     /**
@@ -34,9 +34,9 @@ public final class DataFlowArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="factoryName", required=true)
-      private final Input<String> factoryName;
+      private final Output<String> factoryName;
 
-    public Input<String> getFactoryName() {
+    public Output<String> getFactoryName() {
         return this.factoryName;
     }
 
@@ -45,9 +45,9 @@ public final class DataFlowArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="properties", required=true)
-      private final Input<Object> properties;
+      private final Output<Object> properties;
 
-    public Input<Object> getProperties() {
+    public Output<Object> getProperties() {
         return this.properties;
     }
 
@@ -56,17 +56,17 @@ public final class DataFlowArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
     public DataFlowArgs(
-        @Nullable Input<String> dataFlowName,
-        Input<String> factoryName,
-        Input<Object> properties,
-        Input<String> resourceGroupName) {
+        @Nullable Output<String> dataFlowName,
+        Output<String> factoryName,
+        Output<Object> properties,
+        Output<String> resourceGroupName) {
         this.dataFlowName = dataFlowName;
         this.factoryName = Objects.requireNonNull(factoryName, "expected parameter 'factoryName' to be non-null");
         this.properties = Objects.requireNonNull(properties, "expected parameter 'properties' to be non-null");
@@ -74,10 +74,10 @@ public final class DataFlowArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DataFlowArgs() {
-        this.dataFlowName = Input.empty();
-        this.factoryName = Input.empty();
-        this.properties = Input.empty();
-        this.resourceGroupName = Input.empty();
+        this.dataFlowName = Output.empty();
+        this.factoryName = Output.empty();
+        this.properties = Output.empty();
+        this.resourceGroupName = Output.empty();
     }
 
     public static Builder builder() {
@@ -89,10 +89,10 @@ public final class DataFlowArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> dataFlowName;
-        private Input<String> factoryName;
-        private Input<Object> properties;
-        private Input<String> resourceGroupName;
+        private @Nullable Output<String> dataFlowName;
+        private Output<String> factoryName;
+        private Output<Object> properties;
+        private Output<String> resourceGroupName;
 
         public Builder() {
     	      // Empty
@@ -106,43 +106,43 @@ public final class DataFlowArgs extends io.pulumi.resources.ResourceArgs {
     	      this.resourceGroupName = defaults.resourceGroupName;
         }
 
-        public Builder dataFlowName(@Nullable Input<String> dataFlowName) {
+        public Builder dataFlowName(@Nullable Output<String> dataFlowName) {
             this.dataFlowName = dataFlowName;
             return this;
         }
 
         public Builder dataFlowName(@Nullable String dataFlowName) {
-            this.dataFlowName = Input.ofNullable(dataFlowName);
+            this.dataFlowName = Output.ofNullable(dataFlowName);
             return this;
         }
 
-        public Builder factoryName(Input<String> factoryName) {
+        public Builder factoryName(Output<String> factoryName) {
             this.factoryName = Objects.requireNonNull(factoryName);
             return this;
         }
 
         public Builder factoryName(String factoryName) {
-            this.factoryName = Input.of(Objects.requireNonNull(factoryName));
+            this.factoryName = Output.of(Objects.requireNonNull(factoryName));
             return this;
         }
 
-        public Builder properties(Input<Object> properties) {
+        public Builder properties(Output<Object> properties) {
             this.properties = Objects.requireNonNull(properties);
             return this;
         }
 
         public Builder properties(Object properties) {
-            this.properties = Input.of(Objects.requireNonNull(properties));
+            this.properties = Output.of(Objects.requireNonNull(properties));
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
         public DataFlowArgs build() {

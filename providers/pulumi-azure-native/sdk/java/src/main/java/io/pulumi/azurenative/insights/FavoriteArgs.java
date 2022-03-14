@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.insights;
 
 import io.pulumi.azurenative.insights.enums.FavoriteType;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -22,10 +22,10 @@ public final class FavoriteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="category")
-      private final @Nullable Input<String> category;
+      private final @Nullable Output<String> category;
 
-    public Input<String> getCategory() {
-        return this.category == null ? Input.empty() : this.category;
+    public Output<String> getCategory() {
+        return this.category == null ? Output.empty() : this.category;
     }
 
     /**
@@ -33,10 +33,10 @@ public final class FavoriteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="config")
-      private final @Nullable Input<String> config;
+      private final @Nullable Output<String> config;
 
-    public Input<String> getConfig() {
-        return this.config == null ? Input.empty() : this.config;
+    public Output<String> getConfig() {
+        return this.config == null ? Output.empty() : this.config;
     }
 
     /**
@@ -44,10 +44,10 @@ public final class FavoriteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="favoriteId")
-      private final @Nullable Input<String> favoriteId;
+      private final @Nullable Output<String> favoriteId;
 
-    public Input<String> getFavoriteId() {
-        return this.favoriteId == null ? Input.empty() : this.favoriteId;
+    public Output<String> getFavoriteId() {
+        return this.favoriteId == null ? Output.empty() : this.favoriteId;
     }
 
     /**
@@ -55,10 +55,10 @@ public final class FavoriteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="favoriteType")
-      private final @Nullable Input<FavoriteType> favoriteType;
+      private final @Nullable Output<FavoriteType> favoriteType;
 
-    public Input<FavoriteType> getFavoriteType() {
-        return this.favoriteType == null ? Input.empty() : this.favoriteType;
+    public Output<FavoriteType> getFavoriteType() {
+        return this.favoriteType == null ? Output.empty() : this.favoriteType;
     }
 
     /**
@@ -66,10 +66,10 @@ public final class FavoriteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="isGeneratedFromTemplate")
-      private final @Nullable Input<Boolean> isGeneratedFromTemplate;
+      private final @Nullable Output<Boolean> isGeneratedFromTemplate;
 
-    public Input<Boolean> getIsGeneratedFromTemplate() {
-        return this.isGeneratedFromTemplate == null ? Input.empty() : this.isGeneratedFromTemplate;
+    public Output<Boolean> getIsGeneratedFromTemplate() {
+        return this.isGeneratedFromTemplate == null ? Output.empty() : this.isGeneratedFromTemplate;
     }
 
     /**
@@ -77,10 +77,10 @@ public final class FavoriteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -88,9 +88,9 @@ public final class FavoriteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -99,9 +99,9 @@ public final class FavoriteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceName", required=true)
-      private final Input<String> resourceName;
+      private final Output<String> resourceName;
 
-    public Input<String> getPropResourceName() {
+    public Output<String> getPropResourceName() {
         return this.resourceName;
     }
 
@@ -110,10 +110,10 @@ public final class FavoriteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sourceType")
-      private final @Nullable Input<String> sourceType;
+      private final @Nullable Output<String> sourceType;
 
-    public Input<String> getSourceType() {
-        return this.sourceType == null ? Input.empty() : this.sourceType;
+    public Output<String> getSourceType() {
+        return this.sourceType == null ? Output.empty() : this.sourceType;
     }
 
     /**
@@ -121,10 +121,10 @@ public final class FavoriteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<List<String>> tags;
+      private final @Nullable Output<List<String>> tags;
 
-    public Input<List<String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<List<String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -132,24 +132,24 @@ public final class FavoriteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="version")
-      private final @Nullable Input<String> version;
+      private final @Nullable Output<String> version;
 
-    public Input<String> getVersion() {
-        return this.version == null ? Input.empty() : this.version;
+    public Output<String> getVersion() {
+        return this.version == null ? Output.empty() : this.version;
     }
 
     public FavoriteArgs(
-        @Nullable Input<String> category,
-        @Nullable Input<String> config,
-        @Nullable Input<String> favoriteId,
-        @Nullable Input<FavoriteType> favoriteType,
-        @Nullable Input<Boolean> isGeneratedFromTemplate,
-        @Nullable Input<String> name,
-        Input<String> resourceGroupName,
-        Input<String> resourceName,
-        @Nullable Input<String> sourceType,
-        @Nullable Input<List<String>> tags,
-        @Nullable Input<String> version) {
+        @Nullable Output<String> category,
+        @Nullable Output<String> config,
+        @Nullable Output<String> favoriteId,
+        @Nullable Output<FavoriteType> favoriteType,
+        @Nullable Output<Boolean> isGeneratedFromTemplate,
+        @Nullable Output<String> name,
+        Output<String> resourceGroupName,
+        Output<String> resourceName,
+        @Nullable Output<String> sourceType,
+        @Nullable Output<List<String>> tags,
+        @Nullable Output<String> version) {
         this.category = category;
         this.config = config;
         this.favoriteId = favoriteId;
@@ -164,17 +164,17 @@ public final class FavoriteArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private FavoriteArgs() {
-        this.category = Input.empty();
-        this.config = Input.empty();
-        this.favoriteId = Input.empty();
-        this.favoriteType = Input.empty();
-        this.isGeneratedFromTemplate = Input.empty();
-        this.name = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.resourceName = Input.empty();
-        this.sourceType = Input.empty();
-        this.tags = Input.empty();
-        this.version = Input.empty();
+        this.category = Output.empty();
+        this.config = Output.empty();
+        this.favoriteId = Output.empty();
+        this.favoriteType = Output.empty();
+        this.isGeneratedFromTemplate = Output.empty();
+        this.name = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.resourceName = Output.empty();
+        this.sourceType = Output.empty();
+        this.tags = Output.empty();
+        this.version = Output.empty();
     }
 
     public static Builder builder() {
@@ -186,17 +186,17 @@ public final class FavoriteArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> category;
-        private @Nullable Input<String> config;
-        private @Nullable Input<String> favoriteId;
-        private @Nullable Input<FavoriteType> favoriteType;
-        private @Nullable Input<Boolean> isGeneratedFromTemplate;
-        private @Nullable Input<String> name;
-        private Input<String> resourceGroupName;
-        private Input<String> resourceName;
-        private @Nullable Input<String> sourceType;
-        private @Nullable Input<List<String>> tags;
-        private @Nullable Input<String> version;
+        private @Nullable Output<String> category;
+        private @Nullable Output<String> config;
+        private @Nullable Output<String> favoriteId;
+        private @Nullable Output<FavoriteType> favoriteType;
+        private @Nullable Output<Boolean> isGeneratedFromTemplate;
+        private @Nullable Output<String> name;
+        private Output<String> resourceGroupName;
+        private Output<String> resourceName;
+        private @Nullable Output<String> sourceType;
+        private @Nullable Output<List<String>> tags;
+        private @Nullable Output<String> version;
 
         public Builder() {
     	      // Empty
@@ -217,113 +217,113 @@ public final class FavoriteArgs extends io.pulumi.resources.ResourceArgs {
     	      this.version = defaults.version;
         }
 
-        public Builder category(@Nullable Input<String> category) {
+        public Builder category(@Nullable Output<String> category) {
             this.category = category;
             return this;
         }
 
         public Builder category(@Nullable String category) {
-            this.category = Input.ofNullable(category);
+            this.category = Output.ofNullable(category);
             return this;
         }
 
-        public Builder config(@Nullable Input<String> config) {
+        public Builder config(@Nullable Output<String> config) {
             this.config = config;
             return this;
         }
 
         public Builder config(@Nullable String config) {
-            this.config = Input.ofNullable(config);
+            this.config = Output.ofNullable(config);
             return this;
         }
 
-        public Builder favoriteId(@Nullable Input<String> favoriteId) {
+        public Builder favoriteId(@Nullable Output<String> favoriteId) {
             this.favoriteId = favoriteId;
             return this;
         }
 
         public Builder favoriteId(@Nullable String favoriteId) {
-            this.favoriteId = Input.ofNullable(favoriteId);
+            this.favoriteId = Output.ofNullable(favoriteId);
             return this;
         }
 
-        public Builder favoriteType(@Nullable Input<FavoriteType> favoriteType) {
+        public Builder favoriteType(@Nullable Output<FavoriteType> favoriteType) {
             this.favoriteType = favoriteType;
             return this;
         }
 
         public Builder favoriteType(@Nullable FavoriteType favoriteType) {
-            this.favoriteType = Input.ofNullable(favoriteType);
+            this.favoriteType = Output.ofNullable(favoriteType);
             return this;
         }
 
-        public Builder isGeneratedFromTemplate(@Nullable Input<Boolean> isGeneratedFromTemplate) {
+        public Builder isGeneratedFromTemplate(@Nullable Output<Boolean> isGeneratedFromTemplate) {
             this.isGeneratedFromTemplate = isGeneratedFromTemplate;
             return this;
         }
 
         public Builder isGeneratedFromTemplate(@Nullable Boolean isGeneratedFromTemplate) {
-            this.isGeneratedFromTemplate = Input.ofNullable(isGeneratedFromTemplate);
+            this.isGeneratedFromTemplate = Output.ofNullable(isGeneratedFromTemplate);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder resourceName(Input<String> resourceName) {
+        public Builder resourceName(Output<String> resourceName) {
             this.resourceName = Objects.requireNonNull(resourceName);
             return this;
         }
 
         public Builder resourceName(String resourceName) {
-            this.resourceName = Input.of(Objects.requireNonNull(resourceName));
+            this.resourceName = Output.of(Objects.requireNonNull(resourceName));
             return this;
         }
 
-        public Builder sourceType(@Nullable Input<String> sourceType) {
+        public Builder sourceType(@Nullable Output<String> sourceType) {
             this.sourceType = sourceType;
             return this;
         }
 
         public Builder sourceType(@Nullable String sourceType) {
-            this.sourceType = Input.ofNullable(sourceType);
+            this.sourceType = Output.ofNullable(sourceType);
             return this;
         }
 
-        public Builder tags(@Nullable Input<List<String>> tags) {
+        public Builder tags(@Nullable Output<List<String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable List<String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder version(@Nullable Input<String> version) {
+        public Builder version(@Nullable Output<String> version) {
             this.version = version;
             return this;
         }
 
         public Builder version(@Nullable String version) {
-            this.version = Input.ofNullable(version);
+            this.version = Output.ofNullable(version);
             return this;
         }
         public FavoriteArgs build() {

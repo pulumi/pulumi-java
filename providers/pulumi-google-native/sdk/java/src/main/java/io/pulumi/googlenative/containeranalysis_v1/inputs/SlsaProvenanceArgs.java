@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.containeranalysis_v1.inputs.MaterialArgs;
 import io.pulumi.googlenative.containeranalysis_v1.inputs.SlsaBuilderArgs;
@@ -23,10 +23,10 @@ public final class SlsaProvenanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="builder")
-      private final @Nullable Input<SlsaBuilderArgs> builder;
+      private final @Nullable Output<SlsaBuilderArgs> builder;
 
-    public Input<SlsaBuilderArgs> getBuilder() {
-        return this.builder == null ? Input.empty() : this.builder;
+    public Output<SlsaBuilderArgs> getBuilder() {
+        return this.builder == null ? Output.empty() : this.builder;
     }
 
     /**
@@ -34,17 +34,17 @@ public final class SlsaProvenanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="materials")
-      private final @Nullable Input<List<MaterialArgs>> materials;
+      private final @Nullable Output<List<MaterialArgs>> materials;
 
-    public Input<List<MaterialArgs>> getMaterials() {
-        return this.materials == null ? Input.empty() : this.materials;
+    public Output<List<MaterialArgs>> getMaterials() {
+        return this.materials == null ? Output.empty() : this.materials;
     }
 
     @InputImport(name="metadata")
-      private final @Nullable Input<SlsaMetadataArgs> metadata;
+      private final @Nullable Output<SlsaMetadataArgs> metadata;
 
-    public Input<SlsaMetadataArgs> getMetadata() {
-        return this.metadata == null ? Input.empty() : this.metadata;
+    public Output<SlsaMetadataArgs> getMetadata() {
+        return this.metadata == null ? Output.empty() : this.metadata;
     }
 
     /**
@@ -52,17 +52,17 @@ public final class SlsaProvenanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="recipe")
-      private final @Nullable Input<SlsaRecipeArgs> recipe;
+      private final @Nullable Output<SlsaRecipeArgs> recipe;
 
-    public Input<SlsaRecipeArgs> getRecipe() {
-        return this.recipe == null ? Input.empty() : this.recipe;
+    public Output<SlsaRecipeArgs> getRecipe() {
+        return this.recipe == null ? Output.empty() : this.recipe;
     }
 
     public SlsaProvenanceArgs(
-        @Nullable Input<SlsaBuilderArgs> builder,
-        @Nullable Input<List<MaterialArgs>> materials,
-        @Nullable Input<SlsaMetadataArgs> metadata,
-        @Nullable Input<SlsaRecipeArgs> recipe) {
+        @Nullable Output<SlsaBuilderArgs> builder,
+        @Nullable Output<List<MaterialArgs>> materials,
+        @Nullable Output<SlsaMetadataArgs> metadata,
+        @Nullable Output<SlsaRecipeArgs> recipe) {
         this.builder = builder;
         this.materials = materials;
         this.metadata = metadata;
@@ -70,10 +70,10 @@ public final class SlsaProvenanceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private SlsaProvenanceArgs() {
-        this.builder = Input.empty();
-        this.materials = Input.empty();
-        this.metadata = Input.empty();
-        this.recipe = Input.empty();
+        this.builder = Output.empty();
+        this.materials = Output.empty();
+        this.metadata = Output.empty();
+        this.recipe = Output.empty();
     }
 
     public static Builder builder() {
@@ -85,10 +85,10 @@ public final class SlsaProvenanceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<SlsaBuilderArgs> builder;
-        private @Nullable Input<List<MaterialArgs>> materials;
-        private @Nullable Input<SlsaMetadataArgs> metadata;
-        private @Nullable Input<SlsaRecipeArgs> recipe;
+        private @Nullable Output<SlsaBuilderArgs> builder;
+        private @Nullable Output<List<MaterialArgs>> materials;
+        private @Nullable Output<SlsaMetadataArgs> metadata;
+        private @Nullable Output<SlsaRecipeArgs> recipe;
 
         public Builder() {
     	      // Empty
@@ -102,43 +102,43 @@ public final class SlsaProvenanceArgs extends io.pulumi.resources.ResourceArgs {
     	      this.recipe = defaults.recipe;
         }
 
-        public Builder builder(@Nullable Input<SlsaBuilderArgs> builder) {
+        public Builder builder(@Nullable Output<SlsaBuilderArgs> builder) {
             this.builder = builder;
             return this;
         }
 
         public Builder builder(@Nullable SlsaBuilderArgs builder) {
-            this.builder = Input.ofNullable(builder);
+            this.builder = Output.ofNullable(builder);
             return this;
         }
 
-        public Builder materials(@Nullable Input<List<MaterialArgs>> materials) {
+        public Builder materials(@Nullable Output<List<MaterialArgs>> materials) {
             this.materials = materials;
             return this;
         }
 
         public Builder materials(@Nullable List<MaterialArgs> materials) {
-            this.materials = Input.ofNullable(materials);
+            this.materials = Output.ofNullable(materials);
             return this;
         }
 
-        public Builder metadata(@Nullable Input<SlsaMetadataArgs> metadata) {
+        public Builder metadata(@Nullable Output<SlsaMetadataArgs> metadata) {
             this.metadata = metadata;
             return this;
         }
 
         public Builder metadata(@Nullable SlsaMetadataArgs metadata) {
-            this.metadata = Input.ofNullable(metadata);
+            this.metadata = Output.ofNullable(metadata);
             return this;
         }
 
-        public Builder recipe(@Nullable Input<SlsaRecipeArgs> recipe) {
+        public Builder recipe(@Nullable Output<SlsaRecipeArgs> recipe) {
             this.recipe = recipe;
             return this;
         }
 
         public Builder recipe(@Nullable SlsaRecipeArgs recipe) {
-            this.recipe = Input.ofNullable(recipe);
+            this.recipe = Output.ofNullable(recipe);
             return this;
         }
         public SlsaProvenanceArgs build() {

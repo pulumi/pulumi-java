@@ -5,7 +5,7 @@ package io.pulumi.awsnative.pinpoint.inputs;
 
 import io.pulumi.awsnative.pinpoint.inputs.InAppTemplateDefaultButtonConfigurationArgs;
 import io.pulumi.awsnative.pinpoint.inputs.InAppTemplateOverrideButtonConfigurationArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -16,38 +16,38 @@ public final class InAppTemplateButtonConfigArgs extends io.pulumi.resources.Res
     public static final InAppTemplateButtonConfigArgs Empty = new InAppTemplateButtonConfigArgs();
 
     @InputImport(name="android")
-      private final @Nullable Input<InAppTemplateOverrideButtonConfigurationArgs> android;
+      private final @Nullable Output<InAppTemplateOverrideButtonConfigurationArgs> android;
 
-    public Input<InAppTemplateOverrideButtonConfigurationArgs> getAndroid() {
-        return this.android == null ? Input.empty() : this.android;
+    public Output<InAppTemplateOverrideButtonConfigurationArgs> getAndroid() {
+        return this.android == null ? Output.empty() : this.android;
     }
 
     @InputImport(name="defaultConfig")
-      private final @Nullable Input<InAppTemplateDefaultButtonConfigurationArgs> defaultConfig;
+      private final @Nullable Output<InAppTemplateDefaultButtonConfigurationArgs> defaultConfig;
 
-    public Input<InAppTemplateDefaultButtonConfigurationArgs> getDefaultConfig() {
-        return this.defaultConfig == null ? Input.empty() : this.defaultConfig;
+    public Output<InAppTemplateDefaultButtonConfigurationArgs> getDefaultConfig() {
+        return this.defaultConfig == null ? Output.empty() : this.defaultConfig;
     }
 
     @InputImport(name="iOS")
-      private final @Nullable Input<InAppTemplateOverrideButtonConfigurationArgs> iOS;
+      private final @Nullable Output<InAppTemplateOverrideButtonConfigurationArgs> iOS;
 
-    public Input<InAppTemplateOverrideButtonConfigurationArgs> getIOS() {
-        return this.iOS == null ? Input.empty() : this.iOS;
+    public Output<InAppTemplateOverrideButtonConfigurationArgs> getIOS() {
+        return this.iOS == null ? Output.empty() : this.iOS;
     }
 
     @InputImport(name="web")
-      private final @Nullable Input<InAppTemplateOverrideButtonConfigurationArgs> web;
+      private final @Nullable Output<InAppTemplateOverrideButtonConfigurationArgs> web;
 
-    public Input<InAppTemplateOverrideButtonConfigurationArgs> getWeb() {
-        return this.web == null ? Input.empty() : this.web;
+    public Output<InAppTemplateOverrideButtonConfigurationArgs> getWeb() {
+        return this.web == null ? Output.empty() : this.web;
     }
 
     public InAppTemplateButtonConfigArgs(
-        @Nullable Input<InAppTemplateOverrideButtonConfigurationArgs> android,
-        @Nullable Input<InAppTemplateDefaultButtonConfigurationArgs> defaultConfig,
-        @Nullable Input<InAppTemplateOverrideButtonConfigurationArgs> iOS,
-        @Nullable Input<InAppTemplateOverrideButtonConfigurationArgs> web) {
+        @Nullable Output<InAppTemplateOverrideButtonConfigurationArgs> android,
+        @Nullable Output<InAppTemplateDefaultButtonConfigurationArgs> defaultConfig,
+        @Nullable Output<InAppTemplateOverrideButtonConfigurationArgs> iOS,
+        @Nullable Output<InAppTemplateOverrideButtonConfigurationArgs> web) {
         this.android = android;
         this.defaultConfig = defaultConfig;
         this.iOS = iOS;
@@ -55,10 +55,10 @@ public final class InAppTemplateButtonConfigArgs extends io.pulumi.resources.Res
     }
 
     private InAppTemplateButtonConfigArgs() {
-        this.android = Input.empty();
-        this.defaultConfig = Input.empty();
-        this.iOS = Input.empty();
-        this.web = Input.empty();
+        this.android = Output.empty();
+        this.defaultConfig = Output.empty();
+        this.iOS = Output.empty();
+        this.web = Output.empty();
     }
 
     public static Builder builder() {
@@ -70,10 +70,10 @@ public final class InAppTemplateButtonConfigArgs extends io.pulumi.resources.Res
     }
 
     public static final class Builder {
-        private @Nullable Input<InAppTemplateOverrideButtonConfigurationArgs> android;
-        private @Nullable Input<InAppTemplateDefaultButtonConfigurationArgs> defaultConfig;
-        private @Nullable Input<InAppTemplateOverrideButtonConfigurationArgs> iOS;
-        private @Nullable Input<InAppTemplateOverrideButtonConfigurationArgs> web;
+        private @Nullable Output<InAppTemplateOverrideButtonConfigurationArgs> android;
+        private @Nullable Output<InAppTemplateDefaultButtonConfigurationArgs> defaultConfig;
+        private @Nullable Output<InAppTemplateOverrideButtonConfigurationArgs> iOS;
+        private @Nullable Output<InAppTemplateOverrideButtonConfigurationArgs> web;
 
         public Builder() {
     	      // Empty
@@ -87,43 +87,43 @@ public final class InAppTemplateButtonConfigArgs extends io.pulumi.resources.Res
     	      this.web = defaults.web;
         }
 
-        public Builder android(@Nullable Input<InAppTemplateOverrideButtonConfigurationArgs> android) {
+        public Builder android(@Nullable Output<InAppTemplateOverrideButtonConfigurationArgs> android) {
             this.android = android;
             return this;
         }
 
         public Builder android(@Nullable InAppTemplateOverrideButtonConfigurationArgs android) {
-            this.android = Input.ofNullable(android);
+            this.android = Output.ofNullable(android);
             return this;
         }
 
-        public Builder defaultConfig(@Nullable Input<InAppTemplateDefaultButtonConfigurationArgs> defaultConfig) {
+        public Builder defaultConfig(@Nullable Output<InAppTemplateDefaultButtonConfigurationArgs> defaultConfig) {
             this.defaultConfig = defaultConfig;
             return this;
         }
 
         public Builder defaultConfig(@Nullable InAppTemplateDefaultButtonConfigurationArgs defaultConfig) {
-            this.defaultConfig = Input.ofNullable(defaultConfig);
+            this.defaultConfig = Output.ofNullable(defaultConfig);
             return this;
         }
 
-        public Builder iOS(@Nullable Input<InAppTemplateOverrideButtonConfigurationArgs> iOS) {
+        public Builder iOS(@Nullable Output<InAppTemplateOverrideButtonConfigurationArgs> iOS) {
             this.iOS = iOS;
             return this;
         }
 
         public Builder iOS(@Nullable InAppTemplateOverrideButtonConfigurationArgs iOS) {
-            this.iOS = Input.ofNullable(iOS);
+            this.iOS = Output.ofNullable(iOS);
             return this;
         }
 
-        public Builder web(@Nullable Input<InAppTemplateOverrideButtonConfigurationArgs> web) {
+        public Builder web(@Nullable Output<InAppTemplateOverrideButtonConfigurationArgs> web) {
             this.web = web;
             return this;
         }
 
         public Builder web(@Nullable InAppTemplateOverrideButtonConfigurationArgs web) {
-            this.web = Input.ofNullable(web);
+            this.web = Output.ofNullable(web);
             return this;
         }
         public InAppTemplateButtonConfigArgs build() {

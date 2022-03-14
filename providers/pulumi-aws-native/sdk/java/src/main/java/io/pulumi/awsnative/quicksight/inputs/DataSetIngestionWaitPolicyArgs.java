@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.quicksight.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Double;
@@ -25,10 +25,10 @@ public final class DataSetIngestionWaitPolicyArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="ingestionWaitTimeInHours")
-      private final @Nullable Input<Double> ingestionWaitTimeInHours;
+      private final @Nullable Output<Double> ingestionWaitTimeInHours;
 
-    public Input<Double> getIngestionWaitTimeInHours() {
-        return this.ingestionWaitTimeInHours == null ? Input.empty() : this.ingestionWaitTimeInHours;
+    public Output<Double> getIngestionWaitTimeInHours() {
+        return this.ingestionWaitTimeInHours == null ? Output.empty() : this.ingestionWaitTimeInHours;
     }
 
     /**
@@ -37,22 +37,22 @@ public final class DataSetIngestionWaitPolicyArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="waitForSpiceIngestion")
-      private final @Nullable Input<Boolean> waitForSpiceIngestion;
+      private final @Nullable Output<Boolean> waitForSpiceIngestion;
 
-    public Input<Boolean> getWaitForSpiceIngestion() {
-        return this.waitForSpiceIngestion == null ? Input.empty() : this.waitForSpiceIngestion;
+    public Output<Boolean> getWaitForSpiceIngestion() {
+        return this.waitForSpiceIngestion == null ? Output.empty() : this.waitForSpiceIngestion;
     }
 
     public DataSetIngestionWaitPolicyArgs(
-        @Nullable Input<Double> ingestionWaitTimeInHours,
-        @Nullable Input<Boolean> waitForSpiceIngestion) {
+        @Nullable Output<Double> ingestionWaitTimeInHours,
+        @Nullable Output<Boolean> waitForSpiceIngestion) {
         this.ingestionWaitTimeInHours = ingestionWaitTimeInHours;
         this.waitForSpiceIngestion = waitForSpiceIngestion;
     }
 
     private DataSetIngestionWaitPolicyArgs() {
-        this.ingestionWaitTimeInHours = Input.empty();
-        this.waitForSpiceIngestion = Input.empty();
+        this.ingestionWaitTimeInHours = Output.empty();
+        this.waitForSpiceIngestion = Output.empty();
     }
 
     public static Builder builder() {
@@ -64,8 +64,8 @@ public final class DataSetIngestionWaitPolicyArgs extends io.pulumi.resources.Re
     }
 
     public static final class Builder {
-        private @Nullable Input<Double> ingestionWaitTimeInHours;
-        private @Nullable Input<Boolean> waitForSpiceIngestion;
+        private @Nullable Output<Double> ingestionWaitTimeInHours;
+        private @Nullable Output<Boolean> waitForSpiceIngestion;
 
         public Builder() {
     	      // Empty
@@ -77,23 +77,23 @@ public final class DataSetIngestionWaitPolicyArgs extends io.pulumi.resources.Re
     	      this.waitForSpiceIngestion = defaults.waitForSpiceIngestion;
         }
 
-        public Builder ingestionWaitTimeInHours(@Nullable Input<Double> ingestionWaitTimeInHours) {
+        public Builder ingestionWaitTimeInHours(@Nullable Output<Double> ingestionWaitTimeInHours) {
             this.ingestionWaitTimeInHours = ingestionWaitTimeInHours;
             return this;
         }
 
         public Builder ingestionWaitTimeInHours(@Nullable Double ingestionWaitTimeInHours) {
-            this.ingestionWaitTimeInHours = Input.ofNullable(ingestionWaitTimeInHours);
+            this.ingestionWaitTimeInHours = Output.ofNullable(ingestionWaitTimeInHours);
             return this;
         }
 
-        public Builder waitForSpiceIngestion(@Nullable Input<Boolean> waitForSpiceIngestion) {
+        public Builder waitForSpiceIngestion(@Nullable Output<Boolean> waitForSpiceIngestion) {
             this.waitForSpiceIngestion = waitForSpiceIngestion;
             return this;
         }
 
         public Builder waitForSpiceIngestion(@Nullable Boolean waitForSpiceIngestion) {
-            this.waitForSpiceIngestion = Input.ofNullable(waitForSpiceIngestion);
+            this.waitForSpiceIngestion = Output.ofNullable(waitForSpiceIngestion);
             return this;
         }
         public DataSetIngestionWaitPolicyArgs build() {

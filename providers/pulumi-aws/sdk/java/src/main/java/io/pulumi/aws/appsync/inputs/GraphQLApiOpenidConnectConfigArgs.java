@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.appsync.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -20,10 +20,10 @@ public final class GraphQLApiOpenidConnectConfigArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="authTtl")
-      private final @Nullable Input<Integer> authTtl;
+      private final @Nullable Output<Integer> authTtl;
 
-    public Input<Integer> getAuthTtl() {
-        return this.authTtl == null ? Input.empty() : this.authTtl;
+    public Output<Integer> getAuthTtl() {
+        return this.authTtl == null ? Output.empty() : this.authTtl;
     }
 
     /**
@@ -31,10 +31,10 @@ public final class GraphQLApiOpenidConnectConfigArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="clientId")
-      private final @Nullable Input<String> clientId;
+      private final @Nullable Output<String> clientId;
 
-    public Input<String> getClientId() {
-        return this.clientId == null ? Input.empty() : this.clientId;
+    public Output<String> getClientId() {
+        return this.clientId == null ? Output.empty() : this.clientId;
     }
 
     /**
@@ -42,10 +42,10 @@ public final class GraphQLApiOpenidConnectConfigArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="iatTtl")
-      private final @Nullable Input<Integer> iatTtl;
+      private final @Nullable Output<Integer> iatTtl;
 
-    public Input<Integer> getIatTtl() {
-        return this.iatTtl == null ? Input.empty() : this.iatTtl;
+    public Output<Integer> getIatTtl() {
+        return this.iatTtl == null ? Output.empty() : this.iatTtl;
     }
 
     /**
@@ -53,17 +53,17 @@ public final class GraphQLApiOpenidConnectConfigArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="issuer", required=true)
-      private final Input<String> issuer;
+      private final Output<String> issuer;
 
-    public Input<String> getIssuer() {
+    public Output<String> getIssuer() {
         return this.issuer;
     }
 
     public GraphQLApiOpenidConnectConfigArgs(
-        @Nullable Input<Integer> authTtl,
-        @Nullable Input<String> clientId,
-        @Nullable Input<Integer> iatTtl,
-        Input<String> issuer) {
+        @Nullable Output<Integer> authTtl,
+        @Nullable Output<String> clientId,
+        @Nullable Output<Integer> iatTtl,
+        Output<String> issuer) {
         this.authTtl = authTtl;
         this.clientId = clientId;
         this.iatTtl = iatTtl;
@@ -71,10 +71,10 @@ public final class GraphQLApiOpenidConnectConfigArgs extends io.pulumi.resources
     }
 
     private GraphQLApiOpenidConnectConfigArgs() {
-        this.authTtl = Input.empty();
-        this.clientId = Input.empty();
-        this.iatTtl = Input.empty();
-        this.issuer = Input.empty();
+        this.authTtl = Output.empty();
+        this.clientId = Output.empty();
+        this.iatTtl = Output.empty();
+        this.issuer = Output.empty();
     }
 
     public static Builder builder() {
@@ -86,10 +86,10 @@ public final class GraphQLApiOpenidConnectConfigArgs extends io.pulumi.resources
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> authTtl;
-        private @Nullable Input<String> clientId;
-        private @Nullable Input<Integer> iatTtl;
-        private Input<String> issuer;
+        private @Nullable Output<Integer> authTtl;
+        private @Nullable Output<String> clientId;
+        private @Nullable Output<Integer> iatTtl;
+        private Output<String> issuer;
 
         public Builder() {
     	      // Empty
@@ -103,43 +103,43 @@ public final class GraphQLApiOpenidConnectConfigArgs extends io.pulumi.resources
     	      this.issuer = defaults.issuer;
         }
 
-        public Builder authTtl(@Nullable Input<Integer> authTtl) {
+        public Builder authTtl(@Nullable Output<Integer> authTtl) {
             this.authTtl = authTtl;
             return this;
         }
 
         public Builder authTtl(@Nullable Integer authTtl) {
-            this.authTtl = Input.ofNullable(authTtl);
+            this.authTtl = Output.ofNullable(authTtl);
             return this;
         }
 
-        public Builder clientId(@Nullable Input<String> clientId) {
+        public Builder clientId(@Nullable Output<String> clientId) {
             this.clientId = clientId;
             return this;
         }
 
         public Builder clientId(@Nullable String clientId) {
-            this.clientId = Input.ofNullable(clientId);
+            this.clientId = Output.ofNullable(clientId);
             return this;
         }
 
-        public Builder iatTtl(@Nullable Input<Integer> iatTtl) {
+        public Builder iatTtl(@Nullable Output<Integer> iatTtl) {
             this.iatTtl = iatTtl;
             return this;
         }
 
         public Builder iatTtl(@Nullable Integer iatTtl) {
-            this.iatTtl = Input.ofNullable(iatTtl);
+            this.iatTtl = Output.ofNullable(iatTtl);
             return this;
         }
 
-        public Builder issuer(Input<String> issuer) {
+        public Builder issuer(Output<String> issuer) {
             this.issuer = Objects.requireNonNull(issuer);
             return this;
         }
 
         public Builder issuer(String issuer) {
-            this.issuer = Input.of(Objects.requireNonNull(issuer));
+            this.issuer = Output.of(Objects.requireNonNull(issuer));
             return this;
         }
         public GraphQLApiOpenidConnectConfigArgs build() {

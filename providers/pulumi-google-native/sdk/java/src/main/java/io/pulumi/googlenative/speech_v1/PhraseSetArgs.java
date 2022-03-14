@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.speech_v1;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.speech_v1.inputs.PhraseArgs;
 import java.lang.Double;
@@ -22,17 +22,17 @@ public final class PhraseSetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="boost")
-      private final @Nullable Input<Double> boost;
+      private final @Nullable Output<Double> boost;
 
-    public Input<Double> getBoost() {
-        return this.boost == null ? Input.empty() : this.boost;
+    public Output<Double> getBoost() {
+        return this.boost == null ? Output.empty() : this.boost;
     }
 
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -40,10 +40,10 @@ public final class PhraseSetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -51,9 +51,9 @@ public final class PhraseSetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="phraseSetId", required=true)
-      private final Input<String> phraseSetId;
+      private final Output<String> phraseSetId;
 
-    public Input<String> getPhraseSetId() {
+    public Output<String> getPhraseSetId() {
         return this.phraseSetId;
     }
 
@@ -62,26 +62,26 @@ public final class PhraseSetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="phrases")
-      private final @Nullable Input<List<PhraseArgs>> phrases;
+      private final @Nullable Output<List<PhraseArgs>> phrases;
 
-    public Input<List<PhraseArgs>> getPhrases() {
-        return this.phrases == null ? Input.empty() : this.phrases;
+    public Output<List<PhraseArgs>> getPhrases() {
+        return this.phrases == null ? Output.empty() : this.phrases;
     }
 
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     public PhraseSetArgs(
-        @Nullable Input<Double> boost,
-        @Nullable Input<String> location,
-        @Nullable Input<String> name,
-        Input<String> phraseSetId,
-        @Nullable Input<List<PhraseArgs>> phrases,
-        @Nullable Input<String> project) {
+        @Nullable Output<Double> boost,
+        @Nullable Output<String> location,
+        @Nullable Output<String> name,
+        Output<String> phraseSetId,
+        @Nullable Output<List<PhraseArgs>> phrases,
+        @Nullable Output<String> project) {
         this.boost = boost;
         this.location = location;
         this.name = name;
@@ -91,12 +91,12 @@ public final class PhraseSetArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private PhraseSetArgs() {
-        this.boost = Input.empty();
-        this.location = Input.empty();
-        this.name = Input.empty();
-        this.phraseSetId = Input.empty();
-        this.phrases = Input.empty();
-        this.project = Input.empty();
+        this.boost = Output.empty();
+        this.location = Output.empty();
+        this.name = Output.empty();
+        this.phraseSetId = Output.empty();
+        this.phrases = Output.empty();
+        this.project = Output.empty();
     }
 
     public static Builder builder() {
@@ -108,12 +108,12 @@ public final class PhraseSetArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Double> boost;
-        private @Nullable Input<String> location;
-        private @Nullable Input<String> name;
-        private Input<String> phraseSetId;
-        private @Nullable Input<List<PhraseArgs>> phrases;
-        private @Nullable Input<String> project;
+        private @Nullable Output<Double> boost;
+        private @Nullable Output<String> location;
+        private @Nullable Output<String> name;
+        private Output<String> phraseSetId;
+        private @Nullable Output<List<PhraseArgs>> phrases;
+        private @Nullable Output<String> project;
 
         public Builder() {
     	      // Empty
@@ -129,63 +129,63 @@ public final class PhraseSetArgs extends io.pulumi.resources.ResourceArgs {
     	      this.project = defaults.project;
         }
 
-        public Builder boost(@Nullable Input<Double> boost) {
+        public Builder boost(@Nullable Output<Double> boost) {
             this.boost = boost;
             return this;
         }
 
         public Builder boost(@Nullable Double boost) {
-            this.boost = Input.ofNullable(boost);
+            this.boost = Output.ofNullable(boost);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder phraseSetId(Input<String> phraseSetId) {
+        public Builder phraseSetId(Output<String> phraseSetId) {
             this.phraseSetId = Objects.requireNonNull(phraseSetId);
             return this;
         }
 
         public Builder phraseSetId(String phraseSetId) {
-            this.phraseSetId = Input.of(Objects.requireNonNull(phraseSetId));
+            this.phraseSetId = Output.of(Objects.requireNonNull(phraseSetId));
             return this;
         }
 
-        public Builder phrases(@Nullable Input<List<PhraseArgs>> phrases) {
+        public Builder phrases(@Nullable Output<List<PhraseArgs>> phrases) {
             this.phrases = phrases;
             return this;
         }
 
         public Builder phrases(@Nullable List<PhraseArgs> phrases) {
-            this.phrases = Input.ofNullable(phrases);
+            this.phrases = Output.ofNullable(phrases);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
         public PhraseSetArgs build() {

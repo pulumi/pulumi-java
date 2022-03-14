@@ -5,7 +5,7 @@ package io.pulumi.awsnative.pinpoint;
 
 import io.pulumi.awsnative.pinpoint.enums.InAppTemplateLayout;
 import io.pulumi.awsnative.pinpoint.inputs.InAppTemplateInAppMessageContentArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
@@ -19,54 +19,54 @@ public final class InAppTemplateArgs extends io.pulumi.resources.ResourceArgs {
     public static final InAppTemplateArgs Empty = new InAppTemplateArgs();
 
     @InputImport(name="content")
-      private final @Nullable Input<List<InAppTemplateInAppMessageContentArgs>> content;
+      private final @Nullable Output<List<InAppTemplateInAppMessageContentArgs>> content;
 
-    public Input<List<InAppTemplateInAppMessageContentArgs>> getContent() {
-        return this.content == null ? Input.empty() : this.content;
+    public Output<List<InAppTemplateInAppMessageContentArgs>> getContent() {
+        return this.content == null ? Output.empty() : this.content;
     }
 
     @InputImport(name="customConfig")
-      private final @Nullable Input<Object> customConfig;
+      private final @Nullable Output<Object> customConfig;
 
-    public Input<Object> getCustomConfig() {
-        return this.customConfig == null ? Input.empty() : this.customConfig;
+    public Output<Object> getCustomConfig() {
+        return this.customConfig == null ? Output.empty() : this.customConfig;
     }
 
     @InputImport(name="layout")
-      private final @Nullable Input<InAppTemplateLayout> layout;
+      private final @Nullable Output<InAppTemplateLayout> layout;
 
-    public Input<InAppTemplateLayout> getLayout() {
-        return this.layout == null ? Input.empty() : this.layout;
+    public Output<InAppTemplateLayout> getLayout() {
+        return this.layout == null ? Output.empty() : this.layout;
     }
 
     @InputImport(name="tags")
-      private final @Nullable Input<Object> tags;
+      private final @Nullable Output<Object> tags;
 
-    public Input<Object> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Object> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     @InputImport(name="templateDescription")
-      private final @Nullable Input<String> templateDescription;
+      private final @Nullable Output<String> templateDescription;
 
-    public Input<String> getTemplateDescription() {
-        return this.templateDescription == null ? Input.empty() : this.templateDescription;
+    public Output<String> getTemplateDescription() {
+        return this.templateDescription == null ? Output.empty() : this.templateDescription;
     }
 
     @InputImport(name="templateName", required=true)
-      private final Input<String> templateName;
+      private final Output<String> templateName;
 
-    public Input<String> getTemplateName() {
+    public Output<String> getTemplateName() {
         return this.templateName;
     }
 
     public InAppTemplateArgs(
-        @Nullable Input<List<InAppTemplateInAppMessageContentArgs>> content,
-        @Nullable Input<Object> customConfig,
-        @Nullable Input<InAppTemplateLayout> layout,
-        @Nullable Input<Object> tags,
-        @Nullable Input<String> templateDescription,
-        Input<String> templateName) {
+        @Nullable Output<List<InAppTemplateInAppMessageContentArgs>> content,
+        @Nullable Output<Object> customConfig,
+        @Nullable Output<InAppTemplateLayout> layout,
+        @Nullable Output<Object> tags,
+        @Nullable Output<String> templateDescription,
+        Output<String> templateName) {
         this.content = content;
         this.customConfig = customConfig;
         this.layout = layout;
@@ -76,12 +76,12 @@ public final class InAppTemplateArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private InAppTemplateArgs() {
-        this.content = Input.empty();
-        this.customConfig = Input.empty();
-        this.layout = Input.empty();
-        this.tags = Input.empty();
-        this.templateDescription = Input.empty();
-        this.templateName = Input.empty();
+        this.content = Output.empty();
+        this.customConfig = Output.empty();
+        this.layout = Output.empty();
+        this.tags = Output.empty();
+        this.templateDescription = Output.empty();
+        this.templateName = Output.empty();
     }
 
     public static Builder builder() {
@@ -93,12 +93,12 @@ public final class InAppTemplateArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<List<InAppTemplateInAppMessageContentArgs>> content;
-        private @Nullable Input<Object> customConfig;
-        private @Nullable Input<InAppTemplateLayout> layout;
-        private @Nullable Input<Object> tags;
-        private @Nullable Input<String> templateDescription;
-        private Input<String> templateName;
+        private @Nullable Output<List<InAppTemplateInAppMessageContentArgs>> content;
+        private @Nullable Output<Object> customConfig;
+        private @Nullable Output<InAppTemplateLayout> layout;
+        private @Nullable Output<Object> tags;
+        private @Nullable Output<String> templateDescription;
+        private Output<String> templateName;
 
         public Builder() {
     	      // Empty
@@ -114,63 +114,63 @@ public final class InAppTemplateArgs extends io.pulumi.resources.ResourceArgs {
     	      this.templateName = defaults.templateName;
         }
 
-        public Builder content(@Nullable Input<List<InAppTemplateInAppMessageContentArgs>> content) {
+        public Builder content(@Nullable Output<List<InAppTemplateInAppMessageContentArgs>> content) {
             this.content = content;
             return this;
         }
 
         public Builder content(@Nullable List<InAppTemplateInAppMessageContentArgs> content) {
-            this.content = Input.ofNullable(content);
+            this.content = Output.ofNullable(content);
             return this;
         }
 
-        public Builder customConfig(@Nullable Input<Object> customConfig) {
+        public Builder customConfig(@Nullable Output<Object> customConfig) {
             this.customConfig = customConfig;
             return this;
         }
 
         public Builder customConfig(@Nullable Object customConfig) {
-            this.customConfig = Input.ofNullable(customConfig);
+            this.customConfig = Output.ofNullable(customConfig);
             return this;
         }
 
-        public Builder layout(@Nullable Input<InAppTemplateLayout> layout) {
+        public Builder layout(@Nullable Output<InAppTemplateLayout> layout) {
             this.layout = layout;
             return this;
         }
 
         public Builder layout(@Nullable InAppTemplateLayout layout) {
-            this.layout = Input.ofNullable(layout);
+            this.layout = Output.ofNullable(layout);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Object> tags) {
+        public Builder tags(@Nullable Output<Object> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Object tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder templateDescription(@Nullable Input<String> templateDescription) {
+        public Builder templateDescription(@Nullable Output<String> templateDescription) {
             this.templateDescription = templateDescription;
             return this;
         }
 
         public Builder templateDescription(@Nullable String templateDescription) {
-            this.templateDescription = Input.ofNullable(templateDescription);
+            this.templateDescription = Output.ofNullable(templateDescription);
             return this;
         }
 
-        public Builder templateName(Input<String> templateName) {
+        public Builder templateName(Output<String> templateName) {
             this.templateName = Objects.requireNonNull(templateName);
             return this;
         }
 
         public Builder templateName(String templateName) {
-            this.templateName = Input.of(Objects.requireNonNull(templateName));
+            this.templateName = Output.of(Objects.requireNonNull(templateName));
             return this;
         }
         public InAppTemplateArgs build() {

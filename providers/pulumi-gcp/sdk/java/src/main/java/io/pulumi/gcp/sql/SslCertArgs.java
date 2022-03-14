@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.sql;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -20,9 +20,9 @@ public final class SslCertArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="commonName", required=true)
-      private final Input<String> commonName;
+      private final Output<String> commonName;
 
-    public Input<String> getCommonName() {
+    public Output<String> getCommonName() {
         return this.commonName;
     }
 
@@ -32,9 +32,9 @@ public final class SslCertArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="instance", required=true)
-      private final Input<String> instance;
+      private final Output<String> instance;
 
-    public Input<String> getInstance() {
+    public Output<String> getInstance() {
         return this.instance;
     }
 
@@ -44,25 +44,25 @@ public final class SslCertArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     public SslCertArgs(
-        Input<String> commonName,
-        Input<String> instance,
-        @Nullable Input<String> project) {
+        Output<String> commonName,
+        Output<String> instance,
+        @Nullable Output<String> project) {
         this.commonName = Objects.requireNonNull(commonName, "expected parameter 'commonName' to be non-null");
         this.instance = Objects.requireNonNull(instance, "expected parameter 'instance' to be non-null");
         this.project = project;
     }
 
     private SslCertArgs() {
-        this.commonName = Input.empty();
-        this.instance = Input.empty();
-        this.project = Input.empty();
+        this.commonName = Output.empty();
+        this.instance = Output.empty();
+        this.project = Output.empty();
     }
 
     public static Builder builder() {
@@ -74,9 +74,9 @@ public final class SslCertArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> commonName;
-        private Input<String> instance;
-        private @Nullable Input<String> project;
+        private Output<String> commonName;
+        private Output<String> instance;
+        private @Nullable Output<String> project;
 
         public Builder() {
     	      // Empty
@@ -89,33 +89,33 @@ public final class SslCertArgs extends io.pulumi.resources.ResourceArgs {
     	      this.project = defaults.project;
         }
 
-        public Builder commonName(Input<String> commonName) {
+        public Builder commonName(Output<String> commonName) {
             this.commonName = Objects.requireNonNull(commonName);
             return this;
         }
 
         public Builder commonName(String commonName) {
-            this.commonName = Input.of(Objects.requireNonNull(commonName));
+            this.commonName = Output.of(Objects.requireNonNull(commonName));
             return this;
         }
 
-        public Builder instance(Input<String> instance) {
+        public Builder instance(Output<String> instance) {
             this.instance = Objects.requireNonNull(instance);
             return this;
         }
 
         public Builder instance(String instance) {
-            this.instance = Input.of(Objects.requireNonNull(instance));
+            this.instance = Output.of(Objects.requireNonNull(instance));
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
         public SslCertArgs build() {

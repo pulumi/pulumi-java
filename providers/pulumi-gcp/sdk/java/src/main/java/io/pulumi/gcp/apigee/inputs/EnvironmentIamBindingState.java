@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.apigee.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.apigee.inputs.EnvironmentIamBindingConditionGetArgs;
 import java.lang.String;
@@ -17,10 +17,10 @@ public final class EnvironmentIamBindingState extends io.pulumi.resources.Resour
     public static final EnvironmentIamBindingState Empty = new EnvironmentIamBindingState();
 
     @InputImport(name="condition")
-      private final @Nullable Input<EnvironmentIamBindingConditionGetArgs> condition;
+      private final @Nullable Output<EnvironmentIamBindingConditionGetArgs> condition;
 
-    public Input<EnvironmentIamBindingConditionGetArgs> getCondition() {
-        return this.condition == null ? Input.empty() : this.condition;
+    public Output<EnvironmentIamBindingConditionGetArgs> getCondition() {
+        return this.condition == null ? Output.empty() : this.condition;
     }
 
     /**
@@ -28,10 +28,10 @@ public final class EnvironmentIamBindingState extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="envId")
-      private final @Nullable Input<String> envId;
+      private final @Nullable Output<String> envId;
 
-    public Input<String> getEnvId() {
-        return this.envId == null ? Input.empty() : this.envId;
+    public Output<String> getEnvId() {
+        return this.envId == null ? Output.empty() : this.envId;
     }
 
     /**
@@ -39,24 +39,24 @@ public final class EnvironmentIamBindingState extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="etag")
-      private final @Nullable Input<String> etag;
+      private final @Nullable Output<String> etag;
 
-    public Input<String> getEtag() {
-        return this.etag == null ? Input.empty() : this.etag;
+    public Output<String> getEtag() {
+        return this.etag == null ? Output.empty() : this.etag;
     }
 
     @InputImport(name="members")
-      private final @Nullable Input<List<String>> members;
+      private final @Nullable Output<List<String>> members;
 
-    public Input<List<String>> getMembers() {
-        return this.members == null ? Input.empty() : this.members;
+    public Output<List<String>> getMembers() {
+        return this.members == null ? Output.empty() : this.members;
     }
 
     @InputImport(name="orgId")
-      private final @Nullable Input<String> orgId;
+      private final @Nullable Output<String> orgId;
 
-    public Input<String> getOrgId() {
-        return this.orgId == null ? Input.empty() : this.orgId;
+    public Output<String> getOrgId() {
+        return this.orgId == null ? Output.empty() : this.orgId;
     }
 
     /**
@@ -66,19 +66,19 @@ public final class EnvironmentIamBindingState extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="role")
-      private final @Nullable Input<String> role;
+      private final @Nullable Output<String> role;
 
-    public Input<String> getRole() {
-        return this.role == null ? Input.empty() : this.role;
+    public Output<String> getRole() {
+        return this.role == null ? Output.empty() : this.role;
     }
 
     public EnvironmentIamBindingState(
-        @Nullable Input<EnvironmentIamBindingConditionGetArgs> condition,
-        @Nullable Input<String> envId,
-        @Nullable Input<String> etag,
-        @Nullable Input<List<String>> members,
-        @Nullable Input<String> orgId,
-        @Nullable Input<String> role) {
+        @Nullable Output<EnvironmentIamBindingConditionGetArgs> condition,
+        @Nullable Output<String> envId,
+        @Nullable Output<String> etag,
+        @Nullable Output<List<String>> members,
+        @Nullable Output<String> orgId,
+        @Nullable Output<String> role) {
         this.condition = condition;
         this.envId = envId;
         this.etag = etag;
@@ -88,12 +88,12 @@ public final class EnvironmentIamBindingState extends io.pulumi.resources.Resour
     }
 
     private EnvironmentIamBindingState() {
-        this.condition = Input.empty();
-        this.envId = Input.empty();
-        this.etag = Input.empty();
-        this.members = Input.empty();
-        this.orgId = Input.empty();
-        this.role = Input.empty();
+        this.condition = Output.empty();
+        this.envId = Output.empty();
+        this.etag = Output.empty();
+        this.members = Output.empty();
+        this.orgId = Output.empty();
+        this.role = Output.empty();
     }
 
     public static Builder builder() {
@@ -105,12 +105,12 @@ public final class EnvironmentIamBindingState extends io.pulumi.resources.Resour
     }
 
     public static final class Builder {
-        private @Nullable Input<EnvironmentIamBindingConditionGetArgs> condition;
-        private @Nullable Input<String> envId;
-        private @Nullable Input<String> etag;
-        private @Nullable Input<List<String>> members;
-        private @Nullable Input<String> orgId;
-        private @Nullable Input<String> role;
+        private @Nullable Output<EnvironmentIamBindingConditionGetArgs> condition;
+        private @Nullable Output<String> envId;
+        private @Nullable Output<String> etag;
+        private @Nullable Output<List<String>> members;
+        private @Nullable Output<String> orgId;
+        private @Nullable Output<String> role;
 
         public Builder() {
     	      // Empty
@@ -126,63 +126,63 @@ public final class EnvironmentIamBindingState extends io.pulumi.resources.Resour
     	      this.role = defaults.role;
         }
 
-        public Builder condition(@Nullable Input<EnvironmentIamBindingConditionGetArgs> condition) {
+        public Builder condition(@Nullable Output<EnvironmentIamBindingConditionGetArgs> condition) {
             this.condition = condition;
             return this;
         }
 
         public Builder condition(@Nullable EnvironmentIamBindingConditionGetArgs condition) {
-            this.condition = Input.ofNullable(condition);
+            this.condition = Output.ofNullable(condition);
             return this;
         }
 
-        public Builder envId(@Nullable Input<String> envId) {
+        public Builder envId(@Nullable Output<String> envId) {
             this.envId = envId;
             return this;
         }
 
         public Builder envId(@Nullable String envId) {
-            this.envId = Input.ofNullable(envId);
+            this.envId = Output.ofNullable(envId);
             return this;
         }
 
-        public Builder etag(@Nullable Input<String> etag) {
+        public Builder etag(@Nullable Output<String> etag) {
             this.etag = etag;
             return this;
         }
 
         public Builder etag(@Nullable String etag) {
-            this.etag = Input.ofNullable(etag);
+            this.etag = Output.ofNullable(etag);
             return this;
         }
 
-        public Builder members(@Nullable Input<List<String>> members) {
+        public Builder members(@Nullable Output<List<String>> members) {
             this.members = members;
             return this;
         }
 
         public Builder members(@Nullable List<String> members) {
-            this.members = Input.ofNullable(members);
+            this.members = Output.ofNullable(members);
             return this;
         }
 
-        public Builder orgId(@Nullable Input<String> orgId) {
+        public Builder orgId(@Nullable Output<String> orgId) {
             this.orgId = orgId;
             return this;
         }
 
         public Builder orgId(@Nullable String orgId) {
-            this.orgId = Input.ofNullable(orgId);
+            this.orgId = Output.ofNullable(orgId);
             return this;
         }
 
-        public Builder role(@Nullable Input<String> role) {
+        public Builder role(@Nullable Output<String> role) {
             this.role = role;
             return this;
         }
 
         public Builder role(@Nullable String role) {
-            this.role = Input.ofNullable(role);
+            this.role = Output.ofNullable(role);
             return this;
         }
         public EnvironmentIamBindingState build() {

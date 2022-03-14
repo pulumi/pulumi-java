@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.testbase.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -23,9 +23,9 @@ public final class TargetOSInfoArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="osUpdateType", required=true)
-      private final Input<String> osUpdateType;
+      private final Output<String> osUpdateType;
 
-    public Input<String> getOsUpdateType() {
+    public Output<String> getOsUpdateType() {
         return this.osUpdateType;
     }
 
@@ -34,22 +34,22 @@ public final class TargetOSInfoArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="targetOSs", required=true)
-      private final Input<List<String>> targetOSs;
+      private final Output<List<String>> targetOSs;
 
-    public Input<List<String>> getTargetOSs() {
+    public Output<List<String>> getTargetOSs() {
         return this.targetOSs;
     }
 
     public TargetOSInfoArgs(
-        Input<String> osUpdateType,
-        Input<List<String>> targetOSs) {
+        Output<String> osUpdateType,
+        Output<List<String>> targetOSs) {
         this.osUpdateType = Objects.requireNonNull(osUpdateType, "expected parameter 'osUpdateType' to be non-null");
         this.targetOSs = Objects.requireNonNull(targetOSs, "expected parameter 'targetOSs' to be non-null");
     }
 
     private TargetOSInfoArgs() {
-        this.osUpdateType = Input.empty();
-        this.targetOSs = Input.empty();
+        this.osUpdateType = Output.empty();
+        this.targetOSs = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class TargetOSInfoArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> osUpdateType;
-        private Input<List<String>> targetOSs;
+        private Output<String> osUpdateType;
+        private Output<List<String>> targetOSs;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class TargetOSInfoArgs extends io.pulumi.resources.ResourceArgs {
     	      this.targetOSs = defaults.targetOSs;
         }
 
-        public Builder osUpdateType(Input<String> osUpdateType) {
+        public Builder osUpdateType(Output<String> osUpdateType) {
             this.osUpdateType = Objects.requireNonNull(osUpdateType);
             return this;
         }
 
         public Builder osUpdateType(String osUpdateType) {
-            this.osUpdateType = Input.of(Objects.requireNonNull(osUpdateType));
+            this.osUpdateType = Output.of(Objects.requireNonNull(osUpdateType));
             return this;
         }
 
-        public Builder targetOSs(Input<List<String>> targetOSs) {
+        public Builder targetOSs(Output<List<String>> targetOSs) {
             this.targetOSs = Objects.requireNonNull(targetOSs);
             return this;
         }
 
         public Builder targetOSs(List<String> targetOSs) {
-            this.targetOSs = Input.of(Objects.requireNonNull(targetOSs));
+            this.targetOSs = Output.of(Objects.requireNonNull(targetOSs));
             return this;
         }
         public TargetOSInfoArgs build() {

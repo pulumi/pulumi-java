@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.compute.inputs;
 
 import io.pulumi.azurenative.compute.inputs.CloudServiceVaultSecretGroupArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
@@ -24,18 +24,18 @@ public final class CloudServiceOsProfileArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="secrets")
-      private final @Nullable Input<List<CloudServiceVaultSecretGroupArgs>> secrets;
+      private final @Nullable Output<List<CloudServiceVaultSecretGroupArgs>> secrets;
 
-    public Input<List<CloudServiceVaultSecretGroupArgs>> getSecrets() {
-        return this.secrets == null ? Input.empty() : this.secrets;
+    public Output<List<CloudServiceVaultSecretGroupArgs>> getSecrets() {
+        return this.secrets == null ? Output.empty() : this.secrets;
     }
 
-    public CloudServiceOsProfileArgs(@Nullable Input<List<CloudServiceVaultSecretGroupArgs>> secrets) {
+    public CloudServiceOsProfileArgs(@Nullable Output<List<CloudServiceVaultSecretGroupArgs>> secrets) {
         this.secrets = secrets;
     }
 
     private CloudServiceOsProfileArgs() {
-        this.secrets = Input.empty();
+        this.secrets = Output.empty();
     }
 
     public static Builder builder() {
@@ -47,7 +47,7 @@ public final class CloudServiceOsProfileArgs extends io.pulumi.resources.Resourc
     }
 
     public static final class Builder {
-        private @Nullable Input<List<CloudServiceVaultSecretGroupArgs>> secrets;
+        private @Nullable Output<List<CloudServiceVaultSecretGroupArgs>> secrets;
 
         public Builder() {
     	      // Empty
@@ -58,13 +58,13 @@ public final class CloudServiceOsProfileArgs extends io.pulumi.resources.Resourc
     	      this.secrets = defaults.secrets;
         }
 
-        public Builder secrets(@Nullable Input<List<CloudServiceVaultSecretGroupArgs>> secrets) {
+        public Builder secrets(@Nullable Output<List<CloudServiceVaultSecretGroupArgs>> secrets) {
             this.secrets = secrets;
             return this;
         }
 
         public Builder secrets(@Nullable List<CloudServiceVaultSecretGroupArgs> secrets) {
-            this.secrets = Input.ofNullable(secrets);
+            this.secrets = Output.ofNullable(secrets);
             return this;
         }
         public CloudServiceOsProfileArgs build() {

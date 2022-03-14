@@ -4,7 +4,7 @@
 package io.pulumi.aws.apprunner.inputs;
 
 import io.pulumi.aws.apprunner.inputs.ServiceSourceConfigurationCodeRepositoryCodeConfigurationCodeConfigurationValuesArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -20,10 +20,10 @@ public final class ServiceSourceConfigurationCodeRepositoryCodeConfigurationArgs
      * 
      */
     @InputImport(name="codeConfigurationValues")
-      private final @Nullable Input<ServiceSourceConfigurationCodeRepositoryCodeConfigurationCodeConfigurationValuesArgs> codeConfigurationValues;
+      private final @Nullable Output<ServiceSourceConfigurationCodeRepositoryCodeConfigurationCodeConfigurationValuesArgs> codeConfigurationValues;
 
-    public Input<ServiceSourceConfigurationCodeRepositoryCodeConfigurationCodeConfigurationValuesArgs> getCodeConfigurationValues() {
-        return this.codeConfigurationValues == null ? Input.empty() : this.codeConfigurationValues;
+    public Output<ServiceSourceConfigurationCodeRepositoryCodeConfigurationCodeConfigurationValuesArgs> getCodeConfigurationValues() {
+        return this.codeConfigurationValues == null ? Output.empty() : this.codeConfigurationValues;
     }
 
     /**
@@ -31,22 +31,22 @@ public final class ServiceSourceConfigurationCodeRepositoryCodeConfigurationArgs
      * 
      */
     @InputImport(name="configurationSource", required=true)
-      private final Input<String> configurationSource;
+      private final Output<String> configurationSource;
 
-    public Input<String> getConfigurationSource() {
+    public Output<String> getConfigurationSource() {
         return this.configurationSource;
     }
 
     public ServiceSourceConfigurationCodeRepositoryCodeConfigurationArgs(
-        @Nullable Input<ServiceSourceConfigurationCodeRepositoryCodeConfigurationCodeConfigurationValuesArgs> codeConfigurationValues,
-        Input<String> configurationSource) {
+        @Nullable Output<ServiceSourceConfigurationCodeRepositoryCodeConfigurationCodeConfigurationValuesArgs> codeConfigurationValues,
+        Output<String> configurationSource) {
         this.codeConfigurationValues = codeConfigurationValues;
         this.configurationSource = Objects.requireNonNull(configurationSource, "expected parameter 'configurationSource' to be non-null");
     }
 
     private ServiceSourceConfigurationCodeRepositoryCodeConfigurationArgs() {
-        this.codeConfigurationValues = Input.empty();
-        this.configurationSource = Input.empty();
+        this.codeConfigurationValues = Output.empty();
+        this.configurationSource = Output.empty();
     }
 
     public static Builder builder() {
@@ -58,8 +58,8 @@ public final class ServiceSourceConfigurationCodeRepositoryCodeConfigurationArgs
     }
 
     public static final class Builder {
-        private @Nullable Input<ServiceSourceConfigurationCodeRepositoryCodeConfigurationCodeConfigurationValuesArgs> codeConfigurationValues;
-        private Input<String> configurationSource;
+        private @Nullable Output<ServiceSourceConfigurationCodeRepositoryCodeConfigurationCodeConfigurationValuesArgs> codeConfigurationValues;
+        private Output<String> configurationSource;
 
         public Builder() {
     	      // Empty
@@ -71,23 +71,23 @@ public final class ServiceSourceConfigurationCodeRepositoryCodeConfigurationArgs
     	      this.configurationSource = defaults.configurationSource;
         }
 
-        public Builder codeConfigurationValues(@Nullable Input<ServiceSourceConfigurationCodeRepositoryCodeConfigurationCodeConfigurationValuesArgs> codeConfigurationValues) {
+        public Builder codeConfigurationValues(@Nullable Output<ServiceSourceConfigurationCodeRepositoryCodeConfigurationCodeConfigurationValuesArgs> codeConfigurationValues) {
             this.codeConfigurationValues = codeConfigurationValues;
             return this;
         }
 
         public Builder codeConfigurationValues(@Nullable ServiceSourceConfigurationCodeRepositoryCodeConfigurationCodeConfigurationValuesArgs codeConfigurationValues) {
-            this.codeConfigurationValues = Input.ofNullable(codeConfigurationValues);
+            this.codeConfigurationValues = Output.ofNullable(codeConfigurationValues);
             return this;
         }
 
-        public Builder configurationSource(Input<String> configurationSource) {
+        public Builder configurationSource(Output<String> configurationSource) {
             this.configurationSource = Objects.requireNonNull(configurationSource);
             return this;
         }
 
         public Builder configurationSource(String configurationSource) {
-            this.configurationSource = Input.of(Objects.requireNonNull(configurationSource));
+            this.configurationSource = Output.of(Objects.requireNonNull(configurationSource));
             return this;
         }
         public ServiceSourceConfigurationCodeRepositoryCodeConfigurationArgs build() {

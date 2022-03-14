@@ -6,7 +6,6 @@ package io.pulumi.aws.ec2;
 import io.pulumi.aws.Utilities;
 import io.pulumi.aws.ec2.NetworkInterfaceAttachmentArgs;
 import io.pulumi.aws.ec2.inputs.NetworkInterfaceAttachmentState;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -131,14 +130,14 @@ public class NetworkInterfaceAttachment extends io.pulumi.resources.CustomResour
      * @param options A bag of options that control this resource's behavior.
      */
     public NetworkInterfaceAttachment(String name, NetworkInterfaceAttachmentArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:ec2/networkInterfaceAttachment:NetworkInterfaceAttachment", name, args == null ? NetworkInterfaceAttachmentArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws:ec2/networkInterfaceAttachment:NetworkInterfaceAttachment", name, args == null ? NetworkInterfaceAttachmentArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private NetworkInterfaceAttachment(String name, Input<String> id, @Nullable NetworkInterfaceAttachmentState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private NetworkInterfaceAttachment(String name, Output<String> id, @Nullable NetworkInterfaceAttachmentState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws:ec2/networkInterfaceAttachment:NetworkInterfaceAttachment", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -154,7 +153,7 @@ public class NetworkInterfaceAttachment extends io.pulumi.resources.CustomResour
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static NetworkInterfaceAttachment get(String name, Input<String> id, @Nullable NetworkInterfaceAttachmentState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static NetworkInterfaceAttachment get(String name, Output<String> id, @Nullable NetworkInterfaceAttachmentState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new NetworkInterfaceAttachment(name, id, state, options);
     }
 }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v2;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dialogflow_v2.enums.EntityTypeAutoExpansionMode;
 import io.pulumi.googlenative.dialogflow_v2.enums.EntityTypeKind;
@@ -24,10 +24,10 @@ public final class EntityTypeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="autoExpansionMode")
-      private final @Nullable Input<EntityTypeAutoExpansionMode> autoExpansionMode;
+      private final @Nullable Output<EntityTypeAutoExpansionMode> autoExpansionMode;
 
-    public Input<EntityTypeAutoExpansionMode> getAutoExpansionMode() {
-        return this.autoExpansionMode == null ? Input.empty() : this.autoExpansionMode;
+    public Output<EntityTypeAutoExpansionMode> getAutoExpansionMode() {
+        return this.autoExpansionMode == null ? Output.empty() : this.autoExpansionMode;
     }
 
     /**
@@ -35,9 +35,9 @@ public final class EntityTypeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName", required=true)
-      private final Input<String> displayName;
+      private final Output<String> displayName;
 
-    public Input<String> getDisplayName() {
+    public Output<String> getDisplayName() {
         return this.displayName;
     }
 
@@ -46,10 +46,10 @@ public final class EntityTypeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enableFuzzyExtraction")
-      private final @Nullable Input<Boolean> enableFuzzyExtraction;
+      private final @Nullable Output<Boolean> enableFuzzyExtraction;
 
-    public Input<Boolean> getEnableFuzzyExtraction() {
-        return this.enableFuzzyExtraction == null ? Input.empty() : this.enableFuzzyExtraction;
+    public Output<Boolean> getEnableFuzzyExtraction() {
+        return this.enableFuzzyExtraction == null ? Output.empty() : this.enableFuzzyExtraction;
     }
 
     /**
@@ -57,10 +57,10 @@ public final class EntityTypeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="entities")
-      private final @Nullable Input<List<GoogleCloudDialogflowV2EntityTypeEntityArgs>> entities;
+      private final @Nullable Output<List<GoogleCloudDialogflowV2EntityTypeEntityArgs>> entities;
 
-    public Input<List<GoogleCloudDialogflowV2EntityTypeEntityArgs>> getEntities() {
-        return this.entities == null ? Input.empty() : this.entities;
+    public Output<List<GoogleCloudDialogflowV2EntityTypeEntityArgs>> getEntities() {
+        return this.entities == null ? Output.empty() : this.entities;
     }
 
     /**
@@ -68,24 +68,24 @@ public final class EntityTypeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kind", required=true)
-      private final Input<EntityTypeKind> kind;
+      private final Output<EntityTypeKind> kind;
 
-    public Input<EntityTypeKind> getKind() {
+    public Output<EntityTypeKind> getKind() {
         return this.kind;
     }
 
     @InputImport(name="languageCode")
-      private final @Nullable Input<String> languageCode;
+      private final @Nullable Output<String> languageCode;
 
-    public Input<String> getLanguageCode() {
-        return this.languageCode == null ? Input.empty() : this.languageCode;
+    public Output<String> getLanguageCode() {
+        return this.languageCode == null ? Output.empty() : this.languageCode;
     }
 
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -93,29 +93,29 @@ public final class EntityTypeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     public EntityTypeArgs(
-        @Nullable Input<EntityTypeAutoExpansionMode> autoExpansionMode,
-        Input<String> displayName,
-        @Nullable Input<Boolean> enableFuzzyExtraction,
-        @Nullable Input<List<GoogleCloudDialogflowV2EntityTypeEntityArgs>> entities,
-        Input<EntityTypeKind> kind,
-        @Nullable Input<String> languageCode,
-        @Nullable Input<String> location,
-        @Nullable Input<String> name,
-        @Nullable Input<String> project) {
+        @Nullable Output<EntityTypeAutoExpansionMode> autoExpansionMode,
+        Output<String> displayName,
+        @Nullable Output<Boolean> enableFuzzyExtraction,
+        @Nullable Output<List<GoogleCloudDialogflowV2EntityTypeEntityArgs>> entities,
+        Output<EntityTypeKind> kind,
+        @Nullable Output<String> languageCode,
+        @Nullable Output<String> location,
+        @Nullable Output<String> name,
+        @Nullable Output<String> project) {
         this.autoExpansionMode = autoExpansionMode;
         this.displayName = Objects.requireNonNull(displayName, "expected parameter 'displayName' to be non-null");
         this.enableFuzzyExtraction = enableFuzzyExtraction;
@@ -128,15 +128,15 @@ public final class EntityTypeArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private EntityTypeArgs() {
-        this.autoExpansionMode = Input.empty();
-        this.displayName = Input.empty();
-        this.enableFuzzyExtraction = Input.empty();
-        this.entities = Input.empty();
-        this.kind = Input.empty();
-        this.languageCode = Input.empty();
-        this.location = Input.empty();
-        this.name = Input.empty();
-        this.project = Input.empty();
+        this.autoExpansionMode = Output.empty();
+        this.displayName = Output.empty();
+        this.enableFuzzyExtraction = Output.empty();
+        this.entities = Output.empty();
+        this.kind = Output.empty();
+        this.languageCode = Output.empty();
+        this.location = Output.empty();
+        this.name = Output.empty();
+        this.project = Output.empty();
     }
 
     public static Builder builder() {
@@ -148,15 +148,15 @@ public final class EntityTypeArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<EntityTypeAutoExpansionMode> autoExpansionMode;
-        private Input<String> displayName;
-        private @Nullable Input<Boolean> enableFuzzyExtraction;
-        private @Nullable Input<List<GoogleCloudDialogflowV2EntityTypeEntityArgs>> entities;
-        private Input<EntityTypeKind> kind;
-        private @Nullable Input<String> languageCode;
-        private @Nullable Input<String> location;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> project;
+        private @Nullable Output<EntityTypeAutoExpansionMode> autoExpansionMode;
+        private Output<String> displayName;
+        private @Nullable Output<Boolean> enableFuzzyExtraction;
+        private @Nullable Output<List<GoogleCloudDialogflowV2EntityTypeEntityArgs>> entities;
+        private Output<EntityTypeKind> kind;
+        private @Nullable Output<String> languageCode;
+        private @Nullable Output<String> location;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> project;
 
         public Builder() {
     	      // Empty
@@ -175,93 +175,93 @@ public final class EntityTypeArgs extends io.pulumi.resources.ResourceArgs {
     	      this.project = defaults.project;
         }
 
-        public Builder autoExpansionMode(@Nullable Input<EntityTypeAutoExpansionMode> autoExpansionMode) {
+        public Builder autoExpansionMode(@Nullable Output<EntityTypeAutoExpansionMode> autoExpansionMode) {
             this.autoExpansionMode = autoExpansionMode;
             return this;
         }
 
         public Builder autoExpansionMode(@Nullable EntityTypeAutoExpansionMode autoExpansionMode) {
-            this.autoExpansionMode = Input.ofNullable(autoExpansionMode);
+            this.autoExpansionMode = Output.ofNullable(autoExpansionMode);
             return this;
         }
 
-        public Builder displayName(Input<String> displayName) {
+        public Builder displayName(Output<String> displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
         public Builder displayName(String displayName) {
-            this.displayName = Input.of(Objects.requireNonNull(displayName));
+            this.displayName = Output.of(Objects.requireNonNull(displayName));
             return this;
         }
 
-        public Builder enableFuzzyExtraction(@Nullable Input<Boolean> enableFuzzyExtraction) {
+        public Builder enableFuzzyExtraction(@Nullable Output<Boolean> enableFuzzyExtraction) {
             this.enableFuzzyExtraction = enableFuzzyExtraction;
             return this;
         }
 
         public Builder enableFuzzyExtraction(@Nullable Boolean enableFuzzyExtraction) {
-            this.enableFuzzyExtraction = Input.ofNullable(enableFuzzyExtraction);
+            this.enableFuzzyExtraction = Output.ofNullable(enableFuzzyExtraction);
             return this;
         }
 
-        public Builder entities(@Nullable Input<List<GoogleCloudDialogflowV2EntityTypeEntityArgs>> entities) {
+        public Builder entities(@Nullable Output<List<GoogleCloudDialogflowV2EntityTypeEntityArgs>> entities) {
             this.entities = entities;
             return this;
         }
 
         public Builder entities(@Nullable List<GoogleCloudDialogflowV2EntityTypeEntityArgs> entities) {
-            this.entities = Input.ofNullable(entities);
+            this.entities = Output.ofNullable(entities);
             return this;
         }
 
-        public Builder kind(Input<EntityTypeKind> kind) {
+        public Builder kind(Output<EntityTypeKind> kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
         public Builder kind(EntityTypeKind kind) {
-            this.kind = Input.of(Objects.requireNonNull(kind));
+            this.kind = Output.of(Objects.requireNonNull(kind));
             return this;
         }
 
-        public Builder languageCode(@Nullable Input<String> languageCode) {
+        public Builder languageCode(@Nullable Output<String> languageCode) {
             this.languageCode = languageCode;
             return this;
         }
 
         public Builder languageCode(@Nullable String languageCode) {
-            this.languageCode = Input.ofNullable(languageCode);
+            this.languageCode = Output.ofNullable(languageCode);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
         public EntityTypeArgs build() {

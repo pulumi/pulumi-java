@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.kms.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.kms.inputs.KeyRingIAMMemberConditionGetArgs;
 import java.lang.String;
@@ -21,10 +21,10 @@ public final class KeyRingIAMMemberState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="condition")
-      private final @Nullable Input<KeyRingIAMMemberConditionGetArgs> condition;
+      private final @Nullable Output<KeyRingIAMMemberConditionGetArgs> condition;
 
-    public Input<KeyRingIAMMemberConditionGetArgs> getCondition() {
-        return this.condition == null ? Input.empty() : this.condition;
+    public Output<KeyRingIAMMemberConditionGetArgs> getCondition() {
+        return this.condition == null ? Output.empty() : this.condition;
     }
 
     /**
@@ -32,10 +32,10 @@ public final class KeyRingIAMMemberState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="etag")
-      private final @Nullable Input<String> etag;
+      private final @Nullable Output<String> etag;
 
-    public Input<String> getEtag() {
-        return this.etag == null ? Input.empty() : this.etag;
+    public Output<String> getEtag() {
+        return this.etag == null ? Output.empty() : this.etag;
     }
 
     /**
@@ -46,17 +46,17 @@ public final class KeyRingIAMMemberState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="keyRingId")
-      private final @Nullable Input<String> keyRingId;
+      private final @Nullable Output<String> keyRingId;
 
-    public Input<String> getKeyRingId() {
-        return this.keyRingId == null ? Input.empty() : this.keyRingId;
+    public Output<String> getKeyRingId() {
+        return this.keyRingId == null ? Output.empty() : this.keyRingId;
     }
 
     @InputImport(name="member")
-      private final @Nullable Input<String> member;
+      private final @Nullable Output<String> member;
 
-    public Input<String> getMember() {
-        return this.member == null ? Input.empty() : this.member;
+    public Output<String> getMember() {
+        return this.member == null ? Output.empty() : this.member;
     }
 
     /**
@@ -66,18 +66,18 @@ public final class KeyRingIAMMemberState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="role")
-      private final @Nullable Input<String> role;
+      private final @Nullable Output<String> role;
 
-    public Input<String> getRole() {
-        return this.role == null ? Input.empty() : this.role;
+    public Output<String> getRole() {
+        return this.role == null ? Output.empty() : this.role;
     }
 
     public KeyRingIAMMemberState(
-        @Nullable Input<KeyRingIAMMemberConditionGetArgs> condition,
-        @Nullable Input<String> etag,
-        @Nullable Input<String> keyRingId,
-        @Nullable Input<String> member,
-        @Nullable Input<String> role) {
+        @Nullable Output<KeyRingIAMMemberConditionGetArgs> condition,
+        @Nullable Output<String> etag,
+        @Nullable Output<String> keyRingId,
+        @Nullable Output<String> member,
+        @Nullable Output<String> role) {
         this.condition = condition;
         this.etag = etag;
         this.keyRingId = keyRingId;
@@ -86,11 +86,11 @@ public final class KeyRingIAMMemberState extends io.pulumi.resources.ResourceArg
     }
 
     private KeyRingIAMMemberState() {
-        this.condition = Input.empty();
-        this.etag = Input.empty();
-        this.keyRingId = Input.empty();
-        this.member = Input.empty();
-        this.role = Input.empty();
+        this.condition = Output.empty();
+        this.etag = Output.empty();
+        this.keyRingId = Output.empty();
+        this.member = Output.empty();
+        this.role = Output.empty();
     }
 
     public static Builder builder() {
@@ -102,11 +102,11 @@ public final class KeyRingIAMMemberState extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private @Nullable Input<KeyRingIAMMemberConditionGetArgs> condition;
-        private @Nullable Input<String> etag;
-        private @Nullable Input<String> keyRingId;
-        private @Nullable Input<String> member;
-        private @Nullable Input<String> role;
+        private @Nullable Output<KeyRingIAMMemberConditionGetArgs> condition;
+        private @Nullable Output<String> etag;
+        private @Nullable Output<String> keyRingId;
+        private @Nullable Output<String> member;
+        private @Nullable Output<String> role;
 
         public Builder() {
     	      // Empty
@@ -121,53 +121,53 @@ public final class KeyRingIAMMemberState extends io.pulumi.resources.ResourceArg
     	      this.role = defaults.role;
         }
 
-        public Builder condition(@Nullable Input<KeyRingIAMMemberConditionGetArgs> condition) {
+        public Builder condition(@Nullable Output<KeyRingIAMMemberConditionGetArgs> condition) {
             this.condition = condition;
             return this;
         }
 
         public Builder condition(@Nullable KeyRingIAMMemberConditionGetArgs condition) {
-            this.condition = Input.ofNullable(condition);
+            this.condition = Output.ofNullable(condition);
             return this;
         }
 
-        public Builder etag(@Nullable Input<String> etag) {
+        public Builder etag(@Nullable Output<String> etag) {
             this.etag = etag;
             return this;
         }
 
         public Builder etag(@Nullable String etag) {
-            this.etag = Input.ofNullable(etag);
+            this.etag = Output.ofNullable(etag);
             return this;
         }
 
-        public Builder keyRingId(@Nullable Input<String> keyRingId) {
+        public Builder keyRingId(@Nullable Output<String> keyRingId) {
             this.keyRingId = keyRingId;
             return this;
         }
 
         public Builder keyRingId(@Nullable String keyRingId) {
-            this.keyRingId = Input.ofNullable(keyRingId);
+            this.keyRingId = Output.ofNullable(keyRingId);
             return this;
         }
 
-        public Builder member(@Nullable Input<String> member) {
+        public Builder member(@Nullable Output<String> member) {
             this.member = member;
             return this;
         }
 
         public Builder member(@Nullable String member) {
-            this.member = Input.ofNullable(member);
+            this.member = Output.ofNullable(member);
             return this;
         }
 
-        public Builder role(@Nullable Input<String> role) {
+        public Builder role(@Nullable Output<String> role) {
             this.role = role;
             return this;
         }
 
         public Builder role(@Nullable String role) {
-            this.role = Input.ofNullable(role);
+            this.role = Output.ofNullable(role);
             return this;
         }
         public KeyRingIAMMemberState build() {

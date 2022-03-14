@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.networkservices_v1beta1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -22,9 +22,9 @@ public final class MetadataLabelsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labelName", required=true)
-      private final Input<String> labelName;
+      private final Output<String> labelName;
 
-    public Input<String> getLabelName() {
+    public Output<String> getLabelName() {
         return this.labelName;
     }
 
@@ -33,22 +33,22 @@ public final class MetadataLabelsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labelValue", required=true)
-      private final Input<String> labelValue;
+      private final Output<String> labelValue;
 
-    public Input<String> getLabelValue() {
+    public Output<String> getLabelValue() {
         return this.labelValue;
     }
 
     public MetadataLabelsArgs(
-        Input<String> labelName,
-        Input<String> labelValue) {
+        Output<String> labelName,
+        Output<String> labelValue) {
         this.labelName = Objects.requireNonNull(labelName, "expected parameter 'labelName' to be non-null");
         this.labelValue = Objects.requireNonNull(labelValue, "expected parameter 'labelValue' to be non-null");
     }
 
     private MetadataLabelsArgs() {
-        this.labelName = Input.empty();
-        this.labelValue = Input.empty();
+        this.labelName = Output.empty();
+        this.labelValue = Output.empty();
     }
 
     public static Builder builder() {
@@ -60,8 +60,8 @@ public final class MetadataLabelsArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> labelName;
-        private Input<String> labelValue;
+        private Output<String> labelName;
+        private Output<String> labelValue;
 
         public Builder() {
     	      // Empty
@@ -73,23 +73,23 @@ public final class MetadataLabelsArgs extends io.pulumi.resources.ResourceArgs {
     	      this.labelValue = defaults.labelValue;
         }
 
-        public Builder labelName(Input<String> labelName) {
+        public Builder labelName(Output<String> labelName) {
             this.labelName = Objects.requireNonNull(labelName);
             return this;
         }
 
         public Builder labelName(String labelName) {
-            this.labelName = Input.of(Objects.requireNonNull(labelName));
+            this.labelName = Output.of(Objects.requireNonNull(labelName));
             return this;
         }
 
-        public Builder labelValue(Input<String> labelValue) {
+        public Builder labelValue(Output<String> labelValue) {
             this.labelValue = Objects.requireNonNull(labelValue);
             return this;
         }
 
         public Builder labelValue(String labelValue) {
-            this.labelValue = Input.of(Objects.requireNonNull(labelValue));
+            this.labelValue = Output.of(Objects.requireNonNull(labelValue));
             return this;
         }
         public MetadataLabelsArgs build() {

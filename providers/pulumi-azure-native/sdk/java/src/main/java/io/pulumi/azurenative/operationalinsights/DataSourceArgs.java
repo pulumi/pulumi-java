@@ -5,7 +5,7 @@ package io.pulumi.azurenative.operationalinsights;
 
 import io.pulumi.azurenative.operationalinsights.enums.DataSourceKind;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
@@ -23,10 +23,10 @@ public final class DataSourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dataSourceName")
-      private final @Nullable Input<String> dataSourceName;
+      private final @Nullable Output<String> dataSourceName;
 
-    public Input<String> getDataSourceName() {
-        return this.dataSourceName == null ? Input.empty() : this.dataSourceName;
+    public Output<String> getDataSourceName() {
+        return this.dataSourceName == null ? Output.empty() : this.dataSourceName;
     }
 
     /**
@@ -34,9 +34,9 @@ public final class DataSourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kind", required=true)
-      private final Input<Either<String,DataSourceKind>> kind;
+      private final Output<Either<String,DataSourceKind>> kind;
 
-    public Input<Either<String,DataSourceKind>> getKind() {
+    public Output<Either<String,DataSourceKind>> getKind() {
         return this.kind;
     }
 
@@ -45,9 +45,9 @@ public final class DataSourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="properties", required=true)
-      private final Input<Object> properties;
+      private final Output<Object> properties;
 
-    public Input<Object> getProperties() {
+    public Output<Object> getProperties() {
         return this.properties;
     }
 
@@ -56,9 +56,9 @@ public final class DataSourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -67,10 +67,10 @@ public final class DataSourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -78,19 +78,19 @@ public final class DataSourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="workspaceName", required=true)
-      private final Input<String> workspaceName;
+      private final Output<String> workspaceName;
 
-    public Input<String> getWorkspaceName() {
+    public Output<String> getWorkspaceName() {
         return this.workspaceName;
     }
 
     public DataSourceArgs(
-        @Nullable Input<String> dataSourceName,
-        Input<Either<String,DataSourceKind>> kind,
-        Input<Object> properties,
-        Input<String> resourceGroupName,
-        @Nullable Input<Map<String,String>> tags,
-        Input<String> workspaceName) {
+        @Nullable Output<String> dataSourceName,
+        Output<Either<String,DataSourceKind>> kind,
+        Output<Object> properties,
+        Output<String> resourceGroupName,
+        @Nullable Output<Map<String,String>> tags,
+        Output<String> workspaceName) {
         this.dataSourceName = dataSourceName;
         this.kind = Objects.requireNonNull(kind, "expected parameter 'kind' to be non-null");
         this.properties = Objects.requireNonNull(properties, "expected parameter 'properties' to be non-null");
@@ -100,12 +100,12 @@ public final class DataSourceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DataSourceArgs() {
-        this.dataSourceName = Input.empty();
-        this.kind = Input.empty();
-        this.properties = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.tags = Input.empty();
-        this.workspaceName = Input.empty();
+        this.dataSourceName = Output.empty();
+        this.kind = Output.empty();
+        this.properties = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.tags = Output.empty();
+        this.workspaceName = Output.empty();
     }
 
     public static Builder builder() {
@@ -117,12 +117,12 @@ public final class DataSourceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> dataSourceName;
-        private Input<Either<String,DataSourceKind>> kind;
-        private Input<Object> properties;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<Map<String,String>> tags;
-        private Input<String> workspaceName;
+        private @Nullable Output<String> dataSourceName;
+        private Output<Either<String,DataSourceKind>> kind;
+        private Output<Object> properties;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<Map<String,String>> tags;
+        private Output<String> workspaceName;
 
         public Builder() {
     	      // Empty
@@ -138,63 +138,63 @@ public final class DataSourceArgs extends io.pulumi.resources.ResourceArgs {
     	      this.workspaceName = defaults.workspaceName;
         }
 
-        public Builder dataSourceName(@Nullable Input<String> dataSourceName) {
+        public Builder dataSourceName(@Nullable Output<String> dataSourceName) {
             this.dataSourceName = dataSourceName;
             return this;
         }
 
         public Builder dataSourceName(@Nullable String dataSourceName) {
-            this.dataSourceName = Input.ofNullable(dataSourceName);
+            this.dataSourceName = Output.ofNullable(dataSourceName);
             return this;
         }
 
-        public Builder kind(Input<Either<String,DataSourceKind>> kind) {
+        public Builder kind(Output<Either<String,DataSourceKind>> kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
         public Builder kind(Either<String,DataSourceKind> kind) {
-            this.kind = Input.of(Objects.requireNonNull(kind));
+            this.kind = Output.of(Objects.requireNonNull(kind));
             return this;
         }
 
-        public Builder properties(Input<Object> properties) {
+        public Builder properties(Output<Object> properties) {
             this.properties = Objects.requireNonNull(properties);
             return this;
         }
 
         public Builder properties(Object properties) {
-            this.properties = Input.of(Objects.requireNonNull(properties));
+            this.properties = Output.of(Objects.requireNonNull(properties));
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder workspaceName(Input<String> workspaceName) {
+        public Builder workspaceName(Output<String> workspaceName) {
             this.workspaceName = Objects.requireNonNull(workspaceName);
             return this;
         }
 
         public Builder workspaceName(String workspaceName) {
-            this.workspaceName = Input.of(Objects.requireNonNull(workspaceName));
+            this.workspaceName = Output.of(Objects.requireNonNull(workspaceName));
             return this;
         }
         public DataSourceArgs build() {

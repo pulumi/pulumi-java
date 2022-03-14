@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.ssm.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class PatchGroupState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="baselineId")
-      private final @Nullable Input<String> baselineId;
+      private final @Nullable Output<String> baselineId;
 
-    public Input<String> getBaselineId() {
-        return this.baselineId == null ? Input.empty() : this.baselineId;
+    public Output<String> getBaselineId() {
+        return this.baselineId == null ? Output.empty() : this.baselineId;
     }
 
     /**
@@ -30,22 +30,22 @@ public final class PatchGroupState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="patchGroup")
-      private final @Nullable Input<String> patchGroup;
+      private final @Nullable Output<String> patchGroup;
 
-    public Input<String> getPatchGroup() {
-        return this.patchGroup == null ? Input.empty() : this.patchGroup;
+    public Output<String> getPatchGroup() {
+        return this.patchGroup == null ? Output.empty() : this.patchGroup;
     }
 
     public PatchGroupState(
-        @Nullable Input<String> baselineId,
-        @Nullable Input<String> patchGroup) {
+        @Nullable Output<String> baselineId,
+        @Nullable Output<String> patchGroup) {
         this.baselineId = baselineId;
         this.patchGroup = patchGroup;
     }
 
     private PatchGroupState() {
-        this.baselineId = Input.empty();
-        this.patchGroup = Input.empty();
+        this.baselineId = Output.empty();
+        this.patchGroup = Output.empty();
     }
 
     public static Builder builder() {
@@ -57,8 +57,8 @@ public final class PatchGroupState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> baselineId;
-        private @Nullable Input<String> patchGroup;
+        private @Nullable Output<String> baselineId;
+        private @Nullable Output<String> patchGroup;
 
         public Builder() {
     	      // Empty
@@ -70,23 +70,23 @@ public final class PatchGroupState extends io.pulumi.resources.ResourceArgs {
     	      this.patchGroup = defaults.patchGroup;
         }
 
-        public Builder baselineId(@Nullable Input<String> baselineId) {
+        public Builder baselineId(@Nullable Output<String> baselineId) {
             this.baselineId = baselineId;
             return this;
         }
 
         public Builder baselineId(@Nullable String baselineId) {
-            this.baselineId = Input.ofNullable(baselineId);
+            this.baselineId = Output.ofNullable(baselineId);
             return this;
         }
 
-        public Builder patchGroup(@Nullable Input<String> patchGroup) {
+        public Builder patchGroup(@Nullable Output<String> patchGroup) {
             this.patchGroup = patchGroup;
             return this;
         }
 
         public Builder patchGroup(@Nullable String patchGroup) {
-            this.patchGroup = Input.ofNullable(patchGroup);
+            this.patchGroup = Output.ofNullable(patchGroup);
             return this;
         }
         public PatchGroupState build() {

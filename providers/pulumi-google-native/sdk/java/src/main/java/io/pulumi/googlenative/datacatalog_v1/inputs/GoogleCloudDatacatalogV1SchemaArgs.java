@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.datacatalog_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.datacatalog_v1.inputs.GoogleCloudDatacatalogV1ColumnSchemaArgs;
 import java.util.List;
@@ -24,18 +24,18 @@ public final class GoogleCloudDatacatalogV1SchemaArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="columns")
-      private final @Nullable Input<List<GoogleCloudDatacatalogV1ColumnSchemaArgs>> columns;
+      private final @Nullable Output<List<GoogleCloudDatacatalogV1ColumnSchemaArgs>> columns;
 
-    public Input<List<GoogleCloudDatacatalogV1ColumnSchemaArgs>> getColumns() {
-        return this.columns == null ? Input.empty() : this.columns;
+    public Output<List<GoogleCloudDatacatalogV1ColumnSchemaArgs>> getColumns() {
+        return this.columns == null ? Output.empty() : this.columns;
     }
 
-    public GoogleCloudDatacatalogV1SchemaArgs(@Nullable Input<List<GoogleCloudDatacatalogV1ColumnSchemaArgs>> columns) {
+    public GoogleCloudDatacatalogV1SchemaArgs(@Nullable Output<List<GoogleCloudDatacatalogV1ColumnSchemaArgs>> columns) {
         this.columns = columns;
     }
 
     private GoogleCloudDatacatalogV1SchemaArgs() {
-        this.columns = Input.empty();
+        this.columns = Output.empty();
     }
 
     public static Builder builder() {
@@ -47,7 +47,7 @@ public final class GoogleCloudDatacatalogV1SchemaArgs extends io.pulumi.resource
     }
 
     public static final class Builder {
-        private @Nullable Input<List<GoogleCloudDatacatalogV1ColumnSchemaArgs>> columns;
+        private @Nullable Output<List<GoogleCloudDatacatalogV1ColumnSchemaArgs>> columns;
 
         public Builder() {
     	      // Empty
@@ -58,13 +58,13 @@ public final class GoogleCloudDatacatalogV1SchemaArgs extends io.pulumi.resource
     	      this.columns = defaults.columns;
         }
 
-        public Builder columns(@Nullable Input<List<GoogleCloudDatacatalogV1ColumnSchemaArgs>> columns) {
+        public Builder columns(@Nullable Output<List<GoogleCloudDatacatalogV1ColumnSchemaArgs>> columns) {
             this.columns = columns;
             return this;
         }
 
         public Builder columns(@Nullable List<GoogleCloudDatacatalogV1ColumnSchemaArgs> columns) {
-            this.columns = Input.ofNullable(columns);
+            this.columns = Output.ofNullable(columns);
             return this;
         }
         public GoogleCloudDatacatalogV1SchemaArgs build() {

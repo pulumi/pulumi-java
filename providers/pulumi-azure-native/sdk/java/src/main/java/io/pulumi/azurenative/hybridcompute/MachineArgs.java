@@ -5,7 +5,7 @@ package io.pulumi.azurenative.hybridcompute;
 
 import io.pulumi.azurenative.hybridcompute.inputs.LocationDataArgs;
 import io.pulumi.azurenative.hybridcompute.inputs.MachineIdentityArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -22,17 +22,17 @@ public final class MachineArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="clientPublicKey")
-      private final @Nullable Input<String> clientPublicKey;
+      private final @Nullable Output<String> clientPublicKey;
 
-    public Input<String> getClientPublicKey() {
-        return this.clientPublicKey == null ? Input.empty() : this.clientPublicKey;
+    public Output<String> getClientPublicKey() {
+        return this.clientPublicKey == null ? Output.empty() : this.clientPublicKey;
     }
 
     @InputImport(name="identity")
-      private final @Nullable Input<MachineIdentityArgs> identity;
+      private final @Nullable Output<MachineIdentityArgs> identity;
 
-    public Input<MachineIdentityArgs> getIdentity() {
-        return this.identity == null ? Input.empty() : this.identity;
+    public Output<MachineIdentityArgs> getIdentity() {
+        return this.identity == null ? Output.empty() : this.identity;
     }
 
     /**
@@ -40,10 +40,10 @@ public final class MachineArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -51,10 +51,10 @@ public final class MachineArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="locationData")
-      private final @Nullable Input<LocationDataArgs> locationData;
+      private final @Nullable Output<LocationDataArgs> locationData;
 
-    public Input<LocationDataArgs> getLocationData() {
-        return this.locationData == null ? Input.empty() : this.locationData;
+    public Output<LocationDataArgs> getLocationData() {
+        return this.locationData == null ? Output.empty() : this.locationData;
     }
 
     /**
@@ -62,10 +62,10 @@ public final class MachineArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -73,9 +73,9 @@ public final class MachineArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -84,10 +84,10 @@ public final class MachineArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -95,21 +95,21 @@ public final class MachineArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="vmId")
-      private final @Nullable Input<String> vmId;
+      private final @Nullable Output<String> vmId;
 
-    public Input<String> getVmId() {
-        return this.vmId == null ? Input.empty() : this.vmId;
+    public Output<String> getVmId() {
+        return this.vmId == null ? Output.empty() : this.vmId;
     }
 
     public MachineArgs(
-        @Nullable Input<String> clientPublicKey,
-        @Nullable Input<MachineIdentityArgs> identity,
-        @Nullable Input<String> location,
-        @Nullable Input<LocationDataArgs> locationData,
-        @Nullable Input<String> name,
-        Input<String> resourceGroupName,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<String> vmId) {
+        @Nullable Output<String> clientPublicKey,
+        @Nullable Output<MachineIdentityArgs> identity,
+        @Nullable Output<String> location,
+        @Nullable Output<LocationDataArgs> locationData,
+        @Nullable Output<String> name,
+        Output<String> resourceGroupName,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<String> vmId) {
         this.clientPublicKey = clientPublicKey;
         this.identity = identity;
         this.location = location;
@@ -121,14 +121,14 @@ public final class MachineArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private MachineArgs() {
-        this.clientPublicKey = Input.empty();
-        this.identity = Input.empty();
-        this.location = Input.empty();
-        this.locationData = Input.empty();
-        this.name = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.tags = Input.empty();
-        this.vmId = Input.empty();
+        this.clientPublicKey = Output.empty();
+        this.identity = Output.empty();
+        this.location = Output.empty();
+        this.locationData = Output.empty();
+        this.name = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.tags = Output.empty();
+        this.vmId = Output.empty();
     }
 
     public static Builder builder() {
@@ -140,14 +140,14 @@ public final class MachineArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> clientPublicKey;
-        private @Nullable Input<MachineIdentityArgs> identity;
-        private @Nullable Input<String> location;
-        private @Nullable Input<LocationDataArgs> locationData;
-        private @Nullable Input<String> name;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<String> vmId;
+        private @Nullable Output<String> clientPublicKey;
+        private @Nullable Output<MachineIdentityArgs> identity;
+        private @Nullable Output<String> location;
+        private @Nullable Output<LocationDataArgs> locationData;
+        private @Nullable Output<String> name;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<String> vmId;
 
         public Builder() {
     	      // Empty
@@ -165,83 +165,83 @@ public final class MachineArgs extends io.pulumi.resources.ResourceArgs {
     	      this.vmId = defaults.vmId;
         }
 
-        public Builder clientPublicKey(@Nullable Input<String> clientPublicKey) {
+        public Builder clientPublicKey(@Nullable Output<String> clientPublicKey) {
             this.clientPublicKey = clientPublicKey;
             return this;
         }
 
         public Builder clientPublicKey(@Nullable String clientPublicKey) {
-            this.clientPublicKey = Input.ofNullable(clientPublicKey);
+            this.clientPublicKey = Output.ofNullable(clientPublicKey);
             return this;
         }
 
-        public Builder identity(@Nullable Input<MachineIdentityArgs> identity) {
+        public Builder identity(@Nullable Output<MachineIdentityArgs> identity) {
             this.identity = identity;
             return this;
         }
 
         public Builder identity(@Nullable MachineIdentityArgs identity) {
-            this.identity = Input.ofNullable(identity);
+            this.identity = Output.ofNullable(identity);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder locationData(@Nullable Input<LocationDataArgs> locationData) {
+        public Builder locationData(@Nullable Output<LocationDataArgs> locationData) {
             this.locationData = locationData;
             return this;
         }
 
         public Builder locationData(@Nullable LocationDataArgs locationData) {
-            this.locationData = Input.ofNullable(locationData);
+            this.locationData = Output.ofNullable(locationData);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder vmId(@Nullable Input<String> vmId) {
+        public Builder vmId(@Nullable Output<String> vmId) {
             this.vmId = vmId;
             return this;
         }
 
         public Builder vmId(@Nullable String vmId) {
-            this.vmId = Input.ofNullable(vmId);
+            this.vmId = Output.ofNullable(vmId);
             return this;
         }
         public MachineArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudbuild_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.cloudbuild_v1.enums.PubsubConfigState;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class PubsubConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serviceAccountEmail")
-      private final @Nullable Input<String> serviceAccountEmail;
+      private final @Nullable Output<String> serviceAccountEmail;
 
-    public Input<String> getServiceAccountEmail() {
-        return this.serviceAccountEmail == null ? Input.empty() : this.serviceAccountEmail;
+    public Output<String> getServiceAccountEmail() {
+        return this.serviceAccountEmail == null ? Output.empty() : this.serviceAccountEmail;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class PubsubConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="state")
-      private final @Nullable Input<PubsubConfigState> state;
+      private final @Nullable Output<PubsubConfigState> state;
 
-    public Input<PubsubConfigState> getState() {
-        return this.state == null ? Input.empty() : this.state;
+    public Output<PubsubConfigState> getState() {
+        return this.state == null ? Output.empty() : this.state;
     }
 
     /**
@@ -46,25 +46,25 @@ public final class PubsubConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="topic")
-      private final @Nullable Input<String> topic;
+      private final @Nullable Output<String> topic;
 
-    public Input<String> getTopic() {
-        return this.topic == null ? Input.empty() : this.topic;
+    public Output<String> getTopic() {
+        return this.topic == null ? Output.empty() : this.topic;
     }
 
     public PubsubConfigArgs(
-        @Nullable Input<String> serviceAccountEmail,
-        @Nullable Input<PubsubConfigState> state,
-        @Nullable Input<String> topic) {
+        @Nullable Output<String> serviceAccountEmail,
+        @Nullable Output<PubsubConfigState> state,
+        @Nullable Output<String> topic) {
         this.serviceAccountEmail = serviceAccountEmail;
         this.state = state;
         this.topic = topic;
     }
 
     private PubsubConfigArgs() {
-        this.serviceAccountEmail = Input.empty();
-        this.state = Input.empty();
-        this.topic = Input.empty();
+        this.serviceAccountEmail = Output.empty();
+        this.state = Output.empty();
+        this.topic = Output.empty();
     }
 
     public static Builder builder() {
@@ -76,9 +76,9 @@ public final class PubsubConfigArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> serviceAccountEmail;
-        private @Nullable Input<PubsubConfigState> state;
-        private @Nullable Input<String> topic;
+        private @Nullable Output<String> serviceAccountEmail;
+        private @Nullable Output<PubsubConfigState> state;
+        private @Nullable Output<String> topic;
 
         public Builder() {
     	      // Empty
@@ -91,33 +91,33 @@ public final class PubsubConfigArgs extends io.pulumi.resources.ResourceArgs {
     	      this.topic = defaults.topic;
         }
 
-        public Builder serviceAccountEmail(@Nullable Input<String> serviceAccountEmail) {
+        public Builder serviceAccountEmail(@Nullable Output<String> serviceAccountEmail) {
             this.serviceAccountEmail = serviceAccountEmail;
             return this;
         }
 
         public Builder serviceAccountEmail(@Nullable String serviceAccountEmail) {
-            this.serviceAccountEmail = Input.ofNullable(serviceAccountEmail);
+            this.serviceAccountEmail = Output.ofNullable(serviceAccountEmail);
             return this;
         }
 
-        public Builder state(@Nullable Input<PubsubConfigState> state) {
+        public Builder state(@Nullable Output<PubsubConfigState> state) {
             this.state = state;
             return this;
         }
 
         public Builder state(@Nullable PubsubConfigState state) {
-            this.state = Input.ofNullable(state);
+            this.state = Output.ofNullable(state);
             return this;
         }
 
-        public Builder topic(@Nullable Input<String> topic) {
+        public Builder topic(@Nullable Output<String> topic) {
             this.topic = topic;
             return this;
         }
 
         public Builder topic(@Nullable String topic) {
-            this.topic = Input.ofNullable(topic);
+            this.topic = Output.ofNullable(topic);
             return this;
         }
         public PubsubConfigArgs build() {

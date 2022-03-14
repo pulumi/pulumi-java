@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.firebaseml_v1beta2.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class ModelStateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="published")
-      private final @Nullable Input<Boolean> published;
+      private final @Nullable Output<Boolean> published;
 
-    public Input<Boolean> getPublished() {
-        return this.published == null ? Input.empty() : this.published;
+    public Output<Boolean> getPublished() {
+        return this.published == null ? Output.empty() : this.published;
     }
 
-    public ModelStateArgs(@Nullable Input<Boolean> published) {
+    public ModelStateArgs(@Nullable Output<Boolean> published) {
         this.published = published;
     }
 
     private ModelStateArgs() {
-        this.published = Input.empty();
+        this.published = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class ModelStateArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> published;
+        private @Nullable Output<Boolean> published;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class ModelStateArgs extends io.pulumi.resources.ResourceArgs {
     	      this.published = defaults.published;
         }
 
-        public Builder published(@Nullable Input<Boolean> published) {
+        public Builder published(@Nullable Output<Boolean> published) {
             this.published = published;
             return this;
         }
 
         public Builder published(@Nullable Boolean published) {
-            this.published = Input.ofNullable(published);
+            this.published = Output.ofNullable(published);
             return this;
         }
         public ModelStateArgs build() {

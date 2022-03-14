@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v2.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -22,9 +22,9 @@ public final class GoogleCloudDialogflowV2HumanAgentHandoffConfigSalesforceLiveA
      * 
      */
     @InputImport(name="buttonId", required=true)
-      private final Input<String> buttonId;
+      private final Output<String> buttonId;
 
-    public Input<String> getButtonId() {
+    public Output<String> getButtonId() {
         return this.buttonId;
     }
 
@@ -33,9 +33,9 @@ public final class GoogleCloudDialogflowV2HumanAgentHandoffConfigSalesforceLiveA
      * 
      */
     @InputImport(name="deploymentId", required=true)
-      private final Input<String> deploymentId;
+      private final Output<String> deploymentId;
 
-    public Input<String> getDeploymentId() {
+    public Output<String> getDeploymentId() {
         return this.deploymentId;
     }
 
@@ -44,9 +44,9 @@ public final class GoogleCloudDialogflowV2HumanAgentHandoffConfigSalesforceLiveA
      * 
      */
     @InputImport(name="endpointDomain", required=true)
-      private final Input<String> endpointDomain;
+      private final Output<String> endpointDomain;
 
-    public Input<String> getEndpointDomain() {
+    public Output<String> getEndpointDomain() {
         return this.endpointDomain;
     }
 
@@ -55,17 +55,17 @@ public final class GoogleCloudDialogflowV2HumanAgentHandoffConfigSalesforceLiveA
      * 
      */
     @InputImport(name="organizationId", required=true)
-      private final Input<String> organizationId;
+      private final Output<String> organizationId;
 
-    public Input<String> getOrganizationId() {
+    public Output<String> getOrganizationId() {
         return this.organizationId;
     }
 
     public GoogleCloudDialogflowV2HumanAgentHandoffConfigSalesforceLiveAgentConfigArgs(
-        Input<String> buttonId,
-        Input<String> deploymentId,
-        Input<String> endpointDomain,
-        Input<String> organizationId) {
+        Output<String> buttonId,
+        Output<String> deploymentId,
+        Output<String> endpointDomain,
+        Output<String> organizationId) {
         this.buttonId = Objects.requireNonNull(buttonId, "expected parameter 'buttonId' to be non-null");
         this.deploymentId = Objects.requireNonNull(deploymentId, "expected parameter 'deploymentId' to be non-null");
         this.endpointDomain = Objects.requireNonNull(endpointDomain, "expected parameter 'endpointDomain' to be non-null");
@@ -73,10 +73,10 @@ public final class GoogleCloudDialogflowV2HumanAgentHandoffConfigSalesforceLiveA
     }
 
     private GoogleCloudDialogflowV2HumanAgentHandoffConfigSalesforceLiveAgentConfigArgs() {
-        this.buttonId = Input.empty();
-        this.deploymentId = Input.empty();
-        this.endpointDomain = Input.empty();
-        this.organizationId = Input.empty();
+        this.buttonId = Output.empty();
+        this.deploymentId = Output.empty();
+        this.endpointDomain = Output.empty();
+        this.organizationId = Output.empty();
     }
 
     public static Builder builder() {
@@ -88,10 +88,10 @@ public final class GoogleCloudDialogflowV2HumanAgentHandoffConfigSalesforceLiveA
     }
 
     public static final class Builder {
-        private Input<String> buttonId;
-        private Input<String> deploymentId;
-        private Input<String> endpointDomain;
-        private Input<String> organizationId;
+        private Output<String> buttonId;
+        private Output<String> deploymentId;
+        private Output<String> endpointDomain;
+        private Output<String> organizationId;
 
         public Builder() {
     	      // Empty
@@ -105,43 +105,43 @@ public final class GoogleCloudDialogflowV2HumanAgentHandoffConfigSalesforceLiveA
     	      this.organizationId = defaults.organizationId;
         }
 
-        public Builder buttonId(Input<String> buttonId) {
+        public Builder buttonId(Output<String> buttonId) {
             this.buttonId = Objects.requireNonNull(buttonId);
             return this;
         }
 
         public Builder buttonId(String buttonId) {
-            this.buttonId = Input.of(Objects.requireNonNull(buttonId));
+            this.buttonId = Output.of(Objects.requireNonNull(buttonId));
             return this;
         }
 
-        public Builder deploymentId(Input<String> deploymentId) {
+        public Builder deploymentId(Output<String> deploymentId) {
             this.deploymentId = Objects.requireNonNull(deploymentId);
             return this;
         }
 
         public Builder deploymentId(String deploymentId) {
-            this.deploymentId = Input.of(Objects.requireNonNull(deploymentId));
+            this.deploymentId = Output.of(Objects.requireNonNull(deploymentId));
             return this;
         }
 
-        public Builder endpointDomain(Input<String> endpointDomain) {
+        public Builder endpointDomain(Output<String> endpointDomain) {
             this.endpointDomain = Objects.requireNonNull(endpointDomain);
             return this;
         }
 
         public Builder endpointDomain(String endpointDomain) {
-            this.endpointDomain = Input.of(Objects.requireNonNull(endpointDomain));
+            this.endpointDomain = Output.of(Objects.requireNonNull(endpointDomain));
             return this;
         }
 
-        public Builder organizationId(Input<String> organizationId) {
+        public Builder organizationId(Output<String> organizationId) {
             this.organizationId = Objects.requireNonNull(organizationId);
             return this;
         }
 
         public Builder organizationId(String organizationId) {
-            this.organizationId = Input.of(Objects.requireNonNull(organizationId));
+            this.organizationId = Output.of(Objects.requireNonNull(organizationId));
             return this;
         }
         public GoogleCloudDialogflowV2HumanAgentHandoffConfigSalesforceLiveAgentConfigArgs build() {

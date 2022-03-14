@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.backup.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -15,29 +15,29 @@ public final class BackupSelectionConditionParameterArgs extends io.pulumi.resou
     public static final BackupSelectionConditionParameterArgs Empty = new BackupSelectionConditionParameterArgs();
 
     @InputImport(name="conditionKey")
-      private final @Nullable Input<String> conditionKey;
+      private final @Nullable Output<String> conditionKey;
 
-    public Input<String> getConditionKey() {
-        return this.conditionKey == null ? Input.empty() : this.conditionKey;
+    public Output<String> getConditionKey() {
+        return this.conditionKey == null ? Output.empty() : this.conditionKey;
     }
 
     @InputImport(name="conditionValue")
-      private final @Nullable Input<String> conditionValue;
+      private final @Nullable Output<String> conditionValue;
 
-    public Input<String> getConditionValue() {
-        return this.conditionValue == null ? Input.empty() : this.conditionValue;
+    public Output<String> getConditionValue() {
+        return this.conditionValue == null ? Output.empty() : this.conditionValue;
     }
 
     public BackupSelectionConditionParameterArgs(
-        @Nullable Input<String> conditionKey,
-        @Nullable Input<String> conditionValue) {
+        @Nullable Output<String> conditionKey,
+        @Nullable Output<String> conditionValue) {
         this.conditionKey = conditionKey;
         this.conditionValue = conditionValue;
     }
 
     private BackupSelectionConditionParameterArgs() {
-        this.conditionKey = Input.empty();
-        this.conditionValue = Input.empty();
+        this.conditionKey = Output.empty();
+        this.conditionValue = Output.empty();
     }
 
     public static Builder builder() {
@@ -49,8 +49,8 @@ public final class BackupSelectionConditionParameterArgs extends io.pulumi.resou
     }
 
     public static final class Builder {
-        private @Nullable Input<String> conditionKey;
-        private @Nullable Input<String> conditionValue;
+        private @Nullable Output<String> conditionKey;
+        private @Nullable Output<String> conditionValue;
 
         public Builder() {
     	      // Empty
@@ -62,23 +62,23 @@ public final class BackupSelectionConditionParameterArgs extends io.pulumi.resou
     	      this.conditionValue = defaults.conditionValue;
         }
 
-        public Builder conditionKey(@Nullable Input<String> conditionKey) {
+        public Builder conditionKey(@Nullable Output<String> conditionKey) {
             this.conditionKey = conditionKey;
             return this;
         }
 
         public Builder conditionKey(@Nullable String conditionKey) {
-            this.conditionKey = Input.ofNullable(conditionKey);
+            this.conditionKey = Output.ofNullable(conditionKey);
             return this;
         }
 
-        public Builder conditionValue(@Nullable Input<String> conditionValue) {
+        public Builder conditionValue(@Nullable Output<String> conditionValue) {
             this.conditionValue = conditionValue;
             return this;
         }
 
         public Builder conditionValue(@Nullable String conditionValue) {
-            this.conditionValue = Input.ofNullable(conditionValue);
+            this.conditionValue = Output.ofNullable(conditionValue);
             return this;
         }
         public BackupSelectionConditionParameterArgs build() {

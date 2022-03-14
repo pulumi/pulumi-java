@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.logic.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
@@ -22,9 +22,9 @@ public final class AS2ErrorSettingsArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="resendIfMDNNotReceived", required=true)
-      private final Input<Boolean> resendIfMDNNotReceived;
+      private final Output<Boolean> resendIfMDNNotReceived;
 
-    public Input<Boolean> getResendIfMDNNotReceived() {
+    public Output<Boolean> getResendIfMDNNotReceived() {
         return this.resendIfMDNNotReceived;
     }
 
@@ -33,22 +33,22 @@ public final class AS2ErrorSettingsArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="suspendDuplicateMessage", required=true)
-      private final Input<Boolean> suspendDuplicateMessage;
+      private final Output<Boolean> suspendDuplicateMessage;
 
-    public Input<Boolean> getSuspendDuplicateMessage() {
+    public Output<Boolean> getSuspendDuplicateMessage() {
         return this.suspendDuplicateMessage;
     }
 
     public AS2ErrorSettingsArgs(
-        Input<Boolean> resendIfMDNNotReceived,
-        Input<Boolean> suspendDuplicateMessage) {
+        Output<Boolean> resendIfMDNNotReceived,
+        Output<Boolean> suspendDuplicateMessage) {
         this.resendIfMDNNotReceived = Objects.requireNonNull(resendIfMDNNotReceived, "expected parameter 'resendIfMDNNotReceived' to be non-null");
         this.suspendDuplicateMessage = Objects.requireNonNull(suspendDuplicateMessage, "expected parameter 'suspendDuplicateMessage' to be non-null");
     }
 
     private AS2ErrorSettingsArgs() {
-        this.resendIfMDNNotReceived = Input.empty();
-        this.suspendDuplicateMessage = Input.empty();
+        this.resendIfMDNNotReceived = Output.empty();
+        this.suspendDuplicateMessage = Output.empty();
     }
 
     public static Builder builder() {
@@ -60,8 +60,8 @@ public final class AS2ErrorSettingsArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private Input<Boolean> resendIfMDNNotReceived;
-        private Input<Boolean> suspendDuplicateMessage;
+        private Output<Boolean> resendIfMDNNotReceived;
+        private Output<Boolean> suspendDuplicateMessage;
 
         public Builder() {
     	      // Empty
@@ -73,23 +73,23 @@ public final class AS2ErrorSettingsArgs extends io.pulumi.resources.ResourceArgs
     	      this.suspendDuplicateMessage = defaults.suspendDuplicateMessage;
         }
 
-        public Builder resendIfMDNNotReceived(Input<Boolean> resendIfMDNNotReceived) {
+        public Builder resendIfMDNNotReceived(Output<Boolean> resendIfMDNNotReceived) {
             this.resendIfMDNNotReceived = Objects.requireNonNull(resendIfMDNNotReceived);
             return this;
         }
 
         public Builder resendIfMDNNotReceived(Boolean resendIfMDNNotReceived) {
-            this.resendIfMDNNotReceived = Input.of(Objects.requireNonNull(resendIfMDNNotReceived));
+            this.resendIfMDNNotReceived = Output.of(Objects.requireNonNull(resendIfMDNNotReceived));
             return this;
         }
 
-        public Builder suspendDuplicateMessage(Input<Boolean> suspendDuplicateMessage) {
+        public Builder suspendDuplicateMessage(Output<Boolean> suspendDuplicateMessage) {
             this.suspendDuplicateMessage = Objects.requireNonNull(suspendDuplicateMessage);
             return this;
         }
 
         public Builder suspendDuplicateMessage(Boolean suspendDuplicateMessage) {
-            this.suspendDuplicateMessage = Input.of(Objects.requireNonNull(suspendDuplicateMessage));
+            this.suspendDuplicateMessage = Output.of(Objects.requireNonNull(suspendDuplicateMessage));
             return this;
         }
         public AS2ErrorSettingsArgs build() {

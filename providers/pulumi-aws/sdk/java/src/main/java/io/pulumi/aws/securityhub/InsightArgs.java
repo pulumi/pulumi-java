@@ -4,7 +4,7 @@
 package io.pulumi.aws.securityhub;
 
 import io.pulumi.aws.securityhub.inputs.InsightFiltersArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -20,9 +20,9 @@ public final class InsightArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="filters", required=true)
-      private final Input<InsightFiltersArgs> filters;
+      private final Output<InsightFiltersArgs> filters;
 
-    public Input<InsightFiltersArgs> getFilters() {
+    public Output<InsightFiltersArgs> getFilters() {
         return this.filters;
     }
 
@@ -31,9 +31,9 @@ public final class InsightArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="groupByAttribute", required=true)
-      private final Input<String> groupByAttribute;
+      private final Output<String> groupByAttribute;
 
-    public Input<String> getGroupByAttribute() {
+    public Output<String> getGroupByAttribute() {
         return this.groupByAttribute;
     }
 
@@ -42,25 +42,25 @@ public final class InsightArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     public InsightArgs(
-        Input<InsightFiltersArgs> filters,
-        Input<String> groupByAttribute,
-        @Nullable Input<String> name) {
+        Output<InsightFiltersArgs> filters,
+        Output<String> groupByAttribute,
+        @Nullable Output<String> name) {
         this.filters = Objects.requireNonNull(filters, "expected parameter 'filters' to be non-null");
         this.groupByAttribute = Objects.requireNonNull(groupByAttribute, "expected parameter 'groupByAttribute' to be non-null");
         this.name = name;
     }
 
     private InsightArgs() {
-        this.filters = Input.empty();
-        this.groupByAttribute = Input.empty();
-        this.name = Input.empty();
+        this.filters = Output.empty();
+        this.groupByAttribute = Output.empty();
+        this.name = Output.empty();
     }
 
     public static Builder builder() {
@@ -72,9 +72,9 @@ public final class InsightArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<InsightFiltersArgs> filters;
-        private Input<String> groupByAttribute;
-        private @Nullable Input<String> name;
+        private Output<InsightFiltersArgs> filters;
+        private Output<String> groupByAttribute;
+        private @Nullable Output<String> name;
 
         public Builder() {
     	      // Empty
@@ -87,33 +87,33 @@ public final class InsightArgs extends io.pulumi.resources.ResourceArgs {
     	      this.name = defaults.name;
         }
 
-        public Builder filters(Input<InsightFiltersArgs> filters) {
+        public Builder filters(Output<InsightFiltersArgs> filters) {
             this.filters = Objects.requireNonNull(filters);
             return this;
         }
 
         public Builder filters(InsightFiltersArgs filters) {
-            this.filters = Input.of(Objects.requireNonNull(filters));
+            this.filters = Output.of(Objects.requireNonNull(filters));
             return this;
         }
 
-        public Builder groupByAttribute(Input<String> groupByAttribute) {
+        public Builder groupByAttribute(Output<String> groupByAttribute) {
             this.groupByAttribute = Objects.requireNonNull(groupByAttribute);
             return this;
         }
 
         public Builder groupByAttribute(String groupByAttribute) {
-            this.groupByAttribute = Input.of(Objects.requireNonNull(groupByAttribute));
+            this.groupByAttribute = Output.of(Objects.requireNonNull(groupByAttribute));
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
         public InsightArgs build() {

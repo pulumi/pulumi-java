@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.servicecatalog.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -20,10 +20,10 @@ public final class PortfolioShareState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="acceptLanguage")
-      private final @Nullable Input<String> acceptLanguage;
+      private final @Nullable Output<String> acceptLanguage;
 
-    public Input<String> getAcceptLanguage() {
-        return this.acceptLanguage == null ? Input.empty() : this.acceptLanguage;
+    public Output<String> getAcceptLanguage() {
+        return this.acceptLanguage == null ? Output.empty() : this.acceptLanguage;
     }
 
     /**
@@ -31,10 +31,10 @@ public final class PortfolioShareState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="accepted")
-      private final @Nullable Input<Boolean> accepted;
+      private final @Nullable Output<Boolean> accepted;
 
-    public Input<Boolean> getAccepted() {
-        return this.accepted == null ? Input.empty() : this.accepted;
+    public Output<Boolean> getAccepted() {
+        return this.accepted == null ? Output.empty() : this.accepted;
     }
 
     /**
@@ -42,10 +42,10 @@ public final class PortfolioShareState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="portfolioId")
-      private final @Nullable Input<String> portfolioId;
+      private final @Nullable Output<String> portfolioId;
 
-    public Input<String> getPortfolioId() {
-        return this.portfolioId == null ? Input.empty() : this.portfolioId;
+    public Output<String> getPortfolioId() {
+        return this.portfolioId == null ? Output.empty() : this.portfolioId;
     }
 
     /**
@@ -53,10 +53,10 @@ public final class PortfolioShareState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="principalId")
-      private final @Nullable Input<String> principalId;
+      private final @Nullable Output<String> principalId;
 
-    public Input<String> getPrincipalId() {
-        return this.principalId == null ? Input.empty() : this.principalId;
+    public Output<String> getPrincipalId() {
+        return this.principalId == null ? Output.empty() : this.principalId;
     }
 
     /**
@@ -64,10 +64,10 @@ public final class PortfolioShareState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="shareTagOptions")
-      private final @Nullable Input<Boolean> shareTagOptions;
+      private final @Nullable Output<Boolean> shareTagOptions;
 
-    public Input<Boolean> getShareTagOptions() {
-        return this.shareTagOptions == null ? Input.empty() : this.shareTagOptions;
+    public Output<Boolean> getShareTagOptions() {
+        return this.shareTagOptions == null ? Output.empty() : this.shareTagOptions;
     }
 
     /**
@@ -75,10 +75,10 @@ public final class PortfolioShareState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="type")
-      private final @Nullable Input<String> type;
+      private final @Nullable Output<String> type;
 
-    public Input<String> getType() {
-        return this.type == null ? Input.empty() : this.type;
+    public Output<String> getType() {
+        return this.type == null ? Output.empty() : this.type;
     }
 
     /**
@@ -86,20 +86,20 @@ public final class PortfolioShareState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="waitForAcceptance")
-      private final @Nullable Input<Boolean> waitForAcceptance;
+      private final @Nullable Output<Boolean> waitForAcceptance;
 
-    public Input<Boolean> getWaitForAcceptance() {
-        return this.waitForAcceptance == null ? Input.empty() : this.waitForAcceptance;
+    public Output<Boolean> getWaitForAcceptance() {
+        return this.waitForAcceptance == null ? Output.empty() : this.waitForAcceptance;
     }
 
     public PortfolioShareState(
-        @Nullable Input<String> acceptLanguage,
-        @Nullable Input<Boolean> accepted,
-        @Nullable Input<String> portfolioId,
-        @Nullable Input<String> principalId,
-        @Nullable Input<Boolean> shareTagOptions,
-        @Nullable Input<String> type,
-        @Nullable Input<Boolean> waitForAcceptance) {
+        @Nullable Output<String> acceptLanguage,
+        @Nullable Output<Boolean> accepted,
+        @Nullable Output<String> portfolioId,
+        @Nullable Output<String> principalId,
+        @Nullable Output<Boolean> shareTagOptions,
+        @Nullable Output<String> type,
+        @Nullable Output<Boolean> waitForAcceptance) {
         this.acceptLanguage = acceptLanguage;
         this.accepted = accepted;
         this.portfolioId = portfolioId;
@@ -110,13 +110,13 @@ public final class PortfolioShareState extends io.pulumi.resources.ResourceArgs 
     }
 
     private PortfolioShareState() {
-        this.acceptLanguage = Input.empty();
-        this.accepted = Input.empty();
-        this.portfolioId = Input.empty();
-        this.principalId = Input.empty();
-        this.shareTagOptions = Input.empty();
-        this.type = Input.empty();
-        this.waitForAcceptance = Input.empty();
+        this.acceptLanguage = Output.empty();
+        this.accepted = Output.empty();
+        this.portfolioId = Output.empty();
+        this.principalId = Output.empty();
+        this.shareTagOptions = Output.empty();
+        this.type = Output.empty();
+        this.waitForAcceptance = Output.empty();
     }
 
     public static Builder builder() {
@@ -128,13 +128,13 @@ public final class PortfolioShareState extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private @Nullable Input<String> acceptLanguage;
-        private @Nullable Input<Boolean> accepted;
-        private @Nullable Input<String> portfolioId;
-        private @Nullable Input<String> principalId;
-        private @Nullable Input<Boolean> shareTagOptions;
-        private @Nullable Input<String> type;
-        private @Nullable Input<Boolean> waitForAcceptance;
+        private @Nullable Output<String> acceptLanguage;
+        private @Nullable Output<Boolean> accepted;
+        private @Nullable Output<String> portfolioId;
+        private @Nullable Output<String> principalId;
+        private @Nullable Output<Boolean> shareTagOptions;
+        private @Nullable Output<String> type;
+        private @Nullable Output<Boolean> waitForAcceptance;
 
         public Builder() {
     	      // Empty
@@ -151,73 +151,73 @@ public final class PortfolioShareState extends io.pulumi.resources.ResourceArgs 
     	      this.waitForAcceptance = defaults.waitForAcceptance;
         }
 
-        public Builder acceptLanguage(@Nullable Input<String> acceptLanguage) {
+        public Builder acceptLanguage(@Nullable Output<String> acceptLanguage) {
             this.acceptLanguage = acceptLanguage;
             return this;
         }
 
         public Builder acceptLanguage(@Nullable String acceptLanguage) {
-            this.acceptLanguage = Input.ofNullable(acceptLanguage);
+            this.acceptLanguage = Output.ofNullable(acceptLanguage);
             return this;
         }
 
-        public Builder accepted(@Nullable Input<Boolean> accepted) {
+        public Builder accepted(@Nullable Output<Boolean> accepted) {
             this.accepted = accepted;
             return this;
         }
 
         public Builder accepted(@Nullable Boolean accepted) {
-            this.accepted = Input.ofNullable(accepted);
+            this.accepted = Output.ofNullable(accepted);
             return this;
         }
 
-        public Builder portfolioId(@Nullable Input<String> portfolioId) {
+        public Builder portfolioId(@Nullable Output<String> portfolioId) {
             this.portfolioId = portfolioId;
             return this;
         }
 
         public Builder portfolioId(@Nullable String portfolioId) {
-            this.portfolioId = Input.ofNullable(portfolioId);
+            this.portfolioId = Output.ofNullable(portfolioId);
             return this;
         }
 
-        public Builder principalId(@Nullable Input<String> principalId) {
+        public Builder principalId(@Nullable Output<String> principalId) {
             this.principalId = principalId;
             return this;
         }
 
         public Builder principalId(@Nullable String principalId) {
-            this.principalId = Input.ofNullable(principalId);
+            this.principalId = Output.ofNullable(principalId);
             return this;
         }
 
-        public Builder shareTagOptions(@Nullable Input<Boolean> shareTagOptions) {
+        public Builder shareTagOptions(@Nullable Output<Boolean> shareTagOptions) {
             this.shareTagOptions = shareTagOptions;
             return this;
         }
 
         public Builder shareTagOptions(@Nullable Boolean shareTagOptions) {
-            this.shareTagOptions = Input.ofNullable(shareTagOptions);
+            this.shareTagOptions = Output.ofNullable(shareTagOptions);
             return this;
         }
 
-        public Builder type(@Nullable Input<String> type) {
+        public Builder type(@Nullable Output<String> type) {
             this.type = type;
             return this;
         }
 
         public Builder type(@Nullable String type) {
-            this.type = Input.ofNullable(type);
+            this.type = Output.ofNullable(type);
             return this;
         }
 
-        public Builder waitForAcceptance(@Nullable Input<Boolean> waitForAcceptance) {
+        public Builder waitForAcceptance(@Nullable Output<Boolean> waitForAcceptance) {
             this.waitForAcceptance = waitForAcceptance;
             return this;
         }
 
         public Builder waitForAcceptance(@Nullable Boolean waitForAcceptance) {
-            this.waitForAcceptance = Input.ofNullable(waitForAcceptance);
+            this.waitForAcceptance = Output.ofNullable(waitForAcceptance);
             return this;
         }
         public PortfolioShareState build() {

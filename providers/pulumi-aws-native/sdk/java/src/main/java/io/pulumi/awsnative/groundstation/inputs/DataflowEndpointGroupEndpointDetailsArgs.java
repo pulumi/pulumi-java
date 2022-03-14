@@ -5,7 +5,7 @@ package io.pulumi.awsnative.groundstation.inputs;
 
 import io.pulumi.awsnative.groundstation.inputs.DataflowEndpointGroupDataflowEndpointArgs;
 import io.pulumi.awsnative.groundstation.inputs.DataflowEndpointGroupSecurityDetailsArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -16,29 +16,29 @@ public final class DataflowEndpointGroupEndpointDetailsArgs extends io.pulumi.re
     public static final DataflowEndpointGroupEndpointDetailsArgs Empty = new DataflowEndpointGroupEndpointDetailsArgs();
 
     @InputImport(name="endpoint")
-      private final @Nullable Input<DataflowEndpointGroupDataflowEndpointArgs> endpoint;
+      private final @Nullable Output<DataflowEndpointGroupDataflowEndpointArgs> endpoint;
 
-    public Input<DataflowEndpointGroupDataflowEndpointArgs> getEndpoint() {
-        return this.endpoint == null ? Input.empty() : this.endpoint;
+    public Output<DataflowEndpointGroupDataflowEndpointArgs> getEndpoint() {
+        return this.endpoint == null ? Output.empty() : this.endpoint;
     }
 
     @InputImport(name="securityDetails")
-      private final @Nullable Input<DataflowEndpointGroupSecurityDetailsArgs> securityDetails;
+      private final @Nullable Output<DataflowEndpointGroupSecurityDetailsArgs> securityDetails;
 
-    public Input<DataflowEndpointGroupSecurityDetailsArgs> getSecurityDetails() {
-        return this.securityDetails == null ? Input.empty() : this.securityDetails;
+    public Output<DataflowEndpointGroupSecurityDetailsArgs> getSecurityDetails() {
+        return this.securityDetails == null ? Output.empty() : this.securityDetails;
     }
 
     public DataflowEndpointGroupEndpointDetailsArgs(
-        @Nullable Input<DataflowEndpointGroupDataflowEndpointArgs> endpoint,
-        @Nullable Input<DataflowEndpointGroupSecurityDetailsArgs> securityDetails) {
+        @Nullable Output<DataflowEndpointGroupDataflowEndpointArgs> endpoint,
+        @Nullable Output<DataflowEndpointGroupSecurityDetailsArgs> securityDetails) {
         this.endpoint = endpoint;
         this.securityDetails = securityDetails;
     }
 
     private DataflowEndpointGroupEndpointDetailsArgs() {
-        this.endpoint = Input.empty();
-        this.securityDetails = Input.empty();
+        this.endpoint = Output.empty();
+        this.securityDetails = Output.empty();
     }
 
     public static Builder builder() {
@@ -50,8 +50,8 @@ public final class DataflowEndpointGroupEndpointDetailsArgs extends io.pulumi.re
     }
 
     public static final class Builder {
-        private @Nullable Input<DataflowEndpointGroupDataflowEndpointArgs> endpoint;
-        private @Nullable Input<DataflowEndpointGroupSecurityDetailsArgs> securityDetails;
+        private @Nullable Output<DataflowEndpointGroupDataflowEndpointArgs> endpoint;
+        private @Nullable Output<DataflowEndpointGroupSecurityDetailsArgs> securityDetails;
 
         public Builder() {
     	      // Empty
@@ -63,23 +63,23 @@ public final class DataflowEndpointGroupEndpointDetailsArgs extends io.pulumi.re
     	      this.securityDetails = defaults.securityDetails;
         }
 
-        public Builder endpoint(@Nullable Input<DataflowEndpointGroupDataflowEndpointArgs> endpoint) {
+        public Builder endpoint(@Nullable Output<DataflowEndpointGroupDataflowEndpointArgs> endpoint) {
             this.endpoint = endpoint;
             return this;
         }
 
         public Builder endpoint(@Nullable DataflowEndpointGroupDataflowEndpointArgs endpoint) {
-            this.endpoint = Input.ofNullable(endpoint);
+            this.endpoint = Output.ofNullable(endpoint);
             return this;
         }
 
-        public Builder securityDetails(@Nullable Input<DataflowEndpointGroupSecurityDetailsArgs> securityDetails) {
+        public Builder securityDetails(@Nullable Output<DataflowEndpointGroupSecurityDetailsArgs> securityDetails) {
             this.securityDetails = securityDetails;
             return this;
         }
 
         public Builder securityDetails(@Nullable DataflowEndpointGroupSecurityDetailsArgs securityDetails) {
-            this.securityDetails = Input.ofNullable(securityDetails);
+            this.securityDetails = Output.ofNullable(securityDetails);
             return this;
         }
         public DataflowEndpointGroupEndpointDetailsArgs build() {

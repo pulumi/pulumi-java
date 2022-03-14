@@ -7,7 +7,6 @@ import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.sqlvirtualmachine.SqlVirtualMachineGroupArgs;
 import io.pulumi.azurenative.sqlvirtualmachine.outputs.WsfcDomainProfileResponse;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -226,18 +225,18 @@ public class SqlVirtualMachineGroup extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public SqlVirtualMachineGroup(String name, SqlVirtualMachineGroupArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:sqlvirtualmachine:SqlVirtualMachineGroup", name, args == null ? SqlVirtualMachineGroupArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("azure-native:sqlvirtualmachine:SqlVirtualMachineGroup", name, args == null ? SqlVirtualMachineGroupArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private SqlVirtualMachineGroup(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private SqlVirtualMachineGroup(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:sqlvirtualmachine:SqlVirtualMachineGroup", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:sqlvirtualmachine/v20170301preview:SqlVirtualMachineGroup").build())
+                Output.of(Alias.builder().setType("azure-native:sqlvirtualmachine/v20170301preview:SqlVirtualMachineGroup").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -251,7 +250,7 @@ public class SqlVirtualMachineGroup extends io.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static SqlVirtualMachineGroup get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static SqlVirtualMachineGroup get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new SqlVirtualMachineGroup(name, id, options);
     }
 }

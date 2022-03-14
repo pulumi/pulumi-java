@@ -9,7 +9,7 @@ import io.pulumi.aws.cloudfront.inputs.ResponseHeadersPolicySecurityHeadersConfi
 import io.pulumi.aws.cloudfront.inputs.ResponseHeadersPolicySecurityHeadersConfigReferrerPolicyGetArgs;
 import io.pulumi.aws.cloudfront.inputs.ResponseHeadersPolicySecurityHeadersConfigStrictTransportSecurityGetArgs;
 import io.pulumi.aws.cloudfront.inputs.ResponseHeadersPolicySecurityHeadersConfigXssProtectionGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,10 +24,10 @@ public final class ResponseHeadersPolicySecurityHeadersConfigGetArgs extends io.
      * 
      */
     @InputImport(name="contentSecurityPolicy")
-      private final @Nullable Input<ResponseHeadersPolicySecurityHeadersConfigContentSecurityPolicyGetArgs> contentSecurityPolicy;
+      private final @Nullable Output<ResponseHeadersPolicySecurityHeadersConfigContentSecurityPolicyGetArgs> contentSecurityPolicy;
 
-    public Input<ResponseHeadersPolicySecurityHeadersConfigContentSecurityPolicyGetArgs> getContentSecurityPolicy() {
-        return this.contentSecurityPolicy == null ? Input.empty() : this.contentSecurityPolicy;
+    public Output<ResponseHeadersPolicySecurityHeadersConfigContentSecurityPolicyGetArgs> getContentSecurityPolicy() {
+        return this.contentSecurityPolicy == null ? Output.empty() : this.contentSecurityPolicy;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class ResponseHeadersPolicySecurityHeadersConfigGetArgs extends io.
      * 
      */
     @InputImport(name="contentTypeOptions")
-      private final @Nullable Input<ResponseHeadersPolicySecurityHeadersConfigContentTypeOptionsGetArgs> contentTypeOptions;
+      private final @Nullable Output<ResponseHeadersPolicySecurityHeadersConfigContentTypeOptionsGetArgs> contentTypeOptions;
 
-    public Input<ResponseHeadersPolicySecurityHeadersConfigContentTypeOptionsGetArgs> getContentTypeOptions() {
-        return this.contentTypeOptions == null ? Input.empty() : this.contentTypeOptions;
+    public Output<ResponseHeadersPolicySecurityHeadersConfigContentTypeOptionsGetArgs> getContentTypeOptions() {
+        return this.contentTypeOptions == null ? Output.empty() : this.contentTypeOptions;
     }
 
     /**
@@ -46,10 +46,10 @@ public final class ResponseHeadersPolicySecurityHeadersConfigGetArgs extends io.
      * 
      */
     @InputImport(name="frameOptions")
-      private final @Nullable Input<ResponseHeadersPolicySecurityHeadersConfigFrameOptionsGetArgs> frameOptions;
+      private final @Nullable Output<ResponseHeadersPolicySecurityHeadersConfigFrameOptionsGetArgs> frameOptions;
 
-    public Input<ResponseHeadersPolicySecurityHeadersConfigFrameOptionsGetArgs> getFrameOptions() {
-        return this.frameOptions == null ? Input.empty() : this.frameOptions;
+    public Output<ResponseHeadersPolicySecurityHeadersConfigFrameOptionsGetArgs> getFrameOptions() {
+        return this.frameOptions == null ? Output.empty() : this.frameOptions;
     }
 
     /**
@@ -57,10 +57,10 @@ public final class ResponseHeadersPolicySecurityHeadersConfigGetArgs extends io.
      * 
      */
     @InputImport(name="referrerPolicy")
-      private final @Nullable Input<ResponseHeadersPolicySecurityHeadersConfigReferrerPolicyGetArgs> referrerPolicy;
+      private final @Nullable Output<ResponseHeadersPolicySecurityHeadersConfigReferrerPolicyGetArgs> referrerPolicy;
 
-    public Input<ResponseHeadersPolicySecurityHeadersConfigReferrerPolicyGetArgs> getReferrerPolicy() {
-        return this.referrerPolicy == null ? Input.empty() : this.referrerPolicy;
+    public Output<ResponseHeadersPolicySecurityHeadersConfigReferrerPolicyGetArgs> getReferrerPolicy() {
+        return this.referrerPolicy == null ? Output.empty() : this.referrerPolicy;
     }
 
     /**
@@ -68,10 +68,10 @@ public final class ResponseHeadersPolicySecurityHeadersConfigGetArgs extends io.
      * 
      */
     @InputImport(name="strictTransportSecurity")
-      private final @Nullable Input<ResponseHeadersPolicySecurityHeadersConfigStrictTransportSecurityGetArgs> strictTransportSecurity;
+      private final @Nullable Output<ResponseHeadersPolicySecurityHeadersConfigStrictTransportSecurityGetArgs> strictTransportSecurity;
 
-    public Input<ResponseHeadersPolicySecurityHeadersConfigStrictTransportSecurityGetArgs> getStrictTransportSecurity() {
-        return this.strictTransportSecurity == null ? Input.empty() : this.strictTransportSecurity;
+    public Output<ResponseHeadersPolicySecurityHeadersConfigStrictTransportSecurityGetArgs> getStrictTransportSecurity() {
+        return this.strictTransportSecurity == null ? Output.empty() : this.strictTransportSecurity;
     }
 
     /**
@@ -79,19 +79,19 @@ public final class ResponseHeadersPolicySecurityHeadersConfigGetArgs extends io.
      * 
      */
     @InputImport(name="xssProtection")
-      private final @Nullable Input<ResponseHeadersPolicySecurityHeadersConfigXssProtectionGetArgs> xssProtection;
+      private final @Nullable Output<ResponseHeadersPolicySecurityHeadersConfigXssProtectionGetArgs> xssProtection;
 
-    public Input<ResponseHeadersPolicySecurityHeadersConfigXssProtectionGetArgs> getXssProtection() {
-        return this.xssProtection == null ? Input.empty() : this.xssProtection;
+    public Output<ResponseHeadersPolicySecurityHeadersConfigXssProtectionGetArgs> getXssProtection() {
+        return this.xssProtection == null ? Output.empty() : this.xssProtection;
     }
 
     public ResponseHeadersPolicySecurityHeadersConfigGetArgs(
-        @Nullable Input<ResponseHeadersPolicySecurityHeadersConfigContentSecurityPolicyGetArgs> contentSecurityPolicy,
-        @Nullable Input<ResponseHeadersPolicySecurityHeadersConfigContentTypeOptionsGetArgs> contentTypeOptions,
-        @Nullable Input<ResponseHeadersPolicySecurityHeadersConfigFrameOptionsGetArgs> frameOptions,
-        @Nullable Input<ResponseHeadersPolicySecurityHeadersConfigReferrerPolicyGetArgs> referrerPolicy,
-        @Nullable Input<ResponseHeadersPolicySecurityHeadersConfigStrictTransportSecurityGetArgs> strictTransportSecurity,
-        @Nullable Input<ResponseHeadersPolicySecurityHeadersConfigXssProtectionGetArgs> xssProtection) {
+        @Nullable Output<ResponseHeadersPolicySecurityHeadersConfigContentSecurityPolicyGetArgs> contentSecurityPolicy,
+        @Nullable Output<ResponseHeadersPolicySecurityHeadersConfigContentTypeOptionsGetArgs> contentTypeOptions,
+        @Nullable Output<ResponseHeadersPolicySecurityHeadersConfigFrameOptionsGetArgs> frameOptions,
+        @Nullable Output<ResponseHeadersPolicySecurityHeadersConfigReferrerPolicyGetArgs> referrerPolicy,
+        @Nullable Output<ResponseHeadersPolicySecurityHeadersConfigStrictTransportSecurityGetArgs> strictTransportSecurity,
+        @Nullable Output<ResponseHeadersPolicySecurityHeadersConfigXssProtectionGetArgs> xssProtection) {
         this.contentSecurityPolicy = contentSecurityPolicy;
         this.contentTypeOptions = contentTypeOptions;
         this.frameOptions = frameOptions;
@@ -101,12 +101,12 @@ public final class ResponseHeadersPolicySecurityHeadersConfigGetArgs extends io.
     }
 
     private ResponseHeadersPolicySecurityHeadersConfigGetArgs() {
-        this.contentSecurityPolicy = Input.empty();
-        this.contentTypeOptions = Input.empty();
-        this.frameOptions = Input.empty();
-        this.referrerPolicy = Input.empty();
-        this.strictTransportSecurity = Input.empty();
-        this.xssProtection = Input.empty();
+        this.contentSecurityPolicy = Output.empty();
+        this.contentTypeOptions = Output.empty();
+        this.frameOptions = Output.empty();
+        this.referrerPolicy = Output.empty();
+        this.strictTransportSecurity = Output.empty();
+        this.xssProtection = Output.empty();
     }
 
     public static Builder builder() {
@@ -118,12 +118,12 @@ public final class ResponseHeadersPolicySecurityHeadersConfigGetArgs extends io.
     }
 
     public static final class Builder {
-        private @Nullable Input<ResponseHeadersPolicySecurityHeadersConfigContentSecurityPolicyGetArgs> contentSecurityPolicy;
-        private @Nullable Input<ResponseHeadersPolicySecurityHeadersConfigContentTypeOptionsGetArgs> contentTypeOptions;
-        private @Nullable Input<ResponseHeadersPolicySecurityHeadersConfigFrameOptionsGetArgs> frameOptions;
-        private @Nullable Input<ResponseHeadersPolicySecurityHeadersConfigReferrerPolicyGetArgs> referrerPolicy;
-        private @Nullable Input<ResponseHeadersPolicySecurityHeadersConfigStrictTransportSecurityGetArgs> strictTransportSecurity;
-        private @Nullable Input<ResponseHeadersPolicySecurityHeadersConfigXssProtectionGetArgs> xssProtection;
+        private @Nullable Output<ResponseHeadersPolicySecurityHeadersConfigContentSecurityPolicyGetArgs> contentSecurityPolicy;
+        private @Nullable Output<ResponseHeadersPolicySecurityHeadersConfigContentTypeOptionsGetArgs> contentTypeOptions;
+        private @Nullable Output<ResponseHeadersPolicySecurityHeadersConfigFrameOptionsGetArgs> frameOptions;
+        private @Nullable Output<ResponseHeadersPolicySecurityHeadersConfigReferrerPolicyGetArgs> referrerPolicy;
+        private @Nullable Output<ResponseHeadersPolicySecurityHeadersConfigStrictTransportSecurityGetArgs> strictTransportSecurity;
+        private @Nullable Output<ResponseHeadersPolicySecurityHeadersConfigXssProtectionGetArgs> xssProtection;
 
         public Builder() {
     	      // Empty
@@ -139,63 +139,63 @@ public final class ResponseHeadersPolicySecurityHeadersConfigGetArgs extends io.
     	      this.xssProtection = defaults.xssProtection;
         }
 
-        public Builder contentSecurityPolicy(@Nullable Input<ResponseHeadersPolicySecurityHeadersConfigContentSecurityPolicyGetArgs> contentSecurityPolicy) {
+        public Builder contentSecurityPolicy(@Nullable Output<ResponseHeadersPolicySecurityHeadersConfigContentSecurityPolicyGetArgs> contentSecurityPolicy) {
             this.contentSecurityPolicy = contentSecurityPolicy;
             return this;
         }
 
         public Builder contentSecurityPolicy(@Nullable ResponseHeadersPolicySecurityHeadersConfigContentSecurityPolicyGetArgs contentSecurityPolicy) {
-            this.contentSecurityPolicy = Input.ofNullable(contentSecurityPolicy);
+            this.contentSecurityPolicy = Output.ofNullable(contentSecurityPolicy);
             return this;
         }
 
-        public Builder contentTypeOptions(@Nullable Input<ResponseHeadersPolicySecurityHeadersConfigContentTypeOptionsGetArgs> contentTypeOptions) {
+        public Builder contentTypeOptions(@Nullable Output<ResponseHeadersPolicySecurityHeadersConfigContentTypeOptionsGetArgs> contentTypeOptions) {
             this.contentTypeOptions = contentTypeOptions;
             return this;
         }
 
         public Builder contentTypeOptions(@Nullable ResponseHeadersPolicySecurityHeadersConfigContentTypeOptionsGetArgs contentTypeOptions) {
-            this.contentTypeOptions = Input.ofNullable(contentTypeOptions);
+            this.contentTypeOptions = Output.ofNullable(contentTypeOptions);
             return this;
         }
 
-        public Builder frameOptions(@Nullable Input<ResponseHeadersPolicySecurityHeadersConfigFrameOptionsGetArgs> frameOptions) {
+        public Builder frameOptions(@Nullable Output<ResponseHeadersPolicySecurityHeadersConfigFrameOptionsGetArgs> frameOptions) {
             this.frameOptions = frameOptions;
             return this;
         }
 
         public Builder frameOptions(@Nullable ResponseHeadersPolicySecurityHeadersConfigFrameOptionsGetArgs frameOptions) {
-            this.frameOptions = Input.ofNullable(frameOptions);
+            this.frameOptions = Output.ofNullable(frameOptions);
             return this;
         }
 
-        public Builder referrerPolicy(@Nullable Input<ResponseHeadersPolicySecurityHeadersConfigReferrerPolicyGetArgs> referrerPolicy) {
+        public Builder referrerPolicy(@Nullable Output<ResponseHeadersPolicySecurityHeadersConfigReferrerPolicyGetArgs> referrerPolicy) {
             this.referrerPolicy = referrerPolicy;
             return this;
         }
 
         public Builder referrerPolicy(@Nullable ResponseHeadersPolicySecurityHeadersConfigReferrerPolicyGetArgs referrerPolicy) {
-            this.referrerPolicy = Input.ofNullable(referrerPolicy);
+            this.referrerPolicy = Output.ofNullable(referrerPolicy);
             return this;
         }
 
-        public Builder strictTransportSecurity(@Nullable Input<ResponseHeadersPolicySecurityHeadersConfigStrictTransportSecurityGetArgs> strictTransportSecurity) {
+        public Builder strictTransportSecurity(@Nullable Output<ResponseHeadersPolicySecurityHeadersConfigStrictTransportSecurityGetArgs> strictTransportSecurity) {
             this.strictTransportSecurity = strictTransportSecurity;
             return this;
         }
 
         public Builder strictTransportSecurity(@Nullable ResponseHeadersPolicySecurityHeadersConfigStrictTransportSecurityGetArgs strictTransportSecurity) {
-            this.strictTransportSecurity = Input.ofNullable(strictTransportSecurity);
+            this.strictTransportSecurity = Output.ofNullable(strictTransportSecurity);
             return this;
         }
 
-        public Builder xssProtection(@Nullable Input<ResponseHeadersPolicySecurityHeadersConfigXssProtectionGetArgs> xssProtection) {
+        public Builder xssProtection(@Nullable Output<ResponseHeadersPolicySecurityHeadersConfigXssProtectionGetArgs> xssProtection) {
             this.xssProtection = xssProtection;
             return this;
         }
 
         public Builder xssProtection(@Nullable ResponseHeadersPolicySecurityHeadersConfigXssProtectionGetArgs xssProtection) {
-            this.xssProtection = Input.ofNullable(xssProtection);
+            this.xssProtection = Output.ofNullable(xssProtection);
             return this;
         }
         public ResponseHeadersPolicySecurityHeadersConfigGetArgs build() {

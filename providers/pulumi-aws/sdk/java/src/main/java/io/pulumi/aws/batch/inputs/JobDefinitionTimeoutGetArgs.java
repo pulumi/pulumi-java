@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.batch.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
@@ -19,18 +19,18 @@ public final class JobDefinitionTimeoutGetArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="attemptDurationSeconds")
-      private final @Nullable Input<Integer> attemptDurationSeconds;
+      private final @Nullable Output<Integer> attemptDurationSeconds;
 
-    public Input<Integer> getAttemptDurationSeconds() {
-        return this.attemptDurationSeconds == null ? Input.empty() : this.attemptDurationSeconds;
+    public Output<Integer> getAttemptDurationSeconds() {
+        return this.attemptDurationSeconds == null ? Output.empty() : this.attemptDurationSeconds;
     }
 
-    public JobDefinitionTimeoutGetArgs(@Nullable Input<Integer> attemptDurationSeconds) {
+    public JobDefinitionTimeoutGetArgs(@Nullable Output<Integer> attemptDurationSeconds) {
         this.attemptDurationSeconds = attemptDurationSeconds;
     }
 
     private JobDefinitionTimeoutGetArgs() {
-        this.attemptDurationSeconds = Input.empty();
+        this.attemptDurationSeconds = Output.empty();
     }
 
     public static Builder builder() {
@@ -42,7 +42,7 @@ public final class JobDefinitionTimeoutGetArgs extends io.pulumi.resources.Resou
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> attemptDurationSeconds;
+        private @Nullable Output<Integer> attemptDurationSeconds;
 
         public Builder() {
     	      // Empty
@@ -53,13 +53,13 @@ public final class JobDefinitionTimeoutGetArgs extends io.pulumi.resources.Resou
     	      this.attemptDurationSeconds = defaults.attemptDurationSeconds;
         }
 
-        public Builder attemptDurationSeconds(@Nullable Input<Integer> attemptDurationSeconds) {
+        public Builder attemptDurationSeconds(@Nullable Output<Integer> attemptDurationSeconds) {
             this.attemptDurationSeconds = attemptDurationSeconds;
             return this;
         }
 
         public Builder attemptDurationSeconds(@Nullable Integer attemptDurationSeconds) {
-            this.attemptDurationSeconds = Input.ofNullable(attemptDurationSeconds);
+            this.attemptDurationSeconds = Output.ofNullable(attemptDurationSeconds);
             return this;
         }
         public JobDefinitionTimeoutGetArgs build() {

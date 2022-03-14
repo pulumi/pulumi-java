@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.backup;
 
 import io.pulumi.awsnative.backup.inputs.BackupSelectionResourceTypeArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -15,29 +15,29 @@ public final class BackupSelectionArgs extends io.pulumi.resources.ResourceArgs 
     public static final BackupSelectionArgs Empty = new BackupSelectionArgs();
 
     @InputImport(name="backupPlanId", required=true)
-      private final Input<String> backupPlanId;
+      private final Output<String> backupPlanId;
 
-    public Input<String> getBackupPlanId() {
+    public Output<String> getBackupPlanId() {
         return this.backupPlanId;
     }
 
     @InputImport(name="backupSelection", required=true)
-      private final Input<BackupSelectionResourceTypeArgs> backupSelection;
+      private final Output<BackupSelectionResourceTypeArgs> backupSelection;
 
-    public Input<BackupSelectionResourceTypeArgs> getBackupSelection() {
+    public Output<BackupSelectionResourceTypeArgs> getBackupSelection() {
         return this.backupSelection;
     }
 
     public BackupSelectionArgs(
-        Input<String> backupPlanId,
-        Input<BackupSelectionResourceTypeArgs> backupSelection) {
+        Output<String> backupPlanId,
+        Output<BackupSelectionResourceTypeArgs> backupSelection) {
         this.backupPlanId = Objects.requireNonNull(backupPlanId, "expected parameter 'backupPlanId' to be non-null");
         this.backupSelection = Objects.requireNonNull(backupSelection, "expected parameter 'backupSelection' to be non-null");
     }
 
     private BackupSelectionArgs() {
-        this.backupPlanId = Input.empty();
-        this.backupSelection = Input.empty();
+        this.backupPlanId = Output.empty();
+        this.backupSelection = Output.empty();
     }
 
     public static Builder builder() {
@@ -49,8 +49,8 @@ public final class BackupSelectionArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private Input<String> backupPlanId;
-        private Input<BackupSelectionResourceTypeArgs> backupSelection;
+        private Output<String> backupPlanId;
+        private Output<BackupSelectionResourceTypeArgs> backupSelection;
 
         public Builder() {
     	      // Empty
@@ -62,23 +62,23 @@ public final class BackupSelectionArgs extends io.pulumi.resources.ResourceArgs 
     	      this.backupSelection = defaults.backupSelection;
         }
 
-        public Builder backupPlanId(Input<String> backupPlanId) {
+        public Builder backupPlanId(Output<String> backupPlanId) {
             this.backupPlanId = Objects.requireNonNull(backupPlanId);
             return this;
         }
 
         public Builder backupPlanId(String backupPlanId) {
-            this.backupPlanId = Input.of(Objects.requireNonNull(backupPlanId));
+            this.backupPlanId = Output.of(Objects.requireNonNull(backupPlanId));
             return this;
         }
 
-        public Builder backupSelection(Input<BackupSelectionResourceTypeArgs> backupSelection) {
+        public Builder backupSelection(Output<BackupSelectionResourceTypeArgs> backupSelection) {
             this.backupSelection = Objects.requireNonNull(backupSelection);
             return this;
         }
 
         public Builder backupSelection(BackupSelectionResourceTypeArgs backupSelection) {
-            this.backupSelection = Input.of(Objects.requireNonNull(backupSelection));
+            this.backupSelection = Output.of(Objects.requireNonNull(backupSelection));
             return this;
         }
         public BackupSelectionArgs build() {

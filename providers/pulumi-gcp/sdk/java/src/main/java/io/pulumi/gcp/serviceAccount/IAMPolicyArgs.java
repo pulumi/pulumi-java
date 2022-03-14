@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.serviceAccount;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,9 +19,9 @@ public final class IAMPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="policyData", required=true)
-      private final Input<String> policyData;
+      private final Output<String> policyData;
 
-    public Input<String> getPolicyData() {
+    public Output<String> getPolicyData() {
         return this.policyData;
     }
 
@@ -30,22 +30,22 @@ public final class IAMPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serviceAccountId", required=true)
-      private final Input<String> serviceAccountId;
+      private final Output<String> serviceAccountId;
 
-    public Input<String> getServiceAccountId() {
+    public Output<String> getServiceAccountId() {
         return this.serviceAccountId;
     }
 
     public IAMPolicyArgs(
-        Input<String> policyData,
-        Input<String> serviceAccountId) {
+        Output<String> policyData,
+        Output<String> serviceAccountId) {
         this.policyData = Objects.requireNonNull(policyData, "expected parameter 'policyData' to be non-null");
         this.serviceAccountId = Objects.requireNonNull(serviceAccountId, "expected parameter 'serviceAccountId' to be non-null");
     }
 
     private IAMPolicyArgs() {
-        this.policyData = Input.empty();
-        this.serviceAccountId = Input.empty();
+        this.policyData = Output.empty();
+        this.serviceAccountId = Output.empty();
     }
 
     public static Builder builder() {
@@ -57,8 +57,8 @@ public final class IAMPolicyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> policyData;
-        private Input<String> serviceAccountId;
+        private Output<String> policyData;
+        private Output<String> serviceAccountId;
 
         public Builder() {
     	      // Empty
@@ -70,23 +70,23 @@ public final class IAMPolicyArgs extends io.pulumi.resources.ResourceArgs {
     	      this.serviceAccountId = defaults.serviceAccountId;
         }
 
-        public Builder policyData(Input<String> policyData) {
+        public Builder policyData(Output<String> policyData) {
             this.policyData = Objects.requireNonNull(policyData);
             return this;
         }
 
         public Builder policyData(String policyData) {
-            this.policyData = Input.of(Objects.requireNonNull(policyData));
+            this.policyData = Output.of(Objects.requireNonNull(policyData));
             return this;
         }
 
-        public Builder serviceAccountId(Input<String> serviceAccountId) {
+        public Builder serviceAccountId(Output<String> serviceAccountId) {
             this.serviceAccountId = Objects.requireNonNull(serviceAccountId);
             return this;
         }
 
         public Builder serviceAccountId(String serviceAccountId) {
-            this.serviceAccountId = Input.of(Objects.requireNonNull(serviceAccountId));
+            this.serviceAccountId = Output.of(Objects.requireNonNull(serviceAccountId));
             return this;
         }
         public IAMPolicyArgs build() {

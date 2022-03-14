@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.databox.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -24,10 +24,10 @@ public final class AzureFileFilterDetailsArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="filePathList")
-      private final @Nullable Input<List<String>> filePathList;
+      private final @Nullable Output<List<String>> filePathList;
 
-    public Input<List<String>> getFilePathList() {
-        return this.filePathList == null ? Input.empty() : this.filePathList;
+    public Output<List<String>> getFilePathList() {
+        return this.filePathList == null ? Output.empty() : this.filePathList;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class AzureFileFilterDetailsArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="filePrefixList")
-      private final @Nullable Input<List<String>> filePrefixList;
+      private final @Nullable Output<List<String>> filePrefixList;
 
-    public Input<List<String>> getFilePrefixList() {
-        return this.filePrefixList == null ? Input.empty() : this.filePrefixList;
+    public Output<List<String>> getFilePrefixList() {
+        return this.filePrefixList == null ? Output.empty() : this.filePrefixList;
     }
 
     /**
@@ -46,25 +46,25 @@ public final class AzureFileFilterDetailsArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="fileShareList")
-      private final @Nullable Input<List<String>> fileShareList;
+      private final @Nullable Output<List<String>> fileShareList;
 
-    public Input<List<String>> getFileShareList() {
-        return this.fileShareList == null ? Input.empty() : this.fileShareList;
+    public Output<List<String>> getFileShareList() {
+        return this.fileShareList == null ? Output.empty() : this.fileShareList;
     }
 
     public AzureFileFilterDetailsArgs(
-        @Nullable Input<List<String>> filePathList,
-        @Nullable Input<List<String>> filePrefixList,
-        @Nullable Input<List<String>> fileShareList) {
+        @Nullable Output<List<String>> filePathList,
+        @Nullable Output<List<String>> filePrefixList,
+        @Nullable Output<List<String>> fileShareList) {
         this.filePathList = filePathList;
         this.filePrefixList = filePrefixList;
         this.fileShareList = fileShareList;
     }
 
     private AzureFileFilterDetailsArgs() {
-        this.filePathList = Input.empty();
-        this.filePrefixList = Input.empty();
-        this.fileShareList = Input.empty();
+        this.filePathList = Output.empty();
+        this.filePrefixList = Output.empty();
+        this.fileShareList = Output.empty();
     }
 
     public static Builder builder() {
@@ -76,9 +76,9 @@ public final class AzureFileFilterDetailsArgs extends io.pulumi.resources.Resour
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> filePathList;
-        private @Nullable Input<List<String>> filePrefixList;
-        private @Nullable Input<List<String>> fileShareList;
+        private @Nullable Output<List<String>> filePathList;
+        private @Nullable Output<List<String>> filePrefixList;
+        private @Nullable Output<List<String>> fileShareList;
 
         public Builder() {
     	      // Empty
@@ -91,33 +91,33 @@ public final class AzureFileFilterDetailsArgs extends io.pulumi.resources.Resour
     	      this.fileShareList = defaults.fileShareList;
         }
 
-        public Builder filePathList(@Nullable Input<List<String>> filePathList) {
+        public Builder filePathList(@Nullable Output<List<String>> filePathList) {
             this.filePathList = filePathList;
             return this;
         }
 
         public Builder filePathList(@Nullable List<String> filePathList) {
-            this.filePathList = Input.ofNullable(filePathList);
+            this.filePathList = Output.ofNullable(filePathList);
             return this;
         }
 
-        public Builder filePrefixList(@Nullable Input<List<String>> filePrefixList) {
+        public Builder filePrefixList(@Nullable Output<List<String>> filePrefixList) {
             this.filePrefixList = filePrefixList;
             return this;
         }
 
         public Builder filePrefixList(@Nullable List<String> filePrefixList) {
-            this.filePrefixList = Input.ofNullable(filePrefixList);
+            this.filePrefixList = Output.ofNullable(filePrefixList);
             return this;
         }
 
-        public Builder fileShareList(@Nullable Input<List<String>> fileShareList) {
+        public Builder fileShareList(@Nullable Output<List<String>> fileShareList) {
             this.fileShareList = fileShareList;
             return this;
         }
 
         public Builder fileShareList(@Nullable List<String> fileShareList) {
-            this.fileShareList = Input.ofNullable(fileShareList);
+            this.fileShareList = Output.ofNullable(fileShareList);
             return this;
         }
         public AzureFileFilterDetailsArgs build() {

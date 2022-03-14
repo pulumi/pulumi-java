@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.compute_v1.inputs.DiskInstantiationConfigArgs;
 import java.util.List;
@@ -24,18 +24,18 @@ public final class SourceInstanceParamsArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="diskConfigs")
-      private final @Nullable Input<List<DiskInstantiationConfigArgs>> diskConfigs;
+      private final @Nullable Output<List<DiskInstantiationConfigArgs>> diskConfigs;
 
-    public Input<List<DiskInstantiationConfigArgs>> getDiskConfigs() {
-        return this.diskConfigs == null ? Input.empty() : this.diskConfigs;
+    public Output<List<DiskInstantiationConfigArgs>> getDiskConfigs() {
+        return this.diskConfigs == null ? Output.empty() : this.diskConfigs;
     }
 
-    public SourceInstanceParamsArgs(@Nullable Input<List<DiskInstantiationConfigArgs>> diskConfigs) {
+    public SourceInstanceParamsArgs(@Nullable Output<List<DiskInstantiationConfigArgs>> diskConfigs) {
         this.diskConfigs = diskConfigs;
     }
 
     private SourceInstanceParamsArgs() {
-        this.diskConfigs = Input.empty();
+        this.diskConfigs = Output.empty();
     }
 
     public static Builder builder() {
@@ -47,7 +47,7 @@ public final class SourceInstanceParamsArgs extends io.pulumi.resources.Resource
     }
 
     public static final class Builder {
-        private @Nullable Input<List<DiskInstantiationConfigArgs>> diskConfigs;
+        private @Nullable Output<List<DiskInstantiationConfigArgs>> diskConfigs;
 
         public Builder() {
     	      // Empty
@@ -58,13 +58,13 @@ public final class SourceInstanceParamsArgs extends io.pulumi.resources.Resource
     	      this.diskConfigs = defaults.diskConfigs;
         }
 
-        public Builder diskConfigs(@Nullable Input<List<DiskInstantiationConfigArgs>> diskConfigs) {
+        public Builder diskConfigs(@Nullable Output<List<DiskInstantiationConfigArgs>> diskConfigs) {
             this.diskConfigs = diskConfigs;
             return this;
         }
 
         public Builder diskConfigs(@Nullable List<DiskInstantiationConfigArgs> diskConfigs) {
-            this.diskConfigs = Input.ofNullable(diskConfigs);
+            this.diskConfigs = Output.ofNullable(diskConfigs);
             return this;
         }
         public SourceInstanceParamsArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
@@ -15,18 +15,18 @@ public final class InterconnectAttachmentPrivateInterconnectInfoArgs extends io.
     public static final InterconnectAttachmentPrivateInterconnectInfoArgs Empty = new InterconnectAttachmentPrivateInterconnectInfoArgs();
 
     @InputImport(name="tag8021q")
-      private final @Nullable Input<Integer> tag8021q;
+      private final @Nullable Output<Integer> tag8021q;
 
-    public Input<Integer> getTag8021q() {
-        return this.tag8021q == null ? Input.empty() : this.tag8021q;
+    public Output<Integer> getTag8021q() {
+        return this.tag8021q == null ? Output.empty() : this.tag8021q;
     }
 
-    public InterconnectAttachmentPrivateInterconnectInfoArgs(@Nullable Input<Integer> tag8021q) {
+    public InterconnectAttachmentPrivateInterconnectInfoArgs(@Nullable Output<Integer> tag8021q) {
         this.tag8021q = tag8021q;
     }
 
     private InterconnectAttachmentPrivateInterconnectInfoArgs() {
-        this.tag8021q = Input.empty();
+        this.tag8021q = Output.empty();
     }
 
     public static Builder builder() {
@@ -38,7 +38,7 @@ public final class InterconnectAttachmentPrivateInterconnectInfoArgs extends io.
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> tag8021q;
+        private @Nullable Output<Integer> tag8021q;
 
         public Builder() {
     	      // Empty
@@ -49,13 +49,13 @@ public final class InterconnectAttachmentPrivateInterconnectInfoArgs extends io.
     	      this.tag8021q = defaults.tag8021q;
         }
 
-        public Builder tag8021q(@Nullable Input<Integer> tag8021q) {
+        public Builder tag8021q(@Nullable Output<Integer> tag8021q) {
             this.tag8021q = tag8021q;
             return this;
         }
 
         public Builder tag8021q(@Nullable Integer tag8021q) {
-            this.tag8021q = Input.ofNullable(tag8021q);
+            this.tag8021q = Output.ofNullable(tag8021q);
             return this;
         }
         public InterconnectAttachmentPrivateInterconnectInfoArgs build() {

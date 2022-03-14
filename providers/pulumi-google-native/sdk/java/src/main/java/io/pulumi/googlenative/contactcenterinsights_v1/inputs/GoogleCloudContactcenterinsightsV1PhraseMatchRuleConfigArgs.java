@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.contactcenterinsights_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.contactcenterinsights_v1.inputs.GoogleCloudContactcenterinsightsV1ExactMatchConfigArgs;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class GoogleCloudContactcenterinsightsV1PhraseMatchRuleConfigArgs e
      * 
      */
     @InputImport(name="exactMatchConfig")
-      private final @Nullable Input<GoogleCloudContactcenterinsightsV1ExactMatchConfigArgs> exactMatchConfig;
+      private final @Nullable Output<GoogleCloudContactcenterinsightsV1ExactMatchConfigArgs> exactMatchConfig;
 
-    public Input<GoogleCloudContactcenterinsightsV1ExactMatchConfigArgs> getExactMatchConfig() {
-        return this.exactMatchConfig == null ? Input.empty() : this.exactMatchConfig;
+    public Output<GoogleCloudContactcenterinsightsV1ExactMatchConfigArgs> getExactMatchConfig() {
+        return this.exactMatchConfig == null ? Output.empty() : this.exactMatchConfig;
     }
 
-    public GoogleCloudContactcenterinsightsV1PhraseMatchRuleConfigArgs(@Nullable Input<GoogleCloudContactcenterinsightsV1ExactMatchConfigArgs> exactMatchConfig) {
+    public GoogleCloudContactcenterinsightsV1PhraseMatchRuleConfigArgs(@Nullable Output<GoogleCloudContactcenterinsightsV1ExactMatchConfigArgs> exactMatchConfig) {
         this.exactMatchConfig = exactMatchConfig;
     }
 
     private GoogleCloudContactcenterinsightsV1PhraseMatchRuleConfigArgs() {
-        this.exactMatchConfig = Input.empty();
+        this.exactMatchConfig = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class GoogleCloudContactcenterinsightsV1PhraseMatchRuleConfigArgs e
     }
 
     public static final class Builder {
-        private @Nullable Input<GoogleCloudContactcenterinsightsV1ExactMatchConfigArgs> exactMatchConfig;
+        private @Nullable Output<GoogleCloudContactcenterinsightsV1ExactMatchConfigArgs> exactMatchConfig;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class GoogleCloudContactcenterinsightsV1PhraseMatchRuleConfigArgs e
     	      this.exactMatchConfig = defaults.exactMatchConfig;
         }
 
-        public Builder exactMatchConfig(@Nullable Input<GoogleCloudContactcenterinsightsV1ExactMatchConfigArgs> exactMatchConfig) {
+        public Builder exactMatchConfig(@Nullable Output<GoogleCloudContactcenterinsightsV1ExactMatchConfigArgs> exactMatchConfig) {
             this.exactMatchConfig = exactMatchConfig;
             return this;
         }
 
         public Builder exactMatchConfig(@Nullable GoogleCloudContactcenterinsightsV1ExactMatchConfigArgs exactMatchConfig) {
-            this.exactMatchConfig = Input.ofNullable(exactMatchConfig);
+            this.exactMatchConfig = Output.ofNullable(exactMatchConfig);
             return this;
         }
         public GoogleCloudContactcenterinsightsV1PhraseMatchRuleConfigArgs build() {

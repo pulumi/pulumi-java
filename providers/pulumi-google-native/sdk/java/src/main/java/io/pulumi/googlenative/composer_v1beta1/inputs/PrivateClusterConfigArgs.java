@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.composer_v1beta1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class PrivateClusterConfigArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="enablePrivateEndpoint")
-      private final @Nullable Input<Boolean> enablePrivateEndpoint;
+      private final @Nullable Output<Boolean> enablePrivateEndpoint;
 
-    public Input<Boolean> getEnablePrivateEndpoint() {
-        return this.enablePrivateEndpoint == null ? Input.empty() : this.enablePrivateEndpoint;
+    public Output<Boolean> getEnablePrivateEndpoint() {
+        return this.enablePrivateEndpoint == null ? Output.empty() : this.enablePrivateEndpoint;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class PrivateClusterConfigArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="masterIpv4CidrBlock")
-      private final @Nullable Input<String> masterIpv4CidrBlock;
+      private final @Nullable Output<String> masterIpv4CidrBlock;
 
-    public Input<String> getMasterIpv4CidrBlock() {
-        return this.masterIpv4CidrBlock == null ? Input.empty() : this.masterIpv4CidrBlock;
+    public Output<String> getMasterIpv4CidrBlock() {
+        return this.masterIpv4CidrBlock == null ? Output.empty() : this.masterIpv4CidrBlock;
     }
 
     public PrivateClusterConfigArgs(
-        @Nullable Input<Boolean> enablePrivateEndpoint,
-        @Nullable Input<String> masterIpv4CidrBlock) {
+        @Nullable Output<Boolean> enablePrivateEndpoint,
+        @Nullable Output<String> masterIpv4CidrBlock) {
         this.enablePrivateEndpoint = enablePrivateEndpoint;
         this.masterIpv4CidrBlock = masterIpv4CidrBlock;
     }
 
     private PrivateClusterConfigArgs() {
-        this.enablePrivateEndpoint = Input.empty();
-        this.masterIpv4CidrBlock = Input.empty();
+        this.enablePrivateEndpoint = Output.empty();
+        this.masterIpv4CidrBlock = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class PrivateClusterConfigArgs extends io.pulumi.resources.Resource
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> enablePrivateEndpoint;
-        private @Nullable Input<String> masterIpv4CidrBlock;
+        private @Nullable Output<Boolean> enablePrivateEndpoint;
+        private @Nullable Output<String> masterIpv4CidrBlock;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class PrivateClusterConfigArgs extends io.pulumi.resources.Resource
     	      this.masterIpv4CidrBlock = defaults.masterIpv4CidrBlock;
         }
 
-        public Builder enablePrivateEndpoint(@Nullable Input<Boolean> enablePrivateEndpoint) {
+        public Builder enablePrivateEndpoint(@Nullable Output<Boolean> enablePrivateEndpoint) {
             this.enablePrivateEndpoint = enablePrivateEndpoint;
             return this;
         }
 
         public Builder enablePrivateEndpoint(@Nullable Boolean enablePrivateEndpoint) {
-            this.enablePrivateEndpoint = Input.ofNullable(enablePrivateEndpoint);
+            this.enablePrivateEndpoint = Output.ofNullable(enablePrivateEndpoint);
             return this;
         }
 
-        public Builder masterIpv4CidrBlock(@Nullable Input<String> masterIpv4CidrBlock) {
+        public Builder masterIpv4CidrBlock(@Nullable Output<String> masterIpv4CidrBlock) {
             this.masterIpv4CidrBlock = masterIpv4CidrBlock;
             return this;
         }
 
         public Builder masterIpv4CidrBlock(@Nullable String masterIpv4CidrBlock) {
-            this.masterIpv4CidrBlock = Input.ofNullable(masterIpv4CidrBlock);
+            this.masterIpv4CidrBlock = Output.ofNullable(masterIpv4CidrBlock);
             return this;
         }
         public PrivateClusterConfigArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.glue.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -18,9 +18,9 @@ public final class CatalogDatabaseTargetDatabaseGetArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="catalogId", required=true)
-      private final Input<String> catalogId;
+      private final Output<String> catalogId;
 
-    public Input<String> getCatalogId() {
+    public Output<String> getCatalogId() {
         return this.catalogId;
     }
 
@@ -29,22 +29,22 @@ public final class CatalogDatabaseTargetDatabaseGetArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="databaseName", required=true)
-      private final Input<String> databaseName;
+      private final Output<String> databaseName;
 
-    public Input<String> getDatabaseName() {
+    public Output<String> getDatabaseName() {
         return this.databaseName;
     }
 
     public CatalogDatabaseTargetDatabaseGetArgs(
-        Input<String> catalogId,
-        Input<String> databaseName) {
+        Output<String> catalogId,
+        Output<String> databaseName) {
         this.catalogId = Objects.requireNonNull(catalogId, "expected parameter 'catalogId' to be non-null");
         this.databaseName = Objects.requireNonNull(databaseName, "expected parameter 'databaseName' to be non-null");
     }
 
     private CatalogDatabaseTargetDatabaseGetArgs() {
-        this.catalogId = Input.empty();
-        this.databaseName = Input.empty();
+        this.catalogId = Output.empty();
+        this.databaseName = Output.empty();
     }
 
     public static Builder builder() {
@@ -56,8 +56,8 @@ public final class CatalogDatabaseTargetDatabaseGetArgs extends io.pulumi.resour
     }
 
     public static final class Builder {
-        private Input<String> catalogId;
-        private Input<String> databaseName;
+        private Output<String> catalogId;
+        private Output<String> databaseName;
 
         public Builder() {
     	      // Empty
@@ -69,23 +69,23 @@ public final class CatalogDatabaseTargetDatabaseGetArgs extends io.pulumi.resour
     	      this.databaseName = defaults.databaseName;
         }
 
-        public Builder catalogId(Input<String> catalogId) {
+        public Builder catalogId(Output<String> catalogId) {
             this.catalogId = Objects.requireNonNull(catalogId);
             return this;
         }
 
         public Builder catalogId(String catalogId) {
-            this.catalogId = Input.of(Objects.requireNonNull(catalogId));
+            this.catalogId = Output.of(Objects.requireNonNull(catalogId));
             return this;
         }
 
-        public Builder databaseName(Input<String> databaseName) {
+        public Builder databaseName(Output<String> databaseName) {
             this.databaseName = Objects.requireNonNull(databaseName);
             return this;
         }
 
         public Builder databaseName(String databaseName) {
-            this.databaseName = Input.of(Objects.requireNonNull(databaseName));
+            this.databaseName = Output.of(Objects.requireNonNull(databaseName));
             return this;
         }
         public CatalogDatabaseTargetDatabaseGetArgs build() {

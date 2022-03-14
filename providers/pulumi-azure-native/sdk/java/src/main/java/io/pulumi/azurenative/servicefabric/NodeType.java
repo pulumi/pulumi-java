@@ -9,7 +9,6 @@ import io.pulumi.azurenative.servicefabric.outputs.EndpointRangeDescriptionRespo
 import io.pulumi.azurenative.servicefabric.outputs.VMSSExtensionResponse;
 import io.pulumi.azurenative.servicefabric.outputs.VaultSecretGroupResponse;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -328,23 +327,23 @@ public class NodeType extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public NodeType(String name, NodeTypeArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:servicefabric:NodeType", name, args == null ? NodeTypeArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("azure-native:servicefabric:NodeType", name, args == null ? NodeTypeArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private NodeType(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private NodeType(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:servicefabric:NodeType", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:servicefabric/v20200101preview:NodeType").build()),
-                Input.of(Alias.builder().setType("azure-native:servicefabric/v20210101preview:NodeType").build()),
-                Input.of(Alias.builder().setType("azure-native:servicefabric/v20210501:NodeType").build()),
-                Input.of(Alias.builder().setType("azure-native:servicefabric/v20210701preview:NodeType").build()),
-                Input.of(Alias.builder().setType("azure-native:servicefabric/v20210901privatepreview:NodeType").build()),
-                Input.of(Alias.builder().setType("azure-native:servicefabric/v20211101preview:NodeType").build())
+                Output.of(Alias.builder().setType("azure-native:servicefabric/v20200101preview:NodeType").build()),
+                Output.of(Alias.builder().setType("azure-native:servicefabric/v20210101preview:NodeType").build()),
+                Output.of(Alias.builder().setType("azure-native:servicefabric/v20210501:NodeType").build()),
+                Output.of(Alias.builder().setType("azure-native:servicefabric/v20210701preview:NodeType").build()),
+                Output.of(Alias.builder().setType("azure-native:servicefabric/v20210901privatepreview:NodeType").build()),
+                Output.of(Alias.builder().setType("azure-native:servicefabric/v20211101preview:NodeType").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -358,7 +357,7 @@ public class NodeType extends io.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static NodeType get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static NodeType get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new NodeType(name, id, options);
     }
 }

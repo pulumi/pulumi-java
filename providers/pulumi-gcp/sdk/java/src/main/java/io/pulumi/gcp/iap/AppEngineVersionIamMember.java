@@ -3,7 +3,6 @@
 
 package io.pulumi.gcp.iap;
 
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -213,14 +212,14 @@ public class AppEngineVersionIamMember extends io.pulumi.resources.CustomResourc
      * @param options A bag of options that control this resource's behavior.
      */
     public AppEngineVersionIamMember(String name, AppEngineVersionIamMemberArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:iap/appEngineVersionIamMember:AppEngineVersionIamMember", name, args == null ? AppEngineVersionIamMemberArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("gcp:iap/appEngineVersionIamMember:AppEngineVersionIamMember", name, args == null ? AppEngineVersionIamMemberArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private AppEngineVersionIamMember(String name, Input<String> id, @Nullable AppEngineVersionIamMemberState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private AppEngineVersionIamMember(String name, Output<String> id, @Nullable AppEngineVersionIamMemberState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("gcp:iap/appEngineVersionIamMember:AppEngineVersionIamMember", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -236,7 +235,7 @@ public class AppEngineVersionIamMember extends io.pulumi.resources.CustomResourc
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static AppEngineVersionIamMember get(String name, Input<String> id, @Nullable AppEngineVersionIamMemberState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static AppEngineVersionIamMember get(String name, Output<String> id, @Nullable AppEngineVersionIamMemberState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new AppEngineVersionIamMember(name, id, state, options);
     }
 }

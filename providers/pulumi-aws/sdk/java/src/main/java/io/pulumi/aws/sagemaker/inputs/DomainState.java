@@ -5,7 +5,7 @@ package io.pulumi.aws.sagemaker.inputs;
 
 import io.pulumi.aws.sagemaker.inputs.DomainDefaultUserSettingsGetArgs;
 import io.pulumi.aws.sagemaker.inputs.DomainRetentionPolicyGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -23,10 +23,10 @@ public final class DomainState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="appNetworkAccessType")
-      private final @Nullable Input<String> appNetworkAccessType;
+      private final @Nullable Output<String> appNetworkAccessType;
 
-    public Input<String> getAppNetworkAccessType() {
-        return this.appNetworkAccessType == null ? Input.empty() : this.appNetworkAccessType;
+    public Output<String> getAppNetworkAccessType() {
+        return this.appNetworkAccessType == null ? Output.empty() : this.appNetworkAccessType;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class DomainState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arn")
-      private final @Nullable Input<String> arn;
+      private final @Nullable Output<String> arn;
 
-    public Input<String> getArn() {
-        return this.arn == null ? Input.empty() : this.arn;
+    public Output<String> getArn() {
+        return this.arn == null ? Output.empty() : this.arn;
     }
 
     /**
@@ -45,10 +45,10 @@ public final class DomainState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="authMode")
-      private final @Nullable Input<String> authMode;
+      private final @Nullable Output<String> authMode;
 
-    public Input<String> getAuthMode() {
-        return this.authMode == null ? Input.empty() : this.authMode;
+    public Output<String> getAuthMode() {
+        return this.authMode == null ? Output.empty() : this.authMode;
     }
 
     /**
@@ -56,10 +56,10 @@ public final class DomainState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="defaultUserSettings")
-      private final @Nullable Input<DomainDefaultUserSettingsGetArgs> defaultUserSettings;
+      private final @Nullable Output<DomainDefaultUserSettingsGetArgs> defaultUserSettings;
 
-    public Input<DomainDefaultUserSettingsGetArgs> getDefaultUserSettings() {
-        return this.defaultUserSettings == null ? Input.empty() : this.defaultUserSettings;
+    public Output<DomainDefaultUserSettingsGetArgs> getDefaultUserSettings() {
+        return this.defaultUserSettings == null ? Output.empty() : this.defaultUserSettings;
     }
 
     /**
@@ -67,10 +67,10 @@ public final class DomainState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="domainName")
-      private final @Nullable Input<String> domainName;
+      private final @Nullable Output<String> domainName;
 
-    public Input<String> getDomainName() {
-        return this.domainName == null ? Input.empty() : this.domainName;
+    public Output<String> getDomainName() {
+        return this.domainName == null ? Output.empty() : this.domainName;
     }
 
     /**
@@ -78,10 +78,10 @@ public final class DomainState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="homeEfsFileSystemId")
-      private final @Nullable Input<String> homeEfsFileSystemId;
+      private final @Nullable Output<String> homeEfsFileSystemId;
 
-    public Input<String> getHomeEfsFileSystemId() {
-        return this.homeEfsFileSystemId == null ? Input.empty() : this.homeEfsFileSystemId;
+    public Output<String> getHomeEfsFileSystemId() {
+        return this.homeEfsFileSystemId == null ? Output.empty() : this.homeEfsFileSystemId;
     }
 
     /**
@@ -89,10 +89,10 @@ public final class DomainState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kmsKeyId")
-      private final @Nullable Input<String> kmsKeyId;
+      private final @Nullable Output<String> kmsKeyId;
 
-    public Input<String> getKmsKeyId() {
-        return this.kmsKeyId == null ? Input.empty() : this.kmsKeyId;
+    public Output<String> getKmsKeyId() {
+        return this.kmsKeyId == null ? Output.empty() : this.kmsKeyId;
     }
 
     /**
@@ -100,10 +100,10 @@ public final class DomainState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="retentionPolicy")
-      private final @Nullable Input<DomainRetentionPolicyGetArgs> retentionPolicy;
+      private final @Nullable Output<DomainRetentionPolicyGetArgs> retentionPolicy;
 
-    public Input<DomainRetentionPolicyGetArgs> getRetentionPolicy() {
-        return this.retentionPolicy == null ? Input.empty() : this.retentionPolicy;
+    public Output<DomainRetentionPolicyGetArgs> getRetentionPolicy() {
+        return this.retentionPolicy == null ? Output.empty() : this.retentionPolicy;
     }
 
     /**
@@ -111,10 +111,10 @@ public final class DomainState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="singleSignOnManagedApplicationInstanceId")
-      private final @Nullable Input<String> singleSignOnManagedApplicationInstanceId;
+      private final @Nullable Output<String> singleSignOnManagedApplicationInstanceId;
 
-    public Input<String> getSingleSignOnManagedApplicationInstanceId() {
-        return this.singleSignOnManagedApplicationInstanceId == null ? Input.empty() : this.singleSignOnManagedApplicationInstanceId;
+    public Output<String> getSingleSignOnManagedApplicationInstanceId() {
+        return this.singleSignOnManagedApplicationInstanceId == null ? Output.empty() : this.singleSignOnManagedApplicationInstanceId;
     }
 
     /**
@@ -122,10 +122,10 @@ public final class DomainState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="subnetIds")
-      private final @Nullable Input<List<String>> subnetIds;
+      private final @Nullable Output<List<String>> subnetIds;
 
-    public Input<List<String>> getSubnetIds() {
-        return this.subnetIds == null ? Input.empty() : this.subnetIds;
+    public Output<List<String>> getSubnetIds() {
+        return this.subnetIds == null ? Output.empty() : this.subnetIds;
     }
 
     /**
@@ -133,10 +133,10 @@ public final class DomainState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -144,10 +144,10 @@ public final class DomainState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tagsAll")
-      private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Input<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Input.empty() : this.tagsAll;
+    public Output<Map<String,String>> getTagsAll() {
+        return this.tagsAll == null ? Output.empty() : this.tagsAll;
     }
 
     /**
@@ -155,10 +155,10 @@ public final class DomainState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="url")
-      private final @Nullable Input<String> url;
+      private final @Nullable Output<String> url;
 
-    public Input<String> getUrl() {
-        return this.url == null ? Input.empty() : this.url;
+    public Output<String> getUrl() {
+        return this.url == null ? Output.empty() : this.url;
     }
 
     /**
@@ -166,27 +166,27 @@ public final class DomainState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="vpcId")
-      private final @Nullable Input<String> vpcId;
+      private final @Nullable Output<String> vpcId;
 
-    public Input<String> getVpcId() {
-        return this.vpcId == null ? Input.empty() : this.vpcId;
+    public Output<String> getVpcId() {
+        return this.vpcId == null ? Output.empty() : this.vpcId;
     }
 
     public DomainState(
-        @Nullable Input<String> appNetworkAccessType,
-        @Nullable Input<String> arn,
-        @Nullable Input<String> authMode,
-        @Nullable Input<DomainDefaultUserSettingsGetArgs> defaultUserSettings,
-        @Nullable Input<String> domainName,
-        @Nullable Input<String> homeEfsFileSystemId,
-        @Nullable Input<String> kmsKeyId,
-        @Nullable Input<DomainRetentionPolicyGetArgs> retentionPolicy,
-        @Nullable Input<String> singleSignOnManagedApplicationInstanceId,
-        @Nullable Input<List<String>> subnetIds,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<Map<String,String>> tagsAll,
-        @Nullable Input<String> url,
-        @Nullable Input<String> vpcId) {
+        @Nullable Output<String> appNetworkAccessType,
+        @Nullable Output<String> arn,
+        @Nullable Output<String> authMode,
+        @Nullable Output<DomainDefaultUserSettingsGetArgs> defaultUserSettings,
+        @Nullable Output<String> domainName,
+        @Nullable Output<String> homeEfsFileSystemId,
+        @Nullable Output<String> kmsKeyId,
+        @Nullable Output<DomainRetentionPolicyGetArgs> retentionPolicy,
+        @Nullable Output<String> singleSignOnManagedApplicationInstanceId,
+        @Nullable Output<List<String>> subnetIds,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<Map<String,String>> tagsAll,
+        @Nullable Output<String> url,
+        @Nullable Output<String> vpcId) {
         this.appNetworkAccessType = appNetworkAccessType;
         this.arn = arn;
         this.authMode = authMode;
@@ -204,20 +204,20 @@ public final class DomainState extends io.pulumi.resources.ResourceArgs {
     }
 
     private DomainState() {
-        this.appNetworkAccessType = Input.empty();
-        this.arn = Input.empty();
-        this.authMode = Input.empty();
-        this.defaultUserSettings = Input.empty();
-        this.domainName = Input.empty();
-        this.homeEfsFileSystemId = Input.empty();
-        this.kmsKeyId = Input.empty();
-        this.retentionPolicy = Input.empty();
-        this.singleSignOnManagedApplicationInstanceId = Input.empty();
-        this.subnetIds = Input.empty();
-        this.tags = Input.empty();
-        this.tagsAll = Input.empty();
-        this.url = Input.empty();
-        this.vpcId = Input.empty();
+        this.appNetworkAccessType = Output.empty();
+        this.arn = Output.empty();
+        this.authMode = Output.empty();
+        this.defaultUserSettings = Output.empty();
+        this.domainName = Output.empty();
+        this.homeEfsFileSystemId = Output.empty();
+        this.kmsKeyId = Output.empty();
+        this.retentionPolicy = Output.empty();
+        this.singleSignOnManagedApplicationInstanceId = Output.empty();
+        this.subnetIds = Output.empty();
+        this.tags = Output.empty();
+        this.tagsAll = Output.empty();
+        this.url = Output.empty();
+        this.vpcId = Output.empty();
     }
 
     public static Builder builder() {
@@ -229,20 +229,20 @@ public final class DomainState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> appNetworkAccessType;
-        private @Nullable Input<String> arn;
-        private @Nullable Input<String> authMode;
-        private @Nullable Input<DomainDefaultUserSettingsGetArgs> defaultUserSettings;
-        private @Nullable Input<String> domainName;
-        private @Nullable Input<String> homeEfsFileSystemId;
-        private @Nullable Input<String> kmsKeyId;
-        private @Nullable Input<DomainRetentionPolicyGetArgs> retentionPolicy;
-        private @Nullable Input<String> singleSignOnManagedApplicationInstanceId;
-        private @Nullable Input<List<String>> subnetIds;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<Map<String,String>> tagsAll;
-        private @Nullable Input<String> url;
-        private @Nullable Input<String> vpcId;
+        private @Nullable Output<String> appNetworkAccessType;
+        private @Nullable Output<String> arn;
+        private @Nullable Output<String> authMode;
+        private @Nullable Output<DomainDefaultUserSettingsGetArgs> defaultUserSettings;
+        private @Nullable Output<String> domainName;
+        private @Nullable Output<String> homeEfsFileSystemId;
+        private @Nullable Output<String> kmsKeyId;
+        private @Nullable Output<DomainRetentionPolicyGetArgs> retentionPolicy;
+        private @Nullable Output<String> singleSignOnManagedApplicationInstanceId;
+        private @Nullable Output<List<String>> subnetIds;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<Map<String,String>> tagsAll;
+        private @Nullable Output<String> url;
+        private @Nullable Output<String> vpcId;
 
         public Builder() {
     	      // Empty
@@ -266,143 +266,143 @@ public final class DomainState extends io.pulumi.resources.ResourceArgs {
     	      this.vpcId = defaults.vpcId;
         }
 
-        public Builder appNetworkAccessType(@Nullable Input<String> appNetworkAccessType) {
+        public Builder appNetworkAccessType(@Nullable Output<String> appNetworkAccessType) {
             this.appNetworkAccessType = appNetworkAccessType;
             return this;
         }
 
         public Builder appNetworkAccessType(@Nullable String appNetworkAccessType) {
-            this.appNetworkAccessType = Input.ofNullable(appNetworkAccessType);
+            this.appNetworkAccessType = Output.ofNullable(appNetworkAccessType);
             return this;
         }
 
-        public Builder arn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
 
         public Builder arn(@Nullable String arn) {
-            this.arn = Input.ofNullable(arn);
+            this.arn = Output.ofNullable(arn);
             return this;
         }
 
-        public Builder authMode(@Nullable Input<String> authMode) {
+        public Builder authMode(@Nullable Output<String> authMode) {
             this.authMode = authMode;
             return this;
         }
 
         public Builder authMode(@Nullable String authMode) {
-            this.authMode = Input.ofNullable(authMode);
+            this.authMode = Output.ofNullable(authMode);
             return this;
         }
 
-        public Builder defaultUserSettings(@Nullable Input<DomainDefaultUserSettingsGetArgs> defaultUserSettings) {
+        public Builder defaultUserSettings(@Nullable Output<DomainDefaultUserSettingsGetArgs> defaultUserSettings) {
             this.defaultUserSettings = defaultUserSettings;
             return this;
         }
 
         public Builder defaultUserSettings(@Nullable DomainDefaultUserSettingsGetArgs defaultUserSettings) {
-            this.defaultUserSettings = Input.ofNullable(defaultUserSettings);
+            this.defaultUserSettings = Output.ofNullable(defaultUserSettings);
             return this;
         }
 
-        public Builder domainName(@Nullable Input<String> domainName) {
+        public Builder domainName(@Nullable Output<String> domainName) {
             this.domainName = domainName;
             return this;
         }
 
         public Builder domainName(@Nullable String domainName) {
-            this.domainName = Input.ofNullable(domainName);
+            this.domainName = Output.ofNullable(domainName);
             return this;
         }
 
-        public Builder homeEfsFileSystemId(@Nullable Input<String> homeEfsFileSystemId) {
+        public Builder homeEfsFileSystemId(@Nullable Output<String> homeEfsFileSystemId) {
             this.homeEfsFileSystemId = homeEfsFileSystemId;
             return this;
         }
 
         public Builder homeEfsFileSystemId(@Nullable String homeEfsFileSystemId) {
-            this.homeEfsFileSystemId = Input.ofNullable(homeEfsFileSystemId);
+            this.homeEfsFileSystemId = Output.ofNullable(homeEfsFileSystemId);
             return this;
         }
 
-        public Builder kmsKeyId(@Nullable Input<String> kmsKeyId) {
+        public Builder kmsKeyId(@Nullable Output<String> kmsKeyId) {
             this.kmsKeyId = kmsKeyId;
             return this;
         }
 
         public Builder kmsKeyId(@Nullable String kmsKeyId) {
-            this.kmsKeyId = Input.ofNullable(kmsKeyId);
+            this.kmsKeyId = Output.ofNullable(kmsKeyId);
             return this;
         }
 
-        public Builder retentionPolicy(@Nullable Input<DomainRetentionPolicyGetArgs> retentionPolicy) {
+        public Builder retentionPolicy(@Nullable Output<DomainRetentionPolicyGetArgs> retentionPolicy) {
             this.retentionPolicy = retentionPolicy;
             return this;
         }
 
         public Builder retentionPolicy(@Nullable DomainRetentionPolicyGetArgs retentionPolicy) {
-            this.retentionPolicy = Input.ofNullable(retentionPolicy);
+            this.retentionPolicy = Output.ofNullable(retentionPolicy);
             return this;
         }
 
-        public Builder singleSignOnManagedApplicationInstanceId(@Nullable Input<String> singleSignOnManagedApplicationInstanceId) {
+        public Builder singleSignOnManagedApplicationInstanceId(@Nullable Output<String> singleSignOnManagedApplicationInstanceId) {
             this.singleSignOnManagedApplicationInstanceId = singleSignOnManagedApplicationInstanceId;
             return this;
         }
 
         public Builder singleSignOnManagedApplicationInstanceId(@Nullable String singleSignOnManagedApplicationInstanceId) {
-            this.singleSignOnManagedApplicationInstanceId = Input.ofNullable(singleSignOnManagedApplicationInstanceId);
+            this.singleSignOnManagedApplicationInstanceId = Output.ofNullable(singleSignOnManagedApplicationInstanceId);
             return this;
         }
 
-        public Builder subnetIds(@Nullable Input<List<String>> subnetIds) {
+        public Builder subnetIds(@Nullable Output<List<String>> subnetIds) {
             this.subnetIds = subnetIds;
             return this;
         }
 
         public Builder subnetIds(@Nullable List<String> subnetIds) {
-            this.subnetIds = Input.ofNullable(subnetIds);
+            this.subnetIds = Output.ofNullable(subnetIds);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Input.ofNullable(tagsAll);
+            this.tagsAll = Output.ofNullable(tagsAll);
             return this;
         }
 
-        public Builder url(@Nullable Input<String> url) {
+        public Builder url(@Nullable Output<String> url) {
             this.url = url;
             return this;
         }
 
         public Builder url(@Nullable String url) {
-            this.url = Input.ofNullable(url);
+            this.url = Output.ofNullable(url);
             return this;
         }
 
-        public Builder vpcId(@Nullable Input<String> vpcId) {
+        public Builder vpcId(@Nullable Output<String> vpcId) {
             this.vpcId = vpcId;
             return this;
         }
 
         public Builder vpcId(@Nullable String vpcId) {
-            this.vpcId = Input.ofNullable(vpcId);
+            this.vpcId = Output.ofNullable(vpcId);
             return this;
         }
         public DomainState build() {

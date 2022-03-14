@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.appstream.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -18,9 +18,9 @@ public final class StackUserSettingArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="action", required=true)
-      private final Input<String> action;
+      private final Output<String> action;
 
-    public Input<String> getAction() {
+    public Output<String> getAction() {
         return this.action;
     }
 
@@ -29,22 +29,22 @@ public final class StackUserSettingArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="permission", required=true)
-      private final Input<String> permission;
+      private final Output<String> permission;
 
-    public Input<String> getPermission() {
+    public Output<String> getPermission() {
         return this.permission;
     }
 
     public StackUserSettingArgs(
-        Input<String> action,
-        Input<String> permission) {
+        Output<String> action,
+        Output<String> permission) {
         this.action = Objects.requireNonNull(action, "expected parameter 'action' to be non-null");
         this.permission = Objects.requireNonNull(permission, "expected parameter 'permission' to be non-null");
     }
 
     private StackUserSettingArgs() {
-        this.action = Input.empty();
-        this.permission = Input.empty();
+        this.action = Output.empty();
+        this.permission = Output.empty();
     }
 
     public static Builder builder() {
@@ -56,8 +56,8 @@ public final class StackUserSettingArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private Input<String> action;
-        private Input<String> permission;
+        private Output<String> action;
+        private Output<String> permission;
 
         public Builder() {
     	      // Empty
@@ -69,23 +69,23 @@ public final class StackUserSettingArgs extends io.pulumi.resources.ResourceArgs
     	      this.permission = defaults.permission;
         }
 
-        public Builder action(Input<String> action) {
+        public Builder action(Output<String> action) {
             this.action = Objects.requireNonNull(action);
             return this;
         }
 
         public Builder action(String action) {
-            this.action = Input.of(Objects.requireNonNull(action));
+            this.action = Output.of(Objects.requireNonNull(action));
             return this;
         }
 
-        public Builder permission(Input<String> permission) {
+        public Builder permission(Output<String> permission) {
             this.permission = Objects.requireNonNull(permission);
             return this;
         }
 
         public Builder permission(String permission) {
-            this.permission = Input.of(Objects.requireNonNull(permission));
+            this.permission = Output.of(Objects.requireNonNull(permission));
             return this;
         }
         public StackUserSettingArgs build() {

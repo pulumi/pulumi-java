@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -24,18 +24,18 @@ public final class FirewallPolicySNATArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="privateRanges")
-      private final @Nullable Input<List<String>> privateRanges;
+      private final @Nullable Output<List<String>> privateRanges;
 
-    public Input<List<String>> getPrivateRanges() {
-        return this.privateRanges == null ? Input.empty() : this.privateRanges;
+    public Output<List<String>> getPrivateRanges() {
+        return this.privateRanges == null ? Output.empty() : this.privateRanges;
     }
 
-    public FirewallPolicySNATArgs(@Nullable Input<List<String>> privateRanges) {
+    public FirewallPolicySNATArgs(@Nullable Output<List<String>> privateRanges) {
         this.privateRanges = privateRanges;
     }
 
     private FirewallPolicySNATArgs() {
-        this.privateRanges = Input.empty();
+        this.privateRanges = Output.empty();
     }
 
     public static Builder builder() {
@@ -47,7 +47,7 @@ public final class FirewallPolicySNATArgs extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> privateRanges;
+        private @Nullable Output<List<String>> privateRanges;
 
         public Builder() {
     	      // Empty
@@ -58,13 +58,13 @@ public final class FirewallPolicySNATArgs extends io.pulumi.resources.ResourceAr
     	      this.privateRanges = defaults.privateRanges;
         }
 
-        public Builder privateRanges(@Nullable Input<List<String>> privateRanges) {
+        public Builder privateRanges(@Nullable Output<List<String>> privateRanges) {
             this.privateRanges = privateRanges;
             return this;
         }
 
         public Builder privateRanges(@Nullable List<String> privateRanges) {
-            this.privateRanges = Input.ofNullable(privateRanges);
+            this.privateRanges = Output.ofNullable(privateRanges);
             return this;
         }
         public FirewallPolicySNATArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.securitycenter_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class StreamingConfigArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="filter")
-      private final @Nullable Input<String> filter;
+      private final @Nullable Output<String> filter;
 
-    public Input<String> getFilter() {
-        return this.filter == null ? Input.empty() : this.filter;
+    public Output<String> getFilter() {
+        return this.filter == null ? Output.empty() : this.filter;
     }
 
-    public StreamingConfigArgs(@Nullable Input<String> filter) {
+    public StreamingConfigArgs(@Nullable Output<String> filter) {
         this.filter = filter;
     }
 
     private StreamingConfigArgs() {
-        this.filter = Input.empty();
+        this.filter = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class StreamingConfigArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private @Nullable Input<String> filter;
+        private @Nullable Output<String> filter;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class StreamingConfigArgs extends io.pulumi.resources.ResourceArgs 
     	      this.filter = defaults.filter;
         }
 
-        public Builder filter(@Nullable Input<String> filter) {
+        public Builder filter(@Nullable Output<String> filter) {
             this.filter = filter;
             return this;
         }
 
         public Builder filter(@Nullable String filter) {
-            this.filter = Input.ofNullable(filter);
+            this.filter = Output.ofNullable(filter);
             return this;
         }
         public StreamingConfigArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.machinelearningservices.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,18 +19,18 @@ public final class DataLakeAnalyticsPropertiesArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="dataLakeStoreAccountName")
-      private final @Nullable Input<String> dataLakeStoreAccountName;
+      private final @Nullable Output<String> dataLakeStoreAccountName;
 
-    public Input<String> getDataLakeStoreAccountName() {
-        return this.dataLakeStoreAccountName == null ? Input.empty() : this.dataLakeStoreAccountName;
+    public Output<String> getDataLakeStoreAccountName() {
+        return this.dataLakeStoreAccountName == null ? Output.empty() : this.dataLakeStoreAccountName;
     }
 
-    public DataLakeAnalyticsPropertiesArgs(@Nullable Input<String> dataLakeStoreAccountName) {
+    public DataLakeAnalyticsPropertiesArgs(@Nullable Output<String> dataLakeStoreAccountName) {
         this.dataLakeStoreAccountName = dataLakeStoreAccountName;
     }
 
     private DataLakeAnalyticsPropertiesArgs() {
-        this.dataLakeStoreAccountName = Input.empty();
+        this.dataLakeStoreAccountName = Output.empty();
     }
 
     public static Builder builder() {
@@ -42,7 +42,7 @@ public final class DataLakeAnalyticsPropertiesArgs extends io.pulumi.resources.R
     }
 
     public static final class Builder {
-        private @Nullable Input<String> dataLakeStoreAccountName;
+        private @Nullable Output<String> dataLakeStoreAccountName;
 
         public Builder() {
     	      // Empty
@@ -53,13 +53,13 @@ public final class DataLakeAnalyticsPropertiesArgs extends io.pulumi.resources.R
     	      this.dataLakeStoreAccountName = defaults.dataLakeStoreAccountName;
         }
 
-        public Builder dataLakeStoreAccountName(@Nullable Input<String> dataLakeStoreAccountName) {
+        public Builder dataLakeStoreAccountName(@Nullable Output<String> dataLakeStoreAccountName) {
             this.dataLakeStoreAccountName = dataLakeStoreAccountName;
             return this;
         }
 
         public Builder dataLakeStoreAccountName(@Nullable String dataLakeStoreAccountName) {
-            this.dataLakeStoreAccountName = Input.ofNullable(dataLakeStoreAccountName);
+            this.dataLakeStoreAccountName = Output.ofNullable(dataLakeStoreAccountName);
             return this;
         }
         public DataLakeAnalyticsPropertiesArgs build() {

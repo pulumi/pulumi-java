@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dataflow_v1b3.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class BigQueryIODetailsArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="dataset")
-      private final @Nullable Input<String> dataset;
+      private final @Nullable Output<String> dataset;
 
-    public Input<String> getDataset() {
-        return this.dataset == null ? Input.empty() : this.dataset;
+    public Output<String> getDataset() {
+        return this.dataset == null ? Output.empty() : this.dataset;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class BigQueryIODetailsArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -45,10 +45,10 @@ public final class BigQueryIODetailsArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="query")
-      private final @Nullable Input<String> query;
+      private final @Nullable Output<String> query;
 
-    public Input<String> getQuery() {
-        return this.query == null ? Input.empty() : this.query;
+    public Output<String> getQuery() {
+        return this.query == null ? Output.empty() : this.query;
     }
 
     /**
@@ -56,17 +56,17 @@ public final class BigQueryIODetailsArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="table")
-      private final @Nullable Input<String> table;
+      private final @Nullable Output<String> table;
 
-    public Input<String> getTable() {
-        return this.table == null ? Input.empty() : this.table;
+    public Output<String> getTable() {
+        return this.table == null ? Output.empty() : this.table;
     }
 
     public BigQueryIODetailsArgs(
-        @Nullable Input<String> dataset,
-        @Nullable Input<String> project,
-        @Nullable Input<String> query,
-        @Nullable Input<String> table) {
+        @Nullable Output<String> dataset,
+        @Nullable Output<String> project,
+        @Nullable Output<String> query,
+        @Nullable Output<String> table) {
         this.dataset = dataset;
         this.project = project;
         this.query = query;
@@ -74,10 +74,10 @@ public final class BigQueryIODetailsArgs extends io.pulumi.resources.ResourceArg
     }
 
     private BigQueryIODetailsArgs() {
-        this.dataset = Input.empty();
-        this.project = Input.empty();
-        this.query = Input.empty();
-        this.table = Input.empty();
+        this.dataset = Output.empty();
+        this.project = Output.empty();
+        this.query = Output.empty();
+        this.table = Output.empty();
     }
 
     public static Builder builder() {
@@ -89,10 +89,10 @@ public final class BigQueryIODetailsArgs extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private @Nullable Input<String> dataset;
-        private @Nullable Input<String> project;
-        private @Nullable Input<String> query;
-        private @Nullable Input<String> table;
+        private @Nullable Output<String> dataset;
+        private @Nullable Output<String> project;
+        private @Nullable Output<String> query;
+        private @Nullable Output<String> table;
 
         public Builder() {
     	      // Empty
@@ -106,43 +106,43 @@ public final class BigQueryIODetailsArgs extends io.pulumi.resources.ResourceArg
     	      this.table = defaults.table;
         }
 
-        public Builder dataset(@Nullable Input<String> dataset) {
+        public Builder dataset(@Nullable Output<String> dataset) {
             this.dataset = dataset;
             return this;
         }
 
         public Builder dataset(@Nullable String dataset) {
-            this.dataset = Input.ofNullable(dataset);
+            this.dataset = Output.ofNullable(dataset);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder query(@Nullable Input<String> query) {
+        public Builder query(@Nullable Output<String> query) {
             this.query = query;
             return this;
         }
 
         public Builder query(@Nullable String query) {
-            this.query = Input.ofNullable(query);
+            this.query = Output.ofNullable(query);
             return this;
         }
 
-        public Builder table(@Nullable Input<String> table) {
+        public Builder table(@Nullable Output<String> table) {
             this.table = table;
             return this;
         }
 
         public Builder table(@Nullable String table) {
-            this.table = Input.ofNullable(table);
+            this.table = Output.ofNullable(table);
             return this;
         }
         public BigQueryIODetailsArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.compute.inputs.RegionUrlMapPathMatcherPathRuleRouteActionWeightedBackendServiceHeaderActionGetArgs;
 import java.lang.Integer;
@@ -23,9 +23,9 @@ public final class RegionUrlMapPathMatcherPathRuleRouteActionWeightedBackendServ
      * 
      */
     @InputImport(name="backendService", required=true)
-      private final Input<String> backendService;
+      private final Output<String> backendService;
 
-    public Input<String> getBackendService() {
+    public Output<String> getBackendService() {
         return this.backendService;
     }
 
@@ -37,10 +37,10 @@ public final class RegionUrlMapPathMatcherPathRuleRouteActionWeightedBackendServ
      * 
      */
     @InputImport(name="headerAction")
-      private final @Nullable Input<RegionUrlMapPathMatcherPathRuleRouteActionWeightedBackendServiceHeaderActionGetArgs> headerAction;
+      private final @Nullable Output<RegionUrlMapPathMatcherPathRuleRouteActionWeightedBackendServiceHeaderActionGetArgs> headerAction;
 
-    public Input<RegionUrlMapPathMatcherPathRuleRouteActionWeightedBackendServiceHeaderActionGetArgs> getHeaderAction() {
-        return this.headerAction == null ? Input.empty() : this.headerAction;
+    public Output<RegionUrlMapPathMatcherPathRuleRouteActionWeightedBackendServiceHeaderActionGetArgs> getHeaderAction() {
+        return this.headerAction == null ? Output.empty() : this.headerAction;
     }
 
     /**
@@ -53,25 +53,25 @@ public final class RegionUrlMapPathMatcherPathRuleRouteActionWeightedBackendServ
      * 
      */
     @InputImport(name="weight", required=true)
-      private final Input<Integer> weight;
+      private final Output<Integer> weight;
 
-    public Input<Integer> getWeight() {
+    public Output<Integer> getWeight() {
         return this.weight;
     }
 
     public RegionUrlMapPathMatcherPathRuleRouteActionWeightedBackendServiceGetArgs(
-        Input<String> backendService,
-        @Nullable Input<RegionUrlMapPathMatcherPathRuleRouteActionWeightedBackendServiceHeaderActionGetArgs> headerAction,
-        Input<Integer> weight) {
+        Output<String> backendService,
+        @Nullable Output<RegionUrlMapPathMatcherPathRuleRouteActionWeightedBackendServiceHeaderActionGetArgs> headerAction,
+        Output<Integer> weight) {
         this.backendService = Objects.requireNonNull(backendService, "expected parameter 'backendService' to be non-null");
         this.headerAction = headerAction;
         this.weight = Objects.requireNonNull(weight, "expected parameter 'weight' to be non-null");
     }
 
     private RegionUrlMapPathMatcherPathRuleRouteActionWeightedBackendServiceGetArgs() {
-        this.backendService = Input.empty();
-        this.headerAction = Input.empty();
-        this.weight = Input.empty();
+        this.backendService = Output.empty();
+        this.headerAction = Output.empty();
+        this.weight = Output.empty();
     }
 
     public static Builder builder() {
@@ -83,9 +83,9 @@ public final class RegionUrlMapPathMatcherPathRuleRouteActionWeightedBackendServ
     }
 
     public static final class Builder {
-        private Input<String> backendService;
-        private @Nullable Input<RegionUrlMapPathMatcherPathRuleRouteActionWeightedBackendServiceHeaderActionGetArgs> headerAction;
-        private Input<Integer> weight;
+        private Output<String> backendService;
+        private @Nullable Output<RegionUrlMapPathMatcherPathRuleRouteActionWeightedBackendServiceHeaderActionGetArgs> headerAction;
+        private Output<Integer> weight;
 
         public Builder() {
     	      // Empty
@@ -98,33 +98,33 @@ public final class RegionUrlMapPathMatcherPathRuleRouteActionWeightedBackendServ
     	      this.weight = defaults.weight;
         }
 
-        public Builder backendService(Input<String> backendService) {
+        public Builder backendService(Output<String> backendService) {
             this.backendService = Objects.requireNonNull(backendService);
             return this;
         }
 
         public Builder backendService(String backendService) {
-            this.backendService = Input.of(Objects.requireNonNull(backendService));
+            this.backendService = Output.of(Objects.requireNonNull(backendService));
             return this;
         }
 
-        public Builder headerAction(@Nullable Input<RegionUrlMapPathMatcherPathRuleRouteActionWeightedBackendServiceHeaderActionGetArgs> headerAction) {
+        public Builder headerAction(@Nullable Output<RegionUrlMapPathMatcherPathRuleRouteActionWeightedBackendServiceHeaderActionGetArgs> headerAction) {
             this.headerAction = headerAction;
             return this;
         }
 
         public Builder headerAction(@Nullable RegionUrlMapPathMatcherPathRuleRouteActionWeightedBackendServiceHeaderActionGetArgs headerAction) {
-            this.headerAction = Input.ofNullable(headerAction);
+            this.headerAction = Output.ofNullable(headerAction);
             return this;
         }
 
-        public Builder weight(Input<Integer> weight) {
+        public Builder weight(Output<Integer> weight) {
             this.weight = Objects.requireNonNull(weight);
             return this;
         }
 
         public Builder weight(Integer weight) {
-            this.weight = Input.of(Objects.requireNonNull(weight));
+            this.weight = Output.of(Objects.requireNonNull(weight));
             return this;
         }
         public RegionUrlMapPathMatcherPathRuleRouteActionWeightedBackendServiceGetArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.String;
@@ -22,10 +22,10 @@ public final class RegionAutoscalerAutoscalingPolicyCpuUtilizationGetArgs extend
      * 
      */
     @InputImport(name="predictiveMethod")
-      private final @Nullable Input<String> predictiveMethod;
+      private final @Nullable Output<String> predictiveMethod;
 
-    public Input<String> getPredictiveMethod() {
-        return this.predictiveMethod == null ? Input.empty() : this.predictiveMethod;
+    public Output<String> getPredictiveMethod() {
+        return this.predictiveMethod == null ? Output.empty() : this.predictiveMethod;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class RegionAutoscalerAutoscalingPolicyCpuUtilizationGetArgs extend
      * 
      */
     @InputImport(name="target", required=true)
-      private final Input<Double> target;
+      private final Output<Double> target;
 
-    public Input<Double> getTarget() {
+    public Output<Double> getTarget() {
         return this.target;
     }
 
     public RegionAutoscalerAutoscalingPolicyCpuUtilizationGetArgs(
-        @Nullable Input<String> predictiveMethod,
-        Input<Double> target) {
+        @Nullable Output<String> predictiveMethod,
+        Output<Double> target) {
         this.predictiveMethod = predictiveMethod;
         this.target = Objects.requireNonNull(target, "expected parameter 'target' to be non-null");
     }
 
     private RegionAutoscalerAutoscalingPolicyCpuUtilizationGetArgs() {
-        this.predictiveMethod = Input.empty();
-        this.target = Input.empty();
+        this.predictiveMethod = Output.empty();
+        this.target = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class RegionAutoscalerAutoscalingPolicyCpuUtilizationGetArgs extend
     }
 
     public static final class Builder {
-        private @Nullable Input<String> predictiveMethod;
-        private Input<Double> target;
+        private @Nullable Output<String> predictiveMethod;
+        private Output<Double> target;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class RegionAutoscalerAutoscalingPolicyCpuUtilizationGetArgs extend
     	      this.target = defaults.target;
         }
 
-        public Builder predictiveMethod(@Nullable Input<String> predictiveMethod) {
+        public Builder predictiveMethod(@Nullable Output<String> predictiveMethod) {
             this.predictiveMethod = predictiveMethod;
             return this;
         }
 
         public Builder predictiveMethod(@Nullable String predictiveMethod) {
-            this.predictiveMethod = Input.ofNullable(predictiveMethod);
+            this.predictiveMethod = Output.ofNullable(predictiveMethod);
             return this;
         }
 
-        public Builder target(Input<Double> target) {
+        public Builder target(Output<Double> target) {
             this.target = Objects.requireNonNull(target);
             return this;
         }
 
         public Builder target(Double target) {
-            this.target = Input.of(Objects.requireNonNull(target));
+            this.target = Output.of(Objects.requireNonNull(target));
             return this;
         }
         public RegionAutoscalerAutoscalingPolicyCpuUtilizationGetArgs build() {

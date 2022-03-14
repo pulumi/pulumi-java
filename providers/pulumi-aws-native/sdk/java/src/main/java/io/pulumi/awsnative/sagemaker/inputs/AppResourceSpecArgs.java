@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.sagemaker.inputs;
 
 import io.pulumi.awsnative.sagemaker.enums.AppResourceSpecInstanceType;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -20,10 +20,10 @@ public final class AppResourceSpecArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="instanceType")
-      private final @Nullable Input<AppResourceSpecInstanceType> instanceType;
+      private final @Nullable Output<AppResourceSpecInstanceType> instanceType;
 
-    public Input<AppResourceSpecInstanceType> getInstanceType() {
-        return this.instanceType == null ? Input.empty() : this.instanceType;
+    public Output<AppResourceSpecInstanceType> getInstanceType() {
+        return this.instanceType == null ? Output.empty() : this.instanceType;
     }
 
     /**
@@ -31,10 +31,10 @@ public final class AppResourceSpecArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="sageMakerImageArn")
-      private final @Nullable Input<String> sageMakerImageArn;
+      private final @Nullable Output<String> sageMakerImageArn;
 
-    public Input<String> getSageMakerImageArn() {
-        return this.sageMakerImageArn == null ? Input.empty() : this.sageMakerImageArn;
+    public Output<String> getSageMakerImageArn() {
+        return this.sageMakerImageArn == null ? Output.empty() : this.sageMakerImageArn;
     }
 
     /**
@@ -42,25 +42,25 @@ public final class AppResourceSpecArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="sageMakerImageVersionArn")
-      private final @Nullable Input<String> sageMakerImageVersionArn;
+      private final @Nullable Output<String> sageMakerImageVersionArn;
 
-    public Input<String> getSageMakerImageVersionArn() {
-        return this.sageMakerImageVersionArn == null ? Input.empty() : this.sageMakerImageVersionArn;
+    public Output<String> getSageMakerImageVersionArn() {
+        return this.sageMakerImageVersionArn == null ? Output.empty() : this.sageMakerImageVersionArn;
     }
 
     public AppResourceSpecArgs(
-        @Nullable Input<AppResourceSpecInstanceType> instanceType,
-        @Nullable Input<String> sageMakerImageArn,
-        @Nullable Input<String> sageMakerImageVersionArn) {
+        @Nullable Output<AppResourceSpecInstanceType> instanceType,
+        @Nullable Output<String> sageMakerImageArn,
+        @Nullable Output<String> sageMakerImageVersionArn) {
         this.instanceType = instanceType;
         this.sageMakerImageArn = sageMakerImageArn;
         this.sageMakerImageVersionArn = sageMakerImageVersionArn;
     }
 
     private AppResourceSpecArgs() {
-        this.instanceType = Input.empty();
-        this.sageMakerImageArn = Input.empty();
-        this.sageMakerImageVersionArn = Input.empty();
+        this.instanceType = Output.empty();
+        this.sageMakerImageArn = Output.empty();
+        this.sageMakerImageVersionArn = Output.empty();
     }
 
     public static Builder builder() {
@@ -72,9 +72,9 @@ public final class AppResourceSpecArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private @Nullable Input<AppResourceSpecInstanceType> instanceType;
-        private @Nullable Input<String> sageMakerImageArn;
-        private @Nullable Input<String> sageMakerImageVersionArn;
+        private @Nullable Output<AppResourceSpecInstanceType> instanceType;
+        private @Nullable Output<String> sageMakerImageArn;
+        private @Nullable Output<String> sageMakerImageVersionArn;
 
         public Builder() {
     	      // Empty
@@ -87,33 +87,33 @@ public final class AppResourceSpecArgs extends io.pulumi.resources.ResourceArgs 
     	      this.sageMakerImageVersionArn = defaults.sageMakerImageVersionArn;
         }
 
-        public Builder instanceType(@Nullable Input<AppResourceSpecInstanceType> instanceType) {
+        public Builder instanceType(@Nullable Output<AppResourceSpecInstanceType> instanceType) {
             this.instanceType = instanceType;
             return this;
         }
 
         public Builder instanceType(@Nullable AppResourceSpecInstanceType instanceType) {
-            this.instanceType = Input.ofNullable(instanceType);
+            this.instanceType = Output.ofNullable(instanceType);
             return this;
         }
 
-        public Builder sageMakerImageArn(@Nullable Input<String> sageMakerImageArn) {
+        public Builder sageMakerImageArn(@Nullable Output<String> sageMakerImageArn) {
             this.sageMakerImageArn = sageMakerImageArn;
             return this;
         }
 
         public Builder sageMakerImageArn(@Nullable String sageMakerImageArn) {
-            this.sageMakerImageArn = Input.ofNullable(sageMakerImageArn);
+            this.sageMakerImageArn = Output.ofNullable(sageMakerImageArn);
             return this;
         }
 
-        public Builder sageMakerImageVersionArn(@Nullable Input<String> sageMakerImageVersionArn) {
+        public Builder sageMakerImageVersionArn(@Nullable Output<String> sageMakerImageVersionArn) {
             this.sageMakerImageVersionArn = sageMakerImageVersionArn;
             return this;
         }
 
         public Builder sageMakerImageVersionArn(@Nullable String sageMakerImageVersionArn) {
-            this.sageMakerImageVersionArn = Input.ofNullable(sageMakerImageVersionArn);
+            this.sageMakerImageVersionArn = Output.ofNullable(sageMakerImageVersionArn);
             return this;
         }
         public AppResourceSpecArgs build() {

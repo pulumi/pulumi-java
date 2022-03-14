@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.cloudwatch.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -20,10 +20,10 @@ public final class LogMetricFilterMetricTransformationArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="defaultValue")
-      private final @Nullable Input<String> defaultValue;
+      private final @Nullable Output<String> defaultValue;
 
-    public Input<String> getDefaultValue() {
-        return this.defaultValue == null ? Input.empty() : this.defaultValue;
+    public Output<String> getDefaultValue() {
+        return this.defaultValue == null ? Output.empty() : this.defaultValue;
     }
 
     /**
@@ -31,10 +31,10 @@ public final class LogMetricFilterMetricTransformationArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="dimensions")
-      private final @Nullable Input<Map<String,String>> dimensions;
+      private final @Nullable Output<Map<String,String>> dimensions;
 
-    public Input<Map<String,String>> getDimensions() {
-        return this.dimensions == null ? Input.empty() : this.dimensions;
+    public Output<Map<String,String>> getDimensions() {
+        return this.dimensions == null ? Output.empty() : this.dimensions;
     }
 
     /**
@@ -42,9 +42,9 @@ public final class LogMetricFilterMetricTransformationArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="name", required=true)
-      private final Input<String> name;
+      private final Output<String> name;
 
-    public Input<String> getName() {
+    public Output<String> getName() {
         return this.name;
     }
 
@@ -53,9 +53,9 @@ public final class LogMetricFilterMetricTransformationArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="namespace", required=true)
-      private final Input<String> namespace;
+      private final Output<String> namespace;
 
-    public Input<String> getNamespace() {
+    public Output<String> getNamespace() {
         return this.namespace;
     }
 
@@ -64,10 +64,10 @@ public final class LogMetricFilterMetricTransformationArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="unit")
-      private final @Nullable Input<String> unit;
+      private final @Nullable Output<String> unit;
 
-    public Input<String> getUnit() {
-        return this.unit == null ? Input.empty() : this.unit;
+    public Output<String> getUnit() {
+        return this.unit == null ? Output.empty() : this.unit;
     }
 
     /**
@@ -75,19 +75,19 @@ public final class LogMetricFilterMetricTransformationArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="value", required=true)
-      private final Input<String> value;
+      private final Output<String> value;
 
-    public Input<String> getValue() {
+    public Output<String> getValue() {
         return this.value;
     }
 
     public LogMetricFilterMetricTransformationArgs(
-        @Nullable Input<String> defaultValue,
-        @Nullable Input<Map<String,String>> dimensions,
-        Input<String> name,
-        Input<String> namespace,
-        @Nullable Input<String> unit,
-        Input<String> value) {
+        @Nullable Output<String> defaultValue,
+        @Nullable Output<Map<String,String>> dimensions,
+        Output<String> name,
+        Output<String> namespace,
+        @Nullable Output<String> unit,
+        Output<String> value) {
         this.defaultValue = defaultValue;
         this.dimensions = dimensions;
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
@@ -97,12 +97,12 @@ public final class LogMetricFilterMetricTransformationArgs extends io.pulumi.res
     }
 
     private LogMetricFilterMetricTransformationArgs() {
-        this.defaultValue = Input.empty();
-        this.dimensions = Input.empty();
-        this.name = Input.empty();
-        this.namespace = Input.empty();
-        this.unit = Input.empty();
-        this.value = Input.empty();
+        this.defaultValue = Output.empty();
+        this.dimensions = Output.empty();
+        this.name = Output.empty();
+        this.namespace = Output.empty();
+        this.unit = Output.empty();
+        this.value = Output.empty();
     }
 
     public static Builder builder() {
@@ -114,12 +114,12 @@ public final class LogMetricFilterMetricTransformationArgs extends io.pulumi.res
     }
 
     public static final class Builder {
-        private @Nullable Input<String> defaultValue;
-        private @Nullable Input<Map<String,String>> dimensions;
-        private Input<String> name;
-        private Input<String> namespace;
-        private @Nullable Input<String> unit;
-        private Input<String> value;
+        private @Nullable Output<String> defaultValue;
+        private @Nullable Output<Map<String,String>> dimensions;
+        private Output<String> name;
+        private Output<String> namespace;
+        private @Nullable Output<String> unit;
+        private Output<String> value;
 
         public Builder() {
     	      // Empty
@@ -135,63 +135,63 @@ public final class LogMetricFilterMetricTransformationArgs extends io.pulumi.res
     	      this.value = defaults.value;
         }
 
-        public Builder defaultValue(@Nullable Input<String> defaultValue) {
+        public Builder defaultValue(@Nullable Output<String> defaultValue) {
             this.defaultValue = defaultValue;
             return this;
         }
 
         public Builder defaultValue(@Nullable String defaultValue) {
-            this.defaultValue = Input.ofNullable(defaultValue);
+            this.defaultValue = Output.ofNullable(defaultValue);
             return this;
         }
 
-        public Builder dimensions(@Nullable Input<Map<String,String>> dimensions) {
+        public Builder dimensions(@Nullable Output<Map<String,String>> dimensions) {
             this.dimensions = dimensions;
             return this;
         }
 
         public Builder dimensions(@Nullable Map<String,String> dimensions) {
-            this.dimensions = Input.ofNullable(dimensions);
+            this.dimensions = Output.ofNullable(dimensions);
             return this;
         }
 
-        public Builder name(Input<String> name) {
+        public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(String name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder namespace(Input<String> namespace) {
+        public Builder namespace(Output<String> namespace) {
             this.namespace = Objects.requireNonNull(namespace);
             return this;
         }
 
         public Builder namespace(String namespace) {
-            this.namespace = Input.of(Objects.requireNonNull(namespace));
+            this.namespace = Output.of(Objects.requireNonNull(namespace));
             return this;
         }
 
-        public Builder unit(@Nullable Input<String> unit) {
+        public Builder unit(@Nullable Output<String> unit) {
             this.unit = unit;
             return this;
         }
 
         public Builder unit(@Nullable String unit) {
-            this.unit = Input.ofNullable(unit);
+            this.unit = Output.ofNullable(unit);
             return this;
         }
 
-        public Builder value(Input<String> value) {
+        public Builder value(Output<String> value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }
 
         public Builder value(String value) {
-            this.value = Input.of(Objects.requireNonNull(value));
+            this.value = Output.of(Objects.requireNonNull(value));
             return this;
         }
         public LogMetricFilterMetricTransformationArgs build() {

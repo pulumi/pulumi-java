@@ -8,7 +8,6 @@ import io.pulumi.azurenative.apimanagement.PrivateEndpointConnectionByNameArgs;
 import io.pulumi.azurenative.apimanagement.outputs.PrivateEndpointResponse;
 import io.pulumi.azurenative.apimanagement.outputs.PrivateLinkServiceConnectionStateResponse;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -142,19 +141,19 @@ public class PrivateEndpointConnectionByName extends io.pulumi.resources.CustomR
      * @param options A bag of options that control this resource's behavior.
      */
     public PrivateEndpointConnectionByName(String name, PrivateEndpointConnectionByNameArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:apimanagement:PrivateEndpointConnectionByName", name, args == null ? PrivateEndpointConnectionByNameArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("azure-native:apimanagement:PrivateEndpointConnectionByName", name, args == null ? PrivateEndpointConnectionByNameArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private PrivateEndpointConnectionByName(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private PrivateEndpointConnectionByName(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:apimanagement:PrivateEndpointConnectionByName", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:apimanagement/v20210401preview:PrivateEndpointConnectionByName").build()),
-                Input.of(Alias.builder().setType("azure-native:apimanagement/v20210801:PrivateEndpointConnectionByName").build())
+                Output.of(Alias.builder().setType("azure-native:apimanagement/v20210401preview:PrivateEndpointConnectionByName").build()),
+                Output.of(Alias.builder().setType("azure-native:apimanagement/v20210801:PrivateEndpointConnectionByName").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -168,7 +167,7 @@ public class PrivateEndpointConnectionByName extends io.pulumi.resources.CustomR
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static PrivateEndpointConnectionByName get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static PrivateEndpointConnectionByName get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new PrivateEndpointConnectionByName(name, id, options);
     }
 }

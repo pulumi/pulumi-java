@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudbuild_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -22,9 +22,9 @@ public final class BitbucketServerSecretsArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="adminAccessTokenVersionName", required=true)
-      private final Input<String> adminAccessTokenVersionName;
+      private final Output<String> adminAccessTokenVersionName;
 
-    public Input<String> getAdminAccessTokenVersionName() {
+    public Output<String> getAdminAccessTokenVersionName() {
         return this.adminAccessTokenVersionName;
     }
 
@@ -33,9 +33,9 @@ public final class BitbucketServerSecretsArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="readAccessTokenVersionName", required=true)
-      private final Input<String> readAccessTokenVersionName;
+      private final Output<String> readAccessTokenVersionName;
 
-    public Input<String> getReadAccessTokenVersionName() {
+    public Output<String> getReadAccessTokenVersionName() {
         return this.readAccessTokenVersionName;
     }
 
@@ -44,25 +44,25 @@ public final class BitbucketServerSecretsArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="webhookSecretVersionName", required=true)
-      private final Input<String> webhookSecretVersionName;
+      private final Output<String> webhookSecretVersionName;
 
-    public Input<String> getWebhookSecretVersionName() {
+    public Output<String> getWebhookSecretVersionName() {
         return this.webhookSecretVersionName;
     }
 
     public BitbucketServerSecretsArgs(
-        Input<String> adminAccessTokenVersionName,
-        Input<String> readAccessTokenVersionName,
-        Input<String> webhookSecretVersionName) {
+        Output<String> adminAccessTokenVersionName,
+        Output<String> readAccessTokenVersionName,
+        Output<String> webhookSecretVersionName) {
         this.adminAccessTokenVersionName = Objects.requireNonNull(adminAccessTokenVersionName, "expected parameter 'adminAccessTokenVersionName' to be non-null");
         this.readAccessTokenVersionName = Objects.requireNonNull(readAccessTokenVersionName, "expected parameter 'readAccessTokenVersionName' to be non-null");
         this.webhookSecretVersionName = Objects.requireNonNull(webhookSecretVersionName, "expected parameter 'webhookSecretVersionName' to be non-null");
     }
 
     private BitbucketServerSecretsArgs() {
-        this.adminAccessTokenVersionName = Input.empty();
-        this.readAccessTokenVersionName = Input.empty();
-        this.webhookSecretVersionName = Input.empty();
+        this.adminAccessTokenVersionName = Output.empty();
+        this.readAccessTokenVersionName = Output.empty();
+        this.webhookSecretVersionName = Output.empty();
     }
 
     public static Builder builder() {
@@ -74,9 +74,9 @@ public final class BitbucketServerSecretsArgs extends io.pulumi.resources.Resour
     }
 
     public static final class Builder {
-        private Input<String> adminAccessTokenVersionName;
-        private Input<String> readAccessTokenVersionName;
-        private Input<String> webhookSecretVersionName;
+        private Output<String> adminAccessTokenVersionName;
+        private Output<String> readAccessTokenVersionName;
+        private Output<String> webhookSecretVersionName;
 
         public Builder() {
     	      // Empty
@@ -89,33 +89,33 @@ public final class BitbucketServerSecretsArgs extends io.pulumi.resources.Resour
     	      this.webhookSecretVersionName = defaults.webhookSecretVersionName;
         }
 
-        public Builder adminAccessTokenVersionName(Input<String> adminAccessTokenVersionName) {
+        public Builder adminAccessTokenVersionName(Output<String> adminAccessTokenVersionName) {
             this.adminAccessTokenVersionName = Objects.requireNonNull(adminAccessTokenVersionName);
             return this;
         }
 
         public Builder adminAccessTokenVersionName(String adminAccessTokenVersionName) {
-            this.adminAccessTokenVersionName = Input.of(Objects.requireNonNull(adminAccessTokenVersionName));
+            this.adminAccessTokenVersionName = Output.of(Objects.requireNonNull(adminAccessTokenVersionName));
             return this;
         }
 
-        public Builder readAccessTokenVersionName(Input<String> readAccessTokenVersionName) {
+        public Builder readAccessTokenVersionName(Output<String> readAccessTokenVersionName) {
             this.readAccessTokenVersionName = Objects.requireNonNull(readAccessTokenVersionName);
             return this;
         }
 
         public Builder readAccessTokenVersionName(String readAccessTokenVersionName) {
-            this.readAccessTokenVersionName = Input.of(Objects.requireNonNull(readAccessTokenVersionName));
+            this.readAccessTokenVersionName = Output.of(Objects.requireNonNull(readAccessTokenVersionName));
             return this;
         }
 
-        public Builder webhookSecretVersionName(Input<String> webhookSecretVersionName) {
+        public Builder webhookSecretVersionName(Output<String> webhookSecretVersionName) {
             this.webhookSecretVersionName = Objects.requireNonNull(webhookSecretVersionName);
             return this;
         }
 
         public Builder webhookSecretVersionName(String webhookSecretVersionName) {
-            this.webhookSecretVersionName = Input.of(Objects.requireNonNull(webhookSecretVersionName));
+            this.webhookSecretVersionName = Output.of(Objects.requireNonNull(webhookSecretVersionName));
             return this;
         }
         public BitbucketServerSecretsArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.networkmanagement.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -20,10 +20,10 @@ public final class ConnectivityTestDestinationGetArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="instance")
-      private final @Nullable Input<String> instance;
+      private final @Nullable Output<String> instance;
 
-    public Input<String> getInstance() {
-        return this.instance == null ? Input.empty() : this.instance;
+    public Output<String> getInstance() {
+        return this.instance == null ? Output.empty() : this.instance;
     }
 
     /**
@@ -33,10 +33,10 @@ public final class ConnectivityTestDestinationGetArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="ipAddress")
-      private final @Nullable Input<String> ipAddress;
+      private final @Nullable Output<String> ipAddress;
 
-    public Input<String> getIpAddress() {
-        return this.ipAddress == null ? Input.empty() : this.ipAddress;
+    public Output<String> getIpAddress() {
+        return this.ipAddress == null ? Output.empty() : this.ipAddress;
     }
 
     /**
@@ -44,10 +44,10 @@ public final class ConnectivityTestDestinationGetArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="network")
-      private final @Nullable Input<String> network;
+      private final @Nullable Output<String> network;
 
-    public Input<String> getNetwork() {
-        return this.network == null ? Input.empty() : this.network;
+    public Output<String> getNetwork() {
+        return this.network == null ? Output.empty() : this.network;
     }
 
     /**
@@ -56,10 +56,10 @@ public final class ConnectivityTestDestinationGetArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="port")
-      private final @Nullable Input<Integer> port;
+      private final @Nullable Output<Integer> port;
 
-    public Input<Integer> getPort() {
-        return this.port == null ? Input.empty() : this.port;
+    public Output<Integer> getPort() {
+        return this.port == null ? Output.empty() : this.port;
     }
 
     /**
@@ -74,18 +74,18 @@ public final class ConnectivityTestDestinationGetArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="projectId")
-      private final @Nullable Input<String> projectId;
+      private final @Nullable Output<String> projectId;
 
-    public Input<String> getProjectId() {
-        return this.projectId == null ? Input.empty() : this.projectId;
+    public Output<String> getProjectId() {
+        return this.projectId == null ? Output.empty() : this.projectId;
     }
 
     public ConnectivityTestDestinationGetArgs(
-        @Nullable Input<String> instance,
-        @Nullable Input<String> ipAddress,
-        @Nullable Input<String> network,
-        @Nullable Input<Integer> port,
-        @Nullable Input<String> projectId) {
+        @Nullable Output<String> instance,
+        @Nullable Output<String> ipAddress,
+        @Nullable Output<String> network,
+        @Nullable Output<Integer> port,
+        @Nullable Output<String> projectId) {
         this.instance = instance;
         this.ipAddress = ipAddress;
         this.network = network;
@@ -94,11 +94,11 @@ public final class ConnectivityTestDestinationGetArgs extends io.pulumi.resource
     }
 
     private ConnectivityTestDestinationGetArgs() {
-        this.instance = Input.empty();
-        this.ipAddress = Input.empty();
-        this.network = Input.empty();
-        this.port = Input.empty();
-        this.projectId = Input.empty();
+        this.instance = Output.empty();
+        this.ipAddress = Output.empty();
+        this.network = Output.empty();
+        this.port = Output.empty();
+        this.projectId = Output.empty();
     }
 
     public static Builder builder() {
@@ -110,11 +110,11 @@ public final class ConnectivityTestDestinationGetArgs extends io.pulumi.resource
     }
 
     public static final class Builder {
-        private @Nullable Input<String> instance;
-        private @Nullable Input<String> ipAddress;
-        private @Nullable Input<String> network;
-        private @Nullable Input<Integer> port;
-        private @Nullable Input<String> projectId;
+        private @Nullable Output<String> instance;
+        private @Nullable Output<String> ipAddress;
+        private @Nullable Output<String> network;
+        private @Nullable Output<Integer> port;
+        private @Nullable Output<String> projectId;
 
         public Builder() {
     	      // Empty
@@ -129,53 +129,53 @@ public final class ConnectivityTestDestinationGetArgs extends io.pulumi.resource
     	      this.projectId = defaults.projectId;
         }
 
-        public Builder instance(@Nullable Input<String> instance) {
+        public Builder instance(@Nullable Output<String> instance) {
             this.instance = instance;
             return this;
         }
 
         public Builder instance(@Nullable String instance) {
-            this.instance = Input.ofNullable(instance);
+            this.instance = Output.ofNullable(instance);
             return this;
         }
 
-        public Builder ipAddress(@Nullable Input<String> ipAddress) {
+        public Builder ipAddress(@Nullable Output<String> ipAddress) {
             this.ipAddress = ipAddress;
             return this;
         }
 
         public Builder ipAddress(@Nullable String ipAddress) {
-            this.ipAddress = Input.ofNullable(ipAddress);
+            this.ipAddress = Output.ofNullable(ipAddress);
             return this;
         }
 
-        public Builder network(@Nullable Input<String> network) {
+        public Builder network(@Nullable Output<String> network) {
             this.network = network;
             return this;
         }
 
         public Builder network(@Nullable String network) {
-            this.network = Input.ofNullable(network);
+            this.network = Output.ofNullable(network);
             return this;
         }
 
-        public Builder port(@Nullable Input<Integer> port) {
+        public Builder port(@Nullable Output<Integer> port) {
             this.port = port;
             return this;
         }
 
         public Builder port(@Nullable Integer port) {
-            this.port = Input.ofNullable(port);
+            this.port = Output.ofNullable(port);
             return this;
         }
 
-        public Builder projectId(@Nullable Input<String> projectId) {
+        public Builder projectId(@Nullable Output<String> projectId) {
             this.projectId = projectId;
             return this;
         }
 
         public Builder projectId(@Nullable String projectId) {
-            this.projectId = Input.ofNullable(projectId);
+            this.projectId = Output.ofNullable(projectId);
             return this;
         }
         public ConnectivityTestDestinationGetArgs build() {

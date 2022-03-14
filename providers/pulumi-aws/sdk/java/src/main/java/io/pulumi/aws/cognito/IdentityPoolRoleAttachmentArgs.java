@@ -4,7 +4,7 @@
 package io.pulumi.aws.cognito;
 
 import io.pulumi.aws.cognito.inputs.IdentityPoolRoleAttachmentRoleMappingArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -22,9 +22,9 @@ public final class IdentityPoolRoleAttachmentArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="identityPoolId", required=true)
-      private final Input<String> identityPoolId;
+      private final Output<String> identityPoolId;
 
-    public Input<String> getIdentityPoolId() {
+    public Output<String> getIdentityPoolId() {
         return this.identityPoolId;
     }
 
@@ -33,10 +33,10 @@ public final class IdentityPoolRoleAttachmentArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="roleMappings")
-      private final @Nullable Input<List<IdentityPoolRoleAttachmentRoleMappingArgs>> roleMappings;
+      private final @Nullable Output<List<IdentityPoolRoleAttachmentRoleMappingArgs>> roleMappings;
 
-    public Input<List<IdentityPoolRoleAttachmentRoleMappingArgs>> getRoleMappings() {
-        return this.roleMappings == null ? Input.empty() : this.roleMappings;
+    public Output<List<IdentityPoolRoleAttachmentRoleMappingArgs>> getRoleMappings() {
+        return this.roleMappings == null ? Output.empty() : this.roleMappings;
     }
 
     /**
@@ -44,25 +44,25 @@ public final class IdentityPoolRoleAttachmentArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="roles", required=true)
-      private final Input<Map<String,String>> roles;
+      private final Output<Map<String,String>> roles;
 
-    public Input<Map<String,String>> getRoles() {
+    public Output<Map<String,String>> getRoles() {
         return this.roles;
     }
 
     public IdentityPoolRoleAttachmentArgs(
-        Input<String> identityPoolId,
-        @Nullable Input<List<IdentityPoolRoleAttachmentRoleMappingArgs>> roleMappings,
-        Input<Map<String,String>> roles) {
+        Output<String> identityPoolId,
+        @Nullable Output<List<IdentityPoolRoleAttachmentRoleMappingArgs>> roleMappings,
+        Output<Map<String,String>> roles) {
         this.identityPoolId = Objects.requireNonNull(identityPoolId, "expected parameter 'identityPoolId' to be non-null");
         this.roleMappings = roleMappings;
         this.roles = Objects.requireNonNull(roles, "expected parameter 'roles' to be non-null");
     }
 
     private IdentityPoolRoleAttachmentArgs() {
-        this.identityPoolId = Input.empty();
-        this.roleMappings = Input.empty();
-        this.roles = Input.empty();
+        this.identityPoolId = Output.empty();
+        this.roleMappings = Output.empty();
+        this.roles = Output.empty();
     }
 
     public static Builder builder() {
@@ -74,9 +74,9 @@ public final class IdentityPoolRoleAttachmentArgs extends io.pulumi.resources.Re
     }
 
     public static final class Builder {
-        private Input<String> identityPoolId;
-        private @Nullable Input<List<IdentityPoolRoleAttachmentRoleMappingArgs>> roleMappings;
-        private Input<Map<String,String>> roles;
+        private Output<String> identityPoolId;
+        private @Nullable Output<List<IdentityPoolRoleAttachmentRoleMappingArgs>> roleMappings;
+        private Output<Map<String,String>> roles;
 
         public Builder() {
     	      // Empty
@@ -89,33 +89,33 @@ public final class IdentityPoolRoleAttachmentArgs extends io.pulumi.resources.Re
     	      this.roles = defaults.roles;
         }
 
-        public Builder identityPoolId(Input<String> identityPoolId) {
+        public Builder identityPoolId(Output<String> identityPoolId) {
             this.identityPoolId = Objects.requireNonNull(identityPoolId);
             return this;
         }
 
         public Builder identityPoolId(String identityPoolId) {
-            this.identityPoolId = Input.of(Objects.requireNonNull(identityPoolId));
+            this.identityPoolId = Output.of(Objects.requireNonNull(identityPoolId));
             return this;
         }
 
-        public Builder roleMappings(@Nullable Input<List<IdentityPoolRoleAttachmentRoleMappingArgs>> roleMappings) {
+        public Builder roleMappings(@Nullable Output<List<IdentityPoolRoleAttachmentRoleMappingArgs>> roleMappings) {
             this.roleMappings = roleMappings;
             return this;
         }
 
         public Builder roleMappings(@Nullable List<IdentityPoolRoleAttachmentRoleMappingArgs> roleMappings) {
-            this.roleMappings = Input.ofNullable(roleMappings);
+            this.roleMappings = Output.ofNullable(roleMappings);
             return this;
         }
 
-        public Builder roles(Input<Map<String,String>> roles) {
+        public Builder roles(Output<Map<String,String>> roles) {
             this.roles = Objects.requireNonNull(roles);
             return this;
         }
 
         public Builder roles(Map<String,String> roles) {
-            this.roles = Input.of(Objects.requireNonNull(roles));
+            this.roles = Output.of(Objects.requireNonNull(roles));
             return this;
         }
         public IdentityPoolRoleAttachmentArgs build() {

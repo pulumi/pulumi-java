@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.backup.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -15,29 +15,29 @@ public final class BackupVaultNotificationObjectTypeArgs extends io.pulumi.resou
     public static final BackupVaultNotificationObjectTypeArgs Empty = new BackupVaultNotificationObjectTypeArgs();
 
     @InputImport(name="backupVaultEvents", required=true)
-      private final Input<List<String>> backupVaultEvents;
+      private final Output<List<String>> backupVaultEvents;
 
-    public Input<List<String>> getBackupVaultEvents() {
+    public Output<List<String>> getBackupVaultEvents() {
         return this.backupVaultEvents;
     }
 
     @InputImport(name="sNSTopicArn", required=true)
-      private final Input<String> sNSTopicArn;
+      private final Output<String> sNSTopicArn;
 
-    public Input<String> getSNSTopicArn() {
+    public Output<String> getSNSTopicArn() {
         return this.sNSTopicArn;
     }
 
     public BackupVaultNotificationObjectTypeArgs(
-        Input<List<String>> backupVaultEvents,
-        Input<String> sNSTopicArn) {
+        Output<List<String>> backupVaultEvents,
+        Output<String> sNSTopicArn) {
         this.backupVaultEvents = Objects.requireNonNull(backupVaultEvents, "expected parameter 'backupVaultEvents' to be non-null");
         this.sNSTopicArn = Objects.requireNonNull(sNSTopicArn, "expected parameter 'sNSTopicArn' to be non-null");
     }
 
     private BackupVaultNotificationObjectTypeArgs() {
-        this.backupVaultEvents = Input.empty();
-        this.sNSTopicArn = Input.empty();
+        this.backupVaultEvents = Output.empty();
+        this.sNSTopicArn = Output.empty();
     }
 
     public static Builder builder() {
@@ -49,8 +49,8 @@ public final class BackupVaultNotificationObjectTypeArgs extends io.pulumi.resou
     }
 
     public static final class Builder {
-        private Input<List<String>> backupVaultEvents;
-        private Input<String> sNSTopicArn;
+        private Output<List<String>> backupVaultEvents;
+        private Output<String> sNSTopicArn;
 
         public Builder() {
     	      // Empty
@@ -62,23 +62,23 @@ public final class BackupVaultNotificationObjectTypeArgs extends io.pulumi.resou
     	      this.sNSTopicArn = defaults.sNSTopicArn;
         }
 
-        public Builder backupVaultEvents(Input<List<String>> backupVaultEvents) {
+        public Builder backupVaultEvents(Output<List<String>> backupVaultEvents) {
             this.backupVaultEvents = Objects.requireNonNull(backupVaultEvents);
             return this;
         }
 
         public Builder backupVaultEvents(List<String> backupVaultEvents) {
-            this.backupVaultEvents = Input.of(Objects.requireNonNull(backupVaultEvents));
+            this.backupVaultEvents = Output.of(Objects.requireNonNull(backupVaultEvents));
             return this;
         }
 
-        public Builder sNSTopicArn(Input<String> sNSTopicArn) {
+        public Builder sNSTopicArn(Output<String> sNSTopicArn) {
             this.sNSTopicArn = Objects.requireNonNull(sNSTopicArn);
             return this;
         }
 
         public Builder sNSTopicArn(String sNSTopicArn) {
-            this.sNSTopicArn = Input.of(Objects.requireNonNull(sNSTopicArn));
+            this.sNSTopicArn = Output.of(Objects.requireNonNull(sNSTopicArn));
             return this;
         }
         public BackupVaultNotificationObjectTypeArgs build() {

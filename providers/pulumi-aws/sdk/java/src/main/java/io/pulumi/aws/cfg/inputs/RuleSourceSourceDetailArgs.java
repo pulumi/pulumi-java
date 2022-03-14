@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.cfg.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class RuleSourceSourceDetailArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="eventSource")
-      private final @Nullable Input<String> eventSource;
+      private final @Nullable Output<String> eventSource;
 
-    public Input<String> getEventSource() {
-        return this.eventSource == null ? Input.empty() : this.eventSource;
+    public Output<String> getEventSource() {
+        return this.eventSource == null ? Output.empty() : this.eventSource;
     }
 
     /**
@@ -30,10 +30,10 @@ public final class RuleSourceSourceDetailArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="maximumExecutionFrequency")
-      private final @Nullable Input<String> maximumExecutionFrequency;
+      private final @Nullable Output<String> maximumExecutionFrequency;
 
-    public Input<String> getMaximumExecutionFrequency() {
-        return this.maximumExecutionFrequency == null ? Input.empty() : this.maximumExecutionFrequency;
+    public Output<String> getMaximumExecutionFrequency() {
+        return this.maximumExecutionFrequency == null ? Output.empty() : this.maximumExecutionFrequency;
     }
 
     /**
@@ -41,25 +41,25 @@ public final class RuleSourceSourceDetailArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="messageType")
-      private final @Nullable Input<String> messageType;
+      private final @Nullable Output<String> messageType;
 
-    public Input<String> getMessageType() {
-        return this.messageType == null ? Input.empty() : this.messageType;
+    public Output<String> getMessageType() {
+        return this.messageType == null ? Output.empty() : this.messageType;
     }
 
     public RuleSourceSourceDetailArgs(
-        @Nullable Input<String> eventSource,
-        @Nullable Input<String> maximumExecutionFrequency,
-        @Nullable Input<String> messageType) {
+        @Nullable Output<String> eventSource,
+        @Nullable Output<String> maximumExecutionFrequency,
+        @Nullable Output<String> messageType) {
         this.eventSource = eventSource;
         this.maximumExecutionFrequency = maximumExecutionFrequency;
         this.messageType = messageType;
     }
 
     private RuleSourceSourceDetailArgs() {
-        this.eventSource = Input.empty();
-        this.maximumExecutionFrequency = Input.empty();
-        this.messageType = Input.empty();
+        this.eventSource = Output.empty();
+        this.maximumExecutionFrequency = Output.empty();
+        this.messageType = Output.empty();
     }
 
     public static Builder builder() {
@@ -71,9 +71,9 @@ public final class RuleSourceSourceDetailArgs extends io.pulumi.resources.Resour
     }
 
     public static final class Builder {
-        private @Nullable Input<String> eventSource;
-        private @Nullable Input<String> maximumExecutionFrequency;
-        private @Nullable Input<String> messageType;
+        private @Nullable Output<String> eventSource;
+        private @Nullable Output<String> maximumExecutionFrequency;
+        private @Nullable Output<String> messageType;
 
         public Builder() {
     	      // Empty
@@ -86,33 +86,33 @@ public final class RuleSourceSourceDetailArgs extends io.pulumi.resources.Resour
     	      this.messageType = defaults.messageType;
         }
 
-        public Builder eventSource(@Nullable Input<String> eventSource) {
+        public Builder eventSource(@Nullable Output<String> eventSource) {
             this.eventSource = eventSource;
             return this;
         }
 
         public Builder eventSource(@Nullable String eventSource) {
-            this.eventSource = Input.ofNullable(eventSource);
+            this.eventSource = Output.ofNullable(eventSource);
             return this;
         }
 
-        public Builder maximumExecutionFrequency(@Nullable Input<String> maximumExecutionFrequency) {
+        public Builder maximumExecutionFrequency(@Nullable Output<String> maximumExecutionFrequency) {
             this.maximumExecutionFrequency = maximumExecutionFrequency;
             return this;
         }
 
         public Builder maximumExecutionFrequency(@Nullable String maximumExecutionFrequency) {
-            this.maximumExecutionFrequency = Input.ofNullable(maximumExecutionFrequency);
+            this.maximumExecutionFrequency = Output.ofNullable(maximumExecutionFrequency);
             return this;
         }
 
-        public Builder messageType(@Nullable Input<String> messageType) {
+        public Builder messageType(@Nullable Output<String> messageType) {
             this.messageType = messageType;
             return this;
         }
 
         public Builder messageType(@Nullable String messageType) {
-            this.messageType = Input.ofNullable(messageType);
+            this.messageType = Output.ofNullable(messageType);
             return this;
         }
         public RuleSourceSourceDetailArgs build() {

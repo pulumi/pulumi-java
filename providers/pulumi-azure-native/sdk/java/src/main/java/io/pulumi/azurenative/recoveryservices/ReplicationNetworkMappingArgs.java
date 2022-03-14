@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.recoveryservices;
 
 import io.pulumi.azurenative.recoveryservices.inputs.CreateNetworkMappingInputPropertiesArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -20,9 +20,9 @@ public final class ReplicationNetworkMappingArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="fabricName", required=true)
-      private final Input<String> fabricName;
+      private final Output<String> fabricName;
 
-    public Input<String> getFabricName() {
+    public Output<String> getFabricName() {
         return this.fabricName;
     }
 
@@ -31,10 +31,10 @@ public final class ReplicationNetworkMappingArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="networkMappingName")
-      private final @Nullable Input<String> networkMappingName;
+      private final @Nullable Output<String> networkMappingName;
 
-    public Input<String> getNetworkMappingName() {
-        return this.networkMappingName == null ? Input.empty() : this.networkMappingName;
+    public Output<String> getNetworkMappingName() {
+        return this.networkMappingName == null ? Output.empty() : this.networkMappingName;
     }
 
     /**
@@ -42,9 +42,9 @@ public final class ReplicationNetworkMappingArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="networkName", required=true)
-      private final Input<String> networkName;
+      private final Output<String> networkName;
 
-    public Input<String> getNetworkName() {
+    public Output<String> getNetworkName() {
         return this.networkName;
     }
 
@@ -53,10 +53,10 @@ public final class ReplicationNetworkMappingArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="properties")
-      private final @Nullable Input<CreateNetworkMappingInputPropertiesArgs> properties;
+      private final @Nullable Output<CreateNetworkMappingInputPropertiesArgs> properties;
 
-    public Input<CreateNetworkMappingInputPropertiesArgs> getProperties() {
-        return this.properties == null ? Input.empty() : this.properties;
+    public Output<CreateNetworkMappingInputPropertiesArgs> getProperties() {
+        return this.properties == null ? Output.empty() : this.properties;
     }
 
     /**
@@ -64,9 +64,9 @@ public final class ReplicationNetworkMappingArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -75,19 +75,19 @@ public final class ReplicationNetworkMappingArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="resourceName", required=true)
-      private final Input<String> resourceName;
+      private final Output<String> resourceName;
 
-    public Input<String> getPropResourceName() {
+    public Output<String> getPropResourceName() {
         return this.resourceName;
     }
 
     public ReplicationNetworkMappingArgs(
-        Input<String> fabricName,
-        @Nullable Input<String> networkMappingName,
-        Input<String> networkName,
-        @Nullable Input<CreateNetworkMappingInputPropertiesArgs> properties,
-        Input<String> resourceGroupName,
-        Input<String> resourceName) {
+        Output<String> fabricName,
+        @Nullable Output<String> networkMappingName,
+        Output<String> networkName,
+        @Nullable Output<CreateNetworkMappingInputPropertiesArgs> properties,
+        Output<String> resourceGroupName,
+        Output<String> resourceName) {
         this.fabricName = Objects.requireNonNull(fabricName, "expected parameter 'fabricName' to be non-null");
         this.networkMappingName = networkMappingName;
         this.networkName = Objects.requireNonNull(networkName, "expected parameter 'networkName' to be non-null");
@@ -97,12 +97,12 @@ public final class ReplicationNetworkMappingArgs extends io.pulumi.resources.Res
     }
 
     private ReplicationNetworkMappingArgs() {
-        this.fabricName = Input.empty();
-        this.networkMappingName = Input.empty();
-        this.networkName = Input.empty();
-        this.properties = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.resourceName = Input.empty();
+        this.fabricName = Output.empty();
+        this.networkMappingName = Output.empty();
+        this.networkName = Output.empty();
+        this.properties = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.resourceName = Output.empty();
     }
 
     public static Builder builder() {
@@ -114,12 +114,12 @@ public final class ReplicationNetworkMappingArgs extends io.pulumi.resources.Res
     }
 
     public static final class Builder {
-        private Input<String> fabricName;
-        private @Nullable Input<String> networkMappingName;
-        private Input<String> networkName;
-        private @Nullable Input<CreateNetworkMappingInputPropertiesArgs> properties;
-        private Input<String> resourceGroupName;
-        private Input<String> resourceName;
+        private Output<String> fabricName;
+        private @Nullable Output<String> networkMappingName;
+        private Output<String> networkName;
+        private @Nullable Output<CreateNetworkMappingInputPropertiesArgs> properties;
+        private Output<String> resourceGroupName;
+        private Output<String> resourceName;
 
         public Builder() {
     	      // Empty
@@ -135,63 +135,63 @@ public final class ReplicationNetworkMappingArgs extends io.pulumi.resources.Res
     	      this.resourceName = defaults.resourceName;
         }
 
-        public Builder fabricName(Input<String> fabricName) {
+        public Builder fabricName(Output<String> fabricName) {
             this.fabricName = Objects.requireNonNull(fabricName);
             return this;
         }
 
         public Builder fabricName(String fabricName) {
-            this.fabricName = Input.of(Objects.requireNonNull(fabricName));
+            this.fabricName = Output.of(Objects.requireNonNull(fabricName));
             return this;
         }
 
-        public Builder networkMappingName(@Nullable Input<String> networkMappingName) {
+        public Builder networkMappingName(@Nullable Output<String> networkMappingName) {
             this.networkMappingName = networkMappingName;
             return this;
         }
 
         public Builder networkMappingName(@Nullable String networkMappingName) {
-            this.networkMappingName = Input.ofNullable(networkMappingName);
+            this.networkMappingName = Output.ofNullable(networkMappingName);
             return this;
         }
 
-        public Builder networkName(Input<String> networkName) {
+        public Builder networkName(Output<String> networkName) {
             this.networkName = Objects.requireNonNull(networkName);
             return this;
         }
 
         public Builder networkName(String networkName) {
-            this.networkName = Input.of(Objects.requireNonNull(networkName));
+            this.networkName = Output.of(Objects.requireNonNull(networkName));
             return this;
         }
 
-        public Builder properties(@Nullable Input<CreateNetworkMappingInputPropertiesArgs> properties) {
+        public Builder properties(@Nullable Output<CreateNetworkMappingInputPropertiesArgs> properties) {
             this.properties = properties;
             return this;
         }
 
         public Builder properties(@Nullable CreateNetworkMappingInputPropertiesArgs properties) {
-            this.properties = Input.ofNullable(properties);
+            this.properties = Output.ofNullable(properties);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder resourceName(Input<String> resourceName) {
+        public Builder resourceName(Output<String> resourceName) {
             this.resourceName = Objects.requireNonNull(resourceName);
             return this;
         }
 
         public Builder resourceName(String resourceName) {
-            this.resourceName = Input.of(Objects.requireNonNull(resourceName));
+            this.resourceName = Output.of(Objects.requireNonNull(resourceName));
             return this;
         }
         public ReplicationNetworkMappingArgs build() {

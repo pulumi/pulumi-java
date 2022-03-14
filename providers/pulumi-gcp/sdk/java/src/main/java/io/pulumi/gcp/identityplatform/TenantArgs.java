@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.identityplatform;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -20,10 +20,10 @@ public final class TenantArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="allowPasswordSignup")
-      private final @Nullable Input<Boolean> allowPasswordSignup;
+      private final @Nullable Output<Boolean> allowPasswordSignup;
 
-    public Input<Boolean> getAllowPasswordSignup() {
-        return this.allowPasswordSignup == null ? Input.empty() : this.allowPasswordSignup;
+    public Output<Boolean> getAllowPasswordSignup() {
+        return this.allowPasswordSignup == null ? Output.empty() : this.allowPasswordSignup;
     }
 
     /**
@@ -33,10 +33,10 @@ public final class TenantArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="disableAuth")
-      private final @Nullable Input<Boolean> disableAuth;
+      private final @Nullable Output<Boolean> disableAuth;
 
-    public Input<Boolean> getDisableAuth() {
-        return this.disableAuth == null ? Input.empty() : this.disableAuth;
+    public Output<Boolean> getDisableAuth() {
+        return this.disableAuth == null ? Output.empty() : this.disableAuth;
     }
 
     /**
@@ -44,9 +44,9 @@ public final class TenantArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName", required=true)
-      private final Input<String> displayName;
+      private final Output<String> displayName;
 
-    public Input<String> getDisplayName() {
+    public Output<String> getDisplayName() {
         return this.displayName;
     }
 
@@ -55,10 +55,10 @@ public final class TenantArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enableEmailLinkSignin")
-      private final @Nullable Input<Boolean> enableEmailLinkSignin;
+      private final @Nullable Output<Boolean> enableEmailLinkSignin;
 
-    public Input<Boolean> getEnableEmailLinkSignin() {
-        return this.enableEmailLinkSignin == null ? Input.empty() : this.enableEmailLinkSignin;
+    public Output<Boolean> getEnableEmailLinkSignin() {
+        return this.enableEmailLinkSignin == null ? Output.empty() : this.enableEmailLinkSignin;
     }
 
     /**
@@ -67,18 +67,18 @@ public final class TenantArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     public TenantArgs(
-        @Nullable Input<Boolean> allowPasswordSignup,
-        @Nullable Input<Boolean> disableAuth,
-        Input<String> displayName,
-        @Nullable Input<Boolean> enableEmailLinkSignin,
-        @Nullable Input<String> project) {
+        @Nullable Output<Boolean> allowPasswordSignup,
+        @Nullable Output<Boolean> disableAuth,
+        Output<String> displayName,
+        @Nullable Output<Boolean> enableEmailLinkSignin,
+        @Nullable Output<String> project) {
         this.allowPasswordSignup = allowPasswordSignup;
         this.disableAuth = disableAuth;
         this.displayName = Objects.requireNonNull(displayName, "expected parameter 'displayName' to be non-null");
@@ -87,11 +87,11 @@ public final class TenantArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private TenantArgs() {
-        this.allowPasswordSignup = Input.empty();
-        this.disableAuth = Input.empty();
-        this.displayName = Input.empty();
-        this.enableEmailLinkSignin = Input.empty();
-        this.project = Input.empty();
+        this.allowPasswordSignup = Output.empty();
+        this.disableAuth = Output.empty();
+        this.displayName = Output.empty();
+        this.enableEmailLinkSignin = Output.empty();
+        this.project = Output.empty();
     }
 
     public static Builder builder() {
@@ -103,11 +103,11 @@ public final class TenantArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> allowPasswordSignup;
-        private @Nullable Input<Boolean> disableAuth;
-        private Input<String> displayName;
-        private @Nullable Input<Boolean> enableEmailLinkSignin;
-        private @Nullable Input<String> project;
+        private @Nullable Output<Boolean> allowPasswordSignup;
+        private @Nullable Output<Boolean> disableAuth;
+        private Output<String> displayName;
+        private @Nullable Output<Boolean> enableEmailLinkSignin;
+        private @Nullable Output<String> project;
 
         public Builder() {
     	      // Empty
@@ -122,53 +122,53 @@ public final class TenantArgs extends io.pulumi.resources.ResourceArgs {
     	      this.project = defaults.project;
         }
 
-        public Builder allowPasswordSignup(@Nullable Input<Boolean> allowPasswordSignup) {
+        public Builder allowPasswordSignup(@Nullable Output<Boolean> allowPasswordSignup) {
             this.allowPasswordSignup = allowPasswordSignup;
             return this;
         }
 
         public Builder allowPasswordSignup(@Nullable Boolean allowPasswordSignup) {
-            this.allowPasswordSignup = Input.ofNullable(allowPasswordSignup);
+            this.allowPasswordSignup = Output.ofNullable(allowPasswordSignup);
             return this;
         }
 
-        public Builder disableAuth(@Nullable Input<Boolean> disableAuth) {
+        public Builder disableAuth(@Nullable Output<Boolean> disableAuth) {
             this.disableAuth = disableAuth;
             return this;
         }
 
         public Builder disableAuth(@Nullable Boolean disableAuth) {
-            this.disableAuth = Input.ofNullable(disableAuth);
+            this.disableAuth = Output.ofNullable(disableAuth);
             return this;
         }
 
-        public Builder displayName(Input<String> displayName) {
+        public Builder displayName(Output<String> displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
         public Builder displayName(String displayName) {
-            this.displayName = Input.of(Objects.requireNonNull(displayName));
+            this.displayName = Output.of(Objects.requireNonNull(displayName));
             return this;
         }
 
-        public Builder enableEmailLinkSignin(@Nullable Input<Boolean> enableEmailLinkSignin) {
+        public Builder enableEmailLinkSignin(@Nullable Output<Boolean> enableEmailLinkSignin) {
             this.enableEmailLinkSignin = enableEmailLinkSignin;
             return this;
         }
 
         public Builder enableEmailLinkSignin(@Nullable Boolean enableEmailLinkSignin) {
-            this.enableEmailLinkSignin = Input.ofNullable(enableEmailLinkSignin);
+            this.enableEmailLinkSignin = Output.ofNullable(enableEmailLinkSignin);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
         public TenantArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.transcoder_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.transcoder_v1.inputs.NormalizedCoordinateArgs;
 import java.lang.Double;
@@ -25,10 +25,10 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="alpha")
-      private final @Nullable Input<Double> alpha;
+      private final @Nullable Output<Double> alpha;
 
-    public Input<Double> getAlpha() {
-        return this.alpha == null ? Input.empty() : this.alpha;
+    public Output<Double> getAlpha() {
+        return this.alpha == null ? Output.empty() : this.alpha;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resolution")
-      private final @Nullable Input<NormalizedCoordinateArgs> resolution;
+      private final @Nullable Output<NormalizedCoordinateArgs> resolution;
 
-    public Input<NormalizedCoordinateArgs> getResolution() {
-        return this.resolution == null ? Input.empty() : this.resolution;
+    public Output<NormalizedCoordinateArgs> getResolution() {
+        return this.resolution == null ? Output.empty() : this.resolution;
     }
 
     /**
@@ -47,25 +47,25 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="uri", required=true)
-      private final Input<String> uri;
+      private final Output<String> uri;
 
-    public Input<String> getUri() {
+    public Output<String> getUri() {
         return this.uri;
     }
 
     public ImageArgs(
-        @Nullable Input<Double> alpha,
-        @Nullable Input<NormalizedCoordinateArgs> resolution,
-        Input<String> uri) {
+        @Nullable Output<Double> alpha,
+        @Nullable Output<NormalizedCoordinateArgs> resolution,
+        Output<String> uri) {
         this.alpha = alpha;
         this.resolution = resolution;
         this.uri = Objects.requireNonNull(uri, "expected parameter 'uri' to be non-null");
     }
 
     private ImageArgs() {
-        this.alpha = Input.empty();
-        this.resolution = Input.empty();
-        this.uri = Input.empty();
+        this.alpha = Output.empty();
+        this.resolution = Output.empty();
+        this.uri = Output.empty();
     }
 
     public static Builder builder() {
@@ -77,9 +77,9 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Double> alpha;
-        private @Nullable Input<NormalizedCoordinateArgs> resolution;
-        private Input<String> uri;
+        private @Nullable Output<Double> alpha;
+        private @Nullable Output<NormalizedCoordinateArgs> resolution;
+        private Output<String> uri;
 
         public Builder() {
     	      // Empty
@@ -92,33 +92,33 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
     	      this.uri = defaults.uri;
         }
 
-        public Builder alpha(@Nullable Input<Double> alpha) {
+        public Builder alpha(@Nullable Output<Double> alpha) {
             this.alpha = alpha;
             return this;
         }
 
         public Builder alpha(@Nullable Double alpha) {
-            this.alpha = Input.ofNullable(alpha);
+            this.alpha = Output.ofNullable(alpha);
             return this;
         }
 
-        public Builder resolution(@Nullable Input<NormalizedCoordinateArgs> resolution) {
+        public Builder resolution(@Nullable Output<NormalizedCoordinateArgs> resolution) {
             this.resolution = resolution;
             return this;
         }
 
         public Builder resolution(@Nullable NormalizedCoordinateArgs resolution) {
-            this.resolution = Input.ofNullable(resolution);
+            this.resolution = Output.ofNullable(resolution);
             return this;
         }
 
-        public Builder uri(Input<String> uri) {
+        public Builder uri(Output<String> uri) {
             this.uri = Objects.requireNonNull(uri);
             return this;
         }
 
         public Builder uri(String uri) {
-            this.uri = Input.of(Objects.requireNonNull(uri));
+            this.uri = Output.of(Objects.requireNonNull(uri));
             return this;
         }
         public ImageArgs build() {

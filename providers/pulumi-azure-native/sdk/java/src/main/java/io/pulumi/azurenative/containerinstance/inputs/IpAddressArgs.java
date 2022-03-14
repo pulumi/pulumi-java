@@ -6,7 +6,7 @@ package io.pulumi.azurenative.containerinstance.inputs;
 import io.pulumi.azurenative.containerinstance.enums.ContainerGroupIpAddressType;
 import io.pulumi.azurenative.containerinstance.inputs.PortArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -27,10 +27,10 @@ public final class IpAddressArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dnsNameLabel")
-      private final @Nullable Input<String> dnsNameLabel;
+      private final @Nullable Output<String> dnsNameLabel;
 
-    public Input<String> getDnsNameLabel() {
-        return this.dnsNameLabel == null ? Input.empty() : this.dnsNameLabel;
+    public Output<String> getDnsNameLabel() {
+        return this.dnsNameLabel == null ? Output.empty() : this.dnsNameLabel;
     }
 
     /**
@@ -38,10 +38,10 @@ public final class IpAddressArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ip")
-      private final @Nullable Input<String> ip;
+      private final @Nullable Output<String> ip;
 
-    public Input<String> getIp() {
-        return this.ip == null ? Input.empty() : this.ip;
+    public Output<String> getIp() {
+        return this.ip == null ? Output.empty() : this.ip;
     }
 
     /**
@@ -49,9 +49,9 @@ public final class IpAddressArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ports", required=true)
-      private final Input<List<PortArgs>> ports;
+      private final Output<List<PortArgs>> ports;
 
-    public Input<List<PortArgs>> getPorts() {
+    public Output<List<PortArgs>> getPorts() {
         return this.ports;
     }
 
@@ -60,17 +60,17 @@ public final class IpAddressArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<Either<String,ContainerGroupIpAddressType>> type;
+      private final Output<Either<String,ContainerGroupIpAddressType>> type;
 
-    public Input<Either<String,ContainerGroupIpAddressType>> getType() {
+    public Output<Either<String,ContainerGroupIpAddressType>> getType() {
         return this.type;
     }
 
     public IpAddressArgs(
-        @Nullable Input<String> dnsNameLabel,
-        @Nullable Input<String> ip,
-        Input<List<PortArgs>> ports,
-        Input<Either<String,ContainerGroupIpAddressType>> type) {
+        @Nullable Output<String> dnsNameLabel,
+        @Nullable Output<String> ip,
+        Output<List<PortArgs>> ports,
+        Output<Either<String,ContainerGroupIpAddressType>> type) {
         this.dnsNameLabel = dnsNameLabel;
         this.ip = ip;
         this.ports = Objects.requireNonNull(ports, "expected parameter 'ports' to be non-null");
@@ -78,10 +78,10 @@ public final class IpAddressArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private IpAddressArgs() {
-        this.dnsNameLabel = Input.empty();
-        this.ip = Input.empty();
-        this.ports = Input.empty();
-        this.type = Input.empty();
+        this.dnsNameLabel = Output.empty();
+        this.ip = Output.empty();
+        this.ports = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -93,10 +93,10 @@ public final class IpAddressArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> dnsNameLabel;
-        private @Nullable Input<String> ip;
-        private Input<List<PortArgs>> ports;
-        private Input<Either<String,ContainerGroupIpAddressType>> type;
+        private @Nullable Output<String> dnsNameLabel;
+        private @Nullable Output<String> ip;
+        private Output<List<PortArgs>> ports;
+        private Output<Either<String,ContainerGroupIpAddressType>> type;
 
         public Builder() {
     	      // Empty
@@ -110,43 +110,43 @@ public final class IpAddressArgs extends io.pulumi.resources.ResourceArgs {
     	      this.type = defaults.type;
         }
 
-        public Builder dnsNameLabel(@Nullable Input<String> dnsNameLabel) {
+        public Builder dnsNameLabel(@Nullable Output<String> dnsNameLabel) {
             this.dnsNameLabel = dnsNameLabel;
             return this;
         }
 
         public Builder dnsNameLabel(@Nullable String dnsNameLabel) {
-            this.dnsNameLabel = Input.ofNullable(dnsNameLabel);
+            this.dnsNameLabel = Output.ofNullable(dnsNameLabel);
             return this;
         }
 
-        public Builder ip(@Nullable Input<String> ip) {
+        public Builder ip(@Nullable Output<String> ip) {
             this.ip = ip;
             return this;
         }
 
         public Builder ip(@Nullable String ip) {
-            this.ip = Input.ofNullable(ip);
+            this.ip = Output.ofNullable(ip);
             return this;
         }
 
-        public Builder ports(Input<List<PortArgs>> ports) {
+        public Builder ports(Output<List<PortArgs>> ports) {
             this.ports = Objects.requireNonNull(ports);
             return this;
         }
 
         public Builder ports(List<PortArgs> ports) {
-            this.ports = Input.of(Objects.requireNonNull(ports));
+            this.ports = Output.of(Objects.requireNonNull(ports));
             return this;
         }
 
-        public Builder type(Input<Either<String,ContainerGroupIpAddressType>> type) {
+        public Builder type(Output<Either<String,ContainerGroupIpAddressType>> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(Either<String,ContainerGroupIpAddressType> type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
         public IpAddressArgs build() {

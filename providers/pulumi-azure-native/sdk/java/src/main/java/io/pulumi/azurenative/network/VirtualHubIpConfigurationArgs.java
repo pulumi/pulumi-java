@@ -7,7 +7,7 @@ import io.pulumi.azurenative.network.enums.IPAllocationMethod;
 import io.pulumi.azurenative.network.inputs.PublicIPAddressArgs;
 import io.pulumi.azurenative.network.inputs.SubnetArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class VirtualHubIpConfigurationArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="id")
-      private final @Nullable Input<String> id;
+      private final @Nullable Output<String> id;
 
-    public Input<String> getId() {
-        return this.id == null ? Input.empty() : this.id;
+    public Output<String> getId() {
+        return this.id == null ? Output.empty() : this.id;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class VirtualHubIpConfigurationArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="ipConfigName")
-      private final @Nullable Input<String> ipConfigName;
+      private final @Nullable Output<String> ipConfigName;
 
-    public Input<String> getIpConfigName() {
-        return this.ipConfigName == null ? Input.empty() : this.ipConfigName;
+    public Output<String> getIpConfigName() {
+        return this.ipConfigName == null ? Output.empty() : this.ipConfigName;
     }
 
     /**
@@ -45,10 +45,10 @@ public final class VirtualHubIpConfigurationArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -56,10 +56,10 @@ public final class VirtualHubIpConfigurationArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="privateIPAddress")
-      private final @Nullable Input<String> privateIPAddress;
+      private final @Nullable Output<String> privateIPAddress;
 
-    public Input<String> getPrivateIPAddress() {
-        return this.privateIPAddress == null ? Input.empty() : this.privateIPAddress;
+    public Output<String> getPrivateIPAddress() {
+        return this.privateIPAddress == null ? Output.empty() : this.privateIPAddress;
     }
 
     /**
@@ -67,10 +67,10 @@ public final class VirtualHubIpConfigurationArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="privateIPAllocationMethod")
-      private final @Nullable Input<Either<String,IPAllocationMethod>> privateIPAllocationMethod;
+      private final @Nullable Output<Either<String,IPAllocationMethod>> privateIPAllocationMethod;
 
-    public Input<Either<String,IPAllocationMethod>> getPrivateIPAllocationMethod() {
-        return this.privateIPAllocationMethod == null ? Input.empty() : this.privateIPAllocationMethod;
+    public Output<Either<String,IPAllocationMethod>> getPrivateIPAllocationMethod() {
+        return this.privateIPAllocationMethod == null ? Output.empty() : this.privateIPAllocationMethod;
     }
 
     /**
@@ -78,10 +78,10 @@ public final class VirtualHubIpConfigurationArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="publicIPAddress")
-      private final @Nullable Input<PublicIPAddressArgs> publicIPAddress;
+      private final @Nullable Output<PublicIPAddressArgs> publicIPAddress;
 
-    public Input<PublicIPAddressArgs> getPublicIPAddress() {
-        return this.publicIPAddress == null ? Input.empty() : this.publicIPAddress;
+    public Output<PublicIPAddressArgs> getPublicIPAddress() {
+        return this.publicIPAddress == null ? Output.empty() : this.publicIPAddress;
     }
 
     /**
@@ -89,9 +89,9 @@ public final class VirtualHubIpConfigurationArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -100,10 +100,10 @@ public final class VirtualHubIpConfigurationArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="subnet")
-      private final @Nullable Input<SubnetArgs> subnet;
+      private final @Nullable Output<SubnetArgs> subnet;
 
-    public Input<SubnetArgs> getSubnet() {
-        return this.subnet == null ? Input.empty() : this.subnet;
+    public Output<SubnetArgs> getSubnet() {
+        return this.subnet == null ? Output.empty() : this.subnet;
     }
 
     /**
@@ -111,22 +111,22 @@ public final class VirtualHubIpConfigurationArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="virtualHubName", required=true)
-      private final Input<String> virtualHubName;
+      private final Output<String> virtualHubName;
 
-    public Input<String> getVirtualHubName() {
+    public Output<String> getVirtualHubName() {
         return this.virtualHubName;
     }
 
     public VirtualHubIpConfigurationArgs(
-        @Nullable Input<String> id,
-        @Nullable Input<String> ipConfigName,
-        @Nullable Input<String> name,
-        @Nullable Input<String> privateIPAddress,
-        @Nullable Input<Either<String,IPAllocationMethod>> privateIPAllocationMethod,
-        @Nullable Input<PublicIPAddressArgs> publicIPAddress,
-        Input<String> resourceGroupName,
-        @Nullable Input<SubnetArgs> subnet,
-        Input<String> virtualHubName) {
+        @Nullable Output<String> id,
+        @Nullable Output<String> ipConfigName,
+        @Nullable Output<String> name,
+        @Nullable Output<String> privateIPAddress,
+        @Nullable Output<Either<String,IPAllocationMethod>> privateIPAllocationMethod,
+        @Nullable Output<PublicIPAddressArgs> publicIPAddress,
+        Output<String> resourceGroupName,
+        @Nullable Output<SubnetArgs> subnet,
+        Output<String> virtualHubName) {
         this.id = id;
         this.ipConfigName = ipConfigName;
         this.name = name;
@@ -139,15 +139,15 @@ public final class VirtualHubIpConfigurationArgs extends io.pulumi.resources.Res
     }
 
     private VirtualHubIpConfigurationArgs() {
-        this.id = Input.empty();
-        this.ipConfigName = Input.empty();
-        this.name = Input.empty();
-        this.privateIPAddress = Input.empty();
-        this.privateIPAllocationMethod = Input.empty();
-        this.publicIPAddress = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.subnet = Input.empty();
-        this.virtualHubName = Input.empty();
+        this.id = Output.empty();
+        this.ipConfigName = Output.empty();
+        this.name = Output.empty();
+        this.privateIPAddress = Output.empty();
+        this.privateIPAllocationMethod = Output.empty();
+        this.publicIPAddress = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.subnet = Output.empty();
+        this.virtualHubName = Output.empty();
     }
 
     public static Builder builder() {
@@ -159,15 +159,15 @@ public final class VirtualHubIpConfigurationArgs extends io.pulumi.resources.Res
     }
 
     public static final class Builder {
-        private @Nullable Input<String> id;
-        private @Nullable Input<String> ipConfigName;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> privateIPAddress;
-        private @Nullable Input<Either<String,IPAllocationMethod>> privateIPAllocationMethod;
-        private @Nullable Input<PublicIPAddressArgs> publicIPAddress;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<SubnetArgs> subnet;
-        private Input<String> virtualHubName;
+        private @Nullable Output<String> id;
+        private @Nullable Output<String> ipConfigName;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> privateIPAddress;
+        private @Nullable Output<Either<String,IPAllocationMethod>> privateIPAllocationMethod;
+        private @Nullable Output<PublicIPAddressArgs> publicIPAddress;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<SubnetArgs> subnet;
+        private Output<String> virtualHubName;
 
         public Builder() {
     	      // Empty
@@ -186,93 +186,93 @@ public final class VirtualHubIpConfigurationArgs extends io.pulumi.resources.Res
     	      this.virtualHubName = defaults.virtualHubName;
         }
 
-        public Builder id(@Nullable Input<String> id) {
+        public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
 
         public Builder id(@Nullable String id) {
-            this.id = Input.ofNullable(id);
+            this.id = Output.ofNullable(id);
             return this;
         }
 
-        public Builder ipConfigName(@Nullable Input<String> ipConfigName) {
+        public Builder ipConfigName(@Nullable Output<String> ipConfigName) {
             this.ipConfigName = ipConfigName;
             return this;
         }
 
         public Builder ipConfigName(@Nullable String ipConfigName) {
-            this.ipConfigName = Input.ofNullable(ipConfigName);
+            this.ipConfigName = Output.ofNullable(ipConfigName);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder privateIPAddress(@Nullable Input<String> privateIPAddress) {
+        public Builder privateIPAddress(@Nullable Output<String> privateIPAddress) {
             this.privateIPAddress = privateIPAddress;
             return this;
         }
 
         public Builder privateIPAddress(@Nullable String privateIPAddress) {
-            this.privateIPAddress = Input.ofNullable(privateIPAddress);
+            this.privateIPAddress = Output.ofNullable(privateIPAddress);
             return this;
         }
 
-        public Builder privateIPAllocationMethod(@Nullable Input<Either<String,IPAllocationMethod>> privateIPAllocationMethod) {
+        public Builder privateIPAllocationMethod(@Nullable Output<Either<String,IPAllocationMethod>> privateIPAllocationMethod) {
             this.privateIPAllocationMethod = privateIPAllocationMethod;
             return this;
         }
 
         public Builder privateIPAllocationMethod(@Nullable Either<String,IPAllocationMethod> privateIPAllocationMethod) {
-            this.privateIPAllocationMethod = Input.ofNullable(privateIPAllocationMethod);
+            this.privateIPAllocationMethod = Output.ofNullable(privateIPAllocationMethod);
             return this;
         }
 
-        public Builder publicIPAddress(@Nullable Input<PublicIPAddressArgs> publicIPAddress) {
+        public Builder publicIPAddress(@Nullable Output<PublicIPAddressArgs> publicIPAddress) {
             this.publicIPAddress = publicIPAddress;
             return this;
         }
 
         public Builder publicIPAddress(@Nullable PublicIPAddressArgs publicIPAddress) {
-            this.publicIPAddress = Input.ofNullable(publicIPAddress);
+            this.publicIPAddress = Output.ofNullable(publicIPAddress);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder subnet(@Nullable Input<SubnetArgs> subnet) {
+        public Builder subnet(@Nullable Output<SubnetArgs> subnet) {
             this.subnet = subnet;
             return this;
         }
 
         public Builder subnet(@Nullable SubnetArgs subnet) {
-            this.subnet = Input.ofNullable(subnet);
+            this.subnet = Output.ofNullable(subnet);
             return this;
         }
 
-        public Builder virtualHubName(Input<String> virtualHubName) {
+        public Builder virtualHubName(Output<String> virtualHubName) {
             this.virtualHubName = Objects.requireNonNull(virtualHubName);
             return this;
         }
 
         public Builder virtualHubName(String virtualHubName) {
-            this.virtualHubName = Input.of(Objects.requireNonNull(virtualHubName));
+            this.virtualHubName = Output.of(Objects.requireNonNull(virtualHubName));
             return this;
         }
         public VirtualHubIpConfigurationArgs build() {

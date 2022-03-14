@@ -9,7 +9,7 @@ import io.pulumi.azurenative.recoveryservices.inputs.LongTermSchedulePolicyArgs;
 import io.pulumi.azurenative.recoveryservices.inputs.SimpleRetentionPolicyArgs;
 import io.pulumi.azurenative.recoveryservices.inputs.SimpleSchedulePolicyArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.Object;
@@ -32,9 +32,9 @@ public final class MabProtectionPolicyArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="backupManagementType", required=true)
-      private final Input<String> backupManagementType;
+      private final Output<String> backupManagementType;
 
-    public Input<String> getBackupManagementType() {
+    public Output<String> getBackupManagementType() {
         return this.backupManagementType;
     }
 
@@ -43,10 +43,10 @@ public final class MabProtectionPolicyArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="protectedItemsCount")
-      private final @Nullable Input<Integer> protectedItemsCount;
+      private final @Nullable Output<Integer> protectedItemsCount;
 
-    public Input<Integer> getProtectedItemsCount() {
-        return this.protectedItemsCount == null ? Input.empty() : this.protectedItemsCount;
+    public Output<Integer> getProtectedItemsCount() {
+        return this.protectedItemsCount == null ? Output.empty() : this.protectedItemsCount;
     }
 
     /**
@@ -54,10 +54,10 @@ public final class MabProtectionPolicyArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="retentionPolicy")
-      private final @Nullable Input<Either<LongTermRetentionPolicyArgs,SimpleRetentionPolicyArgs>> retentionPolicy;
+      private final @Nullable Output<Either<LongTermRetentionPolicyArgs,SimpleRetentionPolicyArgs>> retentionPolicy;
 
-    public Input<Either<LongTermRetentionPolicyArgs,SimpleRetentionPolicyArgs>> getRetentionPolicy() {
-        return this.retentionPolicy == null ? Input.empty() : this.retentionPolicy;
+    public Output<Either<LongTermRetentionPolicyArgs,SimpleRetentionPolicyArgs>> getRetentionPolicy() {
+        return this.retentionPolicy == null ? Output.empty() : this.retentionPolicy;
     }
 
     /**
@@ -65,17 +65,17 @@ public final class MabProtectionPolicyArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="schedulePolicy")
-      private final @Nullable Input<Object> schedulePolicy;
+      private final @Nullable Output<Object> schedulePolicy;
 
-    public Input<Object> getSchedulePolicy() {
-        return this.schedulePolicy == null ? Input.empty() : this.schedulePolicy;
+    public Output<Object> getSchedulePolicy() {
+        return this.schedulePolicy == null ? Output.empty() : this.schedulePolicy;
     }
 
     public MabProtectionPolicyArgs(
-        Input<String> backupManagementType,
-        @Nullable Input<Integer> protectedItemsCount,
-        @Nullable Input<Either<LongTermRetentionPolicyArgs,SimpleRetentionPolicyArgs>> retentionPolicy,
-        @Nullable Input<Object> schedulePolicy) {
+        Output<String> backupManagementType,
+        @Nullable Output<Integer> protectedItemsCount,
+        @Nullable Output<Either<LongTermRetentionPolicyArgs,SimpleRetentionPolicyArgs>> retentionPolicy,
+        @Nullable Output<Object> schedulePolicy) {
         this.backupManagementType = Objects.requireNonNull(backupManagementType, "expected parameter 'backupManagementType' to be non-null");
         this.protectedItemsCount = protectedItemsCount;
         this.retentionPolicy = retentionPolicy;
@@ -83,10 +83,10 @@ public final class MabProtectionPolicyArgs extends io.pulumi.resources.ResourceA
     }
 
     private MabProtectionPolicyArgs() {
-        this.backupManagementType = Input.empty();
-        this.protectedItemsCount = Input.empty();
-        this.retentionPolicy = Input.empty();
-        this.schedulePolicy = Input.empty();
+        this.backupManagementType = Output.empty();
+        this.protectedItemsCount = Output.empty();
+        this.retentionPolicy = Output.empty();
+        this.schedulePolicy = Output.empty();
     }
 
     public static Builder builder() {
@@ -98,10 +98,10 @@ public final class MabProtectionPolicyArgs extends io.pulumi.resources.ResourceA
     }
 
     public static final class Builder {
-        private Input<String> backupManagementType;
-        private @Nullable Input<Integer> protectedItemsCount;
-        private @Nullable Input<Either<LongTermRetentionPolicyArgs,SimpleRetentionPolicyArgs>> retentionPolicy;
-        private @Nullable Input<Object> schedulePolicy;
+        private Output<String> backupManagementType;
+        private @Nullable Output<Integer> protectedItemsCount;
+        private @Nullable Output<Either<LongTermRetentionPolicyArgs,SimpleRetentionPolicyArgs>> retentionPolicy;
+        private @Nullable Output<Object> schedulePolicy;
 
         public Builder() {
     	      // Empty
@@ -115,43 +115,43 @@ public final class MabProtectionPolicyArgs extends io.pulumi.resources.ResourceA
     	      this.schedulePolicy = defaults.schedulePolicy;
         }
 
-        public Builder backupManagementType(Input<String> backupManagementType) {
+        public Builder backupManagementType(Output<String> backupManagementType) {
             this.backupManagementType = Objects.requireNonNull(backupManagementType);
             return this;
         }
 
         public Builder backupManagementType(String backupManagementType) {
-            this.backupManagementType = Input.of(Objects.requireNonNull(backupManagementType));
+            this.backupManagementType = Output.of(Objects.requireNonNull(backupManagementType));
             return this;
         }
 
-        public Builder protectedItemsCount(@Nullable Input<Integer> protectedItemsCount) {
+        public Builder protectedItemsCount(@Nullable Output<Integer> protectedItemsCount) {
             this.protectedItemsCount = protectedItemsCount;
             return this;
         }
 
         public Builder protectedItemsCount(@Nullable Integer protectedItemsCount) {
-            this.protectedItemsCount = Input.ofNullable(protectedItemsCount);
+            this.protectedItemsCount = Output.ofNullable(protectedItemsCount);
             return this;
         }
 
-        public Builder retentionPolicy(@Nullable Input<Either<LongTermRetentionPolicyArgs,SimpleRetentionPolicyArgs>> retentionPolicy) {
+        public Builder retentionPolicy(@Nullable Output<Either<LongTermRetentionPolicyArgs,SimpleRetentionPolicyArgs>> retentionPolicy) {
             this.retentionPolicy = retentionPolicy;
             return this;
         }
 
         public Builder retentionPolicy(@Nullable Either<LongTermRetentionPolicyArgs,SimpleRetentionPolicyArgs> retentionPolicy) {
-            this.retentionPolicy = Input.ofNullable(retentionPolicy);
+            this.retentionPolicy = Output.ofNullable(retentionPolicy);
             return this;
         }
 
-        public Builder schedulePolicy(@Nullable Input<Object> schedulePolicy) {
+        public Builder schedulePolicy(@Nullable Output<Object> schedulePolicy) {
             this.schedulePolicy = schedulePolicy;
             return this;
         }
 
         public Builder schedulePolicy(@Nullable Object schedulePolicy) {
-            this.schedulePolicy = Input.ofNullable(schedulePolicy);
+            this.schedulePolicy = Output.ofNullable(schedulePolicy);
             return this;
         }
         public MabProtectionPolicyArgs build() {

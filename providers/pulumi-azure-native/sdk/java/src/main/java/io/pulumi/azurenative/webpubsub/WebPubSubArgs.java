@@ -9,7 +9,7 @@ import io.pulumi.azurenative.webpubsub.inputs.ResourceSkuArgs;
 import io.pulumi.azurenative.webpubsub.inputs.WebPubSubFeatureArgs;
 import io.pulumi.azurenative.webpubsub.inputs.WebPubSubNetworkACLsArgs;
 import io.pulumi.azurenative.webpubsub.inputs.WebPubSubTlsSettingsArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -27,10 +27,10 @@ public final class WebPubSubArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="eventHandler")
-      private final @Nullable Input<EventHandlerSettingsArgs> eventHandler;
+      private final @Nullable Output<EventHandlerSettingsArgs> eventHandler;
 
-    public Input<EventHandlerSettingsArgs> getEventHandler() {
-        return this.eventHandler == null ? Input.empty() : this.eventHandler;
+    public Output<EventHandlerSettingsArgs> getEventHandler() {
+        return this.eventHandler == null ? Output.empty() : this.eventHandler;
     }
 
     /**
@@ -43,10 +43,10 @@ public final class WebPubSubArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="features")
-      private final @Nullable Input<List<WebPubSubFeatureArgs>> features;
+      private final @Nullable Output<List<WebPubSubFeatureArgs>> features;
 
-    public Input<List<WebPubSubFeatureArgs>> getFeatures() {
-        return this.features == null ? Input.empty() : this.features;
+    public Output<List<WebPubSubFeatureArgs>> getFeatures() {
+        return this.features == null ? Output.empty() : this.features;
     }
 
     /**
@@ -54,10 +54,10 @@ public final class WebPubSubArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="identity")
-      private final @Nullable Input<ManagedIdentityArgs> identity;
+      private final @Nullable Output<ManagedIdentityArgs> identity;
 
-    public Input<ManagedIdentityArgs> getIdentity() {
-        return this.identity == null ? Input.empty() : this.identity;
+    public Output<ManagedIdentityArgs> getIdentity() {
+        return this.identity == null ? Output.empty() : this.identity;
     }
 
     /**
@@ -65,10 +65,10 @@ public final class WebPubSubArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -76,10 +76,10 @@ public final class WebPubSubArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="networkACLs")
-      private final @Nullable Input<WebPubSubNetworkACLsArgs> networkACLs;
+      private final @Nullable Output<WebPubSubNetworkACLsArgs> networkACLs;
 
-    public Input<WebPubSubNetworkACLsArgs> getNetworkACLs() {
-        return this.networkACLs == null ? Input.empty() : this.networkACLs;
+    public Output<WebPubSubNetworkACLsArgs> getNetworkACLs() {
+        return this.networkACLs == null ? Output.empty() : this.networkACLs;
     }
 
     /**
@@ -89,10 +89,10 @@ public final class WebPubSubArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="publicNetworkAccess")
-      private final @Nullable Input<String> publicNetworkAccess;
+      private final @Nullable Output<String> publicNetworkAccess;
 
-    public Input<String> getPublicNetworkAccess() {
-        return this.publicNetworkAccess == null ? Input.empty() : this.publicNetworkAccess;
+    public Output<String> getPublicNetworkAccess() {
+        return this.publicNetworkAccess == null ? Output.empty() : this.publicNetworkAccess;
     }
 
     /**
@@ -100,9 +100,9 @@ public final class WebPubSubArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -111,10 +111,10 @@ public final class WebPubSubArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceName")
-      private final @Nullable Input<String> resourceName;
+      private final @Nullable Output<String> resourceName;
 
-    public Input<String> getPropResourceName() {
-        return this.resourceName == null ? Input.empty() : this.resourceName;
+    public Output<String> getPropResourceName() {
+        return this.resourceName == null ? Output.empty() : this.resourceName;
     }
 
     /**
@@ -122,10 +122,10 @@ public final class WebPubSubArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sku")
-      private final @Nullable Input<ResourceSkuArgs> sku;
+      private final @Nullable Output<ResourceSkuArgs> sku;
 
-    public Input<ResourceSkuArgs> getSku() {
-        return this.sku == null ? Input.empty() : this.sku;
+    public Output<ResourceSkuArgs> getSku() {
+        return this.sku == null ? Output.empty() : this.sku;
     }
 
     /**
@@ -133,10 +133,10 @@ public final class WebPubSubArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -144,30 +144,30 @@ public final class WebPubSubArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tls")
-      private final @Nullable Input<WebPubSubTlsSettingsArgs> tls;
+      private final @Nullable Output<WebPubSubTlsSettingsArgs> tls;
 
-    public Input<WebPubSubTlsSettingsArgs> getTls() {
-        return this.tls == null ? Input.empty() : this.tls;
+    public Output<WebPubSubTlsSettingsArgs> getTls() {
+        return this.tls == null ? Output.empty() : this.tls;
     }
 
     public WebPubSubArgs(
-        @Nullable Input<EventHandlerSettingsArgs> eventHandler,
-        @Nullable Input<List<WebPubSubFeatureArgs>> features,
-        @Nullable Input<ManagedIdentityArgs> identity,
-        @Nullable Input<String> location,
-        @Nullable Input<WebPubSubNetworkACLsArgs> networkACLs,
-        @Nullable Input<String> publicNetworkAccess,
-        Input<String> resourceGroupName,
-        @Nullable Input<String> resourceName,
-        @Nullable Input<ResourceSkuArgs> sku,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<WebPubSubTlsSettingsArgs> tls) {
+        @Nullable Output<EventHandlerSettingsArgs> eventHandler,
+        @Nullable Output<List<WebPubSubFeatureArgs>> features,
+        @Nullable Output<ManagedIdentityArgs> identity,
+        @Nullable Output<String> location,
+        @Nullable Output<WebPubSubNetworkACLsArgs> networkACLs,
+        @Nullable Output<String> publicNetworkAccess,
+        Output<String> resourceGroupName,
+        @Nullable Output<String> resourceName,
+        @Nullable Output<ResourceSkuArgs> sku,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<WebPubSubTlsSettingsArgs> tls) {
         this.eventHandler = eventHandler;
         this.features = features;
         this.identity = identity;
         this.location = location;
         this.networkACLs = networkACLs;
-        this.publicNetworkAccess = publicNetworkAccess == null ? Input.ofNullable("Enabled") : publicNetworkAccess;
+        this.publicNetworkAccess = publicNetworkAccess == null ? Output.ofNullable("Enabled") : publicNetworkAccess;
         this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
         this.resourceName = resourceName;
         this.sku = sku;
@@ -176,17 +176,17 @@ public final class WebPubSubArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private WebPubSubArgs() {
-        this.eventHandler = Input.empty();
-        this.features = Input.empty();
-        this.identity = Input.empty();
-        this.location = Input.empty();
-        this.networkACLs = Input.empty();
-        this.publicNetworkAccess = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.resourceName = Input.empty();
-        this.sku = Input.empty();
-        this.tags = Input.empty();
-        this.tls = Input.empty();
+        this.eventHandler = Output.empty();
+        this.features = Output.empty();
+        this.identity = Output.empty();
+        this.location = Output.empty();
+        this.networkACLs = Output.empty();
+        this.publicNetworkAccess = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.resourceName = Output.empty();
+        this.sku = Output.empty();
+        this.tags = Output.empty();
+        this.tls = Output.empty();
     }
 
     public static Builder builder() {
@@ -198,17 +198,17 @@ public final class WebPubSubArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<EventHandlerSettingsArgs> eventHandler;
-        private @Nullable Input<List<WebPubSubFeatureArgs>> features;
-        private @Nullable Input<ManagedIdentityArgs> identity;
-        private @Nullable Input<String> location;
-        private @Nullable Input<WebPubSubNetworkACLsArgs> networkACLs;
-        private @Nullable Input<String> publicNetworkAccess;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<String> resourceName;
-        private @Nullable Input<ResourceSkuArgs> sku;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<WebPubSubTlsSettingsArgs> tls;
+        private @Nullable Output<EventHandlerSettingsArgs> eventHandler;
+        private @Nullable Output<List<WebPubSubFeatureArgs>> features;
+        private @Nullable Output<ManagedIdentityArgs> identity;
+        private @Nullable Output<String> location;
+        private @Nullable Output<WebPubSubNetworkACLsArgs> networkACLs;
+        private @Nullable Output<String> publicNetworkAccess;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<String> resourceName;
+        private @Nullable Output<ResourceSkuArgs> sku;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<WebPubSubTlsSettingsArgs> tls;
 
         public Builder() {
     	      // Empty
@@ -229,113 +229,113 @@ public final class WebPubSubArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tls = defaults.tls;
         }
 
-        public Builder eventHandler(@Nullable Input<EventHandlerSettingsArgs> eventHandler) {
+        public Builder eventHandler(@Nullable Output<EventHandlerSettingsArgs> eventHandler) {
             this.eventHandler = eventHandler;
             return this;
         }
 
         public Builder eventHandler(@Nullable EventHandlerSettingsArgs eventHandler) {
-            this.eventHandler = Input.ofNullable(eventHandler);
+            this.eventHandler = Output.ofNullable(eventHandler);
             return this;
         }
 
-        public Builder features(@Nullable Input<List<WebPubSubFeatureArgs>> features) {
+        public Builder features(@Nullable Output<List<WebPubSubFeatureArgs>> features) {
             this.features = features;
             return this;
         }
 
         public Builder features(@Nullable List<WebPubSubFeatureArgs> features) {
-            this.features = Input.ofNullable(features);
+            this.features = Output.ofNullable(features);
             return this;
         }
 
-        public Builder identity(@Nullable Input<ManagedIdentityArgs> identity) {
+        public Builder identity(@Nullable Output<ManagedIdentityArgs> identity) {
             this.identity = identity;
             return this;
         }
 
         public Builder identity(@Nullable ManagedIdentityArgs identity) {
-            this.identity = Input.ofNullable(identity);
+            this.identity = Output.ofNullable(identity);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder networkACLs(@Nullable Input<WebPubSubNetworkACLsArgs> networkACLs) {
+        public Builder networkACLs(@Nullable Output<WebPubSubNetworkACLsArgs> networkACLs) {
             this.networkACLs = networkACLs;
             return this;
         }
 
         public Builder networkACLs(@Nullable WebPubSubNetworkACLsArgs networkACLs) {
-            this.networkACLs = Input.ofNullable(networkACLs);
+            this.networkACLs = Output.ofNullable(networkACLs);
             return this;
         }
 
-        public Builder publicNetworkAccess(@Nullable Input<String> publicNetworkAccess) {
+        public Builder publicNetworkAccess(@Nullable Output<String> publicNetworkAccess) {
             this.publicNetworkAccess = publicNetworkAccess;
             return this;
         }
 
         public Builder publicNetworkAccess(@Nullable String publicNetworkAccess) {
-            this.publicNetworkAccess = Input.ofNullable(publicNetworkAccess);
+            this.publicNetworkAccess = Output.ofNullable(publicNetworkAccess);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder resourceName(@Nullable Input<String> resourceName) {
+        public Builder resourceName(@Nullable Output<String> resourceName) {
             this.resourceName = resourceName;
             return this;
         }
 
         public Builder resourceName(@Nullable String resourceName) {
-            this.resourceName = Input.ofNullable(resourceName);
+            this.resourceName = Output.ofNullable(resourceName);
             return this;
         }
 
-        public Builder sku(@Nullable Input<ResourceSkuArgs> sku) {
+        public Builder sku(@Nullable Output<ResourceSkuArgs> sku) {
             this.sku = sku;
             return this;
         }
 
         public Builder sku(@Nullable ResourceSkuArgs sku) {
-            this.sku = Input.ofNullable(sku);
+            this.sku = Output.ofNullable(sku);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder tls(@Nullable Input<WebPubSubTlsSettingsArgs> tls) {
+        public Builder tls(@Nullable Output<WebPubSubTlsSettingsArgs> tls) {
             this.tls = tls;
             return this;
         }
 
         public Builder tls(@Nullable WebPubSubTlsSettingsArgs tls) {
-            this.tls = Input.ofNullable(tls);
+            this.tls = Output.ofNullable(tls);
             return this;
         }
         public WebPubSubArgs build() {

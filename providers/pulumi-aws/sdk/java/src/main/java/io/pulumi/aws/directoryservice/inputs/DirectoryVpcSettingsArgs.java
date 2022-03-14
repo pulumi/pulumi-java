@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.directoryservice.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -16,10 +16,10 @@ public final class DirectoryVpcSettingsArgs extends io.pulumi.resources.Resource
     public static final DirectoryVpcSettingsArgs Empty = new DirectoryVpcSettingsArgs();
 
     @InputImport(name="availabilityZones")
-      private final @Nullable Input<List<String>> availabilityZones;
+      private final @Nullable Output<List<String>> availabilityZones;
 
-    public Input<List<String>> getAvailabilityZones() {
-        return this.availabilityZones == null ? Input.empty() : this.availabilityZones;
+    public Output<List<String>> getAvailabilityZones() {
+        return this.availabilityZones == null ? Output.empty() : this.availabilityZones;
     }
 
     /**
@@ -27,9 +27,9 @@ public final class DirectoryVpcSettingsArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="subnetIds", required=true)
-      private final Input<List<String>> subnetIds;
+      private final Output<List<String>> subnetIds;
 
-    public Input<List<String>> getSubnetIds() {
+    public Output<List<String>> getSubnetIds() {
         return this.subnetIds;
     }
 
@@ -38,25 +38,25 @@ public final class DirectoryVpcSettingsArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="vpcId", required=true)
-      private final Input<String> vpcId;
+      private final Output<String> vpcId;
 
-    public Input<String> getVpcId() {
+    public Output<String> getVpcId() {
         return this.vpcId;
     }
 
     public DirectoryVpcSettingsArgs(
-        @Nullable Input<List<String>> availabilityZones,
-        Input<List<String>> subnetIds,
-        Input<String> vpcId) {
+        @Nullable Output<List<String>> availabilityZones,
+        Output<List<String>> subnetIds,
+        Output<String> vpcId) {
         this.availabilityZones = availabilityZones;
         this.subnetIds = Objects.requireNonNull(subnetIds, "expected parameter 'subnetIds' to be non-null");
         this.vpcId = Objects.requireNonNull(vpcId, "expected parameter 'vpcId' to be non-null");
     }
 
     private DirectoryVpcSettingsArgs() {
-        this.availabilityZones = Input.empty();
-        this.subnetIds = Input.empty();
-        this.vpcId = Input.empty();
+        this.availabilityZones = Output.empty();
+        this.subnetIds = Output.empty();
+        this.vpcId = Output.empty();
     }
 
     public static Builder builder() {
@@ -68,9 +68,9 @@ public final class DirectoryVpcSettingsArgs extends io.pulumi.resources.Resource
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> availabilityZones;
-        private Input<List<String>> subnetIds;
-        private Input<String> vpcId;
+        private @Nullable Output<List<String>> availabilityZones;
+        private Output<List<String>> subnetIds;
+        private Output<String> vpcId;
 
         public Builder() {
     	      // Empty
@@ -83,33 +83,33 @@ public final class DirectoryVpcSettingsArgs extends io.pulumi.resources.Resource
     	      this.vpcId = defaults.vpcId;
         }
 
-        public Builder availabilityZones(@Nullable Input<List<String>> availabilityZones) {
+        public Builder availabilityZones(@Nullable Output<List<String>> availabilityZones) {
             this.availabilityZones = availabilityZones;
             return this;
         }
 
         public Builder availabilityZones(@Nullable List<String> availabilityZones) {
-            this.availabilityZones = Input.ofNullable(availabilityZones);
+            this.availabilityZones = Output.ofNullable(availabilityZones);
             return this;
         }
 
-        public Builder subnetIds(Input<List<String>> subnetIds) {
+        public Builder subnetIds(Output<List<String>> subnetIds) {
             this.subnetIds = Objects.requireNonNull(subnetIds);
             return this;
         }
 
         public Builder subnetIds(List<String> subnetIds) {
-            this.subnetIds = Input.of(Objects.requireNonNull(subnetIds));
+            this.subnetIds = Output.of(Objects.requireNonNull(subnetIds));
             return this;
         }
 
-        public Builder vpcId(Input<String> vpcId) {
+        public Builder vpcId(Output<String> vpcId) {
             this.vpcId = Objects.requireNonNull(vpcId);
             return this;
         }
 
         public Builder vpcId(String vpcId) {
-            this.vpcId = Input.of(Objects.requireNonNull(vpcId));
+            this.vpcId = Output.of(Objects.requireNonNull(vpcId));
             return this;
         }
         public DirectoryVpcSettingsArgs build() {

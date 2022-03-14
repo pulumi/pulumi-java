@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.iotevents.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class DetectorModelAssetPropertyTimestampArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="offsetInNanos")
-      private final @Nullable Input<String> offsetInNanos;
+      private final @Nullable Output<String> offsetInNanos;
 
-    public Input<String> getOffsetInNanos() {
-        return this.offsetInNanos == null ? Input.empty() : this.offsetInNanos;
+    public Output<String> getOffsetInNanos() {
+        return this.offsetInNanos == null ? Output.empty() : this.offsetInNanos;
     }
 
     /**
@@ -34,22 +34,22 @@ public final class DetectorModelAssetPropertyTimestampArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="timeInSeconds", required=true)
-      private final Input<String> timeInSeconds;
+      private final Output<String> timeInSeconds;
 
-    public Input<String> getTimeInSeconds() {
+    public Output<String> getTimeInSeconds() {
         return this.timeInSeconds;
     }
 
     public DetectorModelAssetPropertyTimestampArgs(
-        @Nullable Input<String> offsetInNanos,
-        Input<String> timeInSeconds) {
+        @Nullable Output<String> offsetInNanos,
+        Output<String> timeInSeconds) {
         this.offsetInNanos = offsetInNanos;
         this.timeInSeconds = Objects.requireNonNull(timeInSeconds, "expected parameter 'timeInSeconds' to be non-null");
     }
 
     private DetectorModelAssetPropertyTimestampArgs() {
-        this.offsetInNanos = Input.empty();
-        this.timeInSeconds = Input.empty();
+        this.offsetInNanos = Output.empty();
+        this.timeInSeconds = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class DetectorModelAssetPropertyTimestampArgs extends io.pulumi.res
     }
 
     public static final class Builder {
-        private @Nullable Input<String> offsetInNanos;
-        private Input<String> timeInSeconds;
+        private @Nullable Output<String> offsetInNanos;
+        private Output<String> timeInSeconds;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class DetectorModelAssetPropertyTimestampArgs extends io.pulumi.res
     	      this.timeInSeconds = defaults.timeInSeconds;
         }
 
-        public Builder offsetInNanos(@Nullable Input<String> offsetInNanos) {
+        public Builder offsetInNanos(@Nullable Output<String> offsetInNanos) {
             this.offsetInNanos = offsetInNanos;
             return this;
         }
 
         public Builder offsetInNanos(@Nullable String offsetInNanos) {
-            this.offsetInNanos = Input.ofNullable(offsetInNanos);
+            this.offsetInNanos = Output.ofNullable(offsetInNanos);
             return this;
         }
 
-        public Builder timeInSeconds(Input<String> timeInSeconds) {
+        public Builder timeInSeconds(Output<String> timeInSeconds) {
             this.timeInSeconds = Objects.requireNonNull(timeInSeconds);
             return this;
         }
 
         public Builder timeInSeconds(String timeInSeconds) {
-            this.timeInSeconds = Input.of(Objects.requireNonNull(timeInSeconds));
+            this.timeInSeconds = Output.of(Objects.requireNonNull(timeInSeconds));
             return this;
         }
         public DetectorModelAssetPropertyTimestampArgs build() {

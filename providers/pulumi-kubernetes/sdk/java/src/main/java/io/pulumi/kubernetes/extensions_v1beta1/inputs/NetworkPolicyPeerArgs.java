@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.extensions_v1beta1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.kubernetes.extensions_v1beta1.inputs.IPBlockArgs;
 import io.pulumi.kubernetes.meta_v1.inputs.LabelSelectorArgs;
@@ -24,10 +24,10 @@ public final class NetworkPolicyPeerArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="ipBlock")
-      private final @Nullable Input<IPBlockArgs> ipBlock;
+      private final @Nullable Output<IPBlockArgs> ipBlock;
 
-    public Input<IPBlockArgs> getIpBlock() {
-        return this.ipBlock == null ? Input.empty() : this.ipBlock;
+    public Output<IPBlockArgs> getIpBlock() {
+        return this.ipBlock == null ? Output.empty() : this.ipBlock;
     }
 
     /**
@@ -37,10 +37,10 @@ public final class NetworkPolicyPeerArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="namespaceSelector")
-      private final @Nullable Input<LabelSelectorArgs> namespaceSelector;
+      private final @Nullable Output<LabelSelectorArgs> namespaceSelector;
 
-    public Input<LabelSelectorArgs> getNamespaceSelector() {
-        return this.namespaceSelector == null ? Input.empty() : this.namespaceSelector;
+    public Output<LabelSelectorArgs> getNamespaceSelector() {
+        return this.namespaceSelector == null ? Output.empty() : this.namespaceSelector;
     }
 
     /**
@@ -50,25 +50,25 @@ public final class NetworkPolicyPeerArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="podSelector")
-      private final @Nullable Input<LabelSelectorArgs> podSelector;
+      private final @Nullable Output<LabelSelectorArgs> podSelector;
 
-    public Input<LabelSelectorArgs> getPodSelector() {
-        return this.podSelector == null ? Input.empty() : this.podSelector;
+    public Output<LabelSelectorArgs> getPodSelector() {
+        return this.podSelector == null ? Output.empty() : this.podSelector;
     }
 
     public NetworkPolicyPeerArgs(
-        @Nullable Input<IPBlockArgs> ipBlock,
-        @Nullable Input<LabelSelectorArgs> namespaceSelector,
-        @Nullable Input<LabelSelectorArgs> podSelector) {
+        @Nullable Output<IPBlockArgs> ipBlock,
+        @Nullable Output<LabelSelectorArgs> namespaceSelector,
+        @Nullable Output<LabelSelectorArgs> podSelector) {
         this.ipBlock = ipBlock;
         this.namespaceSelector = namespaceSelector;
         this.podSelector = podSelector;
     }
 
     private NetworkPolicyPeerArgs() {
-        this.ipBlock = Input.empty();
-        this.namespaceSelector = Input.empty();
-        this.podSelector = Input.empty();
+        this.ipBlock = Output.empty();
+        this.namespaceSelector = Output.empty();
+        this.podSelector = Output.empty();
     }
 
     public static Builder builder() {
@@ -80,9 +80,9 @@ public final class NetworkPolicyPeerArgs extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private @Nullable Input<IPBlockArgs> ipBlock;
-        private @Nullable Input<LabelSelectorArgs> namespaceSelector;
-        private @Nullable Input<LabelSelectorArgs> podSelector;
+        private @Nullable Output<IPBlockArgs> ipBlock;
+        private @Nullable Output<LabelSelectorArgs> namespaceSelector;
+        private @Nullable Output<LabelSelectorArgs> podSelector;
 
         public Builder() {
     	      // Empty
@@ -95,33 +95,33 @@ public final class NetworkPolicyPeerArgs extends io.pulumi.resources.ResourceArg
     	      this.podSelector = defaults.podSelector;
         }
 
-        public Builder ipBlock(@Nullable Input<IPBlockArgs> ipBlock) {
+        public Builder ipBlock(@Nullable Output<IPBlockArgs> ipBlock) {
             this.ipBlock = ipBlock;
             return this;
         }
 
         public Builder ipBlock(@Nullable IPBlockArgs ipBlock) {
-            this.ipBlock = Input.ofNullable(ipBlock);
+            this.ipBlock = Output.ofNullable(ipBlock);
             return this;
         }
 
-        public Builder namespaceSelector(@Nullable Input<LabelSelectorArgs> namespaceSelector) {
+        public Builder namespaceSelector(@Nullable Output<LabelSelectorArgs> namespaceSelector) {
             this.namespaceSelector = namespaceSelector;
             return this;
         }
 
         public Builder namespaceSelector(@Nullable LabelSelectorArgs namespaceSelector) {
-            this.namespaceSelector = Input.ofNullable(namespaceSelector);
+            this.namespaceSelector = Output.ofNullable(namespaceSelector);
             return this;
         }
 
-        public Builder podSelector(@Nullable Input<LabelSelectorArgs> podSelector) {
+        public Builder podSelector(@Nullable Output<LabelSelectorArgs> podSelector) {
             this.podSelector = podSelector;
             return this;
         }
 
         public Builder podSelector(@Nullable LabelSelectorArgs podSelector) {
-            this.podSelector = Input.ofNullable(podSelector);
+            this.podSelector = Output.ofNullable(podSelector);
             return this;
         }
         public NetworkPolicyPeerArgs build() {

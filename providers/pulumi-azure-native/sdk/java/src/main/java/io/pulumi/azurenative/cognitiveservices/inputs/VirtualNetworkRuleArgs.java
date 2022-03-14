@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.cognitiveservices.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -24,9 +24,9 @@ public final class VirtualNetworkRuleArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="id", required=true)
-      private final Input<String> id;
+      private final Output<String> id;
 
-    public Input<String> getId() {
+    public Output<String> getId() {
         return this.id;
     }
 
@@ -35,10 +35,10 @@ public final class VirtualNetworkRuleArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="ignoreMissingVnetServiceEndpoint")
-      private final @Nullable Input<Boolean> ignoreMissingVnetServiceEndpoint;
+      private final @Nullable Output<Boolean> ignoreMissingVnetServiceEndpoint;
 
-    public Input<Boolean> getIgnoreMissingVnetServiceEndpoint() {
-        return this.ignoreMissingVnetServiceEndpoint == null ? Input.empty() : this.ignoreMissingVnetServiceEndpoint;
+    public Output<Boolean> getIgnoreMissingVnetServiceEndpoint() {
+        return this.ignoreMissingVnetServiceEndpoint == null ? Output.empty() : this.ignoreMissingVnetServiceEndpoint;
     }
 
     /**
@@ -46,25 +46,25 @@ public final class VirtualNetworkRuleArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="state")
-      private final @Nullable Input<String> state;
+      private final @Nullable Output<String> state;
 
-    public Input<String> getState() {
-        return this.state == null ? Input.empty() : this.state;
+    public Output<String> getState() {
+        return this.state == null ? Output.empty() : this.state;
     }
 
     public VirtualNetworkRuleArgs(
-        Input<String> id,
-        @Nullable Input<Boolean> ignoreMissingVnetServiceEndpoint,
-        @Nullable Input<String> state) {
+        Output<String> id,
+        @Nullable Output<Boolean> ignoreMissingVnetServiceEndpoint,
+        @Nullable Output<String> state) {
         this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
         this.ignoreMissingVnetServiceEndpoint = ignoreMissingVnetServiceEndpoint;
         this.state = state;
     }
 
     private VirtualNetworkRuleArgs() {
-        this.id = Input.empty();
-        this.ignoreMissingVnetServiceEndpoint = Input.empty();
-        this.state = Input.empty();
+        this.id = Output.empty();
+        this.ignoreMissingVnetServiceEndpoint = Output.empty();
+        this.state = Output.empty();
     }
 
     public static Builder builder() {
@@ -76,9 +76,9 @@ public final class VirtualNetworkRuleArgs extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private Input<String> id;
-        private @Nullable Input<Boolean> ignoreMissingVnetServiceEndpoint;
-        private @Nullable Input<String> state;
+        private Output<String> id;
+        private @Nullable Output<Boolean> ignoreMissingVnetServiceEndpoint;
+        private @Nullable Output<String> state;
 
         public Builder() {
     	      // Empty
@@ -91,33 +91,33 @@ public final class VirtualNetworkRuleArgs extends io.pulumi.resources.ResourceAr
     	      this.state = defaults.state;
         }
 
-        public Builder id(Input<String> id) {
+        public Builder id(Output<String> id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
         public Builder id(String id) {
-            this.id = Input.of(Objects.requireNonNull(id));
+            this.id = Output.of(Objects.requireNonNull(id));
             return this;
         }
 
-        public Builder ignoreMissingVnetServiceEndpoint(@Nullable Input<Boolean> ignoreMissingVnetServiceEndpoint) {
+        public Builder ignoreMissingVnetServiceEndpoint(@Nullable Output<Boolean> ignoreMissingVnetServiceEndpoint) {
             this.ignoreMissingVnetServiceEndpoint = ignoreMissingVnetServiceEndpoint;
             return this;
         }
 
         public Builder ignoreMissingVnetServiceEndpoint(@Nullable Boolean ignoreMissingVnetServiceEndpoint) {
-            this.ignoreMissingVnetServiceEndpoint = Input.ofNullable(ignoreMissingVnetServiceEndpoint);
+            this.ignoreMissingVnetServiceEndpoint = Output.ofNullable(ignoreMissingVnetServiceEndpoint);
             return this;
         }
 
-        public Builder state(@Nullable Input<String> state) {
+        public Builder state(@Nullable Output<String> state) {
             this.state = state;
             return this;
         }
 
         public Builder state(@Nullable String state) {
-            this.state = Input.ofNullable(state);
+            this.state = Output.ofNullable(state);
             return this;
         }
         public VirtualNetworkRuleArgs build() {

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.apimanagement.inputs;
 
 import io.pulumi.azurenative.apimanagement.inputs.HttpMessageDiagnosticArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,10 +23,10 @@ public final class PipelineDiagnosticSettingsArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="request")
-      private final @Nullable Input<HttpMessageDiagnosticArgs> request;
+      private final @Nullable Output<HttpMessageDiagnosticArgs> request;
 
-    public Input<HttpMessageDiagnosticArgs> getRequest() {
-        return this.request == null ? Input.empty() : this.request;
+    public Output<HttpMessageDiagnosticArgs> getRequest() {
+        return this.request == null ? Output.empty() : this.request;
     }
 
     /**
@@ -34,22 +34,22 @@ public final class PipelineDiagnosticSettingsArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="response")
-      private final @Nullable Input<HttpMessageDiagnosticArgs> response;
+      private final @Nullable Output<HttpMessageDiagnosticArgs> response;
 
-    public Input<HttpMessageDiagnosticArgs> getResponse() {
-        return this.response == null ? Input.empty() : this.response;
+    public Output<HttpMessageDiagnosticArgs> getResponse() {
+        return this.response == null ? Output.empty() : this.response;
     }
 
     public PipelineDiagnosticSettingsArgs(
-        @Nullable Input<HttpMessageDiagnosticArgs> request,
-        @Nullable Input<HttpMessageDiagnosticArgs> response) {
+        @Nullable Output<HttpMessageDiagnosticArgs> request,
+        @Nullable Output<HttpMessageDiagnosticArgs> response) {
         this.request = request;
         this.response = response;
     }
 
     private PipelineDiagnosticSettingsArgs() {
-        this.request = Input.empty();
-        this.response = Input.empty();
+        this.request = Output.empty();
+        this.response = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class PipelineDiagnosticSettingsArgs extends io.pulumi.resources.Re
     }
 
     public static final class Builder {
-        private @Nullable Input<HttpMessageDiagnosticArgs> request;
-        private @Nullable Input<HttpMessageDiagnosticArgs> response;
+        private @Nullable Output<HttpMessageDiagnosticArgs> request;
+        private @Nullable Output<HttpMessageDiagnosticArgs> response;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class PipelineDiagnosticSettingsArgs extends io.pulumi.resources.Re
     	      this.response = defaults.response;
         }
 
-        public Builder request(@Nullable Input<HttpMessageDiagnosticArgs> request) {
+        public Builder request(@Nullable Output<HttpMessageDiagnosticArgs> request) {
             this.request = request;
             return this;
         }
 
         public Builder request(@Nullable HttpMessageDiagnosticArgs request) {
-            this.request = Input.ofNullable(request);
+            this.request = Output.ofNullable(request);
             return this;
         }
 
-        public Builder response(@Nullable Input<HttpMessageDiagnosticArgs> response) {
+        public Builder response(@Nullable Output<HttpMessageDiagnosticArgs> response) {
             this.response = response;
             return this;
         }
 
         public Builder response(@Nullable HttpMessageDiagnosticArgs response) {
-            this.response = Input.ofNullable(response);
+            this.response = Output.ofNullable(response);
             return this;
         }
         public PipelineDiagnosticSettingsArgs build() {

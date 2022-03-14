@@ -7,7 +7,6 @@ import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.labservices.LabArgs;
 import io.pulumi.azurenative.labservices.outputs.LatestOperationResultResponse;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -280,18 +279,18 @@ public class Lab extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Lab(String name, LabArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:labservices:Lab", name, args == null ? LabArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("azure-native:labservices:Lab", name, args == null ? LabArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private Lab(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private Lab(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:labservices:Lab", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:labservices/v20181015:Lab").build())
+                Output.of(Alias.builder().setType("azure-native:labservices/v20181015:Lab").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -305,7 +304,7 @@ public class Lab extends io.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static Lab get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static Lab get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Lab(name, id, options);
     }
 }

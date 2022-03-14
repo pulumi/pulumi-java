@@ -4,7 +4,7 @@
 package io.pulumi.aws.route53recoverycontrol;
 
 import io.pulumi.aws.route53recoverycontrol.inputs.SafetyRuleRuleConfigArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -22,10 +22,10 @@ public final class SafetyRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="assertedControls")
-      private final @Nullable Input<List<String>> assertedControls;
+      private final @Nullable Output<List<String>> assertedControls;
 
-    public Input<List<String>> getAssertedControls() {
-        return this.assertedControls == null ? Input.empty() : this.assertedControls;
+    public Output<List<String>> getAssertedControls() {
+        return this.assertedControls == null ? Output.empty() : this.assertedControls;
     }
 
     /**
@@ -33,9 +33,9 @@ public final class SafetyRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="controlPanelArn", required=true)
-      private final Input<String> controlPanelArn;
+      private final Output<String> controlPanelArn;
 
-    public Input<String> getControlPanelArn() {
+    public Output<String> getControlPanelArn() {
         return this.controlPanelArn;
     }
 
@@ -44,10 +44,10 @@ public final class SafetyRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="gatingControls")
-      private final @Nullable Input<List<String>> gatingControls;
+      private final @Nullable Output<List<String>> gatingControls;
 
-    public Input<List<String>> getGatingControls() {
-        return this.gatingControls == null ? Input.empty() : this.gatingControls;
+    public Output<List<String>> getGatingControls() {
+        return this.gatingControls == null ? Output.empty() : this.gatingControls;
     }
 
     /**
@@ -55,10 +55,10 @@ public final class SafetyRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -66,9 +66,9 @@ public final class SafetyRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ruleConfig", required=true)
-      private final Input<SafetyRuleRuleConfigArgs> ruleConfig;
+      private final Output<SafetyRuleRuleConfigArgs> ruleConfig;
 
-    public Input<SafetyRuleRuleConfigArgs> getRuleConfig() {
+    public Output<SafetyRuleRuleConfigArgs> getRuleConfig() {
         return this.ruleConfig;
     }
 
@@ -77,10 +77,10 @@ public final class SafetyRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="targetControls")
-      private final @Nullable Input<List<String>> targetControls;
+      private final @Nullable Output<List<String>> targetControls;
 
-    public Input<List<String>> getTargetControls() {
-        return this.targetControls == null ? Input.empty() : this.targetControls;
+    public Output<List<String>> getTargetControls() {
+        return this.targetControls == null ? Output.empty() : this.targetControls;
     }
 
     /**
@@ -88,20 +88,20 @@ public final class SafetyRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="waitPeriodMs", required=true)
-      private final Input<Integer> waitPeriodMs;
+      private final Output<Integer> waitPeriodMs;
 
-    public Input<Integer> getWaitPeriodMs() {
+    public Output<Integer> getWaitPeriodMs() {
         return this.waitPeriodMs;
     }
 
     public SafetyRuleArgs(
-        @Nullable Input<List<String>> assertedControls,
-        Input<String> controlPanelArn,
-        @Nullable Input<List<String>> gatingControls,
-        @Nullable Input<String> name,
-        Input<SafetyRuleRuleConfigArgs> ruleConfig,
-        @Nullable Input<List<String>> targetControls,
-        Input<Integer> waitPeriodMs) {
+        @Nullable Output<List<String>> assertedControls,
+        Output<String> controlPanelArn,
+        @Nullable Output<List<String>> gatingControls,
+        @Nullable Output<String> name,
+        Output<SafetyRuleRuleConfigArgs> ruleConfig,
+        @Nullable Output<List<String>> targetControls,
+        Output<Integer> waitPeriodMs) {
         this.assertedControls = assertedControls;
         this.controlPanelArn = Objects.requireNonNull(controlPanelArn, "expected parameter 'controlPanelArn' to be non-null");
         this.gatingControls = gatingControls;
@@ -112,13 +112,13 @@ public final class SafetyRuleArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private SafetyRuleArgs() {
-        this.assertedControls = Input.empty();
-        this.controlPanelArn = Input.empty();
-        this.gatingControls = Input.empty();
-        this.name = Input.empty();
-        this.ruleConfig = Input.empty();
-        this.targetControls = Input.empty();
-        this.waitPeriodMs = Input.empty();
+        this.assertedControls = Output.empty();
+        this.controlPanelArn = Output.empty();
+        this.gatingControls = Output.empty();
+        this.name = Output.empty();
+        this.ruleConfig = Output.empty();
+        this.targetControls = Output.empty();
+        this.waitPeriodMs = Output.empty();
     }
 
     public static Builder builder() {
@@ -130,13 +130,13 @@ public final class SafetyRuleArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> assertedControls;
-        private Input<String> controlPanelArn;
-        private @Nullable Input<List<String>> gatingControls;
-        private @Nullable Input<String> name;
-        private Input<SafetyRuleRuleConfigArgs> ruleConfig;
-        private @Nullable Input<List<String>> targetControls;
-        private Input<Integer> waitPeriodMs;
+        private @Nullable Output<List<String>> assertedControls;
+        private Output<String> controlPanelArn;
+        private @Nullable Output<List<String>> gatingControls;
+        private @Nullable Output<String> name;
+        private Output<SafetyRuleRuleConfigArgs> ruleConfig;
+        private @Nullable Output<List<String>> targetControls;
+        private Output<Integer> waitPeriodMs;
 
         public Builder() {
     	      // Empty
@@ -153,73 +153,73 @@ public final class SafetyRuleArgs extends io.pulumi.resources.ResourceArgs {
     	      this.waitPeriodMs = defaults.waitPeriodMs;
         }
 
-        public Builder assertedControls(@Nullable Input<List<String>> assertedControls) {
+        public Builder assertedControls(@Nullable Output<List<String>> assertedControls) {
             this.assertedControls = assertedControls;
             return this;
         }
 
         public Builder assertedControls(@Nullable List<String> assertedControls) {
-            this.assertedControls = Input.ofNullable(assertedControls);
+            this.assertedControls = Output.ofNullable(assertedControls);
             return this;
         }
 
-        public Builder controlPanelArn(Input<String> controlPanelArn) {
+        public Builder controlPanelArn(Output<String> controlPanelArn) {
             this.controlPanelArn = Objects.requireNonNull(controlPanelArn);
             return this;
         }
 
         public Builder controlPanelArn(String controlPanelArn) {
-            this.controlPanelArn = Input.of(Objects.requireNonNull(controlPanelArn));
+            this.controlPanelArn = Output.of(Objects.requireNonNull(controlPanelArn));
             return this;
         }
 
-        public Builder gatingControls(@Nullable Input<List<String>> gatingControls) {
+        public Builder gatingControls(@Nullable Output<List<String>> gatingControls) {
             this.gatingControls = gatingControls;
             return this;
         }
 
         public Builder gatingControls(@Nullable List<String> gatingControls) {
-            this.gatingControls = Input.ofNullable(gatingControls);
+            this.gatingControls = Output.ofNullable(gatingControls);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder ruleConfig(Input<SafetyRuleRuleConfigArgs> ruleConfig) {
+        public Builder ruleConfig(Output<SafetyRuleRuleConfigArgs> ruleConfig) {
             this.ruleConfig = Objects.requireNonNull(ruleConfig);
             return this;
         }
 
         public Builder ruleConfig(SafetyRuleRuleConfigArgs ruleConfig) {
-            this.ruleConfig = Input.of(Objects.requireNonNull(ruleConfig));
+            this.ruleConfig = Output.of(Objects.requireNonNull(ruleConfig));
             return this;
         }
 
-        public Builder targetControls(@Nullable Input<List<String>> targetControls) {
+        public Builder targetControls(@Nullable Output<List<String>> targetControls) {
             this.targetControls = targetControls;
             return this;
         }
 
         public Builder targetControls(@Nullable List<String> targetControls) {
-            this.targetControls = Input.ofNullable(targetControls);
+            this.targetControls = Output.ofNullable(targetControls);
             return this;
         }
 
-        public Builder waitPeriodMs(Input<Integer> waitPeriodMs) {
+        public Builder waitPeriodMs(Output<Integer> waitPeriodMs) {
             this.waitPeriodMs = Objects.requireNonNull(waitPeriodMs);
             return this;
         }
 
         public Builder waitPeriodMs(Integer waitPeriodMs) {
-            this.waitPeriodMs = Input.of(Objects.requireNonNull(waitPeriodMs));
+            this.waitPeriodMs = Output.of(Objects.requireNonNull(waitPeriodMs));
             return this;
         }
         public SafetyRuleArgs build() {

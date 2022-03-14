@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.codedeploy.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -19,9 +19,9 @@ public final class DeploymentGroupTriggerConfigurationArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="triggerEvents", required=true)
-      private final Input<List<String>> triggerEvents;
+      private final Output<List<String>> triggerEvents;
 
-    public Input<List<String>> getTriggerEvents() {
+    public Output<List<String>> getTriggerEvents() {
         return this.triggerEvents;
     }
 
@@ -30,9 +30,9 @@ public final class DeploymentGroupTriggerConfigurationArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="triggerName", required=true)
-      private final Input<String> triggerName;
+      private final Output<String> triggerName;
 
-    public Input<String> getTriggerName() {
+    public Output<String> getTriggerName() {
         return this.triggerName;
     }
 
@@ -41,25 +41,25 @@ public final class DeploymentGroupTriggerConfigurationArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="triggerTargetArn", required=true)
-      private final Input<String> triggerTargetArn;
+      private final Output<String> triggerTargetArn;
 
-    public Input<String> getTriggerTargetArn() {
+    public Output<String> getTriggerTargetArn() {
         return this.triggerTargetArn;
     }
 
     public DeploymentGroupTriggerConfigurationArgs(
-        Input<List<String>> triggerEvents,
-        Input<String> triggerName,
-        Input<String> triggerTargetArn) {
+        Output<List<String>> triggerEvents,
+        Output<String> triggerName,
+        Output<String> triggerTargetArn) {
         this.triggerEvents = Objects.requireNonNull(triggerEvents, "expected parameter 'triggerEvents' to be non-null");
         this.triggerName = Objects.requireNonNull(triggerName, "expected parameter 'triggerName' to be non-null");
         this.triggerTargetArn = Objects.requireNonNull(triggerTargetArn, "expected parameter 'triggerTargetArn' to be non-null");
     }
 
     private DeploymentGroupTriggerConfigurationArgs() {
-        this.triggerEvents = Input.empty();
-        this.triggerName = Input.empty();
-        this.triggerTargetArn = Input.empty();
+        this.triggerEvents = Output.empty();
+        this.triggerName = Output.empty();
+        this.triggerTargetArn = Output.empty();
     }
 
     public static Builder builder() {
@@ -71,9 +71,9 @@ public final class DeploymentGroupTriggerConfigurationArgs extends io.pulumi.res
     }
 
     public static final class Builder {
-        private Input<List<String>> triggerEvents;
-        private Input<String> triggerName;
-        private Input<String> triggerTargetArn;
+        private Output<List<String>> triggerEvents;
+        private Output<String> triggerName;
+        private Output<String> triggerTargetArn;
 
         public Builder() {
     	      // Empty
@@ -86,33 +86,33 @@ public final class DeploymentGroupTriggerConfigurationArgs extends io.pulumi.res
     	      this.triggerTargetArn = defaults.triggerTargetArn;
         }
 
-        public Builder triggerEvents(Input<List<String>> triggerEvents) {
+        public Builder triggerEvents(Output<List<String>> triggerEvents) {
             this.triggerEvents = Objects.requireNonNull(triggerEvents);
             return this;
         }
 
         public Builder triggerEvents(List<String> triggerEvents) {
-            this.triggerEvents = Input.of(Objects.requireNonNull(triggerEvents));
+            this.triggerEvents = Output.of(Objects.requireNonNull(triggerEvents));
             return this;
         }
 
-        public Builder triggerName(Input<String> triggerName) {
+        public Builder triggerName(Output<String> triggerName) {
             this.triggerName = Objects.requireNonNull(triggerName);
             return this;
         }
 
         public Builder triggerName(String triggerName) {
-            this.triggerName = Input.of(Objects.requireNonNull(triggerName));
+            this.triggerName = Output.of(Objects.requireNonNull(triggerName));
             return this;
         }
 
-        public Builder triggerTargetArn(Input<String> triggerTargetArn) {
+        public Builder triggerTargetArn(Output<String> triggerTargetArn) {
             this.triggerTargetArn = Objects.requireNonNull(triggerTargetArn);
             return this;
         }
 
         public Builder triggerTargetArn(String triggerTargetArn) {
-            this.triggerTargetArn = Input.of(Objects.requireNonNull(triggerTargetArn));
+            this.triggerTargetArn = Output.of(Objects.requireNonNull(triggerTargetArn));
             return this;
         }
         public DeploymentGroupTriggerConfigurationArgs build() {

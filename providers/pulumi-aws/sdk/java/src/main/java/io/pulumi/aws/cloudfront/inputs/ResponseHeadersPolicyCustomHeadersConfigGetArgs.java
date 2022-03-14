@@ -4,7 +4,7 @@
 package io.pulumi.aws.cloudfront.inputs;
 
 import io.pulumi.aws.cloudfront.inputs.ResponseHeadersPolicyCustomHeadersConfigItemGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
@@ -16,18 +16,18 @@ public final class ResponseHeadersPolicyCustomHeadersConfigGetArgs extends io.pu
     public static final ResponseHeadersPolicyCustomHeadersConfigGetArgs Empty = new ResponseHeadersPolicyCustomHeadersConfigGetArgs();
 
     @InputImport(name="items")
-      private final @Nullable Input<List<ResponseHeadersPolicyCustomHeadersConfigItemGetArgs>> items;
+      private final @Nullable Output<List<ResponseHeadersPolicyCustomHeadersConfigItemGetArgs>> items;
 
-    public Input<List<ResponseHeadersPolicyCustomHeadersConfigItemGetArgs>> getItems() {
-        return this.items == null ? Input.empty() : this.items;
+    public Output<List<ResponseHeadersPolicyCustomHeadersConfigItemGetArgs>> getItems() {
+        return this.items == null ? Output.empty() : this.items;
     }
 
-    public ResponseHeadersPolicyCustomHeadersConfigGetArgs(@Nullable Input<List<ResponseHeadersPolicyCustomHeadersConfigItemGetArgs>> items) {
+    public ResponseHeadersPolicyCustomHeadersConfigGetArgs(@Nullable Output<List<ResponseHeadersPolicyCustomHeadersConfigItemGetArgs>> items) {
         this.items = items;
     }
 
     private ResponseHeadersPolicyCustomHeadersConfigGetArgs() {
-        this.items = Input.empty();
+        this.items = Output.empty();
     }
 
     public static Builder builder() {
@@ -39,7 +39,7 @@ public final class ResponseHeadersPolicyCustomHeadersConfigGetArgs extends io.pu
     }
 
     public static final class Builder {
-        private @Nullable Input<List<ResponseHeadersPolicyCustomHeadersConfigItemGetArgs>> items;
+        private @Nullable Output<List<ResponseHeadersPolicyCustomHeadersConfigItemGetArgs>> items;
 
         public Builder() {
     	      // Empty
@@ -50,13 +50,13 @@ public final class ResponseHeadersPolicyCustomHeadersConfigGetArgs extends io.pu
     	      this.items = defaults.items;
         }
 
-        public Builder items(@Nullable Input<List<ResponseHeadersPolicyCustomHeadersConfigItemGetArgs>> items) {
+        public Builder items(@Nullable Output<List<ResponseHeadersPolicyCustomHeadersConfigItemGetArgs>> items) {
             this.items = items;
             return this;
         }
 
         public Builder items(@Nullable List<ResponseHeadersPolicyCustomHeadersConfigItemGetArgs> items) {
-            this.items = Input.ofNullable(items);
+            this.items = Output.ofNullable(items);
             return this;
         }
         public ResponseHeadersPolicyCustomHeadersConfigGetArgs build() {

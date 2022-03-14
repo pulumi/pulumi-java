@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.sns.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class TopicPolicyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arn")
-      private final @Nullable Input<String> arn;
+      private final @Nullable Output<String> arn;
 
-    public Input<String> getArn() {
-        return this.arn == null ? Input.empty() : this.arn;
+    public Output<String> getArn() {
+        return this.arn == null ? Output.empty() : this.arn;
     }
 
     /**
@@ -30,10 +30,10 @@ public final class TopicPolicyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="owner")
-      private final @Nullable Input<String> owner;
+      private final @Nullable Output<String> owner;
 
-    public Input<String> getOwner() {
-        return this.owner == null ? Input.empty() : this.owner;
+    public Output<String> getOwner() {
+        return this.owner == null ? Output.empty() : this.owner;
     }
 
     /**
@@ -41,25 +41,25 @@ public final class TopicPolicyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="policy")
-      private final @Nullable Input<String> policy;
+      private final @Nullable Output<String> policy;
 
-    public Input<String> getPolicy() {
-        return this.policy == null ? Input.empty() : this.policy;
+    public Output<String> getPolicy() {
+        return this.policy == null ? Output.empty() : this.policy;
     }
 
     public TopicPolicyState(
-        @Nullable Input<String> arn,
-        @Nullable Input<String> owner,
-        @Nullable Input<String> policy) {
+        @Nullable Output<String> arn,
+        @Nullable Output<String> owner,
+        @Nullable Output<String> policy) {
         this.arn = arn;
         this.owner = owner;
         this.policy = policy;
     }
 
     private TopicPolicyState() {
-        this.arn = Input.empty();
-        this.owner = Input.empty();
-        this.policy = Input.empty();
+        this.arn = Output.empty();
+        this.owner = Output.empty();
+        this.policy = Output.empty();
     }
 
     public static Builder builder() {
@@ -71,9 +71,9 @@ public final class TopicPolicyState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> arn;
-        private @Nullable Input<String> owner;
-        private @Nullable Input<String> policy;
+        private @Nullable Output<String> arn;
+        private @Nullable Output<String> owner;
+        private @Nullable Output<String> policy;
 
         public Builder() {
     	      // Empty
@@ -86,33 +86,33 @@ public final class TopicPolicyState extends io.pulumi.resources.ResourceArgs {
     	      this.policy = defaults.policy;
         }
 
-        public Builder arn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
 
         public Builder arn(@Nullable String arn) {
-            this.arn = Input.ofNullable(arn);
+            this.arn = Output.ofNullable(arn);
             return this;
         }
 
-        public Builder owner(@Nullable Input<String> owner) {
+        public Builder owner(@Nullable Output<String> owner) {
             this.owner = owner;
             return this;
         }
 
         public Builder owner(@Nullable String owner) {
-            this.owner = Input.ofNullable(owner);
+            this.owner = Output.ofNullable(owner);
             return this;
         }
 
-        public Builder policy(@Nullable Input<String> policy) {
+        public Builder policy(@Nullable Output<String> policy) {
             this.policy = policy;
             return this;
         }
 
         public Builder policy(@Nullable String policy) {
-            this.policy = Input.ofNullable(policy);
+            this.policy = Output.ofNullable(policy);
             return this;
         }
         public TopicPolicyState build() {

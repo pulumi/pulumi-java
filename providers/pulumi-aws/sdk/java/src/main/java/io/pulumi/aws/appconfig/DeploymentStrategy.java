@@ -6,7 +6,6 @@ package io.pulumi.aws.appconfig;
 import io.pulumi.aws.Utilities;
 import io.pulumi.aws.appconfig.DeploymentStrategyArgs;
 import io.pulumi.aws.appconfig.inputs.DeploymentStrategyState;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -211,14 +210,14 @@ public class DeploymentStrategy extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public DeploymentStrategy(String name, DeploymentStrategyArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:appconfig/deploymentStrategy:DeploymentStrategy", name, args == null ? DeploymentStrategyArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws:appconfig/deploymentStrategy:DeploymentStrategy", name, args == null ? DeploymentStrategyArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private DeploymentStrategy(String name, Input<String> id, @Nullable DeploymentStrategyState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private DeploymentStrategy(String name, Output<String> id, @Nullable DeploymentStrategyState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws:appconfig/deploymentStrategy:DeploymentStrategy", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -234,7 +233,7 @@ public class DeploymentStrategy extends io.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static DeploymentStrategy get(String name, Input<String> id, @Nullable DeploymentStrategyState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static DeploymentStrategy get(String name, Output<String> id, @Nullable DeploymentStrategyState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new DeploymentStrategy(name, id, state, options);
     }
 }

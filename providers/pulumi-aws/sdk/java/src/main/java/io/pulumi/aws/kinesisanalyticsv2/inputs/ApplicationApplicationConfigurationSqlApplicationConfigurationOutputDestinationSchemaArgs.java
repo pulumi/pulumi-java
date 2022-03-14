@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.kinesisanalyticsv2.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -18,18 +18,18 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
      * 
      */
     @InputImport(name="recordFormatType", required=true)
-      private final Input<String> recordFormatType;
+      private final Output<String> recordFormatType;
 
-    public Input<String> getRecordFormatType() {
+    public Output<String> getRecordFormatType() {
         return this.recordFormatType;
     }
 
-    public ApplicationApplicationConfigurationSqlApplicationConfigurationOutputDestinationSchemaArgs(Input<String> recordFormatType) {
+    public ApplicationApplicationConfigurationSqlApplicationConfigurationOutputDestinationSchemaArgs(Output<String> recordFormatType) {
         this.recordFormatType = Objects.requireNonNull(recordFormatType, "expected parameter 'recordFormatType' to be non-null");
     }
 
     private ApplicationApplicationConfigurationSqlApplicationConfigurationOutputDestinationSchemaArgs() {
-        this.recordFormatType = Input.empty();
+        this.recordFormatType = Output.empty();
     }
 
     public static Builder builder() {
@@ -41,7 +41,7 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
     }
 
     public static final class Builder {
-        private Input<String> recordFormatType;
+        private Output<String> recordFormatType;
 
         public Builder() {
     	      // Empty
@@ -52,13 +52,13 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
     	      this.recordFormatType = defaults.recordFormatType;
         }
 
-        public Builder recordFormatType(Input<String> recordFormatType) {
+        public Builder recordFormatType(Output<String> recordFormatType) {
             this.recordFormatType = Objects.requireNonNull(recordFormatType);
             return this;
         }
 
         public Builder recordFormatType(String recordFormatType) {
-            this.recordFormatType = Input.of(Objects.requireNonNull(recordFormatType));
+            this.recordFormatType = Output.of(Objects.requireNonNull(recordFormatType));
             return this;
         }
         public ApplicationApplicationConfigurationSqlApplicationConfigurationOutputDestinationSchemaArgs build() {

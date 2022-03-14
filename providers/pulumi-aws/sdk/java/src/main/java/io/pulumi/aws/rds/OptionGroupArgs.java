@@ -4,7 +4,7 @@
 package io.pulumi.aws.rds;
 
 import io.pulumi.aws.rds.inputs.OptionGroupOptionArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -22,9 +22,9 @@ public final class OptionGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="engineName", required=true)
-      private final Input<String> engineName;
+      private final Output<String> engineName;
 
-    public Input<String> getEngineName() {
+    public Output<String> getEngineName() {
         return this.engineName;
     }
 
@@ -33,9 +33,9 @@ public final class OptionGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="majorEngineVersion", required=true)
-      private final Input<String> majorEngineVersion;
+      private final Output<String> majorEngineVersion;
 
-    public Input<String> getMajorEngineVersion() {
+    public Output<String> getMajorEngineVersion() {
         return this.majorEngineVersion;
     }
 
@@ -44,10 +44,10 @@ public final class OptionGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -55,10 +55,10 @@ public final class OptionGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="namePrefix")
-      private final @Nullable Input<String> namePrefix;
+      private final @Nullable Output<String> namePrefix;
 
-    public Input<String> getNamePrefix() {
-        return this.namePrefix == null ? Input.empty() : this.namePrefix;
+    public Output<String> getNamePrefix() {
+        return this.namePrefix == null ? Output.empty() : this.namePrefix;
     }
 
     /**
@@ -66,10 +66,10 @@ public final class OptionGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="optionGroupDescription")
-      private final @Nullable Input<String> optionGroupDescription;
+      private final @Nullable Output<String> optionGroupDescription;
 
-    public Input<String> getOptionGroupDescription() {
-        return this.optionGroupDescription == null ? Input.empty() : this.optionGroupDescription;
+    public Output<String> getOptionGroupDescription() {
+        return this.optionGroupDescription == null ? Output.empty() : this.optionGroupDescription;
     }
 
     /**
@@ -77,10 +77,10 @@ public final class OptionGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="options")
-      private final @Nullable Input<List<OptionGroupOptionArgs>> options;
+      private final @Nullable Output<List<OptionGroupOptionArgs>> options;
 
-    public Input<List<OptionGroupOptionArgs>> getOptions() {
-        return this.options == null ? Input.empty() : this.options;
+    public Output<List<OptionGroupOptionArgs>> getOptions() {
+        return this.options == null ? Output.empty() : this.options;
     }
 
     /**
@@ -88,37 +88,37 @@ public final class OptionGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public OptionGroupArgs(
-        Input<String> engineName,
-        Input<String> majorEngineVersion,
-        @Nullable Input<String> name,
-        @Nullable Input<String> namePrefix,
-        @Nullable Input<String> optionGroupDescription,
-        @Nullable Input<List<OptionGroupOptionArgs>> options,
-        @Nullable Input<Map<String,String>> tags) {
+        Output<String> engineName,
+        Output<String> majorEngineVersion,
+        @Nullable Output<String> name,
+        @Nullable Output<String> namePrefix,
+        @Nullable Output<String> optionGroupDescription,
+        @Nullable Output<List<OptionGroupOptionArgs>> options,
+        @Nullable Output<Map<String,String>> tags) {
         this.engineName = Objects.requireNonNull(engineName, "expected parameter 'engineName' to be non-null");
         this.majorEngineVersion = Objects.requireNonNull(majorEngineVersion, "expected parameter 'majorEngineVersion' to be non-null");
         this.name = name;
         this.namePrefix = namePrefix;
-        this.optionGroupDescription = optionGroupDescription == null ? Input.ofNullable("Managed by Pulumi") : optionGroupDescription;
+        this.optionGroupDescription = optionGroupDescription == null ? Output.ofNullable("Managed by Pulumi") : optionGroupDescription;
         this.options = options;
         this.tags = tags;
     }
 
     private OptionGroupArgs() {
-        this.engineName = Input.empty();
-        this.majorEngineVersion = Input.empty();
-        this.name = Input.empty();
-        this.namePrefix = Input.empty();
-        this.optionGroupDescription = Input.empty();
-        this.options = Input.empty();
-        this.tags = Input.empty();
+        this.engineName = Output.empty();
+        this.majorEngineVersion = Output.empty();
+        this.name = Output.empty();
+        this.namePrefix = Output.empty();
+        this.optionGroupDescription = Output.empty();
+        this.options = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -130,13 +130,13 @@ public final class OptionGroupArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> engineName;
-        private Input<String> majorEngineVersion;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> namePrefix;
-        private @Nullable Input<String> optionGroupDescription;
-        private @Nullable Input<List<OptionGroupOptionArgs>> options;
-        private @Nullable Input<Map<String,String>> tags;
+        private Output<String> engineName;
+        private Output<String> majorEngineVersion;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> namePrefix;
+        private @Nullable Output<String> optionGroupDescription;
+        private @Nullable Output<List<OptionGroupOptionArgs>> options;
+        private @Nullable Output<Map<String,String>> tags;
 
         public Builder() {
     	      // Empty
@@ -153,73 +153,73 @@ public final class OptionGroupArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder engineName(Input<String> engineName) {
+        public Builder engineName(Output<String> engineName) {
             this.engineName = Objects.requireNonNull(engineName);
             return this;
         }
 
         public Builder engineName(String engineName) {
-            this.engineName = Input.of(Objects.requireNonNull(engineName));
+            this.engineName = Output.of(Objects.requireNonNull(engineName));
             return this;
         }
 
-        public Builder majorEngineVersion(Input<String> majorEngineVersion) {
+        public Builder majorEngineVersion(Output<String> majorEngineVersion) {
             this.majorEngineVersion = Objects.requireNonNull(majorEngineVersion);
             return this;
         }
 
         public Builder majorEngineVersion(String majorEngineVersion) {
-            this.majorEngineVersion = Input.of(Objects.requireNonNull(majorEngineVersion));
+            this.majorEngineVersion = Output.of(Objects.requireNonNull(majorEngineVersion));
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder namePrefix(@Nullable Input<String> namePrefix) {
+        public Builder namePrefix(@Nullable Output<String> namePrefix) {
             this.namePrefix = namePrefix;
             return this;
         }
 
         public Builder namePrefix(@Nullable String namePrefix) {
-            this.namePrefix = Input.ofNullable(namePrefix);
+            this.namePrefix = Output.ofNullable(namePrefix);
             return this;
         }
 
-        public Builder optionGroupDescription(@Nullable Input<String> optionGroupDescription) {
+        public Builder optionGroupDescription(@Nullable Output<String> optionGroupDescription) {
             this.optionGroupDescription = optionGroupDescription;
             return this;
         }
 
         public Builder optionGroupDescription(@Nullable String optionGroupDescription) {
-            this.optionGroupDescription = Input.ofNullable(optionGroupDescription);
+            this.optionGroupDescription = Output.ofNullable(optionGroupDescription);
             return this;
         }
 
-        public Builder options(@Nullable Input<List<OptionGroupOptionArgs>> options) {
+        public Builder options(@Nullable Output<List<OptionGroupOptionArgs>> options) {
             this.options = options;
             return this;
         }
 
         public Builder options(@Nullable List<OptionGroupOptionArgs> options) {
-            this.options = Input.ofNullable(options);
+            this.options = Output.ofNullable(options);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public OptionGroupArgs build() {

@@ -5,7 +5,7 @@ package io.pulumi.aws.appmesh.inputs;
 
 import io.pulumi.aws.appmesh.inputs.VirtualNodeSpecListenerTimeoutGrpcIdleArgs;
 import io.pulumi.aws.appmesh.inputs.VirtualNodeSpecListenerTimeoutGrpcPerRequestArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,10 +20,10 @@ public final class VirtualNodeSpecListenerTimeoutGrpcArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="idle")
-      private final @Nullable Input<VirtualNodeSpecListenerTimeoutGrpcIdleArgs> idle;
+      private final @Nullable Output<VirtualNodeSpecListenerTimeoutGrpcIdleArgs> idle;
 
-    public Input<VirtualNodeSpecListenerTimeoutGrpcIdleArgs> getIdle() {
-        return this.idle == null ? Input.empty() : this.idle;
+    public Output<VirtualNodeSpecListenerTimeoutGrpcIdleArgs> getIdle() {
+        return this.idle == null ? Output.empty() : this.idle;
     }
 
     /**
@@ -31,22 +31,22 @@ public final class VirtualNodeSpecListenerTimeoutGrpcArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="perRequest")
-      private final @Nullable Input<VirtualNodeSpecListenerTimeoutGrpcPerRequestArgs> perRequest;
+      private final @Nullable Output<VirtualNodeSpecListenerTimeoutGrpcPerRequestArgs> perRequest;
 
-    public Input<VirtualNodeSpecListenerTimeoutGrpcPerRequestArgs> getPerRequest() {
-        return this.perRequest == null ? Input.empty() : this.perRequest;
+    public Output<VirtualNodeSpecListenerTimeoutGrpcPerRequestArgs> getPerRequest() {
+        return this.perRequest == null ? Output.empty() : this.perRequest;
     }
 
     public VirtualNodeSpecListenerTimeoutGrpcArgs(
-        @Nullable Input<VirtualNodeSpecListenerTimeoutGrpcIdleArgs> idle,
-        @Nullable Input<VirtualNodeSpecListenerTimeoutGrpcPerRequestArgs> perRequest) {
+        @Nullable Output<VirtualNodeSpecListenerTimeoutGrpcIdleArgs> idle,
+        @Nullable Output<VirtualNodeSpecListenerTimeoutGrpcPerRequestArgs> perRequest) {
         this.idle = idle;
         this.perRequest = perRequest;
     }
 
     private VirtualNodeSpecListenerTimeoutGrpcArgs() {
-        this.idle = Input.empty();
-        this.perRequest = Input.empty();
+        this.idle = Output.empty();
+        this.perRequest = Output.empty();
     }
 
     public static Builder builder() {
@@ -58,8 +58,8 @@ public final class VirtualNodeSpecListenerTimeoutGrpcArgs extends io.pulumi.reso
     }
 
     public static final class Builder {
-        private @Nullable Input<VirtualNodeSpecListenerTimeoutGrpcIdleArgs> idle;
-        private @Nullable Input<VirtualNodeSpecListenerTimeoutGrpcPerRequestArgs> perRequest;
+        private @Nullable Output<VirtualNodeSpecListenerTimeoutGrpcIdleArgs> idle;
+        private @Nullable Output<VirtualNodeSpecListenerTimeoutGrpcPerRequestArgs> perRequest;
 
         public Builder() {
     	      // Empty
@@ -71,23 +71,23 @@ public final class VirtualNodeSpecListenerTimeoutGrpcArgs extends io.pulumi.reso
     	      this.perRequest = defaults.perRequest;
         }
 
-        public Builder idle(@Nullable Input<VirtualNodeSpecListenerTimeoutGrpcIdleArgs> idle) {
+        public Builder idle(@Nullable Output<VirtualNodeSpecListenerTimeoutGrpcIdleArgs> idle) {
             this.idle = idle;
             return this;
         }
 
         public Builder idle(@Nullable VirtualNodeSpecListenerTimeoutGrpcIdleArgs idle) {
-            this.idle = Input.ofNullable(idle);
+            this.idle = Output.ofNullable(idle);
             return this;
         }
 
-        public Builder perRequest(@Nullable Input<VirtualNodeSpecListenerTimeoutGrpcPerRequestArgs> perRequest) {
+        public Builder perRequest(@Nullable Output<VirtualNodeSpecListenerTimeoutGrpcPerRequestArgs> perRequest) {
             this.perRequest = perRequest;
             return this;
         }
 
         public Builder perRequest(@Nullable VirtualNodeSpecListenerTimeoutGrpcPerRequestArgs perRequest) {
-            this.perRequest = Input.ofNullable(perRequest);
+            this.perRequest = Output.ofNullable(perRequest);
             return this;
         }
         public VirtualNodeSpecListenerTimeoutGrpcArgs build() {

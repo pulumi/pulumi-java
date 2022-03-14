@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -24,10 +24,10 @@ public final class AdvancedMachineFeaturesArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="enableNestedVirtualization")
-      private final @Nullable Input<Boolean> enableNestedVirtualization;
+      private final @Nullable Output<Boolean> enableNestedVirtualization;
 
-    public Input<Boolean> getEnableNestedVirtualization() {
-        return this.enableNestedVirtualization == null ? Input.empty() : this.enableNestedVirtualization;
+    public Output<Boolean> getEnableNestedVirtualization() {
+        return this.enableNestedVirtualization == null ? Output.empty() : this.enableNestedVirtualization;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class AdvancedMachineFeaturesArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="enableUefiNetworking")
-      private final @Nullable Input<Boolean> enableUefiNetworking;
+      private final @Nullable Output<Boolean> enableUefiNetworking;
 
-    public Input<Boolean> getEnableUefiNetworking() {
-        return this.enableUefiNetworking == null ? Input.empty() : this.enableUefiNetworking;
+    public Output<Boolean> getEnableUefiNetworking() {
+        return this.enableUefiNetworking == null ? Output.empty() : this.enableUefiNetworking;
     }
 
     /**
@@ -46,10 +46,10 @@ public final class AdvancedMachineFeaturesArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="numaNodeCount")
-      private final @Nullable Input<Integer> numaNodeCount;
+      private final @Nullable Output<Integer> numaNodeCount;
 
-    public Input<Integer> getNumaNodeCount() {
-        return this.numaNodeCount == null ? Input.empty() : this.numaNodeCount;
+    public Output<Integer> getNumaNodeCount() {
+        return this.numaNodeCount == null ? Output.empty() : this.numaNodeCount;
     }
 
     /**
@@ -57,10 +57,10 @@ public final class AdvancedMachineFeaturesArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="threadsPerCore")
-      private final @Nullable Input<Integer> threadsPerCore;
+      private final @Nullable Output<Integer> threadsPerCore;
 
-    public Input<Integer> getThreadsPerCore() {
-        return this.threadsPerCore == null ? Input.empty() : this.threadsPerCore;
+    public Output<Integer> getThreadsPerCore() {
+        return this.threadsPerCore == null ? Output.empty() : this.threadsPerCore;
     }
 
     /**
@@ -68,18 +68,18 @@ public final class AdvancedMachineFeaturesArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="visibleCoreCount")
-      private final @Nullable Input<Integer> visibleCoreCount;
+      private final @Nullable Output<Integer> visibleCoreCount;
 
-    public Input<Integer> getVisibleCoreCount() {
-        return this.visibleCoreCount == null ? Input.empty() : this.visibleCoreCount;
+    public Output<Integer> getVisibleCoreCount() {
+        return this.visibleCoreCount == null ? Output.empty() : this.visibleCoreCount;
     }
 
     public AdvancedMachineFeaturesArgs(
-        @Nullable Input<Boolean> enableNestedVirtualization,
-        @Nullable Input<Boolean> enableUefiNetworking,
-        @Nullable Input<Integer> numaNodeCount,
-        @Nullable Input<Integer> threadsPerCore,
-        @Nullable Input<Integer> visibleCoreCount) {
+        @Nullable Output<Boolean> enableNestedVirtualization,
+        @Nullable Output<Boolean> enableUefiNetworking,
+        @Nullable Output<Integer> numaNodeCount,
+        @Nullable Output<Integer> threadsPerCore,
+        @Nullable Output<Integer> visibleCoreCount) {
         this.enableNestedVirtualization = enableNestedVirtualization;
         this.enableUefiNetworking = enableUefiNetworking;
         this.numaNodeCount = numaNodeCount;
@@ -88,11 +88,11 @@ public final class AdvancedMachineFeaturesArgs extends io.pulumi.resources.Resou
     }
 
     private AdvancedMachineFeaturesArgs() {
-        this.enableNestedVirtualization = Input.empty();
-        this.enableUefiNetworking = Input.empty();
-        this.numaNodeCount = Input.empty();
-        this.threadsPerCore = Input.empty();
-        this.visibleCoreCount = Input.empty();
+        this.enableNestedVirtualization = Output.empty();
+        this.enableUefiNetworking = Output.empty();
+        this.numaNodeCount = Output.empty();
+        this.threadsPerCore = Output.empty();
+        this.visibleCoreCount = Output.empty();
     }
 
     public static Builder builder() {
@@ -104,11 +104,11 @@ public final class AdvancedMachineFeaturesArgs extends io.pulumi.resources.Resou
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> enableNestedVirtualization;
-        private @Nullable Input<Boolean> enableUefiNetworking;
-        private @Nullable Input<Integer> numaNodeCount;
-        private @Nullable Input<Integer> threadsPerCore;
-        private @Nullable Input<Integer> visibleCoreCount;
+        private @Nullable Output<Boolean> enableNestedVirtualization;
+        private @Nullable Output<Boolean> enableUefiNetworking;
+        private @Nullable Output<Integer> numaNodeCount;
+        private @Nullable Output<Integer> threadsPerCore;
+        private @Nullable Output<Integer> visibleCoreCount;
 
         public Builder() {
     	      // Empty
@@ -123,53 +123,53 @@ public final class AdvancedMachineFeaturesArgs extends io.pulumi.resources.Resou
     	      this.visibleCoreCount = defaults.visibleCoreCount;
         }
 
-        public Builder enableNestedVirtualization(@Nullable Input<Boolean> enableNestedVirtualization) {
+        public Builder enableNestedVirtualization(@Nullable Output<Boolean> enableNestedVirtualization) {
             this.enableNestedVirtualization = enableNestedVirtualization;
             return this;
         }
 
         public Builder enableNestedVirtualization(@Nullable Boolean enableNestedVirtualization) {
-            this.enableNestedVirtualization = Input.ofNullable(enableNestedVirtualization);
+            this.enableNestedVirtualization = Output.ofNullable(enableNestedVirtualization);
             return this;
         }
 
-        public Builder enableUefiNetworking(@Nullable Input<Boolean> enableUefiNetworking) {
+        public Builder enableUefiNetworking(@Nullable Output<Boolean> enableUefiNetworking) {
             this.enableUefiNetworking = enableUefiNetworking;
             return this;
         }
 
         public Builder enableUefiNetworking(@Nullable Boolean enableUefiNetworking) {
-            this.enableUefiNetworking = Input.ofNullable(enableUefiNetworking);
+            this.enableUefiNetworking = Output.ofNullable(enableUefiNetworking);
             return this;
         }
 
-        public Builder numaNodeCount(@Nullable Input<Integer> numaNodeCount) {
+        public Builder numaNodeCount(@Nullable Output<Integer> numaNodeCount) {
             this.numaNodeCount = numaNodeCount;
             return this;
         }
 
         public Builder numaNodeCount(@Nullable Integer numaNodeCount) {
-            this.numaNodeCount = Input.ofNullable(numaNodeCount);
+            this.numaNodeCount = Output.ofNullable(numaNodeCount);
             return this;
         }
 
-        public Builder threadsPerCore(@Nullable Input<Integer> threadsPerCore) {
+        public Builder threadsPerCore(@Nullable Output<Integer> threadsPerCore) {
             this.threadsPerCore = threadsPerCore;
             return this;
         }
 
         public Builder threadsPerCore(@Nullable Integer threadsPerCore) {
-            this.threadsPerCore = Input.ofNullable(threadsPerCore);
+            this.threadsPerCore = Output.ofNullable(threadsPerCore);
             return this;
         }
 
-        public Builder visibleCoreCount(@Nullable Input<Integer> visibleCoreCount) {
+        public Builder visibleCoreCount(@Nullable Output<Integer> visibleCoreCount) {
             this.visibleCoreCount = visibleCoreCount;
             return this;
         }
 
         public Builder visibleCoreCount(@Nullable Integer visibleCoreCount) {
-            this.visibleCoreCount = Input.ofNullable(visibleCoreCount);
+            this.visibleCoreCount = Output.ofNullable(visibleCoreCount);
             return this;
         }
         public AdvancedMachineFeaturesArgs build() {

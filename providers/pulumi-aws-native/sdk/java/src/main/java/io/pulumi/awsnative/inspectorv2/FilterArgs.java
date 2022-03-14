@@ -5,7 +5,7 @@ package io.pulumi.awsnative.inspectorv2;
 
 import io.pulumi.awsnative.inspectorv2.enums.FilterAction;
 import io.pulumi.awsnative.inspectorv2.inputs.FilterCriteriaArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -21,10 +21,10 @@ public final class FilterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -32,9 +32,9 @@ public final class FilterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="filterAction", required=true)
-      private final Input<FilterAction> filterAction;
+      private final Output<FilterAction> filterAction;
 
-    public Input<FilterAction> getFilterAction() {
+    public Output<FilterAction> getFilterAction() {
         return this.filterAction;
     }
 
@@ -43,9 +43,9 @@ public final class FilterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="filterCriteria", required=true)
-      private final Input<FilterCriteriaArgs> filterCriteria;
+      private final Output<FilterCriteriaArgs> filterCriteria;
 
-    public Input<FilterCriteriaArgs> getFilterCriteria() {
+    public Output<FilterCriteriaArgs> getFilterCriteria() {
         return this.filterCriteria;
     }
 
@@ -54,17 +54,17 @@ public final class FilterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     public FilterArgs(
-        @Nullable Input<String> description,
-        Input<FilterAction> filterAction,
-        Input<FilterCriteriaArgs> filterCriteria,
-        @Nullable Input<String> name) {
+        @Nullable Output<String> description,
+        Output<FilterAction> filterAction,
+        Output<FilterCriteriaArgs> filterCriteria,
+        @Nullable Output<String> name) {
         this.description = description;
         this.filterAction = Objects.requireNonNull(filterAction, "expected parameter 'filterAction' to be non-null");
         this.filterCriteria = Objects.requireNonNull(filterCriteria, "expected parameter 'filterCriteria' to be non-null");
@@ -72,10 +72,10 @@ public final class FilterArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private FilterArgs() {
-        this.description = Input.empty();
-        this.filterAction = Input.empty();
-        this.filterCriteria = Input.empty();
-        this.name = Input.empty();
+        this.description = Output.empty();
+        this.filterAction = Output.empty();
+        this.filterCriteria = Output.empty();
+        this.name = Output.empty();
     }
 
     public static Builder builder() {
@@ -87,10 +87,10 @@ public final class FilterArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> description;
-        private Input<FilterAction> filterAction;
-        private Input<FilterCriteriaArgs> filterCriteria;
-        private @Nullable Input<String> name;
+        private @Nullable Output<String> description;
+        private Output<FilterAction> filterAction;
+        private Output<FilterCriteriaArgs> filterCriteria;
+        private @Nullable Output<String> name;
 
         public Builder() {
     	      // Empty
@@ -104,43 +104,43 @@ public final class FilterArgs extends io.pulumi.resources.ResourceArgs {
     	      this.name = defaults.name;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder filterAction(Input<FilterAction> filterAction) {
+        public Builder filterAction(Output<FilterAction> filterAction) {
             this.filterAction = Objects.requireNonNull(filterAction);
             return this;
         }
 
         public Builder filterAction(FilterAction filterAction) {
-            this.filterAction = Input.of(Objects.requireNonNull(filterAction));
+            this.filterAction = Output.of(Objects.requireNonNull(filterAction));
             return this;
         }
 
-        public Builder filterCriteria(Input<FilterCriteriaArgs> filterCriteria) {
+        public Builder filterCriteria(Output<FilterCriteriaArgs> filterCriteria) {
             this.filterCriteria = Objects.requireNonNull(filterCriteria);
             return this;
         }
 
         public Builder filterCriteria(FilterCriteriaArgs filterCriteria) {
-            this.filterCriteria = Input.of(Objects.requireNonNull(filterCriteria));
+            this.filterCriteria = Output.of(Objects.requireNonNull(filterCriteria));
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
         public FilterArgs build() {

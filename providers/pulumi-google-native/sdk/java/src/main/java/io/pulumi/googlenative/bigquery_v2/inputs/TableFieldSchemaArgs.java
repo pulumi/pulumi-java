@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.bigquery_v2.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.bigquery_v2.inputs.TableFieldSchemaCategoriesArgs;
 import io.pulumi.googlenative.bigquery_v2.inputs.TableFieldSchemaPolicyTagsArgs;
@@ -22,10 +22,10 @@ public final class TableFieldSchemaArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="categories")
-      private final @Nullable Input<TableFieldSchemaCategoriesArgs> categories;
+      private final @Nullable Output<TableFieldSchemaCategoriesArgs> categories;
 
-    public Input<TableFieldSchemaCategoriesArgs> getCategories() {
-        return this.categories == null ? Input.empty() : this.categories;
+    public Output<TableFieldSchemaCategoriesArgs> getCategories() {
+        return this.categories == null ? Output.empty() : this.categories;
     }
 
     /**
@@ -33,10 +33,10 @@ public final class TableFieldSchemaArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="collationSpec")
-      private final @Nullable Input<String> collationSpec;
+      private final @Nullable Output<String> collationSpec;
 
-    public Input<String> getCollationSpec() {
-        return this.collationSpec == null ? Input.empty() : this.collationSpec;
+    public Output<String> getCollationSpec() {
+        return this.collationSpec == null ? Output.empty() : this.collationSpec;
     }
 
     /**
@@ -44,10 +44,10 @@ public final class TableFieldSchemaArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -55,10 +55,10 @@ public final class TableFieldSchemaArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="fields")
-      private final @Nullable Input<List<TableFieldSchemaArgs>> fields;
+      private final @Nullable Output<List<TableFieldSchemaArgs>> fields;
 
-    public Input<List<TableFieldSchemaArgs>> getFields() {
-        return this.fields == null ? Input.empty() : this.fields;
+    public Output<List<TableFieldSchemaArgs>> getFields() {
+        return this.fields == null ? Output.empty() : this.fields;
     }
 
     /**
@@ -66,10 +66,10 @@ public final class TableFieldSchemaArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="maxLength")
-      private final @Nullable Input<String> maxLength;
+      private final @Nullable Output<String> maxLength;
 
-    public Input<String> getMaxLength() {
-        return this.maxLength == null ? Input.empty() : this.maxLength;
+    public Output<String> getMaxLength() {
+        return this.maxLength == null ? Output.empty() : this.maxLength;
     }
 
     /**
@@ -77,10 +77,10 @@ public final class TableFieldSchemaArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="mode")
-      private final @Nullable Input<String> mode;
+      private final @Nullable Output<String> mode;
 
-    public Input<String> getMode() {
-        return this.mode == null ? Input.empty() : this.mode;
+    public Output<String> getMode() {
+        return this.mode == null ? Output.empty() : this.mode;
     }
 
     /**
@@ -88,17 +88,17 @@ public final class TableFieldSchemaArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     @InputImport(name="policyTags")
-      private final @Nullable Input<TableFieldSchemaPolicyTagsArgs> policyTags;
+      private final @Nullable Output<TableFieldSchemaPolicyTagsArgs> policyTags;
 
-    public Input<TableFieldSchemaPolicyTagsArgs> getPolicyTags() {
-        return this.policyTags == null ? Input.empty() : this.policyTags;
+    public Output<TableFieldSchemaPolicyTagsArgs> getPolicyTags() {
+        return this.policyTags == null ? Output.empty() : this.policyTags;
     }
 
     /**
@@ -106,10 +106,10 @@ public final class TableFieldSchemaArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="precision")
-      private final @Nullable Input<String> precision;
+      private final @Nullable Output<String> precision;
 
-    public Input<String> getPrecision() {
-        return this.precision == null ? Input.empty() : this.precision;
+    public Output<String> getPrecision() {
+        return this.precision == null ? Output.empty() : this.precision;
     }
 
     /**
@@ -117,10 +117,10 @@ public final class TableFieldSchemaArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="scale")
-      private final @Nullable Input<String> scale;
+      private final @Nullable Output<String> scale;
 
-    public Input<String> getScale() {
-        return this.scale == null ? Input.empty() : this.scale;
+    public Output<String> getScale() {
+        return this.scale == null ? Output.empty() : this.scale;
     }
 
     /**
@@ -128,24 +128,24 @@ public final class TableFieldSchemaArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="type")
-      private final @Nullable Input<String> type;
+      private final @Nullable Output<String> type;
 
-    public Input<String> getType() {
-        return this.type == null ? Input.empty() : this.type;
+    public Output<String> getType() {
+        return this.type == null ? Output.empty() : this.type;
     }
 
     public TableFieldSchemaArgs(
-        @Nullable Input<TableFieldSchemaCategoriesArgs> categories,
-        @Nullable Input<String> collationSpec,
-        @Nullable Input<String> description,
-        @Nullable Input<List<TableFieldSchemaArgs>> fields,
-        @Nullable Input<String> maxLength,
-        @Nullable Input<String> mode,
-        @Nullable Input<String> name,
-        @Nullable Input<TableFieldSchemaPolicyTagsArgs> policyTags,
-        @Nullable Input<String> precision,
-        @Nullable Input<String> scale,
-        @Nullable Input<String> type) {
+        @Nullable Output<TableFieldSchemaCategoriesArgs> categories,
+        @Nullable Output<String> collationSpec,
+        @Nullable Output<String> description,
+        @Nullable Output<List<TableFieldSchemaArgs>> fields,
+        @Nullable Output<String> maxLength,
+        @Nullable Output<String> mode,
+        @Nullable Output<String> name,
+        @Nullable Output<TableFieldSchemaPolicyTagsArgs> policyTags,
+        @Nullable Output<String> precision,
+        @Nullable Output<String> scale,
+        @Nullable Output<String> type) {
         this.categories = categories;
         this.collationSpec = collationSpec;
         this.description = description;
@@ -160,17 +160,17 @@ public final class TableFieldSchemaArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private TableFieldSchemaArgs() {
-        this.categories = Input.empty();
-        this.collationSpec = Input.empty();
-        this.description = Input.empty();
-        this.fields = Input.empty();
-        this.maxLength = Input.empty();
-        this.mode = Input.empty();
-        this.name = Input.empty();
-        this.policyTags = Input.empty();
-        this.precision = Input.empty();
-        this.scale = Input.empty();
-        this.type = Input.empty();
+        this.categories = Output.empty();
+        this.collationSpec = Output.empty();
+        this.description = Output.empty();
+        this.fields = Output.empty();
+        this.maxLength = Output.empty();
+        this.mode = Output.empty();
+        this.name = Output.empty();
+        this.policyTags = Output.empty();
+        this.precision = Output.empty();
+        this.scale = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -182,17 +182,17 @@ public final class TableFieldSchemaArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private @Nullable Input<TableFieldSchemaCategoriesArgs> categories;
-        private @Nullable Input<String> collationSpec;
-        private @Nullable Input<String> description;
-        private @Nullable Input<List<TableFieldSchemaArgs>> fields;
-        private @Nullable Input<String> maxLength;
-        private @Nullable Input<String> mode;
-        private @Nullable Input<String> name;
-        private @Nullable Input<TableFieldSchemaPolicyTagsArgs> policyTags;
-        private @Nullable Input<String> precision;
-        private @Nullable Input<String> scale;
-        private @Nullable Input<String> type;
+        private @Nullable Output<TableFieldSchemaCategoriesArgs> categories;
+        private @Nullable Output<String> collationSpec;
+        private @Nullable Output<String> description;
+        private @Nullable Output<List<TableFieldSchemaArgs>> fields;
+        private @Nullable Output<String> maxLength;
+        private @Nullable Output<String> mode;
+        private @Nullable Output<String> name;
+        private @Nullable Output<TableFieldSchemaPolicyTagsArgs> policyTags;
+        private @Nullable Output<String> precision;
+        private @Nullable Output<String> scale;
+        private @Nullable Output<String> type;
 
         public Builder() {
     	      // Empty
@@ -213,113 +213,113 @@ public final class TableFieldSchemaArgs extends io.pulumi.resources.ResourceArgs
     	      this.type = defaults.type;
         }
 
-        public Builder categories(@Nullable Input<TableFieldSchemaCategoriesArgs> categories) {
+        public Builder categories(@Nullable Output<TableFieldSchemaCategoriesArgs> categories) {
             this.categories = categories;
             return this;
         }
 
         public Builder categories(@Nullable TableFieldSchemaCategoriesArgs categories) {
-            this.categories = Input.ofNullable(categories);
+            this.categories = Output.ofNullable(categories);
             return this;
         }
 
-        public Builder collationSpec(@Nullable Input<String> collationSpec) {
+        public Builder collationSpec(@Nullable Output<String> collationSpec) {
             this.collationSpec = collationSpec;
             return this;
         }
 
         public Builder collationSpec(@Nullable String collationSpec) {
-            this.collationSpec = Input.ofNullable(collationSpec);
+            this.collationSpec = Output.ofNullable(collationSpec);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder fields(@Nullable Input<List<TableFieldSchemaArgs>> fields) {
+        public Builder fields(@Nullable Output<List<TableFieldSchemaArgs>> fields) {
             this.fields = fields;
             return this;
         }
 
         public Builder fields(@Nullable List<TableFieldSchemaArgs> fields) {
-            this.fields = Input.ofNullable(fields);
+            this.fields = Output.ofNullable(fields);
             return this;
         }
 
-        public Builder maxLength(@Nullable Input<String> maxLength) {
+        public Builder maxLength(@Nullable Output<String> maxLength) {
             this.maxLength = maxLength;
             return this;
         }
 
         public Builder maxLength(@Nullable String maxLength) {
-            this.maxLength = Input.ofNullable(maxLength);
+            this.maxLength = Output.ofNullable(maxLength);
             return this;
         }
 
-        public Builder mode(@Nullable Input<String> mode) {
+        public Builder mode(@Nullable Output<String> mode) {
             this.mode = mode;
             return this;
         }
 
         public Builder mode(@Nullable String mode) {
-            this.mode = Input.ofNullable(mode);
+            this.mode = Output.ofNullable(mode);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder policyTags(@Nullable Input<TableFieldSchemaPolicyTagsArgs> policyTags) {
+        public Builder policyTags(@Nullable Output<TableFieldSchemaPolicyTagsArgs> policyTags) {
             this.policyTags = policyTags;
             return this;
         }
 
         public Builder policyTags(@Nullable TableFieldSchemaPolicyTagsArgs policyTags) {
-            this.policyTags = Input.ofNullable(policyTags);
+            this.policyTags = Output.ofNullable(policyTags);
             return this;
         }
 
-        public Builder precision(@Nullable Input<String> precision) {
+        public Builder precision(@Nullable Output<String> precision) {
             this.precision = precision;
             return this;
         }
 
         public Builder precision(@Nullable String precision) {
-            this.precision = Input.ofNullable(precision);
+            this.precision = Output.ofNullable(precision);
             return this;
         }
 
-        public Builder scale(@Nullable Input<String> scale) {
+        public Builder scale(@Nullable Output<String> scale) {
             this.scale = scale;
             return this;
         }
 
         public Builder scale(@Nullable String scale) {
-            this.scale = Input.ofNullable(scale);
+            this.scale = Output.ofNullable(scale);
             return this;
         }
 
-        public Builder type(@Nullable Input<String> type) {
+        public Builder type(@Nullable Output<String> type) {
             this.type = type;
             return this;
         }
 
         public Builder type(@Nullable String type) {
-            this.type = Input.ofNullable(type);
+            this.type = Output.ofNullable(type);
             return this;
         }
         public TableFieldSchemaArgs build() {

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.storage;
 
 import io.pulumi.azurenative.storage.inputs.ManagementPolicySchemaArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -20,9 +20,9 @@ public final class ManagementPolicyArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="accountName", required=true)
-      private final Input<String> accountName;
+      private final Output<String> accountName;
 
-    public Input<String> getAccountName() {
+    public Output<String> getAccountName() {
         return this.accountName;
     }
 
@@ -31,10 +31,10 @@ public final class ManagementPolicyArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="managementPolicyName")
-      private final @Nullable Input<String> managementPolicyName;
+      private final @Nullable Output<String> managementPolicyName;
 
-    public Input<String> getManagementPolicyName() {
-        return this.managementPolicyName == null ? Input.empty() : this.managementPolicyName;
+    public Output<String> getManagementPolicyName() {
+        return this.managementPolicyName == null ? Output.empty() : this.managementPolicyName;
     }
 
     /**
@@ -42,9 +42,9 @@ public final class ManagementPolicyArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="policy", required=true)
-      private final Input<ManagementPolicySchemaArgs> policy;
+      private final Output<ManagementPolicySchemaArgs> policy;
 
-    public Input<ManagementPolicySchemaArgs> getPolicy() {
+    public Output<ManagementPolicySchemaArgs> getPolicy() {
         return this.policy;
     }
 
@@ -53,17 +53,17 @@ public final class ManagementPolicyArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
     public ManagementPolicyArgs(
-        Input<String> accountName,
-        @Nullable Input<String> managementPolicyName,
-        Input<ManagementPolicySchemaArgs> policy,
-        Input<String> resourceGroupName) {
+        Output<String> accountName,
+        @Nullable Output<String> managementPolicyName,
+        Output<ManagementPolicySchemaArgs> policy,
+        Output<String> resourceGroupName) {
         this.accountName = Objects.requireNonNull(accountName, "expected parameter 'accountName' to be non-null");
         this.managementPolicyName = managementPolicyName;
         this.policy = Objects.requireNonNull(policy, "expected parameter 'policy' to be non-null");
@@ -71,10 +71,10 @@ public final class ManagementPolicyArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private ManagementPolicyArgs() {
-        this.accountName = Input.empty();
-        this.managementPolicyName = Input.empty();
-        this.policy = Input.empty();
-        this.resourceGroupName = Input.empty();
+        this.accountName = Output.empty();
+        this.managementPolicyName = Output.empty();
+        this.policy = Output.empty();
+        this.resourceGroupName = Output.empty();
     }
 
     public static Builder builder() {
@@ -86,10 +86,10 @@ public final class ManagementPolicyArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private Input<String> accountName;
-        private @Nullable Input<String> managementPolicyName;
-        private Input<ManagementPolicySchemaArgs> policy;
-        private Input<String> resourceGroupName;
+        private Output<String> accountName;
+        private @Nullable Output<String> managementPolicyName;
+        private Output<ManagementPolicySchemaArgs> policy;
+        private Output<String> resourceGroupName;
 
         public Builder() {
     	      // Empty
@@ -103,43 +103,43 @@ public final class ManagementPolicyArgs extends io.pulumi.resources.ResourceArgs
     	      this.resourceGroupName = defaults.resourceGroupName;
         }
 
-        public Builder accountName(Input<String> accountName) {
+        public Builder accountName(Output<String> accountName) {
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
 
         public Builder accountName(String accountName) {
-            this.accountName = Input.of(Objects.requireNonNull(accountName));
+            this.accountName = Output.of(Objects.requireNonNull(accountName));
             return this;
         }
 
-        public Builder managementPolicyName(@Nullable Input<String> managementPolicyName) {
+        public Builder managementPolicyName(@Nullable Output<String> managementPolicyName) {
             this.managementPolicyName = managementPolicyName;
             return this;
         }
 
         public Builder managementPolicyName(@Nullable String managementPolicyName) {
-            this.managementPolicyName = Input.ofNullable(managementPolicyName);
+            this.managementPolicyName = Output.ofNullable(managementPolicyName);
             return this;
         }
 
-        public Builder policy(Input<ManagementPolicySchemaArgs> policy) {
+        public Builder policy(Output<ManagementPolicySchemaArgs> policy) {
             this.policy = Objects.requireNonNull(policy);
             return this;
         }
 
         public Builder policy(ManagementPolicySchemaArgs policy) {
-            this.policy = Input.of(Objects.requireNonNull(policy));
+            this.policy = Output.of(Objects.requireNonNull(policy));
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
         public ManagementPolicyArgs build() {

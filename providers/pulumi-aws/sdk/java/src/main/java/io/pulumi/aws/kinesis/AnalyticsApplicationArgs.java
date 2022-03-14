@@ -7,7 +7,7 @@ import io.pulumi.aws.kinesis.inputs.AnalyticsApplicationCloudwatchLoggingOptions
 import io.pulumi.aws.kinesis.inputs.AnalyticsApplicationInputsArgs;
 import io.pulumi.aws.kinesis.inputs.AnalyticsApplicationOutputArgs;
 import io.pulumi.aws.kinesis.inputs.AnalyticsApplicationReferenceDataSourcesArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -27,10 +27,10 @@ public final class AnalyticsApplicationArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="cloudwatchLoggingOptions")
-      private final @Nullable Input<AnalyticsApplicationCloudwatchLoggingOptionsArgs> cloudwatchLoggingOptions;
+      private final @Nullable Output<AnalyticsApplicationCloudwatchLoggingOptionsArgs> cloudwatchLoggingOptions;
 
-    public Input<AnalyticsApplicationCloudwatchLoggingOptionsArgs> getCloudwatchLoggingOptions() {
-        return this.cloudwatchLoggingOptions == null ? Input.empty() : this.cloudwatchLoggingOptions;
+    public Output<AnalyticsApplicationCloudwatchLoggingOptionsArgs> getCloudwatchLoggingOptions() {
+        return this.cloudwatchLoggingOptions == null ? Output.empty() : this.cloudwatchLoggingOptions;
     }
 
     /**
@@ -38,10 +38,10 @@ public final class AnalyticsApplicationArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="code")
-      private final @Nullable Input<String> code;
+      private final @Nullable Output<String> code;
 
-    public Input<String> getCode() {
-        return this.code == null ? Input.empty() : this.code;
+    public Output<String> getCode() {
+        return this.code == null ? Output.empty() : this.code;
     }
 
     /**
@@ -49,10 +49,10 @@ public final class AnalyticsApplicationArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -60,10 +60,10 @@ public final class AnalyticsApplicationArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="inputs")
-      private final @Nullable Input<AnalyticsApplicationInputsArgs> inputs;
+      private final @Nullable Output<AnalyticsApplicationInputsArgs> inputs;
 
-    public Input<AnalyticsApplicationInputsArgs> getInputs() {
-        return this.inputs == null ? Input.empty() : this.inputs;
+    public Output<AnalyticsApplicationInputsArgs> getInputs() {
+        return this.inputs == null ? Output.empty() : this.inputs;
     }
 
     /**
@@ -71,10 +71,10 @@ public final class AnalyticsApplicationArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -82,10 +82,10 @@ public final class AnalyticsApplicationArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="outputs")
-      private final @Nullable Input<List<AnalyticsApplicationOutputArgs>> outputs;
+      private final @Nullable Output<List<AnalyticsApplicationOutputArgs>> outputs;
 
-    public Input<List<AnalyticsApplicationOutputArgs>> getOutputs() {
-        return this.outputs == null ? Input.empty() : this.outputs;
+    public Output<List<AnalyticsApplicationOutputArgs>> getOutputs() {
+        return this.outputs == null ? Output.empty() : this.outputs;
     }
 
     /**
@@ -94,10 +94,10 @@ public final class AnalyticsApplicationArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="referenceDataSources")
-      private final @Nullable Input<AnalyticsApplicationReferenceDataSourcesArgs> referenceDataSources;
+      private final @Nullable Output<AnalyticsApplicationReferenceDataSourcesArgs> referenceDataSources;
 
-    public Input<AnalyticsApplicationReferenceDataSourcesArgs> getReferenceDataSources() {
-        return this.referenceDataSources == null ? Input.empty() : this.referenceDataSources;
+    public Output<AnalyticsApplicationReferenceDataSourcesArgs> getReferenceDataSources() {
+        return this.referenceDataSources == null ? Output.empty() : this.referenceDataSources;
     }
 
     /**
@@ -106,10 +106,10 @@ public final class AnalyticsApplicationArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="startApplication")
-      private final @Nullable Input<Boolean> startApplication;
+      private final @Nullable Output<Boolean> startApplication;
 
-    public Input<Boolean> getStartApplication() {
-        return this.startApplication == null ? Input.empty() : this.startApplication;
+    public Output<Boolean> getStartApplication() {
+        return this.startApplication == null ? Output.empty() : this.startApplication;
     }
 
     /**
@@ -117,22 +117,22 @@ public final class AnalyticsApplicationArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public AnalyticsApplicationArgs(
-        @Nullable Input<AnalyticsApplicationCloudwatchLoggingOptionsArgs> cloudwatchLoggingOptions,
-        @Nullable Input<String> code,
-        @Nullable Input<String> description,
-        @Nullable Input<AnalyticsApplicationInputsArgs> inputs,
-        @Nullable Input<String> name,
-        @Nullable Input<List<AnalyticsApplicationOutputArgs>> outputs,
-        @Nullable Input<AnalyticsApplicationReferenceDataSourcesArgs> referenceDataSources,
-        @Nullable Input<Boolean> startApplication,
-        @Nullable Input<Map<String,String>> tags) {
+        @Nullable Output<AnalyticsApplicationCloudwatchLoggingOptionsArgs> cloudwatchLoggingOptions,
+        @Nullable Output<String> code,
+        @Nullable Output<String> description,
+        @Nullable Output<AnalyticsApplicationInputsArgs> inputs,
+        @Nullable Output<String> name,
+        @Nullable Output<List<AnalyticsApplicationOutputArgs>> outputs,
+        @Nullable Output<AnalyticsApplicationReferenceDataSourcesArgs> referenceDataSources,
+        @Nullable Output<Boolean> startApplication,
+        @Nullable Output<Map<String,String>> tags) {
         this.cloudwatchLoggingOptions = cloudwatchLoggingOptions;
         this.code = code;
         this.description = description;
@@ -145,15 +145,15 @@ public final class AnalyticsApplicationArgs extends io.pulumi.resources.Resource
     }
 
     private AnalyticsApplicationArgs() {
-        this.cloudwatchLoggingOptions = Input.empty();
-        this.code = Input.empty();
-        this.description = Input.empty();
-        this.inputs = Input.empty();
-        this.name = Input.empty();
-        this.outputs = Input.empty();
-        this.referenceDataSources = Input.empty();
-        this.startApplication = Input.empty();
-        this.tags = Input.empty();
+        this.cloudwatchLoggingOptions = Output.empty();
+        this.code = Output.empty();
+        this.description = Output.empty();
+        this.inputs = Output.empty();
+        this.name = Output.empty();
+        this.outputs = Output.empty();
+        this.referenceDataSources = Output.empty();
+        this.startApplication = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -165,15 +165,15 @@ public final class AnalyticsApplicationArgs extends io.pulumi.resources.Resource
     }
 
     public static final class Builder {
-        private @Nullable Input<AnalyticsApplicationCloudwatchLoggingOptionsArgs> cloudwatchLoggingOptions;
-        private @Nullable Input<String> code;
-        private @Nullable Input<String> description;
-        private @Nullable Input<AnalyticsApplicationInputsArgs> inputs;
-        private @Nullable Input<String> name;
-        private @Nullable Input<List<AnalyticsApplicationOutputArgs>> outputs;
-        private @Nullable Input<AnalyticsApplicationReferenceDataSourcesArgs> referenceDataSources;
-        private @Nullable Input<Boolean> startApplication;
-        private @Nullable Input<Map<String,String>> tags;
+        private @Nullable Output<AnalyticsApplicationCloudwatchLoggingOptionsArgs> cloudwatchLoggingOptions;
+        private @Nullable Output<String> code;
+        private @Nullable Output<String> description;
+        private @Nullable Output<AnalyticsApplicationInputsArgs> inputs;
+        private @Nullable Output<String> name;
+        private @Nullable Output<List<AnalyticsApplicationOutputArgs>> outputs;
+        private @Nullable Output<AnalyticsApplicationReferenceDataSourcesArgs> referenceDataSources;
+        private @Nullable Output<Boolean> startApplication;
+        private @Nullable Output<Map<String,String>> tags;
 
         public Builder() {
     	      // Empty
@@ -192,93 +192,93 @@ public final class AnalyticsApplicationArgs extends io.pulumi.resources.Resource
     	      this.tags = defaults.tags;
         }
 
-        public Builder cloudwatchLoggingOptions(@Nullable Input<AnalyticsApplicationCloudwatchLoggingOptionsArgs> cloudwatchLoggingOptions) {
+        public Builder cloudwatchLoggingOptions(@Nullable Output<AnalyticsApplicationCloudwatchLoggingOptionsArgs> cloudwatchLoggingOptions) {
             this.cloudwatchLoggingOptions = cloudwatchLoggingOptions;
             return this;
         }
 
         public Builder cloudwatchLoggingOptions(@Nullable AnalyticsApplicationCloudwatchLoggingOptionsArgs cloudwatchLoggingOptions) {
-            this.cloudwatchLoggingOptions = Input.ofNullable(cloudwatchLoggingOptions);
+            this.cloudwatchLoggingOptions = Output.ofNullable(cloudwatchLoggingOptions);
             return this;
         }
 
-        public Builder code(@Nullable Input<String> code) {
+        public Builder code(@Nullable Output<String> code) {
             this.code = code;
             return this;
         }
 
         public Builder code(@Nullable String code) {
-            this.code = Input.ofNullable(code);
+            this.code = Output.ofNullable(code);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder inputs(@Nullable Input<AnalyticsApplicationInputsArgs> inputs) {
+        public Builder inputs(@Nullable Output<AnalyticsApplicationInputsArgs> inputs) {
             this.inputs = inputs;
             return this;
         }
 
         public Builder inputs(@Nullable AnalyticsApplicationInputsArgs inputs) {
-            this.inputs = Input.ofNullable(inputs);
+            this.inputs = Output.ofNullable(inputs);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder outputs(@Nullable Input<List<AnalyticsApplicationOutputArgs>> outputs) {
+        public Builder outputs(@Nullable Output<List<AnalyticsApplicationOutputArgs>> outputs) {
             this.outputs = outputs;
             return this;
         }
 
         public Builder outputs(@Nullable List<AnalyticsApplicationOutputArgs> outputs) {
-            this.outputs = Input.ofNullable(outputs);
+            this.outputs = Output.ofNullable(outputs);
             return this;
         }
 
-        public Builder referenceDataSources(@Nullable Input<AnalyticsApplicationReferenceDataSourcesArgs> referenceDataSources) {
+        public Builder referenceDataSources(@Nullable Output<AnalyticsApplicationReferenceDataSourcesArgs> referenceDataSources) {
             this.referenceDataSources = referenceDataSources;
             return this;
         }
 
         public Builder referenceDataSources(@Nullable AnalyticsApplicationReferenceDataSourcesArgs referenceDataSources) {
-            this.referenceDataSources = Input.ofNullable(referenceDataSources);
+            this.referenceDataSources = Output.ofNullable(referenceDataSources);
             return this;
         }
 
-        public Builder startApplication(@Nullable Input<Boolean> startApplication) {
+        public Builder startApplication(@Nullable Output<Boolean> startApplication) {
             this.startApplication = startApplication;
             return this;
         }
 
         public Builder startApplication(@Nullable Boolean startApplication) {
-            this.startApplication = Input.ofNullable(startApplication);
+            this.startApplication = Output.ofNullable(startApplication);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public AnalyticsApplicationArgs build() {

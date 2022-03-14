@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.containeranalysis_v1.inputs.DSSEHintArgs;
 import java.util.Objects;
@@ -19,18 +19,18 @@ public final class DSSEAttestationNoteArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="hint")
-      private final @Nullable Input<DSSEHintArgs> hint;
+      private final @Nullable Output<DSSEHintArgs> hint;
 
-    public Input<DSSEHintArgs> getHint() {
-        return this.hint == null ? Input.empty() : this.hint;
+    public Output<DSSEHintArgs> getHint() {
+        return this.hint == null ? Output.empty() : this.hint;
     }
 
-    public DSSEAttestationNoteArgs(@Nullable Input<DSSEHintArgs> hint) {
+    public DSSEAttestationNoteArgs(@Nullable Output<DSSEHintArgs> hint) {
         this.hint = hint;
     }
 
     private DSSEAttestationNoteArgs() {
-        this.hint = Input.empty();
+        this.hint = Output.empty();
     }
 
     public static Builder builder() {
@@ -42,7 +42,7 @@ public final class DSSEAttestationNoteArgs extends io.pulumi.resources.ResourceA
     }
 
     public static final class Builder {
-        private @Nullable Input<DSSEHintArgs> hint;
+        private @Nullable Output<DSSEHintArgs> hint;
 
         public Builder() {
     	      // Empty
@@ -53,13 +53,13 @@ public final class DSSEAttestationNoteArgs extends io.pulumi.resources.ResourceA
     	      this.hint = defaults.hint;
         }
 
-        public Builder hint(@Nullable Input<DSSEHintArgs> hint) {
+        public Builder hint(@Nullable Output<DSSEHintArgs> hint) {
             this.hint = hint;
             return this;
         }
 
         public Builder hint(@Nullable DSSEHintArgs hint) {
-            this.hint = Input.ofNullable(hint);
+            this.hint = Output.ofNullable(hint);
             return this;
         }
         public DSSEAttestationNoteArgs build() {

@@ -5,7 +5,7 @@ package io.pulumi.azurenative.web.inputs;
 
 import io.pulumi.azurenative.web.inputs.GitHubActionCodeConfigurationArgs;
 import io.pulumi.azurenative.web.inputs.GitHubActionContainerConfigurationArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
@@ -25,10 +25,10 @@ public final class GitHubActionConfigurationArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="codeConfiguration")
-      private final @Nullable Input<GitHubActionCodeConfigurationArgs> codeConfiguration;
+      private final @Nullable Output<GitHubActionCodeConfigurationArgs> codeConfiguration;
 
-    public Input<GitHubActionCodeConfigurationArgs> getCodeConfiguration() {
-        return this.codeConfiguration == null ? Input.empty() : this.codeConfiguration;
+    public Output<GitHubActionCodeConfigurationArgs> getCodeConfiguration() {
+        return this.codeConfiguration == null ? Output.empty() : this.codeConfiguration;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class GitHubActionConfigurationArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="containerConfiguration")
-      private final @Nullable Input<GitHubActionContainerConfigurationArgs> containerConfiguration;
+      private final @Nullable Output<GitHubActionContainerConfigurationArgs> containerConfiguration;
 
-    public Input<GitHubActionContainerConfigurationArgs> getContainerConfiguration() {
-        return this.containerConfiguration == null ? Input.empty() : this.containerConfiguration;
+    public Output<GitHubActionContainerConfigurationArgs> getContainerConfiguration() {
+        return this.containerConfiguration == null ? Output.empty() : this.containerConfiguration;
     }
 
     /**
@@ -47,10 +47,10 @@ public final class GitHubActionConfigurationArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="generateWorkflowFile")
-      private final @Nullable Input<Boolean> generateWorkflowFile;
+      private final @Nullable Output<Boolean> generateWorkflowFile;
 
-    public Input<Boolean> getGenerateWorkflowFile() {
-        return this.generateWorkflowFile == null ? Input.empty() : this.generateWorkflowFile;
+    public Output<Boolean> getGenerateWorkflowFile() {
+        return this.generateWorkflowFile == null ? Output.empty() : this.generateWorkflowFile;
     }
 
     /**
@@ -58,17 +58,17 @@ public final class GitHubActionConfigurationArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="isLinux")
-      private final @Nullable Input<Boolean> isLinux;
+      private final @Nullable Output<Boolean> isLinux;
 
-    public Input<Boolean> getIsLinux() {
-        return this.isLinux == null ? Input.empty() : this.isLinux;
+    public Output<Boolean> getIsLinux() {
+        return this.isLinux == null ? Output.empty() : this.isLinux;
     }
 
     public GitHubActionConfigurationArgs(
-        @Nullable Input<GitHubActionCodeConfigurationArgs> codeConfiguration,
-        @Nullable Input<GitHubActionContainerConfigurationArgs> containerConfiguration,
-        @Nullable Input<Boolean> generateWorkflowFile,
-        @Nullable Input<Boolean> isLinux) {
+        @Nullable Output<GitHubActionCodeConfigurationArgs> codeConfiguration,
+        @Nullable Output<GitHubActionContainerConfigurationArgs> containerConfiguration,
+        @Nullable Output<Boolean> generateWorkflowFile,
+        @Nullable Output<Boolean> isLinux) {
         this.codeConfiguration = codeConfiguration;
         this.containerConfiguration = containerConfiguration;
         this.generateWorkflowFile = generateWorkflowFile;
@@ -76,10 +76,10 @@ public final class GitHubActionConfigurationArgs extends io.pulumi.resources.Res
     }
 
     private GitHubActionConfigurationArgs() {
-        this.codeConfiguration = Input.empty();
-        this.containerConfiguration = Input.empty();
-        this.generateWorkflowFile = Input.empty();
-        this.isLinux = Input.empty();
+        this.codeConfiguration = Output.empty();
+        this.containerConfiguration = Output.empty();
+        this.generateWorkflowFile = Output.empty();
+        this.isLinux = Output.empty();
     }
 
     public static Builder builder() {
@@ -91,10 +91,10 @@ public final class GitHubActionConfigurationArgs extends io.pulumi.resources.Res
     }
 
     public static final class Builder {
-        private @Nullable Input<GitHubActionCodeConfigurationArgs> codeConfiguration;
-        private @Nullable Input<GitHubActionContainerConfigurationArgs> containerConfiguration;
-        private @Nullable Input<Boolean> generateWorkflowFile;
-        private @Nullable Input<Boolean> isLinux;
+        private @Nullable Output<GitHubActionCodeConfigurationArgs> codeConfiguration;
+        private @Nullable Output<GitHubActionContainerConfigurationArgs> containerConfiguration;
+        private @Nullable Output<Boolean> generateWorkflowFile;
+        private @Nullable Output<Boolean> isLinux;
 
         public Builder() {
     	      // Empty
@@ -108,43 +108,43 @@ public final class GitHubActionConfigurationArgs extends io.pulumi.resources.Res
     	      this.isLinux = defaults.isLinux;
         }
 
-        public Builder codeConfiguration(@Nullable Input<GitHubActionCodeConfigurationArgs> codeConfiguration) {
+        public Builder codeConfiguration(@Nullable Output<GitHubActionCodeConfigurationArgs> codeConfiguration) {
             this.codeConfiguration = codeConfiguration;
             return this;
         }
 
         public Builder codeConfiguration(@Nullable GitHubActionCodeConfigurationArgs codeConfiguration) {
-            this.codeConfiguration = Input.ofNullable(codeConfiguration);
+            this.codeConfiguration = Output.ofNullable(codeConfiguration);
             return this;
         }
 
-        public Builder containerConfiguration(@Nullable Input<GitHubActionContainerConfigurationArgs> containerConfiguration) {
+        public Builder containerConfiguration(@Nullable Output<GitHubActionContainerConfigurationArgs> containerConfiguration) {
             this.containerConfiguration = containerConfiguration;
             return this;
         }
 
         public Builder containerConfiguration(@Nullable GitHubActionContainerConfigurationArgs containerConfiguration) {
-            this.containerConfiguration = Input.ofNullable(containerConfiguration);
+            this.containerConfiguration = Output.ofNullable(containerConfiguration);
             return this;
         }
 
-        public Builder generateWorkflowFile(@Nullable Input<Boolean> generateWorkflowFile) {
+        public Builder generateWorkflowFile(@Nullable Output<Boolean> generateWorkflowFile) {
             this.generateWorkflowFile = generateWorkflowFile;
             return this;
         }
 
         public Builder generateWorkflowFile(@Nullable Boolean generateWorkflowFile) {
-            this.generateWorkflowFile = Input.ofNullable(generateWorkflowFile);
+            this.generateWorkflowFile = Output.ofNullable(generateWorkflowFile);
             return this;
         }
 
-        public Builder isLinux(@Nullable Input<Boolean> isLinux) {
+        public Builder isLinux(@Nullable Output<Boolean> isLinux) {
             this.isLinux = isLinux;
             return this;
         }
 
         public Builder isLinux(@Nullable Boolean isLinux) {
-            this.isLinux = Input.ofNullable(isLinux);
+            this.isLinux = Output.ofNullable(isLinux);
             return this;
         }
         public GitHubActionConfigurationArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.ses.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class TemplateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="htmlPart")
-      private final @Nullable Input<String> htmlPart;
+      private final @Nullable Output<String> htmlPart;
 
-    public Input<String> getHtmlPart() {
-        return this.htmlPart == null ? Input.empty() : this.htmlPart;
+    public Output<String> getHtmlPart() {
+        return this.htmlPart == null ? Output.empty() : this.htmlPart;
     }
 
     /**
@@ -34,9 +34,9 @@ public final class TemplateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="subjectPart", required=true)
-      private final Input<String> subjectPart;
+      private final Output<String> subjectPart;
 
-    public Input<String> getSubjectPart() {
+    public Output<String> getSubjectPart() {
         return this.subjectPart;
     }
 
@@ -45,10 +45,10 @@ public final class TemplateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="templateName")
-      private final @Nullable Input<String> templateName;
+      private final @Nullable Output<String> templateName;
 
-    public Input<String> getTemplateName() {
-        return this.templateName == null ? Input.empty() : this.templateName;
+    public Output<String> getTemplateName() {
+        return this.templateName == null ? Output.empty() : this.templateName;
     }
 
     /**
@@ -56,17 +56,17 @@ public final class TemplateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="textPart")
-      private final @Nullable Input<String> textPart;
+      private final @Nullable Output<String> textPart;
 
-    public Input<String> getTextPart() {
-        return this.textPart == null ? Input.empty() : this.textPart;
+    public Output<String> getTextPart() {
+        return this.textPart == null ? Output.empty() : this.textPart;
     }
 
     public TemplateArgs(
-        @Nullable Input<String> htmlPart,
-        Input<String> subjectPart,
-        @Nullable Input<String> templateName,
-        @Nullable Input<String> textPart) {
+        @Nullable Output<String> htmlPart,
+        Output<String> subjectPart,
+        @Nullable Output<String> templateName,
+        @Nullable Output<String> textPart) {
         this.htmlPart = htmlPart;
         this.subjectPart = Objects.requireNonNull(subjectPart, "expected parameter 'subjectPart' to be non-null");
         this.templateName = templateName;
@@ -74,10 +74,10 @@ public final class TemplateArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private TemplateArgs() {
-        this.htmlPart = Input.empty();
-        this.subjectPart = Input.empty();
-        this.templateName = Input.empty();
-        this.textPart = Input.empty();
+        this.htmlPart = Output.empty();
+        this.subjectPart = Output.empty();
+        this.templateName = Output.empty();
+        this.textPart = Output.empty();
     }
 
     public static Builder builder() {
@@ -89,10 +89,10 @@ public final class TemplateArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> htmlPart;
-        private Input<String> subjectPart;
-        private @Nullable Input<String> templateName;
-        private @Nullable Input<String> textPart;
+        private @Nullable Output<String> htmlPart;
+        private Output<String> subjectPart;
+        private @Nullable Output<String> templateName;
+        private @Nullable Output<String> textPart;
 
         public Builder() {
     	      // Empty
@@ -106,43 +106,43 @@ public final class TemplateArgs extends io.pulumi.resources.ResourceArgs {
     	      this.textPart = defaults.textPart;
         }
 
-        public Builder htmlPart(@Nullable Input<String> htmlPart) {
+        public Builder htmlPart(@Nullable Output<String> htmlPart) {
             this.htmlPart = htmlPart;
             return this;
         }
 
         public Builder htmlPart(@Nullable String htmlPart) {
-            this.htmlPart = Input.ofNullable(htmlPart);
+            this.htmlPart = Output.ofNullable(htmlPart);
             return this;
         }
 
-        public Builder subjectPart(Input<String> subjectPart) {
+        public Builder subjectPart(Output<String> subjectPart) {
             this.subjectPart = Objects.requireNonNull(subjectPart);
             return this;
         }
 
         public Builder subjectPart(String subjectPart) {
-            this.subjectPart = Input.of(Objects.requireNonNull(subjectPart));
+            this.subjectPart = Output.of(Objects.requireNonNull(subjectPart));
             return this;
         }
 
-        public Builder templateName(@Nullable Input<String> templateName) {
+        public Builder templateName(@Nullable Output<String> templateName) {
             this.templateName = templateName;
             return this;
         }
 
         public Builder templateName(@Nullable String templateName) {
-            this.templateName = Input.ofNullable(templateName);
+            this.templateName = Output.ofNullable(templateName);
             return this;
         }
 
-        public Builder textPart(@Nullable Input<String> textPart) {
+        public Builder textPart(@Nullable Output<String> textPart) {
             this.textPart = textPart;
             return this;
         }
 
         public Builder textPart(@Nullable String textPart) {
-            this.textPart = Input.ofNullable(textPart);
+            this.textPart = Output.ofNullable(textPart);
             return this;
         }
         public TemplateArgs build() {

@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.iotevents.inputs;
 
 import io.pulumi.awsnative.iotevents.inputs.DetectorModelStateArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -24,9 +24,9 @@ public final class DetectorModelDefinitionArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="initialStateName", required=true)
-      private final Input<String> initialStateName;
+      private final Output<String> initialStateName;
 
-    public Input<String> getInitialStateName() {
+    public Output<String> getInitialStateName() {
         return this.initialStateName;
     }
 
@@ -35,22 +35,22 @@ public final class DetectorModelDefinitionArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="states", required=true)
-      private final Input<List<DetectorModelStateArgs>> states;
+      private final Output<List<DetectorModelStateArgs>> states;
 
-    public Input<List<DetectorModelStateArgs>> getStates() {
+    public Output<List<DetectorModelStateArgs>> getStates() {
         return this.states;
     }
 
     public DetectorModelDefinitionArgs(
-        Input<String> initialStateName,
-        Input<List<DetectorModelStateArgs>> states) {
+        Output<String> initialStateName,
+        Output<List<DetectorModelStateArgs>> states) {
         this.initialStateName = Objects.requireNonNull(initialStateName, "expected parameter 'initialStateName' to be non-null");
         this.states = Objects.requireNonNull(states, "expected parameter 'states' to be non-null");
     }
 
     private DetectorModelDefinitionArgs() {
-        this.initialStateName = Input.empty();
-        this.states = Input.empty();
+        this.initialStateName = Output.empty();
+        this.states = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class DetectorModelDefinitionArgs extends io.pulumi.resources.Resou
     }
 
     public static final class Builder {
-        private Input<String> initialStateName;
-        private Input<List<DetectorModelStateArgs>> states;
+        private Output<String> initialStateName;
+        private Output<List<DetectorModelStateArgs>> states;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class DetectorModelDefinitionArgs extends io.pulumi.resources.Resou
     	      this.states = defaults.states;
         }
 
-        public Builder initialStateName(Input<String> initialStateName) {
+        public Builder initialStateName(Output<String> initialStateName) {
             this.initialStateName = Objects.requireNonNull(initialStateName);
             return this;
         }
 
         public Builder initialStateName(String initialStateName) {
-            this.initialStateName = Input.of(Objects.requireNonNull(initialStateName));
+            this.initialStateName = Output.of(Objects.requireNonNull(initialStateName));
             return this;
         }
 
-        public Builder states(Input<List<DetectorModelStateArgs>> states) {
+        public Builder states(Output<List<DetectorModelStateArgs>> states) {
             this.states = Objects.requireNonNull(states);
             return this;
         }
 
         public Builder states(List<DetectorModelStateArgs> states) {
-            this.states = Input.of(Objects.requireNonNull(states));
+            this.states = Output.of(Objects.requireNonNull(states));
             return this;
         }
         public DetectorModelDefinitionArgs build() {

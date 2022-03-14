@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.hybridnetwork.inputs;
 
 import io.pulumi.azurenative.hybridnetwork.inputs.NetworkFunctionRoleConfigurationArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
@@ -24,18 +24,18 @@ public final class NetworkFunctionTemplateArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="networkFunctionRoleConfigurations")
-      private final @Nullable Input<List<NetworkFunctionRoleConfigurationArgs>> networkFunctionRoleConfigurations;
+      private final @Nullable Output<List<NetworkFunctionRoleConfigurationArgs>> networkFunctionRoleConfigurations;
 
-    public Input<List<NetworkFunctionRoleConfigurationArgs>> getNetworkFunctionRoleConfigurations() {
-        return this.networkFunctionRoleConfigurations == null ? Input.empty() : this.networkFunctionRoleConfigurations;
+    public Output<List<NetworkFunctionRoleConfigurationArgs>> getNetworkFunctionRoleConfigurations() {
+        return this.networkFunctionRoleConfigurations == null ? Output.empty() : this.networkFunctionRoleConfigurations;
     }
 
-    public NetworkFunctionTemplateArgs(@Nullable Input<List<NetworkFunctionRoleConfigurationArgs>> networkFunctionRoleConfigurations) {
+    public NetworkFunctionTemplateArgs(@Nullable Output<List<NetworkFunctionRoleConfigurationArgs>> networkFunctionRoleConfigurations) {
         this.networkFunctionRoleConfigurations = networkFunctionRoleConfigurations;
     }
 
     private NetworkFunctionTemplateArgs() {
-        this.networkFunctionRoleConfigurations = Input.empty();
+        this.networkFunctionRoleConfigurations = Output.empty();
     }
 
     public static Builder builder() {
@@ -47,7 +47,7 @@ public final class NetworkFunctionTemplateArgs extends io.pulumi.resources.Resou
     }
 
     public static final class Builder {
-        private @Nullable Input<List<NetworkFunctionRoleConfigurationArgs>> networkFunctionRoleConfigurations;
+        private @Nullable Output<List<NetworkFunctionRoleConfigurationArgs>> networkFunctionRoleConfigurations;
 
         public Builder() {
     	      // Empty
@@ -58,13 +58,13 @@ public final class NetworkFunctionTemplateArgs extends io.pulumi.resources.Resou
     	      this.networkFunctionRoleConfigurations = defaults.networkFunctionRoleConfigurations;
         }
 
-        public Builder networkFunctionRoleConfigurations(@Nullable Input<List<NetworkFunctionRoleConfigurationArgs>> networkFunctionRoleConfigurations) {
+        public Builder networkFunctionRoleConfigurations(@Nullable Output<List<NetworkFunctionRoleConfigurationArgs>> networkFunctionRoleConfigurations) {
             this.networkFunctionRoleConfigurations = networkFunctionRoleConfigurations;
             return this;
         }
 
         public Builder networkFunctionRoleConfigurations(@Nullable List<NetworkFunctionRoleConfigurationArgs> networkFunctionRoleConfigurations) {
-            this.networkFunctionRoleConfigurations = Input.ofNullable(networkFunctionRoleConfigurations);
+            this.networkFunctionRoleConfigurations = Output.ofNullable(networkFunctionRoleConfigurations);
             return this;
         }
         public NetworkFunctionTemplateArgs build() {

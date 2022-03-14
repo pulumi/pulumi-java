@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.glue.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
@@ -19,18 +19,18 @@ public final class JobNotificationPropertyArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="notifyDelayAfter")
-      private final @Nullable Input<Integer> notifyDelayAfter;
+      private final @Nullable Output<Integer> notifyDelayAfter;
 
-    public Input<Integer> getNotifyDelayAfter() {
-        return this.notifyDelayAfter == null ? Input.empty() : this.notifyDelayAfter;
+    public Output<Integer> getNotifyDelayAfter() {
+        return this.notifyDelayAfter == null ? Output.empty() : this.notifyDelayAfter;
     }
 
-    public JobNotificationPropertyArgs(@Nullable Input<Integer> notifyDelayAfter) {
+    public JobNotificationPropertyArgs(@Nullable Output<Integer> notifyDelayAfter) {
         this.notifyDelayAfter = notifyDelayAfter;
     }
 
     private JobNotificationPropertyArgs() {
-        this.notifyDelayAfter = Input.empty();
+        this.notifyDelayAfter = Output.empty();
     }
 
     public static Builder builder() {
@@ -42,7 +42,7 @@ public final class JobNotificationPropertyArgs extends io.pulumi.resources.Resou
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> notifyDelayAfter;
+        private @Nullable Output<Integer> notifyDelayAfter;
 
         public Builder() {
     	      // Empty
@@ -53,13 +53,13 @@ public final class JobNotificationPropertyArgs extends io.pulumi.resources.Resou
     	      this.notifyDelayAfter = defaults.notifyDelayAfter;
         }
 
-        public Builder notifyDelayAfter(@Nullable Input<Integer> notifyDelayAfter) {
+        public Builder notifyDelayAfter(@Nullable Output<Integer> notifyDelayAfter) {
             this.notifyDelayAfter = notifyDelayAfter;
             return this;
         }
 
         public Builder notifyDelayAfter(@Nullable Integer notifyDelayAfter) {
-            this.notifyDelayAfter = Input.ofNullable(notifyDelayAfter);
+            this.notifyDelayAfter = Output.ofNullable(notifyDelayAfter);
             return this;
         }
         public JobNotificationPropertyArgs build() {

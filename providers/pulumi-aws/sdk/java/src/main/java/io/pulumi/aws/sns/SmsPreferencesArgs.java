@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.sns;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -20,10 +20,10 @@ public final class SmsPreferencesArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="defaultSenderId")
-      private final @Nullable Input<String> defaultSenderId;
+      private final @Nullable Output<String> defaultSenderId;
 
-    public Input<String> getDefaultSenderId() {
-        return this.defaultSenderId == null ? Input.empty() : this.defaultSenderId;
+    public Output<String> getDefaultSenderId() {
+        return this.defaultSenderId == null ? Output.empty() : this.defaultSenderId;
     }
 
     /**
@@ -31,10 +31,10 @@ public final class SmsPreferencesArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="defaultSmsType")
-      private final @Nullable Input<String> defaultSmsType;
+      private final @Nullable Output<String> defaultSmsType;
 
-    public Input<String> getDefaultSmsType() {
-        return this.defaultSmsType == null ? Input.empty() : this.defaultSmsType;
+    public Output<String> getDefaultSmsType() {
+        return this.defaultSmsType == null ? Output.empty() : this.defaultSmsType;
     }
 
     /**
@@ -42,10 +42,10 @@ public final class SmsPreferencesArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="deliveryStatusIamRoleArn")
-      private final @Nullable Input<String> deliveryStatusIamRoleArn;
+      private final @Nullable Output<String> deliveryStatusIamRoleArn;
 
-    public Input<String> getDeliveryStatusIamRoleArn() {
-        return this.deliveryStatusIamRoleArn == null ? Input.empty() : this.deliveryStatusIamRoleArn;
+    public Output<String> getDeliveryStatusIamRoleArn() {
+        return this.deliveryStatusIamRoleArn == null ? Output.empty() : this.deliveryStatusIamRoleArn;
     }
 
     /**
@@ -53,10 +53,10 @@ public final class SmsPreferencesArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="deliveryStatusSuccessSamplingRate")
-      private final @Nullable Input<String> deliveryStatusSuccessSamplingRate;
+      private final @Nullable Output<String> deliveryStatusSuccessSamplingRate;
 
-    public Input<String> getDeliveryStatusSuccessSamplingRate() {
-        return this.deliveryStatusSuccessSamplingRate == null ? Input.empty() : this.deliveryStatusSuccessSamplingRate;
+    public Output<String> getDeliveryStatusSuccessSamplingRate() {
+        return this.deliveryStatusSuccessSamplingRate == null ? Output.empty() : this.deliveryStatusSuccessSamplingRate;
     }
 
     /**
@@ -64,10 +64,10 @@ public final class SmsPreferencesArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="monthlySpendLimit")
-      private final @Nullable Input<Integer> monthlySpendLimit;
+      private final @Nullable Output<Integer> monthlySpendLimit;
 
-    public Input<Integer> getMonthlySpendLimit() {
-        return this.monthlySpendLimit == null ? Input.empty() : this.monthlySpendLimit;
+    public Output<Integer> getMonthlySpendLimit() {
+        return this.monthlySpendLimit == null ? Output.empty() : this.monthlySpendLimit;
     }
 
     /**
@@ -75,19 +75,19 @@ public final class SmsPreferencesArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="usageReportS3Bucket")
-      private final @Nullable Input<String> usageReportS3Bucket;
+      private final @Nullable Output<String> usageReportS3Bucket;
 
-    public Input<String> getUsageReportS3Bucket() {
-        return this.usageReportS3Bucket == null ? Input.empty() : this.usageReportS3Bucket;
+    public Output<String> getUsageReportS3Bucket() {
+        return this.usageReportS3Bucket == null ? Output.empty() : this.usageReportS3Bucket;
     }
 
     public SmsPreferencesArgs(
-        @Nullable Input<String> defaultSenderId,
-        @Nullable Input<String> defaultSmsType,
-        @Nullable Input<String> deliveryStatusIamRoleArn,
-        @Nullable Input<String> deliveryStatusSuccessSamplingRate,
-        @Nullable Input<Integer> monthlySpendLimit,
-        @Nullable Input<String> usageReportS3Bucket) {
+        @Nullable Output<String> defaultSenderId,
+        @Nullable Output<String> defaultSmsType,
+        @Nullable Output<String> deliveryStatusIamRoleArn,
+        @Nullable Output<String> deliveryStatusSuccessSamplingRate,
+        @Nullable Output<Integer> monthlySpendLimit,
+        @Nullable Output<String> usageReportS3Bucket) {
         this.defaultSenderId = defaultSenderId;
         this.defaultSmsType = defaultSmsType;
         this.deliveryStatusIamRoleArn = deliveryStatusIamRoleArn;
@@ -97,12 +97,12 @@ public final class SmsPreferencesArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private SmsPreferencesArgs() {
-        this.defaultSenderId = Input.empty();
-        this.defaultSmsType = Input.empty();
-        this.deliveryStatusIamRoleArn = Input.empty();
-        this.deliveryStatusSuccessSamplingRate = Input.empty();
-        this.monthlySpendLimit = Input.empty();
-        this.usageReportS3Bucket = Input.empty();
+        this.defaultSenderId = Output.empty();
+        this.defaultSmsType = Output.empty();
+        this.deliveryStatusIamRoleArn = Output.empty();
+        this.deliveryStatusSuccessSamplingRate = Output.empty();
+        this.monthlySpendLimit = Output.empty();
+        this.usageReportS3Bucket = Output.empty();
     }
 
     public static Builder builder() {
@@ -114,12 +114,12 @@ public final class SmsPreferencesArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> defaultSenderId;
-        private @Nullable Input<String> defaultSmsType;
-        private @Nullable Input<String> deliveryStatusIamRoleArn;
-        private @Nullable Input<String> deliveryStatusSuccessSamplingRate;
-        private @Nullable Input<Integer> monthlySpendLimit;
-        private @Nullable Input<String> usageReportS3Bucket;
+        private @Nullable Output<String> defaultSenderId;
+        private @Nullable Output<String> defaultSmsType;
+        private @Nullable Output<String> deliveryStatusIamRoleArn;
+        private @Nullable Output<String> deliveryStatusSuccessSamplingRate;
+        private @Nullable Output<Integer> monthlySpendLimit;
+        private @Nullable Output<String> usageReportS3Bucket;
 
         public Builder() {
     	      // Empty
@@ -135,63 +135,63 @@ public final class SmsPreferencesArgs extends io.pulumi.resources.ResourceArgs {
     	      this.usageReportS3Bucket = defaults.usageReportS3Bucket;
         }
 
-        public Builder defaultSenderId(@Nullable Input<String> defaultSenderId) {
+        public Builder defaultSenderId(@Nullable Output<String> defaultSenderId) {
             this.defaultSenderId = defaultSenderId;
             return this;
         }
 
         public Builder defaultSenderId(@Nullable String defaultSenderId) {
-            this.defaultSenderId = Input.ofNullable(defaultSenderId);
+            this.defaultSenderId = Output.ofNullable(defaultSenderId);
             return this;
         }
 
-        public Builder defaultSmsType(@Nullable Input<String> defaultSmsType) {
+        public Builder defaultSmsType(@Nullable Output<String> defaultSmsType) {
             this.defaultSmsType = defaultSmsType;
             return this;
         }
 
         public Builder defaultSmsType(@Nullable String defaultSmsType) {
-            this.defaultSmsType = Input.ofNullable(defaultSmsType);
+            this.defaultSmsType = Output.ofNullable(defaultSmsType);
             return this;
         }
 
-        public Builder deliveryStatusIamRoleArn(@Nullable Input<String> deliveryStatusIamRoleArn) {
+        public Builder deliveryStatusIamRoleArn(@Nullable Output<String> deliveryStatusIamRoleArn) {
             this.deliveryStatusIamRoleArn = deliveryStatusIamRoleArn;
             return this;
         }
 
         public Builder deliveryStatusIamRoleArn(@Nullable String deliveryStatusIamRoleArn) {
-            this.deliveryStatusIamRoleArn = Input.ofNullable(deliveryStatusIamRoleArn);
+            this.deliveryStatusIamRoleArn = Output.ofNullable(deliveryStatusIamRoleArn);
             return this;
         }
 
-        public Builder deliveryStatusSuccessSamplingRate(@Nullable Input<String> deliveryStatusSuccessSamplingRate) {
+        public Builder deliveryStatusSuccessSamplingRate(@Nullable Output<String> deliveryStatusSuccessSamplingRate) {
             this.deliveryStatusSuccessSamplingRate = deliveryStatusSuccessSamplingRate;
             return this;
         }
 
         public Builder deliveryStatusSuccessSamplingRate(@Nullable String deliveryStatusSuccessSamplingRate) {
-            this.deliveryStatusSuccessSamplingRate = Input.ofNullable(deliveryStatusSuccessSamplingRate);
+            this.deliveryStatusSuccessSamplingRate = Output.ofNullable(deliveryStatusSuccessSamplingRate);
             return this;
         }
 
-        public Builder monthlySpendLimit(@Nullable Input<Integer> monthlySpendLimit) {
+        public Builder monthlySpendLimit(@Nullable Output<Integer> monthlySpendLimit) {
             this.monthlySpendLimit = monthlySpendLimit;
             return this;
         }
 
         public Builder monthlySpendLimit(@Nullable Integer monthlySpendLimit) {
-            this.monthlySpendLimit = Input.ofNullable(monthlySpendLimit);
+            this.monthlySpendLimit = Output.ofNullable(monthlySpendLimit);
             return this;
         }
 
-        public Builder usageReportS3Bucket(@Nullable Input<String> usageReportS3Bucket) {
+        public Builder usageReportS3Bucket(@Nullable Output<String> usageReportS3Bucket) {
             this.usageReportS3Bucket = usageReportS3Bucket;
             return this;
         }
 
         public Builder usageReportS3Bucket(@Nullable String usageReportS3Bucket) {
-            this.usageReportS3Bucket = Input.ofNullable(usageReportS3Bucket);
+            this.usageReportS3Bucket = Output.ofNullable(usageReportS3Bucket);
             return this;
         }
         public SmsPreferencesArgs build() {

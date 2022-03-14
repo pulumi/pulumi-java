@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.apimanagement.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -25,10 +25,10 @@ public final class ParameterContractArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="defaultValue")
-      private final @Nullable Input<String> defaultValue;
+      private final @Nullable Output<String> defaultValue;
 
-    public Input<String> getDefaultValue() {
-        return this.defaultValue == null ? Input.empty() : this.defaultValue;
+    public Output<String> getDefaultValue() {
+        return this.defaultValue == null ? Output.empty() : this.defaultValue;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class ParameterContractArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -47,9 +47,9 @@ public final class ParameterContractArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="name", required=true)
-      private final Input<String> name;
+      private final Output<String> name;
 
-    public Input<String> getName() {
+    public Output<String> getName() {
         return this.name;
     }
 
@@ -58,10 +58,10 @@ public final class ParameterContractArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="required")
-      private final @Nullable Input<Boolean> required;
+      private final @Nullable Output<Boolean> required;
 
-    public Input<Boolean> getRequired() {
-        return this.required == null ? Input.empty() : this.required;
+    public Output<Boolean> getRequired() {
+        return this.required == null ? Output.empty() : this.required;
     }
 
     /**
@@ -69,9 +69,9 @@ public final class ParameterContractArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<String> type;
+      private final Output<String> type;
 
-    public Input<String> getType() {
+    public Output<String> getType() {
         return this.type;
     }
 
@@ -80,19 +80,19 @@ public final class ParameterContractArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="values")
-      private final @Nullable Input<List<String>> values;
+      private final @Nullable Output<List<String>> values;
 
-    public Input<List<String>> getValues() {
-        return this.values == null ? Input.empty() : this.values;
+    public Output<List<String>> getValues() {
+        return this.values == null ? Output.empty() : this.values;
     }
 
     public ParameterContractArgs(
-        @Nullable Input<String> defaultValue,
-        @Nullable Input<String> description,
-        Input<String> name,
-        @Nullable Input<Boolean> required,
-        Input<String> type,
-        @Nullable Input<List<String>> values) {
+        @Nullable Output<String> defaultValue,
+        @Nullable Output<String> description,
+        Output<String> name,
+        @Nullable Output<Boolean> required,
+        Output<String> type,
+        @Nullable Output<List<String>> values) {
         this.defaultValue = defaultValue;
         this.description = description;
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
@@ -102,12 +102,12 @@ public final class ParameterContractArgs extends io.pulumi.resources.ResourceArg
     }
 
     private ParameterContractArgs() {
-        this.defaultValue = Input.empty();
-        this.description = Input.empty();
-        this.name = Input.empty();
-        this.required = Input.empty();
-        this.type = Input.empty();
-        this.values = Input.empty();
+        this.defaultValue = Output.empty();
+        this.description = Output.empty();
+        this.name = Output.empty();
+        this.required = Output.empty();
+        this.type = Output.empty();
+        this.values = Output.empty();
     }
 
     public static Builder builder() {
@@ -119,12 +119,12 @@ public final class ParameterContractArgs extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private @Nullable Input<String> defaultValue;
-        private @Nullable Input<String> description;
-        private Input<String> name;
-        private @Nullable Input<Boolean> required;
-        private Input<String> type;
-        private @Nullable Input<List<String>> values;
+        private @Nullable Output<String> defaultValue;
+        private @Nullable Output<String> description;
+        private Output<String> name;
+        private @Nullable Output<Boolean> required;
+        private Output<String> type;
+        private @Nullable Output<List<String>> values;
 
         public Builder() {
     	      // Empty
@@ -140,63 +140,63 @@ public final class ParameterContractArgs extends io.pulumi.resources.ResourceArg
     	      this.values = defaults.values;
         }
 
-        public Builder defaultValue(@Nullable Input<String> defaultValue) {
+        public Builder defaultValue(@Nullable Output<String> defaultValue) {
             this.defaultValue = defaultValue;
             return this;
         }
 
         public Builder defaultValue(@Nullable String defaultValue) {
-            this.defaultValue = Input.ofNullable(defaultValue);
+            this.defaultValue = Output.ofNullable(defaultValue);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder name(Input<String> name) {
+        public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(String name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder required(@Nullable Input<Boolean> required) {
+        public Builder required(@Nullable Output<Boolean> required) {
             this.required = required;
             return this;
         }
 
         public Builder required(@Nullable Boolean required) {
-            this.required = Input.ofNullable(required);
+            this.required = Output.ofNullable(required);
             return this;
         }
 
-        public Builder type(Input<String> type) {
+        public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(String type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
 
-        public Builder values(@Nullable Input<List<String>> values) {
+        public Builder values(@Nullable Output<List<String>> values) {
             this.values = values;
             return this;
         }
 
         public Builder values(@Nullable List<String> values) {
-            this.values = Input.ofNullable(values);
+            this.values = Output.ofNullable(values);
             return this;
         }
         public ParameterContractArgs build() {

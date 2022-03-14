@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.efs.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class FileSystemLifecyclePolicyGetArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="transitionToIa")
-      private final @Nullable Input<String> transitionToIa;
+      private final @Nullable Output<String> transitionToIa;
 
-    public Input<String> getTransitionToIa() {
-        return this.transitionToIa == null ? Input.empty() : this.transitionToIa;
+    public Output<String> getTransitionToIa() {
+        return this.transitionToIa == null ? Output.empty() : this.transitionToIa;
     }
 
     /**
@@ -30,22 +30,22 @@ public final class FileSystemLifecyclePolicyGetArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="transitionToPrimaryStorageClass")
-      private final @Nullable Input<String> transitionToPrimaryStorageClass;
+      private final @Nullable Output<String> transitionToPrimaryStorageClass;
 
-    public Input<String> getTransitionToPrimaryStorageClass() {
-        return this.transitionToPrimaryStorageClass == null ? Input.empty() : this.transitionToPrimaryStorageClass;
+    public Output<String> getTransitionToPrimaryStorageClass() {
+        return this.transitionToPrimaryStorageClass == null ? Output.empty() : this.transitionToPrimaryStorageClass;
     }
 
     public FileSystemLifecyclePolicyGetArgs(
-        @Nullable Input<String> transitionToIa,
-        @Nullable Input<String> transitionToPrimaryStorageClass) {
+        @Nullable Output<String> transitionToIa,
+        @Nullable Output<String> transitionToPrimaryStorageClass) {
         this.transitionToIa = transitionToIa;
         this.transitionToPrimaryStorageClass = transitionToPrimaryStorageClass;
     }
 
     private FileSystemLifecyclePolicyGetArgs() {
-        this.transitionToIa = Input.empty();
-        this.transitionToPrimaryStorageClass = Input.empty();
+        this.transitionToIa = Output.empty();
+        this.transitionToPrimaryStorageClass = Output.empty();
     }
 
     public static Builder builder() {
@@ -57,8 +57,8 @@ public final class FileSystemLifecyclePolicyGetArgs extends io.pulumi.resources.
     }
 
     public static final class Builder {
-        private @Nullable Input<String> transitionToIa;
-        private @Nullable Input<String> transitionToPrimaryStorageClass;
+        private @Nullable Output<String> transitionToIa;
+        private @Nullable Output<String> transitionToPrimaryStorageClass;
 
         public Builder() {
     	      // Empty
@@ -70,23 +70,23 @@ public final class FileSystemLifecyclePolicyGetArgs extends io.pulumi.resources.
     	      this.transitionToPrimaryStorageClass = defaults.transitionToPrimaryStorageClass;
         }
 
-        public Builder transitionToIa(@Nullable Input<String> transitionToIa) {
+        public Builder transitionToIa(@Nullable Output<String> transitionToIa) {
             this.transitionToIa = transitionToIa;
             return this;
         }
 
         public Builder transitionToIa(@Nullable String transitionToIa) {
-            this.transitionToIa = Input.ofNullable(transitionToIa);
+            this.transitionToIa = Output.ofNullable(transitionToIa);
             return this;
         }
 
-        public Builder transitionToPrimaryStorageClass(@Nullable Input<String> transitionToPrimaryStorageClass) {
+        public Builder transitionToPrimaryStorageClass(@Nullable Output<String> transitionToPrimaryStorageClass) {
             this.transitionToPrimaryStorageClass = transitionToPrimaryStorageClass;
             return this;
         }
 
         public Builder transitionToPrimaryStorageClass(@Nullable String transitionToPrimaryStorageClass) {
-            this.transitionToPrimaryStorageClass = Input.ofNullable(transitionToPrimaryStorageClass);
+            this.transitionToPrimaryStorageClass = Output.ofNullable(transitionToPrimaryStorageClass);
             return this;
         }
         public FileSystemLifecyclePolicyGetArgs build() {

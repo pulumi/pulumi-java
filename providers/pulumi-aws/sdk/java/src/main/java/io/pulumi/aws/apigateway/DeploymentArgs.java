@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.apigateway;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -20,10 +20,10 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -31,9 +31,9 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="restApi", required=true)
-      private final Input<String> restApi;
+      private final Output<String> restApi;
 
-    public Input<String> getRestApi() {
+    public Output<String> getRestApi() {
         return this.restApi;
     }
 
@@ -42,10 +42,10 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="stageDescription")
-      private final @Nullable Input<String> stageDescription;
+      private final @Nullable Output<String> stageDescription;
 
-    public Input<String> getStageDescription() {
-        return this.stageDescription == null ? Input.empty() : this.stageDescription;
+    public Output<String> getStageDescription() {
+        return this.stageDescription == null ? Output.empty() : this.stageDescription;
     }
 
     /**
@@ -53,10 +53,10 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="stageName")
-      private final @Nullable Input<String> stageName;
+      private final @Nullable Output<String> stageName;
 
-    public Input<String> getStageName() {
-        return this.stageName == null ? Input.empty() : this.stageName;
+    public Output<String> getStageName() {
+        return this.stageName == null ? Output.empty() : this.stageName;
     }
 
     /**
@@ -64,10 +64,10 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="triggers")
-      private final @Nullable Input<Map<String,String>> triggers;
+      private final @Nullable Output<Map<String,String>> triggers;
 
-    public Input<Map<String,String>> getTriggers() {
-        return this.triggers == null ? Input.empty() : this.triggers;
+    public Output<Map<String,String>> getTriggers() {
+        return this.triggers == null ? Output.empty() : this.triggers;
     }
 
     /**
@@ -75,19 +75,19 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="variables")
-      private final @Nullable Input<Map<String,String>> variables;
+      private final @Nullable Output<Map<String,String>> variables;
 
-    public Input<Map<String,String>> getVariables() {
-        return this.variables == null ? Input.empty() : this.variables;
+    public Output<Map<String,String>> getVariables() {
+        return this.variables == null ? Output.empty() : this.variables;
     }
 
     public DeploymentArgs(
-        @Nullable Input<String> description,
-        Input<String> restApi,
-        @Nullable Input<String> stageDescription,
-        @Nullable Input<String> stageName,
-        @Nullable Input<Map<String,String>> triggers,
-        @Nullable Input<Map<String,String>> variables) {
+        @Nullable Output<String> description,
+        Output<String> restApi,
+        @Nullable Output<String> stageDescription,
+        @Nullable Output<String> stageName,
+        @Nullable Output<Map<String,String>> triggers,
+        @Nullable Output<Map<String,String>> variables) {
         this.description = description;
         this.restApi = Objects.requireNonNull(restApi, "expected parameter 'restApi' to be non-null");
         this.stageDescription = stageDescription;
@@ -97,12 +97,12 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DeploymentArgs() {
-        this.description = Input.empty();
-        this.restApi = Input.empty();
-        this.stageDescription = Input.empty();
-        this.stageName = Input.empty();
-        this.triggers = Input.empty();
-        this.variables = Input.empty();
+        this.description = Output.empty();
+        this.restApi = Output.empty();
+        this.stageDescription = Output.empty();
+        this.stageName = Output.empty();
+        this.triggers = Output.empty();
+        this.variables = Output.empty();
     }
 
     public static Builder builder() {
@@ -114,12 +114,12 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> description;
-        private Input<String> restApi;
-        private @Nullable Input<String> stageDescription;
-        private @Nullable Input<String> stageName;
-        private @Nullable Input<Map<String,String>> triggers;
-        private @Nullable Input<Map<String,String>> variables;
+        private @Nullable Output<String> description;
+        private Output<String> restApi;
+        private @Nullable Output<String> stageDescription;
+        private @Nullable Output<String> stageName;
+        private @Nullable Output<Map<String,String>> triggers;
+        private @Nullable Output<Map<String,String>> variables;
 
         public Builder() {
     	      // Empty
@@ -135,58 +135,58 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
     	      this.variables = defaults.variables;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder restApi(Input<String> restApi) {
+        public Builder restApi(Output<String> restApi) {
             this.restApi = Objects.requireNonNull(restApi);
             return this;
         }
 
-        public Builder stageDescription(@Nullable Input<String> stageDescription) {
+        public Builder stageDescription(@Nullable Output<String> stageDescription) {
             this.stageDescription = stageDescription;
             return this;
         }
 
         public Builder stageDescription(@Nullable String stageDescription) {
-            this.stageDescription = Input.ofNullable(stageDescription);
+            this.stageDescription = Output.ofNullable(stageDescription);
             return this;
         }
 
-        public Builder stageName(@Nullable Input<String> stageName) {
+        public Builder stageName(@Nullable Output<String> stageName) {
             this.stageName = stageName;
             return this;
         }
 
         public Builder stageName(@Nullable String stageName) {
-            this.stageName = Input.ofNullable(stageName);
+            this.stageName = Output.ofNullable(stageName);
             return this;
         }
 
-        public Builder triggers(@Nullable Input<Map<String,String>> triggers) {
+        public Builder triggers(@Nullable Output<Map<String,String>> triggers) {
             this.triggers = triggers;
             return this;
         }
 
         public Builder triggers(@Nullable Map<String,String> triggers) {
-            this.triggers = Input.ofNullable(triggers);
+            this.triggers = Output.ofNullable(triggers);
             return this;
         }
 
-        public Builder variables(@Nullable Input<Map<String,String>> variables) {
+        public Builder variables(@Nullable Output<Map<String,String>> variables) {
             this.variables = variables;
             return this;
         }
 
         public Builder variables(@Nullable Map<String,String> variables) {
-            this.variables = Input.ofNullable(variables);
+            this.variables = Output.ofNullable(variables);
             return this;
         }
         public DeploymentArgs build() {

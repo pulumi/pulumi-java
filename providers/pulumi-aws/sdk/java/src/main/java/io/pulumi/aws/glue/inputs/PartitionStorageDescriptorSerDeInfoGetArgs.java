@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.glue.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -20,10 +20,10 @@ public final class PartitionStorageDescriptorSerDeInfoGetArgs extends io.pulumi.
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -31,10 +31,10 @@ public final class PartitionStorageDescriptorSerDeInfoGetArgs extends io.pulumi.
      * 
      */
     @InputImport(name="parameters")
-      private final @Nullable Input<Map<String,String>> parameters;
+      private final @Nullable Output<Map<String,String>> parameters;
 
-    public Input<Map<String,String>> getParameters() {
-        return this.parameters == null ? Input.empty() : this.parameters;
+    public Output<Map<String,String>> getParameters() {
+        return this.parameters == null ? Output.empty() : this.parameters;
     }
 
     /**
@@ -42,25 +42,25 @@ public final class PartitionStorageDescriptorSerDeInfoGetArgs extends io.pulumi.
      * 
      */
     @InputImport(name="serializationLibrary")
-      private final @Nullable Input<String> serializationLibrary;
+      private final @Nullable Output<String> serializationLibrary;
 
-    public Input<String> getSerializationLibrary() {
-        return this.serializationLibrary == null ? Input.empty() : this.serializationLibrary;
+    public Output<String> getSerializationLibrary() {
+        return this.serializationLibrary == null ? Output.empty() : this.serializationLibrary;
     }
 
     public PartitionStorageDescriptorSerDeInfoGetArgs(
-        @Nullable Input<String> name,
-        @Nullable Input<Map<String,String>> parameters,
-        @Nullable Input<String> serializationLibrary) {
+        @Nullable Output<String> name,
+        @Nullable Output<Map<String,String>> parameters,
+        @Nullable Output<String> serializationLibrary) {
         this.name = name;
         this.parameters = parameters;
         this.serializationLibrary = serializationLibrary;
     }
 
     private PartitionStorageDescriptorSerDeInfoGetArgs() {
-        this.name = Input.empty();
-        this.parameters = Input.empty();
-        this.serializationLibrary = Input.empty();
+        this.name = Output.empty();
+        this.parameters = Output.empty();
+        this.serializationLibrary = Output.empty();
     }
 
     public static Builder builder() {
@@ -72,9 +72,9 @@ public final class PartitionStorageDescriptorSerDeInfoGetArgs extends io.pulumi.
     }
 
     public static final class Builder {
-        private @Nullable Input<String> name;
-        private @Nullable Input<Map<String,String>> parameters;
-        private @Nullable Input<String> serializationLibrary;
+        private @Nullable Output<String> name;
+        private @Nullable Output<Map<String,String>> parameters;
+        private @Nullable Output<String> serializationLibrary;
 
         public Builder() {
     	      // Empty
@@ -87,33 +87,33 @@ public final class PartitionStorageDescriptorSerDeInfoGetArgs extends io.pulumi.
     	      this.serializationLibrary = defaults.serializationLibrary;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder parameters(@Nullable Input<Map<String,String>> parameters) {
+        public Builder parameters(@Nullable Output<Map<String,String>> parameters) {
             this.parameters = parameters;
             return this;
         }
 
         public Builder parameters(@Nullable Map<String,String> parameters) {
-            this.parameters = Input.ofNullable(parameters);
+            this.parameters = Output.ofNullable(parameters);
             return this;
         }
 
-        public Builder serializationLibrary(@Nullable Input<String> serializationLibrary) {
+        public Builder serializationLibrary(@Nullable Output<String> serializationLibrary) {
             this.serializationLibrary = serializationLibrary;
             return this;
         }
 
         public Builder serializationLibrary(@Nullable String serializationLibrary) {
-            this.serializationLibrary = Input.ofNullable(serializationLibrary);
+            this.serializationLibrary = Output.ofNullable(serializationLibrary);
             return this;
         }
         public PartitionStorageDescriptorSerDeInfoGetArgs build() {

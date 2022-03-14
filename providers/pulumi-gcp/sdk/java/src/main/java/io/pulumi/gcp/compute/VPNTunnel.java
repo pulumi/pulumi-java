@@ -3,7 +3,6 @@
 
 package io.pulumi.gcp.compute;
 
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -461,14 +460,14 @@ public class VPNTunnel extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public VPNTunnel(String name, VPNTunnelArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:compute/vPNTunnel:VPNTunnel", name, args == null ? VPNTunnelArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("gcp:compute/vPNTunnel:VPNTunnel", name, args == null ? VPNTunnelArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private VPNTunnel(String name, Input<String> id, @Nullable VPNTunnelState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private VPNTunnel(String name, Output<String> id, @Nullable VPNTunnelState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("gcp:compute/vPNTunnel:VPNTunnel", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -484,7 +483,7 @@ public class VPNTunnel extends io.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static VPNTunnel get(String name, Input<String> id, @Nullable VPNTunnelState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static VPNTunnel get(String name, Output<String> id, @Nullable VPNTunnelState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new VPNTunnel(name, id, state, options);
     }
 }

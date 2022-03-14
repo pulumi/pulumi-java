@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.ml_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class GoogleCloudMlV1__SchedulingArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="maxRunningTime")
-      private final @Nullable Input<String> maxRunningTime;
+      private final @Nullable Output<String> maxRunningTime;
 
-    public Input<String> getMaxRunningTime() {
-        return this.maxRunningTime == null ? Input.empty() : this.maxRunningTime;
+    public Output<String> getMaxRunningTime() {
+        return this.maxRunningTime == null ? Output.empty() : this.maxRunningTime;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class GoogleCloudMlV1__SchedulingArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="maxWaitTime")
-      private final @Nullable Input<String> maxWaitTime;
+      private final @Nullable Output<String> maxWaitTime;
 
-    public Input<String> getMaxWaitTime() {
-        return this.maxWaitTime == null ? Input.empty() : this.maxWaitTime;
+    public Output<String> getMaxWaitTime() {
+        return this.maxWaitTime == null ? Output.empty() : this.maxWaitTime;
     }
 
     /**
@@ -46,25 +46,25 @@ public final class GoogleCloudMlV1__SchedulingArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="priority")
-      private final @Nullable Input<Integer> priority;
+      private final @Nullable Output<Integer> priority;
 
-    public Input<Integer> getPriority() {
-        return this.priority == null ? Input.empty() : this.priority;
+    public Output<Integer> getPriority() {
+        return this.priority == null ? Output.empty() : this.priority;
     }
 
     public GoogleCloudMlV1__SchedulingArgs(
-        @Nullable Input<String> maxRunningTime,
-        @Nullable Input<String> maxWaitTime,
-        @Nullable Input<Integer> priority) {
+        @Nullable Output<String> maxRunningTime,
+        @Nullable Output<String> maxWaitTime,
+        @Nullable Output<Integer> priority) {
         this.maxRunningTime = maxRunningTime;
         this.maxWaitTime = maxWaitTime;
         this.priority = priority;
     }
 
     private GoogleCloudMlV1__SchedulingArgs() {
-        this.maxRunningTime = Input.empty();
-        this.maxWaitTime = Input.empty();
-        this.priority = Input.empty();
+        this.maxRunningTime = Output.empty();
+        this.maxWaitTime = Output.empty();
+        this.priority = Output.empty();
     }
 
     public static Builder builder() {
@@ -76,9 +76,9 @@ public final class GoogleCloudMlV1__SchedulingArgs extends io.pulumi.resources.R
     }
 
     public static final class Builder {
-        private @Nullable Input<String> maxRunningTime;
-        private @Nullable Input<String> maxWaitTime;
-        private @Nullable Input<Integer> priority;
+        private @Nullable Output<String> maxRunningTime;
+        private @Nullable Output<String> maxWaitTime;
+        private @Nullable Output<Integer> priority;
 
         public Builder() {
     	      // Empty
@@ -91,33 +91,33 @@ public final class GoogleCloudMlV1__SchedulingArgs extends io.pulumi.resources.R
     	      this.priority = defaults.priority;
         }
 
-        public Builder maxRunningTime(@Nullable Input<String> maxRunningTime) {
+        public Builder maxRunningTime(@Nullable Output<String> maxRunningTime) {
             this.maxRunningTime = maxRunningTime;
             return this;
         }
 
         public Builder maxRunningTime(@Nullable String maxRunningTime) {
-            this.maxRunningTime = Input.ofNullable(maxRunningTime);
+            this.maxRunningTime = Output.ofNullable(maxRunningTime);
             return this;
         }
 
-        public Builder maxWaitTime(@Nullable Input<String> maxWaitTime) {
+        public Builder maxWaitTime(@Nullable Output<String> maxWaitTime) {
             this.maxWaitTime = maxWaitTime;
             return this;
         }
 
         public Builder maxWaitTime(@Nullable String maxWaitTime) {
-            this.maxWaitTime = Input.ofNullable(maxWaitTime);
+            this.maxWaitTime = Output.ofNullable(maxWaitTime);
             return this;
         }
 
-        public Builder priority(@Nullable Input<Integer> priority) {
+        public Builder priority(@Nullable Output<Integer> priority) {
             this.priority = priority;
             return this;
         }
 
         public Builder priority(@Nullable Integer priority) {
-            this.priority = Input.ofNullable(priority);
+            this.priority = Output.ofNullable(priority);
             return this;
         }
         public GoogleCloudMlV1__SchedulingArgs build() {

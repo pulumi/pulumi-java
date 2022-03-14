@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.apigee.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class EnvironmentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -30,10 +30,10 @@ public final class EnvironmentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName")
-      private final @Nullable Input<String> displayName;
+      private final @Nullable Output<String> displayName;
 
-    public Input<String> getDisplayName() {
-        return this.displayName == null ? Input.empty() : this.displayName;
+    public Output<String> getDisplayName() {
+        return this.displayName == null ? Output.empty() : this.displayName;
     }
 
     /**
@@ -41,10 +41,10 @@ public final class EnvironmentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -53,17 +53,17 @@ public final class EnvironmentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="orgId")
-      private final @Nullable Input<String> orgId;
+      private final @Nullable Output<String> orgId;
 
-    public Input<String> getOrgId() {
-        return this.orgId == null ? Input.empty() : this.orgId;
+    public Output<String> getOrgId() {
+        return this.orgId == null ? Output.empty() : this.orgId;
     }
 
     public EnvironmentState(
-        @Nullable Input<String> description,
-        @Nullable Input<String> displayName,
-        @Nullable Input<String> name,
-        @Nullable Input<String> orgId) {
+        @Nullable Output<String> description,
+        @Nullable Output<String> displayName,
+        @Nullable Output<String> name,
+        @Nullable Output<String> orgId) {
         this.description = description;
         this.displayName = displayName;
         this.name = name;
@@ -71,10 +71,10 @@ public final class EnvironmentState extends io.pulumi.resources.ResourceArgs {
     }
 
     private EnvironmentState() {
-        this.description = Input.empty();
-        this.displayName = Input.empty();
-        this.name = Input.empty();
-        this.orgId = Input.empty();
+        this.description = Output.empty();
+        this.displayName = Output.empty();
+        this.name = Output.empty();
+        this.orgId = Output.empty();
     }
 
     public static Builder builder() {
@@ -86,10 +86,10 @@ public final class EnvironmentState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> description;
-        private @Nullable Input<String> displayName;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> orgId;
+        private @Nullable Output<String> description;
+        private @Nullable Output<String> displayName;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> orgId;
 
         public Builder() {
     	      // Empty
@@ -103,43 +103,43 @@ public final class EnvironmentState extends io.pulumi.resources.ResourceArgs {
     	      this.orgId = defaults.orgId;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder displayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Input.ofNullable(displayName);
+            this.displayName = Output.ofNullable(displayName);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder orgId(@Nullable Input<String> orgId) {
+        public Builder orgId(@Nullable Output<String> orgId) {
             this.orgId = orgId;
             return this;
         }
 
         public Builder orgId(@Nullable String orgId) {
-            this.orgId = Input.ofNullable(orgId);
+            this.orgId = Output.ofNullable(orgId);
             return this;
         }
         public EnvironmentState build() {

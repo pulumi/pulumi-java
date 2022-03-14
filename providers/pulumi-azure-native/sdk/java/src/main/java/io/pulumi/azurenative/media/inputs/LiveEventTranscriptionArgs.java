@@ -5,7 +5,7 @@ package io.pulumi.azurenative.media.inputs;
 
 import io.pulumi.azurenative.media.inputs.LiveEventInputTrackSelectionArgs;
 import io.pulumi.azurenative.media.inputs.LiveEventOutputTranscriptionTrackArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -26,10 +26,10 @@ public final class LiveEventTranscriptionArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="inputTrackSelection")
-      private final @Nullable Input<List<LiveEventInputTrackSelectionArgs>> inputTrackSelection;
+      private final @Nullable Output<List<LiveEventInputTrackSelectionArgs>> inputTrackSelection;
 
-    public Input<List<LiveEventInputTrackSelectionArgs>> getInputTrackSelection() {
-        return this.inputTrackSelection == null ? Input.empty() : this.inputTrackSelection;
+    public Output<List<LiveEventInputTrackSelectionArgs>> getInputTrackSelection() {
+        return this.inputTrackSelection == null ? Output.empty() : this.inputTrackSelection;
     }
 
     /**
@@ -37,10 +37,10 @@ public final class LiveEventTranscriptionArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="language")
-      private final @Nullable Input<String> language;
+      private final @Nullable Output<String> language;
 
-    public Input<String> getLanguage() {
-        return this.language == null ? Input.empty() : this.language;
+    public Output<String> getLanguage() {
+        return this.language == null ? Output.empty() : this.language;
     }
 
     /**
@@ -48,25 +48,25 @@ public final class LiveEventTranscriptionArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="outputTranscriptionTrack")
-      private final @Nullable Input<LiveEventOutputTranscriptionTrackArgs> outputTranscriptionTrack;
+      private final @Nullable Output<LiveEventOutputTranscriptionTrackArgs> outputTranscriptionTrack;
 
-    public Input<LiveEventOutputTranscriptionTrackArgs> getOutputTranscriptionTrack() {
-        return this.outputTranscriptionTrack == null ? Input.empty() : this.outputTranscriptionTrack;
+    public Output<LiveEventOutputTranscriptionTrackArgs> getOutputTranscriptionTrack() {
+        return this.outputTranscriptionTrack == null ? Output.empty() : this.outputTranscriptionTrack;
     }
 
     public LiveEventTranscriptionArgs(
-        @Nullable Input<List<LiveEventInputTrackSelectionArgs>> inputTrackSelection,
-        @Nullable Input<String> language,
-        @Nullable Input<LiveEventOutputTranscriptionTrackArgs> outputTranscriptionTrack) {
+        @Nullable Output<List<LiveEventInputTrackSelectionArgs>> inputTrackSelection,
+        @Nullable Output<String> language,
+        @Nullable Output<LiveEventOutputTranscriptionTrackArgs> outputTranscriptionTrack) {
         this.inputTrackSelection = inputTrackSelection;
         this.language = language;
         this.outputTranscriptionTrack = outputTranscriptionTrack;
     }
 
     private LiveEventTranscriptionArgs() {
-        this.inputTrackSelection = Input.empty();
-        this.language = Input.empty();
-        this.outputTranscriptionTrack = Input.empty();
+        this.inputTrackSelection = Output.empty();
+        this.language = Output.empty();
+        this.outputTranscriptionTrack = Output.empty();
     }
 
     public static Builder builder() {
@@ -78,9 +78,9 @@ public final class LiveEventTranscriptionArgs extends io.pulumi.resources.Resour
     }
 
     public static final class Builder {
-        private @Nullable Input<List<LiveEventInputTrackSelectionArgs>> inputTrackSelection;
-        private @Nullable Input<String> language;
-        private @Nullable Input<LiveEventOutputTranscriptionTrackArgs> outputTranscriptionTrack;
+        private @Nullable Output<List<LiveEventInputTrackSelectionArgs>> inputTrackSelection;
+        private @Nullable Output<String> language;
+        private @Nullable Output<LiveEventOutputTranscriptionTrackArgs> outputTranscriptionTrack;
 
         public Builder() {
     	      // Empty
@@ -93,33 +93,33 @@ public final class LiveEventTranscriptionArgs extends io.pulumi.resources.Resour
     	      this.outputTranscriptionTrack = defaults.outputTranscriptionTrack;
         }
 
-        public Builder inputTrackSelection(@Nullable Input<List<LiveEventInputTrackSelectionArgs>> inputTrackSelection) {
+        public Builder inputTrackSelection(@Nullable Output<List<LiveEventInputTrackSelectionArgs>> inputTrackSelection) {
             this.inputTrackSelection = inputTrackSelection;
             return this;
         }
 
         public Builder inputTrackSelection(@Nullable List<LiveEventInputTrackSelectionArgs> inputTrackSelection) {
-            this.inputTrackSelection = Input.ofNullable(inputTrackSelection);
+            this.inputTrackSelection = Output.ofNullable(inputTrackSelection);
             return this;
         }
 
-        public Builder language(@Nullable Input<String> language) {
+        public Builder language(@Nullable Output<String> language) {
             this.language = language;
             return this;
         }
 
         public Builder language(@Nullable String language) {
-            this.language = Input.ofNullable(language);
+            this.language = Output.ofNullable(language);
             return this;
         }
 
-        public Builder outputTranscriptionTrack(@Nullable Input<LiveEventOutputTranscriptionTrackArgs> outputTranscriptionTrack) {
+        public Builder outputTranscriptionTrack(@Nullable Output<LiveEventOutputTranscriptionTrackArgs> outputTranscriptionTrack) {
             this.outputTranscriptionTrack = outputTranscriptionTrack;
             return this;
         }
 
         public Builder outputTranscriptionTrack(@Nullable LiveEventOutputTranscriptionTrackArgs outputTranscriptionTrack) {
-            this.outputTranscriptionTrack = Input.ofNullable(outputTranscriptionTrack);
+            this.outputTranscriptionTrack = Output.ofNullable(outputTranscriptionTrack);
             return this;
         }
         public LiveEventTranscriptionArgs build() {

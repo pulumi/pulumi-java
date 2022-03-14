@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.databrew.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class RulesetColumnSelectorArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -34,22 +34,22 @@ public final class RulesetColumnSelectorArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="regex")
-      private final @Nullable Input<String> regex;
+      private final @Nullable Output<String> regex;
 
-    public Input<String> getRegex() {
-        return this.regex == null ? Input.empty() : this.regex;
+    public Output<String> getRegex() {
+        return this.regex == null ? Output.empty() : this.regex;
     }
 
     public RulesetColumnSelectorArgs(
-        @Nullable Input<String> name,
-        @Nullable Input<String> regex) {
+        @Nullable Output<String> name,
+        @Nullable Output<String> regex) {
         this.name = name;
         this.regex = regex;
     }
 
     private RulesetColumnSelectorArgs() {
-        this.name = Input.empty();
-        this.regex = Input.empty();
+        this.name = Output.empty();
+        this.regex = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class RulesetColumnSelectorArgs extends io.pulumi.resources.Resourc
     }
 
     public static final class Builder {
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> regex;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> regex;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class RulesetColumnSelectorArgs extends io.pulumi.resources.Resourc
     	      this.regex = defaults.regex;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder regex(@Nullable Input<String> regex) {
+        public Builder regex(@Nullable Output<String> regex) {
             this.regex = regex;
             return this;
         }
 
         public Builder regex(@Nullable String regex) {
-            this.regex = Input.ofNullable(regex);
+            this.regex = Output.ofNullable(regex);
             return this;
         }
         public RulesetColumnSelectorArgs build() {

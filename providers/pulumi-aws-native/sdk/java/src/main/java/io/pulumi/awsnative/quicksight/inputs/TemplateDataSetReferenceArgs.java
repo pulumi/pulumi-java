@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.quicksight.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -22,9 +22,9 @@ public final class TemplateDataSetReferenceArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="dataSetArn", required=true)
-      private final Input<String> dataSetArn;
+      private final Output<String> dataSetArn;
 
-    public Input<String> getDataSetArn() {
+    public Output<String> getDataSetArn() {
         return this.dataSetArn;
     }
 
@@ -33,22 +33,22 @@ public final class TemplateDataSetReferenceArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="dataSetPlaceholder", required=true)
-      private final Input<String> dataSetPlaceholder;
+      private final Output<String> dataSetPlaceholder;
 
-    public Input<String> getDataSetPlaceholder() {
+    public Output<String> getDataSetPlaceholder() {
         return this.dataSetPlaceholder;
     }
 
     public TemplateDataSetReferenceArgs(
-        Input<String> dataSetArn,
-        Input<String> dataSetPlaceholder) {
+        Output<String> dataSetArn,
+        Output<String> dataSetPlaceholder) {
         this.dataSetArn = Objects.requireNonNull(dataSetArn, "expected parameter 'dataSetArn' to be non-null");
         this.dataSetPlaceholder = Objects.requireNonNull(dataSetPlaceholder, "expected parameter 'dataSetPlaceholder' to be non-null");
     }
 
     private TemplateDataSetReferenceArgs() {
-        this.dataSetArn = Input.empty();
-        this.dataSetPlaceholder = Input.empty();
+        this.dataSetArn = Output.empty();
+        this.dataSetPlaceholder = Output.empty();
     }
 
     public static Builder builder() {
@@ -60,8 +60,8 @@ public final class TemplateDataSetReferenceArgs extends io.pulumi.resources.Reso
     }
 
     public static final class Builder {
-        private Input<String> dataSetArn;
-        private Input<String> dataSetPlaceholder;
+        private Output<String> dataSetArn;
+        private Output<String> dataSetPlaceholder;
 
         public Builder() {
     	      // Empty
@@ -73,23 +73,23 @@ public final class TemplateDataSetReferenceArgs extends io.pulumi.resources.Reso
     	      this.dataSetPlaceholder = defaults.dataSetPlaceholder;
         }
 
-        public Builder dataSetArn(Input<String> dataSetArn) {
+        public Builder dataSetArn(Output<String> dataSetArn) {
             this.dataSetArn = Objects.requireNonNull(dataSetArn);
             return this;
         }
 
         public Builder dataSetArn(String dataSetArn) {
-            this.dataSetArn = Input.of(Objects.requireNonNull(dataSetArn));
+            this.dataSetArn = Output.of(Objects.requireNonNull(dataSetArn));
             return this;
         }
 
-        public Builder dataSetPlaceholder(Input<String> dataSetPlaceholder) {
+        public Builder dataSetPlaceholder(Output<String> dataSetPlaceholder) {
             this.dataSetPlaceholder = Objects.requireNonNull(dataSetPlaceholder);
             return this;
         }
 
         public Builder dataSetPlaceholder(String dataSetPlaceholder) {
-            this.dataSetPlaceholder = Input.of(Objects.requireNonNull(dataSetPlaceholder));
+            this.dataSetPlaceholder = Output.of(Objects.requireNonNull(dataSetPlaceholder));
             return this;
         }
         public TemplateDataSetReferenceArgs build() {

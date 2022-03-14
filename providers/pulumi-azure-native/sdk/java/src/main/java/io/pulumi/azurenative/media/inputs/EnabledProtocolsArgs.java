@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.media.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
@@ -22,9 +22,9 @@ public final class EnabledProtocolsArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="dash", required=true)
-      private final Input<Boolean> dash;
+      private final Output<Boolean> dash;
 
-    public Input<Boolean> getDash() {
+    public Output<Boolean> getDash() {
         return this.dash;
     }
 
@@ -33,9 +33,9 @@ public final class EnabledProtocolsArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="download", required=true)
-      private final Input<Boolean> download;
+      private final Output<Boolean> download;
 
-    public Input<Boolean> getDownload() {
+    public Output<Boolean> getDownload() {
         return this.download;
     }
 
@@ -44,9 +44,9 @@ public final class EnabledProtocolsArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="hls", required=true)
-      private final Input<Boolean> hls;
+      private final Output<Boolean> hls;
 
-    public Input<Boolean> getHls() {
+    public Output<Boolean> getHls() {
         return this.hls;
     }
 
@@ -55,17 +55,17 @@ public final class EnabledProtocolsArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="smoothStreaming", required=true)
-      private final Input<Boolean> smoothStreaming;
+      private final Output<Boolean> smoothStreaming;
 
-    public Input<Boolean> getSmoothStreaming() {
+    public Output<Boolean> getSmoothStreaming() {
         return this.smoothStreaming;
     }
 
     public EnabledProtocolsArgs(
-        Input<Boolean> dash,
-        Input<Boolean> download,
-        Input<Boolean> hls,
-        Input<Boolean> smoothStreaming) {
+        Output<Boolean> dash,
+        Output<Boolean> download,
+        Output<Boolean> hls,
+        Output<Boolean> smoothStreaming) {
         this.dash = Objects.requireNonNull(dash, "expected parameter 'dash' to be non-null");
         this.download = Objects.requireNonNull(download, "expected parameter 'download' to be non-null");
         this.hls = Objects.requireNonNull(hls, "expected parameter 'hls' to be non-null");
@@ -73,10 +73,10 @@ public final class EnabledProtocolsArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private EnabledProtocolsArgs() {
-        this.dash = Input.empty();
-        this.download = Input.empty();
-        this.hls = Input.empty();
-        this.smoothStreaming = Input.empty();
+        this.dash = Output.empty();
+        this.download = Output.empty();
+        this.hls = Output.empty();
+        this.smoothStreaming = Output.empty();
     }
 
     public static Builder builder() {
@@ -88,10 +88,10 @@ public final class EnabledProtocolsArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private Input<Boolean> dash;
-        private Input<Boolean> download;
-        private Input<Boolean> hls;
-        private Input<Boolean> smoothStreaming;
+        private Output<Boolean> dash;
+        private Output<Boolean> download;
+        private Output<Boolean> hls;
+        private Output<Boolean> smoothStreaming;
 
         public Builder() {
     	      // Empty
@@ -105,43 +105,43 @@ public final class EnabledProtocolsArgs extends io.pulumi.resources.ResourceArgs
     	      this.smoothStreaming = defaults.smoothStreaming;
         }
 
-        public Builder dash(Input<Boolean> dash) {
+        public Builder dash(Output<Boolean> dash) {
             this.dash = Objects.requireNonNull(dash);
             return this;
         }
 
         public Builder dash(Boolean dash) {
-            this.dash = Input.of(Objects.requireNonNull(dash));
+            this.dash = Output.of(Objects.requireNonNull(dash));
             return this;
         }
 
-        public Builder download(Input<Boolean> download) {
+        public Builder download(Output<Boolean> download) {
             this.download = Objects.requireNonNull(download);
             return this;
         }
 
         public Builder download(Boolean download) {
-            this.download = Input.of(Objects.requireNonNull(download));
+            this.download = Output.of(Objects.requireNonNull(download));
             return this;
         }
 
-        public Builder hls(Input<Boolean> hls) {
+        public Builder hls(Output<Boolean> hls) {
             this.hls = Objects.requireNonNull(hls);
             return this;
         }
 
         public Builder hls(Boolean hls) {
-            this.hls = Input.of(Objects.requireNonNull(hls));
+            this.hls = Output.of(Objects.requireNonNull(hls));
             return this;
         }
 
-        public Builder smoothStreaming(Input<Boolean> smoothStreaming) {
+        public Builder smoothStreaming(Output<Boolean> smoothStreaming) {
             this.smoothStreaming = Objects.requireNonNull(smoothStreaming);
             return this;
         }
 
         public Builder smoothStreaming(Boolean smoothStreaming) {
-            this.smoothStreaming = Input.of(Objects.requireNonNull(smoothStreaming));
+            this.smoothStreaming = Output.of(Objects.requireNonNull(smoothStreaming));
             return this;
         }
         public EnabledProtocolsArgs build() {

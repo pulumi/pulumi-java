@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.osconfig.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.osconfig.inputs.OsPolicyAssignmentOsPolicyResourceGroupInventoryFilterGetArgs;
 import io.pulumi.gcp.osconfig.inputs.OsPolicyAssignmentOsPolicyResourceGroupResourceGetArgs;
@@ -21,10 +21,10 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupGetArgs extends io.pul
      * 
      */
     @InputImport(name="inventoryFilters")
-      private final @Nullable Input<List<OsPolicyAssignmentOsPolicyResourceGroupInventoryFilterGetArgs>> inventoryFilters;
+      private final @Nullable Output<List<OsPolicyAssignmentOsPolicyResourceGroupInventoryFilterGetArgs>> inventoryFilters;
 
-    public Input<List<OsPolicyAssignmentOsPolicyResourceGroupInventoryFilterGetArgs>> getInventoryFilters() {
-        return this.inventoryFilters == null ? Input.empty() : this.inventoryFilters;
+    public Output<List<OsPolicyAssignmentOsPolicyResourceGroupInventoryFilterGetArgs>> getInventoryFilters() {
+        return this.inventoryFilters == null ? Output.empty() : this.inventoryFilters;
     }
 
     /**
@@ -32,22 +32,22 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupGetArgs extends io.pul
      * 
      */
     @InputImport(name="resources", required=true)
-      private final Input<List<OsPolicyAssignmentOsPolicyResourceGroupResourceGetArgs>> resources;
+      private final Output<List<OsPolicyAssignmentOsPolicyResourceGroupResourceGetArgs>> resources;
 
-    public Input<List<OsPolicyAssignmentOsPolicyResourceGroupResourceGetArgs>> getResources() {
+    public Output<List<OsPolicyAssignmentOsPolicyResourceGroupResourceGetArgs>> getResources() {
         return this.resources;
     }
 
     public OsPolicyAssignmentOsPolicyResourceGroupGetArgs(
-        @Nullable Input<List<OsPolicyAssignmentOsPolicyResourceGroupInventoryFilterGetArgs>> inventoryFilters,
-        Input<List<OsPolicyAssignmentOsPolicyResourceGroupResourceGetArgs>> resources) {
+        @Nullable Output<List<OsPolicyAssignmentOsPolicyResourceGroupInventoryFilterGetArgs>> inventoryFilters,
+        Output<List<OsPolicyAssignmentOsPolicyResourceGroupResourceGetArgs>> resources) {
         this.inventoryFilters = inventoryFilters;
         this.resources = Objects.requireNonNull(resources, "expected parameter 'resources' to be non-null");
     }
 
     private OsPolicyAssignmentOsPolicyResourceGroupGetArgs() {
-        this.inventoryFilters = Input.empty();
-        this.resources = Input.empty();
+        this.inventoryFilters = Output.empty();
+        this.resources = Output.empty();
     }
 
     public static Builder builder() {
@@ -59,8 +59,8 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupGetArgs extends io.pul
     }
 
     public static final class Builder {
-        private @Nullable Input<List<OsPolicyAssignmentOsPolicyResourceGroupInventoryFilterGetArgs>> inventoryFilters;
-        private Input<List<OsPolicyAssignmentOsPolicyResourceGroupResourceGetArgs>> resources;
+        private @Nullable Output<List<OsPolicyAssignmentOsPolicyResourceGroupInventoryFilterGetArgs>> inventoryFilters;
+        private Output<List<OsPolicyAssignmentOsPolicyResourceGroupResourceGetArgs>> resources;
 
         public Builder() {
     	      // Empty
@@ -72,23 +72,23 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupGetArgs extends io.pul
     	      this.resources = defaults.resources;
         }
 
-        public Builder inventoryFilters(@Nullable Input<List<OsPolicyAssignmentOsPolicyResourceGroupInventoryFilterGetArgs>> inventoryFilters) {
+        public Builder inventoryFilters(@Nullable Output<List<OsPolicyAssignmentOsPolicyResourceGroupInventoryFilterGetArgs>> inventoryFilters) {
             this.inventoryFilters = inventoryFilters;
             return this;
         }
 
         public Builder inventoryFilters(@Nullable List<OsPolicyAssignmentOsPolicyResourceGroupInventoryFilterGetArgs> inventoryFilters) {
-            this.inventoryFilters = Input.ofNullable(inventoryFilters);
+            this.inventoryFilters = Output.ofNullable(inventoryFilters);
             return this;
         }
 
-        public Builder resources(Input<List<OsPolicyAssignmentOsPolicyResourceGroupResourceGetArgs>> resources) {
+        public Builder resources(Output<List<OsPolicyAssignmentOsPolicyResourceGroupResourceGetArgs>> resources) {
             this.resources = Objects.requireNonNull(resources);
             return this;
         }
 
         public Builder resources(List<OsPolicyAssignmentOsPolicyResourceGroupResourceGetArgs> resources) {
-            this.resources = Input.of(Objects.requireNonNull(resources));
+            this.resources = Output.of(Objects.requireNonNull(resources));
             return this;
         }
         public OsPolicyAssignmentOsPolicyResourceGroupGetArgs build() {

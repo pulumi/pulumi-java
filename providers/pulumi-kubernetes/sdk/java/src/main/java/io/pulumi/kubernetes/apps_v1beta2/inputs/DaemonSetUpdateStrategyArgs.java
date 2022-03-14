@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.apps_v1beta2.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.kubernetes.apps_v1beta2.inputs.RollingUpdateDaemonSetArgs;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class DaemonSetUpdateStrategyArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="rollingUpdate")
-      private final @Nullable Input<RollingUpdateDaemonSetArgs> rollingUpdate;
+      private final @Nullable Output<RollingUpdateDaemonSetArgs> rollingUpdate;
 
-    public Input<RollingUpdateDaemonSetArgs> getRollingUpdate() {
-        return this.rollingUpdate == null ? Input.empty() : this.rollingUpdate;
+    public Output<RollingUpdateDaemonSetArgs> getRollingUpdate() {
+        return this.rollingUpdate == null ? Output.empty() : this.rollingUpdate;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class DaemonSetUpdateStrategyArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="type")
-      private final @Nullable Input<String> type;
+      private final @Nullable Output<String> type;
 
-    public Input<String> getType() {
-        return this.type == null ? Input.empty() : this.type;
+    public Output<String> getType() {
+        return this.type == null ? Output.empty() : this.type;
     }
 
     public DaemonSetUpdateStrategyArgs(
-        @Nullable Input<RollingUpdateDaemonSetArgs> rollingUpdate,
-        @Nullable Input<String> type) {
+        @Nullable Output<RollingUpdateDaemonSetArgs> rollingUpdate,
+        @Nullable Output<String> type) {
         this.rollingUpdate = rollingUpdate;
         this.type = type;
     }
 
     private DaemonSetUpdateStrategyArgs() {
-        this.rollingUpdate = Input.empty();
-        this.type = Input.empty();
+        this.rollingUpdate = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class DaemonSetUpdateStrategyArgs extends io.pulumi.resources.Resou
     }
 
     public static final class Builder {
-        private @Nullable Input<RollingUpdateDaemonSetArgs> rollingUpdate;
-        private @Nullable Input<String> type;
+        private @Nullable Output<RollingUpdateDaemonSetArgs> rollingUpdate;
+        private @Nullable Output<String> type;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class DaemonSetUpdateStrategyArgs extends io.pulumi.resources.Resou
     	      this.type = defaults.type;
         }
 
-        public Builder rollingUpdate(@Nullable Input<RollingUpdateDaemonSetArgs> rollingUpdate) {
+        public Builder rollingUpdate(@Nullable Output<RollingUpdateDaemonSetArgs> rollingUpdate) {
             this.rollingUpdate = rollingUpdate;
             return this;
         }
 
         public Builder rollingUpdate(@Nullable RollingUpdateDaemonSetArgs rollingUpdate) {
-            this.rollingUpdate = Input.ofNullable(rollingUpdate);
+            this.rollingUpdate = Output.ofNullable(rollingUpdate);
             return this;
         }
 
-        public Builder type(@Nullable Input<String> type) {
+        public Builder type(@Nullable Output<String> type) {
             this.type = type;
             return this;
         }
 
         public Builder type(@Nullable String type) {
-            this.type = Input.ofNullable(type);
+            this.type = Output.ofNullable(type);
             return this;
         }
         public DaemonSetUpdateStrategyArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.kafkaconnect.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -23,9 +23,9 @@ public final class ConnectorVpcArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="securityGroups", required=true)
-      private final Input<List<String>> securityGroups;
+      private final Output<List<String>> securityGroups;
 
-    public Input<List<String>> getSecurityGroups() {
+    public Output<List<String>> getSecurityGroups() {
         return this.securityGroups;
     }
 
@@ -34,22 +34,22 @@ public final class ConnectorVpcArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="subnets", required=true)
-      private final Input<List<String>> subnets;
+      private final Output<List<String>> subnets;
 
-    public Input<List<String>> getSubnets() {
+    public Output<List<String>> getSubnets() {
         return this.subnets;
     }
 
     public ConnectorVpcArgs(
-        Input<List<String>> securityGroups,
-        Input<List<String>> subnets) {
+        Output<List<String>> securityGroups,
+        Output<List<String>> subnets) {
         this.securityGroups = Objects.requireNonNull(securityGroups, "expected parameter 'securityGroups' to be non-null");
         this.subnets = Objects.requireNonNull(subnets, "expected parameter 'subnets' to be non-null");
     }
 
     private ConnectorVpcArgs() {
-        this.securityGroups = Input.empty();
-        this.subnets = Input.empty();
+        this.securityGroups = Output.empty();
+        this.subnets = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class ConnectorVpcArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<List<String>> securityGroups;
-        private Input<List<String>> subnets;
+        private Output<List<String>> securityGroups;
+        private Output<List<String>> subnets;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class ConnectorVpcArgs extends io.pulumi.resources.ResourceArgs {
     	      this.subnets = defaults.subnets;
         }
 
-        public Builder securityGroups(Input<List<String>> securityGroups) {
+        public Builder securityGroups(Output<List<String>> securityGroups) {
             this.securityGroups = Objects.requireNonNull(securityGroups);
             return this;
         }
 
         public Builder securityGroups(List<String> securityGroups) {
-            this.securityGroups = Input.of(Objects.requireNonNull(securityGroups));
+            this.securityGroups = Output.of(Objects.requireNonNull(securityGroups));
             return this;
         }
 
-        public Builder subnets(Input<List<String>> subnets) {
+        public Builder subnets(Output<List<String>> subnets) {
             this.subnets = Objects.requireNonNull(subnets);
             return this;
         }
 
         public Builder subnets(List<String> subnets) {
-            this.subnets = Input.of(Objects.requireNonNull(subnets));
+            this.subnets = Output.of(Objects.requireNonNull(subnets));
             return this;
         }
         public ConnectorVpcArgs build() {

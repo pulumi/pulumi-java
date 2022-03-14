@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.lex.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -22,18 +22,18 @@ public final class BotSlotValueRegexFilterArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="pattern", required=true)
-      private final Input<String> pattern;
+      private final Output<String> pattern;
 
-    public Input<String> getPattern() {
+    public Output<String> getPattern() {
         return this.pattern;
     }
 
-    public BotSlotValueRegexFilterArgs(Input<String> pattern) {
+    public BotSlotValueRegexFilterArgs(Output<String> pattern) {
         this.pattern = Objects.requireNonNull(pattern, "expected parameter 'pattern' to be non-null");
     }
 
     private BotSlotValueRegexFilterArgs() {
-        this.pattern = Input.empty();
+        this.pattern = Output.empty();
     }
 
     public static Builder builder() {
@@ -45,7 +45,7 @@ public final class BotSlotValueRegexFilterArgs extends io.pulumi.resources.Resou
     }
 
     public static final class Builder {
-        private Input<String> pattern;
+        private Output<String> pattern;
 
         public Builder() {
     	      // Empty
@@ -56,13 +56,13 @@ public final class BotSlotValueRegexFilterArgs extends io.pulumi.resources.Resou
     	      this.pattern = defaults.pattern;
         }
 
-        public Builder pattern(Input<String> pattern) {
+        public Builder pattern(Output<String> pattern) {
             this.pattern = Objects.requireNonNull(pattern);
             return this;
         }
 
         public Builder pattern(String pattern) {
-            this.pattern = Input.of(Objects.requireNonNull(pattern));
+            this.pattern = Output.of(Objects.requireNonNull(pattern));
             return this;
         }
         public BotSlotValueRegexFilterArgs build() {

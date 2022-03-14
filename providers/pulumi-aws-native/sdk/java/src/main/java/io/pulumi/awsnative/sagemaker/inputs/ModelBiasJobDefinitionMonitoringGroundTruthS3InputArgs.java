@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.sagemaker.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -22,18 +22,18 @@ public final class ModelBiasJobDefinitionMonitoringGroundTruthS3InputArgs extend
      * 
      */
     @InputImport(name="s3Uri", required=true)
-      private final Input<String> s3Uri;
+      private final Output<String> s3Uri;
 
-    public Input<String> getS3Uri() {
+    public Output<String> getS3Uri() {
         return this.s3Uri;
     }
 
-    public ModelBiasJobDefinitionMonitoringGroundTruthS3InputArgs(Input<String> s3Uri) {
+    public ModelBiasJobDefinitionMonitoringGroundTruthS3InputArgs(Output<String> s3Uri) {
         this.s3Uri = Objects.requireNonNull(s3Uri, "expected parameter 's3Uri' to be non-null");
     }
 
     private ModelBiasJobDefinitionMonitoringGroundTruthS3InputArgs() {
-        this.s3Uri = Input.empty();
+        this.s3Uri = Output.empty();
     }
 
     public static Builder builder() {
@@ -45,7 +45,7 @@ public final class ModelBiasJobDefinitionMonitoringGroundTruthS3InputArgs extend
     }
 
     public static final class Builder {
-        private Input<String> s3Uri;
+        private Output<String> s3Uri;
 
         public Builder() {
     	      // Empty
@@ -56,13 +56,13 @@ public final class ModelBiasJobDefinitionMonitoringGroundTruthS3InputArgs extend
     	      this.s3Uri = defaults.s3Uri;
         }
 
-        public Builder s3Uri(Input<String> s3Uri) {
+        public Builder s3Uri(Output<String> s3Uri) {
             this.s3Uri = Objects.requireNonNull(s3Uri);
             return this;
         }
 
         public Builder s3Uri(String s3Uri) {
-            this.s3Uri = Input.of(Objects.requireNonNull(s3Uri));
+            this.s3Uri = Output.of(Objects.requireNonNull(s3Uri));
             return this;
         }
         public ModelBiasJobDefinitionMonitoringGroundTruthS3InputArgs build() {

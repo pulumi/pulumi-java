@@ -8,7 +8,6 @@ import io.pulumi.azurenative.logic.IntegrationAccountArgs;
 import io.pulumi.azurenative.logic.outputs.IntegrationAccountSkuResponse;
 import io.pulumi.azurenative.logic.outputs.ResourceReferenceResponse;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -171,21 +170,21 @@ public class IntegrationAccount extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public IntegrationAccount(String name, IntegrationAccountArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:logic:IntegrationAccount", name, args == null ? IntegrationAccountArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("azure-native:logic:IntegrationAccount", name, args == null ? IntegrationAccountArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private IntegrationAccount(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private IntegrationAccount(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:logic:IntegrationAccount", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:logic/v20150801preview:IntegrationAccount").build()),
-                Input.of(Alias.builder().setType("azure-native:logic/v20160601:IntegrationAccount").build()),
-                Input.of(Alias.builder().setType("azure-native:logic/v20180701preview:IntegrationAccount").build()),
-                Input.of(Alias.builder().setType("azure-native:logic/v20190501:IntegrationAccount").build())
+                Output.of(Alias.builder().setType("azure-native:logic/v20150801preview:IntegrationAccount").build()),
+                Output.of(Alias.builder().setType("azure-native:logic/v20160601:IntegrationAccount").build()),
+                Output.of(Alias.builder().setType("azure-native:logic/v20180701preview:IntegrationAccount").build()),
+                Output.of(Alias.builder().setType("azure-native:logic/v20190501:IntegrationAccount").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -199,7 +198,7 @@ public class IntegrationAccount extends io.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static IntegrationAccount get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static IntegrationAccount get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new IntegrationAccount(name, id, options);
     }
 }

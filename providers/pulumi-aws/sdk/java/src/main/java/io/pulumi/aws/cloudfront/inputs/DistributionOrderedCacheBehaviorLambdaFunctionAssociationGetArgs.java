@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.cloudfront.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -21,9 +21,9 @@ public final class DistributionOrderedCacheBehaviorLambdaFunctionAssociationGetA
      * 
      */
     @InputImport(name="eventType", required=true)
-      private final Input<String> eventType;
+      private final Output<String> eventType;
 
-    public Input<String> getEventType() {
+    public Output<String> getEventType() {
         return this.eventType;
     }
 
@@ -32,10 +32,10 @@ public final class DistributionOrderedCacheBehaviorLambdaFunctionAssociationGetA
      * 
      */
     @InputImport(name="includeBody")
-      private final @Nullable Input<Boolean> includeBody;
+      private final @Nullable Output<Boolean> includeBody;
 
-    public Input<Boolean> getIncludeBody() {
-        return this.includeBody == null ? Input.empty() : this.includeBody;
+    public Output<Boolean> getIncludeBody() {
+        return this.includeBody == null ? Output.empty() : this.includeBody;
     }
 
     /**
@@ -43,25 +43,25 @@ public final class DistributionOrderedCacheBehaviorLambdaFunctionAssociationGetA
      * 
      */
     @InputImport(name="lambdaArn", required=true)
-      private final Input<String> lambdaArn;
+      private final Output<String> lambdaArn;
 
-    public Input<String> getLambdaArn() {
+    public Output<String> getLambdaArn() {
         return this.lambdaArn;
     }
 
     public DistributionOrderedCacheBehaviorLambdaFunctionAssociationGetArgs(
-        Input<String> eventType,
-        @Nullable Input<Boolean> includeBody,
-        Input<String> lambdaArn) {
+        Output<String> eventType,
+        @Nullable Output<Boolean> includeBody,
+        Output<String> lambdaArn) {
         this.eventType = Objects.requireNonNull(eventType, "expected parameter 'eventType' to be non-null");
         this.includeBody = includeBody;
         this.lambdaArn = Objects.requireNonNull(lambdaArn, "expected parameter 'lambdaArn' to be non-null");
     }
 
     private DistributionOrderedCacheBehaviorLambdaFunctionAssociationGetArgs() {
-        this.eventType = Input.empty();
-        this.includeBody = Input.empty();
-        this.lambdaArn = Input.empty();
+        this.eventType = Output.empty();
+        this.includeBody = Output.empty();
+        this.lambdaArn = Output.empty();
     }
 
     public static Builder builder() {
@@ -73,9 +73,9 @@ public final class DistributionOrderedCacheBehaviorLambdaFunctionAssociationGetA
     }
 
     public static final class Builder {
-        private Input<String> eventType;
-        private @Nullable Input<Boolean> includeBody;
-        private Input<String> lambdaArn;
+        private Output<String> eventType;
+        private @Nullable Output<Boolean> includeBody;
+        private Output<String> lambdaArn;
 
         public Builder() {
     	      // Empty
@@ -88,33 +88,33 @@ public final class DistributionOrderedCacheBehaviorLambdaFunctionAssociationGetA
     	      this.lambdaArn = defaults.lambdaArn;
         }
 
-        public Builder eventType(Input<String> eventType) {
+        public Builder eventType(Output<String> eventType) {
             this.eventType = Objects.requireNonNull(eventType);
             return this;
         }
 
         public Builder eventType(String eventType) {
-            this.eventType = Input.of(Objects.requireNonNull(eventType));
+            this.eventType = Output.of(Objects.requireNonNull(eventType));
             return this;
         }
 
-        public Builder includeBody(@Nullable Input<Boolean> includeBody) {
+        public Builder includeBody(@Nullable Output<Boolean> includeBody) {
             this.includeBody = includeBody;
             return this;
         }
 
         public Builder includeBody(@Nullable Boolean includeBody) {
-            this.includeBody = Input.ofNullable(includeBody);
+            this.includeBody = Output.ofNullable(includeBody);
             return this;
         }
 
-        public Builder lambdaArn(Input<String> lambdaArn) {
+        public Builder lambdaArn(Output<String> lambdaArn) {
             this.lambdaArn = Objects.requireNonNull(lambdaArn);
             return this;
         }
 
         public Builder lambdaArn(String lambdaArn) {
-            this.lambdaArn = Input.of(Objects.requireNonNull(lambdaArn));
+            this.lambdaArn = Output.of(Objects.requireNonNull(lambdaArn));
             return this;
         }
         public DistributionOrderedCacheBehaviorLambdaFunctionAssociationGetArgs build() {

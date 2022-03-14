@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.autoscaling_v2beta1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.kubernetes.meta_v1.inputs.LabelSelectorArgs;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class ExternalMetricStatusArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="currentAverageValue")
-      private final @Nullable Input<String> currentAverageValue;
+      private final @Nullable Output<String> currentAverageValue;
 
-    public Input<String> getCurrentAverageValue() {
-        return this.currentAverageValue == null ? Input.empty() : this.currentAverageValue;
+    public Output<String> getCurrentAverageValue() {
+        return this.currentAverageValue == null ? Output.empty() : this.currentAverageValue;
     }
 
     /**
@@ -35,9 +35,9 @@ public final class ExternalMetricStatusArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="currentValue", required=true)
-      private final Input<String> currentValue;
+      private final Output<String> currentValue;
 
-    public Input<String> getCurrentValue() {
+    public Output<String> getCurrentValue() {
         return this.currentValue;
     }
 
@@ -46,9 +46,9 @@ public final class ExternalMetricStatusArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="metricName", required=true)
-      private final Input<String> metricName;
+      private final Output<String> metricName;
 
-    public Input<String> getMetricName() {
+    public Output<String> getMetricName() {
         return this.metricName;
     }
 
@@ -57,17 +57,17 @@ public final class ExternalMetricStatusArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="metricSelector")
-      private final @Nullable Input<LabelSelectorArgs> metricSelector;
+      private final @Nullable Output<LabelSelectorArgs> metricSelector;
 
-    public Input<LabelSelectorArgs> getMetricSelector() {
-        return this.metricSelector == null ? Input.empty() : this.metricSelector;
+    public Output<LabelSelectorArgs> getMetricSelector() {
+        return this.metricSelector == null ? Output.empty() : this.metricSelector;
     }
 
     public ExternalMetricStatusArgs(
-        @Nullable Input<String> currentAverageValue,
-        Input<String> currentValue,
-        Input<String> metricName,
-        @Nullable Input<LabelSelectorArgs> metricSelector) {
+        @Nullable Output<String> currentAverageValue,
+        Output<String> currentValue,
+        Output<String> metricName,
+        @Nullable Output<LabelSelectorArgs> metricSelector) {
         this.currentAverageValue = currentAverageValue;
         this.currentValue = Objects.requireNonNull(currentValue, "expected parameter 'currentValue' to be non-null");
         this.metricName = Objects.requireNonNull(metricName, "expected parameter 'metricName' to be non-null");
@@ -75,10 +75,10 @@ public final class ExternalMetricStatusArgs extends io.pulumi.resources.Resource
     }
 
     private ExternalMetricStatusArgs() {
-        this.currentAverageValue = Input.empty();
-        this.currentValue = Input.empty();
-        this.metricName = Input.empty();
-        this.metricSelector = Input.empty();
+        this.currentAverageValue = Output.empty();
+        this.currentValue = Output.empty();
+        this.metricName = Output.empty();
+        this.metricSelector = Output.empty();
     }
 
     public static Builder builder() {
@@ -90,10 +90,10 @@ public final class ExternalMetricStatusArgs extends io.pulumi.resources.Resource
     }
 
     public static final class Builder {
-        private @Nullable Input<String> currentAverageValue;
-        private Input<String> currentValue;
-        private Input<String> metricName;
-        private @Nullable Input<LabelSelectorArgs> metricSelector;
+        private @Nullable Output<String> currentAverageValue;
+        private Output<String> currentValue;
+        private Output<String> metricName;
+        private @Nullable Output<LabelSelectorArgs> metricSelector;
 
         public Builder() {
     	      // Empty
@@ -107,43 +107,43 @@ public final class ExternalMetricStatusArgs extends io.pulumi.resources.Resource
     	      this.metricSelector = defaults.metricSelector;
         }
 
-        public Builder currentAverageValue(@Nullable Input<String> currentAverageValue) {
+        public Builder currentAverageValue(@Nullable Output<String> currentAverageValue) {
             this.currentAverageValue = currentAverageValue;
             return this;
         }
 
         public Builder currentAverageValue(@Nullable String currentAverageValue) {
-            this.currentAverageValue = Input.ofNullable(currentAverageValue);
+            this.currentAverageValue = Output.ofNullable(currentAverageValue);
             return this;
         }
 
-        public Builder currentValue(Input<String> currentValue) {
+        public Builder currentValue(Output<String> currentValue) {
             this.currentValue = Objects.requireNonNull(currentValue);
             return this;
         }
 
         public Builder currentValue(String currentValue) {
-            this.currentValue = Input.of(Objects.requireNonNull(currentValue));
+            this.currentValue = Output.of(Objects.requireNonNull(currentValue));
             return this;
         }
 
-        public Builder metricName(Input<String> metricName) {
+        public Builder metricName(Output<String> metricName) {
             this.metricName = Objects.requireNonNull(metricName);
             return this;
         }
 
         public Builder metricName(String metricName) {
-            this.metricName = Input.of(Objects.requireNonNull(metricName));
+            this.metricName = Output.of(Objects.requireNonNull(metricName));
             return this;
         }
 
-        public Builder metricSelector(@Nullable Input<LabelSelectorArgs> metricSelector) {
+        public Builder metricSelector(@Nullable Output<LabelSelectorArgs> metricSelector) {
             this.metricSelector = metricSelector;
             return this;
         }
 
         public Builder metricSelector(@Nullable LabelSelectorArgs metricSelector) {
-            this.metricSelector = Input.ofNullable(metricSelector);
+            this.metricSelector = Output.ofNullable(metricSelector);
             return this;
         }
         public ExternalMetricStatusArgs build() {

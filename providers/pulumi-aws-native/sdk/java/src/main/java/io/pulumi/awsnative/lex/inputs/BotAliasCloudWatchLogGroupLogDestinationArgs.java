@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.lex.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -18,9 +18,9 @@ public final class BotAliasCloudWatchLogGroupLogDestinationArgs extends io.pulum
      * 
      */
     @InputImport(name="cloudWatchLogGroupArn", required=true)
-      private final Input<String> cloudWatchLogGroupArn;
+      private final Output<String> cloudWatchLogGroupArn;
 
-    public Input<String> getCloudWatchLogGroupArn() {
+    public Output<String> getCloudWatchLogGroupArn() {
         return this.cloudWatchLogGroupArn;
     }
 
@@ -29,22 +29,22 @@ public final class BotAliasCloudWatchLogGroupLogDestinationArgs extends io.pulum
      * 
      */
     @InputImport(name="logPrefix", required=true)
-      private final Input<String> logPrefix;
+      private final Output<String> logPrefix;
 
-    public Input<String> getLogPrefix() {
+    public Output<String> getLogPrefix() {
         return this.logPrefix;
     }
 
     public BotAliasCloudWatchLogGroupLogDestinationArgs(
-        Input<String> cloudWatchLogGroupArn,
-        Input<String> logPrefix) {
+        Output<String> cloudWatchLogGroupArn,
+        Output<String> logPrefix) {
         this.cloudWatchLogGroupArn = Objects.requireNonNull(cloudWatchLogGroupArn, "expected parameter 'cloudWatchLogGroupArn' to be non-null");
         this.logPrefix = Objects.requireNonNull(logPrefix, "expected parameter 'logPrefix' to be non-null");
     }
 
     private BotAliasCloudWatchLogGroupLogDestinationArgs() {
-        this.cloudWatchLogGroupArn = Input.empty();
-        this.logPrefix = Input.empty();
+        this.cloudWatchLogGroupArn = Output.empty();
+        this.logPrefix = Output.empty();
     }
 
     public static Builder builder() {
@@ -56,8 +56,8 @@ public final class BotAliasCloudWatchLogGroupLogDestinationArgs extends io.pulum
     }
 
     public static final class Builder {
-        private Input<String> cloudWatchLogGroupArn;
-        private Input<String> logPrefix;
+        private Output<String> cloudWatchLogGroupArn;
+        private Output<String> logPrefix;
 
         public Builder() {
     	      // Empty
@@ -69,23 +69,23 @@ public final class BotAliasCloudWatchLogGroupLogDestinationArgs extends io.pulum
     	      this.logPrefix = defaults.logPrefix;
         }
 
-        public Builder cloudWatchLogGroupArn(Input<String> cloudWatchLogGroupArn) {
+        public Builder cloudWatchLogGroupArn(Output<String> cloudWatchLogGroupArn) {
             this.cloudWatchLogGroupArn = Objects.requireNonNull(cloudWatchLogGroupArn);
             return this;
         }
 
         public Builder cloudWatchLogGroupArn(String cloudWatchLogGroupArn) {
-            this.cloudWatchLogGroupArn = Input.of(Objects.requireNonNull(cloudWatchLogGroupArn));
+            this.cloudWatchLogGroupArn = Output.of(Objects.requireNonNull(cloudWatchLogGroupArn));
             return this;
         }
 
-        public Builder logPrefix(Input<String> logPrefix) {
+        public Builder logPrefix(Output<String> logPrefix) {
             this.logPrefix = Objects.requireNonNull(logPrefix);
             return this;
         }
 
         public Builder logPrefix(String logPrefix) {
-            this.logPrefix = Input.of(Objects.requireNonNull(logPrefix));
+            this.logPrefix = Output.of(Objects.requireNonNull(logPrefix));
             return this;
         }
         public BotAliasCloudWatchLogGroupLogDestinationArgs build() {

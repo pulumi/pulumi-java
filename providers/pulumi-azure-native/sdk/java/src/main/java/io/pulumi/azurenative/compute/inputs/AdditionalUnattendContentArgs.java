@@ -6,7 +6,7 @@ package io.pulumi.azurenative.compute.inputs;
 import io.pulumi.azurenative.compute.enums.ComponentNames;
 import io.pulumi.azurenative.compute.enums.PassNames;
 import io.pulumi.azurenative.compute.enums.SettingNames;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -26,10 +26,10 @@ public final class AdditionalUnattendContentArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="componentName")
-      private final @Nullable Input<ComponentNames> componentName;
+      private final @Nullable Output<ComponentNames> componentName;
 
-    public Input<ComponentNames> getComponentName() {
-        return this.componentName == null ? Input.empty() : this.componentName;
+    public Output<ComponentNames> getComponentName() {
+        return this.componentName == null ? Output.empty() : this.componentName;
     }
 
     /**
@@ -37,10 +37,10 @@ public final class AdditionalUnattendContentArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="content")
-      private final @Nullable Input<String> content;
+      private final @Nullable Output<String> content;
 
-    public Input<String> getContent() {
-        return this.content == null ? Input.empty() : this.content;
+    public Output<String> getContent() {
+        return this.content == null ? Output.empty() : this.content;
     }
 
     /**
@@ -48,10 +48,10 @@ public final class AdditionalUnattendContentArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="passName")
-      private final @Nullable Input<PassNames> passName;
+      private final @Nullable Output<PassNames> passName;
 
-    public Input<PassNames> getPassName() {
-        return this.passName == null ? Input.empty() : this.passName;
+    public Output<PassNames> getPassName() {
+        return this.passName == null ? Output.empty() : this.passName;
     }
 
     /**
@@ -59,17 +59,17 @@ public final class AdditionalUnattendContentArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="settingName")
-      private final @Nullable Input<SettingNames> settingName;
+      private final @Nullable Output<SettingNames> settingName;
 
-    public Input<SettingNames> getSettingName() {
-        return this.settingName == null ? Input.empty() : this.settingName;
+    public Output<SettingNames> getSettingName() {
+        return this.settingName == null ? Output.empty() : this.settingName;
     }
 
     public AdditionalUnattendContentArgs(
-        @Nullable Input<ComponentNames> componentName,
-        @Nullable Input<String> content,
-        @Nullable Input<PassNames> passName,
-        @Nullable Input<SettingNames> settingName) {
+        @Nullable Output<ComponentNames> componentName,
+        @Nullable Output<String> content,
+        @Nullable Output<PassNames> passName,
+        @Nullable Output<SettingNames> settingName) {
         this.componentName = componentName;
         this.content = content;
         this.passName = passName;
@@ -77,10 +77,10 @@ public final class AdditionalUnattendContentArgs extends io.pulumi.resources.Res
     }
 
     private AdditionalUnattendContentArgs() {
-        this.componentName = Input.empty();
-        this.content = Input.empty();
-        this.passName = Input.empty();
-        this.settingName = Input.empty();
+        this.componentName = Output.empty();
+        this.content = Output.empty();
+        this.passName = Output.empty();
+        this.settingName = Output.empty();
     }
 
     public static Builder builder() {
@@ -92,10 +92,10 @@ public final class AdditionalUnattendContentArgs extends io.pulumi.resources.Res
     }
 
     public static final class Builder {
-        private @Nullable Input<ComponentNames> componentName;
-        private @Nullable Input<String> content;
-        private @Nullable Input<PassNames> passName;
-        private @Nullable Input<SettingNames> settingName;
+        private @Nullable Output<ComponentNames> componentName;
+        private @Nullable Output<String> content;
+        private @Nullable Output<PassNames> passName;
+        private @Nullable Output<SettingNames> settingName;
 
         public Builder() {
     	      // Empty
@@ -109,43 +109,43 @@ public final class AdditionalUnattendContentArgs extends io.pulumi.resources.Res
     	      this.settingName = defaults.settingName;
         }
 
-        public Builder componentName(@Nullable Input<ComponentNames> componentName) {
+        public Builder componentName(@Nullable Output<ComponentNames> componentName) {
             this.componentName = componentName;
             return this;
         }
 
         public Builder componentName(@Nullable ComponentNames componentName) {
-            this.componentName = Input.ofNullable(componentName);
+            this.componentName = Output.ofNullable(componentName);
             return this;
         }
 
-        public Builder content(@Nullable Input<String> content) {
+        public Builder content(@Nullable Output<String> content) {
             this.content = content;
             return this;
         }
 
         public Builder content(@Nullable String content) {
-            this.content = Input.ofNullable(content);
+            this.content = Output.ofNullable(content);
             return this;
         }
 
-        public Builder passName(@Nullable Input<PassNames> passName) {
+        public Builder passName(@Nullable Output<PassNames> passName) {
             this.passName = passName;
             return this;
         }
 
         public Builder passName(@Nullable PassNames passName) {
-            this.passName = Input.ofNullable(passName);
+            this.passName = Output.ofNullable(passName);
             return this;
         }
 
-        public Builder settingName(@Nullable Input<SettingNames> settingName) {
+        public Builder settingName(@Nullable Output<SettingNames> settingName) {
             this.settingName = settingName;
             return this;
         }
 
         public Builder settingName(@Nullable SettingNames settingName) {
-            this.settingName = Input.ofNullable(settingName);
+            this.settingName = Output.ofNullable(settingName);
             return this;
         }
         public AdditionalUnattendContentArgs build() {

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.videoanalyzer;
 
 import io.pulumi.azurenative.videoanalyzer.inputs.ParameterDefinitionArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -22,9 +22,9 @@ public final class LivePipelineArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="accountName", required=true)
-      private final Input<String> accountName;
+      private final Output<String> accountName;
 
-    public Input<String> getAccountName() {
+    public Output<String> getAccountName() {
         return this.accountName;
     }
 
@@ -33,9 +33,9 @@ public final class LivePipelineArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="bitrateKbps", required=true)
-      private final Input<Integer> bitrateKbps;
+      private final Output<Integer> bitrateKbps;
 
-    public Input<Integer> getBitrateKbps() {
+    public Output<Integer> getBitrateKbps() {
         return this.bitrateKbps;
     }
 
@@ -44,10 +44,10 @@ public final class LivePipelineArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -55,10 +55,10 @@ public final class LivePipelineArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="livePipelineName")
-      private final @Nullable Input<String> livePipelineName;
+      private final @Nullable Output<String> livePipelineName;
 
-    public Input<String> getLivePipelineName() {
-        return this.livePipelineName == null ? Input.empty() : this.livePipelineName;
+    public Output<String> getLivePipelineName() {
+        return this.livePipelineName == null ? Output.empty() : this.livePipelineName;
     }
 
     /**
@@ -66,10 +66,10 @@ public final class LivePipelineArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="parameters")
-      private final @Nullable Input<List<ParameterDefinitionArgs>> parameters;
+      private final @Nullable Output<List<ParameterDefinitionArgs>> parameters;
 
-    public Input<List<ParameterDefinitionArgs>> getParameters() {
-        return this.parameters == null ? Input.empty() : this.parameters;
+    public Output<List<ParameterDefinitionArgs>> getParameters() {
+        return this.parameters == null ? Output.empty() : this.parameters;
     }
 
     /**
@@ -77,9 +77,9 @@ public final class LivePipelineArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -88,20 +88,20 @@ public final class LivePipelineArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="topologyName", required=true)
-      private final Input<String> topologyName;
+      private final Output<String> topologyName;
 
-    public Input<String> getTopologyName() {
+    public Output<String> getTopologyName() {
         return this.topologyName;
     }
 
     public LivePipelineArgs(
-        Input<String> accountName,
-        Input<Integer> bitrateKbps,
-        @Nullable Input<String> description,
-        @Nullable Input<String> livePipelineName,
-        @Nullable Input<List<ParameterDefinitionArgs>> parameters,
-        Input<String> resourceGroupName,
-        Input<String> topologyName) {
+        Output<String> accountName,
+        Output<Integer> bitrateKbps,
+        @Nullable Output<String> description,
+        @Nullable Output<String> livePipelineName,
+        @Nullable Output<List<ParameterDefinitionArgs>> parameters,
+        Output<String> resourceGroupName,
+        Output<String> topologyName) {
         this.accountName = Objects.requireNonNull(accountName, "expected parameter 'accountName' to be non-null");
         this.bitrateKbps = Objects.requireNonNull(bitrateKbps, "expected parameter 'bitrateKbps' to be non-null");
         this.description = description;
@@ -112,13 +112,13 @@ public final class LivePipelineArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private LivePipelineArgs() {
-        this.accountName = Input.empty();
-        this.bitrateKbps = Input.empty();
-        this.description = Input.empty();
-        this.livePipelineName = Input.empty();
-        this.parameters = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.topologyName = Input.empty();
+        this.accountName = Output.empty();
+        this.bitrateKbps = Output.empty();
+        this.description = Output.empty();
+        this.livePipelineName = Output.empty();
+        this.parameters = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.topologyName = Output.empty();
     }
 
     public static Builder builder() {
@@ -130,13 +130,13 @@ public final class LivePipelineArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> accountName;
-        private Input<Integer> bitrateKbps;
-        private @Nullable Input<String> description;
-        private @Nullable Input<String> livePipelineName;
-        private @Nullable Input<List<ParameterDefinitionArgs>> parameters;
-        private Input<String> resourceGroupName;
-        private Input<String> topologyName;
+        private Output<String> accountName;
+        private Output<Integer> bitrateKbps;
+        private @Nullable Output<String> description;
+        private @Nullable Output<String> livePipelineName;
+        private @Nullable Output<List<ParameterDefinitionArgs>> parameters;
+        private Output<String> resourceGroupName;
+        private Output<String> topologyName;
 
         public Builder() {
     	      // Empty
@@ -153,73 +153,73 @@ public final class LivePipelineArgs extends io.pulumi.resources.ResourceArgs {
     	      this.topologyName = defaults.topologyName;
         }
 
-        public Builder accountName(Input<String> accountName) {
+        public Builder accountName(Output<String> accountName) {
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
 
         public Builder accountName(String accountName) {
-            this.accountName = Input.of(Objects.requireNonNull(accountName));
+            this.accountName = Output.of(Objects.requireNonNull(accountName));
             return this;
         }
 
-        public Builder bitrateKbps(Input<Integer> bitrateKbps) {
+        public Builder bitrateKbps(Output<Integer> bitrateKbps) {
             this.bitrateKbps = Objects.requireNonNull(bitrateKbps);
             return this;
         }
 
         public Builder bitrateKbps(Integer bitrateKbps) {
-            this.bitrateKbps = Input.of(Objects.requireNonNull(bitrateKbps));
+            this.bitrateKbps = Output.of(Objects.requireNonNull(bitrateKbps));
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder livePipelineName(@Nullable Input<String> livePipelineName) {
+        public Builder livePipelineName(@Nullable Output<String> livePipelineName) {
             this.livePipelineName = livePipelineName;
             return this;
         }
 
         public Builder livePipelineName(@Nullable String livePipelineName) {
-            this.livePipelineName = Input.ofNullable(livePipelineName);
+            this.livePipelineName = Output.ofNullable(livePipelineName);
             return this;
         }
 
-        public Builder parameters(@Nullable Input<List<ParameterDefinitionArgs>> parameters) {
+        public Builder parameters(@Nullable Output<List<ParameterDefinitionArgs>> parameters) {
             this.parameters = parameters;
             return this;
         }
 
         public Builder parameters(@Nullable List<ParameterDefinitionArgs> parameters) {
-            this.parameters = Input.ofNullable(parameters);
+            this.parameters = Output.ofNullable(parameters);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder topologyName(Input<String> topologyName) {
+        public Builder topologyName(Output<String> topologyName) {
             this.topologyName = Objects.requireNonNull(topologyName);
             return this;
         }
 
         public Builder topologyName(String topologyName) {
-            this.topologyName = Input.of(Objects.requireNonNull(topologyName));
+            this.topologyName = Output.of(Objects.requireNonNull(topologyName));
             return this;
         }
         public LivePipelineArgs build() {

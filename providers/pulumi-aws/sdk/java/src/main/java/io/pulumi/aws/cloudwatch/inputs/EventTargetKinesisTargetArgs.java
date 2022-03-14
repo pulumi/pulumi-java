@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.cloudwatch.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,18 +19,18 @@ public final class EventTargetKinesisTargetArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="partitionKeyPath")
-      private final @Nullable Input<String> partitionKeyPath;
+      private final @Nullable Output<String> partitionKeyPath;
 
-    public Input<String> getPartitionKeyPath() {
-        return this.partitionKeyPath == null ? Input.empty() : this.partitionKeyPath;
+    public Output<String> getPartitionKeyPath() {
+        return this.partitionKeyPath == null ? Output.empty() : this.partitionKeyPath;
     }
 
-    public EventTargetKinesisTargetArgs(@Nullable Input<String> partitionKeyPath) {
+    public EventTargetKinesisTargetArgs(@Nullable Output<String> partitionKeyPath) {
         this.partitionKeyPath = partitionKeyPath;
     }
 
     private EventTargetKinesisTargetArgs() {
-        this.partitionKeyPath = Input.empty();
+        this.partitionKeyPath = Output.empty();
     }
 
     public static Builder builder() {
@@ -42,7 +42,7 @@ public final class EventTargetKinesisTargetArgs extends io.pulumi.resources.Reso
     }
 
     public static final class Builder {
-        private @Nullable Input<String> partitionKeyPath;
+        private @Nullable Output<String> partitionKeyPath;
 
         public Builder() {
     	      // Empty
@@ -53,13 +53,13 @@ public final class EventTargetKinesisTargetArgs extends io.pulumi.resources.Reso
     	      this.partitionKeyPath = defaults.partitionKeyPath;
         }
 
-        public Builder partitionKeyPath(@Nullable Input<String> partitionKeyPath) {
+        public Builder partitionKeyPath(@Nullable Output<String> partitionKeyPath) {
             this.partitionKeyPath = partitionKeyPath;
             return this;
         }
 
         public Builder partitionKeyPath(@Nullable String partitionKeyPath) {
-            this.partitionKeyPath = Input.ofNullable(partitionKeyPath);
+            this.partitionKeyPath = Output.ofNullable(partitionKeyPath);
             return this;
         }
         public EventTargetKinesisTargetArgs build() {

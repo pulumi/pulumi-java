@@ -1,7 +1,6 @@
 package io.pulumi.core.internal;
 
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.TypeShape;
 import io.pulumi.core.annotations.InputImport;
@@ -40,25 +39,25 @@ class InputOutputMetadataTest {
         private Output<Double> incomplete;
 
         @InputImport(name = "bar")
-        public final Input<String> explicitBar = Input.of("");
+        public final Output<String> explicitBar = Output.of("");
 
         @InputImport
-        final Input<String> implicitBar = Input.of("");
+        final Output<String> implicitBar = Output.of("");
 
         @SuppressWarnings("DefaultAnnotationParam")
         @InputImport(name = "", required = true, json = true)
-        public final Input<Map<String, Integer>> inputMap = Input.ofMap("k1", 1, "k2", 2);
+        public final Output<Map<String, Integer>> inputMap = Output.ofMap("k1", 1, "k2", 2);
 
         @SuppressWarnings("DefaultAnnotationParam")
         @InputImport(name = "", required = true, json = true)
-        public final Input<Map<String, Integer>> inputMapNullsJson = Input.of(nullfulMap("k1", null, "k2", null));
+        public final Output<Map<String, Integer>> inputMapNullsJson = Output.of(nullfulMap("k1", null, "k2", null));
 
         @SuppressWarnings("DefaultAnnotationParam")
         @InputImport(name = "", required = true, json = false)
-        public final Input<Map<String, Integer>> inputMapNulls = Input.of(nullfulMap("k1", null, "k2", null));
+        public final Output<Map<String, Integer>> inputMapNulls = Output.of(nullfulMap("k1", null, "k2", null));
 
         @InputImport
-        public final Input<List<Boolean>> inputList = Input.ofList(true, false);
+        public final Output<List<Boolean>> inputList = Output.ofList(true, false);
 
         @InputImport
         public final String inputless = "test";
@@ -71,7 +70,7 @@ class InputOutputMetadataTest {
     }
 
     @Test
-    void testInputInfos() {
+    void testImportInfos() {
         var tester = new Tester();
         var infos = InputMetadata.of(Tester.class);
         assertThat(infos).hasSize(9);
@@ -84,7 +83,7 @@ class InputOutputMetadataTest {
         assertThat(barInfo.getFieldType()).isAssignableFrom(tester.explicitBar.getClass());
         var bar = barInfo.getFieldValue(tester);
         assertThat(bar).isNotNull().isPresent();
-        var barValue = Internal.of((Input<?>) bar.get()).getValueNullable().join();
+        var barValue = Internal.of((Output<?>) bar.get()).getValueNullable().join();
         assertThat(barValue).isNotNull().isInstanceOf(String.class).isEqualTo("");
 
         var inputMapInfo = infos.get("inputMap");
@@ -95,24 +94,24 @@ class InputOutputMetadataTest {
         assertThat(inputMapInfo.getFieldType()).isAssignableFrom(tester.inputMap.getClass());
         var inputMap = inputMapInfo.getFieldValue(tester);
         assertThat(inputMap).isNotNull().isPresent();
-        var inputMapValue = Internal.of((Input<?>) inputMap.get()).getValueNullable().join();
+        var inputMapValue = Internal.of((Output<?>) inputMap.get()).getValueNullable().join();
         assertThat(inputMapValue).isNotNull().isInstanceOf(Map.class).isEqualTo(Map.of("k1", 1, "k2", 2));
 
         //noinspection OptionalGetWithoutIsPresent
         var inputMapNullsJson = infos.get("inputMapNullsJson").getFieldValue(tester).get();
-        assertThat(Internal.of((Input<?>) inputMapNullsJson).getValueNullable().join()).isEqualTo(
+        assertThat(Internal.of((Output<?>) inputMapNullsJson).getValueNullable().join()).isEqualTo(
                 nullfulMap("k1", null, "k2", null)
         );
 
         //noinspection OptionalGetWithoutIsPresent
         var inputMapNulls = infos.get("inputMapNulls").getFieldValue(tester).get();
-        assertThat(Internal.of((Input<?>) inputMapNulls).getValueNullable().join()).isEqualTo(
+        assertThat(Internal.of((Output<?>) inputMapNulls).getValueNullable().join()).isEqualTo(
                 nullfulMap("k1", null, "k2", null)
         );
     }
 
     @Test
-    void testOutputInfos() {
+    void testExportInfos() {
         var tester = new Tester();
         var infos = OutputMetadata.of(Tester.class);
         assertThat(infos).hasSize(6);

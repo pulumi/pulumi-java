@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.apigateway.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -20,10 +20,10 @@ public final class ClientCertificateState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="arn")
-      private final @Nullable Input<String> arn;
+      private final @Nullable Output<String> arn;
 
-    public Input<String> getArn() {
-        return this.arn == null ? Input.empty() : this.arn;
+    public Output<String> getArn() {
+        return this.arn == null ? Output.empty() : this.arn;
     }
 
     /**
@@ -31,10 +31,10 @@ public final class ClientCertificateState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="createdDate")
-      private final @Nullable Input<String> createdDate;
+      private final @Nullable Output<String> createdDate;
 
-    public Input<String> getCreatedDate() {
-        return this.createdDate == null ? Input.empty() : this.createdDate;
+    public Output<String> getCreatedDate() {
+        return this.createdDate == null ? Output.empty() : this.createdDate;
     }
 
     /**
@@ -42,10 +42,10 @@ public final class ClientCertificateState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -53,10 +53,10 @@ public final class ClientCertificateState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="expirationDate")
-      private final @Nullable Input<String> expirationDate;
+      private final @Nullable Output<String> expirationDate;
 
-    public Input<String> getExpirationDate() {
-        return this.expirationDate == null ? Input.empty() : this.expirationDate;
+    public Output<String> getExpirationDate() {
+        return this.expirationDate == null ? Output.empty() : this.expirationDate;
     }
 
     /**
@@ -64,10 +64,10 @@ public final class ClientCertificateState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="pemEncodedCertificate")
-      private final @Nullable Input<String> pemEncodedCertificate;
+      private final @Nullable Output<String> pemEncodedCertificate;
 
-    public Input<String> getPemEncodedCertificate() {
-        return this.pemEncodedCertificate == null ? Input.empty() : this.pemEncodedCertificate;
+    public Output<String> getPemEncodedCertificate() {
+        return this.pemEncodedCertificate == null ? Output.empty() : this.pemEncodedCertificate;
     }
 
     /**
@@ -75,10 +75,10 @@ public final class ClientCertificateState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -86,20 +86,20 @@ public final class ClientCertificateState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="tagsAll")
-      private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Input<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Input.empty() : this.tagsAll;
+    public Output<Map<String,String>> getTagsAll() {
+        return this.tagsAll == null ? Output.empty() : this.tagsAll;
     }
 
     public ClientCertificateState(
-        @Nullable Input<String> arn,
-        @Nullable Input<String> createdDate,
-        @Nullable Input<String> description,
-        @Nullable Input<String> expirationDate,
-        @Nullable Input<String> pemEncodedCertificate,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<Map<String,String>> tagsAll) {
+        @Nullable Output<String> arn,
+        @Nullable Output<String> createdDate,
+        @Nullable Output<String> description,
+        @Nullable Output<String> expirationDate,
+        @Nullable Output<String> pemEncodedCertificate,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<Map<String,String>> tagsAll) {
         this.arn = arn;
         this.createdDate = createdDate;
         this.description = description;
@@ -110,13 +110,13 @@ public final class ClientCertificateState extends io.pulumi.resources.ResourceAr
     }
 
     private ClientCertificateState() {
-        this.arn = Input.empty();
-        this.createdDate = Input.empty();
-        this.description = Input.empty();
-        this.expirationDate = Input.empty();
-        this.pemEncodedCertificate = Input.empty();
-        this.tags = Input.empty();
-        this.tagsAll = Input.empty();
+        this.arn = Output.empty();
+        this.createdDate = Output.empty();
+        this.description = Output.empty();
+        this.expirationDate = Output.empty();
+        this.pemEncodedCertificate = Output.empty();
+        this.tags = Output.empty();
+        this.tagsAll = Output.empty();
     }
 
     public static Builder builder() {
@@ -128,13 +128,13 @@ public final class ClientCertificateState extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private @Nullable Input<String> arn;
-        private @Nullable Input<String> createdDate;
-        private @Nullable Input<String> description;
-        private @Nullable Input<String> expirationDate;
-        private @Nullable Input<String> pemEncodedCertificate;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<Map<String,String>> tagsAll;
+        private @Nullable Output<String> arn;
+        private @Nullable Output<String> createdDate;
+        private @Nullable Output<String> description;
+        private @Nullable Output<String> expirationDate;
+        private @Nullable Output<String> pemEncodedCertificate;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<Map<String,String>> tagsAll;
 
         public Builder() {
     	      // Empty
@@ -151,73 +151,73 @@ public final class ClientCertificateState extends io.pulumi.resources.ResourceAr
     	      this.tagsAll = defaults.tagsAll;
         }
 
-        public Builder arn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
 
         public Builder arn(@Nullable String arn) {
-            this.arn = Input.ofNullable(arn);
+            this.arn = Output.ofNullable(arn);
             return this;
         }
 
-        public Builder createdDate(@Nullable Input<String> createdDate) {
+        public Builder createdDate(@Nullable Output<String> createdDate) {
             this.createdDate = createdDate;
             return this;
         }
 
         public Builder createdDate(@Nullable String createdDate) {
-            this.createdDate = Input.ofNullable(createdDate);
+            this.createdDate = Output.ofNullable(createdDate);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder expirationDate(@Nullable Input<String> expirationDate) {
+        public Builder expirationDate(@Nullable Output<String> expirationDate) {
             this.expirationDate = expirationDate;
             return this;
         }
 
         public Builder expirationDate(@Nullable String expirationDate) {
-            this.expirationDate = Input.ofNullable(expirationDate);
+            this.expirationDate = Output.ofNullable(expirationDate);
             return this;
         }
 
-        public Builder pemEncodedCertificate(@Nullable Input<String> pemEncodedCertificate) {
+        public Builder pemEncodedCertificate(@Nullable Output<String> pemEncodedCertificate) {
             this.pemEncodedCertificate = pemEncodedCertificate;
             return this;
         }
 
         public Builder pemEncodedCertificate(@Nullable String pemEncodedCertificate) {
-            this.pemEncodedCertificate = Input.ofNullable(pemEncodedCertificate);
+            this.pemEncodedCertificate = Output.ofNullable(pemEncodedCertificate);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Input.ofNullable(tagsAll);
+            this.tagsAll = Output.ofNullable(tagsAll);
             return this;
         }
         public ClientCertificateState build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.recoveryservices.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class InMageRcmPolicyCreationInputArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="appConsistentFrequencyInMinutes")
-      private final @Nullable Input<Integer> appConsistentFrequencyInMinutes;
+      private final @Nullable Output<Integer> appConsistentFrequencyInMinutes;
 
-    public Input<Integer> getAppConsistentFrequencyInMinutes() {
-        return this.appConsistentFrequencyInMinutes == null ? Input.empty() : this.appConsistentFrequencyInMinutes;
+    public Output<Integer> getAppConsistentFrequencyInMinutes() {
+        return this.appConsistentFrequencyInMinutes == null ? Output.empty() : this.appConsistentFrequencyInMinutes;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class InMageRcmPolicyCreationInputArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="crashConsistentFrequencyInMinutes")
-      private final @Nullable Input<Integer> crashConsistentFrequencyInMinutes;
+      private final @Nullable Output<Integer> crashConsistentFrequencyInMinutes;
 
-    public Input<Integer> getCrashConsistentFrequencyInMinutes() {
-        return this.crashConsistentFrequencyInMinutes == null ? Input.empty() : this.crashConsistentFrequencyInMinutes;
+    public Output<Integer> getCrashConsistentFrequencyInMinutes() {
+        return this.crashConsistentFrequencyInMinutes == null ? Output.empty() : this.crashConsistentFrequencyInMinutes;
     }
 
     /**
@@ -46,10 +46,10 @@ public final class InMageRcmPolicyCreationInputArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="enableMultiVmSync")
-      private final @Nullable Input<String> enableMultiVmSync;
+      private final @Nullable Output<String> enableMultiVmSync;
 
-    public Input<String> getEnableMultiVmSync() {
-        return this.enableMultiVmSync == null ? Input.empty() : this.enableMultiVmSync;
+    public Output<String> getEnableMultiVmSync() {
+        return this.enableMultiVmSync == null ? Output.empty() : this.enableMultiVmSync;
     }
 
     /**
@@ -58,10 +58,10 @@ public final class InMageRcmPolicyCreationInputArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="instanceType")
-      private final @Nullable Input<String> instanceType;
+      private final @Nullable Output<String> instanceType;
 
-    public Input<String> getInstanceType() {
-        return this.instanceType == null ? Input.empty() : this.instanceType;
+    public Output<String> getInstanceType() {
+        return this.instanceType == null ? Output.empty() : this.instanceType;
     }
 
     /**
@@ -69,18 +69,18 @@ public final class InMageRcmPolicyCreationInputArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="recoveryPointHistoryInMinutes")
-      private final @Nullable Input<Integer> recoveryPointHistoryInMinutes;
+      private final @Nullable Output<Integer> recoveryPointHistoryInMinutes;
 
-    public Input<Integer> getRecoveryPointHistoryInMinutes() {
-        return this.recoveryPointHistoryInMinutes == null ? Input.empty() : this.recoveryPointHistoryInMinutes;
+    public Output<Integer> getRecoveryPointHistoryInMinutes() {
+        return this.recoveryPointHistoryInMinutes == null ? Output.empty() : this.recoveryPointHistoryInMinutes;
     }
 
     public InMageRcmPolicyCreationInputArgs(
-        @Nullable Input<Integer> appConsistentFrequencyInMinutes,
-        @Nullable Input<Integer> crashConsistentFrequencyInMinutes,
-        @Nullable Input<String> enableMultiVmSync,
-        @Nullable Input<String> instanceType,
-        @Nullable Input<Integer> recoveryPointHistoryInMinutes) {
+        @Nullable Output<Integer> appConsistentFrequencyInMinutes,
+        @Nullable Output<Integer> crashConsistentFrequencyInMinutes,
+        @Nullable Output<String> enableMultiVmSync,
+        @Nullable Output<String> instanceType,
+        @Nullable Output<Integer> recoveryPointHistoryInMinutes) {
         this.appConsistentFrequencyInMinutes = appConsistentFrequencyInMinutes;
         this.crashConsistentFrequencyInMinutes = crashConsistentFrequencyInMinutes;
         this.enableMultiVmSync = enableMultiVmSync;
@@ -89,11 +89,11 @@ public final class InMageRcmPolicyCreationInputArgs extends io.pulumi.resources.
     }
 
     private InMageRcmPolicyCreationInputArgs() {
-        this.appConsistentFrequencyInMinutes = Input.empty();
-        this.crashConsistentFrequencyInMinutes = Input.empty();
-        this.enableMultiVmSync = Input.empty();
-        this.instanceType = Input.empty();
-        this.recoveryPointHistoryInMinutes = Input.empty();
+        this.appConsistentFrequencyInMinutes = Output.empty();
+        this.crashConsistentFrequencyInMinutes = Output.empty();
+        this.enableMultiVmSync = Output.empty();
+        this.instanceType = Output.empty();
+        this.recoveryPointHistoryInMinutes = Output.empty();
     }
 
     public static Builder builder() {
@@ -105,11 +105,11 @@ public final class InMageRcmPolicyCreationInputArgs extends io.pulumi.resources.
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> appConsistentFrequencyInMinutes;
-        private @Nullable Input<Integer> crashConsistentFrequencyInMinutes;
-        private @Nullable Input<String> enableMultiVmSync;
-        private @Nullable Input<String> instanceType;
-        private @Nullable Input<Integer> recoveryPointHistoryInMinutes;
+        private @Nullable Output<Integer> appConsistentFrequencyInMinutes;
+        private @Nullable Output<Integer> crashConsistentFrequencyInMinutes;
+        private @Nullable Output<String> enableMultiVmSync;
+        private @Nullable Output<String> instanceType;
+        private @Nullable Output<Integer> recoveryPointHistoryInMinutes;
 
         public Builder() {
     	      // Empty
@@ -124,53 +124,53 @@ public final class InMageRcmPolicyCreationInputArgs extends io.pulumi.resources.
     	      this.recoveryPointHistoryInMinutes = defaults.recoveryPointHistoryInMinutes;
         }
 
-        public Builder appConsistentFrequencyInMinutes(@Nullable Input<Integer> appConsistentFrequencyInMinutes) {
+        public Builder appConsistentFrequencyInMinutes(@Nullable Output<Integer> appConsistentFrequencyInMinutes) {
             this.appConsistentFrequencyInMinutes = appConsistentFrequencyInMinutes;
             return this;
         }
 
         public Builder appConsistentFrequencyInMinutes(@Nullable Integer appConsistentFrequencyInMinutes) {
-            this.appConsistentFrequencyInMinutes = Input.ofNullable(appConsistentFrequencyInMinutes);
+            this.appConsistentFrequencyInMinutes = Output.ofNullable(appConsistentFrequencyInMinutes);
             return this;
         }
 
-        public Builder crashConsistentFrequencyInMinutes(@Nullable Input<Integer> crashConsistentFrequencyInMinutes) {
+        public Builder crashConsistentFrequencyInMinutes(@Nullable Output<Integer> crashConsistentFrequencyInMinutes) {
             this.crashConsistentFrequencyInMinutes = crashConsistentFrequencyInMinutes;
             return this;
         }
 
         public Builder crashConsistentFrequencyInMinutes(@Nullable Integer crashConsistentFrequencyInMinutes) {
-            this.crashConsistentFrequencyInMinutes = Input.ofNullable(crashConsistentFrequencyInMinutes);
+            this.crashConsistentFrequencyInMinutes = Output.ofNullable(crashConsistentFrequencyInMinutes);
             return this;
         }
 
-        public Builder enableMultiVmSync(@Nullable Input<String> enableMultiVmSync) {
+        public Builder enableMultiVmSync(@Nullable Output<String> enableMultiVmSync) {
             this.enableMultiVmSync = enableMultiVmSync;
             return this;
         }
 
         public Builder enableMultiVmSync(@Nullable String enableMultiVmSync) {
-            this.enableMultiVmSync = Input.ofNullable(enableMultiVmSync);
+            this.enableMultiVmSync = Output.ofNullable(enableMultiVmSync);
             return this;
         }
 
-        public Builder instanceType(@Nullable Input<String> instanceType) {
+        public Builder instanceType(@Nullable Output<String> instanceType) {
             this.instanceType = instanceType;
             return this;
         }
 
         public Builder instanceType(@Nullable String instanceType) {
-            this.instanceType = Input.ofNullable(instanceType);
+            this.instanceType = Output.ofNullable(instanceType);
             return this;
         }
 
-        public Builder recoveryPointHistoryInMinutes(@Nullable Input<Integer> recoveryPointHistoryInMinutes) {
+        public Builder recoveryPointHistoryInMinutes(@Nullable Output<Integer> recoveryPointHistoryInMinutes) {
             this.recoveryPointHistoryInMinutes = recoveryPointHistoryInMinutes;
             return this;
         }
 
         public Builder recoveryPointHistoryInMinutes(@Nullable Integer recoveryPointHistoryInMinutes) {
-            this.recoveryPointHistoryInMinutes = Input.ofNullable(recoveryPointHistoryInMinutes);
+            this.recoveryPointHistoryInMinutes = Output.ofNullable(recoveryPointHistoryInMinutes);
             return this;
         }
         public InMageRcmPolicyCreationInputArgs build() {

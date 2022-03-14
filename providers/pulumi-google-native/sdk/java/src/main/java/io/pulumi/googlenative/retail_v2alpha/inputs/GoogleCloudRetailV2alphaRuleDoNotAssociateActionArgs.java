@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.retail_v2alpha.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -24,10 +24,10 @@ public final class GoogleCloudRetailV2alphaRuleDoNotAssociateActionArgs extends 
      * 
      */
     @InputImport(name="doNotAssociateTerms")
-      private final @Nullable Input<List<String>> doNotAssociateTerms;
+      private final @Nullable Output<List<String>> doNotAssociateTerms;
 
-    public Input<List<String>> getDoNotAssociateTerms() {
-        return this.doNotAssociateTerms == null ? Input.empty() : this.doNotAssociateTerms;
+    public Output<List<String>> getDoNotAssociateTerms() {
+        return this.doNotAssociateTerms == null ? Output.empty() : this.doNotAssociateTerms;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class GoogleCloudRetailV2alphaRuleDoNotAssociateActionArgs extends 
      * 
      */
     @InputImport(name="queryTerms")
-      private final @Nullable Input<List<String>> queryTerms;
+      private final @Nullable Output<List<String>> queryTerms;
 
-    public Input<List<String>> getQueryTerms() {
-        return this.queryTerms == null ? Input.empty() : this.queryTerms;
+    public Output<List<String>> getQueryTerms() {
+        return this.queryTerms == null ? Output.empty() : this.queryTerms;
     }
 
     /**
@@ -46,25 +46,25 @@ public final class GoogleCloudRetailV2alphaRuleDoNotAssociateActionArgs extends 
      * 
      */
     @InputImport(name="terms")
-      private final @Nullable Input<List<String>> terms;
+      private final @Nullable Output<List<String>> terms;
 
-    public Input<List<String>> getTerms() {
-        return this.terms == null ? Input.empty() : this.terms;
+    public Output<List<String>> getTerms() {
+        return this.terms == null ? Output.empty() : this.terms;
     }
 
     public GoogleCloudRetailV2alphaRuleDoNotAssociateActionArgs(
-        @Nullable Input<List<String>> doNotAssociateTerms,
-        @Nullable Input<List<String>> queryTerms,
-        @Nullable Input<List<String>> terms) {
+        @Nullable Output<List<String>> doNotAssociateTerms,
+        @Nullable Output<List<String>> queryTerms,
+        @Nullable Output<List<String>> terms) {
         this.doNotAssociateTerms = doNotAssociateTerms;
         this.queryTerms = queryTerms;
         this.terms = terms;
     }
 
     private GoogleCloudRetailV2alphaRuleDoNotAssociateActionArgs() {
-        this.doNotAssociateTerms = Input.empty();
-        this.queryTerms = Input.empty();
-        this.terms = Input.empty();
+        this.doNotAssociateTerms = Output.empty();
+        this.queryTerms = Output.empty();
+        this.terms = Output.empty();
     }
 
     public static Builder builder() {
@@ -76,9 +76,9 @@ public final class GoogleCloudRetailV2alphaRuleDoNotAssociateActionArgs extends 
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> doNotAssociateTerms;
-        private @Nullable Input<List<String>> queryTerms;
-        private @Nullable Input<List<String>> terms;
+        private @Nullable Output<List<String>> doNotAssociateTerms;
+        private @Nullable Output<List<String>> queryTerms;
+        private @Nullable Output<List<String>> terms;
 
         public Builder() {
     	      // Empty
@@ -91,33 +91,33 @@ public final class GoogleCloudRetailV2alphaRuleDoNotAssociateActionArgs extends 
     	      this.terms = defaults.terms;
         }
 
-        public Builder doNotAssociateTerms(@Nullable Input<List<String>> doNotAssociateTerms) {
+        public Builder doNotAssociateTerms(@Nullable Output<List<String>> doNotAssociateTerms) {
             this.doNotAssociateTerms = doNotAssociateTerms;
             return this;
         }
 
         public Builder doNotAssociateTerms(@Nullable List<String> doNotAssociateTerms) {
-            this.doNotAssociateTerms = Input.ofNullable(doNotAssociateTerms);
+            this.doNotAssociateTerms = Output.ofNullable(doNotAssociateTerms);
             return this;
         }
 
-        public Builder queryTerms(@Nullable Input<List<String>> queryTerms) {
+        public Builder queryTerms(@Nullable Output<List<String>> queryTerms) {
             this.queryTerms = queryTerms;
             return this;
         }
 
         public Builder queryTerms(@Nullable List<String> queryTerms) {
-            this.queryTerms = Input.ofNullable(queryTerms);
+            this.queryTerms = Output.ofNullable(queryTerms);
             return this;
         }
 
-        public Builder terms(@Nullable Input<List<String>> terms) {
+        public Builder terms(@Nullable Output<List<String>> terms) {
             this.terms = terms;
             return this;
         }
 
         public Builder terms(@Nullable List<String> terms) {
-            this.terms = Input.ofNullable(terms);
+            this.terms = Output.ofNullable(terms);
             return this;
         }
         public GoogleCloudRetailV2alphaRuleDoNotAssociateActionArgs build() {

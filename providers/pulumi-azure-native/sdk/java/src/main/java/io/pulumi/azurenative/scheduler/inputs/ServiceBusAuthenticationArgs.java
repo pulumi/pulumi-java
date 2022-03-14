@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.scheduler.inputs;
 
 import io.pulumi.azurenative.scheduler.enums.ServiceBusAuthenticationType;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -20,10 +20,10 @@ public final class ServiceBusAuthenticationArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="sasKey")
-      private final @Nullable Input<String> sasKey;
+      private final @Nullable Output<String> sasKey;
 
-    public Input<String> getSasKey() {
-        return this.sasKey == null ? Input.empty() : this.sasKey;
+    public Output<String> getSasKey() {
+        return this.sasKey == null ? Output.empty() : this.sasKey;
     }
 
     /**
@@ -31,10 +31,10 @@ public final class ServiceBusAuthenticationArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="sasKeyName")
-      private final @Nullable Input<String> sasKeyName;
+      private final @Nullable Output<String> sasKeyName;
 
-    public Input<String> getSasKeyName() {
-        return this.sasKeyName == null ? Input.empty() : this.sasKeyName;
+    public Output<String> getSasKeyName() {
+        return this.sasKeyName == null ? Output.empty() : this.sasKeyName;
     }
 
     /**
@@ -42,25 +42,25 @@ public final class ServiceBusAuthenticationArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="type")
-      private final @Nullable Input<ServiceBusAuthenticationType> type;
+      private final @Nullable Output<ServiceBusAuthenticationType> type;
 
-    public Input<ServiceBusAuthenticationType> getType() {
-        return this.type == null ? Input.empty() : this.type;
+    public Output<ServiceBusAuthenticationType> getType() {
+        return this.type == null ? Output.empty() : this.type;
     }
 
     public ServiceBusAuthenticationArgs(
-        @Nullable Input<String> sasKey,
-        @Nullable Input<String> sasKeyName,
-        @Nullable Input<ServiceBusAuthenticationType> type) {
+        @Nullable Output<String> sasKey,
+        @Nullable Output<String> sasKeyName,
+        @Nullable Output<ServiceBusAuthenticationType> type) {
         this.sasKey = sasKey;
         this.sasKeyName = sasKeyName;
         this.type = type;
     }
 
     private ServiceBusAuthenticationArgs() {
-        this.sasKey = Input.empty();
-        this.sasKeyName = Input.empty();
-        this.type = Input.empty();
+        this.sasKey = Output.empty();
+        this.sasKeyName = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -72,9 +72,9 @@ public final class ServiceBusAuthenticationArgs extends io.pulumi.resources.Reso
     }
 
     public static final class Builder {
-        private @Nullable Input<String> sasKey;
-        private @Nullable Input<String> sasKeyName;
-        private @Nullable Input<ServiceBusAuthenticationType> type;
+        private @Nullable Output<String> sasKey;
+        private @Nullable Output<String> sasKeyName;
+        private @Nullable Output<ServiceBusAuthenticationType> type;
 
         public Builder() {
     	      // Empty
@@ -87,33 +87,33 @@ public final class ServiceBusAuthenticationArgs extends io.pulumi.resources.Reso
     	      this.type = defaults.type;
         }
 
-        public Builder sasKey(@Nullable Input<String> sasKey) {
+        public Builder sasKey(@Nullable Output<String> sasKey) {
             this.sasKey = sasKey;
             return this;
         }
 
         public Builder sasKey(@Nullable String sasKey) {
-            this.sasKey = Input.ofNullable(sasKey);
+            this.sasKey = Output.ofNullable(sasKey);
             return this;
         }
 
-        public Builder sasKeyName(@Nullable Input<String> sasKeyName) {
+        public Builder sasKeyName(@Nullable Output<String> sasKeyName) {
             this.sasKeyName = sasKeyName;
             return this;
         }
 
         public Builder sasKeyName(@Nullable String sasKeyName) {
-            this.sasKeyName = Input.ofNullable(sasKeyName);
+            this.sasKeyName = Output.ofNullable(sasKeyName);
             return this;
         }
 
-        public Builder type(@Nullable Input<ServiceBusAuthenticationType> type) {
+        public Builder type(@Nullable Output<ServiceBusAuthenticationType> type) {
             this.type = type;
             return this;
         }
 
         public Builder type(@Nullable ServiceBusAuthenticationType type) {
-            this.type = Input.ofNullable(type);
+            this.type = Output.ofNullable(type);
             return this;
         }
         public ServiceBusAuthenticationArgs build() {

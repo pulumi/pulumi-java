@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.containeranalysis.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.containeranalysis.inputs.OccurenceAttestationSignatureGetArgs;
 import java.lang.String;
@@ -21,9 +21,9 @@ public final class OccurenceAttestationGetArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="serializedPayload", required=true)
-      private final Input<String> serializedPayload;
+      private final Output<String> serializedPayload;
 
-    public Input<String> getSerializedPayload() {
+    public Output<String> getSerializedPayload() {
         return this.serializedPayload;
     }
 
@@ -37,22 +37,22 @@ public final class OccurenceAttestationGetArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="signatures", required=true)
-      private final Input<List<OccurenceAttestationSignatureGetArgs>> signatures;
+      private final Output<List<OccurenceAttestationSignatureGetArgs>> signatures;
 
-    public Input<List<OccurenceAttestationSignatureGetArgs>> getSignatures() {
+    public Output<List<OccurenceAttestationSignatureGetArgs>> getSignatures() {
         return this.signatures;
     }
 
     public OccurenceAttestationGetArgs(
-        Input<String> serializedPayload,
-        Input<List<OccurenceAttestationSignatureGetArgs>> signatures) {
+        Output<String> serializedPayload,
+        Output<List<OccurenceAttestationSignatureGetArgs>> signatures) {
         this.serializedPayload = Objects.requireNonNull(serializedPayload, "expected parameter 'serializedPayload' to be non-null");
         this.signatures = Objects.requireNonNull(signatures, "expected parameter 'signatures' to be non-null");
     }
 
     private OccurenceAttestationGetArgs() {
-        this.serializedPayload = Input.empty();
-        this.signatures = Input.empty();
+        this.serializedPayload = Output.empty();
+        this.signatures = Output.empty();
     }
 
     public static Builder builder() {
@@ -64,8 +64,8 @@ public final class OccurenceAttestationGetArgs extends io.pulumi.resources.Resou
     }
 
     public static final class Builder {
-        private Input<String> serializedPayload;
-        private Input<List<OccurenceAttestationSignatureGetArgs>> signatures;
+        private Output<String> serializedPayload;
+        private Output<List<OccurenceAttestationSignatureGetArgs>> signatures;
 
         public Builder() {
     	      // Empty
@@ -77,23 +77,23 @@ public final class OccurenceAttestationGetArgs extends io.pulumi.resources.Resou
     	      this.signatures = defaults.signatures;
         }
 
-        public Builder serializedPayload(Input<String> serializedPayload) {
+        public Builder serializedPayload(Output<String> serializedPayload) {
             this.serializedPayload = Objects.requireNonNull(serializedPayload);
             return this;
         }
 
         public Builder serializedPayload(String serializedPayload) {
-            this.serializedPayload = Input.of(Objects.requireNonNull(serializedPayload));
+            this.serializedPayload = Output.of(Objects.requireNonNull(serializedPayload));
             return this;
         }
 
-        public Builder signatures(Input<List<OccurenceAttestationSignatureGetArgs>> signatures) {
+        public Builder signatures(Output<List<OccurenceAttestationSignatureGetArgs>> signatures) {
             this.signatures = Objects.requireNonNull(signatures);
             return this;
         }
 
         public Builder signatures(List<OccurenceAttestationSignatureGetArgs> signatures) {
-            this.signatures = Input.of(Objects.requireNonNull(signatures));
+            this.signatures = Output.of(Objects.requireNonNull(signatures));
             return this;
         }
         public OccurenceAttestationGetArgs build() {

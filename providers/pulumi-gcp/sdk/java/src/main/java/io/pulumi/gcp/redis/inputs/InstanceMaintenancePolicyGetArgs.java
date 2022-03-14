@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.redis.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.redis.inputs.InstanceMaintenancePolicyWeeklyMaintenanceWindowGetArgs;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class InstanceMaintenancePolicyGetArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="createTime")
-      private final @Nullable Input<String> createTime;
+      private final @Nullable Output<String> createTime;
 
-    public Input<String> getCreateTime() {
-        return this.createTime == null ? Input.empty() : this.createTime;
+    public Output<String> getCreateTime() {
+        return this.createTime == null ? Output.empty() : this.createTime;
     }
 
     /**
@@ -37,10 +37,10 @@ public final class InstanceMaintenancePolicyGetArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -51,10 +51,10 @@ public final class InstanceMaintenancePolicyGetArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="updateTime")
-      private final @Nullable Input<String> updateTime;
+      private final @Nullable Output<String> updateTime;
 
-    public Input<String> getUpdateTime() {
-        return this.updateTime == null ? Input.empty() : this.updateTime;
+    public Output<String> getUpdateTime() {
+        return this.updateTime == null ? Output.empty() : this.updateTime;
     }
 
     /**
@@ -65,17 +65,17 @@ public final class InstanceMaintenancePolicyGetArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="weeklyMaintenanceWindows")
-      private final @Nullable Input<List<InstanceMaintenancePolicyWeeklyMaintenanceWindowGetArgs>> weeklyMaintenanceWindows;
+      private final @Nullable Output<List<InstanceMaintenancePolicyWeeklyMaintenanceWindowGetArgs>> weeklyMaintenanceWindows;
 
-    public Input<List<InstanceMaintenancePolicyWeeklyMaintenanceWindowGetArgs>> getWeeklyMaintenanceWindows() {
-        return this.weeklyMaintenanceWindows == null ? Input.empty() : this.weeklyMaintenanceWindows;
+    public Output<List<InstanceMaintenancePolicyWeeklyMaintenanceWindowGetArgs>> getWeeklyMaintenanceWindows() {
+        return this.weeklyMaintenanceWindows == null ? Output.empty() : this.weeklyMaintenanceWindows;
     }
 
     public InstanceMaintenancePolicyGetArgs(
-        @Nullable Input<String> createTime,
-        @Nullable Input<String> description,
-        @Nullable Input<String> updateTime,
-        @Nullable Input<List<InstanceMaintenancePolicyWeeklyMaintenanceWindowGetArgs>> weeklyMaintenanceWindows) {
+        @Nullable Output<String> createTime,
+        @Nullable Output<String> description,
+        @Nullable Output<String> updateTime,
+        @Nullable Output<List<InstanceMaintenancePolicyWeeklyMaintenanceWindowGetArgs>> weeklyMaintenanceWindows) {
         this.createTime = createTime;
         this.description = description;
         this.updateTime = updateTime;
@@ -83,10 +83,10 @@ public final class InstanceMaintenancePolicyGetArgs extends io.pulumi.resources.
     }
 
     private InstanceMaintenancePolicyGetArgs() {
-        this.createTime = Input.empty();
-        this.description = Input.empty();
-        this.updateTime = Input.empty();
-        this.weeklyMaintenanceWindows = Input.empty();
+        this.createTime = Output.empty();
+        this.description = Output.empty();
+        this.updateTime = Output.empty();
+        this.weeklyMaintenanceWindows = Output.empty();
     }
 
     public static Builder builder() {
@@ -98,10 +98,10 @@ public final class InstanceMaintenancePolicyGetArgs extends io.pulumi.resources.
     }
 
     public static final class Builder {
-        private @Nullable Input<String> createTime;
-        private @Nullable Input<String> description;
-        private @Nullable Input<String> updateTime;
-        private @Nullable Input<List<InstanceMaintenancePolicyWeeklyMaintenanceWindowGetArgs>> weeklyMaintenanceWindows;
+        private @Nullable Output<String> createTime;
+        private @Nullable Output<String> description;
+        private @Nullable Output<String> updateTime;
+        private @Nullable Output<List<InstanceMaintenancePolicyWeeklyMaintenanceWindowGetArgs>> weeklyMaintenanceWindows;
 
         public Builder() {
     	      // Empty
@@ -115,43 +115,43 @@ public final class InstanceMaintenancePolicyGetArgs extends io.pulumi.resources.
     	      this.weeklyMaintenanceWindows = defaults.weeklyMaintenanceWindows;
         }
 
-        public Builder createTime(@Nullable Input<String> createTime) {
+        public Builder createTime(@Nullable Output<String> createTime) {
             this.createTime = createTime;
             return this;
         }
 
         public Builder createTime(@Nullable String createTime) {
-            this.createTime = Input.ofNullable(createTime);
+            this.createTime = Output.ofNullable(createTime);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder updateTime(@Nullable Input<String> updateTime) {
+        public Builder updateTime(@Nullable Output<String> updateTime) {
             this.updateTime = updateTime;
             return this;
         }
 
         public Builder updateTime(@Nullable String updateTime) {
-            this.updateTime = Input.ofNullable(updateTime);
+            this.updateTime = Output.ofNullable(updateTime);
             return this;
         }
 
-        public Builder weeklyMaintenanceWindows(@Nullable Input<List<InstanceMaintenancePolicyWeeklyMaintenanceWindowGetArgs>> weeklyMaintenanceWindows) {
+        public Builder weeklyMaintenanceWindows(@Nullable Output<List<InstanceMaintenancePolicyWeeklyMaintenanceWindowGetArgs>> weeklyMaintenanceWindows) {
             this.weeklyMaintenanceWindows = weeklyMaintenanceWindows;
             return this;
         }
 
         public Builder weeklyMaintenanceWindows(@Nullable List<InstanceMaintenancePolicyWeeklyMaintenanceWindowGetArgs> weeklyMaintenanceWindows) {
-            this.weeklyMaintenanceWindows = Input.ofNullable(weeklyMaintenanceWindows);
+            this.weeklyMaintenanceWindows = Output.ofNullable(weeklyMaintenanceWindows);
             return this;
         }
         public InstanceMaintenancePolicyGetArgs build() {

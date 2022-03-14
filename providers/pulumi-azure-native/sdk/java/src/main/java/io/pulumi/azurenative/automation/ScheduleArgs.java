@@ -6,7 +6,7 @@ package io.pulumi.azurenative.automation;
 import io.pulumi.azurenative.automation.enums.ScheduleFrequency;
 import io.pulumi.azurenative.automation.inputs.AdvancedScheduleArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
@@ -23,10 +23,10 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="advancedSchedule")
-      private final @Nullable Input<AdvancedScheduleArgs> advancedSchedule;
+      private final @Nullable Output<AdvancedScheduleArgs> advancedSchedule;
 
-    public Input<AdvancedScheduleArgs> getAdvancedSchedule() {
-        return this.advancedSchedule == null ? Input.empty() : this.advancedSchedule;
+    public Output<AdvancedScheduleArgs> getAdvancedSchedule() {
+        return this.advancedSchedule == null ? Output.empty() : this.advancedSchedule;
     }
 
     /**
@@ -34,9 +34,9 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="automationAccountName", required=true)
-      private final Input<String> automationAccountName;
+      private final Output<String> automationAccountName;
 
-    public Input<String> getAutomationAccountName() {
+    public Output<String> getAutomationAccountName() {
         return this.automationAccountName;
     }
 
@@ -45,10 +45,10 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -56,10 +56,10 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="expiryTime")
-      private final @Nullable Input<String> expiryTime;
+      private final @Nullable Output<String> expiryTime;
 
-    public Input<String> getExpiryTime() {
-        return this.expiryTime == null ? Input.empty() : this.expiryTime;
+    public Output<String> getExpiryTime() {
+        return this.expiryTime == null ? Output.empty() : this.expiryTime;
     }
 
     /**
@@ -67,9 +67,9 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="frequency", required=true)
-      private final Input<Either<String,ScheduleFrequency>> frequency;
+      private final Output<Either<String,ScheduleFrequency>> frequency;
 
-    public Input<Either<String,ScheduleFrequency>> getFrequency() {
+    public Output<Either<String,ScheduleFrequency>> getFrequency() {
         return this.frequency;
     }
 
@@ -78,10 +78,10 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="interval")
-      private final @Nullable Input<Object> interval;
+      private final @Nullable Output<Object> interval;
 
-    public Input<Object> getInterval() {
-        return this.interval == null ? Input.empty() : this.interval;
+    public Output<Object> getInterval() {
+        return this.interval == null ? Output.empty() : this.interval;
     }
 
     /**
@@ -89,9 +89,9 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name", required=true)
-      private final Input<String> name;
+      private final Output<String> name;
 
-    public Input<String> getName() {
+    public Output<String> getName() {
         return this.name;
     }
 
@@ -100,9 +100,9 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -111,10 +111,10 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="scheduleName")
-      private final @Nullable Input<String> scheduleName;
+      private final @Nullable Output<String> scheduleName;
 
-    public Input<String> getScheduleName() {
-        return this.scheduleName == null ? Input.empty() : this.scheduleName;
+    public Output<String> getScheduleName() {
+        return this.scheduleName == null ? Output.empty() : this.scheduleName;
     }
 
     /**
@@ -122,9 +122,9 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="startTime", required=true)
-      private final Input<String> startTime;
+      private final Output<String> startTime;
 
-    public Input<String> getStartTime() {
+    public Output<String> getStartTime() {
         return this.startTime;
     }
 
@@ -133,24 +133,24 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="timeZone")
-      private final @Nullable Input<String> timeZone;
+      private final @Nullable Output<String> timeZone;
 
-    public Input<String> getTimeZone() {
-        return this.timeZone == null ? Input.empty() : this.timeZone;
+    public Output<String> getTimeZone() {
+        return this.timeZone == null ? Output.empty() : this.timeZone;
     }
 
     public ScheduleArgs(
-        @Nullable Input<AdvancedScheduleArgs> advancedSchedule,
-        Input<String> automationAccountName,
-        @Nullable Input<String> description,
-        @Nullable Input<String> expiryTime,
-        Input<Either<String,ScheduleFrequency>> frequency,
-        @Nullable Input<Object> interval,
-        Input<String> name,
-        Input<String> resourceGroupName,
-        @Nullable Input<String> scheduleName,
-        Input<String> startTime,
-        @Nullable Input<String> timeZone) {
+        @Nullable Output<AdvancedScheduleArgs> advancedSchedule,
+        Output<String> automationAccountName,
+        @Nullable Output<String> description,
+        @Nullable Output<String> expiryTime,
+        Output<Either<String,ScheduleFrequency>> frequency,
+        @Nullable Output<Object> interval,
+        Output<String> name,
+        Output<String> resourceGroupName,
+        @Nullable Output<String> scheduleName,
+        Output<String> startTime,
+        @Nullable Output<String> timeZone) {
         this.advancedSchedule = advancedSchedule;
         this.automationAccountName = Objects.requireNonNull(automationAccountName, "expected parameter 'automationAccountName' to be non-null");
         this.description = description;
@@ -165,17 +165,17 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ScheduleArgs() {
-        this.advancedSchedule = Input.empty();
-        this.automationAccountName = Input.empty();
-        this.description = Input.empty();
-        this.expiryTime = Input.empty();
-        this.frequency = Input.empty();
-        this.interval = Input.empty();
-        this.name = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.scheduleName = Input.empty();
-        this.startTime = Input.empty();
-        this.timeZone = Input.empty();
+        this.advancedSchedule = Output.empty();
+        this.automationAccountName = Output.empty();
+        this.description = Output.empty();
+        this.expiryTime = Output.empty();
+        this.frequency = Output.empty();
+        this.interval = Output.empty();
+        this.name = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.scheduleName = Output.empty();
+        this.startTime = Output.empty();
+        this.timeZone = Output.empty();
     }
 
     public static Builder builder() {
@@ -187,17 +187,17 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<AdvancedScheduleArgs> advancedSchedule;
-        private Input<String> automationAccountName;
-        private @Nullable Input<String> description;
-        private @Nullable Input<String> expiryTime;
-        private Input<Either<String,ScheduleFrequency>> frequency;
-        private @Nullable Input<Object> interval;
-        private Input<String> name;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<String> scheduleName;
-        private Input<String> startTime;
-        private @Nullable Input<String> timeZone;
+        private @Nullable Output<AdvancedScheduleArgs> advancedSchedule;
+        private Output<String> automationAccountName;
+        private @Nullable Output<String> description;
+        private @Nullable Output<String> expiryTime;
+        private Output<Either<String,ScheduleFrequency>> frequency;
+        private @Nullable Output<Object> interval;
+        private Output<String> name;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<String> scheduleName;
+        private Output<String> startTime;
+        private @Nullable Output<String> timeZone;
 
         public Builder() {
     	      // Empty
@@ -218,113 +218,113 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
     	      this.timeZone = defaults.timeZone;
         }
 
-        public Builder advancedSchedule(@Nullable Input<AdvancedScheduleArgs> advancedSchedule) {
+        public Builder advancedSchedule(@Nullable Output<AdvancedScheduleArgs> advancedSchedule) {
             this.advancedSchedule = advancedSchedule;
             return this;
         }
 
         public Builder advancedSchedule(@Nullable AdvancedScheduleArgs advancedSchedule) {
-            this.advancedSchedule = Input.ofNullable(advancedSchedule);
+            this.advancedSchedule = Output.ofNullable(advancedSchedule);
             return this;
         }
 
-        public Builder automationAccountName(Input<String> automationAccountName) {
+        public Builder automationAccountName(Output<String> automationAccountName) {
             this.automationAccountName = Objects.requireNonNull(automationAccountName);
             return this;
         }
 
         public Builder automationAccountName(String automationAccountName) {
-            this.automationAccountName = Input.of(Objects.requireNonNull(automationAccountName));
+            this.automationAccountName = Output.of(Objects.requireNonNull(automationAccountName));
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder expiryTime(@Nullable Input<String> expiryTime) {
+        public Builder expiryTime(@Nullable Output<String> expiryTime) {
             this.expiryTime = expiryTime;
             return this;
         }
 
         public Builder expiryTime(@Nullable String expiryTime) {
-            this.expiryTime = Input.ofNullable(expiryTime);
+            this.expiryTime = Output.ofNullable(expiryTime);
             return this;
         }
 
-        public Builder frequency(Input<Either<String,ScheduleFrequency>> frequency) {
+        public Builder frequency(Output<Either<String,ScheduleFrequency>> frequency) {
             this.frequency = Objects.requireNonNull(frequency);
             return this;
         }
 
         public Builder frequency(Either<String,ScheduleFrequency> frequency) {
-            this.frequency = Input.of(Objects.requireNonNull(frequency));
+            this.frequency = Output.of(Objects.requireNonNull(frequency));
             return this;
         }
 
-        public Builder interval(@Nullable Input<Object> interval) {
+        public Builder interval(@Nullable Output<Object> interval) {
             this.interval = interval;
             return this;
         }
 
         public Builder interval(@Nullable Object interval) {
-            this.interval = Input.ofNullable(interval);
+            this.interval = Output.ofNullable(interval);
             return this;
         }
 
-        public Builder name(Input<String> name) {
+        public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(String name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder scheduleName(@Nullable Input<String> scheduleName) {
+        public Builder scheduleName(@Nullable Output<String> scheduleName) {
             this.scheduleName = scheduleName;
             return this;
         }
 
         public Builder scheduleName(@Nullable String scheduleName) {
-            this.scheduleName = Input.ofNullable(scheduleName);
+            this.scheduleName = Output.ofNullable(scheduleName);
             return this;
         }
 
-        public Builder startTime(Input<String> startTime) {
+        public Builder startTime(Output<String> startTime) {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
         }
 
         public Builder startTime(String startTime) {
-            this.startTime = Input.of(Objects.requireNonNull(startTime));
+            this.startTime = Output.of(Objects.requireNonNull(startTime));
             return this;
         }
 
-        public Builder timeZone(@Nullable Input<String> timeZone) {
+        public Builder timeZone(@Nullable Output<String> timeZone) {
             this.timeZone = timeZone;
             return this;
         }
 
         public Builder timeZone(@Nullable String timeZone) {
-            this.timeZone = Input.ofNullable(timeZone);
+            this.timeZone = Output.ofNullable(timeZone);
             return this;
         }
         public ScheduleArgs build() {

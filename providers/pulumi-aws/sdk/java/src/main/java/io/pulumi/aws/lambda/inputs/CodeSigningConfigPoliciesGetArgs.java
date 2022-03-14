@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.lambda.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -18,18 +18,18 @@ public final class CodeSigningConfigPoliciesGetArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="untrustedArtifactOnDeployment", required=true)
-      private final Input<String> untrustedArtifactOnDeployment;
+      private final Output<String> untrustedArtifactOnDeployment;
 
-    public Input<String> getUntrustedArtifactOnDeployment() {
+    public Output<String> getUntrustedArtifactOnDeployment() {
         return this.untrustedArtifactOnDeployment;
     }
 
-    public CodeSigningConfigPoliciesGetArgs(Input<String> untrustedArtifactOnDeployment) {
+    public CodeSigningConfigPoliciesGetArgs(Output<String> untrustedArtifactOnDeployment) {
         this.untrustedArtifactOnDeployment = Objects.requireNonNull(untrustedArtifactOnDeployment, "expected parameter 'untrustedArtifactOnDeployment' to be non-null");
     }
 
     private CodeSigningConfigPoliciesGetArgs() {
-        this.untrustedArtifactOnDeployment = Input.empty();
+        this.untrustedArtifactOnDeployment = Output.empty();
     }
 
     public static Builder builder() {
@@ -41,7 +41,7 @@ public final class CodeSigningConfigPoliciesGetArgs extends io.pulumi.resources.
     }
 
     public static final class Builder {
-        private Input<String> untrustedArtifactOnDeployment;
+        private Output<String> untrustedArtifactOnDeployment;
 
         public Builder() {
     	      // Empty
@@ -52,13 +52,13 @@ public final class CodeSigningConfigPoliciesGetArgs extends io.pulumi.resources.
     	      this.untrustedArtifactOnDeployment = defaults.untrustedArtifactOnDeployment;
         }
 
-        public Builder untrustedArtifactOnDeployment(Input<String> untrustedArtifactOnDeployment) {
+        public Builder untrustedArtifactOnDeployment(Output<String> untrustedArtifactOnDeployment) {
             this.untrustedArtifactOnDeployment = Objects.requireNonNull(untrustedArtifactOnDeployment);
             return this;
         }
 
         public Builder untrustedArtifactOnDeployment(String untrustedArtifactOnDeployment) {
-            this.untrustedArtifactOnDeployment = Input.of(Objects.requireNonNull(untrustedArtifactOnDeployment));
+            this.untrustedArtifactOnDeployment = Output.of(Objects.requireNonNull(untrustedArtifactOnDeployment));
             return this;
         }
         public CodeSigningConfigPoliciesGetArgs build() {

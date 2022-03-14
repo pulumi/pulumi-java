@@ -3,7 +3,6 @@
 
 package io.pulumi.gcp.logging;
 
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -229,14 +228,14 @@ public class FolderSink extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public FolderSink(String name, FolderSinkArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:logging/folderSink:FolderSink", name, args == null ? FolderSinkArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("gcp:logging/folderSink:FolderSink", name, args == null ? FolderSinkArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private FolderSink(String name, Input<String> id, @Nullable FolderSinkState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private FolderSink(String name, Output<String> id, @Nullable FolderSinkState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("gcp:logging/folderSink:FolderSink", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -252,7 +251,7 @@ public class FolderSink extends io.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static FolderSink get(String name, Input<String> id, @Nullable FolderSinkState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static FolderSink get(String name, Output<String> id, @Nullable FolderSinkState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new FolderSink(name, id, state, options);
     }
 }

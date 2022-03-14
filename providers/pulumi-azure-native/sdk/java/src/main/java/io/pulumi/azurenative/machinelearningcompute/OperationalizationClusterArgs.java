@@ -10,7 +10,7 @@ import io.pulumi.azurenative.machinelearningcompute.inputs.ContainerRegistryProp
 import io.pulumi.azurenative.machinelearningcompute.inputs.GlobalServiceConfigurationArgs;
 import io.pulumi.azurenative.machinelearningcompute.inputs.StorageAccountPropertiesArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -27,10 +27,10 @@ public final class OperationalizationClusterArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="appInsights")
-      private final @Nullable Input<AppInsightsPropertiesArgs> appInsights;
+      private final @Nullable Output<AppInsightsPropertiesArgs> appInsights;
 
-    public Input<AppInsightsPropertiesArgs> getAppInsights() {
-        return this.appInsights == null ? Input.empty() : this.appInsights;
+    public Output<AppInsightsPropertiesArgs> getAppInsights() {
+        return this.appInsights == null ? Output.empty() : this.appInsights;
     }
 
     /**
@@ -38,10 +38,10 @@ public final class OperationalizationClusterArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="clusterName")
-      private final @Nullable Input<String> clusterName;
+      private final @Nullable Output<String> clusterName;
 
-    public Input<String> getClusterName() {
-        return this.clusterName == null ? Input.empty() : this.clusterName;
+    public Output<String> getClusterName() {
+        return this.clusterName == null ? Output.empty() : this.clusterName;
     }
 
     /**
@@ -49,9 +49,9 @@ public final class OperationalizationClusterArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="clusterType", required=true)
-      private final Input<Either<String,ClusterType>> clusterType;
+      private final Output<Either<String,ClusterType>> clusterType;
 
-    public Input<Either<String,ClusterType>> getClusterType() {
+    public Output<Either<String,ClusterType>> getClusterType() {
         return this.clusterType;
     }
 
@@ -60,10 +60,10 @@ public final class OperationalizationClusterArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="containerRegistry")
-      private final @Nullable Input<ContainerRegistryPropertiesArgs> containerRegistry;
+      private final @Nullable Output<ContainerRegistryPropertiesArgs> containerRegistry;
 
-    public Input<ContainerRegistryPropertiesArgs> getContainerRegistry() {
-        return this.containerRegistry == null ? Input.empty() : this.containerRegistry;
+    public Output<ContainerRegistryPropertiesArgs> getContainerRegistry() {
+        return this.containerRegistry == null ? Output.empty() : this.containerRegistry;
     }
 
     /**
@@ -71,10 +71,10 @@ public final class OperationalizationClusterArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="containerService")
-      private final @Nullable Input<AcsClusterPropertiesArgs> containerService;
+      private final @Nullable Output<AcsClusterPropertiesArgs> containerService;
 
-    public Input<AcsClusterPropertiesArgs> getContainerService() {
-        return this.containerService == null ? Input.empty() : this.containerService;
+    public Output<AcsClusterPropertiesArgs> getContainerService() {
+        return this.containerService == null ? Output.empty() : this.containerService;
     }
 
     /**
@@ -82,10 +82,10 @@ public final class OperationalizationClusterArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -93,10 +93,10 @@ public final class OperationalizationClusterArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="globalServiceConfiguration")
-      private final @Nullable Input<GlobalServiceConfigurationArgs> globalServiceConfiguration;
+      private final @Nullable Output<GlobalServiceConfigurationArgs> globalServiceConfiguration;
 
-    public Input<GlobalServiceConfigurationArgs> getGlobalServiceConfiguration() {
-        return this.globalServiceConfiguration == null ? Input.empty() : this.globalServiceConfiguration;
+    public Output<GlobalServiceConfigurationArgs> getGlobalServiceConfiguration() {
+        return this.globalServiceConfiguration == null ? Output.empty() : this.globalServiceConfiguration;
     }
 
     /**
@@ -104,10 +104,10 @@ public final class OperationalizationClusterArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -115,9 +115,9 @@ public final class OperationalizationClusterArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -126,10 +126,10 @@ public final class OperationalizationClusterArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="storageAccount")
-      private final @Nullable Input<StorageAccountPropertiesArgs> storageAccount;
+      private final @Nullable Output<StorageAccountPropertiesArgs> storageAccount;
 
-    public Input<StorageAccountPropertiesArgs> getStorageAccount() {
-        return this.storageAccount == null ? Input.empty() : this.storageAccount;
+    public Output<StorageAccountPropertiesArgs> getStorageAccount() {
+        return this.storageAccount == null ? Output.empty() : this.storageAccount;
     }
 
     /**
@@ -137,24 +137,24 @@ public final class OperationalizationClusterArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public OperationalizationClusterArgs(
-        @Nullable Input<AppInsightsPropertiesArgs> appInsights,
-        @Nullable Input<String> clusterName,
-        Input<Either<String,ClusterType>> clusterType,
-        @Nullable Input<ContainerRegistryPropertiesArgs> containerRegistry,
-        @Nullable Input<AcsClusterPropertiesArgs> containerService,
-        @Nullable Input<String> description,
-        @Nullable Input<GlobalServiceConfigurationArgs> globalServiceConfiguration,
-        @Nullable Input<String> location,
-        Input<String> resourceGroupName,
-        @Nullable Input<StorageAccountPropertiesArgs> storageAccount,
-        @Nullable Input<Map<String,String>> tags) {
+        @Nullable Output<AppInsightsPropertiesArgs> appInsights,
+        @Nullable Output<String> clusterName,
+        Output<Either<String,ClusterType>> clusterType,
+        @Nullable Output<ContainerRegistryPropertiesArgs> containerRegistry,
+        @Nullable Output<AcsClusterPropertiesArgs> containerService,
+        @Nullable Output<String> description,
+        @Nullable Output<GlobalServiceConfigurationArgs> globalServiceConfiguration,
+        @Nullable Output<String> location,
+        Output<String> resourceGroupName,
+        @Nullable Output<StorageAccountPropertiesArgs> storageAccount,
+        @Nullable Output<Map<String,String>> tags) {
         this.appInsights = appInsights;
         this.clusterName = clusterName;
         this.clusterType = Objects.requireNonNull(clusterType, "expected parameter 'clusterType' to be non-null");
@@ -169,17 +169,17 @@ public final class OperationalizationClusterArgs extends io.pulumi.resources.Res
     }
 
     private OperationalizationClusterArgs() {
-        this.appInsights = Input.empty();
-        this.clusterName = Input.empty();
-        this.clusterType = Input.empty();
-        this.containerRegistry = Input.empty();
-        this.containerService = Input.empty();
-        this.description = Input.empty();
-        this.globalServiceConfiguration = Input.empty();
-        this.location = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.storageAccount = Input.empty();
-        this.tags = Input.empty();
+        this.appInsights = Output.empty();
+        this.clusterName = Output.empty();
+        this.clusterType = Output.empty();
+        this.containerRegistry = Output.empty();
+        this.containerService = Output.empty();
+        this.description = Output.empty();
+        this.globalServiceConfiguration = Output.empty();
+        this.location = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.storageAccount = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -191,17 +191,17 @@ public final class OperationalizationClusterArgs extends io.pulumi.resources.Res
     }
 
     public static final class Builder {
-        private @Nullable Input<AppInsightsPropertiesArgs> appInsights;
-        private @Nullable Input<String> clusterName;
-        private Input<Either<String,ClusterType>> clusterType;
-        private @Nullable Input<ContainerRegistryPropertiesArgs> containerRegistry;
-        private @Nullable Input<AcsClusterPropertiesArgs> containerService;
-        private @Nullable Input<String> description;
-        private @Nullable Input<GlobalServiceConfigurationArgs> globalServiceConfiguration;
-        private @Nullable Input<String> location;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<StorageAccountPropertiesArgs> storageAccount;
-        private @Nullable Input<Map<String,String>> tags;
+        private @Nullable Output<AppInsightsPropertiesArgs> appInsights;
+        private @Nullable Output<String> clusterName;
+        private Output<Either<String,ClusterType>> clusterType;
+        private @Nullable Output<ContainerRegistryPropertiesArgs> containerRegistry;
+        private @Nullable Output<AcsClusterPropertiesArgs> containerService;
+        private @Nullable Output<String> description;
+        private @Nullable Output<GlobalServiceConfigurationArgs> globalServiceConfiguration;
+        private @Nullable Output<String> location;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<StorageAccountPropertiesArgs> storageAccount;
+        private @Nullable Output<Map<String,String>> tags;
 
         public Builder() {
     	      // Empty
@@ -222,113 +222,113 @@ public final class OperationalizationClusterArgs extends io.pulumi.resources.Res
     	      this.tags = defaults.tags;
         }
 
-        public Builder appInsights(@Nullable Input<AppInsightsPropertiesArgs> appInsights) {
+        public Builder appInsights(@Nullable Output<AppInsightsPropertiesArgs> appInsights) {
             this.appInsights = appInsights;
             return this;
         }
 
         public Builder appInsights(@Nullable AppInsightsPropertiesArgs appInsights) {
-            this.appInsights = Input.ofNullable(appInsights);
+            this.appInsights = Output.ofNullable(appInsights);
             return this;
         }
 
-        public Builder clusterName(@Nullable Input<String> clusterName) {
+        public Builder clusterName(@Nullable Output<String> clusterName) {
             this.clusterName = clusterName;
             return this;
         }
 
         public Builder clusterName(@Nullable String clusterName) {
-            this.clusterName = Input.ofNullable(clusterName);
+            this.clusterName = Output.ofNullable(clusterName);
             return this;
         }
 
-        public Builder clusterType(Input<Either<String,ClusterType>> clusterType) {
+        public Builder clusterType(Output<Either<String,ClusterType>> clusterType) {
             this.clusterType = Objects.requireNonNull(clusterType);
             return this;
         }
 
         public Builder clusterType(Either<String,ClusterType> clusterType) {
-            this.clusterType = Input.of(Objects.requireNonNull(clusterType));
+            this.clusterType = Output.of(Objects.requireNonNull(clusterType));
             return this;
         }
 
-        public Builder containerRegistry(@Nullable Input<ContainerRegistryPropertiesArgs> containerRegistry) {
+        public Builder containerRegistry(@Nullable Output<ContainerRegistryPropertiesArgs> containerRegistry) {
             this.containerRegistry = containerRegistry;
             return this;
         }
 
         public Builder containerRegistry(@Nullable ContainerRegistryPropertiesArgs containerRegistry) {
-            this.containerRegistry = Input.ofNullable(containerRegistry);
+            this.containerRegistry = Output.ofNullable(containerRegistry);
             return this;
         }
 
-        public Builder containerService(@Nullable Input<AcsClusterPropertiesArgs> containerService) {
+        public Builder containerService(@Nullable Output<AcsClusterPropertiesArgs> containerService) {
             this.containerService = containerService;
             return this;
         }
 
         public Builder containerService(@Nullable AcsClusterPropertiesArgs containerService) {
-            this.containerService = Input.ofNullable(containerService);
+            this.containerService = Output.ofNullable(containerService);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder globalServiceConfiguration(@Nullable Input<GlobalServiceConfigurationArgs> globalServiceConfiguration) {
+        public Builder globalServiceConfiguration(@Nullable Output<GlobalServiceConfigurationArgs> globalServiceConfiguration) {
             this.globalServiceConfiguration = globalServiceConfiguration;
             return this;
         }
 
         public Builder globalServiceConfiguration(@Nullable GlobalServiceConfigurationArgs globalServiceConfiguration) {
-            this.globalServiceConfiguration = Input.ofNullable(globalServiceConfiguration);
+            this.globalServiceConfiguration = Output.ofNullable(globalServiceConfiguration);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder storageAccount(@Nullable Input<StorageAccountPropertiesArgs> storageAccount) {
+        public Builder storageAccount(@Nullable Output<StorageAccountPropertiesArgs> storageAccount) {
             this.storageAccount = storageAccount;
             return this;
         }
 
         public Builder storageAccount(@Nullable StorageAccountPropertiesArgs storageAccount) {
-            this.storageAccount = Input.ofNullable(storageAccount);
+            this.storageAccount = Output.ofNullable(storageAccount);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public OperationalizationClusterArgs build() {

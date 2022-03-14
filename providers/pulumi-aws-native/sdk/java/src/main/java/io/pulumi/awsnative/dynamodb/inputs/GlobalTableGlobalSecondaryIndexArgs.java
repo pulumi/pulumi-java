@@ -6,7 +6,7 @@ package io.pulumi.awsnative.dynamodb.inputs;
 import io.pulumi.awsnative.dynamodb.inputs.GlobalTableKeySchemaArgs;
 import io.pulumi.awsnative.dynamodb.inputs.GlobalTableProjectionArgs;
 import io.pulumi.awsnative.dynamodb.inputs.GlobalTableWriteProvisionedThroughputSettingsArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -19,38 +19,38 @@ public final class GlobalTableGlobalSecondaryIndexArgs extends io.pulumi.resourc
     public static final GlobalTableGlobalSecondaryIndexArgs Empty = new GlobalTableGlobalSecondaryIndexArgs();
 
     @InputImport(name="indexName", required=true)
-      private final Input<String> indexName;
+      private final Output<String> indexName;
 
-    public Input<String> getIndexName() {
+    public Output<String> getIndexName() {
         return this.indexName;
     }
 
     @InputImport(name="keySchema", required=true)
-      private final Input<List<GlobalTableKeySchemaArgs>> keySchema;
+      private final Output<List<GlobalTableKeySchemaArgs>> keySchema;
 
-    public Input<List<GlobalTableKeySchemaArgs>> getKeySchema() {
+    public Output<List<GlobalTableKeySchemaArgs>> getKeySchema() {
         return this.keySchema;
     }
 
     @InputImport(name="projection", required=true)
-      private final Input<GlobalTableProjectionArgs> projection;
+      private final Output<GlobalTableProjectionArgs> projection;
 
-    public Input<GlobalTableProjectionArgs> getProjection() {
+    public Output<GlobalTableProjectionArgs> getProjection() {
         return this.projection;
     }
 
     @InputImport(name="writeProvisionedThroughputSettings")
-      private final @Nullable Input<GlobalTableWriteProvisionedThroughputSettingsArgs> writeProvisionedThroughputSettings;
+      private final @Nullable Output<GlobalTableWriteProvisionedThroughputSettingsArgs> writeProvisionedThroughputSettings;
 
-    public Input<GlobalTableWriteProvisionedThroughputSettingsArgs> getWriteProvisionedThroughputSettings() {
-        return this.writeProvisionedThroughputSettings == null ? Input.empty() : this.writeProvisionedThroughputSettings;
+    public Output<GlobalTableWriteProvisionedThroughputSettingsArgs> getWriteProvisionedThroughputSettings() {
+        return this.writeProvisionedThroughputSettings == null ? Output.empty() : this.writeProvisionedThroughputSettings;
     }
 
     public GlobalTableGlobalSecondaryIndexArgs(
-        Input<String> indexName,
-        Input<List<GlobalTableKeySchemaArgs>> keySchema,
-        Input<GlobalTableProjectionArgs> projection,
-        @Nullable Input<GlobalTableWriteProvisionedThroughputSettingsArgs> writeProvisionedThroughputSettings) {
+        Output<String> indexName,
+        Output<List<GlobalTableKeySchemaArgs>> keySchema,
+        Output<GlobalTableProjectionArgs> projection,
+        @Nullable Output<GlobalTableWriteProvisionedThroughputSettingsArgs> writeProvisionedThroughputSettings) {
         this.indexName = Objects.requireNonNull(indexName, "expected parameter 'indexName' to be non-null");
         this.keySchema = Objects.requireNonNull(keySchema, "expected parameter 'keySchema' to be non-null");
         this.projection = Objects.requireNonNull(projection, "expected parameter 'projection' to be non-null");
@@ -58,10 +58,10 @@ public final class GlobalTableGlobalSecondaryIndexArgs extends io.pulumi.resourc
     }
 
     private GlobalTableGlobalSecondaryIndexArgs() {
-        this.indexName = Input.empty();
-        this.keySchema = Input.empty();
-        this.projection = Input.empty();
-        this.writeProvisionedThroughputSettings = Input.empty();
+        this.indexName = Output.empty();
+        this.keySchema = Output.empty();
+        this.projection = Output.empty();
+        this.writeProvisionedThroughputSettings = Output.empty();
     }
 
     public static Builder builder() {
@@ -73,10 +73,10 @@ public final class GlobalTableGlobalSecondaryIndexArgs extends io.pulumi.resourc
     }
 
     public static final class Builder {
-        private Input<String> indexName;
-        private Input<List<GlobalTableKeySchemaArgs>> keySchema;
-        private Input<GlobalTableProjectionArgs> projection;
-        private @Nullable Input<GlobalTableWriteProvisionedThroughputSettingsArgs> writeProvisionedThroughputSettings;
+        private Output<String> indexName;
+        private Output<List<GlobalTableKeySchemaArgs>> keySchema;
+        private Output<GlobalTableProjectionArgs> projection;
+        private @Nullable Output<GlobalTableWriteProvisionedThroughputSettingsArgs> writeProvisionedThroughputSettings;
 
         public Builder() {
     	      // Empty
@@ -90,43 +90,43 @@ public final class GlobalTableGlobalSecondaryIndexArgs extends io.pulumi.resourc
     	      this.writeProvisionedThroughputSettings = defaults.writeProvisionedThroughputSettings;
         }
 
-        public Builder indexName(Input<String> indexName) {
+        public Builder indexName(Output<String> indexName) {
             this.indexName = Objects.requireNonNull(indexName);
             return this;
         }
 
         public Builder indexName(String indexName) {
-            this.indexName = Input.of(Objects.requireNonNull(indexName));
+            this.indexName = Output.of(Objects.requireNonNull(indexName));
             return this;
         }
 
-        public Builder keySchema(Input<List<GlobalTableKeySchemaArgs>> keySchema) {
+        public Builder keySchema(Output<List<GlobalTableKeySchemaArgs>> keySchema) {
             this.keySchema = Objects.requireNonNull(keySchema);
             return this;
         }
 
         public Builder keySchema(List<GlobalTableKeySchemaArgs> keySchema) {
-            this.keySchema = Input.of(Objects.requireNonNull(keySchema));
+            this.keySchema = Output.of(Objects.requireNonNull(keySchema));
             return this;
         }
 
-        public Builder projection(Input<GlobalTableProjectionArgs> projection) {
+        public Builder projection(Output<GlobalTableProjectionArgs> projection) {
             this.projection = Objects.requireNonNull(projection);
             return this;
         }
 
         public Builder projection(GlobalTableProjectionArgs projection) {
-            this.projection = Input.of(Objects.requireNonNull(projection));
+            this.projection = Output.of(Objects.requireNonNull(projection));
             return this;
         }
 
-        public Builder writeProvisionedThroughputSettings(@Nullable Input<GlobalTableWriteProvisionedThroughputSettingsArgs> writeProvisionedThroughputSettings) {
+        public Builder writeProvisionedThroughputSettings(@Nullable Output<GlobalTableWriteProvisionedThroughputSettingsArgs> writeProvisionedThroughputSettings) {
             this.writeProvisionedThroughputSettings = writeProvisionedThroughputSettings;
             return this;
         }
 
         public Builder writeProvisionedThroughputSettings(@Nullable GlobalTableWriteProvisionedThroughputSettingsArgs writeProvisionedThroughputSettings) {
-            this.writeProvisionedThroughputSettings = Input.ofNullable(writeProvisionedThroughputSettings);
+            this.writeProvisionedThroughputSettings = Output.ofNullable(writeProvisionedThroughputSettings);
             return this;
         }
         public GlobalTableGlobalSecondaryIndexArgs build() {

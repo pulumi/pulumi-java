@@ -5,7 +5,7 @@ package io.pulumi.awsnative.lightsail;
 
 import io.pulumi.awsnative.lightsail.inputs.DiskAddOnArgs;
 import io.pulumi.awsnative.lightsail.inputs.DiskTagArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -23,10 +23,10 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="addOns")
-      private final @Nullable Input<List<DiskAddOnArgs>> addOns;
+      private final @Nullable Output<List<DiskAddOnArgs>> addOns;
 
-    public Input<List<DiskAddOnArgs>> getAddOns() {
-        return this.addOns == null ? Input.empty() : this.addOns;
+    public Output<List<DiskAddOnArgs>> getAddOns() {
+        return this.addOns == null ? Output.empty() : this.addOns;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="availabilityZone")
-      private final @Nullable Input<String> availabilityZone;
+      private final @Nullable Output<String> availabilityZone;
 
-    public Input<String> getAvailabilityZone() {
-        return this.availabilityZone == null ? Input.empty() : this.availabilityZone;
+    public Output<String> getAvailabilityZone() {
+        return this.availabilityZone == null ? Output.empty() : this.availabilityZone;
     }
 
     /**
@@ -45,10 +45,10 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="diskName")
-      private final @Nullable Input<String> diskName;
+      private final @Nullable Output<String> diskName;
 
-    public Input<String> getDiskName() {
-        return this.diskName == null ? Input.empty() : this.diskName;
+    public Output<String> getDiskName() {
+        return this.diskName == null ? Output.empty() : this.diskName;
     }
 
     /**
@@ -56,9 +56,9 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sizeInGb", required=true)
-      private final Input<Integer> sizeInGb;
+      private final Output<Integer> sizeInGb;
 
-    public Input<Integer> getSizeInGb() {
+    public Output<Integer> getSizeInGb() {
         return this.sizeInGb;
     }
 
@@ -67,18 +67,18 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<List<DiskTagArgs>> tags;
+      private final @Nullable Output<List<DiskTagArgs>> tags;
 
-    public Input<List<DiskTagArgs>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<List<DiskTagArgs>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public DiskArgs(
-        @Nullable Input<List<DiskAddOnArgs>> addOns,
-        @Nullable Input<String> availabilityZone,
-        @Nullable Input<String> diskName,
-        Input<Integer> sizeInGb,
-        @Nullable Input<List<DiskTagArgs>> tags) {
+        @Nullable Output<List<DiskAddOnArgs>> addOns,
+        @Nullable Output<String> availabilityZone,
+        @Nullable Output<String> diskName,
+        Output<Integer> sizeInGb,
+        @Nullable Output<List<DiskTagArgs>> tags) {
         this.addOns = addOns;
         this.availabilityZone = availabilityZone;
         this.diskName = diskName;
@@ -87,11 +87,11 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DiskArgs() {
-        this.addOns = Input.empty();
-        this.availabilityZone = Input.empty();
-        this.diskName = Input.empty();
-        this.sizeInGb = Input.empty();
-        this.tags = Input.empty();
+        this.addOns = Output.empty();
+        this.availabilityZone = Output.empty();
+        this.diskName = Output.empty();
+        this.sizeInGb = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -103,11 +103,11 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<List<DiskAddOnArgs>> addOns;
-        private @Nullable Input<String> availabilityZone;
-        private @Nullable Input<String> diskName;
-        private Input<Integer> sizeInGb;
-        private @Nullable Input<List<DiskTagArgs>> tags;
+        private @Nullable Output<List<DiskAddOnArgs>> addOns;
+        private @Nullable Output<String> availabilityZone;
+        private @Nullable Output<String> diskName;
+        private Output<Integer> sizeInGb;
+        private @Nullable Output<List<DiskTagArgs>> tags;
 
         public Builder() {
     	      // Empty
@@ -122,53 +122,53 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder addOns(@Nullable Input<List<DiskAddOnArgs>> addOns) {
+        public Builder addOns(@Nullable Output<List<DiskAddOnArgs>> addOns) {
             this.addOns = addOns;
             return this;
         }
 
         public Builder addOns(@Nullable List<DiskAddOnArgs> addOns) {
-            this.addOns = Input.ofNullable(addOns);
+            this.addOns = Output.ofNullable(addOns);
             return this;
         }
 
-        public Builder availabilityZone(@Nullable Input<String> availabilityZone) {
+        public Builder availabilityZone(@Nullable Output<String> availabilityZone) {
             this.availabilityZone = availabilityZone;
             return this;
         }
 
         public Builder availabilityZone(@Nullable String availabilityZone) {
-            this.availabilityZone = Input.ofNullable(availabilityZone);
+            this.availabilityZone = Output.ofNullable(availabilityZone);
             return this;
         }
 
-        public Builder diskName(@Nullable Input<String> diskName) {
+        public Builder diskName(@Nullable Output<String> diskName) {
             this.diskName = diskName;
             return this;
         }
 
         public Builder diskName(@Nullable String diskName) {
-            this.diskName = Input.ofNullable(diskName);
+            this.diskName = Output.ofNullable(diskName);
             return this;
         }
 
-        public Builder sizeInGb(Input<Integer> sizeInGb) {
+        public Builder sizeInGb(Output<Integer> sizeInGb) {
             this.sizeInGb = Objects.requireNonNull(sizeInGb);
             return this;
         }
 
         public Builder sizeInGb(Integer sizeInGb) {
-            this.sizeInGb = Input.of(Objects.requireNonNull(sizeInGb));
+            this.sizeInGb = Output.of(Objects.requireNonNull(sizeInGb));
             return this;
         }
 
-        public Builder tags(@Nullable Input<List<DiskTagArgs>> tags) {
+        public Builder tags(@Nullable Output<List<DiskTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable List<DiskTagArgs> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public DiskArgs build() {

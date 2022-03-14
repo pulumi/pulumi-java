@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.lex.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
@@ -19,18 +19,18 @@ public final class BotMultipleValuesSettingArgs extends io.pulumi.resources.Reso
     public static final BotMultipleValuesSettingArgs Empty = new BotMultipleValuesSettingArgs();
 
     @InputImport(name="allowMultipleValues")
-      private final @Nullable Input<Boolean> allowMultipleValues;
+      private final @Nullable Output<Boolean> allowMultipleValues;
 
-    public Input<Boolean> getAllowMultipleValues() {
-        return this.allowMultipleValues == null ? Input.empty() : this.allowMultipleValues;
+    public Output<Boolean> getAllowMultipleValues() {
+        return this.allowMultipleValues == null ? Output.empty() : this.allowMultipleValues;
     }
 
-    public BotMultipleValuesSettingArgs(@Nullable Input<Boolean> allowMultipleValues) {
+    public BotMultipleValuesSettingArgs(@Nullable Output<Boolean> allowMultipleValues) {
         this.allowMultipleValues = allowMultipleValues;
     }
 
     private BotMultipleValuesSettingArgs() {
-        this.allowMultipleValues = Input.empty();
+        this.allowMultipleValues = Output.empty();
     }
 
     public static Builder builder() {
@@ -42,7 +42,7 @@ public final class BotMultipleValuesSettingArgs extends io.pulumi.resources.Reso
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> allowMultipleValues;
+        private @Nullable Output<Boolean> allowMultipleValues;
 
         public Builder() {
     	      // Empty
@@ -53,13 +53,13 @@ public final class BotMultipleValuesSettingArgs extends io.pulumi.resources.Reso
     	      this.allowMultipleValues = defaults.allowMultipleValues;
         }
 
-        public Builder allowMultipleValues(@Nullable Input<Boolean> allowMultipleValues) {
+        public Builder allowMultipleValues(@Nullable Output<Boolean> allowMultipleValues) {
             this.allowMultipleValues = allowMultipleValues;
             return this;
         }
 
         public Builder allowMultipleValues(@Nullable Boolean allowMultipleValues) {
-            this.allowMultipleValues = Input.ofNullable(allowMultipleValues);
+            this.allowMultipleValues = Output.ofNullable(allowMultipleValues);
             return this;
         }
         public BotMultipleValuesSettingArgs build() {

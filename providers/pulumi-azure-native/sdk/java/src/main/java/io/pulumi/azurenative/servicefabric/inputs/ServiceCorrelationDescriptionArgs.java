@@ -5,7 +5,7 @@ package io.pulumi.azurenative.servicefabric.inputs;
 
 import io.pulumi.azurenative.servicefabric.enums.ServiceCorrelationScheme;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -24,9 +24,9 @@ public final class ServiceCorrelationDescriptionArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="scheme", required=true)
-      private final Input<Either<String,ServiceCorrelationScheme>> scheme;
+      private final Output<Either<String,ServiceCorrelationScheme>> scheme;
 
-    public Input<Either<String,ServiceCorrelationScheme>> getScheme() {
+    public Output<Either<String,ServiceCorrelationScheme>> getScheme() {
         return this.scheme;
     }
 
@@ -35,22 +35,22 @@ public final class ServiceCorrelationDescriptionArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="serviceName", required=true)
-      private final Input<String> serviceName;
+      private final Output<String> serviceName;
 
-    public Input<String> getServiceName() {
+    public Output<String> getServiceName() {
         return this.serviceName;
     }
 
     public ServiceCorrelationDescriptionArgs(
-        Input<Either<String,ServiceCorrelationScheme>> scheme,
-        Input<String> serviceName) {
+        Output<Either<String,ServiceCorrelationScheme>> scheme,
+        Output<String> serviceName) {
         this.scheme = Objects.requireNonNull(scheme, "expected parameter 'scheme' to be non-null");
         this.serviceName = Objects.requireNonNull(serviceName, "expected parameter 'serviceName' to be non-null");
     }
 
     private ServiceCorrelationDescriptionArgs() {
-        this.scheme = Input.empty();
-        this.serviceName = Input.empty();
+        this.scheme = Output.empty();
+        this.serviceName = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class ServiceCorrelationDescriptionArgs extends io.pulumi.resources
     }
 
     public static final class Builder {
-        private Input<Either<String,ServiceCorrelationScheme>> scheme;
-        private Input<String> serviceName;
+        private Output<Either<String,ServiceCorrelationScheme>> scheme;
+        private Output<String> serviceName;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class ServiceCorrelationDescriptionArgs extends io.pulumi.resources
     	      this.serviceName = defaults.serviceName;
         }
 
-        public Builder scheme(Input<Either<String,ServiceCorrelationScheme>> scheme) {
+        public Builder scheme(Output<Either<String,ServiceCorrelationScheme>> scheme) {
             this.scheme = Objects.requireNonNull(scheme);
             return this;
         }
 
         public Builder scheme(Either<String,ServiceCorrelationScheme> scheme) {
-            this.scheme = Input.of(Objects.requireNonNull(scheme));
+            this.scheme = Output.of(Objects.requireNonNull(scheme));
             return this;
         }
 
-        public Builder serviceName(Input<String> serviceName) {
+        public Builder serviceName(Output<String> serviceName) {
             this.serviceName = Objects.requireNonNull(serviceName);
             return this;
         }
 
         public Builder serviceName(String serviceName) {
-            this.serviceName = Input.of(Objects.requireNonNull(serviceName));
+            this.serviceName = Output.of(Objects.requireNonNull(serviceName));
             return this;
         }
         public ServiceCorrelationDescriptionArgs build() {

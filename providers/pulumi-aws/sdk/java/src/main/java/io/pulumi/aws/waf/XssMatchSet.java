@@ -7,7 +7,6 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.waf.XssMatchSetArgs;
 import io.pulumi.aws.waf.inputs.XssMatchSetState;
 import io.pulumi.aws.waf.outputs.XssMatchSetXssMatchTuple;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -112,14 +111,14 @@ public class XssMatchSet extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public XssMatchSet(String name, @Nullable XssMatchSetArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:waf/xssMatchSet:XssMatchSet", name, args == null ? XssMatchSetArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws:waf/xssMatchSet:XssMatchSet", name, args == null ? XssMatchSetArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private XssMatchSet(String name, Input<String> id, @Nullable XssMatchSetState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private XssMatchSet(String name, Output<String> id, @Nullable XssMatchSetState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws:waf/xssMatchSet:XssMatchSet", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -135,7 +134,7 @@ public class XssMatchSet extends io.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static XssMatchSet get(String name, Input<String> id, @Nullable XssMatchSetState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static XssMatchSet get(String name, Output<String> id, @Nullable XssMatchSetState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new XssMatchSet(name, id, state, options);
     }
 }

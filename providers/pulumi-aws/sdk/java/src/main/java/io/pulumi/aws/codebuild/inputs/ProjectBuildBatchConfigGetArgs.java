@@ -4,7 +4,7 @@
 package io.pulumi.aws.codebuild.inputs;
 
 import io.pulumi.aws.codebuild.inputs.ProjectBuildBatchConfigRestrictionsGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -22,10 +22,10 @@ public final class ProjectBuildBatchConfigGetArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="combineArtifacts")
-      private final @Nullable Input<Boolean> combineArtifacts;
+      private final @Nullable Output<Boolean> combineArtifacts;
 
-    public Input<Boolean> getCombineArtifacts() {
-        return this.combineArtifacts == null ? Input.empty() : this.combineArtifacts;
+    public Output<Boolean> getCombineArtifacts() {
+        return this.combineArtifacts == null ? Output.empty() : this.combineArtifacts;
     }
 
     /**
@@ -33,10 +33,10 @@ public final class ProjectBuildBatchConfigGetArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="restrictions")
-      private final @Nullable Input<ProjectBuildBatchConfigRestrictionsGetArgs> restrictions;
+      private final @Nullable Output<ProjectBuildBatchConfigRestrictionsGetArgs> restrictions;
 
-    public Input<ProjectBuildBatchConfigRestrictionsGetArgs> getRestrictions() {
-        return this.restrictions == null ? Input.empty() : this.restrictions;
+    public Output<ProjectBuildBatchConfigRestrictionsGetArgs> getRestrictions() {
+        return this.restrictions == null ? Output.empty() : this.restrictions;
     }
 
     /**
@@ -44,9 +44,9 @@ public final class ProjectBuildBatchConfigGetArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="serviceRole", required=true)
-      private final Input<String> serviceRole;
+      private final Output<String> serviceRole;
 
-    public Input<String> getServiceRole() {
+    public Output<String> getServiceRole() {
         return this.serviceRole;
     }
 
@@ -55,17 +55,17 @@ public final class ProjectBuildBatchConfigGetArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="timeoutInMins")
-      private final @Nullable Input<Integer> timeoutInMins;
+      private final @Nullable Output<Integer> timeoutInMins;
 
-    public Input<Integer> getTimeoutInMins() {
-        return this.timeoutInMins == null ? Input.empty() : this.timeoutInMins;
+    public Output<Integer> getTimeoutInMins() {
+        return this.timeoutInMins == null ? Output.empty() : this.timeoutInMins;
     }
 
     public ProjectBuildBatchConfigGetArgs(
-        @Nullable Input<Boolean> combineArtifacts,
-        @Nullable Input<ProjectBuildBatchConfigRestrictionsGetArgs> restrictions,
-        Input<String> serviceRole,
-        @Nullable Input<Integer> timeoutInMins) {
+        @Nullable Output<Boolean> combineArtifacts,
+        @Nullable Output<ProjectBuildBatchConfigRestrictionsGetArgs> restrictions,
+        Output<String> serviceRole,
+        @Nullable Output<Integer> timeoutInMins) {
         this.combineArtifacts = combineArtifacts;
         this.restrictions = restrictions;
         this.serviceRole = Objects.requireNonNull(serviceRole, "expected parameter 'serviceRole' to be non-null");
@@ -73,10 +73,10 @@ public final class ProjectBuildBatchConfigGetArgs extends io.pulumi.resources.Re
     }
 
     private ProjectBuildBatchConfigGetArgs() {
-        this.combineArtifacts = Input.empty();
-        this.restrictions = Input.empty();
-        this.serviceRole = Input.empty();
-        this.timeoutInMins = Input.empty();
+        this.combineArtifacts = Output.empty();
+        this.restrictions = Output.empty();
+        this.serviceRole = Output.empty();
+        this.timeoutInMins = Output.empty();
     }
 
     public static Builder builder() {
@@ -88,10 +88,10 @@ public final class ProjectBuildBatchConfigGetArgs extends io.pulumi.resources.Re
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> combineArtifacts;
-        private @Nullable Input<ProjectBuildBatchConfigRestrictionsGetArgs> restrictions;
-        private Input<String> serviceRole;
-        private @Nullable Input<Integer> timeoutInMins;
+        private @Nullable Output<Boolean> combineArtifacts;
+        private @Nullable Output<ProjectBuildBatchConfigRestrictionsGetArgs> restrictions;
+        private Output<String> serviceRole;
+        private @Nullable Output<Integer> timeoutInMins;
 
         public Builder() {
     	      // Empty
@@ -105,43 +105,43 @@ public final class ProjectBuildBatchConfigGetArgs extends io.pulumi.resources.Re
     	      this.timeoutInMins = defaults.timeoutInMins;
         }
 
-        public Builder combineArtifacts(@Nullable Input<Boolean> combineArtifacts) {
+        public Builder combineArtifacts(@Nullable Output<Boolean> combineArtifacts) {
             this.combineArtifacts = combineArtifacts;
             return this;
         }
 
         public Builder combineArtifacts(@Nullable Boolean combineArtifacts) {
-            this.combineArtifacts = Input.ofNullable(combineArtifacts);
+            this.combineArtifacts = Output.ofNullable(combineArtifacts);
             return this;
         }
 
-        public Builder restrictions(@Nullable Input<ProjectBuildBatchConfigRestrictionsGetArgs> restrictions) {
+        public Builder restrictions(@Nullable Output<ProjectBuildBatchConfigRestrictionsGetArgs> restrictions) {
             this.restrictions = restrictions;
             return this;
         }
 
         public Builder restrictions(@Nullable ProjectBuildBatchConfigRestrictionsGetArgs restrictions) {
-            this.restrictions = Input.ofNullable(restrictions);
+            this.restrictions = Output.ofNullable(restrictions);
             return this;
         }
 
-        public Builder serviceRole(Input<String> serviceRole) {
+        public Builder serviceRole(Output<String> serviceRole) {
             this.serviceRole = Objects.requireNonNull(serviceRole);
             return this;
         }
 
         public Builder serviceRole(String serviceRole) {
-            this.serviceRole = Input.of(Objects.requireNonNull(serviceRole));
+            this.serviceRole = Output.of(Objects.requireNonNull(serviceRole));
             return this;
         }
 
-        public Builder timeoutInMins(@Nullable Input<Integer> timeoutInMins) {
+        public Builder timeoutInMins(@Nullable Output<Integer> timeoutInMins) {
             this.timeoutInMins = timeoutInMins;
             return this;
         }
 
         public Builder timeoutInMins(@Nullable Integer timeoutInMins) {
-            this.timeoutInMins = Input.ofNullable(timeoutInMins);
+            this.timeoutInMins = Output.ofNullable(timeoutInMins);
             return this;
         }
         public ProjectBuildBatchConfigGetArgs build() {

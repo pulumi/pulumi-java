@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.pubsub;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -20,9 +20,9 @@ public final class SubscriptionIAMPolicyArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="policyData", required=true)
-      private final Input<String> policyData;
+      private final Output<String> policyData;
 
-    public Input<String> getPolicyData() {
+    public Output<String> getPolicyData() {
         return this.policyData;
     }
 
@@ -32,10 +32,10 @@ public final class SubscriptionIAMPolicyArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -43,25 +43,25 @@ public final class SubscriptionIAMPolicyArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="subscription", required=true)
-      private final Input<String> subscription;
+      private final Output<String> subscription;
 
-    public Input<String> getSubscription() {
+    public Output<String> getSubscription() {
         return this.subscription;
     }
 
     public SubscriptionIAMPolicyArgs(
-        Input<String> policyData,
-        @Nullable Input<String> project,
-        Input<String> subscription) {
+        Output<String> policyData,
+        @Nullable Output<String> project,
+        Output<String> subscription) {
         this.policyData = Objects.requireNonNull(policyData, "expected parameter 'policyData' to be non-null");
         this.project = project;
         this.subscription = Objects.requireNonNull(subscription, "expected parameter 'subscription' to be non-null");
     }
 
     private SubscriptionIAMPolicyArgs() {
-        this.policyData = Input.empty();
-        this.project = Input.empty();
-        this.subscription = Input.empty();
+        this.policyData = Output.empty();
+        this.project = Output.empty();
+        this.subscription = Output.empty();
     }
 
     public static Builder builder() {
@@ -73,9 +73,9 @@ public final class SubscriptionIAMPolicyArgs extends io.pulumi.resources.Resourc
     }
 
     public static final class Builder {
-        private Input<String> policyData;
-        private @Nullable Input<String> project;
-        private Input<String> subscription;
+        private Output<String> policyData;
+        private @Nullable Output<String> project;
+        private Output<String> subscription;
 
         public Builder() {
     	      // Empty
@@ -88,33 +88,33 @@ public final class SubscriptionIAMPolicyArgs extends io.pulumi.resources.Resourc
     	      this.subscription = defaults.subscription;
         }
 
-        public Builder policyData(Input<String> policyData) {
+        public Builder policyData(Output<String> policyData) {
             this.policyData = Objects.requireNonNull(policyData);
             return this;
         }
 
         public Builder policyData(String policyData) {
-            this.policyData = Input.of(Objects.requireNonNull(policyData));
+            this.policyData = Output.of(Objects.requireNonNull(policyData));
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder subscription(Input<String> subscription) {
+        public Builder subscription(Output<String> subscription) {
             this.subscription = Objects.requireNonNull(subscription);
             return this;
         }
 
         public Builder subscription(String subscription) {
-            this.subscription = Input.of(Objects.requireNonNull(subscription));
+            this.subscription = Output.of(Objects.requireNonNull(subscription));
             return this;
         }
         public SubscriptionIAMPolicyArgs build() {

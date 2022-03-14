@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.apigee_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class GoogleCloudApigeeV1CanaryEvaluationMetricLabelsArgs extends i
      * 
      */
     @InputImport(name="env")
-      private final @Nullable Input<String> env;
+      private final @Nullable Output<String> env;
 
-    public Input<String> getEnv() {
-        return this.env == null ? Input.empty() : this.env;
+    public Output<String> getEnv() {
+        return this.env == null ? Output.empty() : this.env;
     }
 
     /**
@@ -34,9 +34,9 @@ public final class GoogleCloudApigeeV1CanaryEvaluationMetricLabelsArgs extends i
      * 
      */
     @InputImport(name="instanceId", required=true)
-      private final Input<String> instanceId;
+      private final Output<String> instanceId;
 
-    public Input<String> getInstanceId() {
+    public Output<String> getInstanceId() {
         return this.instanceId;
     }
 
@@ -45,25 +45,25 @@ public final class GoogleCloudApigeeV1CanaryEvaluationMetricLabelsArgs extends i
      * 
      */
     @InputImport(name="location", required=true)
-      private final Input<String> location;
+      private final Output<String> location;
 
-    public Input<String> getLocation() {
+    public Output<String> getLocation() {
         return this.location;
     }
 
     public GoogleCloudApigeeV1CanaryEvaluationMetricLabelsArgs(
-        @Nullable Input<String> env,
-        Input<String> instanceId,
-        Input<String> location) {
+        @Nullable Output<String> env,
+        Output<String> instanceId,
+        Output<String> location) {
         this.env = env;
         this.instanceId = Objects.requireNonNull(instanceId, "expected parameter 'instanceId' to be non-null");
         this.location = Objects.requireNonNull(location, "expected parameter 'location' to be non-null");
     }
 
     private GoogleCloudApigeeV1CanaryEvaluationMetricLabelsArgs() {
-        this.env = Input.empty();
-        this.instanceId = Input.empty();
-        this.location = Input.empty();
+        this.env = Output.empty();
+        this.instanceId = Output.empty();
+        this.location = Output.empty();
     }
 
     public static Builder builder() {
@@ -75,9 +75,9 @@ public final class GoogleCloudApigeeV1CanaryEvaluationMetricLabelsArgs extends i
     }
 
     public static final class Builder {
-        private @Nullable Input<String> env;
-        private Input<String> instanceId;
-        private Input<String> location;
+        private @Nullable Output<String> env;
+        private Output<String> instanceId;
+        private Output<String> location;
 
         public Builder() {
     	      // Empty
@@ -90,33 +90,33 @@ public final class GoogleCloudApigeeV1CanaryEvaluationMetricLabelsArgs extends i
     	      this.location = defaults.location;
         }
 
-        public Builder env(@Nullable Input<String> env) {
+        public Builder env(@Nullable Output<String> env) {
             this.env = env;
             return this;
         }
 
         public Builder env(@Nullable String env) {
-            this.env = Input.ofNullable(env);
+            this.env = Output.ofNullable(env);
             return this;
         }
 
-        public Builder instanceId(Input<String> instanceId) {
+        public Builder instanceId(Output<String> instanceId) {
             this.instanceId = Objects.requireNonNull(instanceId);
             return this;
         }
 
         public Builder instanceId(String instanceId) {
-            this.instanceId = Input.of(Objects.requireNonNull(instanceId));
+            this.instanceId = Output.of(Objects.requireNonNull(instanceId));
             return this;
         }
 
-        public Builder location(Input<String> location) {
+        public Builder location(Output<String> location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
         public Builder location(String location) {
-            this.location = Input.of(Objects.requireNonNull(location));
+            this.location = Output.of(Objects.requireNonNull(location));
             return this;
         }
         public GoogleCloudApigeeV1CanaryEvaluationMetricLabelsArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.datalabeling_v1beta1;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.datalabeling_v1beta1.inputs.GoogleCloudDatalabelingV1beta1EvaluationJobConfigArgs;
 import java.lang.Boolean;
@@ -21,9 +21,9 @@ public final class EvaluationJobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="annotationSpecSet", required=true)
-      private final Input<String> annotationSpecSet;
+      private final Output<String> annotationSpecSet;
 
-    public Input<String> getAnnotationSpecSet() {
+    public Output<String> getAnnotationSpecSet() {
         return this.annotationSpecSet;
     }
 
@@ -32,9 +32,9 @@ public final class EvaluationJobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description", required=true)
-      private final Input<String> description;
+      private final Output<String> description;
 
-    public Input<String> getDescription() {
+    public Output<String> getDescription() {
         return this.description;
     }
 
@@ -43,9 +43,9 @@ public final class EvaluationJobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="evaluationJobConfig", required=true)
-      private final Input<GoogleCloudDatalabelingV1beta1EvaluationJobConfigArgs> evaluationJobConfig;
+      private final Output<GoogleCloudDatalabelingV1beta1EvaluationJobConfigArgs> evaluationJobConfig;
 
-    public Input<GoogleCloudDatalabelingV1beta1EvaluationJobConfigArgs> getEvaluationJobConfig() {
+    public Output<GoogleCloudDatalabelingV1beta1EvaluationJobConfigArgs> getEvaluationJobConfig() {
         return this.evaluationJobConfig;
     }
 
@@ -54,9 +54,9 @@ public final class EvaluationJobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labelMissingGroundTruth", required=true)
-      private final Input<Boolean> labelMissingGroundTruth;
+      private final Output<Boolean> labelMissingGroundTruth;
 
-    public Input<Boolean> getLabelMissingGroundTruth() {
+    public Output<Boolean> getLabelMissingGroundTruth() {
         return this.labelMissingGroundTruth;
     }
 
@@ -65,17 +65,17 @@ public final class EvaluationJobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="modelVersion", required=true)
-      private final Input<String> modelVersion;
+      private final Output<String> modelVersion;
 
-    public Input<String> getModelVersion() {
+    public Output<String> getModelVersion() {
         return this.modelVersion;
     }
 
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -83,20 +83,20 @@ public final class EvaluationJobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="schedule", required=true)
-      private final Input<String> schedule;
+      private final Output<String> schedule;
 
-    public Input<String> getSchedule() {
+    public Output<String> getSchedule() {
         return this.schedule;
     }
 
     public EvaluationJobArgs(
-        Input<String> annotationSpecSet,
-        Input<String> description,
-        Input<GoogleCloudDatalabelingV1beta1EvaluationJobConfigArgs> evaluationJobConfig,
-        Input<Boolean> labelMissingGroundTruth,
-        Input<String> modelVersion,
-        @Nullable Input<String> project,
-        Input<String> schedule) {
+        Output<String> annotationSpecSet,
+        Output<String> description,
+        Output<GoogleCloudDatalabelingV1beta1EvaluationJobConfigArgs> evaluationJobConfig,
+        Output<Boolean> labelMissingGroundTruth,
+        Output<String> modelVersion,
+        @Nullable Output<String> project,
+        Output<String> schedule) {
         this.annotationSpecSet = Objects.requireNonNull(annotationSpecSet, "expected parameter 'annotationSpecSet' to be non-null");
         this.description = Objects.requireNonNull(description, "expected parameter 'description' to be non-null");
         this.evaluationJobConfig = Objects.requireNonNull(evaluationJobConfig, "expected parameter 'evaluationJobConfig' to be non-null");
@@ -107,13 +107,13 @@ public final class EvaluationJobArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private EvaluationJobArgs() {
-        this.annotationSpecSet = Input.empty();
-        this.description = Input.empty();
-        this.evaluationJobConfig = Input.empty();
-        this.labelMissingGroundTruth = Input.empty();
-        this.modelVersion = Input.empty();
-        this.project = Input.empty();
-        this.schedule = Input.empty();
+        this.annotationSpecSet = Output.empty();
+        this.description = Output.empty();
+        this.evaluationJobConfig = Output.empty();
+        this.labelMissingGroundTruth = Output.empty();
+        this.modelVersion = Output.empty();
+        this.project = Output.empty();
+        this.schedule = Output.empty();
     }
 
     public static Builder builder() {
@@ -125,13 +125,13 @@ public final class EvaluationJobArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> annotationSpecSet;
-        private Input<String> description;
-        private Input<GoogleCloudDatalabelingV1beta1EvaluationJobConfigArgs> evaluationJobConfig;
-        private Input<Boolean> labelMissingGroundTruth;
-        private Input<String> modelVersion;
-        private @Nullable Input<String> project;
-        private Input<String> schedule;
+        private Output<String> annotationSpecSet;
+        private Output<String> description;
+        private Output<GoogleCloudDatalabelingV1beta1EvaluationJobConfigArgs> evaluationJobConfig;
+        private Output<Boolean> labelMissingGroundTruth;
+        private Output<String> modelVersion;
+        private @Nullable Output<String> project;
+        private Output<String> schedule;
 
         public Builder() {
     	      // Empty
@@ -148,73 +148,73 @@ public final class EvaluationJobArgs extends io.pulumi.resources.ResourceArgs {
     	      this.schedule = defaults.schedule;
         }
 
-        public Builder annotationSpecSet(Input<String> annotationSpecSet) {
+        public Builder annotationSpecSet(Output<String> annotationSpecSet) {
             this.annotationSpecSet = Objects.requireNonNull(annotationSpecSet);
             return this;
         }
 
         public Builder annotationSpecSet(String annotationSpecSet) {
-            this.annotationSpecSet = Input.of(Objects.requireNonNull(annotationSpecSet));
+            this.annotationSpecSet = Output.of(Objects.requireNonNull(annotationSpecSet));
             return this;
         }
 
-        public Builder description(Input<String> description) {
+        public Builder description(Output<String> description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
         public Builder description(String description) {
-            this.description = Input.of(Objects.requireNonNull(description));
+            this.description = Output.of(Objects.requireNonNull(description));
             return this;
         }
 
-        public Builder evaluationJobConfig(Input<GoogleCloudDatalabelingV1beta1EvaluationJobConfigArgs> evaluationJobConfig) {
+        public Builder evaluationJobConfig(Output<GoogleCloudDatalabelingV1beta1EvaluationJobConfigArgs> evaluationJobConfig) {
             this.evaluationJobConfig = Objects.requireNonNull(evaluationJobConfig);
             return this;
         }
 
         public Builder evaluationJobConfig(GoogleCloudDatalabelingV1beta1EvaluationJobConfigArgs evaluationJobConfig) {
-            this.evaluationJobConfig = Input.of(Objects.requireNonNull(evaluationJobConfig));
+            this.evaluationJobConfig = Output.of(Objects.requireNonNull(evaluationJobConfig));
             return this;
         }
 
-        public Builder labelMissingGroundTruth(Input<Boolean> labelMissingGroundTruth) {
+        public Builder labelMissingGroundTruth(Output<Boolean> labelMissingGroundTruth) {
             this.labelMissingGroundTruth = Objects.requireNonNull(labelMissingGroundTruth);
             return this;
         }
 
         public Builder labelMissingGroundTruth(Boolean labelMissingGroundTruth) {
-            this.labelMissingGroundTruth = Input.of(Objects.requireNonNull(labelMissingGroundTruth));
+            this.labelMissingGroundTruth = Output.of(Objects.requireNonNull(labelMissingGroundTruth));
             return this;
         }
 
-        public Builder modelVersion(Input<String> modelVersion) {
+        public Builder modelVersion(Output<String> modelVersion) {
             this.modelVersion = Objects.requireNonNull(modelVersion);
             return this;
         }
 
         public Builder modelVersion(String modelVersion) {
-            this.modelVersion = Input.of(Objects.requireNonNull(modelVersion));
+            this.modelVersion = Output.of(Objects.requireNonNull(modelVersion));
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder schedule(Input<String> schedule) {
+        public Builder schedule(Output<String> schedule) {
             this.schedule = Objects.requireNonNull(schedule);
             return this;
         }
 
         public Builder schedule(String schedule) {
-            this.schedule = Input.of(Objects.requireNonNull(schedule));
+            this.schedule = Output.of(Objects.requireNonNull(schedule));
             return this;
         }
         public EvaluationJobArgs build() {

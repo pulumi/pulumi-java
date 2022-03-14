@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.transcoder_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.transcoder_v1.inputs.TextMappingArgs;
 import java.lang.String;
@@ -25,10 +25,10 @@ public final class TextStreamArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="codec")
-      private final @Nullable Input<String> codec;
+      private final @Nullable Output<String> codec;
 
-    public Input<String> getCodec() {
-        return this.codec == null ? Input.empty() : this.codec;
+    public Output<String> getCodec() {
+        return this.codec == null ? Output.empty() : this.codec;
     }
 
     /**
@@ -36,22 +36,22 @@ public final class TextStreamArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="mapping")
-      private final @Nullable Input<List<TextMappingArgs>> mapping;
+      private final @Nullable Output<List<TextMappingArgs>> mapping;
 
-    public Input<List<TextMappingArgs>> getMapping() {
-        return this.mapping == null ? Input.empty() : this.mapping;
+    public Output<List<TextMappingArgs>> getMapping() {
+        return this.mapping == null ? Output.empty() : this.mapping;
     }
 
     public TextStreamArgs(
-        @Nullable Input<String> codec,
-        @Nullable Input<List<TextMappingArgs>> mapping) {
+        @Nullable Output<String> codec,
+        @Nullable Output<List<TextMappingArgs>> mapping) {
         this.codec = codec;
         this.mapping = mapping;
     }
 
     private TextStreamArgs() {
-        this.codec = Input.empty();
-        this.mapping = Input.empty();
+        this.codec = Output.empty();
+        this.mapping = Output.empty();
     }
 
     public static Builder builder() {
@@ -63,8 +63,8 @@ public final class TextStreamArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> codec;
-        private @Nullable Input<List<TextMappingArgs>> mapping;
+        private @Nullable Output<String> codec;
+        private @Nullable Output<List<TextMappingArgs>> mapping;
 
         public Builder() {
     	      // Empty
@@ -76,23 +76,23 @@ public final class TextStreamArgs extends io.pulumi.resources.ResourceArgs {
     	      this.mapping = defaults.mapping;
         }
 
-        public Builder codec(@Nullable Input<String> codec) {
+        public Builder codec(@Nullable Output<String> codec) {
             this.codec = codec;
             return this;
         }
 
         public Builder codec(@Nullable String codec) {
-            this.codec = Input.ofNullable(codec);
+            this.codec = Output.ofNullable(codec);
             return this;
         }
 
-        public Builder mapping(@Nullable Input<List<TextMappingArgs>> mapping) {
+        public Builder mapping(@Nullable Output<List<TextMappingArgs>> mapping) {
             this.mapping = mapping;
             return this;
         }
 
         public Builder mapping(@Nullable List<TextMappingArgs> mapping) {
-            this.mapping = Input.ofNullable(mapping);
+            this.mapping = Output.ofNullable(mapping);
             return this;
         }
         public TextStreamArgs build() {

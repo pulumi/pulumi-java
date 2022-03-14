@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.genomics_v1alpha2.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -22,9 +22,9 @@ public final class LocalCopyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="disk", required=true)
-      private final Input<String> disk;
+      private final Output<String> disk;
 
-    public Input<String> getDisk() {
+    public Output<String> getDisk() {
         return this.disk;
     }
 
@@ -33,22 +33,22 @@ public final class LocalCopyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="path", required=true)
-      private final Input<String> path;
+      private final Output<String> path;
 
-    public Input<String> getPath() {
+    public Output<String> getPath() {
         return this.path;
     }
 
     public LocalCopyArgs(
-        Input<String> disk,
-        Input<String> path) {
+        Output<String> disk,
+        Output<String> path) {
         this.disk = Objects.requireNonNull(disk, "expected parameter 'disk' to be non-null");
         this.path = Objects.requireNonNull(path, "expected parameter 'path' to be non-null");
     }
 
     private LocalCopyArgs() {
-        this.disk = Input.empty();
-        this.path = Input.empty();
+        this.disk = Output.empty();
+        this.path = Output.empty();
     }
 
     public static Builder builder() {
@@ -60,8 +60,8 @@ public final class LocalCopyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> disk;
-        private Input<String> path;
+        private Output<String> disk;
+        private Output<String> path;
 
         public Builder() {
     	      // Empty
@@ -73,23 +73,23 @@ public final class LocalCopyArgs extends io.pulumi.resources.ResourceArgs {
     	      this.path = defaults.path;
         }
 
-        public Builder disk(Input<String> disk) {
+        public Builder disk(Output<String> disk) {
             this.disk = Objects.requireNonNull(disk);
             return this;
         }
 
         public Builder disk(String disk) {
-            this.disk = Input.of(Objects.requireNonNull(disk));
+            this.disk = Output.of(Objects.requireNonNull(disk));
             return this;
         }
 
-        public Builder path(Input<String> path) {
+        public Builder path(Output<String> path) {
             this.path = Objects.requireNonNull(path);
             return this;
         }
 
         public Builder path(String path) {
-            this.path = Input.of(Objects.requireNonNull(path));
+            this.path = Output.of(Objects.requireNonNull(path));
             return this;
         }
         public LocalCopyArgs build() {

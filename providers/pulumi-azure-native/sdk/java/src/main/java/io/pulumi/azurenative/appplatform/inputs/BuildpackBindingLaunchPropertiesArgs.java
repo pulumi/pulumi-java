@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.appplatform.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -24,10 +24,10 @@ public final class BuildpackBindingLaunchPropertiesArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="properties")
-      private final @Nullable Input<Map<String,String>> properties;
+      private final @Nullable Output<Map<String,String>> properties;
 
-    public Input<Map<String,String>> getProperties() {
-        return this.properties == null ? Input.empty() : this.properties;
+    public Output<Map<String,String>> getProperties() {
+        return this.properties == null ? Output.empty() : this.properties;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class BuildpackBindingLaunchPropertiesArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="secrets")
-      private final @Nullable Input<Map<String,String>> secrets;
+      private final @Nullable Output<Map<String,String>> secrets;
 
-    public Input<Map<String,String>> getSecrets() {
-        return this.secrets == null ? Input.empty() : this.secrets;
+    public Output<Map<String,String>> getSecrets() {
+        return this.secrets == null ? Output.empty() : this.secrets;
     }
 
     public BuildpackBindingLaunchPropertiesArgs(
-        @Nullable Input<Map<String,String>> properties,
-        @Nullable Input<Map<String,String>> secrets) {
+        @Nullable Output<Map<String,String>> properties,
+        @Nullable Output<Map<String,String>> secrets) {
         this.properties = properties;
         this.secrets = secrets;
     }
 
     private BuildpackBindingLaunchPropertiesArgs() {
-        this.properties = Input.empty();
-        this.secrets = Input.empty();
+        this.properties = Output.empty();
+        this.secrets = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class BuildpackBindingLaunchPropertiesArgs extends io.pulumi.resour
     }
 
     public static final class Builder {
-        private @Nullable Input<Map<String,String>> properties;
-        private @Nullable Input<Map<String,String>> secrets;
+        private @Nullable Output<Map<String,String>> properties;
+        private @Nullable Output<Map<String,String>> secrets;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class BuildpackBindingLaunchPropertiesArgs extends io.pulumi.resour
     	      this.secrets = defaults.secrets;
         }
 
-        public Builder properties(@Nullable Input<Map<String,String>> properties) {
+        public Builder properties(@Nullable Output<Map<String,String>> properties) {
             this.properties = properties;
             return this;
         }
 
         public Builder properties(@Nullable Map<String,String> properties) {
-            this.properties = Input.ofNullable(properties);
+            this.properties = Output.ofNullable(properties);
             return this;
         }
 
-        public Builder secrets(@Nullable Input<Map<String,String>> secrets) {
+        public Builder secrets(@Nullable Output<Map<String,String>> secrets) {
             this.secrets = secrets;
             return this;
         }
 
         public Builder secrets(@Nullable Map<String,String> secrets) {
-            this.secrets = Input.ofNullable(secrets);
+            this.secrets = Output.ofNullable(secrets);
             return this;
         }
         public BuildpackBindingLaunchPropertiesArgs build() {

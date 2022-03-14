@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.logic;
 
 import io.pulumi.azurenative.logic.inputs.KeyVaultKeyReferenceArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
@@ -22,10 +22,10 @@ public final class IntegrationAccountCertificateArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="certificateName")
-      private final @Nullable Input<String> certificateName;
+      private final @Nullable Output<String> certificateName;
 
-    public Input<String> getCertificateName() {
-        return this.certificateName == null ? Input.empty() : this.certificateName;
+    public Output<String> getCertificateName() {
+        return this.certificateName == null ? Output.empty() : this.certificateName;
     }
 
     /**
@@ -33,9 +33,9 @@ public final class IntegrationAccountCertificateArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="integrationAccountName", required=true)
-      private final Input<String> integrationAccountName;
+      private final Output<String> integrationAccountName;
 
-    public Input<String> getIntegrationAccountName() {
+    public Output<String> getIntegrationAccountName() {
         return this.integrationAccountName;
     }
 
@@ -44,10 +44,10 @@ public final class IntegrationAccountCertificateArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="key")
-      private final @Nullable Input<KeyVaultKeyReferenceArgs> key;
+      private final @Nullable Output<KeyVaultKeyReferenceArgs> key;
 
-    public Input<KeyVaultKeyReferenceArgs> getKey() {
-        return this.key == null ? Input.empty() : this.key;
+    public Output<KeyVaultKeyReferenceArgs> getKey() {
+        return this.key == null ? Output.empty() : this.key;
     }
 
     /**
@@ -55,10 +55,10 @@ public final class IntegrationAccountCertificateArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -66,10 +66,10 @@ public final class IntegrationAccountCertificateArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="metadata")
-      private final @Nullable Input<Object> metadata;
+      private final @Nullable Output<Object> metadata;
 
-    public Input<Object> getMetadata() {
-        return this.metadata == null ? Input.empty() : this.metadata;
+    public Output<Object> getMetadata() {
+        return this.metadata == null ? Output.empty() : this.metadata;
     }
 
     /**
@@ -77,10 +77,10 @@ public final class IntegrationAccountCertificateArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="publicCertificate")
-      private final @Nullable Input<String> publicCertificate;
+      private final @Nullable Output<String> publicCertificate;
 
-    public Input<String> getPublicCertificate() {
-        return this.publicCertificate == null ? Input.empty() : this.publicCertificate;
+    public Output<String> getPublicCertificate() {
+        return this.publicCertificate == null ? Output.empty() : this.publicCertificate;
     }
 
     /**
@@ -88,9 +88,9 @@ public final class IntegrationAccountCertificateArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -99,21 +99,21 @@ public final class IntegrationAccountCertificateArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public IntegrationAccountCertificateArgs(
-        @Nullable Input<String> certificateName,
-        Input<String> integrationAccountName,
-        @Nullable Input<KeyVaultKeyReferenceArgs> key,
-        @Nullable Input<String> location,
-        @Nullable Input<Object> metadata,
-        @Nullable Input<String> publicCertificate,
-        Input<String> resourceGroupName,
-        @Nullable Input<Map<String,String>> tags) {
+        @Nullable Output<String> certificateName,
+        Output<String> integrationAccountName,
+        @Nullable Output<KeyVaultKeyReferenceArgs> key,
+        @Nullable Output<String> location,
+        @Nullable Output<Object> metadata,
+        @Nullable Output<String> publicCertificate,
+        Output<String> resourceGroupName,
+        @Nullable Output<Map<String,String>> tags) {
         this.certificateName = certificateName;
         this.integrationAccountName = Objects.requireNonNull(integrationAccountName, "expected parameter 'integrationAccountName' to be non-null");
         this.key = key;
@@ -125,14 +125,14 @@ public final class IntegrationAccountCertificateArgs extends io.pulumi.resources
     }
 
     private IntegrationAccountCertificateArgs() {
-        this.certificateName = Input.empty();
-        this.integrationAccountName = Input.empty();
-        this.key = Input.empty();
-        this.location = Input.empty();
-        this.metadata = Input.empty();
-        this.publicCertificate = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.tags = Input.empty();
+        this.certificateName = Output.empty();
+        this.integrationAccountName = Output.empty();
+        this.key = Output.empty();
+        this.location = Output.empty();
+        this.metadata = Output.empty();
+        this.publicCertificate = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -144,14 +144,14 @@ public final class IntegrationAccountCertificateArgs extends io.pulumi.resources
     }
 
     public static final class Builder {
-        private @Nullable Input<String> certificateName;
-        private Input<String> integrationAccountName;
-        private @Nullable Input<KeyVaultKeyReferenceArgs> key;
-        private @Nullable Input<String> location;
-        private @Nullable Input<Object> metadata;
-        private @Nullable Input<String> publicCertificate;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<Map<String,String>> tags;
+        private @Nullable Output<String> certificateName;
+        private Output<String> integrationAccountName;
+        private @Nullable Output<KeyVaultKeyReferenceArgs> key;
+        private @Nullable Output<String> location;
+        private @Nullable Output<Object> metadata;
+        private @Nullable Output<String> publicCertificate;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<Map<String,String>> tags;
 
         public Builder() {
     	      // Empty
@@ -169,83 +169,83 @@ public final class IntegrationAccountCertificateArgs extends io.pulumi.resources
     	      this.tags = defaults.tags;
         }
 
-        public Builder certificateName(@Nullable Input<String> certificateName) {
+        public Builder certificateName(@Nullable Output<String> certificateName) {
             this.certificateName = certificateName;
             return this;
         }
 
         public Builder certificateName(@Nullable String certificateName) {
-            this.certificateName = Input.ofNullable(certificateName);
+            this.certificateName = Output.ofNullable(certificateName);
             return this;
         }
 
-        public Builder integrationAccountName(Input<String> integrationAccountName) {
+        public Builder integrationAccountName(Output<String> integrationAccountName) {
             this.integrationAccountName = Objects.requireNonNull(integrationAccountName);
             return this;
         }
 
         public Builder integrationAccountName(String integrationAccountName) {
-            this.integrationAccountName = Input.of(Objects.requireNonNull(integrationAccountName));
+            this.integrationAccountName = Output.of(Objects.requireNonNull(integrationAccountName));
             return this;
         }
 
-        public Builder key(@Nullable Input<KeyVaultKeyReferenceArgs> key) {
+        public Builder key(@Nullable Output<KeyVaultKeyReferenceArgs> key) {
             this.key = key;
             return this;
         }
 
         public Builder key(@Nullable KeyVaultKeyReferenceArgs key) {
-            this.key = Input.ofNullable(key);
+            this.key = Output.ofNullable(key);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder metadata(@Nullable Input<Object> metadata) {
+        public Builder metadata(@Nullable Output<Object> metadata) {
             this.metadata = metadata;
             return this;
         }
 
         public Builder metadata(@Nullable Object metadata) {
-            this.metadata = Input.ofNullable(metadata);
+            this.metadata = Output.ofNullable(metadata);
             return this;
         }
 
-        public Builder publicCertificate(@Nullable Input<String> publicCertificate) {
+        public Builder publicCertificate(@Nullable Output<String> publicCertificate) {
             this.publicCertificate = publicCertificate;
             return this;
         }
 
         public Builder publicCertificate(@Nullable String publicCertificate) {
-            this.publicCertificate = Input.ofNullable(publicCertificate);
+            this.publicCertificate = Output.ofNullable(publicCertificate);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public IntegrationAccountCertificateArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.botservice.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class KikChannelPropertiesArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="apiKey")
-      private final @Nullable Input<String> apiKey;
+      private final @Nullable Output<String> apiKey;
 
-    public Input<String> getApiKey() {
-        return this.apiKey == null ? Input.empty() : this.apiKey;
+    public Output<String> getApiKey() {
+        return this.apiKey == null ? Output.empty() : this.apiKey;
     }
 
     /**
@@ -35,9 +35,9 @@ public final class KikChannelPropertiesArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="isEnabled", required=true)
-      private final Input<Boolean> isEnabled;
+      private final Output<Boolean> isEnabled;
 
-    public Input<Boolean> getIsEnabled() {
+    public Output<Boolean> getIsEnabled() {
         return this.isEnabled;
     }
 
@@ -46,10 +46,10 @@ public final class KikChannelPropertiesArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="isValidated")
-      private final @Nullable Input<Boolean> isValidated;
+      private final @Nullable Output<Boolean> isValidated;
 
-    public Input<Boolean> getIsValidated() {
-        return this.isValidated == null ? Input.empty() : this.isValidated;
+    public Output<Boolean> getIsValidated() {
+        return this.isValidated == null ? Output.empty() : this.isValidated;
     }
 
     /**
@@ -57,17 +57,17 @@ public final class KikChannelPropertiesArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="userName", required=true)
-      private final Input<String> userName;
+      private final Output<String> userName;
 
-    public Input<String> getUserName() {
+    public Output<String> getUserName() {
         return this.userName;
     }
 
     public KikChannelPropertiesArgs(
-        @Nullable Input<String> apiKey,
-        Input<Boolean> isEnabled,
-        @Nullable Input<Boolean> isValidated,
-        Input<String> userName) {
+        @Nullable Output<String> apiKey,
+        Output<Boolean> isEnabled,
+        @Nullable Output<Boolean> isValidated,
+        Output<String> userName) {
         this.apiKey = apiKey;
         this.isEnabled = Objects.requireNonNull(isEnabled, "expected parameter 'isEnabled' to be non-null");
         this.isValidated = isValidated;
@@ -75,10 +75,10 @@ public final class KikChannelPropertiesArgs extends io.pulumi.resources.Resource
     }
 
     private KikChannelPropertiesArgs() {
-        this.apiKey = Input.empty();
-        this.isEnabled = Input.empty();
-        this.isValidated = Input.empty();
-        this.userName = Input.empty();
+        this.apiKey = Output.empty();
+        this.isEnabled = Output.empty();
+        this.isValidated = Output.empty();
+        this.userName = Output.empty();
     }
 
     public static Builder builder() {
@@ -90,10 +90,10 @@ public final class KikChannelPropertiesArgs extends io.pulumi.resources.Resource
     }
 
     public static final class Builder {
-        private @Nullable Input<String> apiKey;
-        private Input<Boolean> isEnabled;
-        private @Nullable Input<Boolean> isValidated;
-        private Input<String> userName;
+        private @Nullable Output<String> apiKey;
+        private Output<Boolean> isEnabled;
+        private @Nullable Output<Boolean> isValidated;
+        private Output<String> userName;
 
         public Builder() {
     	      // Empty
@@ -107,43 +107,43 @@ public final class KikChannelPropertiesArgs extends io.pulumi.resources.Resource
     	      this.userName = defaults.userName;
         }
 
-        public Builder apiKey(@Nullable Input<String> apiKey) {
+        public Builder apiKey(@Nullable Output<String> apiKey) {
             this.apiKey = apiKey;
             return this;
         }
 
         public Builder apiKey(@Nullable String apiKey) {
-            this.apiKey = Input.ofNullable(apiKey);
+            this.apiKey = Output.ofNullable(apiKey);
             return this;
         }
 
-        public Builder isEnabled(Input<Boolean> isEnabled) {
+        public Builder isEnabled(Output<Boolean> isEnabled) {
             this.isEnabled = Objects.requireNonNull(isEnabled);
             return this;
         }
 
         public Builder isEnabled(Boolean isEnabled) {
-            this.isEnabled = Input.of(Objects.requireNonNull(isEnabled));
+            this.isEnabled = Output.of(Objects.requireNonNull(isEnabled));
             return this;
         }
 
-        public Builder isValidated(@Nullable Input<Boolean> isValidated) {
+        public Builder isValidated(@Nullable Output<Boolean> isValidated) {
             this.isValidated = isValidated;
             return this;
         }
 
         public Builder isValidated(@Nullable Boolean isValidated) {
-            this.isValidated = Input.ofNullable(isValidated);
+            this.isValidated = Output.ofNullable(isValidated);
             return this;
         }
 
-        public Builder userName(Input<String> userName) {
+        public Builder userName(Output<String> userName) {
             this.userName = Objects.requireNonNull(userName);
             return this;
         }
 
         public Builder userName(String userName) {
-            this.userName = Input.of(Objects.requireNonNull(userName));
+            this.userName = Output.of(Objects.requireNonNull(userName));
             return this;
         }
         public KikChannelPropertiesArgs build() {

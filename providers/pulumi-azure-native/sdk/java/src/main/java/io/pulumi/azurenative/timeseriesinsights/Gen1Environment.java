@@ -9,7 +9,6 @@ import io.pulumi.azurenative.timeseriesinsights.outputs.EnvironmentStatusRespons
 import io.pulumi.azurenative.timeseriesinsights.outputs.SkuResponse;
 import io.pulumi.azurenative.timeseriesinsights.outputs.TimeSeriesIdPropertyResponse;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -272,10 +271,10 @@ public class Gen1Environment extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Gen1Environment(String name, Gen1EnvironmentArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:timeseriesinsights:Gen1Environment", name, makeArgs(args), makeResourceOptions(options, Input.empty()));
+        super("azure-native:timeseriesinsights:Gen1Environment", name, makeArgs(args), makeResourceOptions(options, Output.empty()));
     }
 
-    private Gen1Environment(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private Gen1Environment(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:timeseriesinsights:Gen1Environment", name, null, makeResourceOptions(options, id));
     }
 
@@ -286,16 +285,16 @@ public class Gen1Environment extends io.pulumi.resources.CustomResource {
             .build();
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:timeseriesinsights/v20170228preview:Gen1Environment").build()),
-                Input.of(Alias.builder().setType("azure-native:timeseriesinsights/v20171115:Gen1Environment").build()),
-                Input.of(Alias.builder().setType("azure-native:timeseriesinsights/v20180815preview:Gen1Environment").build()),
-                Input.of(Alias.builder().setType("azure-native:timeseriesinsights/v20200515:Gen1Environment").build()),
-                Input.of(Alias.builder().setType("azure-native:timeseriesinsights/v20210331preview:Gen1Environment").build()),
-                Input.of(Alias.builder().setType("azure-native:timeseriesinsights/v20210630preview:Gen1Environment").build())
+                Output.of(Alias.builder().setType("azure-native:timeseriesinsights/v20170228preview:Gen1Environment").build()),
+                Output.of(Alias.builder().setType("azure-native:timeseriesinsights/v20171115:Gen1Environment").build()),
+                Output.of(Alias.builder().setType("azure-native:timeseriesinsights/v20180815preview:Gen1Environment").build()),
+                Output.of(Alias.builder().setType("azure-native:timeseriesinsights/v20200515:Gen1Environment").build()),
+                Output.of(Alias.builder().setType("azure-native:timeseriesinsights/v20210331preview:Gen1Environment").build()),
+                Output.of(Alias.builder().setType("azure-native:timeseriesinsights/v20210630preview:Gen1Environment").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -309,7 +308,7 @@ public class Gen1Environment extends io.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static Gen1Environment get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static Gen1Environment get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Gen1Environment(name, id, options);
     }
 }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.genomics_v1alpha2.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.genomics_v1alpha2.inputs.LocalCopyArgs;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class PipelineParameterArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="defaultValue")
-      private final @Nullable Input<String> defaultValue;
+      private final @Nullable Output<String> defaultValue;
 
-    public Input<String> getDefaultValue() {
-        return this.defaultValue == null ? Input.empty() : this.defaultValue;
+    public Output<String> getDefaultValue() {
+        return this.defaultValue == null ? Output.empty() : this.defaultValue;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class PipelineParameterArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -46,10 +46,10 @@ public final class PipelineParameterArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="localCopy")
-      private final @Nullable Input<LocalCopyArgs> localCopy;
+      private final @Nullable Output<LocalCopyArgs> localCopy;
 
-    public Input<LocalCopyArgs> getLocalCopy() {
-        return this.localCopy == null ? Input.empty() : this.localCopy;
+    public Output<LocalCopyArgs> getLocalCopy() {
+        return this.localCopy == null ? Output.empty() : this.localCopy;
     }
 
     /**
@@ -57,17 +57,17 @@ public final class PipelineParameterArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="name", required=true)
-      private final Input<String> name;
+      private final Output<String> name;
 
-    public Input<String> getName() {
+    public Output<String> getName() {
         return this.name;
     }
 
     public PipelineParameterArgs(
-        @Nullable Input<String> defaultValue,
-        @Nullable Input<String> description,
-        @Nullable Input<LocalCopyArgs> localCopy,
-        Input<String> name) {
+        @Nullable Output<String> defaultValue,
+        @Nullable Output<String> description,
+        @Nullable Output<LocalCopyArgs> localCopy,
+        Output<String> name) {
         this.defaultValue = defaultValue;
         this.description = description;
         this.localCopy = localCopy;
@@ -75,10 +75,10 @@ public final class PipelineParameterArgs extends io.pulumi.resources.ResourceArg
     }
 
     private PipelineParameterArgs() {
-        this.defaultValue = Input.empty();
-        this.description = Input.empty();
-        this.localCopy = Input.empty();
-        this.name = Input.empty();
+        this.defaultValue = Output.empty();
+        this.description = Output.empty();
+        this.localCopy = Output.empty();
+        this.name = Output.empty();
     }
 
     public static Builder builder() {
@@ -90,10 +90,10 @@ public final class PipelineParameterArgs extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private @Nullable Input<String> defaultValue;
-        private @Nullable Input<String> description;
-        private @Nullable Input<LocalCopyArgs> localCopy;
-        private Input<String> name;
+        private @Nullable Output<String> defaultValue;
+        private @Nullable Output<String> description;
+        private @Nullable Output<LocalCopyArgs> localCopy;
+        private Output<String> name;
 
         public Builder() {
     	      // Empty
@@ -107,43 +107,43 @@ public final class PipelineParameterArgs extends io.pulumi.resources.ResourceArg
     	      this.name = defaults.name;
         }
 
-        public Builder defaultValue(@Nullable Input<String> defaultValue) {
+        public Builder defaultValue(@Nullable Output<String> defaultValue) {
             this.defaultValue = defaultValue;
             return this;
         }
 
         public Builder defaultValue(@Nullable String defaultValue) {
-            this.defaultValue = Input.ofNullable(defaultValue);
+            this.defaultValue = Output.ofNullable(defaultValue);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder localCopy(@Nullable Input<LocalCopyArgs> localCopy) {
+        public Builder localCopy(@Nullable Output<LocalCopyArgs> localCopy) {
             this.localCopy = localCopy;
             return this;
         }
 
         public Builder localCopy(@Nullable LocalCopyArgs localCopy) {
-            this.localCopy = Input.ofNullable(localCopy);
+            this.localCopy = Output.ofNullable(localCopy);
             return this;
         }
 
-        public Builder name(Input<String> name) {
+        public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(String name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
         public PipelineParameterArgs build() {

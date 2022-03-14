@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.databoxedge.inputs;
 
 import io.pulumi.azurenative.databoxedge.inputs.MountPointMapArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
@@ -24,18 +24,18 @@ public final class KubernetesRoleStorageArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="endpoints")
-      private final @Nullable Input<List<MountPointMapArgs>> endpoints;
+      private final @Nullable Output<List<MountPointMapArgs>> endpoints;
 
-    public Input<List<MountPointMapArgs>> getEndpoints() {
-        return this.endpoints == null ? Input.empty() : this.endpoints;
+    public Output<List<MountPointMapArgs>> getEndpoints() {
+        return this.endpoints == null ? Output.empty() : this.endpoints;
     }
 
-    public KubernetesRoleStorageArgs(@Nullable Input<List<MountPointMapArgs>> endpoints) {
+    public KubernetesRoleStorageArgs(@Nullable Output<List<MountPointMapArgs>> endpoints) {
         this.endpoints = endpoints;
     }
 
     private KubernetesRoleStorageArgs() {
-        this.endpoints = Input.empty();
+        this.endpoints = Output.empty();
     }
 
     public static Builder builder() {
@@ -47,7 +47,7 @@ public final class KubernetesRoleStorageArgs extends io.pulumi.resources.Resourc
     }
 
     public static final class Builder {
-        private @Nullable Input<List<MountPointMapArgs>> endpoints;
+        private @Nullable Output<List<MountPointMapArgs>> endpoints;
 
         public Builder() {
     	      // Empty
@@ -58,13 +58,13 @@ public final class KubernetesRoleStorageArgs extends io.pulumi.resources.Resourc
     	      this.endpoints = defaults.endpoints;
         }
 
-        public Builder endpoints(@Nullable Input<List<MountPointMapArgs>> endpoints) {
+        public Builder endpoints(@Nullable Output<List<MountPointMapArgs>> endpoints) {
             this.endpoints = endpoints;
             return this;
         }
 
         public Builder endpoints(@Nullable List<MountPointMapArgs> endpoints) {
-            this.endpoints = Input.ofNullable(endpoints);
+            this.endpoints = Output.ofNullable(endpoints);
             return this;
         }
         public KubernetesRoleStorageArgs build() {

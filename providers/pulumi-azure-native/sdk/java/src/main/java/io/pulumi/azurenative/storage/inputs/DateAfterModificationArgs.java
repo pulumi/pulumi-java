@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.storage.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class DateAfterModificationArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="daysAfterLastAccessTimeGreaterThan")
-      private final @Nullable Input<Double> daysAfterLastAccessTimeGreaterThan;
+      private final @Nullable Output<Double> daysAfterLastAccessTimeGreaterThan;
 
-    public Input<Double> getDaysAfterLastAccessTimeGreaterThan() {
-        return this.daysAfterLastAccessTimeGreaterThan == null ? Input.empty() : this.daysAfterLastAccessTimeGreaterThan;
+    public Output<Double> getDaysAfterLastAccessTimeGreaterThan() {
+        return this.daysAfterLastAccessTimeGreaterThan == null ? Output.empty() : this.daysAfterLastAccessTimeGreaterThan;
     }
 
     /**
@@ -34,22 +34,22 @@ public final class DateAfterModificationArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="daysAfterModificationGreaterThan")
-      private final @Nullable Input<Double> daysAfterModificationGreaterThan;
+      private final @Nullable Output<Double> daysAfterModificationGreaterThan;
 
-    public Input<Double> getDaysAfterModificationGreaterThan() {
-        return this.daysAfterModificationGreaterThan == null ? Input.empty() : this.daysAfterModificationGreaterThan;
+    public Output<Double> getDaysAfterModificationGreaterThan() {
+        return this.daysAfterModificationGreaterThan == null ? Output.empty() : this.daysAfterModificationGreaterThan;
     }
 
     public DateAfterModificationArgs(
-        @Nullable Input<Double> daysAfterLastAccessTimeGreaterThan,
-        @Nullable Input<Double> daysAfterModificationGreaterThan) {
+        @Nullable Output<Double> daysAfterLastAccessTimeGreaterThan,
+        @Nullable Output<Double> daysAfterModificationGreaterThan) {
         this.daysAfterLastAccessTimeGreaterThan = daysAfterLastAccessTimeGreaterThan;
         this.daysAfterModificationGreaterThan = daysAfterModificationGreaterThan;
     }
 
     private DateAfterModificationArgs() {
-        this.daysAfterLastAccessTimeGreaterThan = Input.empty();
-        this.daysAfterModificationGreaterThan = Input.empty();
+        this.daysAfterLastAccessTimeGreaterThan = Output.empty();
+        this.daysAfterModificationGreaterThan = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class DateAfterModificationArgs extends io.pulumi.resources.Resourc
     }
 
     public static final class Builder {
-        private @Nullable Input<Double> daysAfterLastAccessTimeGreaterThan;
-        private @Nullable Input<Double> daysAfterModificationGreaterThan;
+        private @Nullable Output<Double> daysAfterLastAccessTimeGreaterThan;
+        private @Nullable Output<Double> daysAfterModificationGreaterThan;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class DateAfterModificationArgs extends io.pulumi.resources.Resourc
     	      this.daysAfterModificationGreaterThan = defaults.daysAfterModificationGreaterThan;
         }
 
-        public Builder daysAfterLastAccessTimeGreaterThan(@Nullable Input<Double> daysAfterLastAccessTimeGreaterThan) {
+        public Builder daysAfterLastAccessTimeGreaterThan(@Nullable Output<Double> daysAfterLastAccessTimeGreaterThan) {
             this.daysAfterLastAccessTimeGreaterThan = daysAfterLastAccessTimeGreaterThan;
             return this;
         }
 
         public Builder daysAfterLastAccessTimeGreaterThan(@Nullable Double daysAfterLastAccessTimeGreaterThan) {
-            this.daysAfterLastAccessTimeGreaterThan = Input.ofNullable(daysAfterLastAccessTimeGreaterThan);
+            this.daysAfterLastAccessTimeGreaterThan = Output.ofNullable(daysAfterLastAccessTimeGreaterThan);
             return this;
         }
 
-        public Builder daysAfterModificationGreaterThan(@Nullable Input<Double> daysAfterModificationGreaterThan) {
+        public Builder daysAfterModificationGreaterThan(@Nullable Output<Double> daysAfterModificationGreaterThan) {
             this.daysAfterModificationGreaterThan = daysAfterModificationGreaterThan;
             return this;
         }
 
         public Builder daysAfterModificationGreaterThan(@Nullable Double daysAfterModificationGreaterThan) {
-            this.daysAfterModificationGreaterThan = Input.ofNullable(daysAfterModificationGreaterThan);
+            this.daysAfterModificationGreaterThan = Output.ofNullable(daysAfterModificationGreaterThan);
             return this;
         }
         public DateAfterModificationArgs build() {

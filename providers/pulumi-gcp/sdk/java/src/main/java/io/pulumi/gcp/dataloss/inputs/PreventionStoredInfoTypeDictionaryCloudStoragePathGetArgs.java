@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.dataloss.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -18,18 +18,18 @@ public final class PreventionStoredInfoTypeDictionaryCloudStoragePathGetArgs ext
      * 
      */
     @InputImport(name="path", required=true)
-      private final Input<String> path;
+      private final Output<String> path;
 
-    public Input<String> getPath() {
+    public Output<String> getPath() {
         return this.path;
     }
 
-    public PreventionStoredInfoTypeDictionaryCloudStoragePathGetArgs(Input<String> path) {
+    public PreventionStoredInfoTypeDictionaryCloudStoragePathGetArgs(Output<String> path) {
         this.path = Objects.requireNonNull(path, "expected parameter 'path' to be non-null");
     }
 
     private PreventionStoredInfoTypeDictionaryCloudStoragePathGetArgs() {
-        this.path = Input.empty();
+        this.path = Output.empty();
     }
 
     public static Builder builder() {
@@ -41,7 +41,7 @@ public final class PreventionStoredInfoTypeDictionaryCloudStoragePathGetArgs ext
     }
 
     public static final class Builder {
-        private Input<String> path;
+        private Output<String> path;
 
         public Builder() {
     	      // Empty
@@ -52,13 +52,13 @@ public final class PreventionStoredInfoTypeDictionaryCloudStoragePathGetArgs ext
     	      this.path = defaults.path;
         }
 
-        public Builder path(Input<String> path) {
+        public Builder path(Output<String> path) {
             this.path = Objects.requireNonNull(path);
             return this;
         }
 
         public Builder path(String path) {
-            this.path = Input.of(Objects.requireNonNull(path));
+            this.path = Output.of(Objects.requireNonNull(path));
             return this;
         }
         public PreventionStoredInfoTypeDictionaryCloudStoragePathGetArgs build() {

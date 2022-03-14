@@ -3,7 +3,6 @@
 
 package io.pulumi.gcp.datacatalog;
 
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -321,14 +320,14 @@ public class Entry extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Entry(String name, EntryArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:datacatalog/entry:Entry", name, args == null ? EntryArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("gcp:datacatalog/entry:Entry", name, args == null ? EntryArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private Entry(String name, Input<String> id, @Nullable EntryState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private Entry(String name, Output<String> id, @Nullable EntryState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("gcp:datacatalog/entry:Entry", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -344,7 +343,7 @@ public class Entry extends io.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static Entry get(String name, Input<String> id, @Nullable EntryState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static Entry get(String name, Output<String> id, @Nullable EntryState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Entry(name, id, state, options);
     }
 }

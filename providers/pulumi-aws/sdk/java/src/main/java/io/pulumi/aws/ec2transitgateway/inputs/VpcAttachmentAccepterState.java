@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.ec2transitgateway.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -22,10 +22,10 @@ public final class VpcAttachmentAccepterState extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="applianceModeSupport")
-      private final @Nullable Input<String> applianceModeSupport;
+      private final @Nullable Output<String> applianceModeSupport;
 
-    public Input<String> getApplianceModeSupport() {
-        return this.applianceModeSupport == null ? Input.empty() : this.applianceModeSupport;
+    public Output<String> getApplianceModeSupport() {
+        return this.applianceModeSupport == null ? Output.empty() : this.applianceModeSupport;
     }
 
     /**
@@ -33,10 +33,10 @@ public final class VpcAttachmentAccepterState extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="dnsSupport")
-      private final @Nullable Input<String> dnsSupport;
+      private final @Nullable Output<String> dnsSupport;
 
-    public Input<String> getDnsSupport() {
-        return this.dnsSupport == null ? Input.empty() : this.dnsSupport;
+    public Output<String> getDnsSupport() {
+        return this.dnsSupport == null ? Output.empty() : this.dnsSupport;
     }
 
     /**
@@ -44,10 +44,10 @@ public final class VpcAttachmentAccepterState extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="ipv6Support")
-      private final @Nullable Input<String> ipv6Support;
+      private final @Nullable Output<String> ipv6Support;
 
-    public Input<String> getIpv6Support() {
-        return this.ipv6Support == null ? Input.empty() : this.ipv6Support;
+    public Output<String> getIpv6Support() {
+        return this.ipv6Support == null ? Output.empty() : this.ipv6Support;
     }
 
     /**
@@ -55,10 +55,10 @@ public final class VpcAttachmentAccepterState extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="subnetIds")
-      private final @Nullable Input<List<String>> subnetIds;
+      private final @Nullable Output<List<String>> subnetIds;
 
-    public Input<List<String>> getSubnetIds() {
-        return this.subnetIds == null ? Input.empty() : this.subnetIds;
+    public Output<List<String>> getSubnetIds() {
+        return this.subnetIds == null ? Output.empty() : this.subnetIds;
     }
 
     /**
@@ -66,10 +66,10 @@ public final class VpcAttachmentAccepterState extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -77,10 +77,10 @@ public final class VpcAttachmentAccepterState extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="tagsAll")
-      private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Input<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Input.empty() : this.tagsAll;
+    public Output<Map<String,String>> getTagsAll() {
+        return this.tagsAll == null ? Output.empty() : this.tagsAll;
     }
 
     /**
@@ -88,10 +88,10 @@ public final class VpcAttachmentAccepterState extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="transitGatewayAttachmentId")
-      private final @Nullable Input<String> transitGatewayAttachmentId;
+      private final @Nullable Output<String> transitGatewayAttachmentId;
 
-    public Input<String> getTransitGatewayAttachmentId() {
-        return this.transitGatewayAttachmentId == null ? Input.empty() : this.transitGatewayAttachmentId;
+    public Output<String> getTransitGatewayAttachmentId() {
+        return this.transitGatewayAttachmentId == null ? Output.empty() : this.transitGatewayAttachmentId;
     }
 
     /**
@@ -99,10 +99,10 @@ public final class VpcAttachmentAccepterState extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="transitGatewayDefaultRouteTableAssociation")
-      private final @Nullable Input<Boolean> transitGatewayDefaultRouteTableAssociation;
+      private final @Nullable Output<Boolean> transitGatewayDefaultRouteTableAssociation;
 
-    public Input<Boolean> getTransitGatewayDefaultRouteTableAssociation() {
-        return this.transitGatewayDefaultRouteTableAssociation == null ? Input.empty() : this.transitGatewayDefaultRouteTableAssociation;
+    public Output<Boolean> getTransitGatewayDefaultRouteTableAssociation() {
+        return this.transitGatewayDefaultRouteTableAssociation == null ? Output.empty() : this.transitGatewayDefaultRouteTableAssociation;
     }
 
     /**
@@ -110,10 +110,10 @@ public final class VpcAttachmentAccepterState extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="transitGatewayDefaultRouteTablePropagation")
-      private final @Nullable Input<Boolean> transitGatewayDefaultRouteTablePropagation;
+      private final @Nullable Output<Boolean> transitGatewayDefaultRouteTablePropagation;
 
-    public Input<Boolean> getTransitGatewayDefaultRouteTablePropagation() {
-        return this.transitGatewayDefaultRouteTablePropagation == null ? Input.empty() : this.transitGatewayDefaultRouteTablePropagation;
+    public Output<Boolean> getTransitGatewayDefaultRouteTablePropagation() {
+        return this.transitGatewayDefaultRouteTablePropagation == null ? Output.empty() : this.transitGatewayDefaultRouteTablePropagation;
     }
 
     /**
@@ -121,10 +121,10 @@ public final class VpcAttachmentAccepterState extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="transitGatewayId")
-      private final @Nullable Input<String> transitGatewayId;
+      private final @Nullable Output<String> transitGatewayId;
 
-    public Input<String> getTransitGatewayId() {
-        return this.transitGatewayId == null ? Input.empty() : this.transitGatewayId;
+    public Output<String> getTransitGatewayId() {
+        return this.transitGatewayId == null ? Output.empty() : this.transitGatewayId;
     }
 
     /**
@@ -132,10 +132,10 @@ public final class VpcAttachmentAccepterState extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="vpcId")
-      private final @Nullable Input<String> vpcId;
+      private final @Nullable Output<String> vpcId;
 
-    public Input<String> getVpcId() {
-        return this.vpcId == null ? Input.empty() : this.vpcId;
+    public Output<String> getVpcId() {
+        return this.vpcId == null ? Output.empty() : this.vpcId;
     }
 
     /**
@@ -143,25 +143,25 @@ public final class VpcAttachmentAccepterState extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="vpcOwnerId")
-      private final @Nullable Input<String> vpcOwnerId;
+      private final @Nullable Output<String> vpcOwnerId;
 
-    public Input<String> getVpcOwnerId() {
-        return this.vpcOwnerId == null ? Input.empty() : this.vpcOwnerId;
+    public Output<String> getVpcOwnerId() {
+        return this.vpcOwnerId == null ? Output.empty() : this.vpcOwnerId;
     }
 
     public VpcAttachmentAccepterState(
-        @Nullable Input<String> applianceModeSupport,
-        @Nullable Input<String> dnsSupport,
-        @Nullable Input<String> ipv6Support,
-        @Nullable Input<List<String>> subnetIds,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<Map<String,String>> tagsAll,
-        @Nullable Input<String> transitGatewayAttachmentId,
-        @Nullable Input<Boolean> transitGatewayDefaultRouteTableAssociation,
-        @Nullable Input<Boolean> transitGatewayDefaultRouteTablePropagation,
-        @Nullable Input<String> transitGatewayId,
-        @Nullable Input<String> vpcId,
-        @Nullable Input<String> vpcOwnerId) {
+        @Nullable Output<String> applianceModeSupport,
+        @Nullable Output<String> dnsSupport,
+        @Nullable Output<String> ipv6Support,
+        @Nullable Output<List<String>> subnetIds,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<Map<String,String>> tagsAll,
+        @Nullable Output<String> transitGatewayAttachmentId,
+        @Nullable Output<Boolean> transitGatewayDefaultRouteTableAssociation,
+        @Nullable Output<Boolean> transitGatewayDefaultRouteTablePropagation,
+        @Nullable Output<String> transitGatewayId,
+        @Nullable Output<String> vpcId,
+        @Nullable Output<String> vpcOwnerId) {
         this.applianceModeSupport = applianceModeSupport;
         this.dnsSupport = dnsSupport;
         this.ipv6Support = ipv6Support;
@@ -177,18 +177,18 @@ public final class VpcAttachmentAccepterState extends io.pulumi.resources.Resour
     }
 
     private VpcAttachmentAccepterState() {
-        this.applianceModeSupport = Input.empty();
-        this.dnsSupport = Input.empty();
-        this.ipv6Support = Input.empty();
-        this.subnetIds = Input.empty();
-        this.tags = Input.empty();
-        this.tagsAll = Input.empty();
-        this.transitGatewayAttachmentId = Input.empty();
-        this.transitGatewayDefaultRouteTableAssociation = Input.empty();
-        this.transitGatewayDefaultRouteTablePropagation = Input.empty();
-        this.transitGatewayId = Input.empty();
-        this.vpcId = Input.empty();
-        this.vpcOwnerId = Input.empty();
+        this.applianceModeSupport = Output.empty();
+        this.dnsSupport = Output.empty();
+        this.ipv6Support = Output.empty();
+        this.subnetIds = Output.empty();
+        this.tags = Output.empty();
+        this.tagsAll = Output.empty();
+        this.transitGatewayAttachmentId = Output.empty();
+        this.transitGatewayDefaultRouteTableAssociation = Output.empty();
+        this.transitGatewayDefaultRouteTablePropagation = Output.empty();
+        this.transitGatewayId = Output.empty();
+        this.vpcId = Output.empty();
+        this.vpcOwnerId = Output.empty();
     }
 
     public static Builder builder() {
@@ -200,18 +200,18 @@ public final class VpcAttachmentAccepterState extends io.pulumi.resources.Resour
     }
 
     public static final class Builder {
-        private @Nullable Input<String> applianceModeSupport;
-        private @Nullable Input<String> dnsSupport;
-        private @Nullable Input<String> ipv6Support;
-        private @Nullable Input<List<String>> subnetIds;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<Map<String,String>> tagsAll;
-        private @Nullable Input<String> transitGatewayAttachmentId;
-        private @Nullable Input<Boolean> transitGatewayDefaultRouteTableAssociation;
-        private @Nullable Input<Boolean> transitGatewayDefaultRouteTablePropagation;
-        private @Nullable Input<String> transitGatewayId;
-        private @Nullable Input<String> vpcId;
-        private @Nullable Input<String> vpcOwnerId;
+        private @Nullable Output<String> applianceModeSupport;
+        private @Nullable Output<String> dnsSupport;
+        private @Nullable Output<String> ipv6Support;
+        private @Nullable Output<List<String>> subnetIds;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<Map<String,String>> tagsAll;
+        private @Nullable Output<String> transitGatewayAttachmentId;
+        private @Nullable Output<Boolean> transitGatewayDefaultRouteTableAssociation;
+        private @Nullable Output<Boolean> transitGatewayDefaultRouteTablePropagation;
+        private @Nullable Output<String> transitGatewayId;
+        private @Nullable Output<String> vpcId;
+        private @Nullable Output<String> vpcOwnerId;
 
         public Builder() {
     	      // Empty
@@ -233,123 +233,123 @@ public final class VpcAttachmentAccepterState extends io.pulumi.resources.Resour
     	      this.vpcOwnerId = defaults.vpcOwnerId;
         }
 
-        public Builder applianceModeSupport(@Nullable Input<String> applianceModeSupport) {
+        public Builder applianceModeSupport(@Nullable Output<String> applianceModeSupport) {
             this.applianceModeSupport = applianceModeSupport;
             return this;
         }
 
         public Builder applianceModeSupport(@Nullable String applianceModeSupport) {
-            this.applianceModeSupport = Input.ofNullable(applianceModeSupport);
+            this.applianceModeSupport = Output.ofNullable(applianceModeSupport);
             return this;
         }
 
-        public Builder dnsSupport(@Nullable Input<String> dnsSupport) {
+        public Builder dnsSupport(@Nullable Output<String> dnsSupport) {
             this.dnsSupport = dnsSupport;
             return this;
         }
 
         public Builder dnsSupport(@Nullable String dnsSupport) {
-            this.dnsSupport = Input.ofNullable(dnsSupport);
+            this.dnsSupport = Output.ofNullable(dnsSupport);
             return this;
         }
 
-        public Builder ipv6Support(@Nullable Input<String> ipv6Support) {
+        public Builder ipv6Support(@Nullable Output<String> ipv6Support) {
             this.ipv6Support = ipv6Support;
             return this;
         }
 
         public Builder ipv6Support(@Nullable String ipv6Support) {
-            this.ipv6Support = Input.ofNullable(ipv6Support);
+            this.ipv6Support = Output.ofNullable(ipv6Support);
             return this;
         }
 
-        public Builder subnetIds(@Nullable Input<List<String>> subnetIds) {
+        public Builder subnetIds(@Nullable Output<List<String>> subnetIds) {
             this.subnetIds = subnetIds;
             return this;
         }
 
         public Builder subnetIds(@Nullable List<String> subnetIds) {
-            this.subnetIds = Input.ofNullable(subnetIds);
+            this.subnetIds = Output.ofNullable(subnetIds);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Input.ofNullable(tagsAll);
+            this.tagsAll = Output.ofNullable(tagsAll);
             return this;
         }
 
-        public Builder transitGatewayAttachmentId(@Nullable Input<String> transitGatewayAttachmentId) {
+        public Builder transitGatewayAttachmentId(@Nullable Output<String> transitGatewayAttachmentId) {
             this.transitGatewayAttachmentId = transitGatewayAttachmentId;
             return this;
         }
 
         public Builder transitGatewayAttachmentId(@Nullable String transitGatewayAttachmentId) {
-            this.transitGatewayAttachmentId = Input.ofNullable(transitGatewayAttachmentId);
+            this.transitGatewayAttachmentId = Output.ofNullable(transitGatewayAttachmentId);
             return this;
         }
 
-        public Builder transitGatewayDefaultRouteTableAssociation(@Nullable Input<Boolean> transitGatewayDefaultRouteTableAssociation) {
+        public Builder transitGatewayDefaultRouteTableAssociation(@Nullable Output<Boolean> transitGatewayDefaultRouteTableAssociation) {
             this.transitGatewayDefaultRouteTableAssociation = transitGatewayDefaultRouteTableAssociation;
             return this;
         }
 
         public Builder transitGatewayDefaultRouteTableAssociation(@Nullable Boolean transitGatewayDefaultRouteTableAssociation) {
-            this.transitGatewayDefaultRouteTableAssociation = Input.ofNullable(transitGatewayDefaultRouteTableAssociation);
+            this.transitGatewayDefaultRouteTableAssociation = Output.ofNullable(transitGatewayDefaultRouteTableAssociation);
             return this;
         }
 
-        public Builder transitGatewayDefaultRouteTablePropagation(@Nullable Input<Boolean> transitGatewayDefaultRouteTablePropagation) {
+        public Builder transitGatewayDefaultRouteTablePropagation(@Nullable Output<Boolean> transitGatewayDefaultRouteTablePropagation) {
             this.transitGatewayDefaultRouteTablePropagation = transitGatewayDefaultRouteTablePropagation;
             return this;
         }
 
         public Builder transitGatewayDefaultRouteTablePropagation(@Nullable Boolean transitGatewayDefaultRouteTablePropagation) {
-            this.transitGatewayDefaultRouteTablePropagation = Input.ofNullable(transitGatewayDefaultRouteTablePropagation);
+            this.transitGatewayDefaultRouteTablePropagation = Output.ofNullable(transitGatewayDefaultRouteTablePropagation);
             return this;
         }
 
-        public Builder transitGatewayId(@Nullable Input<String> transitGatewayId) {
+        public Builder transitGatewayId(@Nullable Output<String> transitGatewayId) {
             this.transitGatewayId = transitGatewayId;
             return this;
         }
 
         public Builder transitGatewayId(@Nullable String transitGatewayId) {
-            this.transitGatewayId = Input.ofNullable(transitGatewayId);
+            this.transitGatewayId = Output.ofNullable(transitGatewayId);
             return this;
         }
 
-        public Builder vpcId(@Nullable Input<String> vpcId) {
+        public Builder vpcId(@Nullable Output<String> vpcId) {
             this.vpcId = vpcId;
             return this;
         }
 
         public Builder vpcId(@Nullable String vpcId) {
-            this.vpcId = Input.ofNullable(vpcId);
+            this.vpcId = Output.ofNullable(vpcId);
             return this;
         }
 
-        public Builder vpcOwnerId(@Nullable Input<String> vpcOwnerId) {
+        public Builder vpcOwnerId(@Nullable Output<String> vpcOwnerId) {
             this.vpcOwnerId = vpcOwnerId;
             return this;
         }
 
         public Builder vpcOwnerId(@Nullable String vpcOwnerId) {
-            this.vpcOwnerId = Input.ofNullable(vpcOwnerId);
+            this.vpcOwnerId = Output.ofNullable(vpcOwnerId);
             return this;
         }
         public VpcAttachmentAccepterState build() {

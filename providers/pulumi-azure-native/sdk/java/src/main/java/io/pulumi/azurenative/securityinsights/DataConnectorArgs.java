@@ -5,7 +5,7 @@ package io.pulumi.azurenative.securityinsights;
 
 import io.pulumi.azurenative.securityinsights.enums.DataConnectorKind;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -21,10 +21,10 @@ public final class DataConnectorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dataConnectorId")
-      private final @Nullable Input<String> dataConnectorId;
+      private final @Nullable Output<String> dataConnectorId;
 
-    public Input<String> getDataConnectorId() {
-        return this.dataConnectorId == null ? Input.empty() : this.dataConnectorId;
+    public Output<String> getDataConnectorId() {
+        return this.dataConnectorId == null ? Output.empty() : this.dataConnectorId;
     }
 
     /**
@@ -32,9 +32,9 @@ public final class DataConnectorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kind", required=true)
-      private final Input<Either<String,DataConnectorKind>> kind;
+      private final Output<Either<String,DataConnectorKind>> kind;
 
-    public Input<Either<String,DataConnectorKind>> getKind() {
+    public Output<Either<String,DataConnectorKind>> getKind() {
         return this.kind;
     }
 
@@ -43,9 +43,9 @@ public final class DataConnectorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -54,17 +54,17 @@ public final class DataConnectorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="workspaceName", required=true)
-      private final Input<String> workspaceName;
+      private final Output<String> workspaceName;
 
-    public Input<String> getWorkspaceName() {
+    public Output<String> getWorkspaceName() {
         return this.workspaceName;
     }
 
     public DataConnectorArgs(
-        @Nullable Input<String> dataConnectorId,
-        Input<Either<String,DataConnectorKind>> kind,
-        Input<String> resourceGroupName,
-        Input<String> workspaceName) {
+        @Nullable Output<String> dataConnectorId,
+        Output<Either<String,DataConnectorKind>> kind,
+        Output<String> resourceGroupName,
+        Output<String> workspaceName) {
         this.dataConnectorId = dataConnectorId;
         this.kind = Objects.requireNonNull(kind, "expected parameter 'kind' to be non-null");
         this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
@@ -72,10 +72,10 @@ public final class DataConnectorArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DataConnectorArgs() {
-        this.dataConnectorId = Input.empty();
-        this.kind = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.workspaceName = Input.empty();
+        this.dataConnectorId = Output.empty();
+        this.kind = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.workspaceName = Output.empty();
     }
 
     public static Builder builder() {
@@ -87,10 +87,10 @@ public final class DataConnectorArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> dataConnectorId;
-        private Input<Either<String,DataConnectorKind>> kind;
-        private Input<String> resourceGroupName;
-        private Input<String> workspaceName;
+        private @Nullable Output<String> dataConnectorId;
+        private Output<Either<String,DataConnectorKind>> kind;
+        private Output<String> resourceGroupName;
+        private Output<String> workspaceName;
 
         public Builder() {
     	      // Empty
@@ -104,43 +104,43 @@ public final class DataConnectorArgs extends io.pulumi.resources.ResourceArgs {
     	      this.workspaceName = defaults.workspaceName;
         }
 
-        public Builder dataConnectorId(@Nullable Input<String> dataConnectorId) {
+        public Builder dataConnectorId(@Nullable Output<String> dataConnectorId) {
             this.dataConnectorId = dataConnectorId;
             return this;
         }
 
         public Builder dataConnectorId(@Nullable String dataConnectorId) {
-            this.dataConnectorId = Input.ofNullable(dataConnectorId);
+            this.dataConnectorId = Output.ofNullable(dataConnectorId);
             return this;
         }
 
-        public Builder kind(Input<Either<String,DataConnectorKind>> kind) {
+        public Builder kind(Output<Either<String,DataConnectorKind>> kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
         public Builder kind(Either<String,DataConnectorKind> kind) {
-            this.kind = Input.of(Objects.requireNonNull(kind));
+            this.kind = Output.of(Objects.requireNonNull(kind));
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder workspaceName(Input<String> workspaceName) {
+        public Builder workspaceName(Output<String> workspaceName) {
             this.workspaceName = Objects.requireNonNull(workspaceName);
             return this;
         }
 
         public Builder workspaceName(String workspaceName) {
-            this.workspaceName = Input.of(Objects.requireNonNull(workspaceName));
+            this.workspaceName = Output.of(Objects.requireNonNull(workspaceName));
             return this;
         }
         public DataConnectorArgs build() {

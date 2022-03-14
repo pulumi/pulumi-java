@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.route53recoverycontrol.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class ClusterClusterEndpointGetArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="endpoint")
-      private final @Nullable Input<String> endpoint;
+      private final @Nullable Output<String> endpoint;
 
-    public Input<String> getEndpoint() {
-        return this.endpoint == null ? Input.empty() : this.endpoint;
+    public Output<String> getEndpoint() {
+        return this.endpoint == null ? Output.empty() : this.endpoint;
     }
 
     /**
@@ -30,22 +30,22 @@ public final class ClusterClusterEndpointGetArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="region")
-      private final @Nullable Input<String> region;
+      private final @Nullable Output<String> region;
 
-    public Input<String> getRegion() {
-        return this.region == null ? Input.empty() : this.region;
+    public Output<String> getRegion() {
+        return this.region == null ? Output.empty() : this.region;
     }
 
     public ClusterClusterEndpointGetArgs(
-        @Nullable Input<String> endpoint,
-        @Nullable Input<String> region) {
+        @Nullable Output<String> endpoint,
+        @Nullable Output<String> region) {
         this.endpoint = endpoint;
         this.region = region;
     }
 
     private ClusterClusterEndpointGetArgs() {
-        this.endpoint = Input.empty();
-        this.region = Input.empty();
+        this.endpoint = Output.empty();
+        this.region = Output.empty();
     }
 
     public static Builder builder() {
@@ -57,8 +57,8 @@ public final class ClusterClusterEndpointGetArgs extends io.pulumi.resources.Res
     }
 
     public static final class Builder {
-        private @Nullable Input<String> endpoint;
-        private @Nullable Input<String> region;
+        private @Nullable Output<String> endpoint;
+        private @Nullable Output<String> region;
 
         public Builder() {
     	      // Empty
@@ -70,23 +70,23 @@ public final class ClusterClusterEndpointGetArgs extends io.pulumi.resources.Res
     	      this.region = defaults.region;
         }
 
-        public Builder endpoint(@Nullable Input<String> endpoint) {
+        public Builder endpoint(@Nullable Output<String> endpoint) {
             this.endpoint = endpoint;
             return this;
         }
 
         public Builder endpoint(@Nullable String endpoint) {
-            this.endpoint = Input.ofNullable(endpoint);
+            this.endpoint = Output.ofNullable(endpoint);
             return this;
         }
 
-        public Builder region(@Nullable Input<String> region) {
+        public Builder region(@Nullable Output<String> region) {
             this.region = region;
             return this;
         }
 
         public Builder region(@Nullable String region) {
-            this.region = Input.ofNullable(region);
+            this.region = Output.ofNullable(region);
             return this;
         }
         public ClusterClusterEndpointGetArgs build() {

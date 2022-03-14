@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.databoxedge;
 
 import io.pulumi.azurenative.databoxedge.inputs.MetricConfigurationArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -20,9 +20,9 @@ public final class MonitoringConfigArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="deviceName", required=true)
-      private final Input<String> deviceName;
+      private final Output<String> deviceName;
 
-    public Input<String> getDeviceName() {
+    public Output<String> getDeviceName() {
         return this.deviceName;
     }
 
@@ -31,9 +31,9 @@ public final class MonitoringConfigArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="metricConfigurations", required=true)
-      private final Input<List<MetricConfigurationArgs>> metricConfigurations;
+      private final Output<List<MetricConfigurationArgs>> metricConfigurations;
 
-    public Input<List<MetricConfigurationArgs>> getMetricConfigurations() {
+    public Output<List<MetricConfigurationArgs>> getMetricConfigurations() {
         return this.metricConfigurations;
     }
 
@@ -42,9 +42,9 @@ public final class MonitoringConfigArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -53,17 +53,17 @@ public final class MonitoringConfigArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="roleName", required=true)
-      private final Input<String> roleName;
+      private final Output<String> roleName;
 
-    public Input<String> getRoleName() {
+    public Output<String> getRoleName() {
         return this.roleName;
     }
 
     public MonitoringConfigArgs(
-        Input<String> deviceName,
-        Input<List<MetricConfigurationArgs>> metricConfigurations,
-        Input<String> resourceGroupName,
-        Input<String> roleName) {
+        Output<String> deviceName,
+        Output<List<MetricConfigurationArgs>> metricConfigurations,
+        Output<String> resourceGroupName,
+        Output<String> roleName) {
         this.deviceName = Objects.requireNonNull(deviceName, "expected parameter 'deviceName' to be non-null");
         this.metricConfigurations = Objects.requireNonNull(metricConfigurations, "expected parameter 'metricConfigurations' to be non-null");
         this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
@@ -71,10 +71,10 @@ public final class MonitoringConfigArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private MonitoringConfigArgs() {
-        this.deviceName = Input.empty();
-        this.metricConfigurations = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.roleName = Input.empty();
+        this.deviceName = Output.empty();
+        this.metricConfigurations = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.roleName = Output.empty();
     }
 
     public static Builder builder() {
@@ -86,10 +86,10 @@ public final class MonitoringConfigArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private Input<String> deviceName;
-        private Input<List<MetricConfigurationArgs>> metricConfigurations;
-        private Input<String> resourceGroupName;
-        private Input<String> roleName;
+        private Output<String> deviceName;
+        private Output<List<MetricConfigurationArgs>> metricConfigurations;
+        private Output<String> resourceGroupName;
+        private Output<String> roleName;
 
         public Builder() {
     	      // Empty
@@ -103,43 +103,43 @@ public final class MonitoringConfigArgs extends io.pulumi.resources.ResourceArgs
     	      this.roleName = defaults.roleName;
         }
 
-        public Builder deviceName(Input<String> deviceName) {
+        public Builder deviceName(Output<String> deviceName) {
             this.deviceName = Objects.requireNonNull(deviceName);
             return this;
         }
 
         public Builder deviceName(String deviceName) {
-            this.deviceName = Input.of(Objects.requireNonNull(deviceName));
+            this.deviceName = Output.of(Objects.requireNonNull(deviceName));
             return this;
         }
 
-        public Builder metricConfigurations(Input<List<MetricConfigurationArgs>> metricConfigurations) {
+        public Builder metricConfigurations(Output<List<MetricConfigurationArgs>> metricConfigurations) {
             this.metricConfigurations = Objects.requireNonNull(metricConfigurations);
             return this;
         }
 
         public Builder metricConfigurations(List<MetricConfigurationArgs> metricConfigurations) {
-            this.metricConfigurations = Input.of(Objects.requireNonNull(metricConfigurations));
+            this.metricConfigurations = Output.of(Objects.requireNonNull(metricConfigurations));
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder roleName(Input<String> roleName) {
+        public Builder roleName(Output<String> roleName) {
             this.roleName = Objects.requireNonNull(roleName);
             return this;
         }
 
         public Builder roleName(String roleName) {
-            this.roleName = Input.of(Objects.requireNonNull(roleName));
+            this.roleName = Output.of(Objects.requireNonNull(roleName));
             return this;
         }
         public MonitoringConfigArgs build() {

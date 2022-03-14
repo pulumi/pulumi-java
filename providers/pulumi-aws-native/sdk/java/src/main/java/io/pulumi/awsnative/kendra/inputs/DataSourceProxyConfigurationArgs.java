@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.kendra.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -16,39 +16,39 @@ public final class DataSourceProxyConfigurationArgs extends io.pulumi.resources.
     public static final DataSourceProxyConfigurationArgs Empty = new DataSourceProxyConfigurationArgs();
 
     @InputImport(name="credentials")
-      private final @Nullable Input<String> credentials;
+      private final @Nullable Output<String> credentials;
 
-    public Input<String> getCredentials() {
-        return this.credentials == null ? Input.empty() : this.credentials;
+    public Output<String> getCredentials() {
+        return this.credentials == null ? Output.empty() : this.credentials;
     }
 
     @InputImport(name="host", required=true)
-      private final Input<String> host;
+      private final Output<String> host;
 
-    public Input<String> getHost() {
+    public Output<String> getHost() {
         return this.host;
     }
 
     @InputImport(name="port", required=true)
-      private final Input<Integer> port;
+      private final Output<Integer> port;
 
-    public Input<Integer> getPort() {
+    public Output<Integer> getPort() {
         return this.port;
     }
 
     public DataSourceProxyConfigurationArgs(
-        @Nullable Input<String> credentials,
-        Input<String> host,
-        Input<Integer> port) {
+        @Nullable Output<String> credentials,
+        Output<String> host,
+        Output<Integer> port) {
         this.credentials = credentials;
         this.host = Objects.requireNonNull(host, "expected parameter 'host' to be non-null");
         this.port = Objects.requireNonNull(port, "expected parameter 'port' to be non-null");
     }
 
     private DataSourceProxyConfigurationArgs() {
-        this.credentials = Input.empty();
-        this.host = Input.empty();
-        this.port = Input.empty();
+        this.credentials = Output.empty();
+        this.host = Output.empty();
+        this.port = Output.empty();
     }
 
     public static Builder builder() {
@@ -60,9 +60,9 @@ public final class DataSourceProxyConfigurationArgs extends io.pulumi.resources.
     }
 
     public static final class Builder {
-        private @Nullable Input<String> credentials;
-        private Input<String> host;
-        private Input<Integer> port;
+        private @Nullable Output<String> credentials;
+        private Output<String> host;
+        private Output<Integer> port;
 
         public Builder() {
     	      // Empty
@@ -75,33 +75,33 @@ public final class DataSourceProxyConfigurationArgs extends io.pulumi.resources.
     	      this.port = defaults.port;
         }
 
-        public Builder credentials(@Nullable Input<String> credentials) {
+        public Builder credentials(@Nullable Output<String> credentials) {
             this.credentials = credentials;
             return this;
         }
 
         public Builder credentials(@Nullable String credentials) {
-            this.credentials = Input.ofNullable(credentials);
+            this.credentials = Output.ofNullable(credentials);
             return this;
         }
 
-        public Builder host(Input<String> host) {
+        public Builder host(Output<String> host) {
             this.host = Objects.requireNonNull(host);
             return this;
         }
 
         public Builder host(String host) {
-            this.host = Input.of(Objects.requireNonNull(host));
+            this.host = Output.of(Objects.requireNonNull(host));
             return this;
         }
 
-        public Builder port(Input<Integer> port) {
+        public Builder port(Output<Integer> port) {
             this.port = Objects.requireNonNull(port);
             return this;
         }
 
         public Builder port(Integer port) {
-            this.port = Input.of(Objects.requireNonNull(port));
+            this.port = Output.of(Objects.requireNonNull(port));
             return this;
         }
         public DataSourceProxyConfigurationArgs build() {

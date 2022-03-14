@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.run_v2.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.run_v2.inputs.GoogleCloudRunOpV2ContainerPortArgs;
 import io.pulumi.googlenative.run_v2.inputs.GoogleCloudRunOpV2EnvVarArgs;
@@ -28,10 +28,10 @@ public final class GoogleCloudRunOpV2ContainerArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="args")
-      private final @Nullable Input<List<String>> args;
+      private final @Nullable Output<List<String>> args;
 
-    public Input<List<String>> getArgs() {
-        return this.args == null ? Input.empty() : this.args;
+    public Output<List<String>> getArgs() {
+        return this.args == null ? Output.empty() : this.args;
     }
 
     /**
@@ -39,10 +39,10 @@ public final class GoogleCloudRunOpV2ContainerArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="command")
-      private final @Nullable Input<List<String>> command;
+      private final @Nullable Output<List<String>> command;
 
-    public Input<List<String>> getCommand() {
-        return this.command == null ? Input.empty() : this.command;
+    public Output<List<String>> getCommand() {
+        return this.command == null ? Output.empty() : this.command;
     }
 
     /**
@@ -50,10 +50,10 @@ public final class GoogleCloudRunOpV2ContainerArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="env")
-      private final @Nullable Input<List<GoogleCloudRunOpV2EnvVarArgs>> env;
+      private final @Nullable Output<List<GoogleCloudRunOpV2EnvVarArgs>> env;
 
-    public Input<List<GoogleCloudRunOpV2EnvVarArgs>> getEnv() {
-        return this.env == null ? Input.empty() : this.env;
+    public Output<List<GoogleCloudRunOpV2EnvVarArgs>> getEnv() {
+        return this.env == null ? Output.empty() : this.env;
     }
 
     /**
@@ -61,9 +61,9 @@ public final class GoogleCloudRunOpV2ContainerArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="image", required=true)
-      private final Input<String> image;
+      private final Output<String> image;
 
-    public Input<String> getImage() {
+    public Output<String> getImage() {
         return this.image;
     }
 
@@ -72,10 +72,10 @@ public final class GoogleCloudRunOpV2ContainerArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -83,10 +83,10 @@ public final class GoogleCloudRunOpV2ContainerArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="ports")
-      private final @Nullable Input<List<GoogleCloudRunOpV2ContainerPortArgs>> ports;
+      private final @Nullable Output<List<GoogleCloudRunOpV2ContainerPortArgs>> ports;
 
-    public Input<List<GoogleCloudRunOpV2ContainerPortArgs>> getPorts() {
-        return this.ports == null ? Input.empty() : this.ports;
+    public Output<List<GoogleCloudRunOpV2ContainerPortArgs>> getPorts() {
+        return this.ports == null ? Output.empty() : this.ports;
     }
 
     /**
@@ -94,10 +94,10 @@ public final class GoogleCloudRunOpV2ContainerArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="resources")
-      private final @Nullable Input<GoogleCloudRunOpV2ResourceRequirementsArgs> resources;
+      private final @Nullable Output<GoogleCloudRunOpV2ResourceRequirementsArgs> resources;
 
-    public Input<GoogleCloudRunOpV2ResourceRequirementsArgs> getResources() {
-        return this.resources == null ? Input.empty() : this.resources;
+    public Output<GoogleCloudRunOpV2ResourceRequirementsArgs> getResources() {
+        return this.resources == null ? Output.empty() : this.resources;
     }
 
     /**
@@ -105,21 +105,21 @@ public final class GoogleCloudRunOpV2ContainerArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="volumeMounts")
-      private final @Nullable Input<List<GoogleCloudRunOpV2VolumeMountArgs>> volumeMounts;
+      private final @Nullable Output<List<GoogleCloudRunOpV2VolumeMountArgs>> volumeMounts;
 
-    public Input<List<GoogleCloudRunOpV2VolumeMountArgs>> getVolumeMounts() {
-        return this.volumeMounts == null ? Input.empty() : this.volumeMounts;
+    public Output<List<GoogleCloudRunOpV2VolumeMountArgs>> getVolumeMounts() {
+        return this.volumeMounts == null ? Output.empty() : this.volumeMounts;
     }
 
     public GoogleCloudRunOpV2ContainerArgs(
-        @Nullable Input<List<String>> args,
-        @Nullable Input<List<String>> command,
-        @Nullable Input<List<GoogleCloudRunOpV2EnvVarArgs>> env,
-        Input<String> image,
-        @Nullable Input<String> name,
-        @Nullable Input<List<GoogleCloudRunOpV2ContainerPortArgs>> ports,
-        @Nullable Input<GoogleCloudRunOpV2ResourceRequirementsArgs> resources,
-        @Nullable Input<List<GoogleCloudRunOpV2VolumeMountArgs>> volumeMounts) {
+        @Nullable Output<List<String>> args,
+        @Nullable Output<List<String>> command,
+        @Nullable Output<List<GoogleCloudRunOpV2EnvVarArgs>> env,
+        Output<String> image,
+        @Nullable Output<String> name,
+        @Nullable Output<List<GoogleCloudRunOpV2ContainerPortArgs>> ports,
+        @Nullable Output<GoogleCloudRunOpV2ResourceRequirementsArgs> resources,
+        @Nullable Output<List<GoogleCloudRunOpV2VolumeMountArgs>> volumeMounts) {
         this.args = args;
         this.command = command;
         this.env = env;
@@ -131,14 +131,14 @@ public final class GoogleCloudRunOpV2ContainerArgs extends io.pulumi.resources.R
     }
 
     private GoogleCloudRunOpV2ContainerArgs() {
-        this.args = Input.empty();
-        this.command = Input.empty();
-        this.env = Input.empty();
-        this.image = Input.empty();
-        this.name = Input.empty();
-        this.ports = Input.empty();
-        this.resources = Input.empty();
-        this.volumeMounts = Input.empty();
+        this.args = Output.empty();
+        this.command = Output.empty();
+        this.env = Output.empty();
+        this.image = Output.empty();
+        this.name = Output.empty();
+        this.ports = Output.empty();
+        this.resources = Output.empty();
+        this.volumeMounts = Output.empty();
     }
 
     public static Builder builder() {
@@ -150,14 +150,14 @@ public final class GoogleCloudRunOpV2ContainerArgs extends io.pulumi.resources.R
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> args;
-        private @Nullable Input<List<String>> command;
-        private @Nullable Input<List<GoogleCloudRunOpV2EnvVarArgs>> env;
-        private Input<String> image;
-        private @Nullable Input<String> name;
-        private @Nullable Input<List<GoogleCloudRunOpV2ContainerPortArgs>> ports;
-        private @Nullable Input<GoogleCloudRunOpV2ResourceRequirementsArgs> resources;
-        private @Nullable Input<List<GoogleCloudRunOpV2VolumeMountArgs>> volumeMounts;
+        private @Nullable Output<List<String>> args;
+        private @Nullable Output<List<String>> command;
+        private @Nullable Output<List<GoogleCloudRunOpV2EnvVarArgs>> env;
+        private Output<String> image;
+        private @Nullable Output<String> name;
+        private @Nullable Output<List<GoogleCloudRunOpV2ContainerPortArgs>> ports;
+        private @Nullable Output<GoogleCloudRunOpV2ResourceRequirementsArgs> resources;
+        private @Nullable Output<List<GoogleCloudRunOpV2VolumeMountArgs>> volumeMounts;
 
         public Builder() {
     	      // Empty
@@ -175,83 +175,83 @@ public final class GoogleCloudRunOpV2ContainerArgs extends io.pulumi.resources.R
     	      this.volumeMounts = defaults.volumeMounts;
         }
 
-        public Builder args(@Nullable Input<List<String>> args) {
+        public Builder args(@Nullable Output<List<String>> args) {
             this.args = args;
             return this;
         }
 
         public Builder args(@Nullable List<String> args) {
-            this.args = Input.ofNullable(args);
+            this.args = Output.ofNullable(args);
             return this;
         }
 
-        public Builder command(@Nullable Input<List<String>> command) {
+        public Builder command(@Nullable Output<List<String>> command) {
             this.command = command;
             return this;
         }
 
         public Builder command(@Nullable List<String> command) {
-            this.command = Input.ofNullable(command);
+            this.command = Output.ofNullable(command);
             return this;
         }
 
-        public Builder env(@Nullable Input<List<GoogleCloudRunOpV2EnvVarArgs>> env) {
+        public Builder env(@Nullable Output<List<GoogleCloudRunOpV2EnvVarArgs>> env) {
             this.env = env;
             return this;
         }
 
         public Builder env(@Nullable List<GoogleCloudRunOpV2EnvVarArgs> env) {
-            this.env = Input.ofNullable(env);
+            this.env = Output.ofNullable(env);
             return this;
         }
 
-        public Builder image(Input<String> image) {
+        public Builder image(Output<String> image) {
             this.image = Objects.requireNonNull(image);
             return this;
         }
 
         public Builder image(String image) {
-            this.image = Input.of(Objects.requireNonNull(image));
+            this.image = Output.of(Objects.requireNonNull(image));
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder ports(@Nullable Input<List<GoogleCloudRunOpV2ContainerPortArgs>> ports) {
+        public Builder ports(@Nullable Output<List<GoogleCloudRunOpV2ContainerPortArgs>> ports) {
             this.ports = ports;
             return this;
         }
 
         public Builder ports(@Nullable List<GoogleCloudRunOpV2ContainerPortArgs> ports) {
-            this.ports = Input.ofNullable(ports);
+            this.ports = Output.ofNullable(ports);
             return this;
         }
 
-        public Builder resources(@Nullable Input<GoogleCloudRunOpV2ResourceRequirementsArgs> resources) {
+        public Builder resources(@Nullable Output<GoogleCloudRunOpV2ResourceRequirementsArgs> resources) {
             this.resources = resources;
             return this;
         }
 
         public Builder resources(@Nullable GoogleCloudRunOpV2ResourceRequirementsArgs resources) {
-            this.resources = Input.ofNullable(resources);
+            this.resources = Output.ofNullable(resources);
             return this;
         }
 
-        public Builder volumeMounts(@Nullable Input<List<GoogleCloudRunOpV2VolumeMountArgs>> volumeMounts) {
+        public Builder volumeMounts(@Nullable Output<List<GoogleCloudRunOpV2VolumeMountArgs>> volumeMounts) {
             this.volumeMounts = volumeMounts;
             return this;
         }
 
         public Builder volumeMounts(@Nullable List<GoogleCloudRunOpV2VolumeMountArgs> volumeMounts) {
-            this.volumeMounts = Input.ofNullable(volumeMounts);
+            this.volumeMounts = Output.ofNullable(volumeMounts);
             return this;
         }
         public GoogleCloudRunOpV2ContainerArgs build() {

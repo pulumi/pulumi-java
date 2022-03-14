@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.datafactory.inputs;
 
 import io.pulumi.azurenative.datafactory.inputs.EntityReferenceArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,9 +23,9 @@ public final class PackageStoreArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name", required=true)
-      private final Input<String> name;
+      private final Output<String> name;
 
-    public Input<String> getName() {
+    public Output<String> getName() {
         return this.name;
     }
 
@@ -34,22 +34,22 @@ public final class PackageStoreArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="packageStoreLinkedService", required=true)
-      private final Input<EntityReferenceArgs> packageStoreLinkedService;
+      private final Output<EntityReferenceArgs> packageStoreLinkedService;
 
-    public Input<EntityReferenceArgs> getPackageStoreLinkedService() {
+    public Output<EntityReferenceArgs> getPackageStoreLinkedService() {
         return this.packageStoreLinkedService;
     }
 
     public PackageStoreArgs(
-        Input<String> name,
-        Input<EntityReferenceArgs> packageStoreLinkedService) {
+        Output<String> name,
+        Output<EntityReferenceArgs> packageStoreLinkedService) {
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
         this.packageStoreLinkedService = Objects.requireNonNull(packageStoreLinkedService, "expected parameter 'packageStoreLinkedService' to be non-null");
     }
 
     private PackageStoreArgs() {
-        this.name = Input.empty();
-        this.packageStoreLinkedService = Input.empty();
+        this.name = Output.empty();
+        this.packageStoreLinkedService = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class PackageStoreArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> name;
-        private Input<EntityReferenceArgs> packageStoreLinkedService;
+        private Output<String> name;
+        private Output<EntityReferenceArgs> packageStoreLinkedService;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class PackageStoreArgs extends io.pulumi.resources.ResourceArgs {
     	      this.packageStoreLinkedService = defaults.packageStoreLinkedService;
         }
 
-        public Builder name(Input<String> name) {
+        public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(String name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder packageStoreLinkedService(Input<EntityReferenceArgs> packageStoreLinkedService) {
+        public Builder packageStoreLinkedService(Output<EntityReferenceArgs> packageStoreLinkedService) {
             this.packageStoreLinkedService = Objects.requireNonNull(packageStoreLinkedService);
             return this;
         }
 
         public Builder packageStoreLinkedService(EntityReferenceArgs packageStoreLinkedService) {
-            this.packageStoreLinkedService = Input.of(Objects.requireNonNull(packageStoreLinkedService));
+            this.packageStoreLinkedService = Output.of(Objects.requireNonNull(packageStoreLinkedService));
             return this;
         }
         public PackageStoreArgs build() {

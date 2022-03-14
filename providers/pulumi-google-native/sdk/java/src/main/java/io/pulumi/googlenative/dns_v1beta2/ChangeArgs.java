@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dns_v1beta2;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dns_v1beta2.enums.ChangeStatus;
 import io.pulumi.googlenative.dns_v1beta2.inputs.ResourceRecordSetArgs;
@@ -23,17 +23,17 @@ public final class ChangeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="additions")
-      private final @Nullable Input<List<ResourceRecordSetArgs>> additions;
+      private final @Nullable Output<List<ResourceRecordSetArgs>> additions;
 
-    public Input<List<ResourceRecordSetArgs>> getAdditions() {
-        return this.additions == null ? Input.empty() : this.additions;
+    public Output<List<ResourceRecordSetArgs>> getAdditions() {
+        return this.additions == null ? Output.empty() : this.additions;
     }
 
     @InputImport(name="clientOperationId")
-      private final @Nullable Input<String> clientOperationId;
+      private final @Nullable Output<String> clientOperationId;
 
-    public Input<String> getClientOperationId() {
-        return this.clientOperationId == null ? Input.empty() : this.clientOperationId;
+    public Output<String> getClientOperationId() {
+        return this.clientOperationId == null ? Output.empty() : this.clientOperationId;
     }
 
     /**
@@ -41,10 +41,10 @@ public final class ChangeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="deletions")
-      private final @Nullable Input<List<ResourceRecordSetArgs>> deletions;
+      private final @Nullable Output<List<ResourceRecordSetArgs>> deletions;
 
-    public Input<List<ResourceRecordSetArgs>> getDeletions() {
-        return this.deletions == null ? Input.empty() : this.deletions;
+    public Output<List<ResourceRecordSetArgs>> getDeletions() {
+        return this.deletions == null ? Output.empty() : this.deletions;
     }
 
     /**
@@ -52,10 +52,10 @@ public final class ChangeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="id")
-      private final @Nullable Input<String> id;
+      private final @Nullable Output<String> id;
 
-    public Input<String> getId() {
-        return this.id == null ? Input.empty() : this.id;
+    public Output<String> getId() {
+        return this.id == null ? Output.empty() : this.id;
     }
 
     /**
@@ -63,31 +63,31 @@ public final class ChangeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="isServing")
-      private final @Nullable Input<Boolean> isServing;
+      private final @Nullable Output<Boolean> isServing;
 
-    public Input<Boolean> getIsServing() {
-        return this.isServing == null ? Input.empty() : this.isServing;
+    public Output<Boolean> getIsServing() {
+        return this.isServing == null ? Output.empty() : this.isServing;
     }
 
     @InputImport(name="kind")
-      private final @Nullable Input<String> kind;
+      private final @Nullable Output<String> kind;
 
-    public Input<String> getKind() {
-        return this.kind == null ? Input.empty() : this.kind;
+    public Output<String> getKind() {
+        return this.kind == null ? Output.empty() : this.kind;
     }
 
     @InputImport(name="managedZone", required=true)
-      private final Input<String> managedZone;
+      private final Output<String> managedZone;
 
-    public Input<String> getManagedZone() {
+    public Output<String> getManagedZone() {
         return this.managedZone;
     }
 
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -95,10 +95,10 @@ public final class ChangeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="startTime")
-      private final @Nullable Input<String> startTime;
+      private final @Nullable Output<String> startTime;
 
-    public Input<String> getStartTime() {
-        return this.startTime == null ? Input.empty() : this.startTime;
+    public Output<String> getStartTime() {
+        return this.startTime == null ? Output.empty() : this.startTime;
     }
 
     /**
@@ -106,23 +106,23 @@ public final class ChangeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="status")
-      private final @Nullable Input<ChangeStatus> status;
+      private final @Nullable Output<ChangeStatus> status;
 
-    public Input<ChangeStatus> getStatus() {
-        return this.status == null ? Input.empty() : this.status;
+    public Output<ChangeStatus> getStatus() {
+        return this.status == null ? Output.empty() : this.status;
     }
 
     public ChangeArgs(
-        @Nullable Input<List<ResourceRecordSetArgs>> additions,
-        @Nullable Input<String> clientOperationId,
-        @Nullable Input<List<ResourceRecordSetArgs>> deletions,
-        @Nullable Input<String> id,
-        @Nullable Input<Boolean> isServing,
-        @Nullable Input<String> kind,
-        Input<String> managedZone,
-        @Nullable Input<String> project,
-        @Nullable Input<String> startTime,
-        @Nullable Input<ChangeStatus> status) {
+        @Nullable Output<List<ResourceRecordSetArgs>> additions,
+        @Nullable Output<String> clientOperationId,
+        @Nullable Output<List<ResourceRecordSetArgs>> deletions,
+        @Nullable Output<String> id,
+        @Nullable Output<Boolean> isServing,
+        @Nullable Output<String> kind,
+        Output<String> managedZone,
+        @Nullable Output<String> project,
+        @Nullable Output<String> startTime,
+        @Nullable Output<ChangeStatus> status) {
         this.additions = additions;
         this.clientOperationId = clientOperationId;
         this.deletions = deletions;
@@ -136,16 +136,16 @@ public final class ChangeArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ChangeArgs() {
-        this.additions = Input.empty();
-        this.clientOperationId = Input.empty();
-        this.deletions = Input.empty();
-        this.id = Input.empty();
-        this.isServing = Input.empty();
-        this.kind = Input.empty();
-        this.managedZone = Input.empty();
-        this.project = Input.empty();
-        this.startTime = Input.empty();
-        this.status = Input.empty();
+        this.additions = Output.empty();
+        this.clientOperationId = Output.empty();
+        this.deletions = Output.empty();
+        this.id = Output.empty();
+        this.isServing = Output.empty();
+        this.kind = Output.empty();
+        this.managedZone = Output.empty();
+        this.project = Output.empty();
+        this.startTime = Output.empty();
+        this.status = Output.empty();
     }
 
     public static Builder builder() {
@@ -157,16 +157,16 @@ public final class ChangeArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<List<ResourceRecordSetArgs>> additions;
-        private @Nullable Input<String> clientOperationId;
-        private @Nullable Input<List<ResourceRecordSetArgs>> deletions;
-        private @Nullable Input<String> id;
-        private @Nullable Input<Boolean> isServing;
-        private @Nullable Input<String> kind;
-        private Input<String> managedZone;
-        private @Nullable Input<String> project;
-        private @Nullable Input<String> startTime;
-        private @Nullable Input<ChangeStatus> status;
+        private @Nullable Output<List<ResourceRecordSetArgs>> additions;
+        private @Nullable Output<String> clientOperationId;
+        private @Nullable Output<List<ResourceRecordSetArgs>> deletions;
+        private @Nullable Output<String> id;
+        private @Nullable Output<Boolean> isServing;
+        private @Nullable Output<String> kind;
+        private Output<String> managedZone;
+        private @Nullable Output<String> project;
+        private @Nullable Output<String> startTime;
+        private @Nullable Output<ChangeStatus> status;
 
         public Builder() {
     	      // Empty
@@ -186,103 +186,103 @@ public final class ChangeArgs extends io.pulumi.resources.ResourceArgs {
     	      this.status = defaults.status;
         }
 
-        public Builder additions(@Nullable Input<List<ResourceRecordSetArgs>> additions) {
+        public Builder additions(@Nullable Output<List<ResourceRecordSetArgs>> additions) {
             this.additions = additions;
             return this;
         }
 
         public Builder additions(@Nullable List<ResourceRecordSetArgs> additions) {
-            this.additions = Input.ofNullable(additions);
+            this.additions = Output.ofNullable(additions);
             return this;
         }
 
-        public Builder clientOperationId(@Nullable Input<String> clientOperationId) {
+        public Builder clientOperationId(@Nullable Output<String> clientOperationId) {
             this.clientOperationId = clientOperationId;
             return this;
         }
 
         public Builder clientOperationId(@Nullable String clientOperationId) {
-            this.clientOperationId = Input.ofNullable(clientOperationId);
+            this.clientOperationId = Output.ofNullable(clientOperationId);
             return this;
         }
 
-        public Builder deletions(@Nullable Input<List<ResourceRecordSetArgs>> deletions) {
+        public Builder deletions(@Nullable Output<List<ResourceRecordSetArgs>> deletions) {
             this.deletions = deletions;
             return this;
         }
 
         public Builder deletions(@Nullable List<ResourceRecordSetArgs> deletions) {
-            this.deletions = Input.ofNullable(deletions);
+            this.deletions = Output.ofNullable(deletions);
             return this;
         }
 
-        public Builder id(@Nullable Input<String> id) {
+        public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
 
         public Builder id(@Nullable String id) {
-            this.id = Input.ofNullable(id);
+            this.id = Output.ofNullable(id);
             return this;
         }
 
-        public Builder isServing(@Nullable Input<Boolean> isServing) {
+        public Builder isServing(@Nullable Output<Boolean> isServing) {
             this.isServing = isServing;
             return this;
         }
 
         public Builder isServing(@Nullable Boolean isServing) {
-            this.isServing = Input.ofNullable(isServing);
+            this.isServing = Output.ofNullable(isServing);
             return this;
         }
 
-        public Builder kind(@Nullable Input<String> kind) {
+        public Builder kind(@Nullable Output<String> kind) {
             this.kind = kind;
             return this;
         }
 
         public Builder kind(@Nullable String kind) {
-            this.kind = Input.ofNullable(kind);
+            this.kind = Output.ofNullable(kind);
             return this;
         }
 
-        public Builder managedZone(Input<String> managedZone) {
+        public Builder managedZone(Output<String> managedZone) {
             this.managedZone = Objects.requireNonNull(managedZone);
             return this;
         }
 
         public Builder managedZone(String managedZone) {
-            this.managedZone = Input.of(Objects.requireNonNull(managedZone));
+            this.managedZone = Output.of(Objects.requireNonNull(managedZone));
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder startTime(@Nullable Input<String> startTime) {
+        public Builder startTime(@Nullable Output<String> startTime) {
             this.startTime = startTime;
             return this;
         }
 
         public Builder startTime(@Nullable String startTime) {
-            this.startTime = Input.ofNullable(startTime);
+            this.startTime = Output.ofNullable(startTime);
             return this;
         }
 
-        public Builder status(@Nullable Input<ChangeStatus> status) {
+        public Builder status(@Nullable Output<ChangeStatus> status) {
             this.status = status;
             return this;
         }
 
         public Builder status(@Nullable ChangeStatus status) {
-            this.status = Input.ofNullable(status);
+            this.status = Output.ofNullable(status);
             return this;
         }
         public ChangeArgs build() {

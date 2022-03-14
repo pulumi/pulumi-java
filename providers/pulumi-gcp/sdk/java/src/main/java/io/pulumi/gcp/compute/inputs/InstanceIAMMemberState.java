@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.compute.inputs.InstanceIAMMemberConditionGetArgs;
 import java.lang.String;
@@ -21,10 +21,10 @@ public final class InstanceIAMMemberState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="condition")
-      private final @Nullable Input<InstanceIAMMemberConditionGetArgs> condition;
+      private final @Nullable Output<InstanceIAMMemberConditionGetArgs> condition;
 
-    public Input<InstanceIAMMemberConditionGetArgs> getCondition() {
-        return this.condition == null ? Input.empty() : this.condition;
+    public Output<InstanceIAMMemberConditionGetArgs> getCondition() {
+        return this.condition == null ? Output.empty() : this.condition;
     }
 
     /**
@@ -32,10 +32,10 @@ public final class InstanceIAMMemberState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="etag")
-      private final @Nullable Input<String> etag;
+      private final @Nullable Output<String> etag;
 
-    public Input<String> getEtag() {
-        return this.etag == null ? Input.empty() : this.etag;
+    public Output<String> getEtag() {
+        return this.etag == null ? Output.empty() : this.etag;
     }
 
     /**
@@ -43,17 +43,17 @@ public final class InstanceIAMMemberState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="instanceName")
-      private final @Nullable Input<String> instanceName;
+      private final @Nullable Output<String> instanceName;
 
-    public Input<String> getInstanceName() {
-        return this.instanceName == null ? Input.empty() : this.instanceName;
+    public Output<String> getInstanceName() {
+        return this.instanceName == null ? Output.empty() : this.instanceName;
     }
 
     @InputImport(name="member")
-      private final @Nullable Input<String> member;
+      private final @Nullable Output<String> member;
 
-    public Input<String> getMember() {
-        return this.member == null ? Input.empty() : this.member;
+    public Output<String> getMember() {
+        return this.member == null ? Output.empty() : this.member;
     }
 
     /**
@@ -62,10 +62,10 @@ public final class InstanceIAMMemberState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -75,10 +75,10 @@ public final class InstanceIAMMemberState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="role")
-      private final @Nullable Input<String> role;
+      private final @Nullable Output<String> role;
 
-    public Input<String> getRole() {
-        return this.role == null ? Input.empty() : this.role;
+    public Output<String> getRole() {
+        return this.role == null ? Output.empty() : this.role;
     }
 
     /**
@@ -88,20 +88,20 @@ public final class InstanceIAMMemberState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="zone")
-      private final @Nullable Input<String> zone;
+      private final @Nullable Output<String> zone;
 
-    public Input<String> getZone() {
-        return this.zone == null ? Input.empty() : this.zone;
+    public Output<String> getZone() {
+        return this.zone == null ? Output.empty() : this.zone;
     }
 
     public InstanceIAMMemberState(
-        @Nullable Input<InstanceIAMMemberConditionGetArgs> condition,
-        @Nullable Input<String> etag,
-        @Nullable Input<String> instanceName,
-        @Nullable Input<String> member,
-        @Nullable Input<String> project,
-        @Nullable Input<String> role,
-        @Nullable Input<String> zone) {
+        @Nullable Output<InstanceIAMMemberConditionGetArgs> condition,
+        @Nullable Output<String> etag,
+        @Nullable Output<String> instanceName,
+        @Nullable Output<String> member,
+        @Nullable Output<String> project,
+        @Nullable Output<String> role,
+        @Nullable Output<String> zone) {
         this.condition = condition;
         this.etag = etag;
         this.instanceName = instanceName;
@@ -112,13 +112,13 @@ public final class InstanceIAMMemberState extends io.pulumi.resources.ResourceAr
     }
 
     private InstanceIAMMemberState() {
-        this.condition = Input.empty();
-        this.etag = Input.empty();
-        this.instanceName = Input.empty();
-        this.member = Input.empty();
-        this.project = Input.empty();
-        this.role = Input.empty();
-        this.zone = Input.empty();
+        this.condition = Output.empty();
+        this.etag = Output.empty();
+        this.instanceName = Output.empty();
+        this.member = Output.empty();
+        this.project = Output.empty();
+        this.role = Output.empty();
+        this.zone = Output.empty();
     }
 
     public static Builder builder() {
@@ -130,13 +130,13 @@ public final class InstanceIAMMemberState extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private @Nullable Input<InstanceIAMMemberConditionGetArgs> condition;
-        private @Nullable Input<String> etag;
-        private @Nullable Input<String> instanceName;
-        private @Nullable Input<String> member;
-        private @Nullable Input<String> project;
-        private @Nullable Input<String> role;
-        private @Nullable Input<String> zone;
+        private @Nullable Output<InstanceIAMMemberConditionGetArgs> condition;
+        private @Nullable Output<String> etag;
+        private @Nullable Output<String> instanceName;
+        private @Nullable Output<String> member;
+        private @Nullable Output<String> project;
+        private @Nullable Output<String> role;
+        private @Nullable Output<String> zone;
 
         public Builder() {
     	      // Empty
@@ -153,73 +153,73 @@ public final class InstanceIAMMemberState extends io.pulumi.resources.ResourceAr
     	      this.zone = defaults.zone;
         }
 
-        public Builder condition(@Nullable Input<InstanceIAMMemberConditionGetArgs> condition) {
+        public Builder condition(@Nullable Output<InstanceIAMMemberConditionGetArgs> condition) {
             this.condition = condition;
             return this;
         }
 
         public Builder condition(@Nullable InstanceIAMMemberConditionGetArgs condition) {
-            this.condition = Input.ofNullable(condition);
+            this.condition = Output.ofNullable(condition);
             return this;
         }
 
-        public Builder etag(@Nullable Input<String> etag) {
+        public Builder etag(@Nullable Output<String> etag) {
             this.etag = etag;
             return this;
         }
 
         public Builder etag(@Nullable String etag) {
-            this.etag = Input.ofNullable(etag);
+            this.etag = Output.ofNullable(etag);
             return this;
         }
 
-        public Builder instanceName(@Nullable Input<String> instanceName) {
+        public Builder instanceName(@Nullable Output<String> instanceName) {
             this.instanceName = instanceName;
             return this;
         }
 
         public Builder instanceName(@Nullable String instanceName) {
-            this.instanceName = Input.ofNullable(instanceName);
+            this.instanceName = Output.ofNullable(instanceName);
             return this;
         }
 
-        public Builder member(@Nullable Input<String> member) {
+        public Builder member(@Nullable Output<String> member) {
             this.member = member;
             return this;
         }
 
         public Builder member(@Nullable String member) {
-            this.member = Input.ofNullable(member);
+            this.member = Output.ofNullable(member);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder role(@Nullable Input<String> role) {
+        public Builder role(@Nullable Output<String> role) {
             this.role = role;
             return this;
         }
 
         public Builder role(@Nullable String role) {
-            this.role = Input.ofNullable(role);
+            this.role = Output.ofNullable(role);
             return this;
         }
 
-        public Builder zone(@Nullable Input<String> zone) {
+        public Builder zone(@Nullable Output<String> zone) {
             this.zone = zone;
             return this;
         }
 
         public Builder zone(@Nullable String zone) {
-            this.zone = Input.ofNullable(zone);
+            this.zone = Output.ofNullable(zone);
             return this;
         }
         public InstanceIAMMemberState build() {

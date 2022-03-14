@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.licensemanager;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -16,10 +16,10 @@ public final class GrantArgs extends io.pulumi.resources.ResourceArgs {
     public static final GrantArgs Empty = new GrantArgs();
 
     @InputImport(name="allowedOperations")
-      private final @Nullable Input<List<String>> allowedOperations;
+      private final @Nullable Output<List<String>> allowedOperations;
 
-    public Input<List<String>> getAllowedOperations() {
-        return this.allowedOperations == null ? Input.empty() : this.allowedOperations;
+    public Output<List<String>> getAllowedOperations() {
+        return this.allowedOperations == null ? Output.empty() : this.allowedOperations;
     }
 
     /**
@@ -27,10 +27,10 @@ public final class GrantArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="grantName")
-      private final @Nullable Input<String> grantName;
+      private final @Nullable Output<String> grantName;
 
-    public Input<String> getGrantName() {
-        return this.grantName == null ? Input.empty() : this.grantName;
+    public Output<String> getGrantName() {
+        return this.grantName == null ? Output.empty() : this.grantName;
     }
 
     /**
@@ -38,10 +38,10 @@ public final class GrantArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="homeRegion")
-      private final @Nullable Input<String> homeRegion;
+      private final @Nullable Output<String> homeRegion;
 
-    public Input<String> getHomeRegion() {
-        return this.homeRegion == null ? Input.empty() : this.homeRegion;
+    public Output<String> getHomeRegion() {
+        return this.homeRegion == null ? Output.empty() : this.homeRegion;
     }
 
     /**
@@ -49,33 +49,33 @@ public final class GrantArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="licenseArn")
-      private final @Nullable Input<String> licenseArn;
+      private final @Nullable Output<String> licenseArn;
 
-    public Input<String> getLicenseArn() {
-        return this.licenseArn == null ? Input.empty() : this.licenseArn;
+    public Output<String> getLicenseArn() {
+        return this.licenseArn == null ? Output.empty() : this.licenseArn;
     }
 
     @InputImport(name="principals")
-      private final @Nullable Input<List<String>> principals;
+      private final @Nullable Output<List<String>> principals;
 
-    public Input<List<String>> getPrincipals() {
-        return this.principals == null ? Input.empty() : this.principals;
+    public Output<List<String>> getPrincipals() {
+        return this.principals == null ? Output.empty() : this.principals;
     }
 
     @InputImport(name="status")
-      private final @Nullable Input<String> status;
+      private final @Nullable Output<String> status;
 
-    public Input<String> getStatus() {
-        return this.status == null ? Input.empty() : this.status;
+    public Output<String> getStatus() {
+        return this.status == null ? Output.empty() : this.status;
     }
 
     public GrantArgs(
-        @Nullable Input<List<String>> allowedOperations,
-        @Nullable Input<String> grantName,
-        @Nullable Input<String> homeRegion,
-        @Nullable Input<String> licenseArn,
-        @Nullable Input<List<String>> principals,
-        @Nullable Input<String> status) {
+        @Nullable Output<List<String>> allowedOperations,
+        @Nullable Output<String> grantName,
+        @Nullable Output<String> homeRegion,
+        @Nullable Output<String> licenseArn,
+        @Nullable Output<List<String>> principals,
+        @Nullable Output<String> status) {
         this.allowedOperations = allowedOperations;
         this.grantName = grantName;
         this.homeRegion = homeRegion;
@@ -85,12 +85,12 @@ public final class GrantArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private GrantArgs() {
-        this.allowedOperations = Input.empty();
-        this.grantName = Input.empty();
-        this.homeRegion = Input.empty();
-        this.licenseArn = Input.empty();
-        this.principals = Input.empty();
-        this.status = Input.empty();
+        this.allowedOperations = Output.empty();
+        this.grantName = Output.empty();
+        this.homeRegion = Output.empty();
+        this.licenseArn = Output.empty();
+        this.principals = Output.empty();
+        this.status = Output.empty();
     }
 
     public static Builder builder() {
@@ -102,12 +102,12 @@ public final class GrantArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> allowedOperations;
-        private @Nullable Input<String> grantName;
-        private @Nullable Input<String> homeRegion;
-        private @Nullable Input<String> licenseArn;
-        private @Nullable Input<List<String>> principals;
-        private @Nullable Input<String> status;
+        private @Nullable Output<List<String>> allowedOperations;
+        private @Nullable Output<String> grantName;
+        private @Nullable Output<String> homeRegion;
+        private @Nullable Output<String> licenseArn;
+        private @Nullable Output<List<String>> principals;
+        private @Nullable Output<String> status;
 
         public Builder() {
     	      // Empty
@@ -123,63 +123,63 @@ public final class GrantArgs extends io.pulumi.resources.ResourceArgs {
     	      this.status = defaults.status;
         }
 
-        public Builder allowedOperations(@Nullable Input<List<String>> allowedOperations) {
+        public Builder allowedOperations(@Nullable Output<List<String>> allowedOperations) {
             this.allowedOperations = allowedOperations;
             return this;
         }
 
         public Builder allowedOperations(@Nullable List<String> allowedOperations) {
-            this.allowedOperations = Input.ofNullable(allowedOperations);
+            this.allowedOperations = Output.ofNullable(allowedOperations);
             return this;
         }
 
-        public Builder grantName(@Nullable Input<String> grantName) {
+        public Builder grantName(@Nullable Output<String> grantName) {
             this.grantName = grantName;
             return this;
         }
 
         public Builder grantName(@Nullable String grantName) {
-            this.grantName = Input.ofNullable(grantName);
+            this.grantName = Output.ofNullable(grantName);
             return this;
         }
 
-        public Builder homeRegion(@Nullable Input<String> homeRegion) {
+        public Builder homeRegion(@Nullable Output<String> homeRegion) {
             this.homeRegion = homeRegion;
             return this;
         }
 
         public Builder homeRegion(@Nullable String homeRegion) {
-            this.homeRegion = Input.ofNullable(homeRegion);
+            this.homeRegion = Output.ofNullable(homeRegion);
             return this;
         }
 
-        public Builder licenseArn(@Nullable Input<String> licenseArn) {
+        public Builder licenseArn(@Nullable Output<String> licenseArn) {
             this.licenseArn = licenseArn;
             return this;
         }
 
         public Builder licenseArn(@Nullable String licenseArn) {
-            this.licenseArn = Input.ofNullable(licenseArn);
+            this.licenseArn = Output.ofNullable(licenseArn);
             return this;
         }
 
-        public Builder principals(@Nullable Input<List<String>> principals) {
+        public Builder principals(@Nullable Output<List<String>> principals) {
             this.principals = principals;
             return this;
         }
 
         public Builder principals(@Nullable List<String> principals) {
-            this.principals = Input.ofNullable(principals);
+            this.principals = Output.ofNullable(principals);
             return this;
         }
 
-        public Builder status(@Nullable Input<String> status) {
+        public Builder status(@Nullable Output<String> status) {
             this.status = status;
             return this;
         }
 
         public Builder status(@Nullable String status) {
-            this.status = Input.ofNullable(status);
+            this.status = Output.ofNullable(status);
             return this;
         }
         public GrantArgs build() {

@@ -5,7 +5,7 @@ package io.pulumi.azurenative.databoxedge;
 
 import io.pulumi.azurenative.databoxedge.enums.AddonType;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -21,10 +21,10 @@ public final class AddonArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="addonName")
-      private final @Nullable Input<String> addonName;
+      private final @Nullable Output<String> addonName;
 
-    public Input<String> getAddonName() {
-        return this.addonName == null ? Input.empty() : this.addonName;
+    public Output<String> getAddonName() {
+        return this.addonName == null ? Output.empty() : this.addonName;
     }
 
     /**
@@ -32,9 +32,9 @@ public final class AddonArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="deviceName", required=true)
-      private final Input<String> deviceName;
+      private final Output<String> deviceName;
 
-    public Input<String> getDeviceName() {
+    public Output<String> getDeviceName() {
         return this.deviceName;
     }
 
@@ -43,9 +43,9 @@ public final class AddonArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kind", required=true)
-      private final Input<Either<String,AddonType>> kind;
+      private final Output<Either<String,AddonType>> kind;
 
-    public Input<Either<String,AddonType>> getKind() {
+    public Output<Either<String,AddonType>> getKind() {
         return this.kind;
     }
 
@@ -54,9 +54,9 @@ public final class AddonArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -65,18 +65,18 @@ public final class AddonArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="roleName", required=true)
-      private final Input<String> roleName;
+      private final Output<String> roleName;
 
-    public Input<String> getRoleName() {
+    public Output<String> getRoleName() {
         return this.roleName;
     }
 
     public AddonArgs(
-        @Nullable Input<String> addonName,
-        Input<String> deviceName,
-        Input<Either<String,AddonType>> kind,
-        Input<String> resourceGroupName,
-        Input<String> roleName) {
+        @Nullable Output<String> addonName,
+        Output<String> deviceName,
+        Output<Either<String,AddonType>> kind,
+        Output<String> resourceGroupName,
+        Output<String> roleName) {
         this.addonName = addonName;
         this.deviceName = Objects.requireNonNull(deviceName, "expected parameter 'deviceName' to be non-null");
         this.kind = Objects.requireNonNull(kind, "expected parameter 'kind' to be non-null");
@@ -85,11 +85,11 @@ public final class AddonArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private AddonArgs() {
-        this.addonName = Input.empty();
-        this.deviceName = Input.empty();
-        this.kind = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.roleName = Input.empty();
+        this.addonName = Output.empty();
+        this.deviceName = Output.empty();
+        this.kind = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.roleName = Output.empty();
     }
 
     public static Builder builder() {
@@ -101,11 +101,11 @@ public final class AddonArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> addonName;
-        private Input<String> deviceName;
-        private Input<Either<String,AddonType>> kind;
-        private Input<String> resourceGroupName;
-        private Input<String> roleName;
+        private @Nullable Output<String> addonName;
+        private Output<String> deviceName;
+        private Output<Either<String,AddonType>> kind;
+        private Output<String> resourceGroupName;
+        private Output<String> roleName;
 
         public Builder() {
     	      // Empty
@@ -120,53 +120,53 @@ public final class AddonArgs extends io.pulumi.resources.ResourceArgs {
     	      this.roleName = defaults.roleName;
         }
 
-        public Builder addonName(@Nullable Input<String> addonName) {
+        public Builder addonName(@Nullable Output<String> addonName) {
             this.addonName = addonName;
             return this;
         }
 
         public Builder addonName(@Nullable String addonName) {
-            this.addonName = Input.ofNullable(addonName);
+            this.addonName = Output.ofNullable(addonName);
             return this;
         }
 
-        public Builder deviceName(Input<String> deviceName) {
+        public Builder deviceName(Output<String> deviceName) {
             this.deviceName = Objects.requireNonNull(deviceName);
             return this;
         }
 
         public Builder deviceName(String deviceName) {
-            this.deviceName = Input.of(Objects.requireNonNull(deviceName));
+            this.deviceName = Output.of(Objects.requireNonNull(deviceName));
             return this;
         }
 
-        public Builder kind(Input<Either<String,AddonType>> kind) {
+        public Builder kind(Output<Either<String,AddonType>> kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
         public Builder kind(Either<String,AddonType> kind) {
-            this.kind = Input.of(Objects.requireNonNull(kind));
+            this.kind = Output.of(Objects.requireNonNull(kind));
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder roleName(Input<String> roleName) {
+        public Builder roleName(Output<String> roleName) {
             this.roleName = Objects.requireNonNull(roleName);
             return this;
         }
 
         public Builder roleName(String roleName) {
-            this.roleName = Input.of(Objects.requireNonNull(roleName));
+            this.roleName = Output.of(Objects.requireNonNull(roleName));
             return this;
         }
         public AddonArgs build() {

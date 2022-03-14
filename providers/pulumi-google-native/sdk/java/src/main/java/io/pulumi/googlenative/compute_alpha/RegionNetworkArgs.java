@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.compute_alpha.enums.RegionNetworkNetworkFirewallPolicyEnforcementOrder;
 import io.pulumi.googlenative.compute_alpha.inputs.NetworkRoutingConfigArgs;
@@ -23,10 +23,10 @@ public final class RegionNetworkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="autoCreateSubnetworks")
-      private final @Nullable Input<Boolean> autoCreateSubnetworks;
+      private final @Nullable Output<Boolean> autoCreateSubnetworks;
 
-    public Input<Boolean> getAutoCreateSubnetworks() {
-        return this.autoCreateSubnetworks == null ? Input.empty() : this.autoCreateSubnetworks;
+    public Output<Boolean> getAutoCreateSubnetworks() {
+        return this.autoCreateSubnetworks == null ? Output.empty() : this.autoCreateSubnetworks;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class RegionNetworkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -45,10 +45,10 @@ public final class RegionNetworkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enableUlaInternalIpv6")
-      private final @Nullable Input<Boolean> enableUlaInternalIpv6;
+      private final @Nullable Output<Boolean> enableUlaInternalIpv6;
 
-    public Input<Boolean> getEnableUlaInternalIpv6() {
-        return this.enableUlaInternalIpv6 == null ? Input.empty() : this.enableUlaInternalIpv6;
+    public Output<Boolean> getEnableUlaInternalIpv6() {
+        return this.enableUlaInternalIpv6 == null ? Output.empty() : this.enableUlaInternalIpv6;
     }
 
     /**
@@ -56,10 +56,10 @@ public final class RegionNetworkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="internalIpv6Range")
-      private final @Nullable Input<String> internalIpv6Range;
+      private final @Nullable Output<String> internalIpv6Range;
 
-    public Input<String> getInternalIpv6Range() {
-        return this.internalIpv6Range == null ? Input.empty() : this.internalIpv6Range;
+    public Output<String> getInternalIpv6Range() {
+        return this.internalIpv6Range == null ? Output.empty() : this.internalIpv6Range;
     }
 
     /**
@@ -67,10 +67,10 @@ public final class RegionNetworkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="mtu")
-      private final @Nullable Input<Integer> mtu;
+      private final @Nullable Output<Integer> mtu;
 
-    public Input<Integer> getMtu() {
-        return this.mtu == null ? Input.empty() : this.mtu;
+    public Output<Integer> getMtu() {
+        return this.mtu == null ? Output.empty() : this.mtu;
     }
 
     /**
@@ -78,38 +78,38 @@ public final class RegionNetworkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     @InputImport(name="networkFirewallPolicyEnforcementOrder")
-      private final @Nullable Input<RegionNetworkNetworkFirewallPolicyEnforcementOrder> networkFirewallPolicyEnforcementOrder;
+      private final @Nullable Output<RegionNetworkNetworkFirewallPolicyEnforcementOrder> networkFirewallPolicyEnforcementOrder;
 
-    public Input<RegionNetworkNetworkFirewallPolicyEnforcementOrder> getNetworkFirewallPolicyEnforcementOrder() {
-        return this.networkFirewallPolicyEnforcementOrder == null ? Input.empty() : this.networkFirewallPolicyEnforcementOrder;
+    public Output<RegionNetworkNetworkFirewallPolicyEnforcementOrder> getNetworkFirewallPolicyEnforcementOrder() {
+        return this.networkFirewallPolicyEnforcementOrder == null ? Output.empty() : this.networkFirewallPolicyEnforcementOrder;
     }
 
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     @InputImport(name="region", required=true)
-      private final Input<String> region;
+      private final Output<String> region;
 
-    public Input<String> getRegion() {
+    public Output<String> getRegion() {
         return this.region;
     }
 
     @InputImport(name="requestId")
-      private final @Nullable Input<String> requestId;
+      private final @Nullable Output<String> requestId;
 
-    public Input<String> getRequestId() {
-        return this.requestId == null ? Input.empty() : this.requestId;
+    public Output<String> getRequestId() {
+        return this.requestId == null ? Output.empty() : this.requestId;
     }
 
     /**
@@ -117,24 +117,24 @@ public final class RegionNetworkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="routingConfig")
-      private final @Nullable Input<NetworkRoutingConfigArgs> routingConfig;
+      private final @Nullable Output<NetworkRoutingConfigArgs> routingConfig;
 
-    public Input<NetworkRoutingConfigArgs> getRoutingConfig() {
-        return this.routingConfig == null ? Input.empty() : this.routingConfig;
+    public Output<NetworkRoutingConfigArgs> getRoutingConfig() {
+        return this.routingConfig == null ? Output.empty() : this.routingConfig;
     }
 
     public RegionNetworkArgs(
-        @Nullable Input<Boolean> autoCreateSubnetworks,
-        @Nullable Input<String> description,
-        @Nullable Input<Boolean> enableUlaInternalIpv6,
-        @Nullable Input<String> internalIpv6Range,
-        @Nullable Input<Integer> mtu,
-        @Nullable Input<String> name,
-        @Nullable Input<RegionNetworkNetworkFirewallPolicyEnforcementOrder> networkFirewallPolicyEnforcementOrder,
-        @Nullable Input<String> project,
-        Input<String> region,
-        @Nullable Input<String> requestId,
-        @Nullable Input<NetworkRoutingConfigArgs> routingConfig) {
+        @Nullable Output<Boolean> autoCreateSubnetworks,
+        @Nullable Output<String> description,
+        @Nullable Output<Boolean> enableUlaInternalIpv6,
+        @Nullable Output<String> internalIpv6Range,
+        @Nullable Output<Integer> mtu,
+        @Nullable Output<String> name,
+        @Nullable Output<RegionNetworkNetworkFirewallPolicyEnforcementOrder> networkFirewallPolicyEnforcementOrder,
+        @Nullable Output<String> project,
+        Output<String> region,
+        @Nullable Output<String> requestId,
+        @Nullable Output<NetworkRoutingConfigArgs> routingConfig) {
         this.autoCreateSubnetworks = autoCreateSubnetworks;
         this.description = description;
         this.enableUlaInternalIpv6 = enableUlaInternalIpv6;
@@ -149,17 +149,17 @@ public final class RegionNetworkArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private RegionNetworkArgs() {
-        this.autoCreateSubnetworks = Input.empty();
-        this.description = Input.empty();
-        this.enableUlaInternalIpv6 = Input.empty();
-        this.internalIpv6Range = Input.empty();
-        this.mtu = Input.empty();
-        this.name = Input.empty();
-        this.networkFirewallPolicyEnforcementOrder = Input.empty();
-        this.project = Input.empty();
-        this.region = Input.empty();
-        this.requestId = Input.empty();
-        this.routingConfig = Input.empty();
+        this.autoCreateSubnetworks = Output.empty();
+        this.description = Output.empty();
+        this.enableUlaInternalIpv6 = Output.empty();
+        this.internalIpv6Range = Output.empty();
+        this.mtu = Output.empty();
+        this.name = Output.empty();
+        this.networkFirewallPolicyEnforcementOrder = Output.empty();
+        this.project = Output.empty();
+        this.region = Output.empty();
+        this.requestId = Output.empty();
+        this.routingConfig = Output.empty();
     }
 
     public static Builder builder() {
@@ -171,17 +171,17 @@ public final class RegionNetworkArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> autoCreateSubnetworks;
-        private @Nullable Input<String> description;
-        private @Nullable Input<Boolean> enableUlaInternalIpv6;
-        private @Nullable Input<String> internalIpv6Range;
-        private @Nullable Input<Integer> mtu;
-        private @Nullable Input<String> name;
-        private @Nullable Input<RegionNetworkNetworkFirewallPolicyEnforcementOrder> networkFirewallPolicyEnforcementOrder;
-        private @Nullable Input<String> project;
-        private Input<String> region;
-        private @Nullable Input<String> requestId;
-        private @Nullable Input<NetworkRoutingConfigArgs> routingConfig;
+        private @Nullable Output<Boolean> autoCreateSubnetworks;
+        private @Nullable Output<String> description;
+        private @Nullable Output<Boolean> enableUlaInternalIpv6;
+        private @Nullable Output<String> internalIpv6Range;
+        private @Nullable Output<Integer> mtu;
+        private @Nullable Output<String> name;
+        private @Nullable Output<RegionNetworkNetworkFirewallPolicyEnforcementOrder> networkFirewallPolicyEnforcementOrder;
+        private @Nullable Output<String> project;
+        private Output<String> region;
+        private @Nullable Output<String> requestId;
+        private @Nullable Output<NetworkRoutingConfigArgs> routingConfig;
 
         public Builder() {
     	      // Empty
@@ -202,113 +202,113 @@ public final class RegionNetworkArgs extends io.pulumi.resources.ResourceArgs {
     	      this.routingConfig = defaults.routingConfig;
         }
 
-        public Builder autoCreateSubnetworks(@Nullable Input<Boolean> autoCreateSubnetworks) {
+        public Builder autoCreateSubnetworks(@Nullable Output<Boolean> autoCreateSubnetworks) {
             this.autoCreateSubnetworks = autoCreateSubnetworks;
             return this;
         }
 
         public Builder autoCreateSubnetworks(@Nullable Boolean autoCreateSubnetworks) {
-            this.autoCreateSubnetworks = Input.ofNullable(autoCreateSubnetworks);
+            this.autoCreateSubnetworks = Output.ofNullable(autoCreateSubnetworks);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder enableUlaInternalIpv6(@Nullable Input<Boolean> enableUlaInternalIpv6) {
+        public Builder enableUlaInternalIpv6(@Nullable Output<Boolean> enableUlaInternalIpv6) {
             this.enableUlaInternalIpv6 = enableUlaInternalIpv6;
             return this;
         }
 
         public Builder enableUlaInternalIpv6(@Nullable Boolean enableUlaInternalIpv6) {
-            this.enableUlaInternalIpv6 = Input.ofNullable(enableUlaInternalIpv6);
+            this.enableUlaInternalIpv6 = Output.ofNullable(enableUlaInternalIpv6);
             return this;
         }
 
-        public Builder internalIpv6Range(@Nullable Input<String> internalIpv6Range) {
+        public Builder internalIpv6Range(@Nullable Output<String> internalIpv6Range) {
             this.internalIpv6Range = internalIpv6Range;
             return this;
         }
 
         public Builder internalIpv6Range(@Nullable String internalIpv6Range) {
-            this.internalIpv6Range = Input.ofNullable(internalIpv6Range);
+            this.internalIpv6Range = Output.ofNullable(internalIpv6Range);
             return this;
         }
 
-        public Builder mtu(@Nullable Input<Integer> mtu) {
+        public Builder mtu(@Nullable Output<Integer> mtu) {
             this.mtu = mtu;
             return this;
         }
 
         public Builder mtu(@Nullable Integer mtu) {
-            this.mtu = Input.ofNullable(mtu);
+            this.mtu = Output.ofNullable(mtu);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder networkFirewallPolicyEnforcementOrder(@Nullable Input<RegionNetworkNetworkFirewallPolicyEnforcementOrder> networkFirewallPolicyEnforcementOrder) {
+        public Builder networkFirewallPolicyEnforcementOrder(@Nullable Output<RegionNetworkNetworkFirewallPolicyEnforcementOrder> networkFirewallPolicyEnforcementOrder) {
             this.networkFirewallPolicyEnforcementOrder = networkFirewallPolicyEnforcementOrder;
             return this;
         }
 
         public Builder networkFirewallPolicyEnforcementOrder(@Nullable RegionNetworkNetworkFirewallPolicyEnforcementOrder networkFirewallPolicyEnforcementOrder) {
-            this.networkFirewallPolicyEnforcementOrder = Input.ofNullable(networkFirewallPolicyEnforcementOrder);
+            this.networkFirewallPolicyEnforcementOrder = Output.ofNullable(networkFirewallPolicyEnforcementOrder);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder region(Input<String> region) {
+        public Builder region(Output<String> region) {
             this.region = Objects.requireNonNull(region);
             return this;
         }
 
         public Builder region(String region) {
-            this.region = Input.of(Objects.requireNonNull(region));
+            this.region = Output.of(Objects.requireNonNull(region));
             return this;
         }
 
-        public Builder requestId(@Nullable Input<String> requestId) {
+        public Builder requestId(@Nullable Output<String> requestId) {
             this.requestId = requestId;
             return this;
         }
 
         public Builder requestId(@Nullable String requestId) {
-            this.requestId = Input.ofNullable(requestId);
+            this.requestId = Output.ofNullable(requestId);
             return this;
         }
 
-        public Builder routingConfig(@Nullable Input<NetworkRoutingConfigArgs> routingConfig) {
+        public Builder routingConfig(@Nullable Output<NetworkRoutingConfigArgs> routingConfig) {
             this.routingConfig = routingConfig;
             return this;
         }
 
         public Builder routingConfig(@Nullable NetworkRoutingConfigArgs routingConfig) {
-            this.routingConfig = Input.ofNullable(routingConfig);
+            this.routingConfig = Output.ofNullable(routingConfig);
             return this;
         }
         public RegionNetworkArgs build() {

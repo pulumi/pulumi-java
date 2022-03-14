@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.elasticloadbalancingv2.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class LoadBalancerSubnetMappingGetArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="allocationId")
-      private final @Nullable Input<String> allocationId;
+      private final @Nullable Output<String> allocationId;
 
-    public Input<String> getAllocationId() {
-        return this.allocationId == null ? Input.empty() : this.allocationId;
+    public Output<String> getAllocationId() {
+        return this.allocationId == null ? Output.empty() : this.allocationId;
     }
 
     /**
@@ -30,17 +30,17 @@ public final class LoadBalancerSubnetMappingGetArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="ipv6Address")
-      private final @Nullable Input<String> ipv6Address;
+      private final @Nullable Output<String> ipv6Address;
 
-    public Input<String> getIpv6Address() {
-        return this.ipv6Address == null ? Input.empty() : this.ipv6Address;
+    public Output<String> getIpv6Address() {
+        return this.ipv6Address == null ? Output.empty() : this.ipv6Address;
     }
 
     @InputImport(name="outpostId")
-      private final @Nullable Input<String> outpostId;
+      private final @Nullable Output<String> outpostId;
 
-    public Input<String> getOutpostId() {
-        return this.outpostId == null ? Input.empty() : this.outpostId;
+    public Output<String> getOutpostId() {
+        return this.outpostId == null ? Output.empty() : this.outpostId;
     }
 
     /**
@@ -48,10 +48,10 @@ public final class LoadBalancerSubnetMappingGetArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="privateIpv4Address")
-      private final @Nullable Input<String> privateIpv4Address;
+      private final @Nullable Output<String> privateIpv4Address;
 
-    public Input<String> getPrivateIpv4Address() {
-        return this.privateIpv4Address == null ? Input.empty() : this.privateIpv4Address;
+    public Output<String> getPrivateIpv4Address() {
+        return this.privateIpv4Address == null ? Output.empty() : this.privateIpv4Address;
     }
 
     /**
@@ -59,18 +59,18 @@ public final class LoadBalancerSubnetMappingGetArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="subnetId", required=true)
-      private final Input<String> subnetId;
+      private final Output<String> subnetId;
 
-    public Input<String> getSubnetId() {
+    public Output<String> getSubnetId() {
         return this.subnetId;
     }
 
     public LoadBalancerSubnetMappingGetArgs(
-        @Nullable Input<String> allocationId,
-        @Nullable Input<String> ipv6Address,
-        @Nullable Input<String> outpostId,
-        @Nullable Input<String> privateIpv4Address,
-        Input<String> subnetId) {
+        @Nullable Output<String> allocationId,
+        @Nullable Output<String> ipv6Address,
+        @Nullable Output<String> outpostId,
+        @Nullable Output<String> privateIpv4Address,
+        Output<String> subnetId) {
         this.allocationId = allocationId;
         this.ipv6Address = ipv6Address;
         this.outpostId = outpostId;
@@ -79,11 +79,11 @@ public final class LoadBalancerSubnetMappingGetArgs extends io.pulumi.resources.
     }
 
     private LoadBalancerSubnetMappingGetArgs() {
-        this.allocationId = Input.empty();
-        this.ipv6Address = Input.empty();
-        this.outpostId = Input.empty();
-        this.privateIpv4Address = Input.empty();
-        this.subnetId = Input.empty();
+        this.allocationId = Output.empty();
+        this.ipv6Address = Output.empty();
+        this.outpostId = Output.empty();
+        this.privateIpv4Address = Output.empty();
+        this.subnetId = Output.empty();
     }
 
     public static Builder builder() {
@@ -95,11 +95,11 @@ public final class LoadBalancerSubnetMappingGetArgs extends io.pulumi.resources.
     }
 
     public static final class Builder {
-        private @Nullable Input<String> allocationId;
-        private @Nullable Input<String> ipv6Address;
-        private @Nullable Input<String> outpostId;
-        private @Nullable Input<String> privateIpv4Address;
-        private Input<String> subnetId;
+        private @Nullable Output<String> allocationId;
+        private @Nullable Output<String> ipv6Address;
+        private @Nullable Output<String> outpostId;
+        private @Nullable Output<String> privateIpv4Address;
+        private Output<String> subnetId;
 
         public Builder() {
     	      // Empty
@@ -114,53 +114,53 @@ public final class LoadBalancerSubnetMappingGetArgs extends io.pulumi.resources.
     	      this.subnetId = defaults.subnetId;
         }
 
-        public Builder allocationId(@Nullable Input<String> allocationId) {
+        public Builder allocationId(@Nullable Output<String> allocationId) {
             this.allocationId = allocationId;
             return this;
         }
 
         public Builder allocationId(@Nullable String allocationId) {
-            this.allocationId = Input.ofNullable(allocationId);
+            this.allocationId = Output.ofNullable(allocationId);
             return this;
         }
 
-        public Builder ipv6Address(@Nullable Input<String> ipv6Address) {
+        public Builder ipv6Address(@Nullable Output<String> ipv6Address) {
             this.ipv6Address = ipv6Address;
             return this;
         }
 
         public Builder ipv6Address(@Nullable String ipv6Address) {
-            this.ipv6Address = Input.ofNullable(ipv6Address);
+            this.ipv6Address = Output.ofNullable(ipv6Address);
             return this;
         }
 
-        public Builder outpostId(@Nullable Input<String> outpostId) {
+        public Builder outpostId(@Nullable Output<String> outpostId) {
             this.outpostId = outpostId;
             return this;
         }
 
         public Builder outpostId(@Nullable String outpostId) {
-            this.outpostId = Input.ofNullable(outpostId);
+            this.outpostId = Output.ofNullable(outpostId);
             return this;
         }
 
-        public Builder privateIpv4Address(@Nullable Input<String> privateIpv4Address) {
+        public Builder privateIpv4Address(@Nullable Output<String> privateIpv4Address) {
             this.privateIpv4Address = privateIpv4Address;
             return this;
         }
 
         public Builder privateIpv4Address(@Nullable String privateIpv4Address) {
-            this.privateIpv4Address = Input.ofNullable(privateIpv4Address);
+            this.privateIpv4Address = Output.ofNullable(privateIpv4Address);
             return this;
         }
 
-        public Builder subnetId(Input<String> subnetId) {
+        public Builder subnetId(Output<String> subnetId) {
             this.subnetId = Objects.requireNonNull(subnetId);
             return this;
         }
 
         public Builder subnetId(String subnetId) {
-            this.subnetId = Input.of(Objects.requireNonNull(subnetId));
+            this.subnetId = Output.of(Objects.requireNonNull(subnetId));
             return this;
         }
         public LoadBalancerSubnetMappingGetArgs build() {

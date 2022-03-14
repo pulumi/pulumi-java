@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.cloudrun.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.cloudrun.inputs.ServiceStatusConditionGetArgs;
 import java.lang.Integer;
@@ -18,46 +18,46 @@ public final class ServiceStatusGetArgs extends io.pulumi.resources.ResourceArgs
     public static final ServiceStatusGetArgs Empty = new ServiceStatusGetArgs();
 
     @InputImport(name="conditions")
-      private final @Nullable Input<List<ServiceStatusConditionGetArgs>> conditions;
+      private final @Nullable Output<List<ServiceStatusConditionGetArgs>> conditions;
 
-    public Input<List<ServiceStatusConditionGetArgs>> getConditions() {
-        return this.conditions == null ? Input.empty() : this.conditions;
+    public Output<List<ServiceStatusConditionGetArgs>> getConditions() {
+        return this.conditions == null ? Output.empty() : this.conditions;
     }
 
     @InputImport(name="latestCreatedRevisionName")
-      private final @Nullable Input<String> latestCreatedRevisionName;
+      private final @Nullable Output<String> latestCreatedRevisionName;
 
-    public Input<String> getLatestCreatedRevisionName() {
-        return this.latestCreatedRevisionName == null ? Input.empty() : this.latestCreatedRevisionName;
+    public Output<String> getLatestCreatedRevisionName() {
+        return this.latestCreatedRevisionName == null ? Output.empty() : this.latestCreatedRevisionName;
     }
 
     @InputImport(name="latestReadyRevisionName")
-      private final @Nullable Input<String> latestReadyRevisionName;
+      private final @Nullable Output<String> latestReadyRevisionName;
 
-    public Input<String> getLatestReadyRevisionName() {
-        return this.latestReadyRevisionName == null ? Input.empty() : this.latestReadyRevisionName;
+    public Output<String> getLatestReadyRevisionName() {
+        return this.latestReadyRevisionName == null ? Output.empty() : this.latestReadyRevisionName;
     }
 
     @InputImport(name="observedGeneration")
-      private final @Nullable Input<Integer> observedGeneration;
+      private final @Nullable Output<Integer> observedGeneration;
 
-    public Input<Integer> getObservedGeneration() {
-        return this.observedGeneration == null ? Input.empty() : this.observedGeneration;
+    public Output<Integer> getObservedGeneration() {
+        return this.observedGeneration == null ? Output.empty() : this.observedGeneration;
     }
 
     @InputImport(name="url")
-      private final @Nullable Input<String> url;
+      private final @Nullable Output<String> url;
 
-    public Input<String> getUrl() {
-        return this.url == null ? Input.empty() : this.url;
+    public Output<String> getUrl() {
+        return this.url == null ? Output.empty() : this.url;
     }
 
     public ServiceStatusGetArgs(
-        @Nullable Input<List<ServiceStatusConditionGetArgs>> conditions,
-        @Nullable Input<String> latestCreatedRevisionName,
-        @Nullable Input<String> latestReadyRevisionName,
-        @Nullable Input<Integer> observedGeneration,
-        @Nullable Input<String> url) {
+        @Nullable Output<List<ServiceStatusConditionGetArgs>> conditions,
+        @Nullable Output<String> latestCreatedRevisionName,
+        @Nullable Output<String> latestReadyRevisionName,
+        @Nullable Output<Integer> observedGeneration,
+        @Nullable Output<String> url) {
         this.conditions = conditions;
         this.latestCreatedRevisionName = latestCreatedRevisionName;
         this.latestReadyRevisionName = latestReadyRevisionName;
@@ -66,11 +66,11 @@ public final class ServiceStatusGetArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private ServiceStatusGetArgs() {
-        this.conditions = Input.empty();
-        this.latestCreatedRevisionName = Input.empty();
-        this.latestReadyRevisionName = Input.empty();
-        this.observedGeneration = Input.empty();
-        this.url = Input.empty();
+        this.conditions = Output.empty();
+        this.latestCreatedRevisionName = Output.empty();
+        this.latestReadyRevisionName = Output.empty();
+        this.observedGeneration = Output.empty();
+        this.url = Output.empty();
     }
 
     public static Builder builder() {
@@ -82,11 +82,11 @@ public final class ServiceStatusGetArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private @Nullable Input<List<ServiceStatusConditionGetArgs>> conditions;
-        private @Nullable Input<String> latestCreatedRevisionName;
-        private @Nullable Input<String> latestReadyRevisionName;
-        private @Nullable Input<Integer> observedGeneration;
-        private @Nullable Input<String> url;
+        private @Nullable Output<List<ServiceStatusConditionGetArgs>> conditions;
+        private @Nullable Output<String> latestCreatedRevisionName;
+        private @Nullable Output<String> latestReadyRevisionName;
+        private @Nullable Output<Integer> observedGeneration;
+        private @Nullable Output<String> url;
 
         public Builder() {
     	      // Empty
@@ -101,53 +101,53 @@ public final class ServiceStatusGetArgs extends io.pulumi.resources.ResourceArgs
     	      this.url = defaults.url;
         }
 
-        public Builder conditions(@Nullable Input<List<ServiceStatusConditionGetArgs>> conditions) {
+        public Builder conditions(@Nullable Output<List<ServiceStatusConditionGetArgs>> conditions) {
             this.conditions = conditions;
             return this;
         }
 
         public Builder conditions(@Nullable List<ServiceStatusConditionGetArgs> conditions) {
-            this.conditions = Input.ofNullable(conditions);
+            this.conditions = Output.ofNullable(conditions);
             return this;
         }
 
-        public Builder latestCreatedRevisionName(@Nullable Input<String> latestCreatedRevisionName) {
+        public Builder latestCreatedRevisionName(@Nullable Output<String> latestCreatedRevisionName) {
             this.latestCreatedRevisionName = latestCreatedRevisionName;
             return this;
         }
 
         public Builder latestCreatedRevisionName(@Nullable String latestCreatedRevisionName) {
-            this.latestCreatedRevisionName = Input.ofNullable(latestCreatedRevisionName);
+            this.latestCreatedRevisionName = Output.ofNullable(latestCreatedRevisionName);
             return this;
         }
 
-        public Builder latestReadyRevisionName(@Nullable Input<String> latestReadyRevisionName) {
+        public Builder latestReadyRevisionName(@Nullable Output<String> latestReadyRevisionName) {
             this.latestReadyRevisionName = latestReadyRevisionName;
             return this;
         }
 
         public Builder latestReadyRevisionName(@Nullable String latestReadyRevisionName) {
-            this.latestReadyRevisionName = Input.ofNullable(latestReadyRevisionName);
+            this.latestReadyRevisionName = Output.ofNullable(latestReadyRevisionName);
             return this;
         }
 
-        public Builder observedGeneration(@Nullable Input<Integer> observedGeneration) {
+        public Builder observedGeneration(@Nullable Output<Integer> observedGeneration) {
             this.observedGeneration = observedGeneration;
             return this;
         }
 
         public Builder observedGeneration(@Nullable Integer observedGeneration) {
-            this.observedGeneration = Input.ofNullable(observedGeneration);
+            this.observedGeneration = Output.ofNullable(observedGeneration);
             return this;
         }
 
-        public Builder url(@Nullable Input<String> url) {
+        public Builder url(@Nullable Output<String> url) {
             this.url = url;
             return this;
         }
 
         public Builder url(@Nullable String url) {
-            this.url = Input.ofNullable(url);
+            this.url = Output.ofNullable(url);
             return this;
         }
         public ServiceStatusGetArgs build() {

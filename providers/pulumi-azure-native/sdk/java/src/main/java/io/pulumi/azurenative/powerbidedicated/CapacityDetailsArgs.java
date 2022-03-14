@@ -8,7 +8,7 @@ import io.pulumi.azurenative.powerbidedicated.inputs.CapacitySkuArgs;
 import io.pulumi.azurenative.powerbidedicated.inputs.DedicatedCapacityAdministratorsArgs;
 import io.pulumi.azurenative.powerbidedicated.inputs.SystemDataArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -25,10 +25,10 @@ public final class CapacityDetailsArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="administration")
-      private final @Nullable Input<DedicatedCapacityAdministratorsArgs> administration;
+      private final @Nullable Output<DedicatedCapacityAdministratorsArgs> administration;
 
-    public Input<DedicatedCapacityAdministratorsArgs> getAdministration() {
-        return this.administration == null ? Input.empty() : this.administration;
+    public Output<DedicatedCapacityAdministratorsArgs> getAdministration() {
+        return this.administration == null ? Output.empty() : this.administration;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class CapacityDetailsArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="dedicatedCapacityName")
-      private final @Nullable Input<String> dedicatedCapacityName;
+      private final @Nullable Output<String> dedicatedCapacityName;
 
-    public Input<String> getDedicatedCapacityName() {
-        return this.dedicatedCapacityName == null ? Input.empty() : this.dedicatedCapacityName;
+    public Output<String> getDedicatedCapacityName() {
+        return this.dedicatedCapacityName == null ? Output.empty() : this.dedicatedCapacityName;
     }
 
     /**
@@ -47,10 +47,10 @@ public final class CapacityDetailsArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -58,10 +58,10 @@ public final class CapacityDetailsArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="mode")
-      private final @Nullable Input<Either<String,Mode>> mode;
+      private final @Nullable Output<Either<String,Mode>> mode;
 
-    public Input<Either<String,Mode>> getMode() {
-        return this.mode == null ? Input.empty() : this.mode;
+    public Output<Either<String,Mode>> getMode() {
+        return this.mode == null ? Output.empty() : this.mode;
     }
 
     /**
@@ -69,9 +69,9 @@ public final class CapacityDetailsArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -80,9 +80,9 @@ public final class CapacityDetailsArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="sku", required=true)
-      private final Input<CapacitySkuArgs> sku;
+      private final Output<CapacitySkuArgs> sku;
 
-    public Input<CapacitySkuArgs> getSku() {
+    public Output<CapacitySkuArgs> getSku() {
         return this.sku;
     }
 
@@ -91,10 +91,10 @@ public final class CapacityDetailsArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="systemData")
-      private final @Nullable Input<SystemDataArgs> systemData;
+      private final @Nullable Output<SystemDataArgs> systemData;
 
-    public Input<SystemDataArgs> getSystemData() {
-        return this.systemData == null ? Input.empty() : this.systemData;
+    public Output<SystemDataArgs> getSystemData() {
+        return this.systemData == null ? Output.empty() : this.systemData;
     }
 
     /**
@@ -102,21 +102,21 @@ public final class CapacityDetailsArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public CapacityDetailsArgs(
-        @Nullable Input<DedicatedCapacityAdministratorsArgs> administration,
-        @Nullable Input<String> dedicatedCapacityName,
-        @Nullable Input<String> location,
-        @Nullable Input<Either<String,Mode>> mode,
-        Input<String> resourceGroupName,
-        Input<CapacitySkuArgs> sku,
-        @Nullable Input<SystemDataArgs> systemData,
-        @Nullable Input<Map<String,String>> tags) {
+        @Nullable Output<DedicatedCapacityAdministratorsArgs> administration,
+        @Nullable Output<String> dedicatedCapacityName,
+        @Nullable Output<String> location,
+        @Nullable Output<Either<String,Mode>> mode,
+        Output<String> resourceGroupName,
+        Output<CapacitySkuArgs> sku,
+        @Nullable Output<SystemDataArgs> systemData,
+        @Nullable Output<Map<String,String>> tags) {
         this.administration = administration;
         this.dedicatedCapacityName = dedicatedCapacityName;
         this.location = location;
@@ -128,14 +128,14 @@ public final class CapacityDetailsArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private CapacityDetailsArgs() {
-        this.administration = Input.empty();
-        this.dedicatedCapacityName = Input.empty();
-        this.location = Input.empty();
-        this.mode = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.sku = Input.empty();
-        this.systemData = Input.empty();
-        this.tags = Input.empty();
+        this.administration = Output.empty();
+        this.dedicatedCapacityName = Output.empty();
+        this.location = Output.empty();
+        this.mode = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.sku = Output.empty();
+        this.systemData = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -147,14 +147,14 @@ public final class CapacityDetailsArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private @Nullable Input<DedicatedCapacityAdministratorsArgs> administration;
-        private @Nullable Input<String> dedicatedCapacityName;
-        private @Nullable Input<String> location;
-        private @Nullable Input<Either<String,Mode>> mode;
-        private Input<String> resourceGroupName;
-        private Input<CapacitySkuArgs> sku;
-        private @Nullable Input<SystemDataArgs> systemData;
-        private @Nullable Input<Map<String,String>> tags;
+        private @Nullable Output<DedicatedCapacityAdministratorsArgs> administration;
+        private @Nullable Output<String> dedicatedCapacityName;
+        private @Nullable Output<String> location;
+        private @Nullable Output<Either<String,Mode>> mode;
+        private Output<String> resourceGroupName;
+        private Output<CapacitySkuArgs> sku;
+        private @Nullable Output<SystemDataArgs> systemData;
+        private @Nullable Output<Map<String,String>> tags;
 
         public Builder() {
     	      // Empty
@@ -172,83 +172,83 @@ public final class CapacityDetailsArgs extends io.pulumi.resources.ResourceArgs 
     	      this.tags = defaults.tags;
         }
 
-        public Builder administration(@Nullable Input<DedicatedCapacityAdministratorsArgs> administration) {
+        public Builder administration(@Nullable Output<DedicatedCapacityAdministratorsArgs> administration) {
             this.administration = administration;
             return this;
         }
 
         public Builder administration(@Nullable DedicatedCapacityAdministratorsArgs administration) {
-            this.administration = Input.ofNullable(administration);
+            this.administration = Output.ofNullable(administration);
             return this;
         }
 
-        public Builder dedicatedCapacityName(@Nullable Input<String> dedicatedCapacityName) {
+        public Builder dedicatedCapacityName(@Nullable Output<String> dedicatedCapacityName) {
             this.dedicatedCapacityName = dedicatedCapacityName;
             return this;
         }
 
         public Builder dedicatedCapacityName(@Nullable String dedicatedCapacityName) {
-            this.dedicatedCapacityName = Input.ofNullable(dedicatedCapacityName);
+            this.dedicatedCapacityName = Output.ofNullable(dedicatedCapacityName);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder mode(@Nullable Input<Either<String,Mode>> mode) {
+        public Builder mode(@Nullable Output<Either<String,Mode>> mode) {
             this.mode = mode;
             return this;
         }
 
         public Builder mode(@Nullable Either<String,Mode> mode) {
-            this.mode = Input.ofNullable(mode);
+            this.mode = Output.ofNullable(mode);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder sku(Input<CapacitySkuArgs> sku) {
+        public Builder sku(Output<CapacitySkuArgs> sku) {
             this.sku = Objects.requireNonNull(sku);
             return this;
         }
 
         public Builder sku(CapacitySkuArgs sku) {
-            this.sku = Input.of(Objects.requireNonNull(sku));
+            this.sku = Output.of(Objects.requireNonNull(sku));
             return this;
         }
 
-        public Builder systemData(@Nullable Input<SystemDataArgs> systemData) {
+        public Builder systemData(@Nullable Output<SystemDataArgs> systemData) {
             this.systemData = systemData;
             return this;
         }
 
         public Builder systemData(@Nullable SystemDataArgs systemData) {
-            this.systemData = Input.ofNullable(systemData);
+            this.systemData = Output.ofNullable(systemData);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public CapacityDetailsArgs build() {

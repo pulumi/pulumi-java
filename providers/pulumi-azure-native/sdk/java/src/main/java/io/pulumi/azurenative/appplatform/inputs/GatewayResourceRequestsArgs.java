@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.appplatform.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class GatewayResourceRequestsArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="cpu")
-      private final @Nullable Input<String> cpu;
+      private final @Nullable Output<String> cpu;
 
-    public Input<String> getCpu() {
-        return this.cpu == null ? Input.empty() : this.cpu;
+    public Output<String> getCpu() {
+        return this.cpu == null ? Output.empty() : this.cpu;
     }
 
     /**
@@ -34,22 +34,22 @@ public final class GatewayResourceRequestsArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="memory")
-      private final @Nullable Input<String> memory;
+      private final @Nullable Output<String> memory;
 
-    public Input<String> getMemory() {
-        return this.memory == null ? Input.empty() : this.memory;
+    public Output<String> getMemory() {
+        return this.memory == null ? Output.empty() : this.memory;
     }
 
     public GatewayResourceRequestsArgs(
-        @Nullable Input<String> cpu,
-        @Nullable Input<String> memory) {
+        @Nullable Output<String> cpu,
+        @Nullable Output<String> memory) {
         this.cpu = cpu;
         this.memory = memory;
     }
 
     private GatewayResourceRequestsArgs() {
-        this.cpu = Input.empty();
-        this.memory = Input.empty();
+        this.cpu = Output.empty();
+        this.memory = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class GatewayResourceRequestsArgs extends io.pulumi.resources.Resou
     }
 
     public static final class Builder {
-        private @Nullable Input<String> cpu;
-        private @Nullable Input<String> memory;
+        private @Nullable Output<String> cpu;
+        private @Nullable Output<String> memory;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class GatewayResourceRequestsArgs extends io.pulumi.resources.Resou
     	      this.memory = defaults.memory;
         }
 
-        public Builder cpu(@Nullable Input<String> cpu) {
+        public Builder cpu(@Nullable Output<String> cpu) {
             this.cpu = cpu;
             return this;
         }
 
         public Builder cpu(@Nullable String cpu) {
-            this.cpu = Input.ofNullable(cpu);
+            this.cpu = Output.ofNullable(cpu);
             return this;
         }
 
-        public Builder memory(@Nullable Input<String> memory) {
+        public Builder memory(@Nullable Output<String> memory) {
             this.memory = memory;
             return this;
         }
 
         public Builder memory(@Nullable String memory) {
-            this.memory = Input.ofNullable(memory);
+            this.memory = Output.ofNullable(memory);
             return this;
         }
         public GatewayResourceRequestsArgs build() {

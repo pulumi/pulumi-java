@@ -4,7 +4,7 @@
 package io.pulumi.aws.fsx;
 
 import io.pulumi.aws.fsx.inputs.DataRepositoryAssociationS3Args;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -23,10 +23,10 @@ public final class DataRepositoryAssociationArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="batchImportMetaDataOnCreate")
-      private final @Nullable Input<Boolean> batchImportMetaDataOnCreate;
+      private final @Nullable Output<Boolean> batchImportMetaDataOnCreate;
 
-    public Input<Boolean> getBatchImportMetaDataOnCreate() {
-        return this.batchImportMetaDataOnCreate == null ? Input.empty() : this.batchImportMetaDataOnCreate;
+    public Output<Boolean> getBatchImportMetaDataOnCreate() {
+        return this.batchImportMetaDataOnCreate == null ? Output.empty() : this.batchImportMetaDataOnCreate;
     }
 
     /**
@@ -34,9 +34,9 @@ public final class DataRepositoryAssociationArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="dataRepositoryPath", required=true)
-      private final Input<String> dataRepositoryPath;
+      private final Output<String> dataRepositoryPath;
 
-    public Input<String> getDataRepositoryPath() {
+    public Output<String> getDataRepositoryPath() {
         return this.dataRepositoryPath;
     }
 
@@ -45,10 +45,10 @@ public final class DataRepositoryAssociationArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="deleteDataInFilesystem")
-      private final @Nullable Input<Boolean> deleteDataInFilesystem;
+      private final @Nullable Output<Boolean> deleteDataInFilesystem;
 
-    public Input<Boolean> getDeleteDataInFilesystem() {
-        return this.deleteDataInFilesystem == null ? Input.empty() : this.deleteDataInFilesystem;
+    public Output<Boolean> getDeleteDataInFilesystem() {
+        return this.deleteDataInFilesystem == null ? Output.empty() : this.deleteDataInFilesystem;
     }
 
     /**
@@ -56,9 +56,9 @@ public final class DataRepositoryAssociationArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="fileSystemId", required=true)
-      private final Input<String> fileSystemId;
+      private final Output<String> fileSystemId;
 
-    public Input<String> getFileSystemId() {
+    public Output<String> getFileSystemId() {
         return this.fileSystemId;
     }
 
@@ -67,9 +67,9 @@ public final class DataRepositoryAssociationArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="fileSystemPath", required=true)
-      private final Input<String> fileSystemPath;
+      private final Output<String> fileSystemPath;
 
-    public Input<String> getFileSystemPath() {
+    public Output<String> getFileSystemPath() {
         return this.fileSystemPath;
     }
 
@@ -78,10 +78,10 @@ public final class DataRepositoryAssociationArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="importedFileChunkSize")
-      private final @Nullable Input<Integer> importedFileChunkSize;
+      private final @Nullable Output<Integer> importedFileChunkSize;
 
-    public Input<Integer> getImportedFileChunkSize() {
-        return this.importedFileChunkSize == null ? Input.empty() : this.importedFileChunkSize;
+    public Output<Integer> getImportedFileChunkSize() {
+        return this.importedFileChunkSize == null ? Output.empty() : this.importedFileChunkSize;
     }
 
     /**
@@ -90,10 +90,10 @@ public final class DataRepositoryAssociationArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="s3")
-      private final @Nullable Input<DataRepositoryAssociationS3Args> s3;
+      private final @Nullable Output<DataRepositoryAssociationS3Args> s3;
 
-    public Input<DataRepositoryAssociationS3Args> getS3() {
-        return this.s3 == null ? Input.empty() : this.s3;
+    public Output<DataRepositoryAssociationS3Args> getS3() {
+        return this.s3 == null ? Output.empty() : this.s3;
     }
 
     /**
@@ -101,10 +101,10 @@ public final class DataRepositoryAssociationArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -112,22 +112,22 @@ public final class DataRepositoryAssociationArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="tagsAll")
-      private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Input<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Input.empty() : this.tagsAll;
+    public Output<Map<String,String>> getTagsAll() {
+        return this.tagsAll == null ? Output.empty() : this.tagsAll;
     }
 
     public DataRepositoryAssociationArgs(
-        @Nullable Input<Boolean> batchImportMetaDataOnCreate,
-        Input<String> dataRepositoryPath,
-        @Nullable Input<Boolean> deleteDataInFilesystem,
-        Input<String> fileSystemId,
-        Input<String> fileSystemPath,
-        @Nullable Input<Integer> importedFileChunkSize,
-        @Nullable Input<DataRepositoryAssociationS3Args> s3,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<Map<String,String>> tagsAll) {
+        @Nullable Output<Boolean> batchImportMetaDataOnCreate,
+        Output<String> dataRepositoryPath,
+        @Nullable Output<Boolean> deleteDataInFilesystem,
+        Output<String> fileSystemId,
+        Output<String> fileSystemPath,
+        @Nullable Output<Integer> importedFileChunkSize,
+        @Nullable Output<DataRepositoryAssociationS3Args> s3,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<Map<String,String>> tagsAll) {
         this.batchImportMetaDataOnCreate = batchImportMetaDataOnCreate;
         this.dataRepositoryPath = Objects.requireNonNull(dataRepositoryPath, "expected parameter 'dataRepositoryPath' to be non-null");
         this.deleteDataInFilesystem = deleteDataInFilesystem;
@@ -140,15 +140,15 @@ public final class DataRepositoryAssociationArgs extends io.pulumi.resources.Res
     }
 
     private DataRepositoryAssociationArgs() {
-        this.batchImportMetaDataOnCreate = Input.empty();
-        this.dataRepositoryPath = Input.empty();
-        this.deleteDataInFilesystem = Input.empty();
-        this.fileSystemId = Input.empty();
-        this.fileSystemPath = Input.empty();
-        this.importedFileChunkSize = Input.empty();
-        this.s3 = Input.empty();
-        this.tags = Input.empty();
-        this.tagsAll = Input.empty();
+        this.batchImportMetaDataOnCreate = Output.empty();
+        this.dataRepositoryPath = Output.empty();
+        this.deleteDataInFilesystem = Output.empty();
+        this.fileSystemId = Output.empty();
+        this.fileSystemPath = Output.empty();
+        this.importedFileChunkSize = Output.empty();
+        this.s3 = Output.empty();
+        this.tags = Output.empty();
+        this.tagsAll = Output.empty();
     }
 
     public static Builder builder() {
@@ -160,15 +160,15 @@ public final class DataRepositoryAssociationArgs extends io.pulumi.resources.Res
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> batchImportMetaDataOnCreate;
-        private Input<String> dataRepositoryPath;
-        private @Nullable Input<Boolean> deleteDataInFilesystem;
-        private Input<String> fileSystemId;
-        private Input<String> fileSystemPath;
-        private @Nullable Input<Integer> importedFileChunkSize;
-        private @Nullable Input<DataRepositoryAssociationS3Args> s3;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<Map<String,String>> tagsAll;
+        private @Nullable Output<Boolean> batchImportMetaDataOnCreate;
+        private Output<String> dataRepositoryPath;
+        private @Nullable Output<Boolean> deleteDataInFilesystem;
+        private Output<String> fileSystemId;
+        private Output<String> fileSystemPath;
+        private @Nullable Output<Integer> importedFileChunkSize;
+        private @Nullable Output<DataRepositoryAssociationS3Args> s3;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<Map<String,String>> tagsAll;
 
         public Builder() {
     	      // Empty
@@ -187,93 +187,93 @@ public final class DataRepositoryAssociationArgs extends io.pulumi.resources.Res
     	      this.tagsAll = defaults.tagsAll;
         }
 
-        public Builder batchImportMetaDataOnCreate(@Nullable Input<Boolean> batchImportMetaDataOnCreate) {
+        public Builder batchImportMetaDataOnCreate(@Nullable Output<Boolean> batchImportMetaDataOnCreate) {
             this.batchImportMetaDataOnCreate = batchImportMetaDataOnCreate;
             return this;
         }
 
         public Builder batchImportMetaDataOnCreate(@Nullable Boolean batchImportMetaDataOnCreate) {
-            this.batchImportMetaDataOnCreate = Input.ofNullable(batchImportMetaDataOnCreate);
+            this.batchImportMetaDataOnCreate = Output.ofNullable(batchImportMetaDataOnCreate);
             return this;
         }
 
-        public Builder dataRepositoryPath(Input<String> dataRepositoryPath) {
+        public Builder dataRepositoryPath(Output<String> dataRepositoryPath) {
             this.dataRepositoryPath = Objects.requireNonNull(dataRepositoryPath);
             return this;
         }
 
         public Builder dataRepositoryPath(String dataRepositoryPath) {
-            this.dataRepositoryPath = Input.of(Objects.requireNonNull(dataRepositoryPath));
+            this.dataRepositoryPath = Output.of(Objects.requireNonNull(dataRepositoryPath));
             return this;
         }
 
-        public Builder deleteDataInFilesystem(@Nullable Input<Boolean> deleteDataInFilesystem) {
+        public Builder deleteDataInFilesystem(@Nullable Output<Boolean> deleteDataInFilesystem) {
             this.deleteDataInFilesystem = deleteDataInFilesystem;
             return this;
         }
 
         public Builder deleteDataInFilesystem(@Nullable Boolean deleteDataInFilesystem) {
-            this.deleteDataInFilesystem = Input.ofNullable(deleteDataInFilesystem);
+            this.deleteDataInFilesystem = Output.ofNullable(deleteDataInFilesystem);
             return this;
         }
 
-        public Builder fileSystemId(Input<String> fileSystemId) {
+        public Builder fileSystemId(Output<String> fileSystemId) {
             this.fileSystemId = Objects.requireNonNull(fileSystemId);
             return this;
         }
 
         public Builder fileSystemId(String fileSystemId) {
-            this.fileSystemId = Input.of(Objects.requireNonNull(fileSystemId));
+            this.fileSystemId = Output.of(Objects.requireNonNull(fileSystemId));
             return this;
         }
 
-        public Builder fileSystemPath(Input<String> fileSystemPath) {
+        public Builder fileSystemPath(Output<String> fileSystemPath) {
             this.fileSystemPath = Objects.requireNonNull(fileSystemPath);
             return this;
         }
 
         public Builder fileSystemPath(String fileSystemPath) {
-            this.fileSystemPath = Input.of(Objects.requireNonNull(fileSystemPath));
+            this.fileSystemPath = Output.of(Objects.requireNonNull(fileSystemPath));
             return this;
         }
 
-        public Builder importedFileChunkSize(@Nullable Input<Integer> importedFileChunkSize) {
+        public Builder importedFileChunkSize(@Nullable Output<Integer> importedFileChunkSize) {
             this.importedFileChunkSize = importedFileChunkSize;
             return this;
         }
 
         public Builder importedFileChunkSize(@Nullable Integer importedFileChunkSize) {
-            this.importedFileChunkSize = Input.ofNullable(importedFileChunkSize);
+            this.importedFileChunkSize = Output.ofNullable(importedFileChunkSize);
             return this;
         }
 
-        public Builder s3(@Nullable Input<DataRepositoryAssociationS3Args> s3) {
+        public Builder s3(@Nullable Output<DataRepositoryAssociationS3Args> s3) {
             this.s3 = s3;
             return this;
         }
 
         public Builder s3(@Nullable DataRepositoryAssociationS3Args s3) {
-            this.s3 = Input.ofNullable(s3);
+            this.s3 = Output.ofNullable(s3);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Input.ofNullable(tagsAll);
+            this.tagsAll = Output.ofNullable(tagsAll);
             return this;
         }
         public DataRepositoryAssociationArgs build() {

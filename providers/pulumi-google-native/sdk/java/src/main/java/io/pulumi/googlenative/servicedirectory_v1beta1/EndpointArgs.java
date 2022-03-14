@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.servicedirectory_v1beta1;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -21,24 +21,24 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="address")
-      private final @Nullable Input<String> address;
+      private final @Nullable Output<String> address;
 
-    public Input<String> getAddress() {
-        return this.address == null ? Input.empty() : this.address;
+    public Output<String> getAddress() {
+        return this.address == null ? Output.empty() : this.address;
     }
 
     @InputImport(name="endpointId", required=true)
-      private final Input<String> endpointId;
+      private final Output<String> endpointId;
 
-    public Input<String> getEndpointId() {
+    public Output<String> getEndpointId() {
         return this.endpointId;
     }
 
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -46,10 +46,10 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="metadata")
-      private final @Nullable Input<Map<String,String>> metadata;
+      private final @Nullable Output<Map<String,String>> metadata;
 
-    public Input<Map<String,String>> getMetadata() {
-        return this.metadata == null ? Input.empty() : this.metadata;
+    public Output<Map<String,String>> getMetadata() {
+        return this.metadata == null ? Output.empty() : this.metadata;
     }
 
     /**
@@ -57,16 +57,16 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     @InputImport(name="namespaceId", required=true)
-      private final Input<String> namespaceId;
+      private final Output<String> namespaceId;
 
-    public Input<String> getNamespaceId() {
+    public Output<String> getNamespaceId() {
         return this.namespaceId;
     }
 
@@ -75,10 +75,10 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="network")
-      private final @Nullable Input<String> network;
+      private final @Nullable Output<String> network;
 
-    public Input<String> getNetwork() {
-        return this.network == null ? Input.empty() : this.network;
+    public Output<String> getNetwork() {
+        return this.network == null ? Output.empty() : this.network;
     }
 
     /**
@@ -86,37 +86,37 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="port")
-      private final @Nullable Input<Integer> port;
+      private final @Nullable Output<Integer> port;
 
-    public Input<Integer> getPort() {
-        return this.port == null ? Input.empty() : this.port;
+    public Output<Integer> getPort() {
+        return this.port == null ? Output.empty() : this.port;
     }
 
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     @InputImport(name="serviceId", required=true)
-      private final Input<String> serviceId;
+      private final Output<String> serviceId;
 
-    public Input<String> getServiceId() {
+    public Output<String> getServiceId() {
         return this.serviceId;
     }
 
     public EndpointArgs(
-        @Nullable Input<String> address,
-        Input<String> endpointId,
-        @Nullable Input<String> location,
-        @Nullable Input<Map<String,String>> metadata,
-        @Nullable Input<String> name,
-        Input<String> namespaceId,
-        @Nullable Input<String> network,
-        @Nullable Input<Integer> port,
-        @Nullable Input<String> project,
-        Input<String> serviceId) {
+        @Nullable Output<String> address,
+        Output<String> endpointId,
+        @Nullable Output<String> location,
+        @Nullable Output<Map<String,String>> metadata,
+        @Nullable Output<String> name,
+        Output<String> namespaceId,
+        @Nullable Output<String> network,
+        @Nullable Output<Integer> port,
+        @Nullable Output<String> project,
+        Output<String> serviceId) {
         this.address = address;
         this.endpointId = Objects.requireNonNull(endpointId, "expected parameter 'endpointId' to be non-null");
         this.location = location;
@@ -130,16 +130,16 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private EndpointArgs() {
-        this.address = Input.empty();
-        this.endpointId = Input.empty();
-        this.location = Input.empty();
-        this.metadata = Input.empty();
-        this.name = Input.empty();
-        this.namespaceId = Input.empty();
-        this.network = Input.empty();
-        this.port = Input.empty();
-        this.project = Input.empty();
-        this.serviceId = Input.empty();
+        this.address = Output.empty();
+        this.endpointId = Output.empty();
+        this.location = Output.empty();
+        this.metadata = Output.empty();
+        this.name = Output.empty();
+        this.namespaceId = Output.empty();
+        this.network = Output.empty();
+        this.port = Output.empty();
+        this.project = Output.empty();
+        this.serviceId = Output.empty();
     }
 
     public static Builder builder() {
@@ -151,16 +151,16 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> address;
-        private Input<String> endpointId;
-        private @Nullable Input<String> location;
-        private @Nullable Input<Map<String,String>> metadata;
-        private @Nullable Input<String> name;
-        private Input<String> namespaceId;
-        private @Nullable Input<String> network;
-        private @Nullable Input<Integer> port;
-        private @Nullable Input<String> project;
-        private Input<String> serviceId;
+        private @Nullable Output<String> address;
+        private Output<String> endpointId;
+        private @Nullable Output<String> location;
+        private @Nullable Output<Map<String,String>> metadata;
+        private @Nullable Output<String> name;
+        private Output<String> namespaceId;
+        private @Nullable Output<String> network;
+        private @Nullable Output<Integer> port;
+        private @Nullable Output<String> project;
+        private Output<String> serviceId;
 
         public Builder() {
     	      // Empty
@@ -180,103 +180,103 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
     	      this.serviceId = defaults.serviceId;
         }
 
-        public Builder address(@Nullable Input<String> address) {
+        public Builder address(@Nullable Output<String> address) {
             this.address = address;
             return this;
         }
 
         public Builder address(@Nullable String address) {
-            this.address = Input.ofNullable(address);
+            this.address = Output.ofNullable(address);
             return this;
         }
 
-        public Builder endpointId(Input<String> endpointId) {
+        public Builder endpointId(Output<String> endpointId) {
             this.endpointId = Objects.requireNonNull(endpointId);
             return this;
         }
 
         public Builder endpointId(String endpointId) {
-            this.endpointId = Input.of(Objects.requireNonNull(endpointId));
+            this.endpointId = Output.of(Objects.requireNonNull(endpointId));
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder metadata(@Nullable Input<Map<String,String>> metadata) {
+        public Builder metadata(@Nullable Output<Map<String,String>> metadata) {
             this.metadata = metadata;
             return this;
         }
 
         public Builder metadata(@Nullable Map<String,String> metadata) {
-            this.metadata = Input.ofNullable(metadata);
+            this.metadata = Output.ofNullable(metadata);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder namespaceId(Input<String> namespaceId) {
+        public Builder namespaceId(Output<String> namespaceId) {
             this.namespaceId = Objects.requireNonNull(namespaceId);
             return this;
         }
 
         public Builder namespaceId(String namespaceId) {
-            this.namespaceId = Input.of(Objects.requireNonNull(namespaceId));
+            this.namespaceId = Output.of(Objects.requireNonNull(namespaceId));
             return this;
         }
 
-        public Builder network(@Nullable Input<String> network) {
+        public Builder network(@Nullable Output<String> network) {
             this.network = network;
             return this;
         }
 
         public Builder network(@Nullable String network) {
-            this.network = Input.ofNullable(network);
+            this.network = Output.ofNullable(network);
             return this;
         }
 
-        public Builder port(@Nullable Input<Integer> port) {
+        public Builder port(@Nullable Output<Integer> port) {
             this.port = port;
             return this;
         }
 
         public Builder port(@Nullable Integer port) {
-            this.port = Input.ofNullable(port);
+            this.port = Output.ofNullable(port);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder serviceId(Input<String> serviceId) {
+        public Builder serviceId(Output<String> serviceId) {
             this.serviceId = Objects.requireNonNull(serviceId);
             return this;
         }
 
         public Builder serviceId(String serviceId) {
-            this.serviceId = Input.of(Objects.requireNonNull(serviceId));
+            this.serviceId = Output.of(Objects.requireNonNull(serviceId));
             return this;
         }
         public EndpointArgs build() {

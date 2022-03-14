@@ -4,7 +4,7 @@
 package io.pulumi.aws.networkfirewall.inputs;
 
 import io.pulumi.aws.networkfirewall.inputs.FirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionPublishMetricActionDimensionArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
@@ -19,18 +19,18 @@ public final class FirewallPolicyFirewallPolicyStatelessCustomActionActionDefini
      * 
      */
     @InputImport(name="dimensions", required=true)
-      private final Input<List<FirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionPublishMetricActionDimensionArgs>> dimensions;
+      private final Output<List<FirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionPublishMetricActionDimensionArgs>> dimensions;
 
-    public Input<List<FirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionPublishMetricActionDimensionArgs>> getDimensions() {
+    public Output<List<FirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionPublishMetricActionDimensionArgs>> getDimensions() {
         return this.dimensions;
     }
 
-    public FirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionPublishMetricActionArgs(Input<List<FirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionPublishMetricActionDimensionArgs>> dimensions) {
+    public FirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionPublishMetricActionArgs(Output<List<FirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionPublishMetricActionDimensionArgs>> dimensions) {
         this.dimensions = Objects.requireNonNull(dimensions, "expected parameter 'dimensions' to be non-null");
     }
 
     private FirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionPublishMetricActionArgs() {
-        this.dimensions = Input.empty();
+        this.dimensions = Output.empty();
     }
 
     public static Builder builder() {
@@ -42,7 +42,7 @@ public final class FirewallPolicyFirewallPolicyStatelessCustomActionActionDefini
     }
 
     public static final class Builder {
-        private Input<List<FirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionPublishMetricActionDimensionArgs>> dimensions;
+        private Output<List<FirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionPublishMetricActionDimensionArgs>> dimensions;
 
         public Builder() {
     	      // Empty
@@ -53,13 +53,13 @@ public final class FirewallPolicyFirewallPolicyStatelessCustomActionActionDefini
     	      this.dimensions = defaults.dimensions;
         }
 
-        public Builder dimensions(Input<List<FirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionPublishMetricActionDimensionArgs>> dimensions) {
+        public Builder dimensions(Output<List<FirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionPublishMetricActionDimensionArgs>> dimensions) {
             this.dimensions = Objects.requireNonNull(dimensions);
             return this;
         }
 
         public Builder dimensions(List<FirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionPublishMetricActionDimensionArgs> dimensions) {
-            this.dimensions = Input.of(Objects.requireNonNull(dimensions));
+            this.dimensions = Output.of(Objects.requireNonNull(dimensions));
             return this;
         }
         public FirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionPublishMetricActionArgs build() {

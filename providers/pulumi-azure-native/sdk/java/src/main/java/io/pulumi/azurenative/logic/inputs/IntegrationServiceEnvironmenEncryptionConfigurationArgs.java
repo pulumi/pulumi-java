@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.logic.inputs;
 
 import io.pulumi.azurenative.logic.inputs.IntegrationServiceEnvironmenEncryptionKeyReferenceArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,18 +23,18 @@ public final class IntegrationServiceEnvironmenEncryptionConfigurationArgs exten
      * 
      */
     @InputImport(name="encryptionKeyReference")
-      private final @Nullable Input<IntegrationServiceEnvironmenEncryptionKeyReferenceArgs> encryptionKeyReference;
+      private final @Nullable Output<IntegrationServiceEnvironmenEncryptionKeyReferenceArgs> encryptionKeyReference;
 
-    public Input<IntegrationServiceEnvironmenEncryptionKeyReferenceArgs> getEncryptionKeyReference() {
-        return this.encryptionKeyReference == null ? Input.empty() : this.encryptionKeyReference;
+    public Output<IntegrationServiceEnvironmenEncryptionKeyReferenceArgs> getEncryptionKeyReference() {
+        return this.encryptionKeyReference == null ? Output.empty() : this.encryptionKeyReference;
     }
 
-    public IntegrationServiceEnvironmenEncryptionConfigurationArgs(@Nullable Input<IntegrationServiceEnvironmenEncryptionKeyReferenceArgs> encryptionKeyReference) {
+    public IntegrationServiceEnvironmenEncryptionConfigurationArgs(@Nullable Output<IntegrationServiceEnvironmenEncryptionKeyReferenceArgs> encryptionKeyReference) {
         this.encryptionKeyReference = encryptionKeyReference;
     }
 
     private IntegrationServiceEnvironmenEncryptionConfigurationArgs() {
-        this.encryptionKeyReference = Input.empty();
+        this.encryptionKeyReference = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class IntegrationServiceEnvironmenEncryptionConfigurationArgs exten
     }
 
     public static final class Builder {
-        private @Nullable Input<IntegrationServiceEnvironmenEncryptionKeyReferenceArgs> encryptionKeyReference;
+        private @Nullable Output<IntegrationServiceEnvironmenEncryptionKeyReferenceArgs> encryptionKeyReference;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class IntegrationServiceEnvironmenEncryptionConfigurationArgs exten
     	      this.encryptionKeyReference = defaults.encryptionKeyReference;
         }
 
-        public Builder encryptionKeyReference(@Nullable Input<IntegrationServiceEnvironmenEncryptionKeyReferenceArgs> encryptionKeyReference) {
+        public Builder encryptionKeyReference(@Nullable Output<IntegrationServiceEnvironmenEncryptionKeyReferenceArgs> encryptionKeyReference) {
             this.encryptionKeyReference = encryptionKeyReference;
             return this;
         }
 
         public Builder encryptionKeyReference(@Nullable IntegrationServiceEnvironmenEncryptionKeyReferenceArgs encryptionKeyReference) {
-            this.encryptionKeyReference = Input.ofNullable(encryptionKeyReference);
+            this.encryptionKeyReference = Output.ofNullable(encryptionKeyReference);
             return this;
         }
         public IntegrationServiceEnvironmenEncryptionConfigurationArgs build() {

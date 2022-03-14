@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.streamanalytics.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class TransformationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class TransformationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="query")
-      private final @Nullable Input<String> query;
+      private final @Nullable Output<String> query;
 
-    public Input<String> getQuery() {
-        return this.query == null ? Input.empty() : this.query;
+    public Output<String> getQuery() {
+        return this.query == null ? Output.empty() : this.query;
     }
 
     /**
@@ -46,25 +46,25 @@ public final class TransformationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="streamingUnits")
-      private final @Nullable Input<Integer> streamingUnits;
+      private final @Nullable Output<Integer> streamingUnits;
 
-    public Input<Integer> getStreamingUnits() {
-        return this.streamingUnits == null ? Input.empty() : this.streamingUnits;
+    public Output<Integer> getStreamingUnits() {
+        return this.streamingUnits == null ? Output.empty() : this.streamingUnits;
     }
 
     public TransformationArgs(
-        @Nullable Input<String> name,
-        @Nullable Input<String> query,
-        @Nullable Input<Integer> streamingUnits) {
+        @Nullable Output<String> name,
+        @Nullable Output<String> query,
+        @Nullable Output<Integer> streamingUnits) {
         this.name = name;
         this.query = query;
         this.streamingUnits = streamingUnits;
     }
 
     private TransformationArgs() {
-        this.name = Input.empty();
-        this.query = Input.empty();
-        this.streamingUnits = Input.empty();
+        this.name = Output.empty();
+        this.query = Output.empty();
+        this.streamingUnits = Output.empty();
     }
 
     public static Builder builder() {
@@ -76,9 +76,9 @@ public final class TransformationArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> query;
-        private @Nullable Input<Integer> streamingUnits;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> query;
+        private @Nullable Output<Integer> streamingUnits;
 
         public Builder() {
     	      // Empty
@@ -91,33 +91,33 @@ public final class TransformationArgs extends io.pulumi.resources.ResourceArgs {
     	      this.streamingUnits = defaults.streamingUnits;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder query(@Nullable Input<String> query) {
+        public Builder query(@Nullable Output<String> query) {
             this.query = query;
             return this;
         }
 
         public Builder query(@Nullable String query) {
-            this.query = Input.ofNullable(query);
+            this.query = Output.ofNullable(query);
             return this;
         }
 
-        public Builder streamingUnits(@Nullable Input<Integer> streamingUnits) {
+        public Builder streamingUnits(@Nullable Output<Integer> streamingUnits) {
             this.streamingUnits = streamingUnits;
             return this;
         }
 
         public Builder streamingUnits(@Nullable Integer streamingUnits) {
-            this.streamingUnits = Input.ofNullable(streamingUnits);
+            this.streamingUnits = Output.ofNullable(streamingUnits);
             return this;
         }
         public TransformationArgs build() {

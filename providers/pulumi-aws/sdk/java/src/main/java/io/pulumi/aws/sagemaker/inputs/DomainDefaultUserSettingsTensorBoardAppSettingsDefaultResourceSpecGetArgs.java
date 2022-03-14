@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.sagemaker.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class DomainDefaultUserSettingsTensorBoardAppSettingsDefaultResourc
      * 
      */
     @InputImport(name="instanceType")
-      private final @Nullable Input<String> instanceType;
+      private final @Nullable Output<String> instanceType;
 
-    public Input<String> getInstanceType() {
-        return this.instanceType == null ? Input.empty() : this.instanceType;
+    public Output<String> getInstanceType() {
+        return this.instanceType == null ? Output.empty() : this.instanceType;
     }
 
     /**
@@ -30,10 +30,10 @@ public final class DomainDefaultUserSettingsTensorBoardAppSettingsDefaultResourc
      * 
      */
     @InputImport(name="lifecycleConfigArn")
-      private final @Nullable Input<String> lifecycleConfigArn;
+      private final @Nullable Output<String> lifecycleConfigArn;
 
-    public Input<String> getLifecycleConfigArn() {
-        return this.lifecycleConfigArn == null ? Input.empty() : this.lifecycleConfigArn;
+    public Output<String> getLifecycleConfigArn() {
+        return this.lifecycleConfigArn == null ? Output.empty() : this.lifecycleConfigArn;
     }
 
     /**
@@ -41,10 +41,10 @@ public final class DomainDefaultUserSettingsTensorBoardAppSettingsDefaultResourc
      * 
      */
     @InputImport(name="sagemakerImageArn")
-      private final @Nullable Input<String> sagemakerImageArn;
+      private final @Nullable Output<String> sagemakerImageArn;
 
-    public Input<String> getSagemakerImageArn() {
-        return this.sagemakerImageArn == null ? Input.empty() : this.sagemakerImageArn;
+    public Output<String> getSagemakerImageArn() {
+        return this.sagemakerImageArn == null ? Output.empty() : this.sagemakerImageArn;
     }
 
     /**
@@ -52,17 +52,17 @@ public final class DomainDefaultUserSettingsTensorBoardAppSettingsDefaultResourc
      * 
      */
     @InputImport(name="sagemakerImageVersionArn")
-      private final @Nullable Input<String> sagemakerImageVersionArn;
+      private final @Nullable Output<String> sagemakerImageVersionArn;
 
-    public Input<String> getSagemakerImageVersionArn() {
-        return this.sagemakerImageVersionArn == null ? Input.empty() : this.sagemakerImageVersionArn;
+    public Output<String> getSagemakerImageVersionArn() {
+        return this.sagemakerImageVersionArn == null ? Output.empty() : this.sagemakerImageVersionArn;
     }
 
     public DomainDefaultUserSettingsTensorBoardAppSettingsDefaultResourceSpecGetArgs(
-        @Nullable Input<String> instanceType,
-        @Nullable Input<String> lifecycleConfigArn,
-        @Nullable Input<String> sagemakerImageArn,
-        @Nullable Input<String> sagemakerImageVersionArn) {
+        @Nullable Output<String> instanceType,
+        @Nullable Output<String> lifecycleConfigArn,
+        @Nullable Output<String> sagemakerImageArn,
+        @Nullable Output<String> sagemakerImageVersionArn) {
         this.instanceType = instanceType;
         this.lifecycleConfigArn = lifecycleConfigArn;
         this.sagemakerImageArn = sagemakerImageArn;
@@ -70,10 +70,10 @@ public final class DomainDefaultUserSettingsTensorBoardAppSettingsDefaultResourc
     }
 
     private DomainDefaultUserSettingsTensorBoardAppSettingsDefaultResourceSpecGetArgs() {
-        this.instanceType = Input.empty();
-        this.lifecycleConfigArn = Input.empty();
-        this.sagemakerImageArn = Input.empty();
-        this.sagemakerImageVersionArn = Input.empty();
+        this.instanceType = Output.empty();
+        this.lifecycleConfigArn = Output.empty();
+        this.sagemakerImageArn = Output.empty();
+        this.sagemakerImageVersionArn = Output.empty();
     }
 
     public static Builder builder() {
@@ -85,10 +85,10 @@ public final class DomainDefaultUserSettingsTensorBoardAppSettingsDefaultResourc
     }
 
     public static final class Builder {
-        private @Nullable Input<String> instanceType;
-        private @Nullable Input<String> lifecycleConfigArn;
-        private @Nullable Input<String> sagemakerImageArn;
-        private @Nullable Input<String> sagemakerImageVersionArn;
+        private @Nullable Output<String> instanceType;
+        private @Nullable Output<String> lifecycleConfigArn;
+        private @Nullable Output<String> sagemakerImageArn;
+        private @Nullable Output<String> sagemakerImageVersionArn;
 
         public Builder() {
     	      // Empty
@@ -102,43 +102,43 @@ public final class DomainDefaultUserSettingsTensorBoardAppSettingsDefaultResourc
     	      this.sagemakerImageVersionArn = defaults.sagemakerImageVersionArn;
         }
 
-        public Builder instanceType(@Nullable Input<String> instanceType) {
+        public Builder instanceType(@Nullable Output<String> instanceType) {
             this.instanceType = instanceType;
             return this;
         }
 
         public Builder instanceType(@Nullable String instanceType) {
-            this.instanceType = Input.ofNullable(instanceType);
+            this.instanceType = Output.ofNullable(instanceType);
             return this;
         }
 
-        public Builder lifecycleConfigArn(@Nullable Input<String> lifecycleConfigArn) {
+        public Builder lifecycleConfigArn(@Nullable Output<String> lifecycleConfigArn) {
             this.lifecycleConfigArn = lifecycleConfigArn;
             return this;
         }
 
         public Builder lifecycleConfigArn(@Nullable String lifecycleConfigArn) {
-            this.lifecycleConfigArn = Input.ofNullable(lifecycleConfigArn);
+            this.lifecycleConfigArn = Output.ofNullable(lifecycleConfigArn);
             return this;
         }
 
-        public Builder sagemakerImageArn(@Nullable Input<String> sagemakerImageArn) {
+        public Builder sagemakerImageArn(@Nullable Output<String> sagemakerImageArn) {
             this.sagemakerImageArn = sagemakerImageArn;
             return this;
         }
 
         public Builder sagemakerImageArn(@Nullable String sagemakerImageArn) {
-            this.sagemakerImageArn = Input.ofNullable(sagemakerImageArn);
+            this.sagemakerImageArn = Output.ofNullable(sagemakerImageArn);
             return this;
         }
 
-        public Builder sagemakerImageVersionArn(@Nullable Input<String> sagemakerImageVersionArn) {
+        public Builder sagemakerImageVersionArn(@Nullable Output<String> sagemakerImageVersionArn) {
             this.sagemakerImageVersionArn = sagemakerImageVersionArn;
             return this;
         }
 
         public Builder sagemakerImageVersionArn(@Nullable String sagemakerImageVersionArn) {
-            this.sagemakerImageVersionArn = Input.ofNullable(sagemakerImageVersionArn);
+            this.sagemakerImageVersionArn = Output.ofNullable(sagemakerImageVersionArn);
             return this;
         }
         public DomainDefaultUserSettingsTensorBoardAppSettingsDefaultResourceSpecGetArgs build() {

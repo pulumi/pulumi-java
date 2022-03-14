@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.robomaker.inputs;
 
 import io.pulumi.awsnative.robomaker.enums.RobotApplicationSourceConfigArchitecture;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,9 +19,9 @@ public final class RobotApplicationSourceConfigArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="architecture", required=true)
-      private final Input<RobotApplicationSourceConfigArchitecture> architecture;
+      private final Output<RobotApplicationSourceConfigArchitecture> architecture;
 
-    public Input<RobotApplicationSourceConfigArchitecture> getArchitecture() {
+    public Output<RobotApplicationSourceConfigArchitecture> getArchitecture() {
         return this.architecture;
     }
 
@@ -30,9 +30,9 @@ public final class RobotApplicationSourceConfigArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="s3Bucket", required=true)
-      private final Input<String> s3Bucket;
+      private final Output<String> s3Bucket;
 
-    public Input<String> getS3Bucket() {
+    public Output<String> getS3Bucket() {
         return this.s3Bucket;
     }
 
@@ -41,25 +41,25 @@ public final class RobotApplicationSourceConfigArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="s3Key", required=true)
-      private final Input<String> s3Key;
+      private final Output<String> s3Key;
 
-    public Input<String> getS3Key() {
+    public Output<String> getS3Key() {
         return this.s3Key;
     }
 
     public RobotApplicationSourceConfigArgs(
-        Input<RobotApplicationSourceConfigArchitecture> architecture,
-        Input<String> s3Bucket,
-        Input<String> s3Key) {
+        Output<RobotApplicationSourceConfigArchitecture> architecture,
+        Output<String> s3Bucket,
+        Output<String> s3Key) {
         this.architecture = Objects.requireNonNull(architecture, "expected parameter 'architecture' to be non-null");
         this.s3Bucket = Objects.requireNonNull(s3Bucket, "expected parameter 's3Bucket' to be non-null");
         this.s3Key = Objects.requireNonNull(s3Key, "expected parameter 's3Key' to be non-null");
     }
 
     private RobotApplicationSourceConfigArgs() {
-        this.architecture = Input.empty();
-        this.s3Bucket = Input.empty();
-        this.s3Key = Input.empty();
+        this.architecture = Output.empty();
+        this.s3Bucket = Output.empty();
+        this.s3Key = Output.empty();
     }
 
     public static Builder builder() {
@@ -71,9 +71,9 @@ public final class RobotApplicationSourceConfigArgs extends io.pulumi.resources.
     }
 
     public static final class Builder {
-        private Input<RobotApplicationSourceConfigArchitecture> architecture;
-        private Input<String> s3Bucket;
-        private Input<String> s3Key;
+        private Output<RobotApplicationSourceConfigArchitecture> architecture;
+        private Output<String> s3Bucket;
+        private Output<String> s3Key;
 
         public Builder() {
     	      // Empty
@@ -86,33 +86,33 @@ public final class RobotApplicationSourceConfigArgs extends io.pulumi.resources.
     	      this.s3Key = defaults.s3Key;
         }
 
-        public Builder architecture(Input<RobotApplicationSourceConfigArchitecture> architecture) {
+        public Builder architecture(Output<RobotApplicationSourceConfigArchitecture> architecture) {
             this.architecture = Objects.requireNonNull(architecture);
             return this;
         }
 
         public Builder architecture(RobotApplicationSourceConfigArchitecture architecture) {
-            this.architecture = Input.of(Objects.requireNonNull(architecture));
+            this.architecture = Output.of(Objects.requireNonNull(architecture));
             return this;
         }
 
-        public Builder s3Bucket(Input<String> s3Bucket) {
+        public Builder s3Bucket(Output<String> s3Bucket) {
             this.s3Bucket = Objects.requireNonNull(s3Bucket);
             return this;
         }
 
         public Builder s3Bucket(String s3Bucket) {
-            this.s3Bucket = Input.of(Objects.requireNonNull(s3Bucket));
+            this.s3Bucket = Output.of(Objects.requireNonNull(s3Bucket));
             return this;
         }
 
-        public Builder s3Key(Input<String> s3Key) {
+        public Builder s3Key(Output<String> s3Key) {
             this.s3Key = Objects.requireNonNull(s3Key);
             return this;
         }
 
         public Builder s3Key(String s3Key) {
-            this.s3Key = Input.of(Objects.requireNonNull(s3Key));
+            this.s3Key = Output.of(Objects.requireNonNull(s3Key));
             return this;
         }
         public RobotApplicationSourceConfigArgs build() {

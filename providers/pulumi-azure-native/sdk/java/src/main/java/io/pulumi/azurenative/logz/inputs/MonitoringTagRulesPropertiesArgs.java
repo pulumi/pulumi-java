@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.logz.inputs;
 
 import io.pulumi.azurenative.logz.inputs.LogRulesArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,18 +23,18 @@ public final class MonitoringTagRulesPropertiesArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="logRules")
-      private final @Nullable Input<LogRulesArgs> logRules;
+      private final @Nullable Output<LogRulesArgs> logRules;
 
-    public Input<LogRulesArgs> getLogRules() {
-        return this.logRules == null ? Input.empty() : this.logRules;
+    public Output<LogRulesArgs> getLogRules() {
+        return this.logRules == null ? Output.empty() : this.logRules;
     }
 
-    public MonitoringTagRulesPropertiesArgs(@Nullable Input<LogRulesArgs> logRules) {
+    public MonitoringTagRulesPropertiesArgs(@Nullable Output<LogRulesArgs> logRules) {
         this.logRules = logRules;
     }
 
     private MonitoringTagRulesPropertiesArgs() {
-        this.logRules = Input.empty();
+        this.logRules = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class MonitoringTagRulesPropertiesArgs extends io.pulumi.resources.
     }
 
     public static final class Builder {
-        private @Nullable Input<LogRulesArgs> logRules;
+        private @Nullable Output<LogRulesArgs> logRules;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class MonitoringTagRulesPropertiesArgs extends io.pulumi.resources.
     	      this.logRules = defaults.logRules;
         }
 
-        public Builder logRules(@Nullable Input<LogRulesArgs> logRules) {
+        public Builder logRules(@Nullable Output<LogRulesArgs> logRules) {
             this.logRules = logRules;
             return this;
         }
 
         public Builder logRules(@Nullable LogRulesArgs logRules) {
-            this.logRules = Input.ofNullable(logRules);
+            this.logRules = Output.ofNullable(logRules);
             return this;
         }
         public MonitoringTagRulesPropertiesArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.gkehub.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -18,18 +18,18 @@ public final class FeatureSpecMulticlusteringressArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="configMembership", required=true)
-      private final Input<String> configMembership;
+      private final Output<String> configMembership;
 
-    public Input<String> getConfigMembership() {
+    public Output<String> getConfigMembership() {
         return this.configMembership;
     }
 
-    public FeatureSpecMulticlusteringressArgs(Input<String> configMembership) {
+    public FeatureSpecMulticlusteringressArgs(Output<String> configMembership) {
         this.configMembership = Objects.requireNonNull(configMembership, "expected parameter 'configMembership' to be non-null");
     }
 
     private FeatureSpecMulticlusteringressArgs() {
-        this.configMembership = Input.empty();
+        this.configMembership = Output.empty();
     }
 
     public static Builder builder() {
@@ -41,7 +41,7 @@ public final class FeatureSpecMulticlusteringressArgs extends io.pulumi.resource
     }
 
     public static final class Builder {
-        private Input<String> configMembership;
+        private Output<String> configMembership;
 
         public Builder() {
     	      // Empty
@@ -52,13 +52,13 @@ public final class FeatureSpecMulticlusteringressArgs extends io.pulumi.resource
     	      this.configMembership = defaults.configMembership;
         }
 
-        public Builder configMembership(Input<String> configMembership) {
+        public Builder configMembership(Output<String> configMembership) {
             this.configMembership = Objects.requireNonNull(configMembership);
             return this;
         }
 
         public Builder configMembership(String configMembership) {
-            this.configMembership = Input.of(Objects.requireNonNull(configMembership));
+            this.configMembership = Output.of(Objects.requireNonNull(configMembership));
             return this;
         }
         public FeatureSpecMulticlusteringressArgs build() {

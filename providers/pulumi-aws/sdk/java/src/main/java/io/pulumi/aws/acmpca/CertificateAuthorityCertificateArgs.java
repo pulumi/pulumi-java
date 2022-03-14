@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.acmpca;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,9 +19,9 @@ public final class CertificateAuthorityCertificateArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="certificate", required=true)
-      private final Input<String> certificate;
+      private final Output<String> certificate;
 
-    public Input<String> getCertificate() {
+    public Output<String> getCertificate() {
         return this.certificate;
     }
 
@@ -30,9 +30,9 @@ public final class CertificateAuthorityCertificateArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="certificateAuthorityArn", required=true)
-      private final Input<String> certificateAuthorityArn;
+      private final Output<String> certificateAuthorityArn;
 
-    public Input<String> getCertificateAuthorityArn() {
+    public Output<String> getCertificateAuthorityArn() {
         return this.certificateAuthorityArn;
     }
 
@@ -41,25 +41,25 @@ public final class CertificateAuthorityCertificateArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="certificateChain")
-      private final @Nullable Input<String> certificateChain;
+      private final @Nullable Output<String> certificateChain;
 
-    public Input<String> getCertificateChain() {
-        return this.certificateChain == null ? Input.empty() : this.certificateChain;
+    public Output<String> getCertificateChain() {
+        return this.certificateChain == null ? Output.empty() : this.certificateChain;
     }
 
     public CertificateAuthorityCertificateArgs(
-        Input<String> certificate,
-        Input<String> certificateAuthorityArn,
-        @Nullable Input<String> certificateChain) {
+        Output<String> certificate,
+        Output<String> certificateAuthorityArn,
+        @Nullable Output<String> certificateChain) {
         this.certificate = Objects.requireNonNull(certificate, "expected parameter 'certificate' to be non-null");
         this.certificateAuthorityArn = Objects.requireNonNull(certificateAuthorityArn, "expected parameter 'certificateAuthorityArn' to be non-null");
         this.certificateChain = certificateChain;
     }
 
     private CertificateAuthorityCertificateArgs() {
-        this.certificate = Input.empty();
-        this.certificateAuthorityArn = Input.empty();
-        this.certificateChain = Input.empty();
+        this.certificate = Output.empty();
+        this.certificateAuthorityArn = Output.empty();
+        this.certificateChain = Output.empty();
     }
 
     public static Builder builder() {
@@ -71,9 +71,9 @@ public final class CertificateAuthorityCertificateArgs extends io.pulumi.resourc
     }
 
     public static final class Builder {
-        private Input<String> certificate;
-        private Input<String> certificateAuthorityArn;
-        private @Nullable Input<String> certificateChain;
+        private Output<String> certificate;
+        private Output<String> certificateAuthorityArn;
+        private @Nullable Output<String> certificateChain;
 
         public Builder() {
     	      // Empty
@@ -86,33 +86,33 @@ public final class CertificateAuthorityCertificateArgs extends io.pulumi.resourc
     	      this.certificateChain = defaults.certificateChain;
         }
 
-        public Builder certificate(Input<String> certificate) {
+        public Builder certificate(Output<String> certificate) {
             this.certificate = Objects.requireNonNull(certificate);
             return this;
         }
 
         public Builder certificate(String certificate) {
-            this.certificate = Input.of(Objects.requireNonNull(certificate));
+            this.certificate = Output.of(Objects.requireNonNull(certificate));
             return this;
         }
 
-        public Builder certificateAuthorityArn(Input<String> certificateAuthorityArn) {
+        public Builder certificateAuthorityArn(Output<String> certificateAuthorityArn) {
             this.certificateAuthorityArn = Objects.requireNonNull(certificateAuthorityArn);
             return this;
         }
 
         public Builder certificateAuthorityArn(String certificateAuthorityArn) {
-            this.certificateAuthorityArn = Input.of(Objects.requireNonNull(certificateAuthorityArn));
+            this.certificateAuthorityArn = Output.of(Objects.requireNonNull(certificateAuthorityArn));
             return this;
         }
 
-        public Builder certificateChain(@Nullable Input<String> certificateChain) {
+        public Builder certificateChain(@Nullable Output<String> certificateChain) {
             this.certificateChain = certificateChain;
             return this;
         }
 
         public Builder certificateChain(@Nullable String certificateChain) {
-            this.certificateChain = Input.ofNullable(certificateChain);
+            this.certificateChain = Output.ofNullable(certificateChain);
             return this;
         }
         public CertificateAuthorityCertificateArgs build() {

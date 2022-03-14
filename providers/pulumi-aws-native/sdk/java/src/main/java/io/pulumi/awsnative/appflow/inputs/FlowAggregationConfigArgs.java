@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.appflow.inputs;
 
 import io.pulumi.awsnative.appflow.enums.FlowAggregationType;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -15,18 +15,18 @@ public final class FlowAggregationConfigArgs extends io.pulumi.resources.Resourc
     public static final FlowAggregationConfigArgs Empty = new FlowAggregationConfigArgs();
 
     @InputImport(name="aggregationType")
-      private final @Nullable Input<FlowAggregationType> aggregationType;
+      private final @Nullable Output<FlowAggregationType> aggregationType;
 
-    public Input<FlowAggregationType> getAggregationType() {
-        return this.aggregationType == null ? Input.empty() : this.aggregationType;
+    public Output<FlowAggregationType> getAggregationType() {
+        return this.aggregationType == null ? Output.empty() : this.aggregationType;
     }
 
-    public FlowAggregationConfigArgs(@Nullable Input<FlowAggregationType> aggregationType) {
+    public FlowAggregationConfigArgs(@Nullable Output<FlowAggregationType> aggregationType) {
         this.aggregationType = aggregationType;
     }
 
     private FlowAggregationConfigArgs() {
-        this.aggregationType = Input.empty();
+        this.aggregationType = Output.empty();
     }
 
     public static Builder builder() {
@@ -38,7 +38,7 @@ public final class FlowAggregationConfigArgs extends io.pulumi.resources.Resourc
     }
 
     public static final class Builder {
-        private @Nullable Input<FlowAggregationType> aggregationType;
+        private @Nullable Output<FlowAggregationType> aggregationType;
 
         public Builder() {
     	      // Empty
@@ -49,13 +49,13 @@ public final class FlowAggregationConfigArgs extends io.pulumi.resources.Resourc
     	      this.aggregationType = defaults.aggregationType;
         }
 
-        public Builder aggregationType(@Nullable Input<FlowAggregationType> aggregationType) {
+        public Builder aggregationType(@Nullable Output<FlowAggregationType> aggregationType) {
             this.aggregationType = aggregationType;
             return this;
         }
 
         public Builder aggregationType(@Nullable FlowAggregationType aggregationType) {
-            this.aggregationType = Input.ofNullable(aggregationType);
+            this.aggregationType = Output.ofNullable(aggregationType);
             return this;
         }
         public FlowAggregationConfigArgs build() {

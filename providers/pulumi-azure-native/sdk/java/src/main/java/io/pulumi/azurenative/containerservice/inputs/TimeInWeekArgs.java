@@ -5,7 +5,7 @@ package io.pulumi.azurenative.containerservice.inputs;
 
 import io.pulumi.azurenative.containerservice.enums.WeekDay;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -27,10 +27,10 @@ public final class TimeInWeekArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="day")
-      private final @Nullable Input<Either<String,WeekDay>> day;
+      private final @Nullable Output<Either<String,WeekDay>> day;
 
-    public Input<Either<String,WeekDay>> getDay() {
-        return this.day == null ? Input.empty() : this.day;
+    public Output<Either<String,WeekDay>> getDay() {
+        return this.day == null ? Output.empty() : this.day;
     }
 
     /**
@@ -38,22 +38,22 @@ public final class TimeInWeekArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="hourSlots")
-      private final @Nullable Input<List<Integer>> hourSlots;
+      private final @Nullable Output<List<Integer>> hourSlots;
 
-    public Input<List<Integer>> getHourSlots() {
-        return this.hourSlots == null ? Input.empty() : this.hourSlots;
+    public Output<List<Integer>> getHourSlots() {
+        return this.hourSlots == null ? Output.empty() : this.hourSlots;
     }
 
     public TimeInWeekArgs(
-        @Nullable Input<Either<String,WeekDay>> day,
-        @Nullable Input<List<Integer>> hourSlots) {
+        @Nullable Output<Either<String,WeekDay>> day,
+        @Nullable Output<List<Integer>> hourSlots) {
         this.day = day;
         this.hourSlots = hourSlots;
     }
 
     private TimeInWeekArgs() {
-        this.day = Input.empty();
-        this.hourSlots = Input.empty();
+        this.day = Output.empty();
+        this.hourSlots = Output.empty();
     }
 
     public static Builder builder() {
@@ -65,8 +65,8 @@ public final class TimeInWeekArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Either<String,WeekDay>> day;
-        private @Nullable Input<List<Integer>> hourSlots;
+        private @Nullable Output<Either<String,WeekDay>> day;
+        private @Nullable Output<List<Integer>> hourSlots;
 
         public Builder() {
     	      // Empty
@@ -78,23 +78,23 @@ public final class TimeInWeekArgs extends io.pulumi.resources.ResourceArgs {
     	      this.hourSlots = defaults.hourSlots;
         }
 
-        public Builder day(@Nullable Input<Either<String,WeekDay>> day) {
+        public Builder day(@Nullable Output<Either<String,WeekDay>> day) {
             this.day = day;
             return this;
         }
 
         public Builder day(@Nullable Either<String,WeekDay> day) {
-            this.day = Input.ofNullable(day);
+            this.day = Output.ofNullable(day);
             return this;
         }
 
-        public Builder hourSlots(@Nullable Input<List<Integer>> hourSlots) {
+        public Builder hourSlots(@Nullable Output<List<Integer>> hourSlots) {
             this.hourSlots = hourSlots;
             return this;
         }
 
         public Builder hourSlots(@Nullable List<Integer> hourSlots) {
-            this.hourSlots = Input.ofNullable(hourSlots);
+            this.hourSlots = Output.ofNullable(hourSlots);
             return this;
         }
         public TimeInWeekArgs build() {

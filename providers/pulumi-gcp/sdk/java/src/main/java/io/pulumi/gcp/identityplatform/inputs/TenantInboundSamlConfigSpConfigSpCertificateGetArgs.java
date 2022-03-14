@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.identityplatform.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -20,18 +20,18 @@ public final class TenantInboundSamlConfigSpConfigSpCertificateGetArgs extends i
      * 
      */
     @InputImport(name="x509Certificate")
-      private final @Nullable Input<String> x509Certificate;
+      private final @Nullable Output<String> x509Certificate;
 
-    public Input<String> getX509Certificate() {
-        return this.x509Certificate == null ? Input.empty() : this.x509Certificate;
+    public Output<String> getX509Certificate() {
+        return this.x509Certificate == null ? Output.empty() : this.x509Certificate;
     }
 
-    public TenantInboundSamlConfigSpConfigSpCertificateGetArgs(@Nullable Input<String> x509Certificate) {
+    public TenantInboundSamlConfigSpConfigSpCertificateGetArgs(@Nullable Output<String> x509Certificate) {
         this.x509Certificate = x509Certificate;
     }
 
     private TenantInboundSamlConfigSpConfigSpCertificateGetArgs() {
-        this.x509Certificate = Input.empty();
+        this.x509Certificate = Output.empty();
     }
 
     public static Builder builder() {
@@ -43,7 +43,7 @@ public final class TenantInboundSamlConfigSpConfigSpCertificateGetArgs extends i
     }
 
     public static final class Builder {
-        private @Nullable Input<String> x509Certificate;
+        private @Nullable Output<String> x509Certificate;
 
         public Builder() {
     	      // Empty
@@ -54,13 +54,13 @@ public final class TenantInboundSamlConfigSpConfigSpCertificateGetArgs extends i
     	      this.x509Certificate = defaults.x509Certificate;
         }
 
-        public Builder x509Certificate(@Nullable Input<String> x509Certificate) {
+        public Builder x509Certificate(@Nullable Output<String> x509Certificate) {
             this.x509Certificate = x509Certificate;
             return this;
         }
 
         public Builder x509Certificate(@Nullable String x509Certificate) {
-            this.x509Certificate = Input.ofNullable(x509Certificate);
+            this.x509Certificate = Output.ofNullable(x509Certificate);
             return this;
         }
         public TenantInboundSamlConfigSpConfigSpCertificateGetArgs build() {

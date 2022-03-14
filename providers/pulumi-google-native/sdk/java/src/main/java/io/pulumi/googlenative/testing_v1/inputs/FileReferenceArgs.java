@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.testing_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class FileReferenceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="gcsPath")
-      private final @Nullable Input<String> gcsPath;
+      private final @Nullable Output<String> gcsPath;
 
-    public Input<String> getGcsPath() {
-        return this.gcsPath == null ? Input.empty() : this.gcsPath;
+    public Output<String> getGcsPath() {
+        return this.gcsPath == null ? Output.empty() : this.gcsPath;
     }
 
-    public FileReferenceArgs(@Nullable Input<String> gcsPath) {
+    public FileReferenceArgs(@Nullable Output<String> gcsPath) {
         this.gcsPath = gcsPath;
     }
 
     private FileReferenceArgs() {
-        this.gcsPath = Input.empty();
+        this.gcsPath = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class FileReferenceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> gcsPath;
+        private @Nullable Output<String> gcsPath;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class FileReferenceArgs extends io.pulumi.resources.ResourceArgs {
     	      this.gcsPath = defaults.gcsPath;
         }
 
-        public Builder gcsPath(@Nullable Input<String> gcsPath) {
+        public Builder gcsPath(@Nullable Output<String> gcsPath) {
             this.gcsPath = gcsPath;
             return this;
         }
 
         public Builder gcsPath(@Nullable String gcsPath) {
-            this.gcsPath = Input.ofNullable(gcsPath);
+            this.gcsPath = Output.ofNullable(gcsPath);
             return this;
         }
         public FileReferenceArgs build() {

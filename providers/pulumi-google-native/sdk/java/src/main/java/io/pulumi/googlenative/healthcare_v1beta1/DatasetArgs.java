@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.healthcare_v1beta1;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -15,17 +15,17 @@ public final class DatasetArgs extends io.pulumi.resources.ResourceArgs {
     public static final DatasetArgs Empty = new DatasetArgs();
 
     @InputImport(name="datasetId")
-      private final @Nullable Input<String> datasetId;
+      private final @Nullable Output<String> datasetId;
 
-    public Input<String> getDatasetId() {
-        return this.datasetId == null ? Input.empty() : this.datasetId;
+    public Output<String> getDatasetId() {
+        return this.datasetId == null ? Output.empty() : this.datasetId;
     }
 
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -33,17 +33,17 @@ public final class DatasetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -51,18 +51,18 @@ public final class DatasetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="timeZone")
-      private final @Nullable Input<String> timeZone;
+      private final @Nullable Output<String> timeZone;
 
-    public Input<String> getTimeZone() {
-        return this.timeZone == null ? Input.empty() : this.timeZone;
+    public Output<String> getTimeZone() {
+        return this.timeZone == null ? Output.empty() : this.timeZone;
     }
 
     public DatasetArgs(
-        @Nullable Input<String> datasetId,
-        @Nullable Input<String> location,
-        @Nullable Input<String> name,
-        @Nullable Input<String> project,
-        @Nullable Input<String> timeZone) {
+        @Nullable Output<String> datasetId,
+        @Nullable Output<String> location,
+        @Nullable Output<String> name,
+        @Nullable Output<String> project,
+        @Nullable Output<String> timeZone) {
         this.datasetId = datasetId;
         this.location = location;
         this.name = name;
@@ -71,11 +71,11 @@ public final class DatasetArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DatasetArgs() {
-        this.datasetId = Input.empty();
-        this.location = Input.empty();
-        this.name = Input.empty();
-        this.project = Input.empty();
-        this.timeZone = Input.empty();
+        this.datasetId = Output.empty();
+        this.location = Output.empty();
+        this.name = Output.empty();
+        this.project = Output.empty();
+        this.timeZone = Output.empty();
     }
 
     public static Builder builder() {
@@ -87,11 +87,11 @@ public final class DatasetArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> datasetId;
-        private @Nullable Input<String> location;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> project;
-        private @Nullable Input<String> timeZone;
+        private @Nullable Output<String> datasetId;
+        private @Nullable Output<String> location;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> project;
+        private @Nullable Output<String> timeZone;
 
         public Builder() {
     	      // Empty
@@ -106,53 +106,53 @@ public final class DatasetArgs extends io.pulumi.resources.ResourceArgs {
     	      this.timeZone = defaults.timeZone;
         }
 
-        public Builder datasetId(@Nullable Input<String> datasetId) {
+        public Builder datasetId(@Nullable Output<String> datasetId) {
             this.datasetId = datasetId;
             return this;
         }
 
         public Builder datasetId(@Nullable String datasetId) {
-            this.datasetId = Input.ofNullable(datasetId);
+            this.datasetId = Output.ofNullable(datasetId);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder timeZone(@Nullable Input<String> timeZone) {
+        public Builder timeZone(@Nullable Output<String> timeZone) {
             this.timeZone = timeZone;
             return this;
         }
 
         public Builder timeZone(@Nullable String timeZone) {
-            this.timeZone = Input.ofNullable(timeZone);
+            this.timeZone = Output.ofNullable(timeZone);
             return this;
         }
         public DatasetArgs build() {

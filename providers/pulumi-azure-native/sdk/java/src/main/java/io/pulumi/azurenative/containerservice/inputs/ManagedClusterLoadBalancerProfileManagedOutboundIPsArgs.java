@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.containerservice.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class ManagedClusterLoadBalancerProfileManagedOutboundIPsArgs exten
      * 
      */
     @InputImport(name="count")
-      private final @Nullable Input<Integer> count;
+      private final @Nullable Output<Integer> count;
 
-    public Input<Integer> getCount() {
-        return this.count == null ? Input.empty() : this.count;
+    public Output<Integer> getCount() {
+        return this.count == null ? Output.empty() : this.count;
     }
 
-    public ManagedClusterLoadBalancerProfileManagedOutboundIPsArgs(@Nullable Input<Integer> count) {
-        this.count = count == null ? Input.ofNullable(1) : count;
+    public ManagedClusterLoadBalancerProfileManagedOutboundIPsArgs(@Nullable Output<Integer> count) {
+        this.count = count == null ? Output.ofNullable(1) : count;
     }
 
     private ManagedClusterLoadBalancerProfileManagedOutboundIPsArgs() {
-        this.count = Input.empty();
+        this.count = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class ManagedClusterLoadBalancerProfileManagedOutboundIPsArgs exten
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> count;
+        private @Nullable Output<Integer> count;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class ManagedClusterLoadBalancerProfileManagedOutboundIPsArgs exten
     	      this.count = defaults.count;
         }
 
-        public Builder count(@Nullable Input<Integer> count) {
+        public Builder count(@Nullable Output<Integer> count) {
             this.count = count;
             return this;
         }
 
         public Builder count(@Nullable Integer count) {
-            this.count = Input.ofNullable(count);
+            this.count = Output.ofNullable(count);
             return this;
         }
         public ManagedClusterLoadBalancerProfileManagedOutboundIPsArgs build() {

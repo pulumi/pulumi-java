@@ -7,7 +7,6 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.glacier.VaultArgs;
 import io.pulumi.aws.glacier.inputs.VaultState;
 import io.pulumi.aws.glacier.outputs.VaultNotification;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -172,14 +171,14 @@ public class Vault extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Vault(String name, @Nullable VaultArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:glacier/vault:Vault", name, args == null ? VaultArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws:glacier/vault:Vault", name, args == null ? VaultArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private Vault(String name, Input<String> id, @Nullable VaultState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private Vault(String name, Output<String> id, @Nullable VaultState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws:glacier/vault:Vault", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -195,7 +194,7 @@ public class Vault extends io.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static Vault get(String name, Input<String> id, @Nullable VaultState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static Vault get(String name, Output<String> id, @Nullable VaultState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Vault(name, id, state, options);
     }
 }

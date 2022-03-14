@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_beta.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.compute_beta.enums.SecurityPolicyAdvancedOptionsConfigJsonParsing;
 import io.pulumi.googlenative.compute_beta.enums.SecurityPolicyAdvancedOptionsConfigLogLevel;
@@ -16,29 +16,29 @@ public final class SecurityPolicyAdvancedOptionsConfigArgs extends io.pulumi.res
     public static final SecurityPolicyAdvancedOptionsConfigArgs Empty = new SecurityPolicyAdvancedOptionsConfigArgs();
 
     @InputImport(name="jsonParsing")
-      private final @Nullable Input<SecurityPolicyAdvancedOptionsConfigJsonParsing> jsonParsing;
+      private final @Nullable Output<SecurityPolicyAdvancedOptionsConfigJsonParsing> jsonParsing;
 
-    public Input<SecurityPolicyAdvancedOptionsConfigJsonParsing> getJsonParsing() {
-        return this.jsonParsing == null ? Input.empty() : this.jsonParsing;
+    public Output<SecurityPolicyAdvancedOptionsConfigJsonParsing> getJsonParsing() {
+        return this.jsonParsing == null ? Output.empty() : this.jsonParsing;
     }
 
     @InputImport(name="logLevel")
-      private final @Nullable Input<SecurityPolicyAdvancedOptionsConfigLogLevel> logLevel;
+      private final @Nullable Output<SecurityPolicyAdvancedOptionsConfigLogLevel> logLevel;
 
-    public Input<SecurityPolicyAdvancedOptionsConfigLogLevel> getLogLevel() {
-        return this.logLevel == null ? Input.empty() : this.logLevel;
+    public Output<SecurityPolicyAdvancedOptionsConfigLogLevel> getLogLevel() {
+        return this.logLevel == null ? Output.empty() : this.logLevel;
     }
 
     public SecurityPolicyAdvancedOptionsConfigArgs(
-        @Nullable Input<SecurityPolicyAdvancedOptionsConfigJsonParsing> jsonParsing,
-        @Nullable Input<SecurityPolicyAdvancedOptionsConfigLogLevel> logLevel) {
+        @Nullable Output<SecurityPolicyAdvancedOptionsConfigJsonParsing> jsonParsing,
+        @Nullable Output<SecurityPolicyAdvancedOptionsConfigLogLevel> logLevel) {
         this.jsonParsing = jsonParsing;
         this.logLevel = logLevel;
     }
 
     private SecurityPolicyAdvancedOptionsConfigArgs() {
-        this.jsonParsing = Input.empty();
-        this.logLevel = Input.empty();
+        this.jsonParsing = Output.empty();
+        this.logLevel = Output.empty();
     }
 
     public static Builder builder() {
@@ -50,8 +50,8 @@ public final class SecurityPolicyAdvancedOptionsConfigArgs extends io.pulumi.res
     }
 
     public static final class Builder {
-        private @Nullable Input<SecurityPolicyAdvancedOptionsConfigJsonParsing> jsonParsing;
-        private @Nullable Input<SecurityPolicyAdvancedOptionsConfigLogLevel> logLevel;
+        private @Nullable Output<SecurityPolicyAdvancedOptionsConfigJsonParsing> jsonParsing;
+        private @Nullable Output<SecurityPolicyAdvancedOptionsConfigLogLevel> logLevel;
 
         public Builder() {
     	      // Empty
@@ -63,23 +63,23 @@ public final class SecurityPolicyAdvancedOptionsConfigArgs extends io.pulumi.res
     	      this.logLevel = defaults.logLevel;
         }
 
-        public Builder jsonParsing(@Nullable Input<SecurityPolicyAdvancedOptionsConfigJsonParsing> jsonParsing) {
+        public Builder jsonParsing(@Nullable Output<SecurityPolicyAdvancedOptionsConfigJsonParsing> jsonParsing) {
             this.jsonParsing = jsonParsing;
             return this;
         }
 
         public Builder jsonParsing(@Nullable SecurityPolicyAdvancedOptionsConfigJsonParsing jsonParsing) {
-            this.jsonParsing = Input.ofNullable(jsonParsing);
+            this.jsonParsing = Output.ofNullable(jsonParsing);
             return this;
         }
 
-        public Builder logLevel(@Nullable Input<SecurityPolicyAdvancedOptionsConfigLogLevel> logLevel) {
+        public Builder logLevel(@Nullable Output<SecurityPolicyAdvancedOptionsConfigLogLevel> logLevel) {
             this.logLevel = logLevel;
             return this;
         }
 
         public Builder logLevel(@Nullable SecurityPolicyAdvancedOptionsConfigLogLevel logLevel) {
-            this.logLevel = Input.ofNullable(logLevel);
+            this.logLevel = Output.ofNullable(logLevel);
             return this;
         }
         public SecurityPolicyAdvancedOptionsConfigArgs build() {

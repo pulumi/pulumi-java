@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.apigee_v1;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -16,9 +16,9 @@ public final class ArchiveDeploymentArgs extends io.pulumi.resources.ResourceArg
     public static final ArchiveDeploymentArgs Empty = new ArchiveDeploymentArgs();
 
     @InputImport(name="environmentId", required=true)
-      private final Input<String> environmentId;
+      private final Output<String> environmentId;
 
-    public Input<String> getEnvironmentId() {
+    public Output<String> getEnvironmentId() {
         return this.environmentId;
     }
 
@@ -27,10 +27,10 @@ public final class ArchiveDeploymentArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="gcsUri")
-      private final @Nullable Input<String> gcsUri;
+      private final @Nullable Output<String> gcsUri;
 
-    public Input<String> getGcsUri() {
-        return this.gcsUri == null ? Input.empty() : this.gcsUri;
+    public Output<String> getGcsUri() {
+        return this.gcsUri == null ? Output.empty() : this.gcsUri;
     }
 
     /**
@@ -38,10 +38,10 @@ public final class ArchiveDeploymentArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="labels")
-      private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Output<Map<String,String>> labels;
 
-    public Input<Map<String,String>> getLabels() {
-        return this.labels == null ? Input.empty() : this.labels;
+    public Output<Map<String,String>> getLabels() {
+        return this.labels == null ? Output.empty() : this.labels;
     }
 
     /**
@@ -49,25 +49,25 @@ public final class ArchiveDeploymentArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     @InputImport(name="organizationId", required=true)
-      private final Input<String> organizationId;
+      private final Output<String> organizationId;
 
-    public Input<String> getOrganizationId() {
+    public Output<String> getOrganizationId() {
         return this.organizationId;
     }
 
     public ArchiveDeploymentArgs(
-        Input<String> environmentId,
-        @Nullable Input<String> gcsUri,
-        @Nullable Input<Map<String,String>> labels,
-        @Nullable Input<String> name,
-        Input<String> organizationId) {
+        Output<String> environmentId,
+        @Nullable Output<String> gcsUri,
+        @Nullable Output<Map<String,String>> labels,
+        @Nullable Output<String> name,
+        Output<String> organizationId) {
         this.environmentId = Objects.requireNonNull(environmentId, "expected parameter 'environmentId' to be non-null");
         this.gcsUri = gcsUri;
         this.labels = labels;
@@ -76,11 +76,11 @@ public final class ArchiveDeploymentArgs extends io.pulumi.resources.ResourceArg
     }
 
     private ArchiveDeploymentArgs() {
-        this.environmentId = Input.empty();
-        this.gcsUri = Input.empty();
-        this.labels = Input.empty();
-        this.name = Input.empty();
-        this.organizationId = Input.empty();
+        this.environmentId = Output.empty();
+        this.gcsUri = Output.empty();
+        this.labels = Output.empty();
+        this.name = Output.empty();
+        this.organizationId = Output.empty();
     }
 
     public static Builder builder() {
@@ -92,11 +92,11 @@ public final class ArchiveDeploymentArgs extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private Input<String> environmentId;
-        private @Nullable Input<String> gcsUri;
-        private @Nullable Input<Map<String,String>> labels;
-        private @Nullable Input<String> name;
-        private Input<String> organizationId;
+        private Output<String> environmentId;
+        private @Nullable Output<String> gcsUri;
+        private @Nullable Output<Map<String,String>> labels;
+        private @Nullable Output<String> name;
+        private Output<String> organizationId;
 
         public Builder() {
     	      // Empty
@@ -111,53 +111,53 @@ public final class ArchiveDeploymentArgs extends io.pulumi.resources.ResourceArg
     	      this.organizationId = defaults.organizationId;
         }
 
-        public Builder environmentId(Input<String> environmentId) {
+        public Builder environmentId(Output<String> environmentId) {
             this.environmentId = Objects.requireNonNull(environmentId);
             return this;
         }
 
         public Builder environmentId(String environmentId) {
-            this.environmentId = Input.of(Objects.requireNonNull(environmentId));
+            this.environmentId = Output.of(Objects.requireNonNull(environmentId));
             return this;
         }
 
-        public Builder gcsUri(@Nullable Input<String> gcsUri) {
+        public Builder gcsUri(@Nullable Output<String> gcsUri) {
             this.gcsUri = gcsUri;
             return this;
         }
 
         public Builder gcsUri(@Nullable String gcsUri) {
-            this.gcsUri = Input.ofNullable(gcsUri);
+            this.gcsUri = Output.ofNullable(gcsUri);
             return this;
         }
 
-        public Builder labels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
         public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Input.ofNullable(labels);
+            this.labels = Output.ofNullable(labels);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder organizationId(Input<String> organizationId) {
+        public Builder organizationId(Output<String> organizationId) {
             this.organizationId = Objects.requireNonNull(organizationId);
             return this;
         }
 
         public Builder organizationId(String organizationId) {
-            this.organizationId = Input.of(Objects.requireNonNull(organizationId));
+            this.organizationId = Output.of(Objects.requireNonNull(organizationId));
             return this;
         }
         public ArchiveDeploymentArgs build() {

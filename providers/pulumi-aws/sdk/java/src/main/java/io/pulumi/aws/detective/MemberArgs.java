@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.detective;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -20,9 +20,9 @@ public final class MemberArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="accountId", required=true)
-      private final Input<String> accountId;
+      private final Output<String> accountId;
 
-    public Input<String> getAccountId() {
+    public Output<String> getAccountId() {
         return this.accountId;
     }
 
@@ -31,10 +31,10 @@ public final class MemberArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="disableEmailNotification")
-      private final @Nullable Input<Boolean> disableEmailNotification;
+      private final @Nullable Output<Boolean> disableEmailNotification;
 
-    public Input<Boolean> getDisableEmailNotification() {
-        return this.disableEmailNotification == null ? Input.empty() : this.disableEmailNotification;
+    public Output<Boolean> getDisableEmailNotification() {
+        return this.disableEmailNotification == null ? Output.empty() : this.disableEmailNotification;
     }
 
     /**
@@ -42,9 +42,9 @@ public final class MemberArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="emailAddress", required=true)
-      private final Input<String> emailAddress;
+      private final Output<String> emailAddress;
 
-    public Input<String> getEmailAddress() {
+    public Output<String> getEmailAddress() {
         return this.emailAddress;
     }
 
@@ -53,9 +53,9 @@ public final class MemberArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="graphArn", required=true)
-      private final Input<String> graphArn;
+      private final Output<String> graphArn;
 
-    public Input<String> getGraphArn() {
+    public Output<String> getGraphArn() {
         return this.graphArn;
     }
 
@@ -64,18 +64,18 @@ public final class MemberArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="message")
-      private final @Nullable Input<String> message;
+      private final @Nullable Output<String> message;
 
-    public Input<String> getMessage() {
-        return this.message == null ? Input.empty() : this.message;
+    public Output<String> getMessage() {
+        return this.message == null ? Output.empty() : this.message;
     }
 
     public MemberArgs(
-        Input<String> accountId,
-        @Nullable Input<Boolean> disableEmailNotification,
-        Input<String> emailAddress,
-        Input<String> graphArn,
-        @Nullable Input<String> message) {
+        Output<String> accountId,
+        @Nullable Output<Boolean> disableEmailNotification,
+        Output<String> emailAddress,
+        Output<String> graphArn,
+        @Nullable Output<String> message) {
         this.accountId = Objects.requireNonNull(accountId, "expected parameter 'accountId' to be non-null");
         this.disableEmailNotification = disableEmailNotification;
         this.emailAddress = Objects.requireNonNull(emailAddress, "expected parameter 'emailAddress' to be non-null");
@@ -84,11 +84,11 @@ public final class MemberArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private MemberArgs() {
-        this.accountId = Input.empty();
-        this.disableEmailNotification = Input.empty();
-        this.emailAddress = Input.empty();
-        this.graphArn = Input.empty();
-        this.message = Input.empty();
+        this.accountId = Output.empty();
+        this.disableEmailNotification = Output.empty();
+        this.emailAddress = Output.empty();
+        this.graphArn = Output.empty();
+        this.message = Output.empty();
     }
 
     public static Builder builder() {
@@ -100,11 +100,11 @@ public final class MemberArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> accountId;
-        private @Nullable Input<Boolean> disableEmailNotification;
-        private Input<String> emailAddress;
-        private Input<String> graphArn;
-        private @Nullable Input<String> message;
+        private Output<String> accountId;
+        private @Nullable Output<Boolean> disableEmailNotification;
+        private Output<String> emailAddress;
+        private Output<String> graphArn;
+        private @Nullable Output<String> message;
 
         public Builder() {
     	      // Empty
@@ -119,53 +119,53 @@ public final class MemberArgs extends io.pulumi.resources.ResourceArgs {
     	      this.message = defaults.message;
         }
 
-        public Builder accountId(Input<String> accountId) {
+        public Builder accountId(Output<String> accountId) {
             this.accountId = Objects.requireNonNull(accountId);
             return this;
         }
 
         public Builder accountId(String accountId) {
-            this.accountId = Input.of(Objects.requireNonNull(accountId));
+            this.accountId = Output.of(Objects.requireNonNull(accountId));
             return this;
         }
 
-        public Builder disableEmailNotification(@Nullable Input<Boolean> disableEmailNotification) {
+        public Builder disableEmailNotification(@Nullable Output<Boolean> disableEmailNotification) {
             this.disableEmailNotification = disableEmailNotification;
             return this;
         }
 
         public Builder disableEmailNotification(@Nullable Boolean disableEmailNotification) {
-            this.disableEmailNotification = Input.ofNullable(disableEmailNotification);
+            this.disableEmailNotification = Output.ofNullable(disableEmailNotification);
             return this;
         }
 
-        public Builder emailAddress(Input<String> emailAddress) {
+        public Builder emailAddress(Output<String> emailAddress) {
             this.emailAddress = Objects.requireNonNull(emailAddress);
             return this;
         }
 
         public Builder emailAddress(String emailAddress) {
-            this.emailAddress = Input.of(Objects.requireNonNull(emailAddress));
+            this.emailAddress = Output.of(Objects.requireNonNull(emailAddress));
             return this;
         }
 
-        public Builder graphArn(Input<String> graphArn) {
+        public Builder graphArn(Output<String> graphArn) {
             this.graphArn = Objects.requireNonNull(graphArn);
             return this;
         }
 
         public Builder graphArn(String graphArn) {
-            this.graphArn = Input.of(Objects.requireNonNull(graphArn));
+            this.graphArn = Output.of(Objects.requireNonNull(graphArn));
             return this;
         }
 
-        public Builder message(@Nullable Input<String> message) {
+        public Builder message(@Nullable Output<String> message) {
             this.message = message;
             return this;
         }
 
         public Builder message(@Nullable String message) {
-            this.message = Input.ofNullable(message);
+            this.message = Output.ofNullable(message);
             return this;
         }
         public MemberArgs build() {

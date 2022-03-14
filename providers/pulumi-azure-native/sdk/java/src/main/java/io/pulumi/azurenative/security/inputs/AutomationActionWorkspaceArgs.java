@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.security.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -24,9 +24,9 @@ public final class AutomationActionWorkspaceArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="actionType", required=true)
-      private final Input<String> actionType;
+      private final Output<String> actionType;
 
-    public Input<String> getActionType() {
+    public Output<String> getActionType() {
         return this.actionType;
     }
 
@@ -35,22 +35,22 @@ public final class AutomationActionWorkspaceArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="workspaceResourceId")
-      private final @Nullable Input<String> workspaceResourceId;
+      private final @Nullable Output<String> workspaceResourceId;
 
-    public Input<String> getWorkspaceResourceId() {
-        return this.workspaceResourceId == null ? Input.empty() : this.workspaceResourceId;
+    public Output<String> getWorkspaceResourceId() {
+        return this.workspaceResourceId == null ? Output.empty() : this.workspaceResourceId;
     }
 
     public AutomationActionWorkspaceArgs(
-        Input<String> actionType,
-        @Nullable Input<String> workspaceResourceId) {
+        Output<String> actionType,
+        @Nullable Output<String> workspaceResourceId) {
         this.actionType = Objects.requireNonNull(actionType, "expected parameter 'actionType' to be non-null");
         this.workspaceResourceId = workspaceResourceId;
     }
 
     private AutomationActionWorkspaceArgs() {
-        this.actionType = Input.empty();
-        this.workspaceResourceId = Input.empty();
+        this.actionType = Output.empty();
+        this.workspaceResourceId = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class AutomationActionWorkspaceArgs extends io.pulumi.resources.Res
     }
 
     public static final class Builder {
-        private Input<String> actionType;
-        private @Nullable Input<String> workspaceResourceId;
+        private Output<String> actionType;
+        private @Nullable Output<String> workspaceResourceId;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class AutomationActionWorkspaceArgs extends io.pulumi.resources.Res
     	      this.workspaceResourceId = defaults.workspaceResourceId;
         }
 
-        public Builder actionType(Input<String> actionType) {
+        public Builder actionType(Output<String> actionType) {
             this.actionType = Objects.requireNonNull(actionType);
             return this;
         }
 
         public Builder actionType(String actionType) {
-            this.actionType = Input.of(Objects.requireNonNull(actionType));
+            this.actionType = Output.of(Objects.requireNonNull(actionType));
             return this;
         }
 
-        public Builder workspaceResourceId(@Nullable Input<String> workspaceResourceId) {
+        public Builder workspaceResourceId(@Nullable Output<String> workspaceResourceId) {
             this.workspaceResourceId = workspaceResourceId;
             return this;
         }
 
         public Builder workspaceResourceId(@Nullable String workspaceResourceId) {
-            this.workspaceResourceId = Input.ofNullable(workspaceResourceId);
+            this.workspaceResourceId = Output.ofNullable(workspaceResourceId);
             return this;
         }
         public AutomationActionWorkspaceArgs build() {

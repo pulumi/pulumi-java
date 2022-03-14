@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.managedidentities_v1;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -22,10 +22,10 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="admin")
-      private final @Nullable Input<String> admin;
+      private final @Nullable Output<String> admin;
 
-    public Input<String> getAdmin() {
-        return this.admin == null ? Input.empty() : this.admin;
+    public Output<String> getAdmin() {
+        return this.admin == null ? Output.empty() : this.admin;
     }
 
     /**
@@ -33,10 +33,10 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="auditLogsEnabled")
-      private final @Nullable Input<Boolean> auditLogsEnabled;
+      private final @Nullable Output<Boolean> auditLogsEnabled;
 
-    public Input<Boolean> getAuditLogsEnabled() {
-        return this.auditLogsEnabled == null ? Input.empty() : this.auditLogsEnabled;
+    public Output<Boolean> getAuditLogsEnabled() {
+        return this.auditLogsEnabled == null ? Output.empty() : this.auditLogsEnabled;
     }
 
     /**
@@ -44,16 +44,16 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="authorizedNetworks")
-      private final @Nullable Input<List<String>> authorizedNetworks;
+      private final @Nullable Output<List<String>> authorizedNetworks;
 
-    public Input<List<String>> getAuthorizedNetworks() {
-        return this.authorizedNetworks == null ? Input.empty() : this.authorizedNetworks;
+    public Output<List<String>> getAuthorizedNetworks() {
+        return this.authorizedNetworks == null ? Output.empty() : this.authorizedNetworks;
     }
 
     @InputImport(name="domainName", required=true)
-      private final Input<String> domainName;
+      private final Output<String> domainName;
 
-    public Input<String> getDomainName() {
+    public Output<String> getDomainName() {
         return this.domainName;
     }
 
@@ -62,10 +62,10 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labels")
-      private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Output<Map<String,String>> labels;
 
-    public Input<Map<String,String>> getLabels() {
-        return this.labels == null ? Input.empty() : this.labels;
+    public Output<Map<String,String>> getLabels() {
+        return this.labels == null ? Output.empty() : this.labels;
     }
 
     /**
@@ -73,9 +73,9 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="locations", required=true)
-      private final Input<List<String>> locations;
+      private final Output<List<String>> locations;
 
-    public Input<List<String>> getLocations() {
+    public Output<List<String>> getLocations() {
         return this.locations;
     }
 
@@ -84,17 +84,17 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name", required=true)
-      private final Input<String> name;
+      private final Output<String> name;
 
-    public Input<String> getName() {
+    public Output<String> getName() {
         return this.name;
     }
 
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -102,22 +102,22 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="reservedIpRange", required=true)
-      private final Input<String> reservedIpRange;
+      private final Output<String> reservedIpRange;
 
-    public Input<String> getReservedIpRange() {
+    public Output<String> getReservedIpRange() {
         return this.reservedIpRange;
     }
 
     public DomainArgs(
-        @Nullable Input<String> admin,
-        @Nullable Input<Boolean> auditLogsEnabled,
-        @Nullable Input<List<String>> authorizedNetworks,
-        Input<String> domainName,
-        @Nullable Input<Map<String,String>> labels,
-        Input<List<String>> locations,
-        Input<String> name,
-        @Nullable Input<String> project,
-        Input<String> reservedIpRange) {
+        @Nullable Output<String> admin,
+        @Nullable Output<Boolean> auditLogsEnabled,
+        @Nullable Output<List<String>> authorizedNetworks,
+        Output<String> domainName,
+        @Nullable Output<Map<String,String>> labels,
+        Output<List<String>> locations,
+        Output<String> name,
+        @Nullable Output<String> project,
+        Output<String> reservedIpRange) {
         this.admin = admin;
         this.auditLogsEnabled = auditLogsEnabled;
         this.authorizedNetworks = authorizedNetworks;
@@ -130,15 +130,15 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DomainArgs() {
-        this.admin = Input.empty();
-        this.auditLogsEnabled = Input.empty();
-        this.authorizedNetworks = Input.empty();
-        this.domainName = Input.empty();
-        this.labels = Input.empty();
-        this.locations = Input.empty();
-        this.name = Input.empty();
-        this.project = Input.empty();
-        this.reservedIpRange = Input.empty();
+        this.admin = Output.empty();
+        this.auditLogsEnabled = Output.empty();
+        this.authorizedNetworks = Output.empty();
+        this.domainName = Output.empty();
+        this.labels = Output.empty();
+        this.locations = Output.empty();
+        this.name = Output.empty();
+        this.project = Output.empty();
+        this.reservedIpRange = Output.empty();
     }
 
     public static Builder builder() {
@@ -150,15 +150,15 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> admin;
-        private @Nullable Input<Boolean> auditLogsEnabled;
-        private @Nullable Input<List<String>> authorizedNetworks;
-        private Input<String> domainName;
-        private @Nullable Input<Map<String,String>> labels;
-        private Input<List<String>> locations;
-        private Input<String> name;
-        private @Nullable Input<String> project;
-        private Input<String> reservedIpRange;
+        private @Nullable Output<String> admin;
+        private @Nullable Output<Boolean> auditLogsEnabled;
+        private @Nullable Output<List<String>> authorizedNetworks;
+        private Output<String> domainName;
+        private @Nullable Output<Map<String,String>> labels;
+        private Output<List<String>> locations;
+        private Output<String> name;
+        private @Nullable Output<String> project;
+        private Output<String> reservedIpRange;
 
         public Builder() {
     	      // Empty
@@ -177,93 +177,93 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
     	      this.reservedIpRange = defaults.reservedIpRange;
         }
 
-        public Builder admin(@Nullable Input<String> admin) {
+        public Builder admin(@Nullable Output<String> admin) {
             this.admin = admin;
             return this;
         }
 
         public Builder admin(@Nullable String admin) {
-            this.admin = Input.ofNullable(admin);
+            this.admin = Output.ofNullable(admin);
             return this;
         }
 
-        public Builder auditLogsEnabled(@Nullable Input<Boolean> auditLogsEnabled) {
+        public Builder auditLogsEnabled(@Nullable Output<Boolean> auditLogsEnabled) {
             this.auditLogsEnabled = auditLogsEnabled;
             return this;
         }
 
         public Builder auditLogsEnabled(@Nullable Boolean auditLogsEnabled) {
-            this.auditLogsEnabled = Input.ofNullable(auditLogsEnabled);
+            this.auditLogsEnabled = Output.ofNullable(auditLogsEnabled);
             return this;
         }
 
-        public Builder authorizedNetworks(@Nullable Input<List<String>> authorizedNetworks) {
+        public Builder authorizedNetworks(@Nullable Output<List<String>> authorizedNetworks) {
             this.authorizedNetworks = authorizedNetworks;
             return this;
         }
 
         public Builder authorizedNetworks(@Nullable List<String> authorizedNetworks) {
-            this.authorizedNetworks = Input.ofNullable(authorizedNetworks);
+            this.authorizedNetworks = Output.ofNullable(authorizedNetworks);
             return this;
         }
 
-        public Builder domainName(Input<String> domainName) {
+        public Builder domainName(Output<String> domainName) {
             this.domainName = Objects.requireNonNull(domainName);
             return this;
         }
 
         public Builder domainName(String domainName) {
-            this.domainName = Input.of(Objects.requireNonNull(domainName));
+            this.domainName = Output.of(Objects.requireNonNull(domainName));
             return this;
         }
 
-        public Builder labels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
         public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Input.ofNullable(labels);
+            this.labels = Output.ofNullable(labels);
             return this;
         }
 
-        public Builder locations(Input<List<String>> locations) {
+        public Builder locations(Output<List<String>> locations) {
             this.locations = Objects.requireNonNull(locations);
             return this;
         }
 
         public Builder locations(List<String> locations) {
-            this.locations = Input.of(Objects.requireNonNull(locations));
+            this.locations = Output.of(Objects.requireNonNull(locations));
             return this;
         }
 
-        public Builder name(Input<String> name) {
+        public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(String name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder reservedIpRange(Input<String> reservedIpRange) {
+        public Builder reservedIpRange(Output<String> reservedIpRange) {
             this.reservedIpRange = Objects.requireNonNull(reservedIpRange);
             return this;
         }
 
         public Builder reservedIpRange(String reservedIpRange) {
-            this.reservedIpRange = Input.of(Objects.requireNonNull(reservedIpRange));
+            this.reservedIpRange = Output.of(Objects.requireNonNull(reservedIpRange));
             return this;
         }
         public DomainArgs build() {

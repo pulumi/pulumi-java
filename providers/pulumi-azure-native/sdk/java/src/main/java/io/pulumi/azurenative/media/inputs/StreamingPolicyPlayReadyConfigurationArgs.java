@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.media.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class StreamingPolicyPlayReadyConfigurationArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="customLicenseAcquisitionUrlTemplate")
-      private final @Nullable Input<String> customLicenseAcquisitionUrlTemplate;
+      private final @Nullable Output<String> customLicenseAcquisitionUrlTemplate;
 
-    public Input<String> getCustomLicenseAcquisitionUrlTemplate() {
-        return this.customLicenseAcquisitionUrlTemplate == null ? Input.empty() : this.customLicenseAcquisitionUrlTemplate;
+    public Output<String> getCustomLicenseAcquisitionUrlTemplate() {
+        return this.customLicenseAcquisitionUrlTemplate == null ? Output.empty() : this.customLicenseAcquisitionUrlTemplate;
     }
 
     /**
@@ -34,22 +34,22 @@ public final class StreamingPolicyPlayReadyConfigurationArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="playReadyCustomAttributes")
-      private final @Nullable Input<String> playReadyCustomAttributes;
+      private final @Nullable Output<String> playReadyCustomAttributes;
 
-    public Input<String> getPlayReadyCustomAttributes() {
-        return this.playReadyCustomAttributes == null ? Input.empty() : this.playReadyCustomAttributes;
+    public Output<String> getPlayReadyCustomAttributes() {
+        return this.playReadyCustomAttributes == null ? Output.empty() : this.playReadyCustomAttributes;
     }
 
     public StreamingPolicyPlayReadyConfigurationArgs(
-        @Nullable Input<String> customLicenseAcquisitionUrlTemplate,
-        @Nullable Input<String> playReadyCustomAttributes) {
+        @Nullable Output<String> customLicenseAcquisitionUrlTemplate,
+        @Nullable Output<String> playReadyCustomAttributes) {
         this.customLicenseAcquisitionUrlTemplate = customLicenseAcquisitionUrlTemplate;
         this.playReadyCustomAttributes = playReadyCustomAttributes;
     }
 
     private StreamingPolicyPlayReadyConfigurationArgs() {
-        this.customLicenseAcquisitionUrlTemplate = Input.empty();
-        this.playReadyCustomAttributes = Input.empty();
+        this.customLicenseAcquisitionUrlTemplate = Output.empty();
+        this.playReadyCustomAttributes = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class StreamingPolicyPlayReadyConfigurationArgs extends io.pulumi.r
     }
 
     public static final class Builder {
-        private @Nullable Input<String> customLicenseAcquisitionUrlTemplate;
-        private @Nullable Input<String> playReadyCustomAttributes;
+        private @Nullable Output<String> customLicenseAcquisitionUrlTemplate;
+        private @Nullable Output<String> playReadyCustomAttributes;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class StreamingPolicyPlayReadyConfigurationArgs extends io.pulumi.r
     	      this.playReadyCustomAttributes = defaults.playReadyCustomAttributes;
         }
 
-        public Builder customLicenseAcquisitionUrlTemplate(@Nullable Input<String> customLicenseAcquisitionUrlTemplate) {
+        public Builder customLicenseAcquisitionUrlTemplate(@Nullable Output<String> customLicenseAcquisitionUrlTemplate) {
             this.customLicenseAcquisitionUrlTemplate = customLicenseAcquisitionUrlTemplate;
             return this;
         }
 
         public Builder customLicenseAcquisitionUrlTemplate(@Nullable String customLicenseAcquisitionUrlTemplate) {
-            this.customLicenseAcquisitionUrlTemplate = Input.ofNullable(customLicenseAcquisitionUrlTemplate);
+            this.customLicenseAcquisitionUrlTemplate = Output.ofNullable(customLicenseAcquisitionUrlTemplate);
             return this;
         }
 
-        public Builder playReadyCustomAttributes(@Nullable Input<String> playReadyCustomAttributes) {
+        public Builder playReadyCustomAttributes(@Nullable Output<String> playReadyCustomAttributes) {
             this.playReadyCustomAttributes = playReadyCustomAttributes;
             return this;
         }
 
         public Builder playReadyCustomAttributes(@Nullable String playReadyCustomAttributes) {
-            this.playReadyCustomAttributes = Input.ofNullable(playReadyCustomAttributes);
+            this.playReadyCustomAttributes = Output.ofNullable(playReadyCustomAttributes);
             return this;
         }
         public StreamingPolicyPlayReadyConfigurationArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.monitoring_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.monitoring_v1.enums.ChartOptionsMode;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class ChartOptionsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="mode")
-      private final @Nullable Input<ChartOptionsMode> mode;
+      private final @Nullable Output<ChartOptionsMode> mode;
 
-    public Input<ChartOptionsMode> getMode() {
-        return this.mode == null ? Input.empty() : this.mode;
+    public Output<ChartOptionsMode> getMode() {
+        return this.mode == null ? Output.empty() : this.mode;
     }
 
-    public ChartOptionsArgs(@Nullable Input<ChartOptionsMode> mode) {
+    public ChartOptionsArgs(@Nullable Output<ChartOptionsMode> mode) {
         this.mode = mode;
     }
 
     private ChartOptionsArgs() {
-        this.mode = Input.empty();
+        this.mode = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class ChartOptionsArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<ChartOptionsMode> mode;
+        private @Nullable Output<ChartOptionsMode> mode;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class ChartOptionsArgs extends io.pulumi.resources.ResourceArgs {
     	      this.mode = defaults.mode;
         }
 
-        public Builder mode(@Nullable Input<ChartOptionsMode> mode) {
+        public Builder mode(@Nullable Output<ChartOptionsMode> mode) {
             this.mode = mode;
             return this;
         }
 
         public Builder mode(@Nullable ChartOptionsMode mode) {
-            this.mode = Input.ofNullable(mode);
+            this.mode = Output.ofNullable(mode);
             return this;
         }
         public ChartOptionsArgs build() {

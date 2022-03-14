@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.chaos.inputs;
 
 import io.pulumi.azurenative.chaos.enums.TargetReferenceType;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,9 +23,9 @@ public final class TargetReferenceArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="id", required=true)
-      private final Input<String> id;
+      private final Output<String> id;
 
-    public Input<String> getId() {
+    public Output<String> getId() {
         return this.id;
     }
 
@@ -34,22 +34,22 @@ public final class TargetReferenceArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<TargetReferenceType> type;
+      private final Output<TargetReferenceType> type;
 
-    public Input<TargetReferenceType> getType() {
+    public Output<TargetReferenceType> getType() {
         return this.type;
     }
 
     public TargetReferenceArgs(
-        Input<String> id,
-        Input<TargetReferenceType> type) {
+        Output<String> id,
+        Output<TargetReferenceType> type) {
         this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
         this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
     }
 
     private TargetReferenceArgs() {
-        this.id = Input.empty();
-        this.type = Input.empty();
+        this.id = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class TargetReferenceArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private Input<String> id;
-        private Input<TargetReferenceType> type;
+        private Output<String> id;
+        private Output<TargetReferenceType> type;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class TargetReferenceArgs extends io.pulumi.resources.ResourceArgs 
     	      this.type = defaults.type;
         }
 
-        public Builder id(Input<String> id) {
+        public Builder id(Output<String> id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
         public Builder id(String id) {
-            this.id = Input.of(Objects.requireNonNull(id));
+            this.id = Output.of(Objects.requireNonNull(id));
             return this;
         }
 
-        public Builder type(Input<TargetReferenceType> type) {
+        public Builder type(Output<TargetReferenceType> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(TargetReferenceType type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
         public TargetReferenceArgs build() {

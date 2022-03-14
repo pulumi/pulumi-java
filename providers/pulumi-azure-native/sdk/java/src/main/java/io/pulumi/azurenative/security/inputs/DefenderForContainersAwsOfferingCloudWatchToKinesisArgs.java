@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.security.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class DefenderForContainersAwsOfferingCloudWatchToKinesisArgs exten
      * 
      */
     @InputImport(name="cloudRoleArn")
-      private final @Nullable Input<String> cloudRoleArn;
+      private final @Nullable Output<String> cloudRoleArn;
 
-    public Input<String> getCloudRoleArn() {
-        return this.cloudRoleArn == null ? Input.empty() : this.cloudRoleArn;
+    public Output<String> getCloudRoleArn() {
+        return this.cloudRoleArn == null ? Output.empty() : this.cloudRoleArn;
     }
 
-    public DefenderForContainersAwsOfferingCloudWatchToKinesisArgs(@Nullable Input<String> cloudRoleArn) {
+    public DefenderForContainersAwsOfferingCloudWatchToKinesisArgs(@Nullable Output<String> cloudRoleArn) {
         this.cloudRoleArn = cloudRoleArn;
     }
 
     private DefenderForContainersAwsOfferingCloudWatchToKinesisArgs() {
-        this.cloudRoleArn = Input.empty();
+        this.cloudRoleArn = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class DefenderForContainersAwsOfferingCloudWatchToKinesisArgs exten
     }
 
     public static final class Builder {
-        private @Nullable Input<String> cloudRoleArn;
+        private @Nullable Output<String> cloudRoleArn;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class DefenderForContainersAwsOfferingCloudWatchToKinesisArgs exten
     	      this.cloudRoleArn = defaults.cloudRoleArn;
         }
 
-        public Builder cloudRoleArn(@Nullable Input<String> cloudRoleArn) {
+        public Builder cloudRoleArn(@Nullable Output<String> cloudRoleArn) {
             this.cloudRoleArn = cloudRoleArn;
             return this;
         }
 
         public Builder cloudRoleArn(@Nullable String cloudRoleArn) {
-            this.cloudRoleArn = Input.ofNullable(cloudRoleArn);
+            this.cloudRoleArn = Output.ofNullable(cloudRoleArn);
             return this;
         }
         public DefenderForContainersAwsOfferingCloudWatchToKinesisArgs build() {

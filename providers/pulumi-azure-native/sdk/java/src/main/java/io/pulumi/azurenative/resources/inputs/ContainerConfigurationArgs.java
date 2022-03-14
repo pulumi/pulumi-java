@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.resources.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class ContainerConfigurationArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="containerGroupName")
-      private final @Nullable Input<String> containerGroupName;
+      private final @Nullable Output<String> containerGroupName;
 
-    public Input<String> getContainerGroupName() {
-        return this.containerGroupName == null ? Input.empty() : this.containerGroupName;
+    public Output<String> getContainerGroupName() {
+        return this.containerGroupName == null ? Output.empty() : this.containerGroupName;
     }
 
-    public ContainerConfigurationArgs(@Nullable Input<String> containerGroupName) {
+    public ContainerConfigurationArgs(@Nullable Output<String> containerGroupName) {
         this.containerGroupName = containerGroupName;
     }
 
     private ContainerConfigurationArgs() {
-        this.containerGroupName = Input.empty();
+        this.containerGroupName = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class ContainerConfigurationArgs extends io.pulumi.resources.Resour
     }
 
     public static final class Builder {
-        private @Nullable Input<String> containerGroupName;
+        private @Nullable Output<String> containerGroupName;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class ContainerConfigurationArgs extends io.pulumi.resources.Resour
     	      this.containerGroupName = defaults.containerGroupName;
         }
 
-        public Builder containerGroupName(@Nullable Input<String> containerGroupName) {
+        public Builder containerGroupName(@Nullable Output<String> containerGroupName) {
             this.containerGroupName = containerGroupName;
             return this;
         }
 
         public Builder containerGroupName(@Nullable String containerGroupName) {
-            this.containerGroupName = Input.ofNullable(containerGroupName);
+            this.containerGroupName = Output.ofNullable(containerGroupName);
             return this;
         }
         public ContainerConfigurationArgs build() {

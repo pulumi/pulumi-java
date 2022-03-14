@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.servicefabricmesh.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class NetworkResourcePropertiesArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class NetworkResourcePropertiesArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="kind", required=true)
-      private final Input<String> kind;
+      private final Output<String> kind;
 
-    public Input<String> getKind() {
+    public Output<String> getKind() {
         return this.kind;
     }
 
     public NetworkResourcePropertiesArgs(
-        @Nullable Input<String> description,
-        Input<String> kind) {
+        @Nullable Output<String> description,
+        Output<String> kind) {
         this.description = description;
         this.kind = Objects.requireNonNull(kind, "expected parameter 'kind' to be non-null");
     }
 
     private NetworkResourcePropertiesArgs() {
-        this.description = Input.empty();
-        this.kind = Input.empty();
+        this.description = Output.empty();
+        this.kind = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class NetworkResourcePropertiesArgs extends io.pulumi.resources.Res
     }
 
     public static final class Builder {
-        private @Nullable Input<String> description;
-        private Input<String> kind;
+        private @Nullable Output<String> description;
+        private Output<String> kind;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class NetworkResourcePropertiesArgs extends io.pulumi.resources.Res
     	      this.kind = defaults.kind;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder kind(Input<String> kind) {
+        public Builder kind(Output<String> kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
         public Builder kind(String kind) {
-            this.kind = Input.of(Objects.requireNonNull(kind));
+            this.kind = Output.of(Objects.requireNonNull(kind));
             return this;
         }
         public NetworkResourcePropertiesArgs build() {

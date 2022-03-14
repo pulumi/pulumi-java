@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dlp_v2.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2HotwordRuleArgs;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class GooglePrivacyDlpV2DetectionRuleArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="hotwordRule")
-      private final @Nullable Input<GooglePrivacyDlpV2HotwordRuleArgs> hotwordRule;
+      private final @Nullable Output<GooglePrivacyDlpV2HotwordRuleArgs> hotwordRule;
 
-    public Input<GooglePrivacyDlpV2HotwordRuleArgs> getHotwordRule() {
-        return this.hotwordRule == null ? Input.empty() : this.hotwordRule;
+    public Output<GooglePrivacyDlpV2HotwordRuleArgs> getHotwordRule() {
+        return this.hotwordRule == null ? Output.empty() : this.hotwordRule;
     }
 
-    public GooglePrivacyDlpV2DetectionRuleArgs(@Nullable Input<GooglePrivacyDlpV2HotwordRuleArgs> hotwordRule) {
+    public GooglePrivacyDlpV2DetectionRuleArgs(@Nullable Output<GooglePrivacyDlpV2HotwordRuleArgs> hotwordRule) {
         this.hotwordRule = hotwordRule;
     }
 
     private GooglePrivacyDlpV2DetectionRuleArgs() {
-        this.hotwordRule = Input.empty();
+        this.hotwordRule = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class GooglePrivacyDlpV2DetectionRuleArgs extends io.pulumi.resourc
     }
 
     public static final class Builder {
-        private @Nullable Input<GooglePrivacyDlpV2HotwordRuleArgs> hotwordRule;
+        private @Nullable Output<GooglePrivacyDlpV2HotwordRuleArgs> hotwordRule;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class GooglePrivacyDlpV2DetectionRuleArgs extends io.pulumi.resourc
     	      this.hotwordRule = defaults.hotwordRule;
         }
 
-        public Builder hotwordRule(@Nullable Input<GooglePrivacyDlpV2HotwordRuleArgs> hotwordRule) {
+        public Builder hotwordRule(@Nullable Output<GooglePrivacyDlpV2HotwordRuleArgs> hotwordRule) {
             this.hotwordRule = hotwordRule;
             return this;
         }
 
         public Builder hotwordRule(@Nullable GooglePrivacyDlpV2HotwordRuleArgs hotwordRule) {
-            this.hotwordRule = Input.ofNullable(hotwordRule);
+            this.hotwordRule = Output.ofNullable(hotwordRule);
             return this;
         }
         public GooglePrivacyDlpV2DetectionRuleArgs build() {

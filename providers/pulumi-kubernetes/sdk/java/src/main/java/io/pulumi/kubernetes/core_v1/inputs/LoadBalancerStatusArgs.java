@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.core_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.kubernetes.core_v1.inputs.LoadBalancerIngressArgs;
 import java.util.List;
@@ -24,18 +24,18 @@ public final class LoadBalancerStatusArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="ingress")
-      private final @Nullable Input<List<LoadBalancerIngressArgs>> ingress;
+      private final @Nullable Output<List<LoadBalancerIngressArgs>> ingress;
 
-    public Input<List<LoadBalancerIngressArgs>> getIngress() {
-        return this.ingress == null ? Input.empty() : this.ingress;
+    public Output<List<LoadBalancerIngressArgs>> getIngress() {
+        return this.ingress == null ? Output.empty() : this.ingress;
     }
 
-    public LoadBalancerStatusArgs(@Nullable Input<List<LoadBalancerIngressArgs>> ingress) {
+    public LoadBalancerStatusArgs(@Nullable Output<List<LoadBalancerIngressArgs>> ingress) {
         this.ingress = ingress;
     }
 
     private LoadBalancerStatusArgs() {
-        this.ingress = Input.empty();
+        this.ingress = Output.empty();
     }
 
     public static Builder builder() {
@@ -47,7 +47,7 @@ public final class LoadBalancerStatusArgs extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private @Nullable Input<List<LoadBalancerIngressArgs>> ingress;
+        private @Nullable Output<List<LoadBalancerIngressArgs>> ingress;
 
         public Builder() {
     	      // Empty
@@ -58,13 +58,13 @@ public final class LoadBalancerStatusArgs extends io.pulumi.resources.ResourceAr
     	      this.ingress = defaults.ingress;
         }
 
-        public Builder ingress(@Nullable Input<List<LoadBalancerIngressArgs>> ingress) {
+        public Builder ingress(@Nullable Output<List<LoadBalancerIngressArgs>> ingress) {
             this.ingress = ingress;
             return this;
         }
 
         public Builder ingress(@Nullable List<LoadBalancerIngressArgs> ingress) {
-            this.ingress = Input.ofNullable(ingress);
+            this.ingress = Output.ofNullable(ingress);
             return this;
         }
         public LoadBalancerStatusArgs build() {

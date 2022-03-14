@@ -8,7 +8,7 @@ import io.pulumi.azurenative.machinelearningcompute.enums.OrchestratorType;
 import io.pulumi.azurenative.machinelearningcompute.inputs.KubernetesClusterPropertiesArgs;
 import io.pulumi.azurenative.machinelearningcompute.inputs.SystemServiceArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -30,10 +30,10 @@ public final class AcsClusterPropertiesArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="agentCount")
-      private final @Nullable Input<Integer> agentCount;
+      private final @Nullable Output<Integer> agentCount;
 
-    public Input<Integer> getAgentCount() {
-        return this.agentCount == null ? Input.empty() : this.agentCount;
+    public Output<Integer> getAgentCount() {
+        return this.agentCount == null ? Output.empty() : this.agentCount;
     }
 
     /**
@@ -41,10 +41,10 @@ public final class AcsClusterPropertiesArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="agentVmSize")
-      private final @Nullable Input<Either<String,AgentVMSizeTypes>> agentVmSize;
+      private final @Nullable Output<Either<String,AgentVMSizeTypes>> agentVmSize;
 
-    public Input<Either<String,AgentVMSizeTypes>> getAgentVmSize() {
-        return this.agentVmSize == null ? Input.empty() : this.agentVmSize;
+    public Output<Either<String,AgentVMSizeTypes>> getAgentVmSize() {
+        return this.agentVmSize == null ? Output.empty() : this.agentVmSize;
     }
 
     /**
@@ -52,10 +52,10 @@ public final class AcsClusterPropertiesArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="masterCount")
-      private final @Nullable Input<Integer> masterCount;
+      private final @Nullable Output<Integer> masterCount;
 
-    public Input<Integer> getMasterCount() {
-        return this.masterCount == null ? Input.empty() : this.masterCount;
+    public Output<Integer> getMasterCount() {
+        return this.masterCount == null ? Output.empty() : this.masterCount;
     }
 
     /**
@@ -63,10 +63,10 @@ public final class AcsClusterPropertiesArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="orchestratorProperties")
-      private final @Nullable Input<KubernetesClusterPropertiesArgs> orchestratorProperties;
+      private final @Nullable Output<KubernetesClusterPropertiesArgs> orchestratorProperties;
 
-    public Input<KubernetesClusterPropertiesArgs> getOrchestratorProperties() {
-        return this.orchestratorProperties == null ? Input.empty() : this.orchestratorProperties;
+    public Output<KubernetesClusterPropertiesArgs> getOrchestratorProperties() {
+        return this.orchestratorProperties == null ? Output.empty() : this.orchestratorProperties;
     }
 
     /**
@@ -74,9 +74,9 @@ public final class AcsClusterPropertiesArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="orchestratorType", required=true)
-      private final Input<Either<String,OrchestratorType>> orchestratorType;
+      private final Output<Either<String,OrchestratorType>> orchestratorType;
 
-    public Input<Either<String,OrchestratorType>> getOrchestratorType() {
+    public Output<Either<String,OrchestratorType>> getOrchestratorType() {
         return this.orchestratorType;
     }
 
@@ -85,34 +85,34 @@ public final class AcsClusterPropertiesArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="systemServices")
-      private final @Nullable Input<List<SystemServiceArgs>> systemServices;
+      private final @Nullable Output<List<SystemServiceArgs>> systemServices;
 
-    public Input<List<SystemServiceArgs>> getSystemServices() {
-        return this.systemServices == null ? Input.empty() : this.systemServices;
+    public Output<List<SystemServiceArgs>> getSystemServices() {
+        return this.systemServices == null ? Output.empty() : this.systemServices;
     }
 
     public AcsClusterPropertiesArgs(
-        @Nullable Input<Integer> agentCount,
-        @Nullable Input<Either<String,AgentVMSizeTypes>> agentVmSize,
-        @Nullable Input<Integer> masterCount,
-        @Nullable Input<KubernetesClusterPropertiesArgs> orchestratorProperties,
-        Input<Either<String,OrchestratorType>> orchestratorType,
-        @Nullable Input<List<SystemServiceArgs>> systemServices) {
-        this.agentCount = agentCount == null ? Input.ofNullable(2) : agentCount;
-        this.agentVmSize = agentVmSize == null ? Input.ofLeft("Standard_D3_v2") : agentVmSize;
-        this.masterCount = masterCount == null ? Input.ofNullable(1) : masterCount;
+        @Nullable Output<Integer> agentCount,
+        @Nullable Output<Either<String,AgentVMSizeTypes>> agentVmSize,
+        @Nullable Output<Integer> masterCount,
+        @Nullable Output<KubernetesClusterPropertiesArgs> orchestratorProperties,
+        Output<Either<String,OrchestratorType>> orchestratorType,
+        @Nullable Output<List<SystemServiceArgs>> systemServices) {
+        this.agentCount = agentCount == null ? Output.ofNullable(2) : agentCount;
+        this.agentVmSize = agentVmSize == null ? Output.ofLeft("Standard_D3_v2") : agentVmSize;
+        this.masterCount = masterCount == null ? Output.ofNullable(1) : masterCount;
         this.orchestratorProperties = orchestratorProperties;
         this.orchestratorType = Objects.requireNonNull(orchestratorType, "expected parameter 'orchestratorType' to be non-null");
         this.systemServices = systemServices;
     }
 
     private AcsClusterPropertiesArgs() {
-        this.agentCount = Input.empty();
-        this.agentVmSize = Input.empty();
-        this.masterCount = Input.empty();
-        this.orchestratorProperties = Input.empty();
-        this.orchestratorType = Input.empty();
-        this.systemServices = Input.empty();
+        this.agentCount = Output.empty();
+        this.agentVmSize = Output.empty();
+        this.masterCount = Output.empty();
+        this.orchestratorProperties = Output.empty();
+        this.orchestratorType = Output.empty();
+        this.systemServices = Output.empty();
     }
 
     public static Builder builder() {
@@ -124,12 +124,12 @@ public final class AcsClusterPropertiesArgs extends io.pulumi.resources.Resource
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> agentCount;
-        private @Nullable Input<Either<String,AgentVMSizeTypes>> agentVmSize;
-        private @Nullable Input<Integer> masterCount;
-        private @Nullable Input<KubernetesClusterPropertiesArgs> orchestratorProperties;
-        private Input<Either<String,OrchestratorType>> orchestratorType;
-        private @Nullable Input<List<SystemServiceArgs>> systemServices;
+        private @Nullable Output<Integer> agentCount;
+        private @Nullable Output<Either<String,AgentVMSizeTypes>> agentVmSize;
+        private @Nullable Output<Integer> masterCount;
+        private @Nullable Output<KubernetesClusterPropertiesArgs> orchestratorProperties;
+        private Output<Either<String,OrchestratorType>> orchestratorType;
+        private @Nullable Output<List<SystemServiceArgs>> systemServices;
 
         public Builder() {
     	      // Empty
@@ -145,63 +145,63 @@ public final class AcsClusterPropertiesArgs extends io.pulumi.resources.Resource
     	      this.systemServices = defaults.systemServices;
         }
 
-        public Builder agentCount(@Nullable Input<Integer> agentCount) {
+        public Builder agentCount(@Nullable Output<Integer> agentCount) {
             this.agentCount = agentCount;
             return this;
         }
 
         public Builder agentCount(@Nullable Integer agentCount) {
-            this.agentCount = Input.ofNullable(agentCount);
+            this.agentCount = Output.ofNullable(agentCount);
             return this;
         }
 
-        public Builder agentVmSize(@Nullable Input<Either<String,AgentVMSizeTypes>> agentVmSize) {
+        public Builder agentVmSize(@Nullable Output<Either<String,AgentVMSizeTypes>> agentVmSize) {
             this.agentVmSize = agentVmSize;
             return this;
         }
 
         public Builder agentVmSize(@Nullable Either<String,AgentVMSizeTypes> agentVmSize) {
-            this.agentVmSize = Input.ofNullable(agentVmSize);
+            this.agentVmSize = Output.ofNullable(agentVmSize);
             return this;
         }
 
-        public Builder masterCount(@Nullable Input<Integer> masterCount) {
+        public Builder masterCount(@Nullable Output<Integer> masterCount) {
             this.masterCount = masterCount;
             return this;
         }
 
         public Builder masterCount(@Nullable Integer masterCount) {
-            this.masterCount = Input.ofNullable(masterCount);
+            this.masterCount = Output.ofNullable(masterCount);
             return this;
         }
 
-        public Builder orchestratorProperties(@Nullable Input<KubernetesClusterPropertiesArgs> orchestratorProperties) {
+        public Builder orchestratorProperties(@Nullable Output<KubernetesClusterPropertiesArgs> orchestratorProperties) {
             this.orchestratorProperties = orchestratorProperties;
             return this;
         }
 
         public Builder orchestratorProperties(@Nullable KubernetesClusterPropertiesArgs orchestratorProperties) {
-            this.orchestratorProperties = Input.ofNullable(orchestratorProperties);
+            this.orchestratorProperties = Output.ofNullable(orchestratorProperties);
             return this;
         }
 
-        public Builder orchestratorType(Input<Either<String,OrchestratorType>> orchestratorType) {
+        public Builder orchestratorType(Output<Either<String,OrchestratorType>> orchestratorType) {
             this.orchestratorType = Objects.requireNonNull(orchestratorType);
             return this;
         }
 
         public Builder orchestratorType(Either<String,OrchestratorType> orchestratorType) {
-            this.orchestratorType = Input.of(Objects.requireNonNull(orchestratorType));
+            this.orchestratorType = Output.of(Objects.requireNonNull(orchestratorType));
             return this;
         }
 
-        public Builder systemServices(@Nullable Input<List<SystemServiceArgs>> systemServices) {
+        public Builder systemServices(@Nullable Output<List<SystemServiceArgs>> systemServices) {
             this.systemServices = systemServices;
             return this;
         }
 
         public Builder systemServices(@Nullable List<SystemServiceArgs> systemServices) {
-            this.systemServices = Input.ofNullable(systemServices);
+            this.systemServices = Output.ofNullable(systemServices);
             return this;
         }
         public AcsClusterPropertiesArgs build() {

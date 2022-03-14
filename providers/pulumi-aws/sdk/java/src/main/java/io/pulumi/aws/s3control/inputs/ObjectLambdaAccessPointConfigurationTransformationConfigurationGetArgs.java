@@ -4,7 +4,7 @@
 package io.pulumi.aws.s3control.inputs;
 
 import io.pulumi.aws.s3control.inputs.ObjectLambdaAccessPointConfigurationTransformationConfigurationContentTransformationGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -20,9 +20,9 @@ public final class ObjectLambdaAccessPointConfigurationTransformationConfigurati
      * 
      */
     @InputImport(name="actions", required=true)
-      private final Input<List<String>> actions;
+      private final Output<List<String>> actions;
 
-    public Input<List<String>> getActions() {
+    public Output<List<String>> getActions() {
         return this.actions;
     }
 
@@ -31,22 +31,22 @@ public final class ObjectLambdaAccessPointConfigurationTransformationConfigurati
      * 
      */
     @InputImport(name="contentTransformation", required=true)
-      private final Input<ObjectLambdaAccessPointConfigurationTransformationConfigurationContentTransformationGetArgs> contentTransformation;
+      private final Output<ObjectLambdaAccessPointConfigurationTransformationConfigurationContentTransformationGetArgs> contentTransformation;
 
-    public Input<ObjectLambdaAccessPointConfigurationTransformationConfigurationContentTransformationGetArgs> getContentTransformation() {
+    public Output<ObjectLambdaAccessPointConfigurationTransformationConfigurationContentTransformationGetArgs> getContentTransformation() {
         return this.contentTransformation;
     }
 
     public ObjectLambdaAccessPointConfigurationTransformationConfigurationGetArgs(
-        Input<List<String>> actions,
-        Input<ObjectLambdaAccessPointConfigurationTransformationConfigurationContentTransformationGetArgs> contentTransformation) {
+        Output<List<String>> actions,
+        Output<ObjectLambdaAccessPointConfigurationTransformationConfigurationContentTransformationGetArgs> contentTransformation) {
         this.actions = Objects.requireNonNull(actions, "expected parameter 'actions' to be non-null");
         this.contentTransformation = Objects.requireNonNull(contentTransformation, "expected parameter 'contentTransformation' to be non-null");
     }
 
     private ObjectLambdaAccessPointConfigurationTransformationConfigurationGetArgs() {
-        this.actions = Input.empty();
-        this.contentTransformation = Input.empty();
+        this.actions = Output.empty();
+        this.contentTransformation = Output.empty();
     }
 
     public static Builder builder() {
@@ -58,8 +58,8 @@ public final class ObjectLambdaAccessPointConfigurationTransformationConfigurati
     }
 
     public static final class Builder {
-        private Input<List<String>> actions;
-        private Input<ObjectLambdaAccessPointConfigurationTransformationConfigurationContentTransformationGetArgs> contentTransformation;
+        private Output<List<String>> actions;
+        private Output<ObjectLambdaAccessPointConfigurationTransformationConfigurationContentTransformationGetArgs> contentTransformation;
 
         public Builder() {
     	      // Empty
@@ -71,23 +71,23 @@ public final class ObjectLambdaAccessPointConfigurationTransformationConfigurati
     	      this.contentTransformation = defaults.contentTransformation;
         }
 
-        public Builder actions(Input<List<String>> actions) {
+        public Builder actions(Output<List<String>> actions) {
             this.actions = Objects.requireNonNull(actions);
             return this;
         }
 
         public Builder actions(List<String> actions) {
-            this.actions = Input.of(Objects.requireNonNull(actions));
+            this.actions = Output.of(Objects.requireNonNull(actions));
             return this;
         }
 
-        public Builder contentTransformation(Input<ObjectLambdaAccessPointConfigurationTransformationConfigurationContentTransformationGetArgs> contentTransformation) {
+        public Builder contentTransformation(Output<ObjectLambdaAccessPointConfigurationTransformationConfigurationContentTransformationGetArgs> contentTransformation) {
             this.contentTransformation = Objects.requireNonNull(contentTransformation);
             return this;
         }
 
         public Builder contentTransformation(ObjectLambdaAccessPointConfigurationTransformationConfigurationContentTransformationGetArgs contentTransformation) {
-            this.contentTransformation = Input.of(Objects.requireNonNull(contentTransformation));
+            this.contentTransformation = Output.of(Objects.requireNonNull(contentTransformation));
             return this;
         }
         public ObjectLambdaAccessPointConfigurationTransformationConfigurationGetArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.autoscaling.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
@@ -15,18 +15,18 @@ public final class WarmPoolInstanceReusePolicyArgs extends io.pulumi.resources.R
     public static final WarmPoolInstanceReusePolicyArgs Empty = new WarmPoolInstanceReusePolicyArgs();
 
     @InputImport(name="reuseOnScaleIn")
-      private final @Nullable Input<Boolean> reuseOnScaleIn;
+      private final @Nullable Output<Boolean> reuseOnScaleIn;
 
-    public Input<Boolean> getReuseOnScaleIn() {
-        return this.reuseOnScaleIn == null ? Input.empty() : this.reuseOnScaleIn;
+    public Output<Boolean> getReuseOnScaleIn() {
+        return this.reuseOnScaleIn == null ? Output.empty() : this.reuseOnScaleIn;
     }
 
-    public WarmPoolInstanceReusePolicyArgs(@Nullable Input<Boolean> reuseOnScaleIn) {
+    public WarmPoolInstanceReusePolicyArgs(@Nullable Output<Boolean> reuseOnScaleIn) {
         this.reuseOnScaleIn = reuseOnScaleIn;
     }
 
     private WarmPoolInstanceReusePolicyArgs() {
-        this.reuseOnScaleIn = Input.empty();
+        this.reuseOnScaleIn = Output.empty();
     }
 
     public static Builder builder() {
@@ -38,7 +38,7 @@ public final class WarmPoolInstanceReusePolicyArgs extends io.pulumi.resources.R
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> reuseOnScaleIn;
+        private @Nullable Output<Boolean> reuseOnScaleIn;
 
         public Builder() {
     	      // Empty
@@ -49,13 +49,13 @@ public final class WarmPoolInstanceReusePolicyArgs extends io.pulumi.resources.R
     	      this.reuseOnScaleIn = defaults.reuseOnScaleIn;
         }
 
-        public Builder reuseOnScaleIn(@Nullable Input<Boolean> reuseOnScaleIn) {
+        public Builder reuseOnScaleIn(@Nullable Output<Boolean> reuseOnScaleIn) {
             this.reuseOnScaleIn = reuseOnScaleIn;
             return this;
         }
 
         public Builder reuseOnScaleIn(@Nullable Boolean reuseOnScaleIn) {
-            this.reuseOnScaleIn = Input.ofNullable(reuseOnScaleIn);
+            this.reuseOnScaleIn = Output.ofNullable(reuseOnScaleIn);
             return this;
         }
         public WarmPoolInstanceReusePolicyArgs build() {

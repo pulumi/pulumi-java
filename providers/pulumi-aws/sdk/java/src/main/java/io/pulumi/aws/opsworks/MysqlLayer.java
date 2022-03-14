@@ -8,7 +8,6 @@ import io.pulumi.aws.opsworks.MysqlLayerArgs;
 import io.pulumi.aws.opsworks.inputs.MysqlLayerState;
 import io.pulumi.aws.opsworks.outputs.MysqlLayerCloudwatchConfiguration;
 import io.pulumi.aws.opsworks.outputs.MysqlLayerEbsVolume;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -382,14 +381,14 @@ public class MysqlLayer extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public MysqlLayer(String name, MysqlLayerArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:opsworks/mysqlLayer:MysqlLayer", name, args == null ? MysqlLayerArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws:opsworks/mysqlLayer:MysqlLayer", name, args == null ? MysqlLayerArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private MysqlLayer(String name, Input<String> id, @Nullable MysqlLayerState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private MysqlLayer(String name, Output<String> id, @Nullable MysqlLayerState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws:opsworks/mysqlLayer:MysqlLayer", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -405,7 +404,7 @@ public class MysqlLayer extends io.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static MysqlLayer get(String name, Input<String> id, @Nullable MysqlLayerState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static MysqlLayer get(String name, Output<String> id, @Nullable MysqlLayerState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new MysqlLayer(name, id, state, options);
     }
 }

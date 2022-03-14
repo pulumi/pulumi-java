@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.containeranalysis_v1.enums.DiscoveryNoteAnalysisKind;
 import java.util.Objects;
@@ -22,18 +22,18 @@ public final class DiscoveryNoteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="analysisKind", required=true)
-      private final Input<DiscoveryNoteAnalysisKind> analysisKind;
+      private final Output<DiscoveryNoteAnalysisKind> analysisKind;
 
-    public Input<DiscoveryNoteAnalysisKind> getAnalysisKind() {
+    public Output<DiscoveryNoteAnalysisKind> getAnalysisKind() {
         return this.analysisKind;
     }
 
-    public DiscoveryNoteArgs(Input<DiscoveryNoteAnalysisKind> analysisKind) {
+    public DiscoveryNoteArgs(Output<DiscoveryNoteAnalysisKind> analysisKind) {
         this.analysisKind = Objects.requireNonNull(analysisKind, "expected parameter 'analysisKind' to be non-null");
     }
 
     private DiscoveryNoteArgs() {
-        this.analysisKind = Input.empty();
+        this.analysisKind = Output.empty();
     }
 
     public static Builder builder() {
@@ -45,7 +45,7 @@ public final class DiscoveryNoteArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<DiscoveryNoteAnalysisKind> analysisKind;
+        private Output<DiscoveryNoteAnalysisKind> analysisKind;
 
         public Builder() {
     	      // Empty
@@ -56,13 +56,13 @@ public final class DiscoveryNoteArgs extends io.pulumi.resources.ResourceArgs {
     	      this.analysisKind = defaults.analysisKind;
         }
 
-        public Builder analysisKind(Input<DiscoveryNoteAnalysisKind> analysisKind) {
+        public Builder analysisKind(Output<DiscoveryNoteAnalysisKind> analysisKind) {
             this.analysisKind = Objects.requireNonNull(analysisKind);
             return this;
         }
 
         public Builder analysisKind(DiscoveryNoteAnalysisKind analysisKind) {
-            this.analysisKind = Input.of(Objects.requireNonNull(analysisKind));
+            this.analysisKind = Output.of(Objects.requireNonNull(analysisKind));
             return this;
         }
         public DiscoveryNoteArgs build() {

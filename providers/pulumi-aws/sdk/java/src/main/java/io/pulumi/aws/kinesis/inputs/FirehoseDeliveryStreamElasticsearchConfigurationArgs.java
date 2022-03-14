@@ -6,7 +6,7 @@ package io.pulumi.aws.kinesis.inputs;
 import io.pulumi.aws.kinesis.inputs.FirehoseDeliveryStreamElasticsearchConfigurationCloudwatchLoggingOptionsArgs;
 import io.pulumi.aws.kinesis.inputs.FirehoseDeliveryStreamElasticsearchConfigurationProcessingConfigurationArgs;
 import io.pulumi.aws.kinesis.inputs.FirehoseDeliveryStreamElasticsearchConfigurationVpcConfigArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -23,10 +23,10 @@ public final class FirehoseDeliveryStreamElasticsearchConfigurationArgs extends 
      * 
      */
     @InputImport(name="bufferingInterval")
-      private final @Nullable Input<Integer> bufferingInterval;
+      private final @Nullable Output<Integer> bufferingInterval;
 
-    public Input<Integer> getBufferingInterval() {
-        return this.bufferingInterval == null ? Input.empty() : this.bufferingInterval;
+    public Output<Integer> getBufferingInterval() {
+        return this.bufferingInterval == null ? Output.empty() : this.bufferingInterval;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class FirehoseDeliveryStreamElasticsearchConfigurationArgs extends 
      * 
      */
     @InputImport(name="bufferingSize")
-      private final @Nullable Input<Integer> bufferingSize;
+      private final @Nullable Output<Integer> bufferingSize;
 
-    public Input<Integer> getBufferingSize() {
-        return this.bufferingSize == null ? Input.empty() : this.bufferingSize;
+    public Output<Integer> getBufferingSize() {
+        return this.bufferingSize == null ? Output.empty() : this.bufferingSize;
     }
 
     /**
@@ -45,10 +45,10 @@ public final class FirehoseDeliveryStreamElasticsearchConfigurationArgs extends 
      * 
      */
     @InputImport(name="cloudwatchLoggingOptions")
-      private final @Nullable Input<FirehoseDeliveryStreamElasticsearchConfigurationCloudwatchLoggingOptionsArgs> cloudwatchLoggingOptions;
+      private final @Nullable Output<FirehoseDeliveryStreamElasticsearchConfigurationCloudwatchLoggingOptionsArgs> cloudwatchLoggingOptions;
 
-    public Input<FirehoseDeliveryStreamElasticsearchConfigurationCloudwatchLoggingOptionsArgs> getCloudwatchLoggingOptions() {
-        return this.cloudwatchLoggingOptions == null ? Input.empty() : this.cloudwatchLoggingOptions;
+    public Output<FirehoseDeliveryStreamElasticsearchConfigurationCloudwatchLoggingOptionsArgs> getCloudwatchLoggingOptions() {
+        return this.cloudwatchLoggingOptions == null ? Output.empty() : this.cloudwatchLoggingOptions;
     }
 
     /**
@@ -56,10 +56,10 @@ public final class FirehoseDeliveryStreamElasticsearchConfigurationArgs extends 
      * 
      */
     @InputImport(name="clusterEndpoint")
-      private final @Nullable Input<String> clusterEndpoint;
+      private final @Nullable Output<String> clusterEndpoint;
 
-    public Input<String> getClusterEndpoint() {
-        return this.clusterEndpoint == null ? Input.empty() : this.clusterEndpoint;
+    public Output<String> getClusterEndpoint() {
+        return this.clusterEndpoint == null ? Output.empty() : this.clusterEndpoint;
     }
 
     /**
@@ -67,10 +67,10 @@ public final class FirehoseDeliveryStreamElasticsearchConfigurationArgs extends 
      * 
      */
     @InputImport(name="domainArn")
-      private final @Nullable Input<String> domainArn;
+      private final @Nullable Output<String> domainArn;
 
-    public Input<String> getDomainArn() {
-        return this.domainArn == null ? Input.empty() : this.domainArn;
+    public Output<String> getDomainArn() {
+        return this.domainArn == null ? Output.empty() : this.domainArn;
     }
 
     /**
@@ -78,9 +78,9 @@ public final class FirehoseDeliveryStreamElasticsearchConfigurationArgs extends 
      * 
      */
     @InputImport(name="indexName", required=true)
-      private final Input<String> indexName;
+      private final Output<String> indexName;
 
-    public Input<String> getIndexName() {
+    public Output<String> getIndexName() {
         return this.indexName;
     }
 
@@ -89,10 +89,10 @@ public final class FirehoseDeliveryStreamElasticsearchConfigurationArgs extends 
      * 
      */
     @InputImport(name="indexRotationPeriod")
-      private final @Nullable Input<String> indexRotationPeriod;
+      private final @Nullable Output<String> indexRotationPeriod;
 
-    public Input<String> getIndexRotationPeriod() {
-        return this.indexRotationPeriod == null ? Input.empty() : this.indexRotationPeriod;
+    public Output<String> getIndexRotationPeriod() {
+        return this.indexRotationPeriod == null ? Output.empty() : this.indexRotationPeriod;
     }
 
     /**
@@ -100,10 +100,10 @@ public final class FirehoseDeliveryStreamElasticsearchConfigurationArgs extends 
      * 
      */
     @InputImport(name="processingConfiguration")
-      private final @Nullable Input<FirehoseDeliveryStreamElasticsearchConfigurationProcessingConfigurationArgs> processingConfiguration;
+      private final @Nullable Output<FirehoseDeliveryStreamElasticsearchConfigurationProcessingConfigurationArgs> processingConfiguration;
 
-    public Input<FirehoseDeliveryStreamElasticsearchConfigurationProcessingConfigurationArgs> getProcessingConfiguration() {
-        return this.processingConfiguration == null ? Input.empty() : this.processingConfiguration;
+    public Output<FirehoseDeliveryStreamElasticsearchConfigurationProcessingConfigurationArgs> getProcessingConfiguration() {
+        return this.processingConfiguration == null ? Output.empty() : this.processingConfiguration;
     }
 
     /**
@@ -111,10 +111,10 @@ public final class FirehoseDeliveryStreamElasticsearchConfigurationArgs extends 
      * 
      */
     @InputImport(name="retryDuration")
-      private final @Nullable Input<Integer> retryDuration;
+      private final @Nullable Output<Integer> retryDuration;
 
-    public Input<Integer> getRetryDuration() {
-        return this.retryDuration == null ? Input.empty() : this.retryDuration;
+    public Output<Integer> getRetryDuration() {
+        return this.retryDuration == null ? Output.empty() : this.retryDuration;
     }
 
     /**
@@ -122,9 +122,9 @@ public final class FirehoseDeliveryStreamElasticsearchConfigurationArgs extends 
      * 
      */
     @InputImport(name="roleArn", required=true)
-      private final Input<String> roleArn;
+      private final Output<String> roleArn;
 
-    public Input<String> getRoleArn() {
+    public Output<String> getRoleArn() {
         return this.roleArn;
     }
 
@@ -133,10 +133,10 @@ public final class FirehoseDeliveryStreamElasticsearchConfigurationArgs extends 
      * 
      */
     @InputImport(name="s3BackupMode")
-      private final @Nullable Input<String> s3BackupMode;
+      private final @Nullable Output<String> s3BackupMode;
 
-    public Input<String> getS3BackupMode() {
-        return this.s3BackupMode == null ? Input.empty() : this.s3BackupMode;
+    public Output<String> getS3BackupMode() {
+        return this.s3BackupMode == null ? Output.empty() : this.s3BackupMode;
     }
 
     /**
@@ -144,10 +144,10 @@ public final class FirehoseDeliveryStreamElasticsearchConfigurationArgs extends 
      * 
      */
     @InputImport(name="typeName")
-      private final @Nullable Input<String> typeName;
+      private final @Nullable Output<String> typeName;
 
-    public Input<String> getTypeName() {
-        return this.typeName == null ? Input.empty() : this.typeName;
+    public Output<String> getTypeName() {
+        return this.typeName == null ? Output.empty() : this.typeName;
     }
 
     /**
@@ -155,26 +155,26 @@ public final class FirehoseDeliveryStreamElasticsearchConfigurationArgs extends 
      * 
      */
     @InputImport(name="vpcConfig")
-      private final @Nullable Input<FirehoseDeliveryStreamElasticsearchConfigurationVpcConfigArgs> vpcConfig;
+      private final @Nullable Output<FirehoseDeliveryStreamElasticsearchConfigurationVpcConfigArgs> vpcConfig;
 
-    public Input<FirehoseDeliveryStreamElasticsearchConfigurationVpcConfigArgs> getVpcConfig() {
-        return this.vpcConfig == null ? Input.empty() : this.vpcConfig;
+    public Output<FirehoseDeliveryStreamElasticsearchConfigurationVpcConfigArgs> getVpcConfig() {
+        return this.vpcConfig == null ? Output.empty() : this.vpcConfig;
     }
 
     public FirehoseDeliveryStreamElasticsearchConfigurationArgs(
-        @Nullable Input<Integer> bufferingInterval,
-        @Nullable Input<Integer> bufferingSize,
-        @Nullable Input<FirehoseDeliveryStreamElasticsearchConfigurationCloudwatchLoggingOptionsArgs> cloudwatchLoggingOptions,
-        @Nullable Input<String> clusterEndpoint,
-        @Nullable Input<String> domainArn,
-        Input<String> indexName,
-        @Nullable Input<String> indexRotationPeriod,
-        @Nullable Input<FirehoseDeliveryStreamElasticsearchConfigurationProcessingConfigurationArgs> processingConfiguration,
-        @Nullable Input<Integer> retryDuration,
-        Input<String> roleArn,
-        @Nullable Input<String> s3BackupMode,
-        @Nullable Input<String> typeName,
-        @Nullable Input<FirehoseDeliveryStreamElasticsearchConfigurationVpcConfigArgs> vpcConfig) {
+        @Nullable Output<Integer> bufferingInterval,
+        @Nullable Output<Integer> bufferingSize,
+        @Nullable Output<FirehoseDeliveryStreamElasticsearchConfigurationCloudwatchLoggingOptionsArgs> cloudwatchLoggingOptions,
+        @Nullable Output<String> clusterEndpoint,
+        @Nullable Output<String> domainArn,
+        Output<String> indexName,
+        @Nullable Output<String> indexRotationPeriod,
+        @Nullable Output<FirehoseDeliveryStreamElasticsearchConfigurationProcessingConfigurationArgs> processingConfiguration,
+        @Nullable Output<Integer> retryDuration,
+        Output<String> roleArn,
+        @Nullable Output<String> s3BackupMode,
+        @Nullable Output<String> typeName,
+        @Nullable Output<FirehoseDeliveryStreamElasticsearchConfigurationVpcConfigArgs> vpcConfig) {
         this.bufferingInterval = bufferingInterval;
         this.bufferingSize = bufferingSize;
         this.cloudwatchLoggingOptions = cloudwatchLoggingOptions;
@@ -191,19 +191,19 @@ public final class FirehoseDeliveryStreamElasticsearchConfigurationArgs extends 
     }
 
     private FirehoseDeliveryStreamElasticsearchConfigurationArgs() {
-        this.bufferingInterval = Input.empty();
-        this.bufferingSize = Input.empty();
-        this.cloudwatchLoggingOptions = Input.empty();
-        this.clusterEndpoint = Input.empty();
-        this.domainArn = Input.empty();
-        this.indexName = Input.empty();
-        this.indexRotationPeriod = Input.empty();
-        this.processingConfiguration = Input.empty();
-        this.retryDuration = Input.empty();
-        this.roleArn = Input.empty();
-        this.s3BackupMode = Input.empty();
-        this.typeName = Input.empty();
-        this.vpcConfig = Input.empty();
+        this.bufferingInterval = Output.empty();
+        this.bufferingSize = Output.empty();
+        this.cloudwatchLoggingOptions = Output.empty();
+        this.clusterEndpoint = Output.empty();
+        this.domainArn = Output.empty();
+        this.indexName = Output.empty();
+        this.indexRotationPeriod = Output.empty();
+        this.processingConfiguration = Output.empty();
+        this.retryDuration = Output.empty();
+        this.roleArn = Output.empty();
+        this.s3BackupMode = Output.empty();
+        this.typeName = Output.empty();
+        this.vpcConfig = Output.empty();
     }
 
     public static Builder builder() {
@@ -215,19 +215,19 @@ public final class FirehoseDeliveryStreamElasticsearchConfigurationArgs extends 
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> bufferingInterval;
-        private @Nullable Input<Integer> bufferingSize;
-        private @Nullable Input<FirehoseDeliveryStreamElasticsearchConfigurationCloudwatchLoggingOptionsArgs> cloudwatchLoggingOptions;
-        private @Nullable Input<String> clusterEndpoint;
-        private @Nullable Input<String> domainArn;
-        private Input<String> indexName;
-        private @Nullable Input<String> indexRotationPeriod;
-        private @Nullable Input<FirehoseDeliveryStreamElasticsearchConfigurationProcessingConfigurationArgs> processingConfiguration;
-        private @Nullable Input<Integer> retryDuration;
-        private Input<String> roleArn;
-        private @Nullable Input<String> s3BackupMode;
-        private @Nullable Input<String> typeName;
-        private @Nullable Input<FirehoseDeliveryStreamElasticsearchConfigurationVpcConfigArgs> vpcConfig;
+        private @Nullable Output<Integer> bufferingInterval;
+        private @Nullable Output<Integer> bufferingSize;
+        private @Nullable Output<FirehoseDeliveryStreamElasticsearchConfigurationCloudwatchLoggingOptionsArgs> cloudwatchLoggingOptions;
+        private @Nullable Output<String> clusterEndpoint;
+        private @Nullable Output<String> domainArn;
+        private Output<String> indexName;
+        private @Nullable Output<String> indexRotationPeriod;
+        private @Nullable Output<FirehoseDeliveryStreamElasticsearchConfigurationProcessingConfigurationArgs> processingConfiguration;
+        private @Nullable Output<Integer> retryDuration;
+        private Output<String> roleArn;
+        private @Nullable Output<String> s3BackupMode;
+        private @Nullable Output<String> typeName;
+        private @Nullable Output<FirehoseDeliveryStreamElasticsearchConfigurationVpcConfigArgs> vpcConfig;
 
         public Builder() {
     	      // Empty
@@ -250,133 +250,133 @@ public final class FirehoseDeliveryStreamElasticsearchConfigurationArgs extends 
     	      this.vpcConfig = defaults.vpcConfig;
         }
 
-        public Builder bufferingInterval(@Nullable Input<Integer> bufferingInterval) {
+        public Builder bufferingInterval(@Nullable Output<Integer> bufferingInterval) {
             this.bufferingInterval = bufferingInterval;
             return this;
         }
 
         public Builder bufferingInterval(@Nullable Integer bufferingInterval) {
-            this.bufferingInterval = Input.ofNullable(bufferingInterval);
+            this.bufferingInterval = Output.ofNullable(bufferingInterval);
             return this;
         }
 
-        public Builder bufferingSize(@Nullable Input<Integer> bufferingSize) {
+        public Builder bufferingSize(@Nullable Output<Integer> bufferingSize) {
             this.bufferingSize = bufferingSize;
             return this;
         }
 
         public Builder bufferingSize(@Nullable Integer bufferingSize) {
-            this.bufferingSize = Input.ofNullable(bufferingSize);
+            this.bufferingSize = Output.ofNullable(bufferingSize);
             return this;
         }
 
-        public Builder cloudwatchLoggingOptions(@Nullable Input<FirehoseDeliveryStreamElasticsearchConfigurationCloudwatchLoggingOptionsArgs> cloudwatchLoggingOptions) {
+        public Builder cloudwatchLoggingOptions(@Nullable Output<FirehoseDeliveryStreamElasticsearchConfigurationCloudwatchLoggingOptionsArgs> cloudwatchLoggingOptions) {
             this.cloudwatchLoggingOptions = cloudwatchLoggingOptions;
             return this;
         }
 
         public Builder cloudwatchLoggingOptions(@Nullable FirehoseDeliveryStreamElasticsearchConfigurationCloudwatchLoggingOptionsArgs cloudwatchLoggingOptions) {
-            this.cloudwatchLoggingOptions = Input.ofNullable(cloudwatchLoggingOptions);
+            this.cloudwatchLoggingOptions = Output.ofNullable(cloudwatchLoggingOptions);
             return this;
         }
 
-        public Builder clusterEndpoint(@Nullable Input<String> clusterEndpoint) {
+        public Builder clusterEndpoint(@Nullable Output<String> clusterEndpoint) {
             this.clusterEndpoint = clusterEndpoint;
             return this;
         }
 
         public Builder clusterEndpoint(@Nullable String clusterEndpoint) {
-            this.clusterEndpoint = Input.ofNullable(clusterEndpoint);
+            this.clusterEndpoint = Output.ofNullable(clusterEndpoint);
             return this;
         }
 
-        public Builder domainArn(@Nullable Input<String> domainArn) {
+        public Builder domainArn(@Nullable Output<String> domainArn) {
             this.domainArn = domainArn;
             return this;
         }
 
         public Builder domainArn(@Nullable String domainArn) {
-            this.domainArn = Input.ofNullable(domainArn);
+            this.domainArn = Output.ofNullable(domainArn);
             return this;
         }
 
-        public Builder indexName(Input<String> indexName) {
+        public Builder indexName(Output<String> indexName) {
             this.indexName = Objects.requireNonNull(indexName);
             return this;
         }
 
         public Builder indexName(String indexName) {
-            this.indexName = Input.of(Objects.requireNonNull(indexName));
+            this.indexName = Output.of(Objects.requireNonNull(indexName));
             return this;
         }
 
-        public Builder indexRotationPeriod(@Nullable Input<String> indexRotationPeriod) {
+        public Builder indexRotationPeriod(@Nullable Output<String> indexRotationPeriod) {
             this.indexRotationPeriod = indexRotationPeriod;
             return this;
         }
 
         public Builder indexRotationPeriod(@Nullable String indexRotationPeriod) {
-            this.indexRotationPeriod = Input.ofNullable(indexRotationPeriod);
+            this.indexRotationPeriod = Output.ofNullable(indexRotationPeriod);
             return this;
         }
 
-        public Builder processingConfiguration(@Nullable Input<FirehoseDeliveryStreamElasticsearchConfigurationProcessingConfigurationArgs> processingConfiguration) {
+        public Builder processingConfiguration(@Nullable Output<FirehoseDeliveryStreamElasticsearchConfigurationProcessingConfigurationArgs> processingConfiguration) {
             this.processingConfiguration = processingConfiguration;
             return this;
         }
 
         public Builder processingConfiguration(@Nullable FirehoseDeliveryStreamElasticsearchConfigurationProcessingConfigurationArgs processingConfiguration) {
-            this.processingConfiguration = Input.ofNullable(processingConfiguration);
+            this.processingConfiguration = Output.ofNullable(processingConfiguration);
             return this;
         }
 
-        public Builder retryDuration(@Nullable Input<Integer> retryDuration) {
+        public Builder retryDuration(@Nullable Output<Integer> retryDuration) {
             this.retryDuration = retryDuration;
             return this;
         }
 
         public Builder retryDuration(@Nullable Integer retryDuration) {
-            this.retryDuration = Input.ofNullable(retryDuration);
+            this.retryDuration = Output.ofNullable(retryDuration);
             return this;
         }
 
-        public Builder roleArn(Input<String> roleArn) {
+        public Builder roleArn(Output<String> roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
 
         public Builder roleArn(String roleArn) {
-            this.roleArn = Input.of(Objects.requireNonNull(roleArn));
+            this.roleArn = Output.of(Objects.requireNonNull(roleArn));
             return this;
         }
 
-        public Builder s3BackupMode(@Nullable Input<String> s3BackupMode) {
+        public Builder s3BackupMode(@Nullable Output<String> s3BackupMode) {
             this.s3BackupMode = s3BackupMode;
             return this;
         }
 
         public Builder s3BackupMode(@Nullable String s3BackupMode) {
-            this.s3BackupMode = Input.ofNullable(s3BackupMode);
+            this.s3BackupMode = Output.ofNullable(s3BackupMode);
             return this;
         }
 
-        public Builder typeName(@Nullable Input<String> typeName) {
+        public Builder typeName(@Nullable Output<String> typeName) {
             this.typeName = typeName;
             return this;
         }
 
         public Builder typeName(@Nullable String typeName) {
-            this.typeName = Input.ofNullable(typeName);
+            this.typeName = Output.ofNullable(typeName);
             return this;
         }
 
-        public Builder vpcConfig(@Nullable Input<FirehoseDeliveryStreamElasticsearchConfigurationVpcConfigArgs> vpcConfig) {
+        public Builder vpcConfig(@Nullable Output<FirehoseDeliveryStreamElasticsearchConfigurationVpcConfigArgs> vpcConfig) {
             this.vpcConfig = vpcConfig;
             return this;
         }
 
         public Builder vpcConfig(@Nullable FirehoseDeliveryStreamElasticsearchConfigurationVpcConfigArgs vpcConfig) {
-            this.vpcConfig = Input.ofNullable(vpcConfig);
+            this.vpcConfig = Output.ofNullable(vpcConfig);
             return this;
         }
         public FirehoseDeliveryStreamElasticsearchConfigurationArgs build() {

@@ -6,7 +6,7 @@ package io.pulumi.awsnative.finspace;
 import io.pulumi.awsnative.finspace.enums.EnvironmentFederationMode;
 import io.pulumi.awsnative.finspace.inputs.EnvironmentFederationParametersArgs;
 import io.pulumi.awsnative.finspace.inputs.EnvironmentSuperuserParametersArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -23,10 +23,10 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dataBundles")
-      private final @Nullable Input<List<String>> dataBundles;
+      private final @Nullable Output<List<String>> dataBundles;
 
-    public Input<List<String>> getDataBundles() {
-        return this.dataBundles == null ? Input.empty() : this.dataBundles;
+    public Output<List<String>> getDataBundles() {
+        return this.dataBundles == null ? Output.empty() : this.dataBundles;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -45,17 +45,17 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="federationMode")
-      private final @Nullable Input<EnvironmentFederationMode> federationMode;
+      private final @Nullable Output<EnvironmentFederationMode> federationMode;
 
-    public Input<EnvironmentFederationMode> getFederationMode() {
-        return this.federationMode == null ? Input.empty() : this.federationMode;
+    public Output<EnvironmentFederationMode> getFederationMode() {
+        return this.federationMode == null ? Output.empty() : this.federationMode;
     }
 
     @InputImport(name="federationParameters")
-      private final @Nullable Input<EnvironmentFederationParametersArgs> federationParameters;
+      private final @Nullable Output<EnvironmentFederationParametersArgs> federationParameters;
 
-    public Input<EnvironmentFederationParametersArgs> getFederationParameters() {
-        return this.federationParameters == null ? Input.empty() : this.federationParameters;
+    public Output<EnvironmentFederationParametersArgs> getFederationParameters() {
+        return this.federationParameters == null ? Output.empty() : this.federationParameters;
     }
 
     /**
@@ -63,10 +63,10 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kmsKeyId")
-      private final @Nullable Input<String> kmsKeyId;
+      private final @Nullable Output<String> kmsKeyId;
 
-    public Input<String> getKmsKeyId() {
-        return this.kmsKeyId == null ? Input.empty() : this.kmsKeyId;
+    public Output<String> getKmsKeyId() {
+        return this.kmsKeyId == null ? Output.empty() : this.kmsKeyId;
     }
 
     /**
@@ -74,27 +74,27 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     @InputImport(name="superuserParameters")
-      private final @Nullable Input<EnvironmentSuperuserParametersArgs> superuserParameters;
+      private final @Nullable Output<EnvironmentSuperuserParametersArgs> superuserParameters;
 
-    public Input<EnvironmentSuperuserParametersArgs> getSuperuserParameters() {
-        return this.superuserParameters == null ? Input.empty() : this.superuserParameters;
+    public Output<EnvironmentSuperuserParametersArgs> getSuperuserParameters() {
+        return this.superuserParameters == null ? Output.empty() : this.superuserParameters;
     }
 
     public EnvironmentArgs(
-        @Nullable Input<List<String>> dataBundles,
-        @Nullable Input<String> description,
-        @Nullable Input<EnvironmentFederationMode> federationMode,
-        @Nullable Input<EnvironmentFederationParametersArgs> federationParameters,
-        @Nullable Input<String> kmsKeyId,
-        @Nullable Input<String> name,
-        @Nullable Input<EnvironmentSuperuserParametersArgs> superuserParameters) {
+        @Nullable Output<List<String>> dataBundles,
+        @Nullable Output<String> description,
+        @Nullable Output<EnvironmentFederationMode> federationMode,
+        @Nullable Output<EnvironmentFederationParametersArgs> federationParameters,
+        @Nullable Output<String> kmsKeyId,
+        @Nullable Output<String> name,
+        @Nullable Output<EnvironmentSuperuserParametersArgs> superuserParameters) {
         this.dataBundles = dataBundles;
         this.description = description;
         this.federationMode = federationMode;
@@ -105,13 +105,13 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private EnvironmentArgs() {
-        this.dataBundles = Input.empty();
-        this.description = Input.empty();
-        this.federationMode = Input.empty();
-        this.federationParameters = Input.empty();
-        this.kmsKeyId = Input.empty();
-        this.name = Input.empty();
-        this.superuserParameters = Input.empty();
+        this.dataBundles = Output.empty();
+        this.description = Output.empty();
+        this.federationMode = Output.empty();
+        this.federationParameters = Output.empty();
+        this.kmsKeyId = Output.empty();
+        this.name = Output.empty();
+        this.superuserParameters = Output.empty();
     }
 
     public static Builder builder() {
@@ -123,13 +123,13 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> dataBundles;
-        private @Nullable Input<String> description;
-        private @Nullable Input<EnvironmentFederationMode> federationMode;
-        private @Nullable Input<EnvironmentFederationParametersArgs> federationParameters;
-        private @Nullable Input<String> kmsKeyId;
-        private @Nullable Input<String> name;
-        private @Nullable Input<EnvironmentSuperuserParametersArgs> superuserParameters;
+        private @Nullable Output<List<String>> dataBundles;
+        private @Nullable Output<String> description;
+        private @Nullable Output<EnvironmentFederationMode> federationMode;
+        private @Nullable Output<EnvironmentFederationParametersArgs> federationParameters;
+        private @Nullable Output<String> kmsKeyId;
+        private @Nullable Output<String> name;
+        private @Nullable Output<EnvironmentSuperuserParametersArgs> superuserParameters;
 
         public Builder() {
     	      // Empty
@@ -146,73 +146,73 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
     	      this.superuserParameters = defaults.superuserParameters;
         }
 
-        public Builder dataBundles(@Nullable Input<List<String>> dataBundles) {
+        public Builder dataBundles(@Nullable Output<List<String>> dataBundles) {
             this.dataBundles = dataBundles;
             return this;
         }
 
         public Builder dataBundles(@Nullable List<String> dataBundles) {
-            this.dataBundles = Input.ofNullable(dataBundles);
+            this.dataBundles = Output.ofNullable(dataBundles);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder federationMode(@Nullable Input<EnvironmentFederationMode> federationMode) {
+        public Builder federationMode(@Nullable Output<EnvironmentFederationMode> federationMode) {
             this.federationMode = federationMode;
             return this;
         }
 
         public Builder federationMode(@Nullable EnvironmentFederationMode federationMode) {
-            this.federationMode = Input.ofNullable(federationMode);
+            this.federationMode = Output.ofNullable(federationMode);
             return this;
         }
 
-        public Builder federationParameters(@Nullable Input<EnvironmentFederationParametersArgs> federationParameters) {
+        public Builder federationParameters(@Nullable Output<EnvironmentFederationParametersArgs> federationParameters) {
             this.federationParameters = federationParameters;
             return this;
         }
 
         public Builder federationParameters(@Nullable EnvironmentFederationParametersArgs federationParameters) {
-            this.federationParameters = Input.ofNullable(federationParameters);
+            this.federationParameters = Output.ofNullable(federationParameters);
             return this;
         }
 
-        public Builder kmsKeyId(@Nullable Input<String> kmsKeyId) {
+        public Builder kmsKeyId(@Nullable Output<String> kmsKeyId) {
             this.kmsKeyId = kmsKeyId;
             return this;
         }
 
         public Builder kmsKeyId(@Nullable String kmsKeyId) {
-            this.kmsKeyId = Input.ofNullable(kmsKeyId);
+            this.kmsKeyId = Output.ofNullable(kmsKeyId);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder superuserParameters(@Nullable Input<EnvironmentSuperuserParametersArgs> superuserParameters) {
+        public Builder superuserParameters(@Nullable Output<EnvironmentSuperuserParametersArgs> superuserParameters) {
             this.superuserParameters = superuserParameters;
             return this;
         }
 
         public Builder superuserParameters(@Nullable EnvironmentSuperuserParametersArgs superuserParameters) {
-            this.superuserParameters = Input.ofNullable(superuserParameters);
+            this.superuserParameters = Output.ofNullable(superuserParameters);
             return this;
         }
         public EnvironmentArgs build() {

@@ -4,7 +4,7 @@
 package io.pulumi.aws.apigateway.inputs;
 
 import io.pulumi.aws.apigateway.inputs.UsagePlanApiStageThrottleGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -21,9 +21,9 @@ public final class UsagePlanApiStageGetArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="apiId", required=true)
-      private final Input<String> apiId;
+      private final Output<String> apiId;
 
-    public Input<String> getApiId() {
+    public Output<String> getApiId() {
         return this.apiId;
     }
 
@@ -32,9 +32,9 @@ public final class UsagePlanApiStageGetArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="stage", required=true)
-      private final Input<String> stage;
+      private final Output<String> stage;
 
-    public Input<String> getStage() {
+    public Output<String> getStage() {
         return this.stage;
     }
 
@@ -43,25 +43,25 @@ public final class UsagePlanApiStageGetArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="throttles")
-      private final @Nullable Input<List<UsagePlanApiStageThrottleGetArgs>> throttles;
+      private final @Nullable Output<List<UsagePlanApiStageThrottleGetArgs>> throttles;
 
-    public Input<List<UsagePlanApiStageThrottleGetArgs>> getThrottles() {
-        return this.throttles == null ? Input.empty() : this.throttles;
+    public Output<List<UsagePlanApiStageThrottleGetArgs>> getThrottles() {
+        return this.throttles == null ? Output.empty() : this.throttles;
     }
 
     public UsagePlanApiStageGetArgs(
-        Input<String> apiId,
-        Input<String> stage,
-        @Nullable Input<List<UsagePlanApiStageThrottleGetArgs>> throttles) {
+        Output<String> apiId,
+        Output<String> stage,
+        @Nullable Output<List<UsagePlanApiStageThrottleGetArgs>> throttles) {
         this.apiId = Objects.requireNonNull(apiId, "expected parameter 'apiId' to be non-null");
         this.stage = Objects.requireNonNull(stage, "expected parameter 'stage' to be non-null");
         this.throttles = throttles;
     }
 
     private UsagePlanApiStageGetArgs() {
-        this.apiId = Input.empty();
-        this.stage = Input.empty();
-        this.throttles = Input.empty();
+        this.apiId = Output.empty();
+        this.stage = Output.empty();
+        this.throttles = Output.empty();
     }
 
     public static Builder builder() {
@@ -73,9 +73,9 @@ public final class UsagePlanApiStageGetArgs extends io.pulumi.resources.Resource
     }
 
     public static final class Builder {
-        private Input<String> apiId;
-        private Input<String> stage;
-        private @Nullable Input<List<UsagePlanApiStageThrottleGetArgs>> throttles;
+        private Output<String> apiId;
+        private Output<String> stage;
+        private @Nullable Output<List<UsagePlanApiStageThrottleGetArgs>> throttles;
 
         public Builder() {
     	      // Empty
@@ -88,33 +88,33 @@ public final class UsagePlanApiStageGetArgs extends io.pulumi.resources.Resource
     	      this.throttles = defaults.throttles;
         }
 
-        public Builder apiId(Input<String> apiId) {
+        public Builder apiId(Output<String> apiId) {
             this.apiId = Objects.requireNonNull(apiId);
             return this;
         }
 
         public Builder apiId(String apiId) {
-            this.apiId = Input.of(Objects.requireNonNull(apiId));
+            this.apiId = Output.of(Objects.requireNonNull(apiId));
             return this;
         }
 
-        public Builder stage(Input<String> stage) {
+        public Builder stage(Output<String> stage) {
             this.stage = Objects.requireNonNull(stage);
             return this;
         }
 
         public Builder stage(String stage) {
-            this.stage = Input.of(Objects.requireNonNull(stage));
+            this.stage = Output.of(Objects.requireNonNull(stage));
             return this;
         }
 
-        public Builder throttles(@Nullable Input<List<UsagePlanApiStageThrottleGetArgs>> throttles) {
+        public Builder throttles(@Nullable Output<List<UsagePlanApiStageThrottleGetArgs>> throttles) {
             this.throttles = throttles;
             return this;
         }
 
         public Builder throttles(@Nullable List<UsagePlanApiStageThrottleGetArgs> throttles) {
-            this.throttles = Input.ofNullable(throttles);
+            this.throttles = Output.ofNullable(throttles);
             return this;
         }
         public UsagePlanApiStageGetArgs build() {

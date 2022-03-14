@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.domains_v1beta1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.domains_v1beta1.inputs.PostalAddressArgs;
 import java.lang.String;
@@ -24,9 +24,9 @@ public final class ContactArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="email", required=true)
-      private final Input<String> email;
+      private final Output<String> email;
 
-    public Input<String> getEmail() {
+    public Output<String> getEmail() {
         return this.email;
     }
 
@@ -35,10 +35,10 @@ public final class ContactArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="faxNumber")
-      private final @Nullable Input<String> faxNumber;
+      private final @Nullable Output<String> faxNumber;
 
-    public Input<String> getFaxNumber() {
-        return this.faxNumber == null ? Input.empty() : this.faxNumber;
+    public Output<String> getFaxNumber() {
+        return this.faxNumber == null ? Output.empty() : this.faxNumber;
     }
 
     /**
@@ -46,9 +46,9 @@ public final class ContactArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="phoneNumber", required=true)
-      private final Input<String> phoneNumber;
+      private final Output<String> phoneNumber;
 
-    public Input<String> getPhoneNumber() {
+    public Output<String> getPhoneNumber() {
         return this.phoneNumber;
     }
 
@@ -57,17 +57,17 @@ public final class ContactArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="postalAddress", required=true)
-      private final Input<PostalAddressArgs> postalAddress;
+      private final Output<PostalAddressArgs> postalAddress;
 
-    public Input<PostalAddressArgs> getPostalAddress() {
+    public Output<PostalAddressArgs> getPostalAddress() {
         return this.postalAddress;
     }
 
     public ContactArgs(
-        Input<String> email,
-        @Nullable Input<String> faxNumber,
-        Input<String> phoneNumber,
-        Input<PostalAddressArgs> postalAddress) {
+        Output<String> email,
+        @Nullable Output<String> faxNumber,
+        Output<String> phoneNumber,
+        Output<PostalAddressArgs> postalAddress) {
         this.email = Objects.requireNonNull(email, "expected parameter 'email' to be non-null");
         this.faxNumber = faxNumber;
         this.phoneNumber = Objects.requireNonNull(phoneNumber, "expected parameter 'phoneNumber' to be non-null");
@@ -75,10 +75,10 @@ public final class ContactArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ContactArgs() {
-        this.email = Input.empty();
-        this.faxNumber = Input.empty();
-        this.phoneNumber = Input.empty();
-        this.postalAddress = Input.empty();
+        this.email = Output.empty();
+        this.faxNumber = Output.empty();
+        this.phoneNumber = Output.empty();
+        this.postalAddress = Output.empty();
     }
 
     public static Builder builder() {
@@ -90,10 +90,10 @@ public final class ContactArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> email;
-        private @Nullable Input<String> faxNumber;
-        private Input<String> phoneNumber;
-        private Input<PostalAddressArgs> postalAddress;
+        private Output<String> email;
+        private @Nullable Output<String> faxNumber;
+        private Output<String> phoneNumber;
+        private Output<PostalAddressArgs> postalAddress;
 
         public Builder() {
     	      // Empty
@@ -107,43 +107,43 @@ public final class ContactArgs extends io.pulumi.resources.ResourceArgs {
     	      this.postalAddress = defaults.postalAddress;
         }
 
-        public Builder email(Input<String> email) {
+        public Builder email(Output<String> email) {
             this.email = Objects.requireNonNull(email);
             return this;
         }
 
         public Builder email(String email) {
-            this.email = Input.of(Objects.requireNonNull(email));
+            this.email = Output.of(Objects.requireNonNull(email));
             return this;
         }
 
-        public Builder faxNumber(@Nullable Input<String> faxNumber) {
+        public Builder faxNumber(@Nullable Output<String> faxNumber) {
             this.faxNumber = faxNumber;
             return this;
         }
 
         public Builder faxNumber(@Nullable String faxNumber) {
-            this.faxNumber = Input.ofNullable(faxNumber);
+            this.faxNumber = Output.ofNullable(faxNumber);
             return this;
         }
 
-        public Builder phoneNumber(Input<String> phoneNumber) {
+        public Builder phoneNumber(Output<String> phoneNumber) {
             this.phoneNumber = Objects.requireNonNull(phoneNumber);
             return this;
         }
 
         public Builder phoneNumber(String phoneNumber) {
-            this.phoneNumber = Input.of(Objects.requireNonNull(phoneNumber));
+            this.phoneNumber = Output.of(Objects.requireNonNull(phoneNumber));
             return this;
         }
 
-        public Builder postalAddress(Input<PostalAddressArgs> postalAddress) {
+        public Builder postalAddress(Output<PostalAddressArgs> postalAddress) {
             this.postalAddress = Objects.requireNonNull(postalAddress);
             return this;
         }
 
         public Builder postalAddress(PostalAddressArgs postalAddress) {
-            this.postalAddress = Input.of(Objects.requireNonNull(postalAddress));
+            this.postalAddress = Output.of(Objects.requireNonNull(postalAddress));
             return this;
         }
         public ContactArgs build() {

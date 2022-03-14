@@ -5,7 +5,7 @@ package io.pulumi.azurenative.machinelearningservices.inputs;
 
 import io.pulumi.azurenative.machinelearningservices.enums.BatchOutputAction;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -25,10 +25,10 @@ public final class BatchOutputConfigurationArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="appendRowFileName")
-      private final @Nullable Input<String> appendRowFileName;
+      private final @Nullable Output<String> appendRowFileName;
 
-    public Input<String> getAppendRowFileName() {
-        return this.appendRowFileName == null ? Input.empty() : this.appendRowFileName;
+    public Output<String> getAppendRowFileName() {
+        return this.appendRowFileName == null ? Output.empty() : this.appendRowFileName;
     }
 
     /**
@@ -36,22 +36,22 @@ public final class BatchOutputConfigurationArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="outputAction")
-      private final @Nullable Input<Either<String,BatchOutputAction>> outputAction;
+      private final @Nullable Output<Either<String,BatchOutputAction>> outputAction;
 
-    public Input<Either<String,BatchOutputAction>> getOutputAction() {
-        return this.outputAction == null ? Input.empty() : this.outputAction;
+    public Output<Either<String,BatchOutputAction>> getOutputAction() {
+        return this.outputAction == null ? Output.empty() : this.outputAction;
     }
 
     public BatchOutputConfigurationArgs(
-        @Nullable Input<String> appendRowFileName,
-        @Nullable Input<Either<String,BatchOutputAction>> outputAction) {
+        @Nullable Output<String> appendRowFileName,
+        @Nullable Output<Either<String,BatchOutputAction>> outputAction) {
         this.appendRowFileName = appendRowFileName;
         this.outputAction = outputAction;
     }
 
     private BatchOutputConfigurationArgs() {
-        this.appendRowFileName = Input.empty();
-        this.outputAction = Input.empty();
+        this.appendRowFileName = Output.empty();
+        this.outputAction = Output.empty();
     }
 
     public static Builder builder() {
@@ -63,8 +63,8 @@ public final class BatchOutputConfigurationArgs extends io.pulumi.resources.Reso
     }
 
     public static final class Builder {
-        private @Nullable Input<String> appendRowFileName;
-        private @Nullable Input<Either<String,BatchOutputAction>> outputAction;
+        private @Nullable Output<String> appendRowFileName;
+        private @Nullable Output<Either<String,BatchOutputAction>> outputAction;
 
         public Builder() {
     	      // Empty
@@ -76,23 +76,23 @@ public final class BatchOutputConfigurationArgs extends io.pulumi.resources.Reso
     	      this.outputAction = defaults.outputAction;
         }
 
-        public Builder appendRowFileName(@Nullable Input<String> appendRowFileName) {
+        public Builder appendRowFileName(@Nullable Output<String> appendRowFileName) {
             this.appendRowFileName = appendRowFileName;
             return this;
         }
 
         public Builder appendRowFileName(@Nullable String appendRowFileName) {
-            this.appendRowFileName = Input.ofNullable(appendRowFileName);
+            this.appendRowFileName = Output.ofNullable(appendRowFileName);
             return this;
         }
 
-        public Builder outputAction(@Nullable Input<Either<String,BatchOutputAction>> outputAction) {
+        public Builder outputAction(@Nullable Output<Either<String,BatchOutputAction>> outputAction) {
             this.outputAction = outputAction;
             return this;
         }
 
         public Builder outputAction(@Nullable Either<String,BatchOutputAction> outputAction) {
-            this.outputAction = Input.ofNullable(outputAction);
+            this.outputAction = Output.ofNullable(outputAction);
             return this;
         }
         public BatchOutputConfigurationArgs build() {

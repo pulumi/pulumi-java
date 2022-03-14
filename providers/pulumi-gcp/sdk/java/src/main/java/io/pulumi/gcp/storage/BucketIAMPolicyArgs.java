@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.storage;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -18,9 +18,9 @@ public final class BucketIAMPolicyArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="bucket", required=true)
-      private final Input<String> bucket;
+      private final Output<String> bucket;
 
-    public Input<String> getBucket() {
+    public Output<String> getBucket() {
         return this.bucket;
     }
 
@@ -30,22 +30,22 @@ public final class BucketIAMPolicyArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="policyData", required=true)
-      private final Input<String> policyData;
+      private final Output<String> policyData;
 
-    public Input<String> getPolicyData() {
+    public Output<String> getPolicyData() {
         return this.policyData;
     }
 
     public BucketIAMPolicyArgs(
-        Input<String> bucket,
-        Input<String> policyData) {
+        Output<String> bucket,
+        Output<String> policyData) {
         this.bucket = Objects.requireNonNull(bucket, "expected parameter 'bucket' to be non-null");
         this.policyData = Objects.requireNonNull(policyData, "expected parameter 'policyData' to be non-null");
     }
 
     private BucketIAMPolicyArgs() {
-        this.bucket = Input.empty();
-        this.policyData = Input.empty();
+        this.bucket = Output.empty();
+        this.policyData = Output.empty();
     }
 
     public static Builder builder() {
@@ -57,8 +57,8 @@ public final class BucketIAMPolicyArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private Input<String> bucket;
-        private Input<String> policyData;
+        private Output<String> bucket;
+        private Output<String> policyData;
 
         public Builder() {
     	      // Empty
@@ -70,23 +70,23 @@ public final class BucketIAMPolicyArgs extends io.pulumi.resources.ResourceArgs 
     	      this.policyData = defaults.policyData;
         }
 
-        public Builder bucket(Input<String> bucket) {
+        public Builder bucket(Output<String> bucket) {
             this.bucket = Objects.requireNonNull(bucket);
             return this;
         }
 
         public Builder bucket(String bucket) {
-            this.bucket = Input.of(Objects.requireNonNull(bucket));
+            this.bucket = Output.of(Objects.requireNonNull(bucket));
             return this;
         }
 
-        public Builder policyData(Input<String> policyData) {
+        public Builder policyData(Output<String> policyData) {
             this.policyData = Objects.requireNonNull(policyData);
             return this;
         }
 
         public Builder policyData(String policyData) {
-            this.policyData = Input.of(Objects.requireNonNull(policyData));
+            this.policyData = Output.of(Objects.requireNonNull(policyData));
             return this;
         }
         public BucketIAMPolicyArgs build() {

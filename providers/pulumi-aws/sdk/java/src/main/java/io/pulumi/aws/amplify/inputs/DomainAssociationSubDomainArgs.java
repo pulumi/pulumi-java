@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.amplify.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -20,9 +20,9 @@ public final class DomainAssociationSubDomainArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="branchName", required=true)
-      private final Input<String> branchName;
+      private final Output<String> branchName;
 
-    public Input<String> getBranchName() {
+    public Output<String> getBranchName() {
         return this.branchName;
     }
 
@@ -31,10 +31,10 @@ public final class DomainAssociationSubDomainArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="dnsRecord")
-      private final @Nullable Input<String> dnsRecord;
+      private final @Nullable Output<String> dnsRecord;
 
-    public Input<String> getDnsRecord() {
-        return this.dnsRecord == null ? Input.empty() : this.dnsRecord;
+    public Output<String> getDnsRecord() {
+        return this.dnsRecord == null ? Output.empty() : this.dnsRecord;
     }
 
     /**
@@ -42,9 +42,9 @@ public final class DomainAssociationSubDomainArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="prefix", required=true)
-      private final Input<String> prefix;
+      private final Output<String> prefix;
 
-    public Input<String> getPrefix() {
+    public Output<String> getPrefix() {
         return this.prefix;
     }
 
@@ -53,17 +53,17 @@ public final class DomainAssociationSubDomainArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="verified")
-      private final @Nullable Input<Boolean> verified;
+      private final @Nullable Output<Boolean> verified;
 
-    public Input<Boolean> getVerified() {
-        return this.verified == null ? Input.empty() : this.verified;
+    public Output<Boolean> getVerified() {
+        return this.verified == null ? Output.empty() : this.verified;
     }
 
     public DomainAssociationSubDomainArgs(
-        Input<String> branchName,
-        @Nullable Input<String> dnsRecord,
-        Input<String> prefix,
-        @Nullable Input<Boolean> verified) {
+        Output<String> branchName,
+        @Nullable Output<String> dnsRecord,
+        Output<String> prefix,
+        @Nullable Output<Boolean> verified) {
         this.branchName = Objects.requireNonNull(branchName, "expected parameter 'branchName' to be non-null");
         this.dnsRecord = dnsRecord;
         this.prefix = Objects.requireNonNull(prefix, "expected parameter 'prefix' to be non-null");
@@ -71,10 +71,10 @@ public final class DomainAssociationSubDomainArgs extends io.pulumi.resources.Re
     }
 
     private DomainAssociationSubDomainArgs() {
-        this.branchName = Input.empty();
-        this.dnsRecord = Input.empty();
-        this.prefix = Input.empty();
-        this.verified = Input.empty();
+        this.branchName = Output.empty();
+        this.dnsRecord = Output.empty();
+        this.prefix = Output.empty();
+        this.verified = Output.empty();
     }
 
     public static Builder builder() {
@@ -86,10 +86,10 @@ public final class DomainAssociationSubDomainArgs extends io.pulumi.resources.Re
     }
 
     public static final class Builder {
-        private Input<String> branchName;
-        private @Nullable Input<String> dnsRecord;
-        private Input<String> prefix;
-        private @Nullable Input<Boolean> verified;
+        private Output<String> branchName;
+        private @Nullable Output<String> dnsRecord;
+        private Output<String> prefix;
+        private @Nullable Output<Boolean> verified;
 
         public Builder() {
     	      // Empty
@@ -103,43 +103,43 @@ public final class DomainAssociationSubDomainArgs extends io.pulumi.resources.Re
     	      this.verified = defaults.verified;
         }
 
-        public Builder branchName(Input<String> branchName) {
+        public Builder branchName(Output<String> branchName) {
             this.branchName = Objects.requireNonNull(branchName);
             return this;
         }
 
         public Builder branchName(String branchName) {
-            this.branchName = Input.of(Objects.requireNonNull(branchName));
+            this.branchName = Output.of(Objects.requireNonNull(branchName));
             return this;
         }
 
-        public Builder dnsRecord(@Nullable Input<String> dnsRecord) {
+        public Builder dnsRecord(@Nullable Output<String> dnsRecord) {
             this.dnsRecord = dnsRecord;
             return this;
         }
 
         public Builder dnsRecord(@Nullable String dnsRecord) {
-            this.dnsRecord = Input.ofNullable(dnsRecord);
+            this.dnsRecord = Output.ofNullable(dnsRecord);
             return this;
         }
 
-        public Builder prefix(Input<String> prefix) {
+        public Builder prefix(Output<String> prefix) {
             this.prefix = Objects.requireNonNull(prefix);
             return this;
         }
 
         public Builder prefix(String prefix) {
-            this.prefix = Input.of(Objects.requireNonNull(prefix));
+            this.prefix = Output.of(Objects.requireNonNull(prefix));
             return this;
         }
 
-        public Builder verified(@Nullable Input<Boolean> verified) {
+        public Builder verified(@Nullable Output<Boolean> verified) {
             this.verified = verified;
             return this;
         }
 
         public Builder verified(@Nullable Boolean verified) {
-            this.verified = Input.ofNullable(verified);
+            this.verified = Output.ofNullable(verified);
             return this;
         }
         public DomainAssociationSubDomainArgs build() {

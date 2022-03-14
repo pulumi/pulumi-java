@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.cloudformation.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class StackSetAutoDeploymentArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="enabled")
-      private final @Nullable Input<Boolean> enabled;
+      private final @Nullable Output<Boolean> enabled;
 
-    public Input<Boolean> getEnabled() {
-        return this.enabled == null ? Input.empty() : this.enabled;
+    public Output<Boolean> getEnabled() {
+        return this.enabled == null ? Output.empty() : this.enabled;
     }
 
     /**
@@ -30,22 +30,22 @@ public final class StackSetAutoDeploymentArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="retainStacksOnAccountRemoval")
-      private final @Nullable Input<Boolean> retainStacksOnAccountRemoval;
+      private final @Nullable Output<Boolean> retainStacksOnAccountRemoval;
 
-    public Input<Boolean> getRetainStacksOnAccountRemoval() {
-        return this.retainStacksOnAccountRemoval == null ? Input.empty() : this.retainStacksOnAccountRemoval;
+    public Output<Boolean> getRetainStacksOnAccountRemoval() {
+        return this.retainStacksOnAccountRemoval == null ? Output.empty() : this.retainStacksOnAccountRemoval;
     }
 
     public StackSetAutoDeploymentArgs(
-        @Nullable Input<Boolean> enabled,
-        @Nullable Input<Boolean> retainStacksOnAccountRemoval) {
+        @Nullable Output<Boolean> enabled,
+        @Nullable Output<Boolean> retainStacksOnAccountRemoval) {
         this.enabled = enabled;
         this.retainStacksOnAccountRemoval = retainStacksOnAccountRemoval;
     }
 
     private StackSetAutoDeploymentArgs() {
-        this.enabled = Input.empty();
-        this.retainStacksOnAccountRemoval = Input.empty();
+        this.enabled = Output.empty();
+        this.retainStacksOnAccountRemoval = Output.empty();
     }
 
     public static Builder builder() {
@@ -57,8 +57,8 @@ public final class StackSetAutoDeploymentArgs extends io.pulumi.resources.Resour
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> enabled;
-        private @Nullable Input<Boolean> retainStacksOnAccountRemoval;
+        private @Nullable Output<Boolean> enabled;
+        private @Nullable Output<Boolean> retainStacksOnAccountRemoval;
 
         public Builder() {
     	      // Empty
@@ -70,23 +70,23 @@ public final class StackSetAutoDeploymentArgs extends io.pulumi.resources.Resour
     	      this.retainStacksOnAccountRemoval = defaults.retainStacksOnAccountRemoval;
         }
 
-        public Builder enabled(@Nullable Input<Boolean> enabled) {
+        public Builder enabled(@Nullable Output<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
 
         public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Input.ofNullable(enabled);
+            this.enabled = Output.ofNullable(enabled);
             return this;
         }
 
-        public Builder retainStacksOnAccountRemoval(@Nullable Input<Boolean> retainStacksOnAccountRemoval) {
+        public Builder retainStacksOnAccountRemoval(@Nullable Output<Boolean> retainStacksOnAccountRemoval) {
             this.retainStacksOnAccountRemoval = retainStacksOnAccountRemoval;
             return this;
         }
 
         public Builder retainStacksOnAccountRemoval(@Nullable Boolean retainStacksOnAccountRemoval) {
-            this.retainStacksOnAccountRemoval = Input.ofNullable(retainStacksOnAccountRemoval);
+            this.retainStacksOnAccountRemoval = Output.ofNullable(retainStacksOnAccountRemoval);
             return this;
         }
         public StackSetAutoDeploymentArgs build() {

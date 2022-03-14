@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.storagegateway.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class CacheState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="diskId")
-      private final @Nullable Input<String> diskId;
+      private final @Nullable Output<String> diskId;
 
-    public Input<String> getDiskId() {
-        return this.diskId == null ? Input.empty() : this.diskId;
+    public Output<String> getDiskId() {
+        return this.diskId == null ? Output.empty() : this.diskId;
     }
 
     /**
@@ -30,22 +30,22 @@ public final class CacheState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="gatewayArn")
-      private final @Nullable Input<String> gatewayArn;
+      private final @Nullable Output<String> gatewayArn;
 
-    public Input<String> getGatewayArn() {
-        return this.gatewayArn == null ? Input.empty() : this.gatewayArn;
+    public Output<String> getGatewayArn() {
+        return this.gatewayArn == null ? Output.empty() : this.gatewayArn;
     }
 
     public CacheState(
-        @Nullable Input<String> diskId,
-        @Nullable Input<String> gatewayArn) {
+        @Nullable Output<String> diskId,
+        @Nullable Output<String> gatewayArn) {
         this.diskId = diskId;
         this.gatewayArn = gatewayArn;
     }
 
     private CacheState() {
-        this.diskId = Input.empty();
-        this.gatewayArn = Input.empty();
+        this.diskId = Output.empty();
+        this.gatewayArn = Output.empty();
     }
 
     public static Builder builder() {
@@ -57,8 +57,8 @@ public final class CacheState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> diskId;
-        private @Nullable Input<String> gatewayArn;
+        private @Nullable Output<String> diskId;
+        private @Nullable Output<String> gatewayArn;
 
         public Builder() {
     	      // Empty
@@ -70,23 +70,23 @@ public final class CacheState extends io.pulumi.resources.ResourceArgs {
     	      this.gatewayArn = defaults.gatewayArn;
         }
 
-        public Builder diskId(@Nullable Input<String> diskId) {
+        public Builder diskId(@Nullable Output<String> diskId) {
             this.diskId = diskId;
             return this;
         }
 
         public Builder diskId(@Nullable String diskId) {
-            this.diskId = Input.ofNullable(diskId);
+            this.diskId = Output.ofNullable(diskId);
             return this;
         }
 
-        public Builder gatewayArn(@Nullable Input<String> gatewayArn) {
+        public Builder gatewayArn(@Nullable Output<String> gatewayArn) {
             this.gatewayArn = gatewayArn;
             return this;
         }
 
         public Builder gatewayArn(@Nullable String gatewayArn) {
-            this.gatewayArn = Input.ofNullable(gatewayArn);
+            this.gatewayArn = Output.ofNullable(gatewayArn);
             return this;
         }
         public CacheState build() {

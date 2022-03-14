@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.certificateauthority.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -15,18 +15,18 @@ public final class CertificateCertificateDescriptionSubjectKeyIdGetArgs extends 
     public static final CertificateCertificateDescriptionSubjectKeyIdGetArgs Empty = new CertificateCertificateDescriptionSubjectKeyIdGetArgs();
 
     @InputImport(name="keyId")
-      private final @Nullable Input<String> keyId;
+      private final @Nullable Output<String> keyId;
 
-    public Input<String> getKeyId() {
-        return this.keyId == null ? Input.empty() : this.keyId;
+    public Output<String> getKeyId() {
+        return this.keyId == null ? Output.empty() : this.keyId;
     }
 
-    public CertificateCertificateDescriptionSubjectKeyIdGetArgs(@Nullable Input<String> keyId) {
+    public CertificateCertificateDescriptionSubjectKeyIdGetArgs(@Nullable Output<String> keyId) {
         this.keyId = keyId;
     }
 
     private CertificateCertificateDescriptionSubjectKeyIdGetArgs() {
-        this.keyId = Input.empty();
+        this.keyId = Output.empty();
     }
 
     public static Builder builder() {
@@ -38,7 +38,7 @@ public final class CertificateCertificateDescriptionSubjectKeyIdGetArgs extends 
     }
 
     public static final class Builder {
-        private @Nullable Input<String> keyId;
+        private @Nullable Output<String> keyId;
 
         public Builder() {
     	      // Empty
@@ -49,13 +49,13 @@ public final class CertificateCertificateDescriptionSubjectKeyIdGetArgs extends 
     	      this.keyId = defaults.keyId;
         }
 
-        public Builder keyId(@Nullable Input<String> keyId) {
+        public Builder keyId(@Nullable Output<String> keyId) {
             this.keyId = keyId;
             return this;
         }
 
         public Builder keyId(@Nullable String keyId) {
-            this.keyId = Input.ofNullable(keyId);
+            this.keyId = Output.ofNullable(keyId);
             return this;
         }
         public CertificateCertificateDescriptionSubjectKeyIdGetArgs build() {

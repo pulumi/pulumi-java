@@ -5,7 +5,7 @@ package io.pulumi.azurenative.alertsmanagement;
 
 import io.pulumi.azurenative.alertsmanagement.inputs.HealthAlertActionArgs;
 import io.pulumi.azurenative.alertsmanagement.inputs.HealthAlertCriteriaArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class HealthAlertArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="actions")
-      private final @Nullable Input<List<HealthAlertActionArgs>> actions;
+      private final @Nullable Output<List<HealthAlertActionArgs>> actions;
 
-    public Input<List<HealthAlertActionArgs>> getActions() {
-        return this.actions == null ? Input.empty() : this.actions;
+    public Output<List<HealthAlertActionArgs>> getActions() {
+        return this.actions == null ? Output.empty() : this.actions;
     }
 
     /**
@@ -35,9 +35,9 @@ public final class HealthAlertArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="criteria", required=true)
-      private final Input<HealthAlertCriteriaArgs> criteria;
+      private final Output<HealthAlertCriteriaArgs> criteria;
 
-    public Input<HealthAlertCriteriaArgs> getCriteria() {
+    public Output<HealthAlertCriteriaArgs> getCriteria() {
         return this.criteria;
     }
 
@@ -46,9 +46,9 @@ public final class HealthAlertArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description", required=true)
-      private final Input<String> description;
+      private final Output<String> description;
 
-    public Input<String> getDescription() {
+    public Output<String> getDescription() {
         return this.description;
     }
 
@@ -57,9 +57,9 @@ public final class HealthAlertArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enabled", required=true)
-      private final Input<Boolean> enabled;
+      private final Output<Boolean> enabled;
 
-    public Input<Boolean> getEnabled() {
+    public Output<Boolean> getEnabled() {
         return this.enabled;
     }
 
@@ -68,10 +68,10 @@ public final class HealthAlertArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -79,9 +79,9 @@ public final class HealthAlertArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -90,10 +90,10 @@ public final class HealthAlertArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ruleName")
-      private final @Nullable Input<String> ruleName;
+      private final @Nullable Output<String> ruleName;
 
-    public Input<String> getRuleName() {
-        return this.ruleName == null ? Input.empty() : this.ruleName;
+    public Output<String> getRuleName() {
+        return this.ruleName == null ? Output.empty() : this.ruleName;
     }
 
     /**
@@ -101,10 +101,10 @@ public final class HealthAlertArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="scopes")
-      private final @Nullable Input<List<String>> scopes;
+      private final @Nullable Output<List<String>> scopes;
 
-    public Input<List<String>> getScopes() {
-        return this.scopes == null ? Input.empty() : this.scopes;
+    public Output<List<String>> getScopes() {
+        return this.scopes == null ? Output.empty() : this.scopes;
     }
 
     /**
@@ -112,22 +112,22 @@ public final class HealthAlertArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public HealthAlertArgs(
-        @Nullable Input<List<HealthAlertActionArgs>> actions,
-        Input<HealthAlertCriteriaArgs> criteria,
-        Input<String> description,
-        Input<Boolean> enabled,
-        @Nullable Input<String> location,
-        Input<String> resourceGroupName,
-        @Nullable Input<String> ruleName,
-        @Nullable Input<List<String>> scopes,
-        @Nullable Input<Map<String,String>> tags) {
+        @Nullable Output<List<HealthAlertActionArgs>> actions,
+        Output<HealthAlertCriteriaArgs> criteria,
+        Output<String> description,
+        Output<Boolean> enabled,
+        @Nullable Output<String> location,
+        Output<String> resourceGroupName,
+        @Nullable Output<String> ruleName,
+        @Nullable Output<List<String>> scopes,
+        @Nullable Output<Map<String,String>> tags) {
         this.actions = actions;
         this.criteria = Objects.requireNonNull(criteria, "expected parameter 'criteria' to be non-null");
         this.description = Objects.requireNonNull(description, "expected parameter 'description' to be non-null");
@@ -140,15 +140,15 @@ public final class HealthAlertArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private HealthAlertArgs() {
-        this.actions = Input.empty();
-        this.criteria = Input.empty();
-        this.description = Input.empty();
-        this.enabled = Input.empty();
-        this.location = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.ruleName = Input.empty();
-        this.scopes = Input.empty();
-        this.tags = Input.empty();
+        this.actions = Output.empty();
+        this.criteria = Output.empty();
+        this.description = Output.empty();
+        this.enabled = Output.empty();
+        this.location = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.ruleName = Output.empty();
+        this.scopes = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -160,15 +160,15 @@ public final class HealthAlertArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<List<HealthAlertActionArgs>> actions;
-        private Input<HealthAlertCriteriaArgs> criteria;
-        private Input<String> description;
-        private Input<Boolean> enabled;
-        private @Nullable Input<String> location;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<String> ruleName;
-        private @Nullable Input<List<String>> scopes;
-        private @Nullable Input<Map<String,String>> tags;
+        private @Nullable Output<List<HealthAlertActionArgs>> actions;
+        private Output<HealthAlertCriteriaArgs> criteria;
+        private Output<String> description;
+        private Output<Boolean> enabled;
+        private @Nullable Output<String> location;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<String> ruleName;
+        private @Nullable Output<List<String>> scopes;
+        private @Nullable Output<Map<String,String>> tags;
 
         public Builder() {
     	      // Empty
@@ -187,93 +187,93 @@ public final class HealthAlertArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder actions(@Nullable Input<List<HealthAlertActionArgs>> actions) {
+        public Builder actions(@Nullable Output<List<HealthAlertActionArgs>> actions) {
             this.actions = actions;
             return this;
         }
 
         public Builder actions(@Nullable List<HealthAlertActionArgs> actions) {
-            this.actions = Input.ofNullable(actions);
+            this.actions = Output.ofNullable(actions);
             return this;
         }
 
-        public Builder criteria(Input<HealthAlertCriteriaArgs> criteria) {
+        public Builder criteria(Output<HealthAlertCriteriaArgs> criteria) {
             this.criteria = Objects.requireNonNull(criteria);
             return this;
         }
 
         public Builder criteria(HealthAlertCriteriaArgs criteria) {
-            this.criteria = Input.of(Objects.requireNonNull(criteria));
+            this.criteria = Output.of(Objects.requireNonNull(criteria));
             return this;
         }
 
-        public Builder description(Input<String> description) {
+        public Builder description(Output<String> description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
         public Builder description(String description) {
-            this.description = Input.of(Objects.requireNonNull(description));
+            this.description = Output.of(Objects.requireNonNull(description));
             return this;
         }
 
-        public Builder enabled(Input<Boolean> enabled) {
+        public Builder enabled(Output<Boolean> enabled) {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
 
         public Builder enabled(Boolean enabled) {
-            this.enabled = Input.of(Objects.requireNonNull(enabled));
+            this.enabled = Output.of(Objects.requireNonNull(enabled));
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder ruleName(@Nullable Input<String> ruleName) {
+        public Builder ruleName(@Nullable Output<String> ruleName) {
             this.ruleName = ruleName;
             return this;
         }
 
         public Builder ruleName(@Nullable String ruleName) {
-            this.ruleName = Input.ofNullable(ruleName);
+            this.ruleName = Output.ofNullable(ruleName);
             return this;
         }
 
-        public Builder scopes(@Nullable Input<List<String>> scopes) {
+        public Builder scopes(@Nullable Output<List<String>> scopes) {
             this.scopes = scopes;
             return this;
         }
 
         public Builder scopes(@Nullable List<String> scopes) {
-            this.scopes = Input.ofNullable(scopes);
+            this.scopes = Output.ofNullable(scopes);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public HealthAlertArgs build() {

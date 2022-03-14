@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.migrate.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class AvailabilitySetResourceSettingsArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="faultDomain")
-      private final @Nullable Input<Integer> faultDomain;
+      private final @Nullable Output<Integer> faultDomain;
 
-    public Input<Integer> getFaultDomain() {
-        return this.faultDomain == null ? Input.empty() : this.faultDomain;
+    public Output<Integer> getFaultDomain() {
+        return this.faultDomain == null ? Output.empty() : this.faultDomain;
     }
 
     /**
@@ -36,9 +36,9 @@ public final class AvailabilitySetResourceSettingsArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="resourceType", required=true)
-      private final Input<String> resourceType;
+      private final Output<String> resourceType;
 
-    public Input<String> getPropResourceType() {
+    public Output<String> getPropResourceType() {
         return this.resourceType;
     }
 
@@ -47,9 +47,9 @@ public final class AvailabilitySetResourceSettingsArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="targetResourceName", required=true)
-      private final Input<String> targetResourceName;
+      private final Output<String> targetResourceName;
 
-    public Input<String> getTargetResourceName() {
+    public Output<String> getTargetResourceName() {
         return this.targetResourceName;
     }
 
@@ -58,17 +58,17 @@ public final class AvailabilitySetResourceSettingsArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="updateDomain")
-      private final @Nullable Input<Integer> updateDomain;
+      private final @Nullable Output<Integer> updateDomain;
 
-    public Input<Integer> getUpdateDomain() {
-        return this.updateDomain == null ? Input.empty() : this.updateDomain;
+    public Output<Integer> getUpdateDomain() {
+        return this.updateDomain == null ? Output.empty() : this.updateDomain;
     }
 
     public AvailabilitySetResourceSettingsArgs(
-        @Nullable Input<Integer> faultDomain,
-        Input<String> resourceType,
-        Input<String> targetResourceName,
-        @Nullable Input<Integer> updateDomain) {
+        @Nullable Output<Integer> faultDomain,
+        Output<String> resourceType,
+        Output<String> targetResourceName,
+        @Nullable Output<Integer> updateDomain) {
         this.faultDomain = faultDomain;
         this.resourceType = Objects.requireNonNull(resourceType, "expected parameter 'resourceType' to be non-null");
         this.targetResourceName = Objects.requireNonNull(targetResourceName, "expected parameter 'targetResourceName' to be non-null");
@@ -76,10 +76,10 @@ public final class AvailabilitySetResourceSettingsArgs extends io.pulumi.resourc
     }
 
     private AvailabilitySetResourceSettingsArgs() {
-        this.faultDomain = Input.empty();
-        this.resourceType = Input.empty();
-        this.targetResourceName = Input.empty();
-        this.updateDomain = Input.empty();
+        this.faultDomain = Output.empty();
+        this.resourceType = Output.empty();
+        this.targetResourceName = Output.empty();
+        this.updateDomain = Output.empty();
     }
 
     public static Builder builder() {
@@ -91,10 +91,10 @@ public final class AvailabilitySetResourceSettingsArgs extends io.pulumi.resourc
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> faultDomain;
-        private Input<String> resourceType;
-        private Input<String> targetResourceName;
-        private @Nullable Input<Integer> updateDomain;
+        private @Nullable Output<Integer> faultDomain;
+        private Output<String> resourceType;
+        private Output<String> targetResourceName;
+        private @Nullable Output<Integer> updateDomain;
 
         public Builder() {
     	      // Empty
@@ -108,43 +108,43 @@ public final class AvailabilitySetResourceSettingsArgs extends io.pulumi.resourc
     	      this.updateDomain = defaults.updateDomain;
         }
 
-        public Builder faultDomain(@Nullable Input<Integer> faultDomain) {
+        public Builder faultDomain(@Nullable Output<Integer> faultDomain) {
             this.faultDomain = faultDomain;
             return this;
         }
 
         public Builder faultDomain(@Nullable Integer faultDomain) {
-            this.faultDomain = Input.ofNullable(faultDomain);
+            this.faultDomain = Output.ofNullable(faultDomain);
             return this;
         }
 
-        public Builder resourceType(Input<String> resourceType) {
+        public Builder resourceType(Output<String> resourceType) {
             this.resourceType = Objects.requireNonNull(resourceType);
             return this;
         }
 
         public Builder resourceType(String resourceType) {
-            this.resourceType = Input.of(Objects.requireNonNull(resourceType));
+            this.resourceType = Output.of(Objects.requireNonNull(resourceType));
             return this;
         }
 
-        public Builder targetResourceName(Input<String> targetResourceName) {
+        public Builder targetResourceName(Output<String> targetResourceName) {
             this.targetResourceName = Objects.requireNonNull(targetResourceName);
             return this;
         }
 
         public Builder targetResourceName(String targetResourceName) {
-            this.targetResourceName = Input.of(Objects.requireNonNull(targetResourceName));
+            this.targetResourceName = Output.of(Objects.requireNonNull(targetResourceName));
             return this;
         }
 
-        public Builder updateDomain(@Nullable Input<Integer> updateDomain) {
+        public Builder updateDomain(@Nullable Output<Integer> updateDomain) {
             this.updateDomain = updateDomain;
             return this;
         }
 
         public Builder updateDomain(@Nullable Integer updateDomain) {
-            this.updateDomain = Input.ofNullable(updateDomain);
+            this.updateDomain = Output.ofNullable(updateDomain);
             return this;
         }
         public AvailabilitySetResourceSettingsArgs build() {

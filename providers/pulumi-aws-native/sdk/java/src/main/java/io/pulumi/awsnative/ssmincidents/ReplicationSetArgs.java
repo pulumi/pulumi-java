@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.ssmincidents;
 
 import io.pulumi.awsnative.ssmincidents.inputs.ReplicationSetReplicationRegionArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.List;
@@ -17,10 +17,10 @@ public final class ReplicationSetArgs extends io.pulumi.resources.ResourceArgs {
     public static final ReplicationSetArgs Empty = new ReplicationSetArgs();
 
     @InputImport(name="deletionProtected")
-      private final @Nullable Input<Boolean> deletionProtected;
+      private final @Nullable Output<Boolean> deletionProtected;
 
-    public Input<Boolean> getDeletionProtected() {
-        return this.deletionProtected == null ? Input.empty() : this.deletionProtected;
+    public Output<Boolean> getDeletionProtected() {
+        return this.deletionProtected == null ? Output.empty() : this.deletionProtected;
     }
 
     /**
@@ -28,22 +28,22 @@ public final class ReplicationSetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="regions", required=true)
-      private final Input<List<ReplicationSetReplicationRegionArgs>> regions;
+      private final Output<List<ReplicationSetReplicationRegionArgs>> regions;
 
-    public Input<List<ReplicationSetReplicationRegionArgs>> getRegions() {
+    public Output<List<ReplicationSetReplicationRegionArgs>> getRegions() {
         return this.regions;
     }
 
     public ReplicationSetArgs(
-        @Nullable Input<Boolean> deletionProtected,
-        Input<List<ReplicationSetReplicationRegionArgs>> regions) {
+        @Nullable Output<Boolean> deletionProtected,
+        Output<List<ReplicationSetReplicationRegionArgs>> regions) {
         this.deletionProtected = deletionProtected;
         this.regions = Objects.requireNonNull(regions, "expected parameter 'regions' to be non-null");
     }
 
     private ReplicationSetArgs() {
-        this.deletionProtected = Input.empty();
-        this.regions = Input.empty();
+        this.deletionProtected = Output.empty();
+        this.regions = Output.empty();
     }
 
     public static Builder builder() {
@@ -55,8 +55,8 @@ public final class ReplicationSetArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> deletionProtected;
-        private Input<List<ReplicationSetReplicationRegionArgs>> regions;
+        private @Nullable Output<Boolean> deletionProtected;
+        private Output<List<ReplicationSetReplicationRegionArgs>> regions;
 
         public Builder() {
     	      // Empty
@@ -68,23 +68,23 @@ public final class ReplicationSetArgs extends io.pulumi.resources.ResourceArgs {
     	      this.regions = defaults.regions;
         }
 
-        public Builder deletionProtected(@Nullable Input<Boolean> deletionProtected) {
+        public Builder deletionProtected(@Nullable Output<Boolean> deletionProtected) {
             this.deletionProtected = deletionProtected;
             return this;
         }
 
         public Builder deletionProtected(@Nullable Boolean deletionProtected) {
-            this.deletionProtected = Input.ofNullable(deletionProtected);
+            this.deletionProtected = Output.ofNullable(deletionProtected);
             return this;
         }
 
-        public Builder regions(Input<List<ReplicationSetReplicationRegionArgs>> regions) {
+        public Builder regions(Output<List<ReplicationSetReplicationRegionArgs>> regions) {
             this.regions = Objects.requireNonNull(regions);
             return this;
         }
 
         public Builder regions(List<ReplicationSetReplicationRegionArgs> regions) {
-            this.regions = Input.of(Objects.requireNonNull(regions));
+            this.regions = Output.of(Objects.requireNonNull(regions));
             return this;
         }
         public ReplicationSetArgs build() {

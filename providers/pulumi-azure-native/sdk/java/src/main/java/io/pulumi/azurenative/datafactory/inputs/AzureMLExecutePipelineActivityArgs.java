@@ -7,7 +7,7 @@ import io.pulumi.azurenative.datafactory.inputs.ActivityDependencyArgs;
 import io.pulumi.azurenative.datafactory.inputs.ActivityPolicyArgs;
 import io.pulumi.azurenative.datafactory.inputs.LinkedServiceReferenceArgs;
 import io.pulumi.azurenative.datafactory.inputs.UserPropertyArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
@@ -29,10 +29,10 @@ public final class AzureMLExecutePipelineActivityArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="continueOnStepFailure")
-      private final @Nullable Input<Object> continueOnStepFailure;
+      private final @Nullable Output<Object> continueOnStepFailure;
 
-    public Input<Object> getContinueOnStepFailure() {
-        return this.continueOnStepFailure == null ? Input.empty() : this.continueOnStepFailure;
+    public Output<Object> getContinueOnStepFailure() {
+        return this.continueOnStepFailure == null ? Output.empty() : this.continueOnStepFailure;
     }
 
     /**
@@ -40,10 +40,10 @@ public final class AzureMLExecutePipelineActivityArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="dataPathAssignments")
-      private final @Nullable Input<Object> dataPathAssignments;
+      private final @Nullable Output<Object> dataPathAssignments;
 
-    public Input<Object> getDataPathAssignments() {
-        return this.dataPathAssignments == null ? Input.empty() : this.dataPathAssignments;
+    public Output<Object> getDataPathAssignments() {
+        return this.dataPathAssignments == null ? Output.empty() : this.dataPathAssignments;
     }
 
     /**
@@ -51,10 +51,10 @@ public final class AzureMLExecutePipelineActivityArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="dependsOn")
-      private final @Nullable Input<List<ActivityDependencyArgs>> dependsOn;
+      private final @Nullable Output<List<ActivityDependencyArgs>> dependsOn;
 
-    public Input<List<ActivityDependencyArgs>> getDependsOn() {
-        return this.dependsOn == null ? Input.empty() : this.dependsOn;
+    public Output<List<ActivityDependencyArgs>> getDependsOn() {
+        return this.dependsOn == null ? Output.empty() : this.dependsOn;
     }
 
     /**
@@ -62,10 +62,10 @@ public final class AzureMLExecutePipelineActivityArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -73,10 +73,10 @@ public final class AzureMLExecutePipelineActivityArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="experimentName")
-      private final @Nullable Input<Object> experimentName;
+      private final @Nullable Output<Object> experimentName;
 
-    public Input<Object> getExperimentName() {
-        return this.experimentName == null ? Input.empty() : this.experimentName;
+    public Output<Object> getExperimentName() {
+        return this.experimentName == null ? Output.empty() : this.experimentName;
     }
 
     /**
@@ -84,10 +84,10 @@ public final class AzureMLExecutePipelineActivityArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="linkedServiceName")
-      private final @Nullable Input<LinkedServiceReferenceArgs> linkedServiceName;
+      private final @Nullable Output<LinkedServiceReferenceArgs> linkedServiceName;
 
-    public Input<LinkedServiceReferenceArgs> getLinkedServiceName() {
-        return this.linkedServiceName == null ? Input.empty() : this.linkedServiceName;
+    public Output<LinkedServiceReferenceArgs> getLinkedServiceName() {
+        return this.linkedServiceName == null ? Output.empty() : this.linkedServiceName;
     }
 
     /**
@@ -95,10 +95,10 @@ public final class AzureMLExecutePipelineActivityArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="mlParentRunId")
-      private final @Nullable Input<Object> mlParentRunId;
+      private final @Nullable Output<Object> mlParentRunId;
 
-    public Input<Object> getMlParentRunId() {
-        return this.mlParentRunId == null ? Input.empty() : this.mlParentRunId;
+    public Output<Object> getMlParentRunId() {
+        return this.mlParentRunId == null ? Output.empty() : this.mlParentRunId;
     }
 
     /**
@@ -106,10 +106,10 @@ public final class AzureMLExecutePipelineActivityArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="mlPipelineEndpointId")
-      private final @Nullable Input<Object> mlPipelineEndpointId;
+      private final @Nullable Output<Object> mlPipelineEndpointId;
 
-    public Input<Object> getMlPipelineEndpointId() {
-        return this.mlPipelineEndpointId == null ? Input.empty() : this.mlPipelineEndpointId;
+    public Output<Object> getMlPipelineEndpointId() {
+        return this.mlPipelineEndpointId == null ? Output.empty() : this.mlPipelineEndpointId;
     }
 
     /**
@@ -117,10 +117,10 @@ public final class AzureMLExecutePipelineActivityArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="mlPipelineId")
-      private final @Nullable Input<Object> mlPipelineId;
+      private final @Nullable Output<Object> mlPipelineId;
 
-    public Input<Object> getMlPipelineId() {
-        return this.mlPipelineId == null ? Input.empty() : this.mlPipelineId;
+    public Output<Object> getMlPipelineId() {
+        return this.mlPipelineId == null ? Output.empty() : this.mlPipelineId;
     }
 
     /**
@@ -128,10 +128,10 @@ public final class AzureMLExecutePipelineActivityArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="mlPipelineParameters")
-      private final @Nullable Input<Object> mlPipelineParameters;
+      private final @Nullable Output<Object> mlPipelineParameters;
 
-    public Input<Object> getMlPipelineParameters() {
-        return this.mlPipelineParameters == null ? Input.empty() : this.mlPipelineParameters;
+    public Output<Object> getMlPipelineParameters() {
+        return this.mlPipelineParameters == null ? Output.empty() : this.mlPipelineParameters;
     }
 
     /**
@@ -139,9 +139,9 @@ public final class AzureMLExecutePipelineActivityArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="name", required=true)
-      private final Input<String> name;
+      private final Output<String> name;
 
-    public Input<String> getName() {
+    public Output<String> getName() {
         return this.name;
     }
 
@@ -150,10 +150,10 @@ public final class AzureMLExecutePipelineActivityArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="policy")
-      private final @Nullable Input<ActivityPolicyArgs> policy;
+      private final @Nullable Output<ActivityPolicyArgs> policy;
 
-    public Input<ActivityPolicyArgs> getPolicy() {
-        return this.policy == null ? Input.empty() : this.policy;
+    public Output<ActivityPolicyArgs> getPolicy() {
+        return this.policy == null ? Output.empty() : this.policy;
     }
 
     /**
@@ -162,9 +162,9 @@ public final class AzureMLExecutePipelineActivityArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<String> type;
+      private final Output<String> type;
 
-    public Input<String> getType() {
+    public Output<String> getType() {
         return this.type;
     }
 
@@ -173,10 +173,10 @@ public final class AzureMLExecutePipelineActivityArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="userProperties")
-      private final @Nullable Input<List<UserPropertyArgs>> userProperties;
+      private final @Nullable Output<List<UserPropertyArgs>> userProperties;
 
-    public Input<List<UserPropertyArgs>> getUserProperties() {
-        return this.userProperties == null ? Input.empty() : this.userProperties;
+    public Output<List<UserPropertyArgs>> getUserProperties() {
+        return this.userProperties == null ? Output.empty() : this.userProperties;
     }
 
     /**
@@ -184,28 +184,28 @@ public final class AzureMLExecutePipelineActivityArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="version")
-      private final @Nullable Input<Object> version;
+      private final @Nullable Output<Object> version;
 
-    public Input<Object> getVersion() {
-        return this.version == null ? Input.empty() : this.version;
+    public Output<Object> getVersion() {
+        return this.version == null ? Output.empty() : this.version;
     }
 
     public AzureMLExecutePipelineActivityArgs(
-        @Nullable Input<Object> continueOnStepFailure,
-        @Nullable Input<Object> dataPathAssignments,
-        @Nullable Input<List<ActivityDependencyArgs>> dependsOn,
-        @Nullable Input<String> description,
-        @Nullable Input<Object> experimentName,
-        @Nullable Input<LinkedServiceReferenceArgs> linkedServiceName,
-        @Nullable Input<Object> mlParentRunId,
-        @Nullable Input<Object> mlPipelineEndpointId,
-        @Nullable Input<Object> mlPipelineId,
-        @Nullable Input<Object> mlPipelineParameters,
-        Input<String> name,
-        @Nullable Input<ActivityPolicyArgs> policy,
-        Input<String> type,
-        @Nullable Input<List<UserPropertyArgs>> userProperties,
-        @Nullable Input<Object> version) {
+        @Nullable Output<Object> continueOnStepFailure,
+        @Nullable Output<Object> dataPathAssignments,
+        @Nullable Output<List<ActivityDependencyArgs>> dependsOn,
+        @Nullable Output<String> description,
+        @Nullable Output<Object> experimentName,
+        @Nullable Output<LinkedServiceReferenceArgs> linkedServiceName,
+        @Nullable Output<Object> mlParentRunId,
+        @Nullable Output<Object> mlPipelineEndpointId,
+        @Nullable Output<Object> mlPipelineId,
+        @Nullable Output<Object> mlPipelineParameters,
+        Output<String> name,
+        @Nullable Output<ActivityPolicyArgs> policy,
+        Output<String> type,
+        @Nullable Output<List<UserPropertyArgs>> userProperties,
+        @Nullable Output<Object> version) {
         this.continueOnStepFailure = continueOnStepFailure;
         this.dataPathAssignments = dataPathAssignments;
         this.dependsOn = dependsOn;
@@ -224,21 +224,21 @@ public final class AzureMLExecutePipelineActivityArgs extends io.pulumi.resource
     }
 
     private AzureMLExecutePipelineActivityArgs() {
-        this.continueOnStepFailure = Input.empty();
-        this.dataPathAssignments = Input.empty();
-        this.dependsOn = Input.empty();
-        this.description = Input.empty();
-        this.experimentName = Input.empty();
-        this.linkedServiceName = Input.empty();
-        this.mlParentRunId = Input.empty();
-        this.mlPipelineEndpointId = Input.empty();
-        this.mlPipelineId = Input.empty();
-        this.mlPipelineParameters = Input.empty();
-        this.name = Input.empty();
-        this.policy = Input.empty();
-        this.type = Input.empty();
-        this.userProperties = Input.empty();
-        this.version = Input.empty();
+        this.continueOnStepFailure = Output.empty();
+        this.dataPathAssignments = Output.empty();
+        this.dependsOn = Output.empty();
+        this.description = Output.empty();
+        this.experimentName = Output.empty();
+        this.linkedServiceName = Output.empty();
+        this.mlParentRunId = Output.empty();
+        this.mlPipelineEndpointId = Output.empty();
+        this.mlPipelineId = Output.empty();
+        this.mlPipelineParameters = Output.empty();
+        this.name = Output.empty();
+        this.policy = Output.empty();
+        this.type = Output.empty();
+        this.userProperties = Output.empty();
+        this.version = Output.empty();
     }
 
     public static Builder builder() {
@@ -250,21 +250,21 @@ public final class AzureMLExecutePipelineActivityArgs extends io.pulumi.resource
     }
 
     public static final class Builder {
-        private @Nullable Input<Object> continueOnStepFailure;
-        private @Nullable Input<Object> dataPathAssignments;
-        private @Nullable Input<List<ActivityDependencyArgs>> dependsOn;
-        private @Nullable Input<String> description;
-        private @Nullable Input<Object> experimentName;
-        private @Nullable Input<LinkedServiceReferenceArgs> linkedServiceName;
-        private @Nullable Input<Object> mlParentRunId;
-        private @Nullable Input<Object> mlPipelineEndpointId;
-        private @Nullable Input<Object> mlPipelineId;
-        private @Nullable Input<Object> mlPipelineParameters;
-        private Input<String> name;
-        private @Nullable Input<ActivityPolicyArgs> policy;
-        private Input<String> type;
-        private @Nullable Input<List<UserPropertyArgs>> userProperties;
-        private @Nullable Input<Object> version;
+        private @Nullable Output<Object> continueOnStepFailure;
+        private @Nullable Output<Object> dataPathAssignments;
+        private @Nullable Output<List<ActivityDependencyArgs>> dependsOn;
+        private @Nullable Output<String> description;
+        private @Nullable Output<Object> experimentName;
+        private @Nullable Output<LinkedServiceReferenceArgs> linkedServiceName;
+        private @Nullable Output<Object> mlParentRunId;
+        private @Nullable Output<Object> mlPipelineEndpointId;
+        private @Nullable Output<Object> mlPipelineId;
+        private @Nullable Output<Object> mlPipelineParameters;
+        private Output<String> name;
+        private @Nullable Output<ActivityPolicyArgs> policy;
+        private Output<String> type;
+        private @Nullable Output<List<UserPropertyArgs>> userProperties;
+        private @Nullable Output<Object> version;
 
         public Builder() {
     	      // Empty
@@ -289,153 +289,153 @@ public final class AzureMLExecutePipelineActivityArgs extends io.pulumi.resource
     	      this.version = defaults.version;
         }
 
-        public Builder continueOnStepFailure(@Nullable Input<Object> continueOnStepFailure) {
+        public Builder continueOnStepFailure(@Nullable Output<Object> continueOnStepFailure) {
             this.continueOnStepFailure = continueOnStepFailure;
             return this;
         }
 
         public Builder continueOnStepFailure(@Nullable Object continueOnStepFailure) {
-            this.continueOnStepFailure = Input.ofNullable(continueOnStepFailure);
+            this.continueOnStepFailure = Output.ofNullable(continueOnStepFailure);
             return this;
         }
 
-        public Builder dataPathAssignments(@Nullable Input<Object> dataPathAssignments) {
+        public Builder dataPathAssignments(@Nullable Output<Object> dataPathAssignments) {
             this.dataPathAssignments = dataPathAssignments;
             return this;
         }
 
         public Builder dataPathAssignments(@Nullable Object dataPathAssignments) {
-            this.dataPathAssignments = Input.ofNullable(dataPathAssignments);
+            this.dataPathAssignments = Output.ofNullable(dataPathAssignments);
             return this;
         }
 
-        public Builder dependsOn(@Nullable Input<List<ActivityDependencyArgs>> dependsOn) {
+        public Builder dependsOn(@Nullable Output<List<ActivityDependencyArgs>> dependsOn) {
             this.dependsOn = dependsOn;
             return this;
         }
 
         public Builder dependsOn(@Nullable List<ActivityDependencyArgs> dependsOn) {
-            this.dependsOn = Input.ofNullable(dependsOn);
+            this.dependsOn = Output.ofNullable(dependsOn);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder experimentName(@Nullable Input<Object> experimentName) {
+        public Builder experimentName(@Nullable Output<Object> experimentName) {
             this.experimentName = experimentName;
             return this;
         }
 
         public Builder experimentName(@Nullable Object experimentName) {
-            this.experimentName = Input.ofNullable(experimentName);
+            this.experimentName = Output.ofNullable(experimentName);
             return this;
         }
 
-        public Builder linkedServiceName(@Nullable Input<LinkedServiceReferenceArgs> linkedServiceName) {
+        public Builder linkedServiceName(@Nullable Output<LinkedServiceReferenceArgs> linkedServiceName) {
             this.linkedServiceName = linkedServiceName;
             return this;
         }
 
         public Builder linkedServiceName(@Nullable LinkedServiceReferenceArgs linkedServiceName) {
-            this.linkedServiceName = Input.ofNullable(linkedServiceName);
+            this.linkedServiceName = Output.ofNullable(linkedServiceName);
             return this;
         }
 
-        public Builder mlParentRunId(@Nullable Input<Object> mlParentRunId) {
+        public Builder mlParentRunId(@Nullable Output<Object> mlParentRunId) {
             this.mlParentRunId = mlParentRunId;
             return this;
         }
 
         public Builder mlParentRunId(@Nullable Object mlParentRunId) {
-            this.mlParentRunId = Input.ofNullable(mlParentRunId);
+            this.mlParentRunId = Output.ofNullable(mlParentRunId);
             return this;
         }
 
-        public Builder mlPipelineEndpointId(@Nullable Input<Object> mlPipelineEndpointId) {
+        public Builder mlPipelineEndpointId(@Nullable Output<Object> mlPipelineEndpointId) {
             this.mlPipelineEndpointId = mlPipelineEndpointId;
             return this;
         }
 
         public Builder mlPipelineEndpointId(@Nullable Object mlPipelineEndpointId) {
-            this.mlPipelineEndpointId = Input.ofNullable(mlPipelineEndpointId);
+            this.mlPipelineEndpointId = Output.ofNullable(mlPipelineEndpointId);
             return this;
         }
 
-        public Builder mlPipelineId(@Nullable Input<Object> mlPipelineId) {
+        public Builder mlPipelineId(@Nullable Output<Object> mlPipelineId) {
             this.mlPipelineId = mlPipelineId;
             return this;
         }
 
         public Builder mlPipelineId(@Nullable Object mlPipelineId) {
-            this.mlPipelineId = Input.ofNullable(mlPipelineId);
+            this.mlPipelineId = Output.ofNullable(mlPipelineId);
             return this;
         }
 
-        public Builder mlPipelineParameters(@Nullable Input<Object> mlPipelineParameters) {
+        public Builder mlPipelineParameters(@Nullable Output<Object> mlPipelineParameters) {
             this.mlPipelineParameters = mlPipelineParameters;
             return this;
         }
 
         public Builder mlPipelineParameters(@Nullable Object mlPipelineParameters) {
-            this.mlPipelineParameters = Input.ofNullable(mlPipelineParameters);
+            this.mlPipelineParameters = Output.ofNullable(mlPipelineParameters);
             return this;
         }
 
-        public Builder name(Input<String> name) {
+        public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(String name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder policy(@Nullable Input<ActivityPolicyArgs> policy) {
+        public Builder policy(@Nullable Output<ActivityPolicyArgs> policy) {
             this.policy = policy;
             return this;
         }
 
         public Builder policy(@Nullable ActivityPolicyArgs policy) {
-            this.policy = Input.ofNullable(policy);
+            this.policy = Output.ofNullable(policy);
             return this;
         }
 
-        public Builder type(Input<String> type) {
+        public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(String type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
 
-        public Builder userProperties(@Nullable Input<List<UserPropertyArgs>> userProperties) {
+        public Builder userProperties(@Nullable Output<List<UserPropertyArgs>> userProperties) {
             this.userProperties = userProperties;
             return this;
         }
 
         public Builder userProperties(@Nullable List<UserPropertyArgs> userProperties) {
-            this.userProperties = Input.ofNullable(userProperties);
+            this.userProperties = Output.ofNullable(userProperties);
             return this;
         }
 
-        public Builder version(@Nullable Input<Object> version) {
+        public Builder version(@Nullable Output<Object> version) {
             this.version = version;
             return this;
         }
 
         public Builder version(@Nullable Object version) {
-            this.version = Input.ofNullable(version);
+            this.version = Output.ofNullable(version);
             return this;
         }
         public AzureMLExecutePipelineActivityArgs build() {

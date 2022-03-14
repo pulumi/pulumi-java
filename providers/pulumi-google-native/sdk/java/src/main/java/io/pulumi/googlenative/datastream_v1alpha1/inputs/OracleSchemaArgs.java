@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.datastream_v1alpha1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.datastream_v1alpha1.inputs.OracleTableArgs;
 import java.lang.String;
@@ -25,10 +25,10 @@ public final class OracleSchemaArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="oracleTables")
-      private final @Nullable Input<List<OracleTableArgs>> oracleTables;
+      private final @Nullable Output<List<OracleTableArgs>> oracleTables;
 
-    public Input<List<OracleTableArgs>> getOracleTables() {
-        return this.oracleTables == null ? Input.empty() : this.oracleTables;
+    public Output<List<OracleTableArgs>> getOracleTables() {
+        return this.oracleTables == null ? Output.empty() : this.oracleTables;
     }
 
     /**
@@ -36,22 +36,22 @@ public final class OracleSchemaArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="schemaName")
-      private final @Nullable Input<String> schemaName;
+      private final @Nullable Output<String> schemaName;
 
-    public Input<String> getSchemaName() {
-        return this.schemaName == null ? Input.empty() : this.schemaName;
+    public Output<String> getSchemaName() {
+        return this.schemaName == null ? Output.empty() : this.schemaName;
     }
 
     public OracleSchemaArgs(
-        @Nullable Input<List<OracleTableArgs>> oracleTables,
-        @Nullable Input<String> schemaName) {
+        @Nullable Output<List<OracleTableArgs>> oracleTables,
+        @Nullable Output<String> schemaName) {
         this.oracleTables = oracleTables;
         this.schemaName = schemaName;
     }
 
     private OracleSchemaArgs() {
-        this.oracleTables = Input.empty();
-        this.schemaName = Input.empty();
+        this.oracleTables = Output.empty();
+        this.schemaName = Output.empty();
     }
 
     public static Builder builder() {
@@ -63,8 +63,8 @@ public final class OracleSchemaArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<List<OracleTableArgs>> oracleTables;
-        private @Nullable Input<String> schemaName;
+        private @Nullable Output<List<OracleTableArgs>> oracleTables;
+        private @Nullable Output<String> schemaName;
 
         public Builder() {
     	      // Empty
@@ -76,23 +76,23 @@ public final class OracleSchemaArgs extends io.pulumi.resources.ResourceArgs {
     	      this.schemaName = defaults.schemaName;
         }
 
-        public Builder oracleTables(@Nullable Input<List<OracleTableArgs>> oracleTables) {
+        public Builder oracleTables(@Nullable Output<List<OracleTableArgs>> oracleTables) {
             this.oracleTables = oracleTables;
             return this;
         }
 
         public Builder oracleTables(@Nullable List<OracleTableArgs> oracleTables) {
-            this.oracleTables = Input.ofNullable(oracleTables);
+            this.oracleTables = Output.ofNullable(oracleTables);
             return this;
         }
 
-        public Builder schemaName(@Nullable Input<String> schemaName) {
+        public Builder schemaName(@Nullable Output<String> schemaName) {
             this.schemaName = schemaName;
             return this;
         }
 
         public Builder schemaName(@Nullable String schemaName) {
-            this.schemaName = Input.ofNullable(schemaName);
+            this.schemaName = Output.ofNullable(schemaName);
             return this;
         }
         public OracleSchemaArgs build() {

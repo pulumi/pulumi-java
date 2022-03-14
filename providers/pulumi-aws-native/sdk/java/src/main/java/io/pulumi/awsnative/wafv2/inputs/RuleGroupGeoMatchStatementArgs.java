@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.wafv2.inputs;
 
 import io.pulumi.awsnative.wafv2.inputs.RuleGroupForwardedIPConfigurationArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -17,29 +17,29 @@ public final class RuleGroupGeoMatchStatementArgs extends io.pulumi.resources.Re
     public static final RuleGroupGeoMatchStatementArgs Empty = new RuleGroupGeoMatchStatementArgs();
 
     @InputImport(name="countryCodes")
-      private final @Nullable Input<List<String>> countryCodes;
+      private final @Nullable Output<List<String>> countryCodes;
 
-    public Input<List<String>> getCountryCodes() {
-        return this.countryCodes == null ? Input.empty() : this.countryCodes;
+    public Output<List<String>> getCountryCodes() {
+        return this.countryCodes == null ? Output.empty() : this.countryCodes;
     }
 
     @InputImport(name="forwardedIPConfig")
-      private final @Nullable Input<RuleGroupForwardedIPConfigurationArgs> forwardedIPConfig;
+      private final @Nullable Output<RuleGroupForwardedIPConfigurationArgs> forwardedIPConfig;
 
-    public Input<RuleGroupForwardedIPConfigurationArgs> getForwardedIPConfig() {
-        return this.forwardedIPConfig == null ? Input.empty() : this.forwardedIPConfig;
+    public Output<RuleGroupForwardedIPConfigurationArgs> getForwardedIPConfig() {
+        return this.forwardedIPConfig == null ? Output.empty() : this.forwardedIPConfig;
     }
 
     public RuleGroupGeoMatchStatementArgs(
-        @Nullable Input<List<String>> countryCodes,
-        @Nullable Input<RuleGroupForwardedIPConfigurationArgs> forwardedIPConfig) {
+        @Nullable Output<List<String>> countryCodes,
+        @Nullable Output<RuleGroupForwardedIPConfigurationArgs> forwardedIPConfig) {
         this.countryCodes = countryCodes;
         this.forwardedIPConfig = forwardedIPConfig;
     }
 
     private RuleGroupGeoMatchStatementArgs() {
-        this.countryCodes = Input.empty();
-        this.forwardedIPConfig = Input.empty();
+        this.countryCodes = Output.empty();
+        this.forwardedIPConfig = Output.empty();
     }
 
     public static Builder builder() {
@@ -51,8 +51,8 @@ public final class RuleGroupGeoMatchStatementArgs extends io.pulumi.resources.Re
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> countryCodes;
-        private @Nullable Input<RuleGroupForwardedIPConfigurationArgs> forwardedIPConfig;
+        private @Nullable Output<List<String>> countryCodes;
+        private @Nullable Output<RuleGroupForwardedIPConfigurationArgs> forwardedIPConfig;
 
         public Builder() {
     	      // Empty
@@ -64,23 +64,23 @@ public final class RuleGroupGeoMatchStatementArgs extends io.pulumi.resources.Re
     	      this.forwardedIPConfig = defaults.forwardedIPConfig;
         }
 
-        public Builder countryCodes(@Nullable Input<List<String>> countryCodes) {
+        public Builder countryCodes(@Nullable Output<List<String>> countryCodes) {
             this.countryCodes = countryCodes;
             return this;
         }
 
         public Builder countryCodes(@Nullable List<String> countryCodes) {
-            this.countryCodes = Input.ofNullable(countryCodes);
+            this.countryCodes = Output.ofNullable(countryCodes);
             return this;
         }
 
-        public Builder forwardedIPConfig(@Nullable Input<RuleGroupForwardedIPConfigurationArgs> forwardedIPConfig) {
+        public Builder forwardedIPConfig(@Nullable Output<RuleGroupForwardedIPConfigurationArgs> forwardedIPConfig) {
             this.forwardedIPConfig = forwardedIPConfig;
             return this;
         }
 
         public Builder forwardedIPConfig(@Nullable RuleGroupForwardedIPConfigurationArgs forwardedIPConfig) {
-            this.forwardedIPConfig = Input.ofNullable(forwardedIPConfig);
+            this.forwardedIPConfig = Output.ofNullable(forwardedIPConfig);
             return this;
         }
         public RuleGroupGeoMatchStatementArgs build() {

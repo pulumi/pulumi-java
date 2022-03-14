@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.databrew.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,18 +19,18 @@ public final class JobCsvOutputOptionsArgs extends io.pulumi.resources.ResourceA
     public static final JobCsvOutputOptionsArgs Empty = new JobCsvOutputOptionsArgs();
 
     @InputImport(name="delimiter")
-      private final @Nullable Input<String> delimiter;
+      private final @Nullable Output<String> delimiter;
 
-    public Input<String> getDelimiter() {
-        return this.delimiter == null ? Input.empty() : this.delimiter;
+    public Output<String> getDelimiter() {
+        return this.delimiter == null ? Output.empty() : this.delimiter;
     }
 
-    public JobCsvOutputOptionsArgs(@Nullable Input<String> delimiter) {
+    public JobCsvOutputOptionsArgs(@Nullable Output<String> delimiter) {
         this.delimiter = delimiter;
     }
 
     private JobCsvOutputOptionsArgs() {
-        this.delimiter = Input.empty();
+        this.delimiter = Output.empty();
     }
 
     public static Builder builder() {
@@ -42,7 +42,7 @@ public final class JobCsvOutputOptionsArgs extends io.pulumi.resources.ResourceA
     }
 
     public static final class Builder {
-        private @Nullable Input<String> delimiter;
+        private @Nullable Output<String> delimiter;
 
         public Builder() {
     	      // Empty
@@ -53,13 +53,13 @@ public final class JobCsvOutputOptionsArgs extends io.pulumi.resources.ResourceA
     	      this.delimiter = defaults.delimiter;
         }
 
-        public Builder delimiter(@Nullable Input<String> delimiter) {
+        public Builder delimiter(@Nullable Output<String> delimiter) {
             this.delimiter = delimiter;
             return this;
         }
 
         public Builder delimiter(@Nullable String delimiter) {
-            this.delimiter = Input.ofNullable(delimiter);
+            this.delimiter = Output.ofNullable(delimiter);
             return this;
         }
         public JobCsvOutputOptionsArgs build() {

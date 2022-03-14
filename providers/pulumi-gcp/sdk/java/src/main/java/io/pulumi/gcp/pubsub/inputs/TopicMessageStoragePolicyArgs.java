@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.pubsub.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -24,18 +24,18 @@ public final class TopicMessageStoragePolicyArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="allowedPersistenceRegions", required=true)
-      private final Input<List<String>> allowedPersistenceRegions;
+      private final Output<List<String>> allowedPersistenceRegions;
 
-    public Input<List<String>> getAllowedPersistenceRegions() {
+    public Output<List<String>> getAllowedPersistenceRegions() {
         return this.allowedPersistenceRegions;
     }
 
-    public TopicMessageStoragePolicyArgs(Input<List<String>> allowedPersistenceRegions) {
+    public TopicMessageStoragePolicyArgs(Output<List<String>> allowedPersistenceRegions) {
         this.allowedPersistenceRegions = Objects.requireNonNull(allowedPersistenceRegions, "expected parameter 'allowedPersistenceRegions' to be non-null");
     }
 
     private TopicMessageStoragePolicyArgs() {
-        this.allowedPersistenceRegions = Input.empty();
+        this.allowedPersistenceRegions = Output.empty();
     }
 
     public static Builder builder() {
@@ -47,7 +47,7 @@ public final class TopicMessageStoragePolicyArgs extends io.pulumi.resources.Res
     }
 
     public static final class Builder {
-        private Input<List<String>> allowedPersistenceRegions;
+        private Output<List<String>> allowedPersistenceRegions;
 
         public Builder() {
     	      // Empty
@@ -58,13 +58,13 @@ public final class TopicMessageStoragePolicyArgs extends io.pulumi.resources.Res
     	      this.allowedPersistenceRegions = defaults.allowedPersistenceRegions;
         }
 
-        public Builder allowedPersistenceRegions(Input<List<String>> allowedPersistenceRegions) {
+        public Builder allowedPersistenceRegions(Output<List<String>> allowedPersistenceRegions) {
             this.allowedPersistenceRegions = Objects.requireNonNull(allowedPersistenceRegions);
             return this;
         }
 
         public Builder allowedPersistenceRegions(List<String> allowedPersistenceRegions) {
-            this.allowedPersistenceRegions = Input.of(Objects.requireNonNull(allowedPersistenceRegions));
+            this.allowedPersistenceRegions = Output.of(Objects.requireNonNull(allowedPersistenceRegions));
             return this;
         }
         public TopicMessageStoragePolicyArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.iam;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -20,10 +20,10 @@ public final class AccountPasswordPolicyArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="allowUsersToChangePassword")
-      private final @Nullable Input<Boolean> allowUsersToChangePassword;
+      private final @Nullable Output<Boolean> allowUsersToChangePassword;
 
-    public Input<Boolean> getAllowUsersToChangePassword() {
-        return this.allowUsersToChangePassword == null ? Input.empty() : this.allowUsersToChangePassword;
+    public Output<Boolean> getAllowUsersToChangePassword() {
+        return this.allowUsersToChangePassword == null ? Output.empty() : this.allowUsersToChangePassword;
     }
 
     /**
@@ -31,10 +31,10 @@ public final class AccountPasswordPolicyArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="hardExpiry")
-      private final @Nullable Input<Boolean> hardExpiry;
+      private final @Nullable Output<Boolean> hardExpiry;
 
-    public Input<Boolean> getHardExpiry() {
-        return this.hardExpiry == null ? Input.empty() : this.hardExpiry;
+    public Output<Boolean> getHardExpiry() {
+        return this.hardExpiry == null ? Output.empty() : this.hardExpiry;
     }
 
     /**
@@ -42,10 +42,10 @@ public final class AccountPasswordPolicyArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="maxPasswordAge")
-      private final @Nullable Input<Integer> maxPasswordAge;
+      private final @Nullable Output<Integer> maxPasswordAge;
 
-    public Input<Integer> getMaxPasswordAge() {
-        return this.maxPasswordAge == null ? Input.empty() : this.maxPasswordAge;
+    public Output<Integer> getMaxPasswordAge() {
+        return this.maxPasswordAge == null ? Output.empty() : this.maxPasswordAge;
     }
 
     /**
@@ -53,10 +53,10 @@ public final class AccountPasswordPolicyArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="minimumPasswordLength")
-      private final @Nullable Input<Integer> minimumPasswordLength;
+      private final @Nullable Output<Integer> minimumPasswordLength;
 
-    public Input<Integer> getMinimumPasswordLength() {
-        return this.minimumPasswordLength == null ? Input.empty() : this.minimumPasswordLength;
+    public Output<Integer> getMinimumPasswordLength() {
+        return this.minimumPasswordLength == null ? Output.empty() : this.minimumPasswordLength;
     }
 
     /**
@@ -64,10 +64,10 @@ public final class AccountPasswordPolicyArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="passwordReusePrevention")
-      private final @Nullable Input<Integer> passwordReusePrevention;
+      private final @Nullable Output<Integer> passwordReusePrevention;
 
-    public Input<Integer> getPasswordReusePrevention() {
-        return this.passwordReusePrevention == null ? Input.empty() : this.passwordReusePrevention;
+    public Output<Integer> getPasswordReusePrevention() {
+        return this.passwordReusePrevention == null ? Output.empty() : this.passwordReusePrevention;
     }
 
     /**
@@ -75,10 +75,10 @@ public final class AccountPasswordPolicyArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="requireLowercaseCharacters")
-      private final @Nullable Input<Boolean> requireLowercaseCharacters;
+      private final @Nullable Output<Boolean> requireLowercaseCharacters;
 
-    public Input<Boolean> getRequireLowercaseCharacters() {
-        return this.requireLowercaseCharacters == null ? Input.empty() : this.requireLowercaseCharacters;
+    public Output<Boolean> getRequireLowercaseCharacters() {
+        return this.requireLowercaseCharacters == null ? Output.empty() : this.requireLowercaseCharacters;
     }
 
     /**
@@ -86,10 +86,10 @@ public final class AccountPasswordPolicyArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="requireNumbers")
-      private final @Nullable Input<Boolean> requireNumbers;
+      private final @Nullable Output<Boolean> requireNumbers;
 
-    public Input<Boolean> getRequireNumbers() {
-        return this.requireNumbers == null ? Input.empty() : this.requireNumbers;
+    public Output<Boolean> getRequireNumbers() {
+        return this.requireNumbers == null ? Output.empty() : this.requireNumbers;
     }
 
     /**
@@ -97,10 +97,10 @@ public final class AccountPasswordPolicyArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="requireSymbols")
-      private final @Nullable Input<Boolean> requireSymbols;
+      private final @Nullable Output<Boolean> requireSymbols;
 
-    public Input<Boolean> getRequireSymbols() {
-        return this.requireSymbols == null ? Input.empty() : this.requireSymbols;
+    public Output<Boolean> getRequireSymbols() {
+        return this.requireSymbols == null ? Output.empty() : this.requireSymbols;
     }
 
     /**
@@ -108,22 +108,22 @@ public final class AccountPasswordPolicyArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="requireUppercaseCharacters")
-      private final @Nullable Input<Boolean> requireUppercaseCharacters;
+      private final @Nullable Output<Boolean> requireUppercaseCharacters;
 
-    public Input<Boolean> getRequireUppercaseCharacters() {
-        return this.requireUppercaseCharacters == null ? Input.empty() : this.requireUppercaseCharacters;
+    public Output<Boolean> getRequireUppercaseCharacters() {
+        return this.requireUppercaseCharacters == null ? Output.empty() : this.requireUppercaseCharacters;
     }
 
     public AccountPasswordPolicyArgs(
-        @Nullable Input<Boolean> allowUsersToChangePassword,
-        @Nullable Input<Boolean> hardExpiry,
-        @Nullable Input<Integer> maxPasswordAge,
-        @Nullable Input<Integer> minimumPasswordLength,
-        @Nullable Input<Integer> passwordReusePrevention,
-        @Nullable Input<Boolean> requireLowercaseCharacters,
-        @Nullable Input<Boolean> requireNumbers,
-        @Nullable Input<Boolean> requireSymbols,
-        @Nullable Input<Boolean> requireUppercaseCharacters) {
+        @Nullable Output<Boolean> allowUsersToChangePassword,
+        @Nullable Output<Boolean> hardExpiry,
+        @Nullable Output<Integer> maxPasswordAge,
+        @Nullable Output<Integer> minimumPasswordLength,
+        @Nullable Output<Integer> passwordReusePrevention,
+        @Nullable Output<Boolean> requireLowercaseCharacters,
+        @Nullable Output<Boolean> requireNumbers,
+        @Nullable Output<Boolean> requireSymbols,
+        @Nullable Output<Boolean> requireUppercaseCharacters) {
         this.allowUsersToChangePassword = allowUsersToChangePassword;
         this.hardExpiry = hardExpiry;
         this.maxPasswordAge = maxPasswordAge;
@@ -136,15 +136,15 @@ public final class AccountPasswordPolicyArgs extends io.pulumi.resources.Resourc
     }
 
     private AccountPasswordPolicyArgs() {
-        this.allowUsersToChangePassword = Input.empty();
-        this.hardExpiry = Input.empty();
-        this.maxPasswordAge = Input.empty();
-        this.minimumPasswordLength = Input.empty();
-        this.passwordReusePrevention = Input.empty();
-        this.requireLowercaseCharacters = Input.empty();
-        this.requireNumbers = Input.empty();
-        this.requireSymbols = Input.empty();
-        this.requireUppercaseCharacters = Input.empty();
+        this.allowUsersToChangePassword = Output.empty();
+        this.hardExpiry = Output.empty();
+        this.maxPasswordAge = Output.empty();
+        this.minimumPasswordLength = Output.empty();
+        this.passwordReusePrevention = Output.empty();
+        this.requireLowercaseCharacters = Output.empty();
+        this.requireNumbers = Output.empty();
+        this.requireSymbols = Output.empty();
+        this.requireUppercaseCharacters = Output.empty();
     }
 
     public static Builder builder() {
@@ -156,15 +156,15 @@ public final class AccountPasswordPolicyArgs extends io.pulumi.resources.Resourc
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> allowUsersToChangePassword;
-        private @Nullable Input<Boolean> hardExpiry;
-        private @Nullable Input<Integer> maxPasswordAge;
-        private @Nullable Input<Integer> minimumPasswordLength;
-        private @Nullable Input<Integer> passwordReusePrevention;
-        private @Nullable Input<Boolean> requireLowercaseCharacters;
-        private @Nullable Input<Boolean> requireNumbers;
-        private @Nullable Input<Boolean> requireSymbols;
-        private @Nullable Input<Boolean> requireUppercaseCharacters;
+        private @Nullable Output<Boolean> allowUsersToChangePassword;
+        private @Nullable Output<Boolean> hardExpiry;
+        private @Nullable Output<Integer> maxPasswordAge;
+        private @Nullable Output<Integer> minimumPasswordLength;
+        private @Nullable Output<Integer> passwordReusePrevention;
+        private @Nullable Output<Boolean> requireLowercaseCharacters;
+        private @Nullable Output<Boolean> requireNumbers;
+        private @Nullable Output<Boolean> requireSymbols;
+        private @Nullable Output<Boolean> requireUppercaseCharacters;
 
         public Builder() {
     	      // Empty
@@ -183,93 +183,93 @@ public final class AccountPasswordPolicyArgs extends io.pulumi.resources.Resourc
     	      this.requireUppercaseCharacters = defaults.requireUppercaseCharacters;
         }
 
-        public Builder allowUsersToChangePassword(@Nullable Input<Boolean> allowUsersToChangePassword) {
+        public Builder allowUsersToChangePassword(@Nullable Output<Boolean> allowUsersToChangePassword) {
             this.allowUsersToChangePassword = allowUsersToChangePassword;
             return this;
         }
 
         public Builder allowUsersToChangePassword(@Nullable Boolean allowUsersToChangePassword) {
-            this.allowUsersToChangePassword = Input.ofNullable(allowUsersToChangePassword);
+            this.allowUsersToChangePassword = Output.ofNullable(allowUsersToChangePassword);
             return this;
         }
 
-        public Builder hardExpiry(@Nullable Input<Boolean> hardExpiry) {
+        public Builder hardExpiry(@Nullable Output<Boolean> hardExpiry) {
             this.hardExpiry = hardExpiry;
             return this;
         }
 
         public Builder hardExpiry(@Nullable Boolean hardExpiry) {
-            this.hardExpiry = Input.ofNullable(hardExpiry);
+            this.hardExpiry = Output.ofNullable(hardExpiry);
             return this;
         }
 
-        public Builder maxPasswordAge(@Nullable Input<Integer> maxPasswordAge) {
+        public Builder maxPasswordAge(@Nullable Output<Integer> maxPasswordAge) {
             this.maxPasswordAge = maxPasswordAge;
             return this;
         }
 
         public Builder maxPasswordAge(@Nullable Integer maxPasswordAge) {
-            this.maxPasswordAge = Input.ofNullable(maxPasswordAge);
+            this.maxPasswordAge = Output.ofNullable(maxPasswordAge);
             return this;
         }
 
-        public Builder minimumPasswordLength(@Nullable Input<Integer> minimumPasswordLength) {
+        public Builder minimumPasswordLength(@Nullable Output<Integer> minimumPasswordLength) {
             this.minimumPasswordLength = minimumPasswordLength;
             return this;
         }
 
         public Builder minimumPasswordLength(@Nullable Integer minimumPasswordLength) {
-            this.minimumPasswordLength = Input.ofNullable(minimumPasswordLength);
+            this.minimumPasswordLength = Output.ofNullable(minimumPasswordLength);
             return this;
         }
 
-        public Builder passwordReusePrevention(@Nullable Input<Integer> passwordReusePrevention) {
+        public Builder passwordReusePrevention(@Nullable Output<Integer> passwordReusePrevention) {
             this.passwordReusePrevention = passwordReusePrevention;
             return this;
         }
 
         public Builder passwordReusePrevention(@Nullable Integer passwordReusePrevention) {
-            this.passwordReusePrevention = Input.ofNullable(passwordReusePrevention);
+            this.passwordReusePrevention = Output.ofNullable(passwordReusePrevention);
             return this;
         }
 
-        public Builder requireLowercaseCharacters(@Nullable Input<Boolean> requireLowercaseCharacters) {
+        public Builder requireLowercaseCharacters(@Nullable Output<Boolean> requireLowercaseCharacters) {
             this.requireLowercaseCharacters = requireLowercaseCharacters;
             return this;
         }
 
         public Builder requireLowercaseCharacters(@Nullable Boolean requireLowercaseCharacters) {
-            this.requireLowercaseCharacters = Input.ofNullable(requireLowercaseCharacters);
+            this.requireLowercaseCharacters = Output.ofNullable(requireLowercaseCharacters);
             return this;
         }
 
-        public Builder requireNumbers(@Nullable Input<Boolean> requireNumbers) {
+        public Builder requireNumbers(@Nullable Output<Boolean> requireNumbers) {
             this.requireNumbers = requireNumbers;
             return this;
         }
 
         public Builder requireNumbers(@Nullable Boolean requireNumbers) {
-            this.requireNumbers = Input.ofNullable(requireNumbers);
+            this.requireNumbers = Output.ofNullable(requireNumbers);
             return this;
         }
 
-        public Builder requireSymbols(@Nullable Input<Boolean> requireSymbols) {
+        public Builder requireSymbols(@Nullable Output<Boolean> requireSymbols) {
             this.requireSymbols = requireSymbols;
             return this;
         }
 
         public Builder requireSymbols(@Nullable Boolean requireSymbols) {
-            this.requireSymbols = Input.ofNullable(requireSymbols);
+            this.requireSymbols = Output.ofNullable(requireSymbols);
             return this;
         }
 
-        public Builder requireUppercaseCharacters(@Nullable Input<Boolean> requireUppercaseCharacters) {
+        public Builder requireUppercaseCharacters(@Nullable Output<Boolean> requireUppercaseCharacters) {
             this.requireUppercaseCharacters = requireUppercaseCharacters;
             return this;
         }
 
         public Builder requireUppercaseCharacters(@Nullable Boolean requireUppercaseCharacters) {
-            this.requireUppercaseCharacters = Input.ofNullable(requireUppercaseCharacters);
+            this.requireUppercaseCharacters = Output.ofNullable(requireUppercaseCharacters);
             return this;
         }
         public AccountPasswordPolicyArgs build() {

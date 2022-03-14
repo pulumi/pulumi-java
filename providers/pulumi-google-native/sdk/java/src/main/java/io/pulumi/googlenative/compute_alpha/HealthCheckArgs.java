@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.compute_alpha.enums.HealthCheckType;
 import io.pulumi.googlenative.compute_alpha.inputs.GRPCHealthCheckArgs;
@@ -29,10 +29,10 @@ public final class HealthCheckArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="checkIntervalSec")
-      private final @Nullable Input<Integer> checkIntervalSec;
+      private final @Nullable Output<Integer> checkIntervalSec;
 
-    public Input<Integer> getCheckIntervalSec() {
-        return this.checkIntervalSec == null ? Input.empty() : this.checkIntervalSec;
+    public Output<Integer> getCheckIntervalSec() {
+        return this.checkIntervalSec == null ? Output.empty() : this.checkIntervalSec;
     }
 
     /**
@@ -40,17 +40,17 @@ public final class HealthCheckArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     @InputImport(name="grpcHealthCheck")
-      private final @Nullable Input<GRPCHealthCheckArgs> grpcHealthCheck;
+      private final @Nullable Output<GRPCHealthCheckArgs> grpcHealthCheck;
 
-    public Input<GRPCHealthCheckArgs> getGrpcHealthCheck() {
-        return this.grpcHealthCheck == null ? Input.empty() : this.grpcHealthCheck;
+    public Output<GRPCHealthCheckArgs> getGrpcHealthCheck() {
+        return this.grpcHealthCheck == null ? Output.empty() : this.grpcHealthCheck;
     }
 
     /**
@@ -58,31 +58,31 @@ public final class HealthCheckArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="healthyThreshold")
-      private final @Nullable Input<Integer> healthyThreshold;
+      private final @Nullable Output<Integer> healthyThreshold;
 
-    public Input<Integer> getHealthyThreshold() {
-        return this.healthyThreshold == null ? Input.empty() : this.healthyThreshold;
+    public Output<Integer> getHealthyThreshold() {
+        return this.healthyThreshold == null ? Output.empty() : this.healthyThreshold;
     }
 
     @InputImport(name="http2HealthCheck")
-      private final @Nullable Input<HTTP2HealthCheckArgs> http2HealthCheck;
+      private final @Nullable Output<HTTP2HealthCheckArgs> http2HealthCheck;
 
-    public Input<HTTP2HealthCheckArgs> getHttp2HealthCheck() {
-        return this.http2HealthCheck == null ? Input.empty() : this.http2HealthCheck;
+    public Output<HTTP2HealthCheckArgs> getHttp2HealthCheck() {
+        return this.http2HealthCheck == null ? Output.empty() : this.http2HealthCheck;
     }
 
     @InputImport(name="httpHealthCheck")
-      private final @Nullable Input<HTTPHealthCheckArgs> httpHealthCheck;
+      private final @Nullable Output<HTTPHealthCheckArgs> httpHealthCheck;
 
-    public Input<HTTPHealthCheckArgs> getHttpHealthCheck() {
-        return this.httpHealthCheck == null ? Input.empty() : this.httpHealthCheck;
+    public Output<HTTPHealthCheckArgs> getHttpHealthCheck() {
+        return this.httpHealthCheck == null ? Output.empty() : this.httpHealthCheck;
     }
 
     @InputImport(name="httpsHealthCheck")
-      private final @Nullable Input<HTTPSHealthCheckArgs> httpsHealthCheck;
+      private final @Nullable Output<HTTPSHealthCheckArgs> httpsHealthCheck;
 
-    public Input<HTTPSHealthCheckArgs> getHttpsHealthCheck() {
-        return this.httpsHealthCheck == null ? Input.empty() : this.httpsHealthCheck;
+    public Output<HTTPSHealthCheckArgs> getHttpsHealthCheck() {
+        return this.httpsHealthCheck == null ? Output.empty() : this.httpsHealthCheck;
     }
 
     /**
@@ -90,10 +90,10 @@ public final class HealthCheckArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kind")
-      private final @Nullable Input<String> kind;
+      private final @Nullable Output<String> kind;
 
-    public Input<String> getKind() {
-        return this.kind == null ? Input.empty() : this.kind;
+    public Output<String> getKind() {
+        return this.kind == null ? Output.empty() : this.kind;
     }
 
     /**
@@ -101,10 +101,10 @@ public final class HealthCheckArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="logConfig")
-      private final @Nullable Input<HealthCheckLogConfigArgs> logConfig;
+      private final @Nullable Output<HealthCheckLogConfigArgs> logConfig;
 
-    public Input<HealthCheckLogConfigArgs> getLogConfig() {
-        return this.logConfig == null ? Input.empty() : this.logConfig;
+    public Output<HealthCheckLogConfigArgs> getLogConfig() {
+        return this.logConfig == null ? Output.empty() : this.logConfig;
     }
 
     /**
@@ -112,38 +112,38 @@ public final class HealthCheckArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     @InputImport(name="requestId")
-      private final @Nullable Input<String> requestId;
+      private final @Nullable Output<String> requestId;
 
-    public Input<String> getRequestId() {
-        return this.requestId == null ? Input.empty() : this.requestId;
+    public Output<String> getRequestId() {
+        return this.requestId == null ? Output.empty() : this.requestId;
     }
 
     @InputImport(name="sslHealthCheck")
-      private final @Nullable Input<SSLHealthCheckArgs> sslHealthCheck;
+      private final @Nullable Output<SSLHealthCheckArgs> sslHealthCheck;
 
-    public Input<SSLHealthCheckArgs> getSslHealthCheck() {
-        return this.sslHealthCheck == null ? Input.empty() : this.sslHealthCheck;
+    public Output<SSLHealthCheckArgs> getSslHealthCheck() {
+        return this.sslHealthCheck == null ? Output.empty() : this.sslHealthCheck;
     }
 
     @InputImport(name="tcpHealthCheck")
-      private final @Nullable Input<TCPHealthCheckArgs> tcpHealthCheck;
+      private final @Nullable Output<TCPHealthCheckArgs> tcpHealthCheck;
 
-    public Input<TCPHealthCheckArgs> getTcpHealthCheck() {
-        return this.tcpHealthCheck == null ? Input.empty() : this.tcpHealthCheck;
+    public Output<TCPHealthCheckArgs> getTcpHealthCheck() {
+        return this.tcpHealthCheck == null ? Output.empty() : this.tcpHealthCheck;
     }
 
     /**
@@ -151,10 +151,10 @@ public final class HealthCheckArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="timeoutSec")
-      private final @Nullable Input<Integer> timeoutSec;
+      private final @Nullable Output<Integer> timeoutSec;
 
-    public Input<Integer> getTimeoutSec() {
-        return this.timeoutSec == null ? Input.empty() : this.timeoutSec;
+    public Output<Integer> getTimeoutSec() {
+        return this.timeoutSec == null ? Output.empty() : this.timeoutSec;
     }
 
     /**
@@ -162,17 +162,17 @@ public final class HealthCheckArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type")
-      private final @Nullable Input<HealthCheckType> type;
+      private final @Nullable Output<HealthCheckType> type;
 
-    public Input<HealthCheckType> getType() {
-        return this.type == null ? Input.empty() : this.type;
+    public Output<HealthCheckType> getType() {
+        return this.type == null ? Output.empty() : this.type;
     }
 
     @InputImport(name="udpHealthCheck")
-      private final @Nullable Input<UDPHealthCheckArgs> udpHealthCheck;
+      private final @Nullable Output<UDPHealthCheckArgs> udpHealthCheck;
 
-    public Input<UDPHealthCheckArgs> getUdpHealthCheck() {
-        return this.udpHealthCheck == null ? Input.empty() : this.udpHealthCheck;
+    public Output<UDPHealthCheckArgs> getUdpHealthCheck() {
+        return this.udpHealthCheck == null ? Output.empty() : this.udpHealthCheck;
     }
 
     /**
@@ -180,31 +180,31 @@ public final class HealthCheckArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="unhealthyThreshold")
-      private final @Nullable Input<Integer> unhealthyThreshold;
+      private final @Nullable Output<Integer> unhealthyThreshold;
 
-    public Input<Integer> getUnhealthyThreshold() {
-        return this.unhealthyThreshold == null ? Input.empty() : this.unhealthyThreshold;
+    public Output<Integer> getUnhealthyThreshold() {
+        return this.unhealthyThreshold == null ? Output.empty() : this.unhealthyThreshold;
     }
 
     public HealthCheckArgs(
-        @Nullable Input<Integer> checkIntervalSec,
-        @Nullable Input<String> description,
-        @Nullable Input<GRPCHealthCheckArgs> grpcHealthCheck,
-        @Nullable Input<Integer> healthyThreshold,
-        @Nullable Input<HTTP2HealthCheckArgs> http2HealthCheck,
-        @Nullable Input<HTTPHealthCheckArgs> httpHealthCheck,
-        @Nullable Input<HTTPSHealthCheckArgs> httpsHealthCheck,
-        @Nullable Input<String> kind,
-        @Nullable Input<HealthCheckLogConfigArgs> logConfig,
-        @Nullable Input<String> name,
-        @Nullable Input<String> project,
-        @Nullable Input<String> requestId,
-        @Nullable Input<SSLHealthCheckArgs> sslHealthCheck,
-        @Nullable Input<TCPHealthCheckArgs> tcpHealthCheck,
-        @Nullable Input<Integer> timeoutSec,
-        @Nullable Input<HealthCheckType> type,
-        @Nullable Input<UDPHealthCheckArgs> udpHealthCheck,
-        @Nullable Input<Integer> unhealthyThreshold) {
+        @Nullable Output<Integer> checkIntervalSec,
+        @Nullable Output<String> description,
+        @Nullable Output<GRPCHealthCheckArgs> grpcHealthCheck,
+        @Nullable Output<Integer> healthyThreshold,
+        @Nullable Output<HTTP2HealthCheckArgs> http2HealthCheck,
+        @Nullable Output<HTTPHealthCheckArgs> httpHealthCheck,
+        @Nullable Output<HTTPSHealthCheckArgs> httpsHealthCheck,
+        @Nullable Output<String> kind,
+        @Nullable Output<HealthCheckLogConfigArgs> logConfig,
+        @Nullable Output<String> name,
+        @Nullable Output<String> project,
+        @Nullable Output<String> requestId,
+        @Nullable Output<SSLHealthCheckArgs> sslHealthCheck,
+        @Nullable Output<TCPHealthCheckArgs> tcpHealthCheck,
+        @Nullable Output<Integer> timeoutSec,
+        @Nullable Output<HealthCheckType> type,
+        @Nullable Output<UDPHealthCheckArgs> udpHealthCheck,
+        @Nullable Output<Integer> unhealthyThreshold) {
         this.checkIntervalSec = checkIntervalSec;
         this.description = description;
         this.grpcHealthCheck = grpcHealthCheck;
@@ -226,24 +226,24 @@ public final class HealthCheckArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private HealthCheckArgs() {
-        this.checkIntervalSec = Input.empty();
-        this.description = Input.empty();
-        this.grpcHealthCheck = Input.empty();
-        this.healthyThreshold = Input.empty();
-        this.http2HealthCheck = Input.empty();
-        this.httpHealthCheck = Input.empty();
-        this.httpsHealthCheck = Input.empty();
-        this.kind = Input.empty();
-        this.logConfig = Input.empty();
-        this.name = Input.empty();
-        this.project = Input.empty();
-        this.requestId = Input.empty();
-        this.sslHealthCheck = Input.empty();
-        this.tcpHealthCheck = Input.empty();
-        this.timeoutSec = Input.empty();
-        this.type = Input.empty();
-        this.udpHealthCheck = Input.empty();
-        this.unhealthyThreshold = Input.empty();
+        this.checkIntervalSec = Output.empty();
+        this.description = Output.empty();
+        this.grpcHealthCheck = Output.empty();
+        this.healthyThreshold = Output.empty();
+        this.http2HealthCheck = Output.empty();
+        this.httpHealthCheck = Output.empty();
+        this.httpsHealthCheck = Output.empty();
+        this.kind = Output.empty();
+        this.logConfig = Output.empty();
+        this.name = Output.empty();
+        this.project = Output.empty();
+        this.requestId = Output.empty();
+        this.sslHealthCheck = Output.empty();
+        this.tcpHealthCheck = Output.empty();
+        this.timeoutSec = Output.empty();
+        this.type = Output.empty();
+        this.udpHealthCheck = Output.empty();
+        this.unhealthyThreshold = Output.empty();
     }
 
     public static Builder builder() {
@@ -255,24 +255,24 @@ public final class HealthCheckArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> checkIntervalSec;
-        private @Nullable Input<String> description;
-        private @Nullable Input<GRPCHealthCheckArgs> grpcHealthCheck;
-        private @Nullable Input<Integer> healthyThreshold;
-        private @Nullable Input<HTTP2HealthCheckArgs> http2HealthCheck;
-        private @Nullable Input<HTTPHealthCheckArgs> httpHealthCheck;
-        private @Nullable Input<HTTPSHealthCheckArgs> httpsHealthCheck;
-        private @Nullable Input<String> kind;
-        private @Nullable Input<HealthCheckLogConfigArgs> logConfig;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> project;
-        private @Nullable Input<String> requestId;
-        private @Nullable Input<SSLHealthCheckArgs> sslHealthCheck;
-        private @Nullable Input<TCPHealthCheckArgs> tcpHealthCheck;
-        private @Nullable Input<Integer> timeoutSec;
-        private @Nullable Input<HealthCheckType> type;
-        private @Nullable Input<UDPHealthCheckArgs> udpHealthCheck;
-        private @Nullable Input<Integer> unhealthyThreshold;
+        private @Nullable Output<Integer> checkIntervalSec;
+        private @Nullable Output<String> description;
+        private @Nullable Output<GRPCHealthCheckArgs> grpcHealthCheck;
+        private @Nullable Output<Integer> healthyThreshold;
+        private @Nullable Output<HTTP2HealthCheckArgs> http2HealthCheck;
+        private @Nullable Output<HTTPHealthCheckArgs> httpHealthCheck;
+        private @Nullable Output<HTTPSHealthCheckArgs> httpsHealthCheck;
+        private @Nullable Output<String> kind;
+        private @Nullable Output<HealthCheckLogConfigArgs> logConfig;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> project;
+        private @Nullable Output<String> requestId;
+        private @Nullable Output<SSLHealthCheckArgs> sslHealthCheck;
+        private @Nullable Output<TCPHealthCheckArgs> tcpHealthCheck;
+        private @Nullable Output<Integer> timeoutSec;
+        private @Nullable Output<HealthCheckType> type;
+        private @Nullable Output<UDPHealthCheckArgs> udpHealthCheck;
+        private @Nullable Output<Integer> unhealthyThreshold;
 
         public Builder() {
     	      // Empty
@@ -300,183 +300,183 @@ public final class HealthCheckArgs extends io.pulumi.resources.ResourceArgs {
     	      this.unhealthyThreshold = defaults.unhealthyThreshold;
         }
 
-        public Builder checkIntervalSec(@Nullable Input<Integer> checkIntervalSec) {
+        public Builder checkIntervalSec(@Nullable Output<Integer> checkIntervalSec) {
             this.checkIntervalSec = checkIntervalSec;
             return this;
         }
 
         public Builder checkIntervalSec(@Nullable Integer checkIntervalSec) {
-            this.checkIntervalSec = Input.ofNullable(checkIntervalSec);
+            this.checkIntervalSec = Output.ofNullable(checkIntervalSec);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder grpcHealthCheck(@Nullable Input<GRPCHealthCheckArgs> grpcHealthCheck) {
+        public Builder grpcHealthCheck(@Nullable Output<GRPCHealthCheckArgs> grpcHealthCheck) {
             this.grpcHealthCheck = grpcHealthCheck;
             return this;
         }
 
         public Builder grpcHealthCheck(@Nullable GRPCHealthCheckArgs grpcHealthCheck) {
-            this.grpcHealthCheck = Input.ofNullable(grpcHealthCheck);
+            this.grpcHealthCheck = Output.ofNullable(grpcHealthCheck);
             return this;
         }
 
-        public Builder healthyThreshold(@Nullable Input<Integer> healthyThreshold) {
+        public Builder healthyThreshold(@Nullable Output<Integer> healthyThreshold) {
             this.healthyThreshold = healthyThreshold;
             return this;
         }
 
         public Builder healthyThreshold(@Nullable Integer healthyThreshold) {
-            this.healthyThreshold = Input.ofNullable(healthyThreshold);
+            this.healthyThreshold = Output.ofNullable(healthyThreshold);
             return this;
         }
 
-        public Builder http2HealthCheck(@Nullable Input<HTTP2HealthCheckArgs> http2HealthCheck) {
+        public Builder http2HealthCheck(@Nullable Output<HTTP2HealthCheckArgs> http2HealthCheck) {
             this.http2HealthCheck = http2HealthCheck;
             return this;
         }
 
         public Builder http2HealthCheck(@Nullable HTTP2HealthCheckArgs http2HealthCheck) {
-            this.http2HealthCheck = Input.ofNullable(http2HealthCheck);
+            this.http2HealthCheck = Output.ofNullable(http2HealthCheck);
             return this;
         }
 
-        public Builder httpHealthCheck(@Nullable Input<HTTPHealthCheckArgs> httpHealthCheck) {
+        public Builder httpHealthCheck(@Nullable Output<HTTPHealthCheckArgs> httpHealthCheck) {
             this.httpHealthCheck = httpHealthCheck;
             return this;
         }
 
         public Builder httpHealthCheck(@Nullable HTTPHealthCheckArgs httpHealthCheck) {
-            this.httpHealthCheck = Input.ofNullable(httpHealthCheck);
+            this.httpHealthCheck = Output.ofNullable(httpHealthCheck);
             return this;
         }
 
-        public Builder httpsHealthCheck(@Nullable Input<HTTPSHealthCheckArgs> httpsHealthCheck) {
+        public Builder httpsHealthCheck(@Nullable Output<HTTPSHealthCheckArgs> httpsHealthCheck) {
             this.httpsHealthCheck = httpsHealthCheck;
             return this;
         }
 
         public Builder httpsHealthCheck(@Nullable HTTPSHealthCheckArgs httpsHealthCheck) {
-            this.httpsHealthCheck = Input.ofNullable(httpsHealthCheck);
+            this.httpsHealthCheck = Output.ofNullable(httpsHealthCheck);
             return this;
         }
 
-        public Builder kind(@Nullable Input<String> kind) {
+        public Builder kind(@Nullable Output<String> kind) {
             this.kind = kind;
             return this;
         }
 
         public Builder kind(@Nullable String kind) {
-            this.kind = Input.ofNullable(kind);
+            this.kind = Output.ofNullable(kind);
             return this;
         }
 
-        public Builder logConfig(@Nullable Input<HealthCheckLogConfigArgs> logConfig) {
+        public Builder logConfig(@Nullable Output<HealthCheckLogConfigArgs> logConfig) {
             this.logConfig = logConfig;
             return this;
         }
 
         public Builder logConfig(@Nullable HealthCheckLogConfigArgs logConfig) {
-            this.logConfig = Input.ofNullable(logConfig);
+            this.logConfig = Output.ofNullable(logConfig);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder requestId(@Nullable Input<String> requestId) {
+        public Builder requestId(@Nullable Output<String> requestId) {
             this.requestId = requestId;
             return this;
         }
 
         public Builder requestId(@Nullable String requestId) {
-            this.requestId = Input.ofNullable(requestId);
+            this.requestId = Output.ofNullable(requestId);
             return this;
         }
 
-        public Builder sslHealthCheck(@Nullable Input<SSLHealthCheckArgs> sslHealthCheck) {
+        public Builder sslHealthCheck(@Nullable Output<SSLHealthCheckArgs> sslHealthCheck) {
             this.sslHealthCheck = sslHealthCheck;
             return this;
         }
 
         public Builder sslHealthCheck(@Nullable SSLHealthCheckArgs sslHealthCheck) {
-            this.sslHealthCheck = Input.ofNullable(sslHealthCheck);
+            this.sslHealthCheck = Output.ofNullable(sslHealthCheck);
             return this;
         }
 
-        public Builder tcpHealthCheck(@Nullable Input<TCPHealthCheckArgs> tcpHealthCheck) {
+        public Builder tcpHealthCheck(@Nullable Output<TCPHealthCheckArgs> tcpHealthCheck) {
             this.tcpHealthCheck = tcpHealthCheck;
             return this;
         }
 
         public Builder tcpHealthCheck(@Nullable TCPHealthCheckArgs tcpHealthCheck) {
-            this.tcpHealthCheck = Input.ofNullable(tcpHealthCheck);
+            this.tcpHealthCheck = Output.ofNullable(tcpHealthCheck);
             return this;
         }
 
-        public Builder timeoutSec(@Nullable Input<Integer> timeoutSec) {
+        public Builder timeoutSec(@Nullable Output<Integer> timeoutSec) {
             this.timeoutSec = timeoutSec;
             return this;
         }
 
         public Builder timeoutSec(@Nullable Integer timeoutSec) {
-            this.timeoutSec = Input.ofNullable(timeoutSec);
+            this.timeoutSec = Output.ofNullable(timeoutSec);
             return this;
         }
 
-        public Builder type(@Nullable Input<HealthCheckType> type) {
+        public Builder type(@Nullable Output<HealthCheckType> type) {
             this.type = type;
             return this;
         }
 
         public Builder type(@Nullable HealthCheckType type) {
-            this.type = Input.ofNullable(type);
+            this.type = Output.ofNullable(type);
             return this;
         }
 
-        public Builder udpHealthCheck(@Nullable Input<UDPHealthCheckArgs> udpHealthCheck) {
+        public Builder udpHealthCheck(@Nullable Output<UDPHealthCheckArgs> udpHealthCheck) {
             this.udpHealthCheck = udpHealthCheck;
             return this;
         }
 
         public Builder udpHealthCheck(@Nullable UDPHealthCheckArgs udpHealthCheck) {
-            this.udpHealthCheck = Input.ofNullable(udpHealthCheck);
+            this.udpHealthCheck = Output.ofNullable(udpHealthCheck);
             return this;
         }
 
-        public Builder unhealthyThreshold(@Nullable Input<Integer> unhealthyThreshold) {
+        public Builder unhealthyThreshold(@Nullable Output<Integer> unhealthyThreshold) {
             this.unhealthyThreshold = unhealthyThreshold;
             return this;
         }
 
         public Builder unhealthyThreshold(@Nullable Integer unhealthyThreshold) {
-            this.unhealthyThreshold = Input.ofNullable(unhealthyThreshold);
+            this.unhealthyThreshold = Output.ofNullable(unhealthyThreshold);
             return this;
         }
         public HealthCheckArgs build() {

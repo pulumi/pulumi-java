@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.wafv2.inputs;
 
 import io.pulumi.awsnative.wafv2.inputs.WebACLCustomRequestHandlingArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,18 +19,18 @@ public final class WebACLAllowActionArgs extends io.pulumi.resources.ResourceArg
     public static final WebACLAllowActionArgs Empty = new WebACLAllowActionArgs();
 
     @InputImport(name="customRequestHandling")
-      private final @Nullable Input<WebACLCustomRequestHandlingArgs> customRequestHandling;
+      private final @Nullable Output<WebACLCustomRequestHandlingArgs> customRequestHandling;
 
-    public Input<WebACLCustomRequestHandlingArgs> getCustomRequestHandling() {
-        return this.customRequestHandling == null ? Input.empty() : this.customRequestHandling;
+    public Output<WebACLCustomRequestHandlingArgs> getCustomRequestHandling() {
+        return this.customRequestHandling == null ? Output.empty() : this.customRequestHandling;
     }
 
-    public WebACLAllowActionArgs(@Nullable Input<WebACLCustomRequestHandlingArgs> customRequestHandling) {
+    public WebACLAllowActionArgs(@Nullable Output<WebACLCustomRequestHandlingArgs> customRequestHandling) {
         this.customRequestHandling = customRequestHandling;
     }
 
     private WebACLAllowActionArgs() {
-        this.customRequestHandling = Input.empty();
+        this.customRequestHandling = Output.empty();
     }
 
     public static Builder builder() {
@@ -42,7 +42,7 @@ public final class WebACLAllowActionArgs extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private @Nullable Input<WebACLCustomRequestHandlingArgs> customRequestHandling;
+        private @Nullable Output<WebACLCustomRequestHandlingArgs> customRequestHandling;
 
         public Builder() {
     	      // Empty
@@ -53,13 +53,13 @@ public final class WebACLAllowActionArgs extends io.pulumi.resources.ResourceArg
     	      this.customRequestHandling = defaults.customRequestHandling;
         }
 
-        public Builder customRequestHandling(@Nullable Input<WebACLCustomRequestHandlingArgs> customRequestHandling) {
+        public Builder customRequestHandling(@Nullable Output<WebACLCustomRequestHandlingArgs> customRequestHandling) {
             this.customRequestHandling = customRequestHandling;
             return this;
         }
 
         public Builder customRequestHandling(@Nullable WebACLCustomRequestHandlingArgs customRequestHandling) {
-            this.customRequestHandling = Input.ofNullable(customRequestHandling);
+            this.customRequestHandling = Output.ofNullable(customRequestHandling);
             return this;
         }
         public WebACLAllowActionArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.ecr;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -18,9 +18,9 @@ public final class PullThroughCacheRuleArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="ecrRepositoryPrefix", required=true)
-      private final Input<String> ecrRepositoryPrefix;
+      private final Output<String> ecrRepositoryPrefix;
 
-    public Input<String> getEcrRepositoryPrefix() {
+    public Output<String> getEcrRepositoryPrefix() {
         return this.ecrRepositoryPrefix;
     }
 
@@ -29,22 +29,22 @@ public final class PullThroughCacheRuleArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="upstreamRegistryUrl", required=true)
-      private final Input<String> upstreamRegistryUrl;
+      private final Output<String> upstreamRegistryUrl;
 
-    public Input<String> getUpstreamRegistryUrl() {
+    public Output<String> getUpstreamRegistryUrl() {
         return this.upstreamRegistryUrl;
     }
 
     public PullThroughCacheRuleArgs(
-        Input<String> ecrRepositoryPrefix,
-        Input<String> upstreamRegistryUrl) {
+        Output<String> ecrRepositoryPrefix,
+        Output<String> upstreamRegistryUrl) {
         this.ecrRepositoryPrefix = Objects.requireNonNull(ecrRepositoryPrefix, "expected parameter 'ecrRepositoryPrefix' to be non-null");
         this.upstreamRegistryUrl = Objects.requireNonNull(upstreamRegistryUrl, "expected parameter 'upstreamRegistryUrl' to be non-null");
     }
 
     private PullThroughCacheRuleArgs() {
-        this.ecrRepositoryPrefix = Input.empty();
-        this.upstreamRegistryUrl = Input.empty();
+        this.ecrRepositoryPrefix = Output.empty();
+        this.upstreamRegistryUrl = Output.empty();
     }
 
     public static Builder builder() {
@@ -56,8 +56,8 @@ public final class PullThroughCacheRuleArgs extends io.pulumi.resources.Resource
     }
 
     public static final class Builder {
-        private Input<String> ecrRepositoryPrefix;
-        private Input<String> upstreamRegistryUrl;
+        private Output<String> ecrRepositoryPrefix;
+        private Output<String> upstreamRegistryUrl;
 
         public Builder() {
     	      // Empty
@@ -69,23 +69,23 @@ public final class PullThroughCacheRuleArgs extends io.pulumi.resources.Resource
     	      this.upstreamRegistryUrl = defaults.upstreamRegistryUrl;
         }
 
-        public Builder ecrRepositoryPrefix(Input<String> ecrRepositoryPrefix) {
+        public Builder ecrRepositoryPrefix(Output<String> ecrRepositoryPrefix) {
             this.ecrRepositoryPrefix = Objects.requireNonNull(ecrRepositoryPrefix);
             return this;
         }
 
         public Builder ecrRepositoryPrefix(String ecrRepositoryPrefix) {
-            this.ecrRepositoryPrefix = Input.of(Objects.requireNonNull(ecrRepositoryPrefix));
+            this.ecrRepositoryPrefix = Output.of(Objects.requireNonNull(ecrRepositoryPrefix));
             return this;
         }
 
-        public Builder upstreamRegistryUrl(Input<String> upstreamRegistryUrl) {
+        public Builder upstreamRegistryUrl(Output<String> upstreamRegistryUrl) {
             this.upstreamRegistryUrl = Objects.requireNonNull(upstreamRegistryUrl);
             return this;
         }
 
         public Builder upstreamRegistryUrl(String upstreamRegistryUrl) {
-            this.upstreamRegistryUrl = Input.of(Objects.requireNonNull(upstreamRegistryUrl));
+            this.upstreamRegistryUrl = Output.of(Objects.requireNonNull(upstreamRegistryUrl));
             return this;
         }
         public PullThroughCacheRuleArgs build() {

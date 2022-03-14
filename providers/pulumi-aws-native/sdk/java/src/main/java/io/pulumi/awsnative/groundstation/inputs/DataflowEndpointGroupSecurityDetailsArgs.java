@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.groundstation.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -16,39 +16,39 @@ public final class DataflowEndpointGroupSecurityDetailsArgs extends io.pulumi.re
     public static final DataflowEndpointGroupSecurityDetailsArgs Empty = new DataflowEndpointGroupSecurityDetailsArgs();
 
     @InputImport(name="roleArn")
-      private final @Nullable Input<String> roleArn;
+      private final @Nullable Output<String> roleArn;
 
-    public Input<String> getRoleArn() {
-        return this.roleArn == null ? Input.empty() : this.roleArn;
+    public Output<String> getRoleArn() {
+        return this.roleArn == null ? Output.empty() : this.roleArn;
     }
 
     @InputImport(name="securityGroupIds")
-      private final @Nullable Input<List<String>> securityGroupIds;
+      private final @Nullable Output<List<String>> securityGroupIds;
 
-    public Input<List<String>> getSecurityGroupIds() {
-        return this.securityGroupIds == null ? Input.empty() : this.securityGroupIds;
+    public Output<List<String>> getSecurityGroupIds() {
+        return this.securityGroupIds == null ? Output.empty() : this.securityGroupIds;
     }
 
     @InputImport(name="subnetIds")
-      private final @Nullable Input<List<String>> subnetIds;
+      private final @Nullable Output<List<String>> subnetIds;
 
-    public Input<List<String>> getSubnetIds() {
-        return this.subnetIds == null ? Input.empty() : this.subnetIds;
+    public Output<List<String>> getSubnetIds() {
+        return this.subnetIds == null ? Output.empty() : this.subnetIds;
     }
 
     public DataflowEndpointGroupSecurityDetailsArgs(
-        @Nullable Input<String> roleArn,
-        @Nullable Input<List<String>> securityGroupIds,
-        @Nullable Input<List<String>> subnetIds) {
+        @Nullable Output<String> roleArn,
+        @Nullable Output<List<String>> securityGroupIds,
+        @Nullable Output<List<String>> subnetIds) {
         this.roleArn = roleArn;
         this.securityGroupIds = securityGroupIds;
         this.subnetIds = subnetIds;
     }
 
     private DataflowEndpointGroupSecurityDetailsArgs() {
-        this.roleArn = Input.empty();
-        this.securityGroupIds = Input.empty();
-        this.subnetIds = Input.empty();
+        this.roleArn = Output.empty();
+        this.securityGroupIds = Output.empty();
+        this.subnetIds = Output.empty();
     }
 
     public static Builder builder() {
@@ -60,9 +60,9 @@ public final class DataflowEndpointGroupSecurityDetailsArgs extends io.pulumi.re
     }
 
     public static final class Builder {
-        private @Nullable Input<String> roleArn;
-        private @Nullable Input<List<String>> securityGroupIds;
-        private @Nullable Input<List<String>> subnetIds;
+        private @Nullable Output<String> roleArn;
+        private @Nullable Output<List<String>> securityGroupIds;
+        private @Nullable Output<List<String>> subnetIds;
 
         public Builder() {
     	      // Empty
@@ -75,33 +75,33 @@ public final class DataflowEndpointGroupSecurityDetailsArgs extends io.pulumi.re
     	      this.subnetIds = defaults.subnetIds;
         }
 
-        public Builder roleArn(@Nullable Input<String> roleArn) {
+        public Builder roleArn(@Nullable Output<String> roleArn) {
             this.roleArn = roleArn;
             return this;
         }
 
         public Builder roleArn(@Nullable String roleArn) {
-            this.roleArn = Input.ofNullable(roleArn);
+            this.roleArn = Output.ofNullable(roleArn);
             return this;
         }
 
-        public Builder securityGroupIds(@Nullable Input<List<String>> securityGroupIds) {
+        public Builder securityGroupIds(@Nullable Output<List<String>> securityGroupIds) {
             this.securityGroupIds = securityGroupIds;
             return this;
         }
 
         public Builder securityGroupIds(@Nullable List<String> securityGroupIds) {
-            this.securityGroupIds = Input.ofNullable(securityGroupIds);
+            this.securityGroupIds = Output.ofNullable(securityGroupIds);
             return this;
         }
 
-        public Builder subnetIds(@Nullable Input<List<String>> subnetIds) {
+        public Builder subnetIds(@Nullable Output<List<String>> subnetIds) {
             this.subnetIds = subnetIds;
             return this;
         }
 
         public Builder subnetIds(@Nullable List<String> subnetIds) {
-            this.subnetIds = Input.ofNullable(subnetIds);
+            this.subnetIds = Output.ofNullable(subnetIds);
             return this;
         }
         public DataflowEndpointGroupSecurityDetailsArgs build() {

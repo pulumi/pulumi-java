@@ -6,7 +6,7 @@ package io.pulumi.azurenative.authorization;
 import io.pulumi.azurenative.authorization.enums.LockLevel;
 import io.pulumi.azurenative.authorization.inputs.ManagementLockOwnerArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -23,9 +23,9 @@ public final class ManagementLockAtResourceLevelArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="level", required=true)
-      private final Input<Either<String,LockLevel>> level;
+      private final Output<Either<String,LockLevel>> level;
 
-    public Input<Either<String,LockLevel>> getLevel() {
+    public Output<Either<String,LockLevel>> getLevel() {
         return this.level;
     }
 
@@ -34,10 +34,10 @@ public final class ManagementLockAtResourceLevelArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="lockName")
-      private final @Nullable Input<String> lockName;
+      private final @Nullable Output<String> lockName;
 
-    public Input<String> getLockName() {
-        return this.lockName == null ? Input.empty() : this.lockName;
+    public Output<String> getLockName() {
+        return this.lockName == null ? Output.empty() : this.lockName;
     }
 
     /**
@@ -45,10 +45,10 @@ public final class ManagementLockAtResourceLevelArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="notes")
-      private final @Nullable Input<String> notes;
+      private final @Nullable Output<String> notes;
 
-    public Input<String> getNotes() {
-        return this.notes == null ? Input.empty() : this.notes;
+    public Output<String> getNotes() {
+        return this.notes == null ? Output.empty() : this.notes;
     }
 
     /**
@@ -56,10 +56,10 @@ public final class ManagementLockAtResourceLevelArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="owners")
-      private final @Nullable Input<List<ManagementLockOwnerArgs>> owners;
+      private final @Nullable Output<List<ManagementLockOwnerArgs>> owners;
 
-    public Input<List<ManagementLockOwnerArgs>> getOwners() {
-        return this.owners == null ? Input.empty() : this.owners;
+    public Output<List<ManagementLockOwnerArgs>> getOwners() {
+        return this.owners == null ? Output.empty() : this.owners;
     }
 
     /**
@@ -67,9 +67,9 @@ public final class ManagementLockAtResourceLevelArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="parentResourcePath", required=true)
-      private final Input<String> parentResourcePath;
+      private final Output<String> parentResourcePath;
 
-    public Input<String> getParentResourcePath() {
+    public Output<String> getParentResourcePath() {
         return this.parentResourcePath;
     }
 
@@ -78,9 +78,9 @@ public final class ManagementLockAtResourceLevelArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -89,9 +89,9 @@ public final class ManagementLockAtResourceLevelArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="resourceName", required=true)
-      private final Input<String> resourceName;
+      private final Output<String> resourceName;
 
-    public Input<String> getPropResourceName() {
+    public Output<String> getPropResourceName() {
         return this.resourceName;
     }
 
@@ -100,9 +100,9 @@ public final class ManagementLockAtResourceLevelArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="resourceProviderNamespace", required=true)
-      private final Input<String> resourceProviderNamespace;
+      private final Output<String> resourceProviderNamespace;
 
-    public Input<String> getResourceProviderNamespace() {
+    public Output<String> getResourceProviderNamespace() {
         return this.resourceProviderNamespace;
     }
 
@@ -111,22 +111,22 @@ public final class ManagementLockAtResourceLevelArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="resourceType", required=true)
-      private final Input<String> resourceType;
+      private final Output<String> resourceType;
 
-    public Input<String> getPropResourceType() {
+    public Output<String> getPropResourceType() {
         return this.resourceType;
     }
 
     public ManagementLockAtResourceLevelArgs(
-        Input<Either<String,LockLevel>> level,
-        @Nullable Input<String> lockName,
-        @Nullable Input<String> notes,
-        @Nullable Input<List<ManagementLockOwnerArgs>> owners,
-        Input<String> parentResourcePath,
-        Input<String> resourceGroupName,
-        Input<String> resourceName,
-        Input<String> resourceProviderNamespace,
-        Input<String> resourceType) {
+        Output<Either<String,LockLevel>> level,
+        @Nullable Output<String> lockName,
+        @Nullable Output<String> notes,
+        @Nullable Output<List<ManagementLockOwnerArgs>> owners,
+        Output<String> parentResourcePath,
+        Output<String> resourceGroupName,
+        Output<String> resourceName,
+        Output<String> resourceProviderNamespace,
+        Output<String> resourceType) {
         this.level = Objects.requireNonNull(level, "expected parameter 'level' to be non-null");
         this.lockName = lockName;
         this.notes = notes;
@@ -139,15 +139,15 @@ public final class ManagementLockAtResourceLevelArgs extends io.pulumi.resources
     }
 
     private ManagementLockAtResourceLevelArgs() {
-        this.level = Input.empty();
-        this.lockName = Input.empty();
-        this.notes = Input.empty();
-        this.owners = Input.empty();
-        this.parentResourcePath = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.resourceName = Input.empty();
-        this.resourceProviderNamespace = Input.empty();
-        this.resourceType = Input.empty();
+        this.level = Output.empty();
+        this.lockName = Output.empty();
+        this.notes = Output.empty();
+        this.owners = Output.empty();
+        this.parentResourcePath = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.resourceName = Output.empty();
+        this.resourceProviderNamespace = Output.empty();
+        this.resourceType = Output.empty();
     }
 
     public static Builder builder() {
@@ -159,15 +159,15 @@ public final class ManagementLockAtResourceLevelArgs extends io.pulumi.resources
     }
 
     public static final class Builder {
-        private Input<Either<String,LockLevel>> level;
-        private @Nullable Input<String> lockName;
-        private @Nullable Input<String> notes;
-        private @Nullable Input<List<ManagementLockOwnerArgs>> owners;
-        private Input<String> parentResourcePath;
-        private Input<String> resourceGroupName;
-        private Input<String> resourceName;
-        private Input<String> resourceProviderNamespace;
-        private Input<String> resourceType;
+        private Output<Either<String,LockLevel>> level;
+        private @Nullable Output<String> lockName;
+        private @Nullable Output<String> notes;
+        private @Nullable Output<List<ManagementLockOwnerArgs>> owners;
+        private Output<String> parentResourcePath;
+        private Output<String> resourceGroupName;
+        private Output<String> resourceName;
+        private Output<String> resourceProviderNamespace;
+        private Output<String> resourceType;
 
         public Builder() {
     	      // Empty
@@ -186,93 +186,93 @@ public final class ManagementLockAtResourceLevelArgs extends io.pulumi.resources
     	      this.resourceType = defaults.resourceType;
         }
 
-        public Builder level(Input<Either<String,LockLevel>> level) {
+        public Builder level(Output<Either<String,LockLevel>> level) {
             this.level = Objects.requireNonNull(level);
             return this;
         }
 
         public Builder level(Either<String,LockLevel> level) {
-            this.level = Input.of(Objects.requireNonNull(level));
+            this.level = Output.of(Objects.requireNonNull(level));
             return this;
         }
 
-        public Builder lockName(@Nullable Input<String> lockName) {
+        public Builder lockName(@Nullable Output<String> lockName) {
             this.lockName = lockName;
             return this;
         }
 
         public Builder lockName(@Nullable String lockName) {
-            this.lockName = Input.ofNullable(lockName);
+            this.lockName = Output.ofNullable(lockName);
             return this;
         }
 
-        public Builder notes(@Nullable Input<String> notes) {
+        public Builder notes(@Nullable Output<String> notes) {
             this.notes = notes;
             return this;
         }
 
         public Builder notes(@Nullable String notes) {
-            this.notes = Input.ofNullable(notes);
+            this.notes = Output.ofNullable(notes);
             return this;
         }
 
-        public Builder owners(@Nullable Input<List<ManagementLockOwnerArgs>> owners) {
+        public Builder owners(@Nullable Output<List<ManagementLockOwnerArgs>> owners) {
             this.owners = owners;
             return this;
         }
 
         public Builder owners(@Nullable List<ManagementLockOwnerArgs> owners) {
-            this.owners = Input.ofNullable(owners);
+            this.owners = Output.ofNullable(owners);
             return this;
         }
 
-        public Builder parentResourcePath(Input<String> parentResourcePath) {
+        public Builder parentResourcePath(Output<String> parentResourcePath) {
             this.parentResourcePath = Objects.requireNonNull(parentResourcePath);
             return this;
         }
 
         public Builder parentResourcePath(String parentResourcePath) {
-            this.parentResourcePath = Input.of(Objects.requireNonNull(parentResourcePath));
+            this.parentResourcePath = Output.of(Objects.requireNonNull(parentResourcePath));
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder resourceName(Input<String> resourceName) {
+        public Builder resourceName(Output<String> resourceName) {
             this.resourceName = Objects.requireNonNull(resourceName);
             return this;
         }
 
         public Builder resourceName(String resourceName) {
-            this.resourceName = Input.of(Objects.requireNonNull(resourceName));
+            this.resourceName = Output.of(Objects.requireNonNull(resourceName));
             return this;
         }
 
-        public Builder resourceProviderNamespace(Input<String> resourceProviderNamespace) {
+        public Builder resourceProviderNamespace(Output<String> resourceProviderNamespace) {
             this.resourceProviderNamespace = Objects.requireNonNull(resourceProviderNamespace);
             return this;
         }
 
         public Builder resourceProviderNamespace(String resourceProviderNamespace) {
-            this.resourceProviderNamespace = Input.of(Objects.requireNonNull(resourceProviderNamespace));
+            this.resourceProviderNamespace = Output.of(Objects.requireNonNull(resourceProviderNamespace));
             return this;
         }
 
-        public Builder resourceType(Input<String> resourceType) {
+        public Builder resourceType(Output<String> resourceType) {
             this.resourceType = Objects.requireNonNull(resourceType);
             return this;
         }
 
         public Builder resourceType(String resourceType) {
-            this.resourceType = Input.of(Objects.requireNonNull(resourceType));
+            this.resourceType = Output.of(Objects.requireNonNull(resourceType));
             return this;
         }
         public ManagementLockAtResourceLevelArgs build() {

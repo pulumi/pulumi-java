@@ -3,7 +3,6 @@
 
 package io.pulumi.gcp.compute;
 
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -177,14 +176,14 @@ public class RegionDiskIamMember extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public RegionDiskIamMember(String name, RegionDiskIamMemberArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:compute/regionDiskIamMember:RegionDiskIamMember", name, args == null ? RegionDiskIamMemberArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("gcp:compute/regionDiskIamMember:RegionDiskIamMember", name, args == null ? RegionDiskIamMemberArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private RegionDiskIamMember(String name, Input<String> id, @Nullable RegionDiskIamMemberState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private RegionDiskIamMember(String name, Output<String> id, @Nullable RegionDiskIamMemberState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("gcp:compute/regionDiskIamMember:RegionDiskIamMember", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -200,7 +199,7 @@ public class RegionDiskIamMember extends io.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static RegionDiskIamMember get(String name, Input<String> id, @Nullable RegionDiskIamMemberState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static RegionDiskIamMember get(String name, Output<String> id, @Nullable RegionDiskIamMemberState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new RegionDiskIamMember(name, id, state, options);
     }
 }

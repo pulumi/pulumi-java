@@ -5,7 +5,7 @@ package io.pulumi.azurenative.compute.inputs;
 
 import io.pulumi.azurenative.compute.enums.DeleteOptions;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -26,10 +26,10 @@ public final class NetworkInterfaceReferenceArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="deleteOption")
-      private final @Nullable Input<Either<String,DeleteOptions>> deleteOption;
+      private final @Nullable Output<Either<String,DeleteOptions>> deleteOption;
 
-    public Input<Either<String,DeleteOptions>> getDeleteOption() {
-        return this.deleteOption == null ? Input.empty() : this.deleteOption;
+    public Output<Either<String,DeleteOptions>> getDeleteOption() {
+        return this.deleteOption == null ? Output.empty() : this.deleteOption;
     }
 
     /**
@@ -37,10 +37,10 @@ public final class NetworkInterfaceReferenceArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="id")
-      private final @Nullable Input<String> id;
+      private final @Nullable Output<String> id;
 
-    public Input<String> getId() {
-        return this.id == null ? Input.empty() : this.id;
+    public Output<String> getId() {
+        return this.id == null ? Output.empty() : this.id;
     }
 
     /**
@@ -48,25 +48,25 @@ public final class NetworkInterfaceReferenceArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="primary")
-      private final @Nullable Input<Boolean> primary;
+      private final @Nullable Output<Boolean> primary;
 
-    public Input<Boolean> getPrimary() {
-        return this.primary == null ? Input.empty() : this.primary;
+    public Output<Boolean> getPrimary() {
+        return this.primary == null ? Output.empty() : this.primary;
     }
 
     public NetworkInterfaceReferenceArgs(
-        @Nullable Input<Either<String,DeleteOptions>> deleteOption,
-        @Nullable Input<String> id,
-        @Nullable Input<Boolean> primary) {
+        @Nullable Output<Either<String,DeleteOptions>> deleteOption,
+        @Nullable Output<String> id,
+        @Nullable Output<Boolean> primary) {
         this.deleteOption = deleteOption;
         this.id = id;
         this.primary = primary;
     }
 
     private NetworkInterfaceReferenceArgs() {
-        this.deleteOption = Input.empty();
-        this.id = Input.empty();
-        this.primary = Input.empty();
+        this.deleteOption = Output.empty();
+        this.id = Output.empty();
+        this.primary = Output.empty();
     }
 
     public static Builder builder() {
@@ -78,9 +78,9 @@ public final class NetworkInterfaceReferenceArgs extends io.pulumi.resources.Res
     }
 
     public static final class Builder {
-        private @Nullable Input<Either<String,DeleteOptions>> deleteOption;
-        private @Nullable Input<String> id;
-        private @Nullable Input<Boolean> primary;
+        private @Nullable Output<Either<String,DeleteOptions>> deleteOption;
+        private @Nullable Output<String> id;
+        private @Nullable Output<Boolean> primary;
 
         public Builder() {
     	      // Empty
@@ -93,33 +93,33 @@ public final class NetworkInterfaceReferenceArgs extends io.pulumi.resources.Res
     	      this.primary = defaults.primary;
         }
 
-        public Builder deleteOption(@Nullable Input<Either<String,DeleteOptions>> deleteOption) {
+        public Builder deleteOption(@Nullable Output<Either<String,DeleteOptions>> deleteOption) {
             this.deleteOption = deleteOption;
             return this;
         }
 
         public Builder deleteOption(@Nullable Either<String,DeleteOptions> deleteOption) {
-            this.deleteOption = Input.ofNullable(deleteOption);
+            this.deleteOption = Output.ofNullable(deleteOption);
             return this;
         }
 
-        public Builder id(@Nullable Input<String> id) {
+        public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
 
         public Builder id(@Nullable String id) {
-            this.id = Input.ofNullable(id);
+            this.id = Output.ofNullable(id);
             return this;
         }
 
-        public Builder primary(@Nullable Input<Boolean> primary) {
+        public Builder primary(@Nullable Output<Boolean> primary) {
             this.primary = primary;
             return this;
         }
 
         public Builder primary(@Nullable Boolean primary) {
-            this.primary = Input.ofNullable(primary);
+            this.primary = Output.ofNullable(primary);
             return this;
         }
         public NetworkInterfaceReferenceArgs build() {

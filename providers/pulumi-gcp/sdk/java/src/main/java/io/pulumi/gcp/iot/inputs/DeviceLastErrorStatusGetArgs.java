@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.iot.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.Object;
@@ -19,39 +19,39 @@ public final class DeviceLastErrorStatusGetArgs extends io.pulumi.resources.Reso
     public static final DeviceLastErrorStatusGetArgs Empty = new DeviceLastErrorStatusGetArgs();
 
     @InputImport(name="details")
-      private final @Nullable Input<List<Map<String,Object>>> details;
+      private final @Nullable Output<List<Map<String,Object>>> details;
 
-    public Input<List<Map<String,Object>>> getDetails() {
-        return this.details == null ? Input.empty() : this.details;
+    public Output<List<Map<String,Object>>> getDetails() {
+        return this.details == null ? Output.empty() : this.details;
     }
 
     @InputImport(name="message")
-      private final @Nullable Input<String> message;
+      private final @Nullable Output<String> message;
 
-    public Input<String> getMessage() {
-        return this.message == null ? Input.empty() : this.message;
+    public Output<String> getMessage() {
+        return this.message == null ? Output.empty() : this.message;
     }
 
     @InputImport(name="number")
-      private final @Nullable Input<Integer> number;
+      private final @Nullable Output<Integer> number;
 
-    public Input<Integer> getNumber() {
-        return this.number == null ? Input.empty() : this.number;
+    public Output<Integer> getNumber() {
+        return this.number == null ? Output.empty() : this.number;
     }
 
     public DeviceLastErrorStatusGetArgs(
-        @Nullable Input<List<Map<String,Object>>> details,
-        @Nullable Input<String> message,
-        @Nullable Input<Integer> number) {
+        @Nullable Output<List<Map<String,Object>>> details,
+        @Nullable Output<String> message,
+        @Nullable Output<Integer> number) {
         this.details = details;
         this.message = message;
         this.number = number;
     }
 
     private DeviceLastErrorStatusGetArgs() {
-        this.details = Input.empty();
-        this.message = Input.empty();
-        this.number = Input.empty();
+        this.details = Output.empty();
+        this.message = Output.empty();
+        this.number = Output.empty();
     }
 
     public static Builder builder() {
@@ -63,9 +63,9 @@ public final class DeviceLastErrorStatusGetArgs extends io.pulumi.resources.Reso
     }
 
     public static final class Builder {
-        private @Nullable Input<List<Map<String,Object>>> details;
-        private @Nullable Input<String> message;
-        private @Nullable Input<Integer> number;
+        private @Nullable Output<List<Map<String,Object>>> details;
+        private @Nullable Output<String> message;
+        private @Nullable Output<Integer> number;
 
         public Builder() {
     	      // Empty
@@ -78,33 +78,33 @@ public final class DeviceLastErrorStatusGetArgs extends io.pulumi.resources.Reso
     	      this.number = defaults.number;
         }
 
-        public Builder details(@Nullable Input<List<Map<String,Object>>> details) {
+        public Builder details(@Nullable Output<List<Map<String,Object>>> details) {
             this.details = details;
             return this;
         }
 
         public Builder details(@Nullable List<Map<String,Object>> details) {
-            this.details = Input.ofNullable(details);
+            this.details = Output.ofNullable(details);
             return this;
         }
 
-        public Builder message(@Nullable Input<String> message) {
+        public Builder message(@Nullable Output<String> message) {
             this.message = message;
             return this;
         }
 
         public Builder message(@Nullable String message) {
-            this.message = Input.ofNullable(message);
+            this.message = Output.ofNullable(message);
             return this;
         }
 
-        public Builder number(@Nullable Input<Integer> number) {
+        public Builder number(@Nullable Output<Integer> number) {
             this.number = number;
             return this;
         }
 
         public Builder number(@Nullable Integer number) {
-            this.number = Input.ofNullable(number);
+            this.number = Output.ofNullable(number);
             return this;
         }
         public DeviceLastErrorStatusGetArgs build() {

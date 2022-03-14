@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.servicedirectory_v1;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -20,17 +20,17 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="annotations")
-      private final @Nullable Input<Map<String,String>> annotations;
+      private final @Nullable Output<Map<String,String>> annotations;
 
-    public Input<Map<String,String>> getAnnotations() {
-        return this.annotations == null ? Input.empty() : this.annotations;
+    public Output<Map<String,String>> getAnnotations() {
+        return this.annotations == null ? Output.empty() : this.annotations;
     }
 
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -38,40 +38,40 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     @InputImport(name="namespaceId", required=true)
-      private final Input<String> namespaceId;
+      private final Output<String> namespaceId;
 
-    public Input<String> getNamespaceId() {
+    public Output<String> getNamespaceId() {
         return this.namespaceId;
     }
 
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     @InputImport(name="serviceId", required=true)
-      private final Input<String> serviceId;
+      private final Output<String> serviceId;
 
-    public Input<String> getServiceId() {
+    public Output<String> getServiceId() {
         return this.serviceId;
     }
 
     public ServiceArgs(
-        @Nullable Input<Map<String,String>> annotations,
-        @Nullable Input<String> location,
-        @Nullable Input<String> name,
-        Input<String> namespaceId,
-        @Nullable Input<String> project,
-        Input<String> serviceId) {
+        @Nullable Output<Map<String,String>> annotations,
+        @Nullable Output<String> location,
+        @Nullable Output<String> name,
+        Output<String> namespaceId,
+        @Nullable Output<String> project,
+        Output<String> serviceId) {
         this.annotations = annotations;
         this.location = location;
         this.name = name;
@@ -81,12 +81,12 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ServiceArgs() {
-        this.annotations = Input.empty();
-        this.location = Input.empty();
-        this.name = Input.empty();
-        this.namespaceId = Input.empty();
-        this.project = Input.empty();
-        this.serviceId = Input.empty();
+        this.annotations = Output.empty();
+        this.location = Output.empty();
+        this.name = Output.empty();
+        this.namespaceId = Output.empty();
+        this.project = Output.empty();
+        this.serviceId = Output.empty();
     }
 
     public static Builder builder() {
@@ -98,12 +98,12 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Map<String,String>> annotations;
-        private @Nullable Input<String> location;
-        private @Nullable Input<String> name;
-        private Input<String> namespaceId;
-        private @Nullable Input<String> project;
-        private Input<String> serviceId;
+        private @Nullable Output<Map<String,String>> annotations;
+        private @Nullable Output<String> location;
+        private @Nullable Output<String> name;
+        private Output<String> namespaceId;
+        private @Nullable Output<String> project;
+        private Output<String> serviceId;
 
         public Builder() {
     	      // Empty
@@ -119,63 +119,63 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
     	      this.serviceId = defaults.serviceId;
         }
 
-        public Builder annotations(@Nullable Input<Map<String,String>> annotations) {
+        public Builder annotations(@Nullable Output<Map<String,String>> annotations) {
             this.annotations = annotations;
             return this;
         }
 
         public Builder annotations(@Nullable Map<String,String> annotations) {
-            this.annotations = Input.ofNullable(annotations);
+            this.annotations = Output.ofNullable(annotations);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder namespaceId(Input<String> namespaceId) {
+        public Builder namespaceId(Output<String> namespaceId) {
             this.namespaceId = Objects.requireNonNull(namespaceId);
             return this;
         }
 
         public Builder namespaceId(String namespaceId) {
-            this.namespaceId = Input.of(Objects.requireNonNull(namespaceId));
+            this.namespaceId = Output.of(Objects.requireNonNull(namespaceId));
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder serviceId(Input<String> serviceId) {
+        public Builder serviceId(Output<String> serviceId) {
             this.serviceId = Objects.requireNonNull(serviceId);
             return this;
         }
 
         public Builder serviceId(String serviceId) {
-            this.serviceId = Input.of(Objects.requireNonNull(serviceId));
+            this.serviceId = Output.of(Objects.requireNonNull(serviceId));
             return this;
         }
         public ServiceArgs build() {

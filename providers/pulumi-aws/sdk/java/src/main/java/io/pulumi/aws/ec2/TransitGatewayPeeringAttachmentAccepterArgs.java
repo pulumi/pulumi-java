@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.ec2;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -20,10 +20,10 @@ public final class TransitGatewayPeeringAttachmentAccepterArgs extends io.pulumi
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -31,22 +31,22 @@ public final class TransitGatewayPeeringAttachmentAccepterArgs extends io.pulumi
      * 
      */
     @InputImport(name="transitGatewayAttachmentId", required=true)
-      private final Input<String> transitGatewayAttachmentId;
+      private final Output<String> transitGatewayAttachmentId;
 
-    public Input<String> getTransitGatewayAttachmentId() {
+    public Output<String> getTransitGatewayAttachmentId() {
         return this.transitGatewayAttachmentId;
     }
 
     public TransitGatewayPeeringAttachmentAccepterArgs(
-        @Nullable Input<Map<String,String>> tags,
-        Input<String> transitGatewayAttachmentId) {
+        @Nullable Output<Map<String,String>> tags,
+        Output<String> transitGatewayAttachmentId) {
         this.tags = tags;
         this.transitGatewayAttachmentId = Objects.requireNonNull(transitGatewayAttachmentId, "expected parameter 'transitGatewayAttachmentId' to be non-null");
     }
 
     private TransitGatewayPeeringAttachmentAccepterArgs() {
-        this.tags = Input.empty();
-        this.transitGatewayAttachmentId = Input.empty();
+        this.tags = Output.empty();
+        this.transitGatewayAttachmentId = Output.empty();
     }
 
     public static Builder builder() {
@@ -58,8 +58,8 @@ public final class TransitGatewayPeeringAttachmentAccepterArgs extends io.pulumi
     }
 
     public static final class Builder {
-        private @Nullable Input<Map<String,String>> tags;
-        private Input<String> transitGatewayAttachmentId;
+        private @Nullable Output<Map<String,String>> tags;
+        private Output<String> transitGatewayAttachmentId;
 
         public Builder() {
     	      // Empty
@@ -71,23 +71,23 @@ public final class TransitGatewayPeeringAttachmentAccepterArgs extends io.pulumi
     	      this.transitGatewayAttachmentId = defaults.transitGatewayAttachmentId;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder transitGatewayAttachmentId(Input<String> transitGatewayAttachmentId) {
+        public Builder transitGatewayAttachmentId(Output<String> transitGatewayAttachmentId) {
             this.transitGatewayAttachmentId = Objects.requireNonNull(transitGatewayAttachmentId);
             return this;
         }
 
         public Builder transitGatewayAttachmentId(String transitGatewayAttachmentId) {
-            this.transitGatewayAttachmentId = Input.of(Objects.requireNonNull(transitGatewayAttachmentId));
+            this.transitGatewayAttachmentId = Output.of(Objects.requireNonNull(transitGatewayAttachmentId));
             return this;
         }
         public TransitGatewayPeeringAttachmentAccepterArgs build() {

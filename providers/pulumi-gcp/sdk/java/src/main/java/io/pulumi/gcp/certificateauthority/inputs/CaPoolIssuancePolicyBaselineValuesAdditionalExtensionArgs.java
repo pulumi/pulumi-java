@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.certificateauthority.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.certificateauthority.inputs.CaPoolIssuancePolicyBaselineValuesAdditionalExtensionObjectIdArgs;
 import java.lang.Boolean;
@@ -21,9 +21,9 @@ public final class CaPoolIssuancePolicyBaselineValuesAdditionalExtensionArgs ext
      * 
      */
     @InputImport(name="critical", required=true)
-      private final Input<Boolean> critical;
+      private final Output<Boolean> critical;
 
-    public Input<Boolean> getCritical() {
+    public Output<Boolean> getCritical() {
         return this.critical;
     }
 
@@ -33,9 +33,9 @@ public final class CaPoolIssuancePolicyBaselineValuesAdditionalExtensionArgs ext
      * 
      */
     @InputImport(name="objectId", required=true)
-      private final Input<CaPoolIssuancePolicyBaselineValuesAdditionalExtensionObjectIdArgs> objectId;
+      private final Output<CaPoolIssuancePolicyBaselineValuesAdditionalExtensionObjectIdArgs> objectId;
 
-    public Input<CaPoolIssuancePolicyBaselineValuesAdditionalExtensionObjectIdArgs> getObjectId() {
+    public Output<CaPoolIssuancePolicyBaselineValuesAdditionalExtensionObjectIdArgs> getObjectId() {
         return this.objectId;
     }
 
@@ -44,25 +44,25 @@ public final class CaPoolIssuancePolicyBaselineValuesAdditionalExtensionArgs ext
      * 
      */
     @InputImport(name="value", required=true)
-      private final Input<String> value;
+      private final Output<String> value;
 
-    public Input<String> getValue() {
+    public Output<String> getValue() {
         return this.value;
     }
 
     public CaPoolIssuancePolicyBaselineValuesAdditionalExtensionArgs(
-        Input<Boolean> critical,
-        Input<CaPoolIssuancePolicyBaselineValuesAdditionalExtensionObjectIdArgs> objectId,
-        Input<String> value) {
+        Output<Boolean> critical,
+        Output<CaPoolIssuancePolicyBaselineValuesAdditionalExtensionObjectIdArgs> objectId,
+        Output<String> value) {
         this.critical = Objects.requireNonNull(critical, "expected parameter 'critical' to be non-null");
         this.objectId = Objects.requireNonNull(objectId, "expected parameter 'objectId' to be non-null");
         this.value = Objects.requireNonNull(value, "expected parameter 'value' to be non-null");
     }
 
     private CaPoolIssuancePolicyBaselineValuesAdditionalExtensionArgs() {
-        this.critical = Input.empty();
-        this.objectId = Input.empty();
-        this.value = Input.empty();
+        this.critical = Output.empty();
+        this.objectId = Output.empty();
+        this.value = Output.empty();
     }
 
     public static Builder builder() {
@@ -74,9 +74,9 @@ public final class CaPoolIssuancePolicyBaselineValuesAdditionalExtensionArgs ext
     }
 
     public static final class Builder {
-        private Input<Boolean> critical;
-        private Input<CaPoolIssuancePolicyBaselineValuesAdditionalExtensionObjectIdArgs> objectId;
-        private Input<String> value;
+        private Output<Boolean> critical;
+        private Output<CaPoolIssuancePolicyBaselineValuesAdditionalExtensionObjectIdArgs> objectId;
+        private Output<String> value;
 
         public Builder() {
     	      // Empty
@@ -89,33 +89,33 @@ public final class CaPoolIssuancePolicyBaselineValuesAdditionalExtensionArgs ext
     	      this.value = defaults.value;
         }
 
-        public Builder critical(Input<Boolean> critical) {
+        public Builder critical(Output<Boolean> critical) {
             this.critical = Objects.requireNonNull(critical);
             return this;
         }
 
         public Builder critical(Boolean critical) {
-            this.critical = Input.of(Objects.requireNonNull(critical));
+            this.critical = Output.of(Objects.requireNonNull(critical));
             return this;
         }
 
-        public Builder objectId(Input<CaPoolIssuancePolicyBaselineValuesAdditionalExtensionObjectIdArgs> objectId) {
+        public Builder objectId(Output<CaPoolIssuancePolicyBaselineValuesAdditionalExtensionObjectIdArgs> objectId) {
             this.objectId = Objects.requireNonNull(objectId);
             return this;
         }
 
         public Builder objectId(CaPoolIssuancePolicyBaselineValuesAdditionalExtensionObjectIdArgs objectId) {
-            this.objectId = Input.of(Objects.requireNonNull(objectId));
+            this.objectId = Output.of(Objects.requireNonNull(objectId));
             return this;
         }
 
-        public Builder value(Input<String> value) {
+        public Builder value(Output<String> value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }
 
         public Builder value(String value) {
-            this.value = Input.of(Objects.requireNonNull(value));
+            this.value = Output.of(Objects.requireNonNull(value));
             return this;
         }
         public CaPoolIssuancePolicyBaselineValuesAdditionalExtensionArgs build() {

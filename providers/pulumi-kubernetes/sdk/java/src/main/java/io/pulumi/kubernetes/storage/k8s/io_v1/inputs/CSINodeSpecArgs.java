@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.storage.k8s.io_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.kubernetes.storage.k8s.io_v1.inputs.CSINodeDriverArgs;
 import java.util.List;
@@ -23,18 +23,18 @@ public final class CSINodeSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="drivers", required=true)
-      private final Input<List<CSINodeDriverArgs>> drivers;
+      private final Output<List<CSINodeDriverArgs>> drivers;
 
-    public Input<List<CSINodeDriverArgs>> getDrivers() {
+    public Output<List<CSINodeDriverArgs>> getDrivers() {
         return this.drivers;
     }
 
-    public CSINodeSpecArgs(Input<List<CSINodeDriverArgs>> drivers) {
+    public CSINodeSpecArgs(Output<List<CSINodeDriverArgs>> drivers) {
         this.drivers = Objects.requireNonNull(drivers, "expected parameter 'drivers' to be non-null");
     }
 
     private CSINodeSpecArgs() {
-        this.drivers = Input.empty();
+        this.drivers = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class CSINodeSpecArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<List<CSINodeDriverArgs>> drivers;
+        private Output<List<CSINodeDriverArgs>> drivers;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class CSINodeSpecArgs extends io.pulumi.resources.ResourceArgs {
     	      this.drivers = defaults.drivers;
         }
 
-        public Builder drivers(Input<List<CSINodeDriverArgs>> drivers) {
+        public Builder drivers(Output<List<CSINodeDriverArgs>> drivers) {
             this.drivers = Objects.requireNonNull(drivers);
             return this;
         }
 
         public Builder drivers(List<CSINodeDriverArgs> drivers) {
-            this.drivers = Input.of(Objects.requireNonNull(drivers));
+            this.drivers = Output.of(Objects.requireNonNull(drivers));
             return this;
         }
         public CSINodeSpecArgs build() {

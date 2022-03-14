@@ -5,7 +5,7 @@ package io.pulumi.azurenative.edgeorder;
 
 import io.pulumi.azurenative.edgeorder.inputs.AddressDetailsArgs;
 import io.pulumi.azurenative.edgeorder.inputs.OrderItemDetailsArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -22,9 +22,9 @@ public final class OrderItemByNameArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="addressDetails", required=true)
-      private final Input<AddressDetailsArgs> addressDetails;
+      private final Output<AddressDetailsArgs> addressDetails;
 
-    public Input<AddressDetailsArgs> getAddressDetails() {
+    public Output<AddressDetailsArgs> getAddressDetails() {
         return this.addressDetails;
     }
 
@@ -33,10 +33,10 @@ public final class OrderItemByNameArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -44,9 +44,9 @@ public final class OrderItemByNameArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="orderId", required=true)
-      private final Input<String> orderId;
+      private final Output<String> orderId;
 
-    public Input<String> getOrderId() {
+    public Output<String> getOrderId() {
         return this.orderId;
     }
 
@@ -55,9 +55,9 @@ public final class OrderItemByNameArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="orderItemDetails", required=true)
-      private final Input<OrderItemDetailsArgs> orderItemDetails;
+      private final Output<OrderItemDetailsArgs> orderItemDetails;
 
-    public Input<OrderItemDetailsArgs> getOrderItemDetails() {
+    public Output<OrderItemDetailsArgs> getOrderItemDetails() {
         return this.orderItemDetails;
     }
 
@@ -66,10 +66,10 @@ public final class OrderItemByNameArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="orderItemName")
-      private final @Nullable Input<String> orderItemName;
+      private final @Nullable Output<String> orderItemName;
 
-    public Input<String> getOrderItemName() {
-        return this.orderItemName == null ? Input.empty() : this.orderItemName;
+    public Output<String> getOrderItemName() {
+        return this.orderItemName == null ? Output.empty() : this.orderItemName;
     }
 
     /**
@@ -77,9 +77,9 @@ public final class OrderItemByNameArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -88,20 +88,20 @@ public final class OrderItemByNameArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public OrderItemByNameArgs(
-        Input<AddressDetailsArgs> addressDetails,
-        @Nullable Input<String> location,
-        Input<String> orderId,
-        Input<OrderItemDetailsArgs> orderItemDetails,
-        @Nullable Input<String> orderItemName,
-        Input<String> resourceGroupName,
-        @Nullable Input<Map<String,String>> tags) {
+        Output<AddressDetailsArgs> addressDetails,
+        @Nullable Output<String> location,
+        Output<String> orderId,
+        Output<OrderItemDetailsArgs> orderItemDetails,
+        @Nullable Output<String> orderItemName,
+        Output<String> resourceGroupName,
+        @Nullable Output<Map<String,String>> tags) {
         this.addressDetails = Objects.requireNonNull(addressDetails, "expected parameter 'addressDetails' to be non-null");
         this.location = location;
         this.orderId = Objects.requireNonNull(orderId, "expected parameter 'orderId' to be non-null");
@@ -112,13 +112,13 @@ public final class OrderItemByNameArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private OrderItemByNameArgs() {
-        this.addressDetails = Input.empty();
-        this.location = Input.empty();
-        this.orderId = Input.empty();
-        this.orderItemDetails = Input.empty();
-        this.orderItemName = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.tags = Input.empty();
+        this.addressDetails = Output.empty();
+        this.location = Output.empty();
+        this.orderId = Output.empty();
+        this.orderItemDetails = Output.empty();
+        this.orderItemName = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -130,13 +130,13 @@ public final class OrderItemByNameArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private Input<AddressDetailsArgs> addressDetails;
-        private @Nullable Input<String> location;
-        private Input<String> orderId;
-        private Input<OrderItemDetailsArgs> orderItemDetails;
-        private @Nullable Input<String> orderItemName;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<Map<String,String>> tags;
+        private Output<AddressDetailsArgs> addressDetails;
+        private @Nullable Output<String> location;
+        private Output<String> orderId;
+        private Output<OrderItemDetailsArgs> orderItemDetails;
+        private @Nullable Output<String> orderItemName;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<Map<String,String>> tags;
 
         public Builder() {
     	      // Empty
@@ -153,73 +153,73 @@ public final class OrderItemByNameArgs extends io.pulumi.resources.ResourceArgs 
     	      this.tags = defaults.tags;
         }
 
-        public Builder addressDetails(Input<AddressDetailsArgs> addressDetails) {
+        public Builder addressDetails(Output<AddressDetailsArgs> addressDetails) {
             this.addressDetails = Objects.requireNonNull(addressDetails);
             return this;
         }
 
         public Builder addressDetails(AddressDetailsArgs addressDetails) {
-            this.addressDetails = Input.of(Objects.requireNonNull(addressDetails));
+            this.addressDetails = Output.of(Objects.requireNonNull(addressDetails));
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder orderId(Input<String> orderId) {
+        public Builder orderId(Output<String> orderId) {
             this.orderId = Objects.requireNonNull(orderId);
             return this;
         }
 
         public Builder orderId(String orderId) {
-            this.orderId = Input.of(Objects.requireNonNull(orderId));
+            this.orderId = Output.of(Objects.requireNonNull(orderId));
             return this;
         }
 
-        public Builder orderItemDetails(Input<OrderItemDetailsArgs> orderItemDetails) {
+        public Builder orderItemDetails(Output<OrderItemDetailsArgs> orderItemDetails) {
             this.orderItemDetails = Objects.requireNonNull(orderItemDetails);
             return this;
         }
 
         public Builder orderItemDetails(OrderItemDetailsArgs orderItemDetails) {
-            this.orderItemDetails = Input.of(Objects.requireNonNull(orderItemDetails));
+            this.orderItemDetails = Output.of(Objects.requireNonNull(orderItemDetails));
             return this;
         }
 
-        public Builder orderItemName(@Nullable Input<String> orderItemName) {
+        public Builder orderItemName(@Nullable Output<String> orderItemName) {
             this.orderItemName = orderItemName;
             return this;
         }
 
         public Builder orderItemName(@Nullable String orderItemName) {
-            this.orderItemName = Input.ofNullable(orderItemName);
+            this.orderItemName = Output.ofNullable(orderItemName);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public OrderItemByNameArgs build() {

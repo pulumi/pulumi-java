@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.cloudfront.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -15,18 +15,18 @@ public final class DistributionS3OriginConfigArgs extends io.pulumi.resources.Re
     public static final DistributionS3OriginConfigArgs Empty = new DistributionS3OriginConfigArgs();
 
     @InputImport(name="originAccessIdentity")
-      private final @Nullable Input<String> originAccessIdentity;
+      private final @Nullable Output<String> originAccessIdentity;
 
-    public Input<String> getOriginAccessIdentity() {
-        return this.originAccessIdentity == null ? Input.empty() : this.originAccessIdentity;
+    public Output<String> getOriginAccessIdentity() {
+        return this.originAccessIdentity == null ? Output.empty() : this.originAccessIdentity;
     }
 
-    public DistributionS3OriginConfigArgs(@Nullable Input<String> originAccessIdentity) {
+    public DistributionS3OriginConfigArgs(@Nullable Output<String> originAccessIdentity) {
         this.originAccessIdentity = originAccessIdentity;
     }
 
     private DistributionS3OriginConfigArgs() {
-        this.originAccessIdentity = Input.empty();
+        this.originAccessIdentity = Output.empty();
     }
 
     public static Builder builder() {
@@ -38,7 +38,7 @@ public final class DistributionS3OriginConfigArgs extends io.pulumi.resources.Re
     }
 
     public static final class Builder {
-        private @Nullable Input<String> originAccessIdentity;
+        private @Nullable Output<String> originAccessIdentity;
 
         public Builder() {
     	      // Empty
@@ -49,13 +49,13 @@ public final class DistributionS3OriginConfigArgs extends io.pulumi.resources.Re
     	      this.originAccessIdentity = defaults.originAccessIdentity;
         }
 
-        public Builder originAccessIdentity(@Nullable Input<String> originAccessIdentity) {
+        public Builder originAccessIdentity(@Nullable Output<String> originAccessIdentity) {
             this.originAccessIdentity = originAccessIdentity;
             return this;
         }
 
         public Builder originAccessIdentity(@Nullable String originAccessIdentity) {
-            this.originAccessIdentity = Input.ofNullable(originAccessIdentity);
+            this.originAccessIdentity = Output.ofNullable(originAccessIdentity);
             return this;
         }
         public DistributionS3OriginConfigArgs build() {

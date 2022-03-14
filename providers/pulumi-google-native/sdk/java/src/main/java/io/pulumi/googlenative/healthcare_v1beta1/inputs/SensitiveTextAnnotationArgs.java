@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.healthcare_v1beta1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -24,18 +24,18 @@ public final class SensitiveTextAnnotationArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="details")
-      private final @Nullable Input<Map<String,String>> details;
+      private final @Nullable Output<Map<String,String>> details;
 
-    public Input<Map<String,String>> getDetails() {
-        return this.details == null ? Input.empty() : this.details;
+    public Output<Map<String,String>> getDetails() {
+        return this.details == null ? Output.empty() : this.details;
     }
 
-    public SensitiveTextAnnotationArgs(@Nullable Input<Map<String,String>> details) {
+    public SensitiveTextAnnotationArgs(@Nullable Output<Map<String,String>> details) {
         this.details = details;
     }
 
     private SensitiveTextAnnotationArgs() {
-        this.details = Input.empty();
+        this.details = Output.empty();
     }
 
     public static Builder builder() {
@@ -47,7 +47,7 @@ public final class SensitiveTextAnnotationArgs extends io.pulumi.resources.Resou
     }
 
     public static final class Builder {
-        private @Nullable Input<Map<String,String>> details;
+        private @Nullable Output<Map<String,String>> details;
 
         public Builder() {
     	      // Empty
@@ -58,13 +58,13 @@ public final class SensitiveTextAnnotationArgs extends io.pulumi.resources.Resou
     	      this.details = defaults.details;
         }
 
-        public Builder details(@Nullable Input<Map<String,String>> details) {
+        public Builder details(@Nullable Output<Map<String,String>> details) {
             this.details = details;
             return this;
         }
 
         public Builder details(@Nullable Map<String,String> details) {
-            this.details = Input.ofNullable(details);
+            this.details = Output.ofNullable(details);
             return this;
         }
         public SensitiveTextAnnotationArgs build() {

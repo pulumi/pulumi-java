@@ -7,7 +7,6 @@ import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.security.CustomAssessmentAutomationArgs;
 import io.pulumi.azurenative.security.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -211,18 +210,18 @@ public class CustomAssessmentAutomation extends io.pulumi.resources.CustomResour
      * @param options A bag of options that control this resource's behavior.
      */
     public CustomAssessmentAutomation(String name, CustomAssessmentAutomationArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:security:CustomAssessmentAutomation", name, args == null ? CustomAssessmentAutomationArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("azure-native:security:CustomAssessmentAutomation", name, args == null ? CustomAssessmentAutomationArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private CustomAssessmentAutomation(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private CustomAssessmentAutomation(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:security:CustomAssessmentAutomation", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:security/v20210701preview:CustomAssessmentAutomation").build())
+                Output.of(Alias.builder().setType("azure-native:security/v20210701preview:CustomAssessmentAutomation").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -236,7 +235,7 @@ public class CustomAssessmentAutomation extends io.pulumi.resources.CustomResour
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static CustomAssessmentAutomation get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static CustomAssessmentAutomation get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new CustomAssessmentAutomation(name, id, options);
     }
 }

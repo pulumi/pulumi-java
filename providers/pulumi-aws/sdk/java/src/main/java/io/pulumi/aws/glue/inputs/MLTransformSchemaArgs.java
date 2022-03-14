@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.glue.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class MLTransformSchemaArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="dataType")
-      private final @Nullable Input<String> dataType;
+      private final @Nullable Output<String> dataType;
 
-    public Input<String> getDataType() {
-        return this.dataType == null ? Input.empty() : this.dataType;
+    public Output<String> getDataType() {
+        return this.dataType == null ? Output.empty() : this.dataType;
     }
 
     /**
@@ -30,22 +30,22 @@ public final class MLTransformSchemaArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     public MLTransformSchemaArgs(
-        @Nullable Input<String> dataType,
-        @Nullable Input<String> name) {
+        @Nullable Output<String> dataType,
+        @Nullable Output<String> name) {
         this.dataType = dataType;
         this.name = name;
     }
 
     private MLTransformSchemaArgs() {
-        this.dataType = Input.empty();
-        this.name = Input.empty();
+        this.dataType = Output.empty();
+        this.name = Output.empty();
     }
 
     public static Builder builder() {
@@ -57,8 +57,8 @@ public final class MLTransformSchemaArgs extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private @Nullable Input<String> dataType;
-        private @Nullable Input<String> name;
+        private @Nullable Output<String> dataType;
+        private @Nullable Output<String> name;
 
         public Builder() {
     	      // Empty
@@ -70,23 +70,23 @@ public final class MLTransformSchemaArgs extends io.pulumi.resources.ResourceArg
     	      this.name = defaults.name;
         }
 
-        public Builder dataType(@Nullable Input<String> dataType) {
+        public Builder dataType(@Nullable Output<String> dataType) {
             this.dataType = dataType;
             return this;
         }
 
         public Builder dataType(@Nullable String dataType) {
-            this.dataType = Input.ofNullable(dataType);
+            this.dataType = Output.ofNullable(dataType);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
         public MLTransformSchemaArgs build() {

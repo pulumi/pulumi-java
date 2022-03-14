@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1beta1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.containeranalysis_v1beta1.inputs.HintArgs;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class AuthorityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="hint")
-      private final @Nullable Input<HintArgs> hint;
+      private final @Nullable Output<HintArgs> hint;
 
-    public Input<HintArgs> getHint() {
-        return this.hint == null ? Input.empty() : this.hint;
+    public Output<HintArgs> getHint() {
+        return this.hint == null ? Output.empty() : this.hint;
     }
 
-    public AuthorityArgs(@Nullable Input<HintArgs> hint) {
+    public AuthorityArgs(@Nullable Output<HintArgs> hint) {
         this.hint = hint;
     }
 
     private AuthorityArgs() {
-        this.hint = Input.empty();
+        this.hint = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class AuthorityArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<HintArgs> hint;
+        private @Nullable Output<HintArgs> hint;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class AuthorityArgs extends io.pulumi.resources.ResourceArgs {
     	      this.hint = defaults.hint;
         }
 
-        public Builder hint(@Nullable Input<HintArgs> hint) {
+        public Builder hint(@Nullable Output<HintArgs> hint) {
             this.hint = hint;
             return this;
         }
 
         public Builder hint(@Nullable HintArgs hint) {
-            this.hint = Input.ofNullable(hint);
+            this.hint = Output.ofNullable(hint);
             return this;
         }
         public AuthorityArgs build() {

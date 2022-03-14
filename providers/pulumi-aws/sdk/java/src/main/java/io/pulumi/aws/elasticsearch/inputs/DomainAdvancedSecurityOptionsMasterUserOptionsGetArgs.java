@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.elasticsearch.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class DomainAdvancedSecurityOptionsMasterUserOptionsGetArgs extends
      * 
      */
     @InputImport(name="masterUserArn")
-      private final @Nullable Input<String> masterUserArn;
+      private final @Nullable Output<String> masterUserArn;
 
-    public Input<String> getMasterUserArn() {
-        return this.masterUserArn == null ? Input.empty() : this.masterUserArn;
+    public Output<String> getMasterUserArn() {
+        return this.masterUserArn == null ? Output.empty() : this.masterUserArn;
     }
 
     /**
@@ -30,10 +30,10 @@ public final class DomainAdvancedSecurityOptionsMasterUserOptionsGetArgs extends
      * 
      */
     @InputImport(name="masterUserName")
-      private final @Nullable Input<String> masterUserName;
+      private final @Nullable Output<String> masterUserName;
 
-    public Input<String> getMasterUserName() {
-        return this.masterUserName == null ? Input.empty() : this.masterUserName;
+    public Output<String> getMasterUserName() {
+        return this.masterUserName == null ? Output.empty() : this.masterUserName;
     }
 
     /**
@@ -41,25 +41,25 @@ public final class DomainAdvancedSecurityOptionsMasterUserOptionsGetArgs extends
      * 
      */
     @InputImport(name="masterUserPassword")
-      private final @Nullable Input<String> masterUserPassword;
+      private final @Nullable Output<String> masterUserPassword;
 
-    public Input<String> getMasterUserPassword() {
-        return this.masterUserPassword == null ? Input.empty() : this.masterUserPassword;
+    public Output<String> getMasterUserPassword() {
+        return this.masterUserPassword == null ? Output.empty() : this.masterUserPassword;
     }
 
     public DomainAdvancedSecurityOptionsMasterUserOptionsGetArgs(
-        @Nullable Input<String> masterUserArn,
-        @Nullable Input<String> masterUserName,
-        @Nullable Input<String> masterUserPassword) {
+        @Nullable Output<String> masterUserArn,
+        @Nullable Output<String> masterUserName,
+        @Nullable Output<String> masterUserPassword) {
         this.masterUserArn = masterUserArn;
         this.masterUserName = masterUserName;
         this.masterUserPassword = masterUserPassword;
     }
 
     private DomainAdvancedSecurityOptionsMasterUserOptionsGetArgs() {
-        this.masterUserArn = Input.empty();
-        this.masterUserName = Input.empty();
-        this.masterUserPassword = Input.empty();
+        this.masterUserArn = Output.empty();
+        this.masterUserName = Output.empty();
+        this.masterUserPassword = Output.empty();
     }
 
     public static Builder builder() {
@@ -71,9 +71,9 @@ public final class DomainAdvancedSecurityOptionsMasterUserOptionsGetArgs extends
     }
 
     public static final class Builder {
-        private @Nullable Input<String> masterUserArn;
-        private @Nullable Input<String> masterUserName;
-        private @Nullable Input<String> masterUserPassword;
+        private @Nullable Output<String> masterUserArn;
+        private @Nullable Output<String> masterUserName;
+        private @Nullable Output<String> masterUserPassword;
 
         public Builder() {
     	      // Empty
@@ -86,33 +86,33 @@ public final class DomainAdvancedSecurityOptionsMasterUserOptionsGetArgs extends
     	      this.masterUserPassword = defaults.masterUserPassword;
         }
 
-        public Builder masterUserArn(@Nullable Input<String> masterUserArn) {
+        public Builder masterUserArn(@Nullable Output<String> masterUserArn) {
             this.masterUserArn = masterUserArn;
             return this;
         }
 
         public Builder masterUserArn(@Nullable String masterUserArn) {
-            this.masterUserArn = Input.ofNullable(masterUserArn);
+            this.masterUserArn = Output.ofNullable(masterUserArn);
             return this;
         }
 
-        public Builder masterUserName(@Nullable Input<String> masterUserName) {
+        public Builder masterUserName(@Nullable Output<String> masterUserName) {
             this.masterUserName = masterUserName;
             return this;
         }
 
         public Builder masterUserName(@Nullable String masterUserName) {
-            this.masterUserName = Input.ofNullable(masterUserName);
+            this.masterUserName = Output.ofNullable(masterUserName);
             return this;
         }
 
-        public Builder masterUserPassword(@Nullable Input<String> masterUserPassword) {
+        public Builder masterUserPassword(@Nullable Output<String> masterUserPassword) {
             this.masterUserPassword = masterUserPassword;
             return this;
         }
 
         public Builder masterUserPassword(@Nullable String masterUserPassword) {
-            this.masterUserPassword = Input.ofNullable(masterUserPassword);
+            this.masterUserPassword = Output.ofNullable(masterUserPassword);
             return this;
         }
         public DomainAdvancedSecurityOptionsMasterUserOptionsGetArgs build() {

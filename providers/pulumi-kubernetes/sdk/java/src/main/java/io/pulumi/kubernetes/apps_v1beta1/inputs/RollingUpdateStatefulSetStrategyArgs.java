@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.apps_v1beta1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class RollingUpdateStatefulSetStrategyArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="partition")
-      private final @Nullable Input<Integer> partition;
+      private final @Nullable Output<Integer> partition;
 
-    public Input<Integer> getPartition() {
-        return this.partition == null ? Input.empty() : this.partition;
+    public Output<Integer> getPartition() {
+        return this.partition == null ? Output.empty() : this.partition;
     }
 
-    public RollingUpdateStatefulSetStrategyArgs(@Nullable Input<Integer> partition) {
+    public RollingUpdateStatefulSetStrategyArgs(@Nullable Output<Integer> partition) {
         this.partition = partition;
     }
 
     private RollingUpdateStatefulSetStrategyArgs() {
-        this.partition = Input.empty();
+        this.partition = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class RollingUpdateStatefulSetStrategyArgs extends io.pulumi.resour
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> partition;
+        private @Nullable Output<Integer> partition;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class RollingUpdateStatefulSetStrategyArgs extends io.pulumi.resour
     	      this.partition = defaults.partition;
         }
 
-        public Builder partition(@Nullable Input<Integer> partition) {
+        public Builder partition(@Nullable Output<Integer> partition) {
             this.partition = partition;
             return this;
         }
 
         public Builder partition(@Nullable Integer partition) {
-            this.partition = Input.ofNullable(partition);
+            this.partition = Output.ofNullable(partition);
             return this;
         }
         public RollingUpdateStatefulSetStrategyArgs build() {

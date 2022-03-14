@@ -3,7 +3,6 @@ package io.pulumi.resources;
 import com.google.common.annotations.VisibleForTesting;
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.ImmutableMap;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.internal.InputOutputData;
@@ -59,8 +58,8 @@ public class StackReference extends CustomResource {
         );
     }
 
-    private static Input<String> ensureName(@Nullable StackReferenceArgs args, String name) {
-        return args == null ? Input.of(name) : args.getName().orElse(Input.of(name));
+    private static Output<String> ensureName(@Nullable StackReferenceArgs args, String name) {
+        return args == null ? Output.of(name) : args.getName().orElse(Output.of(name));
     }
 
     public Output<String> getName() {
@@ -82,11 +81,11 @@ public class StackReference extends CustomResource {
      * @param name The name of the stack output to fetch.
      * @return An @see {@link Output} containing the requested value.
      */
-    public Output<Object> getOutput(Input<String> name) {
+    public Output<Object> getOutput(Output<String> name) {
         // Note that this is subtly different from "apply" here. A default "apply" will set the secret bit if any
         // of the inputs are a secret, and this.outputs is always a secret if it contains any secrets.
         // We do this dance so we can ensure that the Output we return is not needlessly tainted as a secret.
-        var value = Output.tuple(name.toOutput(), this.outputs).applyValue(
+        var value = Output.tuple(name, this.outputs).applyValue(
                 v -> Maps.tryGetValue(v.t2, v.t1).orElse(null));
 
         return io.pulumi.core.internal.Internal.of(value).withIsSecret(isSecretOutputName(name));
@@ -99,8 +98,8 @@ public class StackReference extends CustomResource {
      * @param name The name of the stack output to fetch.
      * @return An @see {@link Output} containing the requested value.
      */
-    public Output<Object> requireOutput(Input<String> name) {
-        var value = Output.tuple(name.toOutput(), this.name, this.outputs).applyValue(
+    public Output<Object> requireOutput(Output<String> name) {
+        var value = Output.tuple(name, this.name, this.outputs).applyValue(
                 v -> Maps.tryGetValue(v.t3, v.t1).orElseThrow(
                         () -> new KeyMissingException(v.t1, v.t2)));
 
@@ -117,7 +116,7 @@ public class StackReference extends CustomResource {
      * @param name The name of the stack output to fetch.
      * @return The value of the referenced stack output.
      */
-    public CompletableFuture<Object> getValueAsync(Input<String> name) {
+    public CompletableFuture<Object> getValueAsync(Output<String> name) {
         return io.pulumi.core.internal.Internal.of(this.getOutput(name)).getDataAsync()
                 .thenApply(data -> {
                     if (data.isSecret()) {
@@ -137,7 +136,7 @@ public class StackReference extends CustomResource {
      * @param name The name of the stack output to fetch.
      * @return The value of the referenced stack output.
      */
-    public CompletableFuture<Object> requireValueAsync(Input<String> name) {
+    public CompletableFuture<Object> requireValueAsync(Output<String> name) {
         return io.pulumi.core.internal.Internal.of(this.requireOutput(name)).getDataAsync()
                 .thenApply(data -> {
                     if (data.isSecret()) {
@@ -148,7 +147,7 @@ public class StackReference extends CustomResource {
                 });
     }
 
-    private CompletableFuture<Boolean> isSecretOutputName(Input<String> name) {
+    private CompletableFuture<Boolean> isSecretOutputName(Output<String> name) {
         return io.pulumi.core.internal.Internal.of(name).getDataAsync().thenCompose(
                 (InputOutputData<String> nameOutput) -> io.pulumi.core.internal.Internal.of(this.secretOutputNames).getDataAsync().thenCompose(
                         (InputOutputData<ImmutableList<String>> secretOutputNamesData) -> {

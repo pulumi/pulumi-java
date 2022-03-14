@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.glue.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -18,9 +18,9 @@ public final class CatalogTableTargetTableArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="catalogId", required=true)
-      private final Input<String> catalogId;
+      private final Output<String> catalogId;
 
-    public Input<String> getCatalogId() {
+    public Output<String> getCatalogId() {
         return this.catalogId;
     }
 
@@ -29,9 +29,9 @@ public final class CatalogTableTargetTableArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="databaseName", required=true)
-      private final Input<String> databaseName;
+      private final Output<String> databaseName;
 
-    public Input<String> getDatabaseName() {
+    public Output<String> getDatabaseName() {
         return this.databaseName;
     }
 
@@ -40,25 +40,25 @@ public final class CatalogTableTargetTableArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="name", required=true)
-      private final Input<String> name;
+      private final Output<String> name;
 
-    public Input<String> getName() {
+    public Output<String> getName() {
         return this.name;
     }
 
     public CatalogTableTargetTableArgs(
-        Input<String> catalogId,
-        Input<String> databaseName,
-        Input<String> name) {
+        Output<String> catalogId,
+        Output<String> databaseName,
+        Output<String> name) {
         this.catalogId = Objects.requireNonNull(catalogId, "expected parameter 'catalogId' to be non-null");
         this.databaseName = Objects.requireNonNull(databaseName, "expected parameter 'databaseName' to be non-null");
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
     }
 
     private CatalogTableTargetTableArgs() {
-        this.catalogId = Input.empty();
-        this.databaseName = Input.empty();
-        this.name = Input.empty();
+        this.catalogId = Output.empty();
+        this.databaseName = Output.empty();
+        this.name = Output.empty();
     }
 
     public static Builder builder() {
@@ -70,9 +70,9 @@ public final class CatalogTableTargetTableArgs extends io.pulumi.resources.Resou
     }
 
     public static final class Builder {
-        private Input<String> catalogId;
-        private Input<String> databaseName;
-        private Input<String> name;
+        private Output<String> catalogId;
+        private Output<String> databaseName;
+        private Output<String> name;
 
         public Builder() {
     	      // Empty
@@ -85,33 +85,33 @@ public final class CatalogTableTargetTableArgs extends io.pulumi.resources.Resou
     	      this.name = defaults.name;
         }
 
-        public Builder catalogId(Input<String> catalogId) {
+        public Builder catalogId(Output<String> catalogId) {
             this.catalogId = Objects.requireNonNull(catalogId);
             return this;
         }
 
         public Builder catalogId(String catalogId) {
-            this.catalogId = Input.of(Objects.requireNonNull(catalogId));
+            this.catalogId = Output.of(Objects.requireNonNull(catalogId));
             return this;
         }
 
-        public Builder databaseName(Input<String> databaseName) {
+        public Builder databaseName(Output<String> databaseName) {
             this.databaseName = Objects.requireNonNull(databaseName);
             return this;
         }
 
         public Builder databaseName(String databaseName) {
-            this.databaseName = Input.of(Objects.requireNonNull(databaseName));
+            this.databaseName = Output.of(Objects.requireNonNull(databaseName));
             return this;
         }
 
-        public Builder name(Input<String> name) {
+        public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(String name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
         public CatalogTableTargetTableArgs build() {

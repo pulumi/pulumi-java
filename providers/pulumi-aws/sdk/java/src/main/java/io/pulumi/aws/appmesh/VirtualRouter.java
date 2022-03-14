@@ -7,7 +7,6 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.appmesh.VirtualRouterArgs;
 import io.pulumi.aws.appmesh.inputs.VirtualRouterState;
 import io.pulumi.aws.appmesh.outputs.VirtualRouterSpec;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -224,14 +223,14 @@ public class VirtualRouter extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public VirtualRouter(String name, VirtualRouterArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:appmesh/virtualRouter:VirtualRouter", name, args == null ? VirtualRouterArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws:appmesh/virtualRouter:VirtualRouter", name, args == null ? VirtualRouterArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private VirtualRouter(String name, Input<String> id, @Nullable VirtualRouterState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private VirtualRouter(String name, Output<String> id, @Nullable VirtualRouterState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws:appmesh/virtualRouter:VirtualRouter", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -247,7 +246,7 @@ public class VirtualRouter extends io.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static VirtualRouter get(String name, Input<String> id, @Nullable VirtualRouterState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static VirtualRouter get(String name, Output<String> id, @Nullable VirtualRouterState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new VirtualRouter(name, id, state, options);
     }
 }

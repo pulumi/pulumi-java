@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,9 +19,9 @@ public final class ProjectMetadataItemArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="key", required=true)
-      private final Input<String> key;
+      private final Output<String> key;
 
-    public Input<String> getKey() {
+    public Output<String> getKey() {
         return this.key;
     }
 
@@ -31,10 +31,10 @@ public final class ProjectMetadataItemArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -42,25 +42,25 @@ public final class ProjectMetadataItemArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="value", required=true)
-      private final Input<String> value;
+      private final Output<String> value;
 
-    public Input<String> getValue() {
+    public Output<String> getValue() {
         return this.value;
     }
 
     public ProjectMetadataItemArgs(
-        Input<String> key,
-        @Nullable Input<String> project,
-        Input<String> value) {
+        Output<String> key,
+        @Nullable Output<String> project,
+        Output<String> value) {
         this.key = Objects.requireNonNull(key, "expected parameter 'key' to be non-null");
         this.project = project;
         this.value = Objects.requireNonNull(value, "expected parameter 'value' to be non-null");
     }
 
     private ProjectMetadataItemArgs() {
-        this.key = Input.empty();
-        this.project = Input.empty();
-        this.value = Input.empty();
+        this.key = Output.empty();
+        this.project = Output.empty();
+        this.value = Output.empty();
     }
 
     public static Builder builder() {
@@ -72,9 +72,9 @@ public final class ProjectMetadataItemArgs extends io.pulumi.resources.ResourceA
     }
 
     public static final class Builder {
-        private Input<String> key;
-        private @Nullable Input<String> project;
-        private Input<String> value;
+        private Output<String> key;
+        private @Nullable Output<String> project;
+        private Output<String> value;
 
         public Builder() {
     	      // Empty
@@ -87,33 +87,33 @@ public final class ProjectMetadataItemArgs extends io.pulumi.resources.ResourceA
     	      this.value = defaults.value;
         }
 
-        public Builder key(Input<String> key) {
+        public Builder key(Output<String> key) {
             this.key = Objects.requireNonNull(key);
             return this;
         }
 
         public Builder key(String key) {
-            this.key = Input.of(Objects.requireNonNull(key));
+            this.key = Output.of(Objects.requireNonNull(key));
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder value(Input<String> value) {
+        public Builder value(Output<String> value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }
 
         public Builder value(String value) {
-            this.value = Input.of(Objects.requireNonNull(value));
+            this.value = Output.of(Objects.requireNonNull(value));
             return this;
         }
         public ProjectMetadataItemArgs build() {

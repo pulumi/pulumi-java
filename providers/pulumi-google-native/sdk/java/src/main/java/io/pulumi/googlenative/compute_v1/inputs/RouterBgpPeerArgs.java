@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.compute_v1.enums.RouterBgpPeerAdvertiseMode;
 import io.pulumi.googlenative.compute_v1.enums.RouterBgpPeerAdvertisedGroupsItem;
@@ -27,10 +27,10 @@ public final class RouterBgpPeerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="advertiseMode")
-      private final @Nullable Input<RouterBgpPeerAdvertiseMode> advertiseMode;
+      private final @Nullable Output<RouterBgpPeerAdvertiseMode> advertiseMode;
 
-    public Input<RouterBgpPeerAdvertiseMode> getAdvertiseMode() {
-        return this.advertiseMode == null ? Input.empty() : this.advertiseMode;
+    public Output<RouterBgpPeerAdvertiseMode> getAdvertiseMode() {
+        return this.advertiseMode == null ? Output.empty() : this.advertiseMode;
     }
 
     /**
@@ -38,10 +38,10 @@ public final class RouterBgpPeerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="advertisedGroups")
-      private final @Nullable Input<List<RouterBgpPeerAdvertisedGroupsItem>> advertisedGroups;
+      private final @Nullable Output<List<RouterBgpPeerAdvertisedGroupsItem>> advertisedGroups;
 
-    public Input<List<RouterBgpPeerAdvertisedGroupsItem>> getAdvertisedGroups() {
-        return this.advertisedGroups == null ? Input.empty() : this.advertisedGroups;
+    public Output<List<RouterBgpPeerAdvertisedGroupsItem>> getAdvertisedGroups() {
+        return this.advertisedGroups == null ? Output.empty() : this.advertisedGroups;
     }
 
     /**
@@ -49,10 +49,10 @@ public final class RouterBgpPeerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="advertisedIpRanges")
-      private final @Nullable Input<List<RouterAdvertisedIpRangeArgs>> advertisedIpRanges;
+      private final @Nullable Output<List<RouterAdvertisedIpRangeArgs>> advertisedIpRanges;
 
-    public Input<List<RouterAdvertisedIpRangeArgs>> getAdvertisedIpRanges() {
-        return this.advertisedIpRanges == null ? Input.empty() : this.advertisedIpRanges;
+    public Output<List<RouterAdvertisedIpRangeArgs>> getAdvertisedIpRanges() {
+        return this.advertisedIpRanges == null ? Output.empty() : this.advertisedIpRanges;
     }
 
     /**
@@ -60,10 +60,10 @@ public final class RouterBgpPeerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="advertisedRoutePriority")
-      private final @Nullable Input<Integer> advertisedRoutePriority;
+      private final @Nullable Output<Integer> advertisedRoutePriority;
 
-    public Input<Integer> getAdvertisedRoutePriority() {
-        return this.advertisedRoutePriority == null ? Input.empty() : this.advertisedRoutePriority;
+    public Output<Integer> getAdvertisedRoutePriority() {
+        return this.advertisedRoutePriority == null ? Output.empty() : this.advertisedRoutePriority;
     }
 
     /**
@@ -71,10 +71,10 @@ public final class RouterBgpPeerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="bfd")
-      private final @Nullable Input<RouterBgpPeerBfdArgs> bfd;
+      private final @Nullable Output<RouterBgpPeerBfdArgs> bfd;
 
-    public Input<RouterBgpPeerBfdArgs> getBfd() {
-        return this.bfd == null ? Input.empty() : this.bfd;
+    public Output<RouterBgpPeerBfdArgs> getBfd() {
+        return this.bfd == null ? Output.empty() : this.bfd;
     }
 
     /**
@@ -82,10 +82,10 @@ public final class RouterBgpPeerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enable")
-      private final @Nullable Input<RouterBgpPeerEnable> enable;
+      private final @Nullable Output<RouterBgpPeerEnable> enable;
 
-    public Input<RouterBgpPeerEnable> getEnable() {
-        return this.enable == null ? Input.empty() : this.enable;
+    public Output<RouterBgpPeerEnable> getEnable() {
+        return this.enable == null ? Output.empty() : this.enable;
     }
 
     /**
@@ -93,10 +93,10 @@ public final class RouterBgpPeerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enableIpv6")
-      private final @Nullable Input<Boolean> enableIpv6;
+      private final @Nullable Output<Boolean> enableIpv6;
 
-    public Input<Boolean> getEnableIpv6() {
-        return this.enableIpv6 == null ? Input.empty() : this.enableIpv6;
+    public Output<Boolean> getEnableIpv6() {
+        return this.enableIpv6 == null ? Output.empty() : this.enableIpv6;
     }
 
     /**
@@ -104,10 +104,10 @@ public final class RouterBgpPeerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="interfaceName")
-      private final @Nullable Input<String> interfaceName;
+      private final @Nullable Output<String> interfaceName;
 
-    public Input<String> getInterfaceName() {
-        return this.interfaceName == null ? Input.empty() : this.interfaceName;
+    public Output<String> getInterfaceName() {
+        return this.interfaceName == null ? Output.empty() : this.interfaceName;
     }
 
     /**
@@ -115,10 +115,10 @@ public final class RouterBgpPeerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ipAddress")
-      private final @Nullable Input<String> ipAddress;
+      private final @Nullable Output<String> ipAddress;
 
-    public Input<String> getIpAddress() {
-        return this.ipAddress == null ? Input.empty() : this.ipAddress;
+    public Output<String> getIpAddress() {
+        return this.ipAddress == null ? Output.empty() : this.ipAddress;
     }
 
     /**
@@ -126,10 +126,10 @@ public final class RouterBgpPeerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ipv6NexthopAddress")
-      private final @Nullable Input<String> ipv6NexthopAddress;
+      private final @Nullable Output<String> ipv6NexthopAddress;
 
-    public Input<String> getIpv6NexthopAddress() {
-        return this.ipv6NexthopAddress == null ? Input.empty() : this.ipv6NexthopAddress;
+    public Output<String> getIpv6NexthopAddress() {
+        return this.ipv6NexthopAddress == null ? Output.empty() : this.ipv6NexthopAddress;
     }
 
     /**
@@ -137,10 +137,10 @@ public final class RouterBgpPeerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -148,10 +148,10 @@ public final class RouterBgpPeerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="peerAsn")
-      private final @Nullable Input<Integer> peerAsn;
+      private final @Nullable Output<Integer> peerAsn;
 
-    public Input<Integer> getPeerAsn() {
-        return this.peerAsn == null ? Input.empty() : this.peerAsn;
+    public Output<Integer> getPeerAsn() {
+        return this.peerAsn == null ? Output.empty() : this.peerAsn;
     }
 
     /**
@@ -159,10 +159,10 @@ public final class RouterBgpPeerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="peerIpAddress")
-      private final @Nullable Input<String> peerIpAddress;
+      private final @Nullable Output<String> peerIpAddress;
 
-    public Input<String> getPeerIpAddress() {
-        return this.peerIpAddress == null ? Input.empty() : this.peerIpAddress;
+    public Output<String> getPeerIpAddress() {
+        return this.peerIpAddress == null ? Output.empty() : this.peerIpAddress;
     }
 
     /**
@@ -170,10 +170,10 @@ public final class RouterBgpPeerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="peerIpv6NexthopAddress")
-      private final @Nullable Input<String> peerIpv6NexthopAddress;
+      private final @Nullable Output<String> peerIpv6NexthopAddress;
 
-    public Input<String> getPeerIpv6NexthopAddress() {
-        return this.peerIpv6NexthopAddress == null ? Input.empty() : this.peerIpv6NexthopAddress;
+    public Output<String> getPeerIpv6NexthopAddress() {
+        return this.peerIpv6NexthopAddress == null ? Output.empty() : this.peerIpv6NexthopAddress;
     }
 
     /**
@@ -181,28 +181,28 @@ public final class RouterBgpPeerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="routerApplianceInstance")
-      private final @Nullable Input<String> routerApplianceInstance;
+      private final @Nullable Output<String> routerApplianceInstance;
 
-    public Input<String> getRouterApplianceInstance() {
-        return this.routerApplianceInstance == null ? Input.empty() : this.routerApplianceInstance;
+    public Output<String> getRouterApplianceInstance() {
+        return this.routerApplianceInstance == null ? Output.empty() : this.routerApplianceInstance;
     }
 
     public RouterBgpPeerArgs(
-        @Nullable Input<RouterBgpPeerAdvertiseMode> advertiseMode,
-        @Nullable Input<List<RouterBgpPeerAdvertisedGroupsItem>> advertisedGroups,
-        @Nullable Input<List<RouterAdvertisedIpRangeArgs>> advertisedIpRanges,
-        @Nullable Input<Integer> advertisedRoutePriority,
-        @Nullable Input<RouterBgpPeerBfdArgs> bfd,
-        @Nullable Input<RouterBgpPeerEnable> enable,
-        @Nullable Input<Boolean> enableIpv6,
-        @Nullable Input<String> interfaceName,
-        @Nullable Input<String> ipAddress,
-        @Nullable Input<String> ipv6NexthopAddress,
-        @Nullable Input<String> name,
-        @Nullable Input<Integer> peerAsn,
-        @Nullable Input<String> peerIpAddress,
-        @Nullable Input<String> peerIpv6NexthopAddress,
-        @Nullable Input<String> routerApplianceInstance) {
+        @Nullable Output<RouterBgpPeerAdvertiseMode> advertiseMode,
+        @Nullable Output<List<RouterBgpPeerAdvertisedGroupsItem>> advertisedGroups,
+        @Nullable Output<List<RouterAdvertisedIpRangeArgs>> advertisedIpRanges,
+        @Nullable Output<Integer> advertisedRoutePriority,
+        @Nullable Output<RouterBgpPeerBfdArgs> bfd,
+        @Nullable Output<RouterBgpPeerEnable> enable,
+        @Nullable Output<Boolean> enableIpv6,
+        @Nullable Output<String> interfaceName,
+        @Nullable Output<String> ipAddress,
+        @Nullable Output<String> ipv6NexthopAddress,
+        @Nullable Output<String> name,
+        @Nullable Output<Integer> peerAsn,
+        @Nullable Output<String> peerIpAddress,
+        @Nullable Output<String> peerIpv6NexthopAddress,
+        @Nullable Output<String> routerApplianceInstance) {
         this.advertiseMode = advertiseMode;
         this.advertisedGroups = advertisedGroups;
         this.advertisedIpRanges = advertisedIpRanges;
@@ -221,21 +221,21 @@ public final class RouterBgpPeerArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private RouterBgpPeerArgs() {
-        this.advertiseMode = Input.empty();
-        this.advertisedGroups = Input.empty();
-        this.advertisedIpRanges = Input.empty();
-        this.advertisedRoutePriority = Input.empty();
-        this.bfd = Input.empty();
-        this.enable = Input.empty();
-        this.enableIpv6 = Input.empty();
-        this.interfaceName = Input.empty();
-        this.ipAddress = Input.empty();
-        this.ipv6NexthopAddress = Input.empty();
-        this.name = Input.empty();
-        this.peerAsn = Input.empty();
-        this.peerIpAddress = Input.empty();
-        this.peerIpv6NexthopAddress = Input.empty();
-        this.routerApplianceInstance = Input.empty();
+        this.advertiseMode = Output.empty();
+        this.advertisedGroups = Output.empty();
+        this.advertisedIpRanges = Output.empty();
+        this.advertisedRoutePriority = Output.empty();
+        this.bfd = Output.empty();
+        this.enable = Output.empty();
+        this.enableIpv6 = Output.empty();
+        this.interfaceName = Output.empty();
+        this.ipAddress = Output.empty();
+        this.ipv6NexthopAddress = Output.empty();
+        this.name = Output.empty();
+        this.peerAsn = Output.empty();
+        this.peerIpAddress = Output.empty();
+        this.peerIpv6NexthopAddress = Output.empty();
+        this.routerApplianceInstance = Output.empty();
     }
 
     public static Builder builder() {
@@ -247,21 +247,21 @@ public final class RouterBgpPeerArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<RouterBgpPeerAdvertiseMode> advertiseMode;
-        private @Nullable Input<List<RouterBgpPeerAdvertisedGroupsItem>> advertisedGroups;
-        private @Nullable Input<List<RouterAdvertisedIpRangeArgs>> advertisedIpRanges;
-        private @Nullable Input<Integer> advertisedRoutePriority;
-        private @Nullable Input<RouterBgpPeerBfdArgs> bfd;
-        private @Nullable Input<RouterBgpPeerEnable> enable;
-        private @Nullable Input<Boolean> enableIpv6;
-        private @Nullable Input<String> interfaceName;
-        private @Nullable Input<String> ipAddress;
-        private @Nullable Input<String> ipv6NexthopAddress;
-        private @Nullable Input<String> name;
-        private @Nullable Input<Integer> peerAsn;
-        private @Nullable Input<String> peerIpAddress;
-        private @Nullable Input<String> peerIpv6NexthopAddress;
-        private @Nullable Input<String> routerApplianceInstance;
+        private @Nullable Output<RouterBgpPeerAdvertiseMode> advertiseMode;
+        private @Nullable Output<List<RouterBgpPeerAdvertisedGroupsItem>> advertisedGroups;
+        private @Nullable Output<List<RouterAdvertisedIpRangeArgs>> advertisedIpRanges;
+        private @Nullable Output<Integer> advertisedRoutePriority;
+        private @Nullable Output<RouterBgpPeerBfdArgs> bfd;
+        private @Nullable Output<RouterBgpPeerEnable> enable;
+        private @Nullable Output<Boolean> enableIpv6;
+        private @Nullable Output<String> interfaceName;
+        private @Nullable Output<String> ipAddress;
+        private @Nullable Output<String> ipv6NexthopAddress;
+        private @Nullable Output<String> name;
+        private @Nullable Output<Integer> peerAsn;
+        private @Nullable Output<String> peerIpAddress;
+        private @Nullable Output<String> peerIpv6NexthopAddress;
+        private @Nullable Output<String> routerApplianceInstance;
 
         public Builder() {
     	      // Empty
@@ -286,153 +286,153 @@ public final class RouterBgpPeerArgs extends io.pulumi.resources.ResourceArgs {
     	      this.routerApplianceInstance = defaults.routerApplianceInstance;
         }
 
-        public Builder advertiseMode(@Nullable Input<RouterBgpPeerAdvertiseMode> advertiseMode) {
+        public Builder advertiseMode(@Nullable Output<RouterBgpPeerAdvertiseMode> advertiseMode) {
             this.advertiseMode = advertiseMode;
             return this;
         }
 
         public Builder advertiseMode(@Nullable RouterBgpPeerAdvertiseMode advertiseMode) {
-            this.advertiseMode = Input.ofNullable(advertiseMode);
+            this.advertiseMode = Output.ofNullable(advertiseMode);
             return this;
         }
 
-        public Builder advertisedGroups(@Nullable Input<List<RouterBgpPeerAdvertisedGroupsItem>> advertisedGroups) {
+        public Builder advertisedGroups(@Nullable Output<List<RouterBgpPeerAdvertisedGroupsItem>> advertisedGroups) {
             this.advertisedGroups = advertisedGroups;
             return this;
         }
 
         public Builder advertisedGroups(@Nullable List<RouterBgpPeerAdvertisedGroupsItem> advertisedGroups) {
-            this.advertisedGroups = Input.ofNullable(advertisedGroups);
+            this.advertisedGroups = Output.ofNullable(advertisedGroups);
             return this;
         }
 
-        public Builder advertisedIpRanges(@Nullable Input<List<RouterAdvertisedIpRangeArgs>> advertisedIpRanges) {
+        public Builder advertisedIpRanges(@Nullable Output<List<RouterAdvertisedIpRangeArgs>> advertisedIpRanges) {
             this.advertisedIpRanges = advertisedIpRanges;
             return this;
         }
 
         public Builder advertisedIpRanges(@Nullable List<RouterAdvertisedIpRangeArgs> advertisedIpRanges) {
-            this.advertisedIpRanges = Input.ofNullable(advertisedIpRanges);
+            this.advertisedIpRanges = Output.ofNullable(advertisedIpRanges);
             return this;
         }
 
-        public Builder advertisedRoutePriority(@Nullable Input<Integer> advertisedRoutePriority) {
+        public Builder advertisedRoutePriority(@Nullable Output<Integer> advertisedRoutePriority) {
             this.advertisedRoutePriority = advertisedRoutePriority;
             return this;
         }
 
         public Builder advertisedRoutePriority(@Nullable Integer advertisedRoutePriority) {
-            this.advertisedRoutePriority = Input.ofNullable(advertisedRoutePriority);
+            this.advertisedRoutePriority = Output.ofNullable(advertisedRoutePriority);
             return this;
         }
 
-        public Builder bfd(@Nullable Input<RouterBgpPeerBfdArgs> bfd) {
+        public Builder bfd(@Nullable Output<RouterBgpPeerBfdArgs> bfd) {
             this.bfd = bfd;
             return this;
         }
 
         public Builder bfd(@Nullable RouterBgpPeerBfdArgs bfd) {
-            this.bfd = Input.ofNullable(bfd);
+            this.bfd = Output.ofNullable(bfd);
             return this;
         }
 
-        public Builder enable(@Nullable Input<RouterBgpPeerEnable> enable) {
+        public Builder enable(@Nullable Output<RouterBgpPeerEnable> enable) {
             this.enable = enable;
             return this;
         }
 
         public Builder enable(@Nullable RouterBgpPeerEnable enable) {
-            this.enable = Input.ofNullable(enable);
+            this.enable = Output.ofNullable(enable);
             return this;
         }
 
-        public Builder enableIpv6(@Nullable Input<Boolean> enableIpv6) {
+        public Builder enableIpv6(@Nullable Output<Boolean> enableIpv6) {
             this.enableIpv6 = enableIpv6;
             return this;
         }
 
         public Builder enableIpv6(@Nullable Boolean enableIpv6) {
-            this.enableIpv6 = Input.ofNullable(enableIpv6);
+            this.enableIpv6 = Output.ofNullable(enableIpv6);
             return this;
         }
 
-        public Builder interfaceName(@Nullable Input<String> interfaceName) {
+        public Builder interfaceName(@Nullable Output<String> interfaceName) {
             this.interfaceName = interfaceName;
             return this;
         }
 
         public Builder interfaceName(@Nullable String interfaceName) {
-            this.interfaceName = Input.ofNullable(interfaceName);
+            this.interfaceName = Output.ofNullable(interfaceName);
             return this;
         }
 
-        public Builder ipAddress(@Nullable Input<String> ipAddress) {
+        public Builder ipAddress(@Nullable Output<String> ipAddress) {
             this.ipAddress = ipAddress;
             return this;
         }
 
         public Builder ipAddress(@Nullable String ipAddress) {
-            this.ipAddress = Input.ofNullable(ipAddress);
+            this.ipAddress = Output.ofNullable(ipAddress);
             return this;
         }
 
-        public Builder ipv6NexthopAddress(@Nullable Input<String> ipv6NexthopAddress) {
+        public Builder ipv6NexthopAddress(@Nullable Output<String> ipv6NexthopAddress) {
             this.ipv6NexthopAddress = ipv6NexthopAddress;
             return this;
         }
 
         public Builder ipv6NexthopAddress(@Nullable String ipv6NexthopAddress) {
-            this.ipv6NexthopAddress = Input.ofNullable(ipv6NexthopAddress);
+            this.ipv6NexthopAddress = Output.ofNullable(ipv6NexthopAddress);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder peerAsn(@Nullable Input<Integer> peerAsn) {
+        public Builder peerAsn(@Nullable Output<Integer> peerAsn) {
             this.peerAsn = peerAsn;
             return this;
         }
 
         public Builder peerAsn(@Nullable Integer peerAsn) {
-            this.peerAsn = Input.ofNullable(peerAsn);
+            this.peerAsn = Output.ofNullable(peerAsn);
             return this;
         }
 
-        public Builder peerIpAddress(@Nullable Input<String> peerIpAddress) {
+        public Builder peerIpAddress(@Nullable Output<String> peerIpAddress) {
             this.peerIpAddress = peerIpAddress;
             return this;
         }
 
         public Builder peerIpAddress(@Nullable String peerIpAddress) {
-            this.peerIpAddress = Input.ofNullable(peerIpAddress);
+            this.peerIpAddress = Output.ofNullable(peerIpAddress);
             return this;
         }
 
-        public Builder peerIpv6NexthopAddress(@Nullable Input<String> peerIpv6NexthopAddress) {
+        public Builder peerIpv6NexthopAddress(@Nullable Output<String> peerIpv6NexthopAddress) {
             this.peerIpv6NexthopAddress = peerIpv6NexthopAddress;
             return this;
         }
 
         public Builder peerIpv6NexthopAddress(@Nullable String peerIpv6NexthopAddress) {
-            this.peerIpv6NexthopAddress = Input.ofNullable(peerIpv6NexthopAddress);
+            this.peerIpv6NexthopAddress = Output.ofNullable(peerIpv6NexthopAddress);
             return this;
         }
 
-        public Builder routerApplianceInstance(@Nullable Input<String> routerApplianceInstance) {
+        public Builder routerApplianceInstance(@Nullable Output<String> routerApplianceInstance) {
             this.routerApplianceInstance = routerApplianceInstance;
             return this;
         }
 
         public Builder routerApplianceInstance(@Nullable String routerApplianceInstance) {
-            this.routerApplianceInstance = Input.ofNullable(routerApplianceInstance);
+            this.routerApplianceInstance = Output.ofNullable(routerApplianceInstance);
             return this;
         }
         public RouterBgpPeerArgs build() {

@@ -6,7 +6,6 @@ package io.pulumi.azurenative.web;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.web.WebAppPublicCertificateSlotArgs;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -151,29 +150,29 @@ public class WebAppPublicCertificateSlot extends io.pulumi.resources.CustomResou
      * @param options A bag of options that control this resource's behavior.
      */
     public WebAppPublicCertificateSlot(String name, WebAppPublicCertificateSlotArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:web:WebAppPublicCertificateSlot", name, args == null ? WebAppPublicCertificateSlotArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("azure-native:web:WebAppPublicCertificateSlot", name, args == null ? WebAppPublicCertificateSlotArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private WebAppPublicCertificateSlot(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private WebAppPublicCertificateSlot(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:web:WebAppPublicCertificateSlot", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:web/v20160801:WebAppPublicCertificateSlot").build()),
-                Input.of(Alias.builder().setType("azure-native:web/v20180201:WebAppPublicCertificateSlot").build()),
-                Input.of(Alias.builder().setType("azure-native:web/v20181101:WebAppPublicCertificateSlot").build()),
-                Input.of(Alias.builder().setType("azure-native:web/v20190801:WebAppPublicCertificateSlot").build()),
-                Input.of(Alias.builder().setType("azure-native:web/v20200601:WebAppPublicCertificateSlot").build()),
-                Input.of(Alias.builder().setType("azure-native:web/v20200901:WebAppPublicCertificateSlot").build()),
-                Input.of(Alias.builder().setType("azure-native:web/v20201001:WebAppPublicCertificateSlot").build()),
-                Input.of(Alias.builder().setType("azure-native:web/v20201201:WebAppPublicCertificateSlot").build()),
-                Input.of(Alias.builder().setType("azure-native:web/v20210101:WebAppPublicCertificateSlot").build()),
-                Input.of(Alias.builder().setType("azure-native:web/v20210115:WebAppPublicCertificateSlot").build()),
-                Input.of(Alias.builder().setType("azure-native:web/v20210201:WebAppPublicCertificateSlot").build()),
-                Input.of(Alias.builder().setType("azure-native:web/v20210301:WebAppPublicCertificateSlot").build())
+                Output.of(Alias.builder().setType("azure-native:web/v20160801:WebAppPublicCertificateSlot").build()),
+                Output.of(Alias.builder().setType("azure-native:web/v20180201:WebAppPublicCertificateSlot").build()),
+                Output.of(Alias.builder().setType("azure-native:web/v20181101:WebAppPublicCertificateSlot").build()),
+                Output.of(Alias.builder().setType("azure-native:web/v20190801:WebAppPublicCertificateSlot").build()),
+                Output.of(Alias.builder().setType("azure-native:web/v20200601:WebAppPublicCertificateSlot").build()),
+                Output.of(Alias.builder().setType("azure-native:web/v20200901:WebAppPublicCertificateSlot").build()),
+                Output.of(Alias.builder().setType("azure-native:web/v20201001:WebAppPublicCertificateSlot").build()),
+                Output.of(Alias.builder().setType("azure-native:web/v20201201:WebAppPublicCertificateSlot").build()),
+                Output.of(Alias.builder().setType("azure-native:web/v20210101:WebAppPublicCertificateSlot").build()),
+                Output.of(Alias.builder().setType("azure-native:web/v20210115:WebAppPublicCertificateSlot").build()),
+                Output.of(Alias.builder().setType("azure-native:web/v20210201:WebAppPublicCertificateSlot").build()),
+                Output.of(Alias.builder().setType("azure-native:web/v20210301:WebAppPublicCertificateSlot").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -187,7 +186,7 @@ public class WebAppPublicCertificateSlot extends io.pulumi.resources.CustomResou
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static WebAppPublicCertificateSlot get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static WebAppPublicCertificateSlot get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new WebAppPublicCertificateSlot(name, id, options);
     }
 }

@@ -6,7 +6,7 @@ package io.pulumi.awsnative.frauddetector.inputs;
 import io.pulumi.awsnative.frauddetector.enums.DetectorRuleLanguage;
 import io.pulumi.awsnative.frauddetector.inputs.DetectorOutcomeArgs;
 import io.pulumi.awsnative.frauddetector.inputs.DetectorTagArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -19,10 +19,10 @@ public final class DetectorRuleArgs extends io.pulumi.resources.ResourceArgs {
     public static final DetectorRuleArgs Empty = new DetectorRuleArgs();
 
     @InputImport(name="arn")
-      private final @Nullable Input<String> arn;
+      private final @Nullable Output<String> arn;
 
-    public Input<String> getArn() {
-        return this.arn == null ? Input.empty() : this.arn;
+    public Output<String> getArn() {
+        return this.arn == null ? Output.empty() : this.arn;
     }
 
     /**
@@ -30,10 +30,10 @@ public final class DetectorRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="createdTime")
-      private final @Nullable Input<String> createdTime;
+      private final @Nullable Output<String> createdTime;
 
-    public Input<String> getCreatedTime() {
-        return this.createdTime == null ? Input.empty() : this.createdTime;
+    public Output<String> getCreatedTime() {
+        return this.createdTime == null ? Output.empty() : this.createdTime;
     }
 
     /**
@@ -41,31 +41,31 @@ public final class DetectorRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     @InputImport(name="detectorId")
-      private final @Nullable Input<String> detectorId;
+      private final @Nullable Output<String> detectorId;
 
-    public Input<String> getDetectorId() {
-        return this.detectorId == null ? Input.empty() : this.detectorId;
+    public Output<String> getDetectorId() {
+        return this.detectorId == null ? Output.empty() : this.detectorId;
     }
 
     @InputImport(name="expression")
-      private final @Nullable Input<String> expression;
+      private final @Nullable Output<String> expression;
 
-    public Input<String> getExpression() {
-        return this.expression == null ? Input.empty() : this.expression;
+    public Output<String> getExpression() {
+        return this.expression == null ? Output.empty() : this.expression;
     }
 
     @InputImport(name="language")
-      private final @Nullable Input<DetectorRuleLanguage> language;
+      private final @Nullable Output<DetectorRuleLanguage> language;
 
-    public Input<DetectorRuleLanguage> getLanguage() {
-        return this.language == null ? Input.empty() : this.language;
+    public Output<DetectorRuleLanguage> getLanguage() {
+        return this.language == null ? Output.empty() : this.language;
     }
 
     /**
@@ -73,31 +73,31 @@ public final class DetectorRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="lastUpdatedTime")
-      private final @Nullable Input<String> lastUpdatedTime;
+      private final @Nullable Output<String> lastUpdatedTime;
 
-    public Input<String> getLastUpdatedTime() {
-        return this.lastUpdatedTime == null ? Input.empty() : this.lastUpdatedTime;
+    public Output<String> getLastUpdatedTime() {
+        return this.lastUpdatedTime == null ? Output.empty() : this.lastUpdatedTime;
     }
 
     @InputImport(name="outcomes")
-      private final @Nullable Input<List<DetectorOutcomeArgs>> outcomes;
+      private final @Nullable Output<List<DetectorOutcomeArgs>> outcomes;
 
-    public Input<List<DetectorOutcomeArgs>> getOutcomes() {
-        return this.outcomes == null ? Input.empty() : this.outcomes;
+    public Output<List<DetectorOutcomeArgs>> getOutcomes() {
+        return this.outcomes == null ? Output.empty() : this.outcomes;
     }
 
     @InputImport(name="ruleId")
-      private final @Nullable Input<String> ruleId;
+      private final @Nullable Output<String> ruleId;
 
-    public Input<String> getRuleId() {
-        return this.ruleId == null ? Input.empty() : this.ruleId;
+    public Output<String> getRuleId() {
+        return this.ruleId == null ? Output.empty() : this.ruleId;
     }
 
     @InputImport(name="ruleVersion")
-      private final @Nullable Input<String> ruleVersion;
+      private final @Nullable Output<String> ruleVersion;
 
-    public Input<String> getRuleVersion() {
-        return this.ruleVersion == null ? Input.empty() : this.ruleVersion;
+    public Output<String> getRuleVersion() {
+        return this.ruleVersion == null ? Output.empty() : this.ruleVersion;
     }
 
     /**
@@ -105,24 +105,24 @@ public final class DetectorRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<List<DetectorTagArgs>> tags;
+      private final @Nullable Output<List<DetectorTagArgs>> tags;
 
-    public Input<List<DetectorTagArgs>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<List<DetectorTagArgs>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public DetectorRuleArgs(
-        @Nullable Input<String> arn,
-        @Nullable Input<String> createdTime,
-        @Nullable Input<String> description,
-        @Nullable Input<String> detectorId,
-        @Nullable Input<String> expression,
-        @Nullable Input<DetectorRuleLanguage> language,
-        @Nullable Input<String> lastUpdatedTime,
-        @Nullable Input<List<DetectorOutcomeArgs>> outcomes,
-        @Nullable Input<String> ruleId,
-        @Nullable Input<String> ruleVersion,
-        @Nullable Input<List<DetectorTagArgs>> tags) {
+        @Nullable Output<String> arn,
+        @Nullable Output<String> createdTime,
+        @Nullable Output<String> description,
+        @Nullable Output<String> detectorId,
+        @Nullable Output<String> expression,
+        @Nullable Output<DetectorRuleLanguage> language,
+        @Nullable Output<String> lastUpdatedTime,
+        @Nullable Output<List<DetectorOutcomeArgs>> outcomes,
+        @Nullable Output<String> ruleId,
+        @Nullable Output<String> ruleVersion,
+        @Nullable Output<List<DetectorTagArgs>> tags) {
         this.arn = arn;
         this.createdTime = createdTime;
         this.description = description;
@@ -137,17 +137,17 @@ public final class DetectorRuleArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DetectorRuleArgs() {
-        this.arn = Input.empty();
-        this.createdTime = Input.empty();
-        this.description = Input.empty();
-        this.detectorId = Input.empty();
-        this.expression = Input.empty();
-        this.language = Input.empty();
-        this.lastUpdatedTime = Input.empty();
-        this.outcomes = Input.empty();
-        this.ruleId = Input.empty();
-        this.ruleVersion = Input.empty();
-        this.tags = Input.empty();
+        this.arn = Output.empty();
+        this.createdTime = Output.empty();
+        this.description = Output.empty();
+        this.detectorId = Output.empty();
+        this.expression = Output.empty();
+        this.language = Output.empty();
+        this.lastUpdatedTime = Output.empty();
+        this.outcomes = Output.empty();
+        this.ruleId = Output.empty();
+        this.ruleVersion = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -159,17 +159,17 @@ public final class DetectorRuleArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> arn;
-        private @Nullable Input<String> createdTime;
-        private @Nullable Input<String> description;
-        private @Nullable Input<String> detectorId;
-        private @Nullable Input<String> expression;
-        private @Nullable Input<DetectorRuleLanguage> language;
-        private @Nullable Input<String> lastUpdatedTime;
-        private @Nullable Input<List<DetectorOutcomeArgs>> outcomes;
-        private @Nullable Input<String> ruleId;
-        private @Nullable Input<String> ruleVersion;
-        private @Nullable Input<List<DetectorTagArgs>> tags;
+        private @Nullable Output<String> arn;
+        private @Nullable Output<String> createdTime;
+        private @Nullable Output<String> description;
+        private @Nullable Output<String> detectorId;
+        private @Nullable Output<String> expression;
+        private @Nullable Output<DetectorRuleLanguage> language;
+        private @Nullable Output<String> lastUpdatedTime;
+        private @Nullable Output<List<DetectorOutcomeArgs>> outcomes;
+        private @Nullable Output<String> ruleId;
+        private @Nullable Output<String> ruleVersion;
+        private @Nullable Output<List<DetectorTagArgs>> tags;
 
         public Builder() {
     	      // Empty
@@ -190,113 +190,113 @@ public final class DetectorRuleArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder arn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
 
         public Builder arn(@Nullable String arn) {
-            this.arn = Input.ofNullable(arn);
+            this.arn = Output.ofNullable(arn);
             return this;
         }
 
-        public Builder createdTime(@Nullable Input<String> createdTime) {
+        public Builder createdTime(@Nullable Output<String> createdTime) {
             this.createdTime = createdTime;
             return this;
         }
 
         public Builder createdTime(@Nullable String createdTime) {
-            this.createdTime = Input.ofNullable(createdTime);
+            this.createdTime = Output.ofNullable(createdTime);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder detectorId(@Nullable Input<String> detectorId) {
+        public Builder detectorId(@Nullable Output<String> detectorId) {
             this.detectorId = detectorId;
             return this;
         }
 
         public Builder detectorId(@Nullable String detectorId) {
-            this.detectorId = Input.ofNullable(detectorId);
+            this.detectorId = Output.ofNullable(detectorId);
             return this;
         }
 
-        public Builder expression(@Nullable Input<String> expression) {
+        public Builder expression(@Nullable Output<String> expression) {
             this.expression = expression;
             return this;
         }
 
         public Builder expression(@Nullable String expression) {
-            this.expression = Input.ofNullable(expression);
+            this.expression = Output.ofNullable(expression);
             return this;
         }
 
-        public Builder language(@Nullable Input<DetectorRuleLanguage> language) {
+        public Builder language(@Nullable Output<DetectorRuleLanguage> language) {
             this.language = language;
             return this;
         }
 
         public Builder language(@Nullable DetectorRuleLanguage language) {
-            this.language = Input.ofNullable(language);
+            this.language = Output.ofNullable(language);
             return this;
         }
 
-        public Builder lastUpdatedTime(@Nullable Input<String> lastUpdatedTime) {
+        public Builder lastUpdatedTime(@Nullable Output<String> lastUpdatedTime) {
             this.lastUpdatedTime = lastUpdatedTime;
             return this;
         }
 
         public Builder lastUpdatedTime(@Nullable String lastUpdatedTime) {
-            this.lastUpdatedTime = Input.ofNullable(lastUpdatedTime);
+            this.lastUpdatedTime = Output.ofNullable(lastUpdatedTime);
             return this;
         }
 
-        public Builder outcomes(@Nullable Input<List<DetectorOutcomeArgs>> outcomes) {
+        public Builder outcomes(@Nullable Output<List<DetectorOutcomeArgs>> outcomes) {
             this.outcomes = outcomes;
             return this;
         }
 
         public Builder outcomes(@Nullable List<DetectorOutcomeArgs> outcomes) {
-            this.outcomes = Input.ofNullable(outcomes);
+            this.outcomes = Output.ofNullable(outcomes);
             return this;
         }
 
-        public Builder ruleId(@Nullable Input<String> ruleId) {
+        public Builder ruleId(@Nullable Output<String> ruleId) {
             this.ruleId = ruleId;
             return this;
         }
 
         public Builder ruleId(@Nullable String ruleId) {
-            this.ruleId = Input.ofNullable(ruleId);
+            this.ruleId = Output.ofNullable(ruleId);
             return this;
         }
 
-        public Builder ruleVersion(@Nullable Input<String> ruleVersion) {
+        public Builder ruleVersion(@Nullable Output<String> ruleVersion) {
             this.ruleVersion = ruleVersion;
             return this;
         }
 
         public Builder ruleVersion(@Nullable String ruleVersion) {
-            this.ruleVersion = Input.ofNullable(ruleVersion);
+            this.ruleVersion = Output.ofNullable(ruleVersion);
             return this;
         }
 
-        public Builder tags(@Nullable Input<List<DetectorTagArgs>> tags) {
+        public Builder tags(@Nullable Output<List<DetectorTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable List<DetectorTagArgs> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public DetectorRuleArgs build() {

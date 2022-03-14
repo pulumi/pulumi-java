@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.worklink;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,9 +19,9 @@ public final class WebsiteCertificateAuthorityAssociationArgs extends io.pulumi.
      * 
      */
     @InputImport(name="certificate", required=true)
-      private final Input<String> certificate;
+      private final Output<String> certificate;
 
-    public Input<String> getCertificate() {
+    public Output<String> getCertificate() {
         return this.certificate;
     }
 
@@ -30,10 +30,10 @@ public final class WebsiteCertificateAuthorityAssociationArgs extends io.pulumi.
      * 
      */
     @InputImport(name="displayName")
-      private final @Nullable Input<String> displayName;
+      private final @Nullable Output<String> displayName;
 
-    public Input<String> getDisplayName() {
-        return this.displayName == null ? Input.empty() : this.displayName;
+    public Output<String> getDisplayName() {
+        return this.displayName == null ? Output.empty() : this.displayName;
     }
 
     /**
@@ -41,25 +41,25 @@ public final class WebsiteCertificateAuthorityAssociationArgs extends io.pulumi.
      * 
      */
     @InputImport(name="fleetArn", required=true)
-      private final Input<String> fleetArn;
+      private final Output<String> fleetArn;
 
-    public Input<String> getFleetArn() {
+    public Output<String> getFleetArn() {
         return this.fleetArn;
     }
 
     public WebsiteCertificateAuthorityAssociationArgs(
-        Input<String> certificate,
-        @Nullable Input<String> displayName,
-        Input<String> fleetArn) {
+        Output<String> certificate,
+        @Nullable Output<String> displayName,
+        Output<String> fleetArn) {
         this.certificate = Objects.requireNonNull(certificate, "expected parameter 'certificate' to be non-null");
         this.displayName = displayName;
         this.fleetArn = Objects.requireNonNull(fleetArn, "expected parameter 'fleetArn' to be non-null");
     }
 
     private WebsiteCertificateAuthorityAssociationArgs() {
-        this.certificate = Input.empty();
-        this.displayName = Input.empty();
-        this.fleetArn = Input.empty();
+        this.certificate = Output.empty();
+        this.displayName = Output.empty();
+        this.fleetArn = Output.empty();
     }
 
     public static Builder builder() {
@@ -71,9 +71,9 @@ public final class WebsiteCertificateAuthorityAssociationArgs extends io.pulumi.
     }
 
     public static final class Builder {
-        private Input<String> certificate;
-        private @Nullable Input<String> displayName;
-        private Input<String> fleetArn;
+        private Output<String> certificate;
+        private @Nullable Output<String> displayName;
+        private Output<String> fleetArn;
 
         public Builder() {
     	      // Empty
@@ -86,33 +86,33 @@ public final class WebsiteCertificateAuthorityAssociationArgs extends io.pulumi.
     	      this.fleetArn = defaults.fleetArn;
         }
 
-        public Builder certificate(Input<String> certificate) {
+        public Builder certificate(Output<String> certificate) {
             this.certificate = Objects.requireNonNull(certificate);
             return this;
         }
 
         public Builder certificate(String certificate) {
-            this.certificate = Input.of(Objects.requireNonNull(certificate));
+            this.certificate = Output.of(Objects.requireNonNull(certificate));
             return this;
         }
 
-        public Builder displayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Input.ofNullable(displayName);
+            this.displayName = Output.ofNullable(displayName);
             return this;
         }
 
-        public Builder fleetArn(Input<String> fleetArn) {
+        public Builder fleetArn(Output<String> fleetArn) {
             this.fleetArn = Objects.requireNonNull(fleetArn);
             return this;
         }
 
         public Builder fleetArn(String fleetArn) {
-            this.fleetArn = Input.of(Objects.requireNonNull(fleetArn));
+            this.fleetArn = Output.of(Objects.requireNonNull(fleetArn));
             return this;
         }
         public WebsiteCertificateAuthorityAssociationArgs build() {

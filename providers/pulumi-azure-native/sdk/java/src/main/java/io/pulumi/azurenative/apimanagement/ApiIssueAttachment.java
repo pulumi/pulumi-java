@@ -6,7 +6,6 @@ package io.pulumi.azurenative.apimanagement;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.apimanagement.ApiIssueAttachmentArgs;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -140,28 +139,28 @@ public class ApiIssueAttachment extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ApiIssueAttachment(String name, ApiIssueAttachmentArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:apimanagement:ApiIssueAttachment", name, args == null ? ApiIssueAttachmentArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("azure-native:apimanagement:ApiIssueAttachment", name, args == null ? ApiIssueAttachmentArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private ApiIssueAttachment(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private ApiIssueAttachment(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:apimanagement:ApiIssueAttachment", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:apimanagement/v20170301:ApiIssueAttachment").build()),
-                Input.of(Alias.builder().setType("azure-native:apimanagement/v20180101:ApiIssueAttachment").build()),
-                Input.of(Alias.builder().setType("azure-native:apimanagement/v20180601preview:ApiIssueAttachment").build()),
-                Input.of(Alias.builder().setType("azure-native:apimanagement/v20190101:ApiIssueAttachment").build()),
-                Input.of(Alias.builder().setType("azure-native:apimanagement/v20191201:ApiIssueAttachment").build()),
-                Input.of(Alias.builder().setType("azure-native:apimanagement/v20191201preview:ApiIssueAttachment").build()),
-                Input.of(Alias.builder().setType("azure-native:apimanagement/v20200601preview:ApiIssueAttachment").build()),
-                Input.of(Alias.builder().setType("azure-native:apimanagement/v20201201:ApiIssueAttachment").build()),
-                Input.of(Alias.builder().setType("azure-native:apimanagement/v20210101preview:ApiIssueAttachment").build()),
-                Input.of(Alias.builder().setType("azure-native:apimanagement/v20210401preview:ApiIssueAttachment").build()),
-                Input.of(Alias.builder().setType("azure-native:apimanagement/v20210801:ApiIssueAttachment").build())
+                Output.of(Alias.builder().setType("azure-native:apimanagement/v20170301:ApiIssueAttachment").build()),
+                Output.of(Alias.builder().setType("azure-native:apimanagement/v20180101:ApiIssueAttachment").build()),
+                Output.of(Alias.builder().setType("azure-native:apimanagement/v20180601preview:ApiIssueAttachment").build()),
+                Output.of(Alias.builder().setType("azure-native:apimanagement/v20190101:ApiIssueAttachment").build()),
+                Output.of(Alias.builder().setType("azure-native:apimanagement/v20191201:ApiIssueAttachment").build()),
+                Output.of(Alias.builder().setType("azure-native:apimanagement/v20191201preview:ApiIssueAttachment").build()),
+                Output.of(Alias.builder().setType("azure-native:apimanagement/v20200601preview:ApiIssueAttachment").build()),
+                Output.of(Alias.builder().setType("azure-native:apimanagement/v20201201:ApiIssueAttachment").build()),
+                Output.of(Alias.builder().setType("azure-native:apimanagement/v20210101preview:ApiIssueAttachment").build()),
+                Output.of(Alias.builder().setType("azure-native:apimanagement/v20210401preview:ApiIssueAttachment").build()),
+                Output.of(Alias.builder().setType("azure-native:apimanagement/v20210801:ApiIssueAttachment").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -175,7 +174,7 @@ public class ApiIssueAttachment extends io.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static ApiIssueAttachment get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static ApiIssueAttachment get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new ApiIssueAttachment(name, id, options);
     }
 }

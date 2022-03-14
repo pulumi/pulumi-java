@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.iot.inputs;
 
 import io.pulumi.awsnative.iot.enums.MitigationActionUpdateCACertificateParamsAction;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 
@@ -18,18 +18,18 @@ public final class MitigationActionUpdateCACertificateParamsArgs extends io.pulu
     public static final MitigationActionUpdateCACertificateParamsArgs Empty = new MitigationActionUpdateCACertificateParamsArgs();
 
     @InputImport(name="action", required=true)
-      private final Input<MitigationActionUpdateCACertificateParamsAction> action;
+      private final Output<MitigationActionUpdateCACertificateParamsAction> action;
 
-    public Input<MitigationActionUpdateCACertificateParamsAction> getAction() {
+    public Output<MitigationActionUpdateCACertificateParamsAction> getAction() {
         return this.action;
     }
 
-    public MitigationActionUpdateCACertificateParamsArgs(Input<MitigationActionUpdateCACertificateParamsAction> action) {
+    public MitigationActionUpdateCACertificateParamsArgs(Output<MitigationActionUpdateCACertificateParamsAction> action) {
         this.action = Objects.requireNonNull(action, "expected parameter 'action' to be non-null");
     }
 
     private MitigationActionUpdateCACertificateParamsArgs() {
-        this.action = Input.empty();
+        this.action = Output.empty();
     }
 
     public static Builder builder() {
@@ -41,7 +41,7 @@ public final class MitigationActionUpdateCACertificateParamsArgs extends io.pulu
     }
 
     public static final class Builder {
-        private Input<MitigationActionUpdateCACertificateParamsAction> action;
+        private Output<MitigationActionUpdateCACertificateParamsAction> action;
 
         public Builder() {
     	      // Empty
@@ -52,13 +52,13 @@ public final class MitigationActionUpdateCACertificateParamsArgs extends io.pulu
     	      this.action = defaults.action;
         }
 
-        public Builder action(Input<MitigationActionUpdateCACertificateParamsAction> action) {
+        public Builder action(Output<MitigationActionUpdateCACertificateParamsAction> action) {
             this.action = Objects.requireNonNull(action);
             return this;
         }
 
         public Builder action(MitigationActionUpdateCACertificateParamsAction action) {
-            this.action = Input.of(Objects.requireNonNull(action));
+            this.action = Output.of(Objects.requireNonNull(action));
             return this;
         }
         public MitigationActionUpdateCACertificateParamsArgs build() {

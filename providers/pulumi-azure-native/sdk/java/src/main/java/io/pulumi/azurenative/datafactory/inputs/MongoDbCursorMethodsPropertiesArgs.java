@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datafactory.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class MongoDbCursorMethodsPropertiesArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="limit")
-      private final @Nullable Input<Object> limit;
+      private final @Nullable Output<Object> limit;
 
-    public Input<Object> getLimit() {
-        return this.limit == null ? Input.empty() : this.limit;
+    public Output<Object> getLimit() {
+        return this.limit == null ? Output.empty() : this.limit;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class MongoDbCursorMethodsPropertiesArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="project")
-      private final @Nullable Input<Object> project;
+      private final @Nullable Output<Object> project;
 
-    public Input<Object> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<Object> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -45,10 +45,10 @@ public final class MongoDbCursorMethodsPropertiesArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="skip")
-      private final @Nullable Input<Object> skip;
+      private final @Nullable Output<Object> skip;
 
-    public Input<Object> getSkip() {
-        return this.skip == null ? Input.empty() : this.skip;
+    public Output<Object> getSkip() {
+        return this.skip == null ? Output.empty() : this.skip;
     }
 
     /**
@@ -56,17 +56,17 @@ public final class MongoDbCursorMethodsPropertiesArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="sort")
-      private final @Nullable Input<Object> sort;
+      private final @Nullable Output<Object> sort;
 
-    public Input<Object> getSort() {
-        return this.sort == null ? Input.empty() : this.sort;
+    public Output<Object> getSort() {
+        return this.sort == null ? Output.empty() : this.sort;
     }
 
     public MongoDbCursorMethodsPropertiesArgs(
-        @Nullable Input<Object> limit,
-        @Nullable Input<Object> project,
-        @Nullable Input<Object> skip,
-        @Nullable Input<Object> sort) {
+        @Nullable Output<Object> limit,
+        @Nullable Output<Object> project,
+        @Nullable Output<Object> skip,
+        @Nullable Output<Object> sort) {
         this.limit = limit;
         this.project = project;
         this.skip = skip;
@@ -74,10 +74,10 @@ public final class MongoDbCursorMethodsPropertiesArgs extends io.pulumi.resource
     }
 
     private MongoDbCursorMethodsPropertiesArgs() {
-        this.limit = Input.empty();
-        this.project = Input.empty();
-        this.skip = Input.empty();
-        this.sort = Input.empty();
+        this.limit = Output.empty();
+        this.project = Output.empty();
+        this.skip = Output.empty();
+        this.sort = Output.empty();
     }
 
     public static Builder builder() {
@@ -89,10 +89,10 @@ public final class MongoDbCursorMethodsPropertiesArgs extends io.pulumi.resource
     }
 
     public static final class Builder {
-        private @Nullable Input<Object> limit;
-        private @Nullable Input<Object> project;
-        private @Nullable Input<Object> skip;
-        private @Nullable Input<Object> sort;
+        private @Nullable Output<Object> limit;
+        private @Nullable Output<Object> project;
+        private @Nullable Output<Object> skip;
+        private @Nullable Output<Object> sort;
 
         public Builder() {
     	      // Empty
@@ -106,43 +106,43 @@ public final class MongoDbCursorMethodsPropertiesArgs extends io.pulumi.resource
     	      this.sort = defaults.sort;
         }
 
-        public Builder limit(@Nullable Input<Object> limit) {
+        public Builder limit(@Nullable Output<Object> limit) {
             this.limit = limit;
             return this;
         }
 
         public Builder limit(@Nullable Object limit) {
-            this.limit = Input.ofNullable(limit);
+            this.limit = Output.ofNullable(limit);
             return this;
         }
 
-        public Builder project(@Nullable Input<Object> project) {
+        public Builder project(@Nullable Output<Object> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable Object project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder skip(@Nullable Input<Object> skip) {
+        public Builder skip(@Nullable Output<Object> skip) {
             this.skip = skip;
             return this;
         }
 
         public Builder skip(@Nullable Object skip) {
-            this.skip = Input.ofNullable(skip);
+            this.skip = Output.ofNullable(skip);
             return this;
         }
 
-        public Builder sort(@Nullable Input<Object> sort) {
+        public Builder sort(@Nullable Output<Object> sort) {
             this.sort = sort;
             return this;
         }
 
         public Builder sort(@Nullable Object sort) {
-            this.sort = Input.ofNullable(sort);
+            this.sort = Output.ofNullable(sort);
             return this;
         }
         public MongoDbCursorMethodsPropertiesArgs build() {

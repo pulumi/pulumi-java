@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.ec2.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class LocalGatewayRouteState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="destinationCidrBlock")
-      private final @Nullable Input<String> destinationCidrBlock;
+      private final @Nullable Output<String> destinationCidrBlock;
 
-    public Input<String> getDestinationCidrBlock() {
-        return this.destinationCidrBlock == null ? Input.empty() : this.destinationCidrBlock;
+    public Output<String> getDestinationCidrBlock() {
+        return this.destinationCidrBlock == null ? Output.empty() : this.destinationCidrBlock;
     }
 
     /**
@@ -30,10 +30,10 @@ public final class LocalGatewayRouteState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="localGatewayRouteTableId")
-      private final @Nullable Input<String> localGatewayRouteTableId;
+      private final @Nullable Output<String> localGatewayRouteTableId;
 
-    public Input<String> getLocalGatewayRouteTableId() {
-        return this.localGatewayRouteTableId == null ? Input.empty() : this.localGatewayRouteTableId;
+    public Output<String> getLocalGatewayRouteTableId() {
+        return this.localGatewayRouteTableId == null ? Output.empty() : this.localGatewayRouteTableId;
     }
 
     /**
@@ -41,25 +41,25 @@ public final class LocalGatewayRouteState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="localGatewayVirtualInterfaceGroupId")
-      private final @Nullable Input<String> localGatewayVirtualInterfaceGroupId;
+      private final @Nullable Output<String> localGatewayVirtualInterfaceGroupId;
 
-    public Input<String> getLocalGatewayVirtualInterfaceGroupId() {
-        return this.localGatewayVirtualInterfaceGroupId == null ? Input.empty() : this.localGatewayVirtualInterfaceGroupId;
+    public Output<String> getLocalGatewayVirtualInterfaceGroupId() {
+        return this.localGatewayVirtualInterfaceGroupId == null ? Output.empty() : this.localGatewayVirtualInterfaceGroupId;
     }
 
     public LocalGatewayRouteState(
-        @Nullable Input<String> destinationCidrBlock,
-        @Nullable Input<String> localGatewayRouteTableId,
-        @Nullable Input<String> localGatewayVirtualInterfaceGroupId) {
+        @Nullable Output<String> destinationCidrBlock,
+        @Nullable Output<String> localGatewayRouteTableId,
+        @Nullable Output<String> localGatewayVirtualInterfaceGroupId) {
         this.destinationCidrBlock = destinationCidrBlock;
         this.localGatewayRouteTableId = localGatewayRouteTableId;
         this.localGatewayVirtualInterfaceGroupId = localGatewayVirtualInterfaceGroupId;
     }
 
     private LocalGatewayRouteState() {
-        this.destinationCidrBlock = Input.empty();
-        this.localGatewayRouteTableId = Input.empty();
-        this.localGatewayVirtualInterfaceGroupId = Input.empty();
+        this.destinationCidrBlock = Output.empty();
+        this.localGatewayRouteTableId = Output.empty();
+        this.localGatewayVirtualInterfaceGroupId = Output.empty();
     }
 
     public static Builder builder() {
@@ -71,9 +71,9 @@ public final class LocalGatewayRouteState extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private @Nullable Input<String> destinationCidrBlock;
-        private @Nullable Input<String> localGatewayRouteTableId;
-        private @Nullable Input<String> localGatewayVirtualInterfaceGroupId;
+        private @Nullable Output<String> destinationCidrBlock;
+        private @Nullable Output<String> localGatewayRouteTableId;
+        private @Nullable Output<String> localGatewayVirtualInterfaceGroupId;
 
         public Builder() {
     	      // Empty
@@ -86,33 +86,33 @@ public final class LocalGatewayRouteState extends io.pulumi.resources.ResourceAr
     	      this.localGatewayVirtualInterfaceGroupId = defaults.localGatewayVirtualInterfaceGroupId;
         }
 
-        public Builder destinationCidrBlock(@Nullable Input<String> destinationCidrBlock) {
+        public Builder destinationCidrBlock(@Nullable Output<String> destinationCidrBlock) {
             this.destinationCidrBlock = destinationCidrBlock;
             return this;
         }
 
         public Builder destinationCidrBlock(@Nullable String destinationCidrBlock) {
-            this.destinationCidrBlock = Input.ofNullable(destinationCidrBlock);
+            this.destinationCidrBlock = Output.ofNullable(destinationCidrBlock);
             return this;
         }
 
-        public Builder localGatewayRouteTableId(@Nullable Input<String> localGatewayRouteTableId) {
+        public Builder localGatewayRouteTableId(@Nullable Output<String> localGatewayRouteTableId) {
             this.localGatewayRouteTableId = localGatewayRouteTableId;
             return this;
         }
 
         public Builder localGatewayRouteTableId(@Nullable String localGatewayRouteTableId) {
-            this.localGatewayRouteTableId = Input.ofNullable(localGatewayRouteTableId);
+            this.localGatewayRouteTableId = Output.ofNullable(localGatewayRouteTableId);
             return this;
         }
 
-        public Builder localGatewayVirtualInterfaceGroupId(@Nullable Input<String> localGatewayVirtualInterfaceGroupId) {
+        public Builder localGatewayVirtualInterfaceGroupId(@Nullable Output<String> localGatewayVirtualInterfaceGroupId) {
             this.localGatewayVirtualInterfaceGroupId = localGatewayVirtualInterfaceGroupId;
             return this;
         }
 
         public Builder localGatewayVirtualInterfaceGroupId(@Nullable String localGatewayVirtualInterfaceGroupId) {
-            this.localGatewayVirtualInterfaceGroupId = Input.ofNullable(localGatewayVirtualInterfaceGroupId);
+            this.localGatewayVirtualInterfaceGroupId = Output.ofNullable(localGatewayVirtualInterfaceGroupId);
             return this;
         }
         public LocalGatewayRouteState build() {

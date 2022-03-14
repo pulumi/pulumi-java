@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.openenergyplatform.inputs;
 
 import io.pulumi.azurenative.openenergyplatform.inputs.DataPartitionNamesArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -17,29 +17,29 @@ public final class EnergyServicePropertiesArgs extends io.pulumi.resources.Resou
     public static final EnergyServicePropertiesArgs Empty = new EnergyServicePropertiesArgs();
 
     @InputImport(name="authAppId")
-      private final @Nullable Input<String> authAppId;
+      private final @Nullable Output<String> authAppId;
 
-    public Input<String> getAuthAppId() {
-        return this.authAppId == null ? Input.empty() : this.authAppId;
+    public Output<String> getAuthAppId() {
+        return this.authAppId == null ? Output.empty() : this.authAppId;
     }
 
     @InputImport(name="dataPartitionNames")
-      private final @Nullable Input<List<DataPartitionNamesArgs>> dataPartitionNames;
+      private final @Nullable Output<List<DataPartitionNamesArgs>> dataPartitionNames;
 
-    public Input<List<DataPartitionNamesArgs>> getDataPartitionNames() {
-        return this.dataPartitionNames == null ? Input.empty() : this.dataPartitionNames;
+    public Output<List<DataPartitionNamesArgs>> getDataPartitionNames() {
+        return this.dataPartitionNames == null ? Output.empty() : this.dataPartitionNames;
     }
 
     public EnergyServicePropertiesArgs(
-        @Nullable Input<String> authAppId,
-        @Nullable Input<List<DataPartitionNamesArgs>> dataPartitionNames) {
+        @Nullable Output<String> authAppId,
+        @Nullable Output<List<DataPartitionNamesArgs>> dataPartitionNames) {
         this.authAppId = authAppId;
         this.dataPartitionNames = dataPartitionNames;
     }
 
     private EnergyServicePropertiesArgs() {
-        this.authAppId = Input.empty();
-        this.dataPartitionNames = Input.empty();
+        this.authAppId = Output.empty();
+        this.dataPartitionNames = Output.empty();
     }
 
     public static Builder builder() {
@@ -51,8 +51,8 @@ public final class EnergyServicePropertiesArgs extends io.pulumi.resources.Resou
     }
 
     public static final class Builder {
-        private @Nullable Input<String> authAppId;
-        private @Nullable Input<List<DataPartitionNamesArgs>> dataPartitionNames;
+        private @Nullable Output<String> authAppId;
+        private @Nullable Output<List<DataPartitionNamesArgs>> dataPartitionNames;
 
         public Builder() {
     	      // Empty
@@ -64,23 +64,23 @@ public final class EnergyServicePropertiesArgs extends io.pulumi.resources.Resou
     	      this.dataPartitionNames = defaults.dataPartitionNames;
         }
 
-        public Builder authAppId(@Nullable Input<String> authAppId) {
+        public Builder authAppId(@Nullable Output<String> authAppId) {
             this.authAppId = authAppId;
             return this;
         }
 
         public Builder authAppId(@Nullable String authAppId) {
-            this.authAppId = Input.ofNullable(authAppId);
+            this.authAppId = Output.ofNullable(authAppId);
             return this;
         }
 
-        public Builder dataPartitionNames(@Nullable Input<List<DataPartitionNamesArgs>> dataPartitionNames) {
+        public Builder dataPartitionNames(@Nullable Output<List<DataPartitionNamesArgs>> dataPartitionNames) {
             this.dataPartitionNames = dataPartitionNames;
             return this;
         }
 
         public Builder dataPartitionNames(@Nullable List<DataPartitionNamesArgs> dataPartitionNames) {
-            this.dataPartitionNames = Input.ofNullable(dataPartitionNames);
+            this.dataPartitionNames = Output.ofNullable(dataPartitionNames);
             return this;
         }
         public EnergyServicePropertiesArgs build() {

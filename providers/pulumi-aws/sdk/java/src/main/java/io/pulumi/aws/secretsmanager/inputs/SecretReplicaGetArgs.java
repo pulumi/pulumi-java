@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.secretsmanager.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class SecretReplicaGetArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="kmsKeyId")
-      private final @Nullable Input<String> kmsKeyId;
+      private final @Nullable Output<String> kmsKeyId;
 
-    public Input<String> getKmsKeyId() {
-        return this.kmsKeyId == null ? Input.empty() : this.kmsKeyId;
+    public Output<String> getKmsKeyId() {
+        return this.kmsKeyId == null ? Output.empty() : this.kmsKeyId;
     }
 
     /**
@@ -30,10 +30,10 @@ public final class SecretReplicaGetArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="lastAccessedDate")
-      private final @Nullable Input<String> lastAccessedDate;
+      private final @Nullable Output<String> lastAccessedDate;
 
-    public Input<String> getLastAccessedDate() {
-        return this.lastAccessedDate == null ? Input.empty() : this.lastAccessedDate;
+    public Output<String> getLastAccessedDate() {
+        return this.lastAccessedDate == null ? Output.empty() : this.lastAccessedDate;
     }
 
     /**
@@ -41,9 +41,9 @@ public final class SecretReplicaGetArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="region", required=true)
-      private final Input<String> region;
+      private final Output<String> region;
 
-    public Input<String> getRegion() {
+    public Output<String> getRegion() {
         return this.region;
     }
 
@@ -52,10 +52,10 @@ public final class SecretReplicaGetArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="status")
-      private final @Nullable Input<String> status;
+      private final @Nullable Output<String> status;
 
-    public Input<String> getStatus() {
-        return this.status == null ? Input.empty() : this.status;
+    public Output<String> getStatus() {
+        return this.status == null ? Output.empty() : this.status;
     }
 
     /**
@@ -63,18 +63,18 @@ public final class SecretReplicaGetArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="statusMessage")
-      private final @Nullable Input<String> statusMessage;
+      private final @Nullable Output<String> statusMessage;
 
-    public Input<String> getStatusMessage() {
-        return this.statusMessage == null ? Input.empty() : this.statusMessage;
+    public Output<String> getStatusMessage() {
+        return this.statusMessage == null ? Output.empty() : this.statusMessage;
     }
 
     public SecretReplicaGetArgs(
-        @Nullable Input<String> kmsKeyId,
-        @Nullable Input<String> lastAccessedDate,
-        Input<String> region,
-        @Nullable Input<String> status,
-        @Nullable Input<String> statusMessage) {
+        @Nullable Output<String> kmsKeyId,
+        @Nullable Output<String> lastAccessedDate,
+        Output<String> region,
+        @Nullable Output<String> status,
+        @Nullable Output<String> statusMessage) {
         this.kmsKeyId = kmsKeyId;
         this.lastAccessedDate = lastAccessedDate;
         this.region = Objects.requireNonNull(region, "expected parameter 'region' to be non-null");
@@ -83,11 +83,11 @@ public final class SecretReplicaGetArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private SecretReplicaGetArgs() {
-        this.kmsKeyId = Input.empty();
-        this.lastAccessedDate = Input.empty();
-        this.region = Input.empty();
-        this.status = Input.empty();
-        this.statusMessage = Input.empty();
+        this.kmsKeyId = Output.empty();
+        this.lastAccessedDate = Output.empty();
+        this.region = Output.empty();
+        this.status = Output.empty();
+        this.statusMessage = Output.empty();
     }
 
     public static Builder builder() {
@@ -99,11 +99,11 @@ public final class SecretReplicaGetArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private @Nullable Input<String> kmsKeyId;
-        private @Nullable Input<String> lastAccessedDate;
-        private Input<String> region;
-        private @Nullable Input<String> status;
-        private @Nullable Input<String> statusMessage;
+        private @Nullable Output<String> kmsKeyId;
+        private @Nullable Output<String> lastAccessedDate;
+        private Output<String> region;
+        private @Nullable Output<String> status;
+        private @Nullable Output<String> statusMessage;
 
         public Builder() {
     	      // Empty
@@ -118,53 +118,53 @@ public final class SecretReplicaGetArgs extends io.pulumi.resources.ResourceArgs
     	      this.statusMessage = defaults.statusMessage;
         }
 
-        public Builder kmsKeyId(@Nullable Input<String> kmsKeyId) {
+        public Builder kmsKeyId(@Nullable Output<String> kmsKeyId) {
             this.kmsKeyId = kmsKeyId;
             return this;
         }
 
         public Builder kmsKeyId(@Nullable String kmsKeyId) {
-            this.kmsKeyId = Input.ofNullable(kmsKeyId);
+            this.kmsKeyId = Output.ofNullable(kmsKeyId);
             return this;
         }
 
-        public Builder lastAccessedDate(@Nullable Input<String> lastAccessedDate) {
+        public Builder lastAccessedDate(@Nullable Output<String> lastAccessedDate) {
             this.lastAccessedDate = lastAccessedDate;
             return this;
         }
 
         public Builder lastAccessedDate(@Nullable String lastAccessedDate) {
-            this.lastAccessedDate = Input.ofNullable(lastAccessedDate);
+            this.lastAccessedDate = Output.ofNullable(lastAccessedDate);
             return this;
         }
 
-        public Builder region(Input<String> region) {
+        public Builder region(Output<String> region) {
             this.region = Objects.requireNonNull(region);
             return this;
         }
 
         public Builder region(String region) {
-            this.region = Input.of(Objects.requireNonNull(region));
+            this.region = Output.of(Objects.requireNonNull(region));
             return this;
         }
 
-        public Builder status(@Nullable Input<String> status) {
+        public Builder status(@Nullable Output<String> status) {
             this.status = status;
             return this;
         }
 
         public Builder status(@Nullable String status) {
-            this.status = Input.ofNullable(status);
+            this.status = Output.ofNullable(status);
             return this;
         }
 
-        public Builder statusMessage(@Nullable Input<String> statusMessage) {
+        public Builder statusMessage(@Nullable Output<String> statusMessage) {
             this.statusMessage = statusMessage;
             return this;
         }
 
         public Builder statusMessage(@Nullable String statusMessage) {
-            this.statusMessage = Input.ofNullable(statusMessage);
+            this.statusMessage = Output.ofNullable(statusMessage);
             return this;
         }
         public SecretReplicaGetArgs build() {

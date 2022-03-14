@@ -6,7 +6,7 @@ package io.pulumi.awsnative.appflow;
 import io.pulumi.awsnative.appflow.enums.ConnectorProfileConnectionMode;
 import io.pulumi.awsnative.appflow.enums.ConnectorProfileConnectorType;
 import io.pulumi.awsnative.appflow.inputs.ConnectorProfileConfigArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -22,9 +22,9 @@ public final class ConnectorProfileArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="connectionMode", required=true)
-      private final Input<ConnectorProfileConnectionMode> connectionMode;
+      private final Output<ConnectorProfileConnectionMode> connectionMode;
 
-    public Input<ConnectorProfileConnectionMode> getConnectionMode() {
+    public Output<ConnectorProfileConnectionMode> getConnectionMode() {
         return this.connectionMode;
     }
 
@@ -33,10 +33,10 @@ public final class ConnectorProfileArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="connectorProfileConfig")
-      private final @Nullable Input<ConnectorProfileConfigArgs> connectorProfileConfig;
+      private final @Nullable Output<ConnectorProfileConfigArgs> connectorProfileConfig;
 
-    public Input<ConnectorProfileConfigArgs> getConnectorProfileConfig() {
-        return this.connectorProfileConfig == null ? Input.empty() : this.connectorProfileConfig;
+    public Output<ConnectorProfileConfigArgs> getConnectorProfileConfig() {
+        return this.connectorProfileConfig == null ? Output.empty() : this.connectorProfileConfig;
     }
 
     /**
@@ -44,10 +44,10 @@ public final class ConnectorProfileArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="connectorProfileName")
-      private final @Nullable Input<String> connectorProfileName;
+      private final @Nullable Output<String> connectorProfileName;
 
-    public Input<String> getConnectorProfileName() {
-        return this.connectorProfileName == null ? Input.empty() : this.connectorProfileName;
+    public Output<String> getConnectorProfileName() {
+        return this.connectorProfileName == null ? Output.empty() : this.connectorProfileName;
     }
 
     /**
@@ -55,9 +55,9 @@ public final class ConnectorProfileArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="connectorType", required=true)
-      private final Input<ConnectorProfileConnectorType> connectorType;
+      private final Output<ConnectorProfileConnectorType> connectorType;
 
-    public Input<ConnectorProfileConnectorType> getConnectorType() {
+    public Output<ConnectorProfileConnectorType> getConnectorType() {
         return this.connectorType;
     }
 
@@ -66,18 +66,18 @@ public final class ConnectorProfileArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="kMSArn")
-      private final @Nullable Input<String> kMSArn;
+      private final @Nullable Output<String> kMSArn;
 
-    public Input<String> getKMSArn() {
-        return this.kMSArn == null ? Input.empty() : this.kMSArn;
+    public Output<String> getKMSArn() {
+        return this.kMSArn == null ? Output.empty() : this.kMSArn;
     }
 
     public ConnectorProfileArgs(
-        Input<ConnectorProfileConnectionMode> connectionMode,
-        @Nullable Input<ConnectorProfileConfigArgs> connectorProfileConfig,
-        @Nullable Input<String> connectorProfileName,
-        Input<ConnectorProfileConnectorType> connectorType,
-        @Nullable Input<String> kMSArn) {
+        Output<ConnectorProfileConnectionMode> connectionMode,
+        @Nullable Output<ConnectorProfileConfigArgs> connectorProfileConfig,
+        @Nullable Output<String> connectorProfileName,
+        Output<ConnectorProfileConnectorType> connectorType,
+        @Nullable Output<String> kMSArn) {
         this.connectionMode = Objects.requireNonNull(connectionMode, "expected parameter 'connectionMode' to be non-null");
         this.connectorProfileConfig = connectorProfileConfig;
         this.connectorProfileName = connectorProfileName;
@@ -86,11 +86,11 @@ public final class ConnectorProfileArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private ConnectorProfileArgs() {
-        this.connectionMode = Input.empty();
-        this.connectorProfileConfig = Input.empty();
-        this.connectorProfileName = Input.empty();
-        this.connectorType = Input.empty();
-        this.kMSArn = Input.empty();
+        this.connectionMode = Output.empty();
+        this.connectorProfileConfig = Output.empty();
+        this.connectorProfileName = Output.empty();
+        this.connectorType = Output.empty();
+        this.kMSArn = Output.empty();
     }
 
     public static Builder builder() {
@@ -102,11 +102,11 @@ public final class ConnectorProfileArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private Input<ConnectorProfileConnectionMode> connectionMode;
-        private @Nullable Input<ConnectorProfileConfigArgs> connectorProfileConfig;
-        private @Nullable Input<String> connectorProfileName;
-        private Input<ConnectorProfileConnectorType> connectorType;
-        private @Nullable Input<String> kMSArn;
+        private Output<ConnectorProfileConnectionMode> connectionMode;
+        private @Nullable Output<ConnectorProfileConfigArgs> connectorProfileConfig;
+        private @Nullable Output<String> connectorProfileName;
+        private Output<ConnectorProfileConnectorType> connectorType;
+        private @Nullable Output<String> kMSArn;
 
         public Builder() {
     	      // Empty
@@ -121,53 +121,53 @@ public final class ConnectorProfileArgs extends io.pulumi.resources.ResourceArgs
     	      this.kMSArn = defaults.kMSArn;
         }
 
-        public Builder connectionMode(Input<ConnectorProfileConnectionMode> connectionMode) {
+        public Builder connectionMode(Output<ConnectorProfileConnectionMode> connectionMode) {
             this.connectionMode = Objects.requireNonNull(connectionMode);
             return this;
         }
 
         public Builder connectionMode(ConnectorProfileConnectionMode connectionMode) {
-            this.connectionMode = Input.of(Objects.requireNonNull(connectionMode));
+            this.connectionMode = Output.of(Objects.requireNonNull(connectionMode));
             return this;
         }
 
-        public Builder connectorProfileConfig(@Nullable Input<ConnectorProfileConfigArgs> connectorProfileConfig) {
+        public Builder connectorProfileConfig(@Nullable Output<ConnectorProfileConfigArgs> connectorProfileConfig) {
             this.connectorProfileConfig = connectorProfileConfig;
             return this;
         }
 
         public Builder connectorProfileConfig(@Nullable ConnectorProfileConfigArgs connectorProfileConfig) {
-            this.connectorProfileConfig = Input.ofNullable(connectorProfileConfig);
+            this.connectorProfileConfig = Output.ofNullable(connectorProfileConfig);
             return this;
         }
 
-        public Builder connectorProfileName(@Nullable Input<String> connectorProfileName) {
+        public Builder connectorProfileName(@Nullable Output<String> connectorProfileName) {
             this.connectorProfileName = connectorProfileName;
             return this;
         }
 
         public Builder connectorProfileName(@Nullable String connectorProfileName) {
-            this.connectorProfileName = Input.ofNullable(connectorProfileName);
+            this.connectorProfileName = Output.ofNullable(connectorProfileName);
             return this;
         }
 
-        public Builder connectorType(Input<ConnectorProfileConnectorType> connectorType) {
+        public Builder connectorType(Output<ConnectorProfileConnectorType> connectorType) {
             this.connectorType = Objects.requireNonNull(connectorType);
             return this;
         }
 
         public Builder connectorType(ConnectorProfileConnectorType connectorType) {
-            this.connectorType = Input.of(Objects.requireNonNull(connectorType));
+            this.connectorType = Output.of(Objects.requireNonNull(connectorType));
             return this;
         }
 
-        public Builder kMSArn(@Nullable Input<String> kMSArn) {
+        public Builder kMSArn(@Nullable Output<String> kMSArn) {
             this.kMSArn = kMSArn;
             return this;
         }
 
         public Builder kMSArn(@Nullable String kMSArn) {
-            this.kMSArn = Input.ofNullable(kMSArn);
+            this.kMSArn = Output.ofNullable(kMSArn);
             return this;
         }
         public ConnectorProfileArgs build() {

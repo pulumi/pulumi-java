@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.accesscontextmanager_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.accesscontextmanager_v1.inputs.IngressFromArgs;
 import io.pulumi.googlenative.accesscontextmanager_v1.inputs.IngressToArgs;
@@ -24,10 +24,10 @@ public final class IngressPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ingressFrom")
-      private final @Nullable Input<IngressFromArgs> ingressFrom;
+      private final @Nullable Output<IngressFromArgs> ingressFrom;
 
-    public Input<IngressFromArgs> getIngressFrom() {
-        return this.ingressFrom == null ? Input.empty() : this.ingressFrom;
+    public Output<IngressFromArgs> getIngressFrom() {
+        return this.ingressFrom == null ? Output.empty() : this.ingressFrom;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class IngressPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ingressTo")
-      private final @Nullable Input<IngressToArgs> ingressTo;
+      private final @Nullable Output<IngressToArgs> ingressTo;
 
-    public Input<IngressToArgs> getIngressTo() {
-        return this.ingressTo == null ? Input.empty() : this.ingressTo;
+    public Output<IngressToArgs> getIngressTo() {
+        return this.ingressTo == null ? Output.empty() : this.ingressTo;
     }
 
     public IngressPolicyArgs(
-        @Nullable Input<IngressFromArgs> ingressFrom,
-        @Nullable Input<IngressToArgs> ingressTo) {
+        @Nullable Output<IngressFromArgs> ingressFrom,
+        @Nullable Output<IngressToArgs> ingressTo) {
         this.ingressFrom = ingressFrom;
         this.ingressTo = ingressTo;
     }
 
     private IngressPolicyArgs() {
-        this.ingressFrom = Input.empty();
-        this.ingressTo = Input.empty();
+        this.ingressFrom = Output.empty();
+        this.ingressTo = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class IngressPolicyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<IngressFromArgs> ingressFrom;
-        private @Nullable Input<IngressToArgs> ingressTo;
+        private @Nullable Output<IngressFromArgs> ingressFrom;
+        private @Nullable Output<IngressToArgs> ingressTo;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class IngressPolicyArgs extends io.pulumi.resources.ResourceArgs {
     	      this.ingressTo = defaults.ingressTo;
         }
 
-        public Builder ingressFrom(@Nullable Input<IngressFromArgs> ingressFrom) {
+        public Builder ingressFrom(@Nullable Output<IngressFromArgs> ingressFrom) {
             this.ingressFrom = ingressFrom;
             return this;
         }
 
         public Builder ingressFrom(@Nullable IngressFromArgs ingressFrom) {
-            this.ingressFrom = Input.ofNullable(ingressFrom);
+            this.ingressFrom = Output.ofNullable(ingressFrom);
             return this;
         }
 
-        public Builder ingressTo(@Nullable Input<IngressToArgs> ingressTo) {
+        public Builder ingressTo(@Nullable Output<IngressToArgs> ingressTo) {
             this.ingressTo = ingressTo;
             return this;
         }
 
         public Builder ingressTo(@Nullable IngressToArgs ingressTo) {
-            this.ingressTo = Input.ofNullable(ingressTo);
+            this.ingressTo = Output.ofNullable(ingressTo);
             return this;
         }
         public IngressPolicyArgs build() {

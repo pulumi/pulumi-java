@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datafactory.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class DistcpSettingsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="distcpOptions")
-      private final @Nullable Input<Object> distcpOptions;
+      private final @Nullable Output<Object> distcpOptions;
 
-    public Input<Object> getDistcpOptions() {
-        return this.distcpOptions == null ? Input.empty() : this.distcpOptions;
+    public Output<Object> getDistcpOptions() {
+        return this.distcpOptions == null ? Output.empty() : this.distcpOptions;
     }
 
     /**
@@ -34,9 +34,9 @@ public final class DistcpSettingsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceManagerEndpoint", required=true)
-      private final Input<Object> resourceManagerEndpoint;
+      private final Output<Object> resourceManagerEndpoint;
 
-    public Input<Object> getResourceManagerEndpoint() {
+    public Output<Object> getResourceManagerEndpoint() {
         return this.resourceManagerEndpoint;
     }
 
@@ -45,25 +45,25 @@ public final class DistcpSettingsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tempScriptPath", required=true)
-      private final Input<Object> tempScriptPath;
+      private final Output<Object> tempScriptPath;
 
-    public Input<Object> getTempScriptPath() {
+    public Output<Object> getTempScriptPath() {
         return this.tempScriptPath;
     }
 
     public DistcpSettingsArgs(
-        @Nullable Input<Object> distcpOptions,
-        Input<Object> resourceManagerEndpoint,
-        Input<Object> tempScriptPath) {
+        @Nullable Output<Object> distcpOptions,
+        Output<Object> resourceManagerEndpoint,
+        Output<Object> tempScriptPath) {
         this.distcpOptions = distcpOptions;
         this.resourceManagerEndpoint = Objects.requireNonNull(resourceManagerEndpoint, "expected parameter 'resourceManagerEndpoint' to be non-null");
         this.tempScriptPath = Objects.requireNonNull(tempScriptPath, "expected parameter 'tempScriptPath' to be non-null");
     }
 
     private DistcpSettingsArgs() {
-        this.distcpOptions = Input.empty();
-        this.resourceManagerEndpoint = Input.empty();
-        this.tempScriptPath = Input.empty();
+        this.distcpOptions = Output.empty();
+        this.resourceManagerEndpoint = Output.empty();
+        this.tempScriptPath = Output.empty();
     }
 
     public static Builder builder() {
@@ -75,9 +75,9 @@ public final class DistcpSettingsArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Object> distcpOptions;
-        private Input<Object> resourceManagerEndpoint;
-        private Input<Object> tempScriptPath;
+        private @Nullable Output<Object> distcpOptions;
+        private Output<Object> resourceManagerEndpoint;
+        private Output<Object> tempScriptPath;
 
         public Builder() {
     	      // Empty
@@ -90,33 +90,33 @@ public final class DistcpSettingsArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tempScriptPath = defaults.tempScriptPath;
         }
 
-        public Builder distcpOptions(@Nullable Input<Object> distcpOptions) {
+        public Builder distcpOptions(@Nullable Output<Object> distcpOptions) {
             this.distcpOptions = distcpOptions;
             return this;
         }
 
         public Builder distcpOptions(@Nullable Object distcpOptions) {
-            this.distcpOptions = Input.ofNullable(distcpOptions);
+            this.distcpOptions = Output.ofNullable(distcpOptions);
             return this;
         }
 
-        public Builder resourceManagerEndpoint(Input<Object> resourceManagerEndpoint) {
+        public Builder resourceManagerEndpoint(Output<Object> resourceManagerEndpoint) {
             this.resourceManagerEndpoint = Objects.requireNonNull(resourceManagerEndpoint);
             return this;
         }
 
         public Builder resourceManagerEndpoint(Object resourceManagerEndpoint) {
-            this.resourceManagerEndpoint = Input.of(Objects.requireNonNull(resourceManagerEndpoint));
+            this.resourceManagerEndpoint = Output.of(Objects.requireNonNull(resourceManagerEndpoint));
             return this;
         }
 
-        public Builder tempScriptPath(Input<Object> tempScriptPath) {
+        public Builder tempScriptPath(Output<Object> tempScriptPath) {
             this.tempScriptPath = Objects.requireNonNull(tempScriptPath);
             return this;
         }
 
         public Builder tempScriptPath(Object tempScriptPath) {
-            this.tempScriptPath = Input.of(Objects.requireNonNull(tempScriptPath));
+            this.tempScriptPath = Output.of(Objects.requireNonNull(tempScriptPath));
             return this;
         }
         public DistcpSettingsArgs build() {

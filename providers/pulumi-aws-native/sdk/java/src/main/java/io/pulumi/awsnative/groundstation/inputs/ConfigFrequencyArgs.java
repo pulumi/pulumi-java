@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.groundstation.inputs;
 
 import io.pulumi.awsnative.groundstation.enums.ConfigFrequencyUnits;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.util.Objects;
@@ -16,29 +16,29 @@ public final class ConfigFrequencyArgs extends io.pulumi.resources.ResourceArgs 
     public static final ConfigFrequencyArgs Empty = new ConfigFrequencyArgs();
 
     @InputImport(name="units")
-      private final @Nullable Input<ConfigFrequencyUnits> units;
+      private final @Nullable Output<ConfigFrequencyUnits> units;
 
-    public Input<ConfigFrequencyUnits> getUnits() {
-        return this.units == null ? Input.empty() : this.units;
+    public Output<ConfigFrequencyUnits> getUnits() {
+        return this.units == null ? Output.empty() : this.units;
     }
 
     @InputImport(name="value")
-      private final @Nullable Input<Double> value;
+      private final @Nullable Output<Double> value;
 
-    public Input<Double> getValue() {
-        return this.value == null ? Input.empty() : this.value;
+    public Output<Double> getValue() {
+        return this.value == null ? Output.empty() : this.value;
     }
 
     public ConfigFrequencyArgs(
-        @Nullable Input<ConfigFrequencyUnits> units,
-        @Nullable Input<Double> value) {
+        @Nullable Output<ConfigFrequencyUnits> units,
+        @Nullable Output<Double> value) {
         this.units = units;
         this.value = value;
     }
 
     private ConfigFrequencyArgs() {
-        this.units = Input.empty();
-        this.value = Input.empty();
+        this.units = Output.empty();
+        this.value = Output.empty();
     }
 
     public static Builder builder() {
@@ -50,8 +50,8 @@ public final class ConfigFrequencyArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private @Nullable Input<ConfigFrequencyUnits> units;
-        private @Nullable Input<Double> value;
+        private @Nullable Output<ConfigFrequencyUnits> units;
+        private @Nullable Output<Double> value;
 
         public Builder() {
     	      // Empty
@@ -63,23 +63,23 @@ public final class ConfigFrequencyArgs extends io.pulumi.resources.ResourceArgs 
     	      this.value = defaults.value;
         }
 
-        public Builder units(@Nullable Input<ConfigFrequencyUnits> units) {
+        public Builder units(@Nullable Output<ConfigFrequencyUnits> units) {
             this.units = units;
             return this;
         }
 
         public Builder units(@Nullable ConfigFrequencyUnits units) {
-            this.units = Input.ofNullable(units);
+            this.units = Output.ofNullable(units);
             return this;
         }
 
-        public Builder value(@Nullable Input<Double> value) {
+        public Builder value(@Nullable Output<Double> value) {
             this.value = value;
             return this;
         }
 
         public Builder value(@Nullable Double value) {
-            this.value = Input.ofNullable(value);
+            this.value = Output.ofNullable(value);
             return this;
         }
         public ConfigFrequencyArgs build() {

@@ -6,7 +6,7 @@ package io.pulumi.awsnative.globalaccelerator;
 import io.pulumi.awsnative.globalaccelerator.enums.ListenerClientAffinity;
 import io.pulumi.awsnative.globalaccelerator.enums.ListenerProtocol;
 import io.pulumi.awsnative.globalaccelerator.inputs.ListenerPortRangeArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -23,9 +23,9 @@ public final class ListenerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="acceleratorArn", required=true)
-      private final Input<String> acceleratorArn;
+      private final Output<String> acceleratorArn;
 
-    public Input<String> getAcceleratorArn() {
+    public Output<String> getAcceleratorArn() {
         return this.acceleratorArn;
     }
 
@@ -34,16 +34,16 @@ public final class ListenerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="clientAffinity")
-      private final @Nullable Input<ListenerClientAffinity> clientAffinity;
+      private final @Nullable Output<ListenerClientAffinity> clientAffinity;
 
-    public Input<ListenerClientAffinity> getClientAffinity() {
-        return this.clientAffinity == null ? Input.empty() : this.clientAffinity;
+    public Output<ListenerClientAffinity> getClientAffinity() {
+        return this.clientAffinity == null ? Output.empty() : this.clientAffinity;
     }
 
     @InputImport(name="portRanges", required=true)
-      private final Input<List<ListenerPortRangeArgs>> portRanges;
+      private final Output<List<ListenerPortRangeArgs>> portRanges;
 
-    public Input<List<ListenerPortRangeArgs>> getPortRanges() {
+    public Output<List<ListenerPortRangeArgs>> getPortRanges() {
         return this.portRanges;
     }
 
@@ -52,17 +52,17 @@ public final class ListenerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="protocol", required=true)
-      private final Input<ListenerProtocol> protocol;
+      private final Output<ListenerProtocol> protocol;
 
-    public Input<ListenerProtocol> getProtocol() {
+    public Output<ListenerProtocol> getProtocol() {
         return this.protocol;
     }
 
     public ListenerArgs(
-        Input<String> acceleratorArn,
-        @Nullable Input<ListenerClientAffinity> clientAffinity,
-        Input<List<ListenerPortRangeArgs>> portRanges,
-        Input<ListenerProtocol> protocol) {
+        Output<String> acceleratorArn,
+        @Nullable Output<ListenerClientAffinity> clientAffinity,
+        Output<List<ListenerPortRangeArgs>> portRanges,
+        Output<ListenerProtocol> protocol) {
         this.acceleratorArn = Objects.requireNonNull(acceleratorArn, "expected parameter 'acceleratorArn' to be non-null");
         this.clientAffinity = clientAffinity;
         this.portRanges = Objects.requireNonNull(portRanges, "expected parameter 'portRanges' to be non-null");
@@ -70,10 +70,10 @@ public final class ListenerArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ListenerArgs() {
-        this.acceleratorArn = Input.empty();
-        this.clientAffinity = Input.empty();
-        this.portRanges = Input.empty();
-        this.protocol = Input.empty();
+        this.acceleratorArn = Output.empty();
+        this.clientAffinity = Output.empty();
+        this.portRanges = Output.empty();
+        this.protocol = Output.empty();
     }
 
     public static Builder builder() {
@@ -85,10 +85,10 @@ public final class ListenerArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> acceleratorArn;
-        private @Nullable Input<ListenerClientAffinity> clientAffinity;
-        private Input<List<ListenerPortRangeArgs>> portRanges;
-        private Input<ListenerProtocol> protocol;
+        private Output<String> acceleratorArn;
+        private @Nullable Output<ListenerClientAffinity> clientAffinity;
+        private Output<List<ListenerPortRangeArgs>> portRanges;
+        private Output<ListenerProtocol> protocol;
 
         public Builder() {
     	      // Empty
@@ -102,43 +102,43 @@ public final class ListenerArgs extends io.pulumi.resources.ResourceArgs {
     	      this.protocol = defaults.protocol;
         }
 
-        public Builder acceleratorArn(Input<String> acceleratorArn) {
+        public Builder acceleratorArn(Output<String> acceleratorArn) {
             this.acceleratorArn = Objects.requireNonNull(acceleratorArn);
             return this;
         }
 
         public Builder acceleratorArn(String acceleratorArn) {
-            this.acceleratorArn = Input.of(Objects.requireNonNull(acceleratorArn));
+            this.acceleratorArn = Output.of(Objects.requireNonNull(acceleratorArn));
             return this;
         }
 
-        public Builder clientAffinity(@Nullable Input<ListenerClientAffinity> clientAffinity) {
+        public Builder clientAffinity(@Nullable Output<ListenerClientAffinity> clientAffinity) {
             this.clientAffinity = clientAffinity;
             return this;
         }
 
         public Builder clientAffinity(@Nullable ListenerClientAffinity clientAffinity) {
-            this.clientAffinity = Input.ofNullable(clientAffinity);
+            this.clientAffinity = Output.ofNullable(clientAffinity);
             return this;
         }
 
-        public Builder portRanges(Input<List<ListenerPortRangeArgs>> portRanges) {
+        public Builder portRanges(Output<List<ListenerPortRangeArgs>> portRanges) {
             this.portRanges = Objects.requireNonNull(portRanges);
             return this;
         }
 
         public Builder portRanges(List<ListenerPortRangeArgs> portRanges) {
-            this.portRanges = Input.of(Objects.requireNonNull(portRanges));
+            this.portRanges = Output.of(Objects.requireNonNull(portRanges));
             return this;
         }
 
-        public Builder protocol(Input<ListenerProtocol> protocol) {
+        public Builder protocol(Output<ListenerProtocol> protocol) {
             this.protocol = Objects.requireNonNull(protocol);
             return this;
         }
 
         public Builder protocol(ListenerProtocol protocol) {
-            this.protocol = Input.of(Objects.requireNonNull(protocol));
+            this.protocol = Output.of(Objects.requireNonNull(protocol));
             return this;
         }
         public ListenerArgs build() {

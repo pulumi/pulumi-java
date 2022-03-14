@@ -5,7 +5,7 @@ package io.pulumi.azurenative.devtestlab.inputs;
 
 import io.pulumi.azurenative.devtestlab.enums.EnableStatus;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -26,10 +26,10 @@ public final class NotificationSettingsArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="emailRecipient")
-      private final @Nullable Input<String> emailRecipient;
+      private final @Nullable Output<String> emailRecipient;
 
-    public Input<String> getEmailRecipient() {
-        return this.emailRecipient == null ? Input.empty() : this.emailRecipient;
+    public Output<String> getEmailRecipient() {
+        return this.emailRecipient == null ? Output.empty() : this.emailRecipient;
     }
 
     /**
@@ -37,10 +37,10 @@ public final class NotificationSettingsArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="notificationLocale")
-      private final @Nullable Input<String> notificationLocale;
+      private final @Nullable Output<String> notificationLocale;
 
-    public Input<String> getNotificationLocale() {
-        return this.notificationLocale == null ? Input.empty() : this.notificationLocale;
+    public Output<String> getNotificationLocale() {
+        return this.notificationLocale == null ? Output.empty() : this.notificationLocale;
     }
 
     /**
@@ -48,10 +48,10 @@ public final class NotificationSettingsArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="status")
-      private final @Nullable Input<Either<String,EnableStatus>> status;
+      private final @Nullable Output<Either<String,EnableStatus>> status;
 
-    public Input<Either<String,EnableStatus>> getStatus() {
-        return this.status == null ? Input.empty() : this.status;
+    public Output<Either<String,EnableStatus>> getStatus() {
+        return this.status == null ? Output.empty() : this.status;
     }
 
     /**
@@ -59,10 +59,10 @@ public final class NotificationSettingsArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="timeInMinutes")
-      private final @Nullable Input<Integer> timeInMinutes;
+      private final @Nullable Output<Integer> timeInMinutes;
 
-    public Input<Integer> getTimeInMinutes() {
-        return this.timeInMinutes == null ? Input.empty() : this.timeInMinutes;
+    public Output<Integer> getTimeInMinutes() {
+        return this.timeInMinutes == null ? Output.empty() : this.timeInMinutes;
     }
 
     /**
@@ -70,31 +70,31 @@ public final class NotificationSettingsArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="webhookUrl")
-      private final @Nullable Input<String> webhookUrl;
+      private final @Nullable Output<String> webhookUrl;
 
-    public Input<String> getWebhookUrl() {
-        return this.webhookUrl == null ? Input.empty() : this.webhookUrl;
+    public Output<String> getWebhookUrl() {
+        return this.webhookUrl == null ? Output.empty() : this.webhookUrl;
     }
 
     public NotificationSettingsArgs(
-        @Nullable Input<String> emailRecipient,
-        @Nullable Input<String> notificationLocale,
-        @Nullable Input<Either<String,EnableStatus>> status,
-        @Nullable Input<Integer> timeInMinutes,
-        @Nullable Input<String> webhookUrl) {
+        @Nullable Output<String> emailRecipient,
+        @Nullable Output<String> notificationLocale,
+        @Nullable Output<Either<String,EnableStatus>> status,
+        @Nullable Output<Integer> timeInMinutes,
+        @Nullable Output<String> webhookUrl) {
         this.emailRecipient = emailRecipient;
         this.notificationLocale = notificationLocale;
-        this.status = status == null ? Input.ofLeft("Disabled") : status;
+        this.status = status == null ? Output.ofLeft("Disabled") : status;
         this.timeInMinutes = timeInMinutes;
         this.webhookUrl = webhookUrl;
     }
 
     private NotificationSettingsArgs() {
-        this.emailRecipient = Input.empty();
-        this.notificationLocale = Input.empty();
-        this.status = Input.empty();
-        this.timeInMinutes = Input.empty();
-        this.webhookUrl = Input.empty();
+        this.emailRecipient = Output.empty();
+        this.notificationLocale = Output.empty();
+        this.status = Output.empty();
+        this.timeInMinutes = Output.empty();
+        this.webhookUrl = Output.empty();
     }
 
     public static Builder builder() {
@@ -106,11 +106,11 @@ public final class NotificationSettingsArgs extends io.pulumi.resources.Resource
     }
 
     public static final class Builder {
-        private @Nullable Input<String> emailRecipient;
-        private @Nullable Input<String> notificationLocale;
-        private @Nullable Input<Either<String,EnableStatus>> status;
-        private @Nullable Input<Integer> timeInMinutes;
-        private @Nullable Input<String> webhookUrl;
+        private @Nullable Output<String> emailRecipient;
+        private @Nullable Output<String> notificationLocale;
+        private @Nullable Output<Either<String,EnableStatus>> status;
+        private @Nullable Output<Integer> timeInMinutes;
+        private @Nullable Output<String> webhookUrl;
 
         public Builder() {
     	      // Empty
@@ -125,53 +125,53 @@ public final class NotificationSettingsArgs extends io.pulumi.resources.Resource
     	      this.webhookUrl = defaults.webhookUrl;
         }
 
-        public Builder emailRecipient(@Nullable Input<String> emailRecipient) {
+        public Builder emailRecipient(@Nullable Output<String> emailRecipient) {
             this.emailRecipient = emailRecipient;
             return this;
         }
 
         public Builder emailRecipient(@Nullable String emailRecipient) {
-            this.emailRecipient = Input.ofNullable(emailRecipient);
+            this.emailRecipient = Output.ofNullable(emailRecipient);
             return this;
         }
 
-        public Builder notificationLocale(@Nullable Input<String> notificationLocale) {
+        public Builder notificationLocale(@Nullable Output<String> notificationLocale) {
             this.notificationLocale = notificationLocale;
             return this;
         }
 
         public Builder notificationLocale(@Nullable String notificationLocale) {
-            this.notificationLocale = Input.ofNullable(notificationLocale);
+            this.notificationLocale = Output.ofNullable(notificationLocale);
             return this;
         }
 
-        public Builder status(@Nullable Input<Either<String,EnableStatus>> status) {
+        public Builder status(@Nullable Output<Either<String,EnableStatus>> status) {
             this.status = status;
             return this;
         }
 
         public Builder status(@Nullable Either<String,EnableStatus> status) {
-            this.status = Input.ofNullable(status);
+            this.status = Output.ofNullable(status);
             return this;
         }
 
-        public Builder timeInMinutes(@Nullable Input<Integer> timeInMinutes) {
+        public Builder timeInMinutes(@Nullable Output<Integer> timeInMinutes) {
             this.timeInMinutes = timeInMinutes;
             return this;
         }
 
         public Builder timeInMinutes(@Nullable Integer timeInMinutes) {
-            this.timeInMinutes = Input.ofNullable(timeInMinutes);
+            this.timeInMinutes = Output.ofNullable(timeInMinutes);
             return this;
         }
 
-        public Builder webhookUrl(@Nullable Input<String> webhookUrl) {
+        public Builder webhookUrl(@Nullable Output<String> webhookUrl) {
             this.webhookUrl = webhookUrl;
             return this;
         }
 
         public Builder webhookUrl(@Nullable String webhookUrl) {
-            this.webhookUrl = Input.ofNullable(webhookUrl);
+            this.webhookUrl = Output.ofNullable(webhookUrl);
             return this;
         }
         public NotificationSettingsArgs build() {

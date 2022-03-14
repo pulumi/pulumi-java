@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.servicemanagement_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class SystemParameterArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="httpHeader")
-      private final @Nullable Input<String> httpHeader;
+      private final @Nullable Output<String> httpHeader;
 
-    public Input<String> getHttpHeader() {
-        return this.httpHeader == null ? Input.empty() : this.httpHeader;
+    public Output<String> getHttpHeader() {
+        return this.httpHeader == null ? Output.empty() : this.httpHeader;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class SystemParameterArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -45,25 +45,25 @@ public final class SystemParameterArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="urlQueryParameter")
-      private final @Nullable Input<String> urlQueryParameter;
+      private final @Nullable Output<String> urlQueryParameter;
 
-    public Input<String> getUrlQueryParameter() {
-        return this.urlQueryParameter == null ? Input.empty() : this.urlQueryParameter;
+    public Output<String> getUrlQueryParameter() {
+        return this.urlQueryParameter == null ? Output.empty() : this.urlQueryParameter;
     }
 
     public SystemParameterArgs(
-        @Nullable Input<String> httpHeader,
-        @Nullable Input<String> name,
-        @Nullable Input<String> urlQueryParameter) {
+        @Nullable Output<String> httpHeader,
+        @Nullable Output<String> name,
+        @Nullable Output<String> urlQueryParameter) {
         this.httpHeader = httpHeader;
         this.name = name;
         this.urlQueryParameter = urlQueryParameter;
     }
 
     private SystemParameterArgs() {
-        this.httpHeader = Input.empty();
-        this.name = Input.empty();
-        this.urlQueryParameter = Input.empty();
+        this.httpHeader = Output.empty();
+        this.name = Output.empty();
+        this.urlQueryParameter = Output.empty();
     }
 
     public static Builder builder() {
@@ -75,9 +75,9 @@ public final class SystemParameterArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private @Nullable Input<String> httpHeader;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> urlQueryParameter;
+        private @Nullable Output<String> httpHeader;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> urlQueryParameter;
 
         public Builder() {
     	      // Empty
@@ -90,33 +90,33 @@ public final class SystemParameterArgs extends io.pulumi.resources.ResourceArgs 
     	      this.urlQueryParameter = defaults.urlQueryParameter;
         }
 
-        public Builder httpHeader(@Nullable Input<String> httpHeader) {
+        public Builder httpHeader(@Nullable Output<String> httpHeader) {
             this.httpHeader = httpHeader;
             return this;
         }
 
         public Builder httpHeader(@Nullable String httpHeader) {
-            this.httpHeader = Input.ofNullable(httpHeader);
+            this.httpHeader = Output.ofNullable(httpHeader);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder urlQueryParameter(@Nullable Input<String> urlQueryParameter) {
+        public Builder urlQueryParameter(@Nullable Output<String> urlQueryParameter) {
             this.urlQueryParameter = urlQueryParameter;
             return this;
         }
 
         public Builder urlQueryParameter(@Nullable String urlQueryParameter) {
-            this.urlQueryParameter = Input.ofNullable(urlQueryParameter);
+            this.urlQueryParameter = Output.ofNullable(urlQueryParameter);
             return this;
         }
         public SystemParameterArgs build() {

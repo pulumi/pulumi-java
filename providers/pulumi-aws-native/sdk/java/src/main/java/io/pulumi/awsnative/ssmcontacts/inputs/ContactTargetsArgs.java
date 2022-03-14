@@ -5,7 +5,7 @@ package io.pulumi.awsnative.ssmcontacts.inputs;
 
 import io.pulumi.awsnative.ssmcontacts.inputs.ContactChannelTargetInfoArgs;
 import io.pulumi.awsnative.ssmcontacts.inputs.ContactTargetInfoArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,29 +20,29 @@ public final class ContactTargetsArgs extends io.pulumi.resources.ResourceArgs {
     public static final ContactTargetsArgs Empty = new ContactTargetsArgs();
 
     @InputImport(name="channelTargetInfo")
-      private final @Nullable Input<ContactChannelTargetInfoArgs> channelTargetInfo;
+      private final @Nullable Output<ContactChannelTargetInfoArgs> channelTargetInfo;
 
-    public Input<ContactChannelTargetInfoArgs> getChannelTargetInfo() {
-        return this.channelTargetInfo == null ? Input.empty() : this.channelTargetInfo;
+    public Output<ContactChannelTargetInfoArgs> getChannelTargetInfo() {
+        return this.channelTargetInfo == null ? Output.empty() : this.channelTargetInfo;
     }
 
     @InputImport(name="contactTargetInfo")
-      private final @Nullable Input<ContactTargetInfoArgs> contactTargetInfo;
+      private final @Nullable Output<ContactTargetInfoArgs> contactTargetInfo;
 
-    public Input<ContactTargetInfoArgs> getContactTargetInfo() {
-        return this.contactTargetInfo == null ? Input.empty() : this.contactTargetInfo;
+    public Output<ContactTargetInfoArgs> getContactTargetInfo() {
+        return this.contactTargetInfo == null ? Output.empty() : this.contactTargetInfo;
     }
 
     public ContactTargetsArgs(
-        @Nullable Input<ContactChannelTargetInfoArgs> channelTargetInfo,
-        @Nullable Input<ContactTargetInfoArgs> contactTargetInfo) {
+        @Nullable Output<ContactChannelTargetInfoArgs> channelTargetInfo,
+        @Nullable Output<ContactTargetInfoArgs> contactTargetInfo) {
         this.channelTargetInfo = channelTargetInfo;
         this.contactTargetInfo = contactTargetInfo;
     }
 
     private ContactTargetsArgs() {
-        this.channelTargetInfo = Input.empty();
-        this.contactTargetInfo = Input.empty();
+        this.channelTargetInfo = Output.empty();
+        this.contactTargetInfo = Output.empty();
     }
 
     public static Builder builder() {
@@ -54,8 +54,8 @@ public final class ContactTargetsArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<ContactChannelTargetInfoArgs> channelTargetInfo;
-        private @Nullable Input<ContactTargetInfoArgs> contactTargetInfo;
+        private @Nullable Output<ContactChannelTargetInfoArgs> channelTargetInfo;
+        private @Nullable Output<ContactTargetInfoArgs> contactTargetInfo;
 
         public Builder() {
     	      // Empty
@@ -67,23 +67,23 @@ public final class ContactTargetsArgs extends io.pulumi.resources.ResourceArgs {
     	      this.contactTargetInfo = defaults.contactTargetInfo;
         }
 
-        public Builder channelTargetInfo(@Nullable Input<ContactChannelTargetInfoArgs> channelTargetInfo) {
+        public Builder channelTargetInfo(@Nullable Output<ContactChannelTargetInfoArgs> channelTargetInfo) {
             this.channelTargetInfo = channelTargetInfo;
             return this;
         }
 
         public Builder channelTargetInfo(@Nullable ContactChannelTargetInfoArgs channelTargetInfo) {
-            this.channelTargetInfo = Input.ofNullable(channelTargetInfo);
+            this.channelTargetInfo = Output.ofNullable(channelTargetInfo);
             return this;
         }
 
-        public Builder contactTargetInfo(@Nullable Input<ContactTargetInfoArgs> contactTargetInfo) {
+        public Builder contactTargetInfo(@Nullable Output<ContactTargetInfoArgs> contactTargetInfo) {
             this.contactTargetInfo = contactTargetInfo;
             return this;
         }
 
         public Builder contactTargetInfo(@Nullable ContactTargetInfoArgs contactTargetInfo) {
-            this.contactTargetInfo = Input.ofNullable(contactTargetInfo);
+            this.contactTargetInfo = Output.ofNullable(contactTargetInfo);
             return this;
         }
         public ContactTargetsArgs build() {

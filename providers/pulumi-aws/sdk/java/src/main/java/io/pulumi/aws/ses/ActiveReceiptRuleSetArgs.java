@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.ses;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -18,18 +18,18 @@ public final class ActiveReceiptRuleSetArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="ruleSetName", required=true)
-      private final Input<String> ruleSetName;
+      private final Output<String> ruleSetName;
 
-    public Input<String> getRuleSetName() {
+    public Output<String> getRuleSetName() {
         return this.ruleSetName;
     }
 
-    public ActiveReceiptRuleSetArgs(Input<String> ruleSetName) {
+    public ActiveReceiptRuleSetArgs(Output<String> ruleSetName) {
         this.ruleSetName = Objects.requireNonNull(ruleSetName, "expected parameter 'ruleSetName' to be non-null");
     }
 
     private ActiveReceiptRuleSetArgs() {
-        this.ruleSetName = Input.empty();
+        this.ruleSetName = Output.empty();
     }
 
     public static Builder builder() {
@@ -41,7 +41,7 @@ public final class ActiveReceiptRuleSetArgs extends io.pulumi.resources.Resource
     }
 
     public static final class Builder {
-        private Input<String> ruleSetName;
+        private Output<String> ruleSetName;
 
         public Builder() {
     	      // Empty
@@ -52,13 +52,13 @@ public final class ActiveReceiptRuleSetArgs extends io.pulumi.resources.Resource
     	      this.ruleSetName = defaults.ruleSetName;
         }
 
-        public Builder ruleSetName(Input<String> ruleSetName) {
+        public Builder ruleSetName(Output<String> ruleSetName) {
             this.ruleSetName = Objects.requireNonNull(ruleSetName);
             return this;
         }
 
         public Builder ruleSetName(String ruleSetName) {
-            this.ruleSetName = Input.of(Objects.requireNonNull(ruleSetName));
+            this.ruleSetName = Output.of(Objects.requireNonNull(ruleSetName));
             return this;
         }
         public ActiveReceiptRuleSetArgs build() {

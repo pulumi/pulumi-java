@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.cloudfront.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -14,29 +14,29 @@ public final class FunctionConfigArgs extends io.pulumi.resources.ResourceArgs {
     public static final FunctionConfigArgs Empty = new FunctionConfigArgs();
 
     @InputImport(name="comment", required=true)
-      private final Input<String> comment;
+      private final Output<String> comment;
 
-    public Input<String> getComment() {
+    public Output<String> getComment() {
         return this.comment;
     }
 
     @InputImport(name="runtime", required=true)
-      private final Input<String> runtime;
+      private final Output<String> runtime;
 
-    public Input<String> getRuntime() {
+    public Output<String> getRuntime() {
         return this.runtime;
     }
 
     public FunctionConfigArgs(
-        Input<String> comment,
-        Input<String> runtime) {
+        Output<String> comment,
+        Output<String> runtime) {
         this.comment = Objects.requireNonNull(comment, "expected parameter 'comment' to be non-null");
         this.runtime = Objects.requireNonNull(runtime, "expected parameter 'runtime' to be non-null");
     }
 
     private FunctionConfigArgs() {
-        this.comment = Input.empty();
-        this.runtime = Input.empty();
+        this.comment = Output.empty();
+        this.runtime = Output.empty();
     }
 
     public static Builder builder() {
@@ -48,8 +48,8 @@ public final class FunctionConfigArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> comment;
-        private Input<String> runtime;
+        private Output<String> comment;
+        private Output<String> runtime;
 
         public Builder() {
     	      // Empty
@@ -61,23 +61,23 @@ public final class FunctionConfigArgs extends io.pulumi.resources.ResourceArgs {
     	      this.runtime = defaults.runtime;
         }
 
-        public Builder comment(Input<String> comment) {
+        public Builder comment(Output<String> comment) {
             this.comment = Objects.requireNonNull(comment);
             return this;
         }
 
         public Builder comment(String comment) {
-            this.comment = Input.of(Objects.requireNonNull(comment));
+            this.comment = Output.of(Objects.requireNonNull(comment));
             return this;
         }
 
-        public Builder runtime(Input<String> runtime) {
+        public Builder runtime(Output<String> runtime) {
             this.runtime = Objects.requireNonNull(runtime);
             return this;
         }
 
         public Builder runtime(String runtime) {
-            this.runtime = Input.of(Objects.requireNonNull(runtime));
+            this.runtime = Output.of(Objects.requireNonNull(runtime));
             return this;
         }
         public FunctionConfigArgs build() {

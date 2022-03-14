@@ -6,7 +6,7 @@ package io.pulumi.azurenative.automation;
 import io.pulumi.azurenative.automation.enums.SourceType;
 import io.pulumi.azurenative.automation.inputs.SourceControlSecurityTokenPropertiesArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -23,10 +23,10 @@ public final class SourceControlArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="autoSync")
-      private final @Nullable Input<Boolean> autoSync;
+      private final @Nullable Output<Boolean> autoSync;
 
-    public Input<Boolean> getAutoSync() {
-        return this.autoSync == null ? Input.empty() : this.autoSync;
+    public Output<Boolean> getAutoSync() {
+        return this.autoSync == null ? Output.empty() : this.autoSync;
     }
 
     /**
@@ -34,9 +34,9 @@ public final class SourceControlArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="automationAccountName", required=true)
-      private final Input<String> automationAccountName;
+      private final Output<String> automationAccountName;
 
-    public Input<String> getAutomationAccountName() {
+    public Output<String> getAutomationAccountName() {
         return this.automationAccountName;
     }
 
@@ -45,10 +45,10 @@ public final class SourceControlArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="branch")
-      private final @Nullable Input<String> branch;
+      private final @Nullable Output<String> branch;
 
-    public Input<String> getBranch() {
-        return this.branch == null ? Input.empty() : this.branch;
+    public Output<String> getBranch() {
+        return this.branch == null ? Output.empty() : this.branch;
     }
 
     /**
@@ -56,10 +56,10 @@ public final class SourceControlArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -67,10 +67,10 @@ public final class SourceControlArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="folderPath")
-      private final @Nullable Input<String> folderPath;
+      private final @Nullable Output<String> folderPath;
 
-    public Input<String> getFolderPath() {
-        return this.folderPath == null ? Input.empty() : this.folderPath;
+    public Output<String> getFolderPath() {
+        return this.folderPath == null ? Output.empty() : this.folderPath;
     }
 
     /**
@@ -78,10 +78,10 @@ public final class SourceControlArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="publishRunbook")
-      private final @Nullable Input<Boolean> publishRunbook;
+      private final @Nullable Output<Boolean> publishRunbook;
 
-    public Input<Boolean> getPublishRunbook() {
-        return this.publishRunbook == null ? Input.empty() : this.publishRunbook;
+    public Output<Boolean> getPublishRunbook() {
+        return this.publishRunbook == null ? Output.empty() : this.publishRunbook;
     }
 
     /**
@@ -89,10 +89,10 @@ public final class SourceControlArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="repoUrl")
-      private final @Nullable Input<String> repoUrl;
+      private final @Nullable Output<String> repoUrl;
 
-    public Input<String> getRepoUrl() {
-        return this.repoUrl == null ? Input.empty() : this.repoUrl;
+    public Output<String> getRepoUrl() {
+        return this.repoUrl == null ? Output.empty() : this.repoUrl;
     }
 
     /**
@@ -100,9 +100,9 @@ public final class SourceControlArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -111,10 +111,10 @@ public final class SourceControlArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="securityToken")
-      private final @Nullable Input<SourceControlSecurityTokenPropertiesArgs> securityToken;
+      private final @Nullable Output<SourceControlSecurityTokenPropertiesArgs> securityToken;
 
-    public Input<SourceControlSecurityTokenPropertiesArgs> getSecurityToken() {
-        return this.securityToken == null ? Input.empty() : this.securityToken;
+    public Output<SourceControlSecurityTokenPropertiesArgs> getSecurityToken() {
+        return this.securityToken == null ? Output.empty() : this.securityToken;
     }
 
     /**
@@ -122,10 +122,10 @@ public final class SourceControlArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sourceControlName")
-      private final @Nullable Input<String> sourceControlName;
+      private final @Nullable Output<String> sourceControlName;
 
-    public Input<String> getSourceControlName() {
-        return this.sourceControlName == null ? Input.empty() : this.sourceControlName;
+    public Output<String> getSourceControlName() {
+        return this.sourceControlName == null ? Output.empty() : this.sourceControlName;
     }
 
     /**
@@ -133,24 +133,24 @@ public final class SourceControlArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sourceType")
-      private final @Nullable Input<Either<String,SourceType>> sourceType;
+      private final @Nullable Output<Either<String,SourceType>> sourceType;
 
-    public Input<Either<String,SourceType>> getSourceType() {
-        return this.sourceType == null ? Input.empty() : this.sourceType;
+    public Output<Either<String,SourceType>> getSourceType() {
+        return this.sourceType == null ? Output.empty() : this.sourceType;
     }
 
     public SourceControlArgs(
-        @Nullable Input<Boolean> autoSync,
-        Input<String> automationAccountName,
-        @Nullable Input<String> branch,
-        @Nullable Input<String> description,
-        @Nullable Input<String> folderPath,
-        @Nullable Input<Boolean> publishRunbook,
-        @Nullable Input<String> repoUrl,
-        Input<String> resourceGroupName,
-        @Nullable Input<SourceControlSecurityTokenPropertiesArgs> securityToken,
-        @Nullable Input<String> sourceControlName,
-        @Nullable Input<Either<String,SourceType>> sourceType) {
+        @Nullable Output<Boolean> autoSync,
+        Output<String> automationAccountName,
+        @Nullable Output<String> branch,
+        @Nullable Output<String> description,
+        @Nullable Output<String> folderPath,
+        @Nullable Output<Boolean> publishRunbook,
+        @Nullable Output<String> repoUrl,
+        Output<String> resourceGroupName,
+        @Nullable Output<SourceControlSecurityTokenPropertiesArgs> securityToken,
+        @Nullable Output<String> sourceControlName,
+        @Nullable Output<Either<String,SourceType>> sourceType) {
         this.autoSync = autoSync;
         this.automationAccountName = Objects.requireNonNull(automationAccountName, "expected parameter 'automationAccountName' to be non-null");
         this.branch = branch;
@@ -165,17 +165,17 @@ public final class SourceControlArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private SourceControlArgs() {
-        this.autoSync = Input.empty();
-        this.automationAccountName = Input.empty();
-        this.branch = Input.empty();
-        this.description = Input.empty();
-        this.folderPath = Input.empty();
-        this.publishRunbook = Input.empty();
-        this.repoUrl = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.securityToken = Input.empty();
-        this.sourceControlName = Input.empty();
-        this.sourceType = Input.empty();
+        this.autoSync = Output.empty();
+        this.automationAccountName = Output.empty();
+        this.branch = Output.empty();
+        this.description = Output.empty();
+        this.folderPath = Output.empty();
+        this.publishRunbook = Output.empty();
+        this.repoUrl = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.securityToken = Output.empty();
+        this.sourceControlName = Output.empty();
+        this.sourceType = Output.empty();
     }
 
     public static Builder builder() {
@@ -187,17 +187,17 @@ public final class SourceControlArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> autoSync;
-        private Input<String> automationAccountName;
-        private @Nullable Input<String> branch;
-        private @Nullable Input<String> description;
-        private @Nullable Input<String> folderPath;
-        private @Nullable Input<Boolean> publishRunbook;
-        private @Nullable Input<String> repoUrl;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<SourceControlSecurityTokenPropertiesArgs> securityToken;
-        private @Nullable Input<String> sourceControlName;
-        private @Nullable Input<Either<String,SourceType>> sourceType;
+        private @Nullable Output<Boolean> autoSync;
+        private Output<String> automationAccountName;
+        private @Nullable Output<String> branch;
+        private @Nullable Output<String> description;
+        private @Nullable Output<String> folderPath;
+        private @Nullable Output<Boolean> publishRunbook;
+        private @Nullable Output<String> repoUrl;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<SourceControlSecurityTokenPropertiesArgs> securityToken;
+        private @Nullable Output<String> sourceControlName;
+        private @Nullable Output<Either<String,SourceType>> sourceType;
 
         public Builder() {
     	      // Empty
@@ -218,113 +218,113 @@ public final class SourceControlArgs extends io.pulumi.resources.ResourceArgs {
     	      this.sourceType = defaults.sourceType;
         }
 
-        public Builder autoSync(@Nullable Input<Boolean> autoSync) {
+        public Builder autoSync(@Nullable Output<Boolean> autoSync) {
             this.autoSync = autoSync;
             return this;
         }
 
         public Builder autoSync(@Nullable Boolean autoSync) {
-            this.autoSync = Input.ofNullable(autoSync);
+            this.autoSync = Output.ofNullable(autoSync);
             return this;
         }
 
-        public Builder automationAccountName(Input<String> automationAccountName) {
+        public Builder automationAccountName(Output<String> automationAccountName) {
             this.automationAccountName = Objects.requireNonNull(automationAccountName);
             return this;
         }
 
         public Builder automationAccountName(String automationAccountName) {
-            this.automationAccountName = Input.of(Objects.requireNonNull(automationAccountName));
+            this.automationAccountName = Output.of(Objects.requireNonNull(automationAccountName));
             return this;
         }
 
-        public Builder branch(@Nullable Input<String> branch) {
+        public Builder branch(@Nullable Output<String> branch) {
             this.branch = branch;
             return this;
         }
 
         public Builder branch(@Nullable String branch) {
-            this.branch = Input.ofNullable(branch);
+            this.branch = Output.ofNullable(branch);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder folderPath(@Nullable Input<String> folderPath) {
+        public Builder folderPath(@Nullable Output<String> folderPath) {
             this.folderPath = folderPath;
             return this;
         }
 
         public Builder folderPath(@Nullable String folderPath) {
-            this.folderPath = Input.ofNullable(folderPath);
+            this.folderPath = Output.ofNullable(folderPath);
             return this;
         }
 
-        public Builder publishRunbook(@Nullable Input<Boolean> publishRunbook) {
+        public Builder publishRunbook(@Nullable Output<Boolean> publishRunbook) {
             this.publishRunbook = publishRunbook;
             return this;
         }
 
         public Builder publishRunbook(@Nullable Boolean publishRunbook) {
-            this.publishRunbook = Input.ofNullable(publishRunbook);
+            this.publishRunbook = Output.ofNullable(publishRunbook);
             return this;
         }
 
-        public Builder repoUrl(@Nullable Input<String> repoUrl) {
+        public Builder repoUrl(@Nullable Output<String> repoUrl) {
             this.repoUrl = repoUrl;
             return this;
         }
 
         public Builder repoUrl(@Nullable String repoUrl) {
-            this.repoUrl = Input.ofNullable(repoUrl);
+            this.repoUrl = Output.ofNullable(repoUrl);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder securityToken(@Nullable Input<SourceControlSecurityTokenPropertiesArgs> securityToken) {
+        public Builder securityToken(@Nullable Output<SourceControlSecurityTokenPropertiesArgs> securityToken) {
             this.securityToken = securityToken;
             return this;
         }
 
         public Builder securityToken(@Nullable SourceControlSecurityTokenPropertiesArgs securityToken) {
-            this.securityToken = Input.ofNullable(securityToken);
+            this.securityToken = Output.ofNullable(securityToken);
             return this;
         }
 
-        public Builder sourceControlName(@Nullable Input<String> sourceControlName) {
+        public Builder sourceControlName(@Nullable Output<String> sourceControlName) {
             this.sourceControlName = sourceControlName;
             return this;
         }
 
         public Builder sourceControlName(@Nullable String sourceControlName) {
-            this.sourceControlName = Input.ofNullable(sourceControlName);
+            this.sourceControlName = Output.ofNullable(sourceControlName);
             return this;
         }
 
-        public Builder sourceType(@Nullable Input<Either<String,SourceType>> sourceType) {
+        public Builder sourceType(@Nullable Output<Either<String,SourceType>> sourceType) {
             this.sourceType = sourceType;
             return this;
         }
 
         public Builder sourceType(@Nullable Either<String,SourceType> sourceType) {
-            this.sourceType = Input.ofNullable(sourceType);
+            this.sourceType = Output.ofNullable(sourceType);
             return this;
         }
         public SourceControlArgs build() {

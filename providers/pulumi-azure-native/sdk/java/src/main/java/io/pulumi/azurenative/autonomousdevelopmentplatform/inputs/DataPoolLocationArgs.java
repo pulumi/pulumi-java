@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.autonomousdevelopmentplatform.inputs;
 
 import io.pulumi.azurenative.autonomousdevelopmentplatform.inputs.DataPoolEncryptionArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -24,10 +24,10 @@ public final class DataPoolLocationArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="encryption")
-      private final @Nullable Input<DataPoolEncryptionArgs> encryption;
+      private final @Nullable Output<DataPoolEncryptionArgs> encryption;
 
-    public Input<DataPoolEncryptionArgs> getEncryption() {
-        return this.encryption == null ? Input.empty() : this.encryption;
+    public Output<DataPoolEncryptionArgs> getEncryption() {
+        return this.encryption == null ? Output.empty() : this.encryption;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class DataPoolLocationArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="name", required=true)
-      private final Input<String> name;
+      private final Output<String> name;
 
-    public Input<String> getName() {
+    public Output<String> getName() {
         return this.name;
     }
 
     public DataPoolLocationArgs(
-        @Nullable Input<DataPoolEncryptionArgs> encryption,
-        Input<String> name) {
+        @Nullable Output<DataPoolEncryptionArgs> encryption,
+        Output<String> name) {
         this.encryption = encryption;
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
     }
 
     private DataPoolLocationArgs() {
-        this.encryption = Input.empty();
-        this.name = Input.empty();
+        this.encryption = Output.empty();
+        this.name = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class DataPoolLocationArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private @Nullable Input<DataPoolEncryptionArgs> encryption;
-        private Input<String> name;
+        private @Nullable Output<DataPoolEncryptionArgs> encryption;
+        private Output<String> name;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class DataPoolLocationArgs extends io.pulumi.resources.ResourceArgs
     	      this.name = defaults.name;
         }
 
-        public Builder encryption(@Nullable Input<DataPoolEncryptionArgs> encryption) {
+        public Builder encryption(@Nullable Output<DataPoolEncryptionArgs> encryption) {
             this.encryption = encryption;
             return this;
         }
 
         public Builder encryption(@Nullable DataPoolEncryptionArgs encryption) {
-            this.encryption = Input.ofNullable(encryption);
+            this.encryption = Output.ofNullable(encryption);
             return this;
         }
 
-        public Builder name(Input<String> name) {
+        public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(String name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
         public DataPoolLocationArgs build() {

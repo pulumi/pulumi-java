@@ -7,7 +7,6 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.wafregional.SqlInjectionMatchSetArgs;
 import io.pulumi.aws.wafregional.inputs.SqlInjectionMatchSetState;
 import io.pulumi.aws.wafregional.outputs.SqlInjectionMatchSetSqlInjectionMatchTuple;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -98,14 +97,14 @@ public class SqlInjectionMatchSet extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public SqlInjectionMatchSet(String name, @Nullable SqlInjectionMatchSetArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:wafregional/sqlInjectionMatchSet:SqlInjectionMatchSet", name, args == null ? SqlInjectionMatchSetArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws:wafregional/sqlInjectionMatchSet:SqlInjectionMatchSet", name, args == null ? SqlInjectionMatchSetArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private SqlInjectionMatchSet(String name, Input<String> id, @Nullable SqlInjectionMatchSetState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private SqlInjectionMatchSet(String name, Output<String> id, @Nullable SqlInjectionMatchSetState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws:wafregional/sqlInjectionMatchSet:SqlInjectionMatchSet", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -121,7 +120,7 @@ public class SqlInjectionMatchSet extends io.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static SqlInjectionMatchSet get(String name, Input<String> id, @Nullable SqlInjectionMatchSetState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static SqlInjectionMatchSet get(String name, Output<String> id, @Nullable SqlInjectionMatchSetState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new SqlInjectionMatchSet(name, id, state, options);
     }
 }

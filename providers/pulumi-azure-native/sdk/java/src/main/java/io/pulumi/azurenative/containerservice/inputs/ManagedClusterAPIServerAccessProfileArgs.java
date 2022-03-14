@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.containerservice.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -25,10 +25,10 @@ public final class ManagedClusterAPIServerAccessProfileArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="authorizedIPRanges")
-      private final @Nullable Input<List<String>> authorizedIPRanges;
+      private final @Nullable Output<List<String>> authorizedIPRanges;
 
-    public Input<List<String>> getAuthorizedIPRanges() {
-        return this.authorizedIPRanges == null ? Input.empty() : this.authorizedIPRanges;
+    public Output<List<String>> getAuthorizedIPRanges() {
+        return this.authorizedIPRanges == null ? Output.empty() : this.authorizedIPRanges;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class ManagedClusterAPIServerAccessProfileArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="enablePrivateCluster")
-      private final @Nullable Input<Boolean> enablePrivateCluster;
+      private final @Nullable Output<Boolean> enablePrivateCluster;
 
-    public Input<Boolean> getEnablePrivateCluster() {
-        return this.enablePrivateCluster == null ? Input.empty() : this.enablePrivateCluster;
+    public Output<Boolean> getEnablePrivateCluster() {
+        return this.enablePrivateCluster == null ? Output.empty() : this.enablePrivateCluster;
     }
 
     /**
@@ -47,25 +47,25 @@ public final class ManagedClusterAPIServerAccessProfileArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="privateDNSZone")
-      private final @Nullable Input<String> privateDNSZone;
+      private final @Nullable Output<String> privateDNSZone;
 
-    public Input<String> getPrivateDNSZone() {
-        return this.privateDNSZone == null ? Input.empty() : this.privateDNSZone;
+    public Output<String> getPrivateDNSZone() {
+        return this.privateDNSZone == null ? Output.empty() : this.privateDNSZone;
     }
 
     public ManagedClusterAPIServerAccessProfileArgs(
-        @Nullable Input<List<String>> authorizedIPRanges,
-        @Nullable Input<Boolean> enablePrivateCluster,
-        @Nullable Input<String> privateDNSZone) {
+        @Nullable Output<List<String>> authorizedIPRanges,
+        @Nullable Output<Boolean> enablePrivateCluster,
+        @Nullable Output<String> privateDNSZone) {
         this.authorizedIPRanges = authorizedIPRanges;
         this.enablePrivateCluster = enablePrivateCluster;
         this.privateDNSZone = privateDNSZone;
     }
 
     private ManagedClusterAPIServerAccessProfileArgs() {
-        this.authorizedIPRanges = Input.empty();
-        this.enablePrivateCluster = Input.empty();
-        this.privateDNSZone = Input.empty();
+        this.authorizedIPRanges = Output.empty();
+        this.enablePrivateCluster = Output.empty();
+        this.privateDNSZone = Output.empty();
     }
 
     public static Builder builder() {
@@ -77,9 +77,9 @@ public final class ManagedClusterAPIServerAccessProfileArgs extends io.pulumi.re
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> authorizedIPRanges;
-        private @Nullable Input<Boolean> enablePrivateCluster;
-        private @Nullable Input<String> privateDNSZone;
+        private @Nullable Output<List<String>> authorizedIPRanges;
+        private @Nullable Output<Boolean> enablePrivateCluster;
+        private @Nullable Output<String> privateDNSZone;
 
         public Builder() {
     	      // Empty
@@ -92,33 +92,33 @@ public final class ManagedClusterAPIServerAccessProfileArgs extends io.pulumi.re
     	      this.privateDNSZone = defaults.privateDNSZone;
         }
 
-        public Builder authorizedIPRanges(@Nullable Input<List<String>> authorizedIPRanges) {
+        public Builder authorizedIPRanges(@Nullable Output<List<String>> authorizedIPRanges) {
             this.authorizedIPRanges = authorizedIPRanges;
             return this;
         }
 
         public Builder authorizedIPRanges(@Nullable List<String> authorizedIPRanges) {
-            this.authorizedIPRanges = Input.ofNullable(authorizedIPRanges);
+            this.authorizedIPRanges = Output.ofNullable(authorizedIPRanges);
             return this;
         }
 
-        public Builder enablePrivateCluster(@Nullable Input<Boolean> enablePrivateCluster) {
+        public Builder enablePrivateCluster(@Nullable Output<Boolean> enablePrivateCluster) {
             this.enablePrivateCluster = enablePrivateCluster;
             return this;
         }
 
         public Builder enablePrivateCluster(@Nullable Boolean enablePrivateCluster) {
-            this.enablePrivateCluster = Input.ofNullable(enablePrivateCluster);
+            this.enablePrivateCluster = Output.ofNullable(enablePrivateCluster);
             return this;
         }
 
-        public Builder privateDNSZone(@Nullable Input<String> privateDNSZone) {
+        public Builder privateDNSZone(@Nullable Output<String> privateDNSZone) {
             this.privateDNSZone = privateDNSZone;
             return this;
         }
 
         public Builder privateDNSZone(@Nullable String privateDNSZone) {
-            this.privateDNSZone = Input.ofNullable(privateDNSZone);
+            this.privateDNSZone = Output.ofNullable(privateDNSZone);
             return this;
         }
         public ManagedClusterAPIServerAccessProfileArgs build() {

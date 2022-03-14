@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.iot.inputs;
 
 import io.pulumi.awsnative.iot.enums.MitigationActionEnableIoTLoggingParamsLogLevel;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,9 +23,9 @@ public final class MitigationActionEnableIoTLoggingParamsArgs extends io.pulumi.
      * 
      */
     @InputImport(name="logLevel", required=true)
-      private final Input<MitigationActionEnableIoTLoggingParamsLogLevel> logLevel;
+      private final Output<MitigationActionEnableIoTLoggingParamsLogLevel> logLevel;
 
-    public Input<MitigationActionEnableIoTLoggingParamsLogLevel> getLogLevel() {
+    public Output<MitigationActionEnableIoTLoggingParamsLogLevel> getLogLevel() {
         return this.logLevel;
     }
 
@@ -34,22 +34,22 @@ public final class MitigationActionEnableIoTLoggingParamsArgs extends io.pulumi.
      * 
      */
     @InputImport(name="roleArnForLogging", required=true)
-      private final Input<String> roleArnForLogging;
+      private final Output<String> roleArnForLogging;
 
-    public Input<String> getRoleArnForLogging() {
+    public Output<String> getRoleArnForLogging() {
         return this.roleArnForLogging;
     }
 
     public MitigationActionEnableIoTLoggingParamsArgs(
-        Input<MitigationActionEnableIoTLoggingParamsLogLevel> logLevel,
-        Input<String> roleArnForLogging) {
+        Output<MitigationActionEnableIoTLoggingParamsLogLevel> logLevel,
+        Output<String> roleArnForLogging) {
         this.logLevel = Objects.requireNonNull(logLevel, "expected parameter 'logLevel' to be non-null");
         this.roleArnForLogging = Objects.requireNonNull(roleArnForLogging, "expected parameter 'roleArnForLogging' to be non-null");
     }
 
     private MitigationActionEnableIoTLoggingParamsArgs() {
-        this.logLevel = Input.empty();
-        this.roleArnForLogging = Input.empty();
+        this.logLevel = Output.empty();
+        this.roleArnForLogging = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class MitigationActionEnableIoTLoggingParamsArgs extends io.pulumi.
     }
 
     public static final class Builder {
-        private Input<MitigationActionEnableIoTLoggingParamsLogLevel> logLevel;
-        private Input<String> roleArnForLogging;
+        private Output<MitigationActionEnableIoTLoggingParamsLogLevel> logLevel;
+        private Output<String> roleArnForLogging;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class MitigationActionEnableIoTLoggingParamsArgs extends io.pulumi.
     	      this.roleArnForLogging = defaults.roleArnForLogging;
         }
 
-        public Builder logLevel(Input<MitigationActionEnableIoTLoggingParamsLogLevel> logLevel) {
+        public Builder logLevel(Output<MitigationActionEnableIoTLoggingParamsLogLevel> logLevel) {
             this.logLevel = Objects.requireNonNull(logLevel);
             return this;
         }
 
         public Builder logLevel(MitigationActionEnableIoTLoggingParamsLogLevel logLevel) {
-            this.logLevel = Input.of(Objects.requireNonNull(logLevel));
+            this.logLevel = Output.of(Objects.requireNonNull(logLevel));
             return this;
         }
 
-        public Builder roleArnForLogging(Input<String> roleArnForLogging) {
+        public Builder roleArnForLogging(Output<String> roleArnForLogging) {
             this.roleArnForLogging = Objects.requireNonNull(roleArnForLogging);
             return this;
         }
 
         public Builder roleArnForLogging(String roleArnForLogging) {
-            this.roleArnForLogging = Input.of(Objects.requireNonNull(roleArnForLogging));
+            this.roleArnForLogging = Output.of(Objects.requireNonNull(roleArnForLogging));
             return this;
         }
         public MitigationActionEnableIoTLoggingParamsArgs build() {

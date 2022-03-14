@@ -4,7 +4,7 @@
 package io.pulumi.aws.iot.inputs;
 
 import io.pulumi.aws.iot.inputs.ThingTypePropertiesGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -22,10 +22,10 @@ public final class ThingTypeState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arn")
-      private final @Nullable Input<String> arn;
+      private final @Nullable Output<String> arn;
 
-    public Input<String> getArn() {
-        return this.arn == null ? Input.empty() : this.arn;
+    public Output<String> getArn() {
+        return this.arn == null ? Output.empty() : this.arn;
     }
 
     /**
@@ -33,10 +33,10 @@ public final class ThingTypeState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="deprecated")
-      private final @Nullable Input<Boolean> deprecated;
+      private final @Nullable Output<Boolean> deprecated;
 
-    public Input<Boolean> getDeprecated() {
-        return this.deprecated == null ? Input.empty() : this.deprecated;
+    public Output<Boolean> getDeprecated() {
+        return this.deprecated == null ? Output.empty() : this.deprecated;
     }
 
     /**
@@ -44,10 +44,10 @@ public final class ThingTypeState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -55,10 +55,10 @@ public final class ThingTypeState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="properties")
-      private final @Nullable Input<ThingTypePropertiesGetArgs> properties;
+      private final @Nullable Output<ThingTypePropertiesGetArgs> properties;
 
-    public Input<ThingTypePropertiesGetArgs> getProperties() {
-        return this.properties == null ? Input.empty() : this.properties;
+    public Output<ThingTypePropertiesGetArgs> getProperties() {
+        return this.properties == null ? Output.empty() : this.properties;
     }
 
     /**
@@ -66,10 +66,10 @@ public final class ThingTypeState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -77,19 +77,19 @@ public final class ThingTypeState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tagsAll")
-      private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Input<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Input.empty() : this.tagsAll;
+    public Output<Map<String,String>> getTagsAll() {
+        return this.tagsAll == null ? Output.empty() : this.tagsAll;
     }
 
     public ThingTypeState(
-        @Nullable Input<String> arn,
-        @Nullable Input<Boolean> deprecated,
-        @Nullable Input<String> name,
-        @Nullable Input<ThingTypePropertiesGetArgs> properties,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<Map<String,String>> tagsAll) {
+        @Nullable Output<String> arn,
+        @Nullable Output<Boolean> deprecated,
+        @Nullable Output<String> name,
+        @Nullable Output<ThingTypePropertiesGetArgs> properties,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<Map<String,String>> tagsAll) {
         this.arn = arn;
         this.deprecated = deprecated;
         this.name = name;
@@ -99,12 +99,12 @@ public final class ThingTypeState extends io.pulumi.resources.ResourceArgs {
     }
 
     private ThingTypeState() {
-        this.arn = Input.empty();
-        this.deprecated = Input.empty();
-        this.name = Input.empty();
-        this.properties = Input.empty();
-        this.tags = Input.empty();
-        this.tagsAll = Input.empty();
+        this.arn = Output.empty();
+        this.deprecated = Output.empty();
+        this.name = Output.empty();
+        this.properties = Output.empty();
+        this.tags = Output.empty();
+        this.tagsAll = Output.empty();
     }
 
     public static Builder builder() {
@@ -116,12 +116,12 @@ public final class ThingTypeState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> arn;
-        private @Nullable Input<Boolean> deprecated;
-        private @Nullable Input<String> name;
-        private @Nullable Input<ThingTypePropertiesGetArgs> properties;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<Map<String,String>> tagsAll;
+        private @Nullable Output<String> arn;
+        private @Nullable Output<Boolean> deprecated;
+        private @Nullable Output<String> name;
+        private @Nullable Output<ThingTypePropertiesGetArgs> properties;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<Map<String,String>> tagsAll;
 
         public Builder() {
     	      // Empty
@@ -137,63 +137,63 @@ public final class ThingTypeState extends io.pulumi.resources.ResourceArgs {
     	      this.tagsAll = defaults.tagsAll;
         }
 
-        public Builder arn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
 
         public Builder arn(@Nullable String arn) {
-            this.arn = Input.ofNullable(arn);
+            this.arn = Output.ofNullable(arn);
             return this;
         }
 
-        public Builder deprecated(@Nullable Input<Boolean> deprecated) {
+        public Builder deprecated(@Nullable Output<Boolean> deprecated) {
             this.deprecated = deprecated;
             return this;
         }
 
         public Builder deprecated(@Nullable Boolean deprecated) {
-            this.deprecated = Input.ofNullable(deprecated);
+            this.deprecated = Output.ofNullable(deprecated);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder properties(@Nullable Input<ThingTypePropertiesGetArgs> properties) {
+        public Builder properties(@Nullable Output<ThingTypePropertiesGetArgs> properties) {
             this.properties = properties;
             return this;
         }
 
         public Builder properties(@Nullable ThingTypePropertiesGetArgs properties) {
-            this.properties = Input.ofNullable(properties);
+            this.properties = Output.ofNullable(properties);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Input.ofNullable(tagsAll);
+            this.tagsAll = Output.ofNullable(tagsAll);
             return this;
         }
         public ThingTypeState build() {

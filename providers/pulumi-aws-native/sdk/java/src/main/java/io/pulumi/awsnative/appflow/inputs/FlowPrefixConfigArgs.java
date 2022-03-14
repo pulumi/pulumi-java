@@ -5,7 +5,7 @@ package io.pulumi.awsnative.appflow.inputs;
 
 import io.pulumi.awsnative.appflow.enums.FlowPrefixFormat;
 import io.pulumi.awsnative.appflow.enums.FlowPrefixType;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -16,29 +16,29 @@ public final class FlowPrefixConfigArgs extends io.pulumi.resources.ResourceArgs
     public static final FlowPrefixConfigArgs Empty = new FlowPrefixConfigArgs();
 
     @InputImport(name="prefixFormat")
-      private final @Nullable Input<FlowPrefixFormat> prefixFormat;
+      private final @Nullable Output<FlowPrefixFormat> prefixFormat;
 
-    public Input<FlowPrefixFormat> getPrefixFormat() {
-        return this.prefixFormat == null ? Input.empty() : this.prefixFormat;
+    public Output<FlowPrefixFormat> getPrefixFormat() {
+        return this.prefixFormat == null ? Output.empty() : this.prefixFormat;
     }
 
     @InputImport(name="prefixType")
-      private final @Nullable Input<FlowPrefixType> prefixType;
+      private final @Nullable Output<FlowPrefixType> prefixType;
 
-    public Input<FlowPrefixType> getPrefixType() {
-        return this.prefixType == null ? Input.empty() : this.prefixType;
+    public Output<FlowPrefixType> getPrefixType() {
+        return this.prefixType == null ? Output.empty() : this.prefixType;
     }
 
     public FlowPrefixConfigArgs(
-        @Nullable Input<FlowPrefixFormat> prefixFormat,
-        @Nullable Input<FlowPrefixType> prefixType) {
+        @Nullable Output<FlowPrefixFormat> prefixFormat,
+        @Nullable Output<FlowPrefixType> prefixType) {
         this.prefixFormat = prefixFormat;
         this.prefixType = prefixType;
     }
 
     private FlowPrefixConfigArgs() {
-        this.prefixFormat = Input.empty();
-        this.prefixType = Input.empty();
+        this.prefixFormat = Output.empty();
+        this.prefixType = Output.empty();
     }
 
     public static Builder builder() {
@@ -50,8 +50,8 @@ public final class FlowPrefixConfigArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private @Nullable Input<FlowPrefixFormat> prefixFormat;
-        private @Nullable Input<FlowPrefixType> prefixType;
+        private @Nullable Output<FlowPrefixFormat> prefixFormat;
+        private @Nullable Output<FlowPrefixType> prefixType;
 
         public Builder() {
     	      // Empty
@@ -63,23 +63,23 @@ public final class FlowPrefixConfigArgs extends io.pulumi.resources.ResourceArgs
     	      this.prefixType = defaults.prefixType;
         }
 
-        public Builder prefixFormat(@Nullable Input<FlowPrefixFormat> prefixFormat) {
+        public Builder prefixFormat(@Nullable Output<FlowPrefixFormat> prefixFormat) {
             this.prefixFormat = prefixFormat;
             return this;
         }
 
         public Builder prefixFormat(@Nullable FlowPrefixFormat prefixFormat) {
-            this.prefixFormat = Input.ofNullable(prefixFormat);
+            this.prefixFormat = Output.ofNullable(prefixFormat);
             return this;
         }
 
-        public Builder prefixType(@Nullable Input<FlowPrefixType> prefixType) {
+        public Builder prefixType(@Nullable Output<FlowPrefixType> prefixType) {
             this.prefixType = prefixType;
             return this;
         }
 
         public Builder prefixType(@Nullable FlowPrefixType prefixType) {
-            this.prefixType = Input.ofNullable(prefixType);
+            this.prefixType = Output.ofNullable(prefixType);
             return this;
         }
         public FlowPrefixConfigArgs build() {

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.datafactory.inputs;
 
 import io.pulumi.azurenative.datafactory.inputs.PipelineElapsedTimeMetricPolicyArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,18 +23,18 @@ public final class PipelinePolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="elapsedTimeMetric")
-      private final @Nullable Input<PipelineElapsedTimeMetricPolicyArgs> elapsedTimeMetric;
+      private final @Nullable Output<PipelineElapsedTimeMetricPolicyArgs> elapsedTimeMetric;
 
-    public Input<PipelineElapsedTimeMetricPolicyArgs> getElapsedTimeMetric() {
-        return this.elapsedTimeMetric == null ? Input.empty() : this.elapsedTimeMetric;
+    public Output<PipelineElapsedTimeMetricPolicyArgs> getElapsedTimeMetric() {
+        return this.elapsedTimeMetric == null ? Output.empty() : this.elapsedTimeMetric;
     }
 
-    public PipelinePolicyArgs(@Nullable Input<PipelineElapsedTimeMetricPolicyArgs> elapsedTimeMetric) {
+    public PipelinePolicyArgs(@Nullable Output<PipelineElapsedTimeMetricPolicyArgs> elapsedTimeMetric) {
         this.elapsedTimeMetric = elapsedTimeMetric;
     }
 
     private PipelinePolicyArgs() {
-        this.elapsedTimeMetric = Input.empty();
+        this.elapsedTimeMetric = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class PipelinePolicyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<PipelineElapsedTimeMetricPolicyArgs> elapsedTimeMetric;
+        private @Nullable Output<PipelineElapsedTimeMetricPolicyArgs> elapsedTimeMetric;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class PipelinePolicyArgs extends io.pulumi.resources.ResourceArgs {
     	      this.elapsedTimeMetric = defaults.elapsedTimeMetric;
         }
 
-        public Builder elapsedTimeMetric(@Nullable Input<PipelineElapsedTimeMetricPolicyArgs> elapsedTimeMetric) {
+        public Builder elapsedTimeMetric(@Nullable Output<PipelineElapsedTimeMetricPolicyArgs> elapsedTimeMetric) {
             this.elapsedTimeMetric = elapsedTimeMetric;
             return this;
         }
 
         public Builder elapsedTimeMetric(@Nullable PipelineElapsedTimeMetricPolicyArgs elapsedTimeMetric) {
-            this.elapsedTimeMetric = Input.ofNullable(elapsedTimeMetric);
+            this.elapsedTimeMetric = Output.ofNullable(elapsedTimeMetric);
             return this;
         }
         public PipelinePolicyArgs build() {

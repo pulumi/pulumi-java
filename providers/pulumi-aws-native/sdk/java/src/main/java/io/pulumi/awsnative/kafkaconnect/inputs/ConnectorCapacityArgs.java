@@ -5,7 +5,7 @@ package io.pulumi.awsnative.kafkaconnect.inputs;
 
 import io.pulumi.awsnative.kafkaconnect.inputs.ConnectorAutoScalingArgs;
 import io.pulumi.awsnative.kafkaconnect.inputs.ConnectorProvisionedCapacityArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,29 +20,29 @@ public final class ConnectorCapacityArgs extends io.pulumi.resources.ResourceArg
     public static final ConnectorCapacityArgs Empty = new ConnectorCapacityArgs();
 
     @InputImport(name="autoScaling")
-      private final @Nullable Input<ConnectorAutoScalingArgs> autoScaling;
+      private final @Nullable Output<ConnectorAutoScalingArgs> autoScaling;
 
-    public Input<ConnectorAutoScalingArgs> getAutoScaling() {
-        return this.autoScaling == null ? Input.empty() : this.autoScaling;
+    public Output<ConnectorAutoScalingArgs> getAutoScaling() {
+        return this.autoScaling == null ? Output.empty() : this.autoScaling;
     }
 
     @InputImport(name="provisionedCapacity")
-      private final @Nullable Input<ConnectorProvisionedCapacityArgs> provisionedCapacity;
+      private final @Nullable Output<ConnectorProvisionedCapacityArgs> provisionedCapacity;
 
-    public Input<ConnectorProvisionedCapacityArgs> getProvisionedCapacity() {
-        return this.provisionedCapacity == null ? Input.empty() : this.provisionedCapacity;
+    public Output<ConnectorProvisionedCapacityArgs> getProvisionedCapacity() {
+        return this.provisionedCapacity == null ? Output.empty() : this.provisionedCapacity;
     }
 
     public ConnectorCapacityArgs(
-        @Nullable Input<ConnectorAutoScalingArgs> autoScaling,
-        @Nullable Input<ConnectorProvisionedCapacityArgs> provisionedCapacity) {
+        @Nullable Output<ConnectorAutoScalingArgs> autoScaling,
+        @Nullable Output<ConnectorProvisionedCapacityArgs> provisionedCapacity) {
         this.autoScaling = autoScaling;
         this.provisionedCapacity = provisionedCapacity;
     }
 
     private ConnectorCapacityArgs() {
-        this.autoScaling = Input.empty();
-        this.provisionedCapacity = Input.empty();
+        this.autoScaling = Output.empty();
+        this.provisionedCapacity = Output.empty();
     }
 
     public static Builder builder() {
@@ -54,8 +54,8 @@ public final class ConnectorCapacityArgs extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private @Nullable Input<ConnectorAutoScalingArgs> autoScaling;
-        private @Nullable Input<ConnectorProvisionedCapacityArgs> provisionedCapacity;
+        private @Nullable Output<ConnectorAutoScalingArgs> autoScaling;
+        private @Nullable Output<ConnectorProvisionedCapacityArgs> provisionedCapacity;
 
         public Builder() {
     	      // Empty
@@ -67,23 +67,23 @@ public final class ConnectorCapacityArgs extends io.pulumi.resources.ResourceArg
     	      this.provisionedCapacity = defaults.provisionedCapacity;
         }
 
-        public Builder autoScaling(@Nullable Input<ConnectorAutoScalingArgs> autoScaling) {
+        public Builder autoScaling(@Nullable Output<ConnectorAutoScalingArgs> autoScaling) {
             this.autoScaling = autoScaling;
             return this;
         }
 
         public Builder autoScaling(@Nullable ConnectorAutoScalingArgs autoScaling) {
-            this.autoScaling = Input.ofNullable(autoScaling);
+            this.autoScaling = Output.ofNullable(autoScaling);
             return this;
         }
 
-        public Builder provisionedCapacity(@Nullable Input<ConnectorProvisionedCapacityArgs> provisionedCapacity) {
+        public Builder provisionedCapacity(@Nullable Output<ConnectorProvisionedCapacityArgs> provisionedCapacity) {
             this.provisionedCapacity = provisionedCapacity;
             return this;
         }
 
         public Builder provisionedCapacity(@Nullable ConnectorProvisionedCapacityArgs provisionedCapacity) {
-            this.provisionedCapacity = Input.ofNullable(provisionedCapacity);
+            this.provisionedCapacity = Output.ofNullable(provisionedCapacity);
             return this;
         }
         public ConnectorCapacityArgs build() {

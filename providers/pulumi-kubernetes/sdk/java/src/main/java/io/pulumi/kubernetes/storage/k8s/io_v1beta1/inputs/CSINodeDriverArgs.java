@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.storage.k8s.io_v1beta1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.kubernetes.storage.k8s.io_v1beta1.inputs.VolumeNodeResourcesArgs;
 import java.lang.String;
@@ -25,10 +25,10 @@ public final class CSINodeDriverArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="allocatable")
-      private final @Nullable Input<VolumeNodeResourcesArgs> allocatable;
+      private final @Nullable Output<VolumeNodeResourcesArgs> allocatable;
 
-    public Input<VolumeNodeResourcesArgs> getAllocatable() {
-        return this.allocatable == null ? Input.empty() : this.allocatable;
+    public Output<VolumeNodeResourcesArgs> getAllocatable() {
+        return this.allocatable == null ? Output.empty() : this.allocatable;
     }
 
     /**
@@ -36,9 +36,9 @@ public final class CSINodeDriverArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name", required=true)
-      private final Input<String> name;
+      private final Output<String> name;
 
-    public Input<String> getName() {
+    public Output<String> getName() {
         return this.name;
     }
 
@@ -47,9 +47,9 @@ public final class CSINodeDriverArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="nodeID", required=true)
-      private final Input<String> nodeID;
+      private final Output<String> nodeID;
 
-    public Input<String> getNodeID() {
+    public Output<String> getNodeID() {
         return this.nodeID;
     }
 
@@ -58,17 +58,17 @@ public final class CSINodeDriverArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="topologyKeys")
-      private final @Nullable Input<List<String>> topologyKeys;
+      private final @Nullable Output<List<String>> topologyKeys;
 
-    public Input<List<String>> getTopologyKeys() {
-        return this.topologyKeys == null ? Input.empty() : this.topologyKeys;
+    public Output<List<String>> getTopologyKeys() {
+        return this.topologyKeys == null ? Output.empty() : this.topologyKeys;
     }
 
     public CSINodeDriverArgs(
-        @Nullable Input<VolumeNodeResourcesArgs> allocatable,
-        Input<String> name,
-        Input<String> nodeID,
-        @Nullable Input<List<String>> topologyKeys) {
+        @Nullable Output<VolumeNodeResourcesArgs> allocatable,
+        Output<String> name,
+        Output<String> nodeID,
+        @Nullable Output<List<String>> topologyKeys) {
         this.allocatable = allocatable;
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
         this.nodeID = Objects.requireNonNull(nodeID, "expected parameter 'nodeID' to be non-null");
@@ -76,10 +76,10 @@ public final class CSINodeDriverArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private CSINodeDriverArgs() {
-        this.allocatable = Input.empty();
-        this.name = Input.empty();
-        this.nodeID = Input.empty();
-        this.topologyKeys = Input.empty();
+        this.allocatable = Output.empty();
+        this.name = Output.empty();
+        this.nodeID = Output.empty();
+        this.topologyKeys = Output.empty();
     }
 
     public static Builder builder() {
@@ -91,10 +91,10 @@ public final class CSINodeDriverArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<VolumeNodeResourcesArgs> allocatable;
-        private Input<String> name;
-        private Input<String> nodeID;
-        private @Nullable Input<List<String>> topologyKeys;
+        private @Nullable Output<VolumeNodeResourcesArgs> allocatable;
+        private Output<String> name;
+        private Output<String> nodeID;
+        private @Nullable Output<List<String>> topologyKeys;
 
         public Builder() {
     	      // Empty
@@ -108,43 +108,43 @@ public final class CSINodeDriverArgs extends io.pulumi.resources.ResourceArgs {
     	      this.topologyKeys = defaults.topologyKeys;
         }
 
-        public Builder allocatable(@Nullable Input<VolumeNodeResourcesArgs> allocatable) {
+        public Builder allocatable(@Nullable Output<VolumeNodeResourcesArgs> allocatable) {
             this.allocatable = allocatable;
             return this;
         }
 
         public Builder allocatable(@Nullable VolumeNodeResourcesArgs allocatable) {
-            this.allocatable = Input.ofNullable(allocatable);
+            this.allocatable = Output.ofNullable(allocatable);
             return this;
         }
 
-        public Builder name(Input<String> name) {
+        public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(String name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder nodeID(Input<String> nodeID) {
+        public Builder nodeID(Output<String> nodeID) {
             this.nodeID = Objects.requireNonNull(nodeID);
             return this;
         }
 
         public Builder nodeID(String nodeID) {
-            this.nodeID = Input.of(Objects.requireNonNull(nodeID));
+            this.nodeID = Output.of(Objects.requireNonNull(nodeID));
             return this;
         }
 
-        public Builder topologyKeys(@Nullable Input<List<String>> topologyKeys) {
+        public Builder topologyKeys(@Nullable Output<List<String>> topologyKeys) {
             this.topologyKeys = topologyKeys;
             return this;
         }
 
         public Builder topologyKeys(@Nullable List<String> topologyKeys) {
-            this.topologyKeys = Input.ofNullable(topologyKeys);
+            this.topologyKeys = Output.ofNullable(topologyKeys);
             return this;
         }
         public CSINodeDriverArgs build() {

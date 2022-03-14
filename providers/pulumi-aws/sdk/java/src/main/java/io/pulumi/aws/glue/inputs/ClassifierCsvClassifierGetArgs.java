@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.glue.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -21,10 +21,10 @@ public final class ClassifierCsvClassifierGetArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="allowSingleColumn")
-      private final @Nullable Input<Boolean> allowSingleColumn;
+      private final @Nullable Output<Boolean> allowSingleColumn;
 
-    public Input<Boolean> getAllowSingleColumn() {
-        return this.allowSingleColumn == null ? Input.empty() : this.allowSingleColumn;
+    public Output<Boolean> getAllowSingleColumn() {
+        return this.allowSingleColumn == null ? Output.empty() : this.allowSingleColumn;
     }
 
     /**
@@ -32,10 +32,10 @@ public final class ClassifierCsvClassifierGetArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="containsHeader")
-      private final @Nullable Input<String> containsHeader;
+      private final @Nullable Output<String> containsHeader;
 
-    public Input<String> getContainsHeader() {
-        return this.containsHeader == null ? Input.empty() : this.containsHeader;
+    public Output<String> getContainsHeader() {
+        return this.containsHeader == null ? Output.empty() : this.containsHeader;
     }
 
     /**
@@ -43,10 +43,10 @@ public final class ClassifierCsvClassifierGetArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="delimiter")
-      private final @Nullable Input<String> delimiter;
+      private final @Nullable Output<String> delimiter;
 
-    public Input<String> getDelimiter() {
-        return this.delimiter == null ? Input.empty() : this.delimiter;
+    public Output<String> getDelimiter() {
+        return this.delimiter == null ? Output.empty() : this.delimiter;
     }
 
     /**
@@ -54,10 +54,10 @@ public final class ClassifierCsvClassifierGetArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="disableValueTrimming")
-      private final @Nullable Input<Boolean> disableValueTrimming;
+      private final @Nullable Output<Boolean> disableValueTrimming;
 
-    public Input<Boolean> getDisableValueTrimming() {
-        return this.disableValueTrimming == null ? Input.empty() : this.disableValueTrimming;
+    public Output<Boolean> getDisableValueTrimming() {
+        return this.disableValueTrimming == null ? Output.empty() : this.disableValueTrimming;
     }
 
     /**
@@ -65,10 +65,10 @@ public final class ClassifierCsvClassifierGetArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="headers")
-      private final @Nullable Input<List<String>> headers;
+      private final @Nullable Output<List<String>> headers;
 
-    public Input<List<String>> getHeaders() {
-        return this.headers == null ? Input.empty() : this.headers;
+    public Output<List<String>> getHeaders() {
+        return this.headers == null ? Output.empty() : this.headers;
     }
 
     /**
@@ -76,19 +76,19 @@ public final class ClassifierCsvClassifierGetArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="quoteSymbol")
-      private final @Nullable Input<String> quoteSymbol;
+      private final @Nullable Output<String> quoteSymbol;
 
-    public Input<String> getQuoteSymbol() {
-        return this.quoteSymbol == null ? Input.empty() : this.quoteSymbol;
+    public Output<String> getQuoteSymbol() {
+        return this.quoteSymbol == null ? Output.empty() : this.quoteSymbol;
     }
 
     public ClassifierCsvClassifierGetArgs(
-        @Nullable Input<Boolean> allowSingleColumn,
-        @Nullable Input<String> containsHeader,
-        @Nullable Input<String> delimiter,
-        @Nullable Input<Boolean> disableValueTrimming,
-        @Nullable Input<List<String>> headers,
-        @Nullable Input<String> quoteSymbol) {
+        @Nullable Output<Boolean> allowSingleColumn,
+        @Nullable Output<String> containsHeader,
+        @Nullable Output<String> delimiter,
+        @Nullable Output<Boolean> disableValueTrimming,
+        @Nullable Output<List<String>> headers,
+        @Nullable Output<String> quoteSymbol) {
         this.allowSingleColumn = allowSingleColumn;
         this.containsHeader = containsHeader;
         this.delimiter = delimiter;
@@ -98,12 +98,12 @@ public final class ClassifierCsvClassifierGetArgs extends io.pulumi.resources.Re
     }
 
     private ClassifierCsvClassifierGetArgs() {
-        this.allowSingleColumn = Input.empty();
-        this.containsHeader = Input.empty();
-        this.delimiter = Input.empty();
-        this.disableValueTrimming = Input.empty();
-        this.headers = Input.empty();
-        this.quoteSymbol = Input.empty();
+        this.allowSingleColumn = Output.empty();
+        this.containsHeader = Output.empty();
+        this.delimiter = Output.empty();
+        this.disableValueTrimming = Output.empty();
+        this.headers = Output.empty();
+        this.quoteSymbol = Output.empty();
     }
 
     public static Builder builder() {
@@ -115,12 +115,12 @@ public final class ClassifierCsvClassifierGetArgs extends io.pulumi.resources.Re
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> allowSingleColumn;
-        private @Nullable Input<String> containsHeader;
-        private @Nullable Input<String> delimiter;
-        private @Nullable Input<Boolean> disableValueTrimming;
-        private @Nullable Input<List<String>> headers;
-        private @Nullable Input<String> quoteSymbol;
+        private @Nullable Output<Boolean> allowSingleColumn;
+        private @Nullable Output<String> containsHeader;
+        private @Nullable Output<String> delimiter;
+        private @Nullable Output<Boolean> disableValueTrimming;
+        private @Nullable Output<List<String>> headers;
+        private @Nullable Output<String> quoteSymbol;
 
         public Builder() {
     	      // Empty
@@ -136,63 +136,63 @@ public final class ClassifierCsvClassifierGetArgs extends io.pulumi.resources.Re
     	      this.quoteSymbol = defaults.quoteSymbol;
         }
 
-        public Builder allowSingleColumn(@Nullable Input<Boolean> allowSingleColumn) {
+        public Builder allowSingleColumn(@Nullable Output<Boolean> allowSingleColumn) {
             this.allowSingleColumn = allowSingleColumn;
             return this;
         }
 
         public Builder allowSingleColumn(@Nullable Boolean allowSingleColumn) {
-            this.allowSingleColumn = Input.ofNullable(allowSingleColumn);
+            this.allowSingleColumn = Output.ofNullable(allowSingleColumn);
             return this;
         }
 
-        public Builder containsHeader(@Nullable Input<String> containsHeader) {
+        public Builder containsHeader(@Nullable Output<String> containsHeader) {
             this.containsHeader = containsHeader;
             return this;
         }
 
         public Builder containsHeader(@Nullable String containsHeader) {
-            this.containsHeader = Input.ofNullable(containsHeader);
+            this.containsHeader = Output.ofNullable(containsHeader);
             return this;
         }
 
-        public Builder delimiter(@Nullable Input<String> delimiter) {
+        public Builder delimiter(@Nullable Output<String> delimiter) {
             this.delimiter = delimiter;
             return this;
         }
 
         public Builder delimiter(@Nullable String delimiter) {
-            this.delimiter = Input.ofNullable(delimiter);
+            this.delimiter = Output.ofNullable(delimiter);
             return this;
         }
 
-        public Builder disableValueTrimming(@Nullable Input<Boolean> disableValueTrimming) {
+        public Builder disableValueTrimming(@Nullable Output<Boolean> disableValueTrimming) {
             this.disableValueTrimming = disableValueTrimming;
             return this;
         }
 
         public Builder disableValueTrimming(@Nullable Boolean disableValueTrimming) {
-            this.disableValueTrimming = Input.ofNullable(disableValueTrimming);
+            this.disableValueTrimming = Output.ofNullable(disableValueTrimming);
             return this;
         }
 
-        public Builder headers(@Nullable Input<List<String>> headers) {
+        public Builder headers(@Nullable Output<List<String>> headers) {
             this.headers = headers;
             return this;
         }
 
         public Builder headers(@Nullable List<String> headers) {
-            this.headers = Input.ofNullable(headers);
+            this.headers = Output.ofNullable(headers);
             return this;
         }
 
-        public Builder quoteSymbol(@Nullable Input<String> quoteSymbol) {
+        public Builder quoteSymbol(@Nullable Output<String> quoteSymbol) {
             this.quoteSymbol = quoteSymbol;
             return this;
         }
 
         public Builder quoteSymbol(@Nullable String quoteSymbol) {
-            this.quoteSymbol = Input.ofNullable(quoteSymbol);
+            this.quoteSymbol = Output.ofNullable(quoteSymbol);
             return this;
         }
         public ClassifierCsvClassifierGetArgs build() {

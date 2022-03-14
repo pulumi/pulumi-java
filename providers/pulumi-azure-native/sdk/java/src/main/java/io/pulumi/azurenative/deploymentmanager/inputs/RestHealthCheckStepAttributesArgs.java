@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.deploymentmanager.inputs;
 
 import io.pulumi.azurenative.deploymentmanager.inputs.RestHealthCheckArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -25,9 +25,9 @@ public final class RestHealthCheckStepAttributesArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="healthChecks", required=true)
-      private final Input<List<RestHealthCheckArgs>> healthChecks;
+      private final Output<List<RestHealthCheckArgs>> healthChecks;
 
-    public Input<List<RestHealthCheckArgs>> getHealthChecks() {
+    public Output<List<RestHealthCheckArgs>> getHealthChecks() {
         return this.healthChecks;
     }
 
@@ -36,9 +36,9 @@ public final class RestHealthCheckStepAttributesArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="healthyStateDuration", required=true)
-      private final Input<String> healthyStateDuration;
+      private final Output<String> healthyStateDuration;
 
-    public Input<String> getHealthyStateDuration() {
+    public Output<String> getHealthyStateDuration() {
         return this.healthyStateDuration;
     }
 
@@ -47,10 +47,10 @@ public final class RestHealthCheckStepAttributesArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="maxElasticDuration")
-      private final @Nullable Input<String> maxElasticDuration;
+      private final @Nullable Output<String> maxElasticDuration;
 
-    public Input<String> getMaxElasticDuration() {
-        return this.maxElasticDuration == null ? Input.empty() : this.maxElasticDuration;
+    public Output<String> getMaxElasticDuration() {
+        return this.maxElasticDuration == null ? Output.empty() : this.maxElasticDuration;
     }
 
     /**
@@ -59,9 +59,9 @@ public final class RestHealthCheckStepAttributesArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<String> type;
+      private final Output<String> type;
 
-    public Input<String> getType() {
+    public Output<String> getType() {
         return this.type;
     }
 
@@ -70,18 +70,18 @@ public final class RestHealthCheckStepAttributesArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="waitDuration")
-      private final @Nullable Input<String> waitDuration;
+      private final @Nullable Output<String> waitDuration;
 
-    public Input<String> getWaitDuration() {
-        return this.waitDuration == null ? Input.empty() : this.waitDuration;
+    public Output<String> getWaitDuration() {
+        return this.waitDuration == null ? Output.empty() : this.waitDuration;
     }
 
     public RestHealthCheckStepAttributesArgs(
-        Input<List<RestHealthCheckArgs>> healthChecks,
-        Input<String> healthyStateDuration,
-        @Nullable Input<String> maxElasticDuration,
-        Input<String> type,
-        @Nullable Input<String> waitDuration) {
+        Output<List<RestHealthCheckArgs>> healthChecks,
+        Output<String> healthyStateDuration,
+        @Nullable Output<String> maxElasticDuration,
+        Output<String> type,
+        @Nullable Output<String> waitDuration) {
         this.healthChecks = Objects.requireNonNull(healthChecks, "expected parameter 'healthChecks' to be non-null");
         this.healthyStateDuration = Objects.requireNonNull(healthyStateDuration, "expected parameter 'healthyStateDuration' to be non-null");
         this.maxElasticDuration = maxElasticDuration;
@@ -90,11 +90,11 @@ public final class RestHealthCheckStepAttributesArgs extends io.pulumi.resources
     }
 
     private RestHealthCheckStepAttributesArgs() {
-        this.healthChecks = Input.empty();
-        this.healthyStateDuration = Input.empty();
-        this.maxElasticDuration = Input.empty();
-        this.type = Input.empty();
-        this.waitDuration = Input.empty();
+        this.healthChecks = Output.empty();
+        this.healthyStateDuration = Output.empty();
+        this.maxElasticDuration = Output.empty();
+        this.type = Output.empty();
+        this.waitDuration = Output.empty();
     }
 
     public static Builder builder() {
@@ -106,11 +106,11 @@ public final class RestHealthCheckStepAttributesArgs extends io.pulumi.resources
     }
 
     public static final class Builder {
-        private Input<List<RestHealthCheckArgs>> healthChecks;
-        private Input<String> healthyStateDuration;
-        private @Nullable Input<String> maxElasticDuration;
-        private Input<String> type;
-        private @Nullable Input<String> waitDuration;
+        private Output<List<RestHealthCheckArgs>> healthChecks;
+        private Output<String> healthyStateDuration;
+        private @Nullable Output<String> maxElasticDuration;
+        private Output<String> type;
+        private @Nullable Output<String> waitDuration;
 
         public Builder() {
     	      // Empty
@@ -125,53 +125,53 @@ public final class RestHealthCheckStepAttributesArgs extends io.pulumi.resources
     	      this.waitDuration = defaults.waitDuration;
         }
 
-        public Builder healthChecks(Input<List<RestHealthCheckArgs>> healthChecks) {
+        public Builder healthChecks(Output<List<RestHealthCheckArgs>> healthChecks) {
             this.healthChecks = Objects.requireNonNull(healthChecks);
             return this;
         }
 
         public Builder healthChecks(List<RestHealthCheckArgs> healthChecks) {
-            this.healthChecks = Input.of(Objects.requireNonNull(healthChecks));
+            this.healthChecks = Output.of(Objects.requireNonNull(healthChecks));
             return this;
         }
 
-        public Builder healthyStateDuration(Input<String> healthyStateDuration) {
+        public Builder healthyStateDuration(Output<String> healthyStateDuration) {
             this.healthyStateDuration = Objects.requireNonNull(healthyStateDuration);
             return this;
         }
 
         public Builder healthyStateDuration(String healthyStateDuration) {
-            this.healthyStateDuration = Input.of(Objects.requireNonNull(healthyStateDuration));
+            this.healthyStateDuration = Output.of(Objects.requireNonNull(healthyStateDuration));
             return this;
         }
 
-        public Builder maxElasticDuration(@Nullable Input<String> maxElasticDuration) {
+        public Builder maxElasticDuration(@Nullable Output<String> maxElasticDuration) {
             this.maxElasticDuration = maxElasticDuration;
             return this;
         }
 
         public Builder maxElasticDuration(@Nullable String maxElasticDuration) {
-            this.maxElasticDuration = Input.ofNullable(maxElasticDuration);
+            this.maxElasticDuration = Output.ofNullable(maxElasticDuration);
             return this;
         }
 
-        public Builder type(Input<String> type) {
+        public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(String type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
 
-        public Builder waitDuration(@Nullable Input<String> waitDuration) {
+        public Builder waitDuration(@Nullable Output<String> waitDuration) {
             this.waitDuration = waitDuration;
             return this;
         }
 
         public Builder waitDuration(@Nullable String waitDuration) {
-            this.waitDuration = Input.ofNullable(waitDuration);
+            this.waitDuration = Output.ofNullable(waitDuration);
             return this;
         }
         public RestHealthCheckStepAttributesArgs build() {

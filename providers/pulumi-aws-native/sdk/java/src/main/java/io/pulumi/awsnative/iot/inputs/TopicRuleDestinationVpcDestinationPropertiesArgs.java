@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.iot.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -16,38 +16,38 @@ public final class TopicRuleDestinationVpcDestinationPropertiesArgs extends io.p
     public static final TopicRuleDestinationVpcDestinationPropertiesArgs Empty = new TopicRuleDestinationVpcDestinationPropertiesArgs();
 
     @InputImport(name="roleArn")
-      private final @Nullable Input<String> roleArn;
+      private final @Nullable Output<String> roleArn;
 
-    public Input<String> getRoleArn() {
-        return this.roleArn == null ? Input.empty() : this.roleArn;
+    public Output<String> getRoleArn() {
+        return this.roleArn == null ? Output.empty() : this.roleArn;
     }
 
     @InputImport(name="securityGroups")
-      private final @Nullable Input<List<String>> securityGroups;
+      private final @Nullable Output<List<String>> securityGroups;
 
-    public Input<List<String>> getSecurityGroups() {
-        return this.securityGroups == null ? Input.empty() : this.securityGroups;
+    public Output<List<String>> getSecurityGroups() {
+        return this.securityGroups == null ? Output.empty() : this.securityGroups;
     }
 
     @InputImport(name="subnetIds")
-      private final @Nullable Input<List<String>> subnetIds;
+      private final @Nullable Output<List<String>> subnetIds;
 
-    public Input<List<String>> getSubnetIds() {
-        return this.subnetIds == null ? Input.empty() : this.subnetIds;
+    public Output<List<String>> getSubnetIds() {
+        return this.subnetIds == null ? Output.empty() : this.subnetIds;
     }
 
     @InputImport(name="vpcId")
-      private final @Nullable Input<String> vpcId;
+      private final @Nullable Output<String> vpcId;
 
-    public Input<String> getVpcId() {
-        return this.vpcId == null ? Input.empty() : this.vpcId;
+    public Output<String> getVpcId() {
+        return this.vpcId == null ? Output.empty() : this.vpcId;
     }
 
     public TopicRuleDestinationVpcDestinationPropertiesArgs(
-        @Nullable Input<String> roleArn,
-        @Nullable Input<List<String>> securityGroups,
-        @Nullable Input<List<String>> subnetIds,
-        @Nullable Input<String> vpcId) {
+        @Nullable Output<String> roleArn,
+        @Nullable Output<List<String>> securityGroups,
+        @Nullable Output<List<String>> subnetIds,
+        @Nullable Output<String> vpcId) {
         this.roleArn = roleArn;
         this.securityGroups = securityGroups;
         this.subnetIds = subnetIds;
@@ -55,10 +55,10 @@ public final class TopicRuleDestinationVpcDestinationPropertiesArgs extends io.p
     }
 
     private TopicRuleDestinationVpcDestinationPropertiesArgs() {
-        this.roleArn = Input.empty();
-        this.securityGroups = Input.empty();
-        this.subnetIds = Input.empty();
-        this.vpcId = Input.empty();
+        this.roleArn = Output.empty();
+        this.securityGroups = Output.empty();
+        this.subnetIds = Output.empty();
+        this.vpcId = Output.empty();
     }
 
     public static Builder builder() {
@@ -70,10 +70,10 @@ public final class TopicRuleDestinationVpcDestinationPropertiesArgs extends io.p
     }
 
     public static final class Builder {
-        private @Nullable Input<String> roleArn;
-        private @Nullable Input<List<String>> securityGroups;
-        private @Nullable Input<List<String>> subnetIds;
-        private @Nullable Input<String> vpcId;
+        private @Nullable Output<String> roleArn;
+        private @Nullable Output<List<String>> securityGroups;
+        private @Nullable Output<List<String>> subnetIds;
+        private @Nullable Output<String> vpcId;
 
         public Builder() {
     	      // Empty
@@ -87,43 +87,43 @@ public final class TopicRuleDestinationVpcDestinationPropertiesArgs extends io.p
     	      this.vpcId = defaults.vpcId;
         }
 
-        public Builder roleArn(@Nullable Input<String> roleArn) {
+        public Builder roleArn(@Nullable Output<String> roleArn) {
             this.roleArn = roleArn;
             return this;
         }
 
         public Builder roleArn(@Nullable String roleArn) {
-            this.roleArn = Input.ofNullable(roleArn);
+            this.roleArn = Output.ofNullable(roleArn);
             return this;
         }
 
-        public Builder securityGroups(@Nullable Input<List<String>> securityGroups) {
+        public Builder securityGroups(@Nullable Output<List<String>> securityGroups) {
             this.securityGroups = securityGroups;
             return this;
         }
 
         public Builder securityGroups(@Nullable List<String> securityGroups) {
-            this.securityGroups = Input.ofNullable(securityGroups);
+            this.securityGroups = Output.ofNullable(securityGroups);
             return this;
         }
 
-        public Builder subnetIds(@Nullable Input<List<String>> subnetIds) {
+        public Builder subnetIds(@Nullable Output<List<String>> subnetIds) {
             this.subnetIds = subnetIds;
             return this;
         }
 
         public Builder subnetIds(@Nullable List<String> subnetIds) {
-            this.subnetIds = Input.ofNullable(subnetIds);
+            this.subnetIds = Output.ofNullable(subnetIds);
             return this;
         }
 
-        public Builder vpcId(@Nullable Input<String> vpcId) {
+        public Builder vpcId(@Nullable Output<String> vpcId) {
             this.vpcId = vpcId;
             return this;
         }
 
         public Builder vpcId(@Nullable String vpcId) {
-            this.vpcId = Input.ofNullable(vpcId);
+            this.vpcId = Output.ofNullable(vpcId);
             return this;
         }
         public TopicRuleDestinationVpcDestinationPropertiesArgs build() {

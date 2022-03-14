@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.bigquery_v2.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.bigquery_v2.inputs.BigtableColumnFamilyArgs;
 import java.lang.Boolean;
@@ -21,10 +21,10 @@ public final class BigtableOptionsArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="columnFamilies")
-      private final @Nullable Input<List<BigtableColumnFamilyArgs>> columnFamilies;
+      private final @Nullable Output<List<BigtableColumnFamilyArgs>> columnFamilies;
 
-    public Input<List<BigtableColumnFamilyArgs>> getColumnFamilies() {
-        return this.columnFamilies == null ? Input.empty() : this.columnFamilies;
+    public Output<List<BigtableColumnFamilyArgs>> getColumnFamilies() {
+        return this.columnFamilies == null ? Output.empty() : this.columnFamilies;
     }
 
     /**
@@ -32,10 +32,10 @@ public final class BigtableOptionsArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="ignoreUnspecifiedColumnFamilies")
-      private final @Nullable Input<Boolean> ignoreUnspecifiedColumnFamilies;
+      private final @Nullable Output<Boolean> ignoreUnspecifiedColumnFamilies;
 
-    public Input<Boolean> getIgnoreUnspecifiedColumnFamilies() {
-        return this.ignoreUnspecifiedColumnFamilies == null ? Input.empty() : this.ignoreUnspecifiedColumnFamilies;
+    public Output<Boolean> getIgnoreUnspecifiedColumnFamilies() {
+        return this.ignoreUnspecifiedColumnFamilies == null ? Output.empty() : this.ignoreUnspecifiedColumnFamilies;
     }
 
     /**
@@ -43,25 +43,25 @@ public final class BigtableOptionsArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="readRowkeyAsString")
-      private final @Nullable Input<Boolean> readRowkeyAsString;
+      private final @Nullable Output<Boolean> readRowkeyAsString;
 
-    public Input<Boolean> getReadRowkeyAsString() {
-        return this.readRowkeyAsString == null ? Input.empty() : this.readRowkeyAsString;
+    public Output<Boolean> getReadRowkeyAsString() {
+        return this.readRowkeyAsString == null ? Output.empty() : this.readRowkeyAsString;
     }
 
     public BigtableOptionsArgs(
-        @Nullable Input<List<BigtableColumnFamilyArgs>> columnFamilies,
-        @Nullable Input<Boolean> ignoreUnspecifiedColumnFamilies,
-        @Nullable Input<Boolean> readRowkeyAsString) {
+        @Nullable Output<List<BigtableColumnFamilyArgs>> columnFamilies,
+        @Nullable Output<Boolean> ignoreUnspecifiedColumnFamilies,
+        @Nullable Output<Boolean> readRowkeyAsString) {
         this.columnFamilies = columnFamilies;
         this.ignoreUnspecifiedColumnFamilies = ignoreUnspecifiedColumnFamilies;
         this.readRowkeyAsString = readRowkeyAsString;
     }
 
     private BigtableOptionsArgs() {
-        this.columnFamilies = Input.empty();
-        this.ignoreUnspecifiedColumnFamilies = Input.empty();
-        this.readRowkeyAsString = Input.empty();
+        this.columnFamilies = Output.empty();
+        this.ignoreUnspecifiedColumnFamilies = Output.empty();
+        this.readRowkeyAsString = Output.empty();
     }
 
     public static Builder builder() {
@@ -73,9 +73,9 @@ public final class BigtableOptionsArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private @Nullable Input<List<BigtableColumnFamilyArgs>> columnFamilies;
-        private @Nullable Input<Boolean> ignoreUnspecifiedColumnFamilies;
-        private @Nullable Input<Boolean> readRowkeyAsString;
+        private @Nullable Output<List<BigtableColumnFamilyArgs>> columnFamilies;
+        private @Nullable Output<Boolean> ignoreUnspecifiedColumnFamilies;
+        private @Nullable Output<Boolean> readRowkeyAsString;
 
         public Builder() {
     	      // Empty
@@ -88,33 +88,33 @@ public final class BigtableOptionsArgs extends io.pulumi.resources.ResourceArgs 
     	      this.readRowkeyAsString = defaults.readRowkeyAsString;
         }
 
-        public Builder columnFamilies(@Nullable Input<List<BigtableColumnFamilyArgs>> columnFamilies) {
+        public Builder columnFamilies(@Nullable Output<List<BigtableColumnFamilyArgs>> columnFamilies) {
             this.columnFamilies = columnFamilies;
             return this;
         }
 
         public Builder columnFamilies(@Nullable List<BigtableColumnFamilyArgs> columnFamilies) {
-            this.columnFamilies = Input.ofNullable(columnFamilies);
+            this.columnFamilies = Output.ofNullable(columnFamilies);
             return this;
         }
 
-        public Builder ignoreUnspecifiedColumnFamilies(@Nullable Input<Boolean> ignoreUnspecifiedColumnFamilies) {
+        public Builder ignoreUnspecifiedColumnFamilies(@Nullable Output<Boolean> ignoreUnspecifiedColumnFamilies) {
             this.ignoreUnspecifiedColumnFamilies = ignoreUnspecifiedColumnFamilies;
             return this;
         }
 
         public Builder ignoreUnspecifiedColumnFamilies(@Nullable Boolean ignoreUnspecifiedColumnFamilies) {
-            this.ignoreUnspecifiedColumnFamilies = Input.ofNullable(ignoreUnspecifiedColumnFamilies);
+            this.ignoreUnspecifiedColumnFamilies = Output.ofNullable(ignoreUnspecifiedColumnFamilies);
             return this;
         }
 
-        public Builder readRowkeyAsString(@Nullable Input<Boolean> readRowkeyAsString) {
+        public Builder readRowkeyAsString(@Nullable Output<Boolean> readRowkeyAsString) {
             this.readRowkeyAsString = readRowkeyAsString;
             return this;
         }
 
         public Builder readRowkeyAsString(@Nullable Boolean readRowkeyAsString) {
-            this.readRowkeyAsString = Input.ofNullable(readRowkeyAsString);
+            this.readRowkeyAsString = Output.ofNullable(readRowkeyAsString);
             return this;
         }
         public BigtableOptionsArgs build() {

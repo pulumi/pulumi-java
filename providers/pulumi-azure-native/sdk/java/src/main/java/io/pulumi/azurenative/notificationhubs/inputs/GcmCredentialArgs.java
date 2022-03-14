@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.notificationhubs.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class GcmCredentialArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="gcmEndpoint")
-      private final @Nullable Input<String> gcmEndpoint;
+      private final @Nullable Output<String> gcmEndpoint;
 
-    public Input<String> getGcmEndpoint() {
-        return this.gcmEndpoint == null ? Input.empty() : this.gcmEndpoint;
+    public Output<String> getGcmEndpoint() {
+        return this.gcmEndpoint == null ? Output.empty() : this.gcmEndpoint;
     }
 
     /**
@@ -34,22 +34,22 @@ public final class GcmCredentialArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="googleApiKey")
-      private final @Nullable Input<String> googleApiKey;
+      private final @Nullable Output<String> googleApiKey;
 
-    public Input<String> getGoogleApiKey() {
-        return this.googleApiKey == null ? Input.empty() : this.googleApiKey;
+    public Output<String> getGoogleApiKey() {
+        return this.googleApiKey == null ? Output.empty() : this.googleApiKey;
     }
 
     public GcmCredentialArgs(
-        @Nullable Input<String> gcmEndpoint,
-        @Nullable Input<String> googleApiKey) {
+        @Nullable Output<String> gcmEndpoint,
+        @Nullable Output<String> googleApiKey) {
         this.gcmEndpoint = gcmEndpoint;
         this.googleApiKey = googleApiKey;
     }
 
     private GcmCredentialArgs() {
-        this.gcmEndpoint = Input.empty();
-        this.googleApiKey = Input.empty();
+        this.gcmEndpoint = Output.empty();
+        this.googleApiKey = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class GcmCredentialArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> gcmEndpoint;
-        private @Nullable Input<String> googleApiKey;
+        private @Nullable Output<String> gcmEndpoint;
+        private @Nullable Output<String> googleApiKey;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class GcmCredentialArgs extends io.pulumi.resources.ResourceArgs {
     	      this.googleApiKey = defaults.googleApiKey;
         }
 
-        public Builder gcmEndpoint(@Nullable Input<String> gcmEndpoint) {
+        public Builder gcmEndpoint(@Nullable Output<String> gcmEndpoint) {
             this.gcmEndpoint = gcmEndpoint;
             return this;
         }
 
         public Builder gcmEndpoint(@Nullable String gcmEndpoint) {
-            this.gcmEndpoint = Input.ofNullable(gcmEndpoint);
+            this.gcmEndpoint = Output.ofNullable(gcmEndpoint);
             return this;
         }
 
-        public Builder googleApiKey(@Nullable Input<String> googleApiKey) {
+        public Builder googleApiKey(@Nullable Output<String> googleApiKey) {
             this.googleApiKey = googleApiKey;
             return this;
         }
 
         public Builder googleApiKey(@Nullable String googleApiKey) {
-            this.googleApiKey = Input.ofNullable(googleApiKey);
+            this.googleApiKey = Output.ofNullable(googleApiKey);
             return this;
         }
         public GcmCredentialArgs build() {

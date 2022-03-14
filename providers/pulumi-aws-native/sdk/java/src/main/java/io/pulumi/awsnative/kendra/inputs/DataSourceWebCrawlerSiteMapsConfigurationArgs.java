@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.kendra.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -15,18 +15,18 @@ public final class DataSourceWebCrawlerSiteMapsConfigurationArgs extends io.pulu
     public static final DataSourceWebCrawlerSiteMapsConfigurationArgs Empty = new DataSourceWebCrawlerSiteMapsConfigurationArgs();
 
     @InputImport(name="siteMaps", required=true)
-      private final Input<List<String>> siteMaps;
+      private final Output<List<String>> siteMaps;
 
-    public Input<List<String>> getSiteMaps() {
+    public Output<List<String>> getSiteMaps() {
         return this.siteMaps;
     }
 
-    public DataSourceWebCrawlerSiteMapsConfigurationArgs(Input<List<String>> siteMaps) {
+    public DataSourceWebCrawlerSiteMapsConfigurationArgs(Output<List<String>> siteMaps) {
         this.siteMaps = Objects.requireNonNull(siteMaps, "expected parameter 'siteMaps' to be non-null");
     }
 
     private DataSourceWebCrawlerSiteMapsConfigurationArgs() {
-        this.siteMaps = Input.empty();
+        this.siteMaps = Output.empty();
     }
 
     public static Builder builder() {
@@ -38,7 +38,7 @@ public final class DataSourceWebCrawlerSiteMapsConfigurationArgs extends io.pulu
     }
 
     public static final class Builder {
-        private Input<List<String>> siteMaps;
+        private Output<List<String>> siteMaps;
 
         public Builder() {
     	      // Empty
@@ -49,13 +49,13 @@ public final class DataSourceWebCrawlerSiteMapsConfigurationArgs extends io.pulu
     	      this.siteMaps = defaults.siteMaps;
         }
 
-        public Builder siteMaps(Input<List<String>> siteMaps) {
+        public Builder siteMaps(Output<List<String>> siteMaps) {
             this.siteMaps = Objects.requireNonNull(siteMaps);
             return this;
         }
 
         public Builder siteMaps(List<String> siteMaps) {
-            this.siteMaps = Input.of(Objects.requireNonNull(siteMaps));
+            this.siteMaps = Output.of(Objects.requireNonNull(siteMaps));
             return this;
         }
         public DataSourceWebCrawlerSiteMapsConfigurationArgs build() {

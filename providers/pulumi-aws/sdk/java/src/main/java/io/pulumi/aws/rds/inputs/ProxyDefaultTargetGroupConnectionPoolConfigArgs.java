@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.rds.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -21,10 +21,10 @@ public final class ProxyDefaultTargetGroupConnectionPoolConfigArgs extends io.pu
      * 
      */
     @InputImport(name="connectionBorrowTimeout")
-      private final @Nullable Input<Integer> connectionBorrowTimeout;
+      private final @Nullable Output<Integer> connectionBorrowTimeout;
 
-    public Input<Integer> getConnectionBorrowTimeout() {
-        return this.connectionBorrowTimeout == null ? Input.empty() : this.connectionBorrowTimeout;
+    public Output<Integer> getConnectionBorrowTimeout() {
+        return this.connectionBorrowTimeout == null ? Output.empty() : this.connectionBorrowTimeout;
     }
 
     /**
@@ -32,10 +32,10 @@ public final class ProxyDefaultTargetGroupConnectionPoolConfigArgs extends io.pu
      * 
      */
     @InputImport(name="initQuery")
-      private final @Nullable Input<String> initQuery;
+      private final @Nullable Output<String> initQuery;
 
-    public Input<String> getInitQuery() {
-        return this.initQuery == null ? Input.empty() : this.initQuery;
+    public Output<String> getInitQuery() {
+        return this.initQuery == null ? Output.empty() : this.initQuery;
     }
 
     /**
@@ -43,10 +43,10 @@ public final class ProxyDefaultTargetGroupConnectionPoolConfigArgs extends io.pu
      * 
      */
     @InputImport(name="maxConnectionsPercent")
-      private final @Nullable Input<Integer> maxConnectionsPercent;
+      private final @Nullable Output<Integer> maxConnectionsPercent;
 
-    public Input<Integer> getMaxConnectionsPercent() {
-        return this.maxConnectionsPercent == null ? Input.empty() : this.maxConnectionsPercent;
+    public Output<Integer> getMaxConnectionsPercent() {
+        return this.maxConnectionsPercent == null ? Output.empty() : this.maxConnectionsPercent;
     }
 
     /**
@@ -54,10 +54,10 @@ public final class ProxyDefaultTargetGroupConnectionPoolConfigArgs extends io.pu
      * 
      */
     @InputImport(name="maxIdleConnectionsPercent")
-      private final @Nullable Input<Integer> maxIdleConnectionsPercent;
+      private final @Nullable Output<Integer> maxIdleConnectionsPercent;
 
-    public Input<Integer> getMaxIdleConnectionsPercent() {
-        return this.maxIdleConnectionsPercent == null ? Input.empty() : this.maxIdleConnectionsPercent;
+    public Output<Integer> getMaxIdleConnectionsPercent() {
+        return this.maxIdleConnectionsPercent == null ? Output.empty() : this.maxIdleConnectionsPercent;
     }
 
     /**
@@ -65,18 +65,18 @@ public final class ProxyDefaultTargetGroupConnectionPoolConfigArgs extends io.pu
      * 
      */
     @InputImport(name="sessionPinningFilters")
-      private final @Nullable Input<List<String>> sessionPinningFilters;
+      private final @Nullable Output<List<String>> sessionPinningFilters;
 
-    public Input<List<String>> getSessionPinningFilters() {
-        return this.sessionPinningFilters == null ? Input.empty() : this.sessionPinningFilters;
+    public Output<List<String>> getSessionPinningFilters() {
+        return this.sessionPinningFilters == null ? Output.empty() : this.sessionPinningFilters;
     }
 
     public ProxyDefaultTargetGroupConnectionPoolConfigArgs(
-        @Nullable Input<Integer> connectionBorrowTimeout,
-        @Nullable Input<String> initQuery,
-        @Nullable Input<Integer> maxConnectionsPercent,
-        @Nullable Input<Integer> maxIdleConnectionsPercent,
-        @Nullable Input<List<String>> sessionPinningFilters) {
+        @Nullable Output<Integer> connectionBorrowTimeout,
+        @Nullable Output<String> initQuery,
+        @Nullable Output<Integer> maxConnectionsPercent,
+        @Nullable Output<Integer> maxIdleConnectionsPercent,
+        @Nullable Output<List<String>> sessionPinningFilters) {
         this.connectionBorrowTimeout = connectionBorrowTimeout;
         this.initQuery = initQuery;
         this.maxConnectionsPercent = maxConnectionsPercent;
@@ -85,11 +85,11 @@ public final class ProxyDefaultTargetGroupConnectionPoolConfigArgs extends io.pu
     }
 
     private ProxyDefaultTargetGroupConnectionPoolConfigArgs() {
-        this.connectionBorrowTimeout = Input.empty();
-        this.initQuery = Input.empty();
-        this.maxConnectionsPercent = Input.empty();
-        this.maxIdleConnectionsPercent = Input.empty();
-        this.sessionPinningFilters = Input.empty();
+        this.connectionBorrowTimeout = Output.empty();
+        this.initQuery = Output.empty();
+        this.maxConnectionsPercent = Output.empty();
+        this.maxIdleConnectionsPercent = Output.empty();
+        this.sessionPinningFilters = Output.empty();
     }
 
     public static Builder builder() {
@@ -101,11 +101,11 @@ public final class ProxyDefaultTargetGroupConnectionPoolConfigArgs extends io.pu
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> connectionBorrowTimeout;
-        private @Nullable Input<String> initQuery;
-        private @Nullable Input<Integer> maxConnectionsPercent;
-        private @Nullable Input<Integer> maxIdleConnectionsPercent;
-        private @Nullable Input<List<String>> sessionPinningFilters;
+        private @Nullable Output<Integer> connectionBorrowTimeout;
+        private @Nullable Output<String> initQuery;
+        private @Nullable Output<Integer> maxConnectionsPercent;
+        private @Nullable Output<Integer> maxIdleConnectionsPercent;
+        private @Nullable Output<List<String>> sessionPinningFilters;
 
         public Builder() {
     	      // Empty
@@ -120,53 +120,53 @@ public final class ProxyDefaultTargetGroupConnectionPoolConfigArgs extends io.pu
     	      this.sessionPinningFilters = defaults.sessionPinningFilters;
         }
 
-        public Builder connectionBorrowTimeout(@Nullable Input<Integer> connectionBorrowTimeout) {
+        public Builder connectionBorrowTimeout(@Nullable Output<Integer> connectionBorrowTimeout) {
             this.connectionBorrowTimeout = connectionBorrowTimeout;
             return this;
         }
 
         public Builder connectionBorrowTimeout(@Nullable Integer connectionBorrowTimeout) {
-            this.connectionBorrowTimeout = Input.ofNullable(connectionBorrowTimeout);
+            this.connectionBorrowTimeout = Output.ofNullable(connectionBorrowTimeout);
             return this;
         }
 
-        public Builder initQuery(@Nullable Input<String> initQuery) {
+        public Builder initQuery(@Nullable Output<String> initQuery) {
             this.initQuery = initQuery;
             return this;
         }
 
         public Builder initQuery(@Nullable String initQuery) {
-            this.initQuery = Input.ofNullable(initQuery);
+            this.initQuery = Output.ofNullable(initQuery);
             return this;
         }
 
-        public Builder maxConnectionsPercent(@Nullable Input<Integer> maxConnectionsPercent) {
+        public Builder maxConnectionsPercent(@Nullable Output<Integer> maxConnectionsPercent) {
             this.maxConnectionsPercent = maxConnectionsPercent;
             return this;
         }
 
         public Builder maxConnectionsPercent(@Nullable Integer maxConnectionsPercent) {
-            this.maxConnectionsPercent = Input.ofNullable(maxConnectionsPercent);
+            this.maxConnectionsPercent = Output.ofNullable(maxConnectionsPercent);
             return this;
         }
 
-        public Builder maxIdleConnectionsPercent(@Nullable Input<Integer> maxIdleConnectionsPercent) {
+        public Builder maxIdleConnectionsPercent(@Nullable Output<Integer> maxIdleConnectionsPercent) {
             this.maxIdleConnectionsPercent = maxIdleConnectionsPercent;
             return this;
         }
 
         public Builder maxIdleConnectionsPercent(@Nullable Integer maxIdleConnectionsPercent) {
-            this.maxIdleConnectionsPercent = Input.ofNullable(maxIdleConnectionsPercent);
+            this.maxIdleConnectionsPercent = Output.ofNullable(maxIdleConnectionsPercent);
             return this;
         }
 
-        public Builder sessionPinningFilters(@Nullable Input<List<String>> sessionPinningFilters) {
+        public Builder sessionPinningFilters(@Nullable Output<List<String>> sessionPinningFilters) {
             this.sessionPinningFilters = sessionPinningFilters;
             return this;
         }
 
         public Builder sessionPinningFilters(@Nullable List<String> sessionPinningFilters) {
-            this.sessionPinningFilters = Input.ofNullable(sessionPinningFilters);
+            this.sessionPinningFilters = Output.ofNullable(sessionPinningFilters);
             return this;
         }
         public ProxyDefaultTargetGroupConnectionPoolConfigArgs build() {

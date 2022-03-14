@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.iot.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -18,9 +18,9 @@ public final class TopicRuleCloudwatchAlarmArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="alarmName", required=true)
-      private final Input<String> alarmName;
+      private final Output<String> alarmName;
 
-    public Input<String> getAlarmName() {
+    public Output<String> getAlarmName() {
         return this.alarmName;
     }
 
@@ -29,9 +29,9 @@ public final class TopicRuleCloudwatchAlarmArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="roleArn", required=true)
-      private final Input<String> roleArn;
+      private final Output<String> roleArn;
 
-    public Input<String> getRoleArn() {
+    public Output<String> getRoleArn() {
         return this.roleArn;
     }
 
@@ -40,9 +40,9 @@ public final class TopicRuleCloudwatchAlarmArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="stateReason", required=true)
-      private final Input<String> stateReason;
+      private final Output<String> stateReason;
 
-    public Input<String> getStateReason() {
+    public Output<String> getStateReason() {
         return this.stateReason;
     }
 
@@ -51,17 +51,17 @@ public final class TopicRuleCloudwatchAlarmArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="stateValue", required=true)
-      private final Input<String> stateValue;
+      private final Output<String> stateValue;
 
-    public Input<String> getStateValue() {
+    public Output<String> getStateValue() {
         return this.stateValue;
     }
 
     public TopicRuleCloudwatchAlarmArgs(
-        Input<String> alarmName,
-        Input<String> roleArn,
-        Input<String> stateReason,
-        Input<String> stateValue) {
+        Output<String> alarmName,
+        Output<String> roleArn,
+        Output<String> stateReason,
+        Output<String> stateValue) {
         this.alarmName = Objects.requireNonNull(alarmName, "expected parameter 'alarmName' to be non-null");
         this.roleArn = Objects.requireNonNull(roleArn, "expected parameter 'roleArn' to be non-null");
         this.stateReason = Objects.requireNonNull(stateReason, "expected parameter 'stateReason' to be non-null");
@@ -69,10 +69,10 @@ public final class TopicRuleCloudwatchAlarmArgs extends io.pulumi.resources.Reso
     }
 
     private TopicRuleCloudwatchAlarmArgs() {
-        this.alarmName = Input.empty();
-        this.roleArn = Input.empty();
-        this.stateReason = Input.empty();
-        this.stateValue = Input.empty();
+        this.alarmName = Output.empty();
+        this.roleArn = Output.empty();
+        this.stateReason = Output.empty();
+        this.stateValue = Output.empty();
     }
 
     public static Builder builder() {
@@ -84,10 +84,10 @@ public final class TopicRuleCloudwatchAlarmArgs extends io.pulumi.resources.Reso
     }
 
     public static final class Builder {
-        private Input<String> alarmName;
-        private Input<String> roleArn;
-        private Input<String> stateReason;
-        private Input<String> stateValue;
+        private Output<String> alarmName;
+        private Output<String> roleArn;
+        private Output<String> stateReason;
+        private Output<String> stateValue;
 
         public Builder() {
     	      // Empty
@@ -101,43 +101,43 @@ public final class TopicRuleCloudwatchAlarmArgs extends io.pulumi.resources.Reso
     	      this.stateValue = defaults.stateValue;
         }
 
-        public Builder alarmName(Input<String> alarmName) {
+        public Builder alarmName(Output<String> alarmName) {
             this.alarmName = Objects.requireNonNull(alarmName);
             return this;
         }
 
         public Builder alarmName(String alarmName) {
-            this.alarmName = Input.of(Objects.requireNonNull(alarmName));
+            this.alarmName = Output.of(Objects.requireNonNull(alarmName));
             return this;
         }
 
-        public Builder roleArn(Input<String> roleArn) {
+        public Builder roleArn(Output<String> roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
 
         public Builder roleArn(String roleArn) {
-            this.roleArn = Input.of(Objects.requireNonNull(roleArn));
+            this.roleArn = Output.of(Objects.requireNonNull(roleArn));
             return this;
         }
 
-        public Builder stateReason(Input<String> stateReason) {
+        public Builder stateReason(Output<String> stateReason) {
             this.stateReason = Objects.requireNonNull(stateReason);
             return this;
         }
 
         public Builder stateReason(String stateReason) {
-            this.stateReason = Input.of(Objects.requireNonNull(stateReason));
+            this.stateReason = Output.of(Objects.requireNonNull(stateReason));
             return this;
         }
 
-        public Builder stateValue(Input<String> stateValue) {
+        public Builder stateValue(Output<String> stateValue) {
             this.stateValue = Objects.requireNonNull(stateValue);
             return this;
         }
 
         public Builder stateValue(String stateValue) {
-            this.stateValue = Input.of(Objects.requireNonNull(stateValue));
+            this.stateValue = Output.of(Objects.requireNonNull(stateValue));
             return this;
         }
         public TopicRuleCloudwatchAlarmArgs build() {

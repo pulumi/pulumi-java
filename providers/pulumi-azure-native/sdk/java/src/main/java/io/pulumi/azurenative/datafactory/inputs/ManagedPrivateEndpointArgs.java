@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datafactory.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -24,10 +24,10 @@ public final class ManagedPrivateEndpointArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="fqdns")
-      private final @Nullable Input<List<String>> fqdns;
+      private final @Nullable Output<List<String>> fqdns;
 
-    public Input<List<String>> getFqdns() {
-        return this.fqdns == null ? Input.empty() : this.fqdns;
+    public Output<List<String>> getFqdns() {
+        return this.fqdns == null ? Output.empty() : this.fqdns;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class ManagedPrivateEndpointArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="groupId")
-      private final @Nullable Input<String> groupId;
+      private final @Nullable Output<String> groupId;
 
-    public Input<String> getGroupId() {
-        return this.groupId == null ? Input.empty() : this.groupId;
+    public Output<String> getGroupId() {
+        return this.groupId == null ? Output.empty() : this.groupId;
     }
 
     /**
@@ -46,25 +46,25 @@ public final class ManagedPrivateEndpointArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="privateLinkResourceId")
-      private final @Nullable Input<String> privateLinkResourceId;
+      private final @Nullable Output<String> privateLinkResourceId;
 
-    public Input<String> getPrivateLinkResourceId() {
-        return this.privateLinkResourceId == null ? Input.empty() : this.privateLinkResourceId;
+    public Output<String> getPrivateLinkResourceId() {
+        return this.privateLinkResourceId == null ? Output.empty() : this.privateLinkResourceId;
     }
 
     public ManagedPrivateEndpointArgs(
-        @Nullable Input<List<String>> fqdns,
-        @Nullable Input<String> groupId,
-        @Nullable Input<String> privateLinkResourceId) {
+        @Nullable Output<List<String>> fqdns,
+        @Nullable Output<String> groupId,
+        @Nullable Output<String> privateLinkResourceId) {
         this.fqdns = fqdns;
         this.groupId = groupId;
         this.privateLinkResourceId = privateLinkResourceId;
     }
 
     private ManagedPrivateEndpointArgs() {
-        this.fqdns = Input.empty();
-        this.groupId = Input.empty();
-        this.privateLinkResourceId = Input.empty();
+        this.fqdns = Output.empty();
+        this.groupId = Output.empty();
+        this.privateLinkResourceId = Output.empty();
     }
 
     public static Builder builder() {
@@ -76,9 +76,9 @@ public final class ManagedPrivateEndpointArgs extends io.pulumi.resources.Resour
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> fqdns;
-        private @Nullable Input<String> groupId;
-        private @Nullable Input<String> privateLinkResourceId;
+        private @Nullable Output<List<String>> fqdns;
+        private @Nullable Output<String> groupId;
+        private @Nullable Output<String> privateLinkResourceId;
 
         public Builder() {
     	      // Empty
@@ -91,33 +91,33 @@ public final class ManagedPrivateEndpointArgs extends io.pulumi.resources.Resour
     	      this.privateLinkResourceId = defaults.privateLinkResourceId;
         }
 
-        public Builder fqdns(@Nullable Input<List<String>> fqdns) {
+        public Builder fqdns(@Nullable Output<List<String>> fqdns) {
             this.fqdns = fqdns;
             return this;
         }
 
         public Builder fqdns(@Nullable List<String> fqdns) {
-            this.fqdns = Input.ofNullable(fqdns);
+            this.fqdns = Output.ofNullable(fqdns);
             return this;
         }
 
-        public Builder groupId(@Nullable Input<String> groupId) {
+        public Builder groupId(@Nullable Output<String> groupId) {
             this.groupId = groupId;
             return this;
         }
 
         public Builder groupId(@Nullable String groupId) {
-            this.groupId = Input.ofNullable(groupId);
+            this.groupId = Output.ofNullable(groupId);
             return this;
         }
 
-        public Builder privateLinkResourceId(@Nullable Input<String> privateLinkResourceId) {
+        public Builder privateLinkResourceId(@Nullable Output<String> privateLinkResourceId) {
             this.privateLinkResourceId = privateLinkResourceId;
             return this;
         }
 
         public Builder privateLinkResourceId(@Nullable String privateLinkResourceId) {
-            this.privateLinkResourceId = Input.ofNullable(privateLinkResourceId);
+            this.privateLinkResourceId = Output.ofNullable(privateLinkResourceId);
             return this;
         }
         public ManagedPrivateEndpointArgs build() {

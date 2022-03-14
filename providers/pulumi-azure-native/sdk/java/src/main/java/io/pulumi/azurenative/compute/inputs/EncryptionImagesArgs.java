@@ -5,7 +5,7 @@ package io.pulumi.azurenative.compute.inputs;
 
 import io.pulumi.azurenative.compute.inputs.DataDiskImageEncryptionArgs;
 import io.pulumi.azurenative.compute.inputs.OSDiskImageEncryptionArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
@@ -25,10 +25,10 @@ public final class EncryptionImagesArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="dataDiskImages")
-      private final @Nullable Input<List<DataDiskImageEncryptionArgs>> dataDiskImages;
+      private final @Nullable Output<List<DataDiskImageEncryptionArgs>> dataDiskImages;
 
-    public Input<List<DataDiskImageEncryptionArgs>> getDataDiskImages() {
-        return this.dataDiskImages == null ? Input.empty() : this.dataDiskImages;
+    public Output<List<DataDiskImageEncryptionArgs>> getDataDiskImages() {
+        return this.dataDiskImages == null ? Output.empty() : this.dataDiskImages;
     }
 
     /**
@@ -36,22 +36,22 @@ public final class EncryptionImagesArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="osDiskImage")
-      private final @Nullable Input<OSDiskImageEncryptionArgs> osDiskImage;
+      private final @Nullable Output<OSDiskImageEncryptionArgs> osDiskImage;
 
-    public Input<OSDiskImageEncryptionArgs> getOsDiskImage() {
-        return this.osDiskImage == null ? Input.empty() : this.osDiskImage;
+    public Output<OSDiskImageEncryptionArgs> getOsDiskImage() {
+        return this.osDiskImage == null ? Output.empty() : this.osDiskImage;
     }
 
     public EncryptionImagesArgs(
-        @Nullable Input<List<DataDiskImageEncryptionArgs>> dataDiskImages,
-        @Nullable Input<OSDiskImageEncryptionArgs> osDiskImage) {
+        @Nullable Output<List<DataDiskImageEncryptionArgs>> dataDiskImages,
+        @Nullable Output<OSDiskImageEncryptionArgs> osDiskImage) {
         this.dataDiskImages = dataDiskImages;
         this.osDiskImage = osDiskImage;
     }
 
     private EncryptionImagesArgs() {
-        this.dataDiskImages = Input.empty();
-        this.osDiskImage = Input.empty();
+        this.dataDiskImages = Output.empty();
+        this.osDiskImage = Output.empty();
     }
 
     public static Builder builder() {
@@ -63,8 +63,8 @@ public final class EncryptionImagesArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private @Nullable Input<List<DataDiskImageEncryptionArgs>> dataDiskImages;
-        private @Nullable Input<OSDiskImageEncryptionArgs> osDiskImage;
+        private @Nullable Output<List<DataDiskImageEncryptionArgs>> dataDiskImages;
+        private @Nullable Output<OSDiskImageEncryptionArgs> osDiskImage;
 
         public Builder() {
     	      // Empty
@@ -76,23 +76,23 @@ public final class EncryptionImagesArgs extends io.pulumi.resources.ResourceArgs
     	      this.osDiskImage = defaults.osDiskImage;
         }
 
-        public Builder dataDiskImages(@Nullable Input<List<DataDiskImageEncryptionArgs>> dataDiskImages) {
+        public Builder dataDiskImages(@Nullable Output<List<DataDiskImageEncryptionArgs>> dataDiskImages) {
             this.dataDiskImages = dataDiskImages;
             return this;
         }
 
         public Builder dataDiskImages(@Nullable List<DataDiskImageEncryptionArgs> dataDiskImages) {
-            this.dataDiskImages = Input.ofNullable(dataDiskImages);
+            this.dataDiskImages = Output.ofNullable(dataDiskImages);
             return this;
         }
 
-        public Builder osDiskImage(@Nullable Input<OSDiskImageEncryptionArgs> osDiskImage) {
+        public Builder osDiskImage(@Nullable Output<OSDiskImageEncryptionArgs> osDiskImage) {
             this.osDiskImage = osDiskImage;
             return this;
         }
 
         public Builder osDiskImage(@Nullable OSDiskImageEncryptionArgs osDiskImage) {
-            this.osDiskImage = Input.ofNullable(osDiskImage);
+            this.osDiskImage = Output.ofNullable(osDiskImage);
             return this;
         }
         public EncryptionImagesArgs build() {

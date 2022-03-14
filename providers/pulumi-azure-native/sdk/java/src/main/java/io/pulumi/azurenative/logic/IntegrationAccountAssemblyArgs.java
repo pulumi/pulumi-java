@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.logic;
 
 import io.pulumi.azurenative.logic.inputs.AssemblyPropertiesArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -21,10 +21,10 @@ public final class IntegrationAccountAssemblyArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="assemblyArtifactName")
-      private final @Nullable Input<String> assemblyArtifactName;
+      private final @Nullable Output<String> assemblyArtifactName;
 
-    public Input<String> getAssemblyArtifactName() {
-        return this.assemblyArtifactName == null ? Input.empty() : this.assemblyArtifactName;
+    public Output<String> getAssemblyArtifactName() {
+        return this.assemblyArtifactName == null ? Output.empty() : this.assemblyArtifactName;
     }
 
     /**
@@ -32,9 +32,9 @@ public final class IntegrationAccountAssemblyArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="integrationAccountName", required=true)
-      private final Input<String> integrationAccountName;
+      private final Output<String> integrationAccountName;
 
-    public Input<String> getIntegrationAccountName() {
+    public Output<String> getIntegrationAccountName() {
         return this.integrationAccountName;
     }
 
@@ -43,10 +43,10 @@ public final class IntegrationAccountAssemblyArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -54,9 +54,9 @@ public final class IntegrationAccountAssemblyArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="properties", required=true)
-      private final Input<AssemblyPropertiesArgs> properties;
+      private final Output<AssemblyPropertiesArgs> properties;
 
-    public Input<AssemblyPropertiesArgs> getProperties() {
+    public Output<AssemblyPropertiesArgs> getProperties() {
         return this.properties;
     }
 
@@ -65,9 +65,9 @@ public final class IntegrationAccountAssemblyArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -76,19 +76,19 @@ public final class IntegrationAccountAssemblyArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public IntegrationAccountAssemblyArgs(
-        @Nullable Input<String> assemblyArtifactName,
-        Input<String> integrationAccountName,
-        @Nullable Input<String> location,
-        Input<AssemblyPropertiesArgs> properties,
-        Input<String> resourceGroupName,
-        @Nullable Input<Map<String,String>> tags) {
+        @Nullable Output<String> assemblyArtifactName,
+        Output<String> integrationAccountName,
+        @Nullable Output<String> location,
+        Output<AssemblyPropertiesArgs> properties,
+        Output<String> resourceGroupName,
+        @Nullable Output<Map<String,String>> tags) {
         this.assemblyArtifactName = assemblyArtifactName;
         this.integrationAccountName = Objects.requireNonNull(integrationAccountName, "expected parameter 'integrationAccountName' to be non-null");
         this.location = location;
@@ -98,12 +98,12 @@ public final class IntegrationAccountAssemblyArgs extends io.pulumi.resources.Re
     }
 
     private IntegrationAccountAssemblyArgs() {
-        this.assemblyArtifactName = Input.empty();
-        this.integrationAccountName = Input.empty();
-        this.location = Input.empty();
-        this.properties = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.tags = Input.empty();
+        this.assemblyArtifactName = Output.empty();
+        this.integrationAccountName = Output.empty();
+        this.location = Output.empty();
+        this.properties = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -115,12 +115,12 @@ public final class IntegrationAccountAssemblyArgs extends io.pulumi.resources.Re
     }
 
     public static final class Builder {
-        private @Nullable Input<String> assemblyArtifactName;
-        private Input<String> integrationAccountName;
-        private @Nullable Input<String> location;
-        private Input<AssemblyPropertiesArgs> properties;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<Map<String,String>> tags;
+        private @Nullable Output<String> assemblyArtifactName;
+        private Output<String> integrationAccountName;
+        private @Nullable Output<String> location;
+        private Output<AssemblyPropertiesArgs> properties;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<Map<String,String>> tags;
 
         public Builder() {
     	      // Empty
@@ -136,63 +136,63 @@ public final class IntegrationAccountAssemblyArgs extends io.pulumi.resources.Re
     	      this.tags = defaults.tags;
         }
 
-        public Builder assemblyArtifactName(@Nullable Input<String> assemblyArtifactName) {
+        public Builder assemblyArtifactName(@Nullable Output<String> assemblyArtifactName) {
             this.assemblyArtifactName = assemblyArtifactName;
             return this;
         }
 
         public Builder assemblyArtifactName(@Nullable String assemblyArtifactName) {
-            this.assemblyArtifactName = Input.ofNullable(assemblyArtifactName);
+            this.assemblyArtifactName = Output.ofNullable(assemblyArtifactName);
             return this;
         }
 
-        public Builder integrationAccountName(Input<String> integrationAccountName) {
+        public Builder integrationAccountName(Output<String> integrationAccountName) {
             this.integrationAccountName = Objects.requireNonNull(integrationAccountName);
             return this;
         }
 
         public Builder integrationAccountName(String integrationAccountName) {
-            this.integrationAccountName = Input.of(Objects.requireNonNull(integrationAccountName));
+            this.integrationAccountName = Output.of(Objects.requireNonNull(integrationAccountName));
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder properties(Input<AssemblyPropertiesArgs> properties) {
+        public Builder properties(Output<AssemblyPropertiesArgs> properties) {
             this.properties = Objects.requireNonNull(properties);
             return this;
         }
 
         public Builder properties(AssemblyPropertiesArgs properties) {
-            this.properties = Input.of(Objects.requireNonNull(properties));
+            this.properties = Output.of(Objects.requireNonNull(properties));
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public IntegrationAccountAssemblyArgs build() {

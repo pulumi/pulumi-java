@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.ssmcontacts.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -23,9 +23,9 @@ public final class ContactChannelTargetInfoArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="channelId", required=true)
-      private final Input<String> channelId;
+      private final Output<String> channelId;
 
-    public Input<String> getChannelId() {
+    public Output<String> getChannelId() {
         return this.channelId;
     }
 
@@ -34,22 +34,22 @@ public final class ContactChannelTargetInfoArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="retryIntervalInMinutes", required=true)
-      private final Input<Integer> retryIntervalInMinutes;
+      private final Output<Integer> retryIntervalInMinutes;
 
-    public Input<Integer> getRetryIntervalInMinutes() {
+    public Output<Integer> getRetryIntervalInMinutes() {
         return this.retryIntervalInMinutes;
     }
 
     public ContactChannelTargetInfoArgs(
-        Input<String> channelId,
-        Input<Integer> retryIntervalInMinutes) {
+        Output<String> channelId,
+        Output<Integer> retryIntervalInMinutes) {
         this.channelId = Objects.requireNonNull(channelId, "expected parameter 'channelId' to be non-null");
         this.retryIntervalInMinutes = Objects.requireNonNull(retryIntervalInMinutes, "expected parameter 'retryIntervalInMinutes' to be non-null");
     }
 
     private ContactChannelTargetInfoArgs() {
-        this.channelId = Input.empty();
-        this.retryIntervalInMinutes = Input.empty();
+        this.channelId = Output.empty();
+        this.retryIntervalInMinutes = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class ContactChannelTargetInfoArgs extends io.pulumi.resources.Reso
     }
 
     public static final class Builder {
-        private Input<String> channelId;
-        private Input<Integer> retryIntervalInMinutes;
+        private Output<String> channelId;
+        private Output<Integer> retryIntervalInMinutes;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class ContactChannelTargetInfoArgs extends io.pulumi.resources.Reso
     	      this.retryIntervalInMinutes = defaults.retryIntervalInMinutes;
         }
 
-        public Builder channelId(Input<String> channelId) {
+        public Builder channelId(Output<String> channelId) {
             this.channelId = Objects.requireNonNull(channelId);
             return this;
         }
 
         public Builder channelId(String channelId) {
-            this.channelId = Input.of(Objects.requireNonNull(channelId));
+            this.channelId = Output.of(Objects.requireNonNull(channelId));
             return this;
         }
 
-        public Builder retryIntervalInMinutes(Input<Integer> retryIntervalInMinutes) {
+        public Builder retryIntervalInMinutes(Output<Integer> retryIntervalInMinutes) {
             this.retryIntervalInMinutes = Objects.requireNonNull(retryIntervalInMinutes);
             return this;
         }
 
         public Builder retryIntervalInMinutes(Integer retryIntervalInMinutes) {
-            this.retryIntervalInMinutes = Input.of(Objects.requireNonNull(retryIntervalInMinutes));
+            this.retryIntervalInMinutes = Output.of(Objects.requireNonNull(retryIntervalInMinutes));
             return this;
         }
         public ContactChannelTargetInfoArgs build() {

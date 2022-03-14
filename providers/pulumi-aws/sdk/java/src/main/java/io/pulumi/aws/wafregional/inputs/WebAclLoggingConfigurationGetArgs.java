@@ -4,7 +4,7 @@
 package io.pulumi.aws.wafregional.inputs;
 
 import io.pulumi.aws.wafregional.inputs.WebAclLoggingConfigurationRedactedFieldsGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -20,9 +20,9 @@ public final class WebAclLoggingConfigurationGetArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="logDestination", required=true)
-      private final Input<String> logDestination;
+      private final Output<String> logDestination;
 
-    public Input<String> getLogDestination() {
+    public Output<String> getLogDestination() {
         return this.logDestination;
     }
 
@@ -31,22 +31,22 @@ public final class WebAclLoggingConfigurationGetArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="redactedFields")
-      private final @Nullable Input<WebAclLoggingConfigurationRedactedFieldsGetArgs> redactedFields;
+      private final @Nullable Output<WebAclLoggingConfigurationRedactedFieldsGetArgs> redactedFields;
 
-    public Input<WebAclLoggingConfigurationRedactedFieldsGetArgs> getRedactedFields() {
-        return this.redactedFields == null ? Input.empty() : this.redactedFields;
+    public Output<WebAclLoggingConfigurationRedactedFieldsGetArgs> getRedactedFields() {
+        return this.redactedFields == null ? Output.empty() : this.redactedFields;
     }
 
     public WebAclLoggingConfigurationGetArgs(
-        Input<String> logDestination,
-        @Nullable Input<WebAclLoggingConfigurationRedactedFieldsGetArgs> redactedFields) {
+        Output<String> logDestination,
+        @Nullable Output<WebAclLoggingConfigurationRedactedFieldsGetArgs> redactedFields) {
         this.logDestination = Objects.requireNonNull(logDestination, "expected parameter 'logDestination' to be non-null");
         this.redactedFields = redactedFields;
     }
 
     private WebAclLoggingConfigurationGetArgs() {
-        this.logDestination = Input.empty();
-        this.redactedFields = Input.empty();
+        this.logDestination = Output.empty();
+        this.redactedFields = Output.empty();
     }
 
     public static Builder builder() {
@@ -58,8 +58,8 @@ public final class WebAclLoggingConfigurationGetArgs extends io.pulumi.resources
     }
 
     public static final class Builder {
-        private Input<String> logDestination;
-        private @Nullable Input<WebAclLoggingConfigurationRedactedFieldsGetArgs> redactedFields;
+        private Output<String> logDestination;
+        private @Nullable Output<WebAclLoggingConfigurationRedactedFieldsGetArgs> redactedFields;
 
         public Builder() {
     	      // Empty
@@ -71,23 +71,23 @@ public final class WebAclLoggingConfigurationGetArgs extends io.pulumi.resources
     	      this.redactedFields = defaults.redactedFields;
         }
 
-        public Builder logDestination(Input<String> logDestination) {
+        public Builder logDestination(Output<String> logDestination) {
             this.logDestination = Objects.requireNonNull(logDestination);
             return this;
         }
 
         public Builder logDestination(String logDestination) {
-            this.logDestination = Input.of(Objects.requireNonNull(logDestination));
+            this.logDestination = Output.of(Objects.requireNonNull(logDestination));
             return this;
         }
 
-        public Builder redactedFields(@Nullable Input<WebAclLoggingConfigurationRedactedFieldsGetArgs> redactedFields) {
+        public Builder redactedFields(@Nullable Output<WebAclLoggingConfigurationRedactedFieldsGetArgs> redactedFields) {
             this.redactedFields = redactedFields;
             return this;
         }
 
         public Builder redactedFields(@Nullable WebAclLoggingConfigurationRedactedFieldsGetArgs redactedFields) {
-            this.redactedFields = Input.ofNullable(redactedFields);
+            this.redactedFields = Output.ofNullable(redactedFields);
             return this;
         }
         public WebAclLoggingConfigurationGetArgs build() {

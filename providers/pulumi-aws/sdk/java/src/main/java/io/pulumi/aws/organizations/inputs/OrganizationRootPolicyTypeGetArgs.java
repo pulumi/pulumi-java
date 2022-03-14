@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.organizations.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,29 +19,29 @@ public final class OrganizationRootPolicyTypeGetArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="status")
-      private final @Nullable Input<String> status;
+      private final @Nullable Output<String> status;
 
-    public Input<String> getStatus() {
-        return this.status == null ? Input.empty() : this.status;
+    public Output<String> getStatus() {
+        return this.status == null ? Output.empty() : this.status;
     }
 
     @InputImport(name="type")
-      private final @Nullable Input<String> type;
+      private final @Nullable Output<String> type;
 
-    public Input<String> getType() {
-        return this.type == null ? Input.empty() : this.type;
+    public Output<String> getType() {
+        return this.type == null ? Output.empty() : this.type;
     }
 
     public OrganizationRootPolicyTypeGetArgs(
-        @Nullable Input<String> status,
-        @Nullable Input<String> type) {
+        @Nullable Output<String> status,
+        @Nullable Output<String> type) {
         this.status = status;
         this.type = type;
     }
 
     private OrganizationRootPolicyTypeGetArgs() {
-        this.status = Input.empty();
-        this.type = Input.empty();
+        this.status = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -53,8 +53,8 @@ public final class OrganizationRootPolicyTypeGetArgs extends io.pulumi.resources
     }
 
     public static final class Builder {
-        private @Nullable Input<String> status;
-        private @Nullable Input<String> type;
+        private @Nullable Output<String> status;
+        private @Nullable Output<String> type;
 
         public Builder() {
     	      // Empty
@@ -66,23 +66,23 @@ public final class OrganizationRootPolicyTypeGetArgs extends io.pulumi.resources
     	      this.type = defaults.type;
         }
 
-        public Builder status(@Nullable Input<String> status) {
+        public Builder status(@Nullable Output<String> status) {
             this.status = status;
             return this;
         }
 
         public Builder status(@Nullable String status) {
-            this.status = Input.ofNullable(status);
+            this.status = Output.ofNullable(status);
             return this;
         }
 
-        public Builder type(@Nullable Input<String> type) {
+        public Builder type(@Nullable Output<String> type) {
             this.type = type;
             return this;
         }
 
         public Builder type(@Nullable String type) {
-            this.type = Input.ofNullable(type);
+            this.type = Output.ofNullable(type);
             return this;
         }
         public OrganizationRootPolicyTypeGetArgs build() {

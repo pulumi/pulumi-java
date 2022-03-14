@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.ec2.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,18 +19,18 @@ public final class SpotInstanceRequestCreditSpecificationArgs extends io.pulumi.
      * 
      */
     @InputImport(name="cpuCredits")
-      private final @Nullable Input<String> cpuCredits;
+      private final @Nullable Output<String> cpuCredits;
 
-    public Input<String> getCpuCredits() {
-        return this.cpuCredits == null ? Input.empty() : this.cpuCredits;
+    public Output<String> getCpuCredits() {
+        return this.cpuCredits == null ? Output.empty() : this.cpuCredits;
     }
 
-    public SpotInstanceRequestCreditSpecificationArgs(@Nullable Input<String> cpuCredits) {
+    public SpotInstanceRequestCreditSpecificationArgs(@Nullable Output<String> cpuCredits) {
         this.cpuCredits = cpuCredits;
     }
 
     private SpotInstanceRequestCreditSpecificationArgs() {
-        this.cpuCredits = Input.empty();
+        this.cpuCredits = Output.empty();
     }
 
     public static Builder builder() {
@@ -42,7 +42,7 @@ public final class SpotInstanceRequestCreditSpecificationArgs extends io.pulumi.
     }
 
     public static final class Builder {
-        private @Nullable Input<String> cpuCredits;
+        private @Nullable Output<String> cpuCredits;
 
         public Builder() {
     	      // Empty
@@ -53,13 +53,13 @@ public final class SpotInstanceRequestCreditSpecificationArgs extends io.pulumi.
     	      this.cpuCredits = defaults.cpuCredits;
         }
 
-        public Builder cpuCredits(@Nullable Input<String> cpuCredits) {
+        public Builder cpuCredits(@Nullable Output<String> cpuCredits) {
             this.cpuCredits = cpuCredits;
             return this;
         }
 
         public Builder cpuCredits(@Nullable String cpuCredits) {
-            this.cpuCredits = Input.ofNullable(cpuCredits);
+            this.cpuCredits = Output.ofNullable(cpuCredits);
             return this;
         }
         public SpotInstanceRequestCreditSpecificationArgs build() {

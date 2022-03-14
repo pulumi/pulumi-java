@@ -7,7 +7,7 @@ import io.pulumi.aws.appmesh.inputs.VirtualGatewaySpecListenerConnectionPoolArgs
 import io.pulumi.aws.appmesh.inputs.VirtualGatewaySpecListenerHealthCheckArgs;
 import io.pulumi.aws.appmesh.inputs.VirtualGatewaySpecListenerPortMappingArgs;
 import io.pulumi.aws.appmesh.inputs.VirtualGatewaySpecListenerTlsArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,10 +22,10 @@ public final class VirtualGatewaySpecListenerArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="connectionPool")
-      private final @Nullable Input<VirtualGatewaySpecListenerConnectionPoolArgs> connectionPool;
+      private final @Nullable Output<VirtualGatewaySpecListenerConnectionPoolArgs> connectionPool;
 
-    public Input<VirtualGatewaySpecListenerConnectionPoolArgs> getConnectionPool() {
-        return this.connectionPool == null ? Input.empty() : this.connectionPool;
+    public Output<VirtualGatewaySpecListenerConnectionPoolArgs> getConnectionPool() {
+        return this.connectionPool == null ? Output.empty() : this.connectionPool;
     }
 
     /**
@@ -33,10 +33,10 @@ public final class VirtualGatewaySpecListenerArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="healthCheck")
-      private final @Nullable Input<VirtualGatewaySpecListenerHealthCheckArgs> healthCheck;
+      private final @Nullable Output<VirtualGatewaySpecListenerHealthCheckArgs> healthCheck;
 
-    public Input<VirtualGatewaySpecListenerHealthCheckArgs> getHealthCheck() {
-        return this.healthCheck == null ? Input.empty() : this.healthCheck;
+    public Output<VirtualGatewaySpecListenerHealthCheckArgs> getHealthCheck() {
+        return this.healthCheck == null ? Output.empty() : this.healthCheck;
     }
 
     /**
@@ -44,9 +44,9 @@ public final class VirtualGatewaySpecListenerArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="portMapping", required=true)
-      private final Input<VirtualGatewaySpecListenerPortMappingArgs> portMapping;
+      private final Output<VirtualGatewaySpecListenerPortMappingArgs> portMapping;
 
-    public Input<VirtualGatewaySpecListenerPortMappingArgs> getPortMapping() {
+    public Output<VirtualGatewaySpecListenerPortMappingArgs> getPortMapping() {
         return this.portMapping;
     }
 
@@ -55,17 +55,17 @@ public final class VirtualGatewaySpecListenerArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="tls")
-      private final @Nullable Input<VirtualGatewaySpecListenerTlsArgs> tls;
+      private final @Nullable Output<VirtualGatewaySpecListenerTlsArgs> tls;
 
-    public Input<VirtualGatewaySpecListenerTlsArgs> getTls() {
-        return this.tls == null ? Input.empty() : this.tls;
+    public Output<VirtualGatewaySpecListenerTlsArgs> getTls() {
+        return this.tls == null ? Output.empty() : this.tls;
     }
 
     public VirtualGatewaySpecListenerArgs(
-        @Nullable Input<VirtualGatewaySpecListenerConnectionPoolArgs> connectionPool,
-        @Nullable Input<VirtualGatewaySpecListenerHealthCheckArgs> healthCheck,
-        Input<VirtualGatewaySpecListenerPortMappingArgs> portMapping,
-        @Nullable Input<VirtualGatewaySpecListenerTlsArgs> tls) {
+        @Nullable Output<VirtualGatewaySpecListenerConnectionPoolArgs> connectionPool,
+        @Nullable Output<VirtualGatewaySpecListenerHealthCheckArgs> healthCheck,
+        Output<VirtualGatewaySpecListenerPortMappingArgs> portMapping,
+        @Nullable Output<VirtualGatewaySpecListenerTlsArgs> tls) {
         this.connectionPool = connectionPool;
         this.healthCheck = healthCheck;
         this.portMapping = Objects.requireNonNull(portMapping, "expected parameter 'portMapping' to be non-null");
@@ -73,10 +73,10 @@ public final class VirtualGatewaySpecListenerArgs extends io.pulumi.resources.Re
     }
 
     private VirtualGatewaySpecListenerArgs() {
-        this.connectionPool = Input.empty();
-        this.healthCheck = Input.empty();
-        this.portMapping = Input.empty();
-        this.tls = Input.empty();
+        this.connectionPool = Output.empty();
+        this.healthCheck = Output.empty();
+        this.portMapping = Output.empty();
+        this.tls = Output.empty();
     }
 
     public static Builder builder() {
@@ -88,10 +88,10 @@ public final class VirtualGatewaySpecListenerArgs extends io.pulumi.resources.Re
     }
 
     public static final class Builder {
-        private @Nullable Input<VirtualGatewaySpecListenerConnectionPoolArgs> connectionPool;
-        private @Nullable Input<VirtualGatewaySpecListenerHealthCheckArgs> healthCheck;
-        private Input<VirtualGatewaySpecListenerPortMappingArgs> portMapping;
-        private @Nullable Input<VirtualGatewaySpecListenerTlsArgs> tls;
+        private @Nullable Output<VirtualGatewaySpecListenerConnectionPoolArgs> connectionPool;
+        private @Nullable Output<VirtualGatewaySpecListenerHealthCheckArgs> healthCheck;
+        private Output<VirtualGatewaySpecListenerPortMappingArgs> portMapping;
+        private @Nullable Output<VirtualGatewaySpecListenerTlsArgs> tls;
 
         public Builder() {
     	      // Empty
@@ -105,43 +105,43 @@ public final class VirtualGatewaySpecListenerArgs extends io.pulumi.resources.Re
     	      this.tls = defaults.tls;
         }
 
-        public Builder connectionPool(@Nullable Input<VirtualGatewaySpecListenerConnectionPoolArgs> connectionPool) {
+        public Builder connectionPool(@Nullable Output<VirtualGatewaySpecListenerConnectionPoolArgs> connectionPool) {
             this.connectionPool = connectionPool;
             return this;
         }
 
         public Builder connectionPool(@Nullable VirtualGatewaySpecListenerConnectionPoolArgs connectionPool) {
-            this.connectionPool = Input.ofNullable(connectionPool);
+            this.connectionPool = Output.ofNullable(connectionPool);
             return this;
         }
 
-        public Builder healthCheck(@Nullable Input<VirtualGatewaySpecListenerHealthCheckArgs> healthCheck) {
+        public Builder healthCheck(@Nullable Output<VirtualGatewaySpecListenerHealthCheckArgs> healthCheck) {
             this.healthCheck = healthCheck;
             return this;
         }
 
         public Builder healthCheck(@Nullable VirtualGatewaySpecListenerHealthCheckArgs healthCheck) {
-            this.healthCheck = Input.ofNullable(healthCheck);
+            this.healthCheck = Output.ofNullable(healthCheck);
             return this;
         }
 
-        public Builder portMapping(Input<VirtualGatewaySpecListenerPortMappingArgs> portMapping) {
+        public Builder portMapping(Output<VirtualGatewaySpecListenerPortMappingArgs> portMapping) {
             this.portMapping = Objects.requireNonNull(portMapping);
             return this;
         }
 
         public Builder portMapping(VirtualGatewaySpecListenerPortMappingArgs portMapping) {
-            this.portMapping = Input.of(Objects.requireNonNull(portMapping));
+            this.portMapping = Output.of(Objects.requireNonNull(portMapping));
             return this;
         }
 
-        public Builder tls(@Nullable Input<VirtualGatewaySpecListenerTlsArgs> tls) {
+        public Builder tls(@Nullable Output<VirtualGatewaySpecListenerTlsArgs> tls) {
             this.tls = tls;
             return this;
         }
 
         public Builder tls(@Nullable VirtualGatewaySpecListenerTlsArgs tls) {
-            this.tls = Input.ofNullable(tls);
+            this.tls = Output.ofNullable(tls);
             return this;
         }
         public VirtualGatewaySpecListenerArgs build() {

@@ -7,7 +7,7 @@ import io.pulumi.azurenative.storsimple.enums.BackupType;
 import io.pulumi.azurenative.storsimple.enums.Kind;
 import io.pulumi.azurenative.storsimple.enums.ScheduleStatus;
 import io.pulumi.azurenative.storsimple.inputs.ScheduleRecurrenceArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.String;
@@ -24,9 +24,9 @@ public final class BackupScheduleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="backupPolicyName", required=true)
-      private final Input<String> backupPolicyName;
+      private final Output<String> backupPolicyName;
 
-    public Input<String> getBackupPolicyName() {
+    public Output<String> getBackupPolicyName() {
         return this.backupPolicyName;
     }
 
@@ -35,10 +35,10 @@ public final class BackupScheduleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="backupScheduleName")
-      private final @Nullable Input<String> backupScheduleName;
+      private final @Nullable Output<String> backupScheduleName;
 
-    public Input<String> getBackupScheduleName() {
-        return this.backupScheduleName == null ? Input.empty() : this.backupScheduleName;
+    public Output<String> getBackupScheduleName() {
+        return this.backupScheduleName == null ? Output.empty() : this.backupScheduleName;
     }
 
     /**
@@ -46,9 +46,9 @@ public final class BackupScheduleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="backupType", required=true)
-      private final Input<BackupType> backupType;
+      private final Output<BackupType> backupType;
 
-    public Input<BackupType> getBackupType() {
+    public Output<BackupType> getBackupType() {
         return this.backupType;
     }
 
@@ -57,9 +57,9 @@ public final class BackupScheduleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="deviceName", required=true)
-      private final Input<String> deviceName;
+      private final Output<String> deviceName;
 
-    public Input<String> getDeviceName() {
+    public Output<String> getDeviceName() {
         return this.deviceName;
     }
 
@@ -68,10 +68,10 @@ public final class BackupScheduleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kind")
-      private final @Nullable Input<Kind> kind;
+      private final @Nullable Output<Kind> kind;
 
-    public Input<Kind> getKind() {
-        return this.kind == null ? Input.empty() : this.kind;
+    public Output<Kind> getKind() {
+        return this.kind == null ? Output.empty() : this.kind;
     }
 
     /**
@@ -79,9 +79,9 @@ public final class BackupScheduleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="managerName", required=true)
-      private final Input<String> managerName;
+      private final Output<String> managerName;
 
-    public Input<String> getManagerName() {
+    public Output<String> getManagerName() {
         return this.managerName;
     }
 
@@ -90,9 +90,9 @@ public final class BackupScheduleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -101,9 +101,9 @@ public final class BackupScheduleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="retentionCount", required=true)
-      private final Input<Double> retentionCount;
+      private final Output<Double> retentionCount;
 
-    public Input<Double> getRetentionCount() {
+    public Output<Double> getRetentionCount() {
         return this.retentionCount;
     }
 
@@ -112,9 +112,9 @@ public final class BackupScheduleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="scheduleRecurrence", required=true)
-      private final Input<ScheduleRecurrenceArgs> scheduleRecurrence;
+      private final Output<ScheduleRecurrenceArgs> scheduleRecurrence;
 
-    public Input<ScheduleRecurrenceArgs> getScheduleRecurrence() {
+    public Output<ScheduleRecurrenceArgs> getScheduleRecurrence() {
         return this.scheduleRecurrence;
     }
 
@@ -123,9 +123,9 @@ public final class BackupScheduleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="scheduleStatus", required=true)
-      private final Input<ScheduleStatus> scheduleStatus;
+      private final Output<ScheduleStatus> scheduleStatus;
 
-    public Input<ScheduleStatus> getScheduleStatus() {
+    public Output<ScheduleStatus> getScheduleStatus() {
         return this.scheduleStatus;
     }
 
@@ -134,24 +134,24 @@ public final class BackupScheduleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="startTime", required=true)
-      private final Input<String> startTime;
+      private final Output<String> startTime;
 
-    public Input<String> getStartTime() {
+    public Output<String> getStartTime() {
         return this.startTime;
     }
 
     public BackupScheduleArgs(
-        Input<String> backupPolicyName,
-        @Nullable Input<String> backupScheduleName,
-        Input<BackupType> backupType,
-        Input<String> deviceName,
-        @Nullable Input<Kind> kind,
-        Input<String> managerName,
-        Input<String> resourceGroupName,
-        Input<Double> retentionCount,
-        Input<ScheduleRecurrenceArgs> scheduleRecurrence,
-        Input<ScheduleStatus> scheduleStatus,
-        Input<String> startTime) {
+        Output<String> backupPolicyName,
+        @Nullable Output<String> backupScheduleName,
+        Output<BackupType> backupType,
+        Output<String> deviceName,
+        @Nullable Output<Kind> kind,
+        Output<String> managerName,
+        Output<String> resourceGroupName,
+        Output<Double> retentionCount,
+        Output<ScheduleRecurrenceArgs> scheduleRecurrence,
+        Output<ScheduleStatus> scheduleStatus,
+        Output<String> startTime) {
         this.backupPolicyName = Objects.requireNonNull(backupPolicyName, "expected parameter 'backupPolicyName' to be non-null");
         this.backupScheduleName = backupScheduleName;
         this.backupType = Objects.requireNonNull(backupType, "expected parameter 'backupType' to be non-null");
@@ -166,17 +166,17 @@ public final class BackupScheduleArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private BackupScheduleArgs() {
-        this.backupPolicyName = Input.empty();
-        this.backupScheduleName = Input.empty();
-        this.backupType = Input.empty();
-        this.deviceName = Input.empty();
-        this.kind = Input.empty();
-        this.managerName = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.retentionCount = Input.empty();
-        this.scheduleRecurrence = Input.empty();
-        this.scheduleStatus = Input.empty();
-        this.startTime = Input.empty();
+        this.backupPolicyName = Output.empty();
+        this.backupScheduleName = Output.empty();
+        this.backupType = Output.empty();
+        this.deviceName = Output.empty();
+        this.kind = Output.empty();
+        this.managerName = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.retentionCount = Output.empty();
+        this.scheduleRecurrence = Output.empty();
+        this.scheduleStatus = Output.empty();
+        this.startTime = Output.empty();
     }
 
     public static Builder builder() {
@@ -188,17 +188,17 @@ public final class BackupScheduleArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> backupPolicyName;
-        private @Nullable Input<String> backupScheduleName;
-        private Input<BackupType> backupType;
-        private Input<String> deviceName;
-        private @Nullable Input<Kind> kind;
-        private Input<String> managerName;
-        private Input<String> resourceGroupName;
-        private Input<Double> retentionCount;
-        private Input<ScheduleRecurrenceArgs> scheduleRecurrence;
-        private Input<ScheduleStatus> scheduleStatus;
-        private Input<String> startTime;
+        private Output<String> backupPolicyName;
+        private @Nullable Output<String> backupScheduleName;
+        private Output<BackupType> backupType;
+        private Output<String> deviceName;
+        private @Nullable Output<Kind> kind;
+        private Output<String> managerName;
+        private Output<String> resourceGroupName;
+        private Output<Double> retentionCount;
+        private Output<ScheduleRecurrenceArgs> scheduleRecurrence;
+        private Output<ScheduleStatus> scheduleStatus;
+        private Output<String> startTime;
 
         public Builder() {
     	      // Empty
@@ -219,113 +219,113 @@ public final class BackupScheduleArgs extends io.pulumi.resources.ResourceArgs {
     	      this.startTime = defaults.startTime;
         }
 
-        public Builder backupPolicyName(Input<String> backupPolicyName) {
+        public Builder backupPolicyName(Output<String> backupPolicyName) {
             this.backupPolicyName = Objects.requireNonNull(backupPolicyName);
             return this;
         }
 
         public Builder backupPolicyName(String backupPolicyName) {
-            this.backupPolicyName = Input.of(Objects.requireNonNull(backupPolicyName));
+            this.backupPolicyName = Output.of(Objects.requireNonNull(backupPolicyName));
             return this;
         }
 
-        public Builder backupScheduleName(@Nullable Input<String> backupScheduleName) {
+        public Builder backupScheduleName(@Nullable Output<String> backupScheduleName) {
             this.backupScheduleName = backupScheduleName;
             return this;
         }
 
         public Builder backupScheduleName(@Nullable String backupScheduleName) {
-            this.backupScheduleName = Input.ofNullable(backupScheduleName);
+            this.backupScheduleName = Output.ofNullable(backupScheduleName);
             return this;
         }
 
-        public Builder backupType(Input<BackupType> backupType) {
+        public Builder backupType(Output<BackupType> backupType) {
             this.backupType = Objects.requireNonNull(backupType);
             return this;
         }
 
         public Builder backupType(BackupType backupType) {
-            this.backupType = Input.of(Objects.requireNonNull(backupType));
+            this.backupType = Output.of(Objects.requireNonNull(backupType));
             return this;
         }
 
-        public Builder deviceName(Input<String> deviceName) {
+        public Builder deviceName(Output<String> deviceName) {
             this.deviceName = Objects.requireNonNull(deviceName);
             return this;
         }
 
         public Builder deviceName(String deviceName) {
-            this.deviceName = Input.of(Objects.requireNonNull(deviceName));
+            this.deviceName = Output.of(Objects.requireNonNull(deviceName));
             return this;
         }
 
-        public Builder kind(@Nullable Input<Kind> kind) {
+        public Builder kind(@Nullable Output<Kind> kind) {
             this.kind = kind;
             return this;
         }
 
         public Builder kind(@Nullable Kind kind) {
-            this.kind = Input.ofNullable(kind);
+            this.kind = Output.ofNullable(kind);
             return this;
         }
 
-        public Builder managerName(Input<String> managerName) {
+        public Builder managerName(Output<String> managerName) {
             this.managerName = Objects.requireNonNull(managerName);
             return this;
         }
 
         public Builder managerName(String managerName) {
-            this.managerName = Input.of(Objects.requireNonNull(managerName));
+            this.managerName = Output.of(Objects.requireNonNull(managerName));
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder retentionCount(Input<Double> retentionCount) {
+        public Builder retentionCount(Output<Double> retentionCount) {
             this.retentionCount = Objects.requireNonNull(retentionCount);
             return this;
         }
 
         public Builder retentionCount(Double retentionCount) {
-            this.retentionCount = Input.of(Objects.requireNonNull(retentionCount));
+            this.retentionCount = Output.of(Objects.requireNonNull(retentionCount));
             return this;
         }
 
-        public Builder scheduleRecurrence(Input<ScheduleRecurrenceArgs> scheduleRecurrence) {
+        public Builder scheduleRecurrence(Output<ScheduleRecurrenceArgs> scheduleRecurrence) {
             this.scheduleRecurrence = Objects.requireNonNull(scheduleRecurrence);
             return this;
         }
 
         public Builder scheduleRecurrence(ScheduleRecurrenceArgs scheduleRecurrence) {
-            this.scheduleRecurrence = Input.of(Objects.requireNonNull(scheduleRecurrence));
+            this.scheduleRecurrence = Output.of(Objects.requireNonNull(scheduleRecurrence));
             return this;
         }
 
-        public Builder scheduleStatus(Input<ScheduleStatus> scheduleStatus) {
+        public Builder scheduleStatus(Output<ScheduleStatus> scheduleStatus) {
             this.scheduleStatus = Objects.requireNonNull(scheduleStatus);
             return this;
         }
 
         public Builder scheduleStatus(ScheduleStatus scheduleStatus) {
-            this.scheduleStatus = Input.of(Objects.requireNonNull(scheduleStatus));
+            this.scheduleStatus = Output.of(Objects.requireNonNull(scheduleStatus));
             return this;
         }
 
-        public Builder startTime(Input<String> startTime) {
+        public Builder startTime(Output<String> startTime) {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
         }
 
         public Builder startTime(String startTime) {
-            this.startTime = Input.of(Objects.requireNonNull(startTime));
+            this.startTime = Output.of(Objects.requireNonNull(startTime));
             return this;
         }
         public BackupScheduleArgs build() {

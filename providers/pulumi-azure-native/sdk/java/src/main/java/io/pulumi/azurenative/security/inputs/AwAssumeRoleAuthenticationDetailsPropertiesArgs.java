@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.security.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,9 +23,9 @@ public final class AwAssumeRoleAuthenticationDetailsPropertiesArgs extends io.pu
      * 
      */
     @InputImport(name="authenticationType", required=true)
-      private final Input<String> authenticationType;
+      private final Output<String> authenticationType;
 
-    public Input<String> getAuthenticationType() {
+    public Output<String> getAuthenticationType() {
         return this.authenticationType;
     }
 
@@ -34,9 +34,9 @@ public final class AwAssumeRoleAuthenticationDetailsPropertiesArgs extends io.pu
      * 
      */
     @InputImport(name="awsAssumeRoleArn", required=true)
-      private final Input<String> awsAssumeRoleArn;
+      private final Output<String> awsAssumeRoleArn;
 
-    public Input<String> getAwsAssumeRoleArn() {
+    public Output<String> getAwsAssumeRoleArn() {
         return this.awsAssumeRoleArn;
     }
 
@@ -45,25 +45,25 @@ public final class AwAssumeRoleAuthenticationDetailsPropertiesArgs extends io.pu
      * 
      */
     @InputImport(name="awsExternalId", required=true)
-      private final Input<String> awsExternalId;
+      private final Output<String> awsExternalId;
 
-    public Input<String> getAwsExternalId() {
+    public Output<String> getAwsExternalId() {
         return this.awsExternalId;
     }
 
     public AwAssumeRoleAuthenticationDetailsPropertiesArgs(
-        Input<String> authenticationType,
-        Input<String> awsAssumeRoleArn,
-        Input<String> awsExternalId) {
+        Output<String> authenticationType,
+        Output<String> awsAssumeRoleArn,
+        Output<String> awsExternalId) {
         this.authenticationType = Objects.requireNonNull(authenticationType, "expected parameter 'authenticationType' to be non-null");
         this.awsAssumeRoleArn = Objects.requireNonNull(awsAssumeRoleArn, "expected parameter 'awsAssumeRoleArn' to be non-null");
         this.awsExternalId = Objects.requireNonNull(awsExternalId, "expected parameter 'awsExternalId' to be non-null");
     }
 
     private AwAssumeRoleAuthenticationDetailsPropertiesArgs() {
-        this.authenticationType = Input.empty();
-        this.awsAssumeRoleArn = Input.empty();
-        this.awsExternalId = Input.empty();
+        this.authenticationType = Output.empty();
+        this.awsAssumeRoleArn = Output.empty();
+        this.awsExternalId = Output.empty();
     }
 
     public static Builder builder() {
@@ -75,9 +75,9 @@ public final class AwAssumeRoleAuthenticationDetailsPropertiesArgs extends io.pu
     }
 
     public static final class Builder {
-        private Input<String> authenticationType;
-        private Input<String> awsAssumeRoleArn;
-        private Input<String> awsExternalId;
+        private Output<String> authenticationType;
+        private Output<String> awsAssumeRoleArn;
+        private Output<String> awsExternalId;
 
         public Builder() {
     	      // Empty
@@ -90,33 +90,33 @@ public final class AwAssumeRoleAuthenticationDetailsPropertiesArgs extends io.pu
     	      this.awsExternalId = defaults.awsExternalId;
         }
 
-        public Builder authenticationType(Input<String> authenticationType) {
+        public Builder authenticationType(Output<String> authenticationType) {
             this.authenticationType = Objects.requireNonNull(authenticationType);
             return this;
         }
 
         public Builder authenticationType(String authenticationType) {
-            this.authenticationType = Input.of(Objects.requireNonNull(authenticationType));
+            this.authenticationType = Output.of(Objects.requireNonNull(authenticationType));
             return this;
         }
 
-        public Builder awsAssumeRoleArn(Input<String> awsAssumeRoleArn) {
+        public Builder awsAssumeRoleArn(Output<String> awsAssumeRoleArn) {
             this.awsAssumeRoleArn = Objects.requireNonNull(awsAssumeRoleArn);
             return this;
         }
 
         public Builder awsAssumeRoleArn(String awsAssumeRoleArn) {
-            this.awsAssumeRoleArn = Input.of(Objects.requireNonNull(awsAssumeRoleArn));
+            this.awsAssumeRoleArn = Output.of(Objects.requireNonNull(awsAssumeRoleArn));
             return this;
         }
 
-        public Builder awsExternalId(Input<String> awsExternalId) {
+        public Builder awsExternalId(Output<String> awsExternalId) {
             this.awsExternalId = Objects.requireNonNull(awsExternalId);
             return this;
         }
 
         public Builder awsExternalId(String awsExternalId) {
-            this.awsExternalId = Input.of(Objects.requireNonNull(awsExternalId));
+            this.awsExternalId = Output.of(Objects.requireNonNull(awsExternalId));
             return this;
         }
         public AwAssumeRoleAuthenticationDetailsPropertiesArgs build() {

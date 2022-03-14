@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.cloudfront.inputs;
 
 import io.pulumi.awsnative.cloudfront.inputs.DistributionGeoRestrictionArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 
@@ -14,18 +14,18 @@ public final class DistributionRestrictionsArgs extends io.pulumi.resources.Reso
     public static final DistributionRestrictionsArgs Empty = new DistributionRestrictionsArgs();
 
     @InputImport(name="geoRestriction", required=true)
-      private final Input<DistributionGeoRestrictionArgs> geoRestriction;
+      private final Output<DistributionGeoRestrictionArgs> geoRestriction;
 
-    public Input<DistributionGeoRestrictionArgs> getGeoRestriction() {
+    public Output<DistributionGeoRestrictionArgs> getGeoRestriction() {
         return this.geoRestriction;
     }
 
-    public DistributionRestrictionsArgs(Input<DistributionGeoRestrictionArgs> geoRestriction) {
+    public DistributionRestrictionsArgs(Output<DistributionGeoRestrictionArgs> geoRestriction) {
         this.geoRestriction = Objects.requireNonNull(geoRestriction, "expected parameter 'geoRestriction' to be non-null");
     }
 
     private DistributionRestrictionsArgs() {
-        this.geoRestriction = Input.empty();
+        this.geoRestriction = Output.empty();
     }
 
     public static Builder builder() {
@@ -37,7 +37,7 @@ public final class DistributionRestrictionsArgs extends io.pulumi.resources.Reso
     }
 
     public static final class Builder {
-        private Input<DistributionGeoRestrictionArgs> geoRestriction;
+        private Output<DistributionGeoRestrictionArgs> geoRestriction;
 
         public Builder() {
     	      // Empty
@@ -48,13 +48,13 @@ public final class DistributionRestrictionsArgs extends io.pulumi.resources.Reso
     	      this.geoRestriction = defaults.geoRestriction;
         }
 
-        public Builder geoRestriction(Input<DistributionGeoRestrictionArgs> geoRestriction) {
+        public Builder geoRestriction(Output<DistributionGeoRestrictionArgs> geoRestriction) {
             this.geoRestriction = Objects.requireNonNull(geoRestriction);
             return this;
         }
 
         public Builder geoRestriction(DistributionGeoRestrictionArgs geoRestriction) {
-            this.geoRestriction = Input.of(Objects.requireNonNull(geoRestriction));
+            this.geoRestriction = Output.of(Objects.requireNonNull(geoRestriction));
             return this;
         }
         public DistributionRestrictionsArgs build() {

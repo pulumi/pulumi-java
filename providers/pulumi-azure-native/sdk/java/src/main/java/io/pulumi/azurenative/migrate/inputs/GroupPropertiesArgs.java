@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.migrate.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class GroupPropertiesArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="groupType")
-      private final @Nullable Input<String> groupType;
+      private final @Nullable Output<String> groupType;
 
-    public Input<String> getGroupType() {
-        return this.groupType == null ? Input.empty() : this.groupType;
+    public Output<String> getGroupType() {
+        return this.groupType == null ? Output.empty() : this.groupType;
     }
 
-    public GroupPropertiesArgs(@Nullable Input<String> groupType) {
+    public GroupPropertiesArgs(@Nullable Output<String> groupType) {
         this.groupType = groupType;
     }
 
     private GroupPropertiesArgs() {
-        this.groupType = Input.empty();
+        this.groupType = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class GroupPropertiesArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private @Nullable Input<String> groupType;
+        private @Nullable Output<String> groupType;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class GroupPropertiesArgs extends io.pulumi.resources.ResourceArgs 
     	      this.groupType = defaults.groupType;
         }
 
-        public Builder groupType(@Nullable Input<String> groupType) {
+        public Builder groupType(@Nullable Output<String> groupType) {
             this.groupType = groupType;
             return this;
         }
 
         public Builder groupType(@Nullable String groupType) {
-            this.groupType = Input.ofNullable(groupType);
+            this.groupType = Output.ofNullable(groupType);
             return this;
         }
         public GroupPropertiesArgs build() {

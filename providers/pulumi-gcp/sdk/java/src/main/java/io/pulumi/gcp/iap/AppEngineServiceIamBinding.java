@@ -3,7 +3,6 @@
 
 package io.pulumi.gcp.iap;
 
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -200,14 +199,14 @@ public class AppEngineServiceIamBinding extends io.pulumi.resources.CustomResour
      * @param options A bag of options that control this resource's behavior.
      */
     public AppEngineServiceIamBinding(String name, AppEngineServiceIamBindingArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:iap/appEngineServiceIamBinding:AppEngineServiceIamBinding", name, args == null ? AppEngineServiceIamBindingArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("gcp:iap/appEngineServiceIamBinding:AppEngineServiceIamBinding", name, args == null ? AppEngineServiceIamBindingArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private AppEngineServiceIamBinding(String name, Input<String> id, @Nullable AppEngineServiceIamBindingState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private AppEngineServiceIamBinding(String name, Output<String> id, @Nullable AppEngineServiceIamBindingState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("gcp:iap/appEngineServiceIamBinding:AppEngineServiceIamBinding", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -223,7 +222,7 @@ public class AppEngineServiceIamBinding extends io.pulumi.resources.CustomResour
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static AppEngineServiceIamBinding get(String name, Input<String> id, @Nullable AppEngineServiceIamBindingState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static AppEngineServiceIamBinding get(String name, Output<String> id, @Nullable AppEngineServiceIamBindingState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new AppEngineServiceIamBinding(name, id, state, options);
     }
 }

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.dataloss.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -18,9 +18,9 @@ public final class PreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldTab
      * 
      */
     @InputImport(name="datasetId", required=true)
-      private final Input<String> datasetId;
+      private final Output<String> datasetId;
 
-    public Input<String> getDatasetId() {
+    public Output<String> getDatasetId() {
         return this.datasetId;
     }
 
@@ -29,9 +29,9 @@ public final class PreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldTab
      * 
      */
     @InputImport(name="projectId", required=true)
-      private final Input<String> projectId;
+      private final Output<String> projectId;
 
-    public Input<String> getProjectId() {
+    public Output<String> getProjectId() {
         return this.projectId;
     }
 
@@ -40,25 +40,25 @@ public final class PreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldTab
      * 
      */
     @InputImport(name="tableId", required=true)
-      private final Input<String> tableId;
+      private final Output<String> tableId;
 
-    public Input<String> getTableId() {
+    public Output<String> getTableId() {
         return this.tableId;
     }
 
     public PreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldTableArgs(
-        Input<String> datasetId,
-        Input<String> projectId,
-        Input<String> tableId) {
+        Output<String> datasetId,
+        Output<String> projectId,
+        Output<String> tableId) {
         this.datasetId = Objects.requireNonNull(datasetId, "expected parameter 'datasetId' to be non-null");
         this.projectId = Objects.requireNonNull(projectId, "expected parameter 'projectId' to be non-null");
         this.tableId = Objects.requireNonNull(tableId, "expected parameter 'tableId' to be non-null");
     }
 
     private PreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldTableArgs() {
-        this.datasetId = Input.empty();
-        this.projectId = Input.empty();
-        this.tableId = Input.empty();
+        this.datasetId = Output.empty();
+        this.projectId = Output.empty();
+        this.tableId = Output.empty();
     }
 
     public static Builder builder() {
@@ -70,9 +70,9 @@ public final class PreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldTab
     }
 
     public static final class Builder {
-        private Input<String> datasetId;
-        private Input<String> projectId;
-        private Input<String> tableId;
+        private Output<String> datasetId;
+        private Output<String> projectId;
+        private Output<String> tableId;
 
         public Builder() {
     	      // Empty
@@ -85,33 +85,33 @@ public final class PreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldTab
     	      this.tableId = defaults.tableId;
         }
 
-        public Builder datasetId(Input<String> datasetId) {
+        public Builder datasetId(Output<String> datasetId) {
             this.datasetId = Objects.requireNonNull(datasetId);
             return this;
         }
 
         public Builder datasetId(String datasetId) {
-            this.datasetId = Input.of(Objects.requireNonNull(datasetId));
+            this.datasetId = Output.of(Objects.requireNonNull(datasetId));
             return this;
         }
 
-        public Builder projectId(Input<String> projectId) {
+        public Builder projectId(Output<String> projectId) {
             this.projectId = Objects.requireNonNull(projectId);
             return this;
         }
 
         public Builder projectId(String projectId) {
-            this.projectId = Input.of(Objects.requireNonNull(projectId));
+            this.projectId = Output.of(Objects.requireNonNull(projectId));
             return this;
         }
 
-        public Builder tableId(Input<String> tableId) {
+        public Builder tableId(Output<String> tableId) {
             this.tableId = Objects.requireNonNull(tableId);
             return this;
         }
 
         public Builder tableId(String tableId) {
-            this.tableId = Input.of(Objects.requireNonNull(tableId));
+            this.tableId = Output.of(Objects.requireNonNull(tableId));
             return this;
         }
         public PreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldTableArgs build() {

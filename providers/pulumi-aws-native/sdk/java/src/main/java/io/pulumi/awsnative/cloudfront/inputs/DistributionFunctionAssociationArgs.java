@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.cloudfront.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -15,29 +15,29 @@ public final class DistributionFunctionAssociationArgs extends io.pulumi.resourc
     public static final DistributionFunctionAssociationArgs Empty = new DistributionFunctionAssociationArgs();
 
     @InputImport(name="eventType")
-      private final @Nullable Input<String> eventType;
+      private final @Nullable Output<String> eventType;
 
-    public Input<String> getEventType() {
-        return this.eventType == null ? Input.empty() : this.eventType;
+    public Output<String> getEventType() {
+        return this.eventType == null ? Output.empty() : this.eventType;
     }
 
     @InputImport(name="functionARN")
-      private final @Nullable Input<String> functionARN;
+      private final @Nullable Output<String> functionARN;
 
-    public Input<String> getFunctionARN() {
-        return this.functionARN == null ? Input.empty() : this.functionARN;
+    public Output<String> getFunctionARN() {
+        return this.functionARN == null ? Output.empty() : this.functionARN;
     }
 
     public DistributionFunctionAssociationArgs(
-        @Nullable Input<String> eventType,
-        @Nullable Input<String> functionARN) {
+        @Nullable Output<String> eventType,
+        @Nullable Output<String> functionARN) {
         this.eventType = eventType;
         this.functionARN = functionARN;
     }
 
     private DistributionFunctionAssociationArgs() {
-        this.eventType = Input.empty();
-        this.functionARN = Input.empty();
+        this.eventType = Output.empty();
+        this.functionARN = Output.empty();
     }
 
     public static Builder builder() {
@@ -49,8 +49,8 @@ public final class DistributionFunctionAssociationArgs extends io.pulumi.resourc
     }
 
     public static final class Builder {
-        private @Nullable Input<String> eventType;
-        private @Nullable Input<String> functionARN;
+        private @Nullable Output<String> eventType;
+        private @Nullable Output<String> functionARN;
 
         public Builder() {
     	      // Empty
@@ -62,23 +62,23 @@ public final class DistributionFunctionAssociationArgs extends io.pulumi.resourc
     	      this.functionARN = defaults.functionARN;
         }
 
-        public Builder eventType(@Nullable Input<String> eventType) {
+        public Builder eventType(@Nullable Output<String> eventType) {
             this.eventType = eventType;
             return this;
         }
 
         public Builder eventType(@Nullable String eventType) {
-            this.eventType = Input.ofNullable(eventType);
+            this.eventType = Output.ofNullable(eventType);
             return this;
         }
 
-        public Builder functionARN(@Nullable Input<String> functionARN) {
+        public Builder functionARN(@Nullable Output<String> functionARN) {
             this.functionARN = functionARN;
             return this;
         }
 
         public Builder functionARN(@Nullable String functionARN) {
-            this.functionARN = Input.ofNullable(functionARN);
+            this.functionARN = Output.ofNullable(functionARN);
             return this;
         }
         public DistributionFunctionAssociationArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datafactory.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class AvroWriteSettingsArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="fileNamePrefix")
-      private final @Nullable Input<Object> fileNamePrefix;
+      private final @Nullable Output<Object> fileNamePrefix;
 
-    public Input<Object> getFileNamePrefix() {
-        return this.fileNamePrefix == null ? Input.empty() : this.fileNamePrefix;
+    public Output<Object> getFileNamePrefix() {
+        return this.fileNamePrefix == null ? Output.empty() : this.fileNamePrefix;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class AvroWriteSettingsArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="maxRowsPerFile")
-      private final @Nullable Input<Object> maxRowsPerFile;
+      private final @Nullable Output<Object> maxRowsPerFile;
 
-    public Input<Object> getMaxRowsPerFile() {
-        return this.maxRowsPerFile == null ? Input.empty() : this.maxRowsPerFile;
+    public Output<Object> getMaxRowsPerFile() {
+        return this.maxRowsPerFile == null ? Output.empty() : this.maxRowsPerFile;
     }
 
     /**
@@ -46,10 +46,10 @@ public final class AvroWriteSettingsArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="recordName")
-      private final @Nullable Input<String> recordName;
+      private final @Nullable Output<String> recordName;
 
-    public Input<String> getRecordName() {
-        return this.recordName == null ? Input.empty() : this.recordName;
+    public Output<String> getRecordName() {
+        return this.recordName == null ? Output.empty() : this.recordName;
     }
 
     /**
@@ -57,10 +57,10 @@ public final class AvroWriteSettingsArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="recordNamespace")
-      private final @Nullable Input<String> recordNamespace;
+      private final @Nullable Output<String> recordNamespace;
 
-    public Input<String> getRecordNamespace() {
-        return this.recordNamespace == null ? Input.empty() : this.recordNamespace;
+    public Output<String> getRecordNamespace() {
+        return this.recordNamespace == null ? Output.empty() : this.recordNamespace;
     }
 
     /**
@@ -69,18 +69,18 @@ public final class AvroWriteSettingsArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<String> type;
+      private final Output<String> type;
 
-    public Input<String> getType() {
+    public Output<String> getType() {
         return this.type;
     }
 
     public AvroWriteSettingsArgs(
-        @Nullable Input<Object> fileNamePrefix,
-        @Nullable Input<Object> maxRowsPerFile,
-        @Nullable Input<String> recordName,
-        @Nullable Input<String> recordNamespace,
-        Input<String> type) {
+        @Nullable Output<Object> fileNamePrefix,
+        @Nullable Output<Object> maxRowsPerFile,
+        @Nullable Output<String> recordName,
+        @Nullable Output<String> recordNamespace,
+        Output<String> type) {
         this.fileNamePrefix = fileNamePrefix;
         this.maxRowsPerFile = maxRowsPerFile;
         this.recordName = recordName;
@@ -89,11 +89,11 @@ public final class AvroWriteSettingsArgs extends io.pulumi.resources.ResourceArg
     }
 
     private AvroWriteSettingsArgs() {
-        this.fileNamePrefix = Input.empty();
-        this.maxRowsPerFile = Input.empty();
-        this.recordName = Input.empty();
-        this.recordNamespace = Input.empty();
-        this.type = Input.empty();
+        this.fileNamePrefix = Output.empty();
+        this.maxRowsPerFile = Output.empty();
+        this.recordName = Output.empty();
+        this.recordNamespace = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -105,11 +105,11 @@ public final class AvroWriteSettingsArgs extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private @Nullable Input<Object> fileNamePrefix;
-        private @Nullable Input<Object> maxRowsPerFile;
-        private @Nullable Input<String> recordName;
-        private @Nullable Input<String> recordNamespace;
-        private Input<String> type;
+        private @Nullable Output<Object> fileNamePrefix;
+        private @Nullable Output<Object> maxRowsPerFile;
+        private @Nullable Output<String> recordName;
+        private @Nullable Output<String> recordNamespace;
+        private Output<String> type;
 
         public Builder() {
     	      // Empty
@@ -124,53 +124,53 @@ public final class AvroWriteSettingsArgs extends io.pulumi.resources.ResourceArg
     	      this.type = defaults.type;
         }
 
-        public Builder fileNamePrefix(@Nullable Input<Object> fileNamePrefix) {
+        public Builder fileNamePrefix(@Nullable Output<Object> fileNamePrefix) {
             this.fileNamePrefix = fileNamePrefix;
             return this;
         }
 
         public Builder fileNamePrefix(@Nullable Object fileNamePrefix) {
-            this.fileNamePrefix = Input.ofNullable(fileNamePrefix);
+            this.fileNamePrefix = Output.ofNullable(fileNamePrefix);
             return this;
         }
 
-        public Builder maxRowsPerFile(@Nullable Input<Object> maxRowsPerFile) {
+        public Builder maxRowsPerFile(@Nullable Output<Object> maxRowsPerFile) {
             this.maxRowsPerFile = maxRowsPerFile;
             return this;
         }
 
         public Builder maxRowsPerFile(@Nullable Object maxRowsPerFile) {
-            this.maxRowsPerFile = Input.ofNullable(maxRowsPerFile);
+            this.maxRowsPerFile = Output.ofNullable(maxRowsPerFile);
             return this;
         }
 
-        public Builder recordName(@Nullable Input<String> recordName) {
+        public Builder recordName(@Nullable Output<String> recordName) {
             this.recordName = recordName;
             return this;
         }
 
         public Builder recordName(@Nullable String recordName) {
-            this.recordName = Input.ofNullable(recordName);
+            this.recordName = Output.ofNullable(recordName);
             return this;
         }
 
-        public Builder recordNamespace(@Nullable Input<String> recordNamespace) {
+        public Builder recordNamespace(@Nullable Output<String> recordNamespace) {
             this.recordNamespace = recordNamespace;
             return this;
         }
 
         public Builder recordNamespace(@Nullable String recordNamespace) {
-            this.recordNamespace = Input.ofNullable(recordNamespace);
+            this.recordNamespace = Output.ofNullable(recordNamespace);
             return this;
         }
 
-        public Builder type(Input<String> type) {
+        public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(String type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
         public AvroWriteSettingsArgs build() {

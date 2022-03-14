@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class DnsConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="relativeName")
-      private final @Nullable Input<String> relativeName;
+      private final @Nullable Output<String> relativeName;
 
-    public Input<String> getRelativeName() {
-        return this.relativeName == null ? Input.empty() : this.relativeName;
+    public Output<String> getRelativeName() {
+        return this.relativeName == null ? Output.empty() : this.relativeName;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class DnsConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ttl")
-      private final @Nullable Input<Double> ttl;
+      private final @Nullable Output<Double> ttl;
 
-    public Input<Double> getTtl() {
-        return this.ttl == null ? Input.empty() : this.ttl;
+    public Output<Double> getTtl() {
+        return this.ttl == null ? Output.empty() : this.ttl;
     }
 
     public DnsConfigArgs(
-        @Nullable Input<String> relativeName,
-        @Nullable Input<Double> ttl) {
+        @Nullable Output<String> relativeName,
+        @Nullable Output<Double> ttl) {
         this.relativeName = relativeName;
         this.ttl = ttl;
     }
 
     private DnsConfigArgs() {
-        this.relativeName = Input.empty();
-        this.ttl = Input.empty();
+        this.relativeName = Output.empty();
+        this.ttl = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class DnsConfigArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> relativeName;
-        private @Nullable Input<Double> ttl;
+        private @Nullable Output<String> relativeName;
+        private @Nullable Output<Double> ttl;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class DnsConfigArgs extends io.pulumi.resources.ResourceArgs {
     	      this.ttl = defaults.ttl;
         }
 
-        public Builder relativeName(@Nullable Input<String> relativeName) {
+        public Builder relativeName(@Nullable Output<String> relativeName) {
             this.relativeName = relativeName;
             return this;
         }
 
         public Builder relativeName(@Nullable String relativeName) {
-            this.relativeName = Input.ofNullable(relativeName);
+            this.relativeName = Output.ofNullable(relativeName);
             return this;
         }
 
-        public Builder ttl(@Nullable Input<Double> ttl) {
+        public Builder ttl(@Nullable Output<Double> ttl) {
             this.ttl = ttl;
             return this;
         }
 
         public Builder ttl(@Nullable Double ttl) {
-            this.ttl = Input.ofNullable(ttl);
+            this.ttl = Output.ofNullable(ttl);
             return this;
         }
         public DnsConfigArgs build() {

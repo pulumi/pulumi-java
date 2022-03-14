@@ -8,7 +8,7 @@ import io.pulumi.azurenative.insights.enums.TimeAggregationOperator;
 import io.pulumi.azurenative.insights.inputs.RuleManagementEventDataSourceArgs;
 import io.pulumi.azurenative.insights.inputs.RuleMetricDataSourceArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.String;
@@ -29,10 +29,10 @@ public final class ThresholdRuleConditionArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="dataSource")
-      private final @Nullable Input<Either<RuleManagementEventDataSourceArgs,RuleMetricDataSourceArgs>> dataSource;
+      private final @Nullable Output<Either<RuleManagementEventDataSourceArgs,RuleMetricDataSourceArgs>> dataSource;
 
-    public Input<Either<RuleManagementEventDataSourceArgs,RuleMetricDataSourceArgs>> getDataSource() {
-        return this.dataSource == null ? Input.empty() : this.dataSource;
+    public Output<Either<RuleManagementEventDataSourceArgs,RuleMetricDataSourceArgs>> getDataSource() {
+        return this.dataSource == null ? Output.empty() : this.dataSource;
     }
 
     /**
@@ -41,9 +41,9 @@ public final class ThresholdRuleConditionArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="odataType", required=true)
-      private final Input<String> odataType;
+      private final Output<String> odataType;
 
-    public Input<String> getOdataType() {
+    public Output<String> getOdataType() {
         return this.odataType;
     }
 
@@ -52,9 +52,9 @@ public final class ThresholdRuleConditionArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="operator", required=true)
-      private final Input<ConditionOperator> operator;
+      private final Output<ConditionOperator> operator;
 
-    public Input<ConditionOperator> getOperator() {
+    public Output<ConditionOperator> getOperator() {
         return this.operator;
     }
 
@@ -63,9 +63,9 @@ public final class ThresholdRuleConditionArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="threshold", required=true)
-      private final Input<Double> threshold;
+      private final Output<Double> threshold;
 
-    public Input<Double> getThreshold() {
+    public Output<Double> getThreshold() {
         return this.threshold;
     }
 
@@ -74,10 +74,10 @@ public final class ThresholdRuleConditionArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="timeAggregation")
-      private final @Nullable Input<TimeAggregationOperator> timeAggregation;
+      private final @Nullable Output<TimeAggregationOperator> timeAggregation;
 
-    public Input<TimeAggregationOperator> getTimeAggregation() {
-        return this.timeAggregation == null ? Input.empty() : this.timeAggregation;
+    public Output<TimeAggregationOperator> getTimeAggregation() {
+        return this.timeAggregation == null ? Output.empty() : this.timeAggregation;
     }
 
     /**
@@ -85,19 +85,19 @@ public final class ThresholdRuleConditionArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="windowSize")
-      private final @Nullable Input<String> windowSize;
+      private final @Nullable Output<String> windowSize;
 
-    public Input<String> getWindowSize() {
-        return this.windowSize == null ? Input.empty() : this.windowSize;
+    public Output<String> getWindowSize() {
+        return this.windowSize == null ? Output.empty() : this.windowSize;
     }
 
     public ThresholdRuleConditionArgs(
-        @Nullable Input<Either<RuleManagementEventDataSourceArgs,RuleMetricDataSourceArgs>> dataSource,
-        Input<String> odataType,
-        Input<ConditionOperator> operator,
-        Input<Double> threshold,
-        @Nullable Input<TimeAggregationOperator> timeAggregation,
-        @Nullable Input<String> windowSize) {
+        @Nullable Output<Either<RuleManagementEventDataSourceArgs,RuleMetricDataSourceArgs>> dataSource,
+        Output<String> odataType,
+        Output<ConditionOperator> operator,
+        Output<Double> threshold,
+        @Nullable Output<TimeAggregationOperator> timeAggregation,
+        @Nullable Output<String> windowSize) {
         this.dataSource = dataSource;
         this.odataType = Objects.requireNonNull(odataType, "expected parameter 'odataType' to be non-null");
         this.operator = Objects.requireNonNull(operator, "expected parameter 'operator' to be non-null");
@@ -107,12 +107,12 @@ public final class ThresholdRuleConditionArgs extends io.pulumi.resources.Resour
     }
 
     private ThresholdRuleConditionArgs() {
-        this.dataSource = Input.empty();
-        this.odataType = Input.empty();
-        this.operator = Input.empty();
-        this.threshold = Input.empty();
-        this.timeAggregation = Input.empty();
-        this.windowSize = Input.empty();
+        this.dataSource = Output.empty();
+        this.odataType = Output.empty();
+        this.operator = Output.empty();
+        this.threshold = Output.empty();
+        this.timeAggregation = Output.empty();
+        this.windowSize = Output.empty();
     }
 
     public static Builder builder() {
@@ -124,12 +124,12 @@ public final class ThresholdRuleConditionArgs extends io.pulumi.resources.Resour
     }
 
     public static final class Builder {
-        private @Nullable Input<Either<RuleManagementEventDataSourceArgs,RuleMetricDataSourceArgs>> dataSource;
-        private Input<String> odataType;
-        private Input<ConditionOperator> operator;
-        private Input<Double> threshold;
-        private @Nullable Input<TimeAggregationOperator> timeAggregation;
-        private @Nullable Input<String> windowSize;
+        private @Nullable Output<Either<RuleManagementEventDataSourceArgs,RuleMetricDataSourceArgs>> dataSource;
+        private Output<String> odataType;
+        private Output<ConditionOperator> operator;
+        private Output<Double> threshold;
+        private @Nullable Output<TimeAggregationOperator> timeAggregation;
+        private @Nullable Output<String> windowSize;
 
         public Builder() {
     	      // Empty
@@ -145,63 +145,63 @@ public final class ThresholdRuleConditionArgs extends io.pulumi.resources.Resour
     	      this.windowSize = defaults.windowSize;
         }
 
-        public Builder dataSource(@Nullable Input<Either<RuleManagementEventDataSourceArgs,RuleMetricDataSourceArgs>> dataSource) {
+        public Builder dataSource(@Nullable Output<Either<RuleManagementEventDataSourceArgs,RuleMetricDataSourceArgs>> dataSource) {
             this.dataSource = dataSource;
             return this;
         }
 
         public Builder dataSource(@Nullable Either<RuleManagementEventDataSourceArgs,RuleMetricDataSourceArgs> dataSource) {
-            this.dataSource = Input.ofNullable(dataSource);
+            this.dataSource = Output.ofNullable(dataSource);
             return this;
         }
 
-        public Builder odataType(Input<String> odataType) {
+        public Builder odataType(Output<String> odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
 
         public Builder odataType(String odataType) {
-            this.odataType = Input.of(Objects.requireNonNull(odataType));
+            this.odataType = Output.of(Objects.requireNonNull(odataType));
             return this;
         }
 
-        public Builder operator(Input<ConditionOperator> operator) {
+        public Builder operator(Output<ConditionOperator> operator) {
             this.operator = Objects.requireNonNull(operator);
             return this;
         }
 
         public Builder operator(ConditionOperator operator) {
-            this.operator = Input.of(Objects.requireNonNull(operator));
+            this.operator = Output.of(Objects.requireNonNull(operator));
             return this;
         }
 
-        public Builder threshold(Input<Double> threshold) {
+        public Builder threshold(Output<Double> threshold) {
             this.threshold = Objects.requireNonNull(threshold);
             return this;
         }
 
         public Builder threshold(Double threshold) {
-            this.threshold = Input.of(Objects.requireNonNull(threshold));
+            this.threshold = Output.of(Objects.requireNonNull(threshold));
             return this;
         }
 
-        public Builder timeAggregation(@Nullable Input<TimeAggregationOperator> timeAggregation) {
+        public Builder timeAggregation(@Nullable Output<TimeAggregationOperator> timeAggregation) {
             this.timeAggregation = timeAggregation;
             return this;
         }
 
         public Builder timeAggregation(@Nullable TimeAggregationOperator timeAggregation) {
-            this.timeAggregation = Input.ofNullable(timeAggregation);
+            this.timeAggregation = Output.ofNullable(timeAggregation);
             return this;
         }
 
-        public Builder windowSize(@Nullable Input<String> windowSize) {
+        public Builder windowSize(@Nullable Output<String> windowSize) {
             this.windowSize = windowSize;
             return this;
         }
 
         public Builder windowSize(@Nullable String windowSize) {
-            this.windowSize = Input.ofNullable(windowSize);
+            this.windowSize = Output.ofNullable(windowSize);
             return this;
         }
         public ThresholdRuleConditionArgs build() {

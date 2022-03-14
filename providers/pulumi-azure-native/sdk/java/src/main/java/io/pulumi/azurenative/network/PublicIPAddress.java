@@ -15,7 +15,6 @@ import io.pulumi.azurenative.network.outputs.PublicIPAddressResponse;
 import io.pulumi.azurenative.network.outputs.PublicIPAddressSkuResponse;
 import io.pulumi.azurenative.network.outputs.SubResourceResponse;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -403,56 +402,56 @@ public class PublicIPAddress extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public PublicIPAddress(String name, PublicIPAddressArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:network:PublicIPAddress", name, args == null ? PublicIPAddressArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("azure-native:network:PublicIPAddress", name, args == null ? PublicIPAddressArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private PublicIPAddress(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private PublicIPAddress(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:network:PublicIPAddress", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:network/v20150501preview:PublicIPAddress").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20150615:PublicIPAddress").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20160330:PublicIPAddress").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20160601:PublicIPAddress").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20160901:PublicIPAddress").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20161201:PublicIPAddress").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20170301:PublicIPAddress").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20170601:PublicIPAddress").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20170801:PublicIPAddress").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20170901:PublicIPAddress").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20171001:PublicIPAddress").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20171101:PublicIPAddress").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20180101:PublicIPAddress").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20180201:PublicIPAddress").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20180401:PublicIPAddress").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20180601:PublicIPAddress").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20180701:PublicIPAddress").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20180801:PublicIPAddress").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20181001:PublicIPAddress").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20181101:PublicIPAddress").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20181201:PublicIPAddress").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20190201:PublicIPAddress").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20190401:PublicIPAddress").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20190601:PublicIPAddress").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20190701:PublicIPAddress").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20190801:PublicIPAddress").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20190901:PublicIPAddress").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20191101:PublicIPAddress").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20191201:PublicIPAddress").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20200301:PublicIPAddress").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20200401:PublicIPAddress").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20200501:PublicIPAddress").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20200601:PublicIPAddress").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20200701:PublicIPAddress").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20200801:PublicIPAddress").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20201101:PublicIPAddress").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20210201:PublicIPAddress").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20210301:PublicIPAddress").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20210501:PublicIPAddress").build())
+                Output.of(Alias.builder().setType("azure-native:network/v20150501preview:PublicIPAddress").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20150615:PublicIPAddress").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20160330:PublicIPAddress").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20160601:PublicIPAddress").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20160901:PublicIPAddress").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20161201:PublicIPAddress").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20170301:PublicIPAddress").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20170601:PublicIPAddress").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20170801:PublicIPAddress").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20170901:PublicIPAddress").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20171001:PublicIPAddress").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20171101:PublicIPAddress").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20180101:PublicIPAddress").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20180201:PublicIPAddress").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20180401:PublicIPAddress").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20180601:PublicIPAddress").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20180701:PublicIPAddress").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20180801:PublicIPAddress").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20181001:PublicIPAddress").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20181101:PublicIPAddress").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20181201:PublicIPAddress").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20190201:PublicIPAddress").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20190401:PublicIPAddress").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20190601:PublicIPAddress").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20190701:PublicIPAddress").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20190801:PublicIPAddress").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20190901:PublicIPAddress").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20191101:PublicIPAddress").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20191201:PublicIPAddress").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20200301:PublicIPAddress").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20200401:PublicIPAddress").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20200501:PublicIPAddress").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20200601:PublicIPAddress").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20200701:PublicIPAddress").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20200801:PublicIPAddress").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20201101:PublicIPAddress").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20210201:PublicIPAddress").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20210301:PublicIPAddress").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20210501:PublicIPAddress").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -466,7 +465,7 @@ public class PublicIPAddress extends io.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static PublicIPAddress get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static PublicIPAddress get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new PublicIPAddress(name, id, options);
     }
 }

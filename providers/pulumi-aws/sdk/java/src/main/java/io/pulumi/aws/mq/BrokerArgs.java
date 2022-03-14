@@ -9,7 +9,7 @@ import io.pulumi.aws.mq.inputs.BrokerLdapServerMetadataArgs;
 import io.pulumi.aws.mq.inputs.BrokerLogsArgs;
 import io.pulumi.aws.mq.inputs.BrokerMaintenanceWindowStartTimeArgs;
 import io.pulumi.aws.mq.inputs.BrokerUserArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -28,10 +28,10 @@ public final class BrokerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="applyImmediately")
-      private final @Nullable Input<Boolean> applyImmediately;
+      private final @Nullable Output<Boolean> applyImmediately;
 
-    public Input<Boolean> getApplyImmediately() {
-        return this.applyImmediately == null ? Input.empty() : this.applyImmediately;
+    public Output<Boolean> getApplyImmediately() {
+        return this.applyImmediately == null ? Output.empty() : this.applyImmediately;
     }
 
     /**
@@ -39,10 +39,10 @@ public final class BrokerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="authenticationStrategy")
-      private final @Nullable Input<String> authenticationStrategy;
+      private final @Nullable Output<String> authenticationStrategy;
 
-    public Input<String> getAuthenticationStrategy() {
-        return this.authenticationStrategy == null ? Input.empty() : this.authenticationStrategy;
+    public Output<String> getAuthenticationStrategy() {
+        return this.authenticationStrategy == null ? Output.empty() : this.authenticationStrategy;
     }
 
     /**
@@ -50,10 +50,10 @@ public final class BrokerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="autoMinorVersionUpgrade")
-      private final @Nullable Input<Boolean> autoMinorVersionUpgrade;
+      private final @Nullable Output<Boolean> autoMinorVersionUpgrade;
 
-    public Input<Boolean> getAutoMinorVersionUpgrade() {
-        return this.autoMinorVersionUpgrade == null ? Input.empty() : this.autoMinorVersionUpgrade;
+    public Output<Boolean> getAutoMinorVersionUpgrade() {
+        return this.autoMinorVersionUpgrade == null ? Output.empty() : this.autoMinorVersionUpgrade;
     }
 
     /**
@@ -61,10 +61,10 @@ public final class BrokerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="brokerName")
-      private final @Nullable Input<String> brokerName;
+      private final @Nullable Output<String> brokerName;
 
-    public Input<String> getBrokerName() {
-        return this.brokerName == null ? Input.empty() : this.brokerName;
+    public Output<String> getBrokerName() {
+        return this.brokerName == null ? Output.empty() : this.brokerName;
     }
 
     /**
@@ -72,10 +72,10 @@ public final class BrokerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="configuration")
-      private final @Nullable Input<BrokerConfigurationArgs> configuration;
+      private final @Nullable Output<BrokerConfigurationArgs> configuration;
 
-    public Input<BrokerConfigurationArgs> getConfiguration() {
-        return this.configuration == null ? Input.empty() : this.configuration;
+    public Output<BrokerConfigurationArgs> getConfiguration() {
+        return this.configuration == null ? Output.empty() : this.configuration;
     }
 
     /**
@@ -83,10 +83,10 @@ public final class BrokerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="deploymentMode")
-      private final @Nullable Input<String> deploymentMode;
+      private final @Nullable Output<String> deploymentMode;
 
-    public Input<String> getDeploymentMode() {
-        return this.deploymentMode == null ? Input.empty() : this.deploymentMode;
+    public Output<String> getDeploymentMode() {
+        return this.deploymentMode == null ? Output.empty() : this.deploymentMode;
     }
 
     /**
@@ -94,10 +94,10 @@ public final class BrokerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="encryptionOptions")
-      private final @Nullable Input<BrokerEncryptionOptionsArgs> encryptionOptions;
+      private final @Nullable Output<BrokerEncryptionOptionsArgs> encryptionOptions;
 
-    public Input<BrokerEncryptionOptionsArgs> getEncryptionOptions() {
-        return this.encryptionOptions == null ? Input.empty() : this.encryptionOptions;
+    public Output<BrokerEncryptionOptionsArgs> getEncryptionOptions() {
+        return this.encryptionOptions == null ? Output.empty() : this.encryptionOptions;
     }
 
     /**
@@ -105,9 +105,9 @@ public final class BrokerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="engineType", required=true)
-      private final Input<String> engineType;
+      private final Output<String> engineType;
 
-    public Input<String> getEngineType() {
+    public Output<String> getEngineType() {
         return this.engineType;
     }
 
@@ -116,9 +116,9 @@ public final class BrokerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="engineVersion", required=true)
-      private final Input<String> engineVersion;
+      private final Output<String> engineVersion;
 
-    public Input<String> getEngineVersion() {
+    public Output<String> getEngineVersion() {
         return this.engineVersion;
     }
 
@@ -127,9 +127,9 @@ public final class BrokerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="hostInstanceType", required=true)
-      private final Input<String> hostInstanceType;
+      private final Output<String> hostInstanceType;
 
-    public Input<String> getHostInstanceType() {
+    public Output<String> getHostInstanceType() {
         return this.hostInstanceType;
     }
 
@@ -138,10 +138,10 @@ public final class BrokerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ldapServerMetadata")
-      private final @Nullable Input<BrokerLdapServerMetadataArgs> ldapServerMetadata;
+      private final @Nullable Output<BrokerLdapServerMetadataArgs> ldapServerMetadata;
 
-    public Input<BrokerLdapServerMetadataArgs> getLdapServerMetadata() {
-        return this.ldapServerMetadata == null ? Input.empty() : this.ldapServerMetadata;
+    public Output<BrokerLdapServerMetadataArgs> getLdapServerMetadata() {
+        return this.ldapServerMetadata == null ? Output.empty() : this.ldapServerMetadata;
     }
 
     /**
@@ -149,10 +149,10 @@ public final class BrokerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="logs")
-      private final @Nullable Input<BrokerLogsArgs> logs;
+      private final @Nullable Output<BrokerLogsArgs> logs;
 
-    public Input<BrokerLogsArgs> getLogs() {
-        return this.logs == null ? Input.empty() : this.logs;
+    public Output<BrokerLogsArgs> getLogs() {
+        return this.logs == null ? Output.empty() : this.logs;
     }
 
     /**
@@ -160,10 +160,10 @@ public final class BrokerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="maintenanceWindowStartTime")
-      private final @Nullable Input<BrokerMaintenanceWindowStartTimeArgs> maintenanceWindowStartTime;
+      private final @Nullable Output<BrokerMaintenanceWindowStartTimeArgs> maintenanceWindowStartTime;
 
-    public Input<BrokerMaintenanceWindowStartTimeArgs> getMaintenanceWindowStartTime() {
-        return this.maintenanceWindowStartTime == null ? Input.empty() : this.maintenanceWindowStartTime;
+    public Output<BrokerMaintenanceWindowStartTimeArgs> getMaintenanceWindowStartTime() {
+        return this.maintenanceWindowStartTime == null ? Output.empty() : this.maintenanceWindowStartTime;
     }
 
     /**
@@ -171,10 +171,10 @@ public final class BrokerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="publiclyAccessible")
-      private final @Nullable Input<Boolean> publiclyAccessible;
+      private final @Nullable Output<Boolean> publiclyAccessible;
 
-    public Input<Boolean> getPubliclyAccessible() {
-        return this.publiclyAccessible == null ? Input.empty() : this.publiclyAccessible;
+    public Output<Boolean> getPubliclyAccessible() {
+        return this.publiclyAccessible == null ? Output.empty() : this.publiclyAccessible;
     }
 
     /**
@@ -182,10 +182,10 @@ public final class BrokerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="securityGroups")
-      private final @Nullable Input<List<String>> securityGroups;
+      private final @Nullable Output<List<String>> securityGroups;
 
-    public Input<List<String>> getSecurityGroups() {
-        return this.securityGroups == null ? Input.empty() : this.securityGroups;
+    public Output<List<String>> getSecurityGroups() {
+        return this.securityGroups == null ? Output.empty() : this.securityGroups;
     }
 
     /**
@@ -193,10 +193,10 @@ public final class BrokerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="storageType")
-      private final @Nullable Input<String> storageType;
+      private final @Nullable Output<String> storageType;
 
-    public Input<String> getStorageType() {
-        return this.storageType == null ? Input.empty() : this.storageType;
+    public Output<String> getStorageType() {
+        return this.storageType == null ? Output.empty() : this.storageType;
     }
 
     /**
@@ -204,10 +204,10 @@ public final class BrokerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="subnetIds")
-      private final @Nullable Input<List<String>> subnetIds;
+      private final @Nullable Output<List<String>> subnetIds;
 
-    public Input<List<String>> getSubnetIds() {
-        return this.subnetIds == null ? Input.empty() : this.subnetIds;
+    public Output<List<String>> getSubnetIds() {
+        return this.subnetIds == null ? Output.empty() : this.subnetIds;
     }
 
     /**
@@ -215,10 +215,10 @@ public final class BrokerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -226,32 +226,32 @@ public final class BrokerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="users", required=true)
-      private final Input<List<BrokerUserArgs>> users;
+      private final Output<List<BrokerUserArgs>> users;
 
-    public Input<List<BrokerUserArgs>> getUsers() {
+    public Output<List<BrokerUserArgs>> getUsers() {
         return this.users;
     }
 
     public BrokerArgs(
-        @Nullable Input<Boolean> applyImmediately,
-        @Nullable Input<String> authenticationStrategy,
-        @Nullable Input<Boolean> autoMinorVersionUpgrade,
-        @Nullable Input<String> brokerName,
-        @Nullable Input<BrokerConfigurationArgs> configuration,
-        @Nullable Input<String> deploymentMode,
-        @Nullable Input<BrokerEncryptionOptionsArgs> encryptionOptions,
-        Input<String> engineType,
-        Input<String> engineVersion,
-        Input<String> hostInstanceType,
-        @Nullable Input<BrokerLdapServerMetadataArgs> ldapServerMetadata,
-        @Nullable Input<BrokerLogsArgs> logs,
-        @Nullable Input<BrokerMaintenanceWindowStartTimeArgs> maintenanceWindowStartTime,
-        @Nullable Input<Boolean> publiclyAccessible,
-        @Nullable Input<List<String>> securityGroups,
-        @Nullable Input<String> storageType,
-        @Nullable Input<List<String>> subnetIds,
-        @Nullable Input<Map<String,String>> tags,
-        Input<List<BrokerUserArgs>> users) {
+        @Nullable Output<Boolean> applyImmediately,
+        @Nullable Output<String> authenticationStrategy,
+        @Nullable Output<Boolean> autoMinorVersionUpgrade,
+        @Nullable Output<String> brokerName,
+        @Nullable Output<BrokerConfigurationArgs> configuration,
+        @Nullable Output<String> deploymentMode,
+        @Nullable Output<BrokerEncryptionOptionsArgs> encryptionOptions,
+        Output<String> engineType,
+        Output<String> engineVersion,
+        Output<String> hostInstanceType,
+        @Nullable Output<BrokerLdapServerMetadataArgs> ldapServerMetadata,
+        @Nullable Output<BrokerLogsArgs> logs,
+        @Nullable Output<BrokerMaintenanceWindowStartTimeArgs> maintenanceWindowStartTime,
+        @Nullable Output<Boolean> publiclyAccessible,
+        @Nullable Output<List<String>> securityGroups,
+        @Nullable Output<String> storageType,
+        @Nullable Output<List<String>> subnetIds,
+        @Nullable Output<Map<String,String>> tags,
+        Output<List<BrokerUserArgs>> users) {
         this.applyImmediately = applyImmediately;
         this.authenticationStrategy = authenticationStrategy;
         this.autoMinorVersionUpgrade = autoMinorVersionUpgrade;
@@ -274,25 +274,25 @@ public final class BrokerArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private BrokerArgs() {
-        this.applyImmediately = Input.empty();
-        this.authenticationStrategy = Input.empty();
-        this.autoMinorVersionUpgrade = Input.empty();
-        this.brokerName = Input.empty();
-        this.configuration = Input.empty();
-        this.deploymentMode = Input.empty();
-        this.encryptionOptions = Input.empty();
-        this.engineType = Input.empty();
-        this.engineVersion = Input.empty();
-        this.hostInstanceType = Input.empty();
-        this.ldapServerMetadata = Input.empty();
-        this.logs = Input.empty();
-        this.maintenanceWindowStartTime = Input.empty();
-        this.publiclyAccessible = Input.empty();
-        this.securityGroups = Input.empty();
-        this.storageType = Input.empty();
-        this.subnetIds = Input.empty();
-        this.tags = Input.empty();
-        this.users = Input.empty();
+        this.applyImmediately = Output.empty();
+        this.authenticationStrategy = Output.empty();
+        this.autoMinorVersionUpgrade = Output.empty();
+        this.brokerName = Output.empty();
+        this.configuration = Output.empty();
+        this.deploymentMode = Output.empty();
+        this.encryptionOptions = Output.empty();
+        this.engineType = Output.empty();
+        this.engineVersion = Output.empty();
+        this.hostInstanceType = Output.empty();
+        this.ldapServerMetadata = Output.empty();
+        this.logs = Output.empty();
+        this.maintenanceWindowStartTime = Output.empty();
+        this.publiclyAccessible = Output.empty();
+        this.securityGroups = Output.empty();
+        this.storageType = Output.empty();
+        this.subnetIds = Output.empty();
+        this.tags = Output.empty();
+        this.users = Output.empty();
     }
 
     public static Builder builder() {
@@ -304,25 +304,25 @@ public final class BrokerArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> applyImmediately;
-        private @Nullable Input<String> authenticationStrategy;
-        private @Nullable Input<Boolean> autoMinorVersionUpgrade;
-        private @Nullable Input<String> brokerName;
-        private @Nullable Input<BrokerConfigurationArgs> configuration;
-        private @Nullable Input<String> deploymentMode;
-        private @Nullable Input<BrokerEncryptionOptionsArgs> encryptionOptions;
-        private Input<String> engineType;
-        private Input<String> engineVersion;
-        private Input<String> hostInstanceType;
-        private @Nullable Input<BrokerLdapServerMetadataArgs> ldapServerMetadata;
-        private @Nullable Input<BrokerLogsArgs> logs;
-        private @Nullable Input<BrokerMaintenanceWindowStartTimeArgs> maintenanceWindowStartTime;
-        private @Nullable Input<Boolean> publiclyAccessible;
-        private @Nullable Input<List<String>> securityGroups;
-        private @Nullable Input<String> storageType;
-        private @Nullable Input<List<String>> subnetIds;
-        private @Nullable Input<Map<String,String>> tags;
-        private Input<List<BrokerUserArgs>> users;
+        private @Nullable Output<Boolean> applyImmediately;
+        private @Nullable Output<String> authenticationStrategy;
+        private @Nullable Output<Boolean> autoMinorVersionUpgrade;
+        private @Nullable Output<String> brokerName;
+        private @Nullable Output<BrokerConfigurationArgs> configuration;
+        private @Nullable Output<String> deploymentMode;
+        private @Nullable Output<BrokerEncryptionOptionsArgs> encryptionOptions;
+        private Output<String> engineType;
+        private Output<String> engineVersion;
+        private Output<String> hostInstanceType;
+        private @Nullable Output<BrokerLdapServerMetadataArgs> ldapServerMetadata;
+        private @Nullable Output<BrokerLogsArgs> logs;
+        private @Nullable Output<BrokerMaintenanceWindowStartTimeArgs> maintenanceWindowStartTime;
+        private @Nullable Output<Boolean> publiclyAccessible;
+        private @Nullable Output<List<String>> securityGroups;
+        private @Nullable Output<String> storageType;
+        private @Nullable Output<List<String>> subnetIds;
+        private @Nullable Output<Map<String,String>> tags;
+        private Output<List<BrokerUserArgs>> users;
 
         public Builder() {
     	      // Empty
@@ -351,193 +351,193 @@ public final class BrokerArgs extends io.pulumi.resources.ResourceArgs {
     	      this.users = defaults.users;
         }
 
-        public Builder applyImmediately(@Nullable Input<Boolean> applyImmediately) {
+        public Builder applyImmediately(@Nullable Output<Boolean> applyImmediately) {
             this.applyImmediately = applyImmediately;
             return this;
         }
 
         public Builder applyImmediately(@Nullable Boolean applyImmediately) {
-            this.applyImmediately = Input.ofNullable(applyImmediately);
+            this.applyImmediately = Output.ofNullable(applyImmediately);
             return this;
         }
 
-        public Builder authenticationStrategy(@Nullable Input<String> authenticationStrategy) {
+        public Builder authenticationStrategy(@Nullable Output<String> authenticationStrategy) {
             this.authenticationStrategy = authenticationStrategy;
             return this;
         }
 
         public Builder authenticationStrategy(@Nullable String authenticationStrategy) {
-            this.authenticationStrategy = Input.ofNullable(authenticationStrategy);
+            this.authenticationStrategy = Output.ofNullable(authenticationStrategy);
             return this;
         }
 
-        public Builder autoMinorVersionUpgrade(@Nullable Input<Boolean> autoMinorVersionUpgrade) {
+        public Builder autoMinorVersionUpgrade(@Nullable Output<Boolean> autoMinorVersionUpgrade) {
             this.autoMinorVersionUpgrade = autoMinorVersionUpgrade;
             return this;
         }
 
         public Builder autoMinorVersionUpgrade(@Nullable Boolean autoMinorVersionUpgrade) {
-            this.autoMinorVersionUpgrade = Input.ofNullable(autoMinorVersionUpgrade);
+            this.autoMinorVersionUpgrade = Output.ofNullable(autoMinorVersionUpgrade);
             return this;
         }
 
-        public Builder brokerName(@Nullable Input<String> brokerName) {
+        public Builder brokerName(@Nullable Output<String> brokerName) {
             this.brokerName = brokerName;
             return this;
         }
 
         public Builder brokerName(@Nullable String brokerName) {
-            this.brokerName = Input.ofNullable(brokerName);
+            this.brokerName = Output.ofNullable(brokerName);
             return this;
         }
 
-        public Builder configuration(@Nullable Input<BrokerConfigurationArgs> configuration) {
+        public Builder configuration(@Nullable Output<BrokerConfigurationArgs> configuration) {
             this.configuration = configuration;
             return this;
         }
 
         public Builder configuration(@Nullable BrokerConfigurationArgs configuration) {
-            this.configuration = Input.ofNullable(configuration);
+            this.configuration = Output.ofNullable(configuration);
             return this;
         }
 
-        public Builder deploymentMode(@Nullable Input<String> deploymentMode) {
+        public Builder deploymentMode(@Nullable Output<String> deploymentMode) {
             this.deploymentMode = deploymentMode;
             return this;
         }
 
         public Builder deploymentMode(@Nullable String deploymentMode) {
-            this.deploymentMode = Input.ofNullable(deploymentMode);
+            this.deploymentMode = Output.ofNullable(deploymentMode);
             return this;
         }
 
-        public Builder encryptionOptions(@Nullable Input<BrokerEncryptionOptionsArgs> encryptionOptions) {
+        public Builder encryptionOptions(@Nullable Output<BrokerEncryptionOptionsArgs> encryptionOptions) {
             this.encryptionOptions = encryptionOptions;
             return this;
         }
 
         public Builder encryptionOptions(@Nullable BrokerEncryptionOptionsArgs encryptionOptions) {
-            this.encryptionOptions = Input.ofNullable(encryptionOptions);
+            this.encryptionOptions = Output.ofNullable(encryptionOptions);
             return this;
         }
 
-        public Builder engineType(Input<String> engineType) {
+        public Builder engineType(Output<String> engineType) {
             this.engineType = Objects.requireNonNull(engineType);
             return this;
         }
 
         public Builder engineType(String engineType) {
-            this.engineType = Input.of(Objects.requireNonNull(engineType));
+            this.engineType = Output.of(Objects.requireNonNull(engineType));
             return this;
         }
 
-        public Builder engineVersion(Input<String> engineVersion) {
+        public Builder engineVersion(Output<String> engineVersion) {
             this.engineVersion = Objects.requireNonNull(engineVersion);
             return this;
         }
 
         public Builder engineVersion(String engineVersion) {
-            this.engineVersion = Input.of(Objects.requireNonNull(engineVersion));
+            this.engineVersion = Output.of(Objects.requireNonNull(engineVersion));
             return this;
         }
 
-        public Builder hostInstanceType(Input<String> hostInstanceType) {
+        public Builder hostInstanceType(Output<String> hostInstanceType) {
             this.hostInstanceType = Objects.requireNonNull(hostInstanceType);
             return this;
         }
 
         public Builder hostInstanceType(String hostInstanceType) {
-            this.hostInstanceType = Input.of(Objects.requireNonNull(hostInstanceType));
+            this.hostInstanceType = Output.of(Objects.requireNonNull(hostInstanceType));
             return this;
         }
 
-        public Builder ldapServerMetadata(@Nullable Input<BrokerLdapServerMetadataArgs> ldapServerMetadata) {
+        public Builder ldapServerMetadata(@Nullable Output<BrokerLdapServerMetadataArgs> ldapServerMetadata) {
             this.ldapServerMetadata = ldapServerMetadata;
             return this;
         }
 
         public Builder ldapServerMetadata(@Nullable BrokerLdapServerMetadataArgs ldapServerMetadata) {
-            this.ldapServerMetadata = Input.ofNullable(ldapServerMetadata);
+            this.ldapServerMetadata = Output.ofNullable(ldapServerMetadata);
             return this;
         }
 
-        public Builder logs(@Nullable Input<BrokerLogsArgs> logs) {
+        public Builder logs(@Nullable Output<BrokerLogsArgs> logs) {
             this.logs = logs;
             return this;
         }
 
         public Builder logs(@Nullable BrokerLogsArgs logs) {
-            this.logs = Input.ofNullable(logs);
+            this.logs = Output.ofNullable(logs);
             return this;
         }
 
-        public Builder maintenanceWindowStartTime(@Nullable Input<BrokerMaintenanceWindowStartTimeArgs> maintenanceWindowStartTime) {
+        public Builder maintenanceWindowStartTime(@Nullable Output<BrokerMaintenanceWindowStartTimeArgs> maintenanceWindowStartTime) {
             this.maintenanceWindowStartTime = maintenanceWindowStartTime;
             return this;
         }
 
         public Builder maintenanceWindowStartTime(@Nullable BrokerMaintenanceWindowStartTimeArgs maintenanceWindowStartTime) {
-            this.maintenanceWindowStartTime = Input.ofNullable(maintenanceWindowStartTime);
+            this.maintenanceWindowStartTime = Output.ofNullable(maintenanceWindowStartTime);
             return this;
         }
 
-        public Builder publiclyAccessible(@Nullable Input<Boolean> publiclyAccessible) {
+        public Builder publiclyAccessible(@Nullable Output<Boolean> publiclyAccessible) {
             this.publiclyAccessible = publiclyAccessible;
             return this;
         }
 
         public Builder publiclyAccessible(@Nullable Boolean publiclyAccessible) {
-            this.publiclyAccessible = Input.ofNullable(publiclyAccessible);
+            this.publiclyAccessible = Output.ofNullable(publiclyAccessible);
             return this;
         }
 
-        public Builder securityGroups(@Nullable Input<List<String>> securityGroups) {
+        public Builder securityGroups(@Nullable Output<List<String>> securityGroups) {
             this.securityGroups = securityGroups;
             return this;
         }
 
         public Builder securityGroups(@Nullable List<String> securityGroups) {
-            this.securityGroups = Input.ofNullable(securityGroups);
+            this.securityGroups = Output.ofNullable(securityGroups);
             return this;
         }
 
-        public Builder storageType(@Nullable Input<String> storageType) {
+        public Builder storageType(@Nullable Output<String> storageType) {
             this.storageType = storageType;
             return this;
         }
 
         public Builder storageType(@Nullable String storageType) {
-            this.storageType = Input.ofNullable(storageType);
+            this.storageType = Output.ofNullable(storageType);
             return this;
         }
 
-        public Builder subnetIds(@Nullable Input<List<String>> subnetIds) {
+        public Builder subnetIds(@Nullable Output<List<String>> subnetIds) {
             this.subnetIds = subnetIds;
             return this;
         }
 
         public Builder subnetIds(@Nullable List<String> subnetIds) {
-            this.subnetIds = Input.ofNullable(subnetIds);
+            this.subnetIds = Output.ofNullable(subnetIds);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder users(Input<List<BrokerUserArgs>> users) {
+        public Builder users(Output<List<BrokerUserArgs>> users) {
             this.users = Objects.requireNonNull(users);
             return this;
         }
 
         public Builder users(List<BrokerUserArgs> users) {
-            this.users = Input.of(Objects.requireNonNull(users));
+            this.users = Output.of(Objects.requireNonNull(users));
             return this;
         }
         public BrokerArgs build() {

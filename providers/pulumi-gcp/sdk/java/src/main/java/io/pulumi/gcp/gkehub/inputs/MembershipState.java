@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.gkehub.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.gkehub.inputs.MembershipAuthorityGetArgs;
 import io.pulumi.gcp.gkehub.inputs.MembershipEndpointGetArgs;
@@ -25,10 +25,10 @@ public final class MembershipState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="authority")
-      private final @Nullable Input<MembershipAuthorityGetArgs> authority;
+      private final @Nullable Output<MembershipAuthorityGetArgs> authority;
 
-    public Input<MembershipAuthorityGetArgs> getAuthority() {
-        return this.authority == null ? Input.empty() : this.authority;
+    public Output<MembershipAuthorityGetArgs> getAuthority() {
+        return this.authority == null ? Output.empty() : this.authority;
     }
 
     /**
@@ -40,11 +40,11 @@ public final class MembershipState extends io.pulumi.resources.ResourceArgs {
      */
     @Deprecated /* This field is unavailable in the GA provider and will be removed from the beta provider in a future release. */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
     @Deprecated /* This field is unavailable in the GA provider and will be removed from the beta provider in a future release. */
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -53,10 +53,10 @@ public final class MembershipState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="endpoint")
-      private final @Nullable Input<MembershipEndpointGetArgs> endpoint;
+      private final @Nullable Output<MembershipEndpointGetArgs> endpoint;
 
-    public Input<MembershipEndpointGetArgs> getEndpoint() {
-        return this.endpoint == null ? Input.empty() : this.endpoint;
+    public Output<MembershipEndpointGetArgs> getEndpoint() {
+        return this.endpoint == null ? Output.empty() : this.endpoint;
     }
 
     /**
@@ -64,10 +64,10 @@ public final class MembershipState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labels")
-      private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Output<Map<String,String>> labels;
 
-    public Input<Map<String,String>> getLabels() {
-        return this.labels == null ? Input.empty() : this.labels;
+    public Output<Map<String,String>> getLabels() {
+        return this.labels == null ? Output.empty() : this.labels;
     }
 
     /**
@@ -75,10 +75,10 @@ public final class MembershipState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="membershipId")
-      private final @Nullable Input<String> membershipId;
+      private final @Nullable Output<String> membershipId;
 
-    public Input<String> getMembershipId() {
-        return this.membershipId == null ? Input.empty() : this.membershipId;
+    public Output<String> getMembershipId() {
+        return this.membershipId == null ? Output.empty() : this.membershipId;
     }
 
     /**
@@ -86,10 +86,10 @@ public final class MembershipState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -98,20 +98,20 @@ public final class MembershipState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     public MembershipState(
-        @Nullable Input<MembershipAuthorityGetArgs> authority,
-        @Nullable Input<String> description,
-        @Nullable Input<MembershipEndpointGetArgs> endpoint,
-        @Nullable Input<Map<String,String>> labels,
-        @Nullable Input<String> membershipId,
-        @Nullable Input<String> name,
-        @Nullable Input<String> project) {
+        @Nullable Output<MembershipAuthorityGetArgs> authority,
+        @Nullable Output<String> description,
+        @Nullable Output<MembershipEndpointGetArgs> endpoint,
+        @Nullable Output<Map<String,String>> labels,
+        @Nullable Output<String> membershipId,
+        @Nullable Output<String> name,
+        @Nullable Output<String> project) {
         this.authority = authority;
         this.description = description;
         this.endpoint = endpoint;
@@ -122,13 +122,13 @@ public final class MembershipState extends io.pulumi.resources.ResourceArgs {
     }
 
     private MembershipState() {
-        this.authority = Input.empty();
-        this.description = Input.empty();
-        this.endpoint = Input.empty();
-        this.labels = Input.empty();
-        this.membershipId = Input.empty();
-        this.name = Input.empty();
-        this.project = Input.empty();
+        this.authority = Output.empty();
+        this.description = Output.empty();
+        this.endpoint = Output.empty();
+        this.labels = Output.empty();
+        this.membershipId = Output.empty();
+        this.name = Output.empty();
+        this.project = Output.empty();
     }
 
     public static Builder builder() {
@@ -140,13 +140,13 @@ public final class MembershipState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<MembershipAuthorityGetArgs> authority;
-        private @Nullable Input<String> description;
-        private @Nullable Input<MembershipEndpointGetArgs> endpoint;
-        private @Nullable Input<Map<String,String>> labels;
-        private @Nullable Input<String> membershipId;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> project;
+        private @Nullable Output<MembershipAuthorityGetArgs> authority;
+        private @Nullable Output<String> description;
+        private @Nullable Output<MembershipEndpointGetArgs> endpoint;
+        private @Nullable Output<Map<String,String>> labels;
+        private @Nullable Output<String> membershipId;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> project;
 
         public Builder() {
     	      // Empty
@@ -163,73 +163,73 @@ public final class MembershipState extends io.pulumi.resources.ResourceArgs {
     	      this.project = defaults.project;
         }
 
-        public Builder authority(@Nullable Input<MembershipAuthorityGetArgs> authority) {
+        public Builder authority(@Nullable Output<MembershipAuthorityGetArgs> authority) {
             this.authority = authority;
             return this;
         }
 
         public Builder authority(@Nullable MembershipAuthorityGetArgs authority) {
-            this.authority = Input.ofNullable(authority);
+            this.authority = Output.ofNullable(authority);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder endpoint(@Nullable Input<MembershipEndpointGetArgs> endpoint) {
+        public Builder endpoint(@Nullable Output<MembershipEndpointGetArgs> endpoint) {
             this.endpoint = endpoint;
             return this;
         }
 
         public Builder endpoint(@Nullable MembershipEndpointGetArgs endpoint) {
-            this.endpoint = Input.ofNullable(endpoint);
+            this.endpoint = Output.ofNullable(endpoint);
             return this;
         }
 
-        public Builder labels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
         public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Input.ofNullable(labels);
+            this.labels = Output.ofNullable(labels);
             return this;
         }
 
-        public Builder membershipId(@Nullable Input<String> membershipId) {
+        public Builder membershipId(@Nullable Output<String> membershipId) {
             this.membershipId = membershipId;
             return this;
         }
 
         public Builder membershipId(@Nullable String membershipId) {
-            this.membershipId = Input.ofNullable(membershipId);
+            this.membershipId = Output.ofNullable(membershipId);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
         public MembershipState build() {

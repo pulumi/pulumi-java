@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.cognito.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class UserPoolAdminCreateUserConfigInviteMessageTemplateArgs extend
      * 
      */
     @InputImport(name="emailMessage")
-      private final @Nullable Input<String> emailMessage;
+      private final @Nullable Output<String> emailMessage;
 
-    public Input<String> getEmailMessage() {
-        return this.emailMessage == null ? Input.empty() : this.emailMessage;
+    public Output<String> getEmailMessage() {
+        return this.emailMessage == null ? Output.empty() : this.emailMessage;
     }
 
     /**
@@ -30,10 +30,10 @@ public final class UserPoolAdminCreateUserConfigInviteMessageTemplateArgs extend
      * 
      */
     @InputImport(name="emailSubject")
-      private final @Nullable Input<String> emailSubject;
+      private final @Nullable Output<String> emailSubject;
 
-    public Input<String> getEmailSubject() {
-        return this.emailSubject == null ? Input.empty() : this.emailSubject;
+    public Output<String> getEmailSubject() {
+        return this.emailSubject == null ? Output.empty() : this.emailSubject;
     }
 
     /**
@@ -41,25 +41,25 @@ public final class UserPoolAdminCreateUserConfigInviteMessageTemplateArgs extend
      * 
      */
     @InputImport(name="smsMessage")
-      private final @Nullable Input<String> smsMessage;
+      private final @Nullable Output<String> smsMessage;
 
-    public Input<String> getSmsMessage() {
-        return this.smsMessage == null ? Input.empty() : this.smsMessage;
+    public Output<String> getSmsMessage() {
+        return this.smsMessage == null ? Output.empty() : this.smsMessage;
     }
 
     public UserPoolAdminCreateUserConfigInviteMessageTemplateArgs(
-        @Nullable Input<String> emailMessage,
-        @Nullable Input<String> emailSubject,
-        @Nullable Input<String> smsMessage) {
+        @Nullable Output<String> emailMessage,
+        @Nullable Output<String> emailSubject,
+        @Nullable Output<String> smsMessage) {
         this.emailMessage = emailMessage;
         this.emailSubject = emailSubject;
         this.smsMessage = smsMessage;
     }
 
     private UserPoolAdminCreateUserConfigInviteMessageTemplateArgs() {
-        this.emailMessage = Input.empty();
-        this.emailSubject = Input.empty();
-        this.smsMessage = Input.empty();
+        this.emailMessage = Output.empty();
+        this.emailSubject = Output.empty();
+        this.smsMessage = Output.empty();
     }
 
     public static Builder builder() {
@@ -71,9 +71,9 @@ public final class UserPoolAdminCreateUserConfigInviteMessageTemplateArgs extend
     }
 
     public static final class Builder {
-        private @Nullable Input<String> emailMessage;
-        private @Nullable Input<String> emailSubject;
-        private @Nullable Input<String> smsMessage;
+        private @Nullable Output<String> emailMessage;
+        private @Nullable Output<String> emailSubject;
+        private @Nullable Output<String> smsMessage;
 
         public Builder() {
     	      // Empty
@@ -86,33 +86,33 @@ public final class UserPoolAdminCreateUserConfigInviteMessageTemplateArgs extend
     	      this.smsMessage = defaults.smsMessage;
         }
 
-        public Builder emailMessage(@Nullable Input<String> emailMessage) {
+        public Builder emailMessage(@Nullable Output<String> emailMessage) {
             this.emailMessage = emailMessage;
             return this;
         }
 
         public Builder emailMessage(@Nullable String emailMessage) {
-            this.emailMessage = Input.ofNullable(emailMessage);
+            this.emailMessage = Output.ofNullable(emailMessage);
             return this;
         }
 
-        public Builder emailSubject(@Nullable Input<String> emailSubject) {
+        public Builder emailSubject(@Nullable Output<String> emailSubject) {
             this.emailSubject = emailSubject;
             return this;
         }
 
         public Builder emailSubject(@Nullable String emailSubject) {
-            this.emailSubject = Input.ofNullable(emailSubject);
+            this.emailSubject = Output.ofNullable(emailSubject);
             return this;
         }
 
-        public Builder smsMessage(@Nullable Input<String> smsMessage) {
+        public Builder smsMessage(@Nullable Output<String> smsMessage) {
             this.smsMessage = smsMessage;
             return this;
         }
 
         public Builder smsMessage(@Nullable String smsMessage) {
-            this.smsMessage = Input.ofNullable(smsMessage);
+            this.smsMessage = Output.ofNullable(smsMessage);
             return this;
         }
         public UserPoolAdminCreateUserConfigInviteMessageTemplateArgs build() {

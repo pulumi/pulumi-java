@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.batch;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -20,9 +20,9 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="accountName", required=true)
-      private final Input<String> accountName;
+      private final Output<String> accountName;
 
-    public Input<String> getAccountName() {
+    public Output<String> getAccountName() {
         return this.accountName;
     }
 
@@ -31,10 +31,10 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="allowUpdates")
-      private final @Nullable Input<Boolean> allowUpdates;
+      private final @Nullable Output<Boolean> allowUpdates;
 
-    public Input<Boolean> getAllowUpdates() {
-        return this.allowUpdates == null ? Input.empty() : this.allowUpdates;
+    public Output<Boolean> getAllowUpdates() {
+        return this.allowUpdates == null ? Output.empty() : this.allowUpdates;
     }
 
     /**
@@ -42,10 +42,10 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="applicationName")
-      private final @Nullable Input<String> applicationName;
+      private final @Nullable Output<String> applicationName;
 
-    public Input<String> getApplicationName() {
-        return this.applicationName == null ? Input.empty() : this.applicationName;
+    public Output<String> getApplicationName() {
+        return this.applicationName == null ? Output.empty() : this.applicationName;
     }
 
     /**
@@ -53,10 +53,10 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="defaultVersion")
-      private final @Nullable Input<String> defaultVersion;
+      private final @Nullable Output<String> defaultVersion;
 
-    public Input<String> getDefaultVersion() {
-        return this.defaultVersion == null ? Input.empty() : this.defaultVersion;
+    public Output<String> getDefaultVersion() {
+        return this.defaultVersion == null ? Output.empty() : this.defaultVersion;
     }
 
     /**
@@ -64,10 +64,10 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName")
-      private final @Nullable Input<String> displayName;
+      private final @Nullable Output<String> displayName;
 
-    public Input<String> getDisplayName() {
-        return this.displayName == null ? Input.empty() : this.displayName;
+    public Output<String> getDisplayName() {
+        return this.displayName == null ? Output.empty() : this.displayName;
     }
 
     /**
@@ -75,19 +75,19 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
     public ApplicationArgs(
-        Input<String> accountName,
-        @Nullable Input<Boolean> allowUpdates,
-        @Nullable Input<String> applicationName,
-        @Nullable Input<String> defaultVersion,
-        @Nullable Input<String> displayName,
-        Input<String> resourceGroupName) {
+        Output<String> accountName,
+        @Nullable Output<Boolean> allowUpdates,
+        @Nullable Output<String> applicationName,
+        @Nullable Output<String> defaultVersion,
+        @Nullable Output<String> displayName,
+        Output<String> resourceGroupName) {
         this.accountName = Objects.requireNonNull(accountName, "expected parameter 'accountName' to be non-null");
         this.allowUpdates = allowUpdates;
         this.applicationName = applicationName;
@@ -97,12 +97,12 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ApplicationArgs() {
-        this.accountName = Input.empty();
-        this.allowUpdates = Input.empty();
-        this.applicationName = Input.empty();
-        this.defaultVersion = Input.empty();
-        this.displayName = Input.empty();
-        this.resourceGroupName = Input.empty();
+        this.accountName = Output.empty();
+        this.allowUpdates = Output.empty();
+        this.applicationName = Output.empty();
+        this.defaultVersion = Output.empty();
+        this.displayName = Output.empty();
+        this.resourceGroupName = Output.empty();
     }
 
     public static Builder builder() {
@@ -114,12 +114,12 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> accountName;
-        private @Nullable Input<Boolean> allowUpdates;
-        private @Nullable Input<String> applicationName;
-        private @Nullable Input<String> defaultVersion;
-        private @Nullable Input<String> displayName;
-        private Input<String> resourceGroupName;
+        private Output<String> accountName;
+        private @Nullable Output<Boolean> allowUpdates;
+        private @Nullable Output<String> applicationName;
+        private @Nullable Output<String> defaultVersion;
+        private @Nullable Output<String> displayName;
+        private Output<String> resourceGroupName;
 
         public Builder() {
     	      // Empty
@@ -135,63 +135,63 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
     	      this.resourceGroupName = defaults.resourceGroupName;
         }
 
-        public Builder accountName(Input<String> accountName) {
+        public Builder accountName(Output<String> accountName) {
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
 
         public Builder accountName(String accountName) {
-            this.accountName = Input.of(Objects.requireNonNull(accountName));
+            this.accountName = Output.of(Objects.requireNonNull(accountName));
             return this;
         }
 
-        public Builder allowUpdates(@Nullable Input<Boolean> allowUpdates) {
+        public Builder allowUpdates(@Nullable Output<Boolean> allowUpdates) {
             this.allowUpdates = allowUpdates;
             return this;
         }
 
         public Builder allowUpdates(@Nullable Boolean allowUpdates) {
-            this.allowUpdates = Input.ofNullable(allowUpdates);
+            this.allowUpdates = Output.ofNullable(allowUpdates);
             return this;
         }
 
-        public Builder applicationName(@Nullable Input<String> applicationName) {
+        public Builder applicationName(@Nullable Output<String> applicationName) {
             this.applicationName = applicationName;
             return this;
         }
 
         public Builder applicationName(@Nullable String applicationName) {
-            this.applicationName = Input.ofNullable(applicationName);
+            this.applicationName = Output.ofNullable(applicationName);
             return this;
         }
 
-        public Builder defaultVersion(@Nullable Input<String> defaultVersion) {
+        public Builder defaultVersion(@Nullable Output<String> defaultVersion) {
             this.defaultVersion = defaultVersion;
             return this;
         }
 
         public Builder defaultVersion(@Nullable String defaultVersion) {
-            this.defaultVersion = Input.ofNullable(defaultVersion);
+            this.defaultVersion = Output.ofNullable(defaultVersion);
             return this;
         }
 
-        public Builder displayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Input.ofNullable(displayName);
+            this.displayName = Output.ofNullable(displayName);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
         public ApplicationArgs build() {

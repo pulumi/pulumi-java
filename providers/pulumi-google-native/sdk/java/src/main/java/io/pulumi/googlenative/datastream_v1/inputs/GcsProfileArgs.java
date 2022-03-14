@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.datastream_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,9 +23,9 @@ public final class GcsProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="bucket", required=true)
-      private final Input<String> bucket;
+      private final Output<String> bucket;
 
-    public Input<String> getBucket() {
+    public Output<String> getBucket() {
         return this.bucket;
     }
 
@@ -34,22 +34,22 @@ public final class GcsProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="rootPath")
-      private final @Nullable Input<String> rootPath;
+      private final @Nullable Output<String> rootPath;
 
-    public Input<String> getRootPath() {
-        return this.rootPath == null ? Input.empty() : this.rootPath;
+    public Output<String> getRootPath() {
+        return this.rootPath == null ? Output.empty() : this.rootPath;
     }
 
     public GcsProfileArgs(
-        Input<String> bucket,
-        @Nullable Input<String> rootPath) {
+        Output<String> bucket,
+        @Nullable Output<String> rootPath) {
         this.bucket = Objects.requireNonNull(bucket, "expected parameter 'bucket' to be non-null");
         this.rootPath = rootPath;
     }
 
     private GcsProfileArgs() {
-        this.bucket = Input.empty();
-        this.rootPath = Input.empty();
+        this.bucket = Output.empty();
+        this.rootPath = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class GcsProfileArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> bucket;
-        private @Nullable Input<String> rootPath;
+        private Output<String> bucket;
+        private @Nullable Output<String> rootPath;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class GcsProfileArgs extends io.pulumi.resources.ResourceArgs {
     	      this.rootPath = defaults.rootPath;
         }
 
-        public Builder bucket(Input<String> bucket) {
+        public Builder bucket(Output<String> bucket) {
             this.bucket = Objects.requireNonNull(bucket);
             return this;
         }
 
         public Builder bucket(String bucket) {
-            this.bucket = Input.of(Objects.requireNonNull(bucket));
+            this.bucket = Output.of(Objects.requireNonNull(bucket));
             return this;
         }
 
-        public Builder rootPath(@Nullable Input<String> rootPath) {
+        public Builder rootPath(@Nullable Output<String> rootPath) {
             this.rootPath = rootPath;
             return this;
         }
 
         public Builder rootPath(@Nullable String rootPath) {
-            this.rootPath = Input.ofNullable(rootPath);
+            this.rootPath = Output.ofNullable(rootPath);
             return this;
         }
         public GcsProfileArgs build() {

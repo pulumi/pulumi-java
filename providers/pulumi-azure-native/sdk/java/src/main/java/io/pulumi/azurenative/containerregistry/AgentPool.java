@@ -7,7 +7,6 @@ import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.containerregistry.AgentPoolArgs;
 import io.pulumi.azurenative.containerregistry.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -214,18 +213,18 @@ public class AgentPool extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public AgentPool(String name, AgentPoolArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:containerregistry:AgentPool", name, args == null ? AgentPoolArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("azure-native:containerregistry:AgentPool", name, args == null ? AgentPoolArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private AgentPool(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private AgentPool(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:containerregistry:AgentPool", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:containerregistry/v20190601preview:AgentPool").build())
+                Output.of(Alias.builder().setType("azure-native:containerregistry/v20190601preview:AgentPool").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -239,7 +238,7 @@ public class AgentPool extends io.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static AgentPool get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static AgentPool get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new AgentPool(name, id, options);
     }
 }

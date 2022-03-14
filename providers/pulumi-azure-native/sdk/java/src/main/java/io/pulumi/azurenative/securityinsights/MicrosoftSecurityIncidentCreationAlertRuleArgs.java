@@ -6,7 +6,7 @@ package io.pulumi.azurenative.securityinsights;
 import io.pulumi.azurenative.securityinsights.enums.AlertSeverity;
 import io.pulumi.azurenative.securityinsights.enums.MicrosoftSecurityProductName;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class MicrosoftSecurityIncidentCreationAlertRuleArgs extends io.pul
      * 
      */
     @InputImport(name="alertRuleTemplateName")
-      private final @Nullable Input<String> alertRuleTemplateName;
+      private final @Nullable Output<String> alertRuleTemplateName;
 
-    public Input<String> getAlertRuleTemplateName() {
-        return this.alertRuleTemplateName == null ? Input.empty() : this.alertRuleTemplateName;
+    public Output<String> getAlertRuleTemplateName() {
+        return this.alertRuleTemplateName == null ? Output.empty() : this.alertRuleTemplateName;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class MicrosoftSecurityIncidentCreationAlertRuleArgs extends io.pul
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -46,9 +46,9 @@ public final class MicrosoftSecurityIncidentCreationAlertRuleArgs extends io.pul
      * 
      */
     @InputImport(name="displayName", required=true)
-      private final Input<String> displayName;
+      private final Output<String> displayName;
 
-    public Input<String> getDisplayName() {
+    public Output<String> getDisplayName() {
         return this.displayName;
     }
 
@@ -57,10 +57,10 @@ public final class MicrosoftSecurityIncidentCreationAlertRuleArgs extends io.pul
      * 
      */
     @InputImport(name="displayNamesExcludeFilter")
-      private final @Nullable Input<List<String>> displayNamesExcludeFilter;
+      private final @Nullable Output<List<String>> displayNamesExcludeFilter;
 
-    public Input<List<String>> getDisplayNamesExcludeFilter() {
-        return this.displayNamesExcludeFilter == null ? Input.empty() : this.displayNamesExcludeFilter;
+    public Output<List<String>> getDisplayNamesExcludeFilter() {
+        return this.displayNamesExcludeFilter == null ? Output.empty() : this.displayNamesExcludeFilter;
     }
 
     /**
@@ -68,10 +68,10 @@ public final class MicrosoftSecurityIncidentCreationAlertRuleArgs extends io.pul
      * 
      */
     @InputImport(name="displayNamesFilter")
-      private final @Nullable Input<List<String>> displayNamesFilter;
+      private final @Nullable Output<List<String>> displayNamesFilter;
 
-    public Input<List<String>> getDisplayNamesFilter() {
-        return this.displayNamesFilter == null ? Input.empty() : this.displayNamesFilter;
+    public Output<List<String>> getDisplayNamesFilter() {
+        return this.displayNamesFilter == null ? Output.empty() : this.displayNamesFilter;
     }
 
     /**
@@ -79,9 +79,9 @@ public final class MicrosoftSecurityIncidentCreationAlertRuleArgs extends io.pul
      * 
      */
     @InputImport(name="enabled", required=true)
-      private final Input<Boolean> enabled;
+      private final Output<Boolean> enabled;
 
-    public Input<Boolean> getEnabled() {
+    public Output<Boolean> getEnabled() {
         return this.enabled;
     }
 
@@ -91,9 +91,9 @@ public final class MicrosoftSecurityIncidentCreationAlertRuleArgs extends io.pul
      * 
      */
     @InputImport(name="kind", required=true)
-      private final Input<String> kind;
+      private final Output<String> kind;
 
-    public Input<String> getKind() {
+    public Output<String> getKind() {
         return this.kind;
     }
 
@@ -102,9 +102,9 @@ public final class MicrosoftSecurityIncidentCreationAlertRuleArgs extends io.pul
      * 
      */
     @InputImport(name="productFilter", required=true)
-      private final Input<Either<String,MicrosoftSecurityProductName>> productFilter;
+      private final Output<Either<String,MicrosoftSecurityProductName>> productFilter;
 
-    public Input<Either<String,MicrosoftSecurityProductName>> getProductFilter() {
+    public Output<Either<String,MicrosoftSecurityProductName>> getProductFilter() {
         return this.productFilter;
     }
 
@@ -113,9 +113,9 @@ public final class MicrosoftSecurityIncidentCreationAlertRuleArgs extends io.pul
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -124,10 +124,10 @@ public final class MicrosoftSecurityIncidentCreationAlertRuleArgs extends io.pul
      * 
      */
     @InputImport(name="ruleId")
-      private final @Nullable Input<String> ruleId;
+      private final @Nullable Output<String> ruleId;
 
-    public Input<String> getRuleId() {
-        return this.ruleId == null ? Input.empty() : this.ruleId;
+    public Output<String> getRuleId() {
+        return this.ruleId == null ? Output.empty() : this.ruleId;
     }
 
     /**
@@ -135,10 +135,10 @@ public final class MicrosoftSecurityIncidentCreationAlertRuleArgs extends io.pul
      * 
      */
     @InputImport(name="severitiesFilter")
-      private final @Nullable Input<List<Either<String,AlertSeverity>>> severitiesFilter;
+      private final @Nullable Output<List<Either<String,AlertSeverity>>> severitiesFilter;
 
-    public Input<List<Either<String,AlertSeverity>>> getSeveritiesFilter() {
-        return this.severitiesFilter == null ? Input.empty() : this.severitiesFilter;
+    public Output<List<Either<String,AlertSeverity>>> getSeveritiesFilter() {
+        return this.severitiesFilter == null ? Output.empty() : this.severitiesFilter;
     }
 
     /**
@@ -146,25 +146,25 @@ public final class MicrosoftSecurityIncidentCreationAlertRuleArgs extends io.pul
      * 
      */
     @InputImport(name="workspaceName", required=true)
-      private final Input<String> workspaceName;
+      private final Output<String> workspaceName;
 
-    public Input<String> getWorkspaceName() {
+    public Output<String> getWorkspaceName() {
         return this.workspaceName;
     }
 
     public MicrosoftSecurityIncidentCreationAlertRuleArgs(
-        @Nullable Input<String> alertRuleTemplateName,
-        @Nullable Input<String> description,
-        Input<String> displayName,
-        @Nullable Input<List<String>> displayNamesExcludeFilter,
-        @Nullable Input<List<String>> displayNamesFilter,
-        Input<Boolean> enabled,
-        Input<String> kind,
-        Input<Either<String,MicrosoftSecurityProductName>> productFilter,
-        Input<String> resourceGroupName,
-        @Nullable Input<String> ruleId,
-        @Nullable Input<List<Either<String,AlertSeverity>>> severitiesFilter,
-        Input<String> workspaceName) {
+        @Nullable Output<String> alertRuleTemplateName,
+        @Nullable Output<String> description,
+        Output<String> displayName,
+        @Nullable Output<List<String>> displayNamesExcludeFilter,
+        @Nullable Output<List<String>> displayNamesFilter,
+        Output<Boolean> enabled,
+        Output<String> kind,
+        Output<Either<String,MicrosoftSecurityProductName>> productFilter,
+        Output<String> resourceGroupName,
+        @Nullable Output<String> ruleId,
+        @Nullable Output<List<Either<String,AlertSeverity>>> severitiesFilter,
+        Output<String> workspaceName) {
         this.alertRuleTemplateName = alertRuleTemplateName;
         this.description = description;
         this.displayName = Objects.requireNonNull(displayName, "expected parameter 'displayName' to be non-null");
@@ -180,18 +180,18 @@ public final class MicrosoftSecurityIncidentCreationAlertRuleArgs extends io.pul
     }
 
     private MicrosoftSecurityIncidentCreationAlertRuleArgs() {
-        this.alertRuleTemplateName = Input.empty();
-        this.description = Input.empty();
-        this.displayName = Input.empty();
-        this.displayNamesExcludeFilter = Input.empty();
-        this.displayNamesFilter = Input.empty();
-        this.enabled = Input.empty();
-        this.kind = Input.empty();
-        this.productFilter = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.ruleId = Input.empty();
-        this.severitiesFilter = Input.empty();
-        this.workspaceName = Input.empty();
+        this.alertRuleTemplateName = Output.empty();
+        this.description = Output.empty();
+        this.displayName = Output.empty();
+        this.displayNamesExcludeFilter = Output.empty();
+        this.displayNamesFilter = Output.empty();
+        this.enabled = Output.empty();
+        this.kind = Output.empty();
+        this.productFilter = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.ruleId = Output.empty();
+        this.severitiesFilter = Output.empty();
+        this.workspaceName = Output.empty();
     }
 
     public static Builder builder() {
@@ -203,18 +203,18 @@ public final class MicrosoftSecurityIncidentCreationAlertRuleArgs extends io.pul
     }
 
     public static final class Builder {
-        private @Nullable Input<String> alertRuleTemplateName;
-        private @Nullable Input<String> description;
-        private Input<String> displayName;
-        private @Nullable Input<List<String>> displayNamesExcludeFilter;
-        private @Nullable Input<List<String>> displayNamesFilter;
-        private Input<Boolean> enabled;
-        private Input<String> kind;
-        private Input<Either<String,MicrosoftSecurityProductName>> productFilter;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<String> ruleId;
-        private @Nullable Input<List<Either<String,AlertSeverity>>> severitiesFilter;
-        private Input<String> workspaceName;
+        private @Nullable Output<String> alertRuleTemplateName;
+        private @Nullable Output<String> description;
+        private Output<String> displayName;
+        private @Nullable Output<List<String>> displayNamesExcludeFilter;
+        private @Nullable Output<List<String>> displayNamesFilter;
+        private Output<Boolean> enabled;
+        private Output<String> kind;
+        private Output<Either<String,MicrosoftSecurityProductName>> productFilter;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<String> ruleId;
+        private @Nullable Output<List<Either<String,AlertSeverity>>> severitiesFilter;
+        private Output<String> workspaceName;
 
         public Builder() {
     	      // Empty
@@ -236,123 +236,123 @@ public final class MicrosoftSecurityIncidentCreationAlertRuleArgs extends io.pul
     	      this.workspaceName = defaults.workspaceName;
         }
 
-        public Builder alertRuleTemplateName(@Nullable Input<String> alertRuleTemplateName) {
+        public Builder alertRuleTemplateName(@Nullable Output<String> alertRuleTemplateName) {
             this.alertRuleTemplateName = alertRuleTemplateName;
             return this;
         }
 
         public Builder alertRuleTemplateName(@Nullable String alertRuleTemplateName) {
-            this.alertRuleTemplateName = Input.ofNullable(alertRuleTemplateName);
+            this.alertRuleTemplateName = Output.ofNullable(alertRuleTemplateName);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder displayName(Input<String> displayName) {
+        public Builder displayName(Output<String> displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
         public Builder displayName(String displayName) {
-            this.displayName = Input.of(Objects.requireNonNull(displayName));
+            this.displayName = Output.of(Objects.requireNonNull(displayName));
             return this;
         }
 
-        public Builder displayNamesExcludeFilter(@Nullable Input<List<String>> displayNamesExcludeFilter) {
+        public Builder displayNamesExcludeFilter(@Nullable Output<List<String>> displayNamesExcludeFilter) {
             this.displayNamesExcludeFilter = displayNamesExcludeFilter;
             return this;
         }
 
         public Builder displayNamesExcludeFilter(@Nullable List<String> displayNamesExcludeFilter) {
-            this.displayNamesExcludeFilter = Input.ofNullable(displayNamesExcludeFilter);
+            this.displayNamesExcludeFilter = Output.ofNullable(displayNamesExcludeFilter);
             return this;
         }
 
-        public Builder displayNamesFilter(@Nullable Input<List<String>> displayNamesFilter) {
+        public Builder displayNamesFilter(@Nullable Output<List<String>> displayNamesFilter) {
             this.displayNamesFilter = displayNamesFilter;
             return this;
         }
 
         public Builder displayNamesFilter(@Nullable List<String> displayNamesFilter) {
-            this.displayNamesFilter = Input.ofNullable(displayNamesFilter);
+            this.displayNamesFilter = Output.ofNullable(displayNamesFilter);
             return this;
         }
 
-        public Builder enabled(Input<Boolean> enabled) {
+        public Builder enabled(Output<Boolean> enabled) {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
 
         public Builder enabled(Boolean enabled) {
-            this.enabled = Input.of(Objects.requireNonNull(enabled));
+            this.enabled = Output.of(Objects.requireNonNull(enabled));
             return this;
         }
 
-        public Builder kind(Input<String> kind) {
+        public Builder kind(Output<String> kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
         public Builder kind(String kind) {
-            this.kind = Input.of(Objects.requireNonNull(kind));
+            this.kind = Output.of(Objects.requireNonNull(kind));
             return this;
         }
 
-        public Builder productFilter(Input<Either<String,MicrosoftSecurityProductName>> productFilter) {
+        public Builder productFilter(Output<Either<String,MicrosoftSecurityProductName>> productFilter) {
             this.productFilter = Objects.requireNonNull(productFilter);
             return this;
         }
 
         public Builder productFilter(Either<String,MicrosoftSecurityProductName> productFilter) {
-            this.productFilter = Input.of(Objects.requireNonNull(productFilter));
+            this.productFilter = Output.of(Objects.requireNonNull(productFilter));
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder ruleId(@Nullable Input<String> ruleId) {
+        public Builder ruleId(@Nullable Output<String> ruleId) {
             this.ruleId = ruleId;
             return this;
         }
 
         public Builder ruleId(@Nullable String ruleId) {
-            this.ruleId = Input.ofNullable(ruleId);
+            this.ruleId = Output.ofNullable(ruleId);
             return this;
         }
 
-        public Builder severitiesFilter(@Nullable Input<List<Either<String,AlertSeverity>>> severitiesFilter) {
+        public Builder severitiesFilter(@Nullable Output<List<Either<String,AlertSeverity>>> severitiesFilter) {
             this.severitiesFilter = severitiesFilter;
             return this;
         }
 
         public Builder severitiesFilter(@Nullable List<Either<String,AlertSeverity>> severitiesFilter) {
-            this.severitiesFilter = Input.ofNullable(severitiesFilter);
+            this.severitiesFilter = Output.ofNullable(severitiesFilter);
             return this;
         }
 
-        public Builder workspaceName(Input<String> workspaceName) {
+        public Builder workspaceName(Output<String> workspaceName) {
             this.workspaceName = Objects.requireNonNull(workspaceName);
             return this;
         }
 
         public Builder workspaceName(String workspaceName) {
-            this.workspaceName = Input.of(Objects.requireNonNull(workspaceName));
+            this.workspaceName = Output.of(Objects.requireNonNull(workspaceName));
             return this;
         }
         public MicrosoftSecurityIncidentCreationAlertRuleArgs build() {

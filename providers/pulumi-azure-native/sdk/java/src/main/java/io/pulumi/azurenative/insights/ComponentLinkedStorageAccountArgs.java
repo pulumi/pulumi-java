@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.insights;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class ComponentLinkedStorageAccountArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="linkedStorageAccount")
-      private final @Nullable Input<String> linkedStorageAccount;
+      private final @Nullable Output<String> linkedStorageAccount;
 
-    public Input<String> getLinkedStorageAccount() {
-        return this.linkedStorageAccount == null ? Input.empty() : this.linkedStorageAccount;
+    public Output<String> getLinkedStorageAccount() {
+        return this.linkedStorageAccount == null ? Output.empty() : this.linkedStorageAccount;
     }
 
     /**
@@ -30,9 +30,9 @@ public final class ComponentLinkedStorageAccountArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -41,9 +41,9 @@ public final class ComponentLinkedStorageAccountArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="resourceName", required=true)
-      private final Input<String> resourceName;
+      private final Output<String> resourceName;
 
-    public Input<String> getPropResourceName() {
+    public Output<String> getPropResourceName() {
         return this.resourceName;
     }
 
@@ -52,17 +52,17 @@ public final class ComponentLinkedStorageAccountArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="storageType")
-      private final @Nullable Input<String> storageType;
+      private final @Nullable Output<String> storageType;
 
-    public Input<String> getStorageType() {
-        return this.storageType == null ? Input.empty() : this.storageType;
+    public Output<String> getStorageType() {
+        return this.storageType == null ? Output.empty() : this.storageType;
     }
 
     public ComponentLinkedStorageAccountArgs(
-        @Nullable Input<String> linkedStorageAccount,
-        Input<String> resourceGroupName,
-        Input<String> resourceName,
-        @Nullable Input<String> storageType) {
+        @Nullable Output<String> linkedStorageAccount,
+        Output<String> resourceGroupName,
+        Output<String> resourceName,
+        @Nullable Output<String> storageType) {
         this.linkedStorageAccount = linkedStorageAccount;
         this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
         this.resourceName = Objects.requireNonNull(resourceName, "expected parameter 'resourceName' to be non-null");
@@ -70,10 +70,10 @@ public final class ComponentLinkedStorageAccountArgs extends io.pulumi.resources
     }
 
     private ComponentLinkedStorageAccountArgs() {
-        this.linkedStorageAccount = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.resourceName = Input.empty();
-        this.storageType = Input.empty();
+        this.linkedStorageAccount = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.resourceName = Output.empty();
+        this.storageType = Output.empty();
     }
 
     public static Builder builder() {
@@ -85,10 +85,10 @@ public final class ComponentLinkedStorageAccountArgs extends io.pulumi.resources
     }
 
     public static final class Builder {
-        private @Nullable Input<String> linkedStorageAccount;
-        private Input<String> resourceGroupName;
-        private Input<String> resourceName;
-        private @Nullable Input<String> storageType;
+        private @Nullable Output<String> linkedStorageAccount;
+        private Output<String> resourceGroupName;
+        private Output<String> resourceName;
+        private @Nullable Output<String> storageType;
 
         public Builder() {
     	      // Empty
@@ -102,43 +102,43 @@ public final class ComponentLinkedStorageAccountArgs extends io.pulumi.resources
     	      this.storageType = defaults.storageType;
         }
 
-        public Builder linkedStorageAccount(@Nullable Input<String> linkedStorageAccount) {
+        public Builder linkedStorageAccount(@Nullable Output<String> linkedStorageAccount) {
             this.linkedStorageAccount = linkedStorageAccount;
             return this;
         }
 
         public Builder linkedStorageAccount(@Nullable String linkedStorageAccount) {
-            this.linkedStorageAccount = Input.ofNullable(linkedStorageAccount);
+            this.linkedStorageAccount = Output.ofNullable(linkedStorageAccount);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder resourceName(Input<String> resourceName) {
+        public Builder resourceName(Output<String> resourceName) {
             this.resourceName = Objects.requireNonNull(resourceName);
             return this;
         }
 
         public Builder resourceName(String resourceName) {
-            this.resourceName = Input.of(Objects.requireNonNull(resourceName));
+            this.resourceName = Output.of(Objects.requireNonNull(resourceName));
             return this;
         }
 
-        public Builder storageType(@Nullable Input<String> storageType) {
+        public Builder storageType(@Nullable Output<String> storageType) {
             this.storageType = storageType;
             return this;
         }
 
         public Builder storageType(@Nullable String storageType) {
-            this.storageType = Input.ofNullable(storageType);
+            this.storageType = Output.ofNullable(storageType);
             return this;
         }
         public ComponentLinkedStorageAccountArgs build() {

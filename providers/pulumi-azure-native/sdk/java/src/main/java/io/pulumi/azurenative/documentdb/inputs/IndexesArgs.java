@@ -6,7 +6,7 @@ package io.pulumi.azurenative.documentdb.inputs;
 import io.pulumi.azurenative.documentdb.enums.DataType;
 import io.pulumi.azurenative.documentdb.enums.IndexKind;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -27,10 +27,10 @@ public final class IndexesArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dataType")
-      private final @Nullable Input<Either<String,DataType>> dataType;
+      private final @Nullable Output<Either<String,DataType>> dataType;
 
-    public Input<Either<String,DataType>> getDataType() {
-        return this.dataType == null ? Input.empty() : this.dataType;
+    public Output<Either<String,DataType>> getDataType() {
+        return this.dataType == null ? Output.empty() : this.dataType;
     }
 
     /**
@@ -38,10 +38,10 @@ public final class IndexesArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kind")
-      private final @Nullable Input<Either<String,IndexKind>> kind;
+      private final @Nullable Output<Either<String,IndexKind>> kind;
 
-    public Input<Either<String,IndexKind>> getKind() {
-        return this.kind == null ? Input.empty() : this.kind;
+    public Output<Either<String,IndexKind>> getKind() {
+        return this.kind == null ? Output.empty() : this.kind;
     }
 
     /**
@@ -49,25 +49,25 @@ public final class IndexesArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="precision")
-      private final @Nullable Input<Integer> precision;
+      private final @Nullable Output<Integer> precision;
 
-    public Input<Integer> getPrecision() {
-        return this.precision == null ? Input.empty() : this.precision;
+    public Output<Integer> getPrecision() {
+        return this.precision == null ? Output.empty() : this.precision;
     }
 
     public IndexesArgs(
-        @Nullable Input<Either<String,DataType>> dataType,
-        @Nullable Input<Either<String,IndexKind>> kind,
-        @Nullable Input<Integer> precision) {
-        this.dataType = dataType == null ? Input.ofLeft("String") : dataType;
-        this.kind = kind == null ? Input.ofLeft("Hash") : kind;
+        @Nullable Output<Either<String,DataType>> dataType,
+        @Nullable Output<Either<String,IndexKind>> kind,
+        @Nullable Output<Integer> precision) {
+        this.dataType = dataType == null ? Output.ofLeft("String") : dataType;
+        this.kind = kind == null ? Output.ofLeft("Hash") : kind;
         this.precision = precision;
     }
 
     private IndexesArgs() {
-        this.dataType = Input.empty();
-        this.kind = Input.empty();
-        this.precision = Input.empty();
+        this.dataType = Output.empty();
+        this.kind = Output.empty();
+        this.precision = Output.empty();
     }
 
     public static Builder builder() {
@@ -79,9 +79,9 @@ public final class IndexesArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Either<String,DataType>> dataType;
-        private @Nullable Input<Either<String,IndexKind>> kind;
-        private @Nullable Input<Integer> precision;
+        private @Nullable Output<Either<String,DataType>> dataType;
+        private @Nullable Output<Either<String,IndexKind>> kind;
+        private @Nullable Output<Integer> precision;
 
         public Builder() {
     	      // Empty
@@ -94,33 +94,33 @@ public final class IndexesArgs extends io.pulumi.resources.ResourceArgs {
     	      this.precision = defaults.precision;
         }
 
-        public Builder dataType(@Nullable Input<Either<String,DataType>> dataType) {
+        public Builder dataType(@Nullable Output<Either<String,DataType>> dataType) {
             this.dataType = dataType;
             return this;
         }
 
         public Builder dataType(@Nullable Either<String,DataType> dataType) {
-            this.dataType = Input.ofNullable(dataType);
+            this.dataType = Output.ofNullable(dataType);
             return this;
         }
 
-        public Builder kind(@Nullable Input<Either<String,IndexKind>> kind) {
+        public Builder kind(@Nullable Output<Either<String,IndexKind>> kind) {
             this.kind = kind;
             return this;
         }
 
         public Builder kind(@Nullable Either<String,IndexKind> kind) {
-            this.kind = Input.ofNullable(kind);
+            this.kind = Output.ofNullable(kind);
             return this;
         }
 
-        public Builder precision(@Nullable Input<Integer> precision) {
+        public Builder precision(@Nullable Output<Integer> precision) {
             this.precision = precision;
             return this;
         }
 
         public Builder precision(@Nullable Integer precision) {
-            this.precision = Input.ofNullable(precision);
+            this.precision = Output.ofNullable(precision);
             return this;
         }
         public IndexesArgs build() {

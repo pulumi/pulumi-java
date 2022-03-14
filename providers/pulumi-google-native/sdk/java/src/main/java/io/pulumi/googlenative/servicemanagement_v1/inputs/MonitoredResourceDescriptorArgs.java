@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.servicemanagement_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.servicemanagement_v1.enums.MonitoredResourceDescriptorLaunchStage;
 import io.pulumi.googlenative.servicemanagement_v1.inputs.LabelDescriptorArgs;
@@ -26,10 +26,10 @@ public final class MonitoredResourceDescriptorArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -37,10 +37,10 @@ public final class MonitoredResourceDescriptorArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="displayName")
-      private final @Nullable Input<String> displayName;
+      private final @Nullable Output<String> displayName;
 
-    public Input<String> getDisplayName() {
-        return this.displayName == null ? Input.empty() : this.displayName;
+    public Output<String> getDisplayName() {
+        return this.displayName == null ? Output.empty() : this.displayName;
     }
 
     /**
@@ -48,9 +48,9 @@ public final class MonitoredResourceDescriptorArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="labels", required=true)
-      private final Input<List<LabelDescriptorArgs>> labels;
+      private final Output<List<LabelDescriptorArgs>> labels;
 
-    public Input<List<LabelDescriptorArgs>> getLabels() {
+    public Output<List<LabelDescriptorArgs>> getLabels() {
         return this.labels;
     }
 
@@ -59,10 +59,10 @@ public final class MonitoredResourceDescriptorArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="launchStage")
-      private final @Nullable Input<MonitoredResourceDescriptorLaunchStage> launchStage;
+      private final @Nullable Output<MonitoredResourceDescriptorLaunchStage> launchStage;
 
-    public Input<MonitoredResourceDescriptorLaunchStage> getLaunchStage() {
-        return this.launchStage == null ? Input.empty() : this.launchStage;
+    public Output<MonitoredResourceDescriptorLaunchStage> getLaunchStage() {
+        return this.launchStage == null ? Output.empty() : this.launchStage;
     }
 
     /**
@@ -70,10 +70,10 @@ public final class MonitoredResourceDescriptorArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -81,19 +81,19 @@ public final class MonitoredResourceDescriptorArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<String> type;
+      private final Output<String> type;
 
-    public Input<String> getType() {
+    public Output<String> getType() {
         return this.type;
     }
 
     public MonitoredResourceDescriptorArgs(
-        @Nullable Input<String> description,
-        @Nullable Input<String> displayName,
-        Input<List<LabelDescriptorArgs>> labels,
-        @Nullable Input<MonitoredResourceDescriptorLaunchStage> launchStage,
-        @Nullable Input<String> name,
-        Input<String> type) {
+        @Nullable Output<String> description,
+        @Nullable Output<String> displayName,
+        Output<List<LabelDescriptorArgs>> labels,
+        @Nullable Output<MonitoredResourceDescriptorLaunchStage> launchStage,
+        @Nullable Output<String> name,
+        Output<String> type) {
         this.description = description;
         this.displayName = displayName;
         this.labels = Objects.requireNonNull(labels, "expected parameter 'labels' to be non-null");
@@ -103,12 +103,12 @@ public final class MonitoredResourceDescriptorArgs extends io.pulumi.resources.R
     }
 
     private MonitoredResourceDescriptorArgs() {
-        this.description = Input.empty();
-        this.displayName = Input.empty();
-        this.labels = Input.empty();
-        this.launchStage = Input.empty();
-        this.name = Input.empty();
-        this.type = Input.empty();
+        this.description = Output.empty();
+        this.displayName = Output.empty();
+        this.labels = Output.empty();
+        this.launchStage = Output.empty();
+        this.name = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -120,12 +120,12 @@ public final class MonitoredResourceDescriptorArgs extends io.pulumi.resources.R
     }
 
     public static final class Builder {
-        private @Nullable Input<String> description;
-        private @Nullable Input<String> displayName;
-        private Input<List<LabelDescriptorArgs>> labels;
-        private @Nullable Input<MonitoredResourceDescriptorLaunchStage> launchStage;
-        private @Nullable Input<String> name;
-        private Input<String> type;
+        private @Nullable Output<String> description;
+        private @Nullable Output<String> displayName;
+        private Output<List<LabelDescriptorArgs>> labels;
+        private @Nullable Output<MonitoredResourceDescriptorLaunchStage> launchStage;
+        private @Nullable Output<String> name;
+        private Output<String> type;
 
         public Builder() {
     	      // Empty
@@ -141,63 +141,63 @@ public final class MonitoredResourceDescriptorArgs extends io.pulumi.resources.R
     	      this.type = defaults.type;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder displayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Input.ofNullable(displayName);
+            this.displayName = Output.ofNullable(displayName);
             return this;
         }
 
-        public Builder labels(Input<List<LabelDescriptorArgs>> labels) {
+        public Builder labels(Output<List<LabelDescriptorArgs>> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
 
         public Builder labels(List<LabelDescriptorArgs> labels) {
-            this.labels = Input.of(Objects.requireNonNull(labels));
+            this.labels = Output.of(Objects.requireNonNull(labels));
             return this;
         }
 
-        public Builder launchStage(@Nullable Input<MonitoredResourceDescriptorLaunchStage> launchStage) {
+        public Builder launchStage(@Nullable Output<MonitoredResourceDescriptorLaunchStage> launchStage) {
             this.launchStage = launchStage;
             return this;
         }
 
         public Builder launchStage(@Nullable MonitoredResourceDescriptorLaunchStage launchStage) {
-            this.launchStage = Input.ofNullable(launchStage);
+            this.launchStage = Output.ofNullable(launchStage);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder type(Input<String> type) {
+        public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(String type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
         public MonitoredResourceDescriptorArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.containeranalysis_v1.inputs.UpgradeDistributionArgs;
 import io.pulumi.googlenative.containeranalysis_v1.inputs.VersionArgs;
@@ -26,10 +26,10 @@ public final class UpgradeOccurrenceArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="distribution")
-      private final @Nullable Input<UpgradeDistributionArgs> distribution;
+      private final @Nullable Output<UpgradeDistributionArgs> distribution;
 
-    public Input<UpgradeDistributionArgs> getDistribution() {
-        return this.distribution == null ? Input.empty() : this.distribution;
+    public Output<UpgradeDistributionArgs> getDistribution() {
+        return this.distribution == null ? Output.empty() : this.distribution;
     }
 
     /**
@@ -37,10 +37,10 @@ public final class UpgradeOccurrenceArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="package")
-      private final @Nullable Input<String> $package;
+      private final @Nullable Output<String> $package;
 
-    public Input<String> get$package() {
-        return this.$package == null ? Input.empty() : this.$package;
+    public Output<String> get$package() {
+        return this.$package == null ? Output.empty() : this.$package;
     }
 
     /**
@@ -48,10 +48,10 @@ public final class UpgradeOccurrenceArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="parsedVersion")
-      private final @Nullable Input<VersionArgs> parsedVersion;
+      private final @Nullable Output<VersionArgs> parsedVersion;
 
-    public Input<VersionArgs> getParsedVersion() {
-        return this.parsedVersion == null ? Input.empty() : this.parsedVersion;
+    public Output<VersionArgs> getParsedVersion() {
+        return this.parsedVersion == null ? Output.empty() : this.parsedVersion;
     }
 
     /**
@@ -59,17 +59,17 @@ public final class UpgradeOccurrenceArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="windowsUpdate")
-      private final @Nullable Input<WindowsUpdateArgs> windowsUpdate;
+      private final @Nullable Output<WindowsUpdateArgs> windowsUpdate;
 
-    public Input<WindowsUpdateArgs> getWindowsUpdate() {
-        return this.windowsUpdate == null ? Input.empty() : this.windowsUpdate;
+    public Output<WindowsUpdateArgs> getWindowsUpdate() {
+        return this.windowsUpdate == null ? Output.empty() : this.windowsUpdate;
     }
 
     public UpgradeOccurrenceArgs(
-        @Nullable Input<UpgradeDistributionArgs> distribution,
-        @Nullable Input<String> $package,
-        @Nullable Input<VersionArgs> parsedVersion,
-        @Nullable Input<WindowsUpdateArgs> windowsUpdate) {
+        @Nullable Output<UpgradeDistributionArgs> distribution,
+        @Nullable Output<String> $package,
+        @Nullable Output<VersionArgs> parsedVersion,
+        @Nullable Output<WindowsUpdateArgs> windowsUpdate) {
         this.distribution = distribution;
         this.$package = $package;
         this.parsedVersion = parsedVersion;
@@ -77,10 +77,10 @@ public final class UpgradeOccurrenceArgs extends io.pulumi.resources.ResourceArg
     }
 
     private UpgradeOccurrenceArgs() {
-        this.distribution = Input.empty();
-        this.$package = Input.empty();
-        this.parsedVersion = Input.empty();
-        this.windowsUpdate = Input.empty();
+        this.distribution = Output.empty();
+        this.$package = Output.empty();
+        this.parsedVersion = Output.empty();
+        this.windowsUpdate = Output.empty();
     }
 
     public static Builder builder() {
@@ -92,10 +92,10 @@ public final class UpgradeOccurrenceArgs extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private @Nullable Input<UpgradeDistributionArgs> distribution;
-        private @Nullable Input<String> $package;
-        private @Nullable Input<VersionArgs> parsedVersion;
-        private @Nullable Input<WindowsUpdateArgs> windowsUpdate;
+        private @Nullable Output<UpgradeDistributionArgs> distribution;
+        private @Nullable Output<String> $package;
+        private @Nullable Output<VersionArgs> parsedVersion;
+        private @Nullable Output<WindowsUpdateArgs> windowsUpdate;
 
         public Builder() {
     	      // Empty
@@ -109,43 +109,43 @@ public final class UpgradeOccurrenceArgs extends io.pulumi.resources.ResourceArg
     	      this.windowsUpdate = defaults.windowsUpdate;
         }
 
-        public Builder distribution(@Nullable Input<UpgradeDistributionArgs> distribution) {
+        public Builder distribution(@Nullable Output<UpgradeDistributionArgs> distribution) {
             this.distribution = distribution;
             return this;
         }
 
         public Builder distribution(@Nullable UpgradeDistributionArgs distribution) {
-            this.distribution = Input.ofNullable(distribution);
+            this.distribution = Output.ofNullable(distribution);
             return this;
         }
 
-        public Builder $package(@Nullable Input<String> $package) {
+        public Builder $package(@Nullable Output<String> $package) {
             this.$package = $package;
             return this;
         }
 
         public Builder $package(@Nullable String $package) {
-            this.$package = Input.ofNullable($package);
+            this.$package = Output.ofNullable($package);
             return this;
         }
 
-        public Builder parsedVersion(@Nullable Input<VersionArgs> parsedVersion) {
+        public Builder parsedVersion(@Nullable Output<VersionArgs> parsedVersion) {
             this.parsedVersion = parsedVersion;
             return this;
         }
 
         public Builder parsedVersion(@Nullable VersionArgs parsedVersion) {
-            this.parsedVersion = Input.ofNullable(parsedVersion);
+            this.parsedVersion = Output.ofNullable(parsedVersion);
             return this;
         }
 
-        public Builder windowsUpdate(@Nullable Input<WindowsUpdateArgs> windowsUpdate) {
+        public Builder windowsUpdate(@Nullable Output<WindowsUpdateArgs> windowsUpdate) {
             this.windowsUpdate = windowsUpdate;
             return this;
         }
 
         public Builder windowsUpdate(@Nullable WindowsUpdateArgs windowsUpdate) {
-            this.windowsUpdate = Input.ofNullable(windowsUpdate);
+            this.windowsUpdate = Output.ofNullable(windowsUpdate);
             return this;
         }
         public UpgradeOccurrenceArgs build() {

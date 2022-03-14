@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.customerinsights.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -24,9 +24,9 @@ public final class ConnectorMappingStructureArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="columnName", required=true)
-      private final Input<String> columnName;
+      private final Output<String> columnName;
 
-    public Input<String> getColumnName() {
+    public Output<String> getColumnName() {
         return this.columnName;
     }
 
@@ -35,10 +35,10 @@ public final class ConnectorMappingStructureArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="customFormatSpecifier")
-      private final @Nullable Input<String> customFormatSpecifier;
+      private final @Nullable Output<String> customFormatSpecifier;
 
-    public Input<String> getCustomFormatSpecifier() {
-        return this.customFormatSpecifier == null ? Input.empty() : this.customFormatSpecifier;
+    public Output<String> getCustomFormatSpecifier() {
+        return this.customFormatSpecifier == null ? Output.empty() : this.customFormatSpecifier;
     }
 
     /**
@@ -46,10 +46,10 @@ public final class ConnectorMappingStructureArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="isEncrypted")
-      private final @Nullable Input<Boolean> isEncrypted;
+      private final @Nullable Output<Boolean> isEncrypted;
 
-    public Input<Boolean> getIsEncrypted() {
-        return this.isEncrypted == null ? Input.empty() : this.isEncrypted;
+    public Output<Boolean> getIsEncrypted() {
+        return this.isEncrypted == null ? Output.empty() : this.isEncrypted;
     }
 
     /**
@@ -57,17 +57,17 @@ public final class ConnectorMappingStructureArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="propertyName", required=true)
-      private final Input<String> propertyName;
+      private final Output<String> propertyName;
 
-    public Input<String> getPropertyName() {
+    public Output<String> getPropertyName() {
         return this.propertyName;
     }
 
     public ConnectorMappingStructureArgs(
-        Input<String> columnName,
-        @Nullable Input<String> customFormatSpecifier,
-        @Nullable Input<Boolean> isEncrypted,
-        Input<String> propertyName) {
+        Output<String> columnName,
+        @Nullable Output<String> customFormatSpecifier,
+        @Nullable Output<Boolean> isEncrypted,
+        Output<String> propertyName) {
         this.columnName = Objects.requireNonNull(columnName, "expected parameter 'columnName' to be non-null");
         this.customFormatSpecifier = customFormatSpecifier;
         this.isEncrypted = isEncrypted;
@@ -75,10 +75,10 @@ public final class ConnectorMappingStructureArgs extends io.pulumi.resources.Res
     }
 
     private ConnectorMappingStructureArgs() {
-        this.columnName = Input.empty();
-        this.customFormatSpecifier = Input.empty();
-        this.isEncrypted = Input.empty();
-        this.propertyName = Input.empty();
+        this.columnName = Output.empty();
+        this.customFormatSpecifier = Output.empty();
+        this.isEncrypted = Output.empty();
+        this.propertyName = Output.empty();
     }
 
     public static Builder builder() {
@@ -90,10 +90,10 @@ public final class ConnectorMappingStructureArgs extends io.pulumi.resources.Res
     }
 
     public static final class Builder {
-        private Input<String> columnName;
-        private @Nullable Input<String> customFormatSpecifier;
-        private @Nullable Input<Boolean> isEncrypted;
-        private Input<String> propertyName;
+        private Output<String> columnName;
+        private @Nullable Output<String> customFormatSpecifier;
+        private @Nullable Output<Boolean> isEncrypted;
+        private Output<String> propertyName;
 
         public Builder() {
     	      // Empty
@@ -107,43 +107,43 @@ public final class ConnectorMappingStructureArgs extends io.pulumi.resources.Res
     	      this.propertyName = defaults.propertyName;
         }
 
-        public Builder columnName(Input<String> columnName) {
+        public Builder columnName(Output<String> columnName) {
             this.columnName = Objects.requireNonNull(columnName);
             return this;
         }
 
         public Builder columnName(String columnName) {
-            this.columnName = Input.of(Objects.requireNonNull(columnName));
+            this.columnName = Output.of(Objects.requireNonNull(columnName));
             return this;
         }
 
-        public Builder customFormatSpecifier(@Nullable Input<String> customFormatSpecifier) {
+        public Builder customFormatSpecifier(@Nullable Output<String> customFormatSpecifier) {
             this.customFormatSpecifier = customFormatSpecifier;
             return this;
         }
 
         public Builder customFormatSpecifier(@Nullable String customFormatSpecifier) {
-            this.customFormatSpecifier = Input.ofNullable(customFormatSpecifier);
+            this.customFormatSpecifier = Output.ofNullable(customFormatSpecifier);
             return this;
         }
 
-        public Builder isEncrypted(@Nullable Input<Boolean> isEncrypted) {
+        public Builder isEncrypted(@Nullable Output<Boolean> isEncrypted) {
             this.isEncrypted = isEncrypted;
             return this;
         }
 
         public Builder isEncrypted(@Nullable Boolean isEncrypted) {
-            this.isEncrypted = Input.ofNullable(isEncrypted);
+            this.isEncrypted = Output.ofNullable(isEncrypted);
             return this;
         }
 
-        public Builder propertyName(Input<String> propertyName) {
+        public Builder propertyName(Output<String> propertyName) {
             this.propertyName = Objects.requireNonNull(propertyName);
             return this;
         }
 
         public Builder propertyName(String propertyName) {
-            this.propertyName = Input.of(Objects.requireNonNull(propertyName));
+            this.propertyName = Output.of(Objects.requireNonNull(propertyName));
             return this;
         }
         public ConnectorMappingStructureArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.core_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -29,10 +29,10 @@ public final class TolerationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="effect")
-      private final @Nullable Input<String> effect;
+      private final @Nullable Output<String> effect;
 
-    public Input<String> getEffect() {
-        return this.effect == null ? Input.empty() : this.effect;
+    public Output<String> getEffect() {
+        return this.effect == null ? Output.empty() : this.effect;
     }
 
     /**
@@ -40,10 +40,10 @@ public final class TolerationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="key")
-      private final @Nullable Input<String> key;
+      private final @Nullable Output<String> key;
 
-    public Input<String> getKey() {
-        return this.key == null ? Input.empty() : this.key;
+    public Output<String> getKey() {
+        return this.key == null ? Output.empty() : this.key;
     }
 
     /**
@@ -55,10 +55,10 @@ public final class TolerationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="operator")
-      private final @Nullable Input<String> operator;
+      private final @Nullable Output<String> operator;
 
-    public Input<String> getOperator() {
-        return this.operator == null ? Input.empty() : this.operator;
+    public Output<String> getOperator() {
+        return this.operator == null ? Output.empty() : this.operator;
     }
 
     /**
@@ -66,10 +66,10 @@ public final class TolerationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tolerationSeconds")
-      private final @Nullable Input<Integer> tolerationSeconds;
+      private final @Nullable Output<Integer> tolerationSeconds;
 
-    public Input<Integer> getTolerationSeconds() {
-        return this.tolerationSeconds == null ? Input.empty() : this.tolerationSeconds;
+    public Output<Integer> getTolerationSeconds() {
+        return this.tolerationSeconds == null ? Output.empty() : this.tolerationSeconds;
     }
 
     /**
@@ -77,18 +77,18 @@ public final class TolerationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="value")
-      private final @Nullable Input<String> value;
+      private final @Nullable Output<String> value;
 
-    public Input<String> getValue() {
-        return this.value == null ? Input.empty() : this.value;
+    public Output<String> getValue() {
+        return this.value == null ? Output.empty() : this.value;
     }
 
     public TolerationArgs(
-        @Nullable Input<String> effect,
-        @Nullable Input<String> key,
-        @Nullable Input<String> operator,
-        @Nullable Input<Integer> tolerationSeconds,
-        @Nullable Input<String> value) {
+        @Nullable Output<String> effect,
+        @Nullable Output<String> key,
+        @Nullable Output<String> operator,
+        @Nullable Output<Integer> tolerationSeconds,
+        @Nullable Output<String> value) {
         this.effect = effect;
         this.key = key;
         this.operator = operator;
@@ -97,11 +97,11 @@ public final class TolerationArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private TolerationArgs() {
-        this.effect = Input.empty();
-        this.key = Input.empty();
-        this.operator = Input.empty();
-        this.tolerationSeconds = Input.empty();
-        this.value = Input.empty();
+        this.effect = Output.empty();
+        this.key = Output.empty();
+        this.operator = Output.empty();
+        this.tolerationSeconds = Output.empty();
+        this.value = Output.empty();
     }
 
     public static Builder builder() {
@@ -113,11 +113,11 @@ public final class TolerationArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> effect;
-        private @Nullable Input<String> key;
-        private @Nullable Input<String> operator;
-        private @Nullable Input<Integer> tolerationSeconds;
-        private @Nullable Input<String> value;
+        private @Nullable Output<String> effect;
+        private @Nullable Output<String> key;
+        private @Nullable Output<String> operator;
+        private @Nullable Output<Integer> tolerationSeconds;
+        private @Nullable Output<String> value;
 
         public Builder() {
     	      // Empty
@@ -132,53 +132,53 @@ public final class TolerationArgs extends io.pulumi.resources.ResourceArgs {
     	      this.value = defaults.value;
         }
 
-        public Builder effect(@Nullable Input<String> effect) {
+        public Builder effect(@Nullable Output<String> effect) {
             this.effect = effect;
             return this;
         }
 
         public Builder effect(@Nullable String effect) {
-            this.effect = Input.ofNullable(effect);
+            this.effect = Output.ofNullable(effect);
             return this;
         }
 
-        public Builder key(@Nullable Input<String> key) {
+        public Builder key(@Nullable Output<String> key) {
             this.key = key;
             return this;
         }
 
         public Builder key(@Nullable String key) {
-            this.key = Input.ofNullable(key);
+            this.key = Output.ofNullable(key);
             return this;
         }
 
-        public Builder operator(@Nullable Input<String> operator) {
+        public Builder operator(@Nullable Output<String> operator) {
             this.operator = operator;
             return this;
         }
 
         public Builder operator(@Nullable String operator) {
-            this.operator = Input.ofNullable(operator);
+            this.operator = Output.ofNullable(operator);
             return this;
         }
 
-        public Builder tolerationSeconds(@Nullable Input<Integer> tolerationSeconds) {
+        public Builder tolerationSeconds(@Nullable Output<Integer> tolerationSeconds) {
             this.tolerationSeconds = tolerationSeconds;
             return this;
         }
 
         public Builder tolerationSeconds(@Nullable Integer tolerationSeconds) {
-            this.tolerationSeconds = Input.ofNullable(tolerationSeconds);
+            this.tolerationSeconds = Output.ofNullable(tolerationSeconds);
             return this;
         }
 
-        public Builder value(@Nullable Input<String> value) {
+        public Builder value(@Nullable Output<String> value) {
             this.value = value;
             return this;
         }
 
         public Builder value(@Nullable String value) {
-            this.value = Input.ofNullable(value);
+            this.value = Output.ofNullable(value);
             return this;
         }
         public TolerationArgs build() {

@@ -7,7 +7,7 @@ import io.pulumi.aws.wafv2.inputs.WebAclCustomResponseBodyArgs;
 import io.pulumi.aws.wafv2.inputs.WebAclDefaultActionArgs;
 import io.pulumi.aws.wafv2.inputs.WebAclRuleArgs;
 import io.pulumi.aws.wafv2.inputs.WebAclVisibilityConfigArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -25,10 +25,10 @@ public final class WebAclArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="customResponseBodies")
-      private final @Nullable Input<List<WebAclCustomResponseBodyArgs>> customResponseBodies;
+      private final @Nullable Output<List<WebAclCustomResponseBodyArgs>> customResponseBodies;
 
-    public Input<List<WebAclCustomResponseBodyArgs>> getCustomResponseBodies() {
-        return this.customResponseBodies == null ? Input.empty() : this.customResponseBodies;
+    public Output<List<WebAclCustomResponseBodyArgs>> getCustomResponseBodies() {
+        return this.customResponseBodies == null ? Output.empty() : this.customResponseBodies;
     }
 
     /**
@@ -36,9 +36,9 @@ public final class WebAclArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="defaultAction", required=true)
-      private final Input<WebAclDefaultActionArgs> defaultAction;
+      private final Output<WebAclDefaultActionArgs> defaultAction;
 
-    public Input<WebAclDefaultActionArgs> getDefaultAction() {
+    public Output<WebAclDefaultActionArgs> getDefaultAction() {
         return this.defaultAction;
     }
 
@@ -47,10 +47,10 @@ public final class WebAclArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -58,10 +58,10 @@ public final class WebAclArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -69,10 +69,10 @@ public final class WebAclArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="rules")
-      private final @Nullable Input<List<WebAclRuleArgs>> rules;
+      private final @Nullable Output<List<WebAclRuleArgs>> rules;
 
-    public Input<List<WebAclRuleArgs>> getRules() {
-        return this.rules == null ? Input.empty() : this.rules;
+    public Output<List<WebAclRuleArgs>> getRules() {
+        return this.rules == null ? Output.empty() : this.rules;
     }
 
     /**
@@ -80,9 +80,9 @@ public final class WebAclArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="scope", required=true)
-      private final Input<String> scope;
+      private final Output<String> scope;
 
-    public Input<String> getScope() {
+    public Output<String> getScope() {
         return this.scope;
     }
 
@@ -91,10 +91,10 @@ public final class WebAclArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -102,10 +102,10 @@ public final class WebAclArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tagsAll")
-      private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Input<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Input.empty() : this.tagsAll;
+    public Output<Map<String,String>> getTagsAll() {
+        return this.tagsAll == null ? Output.empty() : this.tagsAll;
     }
 
     /**
@@ -113,22 +113,22 @@ public final class WebAclArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="visibilityConfig", required=true)
-      private final Input<WebAclVisibilityConfigArgs> visibilityConfig;
+      private final Output<WebAclVisibilityConfigArgs> visibilityConfig;
 
-    public Input<WebAclVisibilityConfigArgs> getVisibilityConfig() {
+    public Output<WebAclVisibilityConfigArgs> getVisibilityConfig() {
         return this.visibilityConfig;
     }
 
     public WebAclArgs(
-        @Nullable Input<List<WebAclCustomResponseBodyArgs>> customResponseBodies,
-        Input<WebAclDefaultActionArgs> defaultAction,
-        @Nullable Input<String> description,
-        @Nullable Input<String> name,
-        @Nullable Input<List<WebAclRuleArgs>> rules,
-        Input<String> scope,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<Map<String,String>> tagsAll,
-        Input<WebAclVisibilityConfigArgs> visibilityConfig) {
+        @Nullable Output<List<WebAclCustomResponseBodyArgs>> customResponseBodies,
+        Output<WebAclDefaultActionArgs> defaultAction,
+        @Nullable Output<String> description,
+        @Nullable Output<String> name,
+        @Nullable Output<List<WebAclRuleArgs>> rules,
+        Output<String> scope,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<Map<String,String>> tagsAll,
+        Output<WebAclVisibilityConfigArgs> visibilityConfig) {
         this.customResponseBodies = customResponseBodies;
         this.defaultAction = Objects.requireNonNull(defaultAction, "expected parameter 'defaultAction' to be non-null");
         this.description = description;
@@ -141,15 +141,15 @@ public final class WebAclArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private WebAclArgs() {
-        this.customResponseBodies = Input.empty();
-        this.defaultAction = Input.empty();
-        this.description = Input.empty();
-        this.name = Input.empty();
-        this.rules = Input.empty();
-        this.scope = Input.empty();
-        this.tags = Input.empty();
-        this.tagsAll = Input.empty();
-        this.visibilityConfig = Input.empty();
+        this.customResponseBodies = Output.empty();
+        this.defaultAction = Output.empty();
+        this.description = Output.empty();
+        this.name = Output.empty();
+        this.rules = Output.empty();
+        this.scope = Output.empty();
+        this.tags = Output.empty();
+        this.tagsAll = Output.empty();
+        this.visibilityConfig = Output.empty();
     }
 
     public static Builder builder() {
@@ -161,15 +161,15 @@ public final class WebAclArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<List<WebAclCustomResponseBodyArgs>> customResponseBodies;
-        private Input<WebAclDefaultActionArgs> defaultAction;
-        private @Nullable Input<String> description;
-        private @Nullable Input<String> name;
-        private @Nullable Input<List<WebAclRuleArgs>> rules;
-        private Input<String> scope;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<Map<String,String>> tagsAll;
-        private Input<WebAclVisibilityConfigArgs> visibilityConfig;
+        private @Nullable Output<List<WebAclCustomResponseBodyArgs>> customResponseBodies;
+        private Output<WebAclDefaultActionArgs> defaultAction;
+        private @Nullable Output<String> description;
+        private @Nullable Output<String> name;
+        private @Nullable Output<List<WebAclRuleArgs>> rules;
+        private Output<String> scope;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<Map<String,String>> tagsAll;
+        private Output<WebAclVisibilityConfigArgs> visibilityConfig;
 
         public Builder() {
     	      // Empty
@@ -188,93 +188,93 @@ public final class WebAclArgs extends io.pulumi.resources.ResourceArgs {
     	      this.visibilityConfig = defaults.visibilityConfig;
         }
 
-        public Builder customResponseBodies(@Nullable Input<List<WebAclCustomResponseBodyArgs>> customResponseBodies) {
+        public Builder customResponseBodies(@Nullable Output<List<WebAclCustomResponseBodyArgs>> customResponseBodies) {
             this.customResponseBodies = customResponseBodies;
             return this;
         }
 
         public Builder customResponseBodies(@Nullable List<WebAclCustomResponseBodyArgs> customResponseBodies) {
-            this.customResponseBodies = Input.ofNullable(customResponseBodies);
+            this.customResponseBodies = Output.ofNullable(customResponseBodies);
             return this;
         }
 
-        public Builder defaultAction(Input<WebAclDefaultActionArgs> defaultAction) {
+        public Builder defaultAction(Output<WebAclDefaultActionArgs> defaultAction) {
             this.defaultAction = Objects.requireNonNull(defaultAction);
             return this;
         }
 
         public Builder defaultAction(WebAclDefaultActionArgs defaultAction) {
-            this.defaultAction = Input.of(Objects.requireNonNull(defaultAction));
+            this.defaultAction = Output.of(Objects.requireNonNull(defaultAction));
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder rules(@Nullable Input<List<WebAclRuleArgs>> rules) {
+        public Builder rules(@Nullable Output<List<WebAclRuleArgs>> rules) {
             this.rules = rules;
             return this;
         }
 
         public Builder rules(@Nullable List<WebAclRuleArgs> rules) {
-            this.rules = Input.ofNullable(rules);
+            this.rules = Output.ofNullable(rules);
             return this;
         }
 
-        public Builder scope(Input<String> scope) {
+        public Builder scope(Output<String> scope) {
             this.scope = Objects.requireNonNull(scope);
             return this;
         }
 
         public Builder scope(String scope) {
-            this.scope = Input.of(Objects.requireNonNull(scope));
+            this.scope = Output.of(Objects.requireNonNull(scope));
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Input.ofNullable(tagsAll);
+            this.tagsAll = Output.ofNullable(tagsAll);
             return this;
         }
 
-        public Builder visibilityConfig(Input<WebAclVisibilityConfigArgs> visibilityConfig) {
+        public Builder visibilityConfig(Output<WebAclVisibilityConfigArgs> visibilityConfig) {
             this.visibilityConfig = Objects.requireNonNull(visibilityConfig);
             return this;
         }
 
         public Builder visibilityConfig(WebAclVisibilityConfigArgs visibilityConfig) {
-            this.visibilityConfig = Input.of(Objects.requireNonNull(visibilityConfig));
+            this.visibilityConfig = Output.of(Objects.requireNonNull(visibilityConfig));
             return this;
         }
         public WebAclArgs build() {

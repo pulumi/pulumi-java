@@ -4,7 +4,7 @@
 package io.pulumi.aws.appmesh.inputs;
 
 import io.pulumi.aws.appmesh.inputs.VirtualNodeSpecBackendDefaultsClientPolicyGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,18 +19,18 @@ public final class VirtualNodeSpecBackendDefaultsGetArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="clientPolicy")
-      private final @Nullable Input<VirtualNodeSpecBackendDefaultsClientPolicyGetArgs> clientPolicy;
+      private final @Nullable Output<VirtualNodeSpecBackendDefaultsClientPolicyGetArgs> clientPolicy;
 
-    public Input<VirtualNodeSpecBackendDefaultsClientPolicyGetArgs> getClientPolicy() {
-        return this.clientPolicy == null ? Input.empty() : this.clientPolicy;
+    public Output<VirtualNodeSpecBackendDefaultsClientPolicyGetArgs> getClientPolicy() {
+        return this.clientPolicy == null ? Output.empty() : this.clientPolicy;
     }
 
-    public VirtualNodeSpecBackendDefaultsGetArgs(@Nullable Input<VirtualNodeSpecBackendDefaultsClientPolicyGetArgs> clientPolicy) {
+    public VirtualNodeSpecBackendDefaultsGetArgs(@Nullable Output<VirtualNodeSpecBackendDefaultsClientPolicyGetArgs> clientPolicy) {
         this.clientPolicy = clientPolicy;
     }
 
     private VirtualNodeSpecBackendDefaultsGetArgs() {
-        this.clientPolicy = Input.empty();
+        this.clientPolicy = Output.empty();
     }
 
     public static Builder builder() {
@@ -42,7 +42,7 @@ public final class VirtualNodeSpecBackendDefaultsGetArgs extends io.pulumi.resou
     }
 
     public static final class Builder {
-        private @Nullable Input<VirtualNodeSpecBackendDefaultsClientPolicyGetArgs> clientPolicy;
+        private @Nullable Output<VirtualNodeSpecBackendDefaultsClientPolicyGetArgs> clientPolicy;
 
         public Builder() {
     	      // Empty
@@ -53,13 +53,13 @@ public final class VirtualNodeSpecBackendDefaultsGetArgs extends io.pulumi.resou
     	      this.clientPolicy = defaults.clientPolicy;
         }
 
-        public Builder clientPolicy(@Nullable Input<VirtualNodeSpecBackendDefaultsClientPolicyGetArgs> clientPolicy) {
+        public Builder clientPolicy(@Nullable Output<VirtualNodeSpecBackendDefaultsClientPolicyGetArgs> clientPolicy) {
             this.clientPolicy = clientPolicy;
             return this;
         }
 
         public Builder clientPolicy(@Nullable VirtualNodeSpecBackendDefaultsClientPolicyGetArgs clientPolicy) {
-            this.clientPolicy = Input.ofNullable(clientPolicy);
+            this.clientPolicy = Output.ofNullable(clientPolicy);
             return this;
         }
         public VirtualNodeSpecBackendDefaultsGetArgs build() {

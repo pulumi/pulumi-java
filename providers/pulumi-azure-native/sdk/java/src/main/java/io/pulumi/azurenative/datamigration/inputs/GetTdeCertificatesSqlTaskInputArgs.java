@@ -6,7 +6,7 @@ package io.pulumi.azurenative.datamigration.inputs;
 import io.pulumi.azurenative.datamigration.inputs.FileShareArgs;
 import io.pulumi.azurenative.datamigration.inputs.SelectedCertificateInputArgs;
 import io.pulumi.azurenative.datamigration.inputs.SqlConnectionInfoArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
@@ -25,9 +25,9 @@ public final class GetTdeCertificatesSqlTaskInputArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="backupFileShare", required=true)
-      private final Input<FileShareArgs> backupFileShare;
+      private final Output<FileShareArgs> backupFileShare;
 
-    public Input<FileShareArgs> getBackupFileShare() {
+    public Output<FileShareArgs> getBackupFileShare() {
         return this.backupFileShare;
     }
 
@@ -36,9 +36,9 @@ public final class GetTdeCertificatesSqlTaskInputArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="connectionInfo", required=true)
-      private final Input<SqlConnectionInfoArgs> connectionInfo;
+      private final Output<SqlConnectionInfoArgs> connectionInfo;
 
-    public Input<SqlConnectionInfoArgs> getConnectionInfo() {
+    public Output<SqlConnectionInfoArgs> getConnectionInfo() {
         return this.connectionInfo;
     }
 
@@ -47,25 +47,25 @@ public final class GetTdeCertificatesSqlTaskInputArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="selectedCertificates", required=true)
-      private final Input<List<SelectedCertificateInputArgs>> selectedCertificates;
+      private final Output<List<SelectedCertificateInputArgs>> selectedCertificates;
 
-    public Input<List<SelectedCertificateInputArgs>> getSelectedCertificates() {
+    public Output<List<SelectedCertificateInputArgs>> getSelectedCertificates() {
         return this.selectedCertificates;
     }
 
     public GetTdeCertificatesSqlTaskInputArgs(
-        Input<FileShareArgs> backupFileShare,
-        Input<SqlConnectionInfoArgs> connectionInfo,
-        Input<List<SelectedCertificateInputArgs>> selectedCertificates) {
+        Output<FileShareArgs> backupFileShare,
+        Output<SqlConnectionInfoArgs> connectionInfo,
+        Output<List<SelectedCertificateInputArgs>> selectedCertificates) {
         this.backupFileShare = Objects.requireNonNull(backupFileShare, "expected parameter 'backupFileShare' to be non-null");
         this.connectionInfo = Objects.requireNonNull(connectionInfo, "expected parameter 'connectionInfo' to be non-null");
         this.selectedCertificates = Objects.requireNonNull(selectedCertificates, "expected parameter 'selectedCertificates' to be non-null");
     }
 
     private GetTdeCertificatesSqlTaskInputArgs() {
-        this.backupFileShare = Input.empty();
-        this.connectionInfo = Input.empty();
-        this.selectedCertificates = Input.empty();
+        this.backupFileShare = Output.empty();
+        this.connectionInfo = Output.empty();
+        this.selectedCertificates = Output.empty();
     }
 
     public static Builder builder() {
@@ -77,9 +77,9 @@ public final class GetTdeCertificatesSqlTaskInputArgs extends io.pulumi.resource
     }
 
     public static final class Builder {
-        private Input<FileShareArgs> backupFileShare;
-        private Input<SqlConnectionInfoArgs> connectionInfo;
-        private Input<List<SelectedCertificateInputArgs>> selectedCertificates;
+        private Output<FileShareArgs> backupFileShare;
+        private Output<SqlConnectionInfoArgs> connectionInfo;
+        private Output<List<SelectedCertificateInputArgs>> selectedCertificates;
 
         public Builder() {
     	      // Empty
@@ -92,33 +92,33 @@ public final class GetTdeCertificatesSqlTaskInputArgs extends io.pulumi.resource
     	      this.selectedCertificates = defaults.selectedCertificates;
         }
 
-        public Builder backupFileShare(Input<FileShareArgs> backupFileShare) {
+        public Builder backupFileShare(Output<FileShareArgs> backupFileShare) {
             this.backupFileShare = Objects.requireNonNull(backupFileShare);
             return this;
         }
 
         public Builder backupFileShare(FileShareArgs backupFileShare) {
-            this.backupFileShare = Input.of(Objects.requireNonNull(backupFileShare));
+            this.backupFileShare = Output.of(Objects.requireNonNull(backupFileShare));
             return this;
         }
 
-        public Builder connectionInfo(Input<SqlConnectionInfoArgs> connectionInfo) {
+        public Builder connectionInfo(Output<SqlConnectionInfoArgs> connectionInfo) {
             this.connectionInfo = Objects.requireNonNull(connectionInfo);
             return this;
         }
 
         public Builder connectionInfo(SqlConnectionInfoArgs connectionInfo) {
-            this.connectionInfo = Input.of(Objects.requireNonNull(connectionInfo));
+            this.connectionInfo = Output.of(Objects.requireNonNull(connectionInfo));
             return this;
         }
 
-        public Builder selectedCertificates(Input<List<SelectedCertificateInputArgs>> selectedCertificates) {
+        public Builder selectedCertificates(Output<List<SelectedCertificateInputArgs>> selectedCertificates) {
             this.selectedCertificates = Objects.requireNonNull(selectedCertificates);
             return this;
         }
 
         public Builder selectedCertificates(List<SelectedCertificateInputArgs> selectedCertificates) {
-            this.selectedCertificates = Input.of(Objects.requireNonNull(selectedCertificates));
+            this.selectedCertificates = Output.of(Objects.requireNonNull(selectedCertificates));
             return this;
         }
         public GetTdeCertificatesSqlTaskInputArgs build() {

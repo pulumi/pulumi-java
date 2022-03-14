@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.synapse.inputs;
 
 import io.pulumi.azurenative.synapse.inputs.SecureStringArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
@@ -24,9 +24,9 @@ public final class CmdkeySetupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="password", required=true)
-      private final Input<SecureStringArgs> password;
+      private final Output<SecureStringArgs> password;
 
-    public Input<SecureStringArgs> getPassword() {
+    public Output<SecureStringArgs> getPassword() {
         return this.password;
     }
 
@@ -35,9 +35,9 @@ public final class CmdkeySetupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="targetName", required=true)
-      private final Input<Object> targetName;
+      private final Output<Object> targetName;
 
-    public Input<Object> getTargetName() {
+    public Output<Object> getTargetName() {
         return this.targetName;
     }
 
@@ -47,9 +47,9 @@ public final class CmdkeySetupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<String> type;
+      private final Output<String> type;
 
-    public Input<String> getType() {
+    public Output<String> getType() {
         return this.type;
     }
 
@@ -58,17 +58,17 @@ public final class CmdkeySetupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="userName", required=true)
-      private final Input<Object> userName;
+      private final Output<Object> userName;
 
-    public Input<Object> getUserName() {
+    public Output<Object> getUserName() {
         return this.userName;
     }
 
     public CmdkeySetupArgs(
-        Input<SecureStringArgs> password,
-        Input<Object> targetName,
-        Input<String> type,
-        Input<Object> userName) {
+        Output<SecureStringArgs> password,
+        Output<Object> targetName,
+        Output<String> type,
+        Output<Object> userName) {
         this.password = Objects.requireNonNull(password, "expected parameter 'password' to be non-null");
         this.targetName = Objects.requireNonNull(targetName, "expected parameter 'targetName' to be non-null");
         this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
@@ -76,10 +76,10 @@ public final class CmdkeySetupArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private CmdkeySetupArgs() {
-        this.password = Input.empty();
-        this.targetName = Input.empty();
-        this.type = Input.empty();
-        this.userName = Input.empty();
+        this.password = Output.empty();
+        this.targetName = Output.empty();
+        this.type = Output.empty();
+        this.userName = Output.empty();
     }
 
     public static Builder builder() {
@@ -91,10 +91,10 @@ public final class CmdkeySetupArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<SecureStringArgs> password;
-        private Input<Object> targetName;
-        private Input<String> type;
-        private Input<Object> userName;
+        private Output<SecureStringArgs> password;
+        private Output<Object> targetName;
+        private Output<String> type;
+        private Output<Object> userName;
 
         public Builder() {
     	      // Empty
@@ -108,43 +108,43 @@ public final class CmdkeySetupArgs extends io.pulumi.resources.ResourceArgs {
     	      this.userName = defaults.userName;
         }
 
-        public Builder password(Input<SecureStringArgs> password) {
+        public Builder password(Output<SecureStringArgs> password) {
             this.password = Objects.requireNonNull(password);
             return this;
         }
 
         public Builder password(SecureStringArgs password) {
-            this.password = Input.of(Objects.requireNonNull(password));
+            this.password = Output.of(Objects.requireNonNull(password));
             return this;
         }
 
-        public Builder targetName(Input<Object> targetName) {
+        public Builder targetName(Output<Object> targetName) {
             this.targetName = Objects.requireNonNull(targetName);
             return this;
         }
 
         public Builder targetName(Object targetName) {
-            this.targetName = Input.of(Objects.requireNonNull(targetName));
+            this.targetName = Output.of(Objects.requireNonNull(targetName));
             return this;
         }
 
-        public Builder type(Input<String> type) {
+        public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(String type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
 
-        public Builder userName(Input<Object> userName) {
+        public Builder userName(Output<Object> userName) {
             this.userName = Objects.requireNonNull(userName);
             return this;
         }
 
         public Builder userName(Object userName) {
-            this.userName = Input.of(Objects.requireNonNull(userName));
+            this.userName = Output.of(Objects.requireNonNull(userName));
             return this;
         }
         public CmdkeySetupArgs build() {

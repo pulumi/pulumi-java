@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.jobs_v3;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.jobs_v3.enums.CompanySize;
 import java.lang.Boolean;
@@ -22,10 +22,10 @@ public final class CompanyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="careerSiteUri")
-      private final @Nullable Input<String> careerSiteUri;
+      private final @Nullable Output<String> careerSiteUri;
 
-    public Input<String> getCareerSiteUri() {
-        return this.careerSiteUri == null ? Input.empty() : this.careerSiteUri;
+    public Output<String> getCareerSiteUri() {
+        return this.careerSiteUri == null ? Output.empty() : this.careerSiteUri;
     }
 
     /**
@@ -33,9 +33,9 @@ public final class CompanyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName", required=true)
-      private final Input<String> displayName;
+      private final Output<String> displayName;
 
-    public Input<String> getDisplayName() {
+    public Output<String> getDisplayName() {
         return this.displayName;
     }
 
@@ -44,10 +44,10 @@ public final class CompanyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="eeoText")
-      private final @Nullable Input<String> eeoText;
+      private final @Nullable Output<String> eeoText;
 
-    public Input<String> getEeoText() {
-        return this.eeoText == null ? Input.empty() : this.eeoText;
+    public Output<String> getEeoText() {
+        return this.eeoText == null ? Output.empty() : this.eeoText;
     }
 
     /**
@@ -55,9 +55,9 @@ public final class CompanyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="externalId", required=true)
-      private final Input<String> externalId;
+      private final Output<String> externalId;
 
-    public Input<String> getExternalId() {
+    public Output<String> getExternalId() {
         return this.externalId;
     }
 
@@ -66,10 +66,10 @@ public final class CompanyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="headquartersAddress")
-      private final @Nullable Input<String> headquartersAddress;
+      private final @Nullable Output<String> headquartersAddress;
 
-    public Input<String> getHeadquartersAddress() {
-        return this.headquartersAddress == null ? Input.empty() : this.headquartersAddress;
+    public Output<String> getHeadquartersAddress() {
+        return this.headquartersAddress == null ? Output.empty() : this.headquartersAddress;
     }
 
     /**
@@ -77,10 +77,10 @@ public final class CompanyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="hiringAgency")
-      private final @Nullable Input<Boolean> hiringAgency;
+      private final @Nullable Output<Boolean> hiringAgency;
 
-    public Input<Boolean> getHiringAgency() {
-        return this.hiringAgency == null ? Input.empty() : this.hiringAgency;
+    public Output<Boolean> getHiringAgency() {
+        return this.hiringAgency == null ? Output.empty() : this.hiringAgency;
     }
 
     /**
@@ -88,10 +88,10 @@ public final class CompanyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="imageUri")
-      private final @Nullable Input<String> imageUri;
+      private final @Nullable Output<String> imageUri;
 
-    public Input<String> getImageUri() {
-        return this.imageUri == null ? Input.empty() : this.imageUri;
+    public Output<String> getImageUri() {
+        return this.imageUri == null ? Output.empty() : this.imageUri;
     }
 
     /**
@@ -99,10 +99,10 @@ public final class CompanyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="keywordSearchableJobCustomAttributes")
-      private final @Nullable Input<List<String>> keywordSearchableJobCustomAttributes;
+      private final @Nullable Output<List<String>> keywordSearchableJobCustomAttributes;
 
-    public Input<List<String>> getKeywordSearchableJobCustomAttributes() {
-        return this.keywordSearchableJobCustomAttributes == null ? Input.empty() : this.keywordSearchableJobCustomAttributes;
+    public Output<List<String>> getKeywordSearchableJobCustomAttributes() {
+        return this.keywordSearchableJobCustomAttributes == null ? Output.empty() : this.keywordSearchableJobCustomAttributes;
     }
 
     /**
@@ -110,17 +110,17 @@ public final class CompanyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -128,10 +128,10 @@ public final class CompanyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="size")
-      private final @Nullable Input<CompanySize> size;
+      private final @Nullable Output<CompanySize> size;
 
-    public Input<CompanySize> getSize() {
-        return this.size == null ? Input.empty() : this.size;
+    public Output<CompanySize> getSize() {
+        return this.size == null ? Output.empty() : this.size;
     }
 
     /**
@@ -139,25 +139,25 @@ public final class CompanyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="websiteUri")
-      private final @Nullable Input<String> websiteUri;
+      private final @Nullable Output<String> websiteUri;
 
-    public Input<String> getWebsiteUri() {
-        return this.websiteUri == null ? Input.empty() : this.websiteUri;
+    public Output<String> getWebsiteUri() {
+        return this.websiteUri == null ? Output.empty() : this.websiteUri;
     }
 
     public CompanyArgs(
-        @Nullable Input<String> careerSiteUri,
-        Input<String> displayName,
-        @Nullable Input<String> eeoText,
-        Input<String> externalId,
-        @Nullable Input<String> headquartersAddress,
-        @Nullable Input<Boolean> hiringAgency,
-        @Nullable Input<String> imageUri,
-        @Nullable Input<List<String>> keywordSearchableJobCustomAttributes,
-        @Nullable Input<String> name,
-        @Nullable Input<String> project,
-        @Nullable Input<CompanySize> size,
-        @Nullable Input<String> websiteUri) {
+        @Nullable Output<String> careerSiteUri,
+        Output<String> displayName,
+        @Nullable Output<String> eeoText,
+        Output<String> externalId,
+        @Nullable Output<String> headquartersAddress,
+        @Nullable Output<Boolean> hiringAgency,
+        @Nullable Output<String> imageUri,
+        @Nullable Output<List<String>> keywordSearchableJobCustomAttributes,
+        @Nullable Output<String> name,
+        @Nullable Output<String> project,
+        @Nullable Output<CompanySize> size,
+        @Nullable Output<String> websiteUri) {
         this.careerSiteUri = careerSiteUri;
         this.displayName = Objects.requireNonNull(displayName, "expected parameter 'displayName' to be non-null");
         this.eeoText = eeoText;
@@ -173,18 +173,18 @@ public final class CompanyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private CompanyArgs() {
-        this.careerSiteUri = Input.empty();
-        this.displayName = Input.empty();
-        this.eeoText = Input.empty();
-        this.externalId = Input.empty();
-        this.headquartersAddress = Input.empty();
-        this.hiringAgency = Input.empty();
-        this.imageUri = Input.empty();
-        this.keywordSearchableJobCustomAttributes = Input.empty();
-        this.name = Input.empty();
-        this.project = Input.empty();
-        this.size = Input.empty();
-        this.websiteUri = Input.empty();
+        this.careerSiteUri = Output.empty();
+        this.displayName = Output.empty();
+        this.eeoText = Output.empty();
+        this.externalId = Output.empty();
+        this.headquartersAddress = Output.empty();
+        this.hiringAgency = Output.empty();
+        this.imageUri = Output.empty();
+        this.keywordSearchableJobCustomAttributes = Output.empty();
+        this.name = Output.empty();
+        this.project = Output.empty();
+        this.size = Output.empty();
+        this.websiteUri = Output.empty();
     }
 
     public static Builder builder() {
@@ -196,18 +196,18 @@ public final class CompanyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> careerSiteUri;
-        private Input<String> displayName;
-        private @Nullable Input<String> eeoText;
-        private Input<String> externalId;
-        private @Nullable Input<String> headquartersAddress;
-        private @Nullable Input<Boolean> hiringAgency;
-        private @Nullable Input<String> imageUri;
-        private @Nullable Input<List<String>> keywordSearchableJobCustomAttributes;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> project;
-        private @Nullable Input<CompanySize> size;
-        private @Nullable Input<String> websiteUri;
+        private @Nullable Output<String> careerSiteUri;
+        private Output<String> displayName;
+        private @Nullable Output<String> eeoText;
+        private Output<String> externalId;
+        private @Nullable Output<String> headquartersAddress;
+        private @Nullable Output<Boolean> hiringAgency;
+        private @Nullable Output<String> imageUri;
+        private @Nullable Output<List<String>> keywordSearchableJobCustomAttributes;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> project;
+        private @Nullable Output<CompanySize> size;
+        private @Nullable Output<String> websiteUri;
 
         public Builder() {
     	      // Empty
@@ -229,123 +229,123 @@ public final class CompanyArgs extends io.pulumi.resources.ResourceArgs {
     	      this.websiteUri = defaults.websiteUri;
         }
 
-        public Builder careerSiteUri(@Nullable Input<String> careerSiteUri) {
+        public Builder careerSiteUri(@Nullable Output<String> careerSiteUri) {
             this.careerSiteUri = careerSiteUri;
             return this;
         }
 
         public Builder careerSiteUri(@Nullable String careerSiteUri) {
-            this.careerSiteUri = Input.ofNullable(careerSiteUri);
+            this.careerSiteUri = Output.ofNullable(careerSiteUri);
             return this;
         }
 
-        public Builder displayName(Input<String> displayName) {
+        public Builder displayName(Output<String> displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
         public Builder displayName(String displayName) {
-            this.displayName = Input.of(Objects.requireNonNull(displayName));
+            this.displayName = Output.of(Objects.requireNonNull(displayName));
             return this;
         }
 
-        public Builder eeoText(@Nullable Input<String> eeoText) {
+        public Builder eeoText(@Nullable Output<String> eeoText) {
             this.eeoText = eeoText;
             return this;
         }
 
         public Builder eeoText(@Nullable String eeoText) {
-            this.eeoText = Input.ofNullable(eeoText);
+            this.eeoText = Output.ofNullable(eeoText);
             return this;
         }
 
-        public Builder externalId(Input<String> externalId) {
+        public Builder externalId(Output<String> externalId) {
             this.externalId = Objects.requireNonNull(externalId);
             return this;
         }
 
         public Builder externalId(String externalId) {
-            this.externalId = Input.of(Objects.requireNonNull(externalId));
+            this.externalId = Output.of(Objects.requireNonNull(externalId));
             return this;
         }
 
-        public Builder headquartersAddress(@Nullable Input<String> headquartersAddress) {
+        public Builder headquartersAddress(@Nullable Output<String> headquartersAddress) {
             this.headquartersAddress = headquartersAddress;
             return this;
         }
 
         public Builder headquartersAddress(@Nullable String headquartersAddress) {
-            this.headquartersAddress = Input.ofNullable(headquartersAddress);
+            this.headquartersAddress = Output.ofNullable(headquartersAddress);
             return this;
         }
 
-        public Builder hiringAgency(@Nullable Input<Boolean> hiringAgency) {
+        public Builder hiringAgency(@Nullable Output<Boolean> hiringAgency) {
             this.hiringAgency = hiringAgency;
             return this;
         }
 
         public Builder hiringAgency(@Nullable Boolean hiringAgency) {
-            this.hiringAgency = Input.ofNullable(hiringAgency);
+            this.hiringAgency = Output.ofNullable(hiringAgency);
             return this;
         }
 
-        public Builder imageUri(@Nullable Input<String> imageUri) {
+        public Builder imageUri(@Nullable Output<String> imageUri) {
             this.imageUri = imageUri;
             return this;
         }
 
         public Builder imageUri(@Nullable String imageUri) {
-            this.imageUri = Input.ofNullable(imageUri);
+            this.imageUri = Output.ofNullable(imageUri);
             return this;
         }
 
-        public Builder keywordSearchableJobCustomAttributes(@Nullable Input<List<String>> keywordSearchableJobCustomAttributes) {
+        public Builder keywordSearchableJobCustomAttributes(@Nullable Output<List<String>> keywordSearchableJobCustomAttributes) {
             this.keywordSearchableJobCustomAttributes = keywordSearchableJobCustomAttributes;
             return this;
         }
 
         public Builder keywordSearchableJobCustomAttributes(@Nullable List<String> keywordSearchableJobCustomAttributes) {
-            this.keywordSearchableJobCustomAttributes = Input.ofNullable(keywordSearchableJobCustomAttributes);
+            this.keywordSearchableJobCustomAttributes = Output.ofNullable(keywordSearchableJobCustomAttributes);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder size(@Nullable Input<CompanySize> size) {
+        public Builder size(@Nullable Output<CompanySize> size) {
             this.size = size;
             return this;
         }
 
         public Builder size(@Nullable CompanySize size) {
-            this.size = Input.ofNullable(size);
+            this.size = Output.ofNullable(size);
             return this;
         }
 
-        public Builder websiteUri(@Nullable Input<String> websiteUri) {
+        public Builder websiteUri(@Nullable Output<String> websiteUri) {
             this.websiteUri = websiteUri;
             return this;
         }
 
         public Builder websiteUri(@Nullable String websiteUri) {
-            this.websiteUri = Input.ofNullable(websiteUri);
+            this.websiteUri = Output.ofNullable(websiteUri);
             return this;
         }
         public CompanyArgs build() {

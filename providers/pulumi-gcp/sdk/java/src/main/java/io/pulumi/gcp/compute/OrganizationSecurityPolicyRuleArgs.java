@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.compute.inputs.OrganizationSecurityPolicyRuleMatchArgs;
 import java.lang.Boolean;
@@ -24,9 +24,9 @@ public final class OrganizationSecurityPolicyRuleArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="action", required=true)
-      private final Input<String> action;
+      private final Output<String> action;
 
-    public Input<String> getAction() {
+    public Output<String> getAction() {
         return this.action;
     }
 
@@ -35,10 +35,10 @@ public final class OrganizationSecurityPolicyRuleArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -47,10 +47,10 @@ public final class OrganizationSecurityPolicyRuleArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="direction")
-      private final @Nullable Input<String> direction;
+      private final @Nullable Output<String> direction;
 
-    public Input<String> getDirection() {
-        return this.direction == null ? Input.empty() : this.direction;
+    public Output<String> getDirection() {
+        return this.direction == null ? Output.empty() : this.direction;
     }
 
     /**
@@ -60,10 +60,10 @@ public final class OrganizationSecurityPolicyRuleArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="enableLogging")
-      private final @Nullable Input<Boolean> enableLogging;
+      private final @Nullable Output<Boolean> enableLogging;
 
-    public Input<Boolean> getEnableLogging() {
-        return this.enableLogging == null ? Input.empty() : this.enableLogging;
+    public Output<Boolean> getEnableLogging() {
+        return this.enableLogging == null ? Output.empty() : this.enableLogging;
     }
 
     /**
@@ -72,9 +72,9 @@ public final class OrganizationSecurityPolicyRuleArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="match", required=true)
-      private final Input<OrganizationSecurityPolicyRuleMatchArgs> match;
+      private final Output<OrganizationSecurityPolicyRuleMatchArgs> match;
 
-    public Input<OrganizationSecurityPolicyRuleMatchArgs> getMatch() {
+    public Output<OrganizationSecurityPolicyRuleMatchArgs> getMatch() {
         return this.match;
     }
 
@@ -83,9 +83,9 @@ public final class OrganizationSecurityPolicyRuleArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="policyId", required=true)
-      private final Input<String> policyId;
+      private final Output<String> policyId;
 
-    public Input<String> getPolicyId() {
+    public Output<String> getPolicyId() {
         return this.policyId;
     }
 
@@ -94,10 +94,10 @@ public final class OrganizationSecurityPolicyRuleArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="preview")
-      private final @Nullable Input<Boolean> preview;
+      private final @Nullable Output<Boolean> preview;
 
-    public Input<Boolean> getPreview() {
-        return this.preview == null ? Input.empty() : this.preview;
+    public Output<Boolean> getPreview() {
+        return this.preview == null ? Output.empty() : this.preview;
     }
 
     /**
@@ -107,9 +107,9 @@ public final class OrganizationSecurityPolicyRuleArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="priority", required=true)
-      private final Input<Integer> priority;
+      private final Output<Integer> priority;
 
-    public Input<Integer> getPriority() {
+    public Output<Integer> getPriority() {
         return this.priority;
     }
 
@@ -121,10 +121,10 @@ public final class OrganizationSecurityPolicyRuleArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="targetResources")
-      private final @Nullable Input<List<String>> targetResources;
+      private final @Nullable Output<List<String>> targetResources;
 
-    public Input<List<String>> getTargetResources() {
-        return this.targetResources == null ? Input.empty() : this.targetResources;
+    public Output<List<String>> getTargetResources() {
+        return this.targetResources == null ? Output.empty() : this.targetResources;
     }
 
     /**
@@ -133,23 +133,23 @@ public final class OrganizationSecurityPolicyRuleArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="targetServiceAccounts")
-      private final @Nullable Input<List<String>> targetServiceAccounts;
+      private final @Nullable Output<List<String>> targetServiceAccounts;
 
-    public Input<List<String>> getTargetServiceAccounts() {
-        return this.targetServiceAccounts == null ? Input.empty() : this.targetServiceAccounts;
+    public Output<List<String>> getTargetServiceAccounts() {
+        return this.targetServiceAccounts == null ? Output.empty() : this.targetServiceAccounts;
     }
 
     public OrganizationSecurityPolicyRuleArgs(
-        Input<String> action,
-        @Nullable Input<String> description,
-        @Nullable Input<String> direction,
-        @Nullable Input<Boolean> enableLogging,
-        Input<OrganizationSecurityPolicyRuleMatchArgs> match,
-        Input<String> policyId,
-        @Nullable Input<Boolean> preview,
-        Input<Integer> priority,
-        @Nullable Input<List<String>> targetResources,
-        @Nullable Input<List<String>> targetServiceAccounts) {
+        Output<String> action,
+        @Nullable Output<String> description,
+        @Nullable Output<String> direction,
+        @Nullable Output<Boolean> enableLogging,
+        Output<OrganizationSecurityPolicyRuleMatchArgs> match,
+        Output<String> policyId,
+        @Nullable Output<Boolean> preview,
+        Output<Integer> priority,
+        @Nullable Output<List<String>> targetResources,
+        @Nullable Output<List<String>> targetServiceAccounts) {
         this.action = Objects.requireNonNull(action, "expected parameter 'action' to be non-null");
         this.description = description;
         this.direction = direction;
@@ -163,16 +163,16 @@ public final class OrganizationSecurityPolicyRuleArgs extends io.pulumi.resource
     }
 
     private OrganizationSecurityPolicyRuleArgs() {
-        this.action = Input.empty();
-        this.description = Input.empty();
-        this.direction = Input.empty();
-        this.enableLogging = Input.empty();
-        this.match = Input.empty();
-        this.policyId = Input.empty();
-        this.preview = Input.empty();
-        this.priority = Input.empty();
-        this.targetResources = Input.empty();
-        this.targetServiceAccounts = Input.empty();
+        this.action = Output.empty();
+        this.description = Output.empty();
+        this.direction = Output.empty();
+        this.enableLogging = Output.empty();
+        this.match = Output.empty();
+        this.policyId = Output.empty();
+        this.preview = Output.empty();
+        this.priority = Output.empty();
+        this.targetResources = Output.empty();
+        this.targetServiceAccounts = Output.empty();
     }
 
     public static Builder builder() {
@@ -184,16 +184,16 @@ public final class OrganizationSecurityPolicyRuleArgs extends io.pulumi.resource
     }
 
     public static final class Builder {
-        private Input<String> action;
-        private @Nullable Input<String> description;
-        private @Nullable Input<String> direction;
-        private @Nullable Input<Boolean> enableLogging;
-        private Input<OrganizationSecurityPolicyRuleMatchArgs> match;
-        private Input<String> policyId;
-        private @Nullable Input<Boolean> preview;
-        private Input<Integer> priority;
-        private @Nullable Input<List<String>> targetResources;
-        private @Nullable Input<List<String>> targetServiceAccounts;
+        private Output<String> action;
+        private @Nullable Output<String> description;
+        private @Nullable Output<String> direction;
+        private @Nullable Output<Boolean> enableLogging;
+        private Output<OrganizationSecurityPolicyRuleMatchArgs> match;
+        private Output<String> policyId;
+        private @Nullable Output<Boolean> preview;
+        private Output<Integer> priority;
+        private @Nullable Output<List<String>> targetResources;
+        private @Nullable Output<List<String>> targetServiceAccounts;
 
         public Builder() {
     	      // Empty
@@ -213,103 +213,103 @@ public final class OrganizationSecurityPolicyRuleArgs extends io.pulumi.resource
     	      this.targetServiceAccounts = defaults.targetServiceAccounts;
         }
 
-        public Builder action(Input<String> action) {
+        public Builder action(Output<String> action) {
             this.action = Objects.requireNonNull(action);
             return this;
         }
 
         public Builder action(String action) {
-            this.action = Input.of(Objects.requireNonNull(action));
+            this.action = Output.of(Objects.requireNonNull(action));
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder direction(@Nullable Input<String> direction) {
+        public Builder direction(@Nullable Output<String> direction) {
             this.direction = direction;
             return this;
         }
 
         public Builder direction(@Nullable String direction) {
-            this.direction = Input.ofNullable(direction);
+            this.direction = Output.ofNullable(direction);
             return this;
         }
 
-        public Builder enableLogging(@Nullable Input<Boolean> enableLogging) {
+        public Builder enableLogging(@Nullable Output<Boolean> enableLogging) {
             this.enableLogging = enableLogging;
             return this;
         }
 
         public Builder enableLogging(@Nullable Boolean enableLogging) {
-            this.enableLogging = Input.ofNullable(enableLogging);
+            this.enableLogging = Output.ofNullable(enableLogging);
             return this;
         }
 
-        public Builder match(Input<OrganizationSecurityPolicyRuleMatchArgs> match) {
+        public Builder match(Output<OrganizationSecurityPolicyRuleMatchArgs> match) {
             this.match = Objects.requireNonNull(match);
             return this;
         }
 
         public Builder match(OrganizationSecurityPolicyRuleMatchArgs match) {
-            this.match = Input.of(Objects.requireNonNull(match));
+            this.match = Output.of(Objects.requireNonNull(match));
             return this;
         }
 
-        public Builder policyId(Input<String> policyId) {
+        public Builder policyId(Output<String> policyId) {
             this.policyId = Objects.requireNonNull(policyId);
             return this;
         }
 
         public Builder policyId(String policyId) {
-            this.policyId = Input.of(Objects.requireNonNull(policyId));
+            this.policyId = Output.of(Objects.requireNonNull(policyId));
             return this;
         }
 
-        public Builder preview(@Nullable Input<Boolean> preview) {
+        public Builder preview(@Nullable Output<Boolean> preview) {
             this.preview = preview;
             return this;
         }
 
         public Builder preview(@Nullable Boolean preview) {
-            this.preview = Input.ofNullable(preview);
+            this.preview = Output.ofNullable(preview);
             return this;
         }
 
-        public Builder priority(Input<Integer> priority) {
+        public Builder priority(Output<Integer> priority) {
             this.priority = Objects.requireNonNull(priority);
             return this;
         }
 
         public Builder priority(Integer priority) {
-            this.priority = Input.of(Objects.requireNonNull(priority));
+            this.priority = Output.of(Objects.requireNonNull(priority));
             return this;
         }
 
-        public Builder targetResources(@Nullable Input<List<String>> targetResources) {
+        public Builder targetResources(@Nullable Output<List<String>> targetResources) {
             this.targetResources = targetResources;
             return this;
         }
 
         public Builder targetResources(@Nullable List<String> targetResources) {
-            this.targetResources = Input.ofNullable(targetResources);
+            this.targetResources = Output.ofNullable(targetResources);
             return this;
         }
 
-        public Builder targetServiceAccounts(@Nullable Input<List<String>> targetServiceAccounts) {
+        public Builder targetServiceAccounts(@Nullable Output<List<String>> targetServiceAccounts) {
             this.targetServiceAccounts = targetServiceAccounts;
             return this;
         }
 
         public Builder targetServiceAccounts(@Nullable List<String> targetServiceAccounts) {
-            this.targetServiceAccounts = Input.ofNullable(targetServiceAccounts);
+            this.targetServiceAccounts = Output.ofNullable(targetServiceAccounts);
             return this;
         }
         public OrganizationSecurityPolicyRuleArgs build() {

@@ -7,7 +7,6 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.fsx.DataRepositoryAssociationArgs;
 import io.pulumi.aws.fsx.inputs.DataRepositoryAssociationState;
 import io.pulumi.aws.fsx.outputs.DataRepositoryAssociationS3;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -222,14 +221,14 @@ public class DataRepositoryAssociation extends io.pulumi.resources.CustomResourc
      * @param options A bag of options that control this resource's behavior.
      */
     public DataRepositoryAssociation(String name, DataRepositoryAssociationArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:fsx/dataRepositoryAssociation:DataRepositoryAssociation", name, args == null ? DataRepositoryAssociationArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws:fsx/dataRepositoryAssociation:DataRepositoryAssociation", name, args == null ? DataRepositoryAssociationArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private DataRepositoryAssociation(String name, Input<String> id, @Nullable DataRepositoryAssociationState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private DataRepositoryAssociation(String name, Output<String> id, @Nullable DataRepositoryAssociationState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws:fsx/dataRepositoryAssociation:DataRepositoryAssociation", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -245,7 +244,7 @@ public class DataRepositoryAssociation extends io.pulumi.resources.CustomResourc
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static DataRepositoryAssociation get(String name, Input<String> id, @Nullable DataRepositoryAssociationState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static DataRepositoryAssociation get(String name, Output<String> id, @Nullable DataRepositoryAssociationState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new DataRepositoryAssociation(name, id, state, options);
     }
 }

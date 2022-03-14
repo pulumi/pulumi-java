@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.appsync.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -16,39 +16,39 @@ public final class DataSourceDynamodbConfigDeltaSyncConfigGetArgs extends io.pul
     public static final DataSourceDynamodbConfigDeltaSyncConfigGetArgs Empty = new DataSourceDynamodbConfigDeltaSyncConfigGetArgs();
 
     @InputImport(name="baseTableTtl")
-      private final @Nullable Input<Integer> baseTableTtl;
+      private final @Nullable Output<Integer> baseTableTtl;
 
-    public Input<Integer> getBaseTableTtl() {
-        return this.baseTableTtl == null ? Input.empty() : this.baseTableTtl;
+    public Output<Integer> getBaseTableTtl() {
+        return this.baseTableTtl == null ? Output.empty() : this.baseTableTtl;
     }
 
     @InputImport(name="deltaSyncTableName", required=true)
-      private final Input<String> deltaSyncTableName;
+      private final Output<String> deltaSyncTableName;
 
-    public Input<String> getDeltaSyncTableName() {
+    public Output<String> getDeltaSyncTableName() {
         return this.deltaSyncTableName;
     }
 
     @InputImport(name="deltaSyncTableTtl")
-      private final @Nullable Input<Integer> deltaSyncTableTtl;
+      private final @Nullable Output<Integer> deltaSyncTableTtl;
 
-    public Input<Integer> getDeltaSyncTableTtl() {
-        return this.deltaSyncTableTtl == null ? Input.empty() : this.deltaSyncTableTtl;
+    public Output<Integer> getDeltaSyncTableTtl() {
+        return this.deltaSyncTableTtl == null ? Output.empty() : this.deltaSyncTableTtl;
     }
 
     public DataSourceDynamodbConfigDeltaSyncConfigGetArgs(
-        @Nullable Input<Integer> baseTableTtl,
-        Input<String> deltaSyncTableName,
-        @Nullable Input<Integer> deltaSyncTableTtl) {
+        @Nullable Output<Integer> baseTableTtl,
+        Output<String> deltaSyncTableName,
+        @Nullable Output<Integer> deltaSyncTableTtl) {
         this.baseTableTtl = baseTableTtl;
         this.deltaSyncTableName = Objects.requireNonNull(deltaSyncTableName, "expected parameter 'deltaSyncTableName' to be non-null");
         this.deltaSyncTableTtl = deltaSyncTableTtl;
     }
 
     private DataSourceDynamodbConfigDeltaSyncConfigGetArgs() {
-        this.baseTableTtl = Input.empty();
-        this.deltaSyncTableName = Input.empty();
-        this.deltaSyncTableTtl = Input.empty();
+        this.baseTableTtl = Output.empty();
+        this.deltaSyncTableName = Output.empty();
+        this.deltaSyncTableTtl = Output.empty();
     }
 
     public static Builder builder() {
@@ -60,9 +60,9 @@ public final class DataSourceDynamodbConfigDeltaSyncConfigGetArgs extends io.pul
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> baseTableTtl;
-        private Input<String> deltaSyncTableName;
-        private @Nullable Input<Integer> deltaSyncTableTtl;
+        private @Nullable Output<Integer> baseTableTtl;
+        private Output<String> deltaSyncTableName;
+        private @Nullable Output<Integer> deltaSyncTableTtl;
 
         public Builder() {
     	      // Empty
@@ -75,33 +75,33 @@ public final class DataSourceDynamodbConfigDeltaSyncConfigGetArgs extends io.pul
     	      this.deltaSyncTableTtl = defaults.deltaSyncTableTtl;
         }
 
-        public Builder baseTableTtl(@Nullable Input<Integer> baseTableTtl) {
+        public Builder baseTableTtl(@Nullable Output<Integer> baseTableTtl) {
             this.baseTableTtl = baseTableTtl;
             return this;
         }
 
         public Builder baseTableTtl(@Nullable Integer baseTableTtl) {
-            this.baseTableTtl = Input.ofNullable(baseTableTtl);
+            this.baseTableTtl = Output.ofNullable(baseTableTtl);
             return this;
         }
 
-        public Builder deltaSyncTableName(Input<String> deltaSyncTableName) {
+        public Builder deltaSyncTableName(Output<String> deltaSyncTableName) {
             this.deltaSyncTableName = Objects.requireNonNull(deltaSyncTableName);
             return this;
         }
 
         public Builder deltaSyncTableName(String deltaSyncTableName) {
-            this.deltaSyncTableName = Input.of(Objects.requireNonNull(deltaSyncTableName));
+            this.deltaSyncTableName = Output.of(Objects.requireNonNull(deltaSyncTableName));
             return this;
         }
 
-        public Builder deltaSyncTableTtl(@Nullable Input<Integer> deltaSyncTableTtl) {
+        public Builder deltaSyncTableTtl(@Nullable Output<Integer> deltaSyncTableTtl) {
             this.deltaSyncTableTtl = deltaSyncTableTtl;
             return this;
         }
 
         public Builder deltaSyncTableTtl(@Nullable Integer deltaSyncTableTtl) {
-            this.deltaSyncTableTtl = Input.ofNullable(deltaSyncTableTtl);
+            this.deltaSyncTableTtl = Output.ofNullable(deltaSyncTableTtl);
             return this;
         }
         public DataSourceDynamodbConfigDeltaSyncConfigGetArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.route53.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,17 +19,17 @@ public final class ResolverEndpointIpAddressArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="ip")
-      private final @Nullable Input<String> ip;
+      private final @Nullable Output<String> ip;
 
-    public Input<String> getIp() {
-        return this.ip == null ? Input.empty() : this.ip;
+    public Output<String> getIp() {
+        return this.ip == null ? Output.empty() : this.ip;
     }
 
     @InputImport(name="ipId")
-      private final @Nullable Input<String> ipId;
+      private final @Nullable Output<String> ipId;
 
-    public Input<String> getIpId() {
-        return this.ipId == null ? Input.empty() : this.ipId;
+    public Output<String> getIpId() {
+        return this.ipId == null ? Output.empty() : this.ipId;
     }
 
     /**
@@ -37,25 +37,25 @@ public final class ResolverEndpointIpAddressArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="subnetId", required=true)
-      private final Input<String> subnetId;
+      private final Output<String> subnetId;
 
-    public Input<String> getSubnetId() {
+    public Output<String> getSubnetId() {
         return this.subnetId;
     }
 
     public ResolverEndpointIpAddressArgs(
-        @Nullable Input<String> ip,
-        @Nullable Input<String> ipId,
-        Input<String> subnetId) {
+        @Nullable Output<String> ip,
+        @Nullable Output<String> ipId,
+        Output<String> subnetId) {
         this.ip = ip;
         this.ipId = ipId;
         this.subnetId = Objects.requireNonNull(subnetId, "expected parameter 'subnetId' to be non-null");
     }
 
     private ResolverEndpointIpAddressArgs() {
-        this.ip = Input.empty();
-        this.ipId = Input.empty();
-        this.subnetId = Input.empty();
+        this.ip = Output.empty();
+        this.ipId = Output.empty();
+        this.subnetId = Output.empty();
     }
 
     public static Builder builder() {
@@ -67,9 +67,9 @@ public final class ResolverEndpointIpAddressArgs extends io.pulumi.resources.Res
     }
 
     public static final class Builder {
-        private @Nullable Input<String> ip;
-        private @Nullable Input<String> ipId;
-        private Input<String> subnetId;
+        private @Nullable Output<String> ip;
+        private @Nullable Output<String> ipId;
+        private Output<String> subnetId;
 
         public Builder() {
     	      // Empty
@@ -82,33 +82,33 @@ public final class ResolverEndpointIpAddressArgs extends io.pulumi.resources.Res
     	      this.subnetId = defaults.subnetId;
         }
 
-        public Builder ip(@Nullable Input<String> ip) {
+        public Builder ip(@Nullable Output<String> ip) {
             this.ip = ip;
             return this;
         }
 
         public Builder ip(@Nullable String ip) {
-            this.ip = Input.ofNullable(ip);
+            this.ip = Output.ofNullable(ip);
             return this;
         }
 
-        public Builder ipId(@Nullable Input<String> ipId) {
+        public Builder ipId(@Nullable Output<String> ipId) {
             this.ipId = ipId;
             return this;
         }
 
         public Builder ipId(@Nullable String ipId) {
-            this.ipId = Input.ofNullable(ipId);
+            this.ipId = Output.ofNullable(ipId);
             return this;
         }
 
-        public Builder subnetId(Input<String> subnetId) {
+        public Builder subnetId(Output<String> subnetId) {
             this.subnetId = Objects.requireNonNull(subnetId);
             return this;
         }
 
         public Builder subnetId(String subnetId) {
-            this.subnetId = Input.of(Objects.requireNonNull(subnetId));
+            this.subnetId = Output.of(Objects.requireNonNull(subnetId));
             return this;
         }
         public ResolverEndpointIpAddressArgs build() {

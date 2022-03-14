@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.diagflow;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Double;
@@ -28,10 +28,10 @@ public final class AgentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="apiVersion")
-      private final @Nullable Input<String> apiVersion;
+      private final @Nullable Output<String> apiVersion;
 
-    public Input<String> getApiVersion() {
-        return this.apiVersion == null ? Input.empty() : this.apiVersion;
+    public Output<String> getApiVersion() {
+        return this.apiVersion == null ? Output.empty() : this.apiVersion;
     }
 
     /**
@@ -41,10 +41,10 @@ public final class AgentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="avatarUri")
-      private final @Nullable Input<String> avatarUri;
+      private final @Nullable Output<String> avatarUri;
 
-    public Input<String> getAvatarUri() {
-        return this.avatarUri == null ? Input.empty() : this.avatarUri;
+    public Output<String> getAvatarUri() {
+        return this.avatarUri == null ? Output.empty() : this.avatarUri;
     }
 
     /**
@@ -56,10 +56,10 @@ public final class AgentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="classificationThreshold")
-      private final @Nullable Input<Double> classificationThreshold;
+      private final @Nullable Output<Double> classificationThreshold;
 
-    public Input<Double> getClassificationThreshold() {
-        return this.classificationThreshold == null ? Input.empty() : this.classificationThreshold;
+    public Output<Double> getClassificationThreshold() {
+        return this.classificationThreshold == null ? Output.empty() : this.classificationThreshold;
     }
 
     /**
@@ -68,9 +68,9 @@ public final class AgentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="defaultLanguageCode", required=true)
-      private final Input<String> defaultLanguageCode;
+      private final Output<String> defaultLanguageCode;
 
-    public Input<String> getDefaultLanguageCode() {
+    public Output<String> getDefaultLanguageCode() {
         return this.defaultLanguageCode;
     }
 
@@ -79,10 +79,10 @@ public final class AgentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -90,9 +90,9 @@ public final class AgentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName", required=true)
-      private final Input<String> displayName;
+      private final Output<String> displayName;
 
-    public Input<String> getDisplayName() {
+    public Output<String> getDisplayName() {
         return this.displayName;
     }
 
@@ -101,10 +101,10 @@ public final class AgentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enableLogging")
-      private final @Nullable Input<Boolean> enableLogging;
+      private final @Nullable Output<Boolean> enableLogging;
 
-    public Input<Boolean> getEnableLogging() {
-        return this.enableLogging == null ? Input.empty() : this.enableLogging;
+    public Output<Boolean> getEnableLogging() {
+        return this.enableLogging == null ? Output.empty() : this.enableLogging;
     }
 
     /**
@@ -117,10 +117,10 @@ public final class AgentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="matchMode")
-      private final @Nullable Input<String> matchMode;
+      private final @Nullable Output<String> matchMode;
 
-    public Input<String> getMatchMode() {
-        return this.matchMode == null ? Input.empty() : this.matchMode;
+    public Output<String> getMatchMode() {
+        return this.matchMode == null ? Output.empty() : this.matchMode;
     }
 
     /**
@@ -129,10 +129,10 @@ public final class AgentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -140,10 +140,10 @@ public final class AgentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="supportedLanguageCodes")
-      private final @Nullable Input<List<String>> supportedLanguageCodes;
+      private final @Nullable Output<List<String>> supportedLanguageCodes;
 
-    public Input<List<String>> getSupportedLanguageCodes() {
-        return this.supportedLanguageCodes == null ? Input.empty() : this.supportedLanguageCodes;
+    public Output<List<String>> getSupportedLanguageCodes() {
+        return this.supportedLanguageCodes == null ? Output.empty() : this.supportedLanguageCodes;
     }
 
     /**
@@ -156,10 +156,10 @@ public final class AgentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tier")
-      private final @Nullable Input<String> tier;
+      private final @Nullable Output<String> tier;
 
-    public Input<String> getTier() {
-        return this.tier == null ? Input.empty() : this.tier;
+    public Output<String> getTier() {
+        return this.tier == null ? Output.empty() : this.tier;
     }
 
     /**
@@ -168,25 +168,25 @@ public final class AgentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="timeZone", required=true)
-      private final Input<String> timeZone;
+      private final Output<String> timeZone;
 
-    public Input<String> getTimeZone() {
+    public Output<String> getTimeZone() {
         return this.timeZone;
     }
 
     public AgentArgs(
-        @Nullable Input<String> apiVersion,
-        @Nullable Input<String> avatarUri,
-        @Nullable Input<Double> classificationThreshold,
-        Input<String> defaultLanguageCode,
-        @Nullable Input<String> description,
-        Input<String> displayName,
-        @Nullable Input<Boolean> enableLogging,
-        @Nullable Input<String> matchMode,
-        @Nullable Input<String> project,
-        @Nullable Input<List<String>> supportedLanguageCodes,
-        @Nullable Input<String> tier,
-        Input<String> timeZone) {
+        @Nullable Output<String> apiVersion,
+        @Nullable Output<String> avatarUri,
+        @Nullable Output<Double> classificationThreshold,
+        Output<String> defaultLanguageCode,
+        @Nullable Output<String> description,
+        Output<String> displayName,
+        @Nullable Output<Boolean> enableLogging,
+        @Nullable Output<String> matchMode,
+        @Nullable Output<String> project,
+        @Nullable Output<List<String>> supportedLanguageCodes,
+        @Nullable Output<String> tier,
+        Output<String> timeZone) {
         this.apiVersion = apiVersion;
         this.avatarUri = avatarUri;
         this.classificationThreshold = classificationThreshold;
@@ -202,18 +202,18 @@ public final class AgentArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private AgentArgs() {
-        this.apiVersion = Input.empty();
-        this.avatarUri = Input.empty();
-        this.classificationThreshold = Input.empty();
-        this.defaultLanguageCode = Input.empty();
-        this.description = Input.empty();
-        this.displayName = Input.empty();
-        this.enableLogging = Input.empty();
-        this.matchMode = Input.empty();
-        this.project = Input.empty();
-        this.supportedLanguageCodes = Input.empty();
-        this.tier = Input.empty();
-        this.timeZone = Input.empty();
+        this.apiVersion = Output.empty();
+        this.avatarUri = Output.empty();
+        this.classificationThreshold = Output.empty();
+        this.defaultLanguageCode = Output.empty();
+        this.description = Output.empty();
+        this.displayName = Output.empty();
+        this.enableLogging = Output.empty();
+        this.matchMode = Output.empty();
+        this.project = Output.empty();
+        this.supportedLanguageCodes = Output.empty();
+        this.tier = Output.empty();
+        this.timeZone = Output.empty();
     }
 
     public static Builder builder() {
@@ -225,18 +225,18 @@ public final class AgentArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> apiVersion;
-        private @Nullable Input<String> avatarUri;
-        private @Nullable Input<Double> classificationThreshold;
-        private Input<String> defaultLanguageCode;
-        private @Nullable Input<String> description;
-        private Input<String> displayName;
-        private @Nullable Input<Boolean> enableLogging;
-        private @Nullable Input<String> matchMode;
-        private @Nullable Input<String> project;
-        private @Nullable Input<List<String>> supportedLanguageCodes;
-        private @Nullable Input<String> tier;
-        private Input<String> timeZone;
+        private @Nullable Output<String> apiVersion;
+        private @Nullable Output<String> avatarUri;
+        private @Nullable Output<Double> classificationThreshold;
+        private Output<String> defaultLanguageCode;
+        private @Nullable Output<String> description;
+        private Output<String> displayName;
+        private @Nullable Output<Boolean> enableLogging;
+        private @Nullable Output<String> matchMode;
+        private @Nullable Output<String> project;
+        private @Nullable Output<List<String>> supportedLanguageCodes;
+        private @Nullable Output<String> tier;
+        private Output<String> timeZone;
 
         public Builder() {
     	      // Empty
@@ -258,123 +258,123 @@ public final class AgentArgs extends io.pulumi.resources.ResourceArgs {
     	      this.timeZone = defaults.timeZone;
         }
 
-        public Builder apiVersion(@Nullable Input<String> apiVersion) {
+        public Builder apiVersion(@Nullable Output<String> apiVersion) {
             this.apiVersion = apiVersion;
             return this;
         }
 
         public Builder apiVersion(@Nullable String apiVersion) {
-            this.apiVersion = Input.ofNullable(apiVersion);
+            this.apiVersion = Output.ofNullable(apiVersion);
             return this;
         }
 
-        public Builder avatarUri(@Nullable Input<String> avatarUri) {
+        public Builder avatarUri(@Nullable Output<String> avatarUri) {
             this.avatarUri = avatarUri;
             return this;
         }
 
         public Builder avatarUri(@Nullable String avatarUri) {
-            this.avatarUri = Input.ofNullable(avatarUri);
+            this.avatarUri = Output.ofNullable(avatarUri);
             return this;
         }
 
-        public Builder classificationThreshold(@Nullable Input<Double> classificationThreshold) {
+        public Builder classificationThreshold(@Nullable Output<Double> classificationThreshold) {
             this.classificationThreshold = classificationThreshold;
             return this;
         }
 
         public Builder classificationThreshold(@Nullable Double classificationThreshold) {
-            this.classificationThreshold = Input.ofNullable(classificationThreshold);
+            this.classificationThreshold = Output.ofNullable(classificationThreshold);
             return this;
         }
 
-        public Builder defaultLanguageCode(Input<String> defaultLanguageCode) {
+        public Builder defaultLanguageCode(Output<String> defaultLanguageCode) {
             this.defaultLanguageCode = Objects.requireNonNull(defaultLanguageCode);
             return this;
         }
 
         public Builder defaultLanguageCode(String defaultLanguageCode) {
-            this.defaultLanguageCode = Input.of(Objects.requireNonNull(defaultLanguageCode));
+            this.defaultLanguageCode = Output.of(Objects.requireNonNull(defaultLanguageCode));
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder displayName(Input<String> displayName) {
+        public Builder displayName(Output<String> displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
         public Builder displayName(String displayName) {
-            this.displayName = Input.of(Objects.requireNonNull(displayName));
+            this.displayName = Output.of(Objects.requireNonNull(displayName));
             return this;
         }
 
-        public Builder enableLogging(@Nullable Input<Boolean> enableLogging) {
+        public Builder enableLogging(@Nullable Output<Boolean> enableLogging) {
             this.enableLogging = enableLogging;
             return this;
         }
 
         public Builder enableLogging(@Nullable Boolean enableLogging) {
-            this.enableLogging = Input.ofNullable(enableLogging);
+            this.enableLogging = Output.ofNullable(enableLogging);
             return this;
         }
 
-        public Builder matchMode(@Nullable Input<String> matchMode) {
+        public Builder matchMode(@Nullable Output<String> matchMode) {
             this.matchMode = matchMode;
             return this;
         }
 
         public Builder matchMode(@Nullable String matchMode) {
-            this.matchMode = Input.ofNullable(matchMode);
+            this.matchMode = Output.ofNullable(matchMode);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder supportedLanguageCodes(@Nullable Input<List<String>> supportedLanguageCodes) {
+        public Builder supportedLanguageCodes(@Nullable Output<List<String>> supportedLanguageCodes) {
             this.supportedLanguageCodes = supportedLanguageCodes;
             return this;
         }
 
         public Builder supportedLanguageCodes(@Nullable List<String> supportedLanguageCodes) {
-            this.supportedLanguageCodes = Input.ofNullable(supportedLanguageCodes);
+            this.supportedLanguageCodes = Output.ofNullable(supportedLanguageCodes);
             return this;
         }
 
-        public Builder tier(@Nullable Input<String> tier) {
+        public Builder tier(@Nullable Output<String> tier) {
             this.tier = tier;
             return this;
         }
 
         public Builder tier(@Nullable String tier) {
-            this.tier = Input.ofNullable(tier);
+            this.tier = Output.ofNullable(tier);
             return this;
         }
 
-        public Builder timeZone(Input<String> timeZone) {
+        public Builder timeZone(Output<String> timeZone) {
             this.timeZone = Objects.requireNonNull(timeZone);
             return this;
         }
 
         public Builder timeZone(String timeZone) {
-            this.timeZone = Input.of(Objects.requireNonNull(timeZone));
+            this.timeZone = Output.of(Objects.requireNonNull(timeZone));
             return this;
         }
         public AgentArgs build() {

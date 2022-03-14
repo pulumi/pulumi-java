@@ -5,7 +5,7 @@ package io.pulumi.azurenative.hybridnetwork;
 
 import io.pulumi.azurenative.hybridnetwork.inputs.NetworkFunctionUserConfigurationArgs;
 import io.pulumi.azurenative.hybridnetwork.inputs.SubResourceArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class NetworkFunctionArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="device")
-      private final @Nullable Input<SubResourceArgs> device;
+      private final @Nullable Output<SubResourceArgs> device;
 
-    public Input<SubResourceArgs> getDevice() {
-        return this.device == null ? Input.empty() : this.device;
+    public Output<SubResourceArgs> getDevice() {
+        return this.device == null ? Output.empty() : this.device;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class NetworkFunctionArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -46,10 +46,10 @@ public final class NetworkFunctionArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="managedApplicationParameters")
-      private final @Nullable Input<Object> managedApplicationParameters;
+      private final @Nullable Output<Object> managedApplicationParameters;
 
-    public Input<Object> getManagedApplicationParameters() {
-        return this.managedApplicationParameters == null ? Input.empty() : this.managedApplicationParameters;
+    public Output<Object> getManagedApplicationParameters() {
+        return this.managedApplicationParameters == null ? Output.empty() : this.managedApplicationParameters;
     }
 
     /**
@@ -57,10 +57,10 @@ public final class NetworkFunctionArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="networkFunctionName")
-      private final @Nullable Input<String> networkFunctionName;
+      private final @Nullable Output<String> networkFunctionName;
 
-    public Input<String> getNetworkFunctionName() {
-        return this.networkFunctionName == null ? Input.empty() : this.networkFunctionName;
+    public Output<String> getNetworkFunctionName() {
+        return this.networkFunctionName == null ? Output.empty() : this.networkFunctionName;
     }
 
     /**
@@ -68,10 +68,10 @@ public final class NetworkFunctionArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="networkFunctionUserConfigurations")
-      private final @Nullable Input<List<NetworkFunctionUserConfigurationArgs>> networkFunctionUserConfigurations;
+      private final @Nullable Output<List<NetworkFunctionUserConfigurationArgs>> networkFunctionUserConfigurations;
 
-    public Input<List<NetworkFunctionUserConfigurationArgs>> getNetworkFunctionUserConfigurations() {
-        return this.networkFunctionUserConfigurations == null ? Input.empty() : this.networkFunctionUserConfigurations;
+    public Output<List<NetworkFunctionUserConfigurationArgs>> getNetworkFunctionUserConfigurations() {
+        return this.networkFunctionUserConfigurations == null ? Output.empty() : this.networkFunctionUserConfigurations;
     }
 
     /**
@@ -79,9 +79,9 @@ public final class NetworkFunctionArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -90,10 +90,10 @@ public final class NetworkFunctionArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="skuName")
-      private final @Nullable Input<String> skuName;
+      private final @Nullable Output<String> skuName;
 
-    public Input<String> getSkuName() {
-        return this.skuName == null ? Input.empty() : this.skuName;
+    public Output<String> getSkuName() {
+        return this.skuName == null ? Output.empty() : this.skuName;
     }
 
     /**
@@ -101,10 +101,10 @@ public final class NetworkFunctionArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -112,22 +112,22 @@ public final class NetworkFunctionArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="vendorName")
-      private final @Nullable Input<String> vendorName;
+      private final @Nullable Output<String> vendorName;
 
-    public Input<String> getVendorName() {
-        return this.vendorName == null ? Input.empty() : this.vendorName;
+    public Output<String> getVendorName() {
+        return this.vendorName == null ? Output.empty() : this.vendorName;
     }
 
     public NetworkFunctionArgs(
-        @Nullable Input<SubResourceArgs> device,
-        @Nullable Input<String> location,
-        @Nullable Input<Object> managedApplicationParameters,
-        @Nullable Input<String> networkFunctionName,
-        @Nullable Input<List<NetworkFunctionUserConfigurationArgs>> networkFunctionUserConfigurations,
-        Input<String> resourceGroupName,
-        @Nullable Input<String> skuName,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<String> vendorName) {
+        @Nullable Output<SubResourceArgs> device,
+        @Nullable Output<String> location,
+        @Nullable Output<Object> managedApplicationParameters,
+        @Nullable Output<String> networkFunctionName,
+        @Nullable Output<List<NetworkFunctionUserConfigurationArgs>> networkFunctionUserConfigurations,
+        Output<String> resourceGroupName,
+        @Nullable Output<String> skuName,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<String> vendorName) {
         this.device = device;
         this.location = location;
         this.managedApplicationParameters = managedApplicationParameters;
@@ -140,15 +140,15 @@ public final class NetworkFunctionArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private NetworkFunctionArgs() {
-        this.device = Input.empty();
-        this.location = Input.empty();
-        this.managedApplicationParameters = Input.empty();
-        this.networkFunctionName = Input.empty();
-        this.networkFunctionUserConfigurations = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.skuName = Input.empty();
-        this.tags = Input.empty();
-        this.vendorName = Input.empty();
+        this.device = Output.empty();
+        this.location = Output.empty();
+        this.managedApplicationParameters = Output.empty();
+        this.networkFunctionName = Output.empty();
+        this.networkFunctionUserConfigurations = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.skuName = Output.empty();
+        this.tags = Output.empty();
+        this.vendorName = Output.empty();
     }
 
     public static Builder builder() {
@@ -160,15 +160,15 @@ public final class NetworkFunctionArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private @Nullable Input<SubResourceArgs> device;
-        private @Nullable Input<String> location;
-        private @Nullable Input<Object> managedApplicationParameters;
-        private @Nullable Input<String> networkFunctionName;
-        private @Nullable Input<List<NetworkFunctionUserConfigurationArgs>> networkFunctionUserConfigurations;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<String> skuName;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<String> vendorName;
+        private @Nullable Output<SubResourceArgs> device;
+        private @Nullable Output<String> location;
+        private @Nullable Output<Object> managedApplicationParameters;
+        private @Nullable Output<String> networkFunctionName;
+        private @Nullable Output<List<NetworkFunctionUserConfigurationArgs>> networkFunctionUserConfigurations;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<String> skuName;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<String> vendorName;
 
         public Builder() {
     	      // Empty
@@ -187,93 +187,93 @@ public final class NetworkFunctionArgs extends io.pulumi.resources.ResourceArgs 
     	      this.vendorName = defaults.vendorName;
         }
 
-        public Builder device(@Nullable Input<SubResourceArgs> device) {
+        public Builder device(@Nullable Output<SubResourceArgs> device) {
             this.device = device;
             return this;
         }
 
         public Builder device(@Nullable SubResourceArgs device) {
-            this.device = Input.ofNullable(device);
+            this.device = Output.ofNullable(device);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder managedApplicationParameters(@Nullable Input<Object> managedApplicationParameters) {
+        public Builder managedApplicationParameters(@Nullable Output<Object> managedApplicationParameters) {
             this.managedApplicationParameters = managedApplicationParameters;
             return this;
         }
 
         public Builder managedApplicationParameters(@Nullable Object managedApplicationParameters) {
-            this.managedApplicationParameters = Input.ofNullable(managedApplicationParameters);
+            this.managedApplicationParameters = Output.ofNullable(managedApplicationParameters);
             return this;
         }
 
-        public Builder networkFunctionName(@Nullable Input<String> networkFunctionName) {
+        public Builder networkFunctionName(@Nullable Output<String> networkFunctionName) {
             this.networkFunctionName = networkFunctionName;
             return this;
         }
 
         public Builder networkFunctionName(@Nullable String networkFunctionName) {
-            this.networkFunctionName = Input.ofNullable(networkFunctionName);
+            this.networkFunctionName = Output.ofNullable(networkFunctionName);
             return this;
         }
 
-        public Builder networkFunctionUserConfigurations(@Nullable Input<List<NetworkFunctionUserConfigurationArgs>> networkFunctionUserConfigurations) {
+        public Builder networkFunctionUserConfigurations(@Nullable Output<List<NetworkFunctionUserConfigurationArgs>> networkFunctionUserConfigurations) {
             this.networkFunctionUserConfigurations = networkFunctionUserConfigurations;
             return this;
         }
 
         public Builder networkFunctionUserConfigurations(@Nullable List<NetworkFunctionUserConfigurationArgs> networkFunctionUserConfigurations) {
-            this.networkFunctionUserConfigurations = Input.ofNullable(networkFunctionUserConfigurations);
+            this.networkFunctionUserConfigurations = Output.ofNullable(networkFunctionUserConfigurations);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder skuName(@Nullable Input<String> skuName) {
+        public Builder skuName(@Nullable Output<String> skuName) {
             this.skuName = skuName;
             return this;
         }
 
         public Builder skuName(@Nullable String skuName) {
-            this.skuName = Input.ofNullable(skuName);
+            this.skuName = Output.ofNullable(skuName);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder vendorName(@Nullable Input<String> vendorName) {
+        public Builder vendorName(@Nullable Output<String> vendorName) {
             this.vendorName = vendorName;
             return this;
         }
 
         public Builder vendorName(@Nullable String vendorName) {
-            this.vendorName = Input.ofNullable(vendorName);
+            this.vendorName = Output.ofNullable(vendorName);
             return this;
         }
         public NetworkFunctionArgs build() {

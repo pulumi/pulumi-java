@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.dataloss.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.dataloss.inputs.PreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldFieldGetArgs;
 import io.pulumi.gcp.dataloss.inputs.PreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldTableGetArgs;
@@ -20,9 +20,9 @@ public final class PreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldGet
      * 
      */
     @InputImport(name="field", required=true)
-      private final Input<PreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldFieldGetArgs> field;
+      private final Output<PreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldFieldGetArgs> field;
 
-    public Input<PreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldFieldGetArgs> getField() {
+    public Output<PreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldFieldGetArgs> getField() {
         return this.field;
     }
 
@@ -32,22 +32,22 @@ public final class PreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldGet
      * 
      */
     @InputImport(name="table", required=true)
-      private final Input<PreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldTableGetArgs> table;
+      private final Output<PreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldTableGetArgs> table;
 
-    public Input<PreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldTableGetArgs> getTable() {
+    public Output<PreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldTableGetArgs> getTable() {
         return this.table;
     }
 
     public PreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldGetArgs(
-        Input<PreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldFieldGetArgs> field,
-        Input<PreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldTableGetArgs> table) {
+        Output<PreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldFieldGetArgs> field,
+        Output<PreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldTableGetArgs> table) {
         this.field = Objects.requireNonNull(field, "expected parameter 'field' to be non-null");
         this.table = Objects.requireNonNull(table, "expected parameter 'table' to be non-null");
     }
 
     private PreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldGetArgs() {
-        this.field = Input.empty();
-        this.table = Input.empty();
+        this.field = Output.empty();
+        this.table = Output.empty();
     }
 
     public static Builder builder() {
@@ -59,8 +59,8 @@ public final class PreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldGet
     }
 
     public static final class Builder {
-        private Input<PreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldFieldGetArgs> field;
-        private Input<PreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldTableGetArgs> table;
+        private Output<PreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldFieldGetArgs> field;
+        private Output<PreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldTableGetArgs> table;
 
         public Builder() {
     	      // Empty
@@ -72,23 +72,23 @@ public final class PreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldGet
     	      this.table = defaults.table;
         }
 
-        public Builder field(Input<PreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldFieldGetArgs> field) {
+        public Builder field(Output<PreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldFieldGetArgs> field) {
             this.field = Objects.requireNonNull(field);
             return this;
         }
 
         public Builder field(PreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldFieldGetArgs field) {
-            this.field = Input.of(Objects.requireNonNull(field));
+            this.field = Output.of(Objects.requireNonNull(field));
             return this;
         }
 
-        public Builder table(Input<PreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldTableGetArgs> table) {
+        public Builder table(Output<PreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldTableGetArgs> table) {
             this.table = Objects.requireNonNull(table);
             return this;
         }
 
         public Builder table(PreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldTableGetArgs table) {
-            this.table = Input.of(Objects.requireNonNull(table));
+            this.table = Output.of(Objects.requireNonNull(table));
             return this;
         }
         public PreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldGetArgs build() {

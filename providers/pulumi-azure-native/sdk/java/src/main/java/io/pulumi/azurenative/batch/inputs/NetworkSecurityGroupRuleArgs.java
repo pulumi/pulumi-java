@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.batch.inputs;
 
 import io.pulumi.azurenative.batch.enums.NetworkSecurityGroupRuleAccess;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -18,9 +18,9 @@ public final class NetworkSecurityGroupRuleArgs extends io.pulumi.resources.Reso
     public static final NetworkSecurityGroupRuleArgs Empty = new NetworkSecurityGroupRuleArgs();
 
     @InputImport(name="access", required=true)
-      private final Input<NetworkSecurityGroupRuleAccess> access;
+      private final Output<NetworkSecurityGroupRuleAccess> access;
 
-    public Input<NetworkSecurityGroupRuleAccess> getAccess() {
+    public Output<NetworkSecurityGroupRuleAccess> getAccess() {
         return this.access;
     }
 
@@ -29,9 +29,9 @@ public final class NetworkSecurityGroupRuleArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="priority", required=true)
-      private final Input<Integer> priority;
+      private final Output<Integer> priority;
 
-    public Input<Integer> getPriority() {
+    public Output<Integer> getPriority() {
         return this.priority;
     }
 
@@ -40,9 +40,9 @@ public final class NetworkSecurityGroupRuleArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="sourceAddressPrefix", required=true)
-      private final Input<String> sourceAddressPrefix;
+      private final Output<String> sourceAddressPrefix;
 
-    public Input<String> getSourceAddressPrefix() {
+    public Output<String> getSourceAddressPrefix() {
         return this.sourceAddressPrefix;
     }
 
@@ -51,17 +51,17 @@ public final class NetworkSecurityGroupRuleArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="sourcePortRanges")
-      private final @Nullable Input<List<String>> sourcePortRanges;
+      private final @Nullable Output<List<String>> sourcePortRanges;
 
-    public Input<List<String>> getSourcePortRanges() {
-        return this.sourcePortRanges == null ? Input.empty() : this.sourcePortRanges;
+    public Output<List<String>> getSourcePortRanges() {
+        return this.sourcePortRanges == null ? Output.empty() : this.sourcePortRanges;
     }
 
     public NetworkSecurityGroupRuleArgs(
-        Input<NetworkSecurityGroupRuleAccess> access,
-        Input<Integer> priority,
-        Input<String> sourceAddressPrefix,
-        @Nullable Input<List<String>> sourcePortRanges) {
+        Output<NetworkSecurityGroupRuleAccess> access,
+        Output<Integer> priority,
+        Output<String> sourceAddressPrefix,
+        @Nullable Output<List<String>> sourcePortRanges) {
         this.access = Objects.requireNonNull(access, "expected parameter 'access' to be non-null");
         this.priority = Objects.requireNonNull(priority, "expected parameter 'priority' to be non-null");
         this.sourceAddressPrefix = Objects.requireNonNull(sourceAddressPrefix, "expected parameter 'sourceAddressPrefix' to be non-null");
@@ -69,10 +69,10 @@ public final class NetworkSecurityGroupRuleArgs extends io.pulumi.resources.Reso
     }
 
     private NetworkSecurityGroupRuleArgs() {
-        this.access = Input.empty();
-        this.priority = Input.empty();
-        this.sourceAddressPrefix = Input.empty();
-        this.sourcePortRanges = Input.empty();
+        this.access = Output.empty();
+        this.priority = Output.empty();
+        this.sourceAddressPrefix = Output.empty();
+        this.sourcePortRanges = Output.empty();
     }
 
     public static Builder builder() {
@@ -84,10 +84,10 @@ public final class NetworkSecurityGroupRuleArgs extends io.pulumi.resources.Reso
     }
 
     public static final class Builder {
-        private Input<NetworkSecurityGroupRuleAccess> access;
-        private Input<Integer> priority;
-        private Input<String> sourceAddressPrefix;
-        private @Nullable Input<List<String>> sourcePortRanges;
+        private Output<NetworkSecurityGroupRuleAccess> access;
+        private Output<Integer> priority;
+        private Output<String> sourceAddressPrefix;
+        private @Nullable Output<List<String>> sourcePortRanges;
 
         public Builder() {
     	      // Empty
@@ -101,43 +101,43 @@ public final class NetworkSecurityGroupRuleArgs extends io.pulumi.resources.Reso
     	      this.sourcePortRanges = defaults.sourcePortRanges;
         }
 
-        public Builder access(Input<NetworkSecurityGroupRuleAccess> access) {
+        public Builder access(Output<NetworkSecurityGroupRuleAccess> access) {
             this.access = Objects.requireNonNull(access);
             return this;
         }
 
         public Builder access(NetworkSecurityGroupRuleAccess access) {
-            this.access = Input.of(Objects.requireNonNull(access));
+            this.access = Output.of(Objects.requireNonNull(access));
             return this;
         }
 
-        public Builder priority(Input<Integer> priority) {
+        public Builder priority(Output<Integer> priority) {
             this.priority = Objects.requireNonNull(priority);
             return this;
         }
 
         public Builder priority(Integer priority) {
-            this.priority = Input.of(Objects.requireNonNull(priority));
+            this.priority = Output.of(Objects.requireNonNull(priority));
             return this;
         }
 
-        public Builder sourceAddressPrefix(Input<String> sourceAddressPrefix) {
+        public Builder sourceAddressPrefix(Output<String> sourceAddressPrefix) {
             this.sourceAddressPrefix = Objects.requireNonNull(sourceAddressPrefix);
             return this;
         }
 
         public Builder sourceAddressPrefix(String sourceAddressPrefix) {
-            this.sourceAddressPrefix = Input.of(Objects.requireNonNull(sourceAddressPrefix));
+            this.sourceAddressPrefix = Output.of(Objects.requireNonNull(sourceAddressPrefix));
             return this;
         }
 
-        public Builder sourcePortRanges(@Nullable Input<List<String>> sourcePortRanges) {
+        public Builder sourcePortRanges(@Nullable Output<List<String>> sourcePortRanges) {
             this.sourcePortRanges = sourcePortRanges;
             return this;
         }
 
         public Builder sourcePortRanges(@Nullable List<String> sourcePortRanges) {
-            this.sourcePortRanges = Input.ofNullable(sourcePortRanges);
+            this.sourcePortRanges = Output.ofNullable(sourcePortRanges);
             return this;
         }
         public NetworkSecurityGroupRuleArgs build() {

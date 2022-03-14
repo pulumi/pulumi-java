@@ -5,7 +5,7 @@ package io.pulumi.azurenative.authorization;
 
 import io.pulumi.azurenative.authorization.enums.ExemptionCategory;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
@@ -23,10 +23,10 @@ public final class PolicyExemptionArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class PolicyExemptionArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="displayName")
-      private final @Nullable Input<String> displayName;
+      private final @Nullable Output<String> displayName;
 
-    public Input<String> getDisplayName() {
-        return this.displayName == null ? Input.empty() : this.displayName;
+    public Output<String> getDisplayName() {
+        return this.displayName == null ? Output.empty() : this.displayName;
     }
 
     /**
@@ -45,9 +45,9 @@ public final class PolicyExemptionArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="exemptionCategory", required=true)
-      private final Input<Either<String,ExemptionCategory>> exemptionCategory;
+      private final Output<Either<String,ExemptionCategory>> exemptionCategory;
 
-    public Input<Either<String,ExemptionCategory>> getExemptionCategory() {
+    public Output<Either<String,ExemptionCategory>> getExemptionCategory() {
         return this.exemptionCategory;
     }
 
@@ -56,10 +56,10 @@ public final class PolicyExemptionArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="expiresOn")
-      private final @Nullable Input<String> expiresOn;
+      private final @Nullable Output<String> expiresOn;
 
-    public Input<String> getExpiresOn() {
-        return this.expiresOn == null ? Input.empty() : this.expiresOn;
+    public Output<String> getExpiresOn() {
+        return this.expiresOn == null ? Output.empty() : this.expiresOn;
     }
 
     /**
@@ -67,10 +67,10 @@ public final class PolicyExemptionArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="metadata")
-      private final @Nullable Input<Object> metadata;
+      private final @Nullable Output<Object> metadata;
 
-    public Input<Object> getMetadata() {
-        return this.metadata == null ? Input.empty() : this.metadata;
+    public Output<Object> getMetadata() {
+        return this.metadata == null ? Output.empty() : this.metadata;
     }
 
     /**
@@ -78,9 +78,9 @@ public final class PolicyExemptionArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="policyAssignmentId", required=true)
-      private final Input<String> policyAssignmentId;
+      private final Output<String> policyAssignmentId;
 
-    public Input<String> getPolicyAssignmentId() {
+    public Output<String> getPolicyAssignmentId() {
         return this.policyAssignmentId;
     }
 
@@ -89,10 +89,10 @@ public final class PolicyExemptionArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="policyDefinitionReferenceIds")
-      private final @Nullable Input<List<String>> policyDefinitionReferenceIds;
+      private final @Nullable Output<List<String>> policyDefinitionReferenceIds;
 
-    public Input<List<String>> getPolicyDefinitionReferenceIds() {
-        return this.policyDefinitionReferenceIds == null ? Input.empty() : this.policyDefinitionReferenceIds;
+    public Output<List<String>> getPolicyDefinitionReferenceIds() {
+        return this.policyDefinitionReferenceIds == null ? Output.empty() : this.policyDefinitionReferenceIds;
     }
 
     /**
@@ -100,10 +100,10 @@ public final class PolicyExemptionArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="policyExemptionName")
-      private final @Nullable Input<String> policyExemptionName;
+      private final @Nullable Output<String> policyExemptionName;
 
-    public Input<String> getPolicyExemptionName() {
-        return this.policyExemptionName == null ? Input.empty() : this.policyExemptionName;
+    public Output<String> getPolicyExemptionName() {
+        return this.policyExemptionName == null ? Output.empty() : this.policyExemptionName;
     }
 
     /**
@@ -111,22 +111,22 @@ public final class PolicyExemptionArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="scope", required=true)
-      private final Input<String> scope;
+      private final Output<String> scope;
 
-    public Input<String> getScope() {
+    public Output<String> getScope() {
         return this.scope;
     }
 
     public PolicyExemptionArgs(
-        @Nullable Input<String> description,
-        @Nullable Input<String> displayName,
-        Input<Either<String,ExemptionCategory>> exemptionCategory,
-        @Nullable Input<String> expiresOn,
-        @Nullable Input<Object> metadata,
-        Input<String> policyAssignmentId,
-        @Nullable Input<List<String>> policyDefinitionReferenceIds,
-        @Nullable Input<String> policyExemptionName,
-        Input<String> scope) {
+        @Nullable Output<String> description,
+        @Nullable Output<String> displayName,
+        Output<Either<String,ExemptionCategory>> exemptionCategory,
+        @Nullable Output<String> expiresOn,
+        @Nullable Output<Object> metadata,
+        Output<String> policyAssignmentId,
+        @Nullable Output<List<String>> policyDefinitionReferenceIds,
+        @Nullable Output<String> policyExemptionName,
+        Output<String> scope) {
         this.description = description;
         this.displayName = displayName;
         this.exemptionCategory = Objects.requireNonNull(exemptionCategory, "expected parameter 'exemptionCategory' to be non-null");
@@ -139,15 +139,15 @@ public final class PolicyExemptionArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private PolicyExemptionArgs() {
-        this.description = Input.empty();
-        this.displayName = Input.empty();
-        this.exemptionCategory = Input.empty();
-        this.expiresOn = Input.empty();
-        this.metadata = Input.empty();
-        this.policyAssignmentId = Input.empty();
-        this.policyDefinitionReferenceIds = Input.empty();
-        this.policyExemptionName = Input.empty();
-        this.scope = Input.empty();
+        this.description = Output.empty();
+        this.displayName = Output.empty();
+        this.exemptionCategory = Output.empty();
+        this.expiresOn = Output.empty();
+        this.metadata = Output.empty();
+        this.policyAssignmentId = Output.empty();
+        this.policyDefinitionReferenceIds = Output.empty();
+        this.policyExemptionName = Output.empty();
+        this.scope = Output.empty();
     }
 
     public static Builder builder() {
@@ -159,15 +159,15 @@ public final class PolicyExemptionArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private @Nullable Input<String> description;
-        private @Nullable Input<String> displayName;
-        private Input<Either<String,ExemptionCategory>> exemptionCategory;
-        private @Nullable Input<String> expiresOn;
-        private @Nullable Input<Object> metadata;
-        private Input<String> policyAssignmentId;
-        private @Nullable Input<List<String>> policyDefinitionReferenceIds;
-        private @Nullable Input<String> policyExemptionName;
-        private Input<String> scope;
+        private @Nullable Output<String> description;
+        private @Nullable Output<String> displayName;
+        private Output<Either<String,ExemptionCategory>> exemptionCategory;
+        private @Nullable Output<String> expiresOn;
+        private @Nullable Output<Object> metadata;
+        private Output<String> policyAssignmentId;
+        private @Nullable Output<List<String>> policyDefinitionReferenceIds;
+        private @Nullable Output<String> policyExemptionName;
+        private Output<String> scope;
 
         public Builder() {
     	      // Empty
@@ -186,93 +186,93 @@ public final class PolicyExemptionArgs extends io.pulumi.resources.ResourceArgs 
     	      this.scope = defaults.scope;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder displayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Input.ofNullable(displayName);
+            this.displayName = Output.ofNullable(displayName);
             return this;
         }
 
-        public Builder exemptionCategory(Input<Either<String,ExemptionCategory>> exemptionCategory) {
+        public Builder exemptionCategory(Output<Either<String,ExemptionCategory>> exemptionCategory) {
             this.exemptionCategory = Objects.requireNonNull(exemptionCategory);
             return this;
         }
 
         public Builder exemptionCategory(Either<String,ExemptionCategory> exemptionCategory) {
-            this.exemptionCategory = Input.of(Objects.requireNonNull(exemptionCategory));
+            this.exemptionCategory = Output.of(Objects.requireNonNull(exemptionCategory));
             return this;
         }
 
-        public Builder expiresOn(@Nullable Input<String> expiresOn) {
+        public Builder expiresOn(@Nullable Output<String> expiresOn) {
             this.expiresOn = expiresOn;
             return this;
         }
 
         public Builder expiresOn(@Nullable String expiresOn) {
-            this.expiresOn = Input.ofNullable(expiresOn);
+            this.expiresOn = Output.ofNullable(expiresOn);
             return this;
         }
 
-        public Builder metadata(@Nullable Input<Object> metadata) {
+        public Builder metadata(@Nullable Output<Object> metadata) {
             this.metadata = metadata;
             return this;
         }
 
         public Builder metadata(@Nullable Object metadata) {
-            this.metadata = Input.ofNullable(metadata);
+            this.metadata = Output.ofNullable(metadata);
             return this;
         }
 
-        public Builder policyAssignmentId(Input<String> policyAssignmentId) {
+        public Builder policyAssignmentId(Output<String> policyAssignmentId) {
             this.policyAssignmentId = Objects.requireNonNull(policyAssignmentId);
             return this;
         }
 
         public Builder policyAssignmentId(String policyAssignmentId) {
-            this.policyAssignmentId = Input.of(Objects.requireNonNull(policyAssignmentId));
+            this.policyAssignmentId = Output.of(Objects.requireNonNull(policyAssignmentId));
             return this;
         }
 
-        public Builder policyDefinitionReferenceIds(@Nullable Input<List<String>> policyDefinitionReferenceIds) {
+        public Builder policyDefinitionReferenceIds(@Nullable Output<List<String>> policyDefinitionReferenceIds) {
             this.policyDefinitionReferenceIds = policyDefinitionReferenceIds;
             return this;
         }
 
         public Builder policyDefinitionReferenceIds(@Nullable List<String> policyDefinitionReferenceIds) {
-            this.policyDefinitionReferenceIds = Input.ofNullable(policyDefinitionReferenceIds);
+            this.policyDefinitionReferenceIds = Output.ofNullable(policyDefinitionReferenceIds);
             return this;
         }
 
-        public Builder policyExemptionName(@Nullable Input<String> policyExemptionName) {
+        public Builder policyExemptionName(@Nullable Output<String> policyExemptionName) {
             this.policyExemptionName = policyExemptionName;
             return this;
         }
 
         public Builder policyExemptionName(@Nullable String policyExemptionName) {
-            this.policyExemptionName = Input.ofNullable(policyExemptionName);
+            this.policyExemptionName = Output.ofNullable(policyExemptionName);
             return this;
         }
 
-        public Builder scope(Input<String> scope) {
+        public Builder scope(Output<String> scope) {
             this.scope = Objects.requireNonNull(scope);
             return this;
         }
 
         public Builder scope(String scope) {
-            this.scope = Input.of(Objects.requireNonNull(scope));
+            this.scope = Output.of(Objects.requireNonNull(scope));
             return this;
         }
         public PolicyExemptionArgs build() {

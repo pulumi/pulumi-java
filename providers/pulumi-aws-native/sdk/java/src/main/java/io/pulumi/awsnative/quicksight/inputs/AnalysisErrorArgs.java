@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.quicksight.inputs;
 
 import io.pulumi.awsnative.quicksight.enums.AnalysisErrorType;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -24,29 +24,29 @@ public final class AnalysisErrorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="message")
-      private final @Nullable Input<String> message;
+      private final @Nullable Output<String> message;
 
-    public Input<String> getMessage() {
-        return this.message == null ? Input.empty() : this.message;
+    public Output<String> getMessage() {
+        return this.message == null ? Output.empty() : this.message;
     }
 
     @InputImport(name="type")
-      private final @Nullable Input<AnalysisErrorType> type;
+      private final @Nullable Output<AnalysisErrorType> type;
 
-    public Input<AnalysisErrorType> getType() {
-        return this.type == null ? Input.empty() : this.type;
+    public Output<AnalysisErrorType> getType() {
+        return this.type == null ? Output.empty() : this.type;
     }
 
     public AnalysisErrorArgs(
-        @Nullable Input<String> message,
-        @Nullable Input<AnalysisErrorType> type) {
+        @Nullable Output<String> message,
+        @Nullable Output<AnalysisErrorType> type) {
         this.message = message;
         this.type = type;
     }
 
     private AnalysisErrorArgs() {
-        this.message = Input.empty();
-        this.type = Input.empty();
+        this.message = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -58,8 +58,8 @@ public final class AnalysisErrorArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> message;
-        private @Nullable Input<AnalysisErrorType> type;
+        private @Nullable Output<String> message;
+        private @Nullable Output<AnalysisErrorType> type;
 
         public Builder() {
     	      // Empty
@@ -71,23 +71,23 @@ public final class AnalysisErrorArgs extends io.pulumi.resources.ResourceArgs {
     	      this.type = defaults.type;
         }
 
-        public Builder message(@Nullable Input<String> message) {
+        public Builder message(@Nullable Output<String> message) {
             this.message = message;
             return this;
         }
 
         public Builder message(@Nullable String message) {
-            this.message = Input.ofNullable(message);
+            this.message = Output.ofNullable(message);
             return this;
         }
 
-        public Builder type(@Nullable Input<AnalysisErrorType> type) {
+        public Builder type(@Nullable Output<AnalysisErrorType> type) {
             this.type = type;
             return this;
         }
 
         public Builder type(@Nullable AnalysisErrorType type) {
-            this.type = Input.ofNullable(type);
+            this.type = Output.ofNullable(type);
             return this;
         }
         public AnalysisErrorArgs build() {

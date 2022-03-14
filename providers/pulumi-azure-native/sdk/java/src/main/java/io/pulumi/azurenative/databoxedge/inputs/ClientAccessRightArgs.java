@@ -5,7 +5,7 @@ package io.pulumi.azurenative.databoxedge.inputs;
 
 import io.pulumi.azurenative.databoxedge.enums.ClientPermissionType;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -24,9 +24,9 @@ public final class ClientAccessRightArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="accessPermission", required=true)
-      private final Input<Either<String,ClientPermissionType>> accessPermission;
+      private final Output<Either<String,ClientPermissionType>> accessPermission;
 
-    public Input<Either<String,ClientPermissionType>> getAccessPermission() {
+    public Output<Either<String,ClientPermissionType>> getAccessPermission() {
         return this.accessPermission;
     }
 
@@ -35,22 +35,22 @@ public final class ClientAccessRightArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="client", required=true)
-      private final Input<String> client;
+      private final Output<String> client;
 
-    public Input<String> getClient() {
+    public Output<String> getClient() {
         return this.client;
     }
 
     public ClientAccessRightArgs(
-        Input<Either<String,ClientPermissionType>> accessPermission,
-        Input<String> client) {
+        Output<Either<String,ClientPermissionType>> accessPermission,
+        Output<String> client) {
         this.accessPermission = Objects.requireNonNull(accessPermission, "expected parameter 'accessPermission' to be non-null");
         this.client = Objects.requireNonNull(client, "expected parameter 'client' to be non-null");
     }
 
     private ClientAccessRightArgs() {
-        this.accessPermission = Input.empty();
-        this.client = Input.empty();
+        this.accessPermission = Output.empty();
+        this.client = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class ClientAccessRightArgs extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private Input<Either<String,ClientPermissionType>> accessPermission;
-        private Input<String> client;
+        private Output<Either<String,ClientPermissionType>> accessPermission;
+        private Output<String> client;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class ClientAccessRightArgs extends io.pulumi.resources.ResourceArg
     	      this.client = defaults.client;
         }
 
-        public Builder accessPermission(Input<Either<String,ClientPermissionType>> accessPermission) {
+        public Builder accessPermission(Output<Either<String,ClientPermissionType>> accessPermission) {
             this.accessPermission = Objects.requireNonNull(accessPermission);
             return this;
         }
 
         public Builder accessPermission(Either<String,ClientPermissionType> accessPermission) {
-            this.accessPermission = Input.of(Objects.requireNonNull(accessPermission));
+            this.accessPermission = Output.of(Objects.requireNonNull(accessPermission));
             return this;
         }
 
-        public Builder client(Input<String> client) {
+        public Builder client(Output<String> client) {
             this.client = Objects.requireNonNull(client);
             return this;
         }
 
         public Builder client(String client) {
-            this.client = Input.of(Objects.requireNonNull(client));
+            this.client = Output.of(Objects.requireNonNull(client));
             return this;
         }
         public ClientAccessRightArgs build() {

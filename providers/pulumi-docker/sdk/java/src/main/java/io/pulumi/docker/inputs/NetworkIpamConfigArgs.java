@@ -3,7 +3,7 @@
 
 package io.pulumi.docker.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
@@ -17,38 +17,38 @@ public final class NetworkIpamConfigArgs extends io.pulumi.resources.ResourceArg
     public static final NetworkIpamConfigArgs Empty = new NetworkIpamConfigArgs();
 
     @InputImport(name="auxAddress")
-      private final @Nullable Input<Map<String,Object>> auxAddress;
+      private final @Nullable Output<Map<String,Object>> auxAddress;
 
-    public Input<Map<String,Object>> getAuxAddress() {
-        return this.auxAddress == null ? Input.empty() : this.auxAddress;
+    public Output<Map<String,Object>> getAuxAddress() {
+        return this.auxAddress == null ? Output.empty() : this.auxAddress;
     }
 
     @InputImport(name="gateway")
-      private final @Nullable Input<String> gateway;
+      private final @Nullable Output<String> gateway;
 
-    public Input<String> getGateway() {
-        return this.gateway == null ? Input.empty() : this.gateway;
+    public Output<String> getGateway() {
+        return this.gateway == null ? Output.empty() : this.gateway;
     }
 
     @InputImport(name="ipRange")
-      private final @Nullable Input<String> ipRange;
+      private final @Nullable Output<String> ipRange;
 
-    public Input<String> getIpRange() {
-        return this.ipRange == null ? Input.empty() : this.ipRange;
+    public Output<String> getIpRange() {
+        return this.ipRange == null ? Output.empty() : this.ipRange;
     }
 
     @InputImport(name="subnet")
-      private final @Nullable Input<String> subnet;
+      private final @Nullable Output<String> subnet;
 
-    public Input<String> getSubnet() {
-        return this.subnet == null ? Input.empty() : this.subnet;
+    public Output<String> getSubnet() {
+        return this.subnet == null ? Output.empty() : this.subnet;
     }
 
     public NetworkIpamConfigArgs(
-        @Nullable Input<Map<String,Object>> auxAddress,
-        @Nullable Input<String> gateway,
-        @Nullable Input<String> ipRange,
-        @Nullable Input<String> subnet) {
+        @Nullable Output<Map<String,Object>> auxAddress,
+        @Nullable Output<String> gateway,
+        @Nullable Output<String> ipRange,
+        @Nullable Output<String> subnet) {
         this.auxAddress = auxAddress;
         this.gateway = gateway;
         this.ipRange = ipRange;
@@ -56,10 +56,10 @@ public final class NetworkIpamConfigArgs extends io.pulumi.resources.ResourceArg
     }
 
     private NetworkIpamConfigArgs() {
-        this.auxAddress = Input.empty();
-        this.gateway = Input.empty();
-        this.ipRange = Input.empty();
-        this.subnet = Input.empty();
+        this.auxAddress = Output.empty();
+        this.gateway = Output.empty();
+        this.ipRange = Output.empty();
+        this.subnet = Output.empty();
     }
 
     public static Builder builder() {
@@ -71,10 +71,10 @@ public final class NetworkIpamConfigArgs extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private @Nullable Input<Map<String,Object>> auxAddress;
-        private @Nullable Input<String> gateway;
-        private @Nullable Input<String> ipRange;
-        private @Nullable Input<String> subnet;
+        private @Nullable Output<Map<String,Object>> auxAddress;
+        private @Nullable Output<String> gateway;
+        private @Nullable Output<String> ipRange;
+        private @Nullable Output<String> subnet;
 
         public Builder() {
     	      // Empty
@@ -88,43 +88,43 @@ public final class NetworkIpamConfigArgs extends io.pulumi.resources.ResourceArg
     	      this.subnet = defaults.subnet;
         }
 
-        public Builder auxAddress(@Nullable Input<Map<String,Object>> auxAddress) {
+        public Builder auxAddress(@Nullable Output<Map<String,Object>> auxAddress) {
             this.auxAddress = auxAddress;
             return this;
         }
 
         public Builder auxAddress(@Nullable Map<String,Object> auxAddress) {
-            this.auxAddress = Input.ofNullable(auxAddress);
+            this.auxAddress = Output.ofNullable(auxAddress);
             return this;
         }
 
-        public Builder gateway(@Nullable Input<String> gateway) {
+        public Builder gateway(@Nullable Output<String> gateway) {
             this.gateway = gateway;
             return this;
         }
 
         public Builder gateway(@Nullable String gateway) {
-            this.gateway = Input.ofNullable(gateway);
+            this.gateway = Output.ofNullable(gateway);
             return this;
         }
 
-        public Builder ipRange(@Nullable Input<String> ipRange) {
+        public Builder ipRange(@Nullable Output<String> ipRange) {
             this.ipRange = ipRange;
             return this;
         }
 
         public Builder ipRange(@Nullable String ipRange) {
-            this.ipRange = Input.ofNullable(ipRange);
+            this.ipRange = Output.ofNullable(ipRange);
             return this;
         }
 
-        public Builder subnet(@Nullable Input<String> subnet) {
+        public Builder subnet(@Nullable Output<String> subnet) {
             this.subnet = subnet;
             return this;
         }
 
         public Builder subnet(@Nullable String subnet) {
-            this.subnet = Input.ofNullable(subnet);
+            this.subnet = Output.ofNullable(subnet);
             return this;
         }
         public NetworkIpamConfigArgs build() {

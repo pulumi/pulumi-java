@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.kms.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -15,29 +15,29 @@ public final class KeyRingImportJobAttestationGetArgs extends io.pulumi.resource
     public static final KeyRingImportJobAttestationGetArgs Empty = new KeyRingImportJobAttestationGetArgs();
 
     @InputImport(name="content")
-      private final @Nullable Input<String> content;
+      private final @Nullable Output<String> content;
 
-    public Input<String> getContent() {
-        return this.content == null ? Input.empty() : this.content;
+    public Output<String> getContent() {
+        return this.content == null ? Output.empty() : this.content;
     }
 
     @InputImport(name="format")
-      private final @Nullable Input<String> format;
+      private final @Nullable Output<String> format;
 
-    public Input<String> getFormat() {
-        return this.format == null ? Input.empty() : this.format;
+    public Output<String> getFormat() {
+        return this.format == null ? Output.empty() : this.format;
     }
 
     public KeyRingImportJobAttestationGetArgs(
-        @Nullable Input<String> content,
-        @Nullable Input<String> format) {
+        @Nullable Output<String> content,
+        @Nullable Output<String> format) {
         this.content = content;
         this.format = format;
     }
 
     private KeyRingImportJobAttestationGetArgs() {
-        this.content = Input.empty();
-        this.format = Input.empty();
+        this.content = Output.empty();
+        this.format = Output.empty();
     }
 
     public static Builder builder() {
@@ -49,8 +49,8 @@ public final class KeyRingImportJobAttestationGetArgs extends io.pulumi.resource
     }
 
     public static final class Builder {
-        private @Nullable Input<String> content;
-        private @Nullable Input<String> format;
+        private @Nullable Output<String> content;
+        private @Nullable Output<String> format;
 
         public Builder() {
     	      // Empty
@@ -62,23 +62,23 @@ public final class KeyRingImportJobAttestationGetArgs extends io.pulumi.resource
     	      this.format = defaults.format;
         }
 
-        public Builder content(@Nullable Input<String> content) {
+        public Builder content(@Nullable Output<String> content) {
             this.content = content;
             return this;
         }
 
         public Builder content(@Nullable String content) {
-            this.content = Input.ofNullable(content);
+            this.content = Output.ofNullable(content);
             return this;
         }
 
-        public Builder format(@Nullable Input<String> format) {
+        public Builder format(@Nullable Output<String> format) {
             this.format = format;
             return this;
         }
 
         public Builder format(@Nullable String format) {
-            this.format = Input.ofNullable(format);
+            this.format = Output.ofNullable(format);
             return this;
         }
         public KeyRingImportJobAttestationGetArgs build() {

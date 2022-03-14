@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.powerplatform.inputs;
 
 import io.pulumi.azurenative.powerplatform.inputs.KeyPropertiesArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -24,10 +24,10 @@ public final class KeyVaultPropertiesArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="id")
-      private final @Nullable Input<String> id;
+      private final @Nullable Output<String> id;
 
-    public Input<String> getId() {
-        return this.id == null ? Input.empty() : this.id;
+    public Output<String> getId() {
+        return this.id == null ? Output.empty() : this.id;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class KeyVaultPropertiesArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="key")
-      private final @Nullable Input<KeyPropertiesArgs> key;
+      private final @Nullable Output<KeyPropertiesArgs> key;
 
-    public Input<KeyPropertiesArgs> getKey() {
-        return this.key == null ? Input.empty() : this.key;
+    public Output<KeyPropertiesArgs> getKey() {
+        return this.key == null ? Output.empty() : this.key;
     }
 
     public KeyVaultPropertiesArgs(
-        @Nullable Input<String> id,
-        @Nullable Input<KeyPropertiesArgs> key) {
+        @Nullable Output<String> id,
+        @Nullable Output<KeyPropertiesArgs> key) {
         this.id = id;
         this.key = key;
     }
 
     private KeyVaultPropertiesArgs() {
-        this.id = Input.empty();
-        this.key = Input.empty();
+        this.id = Output.empty();
+        this.key = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class KeyVaultPropertiesArgs extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private @Nullable Input<String> id;
-        private @Nullable Input<KeyPropertiesArgs> key;
+        private @Nullable Output<String> id;
+        private @Nullable Output<KeyPropertiesArgs> key;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class KeyVaultPropertiesArgs extends io.pulumi.resources.ResourceAr
     	      this.key = defaults.key;
         }
 
-        public Builder id(@Nullable Input<String> id) {
+        public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
 
         public Builder id(@Nullable String id) {
-            this.id = Input.ofNullable(id);
+            this.id = Output.ofNullable(id);
             return this;
         }
 
-        public Builder key(@Nullable Input<KeyPropertiesArgs> key) {
+        public Builder key(@Nullable Output<KeyPropertiesArgs> key) {
             this.key = key;
             return this;
         }
 
         public Builder key(@Nullable KeyPropertiesArgs key) {
-            this.key = Input.ofNullable(key);
+            this.key = Output.ofNullable(key);
             return this;
         }
         public KeyVaultPropertiesArgs build() {

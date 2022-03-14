@@ -5,7 +5,6 @@ package io.pulumi.awsnative.appstream;
 
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.appstream.ApplicationFleetAssociationArgs;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -69,14 +68,14 @@ public class ApplicationFleetAssociation extends io.pulumi.resources.CustomResou
      * @param options A bag of options that control this resource's behavior.
      */
     public ApplicationFleetAssociation(String name, ApplicationFleetAssociationArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:appstream:ApplicationFleetAssociation", name, args == null ? ApplicationFleetAssociationArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws-native:appstream:ApplicationFleetAssociation", name, args == null ? ApplicationFleetAssociationArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private ApplicationFleetAssociation(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private ApplicationFleetAssociation(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws-native:appstream:ApplicationFleetAssociation", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -91,7 +90,7 @@ public class ApplicationFleetAssociation extends io.pulumi.resources.CustomResou
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static ApplicationFleetAssociation get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static ApplicationFleetAssociation get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new ApplicationFleetAssociation(name, id, options);
     }
 }

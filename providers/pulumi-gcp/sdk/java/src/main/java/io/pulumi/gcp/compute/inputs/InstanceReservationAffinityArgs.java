@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.compute.inputs.InstanceReservationAffinitySpecificReservationArgs;
 import java.lang.String;
@@ -21,10 +21,10 @@ public final class InstanceReservationAffinityArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="specificReservation")
-      private final @Nullable Input<InstanceReservationAffinitySpecificReservationArgs> specificReservation;
+      private final @Nullable Output<InstanceReservationAffinitySpecificReservationArgs> specificReservation;
 
-    public Input<InstanceReservationAffinitySpecificReservationArgs> getSpecificReservation() {
-        return this.specificReservation == null ? Input.empty() : this.specificReservation;
+    public Output<InstanceReservationAffinitySpecificReservationArgs> getSpecificReservation() {
+        return this.specificReservation == null ? Output.empty() : this.specificReservation;
     }
 
     /**
@@ -32,22 +32,22 @@ public final class InstanceReservationAffinityArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<String> type;
+      private final Output<String> type;
 
-    public Input<String> getType() {
+    public Output<String> getType() {
         return this.type;
     }
 
     public InstanceReservationAffinityArgs(
-        @Nullable Input<InstanceReservationAffinitySpecificReservationArgs> specificReservation,
-        Input<String> type) {
+        @Nullable Output<InstanceReservationAffinitySpecificReservationArgs> specificReservation,
+        Output<String> type) {
         this.specificReservation = specificReservation;
         this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
     }
 
     private InstanceReservationAffinityArgs() {
-        this.specificReservation = Input.empty();
-        this.type = Input.empty();
+        this.specificReservation = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -59,8 +59,8 @@ public final class InstanceReservationAffinityArgs extends io.pulumi.resources.R
     }
 
     public static final class Builder {
-        private @Nullable Input<InstanceReservationAffinitySpecificReservationArgs> specificReservation;
-        private Input<String> type;
+        private @Nullable Output<InstanceReservationAffinitySpecificReservationArgs> specificReservation;
+        private Output<String> type;
 
         public Builder() {
     	      // Empty
@@ -72,23 +72,23 @@ public final class InstanceReservationAffinityArgs extends io.pulumi.resources.R
     	      this.type = defaults.type;
         }
 
-        public Builder specificReservation(@Nullable Input<InstanceReservationAffinitySpecificReservationArgs> specificReservation) {
+        public Builder specificReservation(@Nullable Output<InstanceReservationAffinitySpecificReservationArgs> specificReservation) {
             this.specificReservation = specificReservation;
             return this;
         }
 
         public Builder specificReservation(@Nullable InstanceReservationAffinitySpecificReservationArgs specificReservation) {
-            this.specificReservation = Input.ofNullable(specificReservation);
+            this.specificReservation = Output.ofNullable(specificReservation);
             return this;
         }
 
-        public Builder type(Input<String> type) {
+        public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(String type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
         public InstanceReservationAffinityArgs build() {

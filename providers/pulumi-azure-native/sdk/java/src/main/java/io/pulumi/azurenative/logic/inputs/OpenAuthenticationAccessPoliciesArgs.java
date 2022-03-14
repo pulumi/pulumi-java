@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.logic.inputs;
 
 import io.pulumi.azurenative.logic.inputs.OpenAuthenticationAccessPolicyArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -25,18 +25,18 @@ public final class OpenAuthenticationAccessPoliciesArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="policies")
-      private final @Nullable Input<Map<String,OpenAuthenticationAccessPolicyArgs>> policies;
+      private final @Nullable Output<Map<String,OpenAuthenticationAccessPolicyArgs>> policies;
 
-    public Input<Map<String,OpenAuthenticationAccessPolicyArgs>> getPolicies() {
-        return this.policies == null ? Input.empty() : this.policies;
+    public Output<Map<String,OpenAuthenticationAccessPolicyArgs>> getPolicies() {
+        return this.policies == null ? Output.empty() : this.policies;
     }
 
-    public OpenAuthenticationAccessPoliciesArgs(@Nullable Input<Map<String,OpenAuthenticationAccessPolicyArgs>> policies) {
+    public OpenAuthenticationAccessPoliciesArgs(@Nullable Output<Map<String,OpenAuthenticationAccessPolicyArgs>> policies) {
         this.policies = policies;
     }
 
     private OpenAuthenticationAccessPoliciesArgs() {
-        this.policies = Input.empty();
+        this.policies = Output.empty();
     }
 
     public static Builder builder() {
@@ -48,7 +48,7 @@ public final class OpenAuthenticationAccessPoliciesArgs extends io.pulumi.resour
     }
 
     public static final class Builder {
-        private @Nullable Input<Map<String,OpenAuthenticationAccessPolicyArgs>> policies;
+        private @Nullable Output<Map<String,OpenAuthenticationAccessPolicyArgs>> policies;
 
         public Builder() {
     	      // Empty
@@ -59,13 +59,13 @@ public final class OpenAuthenticationAccessPoliciesArgs extends io.pulumi.resour
     	      this.policies = defaults.policies;
         }
 
-        public Builder policies(@Nullable Input<Map<String,OpenAuthenticationAccessPolicyArgs>> policies) {
+        public Builder policies(@Nullable Output<Map<String,OpenAuthenticationAccessPolicyArgs>> policies) {
             this.policies = policies;
             return this;
         }
 
         public Builder policies(@Nullable Map<String,OpenAuthenticationAccessPolicyArgs> policies) {
-            this.policies = Input.ofNullable(policies);
+            this.policies = Output.ofNullable(policies);
             return this;
         }
         public OpenAuthenticationAccessPoliciesArgs build() {

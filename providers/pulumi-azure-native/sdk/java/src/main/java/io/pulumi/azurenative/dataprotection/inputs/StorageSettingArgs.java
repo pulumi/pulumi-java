@@ -6,7 +6,7 @@ package io.pulumi.azurenative.dataprotection.inputs;
 import io.pulumi.azurenative.dataprotection.enums.StorageSettingStoreTypes;
 import io.pulumi.azurenative.dataprotection.enums.StorageSettingTypes;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -26,10 +26,10 @@ public final class StorageSettingArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="datastoreType")
-      private final @Nullable Input<Either<String,StorageSettingStoreTypes>> datastoreType;
+      private final @Nullable Output<Either<String,StorageSettingStoreTypes>> datastoreType;
 
-    public Input<Either<String,StorageSettingStoreTypes>> getDatastoreType() {
-        return this.datastoreType == null ? Input.empty() : this.datastoreType;
+    public Output<Either<String,StorageSettingStoreTypes>> getDatastoreType() {
+        return this.datastoreType == null ? Output.empty() : this.datastoreType;
     }
 
     /**
@@ -37,22 +37,22 @@ public final class StorageSettingArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type")
-      private final @Nullable Input<Either<String,StorageSettingTypes>> type;
+      private final @Nullable Output<Either<String,StorageSettingTypes>> type;
 
-    public Input<Either<String,StorageSettingTypes>> getType() {
-        return this.type == null ? Input.empty() : this.type;
+    public Output<Either<String,StorageSettingTypes>> getType() {
+        return this.type == null ? Output.empty() : this.type;
     }
 
     public StorageSettingArgs(
-        @Nullable Input<Either<String,StorageSettingStoreTypes>> datastoreType,
-        @Nullable Input<Either<String,StorageSettingTypes>> type) {
+        @Nullable Output<Either<String,StorageSettingStoreTypes>> datastoreType,
+        @Nullable Output<Either<String,StorageSettingTypes>> type) {
         this.datastoreType = datastoreType;
         this.type = type;
     }
 
     private StorageSettingArgs() {
-        this.datastoreType = Input.empty();
-        this.type = Input.empty();
+        this.datastoreType = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -64,8 +64,8 @@ public final class StorageSettingArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Either<String,StorageSettingStoreTypes>> datastoreType;
-        private @Nullable Input<Either<String,StorageSettingTypes>> type;
+        private @Nullable Output<Either<String,StorageSettingStoreTypes>> datastoreType;
+        private @Nullable Output<Either<String,StorageSettingTypes>> type;
 
         public Builder() {
     	      // Empty
@@ -77,23 +77,23 @@ public final class StorageSettingArgs extends io.pulumi.resources.ResourceArgs {
     	      this.type = defaults.type;
         }
 
-        public Builder datastoreType(@Nullable Input<Either<String,StorageSettingStoreTypes>> datastoreType) {
+        public Builder datastoreType(@Nullable Output<Either<String,StorageSettingStoreTypes>> datastoreType) {
             this.datastoreType = datastoreType;
             return this;
         }
 
         public Builder datastoreType(@Nullable Either<String,StorageSettingStoreTypes> datastoreType) {
-            this.datastoreType = Input.ofNullable(datastoreType);
+            this.datastoreType = Output.ofNullable(datastoreType);
             return this;
         }
 
-        public Builder type(@Nullable Input<Either<String,StorageSettingTypes>> type) {
+        public Builder type(@Nullable Output<Either<String,StorageSettingTypes>> type) {
             this.type = type;
             return this;
         }
 
         public Builder type(@Nullable Either<String,StorageSettingTypes> type) {
-            this.type = Input.ofNullable(type);
+            this.type = Output.ofNullable(type);
             return this;
         }
         public StorageSettingArgs build() {

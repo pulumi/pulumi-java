@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.cloudwatch.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -20,10 +20,10 @@ public final class EventConnectionAuthParametersInvocationHttpParametersHeaderAr
      * 
      */
     @InputImport(name="isValueSecret")
-      private final @Nullable Input<Boolean> isValueSecret;
+      private final @Nullable Output<Boolean> isValueSecret;
 
-    public Input<Boolean> getIsValueSecret() {
-        return this.isValueSecret == null ? Input.empty() : this.isValueSecret;
+    public Output<Boolean> getIsValueSecret() {
+        return this.isValueSecret == null ? Output.empty() : this.isValueSecret;
     }
 
     /**
@@ -31,10 +31,10 @@ public final class EventConnectionAuthParametersInvocationHttpParametersHeaderAr
      * 
      */
     @InputImport(name="key")
-      private final @Nullable Input<String> key;
+      private final @Nullable Output<String> key;
 
-    public Input<String> getKey() {
-        return this.key == null ? Input.empty() : this.key;
+    public Output<String> getKey() {
+        return this.key == null ? Output.empty() : this.key;
     }
 
     /**
@@ -42,25 +42,25 @@ public final class EventConnectionAuthParametersInvocationHttpParametersHeaderAr
      * 
      */
     @InputImport(name="value")
-      private final @Nullable Input<String> value;
+      private final @Nullable Output<String> value;
 
-    public Input<String> getValue() {
-        return this.value == null ? Input.empty() : this.value;
+    public Output<String> getValue() {
+        return this.value == null ? Output.empty() : this.value;
     }
 
     public EventConnectionAuthParametersInvocationHttpParametersHeaderArgs(
-        @Nullable Input<Boolean> isValueSecret,
-        @Nullable Input<String> key,
-        @Nullable Input<String> value) {
+        @Nullable Output<Boolean> isValueSecret,
+        @Nullable Output<String> key,
+        @Nullable Output<String> value) {
         this.isValueSecret = isValueSecret;
         this.key = key;
         this.value = value;
     }
 
     private EventConnectionAuthParametersInvocationHttpParametersHeaderArgs() {
-        this.isValueSecret = Input.empty();
-        this.key = Input.empty();
-        this.value = Input.empty();
+        this.isValueSecret = Output.empty();
+        this.key = Output.empty();
+        this.value = Output.empty();
     }
 
     public static Builder builder() {
@@ -72,9 +72,9 @@ public final class EventConnectionAuthParametersInvocationHttpParametersHeaderAr
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> isValueSecret;
-        private @Nullable Input<String> key;
-        private @Nullable Input<String> value;
+        private @Nullable Output<Boolean> isValueSecret;
+        private @Nullable Output<String> key;
+        private @Nullable Output<String> value;
 
         public Builder() {
     	      // Empty
@@ -87,33 +87,33 @@ public final class EventConnectionAuthParametersInvocationHttpParametersHeaderAr
     	      this.value = defaults.value;
         }
 
-        public Builder isValueSecret(@Nullable Input<Boolean> isValueSecret) {
+        public Builder isValueSecret(@Nullable Output<Boolean> isValueSecret) {
             this.isValueSecret = isValueSecret;
             return this;
         }
 
         public Builder isValueSecret(@Nullable Boolean isValueSecret) {
-            this.isValueSecret = Input.ofNullable(isValueSecret);
+            this.isValueSecret = Output.ofNullable(isValueSecret);
             return this;
         }
 
-        public Builder key(@Nullable Input<String> key) {
+        public Builder key(@Nullable Output<String> key) {
             this.key = key;
             return this;
         }
 
         public Builder key(@Nullable String key) {
-            this.key = Input.ofNullable(key);
+            this.key = Output.ofNullable(key);
             return this;
         }
 
-        public Builder value(@Nullable Input<String> value) {
+        public Builder value(@Nullable Output<String> value) {
             this.value = value;
             return this;
         }
 
         public Builder value(@Nullable String value) {
-            this.value = Input.ofNullable(value);
+            this.value = Output.ofNullable(value);
             return this;
         }
         public EventConnectionAuthParametersInvocationHttpParametersHeaderArgs build() {

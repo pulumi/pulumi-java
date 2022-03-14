@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.datacatalog.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class PolicyTagIamPolicyState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="etag")
-      private final @Nullable Input<String> etag;
+      private final @Nullable Output<String> etag;
 
-    public Input<String> getEtag() {
-        return this.etag == null ? Input.empty() : this.etag;
+    public Output<String> getEtag() {
+        return this.etag == null ? Output.empty() : this.etag;
     }
 
     /**
@@ -31,10 +31,10 @@ public final class PolicyTagIamPolicyState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="policyData")
-      private final @Nullable Input<String> policyData;
+      private final @Nullable Output<String> policyData;
 
-    public Input<String> getPolicyData() {
-        return this.policyData == null ? Input.empty() : this.policyData;
+    public Output<String> getPolicyData() {
+        return this.policyData == null ? Output.empty() : this.policyData;
     }
 
     /**
@@ -42,25 +42,25 @@ public final class PolicyTagIamPolicyState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="policyTag")
-      private final @Nullable Input<String> policyTag;
+      private final @Nullable Output<String> policyTag;
 
-    public Input<String> getPolicyTag() {
-        return this.policyTag == null ? Input.empty() : this.policyTag;
+    public Output<String> getPolicyTag() {
+        return this.policyTag == null ? Output.empty() : this.policyTag;
     }
 
     public PolicyTagIamPolicyState(
-        @Nullable Input<String> etag,
-        @Nullable Input<String> policyData,
-        @Nullable Input<String> policyTag) {
+        @Nullable Output<String> etag,
+        @Nullable Output<String> policyData,
+        @Nullable Output<String> policyTag) {
         this.etag = etag;
         this.policyData = policyData;
         this.policyTag = policyTag;
     }
 
     private PolicyTagIamPolicyState() {
-        this.etag = Input.empty();
-        this.policyData = Input.empty();
-        this.policyTag = Input.empty();
+        this.etag = Output.empty();
+        this.policyData = Output.empty();
+        this.policyTag = Output.empty();
     }
 
     public static Builder builder() {
@@ -72,9 +72,9 @@ public final class PolicyTagIamPolicyState extends io.pulumi.resources.ResourceA
     }
 
     public static final class Builder {
-        private @Nullable Input<String> etag;
-        private @Nullable Input<String> policyData;
-        private @Nullable Input<String> policyTag;
+        private @Nullable Output<String> etag;
+        private @Nullable Output<String> policyData;
+        private @Nullable Output<String> policyTag;
 
         public Builder() {
     	      // Empty
@@ -87,33 +87,33 @@ public final class PolicyTagIamPolicyState extends io.pulumi.resources.ResourceA
     	      this.policyTag = defaults.policyTag;
         }
 
-        public Builder etag(@Nullable Input<String> etag) {
+        public Builder etag(@Nullable Output<String> etag) {
             this.etag = etag;
             return this;
         }
 
         public Builder etag(@Nullable String etag) {
-            this.etag = Input.ofNullable(etag);
+            this.etag = Output.ofNullable(etag);
             return this;
         }
 
-        public Builder policyData(@Nullable Input<String> policyData) {
+        public Builder policyData(@Nullable Output<String> policyData) {
             this.policyData = policyData;
             return this;
         }
 
         public Builder policyData(@Nullable String policyData) {
-            this.policyData = Input.ofNullable(policyData);
+            this.policyData = Output.ofNullable(policyData);
             return this;
         }
 
-        public Builder policyTag(@Nullable Input<String> policyTag) {
+        public Builder policyTag(@Nullable Output<String> policyTag) {
             this.policyTag = policyTag;
             return this;
         }
 
         public Builder policyTag(@Nullable String policyTag) {
-            this.policyTag = Input.ofNullable(policyTag);
+            this.policyTag = Output.ofNullable(policyTag);
             return this;
         }
         public PolicyTagIamPolicyState build() {

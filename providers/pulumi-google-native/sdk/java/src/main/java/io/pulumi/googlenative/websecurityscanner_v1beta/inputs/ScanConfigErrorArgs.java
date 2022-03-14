@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.websecurityscanner_v1beta.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.websecurityscanner_v1beta.enums.ScanConfigErrorCode;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class ScanConfigErrorArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="code")
-      private final @Nullable Input<ScanConfigErrorCode> code;
+      private final @Nullable Output<ScanConfigErrorCode> code;
 
-    public Input<ScanConfigErrorCode> getCode() {
-        return this.code == null ? Input.empty() : this.code;
+    public Output<ScanConfigErrorCode> getCode() {
+        return this.code == null ? Output.empty() : this.code;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class ScanConfigErrorArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="fieldName")
-      private final @Nullable Input<String> fieldName;
+      private final @Nullable Output<String> fieldName;
 
-    public Input<String> getFieldName() {
-        return this.fieldName == null ? Input.empty() : this.fieldName;
+    public Output<String> getFieldName() {
+        return this.fieldName == null ? Output.empty() : this.fieldName;
     }
 
     public ScanConfigErrorArgs(
-        @Nullable Input<ScanConfigErrorCode> code,
-        @Nullable Input<String> fieldName) {
+        @Nullable Output<ScanConfigErrorCode> code,
+        @Nullable Output<String> fieldName) {
         this.code = code;
         this.fieldName = fieldName;
     }
 
     private ScanConfigErrorArgs() {
-        this.code = Input.empty();
-        this.fieldName = Input.empty();
+        this.code = Output.empty();
+        this.fieldName = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class ScanConfigErrorArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private @Nullable Input<ScanConfigErrorCode> code;
-        private @Nullable Input<String> fieldName;
+        private @Nullable Output<ScanConfigErrorCode> code;
+        private @Nullable Output<String> fieldName;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class ScanConfigErrorArgs extends io.pulumi.resources.ResourceArgs 
     	      this.fieldName = defaults.fieldName;
         }
 
-        public Builder code(@Nullable Input<ScanConfigErrorCode> code) {
+        public Builder code(@Nullable Output<ScanConfigErrorCode> code) {
             this.code = code;
             return this;
         }
 
         public Builder code(@Nullable ScanConfigErrorCode code) {
-            this.code = Input.ofNullable(code);
+            this.code = Output.ofNullable(code);
             return this;
         }
 
-        public Builder fieldName(@Nullable Input<String> fieldName) {
+        public Builder fieldName(@Nullable Output<String> fieldName) {
             this.fieldName = fieldName;
             return this;
         }
 
         public Builder fieldName(@Nullable String fieldName) {
-            this.fieldName = Input.ofNullable(fieldName);
+            this.fieldName = Output.ofNullable(fieldName);
             return this;
         }
         public ScanConfigErrorArgs build() {

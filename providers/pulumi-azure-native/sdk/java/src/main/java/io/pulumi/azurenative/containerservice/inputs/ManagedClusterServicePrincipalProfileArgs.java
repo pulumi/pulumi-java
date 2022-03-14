@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.containerservice.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,9 +23,9 @@ public final class ManagedClusterServicePrincipalProfileArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="clientId", required=true)
-      private final Input<String> clientId;
+      private final Output<String> clientId;
 
-    public Input<String> getClientId() {
+    public Output<String> getClientId() {
         return this.clientId;
     }
 
@@ -34,22 +34,22 @@ public final class ManagedClusterServicePrincipalProfileArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="secret")
-      private final @Nullable Input<String> secret;
+      private final @Nullable Output<String> secret;
 
-    public Input<String> getSecret() {
-        return this.secret == null ? Input.empty() : this.secret;
+    public Output<String> getSecret() {
+        return this.secret == null ? Output.empty() : this.secret;
     }
 
     public ManagedClusterServicePrincipalProfileArgs(
-        Input<String> clientId,
-        @Nullable Input<String> secret) {
+        Output<String> clientId,
+        @Nullable Output<String> secret) {
         this.clientId = Objects.requireNonNull(clientId, "expected parameter 'clientId' to be non-null");
         this.secret = secret;
     }
 
     private ManagedClusterServicePrincipalProfileArgs() {
-        this.clientId = Input.empty();
-        this.secret = Input.empty();
+        this.clientId = Output.empty();
+        this.secret = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class ManagedClusterServicePrincipalProfileArgs extends io.pulumi.r
     }
 
     public static final class Builder {
-        private Input<String> clientId;
-        private @Nullable Input<String> secret;
+        private Output<String> clientId;
+        private @Nullable Output<String> secret;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class ManagedClusterServicePrincipalProfileArgs extends io.pulumi.r
     	      this.secret = defaults.secret;
         }
 
-        public Builder clientId(Input<String> clientId) {
+        public Builder clientId(Output<String> clientId) {
             this.clientId = Objects.requireNonNull(clientId);
             return this;
         }
 
         public Builder clientId(String clientId) {
-            this.clientId = Input.of(Objects.requireNonNull(clientId));
+            this.clientId = Output.of(Objects.requireNonNull(clientId));
             return this;
         }
 
-        public Builder secret(@Nullable Input<String> secret) {
+        public Builder secret(@Nullable Output<String> secret) {
             this.secret = secret;
             return this;
         }
 
         public Builder secret(@Nullable String secret) {
-            this.secret = Input.ofNullable(secret);
+            this.secret = Output.ofNullable(secret);
             return this;
         }
         public ManagedClusterServicePrincipalProfileArgs build() {

@@ -5,7 +5,7 @@ package io.pulumi.azurenative.providerhub.inputs;
 
 import io.pulumi.azurenative.providerhub.enums.SubscriptionState;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -18,29 +18,29 @@ public final class SubscriptionStateRuleArgs extends io.pulumi.resources.Resourc
     public static final SubscriptionStateRuleArgs Empty = new SubscriptionStateRuleArgs();
 
     @InputImport(name="allowedActions")
-      private final @Nullable Input<List<String>> allowedActions;
+      private final @Nullable Output<List<String>> allowedActions;
 
-    public Input<List<String>> getAllowedActions() {
-        return this.allowedActions == null ? Input.empty() : this.allowedActions;
+    public Output<List<String>> getAllowedActions() {
+        return this.allowedActions == null ? Output.empty() : this.allowedActions;
     }
 
     @InputImport(name="state")
-      private final @Nullable Input<Either<String,SubscriptionState>> state;
+      private final @Nullable Output<Either<String,SubscriptionState>> state;
 
-    public Input<Either<String,SubscriptionState>> getState() {
-        return this.state == null ? Input.empty() : this.state;
+    public Output<Either<String,SubscriptionState>> getState() {
+        return this.state == null ? Output.empty() : this.state;
     }
 
     public SubscriptionStateRuleArgs(
-        @Nullable Input<List<String>> allowedActions,
-        @Nullable Input<Either<String,SubscriptionState>> state) {
+        @Nullable Output<List<String>> allowedActions,
+        @Nullable Output<Either<String,SubscriptionState>> state) {
         this.allowedActions = allowedActions;
         this.state = state;
     }
 
     private SubscriptionStateRuleArgs() {
-        this.allowedActions = Input.empty();
-        this.state = Input.empty();
+        this.allowedActions = Output.empty();
+        this.state = Output.empty();
     }
 
     public static Builder builder() {
@@ -52,8 +52,8 @@ public final class SubscriptionStateRuleArgs extends io.pulumi.resources.Resourc
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> allowedActions;
-        private @Nullable Input<Either<String,SubscriptionState>> state;
+        private @Nullable Output<List<String>> allowedActions;
+        private @Nullable Output<Either<String,SubscriptionState>> state;
 
         public Builder() {
     	      // Empty
@@ -65,23 +65,23 @@ public final class SubscriptionStateRuleArgs extends io.pulumi.resources.Resourc
     	      this.state = defaults.state;
         }
 
-        public Builder allowedActions(@Nullable Input<List<String>> allowedActions) {
+        public Builder allowedActions(@Nullable Output<List<String>> allowedActions) {
             this.allowedActions = allowedActions;
             return this;
         }
 
         public Builder allowedActions(@Nullable List<String> allowedActions) {
-            this.allowedActions = Input.ofNullable(allowedActions);
+            this.allowedActions = Output.ofNullable(allowedActions);
             return this;
         }
 
-        public Builder state(@Nullable Input<Either<String,SubscriptionState>> state) {
+        public Builder state(@Nullable Output<Either<String,SubscriptionState>> state) {
             this.state = state;
             return this;
         }
 
         public Builder state(@Nullable Either<String,SubscriptionState> state) {
-            this.state = Input.ofNullable(state);
+            this.state = Output.ofNullable(state);
             return this;
         }
         public SubscriptionStateRuleArgs build() {

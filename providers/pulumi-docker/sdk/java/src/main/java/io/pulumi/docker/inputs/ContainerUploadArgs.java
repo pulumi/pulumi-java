@@ -3,7 +3,7 @@
 
 package io.pulumi.docker.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -16,54 +16,54 @@ public final class ContainerUploadArgs extends io.pulumi.resources.ResourceArgs 
     public static final ContainerUploadArgs Empty = new ContainerUploadArgs();
 
     @InputImport(name="content")
-      private final @Nullable Input<String> content;
+      private final @Nullable Output<String> content;
 
-    public Input<String> getContent() {
-        return this.content == null ? Input.empty() : this.content;
+    public Output<String> getContent() {
+        return this.content == null ? Output.empty() : this.content;
     }
 
     @InputImport(name="contentBase64")
-      private final @Nullable Input<String> contentBase64;
+      private final @Nullable Output<String> contentBase64;
 
-    public Input<String> getContentBase64() {
-        return this.contentBase64 == null ? Input.empty() : this.contentBase64;
+    public Output<String> getContentBase64() {
+        return this.contentBase64 == null ? Output.empty() : this.contentBase64;
     }
 
     @InputImport(name="executable")
-      private final @Nullable Input<Boolean> executable;
+      private final @Nullable Output<Boolean> executable;
 
-    public Input<Boolean> getExecutable() {
-        return this.executable == null ? Input.empty() : this.executable;
+    public Output<Boolean> getExecutable() {
+        return this.executable == null ? Output.empty() : this.executable;
     }
 
     @InputImport(name="file", required=true)
-      private final Input<String> file;
+      private final Output<String> file;
 
-    public Input<String> getFile() {
+    public Output<String> getFile() {
         return this.file;
     }
 
     @InputImport(name="source")
-      private final @Nullable Input<String> source;
+      private final @Nullable Output<String> source;
 
-    public Input<String> getSource() {
-        return this.source == null ? Input.empty() : this.source;
+    public Output<String> getSource() {
+        return this.source == null ? Output.empty() : this.source;
     }
 
     @InputImport(name="sourceHash")
-      private final @Nullable Input<String> sourceHash;
+      private final @Nullable Output<String> sourceHash;
 
-    public Input<String> getSourceHash() {
-        return this.sourceHash == null ? Input.empty() : this.sourceHash;
+    public Output<String> getSourceHash() {
+        return this.sourceHash == null ? Output.empty() : this.sourceHash;
     }
 
     public ContainerUploadArgs(
-        @Nullable Input<String> content,
-        @Nullable Input<String> contentBase64,
-        @Nullable Input<Boolean> executable,
-        Input<String> file,
-        @Nullable Input<String> source,
-        @Nullable Input<String> sourceHash) {
+        @Nullable Output<String> content,
+        @Nullable Output<String> contentBase64,
+        @Nullable Output<Boolean> executable,
+        Output<String> file,
+        @Nullable Output<String> source,
+        @Nullable Output<String> sourceHash) {
         this.content = content;
         this.contentBase64 = contentBase64;
         this.executable = executable;
@@ -73,12 +73,12 @@ public final class ContainerUploadArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private ContainerUploadArgs() {
-        this.content = Input.empty();
-        this.contentBase64 = Input.empty();
-        this.executable = Input.empty();
-        this.file = Input.empty();
-        this.source = Input.empty();
-        this.sourceHash = Input.empty();
+        this.content = Output.empty();
+        this.contentBase64 = Output.empty();
+        this.executable = Output.empty();
+        this.file = Output.empty();
+        this.source = Output.empty();
+        this.sourceHash = Output.empty();
     }
 
     public static Builder builder() {
@@ -90,12 +90,12 @@ public final class ContainerUploadArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private @Nullable Input<String> content;
-        private @Nullable Input<String> contentBase64;
-        private @Nullable Input<Boolean> executable;
-        private Input<String> file;
-        private @Nullable Input<String> source;
-        private @Nullable Input<String> sourceHash;
+        private @Nullable Output<String> content;
+        private @Nullable Output<String> contentBase64;
+        private @Nullable Output<Boolean> executable;
+        private Output<String> file;
+        private @Nullable Output<String> source;
+        private @Nullable Output<String> sourceHash;
 
         public Builder() {
     	      // Empty
@@ -111,63 +111,63 @@ public final class ContainerUploadArgs extends io.pulumi.resources.ResourceArgs 
     	      this.sourceHash = defaults.sourceHash;
         }
 
-        public Builder content(@Nullable Input<String> content) {
+        public Builder content(@Nullable Output<String> content) {
             this.content = content;
             return this;
         }
 
         public Builder content(@Nullable String content) {
-            this.content = Input.ofNullable(content);
+            this.content = Output.ofNullable(content);
             return this;
         }
 
-        public Builder contentBase64(@Nullable Input<String> contentBase64) {
+        public Builder contentBase64(@Nullable Output<String> contentBase64) {
             this.contentBase64 = contentBase64;
             return this;
         }
 
         public Builder contentBase64(@Nullable String contentBase64) {
-            this.contentBase64 = Input.ofNullable(contentBase64);
+            this.contentBase64 = Output.ofNullable(contentBase64);
             return this;
         }
 
-        public Builder executable(@Nullable Input<Boolean> executable) {
+        public Builder executable(@Nullable Output<Boolean> executable) {
             this.executable = executable;
             return this;
         }
 
         public Builder executable(@Nullable Boolean executable) {
-            this.executable = Input.ofNullable(executable);
+            this.executable = Output.ofNullable(executable);
             return this;
         }
 
-        public Builder file(Input<String> file) {
+        public Builder file(Output<String> file) {
             this.file = Objects.requireNonNull(file);
             return this;
         }
 
         public Builder file(String file) {
-            this.file = Input.of(Objects.requireNonNull(file));
+            this.file = Output.of(Objects.requireNonNull(file));
             return this;
         }
 
-        public Builder source(@Nullable Input<String> source) {
+        public Builder source(@Nullable Output<String> source) {
             this.source = source;
             return this;
         }
 
         public Builder source(@Nullable String source) {
-            this.source = Input.ofNullable(source);
+            this.source = Output.ofNullable(source);
             return this;
         }
 
-        public Builder sourceHash(@Nullable Input<String> sourceHash) {
+        public Builder sourceHash(@Nullable Output<String> sourceHash) {
             this.sourceHash = sourceHash;
             return this;
         }
 
         public Builder sourceHash(@Nullable String sourceHash) {
-            this.sourceHash = Input.ofNullable(sourceHash);
+            this.sourceHash = Output.ofNullable(sourceHash);
             return this;
         }
         public ContainerUploadArgs build() {

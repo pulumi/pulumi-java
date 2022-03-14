@@ -12,7 +12,7 @@ import io.pulumi.azurenative.datafactory.inputs.IntegrationRuntimeReferenceArgs;
 import io.pulumi.azurenative.datafactory.inputs.PowerQuerySinkArgs;
 import io.pulumi.azurenative.datafactory.inputs.PowerQuerySinkMappingArgs;
 import io.pulumi.azurenative.datafactory.inputs.UserPropertyArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
@@ -35,10 +35,10 @@ public final class ExecuteWranglingDataflowActivityArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="compute")
-      private final @Nullable Input<ExecuteDataFlowActivityTypePropertiesComputeArgs> compute;
+      private final @Nullable Output<ExecuteDataFlowActivityTypePropertiesComputeArgs> compute;
 
-    public Input<ExecuteDataFlowActivityTypePropertiesComputeArgs> getCompute() {
-        return this.compute == null ? Input.empty() : this.compute;
+    public Output<ExecuteDataFlowActivityTypePropertiesComputeArgs> getCompute() {
+        return this.compute == null ? Output.empty() : this.compute;
     }
 
     /**
@@ -46,10 +46,10 @@ public final class ExecuteWranglingDataflowActivityArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="continueOnError")
-      private final @Nullable Input<Object> continueOnError;
+      private final @Nullable Output<Object> continueOnError;
 
-    public Input<Object> getContinueOnError() {
-        return this.continueOnError == null ? Input.empty() : this.continueOnError;
+    public Output<Object> getContinueOnError() {
+        return this.continueOnError == null ? Output.empty() : this.continueOnError;
     }
 
     /**
@@ -57,9 +57,9 @@ public final class ExecuteWranglingDataflowActivityArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="dataFlow", required=true)
-      private final Input<DataFlowReferenceArgs> dataFlow;
+      private final Output<DataFlowReferenceArgs> dataFlow;
 
-    public Input<DataFlowReferenceArgs> getDataFlow() {
+    public Output<DataFlowReferenceArgs> getDataFlow() {
         return this.dataFlow;
     }
 
@@ -68,10 +68,10 @@ public final class ExecuteWranglingDataflowActivityArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="dependsOn")
-      private final @Nullable Input<List<ActivityDependencyArgs>> dependsOn;
+      private final @Nullable Output<List<ActivityDependencyArgs>> dependsOn;
 
-    public Input<List<ActivityDependencyArgs>> getDependsOn() {
-        return this.dependsOn == null ? Input.empty() : this.dependsOn;
+    public Output<List<ActivityDependencyArgs>> getDependsOn() {
+        return this.dependsOn == null ? Output.empty() : this.dependsOn;
     }
 
     /**
@@ -79,10 +79,10 @@ public final class ExecuteWranglingDataflowActivityArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -90,10 +90,10 @@ public final class ExecuteWranglingDataflowActivityArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="integrationRuntime")
-      private final @Nullable Input<IntegrationRuntimeReferenceArgs> integrationRuntime;
+      private final @Nullable Output<IntegrationRuntimeReferenceArgs> integrationRuntime;
 
-    public Input<IntegrationRuntimeReferenceArgs> getIntegrationRuntime() {
-        return this.integrationRuntime == null ? Input.empty() : this.integrationRuntime;
+    public Output<IntegrationRuntimeReferenceArgs> getIntegrationRuntime() {
+        return this.integrationRuntime == null ? Output.empty() : this.integrationRuntime;
     }
 
     /**
@@ -101,9 +101,9 @@ public final class ExecuteWranglingDataflowActivityArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="name", required=true)
-      private final Input<String> name;
+      private final Output<String> name;
 
-    public Input<String> getName() {
+    public Output<String> getName() {
         return this.name;
     }
 
@@ -112,10 +112,10 @@ public final class ExecuteWranglingDataflowActivityArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="policy")
-      private final @Nullable Input<ActivityPolicyArgs> policy;
+      private final @Nullable Output<ActivityPolicyArgs> policy;
 
-    public Input<ActivityPolicyArgs> getPolicy() {
-        return this.policy == null ? Input.empty() : this.policy;
+    public Output<ActivityPolicyArgs> getPolicy() {
+        return this.policy == null ? Output.empty() : this.policy;
     }
 
     /**
@@ -123,10 +123,10 @@ public final class ExecuteWranglingDataflowActivityArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="queries")
-      private final @Nullable Input<List<PowerQuerySinkMappingArgs>> queries;
+      private final @Nullable Output<List<PowerQuerySinkMappingArgs>> queries;
 
-    public Input<List<PowerQuerySinkMappingArgs>> getQueries() {
-        return this.queries == null ? Input.empty() : this.queries;
+    public Output<List<PowerQuerySinkMappingArgs>> getQueries() {
+        return this.queries == null ? Output.empty() : this.queries;
     }
 
     /**
@@ -134,10 +134,10 @@ public final class ExecuteWranglingDataflowActivityArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="runConcurrently")
-      private final @Nullable Input<Object> runConcurrently;
+      private final @Nullable Output<Object> runConcurrently;
 
-    public Input<Object> getRunConcurrently() {
-        return this.runConcurrently == null ? Input.empty() : this.runConcurrently;
+    public Output<Object> getRunConcurrently() {
+        return this.runConcurrently == null ? Output.empty() : this.runConcurrently;
     }
 
     /**
@@ -145,10 +145,10 @@ public final class ExecuteWranglingDataflowActivityArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="sinks")
-      private final @Nullable Input<Map<String,PowerQuerySinkArgs>> sinks;
+      private final @Nullable Output<Map<String,PowerQuerySinkArgs>> sinks;
 
-    public Input<Map<String,PowerQuerySinkArgs>> getSinks() {
-        return this.sinks == null ? Input.empty() : this.sinks;
+    public Output<Map<String,PowerQuerySinkArgs>> getSinks() {
+        return this.sinks == null ? Output.empty() : this.sinks;
     }
 
     /**
@@ -156,10 +156,10 @@ public final class ExecuteWranglingDataflowActivityArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="staging")
-      private final @Nullable Input<DataFlowStagingInfoArgs> staging;
+      private final @Nullable Output<DataFlowStagingInfoArgs> staging;
 
-    public Input<DataFlowStagingInfoArgs> getStaging() {
-        return this.staging == null ? Input.empty() : this.staging;
+    public Output<DataFlowStagingInfoArgs> getStaging() {
+        return this.staging == null ? Output.empty() : this.staging;
     }
 
     /**
@@ -167,10 +167,10 @@ public final class ExecuteWranglingDataflowActivityArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="traceLevel")
-      private final @Nullable Input<Object> traceLevel;
+      private final @Nullable Output<Object> traceLevel;
 
-    public Input<Object> getTraceLevel() {
-        return this.traceLevel == null ? Input.empty() : this.traceLevel;
+    public Output<Object> getTraceLevel() {
+        return this.traceLevel == null ? Output.empty() : this.traceLevel;
     }
 
     /**
@@ -179,9 +179,9 @@ public final class ExecuteWranglingDataflowActivityArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<String> type;
+      private final Output<String> type;
 
-    public Input<String> getType() {
+    public Output<String> getType() {
         return this.type;
     }
 
@@ -190,28 +190,28 @@ public final class ExecuteWranglingDataflowActivityArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="userProperties")
-      private final @Nullable Input<List<UserPropertyArgs>> userProperties;
+      private final @Nullable Output<List<UserPropertyArgs>> userProperties;
 
-    public Input<List<UserPropertyArgs>> getUserProperties() {
-        return this.userProperties == null ? Input.empty() : this.userProperties;
+    public Output<List<UserPropertyArgs>> getUserProperties() {
+        return this.userProperties == null ? Output.empty() : this.userProperties;
     }
 
     public ExecuteWranglingDataflowActivityArgs(
-        @Nullable Input<ExecuteDataFlowActivityTypePropertiesComputeArgs> compute,
-        @Nullable Input<Object> continueOnError,
-        Input<DataFlowReferenceArgs> dataFlow,
-        @Nullable Input<List<ActivityDependencyArgs>> dependsOn,
-        @Nullable Input<String> description,
-        @Nullable Input<IntegrationRuntimeReferenceArgs> integrationRuntime,
-        Input<String> name,
-        @Nullable Input<ActivityPolicyArgs> policy,
-        @Nullable Input<List<PowerQuerySinkMappingArgs>> queries,
-        @Nullable Input<Object> runConcurrently,
-        @Nullable Input<Map<String,PowerQuerySinkArgs>> sinks,
-        @Nullable Input<DataFlowStagingInfoArgs> staging,
-        @Nullable Input<Object> traceLevel,
-        Input<String> type,
-        @Nullable Input<List<UserPropertyArgs>> userProperties) {
+        @Nullable Output<ExecuteDataFlowActivityTypePropertiesComputeArgs> compute,
+        @Nullable Output<Object> continueOnError,
+        Output<DataFlowReferenceArgs> dataFlow,
+        @Nullable Output<List<ActivityDependencyArgs>> dependsOn,
+        @Nullable Output<String> description,
+        @Nullable Output<IntegrationRuntimeReferenceArgs> integrationRuntime,
+        Output<String> name,
+        @Nullable Output<ActivityPolicyArgs> policy,
+        @Nullable Output<List<PowerQuerySinkMappingArgs>> queries,
+        @Nullable Output<Object> runConcurrently,
+        @Nullable Output<Map<String,PowerQuerySinkArgs>> sinks,
+        @Nullable Output<DataFlowStagingInfoArgs> staging,
+        @Nullable Output<Object> traceLevel,
+        Output<String> type,
+        @Nullable Output<List<UserPropertyArgs>> userProperties) {
         this.compute = compute;
         this.continueOnError = continueOnError;
         this.dataFlow = Objects.requireNonNull(dataFlow, "expected parameter 'dataFlow' to be non-null");
@@ -230,21 +230,21 @@ public final class ExecuteWranglingDataflowActivityArgs extends io.pulumi.resour
     }
 
     private ExecuteWranglingDataflowActivityArgs() {
-        this.compute = Input.empty();
-        this.continueOnError = Input.empty();
-        this.dataFlow = Input.empty();
-        this.dependsOn = Input.empty();
-        this.description = Input.empty();
-        this.integrationRuntime = Input.empty();
-        this.name = Input.empty();
-        this.policy = Input.empty();
-        this.queries = Input.empty();
-        this.runConcurrently = Input.empty();
-        this.sinks = Input.empty();
-        this.staging = Input.empty();
-        this.traceLevel = Input.empty();
-        this.type = Input.empty();
-        this.userProperties = Input.empty();
+        this.compute = Output.empty();
+        this.continueOnError = Output.empty();
+        this.dataFlow = Output.empty();
+        this.dependsOn = Output.empty();
+        this.description = Output.empty();
+        this.integrationRuntime = Output.empty();
+        this.name = Output.empty();
+        this.policy = Output.empty();
+        this.queries = Output.empty();
+        this.runConcurrently = Output.empty();
+        this.sinks = Output.empty();
+        this.staging = Output.empty();
+        this.traceLevel = Output.empty();
+        this.type = Output.empty();
+        this.userProperties = Output.empty();
     }
 
     public static Builder builder() {
@@ -256,21 +256,21 @@ public final class ExecuteWranglingDataflowActivityArgs extends io.pulumi.resour
     }
 
     public static final class Builder {
-        private @Nullable Input<ExecuteDataFlowActivityTypePropertiesComputeArgs> compute;
-        private @Nullable Input<Object> continueOnError;
-        private Input<DataFlowReferenceArgs> dataFlow;
-        private @Nullable Input<List<ActivityDependencyArgs>> dependsOn;
-        private @Nullable Input<String> description;
-        private @Nullable Input<IntegrationRuntimeReferenceArgs> integrationRuntime;
-        private Input<String> name;
-        private @Nullable Input<ActivityPolicyArgs> policy;
-        private @Nullable Input<List<PowerQuerySinkMappingArgs>> queries;
-        private @Nullable Input<Object> runConcurrently;
-        private @Nullable Input<Map<String,PowerQuerySinkArgs>> sinks;
-        private @Nullable Input<DataFlowStagingInfoArgs> staging;
-        private @Nullable Input<Object> traceLevel;
-        private Input<String> type;
-        private @Nullable Input<List<UserPropertyArgs>> userProperties;
+        private @Nullable Output<ExecuteDataFlowActivityTypePropertiesComputeArgs> compute;
+        private @Nullable Output<Object> continueOnError;
+        private Output<DataFlowReferenceArgs> dataFlow;
+        private @Nullable Output<List<ActivityDependencyArgs>> dependsOn;
+        private @Nullable Output<String> description;
+        private @Nullable Output<IntegrationRuntimeReferenceArgs> integrationRuntime;
+        private Output<String> name;
+        private @Nullable Output<ActivityPolicyArgs> policy;
+        private @Nullable Output<List<PowerQuerySinkMappingArgs>> queries;
+        private @Nullable Output<Object> runConcurrently;
+        private @Nullable Output<Map<String,PowerQuerySinkArgs>> sinks;
+        private @Nullable Output<DataFlowStagingInfoArgs> staging;
+        private @Nullable Output<Object> traceLevel;
+        private Output<String> type;
+        private @Nullable Output<List<UserPropertyArgs>> userProperties;
 
         public Builder() {
     	      // Empty
@@ -295,153 +295,153 @@ public final class ExecuteWranglingDataflowActivityArgs extends io.pulumi.resour
     	      this.userProperties = defaults.userProperties;
         }
 
-        public Builder compute(@Nullable Input<ExecuteDataFlowActivityTypePropertiesComputeArgs> compute) {
+        public Builder compute(@Nullable Output<ExecuteDataFlowActivityTypePropertiesComputeArgs> compute) {
             this.compute = compute;
             return this;
         }
 
         public Builder compute(@Nullable ExecuteDataFlowActivityTypePropertiesComputeArgs compute) {
-            this.compute = Input.ofNullable(compute);
+            this.compute = Output.ofNullable(compute);
             return this;
         }
 
-        public Builder continueOnError(@Nullable Input<Object> continueOnError) {
+        public Builder continueOnError(@Nullable Output<Object> continueOnError) {
             this.continueOnError = continueOnError;
             return this;
         }
 
         public Builder continueOnError(@Nullable Object continueOnError) {
-            this.continueOnError = Input.ofNullable(continueOnError);
+            this.continueOnError = Output.ofNullable(continueOnError);
             return this;
         }
 
-        public Builder dataFlow(Input<DataFlowReferenceArgs> dataFlow) {
+        public Builder dataFlow(Output<DataFlowReferenceArgs> dataFlow) {
             this.dataFlow = Objects.requireNonNull(dataFlow);
             return this;
         }
 
         public Builder dataFlow(DataFlowReferenceArgs dataFlow) {
-            this.dataFlow = Input.of(Objects.requireNonNull(dataFlow));
+            this.dataFlow = Output.of(Objects.requireNonNull(dataFlow));
             return this;
         }
 
-        public Builder dependsOn(@Nullable Input<List<ActivityDependencyArgs>> dependsOn) {
+        public Builder dependsOn(@Nullable Output<List<ActivityDependencyArgs>> dependsOn) {
             this.dependsOn = dependsOn;
             return this;
         }
 
         public Builder dependsOn(@Nullable List<ActivityDependencyArgs> dependsOn) {
-            this.dependsOn = Input.ofNullable(dependsOn);
+            this.dependsOn = Output.ofNullable(dependsOn);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder integrationRuntime(@Nullable Input<IntegrationRuntimeReferenceArgs> integrationRuntime) {
+        public Builder integrationRuntime(@Nullable Output<IntegrationRuntimeReferenceArgs> integrationRuntime) {
             this.integrationRuntime = integrationRuntime;
             return this;
         }
 
         public Builder integrationRuntime(@Nullable IntegrationRuntimeReferenceArgs integrationRuntime) {
-            this.integrationRuntime = Input.ofNullable(integrationRuntime);
+            this.integrationRuntime = Output.ofNullable(integrationRuntime);
             return this;
         }
 
-        public Builder name(Input<String> name) {
+        public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(String name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder policy(@Nullable Input<ActivityPolicyArgs> policy) {
+        public Builder policy(@Nullable Output<ActivityPolicyArgs> policy) {
             this.policy = policy;
             return this;
         }
 
         public Builder policy(@Nullable ActivityPolicyArgs policy) {
-            this.policy = Input.ofNullable(policy);
+            this.policy = Output.ofNullable(policy);
             return this;
         }
 
-        public Builder queries(@Nullable Input<List<PowerQuerySinkMappingArgs>> queries) {
+        public Builder queries(@Nullable Output<List<PowerQuerySinkMappingArgs>> queries) {
             this.queries = queries;
             return this;
         }
 
         public Builder queries(@Nullable List<PowerQuerySinkMappingArgs> queries) {
-            this.queries = Input.ofNullable(queries);
+            this.queries = Output.ofNullable(queries);
             return this;
         }
 
-        public Builder runConcurrently(@Nullable Input<Object> runConcurrently) {
+        public Builder runConcurrently(@Nullable Output<Object> runConcurrently) {
             this.runConcurrently = runConcurrently;
             return this;
         }
 
         public Builder runConcurrently(@Nullable Object runConcurrently) {
-            this.runConcurrently = Input.ofNullable(runConcurrently);
+            this.runConcurrently = Output.ofNullable(runConcurrently);
             return this;
         }
 
-        public Builder sinks(@Nullable Input<Map<String,PowerQuerySinkArgs>> sinks) {
+        public Builder sinks(@Nullable Output<Map<String,PowerQuerySinkArgs>> sinks) {
             this.sinks = sinks;
             return this;
         }
 
         public Builder sinks(@Nullable Map<String,PowerQuerySinkArgs> sinks) {
-            this.sinks = Input.ofNullable(sinks);
+            this.sinks = Output.ofNullable(sinks);
             return this;
         }
 
-        public Builder staging(@Nullable Input<DataFlowStagingInfoArgs> staging) {
+        public Builder staging(@Nullable Output<DataFlowStagingInfoArgs> staging) {
             this.staging = staging;
             return this;
         }
 
         public Builder staging(@Nullable DataFlowStagingInfoArgs staging) {
-            this.staging = Input.ofNullable(staging);
+            this.staging = Output.ofNullable(staging);
             return this;
         }
 
-        public Builder traceLevel(@Nullable Input<Object> traceLevel) {
+        public Builder traceLevel(@Nullable Output<Object> traceLevel) {
             this.traceLevel = traceLevel;
             return this;
         }
 
         public Builder traceLevel(@Nullable Object traceLevel) {
-            this.traceLevel = Input.ofNullable(traceLevel);
+            this.traceLevel = Output.ofNullable(traceLevel);
             return this;
         }
 
-        public Builder type(Input<String> type) {
+        public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(String type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
 
-        public Builder userProperties(@Nullable Input<List<UserPropertyArgs>> userProperties) {
+        public Builder userProperties(@Nullable Output<List<UserPropertyArgs>> userProperties) {
             this.userProperties = userProperties;
             return this;
         }
 
         public Builder userProperties(@Nullable List<UserPropertyArgs> userProperties) {
-            this.userProperties = Input.ofNullable(userProperties);
+            this.userProperties = Output.ofNullable(userProperties);
             return this;
         }
         public ExecuteWranglingDataflowActivityArgs build() {

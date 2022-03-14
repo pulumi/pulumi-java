@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.monitoring_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.monitoring_v1.inputs.GaugeViewArgs;
 import io.pulumi.googlenative.monitoring_v1.inputs.SparkChartViewArgs;
@@ -27,10 +27,10 @@ public final class ScorecardArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="gaugeView")
-      private final @Nullable Input<GaugeViewArgs> gaugeView;
+      private final @Nullable Output<GaugeViewArgs> gaugeView;
 
-    public Input<GaugeViewArgs> getGaugeView() {
-        return this.gaugeView == null ? Input.empty() : this.gaugeView;
+    public Output<GaugeViewArgs> getGaugeView() {
+        return this.gaugeView == null ? Output.empty() : this.gaugeView;
     }
 
     /**
@@ -38,10 +38,10 @@ public final class ScorecardArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sparkChartView")
-      private final @Nullable Input<SparkChartViewArgs> sparkChartView;
+      private final @Nullable Output<SparkChartViewArgs> sparkChartView;
 
-    public Input<SparkChartViewArgs> getSparkChartView() {
-        return this.sparkChartView == null ? Input.empty() : this.sparkChartView;
+    public Output<SparkChartViewArgs> getSparkChartView() {
+        return this.sparkChartView == null ? Output.empty() : this.sparkChartView;
     }
 
     /**
@@ -49,10 +49,10 @@ public final class ScorecardArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="thresholds")
-      private final @Nullable Input<List<ThresholdArgs>> thresholds;
+      private final @Nullable Output<List<ThresholdArgs>> thresholds;
 
-    public Input<List<ThresholdArgs>> getThresholds() {
-        return this.thresholds == null ? Input.empty() : this.thresholds;
+    public Output<List<ThresholdArgs>> getThresholds() {
+        return this.thresholds == null ? Output.empty() : this.thresholds;
     }
 
     /**
@@ -60,17 +60,17 @@ public final class ScorecardArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="timeSeriesQuery", required=true)
-      private final Input<TimeSeriesQueryArgs> timeSeriesQuery;
+      private final Output<TimeSeriesQueryArgs> timeSeriesQuery;
 
-    public Input<TimeSeriesQueryArgs> getTimeSeriesQuery() {
+    public Output<TimeSeriesQueryArgs> getTimeSeriesQuery() {
         return this.timeSeriesQuery;
     }
 
     public ScorecardArgs(
-        @Nullable Input<GaugeViewArgs> gaugeView,
-        @Nullable Input<SparkChartViewArgs> sparkChartView,
-        @Nullable Input<List<ThresholdArgs>> thresholds,
-        Input<TimeSeriesQueryArgs> timeSeriesQuery) {
+        @Nullable Output<GaugeViewArgs> gaugeView,
+        @Nullable Output<SparkChartViewArgs> sparkChartView,
+        @Nullable Output<List<ThresholdArgs>> thresholds,
+        Output<TimeSeriesQueryArgs> timeSeriesQuery) {
         this.gaugeView = gaugeView;
         this.sparkChartView = sparkChartView;
         this.thresholds = thresholds;
@@ -78,10 +78,10 @@ public final class ScorecardArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ScorecardArgs() {
-        this.gaugeView = Input.empty();
-        this.sparkChartView = Input.empty();
-        this.thresholds = Input.empty();
-        this.timeSeriesQuery = Input.empty();
+        this.gaugeView = Output.empty();
+        this.sparkChartView = Output.empty();
+        this.thresholds = Output.empty();
+        this.timeSeriesQuery = Output.empty();
     }
 
     public static Builder builder() {
@@ -93,10 +93,10 @@ public final class ScorecardArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<GaugeViewArgs> gaugeView;
-        private @Nullable Input<SparkChartViewArgs> sparkChartView;
-        private @Nullable Input<List<ThresholdArgs>> thresholds;
-        private Input<TimeSeriesQueryArgs> timeSeriesQuery;
+        private @Nullable Output<GaugeViewArgs> gaugeView;
+        private @Nullable Output<SparkChartViewArgs> sparkChartView;
+        private @Nullable Output<List<ThresholdArgs>> thresholds;
+        private Output<TimeSeriesQueryArgs> timeSeriesQuery;
 
         public Builder() {
     	      // Empty
@@ -110,43 +110,43 @@ public final class ScorecardArgs extends io.pulumi.resources.ResourceArgs {
     	      this.timeSeriesQuery = defaults.timeSeriesQuery;
         }
 
-        public Builder gaugeView(@Nullable Input<GaugeViewArgs> gaugeView) {
+        public Builder gaugeView(@Nullable Output<GaugeViewArgs> gaugeView) {
             this.gaugeView = gaugeView;
             return this;
         }
 
         public Builder gaugeView(@Nullable GaugeViewArgs gaugeView) {
-            this.gaugeView = Input.ofNullable(gaugeView);
+            this.gaugeView = Output.ofNullable(gaugeView);
             return this;
         }
 
-        public Builder sparkChartView(@Nullable Input<SparkChartViewArgs> sparkChartView) {
+        public Builder sparkChartView(@Nullable Output<SparkChartViewArgs> sparkChartView) {
             this.sparkChartView = sparkChartView;
             return this;
         }
 
         public Builder sparkChartView(@Nullable SparkChartViewArgs sparkChartView) {
-            this.sparkChartView = Input.ofNullable(sparkChartView);
+            this.sparkChartView = Output.ofNullable(sparkChartView);
             return this;
         }
 
-        public Builder thresholds(@Nullable Input<List<ThresholdArgs>> thresholds) {
+        public Builder thresholds(@Nullable Output<List<ThresholdArgs>> thresholds) {
             this.thresholds = thresholds;
             return this;
         }
 
         public Builder thresholds(@Nullable List<ThresholdArgs> thresholds) {
-            this.thresholds = Input.ofNullable(thresholds);
+            this.thresholds = Output.ofNullable(thresholds);
             return this;
         }
 
-        public Builder timeSeriesQuery(Input<TimeSeriesQueryArgs> timeSeriesQuery) {
+        public Builder timeSeriesQuery(Output<TimeSeriesQueryArgs> timeSeriesQuery) {
             this.timeSeriesQuery = Objects.requireNonNull(timeSeriesQuery);
             return this;
         }
 
         public Builder timeSeriesQuery(TimeSeriesQueryArgs timeSeriesQuery) {
-            this.timeSeriesQuery = Input.of(Objects.requireNonNull(timeSeriesQuery));
+            this.timeSeriesQuery = Output.of(Objects.requireNonNull(timeSeriesQuery));
             return this;
         }
         public ScorecardArgs build() {

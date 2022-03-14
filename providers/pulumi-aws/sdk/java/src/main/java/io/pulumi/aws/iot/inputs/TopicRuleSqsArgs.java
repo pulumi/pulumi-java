@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.iot.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -19,9 +19,9 @@ public final class TopicRuleSqsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="queueUrl", required=true)
-      private final Input<String> queueUrl;
+      private final Output<String> queueUrl;
 
-    public Input<String> getQueueUrl() {
+    public Output<String> getQueueUrl() {
         return this.queueUrl;
     }
 
@@ -30,9 +30,9 @@ public final class TopicRuleSqsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="roleArn", required=true)
-      private final Input<String> roleArn;
+      private final Output<String> roleArn;
 
-    public Input<String> getRoleArn() {
+    public Output<String> getRoleArn() {
         return this.roleArn;
     }
 
@@ -41,25 +41,25 @@ public final class TopicRuleSqsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="useBase64", required=true)
-      private final Input<Boolean> useBase64;
+      private final Output<Boolean> useBase64;
 
-    public Input<Boolean> getUseBase64() {
+    public Output<Boolean> getUseBase64() {
         return this.useBase64;
     }
 
     public TopicRuleSqsArgs(
-        Input<String> queueUrl,
-        Input<String> roleArn,
-        Input<Boolean> useBase64) {
+        Output<String> queueUrl,
+        Output<String> roleArn,
+        Output<Boolean> useBase64) {
         this.queueUrl = Objects.requireNonNull(queueUrl, "expected parameter 'queueUrl' to be non-null");
         this.roleArn = Objects.requireNonNull(roleArn, "expected parameter 'roleArn' to be non-null");
         this.useBase64 = Objects.requireNonNull(useBase64, "expected parameter 'useBase64' to be non-null");
     }
 
     private TopicRuleSqsArgs() {
-        this.queueUrl = Input.empty();
-        this.roleArn = Input.empty();
-        this.useBase64 = Input.empty();
+        this.queueUrl = Output.empty();
+        this.roleArn = Output.empty();
+        this.useBase64 = Output.empty();
     }
 
     public static Builder builder() {
@@ -71,9 +71,9 @@ public final class TopicRuleSqsArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> queueUrl;
-        private Input<String> roleArn;
-        private Input<Boolean> useBase64;
+        private Output<String> queueUrl;
+        private Output<String> roleArn;
+        private Output<Boolean> useBase64;
 
         public Builder() {
     	      // Empty
@@ -86,33 +86,33 @@ public final class TopicRuleSqsArgs extends io.pulumi.resources.ResourceArgs {
     	      this.useBase64 = defaults.useBase64;
         }
 
-        public Builder queueUrl(Input<String> queueUrl) {
+        public Builder queueUrl(Output<String> queueUrl) {
             this.queueUrl = Objects.requireNonNull(queueUrl);
             return this;
         }
 
         public Builder queueUrl(String queueUrl) {
-            this.queueUrl = Input.of(Objects.requireNonNull(queueUrl));
+            this.queueUrl = Output.of(Objects.requireNonNull(queueUrl));
             return this;
         }
 
-        public Builder roleArn(Input<String> roleArn) {
+        public Builder roleArn(Output<String> roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
 
         public Builder roleArn(String roleArn) {
-            this.roleArn = Input.of(Objects.requireNonNull(roleArn));
+            this.roleArn = Output.of(Objects.requireNonNull(roleArn));
             return this;
         }
 
-        public Builder useBase64(Input<Boolean> useBase64) {
+        public Builder useBase64(Output<Boolean> useBase64) {
             this.useBase64 = Objects.requireNonNull(useBase64);
             return this;
         }
 
         public Builder useBase64(Boolean useBase64) {
-            this.useBase64 = Input.of(Objects.requireNonNull(useBase64));
+            this.useBase64 = Output.of(Objects.requireNonNull(useBase64));
             return this;
         }
         public TopicRuleSqsArgs build() {

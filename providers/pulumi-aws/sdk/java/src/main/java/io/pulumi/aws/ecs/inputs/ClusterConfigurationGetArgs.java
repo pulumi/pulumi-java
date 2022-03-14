@@ -4,7 +4,7 @@
 package io.pulumi.aws.ecs.inputs;
 
 import io.pulumi.aws.ecs.inputs.ClusterConfigurationExecuteCommandConfigurationGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,18 +19,18 @@ public final class ClusterConfigurationGetArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="executeCommandConfiguration")
-      private final @Nullable Input<ClusterConfigurationExecuteCommandConfigurationGetArgs> executeCommandConfiguration;
+      private final @Nullable Output<ClusterConfigurationExecuteCommandConfigurationGetArgs> executeCommandConfiguration;
 
-    public Input<ClusterConfigurationExecuteCommandConfigurationGetArgs> getExecuteCommandConfiguration() {
-        return this.executeCommandConfiguration == null ? Input.empty() : this.executeCommandConfiguration;
+    public Output<ClusterConfigurationExecuteCommandConfigurationGetArgs> getExecuteCommandConfiguration() {
+        return this.executeCommandConfiguration == null ? Output.empty() : this.executeCommandConfiguration;
     }
 
-    public ClusterConfigurationGetArgs(@Nullable Input<ClusterConfigurationExecuteCommandConfigurationGetArgs> executeCommandConfiguration) {
+    public ClusterConfigurationGetArgs(@Nullable Output<ClusterConfigurationExecuteCommandConfigurationGetArgs> executeCommandConfiguration) {
         this.executeCommandConfiguration = executeCommandConfiguration;
     }
 
     private ClusterConfigurationGetArgs() {
-        this.executeCommandConfiguration = Input.empty();
+        this.executeCommandConfiguration = Output.empty();
     }
 
     public static Builder builder() {
@@ -42,7 +42,7 @@ public final class ClusterConfigurationGetArgs extends io.pulumi.resources.Resou
     }
 
     public static final class Builder {
-        private @Nullable Input<ClusterConfigurationExecuteCommandConfigurationGetArgs> executeCommandConfiguration;
+        private @Nullable Output<ClusterConfigurationExecuteCommandConfigurationGetArgs> executeCommandConfiguration;
 
         public Builder() {
     	      // Empty
@@ -53,13 +53,13 @@ public final class ClusterConfigurationGetArgs extends io.pulumi.resources.Resou
     	      this.executeCommandConfiguration = defaults.executeCommandConfiguration;
         }
 
-        public Builder executeCommandConfiguration(@Nullable Input<ClusterConfigurationExecuteCommandConfigurationGetArgs> executeCommandConfiguration) {
+        public Builder executeCommandConfiguration(@Nullable Output<ClusterConfigurationExecuteCommandConfigurationGetArgs> executeCommandConfiguration) {
             this.executeCommandConfiguration = executeCommandConfiguration;
             return this;
         }
 
         public Builder executeCommandConfiguration(@Nullable ClusterConfigurationExecuteCommandConfigurationGetArgs executeCommandConfiguration) {
-            this.executeCommandConfiguration = Input.ofNullable(executeCommandConfiguration);
+            this.executeCommandConfiguration = Output.ofNullable(executeCommandConfiguration);
             return this;
         }
         public ClusterConfigurationGetArgs build() {

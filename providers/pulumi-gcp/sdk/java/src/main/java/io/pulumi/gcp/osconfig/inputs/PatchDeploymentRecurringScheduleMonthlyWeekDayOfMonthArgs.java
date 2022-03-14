@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.osconfig.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -20,9 +20,9 @@ public final class PatchDeploymentRecurringScheduleMonthlyWeekDayOfMonthArgs ext
      * 
      */
     @InputImport(name="dayOfWeek", required=true)
-      private final Input<String> dayOfWeek;
+      private final Output<String> dayOfWeek;
 
-    public Input<String> getDayOfWeek() {
+    public Output<String> getDayOfWeek() {
         return this.dayOfWeek;
     }
 
@@ -31,22 +31,22 @@ public final class PatchDeploymentRecurringScheduleMonthlyWeekDayOfMonthArgs ext
      * 
      */
     @InputImport(name="weekOrdinal", required=true)
-      private final Input<Integer> weekOrdinal;
+      private final Output<Integer> weekOrdinal;
 
-    public Input<Integer> getWeekOrdinal() {
+    public Output<Integer> getWeekOrdinal() {
         return this.weekOrdinal;
     }
 
     public PatchDeploymentRecurringScheduleMonthlyWeekDayOfMonthArgs(
-        Input<String> dayOfWeek,
-        Input<Integer> weekOrdinal) {
+        Output<String> dayOfWeek,
+        Output<Integer> weekOrdinal) {
         this.dayOfWeek = Objects.requireNonNull(dayOfWeek, "expected parameter 'dayOfWeek' to be non-null");
         this.weekOrdinal = Objects.requireNonNull(weekOrdinal, "expected parameter 'weekOrdinal' to be non-null");
     }
 
     private PatchDeploymentRecurringScheduleMonthlyWeekDayOfMonthArgs() {
-        this.dayOfWeek = Input.empty();
-        this.weekOrdinal = Input.empty();
+        this.dayOfWeek = Output.empty();
+        this.weekOrdinal = Output.empty();
     }
 
     public static Builder builder() {
@@ -58,8 +58,8 @@ public final class PatchDeploymentRecurringScheduleMonthlyWeekDayOfMonthArgs ext
     }
 
     public static final class Builder {
-        private Input<String> dayOfWeek;
-        private Input<Integer> weekOrdinal;
+        private Output<String> dayOfWeek;
+        private Output<Integer> weekOrdinal;
 
         public Builder() {
     	      // Empty
@@ -71,23 +71,23 @@ public final class PatchDeploymentRecurringScheduleMonthlyWeekDayOfMonthArgs ext
     	      this.weekOrdinal = defaults.weekOrdinal;
         }
 
-        public Builder dayOfWeek(Input<String> dayOfWeek) {
+        public Builder dayOfWeek(Output<String> dayOfWeek) {
             this.dayOfWeek = Objects.requireNonNull(dayOfWeek);
             return this;
         }
 
         public Builder dayOfWeek(String dayOfWeek) {
-            this.dayOfWeek = Input.of(Objects.requireNonNull(dayOfWeek));
+            this.dayOfWeek = Output.of(Objects.requireNonNull(dayOfWeek));
             return this;
         }
 
-        public Builder weekOrdinal(Input<Integer> weekOrdinal) {
+        public Builder weekOrdinal(Output<Integer> weekOrdinal) {
             this.weekOrdinal = Objects.requireNonNull(weekOrdinal);
             return this;
         }
 
         public Builder weekOrdinal(Integer weekOrdinal) {
-            this.weekOrdinal = Input.of(Objects.requireNonNull(weekOrdinal));
+            this.weekOrdinal = Output.of(Objects.requireNonNull(weekOrdinal));
             return this;
         }
         public PatchDeploymentRecurringScheduleMonthlyWeekDayOfMonthArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.databox.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -24,9 +24,9 @@ public final class StorageAccountDetailsArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="dataAccountType", required=true)
-      private final Input<String> dataAccountType;
+      private final Output<String> dataAccountType;
 
-    public Input<String> getDataAccountType() {
+    public Output<String> getDataAccountType() {
         return this.dataAccountType;
     }
 
@@ -35,10 +35,10 @@ public final class StorageAccountDetailsArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="sharePassword")
-      private final @Nullable Input<String> sharePassword;
+      private final @Nullable Output<String> sharePassword;
 
-    public Input<String> getSharePassword() {
-        return this.sharePassword == null ? Input.empty() : this.sharePassword;
+    public Output<String> getSharePassword() {
+        return this.sharePassword == null ? Output.empty() : this.sharePassword;
     }
 
     /**
@@ -46,25 +46,25 @@ public final class StorageAccountDetailsArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="storageAccountId", required=true)
-      private final Input<String> storageAccountId;
+      private final Output<String> storageAccountId;
 
-    public Input<String> getStorageAccountId() {
+    public Output<String> getStorageAccountId() {
         return this.storageAccountId;
     }
 
     public StorageAccountDetailsArgs(
-        Input<String> dataAccountType,
-        @Nullable Input<String> sharePassword,
-        Input<String> storageAccountId) {
-        this.dataAccountType = dataAccountType == null ? Input.ofNullable("StorageAccount") : Objects.requireNonNull(dataAccountType, "expected parameter 'dataAccountType' to be non-null");
+        Output<String> dataAccountType,
+        @Nullable Output<String> sharePassword,
+        Output<String> storageAccountId) {
+        this.dataAccountType = dataAccountType == null ? Output.ofNullable("StorageAccount") : Objects.requireNonNull(dataAccountType, "expected parameter 'dataAccountType' to be non-null");
         this.sharePassword = sharePassword;
         this.storageAccountId = Objects.requireNonNull(storageAccountId, "expected parameter 'storageAccountId' to be non-null");
     }
 
     private StorageAccountDetailsArgs() {
-        this.dataAccountType = Input.empty();
-        this.sharePassword = Input.empty();
-        this.storageAccountId = Input.empty();
+        this.dataAccountType = Output.empty();
+        this.sharePassword = Output.empty();
+        this.storageAccountId = Output.empty();
     }
 
     public static Builder builder() {
@@ -76,9 +76,9 @@ public final class StorageAccountDetailsArgs extends io.pulumi.resources.Resourc
     }
 
     public static final class Builder {
-        private Input<String> dataAccountType;
-        private @Nullable Input<String> sharePassword;
-        private Input<String> storageAccountId;
+        private Output<String> dataAccountType;
+        private @Nullable Output<String> sharePassword;
+        private Output<String> storageAccountId;
 
         public Builder() {
     	      // Empty
@@ -91,33 +91,33 @@ public final class StorageAccountDetailsArgs extends io.pulumi.resources.Resourc
     	      this.storageAccountId = defaults.storageAccountId;
         }
 
-        public Builder dataAccountType(Input<String> dataAccountType) {
+        public Builder dataAccountType(Output<String> dataAccountType) {
             this.dataAccountType = Objects.requireNonNull(dataAccountType);
             return this;
         }
 
         public Builder dataAccountType(String dataAccountType) {
-            this.dataAccountType = Input.of(Objects.requireNonNull(dataAccountType));
+            this.dataAccountType = Output.of(Objects.requireNonNull(dataAccountType));
             return this;
         }
 
-        public Builder sharePassword(@Nullable Input<String> sharePassword) {
+        public Builder sharePassword(@Nullable Output<String> sharePassword) {
             this.sharePassword = sharePassword;
             return this;
         }
 
         public Builder sharePassword(@Nullable String sharePassword) {
-            this.sharePassword = Input.ofNullable(sharePassword);
+            this.sharePassword = Output.ofNullable(sharePassword);
             return this;
         }
 
-        public Builder storageAccountId(Input<String> storageAccountId) {
+        public Builder storageAccountId(Output<String> storageAccountId) {
             this.storageAccountId = Objects.requireNonNull(storageAccountId);
             return this;
         }
 
         public Builder storageAccountId(String storageAccountId) {
-            this.storageAccountId = Input.of(Objects.requireNonNull(storageAccountId));
+            this.storageAccountId = Output.of(Objects.requireNonNull(storageAccountId));
             return this;
         }
         public StorageAccountDetailsArgs build() {

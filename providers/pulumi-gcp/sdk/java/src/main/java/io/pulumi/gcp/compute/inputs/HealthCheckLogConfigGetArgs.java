@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
@@ -20,18 +20,18 @@ public final class HealthCheckLogConfigGetArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="enable")
-      private final @Nullable Input<Boolean> enable;
+      private final @Nullable Output<Boolean> enable;
 
-    public Input<Boolean> getEnable() {
-        return this.enable == null ? Input.empty() : this.enable;
+    public Output<Boolean> getEnable() {
+        return this.enable == null ? Output.empty() : this.enable;
     }
 
-    public HealthCheckLogConfigGetArgs(@Nullable Input<Boolean> enable) {
+    public HealthCheckLogConfigGetArgs(@Nullable Output<Boolean> enable) {
         this.enable = enable;
     }
 
     private HealthCheckLogConfigGetArgs() {
-        this.enable = Input.empty();
+        this.enable = Output.empty();
     }
 
     public static Builder builder() {
@@ -43,7 +43,7 @@ public final class HealthCheckLogConfigGetArgs extends io.pulumi.resources.Resou
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> enable;
+        private @Nullable Output<Boolean> enable;
 
         public Builder() {
     	      // Empty
@@ -54,13 +54,13 @@ public final class HealthCheckLogConfigGetArgs extends io.pulumi.resources.Resou
     	      this.enable = defaults.enable;
         }
 
-        public Builder enable(@Nullable Input<Boolean> enable) {
+        public Builder enable(@Nullable Output<Boolean> enable) {
             this.enable = enable;
             return this;
         }
 
         public Builder enable(@Nullable Boolean enable) {
-            this.enable = Input.ofNullable(enable);
+            this.enable = Output.ofNullable(enable);
             return this;
         }
         public HealthCheckLogConfigGetArgs build() {

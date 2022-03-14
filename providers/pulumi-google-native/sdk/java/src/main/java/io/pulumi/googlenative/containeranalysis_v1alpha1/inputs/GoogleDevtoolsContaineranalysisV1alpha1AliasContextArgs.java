@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1alpha1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.containeranalysis_v1alpha1.enums.GoogleDevtoolsContaineranalysisV1alpha1AliasContextKind;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class GoogleDevtoolsContaineranalysisV1alpha1AliasContextArgs exten
      * 
      */
     @InputImport(name="kind")
-      private final @Nullable Input<GoogleDevtoolsContaineranalysisV1alpha1AliasContextKind> kind;
+      private final @Nullable Output<GoogleDevtoolsContaineranalysisV1alpha1AliasContextKind> kind;
 
-    public Input<GoogleDevtoolsContaineranalysisV1alpha1AliasContextKind> getKind() {
-        return this.kind == null ? Input.empty() : this.kind;
+    public Output<GoogleDevtoolsContaineranalysisV1alpha1AliasContextKind> getKind() {
+        return this.kind == null ? Output.empty() : this.kind;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class GoogleDevtoolsContaineranalysisV1alpha1AliasContextArgs exten
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     public GoogleDevtoolsContaineranalysisV1alpha1AliasContextArgs(
-        @Nullable Input<GoogleDevtoolsContaineranalysisV1alpha1AliasContextKind> kind,
-        @Nullable Input<String> name) {
+        @Nullable Output<GoogleDevtoolsContaineranalysisV1alpha1AliasContextKind> kind,
+        @Nullable Output<String> name) {
         this.kind = kind;
         this.name = name;
     }
 
     private GoogleDevtoolsContaineranalysisV1alpha1AliasContextArgs() {
-        this.kind = Input.empty();
-        this.name = Input.empty();
+        this.kind = Output.empty();
+        this.name = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class GoogleDevtoolsContaineranalysisV1alpha1AliasContextArgs exten
     }
 
     public static final class Builder {
-        private @Nullable Input<GoogleDevtoolsContaineranalysisV1alpha1AliasContextKind> kind;
-        private @Nullable Input<String> name;
+        private @Nullable Output<GoogleDevtoolsContaineranalysisV1alpha1AliasContextKind> kind;
+        private @Nullable Output<String> name;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class GoogleDevtoolsContaineranalysisV1alpha1AliasContextArgs exten
     	      this.name = defaults.name;
         }
 
-        public Builder kind(@Nullable Input<GoogleDevtoolsContaineranalysisV1alpha1AliasContextKind> kind) {
+        public Builder kind(@Nullable Output<GoogleDevtoolsContaineranalysisV1alpha1AliasContextKind> kind) {
             this.kind = kind;
             return this;
         }
 
         public Builder kind(@Nullable GoogleDevtoolsContaineranalysisV1alpha1AliasContextKind kind) {
-            this.kind = Input.ofNullable(kind);
+            this.kind = Output.ofNullable(kind);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
         public GoogleDevtoolsContaineranalysisV1alpha1AliasContextArgs build() {

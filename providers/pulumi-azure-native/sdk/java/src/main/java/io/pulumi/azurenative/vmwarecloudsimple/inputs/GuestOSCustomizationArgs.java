@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.vmwarecloudsimple.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -24,10 +24,10 @@ public final class GuestOSCustomizationArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="dnsServers")
-      private final @Nullable Input<List<String>> dnsServers;
+      private final @Nullable Output<List<String>> dnsServers;
 
-    public Input<List<String>> getDnsServers() {
-        return this.dnsServers == null ? Input.empty() : this.dnsServers;
+    public Output<List<String>> getDnsServers() {
+        return this.dnsServers == null ? Output.empty() : this.dnsServers;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class GuestOSCustomizationArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="hostName")
-      private final @Nullable Input<String> hostName;
+      private final @Nullable Output<String> hostName;
 
-    public Input<String> getHostName() {
-        return this.hostName == null ? Input.empty() : this.hostName;
+    public Output<String> getHostName() {
+        return this.hostName == null ? Output.empty() : this.hostName;
     }
 
     /**
@@ -46,10 +46,10 @@ public final class GuestOSCustomizationArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="password")
-      private final @Nullable Input<String> password;
+      private final @Nullable Output<String> password;
 
-    public Input<String> getPassword() {
-        return this.password == null ? Input.empty() : this.password;
+    public Output<String> getPassword() {
+        return this.password == null ? Output.empty() : this.password;
     }
 
     /**
@@ -57,10 +57,10 @@ public final class GuestOSCustomizationArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="policyId")
-      private final @Nullable Input<String> policyId;
+      private final @Nullable Output<String> policyId;
 
-    public Input<String> getPolicyId() {
-        return this.policyId == null ? Input.empty() : this.policyId;
+    public Output<String> getPolicyId() {
+        return this.policyId == null ? Output.empty() : this.policyId;
     }
 
     /**
@@ -68,18 +68,18 @@ public final class GuestOSCustomizationArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="username")
-      private final @Nullable Input<String> username;
+      private final @Nullable Output<String> username;
 
-    public Input<String> getUsername() {
-        return this.username == null ? Input.empty() : this.username;
+    public Output<String> getUsername() {
+        return this.username == null ? Output.empty() : this.username;
     }
 
     public GuestOSCustomizationArgs(
-        @Nullable Input<List<String>> dnsServers,
-        @Nullable Input<String> hostName,
-        @Nullable Input<String> password,
-        @Nullable Input<String> policyId,
-        @Nullable Input<String> username) {
+        @Nullable Output<List<String>> dnsServers,
+        @Nullable Output<String> hostName,
+        @Nullable Output<String> password,
+        @Nullable Output<String> policyId,
+        @Nullable Output<String> username) {
         this.dnsServers = dnsServers;
         this.hostName = hostName;
         this.password = password;
@@ -88,11 +88,11 @@ public final class GuestOSCustomizationArgs extends io.pulumi.resources.Resource
     }
 
     private GuestOSCustomizationArgs() {
-        this.dnsServers = Input.empty();
-        this.hostName = Input.empty();
-        this.password = Input.empty();
-        this.policyId = Input.empty();
-        this.username = Input.empty();
+        this.dnsServers = Output.empty();
+        this.hostName = Output.empty();
+        this.password = Output.empty();
+        this.policyId = Output.empty();
+        this.username = Output.empty();
     }
 
     public static Builder builder() {
@@ -104,11 +104,11 @@ public final class GuestOSCustomizationArgs extends io.pulumi.resources.Resource
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> dnsServers;
-        private @Nullable Input<String> hostName;
-        private @Nullable Input<String> password;
-        private @Nullable Input<String> policyId;
-        private @Nullable Input<String> username;
+        private @Nullable Output<List<String>> dnsServers;
+        private @Nullable Output<String> hostName;
+        private @Nullable Output<String> password;
+        private @Nullable Output<String> policyId;
+        private @Nullable Output<String> username;
 
         public Builder() {
     	      // Empty
@@ -123,53 +123,53 @@ public final class GuestOSCustomizationArgs extends io.pulumi.resources.Resource
     	      this.username = defaults.username;
         }
 
-        public Builder dnsServers(@Nullable Input<List<String>> dnsServers) {
+        public Builder dnsServers(@Nullable Output<List<String>> dnsServers) {
             this.dnsServers = dnsServers;
             return this;
         }
 
         public Builder dnsServers(@Nullable List<String> dnsServers) {
-            this.dnsServers = Input.ofNullable(dnsServers);
+            this.dnsServers = Output.ofNullable(dnsServers);
             return this;
         }
 
-        public Builder hostName(@Nullable Input<String> hostName) {
+        public Builder hostName(@Nullable Output<String> hostName) {
             this.hostName = hostName;
             return this;
         }
 
         public Builder hostName(@Nullable String hostName) {
-            this.hostName = Input.ofNullable(hostName);
+            this.hostName = Output.ofNullable(hostName);
             return this;
         }
 
-        public Builder password(@Nullable Input<String> password) {
+        public Builder password(@Nullable Output<String> password) {
             this.password = password;
             return this;
         }
 
         public Builder password(@Nullable String password) {
-            this.password = Input.ofNullable(password);
+            this.password = Output.ofNullable(password);
             return this;
         }
 
-        public Builder policyId(@Nullable Input<String> policyId) {
+        public Builder policyId(@Nullable Output<String> policyId) {
             this.policyId = policyId;
             return this;
         }
 
         public Builder policyId(@Nullable String policyId) {
-            this.policyId = Input.ofNullable(policyId);
+            this.policyId = Output.ofNullable(policyId);
             return this;
         }
 
-        public Builder username(@Nullable Input<String> username) {
+        public Builder username(@Nullable Output<String> username) {
             this.username = username;
             return this;
         }
 
         public Builder username(@Nullable String username) {
-            this.username = Input.ofNullable(username);
+            this.username = Output.ofNullable(username);
             return this;
         }
         public GuestOSCustomizationArgs build() {

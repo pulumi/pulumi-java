@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.dynamodb.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -14,29 +14,29 @@ public final class GlobalTableAttributeDefinitionArgs extends io.pulumi.resource
     public static final GlobalTableAttributeDefinitionArgs Empty = new GlobalTableAttributeDefinitionArgs();
 
     @InputImport(name="attributeName", required=true)
-      private final Input<String> attributeName;
+      private final Output<String> attributeName;
 
-    public Input<String> getAttributeName() {
+    public Output<String> getAttributeName() {
         return this.attributeName;
     }
 
     @InputImport(name="attributeType", required=true)
-      private final Input<String> attributeType;
+      private final Output<String> attributeType;
 
-    public Input<String> getAttributeType() {
+    public Output<String> getAttributeType() {
         return this.attributeType;
     }
 
     public GlobalTableAttributeDefinitionArgs(
-        Input<String> attributeName,
-        Input<String> attributeType) {
+        Output<String> attributeName,
+        Output<String> attributeType) {
         this.attributeName = Objects.requireNonNull(attributeName, "expected parameter 'attributeName' to be non-null");
         this.attributeType = Objects.requireNonNull(attributeType, "expected parameter 'attributeType' to be non-null");
     }
 
     private GlobalTableAttributeDefinitionArgs() {
-        this.attributeName = Input.empty();
-        this.attributeType = Input.empty();
+        this.attributeName = Output.empty();
+        this.attributeType = Output.empty();
     }
 
     public static Builder builder() {
@@ -48,8 +48,8 @@ public final class GlobalTableAttributeDefinitionArgs extends io.pulumi.resource
     }
 
     public static final class Builder {
-        private Input<String> attributeName;
-        private Input<String> attributeType;
+        private Output<String> attributeName;
+        private Output<String> attributeType;
 
         public Builder() {
     	      // Empty
@@ -61,23 +61,23 @@ public final class GlobalTableAttributeDefinitionArgs extends io.pulumi.resource
     	      this.attributeType = defaults.attributeType;
         }
 
-        public Builder attributeName(Input<String> attributeName) {
+        public Builder attributeName(Output<String> attributeName) {
             this.attributeName = Objects.requireNonNull(attributeName);
             return this;
         }
 
         public Builder attributeName(String attributeName) {
-            this.attributeName = Input.of(Objects.requireNonNull(attributeName));
+            this.attributeName = Output.of(Objects.requireNonNull(attributeName));
             return this;
         }
 
-        public Builder attributeType(Input<String> attributeType) {
+        public Builder attributeType(Output<String> attributeType) {
             this.attributeType = Objects.requireNonNull(attributeType);
             return this;
         }
 
         public Builder attributeType(String attributeType) {
-            this.attributeType = Input.of(Objects.requireNonNull(attributeType));
+            this.attributeType = Output.of(Objects.requireNonNull(attributeType));
             return this;
         }
         public GlobalTableAttributeDefinitionArgs build() {

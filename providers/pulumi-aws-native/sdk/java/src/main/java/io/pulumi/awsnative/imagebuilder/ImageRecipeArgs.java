@@ -6,7 +6,7 @@ package io.pulumi.awsnative.imagebuilder;
 import io.pulumi.awsnative.imagebuilder.inputs.ImageRecipeAdditionalInstanceConfigurationArgs;
 import io.pulumi.awsnative.imagebuilder.inputs.ImageRecipeComponentConfigurationArgs;
 import io.pulumi.awsnative.imagebuilder.inputs.ImageRecipeInstanceBlockDeviceMappingArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class ImageRecipeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="additionalInstanceConfiguration")
-      private final @Nullable Input<ImageRecipeAdditionalInstanceConfigurationArgs> additionalInstanceConfiguration;
+      private final @Nullable Output<ImageRecipeAdditionalInstanceConfigurationArgs> additionalInstanceConfiguration;
 
-    public Input<ImageRecipeAdditionalInstanceConfigurationArgs> getAdditionalInstanceConfiguration() {
-        return this.additionalInstanceConfiguration == null ? Input.empty() : this.additionalInstanceConfiguration;
+    public Output<ImageRecipeAdditionalInstanceConfigurationArgs> getAdditionalInstanceConfiguration() {
+        return this.additionalInstanceConfiguration == null ? Output.empty() : this.additionalInstanceConfiguration;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class ImageRecipeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="blockDeviceMappings")
-      private final @Nullable Input<List<ImageRecipeInstanceBlockDeviceMappingArgs>> blockDeviceMappings;
+      private final @Nullable Output<List<ImageRecipeInstanceBlockDeviceMappingArgs>> blockDeviceMappings;
 
-    public Input<List<ImageRecipeInstanceBlockDeviceMappingArgs>> getBlockDeviceMappings() {
-        return this.blockDeviceMappings == null ? Input.empty() : this.blockDeviceMappings;
+    public Output<List<ImageRecipeInstanceBlockDeviceMappingArgs>> getBlockDeviceMappings() {
+        return this.blockDeviceMappings == null ? Output.empty() : this.blockDeviceMappings;
     }
 
     /**
@@ -46,9 +46,9 @@ public final class ImageRecipeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="components", required=true)
-      private final Input<List<ImageRecipeComponentConfigurationArgs>> components;
+      private final Output<List<ImageRecipeComponentConfigurationArgs>> components;
 
-    public Input<List<ImageRecipeComponentConfigurationArgs>> getComponents() {
+    public Output<List<ImageRecipeComponentConfigurationArgs>> getComponents() {
         return this.components;
     }
 
@@ -57,10 +57,10 @@ public final class ImageRecipeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -68,10 +68,10 @@ public final class ImageRecipeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -79,9 +79,9 @@ public final class ImageRecipeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="parentImage", required=true)
-      private final Input<String> parentImage;
+      private final Output<String> parentImage;
 
-    public Input<String> getParentImage() {
+    public Output<String> getParentImage() {
         return this.parentImage;
     }
 
@@ -90,10 +90,10 @@ public final class ImageRecipeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Object> tags;
+      private final @Nullable Output<Object> tags;
 
-    public Input<Object> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Object> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -101,9 +101,9 @@ public final class ImageRecipeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="version", required=true)
-      private final Input<String> version;
+      private final Output<String> version;
 
-    public Input<String> getVersion() {
+    public Output<String> getVersion() {
         return this.version;
     }
 
@@ -112,22 +112,22 @@ public final class ImageRecipeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="workingDirectory")
-      private final @Nullable Input<String> workingDirectory;
+      private final @Nullable Output<String> workingDirectory;
 
-    public Input<String> getWorkingDirectory() {
-        return this.workingDirectory == null ? Input.empty() : this.workingDirectory;
+    public Output<String> getWorkingDirectory() {
+        return this.workingDirectory == null ? Output.empty() : this.workingDirectory;
     }
 
     public ImageRecipeArgs(
-        @Nullable Input<ImageRecipeAdditionalInstanceConfigurationArgs> additionalInstanceConfiguration,
-        @Nullable Input<List<ImageRecipeInstanceBlockDeviceMappingArgs>> blockDeviceMappings,
-        Input<List<ImageRecipeComponentConfigurationArgs>> components,
-        @Nullable Input<String> description,
-        @Nullable Input<String> name,
-        Input<String> parentImage,
-        @Nullable Input<Object> tags,
-        Input<String> version,
-        @Nullable Input<String> workingDirectory) {
+        @Nullable Output<ImageRecipeAdditionalInstanceConfigurationArgs> additionalInstanceConfiguration,
+        @Nullable Output<List<ImageRecipeInstanceBlockDeviceMappingArgs>> blockDeviceMappings,
+        Output<List<ImageRecipeComponentConfigurationArgs>> components,
+        @Nullable Output<String> description,
+        @Nullable Output<String> name,
+        Output<String> parentImage,
+        @Nullable Output<Object> tags,
+        Output<String> version,
+        @Nullable Output<String> workingDirectory) {
         this.additionalInstanceConfiguration = additionalInstanceConfiguration;
         this.blockDeviceMappings = blockDeviceMappings;
         this.components = Objects.requireNonNull(components, "expected parameter 'components' to be non-null");
@@ -140,15 +140,15 @@ public final class ImageRecipeArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ImageRecipeArgs() {
-        this.additionalInstanceConfiguration = Input.empty();
-        this.blockDeviceMappings = Input.empty();
-        this.components = Input.empty();
-        this.description = Input.empty();
-        this.name = Input.empty();
-        this.parentImage = Input.empty();
-        this.tags = Input.empty();
-        this.version = Input.empty();
-        this.workingDirectory = Input.empty();
+        this.additionalInstanceConfiguration = Output.empty();
+        this.blockDeviceMappings = Output.empty();
+        this.components = Output.empty();
+        this.description = Output.empty();
+        this.name = Output.empty();
+        this.parentImage = Output.empty();
+        this.tags = Output.empty();
+        this.version = Output.empty();
+        this.workingDirectory = Output.empty();
     }
 
     public static Builder builder() {
@@ -160,15 +160,15 @@ public final class ImageRecipeArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<ImageRecipeAdditionalInstanceConfigurationArgs> additionalInstanceConfiguration;
-        private @Nullable Input<List<ImageRecipeInstanceBlockDeviceMappingArgs>> blockDeviceMappings;
-        private Input<List<ImageRecipeComponentConfigurationArgs>> components;
-        private @Nullable Input<String> description;
-        private @Nullable Input<String> name;
-        private Input<String> parentImage;
-        private @Nullable Input<Object> tags;
-        private Input<String> version;
-        private @Nullable Input<String> workingDirectory;
+        private @Nullable Output<ImageRecipeAdditionalInstanceConfigurationArgs> additionalInstanceConfiguration;
+        private @Nullable Output<List<ImageRecipeInstanceBlockDeviceMappingArgs>> blockDeviceMappings;
+        private Output<List<ImageRecipeComponentConfigurationArgs>> components;
+        private @Nullable Output<String> description;
+        private @Nullable Output<String> name;
+        private Output<String> parentImage;
+        private @Nullable Output<Object> tags;
+        private Output<String> version;
+        private @Nullable Output<String> workingDirectory;
 
         public Builder() {
     	      // Empty
@@ -187,93 +187,93 @@ public final class ImageRecipeArgs extends io.pulumi.resources.ResourceArgs {
     	      this.workingDirectory = defaults.workingDirectory;
         }
 
-        public Builder additionalInstanceConfiguration(@Nullable Input<ImageRecipeAdditionalInstanceConfigurationArgs> additionalInstanceConfiguration) {
+        public Builder additionalInstanceConfiguration(@Nullable Output<ImageRecipeAdditionalInstanceConfigurationArgs> additionalInstanceConfiguration) {
             this.additionalInstanceConfiguration = additionalInstanceConfiguration;
             return this;
         }
 
         public Builder additionalInstanceConfiguration(@Nullable ImageRecipeAdditionalInstanceConfigurationArgs additionalInstanceConfiguration) {
-            this.additionalInstanceConfiguration = Input.ofNullable(additionalInstanceConfiguration);
+            this.additionalInstanceConfiguration = Output.ofNullable(additionalInstanceConfiguration);
             return this;
         }
 
-        public Builder blockDeviceMappings(@Nullable Input<List<ImageRecipeInstanceBlockDeviceMappingArgs>> blockDeviceMappings) {
+        public Builder blockDeviceMappings(@Nullable Output<List<ImageRecipeInstanceBlockDeviceMappingArgs>> blockDeviceMappings) {
             this.blockDeviceMappings = blockDeviceMappings;
             return this;
         }
 
         public Builder blockDeviceMappings(@Nullable List<ImageRecipeInstanceBlockDeviceMappingArgs> blockDeviceMappings) {
-            this.blockDeviceMappings = Input.ofNullable(blockDeviceMappings);
+            this.blockDeviceMappings = Output.ofNullable(blockDeviceMappings);
             return this;
         }
 
-        public Builder components(Input<List<ImageRecipeComponentConfigurationArgs>> components) {
+        public Builder components(Output<List<ImageRecipeComponentConfigurationArgs>> components) {
             this.components = Objects.requireNonNull(components);
             return this;
         }
 
         public Builder components(List<ImageRecipeComponentConfigurationArgs> components) {
-            this.components = Input.of(Objects.requireNonNull(components));
+            this.components = Output.of(Objects.requireNonNull(components));
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder parentImage(Input<String> parentImage) {
+        public Builder parentImage(Output<String> parentImage) {
             this.parentImage = Objects.requireNonNull(parentImage);
             return this;
         }
 
         public Builder parentImage(String parentImage) {
-            this.parentImage = Input.of(Objects.requireNonNull(parentImage));
+            this.parentImage = Output.of(Objects.requireNonNull(parentImage));
             return this;
         }
 
-        public Builder tags(@Nullable Input<Object> tags) {
+        public Builder tags(@Nullable Output<Object> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Object tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder version(Input<String> version) {
+        public Builder version(Output<String> version) {
             this.version = Objects.requireNonNull(version);
             return this;
         }
 
         public Builder version(String version) {
-            this.version = Input.of(Objects.requireNonNull(version));
+            this.version = Output.of(Objects.requireNonNull(version));
             return this;
         }
 
-        public Builder workingDirectory(@Nullable Input<String> workingDirectory) {
+        public Builder workingDirectory(@Nullable Output<String> workingDirectory) {
             this.workingDirectory = workingDirectory;
             return this;
         }
 
         public Builder workingDirectory(@Nullable String workingDirectory) {
-            this.workingDirectory = Input.ofNullable(workingDirectory);
+            this.workingDirectory = Output.ofNullable(workingDirectory);
             return this;
         }
         public ImageRecipeArgs build() {

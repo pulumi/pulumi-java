@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.opsworks;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -20,10 +20,10 @@ public final class UserProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="allowSelfManagement")
-      private final @Nullable Input<Boolean> allowSelfManagement;
+      private final @Nullable Output<Boolean> allowSelfManagement;
 
-    public Input<Boolean> getAllowSelfManagement() {
-        return this.allowSelfManagement == null ? Input.empty() : this.allowSelfManagement;
+    public Output<Boolean> getAllowSelfManagement() {
+        return this.allowSelfManagement == null ? Output.empty() : this.allowSelfManagement;
     }
 
     /**
@@ -31,10 +31,10 @@ public final class UserProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sshPublicKey")
-      private final @Nullable Input<String> sshPublicKey;
+      private final @Nullable Output<String> sshPublicKey;
 
-    public Input<String> getSshPublicKey() {
-        return this.sshPublicKey == null ? Input.empty() : this.sshPublicKey;
+    public Output<String> getSshPublicKey() {
+        return this.sshPublicKey == null ? Output.empty() : this.sshPublicKey;
     }
 
     /**
@@ -42,9 +42,9 @@ public final class UserProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sshUsername", required=true)
-      private final Input<String> sshUsername;
+      private final Output<String> sshUsername;
 
-    public Input<String> getSshUsername() {
+    public Output<String> getSshUsername() {
         return this.sshUsername;
     }
 
@@ -53,17 +53,17 @@ public final class UserProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="userArn", required=true)
-      private final Input<String> userArn;
+      private final Output<String> userArn;
 
-    public Input<String> getUserArn() {
+    public Output<String> getUserArn() {
         return this.userArn;
     }
 
     public UserProfileArgs(
-        @Nullable Input<Boolean> allowSelfManagement,
-        @Nullable Input<String> sshPublicKey,
-        Input<String> sshUsername,
-        Input<String> userArn) {
+        @Nullable Output<Boolean> allowSelfManagement,
+        @Nullable Output<String> sshPublicKey,
+        Output<String> sshUsername,
+        Output<String> userArn) {
         this.allowSelfManagement = allowSelfManagement;
         this.sshPublicKey = sshPublicKey;
         this.sshUsername = Objects.requireNonNull(sshUsername, "expected parameter 'sshUsername' to be non-null");
@@ -71,10 +71,10 @@ public final class UserProfileArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private UserProfileArgs() {
-        this.allowSelfManagement = Input.empty();
-        this.sshPublicKey = Input.empty();
-        this.sshUsername = Input.empty();
-        this.userArn = Input.empty();
+        this.allowSelfManagement = Output.empty();
+        this.sshPublicKey = Output.empty();
+        this.sshUsername = Output.empty();
+        this.userArn = Output.empty();
     }
 
     public static Builder builder() {
@@ -86,10 +86,10 @@ public final class UserProfileArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> allowSelfManagement;
-        private @Nullable Input<String> sshPublicKey;
-        private Input<String> sshUsername;
-        private Input<String> userArn;
+        private @Nullable Output<Boolean> allowSelfManagement;
+        private @Nullable Output<String> sshPublicKey;
+        private Output<String> sshUsername;
+        private Output<String> userArn;
 
         public Builder() {
     	      // Empty
@@ -103,43 +103,43 @@ public final class UserProfileArgs extends io.pulumi.resources.ResourceArgs {
     	      this.userArn = defaults.userArn;
         }
 
-        public Builder allowSelfManagement(@Nullable Input<Boolean> allowSelfManagement) {
+        public Builder allowSelfManagement(@Nullable Output<Boolean> allowSelfManagement) {
             this.allowSelfManagement = allowSelfManagement;
             return this;
         }
 
         public Builder allowSelfManagement(@Nullable Boolean allowSelfManagement) {
-            this.allowSelfManagement = Input.ofNullable(allowSelfManagement);
+            this.allowSelfManagement = Output.ofNullable(allowSelfManagement);
             return this;
         }
 
-        public Builder sshPublicKey(@Nullable Input<String> sshPublicKey) {
+        public Builder sshPublicKey(@Nullable Output<String> sshPublicKey) {
             this.sshPublicKey = sshPublicKey;
             return this;
         }
 
         public Builder sshPublicKey(@Nullable String sshPublicKey) {
-            this.sshPublicKey = Input.ofNullable(sshPublicKey);
+            this.sshPublicKey = Output.ofNullable(sshPublicKey);
             return this;
         }
 
-        public Builder sshUsername(Input<String> sshUsername) {
+        public Builder sshUsername(Output<String> sshUsername) {
             this.sshUsername = Objects.requireNonNull(sshUsername);
             return this;
         }
 
         public Builder sshUsername(String sshUsername) {
-            this.sshUsername = Input.of(Objects.requireNonNull(sshUsername));
+            this.sshUsername = Output.of(Objects.requireNonNull(sshUsername));
             return this;
         }
 
-        public Builder userArn(Input<String> userArn) {
+        public Builder userArn(Output<String> userArn) {
             this.userArn = Objects.requireNonNull(userArn);
             return this;
         }
 
         public Builder userArn(String userArn) {
-            this.userArn = Input.of(Objects.requireNonNull(userArn));
+            this.userArn = Output.of(Objects.requireNonNull(userArn));
             return this;
         }
         public UserProfileArgs build() {

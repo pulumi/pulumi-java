@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.storage.inputs;
 
 import io.pulumi.azurenative.storage.inputs.SmbSettingArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,18 +23,18 @@ public final class ProtocolSettingsArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="smb")
-      private final @Nullable Input<SmbSettingArgs> smb;
+      private final @Nullable Output<SmbSettingArgs> smb;
 
-    public Input<SmbSettingArgs> getSmb() {
-        return this.smb == null ? Input.empty() : this.smb;
+    public Output<SmbSettingArgs> getSmb() {
+        return this.smb == null ? Output.empty() : this.smb;
     }
 
-    public ProtocolSettingsArgs(@Nullable Input<SmbSettingArgs> smb) {
+    public ProtocolSettingsArgs(@Nullable Output<SmbSettingArgs> smb) {
         this.smb = smb;
     }
 
     private ProtocolSettingsArgs() {
-        this.smb = Input.empty();
+        this.smb = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class ProtocolSettingsArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private @Nullable Input<SmbSettingArgs> smb;
+        private @Nullable Output<SmbSettingArgs> smb;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class ProtocolSettingsArgs extends io.pulumi.resources.ResourceArgs
     	      this.smb = defaults.smb;
         }
 
-        public Builder smb(@Nullable Input<SmbSettingArgs> smb) {
+        public Builder smb(@Nullable Output<SmbSettingArgs> smb) {
             this.smb = smb;
             return this;
         }
 
         public Builder smb(@Nullable SmbSettingArgs smb) {
-            this.smb = Input.ofNullable(smb);
+            this.smb = Output.ofNullable(smb);
             return this;
         }
         public ProtocolSettingsArgs build() {

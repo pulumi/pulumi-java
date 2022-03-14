@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.artifactregistry.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.artifactregistry.inputs.RepositoryIamMemberConditionGetArgs;
 import java.lang.String;
@@ -16,10 +16,10 @@ public final class RepositoryIamMemberState extends io.pulumi.resources.Resource
     public static final RepositoryIamMemberState Empty = new RepositoryIamMemberState();
 
     @InputImport(name="condition")
-      private final @Nullable Input<RepositoryIamMemberConditionGetArgs> condition;
+      private final @Nullable Output<RepositoryIamMemberConditionGetArgs> condition;
 
-    public Input<RepositoryIamMemberConditionGetArgs> getCondition() {
-        return this.condition == null ? Input.empty() : this.condition;
+    public Output<RepositoryIamMemberConditionGetArgs> getCondition() {
+        return this.condition == null ? Output.empty() : this.condition;
     }
 
     /**
@@ -27,10 +27,10 @@ public final class RepositoryIamMemberState extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="etag")
-      private final @Nullable Input<String> etag;
+      private final @Nullable Output<String> etag;
 
-    public Input<String> getEtag() {
-        return this.etag == null ? Input.empty() : this.etag;
+    public Output<String> getEtag() {
+        return this.etag == null ? Output.empty() : this.etag;
     }
 
     /**
@@ -39,17 +39,17 @@ public final class RepositoryIamMemberState extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     @InputImport(name="member")
-      private final @Nullable Input<String> member;
+      private final @Nullable Output<String> member;
 
-    public Input<String> getMember() {
-        return this.member == null ? Input.empty() : this.member;
+    public Output<String> getMember() {
+        return this.member == null ? Output.empty() : this.member;
     }
 
     /**
@@ -58,10 +58,10 @@ public final class RepositoryIamMemberState extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -69,10 +69,10 @@ public final class RepositoryIamMemberState extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="repository")
-      private final @Nullable Input<String> repository;
+      private final @Nullable Output<String> repository;
 
-    public Input<String> getRepository() {
-        return this.repository == null ? Input.empty() : this.repository;
+    public Output<String> getRepository() {
+        return this.repository == null ? Output.empty() : this.repository;
     }
 
     /**
@@ -82,20 +82,20 @@ public final class RepositoryIamMemberState extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="role")
-      private final @Nullable Input<String> role;
+      private final @Nullable Output<String> role;
 
-    public Input<String> getRole() {
-        return this.role == null ? Input.empty() : this.role;
+    public Output<String> getRole() {
+        return this.role == null ? Output.empty() : this.role;
     }
 
     public RepositoryIamMemberState(
-        @Nullable Input<RepositoryIamMemberConditionGetArgs> condition,
-        @Nullable Input<String> etag,
-        @Nullable Input<String> location,
-        @Nullable Input<String> member,
-        @Nullable Input<String> project,
-        @Nullable Input<String> repository,
-        @Nullable Input<String> role) {
+        @Nullable Output<RepositoryIamMemberConditionGetArgs> condition,
+        @Nullable Output<String> etag,
+        @Nullable Output<String> location,
+        @Nullable Output<String> member,
+        @Nullable Output<String> project,
+        @Nullable Output<String> repository,
+        @Nullable Output<String> role) {
         this.condition = condition;
         this.etag = etag;
         this.location = location;
@@ -106,13 +106,13 @@ public final class RepositoryIamMemberState extends io.pulumi.resources.Resource
     }
 
     private RepositoryIamMemberState() {
-        this.condition = Input.empty();
-        this.etag = Input.empty();
-        this.location = Input.empty();
-        this.member = Input.empty();
-        this.project = Input.empty();
-        this.repository = Input.empty();
-        this.role = Input.empty();
+        this.condition = Output.empty();
+        this.etag = Output.empty();
+        this.location = Output.empty();
+        this.member = Output.empty();
+        this.project = Output.empty();
+        this.repository = Output.empty();
+        this.role = Output.empty();
     }
 
     public static Builder builder() {
@@ -124,13 +124,13 @@ public final class RepositoryIamMemberState extends io.pulumi.resources.Resource
     }
 
     public static final class Builder {
-        private @Nullable Input<RepositoryIamMemberConditionGetArgs> condition;
-        private @Nullable Input<String> etag;
-        private @Nullable Input<String> location;
-        private @Nullable Input<String> member;
-        private @Nullable Input<String> project;
-        private @Nullable Input<String> repository;
-        private @Nullable Input<String> role;
+        private @Nullable Output<RepositoryIamMemberConditionGetArgs> condition;
+        private @Nullable Output<String> etag;
+        private @Nullable Output<String> location;
+        private @Nullable Output<String> member;
+        private @Nullable Output<String> project;
+        private @Nullable Output<String> repository;
+        private @Nullable Output<String> role;
 
         public Builder() {
     	      // Empty
@@ -147,73 +147,73 @@ public final class RepositoryIamMemberState extends io.pulumi.resources.Resource
     	      this.role = defaults.role;
         }
 
-        public Builder condition(@Nullable Input<RepositoryIamMemberConditionGetArgs> condition) {
+        public Builder condition(@Nullable Output<RepositoryIamMemberConditionGetArgs> condition) {
             this.condition = condition;
             return this;
         }
 
         public Builder condition(@Nullable RepositoryIamMemberConditionGetArgs condition) {
-            this.condition = Input.ofNullable(condition);
+            this.condition = Output.ofNullable(condition);
             return this;
         }
 
-        public Builder etag(@Nullable Input<String> etag) {
+        public Builder etag(@Nullable Output<String> etag) {
             this.etag = etag;
             return this;
         }
 
         public Builder etag(@Nullable String etag) {
-            this.etag = Input.ofNullable(etag);
+            this.etag = Output.ofNullable(etag);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder member(@Nullable Input<String> member) {
+        public Builder member(@Nullable Output<String> member) {
             this.member = member;
             return this;
         }
 
         public Builder member(@Nullable String member) {
-            this.member = Input.ofNullable(member);
+            this.member = Output.ofNullable(member);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder repository(@Nullable Input<String> repository) {
+        public Builder repository(@Nullable Output<String> repository) {
             this.repository = repository;
             return this;
         }
 
         public Builder repository(@Nullable String repository) {
-            this.repository = Input.ofNullable(repository);
+            this.repository = Output.ofNullable(repository);
             return this;
         }
 
-        public Builder role(@Nullable Input<String> role) {
+        public Builder role(@Nullable Output<String> role) {
             this.role = role;
             return this;
         }
 
         public Builder role(@Nullable String role) {
-            this.role = Input.ofNullable(role);
+            this.role = Output.ofNullable(role);
             return this;
         }
         public RepositoryIamMemberState build() {

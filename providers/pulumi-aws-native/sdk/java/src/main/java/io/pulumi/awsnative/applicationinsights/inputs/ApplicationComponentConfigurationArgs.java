@@ -5,7 +5,7 @@ package io.pulumi.awsnative.applicationinsights.inputs;
 
 import io.pulumi.awsnative.applicationinsights.inputs.ApplicationConfigurationDetailsArgs;
 import io.pulumi.awsnative.applicationinsights.inputs.ApplicationSubComponentTypeConfigurationArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
@@ -25,10 +25,10 @@ public final class ApplicationComponentConfigurationArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="configurationDetails")
-      private final @Nullable Input<ApplicationConfigurationDetailsArgs> configurationDetails;
+      private final @Nullable Output<ApplicationConfigurationDetailsArgs> configurationDetails;
 
-    public Input<ApplicationConfigurationDetailsArgs> getConfigurationDetails() {
-        return this.configurationDetails == null ? Input.empty() : this.configurationDetails;
+    public Output<ApplicationConfigurationDetailsArgs> getConfigurationDetails() {
+        return this.configurationDetails == null ? Output.empty() : this.configurationDetails;
     }
 
     /**
@@ -36,22 +36,22 @@ public final class ApplicationComponentConfigurationArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="subComponentTypeConfigurations")
-      private final @Nullable Input<List<ApplicationSubComponentTypeConfigurationArgs>> subComponentTypeConfigurations;
+      private final @Nullable Output<List<ApplicationSubComponentTypeConfigurationArgs>> subComponentTypeConfigurations;
 
-    public Input<List<ApplicationSubComponentTypeConfigurationArgs>> getSubComponentTypeConfigurations() {
-        return this.subComponentTypeConfigurations == null ? Input.empty() : this.subComponentTypeConfigurations;
+    public Output<List<ApplicationSubComponentTypeConfigurationArgs>> getSubComponentTypeConfigurations() {
+        return this.subComponentTypeConfigurations == null ? Output.empty() : this.subComponentTypeConfigurations;
     }
 
     public ApplicationComponentConfigurationArgs(
-        @Nullable Input<ApplicationConfigurationDetailsArgs> configurationDetails,
-        @Nullable Input<List<ApplicationSubComponentTypeConfigurationArgs>> subComponentTypeConfigurations) {
+        @Nullable Output<ApplicationConfigurationDetailsArgs> configurationDetails,
+        @Nullable Output<List<ApplicationSubComponentTypeConfigurationArgs>> subComponentTypeConfigurations) {
         this.configurationDetails = configurationDetails;
         this.subComponentTypeConfigurations = subComponentTypeConfigurations;
     }
 
     private ApplicationComponentConfigurationArgs() {
-        this.configurationDetails = Input.empty();
-        this.subComponentTypeConfigurations = Input.empty();
+        this.configurationDetails = Output.empty();
+        this.subComponentTypeConfigurations = Output.empty();
     }
 
     public static Builder builder() {
@@ -63,8 +63,8 @@ public final class ApplicationComponentConfigurationArgs extends io.pulumi.resou
     }
 
     public static final class Builder {
-        private @Nullable Input<ApplicationConfigurationDetailsArgs> configurationDetails;
-        private @Nullable Input<List<ApplicationSubComponentTypeConfigurationArgs>> subComponentTypeConfigurations;
+        private @Nullable Output<ApplicationConfigurationDetailsArgs> configurationDetails;
+        private @Nullable Output<List<ApplicationSubComponentTypeConfigurationArgs>> subComponentTypeConfigurations;
 
         public Builder() {
     	      // Empty
@@ -76,23 +76,23 @@ public final class ApplicationComponentConfigurationArgs extends io.pulumi.resou
     	      this.subComponentTypeConfigurations = defaults.subComponentTypeConfigurations;
         }
 
-        public Builder configurationDetails(@Nullable Input<ApplicationConfigurationDetailsArgs> configurationDetails) {
+        public Builder configurationDetails(@Nullable Output<ApplicationConfigurationDetailsArgs> configurationDetails) {
             this.configurationDetails = configurationDetails;
             return this;
         }
 
         public Builder configurationDetails(@Nullable ApplicationConfigurationDetailsArgs configurationDetails) {
-            this.configurationDetails = Input.ofNullable(configurationDetails);
+            this.configurationDetails = Output.ofNullable(configurationDetails);
             return this;
         }
 
-        public Builder subComponentTypeConfigurations(@Nullable Input<List<ApplicationSubComponentTypeConfigurationArgs>> subComponentTypeConfigurations) {
+        public Builder subComponentTypeConfigurations(@Nullable Output<List<ApplicationSubComponentTypeConfigurationArgs>> subComponentTypeConfigurations) {
             this.subComponentTypeConfigurations = subComponentTypeConfigurations;
             return this;
         }
 
         public Builder subComponentTypeConfigurations(@Nullable List<ApplicationSubComponentTypeConfigurationArgs> subComponentTypeConfigurations) {
-            this.subComponentTypeConfigurations = Input.ofNullable(subComponentTypeConfigurations);
+            this.subComponentTypeConfigurations = Output.ofNullable(subComponentTypeConfigurations);
             return this;
         }
         public ApplicationComponentConfigurationArgs build() {

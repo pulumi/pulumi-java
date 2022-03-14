@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.bigquerydatatransfer_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class EmailPreferencesArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="enableFailureEmail")
-      private final @Nullable Input<Boolean> enableFailureEmail;
+      private final @Nullable Output<Boolean> enableFailureEmail;
 
-    public Input<Boolean> getEnableFailureEmail() {
-        return this.enableFailureEmail == null ? Input.empty() : this.enableFailureEmail;
+    public Output<Boolean> getEnableFailureEmail() {
+        return this.enableFailureEmail == null ? Output.empty() : this.enableFailureEmail;
     }
 
-    public EmailPreferencesArgs(@Nullable Input<Boolean> enableFailureEmail) {
+    public EmailPreferencesArgs(@Nullable Output<Boolean> enableFailureEmail) {
         this.enableFailureEmail = enableFailureEmail;
     }
 
     private EmailPreferencesArgs() {
-        this.enableFailureEmail = Input.empty();
+        this.enableFailureEmail = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class EmailPreferencesArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> enableFailureEmail;
+        private @Nullable Output<Boolean> enableFailureEmail;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class EmailPreferencesArgs extends io.pulumi.resources.ResourceArgs
     	      this.enableFailureEmail = defaults.enableFailureEmail;
         }
 
-        public Builder enableFailureEmail(@Nullable Input<Boolean> enableFailureEmail) {
+        public Builder enableFailureEmail(@Nullable Output<Boolean> enableFailureEmail) {
             this.enableFailureEmail = enableFailureEmail;
             return this;
         }
 
         public Builder enableFailureEmail(@Nullable Boolean enableFailureEmail) {
-            this.enableFailureEmail = Input.ofNullable(enableFailureEmail);
+            this.enableFailureEmail = Output.ofNullable(enableFailureEmail);
             return this;
         }
         public EmailPreferencesArgs build() {

@@ -9,7 +9,7 @@ import io.pulumi.azurenative.network.enums.IsGlobal;
 import io.pulumi.azurenative.network.inputs.ConnectivityGroupItemArgs;
 import io.pulumi.azurenative.network.inputs.HubArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -26,10 +26,10 @@ public final class ConnectivityConfigurationArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="appliesToGroups")
-      private final @Nullable Input<List<ConnectivityGroupItemArgs>> appliesToGroups;
+      private final @Nullable Output<List<ConnectivityGroupItemArgs>> appliesToGroups;
 
-    public Input<List<ConnectivityGroupItemArgs>> getAppliesToGroups() {
-        return this.appliesToGroups == null ? Input.empty() : this.appliesToGroups;
+    public Output<List<ConnectivityGroupItemArgs>> getAppliesToGroups() {
+        return this.appliesToGroups == null ? Output.empty() : this.appliesToGroups;
     }
 
     /**
@@ -37,10 +37,10 @@ public final class ConnectivityConfigurationArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="configurationName")
-      private final @Nullable Input<String> configurationName;
+      private final @Nullable Output<String> configurationName;
 
-    public Input<String> getConfigurationName() {
-        return this.configurationName == null ? Input.empty() : this.configurationName;
+    public Output<String> getConfigurationName() {
+        return this.configurationName == null ? Output.empty() : this.configurationName;
     }
 
     /**
@@ -48,9 +48,9 @@ public final class ConnectivityConfigurationArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="connectivityTopology", required=true)
-      private final Input<Either<String,ConnectivityTopology>> connectivityTopology;
+      private final Output<Either<String,ConnectivityTopology>> connectivityTopology;
 
-    public Input<Either<String,ConnectivityTopology>> getConnectivityTopology() {
+    public Output<Either<String,ConnectivityTopology>> getConnectivityTopology() {
         return this.connectivityTopology;
     }
 
@@ -59,10 +59,10 @@ public final class ConnectivityConfigurationArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="deleteExistingPeering")
-      private final @Nullable Input<Either<String,DeleteExistingPeering>> deleteExistingPeering;
+      private final @Nullable Output<Either<String,DeleteExistingPeering>> deleteExistingPeering;
 
-    public Input<Either<String,DeleteExistingPeering>> getDeleteExistingPeering() {
-        return this.deleteExistingPeering == null ? Input.empty() : this.deleteExistingPeering;
+    public Output<Either<String,DeleteExistingPeering>> getDeleteExistingPeering() {
+        return this.deleteExistingPeering == null ? Output.empty() : this.deleteExistingPeering;
     }
 
     /**
@@ -70,10 +70,10 @@ public final class ConnectivityConfigurationArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -81,10 +81,10 @@ public final class ConnectivityConfigurationArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="displayName")
-      private final @Nullable Input<String> displayName;
+      private final @Nullable Output<String> displayName;
 
-    public Input<String> getDisplayName() {
-        return this.displayName == null ? Input.empty() : this.displayName;
+    public Output<String> getDisplayName() {
+        return this.displayName == null ? Output.empty() : this.displayName;
     }
 
     /**
@@ -92,10 +92,10 @@ public final class ConnectivityConfigurationArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="hubs")
-      private final @Nullable Input<List<HubArgs>> hubs;
+      private final @Nullable Output<List<HubArgs>> hubs;
 
-    public Input<List<HubArgs>> getHubs() {
-        return this.hubs == null ? Input.empty() : this.hubs;
+    public Output<List<HubArgs>> getHubs() {
+        return this.hubs == null ? Output.empty() : this.hubs;
     }
 
     /**
@@ -103,10 +103,10 @@ public final class ConnectivityConfigurationArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="isGlobal")
-      private final @Nullable Input<Either<String,IsGlobal>> isGlobal;
+      private final @Nullable Output<Either<String,IsGlobal>> isGlobal;
 
-    public Input<Either<String,IsGlobal>> getIsGlobal() {
-        return this.isGlobal == null ? Input.empty() : this.isGlobal;
+    public Output<Either<String,IsGlobal>> getIsGlobal() {
+        return this.isGlobal == null ? Output.empty() : this.isGlobal;
     }
 
     /**
@@ -114,9 +114,9 @@ public final class ConnectivityConfigurationArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="networkManagerName", required=true)
-      private final Input<String> networkManagerName;
+      private final Output<String> networkManagerName;
 
-    public Input<String> getNetworkManagerName() {
+    public Output<String> getNetworkManagerName() {
         return this.networkManagerName;
     }
 
@@ -125,23 +125,23 @@ public final class ConnectivityConfigurationArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
     public ConnectivityConfigurationArgs(
-        @Nullable Input<List<ConnectivityGroupItemArgs>> appliesToGroups,
-        @Nullable Input<String> configurationName,
-        Input<Either<String,ConnectivityTopology>> connectivityTopology,
-        @Nullable Input<Either<String,DeleteExistingPeering>> deleteExistingPeering,
-        @Nullable Input<String> description,
-        @Nullable Input<String> displayName,
-        @Nullable Input<List<HubArgs>> hubs,
-        @Nullable Input<Either<String,IsGlobal>> isGlobal,
-        Input<String> networkManagerName,
-        Input<String> resourceGroupName) {
+        @Nullable Output<List<ConnectivityGroupItemArgs>> appliesToGroups,
+        @Nullable Output<String> configurationName,
+        Output<Either<String,ConnectivityTopology>> connectivityTopology,
+        @Nullable Output<Either<String,DeleteExistingPeering>> deleteExistingPeering,
+        @Nullable Output<String> description,
+        @Nullable Output<String> displayName,
+        @Nullable Output<List<HubArgs>> hubs,
+        @Nullable Output<Either<String,IsGlobal>> isGlobal,
+        Output<String> networkManagerName,
+        Output<String> resourceGroupName) {
         this.appliesToGroups = appliesToGroups;
         this.configurationName = configurationName;
         this.connectivityTopology = Objects.requireNonNull(connectivityTopology, "expected parameter 'connectivityTopology' to be non-null");
@@ -155,16 +155,16 @@ public final class ConnectivityConfigurationArgs extends io.pulumi.resources.Res
     }
 
     private ConnectivityConfigurationArgs() {
-        this.appliesToGroups = Input.empty();
-        this.configurationName = Input.empty();
-        this.connectivityTopology = Input.empty();
-        this.deleteExistingPeering = Input.empty();
-        this.description = Input.empty();
-        this.displayName = Input.empty();
-        this.hubs = Input.empty();
-        this.isGlobal = Input.empty();
-        this.networkManagerName = Input.empty();
-        this.resourceGroupName = Input.empty();
+        this.appliesToGroups = Output.empty();
+        this.configurationName = Output.empty();
+        this.connectivityTopology = Output.empty();
+        this.deleteExistingPeering = Output.empty();
+        this.description = Output.empty();
+        this.displayName = Output.empty();
+        this.hubs = Output.empty();
+        this.isGlobal = Output.empty();
+        this.networkManagerName = Output.empty();
+        this.resourceGroupName = Output.empty();
     }
 
     public static Builder builder() {
@@ -176,16 +176,16 @@ public final class ConnectivityConfigurationArgs extends io.pulumi.resources.Res
     }
 
     public static final class Builder {
-        private @Nullable Input<List<ConnectivityGroupItemArgs>> appliesToGroups;
-        private @Nullable Input<String> configurationName;
-        private Input<Either<String,ConnectivityTopology>> connectivityTopology;
-        private @Nullable Input<Either<String,DeleteExistingPeering>> deleteExistingPeering;
-        private @Nullable Input<String> description;
-        private @Nullable Input<String> displayName;
-        private @Nullable Input<List<HubArgs>> hubs;
-        private @Nullable Input<Either<String,IsGlobal>> isGlobal;
-        private Input<String> networkManagerName;
-        private Input<String> resourceGroupName;
+        private @Nullable Output<List<ConnectivityGroupItemArgs>> appliesToGroups;
+        private @Nullable Output<String> configurationName;
+        private Output<Either<String,ConnectivityTopology>> connectivityTopology;
+        private @Nullable Output<Either<String,DeleteExistingPeering>> deleteExistingPeering;
+        private @Nullable Output<String> description;
+        private @Nullable Output<String> displayName;
+        private @Nullable Output<List<HubArgs>> hubs;
+        private @Nullable Output<Either<String,IsGlobal>> isGlobal;
+        private Output<String> networkManagerName;
+        private Output<String> resourceGroupName;
 
         public Builder() {
     	      // Empty
@@ -205,103 +205,103 @@ public final class ConnectivityConfigurationArgs extends io.pulumi.resources.Res
     	      this.resourceGroupName = defaults.resourceGroupName;
         }
 
-        public Builder appliesToGroups(@Nullable Input<List<ConnectivityGroupItemArgs>> appliesToGroups) {
+        public Builder appliesToGroups(@Nullable Output<List<ConnectivityGroupItemArgs>> appliesToGroups) {
             this.appliesToGroups = appliesToGroups;
             return this;
         }
 
         public Builder appliesToGroups(@Nullable List<ConnectivityGroupItemArgs> appliesToGroups) {
-            this.appliesToGroups = Input.ofNullable(appliesToGroups);
+            this.appliesToGroups = Output.ofNullable(appliesToGroups);
             return this;
         }
 
-        public Builder configurationName(@Nullable Input<String> configurationName) {
+        public Builder configurationName(@Nullable Output<String> configurationName) {
             this.configurationName = configurationName;
             return this;
         }
 
         public Builder configurationName(@Nullable String configurationName) {
-            this.configurationName = Input.ofNullable(configurationName);
+            this.configurationName = Output.ofNullable(configurationName);
             return this;
         }
 
-        public Builder connectivityTopology(Input<Either<String,ConnectivityTopology>> connectivityTopology) {
+        public Builder connectivityTopology(Output<Either<String,ConnectivityTopology>> connectivityTopology) {
             this.connectivityTopology = Objects.requireNonNull(connectivityTopology);
             return this;
         }
 
         public Builder connectivityTopology(Either<String,ConnectivityTopology> connectivityTopology) {
-            this.connectivityTopology = Input.of(Objects.requireNonNull(connectivityTopology));
+            this.connectivityTopology = Output.of(Objects.requireNonNull(connectivityTopology));
             return this;
         }
 
-        public Builder deleteExistingPeering(@Nullable Input<Either<String,DeleteExistingPeering>> deleteExistingPeering) {
+        public Builder deleteExistingPeering(@Nullable Output<Either<String,DeleteExistingPeering>> deleteExistingPeering) {
             this.deleteExistingPeering = deleteExistingPeering;
             return this;
         }
 
         public Builder deleteExistingPeering(@Nullable Either<String,DeleteExistingPeering> deleteExistingPeering) {
-            this.deleteExistingPeering = Input.ofNullable(deleteExistingPeering);
+            this.deleteExistingPeering = Output.ofNullable(deleteExistingPeering);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder displayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Input.ofNullable(displayName);
+            this.displayName = Output.ofNullable(displayName);
             return this;
         }
 
-        public Builder hubs(@Nullable Input<List<HubArgs>> hubs) {
+        public Builder hubs(@Nullable Output<List<HubArgs>> hubs) {
             this.hubs = hubs;
             return this;
         }
 
         public Builder hubs(@Nullable List<HubArgs> hubs) {
-            this.hubs = Input.ofNullable(hubs);
+            this.hubs = Output.ofNullable(hubs);
             return this;
         }
 
-        public Builder isGlobal(@Nullable Input<Either<String,IsGlobal>> isGlobal) {
+        public Builder isGlobal(@Nullable Output<Either<String,IsGlobal>> isGlobal) {
             this.isGlobal = isGlobal;
             return this;
         }
 
         public Builder isGlobal(@Nullable Either<String,IsGlobal> isGlobal) {
-            this.isGlobal = Input.ofNullable(isGlobal);
+            this.isGlobal = Output.ofNullable(isGlobal);
             return this;
         }
 
-        public Builder networkManagerName(Input<String> networkManagerName) {
+        public Builder networkManagerName(Output<String> networkManagerName) {
             this.networkManagerName = Objects.requireNonNull(networkManagerName);
             return this;
         }
 
         public Builder networkManagerName(String networkManagerName) {
-            this.networkManagerName = Input.of(Objects.requireNonNull(networkManagerName));
+            this.networkManagerName = Output.of(Objects.requireNonNull(networkManagerName));
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
         public ConnectivityConfigurationArgs build() {

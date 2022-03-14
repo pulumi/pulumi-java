@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.iam;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -18,9 +18,9 @@ public final class UserPolicyAttachmentArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="policyArn", required=true)
-      private final Input<String> policyArn;
+      private final Output<String> policyArn;
 
-    public Input<String> getPolicyArn() {
+    public Output<String> getPolicyArn() {
         return this.policyArn;
     }
 
@@ -29,22 +29,22 @@ public final class UserPolicyAttachmentArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="user", required=true)
-      private final Input<String> user;
+      private final Output<String> user;
 
-    public Input<String> getUser() {
+    public Output<String> getUser() {
         return this.user;
     }
 
     public UserPolicyAttachmentArgs(
-        Input<String> policyArn,
-        Input<String> user) {
+        Output<String> policyArn,
+        Output<String> user) {
         this.policyArn = Objects.requireNonNull(policyArn, "expected parameter 'policyArn' to be non-null");
         this.user = Objects.requireNonNull(user, "expected parameter 'user' to be non-null");
     }
 
     private UserPolicyAttachmentArgs() {
-        this.policyArn = Input.empty();
-        this.user = Input.empty();
+        this.policyArn = Output.empty();
+        this.user = Output.empty();
     }
 
     public static Builder builder() {
@@ -56,8 +56,8 @@ public final class UserPolicyAttachmentArgs extends io.pulumi.resources.Resource
     }
 
     public static final class Builder {
-        private Input<String> policyArn;
-        private Input<String> user;
+        private Output<String> policyArn;
+        private Output<String> user;
 
         public Builder() {
     	      // Empty
@@ -69,17 +69,17 @@ public final class UserPolicyAttachmentArgs extends io.pulumi.resources.Resource
     	      this.user = defaults.user;
         }
 
-        public Builder policyArn(Input<String> policyArn) {
+        public Builder policyArn(Output<String> policyArn) {
             this.policyArn = Objects.requireNonNull(policyArn);
             return this;
         }
 
         public Builder policyArn(String policyArn) {
-            this.policyArn = Input.of(Objects.requireNonNull(policyArn));
+            this.policyArn = Output.of(Objects.requireNonNull(policyArn));
             return this;
         }
 
-        public Builder user(Input<String> user) {
+        public Builder user(Output<String> user) {
             this.user = Objects.requireNonNull(user);
             return this;
         }

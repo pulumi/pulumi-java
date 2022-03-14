@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.projects.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -21,10 +21,10 @@ public final class IAMCustomRoleState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="deleted")
-      private final @Nullable Input<Boolean> deleted;
+      private final @Nullable Output<Boolean> deleted;
 
-    public Input<Boolean> getDeleted() {
-        return this.deleted == null ? Input.empty() : this.deleted;
+    public Output<Boolean> getDeleted() {
+        return this.deleted == null ? Output.empty() : this.deleted;
     }
 
     /**
@@ -32,10 +32,10 @@ public final class IAMCustomRoleState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -43,10 +43,10 @@ public final class IAMCustomRoleState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -54,10 +54,10 @@ public final class IAMCustomRoleState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="permissions")
-      private final @Nullable Input<List<String>> permissions;
+      private final @Nullable Output<List<String>> permissions;
 
-    public Input<List<String>> getPermissions() {
-        return this.permissions == null ? Input.empty() : this.permissions;
+    public Output<List<String>> getPermissions() {
+        return this.permissions == null ? Output.empty() : this.permissions;
     }
 
     /**
@@ -66,10 +66,10 @@ public final class IAMCustomRoleState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -77,10 +77,10 @@ public final class IAMCustomRoleState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="roleId")
-      private final @Nullable Input<String> roleId;
+      private final @Nullable Output<String> roleId;
 
-    public Input<String> getRoleId() {
-        return this.roleId == null ? Input.empty() : this.roleId;
+    public Output<String> getRoleId() {
+        return this.roleId == null ? Output.empty() : this.roleId;
     }
 
     /**
@@ -90,10 +90,10 @@ public final class IAMCustomRoleState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="stage")
-      private final @Nullable Input<String> stage;
+      private final @Nullable Output<String> stage;
 
-    public Input<String> getStage() {
-        return this.stage == null ? Input.empty() : this.stage;
+    public Output<String> getStage() {
+        return this.stage == null ? Output.empty() : this.stage;
     }
 
     /**
@@ -101,21 +101,21 @@ public final class IAMCustomRoleState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="title")
-      private final @Nullable Input<String> title;
+      private final @Nullable Output<String> title;
 
-    public Input<String> getTitle() {
-        return this.title == null ? Input.empty() : this.title;
+    public Output<String> getTitle() {
+        return this.title == null ? Output.empty() : this.title;
     }
 
     public IAMCustomRoleState(
-        @Nullable Input<Boolean> deleted,
-        @Nullable Input<String> description,
-        @Nullable Input<String> name,
-        @Nullable Input<List<String>> permissions,
-        @Nullable Input<String> project,
-        @Nullable Input<String> roleId,
-        @Nullable Input<String> stage,
-        @Nullable Input<String> title) {
+        @Nullable Output<Boolean> deleted,
+        @Nullable Output<String> description,
+        @Nullable Output<String> name,
+        @Nullable Output<List<String>> permissions,
+        @Nullable Output<String> project,
+        @Nullable Output<String> roleId,
+        @Nullable Output<String> stage,
+        @Nullable Output<String> title) {
         this.deleted = deleted;
         this.description = description;
         this.name = name;
@@ -127,14 +127,14 @@ public final class IAMCustomRoleState extends io.pulumi.resources.ResourceArgs {
     }
 
     private IAMCustomRoleState() {
-        this.deleted = Input.empty();
-        this.description = Input.empty();
-        this.name = Input.empty();
-        this.permissions = Input.empty();
-        this.project = Input.empty();
-        this.roleId = Input.empty();
-        this.stage = Input.empty();
-        this.title = Input.empty();
+        this.deleted = Output.empty();
+        this.description = Output.empty();
+        this.name = Output.empty();
+        this.permissions = Output.empty();
+        this.project = Output.empty();
+        this.roleId = Output.empty();
+        this.stage = Output.empty();
+        this.title = Output.empty();
     }
 
     public static Builder builder() {
@@ -146,14 +146,14 @@ public final class IAMCustomRoleState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> deleted;
-        private @Nullable Input<String> description;
-        private @Nullable Input<String> name;
-        private @Nullable Input<List<String>> permissions;
-        private @Nullable Input<String> project;
-        private @Nullable Input<String> roleId;
-        private @Nullable Input<String> stage;
-        private @Nullable Input<String> title;
+        private @Nullable Output<Boolean> deleted;
+        private @Nullable Output<String> description;
+        private @Nullable Output<String> name;
+        private @Nullable Output<List<String>> permissions;
+        private @Nullable Output<String> project;
+        private @Nullable Output<String> roleId;
+        private @Nullable Output<String> stage;
+        private @Nullable Output<String> title;
 
         public Builder() {
     	      // Empty
@@ -171,83 +171,83 @@ public final class IAMCustomRoleState extends io.pulumi.resources.ResourceArgs {
     	      this.title = defaults.title;
         }
 
-        public Builder deleted(@Nullable Input<Boolean> deleted) {
+        public Builder deleted(@Nullable Output<Boolean> deleted) {
             this.deleted = deleted;
             return this;
         }
 
         public Builder deleted(@Nullable Boolean deleted) {
-            this.deleted = Input.ofNullable(deleted);
+            this.deleted = Output.ofNullable(deleted);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder permissions(@Nullable Input<List<String>> permissions) {
+        public Builder permissions(@Nullable Output<List<String>> permissions) {
             this.permissions = permissions;
             return this;
         }
 
         public Builder permissions(@Nullable List<String> permissions) {
-            this.permissions = Input.ofNullable(permissions);
+            this.permissions = Output.ofNullable(permissions);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder roleId(@Nullable Input<String> roleId) {
+        public Builder roleId(@Nullable Output<String> roleId) {
             this.roleId = roleId;
             return this;
         }
 
         public Builder roleId(@Nullable String roleId) {
-            this.roleId = Input.ofNullable(roleId);
+            this.roleId = Output.ofNullable(roleId);
             return this;
         }
 
-        public Builder stage(@Nullable Input<String> stage) {
+        public Builder stage(@Nullable Output<String> stage) {
             this.stage = stage;
             return this;
         }
 
         public Builder stage(@Nullable String stage) {
-            this.stage = Input.ofNullable(stage);
+            this.stage = Output.ofNullable(stage);
             return this;
         }
 
-        public Builder title(@Nullable Input<String> title) {
+        public Builder title(@Nullable Output<String> title) {
             this.title = title;
             return this;
         }
 
         public Builder title(@Nullable String title) {
-            this.title = Input.ofNullable(title);
+            this.title = Output.ofNullable(title);
             return this;
         }
         public IAMCustomRoleState build() {

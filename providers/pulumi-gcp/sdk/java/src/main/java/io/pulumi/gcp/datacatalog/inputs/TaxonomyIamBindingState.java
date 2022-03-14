@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.datacatalog.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.datacatalog.inputs.TaxonomyIamBindingConditionGetArgs;
 import java.lang.String;
@@ -17,10 +17,10 @@ public final class TaxonomyIamBindingState extends io.pulumi.resources.ResourceA
     public static final TaxonomyIamBindingState Empty = new TaxonomyIamBindingState();
 
     @InputImport(name="condition")
-      private final @Nullable Input<TaxonomyIamBindingConditionGetArgs> condition;
+      private final @Nullable Output<TaxonomyIamBindingConditionGetArgs> condition;
 
-    public Input<TaxonomyIamBindingConditionGetArgs> getCondition() {
-        return this.condition == null ? Input.empty() : this.condition;
+    public Output<TaxonomyIamBindingConditionGetArgs> getCondition() {
+        return this.condition == null ? Output.empty() : this.condition;
     }
 
     /**
@@ -28,17 +28,17 @@ public final class TaxonomyIamBindingState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="etag")
-      private final @Nullable Input<String> etag;
+      private final @Nullable Output<String> etag;
 
-    public Input<String> getEtag() {
-        return this.etag == null ? Input.empty() : this.etag;
+    public Output<String> getEtag() {
+        return this.etag == null ? Output.empty() : this.etag;
     }
 
     @InputImport(name="members")
-      private final @Nullable Input<List<String>> members;
+      private final @Nullable Output<List<String>> members;
 
-    public Input<List<String>> getMembers() {
-        return this.members == null ? Input.empty() : this.members;
+    public Output<List<String>> getMembers() {
+        return this.members == null ? Output.empty() : this.members;
     }
 
     /**
@@ -47,17 +47,17 @@ public final class TaxonomyIamBindingState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     @InputImport(name="region")
-      private final @Nullable Input<String> region;
+      private final @Nullable Output<String> region;
 
-    public Input<String> getRegion() {
-        return this.region == null ? Input.empty() : this.region;
+    public Output<String> getRegion() {
+        return this.region == null ? Output.empty() : this.region;
     }
 
     /**
@@ -67,10 +67,10 @@ public final class TaxonomyIamBindingState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="role")
-      private final @Nullable Input<String> role;
+      private final @Nullable Output<String> role;
 
-    public Input<String> getRole() {
-        return this.role == null ? Input.empty() : this.role;
+    public Output<String> getRole() {
+        return this.role == null ? Output.empty() : this.role;
     }
 
     /**
@@ -78,20 +78,20 @@ public final class TaxonomyIamBindingState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="taxonomy")
-      private final @Nullable Input<String> taxonomy;
+      private final @Nullable Output<String> taxonomy;
 
-    public Input<String> getTaxonomy() {
-        return this.taxonomy == null ? Input.empty() : this.taxonomy;
+    public Output<String> getTaxonomy() {
+        return this.taxonomy == null ? Output.empty() : this.taxonomy;
     }
 
     public TaxonomyIamBindingState(
-        @Nullable Input<TaxonomyIamBindingConditionGetArgs> condition,
-        @Nullable Input<String> etag,
-        @Nullable Input<List<String>> members,
-        @Nullable Input<String> project,
-        @Nullable Input<String> region,
-        @Nullable Input<String> role,
-        @Nullable Input<String> taxonomy) {
+        @Nullable Output<TaxonomyIamBindingConditionGetArgs> condition,
+        @Nullable Output<String> etag,
+        @Nullable Output<List<String>> members,
+        @Nullable Output<String> project,
+        @Nullable Output<String> region,
+        @Nullable Output<String> role,
+        @Nullable Output<String> taxonomy) {
         this.condition = condition;
         this.etag = etag;
         this.members = members;
@@ -102,13 +102,13 @@ public final class TaxonomyIamBindingState extends io.pulumi.resources.ResourceA
     }
 
     private TaxonomyIamBindingState() {
-        this.condition = Input.empty();
-        this.etag = Input.empty();
-        this.members = Input.empty();
-        this.project = Input.empty();
-        this.region = Input.empty();
-        this.role = Input.empty();
-        this.taxonomy = Input.empty();
+        this.condition = Output.empty();
+        this.etag = Output.empty();
+        this.members = Output.empty();
+        this.project = Output.empty();
+        this.region = Output.empty();
+        this.role = Output.empty();
+        this.taxonomy = Output.empty();
     }
 
     public static Builder builder() {
@@ -120,13 +120,13 @@ public final class TaxonomyIamBindingState extends io.pulumi.resources.ResourceA
     }
 
     public static final class Builder {
-        private @Nullable Input<TaxonomyIamBindingConditionGetArgs> condition;
-        private @Nullable Input<String> etag;
-        private @Nullable Input<List<String>> members;
-        private @Nullable Input<String> project;
-        private @Nullable Input<String> region;
-        private @Nullable Input<String> role;
-        private @Nullable Input<String> taxonomy;
+        private @Nullable Output<TaxonomyIamBindingConditionGetArgs> condition;
+        private @Nullable Output<String> etag;
+        private @Nullable Output<List<String>> members;
+        private @Nullable Output<String> project;
+        private @Nullable Output<String> region;
+        private @Nullable Output<String> role;
+        private @Nullable Output<String> taxonomy;
 
         public Builder() {
     	      // Empty
@@ -143,73 +143,73 @@ public final class TaxonomyIamBindingState extends io.pulumi.resources.ResourceA
     	      this.taxonomy = defaults.taxonomy;
         }
 
-        public Builder condition(@Nullable Input<TaxonomyIamBindingConditionGetArgs> condition) {
+        public Builder condition(@Nullable Output<TaxonomyIamBindingConditionGetArgs> condition) {
             this.condition = condition;
             return this;
         }
 
         public Builder condition(@Nullable TaxonomyIamBindingConditionGetArgs condition) {
-            this.condition = Input.ofNullable(condition);
+            this.condition = Output.ofNullable(condition);
             return this;
         }
 
-        public Builder etag(@Nullable Input<String> etag) {
+        public Builder etag(@Nullable Output<String> etag) {
             this.etag = etag;
             return this;
         }
 
         public Builder etag(@Nullable String etag) {
-            this.etag = Input.ofNullable(etag);
+            this.etag = Output.ofNullable(etag);
             return this;
         }
 
-        public Builder members(@Nullable Input<List<String>> members) {
+        public Builder members(@Nullable Output<List<String>> members) {
             this.members = members;
             return this;
         }
 
         public Builder members(@Nullable List<String> members) {
-            this.members = Input.ofNullable(members);
+            this.members = Output.ofNullable(members);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder region(@Nullable Input<String> region) {
+        public Builder region(@Nullable Output<String> region) {
             this.region = region;
             return this;
         }
 
         public Builder region(@Nullable String region) {
-            this.region = Input.ofNullable(region);
+            this.region = Output.ofNullable(region);
             return this;
         }
 
-        public Builder role(@Nullable Input<String> role) {
+        public Builder role(@Nullable Output<String> role) {
             this.role = role;
             return this;
         }
 
         public Builder role(@Nullable String role) {
-            this.role = Input.ofNullable(role);
+            this.role = Output.ofNullable(role);
             return this;
         }
 
-        public Builder taxonomy(@Nullable Input<String> taxonomy) {
+        public Builder taxonomy(@Nullable Output<String> taxonomy) {
             this.taxonomy = taxonomy;
             return this;
         }
 
         public Builder taxonomy(@Nullable String taxonomy) {
-            this.taxonomy = Input.ofNullable(taxonomy);
+            this.taxonomy = Output.ofNullable(taxonomy);
             return this;
         }
         public TaxonomyIamBindingState build() {

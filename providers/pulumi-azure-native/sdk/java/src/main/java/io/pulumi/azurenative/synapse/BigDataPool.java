@@ -11,7 +11,6 @@ import io.pulumi.azurenative.synapse.outputs.DynamicExecutorAllocationResponse;
 import io.pulumi.azurenative.synapse.outputs.LibraryInfoResponse;
 import io.pulumi.azurenative.synapse.outputs.LibraryRequirementsResponse;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -386,24 +385,24 @@ public class BigDataPool extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public BigDataPool(String name, BigDataPoolArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:synapse:BigDataPool", name, args == null ? BigDataPoolArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("azure-native:synapse:BigDataPool", name, args == null ? BigDataPoolArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private BigDataPool(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private BigDataPool(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:synapse:BigDataPool", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:synapse/v20190601preview:BigDataPool").build()),
-                Input.of(Alias.builder().setType("azure-native:synapse/v20201201:BigDataPool").build()),
-                Input.of(Alias.builder().setType("azure-native:synapse/v20210301:BigDataPool").build()),
-                Input.of(Alias.builder().setType("azure-native:synapse/v20210401preview:BigDataPool").build()),
-                Input.of(Alias.builder().setType("azure-native:synapse/v20210501:BigDataPool").build()),
-                Input.of(Alias.builder().setType("azure-native:synapse/v20210601:BigDataPool").build()),
-                Input.of(Alias.builder().setType("azure-native:synapse/v20210601preview:BigDataPool").build())
+                Output.of(Alias.builder().setType("azure-native:synapse/v20190601preview:BigDataPool").build()),
+                Output.of(Alias.builder().setType("azure-native:synapse/v20201201:BigDataPool").build()),
+                Output.of(Alias.builder().setType("azure-native:synapse/v20210301:BigDataPool").build()),
+                Output.of(Alias.builder().setType("azure-native:synapse/v20210401preview:BigDataPool").build()),
+                Output.of(Alias.builder().setType("azure-native:synapse/v20210501:BigDataPool").build()),
+                Output.of(Alias.builder().setType("azure-native:synapse/v20210601:BigDataPool").build()),
+                Output.of(Alias.builder().setType("azure-native:synapse/v20210601preview:BigDataPool").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -417,7 +416,7 @@ public class BigDataPool extends io.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static BigDataPool get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static BigDataPool get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new BigDataPool(name, id, options);
     }
 }

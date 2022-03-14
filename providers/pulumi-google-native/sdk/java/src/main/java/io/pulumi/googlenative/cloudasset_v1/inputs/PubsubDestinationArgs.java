@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudasset_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class PubsubDestinationArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="topic")
-      private final @Nullable Input<String> topic;
+      private final @Nullable Output<String> topic;
 
-    public Input<String> getTopic() {
-        return this.topic == null ? Input.empty() : this.topic;
+    public Output<String> getTopic() {
+        return this.topic == null ? Output.empty() : this.topic;
     }
 
-    public PubsubDestinationArgs(@Nullable Input<String> topic) {
+    public PubsubDestinationArgs(@Nullable Output<String> topic) {
         this.topic = topic;
     }
 
     private PubsubDestinationArgs() {
-        this.topic = Input.empty();
+        this.topic = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class PubsubDestinationArgs extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private @Nullable Input<String> topic;
+        private @Nullable Output<String> topic;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class PubsubDestinationArgs extends io.pulumi.resources.ResourceArg
     	      this.topic = defaults.topic;
         }
 
-        public Builder topic(@Nullable Input<String> topic) {
+        public Builder topic(@Nullable Output<String> topic) {
             this.topic = topic;
             return this;
         }
 
         public Builder topic(@Nullable String topic) {
-            this.topic = Input.ofNullable(topic);
+            this.topic = Output.ofNullable(topic);
             return this;
         }
         public PubsubDestinationArgs build() {

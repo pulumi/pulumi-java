@@ -31,17 +31,17 @@ public class Alias {
     @Nullable
     private final String urn;
     @Nullable
-    private final io.pulumi.core.Input<String> name;
+    private final Output<String> name;
     @Nullable
-    private final io.pulumi.core.Input<String> type;
+    private final Output<String> type;
     @Nullable
-    private final io.pulumi.core.Input<String> stack;
+    private final Output<String> stack;
     @Nullable
-    private final io.pulumi.core.Input<String> project;
+    private final Output<String> project;
     @Nullable
     private final Resource parent;
     @Nullable
-    private final io.pulumi.core.Input<String> parentUrn;
+    private final Output<String> parentUrn;
     private final boolean noParent;
 
     @SuppressWarnings("unused")
@@ -51,12 +51,12 @@ public class Alias {
 
     private Alias(
             @Nullable String urn,
-            @Nullable Input<String> name,
-            @Nullable Input<String> type,
-            @Nullable Input<String> stack,
-            @Nullable Input<String> project,
+            @Nullable Output<String> name,
+            @Nullable Output<String> type,
+            @Nullable Output<String> stack,
+            @Nullable Output<String> project,
             @Nullable Resource parent,
-            @Nullable Input<String> parentUrn,
+            @Nullable Output<String> parentUrn,
             boolean noParent
     ) {
         this.urn = urn;
@@ -102,55 +102,55 @@ public class Alias {
 
     public static final class Builder {
         @Nullable
-        private io.pulumi.core.Input<String> name;
+        private Output<String> name;
         @Nullable
-        private io.pulumi.core.Input<String> type;
+        private Output<String> type;
         @Nullable
-        private io.pulumi.core.Input<String> stack;
+        private Output<String> stack;
         @Nullable
-        private io.pulumi.core.Input<String> project;
+        private Output<String> project;
         @Nullable
         private Resource parent;
         @Nullable
-        private io.pulumi.core.Input<String> parentUrn;
+        private Output<String> parentUrn;
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder setName(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder setName(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder setType(@Nullable Input<String> type) {
+        public Builder setType(@Nullable Output<String> type) {
             this.type = type;
             return this;
         }
 
         public Builder setType(@Nullable String type) {
-            this.type = Input.ofNullable(type);
+            this.type = Output.ofNullable(type);
             return this;
         }
 
-        public Builder setStack(@Nullable Input<String> stack) {
+        public Builder setStack(@Nullable Output<String> stack) {
             this.stack = stack;
             return this;
         }
 
         public Builder setStack(@Nullable String stack) {
-            this.stack = Input.ofNullable(stack);
+            this.stack = Output.ofNullable(stack);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder setProject(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder setProject(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
@@ -160,7 +160,7 @@ public class Alias {
             return this;
         }
 
-        public Builder setParentUrn(@Nullable Input<String> parentUrn) {
+        public Builder setParentUrn(@Nullable Output<String> parentUrn) {
             requireNullState(name, () -> "Alias should not specify Alias#parentUrn when Alias#parent is set already.");
             this.parentUrn = parentUrn;
             return this;
@@ -195,7 +195,7 @@ public class Alias {
      * The previous name of the resource.
      * If empty, the current name of the resource is used.
      */
-    public Optional<Input<String>> getName() {
+    public Optional<Output<String>> getName() {
         return Optional.ofNullable(name);
     }
 
@@ -203,7 +203,7 @@ public class Alias {
      * The previous type of the resource.
      * If empty, the current type of the resource is used.
      */
-    public Optional<Input<String>> getType() {
+    public Optional<Output<String>> getType() {
         return Optional.ofNullable(type);
     }
 
@@ -211,7 +211,7 @@ public class Alias {
      * The previous stack of the resource.
      * If empty, defaults to the value of @see {@link io.pulumi.deployment.Deployment#getStackName()}
      */
-    public Optional<Input<String>> getStack() {
+    public Optional<Output<String>> getStack() {
         return Optional.ofNullable(stack);
     }
 
@@ -219,7 +219,7 @@ public class Alias {
      * The previous project of the resource.
      * If empty, defaults to the value of @see {@link io.pulumi.deployment.Deployment#getProjectName()}
      */
-    public Optional<Input<String>> getProject() {
+    public Optional<Output<String>> getProject() {
         return Optional.ofNullable(project);
     }
 
@@ -242,7 +242,7 @@ public class Alias {
      * <p>
      * Only specify one of "parent" or "parentUrn" or "noParent".
      */
-    public Optional<Input<String>> getParentUrn() {
+    public Optional<Output<String>> getParentUrn() {
         return Optional.ofNullable(parentUrn);
     }
 

@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.mediapackage.inputs;
 
 import io.pulumi.awsnative.mediapackage.inputs.PackagingConfigurationStreamSelectionArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -20,29 +20,29 @@ public final class PackagingConfigurationMssManifestArgs extends io.pulumi.resou
     public static final PackagingConfigurationMssManifestArgs Empty = new PackagingConfigurationMssManifestArgs();
 
     @InputImport(name="manifestName")
-      private final @Nullable Input<String> manifestName;
+      private final @Nullable Output<String> manifestName;
 
-    public Input<String> getManifestName() {
-        return this.manifestName == null ? Input.empty() : this.manifestName;
+    public Output<String> getManifestName() {
+        return this.manifestName == null ? Output.empty() : this.manifestName;
     }
 
     @InputImport(name="streamSelection")
-      private final @Nullable Input<PackagingConfigurationStreamSelectionArgs> streamSelection;
+      private final @Nullable Output<PackagingConfigurationStreamSelectionArgs> streamSelection;
 
-    public Input<PackagingConfigurationStreamSelectionArgs> getStreamSelection() {
-        return this.streamSelection == null ? Input.empty() : this.streamSelection;
+    public Output<PackagingConfigurationStreamSelectionArgs> getStreamSelection() {
+        return this.streamSelection == null ? Output.empty() : this.streamSelection;
     }
 
     public PackagingConfigurationMssManifestArgs(
-        @Nullable Input<String> manifestName,
-        @Nullable Input<PackagingConfigurationStreamSelectionArgs> streamSelection) {
+        @Nullable Output<String> manifestName,
+        @Nullable Output<PackagingConfigurationStreamSelectionArgs> streamSelection) {
         this.manifestName = manifestName;
         this.streamSelection = streamSelection;
     }
 
     private PackagingConfigurationMssManifestArgs() {
-        this.manifestName = Input.empty();
-        this.streamSelection = Input.empty();
+        this.manifestName = Output.empty();
+        this.streamSelection = Output.empty();
     }
 
     public static Builder builder() {
@@ -54,8 +54,8 @@ public final class PackagingConfigurationMssManifestArgs extends io.pulumi.resou
     }
 
     public static final class Builder {
-        private @Nullable Input<String> manifestName;
-        private @Nullable Input<PackagingConfigurationStreamSelectionArgs> streamSelection;
+        private @Nullable Output<String> manifestName;
+        private @Nullable Output<PackagingConfigurationStreamSelectionArgs> streamSelection;
 
         public Builder() {
     	      // Empty
@@ -67,23 +67,23 @@ public final class PackagingConfigurationMssManifestArgs extends io.pulumi.resou
     	      this.streamSelection = defaults.streamSelection;
         }
 
-        public Builder manifestName(@Nullable Input<String> manifestName) {
+        public Builder manifestName(@Nullable Output<String> manifestName) {
             this.manifestName = manifestName;
             return this;
         }
 
         public Builder manifestName(@Nullable String manifestName) {
-            this.manifestName = Input.ofNullable(manifestName);
+            this.manifestName = Output.ofNullable(manifestName);
             return this;
         }
 
-        public Builder streamSelection(@Nullable Input<PackagingConfigurationStreamSelectionArgs> streamSelection) {
+        public Builder streamSelection(@Nullable Output<PackagingConfigurationStreamSelectionArgs> streamSelection) {
             this.streamSelection = streamSelection;
             return this;
         }
 
         public Builder streamSelection(@Nullable PackagingConfigurationStreamSelectionArgs streamSelection) {
-            this.streamSelection = Input.ofNullable(streamSelection);
+            this.streamSelection = Output.ofNullable(streamSelection);
             return this;
         }
         public PackagingConfigurationMssManifestArgs build() {

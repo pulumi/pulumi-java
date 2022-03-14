@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.cloudscheduler.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.cloudscheduler.inputs.JobAppEngineHttpTargetAppEngineRoutingArgs;
 import java.lang.String;
@@ -22,10 +22,10 @@ public final class JobAppEngineHttpTargetArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="appEngineRouting")
-      private final @Nullable Input<JobAppEngineHttpTargetAppEngineRoutingArgs> appEngineRouting;
+      private final @Nullable Output<JobAppEngineHttpTargetAppEngineRoutingArgs> appEngineRouting;
 
-    public Input<JobAppEngineHttpTargetAppEngineRoutingArgs> getAppEngineRouting() {
-        return this.appEngineRouting == null ? Input.empty() : this.appEngineRouting;
+    public Output<JobAppEngineHttpTargetAppEngineRoutingArgs> getAppEngineRouting() {
+        return this.appEngineRouting == null ? Output.empty() : this.appEngineRouting;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class JobAppEngineHttpTargetArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="body")
-      private final @Nullable Input<String> body;
+      private final @Nullable Output<String> body;
 
-    public Input<String> getBody() {
-        return this.body == null ? Input.empty() : this.body;
+    public Output<String> getBody() {
+        return this.body == null ? Output.empty() : this.body;
     }
 
     /**
@@ -48,10 +48,10 @@ public final class JobAppEngineHttpTargetArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="headers")
-      private final @Nullable Input<Map<String,String>> headers;
+      private final @Nullable Output<Map<String,String>> headers;
 
-    public Input<Map<String,String>> getHeaders() {
-        return this.headers == null ? Input.empty() : this.headers;
+    public Output<Map<String,String>> getHeaders() {
+        return this.headers == null ? Output.empty() : this.headers;
     }
 
     /**
@@ -59,10 +59,10 @@ public final class JobAppEngineHttpTargetArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="httpMethod")
-      private final @Nullable Input<String> httpMethod;
+      private final @Nullable Output<String> httpMethod;
 
-    public Input<String> getHttpMethod() {
-        return this.httpMethod == null ? Input.empty() : this.httpMethod;
+    public Output<String> getHttpMethod() {
+        return this.httpMethod == null ? Output.empty() : this.httpMethod;
     }
 
     /**
@@ -74,18 +74,18 @@ public final class JobAppEngineHttpTargetArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="relativeUri", required=true)
-      private final Input<String> relativeUri;
+      private final Output<String> relativeUri;
 
-    public Input<String> getRelativeUri() {
+    public Output<String> getRelativeUri() {
         return this.relativeUri;
     }
 
     public JobAppEngineHttpTargetArgs(
-        @Nullable Input<JobAppEngineHttpTargetAppEngineRoutingArgs> appEngineRouting,
-        @Nullable Input<String> body,
-        @Nullable Input<Map<String,String>> headers,
-        @Nullable Input<String> httpMethod,
-        Input<String> relativeUri) {
+        @Nullable Output<JobAppEngineHttpTargetAppEngineRoutingArgs> appEngineRouting,
+        @Nullable Output<String> body,
+        @Nullable Output<Map<String,String>> headers,
+        @Nullable Output<String> httpMethod,
+        Output<String> relativeUri) {
         this.appEngineRouting = appEngineRouting;
         this.body = body;
         this.headers = headers;
@@ -94,11 +94,11 @@ public final class JobAppEngineHttpTargetArgs extends io.pulumi.resources.Resour
     }
 
     private JobAppEngineHttpTargetArgs() {
-        this.appEngineRouting = Input.empty();
-        this.body = Input.empty();
-        this.headers = Input.empty();
-        this.httpMethod = Input.empty();
-        this.relativeUri = Input.empty();
+        this.appEngineRouting = Output.empty();
+        this.body = Output.empty();
+        this.headers = Output.empty();
+        this.httpMethod = Output.empty();
+        this.relativeUri = Output.empty();
     }
 
     public static Builder builder() {
@@ -110,11 +110,11 @@ public final class JobAppEngineHttpTargetArgs extends io.pulumi.resources.Resour
     }
 
     public static final class Builder {
-        private @Nullable Input<JobAppEngineHttpTargetAppEngineRoutingArgs> appEngineRouting;
-        private @Nullable Input<String> body;
-        private @Nullable Input<Map<String,String>> headers;
-        private @Nullable Input<String> httpMethod;
-        private Input<String> relativeUri;
+        private @Nullable Output<JobAppEngineHttpTargetAppEngineRoutingArgs> appEngineRouting;
+        private @Nullable Output<String> body;
+        private @Nullable Output<Map<String,String>> headers;
+        private @Nullable Output<String> httpMethod;
+        private Output<String> relativeUri;
 
         public Builder() {
     	      // Empty
@@ -129,53 +129,53 @@ public final class JobAppEngineHttpTargetArgs extends io.pulumi.resources.Resour
     	      this.relativeUri = defaults.relativeUri;
         }
 
-        public Builder appEngineRouting(@Nullable Input<JobAppEngineHttpTargetAppEngineRoutingArgs> appEngineRouting) {
+        public Builder appEngineRouting(@Nullable Output<JobAppEngineHttpTargetAppEngineRoutingArgs> appEngineRouting) {
             this.appEngineRouting = appEngineRouting;
             return this;
         }
 
         public Builder appEngineRouting(@Nullable JobAppEngineHttpTargetAppEngineRoutingArgs appEngineRouting) {
-            this.appEngineRouting = Input.ofNullable(appEngineRouting);
+            this.appEngineRouting = Output.ofNullable(appEngineRouting);
             return this;
         }
 
-        public Builder body(@Nullable Input<String> body) {
+        public Builder body(@Nullable Output<String> body) {
             this.body = body;
             return this;
         }
 
         public Builder body(@Nullable String body) {
-            this.body = Input.ofNullable(body);
+            this.body = Output.ofNullable(body);
             return this;
         }
 
-        public Builder headers(@Nullable Input<Map<String,String>> headers) {
+        public Builder headers(@Nullable Output<Map<String,String>> headers) {
             this.headers = headers;
             return this;
         }
 
         public Builder headers(@Nullable Map<String,String> headers) {
-            this.headers = Input.ofNullable(headers);
+            this.headers = Output.ofNullable(headers);
             return this;
         }
 
-        public Builder httpMethod(@Nullable Input<String> httpMethod) {
+        public Builder httpMethod(@Nullable Output<String> httpMethod) {
             this.httpMethod = httpMethod;
             return this;
         }
 
         public Builder httpMethod(@Nullable String httpMethod) {
-            this.httpMethod = Input.ofNullable(httpMethod);
+            this.httpMethod = Output.ofNullable(httpMethod);
             return this;
         }
 
-        public Builder relativeUri(Input<String> relativeUri) {
+        public Builder relativeUri(Output<String> relativeUri) {
             this.relativeUri = Objects.requireNonNull(relativeUri);
             return this;
         }
 
         public Builder relativeUri(String relativeUri) {
-            this.relativeUri = Input.of(Objects.requireNonNull(relativeUri));
+            this.relativeUri = Output.of(Objects.requireNonNull(relativeUri));
             return this;
         }
         public JobAppEngineHttpTargetArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.kubernetesconfiguration.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class DependsOnDefinitionArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="kustomizationName")
-      private final @Nullable Input<String> kustomizationName;
+      private final @Nullable Output<String> kustomizationName;
 
-    public Input<String> getKustomizationName() {
-        return this.kustomizationName == null ? Input.empty() : this.kustomizationName;
+    public Output<String> getKustomizationName() {
+        return this.kustomizationName == null ? Output.empty() : this.kustomizationName;
     }
 
-    public DependsOnDefinitionArgs(@Nullable Input<String> kustomizationName) {
+    public DependsOnDefinitionArgs(@Nullable Output<String> kustomizationName) {
         this.kustomizationName = kustomizationName;
     }
 
     private DependsOnDefinitionArgs() {
-        this.kustomizationName = Input.empty();
+        this.kustomizationName = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class DependsOnDefinitionArgs extends io.pulumi.resources.ResourceA
     }
 
     public static final class Builder {
-        private @Nullable Input<String> kustomizationName;
+        private @Nullable Output<String> kustomizationName;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class DependsOnDefinitionArgs extends io.pulumi.resources.ResourceA
     	      this.kustomizationName = defaults.kustomizationName;
         }
 
-        public Builder kustomizationName(@Nullable Input<String> kustomizationName) {
+        public Builder kustomizationName(@Nullable Output<String> kustomizationName) {
             this.kustomizationName = kustomizationName;
             return this;
         }
 
         public Builder kustomizationName(@Nullable String kustomizationName) {
-            this.kustomizationName = Input.ofNullable(kustomizationName);
+            this.kustomizationName = Output.ofNullable(kustomizationName);
             return this;
         }
         public DependsOnDefinitionArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.videoanalyzer.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class TlsValidationOptionsArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="ignoreHostname")
-      private final @Nullable Input<String> ignoreHostname;
+      private final @Nullable Output<String> ignoreHostname;
 
-    public Input<String> getIgnoreHostname() {
-        return this.ignoreHostname == null ? Input.empty() : this.ignoreHostname;
+    public Output<String> getIgnoreHostname() {
+        return this.ignoreHostname == null ? Output.empty() : this.ignoreHostname;
     }
 
     /**
@@ -34,22 +34,22 @@ public final class TlsValidationOptionsArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="ignoreSignature")
-      private final @Nullable Input<String> ignoreSignature;
+      private final @Nullable Output<String> ignoreSignature;
 
-    public Input<String> getIgnoreSignature() {
-        return this.ignoreSignature == null ? Input.empty() : this.ignoreSignature;
+    public Output<String> getIgnoreSignature() {
+        return this.ignoreSignature == null ? Output.empty() : this.ignoreSignature;
     }
 
     public TlsValidationOptionsArgs(
-        @Nullable Input<String> ignoreHostname,
-        @Nullable Input<String> ignoreSignature) {
+        @Nullable Output<String> ignoreHostname,
+        @Nullable Output<String> ignoreSignature) {
         this.ignoreHostname = ignoreHostname;
         this.ignoreSignature = ignoreSignature;
     }
 
     private TlsValidationOptionsArgs() {
-        this.ignoreHostname = Input.empty();
-        this.ignoreSignature = Input.empty();
+        this.ignoreHostname = Output.empty();
+        this.ignoreSignature = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class TlsValidationOptionsArgs extends io.pulumi.resources.Resource
     }
 
     public static final class Builder {
-        private @Nullable Input<String> ignoreHostname;
-        private @Nullable Input<String> ignoreSignature;
+        private @Nullable Output<String> ignoreHostname;
+        private @Nullable Output<String> ignoreSignature;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class TlsValidationOptionsArgs extends io.pulumi.resources.Resource
     	      this.ignoreSignature = defaults.ignoreSignature;
         }
 
-        public Builder ignoreHostname(@Nullable Input<String> ignoreHostname) {
+        public Builder ignoreHostname(@Nullable Output<String> ignoreHostname) {
             this.ignoreHostname = ignoreHostname;
             return this;
         }
 
         public Builder ignoreHostname(@Nullable String ignoreHostname) {
-            this.ignoreHostname = Input.ofNullable(ignoreHostname);
+            this.ignoreHostname = Output.ofNullable(ignoreHostname);
             return this;
         }
 
-        public Builder ignoreSignature(@Nullable Input<String> ignoreSignature) {
+        public Builder ignoreSignature(@Nullable Output<String> ignoreSignature) {
             this.ignoreSignature = ignoreSignature;
             return this;
         }
 
         public Builder ignoreSignature(@Nullable String ignoreSignature) {
-            this.ignoreSignature = Input.ofNullable(ignoreSignature);
+            this.ignoreSignature = Output.ofNullable(ignoreSignature);
             return this;
         }
         public TlsValidationOptionsArgs build() {

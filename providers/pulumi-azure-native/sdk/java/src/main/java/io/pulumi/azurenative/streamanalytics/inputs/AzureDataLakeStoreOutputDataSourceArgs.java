@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.streamanalytics.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class AzureDataLakeStoreOutputDataSourceArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="accountName")
-      private final @Nullable Input<String> accountName;
+      private final @Nullable Output<String> accountName;
 
-    public Input<String> getAccountName() {
-        return this.accountName == null ? Input.empty() : this.accountName;
+    public Output<String> getAccountName() {
+        return this.accountName == null ? Output.empty() : this.accountName;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class AzureDataLakeStoreOutputDataSourceArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="dateFormat")
-      private final @Nullable Input<String> dateFormat;
+      private final @Nullable Output<String> dateFormat;
 
-    public Input<String> getDateFormat() {
-        return this.dateFormat == null ? Input.empty() : this.dateFormat;
+    public Output<String> getDateFormat() {
+        return this.dateFormat == null ? Output.empty() : this.dateFormat;
     }
 
     /**
@@ -45,10 +45,10 @@ public final class AzureDataLakeStoreOutputDataSourceArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="filePathPrefix")
-      private final @Nullable Input<String> filePathPrefix;
+      private final @Nullable Output<String> filePathPrefix;
 
-    public Input<String> getFilePathPrefix() {
-        return this.filePathPrefix == null ? Input.empty() : this.filePathPrefix;
+    public Output<String> getFilePathPrefix() {
+        return this.filePathPrefix == null ? Output.empty() : this.filePathPrefix;
     }
 
     /**
@@ -56,10 +56,10 @@ public final class AzureDataLakeStoreOutputDataSourceArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="refreshToken")
-      private final @Nullable Input<String> refreshToken;
+      private final @Nullable Output<String> refreshToken;
 
-    public Input<String> getRefreshToken() {
-        return this.refreshToken == null ? Input.empty() : this.refreshToken;
+    public Output<String> getRefreshToken() {
+        return this.refreshToken == null ? Output.empty() : this.refreshToken;
     }
 
     /**
@@ -67,10 +67,10 @@ public final class AzureDataLakeStoreOutputDataSourceArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="tenantId")
-      private final @Nullable Input<String> tenantId;
+      private final @Nullable Output<String> tenantId;
 
-    public Input<String> getTenantId() {
-        return this.tenantId == null ? Input.empty() : this.tenantId;
+    public Output<String> getTenantId() {
+        return this.tenantId == null ? Output.empty() : this.tenantId;
     }
 
     /**
@@ -78,10 +78,10 @@ public final class AzureDataLakeStoreOutputDataSourceArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="timeFormat")
-      private final @Nullable Input<String> timeFormat;
+      private final @Nullable Output<String> timeFormat;
 
-    public Input<String> getTimeFormat() {
-        return this.timeFormat == null ? Input.empty() : this.timeFormat;
+    public Output<String> getTimeFormat() {
+        return this.timeFormat == null ? Output.empty() : this.timeFormat;
     }
 
     /**
@@ -89,10 +89,10 @@ public final class AzureDataLakeStoreOutputDataSourceArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="tokenUserDisplayName")
-      private final @Nullable Input<String> tokenUserDisplayName;
+      private final @Nullable Output<String> tokenUserDisplayName;
 
-    public Input<String> getTokenUserDisplayName() {
-        return this.tokenUserDisplayName == null ? Input.empty() : this.tokenUserDisplayName;
+    public Output<String> getTokenUserDisplayName() {
+        return this.tokenUserDisplayName == null ? Output.empty() : this.tokenUserDisplayName;
     }
 
     /**
@@ -100,10 +100,10 @@ public final class AzureDataLakeStoreOutputDataSourceArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="tokenUserPrincipalName")
-      private final @Nullable Input<String> tokenUserPrincipalName;
+      private final @Nullable Output<String> tokenUserPrincipalName;
 
-    public Input<String> getTokenUserPrincipalName() {
-        return this.tokenUserPrincipalName == null ? Input.empty() : this.tokenUserPrincipalName;
+    public Output<String> getTokenUserPrincipalName() {
+        return this.tokenUserPrincipalName == null ? Output.empty() : this.tokenUserPrincipalName;
     }
 
     /**
@@ -112,22 +112,22 @@ public final class AzureDataLakeStoreOutputDataSourceArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<String> type;
+      private final Output<String> type;
 
-    public Input<String> getType() {
+    public Output<String> getType() {
         return this.type;
     }
 
     public AzureDataLakeStoreOutputDataSourceArgs(
-        @Nullable Input<String> accountName,
-        @Nullable Input<String> dateFormat,
-        @Nullable Input<String> filePathPrefix,
-        @Nullable Input<String> refreshToken,
-        @Nullable Input<String> tenantId,
-        @Nullable Input<String> timeFormat,
-        @Nullable Input<String> tokenUserDisplayName,
-        @Nullable Input<String> tokenUserPrincipalName,
-        Input<String> type) {
+        @Nullable Output<String> accountName,
+        @Nullable Output<String> dateFormat,
+        @Nullable Output<String> filePathPrefix,
+        @Nullable Output<String> refreshToken,
+        @Nullable Output<String> tenantId,
+        @Nullable Output<String> timeFormat,
+        @Nullable Output<String> tokenUserDisplayName,
+        @Nullable Output<String> tokenUserPrincipalName,
+        Output<String> type) {
         this.accountName = accountName;
         this.dateFormat = dateFormat;
         this.filePathPrefix = filePathPrefix;
@@ -140,15 +140,15 @@ public final class AzureDataLakeStoreOutputDataSourceArgs extends io.pulumi.reso
     }
 
     private AzureDataLakeStoreOutputDataSourceArgs() {
-        this.accountName = Input.empty();
-        this.dateFormat = Input.empty();
-        this.filePathPrefix = Input.empty();
-        this.refreshToken = Input.empty();
-        this.tenantId = Input.empty();
-        this.timeFormat = Input.empty();
-        this.tokenUserDisplayName = Input.empty();
-        this.tokenUserPrincipalName = Input.empty();
-        this.type = Input.empty();
+        this.accountName = Output.empty();
+        this.dateFormat = Output.empty();
+        this.filePathPrefix = Output.empty();
+        this.refreshToken = Output.empty();
+        this.tenantId = Output.empty();
+        this.timeFormat = Output.empty();
+        this.tokenUserDisplayName = Output.empty();
+        this.tokenUserPrincipalName = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -160,15 +160,15 @@ public final class AzureDataLakeStoreOutputDataSourceArgs extends io.pulumi.reso
     }
 
     public static final class Builder {
-        private @Nullable Input<String> accountName;
-        private @Nullable Input<String> dateFormat;
-        private @Nullable Input<String> filePathPrefix;
-        private @Nullable Input<String> refreshToken;
-        private @Nullable Input<String> tenantId;
-        private @Nullable Input<String> timeFormat;
-        private @Nullable Input<String> tokenUserDisplayName;
-        private @Nullable Input<String> tokenUserPrincipalName;
-        private Input<String> type;
+        private @Nullable Output<String> accountName;
+        private @Nullable Output<String> dateFormat;
+        private @Nullable Output<String> filePathPrefix;
+        private @Nullable Output<String> refreshToken;
+        private @Nullable Output<String> tenantId;
+        private @Nullable Output<String> timeFormat;
+        private @Nullable Output<String> tokenUserDisplayName;
+        private @Nullable Output<String> tokenUserPrincipalName;
+        private Output<String> type;
 
         public Builder() {
     	      // Empty
@@ -187,93 +187,93 @@ public final class AzureDataLakeStoreOutputDataSourceArgs extends io.pulumi.reso
     	      this.type = defaults.type;
         }
 
-        public Builder accountName(@Nullable Input<String> accountName) {
+        public Builder accountName(@Nullable Output<String> accountName) {
             this.accountName = accountName;
             return this;
         }
 
         public Builder accountName(@Nullable String accountName) {
-            this.accountName = Input.ofNullable(accountName);
+            this.accountName = Output.ofNullable(accountName);
             return this;
         }
 
-        public Builder dateFormat(@Nullable Input<String> dateFormat) {
+        public Builder dateFormat(@Nullable Output<String> dateFormat) {
             this.dateFormat = dateFormat;
             return this;
         }
 
         public Builder dateFormat(@Nullable String dateFormat) {
-            this.dateFormat = Input.ofNullable(dateFormat);
+            this.dateFormat = Output.ofNullable(dateFormat);
             return this;
         }
 
-        public Builder filePathPrefix(@Nullable Input<String> filePathPrefix) {
+        public Builder filePathPrefix(@Nullable Output<String> filePathPrefix) {
             this.filePathPrefix = filePathPrefix;
             return this;
         }
 
         public Builder filePathPrefix(@Nullable String filePathPrefix) {
-            this.filePathPrefix = Input.ofNullable(filePathPrefix);
+            this.filePathPrefix = Output.ofNullable(filePathPrefix);
             return this;
         }
 
-        public Builder refreshToken(@Nullable Input<String> refreshToken) {
+        public Builder refreshToken(@Nullable Output<String> refreshToken) {
             this.refreshToken = refreshToken;
             return this;
         }
 
         public Builder refreshToken(@Nullable String refreshToken) {
-            this.refreshToken = Input.ofNullable(refreshToken);
+            this.refreshToken = Output.ofNullable(refreshToken);
             return this;
         }
 
-        public Builder tenantId(@Nullable Input<String> tenantId) {
+        public Builder tenantId(@Nullable Output<String> tenantId) {
             this.tenantId = tenantId;
             return this;
         }
 
         public Builder tenantId(@Nullable String tenantId) {
-            this.tenantId = Input.ofNullable(tenantId);
+            this.tenantId = Output.ofNullable(tenantId);
             return this;
         }
 
-        public Builder timeFormat(@Nullable Input<String> timeFormat) {
+        public Builder timeFormat(@Nullable Output<String> timeFormat) {
             this.timeFormat = timeFormat;
             return this;
         }
 
         public Builder timeFormat(@Nullable String timeFormat) {
-            this.timeFormat = Input.ofNullable(timeFormat);
+            this.timeFormat = Output.ofNullable(timeFormat);
             return this;
         }
 
-        public Builder tokenUserDisplayName(@Nullable Input<String> tokenUserDisplayName) {
+        public Builder tokenUserDisplayName(@Nullable Output<String> tokenUserDisplayName) {
             this.tokenUserDisplayName = tokenUserDisplayName;
             return this;
         }
 
         public Builder tokenUserDisplayName(@Nullable String tokenUserDisplayName) {
-            this.tokenUserDisplayName = Input.ofNullable(tokenUserDisplayName);
+            this.tokenUserDisplayName = Output.ofNullable(tokenUserDisplayName);
             return this;
         }
 
-        public Builder tokenUserPrincipalName(@Nullable Input<String> tokenUserPrincipalName) {
+        public Builder tokenUserPrincipalName(@Nullable Output<String> tokenUserPrincipalName) {
             this.tokenUserPrincipalName = tokenUserPrincipalName;
             return this;
         }
 
         public Builder tokenUserPrincipalName(@Nullable String tokenUserPrincipalName) {
-            this.tokenUserPrincipalName = Input.ofNullable(tokenUserPrincipalName);
+            this.tokenUserPrincipalName = Output.ofNullable(tokenUserPrincipalName);
             return this;
         }
 
-        public Builder type(Input<String> type) {
+        public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(String type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
         public AzureDataLakeStoreOutputDataSourceArgs build() {

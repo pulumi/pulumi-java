@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.servicefabric.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -23,9 +23,9 @@ public final class ClientCertificateThumbprintArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="certificateThumbprint", required=true)
-      private final Input<String> certificateThumbprint;
+      private final Output<String> certificateThumbprint;
 
-    public Input<String> getCertificateThumbprint() {
+    public Output<String> getCertificateThumbprint() {
         return this.certificateThumbprint;
     }
 
@@ -34,22 +34,22 @@ public final class ClientCertificateThumbprintArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="isAdmin", required=true)
-      private final Input<Boolean> isAdmin;
+      private final Output<Boolean> isAdmin;
 
-    public Input<Boolean> getIsAdmin() {
+    public Output<Boolean> getIsAdmin() {
         return this.isAdmin;
     }
 
     public ClientCertificateThumbprintArgs(
-        Input<String> certificateThumbprint,
-        Input<Boolean> isAdmin) {
+        Output<String> certificateThumbprint,
+        Output<Boolean> isAdmin) {
         this.certificateThumbprint = Objects.requireNonNull(certificateThumbprint, "expected parameter 'certificateThumbprint' to be non-null");
         this.isAdmin = Objects.requireNonNull(isAdmin, "expected parameter 'isAdmin' to be non-null");
     }
 
     private ClientCertificateThumbprintArgs() {
-        this.certificateThumbprint = Input.empty();
-        this.isAdmin = Input.empty();
+        this.certificateThumbprint = Output.empty();
+        this.isAdmin = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class ClientCertificateThumbprintArgs extends io.pulumi.resources.R
     }
 
     public static final class Builder {
-        private Input<String> certificateThumbprint;
-        private Input<Boolean> isAdmin;
+        private Output<String> certificateThumbprint;
+        private Output<Boolean> isAdmin;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class ClientCertificateThumbprintArgs extends io.pulumi.resources.R
     	      this.isAdmin = defaults.isAdmin;
         }
 
-        public Builder certificateThumbprint(Input<String> certificateThumbprint) {
+        public Builder certificateThumbprint(Output<String> certificateThumbprint) {
             this.certificateThumbprint = Objects.requireNonNull(certificateThumbprint);
             return this;
         }
 
         public Builder certificateThumbprint(String certificateThumbprint) {
-            this.certificateThumbprint = Input.of(Objects.requireNonNull(certificateThumbprint));
+            this.certificateThumbprint = Output.of(Objects.requireNonNull(certificateThumbprint));
             return this;
         }
 
-        public Builder isAdmin(Input<Boolean> isAdmin) {
+        public Builder isAdmin(Output<Boolean> isAdmin) {
             this.isAdmin = Objects.requireNonNull(isAdmin);
             return this;
         }
 
         public Builder isAdmin(Boolean isAdmin) {
-            this.isAdmin = Input.of(Objects.requireNonNull(isAdmin));
+            this.isAdmin = Output.of(Objects.requireNonNull(isAdmin));
             return this;
         }
         public ClientCertificateThumbprintArgs build() {

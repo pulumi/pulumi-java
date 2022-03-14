@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.security.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,9 +23,9 @@ public final class SecurityAssessmentMetadataPartnerDataArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="partnerName", required=true)
-      private final Input<String> partnerName;
+      private final Output<String> partnerName;
 
-    public Input<String> getPartnerName() {
+    public Output<String> getPartnerName() {
         return this.partnerName;
     }
 
@@ -34,10 +34,10 @@ public final class SecurityAssessmentMetadataPartnerDataArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="productName")
-      private final @Nullable Input<String> productName;
+      private final @Nullable Output<String> productName;
 
-    public Input<String> getProductName() {
-        return this.productName == null ? Input.empty() : this.productName;
+    public Output<String> getProductName() {
+        return this.productName == null ? Output.empty() : this.productName;
     }
 
     /**
@@ -45,25 +45,25 @@ public final class SecurityAssessmentMetadataPartnerDataArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="secret", required=true)
-      private final Input<String> secret;
+      private final Output<String> secret;
 
-    public Input<String> getSecret() {
+    public Output<String> getSecret() {
         return this.secret;
     }
 
     public SecurityAssessmentMetadataPartnerDataArgs(
-        Input<String> partnerName,
-        @Nullable Input<String> productName,
-        Input<String> secret) {
+        Output<String> partnerName,
+        @Nullable Output<String> productName,
+        Output<String> secret) {
         this.partnerName = Objects.requireNonNull(partnerName, "expected parameter 'partnerName' to be non-null");
         this.productName = productName;
         this.secret = Objects.requireNonNull(secret, "expected parameter 'secret' to be non-null");
     }
 
     private SecurityAssessmentMetadataPartnerDataArgs() {
-        this.partnerName = Input.empty();
-        this.productName = Input.empty();
-        this.secret = Input.empty();
+        this.partnerName = Output.empty();
+        this.productName = Output.empty();
+        this.secret = Output.empty();
     }
 
     public static Builder builder() {
@@ -75,9 +75,9 @@ public final class SecurityAssessmentMetadataPartnerDataArgs extends io.pulumi.r
     }
 
     public static final class Builder {
-        private Input<String> partnerName;
-        private @Nullable Input<String> productName;
-        private Input<String> secret;
+        private Output<String> partnerName;
+        private @Nullable Output<String> productName;
+        private Output<String> secret;
 
         public Builder() {
     	      // Empty
@@ -90,33 +90,33 @@ public final class SecurityAssessmentMetadataPartnerDataArgs extends io.pulumi.r
     	      this.secret = defaults.secret;
         }
 
-        public Builder partnerName(Input<String> partnerName) {
+        public Builder partnerName(Output<String> partnerName) {
             this.partnerName = Objects.requireNonNull(partnerName);
             return this;
         }
 
         public Builder partnerName(String partnerName) {
-            this.partnerName = Input.of(Objects.requireNonNull(partnerName));
+            this.partnerName = Output.of(Objects.requireNonNull(partnerName));
             return this;
         }
 
-        public Builder productName(@Nullable Input<String> productName) {
+        public Builder productName(@Nullable Output<String> productName) {
             this.productName = productName;
             return this;
         }
 
         public Builder productName(@Nullable String productName) {
-            this.productName = Input.ofNullable(productName);
+            this.productName = Output.ofNullable(productName);
             return this;
         }
 
-        public Builder secret(Input<String> secret) {
+        public Builder secret(Output<String> secret) {
             this.secret = Objects.requireNonNull(secret);
             return this;
         }
 
         public Builder secret(String secret) {
-            this.secret = Input.of(Objects.requireNonNull(secret));
+            this.secret = Output.of(Objects.requireNonNull(secret));
             return this;
         }
         public SecurityAssessmentMetadataPartnerDataArgs build() {

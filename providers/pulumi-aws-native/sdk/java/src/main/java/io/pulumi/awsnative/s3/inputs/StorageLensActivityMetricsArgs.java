@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.s3.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class StorageLensActivityMetricsArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="isEnabled")
-      private final @Nullable Input<Boolean> isEnabled;
+      private final @Nullable Output<Boolean> isEnabled;
 
-    public Input<Boolean> getIsEnabled() {
-        return this.isEnabled == null ? Input.empty() : this.isEnabled;
+    public Output<Boolean> getIsEnabled() {
+        return this.isEnabled == null ? Output.empty() : this.isEnabled;
     }
 
-    public StorageLensActivityMetricsArgs(@Nullable Input<Boolean> isEnabled) {
+    public StorageLensActivityMetricsArgs(@Nullable Output<Boolean> isEnabled) {
         this.isEnabled = isEnabled;
     }
 
     private StorageLensActivityMetricsArgs() {
-        this.isEnabled = Input.empty();
+        this.isEnabled = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class StorageLensActivityMetricsArgs extends io.pulumi.resources.Re
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> isEnabled;
+        private @Nullable Output<Boolean> isEnabled;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class StorageLensActivityMetricsArgs extends io.pulumi.resources.Re
     	      this.isEnabled = defaults.isEnabled;
         }
 
-        public Builder isEnabled(@Nullable Input<Boolean> isEnabled) {
+        public Builder isEnabled(@Nullable Output<Boolean> isEnabled) {
             this.isEnabled = isEnabled;
             return this;
         }
 
         public Builder isEnabled(@Nullable Boolean isEnabled) {
-            this.isEnabled = Input.ofNullable(isEnabled);
+            this.isEnabled = Output.ofNullable(isEnabled);
             return this;
         }
         public StorageLensActivityMetricsArgs build() {

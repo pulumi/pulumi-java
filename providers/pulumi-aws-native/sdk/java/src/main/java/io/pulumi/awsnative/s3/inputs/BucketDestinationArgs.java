@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.s3.inputs;
 
 import io.pulumi.awsnative.s3.enums.BucketDestinationFormat;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -24,10 +24,10 @@ public final class BucketDestinationArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="bucketAccountId")
-      private final @Nullable Input<String> bucketAccountId;
+      private final @Nullable Output<String> bucketAccountId;
 
-    public Input<String> getBucketAccountId() {
-        return this.bucketAccountId == null ? Input.empty() : this.bucketAccountId;
+    public Output<String> getBucketAccountId() {
+        return this.bucketAccountId == null ? Output.empty() : this.bucketAccountId;
     }
 
     /**
@@ -35,9 +35,9 @@ public final class BucketDestinationArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="bucketArn", required=true)
-      private final Input<String> bucketArn;
+      private final Output<String> bucketArn;
 
-    public Input<String> getBucketArn() {
+    public Output<String> getBucketArn() {
         return this.bucketArn;
     }
 
@@ -46,9 +46,9 @@ public final class BucketDestinationArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="format", required=true)
-      private final Input<BucketDestinationFormat> format;
+      private final Output<BucketDestinationFormat> format;
 
-    public Input<BucketDestinationFormat> getFormat() {
+    public Output<BucketDestinationFormat> getFormat() {
         return this.format;
     }
 
@@ -57,17 +57,17 @@ public final class BucketDestinationArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="prefix")
-      private final @Nullable Input<String> prefix;
+      private final @Nullable Output<String> prefix;
 
-    public Input<String> getPrefix() {
-        return this.prefix == null ? Input.empty() : this.prefix;
+    public Output<String> getPrefix() {
+        return this.prefix == null ? Output.empty() : this.prefix;
     }
 
     public BucketDestinationArgs(
-        @Nullable Input<String> bucketAccountId,
-        Input<String> bucketArn,
-        Input<BucketDestinationFormat> format,
-        @Nullable Input<String> prefix) {
+        @Nullable Output<String> bucketAccountId,
+        Output<String> bucketArn,
+        Output<BucketDestinationFormat> format,
+        @Nullable Output<String> prefix) {
         this.bucketAccountId = bucketAccountId;
         this.bucketArn = Objects.requireNonNull(bucketArn, "expected parameter 'bucketArn' to be non-null");
         this.format = Objects.requireNonNull(format, "expected parameter 'format' to be non-null");
@@ -75,10 +75,10 @@ public final class BucketDestinationArgs extends io.pulumi.resources.ResourceArg
     }
 
     private BucketDestinationArgs() {
-        this.bucketAccountId = Input.empty();
-        this.bucketArn = Input.empty();
-        this.format = Input.empty();
-        this.prefix = Input.empty();
+        this.bucketAccountId = Output.empty();
+        this.bucketArn = Output.empty();
+        this.format = Output.empty();
+        this.prefix = Output.empty();
     }
 
     public static Builder builder() {
@@ -90,10 +90,10 @@ public final class BucketDestinationArgs extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private @Nullable Input<String> bucketAccountId;
-        private Input<String> bucketArn;
-        private Input<BucketDestinationFormat> format;
-        private @Nullable Input<String> prefix;
+        private @Nullable Output<String> bucketAccountId;
+        private Output<String> bucketArn;
+        private Output<BucketDestinationFormat> format;
+        private @Nullable Output<String> prefix;
 
         public Builder() {
     	      // Empty
@@ -107,43 +107,43 @@ public final class BucketDestinationArgs extends io.pulumi.resources.ResourceArg
     	      this.prefix = defaults.prefix;
         }
 
-        public Builder bucketAccountId(@Nullable Input<String> bucketAccountId) {
+        public Builder bucketAccountId(@Nullable Output<String> bucketAccountId) {
             this.bucketAccountId = bucketAccountId;
             return this;
         }
 
         public Builder bucketAccountId(@Nullable String bucketAccountId) {
-            this.bucketAccountId = Input.ofNullable(bucketAccountId);
+            this.bucketAccountId = Output.ofNullable(bucketAccountId);
             return this;
         }
 
-        public Builder bucketArn(Input<String> bucketArn) {
+        public Builder bucketArn(Output<String> bucketArn) {
             this.bucketArn = Objects.requireNonNull(bucketArn);
             return this;
         }
 
         public Builder bucketArn(String bucketArn) {
-            this.bucketArn = Input.of(Objects.requireNonNull(bucketArn));
+            this.bucketArn = Output.of(Objects.requireNonNull(bucketArn));
             return this;
         }
 
-        public Builder format(Input<BucketDestinationFormat> format) {
+        public Builder format(Output<BucketDestinationFormat> format) {
             this.format = Objects.requireNonNull(format);
             return this;
         }
 
         public Builder format(BucketDestinationFormat format) {
-            this.format = Input.of(Objects.requireNonNull(format));
+            this.format = Output.of(Objects.requireNonNull(format));
             return this;
         }
 
-        public Builder prefix(@Nullable Input<String> prefix) {
+        public Builder prefix(@Nullable Output<String> prefix) {
             this.prefix = prefix;
             return this;
         }
 
         public Builder prefix(@Nullable String prefix) {
-            this.prefix = Input.ofNullable(prefix);
+            this.prefix = Output.ofNullable(prefix);
             return this;
         }
         public BucketDestinationArgs build() {

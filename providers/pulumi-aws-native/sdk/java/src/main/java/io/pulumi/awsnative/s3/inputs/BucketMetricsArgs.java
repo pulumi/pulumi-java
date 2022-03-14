@@ -5,7 +5,7 @@ package io.pulumi.awsnative.s3.inputs;
 
 import io.pulumi.awsnative.s3.enums.BucketMetricsStatus;
 import io.pulumi.awsnative.s3.inputs.BucketReplicationTimeValueArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -16,29 +16,29 @@ public final class BucketMetricsArgs extends io.pulumi.resources.ResourceArgs {
     public static final BucketMetricsArgs Empty = new BucketMetricsArgs();
 
     @InputImport(name="eventThreshold")
-      private final @Nullable Input<BucketReplicationTimeValueArgs> eventThreshold;
+      private final @Nullable Output<BucketReplicationTimeValueArgs> eventThreshold;
 
-    public Input<BucketReplicationTimeValueArgs> getEventThreshold() {
-        return this.eventThreshold == null ? Input.empty() : this.eventThreshold;
+    public Output<BucketReplicationTimeValueArgs> getEventThreshold() {
+        return this.eventThreshold == null ? Output.empty() : this.eventThreshold;
     }
 
     @InputImport(name="status", required=true)
-      private final Input<BucketMetricsStatus> status;
+      private final Output<BucketMetricsStatus> status;
 
-    public Input<BucketMetricsStatus> getStatus() {
+    public Output<BucketMetricsStatus> getStatus() {
         return this.status;
     }
 
     public BucketMetricsArgs(
-        @Nullable Input<BucketReplicationTimeValueArgs> eventThreshold,
-        Input<BucketMetricsStatus> status) {
+        @Nullable Output<BucketReplicationTimeValueArgs> eventThreshold,
+        Output<BucketMetricsStatus> status) {
         this.eventThreshold = eventThreshold;
         this.status = Objects.requireNonNull(status, "expected parameter 'status' to be non-null");
     }
 
     private BucketMetricsArgs() {
-        this.eventThreshold = Input.empty();
-        this.status = Input.empty();
+        this.eventThreshold = Output.empty();
+        this.status = Output.empty();
     }
 
     public static Builder builder() {
@@ -50,8 +50,8 @@ public final class BucketMetricsArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<BucketReplicationTimeValueArgs> eventThreshold;
-        private Input<BucketMetricsStatus> status;
+        private @Nullable Output<BucketReplicationTimeValueArgs> eventThreshold;
+        private Output<BucketMetricsStatus> status;
 
         public Builder() {
     	      // Empty
@@ -63,23 +63,23 @@ public final class BucketMetricsArgs extends io.pulumi.resources.ResourceArgs {
     	      this.status = defaults.status;
         }
 
-        public Builder eventThreshold(@Nullable Input<BucketReplicationTimeValueArgs> eventThreshold) {
+        public Builder eventThreshold(@Nullable Output<BucketReplicationTimeValueArgs> eventThreshold) {
             this.eventThreshold = eventThreshold;
             return this;
         }
 
         public Builder eventThreshold(@Nullable BucketReplicationTimeValueArgs eventThreshold) {
-            this.eventThreshold = Input.ofNullable(eventThreshold);
+            this.eventThreshold = Output.ofNullable(eventThreshold);
             return this;
         }
 
-        public Builder status(Input<BucketMetricsStatus> status) {
+        public Builder status(Output<BucketMetricsStatus> status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
 
         public Builder status(BucketMetricsStatus status) {
-            this.status = Input.of(Objects.requireNonNull(status));
+            this.status = Output.of(Objects.requireNonNull(status));
             return this;
         }
         public BucketMetricsArgs build() {

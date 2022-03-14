@@ -17,7 +17,6 @@ import io.pulumi.azurenative.network.outputs.SrvRecordResponse;
 import io.pulumi.azurenative.network.outputs.SubResourceResponse;
 import io.pulumi.azurenative.network.outputs.TxtRecordResponse;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -335,23 +334,23 @@ public class RecordSet extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public RecordSet(String name, RecordSetArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:network:RecordSet", name, args == null ? RecordSetArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("azure-native:network:RecordSet", name, args == null ? RecordSetArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private RecordSet(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private RecordSet(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:network:RecordSet", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:network/v20150504preview:RecordSet").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20160401:RecordSet").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20170901:RecordSet").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20171001:RecordSet").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20180301preview:RecordSet").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20180501:RecordSet").build())
+                Output.of(Alias.builder().setType("azure-native:network/v20150504preview:RecordSet").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20160401:RecordSet").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20170901:RecordSet").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20171001:RecordSet").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20180301preview:RecordSet").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20180501:RecordSet").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -365,7 +364,7 @@ public class RecordSet extends io.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static RecordSet get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static RecordSet get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new RecordSet(name, id, options);
     }
 }

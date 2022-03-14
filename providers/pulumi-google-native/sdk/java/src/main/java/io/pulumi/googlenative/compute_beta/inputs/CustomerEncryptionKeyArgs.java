@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_beta.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class CustomerEncryptionKeyArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="kmsKeyName")
-      private final @Nullable Input<String> kmsKeyName;
+      private final @Nullable Output<String> kmsKeyName;
 
-    public Input<String> getKmsKeyName() {
-        return this.kmsKeyName == null ? Input.empty() : this.kmsKeyName;
+    public Output<String> getKmsKeyName() {
+        return this.kmsKeyName == null ? Output.empty() : this.kmsKeyName;
     }
 
     /**
@@ -30,10 +30,10 @@ public final class CustomerEncryptionKeyArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="kmsKeyServiceAccount")
-      private final @Nullable Input<String> kmsKeyServiceAccount;
+      private final @Nullable Output<String> kmsKeyServiceAccount;
 
-    public Input<String> getKmsKeyServiceAccount() {
-        return this.kmsKeyServiceAccount == null ? Input.empty() : this.kmsKeyServiceAccount;
+    public Output<String> getKmsKeyServiceAccount() {
+        return this.kmsKeyServiceAccount == null ? Output.empty() : this.kmsKeyServiceAccount;
     }
 
     /**
@@ -41,10 +41,10 @@ public final class CustomerEncryptionKeyArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="rawKey")
-      private final @Nullable Input<String> rawKey;
+      private final @Nullable Output<String> rawKey;
 
-    public Input<String> getRawKey() {
-        return this.rawKey == null ? Input.empty() : this.rawKey;
+    public Output<String> getRawKey() {
+        return this.rawKey == null ? Output.empty() : this.rawKey;
     }
 
     /**
@@ -52,17 +52,17 @@ public final class CustomerEncryptionKeyArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="rsaEncryptedKey")
-      private final @Nullable Input<String> rsaEncryptedKey;
+      private final @Nullable Output<String> rsaEncryptedKey;
 
-    public Input<String> getRsaEncryptedKey() {
-        return this.rsaEncryptedKey == null ? Input.empty() : this.rsaEncryptedKey;
+    public Output<String> getRsaEncryptedKey() {
+        return this.rsaEncryptedKey == null ? Output.empty() : this.rsaEncryptedKey;
     }
 
     public CustomerEncryptionKeyArgs(
-        @Nullable Input<String> kmsKeyName,
-        @Nullable Input<String> kmsKeyServiceAccount,
-        @Nullable Input<String> rawKey,
-        @Nullable Input<String> rsaEncryptedKey) {
+        @Nullable Output<String> kmsKeyName,
+        @Nullable Output<String> kmsKeyServiceAccount,
+        @Nullable Output<String> rawKey,
+        @Nullable Output<String> rsaEncryptedKey) {
         this.kmsKeyName = kmsKeyName;
         this.kmsKeyServiceAccount = kmsKeyServiceAccount;
         this.rawKey = rawKey;
@@ -70,10 +70,10 @@ public final class CustomerEncryptionKeyArgs extends io.pulumi.resources.Resourc
     }
 
     private CustomerEncryptionKeyArgs() {
-        this.kmsKeyName = Input.empty();
-        this.kmsKeyServiceAccount = Input.empty();
-        this.rawKey = Input.empty();
-        this.rsaEncryptedKey = Input.empty();
+        this.kmsKeyName = Output.empty();
+        this.kmsKeyServiceAccount = Output.empty();
+        this.rawKey = Output.empty();
+        this.rsaEncryptedKey = Output.empty();
     }
 
     public static Builder builder() {
@@ -85,10 +85,10 @@ public final class CustomerEncryptionKeyArgs extends io.pulumi.resources.Resourc
     }
 
     public static final class Builder {
-        private @Nullable Input<String> kmsKeyName;
-        private @Nullable Input<String> kmsKeyServiceAccount;
-        private @Nullable Input<String> rawKey;
-        private @Nullable Input<String> rsaEncryptedKey;
+        private @Nullable Output<String> kmsKeyName;
+        private @Nullable Output<String> kmsKeyServiceAccount;
+        private @Nullable Output<String> rawKey;
+        private @Nullable Output<String> rsaEncryptedKey;
 
         public Builder() {
     	      // Empty
@@ -102,43 +102,43 @@ public final class CustomerEncryptionKeyArgs extends io.pulumi.resources.Resourc
     	      this.rsaEncryptedKey = defaults.rsaEncryptedKey;
         }
 
-        public Builder kmsKeyName(@Nullable Input<String> kmsKeyName) {
+        public Builder kmsKeyName(@Nullable Output<String> kmsKeyName) {
             this.kmsKeyName = kmsKeyName;
             return this;
         }
 
         public Builder kmsKeyName(@Nullable String kmsKeyName) {
-            this.kmsKeyName = Input.ofNullable(kmsKeyName);
+            this.kmsKeyName = Output.ofNullable(kmsKeyName);
             return this;
         }
 
-        public Builder kmsKeyServiceAccount(@Nullable Input<String> kmsKeyServiceAccount) {
+        public Builder kmsKeyServiceAccount(@Nullable Output<String> kmsKeyServiceAccount) {
             this.kmsKeyServiceAccount = kmsKeyServiceAccount;
             return this;
         }
 
         public Builder kmsKeyServiceAccount(@Nullable String kmsKeyServiceAccount) {
-            this.kmsKeyServiceAccount = Input.ofNullable(kmsKeyServiceAccount);
+            this.kmsKeyServiceAccount = Output.ofNullable(kmsKeyServiceAccount);
             return this;
         }
 
-        public Builder rawKey(@Nullable Input<String> rawKey) {
+        public Builder rawKey(@Nullable Output<String> rawKey) {
             this.rawKey = rawKey;
             return this;
         }
 
         public Builder rawKey(@Nullable String rawKey) {
-            this.rawKey = Input.ofNullable(rawKey);
+            this.rawKey = Output.ofNullable(rawKey);
             return this;
         }
 
-        public Builder rsaEncryptedKey(@Nullable Input<String> rsaEncryptedKey) {
+        public Builder rsaEncryptedKey(@Nullable Output<String> rsaEncryptedKey) {
             this.rsaEncryptedKey = rsaEncryptedKey;
             return this;
         }
 
         public Builder rsaEncryptedKey(@Nullable String rsaEncryptedKey) {
-            this.rsaEncryptedKey = Input.ofNullable(rsaEncryptedKey);
+            this.rsaEncryptedKey = Output.ofNullable(rsaEncryptedKey);
             return this;
         }
         public CustomerEncryptionKeyArgs build() {

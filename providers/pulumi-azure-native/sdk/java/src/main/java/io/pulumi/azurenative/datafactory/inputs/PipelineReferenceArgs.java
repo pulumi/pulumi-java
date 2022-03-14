@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datafactory.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class PipelineReferenceArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -34,9 +34,9 @@ public final class PipelineReferenceArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="referenceName", required=true)
-      private final Input<String> referenceName;
+      private final Output<String> referenceName;
 
-    public Input<String> getReferenceName() {
+    public Output<String> getReferenceName() {
         return this.referenceName;
     }
 
@@ -45,25 +45,25 @@ public final class PipelineReferenceArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<String> type;
+      private final Output<String> type;
 
-    public Input<String> getType() {
+    public Output<String> getType() {
         return this.type;
     }
 
     public PipelineReferenceArgs(
-        @Nullable Input<String> name,
-        Input<String> referenceName,
-        Input<String> type) {
+        @Nullable Output<String> name,
+        Output<String> referenceName,
+        Output<String> type) {
         this.name = name;
         this.referenceName = Objects.requireNonNull(referenceName, "expected parameter 'referenceName' to be non-null");
         this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
     }
 
     private PipelineReferenceArgs() {
-        this.name = Input.empty();
-        this.referenceName = Input.empty();
-        this.type = Input.empty();
+        this.name = Output.empty();
+        this.referenceName = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -75,9 +75,9 @@ public final class PipelineReferenceArgs extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private @Nullable Input<String> name;
-        private Input<String> referenceName;
-        private Input<String> type;
+        private @Nullable Output<String> name;
+        private Output<String> referenceName;
+        private Output<String> type;
 
         public Builder() {
     	      // Empty
@@ -90,33 +90,33 @@ public final class PipelineReferenceArgs extends io.pulumi.resources.ResourceArg
     	      this.type = defaults.type;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder referenceName(Input<String> referenceName) {
+        public Builder referenceName(Output<String> referenceName) {
             this.referenceName = Objects.requireNonNull(referenceName);
             return this;
         }
 
         public Builder referenceName(String referenceName) {
-            this.referenceName = Input.of(Objects.requireNonNull(referenceName));
+            this.referenceName = Output.of(Objects.requireNonNull(referenceName));
             return this;
         }
 
-        public Builder type(Input<String> type) {
+        public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(String type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
         public PipelineReferenceArgs build() {

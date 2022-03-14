@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.core_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.kubernetes.core_v1.inputs.NodeAffinityArgs;
 import io.pulumi.kubernetes.core_v1.inputs.PodAffinityArgs;
@@ -25,10 +25,10 @@ public final class AffinityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="nodeAffinity")
-      private final @Nullable Input<NodeAffinityArgs> nodeAffinity;
+      private final @Nullable Output<NodeAffinityArgs> nodeAffinity;
 
-    public Input<NodeAffinityArgs> getNodeAffinity() {
-        return this.nodeAffinity == null ? Input.empty() : this.nodeAffinity;
+    public Output<NodeAffinityArgs> getNodeAffinity() {
+        return this.nodeAffinity == null ? Output.empty() : this.nodeAffinity;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class AffinityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="podAffinity")
-      private final @Nullable Input<PodAffinityArgs> podAffinity;
+      private final @Nullable Output<PodAffinityArgs> podAffinity;
 
-    public Input<PodAffinityArgs> getPodAffinity() {
-        return this.podAffinity == null ? Input.empty() : this.podAffinity;
+    public Output<PodAffinityArgs> getPodAffinity() {
+        return this.podAffinity == null ? Output.empty() : this.podAffinity;
     }
 
     /**
@@ -47,25 +47,25 @@ public final class AffinityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="podAntiAffinity")
-      private final @Nullable Input<PodAntiAffinityArgs> podAntiAffinity;
+      private final @Nullable Output<PodAntiAffinityArgs> podAntiAffinity;
 
-    public Input<PodAntiAffinityArgs> getPodAntiAffinity() {
-        return this.podAntiAffinity == null ? Input.empty() : this.podAntiAffinity;
+    public Output<PodAntiAffinityArgs> getPodAntiAffinity() {
+        return this.podAntiAffinity == null ? Output.empty() : this.podAntiAffinity;
     }
 
     public AffinityArgs(
-        @Nullable Input<NodeAffinityArgs> nodeAffinity,
-        @Nullable Input<PodAffinityArgs> podAffinity,
-        @Nullable Input<PodAntiAffinityArgs> podAntiAffinity) {
+        @Nullable Output<NodeAffinityArgs> nodeAffinity,
+        @Nullable Output<PodAffinityArgs> podAffinity,
+        @Nullable Output<PodAntiAffinityArgs> podAntiAffinity) {
         this.nodeAffinity = nodeAffinity;
         this.podAffinity = podAffinity;
         this.podAntiAffinity = podAntiAffinity;
     }
 
     private AffinityArgs() {
-        this.nodeAffinity = Input.empty();
-        this.podAffinity = Input.empty();
-        this.podAntiAffinity = Input.empty();
+        this.nodeAffinity = Output.empty();
+        this.podAffinity = Output.empty();
+        this.podAntiAffinity = Output.empty();
     }
 
     public static Builder builder() {
@@ -77,9 +77,9 @@ public final class AffinityArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<NodeAffinityArgs> nodeAffinity;
-        private @Nullable Input<PodAffinityArgs> podAffinity;
-        private @Nullable Input<PodAntiAffinityArgs> podAntiAffinity;
+        private @Nullable Output<NodeAffinityArgs> nodeAffinity;
+        private @Nullable Output<PodAffinityArgs> podAffinity;
+        private @Nullable Output<PodAntiAffinityArgs> podAntiAffinity;
 
         public Builder() {
     	      // Empty
@@ -92,33 +92,33 @@ public final class AffinityArgs extends io.pulumi.resources.ResourceArgs {
     	      this.podAntiAffinity = defaults.podAntiAffinity;
         }
 
-        public Builder nodeAffinity(@Nullable Input<NodeAffinityArgs> nodeAffinity) {
+        public Builder nodeAffinity(@Nullable Output<NodeAffinityArgs> nodeAffinity) {
             this.nodeAffinity = nodeAffinity;
             return this;
         }
 
         public Builder nodeAffinity(@Nullable NodeAffinityArgs nodeAffinity) {
-            this.nodeAffinity = Input.ofNullable(nodeAffinity);
+            this.nodeAffinity = Output.ofNullable(nodeAffinity);
             return this;
         }
 
-        public Builder podAffinity(@Nullable Input<PodAffinityArgs> podAffinity) {
+        public Builder podAffinity(@Nullable Output<PodAffinityArgs> podAffinity) {
             this.podAffinity = podAffinity;
             return this;
         }
 
         public Builder podAffinity(@Nullable PodAffinityArgs podAffinity) {
-            this.podAffinity = Input.ofNullable(podAffinity);
+            this.podAffinity = Output.ofNullable(podAffinity);
             return this;
         }
 
-        public Builder podAntiAffinity(@Nullable Input<PodAntiAffinityArgs> podAntiAffinity) {
+        public Builder podAntiAffinity(@Nullable Output<PodAntiAffinityArgs> podAntiAffinity) {
             this.podAntiAffinity = podAntiAffinity;
             return this;
         }
 
         public Builder podAntiAffinity(@Nullable PodAntiAffinityArgs podAntiAffinity) {
-            this.podAntiAffinity = Input.ofNullable(podAntiAffinity);
+            this.podAntiAffinity = Output.ofNullable(podAntiAffinity);
             return this;
         }
         public AffinityArgs build() {

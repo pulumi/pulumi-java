@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.opsworks.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -20,10 +20,10 @@ public final class UserProfileState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="allowSelfManagement")
-      private final @Nullable Input<Boolean> allowSelfManagement;
+      private final @Nullable Output<Boolean> allowSelfManagement;
 
-    public Input<Boolean> getAllowSelfManagement() {
-        return this.allowSelfManagement == null ? Input.empty() : this.allowSelfManagement;
+    public Output<Boolean> getAllowSelfManagement() {
+        return this.allowSelfManagement == null ? Output.empty() : this.allowSelfManagement;
     }
 
     /**
@@ -31,10 +31,10 @@ public final class UserProfileState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sshPublicKey")
-      private final @Nullable Input<String> sshPublicKey;
+      private final @Nullable Output<String> sshPublicKey;
 
-    public Input<String> getSshPublicKey() {
-        return this.sshPublicKey == null ? Input.empty() : this.sshPublicKey;
+    public Output<String> getSshPublicKey() {
+        return this.sshPublicKey == null ? Output.empty() : this.sshPublicKey;
     }
 
     /**
@@ -42,10 +42,10 @@ public final class UserProfileState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sshUsername")
-      private final @Nullable Input<String> sshUsername;
+      private final @Nullable Output<String> sshUsername;
 
-    public Input<String> getSshUsername() {
-        return this.sshUsername == null ? Input.empty() : this.sshUsername;
+    public Output<String> getSshUsername() {
+        return this.sshUsername == null ? Output.empty() : this.sshUsername;
     }
 
     /**
@@ -53,17 +53,17 @@ public final class UserProfileState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="userArn")
-      private final @Nullable Input<String> userArn;
+      private final @Nullable Output<String> userArn;
 
-    public Input<String> getUserArn() {
-        return this.userArn == null ? Input.empty() : this.userArn;
+    public Output<String> getUserArn() {
+        return this.userArn == null ? Output.empty() : this.userArn;
     }
 
     public UserProfileState(
-        @Nullable Input<Boolean> allowSelfManagement,
-        @Nullable Input<String> sshPublicKey,
-        @Nullable Input<String> sshUsername,
-        @Nullable Input<String> userArn) {
+        @Nullable Output<Boolean> allowSelfManagement,
+        @Nullable Output<String> sshPublicKey,
+        @Nullable Output<String> sshUsername,
+        @Nullable Output<String> userArn) {
         this.allowSelfManagement = allowSelfManagement;
         this.sshPublicKey = sshPublicKey;
         this.sshUsername = sshUsername;
@@ -71,10 +71,10 @@ public final class UserProfileState extends io.pulumi.resources.ResourceArgs {
     }
 
     private UserProfileState() {
-        this.allowSelfManagement = Input.empty();
-        this.sshPublicKey = Input.empty();
-        this.sshUsername = Input.empty();
-        this.userArn = Input.empty();
+        this.allowSelfManagement = Output.empty();
+        this.sshPublicKey = Output.empty();
+        this.sshUsername = Output.empty();
+        this.userArn = Output.empty();
     }
 
     public static Builder builder() {
@@ -86,10 +86,10 @@ public final class UserProfileState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> allowSelfManagement;
-        private @Nullable Input<String> sshPublicKey;
-        private @Nullable Input<String> sshUsername;
-        private @Nullable Input<String> userArn;
+        private @Nullable Output<Boolean> allowSelfManagement;
+        private @Nullable Output<String> sshPublicKey;
+        private @Nullable Output<String> sshUsername;
+        private @Nullable Output<String> userArn;
 
         public Builder() {
     	      // Empty
@@ -103,43 +103,43 @@ public final class UserProfileState extends io.pulumi.resources.ResourceArgs {
     	      this.userArn = defaults.userArn;
         }
 
-        public Builder allowSelfManagement(@Nullable Input<Boolean> allowSelfManagement) {
+        public Builder allowSelfManagement(@Nullable Output<Boolean> allowSelfManagement) {
             this.allowSelfManagement = allowSelfManagement;
             return this;
         }
 
         public Builder allowSelfManagement(@Nullable Boolean allowSelfManagement) {
-            this.allowSelfManagement = Input.ofNullable(allowSelfManagement);
+            this.allowSelfManagement = Output.ofNullable(allowSelfManagement);
             return this;
         }
 
-        public Builder sshPublicKey(@Nullable Input<String> sshPublicKey) {
+        public Builder sshPublicKey(@Nullable Output<String> sshPublicKey) {
             this.sshPublicKey = sshPublicKey;
             return this;
         }
 
         public Builder sshPublicKey(@Nullable String sshPublicKey) {
-            this.sshPublicKey = Input.ofNullable(sshPublicKey);
+            this.sshPublicKey = Output.ofNullable(sshPublicKey);
             return this;
         }
 
-        public Builder sshUsername(@Nullable Input<String> sshUsername) {
+        public Builder sshUsername(@Nullable Output<String> sshUsername) {
             this.sshUsername = sshUsername;
             return this;
         }
 
         public Builder sshUsername(@Nullable String sshUsername) {
-            this.sshUsername = Input.ofNullable(sshUsername);
+            this.sshUsername = Output.ofNullable(sshUsername);
             return this;
         }
 
-        public Builder userArn(@Nullable Input<String> userArn) {
+        public Builder userArn(@Nullable Output<String> userArn) {
             this.userArn = userArn;
             return this;
         }
 
         public Builder userArn(@Nullable String userArn) {
-            this.userArn = Input.ofNullable(userArn);
+            this.userArn = Output.ofNullable(userArn);
             return this;
         }
         public UserProfileState build() {

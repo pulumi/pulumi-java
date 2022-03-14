@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.cloudasset;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.cloudasset.inputs.OrganizationFeedConditionArgs;
 import io.pulumi.gcp.cloudasset.inputs.OrganizationFeedFeedOutputConfigArgs;
@@ -25,10 +25,10 @@ public final class OrganizationFeedArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="assetNames")
-      private final @Nullable Input<List<String>> assetNames;
+      private final @Nullable Output<List<String>> assetNames;
 
-    public Input<List<String>> getAssetNames() {
-        return this.assetNames == null ? Input.empty() : this.assetNames;
+    public Output<List<String>> getAssetNames() {
+        return this.assetNames == null ? Output.empty() : this.assetNames;
     }
 
     /**
@@ -40,10 +40,10 @@ public final class OrganizationFeedArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="assetTypes")
-      private final @Nullable Input<List<String>> assetTypes;
+      private final @Nullable Output<List<String>> assetTypes;
 
-    public Input<List<String>> getAssetTypes() {
-        return this.assetTypes == null ? Input.empty() : this.assetTypes;
+    public Output<List<String>> getAssetTypes() {
+        return this.assetTypes == null ? Output.empty() : this.assetTypes;
     }
 
     /**
@@ -53,9 +53,9 @@ public final class OrganizationFeedArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="billingProject", required=true)
-      private final Input<String> billingProject;
+      private final Output<String> billingProject;
 
-    public Input<String> getBillingProject() {
+    public Output<String> getBillingProject() {
         return this.billingProject;
     }
 
@@ -69,10 +69,10 @@ public final class OrganizationFeedArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="condition")
-      private final @Nullable Input<OrganizationFeedConditionArgs> condition;
+      private final @Nullable Output<OrganizationFeedConditionArgs> condition;
 
-    public Input<OrganizationFeedConditionArgs> getCondition() {
-        return this.condition == null ? Input.empty() : this.condition;
+    public Output<OrganizationFeedConditionArgs> getCondition() {
+        return this.condition == null ? Output.empty() : this.condition;
     }
 
     /**
@@ -81,10 +81,10 @@ public final class OrganizationFeedArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="contentType")
-      private final @Nullable Input<String> contentType;
+      private final @Nullable Output<String> contentType;
 
-    public Input<String> getContentType() {
-        return this.contentType == null ? Input.empty() : this.contentType;
+    public Output<String> getContentType() {
+        return this.contentType == null ? Output.empty() : this.contentType;
     }
 
     /**
@@ -92,9 +92,9 @@ public final class OrganizationFeedArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="feedId", required=true)
-      private final Input<String> feedId;
+      private final Output<String> feedId;
 
-    public Input<String> getFeedId() {
+    public Output<String> getFeedId() {
         return this.feedId;
     }
 
@@ -104,9 +104,9 @@ public final class OrganizationFeedArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="feedOutputConfig", required=true)
-      private final Input<OrganizationFeedFeedOutputConfigArgs> feedOutputConfig;
+      private final Output<OrganizationFeedFeedOutputConfigArgs> feedOutputConfig;
 
-    public Input<OrganizationFeedFeedOutputConfigArgs> getFeedOutputConfig() {
+    public Output<OrganizationFeedFeedOutputConfigArgs> getFeedOutputConfig() {
         return this.feedOutputConfig;
     }
 
@@ -115,21 +115,21 @@ public final class OrganizationFeedArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="orgId", required=true)
-      private final Input<String> orgId;
+      private final Output<String> orgId;
 
-    public Input<String> getOrgId() {
+    public Output<String> getOrgId() {
         return this.orgId;
     }
 
     public OrganizationFeedArgs(
-        @Nullable Input<List<String>> assetNames,
-        @Nullable Input<List<String>> assetTypes,
-        Input<String> billingProject,
-        @Nullable Input<OrganizationFeedConditionArgs> condition,
-        @Nullable Input<String> contentType,
-        Input<String> feedId,
-        Input<OrganizationFeedFeedOutputConfigArgs> feedOutputConfig,
-        Input<String> orgId) {
+        @Nullable Output<List<String>> assetNames,
+        @Nullable Output<List<String>> assetTypes,
+        Output<String> billingProject,
+        @Nullable Output<OrganizationFeedConditionArgs> condition,
+        @Nullable Output<String> contentType,
+        Output<String> feedId,
+        Output<OrganizationFeedFeedOutputConfigArgs> feedOutputConfig,
+        Output<String> orgId) {
         this.assetNames = assetNames;
         this.assetTypes = assetTypes;
         this.billingProject = Objects.requireNonNull(billingProject, "expected parameter 'billingProject' to be non-null");
@@ -141,14 +141,14 @@ public final class OrganizationFeedArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private OrganizationFeedArgs() {
-        this.assetNames = Input.empty();
-        this.assetTypes = Input.empty();
-        this.billingProject = Input.empty();
-        this.condition = Input.empty();
-        this.contentType = Input.empty();
-        this.feedId = Input.empty();
-        this.feedOutputConfig = Input.empty();
-        this.orgId = Input.empty();
+        this.assetNames = Output.empty();
+        this.assetTypes = Output.empty();
+        this.billingProject = Output.empty();
+        this.condition = Output.empty();
+        this.contentType = Output.empty();
+        this.feedId = Output.empty();
+        this.feedOutputConfig = Output.empty();
+        this.orgId = Output.empty();
     }
 
     public static Builder builder() {
@@ -160,14 +160,14 @@ public final class OrganizationFeedArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> assetNames;
-        private @Nullable Input<List<String>> assetTypes;
-        private Input<String> billingProject;
-        private @Nullable Input<OrganizationFeedConditionArgs> condition;
-        private @Nullable Input<String> contentType;
-        private Input<String> feedId;
-        private Input<OrganizationFeedFeedOutputConfigArgs> feedOutputConfig;
-        private Input<String> orgId;
+        private @Nullable Output<List<String>> assetNames;
+        private @Nullable Output<List<String>> assetTypes;
+        private Output<String> billingProject;
+        private @Nullable Output<OrganizationFeedConditionArgs> condition;
+        private @Nullable Output<String> contentType;
+        private Output<String> feedId;
+        private Output<OrganizationFeedFeedOutputConfigArgs> feedOutputConfig;
+        private Output<String> orgId;
 
         public Builder() {
     	      // Empty
@@ -185,83 +185,83 @@ public final class OrganizationFeedArgs extends io.pulumi.resources.ResourceArgs
     	      this.orgId = defaults.orgId;
         }
 
-        public Builder assetNames(@Nullable Input<List<String>> assetNames) {
+        public Builder assetNames(@Nullable Output<List<String>> assetNames) {
             this.assetNames = assetNames;
             return this;
         }
 
         public Builder assetNames(@Nullable List<String> assetNames) {
-            this.assetNames = Input.ofNullable(assetNames);
+            this.assetNames = Output.ofNullable(assetNames);
             return this;
         }
 
-        public Builder assetTypes(@Nullable Input<List<String>> assetTypes) {
+        public Builder assetTypes(@Nullable Output<List<String>> assetTypes) {
             this.assetTypes = assetTypes;
             return this;
         }
 
         public Builder assetTypes(@Nullable List<String> assetTypes) {
-            this.assetTypes = Input.ofNullable(assetTypes);
+            this.assetTypes = Output.ofNullable(assetTypes);
             return this;
         }
 
-        public Builder billingProject(Input<String> billingProject) {
+        public Builder billingProject(Output<String> billingProject) {
             this.billingProject = Objects.requireNonNull(billingProject);
             return this;
         }
 
         public Builder billingProject(String billingProject) {
-            this.billingProject = Input.of(Objects.requireNonNull(billingProject));
+            this.billingProject = Output.of(Objects.requireNonNull(billingProject));
             return this;
         }
 
-        public Builder condition(@Nullable Input<OrganizationFeedConditionArgs> condition) {
+        public Builder condition(@Nullable Output<OrganizationFeedConditionArgs> condition) {
             this.condition = condition;
             return this;
         }
 
         public Builder condition(@Nullable OrganizationFeedConditionArgs condition) {
-            this.condition = Input.ofNullable(condition);
+            this.condition = Output.ofNullable(condition);
             return this;
         }
 
-        public Builder contentType(@Nullable Input<String> contentType) {
+        public Builder contentType(@Nullable Output<String> contentType) {
             this.contentType = contentType;
             return this;
         }
 
         public Builder contentType(@Nullable String contentType) {
-            this.contentType = Input.ofNullable(contentType);
+            this.contentType = Output.ofNullable(contentType);
             return this;
         }
 
-        public Builder feedId(Input<String> feedId) {
+        public Builder feedId(Output<String> feedId) {
             this.feedId = Objects.requireNonNull(feedId);
             return this;
         }
 
         public Builder feedId(String feedId) {
-            this.feedId = Input.of(Objects.requireNonNull(feedId));
+            this.feedId = Output.of(Objects.requireNonNull(feedId));
             return this;
         }
 
-        public Builder feedOutputConfig(Input<OrganizationFeedFeedOutputConfigArgs> feedOutputConfig) {
+        public Builder feedOutputConfig(Output<OrganizationFeedFeedOutputConfigArgs> feedOutputConfig) {
             this.feedOutputConfig = Objects.requireNonNull(feedOutputConfig);
             return this;
         }
 
         public Builder feedOutputConfig(OrganizationFeedFeedOutputConfigArgs feedOutputConfig) {
-            this.feedOutputConfig = Input.of(Objects.requireNonNull(feedOutputConfig));
+            this.feedOutputConfig = Output.of(Objects.requireNonNull(feedOutputConfig));
             return this;
         }
 
-        public Builder orgId(Input<String> orgId) {
+        public Builder orgId(Output<String> orgId) {
             this.orgId = Objects.requireNonNull(orgId);
             return this;
         }
 
         public Builder orgId(String orgId) {
-            this.orgId = Input.of(Objects.requireNonNull(orgId));
+            this.orgId = Output.of(Objects.requireNonNull(orgId));
             return this;
         }
         public OrganizationFeedArgs build() {

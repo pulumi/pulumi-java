@@ -6,7 +6,6 @@ package io.pulumi.azurenative.management;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.management.HierarchySettingArgs;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -141,21 +140,21 @@ public class HierarchySetting extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public HierarchySetting(String name, HierarchySettingArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:management:HierarchySetting", name, args == null ? HierarchySettingArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("azure-native:management:HierarchySetting", name, args == null ? HierarchySettingArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private HierarchySetting(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private HierarchySetting(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:management:HierarchySetting", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:management/v20200201:HierarchySetting").build()),
-                Input.of(Alias.builder().setType("azure-native:management/v20200501:HierarchySetting").build()),
-                Input.of(Alias.builder().setType("azure-native:management/v20201001:HierarchySetting").build()),
-                Input.of(Alias.builder().setType("azure-native:management/v20210401:HierarchySetting").build())
+                Output.of(Alias.builder().setType("azure-native:management/v20200201:HierarchySetting").build()),
+                Output.of(Alias.builder().setType("azure-native:management/v20200501:HierarchySetting").build()),
+                Output.of(Alias.builder().setType("azure-native:management/v20201001:HierarchySetting").build()),
+                Output.of(Alias.builder().setType("azure-native:management/v20210401:HierarchySetting").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -169,7 +168,7 @@ public class HierarchySetting extends io.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static HierarchySetting get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static HierarchySetting get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new HierarchySetting(name, id, options);
     }
 }

@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.lightsail.inputs;
 
 import io.pulumi.awsnative.lightsail.inputs.InstanceDiskArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.List;
@@ -25,10 +25,10 @@ public final class InstanceHardwareArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="cpuCount")
-      private final @Nullable Input<Integer> cpuCount;
+      private final @Nullable Output<Integer> cpuCount;
 
-    public Input<Integer> getCpuCount() {
-        return this.cpuCount == null ? Input.empty() : this.cpuCount;
+    public Output<Integer> getCpuCount() {
+        return this.cpuCount == null ? Output.empty() : this.cpuCount;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class InstanceHardwareArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="disks")
-      private final @Nullable Input<List<InstanceDiskArgs>> disks;
+      private final @Nullable Output<List<InstanceDiskArgs>> disks;
 
-    public Input<List<InstanceDiskArgs>> getDisks() {
-        return this.disks == null ? Input.empty() : this.disks;
+    public Output<List<InstanceDiskArgs>> getDisks() {
+        return this.disks == null ? Output.empty() : this.disks;
     }
 
     /**
@@ -47,25 +47,25 @@ public final class InstanceHardwareArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="ramSizeInGb")
-      private final @Nullable Input<Integer> ramSizeInGb;
+      private final @Nullable Output<Integer> ramSizeInGb;
 
-    public Input<Integer> getRamSizeInGb() {
-        return this.ramSizeInGb == null ? Input.empty() : this.ramSizeInGb;
+    public Output<Integer> getRamSizeInGb() {
+        return this.ramSizeInGb == null ? Output.empty() : this.ramSizeInGb;
     }
 
     public InstanceHardwareArgs(
-        @Nullable Input<Integer> cpuCount,
-        @Nullable Input<List<InstanceDiskArgs>> disks,
-        @Nullable Input<Integer> ramSizeInGb) {
+        @Nullable Output<Integer> cpuCount,
+        @Nullable Output<List<InstanceDiskArgs>> disks,
+        @Nullable Output<Integer> ramSizeInGb) {
         this.cpuCount = cpuCount;
         this.disks = disks;
         this.ramSizeInGb = ramSizeInGb;
     }
 
     private InstanceHardwareArgs() {
-        this.cpuCount = Input.empty();
-        this.disks = Input.empty();
-        this.ramSizeInGb = Input.empty();
+        this.cpuCount = Output.empty();
+        this.disks = Output.empty();
+        this.ramSizeInGb = Output.empty();
     }
 
     public static Builder builder() {
@@ -77,9 +77,9 @@ public final class InstanceHardwareArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> cpuCount;
-        private @Nullable Input<List<InstanceDiskArgs>> disks;
-        private @Nullable Input<Integer> ramSizeInGb;
+        private @Nullable Output<Integer> cpuCount;
+        private @Nullable Output<List<InstanceDiskArgs>> disks;
+        private @Nullable Output<Integer> ramSizeInGb;
 
         public Builder() {
     	      // Empty
@@ -92,33 +92,33 @@ public final class InstanceHardwareArgs extends io.pulumi.resources.ResourceArgs
     	      this.ramSizeInGb = defaults.ramSizeInGb;
         }
 
-        public Builder cpuCount(@Nullable Input<Integer> cpuCount) {
+        public Builder cpuCount(@Nullable Output<Integer> cpuCount) {
             this.cpuCount = cpuCount;
             return this;
         }
 
         public Builder cpuCount(@Nullable Integer cpuCount) {
-            this.cpuCount = Input.ofNullable(cpuCount);
+            this.cpuCount = Output.ofNullable(cpuCount);
             return this;
         }
 
-        public Builder disks(@Nullable Input<List<InstanceDiskArgs>> disks) {
+        public Builder disks(@Nullable Output<List<InstanceDiskArgs>> disks) {
             this.disks = disks;
             return this;
         }
 
         public Builder disks(@Nullable List<InstanceDiskArgs> disks) {
-            this.disks = Input.ofNullable(disks);
+            this.disks = Output.ofNullable(disks);
             return this;
         }
 
-        public Builder ramSizeInGb(@Nullable Input<Integer> ramSizeInGb) {
+        public Builder ramSizeInGb(@Nullable Output<Integer> ramSizeInGb) {
             this.ramSizeInGb = ramSizeInGb;
             return this;
         }
 
         public Builder ramSizeInGb(@Nullable Integer ramSizeInGb) {
-            this.ramSizeInGb = Input.ofNullable(ramSizeInGb);
+            this.ramSizeInGb = Output.ofNullable(ramSizeInGb);
             return this;
         }
         public InstanceHardwareArgs build() {

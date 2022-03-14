@@ -17,7 +17,7 @@ import io.pulumi.azurenative.eventgrid.inputs.StorageBlobDeadLetterDestinationAr
 import io.pulumi.azurenative.eventgrid.inputs.StorageQueueEventSubscriptionDestinationArgs;
 import io.pulumi.azurenative.eventgrid.inputs.WebHookEventSubscriptionDestinationArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
@@ -36,10 +36,10 @@ public final class PartnerTopicEventSubscriptionArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="deadLetterDestination")
-      private final @Nullable Input<StorageBlobDeadLetterDestinationArgs> deadLetterDestination;
+      private final @Nullable Output<StorageBlobDeadLetterDestinationArgs> deadLetterDestination;
 
-    public Input<StorageBlobDeadLetterDestinationArgs> getDeadLetterDestination() {
-        return this.deadLetterDestination == null ? Input.empty() : this.deadLetterDestination;
+    public Output<StorageBlobDeadLetterDestinationArgs> getDeadLetterDestination() {
+        return this.deadLetterDestination == null ? Output.empty() : this.deadLetterDestination;
     }
 
     /**
@@ -48,10 +48,10 @@ public final class PartnerTopicEventSubscriptionArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="deadLetterWithResourceIdentity")
-      private final @Nullable Input<DeadLetterWithResourceIdentityArgs> deadLetterWithResourceIdentity;
+      private final @Nullable Output<DeadLetterWithResourceIdentityArgs> deadLetterWithResourceIdentity;
 
-    public Input<DeadLetterWithResourceIdentityArgs> getDeadLetterWithResourceIdentity() {
-        return this.deadLetterWithResourceIdentity == null ? Input.empty() : this.deadLetterWithResourceIdentity;
+    public Output<DeadLetterWithResourceIdentityArgs> getDeadLetterWithResourceIdentity() {
+        return this.deadLetterWithResourceIdentity == null ? Output.empty() : this.deadLetterWithResourceIdentity;
     }
 
     /**
@@ -60,10 +60,10 @@ public final class PartnerTopicEventSubscriptionArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="deliveryWithResourceIdentity")
-      private final @Nullable Input<DeliveryWithResourceIdentityArgs> deliveryWithResourceIdentity;
+      private final @Nullable Output<DeliveryWithResourceIdentityArgs> deliveryWithResourceIdentity;
 
-    public Input<DeliveryWithResourceIdentityArgs> getDeliveryWithResourceIdentity() {
-        return this.deliveryWithResourceIdentity == null ? Input.empty() : this.deliveryWithResourceIdentity;
+    public Output<DeliveryWithResourceIdentityArgs> getDeliveryWithResourceIdentity() {
+        return this.deliveryWithResourceIdentity == null ? Output.empty() : this.deliveryWithResourceIdentity;
     }
 
     /**
@@ -72,10 +72,10 @@ public final class PartnerTopicEventSubscriptionArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="destination")
-      private final @Nullable Input<Object> destination;
+      private final @Nullable Output<Object> destination;
 
-    public Input<Object> getDestination() {
-        return this.destination == null ? Input.empty() : this.destination;
+    public Output<Object> getDestination() {
+        return this.destination == null ? Output.empty() : this.destination;
     }
 
     /**
@@ -83,10 +83,10 @@ public final class PartnerTopicEventSubscriptionArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="eventDeliverySchema")
-      private final @Nullable Input<Either<String,EventDeliverySchema>> eventDeliverySchema;
+      private final @Nullable Output<Either<String,EventDeliverySchema>> eventDeliverySchema;
 
-    public Input<Either<String,EventDeliverySchema>> getEventDeliverySchema() {
-        return this.eventDeliverySchema == null ? Input.empty() : this.eventDeliverySchema;
+    public Output<Either<String,EventDeliverySchema>> getEventDeliverySchema() {
+        return this.eventDeliverySchema == null ? Output.empty() : this.eventDeliverySchema;
     }
 
     /**
@@ -94,10 +94,10 @@ public final class PartnerTopicEventSubscriptionArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="eventSubscriptionName")
-      private final @Nullable Input<String> eventSubscriptionName;
+      private final @Nullable Output<String> eventSubscriptionName;
 
-    public Input<String> getEventSubscriptionName() {
-        return this.eventSubscriptionName == null ? Input.empty() : this.eventSubscriptionName;
+    public Output<String> getEventSubscriptionName() {
+        return this.eventSubscriptionName == null ? Output.empty() : this.eventSubscriptionName;
     }
 
     /**
@@ -105,10 +105,10 @@ public final class PartnerTopicEventSubscriptionArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="expirationTimeUtc")
-      private final @Nullable Input<String> expirationTimeUtc;
+      private final @Nullable Output<String> expirationTimeUtc;
 
-    public Input<String> getExpirationTimeUtc() {
-        return this.expirationTimeUtc == null ? Input.empty() : this.expirationTimeUtc;
+    public Output<String> getExpirationTimeUtc() {
+        return this.expirationTimeUtc == null ? Output.empty() : this.expirationTimeUtc;
     }
 
     /**
@@ -116,10 +116,10 @@ public final class PartnerTopicEventSubscriptionArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="filter")
-      private final @Nullable Input<EventSubscriptionFilterArgs> filter;
+      private final @Nullable Output<EventSubscriptionFilterArgs> filter;
 
-    public Input<EventSubscriptionFilterArgs> getFilter() {
-        return this.filter == null ? Input.empty() : this.filter;
+    public Output<EventSubscriptionFilterArgs> getFilter() {
+        return this.filter == null ? Output.empty() : this.filter;
     }
 
     /**
@@ -127,10 +127,10 @@ public final class PartnerTopicEventSubscriptionArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="labels")
-      private final @Nullable Input<List<String>> labels;
+      private final @Nullable Output<List<String>> labels;
 
-    public Input<List<String>> getLabels() {
-        return this.labels == null ? Input.empty() : this.labels;
+    public Output<List<String>> getLabels() {
+        return this.labels == null ? Output.empty() : this.labels;
     }
 
     /**
@@ -138,9 +138,9 @@ public final class PartnerTopicEventSubscriptionArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="partnerTopicName", required=true)
-      private final Input<String> partnerTopicName;
+      private final Output<String> partnerTopicName;
 
-    public Input<String> getPartnerTopicName() {
+    public Output<String> getPartnerTopicName() {
         return this.partnerTopicName;
     }
 
@@ -149,9 +149,9 @@ public final class PartnerTopicEventSubscriptionArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -160,30 +160,30 @@ public final class PartnerTopicEventSubscriptionArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="retryPolicy")
-      private final @Nullable Input<RetryPolicyArgs> retryPolicy;
+      private final @Nullable Output<RetryPolicyArgs> retryPolicy;
 
-    public Input<RetryPolicyArgs> getRetryPolicy() {
-        return this.retryPolicy == null ? Input.empty() : this.retryPolicy;
+    public Output<RetryPolicyArgs> getRetryPolicy() {
+        return this.retryPolicy == null ? Output.empty() : this.retryPolicy;
     }
 
     public PartnerTopicEventSubscriptionArgs(
-        @Nullable Input<StorageBlobDeadLetterDestinationArgs> deadLetterDestination,
-        @Nullable Input<DeadLetterWithResourceIdentityArgs> deadLetterWithResourceIdentity,
-        @Nullable Input<DeliveryWithResourceIdentityArgs> deliveryWithResourceIdentity,
-        @Nullable Input<Object> destination,
-        @Nullable Input<Either<String,EventDeliverySchema>> eventDeliverySchema,
-        @Nullable Input<String> eventSubscriptionName,
-        @Nullable Input<String> expirationTimeUtc,
-        @Nullable Input<EventSubscriptionFilterArgs> filter,
-        @Nullable Input<List<String>> labels,
-        Input<String> partnerTopicName,
-        Input<String> resourceGroupName,
-        @Nullable Input<RetryPolicyArgs> retryPolicy) {
+        @Nullable Output<StorageBlobDeadLetterDestinationArgs> deadLetterDestination,
+        @Nullable Output<DeadLetterWithResourceIdentityArgs> deadLetterWithResourceIdentity,
+        @Nullable Output<DeliveryWithResourceIdentityArgs> deliveryWithResourceIdentity,
+        @Nullable Output<Object> destination,
+        @Nullable Output<Either<String,EventDeliverySchema>> eventDeliverySchema,
+        @Nullable Output<String> eventSubscriptionName,
+        @Nullable Output<String> expirationTimeUtc,
+        @Nullable Output<EventSubscriptionFilterArgs> filter,
+        @Nullable Output<List<String>> labels,
+        Output<String> partnerTopicName,
+        Output<String> resourceGroupName,
+        @Nullable Output<RetryPolicyArgs> retryPolicy) {
         this.deadLetterDestination = deadLetterDestination;
         this.deadLetterWithResourceIdentity = deadLetterWithResourceIdentity;
         this.deliveryWithResourceIdentity = deliveryWithResourceIdentity;
         this.destination = destination;
-        this.eventDeliverySchema = eventDeliverySchema == null ? Input.ofLeft("EventGridSchema") : eventDeliverySchema;
+        this.eventDeliverySchema = eventDeliverySchema == null ? Output.ofLeft("EventGridSchema") : eventDeliverySchema;
         this.eventSubscriptionName = eventSubscriptionName;
         this.expirationTimeUtc = expirationTimeUtc;
         this.filter = filter;
@@ -194,18 +194,18 @@ public final class PartnerTopicEventSubscriptionArgs extends io.pulumi.resources
     }
 
     private PartnerTopicEventSubscriptionArgs() {
-        this.deadLetterDestination = Input.empty();
-        this.deadLetterWithResourceIdentity = Input.empty();
-        this.deliveryWithResourceIdentity = Input.empty();
-        this.destination = Input.empty();
-        this.eventDeliverySchema = Input.empty();
-        this.eventSubscriptionName = Input.empty();
-        this.expirationTimeUtc = Input.empty();
-        this.filter = Input.empty();
-        this.labels = Input.empty();
-        this.partnerTopicName = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.retryPolicy = Input.empty();
+        this.deadLetterDestination = Output.empty();
+        this.deadLetterWithResourceIdentity = Output.empty();
+        this.deliveryWithResourceIdentity = Output.empty();
+        this.destination = Output.empty();
+        this.eventDeliverySchema = Output.empty();
+        this.eventSubscriptionName = Output.empty();
+        this.expirationTimeUtc = Output.empty();
+        this.filter = Output.empty();
+        this.labels = Output.empty();
+        this.partnerTopicName = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.retryPolicy = Output.empty();
     }
 
     public static Builder builder() {
@@ -217,18 +217,18 @@ public final class PartnerTopicEventSubscriptionArgs extends io.pulumi.resources
     }
 
     public static final class Builder {
-        private @Nullable Input<StorageBlobDeadLetterDestinationArgs> deadLetterDestination;
-        private @Nullable Input<DeadLetterWithResourceIdentityArgs> deadLetterWithResourceIdentity;
-        private @Nullable Input<DeliveryWithResourceIdentityArgs> deliveryWithResourceIdentity;
-        private @Nullable Input<Object> destination;
-        private @Nullable Input<Either<String,EventDeliverySchema>> eventDeliverySchema;
-        private @Nullable Input<String> eventSubscriptionName;
-        private @Nullable Input<String> expirationTimeUtc;
-        private @Nullable Input<EventSubscriptionFilterArgs> filter;
-        private @Nullable Input<List<String>> labels;
-        private Input<String> partnerTopicName;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<RetryPolicyArgs> retryPolicy;
+        private @Nullable Output<StorageBlobDeadLetterDestinationArgs> deadLetterDestination;
+        private @Nullable Output<DeadLetterWithResourceIdentityArgs> deadLetterWithResourceIdentity;
+        private @Nullable Output<DeliveryWithResourceIdentityArgs> deliveryWithResourceIdentity;
+        private @Nullable Output<Object> destination;
+        private @Nullable Output<Either<String,EventDeliverySchema>> eventDeliverySchema;
+        private @Nullable Output<String> eventSubscriptionName;
+        private @Nullable Output<String> expirationTimeUtc;
+        private @Nullable Output<EventSubscriptionFilterArgs> filter;
+        private @Nullable Output<List<String>> labels;
+        private Output<String> partnerTopicName;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<RetryPolicyArgs> retryPolicy;
 
         public Builder() {
     	      // Empty
@@ -250,123 +250,123 @@ public final class PartnerTopicEventSubscriptionArgs extends io.pulumi.resources
     	      this.retryPolicy = defaults.retryPolicy;
         }
 
-        public Builder deadLetterDestination(@Nullable Input<StorageBlobDeadLetterDestinationArgs> deadLetterDestination) {
+        public Builder deadLetterDestination(@Nullable Output<StorageBlobDeadLetterDestinationArgs> deadLetterDestination) {
             this.deadLetterDestination = deadLetterDestination;
             return this;
         }
 
         public Builder deadLetterDestination(@Nullable StorageBlobDeadLetterDestinationArgs deadLetterDestination) {
-            this.deadLetterDestination = Input.ofNullable(deadLetterDestination);
+            this.deadLetterDestination = Output.ofNullable(deadLetterDestination);
             return this;
         }
 
-        public Builder deadLetterWithResourceIdentity(@Nullable Input<DeadLetterWithResourceIdentityArgs> deadLetterWithResourceIdentity) {
+        public Builder deadLetterWithResourceIdentity(@Nullable Output<DeadLetterWithResourceIdentityArgs> deadLetterWithResourceIdentity) {
             this.deadLetterWithResourceIdentity = deadLetterWithResourceIdentity;
             return this;
         }
 
         public Builder deadLetterWithResourceIdentity(@Nullable DeadLetterWithResourceIdentityArgs deadLetterWithResourceIdentity) {
-            this.deadLetterWithResourceIdentity = Input.ofNullable(deadLetterWithResourceIdentity);
+            this.deadLetterWithResourceIdentity = Output.ofNullable(deadLetterWithResourceIdentity);
             return this;
         }
 
-        public Builder deliveryWithResourceIdentity(@Nullable Input<DeliveryWithResourceIdentityArgs> deliveryWithResourceIdentity) {
+        public Builder deliveryWithResourceIdentity(@Nullable Output<DeliveryWithResourceIdentityArgs> deliveryWithResourceIdentity) {
             this.deliveryWithResourceIdentity = deliveryWithResourceIdentity;
             return this;
         }
 
         public Builder deliveryWithResourceIdentity(@Nullable DeliveryWithResourceIdentityArgs deliveryWithResourceIdentity) {
-            this.deliveryWithResourceIdentity = Input.ofNullable(deliveryWithResourceIdentity);
+            this.deliveryWithResourceIdentity = Output.ofNullable(deliveryWithResourceIdentity);
             return this;
         }
 
-        public Builder destination(@Nullable Input<Object> destination) {
+        public Builder destination(@Nullable Output<Object> destination) {
             this.destination = destination;
             return this;
         }
 
         public Builder destination(@Nullable Object destination) {
-            this.destination = Input.ofNullable(destination);
+            this.destination = Output.ofNullable(destination);
             return this;
         }
 
-        public Builder eventDeliverySchema(@Nullable Input<Either<String,EventDeliverySchema>> eventDeliverySchema) {
+        public Builder eventDeliverySchema(@Nullable Output<Either<String,EventDeliverySchema>> eventDeliverySchema) {
             this.eventDeliverySchema = eventDeliverySchema;
             return this;
         }
 
         public Builder eventDeliverySchema(@Nullable Either<String,EventDeliverySchema> eventDeliverySchema) {
-            this.eventDeliverySchema = Input.ofNullable(eventDeliverySchema);
+            this.eventDeliverySchema = Output.ofNullable(eventDeliverySchema);
             return this;
         }
 
-        public Builder eventSubscriptionName(@Nullable Input<String> eventSubscriptionName) {
+        public Builder eventSubscriptionName(@Nullable Output<String> eventSubscriptionName) {
             this.eventSubscriptionName = eventSubscriptionName;
             return this;
         }
 
         public Builder eventSubscriptionName(@Nullable String eventSubscriptionName) {
-            this.eventSubscriptionName = Input.ofNullable(eventSubscriptionName);
+            this.eventSubscriptionName = Output.ofNullable(eventSubscriptionName);
             return this;
         }
 
-        public Builder expirationTimeUtc(@Nullable Input<String> expirationTimeUtc) {
+        public Builder expirationTimeUtc(@Nullable Output<String> expirationTimeUtc) {
             this.expirationTimeUtc = expirationTimeUtc;
             return this;
         }
 
         public Builder expirationTimeUtc(@Nullable String expirationTimeUtc) {
-            this.expirationTimeUtc = Input.ofNullable(expirationTimeUtc);
+            this.expirationTimeUtc = Output.ofNullable(expirationTimeUtc);
             return this;
         }
 
-        public Builder filter(@Nullable Input<EventSubscriptionFilterArgs> filter) {
+        public Builder filter(@Nullable Output<EventSubscriptionFilterArgs> filter) {
             this.filter = filter;
             return this;
         }
 
         public Builder filter(@Nullable EventSubscriptionFilterArgs filter) {
-            this.filter = Input.ofNullable(filter);
+            this.filter = Output.ofNullable(filter);
             return this;
         }
 
-        public Builder labels(@Nullable Input<List<String>> labels) {
+        public Builder labels(@Nullable Output<List<String>> labels) {
             this.labels = labels;
             return this;
         }
 
         public Builder labels(@Nullable List<String> labels) {
-            this.labels = Input.ofNullable(labels);
+            this.labels = Output.ofNullable(labels);
             return this;
         }
 
-        public Builder partnerTopicName(Input<String> partnerTopicName) {
+        public Builder partnerTopicName(Output<String> partnerTopicName) {
             this.partnerTopicName = Objects.requireNonNull(partnerTopicName);
             return this;
         }
 
         public Builder partnerTopicName(String partnerTopicName) {
-            this.partnerTopicName = Input.of(Objects.requireNonNull(partnerTopicName));
+            this.partnerTopicName = Output.of(Objects.requireNonNull(partnerTopicName));
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder retryPolicy(@Nullable Input<RetryPolicyArgs> retryPolicy) {
+        public Builder retryPolicy(@Nullable Output<RetryPolicyArgs> retryPolicy) {
             this.retryPolicy = retryPolicy;
             return this;
         }
 
         public Builder retryPolicy(@Nullable RetryPolicyArgs retryPolicy) {
-            this.retryPolicy = Input.ofNullable(retryPolicy);
+            this.retryPolicy = Output.ofNullable(retryPolicy);
             return this;
         }
         public PartnerTopicEventSubscriptionArgs build() {

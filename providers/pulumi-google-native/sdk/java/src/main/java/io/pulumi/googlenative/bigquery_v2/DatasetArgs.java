@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.bigquery_v2;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.bigquery_v2.inputs.DatasetAccessItemArgs;
 import io.pulumi.googlenative.bigquery_v2.inputs.DatasetReferenceArgs;
@@ -26,10 +26,10 @@ public final class DatasetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="access")
-      private final @Nullable Input<List<DatasetAccessItemArgs>> access;
+      private final @Nullable Output<List<DatasetAccessItemArgs>> access;
 
-    public Input<List<DatasetAccessItemArgs>> getAccess() {
-        return this.access == null ? Input.empty() : this.access;
+    public Output<List<DatasetAccessItemArgs>> getAccess() {
+        return this.access == null ? Output.empty() : this.access;
     }
 
     /**
@@ -37,17 +37,17 @@ public final class DatasetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="datasetReference")
-      private final @Nullable Input<DatasetReferenceArgs> datasetReference;
+      private final @Nullable Output<DatasetReferenceArgs> datasetReference;
 
-    public Input<DatasetReferenceArgs> getDatasetReference() {
-        return this.datasetReference == null ? Input.empty() : this.datasetReference;
+    public Output<DatasetReferenceArgs> getDatasetReference() {
+        return this.datasetReference == null ? Output.empty() : this.datasetReference;
     }
 
     @InputImport(name="defaultEncryptionConfiguration")
-      private final @Nullable Input<EncryptionConfigurationArgs> defaultEncryptionConfiguration;
+      private final @Nullable Output<EncryptionConfigurationArgs> defaultEncryptionConfiguration;
 
-    public Input<EncryptionConfigurationArgs> getDefaultEncryptionConfiguration() {
-        return this.defaultEncryptionConfiguration == null ? Input.empty() : this.defaultEncryptionConfiguration;
+    public Output<EncryptionConfigurationArgs> getDefaultEncryptionConfiguration() {
+        return this.defaultEncryptionConfiguration == null ? Output.empty() : this.defaultEncryptionConfiguration;
     }
 
     /**
@@ -55,10 +55,10 @@ public final class DatasetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="defaultPartitionExpirationMs")
-      private final @Nullable Input<String> defaultPartitionExpirationMs;
+      private final @Nullable Output<String> defaultPartitionExpirationMs;
 
-    public Input<String> getDefaultPartitionExpirationMs() {
-        return this.defaultPartitionExpirationMs == null ? Input.empty() : this.defaultPartitionExpirationMs;
+    public Output<String> getDefaultPartitionExpirationMs() {
+        return this.defaultPartitionExpirationMs == null ? Output.empty() : this.defaultPartitionExpirationMs;
     }
 
     /**
@@ -66,10 +66,10 @@ public final class DatasetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="defaultTableExpirationMs")
-      private final @Nullable Input<String> defaultTableExpirationMs;
+      private final @Nullable Output<String> defaultTableExpirationMs;
 
-    public Input<String> getDefaultTableExpirationMs() {
-        return this.defaultTableExpirationMs == null ? Input.empty() : this.defaultTableExpirationMs;
+    public Output<String> getDefaultTableExpirationMs() {
+        return this.defaultTableExpirationMs == null ? Output.empty() : this.defaultTableExpirationMs;
     }
 
     /**
@@ -77,10 +77,10 @@ public final class DatasetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -88,10 +88,10 @@ public final class DatasetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="friendlyName")
-      private final @Nullable Input<String> friendlyName;
+      private final @Nullable Output<String> friendlyName;
 
-    public Input<String> getFriendlyName() {
-        return this.friendlyName == null ? Input.empty() : this.friendlyName;
+    public Output<String> getFriendlyName() {
+        return this.friendlyName == null ? Output.empty() : this.friendlyName;
     }
 
     /**
@@ -99,10 +99,10 @@ public final class DatasetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="isCaseInsensitive")
-      private final @Nullable Input<Boolean> isCaseInsensitive;
+      private final @Nullable Output<Boolean> isCaseInsensitive;
 
-    public Input<Boolean> getIsCaseInsensitive() {
-        return this.isCaseInsensitive == null ? Input.empty() : this.isCaseInsensitive;
+    public Output<Boolean> getIsCaseInsensitive() {
+        return this.isCaseInsensitive == null ? Output.empty() : this.isCaseInsensitive;
     }
 
     /**
@@ -110,10 +110,10 @@ public final class DatasetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labels")
-      private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Output<Map<String,String>> labels;
 
-    public Input<Map<String,String>> getLabels() {
-        return this.labels == null ? Input.empty() : this.labels;
+    public Output<Map<String,String>> getLabels() {
+        return this.labels == null ? Output.empty() : this.labels;
     }
 
     /**
@@ -121,17 +121,17 @@ public final class DatasetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -139,25 +139,25 @@ public final class DatasetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<List<DatasetTagsItemArgs>> tags;
+      private final @Nullable Output<List<DatasetTagsItemArgs>> tags;
 
-    public Input<List<DatasetTagsItemArgs>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<List<DatasetTagsItemArgs>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public DatasetArgs(
-        @Nullable Input<List<DatasetAccessItemArgs>> access,
-        @Nullable Input<DatasetReferenceArgs> datasetReference,
-        @Nullable Input<EncryptionConfigurationArgs> defaultEncryptionConfiguration,
-        @Nullable Input<String> defaultPartitionExpirationMs,
-        @Nullable Input<String> defaultTableExpirationMs,
-        @Nullable Input<String> description,
-        @Nullable Input<String> friendlyName,
-        @Nullable Input<Boolean> isCaseInsensitive,
-        @Nullable Input<Map<String,String>> labels,
-        @Nullable Input<String> location,
-        @Nullable Input<String> project,
-        @Nullable Input<List<DatasetTagsItemArgs>> tags) {
+        @Nullable Output<List<DatasetAccessItemArgs>> access,
+        @Nullable Output<DatasetReferenceArgs> datasetReference,
+        @Nullable Output<EncryptionConfigurationArgs> defaultEncryptionConfiguration,
+        @Nullable Output<String> defaultPartitionExpirationMs,
+        @Nullable Output<String> defaultTableExpirationMs,
+        @Nullable Output<String> description,
+        @Nullable Output<String> friendlyName,
+        @Nullable Output<Boolean> isCaseInsensitive,
+        @Nullable Output<Map<String,String>> labels,
+        @Nullable Output<String> location,
+        @Nullable Output<String> project,
+        @Nullable Output<List<DatasetTagsItemArgs>> tags) {
         this.access = access;
         this.datasetReference = datasetReference;
         this.defaultEncryptionConfiguration = defaultEncryptionConfiguration;
@@ -173,18 +173,18 @@ public final class DatasetArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DatasetArgs() {
-        this.access = Input.empty();
-        this.datasetReference = Input.empty();
-        this.defaultEncryptionConfiguration = Input.empty();
-        this.defaultPartitionExpirationMs = Input.empty();
-        this.defaultTableExpirationMs = Input.empty();
-        this.description = Input.empty();
-        this.friendlyName = Input.empty();
-        this.isCaseInsensitive = Input.empty();
-        this.labels = Input.empty();
-        this.location = Input.empty();
-        this.project = Input.empty();
-        this.tags = Input.empty();
+        this.access = Output.empty();
+        this.datasetReference = Output.empty();
+        this.defaultEncryptionConfiguration = Output.empty();
+        this.defaultPartitionExpirationMs = Output.empty();
+        this.defaultTableExpirationMs = Output.empty();
+        this.description = Output.empty();
+        this.friendlyName = Output.empty();
+        this.isCaseInsensitive = Output.empty();
+        this.labels = Output.empty();
+        this.location = Output.empty();
+        this.project = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -196,18 +196,18 @@ public final class DatasetArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<List<DatasetAccessItemArgs>> access;
-        private @Nullable Input<DatasetReferenceArgs> datasetReference;
-        private @Nullable Input<EncryptionConfigurationArgs> defaultEncryptionConfiguration;
-        private @Nullable Input<String> defaultPartitionExpirationMs;
-        private @Nullable Input<String> defaultTableExpirationMs;
-        private @Nullable Input<String> description;
-        private @Nullable Input<String> friendlyName;
-        private @Nullable Input<Boolean> isCaseInsensitive;
-        private @Nullable Input<Map<String,String>> labels;
-        private @Nullable Input<String> location;
-        private @Nullable Input<String> project;
-        private @Nullable Input<List<DatasetTagsItemArgs>> tags;
+        private @Nullable Output<List<DatasetAccessItemArgs>> access;
+        private @Nullable Output<DatasetReferenceArgs> datasetReference;
+        private @Nullable Output<EncryptionConfigurationArgs> defaultEncryptionConfiguration;
+        private @Nullable Output<String> defaultPartitionExpirationMs;
+        private @Nullable Output<String> defaultTableExpirationMs;
+        private @Nullable Output<String> description;
+        private @Nullable Output<String> friendlyName;
+        private @Nullable Output<Boolean> isCaseInsensitive;
+        private @Nullable Output<Map<String,String>> labels;
+        private @Nullable Output<String> location;
+        private @Nullable Output<String> project;
+        private @Nullable Output<List<DatasetTagsItemArgs>> tags;
 
         public Builder() {
     	      // Empty
@@ -229,123 +229,123 @@ public final class DatasetArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder access(@Nullable Input<List<DatasetAccessItemArgs>> access) {
+        public Builder access(@Nullable Output<List<DatasetAccessItemArgs>> access) {
             this.access = access;
             return this;
         }
 
         public Builder access(@Nullable List<DatasetAccessItemArgs> access) {
-            this.access = Input.ofNullable(access);
+            this.access = Output.ofNullable(access);
             return this;
         }
 
-        public Builder datasetReference(@Nullable Input<DatasetReferenceArgs> datasetReference) {
+        public Builder datasetReference(@Nullable Output<DatasetReferenceArgs> datasetReference) {
             this.datasetReference = datasetReference;
             return this;
         }
 
         public Builder datasetReference(@Nullable DatasetReferenceArgs datasetReference) {
-            this.datasetReference = Input.ofNullable(datasetReference);
+            this.datasetReference = Output.ofNullable(datasetReference);
             return this;
         }
 
-        public Builder defaultEncryptionConfiguration(@Nullable Input<EncryptionConfigurationArgs> defaultEncryptionConfiguration) {
+        public Builder defaultEncryptionConfiguration(@Nullable Output<EncryptionConfigurationArgs> defaultEncryptionConfiguration) {
             this.defaultEncryptionConfiguration = defaultEncryptionConfiguration;
             return this;
         }
 
         public Builder defaultEncryptionConfiguration(@Nullable EncryptionConfigurationArgs defaultEncryptionConfiguration) {
-            this.defaultEncryptionConfiguration = Input.ofNullable(defaultEncryptionConfiguration);
+            this.defaultEncryptionConfiguration = Output.ofNullable(defaultEncryptionConfiguration);
             return this;
         }
 
-        public Builder defaultPartitionExpirationMs(@Nullable Input<String> defaultPartitionExpirationMs) {
+        public Builder defaultPartitionExpirationMs(@Nullable Output<String> defaultPartitionExpirationMs) {
             this.defaultPartitionExpirationMs = defaultPartitionExpirationMs;
             return this;
         }
 
         public Builder defaultPartitionExpirationMs(@Nullable String defaultPartitionExpirationMs) {
-            this.defaultPartitionExpirationMs = Input.ofNullable(defaultPartitionExpirationMs);
+            this.defaultPartitionExpirationMs = Output.ofNullable(defaultPartitionExpirationMs);
             return this;
         }
 
-        public Builder defaultTableExpirationMs(@Nullable Input<String> defaultTableExpirationMs) {
+        public Builder defaultTableExpirationMs(@Nullable Output<String> defaultTableExpirationMs) {
             this.defaultTableExpirationMs = defaultTableExpirationMs;
             return this;
         }
 
         public Builder defaultTableExpirationMs(@Nullable String defaultTableExpirationMs) {
-            this.defaultTableExpirationMs = Input.ofNullable(defaultTableExpirationMs);
+            this.defaultTableExpirationMs = Output.ofNullable(defaultTableExpirationMs);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder friendlyName(@Nullable Input<String> friendlyName) {
+        public Builder friendlyName(@Nullable Output<String> friendlyName) {
             this.friendlyName = friendlyName;
             return this;
         }
 
         public Builder friendlyName(@Nullable String friendlyName) {
-            this.friendlyName = Input.ofNullable(friendlyName);
+            this.friendlyName = Output.ofNullable(friendlyName);
             return this;
         }
 
-        public Builder isCaseInsensitive(@Nullable Input<Boolean> isCaseInsensitive) {
+        public Builder isCaseInsensitive(@Nullable Output<Boolean> isCaseInsensitive) {
             this.isCaseInsensitive = isCaseInsensitive;
             return this;
         }
 
         public Builder isCaseInsensitive(@Nullable Boolean isCaseInsensitive) {
-            this.isCaseInsensitive = Input.ofNullable(isCaseInsensitive);
+            this.isCaseInsensitive = Output.ofNullable(isCaseInsensitive);
             return this;
         }
 
-        public Builder labels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
         public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Input.ofNullable(labels);
+            this.labels = Output.ofNullable(labels);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder tags(@Nullable Input<List<DatasetTagsItemArgs>> tags) {
+        public Builder tags(@Nullable Output<List<DatasetTagsItemArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable List<DatasetTagsItemArgs> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public DatasetArgs build() {

@@ -6,7 +6,7 @@ package io.pulumi.azurenative.avs.inputs;
 import io.pulumi.azurenative.avs.enums.AffinityType;
 import io.pulumi.azurenative.avs.enums.PlacementPolicyState;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -27,9 +27,9 @@ public final class VmHostPlacementPolicyPropertiesArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="affinityType", required=true)
-      private final Input<Either<String,AffinityType>> affinityType;
+      private final Output<Either<String,AffinityType>> affinityType;
 
-    public Input<Either<String,AffinityType>> getAffinityType() {
+    public Output<Either<String,AffinityType>> getAffinityType() {
         return this.affinityType;
     }
 
@@ -38,10 +38,10 @@ public final class VmHostPlacementPolicyPropertiesArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="displayName")
-      private final @Nullable Input<String> displayName;
+      private final @Nullable Output<String> displayName;
 
-    public Input<String> getDisplayName() {
-        return this.displayName == null ? Input.empty() : this.displayName;
+    public Output<String> getDisplayName() {
+        return this.displayName == null ? Output.empty() : this.displayName;
     }
 
     /**
@@ -49,9 +49,9 @@ public final class VmHostPlacementPolicyPropertiesArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="hostMembers", required=true)
-      private final Input<List<String>> hostMembers;
+      private final Output<List<String>> hostMembers;
 
-    public Input<List<String>> getHostMembers() {
+    public Output<List<String>> getHostMembers() {
         return this.hostMembers;
     }
 
@@ -60,10 +60,10 @@ public final class VmHostPlacementPolicyPropertiesArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="state")
-      private final @Nullable Input<Either<String,PlacementPolicyState>> state;
+      private final @Nullable Output<Either<String,PlacementPolicyState>> state;
 
-    public Input<Either<String,PlacementPolicyState>> getState() {
-        return this.state == null ? Input.empty() : this.state;
+    public Output<Either<String,PlacementPolicyState>> getState() {
+        return this.state == null ? Output.empty() : this.state;
     }
 
     /**
@@ -72,9 +72,9 @@ public final class VmHostPlacementPolicyPropertiesArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<String> type;
+      private final Output<String> type;
 
-    public Input<String> getType() {
+    public Output<String> getType() {
         return this.type;
     }
 
@@ -83,19 +83,19 @@ public final class VmHostPlacementPolicyPropertiesArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="vmMembers", required=true)
-      private final Input<List<String>> vmMembers;
+      private final Output<List<String>> vmMembers;
 
-    public Input<List<String>> getVmMembers() {
+    public Output<List<String>> getVmMembers() {
         return this.vmMembers;
     }
 
     public VmHostPlacementPolicyPropertiesArgs(
-        Input<Either<String,AffinityType>> affinityType,
-        @Nullable Input<String> displayName,
-        Input<List<String>> hostMembers,
-        @Nullable Input<Either<String,PlacementPolicyState>> state,
-        Input<String> type,
-        Input<List<String>> vmMembers) {
+        Output<Either<String,AffinityType>> affinityType,
+        @Nullable Output<String> displayName,
+        Output<List<String>> hostMembers,
+        @Nullable Output<Either<String,PlacementPolicyState>> state,
+        Output<String> type,
+        Output<List<String>> vmMembers) {
         this.affinityType = Objects.requireNonNull(affinityType, "expected parameter 'affinityType' to be non-null");
         this.displayName = displayName;
         this.hostMembers = Objects.requireNonNull(hostMembers, "expected parameter 'hostMembers' to be non-null");
@@ -105,12 +105,12 @@ public final class VmHostPlacementPolicyPropertiesArgs extends io.pulumi.resourc
     }
 
     private VmHostPlacementPolicyPropertiesArgs() {
-        this.affinityType = Input.empty();
-        this.displayName = Input.empty();
-        this.hostMembers = Input.empty();
-        this.state = Input.empty();
-        this.type = Input.empty();
-        this.vmMembers = Input.empty();
+        this.affinityType = Output.empty();
+        this.displayName = Output.empty();
+        this.hostMembers = Output.empty();
+        this.state = Output.empty();
+        this.type = Output.empty();
+        this.vmMembers = Output.empty();
     }
 
     public static Builder builder() {
@@ -122,12 +122,12 @@ public final class VmHostPlacementPolicyPropertiesArgs extends io.pulumi.resourc
     }
 
     public static final class Builder {
-        private Input<Either<String,AffinityType>> affinityType;
-        private @Nullable Input<String> displayName;
-        private Input<List<String>> hostMembers;
-        private @Nullable Input<Either<String,PlacementPolicyState>> state;
-        private Input<String> type;
-        private Input<List<String>> vmMembers;
+        private Output<Either<String,AffinityType>> affinityType;
+        private @Nullable Output<String> displayName;
+        private Output<List<String>> hostMembers;
+        private @Nullable Output<Either<String,PlacementPolicyState>> state;
+        private Output<String> type;
+        private Output<List<String>> vmMembers;
 
         public Builder() {
     	      // Empty
@@ -143,63 +143,63 @@ public final class VmHostPlacementPolicyPropertiesArgs extends io.pulumi.resourc
     	      this.vmMembers = defaults.vmMembers;
         }
 
-        public Builder affinityType(Input<Either<String,AffinityType>> affinityType) {
+        public Builder affinityType(Output<Either<String,AffinityType>> affinityType) {
             this.affinityType = Objects.requireNonNull(affinityType);
             return this;
         }
 
         public Builder affinityType(Either<String,AffinityType> affinityType) {
-            this.affinityType = Input.of(Objects.requireNonNull(affinityType));
+            this.affinityType = Output.of(Objects.requireNonNull(affinityType));
             return this;
         }
 
-        public Builder displayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Input.ofNullable(displayName);
+            this.displayName = Output.ofNullable(displayName);
             return this;
         }
 
-        public Builder hostMembers(Input<List<String>> hostMembers) {
+        public Builder hostMembers(Output<List<String>> hostMembers) {
             this.hostMembers = Objects.requireNonNull(hostMembers);
             return this;
         }
 
         public Builder hostMembers(List<String> hostMembers) {
-            this.hostMembers = Input.of(Objects.requireNonNull(hostMembers));
+            this.hostMembers = Output.of(Objects.requireNonNull(hostMembers));
             return this;
         }
 
-        public Builder state(@Nullable Input<Either<String,PlacementPolicyState>> state) {
+        public Builder state(@Nullable Output<Either<String,PlacementPolicyState>> state) {
             this.state = state;
             return this;
         }
 
         public Builder state(@Nullable Either<String,PlacementPolicyState> state) {
-            this.state = Input.ofNullable(state);
+            this.state = Output.ofNullable(state);
             return this;
         }
 
-        public Builder type(Input<String> type) {
+        public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(String type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
 
-        public Builder vmMembers(Input<List<String>> vmMembers) {
+        public Builder vmMembers(Output<List<String>> vmMembers) {
             this.vmMembers = Objects.requireNonNull(vmMembers);
             return this;
         }
 
         public Builder vmMembers(List<String> vmMembers) {
-            this.vmMembers = Input.of(Objects.requireNonNull(vmMembers));
+            this.vmMembers = Output.of(Objects.requireNonNull(vmMembers));
             return this;
         }
         public VmHostPlacementPolicyPropertiesArgs build() {

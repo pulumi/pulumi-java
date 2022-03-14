@@ -5,7 +5,7 @@ package io.pulumi.azurenative.security.inputs;
 
 import io.pulumi.azurenative.security.enums.OrganizationMembershipType;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -26,10 +26,10 @@ public final class SecurityConnectorPropertiesOrganizationalDataArgs extends io.
      * 
      */
     @InputImport(name="excludedAccountIds")
-      private final @Nullable Input<List<String>> excludedAccountIds;
+      private final @Nullable Output<List<String>> excludedAccountIds;
 
-    public Input<List<String>> getExcludedAccountIds() {
-        return this.excludedAccountIds == null ? Input.empty() : this.excludedAccountIds;
+    public Output<List<String>> getExcludedAccountIds() {
+        return this.excludedAccountIds == null ? Output.empty() : this.excludedAccountIds;
     }
 
     /**
@@ -37,10 +37,10 @@ public final class SecurityConnectorPropertiesOrganizationalDataArgs extends io.
      * 
      */
     @InputImport(name="organizationMembershipType")
-      private final @Nullable Input<Either<String,OrganizationMembershipType>> organizationMembershipType;
+      private final @Nullable Output<Either<String,OrganizationMembershipType>> organizationMembershipType;
 
-    public Input<Either<String,OrganizationMembershipType>> getOrganizationMembershipType() {
-        return this.organizationMembershipType == null ? Input.empty() : this.organizationMembershipType;
+    public Output<Either<String,OrganizationMembershipType>> getOrganizationMembershipType() {
+        return this.organizationMembershipType == null ? Output.empty() : this.organizationMembershipType;
     }
 
     /**
@@ -48,10 +48,10 @@ public final class SecurityConnectorPropertiesOrganizationalDataArgs extends io.
      * 
      */
     @InputImport(name="parentHierarchyId")
-      private final @Nullable Input<String> parentHierarchyId;
+      private final @Nullable Output<String> parentHierarchyId;
 
-    public Input<String> getParentHierarchyId() {
-        return this.parentHierarchyId == null ? Input.empty() : this.parentHierarchyId;
+    public Output<String> getParentHierarchyId() {
+        return this.parentHierarchyId == null ? Output.empty() : this.parentHierarchyId;
     }
 
     /**
@@ -59,17 +59,17 @@ public final class SecurityConnectorPropertiesOrganizationalDataArgs extends io.
      * 
      */
     @InputImport(name="stacksetName")
-      private final @Nullable Input<String> stacksetName;
+      private final @Nullable Output<String> stacksetName;
 
-    public Input<String> getStacksetName() {
-        return this.stacksetName == null ? Input.empty() : this.stacksetName;
+    public Output<String> getStacksetName() {
+        return this.stacksetName == null ? Output.empty() : this.stacksetName;
     }
 
     public SecurityConnectorPropertiesOrganizationalDataArgs(
-        @Nullable Input<List<String>> excludedAccountIds,
-        @Nullable Input<Either<String,OrganizationMembershipType>> organizationMembershipType,
-        @Nullable Input<String> parentHierarchyId,
-        @Nullable Input<String> stacksetName) {
+        @Nullable Output<List<String>> excludedAccountIds,
+        @Nullable Output<Either<String,OrganizationMembershipType>> organizationMembershipType,
+        @Nullable Output<String> parentHierarchyId,
+        @Nullable Output<String> stacksetName) {
         this.excludedAccountIds = excludedAccountIds;
         this.organizationMembershipType = organizationMembershipType;
         this.parentHierarchyId = parentHierarchyId;
@@ -77,10 +77,10 @@ public final class SecurityConnectorPropertiesOrganizationalDataArgs extends io.
     }
 
     private SecurityConnectorPropertiesOrganizationalDataArgs() {
-        this.excludedAccountIds = Input.empty();
-        this.organizationMembershipType = Input.empty();
-        this.parentHierarchyId = Input.empty();
-        this.stacksetName = Input.empty();
+        this.excludedAccountIds = Output.empty();
+        this.organizationMembershipType = Output.empty();
+        this.parentHierarchyId = Output.empty();
+        this.stacksetName = Output.empty();
     }
 
     public static Builder builder() {
@@ -92,10 +92,10 @@ public final class SecurityConnectorPropertiesOrganizationalDataArgs extends io.
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> excludedAccountIds;
-        private @Nullable Input<Either<String,OrganizationMembershipType>> organizationMembershipType;
-        private @Nullable Input<String> parentHierarchyId;
-        private @Nullable Input<String> stacksetName;
+        private @Nullable Output<List<String>> excludedAccountIds;
+        private @Nullable Output<Either<String,OrganizationMembershipType>> organizationMembershipType;
+        private @Nullable Output<String> parentHierarchyId;
+        private @Nullable Output<String> stacksetName;
 
         public Builder() {
     	      // Empty
@@ -109,43 +109,43 @@ public final class SecurityConnectorPropertiesOrganizationalDataArgs extends io.
     	      this.stacksetName = defaults.stacksetName;
         }
 
-        public Builder excludedAccountIds(@Nullable Input<List<String>> excludedAccountIds) {
+        public Builder excludedAccountIds(@Nullable Output<List<String>> excludedAccountIds) {
             this.excludedAccountIds = excludedAccountIds;
             return this;
         }
 
         public Builder excludedAccountIds(@Nullable List<String> excludedAccountIds) {
-            this.excludedAccountIds = Input.ofNullable(excludedAccountIds);
+            this.excludedAccountIds = Output.ofNullable(excludedAccountIds);
             return this;
         }
 
-        public Builder organizationMembershipType(@Nullable Input<Either<String,OrganizationMembershipType>> organizationMembershipType) {
+        public Builder organizationMembershipType(@Nullable Output<Either<String,OrganizationMembershipType>> organizationMembershipType) {
             this.organizationMembershipType = organizationMembershipType;
             return this;
         }
 
         public Builder organizationMembershipType(@Nullable Either<String,OrganizationMembershipType> organizationMembershipType) {
-            this.organizationMembershipType = Input.ofNullable(organizationMembershipType);
+            this.organizationMembershipType = Output.ofNullable(organizationMembershipType);
             return this;
         }
 
-        public Builder parentHierarchyId(@Nullable Input<String> parentHierarchyId) {
+        public Builder parentHierarchyId(@Nullable Output<String> parentHierarchyId) {
             this.parentHierarchyId = parentHierarchyId;
             return this;
         }
 
         public Builder parentHierarchyId(@Nullable String parentHierarchyId) {
-            this.parentHierarchyId = Input.ofNullable(parentHierarchyId);
+            this.parentHierarchyId = Output.ofNullable(parentHierarchyId);
             return this;
         }
 
-        public Builder stacksetName(@Nullable Input<String> stacksetName) {
+        public Builder stacksetName(@Nullable Output<String> stacksetName) {
             this.stacksetName = stacksetName;
             return this;
         }
 
         public Builder stacksetName(@Nullable String stacksetName) {
-            this.stacksetName = Input.ofNullable(stacksetName);
+            this.stacksetName = Output.ofNullable(stacksetName);
             return this;
         }
         public SecurityConnectorPropertiesOrganizationalDataArgs build() {

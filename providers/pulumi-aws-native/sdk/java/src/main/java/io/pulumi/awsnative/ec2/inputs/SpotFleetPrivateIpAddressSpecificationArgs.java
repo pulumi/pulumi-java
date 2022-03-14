@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.ec2.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -16,29 +16,29 @@ public final class SpotFleetPrivateIpAddressSpecificationArgs extends io.pulumi.
     public static final SpotFleetPrivateIpAddressSpecificationArgs Empty = new SpotFleetPrivateIpAddressSpecificationArgs();
 
     @InputImport(name="primary")
-      private final @Nullable Input<Boolean> primary;
+      private final @Nullable Output<Boolean> primary;
 
-    public Input<Boolean> getPrimary() {
-        return this.primary == null ? Input.empty() : this.primary;
+    public Output<Boolean> getPrimary() {
+        return this.primary == null ? Output.empty() : this.primary;
     }
 
     @InputImport(name="privateIpAddress", required=true)
-      private final Input<String> privateIpAddress;
+      private final Output<String> privateIpAddress;
 
-    public Input<String> getPrivateIpAddress() {
+    public Output<String> getPrivateIpAddress() {
         return this.privateIpAddress;
     }
 
     public SpotFleetPrivateIpAddressSpecificationArgs(
-        @Nullable Input<Boolean> primary,
-        Input<String> privateIpAddress) {
+        @Nullable Output<Boolean> primary,
+        Output<String> privateIpAddress) {
         this.primary = primary;
         this.privateIpAddress = Objects.requireNonNull(privateIpAddress, "expected parameter 'privateIpAddress' to be non-null");
     }
 
     private SpotFleetPrivateIpAddressSpecificationArgs() {
-        this.primary = Input.empty();
-        this.privateIpAddress = Input.empty();
+        this.primary = Output.empty();
+        this.privateIpAddress = Output.empty();
     }
 
     public static Builder builder() {
@@ -50,8 +50,8 @@ public final class SpotFleetPrivateIpAddressSpecificationArgs extends io.pulumi.
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> primary;
-        private Input<String> privateIpAddress;
+        private @Nullable Output<Boolean> primary;
+        private Output<String> privateIpAddress;
 
         public Builder() {
     	      // Empty
@@ -63,23 +63,23 @@ public final class SpotFleetPrivateIpAddressSpecificationArgs extends io.pulumi.
     	      this.privateIpAddress = defaults.privateIpAddress;
         }
 
-        public Builder primary(@Nullable Input<Boolean> primary) {
+        public Builder primary(@Nullable Output<Boolean> primary) {
             this.primary = primary;
             return this;
         }
 
         public Builder primary(@Nullable Boolean primary) {
-            this.primary = Input.ofNullable(primary);
+            this.primary = Output.ofNullable(primary);
             return this;
         }
 
-        public Builder privateIpAddress(Input<String> privateIpAddress) {
+        public Builder privateIpAddress(Output<String> privateIpAddress) {
             this.privateIpAddress = Objects.requireNonNull(privateIpAddress);
             return this;
         }
 
         public Builder privateIpAddress(String privateIpAddress) {
-            this.privateIpAddress = Input.of(Objects.requireNonNull(privateIpAddress));
+            this.privateIpAddress = Output.of(Objects.requireNonNull(privateIpAddress));
             return this;
         }
         public SpotFleetPrivateIpAddressSpecificationArgs build() {

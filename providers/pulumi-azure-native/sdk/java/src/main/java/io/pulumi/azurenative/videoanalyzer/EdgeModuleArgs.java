@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.videoanalyzer;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,9 +19,9 @@ public final class EdgeModuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="accountName", required=true)
-      private final Input<String> accountName;
+      private final Output<String> accountName;
 
-    public Input<String> getAccountName() {
+    public Output<String> getAccountName() {
         return this.accountName;
     }
 
@@ -30,10 +30,10 @@ public final class EdgeModuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="edgeModuleName")
-      private final @Nullable Input<String> edgeModuleName;
+      private final @Nullable Output<String> edgeModuleName;
 
-    public Input<String> getEdgeModuleName() {
-        return this.edgeModuleName == null ? Input.empty() : this.edgeModuleName;
+    public Output<String> getEdgeModuleName() {
+        return this.edgeModuleName == null ? Output.empty() : this.edgeModuleName;
     }
 
     /**
@@ -41,25 +41,25 @@ public final class EdgeModuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
     public EdgeModuleArgs(
-        Input<String> accountName,
-        @Nullable Input<String> edgeModuleName,
-        Input<String> resourceGroupName) {
+        Output<String> accountName,
+        @Nullable Output<String> edgeModuleName,
+        Output<String> resourceGroupName) {
         this.accountName = Objects.requireNonNull(accountName, "expected parameter 'accountName' to be non-null");
         this.edgeModuleName = edgeModuleName;
         this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
     }
 
     private EdgeModuleArgs() {
-        this.accountName = Input.empty();
-        this.edgeModuleName = Input.empty();
-        this.resourceGroupName = Input.empty();
+        this.accountName = Output.empty();
+        this.edgeModuleName = Output.empty();
+        this.resourceGroupName = Output.empty();
     }
 
     public static Builder builder() {
@@ -71,9 +71,9 @@ public final class EdgeModuleArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> accountName;
-        private @Nullable Input<String> edgeModuleName;
-        private Input<String> resourceGroupName;
+        private Output<String> accountName;
+        private @Nullable Output<String> edgeModuleName;
+        private Output<String> resourceGroupName;
 
         public Builder() {
     	      // Empty
@@ -86,33 +86,33 @@ public final class EdgeModuleArgs extends io.pulumi.resources.ResourceArgs {
     	      this.resourceGroupName = defaults.resourceGroupName;
         }
 
-        public Builder accountName(Input<String> accountName) {
+        public Builder accountName(Output<String> accountName) {
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
 
         public Builder accountName(String accountName) {
-            this.accountName = Input.of(Objects.requireNonNull(accountName));
+            this.accountName = Output.of(Objects.requireNonNull(accountName));
             return this;
         }
 
-        public Builder edgeModuleName(@Nullable Input<String> edgeModuleName) {
+        public Builder edgeModuleName(@Nullable Output<String> edgeModuleName) {
             this.edgeModuleName = edgeModuleName;
             return this;
         }
 
         public Builder edgeModuleName(@Nullable String edgeModuleName) {
-            this.edgeModuleName = Input.ofNullable(edgeModuleName);
+            this.edgeModuleName = Output.ofNullable(edgeModuleName);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
         public EdgeModuleArgs build() {

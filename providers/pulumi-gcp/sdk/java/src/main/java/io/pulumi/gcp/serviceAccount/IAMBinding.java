@@ -3,7 +3,6 @@
 
 package io.pulumi.gcp.serviceAccount;
 
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -174,14 +173,14 @@ public class IAMBinding extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public IAMBinding(String name, IAMBindingArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:serviceAccount/iAMBinding:IAMBinding", name, args == null ? IAMBindingArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("gcp:serviceAccount/iAMBinding:IAMBinding", name, args == null ? IAMBindingArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private IAMBinding(String name, Input<String> id, @Nullable IAMBindingState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private IAMBinding(String name, Output<String> id, @Nullable IAMBindingState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("gcp:serviceAccount/iAMBinding:IAMBinding", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -197,7 +196,7 @@ public class IAMBinding extends io.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static IAMBinding get(String name, Input<String> id, @Nullable IAMBindingState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static IAMBinding get(String name, Output<String> id, @Nullable IAMBindingState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new IAMBinding(name, id, state, options);
     }
 }

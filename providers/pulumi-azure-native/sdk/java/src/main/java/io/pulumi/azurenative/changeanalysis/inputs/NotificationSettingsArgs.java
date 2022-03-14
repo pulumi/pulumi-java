@@ -6,7 +6,7 @@ package io.pulumi.azurenative.changeanalysis.inputs;
 import io.pulumi.azurenative.changeanalysis.enums.NotificationsState;
 import io.pulumi.azurenative.changeanalysis.inputs.AzureMonitorWorkspacePropertiesArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -26,10 +26,10 @@ public final class NotificationSettingsArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="activationState")
-      private final @Nullable Input<Either<String,NotificationsState>> activationState;
+      private final @Nullable Output<Either<String,NotificationsState>> activationState;
 
-    public Input<Either<String,NotificationsState>> getActivationState() {
-        return this.activationState == null ? Input.empty() : this.activationState;
+    public Output<Either<String,NotificationsState>> getActivationState() {
+        return this.activationState == null ? Output.empty() : this.activationState;
     }
 
     /**
@@ -37,22 +37,22 @@ public final class NotificationSettingsArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="azureMonitorWorkspaceProperties")
-      private final @Nullable Input<AzureMonitorWorkspacePropertiesArgs> azureMonitorWorkspaceProperties;
+      private final @Nullable Output<AzureMonitorWorkspacePropertiesArgs> azureMonitorWorkspaceProperties;
 
-    public Input<AzureMonitorWorkspacePropertiesArgs> getAzureMonitorWorkspaceProperties() {
-        return this.azureMonitorWorkspaceProperties == null ? Input.empty() : this.azureMonitorWorkspaceProperties;
+    public Output<AzureMonitorWorkspacePropertiesArgs> getAzureMonitorWorkspaceProperties() {
+        return this.azureMonitorWorkspaceProperties == null ? Output.empty() : this.azureMonitorWorkspaceProperties;
     }
 
     public NotificationSettingsArgs(
-        @Nullable Input<Either<String,NotificationsState>> activationState,
-        @Nullable Input<AzureMonitorWorkspacePropertiesArgs> azureMonitorWorkspaceProperties) {
+        @Nullable Output<Either<String,NotificationsState>> activationState,
+        @Nullable Output<AzureMonitorWorkspacePropertiesArgs> azureMonitorWorkspaceProperties) {
         this.activationState = activationState;
         this.azureMonitorWorkspaceProperties = azureMonitorWorkspaceProperties;
     }
 
     private NotificationSettingsArgs() {
-        this.activationState = Input.empty();
-        this.azureMonitorWorkspaceProperties = Input.empty();
+        this.activationState = Output.empty();
+        this.azureMonitorWorkspaceProperties = Output.empty();
     }
 
     public static Builder builder() {
@@ -64,8 +64,8 @@ public final class NotificationSettingsArgs extends io.pulumi.resources.Resource
     }
 
     public static final class Builder {
-        private @Nullable Input<Either<String,NotificationsState>> activationState;
-        private @Nullable Input<AzureMonitorWorkspacePropertiesArgs> azureMonitorWorkspaceProperties;
+        private @Nullable Output<Either<String,NotificationsState>> activationState;
+        private @Nullable Output<AzureMonitorWorkspacePropertiesArgs> azureMonitorWorkspaceProperties;
 
         public Builder() {
     	      // Empty
@@ -77,23 +77,23 @@ public final class NotificationSettingsArgs extends io.pulumi.resources.Resource
     	      this.azureMonitorWorkspaceProperties = defaults.azureMonitorWorkspaceProperties;
         }
 
-        public Builder activationState(@Nullable Input<Either<String,NotificationsState>> activationState) {
+        public Builder activationState(@Nullable Output<Either<String,NotificationsState>> activationState) {
             this.activationState = activationState;
             return this;
         }
 
         public Builder activationState(@Nullable Either<String,NotificationsState> activationState) {
-            this.activationState = Input.ofNullable(activationState);
+            this.activationState = Output.ofNullable(activationState);
             return this;
         }
 
-        public Builder azureMonitorWorkspaceProperties(@Nullable Input<AzureMonitorWorkspacePropertiesArgs> azureMonitorWorkspaceProperties) {
+        public Builder azureMonitorWorkspaceProperties(@Nullable Output<AzureMonitorWorkspacePropertiesArgs> azureMonitorWorkspaceProperties) {
             this.azureMonitorWorkspaceProperties = azureMonitorWorkspaceProperties;
             return this;
         }
 
         public Builder azureMonitorWorkspaceProperties(@Nullable AzureMonitorWorkspacePropertiesArgs azureMonitorWorkspaceProperties) {
-            this.azureMonitorWorkspaceProperties = Input.ofNullable(azureMonitorWorkspaceProperties);
+            this.azureMonitorWorkspaceProperties = Output.ofNullable(azureMonitorWorkspaceProperties);
             return this;
         }
         public NotificationSettingsArgs build() {

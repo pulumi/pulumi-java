@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.testing_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.testing_v1.inputs.ClientInfoDetailArgs;
 import java.lang.String;
@@ -25,10 +25,10 @@ public final class ClientInfoArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="clientInfoDetails")
-      private final @Nullable Input<List<ClientInfoDetailArgs>> clientInfoDetails;
+      private final @Nullable Output<List<ClientInfoDetailArgs>> clientInfoDetails;
 
-    public Input<List<ClientInfoDetailArgs>> getClientInfoDetails() {
-        return this.clientInfoDetails == null ? Input.empty() : this.clientInfoDetails;
+    public Output<List<ClientInfoDetailArgs>> getClientInfoDetails() {
+        return this.clientInfoDetails == null ? Output.empty() : this.clientInfoDetails;
     }
 
     /**
@@ -36,22 +36,22 @@ public final class ClientInfoArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name", required=true)
-      private final Input<String> name;
+      private final Output<String> name;
 
-    public Input<String> getName() {
+    public Output<String> getName() {
         return this.name;
     }
 
     public ClientInfoArgs(
-        @Nullable Input<List<ClientInfoDetailArgs>> clientInfoDetails,
-        Input<String> name) {
+        @Nullable Output<List<ClientInfoDetailArgs>> clientInfoDetails,
+        Output<String> name) {
         this.clientInfoDetails = clientInfoDetails;
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
     }
 
     private ClientInfoArgs() {
-        this.clientInfoDetails = Input.empty();
-        this.name = Input.empty();
+        this.clientInfoDetails = Output.empty();
+        this.name = Output.empty();
     }
 
     public static Builder builder() {
@@ -63,8 +63,8 @@ public final class ClientInfoArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<List<ClientInfoDetailArgs>> clientInfoDetails;
-        private Input<String> name;
+        private @Nullable Output<List<ClientInfoDetailArgs>> clientInfoDetails;
+        private Output<String> name;
 
         public Builder() {
     	      // Empty
@@ -76,23 +76,23 @@ public final class ClientInfoArgs extends io.pulumi.resources.ResourceArgs {
     	      this.name = defaults.name;
         }
 
-        public Builder clientInfoDetails(@Nullable Input<List<ClientInfoDetailArgs>> clientInfoDetails) {
+        public Builder clientInfoDetails(@Nullable Output<List<ClientInfoDetailArgs>> clientInfoDetails) {
             this.clientInfoDetails = clientInfoDetails;
             return this;
         }
 
         public Builder clientInfoDetails(@Nullable List<ClientInfoDetailArgs> clientInfoDetails) {
-            this.clientInfoDetails = Input.ofNullable(clientInfoDetails);
+            this.clientInfoDetails = Output.ofNullable(clientInfoDetails);
             return this;
         }
 
-        public Builder name(Input<String> name) {
+        public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(String name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
         public ClientInfoArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.projects.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.projects.inputs.AccessApprovalSettingsEnrolledServiceGetArgs;
 import java.lang.Boolean;
@@ -23,10 +23,10 @@ public final class AccessApprovalSettingsState extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="enrolledAncestor")
-      private final @Nullable Input<Boolean> enrolledAncestor;
+      private final @Nullable Output<Boolean> enrolledAncestor;
 
-    public Input<Boolean> getEnrolledAncestor() {
-        return this.enrolledAncestor == null ? Input.empty() : this.enrolledAncestor;
+    public Output<Boolean> getEnrolledAncestor() {
+        return this.enrolledAncestor == null ? Output.empty() : this.enrolledAncestor;
     }
 
     /**
@@ -38,10 +38,10 @@ public final class AccessApprovalSettingsState extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="enrolledServices")
-      private final @Nullable Input<List<AccessApprovalSettingsEnrolledServiceGetArgs>> enrolledServices;
+      private final @Nullable Output<List<AccessApprovalSettingsEnrolledServiceGetArgs>> enrolledServices;
 
-    public Input<List<AccessApprovalSettingsEnrolledServiceGetArgs>> getEnrolledServices() {
-        return this.enrolledServices == null ? Input.empty() : this.enrolledServices;
+    public Output<List<AccessApprovalSettingsEnrolledServiceGetArgs>> getEnrolledServices() {
+        return this.enrolledServices == null ? Output.empty() : this.enrolledServices;
     }
 
     /**
@@ -49,10 +49,10 @@ public final class AccessApprovalSettingsState extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -62,10 +62,10 @@ public final class AccessApprovalSettingsState extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="notificationEmails")
-      private final @Nullable Input<List<String>> notificationEmails;
+      private final @Nullable Output<List<String>> notificationEmails;
 
-    public Input<List<String>> getNotificationEmails() {
-        return this.notificationEmails == null ? Input.empty() : this.notificationEmails;
+    public Output<List<String>> getNotificationEmails() {
+        return this.notificationEmails == null ? Output.empty() : this.notificationEmails;
     }
 
     /**
@@ -79,11 +79,11 @@ public final class AccessApprovalSettingsState extends io.pulumi.resources.Resou
      */
     @Deprecated /* Deprecated in favor of `project_id` */
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
     @Deprecated /* Deprecated in favor of `project_id` */
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -91,19 +91,19 @@ public final class AccessApprovalSettingsState extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="projectId")
-      private final @Nullable Input<String> projectId;
+      private final @Nullable Output<String> projectId;
 
-    public Input<String> getProjectId() {
-        return this.projectId == null ? Input.empty() : this.projectId;
+    public Output<String> getProjectId() {
+        return this.projectId == null ? Output.empty() : this.projectId;
     }
 
     public AccessApprovalSettingsState(
-        @Nullable Input<Boolean> enrolledAncestor,
-        @Nullable Input<List<AccessApprovalSettingsEnrolledServiceGetArgs>> enrolledServices,
-        @Nullable Input<String> name,
-        @Nullable Input<List<String>> notificationEmails,
-        @Nullable Input<String> project,
-        @Nullable Input<String> projectId) {
+        @Nullable Output<Boolean> enrolledAncestor,
+        @Nullable Output<List<AccessApprovalSettingsEnrolledServiceGetArgs>> enrolledServices,
+        @Nullable Output<String> name,
+        @Nullable Output<List<String>> notificationEmails,
+        @Nullable Output<String> project,
+        @Nullable Output<String> projectId) {
         this.enrolledAncestor = enrolledAncestor;
         this.enrolledServices = enrolledServices;
         this.name = name;
@@ -113,12 +113,12 @@ public final class AccessApprovalSettingsState extends io.pulumi.resources.Resou
     }
 
     private AccessApprovalSettingsState() {
-        this.enrolledAncestor = Input.empty();
-        this.enrolledServices = Input.empty();
-        this.name = Input.empty();
-        this.notificationEmails = Input.empty();
-        this.project = Input.empty();
-        this.projectId = Input.empty();
+        this.enrolledAncestor = Output.empty();
+        this.enrolledServices = Output.empty();
+        this.name = Output.empty();
+        this.notificationEmails = Output.empty();
+        this.project = Output.empty();
+        this.projectId = Output.empty();
     }
 
     public static Builder builder() {
@@ -130,12 +130,12 @@ public final class AccessApprovalSettingsState extends io.pulumi.resources.Resou
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> enrolledAncestor;
-        private @Nullable Input<List<AccessApprovalSettingsEnrolledServiceGetArgs>> enrolledServices;
-        private @Nullable Input<String> name;
-        private @Nullable Input<List<String>> notificationEmails;
-        private @Nullable Input<String> project;
-        private @Nullable Input<String> projectId;
+        private @Nullable Output<Boolean> enrolledAncestor;
+        private @Nullable Output<List<AccessApprovalSettingsEnrolledServiceGetArgs>> enrolledServices;
+        private @Nullable Output<String> name;
+        private @Nullable Output<List<String>> notificationEmails;
+        private @Nullable Output<String> project;
+        private @Nullable Output<String> projectId;
 
         public Builder() {
     	      // Empty
@@ -151,63 +151,63 @@ public final class AccessApprovalSettingsState extends io.pulumi.resources.Resou
     	      this.projectId = defaults.projectId;
         }
 
-        public Builder enrolledAncestor(@Nullable Input<Boolean> enrolledAncestor) {
+        public Builder enrolledAncestor(@Nullable Output<Boolean> enrolledAncestor) {
             this.enrolledAncestor = enrolledAncestor;
             return this;
         }
 
         public Builder enrolledAncestor(@Nullable Boolean enrolledAncestor) {
-            this.enrolledAncestor = Input.ofNullable(enrolledAncestor);
+            this.enrolledAncestor = Output.ofNullable(enrolledAncestor);
             return this;
         }
 
-        public Builder enrolledServices(@Nullable Input<List<AccessApprovalSettingsEnrolledServiceGetArgs>> enrolledServices) {
+        public Builder enrolledServices(@Nullable Output<List<AccessApprovalSettingsEnrolledServiceGetArgs>> enrolledServices) {
             this.enrolledServices = enrolledServices;
             return this;
         }
 
         public Builder enrolledServices(@Nullable List<AccessApprovalSettingsEnrolledServiceGetArgs> enrolledServices) {
-            this.enrolledServices = Input.ofNullable(enrolledServices);
+            this.enrolledServices = Output.ofNullable(enrolledServices);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder notificationEmails(@Nullable Input<List<String>> notificationEmails) {
+        public Builder notificationEmails(@Nullable Output<List<String>> notificationEmails) {
             this.notificationEmails = notificationEmails;
             return this;
         }
 
         public Builder notificationEmails(@Nullable List<String> notificationEmails) {
-            this.notificationEmails = Input.ofNullable(notificationEmails);
+            this.notificationEmails = Output.ofNullable(notificationEmails);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder projectId(@Nullable Input<String> projectId) {
+        public Builder projectId(@Nullable Output<String> projectId) {
             this.projectId = projectId;
             return this;
         }
 
         public Builder projectId(@Nullable String projectId) {
-            this.projectId = Input.ofNullable(projectId);
+            this.projectId = Output.ofNullable(projectId);
             return this;
         }
         public AccessApprovalSettingsState build() {

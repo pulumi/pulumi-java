@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.vision_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class VertexArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="x")
-      private final @Nullable Input<Integer> x;
+      private final @Nullable Output<Integer> x;
 
-    public Input<Integer> getX() {
-        return this.x == null ? Input.empty() : this.x;
+    public Output<Integer> getX() {
+        return this.x == null ? Output.empty() : this.x;
     }
 
     /**
@@ -34,22 +34,22 @@ public final class VertexArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="y")
-      private final @Nullable Input<Integer> y;
+      private final @Nullable Output<Integer> y;
 
-    public Input<Integer> getY() {
-        return this.y == null ? Input.empty() : this.y;
+    public Output<Integer> getY() {
+        return this.y == null ? Output.empty() : this.y;
     }
 
     public VertexArgs(
-        @Nullable Input<Integer> x,
-        @Nullable Input<Integer> y) {
+        @Nullable Output<Integer> x,
+        @Nullable Output<Integer> y) {
         this.x = x;
         this.y = y;
     }
 
     private VertexArgs() {
-        this.x = Input.empty();
-        this.y = Input.empty();
+        this.x = Output.empty();
+        this.y = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class VertexArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> x;
-        private @Nullable Input<Integer> y;
+        private @Nullable Output<Integer> x;
+        private @Nullable Output<Integer> y;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class VertexArgs extends io.pulumi.resources.ResourceArgs {
     	      this.y = defaults.y;
         }
 
-        public Builder x(@Nullable Input<Integer> x) {
+        public Builder x(@Nullable Output<Integer> x) {
             this.x = x;
             return this;
         }
 
         public Builder x(@Nullable Integer x) {
-            this.x = Input.ofNullable(x);
+            this.x = Output.ofNullable(x);
             return this;
         }
 
-        public Builder y(@Nullable Input<Integer> y) {
+        public Builder y(@Nullable Output<Integer> y) {
             this.y = y;
             return this;
         }
 
         public Builder y(@Nullable Integer y) {
-            this.y = Input.ofNullable(y);
+            this.y = Output.ofNullable(y);
             return this;
         }
         public VertexArgs build() {

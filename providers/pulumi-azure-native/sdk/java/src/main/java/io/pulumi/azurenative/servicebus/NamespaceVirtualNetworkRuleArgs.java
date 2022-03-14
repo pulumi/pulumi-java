@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.servicebus;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,9 +19,9 @@ public final class NamespaceVirtualNetworkRuleArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="namespaceName", required=true)
-      private final Input<String> namespaceName;
+      private final Output<String> namespaceName;
 
-    public Input<String> getNamespaceName() {
+    public Output<String> getNamespaceName() {
         return this.namespaceName;
     }
 
@@ -30,9 +30,9 @@ public final class NamespaceVirtualNetworkRuleArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -41,10 +41,10 @@ public final class NamespaceVirtualNetworkRuleArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="virtualNetworkRuleName")
-      private final @Nullable Input<String> virtualNetworkRuleName;
+      private final @Nullable Output<String> virtualNetworkRuleName;
 
-    public Input<String> getVirtualNetworkRuleName() {
-        return this.virtualNetworkRuleName == null ? Input.empty() : this.virtualNetworkRuleName;
+    public Output<String> getVirtualNetworkRuleName() {
+        return this.virtualNetworkRuleName == null ? Output.empty() : this.virtualNetworkRuleName;
     }
 
     /**
@@ -52,17 +52,17 @@ public final class NamespaceVirtualNetworkRuleArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="virtualNetworkSubnetId")
-      private final @Nullable Input<String> virtualNetworkSubnetId;
+      private final @Nullable Output<String> virtualNetworkSubnetId;
 
-    public Input<String> getVirtualNetworkSubnetId() {
-        return this.virtualNetworkSubnetId == null ? Input.empty() : this.virtualNetworkSubnetId;
+    public Output<String> getVirtualNetworkSubnetId() {
+        return this.virtualNetworkSubnetId == null ? Output.empty() : this.virtualNetworkSubnetId;
     }
 
     public NamespaceVirtualNetworkRuleArgs(
-        Input<String> namespaceName,
-        Input<String> resourceGroupName,
-        @Nullable Input<String> virtualNetworkRuleName,
-        @Nullable Input<String> virtualNetworkSubnetId) {
+        Output<String> namespaceName,
+        Output<String> resourceGroupName,
+        @Nullable Output<String> virtualNetworkRuleName,
+        @Nullable Output<String> virtualNetworkSubnetId) {
         this.namespaceName = Objects.requireNonNull(namespaceName, "expected parameter 'namespaceName' to be non-null");
         this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
         this.virtualNetworkRuleName = virtualNetworkRuleName;
@@ -70,10 +70,10 @@ public final class NamespaceVirtualNetworkRuleArgs extends io.pulumi.resources.R
     }
 
     private NamespaceVirtualNetworkRuleArgs() {
-        this.namespaceName = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.virtualNetworkRuleName = Input.empty();
-        this.virtualNetworkSubnetId = Input.empty();
+        this.namespaceName = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.virtualNetworkRuleName = Output.empty();
+        this.virtualNetworkSubnetId = Output.empty();
     }
 
     public static Builder builder() {
@@ -85,10 +85,10 @@ public final class NamespaceVirtualNetworkRuleArgs extends io.pulumi.resources.R
     }
 
     public static final class Builder {
-        private Input<String> namespaceName;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<String> virtualNetworkRuleName;
-        private @Nullable Input<String> virtualNetworkSubnetId;
+        private Output<String> namespaceName;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<String> virtualNetworkRuleName;
+        private @Nullable Output<String> virtualNetworkSubnetId;
 
         public Builder() {
     	      // Empty
@@ -102,43 +102,43 @@ public final class NamespaceVirtualNetworkRuleArgs extends io.pulumi.resources.R
     	      this.virtualNetworkSubnetId = defaults.virtualNetworkSubnetId;
         }
 
-        public Builder namespaceName(Input<String> namespaceName) {
+        public Builder namespaceName(Output<String> namespaceName) {
             this.namespaceName = Objects.requireNonNull(namespaceName);
             return this;
         }
 
         public Builder namespaceName(String namespaceName) {
-            this.namespaceName = Input.of(Objects.requireNonNull(namespaceName));
+            this.namespaceName = Output.of(Objects.requireNonNull(namespaceName));
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder virtualNetworkRuleName(@Nullable Input<String> virtualNetworkRuleName) {
+        public Builder virtualNetworkRuleName(@Nullable Output<String> virtualNetworkRuleName) {
             this.virtualNetworkRuleName = virtualNetworkRuleName;
             return this;
         }
 
         public Builder virtualNetworkRuleName(@Nullable String virtualNetworkRuleName) {
-            this.virtualNetworkRuleName = Input.ofNullable(virtualNetworkRuleName);
+            this.virtualNetworkRuleName = Output.ofNullable(virtualNetworkRuleName);
             return this;
         }
 
-        public Builder virtualNetworkSubnetId(@Nullable Input<String> virtualNetworkSubnetId) {
+        public Builder virtualNetworkSubnetId(@Nullable Output<String> virtualNetworkSubnetId) {
             this.virtualNetworkSubnetId = virtualNetworkSubnetId;
             return this;
         }
 
         public Builder virtualNetworkSubnetId(@Nullable String virtualNetworkSubnetId) {
-            this.virtualNetworkSubnetId = Input.ofNullable(virtualNetworkSubnetId);
+            this.virtualNetworkSubnetId = Output.ofNullable(virtualNetworkSubnetId);
             return this;
         }
         public NamespaceVirtualNetworkRuleArgs build() {

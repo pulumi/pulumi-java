@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.deviceupdate.inputs;
 
 import io.pulumi.azurenative.deviceupdate.inputs.PrivateLinkServiceConnectionStateArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -25,10 +25,10 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="groupIds")
-      private final @Nullable Input<List<String>> groupIds;
+      private final @Nullable Output<List<String>> groupIds;
 
-    public Input<List<String>> getGroupIds() {
-        return this.groupIds == null ? Input.empty() : this.groupIds;
+    public Output<List<String>> getGroupIds() {
+        return this.groupIds == null ? Output.empty() : this.groupIds;
     }
 
     /**
@@ -36,22 +36,22 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="privateLinkServiceConnectionState", required=true)
-      private final Input<PrivateLinkServiceConnectionStateArgs> privateLinkServiceConnectionState;
+      private final Output<PrivateLinkServiceConnectionStateArgs> privateLinkServiceConnectionState;
 
-    public Input<PrivateLinkServiceConnectionStateArgs> getPrivateLinkServiceConnectionState() {
+    public Output<PrivateLinkServiceConnectionStateArgs> getPrivateLinkServiceConnectionState() {
         return this.privateLinkServiceConnectionState;
     }
 
     public PrivateEndpointConnectionArgs(
-        @Nullable Input<List<String>> groupIds,
-        Input<PrivateLinkServiceConnectionStateArgs> privateLinkServiceConnectionState) {
+        @Nullable Output<List<String>> groupIds,
+        Output<PrivateLinkServiceConnectionStateArgs> privateLinkServiceConnectionState) {
         this.groupIds = groupIds;
         this.privateLinkServiceConnectionState = Objects.requireNonNull(privateLinkServiceConnectionState, "expected parameter 'privateLinkServiceConnectionState' to be non-null");
     }
 
     private PrivateEndpointConnectionArgs() {
-        this.groupIds = Input.empty();
-        this.privateLinkServiceConnectionState = Input.empty();
+        this.groupIds = Output.empty();
+        this.privateLinkServiceConnectionState = Output.empty();
     }
 
     public static Builder builder() {
@@ -63,8 +63,8 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> groupIds;
-        private Input<PrivateLinkServiceConnectionStateArgs> privateLinkServiceConnectionState;
+        private @Nullable Output<List<String>> groupIds;
+        private Output<PrivateLinkServiceConnectionStateArgs> privateLinkServiceConnectionState;
 
         public Builder() {
     	      // Empty
@@ -76,23 +76,23 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
     	      this.privateLinkServiceConnectionState = defaults.privateLinkServiceConnectionState;
         }
 
-        public Builder groupIds(@Nullable Input<List<String>> groupIds) {
+        public Builder groupIds(@Nullable Output<List<String>> groupIds) {
             this.groupIds = groupIds;
             return this;
         }
 
         public Builder groupIds(@Nullable List<String> groupIds) {
-            this.groupIds = Input.ofNullable(groupIds);
+            this.groupIds = Output.ofNullable(groupIds);
             return this;
         }
 
-        public Builder privateLinkServiceConnectionState(Input<PrivateLinkServiceConnectionStateArgs> privateLinkServiceConnectionState) {
+        public Builder privateLinkServiceConnectionState(Output<PrivateLinkServiceConnectionStateArgs> privateLinkServiceConnectionState) {
             this.privateLinkServiceConnectionState = Objects.requireNonNull(privateLinkServiceConnectionState);
             return this;
         }
 
         public Builder privateLinkServiceConnectionState(PrivateLinkServiceConnectionStateArgs privateLinkServiceConnectionState) {
-            this.privateLinkServiceConnectionState = Input.of(Objects.requireNonNull(privateLinkServiceConnectionState));
+            this.privateLinkServiceConnectionState = Output.of(Objects.requireNonNull(privateLinkServiceConnectionState));
             return this;
         }
         public PrivateEndpointConnectionArgs build() {

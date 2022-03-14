@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.storage.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.util.Objects;
@@ -22,18 +22,18 @@ public final class DateAfterCreationArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="daysAfterCreationGreaterThan", required=true)
-      private final Input<Double> daysAfterCreationGreaterThan;
+      private final Output<Double> daysAfterCreationGreaterThan;
 
-    public Input<Double> getDaysAfterCreationGreaterThan() {
+    public Output<Double> getDaysAfterCreationGreaterThan() {
         return this.daysAfterCreationGreaterThan;
     }
 
-    public DateAfterCreationArgs(Input<Double> daysAfterCreationGreaterThan) {
+    public DateAfterCreationArgs(Output<Double> daysAfterCreationGreaterThan) {
         this.daysAfterCreationGreaterThan = Objects.requireNonNull(daysAfterCreationGreaterThan, "expected parameter 'daysAfterCreationGreaterThan' to be non-null");
     }
 
     private DateAfterCreationArgs() {
-        this.daysAfterCreationGreaterThan = Input.empty();
+        this.daysAfterCreationGreaterThan = Output.empty();
     }
 
     public static Builder builder() {
@@ -45,7 +45,7 @@ public final class DateAfterCreationArgs extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private Input<Double> daysAfterCreationGreaterThan;
+        private Output<Double> daysAfterCreationGreaterThan;
 
         public Builder() {
     	      // Empty
@@ -56,13 +56,13 @@ public final class DateAfterCreationArgs extends io.pulumi.resources.ResourceArg
     	      this.daysAfterCreationGreaterThan = defaults.daysAfterCreationGreaterThan;
         }
 
-        public Builder daysAfterCreationGreaterThan(Input<Double> daysAfterCreationGreaterThan) {
+        public Builder daysAfterCreationGreaterThan(Output<Double> daysAfterCreationGreaterThan) {
             this.daysAfterCreationGreaterThan = Objects.requireNonNull(daysAfterCreationGreaterThan);
             return this;
         }
 
         public Builder daysAfterCreationGreaterThan(Double daysAfterCreationGreaterThan) {
-            this.daysAfterCreationGreaterThan = Input.of(Objects.requireNonNull(daysAfterCreationGreaterThan));
+            this.daysAfterCreationGreaterThan = Output.of(Objects.requireNonNull(daysAfterCreationGreaterThan));
             return this;
         }
         public DateAfterCreationArgs build() {

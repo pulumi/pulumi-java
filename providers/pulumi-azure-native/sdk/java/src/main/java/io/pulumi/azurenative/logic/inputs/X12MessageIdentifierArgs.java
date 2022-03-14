@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.logic.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -22,18 +22,18 @@ public final class X12MessageIdentifierArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="messageId", required=true)
-      private final Input<String> messageId;
+      private final Output<String> messageId;
 
-    public Input<String> getMessageId() {
+    public Output<String> getMessageId() {
         return this.messageId;
     }
 
-    public X12MessageIdentifierArgs(Input<String> messageId) {
+    public X12MessageIdentifierArgs(Output<String> messageId) {
         this.messageId = Objects.requireNonNull(messageId, "expected parameter 'messageId' to be non-null");
     }
 
     private X12MessageIdentifierArgs() {
-        this.messageId = Input.empty();
+        this.messageId = Output.empty();
     }
 
     public static Builder builder() {
@@ -45,7 +45,7 @@ public final class X12MessageIdentifierArgs extends io.pulumi.resources.Resource
     }
 
     public static final class Builder {
-        private Input<String> messageId;
+        private Output<String> messageId;
 
         public Builder() {
     	      // Empty
@@ -56,13 +56,13 @@ public final class X12MessageIdentifierArgs extends io.pulumi.resources.Resource
     	      this.messageId = defaults.messageId;
         }
 
-        public Builder messageId(Input<String> messageId) {
+        public Builder messageId(Output<String> messageId) {
             this.messageId = Objects.requireNonNull(messageId);
             return this;
         }
 
         public Builder messageId(String messageId) {
-            this.messageId = Input.of(Objects.requireNonNull(messageId));
+            this.messageId = Output.of(Objects.requireNonNull(messageId));
             return this;
         }
         public X12MessageIdentifierArgs build() {

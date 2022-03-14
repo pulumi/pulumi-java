@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.bigquery_v2.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.bigquery_v2.enums.ArgumentArgumentKind;
 import io.pulumi.googlenative.bigquery_v2.enums.ArgumentMode;
@@ -26,10 +26,10 @@ public final class ArgumentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="argumentKind")
-      private final @Nullable Input<ArgumentArgumentKind> argumentKind;
+      private final @Nullable Output<ArgumentArgumentKind> argumentKind;
 
-    public Input<ArgumentArgumentKind> getArgumentKind() {
-        return this.argumentKind == null ? Input.empty() : this.argumentKind;
+    public Output<ArgumentArgumentKind> getArgumentKind() {
+        return this.argumentKind == null ? Output.empty() : this.argumentKind;
     }
 
     /**
@@ -37,10 +37,10 @@ public final class ArgumentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dataType")
-      private final @Nullable Input<StandardSqlDataTypeArgs> dataType;
+      private final @Nullable Output<StandardSqlDataTypeArgs> dataType;
 
-    public Input<StandardSqlDataTypeArgs> getDataType() {
-        return this.dataType == null ? Input.empty() : this.dataType;
+    public Output<StandardSqlDataTypeArgs> getDataType() {
+        return this.dataType == null ? Output.empty() : this.dataType;
     }
 
     /**
@@ -48,10 +48,10 @@ public final class ArgumentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="mode")
-      private final @Nullable Input<ArgumentMode> mode;
+      private final @Nullable Output<ArgumentMode> mode;
 
-    public Input<ArgumentMode> getMode() {
-        return this.mode == null ? Input.empty() : this.mode;
+    public Output<ArgumentMode> getMode() {
+        return this.mode == null ? Output.empty() : this.mode;
     }
 
     /**
@@ -59,17 +59,17 @@ public final class ArgumentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     public ArgumentArgs(
-        @Nullable Input<ArgumentArgumentKind> argumentKind,
-        @Nullable Input<StandardSqlDataTypeArgs> dataType,
-        @Nullable Input<ArgumentMode> mode,
-        @Nullable Input<String> name) {
+        @Nullable Output<ArgumentArgumentKind> argumentKind,
+        @Nullable Output<StandardSqlDataTypeArgs> dataType,
+        @Nullable Output<ArgumentMode> mode,
+        @Nullable Output<String> name) {
         this.argumentKind = argumentKind;
         this.dataType = dataType;
         this.mode = mode;
@@ -77,10 +77,10 @@ public final class ArgumentArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ArgumentArgs() {
-        this.argumentKind = Input.empty();
-        this.dataType = Input.empty();
-        this.mode = Input.empty();
-        this.name = Input.empty();
+        this.argumentKind = Output.empty();
+        this.dataType = Output.empty();
+        this.mode = Output.empty();
+        this.name = Output.empty();
     }
 
     public static Builder builder() {
@@ -92,10 +92,10 @@ public final class ArgumentArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<ArgumentArgumentKind> argumentKind;
-        private @Nullable Input<StandardSqlDataTypeArgs> dataType;
-        private @Nullable Input<ArgumentMode> mode;
-        private @Nullable Input<String> name;
+        private @Nullable Output<ArgumentArgumentKind> argumentKind;
+        private @Nullable Output<StandardSqlDataTypeArgs> dataType;
+        private @Nullable Output<ArgumentMode> mode;
+        private @Nullable Output<String> name;
 
         public Builder() {
     	      // Empty
@@ -109,43 +109,43 @@ public final class ArgumentArgs extends io.pulumi.resources.ResourceArgs {
     	      this.name = defaults.name;
         }
 
-        public Builder argumentKind(@Nullable Input<ArgumentArgumentKind> argumentKind) {
+        public Builder argumentKind(@Nullable Output<ArgumentArgumentKind> argumentKind) {
             this.argumentKind = argumentKind;
             return this;
         }
 
         public Builder argumentKind(@Nullable ArgumentArgumentKind argumentKind) {
-            this.argumentKind = Input.ofNullable(argumentKind);
+            this.argumentKind = Output.ofNullable(argumentKind);
             return this;
         }
 
-        public Builder dataType(@Nullable Input<StandardSqlDataTypeArgs> dataType) {
+        public Builder dataType(@Nullable Output<StandardSqlDataTypeArgs> dataType) {
             this.dataType = dataType;
             return this;
         }
 
         public Builder dataType(@Nullable StandardSqlDataTypeArgs dataType) {
-            this.dataType = Input.ofNullable(dataType);
+            this.dataType = Output.ofNullable(dataType);
             return this;
         }
 
-        public Builder mode(@Nullable Input<ArgumentMode> mode) {
+        public Builder mode(@Nullable Output<ArgumentMode> mode) {
             this.mode = mode;
             return this;
         }
 
         public Builder mode(@Nullable ArgumentMode mode) {
-            this.mode = Input.ofNullable(mode);
+            this.mode = Output.ofNullable(mode);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
         public ArgumentArgs build() {

@@ -6,7 +6,7 @@ package io.pulumi.awsnative.imagebuilder;
 import io.pulumi.awsnative.imagebuilder.enums.ImagePipelineStatus;
 import io.pulumi.awsnative.imagebuilder.inputs.ImagePipelineImageTestsConfigurationArgs;
 import io.pulumi.awsnative.imagebuilder.inputs.ImagePipelineScheduleArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Object;
@@ -24,10 +24,10 @@ public final class ImagePipelineArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="containerRecipeArn")
-      private final @Nullable Input<String> containerRecipeArn;
+      private final @Nullable Output<String> containerRecipeArn;
 
-    public Input<String> getContainerRecipeArn() {
-        return this.containerRecipeArn == null ? Input.empty() : this.containerRecipeArn;
+    public Output<String> getContainerRecipeArn() {
+        return this.containerRecipeArn == null ? Output.empty() : this.containerRecipeArn;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class ImagePipelineArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -46,10 +46,10 @@ public final class ImagePipelineArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="distributionConfigurationArn")
-      private final @Nullable Input<String> distributionConfigurationArn;
+      private final @Nullable Output<String> distributionConfigurationArn;
 
-    public Input<String> getDistributionConfigurationArn() {
-        return this.distributionConfigurationArn == null ? Input.empty() : this.distributionConfigurationArn;
+    public Output<String> getDistributionConfigurationArn() {
+        return this.distributionConfigurationArn == null ? Output.empty() : this.distributionConfigurationArn;
     }
 
     /**
@@ -57,10 +57,10 @@ public final class ImagePipelineArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enhancedImageMetadataEnabled")
-      private final @Nullable Input<Boolean> enhancedImageMetadataEnabled;
+      private final @Nullable Output<Boolean> enhancedImageMetadataEnabled;
 
-    public Input<Boolean> getEnhancedImageMetadataEnabled() {
-        return this.enhancedImageMetadataEnabled == null ? Input.empty() : this.enhancedImageMetadataEnabled;
+    public Output<Boolean> getEnhancedImageMetadataEnabled() {
+        return this.enhancedImageMetadataEnabled == null ? Output.empty() : this.enhancedImageMetadataEnabled;
     }
 
     /**
@@ -68,10 +68,10 @@ public final class ImagePipelineArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="imageRecipeArn")
-      private final @Nullable Input<String> imageRecipeArn;
+      private final @Nullable Output<String> imageRecipeArn;
 
-    public Input<String> getImageRecipeArn() {
-        return this.imageRecipeArn == null ? Input.empty() : this.imageRecipeArn;
+    public Output<String> getImageRecipeArn() {
+        return this.imageRecipeArn == null ? Output.empty() : this.imageRecipeArn;
     }
 
     /**
@@ -79,10 +79,10 @@ public final class ImagePipelineArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="imageTestsConfiguration")
-      private final @Nullable Input<ImagePipelineImageTestsConfigurationArgs> imageTestsConfiguration;
+      private final @Nullable Output<ImagePipelineImageTestsConfigurationArgs> imageTestsConfiguration;
 
-    public Input<ImagePipelineImageTestsConfigurationArgs> getImageTestsConfiguration() {
-        return this.imageTestsConfiguration == null ? Input.empty() : this.imageTestsConfiguration;
+    public Output<ImagePipelineImageTestsConfigurationArgs> getImageTestsConfiguration() {
+        return this.imageTestsConfiguration == null ? Output.empty() : this.imageTestsConfiguration;
     }
 
     /**
@@ -90,10 +90,10 @@ public final class ImagePipelineArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="infrastructureConfigurationArn")
-      private final @Nullable Input<String> infrastructureConfigurationArn;
+      private final @Nullable Output<String> infrastructureConfigurationArn;
 
-    public Input<String> getInfrastructureConfigurationArn() {
-        return this.infrastructureConfigurationArn == null ? Input.empty() : this.infrastructureConfigurationArn;
+    public Output<String> getInfrastructureConfigurationArn() {
+        return this.infrastructureConfigurationArn == null ? Output.empty() : this.infrastructureConfigurationArn;
     }
 
     /**
@@ -101,10 +101,10 @@ public final class ImagePipelineArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -112,10 +112,10 @@ public final class ImagePipelineArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="schedule")
-      private final @Nullable Input<ImagePipelineScheduleArgs> schedule;
+      private final @Nullable Output<ImagePipelineScheduleArgs> schedule;
 
-    public Input<ImagePipelineScheduleArgs> getSchedule() {
-        return this.schedule == null ? Input.empty() : this.schedule;
+    public Output<ImagePipelineScheduleArgs> getSchedule() {
+        return this.schedule == null ? Output.empty() : this.schedule;
     }
 
     /**
@@ -123,10 +123,10 @@ public final class ImagePipelineArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="status")
-      private final @Nullable Input<ImagePipelineStatus> status;
+      private final @Nullable Output<ImagePipelineStatus> status;
 
-    public Input<ImagePipelineStatus> getStatus() {
-        return this.status == null ? Input.empty() : this.status;
+    public Output<ImagePipelineStatus> getStatus() {
+        return this.status == null ? Output.empty() : this.status;
     }
 
     /**
@@ -134,24 +134,24 @@ public final class ImagePipelineArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Object> tags;
+      private final @Nullable Output<Object> tags;
 
-    public Input<Object> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Object> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public ImagePipelineArgs(
-        @Nullable Input<String> containerRecipeArn,
-        @Nullable Input<String> description,
-        @Nullable Input<String> distributionConfigurationArn,
-        @Nullable Input<Boolean> enhancedImageMetadataEnabled,
-        @Nullable Input<String> imageRecipeArn,
-        @Nullable Input<ImagePipelineImageTestsConfigurationArgs> imageTestsConfiguration,
-        @Nullable Input<String> infrastructureConfigurationArn,
-        @Nullable Input<String> name,
-        @Nullable Input<ImagePipelineScheduleArgs> schedule,
-        @Nullable Input<ImagePipelineStatus> status,
-        @Nullable Input<Object> tags) {
+        @Nullable Output<String> containerRecipeArn,
+        @Nullable Output<String> description,
+        @Nullable Output<String> distributionConfigurationArn,
+        @Nullable Output<Boolean> enhancedImageMetadataEnabled,
+        @Nullable Output<String> imageRecipeArn,
+        @Nullable Output<ImagePipelineImageTestsConfigurationArgs> imageTestsConfiguration,
+        @Nullable Output<String> infrastructureConfigurationArn,
+        @Nullable Output<String> name,
+        @Nullable Output<ImagePipelineScheduleArgs> schedule,
+        @Nullable Output<ImagePipelineStatus> status,
+        @Nullable Output<Object> tags) {
         this.containerRecipeArn = containerRecipeArn;
         this.description = description;
         this.distributionConfigurationArn = distributionConfigurationArn;
@@ -166,17 +166,17 @@ public final class ImagePipelineArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ImagePipelineArgs() {
-        this.containerRecipeArn = Input.empty();
-        this.description = Input.empty();
-        this.distributionConfigurationArn = Input.empty();
-        this.enhancedImageMetadataEnabled = Input.empty();
-        this.imageRecipeArn = Input.empty();
-        this.imageTestsConfiguration = Input.empty();
-        this.infrastructureConfigurationArn = Input.empty();
-        this.name = Input.empty();
-        this.schedule = Input.empty();
-        this.status = Input.empty();
-        this.tags = Input.empty();
+        this.containerRecipeArn = Output.empty();
+        this.description = Output.empty();
+        this.distributionConfigurationArn = Output.empty();
+        this.enhancedImageMetadataEnabled = Output.empty();
+        this.imageRecipeArn = Output.empty();
+        this.imageTestsConfiguration = Output.empty();
+        this.infrastructureConfigurationArn = Output.empty();
+        this.name = Output.empty();
+        this.schedule = Output.empty();
+        this.status = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -188,17 +188,17 @@ public final class ImagePipelineArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> containerRecipeArn;
-        private @Nullable Input<String> description;
-        private @Nullable Input<String> distributionConfigurationArn;
-        private @Nullable Input<Boolean> enhancedImageMetadataEnabled;
-        private @Nullable Input<String> imageRecipeArn;
-        private @Nullable Input<ImagePipelineImageTestsConfigurationArgs> imageTestsConfiguration;
-        private @Nullable Input<String> infrastructureConfigurationArn;
-        private @Nullable Input<String> name;
-        private @Nullable Input<ImagePipelineScheduleArgs> schedule;
-        private @Nullable Input<ImagePipelineStatus> status;
-        private @Nullable Input<Object> tags;
+        private @Nullable Output<String> containerRecipeArn;
+        private @Nullable Output<String> description;
+        private @Nullable Output<String> distributionConfigurationArn;
+        private @Nullable Output<Boolean> enhancedImageMetadataEnabled;
+        private @Nullable Output<String> imageRecipeArn;
+        private @Nullable Output<ImagePipelineImageTestsConfigurationArgs> imageTestsConfiguration;
+        private @Nullable Output<String> infrastructureConfigurationArn;
+        private @Nullable Output<String> name;
+        private @Nullable Output<ImagePipelineScheduleArgs> schedule;
+        private @Nullable Output<ImagePipelineStatus> status;
+        private @Nullable Output<Object> tags;
 
         public Builder() {
     	      // Empty
@@ -219,113 +219,113 @@ public final class ImagePipelineArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder containerRecipeArn(@Nullable Input<String> containerRecipeArn) {
+        public Builder containerRecipeArn(@Nullable Output<String> containerRecipeArn) {
             this.containerRecipeArn = containerRecipeArn;
             return this;
         }
 
         public Builder containerRecipeArn(@Nullable String containerRecipeArn) {
-            this.containerRecipeArn = Input.ofNullable(containerRecipeArn);
+            this.containerRecipeArn = Output.ofNullable(containerRecipeArn);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder distributionConfigurationArn(@Nullable Input<String> distributionConfigurationArn) {
+        public Builder distributionConfigurationArn(@Nullable Output<String> distributionConfigurationArn) {
             this.distributionConfigurationArn = distributionConfigurationArn;
             return this;
         }
 
         public Builder distributionConfigurationArn(@Nullable String distributionConfigurationArn) {
-            this.distributionConfigurationArn = Input.ofNullable(distributionConfigurationArn);
+            this.distributionConfigurationArn = Output.ofNullable(distributionConfigurationArn);
             return this;
         }
 
-        public Builder enhancedImageMetadataEnabled(@Nullable Input<Boolean> enhancedImageMetadataEnabled) {
+        public Builder enhancedImageMetadataEnabled(@Nullable Output<Boolean> enhancedImageMetadataEnabled) {
             this.enhancedImageMetadataEnabled = enhancedImageMetadataEnabled;
             return this;
         }
 
         public Builder enhancedImageMetadataEnabled(@Nullable Boolean enhancedImageMetadataEnabled) {
-            this.enhancedImageMetadataEnabled = Input.ofNullable(enhancedImageMetadataEnabled);
+            this.enhancedImageMetadataEnabled = Output.ofNullable(enhancedImageMetadataEnabled);
             return this;
         }
 
-        public Builder imageRecipeArn(@Nullable Input<String> imageRecipeArn) {
+        public Builder imageRecipeArn(@Nullable Output<String> imageRecipeArn) {
             this.imageRecipeArn = imageRecipeArn;
             return this;
         }
 
         public Builder imageRecipeArn(@Nullable String imageRecipeArn) {
-            this.imageRecipeArn = Input.ofNullable(imageRecipeArn);
+            this.imageRecipeArn = Output.ofNullable(imageRecipeArn);
             return this;
         }
 
-        public Builder imageTestsConfiguration(@Nullable Input<ImagePipelineImageTestsConfigurationArgs> imageTestsConfiguration) {
+        public Builder imageTestsConfiguration(@Nullable Output<ImagePipelineImageTestsConfigurationArgs> imageTestsConfiguration) {
             this.imageTestsConfiguration = imageTestsConfiguration;
             return this;
         }
 
         public Builder imageTestsConfiguration(@Nullable ImagePipelineImageTestsConfigurationArgs imageTestsConfiguration) {
-            this.imageTestsConfiguration = Input.ofNullable(imageTestsConfiguration);
+            this.imageTestsConfiguration = Output.ofNullable(imageTestsConfiguration);
             return this;
         }
 
-        public Builder infrastructureConfigurationArn(@Nullable Input<String> infrastructureConfigurationArn) {
+        public Builder infrastructureConfigurationArn(@Nullable Output<String> infrastructureConfigurationArn) {
             this.infrastructureConfigurationArn = infrastructureConfigurationArn;
             return this;
         }
 
         public Builder infrastructureConfigurationArn(@Nullable String infrastructureConfigurationArn) {
-            this.infrastructureConfigurationArn = Input.ofNullable(infrastructureConfigurationArn);
+            this.infrastructureConfigurationArn = Output.ofNullable(infrastructureConfigurationArn);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder schedule(@Nullable Input<ImagePipelineScheduleArgs> schedule) {
+        public Builder schedule(@Nullable Output<ImagePipelineScheduleArgs> schedule) {
             this.schedule = schedule;
             return this;
         }
 
         public Builder schedule(@Nullable ImagePipelineScheduleArgs schedule) {
-            this.schedule = Input.ofNullable(schedule);
+            this.schedule = Output.ofNullable(schedule);
             return this;
         }
 
-        public Builder status(@Nullable Input<ImagePipelineStatus> status) {
+        public Builder status(@Nullable Output<ImagePipelineStatus> status) {
             this.status = status;
             return this;
         }
 
         public Builder status(@Nullable ImagePipelineStatus status) {
-            this.status = Input.ofNullable(status);
+            this.status = Output.ofNullable(status);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Object> tags) {
+        public Builder tags(@Nullable Output<Object> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Object tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public ImagePipelineArgs build() {

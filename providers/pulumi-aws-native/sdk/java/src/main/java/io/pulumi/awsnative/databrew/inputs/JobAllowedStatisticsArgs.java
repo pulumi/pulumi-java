@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.databrew.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -15,18 +15,18 @@ public final class JobAllowedStatisticsArgs extends io.pulumi.resources.Resource
     public static final JobAllowedStatisticsArgs Empty = new JobAllowedStatisticsArgs();
 
     @InputImport(name="statistics", required=true)
-      private final Input<List<String>> statistics;
+      private final Output<List<String>> statistics;
 
-    public Input<List<String>> getStatistics() {
+    public Output<List<String>> getStatistics() {
         return this.statistics;
     }
 
-    public JobAllowedStatisticsArgs(Input<List<String>> statistics) {
+    public JobAllowedStatisticsArgs(Output<List<String>> statistics) {
         this.statistics = Objects.requireNonNull(statistics, "expected parameter 'statistics' to be non-null");
     }
 
     private JobAllowedStatisticsArgs() {
-        this.statistics = Input.empty();
+        this.statistics = Output.empty();
     }
 
     public static Builder builder() {
@@ -38,7 +38,7 @@ public final class JobAllowedStatisticsArgs extends io.pulumi.resources.Resource
     }
 
     public static final class Builder {
-        private Input<List<String>> statistics;
+        private Output<List<String>> statistics;
 
         public Builder() {
     	      // Empty
@@ -49,13 +49,13 @@ public final class JobAllowedStatisticsArgs extends io.pulumi.resources.Resource
     	      this.statistics = defaults.statistics;
         }
 
-        public Builder statistics(Input<List<String>> statistics) {
+        public Builder statistics(Output<List<String>> statistics) {
             this.statistics = Objects.requireNonNull(statistics);
             return this;
         }
 
         public Builder statistics(List<String> statistics) {
-            this.statistics = Input.of(Objects.requireNonNull(statistics));
+            this.statistics = Output.of(Objects.requireNonNull(statistics));
             return this;
         }
         public JobAllowedStatisticsArgs build() {

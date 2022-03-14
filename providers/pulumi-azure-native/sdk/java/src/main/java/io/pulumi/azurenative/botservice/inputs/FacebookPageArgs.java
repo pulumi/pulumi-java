@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.botservice.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class FacebookPageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="accessToken")
-      private final @Nullable Input<String> accessToken;
+      private final @Nullable Output<String> accessToken;
 
-    public Input<String> getAccessToken() {
-        return this.accessToken == null ? Input.empty() : this.accessToken;
+    public Output<String> getAccessToken() {
+        return this.accessToken == null ? Output.empty() : this.accessToken;
     }
 
     /**
@@ -34,22 +34,22 @@ public final class FacebookPageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="id", required=true)
-      private final Input<String> id;
+      private final Output<String> id;
 
-    public Input<String> getId() {
+    public Output<String> getId() {
         return this.id;
     }
 
     public FacebookPageArgs(
-        @Nullable Input<String> accessToken,
-        Input<String> id) {
+        @Nullable Output<String> accessToken,
+        Output<String> id) {
         this.accessToken = accessToken;
         this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
     }
 
     private FacebookPageArgs() {
-        this.accessToken = Input.empty();
-        this.id = Input.empty();
+        this.accessToken = Output.empty();
+        this.id = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class FacebookPageArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> accessToken;
-        private Input<String> id;
+        private @Nullable Output<String> accessToken;
+        private Output<String> id;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class FacebookPageArgs extends io.pulumi.resources.ResourceArgs {
     	      this.id = defaults.id;
         }
 
-        public Builder accessToken(@Nullable Input<String> accessToken) {
+        public Builder accessToken(@Nullable Output<String> accessToken) {
             this.accessToken = accessToken;
             return this;
         }
 
         public Builder accessToken(@Nullable String accessToken) {
-            this.accessToken = Input.ofNullable(accessToken);
+            this.accessToken = Output.ofNullable(accessToken);
             return this;
         }
 
-        public Builder id(Input<String> id) {
+        public Builder id(Output<String> id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
         public Builder id(String id) {
-            this.id = Input.of(Objects.requireNonNull(id));
+            this.id = Output.of(Objects.requireNonNull(id));
             return this;
         }
         public FacebookPageArgs build() {

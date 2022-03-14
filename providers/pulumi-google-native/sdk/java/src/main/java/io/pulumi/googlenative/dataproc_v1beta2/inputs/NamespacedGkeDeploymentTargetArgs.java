@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dataproc_v1beta2.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class NamespacedGkeDeploymentTargetArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="clusterNamespace")
-      private final @Nullable Input<String> clusterNamespace;
+      private final @Nullable Output<String> clusterNamespace;
 
-    public Input<String> getClusterNamespace() {
-        return this.clusterNamespace == null ? Input.empty() : this.clusterNamespace;
+    public Output<String> getClusterNamespace() {
+        return this.clusterNamespace == null ? Output.empty() : this.clusterNamespace;
     }
 
     /**
@@ -34,22 +34,22 @@ public final class NamespacedGkeDeploymentTargetArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="targetGkeCluster")
-      private final @Nullable Input<String> targetGkeCluster;
+      private final @Nullable Output<String> targetGkeCluster;
 
-    public Input<String> getTargetGkeCluster() {
-        return this.targetGkeCluster == null ? Input.empty() : this.targetGkeCluster;
+    public Output<String> getTargetGkeCluster() {
+        return this.targetGkeCluster == null ? Output.empty() : this.targetGkeCluster;
     }
 
     public NamespacedGkeDeploymentTargetArgs(
-        @Nullable Input<String> clusterNamespace,
-        @Nullable Input<String> targetGkeCluster) {
+        @Nullable Output<String> clusterNamespace,
+        @Nullable Output<String> targetGkeCluster) {
         this.clusterNamespace = clusterNamespace;
         this.targetGkeCluster = targetGkeCluster;
     }
 
     private NamespacedGkeDeploymentTargetArgs() {
-        this.clusterNamespace = Input.empty();
-        this.targetGkeCluster = Input.empty();
+        this.clusterNamespace = Output.empty();
+        this.targetGkeCluster = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class NamespacedGkeDeploymentTargetArgs extends io.pulumi.resources
     }
 
     public static final class Builder {
-        private @Nullable Input<String> clusterNamespace;
-        private @Nullable Input<String> targetGkeCluster;
+        private @Nullable Output<String> clusterNamespace;
+        private @Nullable Output<String> targetGkeCluster;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class NamespacedGkeDeploymentTargetArgs extends io.pulumi.resources
     	      this.targetGkeCluster = defaults.targetGkeCluster;
         }
 
-        public Builder clusterNamespace(@Nullable Input<String> clusterNamespace) {
+        public Builder clusterNamespace(@Nullable Output<String> clusterNamespace) {
             this.clusterNamespace = clusterNamespace;
             return this;
         }
 
         public Builder clusterNamespace(@Nullable String clusterNamespace) {
-            this.clusterNamespace = Input.ofNullable(clusterNamespace);
+            this.clusterNamespace = Output.ofNullable(clusterNamespace);
             return this;
         }
 
-        public Builder targetGkeCluster(@Nullable Input<String> targetGkeCluster) {
+        public Builder targetGkeCluster(@Nullable Output<String> targetGkeCluster) {
             this.targetGkeCluster = targetGkeCluster;
             return this;
         }
 
         public Builder targetGkeCluster(@Nullable String targetGkeCluster) {
-            this.targetGkeCluster = Input.ofNullable(targetGkeCluster);
+            this.targetGkeCluster = Output.ofNullable(targetGkeCluster);
             return this;
         }
         public NamespacedGkeDeploymentTargetArgs build() {

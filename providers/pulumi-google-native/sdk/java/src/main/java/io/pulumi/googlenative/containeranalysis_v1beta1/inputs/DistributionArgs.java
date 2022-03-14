@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1beta1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.containeranalysis_v1beta1.enums.DistributionArchitecture;
 import io.pulumi.googlenative.containeranalysis_v1beta1.inputs.VersionArgs;
@@ -25,10 +25,10 @@ public final class DistributionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="architecture")
-      private final @Nullable Input<DistributionArchitecture> architecture;
+      private final @Nullable Output<DistributionArchitecture> architecture;
 
-    public Input<DistributionArchitecture> getArchitecture() {
-        return this.architecture == null ? Input.empty() : this.architecture;
+    public Output<DistributionArchitecture> getArchitecture() {
+        return this.architecture == null ? Output.empty() : this.architecture;
     }
 
     /**
@@ -36,9 +36,9 @@ public final class DistributionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="cpeUri", required=true)
-      private final Input<String> cpeUri;
+      private final Output<String> cpeUri;
 
-    public Input<String> getCpeUri() {
+    public Output<String> getCpeUri() {
         return this.cpeUri;
     }
 
@@ -47,10 +47,10 @@ public final class DistributionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -58,10 +58,10 @@ public final class DistributionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="latestVersion")
-      private final @Nullable Input<VersionArgs> latestVersion;
+      private final @Nullable Output<VersionArgs> latestVersion;
 
-    public Input<VersionArgs> getLatestVersion() {
-        return this.latestVersion == null ? Input.empty() : this.latestVersion;
+    public Output<VersionArgs> getLatestVersion() {
+        return this.latestVersion == null ? Output.empty() : this.latestVersion;
     }
 
     /**
@@ -69,10 +69,10 @@ public final class DistributionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="maintainer")
-      private final @Nullable Input<String> maintainer;
+      private final @Nullable Output<String> maintainer;
 
-    public Input<String> getMaintainer() {
-        return this.maintainer == null ? Input.empty() : this.maintainer;
+    public Output<String> getMaintainer() {
+        return this.maintainer == null ? Output.empty() : this.maintainer;
     }
 
     /**
@@ -80,19 +80,19 @@ public final class DistributionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="url")
-      private final @Nullable Input<String> url;
+      private final @Nullable Output<String> url;
 
-    public Input<String> getUrl() {
-        return this.url == null ? Input.empty() : this.url;
+    public Output<String> getUrl() {
+        return this.url == null ? Output.empty() : this.url;
     }
 
     public DistributionArgs(
-        @Nullable Input<DistributionArchitecture> architecture,
-        Input<String> cpeUri,
-        @Nullable Input<String> description,
-        @Nullable Input<VersionArgs> latestVersion,
-        @Nullable Input<String> maintainer,
-        @Nullable Input<String> url) {
+        @Nullable Output<DistributionArchitecture> architecture,
+        Output<String> cpeUri,
+        @Nullable Output<String> description,
+        @Nullable Output<VersionArgs> latestVersion,
+        @Nullable Output<String> maintainer,
+        @Nullable Output<String> url) {
         this.architecture = architecture;
         this.cpeUri = Objects.requireNonNull(cpeUri, "expected parameter 'cpeUri' to be non-null");
         this.description = description;
@@ -102,12 +102,12 @@ public final class DistributionArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DistributionArgs() {
-        this.architecture = Input.empty();
-        this.cpeUri = Input.empty();
-        this.description = Input.empty();
-        this.latestVersion = Input.empty();
-        this.maintainer = Input.empty();
-        this.url = Input.empty();
+        this.architecture = Output.empty();
+        this.cpeUri = Output.empty();
+        this.description = Output.empty();
+        this.latestVersion = Output.empty();
+        this.maintainer = Output.empty();
+        this.url = Output.empty();
     }
 
     public static Builder builder() {
@@ -119,12 +119,12 @@ public final class DistributionArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<DistributionArchitecture> architecture;
-        private Input<String> cpeUri;
-        private @Nullable Input<String> description;
-        private @Nullable Input<VersionArgs> latestVersion;
-        private @Nullable Input<String> maintainer;
-        private @Nullable Input<String> url;
+        private @Nullable Output<DistributionArchitecture> architecture;
+        private Output<String> cpeUri;
+        private @Nullable Output<String> description;
+        private @Nullable Output<VersionArgs> latestVersion;
+        private @Nullable Output<String> maintainer;
+        private @Nullable Output<String> url;
 
         public Builder() {
     	      // Empty
@@ -140,63 +140,63 @@ public final class DistributionArgs extends io.pulumi.resources.ResourceArgs {
     	      this.url = defaults.url;
         }
 
-        public Builder architecture(@Nullable Input<DistributionArchitecture> architecture) {
+        public Builder architecture(@Nullable Output<DistributionArchitecture> architecture) {
             this.architecture = architecture;
             return this;
         }
 
         public Builder architecture(@Nullable DistributionArchitecture architecture) {
-            this.architecture = Input.ofNullable(architecture);
+            this.architecture = Output.ofNullable(architecture);
             return this;
         }
 
-        public Builder cpeUri(Input<String> cpeUri) {
+        public Builder cpeUri(Output<String> cpeUri) {
             this.cpeUri = Objects.requireNonNull(cpeUri);
             return this;
         }
 
         public Builder cpeUri(String cpeUri) {
-            this.cpeUri = Input.of(Objects.requireNonNull(cpeUri));
+            this.cpeUri = Output.of(Objects.requireNonNull(cpeUri));
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder latestVersion(@Nullable Input<VersionArgs> latestVersion) {
+        public Builder latestVersion(@Nullable Output<VersionArgs> latestVersion) {
             this.latestVersion = latestVersion;
             return this;
         }
 
         public Builder latestVersion(@Nullable VersionArgs latestVersion) {
-            this.latestVersion = Input.ofNullable(latestVersion);
+            this.latestVersion = Output.ofNullable(latestVersion);
             return this;
         }
 
-        public Builder maintainer(@Nullable Input<String> maintainer) {
+        public Builder maintainer(@Nullable Output<String> maintainer) {
             this.maintainer = maintainer;
             return this;
         }
 
         public Builder maintainer(@Nullable String maintainer) {
-            this.maintainer = Input.ofNullable(maintainer);
+            this.maintainer = Output.ofNullable(maintainer);
             return this;
         }
 
-        public Builder url(@Nullable Input<String> url) {
+        public Builder url(@Nullable Output<String> url) {
             this.url = url;
             return this;
         }
 
         public Builder url(@Nullable String url) {
-            this.url = Input.ofNullable(url);
+            this.url = Output.ofNullable(url);
             return this;
         }
         public DistributionArgs build() {

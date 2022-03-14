@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.containerinstance.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class AzureFileVolumeArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="readOnly")
-      private final @Nullable Input<Boolean> readOnly;
+      private final @Nullable Output<Boolean> readOnly;
 
-    public Input<Boolean> getReadOnly() {
-        return this.readOnly == null ? Input.empty() : this.readOnly;
+    public Output<Boolean> getReadOnly() {
+        return this.readOnly == null ? Output.empty() : this.readOnly;
     }
 
     /**
@@ -35,9 +35,9 @@ public final class AzureFileVolumeArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="shareName", required=true)
-      private final Input<String> shareName;
+      private final Output<String> shareName;
 
-    public Input<String> getShareName() {
+    public Output<String> getShareName() {
         return this.shareName;
     }
 
@@ -46,10 +46,10 @@ public final class AzureFileVolumeArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="storageAccountKey")
-      private final @Nullable Input<String> storageAccountKey;
+      private final @Nullable Output<String> storageAccountKey;
 
-    public Input<String> getStorageAccountKey() {
-        return this.storageAccountKey == null ? Input.empty() : this.storageAccountKey;
+    public Output<String> getStorageAccountKey() {
+        return this.storageAccountKey == null ? Output.empty() : this.storageAccountKey;
     }
 
     /**
@@ -57,17 +57,17 @@ public final class AzureFileVolumeArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="storageAccountName", required=true)
-      private final Input<String> storageAccountName;
+      private final Output<String> storageAccountName;
 
-    public Input<String> getStorageAccountName() {
+    public Output<String> getStorageAccountName() {
         return this.storageAccountName;
     }
 
     public AzureFileVolumeArgs(
-        @Nullable Input<Boolean> readOnly,
-        Input<String> shareName,
-        @Nullable Input<String> storageAccountKey,
-        Input<String> storageAccountName) {
+        @Nullable Output<Boolean> readOnly,
+        Output<String> shareName,
+        @Nullable Output<String> storageAccountKey,
+        Output<String> storageAccountName) {
         this.readOnly = readOnly;
         this.shareName = Objects.requireNonNull(shareName, "expected parameter 'shareName' to be non-null");
         this.storageAccountKey = storageAccountKey;
@@ -75,10 +75,10 @@ public final class AzureFileVolumeArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private AzureFileVolumeArgs() {
-        this.readOnly = Input.empty();
-        this.shareName = Input.empty();
-        this.storageAccountKey = Input.empty();
-        this.storageAccountName = Input.empty();
+        this.readOnly = Output.empty();
+        this.shareName = Output.empty();
+        this.storageAccountKey = Output.empty();
+        this.storageAccountName = Output.empty();
     }
 
     public static Builder builder() {
@@ -90,10 +90,10 @@ public final class AzureFileVolumeArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> readOnly;
-        private Input<String> shareName;
-        private @Nullable Input<String> storageAccountKey;
-        private Input<String> storageAccountName;
+        private @Nullable Output<Boolean> readOnly;
+        private Output<String> shareName;
+        private @Nullable Output<String> storageAccountKey;
+        private Output<String> storageAccountName;
 
         public Builder() {
     	      // Empty
@@ -107,43 +107,43 @@ public final class AzureFileVolumeArgs extends io.pulumi.resources.ResourceArgs 
     	      this.storageAccountName = defaults.storageAccountName;
         }
 
-        public Builder readOnly(@Nullable Input<Boolean> readOnly) {
+        public Builder readOnly(@Nullable Output<Boolean> readOnly) {
             this.readOnly = readOnly;
             return this;
         }
 
         public Builder readOnly(@Nullable Boolean readOnly) {
-            this.readOnly = Input.ofNullable(readOnly);
+            this.readOnly = Output.ofNullable(readOnly);
             return this;
         }
 
-        public Builder shareName(Input<String> shareName) {
+        public Builder shareName(Output<String> shareName) {
             this.shareName = Objects.requireNonNull(shareName);
             return this;
         }
 
         public Builder shareName(String shareName) {
-            this.shareName = Input.of(Objects.requireNonNull(shareName));
+            this.shareName = Output.of(Objects.requireNonNull(shareName));
             return this;
         }
 
-        public Builder storageAccountKey(@Nullable Input<String> storageAccountKey) {
+        public Builder storageAccountKey(@Nullable Output<String> storageAccountKey) {
             this.storageAccountKey = storageAccountKey;
             return this;
         }
 
         public Builder storageAccountKey(@Nullable String storageAccountKey) {
-            this.storageAccountKey = Input.ofNullable(storageAccountKey);
+            this.storageAccountKey = Output.ofNullable(storageAccountKey);
             return this;
         }
 
-        public Builder storageAccountName(Input<String> storageAccountName) {
+        public Builder storageAccountName(Output<String> storageAccountName) {
             this.storageAccountName = Objects.requireNonNull(storageAccountName);
             return this;
         }
 
         public Builder storageAccountName(String storageAccountName) {
-            this.storageAccountName = Input.of(Objects.requireNonNull(storageAccountName));
+            this.storageAccountName = Output.of(Objects.requireNonNull(storageAccountName));
             return this;
         }
         public AzureFileVolumeArgs build() {

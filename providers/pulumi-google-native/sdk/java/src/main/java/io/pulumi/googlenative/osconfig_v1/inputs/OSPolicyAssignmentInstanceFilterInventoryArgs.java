@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.osconfig_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,9 +23,9 @@ public final class OSPolicyAssignmentInstanceFilterInventoryArgs extends io.pulu
      * 
      */
     @InputImport(name="osShortName", required=true)
-      private final Input<String> osShortName;
+      private final Output<String> osShortName;
 
-    public Input<String> getOsShortName() {
+    public Output<String> getOsShortName() {
         return this.osShortName;
     }
 
@@ -34,22 +34,22 @@ public final class OSPolicyAssignmentInstanceFilterInventoryArgs extends io.pulu
      * 
      */
     @InputImport(name="osVersion")
-      private final @Nullable Input<String> osVersion;
+      private final @Nullable Output<String> osVersion;
 
-    public Input<String> getOsVersion() {
-        return this.osVersion == null ? Input.empty() : this.osVersion;
+    public Output<String> getOsVersion() {
+        return this.osVersion == null ? Output.empty() : this.osVersion;
     }
 
     public OSPolicyAssignmentInstanceFilterInventoryArgs(
-        Input<String> osShortName,
-        @Nullable Input<String> osVersion) {
+        Output<String> osShortName,
+        @Nullable Output<String> osVersion) {
         this.osShortName = Objects.requireNonNull(osShortName, "expected parameter 'osShortName' to be non-null");
         this.osVersion = osVersion;
     }
 
     private OSPolicyAssignmentInstanceFilterInventoryArgs() {
-        this.osShortName = Input.empty();
-        this.osVersion = Input.empty();
+        this.osShortName = Output.empty();
+        this.osVersion = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class OSPolicyAssignmentInstanceFilterInventoryArgs extends io.pulu
     }
 
     public static final class Builder {
-        private Input<String> osShortName;
-        private @Nullable Input<String> osVersion;
+        private Output<String> osShortName;
+        private @Nullable Output<String> osVersion;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class OSPolicyAssignmentInstanceFilterInventoryArgs extends io.pulu
     	      this.osVersion = defaults.osVersion;
         }
 
-        public Builder osShortName(Input<String> osShortName) {
+        public Builder osShortName(Output<String> osShortName) {
             this.osShortName = Objects.requireNonNull(osShortName);
             return this;
         }
 
         public Builder osShortName(String osShortName) {
-            this.osShortName = Input.of(Objects.requireNonNull(osShortName));
+            this.osShortName = Output.of(Objects.requireNonNull(osShortName));
             return this;
         }
 
-        public Builder osVersion(@Nullable Input<String> osVersion) {
+        public Builder osVersion(@Nullable Output<String> osVersion) {
             this.osVersion = osVersion;
             return this;
         }
 
         public Builder osVersion(@Nullable String osVersion) {
-            this.osVersion = Input.ofNullable(osVersion);
+            this.osVersion = Output.ofNullable(osVersion);
             return this;
         }
         public OSPolicyAssignmentInstanceFilterInventoryArgs build() {

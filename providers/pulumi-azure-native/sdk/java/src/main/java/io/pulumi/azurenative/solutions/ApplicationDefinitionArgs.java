@@ -12,7 +12,7 @@ import io.pulumi.azurenative.solutions.inputs.ApplicationNotificationPolicyArgs;
 import io.pulumi.azurenative.solutions.inputs.ApplicationPackageLockingPolicyDefinitionArgs;
 import io.pulumi.azurenative.solutions.inputs.ApplicationPolicyArgs;
 import io.pulumi.azurenative.solutions.inputs.SkuArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Object;
@@ -32,10 +32,10 @@ public final class ApplicationDefinitionArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="applicationDefinitionName")
-      private final @Nullable Input<String> applicationDefinitionName;
+      private final @Nullable Output<String> applicationDefinitionName;
 
-    public Input<String> getApplicationDefinitionName() {
-        return this.applicationDefinitionName == null ? Input.empty() : this.applicationDefinitionName;
+    public Output<String> getApplicationDefinitionName() {
+        return this.applicationDefinitionName == null ? Output.empty() : this.applicationDefinitionName;
     }
 
     /**
@@ -43,10 +43,10 @@ public final class ApplicationDefinitionArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="artifacts")
-      private final @Nullable Input<List<ApplicationDefinitionArtifactArgs>> artifacts;
+      private final @Nullable Output<List<ApplicationDefinitionArtifactArgs>> artifacts;
 
-    public Input<List<ApplicationDefinitionArtifactArgs>> getArtifacts() {
-        return this.artifacts == null ? Input.empty() : this.artifacts;
+    public Output<List<ApplicationDefinitionArtifactArgs>> getArtifacts() {
+        return this.artifacts == null ? Output.empty() : this.artifacts;
     }
 
     /**
@@ -54,10 +54,10 @@ public final class ApplicationDefinitionArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="authorizations")
-      private final @Nullable Input<List<ApplicationAuthorizationArgs>> authorizations;
+      private final @Nullable Output<List<ApplicationAuthorizationArgs>> authorizations;
 
-    public Input<List<ApplicationAuthorizationArgs>> getAuthorizations() {
-        return this.authorizations == null ? Input.empty() : this.authorizations;
+    public Output<List<ApplicationAuthorizationArgs>> getAuthorizations() {
+        return this.authorizations == null ? Output.empty() : this.authorizations;
     }
 
     /**
@@ -65,10 +65,10 @@ public final class ApplicationDefinitionArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="createUiDefinition")
-      private final @Nullable Input<Object> createUiDefinition;
+      private final @Nullable Output<Object> createUiDefinition;
 
-    public Input<Object> getCreateUiDefinition() {
-        return this.createUiDefinition == null ? Input.empty() : this.createUiDefinition;
+    public Output<Object> getCreateUiDefinition() {
+        return this.createUiDefinition == null ? Output.empty() : this.createUiDefinition;
     }
 
     /**
@@ -76,10 +76,10 @@ public final class ApplicationDefinitionArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="deploymentPolicy")
-      private final @Nullable Input<ApplicationDeploymentPolicyArgs> deploymentPolicy;
+      private final @Nullable Output<ApplicationDeploymentPolicyArgs> deploymentPolicy;
 
-    public Input<ApplicationDeploymentPolicyArgs> getDeploymentPolicy() {
-        return this.deploymentPolicy == null ? Input.empty() : this.deploymentPolicy;
+    public Output<ApplicationDeploymentPolicyArgs> getDeploymentPolicy() {
+        return this.deploymentPolicy == null ? Output.empty() : this.deploymentPolicy;
     }
 
     /**
@@ -87,10 +87,10 @@ public final class ApplicationDefinitionArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -98,10 +98,10 @@ public final class ApplicationDefinitionArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="displayName")
-      private final @Nullable Input<String> displayName;
+      private final @Nullable Output<String> displayName;
 
-    public Input<String> getDisplayName() {
-        return this.displayName == null ? Input.empty() : this.displayName;
+    public Output<String> getDisplayName() {
+        return this.displayName == null ? Output.empty() : this.displayName;
     }
 
     /**
@@ -109,10 +109,10 @@ public final class ApplicationDefinitionArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="isEnabled")
-      private final @Nullable Input<Boolean> isEnabled;
+      private final @Nullable Output<Boolean> isEnabled;
 
-    public Input<Boolean> getIsEnabled() {
-        return this.isEnabled == null ? Input.empty() : this.isEnabled;
+    public Output<Boolean> getIsEnabled() {
+        return this.isEnabled == null ? Output.empty() : this.isEnabled;
     }
 
     /**
@@ -120,10 +120,10 @@ public final class ApplicationDefinitionArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -131,9 +131,9 @@ public final class ApplicationDefinitionArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="lockLevel", required=true)
-      private final Input<ApplicationLockLevel> lockLevel;
+      private final Output<ApplicationLockLevel> lockLevel;
 
-    public Input<ApplicationLockLevel> getLockLevel() {
+    public Output<ApplicationLockLevel> getLockLevel() {
         return this.lockLevel;
     }
 
@@ -142,10 +142,10 @@ public final class ApplicationDefinitionArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="lockingPolicy")
-      private final @Nullable Input<ApplicationPackageLockingPolicyDefinitionArgs> lockingPolicy;
+      private final @Nullable Output<ApplicationPackageLockingPolicyDefinitionArgs> lockingPolicy;
 
-    public Input<ApplicationPackageLockingPolicyDefinitionArgs> getLockingPolicy() {
-        return this.lockingPolicy == null ? Input.empty() : this.lockingPolicy;
+    public Output<ApplicationPackageLockingPolicyDefinitionArgs> getLockingPolicy() {
+        return this.lockingPolicy == null ? Output.empty() : this.lockingPolicy;
     }
 
     /**
@@ -153,10 +153,10 @@ public final class ApplicationDefinitionArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="mainTemplate")
-      private final @Nullable Input<Object> mainTemplate;
+      private final @Nullable Output<Object> mainTemplate;
 
-    public Input<Object> getMainTemplate() {
-        return this.mainTemplate == null ? Input.empty() : this.mainTemplate;
+    public Output<Object> getMainTemplate() {
+        return this.mainTemplate == null ? Output.empty() : this.mainTemplate;
     }
 
     /**
@@ -164,10 +164,10 @@ public final class ApplicationDefinitionArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="managedBy")
-      private final @Nullable Input<String> managedBy;
+      private final @Nullable Output<String> managedBy;
 
-    public Input<String> getManagedBy() {
-        return this.managedBy == null ? Input.empty() : this.managedBy;
+    public Output<String> getManagedBy() {
+        return this.managedBy == null ? Output.empty() : this.managedBy;
     }
 
     /**
@@ -175,10 +175,10 @@ public final class ApplicationDefinitionArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="managementPolicy")
-      private final @Nullable Input<ApplicationManagementPolicyArgs> managementPolicy;
+      private final @Nullable Output<ApplicationManagementPolicyArgs> managementPolicy;
 
-    public Input<ApplicationManagementPolicyArgs> getManagementPolicy() {
-        return this.managementPolicy == null ? Input.empty() : this.managementPolicy;
+    public Output<ApplicationManagementPolicyArgs> getManagementPolicy() {
+        return this.managementPolicy == null ? Output.empty() : this.managementPolicy;
     }
 
     /**
@@ -186,10 +186,10 @@ public final class ApplicationDefinitionArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="notificationPolicy")
-      private final @Nullable Input<ApplicationNotificationPolicyArgs> notificationPolicy;
+      private final @Nullable Output<ApplicationNotificationPolicyArgs> notificationPolicy;
 
-    public Input<ApplicationNotificationPolicyArgs> getNotificationPolicy() {
-        return this.notificationPolicy == null ? Input.empty() : this.notificationPolicy;
+    public Output<ApplicationNotificationPolicyArgs> getNotificationPolicy() {
+        return this.notificationPolicy == null ? Output.empty() : this.notificationPolicy;
     }
 
     /**
@@ -197,10 +197,10 @@ public final class ApplicationDefinitionArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="packageFileUri")
-      private final @Nullable Input<String> packageFileUri;
+      private final @Nullable Output<String> packageFileUri;
 
-    public Input<String> getPackageFileUri() {
-        return this.packageFileUri == null ? Input.empty() : this.packageFileUri;
+    public Output<String> getPackageFileUri() {
+        return this.packageFileUri == null ? Output.empty() : this.packageFileUri;
     }
 
     /**
@@ -208,10 +208,10 @@ public final class ApplicationDefinitionArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="policies")
-      private final @Nullable Input<List<ApplicationPolicyArgs>> policies;
+      private final @Nullable Output<List<ApplicationPolicyArgs>> policies;
 
-    public Input<List<ApplicationPolicyArgs>> getPolicies() {
-        return this.policies == null ? Input.empty() : this.policies;
+    public Output<List<ApplicationPolicyArgs>> getPolicies() {
+        return this.policies == null ? Output.empty() : this.policies;
     }
 
     /**
@@ -219,9 +219,9 @@ public final class ApplicationDefinitionArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -230,10 +230,10 @@ public final class ApplicationDefinitionArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="sku")
-      private final @Nullable Input<SkuArgs> sku;
+      private final @Nullable Output<SkuArgs> sku;
 
-    public Input<SkuArgs> getSku() {
-        return this.sku == null ? Input.empty() : this.sku;
+    public Output<SkuArgs> getSku() {
+        return this.sku == null ? Output.empty() : this.sku;
     }
 
     /**
@@ -241,33 +241,33 @@ public final class ApplicationDefinitionArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public ApplicationDefinitionArgs(
-        @Nullable Input<String> applicationDefinitionName,
-        @Nullable Input<List<ApplicationDefinitionArtifactArgs>> artifacts,
-        @Nullable Input<List<ApplicationAuthorizationArgs>> authorizations,
-        @Nullable Input<Object> createUiDefinition,
-        @Nullable Input<ApplicationDeploymentPolicyArgs> deploymentPolicy,
-        @Nullable Input<String> description,
-        @Nullable Input<String> displayName,
-        @Nullable Input<Boolean> isEnabled,
-        @Nullable Input<String> location,
-        Input<ApplicationLockLevel> lockLevel,
-        @Nullable Input<ApplicationPackageLockingPolicyDefinitionArgs> lockingPolicy,
-        @Nullable Input<Object> mainTemplate,
-        @Nullable Input<String> managedBy,
-        @Nullable Input<ApplicationManagementPolicyArgs> managementPolicy,
-        @Nullable Input<ApplicationNotificationPolicyArgs> notificationPolicy,
-        @Nullable Input<String> packageFileUri,
-        @Nullable Input<List<ApplicationPolicyArgs>> policies,
-        Input<String> resourceGroupName,
-        @Nullable Input<SkuArgs> sku,
-        @Nullable Input<Map<String,String>> tags) {
+        @Nullable Output<String> applicationDefinitionName,
+        @Nullable Output<List<ApplicationDefinitionArtifactArgs>> artifacts,
+        @Nullable Output<List<ApplicationAuthorizationArgs>> authorizations,
+        @Nullable Output<Object> createUiDefinition,
+        @Nullable Output<ApplicationDeploymentPolicyArgs> deploymentPolicy,
+        @Nullable Output<String> description,
+        @Nullable Output<String> displayName,
+        @Nullable Output<Boolean> isEnabled,
+        @Nullable Output<String> location,
+        Output<ApplicationLockLevel> lockLevel,
+        @Nullable Output<ApplicationPackageLockingPolicyDefinitionArgs> lockingPolicy,
+        @Nullable Output<Object> mainTemplate,
+        @Nullable Output<String> managedBy,
+        @Nullable Output<ApplicationManagementPolicyArgs> managementPolicy,
+        @Nullable Output<ApplicationNotificationPolicyArgs> notificationPolicy,
+        @Nullable Output<String> packageFileUri,
+        @Nullable Output<List<ApplicationPolicyArgs>> policies,
+        Output<String> resourceGroupName,
+        @Nullable Output<SkuArgs> sku,
+        @Nullable Output<Map<String,String>> tags) {
         this.applicationDefinitionName = applicationDefinitionName;
         this.artifacts = artifacts;
         this.authorizations = authorizations;
@@ -291,26 +291,26 @@ public final class ApplicationDefinitionArgs extends io.pulumi.resources.Resourc
     }
 
     private ApplicationDefinitionArgs() {
-        this.applicationDefinitionName = Input.empty();
-        this.artifacts = Input.empty();
-        this.authorizations = Input.empty();
-        this.createUiDefinition = Input.empty();
-        this.deploymentPolicy = Input.empty();
-        this.description = Input.empty();
-        this.displayName = Input.empty();
-        this.isEnabled = Input.empty();
-        this.location = Input.empty();
-        this.lockLevel = Input.empty();
-        this.lockingPolicy = Input.empty();
-        this.mainTemplate = Input.empty();
-        this.managedBy = Input.empty();
-        this.managementPolicy = Input.empty();
-        this.notificationPolicy = Input.empty();
-        this.packageFileUri = Input.empty();
-        this.policies = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.sku = Input.empty();
-        this.tags = Input.empty();
+        this.applicationDefinitionName = Output.empty();
+        this.artifacts = Output.empty();
+        this.authorizations = Output.empty();
+        this.createUiDefinition = Output.empty();
+        this.deploymentPolicy = Output.empty();
+        this.description = Output.empty();
+        this.displayName = Output.empty();
+        this.isEnabled = Output.empty();
+        this.location = Output.empty();
+        this.lockLevel = Output.empty();
+        this.lockingPolicy = Output.empty();
+        this.mainTemplate = Output.empty();
+        this.managedBy = Output.empty();
+        this.managementPolicy = Output.empty();
+        this.notificationPolicy = Output.empty();
+        this.packageFileUri = Output.empty();
+        this.policies = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.sku = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -322,26 +322,26 @@ public final class ApplicationDefinitionArgs extends io.pulumi.resources.Resourc
     }
 
     public static final class Builder {
-        private @Nullable Input<String> applicationDefinitionName;
-        private @Nullable Input<List<ApplicationDefinitionArtifactArgs>> artifacts;
-        private @Nullable Input<List<ApplicationAuthorizationArgs>> authorizations;
-        private @Nullable Input<Object> createUiDefinition;
-        private @Nullable Input<ApplicationDeploymentPolicyArgs> deploymentPolicy;
-        private @Nullable Input<String> description;
-        private @Nullable Input<String> displayName;
-        private @Nullable Input<Boolean> isEnabled;
-        private @Nullable Input<String> location;
-        private Input<ApplicationLockLevel> lockLevel;
-        private @Nullable Input<ApplicationPackageLockingPolicyDefinitionArgs> lockingPolicy;
-        private @Nullable Input<Object> mainTemplate;
-        private @Nullable Input<String> managedBy;
-        private @Nullable Input<ApplicationManagementPolicyArgs> managementPolicy;
-        private @Nullable Input<ApplicationNotificationPolicyArgs> notificationPolicy;
-        private @Nullable Input<String> packageFileUri;
-        private @Nullable Input<List<ApplicationPolicyArgs>> policies;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<SkuArgs> sku;
-        private @Nullable Input<Map<String,String>> tags;
+        private @Nullable Output<String> applicationDefinitionName;
+        private @Nullable Output<List<ApplicationDefinitionArtifactArgs>> artifacts;
+        private @Nullable Output<List<ApplicationAuthorizationArgs>> authorizations;
+        private @Nullable Output<Object> createUiDefinition;
+        private @Nullable Output<ApplicationDeploymentPolicyArgs> deploymentPolicy;
+        private @Nullable Output<String> description;
+        private @Nullable Output<String> displayName;
+        private @Nullable Output<Boolean> isEnabled;
+        private @Nullable Output<String> location;
+        private Output<ApplicationLockLevel> lockLevel;
+        private @Nullable Output<ApplicationPackageLockingPolicyDefinitionArgs> lockingPolicy;
+        private @Nullable Output<Object> mainTemplate;
+        private @Nullable Output<String> managedBy;
+        private @Nullable Output<ApplicationManagementPolicyArgs> managementPolicy;
+        private @Nullable Output<ApplicationNotificationPolicyArgs> notificationPolicy;
+        private @Nullable Output<String> packageFileUri;
+        private @Nullable Output<List<ApplicationPolicyArgs>> policies;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<SkuArgs> sku;
+        private @Nullable Output<Map<String,String>> tags;
 
         public Builder() {
     	      // Empty
@@ -371,203 +371,203 @@ public final class ApplicationDefinitionArgs extends io.pulumi.resources.Resourc
     	      this.tags = defaults.tags;
         }
 
-        public Builder applicationDefinitionName(@Nullable Input<String> applicationDefinitionName) {
+        public Builder applicationDefinitionName(@Nullable Output<String> applicationDefinitionName) {
             this.applicationDefinitionName = applicationDefinitionName;
             return this;
         }
 
         public Builder applicationDefinitionName(@Nullable String applicationDefinitionName) {
-            this.applicationDefinitionName = Input.ofNullable(applicationDefinitionName);
+            this.applicationDefinitionName = Output.ofNullable(applicationDefinitionName);
             return this;
         }
 
-        public Builder artifacts(@Nullable Input<List<ApplicationDefinitionArtifactArgs>> artifacts) {
+        public Builder artifacts(@Nullable Output<List<ApplicationDefinitionArtifactArgs>> artifacts) {
             this.artifacts = artifacts;
             return this;
         }
 
         public Builder artifacts(@Nullable List<ApplicationDefinitionArtifactArgs> artifacts) {
-            this.artifacts = Input.ofNullable(artifacts);
+            this.artifacts = Output.ofNullable(artifacts);
             return this;
         }
 
-        public Builder authorizations(@Nullable Input<List<ApplicationAuthorizationArgs>> authorizations) {
+        public Builder authorizations(@Nullable Output<List<ApplicationAuthorizationArgs>> authorizations) {
             this.authorizations = authorizations;
             return this;
         }
 
         public Builder authorizations(@Nullable List<ApplicationAuthorizationArgs> authorizations) {
-            this.authorizations = Input.ofNullable(authorizations);
+            this.authorizations = Output.ofNullable(authorizations);
             return this;
         }
 
-        public Builder createUiDefinition(@Nullable Input<Object> createUiDefinition) {
+        public Builder createUiDefinition(@Nullable Output<Object> createUiDefinition) {
             this.createUiDefinition = createUiDefinition;
             return this;
         }
 
         public Builder createUiDefinition(@Nullable Object createUiDefinition) {
-            this.createUiDefinition = Input.ofNullable(createUiDefinition);
+            this.createUiDefinition = Output.ofNullable(createUiDefinition);
             return this;
         }
 
-        public Builder deploymentPolicy(@Nullable Input<ApplicationDeploymentPolicyArgs> deploymentPolicy) {
+        public Builder deploymentPolicy(@Nullable Output<ApplicationDeploymentPolicyArgs> deploymentPolicy) {
             this.deploymentPolicy = deploymentPolicy;
             return this;
         }
 
         public Builder deploymentPolicy(@Nullable ApplicationDeploymentPolicyArgs deploymentPolicy) {
-            this.deploymentPolicy = Input.ofNullable(deploymentPolicy);
+            this.deploymentPolicy = Output.ofNullable(deploymentPolicy);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder displayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Input.ofNullable(displayName);
+            this.displayName = Output.ofNullable(displayName);
             return this;
         }
 
-        public Builder isEnabled(@Nullable Input<Boolean> isEnabled) {
+        public Builder isEnabled(@Nullable Output<Boolean> isEnabled) {
             this.isEnabled = isEnabled;
             return this;
         }
 
         public Builder isEnabled(@Nullable Boolean isEnabled) {
-            this.isEnabled = Input.ofNullable(isEnabled);
+            this.isEnabled = Output.ofNullable(isEnabled);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder lockLevel(Input<ApplicationLockLevel> lockLevel) {
+        public Builder lockLevel(Output<ApplicationLockLevel> lockLevel) {
             this.lockLevel = Objects.requireNonNull(lockLevel);
             return this;
         }
 
         public Builder lockLevel(ApplicationLockLevel lockLevel) {
-            this.lockLevel = Input.of(Objects.requireNonNull(lockLevel));
+            this.lockLevel = Output.of(Objects.requireNonNull(lockLevel));
             return this;
         }
 
-        public Builder lockingPolicy(@Nullable Input<ApplicationPackageLockingPolicyDefinitionArgs> lockingPolicy) {
+        public Builder lockingPolicy(@Nullable Output<ApplicationPackageLockingPolicyDefinitionArgs> lockingPolicy) {
             this.lockingPolicy = lockingPolicy;
             return this;
         }
 
         public Builder lockingPolicy(@Nullable ApplicationPackageLockingPolicyDefinitionArgs lockingPolicy) {
-            this.lockingPolicy = Input.ofNullable(lockingPolicy);
+            this.lockingPolicy = Output.ofNullable(lockingPolicy);
             return this;
         }
 
-        public Builder mainTemplate(@Nullable Input<Object> mainTemplate) {
+        public Builder mainTemplate(@Nullable Output<Object> mainTemplate) {
             this.mainTemplate = mainTemplate;
             return this;
         }
 
         public Builder mainTemplate(@Nullable Object mainTemplate) {
-            this.mainTemplate = Input.ofNullable(mainTemplate);
+            this.mainTemplate = Output.ofNullable(mainTemplate);
             return this;
         }
 
-        public Builder managedBy(@Nullable Input<String> managedBy) {
+        public Builder managedBy(@Nullable Output<String> managedBy) {
             this.managedBy = managedBy;
             return this;
         }
 
         public Builder managedBy(@Nullable String managedBy) {
-            this.managedBy = Input.ofNullable(managedBy);
+            this.managedBy = Output.ofNullable(managedBy);
             return this;
         }
 
-        public Builder managementPolicy(@Nullable Input<ApplicationManagementPolicyArgs> managementPolicy) {
+        public Builder managementPolicy(@Nullable Output<ApplicationManagementPolicyArgs> managementPolicy) {
             this.managementPolicy = managementPolicy;
             return this;
         }
 
         public Builder managementPolicy(@Nullable ApplicationManagementPolicyArgs managementPolicy) {
-            this.managementPolicy = Input.ofNullable(managementPolicy);
+            this.managementPolicy = Output.ofNullable(managementPolicy);
             return this;
         }
 
-        public Builder notificationPolicy(@Nullable Input<ApplicationNotificationPolicyArgs> notificationPolicy) {
+        public Builder notificationPolicy(@Nullable Output<ApplicationNotificationPolicyArgs> notificationPolicy) {
             this.notificationPolicy = notificationPolicy;
             return this;
         }
 
         public Builder notificationPolicy(@Nullable ApplicationNotificationPolicyArgs notificationPolicy) {
-            this.notificationPolicy = Input.ofNullable(notificationPolicy);
+            this.notificationPolicy = Output.ofNullable(notificationPolicy);
             return this;
         }
 
-        public Builder packageFileUri(@Nullable Input<String> packageFileUri) {
+        public Builder packageFileUri(@Nullable Output<String> packageFileUri) {
             this.packageFileUri = packageFileUri;
             return this;
         }
 
         public Builder packageFileUri(@Nullable String packageFileUri) {
-            this.packageFileUri = Input.ofNullable(packageFileUri);
+            this.packageFileUri = Output.ofNullable(packageFileUri);
             return this;
         }
 
-        public Builder policies(@Nullable Input<List<ApplicationPolicyArgs>> policies) {
+        public Builder policies(@Nullable Output<List<ApplicationPolicyArgs>> policies) {
             this.policies = policies;
             return this;
         }
 
         public Builder policies(@Nullable List<ApplicationPolicyArgs> policies) {
-            this.policies = Input.ofNullable(policies);
+            this.policies = Output.ofNullable(policies);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder sku(@Nullable Input<SkuArgs> sku) {
+        public Builder sku(@Nullable Output<SkuArgs> sku) {
             this.sku = sku;
             return this;
         }
 
         public Builder sku(@Nullable SkuArgs sku) {
-            this.sku = Input.ofNullable(sku);
+            this.sku = Output.ofNullable(sku);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public ApplicationDefinitionArgs build() {

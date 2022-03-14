@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.notebooks.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.notebooks.inputs.InstanceAcceleratorConfigGetArgs;
 import io.pulumi.gcp.notebooks.inputs.InstanceContainerImageGetArgs;
@@ -31,10 +31,10 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="acceleratorConfig")
-      private final @Nullable Input<InstanceAcceleratorConfigGetArgs> acceleratorConfig;
+      private final @Nullable Output<InstanceAcceleratorConfigGetArgs> acceleratorConfig;
 
-    public Input<InstanceAcceleratorConfigGetArgs> getAcceleratorConfig() {
-        return this.acceleratorConfig == null ? Input.empty() : this.acceleratorConfig;
+    public Output<InstanceAcceleratorConfigGetArgs> getAcceleratorConfig() {
+        return this.acceleratorConfig == null ? Output.empty() : this.acceleratorConfig;
     }
 
     /**
@@ -44,10 +44,10 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="bootDiskSizeGb")
-      private final @Nullable Input<Integer> bootDiskSizeGb;
+      private final @Nullable Output<Integer> bootDiskSizeGb;
 
-    public Input<Integer> getBootDiskSizeGb() {
-        return this.bootDiskSizeGb == null ? Input.empty() : this.bootDiskSizeGb;
+    public Output<Integer> getBootDiskSizeGb() {
+        return this.bootDiskSizeGb == null ? Output.empty() : this.bootDiskSizeGb;
     }
 
     /**
@@ -56,10 +56,10 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="bootDiskType")
-      private final @Nullable Input<String> bootDiskType;
+      private final @Nullable Output<String> bootDiskType;
 
-    public Input<String> getBootDiskType() {
-        return this.bootDiskType == null ? Input.empty() : this.bootDiskType;
+    public Output<String> getBootDiskType() {
+        return this.bootDiskType == null ? Output.empty() : this.bootDiskType;
     }
 
     /**
@@ -68,10 +68,10 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="containerImage")
-      private final @Nullable Input<InstanceContainerImageGetArgs> containerImage;
+      private final @Nullable Output<InstanceContainerImageGetArgs> containerImage;
 
-    public Input<InstanceContainerImageGetArgs> getContainerImage() {
-        return this.containerImage == null ? Input.empty() : this.containerImage;
+    public Output<InstanceContainerImageGetArgs> getContainerImage() {
+        return this.containerImage == null ? Output.empty() : this.containerImage;
     }
 
     /**
@@ -79,10 +79,10 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="createTime")
-      private final @Nullable Input<String> createTime;
+      private final @Nullable Output<String> createTime;
 
-    public Input<String> getCreateTime() {
-        return this.createTime == null ? Input.empty() : this.createTime;
+    public Output<String> getCreateTime() {
+        return this.createTime == null ? Output.empty() : this.createTime;
     }
 
     /**
@@ -91,10 +91,10 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="customGpuDriverPath")
-      private final @Nullable Input<String> customGpuDriverPath;
+      private final @Nullable Output<String> customGpuDriverPath;
 
-    public Input<String> getCustomGpuDriverPath() {
-        return this.customGpuDriverPath == null ? Input.empty() : this.customGpuDriverPath;
+    public Output<String> getCustomGpuDriverPath() {
+        return this.customGpuDriverPath == null ? Output.empty() : this.customGpuDriverPath;
     }
 
     /**
@@ -105,10 +105,10 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dataDiskSizeGb")
-      private final @Nullable Input<Integer> dataDiskSizeGb;
+      private final @Nullable Output<Integer> dataDiskSizeGb;
 
-    public Input<Integer> getDataDiskSizeGb() {
-        return this.dataDiskSizeGb == null ? Input.empty() : this.dataDiskSizeGb;
+    public Output<Integer> getDataDiskSizeGb() {
+        return this.dataDiskSizeGb == null ? Output.empty() : this.dataDiskSizeGb;
     }
 
     /**
@@ -117,10 +117,10 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dataDiskType")
-      private final @Nullable Input<String> dataDiskType;
+      private final @Nullable Output<String> dataDiskType;
 
-    public Input<String> getDataDiskType() {
-        return this.dataDiskType == null ? Input.empty() : this.dataDiskType;
+    public Output<String> getDataDiskType() {
+        return this.dataDiskType == null ? Output.empty() : this.dataDiskType;
     }
 
     /**
@@ -129,10 +129,10 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="diskEncryption")
-      private final @Nullable Input<String> diskEncryption;
+      private final @Nullable Output<String> diskEncryption;
 
-    public Input<String> getDiskEncryption() {
-        return this.diskEncryption == null ? Input.empty() : this.diskEncryption;
+    public Output<String> getDiskEncryption() {
+        return this.diskEncryption == null ? Output.empty() : this.diskEncryption;
     }
 
     /**
@@ -142,10 +142,10 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="installGpuDriver")
-      private final @Nullable Input<Boolean> installGpuDriver;
+      private final @Nullable Output<Boolean> installGpuDriver;
 
-    public Input<Boolean> getInstallGpuDriver() {
-        return this.installGpuDriver == null ? Input.empty() : this.installGpuDriver;
+    public Output<Boolean> getInstallGpuDriver() {
+        return this.installGpuDriver == null ? Output.empty() : this.installGpuDriver;
     }
 
     /**
@@ -157,10 +157,10 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="instanceOwners")
-      private final @Nullable Input<List<String>> instanceOwners;
+      private final @Nullable Output<List<String>> instanceOwners;
 
-    public Input<List<String>> getInstanceOwners() {
-        return this.instanceOwners == null ? Input.empty() : this.instanceOwners;
+    public Output<List<String>> getInstanceOwners() {
+        return this.instanceOwners == null ? Output.empty() : this.instanceOwners;
     }
 
     /**
@@ -169,10 +169,10 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kmsKey")
-      private final @Nullable Input<String> kmsKey;
+      private final @Nullable Output<String> kmsKey;
 
-    public Input<String> getKmsKey() {
-        return this.kmsKey == null ? Input.empty() : this.kmsKey;
+    public Output<String> getKmsKey() {
+        return this.kmsKey == null ? Output.empty() : this.kmsKey;
     }
 
     /**
@@ -181,10 +181,10 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labels")
-      private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Output<Map<String,String>> labels;
 
-    public Input<Map<String,String>> getLabels() {
-        return this.labels == null ? Input.empty() : this.labels;
+    public Output<Map<String,String>> getLabels() {
+        return this.labels == null ? Output.empty() : this.labels;
     }
 
     /**
@@ -192,10 +192,10 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -203,10 +203,10 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="machineType")
-      private final @Nullable Input<String> machineType;
+      private final @Nullable Output<String> machineType;
 
-    public Input<String> getMachineType() {
-        return this.machineType == null ? Input.empty() : this.machineType;
+    public Output<String> getMachineType() {
+        return this.machineType == null ? Output.empty() : this.machineType;
     }
 
     /**
@@ -215,10 +215,10 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="metadata")
-      private final @Nullable Input<Map<String,String>> metadata;
+      private final @Nullable Output<Map<String,String>> metadata;
 
-    public Input<Map<String,String>> getMetadata() {
-        return this.metadata == null ? Input.empty() : this.metadata;
+    public Output<Map<String,String>> getMetadata() {
+        return this.metadata == null ? Output.empty() : this.metadata;
     }
 
     /**
@@ -226,10 +226,10 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -238,10 +238,10 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="network")
-      private final @Nullable Input<String> network;
+      private final @Nullable Output<String> network;
 
-    public Input<String> getNetwork() {
-        return this.network == null ? Input.empty() : this.network;
+    public Output<String> getNetwork() {
+        return this.network == null ? Output.empty() : this.network;
     }
 
     /**
@@ -250,10 +250,10 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="nicType")
-      private final @Nullable Input<String> nicType;
+      private final @Nullable Output<String> nicType;
 
-    public Input<String> getNicType() {
-        return this.nicType == null ? Input.empty() : this.nicType;
+    public Output<String> getNicType() {
+        return this.nicType == null ? Output.empty() : this.nicType;
     }
 
     /**
@@ -261,10 +261,10 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="noProxyAccess")
-      private final @Nullable Input<Boolean> noProxyAccess;
+      private final @Nullable Output<Boolean> noProxyAccess;
 
-    public Input<Boolean> getNoProxyAccess() {
-        return this.noProxyAccess == null ? Input.empty() : this.noProxyAccess;
+    public Output<Boolean> getNoProxyAccess() {
+        return this.noProxyAccess == null ? Output.empty() : this.noProxyAccess;
     }
 
     /**
@@ -272,10 +272,10 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="noPublicIp")
-      private final @Nullable Input<Boolean> noPublicIp;
+      private final @Nullable Output<Boolean> noPublicIp;
 
-    public Input<Boolean> getNoPublicIp() {
-        return this.noPublicIp == null ? Input.empty() : this.noPublicIp;
+    public Output<Boolean> getNoPublicIp() {
+        return this.noPublicIp == null ? Output.empty() : this.noPublicIp;
     }
 
     /**
@@ -283,10 +283,10 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="noRemoveDataDisk")
-      private final @Nullable Input<Boolean> noRemoveDataDisk;
+      private final @Nullable Output<Boolean> noRemoveDataDisk;
 
-    public Input<Boolean> getNoRemoveDataDisk() {
-        return this.noRemoveDataDisk == null ? Input.empty() : this.noRemoveDataDisk;
+    public Output<Boolean> getNoRemoveDataDisk() {
+        return this.noRemoveDataDisk == null ? Output.empty() : this.noRemoveDataDisk;
     }
 
     /**
@@ -296,10 +296,10 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="postStartupScript")
-      private final @Nullable Input<String> postStartupScript;
+      private final @Nullable Output<String> postStartupScript;
 
-    public Input<String> getPostStartupScript() {
-        return this.postStartupScript == null ? Input.empty() : this.postStartupScript;
+    public Output<String> getPostStartupScript() {
+        return this.postStartupScript == null ? Output.empty() : this.postStartupScript;
     }
 
     /**
@@ -308,10 +308,10 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -319,10 +319,10 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="proxyUri")
-      private final @Nullable Input<String> proxyUri;
+      private final @Nullable Output<String> proxyUri;
 
-    public Input<String> getProxyUri() {
-        return this.proxyUri == null ? Input.empty() : this.proxyUri;
+    public Output<String> getProxyUri() {
+        return this.proxyUri == null ? Output.empty() : this.proxyUri;
     }
 
     /**
@@ -331,10 +331,10 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="reservationAffinity")
-      private final @Nullable Input<InstanceReservationAffinityGetArgs> reservationAffinity;
+      private final @Nullable Output<InstanceReservationAffinityGetArgs> reservationAffinity;
 
-    public Input<InstanceReservationAffinityGetArgs> getReservationAffinity() {
-        return this.reservationAffinity == null ? Input.empty() : this.reservationAffinity;
+    public Output<InstanceReservationAffinityGetArgs> getReservationAffinity() {
+        return this.reservationAffinity == null ? Output.empty() : this.reservationAffinity;
     }
 
     /**
@@ -346,10 +346,10 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serviceAccount")
-      private final @Nullable Input<String> serviceAccount;
+      private final @Nullable Output<String> serviceAccount;
 
-    public Input<String> getServiceAccount() {
-        return this.serviceAccount == null ? Input.empty() : this.serviceAccount;
+    public Output<String> getServiceAccount() {
+        return this.serviceAccount == null ? Output.empty() : this.serviceAccount;
     }
 
     /**
@@ -360,10 +360,10 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serviceAccountScopes")
-      private final @Nullable Input<List<String>> serviceAccountScopes;
+      private final @Nullable Output<List<String>> serviceAccountScopes;
 
-    public Input<List<String>> getServiceAccountScopes() {
-        return this.serviceAccountScopes == null ? Input.empty() : this.serviceAccountScopes;
+    public Output<List<String>> getServiceAccountScopes() {
+        return this.serviceAccountScopes == null ? Output.empty() : this.serviceAccountScopes;
     }
 
     /**
@@ -373,10 +373,10 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="shieldedInstanceConfig")
-      private final @Nullable Input<InstanceShieldedInstanceConfigGetArgs> shieldedInstanceConfig;
+      private final @Nullable Output<InstanceShieldedInstanceConfigGetArgs> shieldedInstanceConfig;
 
-    public Input<InstanceShieldedInstanceConfigGetArgs> getShieldedInstanceConfig() {
-        return this.shieldedInstanceConfig == null ? Input.empty() : this.shieldedInstanceConfig;
+    public Output<InstanceShieldedInstanceConfigGetArgs> getShieldedInstanceConfig() {
+        return this.shieldedInstanceConfig == null ? Output.empty() : this.shieldedInstanceConfig;
     }
 
     /**
@@ -384,10 +384,10 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="state")
-      private final @Nullable Input<String> state;
+      private final @Nullable Output<String> state;
 
-    public Input<String> getState() {
-        return this.state == null ? Input.empty() : this.state;
+    public Output<String> getState() {
+        return this.state == null ? Output.empty() : this.state;
     }
 
     /**
@@ -396,10 +396,10 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="subnet")
-      private final @Nullable Input<String> subnet;
+      private final @Nullable Output<String> subnet;
 
-    public Input<String> getSubnet() {
-        return this.subnet == null ? Input.empty() : this.subnet;
+    public Output<String> getSubnet() {
+        return this.subnet == null ? Output.empty() : this.subnet;
     }
 
     /**
@@ -407,10 +407,10 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<List<String>> tags;
+      private final @Nullable Output<List<String>> tags;
 
-    public Input<List<String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<List<String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -418,10 +418,10 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="updateTime")
-      private final @Nullable Input<String> updateTime;
+      private final @Nullable Output<String> updateTime;
 
-    public Input<String> getUpdateTime() {
-        return this.updateTime == null ? Input.empty() : this.updateTime;
+    public Output<String> getUpdateTime() {
+        return this.updateTime == null ? Output.empty() : this.updateTime;
     }
 
     /**
@@ -430,47 +430,47 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="vmImage")
-      private final @Nullable Input<InstanceVmImageGetArgs> vmImage;
+      private final @Nullable Output<InstanceVmImageGetArgs> vmImage;
 
-    public Input<InstanceVmImageGetArgs> getVmImage() {
-        return this.vmImage == null ? Input.empty() : this.vmImage;
+    public Output<InstanceVmImageGetArgs> getVmImage() {
+        return this.vmImage == null ? Output.empty() : this.vmImage;
     }
 
     public InstanceState(
-        @Nullable Input<InstanceAcceleratorConfigGetArgs> acceleratorConfig,
-        @Nullable Input<Integer> bootDiskSizeGb,
-        @Nullable Input<String> bootDiskType,
-        @Nullable Input<InstanceContainerImageGetArgs> containerImage,
-        @Nullable Input<String> createTime,
-        @Nullable Input<String> customGpuDriverPath,
-        @Nullable Input<Integer> dataDiskSizeGb,
-        @Nullable Input<String> dataDiskType,
-        @Nullable Input<String> diskEncryption,
-        @Nullable Input<Boolean> installGpuDriver,
-        @Nullable Input<List<String>> instanceOwners,
-        @Nullable Input<String> kmsKey,
-        @Nullable Input<Map<String,String>> labels,
-        @Nullable Input<String> location,
-        @Nullable Input<String> machineType,
-        @Nullable Input<Map<String,String>> metadata,
-        @Nullable Input<String> name,
-        @Nullable Input<String> network,
-        @Nullable Input<String> nicType,
-        @Nullable Input<Boolean> noProxyAccess,
-        @Nullable Input<Boolean> noPublicIp,
-        @Nullable Input<Boolean> noRemoveDataDisk,
-        @Nullable Input<String> postStartupScript,
-        @Nullable Input<String> project,
-        @Nullable Input<String> proxyUri,
-        @Nullable Input<InstanceReservationAffinityGetArgs> reservationAffinity,
-        @Nullable Input<String> serviceAccount,
-        @Nullable Input<List<String>> serviceAccountScopes,
-        @Nullable Input<InstanceShieldedInstanceConfigGetArgs> shieldedInstanceConfig,
-        @Nullable Input<String> state,
-        @Nullable Input<String> subnet,
-        @Nullable Input<List<String>> tags,
-        @Nullable Input<String> updateTime,
-        @Nullable Input<InstanceVmImageGetArgs> vmImage) {
+        @Nullable Output<InstanceAcceleratorConfigGetArgs> acceleratorConfig,
+        @Nullable Output<Integer> bootDiskSizeGb,
+        @Nullable Output<String> bootDiskType,
+        @Nullable Output<InstanceContainerImageGetArgs> containerImage,
+        @Nullable Output<String> createTime,
+        @Nullable Output<String> customGpuDriverPath,
+        @Nullable Output<Integer> dataDiskSizeGb,
+        @Nullable Output<String> dataDiskType,
+        @Nullable Output<String> diskEncryption,
+        @Nullable Output<Boolean> installGpuDriver,
+        @Nullable Output<List<String>> instanceOwners,
+        @Nullable Output<String> kmsKey,
+        @Nullable Output<Map<String,String>> labels,
+        @Nullable Output<String> location,
+        @Nullable Output<String> machineType,
+        @Nullable Output<Map<String,String>> metadata,
+        @Nullable Output<String> name,
+        @Nullable Output<String> network,
+        @Nullable Output<String> nicType,
+        @Nullable Output<Boolean> noProxyAccess,
+        @Nullable Output<Boolean> noPublicIp,
+        @Nullable Output<Boolean> noRemoveDataDisk,
+        @Nullable Output<String> postStartupScript,
+        @Nullable Output<String> project,
+        @Nullable Output<String> proxyUri,
+        @Nullable Output<InstanceReservationAffinityGetArgs> reservationAffinity,
+        @Nullable Output<String> serviceAccount,
+        @Nullable Output<List<String>> serviceAccountScopes,
+        @Nullable Output<InstanceShieldedInstanceConfigGetArgs> shieldedInstanceConfig,
+        @Nullable Output<String> state,
+        @Nullable Output<String> subnet,
+        @Nullable Output<List<String>> tags,
+        @Nullable Output<String> updateTime,
+        @Nullable Output<InstanceVmImageGetArgs> vmImage) {
         this.acceleratorConfig = acceleratorConfig;
         this.bootDiskSizeGb = bootDiskSizeGb;
         this.bootDiskType = bootDiskType;
@@ -508,40 +508,40 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
     }
 
     private InstanceState() {
-        this.acceleratorConfig = Input.empty();
-        this.bootDiskSizeGb = Input.empty();
-        this.bootDiskType = Input.empty();
-        this.containerImage = Input.empty();
-        this.createTime = Input.empty();
-        this.customGpuDriverPath = Input.empty();
-        this.dataDiskSizeGb = Input.empty();
-        this.dataDiskType = Input.empty();
-        this.diskEncryption = Input.empty();
-        this.installGpuDriver = Input.empty();
-        this.instanceOwners = Input.empty();
-        this.kmsKey = Input.empty();
-        this.labels = Input.empty();
-        this.location = Input.empty();
-        this.machineType = Input.empty();
-        this.metadata = Input.empty();
-        this.name = Input.empty();
-        this.network = Input.empty();
-        this.nicType = Input.empty();
-        this.noProxyAccess = Input.empty();
-        this.noPublicIp = Input.empty();
-        this.noRemoveDataDisk = Input.empty();
-        this.postStartupScript = Input.empty();
-        this.project = Input.empty();
-        this.proxyUri = Input.empty();
-        this.reservationAffinity = Input.empty();
-        this.serviceAccount = Input.empty();
-        this.serviceAccountScopes = Input.empty();
-        this.shieldedInstanceConfig = Input.empty();
-        this.state = Input.empty();
-        this.subnet = Input.empty();
-        this.tags = Input.empty();
-        this.updateTime = Input.empty();
-        this.vmImage = Input.empty();
+        this.acceleratorConfig = Output.empty();
+        this.bootDiskSizeGb = Output.empty();
+        this.bootDiskType = Output.empty();
+        this.containerImage = Output.empty();
+        this.createTime = Output.empty();
+        this.customGpuDriverPath = Output.empty();
+        this.dataDiskSizeGb = Output.empty();
+        this.dataDiskType = Output.empty();
+        this.diskEncryption = Output.empty();
+        this.installGpuDriver = Output.empty();
+        this.instanceOwners = Output.empty();
+        this.kmsKey = Output.empty();
+        this.labels = Output.empty();
+        this.location = Output.empty();
+        this.machineType = Output.empty();
+        this.metadata = Output.empty();
+        this.name = Output.empty();
+        this.network = Output.empty();
+        this.nicType = Output.empty();
+        this.noProxyAccess = Output.empty();
+        this.noPublicIp = Output.empty();
+        this.noRemoveDataDisk = Output.empty();
+        this.postStartupScript = Output.empty();
+        this.project = Output.empty();
+        this.proxyUri = Output.empty();
+        this.reservationAffinity = Output.empty();
+        this.serviceAccount = Output.empty();
+        this.serviceAccountScopes = Output.empty();
+        this.shieldedInstanceConfig = Output.empty();
+        this.state = Output.empty();
+        this.subnet = Output.empty();
+        this.tags = Output.empty();
+        this.updateTime = Output.empty();
+        this.vmImage = Output.empty();
     }
 
     public static Builder builder() {
@@ -553,40 +553,40 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<InstanceAcceleratorConfigGetArgs> acceleratorConfig;
-        private @Nullable Input<Integer> bootDiskSizeGb;
-        private @Nullable Input<String> bootDiskType;
-        private @Nullable Input<InstanceContainerImageGetArgs> containerImage;
-        private @Nullable Input<String> createTime;
-        private @Nullable Input<String> customGpuDriverPath;
-        private @Nullable Input<Integer> dataDiskSizeGb;
-        private @Nullable Input<String> dataDiskType;
-        private @Nullable Input<String> diskEncryption;
-        private @Nullable Input<Boolean> installGpuDriver;
-        private @Nullable Input<List<String>> instanceOwners;
-        private @Nullable Input<String> kmsKey;
-        private @Nullable Input<Map<String,String>> labels;
-        private @Nullable Input<String> location;
-        private @Nullable Input<String> machineType;
-        private @Nullable Input<Map<String,String>> metadata;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> network;
-        private @Nullable Input<String> nicType;
-        private @Nullable Input<Boolean> noProxyAccess;
-        private @Nullable Input<Boolean> noPublicIp;
-        private @Nullable Input<Boolean> noRemoveDataDisk;
-        private @Nullable Input<String> postStartupScript;
-        private @Nullable Input<String> project;
-        private @Nullable Input<String> proxyUri;
-        private @Nullable Input<InstanceReservationAffinityGetArgs> reservationAffinity;
-        private @Nullable Input<String> serviceAccount;
-        private @Nullable Input<List<String>> serviceAccountScopes;
-        private @Nullable Input<InstanceShieldedInstanceConfigGetArgs> shieldedInstanceConfig;
-        private @Nullable Input<String> state;
-        private @Nullable Input<String> subnet;
-        private @Nullable Input<List<String>> tags;
-        private @Nullable Input<String> updateTime;
-        private @Nullable Input<InstanceVmImageGetArgs> vmImage;
+        private @Nullable Output<InstanceAcceleratorConfigGetArgs> acceleratorConfig;
+        private @Nullable Output<Integer> bootDiskSizeGb;
+        private @Nullable Output<String> bootDiskType;
+        private @Nullable Output<InstanceContainerImageGetArgs> containerImage;
+        private @Nullable Output<String> createTime;
+        private @Nullable Output<String> customGpuDriverPath;
+        private @Nullable Output<Integer> dataDiskSizeGb;
+        private @Nullable Output<String> dataDiskType;
+        private @Nullable Output<String> diskEncryption;
+        private @Nullable Output<Boolean> installGpuDriver;
+        private @Nullable Output<List<String>> instanceOwners;
+        private @Nullable Output<String> kmsKey;
+        private @Nullable Output<Map<String,String>> labels;
+        private @Nullable Output<String> location;
+        private @Nullable Output<String> machineType;
+        private @Nullable Output<Map<String,String>> metadata;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> network;
+        private @Nullable Output<String> nicType;
+        private @Nullable Output<Boolean> noProxyAccess;
+        private @Nullable Output<Boolean> noPublicIp;
+        private @Nullable Output<Boolean> noRemoveDataDisk;
+        private @Nullable Output<String> postStartupScript;
+        private @Nullable Output<String> project;
+        private @Nullable Output<String> proxyUri;
+        private @Nullable Output<InstanceReservationAffinityGetArgs> reservationAffinity;
+        private @Nullable Output<String> serviceAccount;
+        private @Nullable Output<List<String>> serviceAccountScopes;
+        private @Nullable Output<InstanceShieldedInstanceConfigGetArgs> shieldedInstanceConfig;
+        private @Nullable Output<String> state;
+        private @Nullable Output<String> subnet;
+        private @Nullable Output<List<String>> tags;
+        private @Nullable Output<String> updateTime;
+        private @Nullable Output<InstanceVmImageGetArgs> vmImage;
 
         public Builder() {
     	      // Empty
@@ -630,343 +630,343 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
     	      this.vmImage = defaults.vmImage;
         }
 
-        public Builder acceleratorConfig(@Nullable Input<InstanceAcceleratorConfigGetArgs> acceleratorConfig) {
+        public Builder acceleratorConfig(@Nullable Output<InstanceAcceleratorConfigGetArgs> acceleratorConfig) {
             this.acceleratorConfig = acceleratorConfig;
             return this;
         }
 
         public Builder acceleratorConfig(@Nullable InstanceAcceleratorConfigGetArgs acceleratorConfig) {
-            this.acceleratorConfig = Input.ofNullable(acceleratorConfig);
+            this.acceleratorConfig = Output.ofNullable(acceleratorConfig);
             return this;
         }
 
-        public Builder bootDiskSizeGb(@Nullable Input<Integer> bootDiskSizeGb) {
+        public Builder bootDiskSizeGb(@Nullable Output<Integer> bootDiskSizeGb) {
             this.bootDiskSizeGb = bootDiskSizeGb;
             return this;
         }
 
         public Builder bootDiskSizeGb(@Nullable Integer bootDiskSizeGb) {
-            this.bootDiskSizeGb = Input.ofNullable(bootDiskSizeGb);
+            this.bootDiskSizeGb = Output.ofNullable(bootDiskSizeGb);
             return this;
         }
 
-        public Builder bootDiskType(@Nullable Input<String> bootDiskType) {
+        public Builder bootDiskType(@Nullable Output<String> bootDiskType) {
             this.bootDiskType = bootDiskType;
             return this;
         }
 
         public Builder bootDiskType(@Nullable String bootDiskType) {
-            this.bootDiskType = Input.ofNullable(bootDiskType);
+            this.bootDiskType = Output.ofNullable(bootDiskType);
             return this;
         }
 
-        public Builder containerImage(@Nullable Input<InstanceContainerImageGetArgs> containerImage) {
+        public Builder containerImage(@Nullable Output<InstanceContainerImageGetArgs> containerImage) {
             this.containerImage = containerImage;
             return this;
         }
 
         public Builder containerImage(@Nullable InstanceContainerImageGetArgs containerImage) {
-            this.containerImage = Input.ofNullable(containerImage);
+            this.containerImage = Output.ofNullable(containerImage);
             return this;
         }
 
-        public Builder createTime(@Nullable Input<String> createTime) {
+        public Builder createTime(@Nullable Output<String> createTime) {
             this.createTime = createTime;
             return this;
         }
 
         public Builder createTime(@Nullable String createTime) {
-            this.createTime = Input.ofNullable(createTime);
+            this.createTime = Output.ofNullable(createTime);
             return this;
         }
 
-        public Builder customGpuDriverPath(@Nullable Input<String> customGpuDriverPath) {
+        public Builder customGpuDriverPath(@Nullable Output<String> customGpuDriverPath) {
             this.customGpuDriverPath = customGpuDriverPath;
             return this;
         }
 
         public Builder customGpuDriverPath(@Nullable String customGpuDriverPath) {
-            this.customGpuDriverPath = Input.ofNullable(customGpuDriverPath);
+            this.customGpuDriverPath = Output.ofNullable(customGpuDriverPath);
             return this;
         }
 
-        public Builder dataDiskSizeGb(@Nullable Input<Integer> dataDiskSizeGb) {
+        public Builder dataDiskSizeGb(@Nullable Output<Integer> dataDiskSizeGb) {
             this.dataDiskSizeGb = dataDiskSizeGb;
             return this;
         }
 
         public Builder dataDiskSizeGb(@Nullable Integer dataDiskSizeGb) {
-            this.dataDiskSizeGb = Input.ofNullable(dataDiskSizeGb);
+            this.dataDiskSizeGb = Output.ofNullable(dataDiskSizeGb);
             return this;
         }
 
-        public Builder dataDiskType(@Nullable Input<String> dataDiskType) {
+        public Builder dataDiskType(@Nullable Output<String> dataDiskType) {
             this.dataDiskType = dataDiskType;
             return this;
         }
 
         public Builder dataDiskType(@Nullable String dataDiskType) {
-            this.dataDiskType = Input.ofNullable(dataDiskType);
+            this.dataDiskType = Output.ofNullable(dataDiskType);
             return this;
         }
 
-        public Builder diskEncryption(@Nullable Input<String> diskEncryption) {
+        public Builder diskEncryption(@Nullable Output<String> diskEncryption) {
             this.diskEncryption = diskEncryption;
             return this;
         }
 
         public Builder diskEncryption(@Nullable String diskEncryption) {
-            this.diskEncryption = Input.ofNullable(diskEncryption);
+            this.diskEncryption = Output.ofNullable(diskEncryption);
             return this;
         }
 
-        public Builder installGpuDriver(@Nullable Input<Boolean> installGpuDriver) {
+        public Builder installGpuDriver(@Nullable Output<Boolean> installGpuDriver) {
             this.installGpuDriver = installGpuDriver;
             return this;
         }
 
         public Builder installGpuDriver(@Nullable Boolean installGpuDriver) {
-            this.installGpuDriver = Input.ofNullable(installGpuDriver);
+            this.installGpuDriver = Output.ofNullable(installGpuDriver);
             return this;
         }
 
-        public Builder instanceOwners(@Nullable Input<List<String>> instanceOwners) {
+        public Builder instanceOwners(@Nullable Output<List<String>> instanceOwners) {
             this.instanceOwners = instanceOwners;
             return this;
         }
 
         public Builder instanceOwners(@Nullable List<String> instanceOwners) {
-            this.instanceOwners = Input.ofNullable(instanceOwners);
+            this.instanceOwners = Output.ofNullable(instanceOwners);
             return this;
         }
 
-        public Builder kmsKey(@Nullable Input<String> kmsKey) {
+        public Builder kmsKey(@Nullable Output<String> kmsKey) {
             this.kmsKey = kmsKey;
             return this;
         }
 
         public Builder kmsKey(@Nullable String kmsKey) {
-            this.kmsKey = Input.ofNullable(kmsKey);
+            this.kmsKey = Output.ofNullable(kmsKey);
             return this;
         }
 
-        public Builder labels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
         public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Input.ofNullable(labels);
+            this.labels = Output.ofNullable(labels);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder machineType(@Nullable Input<String> machineType) {
+        public Builder machineType(@Nullable Output<String> machineType) {
             this.machineType = machineType;
             return this;
         }
 
         public Builder machineType(@Nullable String machineType) {
-            this.machineType = Input.ofNullable(machineType);
+            this.machineType = Output.ofNullable(machineType);
             return this;
         }
 
-        public Builder metadata(@Nullable Input<Map<String,String>> metadata) {
+        public Builder metadata(@Nullable Output<Map<String,String>> metadata) {
             this.metadata = metadata;
             return this;
         }
 
         public Builder metadata(@Nullable Map<String,String> metadata) {
-            this.metadata = Input.ofNullable(metadata);
+            this.metadata = Output.ofNullable(metadata);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder network(@Nullable Input<String> network) {
+        public Builder network(@Nullable Output<String> network) {
             this.network = network;
             return this;
         }
 
         public Builder network(@Nullable String network) {
-            this.network = Input.ofNullable(network);
+            this.network = Output.ofNullable(network);
             return this;
         }
 
-        public Builder nicType(@Nullable Input<String> nicType) {
+        public Builder nicType(@Nullable Output<String> nicType) {
             this.nicType = nicType;
             return this;
         }
 
         public Builder nicType(@Nullable String nicType) {
-            this.nicType = Input.ofNullable(nicType);
+            this.nicType = Output.ofNullable(nicType);
             return this;
         }
 
-        public Builder noProxyAccess(@Nullable Input<Boolean> noProxyAccess) {
+        public Builder noProxyAccess(@Nullable Output<Boolean> noProxyAccess) {
             this.noProxyAccess = noProxyAccess;
             return this;
         }
 
         public Builder noProxyAccess(@Nullable Boolean noProxyAccess) {
-            this.noProxyAccess = Input.ofNullable(noProxyAccess);
+            this.noProxyAccess = Output.ofNullable(noProxyAccess);
             return this;
         }
 
-        public Builder noPublicIp(@Nullable Input<Boolean> noPublicIp) {
+        public Builder noPublicIp(@Nullable Output<Boolean> noPublicIp) {
             this.noPublicIp = noPublicIp;
             return this;
         }
 
         public Builder noPublicIp(@Nullable Boolean noPublicIp) {
-            this.noPublicIp = Input.ofNullable(noPublicIp);
+            this.noPublicIp = Output.ofNullable(noPublicIp);
             return this;
         }
 
-        public Builder noRemoveDataDisk(@Nullable Input<Boolean> noRemoveDataDisk) {
+        public Builder noRemoveDataDisk(@Nullable Output<Boolean> noRemoveDataDisk) {
             this.noRemoveDataDisk = noRemoveDataDisk;
             return this;
         }
 
         public Builder noRemoveDataDisk(@Nullable Boolean noRemoveDataDisk) {
-            this.noRemoveDataDisk = Input.ofNullable(noRemoveDataDisk);
+            this.noRemoveDataDisk = Output.ofNullable(noRemoveDataDisk);
             return this;
         }
 
-        public Builder postStartupScript(@Nullable Input<String> postStartupScript) {
+        public Builder postStartupScript(@Nullable Output<String> postStartupScript) {
             this.postStartupScript = postStartupScript;
             return this;
         }
 
         public Builder postStartupScript(@Nullable String postStartupScript) {
-            this.postStartupScript = Input.ofNullable(postStartupScript);
+            this.postStartupScript = Output.ofNullable(postStartupScript);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder proxyUri(@Nullable Input<String> proxyUri) {
+        public Builder proxyUri(@Nullable Output<String> proxyUri) {
             this.proxyUri = proxyUri;
             return this;
         }
 
         public Builder proxyUri(@Nullable String proxyUri) {
-            this.proxyUri = Input.ofNullable(proxyUri);
+            this.proxyUri = Output.ofNullable(proxyUri);
             return this;
         }
 
-        public Builder reservationAffinity(@Nullable Input<InstanceReservationAffinityGetArgs> reservationAffinity) {
+        public Builder reservationAffinity(@Nullable Output<InstanceReservationAffinityGetArgs> reservationAffinity) {
             this.reservationAffinity = reservationAffinity;
             return this;
         }
 
         public Builder reservationAffinity(@Nullable InstanceReservationAffinityGetArgs reservationAffinity) {
-            this.reservationAffinity = Input.ofNullable(reservationAffinity);
+            this.reservationAffinity = Output.ofNullable(reservationAffinity);
             return this;
         }
 
-        public Builder serviceAccount(@Nullable Input<String> serviceAccount) {
+        public Builder serviceAccount(@Nullable Output<String> serviceAccount) {
             this.serviceAccount = serviceAccount;
             return this;
         }
 
         public Builder serviceAccount(@Nullable String serviceAccount) {
-            this.serviceAccount = Input.ofNullable(serviceAccount);
+            this.serviceAccount = Output.ofNullable(serviceAccount);
             return this;
         }
 
-        public Builder serviceAccountScopes(@Nullable Input<List<String>> serviceAccountScopes) {
+        public Builder serviceAccountScopes(@Nullable Output<List<String>> serviceAccountScopes) {
             this.serviceAccountScopes = serviceAccountScopes;
             return this;
         }
 
         public Builder serviceAccountScopes(@Nullable List<String> serviceAccountScopes) {
-            this.serviceAccountScopes = Input.ofNullable(serviceAccountScopes);
+            this.serviceAccountScopes = Output.ofNullable(serviceAccountScopes);
             return this;
         }
 
-        public Builder shieldedInstanceConfig(@Nullable Input<InstanceShieldedInstanceConfigGetArgs> shieldedInstanceConfig) {
+        public Builder shieldedInstanceConfig(@Nullable Output<InstanceShieldedInstanceConfigGetArgs> shieldedInstanceConfig) {
             this.shieldedInstanceConfig = shieldedInstanceConfig;
             return this;
         }
 
         public Builder shieldedInstanceConfig(@Nullable InstanceShieldedInstanceConfigGetArgs shieldedInstanceConfig) {
-            this.shieldedInstanceConfig = Input.ofNullable(shieldedInstanceConfig);
+            this.shieldedInstanceConfig = Output.ofNullable(shieldedInstanceConfig);
             return this;
         }
 
-        public Builder state(@Nullable Input<String> state) {
+        public Builder state(@Nullable Output<String> state) {
             this.state = state;
             return this;
         }
 
         public Builder state(@Nullable String state) {
-            this.state = Input.ofNullable(state);
+            this.state = Output.ofNullable(state);
             return this;
         }
 
-        public Builder subnet(@Nullable Input<String> subnet) {
+        public Builder subnet(@Nullable Output<String> subnet) {
             this.subnet = subnet;
             return this;
         }
 
         public Builder subnet(@Nullable String subnet) {
-            this.subnet = Input.ofNullable(subnet);
+            this.subnet = Output.ofNullable(subnet);
             return this;
         }
 
-        public Builder tags(@Nullable Input<List<String>> tags) {
+        public Builder tags(@Nullable Output<List<String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable List<String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder updateTime(@Nullable Input<String> updateTime) {
+        public Builder updateTime(@Nullable Output<String> updateTime) {
             this.updateTime = updateTime;
             return this;
         }
 
         public Builder updateTime(@Nullable String updateTime) {
-            this.updateTime = Input.ofNullable(updateTime);
+            this.updateTime = Output.ofNullable(updateTime);
             return this;
         }
 
-        public Builder vmImage(@Nullable Input<InstanceVmImageGetArgs> vmImage) {
+        public Builder vmImage(@Nullable Output<InstanceVmImageGetArgs> vmImage) {
             this.vmImage = vmImage;
             return this;
         }
 
         public Builder vmImage(@Nullable InstanceVmImageGetArgs vmImage) {
-            this.vmImage = Input.ofNullable(vmImage);
+            this.vmImage = Output.ofNullable(vmImage);
             return this;
         }
         public InstanceState build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dataflow_v1b3.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class WorkerSettingsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="baseUrl")
-      private final @Nullable Input<String> baseUrl;
+      private final @Nullable Output<String> baseUrl;
 
-    public Input<String> getBaseUrl() {
-        return this.baseUrl == null ? Input.empty() : this.baseUrl;
+    public Output<String> getBaseUrl() {
+        return this.baseUrl == null ? Output.empty() : this.baseUrl;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class WorkerSettingsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="reportingEnabled")
-      private final @Nullable Input<Boolean> reportingEnabled;
+      private final @Nullable Output<Boolean> reportingEnabled;
 
-    public Input<Boolean> getReportingEnabled() {
-        return this.reportingEnabled == null ? Input.empty() : this.reportingEnabled;
+    public Output<Boolean> getReportingEnabled() {
+        return this.reportingEnabled == null ? Output.empty() : this.reportingEnabled;
     }
 
     /**
@@ -46,10 +46,10 @@ public final class WorkerSettingsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="servicePath")
-      private final @Nullable Input<String> servicePath;
+      private final @Nullable Output<String> servicePath;
 
-    public Input<String> getServicePath() {
-        return this.servicePath == null ? Input.empty() : this.servicePath;
+    public Output<String> getServicePath() {
+        return this.servicePath == null ? Output.empty() : this.servicePath;
     }
 
     /**
@@ -57,10 +57,10 @@ public final class WorkerSettingsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="shuffleServicePath")
-      private final @Nullable Input<String> shuffleServicePath;
+      private final @Nullable Output<String> shuffleServicePath;
 
-    public Input<String> getShuffleServicePath() {
-        return this.shuffleServicePath == null ? Input.empty() : this.shuffleServicePath;
+    public Output<String> getShuffleServicePath() {
+        return this.shuffleServicePath == null ? Output.empty() : this.shuffleServicePath;
     }
 
     /**
@@ -68,10 +68,10 @@ public final class WorkerSettingsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tempStoragePrefix")
-      private final @Nullable Input<String> tempStoragePrefix;
+      private final @Nullable Output<String> tempStoragePrefix;
 
-    public Input<String> getTempStoragePrefix() {
-        return this.tempStoragePrefix == null ? Input.empty() : this.tempStoragePrefix;
+    public Output<String> getTempStoragePrefix() {
+        return this.tempStoragePrefix == null ? Output.empty() : this.tempStoragePrefix;
     }
 
     /**
@@ -79,19 +79,19 @@ public final class WorkerSettingsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="workerId")
-      private final @Nullable Input<String> workerId;
+      private final @Nullable Output<String> workerId;
 
-    public Input<String> getWorkerId() {
-        return this.workerId == null ? Input.empty() : this.workerId;
+    public Output<String> getWorkerId() {
+        return this.workerId == null ? Output.empty() : this.workerId;
     }
 
     public WorkerSettingsArgs(
-        @Nullable Input<String> baseUrl,
-        @Nullable Input<Boolean> reportingEnabled,
-        @Nullable Input<String> servicePath,
-        @Nullable Input<String> shuffleServicePath,
-        @Nullable Input<String> tempStoragePrefix,
-        @Nullable Input<String> workerId) {
+        @Nullable Output<String> baseUrl,
+        @Nullable Output<Boolean> reportingEnabled,
+        @Nullable Output<String> servicePath,
+        @Nullable Output<String> shuffleServicePath,
+        @Nullable Output<String> tempStoragePrefix,
+        @Nullable Output<String> workerId) {
         this.baseUrl = baseUrl;
         this.reportingEnabled = reportingEnabled;
         this.servicePath = servicePath;
@@ -101,12 +101,12 @@ public final class WorkerSettingsArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private WorkerSettingsArgs() {
-        this.baseUrl = Input.empty();
-        this.reportingEnabled = Input.empty();
-        this.servicePath = Input.empty();
-        this.shuffleServicePath = Input.empty();
-        this.tempStoragePrefix = Input.empty();
-        this.workerId = Input.empty();
+        this.baseUrl = Output.empty();
+        this.reportingEnabled = Output.empty();
+        this.servicePath = Output.empty();
+        this.shuffleServicePath = Output.empty();
+        this.tempStoragePrefix = Output.empty();
+        this.workerId = Output.empty();
     }
 
     public static Builder builder() {
@@ -118,12 +118,12 @@ public final class WorkerSettingsArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> baseUrl;
-        private @Nullable Input<Boolean> reportingEnabled;
-        private @Nullable Input<String> servicePath;
-        private @Nullable Input<String> shuffleServicePath;
-        private @Nullable Input<String> tempStoragePrefix;
-        private @Nullable Input<String> workerId;
+        private @Nullable Output<String> baseUrl;
+        private @Nullable Output<Boolean> reportingEnabled;
+        private @Nullable Output<String> servicePath;
+        private @Nullable Output<String> shuffleServicePath;
+        private @Nullable Output<String> tempStoragePrefix;
+        private @Nullable Output<String> workerId;
 
         public Builder() {
     	      // Empty
@@ -139,63 +139,63 @@ public final class WorkerSettingsArgs extends io.pulumi.resources.ResourceArgs {
     	      this.workerId = defaults.workerId;
         }
 
-        public Builder baseUrl(@Nullable Input<String> baseUrl) {
+        public Builder baseUrl(@Nullable Output<String> baseUrl) {
             this.baseUrl = baseUrl;
             return this;
         }
 
         public Builder baseUrl(@Nullable String baseUrl) {
-            this.baseUrl = Input.ofNullable(baseUrl);
+            this.baseUrl = Output.ofNullable(baseUrl);
             return this;
         }
 
-        public Builder reportingEnabled(@Nullable Input<Boolean> reportingEnabled) {
+        public Builder reportingEnabled(@Nullable Output<Boolean> reportingEnabled) {
             this.reportingEnabled = reportingEnabled;
             return this;
         }
 
         public Builder reportingEnabled(@Nullable Boolean reportingEnabled) {
-            this.reportingEnabled = Input.ofNullable(reportingEnabled);
+            this.reportingEnabled = Output.ofNullable(reportingEnabled);
             return this;
         }
 
-        public Builder servicePath(@Nullable Input<String> servicePath) {
+        public Builder servicePath(@Nullable Output<String> servicePath) {
             this.servicePath = servicePath;
             return this;
         }
 
         public Builder servicePath(@Nullable String servicePath) {
-            this.servicePath = Input.ofNullable(servicePath);
+            this.servicePath = Output.ofNullable(servicePath);
             return this;
         }
 
-        public Builder shuffleServicePath(@Nullable Input<String> shuffleServicePath) {
+        public Builder shuffleServicePath(@Nullable Output<String> shuffleServicePath) {
             this.shuffleServicePath = shuffleServicePath;
             return this;
         }
 
         public Builder shuffleServicePath(@Nullable String shuffleServicePath) {
-            this.shuffleServicePath = Input.ofNullable(shuffleServicePath);
+            this.shuffleServicePath = Output.ofNullable(shuffleServicePath);
             return this;
         }
 
-        public Builder tempStoragePrefix(@Nullable Input<String> tempStoragePrefix) {
+        public Builder tempStoragePrefix(@Nullable Output<String> tempStoragePrefix) {
             this.tempStoragePrefix = tempStoragePrefix;
             return this;
         }
 
         public Builder tempStoragePrefix(@Nullable String tempStoragePrefix) {
-            this.tempStoragePrefix = Input.ofNullable(tempStoragePrefix);
+            this.tempStoragePrefix = Output.ofNullable(tempStoragePrefix);
             return this;
         }
 
-        public Builder workerId(@Nullable Input<String> workerId) {
+        public Builder workerId(@Nullable Output<String> workerId) {
             this.workerId = workerId;
             return this;
         }
 
         public Builder workerId(@Nullable String workerId) {
-            this.workerId = Input.ofNullable(workerId);
+            this.workerId = Output.ofNullable(workerId);
             return this;
         }
         public WorkerSettingsArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.recaptcha.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -21,10 +21,10 @@ public final class EnterpriseKeyWebSettingsArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="allowAllDomains")
-      private final @Nullable Input<Boolean> allowAllDomains;
+      private final @Nullable Output<Boolean> allowAllDomains;
 
-    public Input<Boolean> getAllowAllDomains() {
-        return this.allowAllDomains == null ? Input.empty() : this.allowAllDomains;
+    public Output<Boolean> getAllowAllDomains() {
+        return this.allowAllDomains == null ? Output.empty() : this.allowAllDomains;
     }
 
     /**
@@ -32,10 +32,10 @@ public final class EnterpriseKeyWebSettingsArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="allowAmpTraffic")
-      private final @Nullable Input<Boolean> allowAmpTraffic;
+      private final @Nullable Output<Boolean> allowAmpTraffic;
 
-    public Input<Boolean> getAllowAmpTraffic() {
-        return this.allowAmpTraffic == null ? Input.empty() : this.allowAmpTraffic;
+    public Output<Boolean> getAllowAmpTraffic() {
+        return this.allowAmpTraffic == null ? Output.empty() : this.allowAmpTraffic;
     }
 
     /**
@@ -43,10 +43,10 @@ public final class EnterpriseKeyWebSettingsArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="allowedDomains")
-      private final @Nullable Input<List<String>> allowedDomains;
+      private final @Nullable Output<List<String>> allowedDomains;
 
-    public Input<List<String>> getAllowedDomains() {
-        return this.allowedDomains == null ? Input.empty() : this.allowedDomains;
+    public Output<List<String>> getAllowedDomains() {
+        return this.allowedDomains == null ? Output.empty() : this.allowedDomains;
     }
 
     /**
@@ -54,10 +54,10 @@ public final class EnterpriseKeyWebSettingsArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="challengeSecurityPreference")
-      private final @Nullable Input<String> challengeSecurityPreference;
+      private final @Nullable Output<String> challengeSecurityPreference;
 
-    public Input<String> getChallengeSecurityPreference() {
-        return this.challengeSecurityPreference == null ? Input.empty() : this.challengeSecurityPreference;
+    public Output<String> getChallengeSecurityPreference() {
+        return this.challengeSecurityPreference == null ? Output.empty() : this.challengeSecurityPreference;
     }
 
     /**
@@ -65,18 +65,18 @@ public final class EnterpriseKeyWebSettingsArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="integrationType", required=true)
-      private final Input<String> integrationType;
+      private final Output<String> integrationType;
 
-    public Input<String> getIntegrationType() {
+    public Output<String> getIntegrationType() {
         return this.integrationType;
     }
 
     public EnterpriseKeyWebSettingsArgs(
-        @Nullable Input<Boolean> allowAllDomains,
-        @Nullable Input<Boolean> allowAmpTraffic,
-        @Nullable Input<List<String>> allowedDomains,
-        @Nullable Input<String> challengeSecurityPreference,
-        Input<String> integrationType) {
+        @Nullable Output<Boolean> allowAllDomains,
+        @Nullable Output<Boolean> allowAmpTraffic,
+        @Nullable Output<List<String>> allowedDomains,
+        @Nullable Output<String> challengeSecurityPreference,
+        Output<String> integrationType) {
         this.allowAllDomains = allowAllDomains;
         this.allowAmpTraffic = allowAmpTraffic;
         this.allowedDomains = allowedDomains;
@@ -85,11 +85,11 @@ public final class EnterpriseKeyWebSettingsArgs extends io.pulumi.resources.Reso
     }
 
     private EnterpriseKeyWebSettingsArgs() {
-        this.allowAllDomains = Input.empty();
-        this.allowAmpTraffic = Input.empty();
-        this.allowedDomains = Input.empty();
-        this.challengeSecurityPreference = Input.empty();
-        this.integrationType = Input.empty();
+        this.allowAllDomains = Output.empty();
+        this.allowAmpTraffic = Output.empty();
+        this.allowedDomains = Output.empty();
+        this.challengeSecurityPreference = Output.empty();
+        this.integrationType = Output.empty();
     }
 
     public static Builder builder() {
@@ -101,11 +101,11 @@ public final class EnterpriseKeyWebSettingsArgs extends io.pulumi.resources.Reso
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> allowAllDomains;
-        private @Nullable Input<Boolean> allowAmpTraffic;
-        private @Nullable Input<List<String>> allowedDomains;
-        private @Nullable Input<String> challengeSecurityPreference;
-        private Input<String> integrationType;
+        private @Nullable Output<Boolean> allowAllDomains;
+        private @Nullable Output<Boolean> allowAmpTraffic;
+        private @Nullable Output<List<String>> allowedDomains;
+        private @Nullable Output<String> challengeSecurityPreference;
+        private Output<String> integrationType;
 
         public Builder() {
     	      // Empty
@@ -120,53 +120,53 @@ public final class EnterpriseKeyWebSettingsArgs extends io.pulumi.resources.Reso
     	      this.integrationType = defaults.integrationType;
         }
 
-        public Builder allowAllDomains(@Nullable Input<Boolean> allowAllDomains) {
+        public Builder allowAllDomains(@Nullable Output<Boolean> allowAllDomains) {
             this.allowAllDomains = allowAllDomains;
             return this;
         }
 
         public Builder allowAllDomains(@Nullable Boolean allowAllDomains) {
-            this.allowAllDomains = Input.ofNullable(allowAllDomains);
+            this.allowAllDomains = Output.ofNullable(allowAllDomains);
             return this;
         }
 
-        public Builder allowAmpTraffic(@Nullable Input<Boolean> allowAmpTraffic) {
+        public Builder allowAmpTraffic(@Nullable Output<Boolean> allowAmpTraffic) {
             this.allowAmpTraffic = allowAmpTraffic;
             return this;
         }
 
         public Builder allowAmpTraffic(@Nullable Boolean allowAmpTraffic) {
-            this.allowAmpTraffic = Input.ofNullable(allowAmpTraffic);
+            this.allowAmpTraffic = Output.ofNullable(allowAmpTraffic);
             return this;
         }
 
-        public Builder allowedDomains(@Nullable Input<List<String>> allowedDomains) {
+        public Builder allowedDomains(@Nullable Output<List<String>> allowedDomains) {
             this.allowedDomains = allowedDomains;
             return this;
         }
 
         public Builder allowedDomains(@Nullable List<String> allowedDomains) {
-            this.allowedDomains = Input.ofNullable(allowedDomains);
+            this.allowedDomains = Output.ofNullable(allowedDomains);
             return this;
         }
 
-        public Builder challengeSecurityPreference(@Nullable Input<String> challengeSecurityPreference) {
+        public Builder challengeSecurityPreference(@Nullable Output<String> challengeSecurityPreference) {
             this.challengeSecurityPreference = challengeSecurityPreference;
             return this;
         }
 
         public Builder challengeSecurityPreference(@Nullable String challengeSecurityPreference) {
-            this.challengeSecurityPreference = Input.ofNullable(challengeSecurityPreference);
+            this.challengeSecurityPreference = Output.ofNullable(challengeSecurityPreference);
             return this;
         }
 
-        public Builder integrationType(Input<String> integrationType) {
+        public Builder integrationType(Output<String> integrationType) {
             this.integrationType = Objects.requireNonNull(integrationType);
             return this;
         }
 
         public Builder integrationType(String integrationType) {
-            this.integrationType = Input.of(Objects.requireNonNull(integrationType));
+            this.integrationType = Output.of(Objects.requireNonNull(integrationType));
             return this;
         }
         public EnterpriseKeyWebSettingsArgs build() {

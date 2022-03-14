@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.firebaserules_v1;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.firebaserules_v1.inputs.SourceArgs;
 import java.lang.String;
@@ -16,10 +16,10 @@ public final class RulesetArgs extends io.pulumi.resources.ResourceArgs {
     public static final RulesetArgs Empty = new RulesetArgs();
 
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -27,22 +27,22 @@ public final class RulesetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="source", required=true)
-      private final Input<SourceArgs> source;
+      private final Output<SourceArgs> source;
 
-    public Input<SourceArgs> getSource() {
+    public Output<SourceArgs> getSource() {
         return this.source;
     }
 
     public RulesetArgs(
-        @Nullable Input<String> project,
-        Input<SourceArgs> source) {
+        @Nullable Output<String> project,
+        Output<SourceArgs> source) {
         this.project = project;
         this.source = Objects.requireNonNull(source, "expected parameter 'source' to be non-null");
     }
 
     private RulesetArgs() {
-        this.project = Input.empty();
-        this.source = Input.empty();
+        this.project = Output.empty();
+        this.source = Output.empty();
     }
 
     public static Builder builder() {
@@ -54,8 +54,8 @@ public final class RulesetArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> project;
-        private Input<SourceArgs> source;
+        private @Nullable Output<String> project;
+        private Output<SourceArgs> source;
 
         public Builder() {
     	      // Empty
@@ -67,23 +67,23 @@ public final class RulesetArgs extends io.pulumi.resources.ResourceArgs {
     	      this.source = defaults.source;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder source(Input<SourceArgs> source) {
+        public Builder source(Output<SourceArgs> source) {
             this.source = Objects.requireNonNull(source);
             return this;
         }
 
         public Builder source(SourceArgs source) {
-            this.source = Input.of(Objects.requireNonNull(source));
+            this.source = Output.of(Objects.requireNonNull(source));
             return this;
         }
         public RulesetArgs build() {

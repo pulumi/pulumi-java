@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.osconfig_v1beta.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -22,18 +22,18 @@ public final class OneTimeScheduleArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="executeTime", required=true)
-      private final Input<String> executeTime;
+      private final Output<String> executeTime;
 
-    public Input<String> getExecuteTime() {
+    public Output<String> getExecuteTime() {
         return this.executeTime;
     }
 
-    public OneTimeScheduleArgs(Input<String> executeTime) {
+    public OneTimeScheduleArgs(Output<String> executeTime) {
         this.executeTime = Objects.requireNonNull(executeTime, "expected parameter 'executeTime' to be non-null");
     }
 
     private OneTimeScheduleArgs() {
-        this.executeTime = Input.empty();
+        this.executeTime = Output.empty();
     }
 
     public static Builder builder() {
@@ -45,7 +45,7 @@ public final class OneTimeScheduleArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private Input<String> executeTime;
+        private Output<String> executeTime;
 
         public Builder() {
     	      // Empty
@@ -56,13 +56,13 @@ public final class OneTimeScheduleArgs extends io.pulumi.resources.ResourceArgs 
     	      this.executeTime = defaults.executeTime;
         }
 
-        public Builder executeTime(Input<String> executeTime) {
+        public Builder executeTime(Output<String> executeTime) {
             this.executeTime = Objects.requireNonNull(executeTime);
             return this;
         }
 
         public Builder executeTime(String executeTime) {
-            this.executeTime = Input.of(Objects.requireNonNull(executeTime));
+            this.executeTime = Output.of(Objects.requireNonNull(executeTime));
             return this;
         }
         public OneTimeScheduleArgs build() {

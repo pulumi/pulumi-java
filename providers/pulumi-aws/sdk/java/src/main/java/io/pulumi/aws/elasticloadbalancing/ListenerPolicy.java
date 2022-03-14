@@ -6,7 +6,6 @@ package io.pulumi.aws.elasticloadbalancing;
 import io.pulumi.aws.Utilities;
 import io.pulumi.aws.elasticloadbalancing.ListenerPolicyArgs;
 import io.pulumi.aws.elasticloadbalancing.inputs.ListenerPolicyState;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -108,14 +107,14 @@ public class ListenerPolicy extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ListenerPolicy(String name, ListenerPolicyArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:elasticloadbalancing/listenerPolicy:ListenerPolicy", name, args == null ? ListenerPolicyArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws:elasticloadbalancing/listenerPolicy:ListenerPolicy", name, args == null ? ListenerPolicyArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private ListenerPolicy(String name, Input<String> id, @Nullable ListenerPolicyState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private ListenerPolicy(String name, Output<String> id, @Nullable ListenerPolicyState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws:elasticloadbalancing/listenerPolicy:ListenerPolicy", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -131,7 +130,7 @@ public class ListenerPolicy extends io.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static ListenerPolicy get(String name, Input<String> id, @Nullable ListenerPolicyState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static ListenerPolicy get(String name, Output<String> id, @Nullable ListenerPolicyState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new ListenerPolicy(name, id, state, options);
     }
 }

@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.iot.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.Integer;
@@ -26,10 +26,10 @@ public final class SecurityProfileMetricValueArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="cidrs")
-      private final @Nullable Input<List<String>> cidrs;
+      private final @Nullable Output<List<String>> cidrs;
 
-    public Input<List<String>> getCidrs() {
-        return this.cidrs == null ? Input.empty() : this.cidrs;
+    public Output<List<String>> getCidrs() {
+        return this.cidrs == null ? Output.empty() : this.cidrs;
     }
 
     /**
@@ -37,10 +37,10 @@ public final class SecurityProfileMetricValueArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="count")
-      private final @Nullable Input<String> count;
+      private final @Nullable Output<String> count;
 
-    public Input<String> getCount() {
-        return this.count == null ? Input.empty() : this.count;
+    public Output<String> getCount() {
+        return this.count == null ? Output.empty() : this.count;
     }
 
     /**
@@ -48,10 +48,10 @@ public final class SecurityProfileMetricValueArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="number")
-      private final @Nullable Input<Double> number;
+      private final @Nullable Output<Double> number;
 
-    public Input<Double> getNumber() {
-        return this.number == null ? Input.empty() : this.number;
+    public Output<Double> getNumber() {
+        return this.number == null ? Output.empty() : this.number;
     }
 
     /**
@@ -59,10 +59,10 @@ public final class SecurityProfileMetricValueArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="numbers")
-      private final @Nullable Input<List<Double>> numbers;
+      private final @Nullable Output<List<Double>> numbers;
 
-    public Input<List<Double>> getNumbers() {
-        return this.numbers == null ? Input.empty() : this.numbers;
+    public Output<List<Double>> getNumbers() {
+        return this.numbers == null ? Output.empty() : this.numbers;
     }
 
     /**
@@ -70,10 +70,10 @@ public final class SecurityProfileMetricValueArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="ports")
-      private final @Nullable Input<List<Integer>> ports;
+      private final @Nullable Output<List<Integer>> ports;
 
-    public Input<List<Integer>> getPorts() {
-        return this.ports == null ? Input.empty() : this.ports;
+    public Output<List<Integer>> getPorts() {
+        return this.ports == null ? Output.empty() : this.ports;
     }
 
     /**
@@ -81,19 +81,19 @@ public final class SecurityProfileMetricValueArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="strings")
-      private final @Nullable Input<List<String>> strings;
+      private final @Nullable Output<List<String>> strings;
 
-    public Input<List<String>> getStrings() {
-        return this.strings == null ? Input.empty() : this.strings;
+    public Output<List<String>> getStrings() {
+        return this.strings == null ? Output.empty() : this.strings;
     }
 
     public SecurityProfileMetricValueArgs(
-        @Nullable Input<List<String>> cidrs,
-        @Nullable Input<String> count,
-        @Nullable Input<Double> number,
-        @Nullable Input<List<Double>> numbers,
-        @Nullable Input<List<Integer>> ports,
-        @Nullable Input<List<String>> strings) {
+        @Nullable Output<List<String>> cidrs,
+        @Nullable Output<String> count,
+        @Nullable Output<Double> number,
+        @Nullable Output<List<Double>> numbers,
+        @Nullable Output<List<Integer>> ports,
+        @Nullable Output<List<String>> strings) {
         this.cidrs = cidrs;
         this.count = count;
         this.number = number;
@@ -103,12 +103,12 @@ public final class SecurityProfileMetricValueArgs extends io.pulumi.resources.Re
     }
 
     private SecurityProfileMetricValueArgs() {
-        this.cidrs = Input.empty();
-        this.count = Input.empty();
-        this.number = Input.empty();
-        this.numbers = Input.empty();
-        this.ports = Input.empty();
-        this.strings = Input.empty();
+        this.cidrs = Output.empty();
+        this.count = Output.empty();
+        this.number = Output.empty();
+        this.numbers = Output.empty();
+        this.ports = Output.empty();
+        this.strings = Output.empty();
     }
 
     public static Builder builder() {
@@ -120,12 +120,12 @@ public final class SecurityProfileMetricValueArgs extends io.pulumi.resources.Re
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> cidrs;
-        private @Nullable Input<String> count;
-        private @Nullable Input<Double> number;
-        private @Nullable Input<List<Double>> numbers;
-        private @Nullable Input<List<Integer>> ports;
-        private @Nullable Input<List<String>> strings;
+        private @Nullable Output<List<String>> cidrs;
+        private @Nullable Output<String> count;
+        private @Nullable Output<Double> number;
+        private @Nullable Output<List<Double>> numbers;
+        private @Nullable Output<List<Integer>> ports;
+        private @Nullable Output<List<String>> strings;
 
         public Builder() {
     	      // Empty
@@ -141,63 +141,63 @@ public final class SecurityProfileMetricValueArgs extends io.pulumi.resources.Re
     	      this.strings = defaults.strings;
         }
 
-        public Builder cidrs(@Nullable Input<List<String>> cidrs) {
+        public Builder cidrs(@Nullable Output<List<String>> cidrs) {
             this.cidrs = cidrs;
             return this;
         }
 
         public Builder cidrs(@Nullable List<String> cidrs) {
-            this.cidrs = Input.ofNullable(cidrs);
+            this.cidrs = Output.ofNullable(cidrs);
             return this;
         }
 
-        public Builder count(@Nullable Input<String> count) {
+        public Builder count(@Nullable Output<String> count) {
             this.count = count;
             return this;
         }
 
         public Builder count(@Nullable String count) {
-            this.count = Input.ofNullable(count);
+            this.count = Output.ofNullable(count);
             return this;
         }
 
-        public Builder number(@Nullable Input<Double> number) {
+        public Builder number(@Nullable Output<Double> number) {
             this.number = number;
             return this;
         }
 
         public Builder number(@Nullable Double number) {
-            this.number = Input.ofNullable(number);
+            this.number = Output.ofNullable(number);
             return this;
         }
 
-        public Builder numbers(@Nullable Input<List<Double>> numbers) {
+        public Builder numbers(@Nullable Output<List<Double>> numbers) {
             this.numbers = numbers;
             return this;
         }
 
         public Builder numbers(@Nullable List<Double> numbers) {
-            this.numbers = Input.ofNullable(numbers);
+            this.numbers = Output.ofNullable(numbers);
             return this;
         }
 
-        public Builder ports(@Nullable Input<List<Integer>> ports) {
+        public Builder ports(@Nullable Output<List<Integer>> ports) {
             this.ports = ports;
             return this;
         }
 
         public Builder ports(@Nullable List<Integer> ports) {
-            this.ports = Input.ofNullable(ports);
+            this.ports = Output.ofNullable(ports);
             return this;
         }
 
-        public Builder strings(@Nullable Input<List<String>> strings) {
+        public Builder strings(@Nullable Output<List<String>> strings) {
             this.strings = strings;
             return this;
         }
 
         public Builder strings(@Nullable List<String> strings) {
-            this.strings = Input.ofNullable(strings);
+            this.strings = Output.ofNullable(strings);
             return this;
         }
         public SecurityProfileMetricValueArgs build() {

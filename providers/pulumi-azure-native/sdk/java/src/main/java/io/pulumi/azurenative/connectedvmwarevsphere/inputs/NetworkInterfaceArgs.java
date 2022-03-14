@@ -7,7 +7,7 @@ import io.pulumi.azurenative.connectedvmwarevsphere.enums.NICType;
 import io.pulumi.azurenative.connectedvmwarevsphere.enums.PowerOnBootOption;
 import io.pulumi.azurenative.connectedvmwarevsphere.inputs.NicIPSettingsArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -28,10 +28,10 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="deviceKey")
-      private final @Nullable Input<Integer> deviceKey;
+      private final @Nullable Output<Integer> deviceKey;
 
-    public Input<Integer> getDeviceKey() {
-        return this.deviceKey == null ? Input.empty() : this.deviceKey;
+    public Output<Integer> getDeviceKey() {
+        return this.deviceKey == null ? Output.empty() : this.deviceKey;
     }
 
     /**
@@ -39,10 +39,10 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="ipSettings")
-      private final @Nullable Input<NicIPSettingsArgs> ipSettings;
+      private final @Nullable Output<NicIPSettingsArgs> ipSettings;
 
-    public Input<NicIPSettingsArgs> getIpSettings() {
-        return this.ipSettings == null ? Input.empty() : this.ipSettings;
+    public Output<NicIPSettingsArgs> getIpSettings() {
+        return this.ipSettings == null ? Output.empty() : this.ipSettings;
     }
 
     /**
@@ -50,10 +50,10 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -61,10 +61,10 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="networkId")
-      private final @Nullable Input<String> networkId;
+      private final @Nullable Output<String> networkId;
 
-    public Input<String> getNetworkId() {
-        return this.networkId == null ? Input.empty() : this.networkId;
+    public Output<String> getNetworkId() {
+        return this.networkId == null ? Output.empty() : this.networkId;
     }
 
     /**
@@ -72,10 +72,10 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="nicType")
-      private final @Nullable Input<Either<String,NICType>> nicType;
+      private final @Nullable Output<Either<String,NICType>> nicType;
 
-    public Input<Either<String,NICType>> getNicType() {
-        return this.nicType == null ? Input.empty() : this.nicType;
+    public Output<Either<String,NICType>> getNicType() {
+        return this.nicType == null ? Output.empty() : this.nicType;
     }
 
     /**
@@ -83,19 +83,19 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="powerOnBoot")
-      private final @Nullable Input<Either<String,PowerOnBootOption>> powerOnBoot;
+      private final @Nullable Output<Either<String,PowerOnBootOption>> powerOnBoot;
 
-    public Input<Either<String,PowerOnBootOption>> getPowerOnBoot() {
-        return this.powerOnBoot == null ? Input.empty() : this.powerOnBoot;
+    public Output<Either<String,PowerOnBootOption>> getPowerOnBoot() {
+        return this.powerOnBoot == null ? Output.empty() : this.powerOnBoot;
     }
 
     public NetworkInterfaceArgs(
-        @Nullable Input<Integer> deviceKey,
-        @Nullable Input<NicIPSettingsArgs> ipSettings,
-        @Nullable Input<String> name,
-        @Nullable Input<String> networkId,
-        @Nullable Input<Either<String,NICType>> nicType,
-        @Nullable Input<Either<String,PowerOnBootOption>> powerOnBoot) {
+        @Nullable Output<Integer> deviceKey,
+        @Nullable Output<NicIPSettingsArgs> ipSettings,
+        @Nullable Output<String> name,
+        @Nullable Output<String> networkId,
+        @Nullable Output<Either<String,NICType>> nicType,
+        @Nullable Output<Either<String,PowerOnBootOption>> powerOnBoot) {
         this.deviceKey = deviceKey;
         this.ipSettings = ipSettings;
         this.name = name;
@@ -105,12 +105,12 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private NetworkInterfaceArgs() {
-        this.deviceKey = Input.empty();
-        this.ipSettings = Input.empty();
-        this.name = Input.empty();
-        this.networkId = Input.empty();
-        this.nicType = Input.empty();
-        this.powerOnBoot = Input.empty();
+        this.deviceKey = Output.empty();
+        this.ipSettings = Output.empty();
+        this.name = Output.empty();
+        this.networkId = Output.empty();
+        this.nicType = Output.empty();
+        this.powerOnBoot = Output.empty();
     }
 
     public static Builder builder() {
@@ -122,12 +122,12 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> deviceKey;
-        private @Nullable Input<NicIPSettingsArgs> ipSettings;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> networkId;
-        private @Nullable Input<Either<String,NICType>> nicType;
-        private @Nullable Input<Either<String,PowerOnBootOption>> powerOnBoot;
+        private @Nullable Output<Integer> deviceKey;
+        private @Nullable Output<NicIPSettingsArgs> ipSettings;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> networkId;
+        private @Nullable Output<Either<String,NICType>> nicType;
+        private @Nullable Output<Either<String,PowerOnBootOption>> powerOnBoot;
 
         public Builder() {
     	      // Empty
@@ -143,63 +143,63 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
     	      this.powerOnBoot = defaults.powerOnBoot;
         }
 
-        public Builder deviceKey(@Nullable Input<Integer> deviceKey) {
+        public Builder deviceKey(@Nullable Output<Integer> deviceKey) {
             this.deviceKey = deviceKey;
             return this;
         }
 
         public Builder deviceKey(@Nullable Integer deviceKey) {
-            this.deviceKey = Input.ofNullable(deviceKey);
+            this.deviceKey = Output.ofNullable(deviceKey);
             return this;
         }
 
-        public Builder ipSettings(@Nullable Input<NicIPSettingsArgs> ipSettings) {
+        public Builder ipSettings(@Nullable Output<NicIPSettingsArgs> ipSettings) {
             this.ipSettings = ipSettings;
             return this;
         }
 
         public Builder ipSettings(@Nullable NicIPSettingsArgs ipSettings) {
-            this.ipSettings = Input.ofNullable(ipSettings);
+            this.ipSettings = Output.ofNullable(ipSettings);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder networkId(@Nullable Input<String> networkId) {
+        public Builder networkId(@Nullable Output<String> networkId) {
             this.networkId = networkId;
             return this;
         }
 
         public Builder networkId(@Nullable String networkId) {
-            this.networkId = Input.ofNullable(networkId);
+            this.networkId = Output.ofNullable(networkId);
             return this;
         }
 
-        public Builder nicType(@Nullable Input<Either<String,NICType>> nicType) {
+        public Builder nicType(@Nullable Output<Either<String,NICType>> nicType) {
             this.nicType = nicType;
             return this;
         }
 
         public Builder nicType(@Nullable Either<String,NICType> nicType) {
-            this.nicType = Input.ofNullable(nicType);
+            this.nicType = Output.ofNullable(nicType);
             return this;
         }
 
-        public Builder powerOnBoot(@Nullable Input<Either<String,PowerOnBootOption>> powerOnBoot) {
+        public Builder powerOnBoot(@Nullable Output<Either<String,PowerOnBootOption>> powerOnBoot) {
             this.powerOnBoot = powerOnBoot;
             return this;
         }
 
         public Builder powerOnBoot(@Nullable Either<String,PowerOnBootOption> powerOnBoot) {
-            this.powerOnBoot = Input.ofNullable(powerOnBoot);
+            this.powerOnBoot = Output.ofNullable(powerOnBoot);
             return this;
         }
         public NetworkInterfaceArgs build() {

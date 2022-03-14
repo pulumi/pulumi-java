@@ -4,7 +4,7 @@
 package io.pulumi.aws.route53recoverycontrol.inputs;
 
 import io.pulumi.aws.route53recoverycontrol.inputs.ClusterClusterEndpointGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -21,10 +21,10 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arn")
-      private final @Nullable Input<String> arn;
+      private final @Nullable Output<String> arn;
 
-    public Input<String> getArn() {
-        return this.arn == null ? Input.empty() : this.arn;
+    public Output<String> getArn() {
+        return this.arn == null ? Output.empty() : this.arn;
     }
 
     /**
@@ -32,10 +32,10 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="clusterEndpoints")
-      private final @Nullable Input<List<ClusterClusterEndpointGetArgs>> clusterEndpoints;
+      private final @Nullable Output<List<ClusterClusterEndpointGetArgs>> clusterEndpoints;
 
-    public Input<List<ClusterClusterEndpointGetArgs>> getClusterEndpoints() {
-        return this.clusterEndpoints == null ? Input.empty() : this.clusterEndpoints;
+    public Output<List<ClusterClusterEndpointGetArgs>> getClusterEndpoints() {
+        return this.clusterEndpoints == null ? Output.empty() : this.clusterEndpoints;
     }
 
     /**
@@ -43,10 +43,10 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -54,17 +54,17 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="status")
-      private final @Nullable Input<String> status;
+      private final @Nullable Output<String> status;
 
-    public Input<String> getStatus() {
-        return this.status == null ? Input.empty() : this.status;
+    public Output<String> getStatus() {
+        return this.status == null ? Output.empty() : this.status;
     }
 
     public ClusterState(
-        @Nullable Input<String> arn,
-        @Nullable Input<List<ClusterClusterEndpointGetArgs>> clusterEndpoints,
-        @Nullable Input<String> name,
-        @Nullable Input<String> status) {
+        @Nullable Output<String> arn,
+        @Nullable Output<List<ClusterClusterEndpointGetArgs>> clusterEndpoints,
+        @Nullable Output<String> name,
+        @Nullable Output<String> status) {
         this.arn = arn;
         this.clusterEndpoints = clusterEndpoints;
         this.name = name;
@@ -72,10 +72,10 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
     }
 
     private ClusterState() {
-        this.arn = Input.empty();
-        this.clusterEndpoints = Input.empty();
-        this.name = Input.empty();
-        this.status = Input.empty();
+        this.arn = Output.empty();
+        this.clusterEndpoints = Output.empty();
+        this.name = Output.empty();
+        this.status = Output.empty();
     }
 
     public static Builder builder() {
@@ -87,10 +87,10 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> arn;
-        private @Nullable Input<List<ClusterClusterEndpointGetArgs>> clusterEndpoints;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> status;
+        private @Nullable Output<String> arn;
+        private @Nullable Output<List<ClusterClusterEndpointGetArgs>> clusterEndpoints;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> status;
 
         public Builder() {
     	      // Empty
@@ -104,43 +104,43 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
     	      this.status = defaults.status;
         }
 
-        public Builder arn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
 
         public Builder arn(@Nullable String arn) {
-            this.arn = Input.ofNullable(arn);
+            this.arn = Output.ofNullable(arn);
             return this;
         }
 
-        public Builder clusterEndpoints(@Nullable Input<List<ClusterClusterEndpointGetArgs>> clusterEndpoints) {
+        public Builder clusterEndpoints(@Nullable Output<List<ClusterClusterEndpointGetArgs>> clusterEndpoints) {
             this.clusterEndpoints = clusterEndpoints;
             return this;
         }
 
         public Builder clusterEndpoints(@Nullable List<ClusterClusterEndpointGetArgs> clusterEndpoints) {
-            this.clusterEndpoints = Input.ofNullable(clusterEndpoints);
+            this.clusterEndpoints = Output.ofNullable(clusterEndpoints);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder status(@Nullable Input<String> status) {
+        public Builder status(@Nullable Output<String> status) {
             this.status = status;
             return this;
         }
 
         public Builder status(@Nullable String status) {
-            this.status = Input.ofNullable(status);
+            this.status = Output.ofNullable(status);
             return this;
         }
         public ClusterState build() {

@@ -7,7 +7,6 @@ import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.authorization.ManagementLockAtResourceLevelArgs;
 import io.pulumi.azurenative.authorization.outputs.ManagementLockOwnerResponse;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -141,20 +140,20 @@ public class ManagementLockAtResourceLevel extends io.pulumi.resources.CustomRes
      * @param options A bag of options that control this resource's behavior.
      */
     public ManagementLockAtResourceLevel(String name, ManagementLockAtResourceLevelArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:authorization:ManagementLockAtResourceLevel", name, args == null ? ManagementLockAtResourceLevelArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("azure-native:authorization:ManagementLockAtResourceLevel", name, args == null ? ManagementLockAtResourceLevelArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private ManagementLockAtResourceLevel(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private ManagementLockAtResourceLevel(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:authorization:ManagementLockAtResourceLevel", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:authorization/v20160901:ManagementLockAtResourceLevel").build()),
-                Input.of(Alias.builder().setType("azure-native:authorization/v20170401:ManagementLockAtResourceLevel").build()),
-                Input.of(Alias.builder().setType("azure-native:authorization/v20200501:ManagementLockAtResourceLevel").build())
+                Output.of(Alias.builder().setType("azure-native:authorization/v20160901:ManagementLockAtResourceLevel").build()),
+                Output.of(Alias.builder().setType("azure-native:authorization/v20170401:ManagementLockAtResourceLevel").build()),
+                Output.of(Alias.builder().setType("azure-native:authorization/v20200501:ManagementLockAtResourceLevel").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -168,7 +167,7 @@ public class ManagementLockAtResourceLevel extends io.pulumi.resources.CustomRes
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static ManagementLockAtResourceLevel get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static ManagementLockAtResourceLevel get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new ManagementLockAtResourceLevel(name, id, options);
     }
 }

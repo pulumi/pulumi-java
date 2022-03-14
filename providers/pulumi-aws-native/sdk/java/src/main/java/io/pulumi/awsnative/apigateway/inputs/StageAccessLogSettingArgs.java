@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.apigateway.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class StageAccessLogSettingArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="destinationArn")
-      private final @Nullable Input<String> destinationArn;
+      private final @Nullable Output<String> destinationArn;
 
-    public Input<String> getDestinationArn() {
-        return this.destinationArn == null ? Input.empty() : this.destinationArn;
+    public Output<String> getDestinationArn() {
+        return this.destinationArn == null ? Output.empty() : this.destinationArn;
     }
 
     /**
@@ -34,22 +34,22 @@ public final class StageAccessLogSettingArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="format")
-      private final @Nullable Input<String> format;
+      private final @Nullable Output<String> format;
 
-    public Input<String> getFormat() {
-        return this.format == null ? Input.empty() : this.format;
+    public Output<String> getFormat() {
+        return this.format == null ? Output.empty() : this.format;
     }
 
     public StageAccessLogSettingArgs(
-        @Nullable Input<String> destinationArn,
-        @Nullable Input<String> format) {
+        @Nullable Output<String> destinationArn,
+        @Nullable Output<String> format) {
         this.destinationArn = destinationArn;
         this.format = format;
     }
 
     private StageAccessLogSettingArgs() {
-        this.destinationArn = Input.empty();
-        this.format = Input.empty();
+        this.destinationArn = Output.empty();
+        this.format = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class StageAccessLogSettingArgs extends io.pulumi.resources.Resourc
     }
 
     public static final class Builder {
-        private @Nullable Input<String> destinationArn;
-        private @Nullable Input<String> format;
+        private @Nullable Output<String> destinationArn;
+        private @Nullable Output<String> format;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class StageAccessLogSettingArgs extends io.pulumi.resources.Resourc
     	      this.format = defaults.format;
         }
 
-        public Builder destinationArn(@Nullable Input<String> destinationArn) {
+        public Builder destinationArn(@Nullable Output<String> destinationArn) {
             this.destinationArn = destinationArn;
             return this;
         }
 
         public Builder destinationArn(@Nullable String destinationArn) {
-            this.destinationArn = Input.ofNullable(destinationArn);
+            this.destinationArn = Output.ofNullable(destinationArn);
             return this;
         }
 
-        public Builder format(@Nullable Input<String> format) {
+        public Builder format(@Nullable Output<String> format) {
             this.format = format;
             return this;
         }
 
         public Builder format(@Nullable String format) {
-            this.format = Input.ofNullable(format);
+            this.format = Output.ofNullable(format);
             return this;
         }
         public StageAccessLogSettingArgs build() {

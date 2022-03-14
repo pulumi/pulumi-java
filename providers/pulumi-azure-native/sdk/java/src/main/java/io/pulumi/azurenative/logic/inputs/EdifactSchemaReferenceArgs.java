@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.logic.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class EdifactSchemaReferenceArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="associationAssignedCode")
-      private final @Nullable Input<String> associationAssignedCode;
+      private final @Nullable Output<String> associationAssignedCode;
 
-    public Input<String> getAssociationAssignedCode() {
-        return this.associationAssignedCode == null ? Input.empty() : this.associationAssignedCode;
+    public Output<String> getAssociationAssignedCode() {
+        return this.associationAssignedCode == null ? Output.empty() : this.associationAssignedCode;
     }
 
     /**
@@ -34,9 +34,9 @@ public final class EdifactSchemaReferenceArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="messageId", required=true)
-      private final Input<String> messageId;
+      private final Output<String> messageId;
 
-    public Input<String> getMessageId() {
+    public Output<String> getMessageId() {
         return this.messageId;
     }
 
@@ -45,9 +45,9 @@ public final class EdifactSchemaReferenceArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="messageRelease", required=true)
-      private final Input<String> messageRelease;
+      private final Output<String> messageRelease;
 
-    public Input<String> getMessageRelease() {
+    public Output<String> getMessageRelease() {
         return this.messageRelease;
     }
 
@@ -56,9 +56,9 @@ public final class EdifactSchemaReferenceArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="messageVersion", required=true)
-      private final Input<String> messageVersion;
+      private final Output<String> messageVersion;
 
-    public Input<String> getMessageVersion() {
+    public Output<String> getMessageVersion() {
         return this.messageVersion;
     }
 
@@ -67,9 +67,9 @@ public final class EdifactSchemaReferenceArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="schemaName", required=true)
-      private final Input<String> schemaName;
+      private final Output<String> schemaName;
 
-    public Input<String> getSchemaName() {
+    public Output<String> getSchemaName() {
         return this.schemaName;
     }
 
@@ -78,10 +78,10 @@ public final class EdifactSchemaReferenceArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="senderApplicationId")
-      private final @Nullable Input<String> senderApplicationId;
+      private final @Nullable Output<String> senderApplicationId;
 
-    public Input<String> getSenderApplicationId() {
-        return this.senderApplicationId == null ? Input.empty() : this.senderApplicationId;
+    public Output<String> getSenderApplicationId() {
+        return this.senderApplicationId == null ? Output.empty() : this.senderApplicationId;
     }
 
     /**
@@ -89,20 +89,20 @@ public final class EdifactSchemaReferenceArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="senderApplicationQualifier")
-      private final @Nullable Input<String> senderApplicationQualifier;
+      private final @Nullable Output<String> senderApplicationQualifier;
 
-    public Input<String> getSenderApplicationQualifier() {
-        return this.senderApplicationQualifier == null ? Input.empty() : this.senderApplicationQualifier;
+    public Output<String> getSenderApplicationQualifier() {
+        return this.senderApplicationQualifier == null ? Output.empty() : this.senderApplicationQualifier;
     }
 
     public EdifactSchemaReferenceArgs(
-        @Nullable Input<String> associationAssignedCode,
-        Input<String> messageId,
-        Input<String> messageRelease,
-        Input<String> messageVersion,
-        Input<String> schemaName,
-        @Nullable Input<String> senderApplicationId,
-        @Nullable Input<String> senderApplicationQualifier) {
+        @Nullable Output<String> associationAssignedCode,
+        Output<String> messageId,
+        Output<String> messageRelease,
+        Output<String> messageVersion,
+        Output<String> schemaName,
+        @Nullable Output<String> senderApplicationId,
+        @Nullable Output<String> senderApplicationQualifier) {
         this.associationAssignedCode = associationAssignedCode;
         this.messageId = Objects.requireNonNull(messageId, "expected parameter 'messageId' to be non-null");
         this.messageRelease = Objects.requireNonNull(messageRelease, "expected parameter 'messageRelease' to be non-null");
@@ -113,13 +113,13 @@ public final class EdifactSchemaReferenceArgs extends io.pulumi.resources.Resour
     }
 
     private EdifactSchemaReferenceArgs() {
-        this.associationAssignedCode = Input.empty();
-        this.messageId = Input.empty();
-        this.messageRelease = Input.empty();
-        this.messageVersion = Input.empty();
-        this.schemaName = Input.empty();
-        this.senderApplicationId = Input.empty();
-        this.senderApplicationQualifier = Input.empty();
+        this.associationAssignedCode = Output.empty();
+        this.messageId = Output.empty();
+        this.messageRelease = Output.empty();
+        this.messageVersion = Output.empty();
+        this.schemaName = Output.empty();
+        this.senderApplicationId = Output.empty();
+        this.senderApplicationQualifier = Output.empty();
     }
 
     public static Builder builder() {
@@ -131,13 +131,13 @@ public final class EdifactSchemaReferenceArgs extends io.pulumi.resources.Resour
     }
 
     public static final class Builder {
-        private @Nullable Input<String> associationAssignedCode;
-        private Input<String> messageId;
-        private Input<String> messageRelease;
-        private Input<String> messageVersion;
-        private Input<String> schemaName;
-        private @Nullable Input<String> senderApplicationId;
-        private @Nullable Input<String> senderApplicationQualifier;
+        private @Nullable Output<String> associationAssignedCode;
+        private Output<String> messageId;
+        private Output<String> messageRelease;
+        private Output<String> messageVersion;
+        private Output<String> schemaName;
+        private @Nullable Output<String> senderApplicationId;
+        private @Nullable Output<String> senderApplicationQualifier;
 
         public Builder() {
     	      // Empty
@@ -154,73 +154,73 @@ public final class EdifactSchemaReferenceArgs extends io.pulumi.resources.Resour
     	      this.senderApplicationQualifier = defaults.senderApplicationQualifier;
         }
 
-        public Builder associationAssignedCode(@Nullable Input<String> associationAssignedCode) {
+        public Builder associationAssignedCode(@Nullable Output<String> associationAssignedCode) {
             this.associationAssignedCode = associationAssignedCode;
             return this;
         }
 
         public Builder associationAssignedCode(@Nullable String associationAssignedCode) {
-            this.associationAssignedCode = Input.ofNullable(associationAssignedCode);
+            this.associationAssignedCode = Output.ofNullable(associationAssignedCode);
             return this;
         }
 
-        public Builder messageId(Input<String> messageId) {
+        public Builder messageId(Output<String> messageId) {
             this.messageId = Objects.requireNonNull(messageId);
             return this;
         }
 
         public Builder messageId(String messageId) {
-            this.messageId = Input.of(Objects.requireNonNull(messageId));
+            this.messageId = Output.of(Objects.requireNonNull(messageId));
             return this;
         }
 
-        public Builder messageRelease(Input<String> messageRelease) {
+        public Builder messageRelease(Output<String> messageRelease) {
             this.messageRelease = Objects.requireNonNull(messageRelease);
             return this;
         }
 
         public Builder messageRelease(String messageRelease) {
-            this.messageRelease = Input.of(Objects.requireNonNull(messageRelease));
+            this.messageRelease = Output.of(Objects.requireNonNull(messageRelease));
             return this;
         }
 
-        public Builder messageVersion(Input<String> messageVersion) {
+        public Builder messageVersion(Output<String> messageVersion) {
             this.messageVersion = Objects.requireNonNull(messageVersion);
             return this;
         }
 
         public Builder messageVersion(String messageVersion) {
-            this.messageVersion = Input.of(Objects.requireNonNull(messageVersion));
+            this.messageVersion = Output.of(Objects.requireNonNull(messageVersion));
             return this;
         }
 
-        public Builder schemaName(Input<String> schemaName) {
+        public Builder schemaName(Output<String> schemaName) {
             this.schemaName = Objects.requireNonNull(schemaName);
             return this;
         }
 
         public Builder schemaName(String schemaName) {
-            this.schemaName = Input.of(Objects.requireNonNull(schemaName));
+            this.schemaName = Output.of(Objects.requireNonNull(schemaName));
             return this;
         }
 
-        public Builder senderApplicationId(@Nullable Input<String> senderApplicationId) {
+        public Builder senderApplicationId(@Nullable Output<String> senderApplicationId) {
             this.senderApplicationId = senderApplicationId;
             return this;
         }
 
         public Builder senderApplicationId(@Nullable String senderApplicationId) {
-            this.senderApplicationId = Input.ofNullable(senderApplicationId);
+            this.senderApplicationId = Output.ofNullable(senderApplicationId);
             return this;
         }
 
-        public Builder senderApplicationQualifier(@Nullable Input<String> senderApplicationQualifier) {
+        public Builder senderApplicationQualifier(@Nullable Output<String> senderApplicationQualifier) {
             this.senderApplicationQualifier = senderApplicationQualifier;
             return this;
         }
 
         public Builder senderApplicationQualifier(@Nullable String senderApplicationQualifier) {
-            this.senderApplicationQualifier = Input.ofNullable(senderApplicationQualifier);
+            this.senderApplicationQualifier = Output.ofNullable(senderApplicationQualifier);
             return this;
         }
         public EdifactSchemaReferenceArgs build() {

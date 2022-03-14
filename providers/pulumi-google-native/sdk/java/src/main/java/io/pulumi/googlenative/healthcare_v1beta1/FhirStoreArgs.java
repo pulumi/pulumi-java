@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.healthcare_v1beta1;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.healthcare_v1beta1.enums.FhirStoreVersion;
 import io.pulumi.googlenative.healthcare_v1beta1.inputs.NotificationConfigArgs;
@@ -23,9 +23,9 @@ public final class FhirStoreArgs extends io.pulumi.resources.ResourceArgs {
     public static final FhirStoreArgs Empty = new FhirStoreArgs();
 
     @InputImport(name="datasetId", required=true)
-      private final Input<String> datasetId;
+      private final Output<String> datasetId;
 
-    public Input<String> getDatasetId() {
+    public Output<String> getDatasetId() {
         return this.datasetId;
     }
 
@@ -34,10 +34,10 @@ public final class FhirStoreArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="defaultSearchHandlingStrict")
-      private final @Nullable Input<Boolean> defaultSearchHandlingStrict;
+      private final @Nullable Output<Boolean> defaultSearchHandlingStrict;
 
-    public Input<Boolean> getDefaultSearchHandlingStrict() {
-        return this.defaultSearchHandlingStrict == null ? Input.empty() : this.defaultSearchHandlingStrict;
+    public Output<Boolean> getDefaultSearchHandlingStrict() {
+        return this.defaultSearchHandlingStrict == null ? Output.empty() : this.defaultSearchHandlingStrict;
     }
 
     /**
@@ -45,10 +45,10 @@ public final class FhirStoreArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="disableReferentialIntegrity")
-      private final @Nullable Input<Boolean> disableReferentialIntegrity;
+      private final @Nullable Output<Boolean> disableReferentialIntegrity;
 
-    public Input<Boolean> getDisableReferentialIntegrity() {
-        return this.disableReferentialIntegrity == null ? Input.empty() : this.disableReferentialIntegrity;
+    public Output<Boolean> getDisableReferentialIntegrity() {
+        return this.disableReferentialIntegrity == null ? Output.empty() : this.disableReferentialIntegrity;
     }
 
     /**
@@ -56,10 +56,10 @@ public final class FhirStoreArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="disableResourceVersioning")
-      private final @Nullable Input<Boolean> disableResourceVersioning;
+      private final @Nullable Output<Boolean> disableResourceVersioning;
 
-    public Input<Boolean> getDisableResourceVersioning() {
-        return this.disableResourceVersioning == null ? Input.empty() : this.disableResourceVersioning;
+    public Output<Boolean> getDisableResourceVersioning() {
+        return this.disableResourceVersioning == null ? Output.empty() : this.disableResourceVersioning;
     }
 
     /**
@@ -67,17 +67,17 @@ public final class FhirStoreArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enableUpdateCreate")
-      private final @Nullable Input<Boolean> enableUpdateCreate;
+      private final @Nullable Output<Boolean> enableUpdateCreate;
 
-    public Input<Boolean> getEnableUpdateCreate() {
-        return this.enableUpdateCreate == null ? Input.empty() : this.enableUpdateCreate;
+    public Output<Boolean> getEnableUpdateCreate() {
+        return this.enableUpdateCreate == null ? Output.empty() : this.enableUpdateCreate;
     }
 
     @InputImport(name="fhirStoreId")
-      private final @Nullable Input<String> fhirStoreId;
+      private final @Nullable Output<String> fhirStoreId;
 
-    public Input<String> getFhirStoreId() {
-        return this.fhirStoreId == null ? Input.empty() : this.fhirStoreId;
+    public Output<String> getFhirStoreId() {
+        return this.fhirStoreId == null ? Output.empty() : this.fhirStoreId;
     }
 
     /**
@@ -85,17 +85,17 @@ public final class FhirStoreArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labels")
-      private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Output<Map<String,String>> labels;
 
-    public Input<Map<String,String>> getLabels() {
-        return this.labels == null ? Input.empty() : this.labels;
+    public Output<Map<String,String>> getLabels() {
+        return this.labels == null ? Output.empty() : this.labels;
     }
 
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -103,17 +103,17 @@ public final class FhirStoreArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="notificationConfig")
-      private final @Nullable Input<NotificationConfigArgs> notificationConfig;
+      private final @Nullable Output<NotificationConfigArgs> notificationConfig;
 
-    public Input<NotificationConfigArgs> getNotificationConfig() {
-        return this.notificationConfig == null ? Input.empty() : this.notificationConfig;
+    public Output<NotificationConfigArgs> getNotificationConfig() {
+        return this.notificationConfig == null ? Output.empty() : this.notificationConfig;
     }
 
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -121,10 +121,10 @@ public final class FhirStoreArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="searchConfig")
-      private final @Nullable Input<SearchConfigArgs> searchConfig;
+      private final @Nullable Output<SearchConfigArgs> searchConfig;
 
-    public Input<SearchConfigArgs> getSearchConfig() {
-        return this.searchConfig == null ? Input.empty() : this.searchConfig;
+    public Output<SearchConfigArgs> getSearchConfig() {
+        return this.searchConfig == null ? Output.empty() : this.searchConfig;
     }
 
     /**
@@ -132,10 +132,10 @@ public final class FhirStoreArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="streamConfigs")
-      private final @Nullable Input<List<StreamConfigArgs>> streamConfigs;
+      private final @Nullable Output<List<StreamConfigArgs>> streamConfigs;
 
-    public Input<List<StreamConfigArgs>> getStreamConfigs() {
-        return this.streamConfigs == null ? Input.empty() : this.streamConfigs;
+    public Output<List<StreamConfigArgs>> getStreamConfigs() {
+        return this.streamConfigs == null ? Output.empty() : this.streamConfigs;
     }
 
     /**
@@ -143,10 +143,10 @@ public final class FhirStoreArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="validationConfig")
-      private final @Nullable Input<ValidationConfigArgs> validationConfig;
+      private final @Nullable Output<ValidationConfigArgs> validationConfig;
 
-    public Input<ValidationConfigArgs> getValidationConfig() {
-        return this.validationConfig == null ? Input.empty() : this.validationConfig;
+    public Output<ValidationConfigArgs> getValidationConfig() {
+        return this.validationConfig == null ? Output.empty() : this.validationConfig;
     }
 
     /**
@@ -154,27 +154,27 @@ public final class FhirStoreArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="version")
-      private final @Nullable Input<FhirStoreVersion> version;
+      private final @Nullable Output<FhirStoreVersion> version;
 
-    public Input<FhirStoreVersion> getVersion() {
-        return this.version == null ? Input.empty() : this.version;
+    public Output<FhirStoreVersion> getVersion() {
+        return this.version == null ? Output.empty() : this.version;
     }
 
     public FhirStoreArgs(
-        Input<String> datasetId,
-        @Nullable Input<Boolean> defaultSearchHandlingStrict,
-        @Nullable Input<Boolean> disableReferentialIntegrity,
-        @Nullable Input<Boolean> disableResourceVersioning,
-        @Nullable Input<Boolean> enableUpdateCreate,
-        @Nullable Input<String> fhirStoreId,
-        @Nullable Input<Map<String,String>> labels,
-        @Nullable Input<String> location,
-        @Nullable Input<NotificationConfigArgs> notificationConfig,
-        @Nullable Input<String> project,
-        @Nullable Input<SearchConfigArgs> searchConfig,
-        @Nullable Input<List<StreamConfigArgs>> streamConfigs,
-        @Nullable Input<ValidationConfigArgs> validationConfig,
-        @Nullable Input<FhirStoreVersion> version) {
+        Output<String> datasetId,
+        @Nullable Output<Boolean> defaultSearchHandlingStrict,
+        @Nullable Output<Boolean> disableReferentialIntegrity,
+        @Nullable Output<Boolean> disableResourceVersioning,
+        @Nullable Output<Boolean> enableUpdateCreate,
+        @Nullable Output<String> fhirStoreId,
+        @Nullable Output<Map<String,String>> labels,
+        @Nullable Output<String> location,
+        @Nullable Output<NotificationConfigArgs> notificationConfig,
+        @Nullable Output<String> project,
+        @Nullable Output<SearchConfigArgs> searchConfig,
+        @Nullable Output<List<StreamConfigArgs>> streamConfigs,
+        @Nullable Output<ValidationConfigArgs> validationConfig,
+        @Nullable Output<FhirStoreVersion> version) {
         this.datasetId = Objects.requireNonNull(datasetId, "expected parameter 'datasetId' to be non-null");
         this.defaultSearchHandlingStrict = defaultSearchHandlingStrict;
         this.disableReferentialIntegrity = disableReferentialIntegrity;
@@ -192,20 +192,20 @@ public final class FhirStoreArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private FhirStoreArgs() {
-        this.datasetId = Input.empty();
-        this.defaultSearchHandlingStrict = Input.empty();
-        this.disableReferentialIntegrity = Input.empty();
-        this.disableResourceVersioning = Input.empty();
-        this.enableUpdateCreate = Input.empty();
-        this.fhirStoreId = Input.empty();
-        this.labels = Input.empty();
-        this.location = Input.empty();
-        this.notificationConfig = Input.empty();
-        this.project = Input.empty();
-        this.searchConfig = Input.empty();
-        this.streamConfigs = Input.empty();
-        this.validationConfig = Input.empty();
-        this.version = Input.empty();
+        this.datasetId = Output.empty();
+        this.defaultSearchHandlingStrict = Output.empty();
+        this.disableReferentialIntegrity = Output.empty();
+        this.disableResourceVersioning = Output.empty();
+        this.enableUpdateCreate = Output.empty();
+        this.fhirStoreId = Output.empty();
+        this.labels = Output.empty();
+        this.location = Output.empty();
+        this.notificationConfig = Output.empty();
+        this.project = Output.empty();
+        this.searchConfig = Output.empty();
+        this.streamConfigs = Output.empty();
+        this.validationConfig = Output.empty();
+        this.version = Output.empty();
     }
 
     public static Builder builder() {
@@ -217,20 +217,20 @@ public final class FhirStoreArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> datasetId;
-        private @Nullable Input<Boolean> defaultSearchHandlingStrict;
-        private @Nullable Input<Boolean> disableReferentialIntegrity;
-        private @Nullable Input<Boolean> disableResourceVersioning;
-        private @Nullable Input<Boolean> enableUpdateCreate;
-        private @Nullable Input<String> fhirStoreId;
-        private @Nullable Input<Map<String,String>> labels;
-        private @Nullable Input<String> location;
-        private @Nullable Input<NotificationConfigArgs> notificationConfig;
-        private @Nullable Input<String> project;
-        private @Nullable Input<SearchConfigArgs> searchConfig;
-        private @Nullable Input<List<StreamConfigArgs>> streamConfigs;
-        private @Nullable Input<ValidationConfigArgs> validationConfig;
-        private @Nullable Input<FhirStoreVersion> version;
+        private Output<String> datasetId;
+        private @Nullable Output<Boolean> defaultSearchHandlingStrict;
+        private @Nullable Output<Boolean> disableReferentialIntegrity;
+        private @Nullable Output<Boolean> disableResourceVersioning;
+        private @Nullable Output<Boolean> enableUpdateCreate;
+        private @Nullable Output<String> fhirStoreId;
+        private @Nullable Output<Map<String,String>> labels;
+        private @Nullable Output<String> location;
+        private @Nullable Output<NotificationConfigArgs> notificationConfig;
+        private @Nullable Output<String> project;
+        private @Nullable Output<SearchConfigArgs> searchConfig;
+        private @Nullable Output<List<StreamConfigArgs>> streamConfigs;
+        private @Nullable Output<ValidationConfigArgs> validationConfig;
+        private @Nullable Output<FhirStoreVersion> version;
 
         public Builder() {
     	      // Empty
@@ -254,143 +254,143 @@ public final class FhirStoreArgs extends io.pulumi.resources.ResourceArgs {
     	      this.version = defaults.version;
         }
 
-        public Builder datasetId(Input<String> datasetId) {
+        public Builder datasetId(Output<String> datasetId) {
             this.datasetId = Objects.requireNonNull(datasetId);
             return this;
         }
 
         public Builder datasetId(String datasetId) {
-            this.datasetId = Input.of(Objects.requireNonNull(datasetId));
+            this.datasetId = Output.of(Objects.requireNonNull(datasetId));
             return this;
         }
 
-        public Builder defaultSearchHandlingStrict(@Nullable Input<Boolean> defaultSearchHandlingStrict) {
+        public Builder defaultSearchHandlingStrict(@Nullable Output<Boolean> defaultSearchHandlingStrict) {
             this.defaultSearchHandlingStrict = defaultSearchHandlingStrict;
             return this;
         }
 
         public Builder defaultSearchHandlingStrict(@Nullable Boolean defaultSearchHandlingStrict) {
-            this.defaultSearchHandlingStrict = Input.ofNullable(defaultSearchHandlingStrict);
+            this.defaultSearchHandlingStrict = Output.ofNullable(defaultSearchHandlingStrict);
             return this;
         }
 
-        public Builder disableReferentialIntegrity(@Nullable Input<Boolean> disableReferentialIntegrity) {
+        public Builder disableReferentialIntegrity(@Nullable Output<Boolean> disableReferentialIntegrity) {
             this.disableReferentialIntegrity = disableReferentialIntegrity;
             return this;
         }
 
         public Builder disableReferentialIntegrity(@Nullable Boolean disableReferentialIntegrity) {
-            this.disableReferentialIntegrity = Input.ofNullable(disableReferentialIntegrity);
+            this.disableReferentialIntegrity = Output.ofNullable(disableReferentialIntegrity);
             return this;
         }
 
-        public Builder disableResourceVersioning(@Nullable Input<Boolean> disableResourceVersioning) {
+        public Builder disableResourceVersioning(@Nullable Output<Boolean> disableResourceVersioning) {
             this.disableResourceVersioning = disableResourceVersioning;
             return this;
         }
 
         public Builder disableResourceVersioning(@Nullable Boolean disableResourceVersioning) {
-            this.disableResourceVersioning = Input.ofNullable(disableResourceVersioning);
+            this.disableResourceVersioning = Output.ofNullable(disableResourceVersioning);
             return this;
         }
 
-        public Builder enableUpdateCreate(@Nullable Input<Boolean> enableUpdateCreate) {
+        public Builder enableUpdateCreate(@Nullable Output<Boolean> enableUpdateCreate) {
             this.enableUpdateCreate = enableUpdateCreate;
             return this;
         }
 
         public Builder enableUpdateCreate(@Nullable Boolean enableUpdateCreate) {
-            this.enableUpdateCreate = Input.ofNullable(enableUpdateCreate);
+            this.enableUpdateCreate = Output.ofNullable(enableUpdateCreate);
             return this;
         }
 
-        public Builder fhirStoreId(@Nullable Input<String> fhirStoreId) {
+        public Builder fhirStoreId(@Nullable Output<String> fhirStoreId) {
             this.fhirStoreId = fhirStoreId;
             return this;
         }
 
         public Builder fhirStoreId(@Nullable String fhirStoreId) {
-            this.fhirStoreId = Input.ofNullable(fhirStoreId);
+            this.fhirStoreId = Output.ofNullable(fhirStoreId);
             return this;
         }
 
-        public Builder labels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
         public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Input.ofNullable(labels);
+            this.labels = Output.ofNullable(labels);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder notificationConfig(@Nullable Input<NotificationConfigArgs> notificationConfig) {
+        public Builder notificationConfig(@Nullable Output<NotificationConfigArgs> notificationConfig) {
             this.notificationConfig = notificationConfig;
             return this;
         }
 
         public Builder notificationConfig(@Nullable NotificationConfigArgs notificationConfig) {
-            this.notificationConfig = Input.ofNullable(notificationConfig);
+            this.notificationConfig = Output.ofNullable(notificationConfig);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder searchConfig(@Nullable Input<SearchConfigArgs> searchConfig) {
+        public Builder searchConfig(@Nullable Output<SearchConfigArgs> searchConfig) {
             this.searchConfig = searchConfig;
             return this;
         }
 
         public Builder searchConfig(@Nullable SearchConfigArgs searchConfig) {
-            this.searchConfig = Input.ofNullable(searchConfig);
+            this.searchConfig = Output.ofNullable(searchConfig);
             return this;
         }
 
-        public Builder streamConfigs(@Nullable Input<List<StreamConfigArgs>> streamConfigs) {
+        public Builder streamConfigs(@Nullable Output<List<StreamConfigArgs>> streamConfigs) {
             this.streamConfigs = streamConfigs;
             return this;
         }
 
         public Builder streamConfigs(@Nullable List<StreamConfigArgs> streamConfigs) {
-            this.streamConfigs = Input.ofNullable(streamConfigs);
+            this.streamConfigs = Output.ofNullable(streamConfigs);
             return this;
         }
 
-        public Builder validationConfig(@Nullable Input<ValidationConfigArgs> validationConfig) {
+        public Builder validationConfig(@Nullable Output<ValidationConfigArgs> validationConfig) {
             this.validationConfig = validationConfig;
             return this;
         }
 
         public Builder validationConfig(@Nullable ValidationConfigArgs validationConfig) {
-            this.validationConfig = Input.ofNullable(validationConfig);
+            this.validationConfig = Output.ofNullable(validationConfig);
             return this;
         }
 
-        public Builder version(@Nullable Input<FhirStoreVersion> version) {
+        public Builder version(@Nullable Output<FhirStoreVersion> version) {
             this.version = version;
             return this;
         }
 
         public Builder version(@Nullable FhirStoreVersion version) {
-            this.version = Input.ofNullable(version);
+            this.version = Output.ofNullable(version);
             return this;
         }
         public FhirStoreArgs build() {

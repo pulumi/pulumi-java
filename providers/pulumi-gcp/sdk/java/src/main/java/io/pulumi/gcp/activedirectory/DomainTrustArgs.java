@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.activedirectory;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -22,9 +22,9 @@ public final class DomainTrustArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="domain", required=true)
-      private final Input<String> domain;
+      private final Output<String> domain;
 
-    public Input<String> getDomain() {
+    public Output<String> getDomain() {
         return this.domain;
     }
 
@@ -34,10 +34,10 @@ public final class DomainTrustArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -45,10 +45,10 @@ public final class DomainTrustArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="selectiveAuthentication")
-      private final @Nullable Input<Boolean> selectiveAuthentication;
+      private final @Nullable Output<Boolean> selectiveAuthentication;
 
-    public Input<Boolean> getSelectiveAuthentication() {
-        return this.selectiveAuthentication == null ? Input.empty() : this.selectiveAuthentication;
+    public Output<Boolean> getSelectiveAuthentication() {
+        return this.selectiveAuthentication == null ? Output.empty() : this.selectiveAuthentication;
     }
 
     /**
@@ -56,9 +56,9 @@ public final class DomainTrustArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="targetDnsIpAddresses", required=true)
-      private final Input<List<String>> targetDnsIpAddresses;
+      private final Output<List<String>> targetDnsIpAddresses;
 
-    public Input<List<String>> getTargetDnsIpAddresses() {
+    public Output<List<String>> getTargetDnsIpAddresses() {
         return this.targetDnsIpAddresses;
     }
 
@@ -67,9 +67,9 @@ public final class DomainTrustArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="targetDomainName", required=true)
-      private final Input<String> targetDomainName;
+      private final Output<String> targetDomainName;
 
-    public Input<String> getTargetDomainName() {
+    public Output<String> getTargetDomainName() {
         return this.targetDomainName;
     }
 
@@ -79,9 +79,9 @@ public final class DomainTrustArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="trustDirection", required=true)
-      private final Input<String> trustDirection;
+      private final Output<String> trustDirection;
 
-    public Input<String> getTrustDirection() {
+    public Output<String> getTrustDirection() {
         return this.trustDirection;
     }
 
@@ -91,9 +91,9 @@ public final class DomainTrustArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="trustHandshakeSecret", required=true)
-      private final Input<String> trustHandshakeSecret;
+      private final Output<String> trustHandshakeSecret;
 
-    public Input<String> getTrustHandshakeSecret() {
+    public Output<String> getTrustHandshakeSecret() {
         return this.trustHandshakeSecret;
     }
 
@@ -103,21 +103,21 @@ public final class DomainTrustArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="trustType", required=true)
-      private final Input<String> trustType;
+      private final Output<String> trustType;
 
-    public Input<String> getTrustType() {
+    public Output<String> getTrustType() {
         return this.trustType;
     }
 
     public DomainTrustArgs(
-        Input<String> domain,
-        @Nullable Input<String> project,
-        @Nullable Input<Boolean> selectiveAuthentication,
-        Input<List<String>> targetDnsIpAddresses,
-        Input<String> targetDomainName,
-        Input<String> trustDirection,
-        Input<String> trustHandshakeSecret,
-        Input<String> trustType) {
+        Output<String> domain,
+        @Nullable Output<String> project,
+        @Nullable Output<Boolean> selectiveAuthentication,
+        Output<List<String>> targetDnsIpAddresses,
+        Output<String> targetDomainName,
+        Output<String> trustDirection,
+        Output<String> trustHandshakeSecret,
+        Output<String> trustType) {
         this.domain = Objects.requireNonNull(domain, "expected parameter 'domain' to be non-null");
         this.project = project;
         this.selectiveAuthentication = selectiveAuthentication;
@@ -129,14 +129,14 @@ public final class DomainTrustArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DomainTrustArgs() {
-        this.domain = Input.empty();
-        this.project = Input.empty();
-        this.selectiveAuthentication = Input.empty();
-        this.targetDnsIpAddresses = Input.empty();
-        this.targetDomainName = Input.empty();
-        this.trustDirection = Input.empty();
-        this.trustHandshakeSecret = Input.empty();
-        this.trustType = Input.empty();
+        this.domain = Output.empty();
+        this.project = Output.empty();
+        this.selectiveAuthentication = Output.empty();
+        this.targetDnsIpAddresses = Output.empty();
+        this.targetDomainName = Output.empty();
+        this.trustDirection = Output.empty();
+        this.trustHandshakeSecret = Output.empty();
+        this.trustType = Output.empty();
     }
 
     public static Builder builder() {
@@ -148,14 +148,14 @@ public final class DomainTrustArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> domain;
-        private @Nullable Input<String> project;
-        private @Nullable Input<Boolean> selectiveAuthentication;
-        private Input<List<String>> targetDnsIpAddresses;
-        private Input<String> targetDomainName;
-        private Input<String> trustDirection;
-        private Input<String> trustHandshakeSecret;
-        private Input<String> trustType;
+        private Output<String> domain;
+        private @Nullable Output<String> project;
+        private @Nullable Output<Boolean> selectiveAuthentication;
+        private Output<List<String>> targetDnsIpAddresses;
+        private Output<String> targetDomainName;
+        private Output<String> trustDirection;
+        private Output<String> trustHandshakeSecret;
+        private Output<String> trustType;
 
         public Builder() {
     	      // Empty
@@ -173,83 +173,83 @@ public final class DomainTrustArgs extends io.pulumi.resources.ResourceArgs {
     	      this.trustType = defaults.trustType;
         }
 
-        public Builder domain(Input<String> domain) {
+        public Builder domain(Output<String> domain) {
             this.domain = Objects.requireNonNull(domain);
             return this;
         }
 
         public Builder domain(String domain) {
-            this.domain = Input.of(Objects.requireNonNull(domain));
+            this.domain = Output.of(Objects.requireNonNull(domain));
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder selectiveAuthentication(@Nullable Input<Boolean> selectiveAuthentication) {
+        public Builder selectiveAuthentication(@Nullable Output<Boolean> selectiveAuthentication) {
             this.selectiveAuthentication = selectiveAuthentication;
             return this;
         }
 
         public Builder selectiveAuthentication(@Nullable Boolean selectiveAuthentication) {
-            this.selectiveAuthentication = Input.ofNullable(selectiveAuthentication);
+            this.selectiveAuthentication = Output.ofNullable(selectiveAuthentication);
             return this;
         }
 
-        public Builder targetDnsIpAddresses(Input<List<String>> targetDnsIpAddresses) {
+        public Builder targetDnsIpAddresses(Output<List<String>> targetDnsIpAddresses) {
             this.targetDnsIpAddresses = Objects.requireNonNull(targetDnsIpAddresses);
             return this;
         }
 
         public Builder targetDnsIpAddresses(List<String> targetDnsIpAddresses) {
-            this.targetDnsIpAddresses = Input.of(Objects.requireNonNull(targetDnsIpAddresses));
+            this.targetDnsIpAddresses = Output.of(Objects.requireNonNull(targetDnsIpAddresses));
             return this;
         }
 
-        public Builder targetDomainName(Input<String> targetDomainName) {
+        public Builder targetDomainName(Output<String> targetDomainName) {
             this.targetDomainName = Objects.requireNonNull(targetDomainName);
             return this;
         }
 
         public Builder targetDomainName(String targetDomainName) {
-            this.targetDomainName = Input.of(Objects.requireNonNull(targetDomainName));
+            this.targetDomainName = Output.of(Objects.requireNonNull(targetDomainName));
             return this;
         }
 
-        public Builder trustDirection(Input<String> trustDirection) {
+        public Builder trustDirection(Output<String> trustDirection) {
             this.trustDirection = Objects.requireNonNull(trustDirection);
             return this;
         }
 
         public Builder trustDirection(String trustDirection) {
-            this.trustDirection = Input.of(Objects.requireNonNull(trustDirection));
+            this.trustDirection = Output.of(Objects.requireNonNull(trustDirection));
             return this;
         }
 
-        public Builder trustHandshakeSecret(Input<String> trustHandshakeSecret) {
+        public Builder trustHandshakeSecret(Output<String> trustHandshakeSecret) {
             this.trustHandshakeSecret = Objects.requireNonNull(trustHandshakeSecret);
             return this;
         }
 
         public Builder trustHandshakeSecret(String trustHandshakeSecret) {
-            this.trustHandshakeSecret = Input.of(Objects.requireNonNull(trustHandshakeSecret));
+            this.trustHandshakeSecret = Output.of(Objects.requireNonNull(trustHandshakeSecret));
             return this;
         }
 
-        public Builder trustType(Input<String> trustType) {
+        public Builder trustType(Output<String> trustType) {
             this.trustType = Objects.requireNonNull(trustType);
             return this;
         }
 
         public Builder trustType(String trustType) {
-            this.trustType = Input.of(Objects.requireNonNull(trustType));
+            this.trustType = Output.of(Objects.requireNonNull(trustType));
             return this;
         }
         public DomainTrustArgs build() {

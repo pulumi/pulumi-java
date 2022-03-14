@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.osconfig_v1beta.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.osconfig_v1beta.inputs.SoftwareRecipeArtifactGcsArgs;
 import io.pulumi.googlenative.osconfig_v1beta.inputs.SoftwareRecipeArtifactRemoteArgs;
@@ -26,10 +26,10 @@ public final class SoftwareRecipeArtifactArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="allowInsecure")
-      private final @Nullable Input<Boolean> allowInsecure;
+      private final @Nullable Output<Boolean> allowInsecure;
 
-    public Input<Boolean> getAllowInsecure() {
-        return this.allowInsecure == null ? Input.empty() : this.allowInsecure;
+    public Output<Boolean> getAllowInsecure() {
+        return this.allowInsecure == null ? Output.empty() : this.allowInsecure;
     }
 
     /**
@@ -37,10 +37,10 @@ public final class SoftwareRecipeArtifactArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="gcs")
-      private final @Nullable Input<SoftwareRecipeArtifactGcsArgs> gcs;
+      private final @Nullable Output<SoftwareRecipeArtifactGcsArgs> gcs;
 
-    public Input<SoftwareRecipeArtifactGcsArgs> getGcs() {
-        return this.gcs == null ? Input.empty() : this.gcs;
+    public Output<SoftwareRecipeArtifactGcsArgs> getGcs() {
+        return this.gcs == null ? Output.empty() : this.gcs;
     }
 
     /**
@@ -48,9 +48,9 @@ public final class SoftwareRecipeArtifactArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="id", required=true)
-      private final Input<String> id;
+      private final Output<String> id;
 
-    public Input<String> getId() {
+    public Output<String> getId() {
         return this.id;
     }
 
@@ -59,17 +59,17 @@ public final class SoftwareRecipeArtifactArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="remote")
-      private final @Nullable Input<SoftwareRecipeArtifactRemoteArgs> remote;
+      private final @Nullable Output<SoftwareRecipeArtifactRemoteArgs> remote;
 
-    public Input<SoftwareRecipeArtifactRemoteArgs> getRemote() {
-        return this.remote == null ? Input.empty() : this.remote;
+    public Output<SoftwareRecipeArtifactRemoteArgs> getRemote() {
+        return this.remote == null ? Output.empty() : this.remote;
     }
 
     public SoftwareRecipeArtifactArgs(
-        @Nullable Input<Boolean> allowInsecure,
-        @Nullable Input<SoftwareRecipeArtifactGcsArgs> gcs,
-        Input<String> id,
-        @Nullable Input<SoftwareRecipeArtifactRemoteArgs> remote) {
+        @Nullable Output<Boolean> allowInsecure,
+        @Nullable Output<SoftwareRecipeArtifactGcsArgs> gcs,
+        Output<String> id,
+        @Nullable Output<SoftwareRecipeArtifactRemoteArgs> remote) {
         this.allowInsecure = allowInsecure;
         this.gcs = gcs;
         this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
@@ -77,10 +77,10 @@ public final class SoftwareRecipeArtifactArgs extends io.pulumi.resources.Resour
     }
 
     private SoftwareRecipeArtifactArgs() {
-        this.allowInsecure = Input.empty();
-        this.gcs = Input.empty();
-        this.id = Input.empty();
-        this.remote = Input.empty();
+        this.allowInsecure = Output.empty();
+        this.gcs = Output.empty();
+        this.id = Output.empty();
+        this.remote = Output.empty();
     }
 
     public static Builder builder() {
@@ -92,10 +92,10 @@ public final class SoftwareRecipeArtifactArgs extends io.pulumi.resources.Resour
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> allowInsecure;
-        private @Nullable Input<SoftwareRecipeArtifactGcsArgs> gcs;
-        private Input<String> id;
-        private @Nullable Input<SoftwareRecipeArtifactRemoteArgs> remote;
+        private @Nullable Output<Boolean> allowInsecure;
+        private @Nullable Output<SoftwareRecipeArtifactGcsArgs> gcs;
+        private Output<String> id;
+        private @Nullable Output<SoftwareRecipeArtifactRemoteArgs> remote;
 
         public Builder() {
     	      // Empty
@@ -109,43 +109,43 @@ public final class SoftwareRecipeArtifactArgs extends io.pulumi.resources.Resour
     	      this.remote = defaults.remote;
         }
 
-        public Builder allowInsecure(@Nullable Input<Boolean> allowInsecure) {
+        public Builder allowInsecure(@Nullable Output<Boolean> allowInsecure) {
             this.allowInsecure = allowInsecure;
             return this;
         }
 
         public Builder allowInsecure(@Nullable Boolean allowInsecure) {
-            this.allowInsecure = Input.ofNullable(allowInsecure);
+            this.allowInsecure = Output.ofNullable(allowInsecure);
             return this;
         }
 
-        public Builder gcs(@Nullable Input<SoftwareRecipeArtifactGcsArgs> gcs) {
+        public Builder gcs(@Nullable Output<SoftwareRecipeArtifactGcsArgs> gcs) {
             this.gcs = gcs;
             return this;
         }
 
         public Builder gcs(@Nullable SoftwareRecipeArtifactGcsArgs gcs) {
-            this.gcs = Input.ofNullable(gcs);
+            this.gcs = Output.ofNullable(gcs);
             return this;
         }
 
-        public Builder id(Input<String> id) {
+        public Builder id(Output<String> id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
         public Builder id(String id) {
-            this.id = Input.of(Objects.requireNonNull(id));
+            this.id = Output.of(Objects.requireNonNull(id));
             return this;
         }
 
-        public Builder remote(@Nullable Input<SoftwareRecipeArtifactRemoteArgs> remote) {
+        public Builder remote(@Nullable Output<SoftwareRecipeArtifactRemoteArgs> remote) {
             this.remote = remote;
             return this;
         }
 
         public Builder remote(@Nullable SoftwareRecipeArtifactRemoteArgs remote) {
-            this.remote = Input.ofNullable(remote);
+            this.remote = Output.ofNullable(remote);
             return this;
         }
         public SoftwareRecipeArtifactArgs build() {

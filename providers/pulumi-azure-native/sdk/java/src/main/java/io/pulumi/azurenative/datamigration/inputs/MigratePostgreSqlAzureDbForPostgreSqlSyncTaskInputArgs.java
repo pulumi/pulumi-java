@@ -5,7 +5,7 @@ package io.pulumi.azurenative.datamigration.inputs;
 
 import io.pulumi.azurenative.datamigration.inputs.MigratePostgreSqlAzureDbForPostgreSqlSyncDatabaseInputArgs;
 import io.pulumi.azurenative.datamigration.inputs.PostgreSqlConnectionInfoArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
@@ -24,9 +24,9 @@ public final class MigratePostgreSqlAzureDbForPostgreSqlSyncTaskInputArgs extend
      * 
      */
     @InputImport(name="selectedDatabases", required=true)
-      private final Input<List<MigratePostgreSqlAzureDbForPostgreSqlSyncDatabaseInputArgs>> selectedDatabases;
+      private final Output<List<MigratePostgreSqlAzureDbForPostgreSqlSyncDatabaseInputArgs>> selectedDatabases;
 
-    public Input<List<MigratePostgreSqlAzureDbForPostgreSqlSyncDatabaseInputArgs>> getSelectedDatabases() {
+    public Output<List<MigratePostgreSqlAzureDbForPostgreSqlSyncDatabaseInputArgs>> getSelectedDatabases() {
         return this.selectedDatabases;
     }
 
@@ -35,9 +35,9 @@ public final class MigratePostgreSqlAzureDbForPostgreSqlSyncTaskInputArgs extend
      * 
      */
     @InputImport(name="sourceConnectionInfo", required=true)
-      private final Input<PostgreSqlConnectionInfoArgs> sourceConnectionInfo;
+      private final Output<PostgreSqlConnectionInfoArgs> sourceConnectionInfo;
 
-    public Input<PostgreSqlConnectionInfoArgs> getSourceConnectionInfo() {
+    public Output<PostgreSqlConnectionInfoArgs> getSourceConnectionInfo() {
         return this.sourceConnectionInfo;
     }
 
@@ -46,25 +46,25 @@ public final class MigratePostgreSqlAzureDbForPostgreSqlSyncTaskInputArgs extend
      * 
      */
     @InputImport(name="targetConnectionInfo", required=true)
-      private final Input<PostgreSqlConnectionInfoArgs> targetConnectionInfo;
+      private final Output<PostgreSqlConnectionInfoArgs> targetConnectionInfo;
 
-    public Input<PostgreSqlConnectionInfoArgs> getTargetConnectionInfo() {
+    public Output<PostgreSqlConnectionInfoArgs> getTargetConnectionInfo() {
         return this.targetConnectionInfo;
     }
 
     public MigratePostgreSqlAzureDbForPostgreSqlSyncTaskInputArgs(
-        Input<List<MigratePostgreSqlAzureDbForPostgreSqlSyncDatabaseInputArgs>> selectedDatabases,
-        Input<PostgreSqlConnectionInfoArgs> sourceConnectionInfo,
-        Input<PostgreSqlConnectionInfoArgs> targetConnectionInfo) {
+        Output<List<MigratePostgreSqlAzureDbForPostgreSqlSyncDatabaseInputArgs>> selectedDatabases,
+        Output<PostgreSqlConnectionInfoArgs> sourceConnectionInfo,
+        Output<PostgreSqlConnectionInfoArgs> targetConnectionInfo) {
         this.selectedDatabases = Objects.requireNonNull(selectedDatabases, "expected parameter 'selectedDatabases' to be non-null");
         this.sourceConnectionInfo = Objects.requireNonNull(sourceConnectionInfo, "expected parameter 'sourceConnectionInfo' to be non-null");
         this.targetConnectionInfo = Objects.requireNonNull(targetConnectionInfo, "expected parameter 'targetConnectionInfo' to be non-null");
     }
 
     private MigratePostgreSqlAzureDbForPostgreSqlSyncTaskInputArgs() {
-        this.selectedDatabases = Input.empty();
-        this.sourceConnectionInfo = Input.empty();
-        this.targetConnectionInfo = Input.empty();
+        this.selectedDatabases = Output.empty();
+        this.sourceConnectionInfo = Output.empty();
+        this.targetConnectionInfo = Output.empty();
     }
 
     public static Builder builder() {
@@ -76,9 +76,9 @@ public final class MigratePostgreSqlAzureDbForPostgreSqlSyncTaskInputArgs extend
     }
 
     public static final class Builder {
-        private Input<List<MigratePostgreSqlAzureDbForPostgreSqlSyncDatabaseInputArgs>> selectedDatabases;
-        private Input<PostgreSqlConnectionInfoArgs> sourceConnectionInfo;
-        private Input<PostgreSqlConnectionInfoArgs> targetConnectionInfo;
+        private Output<List<MigratePostgreSqlAzureDbForPostgreSqlSyncDatabaseInputArgs>> selectedDatabases;
+        private Output<PostgreSqlConnectionInfoArgs> sourceConnectionInfo;
+        private Output<PostgreSqlConnectionInfoArgs> targetConnectionInfo;
 
         public Builder() {
     	      // Empty
@@ -91,33 +91,33 @@ public final class MigratePostgreSqlAzureDbForPostgreSqlSyncTaskInputArgs extend
     	      this.targetConnectionInfo = defaults.targetConnectionInfo;
         }
 
-        public Builder selectedDatabases(Input<List<MigratePostgreSqlAzureDbForPostgreSqlSyncDatabaseInputArgs>> selectedDatabases) {
+        public Builder selectedDatabases(Output<List<MigratePostgreSqlAzureDbForPostgreSqlSyncDatabaseInputArgs>> selectedDatabases) {
             this.selectedDatabases = Objects.requireNonNull(selectedDatabases);
             return this;
         }
 
         public Builder selectedDatabases(List<MigratePostgreSqlAzureDbForPostgreSqlSyncDatabaseInputArgs> selectedDatabases) {
-            this.selectedDatabases = Input.of(Objects.requireNonNull(selectedDatabases));
+            this.selectedDatabases = Output.of(Objects.requireNonNull(selectedDatabases));
             return this;
         }
 
-        public Builder sourceConnectionInfo(Input<PostgreSqlConnectionInfoArgs> sourceConnectionInfo) {
+        public Builder sourceConnectionInfo(Output<PostgreSqlConnectionInfoArgs> sourceConnectionInfo) {
             this.sourceConnectionInfo = Objects.requireNonNull(sourceConnectionInfo);
             return this;
         }
 
         public Builder sourceConnectionInfo(PostgreSqlConnectionInfoArgs sourceConnectionInfo) {
-            this.sourceConnectionInfo = Input.of(Objects.requireNonNull(sourceConnectionInfo));
+            this.sourceConnectionInfo = Output.of(Objects.requireNonNull(sourceConnectionInfo));
             return this;
         }
 
-        public Builder targetConnectionInfo(Input<PostgreSqlConnectionInfoArgs> targetConnectionInfo) {
+        public Builder targetConnectionInfo(Output<PostgreSqlConnectionInfoArgs> targetConnectionInfo) {
             this.targetConnectionInfo = Objects.requireNonNull(targetConnectionInfo);
             return this;
         }
 
         public Builder targetConnectionInfo(PostgreSqlConnectionInfoArgs targetConnectionInfo) {
-            this.targetConnectionInfo = Input.of(Objects.requireNonNull(targetConnectionInfo));
+            this.targetConnectionInfo = Output.of(Objects.requireNonNull(targetConnectionInfo));
             return this;
         }
         public MigratePostgreSqlAzureDbForPostgreSqlSyncTaskInputArgs build() {

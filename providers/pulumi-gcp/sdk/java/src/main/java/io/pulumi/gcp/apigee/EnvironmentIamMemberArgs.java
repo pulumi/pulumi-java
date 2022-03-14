@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.apigee;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.apigee.inputs.EnvironmentIamMemberConditionArgs;
 import java.lang.String;
@@ -16,10 +16,10 @@ public final class EnvironmentIamMemberArgs extends io.pulumi.resources.Resource
     public static final EnvironmentIamMemberArgs Empty = new EnvironmentIamMemberArgs();
 
     @InputImport(name="condition")
-      private final @Nullable Input<EnvironmentIamMemberConditionArgs> condition;
+      private final @Nullable Output<EnvironmentIamMemberConditionArgs> condition;
 
-    public Input<EnvironmentIamMemberConditionArgs> getCondition() {
-        return this.condition == null ? Input.empty() : this.condition;
+    public Output<EnvironmentIamMemberConditionArgs> getCondition() {
+        return this.condition == null ? Output.empty() : this.condition;
     }
 
     /**
@@ -27,23 +27,23 @@ public final class EnvironmentIamMemberArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="envId", required=true)
-      private final Input<String> envId;
+      private final Output<String> envId;
 
-    public Input<String> getEnvId() {
+    public Output<String> getEnvId() {
         return this.envId;
     }
 
     @InputImport(name="member", required=true)
-      private final Input<String> member;
+      private final Output<String> member;
 
-    public Input<String> getMember() {
+    public Output<String> getMember() {
         return this.member;
     }
 
     @InputImport(name="orgId", required=true)
-      private final Input<String> orgId;
+      private final Output<String> orgId;
 
-    public Input<String> getOrgId() {
+    public Output<String> getOrgId() {
         return this.orgId;
     }
 
@@ -54,18 +54,18 @@ public final class EnvironmentIamMemberArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="role", required=true)
-      private final Input<String> role;
+      private final Output<String> role;
 
-    public Input<String> getRole() {
+    public Output<String> getRole() {
         return this.role;
     }
 
     public EnvironmentIamMemberArgs(
-        @Nullable Input<EnvironmentIamMemberConditionArgs> condition,
-        Input<String> envId,
-        Input<String> member,
-        Input<String> orgId,
-        Input<String> role) {
+        @Nullable Output<EnvironmentIamMemberConditionArgs> condition,
+        Output<String> envId,
+        Output<String> member,
+        Output<String> orgId,
+        Output<String> role) {
         this.condition = condition;
         this.envId = Objects.requireNonNull(envId, "expected parameter 'envId' to be non-null");
         this.member = Objects.requireNonNull(member, "expected parameter 'member' to be non-null");
@@ -74,11 +74,11 @@ public final class EnvironmentIamMemberArgs extends io.pulumi.resources.Resource
     }
 
     private EnvironmentIamMemberArgs() {
-        this.condition = Input.empty();
-        this.envId = Input.empty();
-        this.member = Input.empty();
-        this.orgId = Input.empty();
-        this.role = Input.empty();
+        this.condition = Output.empty();
+        this.envId = Output.empty();
+        this.member = Output.empty();
+        this.orgId = Output.empty();
+        this.role = Output.empty();
     }
 
     public static Builder builder() {
@@ -90,11 +90,11 @@ public final class EnvironmentIamMemberArgs extends io.pulumi.resources.Resource
     }
 
     public static final class Builder {
-        private @Nullable Input<EnvironmentIamMemberConditionArgs> condition;
-        private Input<String> envId;
-        private Input<String> member;
-        private Input<String> orgId;
-        private Input<String> role;
+        private @Nullable Output<EnvironmentIamMemberConditionArgs> condition;
+        private Output<String> envId;
+        private Output<String> member;
+        private Output<String> orgId;
+        private Output<String> role;
 
         public Builder() {
     	      // Empty
@@ -109,53 +109,53 @@ public final class EnvironmentIamMemberArgs extends io.pulumi.resources.Resource
     	      this.role = defaults.role;
         }
 
-        public Builder condition(@Nullable Input<EnvironmentIamMemberConditionArgs> condition) {
+        public Builder condition(@Nullable Output<EnvironmentIamMemberConditionArgs> condition) {
             this.condition = condition;
             return this;
         }
 
         public Builder condition(@Nullable EnvironmentIamMemberConditionArgs condition) {
-            this.condition = Input.ofNullable(condition);
+            this.condition = Output.ofNullable(condition);
             return this;
         }
 
-        public Builder envId(Input<String> envId) {
+        public Builder envId(Output<String> envId) {
             this.envId = Objects.requireNonNull(envId);
             return this;
         }
 
         public Builder envId(String envId) {
-            this.envId = Input.of(Objects.requireNonNull(envId));
+            this.envId = Output.of(Objects.requireNonNull(envId));
             return this;
         }
 
-        public Builder member(Input<String> member) {
+        public Builder member(Output<String> member) {
             this.member = Objects.requireNonNull(member);
             return this;
         }
 
         public Builder member(String member) {
-            this.member = Input.of(Objects.requireNonNull(member));
+            this.member = Output.of(Objects.requireNonNull(member));
             return this;
         }
 
-        public Builder orgId(Input<String> orgId) {
+        public Builder orgId(Output<String> orgId) {
             this.orgId = Objects.requireNonNull(orgId);
             return this;
         }
 
         public Builder orgId(String orgId) {
-            this.orgId = Input.of(Objects.requireNonNull(orgId));
+            this.orgId = Output.of(Objects.requireNonNull(orgId));
             return this;
         }
 
-        public Builder role(Input<String> role) {
+        public Builder role(Output<String> role) {
             this.role = Objects.requireNonNull(role);
             return this;
         }
 
         public Builder role(String role) {
-            this.role = Input.of(Objects.requireNonNull(role));
+            this.role = Output.of(Objects.requireNonNull(role));
             return this;
         }
         public EnvironmentIamMemberArgs build() {

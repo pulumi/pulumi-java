@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.servicemanagement_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.servicemanagement_v1.inputs.CustomErrorRuleArgs;
 import java.lang.String;
@@ -25,10 +25,10 @@ public final class CustomErrorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="rules")
-      private final @Nullable Input<List<CustomErrorRuleArgs>> rules;
+      private final @Nullable Output<List<CustomErrorRuleArgs>> rules;
 
-    public Input<List<CustomErrorRuleArgs>> getRules() {
-        return this.rules == null ? Input.empty() : this.rules;
+    public Output<List<CustomErrorRuleArgs>> getRules() {
+        return this.rules == null ? Output.empty() : this.rules;
     }
 
     /**
@@ -36,22 +36,22 @@ public final class CustomErrorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="types")
-      private final @Nullable Input<List<String>> types;
+      private final @Nullable Output<List<String>> types;
 
-    public Input<List<String>> getTypes() {
-        return this.types == null ? Input.empty() : this.types;
+    public Output<List<String>> getTypes() {
+        return this.types == null ? Output.empty() : this.types;
     }
 
     public CustomErrorArgs(
-        @Nullable Input<List<CustomErrorRuleArgs>> rules,
-        @Nullable Input<List<String>> types) {
+        @Nullable Output<List<CustomErrorRuleArgs>> rules,
+        @Nullable Output<List<String>> types) {
         this.rules = rules;
         this.types = types;
     }
 
     private CustomErrorArgs() {
-        this.rules = Input.empty();
-        this.types = Input.empty();
+        this.rules = Output.empty();
+        this.types = Output.empty();
     }
 
     public static Builder builder() {
@@ -63,8 +63,8 @@ public final class CustomErrorArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<List<CustomErrorRuleArgs>> rules;
-        private @Nullable Input<List<String>> types;
+        private @Nullable Output<List<CustomErrorRuleArgs>> rules;
+        private @Nullable Output<List<String>> types;
 
         public Builder() {
     	      // Empty
@@ -76,23 +76,23 @@ public final class CustomErrorArgs extends io.pulumi.resources.ResourceArgs {
     	      this.types = defaults.types;
         }
 
-        public Builder rules(@Nullable Input<List<CustomErrorRuleArgs>> rules) {
+        public Builder rules(@Nullable Output<List<CustomErrorRuleArgs>> rules) {
             this.rules = rules;
             return this;
         }
 
         public Builder rules(@Nullable List<CustomErrorRuleArgs> rules) {
-            this.rules = Input.ofNullable(rules);
+            this.rules = Output.ofNullable(rules);
             return this;
         }
 
-        public Builder types(@Nullable Input<List<String>> types) {
+        public Builder types(@Nullable Output<List<String>> types) {
             this.types = types;
             return this;
         }
 
         public Builder types(@Nullable List<String> types) {
-            this.types = Input.ofNullable(types);
+            this.types = Output.ofNullable(types);
             return this;
         }
         public CustomErrorArgs build() {

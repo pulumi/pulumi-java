@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.flowcontrol.apiserver.k8s.io_v1beta1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class FlowSchemaConditionArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="lastTransitionTime")
-      private final @Nullable Input<String> lastTransitionTime;
+      private final @Nullable Output<String> lastTransitionTime;
 
-    public Input<String> getLastTransitionTime() {
-        return this.lastTransitionTime == null ? Input.empty() : this.lastTransitionTime;
+    public Output<String> getLastTransitionTime() {
+        return this.lastTransitionTime == null ? Output.empty() : this.lastTransitionTime;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class FlowSchemaConditionArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="message")
-      private final @Nullable Input<String> message;
+      private final @Nullable Output<String> message;
 
-    public Input<String> getMessage() {
-        return this.message == null ? Input.empty() : this.message;
+    public Output<String> getMessage() {
+        return this.message == null ? Output.empty() : this.message;
     }
 
     /**
@@ -45,10 +45,10 @@ public final class FlowSchemaConditionArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="reason")
-      private final @Nullable Input<String> reason;
+      private final @Nullable Output<String> reason;
 
-    public Input<String> getReason() {
-        return this.reason == null ? Input.empty() : this.reason;
+    public Output<String> getReason() {
+        return this.reason == null ? Output.empty() : this.reason;
     }
 
     /**
@@ -56,10 +56,10 @@ public final class FlowSchemaConditionArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="status")
-      private final @Nullable Input<String> status;
+      private final @Nullable Output<String> status;
 
-    public Input<String> getStatus() {
-        return this.status == null ? Input.empty() : this.status;
+    public Output<String> getStatus() {
+        return this.status == null ? Output.empty() : this.status;
     }
 
     /**
@@ -67,18 +67,18 @@ public final class FlowSchemaConditionArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="type")
-      private final @Nullable Input<String> type;
+      private final @Nullable Output<String> type;
 
-    public Input<String> getType() {
-        return this.type == null ? Input.empty() : this.type;
+    public Output<String> getType() {
+        return this.type == null ? Output.empty() : this.type;
     }
 
     public FlowSchemaConditionArgs(
-        @Nullable Input<String> lastTransitionTime,
-        @Nullable Input<String> message,
-        @Nullable Input<String> reason,
-        @Nullable Input<String> status,
-        @Nullable Input<String> type) {
+        @Nullable Output<String> lastTransitionTime,
+        @Nullable Output<String> message,
+        @Nullable Output<String> reason,
+        @Nullable Output<String> status,
+        @Nullable Output<String> type) {
         this.lastTransitionTime = lastTransitionTime;
         this.message = message;
         this.reason = reason;
@@ -87,11 +87,11 @@ public final class FlowSchemaConditionArgs extends io.pulumi.resources.ResourceA
     }
 
     private FlowSchemaConditionArgs() {
-        this.lastTransitionTime = Input.empty();
-        this.message = Input.empty();
-        this.reason = Input.empty();
-        this.status = Input.empty();
-        this.type = Input.empty();
+        this.lastTransitionTime = Output.empty();
+        this.message = Output.empty();
+        this.reason = Output.empty();
+        this.status = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -103,11 +103,11 @@ public final class FlowSchemaConditionArgs extends io.pulumi.resources.ResourceA
     }
 
     public static final class Builder {
-        private @Nullable Input<String> lastTransitionTime;
-        private @Nullable Input<String> message;
-        private @Nullable Input<String> reason;
-        private @Nullable Input<String> status;
-        private @Nullable Input<String> type;
+        private @Nullable Output<String> lastTransitionTime;
+        private @Nullable Output<String> message;
+        private @Nullable Output<String> reason;
+        private @Nullable Output<String> status;
+        private @Nullable Output<String> type;
 
         public Builder() {
     	      // Empty
@@ -122,53 +122,53 @@ public final class FlowSchemaConditionArgs extends io.pulumi.resources.ResourceA
     	      this.type = defaults.type;
         }
 
-        public Builder lastTransitionTime(@Nullable Input<String> lastTransitionTime) {
+        public Builder lastTransitionTime(@Nullable Output<String> lastTransitionTime) {
             this.lastTransitionTime = lastTransitionTime;
             return this;
         }
 
         public Builder lastTransitionTime(@Nullable String lastTransitionTime) {
-            this.lastTransitionTime = Input.ofNullable(lastTransitionTime);
+            this.lastTransitionTime = Output.ofNullable(lastTransitionTime);
             return this;
         }
 
-        public Builder message(@Nullable Input<String> message) {
+        public Builder message(@Nullable Output<String> message) {
             this.message = message;
             return this;
         }
 
         public Builder message(@Nullable String message) {
-            this.message = Input.ofNullable(message);
+            this.message = Output.ofNullable(message);
             return this;
         }
 
-        public Builder reason(@Nullable Input<String> reason) {
+        public Builder reason(@Nullable Output<String> reason) {
             this.reason = reason;
             return this;
         }
 
         public Builder reason(@Nullable String reason) {
-            this.reason = Input.ofNullable(reason);
+            this.reason = Output.ofNullable(reason);
             return this;
         }
 
-        public Builder status(@Nullable Input<String> status) {
+        public Builder status(@Nullable Output<String> status) {
             this.status = status;
             return this;
         }
 
         public Builder status(@Nullable String status) {
-            this.status = Input.ofNullable(status);
+            this.status = Output.ofNullable(status);
             return this;
         }
 
-        public Builder type(@Nullable Input<String> type) {
+        public Builder type(@Nullable Output<String> type) {
             this.type = type;
             return this;
         }
 
         public Builder type(@Nullable String type) {
-            this.type = Input.ofNullable(type);
+            this.type = Output.ofNullable(type);
             return this;
         }
         public FlowSchemaConditionArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.osconfig_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.osconfig_v1.inputs.OSPolicyResourceFileArgs;
 import java.lang.String;
@@ -25,10 +25,10 @@ public final class OSPolicyResourcePackageResourceMSIArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="properties")
-      private final @Nullable Input<List<String>> properties;
+      private final @Nullable Output<List<String>> properties;
 
-    public Input<List<String>> getProperties() {
-        return this.properties == null ? Input.empty() : this.properties;
+    public Output<List<String>> getProperties() {
+        return this.properties == null ? Output.empty() : this.properties;
     }
 
     /**
@@ -36,22 +36,22 @@ public final class OSPolicyResourcePackageResourceMSIArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="source", required=true)
-      private final Input<OSPolicyResourceFileArgs> source;
+      private final Output<OSPolicyResourceFileArgs> source;
 
-    public Input<OSPolicyResourceFileArgs> getSource() {
+    public Output<OSPolicyResourceFileArgs> getSource() {
         return this.source;
     }
 
     public OSPolicyResourcePackageResourceMSIArgs(
-        @Nullable Input<List<String>> properties,
-        Input<OSPolicyResourceFileArgs> source) {
+        @Nullable Output<List<String>> properties,
+        Output<OSPolicyResourceFileArgs> source) {
         this.properties = properties;
         this.source = Objects.requireNonNull(source, "expected parameter 'source' to be non-null");
     }
 
     private OSPolicyResourcePackageResourceMSIArgs() {
-        this.properties = Input.empty();
-        this.source = Input.empty();
+        this.properties = Output.empty();
+        this.source = Output.empty();
     }
 
     public static Builder builder() {
@@ -63,8 +63,8 @@ public final class OSPolicyResourcePackageResourceMSIArgs extends io.pulumi.reso
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> properties;
-        private Input<OSPolicyResourceFileArgs> source;
+        private @Nullable Output<List<String>> properties;
+        private Output<OSPolicyResourceFileArgs> source;
 
         public Builder() {
     	      // Empty
@@ -76,23 +76,23 @@ public final class OSPolicyResourcePackageResourceMSIArgs extends io.pulumi.reso
     	      this.source = defaults.source;
         }
 
-        public Builder properties(@Nullable Input<List<String>> properties) {
+        public Builder properties(@Nullable Output<List<String>> properties) {
             this.properties = properties;
             return this;
         }
 
         public Builder properties(@Nullable List<String> properties) {
-            this.properties = Input.ofNullable(properties);
+            this.properties = Output.ofNullable(properties);
             return this;
         }
 
-        public Builder source(Input<OSPolicyResourceFileArgs> source) {
+        public Builder source(Output<OSPolicyResourceFileArgs> source) {
             this.source = Objects.requireNonNull(source);
             return this;
         }
 
         public Builder source(OSPolicyResourceFileArgs source) {
-            this.source = Input.of(Objects.requireNonNull(source));
+            this.source = Output.of(Objects.requireNonNull(source));
             return this;
         }
         public OSPolicyResourcePackageResourceMSIArgs build() {

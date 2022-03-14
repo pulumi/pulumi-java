@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.ses.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -20,9 +20,9 @@ public final class ReceiptRuleStopActionArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="position", required=true)
-      private final Input<Integer> position;
+      private final Output<Integer> position;
 
-    public Input<Integer> getPosition() {
+    public Output<Integer> getPosition() {
         return this.position;
     }
 
@@ -31,9 +31,9 @@ public final class ReceiptRuleStopActionArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="scope", required=true)
-      private final Input<String> scope;
+      private final Output<String> scope;
 
-    public Input<String> getScope() {
+    public Output<String> getScope() {
         return this.scope;
     }
 
@@ -42,25 +42,25 @@ public final class ReceiptRuleStopActionArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="topicArn")
-      private final @Nullable Input<String> topicArn;
+      private final @Nullable Output<String> topicArn;
 
-    public Input<String> getTopicArn() {
-        return this.topicArn == null ? Input.empty() : this.topicArn;
+    public Output<String> getTopicArn() {
+        return this.topicArn == null ? Output.empty() : this.topicArn;
     }
 
     public ReceiptRuleStopActionArgs(
-        Input<Integer> position,
-        Input<String> scope,
-        @Nullable Input<String> topicArn) {
+        Output<Integer> position,
+        Output<String> scope,
+        @Nullable Output<String> topicArn) {
         this.position = Objects.requireNonNull(position, "expected parameter 'position' to be non-null");
         this.scope = Objects.requireNonNull(scope, "expected parameter 'scope' to be non-null");
         this.topicArn = topicArn;
     }
 
     private ReceiptRuleStopActionArgs() {
-        this.position = Input.empty();
-        this.scope = Input.empty();
-        this.topicArn = Input.empty();
+        this.position = Output.empty();
+        this.scope = Output.empty();
+        this.topicArn = Output.empty();
     }
 
     public static Builder builder() {
@@ -72,9 +72,9 @@ public final class ReceiptRuleStopActionArgs extends io.pulumi.resources.Resourc
     }
 
     public static final class Builder {
-        private Input<Integer> position;
-        private Input<String> scope;
-        private @Nullable Input<String> topicArn;
+        private Output<Integer> position;
+        private Output<String> scope;
+        private @Nullable Output<String> topicArn;
 
         public Builder() {
     	      // Empty
@@ -87,33 +87,33 @@ public final class ReceiptRuleStopActionArgs extends io.pulumi.resources.Resourc
     	      this.topicArn = defaults.topicArn;
         }
 
-        public Builder position(Input<Integer> position) {
+        public Builder position(Output<Integer> position) {
             this.position = Objects.requireNonNull(position);
             return this;
         }
 
         public Builder position(Integer position) {
-            this.position = Input.of(Objects.requireNonNull(position));
+            this.position = Output.of(Objects.requireNonNull(position));
             return this;
         }
 
-        public Builder scope(Input<String> scope) {
+        public Builder scope(Output<String> scope) {
             this.scope = Objects.requireNonNull(scope);
             return this;
         }
 
         public Builder scope(String scope) {
-            this.scope = Input.of(Objects.requireNonNull(scope));
+            this.scope = Output.of(Objects.requireNonNull(scope));
             return this;
         }
 
-        public Builder topicArn(@Nullable Input<String> topicArn) {
+        public Builder topicArn(@Nullable Output<String> topicArn) {
             this.topicArn = topicArn;
             return this;
         }
 
         public Builder topicArn(@Nullable String topicArn) {
-            this.topicArn = Input.ofNullable(topicArn);
+            this.topicArn = Output.ofNullable(topicArn);
             return this;
         }
         public ReceiptRuleStopActionArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datafactory.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class GitHubClientSecretArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="byoaSecretAkvUrl")
-      private final @Nullable Input<String> byoaSecretAkvUrl;
+      private final @Nullable Output<String> byoaSecretAkvUrl;
 
-    public Input<String> getByoaSecretAkvUrl() {
-        return this.byoaSecretAkvUrl == null ? Input.empty() : this.byoaSecretAkvUrl;
+    public Output<String> getByoaSecretAkvUrl() {
+        return this.byoaSecretAkvUrl == null ? Output.empty() : this.byoaSecretAkvUrl;
     }
 
     /**
@@ -34,22 +34,22 @@ public final class GitHubClientSecretArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="byoaSecretName")
-      private final @Nullable Input<String> byoaSecretName;
+      private final @Nullable Output<String> byoaSecretName;
 
-    public Input<String> getByoaSecretName() {
-        return this.byoaSecretName == null ? Input.empty() : this.byoaSecretName;
+    public Output<String> getByoaSecretName() {
+        return this.byoaSecretName == null ? Output.empty() : this.byoaSecretName;
     }
 
     public GitHubClientSecretArgs(
-        @Nullable Input<String> byoaSecretAkvUrl,
-        @Nullable Input<String> byoaSecretName) {
+        @Nullable Output<String> byoaSecretAkvUrl,
+        @Nullable Output<String> byoaSecretName) {
         this.byoaSecretAkvUrl = byoaSecretAkvUrl;
         this.byoaSecretName = byoaSecretName;
     }
 
     private GitHubClientSecretArgs() {
-        this.byoaSecretAkvUrl = Input.empty();
-        this.byoaSecretName = Input.empty();
+        this.byoaSecretAkvUrl = Output.empty();
+        this.byoaSecretName = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class GitHubClientSecretArgs extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private @Nullable Input<String> byoaSecretAkvUrl;
-        private @Nullable Input<String> byoaSecretName;
+        private @Nullable Output<String> byoaSecretAkvUrl;
+        private @Nullable Output<String> byoaSecretName;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class GitHubClientSecretArgs extends io.pulumi.resources.ResourceAr
     	      this.byoaSecretName = defaults.byoaSecretName;
         }
 
-        public Builder byoaSecretAkvUrl(@Nullable Input<String> byoaSecretAkvUrl) {
+        public Builder byoaSecretAkvUrl(@Nullable Output<String> byoaSecretAkvUrl) {
             this.byoaSecretAkvUrl = byoaSecretAkvUrl;
             return this;
         }
 
         public Builder byoaSecretAkvUrl(@Nullable String byoaSecretAkvUrl) {
-            this.byoaSecretAkvUrl = Input.ofNullable(byoaSecretAkvUrl);
+            this.byoaSecretAkvUrl = Output.ofNullable(byoaSecretAkvUrl);
             return this;
         }
 
-        public Builder byoaSecretName(@Nullable Input<String> byoaSecretName) {
+        public Builder byoaSecretName(@Nullable Output<String> byoaSecretName) {
             this.byoaSecretName = byoaSecretName;
             return this;
         }
 
         public Builder byoaSecretName(@Nullable String byoaSecretName) {
-            this.byoaSecretName = Input.ofNullable(byoaSecretName);
+            this.byoaSecretName = Output.ofNullable(byoaSecretName);
             return this;
         }
         public GitHubClientSecretArgs build() {

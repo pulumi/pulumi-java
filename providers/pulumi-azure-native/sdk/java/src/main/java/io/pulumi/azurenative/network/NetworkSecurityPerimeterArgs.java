@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -20,10 +20,10 @@ public final class NetworkSecurityPerimeterArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -31,10 +31,10 @@ public final class NetworkSecurityPerimeterArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="displayName")
-      private final @Nullable Input<String> displayName;
+      private final @Nullable Output<String> displayName;
 
-    public Input<String> getDisplayName() {
-        return this.displayName == null ? Input.empty() : this.displayName;
+    public Output<String> getDisplayName() {
+        return this.displayName == null ? Output.empty() : this.displayName;
     }
 
     /**
@@ -42,10 +42,10 @@ public final class NetworkSecurityPerimeterArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="id")
-      private final @Nullable Input<String> id;
+      private final @Nullable Output<String> id;
 
-    public Input<String> getId() {
-        return this.id == null ? Input.empty() : this.id;
+    public Output<String> getId() {
+        return this.id == null ? Output.empty() : this.id;
     }
 
     /**
@@ -53,10 +53,10 @@ public final class NetworkSecurityPerimeterArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -64,10 +64,10 @@ public final class NetworkSecurityPerimeterArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -75,10 +75,10 @@ public final class NetworkSecurityPerimeterArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="networkSecurityPerimeterName")
-      private final @Nullable Input<String> networkSecurityPerimeterName;
+      private final @Nullable Output<String> networkSecurityPerimeterName;
 
-    public Input<String> getNetworkSecurityPerimeterName() {
-        return this.networkSecurityPerimeterName == null ? Input.empty() : this.networkSecurityPerimeterName;
+    public Output<String> getNetworkSecurityPerimeterName() {
+        return this.networkSecurityPerimeterName == null ? Output.empty() : this.networkSecurityPerimeterName;
     }
 
     /**
@@ -86,9 +86,9 @@ public final class NetworkSecurityPerimeterArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -97,21 +97,21 @@ public final class NetworkSecurityPerimeterArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public NetworkSecurityPerimeterArgs(
-        @Nullable Input<String> description,
-        @Nullable Input<String> displayName,
-        @Nullable Input<String> id,
-        @Nullable Input<String> location,
-        @Nullable Input<String> name,
-        @Nullable Input<String> networkSecurityPerimeterName,
-        Input<String> resourceGroupName,
-        @Nullable Input<Map<String,String>> tags) {
+        @Nullable Output<String> description,
+        @Nullable Output<String> displayName,
+        @Nullable Output<String> id,
+        @Nullable Output<String> location,
+        @Nullable Output<String> name,
+        @Nullable Output<String> networkSecurityPerimeterName,
+        Output<String> resourceGroupName,
+        @Nullable Output<Map<String,String>> tags) {
         this.description = description;
         this.displayName = displayName;
         this.id = id;
@@ -123,14 +123,14 @@ public final class NetworkSecurityPerimeterArgs extends io.pulumi.resources.Reso
     }
 
     private NetworkSecurityPerimeterArgs() {
-        this.description = Input.empty();
-        this.displayName = Input.empty();
-        this.id = Input.empty();
-        this.location = Input.empty();
-        this.name = Input.empty();
-        this.networkSecurityPerimeterName = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.tags = Input.empty();
+        this.description = Output.empty();
+        this.displayName = Output.empty();
+        this.id = Output.empty();
+        this.location = Output.empty();
+        this.name = Output.empty();
+        this.networkSecurityPerimeterName = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -142,14 +142,14 @@ public final class NetworkSecurityPerimeterArgs extends io.pulumi.resources.Reso
     }
 
     public static final class Builder {
-        private @Nullable Input<String> description;
-        private @Nullable Input<String> displayName;
-        private @Nullable Input<String> id;
-        private @Nullable Input<String> location;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> networkSecurityPerimeterName;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<Map<String,String>> tags;
+        private @Nullable Output<String> description;
+        private @Nullable Output<String> displayName;
+        private @Nullable Output<String> id;
+        private @Nullable Output<String> location;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> networkSecurityPerimeterName;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<Map<String,String>> tags;
 
         public Builder() {
     	      // Empty
@@ -167,83 +167,83 @@ public final class NetworkSecurityPerimeterArgs extends io.pulumi.resources.Reso
     	      this.tags = defaults.tags;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder displayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Input.ofNullable(displayName);
+            this.displayName = Output.ofNullable(displayName);
             return this;
         }
 
-        public Builder id(@Nullable Input<String> id) {
+        public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
 
         public Builder id(@Nullable String id) {
-            this.id = Input.ofNullable(id);
+            this.id = Output.ofNullable(id);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder networkSecurityPerimeterName(@Nullable Input<String> networkSecurityPerimeterName) {
+        public Builder networkSecurityPerimeterName(@Nullable Output<String> networkSecurityPerimeterName) {
             this.networkSecurityPerimeterName = networkSecurityPerimeterName;
             return this;
         }
 
         public Builder networkSecurityPerimeterName(@Nullable String networkSecurityPerimeterName) {
-            this.networkSecurityPerimeterName = Input.ofNullable(networkSecurityPerimeterName);
+            this.networkSecurityPerimeterName = Output.ofNullable(networkSecurityPerimeterName);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public NetworkSecurityPerimeterArgs build() {

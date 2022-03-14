@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.osconfig_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.osconfig_v1.enums.WeeklyScheduleDayOfWeek;
 import java.util.Objects;
@@ -22,18 +22,18 @@ public final class WeeklyScheduleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dayOfWeek", required=true)
-      private final Input<WeeklyScheduleDayOfWeek> dayOfWeek;
+      private final Output<WeeklyScheduleDayOfWeek> dayOfWeek;
 
-    public Input<WeeklyScheduleDayOfWeek> getDayOfWeek() {
+    public Output<WeeklyScheduleDayOfWeek> getDayOfWeek() {
         return this.dayOfWeek;
     }
 
-    public WeeklyScheduleArgs(Input<WeeklyScheduleDayOfWeek> dayOfWeek) {
+    public WeeklyScheduleArgs(Output<WeeklyScheduleDayOfWeek> dayOfWeek) {
         this.dayOfWeek = Objects.requireNonNull(dayOfWeek, "expected parameter 'dayOfWeek' to be non-null");
     }
 
     private WeeklyScheduleArgs() {
-        this.dayOfWeek = Input.empty();
+        this.dayOfWeek = Output.empty();
     }
 
     public static Builder builder() {
@@ -45,7 +45,7 @@ public final class WeeklyScheduleArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<WeeklyScheduleDayOfWeek> dayOfWeek;
+        private Output<WeeklyScheduleDayOfWeek> dayOfWeek;
 
         public Builder() {
     	      // Empty
@@ -56,13 +56,13 @@ public final class WeeklyScheduleArgs extends io.pulumi.resources.ResourceArgs {
     	      this.dayOfWeek = defaults.dayOfWeek;
         }
 
-        public Builder dayOfWeek(Input<WeeklyScheduleDayOfWeek> dayOfWeek) {
+        public Builder dayOfWeek(Output<WeeklyScheduleDayOfWeek> dayOfWeek) {
             this.dayOfWeek = Objects.requireNonNull(dayOfWeek);
             return this;
         }
 
         public Builder dayOfWeek(WeeklyScheduleDayOfWeek dayOfWeek) {
-            this.dayOfWeek = Input.of(Objects.requireNonNull(dayOfWeek));
+            this.dayOfWeek = Output.of(Objects.requireNonNull(dayOfWeek));
             return this;
         }
         public WeeklyScheduleArgs build() {

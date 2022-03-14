@@ -5,7 +5,7 @@ package io.pulumi.aws.appmesh.inputs;
 
 import io.pulumi.aws.appmesh.inputs.VirtualNodeSpecListenerTimeoutHttp2IdleGetArgs;
 import io.pulumi.aws.appmesh.inputs.VirtualNodeSpecListenerTimeoutHttp2PerRequestGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,10 +20,10 @@ public final class VirtualNodeSpecListenerTimeoutHttp2GetArgs extends io.pulumi.
      * 
      */
     @InputImport(name="idle")
-      private final @Nullable Input<VirtualNodeSpecListenerTimeoutHttp2IdleGetArgs> idle;
+      private final @Nullable Output<VirtualNodeSpecListenerTimeoutHttp2IdleGetArgs> idle;
 
-    public Input<VirtualNodeSpecListenerTimeoutHttp2IdleGetArgs> getIdle() {
-        return this.idle == null ? Input.empty() : this.idle;
+    public Output<VirtualNodeSpecListenerTimeoutHttp2IdleGetArgs> getIdle() {
+        return this.idle == null ? Output.empty() : this.idle;
     }
 
     /**
@@ -31,22 +31,22 @@ public final class VirtualNodeSpecListenerTimeoutHttp2GetArgs extends io.pulumi.
      * 
      */
     @InputImport(name="perRequest")
-      private final @Nullable Input<VirtualNodeSpecListenerTimeoutHttp2PerRequestGetArgs> perRequest;
+      private final @Nullable Output<VirtualNodeSpecListenerTimeoutHttp2PerRequestGetArgs> perRequest;
 
-    public Input<VirtualNodeSpecListenerTimeoutHttp2PerRequestGetArgs> getPerRequest() {
-        return this.perRequest == null ? Input.empty() : this.perRequest;
+    public Output<VirtualNodeSpecListenerTimeoutHttp2PerRequestGetArgs> getPerRequest() {
+        return this.perRequest == null ? Output.empty() : this.perRequest;
     }
 
     public VirtualNodeSpecListenerTimeoutHttp2GetArgs(
-        @Nullable Input<VirtualNodeSpecListenerTimeoutHttp2IdleGetArgs> idle,
-        @Nullable Input<VirtualNodeSpecListenerTimeoutHttp2PerRequestGetArgs> perRequest) {
+        @Nullable Output<VirtualNodeSpecListenerTimeoutHttp2IdleGetArgs> idle,
+        @Nullable Output<VirtualNodeSpecListenerTimeoutHttp2PerRequestGetArgs> perRequest) {
         this.idle = idle;
         this.perRequest = perRequest;
     }
 
     private VirtualNodeSpecListenerTimeoutHttp2GetArgs() {
-        this.idle = Input.empty();
-        this.perRequest = Input.empty();
+        this.idle = Output.empty();
+        this.perRequest = Output.empty();
     }
 
     public static Builder builder() {
@@ -58,8 +58,8 @@ public final class VirtualNodeSpecListenerTimeoutHttp2GetArgs extends io.pulumi.
     }
 
     public static final class Builder {
-        private @Nullable Input<VirtualNodeSpecListenerTimeoutHttp2IdleGetArgs> idle;
-        private @Nullable Input<VirtualNodeSpecListenerTimeoutHttp2PerRequestGetArgs> perRequest;
+        private @Nullable Output<VirtualNodeSpecListenerTimeoutHttp2IdleGetArgs> idle;
+        private @Nullable Output<VirtualNodeSpecListenerTimeoutHttp2PerRequestGetArgs> perRequest;
 
         public Builder() {
     	      // Empty
@@ -71,23 +71,23 @@ public final class VirtualNodeSpecListenerTimeoutHttp2GetArgs extends io.pulumi.
     	      this.perRequest = defaults.perRequest;
         }
 
-        public Builder idle(@Nullable Input<VirtualNodeSpecListenerTimeoutHttp2IdleGetArgs> idle) {
+        public Builder idle(@Nullable Output<VirtualNodeSpecListenerTimeoutHttp2IdleGetArgs> idle) {
             this.idle = idle;
             return this;
         }
 
         public Builder idle(@Nullable VirtualNodeSpecListenerTimeoutHttp2IdleGetArgs idle) {
-            this.idle = Input.ofNullable(idle);
+            this.idle = Output.ofNullable(idle);
             return this;
         }
 
-        public Builder perRequest(@Nullable Input<VirtualNodeSpecListenerTimeoutHttp2PerRequestGetArgs> perRequest) {
+        public Builder perRequest(@Nullable Output<VirtualNodeSpecListenerTimeoutHttp2PerRequestGetArgs> perRequest) {
             this.perRequest = perRequest;
             return this;
         }
 
         public Builder perRequest(@Nullable VirtualNodeSpecListenerTimeoutHttp2PerRequestGetArgs perRequest) {
-            this.perRequest = Input.ofNullable(perRequest);
+            this.perRequest = Output.ofNullable(perRequest);
             return this;
         }
         public VirtualNodeSpecListenerTimeoutHttp2GetArgs build() {

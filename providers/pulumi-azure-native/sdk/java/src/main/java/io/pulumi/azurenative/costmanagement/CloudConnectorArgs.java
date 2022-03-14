@@ -5,7 +5,7 @@ package io.pulumi.azurenative.costmanagement;
 
 import io.pulumi.azurenative.costmanagement.enums.ConnectorBillingModel;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -21,10 +21,10 @@ public final class CloudConnectorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="billingModel")
-      private final @Nullable Input<Either<String,ConnectorBillingModel>> billingModel;
+      private final @Nullable Output<Either<String,ConnectorBillingModel>> billingModel;
 
-    public Input<Either<String,ConnectorBillingModel>> getBillingModel() {
-        return this.billingModel == null ? Input.empty() : this.billingModel;
+    public Output<Either<String,ConnectorBillingModel>> getBillingModel() {
+        return this.billingModel == null ? Output.empty() : this.billingModel;
     }
 
     /**
@@ -32,10 +32,10 @@ public final class CloudConnectorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="connectorName")
-      private final @Nullable Input<String> connectorName;
+      private final @Nullable Output<String> connectorName;
 
-    public Input<String> getConnectorName() {
-        return this.connectorName == null ? Input.empty() : this.connectorName;
+    public Output<String> getConnectorName() {
+        return this.connectorName == null ? Output.empty() : this.connectorName;
     }
 
     /**
@@ -43,10 +43,10 @@ public final class CloudConnectorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="credentialsKey")
-      private final @Nullable Input<String> credentialsKey;
+      private final @Nullable Output<String> credentialsKey;
 
-    public Input<String> getCredentialsKey() {
-        return this.credentialsKey == null ? Input.empty() : this.credentialsKey;
+    public Output<String> getCredentialsKey() {
+        return this.credentialsKey == null ? Output.empty() : this.credentialsKey;
     }
 
     /**
@@ -54,10 +54,10 @@ public final class CloudConnectorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="credentialsSecret")
-      private final @Nullable Input<String> credentialsSecret;
+      private final @Nullable Output<String> credentialsSecret;
 
-    public Input<String> getCredentialsSecret() {
-        return this.credentialsSecret == null ? Input.empty() : this.credentialsSecret;
+    public Output<String> getCredentialsSecret() {
+        return this.credentialsSecret == null ? Output.empty() : this.credentialsSecret;
     }
 
     /**
@@ -65,10 +65,10 @@ public final class CloudConnectorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="defaultManagementGroupId")
-      private final @Nullable Input<String> defaultManagementGroupId;
+      private final @Nullable Output<String> defaultManagementGroupId;
 
-    public Input<String> getDefaultManagementGroupId() {
-        return this.defaultManagementGroupId == null ? Input.empty() : this.defaultManagementGroupId;
+    public Output<String> getDefaultManagementGroupId() {
+        return this.defaultManagementGroupId == null ? Output.empty() : this.defaultManagementGroupId;
     }
 
     /**
@@ -76,10 +76,10 @@ public final class CloudConnectorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName")
-      private final @Nullable Input<String> displayName;
+      private final @Nullable Output<String> displayName;
 
-    public Input<String> getDisplayName() {
-        return this.displayName == null ? Input.empty() : this.displayName;
+    public Output<String> getDisplayName() {
+        return this.displayName == null ? Output.empty() : this.displayName;
     }
 
     /**
@@ -87,10 +87,10 @@ public final class CloudConnectorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kind")
-      private final @Nullable Input<String> kind;
+      private final @Nullable Output<String> kind;
 
-    public Input<String> getKind() {
-        return this.kind == null ? Input.empty() : this.kind;
+    public Output<String> getKind() {
+        return this.kind == null ? Output.empty() : this.kind;
     }
 
     /**
@@ -98,10 +98,10 @@ public final class CloudConnectorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="reportId")
-      private final @Nullable Input<String> reportId;
+      private final @Nullable Output<String> reportId;
 
-    public Input<String> getReportId() {
-        return this.reportId == null ? Input.empty() : this.reportId;
+    public Output<String> getReportId() {
+        return this.reportId == null ? Output.empty() : this.reportId;
     }
 
     /**
@@ -109,22 +109,22 @@ public final class CloudConnectorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="subscriptionId")
-      private final @Nullable Input<String> subscriptionId;
+      private final @Nullable Output<String> subscriptionId;
 
-    public Input<String> getSubscriptionId() {
-        return this.subscriptionId == null ? Input.empty() : this.subscriptionId;
+    public Output<String> getSubscriptionId() {
+        return this.subscriptionId == null ? Output.empty() : this.subscriptionId;
     }
 
     public CloudConnectorArgs(
-        @Nullable Input<Either<String,ConnectorBillingModel>> billingModel,
-        @Nullable Input<String> connectorName,
-        @Nullable Input<String> credentialsKey,
-        @Nullable Input<String> credentialsSecret,
-        @Nullable Input<String> defaultManagementGroupId,
-        @Nullable Input<String> displayName,
-        @Nullable Input<String> kind,
-        @Nullable Input<String> reportId,
-        @Nullable Input<String> subscriptionId) {
+        @Nullable Output<Either<String,ConnectorBillingModel>> billingModel,
+        @Nullable Output<String> connectorName,
+        @Nullable Output<String> credentialsKey,
+        @Nullable Output<String> credentialsSecret,
+        @Nullable Output<String> defaultManagementGroupId,
+        @Nullable Output<String> displayName,
+        @Nullable Output<String> kind,
+        @Nullable Output<String> reportId,
+        @Nullable Output<String> subscriptionId) {
         this.billingModel = billingModel;
         this.connectorName = connectorName;
         this.credentialsKey = credentialsKey;
@@ -137,15 +137,15 @@ public final class CloudConnectorArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private CloudConnectorArgs() {
-        this.billingModel = Input.empty();
-        this.connectorName = Input.empty();
-        this.credentialsKey = Input.empty();
-        this.credentialsSecret = Input.empty();
-        this.defaultManagementGroupId = Input.empty();
-        this.displayName = Input.empty();
-        this.kind = Input.empty();
-        this.reportId = Input.empty();
-        this.subscriptionId = Input.empty();
+        this.billingModel = Output.empty();
+        this.connectorName = Output.empty();
+        this.credentialsKey = Output.empty();
+        this.credentialsSecret = Output.empty();
+        this.defaultManagementGroupId = Output.empty();
+        this.displayName = Output.empty();
+        this.kind = Output.empty();
+        this.reportId = Output.empty();
+        this.subscriptionId = Output.empty();
     }
 
     public static Builder builder() {
@@ -157,15 +157,15 @@ public final class CloudConnectorArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Either<String,ConnectorBillingModel>> billingModel;
-        private @Nullable Input<String> connectorName;
-        private @Nullable Input<String> credentialsKey;
-        private @Nullable Input<String> credentialsSecret;
-        private @Nullable Input<String> defaultManagementGroupId;
-        private @Nullable Input<String> displayName;
-        private @Nullable Input<String> kind;
-        private @Nullable Input<String> reportId;
-        private @Nullable Input<String> subscriptionId;
+        private @Nullable Output<Either<String,ConnectorBillingModel>> billingModel;
+        private @Nullable Output<String> connectorName;
+        private @Nullable Output<String> credentialsKey;
+        private @Nullable Output<String> credentialsSecret;
+        private @Nullable Output<String> defaultManagementGroupId;
+        private @Nullable Output<String> displayName;
+        private @Nullable Output<String> kind;
+        private @Nullable Output<String> reportId;
+        private @Nullable Output<String> subscriptionId;
 
         public Builder() {
     	      // Empty
@@ -184,93 +184,93 @@ public final class CloudConnectorArgs extends io.pulumi.resources.ResourceArgs {
     	      this.subscriptionId = defaults.subscriptionId;
         }
 
-        public Builder billingModel(@Nullable Input<Either<String,ConnectorBillingModel>> billingModel) {
+        public Builder billingModel(@Nullable Output<Either<String,ConnectorBillingModel>> billingModel) {
             this.billingModel = billingModel;
             return this;
         }
 
         public Builder billingModel(@Nullable Either<String,ConnectorBillingModel> billingModel) {
-            this.billingModel = Input.ofNullable(billingModel);
+            this.billingModel = Output.ofNullable(billingModel);
             return this;
         }
 
-        public Builder connectorName(@Nullable Input<String> connectorName) {
+        public Builder connectorName(@Nullable Output<String> connectorName) {
             this.connectorName = connectorName;
             return this;
         }
 
         public Builder connectorName(@Nullable String connectorName) {
-            this.connectorName = Input.ofNullable(connectorName);
+            this.connectorName = Output.ofNullable(connectorName);
             return this;
         }
 
-        public Builder credentialsKey(@Nullable Input<String> credentialsKey) {
+        public Builder credentialsKey(@Nullable Output<String> credentialsKey) {
             this.credentialsKey = credentialsKey;
             return this;
         }
 
         public Builder credentialsKey(@Nullable String credentialsKey) {
-            this.credentialsKey = Input.ofNullable(credentialsKey);
+            this.credentialsKey = Output.ofNullable(credentialsKey);
             return this;
         }
 
-        public Builder credentialsSecret(@Nullable Input<String> credentialsSecret) {
+        public Builder credentialsSecret(@Nullable Output<String> credentialsSecret) {
             this.credentialsSecret = credentialsSecret;
             return this;
         }
 
         public Builder credentialsSecret(@Nullable String credentialsSecret) {
-            this.credentialsSecret = Input.ofNullable(credentialsSecret);
+            this.credentialsSecret = Output.ofNullable(credentialsSecret);
             return this;
         }
 
-        public Builder defaultManagementGroupId(@Nullable Input<String> defaultManagementGroupId) {
+        public Builder defaultManagementGroupId(@Nullable Output<String> defaultManagementGroupId) {
             this.defaultManagementGroupId = defaultManagementGroupId;
             return this;
         }
 
         public Builder defaultManagementGroupId(@Nullable String defaultManagementGroupId) {
-            this.defaultManagementGroupId = Input.ofNullable(defaultManagementGroupId);
+            this.defaultManagementGroupId = Output.ofNullable(defaultManagementGroupId);
             return this;
         }
 
-        public Builder displayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Input.ofNullable(displayName);
+            this.displayName = Output.ofNullable(displayName);
             return this;
         }
 
-        public Builder kind(@Nullable Input<String> kind) {
+        public Builder kind(@Nullable Output<String> kind) {
             this.kind = kind;
             return this;
         }
 
         public Builder kind(@Nullable String kind) {
-            this.kind = Input.ofNullable(kind);
+            this.kind = Output.ofNullable(kind);
             return this;
         }
 
-        public Builder reportId(@Nullable Input<String> reportId) {
+        public Builder reportId(@Nullable Output<String> reportId) {
             this.reportId = reportId;
             return this;
         }
 
         public Builder reportId(@Nullable String reportId) {
-            this.reportId = Input.ofNullable(reportId);
+            this.reportId = Output.ofNullable(reportId);
             return this;
         }
 
-        public Builder subscriptionId(@Nullable Input<String> subscriptionId) {
+        public Builder subscriptionId(@Nullable Output<String> subscriptionId) {
             this.subscriptionId = subscriptionId;
             return this;
         }
 
         public Builder subscriptionId(@Nullable String subscriptionId) {
-            this.subscriptionId = Input.ofNullable(subscriptionId);
+            this.subscriptionId = Output.ofNullable(subscriptionId);
             return this;
         }
         public CloudConnectorArgs build() {

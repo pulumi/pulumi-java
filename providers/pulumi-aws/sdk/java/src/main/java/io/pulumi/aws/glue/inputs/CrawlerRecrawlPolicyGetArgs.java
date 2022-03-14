@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.glue.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,18 +19,18 @@ public final class CrawlerRecrawlPolicyGetArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="recrawlBehavior")
-      private final @Nullable Input<String> recrawlBehavior;
+      private final @Nullable Output<String> recrawlBehavior;
 
-    public Input<String> getRecrawlBehavior() {
-        return this.recrawlBehavior == null ? Input.empty() : this.recrawlBehavior;
+    public Output<String> getRecrawlBehavior() {
+        return this.recrawlBehavior == null ? Output.empty() : this.recrawlBehavior;
     }
 
-    public CrawlerRecrawlPolicyGetArgs(@Nullable Input<String> recrawlBehavior) {
+    public CrawlerRecrawlPolicyGetArgs(@Nullable Output<String> recrawlBehavior) {
         this.recrawlBehavior = recrawlBehavior;
     }
 
     private CrawlerRecrawlPolicyGetArgs() {
-        this.recrawlBehavior = Input.empty();
+        this.recrawlBehavior = Output.empty();
     }
 
     public static Builder builder() {
@@ -42,7 +42,7 @@ public final class CrawlerRecrawlPolicyGetArgs extends io.pulumi.resources.Resou
     }
 
     public static final class Builder {
-        private @Nullable Input<String> recrawlBehavior;
+        private @Nullable Output<String> recrawlBehavior;
 
         public Builder() {
     	      // Empty
@@ -53,13 +53,13 @@ public final class CrawlerRecrawlPolicyGetArgs extends io.pulumi.resources.Resou
     	      this.recrawlBehavior = defaults.recrawlBehavior;
         }
 
-        public Builder recrawlBehavior(@Nullable Input<String> recrawlBehavior) {
+        public Builder recrawlBehavior(@Nullable Output<String> recrawlBehavior) {
             this.recrawlBehavior = recrawlBehavior;
             return this;
         }
 
         public Builder recrawlBehavior(@Nullable String recrawlBehavior) {
-            this.recrawlBehavior = Input.ofNullable(recrawlBehavior);
+            this.recrawlBehavior = Output.ofNullable(recrawlBehavior);
             return this;
         }
         public CrawlerRecrawlPolicyGetArgs build() {

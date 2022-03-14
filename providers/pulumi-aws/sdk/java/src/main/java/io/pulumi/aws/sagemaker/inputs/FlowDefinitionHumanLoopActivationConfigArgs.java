@@ -4,7 +4,7 @@
 package io.pulumi.aws.sagemaker.inputs;
 
 import io.pulumi.aws.sagemaker.inputs.FlowDefinitionHumanLoopActivationConfigHumanLoopActivationConditionsConfigArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,18 +19,18 @@ public final class FlowDefinitionHumanLoopActivationConfigArgs extends io.pulumi
      * 
      */
     @InputImport(name="humanLoopActivationConditionsConfig")
-      private final @Nullable Input<FlowDefinitionHumanLoopActivationConfigHumanLoopActivationConditionsConfigArgs> humanLoopActivationConditionsConfig;
+      private final @Nullable Output<FlowDefinitionHumanLoopActivationConfigHumanLoopActivationConditionsConfigArgs> humanLoopActivationConditionsConfig;
 
-    public Input<FlowDefinitionHumanLoopActivationConfigHumanLoopActivationConditionsConfigArgs> getHumanLoopActivationConditionsConfig() {
-        return this.humanLoopActivationConditionsConfig == null ? Input.empty() : this.humanLoopActivationConditionsConfig;
+    public Output<FlowDefinitionHumanLoopActivationConfigHumanLoopActivationConditionsConfigArgs> getHumanLoopActivationConditionsConfig() {
+        return this.humanLoopActivationConditionsConfig == null ? Output.empty() : this.humanLoopActivationConditionsConfig;
     }
 
-    public FlowDefinitionHumanLoopActivationConfigArgs(@Nullable Input<FlowDefinitionHumanLoopActivationConfigHumanLoopActivationConditionsConfigArgs> humanLoopActivationConditionsConfig) {
+    public FlowDefinitionHumanLoopActivationConfigArgs(@Nullable Output<FlowDefinitionHumanLoopActivationConfigHumanLoopActivationConditionsConfigArgs> humanLoopActivationConditionsConfig) {
         this.humanLoopActivationConditionsConfig = humanLoopActivationConditionsConfig;
     }
 
     private FlowDefinitionHumanLoopActivationConfigArgs() {
-        this.humanLoopActivationConditionsConfig = Input.empty();
+        this.humanLoopActivationConditionsConfig = Output.empty();
     }
 
     public static Builder builder() {
@@ -42,7 +42,7 @@ public final class FlowDefinitionHumanLoopActivationConfigArgs extends io.pulumi
     }
 
     public static final class Builder {
-        private @Nullable Input<FlowDefinitionHumanLoopActivationConfigHumanLoopActivationConditionsConfigArgs> humanLoopActivationConditionsConfig;
+        private @Nullable Output<FlowDefinitionHumanLoopActivationConfigHumanLoopActivationConditionsConfigArgs> humanLoopActivationConditionsConfig;
 
         public Builder() {
     	      // Empty
@@ -53,13 +53,13 @@ public final class FlowDefinitionHumanLoopActivationConfigArgs extends io.pulumi
     	      this.humanLoopActivationConditionsConfig = defaults.humanLoopActivationConditionsConfig;
         }
 
-        public Builder humanLoopActivationConditionsConfig(@Nullable Input<FlowDefinitionHumanLoopActivationConfigHumanLoopActivationConditionsConfigArgs> humanLoopActivationConditionsConfig) {
+        public Builder humanLoopActivationConditionsConfig(@Nullable Output<FlowDefinitionHumanLoopActivationConfigHumanLoopActivationConditionsConfigArgs> humanLoopActivationConditionsConfig) {
             this.humanLoopActivationConditionsConfig = humanLoopActivationConditionsConfig;
             return this;
         }
 
         public Builder humanLoopActivationConditionsConfig(@Nullable FlowDefinitionHumanLoopActivationConfigHumanLoopActivationConditionsConfigArgs humanLoopActivationConditionsConfig) {
-            this.humanLoopActivationConditionsConfig = Input.ofNullable(humanLoopActivationConditionsConfig);
+            this.humanLoopActivationConditionsConfig = Output.ofNullable(humanLoopActivationConditionsConfig);
             return this;
         }
         public FlowDefinitionHumanLoopActivationConfigArgs build() {

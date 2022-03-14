@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.apigateway.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class UsagePlanKeyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="keyId")
-      private final @Nullable Input<String> keyId;
+      private final @Nullable Output<String> keyId;
 
-    public Input<String> getKeyId() {
-        return this.keyId == null ? Input.empty() : this.keyId;
+    public Output<String> getKeyId() {
+        return this.keyId == null ? Output.empty() : this.keyId;
     }
 
     /**
@@ -30,10 +30,10 @@ public final class UsagePlanKeyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="keyType")
-      private final @Nullable Input<String> keyType;
+      private final @Nullable Output<String> keyType;
 
-    public Input<String> getKeyType() {
-        return this.keyType == null ? Input.empty() : this.keyType;
+    public Output<String> getKeyType() {
+        return this.keyType == null ? Output.empty() : this.keyType;
     }
 
     /**
@@ -41,10 +41,10 @@ public final class UsagePlanKeyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -52,10 +52,10 @@ public final class UsagePlanKeyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="usagePlanId")
-      private final @Nullable Input<String> usagePlanId;
+      private final @Nullable Output<String> usagePlanId;
 
-    public Input<String> getUsagePlanId() {
-        return this.usagePlanId == null ? Input.empty() : this.usagePlanId;
+    public Output<String> getUsagePlanId() {
+        return this.usagePlanId == null ? Output.empty() : this.usagePlanId;
     }
 
     /**
@@ -63,18 +63,18 @@ public final class UsagePlanKeyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="value")
-      private final @Nullable Input<String> value;
+      private final @Nullable Output<String> value;
 
-    public Input<String> getValue() {
-        return this.value == null ? Input.empty() : this.value;
+    public Output<String> getValue() {
+        return this.value == null ? Output.empty() : this.value;
     }
 
     public UsagePlanKeyState(
-        @Nullable Input<String> keyId,
-        @Nullable Input<String> keyType,
-        @Nullable Input<String> name,
-        @Nullable Input<String> usagePlanId,
-        @Nullable Input<String> value) {
+        @Nullable Output<String> keyId,
+        @Nullable Output<String> keyType,
+        @Nullable Output<String> name,
+        @Nullable Output<String> usagePlanId,
+        @Nullable Output<String> value) {
         this.keyId = keyId;
         this.keyType = keyType;
         this.name = name;
@@ -83,11 +83,11 @@ public final class UsagePlanKeyState extends io.pulumi.resources.ResourceArgs {
     }
 
     private UsagePlanKeyState() {
-        this.keyId = Input.empty();
-        this.keyType = Input.empty();
-        this.name = Input.empty();
-        this.usagePlanId = Input.empty();
-        this.value = Input.empty();
+        this.keyId = Output.empty();
+        this.keyType = Output.empty();
+        this.name = Output.empty();
+        this.usagePlanId = Output.empty();
+        this.value = Output.empty();
     }
 
     public static Builder builder() {
@@ -99,11 +99,11 @@ public final class UsagePlanKeyState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> keyId;
-        private @Nullable Input<String> keyType;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> usagePlanId;
-        private @Nullable Input<String> value;
+        private @Nullable Output<String> keyId;
+        private @Nullable Output<String> keyType;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> usagePlanId;
+        private @Nullable Output<String> value;
 
         public Builder() {
     	      // Empty
@@ -118,53 +118,53 @@ public final class UsagePlanKeyState extends io.pulumi.resources.ResourceArgs {
     	      this.value = defaults.value;
         }
 
-        public Builder keyId(@Nullable Input<String> keyId) {
+        public Builder keyId(@Nullable Output<String> keyId) {
             this.keyId = keyId;
             return this;
         }
 
         public Builder keyId(@Nullable String keyId) {
-            this.keyId = Input.ofNullable(keyId);
+            this.keyId = Output.ofNullable(keyId);
             return this;
         }
 
-        public Builder keyType(@Nullable Input<String> keyType) {
+        public Builder keyType(@Nullable Output<String> keyType) {
             this.keyType = keyType;
             return this;
         }
 
         public Builder keyType(@Nullable String keyType) {
-            this.keyType = Input.ofNullable(keyType);
+            this.keyType = Output.ofNullable(keyType);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder usagePlanId(@Nullable Input<String> usagePlanId) {
+        public Builder usagePlanId(@Nullable Output<String> usagePlanId) {
             this.usagePlanId = usagePlanId;
             return this;
         }
 
         public Builder usagePlanId(@Nullable String usagePlanId) {
-            this.usagePlanId = Input.ofNullable(usagePlanId);
+            this.usagePlanId = Output.ofNullable(usagePlanId);
             return this;
         }
 
-        public Builder value(@Nullable Input<String> value) {
+        public Builder value(@Nullable Output<String> value) {
             this.value = value;
             return this;
         }
 
         public Builder value(@Nullable String value) {
-            this.value = Input.ofNullable(value);
+            this.value = Output.ofNullable(value);
             return this;
         }
         public UsagePlanKeyState build() {

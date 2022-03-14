@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class EndpointPropertiesSubnetsArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="first")
-      private final @Nullable Input<String> first;
+      private final @Nullable Output<String> first;
 
-    public Input<String> getFirst() {
-        return this.first == null ? Input.empty() : this.first;
+    public Output<String> getFirst() {
+        return this.first == null ? Output.empty() : this.first;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class EndpointPropertiesSubnetsArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="last")
-      private final @Nullable Input<String> last;
+      private final @Nullable Output<String> last;
 
-    public Input<String> getLast() {
-        return this.last == null ? Input.empty() : this.last;
+    public Output<String> getLast() {
+        return this.last == null ? Output.empty() : this.last;
     }
 
     /**
@@ -46,25 +46,25 @@ public final class EndpointPropertiesSubnetsArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="scope")
-      private final @Nullable Input<Integer> scope;
+      private final @Nullable Output<Integer> scope;
 
-    public Input<Integer> getScope() {
-        return this.scope == null ? Input.empty() : this.scope;
+    public Output<Integer> getScope() {
+        return this.scope == null ? Output.empty() : this.scope;
     }
 
     public EndpointPropertiesSubnetsArgs(
-        @Nullable Input<String> first,
-        @Nullable Input<String> last,
-        @Nullable Input<Integer> scope) {
+        @Nullable Output<String> first,
+        @Nullable Output<String> last,
+        @Nullable Output<Integer> scope) {
         this.first = first;
         this.last = last;
         this.scope = scope;
     }
 
     private EndpointPropertiesSubnetsArgs() {
-        this.first = Input.empty();
-        this.last = Input.empty();
-        this.scope = Input.empty();
+        this.first = Output.empty();
+        this.last = Output.empty();
+        this.scope = Output.empty();
     }
 
     public static Builder builder() {
@@ -76,9 +76,9 @@ public final class EndpointPropertiesSubnetsArgs extends io.pulumi.resources.Res
     }
 
     public static final class Builder {
-        private @Nullable Input<String> first;
-        private @Nullable Input<String> last;
-        private @Nullable Input<Integer> scope;
+        private @Nullable Output<String> first;
+        private @Nullable Output<String> last;
+        private @Nullable Output<Integer> scope;
 
         public Builder() {
     	      // Empty
@@ -91,33 +91,33 @@ public final class EndpointPropertiesSubnetsArgs extends io.pulumi.resources.Res
     	      this.scope = defaults.scope;
         }
 
-        public Builder first(@Nullable Input<String> first) {
+        public Builder first(@Nullable Output<String> first) {
             this.first = first;
             return this;
         }
 
         public Builder first(@Nullable String first) {
-            this.first = Input.ofNullable(first);
+            this.first = Output.ofNullable(first);
             return this;
         }
 
-        public Builder last(@Nullable Input<String> last) {
+        public Builder last(@Nullable Output<String> last) {
             this.last = last;
             return this;
         }
 
         public Builder last(@Nullable String last) {
-            this.last = Input.ofNullable(last);
+            this.last = Output.ofNullable(last);
             return this;
         }
 
-        public Builder scope(@Nullable Input<Integer> scope) {
+        public Builder scope(@Nullable Output<Integer> scope) {
             this.scope = scope;
             return this;
         }
 
         public Builder scope(@Nullable Integer scope) {
-            this.scope = Input.ofNullable(scope);
+            this.scope = Output.ofNullable(scope);
             return this;
         }
         public EndpointPropertiesSubnetsArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.bigquery.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.bigquery.inputs.TableRangePartitioningRangeGetArgs;
 import java.lang.String;
@@ -20,9 +20,9 @@ public final class TableRangePartitioningGetArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="field", required=true)
-      private final Input<String> field;
+      private final Output<String> field;
 
-    public Input<String> getField() {
+    public Output<String> getField() {
         return this.field;
     }
 
@@ -32,22 +32,22 @@ public final class TableRangePartitioningGetArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="range", required=true)
-      private final Input<TableRangePartitioningRangeGetArgs> range;
+      private final Output<TableRangePartitioningRangeGetArgs> range;
 
-    public Input<TableRangePartitioningRangeGetArgs> getRange() {
+    public Output<TableRangePartitioningRangeGetArgs> getRange() {
         return this.range;
     }
 
     public TableRangePartitioningGetArgs(
-        Input<String> field,
-        Input<TableRangePartitioningRangeGetArgs> range) {
+        Output<String> field,
+        Output<TableRangePartitioningRangeGetArgs> range) {
         this.field = Objects.requireNonNull(field, "expected parameter 'field' to be non-null");
         this.range = Objects.requireNonNull(range, "expected parameter 'range' to be non-null");
     }
 
     private TableRangePartitioningGetArgs() {
-        this.field = Input.empty();
-        this.range = Input.empty();
+        this.field = Output.empty();
+        this.range = Output.empty();
     }
 
     public static Builder builder() {
@@ -59,8 +59,8 @@ public final class TableRangePartitioningGetArgs extends io.pulumi.resources.Res
     }
 
     public static final class Builder {
-        private Input<String> field;
-        private Input<TableRangePartitioningRangeGetArgs> range;
+        private Output<String> field;
+        private Output<TableRangePartitioningRangeGetArgs> range;
 
         public Builder() {
     	      // Empty
@@ -72,23 +72,23 @@ public final class TableRangePartitioningGetArgs extends io.pulumi.resources.Res
     	      this.range = defaults.range;
         }
 
-        public Builder field(Input<String> field) {
+        public Builder field(Output<String> field) {
             this.field = Objects.requireNonNull(field);
             return this;
         }
 
         public Builder field(String field) {
-            this.field = Input.of(Objects.requireNonNull(field));
+            this.field = Output.of(Objects.requireNonNull(field));
             return this;
         }
 
-        public Builder range(Input<TableRangePartitioningRangeGetArgs> range) {
+        public Builder range(Output<TableRangePartitioningRangeGetArgs> range) {
             this.range = Objects.requireNonNull(range);
             return this;
         }
 
         public Builder range(TableRangePartitioningRangeGetArgs range) {
-            this.range = Input.of(Objects.requireNonNull(range));
+            this.range = Output.of(Objects.requireNonNull(range));
             return this;
         }
         public TableRangePartitioningGetArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.servicefabric.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.String;
@@ -28,10 +28,10 @@ public final class ApplicationMetricDescriptionArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="maximumCapacity")
-      private final @Nullable Input<Double> maximumCapacity;
+      private final @Nullable Output<Double> maximumCapacity;
 
-    public Input<Double> getMaximumCapacity() {
-        return this.maximumCapacity == null ? Input.empty() : this.maximumCapacity;
+    public Output<Double> getMaximumCapacity() {
+        return this.maximumCapacity == null ? Output.empty() : this.maximumCapacity;
     }
 
     /**
@@ -39,10 +39,10 @@ public final class ApplicationMetricDescriptionArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -54,10 +54,10 @@ public final class ApplicationMetricDescriptionArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="reservationCapacity")
-      private final @Nullable Input<Double> reservationCapacity;
+      private final @Nullable Output<Double> reservationCapacity;
 
-    public Input<Double> getReservationCapacity() {
-        return this.reservationCapacity == null ? Input.empty() : this.reservationCapacity;
+    public Output<Double> getReservationCapacity() {
+        return this.reservationCapacity == null ? Output.empty() : this.reservationCapacity;
     }
 
     /**
@@ -67,17 +67,17 @@ public final class ApplicationMetricDescriptionArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="totalApplicationCapacity")
-      private final @Nullable Input<Double> totalApplicationCapacity;
+      private final @Nullable Output<Double> totalApplicationCapacity;
 
-    public Input<Double> getTotalApplicationCapacity() {
-        return this.totalApplicationCapacity == null ? Input.empty() : this.totalApplicationCapacity;
+    public Output<Double> getTotalApplicationCapacity() {
+        return this.totalApplicationCapacity == null ? Output.empty() : this.totalApplicationCapacity;
     }
 
     public ApplicationMetricDescriptionArgs(
-        @Nullable Input<Double> maximumCapacity,
-        @Nullable Input<String> name,
-        @Nullable Input<Double> reservationCapacity,
-        @Nullable Input<Double> totalApplicationCapacity) {
+        @Nullable Output<Double> maximumCapacity,
+        @Nullable Output<String> name,
+        @Nullable Output<Double> reservationCapacity,
+        @Nullable Output<Double> totalApplicationCapacity) {
         this.maximumCapacity = maximumCapacity;
         this.name = name;
         this.reservationCapacity = reservationCapacity;
@@ -85,10 +85,10 @@ public final class ApplicationMetricDescriptionArgs extends io.pulumi.resources.
     }
 
     private ApplicationMetricDescriptionArgs() {
-        this.maximumCapacity = Input.empty();
-        this.name = Input.empty();
-        this.reservationCapacity = Input.empty();
-        this.totalApplicationCapacity = Input.empty();
+        this.maximumCapacity = Output.empty();
+        this.name = Output.empty();
+        this.reservationCapacity = Output.empty();
+        this.totalApplicationCapacity = Output.empty();
     }
 
     public static Builder builder() {
@@ -100,10 +100,10 @@ public final class ApplicationMetricDescriptionArgs extends io.pulumi.resources.
     }
 
     public static final class Builder {
-        private @Nullable Input<Double> maximumCapacity;
-        private @Nullable Input<String> name;
-        private @Nullable Input<Double> reservationCapacity;
-        private @Nullable Input<Double> totalApplicationCapacity;
+        private @Nullable Output<Double> maximumCapacity;
+        private @Nullable Output<String> name;
+        private @Nullable Output<Double> reservationCapacity;
+        private @Nullable Output<Double> totalApplicationCapacity;
 
         public Builder() {
     	      // Empty
@@ -117,43 +117,43 @@ public final class ApplicationMetricDescriptionArgs extends io.pulumi.resources.
     	      this.totalApplicationCapacity = defaults.totalApplicationCapacity;
         }
 
-        public Builder maximumCapacity(@Nullable Input<Double> maximumCapacity) {
+        public Builder maximumCapacity(@Nullable Output<Double> maximumCapacity) {
             this.maximumCapacity = maximumCapacity;
             return this;
         }
 
         public Builder maximumCapacity(@Nullable Double maximumCapacity) {
-            this.maximumCapacity = Input.ofNullable(maximumCapacity);
+            this.maximumCapacity = Output.ofNullable(maximumCapacity);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder reservationCapacity(@Nullable Input<Double> reservationCapacity) {
+        public Builder reservationCapacity(@Nullable Output<Double> reservationCapacity) {
             this.reservationCapacity = reservationCapacity;
             return this;
         }
 
         public Builder reservationCapacity(@Nullable Double reservationCapacity) {
-            this.reservationCapacity = Input.ofNullable(reservationCapacity);
+            this.reservationCapacity = Output.ofNullable(reservationCapacity);
             return this;
         }
 
-        public Builder totalApplicationCapacity(@Nullable Input<Double> totalApplicationCapacity) {
+        public Builder totalApplicationCapacity(@Nullable Output<Double> totalApplicationCapacity) {
             this.totalApplicationCapacity = totalApplicationCapacity;
             return this;
         }
 
         public Builder totalApplicationCapacity(@Nullable Double totalApplicationCapacity) {
-            this.totalApplicationCapacity = Input.ofNullable(totalApplicationCapacity);
+            this.totalApplicationCapacity = Output.ofNullable(totalApplicationCapacity);
             return this;
         }
         public ApplicationMetricDescriptionArgs build() {

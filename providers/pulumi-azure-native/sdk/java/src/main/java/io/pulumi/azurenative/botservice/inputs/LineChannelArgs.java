@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.botservice.inputs;
 
 import io.pulumi.azurenative.botservice.inputs.LineChannelPropertiesArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -25,9 +25,9 @@ public final class LineChannelArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="channelName", required=true)
-      private final Input<String> channelName;
+      private final Output<String> channelName;
 
-    public Input<String> getChannelName() {
+    public Output<String> getChannelName() {
         return this.channelName;
     }
 
@@ -36,10 +36,10 @@ public final class LineChannelArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="etag")
-      private final @Nullable Input<String> etag;
+      private final @Nullable Output<String> etag;
 
-    public Input<String> getEtag() {
-        return this.etag == null ? Input.empty() : this.etag;
+    public Output<String> getEtag() {
+        return this.etag == null ? Output.empty() : this.etag;
     }
 
     /**
@@ -47,10 +47,10 @@ public final class LineChannelArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -58,28 +58,28 @@ public final class LineChannelArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="properties")
-      private final @Nullable Input<LineChannelPropertiesArgs> properties;
+      private final @Nullable Output<LineChannelPropertiesArgs> properties;
 
-    public Input<LineChannelPropertiesArgs> getProperties() {
-        return this.properties == null ? Input.empty() : this.properties;
+    public Output<LineChannelPropertiesArgs> getProperties() {
+        return this.properties == null ? Output.empty() : this.properties;
     }
 
     public LineChannelArgs(
-        Input<String> channelName,
-        @Nullable Input<String> etag,
-        @Nullable Input<String> location,
-        @Nullable Input<LineChannelPropertiesArgs> properties) {
+        Output<String> channelName,
+        @Nullable Output<String> etag,
+        @Nullable Output<String> location,
+        @Nullable Output<LineChannelPropertiesArgs> properties) {
         this.channelName = Objects.requireNonNull(channelName, "expected parameter 'channelName' to be non-null");
         this.etag = etag;
-        this.location = location == null ? Input.ofNullable("global") : location;
+        this.location = location == null ? Output.ofNullable("global") : location;
         this.properties = properties;
     }
 
     private LineChannelArgs() {
-        this.channelName = Input.empty();
-        this.etag = Input.empty();
-        this.location = Input.empty();
-        this.properties = Input.empty();
+        this.channelName = Output.empty();
+        this.etag = Output.empty();
+        this.location = Output.empty();
+        this.properties = Output.empty();
     }
 
     public static Builder builder() {
@@ -91,10 +91,10 @@ public final class LineChannelArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> channelName;
-        private @Nullable Input<String> etag;
-        private @Nullable Input<String> location;
-        private @Nullable Input<LineChannelPropertiesArgs> properties;
+        private Output<String> channelName;
+        private @Nullable Output<String> etag;
+        private @Nullable Output<String> location;
+        private @Nullable Output<LineChannelPropertiesArgs> properties;
 
         public Builder() {
     	      // Empty
@@ -108,43 +108,43 @@ public final class LineChannelArgs extends io.pulumi.resources.ResourceArgs {
     	      this.properties = defaults.properties;
         }
 
-        public Builder channelName(Input<String> channelName) {
+        public Builder channelName(Output<String> channelName) {
             this.channelName = Objects.requireNonNull(channelName);
             return this;
         }
 
         public Builder channelName(String channelName) {
-            this.channelName = Input.of(Objects.requireNonNull(channelName));
+            this.channelName = Output.of(Objects.requireNonNull(channelName));
             return this;
         }
 
-        public Builder etag(@Nullable Input<String> etag) {
+        public Builder etag(@Nullable Output<String> etag) {
             this.etag = etag;
             return this;
         }
 
         public Builder etag(@Nullable String etag) {
-            this.etag = Input.ofNullable(etag);
+            this.etag = Output.ofNullable(etag);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder properties(@Nullable Input<LineChannelPropertiesArgs> properties) {
+        public Builder properties(@Nullable Output<LineChannelPropertiesArgs> properties) {
             this.properties = properties;
             return this;
         }
 
         public Builder properties(@Nullable LineChannelPropertiesArgs properties) {
-            this.properties = Input.ofNullable(properties);
+            this.properties = Output.ofNullable(properties);
             return this;
         }
         public LineChannelArgs build() {

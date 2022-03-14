@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.ecr.inputs;
 
 import io.pulumi.awsnative.ecr.enums.ReplicationConfigurationFilterType;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,29 +19,29 @@ public final class ReplicationConfigurationRepositoryFilterArgs extends io.pulum
     public static final ReplicationConfigurationRepositoryFilterArgs Empty = new ReplicationConfigurationRepositoryFilterArgs();
 
     @InputImport(name="filter", required=true)
-      private final Input<String> filter;
+      private final Output<String> filter;
 
-    public Input<String> getFilter() {
+    public Output<String> getFilter() {
         return this.filter;
     }
 
     @InputImport(name="filterType", required=true)
-      private final Input<ReplicationConfigurationFilterType> filterType;
+      private final Output<ReplicationConfigurationFilterType> filterType;
 
-    public Input<ReplicationConfigurationFilterType> getFilterType() {
+    public Output<ReplicationConfigurationFilterType> getFilterType() {
         return this.filterType;
     }
 
     public ReplicationConfigurationRepositoryFilterArgs(
-        Input<String> filter,
-        Input<ReplicationConfigurationFilterType> filterType) {
+        Output<String> filter,
+        Output<ReplicationConfigurationFilterType> filterType) {
         this.filter = Objects.requireNonNull(filter, "expected parameter 'filter' to be non-null");
         this.filterType = Objects.requireNonNull(filterType, "expected parameter 'filterType' to be non-null");
     }
 
     private ReplicationConfigurationRepositoryFilterArgs() {
-        this.filter = Input.empty();
-        this.filterType = Input.empty();
+        this.filter = Output.empty();
+        this.filterType = Output.empty();
     }
 
     public static Builder builder() {
@@ -53,8 +53,8 @@ public final class ReplicationConfigurationRepositoryFilterArgs extends io.pulum
     }
 
     public static final class Builder {
-        private Input<String> filter;
-        private Input<ReplicationConfigurationFilterType> filterType;
+        private Output<String> filter;
+        private Output<ReplicationConfigurationFilterType> filterType;
 
         public Builder() {
     	      // Empty
@@ -66,23 +66,23 @@ public final class ReplicationConfigurationRepositoryFilterArgs extends io.pulum
     	      this.filterType = defaults.filterType;
         }
 
-        public Builder filter(Input<String> filter) {
+        public Builder filter(Output<String> filter) {
             this.filter = Objects.requireNonNull(filter);
             return this;
         }
 
         public Builder filter(String filter) {
-            this.filter = Input.of(Objects.requireNonNull(filter));
+            this.filter = Output.of(Objects.requireNonNull(filter));
             return this;
         }
 
-        public Builder filterType(Input<ReplicationConfigurationFilterType> filterType) {
+        public Builder filterType(Output<ReplicationConfigurationFilterType> filterType) {
             this.filterType = Objects.requireNonNull(filterType);
             return this;
         }
 
         public Builder filterType(ReplicationConfigurationFilterType filterType) {
-            this.filterType = Input.of(Objects.requireNonNull(filterType));
+            this.filterType = Output.of(Objects.requireNonNull(filterType));
             return this;
         }
         public ReplicationConfigurationRepositoryFilterArgs build() {

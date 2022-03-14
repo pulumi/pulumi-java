@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.kinesis.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class AnalyticsApplicationCloudwatchLoggingOptionsArgs extends io.p
      * 
      */
     @InputImport(name="id")
-      private final @Nullable Input<String> id;
+      private final @Nullable Output<String> id;
 
-    public Input<String> getId() {
-        return this.id == null ? Input.empty() : this.id;
+    public Output<String> getId() {
+        return this.id == null ? Output.empty() : this.id;
     }
 
     /**
@@ -30,9 +30,9 @@ public final class AnalyticsApplicationCloudwatchLoggingOptionsArgs extends io.p
      * 
      */
     @InputImport(name="logStreamArn", required=true)
-      private final Input<String> logStreamArn;
+      private final Output<String> logStreamArn;
 
-    public Input<String> getLogStreamArn() {
+    public Output<String> getLogStreamArn() {
         return this.logStreamArn;
     }
 
@@ -41,25 +41,25 @@ public final class AnalyticsApplicationCloudwatchLoggingOptionsArgs extends io.p
      * 
      */
     @InputImport(name="roleArn", required=true)
-      private final Input<String> roleArn;
+      private final Output<String> roleArn;
 
-    public Input<String> getRoleArn() {
+    public Output<String> getRoleArn() {
         return this.roleArn;
     }
 
     public AnalyticsApplicationCloudwatchLoggingOptionsArgs(
-        @Nullable Input<String> id,
-        Input<String> logStreamArn,
-        Input<String> roleArn) {
+        @Nullable Output<String> id,
+        Output<String> logStreamArn,
+        Output<String> roleArn) {
         this.id = id;
         this.logStreamArn = Objects.requireNonNull(logStreamArn, "expected parameter 'logStreamArn' to be non-null");
         this.roleArn = Objects.requireNonNull(roleArn, "expected parameter 'roleArn' to be non-null");
     }
 
     private AnalyticsApplicationCloudwatchLoggingOptionsArgs() {
-        this.id = Input.empty();
-        this.logStreamArn = Input.empty();
-        this.roleArn = Input.empty();
+        this.id = Output.empty();
+        this.logStreamArn = Output.empty();
+        this.roleArn = Output.empty();
     }
 
     public static Builder builder() {
@@ -71,9 +71,9 @@ public final class AnalyticsApplicationCloudwatchLoggingOptionsArgs extends io.p
     }
 
     public static final class Builder {
-        private @Nullable Input<String> id;
-        private Input<String> logStreamArn;
-        private Input<String> roleArn;
+        private @Nullable Output<String> id;
+        private Output<String> logStreamArn;
+        private Output<String> roleArn;
 
         public Builder() {
     	      // Empty
@@ -86,33 +86,33 @@ public final class AnalyticsApplicationCloudwatchLoggingOptionsArgs extends io.p
     	      this.roleArn = defaults.roleArn;
         }
 
-        public Builder id(@Nullable Input<String> id) {
+        public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
 
         public Builder id(@Nullable String id) {
-            this.id = Input.ofNullable(id);
+            this.id = Output.ofNullable(id);
             return this;
         }
 
-        public Builder logStreamArn(Input<String> logStreamArn) {
+        public Builder logStreamArn(Output<String> logStreamArn) {
             this.logStreamArn = Objects.requireNonNull(logStreamArn);
             return this;
         }
 
         public Builder logStreamArn(String logStreamArn) {
-            this.logStreamArn = Input.of(Objects.requireNonNull(logStreamArn));
+            this.logStreamArn = Output.of(Objects.requireNonNull(logStreamArn));
             return this;
         }
 
-        public Builder roleArn(Input<String> roleArn) {
+        public Builder roleArn(Output<String> roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
 
         public Builder roleArn(String roleArn) {
-            this.roleArn = Input.of(Objects.requireNonNull(roleArn));
+            this.roleArn = Output.of(Objects.requireNonNull(roleArn));
             return this;
         }
         public AnalyticsApplicationCloudwatchLoggingOptionsArgs build() {

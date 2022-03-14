@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.web.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -24,17 +24,17 @@ public final class StatusCodesRangeBasedTriggerArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="count")
-      private final @Nullable Input<Integer> count;
+      private final @Nullable Output<Integer> count;
 
-    public Input<Integer> getCount() {
-        return this.count == null ? Input.empty() : this.count;
+    public Output<Integer> getCount() {
+        return this.count == null ? Output.empty() : this.count;
     }
 
     @InputImport(name="path")
-      private final @Nullable Input<String> path;
+      private final @Nullable Output<String> path;
 
-    public Input<String> getPath() {
-        return this.path == null ? Input.empty() : this.path;
+    public Output<String> getPath() {
+        return this.path == null ? Output.empty() : this.path;
     }
 
     /**
@@ -42,10 +42,10 @@ public final class StatusCodesRangeBasedTriggerArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="statusCodes")
-      private final @Nullable Input<String> statusCodes;
+      private final @Nullable Output<String> statusCodes;
 
-    public Input<String> getStatusCodes() {
-        return this.statusCodes == null ? Input.empty() : this.statusCodes;
+    public Output<String> getStatusCodes() {
+        return this.statusCodes == null ? Output.empty() : this.statusCodes;
     }
 
     /**
@@ -53,17 +53,17 @@ public final class StatusCodesRangeBasedTriggerArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="timeInterval")
-      private final @Nullable Input<String> timeInterval;
+      private final @Nullable Output<String> timeInterval;
 
-    public Input<String> getTimeInterval() {
-        return this.timeInterval == null ? Input.empty() : this.timeInterval;
+    public Output<String> getTimeInterval() {
+        return this.timeInterval == null ? Output.empty() : this.timeInterval;
     }
 
     public StatusCodesRangeBasedTriggerArgs(
-        @Nullable Input<Integer> count,
-        @Nullable Input<String> path,
-        @Nullable Input<String> statusCodes,
-        @Nullable Input<String> timeInterval) {
+        @Nullable Output<Integer> count,
+        @Nullable Output<String> path,
+        @Nullable Output<String> statusCodes,
+        @Nullable Output<String> timeInterval) {
         this.count = count;
         this.path = path;
         this.statusCodes = statusCodes;
@@ -71,10 +71,10 @@ public final class StatusCodesRangeBasedTriggerArgs extends io.pulumi.resources.
     }
 
     private StatusCodesRangeBasedTriggerArgs() {
-        this.count = Input.empty();
-        this.path = Input.empty();
-        this.statusCodes = Input.empty();
-        this.timeInterval = Input.empty();
+        this.count = Output.empty();
+        this.path = Output.empty();
+        this.statusCodes = Output.empty();
+        this.timeInterval = Output.empty();
     }
 
     public static Builder builder() {
@@ -86,10 +86,10 @@ public final class StatusCodesRangeBasedTriggerArgs extends io.pulumi.resources.
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> count;
-        private @Nullable Input<String> path;
-        private @Nullable Input<String> statusCodes;
-        private @Nullable Input<String> timeInterval;
+        private @Nullable Output<Integer> count;
+        private @Nullable Output<String> path;
+        private @Nullable Output<String> statusCodes;
+        private @Nullable Output<String> timeInterval;
 
         public Builder() {
     	      // Empty
@@ -103,43 +103,43 @@ public final class StatusCodesRangeBasedTriggerArgs extends io.pulumi.resources.
     	      this.timeInterval = defaults.timeInterval;
         }
 
-        public Builder count(@Nullable Input<Integer> count) {
+        public Builder count(@Nullable Output<Integer> count) {
             this.count = count;
             return this;
         }
 
         public Builder count(@Nullable Integer count) {
-            this.count = Input.ofNullable(count);
+            this.count = Output.ofNullable(count);
             return this;
         }
 
-        public Builder path(@Nullable Input<String> path) {
+        public Builder path(@Nullable Output<String> path) {
             this.path = path;
             return this;
         }
 
         public Builder path(@Nullable String path) {
-            this.path = Input.ofNullable(path);
+            this.path = Output.ofNullable(path);
             return this;
         }
 
-        public Builder statusCodes(@Nullable Input<String> statusCodes) {
+        public Builder statusCodes(@Nullable Output<String> statusCodes) {
             this.statusCodes = statusCodes;
             return this;
         }
 
         public Builder statusCodes(@Nullable String statusCodes) {
-            this.statusCodes = Input.ofNullable(statusCodes);
+            this.statusCodes = Output.ofNullable(statusCodes);
             return this;
         }
 
-        public Builder timeInterval(@Nullable Input<String> timeInterval) {
+        public Builder timeInterval(@Nullable Output<String> timeInterval) {
             this.timeInterval = timeInterval;
             return this;
         }
 
         public Builder timeInterval(@Nullable String timeInterval) {
-            this.timeInterval = Input.ofNullable(timeInterval);
+            this.timeInterval = Output.ofNullable(timeInterval);
             return this;
         }
         public StatusCodesRangeBasedTriggerArgs build() {

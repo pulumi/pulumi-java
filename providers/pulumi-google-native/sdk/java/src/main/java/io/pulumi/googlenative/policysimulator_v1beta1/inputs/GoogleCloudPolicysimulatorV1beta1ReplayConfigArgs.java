@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.policysimulator_v1beta1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.policysimulator_v1beta1.enums.GoogleCloudPolicysimulatorV1beta1ReplayConfigLogSource;
 import java.lang.String;
@@ -25,10 +25,10 @@ public final class GoogleCloudPolicysimulatorV1beta1ReplayConfigArgs extends io.
      * 
      */
     @InputImport(name="logSource")
-      private final @Nullable Input<GoogleCloudPolicysimulatorV1beta1ReplayConfigLogSource> logSource;
+      private final @Nullable Output<GoogleCloudPolicysimulatorV1beta1ReplayConfigLogSource> logSource;
 
-    public Input<GoogleCloudPolicysimulatorV1beta1ReplayConfigLogSource> getLogSource() {
-        return this.logSource == null ? Input.empty() : this.logSource;
+    public Output<GoogleCloudPolicysimulatorV1beta1ReplayConfigLogSource> getLogSource() {
+        return this.logSource == null ? Output.empty() : this.logSource;
     }
 
     /**
@@ -36,22 +36,22 @@ public final class GoogleCloudPolicysimulatorV1beta1ReplayConfigArgs extends io.
      * 
      */
     @InputImport(name="policyOverlay")
-      private final @Nullable Input<Map<String,String>> policyOverlay;
+      private final @Nullable Output<Map<String,String>> policyOverlay;
 
-    public Input<Map<String,String>> getPolicyOverlay() {
-        return this.policyOverlay == null ? Input.empty() : this.policyOverlay;
+    public Output<Map<String,String>> getPolicyOverlay() {
+        return this.policyOverlay == null ? Output.empty() : this.policyOverlay;
     }
 
     public GoogleCloudPolicysimulatorV1beta1ReplayConfigArgs(
-        @Nullable Input<GoogleCloudPolicysimulatorV1beta1ReplayConfigLogSource> logSource,
-        @Nullable Input<Map<String,String>> policyOverlay) {
+        @Nullable Output<GoogleCloudPolicysimulatorV1beta1ReplayConfigLogSource> logSource,
+        @Nullable Output<Map<String,String>> policyOverlay) {
         this.logSource = logSource;
         this.policyOverlay = policyOverlay;
     }
 
     private GoogleCloudPolicysimulatorV1beta1ReplayConfigArgs() {
-        this.logSource = Input.empty();
-        this.policyOverlay = Input.empty();
+        this.logSource = Output.empty();
+        this.policyOverlay = Output.empty();
     }
 
     public static Builder builder() {
@@ -63,8 +63,8 @@ public final class GoogleCloudPolicysimulatorV1beta1ReplayConfigArgs extends io.
     }
 
     public static final class Builder {
-        private @Nullable Input<GoogleCloudPolicysimulatorV1beta1ReplayConfigLogSource> logSource;
-        private @Nullable Input<Map<String,String>> policyOverlay;
+        private @Nullable Output<GoogleCloudPolicysimulatorV1beta1ReplayConfigLogSource> logSource;
+        private @Nullable Output<Map<String,String>> policyOverlay;
 
         public Builder() {
     	      // Empty
@@ -76,23 +76,23 @@ public final class GoogleCloudPolicysimulatorV1beta1ReplayConfigArgs extends io.
     	      this.policyOverlay = defaults.policyOverlay;
         }
 
-        public Builder logSource(@Nullable Input<GoogleCloudPolicysimulatorV1beta1ReplayConfigLogSource> logSource) {
+        public Builder logSource(@Nullable Output<GoogleCloudPolicysimulatorV1beta1ReplayConfigLogSource> logSource) {
             this.logSource = logSource;
             return this;
         }
 
         public Builder logSource(@Nullable GoogleCloudPolicysimulatorV1beta1ReplayConfigLogSource logSource) {
-            this.logSource = Input.ofNullable(logSource);
+            this.logSource = Output.ofNullable(logSource);
             return this;
         }
 
-        public Builder policyOverlay(@Nullable Input<Map<String,String>> policyOverlay) {
+        public Builder policyOverlay(@Nullable Output<Map<String,String>> policyOverlay) {
             this.policyOverlay = policyOverlay;
             return this;
         }
 
         public Builder policyOverlay(@Nullable Map<String,String> policyOverlay) {
-            this.policyOverlay = Input.ofNullable(policyOverlay);
+            this.policyOverlay = Output.ofNullable(policyOverlay);
             return this;
         }
         public GoogleCloudPolicysimulatorV1beta1ReplayConfigArgs build() {

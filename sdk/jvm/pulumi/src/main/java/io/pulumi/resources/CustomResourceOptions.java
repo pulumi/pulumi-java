@@ -1,7 +1,7 @@
 package io.pulumi.resources;
 
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.internal.Copyable;
 
 import javax.annotation.Nullable;
@@ -26,16 +26,16 @@ public final class CustomResourceOptions extends ResourceOptions implements Copy
     private CustomResourceOptions() { /* empty */ }
 
     private CustomResourceOptions(
-            @Nullable Input<String> id,
+            @Nullable Output<String> id,
             @Nullable Resource parent,
-            @Nullable Input<List<Resource>> dependsOn,
+            @Nullable Output<List<Resource>> dependsOn,
             boolean protect,
             @Nullable List<String> ignoreChanges,
             @Nullable String version,
             @Nullable ProviderResource provider,
             @Nullable CustomTimeouts customTimeouts,
             @Nullable List<ResourceTransformation> resourceTransformations,
-            @Nullable List<Input<Alias>> aliases,
+            @Nullable List<Output<Alias>> aliases,
             @Nullable String urn,
             boolean deleteBeforeReplace,
             @Nullable List<String> additionalSecretOutputs,
@@ -150,7 +150,7 @@ public final class CustomResourceOptions extends ResourceOptions implements Copy
     public static CustomResourceOptions merge(
             @Nullable CustomResourceOptions options1,
             @Nullable CustomResourceOptions options2,
-            @Nullable Input<String> id
+            @Nullable Output<String> id
     ) {
         options1 = options1 != null ? options1.copy() : Empty;
         options2 = options2 != null ? options2.copy() : Empty;

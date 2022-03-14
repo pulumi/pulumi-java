@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.core_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class SeccompProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="localhostProfile")
-      private final @Nullable Input<String> localhostProfile;
+      private final @Nullable Output<String> localhostProfile;
 
-    public Input<String> getLocalhostProfile() {
-        return this.localhostProfile == null ? Input.empty() : this.localhostProfile;
+    public Output<String> getLocalhostProfile() {
+        return this.localhostProfile == null ? Output.empty() : this.localhostProfile;
     }
 
     /**
@@ -41,22 +41,22 @@ public final class SeccompProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<String> type;
+      private final Output<String> type;
 
-    public Input<String> getType() {
+    public Output<String> getType() {
         return this.type;
     }
 
     public SeccompProfileArgs(
-        @Nullable Input<String> localhostProfile,
-        Input<String> type) {
+        @Nullable Output<String> localhostProfile,
+        Output<String> type) {
         this.localhostProfile = localhostProfile;
         this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
     }
 
     private SeccompProfileArgs() {
-        this.localhostProfile = Input.empty();
-        this.type = Input.empty();
+        this.localhostProfile = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -68,8 +68,8 @@ public final class SeccompProfileArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> localhostProfile;
-        private Input<String> type;
+        private @Nullable Output<String> localhostProfile;
+        private Output<String> type;
 
         public Builder() {
     	      // Empty
@@ -81,23 +81,23 @@ public final class SeccompProfileArgs extends io.pulumi.resources.ResourceArgs {
     	      this.type = defaults.type;
         }
 
-        public Builder localhostProfile(@Nullable Input<String> localhostProfile) {
+        public Builder localhostProfile(@Nullable Output<String> localhostProfile) {
             this.localhostProfile = localhostProfile;
             return this;
         }
 
         public Builder localhostProfile(@Nullable String localhostProfile) {
-            this.localhostProfile = Input.ofNullable(localhostProfile);
+            this.localhostProfile = Output.ofNullable(localhostProfile);
             return this;
         }
 
-        public Builder type(Input<String> type) {
+        public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(String type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
         public SeccompProfileArgs build() {

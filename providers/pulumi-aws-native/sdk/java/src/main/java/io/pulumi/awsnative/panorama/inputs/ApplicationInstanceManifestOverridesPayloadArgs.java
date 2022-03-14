@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.panorama.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -15,18 +15,18 @@ public final class ApplicationInstanceManifestOverridesPayloadArgs extends io.pu
     public static final ApplicationInstanceManifestOverridesPayloadArgs Empty = new ApplicationInstanceManifestOverridesPayloadArgs();
 
     @InputImport(name="payloadData")
-      private final @Nullable Input<String> payloadData;
+      private final @Nullable Output<String> payloadData;
 
-    public Input<String> getPayloadData() {
-        return this.payloadData == null ? Input.empty() : this.payloadData;
+    public Output<String> getPayloadData() {
+        return this.payloadData == null ? Output.empty() : this.payloadData;
     }
 
-    public ApplicationInstanceManifestOverridesPayloadArgs(@Nullable Input<String> payloadData) {
+    public ApplicationInstanceManifestOverridesPayloadArgs(@Nullable Output<String> payloadData) {
         this.payloadData = payloadData;
     }
 
     private ApplicationInstanceManifestOverridesPayloadArgs() {
-        this.payloadData = Input.empty();
+        this.payloadData = Output.empty();
     }
 
     public static Builder builder() {
@@ -38,7 +38,7 @@ public final class ApplicationInstanceManifestOverridesPayloadArgs extends io.pu
     }
 
     public static final class Builder {
-        private @Nullable Input<String> payloadData;
+        private @Nullable Output<String> payloadData;
 
         public Builder() {
     	      // Empty
@@ -49,13 +49,13 @@ public final class ApplicationInstanceManifestOverridesPayloadArgs extends io.pu
     	      this.payloadData = defaults.payloadData;
         }
 
-        public Builder payloadData(@Nullable Input<String> payloadData) {
+        public Builder payloadData(@Nullable Output<String> payloadData) {
             this.payloadData = payloadData;
             return this;
         }
 
         public Builder payloadData(@Nullable String payloadData) {
-            this.payloadData = Input.ofNullable(payloadData);
+            this.payloadData = Output.ofNullable(payloadData);
             return this;
         }
         public ApplicationInstanceManifestOverridesPayloadArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.deploymentmanager_v2beta;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.deploymentmanager_v2beta.inputs.CollectionOverrideArgs;
 import io.pulumi.googlenative.deploymentmanager_v2beta.inputs.CredentialArgs;
@@ -24,10 +24,10 @@ public final class TypeProviderArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="collectionOverrides")
-      private final @Nullable Input<List<CollectionOverrideArgs>> collectionOverrides;
+      private final @Nullable Output<List<CollectionOverrideArgs>> collectionOverrides;
 
-    public Input<List<CollectionOverrideArgs>> getCollectionOverrides() {
-        return this.collectionOverrides == null ? Input.empty() : this.collectionOverrides;
+    public Output<List<CollectionOverrideArgs>> getCollectionOverrides() {
+        return this.collectionOverrides == null ? Output.empty() : this.collectionOverrides;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class TypeProviderArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="credential")
-      private final @Nullable Input<CredentialArgs> credential;
+      private final @Nullable Output<CredentialArgs> credential;
 
-    public Input<CredentialArgs> getCredential() {
-        return this.credential == null ? Input.empty() : this.credential;
+    public Output<CredentialArgs> getCredential() {
+        return this.credential == null ? Output.empty() : this.credential;
     }
 
     /**
@@ -46,10 +46,10 @@ public final class TypeProviderArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="customCertificateAuthorityRoots")
-      private final @Nullable Input<List<String>> customCertificateAuthorityRoots;
+      private final @Nullable Output<List<String>> customCertificateAuthorityRoots;
 
-    public Input<List<String>> getCustomCertificateAuthorityRoots() {
-        return this.customCertificateAuthorityRoots == null ? Input.empty() : this.customCertificateAuthorityRoots;
+    public Output<List<String>> getCustomCertificateAuthorityRoots() {
+        return this.customCertificateAuthorityRoots == null ? Output.empty() : this.customCertificateAuthorityRoots;
     }
 
     /**
@@ -57,10 +57,10 @@ public final class TypeProviderArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -68,10 +68,10 @@ public final class TypeProviderArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="descriptorUrl")
-      private final @Nullable Input<String> descriptorUrl;
+      private final @Nullable Output<String> descriptorUrl;
 
-    public Input<String> getDescriptorUrl() {
-        return this.descriptorUrl == null ? Input.empty() : this.descriptorUrl;
+    public Output<String> getDescriptorUrl() {
+        return this.descriptorUrl == null ? Output.empty() : this.descriptorUrl;
     }
 
     /**
@@ -79,10 +79,10 @@ public final class TypeProviderArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labels")
-      private final @Nullable Input<List<TypeProviderLabelEntryArgs>> labels;
+      private final @Nullable Output<List<TypeProviderLabelEntryArgs>> labels;
 
-    public Input<List<TypeProviderLabelEntryArgs>> getLabels() {
-        return this.labels == null ? Input.empty() : this.labels;
+    public Output<List<TypeProviderLabelEntryArgs>> getLabels() {
+        return this.labels == null ? Output.empty() : this.labels;
     }
 
     /**
@@ -90,10 +90,10 @@ public final class TypeProviderArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -101,29 +101,29 @@ public final class TypeProviderArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="options")
-      private final @Nullable Input<OptionsArgs> options;
+      private final @Nullable Output<OptionsArgs> options;
 
-    public Input<OptionsArgs> getOptions() {
-        return this.options == null ? Input.empty() : this.options;
+    public Output<OptionsArgs> getOptions() {
+        return this.options == null ? Output.empty() : this.options;
     }
 
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     public TypeProviderArgs(
-        @Nullable Input<List<CollectionOverrideArgs>> collectionOverrides,
-        @Nullable Input<CredentialArgs> credential,
-        @Nullable Input<List<String>> customCertificateAuthorityRoots,
-        @Nullable Input<String> description,
-        @Nullable Input<String> descriptorUrl,
-        @Nullable Input<List<TypeProviderLabelEntryArgs>> labels,
-        @Nullable Input<String> name,
-        @Nullable Input<OptionsArgs> options,
-        @Nullable Input<String> project) {
+        @Nullable Output<List<CollectionOverrideArgs>> collectionOverrides,
+        @Nullable Output<CredentialArgs> credential,
+        @Nullable Output<List<String>> customCertificateAuthorityRoots,
+        @Nullable Output<String> description,
+        @Nullable Output<String> descriptorUrl,
+        @Nullable Output<List<TypeProviderLabelEntryArgs>> labels,
+        @Nullable Output<String> name,
+        @Nullable Output<OptionsArgs> options,
+        @Nullable Output<String> project) {
         this.collectionOverrides = collectionOverrides;
         this.credential = credential;
         this.customCertificateAuthorityRoots = customCertificateAuthorityRoots;
@@ -136,15 +136,15 @@ public final class TypeProviderArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private TypeProviderArgs() {
-        this.collectionOverrides = Input.empty();
-        this.credential = Input.empty();
-        this.customCertificateAuthorityRoots = Input.empty();
-        this.description = Input.empty();
-        this.descriptorUrl = Input.empty();
-        this.labels = Input.empty();
-        this.name = Input.empty();
-        this.options = Input.empty();
-        this.project = Input.empty();
+        this.collectionOverrides = Output.empty();
+        this.credential = Output.empty();
+        this.customCertificateAuthorityRoots = Output.empty();
+        this.description = Output.empty();
+        this.descriptorUrl = Output.empty();
+        this.labels = Output.empty();
+        this.name = Output.empty();
+        this.options = Output.empty();
+        this.project = Output.empty();
     }
 
     public static Builder builder() {
@@ -156,15 +156,15 @@ public final class TypeProviderArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<List<CollectionOverrideArgs>> collectionOverrides;
-        private @Nullable Input<CredentialArgs> credential;
-        private @Nullable Input<List<String>> customCertificateAuthorityRoots;
-        private @Nullable Input<String> description;
-        private @Nullable Input<String> descriptorUrl;
-        private @Nullable Input<List<TypeProviderLabelEntryArgs>> labels;
-        private @Nullable Input<String> name;
-        private @Nullable Input<OptionsArgs> options;
-        private @Nullable Input<String> project;
+        private @Nullable Output<List<CollectionOverrideArgs>> collectionOverrides;
+        private @Nullable Output<CredentialArgs> credential;
+        private @Nullable Output<List<String>> customCertificateAuthorityRoots;
+        private @Nullable Output<String> description;
+        private @Nullable Output<String> descriptorUrl;
+        private @Nullable Output<List<TypeProviderLabelEntryArgs>> labels;
+        private @Nullable Output<String> name;
+        private @Nullable Output<OptionsArgs> options;
+        private @Nullable Output<String> project;
 
         public Builder() {
     	      // Empty
@@ -183,93 +183,93 @@ public final class TypeProviderArgs extends io.pulumi.resources.ResourceArgs {
     	      this.project = defaults.project;
         }
 
-        public Builder collectionOverrides(@Nullable Input<List<CollectionOverrideArgs>> collectionOverrides) {
+        public Builder collectionOverrides(@Nullable Output<List<CollectionOverrideArgs>> collectionOverrides) {
             this.collectionOverrides = collectionOverrides;
             return this;
         }
 
         public Builder collectionOverrides(@Nullable List<CollectionOverrideArgs> collectionOverrides) {
-            this.collectionOverrides = Input.ofNullable(collectionOverrides);
+            this.collectionOverrides = Output.ofNullable(collectionOverrides);
             return this;
         }
 
-        public Builder credential(@Nullable Input<CredentialArgs> credential) {
+        public Builder credential(@Nullable Output<CredentialArgs> credential) {
             this.credential = credential;
             return this;
         }
 
         public Builder credential(@Nullable CredentialArgs credential) {
-            this.credential = Input.ofNullable(credential);
+            this.credential = Output.ofNullable(credential);
             return this;
         }
 
-        public Builder customCertificateAuthorityRoots(@Nullable Input<List<String>> customCertificateAuthorityRoots) {
+        public Builder customCertificateAuthorityRoots(@Nullable Output<List<String>> customCertificateAuthorityRoots) {
             this.customCertificateAuthorityRoots = customCertificateAuthorityRoots;
             return this;
         }
 
         public Builder customCertificateAuthorityRoots(@Nullable List<String> customCertificateAuthorityRoots) {
-            this.customCertificateAuthorityRoots = Input.ofNullable(customCertificateAuthorityRoots);
+            this.customCertificateAuthorityRoots = Output.ofNullable(customCertificateAuthorityRoots);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder descriptorUrl(@Nullable Input<String> descriptorUrl) {
+        public Builder descriptorUrl(@Nullable Output<String> descriptorUrl) {
             this.descriptorUrl = descriptorUrl;
             return this;
         }
 
         public Builder descriptorUrl(@Nullable String descriptorUrl) {
-            this.descriptorUrl = Input.ofNullable(descriptorUrl);
+            this.descriptorUrl = Output.ofNullable(descriptorUrl);
             return this;
         }
 
-        public Builder labels(@Nullable Input<List<TypeProviderLabelEntryArgs>> labels) {
+        public Builder labels(@Nullable Output<List<TypeProviderLabelEntryArgs>> labels) {
             this.labels = labels;
             return this;
         }
 
         public Builder labels(@Nullable List<TypeProviderLabelEntryArgs> labels) {
-            this.labels = Input.ofNullable(labels);
+            this.labels = Output.ofNullable(labels);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder options(@Nullable Input<OptionsArgs> options) {
+        public Builder options(@Nullable Output<OptionsArgs> options) {
             this.options = options;
             return this;
         }
 
         public Builder options(@Nullable OptionsArgs options) {
-            this.options = Input.ofNullable(options);
+            this.options = Output.ofNullable(options);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
         public TypeProviderArgs build() {

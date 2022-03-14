@@ -5,7 +5,7 @@ package io.pulumi.awsnative.route53;
 
 import io.pulumi.awsnative.route53.inputs.HealthCheckConfigPropertiesArgs;
 import io.pulumi.awsnative.route53.inputs.HealthCheckTagArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
@@ -21,9 +21,9 @@ public final class HealthCheckArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="healthCheckConfig", required=true)
-      private final Input<HealthCheckConfigPropertiesArgs> healthCheckConfig;
+      private final Output<HealthCheckConfigPropertiesArgs> healthCheckConfig;
 
-    public Input<HealthCheckConfigPropertiesArgs> getHealthCheckConfig() {
+    public Output<HealthCheckConfigPropertiesArgs> getHealthCheckConfig() {
         return this.healthCheckConfig;
     }
 
@@ -32,22 +32,22 @@ public final class HealthCheckArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="healthCheckTags")
-      private final @Nullable Input<List<HealthCheckTagArgs>> healthCheckTags;
+      private final @Nullable Output<List<HealthCheckTagArgs>> healthCheckTags;
 
-    public Input<List<HealthCheckTagArgs>> getHealthCheckTags() {
-        return this.healthCheckTags == null ? Input.empty() : this.healthCheckTags;
+    public Output<List<HealthCheckTagArgs>> getHealthCheckTags() {
+        return this.healthCheckTags == null ? Output.empty() : this.healthCheckTags;
     }
 
     public HealthCheckArgs(
-        Input<HealthCheckConfigPropertiesArgs> healthCheckConfig,
-        @Nullable Input<List<HealthCheckTagArgs>> healthCheckTags) {
+        Output<HealthCheckConfigPropertiesArgs> healthCheckConfig,
+        @Nullable Output<List<HealthCheckTagArgs>> healthCheckTags) {
         this.healthCheckConfig = Objects.requireNonNull(healthCheckConfig, "expected parameter 'healthCheckConfig' to be non-null");
         this.healthCheckTags = healthCheckTags;
     }
 
     private HealthCheckArgs() {
-        this.healthCheckConfig = Input.empty();
-        this.healthCheckTags = Input.empty();
+        this.healthCheckConfig = Output.empty();
+        this.healthCheckTags = Output.empty();
     }
 
     public static Builder builder() {
@@ -59,8 +59,8 @@ public final class HealthCheckArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<HealthCheckConfigPropertiesArgs> healthCheckConfig;
-        private @Nullable Input<List<HealthCheckTagArgs>> healthCheckTags;
+        private Output<HealthCheckConfigPropertiesArgs> healthCheckConfig;
+        private @Nullable Output<List<HealthCheckTagArgs>> healthCheckTags;
 
         public Builder() {
     	      // Empty
@@ -72,23 +72,23 @@ public final class HealthCheckArgs extends io.pulumi.resources.ResourceArgs {
     	      this.healthCheckTags = defaults.healthCheckTags;
         }
 
-        public Builder healthCheckConfig(Input<HealthCheckConfigPropertiesArgs> healthCheckConfig) {
+        public Builder healthCheckConfig(Output<HealthCheckConfigPropertiesArgs> healthCheckConfig) {
             this.healthCheckConfig = Objects.requireNonNull(healthCheckConfig);
             return this;
         }
 
         public Builder healthCheckConfig(HealthCheckConfigPropertiesArgs healthCheckConfig) {
-            this.healthCheckConfig = Input.of(Objects.requireNonNull(healthCheckConfig));
+            this.healthCheckConfig = Output.of(Objects.requireNonNull(healthCheckConfig));
             return this;
         }
 
-        public Builder healthCheckTags(@Nullable Input<List<HealthCheckTagArgs>> healthCheckTags) {
+        public Builder healthCheckTags(@Nullable Output<List<HealthCheckTagArgs>> healthCheckTags) {
             this.healthCheckTags = healthCheckTags;
             return this;
         }
 
         public Builder healthCheckTags(@Nullable List<HealthCheckTagArgs> healthCheckTags) {
-            this.healthCheckTags = Input.ofNullable(healthCheckTags);
+            this.healthCheckTags = Output.ofNullable(healthCheckTags);
             return this;
         }
         public HealthCheckArgs build() {

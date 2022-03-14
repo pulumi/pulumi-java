@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.storage.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -21,10 +21,10 @@ public final class BucketCorGetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="maxAgeSeconds")
-      private final @Nullable Input<Integer> maxAgeSeconds;
+      private final @Nullable Output<Integer> maxAgeSeconds;
 
-    public Input<Integer> getMaxAgeSeconds() {
-        return this.maxAgeSeconds == null ? Input.empty() : this.maxAgeSeconds;
+    public Output<Integer> getMaxAgeSeconds() {
+        return this.maxAgeSeconds == null ? Output.empty() : this.maxAgeSeconds;
     }
 
     /**
@@ -32,10 +32,10 @@ public final class BucketCorGetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="methods")
-      private final @Nullable Input<List<String>> methods;
+      private final @Nullable Output<List<String>> methods;
 
-    public Input<List<String>> getMethods() {
-        return this.methods == null ? Input.empty() : this.methods;
+    public Output<List<String>> getMethods() {
+        return this.methods == null ? Output.empty() : this.methods;
     }
 
     /**
@@ -43,10 +43,10 @@ public final class BucketCorGetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="origins")
-      private final @Nullable Input<List<String>> origins;
+      private final @Nullable Output<List<String>> origins;
 
-    public Input<List<String>> getOrigins() {
-        return this.origins == null ? Input.empty() : this.origins;
+    public Output<List<String>> getOrigins() {
+        return this.origins == null ? Output.empty() : this.origins;
     }
 
     /**
@@ -54,17 +54,17 @@ public final class BucketCorGetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="responseHeaders")
-      private final @Nullable Input<List<String>> responseHeaders;
+      private final @Nullable Output<List<String>> responseHeaders;
 
-    public Input<List<String>> getResponseHeaders() {
-        return this.responseHeaders == null ? Input.empty() : this.responseHeaders;
+    public Output<List<String>> getResponseHeaders() {
+        return this.responseHeaders == null ? Output.empty() : this.responseHeaders;
     }
 
     public BucketCorGetArgs(
-        @Nullable Input<Integer> maxAgeSeconds,
-        @Nullable Input<List<String>> methods,
-        @Nullable Input<List<String>> origins,
-        @Nullable Input<List<String>> responseHeaders) {
+        @Nullable Output<Integer> maxAgeSeconds,
+        @Nullable Output<List<String>> methods,
+        @Nullable Output<List<String>> origins,
+        @Nullable Output<List<String>> responseHeaders) {
         this.maxAgeSeconds = maxAgeSeconds;
         this.methods = methods;
         this.origins = origins;
@@ -72,10 +72,10 @@ public final class BucketCorGetArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private BucketCorGetArgs() {
-        this.maxAgeSeconds = Input.empty();
-        this.methods = Input.empty();
-        this.origins = Input.empty();
-        this.responseHeaders = Input.empty();
+        this.maxAgeSeconds = Output.empty();
+        this.methods = Output.empty();
+        this.origins = Output.empty();
+        this.responseHeaders = Output.empty();
     }
 
     public static Builder builder() {
@@ -87,10 +87,10 @@ public final class BucketCorGetArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> maxAgeSeconds;
-        private @Nullable Input<List<String>> methods;
-        private @Nullable Input<List<String>> origins;
-        private @Nullable Input<List<String>> responseHeaders;
+        private @Nullable Output<Integer> maxAgeSeconds;
+        private @Nullable Output<List<String>> methods;
+        private @Nullable Output<List<String>> origins;
+        private @Nullable Output<List<String>> responseHeaders;
 
         public Builder() {
     	      // Empty
@@ -104,43 +104,43 @@ public final class BucketCorGetArgs extends io.pulumi.resources.ResourceArgs {
     	      this.responseHeaders = defaults.responseHeaders;
         }
 
-        public Builder maxAgeSeconds(@Nullable Input<Integer> maxAgeSeconds) {
+        public Builder maxAgeSeconds(@Nullable Output<Integer> maxAgeSeconds) {
             this.maxAgeSeconds = maxAgeSeconds;
             return this;
         }
 
         public Builder maxAgeSeconds(@Nullable Integer maxAgeSeconds) {
-            this.maxAgeSeconds = Input.ofNullable(maxAgeSeconds);
+            this.maxAgeSeconds = Output.ofNullable(maxAgeSeconds);
             return this;
         }
 
-        public Builder methods(@Nullable Input<List<String>> methods) {
+        public Builder methods(@Nullable Output<List<String>> methods) {
             this.methods = methods;
             return this;
         }
 
         public Builder methods(@Nullable List<String> methods) {
-            this.methods = Input.ofNullable(methods);
+            this.methods = Output.ofNullable(methods);
             return this;
         }
 
-        public Builder origins(@Nullable Input<List<String>> origins) {
+        public Builder origins(@Nullable Output<List<String>> origins) {
             this.origins = origins;
             return this;
         }
 
         public Builder origins(@Nullable List<String> origins) {
-            this.origins = Input.ofNullable(origins);
+            this.origins = Output.ofNullable(origins);
             return this;
         }
 
-        public Builder responseHeaders(@Nullable Input<List<String>> responseHeaders) {
+        public Builder responseHeaders(@Nullable Output<List<String>> responseHeaders) {
             this.responseHeaders = responseHeaders;
             return this;
         }
 
         public Builder responseHeaders(@Nullable List<String> responseHeaders) {
-            this.responseHeaders = Input.ofNullable(responseHeaders);
+            this.responseHeaders = Output.ofNullable(responseHeaders);
             return this;
         }
         public BucketCorGetArgs build() {

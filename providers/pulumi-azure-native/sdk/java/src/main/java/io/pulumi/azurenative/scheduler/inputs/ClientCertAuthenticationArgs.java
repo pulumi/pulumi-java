@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.scheduler.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class ClientCertAuthenticationArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="certificateExpirationDate")
-      private final @Nullable Input<String> certificateExpirationDate;
+      private final @Nullable Output<String> certificateExpirationDate;
 
-    public Input<String> getCertificateExpirationDate() {
-        return this.certificateExpirationDate == null ? Input.empty() : this.certificateExpirationDate;
+    public Output<String> getCertificateExpirationDate() {
+        return this.certificateExpirationDate == null ? Output.empty() : this.certificateExpirationDate;
     }
 
     /**
@@ -30,10 +30,10 @@ public final class ClientCertAuthenticationArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="certificateSubjectName")
-      private final @Nullable Input<String> certificateSubjectName;
+      private final @Nullable Output<String> certificateSubjectName;
 
-    public Input<String> getCertificateSubjectName() {
-        return this.certificateSubjectName == null ? Input.empty() : this.certificateSubjectName;
+    public Output<String> getCertificateSubjectName() {
+        return this.certificateSubjectName == null ? Output.empty() : this.certificateSubjectName;
     }
 
     /**
@@ -41,10 +41,10 @@ public final class ClientCertAuthenticationArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="certificateThumbprint")
-      private final @Nullable Input<String> certificateThumbprint;
+      private final @Nullable Output<String> certificateThumbprint;
 
-    public Input<String> getCertificateThumbprint() {
-        return this.certificateThumbprint == null ? Input.empty() : this.certificateThumbprint;
+    public Output<String> getCertificateThumbprint() {
+        return this.certificateThumbprint == null ? Output.empty() : this.certificateThumbprint;
     }
 
     /**
@@ -52,10 +52,10 @@ public final class ClientCertAuthenticationArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="password")
-      private final @Nullable Input<String> password;
+      private final @Nullable Output<String> password;
 
-    public Input<String> getPassword() {
-        return this.password == null ? Input.empty() : this.password;
+    public Output<String> getPassword() {
+        return this.password == null ? Output.empty() : this.password;
     }
 
     /**
@@ -63,10 +63,10 @@ public final class ClientCertAuthenticationArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="pfx")
-      private final @Nullable Input<String> pfx;
+      private final @Nullable Output<String> pfx;
 
-    public Input<String> getPfx() {
-        return this.pfx == null ? Input.empty() : this.pfx;
+    public Output<String> getPfx() {
+        return this.pfx == null ? Output.empty() : this.pfx;
     }
 
     /**
@@ -75,19 +75,19 @@ public final class ClientCertAuthenticationArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<String> type;
+      private final Output<String> type;
 
-    public Input<String> getType() {
+    public Output<String> getType() {
         return this.type;
     }
 
     public ClientCertAuthenticationArgs(
-        @Nullable Input<String> certificateExpirationDate,
-        @Nullable Input<String> certificateSubjectName,
-        @Nullable Input<String> certificateThumbprint,
-        @Nullable Input<String> password,
-        @Nullable Input<String> pfx,
-        Input<String> type) {
+        @Nullable Output<String> certificateExpirationDate,
+        @Nullable Output<String> certificateSubjectName,
+        @Nullable Output<String> certificateThumbprint,
+        @Nullable Output<String> password,
+        @Nullable Output<String> pfx,
+        Output<String> type) {
         this.certificateExpirationDate = certificateExpirationDate;
         this.certificateSubjectName = certificateSubjectName;
         this.certificateThumbprint = certificateThumbprint;
@@ -97,12 +97,12 @@ public final class ClientCertAuthenticationArgs extends io.pulumi.resources.Reso
     }
 
     private ClientCertAuthenticationArgs() {
-        this.certificateExpirationDate = Input.empty();
-        this.certificateSubjectName = Input.empty();
-        this.certificateThumbprint = Input.empty();
-        this.password = Input.empty();
-        this.pfx = Input.empty();
-        this.type = Input.empty();
+        this.certificateExpirationDate = Output.empty();
+        this.certificateSubjectName = Output.empty();
+        this.certificateThumbprint = Output.empty();
+        this.password = Output.empty();
+        this.pfx = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -114,12 +114,12 @@ public final class ClientCertAuthenticationArgs extends io.pulumi.resources.Reso
     }
 
     public static final class Builder {
-        private @Nullable Input<String> certificateExpirationDate;
-        private @Nullable Input<String> certificateSubjectName;
-        private @Nullable Input<String> certificateThumbprint;
-        private @Nullable Input<String> password;
-        private @Nullable Input<String> pfx;
-        private Input<String> type;
+        private @Nullable Output<String> certificateExpirationDate;
+        private @Nullable Output<String> certificateSubjectName;
+        private @Nullable Output<String> certificateThumbprint;
+        private @Nullable Output<String> password;
+        private @Nullable Output<String> pfx;
+        private Output<String> type;
 
         public Builder() {
     	      // Empty
@@ -135,63 +135,63 @@ public final class ClientCertAuthenticationArgs extends io.pulumi.resources.Reso
     	      this.type = defaults.type;
         }
 
-        public Builder certificateExpirationDate(@Nullable Input<String> certificateExpirationDate) {
+        public Builder certificateExpirationDate(@Nullable Output<String> certificateExpirationDate) {
             this.certificateExpirationDate = certificateExpirationDate;
             return this;
         }
 
         public Builder certificateExpirationDate(@Nullable String certificateExpirationDate) {
-            this.certificateExpirationDate = Input.ofNullable(certificateExpirationDate);
+            this.certificateExpirationDate = Output.ofNullable(certificateExpirationDate);
             return this;
         }
 
-        public Builder certificateSubjectName(@Nullable Input<String> certificateSubjectName) {
+        public Builder certificateSubjectName(@Nullable Output<String> certificateSubjectName) {
             this.certificateSubjectName = certificateSubjectName;
             return this;
         }
 
         public Builder certificateSubjectName(@Nullable String certificateSubjectName) {
-            this.certificateSubjectName = Input.ofNullable(certificateSubjectName);
+            this.certificateSubjectName = Output.ofNullable(certificateSubjectName);
             return this;
         }
 
-        public Builder certificateThumbprint(@Nullable Input<String> certificateThumbprint) {
+        public Builder certificateThumbprint(@Nullable Output<String> certificateThumbprint) {
             this.certificateThumbprint = certificateThumbprint;
             return this;
         }
 
         public Builder certificateThumbprint(@Nullable String certificateThumbprint) {
-            this.certificateThumbprint = Input.ofNullable(certificateThumbprint);
+            this.certificateThumbprint = Output.ofNullable(certificateThumbprint);
             return this;
         }
 
-        public Builder password(@Nullable Input<String> password) {
+        public Builder password(@Nullable Output<String> password) {
             this.password = password;
             return this;
         }
 
         public Builder password(@Nullable String password) {
-            this.password = Input.ofNullable(password);
+            this.password = Output.ofNullable(password);
             return this;
         }
 
-        public Builder pfx(@Nullable Input<String> pfx) {
+        public Builder pfx(@Nullable Output<String> pfx) {
             this.pfx = pfx;
             return this;
         }
 
         public Builder pfx(@Nullable String pfx) {
-            this.pfx = Input.ofNullable(pfx);
+            this.pfx = Output.ofNullable(pfx);
             return this;
         }
 
-        public Builder type(Input<String> type) {
+        public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(String type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
         public ClientCertAuthenticationArgs build() {

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.storagecache.inputs;
 
 import io.pulumi.azurenative.storagecache.inputs.KeyVaultKeyReferenceArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,18 +23,18 @@ public final class CacheEncryptionSettingsArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="keyEncryptionKey")
-      private final @Nullable Input<KeyVaultKeyReferenceArgs> keyEncryptionKey;
+      private final @Nullable Output<KeyVaultKeyReferenceArgs> keyEncryptionKey;
 
-    public Input<KeyVaultKeyReferenceArgs> getKeyEncryptionKey() {
-        return this.keyEncryptionKey == null ? Input.empty() : this.keyEncryptionKey;
+    public Output<KeyVaultKeyReferenceArgs> getKeyEncryptionKey() {
+        return this.keyEncryptionKey == null ? Output.empty() : this.keyEncryptionKey;
     }
 
-    public CacheEncryptionSettingsArgs(@Nullable Input<KeyVaultKeyReferenceArgs> keyEncryptionKey) {
+    public CacheEncryptionSettingsArgs(@Nullable Output<KeyVaultKeyReferenceArgs> keyEncryptionKey) {
         this.keyEncryptionKey = keyEncryptionKey;
     }
 
     private CacheEncryptionSettingsArgs() {
-        this.keyEncryptionKey = Input.empty();
+        this.keyEncryptionKey = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class CacheEncryptionSettingsArgs extends io.pulumi.resources.Resou
     }
 
     public static final class Builder {
-        private @Nullable Input<KeyVaultKeyReferenceArgs> keyEncryptionKey;
+        private @Nullable Output<KeyVaultKeyReferenceArgs> keyEncryptionKey;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class CacheEncryptionSettingsArgs extends io.pulumi.resources.Resou
     	      this.keyEncryptionKey = defaults.keyEncryptionKey;
         }
 
-        public Builder keyEncryptionKey(@Nullable Input<KeyVaultKeyReferenceArgs> keyEncryptionKey) {
+        public Builder keyEncryptionKey(@Nullable Output<KeyVaultKeyReferenceArgs> keyEncryptionKey) {
             this.keyEncryptionKey = keyEncryptionKey;
             return this;
         }
 
         public Builder keyEncryptionKey(@Nullable KeyVaultKeyReferenceArgs keyEncryptionKey) {
-            this.keyEncryptionKey = Input.ofNullable(keyEncryptionKey);
+            this.keyEncryptionKey = Output.ofNullable(keyEncryptionKey);
             return this;
         }
         public CacheEncryptionSettingsArgs build() {

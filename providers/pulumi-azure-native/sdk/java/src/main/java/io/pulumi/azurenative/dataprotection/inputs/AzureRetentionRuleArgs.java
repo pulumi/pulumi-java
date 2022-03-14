@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.dataprotection.inputs;
 
 import io.pulumi.azurenative.dataprotection.inputs.SourceLifeCycleArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -22,23 +22,23 @@ public final class AzureRetentionRuleArgs extends io.pulumi.resources.ResourceAr
     public static final AzureRetentionRuleArgs Empty = new AzureRetentionRuleArgs();
 
     @InputImport(name="isDefault")
-      private final @Nullable Input<Boolean> isDefault;
+      private final @Nullable Output<Boolean> isDefault;
 
-    public Input<Boolean> getIsDefault() {
-        return this.isDefault == null ? Input.empty() : this.isDefault;
+    public Output<Boolean> getIsDefault() {
+        return this.isDefault == null ? Output.empty() : this.isDefault;
     }
 
     @InputImport(name="lifecycles", required=true)
-      private final Input<List<SourceLifeCycleArgs>> lifecycles;
+      private final Output<List<SourceLifeCycleArgs>> lifecycles;
 
-    public Input<List<SourceLifeCycleArgs>> getLifecycles() {
+    public Output<List<SourceLifeCycleArgs>> getLifecycles() {
         return this.lifecycles;
     }
 
     @InputImport(name="name", required=true)
-      private final Input<String> name;
+      private final Output<String> name;
 
-    public Input<String> getName() {
+    public Output<String> getName() {
         return this.name;
     }
 
@@ -47,17 +47,17 @@ public final class AzureRetentionRuleArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="objectType", required=true)
-      private final Input<String> objectType;
+      private final Output<String> objectType;
 
-    public Input<String> getObjectType() {
+    public Output<String> getObjectType() {
         return this.objectType;
     }
 
     public AzureRetentionRuleArgs(
-        @Nullable Input<Boolean> isDefault,
-        Input<List<SourceLifeCycleArgs>> lifecycles,
-        Input<String> name,
-        Input<String> objectType) {
+        @Nullable Output<Boolean> isDefault,
+        Output<List<SourceLifeCycleArgs>> lifecycles,
+        Output<String> name,
+        Output<String> objectType) {
         this.isDefault = isDefault;
         this.lifecycles = Objects.requireNonNull(lifecycles, "expected parameter 'lifecycles' to be non-null");
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
@@ -65,10 +65,10 @@ public final class AzureRetentionRuleArgs extends io.pulumi.resources.ResourceAr
     }
 
     private AzureRetentionRuleArgs() {
-        this.isDefault = Input.empty();
-        this.lifecycles = Input.empty();
-        this.name = Input.empty();
-        this.objectType = Input.empty();
+        this.isDefault = Output.empty();
+        this.lifecycles = Output.empty();
+        this.name = Output.empty();
+        this.objectType = Output.empty();
     }
 
     public static Builder builder() {
@@ -80,10 +80,10 @@ public final class AzureRetentionRuleArgs extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> isDefault;
-        private Input<List<SourceLifeCycleArgs>> lifecycles;
-        private Input<String> name;
-        private Input<String> objectType;
+        private @Nullable Output<Boolean> isDefault;
+        private Output<List<SourceLifeCycleArgs>> lifecycles;
+        private Output<String> name;
+        private Output<String> objectType;
 
         public Builder() {
     	      // Empty
@@ -97,43 +97,43 @@ public final class AzureRetentionRuleArgs extends io.pulumi.resources.ResourceAr
     	      this.objectType = defaults.objectType;
         }
 
-        public Builder isDefault(@Nullable Input<Boolean> isDefault) {
+        public Builder isDefault(@Nullable Output<Boolean> isDefault) {
             this.isDefault = isDefault;
             return this;
         }
 
         public Builder isDefault(@Nullable Boolean isDefault) {
-            this.isDefault = Input.ofNullable(isDefault);
+            this.isDefault = Output.ofNullable(isDefault);
             return this;
         }
 
-        public Builder lifecycles(Input<List<SourceLifeCycleArgs>> lifecycles) {
+        public Builder lifecycles(Output<List<SourceLifeCycleArgs>> lifecycles) {
             this.lifecycles = Objects.requireNonNull(lifecycles);
             return this;
         }
 
         public Builder lifecycles(List<SourceLifeCycleArgs> lifecycles) {
-            this.lifecycles = Input.of(Objects.requireNonNull(lifecycles));
+            this.lifecycles = Output.of(Objects.requireNonNull(lifecycles));
             return this;
         }
 
-        public Builder name(Input<String> name) {
+        public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(String name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder objectType(Input<String> objectType) {
+        public Builder objectType(Output<String> objectType) {
             this.objectType = Objects.requireNonNull(objectType);
             return this;
         }
 
         public Builder objectType(String objectType) {
-            this.objectType = Input.of(Objects.requireNonNull(objectType));
+            this.objectType = Output.of(Objects.requireNonNull(objectType));
             return this;
         }
         public AzureRetentionRuleArgs build() {

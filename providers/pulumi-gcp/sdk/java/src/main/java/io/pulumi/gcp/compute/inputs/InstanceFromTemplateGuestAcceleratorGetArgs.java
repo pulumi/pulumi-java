@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -15,29 +15,29 @@ public final class InstanceFromTemplateGuestAcceleratorGetArgs extends io.pulumi
     public static final InstanceFromTemplateGuestAcceleratorGetArgs Empty = new InstanceFromTemplateGuestAcceleratorGetArgs();
 
     @InputImport(name="count", required=true)
-      private final Input<Integer> count;
+      private final Output<Integer> count;
 
-    public Input<Integer> getCount() {
+    public Output<Integer> getCount() {
         return this.count;
     }
 
     @InputImport(name="type", required=true)
-      private final Input<String> type;
+      private final Output<String> type;
 
-    public Input<String> getType() {
+    public Output<String> getType() {
         return this.type;
     }
 
     public InstanceFromTemplateGuestAcceleratorGetArgs(
-        Input<Integer> count,
-        Input<String> type) {
+        Output<Integer> count,
+        Output<String> type) {
         this.count = Objects.requireNonNull(count, "expected parameter 'count' to be non-null");
         this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
     }
 
     private InstanceFromTemplateGuestAcceleratorGetArgs() {
-        this.count = Input.empty();
-        this.type = Input.empty();
+        this.count = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -49,8 +49,8 @@ public final class InstanceFromTemplateGuestAcceleratorGetArgs extends io.pulumi
     }
 
     public static final class Builder {
-        private Input<Integer> count;
-        private Input<String> type;
+        private Output<Integer> count;
+        private Output<String> type;
 
         public Builder() {
     	      // Empty
@@ -62,23 +62,23 @@ public final class InstanceFromTemplateGuestAcceleratorGetArgs extends io.pulumi
     	      this.type = defaults.type;
         }
 
-        public Builder count(Input<Integer> count) {
+        public Builder count(Output<Integer> count) {
             this.count = Objects.requireNonNull(count);
             return this;
         }
 
         public Builder count(Integer count) {
-            this.count = Input.of(Objects.requireNonNull(count));
+            this.count = Output.of(Objects.requireNonNull(count));
             return this;
         }
 
-        public Builder type(Input<String> type) {
+        public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(String type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
         public InstanceFromTemplateGuestAcceleratorGetArgs build() {

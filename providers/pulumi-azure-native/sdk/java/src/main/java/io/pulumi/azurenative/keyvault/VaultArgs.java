@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.keyvault;
 
 import io.pulumi.azurenative.keyvault.inputs.VaultPropertiesArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -21,10 +21,10 @@ public final class VaultArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -32,9 +32,9 @@ public final class VaultArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="properties", required=true)
-      private final Input<VaultPropertiesArgs> properties;
+      private final Output<VaultPropertiesArgs> properties;
 
-    public Input<VaultPropertiesArgs> getProperties() {
+    public Output<VaultPropertiesArgs> getProperties() {
         return this.properties;
     }
 
@@ -43,9 +43,9 @@ public final class VaultArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -54,10 +54,10 @@ public final class VaultArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -65,18 +65,18 @@ public final class VaultArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="vaultName")
-      private final @Nullable Input<String> vaultName;
+      private final @Nullable Output<String> vaultName;
 
-    public Input<String> getVaultName() {
-        return this.vaultName == null ? Input.empty() : this.vaultName;
+    public Output<String> getVaultName() {
+        return this.vaultName == null ? Output.empty() : this.vaultName;
     }
 
     public VaultArgs(
-        @Nullable Input<String> location,
-        Input<VaultPropertiesArgs> properties,
-        Input<String> resourceGroupName,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<String> vaultName) {
+        @Nullable Output<String> location,
+        Output<VaultPropertiesArgs> properties,
+        Output<String> resourceGroupName,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<String> vaultName) {
         this.location = location;
         this.properties = Objects.requireNonNull(properties, "expected parameter 'properties' to be non-null");
         this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
@@ -85,11 +85,11 @@ public final class VaultArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private VaultArgs() {
-        this.location = Input.empty();
-        this.properties = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.tags = Input.empty();
-        this.vaultName = Input.empty();
+        this.location = Output.empty();
+        this.properties = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.tags = Output.empty();
+        this.vaultName = Output.empty();
     }
 
     public static Builder builder() {
@@ -101,11 +101,11 @@ public final class VaultArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> location;
-        private Input<VaultPropertiesArgs> properties;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<String> vaultName;
+        private @Nullable Output<String> location;
+        private Output<VaultPropertiesArgs> properties;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<String> vaultName;
 
         public Builder() {
     	      // Empty
@@ -120,53 +120,53 @@ public final class VaultArgs extends io.pulumi.resources.ResourceArgs {
     	      this.vaultName = defaults.vaultName;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder properties(Input<VaultPropertiesArgs> properties) {
+        public Builder properties(Output<VaultPropertiesArgs> properties) {
             this.properties = Objects.requireNonNull(properties);
             return this;
         }
 
         public Builder properties(VaultPropertiesArgs properties) {
-            this.properties = Input.of(Objects.requireNonNull(properties));
+            this.properties = Output.of(Objects.requireNonNull(properties));
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder vaultName(@Nullable Input<String> vaultName) {
+        public Builder vaultName(@Nullable Output<String> vaultName) {
             this.vaultName = vaultName;
             return this;
         }
 
         public Builder vaultName(@Nullable String vaultName) {
-            this.vaultName = Input.ofNullable(vaultName);
+            this.vaultName = Output.ofNullable(vaultName);
             return this;
         }
         public VaultArgs build() {

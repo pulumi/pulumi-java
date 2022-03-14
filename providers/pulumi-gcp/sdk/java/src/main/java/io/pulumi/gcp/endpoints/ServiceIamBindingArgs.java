@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.endpoints;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.endpoints.inputs.ServiceIamBindingConditionArgs;
 import java.lang.String;
@@ -17,16 +17,16 @@ public final class ServiceIamBindingArgs extends io.pulumi.resources.ResourceArg
     public static final ServiceIamBindingArgs Empty = new ServiceIamBindingArgs();
 
     @InputImport(name="condition")
-      private final @Nullable Input<ServiceIamBindingConditionArgs> condition;
+      private final @Nullable Output<ServiceIamBindingConditionArgs> condition;
 
-    public Input<ServiceIamBindingConditionArgs> getCondition() {
-        return this.condition == null ? Input.empty() : this.condition;
+    public Output<ServiceIamBindingConditionArgs> getCondition() {
+        return this.condition == null ? Output.empty() : this.condition;
     }
 
     @InputImport(name="members", required=true)
-      private final Input<List<String>> members;
+      private final Output<List<String>> members;
 
-    public Input<List<String>> getMembers() {
+    public Output<List<String>> getMembers() {
         return this.members;
     }
 
@@ -37,24 +37,24 @@ public final class ServiceIamBindingArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="role", required=true)
-      private final Input<String> role;
+      private final Output<String> role;
 
-    public Input<String> getRole() {
+    public Output<String> getRole() {
         return this.role;
     }
 
     @InputImport(name="serviceName", required=true)
-      private final Input<String> serviceName;
+      private final Output<String> serviceName;
 
-    public Input<String> getServiceName() {
+    public Output<String> getServiceName() {
         return this.serviceName;
     }
 
     public ServiceIamBindingArgs(
-        @Nullable Input<ServiceIamBindingConditionArgs> condition,
-        Input<List<String>> members,
-        Input<String> role,
-        Input<String> serviceName) {
+        @Nullable Output<ServiceIamBindingConditionArgs> condition,
+        Output<List<String>> members,
+        Output<String> role,
+        Output<String> serviceName) {
         this.condition = condition;
         this.members = Objects.requireNonNull(members, "expected parameter 'members' to be non-null");
         this.role = Objects.requireNonNull(role, "expected parameter 'role' to be non-null");
@@ -62,10 +62,10 @@ public final class ServiceIamBindingArgs extends io.pulumi.resources.ResourceArg
     }
 
     private ServiceIamBindingArgs() {
-        this.condition = Input.empty();
-        this.members = Input.empty();
-        this.role = Input.empty();
-        this.serviceName = Input.empty();
+        this.condition = Output.empty();
+        this.members = Output.empty();
+        this.role = Output.empty();
+        this.serviceName = Output.empty();
     }
 
     public static Builder builder() {
@@ -77,10 +77,10 @@ public final class ServiceIamBindingArgs extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private @Nullable Input<ServiceIamBindingConditionArgs> condition;
-        private Input<List<String>> members;
-        private Input<String> role;
-        private Input<String> serviceName;
+        private @Nullable Output<ServiceIamBindingConditionArgs> condition;
+        private Output<List<String>> members;
+        private Output<String> role;
+        private Output<String> serviceName;
 
         public Builder() {
     	      // Empty
@@ -94,43 +94,43 @@ public final class ServiceIamBindingArgs extends io.pulumi.resources.ResourceArg
     	      this.serviceName = defaults.serviceName;
         }
 
-        public Builder condition(@Nullable Input<ServiceIamBindingConditionArgs> condition) {
+        public Builder condition(@Nullable Output<ServiceIamBindingConditionArgs> condition) {
             this.condition = condition;
             return this;
         }
 
         public Builder condition(@Nullable ServiceIamBindingConditionArgs condition) {
-            this.condition = Input.ofNullable(condition);
+            this.condition = Output.ofNullable(condition);
             return this;
         }
 
-        public Builder members(Input<List<String>> members) {
+        public Builder members(Output<List<String>> members) {
             this.members = Objects.requireNonNull(members);
             return this;
         }
 
         public Builder members(List<String> members) {
-            this.members = Input.of(Objects.requireNonNull(members));
+            this.members = Output.of(Objects.requireNonNull(members));
             return this;
         }
 
-        public Builder role(Input<String> role) {
+        public Builder role(Output<String> role) {
             this.role = Objects.requireNonNull(role);
             return this;
         }
 
         public Builder role(String role) {
-            this.role = Input.of(Objects.requireNonNull(role));
+            this.role = Output.of(Objects.requireNonNull(role));
             return this;
         }
 
-        public Builder serviceName(Input<String> serviceName) {
+        public Builder serviceName(Output<String> serviceName) {
             this.serviceName = Objects.requireNonNull(serviceName);
             return this;
         }
 
         public Builder serviceName(String serviceName) {
-            this.serviceName = Input.of(Objects.requireNonNull(serviceName));
+            this.serviceName = Output.of(Objects.requireNonNull(serviceName));
             return this;
         }
         public ServiceIamBindingArgs build() {

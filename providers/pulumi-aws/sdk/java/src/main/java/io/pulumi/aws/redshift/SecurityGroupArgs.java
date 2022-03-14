@@ -4,7 +4,7 @@
 package io.pulumi.aws.redshift;
 
 import io.pulumi.aws.redshift.inputs.SecurityGroupIngressArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -21,10 +21,10 @@ public final class SecurityGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -32,9 +32,9 @@ public final class SecurityGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ingress", required=true)
-      private final Input<List<SecurityGroupIngressArgs>> ingress;
+      private final Output<List<SecurityGroupIngressArgs>> ingress;
 
-    public Input<List<SecurityGroupIngressArgs>> getIngress() {
+    public Output<List<SecurityGroupIngressArgs>> getIngress() {
         return this.ingress;
     }
 
@@ -43,25 +43,25 @@ public final class SecurityGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     public SecurityGroupArgs(
-        @Nullable Input<String> description,
-        Input<List<SecurityGroupIngressArgs>> ingress,
-        @Nullable Input<String> name) {
-        this.description = description == null ? Input.ofNullable("Managed by Pulumi") : description;
+        @Nullable Output<String> description,
+        Output<List<SecurityGroupIngressArgs>> ingress,
+        @Nullable Output<String> name) {
+        this.description = description == null ? Output.ofNullable("Managed by Pulumi") : description;
         this.ingress = Objects.requireNonNull(ingress, "expected parameter 'ingress' to be non-null");
         this.name = name;
     }
 
     private SecurityGroupArgs() {
-        this.description = Input.empty();
-        this.ingress = Input.empty();
-        this.name = Input.empty();
+        this.description = Output.empty();
+        this.ingress = Output.empty();
+        this.name = Output.empty();
     }
 
     public static Builder builder() {
@@ -73,9 +73,9 @@ public final class SecurityGroupArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> description;
-        private Input<List<SecurityGroupIngressArgs>> ingress;
-        private @Nullable Input<String> name;
+        private @Nullable Output<String> description;
+        private Output<List<SecurityGroupIngressArgs>> ingress;
+        private @Nullable Output<String> name;
 
         public Builder() {
     	      // Empty
@@ -88,33 +88,33 @@ public final class SecurityGroupArgs extends io.pulumi.resources.ResourceArgs {
     	      this.name = defaults.name;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder ingress(Input<List<SecurityGroupIngressArgs>> ingress) {
+        public Builder ingress(Output<List<SecurityGroupIngressArgs>> ingress) {
             this.ingress = Objects.requireNonNull(ingress);
             return this;
         }
 
         public Builder ingress(List<SecurityGroupIngressArgs> ingress) {
-            this.ingress = Input.of(Objects.requireNonNull(ingress));
+            this.ingress = Output.of(Objects.requireNonNull(ingress));
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
         public SecurityGroupArgs build() {

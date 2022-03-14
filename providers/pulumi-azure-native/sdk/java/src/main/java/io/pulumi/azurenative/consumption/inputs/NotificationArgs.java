@@ -7,7 +7,7 @@ import io.pulumi.azurenative.consumption.enums.CultureCode;
 import io.pulumi.azurenative.consumption.enums.OperatorType;
 import io.pulumi.azurenative.consumption.enums.ThresholdType;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Double;
@@ -30,9 +30,9 @@ public final class NotificationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="contactEmails", required=true)
-      private final Input<List<String>> contactEmails;
+      private final Output<List<String>> contactEmails;
 
-    public Input<List<String>> getContactEmails() {
+    public Output<List<String>> getContactEmails() {
         return this.contactEmails;
     }
 
@@ -41,10 +41,10 @@ public final class NotificationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="contactGroups")
-      private final @Nullable Input<List<String>> contactGroups;
+      private final @Nullable Output<List<String>> contactGroups;
 
-    public Input<List<String>> getContactGroups() {
-        return this.contactGroups == null ? Input.empty() : this.contactGroups;
+    public Output<List<String>> getContactGroups() {
+        return this.contactGroups == null ? Output.empty() : this.contactGroups;
     }
 
     /**
@@ -52,10 +52,10 @@ public final class NotificationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="contactRoles")
-      private final @Nullable Input<List<String>> contactRoles;
+      private final @Nullable Output<List<String>> contactRoles;
 
-    public Input<List<String>> getContactRoles() {
-        return this.contactRoles == null ? Input.empty() : this.contactRoles;
+    public Output<List<String>> getContactRoles() {
+        return this.contactRoles == null ? Output.empty() : this.contactRoles;
     }
 
     /**
@@ -63,9 +63,9 @@ public final class NotificationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enabled", required=true)
-      private final Input<Boolean> enabled;
+      private final Output<Boolean> enabled;
 
-    public Input<Boolean> getEnabled() {
+    public Output<Boolean> getEnabled() {
         return this.enabled;
     }
 
@@ -74,10 +74,10 @@ public final class NotificationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="locale")
-      private final @Nullable Input<Either<String,CultureCode>> locale;
+      private final @Nullable Output<Either<String,CultureCode>> locale;
 
-    public Input<Either<String,CultureCode>> getLocale() {
-        return this.locale == null ? Input.empty() : this.locale;
+    public Output<Either<String,CultureCode>> getLocale() {
+        return this.locale == null ? Output.empty() : this.locale;
     }
 
     /**
@@ -85,9 +85,9 @@ public final class NotificationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="operator", required=true)
-      private final Input<Either<String,OperatorType>> operator;
+      private final Output<Either<String,OperatorType>> operator;
 
-    public Input<Either<String,OperatorType>> getOperator() {
+    public Output<Either<String,OperatorType>> getOperator() {
         return this.operator;
     }
 
@@ -96,9 +96,9 @@ public final class NotificationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="threshold", required=true)
-      private final Input<Double> threshold;
+      private final Output<Double> threshold;
 
-    public Input<Double> getThreshold() {
+    public Output<Double> getThreshold() {
         return this.threshold;
     }
 
@@ -107,21 +107,21 @@ public final class NotificationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="thresholdType")
-      private final @Nullable Input<Either<String,ThresholdType>> thresholdType;
+      private final @Nullable Output<Either<String,ThresholdType>> thresholdType;
 
-    public Input<Either<String,ThresholdType>> getThresholdType() {
-        return this.thresholdType == null ? Input.empty() : this.thresholdType;
+    public Output<Either<String,ThresholdType>> getThresholdType() {
+        return this.thresholdType == null ? Output.empty() : this.thresholdType;
     }
 
     public NotificationArgs(
-        Input<List<String>> contactEmails,
-        @Nullable Input<List<String>> contactGroups,
-        @Nullable Input<List<String>> contactRoles,
-        Input<Boolean> enabled,
-        @Nullable Input<Either<String,CultureCode>> locale,
-        Input<Either<String,OperatorType>> operator,
-        Input<Double> threshold,
-        @Nullable Input<Either<String,ThresholdType>> thresholdType) {
+        Output<List<String>> contactEmails,
+        @Nullable Output<List<String>> contactGroups,
+        @Nullable Output<List<String>> contactRoles,
+        Output<Boolean> enabled,
+        @Nullable Output<Either<String,CultureCode>> locale,
+        Output<Either<String,OperatorType>> operator,
+        Output<Double> threshold,
+        @Nullable Output<Either<String,ThresholdType>> thresholdType) {
         this.contactEmails = Objects.requireNonNull(contactEmails, "expected parameter 'contactEmails' to be non-null");
         this.contactGroups = contactGroups;
         this.contactRoles = contactRoles;
@@ -129,18 +129,18 @@ public final class NotificationArgs extends io.pulumi.resources.ResourceArgs {
         this.locale = locale;
         this.operator = Objects.requireNonNull(operator, "expected parameter 'operator' to be non-null");
         this.threshold = Objects.requireNonNull(threshold, "expected parameter 'threshold' to be non-null");
-        this.thresholdType = thresholdType == null ? Input.ofLeft("Actual") : thresholdType;
+        this.thresholdType = thresholdType == null ? Output.ofLeft("Actual") : thresholdType;
     }
 
     private NotificationArgs() {
-        this.contactEmails = Input.empty();
-        this.contactGroups = Input.empty();
-        this.contactRoles = Input.empty();
-        this.enabled = Input.empty();
-        this.locale = Input.empty();
-        this.operator = Input.empty();
-        this.threshold = Input.empty();
-        this.thresholdType = Input.empty();
+        this.contactEmails = Output.empty();
+        this.contactGroups = Output.empty();
+        this.contactRoles = Output.empty();
+        this.enabled = Output.empty();
+        this.locale = Output.empty();
+        this.operator = Output.empty();
+        this.threshold = Output.empty();
+        this.thresholdType = Output.empty();
     }
 
     public static Builder builder() {
@@ -152,14 +152,14 @@ public final class NotificationArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<List<String>> contactEmails;
-        private @Nullable Input<List<String>> contactGroups;
-        private @Nullable Input<List<String>> contactRoles;
-        private Input<Boolean> enabled;
-        private @Nullable Input<Either<String,CultureCode>> locale;
-        private Input<Either<String,OperatorType>> operator;
-        private Input<Double> threshold;
-        private @Nullable Input<Either<String,ThresholdType>> thresholdType;
+        private Output<List<String>> contactEmails;
+        private @Nullable Output<List<String>> contactGroups;
+        private @Nullable Output<List<String>> contactRoles;
+        private Output<Boolean> enabled;
+        private @Nullable Output<Either<String,CultureCode>> locale;
+        private Output<Either<String,OperatorType>> operator;
+        private Output<Double> threshold;
+        private @Nullable Output<Either<String,ThresholdType>> thresholdType;
 
         public Builder() {
     	      // Empty
@@ -177,83 +177,83 @@ public final class NotificationArgs extends io.pulumi.resources.ResourceArgs {
     	      this.thresholdType = defaults.thresholdType;
         }
 
-        public Builder contactEmails(Input<List<String>> contactEmails) {
+        public Builder contactEmails(Output<List<String>> contactEmails) {
             this.contactEmails = Objects.requireNonNull(contactEmails);
             return this;
         }
 
         public Builder contactEmails(List<String> contactEmails) {
-            this.contactEmails = Input.of(Objects.requireNonNull(contactEmails));
+            this.contactEmails = Output.of(Objects.requireNonNull(contactEmails));
             return this;
         }
 
-        public Builder contactGroups(@Nullable Input<List<String>> contactGroups) {
+        public Builder contactGroups(@Nullable Output<List<String>> contactGroups) {
             this.contactGroups = contactGroups;
             return this;
         }
 
         public Builder contactGroups(@Nullable List<String> contactGroups) {
-            this.contactGroups = Input.ofNullable(contactGroups);
+            this.contactGroups = Output.ofNullable(contactGroups);
             return this;
         }
 
-        public Builder contactRoles(@Nullable Input<List<String>> contactRoles) {
+        public Builder contactRoles(@Nullable Output<List<String>> contactRoles) {
             this.contactRoles = contactRoles;
             return this;
         }
 
         public Builder contactRoles(@Nullable List<String> contactRoles) {
-            this.contactRoles = Input.ofNullable(contactRoles);
+            this.contactRoles = Output.ofNullable(contactRoles);
             return this;
         }
 
-        public Builder enabled(Input<Boolean> enabled) {
+        public Builder enabled(Output<Boolean> enabled) {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
 
         public Builder enabled(Boolean enabled) {
-            this.enabled = Input.of(Objects.requireNonNull(enabled));
+            this.enabled = Output.of(Objects.requireNonNull(enabled));
             return this;
         }
 
-        public Builder locale(@Nullable Input<Either<String,CultureCode>> locale) {
+        public Builder locale(@Nullable Output<Either<String,CultureCode>> locale) {
             this.locale = locale;
             return this;
         }
 
         public Builder locale(@Nullable Either<String,CultureCode> locale) {
-            this.locale = Input.ofNullable(locale);
+            this.locale = Output.ofNullable(locale);
             return this;
         }
 
-        public Builder operator(Input<Either<String,OperatorType>> operator) {
+        public Builder operator(Output<Either<String,OperatorType>> operator) {
             this.operator = Objects.requireNonNull(operator);
             return this;
         }
 
         public Builder operator(Either<String,OperatorType> operator) {
-            this.operator = Input.of(Objects.requireNonNull(operator));
+            this.operator = Output.of(Objects.requireNonNull(operator));
             return this;
         }
 
-        public Builder threshold(Input<Double> threshold) {
+        public Builder threshold(Output<Double> threshold) {
             this.threshold = Objects.requireNonNull(threshold);
             return this;
         }
 
         public Builder threshold(Double threshold) {
-            this.threshold = Input.of(Objects.requireNonNull(threshold));
+            this.threshold = Output.of(Objects.requireNonNull(threshold));
             return this;
         }
 
-        public Builder thresholdType(@Nullable Input<Either<String,ThresholdType>> thresholdType) {
+        public Builder thresholdType(@Nullable Output<Either<String,ThresholdType>> thresholdType) {
             this.thresholdType = thresholdType;
             return this;
         }
 
         public Builder thresholdType(@Nullable Either<String,ThresholdType> thresholdType) {
-            this.thresholdType = Input.ofNullable(thresholdType);
+            this.thresholdType = Output.ofNullable(thresholdType);
             return this;
         }
         public NotificationArgs build() {

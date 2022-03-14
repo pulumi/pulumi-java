@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.securityinsights.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class ThreatIntelligenceParsedPatternTypeValueArgs extends io.pulum
      * 
      */
     @InputImport(name="value")
-      private final @Nullable Input<String> value;
+      private final @Nullable Output<String> value;
 
-    public Input<String> getValue() {
-        return this.value == null ? Input.empty() : this.value;
+    public Output<String> getValue() {
+        return this.value == null ? Output.empty() : this.value;
     }
 
     /**
@@ -34,22 +34,22 @@ public final class ThreatIntelligenceParsedPatternTypeValueArgs extends io.pulum
      * 
      */
     @InputImport(name="valueType")
-      private final @Nullable Input<String> valueType;
+      private final @Nullable Output<String> valueType;
 
-    public Input<String> getValueType() {
-        return this.valueType == null ? Input.empty() : this.valueType;
+    public Output<String> getValueType() {
+        return this.valueType == null ? Output.empty() : this.valueType;
     }
 
     public ThreatIntelligenceParsedPatternTypeValueArgs(
-        @Nullable Input<String> value,
-        @Nullable Input<String> valueType) {
+        @Nullable Output<String> value,
+        @Nullable Output<String> valueType) {
         this.value = value;
         this.valueType = valueType;
     }
 
     private ThreatIntelligenceParsedPatternTypeValueArgs() {
-        this.value = Input.empty();
-        this.valueType = Input.empty();
+        this.value = Output.empty();
+        this.valueType = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class ThreatIntelligenceParsedPatternTypeValueArgs extends io.pulum
     }
 
     public static final class Builder {
-        private @Nullable Input<String> value;
-        private @Nullable Input<String> valueType;
+        private @Nullable Output<String> value;
+        private @Nullable Output<String> valueType;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class ThreatIntelligenceParsedPatternTypeValueArgs extends io.pulum
     	      this.valueType = defaults.valueType;
         }
 
-        public Builder value(@Nullable Input<String> value) {
+        public Builder value(@Nullable Output<String> value) {
             this.value = value;
             return this;
         }
 
         public Builder value(@Nullable String value) {
-            this.value = Input.ofNullable(value);
+            this.value = Output.ofNullable(value);
             return this;
         }
 
-        public Builder valueType(@Nullable Input<String> valueType) {
+        public Builder valueType(@Nullable Output<String> valueType) {
             this.valueType = valueType;
             return this;
         }
 
         public Builder valueType(@Nullable String valueType) {
-            this.valueType = Input.ofNullable(valueType);
+            this.valueType = Output.ofNullable(valueType);
             return this;
         }
         public ThreatIntelligenceParsedPatternTypeValueArgs build() {

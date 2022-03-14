@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.core_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.kubernetes.core_v1.inputs.NodeConfigSourceArgs;
 import io.pulumi.kubernetes.core_v1.inputs.TaintArgs;
@@ -27,10 +27,10 @@ public final class NodeSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="configSource")
-      private final @Nullable Input<NodeConfigSourceArgs> configSource;
+      private final @Nullable Output<NodeConfigSourceArgs> configSource;
 
-    public Input<NodeConfigSourceArgs> getConfigSource() {
-        return this.configSource == null ? Input.empty() : this.configSource;
+    public Output<NodeConfigSourceArgs> getConfigSource() {
+        return this.configSource == null ? Output.empty() : this.configSource;
     }
 
     /**
@@ -38,10 +38,10 @@ public final class NodeSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="externalID")
-      private final @Nullable Input<String> externalID;
+      private final @Nullable Output<String> externalID;
 
-    public Input<String> getExternalID() {
-        return this.externalID == null ? Input.empty() : this.externalID;
+    public Output<String> getExternalID() {
+        return this.externalID == null ? Output.empty() : this.externalID;
     }
 
     /**
@@ -49,10 +49,10 @@ public final class NodeSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="podCIDR")
-      private final @Nullable Input<String> podCIDR;
+      private final @Nullable Output<String> podCIDR;
 
-    public Input<String> getPodCIDR() {
-        return this.podCIDR == null ? Input.empty() : this.podCIDR;
+    public Output<String> getPodCIDR() {
+        return this.podCIDR == null ? Output.empty() : this.podCIDR;
     }
 
     /**
@@ -60,10 +60,10 @@ public final class NodeSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="podCIDRs")
-      private final @Nullable Input<List<String>> podCIDRs;
+      private final @Nullable Output<List<String>> podCIDRs;
 
-    public Input<List<String>> getPodCIDRs() {
-        return this.podCIDRs == null ? Input.empty() : this.podCIDRs;
+    public Output<List<String>> getPodCIDRs() {
+        return this.podCIDRs == null ? Output.empty() : this.podCIDRs;
     }
 
     /**
@@ -71,10 +71,10 @@ public final class NodeSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="providerID")
-      private final @Nullable Input<String> providerID;
+      private final @Nullable Output<String> providerID;
 
-    public Input<String> getProviderID() {
-        return this.providerID == null ? Input.empty() : this.providerID;
+    public Output<String> getProviderID() {
+        return this.providerID == null ? Output.empty() : this.providerID;
     }
 
     /**
@@ -82,10 +82,10 @@ public final class NodeSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="taints")
-      private final @Nullable Input<List<TaintArgs>> taints;
+      private final @Nullable Output<List<TaintArgs>> taints;
 
-    public Input<List<TaintArgs>> getTaints() {
-        return this.taints == null ? Input.empty() : this.taints;
+    public Output<List<TaintArgs>> getTaints() {
+        return this.taints == null ? Output.empty() : this.taints;
     }
 
     /**
@@ -93,20 +93,20 @@ public final class NodeSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="unschedulable")
-      private final @Nullable Input<Boolean> unschedulable;
+      private final @Nullable Output<Boolean> unschedulable;
 
-    public Input<Boolean> getUnschedulable() {
-        return this.unschedulable == null ? Input.empty() : this.unschedulable;
+    public Output<Boolean> getUnschedulable() {
+        return this.unschedulable == null ? Output.empty() : this.unschedulable;
     }
 
     public NodeSpecArgs(
-        @Nullable Input<NodeConfigSourceArgs> configSource,
-        @Nullable Input<String> externalID,
-        @Nullable Input<String> podCIDR,
-        @Nullable Input<List<String>> podCIDRs,
-        @Nullable Input<String> providerID,
-        @Nullable Input<List<TaintArgs>> taints,
-        @Nullable Input<Boolean> unschedulable) {
+        @Nullable Output<NodeConfigSourceArgs> configSource,
+        @Nullable Output<String> externalID,
+        @Nullable Output<String> podCIDR,
+        @Nullable Output<List<String>> podCIDRs,
+        @Nullable Output<String> providerID,
+        @Nullable Output<List<TaintArgs>> taints,
+        @Nullable Output<Boolean> unschedulable) {
         this.configSource = configSource;
         this.externalID = externalID;
         this.podCIDR = podCIDR;
@@ -117,13 +117,13 @@ public final class NodeSpecArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private NodeSpecArgs() {
-        this.configSource = Input.empty();
-        this.externalID = Input.empty();
-        this.podCIDR = Input.empty();
-        this.podCIDRs = Input.empty();
-        this.providerID = Input.empty();
-        this.taints = Input.empty();
-        this.unschedulable = Input.empty();
+        this.configSource = Output.empty();
+        this.externalID = Output.empty();
+        this.podCIDR = Output.empty();
+        this.podCIDRs = Output.empty();
+        this.providerID = Output.empty();
+        this.taints = Output.empty();
+        this.unschedulable = Output.empty();
     }
 
     public static Builder builder() {
@@ -135,13 +135,13 @@ public final class NodeSpecArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<NodeConfigSourceArgs> configSource;
-        private @Nullable Input<String> externalID;
-        private @Nullable Input<String> podCIDR;
-        private @Nullable Input<List<String>> podCIDRs;
-        private @Nullable Input<String> providerID;
-        private @Nullable Input<List<TaintArgs>> taints;
-        private @Nullable Input<Boolean> unschedulable;
+        private @Nullable Output<NodeConfigSourceArgs> configSource;
+        private @Nullable Output<String> externalID;
+        private @Nullable Output<String> podCIDR;
+        private @Nullable Output<List<String>> podCIDRs;
+        private @Nullable Output<String> providerID;
+        private @Nullable Output<List<TaintArgs>> taints;
+        private @Nullable Output<Boolean> unschedulable;
 
         public Builder() {
     	      // Empty
@@ -158,73 +158,73 @@ public final class NodeSpecArgs extends io.pulumi.resources.ResourceArgs {
     	      this.unschedulable = defaults.unschedulable;
         }
 
-        public Builder configSource(@Nullable Input<NodeConfigSourceArgs> configSource) {
+        public Builder configSource(@Nullable Output<NodeConfigSourceArgs> configSource) {
             this.configSource = configSource;
             return this;
         }
 
         public Builder configSource(@Nullable NodeConfigSourceArgs configSource) {
-            this.configSource = Input.ofNullable(configSource);
+            this.configSource = Output.ofNullable(configSource);
             return this;
         }
 
-        public Builder externalID(@Nullable Input<String> externalID) {
+        public Builder externalID(@Nullable Output<String> externalID) {
             this.externalID = externalID;
             return this;
         }
 
         public Builder externalID(@Nullable String externalID) {
-            this.externalID = Input.ofNullable(externalID);
+            this.externalID = Output.ofNullable(externalID);
             return this;
         }
 
-        public Builder podCIDR(@Nullable Input<String> podCIDR) {
+        public Builder podCIDR(@Nullable Output<String> podCIDR) {
             this.podCIDR = podCIDR;
             return this;
         }
 
         public Builder podCIDR(@Nullable String podCIDR) {
-            this.podCIDR = Input.ofNullable(podCIDR);
+            this.podCIDR = Output.ofNullable(podCIDR);
             return this;
         }
 
-        public Builder podCIDRs(@Nullable Input<List<String>> podCIDRs) {
+        public Builder podCIDRs(@Nullable Output<List<String>> podCIDRs) {
             this.podCIDRs = podCIDRs;
             return this;
         }
 
         public Builder podCIDRs(@Nullable List<String> podCIDRs) {
-            this.podCIDRs = Input.ofNullable(podCIDRs);
+            this.podCIDRs = Output.ofNullable(podCIDRs);
             return this;
         }
 
-        public Builder providerID(@Nullable Input<String> providerID) {
+        public Builder providerID(@Nullable Output<String> providerID) {
             this.providerID = providerID;
             return this;
         }
 
         public Builder providerID(@Nullable String providerID) {
-            this.providerID = Input.ofNullable(providerID);
+            this.providerID = Output.ofNullable(providerID);
             return this;
         }
 
-        public Builder taints(@Nullable Input<List<TaintArgs>> taints) {
+        public Builder taints(@Nullable Output<List<TaintArgs>> taints) {
             this.taints = taints;
             return this;
         }
 
         public Builder taints(@Nullable List<TaintArgs> taints) {
-            this.taints = Input.ofNullable(taints);
+            this.taints = Output.ofNullable(taints);
             return this;
         }
 
-        public Builder unschedulable(@Nullable Input<Boolean> unschedulable) {
+        public Builder unschedulable(@Nullable Output<Boolean> unschedulable) {
             this.unschedulable = unschedulable;
             return this;
         }
 
         public Builder unschedulable(@Nullable Boolean unschedulable) {
-            this.unschedulable = Input.ofNullable(unschedulable);
+            this.unschedulable = Output.ofNullable(unschedulable);
             return this;
         }
         public NodeSpecArgs build() {

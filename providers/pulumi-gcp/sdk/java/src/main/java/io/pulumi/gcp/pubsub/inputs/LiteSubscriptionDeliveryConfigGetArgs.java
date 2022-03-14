@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.pubsub.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,18 +19,18 @@ public final class LiteSubscriptionDeliveryConfigGetArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="deliveryRequirement", required=true)
-      private final Input<String> deliveryRequirement;
+      private final Output<String> deliveryRequirement;
 
-    public Input<String> getDeliveryRequirement() {
+    public Output<String> getDeliveryRequirement() {
         return this.deliveryRequirement;
     }
 
-    public LiteSubscriptionDeliveryConfigGetArgs(Input<String> deliveryRequirement) {
+    public LiteSubscriptionDeliveryConfigGetArgs(Output<String> deliveryRequirement) {
         this.deliveryRequirement = Objects.requireNonNull(deliveryRequirement, "expected parameter 'deliveryRequirement' to be non-null");
     }
 
     private LiteSubscriptionDeliveryConfigGetArgs() {
-        this.deliveryRequirement = Input.empty();
+        this.deliveryRequirement = Output.empty();
     }
 
     public static Builder builder() {
@@ -42,7 +42,7 @@ public final class LiteSubscriptionDeliveryConfigGetArgs extends io.pulumi.resou
     }
 
     public static final class Builder {
-        private Input<String> deliveryRequirement;
+        private Output<String> deliveryRequirement;
 
         public Builder() {
     	      // Empty
@@ -53,13 +53,13 @@ public final class LiteSubscriptionDeliveryConfigGetArgs extends io.pulumi.resou
     	      this.deliveryRequirement = defaults.deliveryRequirement;
         }
 
-        public Builder deliveryRequirement(Input<String> deliveryRequirement) {
+        public Builder deliveryRequirement(Output<String> deliveryRequirement) {
             this.deliveryRequirement = Objects.requireNonNull(deliveryRequirement);
             return this;
         }
 
         public Builder deliveryRequirement(String deliveryRequirement) {
-            this.deliveryRequirement = Input.of(Objects.requireNonNull(deliveryRequirement));
+            this.deliveryRequirement = Output.of(Objects.requireNonNull(deliveryRequirement));
             return this;
         }
         public LiteSubscriptionDeliveryConfigGetArgs build() {

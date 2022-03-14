@@ -6,7 +6,7 @@ package io.pulumi.azurenative.security;
 import io.pulumi.azurenative.security.enums.RuleState;
 import io.pulumi.azurenative.security.inputs.SuppressionAlertsScopeArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -22,9 +22,9 @@ public final class AlertsSuppressionRuleArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="alertType", required=true)
-      private final Input<String> alertType;
+      private final Output<String> alertType;
 
-    public Input<String> getAlertType() {
+    public Output<String> getAlertType() {
         return this.alertType;
     }
 
@@ -33,10 +33,10 @@ public final class AlertsSuppressionRuleArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="alertsSuppressionRuleName")
-      private final @Nullable Input<String> alertsSuppressionRuleName;
+      private final @Nullable Output<String> alertsSuppressionRuleName;
 
-    public Input<String> getAlertsSuppressionRuleName() {
-        return this.alertsSuppressionRuleName == null ? Input.empty() : this.alertsSuppressionRuleName;
+    public Output<String> getAlertsSuppressionRuleName() {
+        return this.alertsSuppressionRuleName == null ? Output.empty() : this.alertsSuppressionRuleName;
     }
 
     /**
@@ -44,10 +44,10 @@ public final class AlertsSuppressionRuleArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="comment")
-      private final @Nullable Input<String> comment;
+      private final @Nullable Output<String> comment;
 
-    public Input<String> getComment() {
-        return this.comment == null ? Input.empty() : this.comment;
+    public Output<String> getComment() {
+        return this.comment == null ? Output.empty() : this.comment;
     }
 
     /**
@@ -55,10 +55,10 @@ public final class AlertsSuppressionRuleArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="expirationDateUtc")
-      private final @Nullable Input<String> expirationDateUtc;
+      private final @Nullable Output<String> expirationDateUtc;
 
-    public Input<String> getExpirationDateUtc() {
-        return this.expirationDateUtc == null ? Input.empty() : this.expirationDateUtc;
+    public Output<String> getExpirationDateUtc() {
+        return this.expirationDateUtc == null ? Output.empty() : this.expirationDateUtc;
     }
 
     /**
@@ -66,9 +66,9 @@ public final class AlertsSuppressionRuleArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="reason", required=true)
-      private final Input<String> reason;
+      private final Output<String> reason;
 
-    public Input<String> getReason() {
+    public Output<String> getReason() {
         return this.reason;
     }
 
@@ -77,9 +77,9 @@ public final class AlertsSuppressionRuleArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="state", required=true)
-      private final Input<Either<String,RuleState>> state;
+      private final Output<Either<String,RuleState>> state;
 
-    public Input<Either<String,RuleState>> getState() {
+    public Output<Either<String,RuleState>> getState() {
         return this.state;
     }
 
@@ -88,20 +88,20 @@ public final class AlertsSuppressionRuleArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="suppressionAlertsScope")
-      private final @Nullable Input<SuppressionAlertsScopeArgs> suppressionAlertsScope;
+      private final @Nullable Output<SuppressionAlertsScopeArgs> suppressionAlertsScope;
 
-    public Input<SuppressionAlertsScopeArgs> getSuppressionAlertsScope() {
-        return this.suppressionAlertsScope == null ? Input.empty() : this.suppressionAlertsScope;
+    public Output<SuppressionAlertsScopeArgs> getSuppressionAlertsScope() {
+        return this.suppressionAlertsScope == null ? Output.empty() : this.suppressionAlertsScope;
     }
 
     public AlertsSuppressionRuleArgs(
-        Input<String> alertType,
-        @Nullable Input<String> alertsSuppressionRuleName,
-        @Nullable Input<String> comment,
-        @Nullable Input<String> expirationDateUtc,
-        Input<String> reason,
-        Input<Either<String,RuleState>> state,
-        @Nullable Input<SuppressionAlertsScopeArgs> suppressionAlertsScope) {
+        Output<String> alertType,
+        @Nullable Output<String> alertsSuppressionRuleName,
+        @Nullable Output<String> comment,
+        @Nullable Output<String> expirationDateUtc,
+        Output<String> reason,
+        Output<Either<String,RuleState>> state,
+        @Nullable Output<SuppressionAlertsScopeArgs> suppressionAlertsScope) {
         this.alertType = Objects.requireNonNull(alertType, "expected parameter 'alertType' to be non-null");
         this.alertsSuppressionRuleName = alertsSuppressionRuleName;
         this.comment = comment;
@@ -112,13 +112,13 @@ public final class AlertsSuppressionRuleArgs extends io.pulumi.resources.Resourc
     }
 
     private AlertsSuppressionRuleArgs() {
-        this.alertType = Input.empty();
-        this.alertsSuppressionRuleName = Input.empty();
-        this.comment = Input.empty();
-        this.expirationDateUtc = Input.empty();
-        this.reason = Input.empty();
-        this.state = Input.empty();
-        this.suppressionAlertsScope = Input.empty();
+        this.alertType = Output.empty();
+        this.alertsSuppressionRuleName = Output.empty();
+        this.comment = Output.empty();
+        this.expirationDateUtc = Output.empty();
+        this.reason = Output.empty();
+        this.state = Output.empty();
+        this.suppressionAlertsScope = Output.empty();
     }
 
     public static Builder builder() {
@@ -130,13 +130,13 @@ public final class AlertsSuppressionRuleArgs extends io.pulumi.resources.Resourc
     }
 
     public static final class Builder {
-        private Input<String> alertType;
-        private @Nullable Input<String> alertsSuppressionRuleName;
-        private @Nullable Input<String> comment;
-        private @Nullable Input<String> expirationDateUtc;
-        private Input<String> reason;
-        private Input<Either<String,RuleState>> state;
-        private @Nullable Input<SuppressionAlertsScopeArgs> suppressionAlertsScope;
+        private Output<String> alertType;
+        private @Nullable Output<String> alertsSuppressionRuleName;
+        private @Nullable Output<String> comment;
+        private @Nullable Output<String> expirationDateUtc;
+        private Output<String> reason;
+        private Output<Either<String,RuleState>> state;
+        private @Nullable Output<SuppressionAlertsScopeArgs> suppressionAlertsScope;
 
         public Builder() {
     	      // Empty
@@ -153,73 +153,73 @@ public final class AlertsSuppressionRuleArgs extends io.pulumi.resources.Resourc
     	      this.suppressionAlertsScope = defaults.suppressionAlertsScope;
         }
 
-        public Builder alertType(Input<String> alertType) {
+        public Builder alertType(Output<String> alertType) {
             this.alertType = Objects.requireNonNull(alertType);
             return this;
         }
 
         public Builder alertType(String alertType) {
-            this.alertType = Input.of(Objects.requireNonNull(alertType));
+            this.alertType = Output.of(Objects.requireNonNull(alertType));
             return this;
         }
 
-        public Builder alertsSuppressionRuleName(@Nullable Input<String> alertsSuppressionRuleName) {
+        public Builder alertsSuppressionRuleName(@Nullable Output<String> alertsSuppressionRuleName) {
             this.alertsSuppressionRuleName = alertsSuppressionRuleName;
             return this;
         }
 
         public Builder alertsSuppressionRuleName(@Nullable String alertsSuppressionRuleName) {
-            this.alertsSuppressionRuleName = Input.ofNullable(alertsSuppressionRuleName);
+            this.alertsSuppressionRuleName = Output.ofNullable(alertsSuppressionRuleName);
             return this;
         }
 
-        public Builder comment(@Nullable Input<String> comment) {
+        public Builder comment(@Nullable Output<String> comment) {
             this.comment = comment;
             return this;
         }
 
         public Builder comment(@Nullable String comment) {
-            this.comment = Input.ofNullable(comment);
+            this.comment = Output.ofNullable(comment);
             return this;
         }
 
-        public Builder expirationDateUtc(@Nullable Input<String> expirationDateUtc) {
+        public Builder expirationDateUtc(@Nullable Output<String> expirationDateUtc) {
             this.expirationDateUtc = expirationDateUtc;
             return this;
         }
 
         public Builder expirationDateUtc(@Nullable String expirationDateUtc) {
-            this.expirationDateUtc = Input.ofNullable(expirationDateUtc);
+            this.expirationDateUtc = Output.ofNullable(expirationDateUtc);
             return this;
         }
 
-        public Builder reason(Input<String> reason) {
+        public Builder reason(Output<String> reason) {
             this.reason = Objects.requireNonNull(reason);
             return this;
         }
 
         public Builder reason(String reason) {
-            this.reason = Input.of(Objects.requireNonNull(reason));
+            this.reason = Output.of(Objects.requireNonNull(reason));
             return this;
         }
 
-        public Builder state(Input<Either<String,RuleState>> state) {
+        public Builder state(Output<Either<String,RuleState>> state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
 
         public Builder state(Either<String,RuleState> state) {
-            this.state = Input.of(Objects.requireNonNull(state));
+            this.state = Output.of(Objects.requireNonNull(state));
             return this;
         }
 
-        public Builder suppressionAlertsScope(@Nullable Input<SuppressionAlertsScopeArgs> suppressionAlertsScope) {
+        public Builder suppressionAlertsScope(@Nullable Output<SuppressionAlertsScopeArgs> suppressionAlertsScope) {
             this.suppressionAlertsScope = suppressionAlertsScope;
             return this;
         }
 
         public Builder suppressionAlertsScope(@Nullable SuppressionAlertsScopeArgs suppressionAlertsScope) {
-            this.suppressionAlertsScope = Input.ofNullable(suppressionAlertsScope);
+            this.suppressionAlertsScope = Output.ofNullable(suppressionAlertsScope);
             return this;
         }
         public AlertsSuppressionRuleArgs build() {

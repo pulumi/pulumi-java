@@ -6,7 +6,7 @@ package io.pulumi.azurenative.cdn.inputs;
 import io.pulumi.azurenative.cdn.enums.Algorithm;
 import io.pulumi.azurenative.cdn.inputs.UrlSigningParamIdentifierArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -27,16 +27,16 @@ public final class UrlSigningActionParametersArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="algorithm")
-      private final @Nullable Input<Either<String,Algorithm>> algorithm;
+      private final @Nullable Output<Either<String,Algorithm>> algorithm;
 
-    public Input<Either<String,Algorithm>> getAlgorithm() {
-        return this.algorithm == null ? Input.empty() : this.algorithm;
+    public Output<Either<String,Algorithm>> getAlgorithm() {
+        return this.algorithm == null ? Output.empty() : this.algorithm;
     }
 
     @InputImport(name="odataType", required=true)
-      private final Input<String> odataType;
+      private final Output<String> odataType;
 
-    public Input<String> getOdataType() {
+    public Output<String> getOdataType() {
         return this.odataType;
     }
 
@@ -45,25 +45,25 @@ public final class UrlSigningActionParametersArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="parameterNameOverride")
-      private final @Nullable Input<List<UrlSigningParamIdentifierArgs>> parameterNameOverride;
+      private final @Nullable Output<List<UrlSigningParamIdentifierArgs>> parameterNameOverride;
 
-    public Input<List<UrlSigningParamIdentifierArgs>> getParameterNameOverride() {
-        return this.parameterNameOverride == null ? Input.empty() : this.parameterNameOverride;
+    public Output<List<UrlSigningParamIdentifierArgs>> getParameterNameOverride() {
+        return this.parameterNameOverride == null ? Output.empty() : this.parameterNameOverride;
     }
 
     public UrlSigningActionParametersArgs(
-        @Nullable Input<Either<String,Algorithm>> algorithm,
-        Input<String> odataType,
-        @Nullable Input<List<UrlSigningParamIdentifierArgs>> parameterNameOverride) {
+        @Nullable Output<Either<String,Algorithm>> algorithm,
+        Output<String> odataType,
+        @Nullable Output<List<UrlSigningParamIdentifierArgs>> parameterNameOverride) {
         this.algorithm = algorithm;
         this.odataType = Objects.requireNonNull(odataType, "expected parameter 'odataType' to be non-null");
         this.parameterNameOverride = parameterNameOverride;
     }
 
     private UrlSigningActionParametersArgs() {
-        this.algorithm = Input.empty();
-        this.odataType = Input.empty();
-        this.parameterNameOverride = Input.empty();
+        this.algorithm = Output.empty();
+        this.odataType = Output.empty();
+        this.parameterNameOverride = Output.empty();
     }
 
     public static Builder builder() {
@@ -75,9 +75,9 @@ public final class UrlSigningActionParametersArgs extends io.pulumi.resources.Re
     }
 
     public static final class Builder {
-        private @Nullable Input<Either<String,Algorithm>> algorithm;
-        private Input<String> odataType;
-        private @Nullable Input<List<UrlSigningParamIdentifierArgs>> parameterNameOverride;
+        private @Nullable Output<Either<String,Algorithm>> algorithm;
+        private Output<String> odataType;
+        private @Nullable Output<List<UrlSigningParamIdentifierArgs>> parameterNameOverride;
 
         public Builder() {
     	      // Empty
@@ -90,33 +90,33 @@ public final class UrlSigningActionParametersArgs extends io.pulumi.resources.Re
     	      this.parameterNameOverride = defaults.parameterNameOverride;
         }
 
-        public Builder algorithm(@Nullable Input<Either<String,Algorithm>> algorithm) {
+        public Builder algorithm(@Nullable Output<Either<String,Algorithm>> algorithm) {
             this.algorithm = algorithm;
             return this;
         }
 
         public Builder algorithm(@Nullable Either<String,Algorithm> algorithm) {
-            this.algorithm = Input.ofNullable(algorithm);
+            this.algorithm = Output.ofNullable(algorithm);
             return this;
         }
 
-        public Builder odataType(Input<String> odataType) {
+        public Builder odataType(Output<String> odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
 
         public Builder odataType(String odataType) {
-            this.odataType = Input.of(Objects.requireNonNull(odataType));
+            this.odataType = Output.of(Objects.requireNonNull(odataType));
             return this;
         }
 
-        public Builder parameterNameOverride(@Nullable Input<List<UrlSigningParamIdentifierArgs>> parameterNameOverride) {
+        public Builder parameterNameOverride(@Nullable Output<List<UrlSigningParamIdentifierArgs>> parameterNameOverride) {
             this.parameterNameOverride = parameterNameOverride;
             return this;
         }
 
         public Builder parameterNameOverride(@Nullable List<UrlSigningParamIdentifierArgs> parameterNameOverride) {
-            this.parameterNameOverride = Input.ofNullable(parameterNameOverride);
+            this.parameterNameOverride = Output.ofNullable(parameterNameOverride);
             return this;
         }
         public UrlSigningActionParametersArgs build() {

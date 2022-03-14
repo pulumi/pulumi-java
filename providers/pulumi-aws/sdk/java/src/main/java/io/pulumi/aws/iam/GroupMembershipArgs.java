@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.iam;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -20,9 +20,9 @@ public final class GroupMembershipArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="group", required=true)
-      private final Input<String> group;
+      private final Output<String> group;
 
-    public Input<String> getGroup() {
+    public Output<String> getGroup() {
         return this.group;
     }
 
@@ -31,10 +31,10 @@ public final class GroupMembershipArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -42,25 +42,25 @@ public final class GroupMembershipArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="users", required=true)
-      private final Input<List<String>> users;
+      private final Output<List<String>> users;
 
-    public Input<List<String>> getUsers() {
+    public Output<List<String>> getUsers() {
         return this.users;
     }
 
     public GroupMembershipArgs(
-        Input<String> group,
-        @Nullable Input<String> name,
-        Input<List<String>> users) {
+        Output<String> group,
+        @Nullable Output<String> name,
+        Output<List<String>> users) {
         this.group = Objects.requireNonNull(group, "expected parameter 'group' to be non-null");
         this.name = name;
         this.users = Objects.requireNonNull(users, "expected parameter 'users' to be non-null");
     }
 
     private GroupMembershipArgs() {
-        this.group = Input.empty();
-        this.name = Input.empty();
-        this.users = Input.empty();
+        this.group = Output.empty();
+        this.name = Output.empty();
+        this.users = Output.empty();
     }
 
     public static Builder builder() {
@@ -72,9 +72,9 @@ public final class GroupMembershipArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private Input<String> group;
-        private @Nullable Input<String> name;
-        private Input<List<String>> users;
+        private Output<String> group;
+        private @Nullable Output<String> name;
+        private Output<List<String>> users;
 
         public Builder() {
     	      // Empty
@@ -87,33 +87,33 @@ public final class GroupMembershipArgs extends io.pulumi.resources.ResourceArgs 
     	      this.users = defaults.users;
         }
 
-        public Builder group(Input<String> group) {
+        public Builder group(Output<String> group) {
             this.group = Objects.requireNonNull(group);
             return this;
         }
 
         public Builder group(String group) {
-            this.group = Input.of(Objects.requireNonNull(group));
+            this.group = Output.of(Objects.requireNonNull(group));
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder users(Input<List<String>> users) {
+        public Builder users(Output<List<String>> users) {
             this.users = Objects.requireNonNull(users);
             return this;
         }
 
         public Builder users(List<String> users) {
-            this.users = Input.of(Objects.requireNonNull(users));
+            this.users = Output.of(Objects.requireNonNull(users));
             return this;
         }
         public GroupMembershipArgs build() {

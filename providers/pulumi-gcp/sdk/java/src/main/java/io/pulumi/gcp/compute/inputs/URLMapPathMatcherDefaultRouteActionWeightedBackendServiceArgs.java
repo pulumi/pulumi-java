@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.compute.inputs.URLMapPathMatcherDefaultRouteActionWeightedBackendServiceHeaderActionArgs;
 import java.lang.Integer;
@@ -21,10 +21,10 @@ public final class URLMapPathMatcherDefaultRouteActionWeightedBackendServiceArgs
      * 
      */
     @InputImport(name="backendService")
-      private final @Nullable Input<String> backendService;
+      private final @Nullable Output<String> backendService;
 
-    public Input<String> getBackendService() {
-        return this.backendService == null ? Input.empty() : this.backendService;
+    public Output<String> getBackendService() {
+        return this.backendService == null ? Output.empty() : this.backendService;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class URLMapPathMatcherDefaultRouteActionWeightedBackendServiceArgs
      * 
      */
     @InputImport(name="headerAction")
-      private final @Nullable Input<URLMapPathMatcherDefaultRouteActionWeightedBackendServiceHeaderActionArgs> headerAction;
+      private final @Nullable Output<URLMapPathMatcherDefaultRouteActionWeightedBackendServiceHeaderActionArgs> headerAction;
 
-    public Input<URLMapPathMatcherDefaultRouteActionWeightedBackendServiceHeaderActionArgs> getHeaderAction() {
-        return this.headerAction == null ? Input.empty() : this.headerAction;
+    public Output<URLMapPathMatcherDefaultRouteActionWeightedBackendServiceHeaderActionArgs> getHeaderAction() {
+        return this.headerAction == null ? Output.empty() : this.headerAction;
     }
 
     /**
@@ -52,25 +52,25 @@ public final class URLMapPathMatcherDefaultRouteActionWeightedBackendServiceArgs
      * 
      */
     @InputImport(name="weight")
-      private final @Nullable Input<Integer> weight;
+      private final @Nullable Output<Integer> weight;
 
-    public Input<Integer> getWeight() {
-        return this.weight == null ? Input.empty() : this.weight;
+    public Output<Integer> getWeight() {
+        return this.weight == null ? Output.empty() : this.weight;
     }
 
     public URLMapPathMatcherDefaultRouteActionWeightedBackendServiceArgs(
-        @Nullable Input<String> backendService,
-        @Nullable Input<URLMapPathMatcherDefaultRouteActionWeightedBackendServiceHeaderActionArgs> headerAction,
-        @Nullable Input<Integer> weight) {
+        @Nullable Output<String> backendService,
+        @Nullable Output<URLMapPathMatcherDefaultRouteActionWeightedBackendServiceHeaderActionArgs> headerAction,
+        @Nullable Output<Integer> weight) {
         this.backendService = backendService;
         this.headerAction = headerAction;
         this.weight = weight;
     }
 
     private URLMapPathMatcherDefaultRouteActionWeightedBackendServiceArgs() {
-        this.backendService = Input.empty();
-        this.headerAction = Input.empty();
-        this.weight = Input.empty();
+        this.backendService = Output.empty();
+        this.headerAction = Output.empty();
+        this.weight = Output.empty();
     }
 
     public static Builder builder() {
@@ -82,9 +82,9 @@ public final class URLMapPathMatcherDefaultRouteActionWeightedBackendServiceArgs
     }
 
     public static final class Builder {
-        private @Nullable Input<String> backendService;
-        private @Nullable Input<URLMapPathMatcherDefaultRouteActionWeightedBackendServiceHeaderActionArgs> headerAction;
-        private @Nullable Input<Integer> weight;
+        private @Nullable Output<String> backendService;
+        private @Nullable Output<URLMapPathMatcherDefaultRouteActionWeightedBackendServiceHeaderActionArgs> headerAction;
+        private @Nullable Output<Integer> weight;
 
         public Builder() {
     	      // Empty
@@ -97,33 +97,33 @@ public final class URLMapPathMatcherDefaultRouteActionWeightedBackendServiceArgs
     	      this.weight = defaults.weight;
         }
 
-        public Builder backendService(@Nullable Input<String> backendService) {
+        public Builder backendService(@Nullable Output<String> backendService) {
             this.backendService = backendService;
             return this;
         }
 
         public Builder backendService(@Nullable String backendService) {
-            this.backendService = Input.ofNullable(backendService);
+            this.backendService = Output.ofNullable(backendService);
             return this;
         }
 
-        public Builder headerAction(@Nullable Input<URLMapPathMatcherDefaultRouteActionWeightedBackendServiceHeaderActionArgs> headerAction) {
+        public Builder headerAction(@Nullable Output<URLMapPathMatcherDefaultRouteActionWeightedBackendServiceHeaderActionArgs> headerAction) {
             this.headerAction = headerAction;
             return this;
         }
 
         public Builder headerAction(@Nullable URLMapPathMatcherDefaultRouteActionWeightedBackendServiceHeaderActionArgs headerAction) {
-            this.headerAction = Input.ofNullable(headerAction);
+            this.headerAction = Output.ofNullable(headerAction);
             return this;
         }
 
-        public Builder weight(@Nullable Input<Integer> weight) {
+        public Builder weight(@Nullable Output<Integer> weight) {
             this.weight = weight;
             return this;
         }
 
         public Builder weight(@Nullable Integer weight) {
-            this.weight = Input.ofNullable(weight);
+            this.weight = Output.ofNullable(weight);
             return this;
         }
         public URLMapPathMatcherDefaultRouteActionWeightedBackendServiceArgs build() {

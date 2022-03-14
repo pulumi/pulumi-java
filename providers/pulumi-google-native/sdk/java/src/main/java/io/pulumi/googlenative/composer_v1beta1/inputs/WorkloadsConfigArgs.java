@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.composer_v1beta1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.composer_v1beta1.inputs.SchedulerResourceArgs;
 import io.pulumi.googlenative.composer_v1beta1.inputs.WebServerResourceArgs;
@@ -25,10 +25,10 @@ public final class WorkloadsConfigArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="scheduler")
-      private final @Nullable Input<SchedulerResourceArgs> scheduler;
+      private final @Nullable Output<SchedulerResourceArgs> scheduler;
 
-    public Input<SchedulerResourceArgs> getScheduler() {
-        return this.scheduler == null ? Input.empty() : this.scheduler;
+    public Output<SchedulerResourceArgs> getScheduler() {
+        return this.scheduler == null ? Output.empty() : this.scheduler;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class WorkloadsConfigArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="webServer")
-      private final @Nullable Input<WebServerResourceArgs> webServer;
+      private final @Nullable Output<WebServerResourceArgs> webServer;
 
-    public Input<WebServerResourceArgs> getWebServer() {
-        return this.webServer == null ? Input.empty() : this.webServer;
+    public Output<WebServerResourceArgs> getWebServer() {
+        return this.webServer == null ? Output.empty() : this.webServer;
     }
 
     /**
@@ -47,25 +47,25 @@ public final class WorkloadsConfigArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="worker")
-      private final @Nullable Input<WorkerResourceArgs> worker;
+      private final @Nullable Output<WorkerResourceArgs> worker;
 
-    public Input<WorkerResourceArgs> getWorker() {
-        return this.worker == null ? Input.empty() : this.worker;
+    public Output<WorkerResourceArgs> getWorker() {
+        return this.worker == null ? Output.empty() : this.worker;
     }
 
     public WorkloadsConfigArgs(
-        @Nullable Input<SchedulerResourceArgs> scheduler,
-        @Nullable Input<WebServerResourceArgs> webServer,
-        @Nullable Input<WorkerResourceArgs> worker) {
+        @Nullable Output<SchedulerResourceArgs> scheduler,
+        @Nullable Output<WebServerResourceArgs> webServer,
+        @Nullable Output<WorkerResourceArgs> worker) {
         this.scheduler = scheduler;
         this.webServer = webServer;
         this.worker = worker;
     }
 
     private WorkloadsConfigArgs() {
-        this.scheduler = Input.empty();
-        this.webServer = Input.empty();
-        this.worker = Input.empty();
+        this.scheduler = Output.empty();
+        this.webServer = Output.empty();
+        this.worker = Output.empty();
     }
 
     public static Builder builder() {
@@ -77,9 +77,9 @@ public final class WorkloadsConfigArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private @Nullable Input<SchedulerResourceArgs> scheduler;
-        private @Nullable Input<WebServerResourceArgs> webServer;
-        private @Nullable Input<WorkerResourceArgs> worker;
+        private @Nullable Output<SchedulerResourceArgs> scheduler;
+        private @Nullable Output<WebServerResourceArgs> webServer;
+        private @Nullable Output<WorkerResourceArgs> worker;
 
         public Builder() {
     	      // Empty
@@ -92,33 +92,33 @@ public final class WorkloadsConfigArgs extends io.pulumi.resources.ResourceArgs 
     	      this.worker = defaults.worker;
         }
 
-        public Builder scheduler(@Nullable Input<SchedulerResourceArgs> scheduler) {
+        public Builder scheduler(@Nullable Output<SchedulerResourceArgs> scheduler) {
             this.scheduler = scheduler;
             return this;
         }
 
         public Builder scheduler(@Nullable SchedulerResourceArgs scheduler) {
-            this.scheduler = Input.ofNullable(scheduler);
+            this.scheduler = Output.ofNullable(scheduler);
             return this;
         }
 
-        public Builder webServer(@Nullable Input<WebServerResourceArgs> webServer) {
+        public Builder webServer(@Nullable Output<WebServerResourceArgs> webServer) {
             this.webServer = webServer;
             return this;
         }
 
         public Builder webServer(@Nullable WebServerResourceArgs webServer) {
-            this.webServer = Input.ofNullable(webServer);
+            this.webServer = Output.ofNullable(webServer);
             return this;
         }
 
-        public Builder worker(@Nullable Input<WorkerResourceArgs> worker) {
+        public Builder worker(@Nullable Output<WorkerResourceArgs> worker) {
             this.worker = worker;
             return this;
         }
 
         public Builder worker(@Nullable WorkerResourceArgs worker) {
-            this.worker = Input.ofNullable(worker);
+            this.worker = Output.ofNullable(worker);
             return this;
         }
         public WorkloadsConfigArgs build() {

@@ -6,7 +6,7 @@ package io.pulumi.awsnative.iotanalytics.inputs;
 import io.pulumi.awsnative.iotanalytics.inputs.DatastoreCustomerManagedS3Args;
 import io.pulumi.awsnative.iotanalytics.inputs.DatastoreIotSiteWiseMultiLayerStorageArgs;
 import io.pulumi.awsnative.iotanalytics.inputs.DatastoreServiceManagedS3Args;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -17,39 +17,39 @@ public final class DatastoreStorageArgs extends io.pulumi.resources.ResourceArgs
     public static final DatastoreStorageArgs Empty = new DatastoreStorageArgs();
 
     @InputImport(name="customerManagedS3")
-      private final @Nullable Input<DatastoreCustomerManagedS3Args> customerManagedS3;
+      private final @Nullable Output<DatastoreCustomerManagedS3Args> customerManagedS3;
 
-    public Input<DatastoreCustomerManagedS3Args> getCustomerManagedS3() {
-        return this.customerManagedS3 == null ? Input.empty() : this.customerManagedS3;
+    public Output<DatastoreCustomerManagedS3Args> getCustomerManagedS3() {
+        return this.customerManagedS3 == null ? Output.empty() : this.customerManagedS3;
     }
 
     @InputImport(name="iotSiteWiseMultiLayerStorage")
-      private final @Nullable Input<DatastoreIotSiteWiseMultiLayerStorageArgs> iotSiteWiseMultiLayerStorage;
+      private final @Nullable Output<DatastoreIotSiteWiseMultiLayerStorageArgs> iotSiteWiseMultiLayerStorage;
 
-    public Input<DatastoreIotSiteWiseMultiLayerStorageArgs> getIotSiteWiseMultiLayerStorage() {
-        return this.iotSiteWiseMultiLayerStorage == null ? Input.empty() : this.iotSiteWiseMultiLayerStorage;
+    public Output<DatastoreIotSiteWiseMultiLayerStorageArgs> getIotSiteWiseMultiLayerStorage() {
+        return this.iotSiteWiseMultiLayerStorage == null ? Output.empty() : this.iotSiteWiseMultiLayerStorage;
     }
 
     @InputImport(name="serviceManagedS3")
-      private final @Nullable Input<DatastoreServiceManagedS3Args> serviceManagedS3;
+      private final @Nullable Output<DatastoreServiceManagedS3Args> serviceManagedS3;
 
-    public Input<DatastoreServiceManagedS3Args> getServiceManagedS3() {
-        return this.serviceManagedS3 == null ? Input.empty() : this.serviceManagedS3;
+    public Output<DatastoreServiceManagedS3Args> getServiceManagedS3() {
+        return this.serviceManagedS3 == null ? Output.empty() : this.serviceManagedS3;
     }
 
     public DatastoreStorageArgs(
-        @Nullable Input<DatastoreCustomerManagedS3Args> customerManagedS3,
-        @Nullable Input<DatastoreIotSiteWiseMultiLayerStorageArgs> iotSiteWiseMultiLayerStorage,
-        @Nullable Input<DatastoreServiceManagedS3Args> serviceManagedS3) {
+        @Nullable Output<DatastoreCustomerManagedS3Args> customerManagedS3,
+        @Nullable Output<DatastoreIotSiteWiseMultiLayerStorageArgs> iotSiteWiseMultiLayerStorage,
+        @Nullable Output<DatastoreServiceManagedS3Args> serviceManagedS3) {
         this.customerManagedS3 = customerManagedS3;
         this.iotSiteWiseMultiLayerStorage = iotSiteWiseMultiLayerStorage;
         this.serviceManagedS3 = serviceManagedS3;
     }
 
     private DatastoreStorageArgs() {
-        this.customerManagedS3 = Input.empty();
-        this.iotSiteWiseMultiLayerStorage = Input.empty();
-        this.serviceManagedS3 = Input.empty();
+        this.customerManagedS3 = Output.empty();
+        this.iotSiteWiseMultiLayerStorage = Output.empty();
+        this.serviceManagedS3 = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,9 +61,9 @@ public final class DatastoreStorageArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private @Nullable Input<DatastoreCustomerManagedS3Args> customerManagedS3;
-        private @Nullable Input<DatastoreIotSiteWiseMultiLayerStorageArgs> iotSiteWiseMultiLayerStorage;
-        private @Nullable Input<DatastoreServiceManagedS3Args> serviceManagedS3;
+        private @Nullable Output<DatastoreCustomerManagedS3Args> customerManagedS3;
+        private @Nullable Output<DatastoreIotSiteWiseMultiLayerStorageArgs> iotSiteWiseMultiLayerStorage;
+        private @Nullable Output<DatastoreServiceManagedS3Args> serviceManagedS3;
 
         public Builder() {
     	      // Empty
@@ -76,33 +76,33 @@ public final class DatastoreStorageArgs extends io.pulumi.resources.ResourceArgs
     	      this.serviceManagedS3 = defaults.serviceManagedS3;
         }
 
-        public Builder customerManagedS3(@Nullable Input<DatastoreCustomerManagedS3Args> customerManagedS3) {
+        public Builder customerManagedS3(@Nullable Output<DatastoreCustomerManagedS3Args> customerManagedS3) {
             this.customerManagedS3 = customerManagedS3;
             return this;
         }
 
         public Builder customerManagedS3(@Nullable DatastoreCustomerManagedS3Args customerManagedS3) {
-            this.customerManagedS3 = Input.ofNullable(customerManagedS3);
+            this.customerManagedS3 = Output.ofNullable(customerManagedS3);
             return this;
         }
 
-        public Builder iotSiteWiseMultiLayerStorage(@Nullable Input<DatastoreIotSiteWiseMultiLayerStorageArgs> iotSiteWiseMultiLayerStorage) {
+        public Builder iotSiteWiseMultiLayerStorage(@Nullable Output<DatastoreIotSiteWiseMultiLayerStorageArgs> iotSiteWiseMultiLayerStorage) {
             this.iotSiteWiseMultiLayerStorage = iotSiteWiseMultiLayerStorage;
             return this;
         }
 
         public Builder iotSiteWiseMultiLayerStorage(@Nullable DatastoreIotSiteWiseMultiLayerStorageArgs iotSiteWiseMultiLayerStorage) {
-            this.iotSiteWiseMultiLayerStorage = Input.ofNullable(iotSiteWiseMultiLayerStorage);
+            this.iotSiteWiseMultiLayerStorage = Output.ofNullable(iotSiteWiseMultiLayerStorage);
             return this;
         }
 
-        public Builder serviceManagedS3(@Nullable Input<DatastoreServiceManagedS3Args> serviceManagedS3) {
+        public Builder serviceManagedS3(@Nullable Output<DatastoreServiceManagedS3Args> serviceManagedS3) {
             this.serviceManagedS3 = serviceManagedS3;
             return this;
         }
 
         public Builder serviceManagedS3(@Nullable DatastoreServiceManagedS3Args serviceManagedS3) {
-            this.serviceManagedS3 = Input.ofNullable(serviceManagedS3);
+            this.serviceManagedS3 = Output.ofNullable(serviceManagedS3);
             return this;
         }
         public DatastoreStorageArgs build() {

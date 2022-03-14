@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.monitoring.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.monitoring.inputs.NotificationChannelSensitiveLabelsGetArgs;
 import java.lang.Boolean;
@@ -22,10 +22,10 @@ public final class NotificationChannelState extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -33,10 +33,10 @@ public final class NotificationChannelState extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="displayName")
-      private final @Nullable Input<String> displayName;
+      private final @Nullable Output<String> displayName;
 
-    public Input<String> getDisplayName() {
-        return this.displayName == null ? Input.empty() : this.displayName;
+    public Output<String> getDisplayName() {
+        return this.displayName == null ? Output.empty() : this.displayName;
     }
 
     /**
@@ -44,10 +44,10 @@ public final class NotificationChannelState extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="enabled")
-      private final @Nullable Input<Boolean> enabled;
+      private final @Nullable Output<Boolean> enabled;
 
-    public Input<Boolean> getEnabled() {
-        return this.enabled == null ? Input.empty() : this.enabled;
+    public Output<Boolean> getEnabled() {
+        return this.enabled == null ? Output.empty() : this.enabled;
     }
 
     /**
@@ -60,10 +60,10 @@ public final class NotificationChannelState extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="labels")
-      private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Output<Map<String,String>> labels;
 
-    public Input<Map<String,String>> getLabels() {
-        return this.labels == null ? Input.empty() : this.labels;
+    public Output<Map<String,String>> getLabels() {
+        return this.labels == null ? Output.empty() : this.labels;
     }
 
     /**
@@ -72,10 +72,10 @@ public final class NotificationChannelState extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -84,10 +84,10 @@ public final class NotificationChannelState extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -101,10 +101,10 @@ public final class NotificationChannelState extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="sensitiveLabels")
-      private final @Nullable Input<NotificationChannelSensitiveLabelsGetArgs> sensitiveLabels;
+      private final @Nullable Output<NotificationChannelSensitiveLabelsGetArgs> sensitiveLabels;
 
-    public Input<NotificationChannelSensitiveLabelsGetArgs> getSensitiveLabels() {
-        return this.sensitiveLabels == null ? Input.empty() : this.sensitiveLabels;
+    public Output<NotificationChannelSensitiveLabelsGetArgs> getSensitiveLabels() {
+        return this.sensitiveLabels == null ? Output.empty() : this.sensitiveLabels;
     }
 
     /**
@@ -112,10 +112,10 @@ public final class NotificationChannelState extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="type")
-      private final @Nullable Input<String> type;
+      private final @Nullable Output<String> type;
 
-    public Input<String> getType() {
-        return this.type == null ? Input.empty() : this.type;
+    public Output<String> getType() {
+        return this.type == null ? Output.empty() : this.type;
     }
 
     /**
@@ -123,10 +123,10 @@ public final class NotificationChannelState extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="userLabels")
-      private final @Nullable Input<Map<String,String>> userLabels;
+      private final @Nullable Output<Map<String,String>> userLabels;
 
-    public Input<Map<String,String>> getUserLabels() {
-        return this.userLabels == null ? Input.empty() : this.userLabels;
+    public Output<Map<String,String>> getUserLabels() {
+        return this.userLabels == null ? Output.empty() : this.userLabels;
     }
 
     /**
@@ -140,23 +140,23 @@ public final class NotificationChannelState extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="verificationStatus")
-      private final @Nullable Input<String> verificationStatus;
+      private final @Nullable Output<String> verificationStatus;
 
-    public Input<String> getVerificationStatus() {
-        return this.verificationStatus == null ? Input.empty() : this.verificationStatus;
+    public Output<String> getVerificationStatus() {
+        return this.verificationStatus == null ? Output.empty() : this.verificationStatus;
     }
 
     public NotificationChannelState(
-        @Nullable Input<String> description,
-        @Nullable Input<String> displayName,
-        @Nullable Input<Boolean> enabled,
-        @Nullable Input<Map<String,String>> labels,
-        @Nullable Input<String> name,
-        @Nullable Input<String> project,
-        @Nullable Input<NotificationChannelSensitiveLabelsGetArgs> sensitiveLabels,
-        @Nullable Input<String> type,
-        @Nullable Input<Map<String,String>> userLabels,
-        @Nullable Input<String> verificationStatus) {
+        @Nullable Output<String> description,
+        @Nullable Output<String> displayName,
+        @Nullable Output<Boolean> enabled,
+        @Nullable Output<Map<String,String>> labels,
+        @Nullable Output<String> name,
+        @Nullable Output<String> project,
+        @Nullable Output<NotificationChannelSensitiveLabelsGetArgs> sensitiveLabels,
+        @Nullable Output<String> type,
+        @Nullable Output<Map<String,String>> userLabels,
+        @Nullable Output<String> verificationStatus) {
         this.description = description;
         this.displayName = displayName;
         this.enabled = enabled;
@@ -170,16 +170,16 @@ public final class NotificationChannelState extends io.pulumi.resources.Resource
     }
 
     private NotificationChannelState() {
-        this.description = Input.empty();
-        this.displayName = Input.empty();
-        this.enabled = Input.empty();
-        this.labels = Input.empty();
-        this.name = Input.empty();
-        this.project = Input.empty();
-        this.sensitiveLabels = Input.empty();
-        this.type = Input.empty();
-        this.userLabels = Input.empty();
-        this.verificationStatus = Input.empty();
+        this.description = Output.empty();
+        this.displayName = Output.empty();
+        this.enabled = Output.empty();
+        this.labels = Output.empty();
+        this.name = Output.empty();
+        this.project = Output.empty();
+        this.sensitiveLabels = Output.empty();
+        this.type = Output.empty();
+        this.userLabels = Output.empty();
+        this.verificationStatus = Output.empty();
     }
 
     public static Builder builder() {
@@ -191,16 +191,16 @@ public final class NotificationChannelState extends io.pulumi.resources.Resource
     }
 
     public static final class Builder {
-        private @Nullable Input<String> description;
-        private @Nullable Input<String> displayName;
-        private @Nullable Input<Boolean> enabled;
-        private @Nullable Input<Map<String,String>> labels;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> project;
-        private @Nullable Input<NotificationChannelSensitiveLabelsGetArgs> sensitiveLabels;
-        private @Nullable Input<String> type;
-        private @Nullable Input<Map<String,String>> userLabels;
-        private @Nullable Input<String> verificationStatus;
+        private @Nullable Output<String> description;
+        private @Nullable Output<String> displayName;
+        private @Nullable Output<Boolean> enabled;
+        private @Nullable Output<Map<String,String>> labels;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> project;
+        private @Nullable Output<NotificationChannelSensitiveLabelsGetArgs> sensitiveLabels;
+        private @Nullable Output<String> type;
+        private @Nullable Output<Map<String,String>> userLabels;
+        private @Nullable Output<String> verificationStatus;
 
         public Builder() {
     	      // Empty
@@ -220,103 +220,103 @@ public final class NotificationChannelState extends io.pulumi.resources.Resource
     	      this.verificationStatus = defaults.verificationStatus;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder displayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Input.ofNullable(displayName);
+            this.displayName = Output.ofNullable(displayName);
             return this;
         }
 
-        public Builder enabled(@Nullable Input<Boolean> enabled) {
+        public Builder enabled(@Nullable Output<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
 
         public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Input.ofNullable(enabled);
+            this.enabled = Output.ofNullable(enabled);
             return this;
         }
 
-        public Builder labels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
         public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Input.ofNullable(labels);
+            this.labels = Output.ofNullable(labels);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder sensitiveLabels(@Nullable Input<NotificationChannelSensitiveLabelsGetArgs> sensitiveLabels) {
+        public Builder sensitiveLabels(@Nullable Output<NotificationChannelSensitiveLabelsGetArgs> sensitiveLabels) {
             this.sensitiveLabels = sensitiveLabels;
             return this;
         }
 
         public Builder sensitiveLabels(@Nullable NotificationChannelSensitiveLabelsGetArgs sensitiveLabels) {
-            this.sensitiveLabels = Input.ofNullable(sensitiveLabels);
+            this.sensitiveLabels = Output.ofNullable(sensitiveLabels);
             return this;
         }
 
-        public Builder type(@Nullable Input<String> type) {
+        public Builder type(@Nullable Output<String> type) {
             this.type = type;
             return this;
         }
 
         public Builder type(@Nullable String type) {
-            this.type = Input.ofNullable(type);
+            this.type = Output.ofNullable(type);
             return this;
         }
 
-        public Builder userLabels(@Nullable Input<Map<String,String>> userLabels) {
+        public Builder userLabels(@Nullable Output<Map<String,String>> userLabels) {
             this.userLabels = userLabels;
             return this;
         }
 
         public Builder userLabels(@Nullable Map<String,String> userLabels) {
-            this.userLabels = Input.ofNullable(userLabels);
+            this.userLabels = Output.ofNullable(userLabels);
             return this;
         }
 
-        public Builder verificationStatus(@Nullable Input<String> verificationStatus) {
+        public Builder verificationStatus(@Nullable Output<String> verificationStatus) {
             this.verificationStatus = verificationStatus;
             return this;
         }
 
         public Builder verificationStatus(@Nullable String verificationStatus) {
-            this.verificationStatus = Input.ofNullable(verificationStatus);
+            this.verificationStatus = Output.ofNullable(verificationStatus);
             return this;
         }
         public NotificationChannelState build() {

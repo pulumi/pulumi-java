@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.iotevents.inputs;
 
 import io.pulumi.awsnative.iotevents.inputs.DetectorModelAssetPropertyValueArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -24,10 +24,10 @@ public final class DetectorModelIotSiteWiseArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="assetId")
-      private final @Nullable Input<String> assetId;
+      private final @Nullable Output<String> assetId;
 
-    public Input<String> getAssetId() {
-        return this.assetId == null ? Input.empty() : this.assetId;
+    public Output<String> getAssetId() {
+        return this.assetId == null ? Output.empty() : this.assetId;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class DetectorModelIotSiteWiseArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="entryId")
-      private final @Nullable Input<String> entryId;
+      private final @Nullable Output<String> entryId;
 
-    public Input<String> getEntryId() {
-        return this.entryId == null ? Input.empty() : this.entryId;
+    public Output<String> getEntryId() {
+        return this.entryId == null ? Output.empty() : this.entryId;
     }
 
     /**
@@ -46,10 +46,10 @@ public final class DetectorModelIotSiteWiseArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="propertyAlias")
-      private final @Nullable Input<String> propertyAlias;
+      private final @Nullable Output<String> propertyAlias;
 
-    public Input<String> getPropertyAlias() {
-        return this.propertyAlias == null ? Input.empty() : this.propertyAlias;
+    public Output<String> getPropertyAlias() {
+        return this.propertyAlias == null ? Output.empty() : this.propertyAlias;
     }
 
     /**
@@ -57,25 +57,25 @@ public final class DetectorModelIotSiteWiseArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="propertyId")
-      private final @Nullable Input<String> propertyId;
+      private final @Nullable Output<String> propertyId;
 
-    public Input<String> getPropertyId() {
-        return this.propertyId == null ? Input.empty() : this.propertyId;
+    public Output<String> getPropertyId() {
+        return this.propertyId == null ? Output.empty() : this.propertyId;
     }
 
     @InputImport(name="propertyValue", required=true)
-      private final Input<DetectorModelAssetPropertyValueArgs> propertyValue;
+      private final Output<DetectorModelAssetPropertyValueArgs> propertyValue;
 
-    public Input<DetectorModelAssetPropertyValueArgs> getPropertyValue() {
+    public Output<DetectorModelAssetPropertyValueArgs> getPropertyValue() {
         return this.propertyValue;
     }
 
     public DetectorModelIotSiteWiseArgs(
-        @Nullable Input<String> assetId,
-        @Nullable Input<String> entryId,
-        @Nullable Input<String> propertyAlias,
-        @Nullable Input<String> propertyId,
-        Input<DetectorModelAssetPropertyValueArgs> propertyValue) {
+        @Nullable Output<String> assetId,
+        @Nullable Output<String> entryId,
+        @Nullable Output<String> propertyAlias,
+        @Nullable Output<String> propertyId,
+        Output<DetectorModelAssetPropertyValueArgs> propertyValue) {
         this.assetId = assetId;
         this.entryId = entryId;
         this.propertyAlias = propertyAlias;
@@ -84,11 +84,11 @@ public final class DetectorModelIotSiteWiseArgs extends io.pulumi.resources.Reso
     }
 
     private DetectorModelIotSiteWiseArgs() {
-        this.assetId = Input.empty();
-        this.entryId = Input.empty();
-        this.propertyAlias = Input.empty();
-        this.propertyId = Input.empty();
-        this.propertyValue = Input.empty();
+        this.assetId = Output.empty();
+        this.entryId = Output.empty();
+        this.propertyAlias = Output.empty();
+        this.propertyId = Output.empty();
+        this.propertyValue = Output.empty();
     }
 
     public static Builder builder() {
@@ -100,11 +100,11 @@ public final class DetectorModelIotSiteWiseArgs extends io.pulumi.resources.Reso
     }
 
     public static final class Builder {
-        private @Nullable Input<String> assetId;
-        private @Nullable Input<String> entryId;
-        private @Nullable Input<String> propertyAlias;
-        private @Nullable Input<String> propertyId;
-        private Input<DetectorModelAssetPropertyValueArgs> propertyValue;
+        private @Nullable Output<String> assetId;
+        private @Nullable Output<String> entryId;
+        private @Nullable Output<String> propertyAlias;
+        private @Nullable Output<String> propertyId;
+        private Output<DetectorModelAssetPropertyValueArgs> propertyValue;
 
         public Builder() {
     	      // Empty
@@ -119,53 +119,53 @@ public final class DetectorModelIotSiteWiseArgs extends io.pulumi.resources.Reso
     	      this.propertyValue = defaults.propertyValue;
         }
 
-        public Builder assetId(@Nullable Input<String> assetId) {
+        public Builder assetId(@Nullable Output<String> assetId) {
             this.assetId = assetId;
             return this;
         }
 
         public Builder assetId(@Nullable String assetId) {
-            this.assetId = Input.ofNullable(assetId);
+            this.assetId = Output.ofNullable(assetId);
             return this;
         }
 
-        public Builder entryId(@Nullable Input<String> entryId) {
+        public Builder entryId(@Nullable Output<String> entryId) {
             this.entryId = entryId;
             return this;
         }
 
         public Builder entryId(@Nullable String entryId) {
-            this.entryId = Input.ofNullable(entryId);
+            this.entryId = Output.ofNullable(entryId);
             return this;
         }
 
-        public Builder propertyAlias(@Nullable Input<String> propertyAlias) {
+        public Builder propertyAlias(@Nullable Output<String> propertyAlias) {
             this.propertyAlias = propertyAlias;
             return this;
         }
 
         public Builder propertyAlias(@Nullable String propertyAlias) {
-            this.propertyAlias = Input.ofNullable(propertyAlias);
+            this.propertyAlias = Output.ofNullable(propertyAlias);
             return this;
         }
 
-        public Builder propertyId(@Nullable Input<String> propertyId) {
+        public Builder propertyId(@Nullable Output<String> propertyId) {
             this.propertyId = propertyId;
             return this;
         }
 
         public Builder propertyId(@Nullable String propertyId) {
-            this.propertyId = Input.ofNullable(propertyId);
+            this.propertyId = Output.ofNullable(propertyId);
             return this;
         }
 
-        public Builder propertyValue(Input<DetectorModelAssetPropertyValueArgs> propertyValue) {
+        public Builder propertyValue(Output<DetectorModelAssetPropertyValueArgs> propertyValue) {
             this.propertyValue = Objects.requireNonNull(propertyValue);
             return this;
         }
 
         public Builder propertyValue(DetectorModelAssetPropertyValueArgs propertyValue) {
-            this.propertyValue = Input.of(Objects.requireNonNull(propertyValue));
+            this.propertyValue = Output.of(Objects.requireNonNull(propertyValue));
             return this;
         }
         public DetectorModelIotSiteWiseArgs build() {

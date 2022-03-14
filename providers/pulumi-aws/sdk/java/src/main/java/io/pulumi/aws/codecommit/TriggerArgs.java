@@ -4,7 +4,7 @@
 package io.pulumi.aws.codecommit;
 
 import io.pulumi.aws.codecommit.inputs.TriggerTriggerArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -20,29 +20,29 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="repositoryName", required=true)
-      private final Input<String> repositoryName;
+      private final Output<String> repositoryName;
 
-    public Input<String> getRepositoryName() {
+    public Output<String> getRepositoryName() {
         return this.repositoryName;
     }
 
     @InputImport(name="triggers", required=true)
-      private final Input<List<TriggerTriggerArgs>> triggers;
+      private final Output<List<TriggerTriggerArgs>> triggers;
 
-    public Input<List<TriggerTriggerArgs>> getTriggers() {
+    public Output<List<TriggerTriggerArgs>> getTriggers() {
         return this.triggers;
     }
 
     public TriggerArgs(
-        Input<String> repositoryName,
-        Input<List<TriggerTriggerArgs>> triggers) {
+        Output<String> repositoryName,
+        Output<List<TriggerTriggerArgs>> triggers) {
         this.repositoryName = Objects.requireNonNull(repositoryName, "expected parameter 'repositoryName' to be non-null");
         this.triggers = Objects.requireNonNull(triggers, "expected parameter 'triggers' to be non-null");
     }
 
     private TriggerArgs() {
-        this.repositoryName = Input.empty();
-        this.triggers = Input.empty();
+        this.repositoryName = Output.empty();
+        this.triggers = Output.empty();
     }
 
     public static Builder builder() {
@@ -54,8 +54,8 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> repositoryName;
-        private Input<List<TriggerTriggerArgs>> triggers;
+        private Output<String> repositoryName;
+        private Output<List<TriggerTriggerArgs>> triggers;
 
         public Builder() {
     	      // Empty
@@ -67,23 +67,23 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
     	      this.triggers = defaults.triggers;
         }
 
-        public Builder repositoryName(Input<String> repositoryName) {
+        public Builder repositoryName(Output<String> repositoryName) {
             this.repositoryName = Objects.requireNonNull(repositoryName);
             return this;
         }
 
         public Builder repositoryName(String repositoryName) {
-            this.repositoryName = Input.of(Objects.requireNonNull(repositoryName));
+            this.repositoryName = Output.of(Objects.requireNonNull(repositoryName));
             return this;
         }
 
-        public Builder triggers(Input<List<TriggerTriggerArgs>> triggers) {
+        public Builder triggers(Output<List<TriggerTriggerArgs>> triggers) {
             this.triggers = Objects.requireNonNull(triggers);
             return this;
         }
 
         public Builder triggers(List<TriggerTriggerArgs> triggers) {
-            this.triggers = Input.of(Objects.requireNonNull(triggers));
+            this.triggers = Output.of(Objects.requireNonNull(triggers));
             return this;
         }
         public TriggerArgs build() {

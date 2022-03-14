@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.videoanalyzer.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
@@ -25,9 +25,9 @@ public final class VideoAnalyzerIdentityArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<String> type;
+      private final Output<String> type;
 
-    public Input<String> getType() {
+    public Output<String> getType() {
         return this.type;
     }
 
@@ -36,22 +36,22 @@ public final class VideoAnalyzerIdentityArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="userAssignedIdentities")
-      private final @Nullable Input<Map<String,Object>> userAssignedIdentities;
+      private final @Nullable Output<Map<String,Object>> userAssignedIdentities;
 
-    public Input<Map<String,Object>> getUserAssignedIdentities() {
-        return this.userAssignedIdentities == null ? Input.empty() : this.userAssignedIdentities;
+    public Output<Map<String,Object>> getUserAssignedIdentities() {
+        return this.userAssignedIdentities == null ? Output.empty() : this.userAssignedIdentities;
     }
 
     public VideoAnalyzerIdentityArgs(
-        Input<String> type,
-        @Nullable Input<Map<String,Object>> userAssignedIdentities) {
+        Output<String> type,
+        @Nullable Output<Map<String,Object>> userAssignedIdentities) {
         this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
         this.userAssignedIdentities = userAssignedIdentities;
     }
 
     private VideoAnalyzerIdentityArgs() {
-        this.type = Input.empty();
-        this.userAssignedIdentities = Input.empty();
+        this.type = Output.empty();
+        this.userAssignedIdentities = Output.empty();
     }
 
     public static Builder builder() {
@@ -63,8 +63,8 @@ public final class VideoAnalyzerIdentityArgs extends io.pulumi.resources.Resourc
     }
 
     public static final class Builder {
-        private Input<String> type;
-        private @Nullable Input<Map<String,Object>> userAssignedIdentities;
+        private Output<String> type;
+        private @Nullable Output<Map<String,Object>> userAssignedIdentities;
 
         public Builder() {
     	      // Empty
@@ -76,23 +76,23 @@ public final class VideoAnalyzerIdentityArgs extends io.pulumi.resources.Resourc
     	      this.userAssignedIdentities = defaults.userAssignedIdentities;
         }
 
-        public Builder type(Input<String> type) {
+        public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(String type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
 
-        public Builder userAssignedIdentities(@Nullable Input<Map<String,Object>> userAssignedIdentities) {
+        public Builder userAssignedIdentities(@Nullable Output<Map<String,Object>> userAssignedIdentities) {
             this.userAssignedIdentities = userAssignedIdentities;
             return this;
         }
 
         public Builder userAssignedIdentities(@Nullable Map<String,Object> userAssignedIdentities) {
-            this.userAssignedIdentities = Input.ofNullable(userAssignedIdentities);
+            this.userAssignedIdentities = Output.ofNullable(userAssignedIdentities);
             return this;
         }
         public VideoAnalyzerIdentityArgs build() {

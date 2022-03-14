@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.ses.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -20,10 +20,10 @@ public final class ReceiptRuleSnsActionGetArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="encoding")
-      private final @Nullable Input<String> encoding;
+      private final @Nullable Output<String> encoding;
 
-    public Input<String> getEncoding() {
-        return this.encoding == null ? Input.empty() : this.encoding;
+    public Output<String> getEncoding() {
+        return this.encoding == null ? Output.empty() : this.encoding;
     }
 
     /**
@@ -31,9 +31,9 @@ public final class ReceiptRuleSnsActionGetArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="position", required=true)
-      private final Input<Integer> position;
+      private final Output<Integer> position;
 
-    public Input<Integer> getPosition() {
+    public Output<Integer> getPosition() {
         return this.position;
     }
 
@@ -42,25 +42,25 @@ public final class ReceiptRuleSnsActionGetArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="topicArn", required=true)
-      private final Input<String> topicArn;
+      private final Output<String> topicArn;
 
-    public Input<String> getTopicArn() {
+    public Output<String> getTopicArn() {
         return this.topicArn;
     }
 
     public ReceiptRuleSnsActionGetArgs(
-        @Nullable Input<String> encoding,
-        Input<Integer> position,
-        Input<String> topicArn) {
+        @Nullable Output<String> encoding,
+        Output<Integer> position,
+        Output<String> topicArn) {
         this.encoding = encoding;
         this.position = Objects.requireNonNull(position, "expected parameter 'position' to be non-null");
         this.topicArn = Objects.requireNonNull(topicArn, "expected parameter 'topicArn' to be non-null");
     }
 
     private ReceiptRuleSnsActionGetArgs() {
-        this.encoding = Input.empty();
-        this.position = Input.empty();
-        this.topicArn = Input.empty();
+        this.encoding = Output.empty();
+        this.position = Output.empty();
+        this.topicArn = Output.empty();
     }
 
     public static Builder builder() {
@@ -72,9 +72,9 @@ public final class ReceiptRuleSnsActionGetArgs extends io.pulumi.resources.Resou
     }
 
     public static final class Builder {
-        private @Nullable Input<String> encoding;
-        private Input<Integer> position;
-        private Input<String> topicArn;
+        private @Nullable Output<String> encoding;
+        private Output<Integer> position;
+        private Output<String> topicArn;
 
         public Builder() {
     	      // Empty
@@ -87,33 +87,33 @@ public final class ReceiptRuleSnsActionGetArgs extends io.pulumi.resources.Resou
     	      this.topicArn = defaults.topicArn;
         }
 
-        public Builder encoding(@Nullable Input<String> encoding) {
+        public Builder encoding(@Nullable Output<String> encoding) {
             this.encoding = encoding;
             return this;
         }
 
         public Builder encoding(@Nullable String encoding) {
-            this.encoding = Input.ofNullable(encoding);
+            this.encoding = Output.ofNullable(encoding);
             return this;
         }
 
-        public Builder position(Input<Integer> position) {
+        public Builder position(Output<Integer> position) {
             this.position = Objects.requireNonNull(position);
             return this;
         }
 
         public Builder position(Integer position) {
-            this.position = Input.of(Objects.requireNonNull(position));
+            this.position = Output.of(Objects.requireNonNull(position));
             return this;
         }
 
-        public Builder topicArn(Input<String> topicArn) {
+        public Builder topicArn(Output<String> topicArn) {
             this.topicArn = Objects.requireNonNull(topicArn);
             return this;
         }
 
         public Builder topicArn(String topicArn) {
-            this.topicArn = Input.of(Objects.requireNonNull(topicArn));
+            this.topicArn = Output.of(Objects.requireNonNull(topicArn));
             return this;
         }
         public ReceiptRuleSnsActionGetArgs build() {

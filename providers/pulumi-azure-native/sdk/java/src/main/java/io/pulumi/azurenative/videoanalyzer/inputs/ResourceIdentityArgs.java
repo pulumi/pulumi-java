@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.videoanalyzer.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -22,18 +22,18 @@ public final class ResourceIdentityArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="userAssignedIdentity", required=true)
-      private final Input<String> userAssignedIdentity;
+      private final Output<String> userAssignedIdentity;
 
-    public Input<String> getUserAssignedIdentity() {
+    public Output<String> getUserAssignedIdentity() {
         return this.userAssignedIdentity;
     }
 
-    public ResourceIdentityArgs(Input<String> userAssignedIdentity) {
+    public ResourceIdentityArgs(Output<String> userAssignedIdentity) {
         this.userAssignedIdentity = Objects.requireNonNull(userAssignedIdentity, "expected parameter 'userAssignedIdentity' to be non-null");
     }
 
     private ResourceIdentityArgs() {
-        this.userAssignedIdentity = Input.empty();
+        this.userAssignedIdentity = Output.empty();
     }
 
     public static Builder builder() {
@@ -45,7 +45,7 @@ public final class ResourceIdentityArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private Input<String> userAssignedIdentity;
+        private Output<String> userAssignedIdentity;
 
         public Builder() {
     	      // Empty
@@ -56,13 +56,13 @@ public final class ResourceIdentityArgs extends io.pulumi.resources.ResourceArgs
     	      this.userAssignedIdentity = defaults.userAssignedIdentity;
         }
 
-        public Builder userAssignedIdentity(Input<String> userAssignedIdentity) {
+        public Builder userAssignedIdentity(Output<String> userAssignedIdentity) {
             this.userAssignedIdentity = Objects.requireNonNull(userAssignedIdentity);
             return this;
         }
 
         public Builder userAssignedIdentity(String userAssignedIdentity) {
-            this.userAssignedIdentity = Input.of(Objects.requireNonNull(userAssignedIdentity));
+            this.userAssignedIdentity = Output.of(Objects.requireNonNull(userAssignedIdentity));
             return this;
         }
         public ResourceIdentityArgs build() {

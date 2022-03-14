@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.cloud9;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -18,9 +18,9 @@ public final class EnvironmentMembershipArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="environmentId", required=true)
-      private final Input<String> environmentId;
+      private final Output<String> environmentId;
 
-    public Input<String> getEnvironmentId() {
+    public Output<String> getEnvironmentId() {
         return this.environmentId;
     }
 
@@ -29,9 +29,9 @@ public final class EnvironmentMembershipArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="permissions", required=true)
-      private final Input<String> permissions;
+      private final Output<String> permissions;
 
-    public Input<String> getPermissions() {
+    public Output<String> getPermissions() {
         return this.permissions;
     }
 
@@ -40,25 +40,25 @@ public final class EnvironmentMembershipArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="userArn", required=true)
-      private final Input<String> userArn;
+      private final Output<String> userArn;
 
-    public Input<String> getUserArn() {
+    public Output<String> getUserArn() {
         return this.userArn;
     }
 
     public EnvironmentMembershipArgs(
-        Input<String> environmentId,
-        Input<String> permissions,
-        Input<String> userArn) {
+        Output<String> environmentId,
+        Output<String> permissions,
+        Output<String> userArn) {
         this.environmentId = Objects.requireNonNull(environmentId, "expected parameter 'environmentId' to be non-null");
         this.permissions = Objects.requireNonNull(permissions, "expected parameter 'permissions' to be non-null");
         this.userArn = Objects.requireNonNull(userArn, "expected parameter 'userArn' to be non-null");
     }
 
     private EnvironmentMembershipArgs() {
-        this.environmentId = Input.empty();
-        this.permissions = Input.empty();
-        this.userArn = Input.empty();
+        this.environmentId = Output.empty();
+        this.permissions = Output.empty();
+        this.userArn = Output.empty();
     }
 
     public static Builder builder() {
@@ -70,9 +70,9 @@ public final class EnvironmentMembershipArgs extends io.pulumi.resources.Resourc
     }
 
     public static final class Builder {
-        private Input<String> environmentId;
-        private Input<String> permissions;
-        private Input<String> userArn;
+        private Output<String> environmentId;
+        private Output<String> permissions;
+        private Output<String> userArn;
 
         public Builder() {
     	      // Empty
@@ -85,33 +85,33 @@ public final class EnvironmentMembershipArgs extends io.pulumi.resources.Resourc
     	      this.userArn = defaults.userArn;
         }
 
-        public Builder environmentId(Input<String> environmentId) {
+        public Builder environmentId(Output<String> environmentId) {
             this.environmentId = Objects.requireNonNull(environmentId);
             return this;
         }
 
         public Builder environmentId(String environmentId) {
-            this.environmentId = Input.of(Objects.requireNonNull(environmentId));
+            this.environmentId = Output.of(Objects.requireNonNull(environmentId));
             return this;
         }
 
-        public Builder permissions(Input<String> permissions) {
+        public Builder permissions(Output<String> permissions) {
             this.permissions = Objects.requireNonNull(permissions);
             return this;
         }
 
         public Builder permissions(String permissions) {
-            this.permissions = Input.of(Objects.requireNonNull(permissions));
+            this.permissions = Output.of(Objects.requireNonNull(permissions));
             return this;
         }
 
-        public Builder userArn(Input<String> userArn) {
+        public Builder userArn(Output<String> userArn) {
             this.userArn = Objects.requireNonNull(userArn);
             return this;
         }
 
         public Builder userArn(String userArn) {
-            this.userArn = Input.of(Objects.requireNonNull(userArn));
+            this.userArn = Output.of(Objects.requireNonNull(userArn));
             return this;
         }
         public EnvironmentMembershipArgs build() {

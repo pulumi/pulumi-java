@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.elastictranscoder.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class PresetVideoGetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="aspectRatio")
-      private final @Nullable Input<String> aspectRatio;
+      private final @Nullable Output<String> aspectRatio;
 
-    public Input<String> getAspectRatio() {
-        return this.aspectRatio == null ? Input.empty() : this.aspectRatio;
+    public Output<String> getAspectRatio() {
+        return this.aspectRatio == null ? Output.empty() : this.aspectRatio;
     }
 
     /**
@@ -30,10 +30,10 @@ public final class PresetVideoGetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="bitRate")
-      private final @Nullable Input<String> bitRate;
+      private final @Nullable Output<String> bitRate;
 
-    public Input<String> getBitRate() {
-        return this.bitRate == null ? Input.empty() : this.bitRate;
+    public Output<String> getBitRate() {
+        return this.bitRate == null ? Output.empty() : this.bitRate;
     }
 
     /**
@@ -41,10 +41,10 @@ public final class PresetVideoGetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="codec")
-      private final @Nullable Input<String> codec;
+      private final @Nullable Output<String> codec;
 
-    public Input<String> getCodec() {
-        return this.codec == null ? Input.empty() : this.codec;
+    public Output<String> getCodec() {
+        return this.codec == null ? Output.empty() : this.codec;
     }
 
     /**
@@ -52,10 +52,10 @@ public final class PresetVideoGetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayAspectRatio")
-      private final @Nullable Input<String> displayAspectRatio;
+      private final @Nullable Output<String> displayAspectRatio;
 
-    public Input<String> getDisplayAspectRatio() {
-        return this.displayAspectRatio == null ? Input.empty() : this.displayAspectRatio;
+    public Output<String> getDisplayAspectRatio() {
+        return this.displayAspectRatio == null ? Output.empty() : this.displayAspectRatio;
     }
 
     /**
@@ -63,10 +63,10 @@ public final class PresetVideoGetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="fixedGop")
-      private final @Nullable Input<String> fixedGop;
+      private final @Nullable Output<String> fixedGop;
 
-    public Input<String> getFixedGop() {
-        return this.fixedGop == null ? Input.empty() : this.fixedGop;
+    public Output<String> getFixedGop() {
+        return this.fixedGop == null ? Output.empty() : this.fixedGop;
     }
 
     /**
@@ -74,10 +74,10 @@ public final class PresetVideoGetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="frameRate")
-      private final @Nullable Input<String> frameRate;
+      private final @Nullable Output<String> frameRate;
 
-    public Input<String> getFrameRate() {
-        return this.frameRate == null ? Input.empty() : this.frameRate;
+    public Output<String> getFrameRate() {
+        return this.frameRate == null ? Output.empty() : this.frameRate;
     }
 
     /**
@@ -85,10 +85,10 @@ public final class PresetVideoGetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="keyframesMaxDist")
-      private final @Nullable Input<String> keyframesMaxDist;
+      private final @Nullable Output<String> keyframesMaxDist;
 
-    public Input<String> getKeyframesMaxDist() {
-        return this.keyframesMaxDist == null ? Input.empty() : this.keyframesMaxDist;
+    public Output<String> getKeyframesMaxDist() {
+        return this.keyframesMaxDist == null ? Output.empty() : this.keyframesMaxDist;
     }
 
     /**
@@ -96,10 +96,10 @@ public final class PresetVideoGetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="maxFrameRate")
-      private final @Nullable Input<String> maxFrameRate;
+      private final @Nullable Output<String> maxFrameRate;
 
-    public Input<String> getMaxFrameRate() {
-        return this.maxFrameRate == null ? Input.empty() : this.maxFrameRate;
+    public Output<String> getMaxFrameRate() {
+        return this.maxFrameRate == null ? Output.empty() : this.maxFrameRate;
     }
 
     /**
@@ -107,10 +107,10 @@ public final class PresetVideoGetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="maxHeight")
-      private final @Nullable Input<String> maxHeight;
+      private final @Nullable Output<String> maxHeight;
 
-    public Input<String> getMaxHeight() {
-        return this.maxHeight == null ? Input.empty() : this.maxHeight;
+    public Output<String> getMaxHeight() {
+        return this.maxHeight == null ? Output.empty() : this.maxHeight;
     }
 
     /**
@@ -118,10 +118,10 @@ public final class PresetVideoGetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="maxWidth")
-      private final @Nullable Input<String> maxWidth;
+      private final @Nullable Output<String> maxWidth;
 
-    public Input<String> getMaxWidth() {
-        return this.maxWidth == null ? Input.empty() : this.maxWidth;
+    public Output<String> getMaxWidth() {
+        return this.maxWidth == null ? Output.empty() : this.maxWidth;
     }
 
     /**
@@ -129,10 +129,10 @@ public final class PresetVideoGetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="paddingPolicy")
-      private final @Nullable Input<String> paddingPolicy;
+      private final @Nullable Output<String> paddingPolicy;
 
-    public Input<String> getPaddingPolicy() {
-        return this.paddingPolicy == null ? Input.empty() : this.paddingPolicy;
+    public Output<String> getPaddingPolicy() {
+        return this.paddingPolicy == null ? Output.empty() : this.paddingPolicy;
     }
 
     /**
@@ -140,10 +140,10 @@ public final class PresetVideoGetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resolution")
-      private final @Nullable Input<String> resolution;
+      private final @Nullable Output<String> resolution;
 
-    public Input<String> getResolution() {
-        return this.resolution == null ? Input.empty() : this.resolution;
+    public Output<String> getResolution() {
+        return this.resolution == null ? Output.empty() : this.resolution;
     }
 
     /**
@@ -151,26 +151,26 @@ public final class PresetVideoGetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sizingPolicy")
-      private final @Nullable Input<String> sizingPolicy;
+      private final @Nullable Output<String> sizingPolicy;
 
-    public Input<String> getSizingPolicy() {
-        return this.sizingPolicy == null ? Input.empty() : this.sizingPolicy;
+    public Output<String> getSizingPolicy() {
+        return this.sizingPolicy == null ? Output.empty() : this.sizingPolicy;
     }
 
     public PresetVideoGetArgs(
-        @Nullable Input<String> aspectRatio,
-        @Nullable Input<String> bitRate,
-        @Nullable Input<String> codec,
-        @Nullable Input<String> displayAspectRatio,
-        @Nullable Input<String> fixedGop,
-        @Nullable Input<String> frameRate,
-        @Nullable Input<String> keyframesMaxDist,
-        @Nullable Input<String> maxFrameRate,
-        @Nullable Input<String> maxHeight,
-        @Nullable Input<String> maxWidth,
-        @Nullable Input<String> paddingPolicy,
-        @Nullable Input<String> resolution,
-        @Nullable Input<String> sizingPolicy) {
+        @Nullable Output<String> aspectRatio,
+        @Nullable Output<String> bitRate,
+        @Nullable Output<String> codec,
+        @Nullable Output<String> displayAspectRatio,
+        @Nullable Output<String> fixedGop,
+        @Nullable Output<String> frameRate,
+        @Nullable Output<String> keyframesMaxDist,
+        @Nullable Output<String> maxFrameRate,
+        @Nullable Output<String> maxHeight,
+        @Nullable Output<String> maxWidth,
+        @Nullable Output<String> paddingPolicy,
+        @Nullable Output<String> resolution,
+        @Nullable Output<String> sizingPolicy) {
         this.aspectRatio = aspectRatio;
         this.bitRate = bitRate;
         this.codec = codec;
@@ -187,19 +187,19 @@ public final class PresetVideoGetArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private PresetVideoGetArgs() {
-        this.aspectRatio = Input.empty();
-        this.bitRate = Input.empty();
-        this.codec = Input.empty();
-        this.displayAspectRatio = Input.empty();
-        this.fixedGop = Input.empty();
-        this.frameRate = Input.empty();
-        this.keyframesMaxDist = Input.empty();
-        this.maxFrameRate = Input.empty();
-        this.maxHeight = Input.empty();
-        this.maxWidth = Input.empty();
-        this.paddingPolicy = Input.empty();
-        this.resolution = Input.empty();
-        this.sizingPolicy = Input.empty();
+        this.aspectRatio = Output.empty();
+        this.bitRate = Output.empty();
+        this.codec = Output.empty();
+        this.displayAspectRatio = Output.empty();
+        this.fixedGop = Output.empty();
+        this.frameRate = Output.empty();
+        this.keyframesMaxDist = Output.empty();
+        this.maxFrameRate = Output.empty();
+        this.maxHeight = Output.empty();
+        this.maxWidth = Output.empty();
+        this.paddingPolicy = Output.empty();
+        this.resolution = Output.empty();
+        this.sizingPolicy = Output.empty();
     }
 
     public static Builder builder() {
@@ -211,19 +211,19 @@ public final class PresetVideoGetArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> aspectRatio;
-        private @Nullable Input<String> bitRate;
-        private @Nullable Input<String> codec;
-        private @Nullable Input<String> displayAspectRatio;
-        private @Nullable Input<String> fixedGop;
-        private @Nullable Input<String> frameRate;
-        private @Nullable Input<String> keyframesMaxDist;
-        private @Nullable Input<String> maxFrameRate;
-        private @Nullable Input<String> maxHeight;
-        private @Nullable Input<String> maxWidth;
-        private @Nullable Input<String> paddingPolicy;
-        private @Nullable Input<String> resolution;
-        private @Nullable Input<String> sizingPolicy;
+        private @Nullable Output<String> aspectRatio;
+        private @Nullable Output<String> bitRate;
+        private @Nullable Output<String> codec;
+        private @Nullable Output<String> displayAspectRatio;
+        private @Nullable Output<String> fixedGop;
+        private @Nullable Output<String> frameRate;
+        private @Nullable Output<String> keyframesMaxDist;
+        private @Nullable Output<String> maxFrameRate;
+        private @Nullable Output<String> maxHeight;
+        private @Nullable Output<String> maxWidth;
+        private @Nullable Output<String> paddingPolicy;
+        private @Nullable Output<String> resolution;
+        private @Nullable Output<String> sizingPolicy;
 
         public Builder() {
     	      // Empty
@@ -246,133 +246,133 @@ public final class PresetVideoGetArgs extends io.pulumi.resources.ResourceArgs {
     	      this.sizingPolicy = defaults.sizingPolicy;
         }
 
-        public Builder aspectRatio(@Nullable Input<String> aspectRatio) {
+        public Builder aspectRatio(@Nullable Output<String> aspectRatio) {
             this.aspectRatio = aspectRatio;
             return this;
         }
 
         public Builder aspectRatio(@Nullable String aspectRatio) {
-            this.aspectRatio = Input.ofNullable(aspectRatio);
+            this.aspectRatio = Output.ofNullable(aspectRatio);
             return this;
         }
 
-        public Builder bitRate(@Nullable Input<String> bitRate) {
+        public Builder bitRate(@Nullable Output<String> bitRate) {
             this.bitRate = bitRate;
             return this;
         }
 
         public Builder bitRate(@Nullable String bitRate) {
-            this.bitRate = Input.ofNullable(bitRate);
+            this.bitRate = Output.ofNullable(bitRate);
             return this;
         }
 
-        public Builder codec(@Nullable Input<String> codec) {
+        public Builder codec(@Nullable Output<String> codec) {
             this.codec = codec;
             return this;
         }
 
         public Builder codec(@Nullable String codec) {
-            this.codec = Input.ofNullable(codec);
+            this.codec = Output.ofNullable(codec);
             return this;
         }
 
-        public Builder displayAspectRatio(@Nullable Input<String> displayAspectRatio) {
+        public Builder displayAspectRatio(@Nullable Output<String> displayAspectRatio) {
             this.displayAspectRatio = displayAspectRatio;
             return this;
         }
 
         public Builder displayAspectRatio(@Nullable String displayAspectRatio) {
-            this.displayAspectRatio = Input.ofNullable(displayAspectRatio);
+            this.displayAspectRatio = Output.ofNullable(displayAspectRatio);
             return this;
         }
 
-        public Builder fixedGop(@Nullable Input<String> fixedGop) {
+        public Builder fixedGop(@Nullable Output<String> fixedGop) {
             this.fixedGop = fixedGop;
             return this;
         }
 
         public Builder fixedGop(@Nullable String fixedGop) {
-            this.fixedGop = Input.ofNullable(fixedGop);
+            this.fixedGop = Output.ofNullable(fixedGop);
             return this;
         }
 
-        public Builder frameRate(@Nullable Input<String> frameRate) {
+        public Builder frameRate(@Nullable Output<String> frameRate) {
             this.frameRate = frameRate;
             return this;
         }
 
         public Builder frameRate(@Nullable String frameRate) {
-            this.frameRate = Input.ofNullable(frameRate);
+            this.frameRate = Output.ofNullable(frameRate);
             return this;
         }
 
-        public Builder keyframesMaxDist(@Nullable Input<String> keyframesMaxDist) {
+        public Builder keyframesMaxDist(@Nullable Output<String> keyframesMaxDist) {
             this.keyframesMaxDist = keyframesMaxDist;
             return this;
         }
 
         public Builder keyframesMaxDist(@Nullable String keyframesMaxDist) {
-            this.keyframesMaxDist = Input.ofNullable(keyframesMaxDist);
+            this.keyframesMaxDist = Output.ofNullable(keyframesMaxDist);
             return this;
         }
 
-        public Builder maxFrameRate(@Nullable Input<String> maxFrameRate) {
+        public Builder maxFrameRate(@Nullable Output<String> maxFrameRate) {
             this.maxFrameRate = maxFrameRate;
             return this;
         }
 
         public Builder maxFrameRate(@Nullable String maxFrameRate) {
-            this.maxFrameRate = Input.ofNullable(maxFrameRate);
+            this.maxFrameRate = Output.ofNullable(maxFrameRate);
             return this;
         }
 
-        public Builder maxHeight(@Nullable Input<String> maxHeight) {
+        public Builder maxHeight(@Nullable Output<String> maxHeight) {
             this.maxHeight = maxHeight;
             return this;
         }
 
         public Builder maxHeight(@Nullable String maxHeight) {
-            this.maxHeight = Input.ofNullable(maxHeight);
+            this.maxHeight = Output.ofNullable(maxHeight);
             return this;
         }
 
-        public Builder maxWidth(@Nullable Input<String> maxWidth) {
+        public Builder maxWidth(@Nullable Output<String> maxWidth) {
             this.maxWidth = maxWidth;
             return this;
         }
 
         public Builder maxWidth(@Nullable String maxWidth) {
-            this.maxWidth = Input.ofNullable(maxWidth);
+            this.maxWidth = Output.ofNullable(maxWidth);
             return this;
         }
 
-        public Builder paddingPolicy(@Nullable Input<String> paddingPolicy) {
+        public Builder paddingPolicy(@Nullable Output<String> paddingPolicy) {
             this.paddingPolicy = paddingPolicy;
             return this;
         }
 
         public Builder paddingPolicy(@Nullable String paddingPolicy) {
-            this.paddingPolicy = Input.ofNullable(paddingPolicy);
+            this.paddingPolicy = Output.ofNullable(paddingPolicy);
             return this;
         }
 
-        public Builder resolution(@Nullable Input<String> resolution) {
+        public Builder resolution(@Nullable Output<String> resolution) {
             this.resolution = resolution;
             return this;
         }
 
         public Builder resolution(@Nullable String resolution) {
-            this.resolution = Input.ofNullable(resolution);
+            this.resolution = Output.ofNullable(resolution);
             return this;
         }
 
-        public Builder sizingPolicy(@Nullable Input<String> sizingPolicy) {
+        public Builder sizingPolicy(@Nullable Output<String> sizingPolicy) {
             this.sizingPolicy = sizingPolicy;
             return this;
         }
 
         public Builder sizingPolicy(@Nullable String sizingPolicy) {
-            this.sizingPolicy = Input.ofNullable(sizingPolicy);
+            this.sizingPolicy = Output.ofNullable(sizingPolicy);
             return this;
         }
         public PresetVideoGetArgs build() {

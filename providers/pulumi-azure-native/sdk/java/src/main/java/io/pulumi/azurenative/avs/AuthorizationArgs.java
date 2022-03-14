@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.avs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class AuthorizationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="authorizationName")
-      private final @Nullable Input<String> authorizationName;
+      private final @Nullable Output<String> authorizationName;
 
-    public Input<String> getAuthorizationName() {
-        return this.authorizationName == null ? Input.empty() : this.authorizationName;
+    public Output<String> getAuthorizationName() {
+        return this.authorizationName == null ? Output.empty() : this.authorizationName;
     }
 
     /**
@@ -30,9 +30,9 @@ public final class AuthorizationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="privateCloudName", required=true)
-      private final Input<String> privateCloudName;
+      private final Output<String> privateCloudName;
 
-    public Input<String> getPrivateCloudName() {
+    public Output<String> getPrivateCloudName() {
         return this.privateCloudName;
     }
 
@@ -41,25 +41,25 @@ public final class AuthorizationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
     public AuthorizationArgs(
-        @Nullable Input<String> authorizationName,
-        Input<String> privateCloudName,
-        Input<String> resourceGroupName) {
+        @Nullable Output<String> authorizationName,
+        Output<String> privateCloudName,
+        Output<String> resourceGroupName) {
         this.authorizationName = authorizationName;
         this.privateCloudName = Objects.requireNonNull(privateCloudName, "expected parameter 'privateCloudName' to be non-null");
         this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
     }
 
     private AuthorizationArgs() {
-        this.authorizationName = Input.empty();
-        this.privateCloudName = Input.empty();
-        this.resourceGroupName = Input.empty();
+        this.authorizationName = Output.empty();
+        this.privateCloudName = Output.empty();
+        this.resourceGroupName = Output.empty();
     }
 
     public static Builder builder() {
@@ -71,9 +71,9 @@ public final class AuthorizationArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> authorizationName;
-        private Input<String> privateCloudName;
-        private Input<String> resourceGroupName;
+        private @Nullable Output<String> authorizationName;
+        private Output<String> privateCloudName;
+        private Output<String> resourceGroupName;
 
         public Builder() {
     	      // Empty
@@ -86,33 +86,33 @@ public final class AuthorizationArgs extends io.pulumi.resources.ResourceArgs {
     	      this.resourceGroupName = defaults.resourceGroupName;
         }
 
-        public Builder authorizationName(@Nullable Input<String> authorizationName) {
+        public Builder authorizationName(@Nullable Output<String> authorizationName) {
             this.authorizationName = authorizationName;
             return this;
         }
 
         public Builder authorizationName(@Nullable String authorizationName) {
-            this.authorizationName = Input.ofNullable(authorizationName);
+            this.authorizationName = Output.ofNullable(authorizationName);
             return this;
         }
 
-        public Builder privateCloudName(Input<String> privateCloudName) {
+        public Builder privateCloudName(Output<String> privateCloudName) {
             this.privateCloudName = Objects.requireNonNull(privateCloudName);
             return this;
         }
 
         public Builder privateCloudName(String privateCloudName) {
-            this.privateCloudName = Input.of(Objects.requireNonNull(privateCloudName));
+            this.privateCloudName = Output.of(Objects.requireNonNull(privateCloudName));
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
         public AuthorizationArgs build() {

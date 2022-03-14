@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.containerregistry;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -22,9 +22,9 @@ public final class ScopeMapArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="actions", required=true)
-      private final Input<List<String>> actions;
+      private final Output<List<String>> actions;
 
-    public Input<List<String>> getActions() {
+    public Output<List<String>> getActions() {
         return this.actions;
     }
 
@@ -33,10 +33,10 @@ public final class ScopeMapArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -44,9 +44,9 @@ public final class ScopeMapArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="registryName", required=true)
-      private final Input<String> registryName;
+      private final Output<String> registryName;
 
-    public Input<String> getRegistryName() {
+    public Output<String> getRegistryName() {
         return this.registryName;
     }
 
@@ -55,9 +55,9 @@ public final class ScopeMapArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -66,18 +66,18 @@ public final class ScopeMapArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="scopeMapName")
-      private final @Nullable Input<String> scopeMapName;
+      private final @Nullable Output<String> scopeMapName;
 
-    public Input<String> getScopeMapName() {
-        return this.scopeMapName == null ? Input.empty() : this.scopeMapName;
+    public Output<String> getScopeMapName() {
+        return this.scopeMapName == null ? Output.empty() : this.scopeMapName;
     }
 
     public ScopeMapArgs(
-        Input<List<String>> actions,
-        @Nullable Input<String> description,
-        Input<String> registryName,
-        Input<String> resourceGroupName,
-        @Nullable Input<String> scopeMapName) {
+        Output<List<String>> actions,
+        @Nullable Output<String> description,
+        Output<String> registryName,
+        Output<String> resourceGroupName,
+        @Nullable Output<String> scopeMapName) {
         this.actions = Objects.requireNonNull(actions, "expected parameter 'actions' to be non-null");
         this.description = description;
         this.registryName = Objects.requireNonNull(registryName, "expected parameter 'registryName' to be non-null");
@@ -86,11 +86,11 @@ public final class ScopeMapArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ScopeMapArgs() {
-        this.actions = Input.empty();
-        this.description = Input.empty();
-        this.registryName = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.scopeMapName = Input.empty();
+        this.actions = Output.empty();
+        this.description = Output.empty();
+        this.registryName = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.scopeMapName = Output.empty();
     }
 
     public static Builder builder() {
@@ -102,11 +102,11 @@ public final class ScopeMapArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<List<String>> actions;
-        private @Nullable Input<String> description;
-        private Input<String> registryName;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<String> scopeMapName;
+        private Output<List<String>> actions;
+        private @Nullable Output<String> description;
+        private Output<String> registryName;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<String> scopeMapName;
 
         public Builder() {
     	      // Empty
@@ -121,53 +121,53 @@ public final class ScopeMapArgs extends io.pulumi.resources.ResourceArgs {
     	      this.scopeMapName = defaults.scopeMapName;
         }
 
-        public Builder actions(Input<List<String>> actions) {
+        public Builder actions(Output<List<String>> actions) {
             this.actions = Objects.requireNonNull(actions);
             return this;
         }
 
         public Builder actions(List<String> actions) {
-            this.actions = Input.of(Objects.requireNonNull(actions));
+            this.actions = Output.of(Objects.requireNonNull(actions));
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder registryName(Input<String> registryName) {
+        public Builder registryName(Output<String> registryName) {
             this.registryName = Objects.requireNonNull(registryName);
             return this;
         }
 
         public Builder registryName(String registryName) {
-            this.registryName = Input.of(Objects.requireNonNull(registryName));
+            this.registryName = Output.of(Objects.requireNonNull(registryName));
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder scopeMapName(@Nullable Input<String> scopeMapName) {
+        public Builder scopeMapName(@Nullable Output<String> scopeMapName) {
             this.scopeMapName = scopeMapName;
             return this;
         }
 
         public Builder scopeMapName(@Nullable String scopeMapName) {
-            this.scopeMapName = Input.ofNullable(scopeMapName);
+            this.scopeMapName = Output.ofNullable(scopeMapName);
             return this;
         }
         public ScopeMapArgs build() {

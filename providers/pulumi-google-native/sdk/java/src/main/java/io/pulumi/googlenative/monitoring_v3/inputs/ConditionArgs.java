@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.monitoring_v3.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.monitoring_v3.inputs.LogMatchArgs;
 import io.pulumi.googlenative.monitoring_v3.inputs.MetricAbsenceArgs;
@@ -27,10 +27,10 @@ public final class ConditionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="conditionAbsent")
-      private final @Nullable Input<MetricAbsenceArgs> conditionAbsent;
+      private final @Nullable Output<MetricAbsenceArgs> conditionAbsent;
 
-    public Input<MetricAbsenceArgs> getConditionAbsent() {
-        return this.conditionAbsent == null ? Input.empty() : this.conditionAbsent;
+    public Output<MetricAbsenceArgs> getConditionAbsent() {
+        return this.conditionAbsent == null ? Output.empty() : this.conditionAbsent;
     }
 
     /**
@@ -38,10 +38,10 @@ public final class ConditionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="conditionMatchedLog")
-      private final @Nullable Input<LogMatchArgs> conditionMatchedLog;
+      private final @Nullable Output<LogMatchArgs> conditionMatchedLog;
 
-    public Input<LogMatchArgs> getConditionMatchedLog() {
-        return this.conditionMatchedLog == null ? Input.empty() : this.conditionMatchedLog;
+    public Output<LogMatchArgs> getConditionMatchedLog() {
+        return this.conditionMatchedLog == null ? Output.empty() : this.conditionMatchedLog;
     }
 
     /**
@@ -49,10 +49,10 @@ public final class ConditionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="conditionMonitoringQueryLanguage")
-      private final @Nullable Input<MonitoringQueryLanguageConditionArgs> conditionMonitoringQueryLanguage;
+      private final @Nullable Output<MonitoringQueryLanguageConditionArgs> conditionMonitoringQueryLanguage;
 
-    public Input<MonitoringQueryLanguageConditionArgs> getConditionMonitoringQueryLanguage() {
-        return this.conditionMonitoringQueryLanguage == null ? Input.empty() : this.conditionMonitoringQueryLanguage;
+    public Output<MonitoringQueryLanguageConditionArgs> getConditionMonitoringQueryLanguage() {
+        return this.conditionMonitoringQueryLanguage == null ? Output.empty() : this.conditionMonitoringQueryLanguage;
     }
 
     /**
@@ -60,10 +60,10 @@ public final class ConditionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="conditionThreshold")
-      private final @Nullable Input<MetricThresholdArgs> conditionThreshold;
+      private final @Nullable Output<MetricThresholdArgs> conditionThreshold;
 
-    public Input<MetricThresholdArgs> getConditionThreshold() {
-        return this.conditionThreshold == null ? Input.empty() : this.conditionThreshold;
+    public Output<MetricThresholdArgs> getConditionThreshold() {
+        return this.conditionThreshold == null ? Output.empty() : this.conditionThreshold;
     }
 
     /**
@@ -71,10 +71,10 @@ public final class ConditionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName")
-      private final @Nullable Input<String> displayName;
+      private final @Nullable Output<String> displayName;
 
-    public Input<String> getDisplayName() {
-        return this.displayName == null ? Input.empty() : this.displayName;
+    public Output<String> getDisplayName() {
+        return this.displayName == null ? Output.empty() : this.displayName;
     }
 
     /**
@@ -82,19 +82,19 @@ public final class ConditionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     public ConditionArgs(
-        @Nullable Input<MetricAbsenceArgs> conditionAbsent,
-        @Nullable Input<LogMatchArgs> conditionMatchedLog,
-        @Nullable Input<MonitoringQueryLanguageConditionArgs> conditionMonitoringQueryLanguage,
-        @Nullable Input<MetricThresholdArgs> conditionThreshold,
-        @Nullable Input<String> displayName,
-        @Nullable Input<String> name) {
+        @Nullable Output<MetricAbsenceArgs> conditionAbsent,
+        @Nullable Output<LogMatchArgs> conditionMatchedLog,
+        @Nullable Output<MonitoringQueryLanguageConditionArgs> conditionMonitoringQueryLanguage,
+        @Nullable Output<MetricThresholdArgs> conditionThreshold,
+        @Nullable Output<String> displayName,
+        @Nullable Output<String> name) {
         this.conditionAbsent = conditionAbsent;
         this.conditionMatchedLog = conditionMatchedLog;
         this.conditionMonitoringQueryLanguage = conditionMonitoringQueryLanguage;
@@ -104,12 +104,12 @@ public final class ConditionArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ConditionArgs() {
-        this.conditionAbsent = Input.empty();
-        this.conditionMatchedLog = Input.empty();
-        this.conditionMonitoringQueryLanguage = Input.empty();
-        this.conditionThreshold = Input.empty();
-        this.displayName = Input.empty();
-        this.name = Input.empty();
+        this.conditionAbsent = Output.empty();
+        this.conditionMatchedLog = Output.empty();
+        this.conditionMonitoringQueryLanguage = Output.empty();
+        this.conditionThreshold = Output.empty();
+        this.displayName = Output.empty();
+        this.name = Output.empty();
     }
 
     public static Builder builder() {
@@ -121,12 +121,12 @@ public final class ConditionArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<MetricAbsenceArgs> conditionAbsent;
-        private @Nullable Input<LogMatchArgs> conditionMatchedLog;
-        private @Nullable Input<MonitoringQueryLanguageConditionArgs> conditionMonitoringQueryLanguage;
-        private @Nullable Input<MetricThresholdArgs> conditionThreshold;
-        private @Nullable Input<String> displayName;
-        private @Nullable Input<String> name;
+        private @Nullable Output<MetricAbsenceArgs> conditionAbsent;
+        private @Nullable Output<LogMatchArgs> conditionMatchedLog;
+        private @Nullable Output<MonitoringQueryLanguageConditionArgs> conditionMonitoringQueryLanguage;
+        private @Nullable Output<MetricThresholdArgs> conditionThreshold;
+        private @Nullable Output<String> displayName;
+        private @Nullable Output<String> name;
 
         public Builder() {
     	      // Empty
@@ -142,63 +142,63 @@ public final class ConditionArgs extends io.pulumi.resources.ResourceArgs {
     	      this.name = defaults.name;
         }
 
-        public Builder conditionAbsent(@Nullable Input<MetricAbsenceArgs> conditionAbsent) {
+        public Builder conditionAbsent(@Nullable Output<MetricAbsenceArgs> conditionAbsent) {
             this.conditionAbsent = conditionAbsent;
             return this;
         }
 
         public Builder conditionAbsent(@Nullable MetricAbsenceArgs conditionAbsent) {
-            this.conditionAbsent = Input.ofNullable(conditionAbsent);
+            this.conditionAbsent = Output.ofNullable(conditionAbsent);
             return this;
         }
 
-        public Builder conditionMatchedLog(@Nullable Input<LogMatchArgs> conditionMatchedLog) {
+        public Builder conditionMatchedLog(@Nullable Output<LogMatchArgs> conditionMatchedLog) {
             this.conditionMatchedLog = conditionMatchedLog;
             return this;
         }
 
         public Builder conditionMatchedLog(@Nullable LogMatchArgs conditionMatchedLog) {
-            this.conditionMatchedLog = Input.ofNullable(conditionMatchedLog);
+            this.conditionMatchedLog = Output.ofNullable(conditionMatchedLog);
             return this;
         }
 
-        public Builder conditionMonitoringQueryLanguage(@Nullable Input<MonitoringQueryLanguageConditionArgs> conditionMonitoringQueryLanguage) {
+        public Builder conditionMonitoringQueryLanguage(@Nullable Output<MonitoringQueryLanguageConditionArgs> conditionMonitoringQueryLanguage) {
             this.conditionMonitoringQueryLanguage = conditionMonitoringQueryLanguage;
             return this;
         }
 
         public Builder conditionMonitoringQueryLanguage(@Nullable MonitoringQueryLanguageConditionArgs conditionMonitoringQueryLanguage) {
-            this.conditionMonitoringQueryLanguage = Input.ofNullable(conditionMonitoringQueryLanguage);
+            this.conditionMonitoringQueryLanguage = Output.ofNullable(conditionMonitoringQueryLanguage);
             return this;
         }
 
-        public Builder conditionThreshold(@Nullable Input<MetricThresholdArgs> conditionThreshold) {
+        public Builder conditionThreshold(@Nullable Output<MetricThresholdArgs> conditionThreshold) {
             this.conditionThreshold = conditionThreshold;
             return this;
         }
 
         public Builder conditionThreshold(@Nullable MetricThresholdArgs conditionThreshold) {
-            this.conditionThreshold = Input.ofNullable(conditionThreshold);
+            this.conditionThreshold = Output.ofNullable(conditionThreshold);
             return this;
         }
 
-        public Builder displayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Input.ofNullable(displayName);
+            this.displayName = Output.ofNullable(displayName);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
         public ConditionArgs build() {

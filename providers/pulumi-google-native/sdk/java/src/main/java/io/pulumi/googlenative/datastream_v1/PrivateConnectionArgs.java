@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.datastream_v1;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.datastream_v1.inputs.VpcPeeringConfigArgs;
 import java.lang.String;
@@ -21,9 +21,9 @@ public final class PrivateConnectionArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="displayName", required=true)
-      private final Input<String> displayName;
+      private final Output<String> displayName;
 
-    public Input<String> getDisplayName() {
+    public Output<String> getDisplayName() {
         return this.displayName;
     }
 
@@ -32,38 +32,38 @@ public final class PrivateConnectionArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="labels")
-      private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Output<Map<String,String>> labels;
 
-    public Input<Map<String,String>> getLabels() {
-        return this.labels == null ? Input.empty() : this.labels;
+    public Output<Map<String,String>> getLabels() {
+        return this.labels == null ? Output.empty() : this.labels;
     }
 
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     @InputImport(name="privateConnectionId", required=true)
-      private final Input<String> privateConnectionId;
+      private final Output<String> privateConnectionId;
 
-    public Input<String> getPrivateConnectionId() {
+    public Output<String> getPrivateConnectionId() {
         return this.privateConnectionId;
     }
 
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     @InputImport(name="requestId")
-      private final @Nullable Input<String> requestId;
+      private final @Nullable Output<String> requestId;
 
-    public Input<String> getRequestId() {
-        return this.requestId == null ? Input.empty() : this.requestId;
+    public Output<String> getRequestId() {
+        return this.requestId == null ? Output.empty() : this.requestId;
     }
 
     /**
@@ -71,20 +71,20 @@ public final class PrivateConnectionArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="vpcPeeringConfig")
-      private final @Nullable Input<VpcPeeringConfigArgs> vpcPeeringConfig;
+      private final @Nullable Output<VpcPeeringConfigArgs> vpcPeeringConfig;
 
-    public Input<VpcPeeringConfigArgs> getVpcPeeringConfig() {
-        return this.vpcPeeringConfig == null ? Input.empty() : this.vpcPeeringConfig;
+    public Output<VpcPeeringConfigArgs> getVpcPeeringConfig() {
+        return this.vpcPeeringConfig == null ? Output.empty() : this.vpcPeeringConfig;
     }
 
     public PrivateConnectionArgs(
-        Input<String> displayName,
-        @Nullable Input<Map<String,String>> labels,
-        @Nullable Input<String> location,
-        Input<String> privateConnectionId,
-        @Nullable Input<String> project,
-        @Nullable Input<String> requestId,
-        @Nullable Input<VpcPeeringConfigArgs> vpcPeeringConfig) {
+        Output<String> displayName,
+        @Nullable Output<Map<String,String>> labels,
+        @Nullable Output<String> location,
+        Output<String> privateConnectionId,
+        @Nullable Output<String> project,
+        @Nullable Output<String> requestId,
+        @Nullable Output<VpcPeeringConfigArgs> vpcPeeringConfig) {
         this.displayName = Objects.requireNonNull(displayName, "expected parameter 'displayName' to be non-null");
         this.labels = labels;
         this.location = location;
@@ -95,13 +95,13 @@ public final class PrivateConnectionArgs extends io.pulumi.resources.ResourceArg
     }
 
     private PrivateConnectionArgs() {
-        this.displayName = Input.empty();
-        this.labels = Input.empty();
-        this.location = Input.empty();
-        this.privateConnectionId = Input.empty();
-        this.project = Input.empty();
-        this.requestId = Input.empty();
-        this.vpcPeeringConfig = Input.empty();
+        this.displayName = Output.empty();
+        this.labels = Output.empty();
+        this.location = Output.empty();
+        this.privateConnectionId = Output.empty();
+        this.project = Output.empty();
+        this.requestId = Output.empty();
+        this.vpcPeeringConfig = Output.empty();
     }
 
     public static Builder builder() {
@@ -113,13 +113,13 @@ public final class PrivateConnectionArgs extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private Input<String> displayName;
-        private @Nullable Input<Map<String,String>> labels;
-        private @Nullable Input<String> location;
-        private Input<String> privateConnectionId;
-        private @Nullable Input<String> project;
-        private @Nullable Input<String> requestId;
-        private @Nullable Input<VpcPeeringConfigArgs> vpcPeeringConfig;
+        private Output<String> displayName;
+        private @Nullable Output<Map<String,String>> labels;
+        private @Nullable Output<String> location;
+        private Output<String> privateConnectionId;
+        private @Nullable Output<String> project;
+        private @Nullable Output<String> requestId;
+        private @Nullable Output<VpcPeeringConfigArgs> vpcPeeringConfig;
 
         public Builder() {
     	      // Empty
@@ -136,73 +136,73 @@ public final class PrivateConnectionArgs extends io.pulumi.resources.ResourceArg
     	      this.vpcPeeringConfig = defaults.vpcPeeringConfig;
         }
 
-        public Builder displayName(Input<String> displayName) {
+        public Builder displayName(Output<String> displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
         public Builder displayName(String displayName) {
-            this.displayName = Input.of(Objects.requireNonNull(displayName));
+            this.displayName = Output.of(Objects.requireNonNull(displayName));
             return this;
         }
 
-        public Builder labels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
         public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Input.ofNullable(labels);
+            this.labels = Output.ofNullable(labels);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder privateConnectionId(Input<String> privateConnectionId) {
+        public Builder privateConnectionId(Output<String> privateConnectionId) {
             this.privateConnectionId = Objects.requireNonNull(privateConnectionId);
             return this;
         }
 
         public Builder privateConnectionId(String privateConnectionId) {
-            this.privateConnectionId = Input.of(Objects.requireNonNull(privateConnectionId));
+            this.privateConnectionId = Output.of(Objects.requireNonNull(privateConnectionId));
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder requestId(@Nullable Input<String> requestId) {
+        public Builder requestId(@Nullable Output<String> requestId) {
             this.requestId = requestId;
             return this;
         }
 
         public Builder requestId(@Nullable String requestId) {
-            this.requestId = Input.ofNullable(requestId);
+            this.requestId = Output.ofNullable(requestId);
             return this;
         }
 
-        public Builder vpcPeeringConfig(@Nullable Input<VpcPeeringConfigArgs> vpcPeeringConfig) {
+        public Builder vpcPeeringConfig(@Nullable Output<VpcPeeringConfigArgs> vpcPeeringConfig) {
             this.vpcPeeringConfig = vpcPeeringConfig;
             return this;
         }
 
         public Builder vpcPeeringConfig(@Nullable VpcPeeringConfigArgs vpcPeeringConfig) {
-            this.vpcPeeringConfig = Input.ofNullable(vpcPeeringConfig);
+            this.vpcPeeringConfig = Output.ofNullable(vpcPeeringConfig);
             return this;
         }
         public PrivateConnectionArgs build() {

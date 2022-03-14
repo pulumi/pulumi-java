@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -20,10 +20,10 @@ public final class InstanceGroupNamedPortState extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="group")
-      private final @Nullable Input<String> group;
+      private final @Nullable Output<String> group;
 
-    public Input<String> getGroup() {
-        return this.group == null ? Input.empty() : this.group;
+    public Output<String> getGroup() {
+        return this.group == null ? Output.empty() : this.group;
     }
 
     /**
@@ -32,10 +32,10 @@ public final class InstanceGroupNamedPortState extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -43,10 +43,10 @@ public final class InstanceGroupNamedPortState extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="port")
-      private final @Nullable Input<Integer> port;
+      private final @Nullable Output<Integer> port;
 
-    public Input<Integer> getPort() {
-        return this.port == null ? Input.empty() : this.port;
+    public Output<Integer> getPort() {
+        return this.port == null ? Output.empty() : this.port;
     }
 
     /**
@@ -55,10 +55,10 @@ public final class InstanceGroupNamedPortState extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -66,18 +66,18 @@ public final class InstanceGroupNamedPortState extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="zone")
-      private final @Nullable Input<String> zone;
+      private final @Nullable Output<String> zone;
 
-    public Input<String> getZone() {
-        return this.zone == null ? Input.empty() : this.zone;
+    public Output<String> getZone() {
+        return this.zone == null ? Output.empty() : this.zone;
     }
 
     public InstanceGroupNamedPortState(
-        @Nullable Input<String> group,
-        @Nullable Input<String> name,
-        @Nullable Input<Integer> port,
-        @Nullable Input<String> project,
-        @Nullable Input<String> zone) {
+        @Nullable Output<String> group,
+        @Nullable Output<String> name,
+        @Nullable Output<Integer> port,
+        @Nullable Output<String> project,
+        @Nullable Output<String> zone) {
         this.group = group;
         this.name = name;
         this.port = port;
@@ -86,11 +86,11 @@ public final class InstanceGroupNamedPortState extends io.pulumi.resources.Resou
     }
 
     private InstanceGroupNamedPortState() {
-        this.group = Input.empty();
-        this.name = Input.empty();
-        this.port = Input.empty();
-        this.project = Input.empty();
-        this.zone = Input.empty();
+        this.group = Output.empty();
+        this.name = Output.empty();
+        this.port = Output.empty();
+        this.project = Output.empty();
+        this.zone = Output.empty();
     }
 
     public static Builder builder() {
@@ -102,11 +102,11 @@ public final class InstanceGroupNamedPortState extends io.pulumi.resources.Resou
     }
 
     public static final class Builder {
-        private @Nullable Input<String> group;
-        private @Nullable Input<String> name;
-        private @Nullable Input<Integer> port;
-        private @Nullable Input<String> project;
-        private @Nullable Input<String> zone;
+        private @Nullable Output<String> group;
+        private @Nullable Output<String> name;
+        private @Nullable Output<Integer> port;
+        private @Nullable Output<String> project;
+        private @Nullable Output<String> zone;
 
         public Builder() {
     	      // Empty
@@ -121,53 +121,53 @@ public final class InstanceGroupNamedPortState extends io.pulumi.resources.Resou
     	      this.zone = defaults.zone;
         }
 
-        public Builder group(@Nullable Input<String> group) {
+        public Builder group(@Nullable Output<String> group) {
             this.group = group;
             return this;
         }
 
         public Builder group(@Nullable String group) {
-            this.group = Input.ofNullable(group);
+            this.group = Output.ofNullable(group);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder port(@Nullable Input<Integer> port) {
+        public Builder port(@Nullable Output<Integer> port) {
             this.port = port;
             return this;
         }
 
         public Builder port(@Nullable Integer port) {
-            this.port = Input.ofNullable(port);
+            this.port = Output.ofNullable(port);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder zone(@Nullable Input<String> zone) {
+        public Builder zone(@Nullable Output<String> zone) {
             this.zone = zone;
             return this;
         }
 
         public Builder zone(@Nullable String zone) {
-            this.zone = Input.ofNullable(zone);
+            this.zone = Output.ofNullable(zone);
             return this;
         }
         public InstanceGroupNamedPortState build() {

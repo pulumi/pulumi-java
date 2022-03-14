@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -23,9 +23,9 @@ public final class TrafficSelectorPolicyArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="localAddressRanges", required=true)
-      private final Input<List<String>> localAddressRanges;
+      private final Output<List<String>> localAddressRanges;
 
-    public Input<List<String>> getLocalAddressRanges() {
+    public Output<List<String>> getLocalAddressRanges() {
         return this.localAddressRanges;
     }
 
@@ -34,22 +34,22 @@ public final class TrafficSelectorPolicyArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="remoteAddressRanges", required=true)
-      private final Input<List<String>> remoteAddressRanges;
+      private final Output<List<String>> remoteAddressRanges;
 
-    public Input<List<String>> getRemoteAddressRanges() {
+    public Output<List<String>> getRemoteAddressRanges() {
         return this.remoteAddressRanges;
     }
 
     public TrafficSelectorPolicyArgs(
-        Input<List<String>> localAddressRanges,
-        Input<List<String>> remoteAddressRanges) {
+        Output<List<String>> localAddressRanges,
+        Output<List<String>> remoteAddressRanges) {
         this.localAddressRanges = Objects.requireNonNull(localAddressRanges, "expected parameter 'localAddressRanges' to be non-null");
         this.remoteAddressRanges = Objects.requireNonNull(remoteAddressRanges, "expected parameter 'remoteAddressRanges' to be non-null");
     }
 
     private TrafficSelectorPolicyArgs() {
-        this.localAddressRanges = Input.empty();
-        this.remoteAddressRanges = Input.empty();
+        this.localAddressRanges = Output.empty();
+        this.remoteAddressRanges = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class TrafficSelectorPolicyArgs extends io.pulumi.resources.Resourc
     }
 
     public static final class Builder {
-        private Input<List<String>> localAddressRanges;
-        private Input<List<String>> remoteAddressRanges;
+        private Output<List<String>> localAddressRanges;
+        private Output<List<String>> remoteAddressRanges;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class TrafficSelectorPolicyArgs extends io.pulumi.resources.Resourc
     	      this.remoteAddressRanges = defaults.remoteAddressRanges;
         }
 
-        public Builder localAddressRanges(Input<List<String>> localAddressRanges) {
+        public Builder localAddressRanges(Output<List<String>> localAddressRanges) {
             this.localAddressRanges = Objects.requireNonNull(localAddressRanges);
             return this;
         }
 
         public Builder localAddressRanges(List<String> localAddressRanges) {
-            this.localAddressRanges = Input.of(Objects.requireNonNull(localAddressRanges));
+            this.localAddressRanges = Output.of(Objects.requireNonNull(localAddressRanges));
             return this;
         }
 
-        public Builder remoteAddressRanges(Input<List<String>> remoteAddressRanges) {
+        public Builder remoteAddressRanges(Output<List<String>> remoteAddressRanges) {
             this.remoteAddressRanges = Objects.requireNonNull(remoteAddressRanges);
             return this;
         }
 
         public Builder remoteAddressRanges(List<String> remoteAddressRanges) {
-            this.remoteAddressRanges = Input.of(Objects.requireNonNull(remoteAddressRanges));
+            this.remoteAddressRanges = Output.of(Objects.requireNonNull(remoteAddressRanges));
             return this;
         }
         public TrafficSelectorPolicyArgs build() {

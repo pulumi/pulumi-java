@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.metastore_v1alpha.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.metastore_v1alpha.enums.DatabaseDumpDatabaseType;
 import io.pulumi.googlenative.metastore_v1alpha.enums.DatabaseDumpType;
@@ -25,10 +25,10 @@ public final class DatabaseDumpArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="databaseType")
-      private final @Nullable Input<DatabaseDumpDatabaseType> databaseType;
+      private final @Nullable Output<DatabaseDumpDatabaseType> databaseType;
 
-    public Input<DatabaseDumpDatabaseType> getDatabaseType() {
-        return this.databaseType == null ? Input.empty() : this.databaseType;
+    public Output<DatabaseDumpDatabaseType> getDatabaseType() {
+        return this.databaseType == null ? Output.empty() : this.databaseType;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class DatabaseDumpArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="gcsUri")
-      private final @Nullable Input<String> gcsUri;
+      private final @Nullable Output<String> gcsUri;
 
-    public Input<String> getGcsUri() {
-        return this.gcsUri == null ? Input.empty() : this.gcsUri;
+    public Output<String> getGcsUri() {
+        return this.gcsUri == null ? Output.empty() : this.gcsUri;
     }
 
     /**
@@ -47,10 +47,10 @@ public final class DatabaseDumpArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sourceDatabase")
-      private final @Nullable Input<String> sourceDatabase;
+      private final @Nullable Output<String> sourceDatabase;
 
-    public Input<String> getSourceDatabase() {
-        return this.sourceDatabase == null ? Input.empty() : this.sourceDatabase;
+    public Output<String> getSourceDatabase() {
+        return this.sourceDatabase == null ? Output.empty() : this.sourceDatabase;
     }
 
     /**
@@ -58,17 +58,17 @@ public final class DatabaseDumpArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type")
-      private final @Nullable Input<DatabaseDumpType> type;
+      private final @Nullable Output<DatabaseDumpType> type;
 
-    public Input<DatabaseDumpType> getType() {
-        return this.type == null ? Input.empty() : this.type;
+    public Output<DatabaseDumpType> getType() {
+        return this.type == null ? Output.empty() : this.type;
     }
 
     public DatabaseDumpArgs(
-        @Nullable Input<DatabaseDumpDatabaseType> databaseType,
-        @Nullable Input<String> gcsUri,
-        @Nullable Input<String> sourceDatabase,
-        @Nullable Input<DatabaseDumpType> type) {
+        @Nullable Output<DatabaseDumpDatabaseType> databaseType,
+        @Nullable Output<String> gcsUri,
+        @Nullable Output<String> sourceDatabase,
+        @Nullable Output<DatabaseDumpType> type) {
         this.databaseType = databaseType;
         this.gcsUri = gcsUri;
         this.sourceDatabase = sourceDatabase;
@@ -76,10 +76,10 @@ public final class DatabaseDumpArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DatabaseDumpArgs() {
-        this.databaseType = Input.empty();
-        this.gcsUri = Input.empty();
-        this.sourceDatabase = Input.empty();
-        this.type = Input.empty();
+        this.databaseType = Output.empty();
+        this.gcsUri = Output.empty();
+        this.sourceDatabase = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -91,10 +91,10 @@ public final class DatabaseDumpArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<DatabaseDumpDatabaseType> databaseType;
-        private @Nullable Input<String> gcsUri;
-        private @Nullable Input<String> sourceDatabase;
-        private @Nullable Input<DatabaseDumpType> type;
+        private @Nullable Output<DatabaseDumpDatabaseType> databaseType;
+        private @Nullable Output<String> gcsUri;
+        private @Nullable Output<String> sourceDatabase;
+        private @Nullable Output<DatabaseDumpType> type;
 
         public Builder() {
     	      // Empty
@@ -108,43 +108,43 @@ public final class DatabaseDumpArgs extends io.pulumi.resources.ResourceArgs {
     	      this.type = defaults.type;
         }
 
-        public Builder databaseType(@Nullable Input<DatabaseDumpDatabaseType> databaseType) {
+        public Builder databaseType(@Nullable Output<DatabaseDumpDatabaseType> databaseType) {
             this.databaseType = databaseType;
             return this;
         }
 
         public Builder databaseType(@Nullable DatabaseDumpDatabaseType databaseType) {
-            this.databaseType = Input.ofNullable(databaseType);
+            this.databaseType = Output.ofNullable(databaseType);
             return this;
         }
 
-        public Builder gcsUri(@Nullable Input<String> gcsUri) {
+        public Builder gcsUri(@Nullable Output<String> gcsUri) {
             this.gcsUri = gcsUri;
             return this;
         }
 
         public Builder gcsUri(@Nullable String gcsUri) {
-            this.gcsUri = Input.ofNullable(gcsUri);
+            this.gcsUri = Output.ofNullable(gcsUri);
             return this;
         }
 
-        public Builder sourceDatabase(@Nullable Input<String> sourceDatabase) {
+        public Builder sourceDatabase(@Nullable Output<String> sourceDatabase) {
             this.sourceDatabase = sourceDatabase;
             return this;
         }
 
         public Builder sourceDatabase(@Nullable String sourceDatabase) {
-            this.sourceDatabase = Input.ofNullable(sourceDatabase);
+            this.sourceDatabase = Output.ofNullable(sourceDatabase);
             return this;
         }
 
-        public Builder type(@Nullable Input<DatabaseDumpType> type) {
+        public Builder type(@Nullable Output<DatabaseDumpType> type) {
             this.type = type;
             return this;
         }
 
         public Builder type(@Nullable DatabaseDumpType type) {
-            this.type = Input.ofNullable(type);
+            this.type = Output.ofNullable(type);
             return this;
         }
         public DatabaseDumpArgs build() {

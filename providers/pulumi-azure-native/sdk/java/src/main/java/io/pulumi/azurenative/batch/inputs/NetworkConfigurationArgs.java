@@ -5,7 +5,7 @@ package io.pulumi.azurenative.batch.inputs;
 
 import io.pulumi.azurenative.batch.inputs.PoolEndpointConfigurationArgs;
 import io.pulumi.azurenative.batch.inputs.PublicIPAddressConfigurationArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -25,10 +25,10 @@ public final class NetworkConfigurationArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="endpointConfiguration")
-      private final @Nullable Input<PoolEndpointConfigurationArgs> endpointConfiguration;
+      private final @Nullable Output<PoolEndpointConfigurationArgs> endpointConfiguration;
 
-    public Input<PoolEndpointConfigurationArgs> getEndpointConfiguration() {
-        return this.endpointConfiguration == null ? Input.empty() : this.endpointConfiguration;
+    public Output<PoolEndpointConfigurationArgs> getEndpointConfiguration() {
+        return this.endpointConfiguration == null ? Output.empty() : this.endpointConfiguration;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class NetworkConfigurationArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="publicIPAddressConfiguration")
-      private final @Nullable Input<PublicIPAddressConfigurationArgs> publicIPAddressConfiguration;
+      private final @Nullable Output<PublicIPAddressConfigurationArgs> publicIPAddressConfiguration;
 
-    public Input<PublicIPAddressConfigurationArgs> getPublicIPAddressConfiguration() {
-        return this.publicIPAddressConfiguration == null ? Input.empty() : this.publicIPAddressConfiguration;
+    public Output<PublicIPAddressConfigurationArgs> getPublicIPAddressConfiguration() {
+        return this.publicIPAddressConfiguration == null ? Output.empty() : this.publicIPAddressConfiguration;
     }
 
     /**
@@ -47,25 +47,25 @@ public final class NetworkConfigurationArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="subnetId")
-      private final @Nullable Input<String> subnetId;
+      private final @Nullable Output<String> subnetId;
 
-    public Input<String> getSubnetId() {
-        return this.subnetId == null ? Input.empty() : this.subnetId;
+    public Output<String> getSubnetId() {
+        return this.subnetId == null ? Output.empty() : this.subnetId;
     }
 
     public NetworkConfigurationArgs(
-        @Nullable Input<PoolEndpointConfigurationArgs> endpointConfiguration,
-        @Nullable Input<PublicIPAddressConfigurationArgs> publicIPAddressConfiguration,
-        @Nullable Input<String> subnetId) {
+        @Nullable Output<PoolEndpointConfigurationArgs> endpointConfiguration,
+        @Nullable Output<PublicIPAddressConfigurationArgs> publicIPAddressConfiguration,
+        @Nullable Output<String> subnetId) {
         this.endpointConfiguration = endpointConfiguration;
         this.publicIPAddressConfiguration = publicIPAddressConfiguration;
         this.subnetId = subnetId;
     }
 
     private NetworkConfigurationArgs() {
-        this.endpointConfiguration = Input.empty();
-        this.publicIPAddressConfiguration = Input.empty();
-        this.subnetId = Input.empty();
+        this.endpointConfiguration = Output.empty();
+        this.publicIPAddressConfiguration = Output.empty();
+        this.subnetId = Output.empty();
     }
 
     public static Builder builder() {
@@ -77,9 +77,9 @@ public final class NetworkConfigurationArgs extends io.pulumi.resources.Resource
     }
 
     public static final class Builder {
-        private @Nullable Input<PoolEndpointConfigurationArgs> endpointConfiguration;
-        private @Nullable Input<PublicIPAddressConfigurationArgs> publicIPAddressConfiguration;
-        private @Nullable Input<String> subnetId;
+        private @Nullable Output<PoolEndpointConfigurationArgs> endpointConfiguration;
+        private @Nullable Output<PublicIPAddressConfigurationArgs> publicIPAddressConfiguration;
+        private @Nullable Output<String> subnetId;
 
         public Builder() {
     	      // Empty
@@ -92,33 +92,33 @@ public final class NetworkConfigurationArgs extends io.pulumi.resources.Resource
     	      this.subnetId = defaults.subnetId;
         }
 
-        public Builder endpointConfiguration(@Nullable Input<PoolEndpointConfigurationArgs> endpointConfiguration) {
+        public Builder endpointConfiguration(@Nullable Output<PoolEndpointConfigurationArgs> endpointConfiguration) {
             this.endpointConfiguration = endpointConfiguration;
             return this;
         }
 
         public Builder endpointConfiguration(@Nullable PoolEndpointConfigurationArgs endpointConfiguration) {
-            this.endpointConfiguration = Input.ofNullable(endpointConfiguration);
+            this.endpointConfiguration = Output.ofNullable(endpointConfiguration);
             return this;
         }
 
-        public Builder publicIPAddressConfiguration(@Nullable Input<PublicIPAddressConfigurationArgs> publicIPAddressConfiguration) {
+        public Builder publicIPAddressConfiguration(@Nullable Output<PublicIPAddressConfigurationArgs> publicIPAddressConfiguration) {
             this.publicIPAddressConfiguration = publicIPAddressConfiguration;
             return this;
         }
 
         public Builder publicIPAddressConfiguration(@Nullable PublicIPAddressConfigurationArgs publicIPAddressConfiguration) {
-            this.publicIPAddressConfiguration = Input.ofNullable(publicIPAddressConfiguration);
+            this.publicIPAddressConfiguration = Output.ofNullable(publicIPAddressConfiguration);
             return this;
         }
 
-        public Builder subnetId(@Nullable Input<String> subnetId) {
+        public Builder subnetId(@Nullable Output<String> subnetId) {
             this.subnetId = subnetId;
             return this;
         }
 
         public Builder subnetId(@Nullable String subnetId) {
-            this.subnetId = Input.ofNullable(subnetId);
+            this.subnetId = Output.ofNullable(subnetId);
             return this;
         }
         public NetworkConfigurationArgs build() {

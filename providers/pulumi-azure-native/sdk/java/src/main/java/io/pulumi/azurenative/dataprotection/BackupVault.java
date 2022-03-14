@@ -9,7 +9,6 @@ import io.pulumi.azurenative.dataprotection.outputs.BackupVaultResponse;
 import io.pulumi.azurenative.dataprotection.outputs.DppIdentityDetailsResponse;
 import io.pulumi.azurenative.dataprotection.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -186,23 +185,23 @@ public class BackupVault extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public BackupVault(String name, BackupVaultArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:dataprotection:BackupVault", name, args == null ? BackupVaultArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("azure-native:dataprotection:BackupVault", name, args == null ? BackupVaultArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private BackupVault(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private BackupVault(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:dataprotection:BackupVault", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:dataprotection/v20210101:BackupVault").build()),
-                Input.of(Alias.builder().setType("azure-native:dataprotection/v20210201preview:BackupVault").build()),
-                Input.of(Alias.builder().setType("azure-native:dataprotection/v20210601preview:BackupVault").build()),
-                Input.of(Alias.builder().setType("azure-native:dataprotection/v20210701:BackupVault").build()),
-                Input.of(Alias.builder().setType("azure-native:dataprotection/v20211001preview:BackupVault").build()),
-                Input.of(Alias.builder().setType("azure-native:dataprotection/v20211201preview:BackupVault").build())
+                Output.of(Alias.builder().setType("azure-native:dataprotection/v20210101:BackupVault").build()),
+                Output.of(Alias.builder().setType("azure-native:dataprotection/v20210201preview:BackupVault").build()),
+                Output.of(Alias.builder().setType("azure-native:dataprotection/v20210601preview:BackupVault").build()),
+                Output.of(Alias.builder().setType("azure-native:dataprotection/v20210701:BackupVault").build()),
+                Output.of(Alias.builder().setType("azure-native:dataprotection/v20211001preview:BackupVault").build()),
+                Output.of(Alias.builder().setType("azure-native:dataprotection/v20211201preview:BackupVault").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -216,7 +215,7 @@ public class BackupVault extends io.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static BackupVault get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static BackupVault get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new BackupVault(name, id, options);
     }
 }

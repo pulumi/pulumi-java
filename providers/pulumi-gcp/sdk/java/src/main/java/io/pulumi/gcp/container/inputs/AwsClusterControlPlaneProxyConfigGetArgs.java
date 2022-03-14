@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.container.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -18,9 +18,9 @@ public final class AwsClusterControlPlaneProxyConfigGetArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="secretArn", required=true)
-      private final Input<String> secretArn;
+      private final Output<String> secretArn;
 
-    public Input<String> getSecretArn() {
+    public Output<String> getSecretArn() {
         return this.secretArn;
     }
 
@@ -29,22 +29,22 @@ public final class AwsClusterControlPlaneProxyConfigGetArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="secretVersion", required=true)
-      private final Input<String> secretVersion;
+      private final Output<String> secretVersion;
 
-    public Input<String> getSecretVersion() {
+    public Output<String> getSecretVersion() {
         return this.secretVersion;
     }
 
     public AwsClusterControlPlaneProxyConfigGetArgs(
-        Input<String> secretArn,
-        Input<String> secretVersion) {
+        Output<String> secretArn,
+        Output<String> secretVersion) {
         this.secretArn = Objects.requireNonNull(secretArn, "expected parameter 'secretArn' to be non-null");
         this.secretVersion = Objects.requireNonNull(secretVersion, "expected parameter 'secretVersion' to be non-null");
     }
 
     private AwsClusterControlPlaneProxyConfigGetArgs() {
-        this.secretArn = Input.empty();
-        this.secretVersion = Input.empty();
+        this.secretArn = Output.empty();
+        this.secretVersion = Output.empty();
     }
 
     public static Builder builder() {
@@ -56,8 +56,8 @@ public final class AwsClusterControlPlaneProxyConfigGetArgs extends io.pulumi.re
     }
 
     public static final class Builder {
-        private Input<String> secretArn;
-        private Input<String> secretVersion;
+        private Output<String> secretArn;
+        private Output<String> secretVersion;
 
         public Builder() {
     	      // Empty
@@ -69,23 +69,23 @@ public final class AwsClusterControlPlaneProxyConfigGetArgs extends io.pulumi.re
     	      this.secretVersion = defaults.secretVersion;
         }
 
-        public Builder secretArn(Input<String> secretArn) {
+        public Builder secretArn(Output<String> secretArn) {
             this.secretArn = Objects.requireNonNull(secretArn);
             return this;
         }
 
         public Builder secretArn(String secretArn) {
-            this.secretArn = Input.of(Objects.requireNonNull(secretArn));
+            this.secretArn = Output.of(Objects.requireNonNull(secretArn));
             return this;
         }
 
-        public Builder secretVersion(Input<String> secretVersion) {
+        public Builder secretVersion(Output<String> secretVersion) {
             this.secretVersion = Objects.requireNonNull(secretVersion);
             return this;
         }
 
         public Builder secretVersion(String secretVersion) {
-            this.secretVersion = Input.of(Objects.requireNonNull(secretVersion));
+            this.secretVersion = Output.of(Objects.requireNonNull(secretVersion));
             return this;
         }
         public AwsClusterControlPlaneProxyConfigGetArgs build() {

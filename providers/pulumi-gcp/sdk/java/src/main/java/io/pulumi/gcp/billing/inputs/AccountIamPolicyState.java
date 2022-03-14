@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.billing.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -15,39 +15,39 @@ public final class AccountIamPolicyState extends io.pulumi.resources.ResourceArg
     public static final AccountIamPolicyState Empty = new AccountIamPolicyState();
 
     @InputImport(name="billingAccountId")
-      private final @Nullable Input<String> billingAccountId;
+      private final @Nullable Output<String> billingAccountId;
 
-    public Input<String> getBillingAccountId() {
-        return this.billingAccountId == null ? Input.empty() : this.billingAccountId;
+    public Output<String> getBillingAccountId() {
+        return this.billingAccountId == null ? Output.empty() : this.billingAccountId;
     }
 
     @InputImport(name="etag")
-      private final @Nullable Input<String> etag;
+      private final @Nullable Output<String> etag;
 
-    public Input<String> getEtag() {
-        return this.etag == null ? Input.empty() : this.etag;
+    public Output<String> getEtag() {
+        return this.etag == null ? Output.empty() : this.etag;
     }
 
     @InputImport(name="policyData")
-      private final @Nullable Input<String> policyData;
+      private final @Nullable Output<String> policyData;
 
-    public Input<String> getPolicyData() {
-        return this.policyData == null ? Input.empty() : this.policyData;
+    public Output<String> getPolicyData() {
+        return this.policyData == null ? Output.empty() : this.policyData;
     }
 
     public AccountIamPolicyState(
-        @Nullable Input<String> billingAccountId,
-        @Nullable Input<String> etag,
-        @Nullable Input<String> policyData) {
+        @Nullable Output<String> billingAccountId,
+        @Nullable Output<String> etag,
+        @Nullable Output<String> policyData) {
         this.billingAccountId = billingAccountId;
         this.etag = etag;
         this.policyData = policyData;
     }
 
     private AccountIamPolicyState() {
-        this.billingAccountId = Input.empty();
-        this.etag = Input.empty();
-        this.policyData = Input.empty();
+        this.billingAccountId = Output.empty();
+        this.etag = Output.empty();
+        this.policyData = Output.empty();
     }
 
     public static Builder builder() {
@@ -59,9 +59,9 @@ public final class AccountIamPolicyState extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private @Nullable Input<String> billingAccountId;
-        private @Nullable Input<String> etag;
-        private @Nullable Input<String> policyData;
+        private @Nullable Output<String> billingAccountId;
+        private @Nullable Output<String> etag;
+        private @Nullable Output<String> policyData;
 
         public Builder() {
     	      // Empty
@@ -74,33 +74,33 @@ public final class AccountIamPolicyState extends io.pulumi.resources.ResourceArg
     	      this.policyData = defaults.policyData;
         }
 
-        public Builder billingAccountId(@Nullable Input<String> billingAccountId) {
+        public Builder billingAccountId(@Nullable Output<String> billingAccountId) {
             this.billingAccountId = billingAccountId;
             return this;
         }
 
         public Builder billingAccountId(@Nullable String billingAccountId) {
-            this.billingAccountId = Input.ofNullable(billingAccountId);
+            this.billingAccountId = Output.ofNullable(billingAccountId);
             return this;
         }
 
-        public Builder etag(@Nullable Input<String> etag) {
+        public Builder etag(@Nullable Output<String> etag) {
             this.etag = etag;
             return this;
         }
 
         public Builder etag(@Nullable String etag) {
-            this.etag = Input.ofNullable(etag);
+            this.etag = Output.ofNullable(etag);
             return this;
         }
 
-        public Builder policyData(@Nullable Input<String> policyData) {
+        public Builder policyData(@Nullable Output<String> policyData) {
             this.policyData = policyData;
             return this;
         }
 
         public Builder policyData(@Nullable String policyData) {
-            this.policyData = Input.ofNullable(policyData);
+            this.policyData = Output.ofNullable(policyData);
             return this;
         }
         public AccountIamPolicyState build() {

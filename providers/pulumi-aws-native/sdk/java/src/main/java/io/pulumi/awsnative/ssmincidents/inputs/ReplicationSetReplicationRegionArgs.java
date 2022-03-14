@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.ssmincidents.inputs;
 
 import io.pulumi.awsnative.ssmincidents.inputs.ReplicationSetRegionConfigurationArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -20,29 +20,29 @@ public final class ReplicationSetReplicationRegionArgs extends io.pulumi.resourc
     public static final ReplicationSetReplicationRegionArgs Empty = new ReplicationSetReplicationRegionArgs();
 
     @InputImport(name="regionConfiguration")
-      private final @Nullable Input<ReplicationSetRegionConfigurationArgs> regionConfiguration;
+      private final @Nullable Output<ReplicationSetRegionConfigurationArgs> regionConfiguration;
 
-    public Input<ReplicationSetRegionConfigurationArgs> getRegionConfiguration() {
-        return this.regionConfiguration == null ? Input.empty() : this.regionConfiguration;
+    public Output<ReplicationSetRegionConfigurationArgs> getRegionConfiguration() {
+        return this.regionConfiguration == null ? Output.empty() : this.regionConfiguration;
     }
 
     @InputImport(name="regionName")
-      private final @Nullable Input<String> regionName;
+      private final @Nullable Output<String> regionName;
 
-    public Input<String> getRegionName() {
-        return this.regionName == null ? Input.empty() : this.regionName;
+    public Output<String> getRegionName() {
+        return this.regionName == null ? Output.empty() : this.regionName;
     }
 
     public ReplicationSetReplicationRegionArgs(
-        @Nullable Input<ReplicationSetRegionConfigurationArgs> regionConfiguration,
-        @Nullable Input<String> regionName) {
+        @Nullable Output<ReplicationSetRegionConfigurationArgs> regionConfiguration,
+        @Nullable Output<String> regionName) {
         this.regionConfiguration = regionConfiguration;
         this.regionName = regionName;
     }
 
     private ReplicationSetReplicationRegionArgs() {
-        this.regionConfiguration = Input.empty();
-        this.regionName = Input.empty();
+        this.regionConfiguration = Output.empty();
+        this.regionName = Output.empty();
     }
 
     public static Builder builder() {
@@ -54,8 +54,8 @@ public final class ReplicationSetReplicationRegionArgs extends io.pulumi.resourc
     }
 
     public static final class Builder {
-        private @Nullable Input<ReplicationSetRegionConfigurationArgs> regionConfiguration;
-        private @Nullable Input<String> regionName;
+        private @Nullable Output<ReplicationSetRegionConfigurationArgs> regionConfiguration;
+        private @Nullable Output<String> regionName;
 
         public Builder() {
     	      // Empty
@@ -67,23 +67,23 @@ public final class ReplicationSetReplicationRegionArgs extends io.pulumi.resourc
     	      this.regionName = defaults.regionName;
         }
 
-        public Builder regionConfiguration(@Nullable Input<ReplicationSetRegionConfigurationArgs> regionConfiguration) {
+        public Builder regionConfiguration(@Nullable Output<ReplicationSetRegionConfigurationArgs> regionConfiguration) {
             this.regionConfiguration = regionConfiguration;
             return this;
         }
 
         public Builder regionConfiguration(@Nullable ReplicationSetRegionConfigurationArgs regionConfiguration) {
-            this.regionConfiguration = Input.ofNullable(regionConfiguration);
+            this.regionConfiguration = Output.ofNullable(regionConfiguration);
             return this;
         }
 
-        public Builder regionName(@Nullable Input<String> regionName) {
+        public Builder regionName(@Nullable Output<String> regionName) {
             this.regionName = regionName;
             return this;
         }
 
         public Builder regionName(@Nullable String regionName) {
-            this.regionName = Input.ofNullable(regionName);
+            this.regionName = Output.ofNullable(regionName);
             return this;
         }
         public ReplicationSetReplicationRegionArgs build() {

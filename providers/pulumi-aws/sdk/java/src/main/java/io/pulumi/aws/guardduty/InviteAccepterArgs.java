@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.guardduty;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -18,9 +18,9 @@ public final class InviteAccepterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="detectorId", required=true)
-      private final Input<String> detectorId;
+      private final Output<String> detectorId;
 
-    public Input<String> getDetectorId() {
+    public Output<String> getDetectorId() {
         return this.detectorId;
     }
 
@@ -29,22 +29,22 @@ public final class InviteAccepterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="masterAccountId", required=true)
-      private final Input<String> masterAccountId;
+      private final Output<String> masterAccountId;
 
-    public Input<String> getMasterAccountId() {
+    public Output<String> getMasterAccountId() {
         return this.masterAccountId;
     }
 
     public InviteAccepterArgs(
-        Input<String> detectorId,
-        Input<String> masterAccountId) {
+        Output<String> detectorId,
+        Output<String> masterAccountId) {
         this.detectorId = Objects.requireNonNull(detectorId, "expected parameter 'detectorId' to be non-null");
         this.masterAccountId = Objects.requireNonNull(masterAccountId, "expected parameter 'masterAccountId' to be non-null");
     }
 
     private InviteAccepterArgs() {
-        this.detectorId = Input.empty();
-        this.masterAccountId = Input.empty();
+        this.detectorId = Output.empty();
+        this.masterAccountId = Output.empty();
     }
 
     public static Builder builder() {
@@ -56,8 +56,8 @@ public final class InviteAccepterArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> detectorId;
-        private Input<String> masterAccountId;
+        private Output<String> detectorId;
+        private Output<String> masterAccountId;
 
         public Builder() {
     	      // Empty
@@ -69,23 +69,23 @@ public final class InviteAccepterArgs extends io.pulumi.resources.ResourceArgs {
     	      this.masterAccountId = defaults.masterAccountId;
         }
 
-        public Builder detectorId(Input<String> detectorId) {
+        public Builder detectorId(Output<String> detectorId) {
             this.detectorId = Objects.requireNonNull(detectorId);
             return this;
         }
 
         public Builder detectorId(String detectorId) {
-            this.detectorId = Input.of(Objects.requireNonNull(detectorId));
+            this.detectorId = Output.of(Objects.requireNonNull(detectorId));
             return this;
         }
 
-        public Builder masterAccountId(Input<String> masterAccountId) {
+        public Builder masterAccountId(Output<String> masterAccountId) {
             this.masterAccountId = Objects.requireNonNull(masterAccountId);
             return this;
         }
 
         public Builder masterAccountId(String masterAccountId) {
-            this.masterAccountId = Input.of(Objects.requireNonNull(masterAccountId));
+            this.masterAccountId = Output.of(Objects.requireNonNull(masterAccountId));
             return this;
         }
         public InviteAccepterArgs build() {

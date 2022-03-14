@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.ec2;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -21,10 +21,10 @@ public final class VpcIpamPoolCidrAllocationArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="cidr")
-      private final @Nullable Input<String> cidr;
+      private final @Nullable Output<String> cidr;
 
-    public Input<String> getCidr() {
-        return this.cidr == null ? Input.empty() : this.cidr;
+    public Output<String> getCidr() {
+        return this.cidr == null ? Output.empty() : this.cidr;
     }
 
     /**
@@ -32,10 +32,10 @@ public final class VpcIpamPoolCidrAllocationArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -43,10 +43,10 @@ public final class VpcIpamPoolCidrAllocationArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="disallowedCidrs")
-      private final @Nullable Input<List<String>> disallowedCidrs;
+      private final @Nullable Output<List<String>> disallowedCidrs;
 
-    public Input<List<String>> getDisallowedCidrs() {
-        return this.disallowedCidrs == null ? Input.empty() : this.disallowedCidrs;
+    public Output<List<String>> getDisallowedCidrs() {
+        return this.disallowedCidrs == null ? Output.empty() : this.disallowedCidrs;
     }
 
     /**
@@ -54,9 +54,9 @@ public final class VpcIpamPoolCidrAllocationArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="ipamPoolId", required=true)
-      private final Input<String> ipamPoolId;
+      private final Output<String> ipamPoolId;
 
-    public Input<String> getIpamPoolId() {
+    public Output<String> getIpamPoolId() {
         return this.ipamPoolId;
     }
 
@@ -65,18 +65,18 @@ public final class VpcIpamPoolCidrAllocationArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="netmaskLength")
-      private final @Nullable Input<Integer> netmaskLength;
+      private final @Nullable Output<Integer> netmaskLength;
 
-    public Input<Integer> getNetmaskLength() {
-        return this.netmaskLength == null ? Input.empty() : this.netmaskLength;
+    public Output<Integer> getNetmaskLength() {
+        return this.netmaskLength == null ? Output.empty() : this.netmaskLength;
     }
 
     public VpcIpamPoolCidrAllocationArgs(
-        @Nullable Input<String> cidr,
-        @Nullable Input<String> description,
-        @Nullable Input<List<String>> disallowedCidrs,
-        Input<String> ipamPoolId,
-        @Nullable Input<Integer> netmaskLength) {
+        @Nullable Output<String> cidr,
+        @Nullable Output<String> description,
+        @Nullable Output<List<String>> disallowedCidrs,
+        Output<String> ipamPoolId,
+        @Nullable Output<Integer> netmaskLength) {
         this.cidr = cidr;
         this.description = description;
         this.disallowedCidrs = disallowedCidrs;
@@ -85,11 +85,11 @@ public final class VpcIpamPoolCidrAllocationArgs extends io.pulumi.resources.Res
     }
 
     private VpcIpamPoolCidrAllocationArgs() {
-        this.cidr = Input.empty();
-        this.description = Input.empty();
-        this.disallowedCidrs = Input.empty();
-        this.ipamPoolId = Input.empty();
-        this.netmaskLength = Input.empty();
+        this.cidr = Output.empty();
+        this.description = Output.empty();
+        this.disallowedCidrs = Output.empty();
+        this.ipamPoolId = Output.empty();
+        this.netmaskLength = Output.empty();
     }
 
     public static Builder builder() {
@@ -101,11 +101,11 @@ public final class VpcIpamPoolCidrAllocationArgs extends io.pulumi.resources.Res
     }
 
     public static final class Builder {
-        private @Nullable Input<String> cidr;
-        private @Nullable Input<String> description;
-        private @Nullable Input<List<String>> disallowedCidrs;
-        private Input<String> ipamPoolId;
-        private @Nullable Input<Integer> netmaskLength;
+        private @Nullable Output<String> cidr;
+        private @Nullable Output<String> description;
+        private @Nullable Output<List<String>> disallowedCidrs;
+        private Output<String> ipamPoolId;
+        private @Nullable Output<Integer> netmaskLength;
 
         public Builder() {
     	      // Empty
@@ -120,53 +120,53 @@ public final class VpcIpamPoolCidrAllocationArgs extends io.pulumi.resources.Res
     	      this.netmaskLength = defaults.netmaskLength;
         }
 
-        public Builder cidr(@Nullable Input<String> cidr) {
+        public Builder cidr(@Nullable Output<String> cidr) {
             this.cidr = cidr;
             return this;
         }
 
         public Builder cidr(@Nullable String cidr) {
-            this.cidr = Input.ofNullable(cidr);
+            this.cidr = Output.ofNullable(cidr);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder disallowedCidrs(@Nullable Input<List<String>> disallowedCidrs) {
+        public Builder disallowedCidrs(@Nullable Output<List<String>> disallowedCidrs) {
             this.disallowedCidrs = disallowedCidrs;
             return this;
         }
 
         public Builder disallowedCidrs(@Nullable List<String> disallowedCidrs) {
-            this.disallowedCidrs = Input.ofNullable(disallowedCidrs);
+            this.disallowedCidrs = Output.ofNullable(disallowedCidrs);
             return this;
         }
 
-        public Builder ipamPoolId(Input<String> ipamPoolId) {
+        public Builder ipamPoolId(Output<String> ipamPoolId) {
             this.ipamPoolId = Objects.requireNonNull(ipamPoolId);
             return this;
         }
 
         public Builder ipamPoolId(String ipamPoolId) {
-            this.ipamPoolId = Input.of(Objects.requireNonNull(ipamPoolId));
+            this.ipamPoolId = Output.of(Objects.requireNonNull(ipamPoolId));
             return this;
         }
 
-        public Builder netmaskLength(@Nullable Input<Integer> netmaskLength) {
+        public Builder netmaskLength(@Nullable Output<Integer> netmaskLength) {
             this.netmaskLength = netmaskLength;
             return this;
         }
 
         public Builder netmaskLength(@Nullable Integer netmaskLength) {
-            this.netmaskLength = Input.ofNullable(netmaskLength);
+            this.netmaskLength = Output.ofNullable(netmaskLength);
             return this;
         }
         public VpcIpamPoolCidrAllocationArgs build() {

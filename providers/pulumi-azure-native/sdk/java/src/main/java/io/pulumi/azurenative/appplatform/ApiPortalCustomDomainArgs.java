@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.appplatform;
 
 import io.pulumi.azurenative.appplatform.inputs.ApiPortalCustomDomainPropertiesArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -20,9 +20,9 @@ public final class ApiPortalCustomDomainArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="apiPortalName", required=true)
-      private final Input<String> apiPortalName;
+      private final Output<String> apiPortalName;
 
-    public Input<String> getApiPortalName() {
+    public Output<String> getApiPortalName() {
         return this.apiPortalName;
     }
 
@@ -31,10 +31,10 @@ public final class ApiPortalCustomDomainArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="domainName")
-      private final @Nullable Input<String> domainName;
+      private final @Nullable Output<String> domainName;
 
-    public Input<String> getDomainName() {
-        return this.domainName == null ? Input.empty() : this.domainName;
+    public Output<String> getDomainName() {
+        return this.domainName == null ? Output.empty() : this.domainName;
     }
 
     /**
@@ -42,10 +42,10 @@ public final class ApiPortalCustomDomainArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="properties")
-      private final @Nullable Input<ApiPortalCustomDomainPropertiesArgs> properties;
+      private final @Nullable Output<ApiPortalCustomDomainPropertiesArgs> properties;
 
-    public Input<ApiPortalCustomDomainPropertiesArgs> getProperties() {
-        return this.properties == null ? Input.empty() : this.properties;
+    public Output<ApiPortalCustomDomainPropertiesArgs> getProperties() {
+        return this.properties == null ? Output.empty() : this.properties;
     }
 
     /**
@@ -53,9 +53,9 @@ public final class ApiPortalCustomDomainArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -64,18 +64,18 @@ public final class ApiPortalCustomDomainArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="serviceName", required=true)
-      private final Input<String> serviceName;
+      private final Output<String> serviceName;
 
-    public Input<String> getServiceName() {
+    public Output<String> getServiceName() {
         return this.serviceName;
     }
 
     public ApiPortalCustomDomainArgs(
-        Input<String> apiPortalName,
-        @Nullable Input<String> domainName,
-        @Nullable Input<ApiPortalCustomDomainPropertiesArgs> properties,
-        Input<String> resourceGroupName,
-        Input<String> serviceName) {
+        Output<String> apiPortalName,
+        @Nullable Output<String> domainName,
+        @Nullable Output<ApiPortalCustomDomainPropertiesArgs> properties,
+        Output<String> resourceGroupName,
+        Output<String> serviceName) {
         this.apiPortalName = Objects.requireNonNull(apiPortalName, "expected parameter 'apiPortalName' to be non-null");
         this.domainName = domainName;
         this.properties = properties;
@@ -84,11 +84,11 @@ public final class ApiPortalCustomDomainArgs extends io.pulumi.resources.Resourc
     }
 
     private ApiPortalCustomDomainArgs() {
-        this.apiPortalName = Input.empty();
-        this.domainName = Input.empty();
-        this.properties = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.serviceName = Input.empty();
+        this.apiPortalName = Output.empty();
+        this.domainName = Output.empty();
+        this.properties = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.serviceName = Output.empty();
     }
 
     public static Builder builder() {
@@ -100,11 +100,11 @@ public final class ApiPortalCustomDomainArgs extends io.pulumi.resources.Resourc
     }
 
     public static final class Builder {
-        private Input<String> apiPortalName;
-        private @Nullable Input<String> domainName;
-        private @Nullable Input<ApiPortalCustomDomainPropertiesArgs> properties;
-        private Input<String> resourceGroupName;
-        private Input<String> serviceName;
+        private Output<String> apiPortalName;
+        private @Nullable Output<String> domainName;
+        private @Nullable Output<ApiPortalCustomDomainPropertiesArgs> properties;
+        private Output<String> resourceGroupName;
+        private Output<String> serviceName;
 
         public Builder() {
     	      // Empty
@@ -119,53 +119,53 @@ public final class ApiPortalCustomDomainArgs extends io.pulumi.resources.Resourc
     	      this.serviceName = defaults.serviceName;
         }
 
-        public Builder apiPortalName(Input<String> apiPortalName) {
+        public Builder apiPortalName(Output<String> apiPortalName) {
             this.apiPortalName = Objects.requireNonNull(apiPortalName);
             return this;
         }
 
         public Builder apiPortalName(String apiPortalName) {
-            this.apiPortalName = Input.of(Objects.requireNonNull(apiPortalName));
+            this.apiPortalName = Output.of(Objects.requireNonNull(apiPortalName));
             return this;
         }
 
-        public Builder domainName(@Nullable Input<String> domainName) {
+        public Builder domainName(@Nullable Output<String> domainName) {
             this.domainName = domainName;
             return this;
         }
 
         public Builder domainName(@Nullable String domainName) {
-            this.domainName = Input.ofNullable(domainName);
+            this.domainName = Output.ofNullable(domainName);
             return this;
         }
 
-        public Builder properties(@Nullable Input<ApiPortalCustomDomainPropertiesArgs> properties) {
+        public Builder properties(@Nullable Output<ApiPortalCustomDomainPropertiesArgs> properties) {
             this.properties = properties;
             return this;
         }
 
         public Builder properties(@Nullable ApiPortalCustomDomainPropertiesArgs properties) {
-            this.properties = Input.ofNullable(properties);
+            this.properties = Output.ofNullable(properties);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder serviceName(Input<String> serviceName) {
+        public Builder serviceName(Output<String> serviceName) {
             this.serviceName = Objects.requireNonNull(serviceName);
             return this;
         }
 
         public Builder serviceName(String serviceName) {
-            this.serviceName = Input.of(Objects.requireNonNull(serviceName));
+            this.serviceName = Output.of(Objects.requireNonNull(serviceName));
             return this;
         }
         public ApiPortalCustomDomainArgs build() {

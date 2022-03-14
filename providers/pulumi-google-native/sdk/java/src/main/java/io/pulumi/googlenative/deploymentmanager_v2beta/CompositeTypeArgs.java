@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.deploymentmanager_v2beta;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.deploymentmanager_v2beta.enums.CompositeTypeStatus;
 import io.pulumi.googlenative.deploymentmanager_v2beta.inputs.CompositeTypeLabelEntryArgs;
@@ -23,17 +23,17 @@ public final class CompositeTypeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     @InputImport(name="id")
-      private final @Nullable Input<String> id;
+      private final @Nullable Output<String> id;
 
-    public Input<String> getId() {
-        return this.id == null ? Input.empty() : this.id;
+    public Output<String> getId() {
+        return this.id == null ? Output.empty() : this.id;
     }
 
     /**
@@ -41,10 +41,10 @@ public final class CompositeTypeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labels")
-      private final @Nullable Input<List<CompositeTypeLabelEntryArgs>> labels;
+      private final @Nullable Output<List<CompositeTypeLabelEntryArgs>> labels;
 
-    public Input<List<CompositeTypeLabelEntryArgs>> getLabels() {
-        return this.labels == null ? Input.empty() : this.labels;
+    public Output<List<CompositeTypeLabelEntryArgs>> getLabels() {
+        return this.labels == null ? Output.empty() : this.labels;
     }
 
     /**
@@ -52,24 +52,24 @@ public final class CompositeTypeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     @InputImport(name="status")
-      private final @Nullable Input<CompositeTypeStatus> status;
+      private final @Nullable Output<CompositeTypeStatus> status;
 
-    public Input<CompositeTypeStatus> getStatus() {
-        return this.status == null ? Input.empty() : this.status;
+    public Output<CompositeTypeStatus> getStatus() {
+        return this.status == null ? Output.empty() : this.status;
     }
 
     /**
@@ -77,20 +77,20 @@ public final class CompositeTypeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="templateContents")
-      private final @Nullable Input<TemplateContentsArgs> templateContents;
+      private final @Nullable Output<TemplateContentsArgs> templateContents;
 
-    public Input<TemplateContentsArgs> getTemplateContents() {
-        return this.templateContents == null ? Input.empty() : this.templateContents;
+    public Output<TemplateContentsArgs> getTemplateContents() {
+        return this.templateContents == null ? Output.empty() : this.templateContents;
     }
 
     public CompositeTypeArgs(
-        @Nullable Input<String> description,
-        @Nullable Input<String> id,
-        @Nullable Input<List<CompositeTypeLabelEntryArgs>> labels,
-        @Nullable Input<String> name,
-        @Nullable Input<String> project,
-        @Nullable Input<CompositeTypeStatus> status,
-        @Nullable Input<TemplateContentsArgs> templateContents) {
+        @Nullable Output<String> description,
+        @Nullable Output<String> id,
+        @Nullable Output<List<CompositeTypeLabelEntryArgs>> labels,
+        @Nullable Output<String> name,
+        @Nullable Output<String> project,
+        @Nullable Output<CompositeTypeStatus> status,
+        @Nullable Output<TemplateContentsArgs> templateContents) {
         this.description = description;
         this.id = id;
         this.labels = labels;
@@ -101,13 +101,13 @@ public final class CompositeTypeArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private CompositeTypeArgs() {
-        this.description = Input.empty();
-        this.id = Input.empty();
-        this.labels = Input.empty();
-        this.name = Input.empty();
-        this.project = Input.empty();
-        this.status = Input.empty();
-        this.templateContents = Input.empty();
+        this.description = Output.empty();
+        this.id = Output.empty();
+        this.labels = Output.empty();
+        this.name = Output.empty();
+        this.project = Output.empty();
+        this.status = Output.empty();
+        this.templateContents = Output.empty();
     }
 
     public static Builder builder() {
@@ -119,13 +119,13 @@ public final class CompositeTypeArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> description;
-        private @Nullable Input<String> id;
-        private @Nullable Input<List<CompositeTypeLabelEntryArgs>> labels;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> project;
-        private @Nullable Input<CompositeTypeStatus> status;
-        private @Nullable Input<TemplateContentsArgs> templateContents;
+        private @Nullable Output<String> description;
+        private @Nullable Output<String> id;
+        private @Nullable Output<List<CompositeTypeLabelEntryArgs>> labels;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> project;
+        private @Nullable Output<CompositeTypeStatus> status;
+        private @Nullable Output<TemplateContentsArgs> templateContents;
 
         public Builder() {
     	      // Empty
@@ -142,73 +142,73 @@ public final class CompositeTypeArgs extends io.pulumi.resources.ResourceArgs {
     	      this.templateContents = defaults.templateContents;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder id(@Nullable Input<String> id) {
+        public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
 
         public Builder id(@Nullable String id) {
-            this.id = Input.ofNullable(id);
+            this.id = Output.ofNullable(id);
             return this;
         }
 
-        public Builder labels(@Nullable Input<List<CompositeTypeLabelEntryArgs>> labels) {
+        public Builder labels(@Nullable Output<List<CompositeTypeLabelEntryArgs>> labels) {
             this.labels = labels;
             return this;
         }
 
         public Builder labels(@Nullable List<CompositeTypeLabelEntryArgs> labels) {
-            this.labels = Input.ofNullable(labels);
+            this.labels = Output.ofNullable(labels);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder status(@Nullable Input<CompositeTypeStatus> status) {
+        public Builder status(@Nullable Output<CompositeTypeStatus> status) {
             this.status = status;
             return this;
         }
 
         public Builder status(@Nullable CompositeTypeStatus status) {
-            this.status = Input.ofNullable(status);
+            this.status = Output.ofNullable(status);
             return this;
         }
 
-        public Builder templateContents(@Nullable Input<TemplateContentsArgs> templateContents) {
+        public Builder templateContents(@Nullable Output<TemplateContentsArgs> templateContents) {
             this.templateContents = templateContents;
             return this;
         }
 
         public Builder templateContents(@Nullable TemplateContentsArgs templateContents) {
-            this.templateContents = Input.ofNullable(templateContents);
+            this.templateContents = Output.ofNullable(templateContents);
             return this;
         }
         public CompositeTypeArgs build() {

@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.appflow.inputs;
 
 import io.pulumi.awsnative.appflow.enums.FlowS3InputFormatConfigS3InputFileType;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -15,18 +15,18 @@ public final class FlowS3InputFormatConfigArgs extends io.pulumi.resources.Resou
     public static final FlowS3InputFormatConfigArgs Empty = new FlowS3InputFormatConfigArgs();
 
     @InputImport(name="s3InputFileType")
-      private final @Nullable Input<FlowS3InputFormatConfigS3InputFileType> s3InputFileType;
+      private final @Nullable Output<FlowS3InputFormatConfigS3InputFileType> s3InputFileType;
 
-    public Input<FlowS3InputFormatConfigS3InputFileType> getS3InputFileType() {
-        return this.s3InputFileType == null ? Input.empty() : this.s3InputFileType;
+    public Output<FlowS3InputFormatConfigS3InputFileType> getS3InputFileType() {
+        return this.s3InputFileType == null ? Output.empty() : this.s3InputFileType;
     }
 
-    public FlowS3InputFormatConfigArgs(@Nullable Input<FlowS3InputFormatConfigS3InputFileType> s3InputFileType) {
+    public FlowS3InputFormatConfigArgs(@Nullable Output<FlowS3InputFormatConfigS3InputFileType> s3InputFileType) {
         this.s3InputFileType = s3InputFileType;
     }
 
     private FlowS3InputFormatConfigArgs() {
-        this.s3InputFileType = Input.empty();
+        this.s3InputFileType = Output.empty();
     }
 
     public static Builder builder() {
@@ -38,7 +38,7 @@ public final class FlowS3InputFormatConfigArgs extends io.pulumi.resources.Resou
     }
 
     public static final class Builder {
-        private @Nullable Input<FlowS3InputFormatConfigS3InputFileType> s3InputFileType;
+        private @Nullable Output<FlowS3InputFormatConfigS3InputFileType> s3InputFileType;
 
         public Builder() {
     	      // Empty
@@ -49,13 +49,13 @@ public final class FlowS3InputFormatConfigArgs extends io.pulumi.resources.Resou
     	      this.s3InputFileType = defaults.s3InputFileType;
         }
 
-        public Builder s3InputFileType(@Nullable Input<FlowS3InputFormatConfigS3InputFileType> s3InputFileType) {
+        public Builder s3InputFileType(@Nullable Output<FlowS3InputFormatConfigS3InputFileType> s3InputFileType) {
             this.s3InputFileType = s3InputFileType;
             return this;
         }
 
         public Builder s3InputFileType(@Nullable FlowS3InputFormatConfigS3InputFileType s3InputFileType) {
-            this.s3InputFileType = Input.ofNullable(s3InputFileType);
+            this.s3InputFileType = Output.ofNullable(s3InputFileType);
             return this;
         }
         public FlowS3InputFormatConfigArgs build() {

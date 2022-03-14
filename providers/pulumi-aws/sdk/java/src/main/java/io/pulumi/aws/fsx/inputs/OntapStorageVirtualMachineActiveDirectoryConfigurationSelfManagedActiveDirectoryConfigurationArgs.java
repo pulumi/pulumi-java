@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.fsx.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -20,9 +20,9 @@ public final class OntapStorageVirtualMachineActiveDirectoryConfigurationSelfMan
      * 
      */
     @InputImport(name="dnsIps", required=true)
-      private final Input<List<String>> dnsIps;
+      private final Output<List<String>> dnsIps;
 
-    public Input<List<String>> getDnsIps() {
+    public Output<List<String>> getDnsIps() {
         return this.dnsIps;
     }
 
@@ -31,9 +31,9 @@ public final class OntapStorageVirtualMachineActiveDirectoryConfigurationSelfMan
      * 
      */
     @InputImport(name="domainName", required=true)
-      private final Input<String> domainName;
+      private final Output<String> domainName;
 
-    public Input<String> getDomainName() {
+    public Output<String> getDomainName() {
         return this.domainName;
     }
 
@@ -42,10 +42,10 @@ public final class OntapStorageVirtualMachineActiveDirectoryConfigurationSelfMan
      * 
      */
     @InputImport(name="fileSystemAdministratorsGroup")
-      private final @Nullable Input<String> fileSystemAdministratorsGroup;
+      private final @Nullable Output<String> fileSystemAdministratorsGroup;
 
-    public Input<String> getFileSystemAdministratorsGroup() {
-        return this.fileSystemAdministratorsGroup == null ? Input.empty() : this.fileSystemAdministratorsGroup;
+    public Output<String> getFileSystemAdministratorsGroup() {
+        return this.fileSystemAdministratorsGroup == null ? Output.empty() : this.fileSystemAdministratorsGroup;
     }
 
     /**
@@ -55,11 +55,11 @@ public final class OntapStorageVirtualMachineActiveDirectoryConfigurationSelfMan
      */
     @Deprecated /* use 'organizational_unit_distinguished_name' instead */
     @InputImport(name="organizationalUnitDistinguidshedName")
-      private final @Nullable Input<String> organizationalUnitDistinguidshedName;
+      private final @Nullable Output<String> organizationalUnitDistinguidshedName;
 
     @Deprecated /* use 'organizational_unit_distinguished_name' instead */
-    public Input<String> getOrganizationalUnitDistinguidshedName() {
-        return this.organizationalUnitDistinguidshedName == null ? Input.empty() : this.organizationalUnitDistinguidshedName;
+    public Output<String> getOrganizationalUnitDistinguidshedName() {
+        return this.organizationalUnitDistinguidshedName == null ? Output.empty() : this.organizationalUnitDistinguidshedName;
     }
 
     /**
@@ -67,10 +67,10 @@ public final class OntapStorageVirtualMachineActiveDirectoryConfigurationSelfMan
      * 
      */
     @InputImport(name="organizationalUnitDistinguishedName")
-      private final @Nullable Input<String> organizationalUnitDistinguishedName;
+      private final @Nullable Output<String> organizationalUnitDistinguishedName;
 
-    public Input<String> getOrganizationalUnitDistinguishedName() {
-        return this.organizationalUnitDistinguishedName == null ? Input.empty() : this.organizationalUnitDistinguishedName;
+    public Output<String> getOrganizationalUnitDistinguishedName() {
+        return this.organizationalUnitDistinguishedName == null ? Output.empty() : this.organizationalUnitDistinguishedName;
     }
 
     /**
@@ -78,9 +78,9 @@ public final class OntapStorageVirtualMachineActiveDirectoryConfigurationSelfMan
      * 
      */
     @InputImport(name="password", required=true)
-      private final Input<String> password;
+      private final Output<String> password;
 
-    public Input<String> getPassword() {
+    public Output<String> getPassword() {
         return this.password;
     }
 
@@ -89,20 +89,20 @@ public final class OntapStorageVirtualMachineActiveDirectoryConfigurationSelfMan
      * 
      */
     @InputImport(name="username", required=true)
-      private final Input<String> username;
+      private final Output<String> username;
 
-    public Input<String> getUsername() {
+    public Output<String> getUsername() {
         return this.username;
     }
 
     public OntapStorageVirtualMachineActiveDirectoryConfigurationSelfManagedActiveDirectoryConfigurationArgs(
-        Input<List<String>> dnsIps,
-        Input<String> domainName,
-        @Nullable Input<String> fileSystemAdministratorsGroup,
-        @Nullable Input<String> organizationalUnitDistinguidshedName,
-        @Nullable Input<String> organizationalUnitDistinguishedName,
-        Input<String> password,
-        Input<String> username) {
+        Output<List<String>> dnsIps,
+        Output<String> domainName,
+        @Nullable Output<String> fileSystemAdministratorsGroup,
+        @Nullable Output<String> organizationalUnitDistinguidshedName,
+        @Nullable Output<String> organizationalUnitDistinguishedName,
+        Output<String> password,
+        Output<String> username) {
         this.dnsIps = Objects.requireNonNull(dnsIps, "expected parameter 'dnsIps' to be non-null");
         this.domainName = Objects.requireNonNull(domainName, "expected parameter 'domainName' to be non-null");
         this.fileSystemAdministratorsGroup = fileSystemAdministratorsGroup;
@@ -113,13 +113,13 @@ public final class OntapStorageVirtualMachineActiveDirectoryConfigurationSelfMan
     }
 
     private OntapStorageVirtualMachineActiveDirectoryConfigurationSelfManagedActiveDirectoryConfigurationArgs() {
-        this.dnsIps = Input.empty();
-        this.domainName = Input.empty();
-        this.fileSystemAdministratorsGroup = Input.empty();
-        this.organizationalUnitDistinguidshedName = Input.empty();
-        this.organizationalUnitDistinguishedName = Input.empty();
-        this.password = Input.empty();
-        this.username = Input.empty();
+        this.dnsIps = Output.empty();
+        this.domainName = Output.empty();
+        this.fileSystemAdministratorsGroup = Output.empty();
+        this.organizationalUnitDistinguidshedName = Output.empty();
+        this.organizationalUnitDistinguishedName = Output.empty();
+        this.password = Output.empty();
+        this.username = Output.empty();
     }
 
     public static Builder builder() {
@@ -131,13 +131,13 @@ public final class OntapStorageVirtualMachineActiveDirectoryConfigurationSelfMan
     }
 
     public static final class Builder {
-        private Input<List<String>> dnsIps;
-        private Input<String> domainName;
-        private @Nullable Input<String> fileSystemAdministratorsGroup;
-        private @Nullable Input<String> organizationalUnitDistinguidshedName;
-        private @Nullable Input<String> organizationalUnitDistinguishedName;
-        private Input<String> password;
-        private Input<String> username;
+        private Output<List<String>> dnsIps;
+        private Output<String> domainName;
+        private @Nullable Output<String> fileSystemAdministratorsGroup;
+        private @Nullable Output<String> organizationalUnitDistinguidshedName;
+        private @Nullable Output<String> organizationalUnitDistinguishedName;
+        private Output<String> password;
+        private Output<String> username;
 
         public Builder() {
     	      // Empty
@@ -154,73 +154,73 @@ public final class OntapStorageVirtualMachineActiveDirectoryConfigurationSelfMan
     	      this.username = defaults.username;
         }
 
-        public Builder dnsIps(Input<List<String>> dnsIps) {
+        public Builder dnsIps(Output<List<String>> dnsIps) {
             this.dnsIps = Objects.requireNonNull(dnsIps);
             return this;
         }
 
         public Builder dnsIps(List<String> dnsIps) {
-            this.dnsIps = Input.of(Objects.requireNonNull(dnsIps));
+            this.dnsIps = Output.of(Objects.requireNonNull(dnsIps));
             return this;
         }
 
-        public Builder domainName(Input<String> domainName) {
+        public Builder domainName(Output<String> domainName) {
             this.domainName = Objects.requireNonNull(domainName);
             return this;
         }
 
         public Builder domainName(String domainName) {
-            this.domainName = Input.of(Objects.requireNonNull(domainName));
+            this.domainName = Output.of(Objects.requireNonNull(domainName));
             return this;
         }
 
-        public Builder fileSystemAdministratorsGroup(@Nullable Input<String> fileSystemAdministratorsGroup) {
+        public Builder fileSystemAdministratorsGroup(@Nullable Output<String> fileSystemAdministratorsGroup) {
             this.fileSystemAdministratorsGroup = fileSystemAdministratorsGroup;
             return this;
         }
 
         public Builder fileSystemAdministratorsGroup(@Nullable String fileSystemAdministratorsGroup) {
-            this.fileSystemAdministratorsGroup = Input.ofNullable(fileSystemAdministratorsGroup);
+            this.fileSystemAdministratorsGroup = Output.ofNullable(fileSystemAdministratorsGroup);
             return this;
         }
 
-        public Builder organizationalUnitDistinguidshedName(@Nullable Input<String> organizationalUnitDistinguidshedName) {
+        public Builder organizationalUnitDistinguidshedName(@Nullable Output<String> organizationalUnitDistinguidshedName) {
             this.organizationalUnitDistinguidshedName = organizationalUnitDistinguidshedName;
             return this;
         }
 
         public Builder organizationalUnitDistinguidshedName(@Nullable String organizationalUnitDistinguidshedName) {
-            this.organizationalUnitDistinguidshedName = Input.ofNullable(organizationalUnitDistinguidshedName);
+            this.organizationalUnitDistinguidshedName = Output.ofNullable(organizationalUnitDistinguidshedName);
             return this;
         }
 
-        public Builder organizationalUnitDistinguishedName(@Nullable Input<String> organizationalUnitDistinguishedName) {
+        public Builder organizationalUnitDistinguishedName(@Nullable Output<String> organizationalUnitDistinguishedName) {
             this.organizationalUnitDistinguishedName = organizationalUnitDistinguishedName;
             return this;
         }
 
         public Builder organizationalUnitDistinguishedName(@Nullable String organizationalUnitDistinguishedName) {
-            this.organizationalUnitDistinguishedName = Input.ofNullable(organizationalUnitDistinguishedName);
+            this.organizationalUnitDistinguishedName = Output.ofNullable(organizationalUnitDistinguishedName);
             return this;
         }
 
-        public Builder password(Input<String> password) {
+        public Builder password(Output<String> password) {
             this.password = Objects.requireNonNull(password);
             return this;
         }
 
         public Builder password(String password) {
-            this.password = Input.of(Objects.requireNonNull(password));
+            this.password = Output.of(Objects.requireNonNull(password));
             return this;
         }
 
-        public Builder username(Input<String> username) {
+        public Builder username(Output<String> username) {
             this.username = Objects.requireNonNull(username);
             return this;
         }
 
         public Builder username(String username) {
-            this.username = Input.of(Objects.requireNonNull(username));
+            this.username = Output.of(Objects.requireNonNull(username));
             return this;
         }
         public OntapStorageVirtualMachineActiveDirectoryConfigurationSelfManagedActiveDirectoryConfigurationArgs build() {

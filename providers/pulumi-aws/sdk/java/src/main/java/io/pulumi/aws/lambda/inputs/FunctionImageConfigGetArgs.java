@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.lambda.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -20,10 +20,10 @@ public final class FunctionImageConfigGetArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="commands")
-      private final @Nullable Input<List<String>> commands;
+      private final @Nullable Output<List<String>> commands;
 
-    public Input<List<String>> getCommands() {
-        return this.commands == null ? Input.empty() : this.commands;
+    public Output<List<String>> getCommands() {
+        return this.commands == null ? Output.empty() : this.commands;
     }
 
     /**
@@ -31,10 +31,10 @@ public final class FunctionImageConfigGetArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="entryPoints")
-      private final @Nullable Input<List<String>> entryPoints;
+      private final @Nullable Output<List<String>> entryPoints;
 
-    public Input<List<String>> getEntryPoints() {
-        return this.entryPoints == null ? Input.empty() : this.entryPoints;
+    public Output<List<String>> getEntryPoints() {
+        return this.entryPoints == null ? Output.empty() : this.entryPoints;
     }
 
     /**
@@ -42,25 +42,25 @@ public final class FunctionImageConfigGetArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="workingDirectory")
-      private final @Nullable Input<String> workingDirectory;
+      private final @Nullable Output<String> workingDirectory;
 
-    public Input<String> getWorkingDirectory() {
-        return this.workingDirectory == null ? Input.empty() : this.workingDirectory;
+    public Output<String> getWorkingDirectory() {
+        return this.workingDirectory == null ? Output.empty() : this.workingDirectory;
     }
 
     public FunctionImageConfigGetArgs(
-        @Nullable Input<List<String>> commands,
-        @Nullable Input<List<String>> entryPoints,
-        @Nullable Input<String> workingDirectory) {
+        @Nullable Output<List<String>> commands,
+        @Nullable Output<List<String>> entryPoints,
+        @Nullable Output<String> workingDirectory) {
         this.commands = commands;
         this.entryPoints = entryPoints;
         this.workingDirectory = workingDirectory;
     }
 
     private FunctionImageConfigGetArgs() {
-        this.commands = Input.empty();
-        this.entryPoints = Input.empty();
-        this.workingDirectory = Input.empty();
+        this.commands = Output.empty();
+        this.entryPoints = Output.empty();
+        this.workingDirectory = Output.empty();
     }
 
     public static Builder builder() {
@@ -72,9 +72,9 @@ public final class FunctionImageConfigGetArgs extends io.pulumi.resources.Resour
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> commands;
-        private @Nullable Input<List<String>> entryPoints;
-        private @Nullable Input<String> workingDirectory;
+        private @Nullable Output<List<String>> commands;
+        private @Nullable Output<List<String>> entryPoints;
+        private @Nullable Output<String> workingDirectory;
 
         public Builder() {
     	      // Empty
@@ -87,33 +87,33 @@ public final class FunctionImageConfigGetArgs extends io.pulumi.resources.Resour
     	      this.workingDirectory = defaults.workingDirectory;
         }
 
-        public Builder commands(@Nullable Input<List<String>> commands) {
+        public Builder commands(@Nullable Output<List<String>> commands) {
             this.commands = commands;
             return this;
         }
 
         public Builder commands(@Nullable List<String> commands) {
-            this.commands = Input.ofNullable(commands);
+            this.commands = Output.ofNullable(commands);
             return this;
         }
 
-        public Builder entryPoints(@Nullable Input<List<String>> entryPoints) {
+        public Builder entryPoints(@Nullable Output<List<String>> entryPoints) {
             this.entryPoints = entryPoints;
             return this;
         }
 
         public Builder entryPoints(@Nullable List<String> entryPoints) {
-            this.entryPoints = Input.ofNullable(entryPoints);
+            this.entryPoints = Output.ofNullable(entryPoints);
             return this;
         }
 
-        public Builder workingDirectory(@Nullable Input<String> workingDirectory) {
+        public Builder workingDirectory(@Nullable Output<String> workingDirectory) {
             this.workingDirectory = workingDirectory;
             return this;
         }
 
         public Builder workingDirectory(@Nullable String workingDirectory) {
-            this.workingDirectory = Input.ofNullable(workingDirectory);
+            this.workingDirectory = Output.ofNullable(workingDirectory);
             return this;
         }
         public FunctionImageConfigGetArgs build() {

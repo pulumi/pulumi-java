@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.appconfig.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -20,10 +20,10 @@ public final class HostedConfigurationVersionState extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="applicationId")
-      private final @Nullable Input<String> applicationId;
+      private final @Nullable Output<String> applicationId;
 
-    public Input<String> getApplicationId() {
-        return this.applicationId == null ? Input.empty() : this.applicationId;
+    public Output<String> getApplicationId() {
+        return this.applicationId == null ? Output.empty() : this.applicationId;
     }
 
     /**
@@ -31,10 +31,10 @@ public final class HostedConfigurationVersionState extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="arn")
-      private final @Nullable Input<String> arn;
+      private final @Nullable Output<String> arn;
 
-    public Input<String> getArn() {
-        return this.arn == null ? Input.empty() : this.arn;
+    public Output<String> getArn() {
+        return this.arn == null ? Output.empty() : this.arn;
     }
 
     /**
@@ -42,10 +42,10 @@ public final class HostedConfigurationVersionState extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="configurationProfileId")
-      private final @Nullable Input<String> configurationProfileId;
+      private final @Nullable Output<String> configurationProfileId;
 
-    public Input<String> getConfigurationProfileId() {
-        return this.configurationProfileId == null ? Input.empty() : this.configurationProfileId;
+    public Output<String> getConfigurationProfileId() {
+        return this.configurationProfileId == null ? Output.empty() : this.configurationProfileId;
     }
 
     /**
@@ -53,10 +53,10 @@ public final class HostedConfigurationVersionState extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="content")
-      private final @Nullable Input<String> content;
+      private final @Nullable Output<String> content;
 
-    public Input<String> getContent() {
-        return this.content == null ? Input.empty() : this.content;
+    public Output<String> getContent() {
+        return this.content == null ? Output.empty() : this.content;
     }
 
     /**
@@ -64,10 +64,10 @@ public final class HostedConfigurationVersionState extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="contentType")
-      private final @Nullable Input<String> contentType;
+      private final @Nullable Output<String> contentType;
 
-    public Input<String> getContentType() {
-        return this.contentType == null ? Input.empty() : this.contentType;
+    public Output<String> getContentType() {
+        return this.contentType == null ? Output.empty() : this.contentType;
     }
 
     /**
@@ -75,10 +75,10 @@ public final class HostedConfigurationVersionState extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -86,20 +86,20 @@ public final class HostedConfigurationVersionState extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="versionNumber")
-      private final @Nullable Input<Integer> versionNumber;
+      private final @Nullable Output<Integer> versionNumber;
 
-    public Input<Integer> getVersionNumber() {
-        return this.versionNumber == null ? Input.empty() : this.versionNumber;
+    public Output<Integer> getVersionNumber() {
+        return this.versionNumber == null ? Output.empty() : this.versionNumber;
     }
 
     public HostedConfigurationVersionState(
-        @Nullable Input<String> applicationId,
-        @Nullable Input<String> arn,
-        @Nullable Input<String> configurationProfileId,
-        @Nullable Input<String> content,
-        @Nullable Input<String> contentType,
-        @Nullable Input<String> description,
-        @Nullable Input<Integer> versionNumber) {
+        @Nullable Output<String> applicationId,
+        @Nullable Output<String> arn,
+        @Nullable Output<String> configurationProfileId,
+        @Nullable Output<String> content,
+        @Nullable Output<String> contentType,
+        @Nullable Output<String> description,
+        @Nullable Output<Integer> versionNumber) {
         this.applicationId = applicationId;
         this.arn = arn;
         this.configurationProfileId = configurationProfileId;
@@ -110,13 +110,13 @@ public final class HostedConfigurationVersionState extends io.pulumi.resources.R
     }
 
     private HostedConfigurationVersionState() {
-        this.applicationId = Input.empty();
-        this.arn = Input.empty();
-        this.configurationProfileId = Input.empty();
-        this.content = Input.empty();
-        this.contentType = Input.empty();
-        this.description = Input.empty();
-        this.versionNumber = Input.empty();
+        this.applicationId = Output.empty();
+        this.arn = Output.empty();
+        this.configurationProfileId = Output.empty();
+        this.content = Output.empty();
+        this.contentType = Output.empty();
+        this.description = Output.empty();
+        this.versionNumber = Output.empty();
     }
 
     public static Builder builder() {
@@ -128,13 +128,13 @@ public final class HostedConfigurationVersionState extends io.pulumi.resources.R
     }
 
     public static final class Builder {
-        private @Nullable Input<String> applicationId;
-        private @Nullable Input<String> arn;
-        private @Nullable Input<String> configurationProfileId;
-        private @Nullable Input<String> content;
-        private @Nullable Input<String> contentType;
-        private @Nullable Input<String> description;
-        private @Nullable Input<Integer> versionNumber;
+        private @Nullable Output<String> applicationId;
+        private @Nullable Output<String> arn;
+        private @Nullable Output<String> configurationProfileId;
+        private @Nullable Output<String> content;
+        private @Nullable Output<String> contentType;
+        private @Nullable Output<String> description;
+        private @Nullable Output<Integer> versionNumber;
 
         public Builder() {
     	      // Empty
@@ -151,73 +151,73 @@ public final class HostedConfigurationVersionState extends io.pulumi.resources.R
     	      this.versionNumber = defaults.versionNumber;
         }
 
-        public Builder applicationId(@Nullable Input<String> applicationId) {
+        public Builder applicationId(@Nullable Output<String> applicationId) {
             this.applicationId = applicationId;
             return this;
         }
 
         public Builder applicationId(@Nullable String applicationId) {
-            this.applicationId = Input.ofNullable(applicationId);
+            this.applicationId = Output.ofNullable(applicationId);
             return this;
         }
 
-        public Builder arn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
 
         public Builder arn(@Nullable String arn) {
-            this.arn = Input.ofNullable(arn);
+            this.arn = Output.ofNullable(arn);
             return this;
         }
 
-        public Builder configurationProfileId(@Nullable Input<String> configurationProfileId) {
+        public Builder configurationProfileId(@Nullable Output<String> configurationProfileId) {
             this.configurationProfileId = configurationProfileId;
             return this;
         }
 
         public Builder configurationProfileId(@Nullable String configurationProfileId) {
-            this.configurationProfileId = Input.ofNullable(configurationProfileId);
+            this.configurationProfileId = Output.ofNullable(configurationProfileId);
             return this;
         }
 
-        public Builder content(@Nullable Input<String> content) {
+        public Builder content(@Nullable Output<String> content) {
             this.content = content;
             return this;
         }
 
         public Builder content(@Nullable String content) {
-            this.content = Input.ofNullable(content);
+            this.content = Output.ofNullable(content);
             return this;
         }
 
-        public Builder contentType(@Nullable Input<String> contentType) {
+        public Builder contentType(@Nullable Output<String> contentType) {
             this.contentType = contentType;
             return this;
         }
 
         public Builder contentType(@Nullable String contentType) {
-            this.contentType = Input.ofNullable(contentType);
+            this.contentType = Output.ofNullable(contentType);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder versionNumber(@Nullable Input<Integer> versionNumber) {
+        public Builder versionNumber(@Nullable Output<Integer> versionNumber) {
             this.versionNumber = versionNumber;
             return this;
         }
 
         public Builder versionNumber(@Nullable Integer versionNumber) {
-            this.versionNumber = Input.ofNullable(versionNumber);
+            this.versionNumber = Output.ofNullable(versionNumber);
             return this;
         }
         public HostedConfigurationVersionState build() {

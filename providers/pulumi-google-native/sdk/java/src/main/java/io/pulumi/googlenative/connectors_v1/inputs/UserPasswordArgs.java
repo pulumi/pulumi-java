@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.connectors_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.connectors_v1.inputs.SecretArgs;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class UserPasswordArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="password")
-      private final @Nullable Input<SecretArgs> password;
+      private final @Nullable Output<SecretArgs> password;
 
-    public Input<SecretArgs> getPassword() {
-        return this.password == null ? Input.empty() : this.password;
+    public Output<SecretArgs> getPassword() {
+        return this.password == null ? Output.empty() : this.password;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class UserPasswordArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="username")
-      private final @Nullable Input<String> username;
+      private final @Nullable Output<String> username;
 
-    public Input<String> getUsername() {
-        return this.username == null ? Input.empty() : this.username;
+    public Output<String> getUsername() {
+        return this.username == null ? Output.empty() : this.username;
     }
 
     public UserPasswordArgs(
-        @Nullable Input<SecretArgs> password,
-        @Nullable Input<String> username) {
+        @Nullable Output<SecretArgs> password,
+        @Nullable Output<String> username) {
         this.password = password;
         this.username = username;
     }
 
     private UserPasswordArgs() {
-        this.password = Input.empty();
-        this.username = Input.empty();
+        this.password = Output.empty();
+        this.username = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class UserPasswordArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<SecretArgs> password;
-        private @Nullable Input<String> username;
+        private @Nullable Output<SecretArgs> password;
+        private @Nullable Output<String> username;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class UserPasswordArgs extends io.pulumi.resources.ResourceArgs {
     	      this.username = defaults.username;
         }
 
-        public Builder password(@Nullable Input<SecretArgs> password) {
+        public Builder password(@Nullable Output<SecretArgs> password) {
             this.password = password;
             return this;
         }
 
         public Builder password(@Nullable SecretArgs password) {
-            this.password = Input.ofNullable(password);
+            this.password = Output.ofNullable(password);
             return this;
         }
 
-        public Builder username(@Nullable Input<String> username) {
+        public Builder username(@Nullable Output<String> username) {
             this.username = username;
             return this;
         }
 
         public Builder username(@Nullable String username) {
-            this.username = Input.ofNullable(username);
+            this.username = Output.ofNullable(username);
             return this;
         }
         public UserPasswordArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.sagemaker.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,18 +19,18 @@ public final class DomainRetentionPolicyArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="homeEfsFileSystem")
-      private final @Nullable Input<String> homeEfsFileSystem;
+      private final @Nullable Output<String> homeEfsFileSystem;
 
-    public Input<String> getHomeEfsFileSystem() {
-        return this.homeEfsFileSystem == null ? Input.empty() : this.homeEfsFileSystem;
+    public Output<String> getHomeEfsFileSystem() {
+        return this.homeEfsFileSystem == null ? Output.empty() : this.homeEfsFileSystem;
     }
 
-    public DomainRetentionPolicyArgs(@Nullable Input<String> homeEfsFileSystem) {
+    public DomainRetentionPolicyArgs(@Nullable Output<String> homeEfsFileSystem) {
         this.homeEfsFileSystem = homeEfsFileSystem;
     }
 
     private DomainRetentionPolicyArgs() {
-        this.homeEfsFileSystem = Input.empty();
+        this.homeEfsFileSystem = Output.empty();
     }
 
     public static Builder builder() {
@@ -42,7 +42,7 @@ public final class DomainRetentionPolicyArgs extends io.pulumi.resources.Resourc
     }
 
     public static final class Builder {
-        private @Nullable Input<String> homeEfsFileSystem;
+        private @Nullable Output<String> homeEfsFileSystem;
 
         public Builder() {
     	      // Empty
@@ -53,13 +53,13 @@ public final class DomainRetentionPolicyArgs extends io.pulumi.resources.Resourc
     	      this.homeEfsFileSystem = defaults.homeEfsFileSystem;
         }
 
-        public Builder homeEfsFileSystem(@Nullable Input<String> homeEfsFileSystem) {
+        public Builder homeEfsFileSystem(@Nullable Output<String> homeEfsFileSystem) {
             this.homeEfsFileSystem = homeEfsFileSystem;
             return this;
         }
 
         public Builder homeEfsFileSystem(@Nullable String homeEfsFileSystem) {
-            this.homeEfsFileSystem = Input.ofNullable(homeEfsFileSystem);
+            this.homeEfsFileSystem = Output.ofNullable(homeEfsFileSystem);
             return this;
         }
         public DomainRetentionPolicyArgs build() {

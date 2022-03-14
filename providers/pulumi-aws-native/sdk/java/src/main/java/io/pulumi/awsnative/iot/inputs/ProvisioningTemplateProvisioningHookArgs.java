@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.iot.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -15,29 +15,29 @@ public final class ProvisioningTemplateProvisioningHookArgs extends io.pulumi.re
     public static final ProvisioningTemplateProvisioningHookArgs Empty = new ProvisioningTemplateProvisioningHookArgs();
 
     @InputImport(name="payloadVersion")
-      private final @Nullable Input<String> payloadVersion;
+      private final @Nullable Output<String> payloadVersion;
 
-    public Input<String> getPayloadVersion() {
-        return this.payloadVersion == null ? Input.empty() : this.payloadVersion;
+    public Output<String> getPayloadVersion() {
+        return this.payloadVersion == null ? Output.empty() : this.payloadVersion;
     }
 
     @InputImport(name="targetArn")
-      private final @Nullable Input<String> targetArn;
+      private final @Nullable Output<String> targetArn;
 
-    public Input<String> getTargetArn() {
-        return this.targetArn == null ? Input.empty() : this.targetArn;
+    public Output<String> getTargetArn() {
+        return this.targetArn == null ? Output.empty() : this.targetArn;
     }
 
     public ProvisioningTemplateProvisioningHookArgs(
-        @Nullable Input<String> payloadVersion,
-        @Nullable Input<String> targetArn) {
+        @Nullable Output<String> payloadVersion,
+        @Nullable Output<String> targetArn) {
         this.payloadVersion = payloadVersion;
         this.targetArn = targetArn;
     }
 
     private ProvisioningTemplateProvisioningHookArgs() {
-        this.payloadVersion = Input.empty();
-        this.targetArn = Input.empty();
+        this.payloadVersion = Output.empty();
+        this.targetArn = Output.empty();
     }
 
     public static Builder builder() {
@@ -49,8 +49,8 @@ public final class ProvisioningTemplateProvisioningHookArgs extends io.pulumi.re
     }
 
     public static final class Builder {
-        private @Nullable Input<String> payloadVersion;
-        private @Nullable Input<String> targetArn;
+        private @Nullable Output<String> payloadVersion;
+        private @Nullable Output<String> targetArn;
 
         public Builder() {
     	      // Empty
@@ -62,23 +62,23 @@ public final class ProvisioningTemplateProvisioningHookArgs extends io.pulumi.re
     	      this.targetArn = defaults.targetArn;
         }
 
-        public Builder payloadVersion(@Nullable Input<String> payloadVersion) {
+        public Builder payloadVersion(@Nullable Output<String> payloadVersion) {
             this.payloadVersion = payloadVersion;
             return this;
         }
 
         public Builder payloadVersion(@Nullable String payloadVersion) {
-            this.payloadVersion = Input.ofNullable(payloadVersion);
+            this.payloadVersion = Output.ofNullable(payloadVersion);
             return this;
         }
 
-        public Builder targetArn(@Nullable Input<String> targetArn) {
+        public Builder targetArn(@Nullable Output<String> targetArn) {
             this.targetArn = targetArn;
             return this;
         }
 
         public Builder targetArn(@Nullable String targetArn) {
-            this.targetArn = Input.ofNullable(targetArn);
+            this.targetArn = Output.ofNullable(targetArn);
             return this;
         }
         public ProvisioningTemplateProvisioningHookArgs build() {

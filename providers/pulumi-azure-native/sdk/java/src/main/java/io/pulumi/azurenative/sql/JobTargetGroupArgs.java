@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.sql;
 
 import io.pulumi.azurenative.sql.inputs.JobTargetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -21,9 +21,9 @@ public final class JobTargetGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="jobAgentName", required=true)
-      private final Input<String> jobAgentName;
+      private final Output<String> jobAgentName;
 
-    public Input<String> getJobAgentName() {
+    public Output<String> getJobAgentName() {
         return this.jobAgentName;
     }
 
@@ -32,9 +32,9 @@ public final class JobTargetGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="members", required=true)
-      private final Input<List<JobTargetArgs>> members;
+      private final Output<List<JobTargetArgs>> members;
 
-    public Input<List<JobTargetArgs>> getMembers() {
+    public Output<List<JobTargetArgs>> getMembers() {
         return this.members;
     }
 
@@ -43,9 +43,9 @@ public final class JobTargetGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -54,9 +54,9 @@ public final class JobTargetGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serverName", required=true)
-      private final Input<String> serverName;
+      private final Output<String> serverName;
 
-    public Input<String> getServerName() {
+    public Output<String> getServerName() {
         return this.serverName;
     }
 
@@ -65,18 +65,18 @@ public final class JobTargetGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="targetGroupName")
-      private final @Nullable Input<String> targetGroupName;
+      private final @Nullable Output<String> targetGroupName;
 
-    public Input<String> getTargetGroupName() {
-        return this.targetGroupName == null ? Input.empty() : this.targetGroupName;
+    public Output<String> getTargetGroupName() {
+        return this.targetGroupName == null ? Output.empty() : this.targetGroupName;
     }
 
     public JobTargetGroupArgs(
-        Input<String> jobAgentName,
-        Input<List<JobTargetArgs>> members,
-        Input<String> resourceGroupName,
-        Input<String> serverName,
-        @Nullable Input<String> targetGroupName) {
+        Output<String> jobAgentName,
+        Output<List<JobTargetArgs>> members,
+        Output<String> resourceGroupName,
+        Output<String> serverName,
+        @Nullable Output<String> targetGroupName) {
         this.jobAgentName = Objects.requireNonNull(jobAgentName, "expected parameter 'jobAgentName' to be non-null");
         this.members = Objects.requireNonNull(members, "expected parameter 'members' to be non-null");
         this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
@@ -85,11 +85,11 @@ public final class JobTargetGroupArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private JobTargetGroupArgs() {
-        this.jobAgentName = Input.empty();
-        this.members = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.serverName = Input.empty();
-        this.targetGroupName = Input.empty();
+        this.jobAgentName = Output.empty();
+        this.members = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.serverName = Output.empty();
+        this.targetGroupName = Output.empty();
     }
 
     public static Builder builder() {
@@ -101,11 +101,11 @@ public final class JobTargetGroupArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> jobAgentName;
-        private Input<List<JobTargetArgs>> members;
-        private Input<String> resourceGroupName;
-        private Input<String> serverName;
-        private @Nullable Input<String> targetGroupName;
+        private Output<String> jobAgentName;
+        private Output<List<JobTargetArgs>> members;
+        private Output<String> resourceGroupName;
+        private Output<String> serverName;
+        private @Nullable Output<String> targetGroupName;
 
         public Builder() {
     	      // Empty
@@ -120,53 +120,53 @@ public final class JobTargetGroupArgs extends io.pulumi.resources.ResourceArgs {
     	      this.targetGroupName = defaults.targetGroupName;
         }
 
-        public Builder jobAgentName(Input<String> jobAgentName) {
+        public Builder jobAgentName(Output<String> jobAgentName) {
             this.jobAgentName = Objects.requireNonNull(jobAgentName);
             return this;
         }
 
         public Builder jobAgentName(String jobAgentName) {
-            this.jobAgentName = Input.of(Objects.requireNonNull(jobAgentName));
+            this.jobAgentName = Output.of(Objects.requireNonNull(jobAgentName));
             return this;
         }
 
-        public Builder members(Input<List<JobTargetArgs>> members) {
+        public Builder members(Output<List<JobTargetArgs>> members) {
             this.members = Objects.requireNonNull(members);
             return this;
         }
 
         public Builder members(List<JobTargetArgs> members) {
-            this.members = Input.of(Objects.requireNonNull(members));
+            this.members = Output.of(Objects.requireNonNull(members));
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder serverName(Input<String> serverName) {
+        public Builder serverName(Output<String> serverName) {
             this.serverName = Objects.requireNonNull(serverName);
             return this;
         }
 
         public Builder serverName(String serverName) {
-            this.serverName = Input.of(Objects.requireNonNull(serverName));
+            this.serverName = Output.of(Objects.requireNonNull(serverName));
             return this;
         }
 
-        public Builder targetGroupName(@Nullable Input<String> targetGroupName) {
+        public Builder targetGroupName(@Nullable Output<String> targetGroupName) {
             this.targetGroupName = targetGroupName;
             return this;
         }
 
         public Builder targetGroupName(@Nullable String targetGroupName) {
-            this.targetGroupName = Input.ofNullable(targetGroupName);
+            this.targetGroupName = Output.ofNullable(targetGroupName);
             return this;
         }
         public JobTargetGroupArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.devtestlab.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class UserIdentityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="appId")
-      private final @Nullable Input<String> appId;
+      private final @Nullable Output<String> appId;
 
-    public Input<String> getAppId() {
-        return this.appId == null ? Input.empty() : this.appId;
+    public Output<String> getAppId() {
+        return this.appId == null ? Output.empty() : this.appId;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class UserIdentityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="objectId")
-      private final @Nullable Input<String> objectId;
+      private final @Nullable Output<String> objectId;
 
-    public Input<String> getObjectId() {
-        return this.objectId == null ? Input.empty() : this.objectId;
+    public Output<String> getObjectId() {
+        return this.objectId == null ? Output.empty() : this.objectId;
     }
 
     /**
@@ -45,10 +45,10 @@ public final class UserIdentityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="principalId")
-      private final @Nullable Input<String> principalId;
+      private final @Nullable Output<String> principalId;
 
-    public Input<String> getPrincipalId() {
-        return this.principalId == null ? Input.empty() : this.principalId;
+    public Output<String> getPrincipalId() {
+        return this.principalId == null ? Output.empty() : this.principalId;
     }
 
     /**
@@ -56,10 +56,10 @@ public final class UserIdentityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="principalName")
-      private final @Nullable Input<String> principalName;
+      private final @Nullable Output<String> principalName;
 
-    public Input<String> getPrincipalName() {
-        return this.principalName == null ? Input.empty() : this.principalName;
+    public Output<String> getPrincipalName() {
+        return this.principalName == null ? Output.empty() : this.principalName;
     }
 
     /**
@@ -67,18 +67,18 @@ public final class UserIdentityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tenantId")
-      private final @Nullable Input<String> tenantId;
+      private final @Nullable Output<String> tenantId;
 
-    public Input<String> getTenantId() {
-        return this.tenantId == null ? Input.empty() : this.tenantId;
+    public Output<String> getTenantId() {
+        return this.tenantId == null ? Output.empty() : this.tenantId;
     }
 
     public UserIdentityArgs(
-        @Nullable Input<String> appId,
-        @Nullable Input<String> objectId,
-        @Nullable Input<String> principalId,
-        @Nullable Input<String> principalName,
-        @Nullable Input<String> tenantId) {
+        @Nullable Output<String> appId,
+        @Nullable Output<String> objectId,
+        @Nullable Output<String> principalId,
+        @Nullable Output<String> principalName,
+        @Nullable Output<String> tenantId) {
         this.appId = appId;
         this.objectId = objectId;
         this.principalId = principalId;
@@ -87,11 +87,11 @@ public final class UserIdentityArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private UserIdentityArgs() {
-        this.appId = Input.empty();
-        this.objectId = Input.empty();
-        this.principalId = Input.empty();
-        this.principalName = Input.empty();
-        this.tenantId = Input.empty();
+        this.appId = Output.empty();
+        this.objectId = Output.empty();
+        this.principalId = Output.empty();
+        this.principalName = Output.empty();
+        this.tenantId = Output.empty();
     }
 
     public static Builder builder() {
@@ -103,11 +103,11 @@ public final class UserIdentityArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> appId;
-        private @Nullable Input<String> objectId;
-        private @Nullable Input<String> principalId;
-        private @Nullable Input<String> principalName;
-        private @Nullable Input<String> tenantId;
+        private @Nullable Output<String> appId;
+        private @Nullable Output<String> objectId;
+        private @Nullable Output<String> principalId;
+        private @Nullable Output<String> principalName;
+        private @Nullable Output<String> tenantId;
 
         public Builder() {
     	      // Empty
@@ -122,53 +122,53 @@ public final class UserIdentityArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tenantId = defaults.tenantId;
         }
 
-        public Builder appId(@Nullable Input<String> appId) {
+        public Builder appId(@Nullable Output<String> appId) {
             this.appId = appId;
             return this;
         }
 
         public Builder appId(@Nullable String appId) {
-            this.appId = Input.ofNullable(appId);
+            this.appId = Output.ofNullable(appId);
             return this;
         }
 
-        public Builder objectId(@Nullable Input<String> objectId) {
+        public Builder objectId(@Nullable Output<String> objectId) {
             this.objectId = objectId;
             return this;
         }
 
         public Builder objectId(@Nullable String objectId) {
-            this.objectId = Input.ofNullable(objectId);
+            this.objectId = Output.ofNullable(objectId);
             return this;
         }
 
-        public Builder principalId(@Nullable Input<String> principalId) {
+        public Builder principalId(@Nullable Output<String> principalId) {
             this.principalId = principalId;
             return this;
         }
 
         public Builder principalId(@Nullable String principalId) {
-            this.principalId = Input.ofNullable(principalId);
+            this.principalId = Output.ofNullable(principalId);
             return this;
         }
 
-        public Builder principalName(@Nullable Input<String> principalName) {
+        public Builder principalName(@Nullable Output<String> principalName) {
             this.principalName = principalName;
             return this;
         }
 
         public Builder principalName(@Nullable String principalName) {
-            this.principalName = Input.ofNullable(principalName);
+            this.principalName = Output.ofNullable(principalName);
             return this;
         }
 
-        public Builder tenantId(@Nullable Input<String> tenantId) {
+        public Builder tenantId(@Nullable Output<String> tenantId) {
             this.tenantId = tenantId;
             return this;
         }
 
         public Builder tenantId(@Nullable String tenantId) {
-            this.tenantId = Input.ofNullable(tenantId);
+            this.tenantId = Output.ofNullable(tenantId);
             return this;
         }
         public UserIdentityArgs build() {

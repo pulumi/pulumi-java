@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.iotanalytics.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -16,29 +16,29 @@ public final class ChannelRetentionPeriodArgs extends io.pulumi.resources.Resour
     public static final ChannelRetentionPeriodArgs Empty = new ChannelRetentionPeriodArgs();
 
     @InputImport(name="numberOfDays")
-      private final @Nullable Input<Integer> numberOfDays;
+      private final @Nullable Output<Integer> numberOfDays;
 
-    public Input<Integer> getNumberOfDays() {
-        return this.numberOfDays == null ? Input.empty() : this.numberOfDays;
+    public Output<Integer> getNumberOfDays() {
+        return this.numberOfDays == null ? Output.empty() : this.numberOfDays;
     }
 
     @InputImport(name="unlimited")
-      private final @Nullable Input<Boolean> unlimited;
+      private final @Nullable Output<Boolean> unlimited;
 
-    public Input<Boolean> getUnlimited() {
-        return this.unlimited == null ? Input.empty() : this.unlimited;
+    public Output<Boolean> getUnlimited() {
+        return this.unlimited == null ? Output.empty() : this.unlimited;
     }
 
     public ChannelRetentionPeriodArgs(
-        @Nullable Input<Integer> numberOfDays,
-        @Nullable Input<Boolean> unlimited) {
+        @Nullable Output<Integer> numberOfDays,
+        @Nullable Output<Boolean> unlimited) {
         this.numberOfDays = numberOfDays;
         this.unlimited = unlimited;
     }
 
     private ChannelRetentionPeriodArgs() {
-        this.numberOfDays = Input.empty();
-        this.unlimited = Input.empty();
+        this.numberOfDays = Output.empty();
+        this.unlimited = Output.empty();
     }
 
     public static Builder builder() {
@@ -50,8 +50,8 @@ public final class ChannelRetentionPeriodArgs extends io.pulumi.resources.Resour
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> numberOfDays;
-        private @Nullable Input<Boolean> unlimited;
+        private @Nullable Output<Integer> numberOfDays;
+        private @Nullable Output<Boolean> unlimited;
 
         public Builder() {
     	      // Empty
@@ -63,23 +63,23 @@ public final class ChannelRetentionPeriodArgs extends io.pulumi.resources.Resour
     	      this.unlimited = defaults.unlimited;
         }
 
-        public Builder numberOfDays(@Nullable Input<Integer> numberOfDays) {
+        public Builder numberOfDays(@Nullable Output<Integer> numberOfDays) {
             this.numberOfDays = numberOfDays;
             return this;
         }
 
         public Builder numberOfDays(@Nullable Integer numberOfDays) {
-            this.numberOfDays = Input.ofNullable(numberOfDays);
+            this.numberOfDays = Output.ofNullable(numberOfDays);
             return this;
         }
 
-        public Builder unlimited(@Nullable Input<Boolean> unlimited) {
+        public Builder unlimited(@Nullable Output<Boolean> unlimited) {
             this.unlimited = unlimited;
             return this;
         }
 
         public Builder unlimited(@Nullable Boolean unlimited) {
-            this.unlimited = Input.ofNullable(unlimited);
+            this.unlimited = Output.ofNullable(unlimited);
             return this;
         }
         public ChannelRetentionPeriodArgs build() {

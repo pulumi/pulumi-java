@@ -5,7 +5,7 @@ package io.pulumi.awsnative.sagemaker;
 
 import io.pulumi.awsnative.sagemaker.inputs.UserProfileTagArgs;
 import io.pulumi.awsnative.sagemaker.inputs.UserProfileUserSettingsArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -22,9 +22,9 @@ public final class UserProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="domainId", required=true)
-      private final Input<String> domainId;
+      private final Output<String> domainId;
 
-    public Input<String> getDomainId() {
+    public Output<String> getDomainId() {
         return this.domainId;
     }
 
@@ -33,10 +33,10 @@ public final class UserProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="singleSignOnUserIdentifier")
-      private final @Nullable Input<String> singleSignOnUserIdentifier;
+      private final @Nullable Output<String> singleSignOnUserIdentifier;
 
-    public Input<String> getSingleSignOnUserIdentifier() {
-        return this.singleSignOnUserIdentifier == null ? Input.empty() : this.singleSignOnUserIdentifier;
+    public Output<String> getSingleSignOnUserIdentifier() {
+        return this.singleSignOnUserIdentifier == null ? Output.empty() : this.singleSignOnUserIdentifier;
     }
 
     /**
@@ -44,10 +44,10 @@ public final class UserProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="singleSignOnUserValue")
-      private final @Nullable Input<String> singleSignOnUserValue;
+      private final @Nullable Output<String> singleSignOnUserValue;
 
-    public Input<String> getSingleSignOnUserValue() {
-        return this.singleSignOnUserValue == null ? Input.empty() : this.singleSignOnUserValue;
+    public Output<String> getSingleSignOnUserValue() {
+        return this.singleSignOnUserValue == null ? Output.empty() : this.singleSignOnUserValue;
     }
 
     /**
@@ -55,10 +55,10 @@ public final class UserProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<List<UserProfileTagArgs>> tags;
+      private final @Nullable Output<List<UserProfileTagArgs>> tags;
 
-    public Input<List<UserProfileTagArgs>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<List<UserProfileTagArgs>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -66,10 +66,10 @@ public final class UserProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="userProfileName")
-      private final @Nullable Input<String> userProfileName;
+      private final @Nullable Output<String> userProfileName;
 
-    public Input<String> getUserProfileName() {
-        return this.userProfileName == null ? Input.empty() : this.userProfileName;
+    public Output<String> getUserProfileName() {
+        return this.userProfileName == null ? Output.empty() : this.userProfileName;
     }
 
     /**
@@ -77,19 +77,19 @@ public final class UserProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="userSettings")
-      private final @Nullable Input<UserProfileUserSettingsArgs> userSettings;
+      private final @Nullable Output<UserProfileUserSettingsArgs> userSettings;
 
-    public Input<UserProfileUserSettingsArgs> getUserSettings() {
-        return this.userSettings == null ? Input.empty() : this.userSettings;
+    public Output<UserProfileUserSettingsArgs> getUserSettings() {
+        return this.userSettings == null ? Output.empty() : this.userSettings;
     }
 
     public UserProfileArgs(
-        Input<String> domainId,
-        @Nullable Input<String> singleSignOnUserIdentifier,
-        @Nullable Input<String> singleSignOnUserValue,
-        @Nullable Input<List<UserProfileTagArgs>> tags,
-        @Nullable Input<String> userProfileName,
-        @Nullable Input<UserProfileUserSettingsArgs> userSettings) {
+        Output<String> domainId,
+        @Nullable Output<String> singleSignOnUserIdentifier,
+        @Nullable Output<String> singleSignOnUserValue,
+        @Nullable Output<List<UserProfileTagArgs>> tags,
+        @Nullable Output<String> userProfileName,
+        @Nullable Output<UserProfileUserSettingsArgs> userSettings) {
         this.domainId = Objects.requireNonNull(domainId, "expected parameter 'domainId' to be non-null");
         this.singleSignOnUserIdentifier = singleSignOnUserIdentifier;
         this.singleSignOnUserValue = singleSignOnUserValue;
@@ -99,12 +99,12 @@ public final class UserProfileArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private UserProfileArgs() {
-        this.domainId = Input.empty();
-        this.singleSignOnUserIdentifier = Input.empty();
-        this.singleSignOnUserValue = Input.empty();
-        this.tags = Input.empty();
-        this.userProfileName = Input.empty();
-        this.userSettings = Input.empty();
+        this.domainId = Output.empty();
+        this.singleSignOnUserIdentifier = Output.empty();
+        this.singleSignOnUserValue = Output.empty();
+        this.tags = Output.empty();
+        this.userProfileName = Output.empty();
+        this.userSettings = Output.empty();
     }
 
     public static Builder builder() {
@@ -116,12 +116,12 @@ public final class UserProfileArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> domainId;
-        private @Nullable Input<String> singleSignOnUserIdentifier;
-        private @Nullable Input<String> singleSignOnUserValue;
-        private @Nullable Input<List<UserProfileTagArgs>> tags;
-        private @Nullable Input<String> userProfileName;
-        private @Nullable Input<UserProfileUserSettingsArgs> userSettings;
+        private Output<String> domainId;
+        private @Nullable Output<String> singleSignOnUserIdentifier;
+        private @Nullable Output<String> singleSignOnUserValue;
+        private @Nullable Output<List<UserProfileTagArgs>> tags;
+        private @Nullable Output<String> userProfileName;
+        private @Nullable Output<UserProfileUserSettingsArgs> userSettings;
 
         public Builder() {
     	      // Empty
@@ -137,63 +137,63 @@ public final class UserProfileArgs extends io.pulumi.resources.ResourceArgs {
     	      this.userSettings = defaults.userSettings;
         }
 
-        public Builder domainId(Input<String> domainId) {
+        public Builder domainId(Output<String> domainId) {
             this.domainId = Objects.requireNonNull(domainId);
             return this;
         }
 
         public Builder domainId(String domainId) {
-            this.domainId = Input.of(Objects.requireNonNull(domainId));
+            this.domainId = Output.of(Objects.requireNonNull(domainId));
             return this;
         }
 
-        public Builder singleSignOnUserIdentifier(@Nullable Input<String> singleSignOnUserIdentifier) {
+        public Builder singleSignOnUserIdentifier(@Nullable Output<String> singleSignOnUserIdentifier) {
             this.singleSignOnUserIdentifier = singleSignOnUserIdentifier;
             return this;
         }
 
         public Builder singleSignOnUserIdentifier(@Nullable String singleSignOnUserIdentifier) {
-            this.singleSignOnUserIdentifier = Input.ofNullable(singleSignOnUserIdentifier);
+            this.singleSignOnUserIdentifier = Output.ofNullable(singleSignOnUserIdentifier);
             return this;
         }
 
-        public Builder singleSignOnUserValue(@Nullable Input<String> singleSignOnUserValue) {
+        public Builder singleSignOnUserValue(@Nullable Output<String> singleSignOnUserValue) {
             this.singleSignOnUserValue = singleSignOnUserValue;
             return this;
         }
 
         public Builder singleSignOnUserValue(@Nullable String singleSignOnUserValue) {
-            this.singleSignOnUserValue = Input.ofNullable(singleSignOnUserValue);
+            this.singleSignOnUserValue = Output.ofNullable(singleSignOnUserValue);
             return this;
         }
 
-        public Builder tags(@Nullable Input<List<UserProfileTagArgs>> tags) {
+        public Builder tags(@Nullable Output<List<UserProfileTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable List<UserProfileTagArgs> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder userProfileName(@Nullable Input<String> userProfileName) {
+        public Builder userProfileName(@Nullable Output<String> userProfileName) {
             this.userProfileName = userProfileName;
             return this;
         }
 
         public Builder userProfileName(@Nullable String userProfileName) {
-            this.userProfileName = Input.ofNullable(userProfileName);
+            this.userProfileName = Output.ofNullable(userProfileName);
             return this;
         }
 
-        public Builder userSettings(@Nullable Input<UserProfileUserSettingsArgs> userSettings) {
+        public Builder userSettings(@Nullable Output<UserProfileUserSettingsArgs> userSettings) {
             this.userSettings = userSettings;
             return this;
         }
 
         public Builder userSettings(@Nullable UserProfileUserSettingsArgs userSettings) {
-            this.userSettings = Input.ofNullable(userSettings);
+            this.userSettings = Output.ofNullable(userSettings);
             return this;
         }
         public UserProfileArgs build() {

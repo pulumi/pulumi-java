@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.kendra.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -16,29 +16,29 @@ public final class IndexValueImportanceItemArgs extends io.pulumi.resources.Reso
     public static final IndexValueImportanceItemArgs Empty = new IndexValueImportanceItemArgs();
 
     @InputImport(name="key")
-      private final @Nullable Input<String> key;
+      private final @Nullable Output<String> key;
 
-    public Input<String> getKey() {
-        return this.key == null ? Input.empty() : this.key;
+    public Output<String> getKey() {
+        return this.key == null ? Output.empty() : this.key;
     }
 
     @InputImport(name="value")
-      private final @Nullable Input<Integer> value;
+      private final @Nullable Output<Integer> value;
 
-    public Input<Integer> getValue() {
-        return this.value == null ? Input.empty() : this.value;
+    public Output<Integer> getValue() {
+        return this.value == null ? Output.empty() : this.value;
     }
 
     public IndexValueImportanceItemArgs(
-        @Nullable Input<String> key,
-        @Nullable Input<Integer> value) {
+        @Nullable Output<String> key,
+        @Nullable Output<Integer> value) {
         this.key = key;
         this.value = value;
     }
 
     private IndexValueImportanceItemArgs() {
-        this.key = Input.empty();
-        this.value = Input.empty();
+        this.key = Output.empty();
+        this.value = Output.empty();
     }
 
     public static Builder builder() {
@@ -50,8 +50,8 @@ public final class IndexValueImportanceItemArgs extends io.pulumi.resources.Reso
     }
 
     public static final class Builder {
-        private @Nullable Input<String> key;
-        private @Nullable Input<Integer> value;
+        private @Nullable Output<String> key;
+        private @Nullable Output<Integer> value;
 
         public Builder() {
     	      // Empty
@@ -63,23 +63,23 @@ public final class IndexValueImportanceItemArgs extends io.pulumi.resources.Reso
     	      this.value = defaults.value;
         }
 
-        public Builder key(@Nullable Input<String> key) {
+        public Builder key(@Nullable Output<String> key) {
             this.key = key;
             return this;
         }
 
         public Builder key(@Nullable String key) {
-            this.key = Input.ofNullable(key);
+            this.key = Output.ofNullable(key);
             return this;
         }
 
-        public Builder value(@Nullable Input<Integer> value) {
+        public Builder value(@Nullable Output<Integer> value) {
             this.value = value;
             return this;
         }
 
         public Builder value(@Nullable Integer value) {
-            this.value = Input.ofNullable(value);
+            this.value = Output.ofNullable(value);
             return this;
         }
         public IndexValueImportanceItemArgs build() {

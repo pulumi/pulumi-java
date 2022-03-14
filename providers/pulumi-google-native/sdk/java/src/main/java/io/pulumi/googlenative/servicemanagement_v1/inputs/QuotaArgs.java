@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.servicemanagement_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.servicemanagement_v1.inputs.MetricRuleArgs;
 import io.pulumi.googlenative.servicemanagement_v1.inputs.QuotaLimitArgs;
@@ -25,10 +25,10 @@ public final class QuotaArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="limits")
-      private final @Nullable Input<List<QuotaLimitArgs>> limits;
+      private final @Nullable Output<List<QuotaLimitArgs>> limits;
 
-    public Input<List<QuotaLimitArgs>> getLimits() {
-        return this.limits == null ? Input.empty() : this.limits;
+    public Output<List<QuotaLimitArgs>> getLimits() {
+        return this.limits == null ? Output.empty() : this.limits;
     }
 
     /**
@@ -36,22 +36,22 @@ public final class QuotaArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="metricRules")
-      private final @Nullable Input<List<MetricRuleArgs>> metricRules;
+      private final @Nullable Output<List<MetricRuleArgs>> metricRules;
 
-    public Input<List<MetricRuleArgs>> getMetricRules() {
-        return this.metricRules == null ? Input.empty() : this.metricRules;
+    public Output<List<MetricRuleArgs>> getMetricRules() {
+        return this.metricRules == null ? Output.empty() : this.metricRules;
     }
 
     public QuotaArgs(
-        @Nullable Input<List<QuotaLimitArgs>> limits,
-        @Nullable Input<List<MetricRuleArgs>> metricRules) {
+        @Nullable Output<List<QuotaLimitArgs>> limits,
+        @Nullable Output<List<MetricRuleArgs>> metricRules) {
         this.limits = limits;
         this.metricRules = metricRules;
     }
 
     private QuotaArgs() {
-        this.limits = Input.empty();
-        this.metricRules = Input.empty();
+        this.limits = Output.empty();
+        this.metricRules = Output.empty();
     }
 
     public static Builder builder() {
@@ -63,8 +63,8 @@ public final class QuotaArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<List<QuotaLimitArgs>> limits;
-        private @Nullable Input<List<MetricRuleArgs>> metricRules;
+        private @Nullable Output<List<QuotaLimitArgs>> limits;
+        private @Nullable Output<List<MetricRuleArgs>> metricRules;
 
         public Builder() {
     	      // Empty
@@ -76,23 +76,23 @@ public final class QuotaArgs extends io.pulumi.resources.ResourceArgs {
     	      this.metricRules = defaults.metricRules;
         }
 
-        public Builder limits(@Nullable Input<List<QuotaLimitArgs>> limits) {
+        public Builder limits(@Nullable Output<List<QuotaLimitArgs>> limits) {
             this.limits = limits;
             return this;
         }
 
         public Builder limits(@Nullable List<QuotaLimitArgs> limits) {
-            this.limits = Input.ofNullable(limits);
+            this.limits = Output.ofNullable(limits);
             return this;
         }
 
-        public Builder metricRules(@Nullable Input<List<MetricRuleArgs>> metricRules) {
+        public Builder metricRules(@Nullable Output<List<MetricRuleArgs>> metricRules) {
             this.metricRules = metricRules;
             return this;
         }
 
         public Builder metricRules(@Nullable List<MetricRuleArgs> metricRules) {
-            this.metricRules = Input.ofNullable(metricRules);
+            this.metricRules = Output.ofNullable(metricRules);
             return this;
         }
         public QuotaArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.ec2;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -18,9 +18,9 @@ public final class GatewayRouteTableAssociationArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="gatewayId", required=true)
-      private final Input<String> gatewayId;
+      private final Output<String> gatewayId;
 
-    public Input<String> getGatewayId() {
+    public Output<String> getGatewayId() {
         return this.gatewayId;
     }
 
@@ -29,22 +29,22 @@ public final class GatewayRouteTableAssociationArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="routeTableId", required=true)
-      private final Input<String> routeTableId;
+      private final Output<String> routeTableId;
 
-    public Input<String> getRouteTableId() {
+    public Output<String> getRouteTableId() {
         return this.routeTableId;
     }
 
     public GatewayRouteTableAssociationArgs(
-        Input<String> gatewayId,
-        Input<String> routeTableId) {
+        Output<String> gatewayId,
+        Output<String> routeTableId) {
         this.gatewayId = Objects.requireNonNull(gatewayId, "expected parameter 'gatewayId' to be non-null");
         this.routeTableId = Objects.requireNonNull(routeTableId, "expected parameter 'routeTableId' to be non-null");
     }
 
     private GatewayRouteTableAssociationArgs() {
-        this.gatewayId = Input.empty();
-        this.routeTableId = Input.empty();
+        this.gatewayId = Output.empty();
+        this.routeTableId = Output.empty();
     }
 
     public static Builder builder() {
@@ -56,8 +56,8 @@ public final class GatewayRouteTableAssociationArgs extends io.pulumi.resources.
     }
 
     public static final class Builder {
-        private Input<String> gatewayId;
-        private Input<String> routeTableId;
+        private Output<String> gatewayId;
+        private Output<String> routeTableId;
 
         public Builder() {
     	      // Empty
@@ -69,23 +69,23 @@ public final class GatewayRouteTableAssociationArgs extends io.pulumi.resources.
     	      this.routeTableId = defaults.routeTableId;
         }
 
-        public Builder gatewayId(Input<String> gatewayId) {
+        public Builder gatewayId(Output<String> gatewayId) {
             this.gatewayId = Objects.requireNonNull(gatewayId);
             return this;
         }
 
         public Builder gatewayId(String gatewayId) {
-            this.gatewayId = Input.of(Objects.requireNonNull(gatewayId));
+            this.gatewayId = Output.of(Objects.requireNonNull(gatewayId));
             return this;
         }
 
-        public Builder routeTableId(Input<String> routeTableId) {
+        public Builder routeTableId(Output<String> routeTableId) {
             this.routeTableId = Objects.requireNonNull(routeTableId);
             return this;
         }
 
         public Builder routeTableId(String routeTableId) {
-            this.routeTableId = Input.of(Objects.requireNonNull(routeTableId));
+            this.routeTableId = Output.of(Objects.requireNonNull(routeTableId));
             return this;
         }
         public GatewayRouteTableAssociationArgs build() {

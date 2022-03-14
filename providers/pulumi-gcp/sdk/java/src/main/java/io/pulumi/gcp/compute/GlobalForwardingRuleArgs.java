@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.compute.inputs.GlobalForwardingRuleMetadataFilterArgs;
 import java.lang.String;
@@ -23,10 +23,10 @@ public final class GlobalForwardingRuleArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -46,10 +46,10 @@ public final class GlobalForwardingRuleArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="ipAddress")
-      private final @Nullable Input<String> ipAddress;
+      private final @Nullable Output<String> ipAddress;
 
-    public Input<String> getIpAddress() {
-        return this.ipAddress == null ? Input.empty() : this.ipAddress;
+    public Output<String> getIpAddress() {
+        return this.ipAddress == null ? Output.empty() : this.ipAddress;
     }
 
     /**
@@ -61,10 +61,10 @@ public final class GlobalForwardingRuleArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="ipProtocol")
-      private final @Nullable Input<String> ipProtocol;
+      private final @Nullable Output<String> ipProtocol;
 
-    public Input<String> getIpProtocol() {
-        return this.ipProtocol == null ? Input.empty() : this.ipProtocol;
+    public Output<String> getIpProtocol() {
+        return this.ipProtocol == null ? Output.empty() : this.ipProtocol;
     }
 
     /**
@@ -73,10 +73,10 @@ public final class GlobalForwardingRuleArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="ipVersion")
-      private final @Nullable Input<String> ipVersion;
+      private final @Nullable Output<String> ipVersion;
 
-    public Input<String> getIpVersion() {
-        return this.ipVersion == null ? Input.empty() : this.ipVersion;
+    public Output<String> getIpVersion() {
+        return this.ipVersion == null ? Output.empty() : this.ipVersion;
     }
 
     /**
@@ -84,10 +84,10 @@ public final class GlobalForwardingRuleArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="labels")
-      private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Output<Map<String,String>> labels;
 
-    public Input<Map<String,String>> getLabels() {
-        return this.labels == null ? Input.empty() : this.labels;
+    public Output<Map<String,String>> getLabels() {
+        return this.labels == null ? Output.empty() : this.labels;
     }
 
     /**
@@ -106,10 +106,10 @@ public final class GlobalForwardingRuleArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="loadBalancingScheme")
-      private final @Nullable Input<String> loadBalancingScheme;
+      private final @Nullable Output<String> loadBalancingScheme;
 
-    public Input<String> getLoadBalancingScheme() {
-        return this.loadBalancingScheme == null ? Input.empty() : this.loadBalancingScheme;
+    public Output<String> getLoadBalancingScheme() {
+        return this.loadBalancingScheme == null ? Output.empty() : this.loadBalancingScheme;
     }
 
     /**
@@ -131,10 +131,10 @@ public final class GlobalForwardingRuleArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="metadataFilters")
-      private final @Nullable Input<List<GlobalForwardingRuleMetadataFilterArgs>> metadataFilters;
+      private final @Nullable Output<List<GlobalForwardingRuleMetadataFilterArgs>> metadataFilters;
 
-    public Input<List<GlobalForwardingRuleMetadataFilterArgs>> getMetadataFilters() {
-        return this.metadataFilters == null ? Input.empty() : this.metadataFilters;
+    public Output<List<GlobalForwardingRuleMetadataFilterArgs>> getMetadataFilters() {
+        return this.metadataFilters == null ? Output.empty() : this.metadataFilters;
     }
 
     /**
@@ -143,10 +143,10 @@ public final class GlobalForwardingRuleArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -158,10 +158,10 @@ public final class GlobalForwardingRuleArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="network")
-      private final @Nullable Input<String> network;
+      private final @Nullable Output<String> network;
 
-    public Input<String> getNetwork() {
-        return this.network == null ? Input.empty() : this.network;
+    public Output<String> getNetwork() {
+        return this.network == null ? Output.empty() : this.network;
     }
 
     /**
@@ -184,10 +184,10 @@ public final class GlobalForwardingRuleArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="portRange")
-      private final @Nullable Input<String> portRange;
+      private final @Nullable Output<String> portRange;
 
-    public Input<String> getPortRange() {
-        return this.portRange == null ? Input.empty() : this.portRange;
+    public Output<String> getPortRange() {
+        return this.portRange == null ? Output.empty() : this.portRange;
     }
 
     /**
@@ -196,10 +196,10 @@ public final class GlobalForwardingRuleArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -212,25 +212,25 @@ public final class GlobalForwardingRuleArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="target", required=true)
-      private final Input<String> target;
+      private final Output<String> target;
 
-    public Input<String> getTarget() {
+    public Output<String> getTarget() {
         return this.target;
     }
 
     public GlobalForwardingRuleArgs(
-        @Nullable Input<String> description,
-        @Nullable Input<String> ipAddress,
-        @Nullable Input<String> ipProtocol,
-        @Nullable Input<String> ipVersion,
-        @Nullable Input<Map<String,String>> labels,
-        @Nullable Input<String> loadBalancingScheme,
-        @Nullable Input<List<GlobalForwardingRuleMetadataFilterArgs>> metadataFilters,
-        @Nullable Input<String> name,
-        @Nullable Input<String> network,
-        @Nullable Input<String> portRange,
-        @Nullable Input<String> project,
-        Input<String> target) {
+        @Nullable Output<String> description,
+        @Nullable Output<String> ipAddress,
+        @Nullable Output<String> ipProtocol,
+        @Nullable Output<String> ipVersion,
+        @Nullable Output<Map<String,String>> labels,
+        @Nullable Output<String> loadBalancingScheme,
+        @Nullable Output<List<GlobalForwardingRuleMetadataFilterArgs>> metadataFilters,
+        @Nullable Output<String> name,
+        @Nullable Output<String> network,
+        @Nullable Output<String> portRange,
+        @Nullable Output<String> project,
+        Output<String> target) {
         this.description = description;
         this.ipAddress = ipAddress;
         this.ipProtocol = ipProtocol;
@@ -246,18 +246,18 @@ public final class GlobalForwardingRuleArgs extends io.pulumi.resources.Resource
     }
 
     private GlobalForwardingRuleArgs() {
-        this.description = Input.empty();
-        this.ipAddress = Input.empty();
-        this.ipProtocol = Input.empty();
-        this.ipVersion = Input.empty();
-        this.labels = Input.empty();
-        this.loadBalancingScheme = Input.empty();
-        this.metadataFilters = Input.empty();
-        this.name = Input.empty();
-        this.network = Input.empty();
-        this.portRange = Input.empty();
-        this.project = Input.empty();
-        this.target = Input.empty();
+        this.description = Output.empty();
+        this.ipAddress = Output.empty();
+        this.ipProtocol = Output.empty();
+        this.ipVersion = Output.empty();
+        this.labels = Output.empty();
+        this.loadBalancingScheme = Output.empty();
+        this.metadataFilters = Output.empty();
+        this.name = Output.empty();
+        this.network = Output.empty();
+        this.portRange = Output.empty();
+        this.project = Output.empty();
+        this.target = Output.empty();
     }
 
     public static Builder builder() {
@@ -269,18 +269,18 @@ public final class GlobalForwardingRuleArgs extends io.pulumi.resources.Resource
     }
 
     public static final class Builder {
-        private @Nullable Input<String> description;
-        private @Nullable Input<String> ipAddress;
-        private @Nullable Input<String> ipProtocol;
-        private @Nullable Input<String> ipVersion;
-        private @Nullable Input<Map<String,String>> labels;
-        private @Nullable Input<String> loadBalancingScheme;
-        private @Nullable Input<List<GlobalForwardingRuleMetadataFilterArgs>> metadataFilters;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> network;
-        private @Nullable Input<String> portRange;
-        private @Nullable Input<String> project;
-        private Input<String> target;
+        private @Nullable Output<String> description;
+        private @Nullable Output<String> ipAddress;
+        private @Nullable Output<String> ipProtocol;
+        private @Nullable Output<String> ipVersion;
+        private @Nullable Output<Map<String,String>> labels;
+        private @Nullable Output<String> loadBalancingScheme;
+        private @Nullable Output<List<GlobalForwardingRuleMetadataFilterArgs>> metadataFilters;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> network;
+        private @Nullable Output<String> portRange;
+        private @Nullable Output<String> project;
+        private Output<String> target;
 
         public Builder() {
     	      // Empty
@@ -302,123 +302,123 @@ public final class GlobalForwardingRuleArgs extends io.pulumi.resources.Resource
     	      this.target = defaults.target;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder ipAddress(@Nullable Input<String> ipAddress) {
+        public Builder ipAddress(@Nullable Output<String> ipAddress) {
             this.ipAddress = ipAddress;
             return this;
         }
 
         public Builder ipAddress(@Nullable String ipAddress) {
-            this.ipAddress = Input.ofNullable(ipAddress);
+            this.ipAddress = Output.ofNullable(ipAddress);
             return this;
         }
 
-        public Builder ipProtocol(@Nullable Input<String> ipProtocol) {
+        public Builder ipProtocol(@Nullable Output<String> ipProtocol) {
             this.ipProtocol = ipProtocol;
             return this;
         }
 
         public Builder ipProtocol(@Nullable String ipProtocol) {
-            this.ipProtocol = Input.ofNullable(ipProtocol);
+            this.ipProtocol = Output.ofNullable(ipProtocol);
             return this;
         }
 
-        public Builder ipVersion(@Nullable Input<String> ipVersion) {
+        public Builder ipVersion(@Nullable Output<String> ipVersion) {
             this.ipVersion = ipVersion;
             return this;
         }
 
         public Builder ipVersion(@Nullable String ipVersion) {
-            this.ipVersion = Input.ofNullable(ipVersion);
+            this.ipVersion = Output.ofNullable(ipVersion);
             return this;
         }
 
-        public Builder labels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
         public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Input.ofNullable(labels);
+            this.labels = Output.ofNullable(labels);
             return this;
         }
 
-        public Builder loadBalancingScheme(@Nullable Input<String> loadBalancingScheme) {
+        public Builder loadBalancingScheme(@Nullable Output<String> loadBalancingScheme) {
             this.loadBalancingScheme = loadBalancingScheme;
             return this;
         }
 
         public Builder loadBalancingScheme(@Nullable String loadBalancingScheme) {
-            this.loadBalancingScheme = Input.ofNullable(loadBalancingScheme);
+            this.loadBalancingScheme = Output.ofNullable(loadBalancingScheme);
             return this;
         }
 
-        public Builder metadataFilters(@Nullable Input<List<GlobalForwardingRuleMetadataFilterArgs>> metadataFilters) {
+        public Builder metadataFilters(@Nullable Output<List<GlobalForwardingRuleMetadataFilterArgs>> metadataFilters) {
             this.metadataFilters = metadataFilters;
             return this;
         }
 
         public Builder metadataFilters(@Nullable List<GlobalForwardingRuleMetadataFilterArgs> metadataFilters) {
-            this.metadataFilters = Input.ofNullable(metadataFilters);
+            this.metadataFilters = Output.ofNullable(metadataFilters);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder network(@Nullable Input<String> network) {
+        public Builder network(@Nullable Output<String> network) {
             this.network = network;
             return this;
         }
 
         public Builder network(@Nullable String network) {
-            this.network = Input.ofNullable(network);
+            this.network = Output.ofNullable(network);
             return this;
         }
 
-        public Builder portRange(@Nullable Input<String> portRange) {
+        public Builder portRange(@Nullable Output<String> portRange) {
             this.portRange = portRange;
             return this;
         }
 
         public Builder portRange(@Nullable String portRange) {
-            this.portRange = Input.ofNullable(portRange);
+            this.portRange = Output.ofNullable(portRange);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder target(Input<String> target) {
+        public Builder target(Output<String> target) {
             this.target = Objects.requireNonNull(target);
             return this;
         }
 
         public Builder target(String target) {
-            this.target = Input.of(Objects.requireNonNull(target));
+            this.target = Output.of(Objects.requireNonNull(target));
             return this;
         }
         public GlobalForwardingRuleArgs build() {

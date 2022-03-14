@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.hdinsight.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="container")
-      private final @Nullable Input<String> container;
+      private final @Nullable Output<String> container;
 
-    public Input<String> getContainer() {
-        return this.container == null ? Input.empty() : this.container;
+    public Output<String> getContainer() {
+        return this.container == null ? Output.empty() : this.container;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="fileSystem")
-      private final @Nullable Input<String> fileSystem;
+      private final @Nullable Output<String> fileSystem;
 
-    public Input<String> getFileSystem() {
-        return this.fileSystem == null ? Input.empty() : this.fileSystem;
+    public Output<String> getFileSystem() {
+        return this.fileSystem == null ? Output.empty() : this.fileSystem;
     }
 
     /**
@@ -46,10 +46,10 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="fileshare")
-      private final @Nullable Input<String> fileshare;
+      private final @Nullable Output<String> fileshare;
 
-    public Input<String> getFileshare() {
-        return this.fileshare == null ? Input.empty() : this.fileshare;
+    public Output<String> getFileshare() {
+        return this.fileshare == null ? Output.empty() : this.fileshare;
     }
 
     /**
@@ -57,10 +57,10 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="isDefault")
-      private final @Nullable Input<Boolean> isDefault;
+      private final @Nullable Output<Boolean> isDefault;
 
-    public Input<Boolean> getIsDefault() {
-        return this.isDefault == null ? Input.empty() : this.isDefault;
+    public Output<Boolean> getIsDefault() {
+        return this.isDefault == null ? Output.empty() : this.isDefault;
     }
 
     /**
@@ -68,10 +68,10 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="key")
-      private final @Nullable Input<String> key;
+      private final @Nullable Output<String> key;
 
-    public Input<String> getKey() {
-        return this.key == null ? Input.empty() : this.key;
+    public Output<String> getKey() {
+        return this.key == null ? Output.empty() : this.key;
     }
 
     /**
@@ -79,10 +79,10 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="msiResourceId")
-      private final @Nullable Input<String> msiResourceId;
+      private final @Nullable Output<String> msiResourceId;
 
-    public Input<String> getMsiResourceId() {
-        return this.msiResourceId == null ? Input.empty() : this.msiResourceId;
+    public Output<String> getMsiResourceId() {
+        return this.msiResourceId == null ? Output.empty() : this.msiResourceId;
     }
 
     /**
@@ -90,10 +90,10 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -101,10 +101,10 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceId")
-      private final @Nullable Input<String> resourceId;
+      private final @Nullable Output<String> resourceId;
 
-    public Input<String> getResourceId() {
-        return this.resourceId == null ? Input.empty() : this.resourceId;
+    public Output<String> getResourceId() {
+        return this.resourceId == null ? Output.empty() : this.resourceId;
     }
 
     /**
@@ -112,22 +112,22 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="saskey")
-      private final @Nullable Input<String> saskey;
+      private final @Nullable Output<String> saskey;
 
-    public Input<String> getSaskey() {
-        return this.saskey == null ? Input.empty() : this.saskey;
+    public Output<String> getSaskey() {
+        return this.saskey == null ? Output.empty() : this.saskey;
     }
 
     public StorageAccountArgs(
-        @Nullable Input<String> container,
-        @Nullable Input<String> fileSystem,
-        @Nullable Input<String> fileshare,
-        @Nullable Input<Boolean> isDefault,
-        @Nullable Input<String> key,
-        @Nullable Input<String> msiResourceId,
-        @Nullable Input<String> name,
-        @Nullable Input<String> resourceId,
-        @Nullable Input<String> saskey) {
+        @Nullable Output<String> container,
+        @Nullable Output<String> fileSystem,
+        @Nullable Output<String> fileshare,
+        @Nullable Output<Boolean> isDefault,
+        @Nullable Output<String> key,
+        @Nullable Output<String> msiResourceId,
+        @Nullable Output<String> name,
+        @Nullable Output<String> resourceId,
+        @Nullable Output<String> saskey) {
         this.container = container;
         this.fileSystem = fileSystem;
         this.fileshare = fileshare;
@@ -140,15 +140,15 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private StorageAccountArgs() {
-        this.container = Input.empty();
-        this.fileSystem = Input.empty();
-        this.fileshare = Input.empty();
-        this.isDefault = Input.empty();
-        this.key = Input.empty();
-        this.msiResourceId = Input.empty();
-        this.name = Input.empty();
-        this.resourceId = Input.empty();
-        this.saskey = Input.empty();
+        this.container = Output.empty();
+        this.fileSystem = Output.empty();
+        this.fileshare = Output.empty();
+        this.isDefault = Output.empty();
+        this.key = Output.empty();
+        this.msiResourceId = Output.empty();
+        this.name = Output.empty();
+        this.resourceId = Output.empty();
+        this.saskey = Output.empty();
     }
 
     public static Builder builder() {
@@ -160,15 +160,15 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> container;
-        private @Nullable Input<String> fileSystem;
-        private @Nullable Input<String> fileshare;
-        private @Nullable Input<Boolean> isDefault;
-        private @Nullable Input<String> key;
-        private @Nullable Input<String> msiResourceId;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> resourceId;
-        private @Nullable Input<String> saskey;
+        private @Nullable Output<String> container;
+        private @Nullable Output<String> fileSystem;
+        private @Nullable Output<String> fileshare;
+        private @Nullable Output<Boolean> isDefault;
+        private @Nullable Output<String> key;
+        private @Nullable Output<String> msiResourceId;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> resourceId;
+        private @Nullable Output<String> saskey;
 
         public Builder() {
     	      // Empty
@@ -187,93 +187,93 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
     	      this.saskey = defaults.saskey;
         }
 
-        public Builder container(@Nullable Input<String> container) {
+        public Builder container(@Nullable Output<String> container) {
             this.container = container;
             return this;
         }
 
         public Builder container(@Nullable String container) {
-            this.container = Input.ofNullable(container);
+            this.container = Output.ofNullable(container);
             return this;
         }
 
-        public Builder fileSystem(@Nullable Input<String> fileSystem) {
+        public Builder fileSystem(@Nullable Output<String> fileSystem) {
             this.fileSystem = fileSystem;
             return this;
         }
 
         public Builder fileSystem(@Nullable String fileSystem) {
-            this.fileSystem = Input.ofNullable(fileSystem);
+            this.fileSystem = Output.ofNullable(fileSystem);
             return this;
         }
 
-        public Builder fileshare(@Nullable Input<String> fileshare) {
+        public Builder fileshare(@Nullable Output<String> fileshare) {
             this.fileshare = fileshare;
             return this;
         }
 
         public Builder fileshare(@Nullable String fileshare) {
-            this.fileshare = Input.ofNullable(fileshare);
+            this.fileshare = Output.ofNullable(fileshare);
             return this;
         }
 
-        public Builder isDefault(@Nullable Input<Boolean> isDefault) {
+        public Builder isDefault(@Nullable Output<Boolean> isDefault) {
             this.isDefault = isDefault;
             return this;
         }
 
         public Builder isDefault(@Nullable Boolean isDefault) {
-            this.isDefault = Input.ofNullable(isDefault);
+            this.isDefault = Output.ofNullable(isDefault);
             return this;
         }
 
-        public Builder key(@Nullable Input<String> key) {
+        public Builder key(@Nullable Output<String> key) {
             this.key = key;
             return this;
         }
 
         public Builder key(@Nullable String key) {
-            this.key = Input.ofNullable(key);
+            this.key = Output.ofNullable(key);
             return this;
         }
 
-        public Builder msiResourceId(@Nullable Input<String> msiResourceId) {
+        public Builder msiResourceId(@Nullable Output<String> msiResourceId) {
             this.msiResourceId = msiResourceId;
             return this;
         }
 
         public Builder msiResourceId(@Nullable String msiResourceId) {
-            this.msiResourceId = Input.ofNullable(msiResourceId);
+            this.msiResourceId = Output.ofNullable(msiResourceId);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder resourceId(@Nullable Input<String> resourceId) {
+        public Builder resourceId(@Nullable Output<String> resourceId) {
             this.resourceId = resourceId;
             return this;
         }
 
         public Builder resourceId(@Nullable String resourceId) {
-            this.resourceId = Input.ofNullable(resourceId);
+            this.resourceId = Output.ofNullable(resourceId);
             return this;
         }
 
-        public Builder saskey(@Nullable Input<String> saskey) {
+        public Builder saskey(@Nullable Output<String> saskey) {
             this.saskey = saskey;
             return this;
         }
 
         public Builder saskey(@Nullable String saskey) {
-            this.saskey = Input.ofNullable(saskey);
+            this.saskey = Output.ofNullable(saskey);
             return this;
         }
         public StorageAccountArgs build() {

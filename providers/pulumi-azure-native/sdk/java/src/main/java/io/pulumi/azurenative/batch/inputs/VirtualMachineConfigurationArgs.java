@@ -10,7 +10,7 @@ import io.pulumi.azurenative.batch.inputs.ImageReferenceArgs;
 import io.pulumi.azurenative.batch.inputs.NodePlacementConfigurationArgs;
 import io.pulumi.azurenative.batch.inputs.VMExtensionArgs;
 import io.pulumi.azurenative.batch.inputs.WindowsConfigurationArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -27,10 +27,10 @@ public final class VirtualMachineConfigurationArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="containerConfiguration")
-      private final @Nullable Input<ContainerConfigurationArgs> containerConfiguration;
+      private final @Nullable Output<ContainerConfigurationArgs> containerConfiguration;
 
-    public Input<ContainerConfigurationArgs> getContainerConfiguration() {
-        return this.containerConfiguration == null ? Input.empty() : this.containerConfiguration;
+    public Output<ContainerConfigurationArgs> getContainerConfiguration() {
+        return this.containerConfiguration == null ? Output.empty() : this.containerConfiguration;
     }
 
     /**
@@ -38,10 +38,10 @@ public final class VirtualMachineConfigurationArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="dataDisks")
-      private final @Nullable Input<List<DataDiskArgs>> dataDisks;
+      private final @Nullable Output<List<DataDiskArgs>> dataDisks;
 
-    public Input<List<DataDiskArgs>> getDataDisks() {
-        return this.dataDisks == null ? Input.empty() : this.dataDisks;
+    public Output<List<DataDiskArgs>> getDataDisks() {
+        return this.dataDisks == null ? Output.empty() : this.dataDisks;
     }
 
     /**
@@ -49,10 +49,10 @@ public final class VirtualMachineConfigurationArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="diskEncryptionConfiguration")
-      private final @Nullable Input<DiskEncryptionConfigurationArgs> diskEncryptionConfiguration;
+      private final @Nullable Output<DiskEncryptionConfigurationArgs> diskEncryptionConfiguration;
 
-    public Input<DiskEncryptionConfigurationArgs> getDiskEncryptionConfiguration() {
-        return this.diskEncryptionConfiguration == null ? Input.empty() : this.diskEncryptionConfiguration;
+    public Output<DiskEncryptionConfigurationArgs> getDiskEncryptionConfiguration() {
+        return this.diskEncryptionConfiguration == null ? Output.empty() : this.diskEncryptionConfiguration;
     }
 
     /**
@@ -60,16 +60,16 @@ public final class VirtualMachineConfigurationArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="extensions")
-      private final @Nullable Input<List<VMExtensionArgs>> extensions;
+      private final @Nullable Output<List<VMExtensionArgs>> extensions;
 
-    public Input<List<VMExtensionArgs>> getExtensions() {
-        return this.extensions == null ? Input.empty() : this.extensions;
+    public Output<List<VMExtensionArgs>> getExtensions() {
+        return this.extensions == null ? Output.empty() : this.extensions;
     }
 
     @InputImport(name="imageReference", required=true)
-      private final Input<ImageReferenceArgs> imageReference;
+      private final Output<ImageReferenceArgs> imageReference;
 
-    public Input<ImageReferenceArgs> getImageReference() {
+    public Output<ImageReferenceArgs> getImageReference() {
         return this.imageReference;
     }
 
@@ -81,10 +81,10 @@ public final class VirtualMachineConfigurationArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="licenseType")
-      private final @Nullable Input<String> licenseType;
+      private final @Nullable Output<String> licenseType;
 
-    public Input<String> getLicenseType() {
-        return this.licenseType == null ? Input.empty() : this.licenseType;
+    public Output<String> getLicenseType() {
+        return this.licenseType == null ? Output.empty() : this.licenseType;
     }
 
     /**
@@ -92,9 +92,9 @@ public final class VirtualMachineConfigurationArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="nodeAgentSkuId", required=true)
-      private final Input<String> nodeAgentSkuId;
+      private final Output<String> nodeAgentSkuId;
 
-    public Input<String> getNodeAgentSkuId() {
+    public Output<String> getNodeAgentSkuId() {
         return this.nodeAgentSkuId;
     }
 
@@ -103,10 +103,10 @@ public final class VirtualMachineConfigurationArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="nodePlacementConfiguration")
-      private final @Nullable Input<NodePlacementConfigurationArgs> nodePlacementConfiguration;
+      private final @Nullable Output<NodePlacementConfigurationArgs> nodePlacementConfiguration;
 
-    public Input<NodePlacementConfigurationArgs> getNodePlacementConfiguration() {
-        return this.nodePlacementConfiguration == null ? Input.empty() : this.nodePlacementConfiguration;
+    public Output<NodePlacementConfigurationArgs> getNodePlacementConfiguration() {
+        return this.nodePlacementConfiguration == null ? Output.empty() : this.nodePlacementConfiguration;
     }
 
     /**
@@ -114,22 +114,22 @@ public final class VirtualMachineConfigurationArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="windowsConfiguration")
-      private final @Nullable Input<WindowsConfigurationArgs> windowsConfiguration;
+      private final @Nullable Output<WindowsConfigurationArgs> windowsConfiguration;
 
-    public Input<WindowsConfigurationArgs> getWindowsConfiguration() {
-        return this.windowsConfiguration == null ? Input.empty() : this.windowsConfiguration;
+    public Output<WindowsConfigurationArgs> getWindowsConfiguration() {
+        return this.windowsConfiguration == null ? Output.empty() : this.windowsConfiguration;
     }
 
     public VirtualMachineConfigurationArgs(
-        @Nullable Input<ContainerConfigurationArgs> containerConfiguration,
-        @Nullable Input<List<DataDiskArgs>> dataDisks,
-        @Nullable Input<DiskEncryptionConfigurationArgs> diskEncryptionConfiguration,
-        @Nullable Input<List<VMExtensionArgs>> extensions,
-        Input<ImageReferenceArgs> imageReference,
-        @Nullable Input<String> licenseType,
-        Input<String> nodeAgentSkuId,
-        @Nullable Input<NodePlacementConfigurationArgs> nodePlacementConfiguration,
-        @Nullable Input<WindowsConfigurationArgs> windowsConfiguration) {
+        @Nullable Output<ContainerConfigurationArgs> containerConfiguration,
+        @Nullable Output<List<DataDiskArgs>> dataDisks,
+        @Nullable Output<DiskEncryptionConfigurationArgs> diskEncryptionConfiguration,
+        @Nullable Output<List<VMExtensionArgs>> extensions,
+        Output<ImageReferenceArgs> imageReference,
+        @Nullable Output<String> licenseType,
+        Output<String> nodeAgentSkuId,
+        @Nullable Output<NodePlacementConfigurationArgs> nodePlacementConfiguration,
+        @Nullable Output<WindowsConfigurationArgs> windowsConfiguration) {
         this.containerConfiguration = containerConfiguration;
         this.dataDisks = dataDisks;
         this.diskEncryptionConfiguration = diskEncryptionConfiguration;
@@ -142,15 +142,15 @@ public final class VirtualMachineConfigurationArgs extends io.pulumi.resources.R
     }
 
     private VirtualMachineConfigurationArgs() {
-        this.containerConfiguration = Input.empty();
-        this.dataDisks = Input.empty();
-        this.diskEncryptionConfiguration = Input.empty();
-        this.extensions = Input.empty();
-        this.imageReference = Input.empty();
-        this.licenseType = Input.empty();
-        this.nodeAgentSkuId = Input.empty();
-        this.nodePlacementConfiguration = Input.empty();
-        this.windowsConfiguration = Input.empty();
+        this.containerConfiguration = Output.empty();
+        this.dataDisks = Output.empty();
+        this.diskEncryptionConfiguration = Output.empty();
+        this.extensions = Output.empty();
+        this.imageReference = Output.empty();
+        this.licenseType = Output.empty();
+        this.nodeAgentSkuId = Output.empty();
+        this.nodePlacementConfiguration = Output.empty();
+        this.windowsConfiguration = Output.empty();
     }
 
     public static Builder builder() {
@@ -162,15 +162,15 @@ public final class VirtualMachineConfigurationArgs extends io.pulumi.resources.R
     }
 
     public static final class Builder {
-        private @Nullable Input<ContainerConfigurationArgs> containerConfiguration;
-        private @Nullable Input<List<DataDiskArgs>> dataDisks;
-        private @Nullable Input<DiskEncryptionConfigurationArgs> diskEncryptionConfiguration;
-        private @Nullable Input<List<VMExtensionArgs>> extensions;
-        private Input<ImageReferenceArgs> imageReference;
-        private @Nullable Input<String> licenseType;
-        private Input<String> nodeAgentSkuId;
-        private @Nullable Input<NodePlacementConfigurationArgs> nodePlacementConfiguration;
-        private @Nullable Input<WindowsConfigurationArgs> windowsConfiguration;
+        private @Nullable Output<ContainerConfigurationArgs> containerConfiguration;
+        private @Nullable Output<List<DataDiskArgs>> dataDisks;
+        private @Nullable Output<DiskEncryptionConfigurationArgs> diskEncryptionConfiguration;
+        private @Nullable Output<List<VMExtensionArgs>> extensions;
+        private Output<ImageReferenceArgs> imageReference;
+        private @Nullable Output<String> licenseType;
+        private Output<String> nodeAgentSkuId;
+        private @Nullable Output<NodePlacementConfigurationArgs> nodePlacementConfiguration;
+        private @Nullable Output<WindowsConfigurationArgs> windowsConfiguration;
 
         public Builder() {
     	      // Empty
@@ -189,93 +189,93 @@ public final class VirtualMachineConfigurationArgs extends io.pulumi.resources.R
     	      this.windowsConfiguration = defaults.windowsConfiguration;
         }
 
-        public Builder containerConfiguration(@Nullable Input<ContainerConfigurationArgs> containerConfiguration) {
+        public Builder containerConfiguration(@Nullable Output<ContainerConfigurationArgs> containerConfiguration) {
             this.containerConfiguration = containerConfiguration;
             return this;
         }
 
         public Builder containerConfiguration(@Nullable ContainerConfigurationArgs containerConfiguration) {
-            this.containerConfiguration = Input.ofNullable(containerConfiguration);
+            this.containerConfiguration = Output.ofNullable(containerConfiguration);
             return this;
         }
 
-        public Builder dataDisks(@Nullable Input<List<DataDiskArgs>> dataDisks) {
+        public Builder dataDisks(@Nullable Output<List<DataDiskArgs>> dataDisks) {
             this.dataDisks = dataDisks;
             return this;
         }
 
         public Builder dataDisks(@Nullable List<DataDiskArgs> dataDisks) {
-            this.dataDisks = Input.ofNullable(dataDisks);
+            this.dataDisks = Output.ofNullable(dataDisks);
             return this;
         }
 
-        public Builder diskEncryptionConfiguration(@Nullable Input<DiskEncryptionConfigurationArgs> diskEncryptionConfiguration) {
+        public Builder diskEncryptionConfiguration(@Nullable Output<DiskEncryptionConfigurationArgs> diskEncryptionConfiguration) {
             this.diskEncryptionConfiguration = diskEncryptionConfiguration;
             return this;
         }
 
         public Builder diskEncryptionConfiguration(@Nullable DiskEncryptionConfigurationArgs diskEncryptionConfiguration) {
-            this.diskEncryptionConfiguration = Input.ofNullable(diskEncryptionConfiguration);
+            this.diskEncryptionConfiguration = Output.ofNullable(diskEncryptionConfiguration);
             return this;
         }
 
-        public Builder extensions(@Nullable Input<List<VMExtensionArgs>> extensions) {
+        public Builder extensions(@Nullable Output<List<VMExtensionArgs>> extensions) {
             this.extensions = extensions;
             return this;
         }
 
         public Builder extensions(@Nullable List<VMExtensionArgs> extensions) {
-            this.extensions = Input.ofNullable(extensions);
+            this.extensions = Output.ofNullable(extensions);
             return this;
         }
 
-        public Builder imageReference(Input<ImageReferenceArgs> imageReference) {
+        public Builder imageReference(Output<ImageReferenceArgs> imageReference) {
             this.imageReference = Objects.requireNonNull(imageReference);
             return this;
         }
 
         public Builder imageReference(ImageReferenceArgs imageReference) {
-            this.imageReference = Input.of(Objects.requireNonNull(imageReference));
+            this.imageReference = Output.of(Objects.requireNonNull(imageReference));
             return this;
         }
 
-        public Builder licenseType(@Nullable Input<String> licenseType) {
+        public Builder licenseType(@Nullable Output<String> licenseType) {
             this.licenseType = licenseType;
             return this;
         }
 
         public Builder licenseType(@Nullable String licenseType) {
-            this.licenseType = Input.ofNullable(licenseType);
+            this.licenseType = Output.ofNullable(licenseType);
             return this;
         }
 
-        public Builder nodeAgentSkuId(Input<String> nodeAgentSkuId) {
+        public Builder nodeAgentSkuId(Output<String> nodeAgentSkuId) {
             this.nodeAgentSkuId = Objects.requireNonNull(nodeAgentSkuId);
             return this;
         }
 
         public Builder nodeAgentSkuId(String nodeAgentSkuId) {
-            this.nodeAgentSkuId = Input.of(Objects.requireNonNull(nodeAgentSkuId));
+            this.nodeAgentSkuId = Output.of(Objects.requireNonNull(nodeAgentSkuId));
             return this;
         }
 
-        public Builder nodePlacementConfiguration(@Nullable Input<NodePlacementConfigurationArgs> nodePlacementConfiguration) {
+        public Builder nodePlacementConfiguration(@Nullable Output<NodePlacementConfigurationArgs> nodePlacementConfiguration) {
             this.nodePlacementConfiguration = nodePlacementConfiguration;
             return this;
         }
 
         public Builder nodePlacementConfiguration(@Nullable NodePlacementConfigurationArgs nodePlacementConfiguration) {
-            this.nodePlacementConfiguration = Input.ofNullable(nodePlacementConfiguration);
+            this.nodePlacementConfiguration = Output.ofNullable(nodePlacementConfiguration);
             return this;
         }
 
-        public Builder windowsConfiguration(@Nullable Input<WindowsConfigurationArgs> windowsConfiguration) {
+        public Builder windowsConfiguration(@Nullable Output<WindowsConfigurationArgs> windowsConfiguration) {
             this.windowsConfiguration = windowsConfiguration;
             return this;
         }
 
         public Builder windowsConfiguration(@Nullable WindowsConfigurationArgs windowsConfiguration) {
-            this.windowsConfiguration = Input.ofNullable(windowsConfiguration);
+            this.windowsConfiguration = Output.ofNullable(windowsConfiguration);
             return this;
         }
         public VirtualMachineConfigurationArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.notificationhubs.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class AdmCredentialArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="authTokenUrl")
-      private final @Nullable Input<String> authTokenUrl;
+      private final @Nullable Output<String> authTokenUrl;
 
-    public Input<String> getAuthTokenUrl() {
-        return this.authTokenUrl == null ? Input.empty() : this.authTokenUrl;
+    public Output<String> getAuthTokenUrl() {
+        return this.authTokenUrl == null ? Output.empty() : this.authTokenUrl;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class AdmCredentialArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="clientId")
-      private final @Nullable Input<String> clientId;
+      private final @Nullable Output<String> clientId;
 
-    public Input<String> getClientId() {
-        return this.clientId == null ? Input.empty() : this.clientId;
+    public Output<String> getClientId() {
+        return this.clientId == null ? Output.empty() : this.clientId;
     }
 
     /**
@@ -45,25 +45,25 @@ public final class AdmCredentialArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="clientSecret")
-      private final @Nullable Input<String> clientSecret;
+      private final @Nullable Output<String> clientSecret;
 
-    public Input<String> getClientSecret() {
-        return this.clientSecret == null ? Input.empty() : this.clientSecret;
+    public Output<String> getClientSecret() {
+        return this.clientSecret == null ? Output.empty() : this.clientSecret;
     }
 
     public AdmCredentialArgs(
-        @Nullable Input<String> authTokenUrl,
-        @Nullable Input<String> clientId,
-        @Nullable Input<String> clientSecret) {
+        @Nullable Output<String> authTokenUrl,
+        @Nullable Output<String> clientId,
+        @Nullable Output<String> clientSecret) {
         this.authTokenUrl = authTokenUrl;
         this.clientId = clientId;
         this.clientSecret = clientSecret;
     }
 
     private AdmCredentialArgs() {
-        this.authTokenUrl = Input.empty();
-        this.clientId = Input.empty();
-        this.clientSecret = Input.empty();
+        this.authTokenUrl = Output.empty();
+        this.clientId = Output.empty();
+        this.clientSecret = Output.empty();
     }
 
     public static Builder builder() {
@@ -75,9 +75,9 @@ public final class AdmCredentialArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> authTokenUrl;
-        private @Nullable Input<String> clientId;
-        private @Nullable Input<String> clientSecret;
+        private @Nullable Output<String> authTokenUrl;
+        private @Nullable Output<String> clientId;
+        private @Nullable Output<String> clientSecret;
 
         public Builder() {
     	      // Empty
@@ -90,33 +90,33 @@ public final class AdmCredentialArgs extends io.pulumi.resources.ResourceArgs {
     	      this.clientSecret = defaults.clientSecret;
         }
 
-        public Builder authTokenUrl(@Nullable Input<String> authTokenUrl) {
+        public Builder authTokenUrl(@Nullable Output<String> authTokenUrl) {
             this.authTokenUrl = authTokenUrl;
             return this;
         }
 
         public Builder authTokenUrl(@Nullable String authTokenUrl) {
-            this.authTokenUrl = Input.ofNullable(authTokenUrl);
+            this.authTokenUrl = Output.ofNullable(authTokenUrl);
             return this;
         }
 
-        public Builder clientId(@Nullable Input<String> clientId) {
+        public Builder clientId(@Nullable Output<String> clientId) {
             this.clientId = clientId;
             return this;
         }
 
         public Builder clientId(@Nullable String clientId) {
-            this.clientId = Input.ofNullable(clientId);
+            this.clientId = Output.ofNullable(clientId);
             return this;
         }
 
-        public Builder clientSecret(@Nullable Input<String> clientSecret) {
+        public Builder clientSecret(@Nullable Output<String> clientSecret) {
             this.clientSecret = clientSecret;
             return this;
         }
 
         public Builder clientSecret(@Nullable String clientSecret) {
-            this.clientSecret = Input.ofNullable(clientSecret);
+            this.clientSecret = Output.ofNullable(clientSecret);
             return this;
         }
         public AdmCredentialArgs build() {

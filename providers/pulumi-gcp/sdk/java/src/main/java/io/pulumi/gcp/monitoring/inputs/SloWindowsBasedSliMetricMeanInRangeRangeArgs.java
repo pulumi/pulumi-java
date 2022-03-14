@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.monitoring.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.util.Objects;
@@ -21,10 +21,10 @@ public final class SloWindowsBasedSliMetricMeanInRangeRangeArgs extends io.pulum
      * 
      */
     @InputImport(name="max")
-      private final @Nullable Input<Double> max;
+      private final @Nullable Output<Double> max;
 
-    public Input<Double> getMax() {
-        return this.max == null ? Input.empty() : this.max;
+    public Output<Double> getMax() {
+        return this.max == null ? Output.empty() : this.max;
     }
 
     /**
@@ -34,22 +34,22 @@ public final class SloWindowsBasedSliMetricMeanInRangeRangeArgs extends io.pulum
      * 
      */
     @InputImport(name="min")
-      private final @Nullable Input<Double> min;
+      private final @Nullable Output<Double> min;
 
-    public Input<Double> getMin() {
-        return this.min == null ? Input.empty() : this.min;
+    public Output<Double> getMin() {
+        return this.min == null ? Output.empty() : this.min;
     }
 
     public SloWindowsBasedSliMetricMeanInRangeRangeArgs(
-        @Nullable Input<Double> max,
-        @Nullable Input<Double> min) {
+        @Nullable Output<Double> max,
+        @Nullable Output<Double> min) {
         this.max = max;
         this.min = min;
     }
 
     private SloWindowsBasedSliMetricMeanInRangeRangeArgs() {
-        this.max = Input.empty();
-        this.min = Input.empty();
+        this.max = Output.empty();
+        this.min = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class SloWindowsBasedSliMetricMeanInRangeRangeArgs extends io.pulum
     }
 
     public static final class Builder {
-        private @Nullable Input<Double> max;
-        private @Nullable Input<Double> min;
+        private @Nullable Output<Double> max;
+        private @Nullable Output<Double> min;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class SloWindowsBasedSliMetricMeanInRangeRangeArgs extends io.pulum
     	      this.min = defaults.min;
         }
 
-        public Builder max(@Nullable Input<Double> max) {
+        public Builder max(@Nullable Output<Double> max) {
             this.max = max;
             return this;
         }
 
         public Builder max(@Nullable Double max) {
-            this.max = Input.ofNullable(max);
+            this.max = Output.ofNullable(max);
             return this;
         }
 
-        public Builder min(@Nullable Input<Double> min) {
+        public Builder min(@Nullable Output<Double> min) {
             this.min = min;
             return this;
         }
 
         public Builder min(@Nullable Double min) {
-            this.min = Input.ofNullable(min);
+            this.min = Output.ofNullable(min);
             return this;
         }
         public SloWindowsBasedSliMetricMeanInRangeRangeArgs build() {

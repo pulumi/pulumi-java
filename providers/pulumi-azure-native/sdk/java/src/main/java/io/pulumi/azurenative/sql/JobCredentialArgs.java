@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.sql;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class JobCredentialArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="credentialName")
-      private final @Nullable Input<String> credentialName;
+      private final @Nullable Output<String> credentialName;
 
-    public Input<String> getCredentialName() {
-        return this.credentialName == null ? Input.empty() : this.credentialName;
+    public Output<String> getCredentialName() {
+        return this.credentialName == null ? Output.empty() : this.credentialName;
     }
 
     /**
@@ -30,9 +30,9 @@ public final class JobCredentialArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="jobAgentName", required=true)
-      private final Input<String> jobAgentName;
+      private final Output<String> jobAgentName;
 
-    public Input<String> getJobAgentName() {
+    public Output<String> getJobAgentName() {
         return this.jobAgentName;
     }
 
@@ -41,9 +41,9 @@ public final class JobCredentialArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="password", required=true)
-      private final Input<String> password;
+      private final Output<String> password;
 
-    public Input<String> getPassword() {
+    public Output<String> getPassword() {
         return this.password;
     }
 
@@ -52,9 +52,9 @@ public final class JobCredentialArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -63,9 +63,9 @@ public final class JobCredentialArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serverName", required=true)
-      private final Input<String> serverName;
+      private final Output<String> serverName;
 
-    public Input<String> getServerName() {
+    public Output<String> getServerName() {
         return this.serverName;
     }
 
@@ -74,19 +74,19 @@ public final class JobCredentialArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="username", required=true)
-      private final Input<String> username;
+      private final Output<String> username;
 
-    public Input<String> getUsername() {
+    public Output<String> getUsername() {
         return this.username;
     }
 
     public JobCredentialArgs(
-        @Nullable Input<String> credentialName,
-        Input<String> jobAgentName,
-        Input<String> password,
-        Input<String> resourceGroupName,
-        Input<String> serverName,
-        Input<String> username) {
+        @Nullable Output<String> credentialName,
+        Output<String> jobAgentName,
+        Output<String> password,
+        Output<String> resourceGroupName,
+        Output<String> serverName,
+        Output<String> username) {
         this.credentialName = credentialName;
         this.jobAgentName = Objects.requireNonNull(jobAgentName, "expected parameter 'jobAgentName' to be non-null");
         this.password = Objects.requireNonNull(password, "expected parameter 'password' to be non-null");
@@ -96,12 +96,12 @@ public final class JobCredentialArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private JobCredentialArgs() {
-        this.credentialName = Input.empty();
-        this.jobAgentName = Input.empty();
-        this.password = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.serverName = Input.empty();
-        this.username = Input.empty();
+        this.credentialName = Output.empty();
+        this.jobAgentName = Output.empty();
+        this.password = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.serverName = Output.empty();
+        this.username = Output.empty();
     }
 
     public static Builder builder() {
@@ -113,12 +113,12 @@ public final class JobCredentialArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> credentialName;
-        private Input<String> jobAgentName;
-        private Input<String> password;
-        private Input<String> resourceGroupName;
-        private Input<String> serverName;
-        private Input<String> username;
+        private @Nullable Output<String> credentialName;
+        private Output<String> jobAgentName;
+        private Output<String> password;
+        private Output<String> resourceGroupName;
+        private Output<String> serverName;
+        private Output<String> username;
 
         public Builder() {
     	      // Empty
@@ -134,63 +134,63 @@ public final class JobCredentialArgs extends io.pulumi.resources.ResourceArgs {
     	      this.username = defaults.username;
         }
 
-        public Builder credentialName(@Nullable Input<String> credentialName) {
+        public Builder credentialName(@Nullable Output<String> credentialName) {
             this.credentialName = credentialName;
             return this;
         }
 
         public Builder credentialName(@Nullable String credentialName) {
-            this.credentialName = Input.ofNullable(credentialName);
+            this.credentialName = Output.ofNullable(credentialName);
             return this;
         }
 
-        public Builder jobAgentName(Input<String> jobAgentName) {
+        public Builder jobAgentName(Output<String> jobAgentName) {
             this.jobAgentName = Objects.requireNonNull(jobAgentName);
             return this;
         }
 
         public Builder jobAgentName(String jobAgentName) {
-            this.jobAgentName = Input.of(Objects.requireNonNull(jobAgentName));
+            this.jobAgentName = Output.of(Objects.requireNonNull(jobAgentName));
             return this;
         }
 
-        public Builder password(Input<String> password) {
+        public Builder password(Output<String> password) {
             this.password = Objects.requireNonNull(password);
             return this;
         }
 
         public Builder password(String password) {
-            this.password = Input.of(Objects.requireNonNull(password));
+            this.password = Output.of(Objects.requireNonNull(password));
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder serverName(Input<String> serverName) {
+        public Builder serverName(Output<String> serverName) {
             this.serverName = Objects.requireNonNull(serverName);
             return this;
         }
 
         public Builder serverName(String serverName) {
-            this.serverName = Input.of(Objects.requireNonNull(serverName));
+            this.serverName = Output.of(Objects.requireNonNull(serverName));
             return this;
         }
 
-        public Builder username(Input<String> username) {
+        public Builder username(Output<String> username) {
             this.username = Objects.requireNonNull(username);
             return this;
         }
 
         public Builder username(String username) {
-            this.username = Input.of(Objects.requireNonNull(username));
+            this.username = Output.of(Objects.requireNonNull(username));
             return this;
         }
         public JobCredentialArgs build() {

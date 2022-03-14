@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.toolresults_v1beta3.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class AndroidAppInfoArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class AndroidAppInfoArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="packageName")
-      private final @Nullable Input<String> packageName;
+      private final @Nullable Output<String> packageName;
 
-    public Input<String> getPackageName() {
-        return this.packageName == null ? Input.empty() : this.packageName;
+    public Output<String> getPackageName() {
+        return this.packageName == null ? Output.empty() : this.packageName;
     }
 
     /**
@@ -45,10 +45,10 @@ public final class AndroidAppInfoArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="versionCode")
-      private final @Nullable Input<String> versionCode;
+      private final @Nullable Output<String> versionCode;
 
-    public Input<String> getVersionCode() {
-        return this.versionCode == null ? Input.empty() : this.versionCode;
+    public Output<String> getVersionCode() {
+        return this.versionCode == null ? Output.empty() : this.versionCode;
     }
 
     /**
@@ -56,17 +56,17 @@ public final class AndroidAppInfoArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="versionName")
-      private final @Nullable Input<String> versionName;
+      private final @Nullable Output<String> versionName;
 
-    public Input<String> getVersionName() {
-        return this.versionName == null ? Input.empty() : this.versionName;
+    public Output<String> getVersionName() {
+        return this.versionName == null ? Output.empty() : this.versionName;
     }
 
     public AndroidAppInfoArgs(
-        @Nullable Input<String> name,
-        @Nullable Input<String> packageName,
-        @Nullable Input<String> versionCode,
-        @Nullable Input<String> versionName) {
+        @Nullable Output<String> name,
+        @Nullable Output<String> packageName,
+        @Nullable Output<String> versionCode,
+        @Nullable Output<String> versionName) {
         this.name = name;
         this.packageName = packageName;
         this.versionCode = versionCode;
@@ -74,10 +74,10 @@ public final class AndroidAppInfoArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private AndroidAppInfoArgs() {
-        this.name = Input.empty();
-        this.packageName = Input.empty();
-        this.versionCode = Input.empty();
-        this.versionName = Input.empty();
+        this.name = Output.empty();
+        this.packageName = Output.empty();
+        this.versionCode = Output.empty();
+        this.versionName = Output.empty();
     }
 
     public static Builder builder() {
@@ -89,10 +89,10 @@ public final class AndroidAppInfoArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> packageName;
-        private @Nullable Input<String> versionCode;
-        private @Nullable Input<String> versionName;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> packageName;
+        private @Nullable Output<String> versionCode;
+        private @Nullable Output<String> versionName;
 
         public Builder() {
     	      // Empty
@@ -106,43 +106,43 @@ public final class AndroidAppInfoArgs extends io.pulumi.resources.ResourceArgs {
     	      this.versionName = defaults.versionName;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder packageName(@Nullable Input<String> packageName) {
+        public Builder packageName(@Nullable Output<String> packageName) {
             this.packageName = packageName;
             return this;
         }
 
         public Builder packageName(@Nullable String packageName) {
-            this.packageName = Input.ofNullable(packageName);
+            this.packageName = Output.ofNullable(packageName);
             return this;
         }
 
-        public Builder versionCode(@Nullable Input<String> versionCode) {
+        public Builder versionCode(@Nullable Output<String> versionCode) {
             this.versionCode = versionCode;
             return this;
         }
 
         public Builder versionCode(@Nullable String versionCode) {
-            this.versionCode = Input.ofNullable(versionCode);
+            this.versionCode = Output.ofNullable(versionCode);
             return this;
         }
 
-        public Builder versionName(@Nullable Input<String> versionName) {
+        public Builder versionName(@Nullable Output<String> versionName) {
             this.versionName = versionName;
             return this;
         }
 
         public Builder versionName(@Nullable String versionName) {
-            this.versionName = Input.ofNullable(versionName);
+            this.versionName = Output.ofNullable(versionName);
             return this;
         }
         public AndroidAppInfoArgs build() {

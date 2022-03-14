@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.dlm.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
@@ -18,18 +18,18 @@ public final class LifecyclePolicyPolicyDetailsScheduleRetainRuleGetArgs extends
      * 
      */
     @InputImport(name="count", required=true)
-      private final Input<Integer> count;
+      private final Output<Integer> count;
 
-    public Input<Integer> getCount() {
+    public Output<Integer> getCount() {
         return this.count;
     }
 
-    public LifecyclePolicyPolicyDetailsScheduleRetainRuleGetArgs(Input<Integer> count) {
+    public LifecyclePolicyPolicyDetailsScheduleRetainRuleGetArgs(Output<Integer> count) {
         this.count = Objects.requireNonNull(count, "expected parameter 'count' to be non-null");
     }
 
     private LifecyclePolicyPolicyDetailsScheduleRetainRuleGetArgs() {
-        this.count = Input.empty();
+        this.count = Output.empty();
     }
 
     public static Builder builder() {
@@ -41,7 +41,7 @@ public final class LifecyclePolicyPolicyDetailsScheduleRetainRuleGetArgs extends
     }
 
     public static final class Builder {
-        private Input<Integer> count;
+        private Output<Integer> count;
 
         public Builder() {
     	      // Empty
@@ -52,13 +52,13 @@ public final class LifecyclePolicyPolicyDetailsScheduleRetainRuleGetArgs extends
     	      this.count = defaults.count;
         }
 
-        public Builder count(Input<Integer> count) {
+        public Builder count(Output<Integer> count) {
             this.count = Objects.requireNonNull(count);
             return this;
         }
 
         public Builder count(Integer count) {
-            this.count = Input.of(Objects.requireNonNull(count));
+            this.count = Output.of(Objects.requireNonNull(count));
             return this;
         }
         public LifecyclePolicyPolicyDetailsScheduleRetainRuleGetArgs build() {

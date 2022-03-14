@@ -5,7 +5,7 @@ package io.pulumi.aws.elasticloadbalancingv2.inputs;
 
 import io.pulumi.aws.elasticloadbalancingv2.inputs.ListenerRuleActionForwardStickinessArgs;
 import io.pulumi.aws.elasticloadbalancingv2.inputs.ListenerRuleActionForwardTargetGroupArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
@@ -21,10 +21,10 @@ public final class ListenerRuleActionForwardArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="stickiness")
-      private final @Nullable Input<ListenerRuleActionForwardStickinessArgs> stickiness;
+      private final @Nullable Output<ListenerRuleActionForwardStickinessArgs> stickiness;
 
-    public Input<ListenerRuleActionForwardStickinessArgs> getStickiness() {
-        return this.stickiness == null ? Input.empty() : this.stickiness;
+    public Output<ListenerRuleActionForwardStickinessArgs> getStickiness() {
+        return this.stickiness == null ? Output.empty() : this.stickiness;
     }
 
     /**
@@ -32,22 +32,22 @@ public final class ListenerRuleActionForwardArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="targetGroups", required=true)
-      private final Input<List<ListenerRuleActionForwardTargetGroupArgs>> targetGroups;
+      private final Output<List<ListenerRuleActionForwardTargetGroupArgs>> targetGroups;
 
-    public Input<List<ListenerRuleActionForwardTargetGroupArgs>> getTargetGroups() {
+    public Output<List<ListenerRuleActionForwardTargetGroupArgs>> getTargetGroups() {
         return this.targetGroups;
     }
 
     public ListenerRuleActionForwardArgs(
-        @Nullable Input<ListenerRuleActionForwardStickinessArgs> stickiness,
-        Input<List<ListenerRuleActionForwardTargetGroupArgs>> targetGroups) {
+        @Nullable Output<ListenerRuleActionForwardStickinessArgs> stickiness,
+        Output<List<ListenerRuleActionForwardTargetGroupArgs>> targetGroups) {
         this.stickiness = stickiness;
         this.targetGroups = Objects.requireNonNull(targetGroups, "expected parameter 'targetGroups' to be non-null");
     }
 
     private ListenerRuleActionForwardArgs() {
-        this.stickiness = Input.empty();
-        this.targetGroups = Input.empty();
+        this.stickiness = Output.empty();
+        this.targetGroups = Output.empty();
     }
 
     public static Builder builder() {
@@ -59,8 +59,8 @@ public final class ListenerRuleActionForwardArgs extends io.pulumi.resources.Res
     }
 
     public static final class Builder {
-        private @Nullable Input<ListenerRuleActionForwardStickinessArgs> stickiness;
-        private Input<List<ListenerRuleActionForwardTargetGroupArgs>> targetGroups;
+        private @Nullable Output<ListenerRuleActionForwardStickinessArgs> stickiness;
+        private Output<List<ListenerRuleActionForwardTargetGroupArgs>> targetGroups;
 
         public Builder() {
     	      // Empty
@@ -72,23 +72,23 @@ public final class ListenerRuleActionForwardArgs extends io.pulumi.resources.Res
     	      this.targetGroups = defaults.targetGroups;
         }
 
-        public Builder stickiness(@Nullable Input<ListenerRuleActionForwardStickinessArgs> stickiness) {
+        public Builder stickiness(@Nullable Output<ListenerRuleActionForwardStickinessArgs> stickiness) {
             this.stickiness = stickiness;
             return this;
         }
 
         public Builder stickiness(@Nullable ListenerRuleActionForwardStickinessArgs stickiness) {
-            this.stickiness = Input.ofNullable(stickiness);
+            this.stickiness = Output.ofNullable(stickiness);
             return this;
         }
 
-        public Builder targetGroups(Input<List<ListenerRuleActionForwardTargetGroupArgs>> targetGroups) {
+        public Builder targetGroups(Output<List<ListenerRuleActionForwardTargetGroupArgs>> targetGroups) {
             this.targetGroups = Objects.requireNonNull(targetGroups);
             return this;
         }
 
         public Builder targetGroups(List<ListenerRuleActionForwardTargetGroupArgs> targetGroups) {
-            this.targetGroups = Input.of(Objects.requireNonNull(targetGroups));
+            this.targetGroups = Output.of(Objects.requireNonNull(targetGroups));
             return this;
         }
         public ListenerRuleActionForwardArgs build() {

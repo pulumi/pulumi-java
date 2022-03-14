@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.media.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -23,9 +23,9 @@ public final class MediaGraphAssetSinkArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="assetName", required=true)
-      private final Input<String> assetName;
+      private final Output<String> assetName;
 
-    public Input<String> getAssetName() {
+    public Output<String> getAssetName() {
         return this.assetName;
     }
 
@@ -34,9 +34,9 @@ public final class MediaGraphAssetSinkArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="inputs", required=true)
-      private final Input<List<String>> inputs;
+      private final Output<List<String>> inputs;
 
-    public Input<List<String>> getInputs() {
+    public Output<List<String>> getInputs() {
         return this.inputs;
     }
 
@@ -45,9 +45,9 @@ public final class MediaGraphAssetSinkArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="name", required=true)
-      private final Input<String> name;
+      private final Output<String> name;
 
-    public Input<String> getName() {
+    public Output<String> getName() {
         return this.name;
     }
 
@@ -57,17 +57,17 @@ public final class MediaGraphAssetSinkArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="odataType", required=true)
-      private final Input<String> odataType;
+      private final Output<String> odataType;
 
-    public Input<String> getOdataType() {
+    public Output<String> getOdataType() {
         return this.odataType;
     }
 
     public MediaGraphAssetSinkArgs(
-        Input<String> assetName,
-        Input<List<String>> inputs,
-        Input<String> name,
-        Input<String> odataType) {
+        Output<String> assetName,
+        Output<List<String>> inputs,
+        Output<String> name,
+        Output<String> odataType) {
         this.assetName = Objects.requireNonNull(assetName, "expected parameter 'assetName' to be non-null");
         this.inputs = Objects.requireNonNull(inputs, "expected parameter 'inputs' to be non-null");
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
@@ -75,10 +75,10 @@ public final class MediaGraphAssetSinkArgs extends io.pulumi.resources.ResourceA
     }
 
     private MediaGraphAssetSinkArgs() {
-        this.assetName = Input.empty();
-        this.inputs = Input.empty();
-        this.name = Input.empty();
-        this.odataType = Input.empty();
+        this.assetName = Output.empty();
+        this.inputs = Output.empty();
+        this.name = Output.empty();
+        this.odataType = Output.empty();
     }
 
     public static Builder builder() {
@@ -90,10 +90,10 @@ public final class MediaGraphAssetSinkArgs extends io.pulumi.resources.ResourceA
     }
 
     public static final class Builder {
-        private Input<String> assetName;
-        private Input<List<String>> inputs;
-        private Input<String> name;
-        private Input<String> odataType;
+        private Output<String> assetName;
+        private Output<List<String>> inputs;
+        private Output<String> name;
+        private Output<String> odataType;
 
         public Builder() {
     	      // Empty
@@ -107,43 +107,43 @@ public final class MediaGraphAssetSinkArgs extends io.pulumi.resources.ResourceA
     	      this.odataType = defaults.odataType;
         }
 
-        public Builder assetName(Input<String> assetName) {
+        public Builder assetName(Output<String> assetName) {
             this.assetName = Objects.requireNonNull(assetName);
             return this;
         }
 
         public Builder assetName(String assetName) {
-            this.assetName = Input.of(Objects.requireNonNull(assetName));
+            this.assetName = Output.of(Objects.requireNonNull(assetName));
             return this;
         }
 
-        public Builder inputs(Input<List<String>> inputs) {
+        public Builder inputs(Output<List<String>> inputs) {
             this.inputs = Objects.requireNonNull(inputs);
             return this;
         }
 
         public Builder inputs(List<String> inputs) {
-            this.inputs = Input.of(Objects.requireNonNull(inputs));
+            this.inputs = Output.of(Objects.requireNonNull(inputs));
             return this;
         }
 
-        public Builder name(Input<String> name) {
+        public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(String name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder odataType(Input<String> odataType) {
+        public Builder odataType(Output<String> odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
 
         public Builder odataType(String odataType) {
-            this.odataType = Input.of(Objects.requireNonNull(odataType));
+            this.odataType = Output.of(Objects.requireNonNull(odataType));
             return this;
         }
         public MediaGraphAssetSinkArgs build() {

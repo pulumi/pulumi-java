@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.hdinsight.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class DataDisksGroupsArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="disksPerNode")
-      private final @Nullable Input<Integer> disksPerNode;
+      private final @Nullable Output<Integer> disksPerNode;
 
-    public Input<Integer> getDisksPerNode() {
-        return this.disksPerNode == null ? Input.empty() : this.disksPerNode;
+    public Output<Integer> getDisksPerNode() {
+        return this.disksPerNode == null ? Output.empty() : this.disksPerNode;
     }
 
-    public DataDisksGroupsArgs(@Nullable Input<Integer> disksPerNode) {
+    public DataDisksGroupsArgs(@Nullable Output<Integer> disksPerNode) {
         this.disksPerNode = disksPerNode;
     }
 
     private DataDisksGroupsArgs() {
-        this.disksPerNode = Input.empty();
+        this.disksPerNode = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class DataDisksGroupsArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> disksPerNode;
+        private @Nullable Output<Integer> disksPerNode;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class DataDisksGroupsArgs extends io.pulumi.resources.ResourceArgs 
     	      this.disksPerNode = defaults.disksPerNode;
         }
 
-        public Builder disksPerNode(@Nullable Input<Integer> disksPerNode) {
+        public Builder disksPerNode(@Nullable Output<Integer> disksPerNode) {
             this.disksPerNode = disksPerNode;
             return this;
         }
 
         public Builder disksPerNode(@Nullable Integer disksPerNode) {
-            this.disksPerNode = Input.ofNullable(disksPerNode);
+            this.disksPerNode = Output.ofNullable(disksPerNode);
             return this;
         }
         public DataDisksGroupsArgs build() {

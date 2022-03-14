@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.deploymentmanager;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -20,10 +20,10 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -31,9 +31,9 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -42,10 +42,10 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serviceName")
-      private final @Nullable Input<String> serviceName;
+      private final @Nullable Output<String> serviceName;
 
-    public Input<String> getServiceName() {
-        return this.serviceName == null ? Input.empty() : this.serviceName;
+    public Output<String> getServiceName() {
+        return this.serviceName == null ? Output.empty() : this.serviceName;
     }
 
     /**
@@ -53,9 +53,9 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serviceTopologyName", required=true)
-      private final Input<String> serviceTopologyName;
+      private final Output<String> serviceTopologyName;
 
-    public Input<String> getServiceTopologyName() {
+    public Output<String> getServiceTopologyName() {
         return this.serviceTopologyName;
     }
 
@@ -64,10 +64,10 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -75,9 +75,9 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="targetLocation", required=true)
-      private final Input<String> targetLocation;
+      private final Output<String> targetLocation;
 
-    public Input<String> getTargetLocation() {
+    public Output<String> getTargetLocation() {
         return this.targetLocation;
     }
 
@@ -86,20 +86,20 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="targetSubscriptionId", required=true)
-      private final Input<String> targetSubscriptionId;
+      private final Output<String> targetSubscriptionId;
 
-    public Input<String> getTargetSubscriptionId() {
+    public Output<String> getTargetSubscriptionId() {
         return this.targetSubscriptionId;
     }
 
     public ServiceArgs(
-        @Nullable Input<String> location,
-        Input<String> resourceGroupName,
-        @Nullable Input<String> serviceName,
-        Input<String> serviceTopologyName,
-        @Nullable Input<Map<String,String>> tags,
-        Input<String> targetLocation,
-        Input<String> targetSubscriptionId) {
+        @Nullable Output<String> location,
+        Output<String> resourceGroupName,
+        @Nullable Output<String> serviceName,
+        Output<String> serviceTopologyName,
+        @Nullable Output<Map<String,String>> tags,
+        Output<String> targetLocation,
+        Output<String> targetSubscriptionId) {
         this.location = location;
         this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
         this.serviceName = serviceName;
@@ -110,13 +110,13 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ServiceArgs() {
-        this.location = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.serviceName = Input.empty();
-        this.serviceTopologyName = Input.empty();
-        this.tags = Input.empty();
-        this.targetLocation = Input.empty();
-        this.targetSubscriptionId = Input.empty();
+        this.location = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.serviceName = Output.empty();
+        this.serviceTopologyName = Output.empty();
+        this.tags = Output.empty();
+        this.targetLocation = Output.empty();
+        this.targetSubscriptionId = Output.empty();
     }
 
     public static Builder builder() {
@@ -128,13 +128,13 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> location;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<String> serviceName;
-        private Input<String> serviceTopologyName;
-        private @Nullable Input<Map<String,String>> tags;
-        private Input<String> targetLocation;
-        private Input<String> targetSubscriptionId;
+        private @Nullable Output<String> location;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<String> serviceName;
+        private Output<String> serviceTopologyName;
+        private @Nullable Output<Map<String,String>> tags;
+        private Output<String> targetLocation;
+        private Output<String> targetSubscriptionId;
 
         public Builder() {
     	      // Empty
@@ -151,73 +151,73 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
     	      this.targetSubscriptionId = defaults.targetSubscriptionId;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder serviceName(@Nullable Input<String> serviceName) {
+        public Builder serviceName(@Nullable Output<String> serviceName) {
             this.serviceName = serviceName;
             return this;
         }
 
         public Builder serviceName(@Nullable String serviceName) {
-            this.serviceName = Input.ofNullable(serviceName);
+            this.serviceName = Output.ofNullable(serviceName);
             return this;
         }
 
-        public Builder serviceTopologyName(Input<String> serviceTopologyName) {
+        public Builder serviceTopologyName(Output<String> serviceTopologyName) {
             this.serviceTopologyName = Objects.requireNonNull(serviceTopologyName);
             return this;
         }
 
         public Builder serviceTopologyName(String serviceTopologyName) {
-            this.serviceTopologyName = Input.of(Objects.requireNonNull(serviceTopologyName));
+            this.serviceTopologyName = Output.of(Objects.requireNonNull(serviceTopologyName));
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder targetLocation(Input<String> targetLocation) {
+        public Builder targetLocation(Output<String> targetLocation) {
             this.targetLocation = Objects.requireNonNull(targetLocation);
             return this;
         }
 
         public Builder targetLocation(String targetLocation) {
-            this.targetLocation = Input.of(Objects.requireNonNull(targetLocation));
+            this.targetLocation = Output.of(Objects.requireNonNull(targetLocation));
             return this;
         }
 
-        public Builder targetSubscriptionId(Input<String> targetSubscriptionId) {
+        public Builder targetSubscriptionId(Output<String> targetSubscriptionId) {
             this.targetSubscriptionId = Objects.requireNonNull(targetSubscriptionId);
             return this;
         }
 
         public Builder targetSubscriptionId(String targetSubscriptionId) {
-            this.targetSubscriptionId = Input.of(Objects.requireNonNull(targetSubscriptionId));
+            this.targetSubscriptionId = Output.of(Objects.requireNonNull(targetSubscriptionId));
             return this;
         }
         public ServiceArgs build() {

@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.s3.inputs;
 
 import io.pulumi.awsnative.s3.enums.BucketTieringAccessTier;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
@@ -19,9 +19,9 @@ public final class BucketTieringArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="accessTier", required=true)
-      private final Input<BucketTieringAccessTier> accessTier;
+      private final Output<BucketTieringAccessTier> accessTier;
 
-    public Input<BucketTieringAccessTier> getAccessTier() {
+    public Output<BucketTieringAccessTier> getAccessTier() {
         return this.accessTier;
     }
 
@@ -30,22 +30,22 @@ public final class BucketTieringArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="days", required=true)
-      private final Input<Integer> days;
+      private final Output<Integer> days;
 
-    public Input<Integer> getDays() {
+    public Output<Integer> getDays() {
         return this.days;
     }
 
     public BucketTieringArgs(
-        Input<BucketTieringAccessTier> accessTier,
-        Input<Integer> days) {
+        Output<BucketTieringAccessTier> accessTier,
+        Output<Integer> days) {
         this.accessTier = Objects.requireNonNull(accessTier, "expected parameter 'accessTier' to be non-null");
         this.days = Objects.requireNonNull(days, "expected parameter 'days' to be non-null");
     }
 
     private BucketTieringArgs() {
-        this.accessTier = Input.empty();
-        this.days = Input.empty();
+        this.accessTier = Output.empty();
+        this.days = Output.empty();
     }
 
     public static Builder builder() {
@@ -57,8 +57,8 @@ public final class BucketTieringArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<BucketTieringAccessTier> accessTier;
-        private Input<Integer> days;
+        private Output<BucketTieringAccessTier> accessTier;
+        private Output<Integer> days;
 
         public Builder() {
     	      // Empty
@@ -70,23 +70,23 @@ public final class BucketTieringArgs extends io.pulumi.resources.ResourceArgs {
     	      this.days = defaults.days;
         }
 
-        public Builder accessTier(Input<BucketTieringAccessTier> accessTier) {
+        public Builder accessTier(Output<BucketTieringAccessTier> accessTier) {
             this.accessTier = Objects.requireNonNull(accessTier);
             return this;
         }
 
         public Builder accessTier(BucketTieringAccessTier accessTier) {
-            this.accessTier = Input.of(Objects.requireNonNull(accessTier));
+            this.accessTier = Output.of(Objects.requireNonNull(accessTier));
             return this;
         }
 
-        public Builder days(Input<Integer> days) {
+        public Builder days(Output<Integer> days) {
             this.days = Objects.requireNonNull(days);
             return this;
         }
 
         public Builder days(Integer days) {
-            this.days = Input.of(Objects.requireNonNull(days));
+            this.days = Output.of(Objects.requireNonNull(days));
             return this;
         }
         public BucketTieringArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.emrcontainers.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -14,18 +14,18 @@ public final class VirtualClusterEksInfoArgs extends io.pulumi.resources.Resourc
     public static final VirtualClusterEksInfoArgs Empty = new VirtualClusterEksInfoArgs();
 
     @InputImport(name="namespace", required=true)
-      private final Input<String> namespace;
+      private final Output<String> namespace;
 
-    public Input<String> getNamespace() {
+    public Output<String> getNamespace() {
         return this.namespace;
     }
 
-    public VirtualClusterEksInfoArgs(Input<String> namespace) {
+    public VirtualClusterEksInfoArgs(Output<String> namespace) {
         this.namespace = Objects.requireNonNull(namespace, "expected parameter 'namespace' to be non-null");
     }
 
     private VirtualClusterEksInfoArgs() {
-        this.namespace = Input.empty();
+        this.namespace = Output.empty();
     }
 
     public static Builder builder() {
@@ -37,7 +37,7 @@ public final class VirtualClusterEksInfoArgs extends io.pulumi.resources.Resourc
     }
 
     public static final class Builder {
-        private Input<String> namespace;
+        private Output<String> namespace;
 
         public Builder() {
     	      // Empty
@@ -48,13 +48,13 @@ public final class VirtualClusterEksInfoArgs extends io.pulumi.resources.Resourc
     	      this.namespace = defaults.namespace;
         }
 
-        public Builder namespace(Input<String> namespace) {
+        public Builder namespace(Output<String> namespace) {
             this.namespace = Objects.requireNonNull(namespace);
             return this;
         }
 
         public Builder namespace(String namespace) {
-            this.namespace = Input.of(Objects.requireNonNull(namespace));
+            this.namespace = Output.of(Objects.requireNonNull(namespace));
             return this;
         }
         public VirtualClusterEksInfoArgs build() {

@@ -3,7 +3,6 @@
 
 package io.pulumi.gcp.compute;
 
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -199,14 +198,14 @@ public class MangedSslCertificate extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public MangedSslCertificate(String name, @Nullable MangedSslCertificateArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:compute/mangedSslCertificate:MangedSslCertificate", name, args == null ? MangedSslCertificateArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("gcp:compute/mangedSslCertificate:MangedSslCertificate", name, args == null ? MangedSslCertificateArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private MangedSslCertificate(String name, Input<String> id, @Nullable MangedSslCertificateState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private MangedSslCertificate(String name, Output<String> id, @Nullable MangedSslCertificateState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("gcp:compute/mangedSslCertificate:MangedSslCertificate", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -222,7 +221,7 @@ public class MangedSslCertificate extends io.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static MangedSslCertificate get(String name, Input<String> id, @Nullable MangedSslCertificateState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static MangedSslCertificate get(String name, Output<String> id, @Nullable MangedSslCertificateState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new MangedSslCertificate(name, id, state, options);
     }
 }

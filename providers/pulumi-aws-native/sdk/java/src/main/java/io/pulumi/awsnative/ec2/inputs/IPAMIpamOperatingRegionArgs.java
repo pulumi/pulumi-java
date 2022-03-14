@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.ec2.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -22,18 +22,18 @@ public final class IPAMIpamOperatingRegionArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="regionName", required=true)
-      private final Input<String> regionName;
+      private final Output<String> regionName;
 
-    public Input<String> getRegionName() {
+    public Output<String> getRegionName() {
         return this.regionName;
     }
 
-    public IPAMIpamOperatingRegionArgs(Input<String> regionName) {
+    public IPAMIpamOperatingRegionArgs(Output<String> regionName) {
         this.regionName = Objects.requireNonNull(regionName, "expected parameter 'regionName' to be non-null");
     }
 
     private IPAMIpamOperatingRegionArgs() {
-        this.regionName = Input.empty();
+        this.regionName = Output.empty();
     }
 
     public static Builder builder() {
@@ -45,7 +45,7 @@ public final class IPAMIpamOperatingRegionArgs extends io.pulumi.resources.Resou
     }
 
     public static final class Builder {
-        private Input<String> regionName;
+        private Output<String> regionName;
 
         public Builder() {
     	      // Empty
@@ -56,13 +56,13 @@ public final class IPAMIpamOperatingRegionArgs extends io.pulumi.resources.Resou
     	      this.regionName = defaults.regionName;
         }
 
-        public Builder regionName(Input<String> regionName) {
+        public Builder regionName(Output<String> regionName) {
             this.regionName = Objects.requireNonNull(regionName);
             return this;
         }
 
         public Builder regionName(String regionName) {
-            this.regionName = Input.of(Objects.requireNonNull(regionName));
+            this.regionName = Output.of(Objects.requireNonNull(regionName));
             return this;
         }
         public IPAMIpamOperatingRegionArgs build() {

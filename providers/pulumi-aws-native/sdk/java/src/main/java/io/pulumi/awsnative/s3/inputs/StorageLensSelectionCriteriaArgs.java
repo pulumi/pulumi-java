@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.s3.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.Integer;
@@ -25,10 +25,10 @@ public final class StorageLensSelectionCriteriaArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="delimiter")
-      private final @Nullable Input<String> delimiter;
+      private final @Nullable Output<String> delimiter;
 
-    public Input<String> getDelimiter() {
-        return this.delimiter == null ? Input.empty() : this.delimiter;
+    public Output<String> getDelimiter() {
+        return this.delimiter == null ? Output.empty() : this.delimiter;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class StorageLensSelectionCriteriaArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="maxDepth")
-      private final @Nullable Input<Integer> maxDepth;
+      private final @Nullable Output<Integer> maxDepth;
 
-    public Input<Integer> getMaxDepth() {
-        return this.maxDepth == null ? Input.empty() : this.maxDepth;
+    public Output<Integer> getMaxDepth() {
+        return this.maxDepth == null ? Output.empty() : this.maxDepth;
     }
 
     /**
@@ -47,25 +47,25 @@ public final class StorageLensSelectionCriteriaArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="minStorageBytesPercentage")
-      private final @Nullable Input<Double> minStorageBytesPercentage;
+      private final @Nullable Output<Double> minStorageBytesPercentage;
 
-    public Input<Double> getMinStorageBytesPercentage() {
-        return this.minStorageBytesPercentage == null ? Input.empty() : this.minStorageBytesPercentage;
+    public Output<Double> getMinStorageBytesPercentage() {
+        return this.minStorageBytesPercentage == null ? Output.empty() : this.minStorageBytesPercentage;
     }
 
     public StorageLensSelectionCriteriaArgs(
-        @Nullable Input<String> delimiter,
-        @Nullable Input<Integer> maxDepth,
-        @Nullable Input<Double> minStorageBytesPercentage) {
+        @Nullable Output<String> delimiter,
+        @Nullable Output<Integer> maxDepth,
+        @Nullable Output<Double> minStorageBytesPercentage) {
         this.delimiter = delimiter;
         this.maxDepth = maxDepth;
         this.minStorageBytesPercentage = minStorageBytesPercentage;
     }
 
     private StorageLensSelectionCriteriaArgs() {
-        this.delimiter = Input.empty();
-        this.maxDepth = Input.empty();
-        this.minStorageBytesPercentage = Input.empty();
+        this.delimiter = Output.empty();
+        this.maxDepth = Output.empty();
+        this.minStorageBytesPercentage = Output.empty();
     }
 
     public static Builder builder() {
@@ -77,9 +77,9 @@ public final class StorageLensSelectionCriteriaArgs extends io.pulumi.resources.
     }
 
     public static final class Builder {
-        private @Nullable Input<String> delimiter;
-        private @Nullable Input<Integer> maxDepth;
-        private @Nullable Input<Double> minStorageBytesPercentage;
+        private @Nullable Output<String> delimiter;
+        private @Nullable Output<Integer> maxDepth;
+        private @Nullable Output<Double> minStorageBytesPercentage;
 
         public Builder() {
     	      // Empty
@@ -92,33 +92,33 @@ public final class StorageLensSelectionCriteriaArgs extends io.pulumi.resources.
     	      this.minStorageBytesPercentage = defaults.minStorageBytesPercentage;
         }
 
-        public Builder delimiter(@Nullable Input<String> delimiter) {
+        public Builder delimiter(@Nullable Output<String> delimiter) {
             this.delimiter = delimiter;
             return this;
         }
 
         public Builder delimiter(@Nullable String delimiter) {
-            this.delimiter = Input.ofNullable(delimiter);
+            this.delimiter = Output.ofNullable(delimiter);
             return this;
         }
 
-        public Builder maxDepth(@Nullable Input<Integer> maxDepth) {
+        public Builder maxDepth(@Nullable Output<Integer> maxDepth) {
             this.maxDepth = maxDepth;
             return this;
         }
 
         public Builder maxDepth(@Nullable Integer maxDepth) {
-            this.maxDepth = Input.ofNullable(maxDepth);
+            this.maxDepth = Output.ofNullable(maxDepth);
             return this;
         }
 
-        public Builder minStorageBytesPercentage(@Nullable Input<Double> minStorageBytesPercentage) {
+        public Builder minStorageBytesPercentage(@Nullable Output<Double> minStorageBytesPercentage) {
             this.minStorageBytesPercentage = minStorageBytesPercentage;
             return this;
         }
 
         public Builder minStorageBytesPercentage(@Nullable Double minStorageBytesPercentage) {
-            this.minStorageBytesPercentage = Input.ofNullable(minStorageBytesPercentage);
+            this.minStorageBytesPercentage = Output.ofNullable(minStorageBytesPercentage);
             return this;
         }
         public StorageLensSelectionCriteriaArgs build() {

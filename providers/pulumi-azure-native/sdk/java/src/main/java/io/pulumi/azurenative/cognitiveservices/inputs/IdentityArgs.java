@@ -5,7 +5,7 @@ package io.pulumi.azurenative.cognitiveservices.inputs;
 
 import io.pulumi.azurenative.cognitiveservices.enums.IdentityType;
 import io.pulumi.azurenative.cognitiveservices.inputs.UserAssignedIdentityArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -26,10 +26,10 @@ public final class IdentityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type")
-      private final @Nullable Input<IdentityType> type;
+      private final @Nullable Output<IdentityType> type;
 
-    public Input<IdentityType> getType() {
-        return this.type == null ? Input.empty() : this.type;
+    public Output<IdentityType> getType() {
+        return this.type == null ? Output.empty() : this.type;
     }
 
     /**
@@ -37,22 +37,22 @@ public final class IdentityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="userAssignedIdentities")
-      private final @Nullable Input<Map<String,UserAssignedIdentityArgs>> userAssignedIdentities;
+      private final @Nullable Output<Map<String,UserAssignedIdentityArgs>> userAssignedIdentities;
 
-    public Input<Map<String,UserAssignedIdentityArgs>> getUserAssignedIdentities() {
-        return this.userAssignedIdentities == null ? Input.empty() : this.userAssignedIdentities;
+    public Output<Map<String,UserAssignedIdentityArgs>> getUserAssignedIdentities() {
+        return this.userAssignedIdentities == null ? Output.empty() : this.userAssignedIdentities;
     }
 
     public IdentityArgs(
-        @Nullable Input<IdentityType> type,
-        @Nullable Input<Map<String,UserAssignedIdentityArgs>> userAssignedIdentities) {
+        @Nullable Output<IdentityType> type,
+        @Nullable Output<Map<String,UserAssignedIdentityArgs>> userAssignedIdentities) {
         this.type = type;
         this.userAssignedIdentities = userAssignedIdentities;
     }
 
     private IdentityArgs() {
-        this.type = Input.empty();
-        this.userAssignedIdentities = Input.empty();
+        this.type = Output.empty();
+        this.userAssignedIdentities = Output.empty();
     }
 
     public static Builder builder() {
@@ -64,8 +64,8 @@ public final class IdentityArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<IdentityType> type;
-        private @Nullable Input<Map<String,UserAssignedIdentityArgs>> userAssignedIdentities;
+        private @Nullable Output<IdentityType> type;
+        private @Nullable Output<Map<String,UserAssignedIdentityArgs>> userAssignedIdentities;
 
         public Builder() {
     	      // Empty
@@ -77,23 +77,23 @@ public final class IdentityArgs extends io.pulumi.resources.ResourceArgs {
     	      this.userAssignedIdentities = defaults.userAssignedIdentities;
         }
 
-        public Builder type(@Nullable Input<IdentityType> type) {
+        public Builder type(@Nullable Output<IdentityType> type) {
             this.type = type;
             return this;
         }
 
         public Builder type(@Nullable IdentityType type) {
-            this.type = Input.ofNullable(type);
+            this.type = Output.ofNullable(type);
             return this;
         }
 
-        public Builder userAssignedIdentities(@Nullable Input<Map<String,UserAssignedIdentityArgs>> userAssignedIdentities) {
+        public Builder userAssignedIdentities(@Nullable Output<Map<String,UserAssignedIdentityArgs>> userAssignedIdentities) {
             this.userAssignedIdentities = userAssignedIdentities;
             return this;
         }
 
         public Builder userAssignedIdentities(@Nullable Map<String,UserAssignedIdentityArgs> userAssignedIdentities) {
-            this.userAssignedIdentities = Input.ofNullable(userAssignedIdentities);
+            this.userAssignedIdentities = Output.ofNullable(userAssignedIdentities);
             return this;
         }
         public IdentityArgs build() {

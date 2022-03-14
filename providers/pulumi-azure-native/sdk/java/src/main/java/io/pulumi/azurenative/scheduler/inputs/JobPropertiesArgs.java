@@ -6,7 +6,7 @@ package io.pulumi.azurenative.scheduler.inputs;
 import io.pulumi.azurenative.scheduler.enums.JobState;
 import io.pulumi.azurenative.scheduler.inputs.JobActionArgs;
 import io.pulumi.azurenative.scheduler.inputs.JobRecurrenceArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -22,10 +22,10 @@ public final class JobPropertiesArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="action")
-      private final @Nullable Input<JobActionArgs> action;
+      private final @Nullable Output<JobActionArgs> action;
 
-    public Input<JobActionArgs> getAction() {
-        return this.action == null ? Input.empty() : this.action;
+    public Output<JobActionArgs> getAction() {
+        return this.action == null ? Output.empty() : this.action;
     }
 
     /**
@@ -33,10 +33,10 @@ public final class JobPropertiesArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="recurrence")
-      private final @Nullable Input<JobRecurrenceArgs> recurrence;
+      private final @Nullable Output<JobRecurrenceArgs> recurrence;
 
-    public Input<JobRecurrenceArgs> getRecurrence() {
-        return this.recurrence == null ? Input.empty() : this.recurrence;
+    public Output<JobRecurrenceArgs> getRecurrence() {
+        return this.recurrence == null ? Output.empty() : this.recurrence;
     }
 
     /**
@@ -44,10 +44,10 @@ public final class JobPropertiesArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="startTime")
-      private final @Nullable Input<String> startTime;
+      private final @Nullable Output<String> startTime;
 
-    public Input<String> getStartTime() {
-        return this.startTime == null ? Input.empty() : this.startTime;
+    public Output<String> getStartTime() {
+        return this.startTime == null ? Output.empty() : this.startTime;
     }
 
     /**
@@ -55,17 +55,17 @@ public final class JobPropertiesArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="state")
-      private final @Nullable Input<JobState> state;
+      private final @Nullable Output<JobState> state;
 
-    public Input<JobState> getState() {
-        return this.state == null ? Input.empty() : this.state;
+    public Output<JobState> getState() {
+        return this.state == null ? Output.empty() : this.state;
     }
 
     public JobPropertiesArgs(
-        @Nullable Input<JobActionArgs> action,
-        @Nullable Input<JobRecurrenceArgs> recurrence,
-        @Nullable Input<String> startTime,
-        @Nullable Input<JobState> state) {
+        @Nullable Output<JobActionArgs> action,
+        @Nullable Output<JobRecurrenceArgs> recurrence,
+        @Nullable Output<String> startTime,
+        @Nullable Output<JobState> state) {
         this.action = action;
         this.recurrence = recurrence;
         this.startTime = startTime;
@@ -73,10 +73,10 @@ public final class JobPropertiesArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private JobPropertiesArgs() {
-        this.action = Input.empty();
-        this.recurrence = Input.empty();
-        this.startTime = Input.empty();
-        this.state = Input.empty();
+        this.action = Output.empty();
+        this.recurrence = Output.empty();
+        this.startTime = Output.empty();
+        this.state = Output.empty();
     }
 
     public static Builder builder() {
@@ -88,10 +88,10 @@ public final class JobPropertiesArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<JobActionArgs> action;
-        private @Nullable Input<JobRecurrenceArgs> recurrence;
-        private @Nullable Input<String> startTime;
-        private @Nullable Input<JobState> state;
+        private @Nullable Output<JobActionArgs> action;
+        private @Nullable Output<JobRecurrenceArgs> recurrence;
+        private @Nullable Output<String> startTime;
+        private @Nullable Output<JobState> state;
 
         public Builder() {
     	      // Empty
@@ -105,43 +105,43 @@ public final class JobPropertiesArgs extends io.pulumi.resources.ResourceArgs {
     	      this.state = defaults.state;
         }
 
-        public Builder action(@Nullable Input<JobActionArgs> action) {
+        public Builder action(@Nullable Output<JobActionArgs> action) {
             this.action = action;
             return this;
         }
 
         public Builder action(@Nullable JobActionArgs action) {
-            this.action = Input.ofNullable(action);
+            this.action = Output.ofNullable(action);
             return this;
         }
 
-        public Builder recurrence(@Nullable Input<JobRecurrenceArgs> recurrence) {
+        public Builder recurrence(@Nullable Output<JobRecurrenceArgs> recurrence) {
             this.recurrence = recurrence;
             return this;
         }
 
         public Builder recurrence(@Nullable JobRecurrenceArgs recurrence) {
-            this.recurrence = Input.ofNullable(recurrence);
+            this.recurrence = Output.ofNullable(recurrence);
             return this;
         }
 
-        public Builder startTime(@Nullable Input<String> startTime) {
+        public Builder startTime(@Nullable Output<String> startTime) {
             this.startTime = startTime;
             return this;
         }
 
         public Builder startTime(@Nullable String startTime) {
-            this.startTime = Input.ofNullable(startTime);
+            this.startTime = Output.ofNullable(startTime);
             return this;
         }
 
-        public Builder state(@Nullable Input<JobState> state) {
+        public Builder state(@Nullable Output<JobState> state) {
             this.state = state;
             return this;
         }
 
         public Builder state(@Nullable JobState state) {
-            this.state = Input.ofNullable(state);
+            this.state = Output.ofNullable(state);
             return this;
         }
         public JobPropertiesArgs build() {

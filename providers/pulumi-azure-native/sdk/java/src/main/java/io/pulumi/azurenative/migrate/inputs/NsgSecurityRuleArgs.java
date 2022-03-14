@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.migrate.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -25,10 +25,10 @@ public final class NsgSecurityRuleArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="access")
-      private final @Nullable Input<String> access;
+      private final @Nullable Output<String> access;
 
-    public Input<String> getAccess() {
-        return this.access == null ? Input.empty() : this.access;
+    public Output<String> getAccess() {
+        return this.access == null ? Output.empty() : this.access;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class NsgSecurityRuleArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -49,10 +49,10 @@ public final class NsgSecurityRuleArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="destinationAddressPrefix")
-      private final @Nullable Input<String> destinationAddressPrefix;
+      private final @Nullable Output<String> destinationAddressPrefix;
 
-    public Input<String> getDestinationAddressPrefix() {
-        return this.destinationAddressPrefix == null ? Input.empty() : this.destinationAddressPrefix;
+    public Output<String> getDestinationAddressPrefix() {
+        return this.destinationAddressPrefix == null ? Output.empty() : this.destinationAddressPrefix;
     }
 
     /**
@@ -61,10 +61,10 @@ public final class NsgSecurityRuleArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="destinationPortRange")
-      private final @Nullable Input<String> destinationPortRange;
+      private final @Nullable Output<String> destinationPortRange;
 
-    public Input<String> getDestinationPortRange() {
-        return this.destinationPortRange == null ? Input.empty() : this.destinationPortRange;
+    public Output<String> getDestinationPortRange() {
+        return this.destinationPortRange == null ? Output.empty() : this.destinationPortRange;
     }
 
     /**
@@ -73,10 +73,10 @@ public final class NsgSecurityRuleArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="direction")
-      private final @Nullable Input<String> direction;
+      private final @Nullable Output<String> direction;
 
-    public Input<String> getDirection() {
-        return this.direction == null ? Input.empty() : this.direction;
+    public Output<String> getDirection() {
+        return this.direction == null ? Output.empty() : this.direction;
     }
 
     /**
@@ -84,10 +84,10 @@ public final class NsgSecurityRuleArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -97,10 +97,10 @@ public final class NsgSecurityRuleArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="priority")
-      private final @Nullable Input<Integer> priority;
+      private final @Nullable Output<Integer> priority;
 
-    public Input<Integer> getPriority() {
-        return this.priority == null ? Input.empty() : this.priority;
+    public Output<Integer> getPriority() {
+        return this.priority == null ? Output.empty() : this.priority;
     }
 
     /**
@@ -108,10 +108,10 @@ public final class NsgSecurityRuleArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="protocol")
-      private final @Nullable Input<String> protocol;
+      private final @Nullable Output<String> protocol;
 
-    public Input<String> getProtocol() {
-        return this.protocol == null ? Input.empty() : this.protocol;
+    public Output<String> getProtocol() {
+        return this.protocol == null ? Output.empty() : this.protocol;
     }
 
     /**
@@ -122,10 +122,10 @@ public final class NsgSecurityRuleArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="sourceAddressPrefix")
-      private final @Nullable Input<String> sourceAddressPrefix;
+      private final @Nullable Output<String> sourceAddressPrefix;
 
-    public Input<String> getSourceAddressPrefix() {
-        return this.sourceAddressPrefix == null ? Input.empty() : this.sourceAddressPrefix;
+    public Output<String> getSourceAddressPrefix() {
+        return this.sourceAddressPrefix == null ? Output.empty() : this.sourceAddressPrefix;
     }
 
     /**
@@ -134,23 +134,23 @@ public final class NsgSecurityRuleArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="sourcePortRange")
-      private final @Nullable Input<String> sourcePortRange;
+      private final @Nullable Output<String> sourcePortRange;
 
-    public Input<String> getSourcePortRange() {
-        return this.sourcePortRange == null ? Input.empty() : this.sourcePortRange;
+    public Output<String> getSourcePortRange() {
+        return this.sourcePortRange == null ? Output.empty() : this.sourcePortRange;
     }
 
     public NsgSecurityRuleArgs(
-        @Nullable Input<String> access,
-        @Nullable Input<String> description,
-        @Nullable Input<String> destinationAddressPrefix,
-        @Nullable Input<String> destinationPortRange,
-        @Nullable Input<String> direction,
-        @Nullable Input<String> name,
-        @Nullable Input<Integer> priority,
-        @Nullable Input<String> protocol,
-        @Nullable Input<String> sourceAddressPrefix,
-        @Nullable Input<String> sourcePortRange) {
+        @Nullable Output<String> access,
+        @Nullable Output<String> description,
+        @Nullable Output<String> destinationAddressPrefix,
+        @Nullable Output<String> destinationPortRange,
+        @Nullable Output<String> direction,
+        @Nullable Output<String> name,
+        @Nullable Output<Integer> priority,
+        @Nullable Output<String> protocol,
+        @Nullable Output<String> sourceAddressPrefix,
+        @Nullable Output<String> sourcePortRange) {
         this.access = access;
         this.description = description;
         this.destinationAddressPrefix = destinationAddressPrefix;
@@ -164,16 +164,16 @@ public final class NsgSecurityRuleArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private NsgSecurityRuleArgs() {
-        this.access = Input.empty();
-        this.description = Input.empty();
-        this.destinationAddressPrefix = Input.empty();
-        this.destinationPortRange = Input.empty();
-        this.direction = Input.empty();
-        this.name = Input.empty();
-        this.priority = Input.empty();
-        this.protocol = Input.empty();
-        this.sourceAddressPrefix = Input.empty();
-        this.sourcePortRange = Input.empty();
+        this.access = Output.empty();
+        this.description = Output.empty();
+        this.destinationAddressPrefix = Output.empty();
+        this.destinationPortRange = Output.empty();
+        this.direction = Output.empty();
+        this.name = Output.empty();
+        this.priority = Output.empty();
+        this.protocol = Output.empty();
+        this.sourceAddressPrefix = Output.empty();
+        this.sourcePortRange = Output.empty();
     }
 
     public static Builder builder() {
@@ -185,16 +185,16 @@ public final class NsgSecurityRuleArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private @Nullable Input<String> access;
-        private @Nullable Input<String> description;
-        private @Nullable Input<String> destinationAddressPrefix;
-        private @Nullable Input<String> destinationPortRange;
-        private @Nullable Input<String> direction;
-        private @Nullable Input<String> name;
-        private @Nullable Input<Integer> priority;
-        private @Nullable Input<String> protocol;
-        private @Nullable Input<String> sourceAddressPrefix;
-        private @Nullable Input<String> sourcePortRange;
+        private @Nullable Output<String> access;
+        private @Nullable Output<String> description;
+        private @Nullable Output<String> destinationAddressPrefix;
+        private @Nullable Output<String> destinationPortRange;
+        private @Nullable Output<String> direction;
+        private @Nullable Output<String> name;
+        private @Nullable Output<Integer> priority;
+        private @Nullable Output<String> protocol;
+        private @Nullable Output<String> sourceAddressPrefix;
+        private @Nullable Output<String> sourcePortRange;
 
         public Builder() {
     	      // Empty
@@ -214,103 +214,103 @@ public final class NsgSecurityRuleArgs extends io.pulumi.resources.ResourceArgs 
     	      this.sourcePortRange = defaults.sourcePortRange;
         }
 
-        public Builder access(@Nullable Input<String> access) {
+        public Builder access(@Nullable Output<String> access) {
             this.access = access;
             return this;
         }
 
         public Builder access(@Nullable String access) {
-            this.access = Input.ofNullable(access);
+            this.access = Output.ofNullable(access);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder destinationAddressPrefix(@Nullable Input<String> destinationAddressPrefix) {
+        public Builder destinationAddressPrefix(@Nullable Output<String> destinationAddressPrefix) {
             this.destinationAddressPrefix = destinationAddressPrefix;
             return this;
         }
 
         public Builder destinationAddressPrefix(@Nullable String destinationAddressPrefix) {
-            this.destinationAddressPrefix = Input.ofNullable(destinationAddressPrefix);
+            this.destinationAddressPrefix = Output.ofNullable(destinationAddressPrefix);
             return this;
         }
 
-        public Builder destinationPortRange(@Nullable Input<String> destinationPortRange) {
+        public Builder destinationPortRange(@Nullable Output<String> destinationPortRange) {
             this.destinationPortRange = destinationPortRange;
             return this;
         }
 
         public Builder destinationPortRange(@Nullable String destinationPortRange) {
-            this.destinationPortRange = Input.ofNullable(destinationPortRange);
+            this.destinationPortRange = Output.ofNullable(destinationPortRange);
             return this;
         }
 
-        public Builder direction(@Nullable Input<String> direction) {
+        public Builder direction(@Nullable Output<String> direction) {
             this.direction = direction;
             return this;
         }
 
         public Builder direction(@Nullable String direction) {
-            this.direction = Input.ofNullable(direction);
+            this.direction = Output.ofNullable(direction);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder priority(@Nullable Input<Integer> priority) {
+        public Builder priority(@Nullable Output<Integer> priority) {
             this.priority = priority;
             return this;
         }
 
         public Builder priority(@Nullable Integer priority) {
-            this.priority = Input.ofNullable(priority);
+            this.priority = Output.ofNullable(priority);
             return this;
         }
 
-        public Builder protocol(@Nullable Input<String> protocol) {
+        public Builder protocol(@Nullable Output<String> protocol) {
             this.protocol = protocol;
             return this;
         }
 
         public Builder protocol(@Nullable String protocol) {
-            this.protocol = Input.ofNullable(protocol);
+            this.protocol = Output.ofNullable(protocol);
             return this;
         }
 
-        public Builder sourceAddressPrefix(@Nullable Input<String> sourceAddressPrefix) {
+        public Builder sourceAddressPrefix(@Nullable Output<String> sourceAddressPrefix) {
             this.sourceAddressPrefix = sourceAddressPrefix;
             return this;
         }
 
         public Builder sourceAddressPrefix(@Nullable String sourceAddressPrefix) {
-            this.sourceAddressPrefix = Input.ofNullable(sourceAddressPrefix);
+            this.sourceAddressPrefix = Output.ofNullable(sourceAddressPrefix);
             return this;
         }
 
-        public Builder sourcePortRange(@Nullable Input<String> sourcePortRange) {
+        public Builder sourcePortRange(@Nullable Output<String> sourcePortRange) {
             this.sourcePortRange = sourcePortRange;
             return this;
         }
 
         public Builder sourcePortRange(@Nullable String sourcePortRange) {
-            this.sourcePortRange = Input.ofNullable(sourcePortRange);
+            this.sourcePortRange = Output.ofNullable(sourcePortRange);
             return this;
         }
         public NsgSecurityRuleArgs build() {

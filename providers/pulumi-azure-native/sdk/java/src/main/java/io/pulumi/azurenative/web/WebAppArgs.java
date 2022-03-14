@@ -10,7 +10,7 @@ import io.pulumi.azurenative.web.inputs.HostNameSslStateArgs;
 import io.pulumi.azurenative.web.inputs.HostingEnvironmentProfileArgs;
 import io.pulumi.azurenative.web.inputs.ManagedServiceIdentityArgs;
 import io.pulumi.azurenative.web.inputs.SiteConfigArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -30,10 +30,10 @@ public final class WebAppArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="clientAffinityEnabled")
-      private final @Nullable Input<Boolean> clientAffinityEnabled;
+      private final @Nullable Output<Boolean> clientAffinityEnabled;
 
-    public Input<Boolean> getClientAffinityEnabled() {
-        return this.clientAffinityEnabled == null ? Input.empty() : this.clientAffinityEnabled;
+    public Output<Boolean> getClientAffinityEnabled() {
+        return this.clientAffinityEnabled == null ? Output.empty() : this.clientAffinityEnabled;
     }
 
     /**
@@ -41,10 +41,10 @@ public final class WebAppArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="clientCertEnabled")
-      private final @Nullable Input<Boolean> clientCertEnabled;
+      private final @Nullable Output<Boolean> clientCertEnabled;
 
-    public Input<Boolean> getClientCertEnabled() {
-        return this.clientCertEnabled == null ? Input.empty() : this.clientCertEnabled;
+    public Output<Boolean> getClientCertEnabled() {
+        return this.clientCertEnabled == null ? Output.empty() : this.clientCertEnabled;
     }
 
     /**
@@ -52,10 +52,10 @@ public final class WebAppArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="clientCertExclusionPaths")
-      private final @Nullable Input<String> clientCertExclusionPaths;
+      private final @Nullable Output<String> clientCertExclusionPaths;
 
-    public Input<String> getClientCertExclusionPaths() {
-        return this.clientCertExclusionPaths == null ? Input.empty() : this.clientCertExclusionPaths;
+    public Output<String> getClientCertExclusionPaths() {
+        return this.clientCertExclusionPaths == null ? Output.empty() : this.clientCertExclusionPaths;
     }
 
     /**
@@ -66,10 +66,10 @@ public final class WebAppArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="clientCertMode")
-      private final @Nullable Input<ClientCertMode> clientCertMode;
+      private final @Nullable Output<ClientCertMode> clientCertMode;
 
-    public Input<ClientCertMode> getClientCertMode() {
-        return this.clientCertMode == null ? Input.empty() : this.clientCertMode;
+    public Output<ClientCertMode> getClientCertMode() {
+        return this.clientCertMode == null ? Output.empty() : this.clientCertMode;
     }
 
     /**
@@ -77,10 +77,10 @@ public final class WebAppArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="cloningInfo")
-      private final @Nullable Input<CloningInfoArgs> cloningInfo;
+      private final @Nullable Output<CloningInfoArgs> cloningInfo;
 
-    public Input<CloningInfoArgs> getCloningInfo() {
-        return this.cloningInfo == null ? Input.empty() : this.cloningInfo;
+    public Output<CloningInfoArgs> getCloningInfo() {
+        return this.cloningInfo == null ? Output.empty() : this.cloningInfo;
     }
 
     /**
@@ -88,10 +88,10 @@ public final class WebAppArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="containerSize")
-      private final @Nullable Input<Integer> containerSize;
+      private final @Nullable Output<Integer> containerSize;
 
-    public Input<Integer> getContainerSize() {
-        return this.containerSize == null ? Input.empty() : this.containerSize;
+    public Output<Integer> getContainerSize() {
+        return this.containerSize == null ? Output.empty() : this.containerSize;
     }
 
     /**
@@ -99,10 +99,10 @@ public final class WebAppArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="customDomainVerificationId")
-      private final @Nullable Input<String> customDomainVerificationId;
+      private final @Nullable Output<String> customDomainVerificationId;
 
-    public Input<String> getCustomDomainVerificationId() {
-        return this.customDomainVerificationId == null ? Input.empty() : this.customDomainVerificationId;
+    public Output<String> getCustomDomainVerificationId() {
+        return this.customDomainVerificationId == null ? Output.empty() : this.customDomainVerificationId;
     }
 
     /**
@@ -110,10 +110,10 @@ public final class WebAppArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dailyMemoryTimeQuota")
-      private final @Nullable Input<Integer> dailyMemoryTimeQuota;
+      private final @Nullable Output<Integer> dailyMemoryTimeQuota;
 
-    public Input<Integer> getDailyMemoryTimeQuota() {
-        return this.dailyMemoryTimeQuota == null ? Input.empty() : this.dailyMemoryTimeQuota;
+    public Output<Integer> getDailyMemoryTimeQuota() {
+        return this.dailyMemoryTimeQuota == null ? Output.empty() : this.dailyMemoryTimeQuota;
     }
 
     /**
@@ -121,10 +121,10 @@ public final class WebAppArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enabled")
-      private final @Nullable Input<Boolean> enabled;
+      private final @Nullable Output<Boolean> enabled;
 
-    public Input<Boolean> getEnabled() {
-        return this.enabled == null ? Input.empty() : this.enabled;
+    public Output<Boolean> getEnabled() {
+        return this.enabled == null ? Output.empty() : this.enabled;
     }
 
     /**
@@ -132,10 +132,10 @@ public final class WebAppArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="hostNameSslStates")
-      private final @Nullable Input<List<HostNameSslStateArgs>> hostNameSslStates;
+      private final @Nullable Output<List<HostNameSslStateArgs>> hostNameSslStates;
 
-    public Input<List<HostNameSslStateArgs>> getHostNameSslStates() {
-        return this.hostNameSslStates == null ? Input.empty() : this.hostNameSslStates;
+    public Output<List<HostNameSslStateArgs>> getHostNameSslStates() {
+        return this.hostNameSslStates == null ? Output.empty() : this.hostNameSslStates;
     }
 
     /**
@@ -144,10 +144,10 @@ public final class WebAppArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="hostNamesDisabled")
-      private final @Nullable Input<Boolean> hostNamesDisabled;
+      private final @Nullable Output<Boolean> hostNamesDisabled;
 
-    public Input<Boolean> getHostNamesDisabled() {
-        return this.hostNamesDisabled == null ? Input.empty() : this.hostNamesDisabled;
+    public Output<Boolean> getHostNamesDisabled() {
+        return this.hostNamesDisabled == null ? Output.empty() : this.hostNamesDisabled;
     }
 
     /**
@@ -155,10 +155,10 @@ public final class WebAppArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="hostingEnvironmentProfile")
-      private final @Nullable Input<HostingEnvironmentProfileArgs> hostingEnvironmentProfile;
+      private final @Nullable Output<HostingEnvironmentProfileArgs> hostingEnvironmentProfile;
 
-    public Input<HostingEnvironmentProfileArgs> getHostingEnvironmentProfile() {
-        return this.hostingEnvironmentProfile == null ? Input.empty() : this.hostingEnvironmentProfile;
+    public Output<HostingEnvironmentProfileArgs> getHostingEnvironmentProfile() {
+        return this.hostingEnvironmentProfile == null ? Output.empty() : this.hostingEnvironmentProfile;
     }
 
     /**
@@ -167,10 +167,10 @@ public final class WebAppArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="httpsOnly")
-      private final @Nullable Input<Boolean> httpsOnly;
+      private final @Nullable Output<Boolean> httpsOnly;
 
-    public Input<Boolean> getHttpsOnly() {
-        return this.httpsOnly == null ? Input.empty() : this.httpsOnly;
+    public Output<Boolean> getHttpsOnly() {
+        return this.httpsOnly == null ? Output.empty() : this.httpsOnly;
     }
 
     /**
@@ -178,10 +178,10 @@ public final class WebAppArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="hyperV")
-      private final @Nullable Input<Boolean> hyperV;
+      private final @Nullable Output<Boolean> hyperV;
 
-    public Input<Boolean> getHyperV() {
-        return this.hyperV == null ? Input.empty() : this.hyperV;
+    public Output<Boolean> getHyperV() {
+        return this.hyperV == null ? Output.empty() : this.hyperV;
     }
 
     /**
@@ -189,10 +189,10 @@ public final class WebAppArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="identity")
-      private final @Nullable Input<ManagedServiceIdentityArgs> identity;
+      private final @Nullable Output<ManagedServiceIdentityArgs> identity;
 
-    public Input<ManagedServiceIdentityArgs> getIdentity() {
-        return this.identity == null ? Input.empty() : this.identity;
+    public Output<ManagedServiceIdentityArgs> getIdentity() {
+        return this.identity == null ? Output.empty() : this.identity;
     }
 
     /**
@@ -200,10 +200,10 @@ public final class WebAppArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="isXenon")
-      private final @Nullable Input<Boolean> isXenon;
+      private final @Nullable Output<Boolean> isXenon;
 
-    public Input<Boolean> getIsXenon() {
-        return this.isXenon == null ? Input.empty() : this.isXenon;
+    public Output<Boolean> getIsXenon() {
+        return this.isXenon == null ? Output.empty() : this.isXenon;
     }
 
     /**
@@ -211,10 +211,10 @@ public final class WebAppArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="keyVaultReferenceIdentity")
-      private final @Nullable Input<String> keyVaultReferenceIdentity;
+      private final @Nullable Output<String> keyVaultReferenceIdentity;
 
-    public Input<String> getKeyVaultReferenceIdentity() {
-        return this.keyVaultReferenceIdentity == null ? Input.empty() : this.keyVaultReferenceIdentity;
+    public Output<String> getKeyVaultReferenceIdentity() {
+        return this.keyVaultReferenceIdentity == null ? Output.empty() : this.keyVaultReferenceIdentity;
     }
 
     /**
@@ -222,10 +222,10 @@ public final class WebAppArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kind")
-      private final @Nullable Input<String> kind;
+      private final @Nullable Output<String> kind;
 
-    public Input<String> getKind() {
-        return this.kind == null ? Input.empty() : this.kind;
+    public Output<String> getKind() {
+        return this.kind == null ? Output.empty() : this.kind;
     }
 
     /**
@@ -233,10 +233,10 @@ public final class WebAppArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -244,10 +244,10 @@ public final class WebAppArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -255,10 +255,10 @@ public final class WebAppArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="redundancyMode")
-      private final @Nullable Input<RedundancyMode> redundancyMode;
+      private final @Nullable Output<RedundancyMode> redundancyMode;
 
-    public Input<RedundancyMode> getRedundancyMode() {
-        return this.redundancyMode == null ? Input.empty() : this.redundancyMode;
+    public Output<RedundancyMode> getRedundancyMode() {
+        return this.redundancyMode == null ? Output.empty() : this.redundancyMode;
     }
 
     /**
@@ -266,10 +266,10 @@ public final class WebAppArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="reserved")
-      private final @Nullable Input<Boolean> reserved;
+      private final @Nullable Output<Boolean> reserved;
 
-    public Input<Boolean> getReserved() {
-        return this.reserved == null ? Input.empty() : this.reserved;
+    public Output<Boolean> getReserved() {
+        return this.reserved == null ? Output.empty() : this.reserved;
     }
 
     /**
@@ -277,9 +277,9 @@ public final class WebAppArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -288,10 +288,10 @@ public final class WebAppArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="scmSiteAlsoStopped")
-      private final @Nullable Input<Boolean> scmSiteAlsoStopped;
+      private final @Nullable Output<Boolean> scmSiteAlsoStopped;
 
-    public Input<Boolean> getScmSiteAlsoStopped() {
-        return this.scmSiteAlsoStopped == null ? Input.empty() : this.scmSiteAlsoStopped;
+    public Output<Boolean> getScmSiteAlsoStopped() {
+        return this.scmSiteAlsoStopped == null ? Output.empty() : this.scmSiteAlsoStopped;
     }
 
     /**
@@ -299,10 +299,10 @@ public final class WebAppArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serverFarmId")
-      private final @Nullable Input<String> serverFarmId;
+      private final @Nullable Output<String> serverFarmId;
 
-    public Input<String> getServerFarmId() {
-        return this.serverFarmId == null ? Input.empty() : this.serverFarmId;
+    public Output<String> getServerFarmId() {
+        return this.serverFarmId == null ? Output.empty() : this.serverFarmId;
     }
 
     /**
@@ -310,10 +310,10 @@ public final class WebAppArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="siteConfig")
-      private final @Nullable Input<SiteConfigArgs> siteConfig;
+      private final @Nullable Output<SiteConfigArgs> siteConfig;
 
-    public Input<SiteConfigArgs> getSiteConfig() {
-        return this.siteConfig == null ? Input.empty() : this.siteConfig;
+    public Output<SiteConfigArgs> getSiteConfig() {
+        return this.siteConfig == null ? Output.empty() : this.siteConfig;
     }
 
     /**
@@ -321,10 +321,10 @@ public final class WebAppArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="storageAccountRequired")
-      private final @Nullable Input<Boolean> storageAccountRequired;
+      private final @Nullable Output<Boolean> storageAccountRequired;
 
-    public Input<Boolean> getStorageAccountRequired() {
-        return this.storageAccountRequired == null ? Input.empty() : this.storageAccountRequired;
+    public Output<Boolean> getStorageAccountRequired() {
+        return this.storageAccountRequired == null ? Output.empty() : this.storageAccountRequired;
     }
 
     /**
@@ -332,10 +332,10 @@ public final class WebAppArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -344,42 +344,42 @@ public final class WebAppArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="virtualNetworkSubnetId")
-      private final @Nullable Input<String> virtualNetworkSubnetId;
+      private final @Nullable Output<String> virtualNetworkSubnetId;
 
-    public Input<String> getVirtualNetworkSubnetId() {
-        return this.virtualNetworkSubnetId == null ? Input.empty() : this.virtualNetworkSubnetId;
+    public Output<String> getVirtualNetworkSubnetId() {
+        return this.virtualNetworkSubnetId == null ? Output.empty() : this.virtualNetworkSubnetId;
     }
 
     public WebAppArgs(
-        @Nullable Input<Boolean> clientAffinityEnabled,
-        @Nullable Input<Boolean> clientCertEnabled,
-        @Nullable Input<String> clientCertExclusionPaths,
-        @Nullable Input<ClientCertMode> clientCertMode,
-        @Nullable Input<CloningInfoArgs> cloningInfo,
-        @Nullable Input<Integer> containerSize,
-        @Nullable Input<String> customDomainVerificationId,
-        @Nullable Input<Integer> dailyMemoryTimeQuota,
-        @Nullable Input<Boolean> enabled,
-        @Nullable Input<List<HostNameSslStateArgs>> hostNameSslStates,
-        @Nullable Input<Boolean> hostNamesDisabled,
-        @Nullable Input<HostingEnvironmentProfileArgs> hostingEnvironmentProfile,
-        @Nullable Input<Boolean> httpsOnly,
-        @Nullable Input<Boolean> hyperV,
-        @Nullable Input<ManagedServiceIdentityArgs> identity,
-        @Nullable Input<Boolean> isXenon,
-        @Nullable Input<String> keyVaultReferenceIdentity,
-        @Nullable Input<String> kind,
-        @Nullable Input<String> location,
-        @Nullable Input<String> name,
-        @Nullable Input<RedundancyMode> redundancyMode,
-        @Nullable Input<Boolean> reserved,
-        Input<String> resourceGroupName,
-        @Nullable Input<Boolean> scmSiteAlsoStopped,
-        @Nullable Input<String> serverFarmId,
-        @Nullable Input<SiteConfigArgs> siteConfig,
-        @Nullable Input<Boolean> storageAccountRequired,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<String> virtualNetworkSubnetId) {
+        @Nullable Output<Boolean> clientAffinityEnabled,
+        @Nullable Output<Boolean> clientCertEnabled,
+        @Nullable Output<String> clientCertExclusionPaths,
+        @Nullable Output<ClientCertMode> clientCertMode,
+        @Nullable Output<CloningInfoArgs> cloningInfo,
+        @Nullable Output<Integer> containerSize,
+        @Nullable Output<String> customDomainVerificationId,
+        @Nullable Output<Integer> dailyMemoryTimeQuota,
+        @Nullable Output<Boolean> enabled,
+        @Nullable Output<List<HostNameSslStateArgs>> hostNameSslStates,
+        @Nullable Output<Boolean> hostNamesDisabled,
+        @Nullable Output<HostingEnvironmentProfileArgs> hostingEnvironmentProfile,
+        @Nullable Output<Boolean> httpsOnly,
+        @Nullable Output<Boolean> hyperV,
+        @Nullable Output<ManagedServiceIdentityArgs> identity,
+        @Nullable Output<Boolean> isXenon,
+        @Nullable Output<String> keyVaultReferenceIdentity,
+        @Nullable Output<String> kind,
+        @Nullable Output<String> location,
+        @Nullable Output<String> name,
+        @Nullable Output<RedundancyMode> redundancyMode,
+        @Nullable Output<Boolean> reserved,
+        Output<String> resourceGroupName,
+        @Nullable Output<Boolean> scmSiteAlsoStopped,
+        @Nullable Output<String> serverFarmId,
+        @Nullable Output<SiteConfigArgs> siteConfig,
+        @Nullable Output<Boolean> storageAccountRequired,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<String> virtualNetworkSubnetId) {
         this.clientAffinityEnabled = clientAffinityEnabled;
         this.clientCertEnabled = clientCertEnabled;
         this.clientCertExclusionPaths = clientCertExclusionPaths;
@@ -393,17 +393,17 @@ public final class WebAppArgs extends io.pulumi.resources.ResourceArgs {
         this.hostNamesDisabled = hostNamesDisabled;
         this.hostingEnvironmentProfile = hostingEnvironmentProfile;
         this.httpsOnly = httpsOnly;
-        this.hyperV = hyperV == null ? Input.ofNullable(false) : hyperV;
+        this.hyperV = hyperV == null ? Output.ofNullable(false) : hyperV;
         this.identity = identity;
-        this.isXenon = isXenon == null ? Input.ofNullable(false) : isXenon;
+        this.isXenon = isXenon == null ? Output.ofNullable(false) : isXenon;
         this.keyVaultReferenceIdentity = keyVaultReferenceIdentity;
         this.kind = kind;
         this.location = location;
         this.name = name;
         this.redundancyMode = redundancyMode;
-        this.reserved = reserved == null ? Input.ofNullable(false) : reserved;
+        this.reserved = reserved == null ? Output.ofNullable(false) : reserved;
         this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.scmSiteAlsoStopped = scmSiteAlsoStopped == null ? Input.ofNullable(false) : scmSiteAlsoStopped;
+        this.scmSiteAlsoStopped = scmSiteAlsoStopped == null ? Output.ofNullable(false) : scmSiteAlsoStopped;
         this.serverFarmId = serverFarmId;
         this.siteConfig = siteConfig;
         this.storageAccountRequired = storageAccountRequired;
@@ -412,35 +412,35 @@ public final class WebAppArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private WebAppArgs() {
-        this.clientAffinityEnabled = Input.empty();
-        this.clientCertEnabled = Input.empty();
-        this.clientCertExclusionPaths = Input.empty();
-        this.clientCertMode = Input.empty();
-        this.cloningInfo = Input.empty();
-        this.containerSize = Input.empty();
-        this.customDomainVerificationId = Input.empty();
-        this.dailyMemoryTimeQuota = Input.empty();
-        this.enabled = Input.empty();
-        this.hostNameSslStates = Input.empty();
-        this.hostNamesDisabled = Input.empty();
-        this.hostingEnvironmentProfile = Input.empty();
-        this.httpsOnly = Input.empty();
-        this.hyperV = Input.empty();
-        this.identity = Input.empty();
-        this.isXenon = Input.empty();
-        this.keyVaultReferenceIdentity = Input.empty();
-        this.kind = Input.empty();
-        this.location = Input.empty();
-        this.name = Input.empty();
-        this.redundancyMode = Input.empty();
-        this.reserved = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.scmSiteAlsoStopped = Input.empty();
-        this.serverFarmId = Input.empty();
-        this.siteConfig = Input.empty();
-        this.storageAccountRequired = Input.empty();
-        this.tags = Input.empty();
-        this.virtualNetworkSubnetId = Input.empty();
+        this.clientAffinityEnabled = Output.empty();
+        this.clientCertEnabled = Output.empty();
+        this.clientCertExclusionPaths = Output.empty();
+        this.clientCertMode = Output.empty();
+        this.cloningInfo = Output.empty();
+        this.containerSize = Output.empty();
+        this.customDomainVerificationId = Output.empty();
+        this.dailyMemoryTimeQuota = Output.empty();
+        this.enabled = Output.empty();
+        this.hostNameSslStates = Output.empty();
+        this.hostNamesDisabled = Output.empty();
+        this.hostingEnvironmentProfile = Output.empty();
+        this.httpsOnly = Output.empty();
+        this.hyperV = Output.empty();
+        this.identity = Output.empty();
+        this.isXenon = Output.empty();
+        this.keyVaultReferenceIdentity = Output.empty();
+        this.kind = Output.empty();
+        this.location = Output.empty();
+        this.name = Output.empty();
+        this.redundancyMode = Output.empty();
+        this.reserved = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.scmSiteAlsoStopped = Output.empty();
+        this.serverFarmId = Output.empty();
+        this.siteConfig = Output.empty();
+        this.storageAccountRequired = Output.empty();
+        this.tags = Output.empty();
+        this.virtualNetworkSubnetId = Output.empty();
     }
 
     public static Builder builder() {
@@ -452,35 +452,35 @@ public final class WebAppArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> clientAffinityEnabled;
-        private @Nullable Input<Boolean> clientCertEnabled;
-        private @Nullable Input<String> clientCertExclusionPaths;
-        private @Nullable Input<ClientCertMode> clientCertMode;
-        private @Nullable Input<CloningInfoArgs> cloningInfo;
-        private @Nullable Input<Integer> containerSize;
-        private @Nullable Input<String> customDomainVerificationId;
-        private @Nullable Input<Integer> dailyMemoryTimeQuota;
-        private @Nullable Input<Boolean> enabled;
-        private @Nullable Input<List<HostNameSslStateArgs>> hostNameSslStates;
-        private @Nullable Input<Boolean> hostNamesDisabled;
-        private @Nullable Input<HostingEnvironmentProfileArgs> hostingEnvironmentProfile;
-        private @Nullable Input<Boolean> httpsOnly;
-        private @Nullable Input<Boolean> hyperV;
-        private @Nullable Input<ManagedServiceIdentityArgs> identity;
-        private @Nullable Input<Boolean> isXenon;
-        private @Nullable Input<String> keyVaultReferenceIdentity;
-        private @Nullable Input<String> kind;
-        private @Nullable Input<String> location;
-        private @Nullable Input<String> name;
-        private @Nullable Input<RedundancyMode> redundancyMode;
-        private @Nullable Input<Boolean> reserved;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<Boolean> scmSiteAlsoStopped;
-        private @Nullable Input<String> serverFarmId;
-        private @Nullable Input<SiteConfigArgs> siteConfig;
-        private @Nullable Input<Boolean> storageAccountRequired;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<String> virtualNetworkSubnetId;
+        private @Nullable Output<Boolean> clientAffinityEnabled;
+        private @Nullable Output<Boolean> clientCertEnabled;
+        private @Nullable Output<String> clientCertExclusionPaths;
+        private @Nullable Output<ClientCertMode> clientCertMode;
+        private @Nullable Output<CloningInfoArgs> cloningInfo;
+        private @Nullable Output<Integer> containerSize;
+        private @Nullable Output<String> customDomainVerificationId;
+        private @Nullable Output<Integer> dailyMemoryTimeQuota;
+        private @Nullable Output<Boolean> enabled;
+        private @Nullable Output<List<HostNameSslStateArgs>> hostNameSslStates;
+        private @Nullable Output<Boolean> hostNamesDisabled;
+        private @Nullable Output<HostingEnvironmentProfileArgs> hostingEnvironmentProfile;
+        private @Nullable Output<Boolean> httpsOnly;
+        private @Nullable Output<Boolean> hyperV;
+        private @Nullable Output<ManagedServiceIdentityArgs> identity;
+        private @Nullable Output<Boolean> isXenon;
+        private @Nullable Output<String> keyVaultReferenceIdentity;
+        private @Nullable Output<String> kind;
+        private @Nullable Output<String> location;
+        private @Nullable Output<String> name;
+        private @Nullable Output<RedundancyMode> redundancyMode;
+        private @Nullable Output<Boolean> reserved;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<Boolean> scmSiteAlsoStopped;
+        private @Nullable Output<String> serverFarmId;
+        private @Nullable Output<SiteConfigArgs> siteConfig;
+        private @Nullable Output<Boolean> storageAccountRequired;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<String> virtualNetworkSubnetId;
 
         public Builder() {
     	      // Empty
@@ -519,293 +519,293 @@ public final class WebAppArgs extends io.pulumi.resources.ResourceArgs {
     	      this.virtualNetworkSubnetId = defaults.virtualNetworkSubnetId;
         }
 
-        public Builder clientAffinityEnabled(@Nullable Input<Boolean> clientAffinityEnabled) {
+        public Builder clientAffinityEnabled(@Nullable Output<Boolean> clientAffinityEnabled) {
             this.clientAffinityEnabled = clientAffinityEnabled;
             return this;
         }
 
         public Builder clientAffinityEnabled(@Nullable Boolean clientAffinityEnabled) {
-            this.clientAffinityEnabled = Input.ofNullable(clientAffinityEnabled);
+            this.clientAffinityEnabled = Output.ofNullable(clientAffinityEnabled);
             return this;
         }
 
-        public Builder clientCertEnabled(@Nullable Input<Boolean> clientCertEnabled) {
+        public Builder clientCertEnabled(@Nullable Output<Boolean> clientCertEnabled) {
             this.clientCertEnabled = clientCertEnabled;
             return this;
         }
 
         public Builder clientCertEnabled(@Nullable Boolean clientCertEnabled) {
-            this.clientCertEnabled = Input.ofNullable(clientCertEnabled);
+            this.clientCertEnabled = Output.ofNullable(clientCertEnabled);
             return this;
         }
 
-        public Builder clientCertExclusionPaths(@Nullable Input<String> clientCertExclusionPaths) {
+        public Builder clientCertExclusionPaths(@Nullable Output<String> clientCertExclusionPaths) {
             this.clientCertExclusionPaths = clientCertExclusionPaths;
             return this;
         }
 
         public Builder clientCertExclusionPaths(@Nullable String clientCertExclusionPaths) {
-            this.clientCertExclusionPaths = Input.ofNullable(clientCertExclusionPaths);
+            this.clientCertExclusionPaths = Output.ofNullable(clientCertExclusionPaths);
             return this;
         }
 
-        public Builder clientCertMode(@Nullable Input<ClientCertMode> clientCertMode) {
+        public Builder clientCertMode(@Nullable Output<ClientCertMode> clientCertMode) {
             this.clientCertMode = clientCertMode;
             return this;
         }
 
         public Builder clientCertMode(@Nullable ClientCertMode clientCertMode) {
-            this.clientCertMode = Input.ofNullable(clientCertMode);
+            this.clientCertMode = Output.ofNullable(clientCertMode);
             return this;
         }
 
-        public Builder cloningInfo(@Nullable Input<CloningInfoArgs> cloningInfo) {
+        public Builder cloningInfo(@Nullable Output<CloningInfoArgs> cloningInfo) {
             this.cloningInfo = cloningInfo;
             return this;
         }
 
         public Builder cloningInfo(@Nullable CloningInfoArgs cloningInfo) {
-            this.cloningInfo = Input.ofNullable(cloningInfo);
+            this.cloningInfo = Output.ofNullable(cloningInfo);
             return this;
         }
 
-        public Builder containerSize(@Nullable Input<Integer> containerSize) {
+        public Builder containerSize(@Nullable Output<Integer> containerSize) {
             this.containerSize = containerSize;
             return this;
         }
 
         public Builder containerSize(@Nullable Integer containerSize) {
-            this.containerSize = Input.ofNullable(containerSize);
+            this.containerSize = Output.ofNullable(containerSize);
             return this;
         }
 
-        public Builder customDomainVerificationId(@Nullable Input<String> customDomainVerificationId) {
+        public Builder customDomainVerificationId(@Nullable Output<String> customDomainVerificationId) {
             this.customDomainVerificationId = customDomainVerificationId;
             return this;
         }
 
         public Builder customDomainVerificationId(@Nullable String customDomainVerificationId) {
-            this.customDomainVerificationId = Input.ofNullable(customDomainVerificationId);
+            this.customDomainVerificationId = Output.ofNullable(customDomainVerificationId);
             return this;
         }
 
-        public Builder dailyMemoryTimeQuota(@Nullable Input<Integer> dailyMemoryTimeQuota) {
+        public Builder dailyMemoryTimeQuota(@Nullable Output<Integer> dailyMemoryTimeQuota) {
             this.dailyMemoryTimeQuota = dailyMemoryTimeQuota;
             return this;
         }
 
         public Builder dailyMemoryTimeQuota(@Nullable Integer dailyMemoryTimeQuota) {
-            this.dailyMemoryTimeQuota = Input.ofNullable(dailyMemoryTimeQuota);
+            this.dailyMemoryTimeQuota = Output.ofNullable(dailyMemoryTimeQuota);
             return this;
         }
 
-        public Builder enabled(@Nullable Input<Boolean> enabled) {
+        public Builder enabled(@Nullable Output<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
 
         public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Input.ofNullable(enabled);
+            this.enabled = Output.ofNullable(enabled);
             return this;
         }
 
-        public Builder hostNameSslStates(@Nullable Input<List<HostNameSslStateArgs>> hostNameSslStates) {
+        public Builder hostNameSslStates(@Nullable Output<List<HostNameSslStateArgs>> hostNameSslStates) {
             this.hostNameSslStates = hostNameSslStates;
             return this;
         }
 
         public Builder hostNameSslStates(@Nullable List<HostNameSslStateArgs> hostNameSslStates) {
-            this.hostNameSslStates = Input.ofNullable(hostNameSslStates);
+            this.hostNameSslStates = Output.ofNullable(hostNameSslStates);
             return this;
         }
 
-        public Builder hostNamesDisabled(@Nullable Input<Boolean> hostNamesDisabled) {
+        public Builder hostNamesDisabled(@Nullable Output<Boolean> hostNamesDisabled) {
             this.hostNamesDisabled = hostNamesDisabled;
             return this;
         }
 
         public Builder hostNamesDisabled(@Nullable Boolean hostNamesDisabled) {
-            this.hostNamesDisabled = Input.ofNullable(hostNamesDisabled);
+            this.hostNamesDisabled = Output.ofNullable(hostNamesDisabled);
             return this;
         }
 
-        public Builder hostingEnvironmentProfile(@Nullable Input<HostingEnvironmentProfileArgs> hostingEnvironmentProfile) {
+        public Builder hostingEnvironmentProfile(@Nullable Output<HostingEnvironmentProfileArgs> hostingEnvironmentProfile) {
             this.hostingEnvironmentProfile = hostingEnvironmentProfile;
             return this;
         }
 
         public Builder hostingEnvironmentProfile(@Nullable HostingEnvironmentProfileArgs hostingEnvironmentProfile) {
-            this.hostingEnvironmentProfile = Input.ofNullable(hostingEnvironmentProfile);
+            this.hostingEnvironmentProfile = Output.ofNullable(hostingEnvironmentProfile);
             return this;
         }
 
-        public Builder httpsOnly(@Nullable Input<Boolean> httpsOnly) {
+        public Builder httpsOnly(@Nullable Output<Boolean> httpsOnly) {
             this.httpsOnly = httpsOnly;
             return this;
         }
 
         public Builder httpsOnly(@Nullable Boolean httpsOnly) {
-            this.httpsOnly = Input.ofNullable(httpsOnly);
+            this.httpsOnly = Output.ofNullable(httpsOnly);
             return this;
         }
 
-        public Builder hyperV(@Nullable Input<Boolean> hyperV) {
+        public Builder hyperV(@Nullable Output<Boolean> hyperV) {
             this.hyperV = hyperV;
             return this;
         }
 
         public Builder hyperV(@Nullable Boolean hyperV) {
-            this.hyperV = Input.ofNullable(hyperV);
+            this.hyperV = Output.ofNullable(hyperV);
             return this;
         }
 
-        public Builder identity(@Nullable Input<ManagedServiceIdentityArgs> identity) {
+        public Builder identity(@Nullable Output<ManagedServiceIdentityArgs> identity) {
             this.identity = identity;
             return this;
         }
 
         public Builder identity(@Nullable ManagedServiceIdentityArgs identity) {
-            this.identity = Input.ofNullable(identity);
+            this.identity = Output.ofNullable(identity);
             return this;
         }
 
-        public Builder isXenon(@Nullable Input<Boolean> isXenon) {
+        public Builder isXenon(@Nullable Output<Boolean> isXenon) {
             this.isXenon = isXenon;
             return this;
         }
 
         public Builder isXenon(@Nullable Boolean isXenon) {
-            this.isXenon = Input.ofNullable(isXenon);
+            this.isXenon = Output.ofNullable(isXenon);
             return this;
         }
 
-        public Builder keyVaultReferenceIdentity(@Nullable Input<String> keyVaultReferenceIdentity) {
+        public Builder keyVaultReferenceIdentity(@Nullable Output<String> keyVaultReferenceIdentity) {
             this.keyVaultReferenceIdentity = keyVaultReferenceIdentity;
             return this;
         }
 
         public Builder keyVaultReferenceIdentity(@Nullable String keyVaultReferenceIdentity) {
-            this.keyVaultReferenceIdentity = Input.ofNullable(keyVaultReferenceIdentity);
+            this.keyVaultReferenceIdentity = Output.ofNullable(keyVaultReferenceIdentity);
             return this;
         }
 
-        public Builder kind(@Nullable Input<String> kind) {
+        public Builder kind(@Nullable Output<String> kind) {
             this.kind = kind;
             return this;
         }
 
         public Builder kind(@Nullable String kind) {
-            this.kind = Input.ofNullable(kind);
+            this.kind = Output.ofNullable(kind);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder redundancyMode(@Nullable Input<RedundancyMode> redundancyMode) {
+        public Builder redundancyMode(@Nullable Output<RedundancyMode> redundancyMode) {
             this.redundancyMode = redundancyMode;
             return this;
         }
 
         public Builder redundancyMode(@Nullable RedundancyMode redundancyMode) {
-            this.redundancyMode = Input.ofNullable(redundancyMode);
+            this.redundancyMode = Output.ofNullable(redundancyMode);
             return this;
         }
 
-        public Builder reserved(@Nullable Input<Boolean> reserved) {
+        public Builder reserved(@Nullable Output<Boolean> reserved) {
             this.reserved = reserved;
             return this;
         }
 
         public Builder reserved(@Nullable Boolean reserved) {
-            this.reserved = Input.ofNullable(reserved);
+            this.reserved = Output.ofNullable(reserved);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder scmSiteAlsoStopped(@Nullable Input<Boolean> scmSiteAlsoStopped) {
+        public Builder scmSiteAlsoStopped(@Nullable Output<Boolean> scmSiteAlsoStopped) {
             this.scmSiteAlsoStopped = scmSiteAlsoStopped;
             return this;
         }
 
         public Builder scmSiteAlsoStopped(@Nullable Boolean scmSiteAlsoStopped) {
-            this.scmSiteAlsoStopped = Input.ofNullable(scmSiteAlsoStopped);
+            this.scmSiteAlsoStopped = Output.ofNullable(scmSiteAlsoStopped);
             return this;
         }
 
-        public Builder serverFarmId(@Nullable Input<String> serverFarmId) {
+        public Builder serverFarmId(@Nullable Output<String> serverFarmId) {
             this.serverFarmId = serverFarmId;
             return this;
         }
 
         public Builder serverFarmId(@Nullable String serverFarmId) {
-            this.serverFarmId = Input.ofNullable(serverFarmId);
+            this.serverFarmId = Output.ofNullable(serverFarmId);
             return this;
         }
 
-        public Builder siteConfig(@Nullable Input<SiteConfigArgs> siteConfig) {
+        public Builder siteConfig(@Nullable Output<SiteConfigArgs> siteConfig) {
             this.siteConfig = siteConfig;
             return this;
         }
 
         public Builder siteConfig(@Nullable SiteConfigArgs siteConfig) {
-            this.siteConfig = Input.ofNullable(siteConfig);
+            this.siteConfig = Output.ofNullable(siteConfig);
             return this;
         }
 
-        public Builder storageAccountRequired(@Nullable Input<Boolean> storageAccountRequired) {
+        public Builder storageAccountRequired(@Nullable Output<Boolean> storageAccountRequired) {
             this.storageAccountRequired = storageAccountRequired;
             return this;
         }
 
         public Builder storageAccountRequired(@Nullable Boolean storageAccountRequired) {
-            this.storageAccountRequired = Input.ofNullable(storageAccountRequired);
+            this.storageAccountRequired = Output.ofNullable(storageAccountRequired);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder virtualNetworkSubnetId(@Nullable Input<String> virtualNetworkSubnetId) {
+        public Builder virtualNetworkSubnetId(@Nullable Output<String> virtualNetworkSubnetId) {
             this.virtualNetworkSubnetId = virtualNetworkSubnetId;
             return this;
         }
 
         public Builder virtualNetworkSubnetId(@Nullable String virtualNetworkSubnetId) {
-            this.virtualNetworkSubnetId = Input.ofNullable(virtualNetworkSubnetId);
+            this.virtualNetworkSubnetId = Output.ofNullable(virtualNetworkSubnetId);
             return this;
         }
         public WebAppArgs build() {

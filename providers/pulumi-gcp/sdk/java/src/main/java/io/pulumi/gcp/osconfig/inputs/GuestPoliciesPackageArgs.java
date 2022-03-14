@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.osconfig.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -25,10 +25,10 @@ public final class GuestPoliciesPackageArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="desiredState")
-      private final @Nullable Input<String> desiredState;
+      private final @Nullable Output<String> desiredState;
 
-    public Input<String> getDesiredState() {
-        return this.desiredState == null ? Input.empty() : this.desiredState;
+    public Output<String> getDesiredState() {
+        return this.desiredState == null ? Output.empty() : this.desiredState;
     }
 
     /**
@@ -42,10 +42,10 @@ public final class GuestPoliciesPackageArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="manager")
-      private final @Nullable Input<String> manager;
+      private final @Nullable Output<String> manager;
 
-    public Input<String> getManager() {
-        return this.manager == null ? Input.empty() : this.manager;
+    public Output<String> getManager() {
+        return this.manager == null ? Output.empty() : this.manager;
     }
 
     /**
@@ -56,25 +56,25 @@ public final class GuestPoliciesPackageArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="name", required=true)
-      private final Input<String> name;
+      private final Output<String> name;
 
-    public Input<String> getName() {
+    public Output<String> getName() {
         return this.name;
     }
 
     public GuestPoliciesPackageArgs(
-        @Nullable Input<String> desiredState,
-        @Nullable Input<String> manager,
-        Input<String> name) {
+        @Nullable Output<String> desiredState,
+        @Nullable Output<String> manager,
+        Output<String> name) {
         this.desiredState = desiredState;
         this.manager = manager;
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
     }
 
     private GuestPoliciesPackageArgs() {
-        this.desiredState = Input.empty();
-        this.manager = Input.empty();
-        this.name = Input.empty();
+        this.desiredState = Output.empty();
+        this.manager = Output.empty();
+        this.name = Output.empty();
     }
 
     public static Builder builder() {
@@ -86,9 +86,9 @@ public final class GuestPoliciesPackageArgs extends io.pulumi.resources.Resource
     }
 
     public static final class Builder {
-        private @Nullable Input<String> desiredState;
-        private @Nullable Input<String> manager;
-        private Input<String> name;
+        private @Nullable Output<String> desiredState;
+        private @Nullable Output<String> manager;
+        private Output<String> name;
 
         public Builder() {
     	      // Empty
@@ -101,33 +101,33 @@ public final class GuestPoliciesPackageArgs extends io.pulumi.resources.Resource
     	      this.name = defaults.name;
         }
 
-        public Builder desiredState(@Nullable Input<String> desiredState) {
+        public Builder desiredState(@Nullable Output<String> desiredState) {
             this.desiredState = desiredState;
             return this;
         }
 
         public Builder desiredState(@Nullable String desiredState) {
-            this.desiredState = Input.ofNullable(desiredState);
+            this.desiredState = Output.ofNullable(desiredState);
             return this;
         }
 
-        public Builder manager(@Nullable Input<String> manager) {
+        public Builder manager(@Nullable Output<String> manager) {
             this.manager = manager;
             return this;
         }
 
         public Builder manager(@Nullable String manager) {
-            this.manager = Input.ofNullable(manager);
+            this.manager = Output.ofNullable(manager);
             return this;
         }
 
-        public Builder name(Input<String> name) {
+        public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(String name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
         public GuestPoliciesPackageArgs build() {

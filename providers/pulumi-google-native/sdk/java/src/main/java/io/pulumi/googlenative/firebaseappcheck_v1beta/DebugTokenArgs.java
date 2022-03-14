@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.firebaseappcheck_v1beta;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -15,9 +15,9 @@ public final class DebugTokenArgs extends io.pulumi.resources.ResourceArgs {
     public static final DebugTokenArgs Empty = new DebugTokenArgs();
 
     @InputImport(name="appId", required=true)
-      private final Input<String> appId;
+      private final Output<String> appId;
 
-    public Input<String> getAppId() {
+    public Output<String> getAppId() {
         return this.appId;
     }
 
@@ -26,9 +26,9 @@ public final class DebugTokenArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName", required=true)
-      private final Input<String> displayName;
+      private final Output<String> displayName;
 
-    public Input<String> getDisplayName() {
+    public Output<String> getDisplayName() {
         return this.displayName;
     }
 
@@ -37,17 +37,17 @@ public final class DebugTokenArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -55,18 +55,18 @@ public final class DebugTokenArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="token", required=true)
-      private final Input<String> token;
+      private final Output<String> token;
 
-    public Input<String> getToken() {
+    public Output<String> getToken() {
         return this.token;
     }
 
     public DebugTokenArgs(
-        Input<String> appId,
-        Input<String> displayName,
-        @Nullable Input<String> name,
-        @Nullable Input<String> project,
-        Input<String> token) {
+        Output<String> appId,
+        Output<String> displayName,
+        @Nullable Output<String> name,
+        @Nullable Output<String> project,
+        Output<String> token) {
         this.appId = Objects.requireNonNull(appId, "expected parameter 'appId' to be non-null");
         this.displayName = Objects.requireNonNull(displayName, "expected parameter 'displayName' to be non-null");
         this.name = name;
@@ -75,11 +75,11 @@ public final class DebugTokenArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DebugTokenArgs() {
-        this.appId = Input.empty();
-        this.displayName = Input.empty();
-        this.name = Input.empty();
-        this.project = Input.empty();
-        this.token = Input.empty();
+        this.appId = Output.empty();
+        this.displayName = Output.empty();
+        this.name = Output.empty();
+        this.project = Output.empty();
+        this.token = Output.empty();
     }
 
     public static Builder builder() {
@@ -91,11 +91,11 @@ public final class DebugTokenArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> appId;
-        private Input<String> displayName;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> project;
-        private Input<String> token;
+        private Output<String> appId;
+        private Output<String> displayName;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> project;
+        private Output<String> token;
 
         public Builder() {
     	      // Empty
@@ -110,53 +110,53 @@ public final class DebugTokenArgs extends io.pulumi.resources.ResourceArgs {
     	      this.token = defaults.token;
         }
 
-        public Builder appId(Input<String> appId) {
+        public Builder appId(Output<String> appId) {
             this.appId = Objects.requireNonNull(appId);
             return this;
         }
 
         public Builder appId(String appId) {
-            this.appId = Input.of(Objects.requireNonNull(appId));
+            this.appId = Output.of(Objects.requireNonNull(appId));
             return this;
         }
 
-        public Builder displayName(Input<String> displayName) {
+        public Builder displayName(Output<String> displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
         public Builder displayName(String displayName) {
-            this.displayName = Input.of(Objects.requireNonNull(displayName));
+            this.displayName = Output.of(Objects.requireNonNull(displayName));
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder token(Input<String> token) {
+        public Builder token(Output<String> token) {
             this.token = Objects.requireNonNull(token);
             return this;
         }
 
         public Builder token(String token) {
-            this.token = Input.of(Objects.requireNonNull(token));
+            this.token = Output.of(Objects.requireNonNull(token));
             return this;
         }
         public DebugTokenArgs build() {

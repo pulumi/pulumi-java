@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.jobs_v3.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.jobs_v3.enums.CompensationEntryType;
 import io.pulumi.googlenative.jobs_v3.enums.CompensationEntryUnit;
@@ -28,10 +28,10 @@ public final class CompensationEntryArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="amount")
-      private final @Nullable Input<MoneyArgs> amount;
+      private final @Nullable Output<MoneyArgs> amount;
 
-    public Input<MoneyArgs> getAmount() {
-        return this.amount == null ? Input.empty() : this.amount;
+    public Output<MoneyArgs> getAmount() {
+        return this.amount == null ? Output.empty() : this.amount;
     }
 
     /**
@@ -39,10 +39,10 @@ public final class CompensationEntryArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -50,10 +50,10 @@ public final class CompensationEntryArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="expectedUnitsPerYear")
-      private final @Nullable Input<Double> expectedUnitsPerYear;
+      private final @Nullable Output<Double> expectedUnitsPerYear;
 
-    public Input<Double> getExpectedUnitsPerYear() {
-        return this.expectedUnitsPerYear == null ? Input.empty() : this.expectedUnitsPerYear;
+    public Output<Double> getExpectedUnitsPerYear() {
+        return this.expectedUnitsPerYear == null ? Output.empty() : this.expectedUnitsPerYear;
     }
 
     /**
@@ -61,10 +61,10 @@ public final class CompensationEntryArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="range")
-      private final @Nullable Input<CompensationRangeArgs> range;
+      private final @Nullable Output<CompensationRangeArgs> range;
 
-    public Input<CompensationRangeArgs> getRange() {
-        return this.range == null ? Input.empty() : this.range;
+    public Output<CompensationRangeArgs> getRange() {
+        return this.range == null ? Output.empty() : this.range;
     }
 
     /**
@@ -72,10 +72,10 @@ public final class CompensationEntryArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="type")
-      private final @Nullable Input<CompensationEntryType> type;
+      private final @Nullable Output<CompensationEntryType> type;
 
-    public Input<CompensationEntryType> getType() {
-        return this.type == null ? Input.empty() : this.type;
+    public Output<CompensationEntryType> getType() {
+        return this.type == null ? Output.empty() : this.type;
     }
 
     /**
@@ -83,19 +83,19 @@ public final class CompensationEntryArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="unit")
-      private final @Nullable Input<CompensationEntryUnit> unit;
+      private final @Nullable Output<CompensationEntryUnit> unit;
 
-    public Input<CompensationEntryUnit> getUnit() {
-        return this.unit == null ? Input.empty() : this.unit;
+    public Output<CompensationEntryUnit> getUnit() {
+        return this.unit == null ? Output.empty() : this.unit;
     }
 
     public CompensationEntryArgs(
-        @Nullable Input<MoneyArgs> amount,
-        @Nullable Input<String> description,
-        @Nullable Input<Double> expectedUnitsPerYear,
-        @Nullable Input<CompensationRangeArgs> range,
-        @Nullable Input<CompensationEntryType> type,
-        @Nullable Input<CompensationEntryUnit> unit) {
+        @Nullable Output<MoneyArgs> amount,
+        @Nullable Output<String> description,
+        @Nullable Output<Double> expectedUnitsPerYear,
+        @Nullable Output<CompensationRangeArgs> range,
+        @Nullable Output<CompensationEntryType> type,
+        @Nullable Output<CompensationEntryUnit> unit) {
         this.amount = amount;
         this.description = description;
         this.expectedUnitsPerYear = expectedUnitsPerYear;
@@ -105,12 +105,12 @@ public final class CompensationEntryArgs extends io.pulumi.resources.ResourceArg
     }
 
     private CompensationEntryArgs() {
-        this.amount = Input.empty();
-        this.description = Input.empty();
-        this.expectedUnitsPerYear = Input.empty();
-        this.range = Input.empty();
-        this.type = Input.empty();
-        this.unit = Input.empty();
+        this.amount = Output.empty();
+        this.description = Output.empty();
+        this.expectedUnitsPerYear = Output.empty();
+        this.range = Output.empty();
+        this.type = Output.empty();
+        this.unit = Output.empty();
     }
 
     public static Builder builder() {
@@ -122,12 +122,12 @@ public final class CompensationEntryArgs extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private @Nullable Input<MoneyArgs> amount;
-        private @Nullable Input<String> description;
-        private @Nullable Input<Double> expectedUnitsPerYear;
-        private @Nullable Input<CompensationRangeArgs> range;
-        private @Nullable Input<CompensationEntryType> type;
-        private @Nullable Input<CompensationEntryUnit> unit;
+        private @Nullable Output<MoneyArgs> amount;
+        private @Nullable Output<String> description;
+        private @Nullable Output<Double> expectedUnitsPerYear;
+        private @Nullable Output<CompensationRangeArgs> range;
+        private @Nullable Output<CompensationEntryType> type;
+        private @Nullable Output<CompensationEntryUnit> unit;
 
         public Builder() {
     	      // Empty
@@ -143,63 +143,63 @@ public final class CompensationEntryArgs extends io.pulumi.resources.ResourceArg
     	      this.unit = defaults.unit;
         }
 
-        public Builder amount(@Nullable Input<MoneyArgs> amount) {
+        public Builder amount(@Nullable Output<MoneyArgs> amount) {
             this.amount = amount;
             return this;
         }
 
         public Builder amount(@Nullable MoneyArgs amount) {
-            this.amount = Input.ofNullable(amount);
+            this.amount = Output.ofNullable(amount);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder expectedUnitsPerYear(@Nullable Input<Double> expectedUnitsPerYear) {
+        public Builder expectedUnitsPerYear(@Nullable Output<Double> expectedUnitsPerYear) {
             this.expectedUnitsPerYear = expectedUnitsPerYear;
             return this;
         }
 
         public Builder expectedUnitsPerYear(@Nullable Double expectedUnitsPerYear) {
-            this.expectedUnitsPerYear = Input.ofNullable(expectedUnitsPerYear);
+            this.expectedUnitsPerYear = Output.ofNullable(expectedUnitsPerYear);
             return this;
         }
 
-        public Builder range(@Nullable Input<CompensationRangeArgs> range) {
+        public Builder range(@Nullable Output<CompensationRangeArgs> range) {
             this.range = range;
             return this;
         }
 
         public Builder range(@Nullable CompensationRangeArgs range) {
-            this.range = Input.ofNullable(range);
+            this.range = Output.ofNullable(range);
             return this;
         }
 
-        public Builder type(@Nullable Input<CompensationEntryType> type) {
+        public Builder type(@Nullable Output<CompensationEntryType> type) {
             this.type = type;
             return this;
         }
 
         public Builder type(@Nullable CompensationEntryType type) {
-            this.type = Input.ofNullable(type);
+            this.type = Output.ofNullable(type);
             return this;
         }
 
-        public Builder unit(@Nullable Input<CompensationEntryUnit> unit) {
+        public Builder unit(@Nullable Output<CompensationEntryUnit> unit) {
             this.unit = unit;
             return this;
         }
 
         public Builder unit(@Nullable CompensationEntryUnit unit) {
-            this.unit = Input.ofNullable(unit);
+            this.unit = Output.ofNullable(unit);
             return this;
         }
         public CompensationEntryArgs build() {

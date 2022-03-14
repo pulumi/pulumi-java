@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudbuild_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.cloudbuild_v1.enums.GitRepoSourceRepoType;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class GitRepoSourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ref")
-      private final @Nullable Input<String> ref;
+      private final @Nullable Output<String> ref;
 
-    public Input<String> getRef() {
-        return this.ref == null ? Input.empty() : this.ref;
+    public Output<String> getRef() {
+        return this.ref == null ? Output.empty() : this.ref;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class GitRepoSourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="repoType")
-      private final @Nullable Input<GitRepoSourceRepoType> repoType;
+      private final @Nullable Output<GitRepoSourceRepoType> repoType;
 
-    public Input<GitRepoSourceRepoType> getRepoType() {
-        return this.repoType == null ? Input.empty() : this.repoType;
+    public Output<GitRepoSourceRepoType> getRepoType() {
+        return this.repoType == null ? Output.empty() : this.repoType;
     }
 
     /**
@@ -46,25 +46,25 @@ public final class GitRepoSourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="uri")
-      private final @Nullable Input<String> uri;
+      private final @Nullable Output<String> uri;
 
-    public Input<String> getUri() {
-        return this.uri == null ? Input.empty() : this.uri;
+    public Output<String> getUri() {
+        return this.uri == null ? Output.empty() : this.uri;
     }
 
     public GitRepoSourceArgs(
-        @Nullable Input<String> ref,
-        @Nullable Input<GitRepoSourceRepoType> repoType,
-        @Nullable Input<String> uri) {
+        @Nullable Output<String> ref,
+        @Nullable Output<GitRepoSourceRepoType> repoType,
+        @Nullable Output<String> uri) {
         this.ref = ref;
         this.repoType = repoType;
         this.uri = uri;
     }
 
     private GitRepoSourceArgs() {
-        this.ref = Input.empty();
-        this.repoType = Input.empty();
-        this.uri = Input.empty();
+        this.ref = Output.empty();
+        this.repoType = Output.empty();
+        this.uri = Output.empty();
     }
 
     public static Builder builder() {
@@ -76,9 +76,9 @@ public final class GitRepoSourceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> ref;
-        private @Nullable Input<GitRepoSourceRepoType> repoType;
-        private @Nullable Input<String> uri;
+        private @Nullable Output<String> ref;
+        private @Nullable Output<GitRepoSourceRepoType> repoType;
+        private @Nullable Output<String> uri;
 
         public Builder() {
     	      // Empty
@@ -91,33 +91,33 @@ public final class GitRepoSourceArgs extends io.pulumi.resources.ResourceArgs {
     	      this.uri = defaults.uri;
         }
 
-        public Builder ref(@Nullable Input<String> ref) {
+        public Builder ref(@Nullable Output<String> ref) {
             this.ref = ref;
             return this;
         }
 
         public Builder ref(@Nullable String ref) {
-            this.ref = Input.ofNullable(ref);
+            this.ref = Output.ofNullable(ref);
             return this;
         }
 
-        public Builder repoType(@Nullable Input<GitRepoSourceRepoType> repoType) {
+        public Builder repoType(@Nullable Output<GitRepoSourceRepoType> repoType) {
             this.repoType = repoType;
             return this;
         }
 
         public Builder repoType(@Nullable GitRepoSourceRepoType repoType) {
-            this.repoType = Input.ofNullable(repoType);
+            this.repoType = Output.ofNullable(repoType);
             return this;
         }
 
-        public Builder uri(@Nullable Input<String> uri) {
+        public Builder uri(@Nullable Output<String> uri) {
             this.uri = uri;
             return this;
         }
 
         public Builder uri(@Nullable String uri) {
-            this.uri = Input.ofNullable(uri);
+            this.uri = Output.ofNullable(uri);
             return this;
         }
         public GitRepoSourceArgs build() {

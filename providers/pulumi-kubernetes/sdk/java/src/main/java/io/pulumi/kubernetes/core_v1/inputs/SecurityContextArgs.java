@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.core_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.kubernetes.core_v1.inputs.CapabilitiesArgs;
 import io.pulumi.kubernetes.core_v1.inputs.SELinuxOptionsArgs;
@@ -29,10 +29,10 @@ public final class SecurityContextArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="allowPrivilegeEscalation")
-      private final @Nullable Input<Boolean> allowPrivilegeEscalation;
+      private final @Nullable Output<Boolean> allowPrivilegeEscalation;
 
-    public Input<Boolean> getAllowPrivilegeEscalation() {
-        return this.allowPrivilegeEscalation == null ? Input.empty() : this.allowPrivilegeEscalation;
+    public Output<Boolean> getAllowPrivilegeEscalation() {
+        return this.allowPrivilegeEscalation == null ? Output.empty() : this.allowPrivilegeEscalation;
     }
 
     /**
@@ -40,10 +40,10 @@ public final class SecurityContextArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="capabilities")
-      private final @Nullable Input<CapabilitiesArgs> capabilities;
+      private final @Nullable Output<CapabilitiesArgs> capabilities;
 
-    public Input<CapabilitiesArgs> getCapabilities() {
-        return this.capabilities == null ? Input.empty() : this.capabilities;
+    public Output<CapabilitiesArgs> getCapabilities() {
+        return this.capabilities == null ? Output.empty() : this.capabilities;
     }
 
     /**
@@ -51,10 +51,10 @@ public final class SecurityContextArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="privileged")
-      private final @Nullable Input<Boolean> privileged;
+      private final @Nullable Output<Boolean> privileged;
 
-    public Input<Boolean> getPrivileged() {
-        return this.privileged == null ? Input.empty() : this.privileged;
+    public Output<Boolean> getPrivileged() {
+        return this.privileged == null ? Output.empty() : this.privileged;
     }
 
     /**
@@ -62,10 +62,10 @@ public final class SecurityContextArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="procMount")
-      private final @Nullable Input<String> procMount;
+      private final @Nullable Output<String> procMount;
 
-    public Input<String> getProcMount() {
-        return this.procMount == null ? Input.empty() : this.procMount;
+    public Output<String> getProcMount() {
+        return this.procMount == null ? Output.empty() : this.procMount;
     }
 
     /**
@@ -73,10 +73,10 @@ public final class SecurityContextArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="readOnlyRootFilesystem")
-      private final @Nullable Input<Boolean> readOnlyRootFilesystem;
+      private final @Nullable Output<Boolean> readOnlyRootFilesystem;
 
-    public Input<Boolean> getReadOnlyRootFilesystem() {
-        return this.readOnlyRootFilesystem == null ? Input.empty() : this.readOnlyRootFilesystem;
+    public Output<Boolean> getReadOnlyRootFilesystem() {
+        return this.readOnlyRootFilesystem == null ? Output.empty() : this.readOnlyRootFilesystem;
     }
 
     /**
@@ -84,10 +84,10 @@ public final class SecurityContextArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="runAsGroup")
-      private final @Nullable Input<Integer> runAsGroup;
+      private final @Nullable Output<Integer> runAsGroup;
 
-    public Input<Integer> getRunAsGroup() {
-        return this.runAsGroup == null ? Input.empty() : this.runAsGroup;
+    public Output<Integer> getRunAsGroup() {
+        return this.runAsGroup == null ? Output.empty() : this.runAsGroup;
     }
 
     /**
@@ -95,10 +95,10 @@ public final class SecurityContextArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="runAsNonRoot")
-      private final @Nullable Input<Boolean> runAsNonRoot;
+      private final @Nullable Output<Boolean> runAsNonRoot;
 
-    public Input<Boolean> getRunAsNonRoot() {
-        return this.runAsNonRoot == null ? Input.empty() : this.runAsNonRoot;
+    public Output<Boolean> getRunAsNonRoot() {
+        return this.runAsNonRoot == null ? Output.empty() : this.runAsNonRoot;
     }
 
     /**
@@ -106,10 +106,10 @@ public final class SecurityContextArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="runAsUser")
-      private final @Nullable Input<Integer> runAsUser;
+      private final @Nullable Output<Integer> runAsUser;
 
-    public Input<Integer> getRunAsUser() {
-        return this.runAsUser == null ? Input.empty() : this.runAsUser;
+    public Output<Integer> getRunAsUser() {
+        return this.runAsUser == null ? Output.empty() : this.runAsUser;
     }
 
     /**
@@ -117,10 +117,10 @@ public final class SecurityContextArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="seLinuxOptions")
-      private final @Nullable Input<SELinuxOptionsArgs> seLinuxOptions;
+      private final @Nullable Output<SELinuxOptionsArgs> seLinuxOptions;
 
-    public Input<SELinuxOptionsArgs> getSeLinuxOptions() {
-        return this.seLinuxOptions == null ? Input.empty() : this.seLinuxOptions;
+    public Output<SELinuxOptionsArgs> getSeLinuxOptions() {
+        return this.seLinuxOptions == null ? Output.empty() : this.seLinuxOptions;
     }
 
     /**
@@ -128,10 +128,10 @@ public final class SecurityContextArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="seccompProfile")
-      private final @Nullable Input<SeccompProfileArgs> seccompProfile;
+      private final @Nullable Output<SeccompProfileArgs> seccompProfile;
 
-    public Input<SeccompProfileArgs> getSeccompProfile() {
-        return this.seccompProfile == null ? Input.empty() : this.seccompProfile;
+    public Output<SeccompProfileArgs> getSeccompProfile() {
+        return this.seccompProfile == null ? Output.empty() : this.seccompProfile;
     }
 
     /**
@@ -139,24 +139,24 @@ public final class SecurityContextArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="windowsOptions")
-      private final @Nullable Input<WindowsSecurityContextOptionsArgs> windowsOptions;
+      private final @Nullable Output<WindowsSecurityContextOptionsArgs> windowsOptions;
 
-    public Input<WindowsSecurityContextOptionsArgs> getWindowsOptions() {
-        return this.windowsOptions == null ? Input.empty() : this.windowsOptions;
+    public Output<WindowsSecurityContextOptionsArgs> getWindowsOptions() {
+        return this.windowsOptions == null ? Output.empty() : this.windowsOptions;
     }
 
     public SecurityContextArgs(
-        @Nullable Input<Boolean> allowPrivilegeEscalation,
-        @Nullable Input<CapabilitiesArgs> capabilities,
-        @Nullable Input<Boolean> privileged,
-        @Nullable Input<String> procMount,
-        @Nullable Input<Boolean> readOnlyRootFilesystem,
-        @Nullable Input<Integer> runAsGroup,
-        @Nullable Input<Boolean> runAsNonRoot,
-        @Nullable Input<Integer> runAsUser,
-        @Nullable Input<SELinuxOptionsArgs> seLinuxOptions,
-        @Nullable Input<SeccompProfileArgs> seccompProfile,
-        @Nullable Input<WindowsSecurityContextOptionsArgs> windowsOptions) {
+        @Nullable Output<Boolean> allowPrivilegeEscalation,
+        @Nullable Output<CapabilitiesArgs> capabilities,
+        @Nullable Output<Boolean> privileged,
+        @Nullable Output<String> procMount,
+        @Nullable Output<Boolean> readOnlyRootFilesystem,
+        @Nullable Output<Integer> runAsGroup,
+        @Nullable Output<Boolean> runAsNonRoot,
+        @Nullable Output<Integer> runAsUser,
+        @Nullable Output<SELinuxOptionsArgs> seLinuxOptions,
+        @Nullable Output<SeccompProfileArgs> seccompProfile,
+        @Nullable Output<WindowsSecurityContextOptionsArgs> windowsOptions) {
         this.allowPrivilegeEscalation = allowPrivilegeEscalation;
         this.capabilities = capabilities;
         this.privileged = privileged;
@@ -171,17 +171,17 @@ public final class SecurityContextArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private SecurityContextArgs() {
-        this.allowPrivilegeEscalation = Input.empty();
-        this.capabilities = Input.empty();
-        this.privileged = Input.empty();
-        this.procMount = Input.empty();
-        this.readOnlyRootFilesystem = Input.empty();
-        this.runAsGroup = Input.empty();
-        this.runAsNonRoot = Input.empty();
-        this.runAsUser = Input.empty();
-        this.seLinuxOptions = Input.empty();
-        this.seccompProfile = Input.empty();
-        this.windowsOptions = Input.empty();
+        this.allowPrivilegeEscalation = Output.empty();
+        this.capabilities = Output.empty();
+        this.privileged = Output.empty();
+        this.procMount = Output.empty();
+        this.readOnlyRootFilesystem = Output.empty();
+        this.runAsGroup = Output.empty();
+        this.runAsNonRoot = Output.empty();
+        this.runAsUser = Output.empty();
+        this.seLinuxOptions = Output.empty();
+        this.seccompProfile = Output.empty();
+        this.windowsOptions = Output.empty();
     }
 
     public static Builder builder() {
@@ -193,17 +193,17 @@ public final class SecurityContextArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> allowPrivilegeEscalation;
-        private @Nullable Input<CapabilitiesArgs> capabilities;
-        private @Nullable Input<Boolean> privileged;
-        private @Nullable Input<String> procMount;
-        private @Nullable Input<Boolean> readOnlyRootFilesystem;
-        private @Nullable Input<Integer> runAsGroup;
-        private @Nullable Input<Boolean> runAsNonRoot;
-        private @Nullable Input<Integer> runAsUser;
-        private @Nullable Input<SELinuxOptionsArgs> seLinuxOptions;
-        private @Nullable Input<SeccompProfileArgs> seccompProfile;
-        private @Nullable Input<WindowsSecurityContextOptionsArgs> windowsOptions;
+        private @Nullable Output<Boolean> allowPrivilegeEscalation;
+        private @Nullable Output<CapabilitiesArgs> capabilities;
+        private @Nullable Output<Boolean> privileged;
+        private @Nullable Output<String> procMount;
+        private @Nullable Output<Boolean> readOnlyRootFilesystem;
+        private @Nullable Output<Integer> runAsGroup;
+        private @Nullable Output<Boolean> runAsNonRoot;
+        private @Nullable Output<Integer> runAsUser;
+        private @Nullable Output<SELinuxOptionsArgs> seLinuxOptions;
+        private @Nullable Output<SeccompProfileArgs> seccompProfile;
+        private @Nullable Output<WindowsSecurityContextOptionsArgs> windowsOptions;
 
         public Builder() {
     	      // Empty
@@ -224,113 +224,113 @@ public final class SecurityContextArgs extends io.pulumi.resources.ResourceArgs 
     	      this.windowsOptions = defaults.windowsOptions;
         }
 
-        public Builder allowPrivilegeEscalation(@Nullable Input<Boolean> allowPrivilegeEscalation) {
+        public Builder allowPrivilegeEscalation(@Nullable Output<Boolean> allowPrivilegeEscalation) {
             this.allowPrivilegeEscalation = allowPrivilegeEscalation;
             return this;
         }
 
         public Builder allowPrivilegeEscalation(@Nullable Boolean allowPrivilegeEscalation) {
-            this.allowPrivilegeEscalation = Input.ofNullable(allowPrivilegeEscalation);
+            this.allowPrivilegeEscalation = Output.ofNullable(allowPrivilegeEscalation);
             return this;
         }
 
-        public Builder capabilities(@Nullable Input<CapabilitiesArgs> capabilities) {
+        public Builder capabilities(@Nullable Output<CapabilitiesArgs> capabilities) {
             this.capabilities = capabilities;
             return this;
         }
 
         public Builder capabilities(@Nullable CapabilitiesArgs capabilities) {
-            this.capabilities = Input.ofNullable(capabilities);
+            this.capabilities = Output.ofNullable(capabilities);
             return this;
         }
 
-        public Builder privileged(@Nullable Input<Boolean> privileged) {
+        public Builder privileged(@Nullable Output<Boolean> privileged) {
             this.privileged = privileged;
             return this;
         }
 
         public Builder privileged(@Nullable Boolean privileged) {
-            this.privileged = Input.ofNullable(privileged);
+            this.privileged = Output.ofNullable(privileged);
             return this;
         }
 
-        public Builder procMount(@Nullable Input<String> procMount) {
+        public Builder procMount(@Nullable Output<String> procMount) {
             this.procMount = procMount;
             return this;
         }
 
         public Builder procMount(@Nullable String procMount) {
-            this.procMount = Input.ofNullable(procMount);
+            this.procMount = Output.ofNullable(procMount);
             return this;
         }
 
-        public Builder readOnlyRootFilesystem(@Nullable Input<Boolean> readOnlyRootFilesystem) {
+        public Builder readOnlyRootFilesystem(@Nullable Output<Boolean> readOnlyRootFilesystem) {
             this.readOnlyRootFilesystem = readOnlyRootFilesystem;
             return this;
         }
 
         public Builder readOnlyRootFilesystem(@Nullable Boolean readOnlyRootFilesystem) {
-            this.readOnlyRootFilesystem = Input.ofNullable(readOnlyRootFilesystem);
+            this.readOnlyRootFilesystem = Output.ofNullable(readOnlyRootFilesystem);
             return this;
         }
 
-        public Builder runAsGroup(@Nullable Input<Integer> runAsGroup) {
+        public Builder runAsGroup(@Nullable Output<Integer> runAsGroup) {
             this.runAsGroup = runAsGroup;
             return this;
         }
 
         public Builder runAsGroup(@Nullable Integer runAsGroup) {
-            this.runAsGroup = Input.ofNullable(runAsGroup);
+            this.runAsGroup = Output.ofNullable(runAsGroup);
             return this;
         }
 
-        public Builder runAsNonRoot(@Nullable Input<Boolean> runAsNonRoot) {
+        public Builder runAsNonRoot(@Nullable Output<Boolean> runAsNonRoot) {
             this.runAsNonRoot = runAsNonRoot;
             return this;
         }
 
         public Builder runAsNonRoot(@Nullable Boolean runAsNonRoot) {
-            this.runAsNonRoot = Input.ofNullable(runAsNonRoot);
+            this.runAsNonRoot = Output.ofNullable(runAsNonRoot);
             return this;
         }
 
-        public Builder runAsUser(@Nullable Input<Integer> runAsUser) {
+        public Builder runAsUser(@Nullable Output<Integer> runAsUser) {
             this.runAsUser = runAsUser;
             return this;
         }
 
         public Builder runAsUser(@Nullable Integer runAsUser) {
-            this.runAsUser = Input.ofNullable(runAsUser);
+            this.runAsUser = Output.ofNullable(runAsUser);
             return this;
         }
 
-        public Builder seLinuxOptions(@Nullable Input<SELinuxOptionsArgs> seLinuxOptions) {
+        public Builder seLinuxOptions(@Nullable Output<SELinuxOptionsArgs> seLinuxOptions) {
             this.seLinuxOptions = seLinuxOptions;
             return this;
         }
 
         public Builder seLinuxOptions(@Nullable SELinuxOptionsArgs seLinuxOptions) {
-            this.seLinuxOptions = Input.ofNullable(seLinuxOptions);
+            this.seLinuxOptions = Output.ofNullable(seLinuxOptions);
             return this;
         }
 
-        public Builder seccompProfile(@Nullable Input<SeccompProfileArgs> seccompProfile) {
+        public Builder seccompProfile(@Nullable Output<SeccompProfileArgs> seccompProfile) {
             this.seccompProfile = seccompProfile;
             return this;
         }
 
         public Builder seccompProfile(@Nullable SeccompProfileArgs seccompProfile) {
-            this.seccompProfile = Input.ofNullable(seccompProfile);
+            this.seccompProfile = Output.ofNullable(seccompProfile);
             return this;
         }
 
-        public Builder windowsOptions(@Nullable Input<WindowsSecurityContextOptionsArgs> windowsOptions) {
+        public Builder windowsOptions(@Nullable Output<WindowsSecurityContextOptionsArgs> windowsOptions) {
             this.windowsOptions = windowsOptions;
             return this;
         }
 
         public Builder windowsOptions(@Nullable WindowsSecurityContextOptionsArgs windowsOptions) {
-            this.windowsOptions = Input.ofNullable(windowsOptions);
+            this.windowsOptions = Output.ofNullable(windowsOptions);
             return this;
         }
         public SecurityContextArgs build() {

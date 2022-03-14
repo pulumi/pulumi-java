@@ -6,7 +6,7 @@ package io.pulumi.awsnative.resourcegroups;
 import io.pulumi.awsnative.resourcegroups.inputs.GroupConfigurationItemArgs;
 import io.pulumi.awsnative.resourcegroups.inputs.GroupResourceQueryArgs;
 import io.pulumi.awsnative.resourcegroups.inputs.GroupTagArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -19,10 +19,10 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
     public static final GroupArgs Empty = new GroupArgs();
 
     @InputImport(name="configuration")
-      private final @Nullable Input<List<GroupConfigurationItemArgs>> configuration;
+      private final @Nullable Output<List<GroupConfigurationItemArgs>> configuration;
 
-    public Input<List<GroupConfigurationItemArgs>> getConfiguration() {
-        return this.configuration == null ? Input.empty() : this.configuration;
+    public Output<List<GroupConfigurationItemArgs>> getConfiguration() {
+        return this.configuration == null ? Output.empty() : this.configuration;
     }
 
     /**
@@ -30,10 +30,10 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -41,40 +41,40 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     @InputImport(name="resourceQuery")
-      private final @Nullable Input<GroupResourceQueryArgs> resourceQuery;
+      private final @Nullable Output<GroupResourceQueryArgs> resourceQuery;
 
-    public Input<GroupResourceQueryArgs> getResourceQuery() {
-        return this.resourceQuery == null ? Input.empty() : this.resourceQuery;
+    public Output<GroupResourceQueryArgs> getResourceQuery() {
+        return this.resourceQuery == null ? Output.empty() : this.resourceQuery;
     }
 
     @InputImport(name="resources")
-      private final @Nullable Input<List<String>> resources;
+      private final @Nullable Output<List<String>> resources;
 
-    public Input<List<String>> getResources() {
-        return this.resources == null ? Input.empty() : this.resources;
+    public Output<List<String>> getResources() {
+        return this.resources == null ? Output.empty() : this.resources;
     }
 
     @InputImport(name="tags")
-      private final @Nullable Input<List<GroupTagArgs>> tags;
+      private final @Nullable Output<List<GroupTagArgs>> tags;
 
-    public Input<List<GroupTagArgs>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<List<GroupTagArgs>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public GroupArgs(
-        @Nullable Input<List<GroupConfigurationItemArgs>> configuration,
-        @Nullable Input<String> description,
-        @Nullable Input<String> name,
-        @Nullable Input<GroupResourceQueryArgs> resourceQuery,
-        @Nullable Input<List<String>> resources,
-        @Nullable Input<List<GroupTagArgs>> tags) {
+        @Nullable Output<List<GroupConfigurationItemArgs>> configuration,
+        @Nullable Output<String> description,
+        @Nullable Output<String> name,
+        @Nullable Output<GroupResourceQueryArgs> resourceQuery,
+        @Nullable Output<List<String>> resources,
+        @Nullable Output<List<GroupTagArgs>> tags) {
         this.configuration = configuration;
         this.description = description;
         this.name = name;
@@ -84,12 +84,12 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private GroupArgs() {
-        this.configuration = Input.empty();
-        this.description = Input.empty();
-        this.name = Input.empty();
-        this.resourceQuery = Input.empty();
-        this.resources = Input.empty();
-        this.tags = Input.empty();
+        this.configuration = Output.empty();
+        this.description = Output.empty();
+        this.name = Output.empty();
+        this.resourceQuery = Output.empty();
+        this.resources = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -101,12 +101,12 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<List<GroupConfigurationItemArgs>> configuration;
-        private @Nullable Input<String> description;
-        private @Nullable Input<String> name;
-        private @Nullable Input<GroupResourceQueryArgs> resourceQuery;
-        private @Nullable Input<List<String>> resources;
-        private @Nullable Input<List<GroupTagArgs>> tags;
+        private @Nullable Output<List<GroupConfigurationItemArgs>> configuration;
+        private @Nullable Output<String> description;
+        private @Nullable Output<String> name;
+        private @Nullable Output<GroupResourceQueryArgs> resourceQuery;
+        private @Nullable Output<List<String>> resources;
+        private @Nullable Output<List<GroupTagArgs>> tags;
 
         public Builder() {
     	      // Empty
@@ -122,63 +122,63 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder configuration(@Nullable Input<List<GroupConfigurationItemArgs>> configuration) {
+        public Builder configuration(@Nullable Output<List<GroupConfigurationItemArgs>> configuration) {
             this.configuration = configuration;
             return this;
         }
 
         public Builder configuration(@Nullable List<GroupConfigurationItemArgs> configuration) {
-            this.configuration = Input.ofNullable(configuration);
+            this.configuration = Output.ofNullable(configuration);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder resourceQuery(@Nullable Input<GroupResourceQueryArgs> resourceQuery) {
+        public Builder resourceQuery(@Nullable Output<GroupResourceQueryArgs> resourceQuery) {
             this.resourceQuery = resourceQuery;
             return this;
         }
 
         public Builder resourceQuery(@Nullable GroupResourceQueryArgs resourceQuery) {
-            this.resourceQuery = Input.ofNullable(resourceQuery);
+            this.resourceQuery = Output.ofNullable(resourceQuery);
             return this;
         }
 
-        public Builder resources(@Nullable Input<List<String>> resources) {
+        public Builder resources(@Nullable Output<List<String>> resources) {
             this.resources = resources;
             return this;
         }
 
         public Builder resources(@Nullable List<String> resources) {
-            this.resources = Input.ofNullable(resources);
+            this.resources = Output.ofNullable(resources);
             return this;
         }
 
-        public Builder tags(@Nullable Input<List<GroupTagArgs>> tags) {
+        public Builder tags(@Nullable Output<List<GroupTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable List<GroupTagArgs> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public GroupArgs build() {

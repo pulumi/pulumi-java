@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.iotanalytics.inputs;
 
 import io.pulumi.awsnative.iotanalytics.inputs.DatasetGlueConfigurationArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -16,38 +16,38 @@ public final class DatasetS3DestinationConfigurationArgs extends io.pulumi.resou
     public static final DatasetS3DestinationConfigurationArgs Empty = new DatasetS3DestinationConfigurationArgs();
 
     @InputImport(name="bucket", required=true)
-      private final Input<String> bucket;
+      private final Output<String> bucket;
 
-    public Input<String> getBucket() {
+    public Output<String> getBucket() {
         return this.bucket;
     }
 
     @InputImport(name="glueConfiguration")
-      private final @Nullable Input<DatasetGlueConfigurationArgs> glueConfiguration;
+      private final @Nullable Output<DatasetGlueConfigurationArgs> glueConfiguration;
 
-    public Input<DatasetGlueConfigurationArgs> getGlueConfiguration() {
-        return this.glueConfiguration == null ? Input.empty() : this.glueConfiguration;
+    public Output<DatasetGlueConfigurationArgs> getGlueConfiguration() {
+        return this.glueConfiguration == null ? Output.empty() : this.glueConfiguration;
     }
 
     @InputImport(name="key", required=true)
-      private final Input<String> key;
+      private final Output<String> key;
 
-    public Input<String> getKey() {
+    public Output<String> getKey() {
         return this.key;
     }
 
     @InputImport(name="roleArn", required=true)
-      private final Input<String> roleArn;
+      private final Output<String> roleArn;
 
-    public Input<String> getRoleArn() {
+    public Output<String> getRoleArn() {
         return this.roleArn;
     }
 
     public DatasetS3DestinationConfigurationArgs(
-        Input<String> bucket,
-        @Nullable Input<DatasetGlueConfigurationArgs> glueConfiguration,
-        Input<String> key,
-        Input<String> roleArn) {
+        Output<String> bucket,
+        @Nullable Output<DatasetGlueConfigurationArgs> glueConfiguration,
+        Output<String> key,
+        Output<String> roleArn) {
         this.bucket = Objects.requireNonNull(bucket, "expected parameter 'bucket' to be non-null");
         this.glueConfiguration = glueConfiguration;
         this.key = Objects.requireNonNull(key, "expected parameter 'key' to be non-null");
@@ -55,10 +55,10 @@ public final class DatasetS3DestinationConfigurationArgs extends io.pulumi.resou
     }
 
     private DatasetS3DestinationConfigurationArgs() {
-        this.bucket = Input.empty();
-        this.glueConfiguration = Input.empty();
-        this.key = Input.empty();
-        this.roleArn = Input.empty();
+        this.bucket = Output.empty();
+        this.glueConfiguration = Output.empty();
+        this.key = Output.empty();
+        this.roleArn = Output.empty();
     }
 
     public static Builder builder() {
@@ -70,10 +70,10 @@ public final class DatasetS3DestinationConfigurationArgs extends io.pulumi.resou
     }
 
     public static final class Builder {
-        private Input<String> bucket;
-        private @Nullable Input<DatasetGlueConfigurationArgs> glueConfiguration;
-        private Input<String> key;
-        private Input<String> roleArn;
+        private Output<String> bucket;
+        private @Nullable Output<DatasetGlueConfigurationArgs> glueConfiguration;
+        private Output<String> key;
+        private Output<String> roleArn;
 
         public Builder() {
     	      // Empty
@@ -87,43 +87,43 @@ public final class DatasetS3DestinationConfigurationArgs extends io.pulumi.resou
     	      this.roleArn = defaults.roleArn;
         }
 
-        public Builder bucket(Input<String> bucket) {
+        public Builder bucket(Output<String> bucket) {
             this.bucket = Objects.requireNonNull(bucket);
             return this;
         }
 
         public Builder bucket(String bucket) {
-            this.bucket = Input.of(Objects.requireNonNull(bucket));
+            this.bucket = Output.of(Objects.requireNonNull(bucket));
             return this;
         }
 
-        public Builder glueConfiguration(@Nullable Input<DatasetGlueConfigurationArgs> glueConfiguration) {
+        public Builder glueConfiguration(@Nullable Output<DatasetGlueConfigurationArgs> glueConfiguration) {
             this.glueConfiguration = glueConfiguration;
             return this;
         }
 
         public Builder glueConfiguration(@Nullable DatasetGlueConfigurationArgs glueConfiguration) {
-            this.glueConfiguration = Input.ofNullable(glueConfiguration);
+            this.glueConfiguration = Output.ofNullable(glueConfiguration);
             return this;
         }
 
-        public Builder key(Input<String> key) {
+        public Builder key(Output<String> key) {
             this.key = Objects.requireNonNull(key);
             return this;
         }
 
         public Builder key(String key) {
-            this.key = Input.of(Objects.requireNonNull(key));
+            this.key = Output.of(Objects.requireNonNull(key));
             return this;
         }
 
-        public Builder roleArn(Input<String> roleArn) {
+        public Builder roleArn(Output<String> roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
 
         public Builder roleArn(String roleArn) {
-            this.roleArn = Input.of(Objects.requireNonNull(roleArn));
+            this.roleArn = Output.of(Objects.requireNonNull(roleArn));
             return this;
         }
         public DatasetS3DestinationConfigurationArgs build() {

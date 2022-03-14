@@ -5,7 +5,7 @@ package io.pulumi.awsnative.athena.inputs;
 
 import io.pulumi.awsnative.athena.inputs.WorkGroupEngineVersionArgs;
 import io.pulumi.awsnative.athena.inputs.WorkGroupResultConfigurationArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -18,54 +18,54 @@ public final class WorkGroupConfigurationArgs extends io.pulumi.resources.Resour
     public static final WorkGroupConfigurationArgs Empty = new WorkGroupConfigurationArgs();
 
     @InputImport(name="bytesScannedCutoffPerQuery")
-      private final @Nullable Input<Integer> bytesScannedCutoffPerQuery;
+      private final @Nullable Output<Integer> bytesScannedCutoffPerQuery;
 
-    public Input<Integer> getBytesScannedCutoffPerQuery() {
-        return this.bytesScannedCutoffPerQuery == null ? Input.empty() : this.bytesScannedCutoffPerQuery;
+    public Output<Integer> getBytesScannedCutoffPerQuery() {
+        return this.bytesScannedCutoffPerQuery == null ? Output.empty() : this.bytesScannedCutoffPerQuery;
     }
 
     @InputImport(name="enforceWorkGroupConfiguration")
-      private final @Nullable Input<Boolean> enforceWorkGroupConfiguration;
+      private final @Nullable Output<Boolean> enforceWorkGroupConfiguration;
 
-    public Input<Boolean> getEnforceWorkGroupConfiguration() {
-        return this.enforceWorkGroupConfiguration == null ? Input.empty() : this.enforceWorkGroupConfiguration;
+    public Output<Boolean> getEnforceWorkGroupConfiguration() {
+        return this.enforceWorkGroupConfiguration == null ? Output.empty() : this.enforceWorkGroupConfiguration;
     }
 
     @InputImport(name="engineVersion")
-      private final @Nullable Input<WorkGroupEngineVersionArgs> engineVersion;
+      private final @Nullable Output<WorkGroupEngineVersionArgs> engineVersion;
 
-    public Input<WorkGroupEngineVersionArgs> getEngineVersion() {
-        return this.engineVersion == null ? Input.empty() : this.engineVersion;
+    public Output<WorkGroupEngineVersionArgs> getEngineVersion() {
+        return this.engineVersion == null ? Output.empty() : this.engineVersion;
     }
 
     @InputImport(name="publishCloudWatchMetricsEnabled")
-      private final @Nullable Input<Boolean> publishCloudWatchMetricsEnabled;
+      private final @Nullable Output<Boolean> publishCloudWatchMetricsEnabled;
 
-    public Input<Boolean> getPublishCloudWatchMetricsEnabled() {
-        return this.publishCloudWatchMetricsEnabled == null ? Input.empty() : this.publishCloudWatchMetricsEnabled;
+    public Output<Boolean> getPublishCloudWatchMetricsEnabled() {
+        return this.publishCloudWatchMetricsEnabled == null ? Output.empty() : this.publishCloudWatchMetricsEnabled;
     }
 
     @InputImport(name="requesterPaysEnabled")
-      private final @Nullable Input<Boolean> requesterPaysEnabled;
+      private final @Nullable Output<Boolean> requesterPaysEnabled;
 
-    public Input<Boolean> getRequesterPaysEnabled() {
-        return this.requesterPaysEnabled == null ? Input.empty() : this.requesterPaysEnabled;
+    public Output<Boolean> getRequesterPaysEnabled() {
+        return this.requesterPaysEnabled == null ? Output.empty() : this.requesterPaysEnabled;
     }
 
     @InputImport(name="resultConfiguration")
-      private final @Nullable Input<WorkGroupResultConfigurationArgs> resultConfiguration;
+      private final @Nullable Output<WorkGroupResultConfigurationArgs> resultConfiguration;
 
-    public Input<WorkGroupResultConfigurationArgs> getResultConfiguration() {
-        return this.resultConfiguration == null ? Input.empty() : this.resultConfiguration;
+    public Output<WorkGroupResultConfigurationArgs> getResultConfiguration() {
+        return this.resultConfiguration == null ? Output.empty() : this.resultConfiguration;
     }
 
     public WorkGroupConfigurationArgs(
-        @Nullable Input<Integer> bytesScannedCutoffPerQuery,
-        @Nullable Input<Boolean> enforceWorkGroupConfiguration,
-        @Nullable Input<WorkGroupEngineVersionArgs> engineVersion,
-        @Nullable Input<Boolean> publishCloudWatchMetricsEnabled,
-        @Nullable Input<Boolean> requesterPaysEnabled,
-        @Nullable Input<WorkGroupResultConfigurationArgs> resultConfiguration) {
+        @Nullable Output<Integer> bytesScannedCutoffPerQuery,
+        @Nullable Output<Boolean> enforceWorkGroupConfiguration,
+        @Nullable Output<WorkGroupEngineVersionArgs> engineVersion,
+        @Nullable Output<Boolean> publishCloudWatchMetricsEnabled,
+        @Nullable Output<Boolean> requesterPaysEnabled,
+        @Nullable Output<WorkGroupResultConfigurationArgs> resultConfiguration) {
         this.bytesScannedCutoffPerQuery = bytesScannedCutoffPerQuery;
         this.enforceWorkGroupConfiguration = enforceWorkGroupConfiguration;
         this.engineVersion = engineVersion;
@@ -75,12 +75,12 @@ public final class WorkGroupConfigurationArgs extends io.pulumi.resources.Resour
     }
 
     private WorkGroupConfigurationArgs() {
-        this.bytesScannedCutoffPerQuery = Input.empty();
-        this.enforceWorkGroupConfiguration = Input.empty();
-        this.engineVersion = Input.empty();
-        this.publishCloudWatchMetricsEnabled = Input.empty();
-        this.requesterPaysEnabled = Input.empty();
-        this.resultConfiguration = Input.empty();
+        this.bytesScannedCutoffPerQuery = Output.empty();
+        this.enforceWorkGroupConfiguration = Output.empty();
+        this.engineVersion = Output.empty();
+        this.publishCloudWatchMetricsEnabled = Output.empty();
+        this.requesterPaysEnabled = Output.empty();
+        this.resultConfiguration = Output.empty();
     }
 
     public static Builder builder() {
@@ -92,12 +92,12 @@ public final class WorkGroupConfigurationArgs extends io.pulumi.resources.Resour
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> bytesScannedCutoffPerQuery;
-        private @Nullable Input<Boolean> enforceWorkGroupConfiguration;
-        private @Nullable Input<WorkGroupEngineVersionArgs> engineVersion;
-        private @Nullable Input<Boolean> publishCloudWatchMetricsEnabled;
-        private @Nullable Input<Boolean> requesterPaysEnabled;
-        private @Nullable Input<WorkGroupResultConfigurationArgs> resultConfiguration;
+        private @Nullable Output<Integer> bytesScannedCutoffPerQuery;
+        private @Nullable Output<Boolean> enforceWorkGroupConfiguration;
+        private @Nullable Output<WorkGroupEngineVersionArgs> engineVersion;
+        private @Nullable Output<Boolean> publishCloudWatchMetricsEnabled;
+        private @Nullable Output<Boolean> requesterPaysEnabled;
+        private @Nullable Output<WorkGroupResultConfigurationArgs> resultConfiguration;
 
         public Builder() {
     	      // Empty
@@ -113,63 +113,63 @@ public final class WorkGroupConfigurationArgs extends io.pulumi.resources.Resour
     	      this.resultConfiguration = defaults.resultConfiguration;
         }
 
-        public Builder bytesScannedCutoffPerQuery(@Nullable Input<Integer> bytesScannedCutoffPerQuery) {
+        public Builder bytesScannedCutoffPerQuery(@Nullable Output<Integer> bytesScannedCutoffPerQuery) {
             this.bytesScannedCutoffPerQuery = bytesScannedCutoffPerQuery;
             return this;
         }
 
         public Builder bytesScannedCutoffPerQuery(@Nullable Integer bytesScannedCutoffPerQuery) {
-            this.bytesScannedCutoffPerQuery = Input.ofNullable(bytesScannedCutoffPerQuery);
+            this.bytesScannedCutoffPerQuery = Output.ofNullable(bytesScannedCutoffPerQuery);
             return this;
         }
 
-        public Builder enforceWorkGroupConfiguration(@Nullable Input<Boolean> enforceWorkGroupConfiguration) {
+        public Builder enforceWorkGroupConfiguration(@Nullable Output<Boolean> enforceWorkGroupConfiguration) {
             this.enforceWorkGroupConfiguration = enforceWorkGroupConfiguration;
             return this;
         }
 
         public Builder enforceWorkGroupConfiguration(@Nullable Boolean enforceWorkGroupConfiguration) {
-            this.enforceWorkGroupConfiguration = Input.ofNullable(enforceWorkGroupConfiguration);
+            this.enforceWorkGroupConfiguration = Output.ofNullable(enforceWorkGroupConfiguration);
             return this;
         }
 
-        public Builder engineVersion(@Nullable Input<WorkGroupEngineVersionArgs> engineVersion) {
+        public Builder engineVersion(@Nullable Output<WorkGroupEngineVersionArgs> engineVersion) {
             this.engineVersion = engineVersion;
             return this;
         }
 
         public Builder engineVersion(@Nullable WorkGroupEngineVersionArgs engineVersion) {
-            this.engineVersion = Input.ofNullable(engineVersion);
+            this.engineVersion = Output.ofNullable(engineVersion);
             return this;
         }
 
-        public Builder publishCloudWatchMetricsEnabled(@Nullable Input<Boolean> publishCloudWatchMetricsEnabled) {
+        public Builder publishCloudWatchMetricsEnabled(@Nullable Output<Boolean> publishCloudWatchMetricsEnabled) {
             this.publishCloudWatchMetricsEnabled = publishCloudWatchMetricsEnabled;
             return this;
         }
 
         public Builder publishCloudWatchMetricsEnabled(@Nullable Boolean publishCloudWatchMetricsEnabled) {
-            this.publishCloudWatchMetricsEnabled = Input.ofNullable(publishCloudWatchMetricsEnabled);
+            this.publishCloudWatchMetricsEnabled = Output.ofNullable(publishCloudWatchMetricsEnabled);
             return this;
         }
 
-        public Builder requesterPaysEnabled(@Nullable Input<Boolean> requesterPaysEnabled) {
+        public Builder requesterPaysEnabled(@Nullable Output<Boolean> requesterPaysEnabled) {
             this.requesterPaysEnabled = requesterPaysEnabled;
             return this;
         }
 
         public Builder requesterPaysEnabled(@Nullable Boolean requesterPaysEnabled) {
-            this.requesterPaysEnabled = Input.ofNullable(requesterPaysEnabled);
+            this.requesterPaysEnabled = Output.ofNullable(requesterPaysEnabled);
             return this;
         }
 
-        public Builder resultConfiguration(@Nullable Input<WorkGroupResultConfigurationArgs> resultConfiguration) {
+        public Builder resultConfiguration(@Nullable Output<WorkGroupResultConfigurationArgs> resultConfiguration) {
             this.resultConfiguration = resultConfiguration;
             return this;
         }
 
         public Builder resultConfiguration(@Nullable WorkGroupResultConfigurationArgs resultConfiguration) {
-            this.resultConfiguration = Input.ofNullable(resultConfiguration);
+            this.resultConfiguration = Output.ofNullable(resultConfiguration);
             return this;
         }
         public WorkGroupConfigurationArgs build() {

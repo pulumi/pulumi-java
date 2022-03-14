@@ -9,7 +9,6 @@ import io.pulumi.azurenative.alertsmanagement.outputs.ActionGroupsInformationRes
 import io.pulumi.azurenative.alertsmanagement.outputs.DetectorResponse;
 import io.pulumi.azurenative.alertsmanagement.outputs.ThrottlingInformationResponse;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -242,20 +241,20 @@ public class SmartDetectorAlertRule extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public SmartDetectorAlertRule(String name, SmartDetectorAlertRuleArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:alertsmanagement:SmartDetectorAlertRule", name, args == null ? SmartDetectorAlertRuleArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("azure-native:alertsmanagement:SmartDetectorAlertRule", name, args == null ? SmartDetectorAlertRuleArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private SmartDetectorAlertRule(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private SmartDetectorAlertRule(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:alertsmanagement:SmartDetectorAlertRule", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:alertsmanagement/v20190301:SmartDetectorAlertRule").build()),
-                Input.of(Alias.builder().setType("azure-native:alertsmanagement/v20190601:SmartDetectorAlertRule").build()),
-                Input.of(Alias.builder().setType("azure-native:alertsmanagement/v20210401:SmartDetectorAlertRule").build())
+                Output.of(Alias.builder().setType("azure-native:alertsmanagement/v20190301:SmartDetectorAlertRule").build()),
+                Output.of(Alias.builder().setType("azure-native:alertsmanagement/v20190601:SmartDetectorAlertRule").build()),
+                Output.of(Alias.builder().setType("azure-native:alertsmanagement/v20210401:SmartDetectorAlertRule").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -269,7 +268,7 @@ public class SmartDetectorAlertRule extends io.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static SmartDetectorAlertRule get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static SmartDetectorAlertRule get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new SmartDetectorAlertRule(name, id, options);
     }
 }

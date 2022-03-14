@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.wisdom.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -15,18 +15,18 @@ public final class KnowledgeBaseRenderingConfigurationArgs extends io.pulumi.res
     public static final KnowledgeBaseRenderingConfigurationArgs Empty = new KnowledgeBaseRenderingConfigurationArgs();
 
     @InputImport(name="templateUri")
-      private final @Nullable Input<String> templateUri;
+      private final @Nullable Output<String> templateUri;
 
-    public Input<String> getTemplateUri() {
-        return this.templateUri == null ? Input.empty() : this.templateUri;
+    public Output<String> getTemplateUri() {
+        return this.templateUri == null ? Output.empty() : this.templateUri;
     }
 
-    public KnowledgeBaseRenderingConfigurationArgs(@Nullable Input<String> templateUri) {
+    public KnowledgeBaseRenderingConfigurationArgs(@Nullable Output<String> templateUri) {
         this.templateUri = templateUri;
     }
 
     private KnowledgeBaseRenderingConfigurationArgs() {
-        this.templateUri = Input.empty();
+        this.templateUri = Output.empty();
     }
 
     public static Builder builder() {
@@ -38,7 +38,7 @@ public final class KnowledgeBaseRenderingConfigurationArgs extends io.pulumi.res
     }
 
     public static final class Builder {
-        private @Nullable Input<String> templateUri;
+        private @Nullable Output<String> templateUri;
 
         public Builder() {
     	      // Empty
@@ -49,13 +49,13 @@ public final class KnowledgeBaseRenderingConfigurationArgs extends io.pulumi.res
     	      this.templateUri = defaults.templateUri;
         }
 
-        public Builder templateUri(@Nullable Input<String> templateUri) {
+        public Builder templateUri(@Nullable Output<String> templateUri) {
             this.templateUri = templateUri;
             return this;
         }
 
         public Builder templateUri(@Nullable String templateUri) {
-            this.templateUri = Input.ofNullable(templateUri);
+            this.templateUri = Output.ofNullable(templateUri);
             return this;
         }
         public KnowledgeBaseRenderingConfigurationArgs build() {

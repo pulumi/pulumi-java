@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.iap_v1;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.iap_v1.inputs.BindingArgs;
 import java.lang.Integer;
@@ -22,10 +22,10 @@ public final class V1IamPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="bindings")
-      private final @Nullable Input<List<BindingArgs>> bindings;
+      private final @Nullable Output<List<BindingArgs>> bindings;
 
-    public Input<List<BindingArgs>> getBindings() {
-        return this.bindings == null ? Input.empty() : this.bindings;
+    public Output<List<BindingArgs>> getBindings() {
+        return this.bindings == null ? Output.empty() : this.bindings;
     }
 
     /**
@@ -33,16 +33,16 @@ public final class V1IamPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="etag")
-      private final @Nullable Input<String> etag;
+      private final @Nullable Output<String> etag;
 
-    public Input<String> getEtag() {
-        return this.etag == null ? Input.empty() : this.etag;
+    public Output<String> getEtag() {
+        return this.etag == null ? Output.empty() : this.etag;
     }
 
     @InputImport(name="v1Id", required=true)
-      private final Input<String> v1Id;
+      private final Output<String> v1Id;
 
-    public Input<String> getV1Id() {
+    public Output<String> getV1Id() {
         return this.v1Id;
     }
 
@@ -51,17 +51,17 @@ public final class V1IamPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="version")
-      private final @Nullable Input<Integer> version;
+      private final @Nullable Output<Integer> version;
 
-    public Input<Integer> getVersion() {
-        return this.version == null ? Input.empty() : this.version;
+    public Output<Integer> getVersion() {
+        return this.version == null ? Output.empty() : this.version;
     }
 
     public V1IamPolicyArgs(
-        @Nullable Input<List<BindingArgs>> bindings,
-        @Nullable Input<String> etag,
-        Input<String> v1Id,
-        @Nullable Input<Integer> version) {
+        @Nullable Output<List<BindingArgs>> bindings,
+        @Nullable Output<String> etag,
+        Output<String> v1Id,
+        @Nullable Output<Integer> version) {
         this.bindings = bindings;
         this.etag = etag;
         this.v1Id = Objects.requireNonNull(v1Id, "expected parameter 'v1Id' to be non-null");
@@ -69,10 +69,10 @@ public final class V1IamPolicyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private V1IamPolicyArgs() {
-        this.bindings = Input.empty();
-        this.etag = Input.empty();
-        this.v1Id = Input.empty();
-        this.version = Input.empty();
+        this.bindings = Output.empty();
+        this.etag = Output.empty();
+        this.v1Id = Output.empty();
+        this.version = Output.empty();
     }
 
     public static Builder builder() {
@@ -84,10 +84,10 @@ public final class V1IamPolicyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<List<BindingArgs>> bindings;
-        private @Nullable Input<String> etag;
-        private Input<String> v1Id;
-        private @Nullable Input<Integer> version;
+        private @Nullable Output<List<BindingArgs>> bindings;
+        private @Nullable Output<String> etag;
+        private Output<String> v1Id;
+        private @Nullable Output<Integer> version;
 
         public Builder() {
     	      // Empty
@@ -101,43 +101,43 @@ public final class V1IamPolicyArgs extends io.pulumi.resources.ResourceArgs {
     	      this.version = defaults.version;
         }
 
-        public Builder bindings(@Nullable Input<List<BindingArgs>> bindings) {
+        public Builder bindings(@Nullable Output<List<BindingArgs>> bindings) {
             this.bindings = bindings;
             return this;
         }
 
         public Builder bindings(@Nullable List<BindingArgs> bindings) {
-            this.bindings = Input.ofNullable(bindings);
+            this.bindings = Output.ofNullable(bindings);
             return this;
         }
 
-        public Builder etag(@Nullable Input<String> etag) {
+        public Builder etag(@Nullable Output<String> etag) {
             this.etag = etag;
             return this;
         }
 
         public Builder etag(@Nullable String etag) {
-            this.etag = Input.ofNullable(etag);
+            this.etag = Output.ofNullable(etag);
             return this;
         }
 
-        public Builder v1Id(Input<String> v1Id) {
+        public Builder v1Id(Output<String> v1Id) {
             this.v1Id = Objects.requireNonNull(v1Id);
             return this;
         }
 
         public Builder v1Id(String v1Id) {
-            this.v1Id = Input.of(Objects.requireNonNull(v1Id));
+            this.v1Id = Output.of(Objects.requireNonNull(v1Id));
             return this;
         }
 
-        public Builder version(@Nullable Input<Integer> version) {
+        public Builder version(@Nullable Output<Integer> version) {
             this.version = version;
             return this;
         }
 
         public Builder version(@Nullable Integer version) {
-            this.version = Input.ofNullable(version);
+            this.version = Output.ofNullable(version);
             return this;
         }
         public V1IamPolicyArgs build() {

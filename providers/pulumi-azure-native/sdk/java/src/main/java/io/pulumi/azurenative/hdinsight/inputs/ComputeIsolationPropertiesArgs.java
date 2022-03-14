@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.hdinsight.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class ComputeIsolationPropertiesArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="enableComputeIsolation")
-      private final @Nullable Input<Boolean> enableComputeIsolation;
+      private final @Nullable Output<Boolean> enableComputeIsolation;
 
-    public Input<Boolean> getEnableComputeIsolation() {
-        return this.enableComputeIsolation == null ? Input.empty() : this.enableComputeIsolation;
+    public Output<Boolean> getEnableComputeIsolation() {
+        return this.enableComputeIsolation == null ? Output.empty() : this.enableComputeIsolation;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class ComputeIsolationPropertiesArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="hostSku")
-      private final @Nullable Input<String> hostSku;
+      private final @Nullable Output<String> hostSku;
 
-    public Input<String> getHostSku() {
-        return this.hostSku == null ? Input.empty() : this.hostSku;
+    public Output<String> getHostSku() {
+        return this.hostSku == null ? Output.empty() : this.hostSku;
     }
 
     public ComputeIsolationPropertiesArgs(
-        @Nullable Input<Boolean> enableComputeIsolation,
-        @Nullable Input<String> hostSku) {
-        this.enableComputeIsolation = enableComputeIsolation == null ? Input.ofNullable(false) : enableComputeIsolation;
+        @Nullable Output<Boolean> enableComputeIsolation,
+        @Nullable Output<String> hostSku) {
+        this.enableComputeIsolation = enableComputeIsolation == null ? Output.ofNullable(false) : enableComputeIsolation;
         this.hostSku = hostSku;
     }
 
     private ComputeIsolationPropertiesArgs() {
-        this.enableComputeIsolation = Input.empty();
-        this.hostSku = Input.empty();
+        this.enableComputeIsolation = Output.empty();
+        this.hostSku = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class ComputeIsolationPropertiesArgs extends io.pulumi.resources.Re
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> enableComputeIsolation;
-        private @Nullable Input<String> hostSku;
+        private @Nullable Output<Boolean> enableComputeIsolation;
+        private @Nullable Output<String> hostSku;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class ComputeIsolationPropertiesArgs extends io.pulumi.resources.Re
     	      this.hostSku = defaults.hostSku;
         }
 
-        public Builder enableComputeIsolation(@Nullable Input<Boolean> enableComputeIsolation) {
+        public Builder enableComputeIsolation(@Nullable Output<Boolean> enableComputeIsolation) {
             this.enableComputeIsolation = enableComputeIsolation;
             return this;
         }
 
         public Builder enableComputeIsolation(@Nullable Boolean enableComputeIsolation) {
-            this.enableComputeIsolation = Input.ofNullable(enableComputeIsolation);
+            this.enableComputeIsolation = Output.ofNullable(enableComputeIsolation);
             return this;
         }
 
-        public Builder hostSku(@Nullable Input<String> hostSku) {
+        public Builder hostSku(@Nullable Output<String> hostSku) {
             this.hostSku = hostSku;
             return this;
         }
 
         public Builder hostSku(@Nullable String hostSku) {
-            this.hostSku = Input.ofNullable(hostSku);
+            this.hostSku = Output.ofNullable(hostSku);
             return this;
         }
         public ComputeIsolationPropertiesArgs build() {

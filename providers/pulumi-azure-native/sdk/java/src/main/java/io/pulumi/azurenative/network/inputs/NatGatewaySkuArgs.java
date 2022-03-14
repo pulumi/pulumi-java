@@ -5,7 +5,7 @@ package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.azurenative.network.enums.NatGatewaySkuName;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -25,18 +25,18 @@ public final class NatGatewaySkuArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<Either<String,NatGatewaySkuName>> name;
+      private final @Nullable Output<Either<String,NatGatewaySkuName>> name;
 
-    public Input<Either<String,NatGatewaySkuName>> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<Either<String,NatGatewaySkuName>> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
-    public NatGatewaySkuArgs(@Nullable Input<Either<String,NatGatewaySkuName>> name) {
+    public NatGatewaySkuArgs(@Nullable Output<Either<String,NatGatewaySkuName>> name) {
         this.name = name;
     }
 
     private NatGatewaySkuArgs() {
-        this.name = Input.empty();
+        this.name = Output.empty();
     }
 
     public static Builder builder() {
@@ -48,7 +48,7 @@ public final class NatGatewaySkuArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Either<String,NatGatewaySkuName>> name;
+        private @Nullable Output<Either<String,NatGatewaySkuName>> name;
 
         public Builder() {
     	      // Empty
@@ -59,13 +59,13 @@ public final class NatGatewaySkuArgs extends io.pulumi.resources.ResourceArgs {
     	      this.name = defaults.name;
         }
 
-        public Builder name(@Nullable Input<Either<String,NatGatewaySkuName>> name) {
+        public Builder name(@Nullable Output<Either<String,NatGatewaySkuName>> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable Either<String,NatGatewaySkuName> name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
         public NatGatewaySkuArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.healthcare.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -20,10 +20,10 @@ public final class Hl7StoreParserConfigArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="allowNullHeader")
-      private final @Nullable Input<Boolean> allowNullHeader;
+      private final @Nullable Output<Boolean> allowNullHeader;
 
-    public Input<Boolean> getAllowNullHeader() {
-        return this.allowNullHeader == null ? Input.empty() : this.allowNullHeader;
+    public Output<Boolean> getAllowNullHeader() {
+        return this.allowNullHeader == null ? Output.empty() : this.allowNullHeader;
     }
 
     /**
@@ -32,10 +32,10 @@ public final class Hl7StoreParserConfigArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="schema")
-      private final @Nullable Input<String> schema;
+      private final @Nullable Output<String> schema;
 
-    public Input<String> getSchema() {
-        return this.schema == null ? Input.empty() : this.schema;
+    public Output<String> getSchema() {
+        return this.schema == null ? Output.empty() : this.schema;
     }
 
     /**
@@ -44,10 +44,10 @@ public final class Hl7StoreParserConfigArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="segmentTerminator")
-      private final @Nullable Input<String> segmentTerminator;
+      private final @Nullable Output<String> segmentTerminator;
 
-    public Input<String> getSegmentTerminator() {
-        return this.segmentTerminator == null ? Input.empty() : this.segmentTerminator;
+    public Output<String> getSegmentTerminator() {
+        return this.segmentTerminator == null ? Output.empty() : this.segmentTerminator;
     }
 
     /**
@@ -57,17 +57,17 @@ public final class Hl7StoreParserConfigArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="version")
-      private final @Nullable Input<String> version;
+      private final @Nullable Output<String> version;
 
-    public Input<String> getVersion() {
-        return this.version == null ? Input.empty() : this.version;
+    public Output<String> getVersion() {
+        return this.version == null ? Output.empty() : this.version;
     }
 
     public Hl7StoreParserConfigArgs(
-        @Nullable Input<Boolean> allowNullHeader,
-        @Nullable Input<String> schema,
-        @Nullable Input<String> segmentTerminator,
-        @Nullable Input<String> version) {
+        @Nullable Output<Boolean> allowNullHeader,
+        @Nullable Output<String> schema,
+        @Nullable Output<String> segmentTerminator,
+        @Nullable Output<String> version) {
         this.allowNullHeader = allowNullHeader;
         this.schema = schema;
         this.segmentTerminator = segmentTerminator;
@@ -75,10 +75,10 @@ public final class Hl7StoreParserConfigArgs extends io.pulumi.resources.Resource
     }
 
     private Hl7StoreParserConfigArgs() {
-        this.allowNullHeader = Input.empty();
-        this.schema = Input.empty();
-        this.segmentTerminator = Input.empty();
-        this.version = Input.empty();
+        this.allowNullHeader = Output.empty();
+        this.schema = Output.empty();
+        this.segmentTerminator = Output.empty();
+        this.version = Output.empty();
     }
 
     public static Builder builder() {
@@ -90,10 +90,10 @@ public final class Hl7StoreParserConfigArgs extends io.pulumi.resources.Resource
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> allowNullHeader;
-        private @Nullable Input<String> schema;
-        private @Nullable Input<String> segmentTerminator;
-        private @Nullable Input<String> version;
+        private @Nullable Output<Boolean> allowNullHeader;
+        private @Nullable Output<String> schema;
+        private @Nullable Output<String> segmentTerminator;
+        private @Nullable Output<String> version;
 
         public Builder() {
     	      // Empty
@@ -107,43 +107,43 @@ public final class Hl7StoreParserConfigArgs extends io.pulumi.resources.Resource
     	      this.version = defaults.version;
         }
 
-        public Builder allowNullHeader(@Nullable Input<Boolean> allowNullHeader) {
+        public Builder allowNullHeader(@Nullable Output<Boolean> allowNullHeader) {
             this.allowNullHeader = allowNullHeader;
             return this;
         }
 
         public Builder allowNullHeader(@Nullable Boolean allowNullHeader) {
-            this.allowNullHeader = Input.ofNullable(allowNullHeader);
+            this.allowNullHeader = Output.ofNullable(allowNullHeader);
             return this;
         }
 
-        public Builder schema(@Nullable Input<String> schema) {
+        public Builder schema(@Nullable Output<String> schema) {
             this.schema = schema;
             return this;
         }
 
         public Builder schema(@Nullable String schema) {
-            this.schema = Input.ofNullable(schema);
+            this.schema = Output.ofNullable(schema);
             return this;
         }
 
-        public Builder segmentTerminator(@Nullable Input<String> segmentTerminator) {
+        public Builder segmentTerminator(@Nullable Output<String> segmentTerminator) {
             this.segmentTerminator = segmentTerminator;
             return this;
         }
 
         public Builder segmentTerminator(@Nullable String segmentTerminator) {
-            this.segmentTerminator = Input.ofNullable(segmentTerminator);
+            this.segmentTerminator = Output.ofNullable(segmentTerminator);
             return this;
         }
 
-        public Builder version(@Nullable Input<String> version) {
+        public Builder version(@Nullable Output<String> version) {
             this.version = version;
             return this;
         }
 
         public Builder version(@Nullable String version) {
-            this.version = Input.ofNullable(version);
+            this.version = Output.ofNullable(version);
             return this;
         }
         public Hl7StoreParserConfigArgs build() {

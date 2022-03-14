@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.azurenative.network.inputs.ManagedRuleOverrideArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -25,9 +25,9 @@ public final class ManagedRuleGroupOverrideArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="ruleGroupName", required=true)
-      private final Input<String> ruleGroupName;
+      private final Output<String> ruleGroupName;
 
-    public Input<String> getRuleGroupName() {
+    public Output<String> getRuleGroupName() {
         return this.ruleGroupName;
     }
 
@@ -36,22 +36,22 @@ public final class ManagedRuleGroupOverrideArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="rules")
-      private final @Nullable Input<List<ManagedRuleOverrideArgs>> rules;
+      private final @Nullable Output<List<ManagedRuleOverrideArgs>> rules;
 
-    public Input<List<ManagedRuleOverrideArgs>> getRules() {
-        return this.rules == null ? Input.empty() : this.rules;
+    public Output<List<ManagedRuleOverrideArgs>> getRules() {
+        return this.rules == null ? Output.empty() : this.rules;
     }
 
     public ManagedRuleGroupOverrideArgs(
-        Input<String> ruleGroupName,
-        @Nullable Input<List<ManagedRuleOverrideArgs>> rules) {
+        Output<String> ruleGroupName,
+        @Nullable Output<List<ManagedRuleOverrideArgs>> rules) {
         this.ruleGroupName = Objects.requireNonNull(ruleGroupName, "expected parameter 'ruleGroupName' to be non-null");
         this.rules = rules;
     }
 
     private ManagedRuleGroupOverrideArgs() {
-        this.ruleGroupName = Input.empty();
-        this.rules = Input.empty();
+        this.ruleGroupName = Output.empty();
+        this.rules = Output.empty();
     }
 
     public static Builder builder() {
@@ -63,8 +63,8 @@ public final class ManagedRuleGroupOverrideArgs extends io.pulumi.resources.Reso
     }
 
     public static final class Builder {
-        private Input<String> ruleGroupName;
-        private @Nullable Input<List<ManagedRuleOverrideArgs>> rules;
+        private Output<String> ruleGroupName;
+        private @Nullable Output<List<ManagedRuleOverrideArgs>> rules;
 
         public Builder() {
     	      // Empty
@@ -76,23 +76,23 @@ public final class ManagedRuleGroupOverrideArgs extends io.pulumi.resources.Reso
     	      this.rules = defaults.rules;
         }
 
-        public Builder ruleGroupName(Input<String> ruleGroupName) {
+        public Builder ruleGroupName(Output<String> ruleGroupName) {
             this.ruleGroupName = Objects.requireNonNull(ruleGroupName);
             return this;
         }
 
         public Builder ruleGroupName(String ruleGroupName) {
-            this.ruleGroupName = Input.of(Objects.requireNonNull(ruleGroupName));
+            this.ruleGroupName = Output.of(Objects.requireNonNull(ruleGroupName));
             return this;
         }
 
-        public Builder rules(@Nullable Input<List<ManagedRuleOverrideArgs>> rules) {
+        public Builder rules(@Nullable Output<List<ManagedRuleOverrideArgs>> rules) {
             this.rules = rules;
             return this;
         }
 
         public Builder rules(@Nullable List<ManagedRuleOverrideArgs> rules) {
-            this.rules = Input.ofNullable(rules);
+            this.rules = Output.ofNullable(rules);
             return this;
         }
         public ManagedRuleGroupOverrideArgs build() {

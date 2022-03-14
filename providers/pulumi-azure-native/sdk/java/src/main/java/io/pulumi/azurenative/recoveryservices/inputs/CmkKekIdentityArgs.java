@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.recoveryservices.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class CmkKekIdentityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="useSystemAssignedIdentity")
-      private final @Nullable Input<Boolean> useSystemAssignedIdentity;
+      private final @Nullable Output<Boolean> useSystemAssignedIdentity;
 
-    public Input<Boolean> getUseSystemAssignedIdentity() {
-        return this.useSystemAssignedIdentity == null ? Input.empty() : this.useSystemAssignedIdentity;
+    public Output<Boolean> getUseSystemAssignedIdentity() {
+        return this.useSystemAssignedIdentity == null ? Output.empty() : this.useSystemAssignedIdentity;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class CmkKekIdentityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="userAssignedIdentity")
-      private final @Nullable Input<String> userAssignedIdentity;
+      private final @Nullable Output<String> userAssignedIdentity;
 
-    public Input<String> getUserAssignedIdentity() {
-        return this.userAssignedIdentity == null ? Input.empty() : this.userAssignedIdentity;
+    public Output<String> getUserAssignedIdentity() {
+        return this.userAssignedIdentity == null ? Output.empty() : this.userAssignedIdentity;
     }
 
     public CmkKekIdentityArgs(
-        @Nullable Input<Boolean> useSystemAssignedIdentity,
-        @Nullable Input<String> userAssignedIdentity) {
+        @Nullable Output<Boolean> useSystemAssignedIdentity,
+        @Nullable Output<String> userAssignedIdentity) {
         this.useSystemAssignedIdentity = useSystemAssignedIdentity;
         this.userAssignedIdentity = userAssignedIdentity;
     }
 
     private CmkKekIdentityArgs() {
-        this.useSystemAssignedIdentity = Input.empty();
-        this.userAssignedIdentity = Input.empty();
+        this.useSystemAssignedIdentity = Output.empty();
+        this.userAssignedIdentity = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class CmkKekIdentityArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> useSystemAssignedIdentity;
-        private @Nullable Input<String> userAssignedIdentity;
+        private @Nullable Output<Boolean> useSystemAssignedIdentity;
+        private @Nullable Output<String> userAssignedIdentity;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class CmkKekIdentityArgs extends io.pulumi.resources.ResourceArgs {
     	      this.userAssignedIdentity = defaults.userAssignedIdentity;
         }
 
-        public Builder useSystemAssignedIdentity(@Nullable Input<Boolean> useSystemAssignedIdentity) {
+        public Builder useSystemAssignedIdentity(@Nullable Output<Boolean> useSystemAssignedIdentity) {
             this.useSystemAssignedIdentity = useSystemAssignedIdentity;
             return this;
         }
 
         public Builder useSystemAssignedIdentity(@Nullable Boolean useSystemAssignedIdentity) {
-            this.useSystemAssignedIdentity = Input.ofNullable(useSystemAssignedIdentity);
+            this.useSystemAssignedIdentity = Output.ofNullable(useSystemAssignedIdentity);
             return this;
         }
 
-        public Builder userAssignedIdentity(@Nullable Input<String> userAssignedIdentity) {
+        public Builder userAssignedIdentity(@Nullable Output<String> userAssignedIdentity) {
             this.userAssignedIdentity = userAssignedIdentity;
             return this;
         }
 
         public Builder userAssignedIdentity(@Nullable String userAssignedIdentity) {
-            this.userAssignedIdentity = Input.ofNullable(userAssignedIdentity);
+            this.userAssignedIdentity = Output.ofNullable(userAssignedIdentity);
             return this;
         }
         public CmkKekIdentityArgs build() {

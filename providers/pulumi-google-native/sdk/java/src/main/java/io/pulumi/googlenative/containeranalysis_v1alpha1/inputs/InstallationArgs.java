@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1alpha1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.containeranalysis_v1alpha1.inputs.LocationArgs;
 import java.util.List;
@@ -24,18 +24,18 @@ public final class InstallationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<List<LocationArgs>> location;
+      private final @Nullable Output<List<LocationArgs>> location;
 
-    public Input<List<LocationArgs>> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<List<LocationArgs>> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
-    public InstallationArgs(@Nullable Input<List<LocationArgs>> location) {
+    public InstallationArgs(@Nullable Output<List<LocationArgs>> location) {
         this.location = location;
     }
 
     private InstallationArgs() {
-        this.location = Input.empty();
+        this.location = Output.empty();
     }
 
     public static Builder builder() {
@@ -47,7 +47,7 @@ public final class InstallationArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<List<LocationArgs>> location;
+        private @Nullable Output<List<LocationArgs>> location;
 
         public Builder() {
     	      // Empty
@@ -58,13 +58,13 @@ public final class InstallationArgs extends io.pulumi.resources.ResourceArgs {
     	      this.location = defaults.location;
         }
 
-        public Builder location(@Nullable Input<List<LocationArgs>> location) {
+        public Builder location(@Nullable Output<List<LocationArgs>> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable List<LocationArgs> location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
         public InstallationArgs build() {

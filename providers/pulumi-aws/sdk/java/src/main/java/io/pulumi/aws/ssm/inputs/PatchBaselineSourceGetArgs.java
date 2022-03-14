@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.ssm.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -19,9 +19,9 @@ public final class PatchBaselineSourceGetArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="configuration", required=true)
-      private final Input<String> configuration;
+      private final Output<String> configuration;
 
-    public Input<String> getConfiguration() {
+    public Output<String> getConfiguration() {
         return this.configuration;
     }
 
@@ -30,9 +30,9 @@ public final class PatchBaselineSourceGetArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="name", required=true)
-      private final Input<String> name;
+      private final Output<String> name;
 
-    public Input<String> getName() {
+    public Output<String> getName() {
         return this.name;
     }
 
@@ -41,25 +41,25 @@ public final class PatchBaselineSourceGetArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="products", required=true)
-      private final Input<List<String>> products;
+      private final Output<List<String>> products;
 
-    public Input<List<String>> getProducts() {
+    public Output<List<String>> getProducts() {
         return this.products;
     }
 
     public PatchBaselineSourceGetArgs(
-        Input<String> configuration,
-        Input<String> name,
-        Input<List<String>> products) {
+        Output<String> configuration,
+        Output<String> name,
+        Output<List<String>> products) {
         this.configuration = Objects.requireNonNull(configuration, "expected parameter 'configuration' to be non-null");
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
         this.products = Objects.requireNonNull(products, "expected parameter 'products' to be non-null");
     }
 
     private PatchBaselineSourceGetArgs() {
-        this.configuration = Input.empty();
-        this.name = Input.empty();
-        this.products = Input.empty();
+        this.configuration = Output.empty();
+        this.name = Output.empty();
+        this.products = Output.empty();
     }
 
     public static Builder builder() {
@@ -71,9 +71,9 @@ public final class PatchBaselineSourceGetArgs extends io.pulumi.resources.Resour
     }
 
     public static final class Builder {
-        private Input<String> configuration;
-        private Input<String> name;
-        private Input<List<String>> products;
+        private Output<String> configuration;
+        private Output<String> name;
+        private Output<List<String>> products;
 
         public Builder() {
     	      // Empty
@@ -86,33 +86,33 @@ public final class PatchBaselineSourceGetArgs extends io.pulumi.resources.Resour
     	      this.products = defaults.products;
         }
 
-        public Builder configuration(Input<String> configuration) {
+        public Builder configuration(Output<String> configuration) {
             this.configuration = Objects.requireNonNull(configuration);
             return this;
         }
 
         public Builder configuration(String configuration) {
-            this.configuration = Input.of(Objects.requireNonNull(configuration));
+            this.configuration = Output.of(Objects.requireNonNull(configuration));
             return this;
         }
 
-        public Builder name(Input<String> name) {
+        public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(String name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder products(Input<List<String>> products) {
+        public Builder products(Output<List<String>> products) {
             this.products = Objects.requireNonNull(products);
             return this;
         }
 
         public Builder products(List<String> products) {
-            this.products = Input.of(Objects.requireNonNull(products));
+            this.products = Output.of(Objects.requireNonNull(products));
             return this;
         }
         public PatchBaselineSourceGetArgs build() {

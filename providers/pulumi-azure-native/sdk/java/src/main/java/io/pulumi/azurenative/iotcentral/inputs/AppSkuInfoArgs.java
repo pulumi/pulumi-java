@@ -5,7 +5,7 @@ package io.pulumi.azurenative.iotcentral.inputs;
 
 import io.pulumi.azurenative.iotcentral.enums.AppSku;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -24,18 +24,18 @@ public final class AppSkuInfoArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name", required=true)
-      private final Input<Either<String,AppSku>> name;
+      private final Output<Either<String,AppSku>> name;
 
-    public Input<Either<String,AppSku>> getName() {
+    public Output<Either<String,AppSku>> getName() {
         return this.name;
     }
 
-    public AppSkuInfoArgs(Input<Either<String,AppSku>> name) {
+    public AppSkuInfoArgs(Output<Either<String,AppSku>> name) {
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
     }
 
     private AppSkuInfoArgs() {
-        this.name = Input.empty();
+        this.name = Output.empty();
     }
 
     public static Builder builder() {
@@ -47,7 +47,7 @@ public final class AppSkuInfoArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<Either<String,AppSku>> name;
+        private Output<Either<String,AppSku>> name;
 
         public Builder() {
     	      // Empty
@@ -58,13 +58,13 @@ public final class AppSkuInfoArgs extends io.pulumi.resources.ResourceArgs {
     	      this.name = defaults.name;
         }
 
-        public Builder name(Input<Either<String,AppSku>> name) {
+        public Builder name(Output<Either<String,AppSku>> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(Either<String,AppSku> name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
         public AppSkuInfoArgs build() {

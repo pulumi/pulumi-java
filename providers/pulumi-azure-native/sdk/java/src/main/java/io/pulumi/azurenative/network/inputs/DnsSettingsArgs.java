@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -25,10 +25,10 @@ public final class DnsSettingsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enableProxy")
-      private final @Nullable Input<Boolean> enableProxy;
+      private final @Nullable Output<Boolean> enableProxy;
 
-    public Input<Boolean> getEnableProxy() {
-        return this.enableProxy == null ? Input.empty() : this.enableProxy;
+    public Output<Boolean> getEnableProxy() {
+        return this.enableProxy == null ? Output.empty() : this.enableProxy;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class DnsSettingsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="requireProxyForNetworkRules")
-      private final @Nullable Input<Boolean> requireProxyForNetworkRules;
+      private final @Nullable Output<Boolean> requireProxyForNetworkRules;
 
-    public Input<Boolean> getRequireProxyForNetworkRules() {
-        return this.requireProxyForNetworkRules == null ? Input.empty() : this.requireProxyForNetworkRules;
+    public Output<Boolean> getRequireProxyForNetworkRules() {
+        return this.requireProxyForNetworkRules == null ? Output.empty() : this.requireProxyForNetworkRules;
     }
 
     /**
@@ -47,25 +47,25 @@ public final class DnsSettingsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="servers")
-      private final @Nullable Input<List<String>> servers;
+      private final @Nullable Output<List<String>> servers;
 
-    public Input<List<String>> getServers() {
-        return this.servers == null ? Input.empty() : this.servers;
+    public Output<List<String>> getServers() {
+        return this.servers == null ? Output.empty() : this.servers;
     }
 
     public DnsSettingsArgs(
-        @Nullable Input<Boolean> enableProxy,
-        @Nullable Input<Boolean> requireProxyForNetworkRules,
-        @Nullable Input<List<String>> servers) {
+        @Nullable Output<Boolean> enableProxy,
+        @Nullable Output<Boolean> requireProxyForNetworkRules,
+        @Nullable Output<List<String>> servers) {
         this.enableProxy = enableProxy;
         this.requireProxyForNetworkRules = requireProxyForNetworkRules;
         this.servers = servers;
     }
 
     private DnsSettingsArgs() {
-        this.enableProxy = Input.empty();
-        this.requireProxyForNetworkRules = Input.empty();
-        this.servers = Input.empty();
+        this.enableProxy = Output.empty();
+        this.requireProxyForNetworkRules = Output.empty();
+        this.servers = Output.empty();
     }
 
     public static Builder builder() {
@@ -77,9 +77,9 @@ public final class DnsSettingsArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> enableProxy;
-        private @Nullable Input<Boolean> requireProxyForNetworkRules;
-        private @Nullable Input<List<String>> servers;
+        private @Nullable Output<Boolean> enableProxy;
+        private @Nullable Output<Boolean> requireProxyForNetworkRules;
+        private @Nullable Output<List<String>> servers;
 
         public Builder() {
     	      // Empty
@@ -92,33 +92,33 @@ public final class DnsSettingsArgs extends io.pulumi.resources.ResourceArgs {
     	      this.servers = defaults.servers;
         }
 
-        public Builder enableProxy(@Nullable Input<Boolean> enableProxy) {
+        public Builder enableProxy(@Nullable Output<Boolean> enableProxy) {
             this.enableProxy = enableProxy;
             return this;
         }
 
         public Builder enableProxy(@Nullable Boolean enableProxy) {
-            this.enableProxy = Input.ofNullable(enableProxy);
+            this.enableProxy = Output.ofNullable(enableProxy);
             return this;
         }
 
-        public Builder requireProxyForNetworkRules(@Nullable Input<Boolean> requireProxyForNetworkRules) {
+        public Builder requireProxyForNetworkRules(@Nullable Output<Boolean> requireProxyForNetworkRules) {
             this.requireProxyForNetworkRules = requireProxyForNetworkRules;
             return this;
         }
 
         public Builder requireProxyForNetworkRules(@Nullable Boolean requireProxyForNetworkRules) {
-            this.requireProxyForNetworkRules = Input.ofNullable(requireProxyForNetworkRules);
+            this.requireProxyForNetworkRules = Output.ofNullable(requireProxyForNetworkRules);
             return this;
         }
 
-        public Builder servers(@Nullable Input<List<String>> servers) {
+        public Builder servers(@Nullable Output<List<String>> servers) {
             this.servers = servers;
             return this;
         }
 
         public Builder servers(@Nullable List<String> servers) {
-            this.servers = Input.ofNullable(servers);
+            this.servers = Output.ofNullable(servers);
             return this;
         }
         public DnsSettingsArgs build() {

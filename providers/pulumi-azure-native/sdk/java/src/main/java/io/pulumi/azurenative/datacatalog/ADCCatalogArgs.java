@@ -6,7 +6,7 @@ package io.pulumi.azurenative.datacatalog;
 import io.pulumi.azurenative.datacatalog.enums.SkuType;
 import io.pulumi.azurenative.datacatalog.inputs.PrincipalsArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -26,10 +26,10 @@ public final class ADCCatalogArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="admins")
-      private final @Nullable Input<List<PrincipalsArgs>> admins;
+      private final @Nullable Output<List<PrincipalsArgs>> admins;
 
-    public Input<List<PrincipalsArgs>> getAdmins() {
-        return this.admins == null ? Input.empty() : this.admins;
+    public Output<List<PrincipalsArgs>> getAdmins() {
+        return this.admins == null ? Output.empty() : this.admins;
     }
 
     /**
@@ -37,10 +37,10 @@ public final class ADCCatalogArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="catalogName")
-      private final @Nullable Input<String> catalogName;
+      private final @Nullable Output<String> catalogName;
 
-    public Input<String> getCatalogName() {
-        return this.catalogName == null ? Input.empty() : this.catalogName;
+    public Output<String> getCatalogName() {
+        return this.catalogName == null ? Output.empty() : this.catalogName;
     }
 
     /**
@@ -48,10 +48,10 @@ public final class ADCCatalogArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enableAutomaticUnitAdjustment")
-      private final @Nullable Input<Boolean> enableAutomaticUnitAdjustment;
+      private final @Nullable Output<Boolean> enableAutomaticUnitAdjustment;
 
-    public Input<Boolean> getEnableAutomaticUnitAdjustment() {
-        return this.enableAutomaticUnitAdjustment == null ? Input.empty() : this.enableAutomaticUnitAdjustment;
+    public Output<Boolean> getEnableAutomaticUnitAdjustment() {
+        return this.enableAutomaticUnitAdjustment == null ? Output.empty() : this.enableAutomaticUnitAdjustment;
     }
 
     /**
@@ -59,10 +59,10 @@ public final class ADCCatalogArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -70,9 +70,9 @@ public final class ADCCatalogArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -81,10 +81,10 @@ public final class ADCCatalogArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sku")
-      private final @Nullable Input<Either<String,SkuType>> sku;
+      private final @Nullable Output<Either<String,SkuType>> sku;
 
-    public Input<Either<String,SkuType>> getSku() {
-        return this.sku == null ? Input.empty() : this.sku;
+    public Output<Either<String,SkuType>> getSku() {
+        return this.sku == null ? Output.empty() : this.sku;
     }
 
     /**
@@ -92,10 +92,10 @@ public final class ADCCatalogArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="successfullyProvisioned")
-      private final @Nullable Input<Boolean> successfullyProvisioned;
+      private final @Nullable Output<Boolean> successfullyProvisioned;
 
-    public Input<Boolean> getSuccessfullyProvisioned() {
-        return this.successfullyProvisioned == null ? Input.empty() : this.successfullyProvisioned;
+    public Output<Boolean> getSuccessfullyProvisioned() {
+        return this.successfullyProvisioned == null ? Output.empty() : this.successfullyProvisioned;
     }
 
     /**
@@ -103,10 +103,10 @@ public final class ADCCatalogArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -114,10 +114,10 @@ public final class ADCCatalogArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="units")
-      private final @Nullable Input<Integer> units;
+      private final @Nullable Output<Integer> units;
 
-    public Input<Integer> getUnits() {
-        return this.units == null ? Input.empty() : this.units;
+    public Output<Integer> getUnits() {
+        return this.units == null ? Output.empty() : this.units;
     }
 
     /**
@@ -125,23 +125,23 @@ public final class ADCCatalogArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="users")
-      private final @Nullable Input<List<PrincipalsArgs>> users;
+      private final @Nullable Output<List<PrincipalsArgs>> users;
 
-    public Input<List<PrincipalsArgs>> getUsers() {
-        return this.users == null ? Input.empty() : this.users;
+    public Output<List<PrincipalsArgs>> getUsers() {
+        return this.users == null ? Output.empty() : this.users;
     }
 
     public ADCCatalogArgs(
-        @Nullable Input<List<PrincipalsArgs>> admins,
-        @Nullable Input<String> catalogName,
-        @Nullable Input<Boolean> enableAutomaticUnitAdjustment,
-        @Nullable Input<String> location,
-        Input<String> resourceGroupName,
-        @Nullable Input<Either<String,SkuType>> sku,
-        @Nullable Input<Boolean> successfullyProvisioned,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<Integer> units,
-        @Nullable Input<List<PrincipalsArgs>> users) {
+        @Nullable Output<List<PrincipalsArgs>> admins,
+        @Nullable Output<String> catalogName,
+        @Nullable Output<Boolean> enableAutomaticUnitAdjustment,
+        @Nullable Output<String> location,
+        Output<String> resourceGroupName,
+        @Nullable Output<Either<String,SkuType>> sku,
+        @Nullable Output<Boolean> successfullyProvisioned,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<Integer> units,
+        @Nullable Output<List<PrincipalsArgs>> users) {
         this.admins = admins;
         this.catalogName = catalogName;
         this.enableAutomaticUnitAdjustment = enableAutomaticUnitAdjustment;
@@ -155,16 +155,16 @@ public final class ADCCatalogArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ADCCatalogArgs() {
-        this.admins = Input.empty();
-        this.catalogName = Input.empty();
-        this.enableAutomaticUnitAdjustment = Input.empty();
-        this.location = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.sku = Input.empty();
-        this.successfullyProvisioned = Input.empty();
-        this.tags = Input.empty();
-        this.units = Input.empty();
-        this.users = Input.empty();
+        this.admins = Output.empty();
+        this.catalogName = Output.empty();
+        this.enableAutomaticUnitAdjustment = Output.empty();
+        this.location = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.sku = Output.empty();
+        this.successfullyProvisioned = Output.empty();
+        this.tags = Output.empty();
+        this.units = Output.empty();
+        this.users = Output.empty();
     }
 
     public static Builder builder() {
@@ -176,16 +176,16 @@ public final class ADCCatalogArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<List<PrincipalsArgs>> admins;
-        private @Nullable Input<String> catalogName;
-        private @Nullable Input<Boolean> enableAutomaticUnitAdjustment;
-        private @Nullable Input<String> location;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<Either<String,SkuType>> sku;
-        private @Nullable Input<Boolean> successfullyProvisioned;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<Integer> units;
-        private @Nullable Input<List<PrincipalsArgs>> users;
+        private @Nullable Output<List<PrincipalsArgs>> admins;
+        private @Nullable Output<String> catalogName;
+        private @Nullable Output<Boolean> enableAutomaticUnitAdjustment;
+        private @Nullable Output<String> location;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<Either<String,SkuType>> sku;
+        private @Nullable Output<Boolean> successfullyProvisioned;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<Integer> units;
+        private @Nullable Output<List<PrincipalsArgs>> users;
 
         public Builder() {
     	      // Empty
@@ -205,103 +205,103 @@ public final class ADCCatalogArgs extends io.pulumi.resources.ResourceArgs {
     	      this.users = defaults.users;
         }
 
-        public Builder admins(@Nullable Input<List<PrincipalsArgs>> admins) {
+        public Builder admins(@Nullable Output<List<PrincipalsArgs>> admins) {
             this.admins = admins;
             return this;
         }
 
         public Builder admins(@Nullable List<PrincipalsArgs> admins) {
-            this.admins = Input.ofNullable(admins);
+            this.admins = Output.ofNullable(admins);
             return this;
         }
 
-        public Builder catalogName(@Nullable Input<String> catalogName) {
+        public Builder catalogName(@Nullable Output<String> catalogName) {
             this.catalogName = catalogName;
             return this;
         }
 
         public Builder catalogName(@Nullable String catalogName) {
-            this.catalogName = Input.ofNullable(catalogName);
+            this.catalogName = Output.ofNullable(catalogName);
             return this;
         }
 
-        public Builder enableAutomaticUnitAdjustment(@Nullable Input<Boolean> enableAutomaticUnitAdjustment) {
+        public Builder enableAutomaticUnitAdjustment(@Nullable Output<Boolean> enableAutomaticUnitAdjustment) {
             this.enableAutomaticUnitAdjustment = enableAutomaticUnitAdjustment;
             return this;
         }
 
         public Builder enableAutomaticUnitAdjustment(@Nullable Boolean enableAutomaticUnitAdjustment) {
-            this.enableAutomaticUnitAdjustment = Input.ofNullable(enableAutomaticUnitAdjustment);
+            this.enableAutomaticUnitAdjustment = Output.ofNullable(enableAutomaticUnitAdjustment);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder sku(@Nullable Input<Either<String,SkuType>> sku) {
+        public Builder sku(@Nullable Output<Either<String,SkuType>> sku) {
             this.sku = sku;
             return this;
         }
 
         public Builder sku(@Nullable Either<String,SkuType> sku) {
-            this.sku = Input.ofNullable(sku);
+            this.sku = Output.ofNullable(sku);
             return this;
         }
 
-        public Builder successfullyProvisioned(@Nullable Input<Boolean> successfullyProvisioned) {
+        public Builder successfullyProvisioned(@Nullable Output<Boolean> successfullyProvisioned) {
             this.successfullyProvisioned = successfullyProvisioned;
             return this;
         }
 
         public Builder successfullyProvisioned(@Nullable Boolean successfullyProvisioned) {
-            this.successfullyProvisioned = Input.ofNullable(successfullyProvisioned);
+            this.successfullyProvisioned = Output.ofNullable(successfullyProvisioned);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder units(@Nullable Input<Integer> units) {
+        public Builder units(@Nullable Output<Integer> units) {
             this.units = units;
             return this;
         }
 
         public Builder units(@Nullable Integer units) {
-            this.units = Input.ofNullable(units);
+            this.units = Output.ofNullable(units);
             return this;
         }
 
-        public Builder users(@Nullable Input<List<PrincipalsArgs>> users) {
+        public Builder users(@Nullable Output<List<PrincipalsArgs>> users) {
             this.users = users;
             return this;
         }
 
         public Builder users(@Nullable List<PrincipalsArgs> users) {
-            this.users = Input.ofNullable(users);
+            this.users = Output.ofNullable(users);
             return this;
         }
         public ADCCatalogArgs build() {

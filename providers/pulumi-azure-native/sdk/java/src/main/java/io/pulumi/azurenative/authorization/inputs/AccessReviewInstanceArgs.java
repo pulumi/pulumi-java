@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.authorization.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class AccessReviewInstanceArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="endDateTime")
-      private final @Nullable Input<String> endDateTime;
+      private final @Nullable Output<String> endDateTime;
 
-    public Input<String> getEndDateTime() {
-        return this.endDateTime == null ? Input.empty() : this.endDateTime;
+    public Output<String> getEndDateTime() {
+        return this.endDateTime == null ? Output.empty() : this.endDateTime;
     }
 
     /**
@@ -34,22 +34,22 @@ public final class AccessReviewInstanceArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="startDateTime")
-      private final @Nullable Input<String> startDateTime;
+      private final @Nullable Output<String> startDateTime;
 
-    public Input<String> getStartDateTime() {
-        return this.startDateTime == null ? Input.empty() : this.startDateTime;
+    public Output<String> getStartDateTime() {
+        return this.startDateTime == null ? Output.empty() : this.startDateTime;
     }
 
     public AccessReviewInstanceArgs(
-        @Nullable Input<String> endDateTime,
-        @Nullable Input<String> startDateTime) {
+        @Nullable Output<String> endDateTime,
+        @Nullable Output<String> startDateTime) {
         this.endDateTime = endDateTime;
         this.startDateTime = startDateTime;
     }
 
     private AccessReviewInstanceArgs() {
-        this.endDateTime = Input.empty();
-        this.startDateTime = Input.empty();
+        this.endDateTime = Output.empty();
+        this.startDateTime = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class AccessReviewInstanceArgs extends io.pulumi.resources.Resource
     }
 
     public static final class Builder {
-        private @Nullable Input<String> endDateTime;
-        private @Nullable Input<String> startDateTime;
+        private @Nullable Output<String> endDateTime;
+        private @Nullable Output<String> startDateTime;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class AccessReviewInstanceArgs extends io.pulumi.resources.Resource
     	      this.startDateTime = defaults.startDateTime;
         }
 
-        public Builder endDateTime(@Nullable Input<String> endDateTime) {
+        public Builder endDateTime(@Nullable Output<String> endDateTime) {
             this.endDateTime = endDateTime;
             return this;
         }
 
         public Builder endDateTime(@Nullable String endDateTime) {
-            this.endDateTime = Input.ofNullable(endDateTime);
+            this.endDateTime = Output.ofNullable(endDateTime);
             return this;
         }
 
-        public Builder startDateTime(@Nullable Input<String> startDateTime) {
+        public Builder startDateTime(@Nullable Output<String> startDateTime) {
             this.startDateTime = startDateTime;
             return this;
         }
 
         public Builder startDateTime(@Nullable String startDateTime) {
-            this.startDateTime = Input.ofNullable(startDateTime);
+            this.startDateTime = Output.ofNullable(startDateTime);
             return this;
         }
         public AccessReviewInstanceArgs build() {

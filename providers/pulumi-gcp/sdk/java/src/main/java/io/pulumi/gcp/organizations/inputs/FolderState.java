@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.organizations.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -20,10 +20,10 @@ public final class FolderState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="createTime")
-      private final @Nullable Input<String> createTime;
+      private final @Nullable Output<String> createTime;
 
-    public Input<String> getCreateTime() {
-        return this.createTime == null ? Input.empty() : this.createTime;
+    public Output<String> getCreateTime() {
+        return this.createTime == null ? Output.empty() : this.createTime;
     }
 
     /**
@@ -32,10 +32,10 @@ public final class FolderState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName")
-      private final @Nullable Input<String> displayName;
+      private final @Nullable Output<String> displayName;
 
-    public Input<String> getDisplayName() {
-        return this.displayName == null ? Input.empty() : this.displayName;
+    public Output<String> getDisplayName() {
+        return this.displayName == null ? Output.empty() : this.displayName;
     }
 
     /**
@@ -43,10 +43,10 @@ public final class FolderState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="folderId")
-      private final @Nullable Input<String> folderId;
+      private final @Nullable Output<String> folderId;
 
-    public Input<String> getFolderId() {
-        return this.folderId == null ? Input.empty() : this.folderId;
+    public Output<String> getFolderId() {
+        return this.folderId == null ? Output.empty() : this.folderId;
     }
 
     /**
@@ -54,10 +54,10 @@ public final class FolderState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="lifecycleState")
-      private final @Nullable Input<String> lifecycleState;
+      private final @Nullable Output<String> lifecycleState;
 
-    public Input<String> getLifecycleState() {
-        return this.lifecycleState == null ? Input.empty() : this.lifecycleState;
+    public Output<String> getLifecycleState() {
+        return this.lifecycleState == null ? Output.empty() : this.lifecycleState;
     }
 
     /**
@@ -65,10 +65,10 @@ public final class FolderState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -77,19 +77,19 @@ public final class FolderState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="parent")
-      private final @Nullable Input<String> parent;
+      private final @Nullable Output<String> parent;
 
-    public Input<String> getParent() {
-        return this.parent == null ? Input.empty() : this.parent;
+    public Output<String> getParent() {
+        return this.parent == null ? Output.empty() : this.parent;
     }
 
     public FolderState(
-        @Nullable Input<String> createTime,
-        @Nullable Input<String> displayName,
-        @Nullable Input<String> folderId,
-        @Nullable Input<String> lifecycleState,
-        @Nullable Input<String> name,
-        @Nullable Input<String> parent) {
+        @Nullable Output<String> createTime,
+        @Nullable Output<String> displayName,
+        @Nullable Output<String> folderId,
+        @Nullable Output<String> lifecycleState,
+        @Nullable Output<String> name,
+        @Nullable Output<String> parent) {
         this.createTime = createTime;
         this.displayName = displayName;
         this.folderId = folderId;
@@ -99,12 +99,12 @@ public final class FolderState extends io.pulumi.resources.ResourceArgs {
     }
 
     private FolderState() {
-        this.createTime = Input.empty();
-        this.displayName = Input.empty();
-        this.folderId = Input.empty();
-        this.lifecycleState = Input.empty();
-        this.name = Input.empty();
-        this.parent = Input.empty();
+        this.createTime = Output.empty();
+        this.displayName = Output.empty();
+        this.folderId = Output.empty();
+        this.lifecycleState = Output.empty();
+        this.name = Output.empty();
+        this.parent = Output.empty();
     }
 
     public static Builder builder() {
@@ -116,12 +116,12 @@ public final class FolderState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> createTime;
-        private @Nullable Input<String> displayName;
-        private @Nullable Input<String> folderId;
-        private @Nullable Input<String> lifecycleState;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> parent;
+        private @Nullable Output<String> createTime;
+        private @Nullable Output<String> displayName;
+        private @Nullable Output<String> folderId;
+        private @Nullable Output<String> lifecycleState;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> parent;
 
         public Builder() {
     	      // Empty
@@ -137,63 +137,63 @@ public final class FolderState extends io.pulumi.resources.ResourceArgs {
     	      this.parent = defaults.parent;
         }
 
-        public Builder createTime(@Nullable Input<String> createTime) {
+        public Builder createTime(@Nullable Output<String> createTime) {
             this.createTime = createTime;
             return this;
         }
 
         public Builder createTime(@Nullable String createTime) {
-            this.createTime = Input.ofNullable(createTime);
+            this.createTime = Output.ofNullable(createTime);
             return this;
         }
 
-        public Builder displayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Input.ofNullable(displayName);
+            this.displayName = Output.ofNullable(displayName);
             return this;
         }
 
-        public Builder folderId(@Nullable Input<String> folderId) {
+        public Builder folderId(@Nullable Output<String> folderId) {
             this.folderId = folderId;
             return this;
         }
 
         public Builder folderId(@Nullable String folderId) {
-            this.folderId = Input.ofNullable(folderId);
+            this.folderId = Output.ofNullable(folderId);
             return this;
         }
 
-        public Builder lifecycleState(@Nullable Input<String> lifecycleState) {
+        public Builder lifecycleState(@Nullable Output<String> lifecycleState) {
             this.lifecycleState = lifecycleState;
             return this;
         }
 
         public Builder lifecycleState(@Nullable String lifecycleState) {
-            this.lifecycleState = Input.ofNullable(lifecycleState);
+            this.lifecycleState = Output.ofNullable(lifecycleState);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder parent(@Nullable Input<String> parent) {
+        public Builder parent(@Nullable Output<String> parent) {
             this.parent = parent;
             return this;
         }
 
         public Builder parent(@Nullable String parent) {
-            this.parent = Input.ofNullable(parent);
+            this.parent = Output.ofNullable(parent);
             return this;
         }
         public FolderState build() {

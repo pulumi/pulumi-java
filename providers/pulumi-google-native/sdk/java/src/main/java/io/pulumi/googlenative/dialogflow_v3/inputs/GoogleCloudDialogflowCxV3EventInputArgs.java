@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v3.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class GoogleCloudDialogflowCxV3EventInputArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="event")
-      private final @Nullable Input<String> event;
+      private final @Nullable Output<String> event;
 
-    public Input<String> getEvent() {
-        return this.event == null ? Input.empty() : this.event;
+    public Output<String> getEvent() {
+        return this.event == null ? Output.empty() : this.event;
     }
 
-    public GoogleCloudDialogflowCxV3EventInputArgs(@Nullable Input<String> event) {
+    public GoogleCloudDialogflowCxV3EventInputArgs(@Nullable Output<String> event) {
         this.event = event;
     }
 
     private GoogleCloudDialogflowCxV3EventInputArgs() {
-        this.event = Input.empty();
+        this.event = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class GoogleCloudDialogflowCxV3EventInputArgs extends io.pulumi.res
     }
 
     public static final class Builder {
-        private @Nullable Input<String> event;
+        private @Nullable Output<String> event;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class GoogleCloudDialogflowCxV3EventInputArgs extends io.pulumi.res
     	      this.event = defaults.event;
         }
 
-        public Builder event(@Nullable Input<String> event) {
+        public Builder event(@Nullable Output<String> event) {
             this.event = event;
             return this;
         }
 
         public Builder event(@Nullable String event) {
-            this.event = Input.ofNullable(event);
+            this.event = Output.ofNullable(event);
             return this;
         }
         public GoogleCloudDialogflowCxV3EventInputArgs build() {

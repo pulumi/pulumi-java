@@ -6,7 +6,6 @@ package io.pulumi.aws.efs;
 import io.pulumi.aws.Utilities;
 import io.pulumi.aws.efs.FileSystemPolicyArgs;
 import io.pulumi.aws.efs.inputs.FileSystemPolicyState;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -111,14 +110,14 @@ public class FileSystemPolicy extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public FileSystemPolicy(String name, FileSystemPolicyArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:efs/fileSystemPolicy:FileSystemPolicy", name, args == null ? FileSystemPolicyArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws:efs/fileSystemPolicy:FileSystemPolicy", name, args == null ? FileSystemPolicyArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private FileSystemPolicy(String name, Input<String> id, @Nullable FileSystemPolicyState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private FileSystemPolicy(String name, Output<String> id, @Nullable FileSystemPolicyState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws:efs/fileSystemPolicy:FileSystemPolicy", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -134,7 +133,7 @@ public class FileSystemPolicy extends io.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static FileSystemPolicy get(String name, Input<String> id, @Nullable FileSystemPolicyState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static FileSystemPolicy get(String name, Output<String> id, @Nullable FileSystemPolicyState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new FileSystemPolicy(name, id, state, options);
     }
 }

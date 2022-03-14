@@ -8,7 +8,7 @@ import io.pulumi.awsnative.appflow.inputs.FlowSourceFlowConfigArgs;
 import io.pulumi.awsnative.appflow.inputs.FlowTagArgs;
 import io.pulumi.awsnative.appflow.inputs.FlowTaskArgs;
 import io.pulumi.awsnative.appflow.inputs.FlowTriggerConfigArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -25,10 +25,10 @@ public final class FlowArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -36,9 +36,9 @@ public final class FlowArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="destinationFlowConfigList", required=true)
-      private final Input<List<FlowDestinationFlowConfigArgs>> destinationFlowConfigList;
+      private final Output<List<FlowDestinationFlowConfigArgs>> destinationFlowConfigList;
 
-    public Input<List<FlowDestinationFlowConfigArgs>> getDestinationFlowConfigList() {
+    public Output<List<FlowDestinationFlowConfigArgs>> getDestinationFlowConfigList() {
         return this.destinationFlowConfigList;
     }
 
@@ -47,10 +47,10 @@ public final class FlowArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="flowName")
-      private final @Nullable Input<String> flowName;
+      private final @Nullable Output<String> flowName;
 
-    public Input<String> getFlowName() {
-        return this.flowName == null ? Input.empty() : this.flowName;
+    public Output<String> getFlowName() {
+        return this.flowName == null ? Output.empty() : this.flowName;
     }
 
     /**
@@ -58,10 +58,10 @@ public final class FlowArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kMSArn")
-      private final @Nullable Input<String> kMSArn;
+      private final @Nullable Output<String> kMSArn;
 
-    public Input<String> getKMSArn() {
-        return this.kMSArn == null ? Input.empty() : this.kMSArn;
+    public Output<String> getKMSArn() {
+        return this.kMSArn == null ? Output.empty() : this.kMSArn;
     }
 
     /**
@@ -69,9 +69,9 @@ public final class FlowArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sourceFlowConfig", required=true)
-      private final Input<FlowSourceFlowConfigArgs> sourceFlowConfig;
+      private final Output<FlowSourceFlowConfigArgs> sourceFlowConfig;
 
-    public Input<FlowSourceFlowConfigArgs> getSourceFlowConfig() {
+    public Output<FlowSourceFlowConfigArgs> getSourceFlowConfig() {
         return this.sourceFlowConfig;
     }
 
@@ -80,10 +80,10 @@ public final class FlowArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<List<FlowTagArgs>> tags;
+      private final @Nullable Output<List<FlowTagArgs>> tags;
 
-    public Input<List<FlowTagArgs>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<List<FlowTagArgs>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -91,9 +91,9 @@ public final class FlowArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tasks", required=true)
-      private final Input<List<FlowTaskArgs>> tasks;
+      private final Output<List<FlowTaskArgs>> tasks;
 
-    public Input<List<FlowTaskArgs>> getTasks() {
+    public Output<List<FlowTaskArgs>> getTasks() {
         return this.tasks;
     }
 
@@ -102,21 +102,21 @@ public final class FlowArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="triggerConfig", required=true)
-      private final Input<FlowTriggerConfigArgs> triggerConfig;
+      private final Output<FlowTriggerConfigArgs> triggerConfig;
 
-    public Input<FlowTriggerConfigArgs> getTriggerConfig() {
+    public Output<FlowTriggerConfigArgs> getTriggerConfig() {
         return this.triggerConfig;
     }
 
     public FlowArgs(
-        @Nullable Input<String> description,
-        Input<List<FlowDestinationFlowConfigArgs>> destinationFlowConfigList,
-        @Nullable Input<String> flowName,
-        @Nullable Input<String> kMSArn,
-        Input<FlowSourceFlowConfigArgs> sourceFlowConfig,
-        @Nullable Input<List<FlowTagArgs>> tags,
-        Input<List<FlowTaskArgs>> tasks,
-        Input<FlowTriggerConfigArgs> triggerConfig) {
+        @Nullable Output<String> description,
+        Output<List<FlowDestinationFlowConfigArgs>> destinationFlowConfigList,
+        @Nullable Output<String> flowName,
+        @Nullable Output<String> kMSArn,
+        Output<FlowSourceFlowConfigArgs> sourceFlowConfig,
+        @Nullable Output<List<FlowTagArgs>> tags,
+        Output<List<FlowTaskArgs>> tasks,
+        Output<FlowTriggerConfigArgs> triggerConfig) {
         this.description = description;
         this.destinationFlowConfigList = Objects.requireNonNull(destinationFlowConfigList, "expected parameter 'destinationFlowConfigList' to be non-null");
         this.flowName = flowName;
@@ -128,14 +128,14 @@ public final class FlowArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private FlowArgs() {
-        this.description = Input.empty();
-        this.destinationFlowConfigList = Input.empty();
-        this.flowName = Input.empty();
-        this.kMSArn = Input.empty();
-        this.sourceFlowConfig = Input.empty();
-        this.tags = Input.empty();
-        this.tasks = Input.empty();
-        this.triggerConfig = Input.empty();
+        this.description = Output.empty();
+        this.destinationFlowConfigList = Output.empty();
+        this.flowName = Output.empty();
+        this.kMSArn = Output.empty();
+        this.sourceFlowConfig = Output.empty();
+        this.tags = Output.empty();
+        this.tasks = Output.empty();
+        this.triggerConfig = Output.empty();
     }
 
     public static Builder builder() {
@@ -147,14 +147,14 @@ public final class FlowArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> description;
-        private Input<List<FlowDestinationFlowConfigArgs>> destinationFlowConfigList;
-        private @Nullable Input<String> flowName;
-        private @Nullable Input<String> kMSArn;
-        private Input<FlowSourceFlowConfigArgs> sourceFlowConfig;
-        private @Nullable Input<List<FlowTagArgs>> tags;
-        private Input<List<FlowTaskArgs>> tasks;
-        private Input<FlowTriggerConfigArgs> triggerConfig;
+        private @Nullable Output<String> description;
+        private Output<List<FlowDestinationFlowConfigArgs>> destinationFlowConfigList;
+        private @Nullable Output<String> flowName;
+        private @Nullable Output<String> kMSArn;
+        private Output<FlowSourceFlowConfigArgs> sourceFlowConfig;
+        private @Nullable Output<List<FlowTagArgs>> tags;
+        private Output<List<FlowTaskArgs>> tasks;
+        private Output<FlowTriggerConfigArgs> triggerConfig;
 
         public Builder() {
     	      // Empty
@@ -172,83 +172,83 @@ public final class FlowArgs extends io.pulumi.resources.ResourceArgs {
     	      this.triggerConfig = defaults.triggerConfig;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder destinationFlowConfigList(Input<List<FlowDestinationFlowConfigArgs>> destinationFlowConfigList) {
+        public Builder destinationFlowConfigList(Output<List<FlowDestinationFlowConfigArgs>> destinationFlowConfigList) {
             this.destinationFlowConfigList = Objects.requireNonNull(destinationFlowConfigList);
             return this;
         }
 
         public Builder destinationFlowConfigList(List<FlowDestinationFlowConfigArgs> destinationFlowConfigList) {
-            this.destinationFlowConfigList = Input.of(Objects.requireNonNull(destinationFlowConfigList));
+            this.destinationFlowConfigList = Output.of(Objects.requireNonNull(destinationFlowConfigList));
             return this;
         }
 
-        public Builder flowName(@Nullable Input<String> flowName) {
+        public Builder flowName(@Nullable Output<String> flowName) {
             this.flowName = flowName;
             return this;
         }
 
         public Builder flowName(@Nullable String flowName) {
-            this.flowName = Input.ofNullable(flowName);
+            this.flowName = Output.ofNullable(flowName);
             return this;
         }
 
-        public Builder kMSArn(@Nullable Input<String> kMSArn) {
+        public Builder kMSArn(@Nullable Output<String> kMSArn) {
             this.kMSArn = kMSArn;
             return this;
         }
 
         public Builder kMSArn(@Nullable String kMSArn) {
-            this.kMSArn = Input.ofNullable(kMSArn);
+            this.kMSArn = Output.ofNullable(kMSArn);
             return this;
         }
 
-        public Builder sourceFlowConfig(Input<FlowSourceFlowConfigArgs> sourceFlowConfig) {
+        public Builder sourceFlowConfig(Output<FlowSourceFlowConfigArgs> sourceFlowConfig) {
             this.sourceFlowConfig = Objects.requireNonNull(sourceFlowConfig);
             return this;
         }
 
         public Builder sourceFlowConfig(FlowSourceFlowConfigArgs sourceFlowConfig) {
-            this.sourceFlowConfig = Input.of(Objects.requireNonNull(sourceFlowConfig));
+            this.sourceFlowConfig = Output.of(Objects.requireNonNull(sourceFlowConfig));
             return this;
         }
 
-        public Builder tags(@Nullable Input<List<FlowTagArgs>> tags) {
+        public Builder tags(@Nullable Output<List<FlowTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable List<FlowTagArgs> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder tasks(Input<List<FlowTaskArgs>> tasks) {
+        public Builder tasks(Output<List<FlowTaskArgs>> tasks) {
             this.tasks = Objects.requireNonNull(tasks);
             return this;
         }
 
         public Builder tasks(List<FlowTaskArgs> tasks) {
-            this.tasks = Input.of(Objects.requireNonNull(tasks));
+            this.tasks = Output.of(Objects.requireNonNull(tasks));
             return this;
         }
 
-        public Builder triggerConfig(Input<FlowTriggerConfigArgs> triggerConfig) {
+        public Builder triggerConfig(Output<FlowTriggerConfigArgs> triggerConfig) {
             this.triggerConfig = Objects.requireNonNull(triggerConfig);
             return this;
         }
 
         public Builder triggerConfig(FlowTriggerConfigArgs triggerConfig) {
-            this.triggerConfig = Input.of(Objects.requireNonNull(triggerConfig));
+            this.triggerConfig = Output.of(Objects.requireNonNull(triggerConfig));
             return this;
         }
         public FlowArgs build() {

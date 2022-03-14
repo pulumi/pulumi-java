@@ -5,7 +5,7 @@ package io.pulumi.awsnative.inspectorv2.inputs;
 
 import io.pulumi.awsnative.inspectorv2.inputs.FilterNumberFilterArgs;
 import io.pulumi.awsnative.inspectorv2.inputs.FilterStringFilterArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -16,54 +16,54 @@ public final class FilterPackageFilterArgs extends io.pulumi.resources.ResourceA
     public static final FilterPackageFilterArgs Empty = new FilterPackageFilterArgs();
 
     @InputImport(name="architecture")
-      private final @Nullable Input<FilterStringFilterArgs> architecture;
+      private final @Nullable Output<FilterStringFilterArgs> architecture;
 
-    public Input<FilterStringFilterArgs> getArchitecture() {
-        return this.architecture == null ? Input.empty() : this.architecture;
+    public Output<FilterStringFilterArgs> getArchitecture() {
+        return this.architecture == null ? Output.empty() : this.architecture;
     }
 
     @InputImport(name="epoch")
-      private final @Nullable Input<FilterNumberFilterArgs> epoch;
+      private final @Nullable Output<FilterNumberFilterArgs> epoch;
 
-    public Input<FilterNumberFilterArgs> getEpoch() {
-        return this.epoch == null ? Input.empty() : this.epoch;
+    public Output<FilterNumberFilterArgs> getEpoch() {
+        return this.epoch == null ? Output.empty() : this.epoch;
     }
 
     @InputImport(name="name")
-      private final @Nullable Input<FilterStringFilterArgs> name;
+      private final @Nullable Output<FilterStringFilterArgs> name;
 
-    public Input<FilterStringFilterArgs> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<FilterStringFilterArgs> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     @InputImport(name="release")
-      private final @Nullable Input<FilterStringFilterArgs> release;
+      private final @Nullable Output<FilterStringFilterArgs> release;
 
-    public Input<FilterStringFilterArgs> getRelease() {
-        return this.release == null ? Input.empty() : this.release;
+    public Output<FilterStringFilterArgs> getRelease() {
+        return this.release == null ? Output.empty() : this.release;
     }
 
     @InputImport(name="sourceLayerHash")
-      private final @Nullable Input<FilterStringFilterArgs> sourceLayerHash;
+      private final @Nullable Output<FilterStringFilterArgs> sourceLayerHash;
 
-    public Input<FilterStringFilterArgs> getSourceLayerHash() {
-        return this.sourceLayerHash == null ? Input.empty() : this.sourceLayerHash;
+    public Output<FilterStringFilterArgs> getSourceLayerHash() {
+        return this.sourceLayerHash == null ? Output.empty() : this.sourceLayerHash;
     }
 
     @InputImport(name="version")
-      private final @Nullable Input<FilterStringFilterArgs> version;
+      private final @Nullable Output<FilterStringFilterArgs> version;
 
-    public Input<FilterStringFilterArgs> getVersion() {
-        return this.version == null ? Input.empty() : this.version;
+    public Output<FilterStringFilterArgs> getVersion() {
+        return this.version == null ? Output.empty() : this.version;
     }
 
     public FilterPackageFilterArgs(
-        @Nullable Input<FilterStringFilterArgs> architecture,
-        @Nullable Input<FilterNumberFilterArgs> epoch,
-        @Nullable Input<FilterStringFilterArgs> name,
-        @Nullable Input<FilterStringFilterArgs> release,
-        @Nullable Input<FilterStringFilterArgs> sourceLayerHash,
-        @Nullable Input<FilterStringFilterArgs> version) {
+        @Nullable Output<FilterStringFilterArgs> architecture,
+        @Nullable Output<FilterNumberFilterArgs> epoch,
+        @Nullable Output<FilterStringFilterArgs> name,
+        @Nullable Output<FilterStringFilterArgs> release,
+        @Nullable Output<FilterStringFilterArgs> sourceLayerHash,
+        @Nullable Output<FilterStringFilterArgs> version) {
         this.architecture = architecture;
         this.epoch = epoch;
         this.name = name;
@@ -73,12 +73,12 @@ public final class FilterPackageFilterArgs extends io.pulumi.resources.ResourceA
     }
 
     private FilterPackageFilterArgs() {
-        this.architecture = Input.empty();
-        this.epoch = Input.empty();
-        this.name = Input.empty();
-        this.release = Input.empty();
-        this.sourceLayerHash = Input.empty();
-        this.version = Input.empty();
+        this.architecture = Output.empty();
+        this.epoch = Output.empty();
+        this.name = Output.empty();
+        this.release = Output.empty();
+        this.sourceLayerHash = Output.empty();
+        this.version = Output.empty();
     }
 
     public static Builder builder() {
@@ -90,12 +90,12 @@ public final class FilterPackageFilterArgs extends io.pulumi.resources.ResourceA
     }
 
     public static final class Builder {
-        private @Nullable Input<FilterStringFilterArgs> architecture;
-        private @Nullable Input<FilterNumberFilterArgs> epoch;
-        private @Nullable Input<FilterStringFilterArgs> name;
-        private @Nullable Input<FilterStringFilterArgs> release;
-        private @Nullable Input<FilterStringFilterArgs> sourceLayerHash;
-        private @Nullable Input<FilterStringFilterArgs> version;
+        private @Nullable Output<FilterStringFilterArgs> architecture;
+        private @Nullable Output<FilterNumberFilterArgs> epoch;
+        private @Nullable Output<FilterStringFilterArgs> name;
+        private @Nullable Output<FilterStringFilterArgs> release;
+        private @Nullable Output<FilterStringFilterArgs> sourceLayerHash;
+        private @Nullable Output<FilterStringFilterArgs> version;
 
         public Builder() {
     	      // Empty
@@ -111,63 +111,63 @@ public final class FilterPackageFilterArgs extends io.pulumi.resources.ResourceA
     	      this.version = defaults.version;
         }
 
-        public Builder architecture(@Nullable Input<FilterStringFilterArgs> architecture) {
+        public Builder architecture(@Nullable Output<FilterStringFilterArgs> architecture) {
             this.architecture = architecture;
             return this;
         }
 
         public Builder architecture(@Nullable FilterStringFilterArgs architecture) {
-            this.architecture = Input.ofNullable(architecture);
+            this.architecture = Output.ofNullable(architecture);
             return this;
         }
 
-        public Builder epoch(@Nullable Input<FilterNumberFilterArgs> epoch) {
+        public Builder epoch(@Nullable Output<FilterNumberFilterArgs> epoch) {
             this.epoch = epoch;
             return this;
         }
 
         public Builder epoch(@Nullable FilterNumberFilterArgs epoch) {
-            this.epoch = Input.ofNullable(epoch);
+            this.epoch = Output.ofNullable(epoch);
             return this;
         }
 
-        public Builder name(@Nullable Input<FilterStringFilterArgs> name) {
+        public Builder name(@Nullable Output<FilterStringFilterArgs> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable FilterStringFilterArgs name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder release(@Nullable Input<FilterStringFilterArgs> release) {
+        public Builder release(@Nullable Output<FilterStringFilterArgs> release) {
             this.release = release;
             return this;
         }
 
         public Builder release(@Nullable FilterStringFilterArgs release) {
-            this.release = Input.ofNullable(release);
+            this.release = Output.ofNullable(release);
             return this;
         }
 
-        public Builder sourceLayerHash(@Nullable Input<FilterStringFilterArgs> sourceLayerHash) {
+        public Builder sourceLayerHash(@Nullable Output<FilterStringFilterArgs> sourceLayerHash) {
             this.sourceLayerHash = sourceLayerHash;
             return this;
         }
 
         public Builder sourceLayerHash(@Nullable FilterStringFilterArgs sourceLayerHash) {
-            this.sourceLayerHash = Input.ofNullable(sourceLayerHash);
+            this.sourceLayerHash = Output.ofNullable(sourceLayerHash);
             return this;
         }
 
-        public Builder version(@Nullable Input<FilterStringFilterArgs> version) {
+        public Builder version(@Nullable Output<FilterStringFilterArgs> version) {
             this.version = version;
             return this;
         }
 
         public Builder version(@Nullable FilterStringFilterArgs version) {
-            this.version = Input.ofNullable(version);
+            this.version = Output.ofNullable(version);
             return this;
         }
         public FilterPackageFilterArgs build() {

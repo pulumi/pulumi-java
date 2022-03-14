@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.cloudwatch.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -20,10 +20,10 @@ public final class LogDestinationPolicyState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="accessPolicy")
-      private final @Nullable Input<String> accessPolicy;
+      private final @Nullable Output<String> accessPolicy;
 
-    public Input<String> getAccessPolicy() {
-        return this.accessPolicy == null ? Input.empty() : this.accessPolicy;
+    public Output<String> getAccessPolicy() {
+        return this.accessPolicy == null ? Output.empty() : this.accessPolicy;
     }
 
     /**
@@ -31,10 +31,10 @@ public final class LogDestinationPolicyState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="destinationName")
-      private final @Nullable Input<String> destinationName;
+      private final @Nullable Output<String> destinationName;
 
-    public Input<String> getDestinationName() {
-        return this.destinationName == null ? Input.empty() : this.destinationName;
+    public Output<String> getDestinationName() {
+        return this.destinationName == null ? Output.empty() : this.destinationName;
     }
 
     /**
@@ -42,25 +42,25 @@ public final class LogDestinationPolicyState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="forceUpdate")
-      private final @Nullable Input<Boolean> forceUpdate;
+      private final @Nullable Output<Boolean> forceUpdate;
 
-    public Input<Boolean> getForceUpdate() {
-        return this.forceUpdate == null ? Input.empty() : this.forceUpdate;
+    public Output<Boolean> getForceUpdate() {
+        return this.forceUpdate == null ? Output.empty() : this.forceUpdate;
     }
 
     public LogDestinationPolicyState(
-        @Nullable Input<String> accessPolicy,
-        @Nullable Input<String> destinationName,
-        @Nullable Input<Boolean> forceUpdate) {
+        @Nullable Output<String> accessPolicy,
+        @Nullable Output<String> destinationName,
+        @Nullable Output<Boolean> forceUpdate) {
         this.accessPolicy = accessPolicy;
         this.destinationName = destinationName;
         this.forceUpdate = forceUpdate;
     }
 
     private LogDestinationPolicyState() {
-        this.accessPolicy = Input.empty();
-        this.destinationName = Input.empty();
-        this.forceUpdate = Input.empty();
+        this.accessPolicy = Output.empty();
+        this.destinationName = Output.empty();
+        this.forceUpdate = Output.empty();
     }
 
     public static Builder builder() {
@@ -72,9 +72,9 @@ public final class LogDestinationPolicyState extends io.pulumi.resources.Resourc
     }
 
     public static final class Builder {
-        private @Nullable Input<String> accessPolicy;
-        private @Nullable Input<String> destinationName;
-        private @Nullable Input<Boolean> forceUpdate;
+        private @Nullable Output<String> accessPolicy;
+        private @Nullable Output<String> destinationName;
+        private @Nullable Output<Boolean> forceUpdate;
 
         public Builder() {
     	      // Empty
@@ -87,33 +87,33 @@ public final class LogDestinationPolicyState extends io.pulumi.resources.Resourc
     	      this.forceUpdate = defaults.forceUpdate;
         }
 
-        public Builder accessPolicy(@Nullable Input<String> accessPolicy) {
+        public Builder accessPolicy(@Nullable Output<String> accessPolicy) {
             this.accessPolicy = accessPolicy;
             return this;
         }
 
         public Builder accessPolicy(@Nullable String accessPolicy) {
-            this.accessPolicy = Input.ofNullable(accessPolicy);
+            this.accessPolicy = Output.ofNullable(accessPolicy);
             return this;
         }
 
-        public Builder destinationName(@Nullable Input<String> destinationName) {
+        public Builder destinationName(@Nullable Output<String> destinationName) {
             this.destinationName = destinationName;
             return this;
         }
 
         public Builder destinationName(@Nullable String destinationName) {
-            this.destinationName = Input.ofNullable(destinationName);
+            this.destinationName = Output.ofNullable(destinationName);
             return this;
         }
 
-        public Builder forceUpdate(@Nullable Input<Boolean> forceUpdate) {
+        public Builder forceUpdate(@Nullable Output<Boolean> forceUpdate) {
             this.forceUpdate = forceUpdate;
             return this;
         }
 
         public Builder forceUpdate(@Nullable Boolean forceUpdate) {
-            this.forceUpdate = Input.ofNullable(forceUpdate);
+            this.forceUpdate = Output.ofNullable(forceUpdate);
             return this;
         }
         public LogDestinationPolicyState build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.storage_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class BucketObjectCustomerEncryptionArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="encryptionAlgorithm")
-      private final @Nullable Input<String> encryptionAlgorithm;
+      private final @Nullable Output<String> encryptionAlgorithm;
 
-    public Input<String> getEncryptionAlgorithm() {
-        return this.encryptionAlgorithm == null ? Input.empty() : this.encryptionAlgorithm;
+    public Output<String> getEncryptionAlgorithm() {
+        return this.encryptionAlgorithm == null ? Output.empty() : this.encryptionAlgorithm;
     }
 
     /**
@@ -34,22 +34,22 @@ public final class BucketObjectCustomerEncryptionArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="keySha256")
-      private final @Nullable Input<String> keySha256;
+      private final @Nullable Output<String> keySha256;
 
-    public Input<String> getKeySha256() {
-        return this.keySha256 == null ? Input.empty() : this.keySha256;
+    public Output<String> getKeySha256() {
+        return this.keySha256 == null ? Output.empty() : this.keySha256;
     }
 
     public BucketObjectCustomerEncryptionArgs(
-        @Nullable Input<String> encryptionAlgorithm,
-        @Nullable Input<String> keySha256) {
+        @Nullable Output<String> encryptionAlgorithm,
+        @Nullable Output<String> keySha256) {
         this.encryptionAlgorithm = encryptionAlgorithm;
         this.keySha256 = keySha256;
     }
 
     private BucketObjectCustomerEncryptionArgs() {
-        this.encryptionAlgorithm = Input.empty();
-        this.keySha256 = Input.empty();
+        this.encryptionAlgorithm = Output.empty();
+        this.keySha256 = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class BucketObjectCustomerEncryptionArgs extends io.pulumi.resource
     }
 
     public static final class Builder {
-        private @Nullable Input<String> encryptionAlgorithm;
-        private @Nullable Input<String> keySha256;
+        private @Nullable Output<String> encryptionAlgorithm;
+        private @Nullable Output<String> keySha256;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class BucketObjectCustomerEncryptionArgs extends io.pulumi.resource
     	      this.keySha256 = defaults.keySha256;
         }
 
-        public Builder encryptionAlgorithm(@Nullable Input<String> encryptionAlgorithm) {
+        public Builder encryptionAlgorithm(@Nullable Output<String> encryptionAlgorithm) {
             this.encryptionAlgorithm = encryptionAlgorithm;
             return this;
         }
 
         public Builder encryptionAlgorithm(@Nullable String encryptionAlgorithm) {
-            this.encryptionAlgorithm = Input.ofNullable(encryptionAlgorithm);
+            this.encryptionAlgorithm = Output.ofNullable(encryptionAlgorithm);
             return this;
         }
 
-        public Builder keySha256(@Nullable Input<String> keySha256) {
+        public Builder keySha256(@Nullable Output<String> keySha256) {
             this.keySha256 = keySha256;
             return this;
         }
 
         public Builder keySha256(@Nullable String keySha256) {
-            this.keySha256 = Input.ofNullable(keySha256);
+            this.keySha256 = Output.ofNullable(keySha256);
             return this;
         }
         public BucketObjectCustomerEncryptionArgs build() {

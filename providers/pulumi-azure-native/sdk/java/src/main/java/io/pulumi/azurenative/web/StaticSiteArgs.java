@@ -8,7 +8,7 @@ import io.pulumi.azurenative.web.inputs.ManagedServiceIdentityArgs;
 import io.pulumi.azurenative.web.inputs.SkuDescriptionArgs;
 import io.pulumi.azurenative.web.inputs.StaticSiteBuildPropertiesArgs;
 import io.pulumi.azurenative.web.inputs.StaticSiteTemplateOptionsArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -26,10 +26,10 @@ public final class StaticSiteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="allowConfigFileUpdates")
-      private final @Nullable Input<Boolean> allowConfigFileUpdates;
+      private final @Nullable Output<Boolean> allowConfigFileUpdates;
 
-    public Input<Boolean> getAllowConfigFileUpdates() {
-        return this.allowConfigFileUpdates == null ? Input.empty() : this.allowConfigFileUpdates;
+    public Output<Boolean> getAllowConfigFileUpdates() {
+        return this.allowConfigFileUpdates == null ? Output.empty() : this.allowConfigFileUpdates;
     }
 
     /**
@@ -37,10 +37,10 @@ public final class StaticSiteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="branch")
-      private final @Nullable Input<String> branch;
+      private final @Nullable Output<String> branch;
 
-    public Input<String> getBranch() {
-        return this.branch == null ? Input.empty() : this.branch;
+    public Output<String> getBranch() {
+        return this.branch == null ? Output.empty() : this.branch;
     }
 
     /**
@@ -48,10 +48,10 @@ public final class StaticSiteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="buildProperties")
-      private final @Nullable Input<StaticSiteBuildPropertiesArgs> buildProperties;
+      private final @Nullable Output<StaticSiteBuildPropertiesArgs> buildProperties;
 
-    public Input<StaticSiteBuildPropertiesArgs> getBuildProperties() {
-        return this.buildProperties == null ? Input.empty() : this.buildProperties;
+    public Output<StaticSiteBuildPropertiesArgs> getBuildProperties() {
+        return this.buildProperties == null ? Output.empty() : this.buildProperties;
     }
 
     /**
@@ -59,10 +59,10 @@ public final class StaticSiteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="identity")
-      private final @Nullable Input<ManagedServiceIdentityArgs> identity;
+      private final @Nullable Output<ManagedServiceIdentityArgs> identity;
 
-    public Input<ManagedServiceIdentityArgs> getIdentity() {
-        return this.identity == null ? Input.empty() : this.identity;
+    public Output<ManagedServiceIdentityArgs> getIdentity() {
+        return this.identity == null ? Output.empty() : this.identity;
     }
 
     /**
@@ -70,10 +70,10 @@ public final class StaticSiteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kind")
-      private final @Nullable Input<String> kind;
+      private final @Nullable Output<String> kind;
 
-    public Input<String> getKind() {
-        return this.kind == null ? Input.empty() : this.kind;
+    public Output<String> getKind() {
+        return this.kind == null ? Output.empty() : this.kind;
     }
 
     /**
@@ -81,10 +81,10 @@ public final class StaticSiteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -92,10 +92,10 @@ public final class StaticSiteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -103,10 +103,10 @@ public final class StaticSiteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="repositoryToken")
-      private final @Nullable Input<String> repositoryToken;
+      private final @Nullable Output<String> repositoryToken;
 
-    public Input<String> getRepositoryToken() {
-        return this.repositoryToken == null ? Input.empty() : this.repositoryToken;
+    public Output<String> getRepositoryToken() {
+        return this.repositoryToken == null ? Output.empty() : this.repositoryToken;
     }
 
     /**
@@ -114,10 +114,10 @@ public final class StaticSiteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="repositoryUrl")
-      private final @Nullable Input<String> repositoryUrl;
+      private final @Nullable Output<String> repositoryUrl;
 
-    public Input<String> getRepositoryUrl() {
-        return this.repositoryUrl == null ? Input.empty() : this.repositoryUrl;
+    public Output<String> getRepositoryUrl() {
+        return this.repositoryUrl == null ? Output.empty() : this.repositoryUrl;
     }
 
     /**
@@ -125,9 +125,9 @@ public final class StaticSiteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -136,10 +136,10 @@ public final class StaticSiteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sku")
-      private final @Nullable Input<SkuDescriptionArgs> sku;
+      private final @Nullable Output<SkuDescriptionArgs> sku;
 
-    public Input<SkuDescriptionArgs> getSku() {
-        return this.sku == null ? Input.empty() : this.sku;
+    public Output<SkuDescriptionArgs> getSku() {
+        return this.sku == null ? Output.empty() : this.sku;
     }
 
     /**
@@ -147,10 +147,10 @@ public final class StaticSiteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="stagingEnvironmentPolicy")
-      private final @Nullable Input<StagingEnvironmentPolicy> stagingEnvironmentPolicy;
+      private final @Nullable Output<StagingEnvironmentPolicy> stagingEnvironmentPolicy;
 
-    public Input<StagingEnvironmentPolicy> getStagingEnvironmentPolicy() {
-        return this.stagingEnvironmentPolicy == null ? Input.empty() : this.stagingEnvironmentPolicy;
+    public Output<StagingEnvironmentPolicy> getStagingEnvironmentPolicy() {
+        return this.stagingEnvironmentPolicy == null ? Output.empty() : this.stagingEnvironmentPolicy;
     }
 
     /**
@@ -158,10 +158,10 @@ public final class StaticSiteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -169,27 +169,27 @@ public final class StaticSiteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="templateProperties")
-      private final @Nullable Input<StaticSiteTemplateOptionsArgs> templateProperties;
+      private final @Nullable Output<StaticSiteTemplateOptionsArgs> templateProperties;
 
-    public Input<StaticSiteTemplateOptionsArgs> getTemplateProperties() {
-        return this.templateProperties == null ? Input.empty() : this.templateProperties;
+    public Output<StaticSiteTemplateOptionsArgs> getTemplateProperties() {
+        return this.templateProperties == null ? Output.empty() : this.templateProperties;
     }
 
     public StaticSiteArgs(
-        @Nullable Input<Boolean> allowConfigFileUpdates,
-        @Nullable Input<String> branch,
-        @Nullable Input<StaticSiteBuildPropertiesArgs> buildProperties,
-        @Nullable Input<ManagedServiceIdentityArgs> identity,
-        @Nullable Input<String> kind,
-        @Nullable Input<String> location,
-        @Nullable Input<String> name,
-        @Nullable Input<String> repositoryToken,
-        @Nullable Input<String> repositoryUrl,
-        Input<String> resourceGroupName,
-        @Nullable Input<SkuDescriptionArgs> sku,
-        @Nullable Input<StagingEnvironmentPolicy> stagingEnvironmentPolicy,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<StaticSiteTemplateOptionsArgs> templateProperties) {
+        @Nullable Output<Boolean> allowConfigFileUpdates,
+        @Nullable Output<String> branch,
+        @Nullable Output<StaticSiteBuildPropertiesArgs> buildProperties,
+        @Nullable Output<ManagedServiceIdentityArgs> identity,
+        @Nullable Output<String> kind,
+        @Nullable Output<String> location,
+        @Nullable Output<String> name,
+        @Nullable Output<String> repositoryToken,
+        @Nullable Output<String> repositoryUrl,
+        Output<String> resourceGroupName,
+        @Nullable Output<SkuDescriptionArgs> sku,
+        @Nullable Output<StagingEnvironmentPolicy> stagingEnvironmentPolicy,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<StaticSiteTemplateOptionsArgs> templateProperties) {
         this.allowConfigFileUpdates = allowConfigFileUpdates;
         this.branch = branch;
         this.buildProperties = buildProperties;
@@ -207,20 +207,20 @@ public final class StaticSiteArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private StaticSiteArgs() {
-        this.allowConfigFileUpdates = Input.empty();
-        this.branch = Input.empty();
-        this.buildProperties = Input.empty();
-        this.identity = Input.empty();
-        this.kind = Input.empty();
-        this.location = Input.empty();
-        this.name = Input.empty();
-        this.repositoryToken = Input.empty();
-        this.repositoryUrl = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.sku = Input.empty();
-        this.stagingEnvironmentPolicy = Input.empty();
-        this.tags = Input.empty();
-        this.templateProperties = Input.empty();
+        this.allowConfigFileUpdates = Output.empty();
+        this.branch = Output.empty();
+        this.buildProperties = Output.empty();
+        this.identity = Output.empty();
+        this.kind = Output.empty();
+        this.location = Output.empty();
+        this.name = Output.empty();
+        this.repositoryToken = Output.empty();
+        this.repositoryUrl = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.sku = Output.empty();
+        this.stagingEnvironmentPolicy = Output.empty();
+        this.tags = Output.empty();
+        this.templateProperties = Output.empty();
     }
 
     public static Builder builder() {
@@ -232,20 +232,20 @@ public final class StaticSiteArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> allowConfigFileUpdates;
-        private @Nullable Input<String> branch;
-        private @Nullable Input<StaticSiteBuildPropertiesArgs> buildProperties;
-        private @Nullable Input<ManagedServiceIdentityArgs> identity;
-        private @Nullable Input<String> kind;
-        private @Nullable Input<String> location;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> repositoryToken;
-        private @Nullable Input<String> repositoryUrl;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<SkuDescriptionArgs> sku;
-        private @Nullable Input<StagingEnvironmentPolicy> stagingEnvironmentPolicy;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<StaticSiteTemplateOptionsArgs> templateProperties;
+        private @Nullable Output<Boolean> allowConfigFileUpdates;
+        private @Nullable Output<String> branch;
+        private @Nullable Output<StaticSiteBuildPropertiesArgs> buildProperties;
+        private @Nullable Output<ManagedServiceIdentityArgs> identity;
+        private @Nullable Output<String> kind;
+        private @Nullable Output<String> location;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> repositoryToken;
+        private @Nullable Output<String> repositoryUrl;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<SkuDescriptionArgs> sku;
+        private @Nullable Output<StagingEnvironmentPolicy> stagingEnvironmentPolicy;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<StaticSiteTemplateOptionsArgs> templateProperties;
 
         public Builder() {
     	      // Empty
@@ -269,143 +269,143 @@ public final class StaticSiteArgs extends io.pulumi.resources.ResourceArgs {
     	      this.templateProperties = defaults.templateProperties;
         }
 
-        public Builder allowConfigFileUpdates(@Nullable Input<Boolean> allowConfigFileUpdates) {
+        public Builder allowConfigFileUpdates(@Nullable Output<Boolean> allowConfigFileUpdates) {
             this.allowConfigFileUpdates = allowConfigFileUpdates;
             return this;
         }
 
         public Builder allowConfigFileUpdates(@Nullable Boolean allowConfigFileUpdates) {
-            this.allowConfigFileUpdates = Input.ofNullable(allowConfigFileUpdates);
+            this.allowConfigFileUpdates = Output.ofNullable(allowConfigFileUpdates);
             return this;
         }
 
-        public Builder branch(@Nullable Input<String> branch) {
+        public Builder branch(@Nullable Output<String> branch) {
             this.branch = branch;
             return this;
         }
 
         public Builder branch(@Nullable String branch) {
-            this.branch = Input.ofNullable(branch);
+            this.branch = Output.ofNullable(branch);
             return this;
         }
 
-        public Builder buildProperties(@Nullable Input<StaticSiteBuildPropertiesArgs> buildProperties) {
+        public Builder buildProperties(@Nullable Output<StaticSiteBuildPropertiesArgs> buildProperties) {
             this.buildProperties = buildProperties;
             return this;
         }
 
         public Builder buildProperties(@Nullable StaticSiteBuildPropertiesArgs buildProperties) {
-            this.buildProperties = Input.ofNullable(buildProperties);
+            this.buildProperties = Output.ofNullable(buildProperties);
             return this;
         }
 
-        public Builder identity(@Nullable Input<ManagedServiceIdentityArgs> identity) {
+        public Builder identity(@Nullable Output<ManagedServiceIdentityArgs> identity) {
             this.identity = identity;
             return this;
         }
 
         public Builder identity(@Nullable ManagedServiceIdentityArgs identity) {
-            this.identity = Input.ofNullable(identity);
+            this.identity = Output.ofNullable(identity);
             return this;
         }
 
-        public Builder kind(@Nullable Input<String> kind) {
+        public Builder kind(@Nullable Output<String> kind) {
             this.kind = kind;
             return this;
         }
 
         public Builder kind(@Nullable String kind) {
-            this.kind = Input.ofNullable(kind);
+            this.kind = Output.ofNullable(kind);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder repositoryToken(@Nullable Input<String> repositoryToken) {
+        public Builder repositoryToken(@Nullable Output<String> repositoryToken) {
             this.repositoryToken = repositoryToken;
             return this;
         }
 
         public Builder repositoryToken(@Nullable String repositoryToken) {
-            this.repositoryToken = Input.ofNullable(repositoryToken);
+            this.repositoryToken = Output.ofNullable(repositoryToken);
             return this;
         }
 
-        public Builder repositoryUrl(@Nullable Input<String> repositoryUrl) {
+        public Builder repositoryUrl(@Nullable Output<String> repositoryUrl) {
             this.repositoryUrl = repositoryUrl;
             return this;
         }
 
         public Builder repositoryUrl(@Nullable String repositoryUrl) {
-            this.repositoryUrl = Input.ofNullable(repositoryUrl);
+            this.repositoryUrl = Output.ofNullable(repositoryUrl);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder sku(@Nullable Input<SkuDescriptionArgs> sku) {
+        public Builder sku(@Nullable Output<SkuDescriptionArgs> sku) {
             this.sku = sku;
             return this;
         }
 
         public Builder sku(@Nullable SkuDescriptionArgs sku) {
-            this.sku = Input.ofNullable(sku);
+            this.sku = Output.ofNullable(sku);
             return this;
         }
 
-        public Builder stagingEnvironmentPolicy(@Nullable Input<StagingEnvironmentPolicy> stagingEnvironmentPolicy) {
+        public Builder stagingEnvironmentPolicy(@Nullable Output<StagingEnvironmentPolicy> stagingEnvironmentPolicy) {
             this.stagingEnvironmentPolicy = stagingEnvironmentPolicy;
             return this;
         }
 
         public Builder stagingEnvironmentPolicy(@Nullable StagingEnvironmentPolicy stagingEnvironmentPolicy) {
-            this.stagingEnvironmentPolicy = Input.ofNullable(stagingEnvironmentPolicy);
+            this.stagingEnvironmentPolicy = Output.ofNullable(stagingEnvironmentPolicy);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder templateProperties(@Nullable Input<StaticSiteTemplateOptionsArgs> templateProperties) {
+        public Builder templateProperties(@Nullable Output<StaticSiteTemplateOptionsArgs> templateProperties) {
             this.templateProperties = templateProperties;
             return this;
         }
 
         public Builder templateProperties(@Nullable StaticSiteTemplateOptionsArgs templateProperties) {
-            this.templateProperties = Input.ofNullable(templateProperties);
+            this.templateProperties = Output.ofNullable(templateProperties);
             return this;
         }
         public StaticSiteArgs build() {

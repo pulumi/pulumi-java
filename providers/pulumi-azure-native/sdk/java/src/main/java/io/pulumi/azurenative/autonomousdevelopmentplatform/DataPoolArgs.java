@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.autonomousdevelopmentplatform;
 
 import io.pulumi.azurenative.autonomousdevelopmentplatform.inputs.DataPoolLocationArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -21,9 +21,9 @@ public final class DataPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="accountName", required=true)
-      private final Input<String> accountName;
+      private final Output<String> accountName;
 
-    public Input<String> getAccountName() {
+    public Output<String> getAccountName() {
         return this.accountName;
     }
 
@@ -32,10 +32,10 @@ public final class DataPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dataPoolName")
-      private final @Nullable Input<String> dataPoolName;
+      private final @Nullable Output<String> dataPoolName;
 
-    public Input<String> getDataPoolName() {
-        return this.dataPoolName == null ? Input.empty() : this.dataPoolName;
+    public Output<String> getDataPoolName() {
+        return this.dataPoolName == null ? Output.empty() : this.dataPoolName;
     }
 
     /**
@@ -43,9 +43,9 @@ public final class DataPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="locations", required=true)
-      private final Input<List<DataPoolLocationArgs>> locations;
+      private final Output<List<DataPoolLocationArgs>> locations;
 
-    public Input<List<DataPoolLocationArgs>> getLocations() {
+    public Output<List<DataPoolLocationArgs>> getLocations() {
         return this.locations;
     }
 
@@ -54,17 +54,17 @@ public final class DataPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
     public DataPoolArgs(
-        Input<String> accountName,
-        @Nullable Input<String> dataPoolName,
-        Input<List<DataPoolLocationArgs>> locations,
-        Input<String> resourceGroupName) {
+        Output<String> accountName,
+        @Nullable Output<String> dataPoolName,
+        Output<List<DataPoolLocationArgs>> locations,
+        Output<String> resourceGroupName) {
         this.accountName = Objects.requireNonNull(accountName, "expected parameter 'accountName' to be non-null");
         this.dataPoolName = dataPoolName;
         this.locations = Objects.requireNonNull(locations, "expected parameter 'locations' to be non-null");
@@ -72,10 +72,10 @@ public final class DataPoolArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DataPoolArgs() {
-        this.accountName = Input.empty();
-        this.dataPoolName = Input.empty();
-        this.locations = Input.empty();
-        this.resourceGroupName = Input.empty();
+        this.accountName = Output.empty();
+        this.dataPoolName = Output.empty();
+        this.locations = Output.empty();
+        this.resourceGroupName = Output.empty();
     }
 
     public static Builder builder() {
@@ -87,10 +87,10 @@ public final class DataPoolArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> accountName;
-        private @Nullable Input<String> dataPoolName;
-        private Input<List<DataPoolLocationArgs>> locations;
-        private Input<String> resourceGroupName;
+        private Output<String> accountName;
+        private @Nullable Output<String> dataPoolName;
+        private Output<List<DataPoolLocationArgs>> locations;
+        private Output<String> resourceGroupName;
 
         public Builder() {
     	      // Empty
@@ -104,43 +104,43 @@ public final class DataPoolArgs extends io.pulumi.resources.ResourceArgs {
     	      this.resourceGroupName = defaults.resourceGroupName;
         }
 
-        public Builder accountName(Input<String> accountName) {
+        public Builder accountName(Output<String> accountName) {
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
 
         public Builder accountName(String accountName) {
-            this.accountName = Input.of(Objects.requireNonNull(accountName));
+            this.accountName = Output.of(Objects.requireNonNull(accountName));
             return this;
         }
 
-        public Builder dataPoolName(@Nullable Input<String> dataPoolName) {
+        public Builder dataPoolName(@Nullable Output<String> dataPoolName) {
             this.dataPoolName = dataPoolName;
             return this;
         }
 
         public Builder dataPoolName(@Nullable String dataPoolName) {
-            this.dataPoolName = Input.ofNullable(dataPoolName);
+            this.dataPoolName = Output.ofNullable(dataPoolName);
             return this;
         }
 
-        public Builder locations(Input<List<DataPoolLocationArgs>> locations) {
+        public Builder locations(Output<List<DataPoolLocationArgs>> locations) {
             this.locations = Objects.requireNonNull(locations);
             return this;
         }
 
         public Builder locations(List<DataPoolLocationArgs> locations) {
-            this.locations = Input.of(Objects.requireNonNull(locations));
+            this.locations = Output.of(Objects.requireNonNull(locations));
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
         public DataPoolArgs build() {

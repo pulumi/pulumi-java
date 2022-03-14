@@ -5,7 +5,7 @@ package io.pulumi.azurenative.connectedvmwarevsphere.inputs;
 
 import io.pulumi.azurenative.connectedvmwarevsphere.enums.OsType;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -25,10 +25,10 @@ public final class OsProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="adminPassword")
-      private final @Nullable Input<String> adminPassword;
+      private final @Nullable Output<String> adminPassword;
 
-    public Input<String> getAdminPassword() {
-        return this.adminPassword == null ? Input.empty() : this.adminPassword;
+    public Output<String> getAdminPassword() {
+        return this.adminPassword == null ? Output.empty() : this.adminPassword;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class OsProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="adminUsername")
-      private final @Nullable Input<String> adminUsername;
+      private final @Nullable Output<String> adminUsername;
 
-    public Input<String> getAdminUsername() {
-        return this.adminUsername == null ? Input.empty() : this.adminUsername;
+    public Output<String> getAdminUsername() {
+        return this.adminUsername == null ? Output.empty() : this.adminUsername;
     }
 
     /**
@@ -47,10 +47,10 @@ public final class OsProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="computerName")
-      private final @Nullable Input<String> computerName;
+      private final @Nullable Output<String> computerName;
 
-    public Input<String> getComputerName() {
-        return this.computerName == null ? Input.empty() : this.computerName;
+    public Output<String> getComputerName() {
+        return this.computerName == null ? Output.empty() : this.computerName;
     }
 
     /**
@@ -58,17 +58,17 @@ public final class OsProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="osType")
-      private final @Nullable Input<Either<String,OsType>> osType;
+      private final @Nullable Output<Either<String,OsType>> osType;
 
-    public Input<Either<String,OsType>> getOsType() {
-        return this.osType == null ? Input.empty() : this.osType;
+    public Output<Either<String,OsType>> getOsType() {
+        return this.osType == null ? Output.empty() : this.osType;
     }
 
     public OsProfileArgs(
-        @Nullable Input<String> adminPassword,
-        @Nullable Input<String> adminUsername,
-        @Nullable Input<String> computerName,
-        @Nullable Input<Either<String,OsType>> osType) {
+        @Nullable Output<String> adminPassword,
+        @Nullable Output<String> adminUsername,
+        @Nullable Output<String> computerName,
+        @Nullable Output<Either<String,OsType>> osType) {
         this.adminPassword = adminPassword;
         this.adminUsername = adminUsername;
         this.computerName = computerName;
@@ -76,10 +76,10 @@ public final class OsProfileArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private OsProfileArgs() {
-        this.adminPassword = Input.empty();
-        this.adminUsername = Input.empty();
-        this.computerName = Input.empty();
-        this.osType = Input.empty();
+        this.adminPassword = Output.empty();
+        this.adminUsername = Output.empty();
+        this.computerName = Output.empty();
+        this.osType = Output.empty();
     }
 
     public static Builder builder() {
@@ -91,10 +91,10 @@ public final class OsProfileArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> adminPassword;
-        private @Nullable Input<String> adminUsername;
-        private @Nullable Input<String> computerName;
-        private @Nullable Input<Either<String,OsType>> osType;
+        private @Nullable Output<String> adminPassword;
+        private @Nullable Output<String> adminUsername;
+        private @Nullable Output<String> computerName;
+        private @Nullable Output<Either<String,OsType>> osType;
 
         public Builder() {
     	      // Empty
@@ -108,43 +108,43 @@ public final class OsProfileArgs extends io.pulumi.resources.ResourceArgs {
     	      this.osType = defaults.osType;
         }
 
-        public Builder adminPassword(@Nullable Input<String> adminPassword) {
+        public Builder adminPassword(@Nullable Output<String> adminPassword) {
             this.adminPassword = adminPassword;
             return this;
         }
 
         public Builder adminPassword(@Nullable String adminPassword) {
-            this.adminPassword = Input.ofNullable(adminPassword);
+            this.adminPassword = Output.ofNullable(adminPassword);
             return this;
         }
 
-        public Builder adminUsername(@Nullable Input<String> adminUsername) {
+        public Builder adminUsername(@Nullable Output<String> adminUsername) {
             this.adminUsername = adminUsername;
             return this;
         }
 
         public Builder adminUsername(@Nullable String adminUsername) {
-            this.adminUsername = Input.ofNullable(adminUsername);
+            this.adminUsername = Output.ofNullable(adminUsername);
             return this;
         }
 
-        public Builder computerName(@Nullable Input<String> computerName) {
+        public Builder computerName(@Nullable Output<String> computerName) {
             this.computerName = computerName;
             return this;
         }
 
         public Builder computerName(@Nullable String computerName) {
-            this.computerName = Input.ofNullable(computerName);
+            this.computerName = Output.ofNullable(computerName);
             return this;
         }
 
-        public Builder osType(@Nullable Input<Either<String,OsType>> osType) {
+        public Builder osType(@Nullable Output<Either<String,OsType>> osType) {
             this.osType = osType;
             return this;
         }
 
         public Builder osType(@Nullable Either<String,OsType> osType) {
-            this.osType = Input.ofNullable(osType);
+            this.osType = Output.ofNullable(osType);
             return this;
         }
         public OsProfileArgs build() {

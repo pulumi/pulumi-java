@@ -4,7 +4,7 @@
 package io.pulumi.aws.guardduty.inputs;
 
 import io.pulumi.aws.guardduty.inputs.OrganizationConfigurationDatasourcesS3LogsGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,18 +19,18 @@ public final class OrganizationConfigurationDatasourcesGetArgs extends io.pulumi
      * 
      */
     @InputImport(name="s3Logs")
-      private final @Nullable Input<OrganizationConfigurationDatasourcesS3LogsGetArgs> s3Logs;
+      private final @Nullable Output<OrganizationConfigurationDatasourcesS3LogsGetArgs> s3Logs;
 
-    public Input<OrganizationConfigurationDatasourcesS3LogsGetArgs> getS3Logs() {
-        return this.s3Logs == null ? Input.empty() : this.s3Logs;
+    public Output<OrganizationConfigurationDatasourcesS3LogsGetArgs> getS3Logs() {
+        return this.s3Logs == null ? Output.empty() : this.s3Logs;
     }
 
-    public OrganizationConfigurationDatasourcesGetArgs(@Nullable Input<OrganizationConfigurationDatasourcesS3LogsGetArgs> s3Logs) {
+    public OrganizationConfigurationDatasourcesGetArgs(@Nullable Output<OrganizationConfigurationDatasourcesS3LogsGetArgs> s3Logs) {
         this.s3Logs = s3Logs;
     }
 
     private OrganizationConfigurationDatasourcesGetArgs() {
-        this.s3Logs = Input.empty();
+        this.s3Logs = Output.empty();
     }
 
     public static Builder builder() {
@@ -42,7 +42,7 @@ public final class OrganizationConfigurationDatasourcesGetArgs extends io.pulumi
     }
 
     public static final class Builder {
-        private @Nullable Input<OrganizationConfigurationDatasourcesS3LogsGetArgs> s3Logs;
+        private @Nullable Output<OrganizationConfigurationDatasourcesS3LogsGetArgs> s3Logs;
 
         public Builder() {
     	      // Empty
@@ -53,13 +53,13 @@ public final class OrganizationConfigurationDatasourcesGetArgs extends io.pulumi
     	      this.s3Logs = defaults.s3Logs;
         }
 
-        public Builder s3Logs(@Nullable Input<OrganizationConfigurationDatasourcesS3LogsGetArgs> s3Logs) {
+        public Builder s3Logs(@Nullable Output<OrganizationConfigurationDatasourcesS3LogsGetArgs> s3Logs) {
             this.s3Logs = s3Logs;
             return this;
         }
 
         public Builder s3Logs(@Nullable OrganizationConfigurationDatasourcesS3LogsGetArgs s3Logs) {
-            this.s3Logs = Input.ofNullable(s3Logs);
+            this.s3Logs = Output.ofNullable(s3Logs);
             return this;
         }
         public OrganizationConfigurationDatasourcesGetArgs build() {

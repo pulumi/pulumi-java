@@ -3,7 +3,6 @@
 
 package io.pulumi.googlenative.websecurityscanner_v1beta;
 
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -273,14 +272,14 @@ public class ScanConfig extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ScanConfig(String name, ScanConfigArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:websecurityscanner/v1beta:ScanConfig", name, args == null ? ScanConfigArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("google-native:websecurityscanner/v1beta:ScanConfig", name, args == null ? ScanConfigArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private ScanConfig(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private ScanConfig(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("google-native:websecurityscanner/v1beta:ScanConfig", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -295,7 +294,7 @@ public class ScanConfig extends io.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static ScanConfig get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static ScanConfig get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new ScanConfig(name, id, options);
     }
 }

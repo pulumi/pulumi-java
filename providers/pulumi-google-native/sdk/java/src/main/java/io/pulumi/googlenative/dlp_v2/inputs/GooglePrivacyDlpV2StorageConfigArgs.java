@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dlp_v2.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2BigQueryOptionsArgs;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2CloudStorageOptionsArgs;
@@ -27,10 +27,10 @@ public final class GooglePrivacyDlpV2StorageConfigArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="bigQueryOptions")
-      private final @Nullable Input<GooglePrivacyDlpV2BigQueryOptionsArgs> bigQueryOptions;
+      private final @Nullable Output<GooglePrivacyDlpV2BigQueryOptionsArgs> bigQueryOptions;
 
-    public Input<GooglePrivacyDlpV2BigQueryOptionsArgs> getBigQueryOptions() {
-        return this.bigQueryOptions == null ? Input.empty() : this.bigQueryOptions;
+    public Output<GooglePrivacyDlpV2BigQueryOptionsArgs> getBigQueryOptions() {
+        return this.bigQueryOptions == null ? Output.empty() : this.bigQueryOptions;
     }
 
     /**
@@ -38,10 +38,10 @@ public final class GooglePrivacyDlpV2StorageConfigArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="cloudStorageOptions")
-      private final @Nullable Input<GooglePrivacyDlpV2CloudStorageOptionsArgs> cloudStorageOptions;
+      private final @Nullable Output<GooglePrivacyDlpV2CloudStorageOptionsArgs> cloudStorageOptions;
 
-    public Input<GooglePrivacyDlpV2CloudStorageOptionsArgs> getCloudStorageOptions() {
-        return this.cloudStorageOptions == null ? Input.empty() : this.cloudStorageOptions;
+    public Output<GooglePrivacyDlpV2CloudStorageOptionsArgs> getCloudStorageOptions() {
+        return this.cloudStorageOptions == null ? Output.empty() : this.cloudStorageOptions;
     }
 
     /**
@@ -49,10 +49,10 @@ public final class GooglePrivacyDlpV2StorageConfigArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="datastoreOptions")
-      private final @Nullable Input<GooglePrivacyDlpV2DatastoreOptionsArgs> datastoreOptions;
+      private final @Nullable Output<GooglePrivacyDlpV2DatastoreOptionsArgs> datastoreOptions;
 
-    public Input<GooglePrivacyDlpV2DatastoreOptionsArgs> getDatastoreOptions() {
-        return this.datastoreOptions == null ? Input.empty() : this.datastoreOptions;
+    public Output<GooglePrivacyDlpV2DatastoreOptionsArgs> getDatastoreOptions() {
+        return this.datastoreOptions == null ? Output.empty() : this.datastoreOptions;
     }
 
     /**
@@ -60,25 +60,25 @@ public final class GooglePrivacyDlpV2StorageConfigArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="hybridOptions")
-      private final @Nullable Input<GooglePrivacyDlpV2HybridOptionsArgs> hybridOptions;
+      private final @Nullable Output<GooglePrivacyDlpV2HybridOptionsArgs> hybridOptions;
 
-    public Input<GooglePrivacyDlpV2HybridOptionsArgs> getHybridOptions() {
-        return this.hybridOptions == null ? Input.empty() : this.hybridOptions;
+    public Output<GooglePrivacyDlpV2HybridOptionsArgs> getHybridOptions() {
+        return this.hybridOptions == null ? Output.empty() : this.hybridOptions;
     }
 
     @InputImport(name="timespanConfig")
-      private final @Nullable Input<GooglePrivacyDlpV2TimespanConfigArgs> timespanConfig;
+      private final @Nullable Output<GooglePrivacyDlpV2TimespanConfigArgs> timespanConfig;
 
-    public Input<GooglePrivacyDlpV2TimespanConfigArgs> getTimespanConfig() {
-        return this.timespanConfig == null ? Input.empty() : this.timespanConfig;
+    public Output<GooglePrivacyDlpV2TimespanConfigArgs> getTimespanConfig() {
+        return this.timespanConfig == null ? Output.empty() : this.timespanConfig;
     }
 
     public GooglePrivacyDlpV2StorageConfigArgs(
-        @Nullable Input<GooglePrivacyDlpV2BigQueryOptionsArgs> bigQueryOptions,
-        @Nullable Input<GooglePrivacyDlpV2CloudStorageOptionsArgs> cloudStorageOptions,
-        @Nullable Input<GooglePrivacyDlpV2DatastoreOptionsArgs> datastoreOptions,
-        @Nullable Input<GooglePrivacyDlpV2HybridOptionsArgs> hybridOptions,
-        @Nullable Input<GooglePrivacyDlpV2TimespanConfigArgs> timespanConfig) {
+        @Nullable Output<GooglePrivacyDlpV2BigQueryOptionsArgs> bigQueryOptions,
+        @Nullable Output<GooglePrivacyDlpV2CloudStorageOptionsArgs> cloudStorageOptions,
+        @Nullable Output<GooglePrivacyDlpV2DatastoreOptionsArgs> datastoreOptions,
+        @Nullable Output<GooglePrivacyDlpV2HybridOptionsArgs> hybridOptions,
+        @Nullable Output<GooglePrivacyDlpV2TimespanConfigArgs> timespanConfig) {
         this.bigQueryOptions = bigQueryOptions;
         this.cloudStorageOptions = cloudStorageOptions;
         this.datastoreOptions = datastoreOptions;
@@ -87,11 +87,11 @@ public final class GooglePrivacyDlpV2StorageConfigArgs extends io.pulumi.resourc
     }
 
     private GooglePrivacyDlpV2StorageConfigArgs() {
-        this.bigQueryOptions = Input.empty();
-        this.cloudStorageOptions = Input.empty();
-        this.datastoreOptions = Input.empty();
-        this.hybridOptions = Input.empty();
-        this.timespanConfig = Input.empty();
+        this.bigQueryOptions = Output.empty();
+        this.cloudStorageOptions = Output.empty();
+        this.datastoreOptions = Output.empty();
+        this.hybridOptions = Output.empty();
+        this.timespanConfig = Output.empty();
     }
 
     public static Builder builder() {
@@ -103,11 +103,11 @@ public final class GooglePrivacyDlpV2StorageConfigArgs extends io.pulumi.resourc
     }
 
     public static final class Builder {
-        private @Nullable Input<GooglePrivacyDlpV2BigQueryOptionsArgs> bigQueryOptions;
-        private @Nullable Input<GooglePrivacyDlpV2CloudStorageOptionsArgs> cloudStorageOptions;
-        private @Nullable Input<GooglePrivacyDlpV2DatastoreOptionsArgs> datastoreOptions;
-        private @Nullable Input<GooglePrivacyDlpV2HybridOptionsArgs> hybridOptions;
-        private @Nullable Input<GooglePrivacyDlpV2TimespanConfigArgs> timespanConfig;
+        private @Nullable Output<GooglePrivacyDlpV2BigQueryOptionsArgs> bigQueryOptions;
+        private @Nullable Output<GooglePrivacyDlpV2CloudStorageOptionsArgs> cloudStorageOptions;
+        private @Nullable Output<GooglePrivacyDlpV2DatastoreOptionsArgs> datastoreOptions;
+        private @Nullable Output<GooglePrivacyDlpV2HybridOptionsArgs> hybridOptions;
+        private @Nullable Output<GooglePrivacyDlpV2TimespanConfigArgs> timespanConfig;
 
         public Builder() {
     	      // Empty
@@ -122,53 +122,53 @@ public final class GooglePrivacyDlpV2StorageConfigArgs extends io.pulumi.resourc
     	      this.timespanConfig = defaults.timespanConfig;
         }
 
-        public Builder bigQueryOptions(@Nullable Input<GooglePrivacyDlpV2BigQueryOptionsArgs> bigQueryOptions) {
+        public Builder bigQueryOptions(@Nullable Output<GooglePrivacyDlpV2BigQueryOptionsArgs> bigQueryOptions) {
             this.bigQueryOptions = bigQueryOptions;
             return this;
         }
 
         public Builder bigQueryOptions(@Nullable GooglePrivacyDlpV2BigQueryOptionsArgs bigQueryOptions) {
-            this.bigQueryOptions = Input.ofNullable(bigQueryOptions);
+            this.bigQueryOptions = Output.ofNullable(bigQueryOptions);
             return this;
         }
 
-        public Builder cloudStorageOptions(@Nullable Input<GooglePrivacyDlpV2CloudStorageOptionsArgs> cloudStorageOptions) {
+        public Builder cloudStorageOptions(@Nullable Output<GooglePrivacyDlpV2CloudStorageOptionsArgs> cloudStorageOptions) {
             this.cloudStorageOptions = cloudStorageOptions;
             return this;
         }
 
         public Builder cloudStorageOptions(@Nullable GooglePrivacyDlpV2CloudStorageOptionsArgs cloudStorageOptions) {
-            this.cloudStorageOptions = Input.ofNullable(cloudStorageOptions);
+            this.cloudStorageOptions = Output.ofNullable(cloudStorageOptions);
             return this;
         }
 
-        public Builder datastoreOptions(@Nullable Input<GooglePrivacyDlpV2DatastoreOptionsArgs> datastoreOptions) {
+        public Builder datastoreOptions(@Nullable Output<GooglePrivacyDlpV2DatastoreOptionsArgs> datastoreOptions) {
             this.datastoreOptions = datastoreOptions;
             return this;
         }
 
         public Builder datastoreOptions(@Nullable GooglePrivacyDlpV2DatastoreOptionsArgs datastoreOptions) {
-            this.datastoreOptions = Input.ofNullable(datastoreOptions);
+            this.datastoreOptions = Output.ofNullable(datastoreOptions);
             return this;
         }
 
-        public Builder hybridOptions(@Nullable Input<GooglePrivacyDlpV2HybridOptionsArgs> hybridOptions) {
+        public Builder hybridOptions(@Nullable Output<GooglePrivacyDlpV2HybridOptionsArgs> hybridOptions) {
             this.hybridOptions = hybridOptions;
             return this;
         }
 
         public Builder hybridOptions(@Nullable GooglePrivacyDlpV2HybridOptionsArgs hybridOptions) {
-            this.hybridOptions = Input.ofNullable(hybridOptions);
+            this.hybridOptions = Output.ofNullable(hybridOptions);
             return this;
         }
 
-        public Builder timespanConfig(@Nullable Input<GooglePrivacyDlpV2TimespanConfigArgs> timespanConfig) {
+        public Builder timespanConfig(@Nullable Output<GooglePrivacyDlpV2TimespanConfigArgs> timespanConfig) {
             this.timespanConfig = timespanConfig;
             return this;
         }
 
         public Builder timespanConfig(@Nullable GooglePrivacyDlpV2TimespanConfigArgs timespanConfig) {
-            this.timespanConfig = Input.ofNullable(timespanConfig);
+            this.timespanConfig = Output.ofNullable(timespanConfig);
             return this;
         }
         public GooglePrivacyDlpV2StorageConfigArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.compute.inputs.InstanceNetworkInterfaceAccessConfigGetArgs;
 import io.pulumi.gcp.compute.inputs.InstanceNetworkInterfaceAliasIpRangeGetArgs;
@@ -29,10 +29,10 @@ public final class InstanceNetworkInterfaceGetArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="accessConfigs")
-      private final @Nullable Input<List<InstanceNetworkInterfaceAccessConfigGetArgs>> accessConfigs;
+      private final @Nullable Output<List<InstanceNetworkInterfaceAccessConfigGetArgs>> accessConfigs;
 
-    public Input<List<InstanceNetworkInterfaceAccessConfigGetArgs>> getAccessConfigs() {
-        return this.accessConfigs == null ? Input.empty() : this.accessConfigs;
+    public Output<List<InstanceNetworkInterfaceAccessConfigGetArgs>> getAccessConfigs() {
+        return this.accessConfigs == null ? Output.empty() : this.accessConfigs;
     }
 
     /**
@@ -42,10 +42,10 @@ public final class InstanceNetworkInterfaceGetArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="aliasIpRanges")
-      private final @Nullable Input<List<InstanceNetworkInterfaceAliasIpRangeGetArgs>> aliasIpRanges;
+      private final @Nullable Output<List<InstanceNetworkInterfaceAliasIpRangeGetArgs>> aliasIpRanges;
 
-    public Input<List<InstanceNetworkInterfaceAliasIpRangeGetArgs>> getAliasIpRanges() {
-        return this.aliasIpRanges == null ? Input.empty() : this.aliasIpRanges;
+    public Output<List<InstanceNetworkInterfaceAliasIpRangeGetArgs>> getAliasIpRanges() {
+        return this.aliasIpRanges == null ? Output.empty() : this.aliasIpRanges;
     }
 
     /**
@@ -55,10 +55,10 @@ public final class InstanceNetworkInterfaceGetArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="ipv6AccessConfigs")
-      private final @Nullable Input<List<InstanceNetworkInterfaceIpv6AccessConfigGetArgs>> ipv6AccessConfigs;
+      private final @Nullable Output<List<InstanceNetworkInterfaceIpv6AccessConfigGetArgs>> ipv6AccessConfigs;
 
-    public Input<List<InstanceNetworkInterfaceIpv6AccessConfigGetArgs>> getIpv6AccessConfigs() {
-        return this.ipv6AccessConfigs == null ? Input.empty() : this.ipv6AccessConfigs;
+    public Output<List<InstanceNetworkInterfaceIpv6AccessConfigGetArgs>> getIpv6AccessConfigs() {
+        return this.ipv6AccessConfigs == null ? Output.empty() : this.ipv6AccessConfigs;
     }
 
     /**
@@ -67,10 +67,10 @@ public final class InstanceNetworkInterfaceGetArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="ipv6AccessType")
-      private final @Nullable Input<String> ipv6AccessType;
+      private final @Nullable Output<String> ipv6AccessType;
 
-    public Input<String> getIpv6AccessType() {
-        return this.ipv6AccessType == null ? Input.empty() : this.ipv6AccessType;
+    public Output<String> getIpv6AccessType() {
+        return this.ipv6AccessType == null ? Output.empty() : this.ipv6AccessType;
     }
 
     /**
@@ -79,10 +79,10 @@ public final class InstanceNetworkInterfaceGetArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -92,10 +92,10 @@ public final class InstanceNetworkInterfaceGetArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="network")
-      private final @Nullable Input<String> network;
+      private final @Nullable Output<String> network;
 
-    public Input<String> getNetwork() {
-        return this.network == null ? Input.empty() : this.network;
+    public Output<String> getNetwork() {
+        return this.network == null ? Output.empty() : this.network;
     }
 
     /**
@@ -104,10 +104,10 @@ public final class InstanceNetworkInterfaceGetArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="networkIp")
-      private final @Nullable Input<String> networkIp;
+      private final @Nullable Output<String> networkIp;
 
-    public Input<String> getNetworkIp() {
-        return this.networkIp == null ? Input.empty() : this.networkIp;
+    public Output<String> getNetworkIp() {
+        return this.networkIp == null ? Output.empty() : this.networkIp;
     }
 
     /**
@@ -115,10 +115,10 @@ public final class InstanceNetworkInterfaceGetArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="nicType")
-      private final @Nullable Input<String> nicType;
+      private final @Nullable Output<String> nicType;
 
-    public Input<String> getNicType() {
-        return this.nicType == null ? Input.empty() : this.nicType;
+    public Output<String> getNicType() {
+        return this.nicType == null ? Output.empty() : this.nicType;
     }
 
     /**
@@ -126,10 +126,10 @@ public final class InstanceNetworkInterfaceGetArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="queueCount")
-      private final @Nullable Input<Integer> queueCount;
+      private final @Nullable Output<Integer> queueCount;
 
-    public Input<Integer> getQueueCount() {
-        return this.queueCount == null ? Input.empty() : this.queueCount;
+    public Output<Integer> getQueueCount() {
+        return this.queueCount == null ? Output.empty() : this.queueCount;
     }
 
     /**
@@ -137,10 +137,10 @@ public final class InstanceNetworkInterfaceGetArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="stackType")
-      private final @Nullable Input<String> stackType;
+      private final @Nullable Output<String> stackType;
 
-    public Input<String> getStackType() {
-        return this.stackType == null ? Input.empty() : this.stackType;
+    public Output<String> getStackType() {
+        return this.stackType == null ? Output.empty() : this.stackType;
     }
 
     /**
@@ -154,10 +154,10 @@ public final class InstanceNetworkInterfaceGetArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="subnetwork")
-      private final @Nullable Input<String> subnetwork;
+      private final @Nullable Output<String> subnetwork;
 
-    public Input<String> getSubnetwork() {
-        return this.subnetwork == null ? Input.empty() : this.subnetwork;
+    public Output<String> getSubnetwork() {
+        return this.subnetwork == null ? Output.empty() : this.subnetwork;
     }
 
     /**
@@ -168,25 +168,25 @@ public final class InstanceNetworkInterfaceGetArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="subnetworkProject")
-      private final @Nullable Input<String> subnetworkProject;
+      private final @Nullable Output<String> subnetworkProject;
 
-    public Input<String> getSubnetworkProject() {
-        return this.subnetworkProject == null ? Input.empty() : this.subnetworkProject;
+    public Output<String> getSubnetworkProject() {
+        return this.subnetworkProject == null ? Output.empty() : this.subnetworkProject;
     }
 
     public InstanceNetworkInterfaceGetArgs(
-        @Nullable Input<List<InstanceNetworkInterfaceAccessConfigGetArgs>> accessConfigs,
-        @Nullable Input<List<InstanceNetworkInterfaceAliasIpRangeGetArgs>> aliasIpRanges,
-        @Nullable Input<List<InstanceNetworkInterfaceIpv6AccessConfigGetArgs>> ipv6AccessConfigs,
-        @Nullable Input<String> ipv6AccessType,
-        @Nullable Input<String> name,
-        @Nullable Input<String> network,
-        @Nullable Input<String> networkIp,
-        @Nullable Input<String> nicType,
-        @Nullable Input<Integer> queueCount,
-        @Nullable Input<String> stackType,
-        @Nullable Input<String> subnetwork,
-        @Nullable Input<String> subnetworkProject) {
+        @Nullable Output<List<InstanceNetworkInterfaceAccessConfigGetArgs>> accessConfigs,
+        @Nullable Output<List<InstanceNetworkInterfaceAliasIpRangeGetArgs>> aliasIpRanges,
+        @Nullable Output<List<InstanceNetworkInterfaceIpv6AccessConfigGetArgs>> ipv6AccessConfigs,
+        @Nullable Output<String> ipv6AccessType,
+        @Nullable Output<String> name,
+        @Nullable Output<String> network,
+        @Nullable Output<String> networkIp,
+        @Nullable Output<String> nicType,
+        @Nullable Output<Integer> queueCount,
+        @Nullable Output<String> stackType,
+        @Nullable Output<String> subnetwork,
+        @Nullable Output<String> subnetworkProject) {
         this.accessConfigs = accessConfigs;
         this.aliasIpRanges = aliasIpRanges;
         this.ipv6AccessConfigs = ipv6AccessConfigs;
@@ -202,18 +202,18 @@ public final class InstanceNetworkInterfaceGetArgs extends io.pulumi.resources.R
     }
 
     private InstanceNetworkInterfaceGetArgs() {
-        this.accessConfigs = Input.empty();
-        this.aliasIpRanges = Input.empty();
-        this.ipv6AccessConfigs = Input.empty();
-        this.ipv6AccessType = Input.empty();
-        this.name = Input.empty();
-        this.network = Input.empty();
-        this.networkIp = Input.empty();
-        this.nicType = Input.empty();
-        this.queueCount = Input.empty();
-        this.stackType = Input.empty();
-        this.subnetwork = Input.empty();
-        this.subnetworkProject = Input.empty();
+        this.accessConfigs = Output.empty();
+        this.aliasIpRanges = Output.empty();
+        this.ipv6AccessConfigs = Output.empty();
+        this.ipv6AccessType = Output.empty();
+        this.name = Output.empty();
+        this.network = Output.empty();
+        this.networkIp = Output.empty();
+        this.nicType = Output.empty();
+        this.queueCount = Output.empty();
+        this.stackType = Output.empty();
+        this.subnetwork = Output.empty();
+        this.subnetworkProject = Output.empty();
     }
 
     public static Builder builder() {
@@ -225,18 +225,18 @@ public final class InstanceNetworkInterfaceGetArgs extends io.pulumi.resources.R
     }
 
     public static final class Builder {
-        private @Nullable Input<List<InstanceNetworkInterfaceAccessConfigGetArgs>> accessConfigs;
-        private @Nullable Input<List<InstanceNetworkInterfaceAliasIpRangeGetArgs>> aliasIpRanges;
-        private @Nullable Input<List<InstanceNetworkInterfaceIpv6AccessConfigGetArgs>> ipv6AccessConfigs;
-        private @Nullable Input<String> ipv6AccessType;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> network;
-        private @Nullable Input<String> networkIp;
-        private @Nullable Input<String> nicType;
-        private @Nullable Input<Integer> queueCount;
-        private @Nullable Input<String> stackType;
-        private @Nullable Input<String> subnetwork;
-        private @Nullable Input<String> subnetworkProject;
+        private @Nullable Output<List<InstanceNetworkInterfaceAccessConfigGetArgs>> accessConfigs;
+        private @Nullable Output<List<InstanceNetworkInterfaceAliasIpRangeGetArgs>> aliasIpRanges;
+        private @Nullable Output<List<InstanceNetworkInterfaceIpv6AccessConfigGetArgs>> ipv6AccessConfigs;
+        private @Nullable Output<String> ipv6AccessType;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> network;
+        private @Nullable Output<String> networkIp;
+        private @Nullable Output<String> nicType;
+        private @Nullable Output<Integer> queueCount;
+        private @Nullable Output<String> stackType;
+        private @Nullable Output<String> subnetwork;
+        private @Nullable Output<String> subnetworkProject;
 
         public Builder() {
     	      // Empty
@@ -258,123 +258,123 @@ public final class InstanceNetworkInterfaceGetArgs extends io.pulumi.resources.R
     	      this.subnetworkProject = defaults.subnetworkProject;
         }
 
-        public Builder accessConfigs(@Nullable Input<List<InstanceNetworkInterfaceAccessConfigGetArgs>> accessConfigs) {
+        public Builder accessConfigs(@Nullable Output<List<InstanceNetworkInterfaceAccessConfigGetArgs>> accessConfigs) {
             this.accessConfigs = accessConfigs;
             return this;
         }
 
         public Builder accessConfigs(@Nullable List<InstanceNetworkInterfaceAccessConfigGetArgs> accessConfigs) {
-            this.accessConfigs = Input.ofNullable(accessConfigs);
+            this.accessConfigs = Output.ofNullable(accessConfigs);
             return this;
         }
 
-        public Builder aliasIpRanges(@Nullable Input<List<InstanceNetworkInterfaceAliasIpRangeGetArgs>> aliasIpRanges) {
+        public Builder aliasIpRanges(@Nullable Output<List<InstanceNetworkInterfaceAliasIpRangeGetArgs>> aliasIpRanges) {
             this.aliasIpRanges = aliasIpRanges;
             return this;
         }
 
         public Builder aliasIpRanges(@Nullable List<InstanceNetworkInterfaceAliasIpRangeGetArgs> aliasIpRanges) {
-            this.aliasIpRanges = Input.ofNullable(aliasIpRanges);
+            this.aliasIpRanges = Output.ofNullable(aliasIpRanges);
             return this;
         }
 
-        public Builder ipv6AccessConfigs(@Nullable Input<List<InstanceNetworkInterfaceIpv6AccessConfigGetArgs>> ipv6AccessConfigs) {
+        public Builder ipv6AccessConfigs(@Nullable Output<List<InstanceNetworkInterfaceIpv6AccessConfigGetArgs>> ipv6AccessConfigs) {
             this.ipv6AccessConfigs = ipv6AccessConfigs;
             return this;
         }
 
         public Builder ipv6AccessConfigs(@Nullable List<InstanceNetworkInterfaceIpv6AccessConfigGetArgs> ipv6AccessConfigs) {
-            this.ipv6AccessConfigs = Input.ofNullable(ipv6AccessConfigs);
+            this.ipv6AccessConfigs = Output.ofNullable(ipv6AccessConfigs);
             return this;
         }
 
-        public Builder ipv6AccessType(@Nullable Input<String> ipv6AccessType) {
+        public Builder ipv6AccessType(@Nullable Output<String> ipv6AccessType) {
             this.ipv6AccessType = ipv6AccessType;
             return this;
         }
 
         public Builder ipv6AccessType(@Nullable String ipv6AccessType) {
-            this.ipv6AccessType = Input.ofNullable(ipv6AccessType);
+            this.ipv6AccessType = Output.ofNullable(ipv6AccessType);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder network(@Nullable Input<String> network) {
+        public Builder network(@Nullable Output<String> network) {
             this.network = network;
             return this;
         }
 
         public Builder network(@Nullable String network) {
-            this.network = Input.ofNullable(network);
+            this.network = Output.ofNullable(network);
             return this;
         }
 
-        public Builder networkIp(@Nullable Input<String> networkIp) {
+        public Builder networkIp(@Nullable Output<String> networkIp) {
             this.networkIp = networkIp;
             return this;
         }
 
         public Builder networkIp(@Nullable String networkIp) {
-            this.networkIp = Input.ofNullable(networkIp);
+            this.networkIp = Output.ofNullable(networkIp);
             return this;
         }
 
-        public Builder nicType(@Nullable Input<String> nicType) {
+        public Builder nicType(@Nullable Output<String> nicType) {
             this.nicType = nicType;
             return this;
         }
 
         public Builder nicType(@Nullable String nicType) {
-            this.nicType = Input.ofNullable(nicType);
+            this.nicType = Output.ofNullable(nicType);
             return this;
         }
 
-        public Builder queueCount(@Nullable Input<Integer> queueCount) {
+        public Builder queueCount(@Nullable Output<Integer> queueCount) {
             this.queueCount = queueCount;
             return this;
         }
 
         public Builder queueCount(@Nullable Integer queueCount) {
-            this.queueCount = Input.ofNullable(queueCount);
+            this.queueCount = Output.ofNullable(queueCount);
             return this;
         }
 
-        public Builder stackType(@Nullable Input<String> stackType) {
+        public Builder stackType(@Nullable Output<String> stackType) {
             this.stackType = stackType;
             return this;
         }
 
         public Builder stackType(@Nullable String stackType) {
-            this.stackType = Input.ofNullable(stackType);
+            this.stackType = Output.ofNullable(stackType);
             return this;
         }
 
-        public Builder subnetwork(@Nullable Input<String> subnetwork) {
+        public Builder subnetwork(@Nullable Output<String> subnetwork) {
             this.subnetwork = subnetwork;
             return this;
         }
 
         public Builder subnetwork(@Nullable String subnetwork) {
-            this.subnetwork = Input.ofNullable(subnetwork);
+            this.subnetwork = Output.ofNullable(subnetwork);
             return this;
         }
 
-        public Builder subnetworkProject(@Nullable Input<String> subnetworkProject) {
+        public Builder subnetworkProject(@Nullable Output<String> subnetworkProject) {
             this.subnetworkProject = subnetworkProject;
             return this;
         }
 
         public Builder subnetworkProject(@Nullable String subnetworkProject) {
-            this.subnetworkProject = Input.ofNullable(subnetworkProject);
+            this.subnetworkProject = Output.ofNullable(subnetworkProject);
             return this;
         }
         public InstanceNetworkInterfaceGetArgs build() {

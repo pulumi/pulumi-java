@@ -8,7 +8,7 @@ import io.pulumi.azurenative.cdn.inputs.HealthProbeParametersArgs;
 import io.pulumi.azurenative.cdn.inputs.LoadBalancingSettingsParametersArgs;
 import io.pulumi.azurenative.cdn.inputs.ResponseBasedOriginErrorDetectionParametersArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -25,10 +25,10 @@ public final class AFDOriginGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="healthProbeSettings")
-      private final @Nullable Input<HealthProbeParametersArgs> healthProbeSettings;
+      private final @Nullable Output<HealthProbeParametersArgs> healthProbeSettings;
 
-    public Input<HealthProbeParametersArgs> getHealthProbeSettings() {
-        return this.healthProbeSettings == null ? Input.empty() : this.healthProbeSettings;
+    public Output<HealthProbeParametersArgs> getHealthProbeSettings() {
+        return this.healthProbeSettings == null ? Output.empty() : this.healthProbeSettings;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class AFDOriginGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="loadBalancingSettings")
-      private final @Nullable Input<LoadBalancingSettingsParametersArgs> loadBalancingSettings;
+      private final @Nullable Output<LoadBalancingSettingsParametersArgs> loadBalancingSettings;
 
-    public Input<LoadBalancingSettingsParametersArgs> getLoadBalancingSettings() {
-        return this.loadBalancingSettings == null ? Input.empty() : this.loadBalancingSettings;
+    public Output<LoadBalancingSettingsParametersArgs> getLoadBalancingSettings() {
+        return this.loadBalancingSettings == null ? Output.empty() : this.loadBalancingSettings;
     }
 
     /**
@@ -47,10 +47,10 @@ public final class AFDOriginGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="originGroupName")
-      private final @Nullable Input<String> originGroupName;
+      private final @Nullable Output<String> originGroupName;
 
-    public Input<String> getOriginGroupName() {
-        return this.originGroupName == null ? Input.empty() : this.originGroupName;
+    public Output<String> getOriginGroupName() {
+        return this.originGroupName == null ? Output.empty() : this.originGroupName;
     }
 
     /**
@@ -58,9 +58,9 @@ public final class AFDOriginGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="profileName", required=true)
-      private final Input<String> profileName;
+      private final Output<String> profileName;
 
-    public Input<String> getProfileName() {
+    public Output<String> getProfileName() {
         return this.profileName;
     }
 
@@ -69,9 +69,9 @@ public final class AFDOriginGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -80,10 +80,10 @@ public final class AFDOriginGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="responseBasedAfdOriginErrorDetectionSettings")
-      private final @Nullable Input<ResponseBasedOriginErrorDetectionParametersArgs> responseBasedAfdOriginErrorDetectionSettings;
+      private final @Nullable Output<ResponseBasedOriginErrorDetectionParametersArgs> responseBasedAfdOriginErrorDetectionSettings;
 
-    public Input<ResponseBasedOriginErrorDetectionParametersArgs> getResponseBasedAfdOriginErrorDetectionSettings() {
-        return this.responseBasedAfdOriginErrorDetectionSettings == null ? Input.empty() : this.responseBasedAfdOriginErrorDetectionSettings;
+    public Output<ResponseBasedOriginErrorDetectionParametersArgs> getResponseBasedAfdOriginErrorDetectionSettings() {
+        return this.responseBasedAfdOriginErrorDetectionSettings == null ? Output.empty() : this.responseBasedAfdOriginErrorDetectionSettings;
     }
 
     /**
@@ -91,10 +91,10 @@ public final class AFDOriginGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sessionAffinityState")
-      private final @Nullable Input<Either<String,EnabledState>> sessionAffinityState;
+      private final @Nullable Output<Either<String,EnabledState>> sessionAffinityState;
 
-    public Input<Either<String,EnabledState>> getSessionAffinityState() {
-        return this.sessionAffinityState == null ? Input.empty() : this.sessionAffinityState;
+    public Output<Either<String,EnabledState>> getSessionAffinityState() {
+        return this.sessionAffinityState == null ? Output.empty() : this.sessionAffinityState;
     }
 
     /**
@@ -102,21 +102,21 @@ public final class AFDOriginGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="trafficRestorationTimeToHealedOrNewEndpointsInMinutes")
-      private final @Nullable Input<Integer> trafficRestorationTimeToHealedOrNewEndpointsInMinutes;
+      private final @Nullable Output<Integer> trafficRestorationTimeToHealedOrNewEndpointsInMinutes;
 
-    public Input<Integer> getTrafficRestorationTimeToHealedOrNewEndpointsInMinutes() {
-        return this.trafficRestorationTimeToHealedOrNewEndpointsInMinutes == null ? Input.empty() : this.trafficRestorationTimeToHealedOrNewEndpointsInMinutes;
+    public Output<Integer> getTrafficRestorationTimeToHealedOrNewEndpointsInMinutes() {
+        return this.trafficRestorationTimeToHealedOrNewEndpointsInMinutes == null ? Output.empty() : this.trafficRestorationTimeToHealedOrNewEndpointsInMinutes;
     }
 
     public AFDOriginGroupArgs(
-        @Nullable Input<HealthProbeParametersArgs> healthProbeSettings,
-        @Nullable Input<LoadBalancingSettingsParametersArgs> loadBalancingSettings,
-        @Nullable Input<String> originGroupName,
-        Input<String> profileName,
-        Input<String> resourceGroupName,
-        @Nullable Input<ResponseBasedOriginErrorDetectionParametersArgs> responseBasedAfdOriginErrorDetectionSettings,
-        @Nullable Input<Either<String,EnabledState>> sessionAffinityState,
-        @Nullable Input<Integer> trafficRestorationTimeToHealedOrNewEndpointsInMinutes) {
+        @Nullable Output<HealthProbeParametersArgs> healthProbeSettings,
+        @Nullable Output<LoadBalancingSettingsParametersArgs> loadBalancingSettings,
+        @Nullable Output<String> originGroupName,
+        Output<String> profileName,
+        Output<String> resourceGroupName,
+        @Nullable Output<ResponseBasedOriginErrorDetectionParametersArgs> responseBasedAfdOriginErrorDetectionSettings,
+        @Nullable Output<Either<String,EnabledState>> sessionAffinityState,
+        @Nullable Output<Integer> trafficRestorationTimeToHealedOrNewEndpointsInMinutes) {
         this.healthProbeSettings = healthProbeSettings;
         this.loadBalancingSettings = loadBalancingSettings;
         this.originGroupName = originGroupName;
@@ -128,14 +128,14 @@ public final class AFDOriginGroupArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private AFDOriginGroupArgs() {
-        this.healthProbeSettings = Input.empty();
-        this.loadBalancingSettings = Input.empty();
-        this.originGroupName = Input.empty();
-        this.profileName = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.responseBasedAfdOriginErrorDetectionSettings = Input.empty();
-        this.sessionAffinityState = Input.empty();
-        this.trafficRestorationTimeToHealedOrNewEndpointsInMinutes = Input.empty();
+        this.healthProbeSettings = Output.empty();
+        this.loadBalancingSettings = Output.empty();
+        this.originGroupName = Output.empty();
+        this.profileName = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.responseBasedAfdOriginErrorDetectionSettings = Output.empty();
+        this.sessionAffinityState = Output.empty();
+        this.trafficRestorationTimeToHealedOrNewEndpointsInMinutes = Output.empty();
     }
 
     public static Builder builder() {
@@ -147,14 +147,14 @@ public final class AFDOriginGroupArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<HealthProbeParametersArgs> healthProbeSettings;
-        private @Nullable Input<LoadBalancingSettingsParametersArgs> loadBalancingSettings;
-        private @Nullable Input<String> originGroupName;
-        private Input<String> profileName;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<ResponseBasedOriginErrorDetectionParametersArgs> responseBasedAfdOriginErrorDetectionSettings;
-        private @Nullable Input<Either<String,EnabledState>> sessionAffinityState;
-        private @Nullable Input<Integer> trafficRestorationTimeToHealedOrNewEndpointsInMinutes;
+        private @Nullable Output<HealthProbeParametersArgs> healthProbeSettings;
+        private @Nullable Output<LoadBalancingSettingsParametersArgs> loadBalancingSettings;
+        private @Nullable Output<String> originGroupName;
+        private Output<String> profileName;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<ResponseBasedOriginErrorDetectionParametersArgs> responseBasedAfdOriginErrorDetectionSettings;
+        private @Nullable Output<Either<String,EnabledState>> sessionAffinityState;
+        private @Nullable Output<Integer> trafficRestorationTimeToHealedOrNewEndpointsInMinutes;
 
         public Builder() {
     	      // Empty
@@ -172,83 +172,83 @@ public final class AFDOriginGroupArgs extends io.pulumi.resources.ResourceArgs {
     	      this.trafficRestorationTimeToHealedOrNewEndpointsInMinutes = defaults.trafficRestorationTimeToHealedOrNewEndpointsInMinutes;
         }
 
-        public Builder healthProbeSettings(@Nullable Input<HealthProbeParametersArgs> healthProbeSettings) {
+        public Builder healthProbeSettings(@Nullable Output<HealthProbeParametersArgs> healthProbeSettings) {
             this.healthProbeSettings = healthProbeSettings;
             return this;
         }
 
         public Builder healthProbeSettings(@Nullable HealthProbeParametersArgs healthProbeSettings) {
-            this.healthProbeSettings = Input.ofNullable(healthProbeSettings);
+            this.healthProbeSettings = Output.ofNullable(healthProbeSettings);
             return this;
         }
 
-        public Builder loadBalancingSettings(@Nullable Input<LoadBalancingSettingsParametersArgs> loadBalancingSettings) {
+        public Builder loadBalancingSettings(@Nullable Output<LoadBalancingSettingsParametersArgs> loadBalancingSettings) {
             this.loadBalancingSettings = loadBalancingSettings;
             return this;
         }
 
         public Builder loadBalancingSettings(@Nullable LoadBalancingSettingsParametersArgs loadBalancingSettings) {
-            this.loadBalancingSettings = Input.ofNullable(loadBalancingSettings);
+            this.loadBalancingSettings = Output.ofNullable(loadBalancingSettings);
             return this;
         }
 
-        public Builder originGroupName(@Nullable Input<String> originGroupName) {
+        public Builder originGroupName(@Nullable Output<String> originGroupName) {
             this.originGroupName = originGroupName;
             return this;
         }
 
         public Builder originGroupName(@Nullable String originGroupName) {
-            this.originGroupName = Input.ofNullable(originGroupName);
+            this.originGroupName = Output.ofNullable(originGroupName);
             return this;
         }
 
-        public Builder profileName(Input<String> profileName) {
+        public Builder profileName(Output<String> profileName) {
             this.profileName = Objects.requireNonNull(profileName);
             return this;
         }
 
         public Builder profileName(String profileName) {
-            this.profileName = Input.of(Objects.requireNonNull(profileName));
+            this.profileName = Output.of(Objects.requireNonNull(profileName));
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder responseBasedAfdOriginErrorDetectionSettings(@Nullable Input<ResponseBasedOriginErrorDetectionParametersArgs> responseBasedAfdOriginErrorDetectionSettings) {
+        public Builder responseBasedAfdOriginErrorDetectionSettings(@Nullable Output<ResponseBasedOriginErrorDetectionParametersArgs> responseBasedAfdOriginErrorDetectionSettings) {
             this.responseBasedAfdOriginErrorDetectionSettings = responseBasedAfdOriginErrorDetectionSettings;
             return this;
         }
 
         public Builder responseBasedAfdOriginErrorDetectionSettings(@Nullable ResponseBasedOriginErrorDetectionParametersArgs responseBasedAfdOriginErrorDetectionSettings) {
-            this.responseBasedAfdOriginErrorDetectionSettings = Input.ofNullable(responseBasedAfdOriginErrorDetectionSettings);
+            this.responseBasedAfdOriginErrorDetectionSettings = Output.ofNullable(responseBasedAfdOriginErrorDetectionSettings);
             return this;
         }
 
-        public Builder sessionAffinityState(@Nullable Input<Either<String,EnabledState>> sessionAffinityState) {
+        public Builder sessionAffinityState(@Nullable Output<Either<String,EnabledState>> sessionAffinityState) {
             this.sessionAffinityState = sessionAffinityState;
             return this;
         }
 
         public Builder sessionAffinityState(@Nullable Either<String,EnabledState> sessionAffinityState) {
-            this.sessionAffinityState = Input.ofNullable(sessionAffinityState);
+            this.sessionAffinityState = Output.ofNullable(sessionAffinityState);
             return this;
         }
 
-        public Builder trafficRestorationTimeToHealedOrNewEndpointsInMinutes(@Nullable Input<Integer> trafficRestorationTimeToHealedOrNewEndpointsInMinutes) {
+        public Builder trafficRestorationTimeToHealedOrNewEndpointsInMinutes(@Nullable Output<Integer> trafficRestorationTimeToHealedOrNewEndpointsInMinutes) {
             this.trafficRestorationTimeToHealedOrNewEndpointsInMinutes = trafficRestorationTimeToHealedOrNewEndpointsInMinutes;
             return this;
         }
 
         public Builder trafficRestorationTimeToHealedOrNewEndpointsInMinutes(@Nullable Integer trafficRestorationTimeToHealedOrNewEndpointsInMinutes) {
-            this.trafficRestorationTimeToHealedOrNewEndpointsInMinutes = Input.ofNullable(trafficRestorationTimeToHealedOrNewEndpointsInMinutes);
+            this.trafficRestorationTimeToHealedOrNewEndpointsInMinutes = Output.ofNullable(trafficRestorationTimeToHealedOrNewEndpointsInMinutes);
             return this;
         }
         public AFDOriginGroupArgs build() {

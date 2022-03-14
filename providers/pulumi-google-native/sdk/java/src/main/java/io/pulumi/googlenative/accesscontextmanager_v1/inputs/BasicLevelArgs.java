@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.accesscontextmanager_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.accesscontextmanager_v1.enums.BasicLevelCombiningFunction;
 import io.pulumi.googlenative.accesscontextmanager_v1.inputs.ConditionArgs;
@@ -25,10 +25,10 @@ public final class BasicLevelArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="combiningFunction")
-      private final @Nullable Input<BasicLevelCombiningFunction> combiningFunction;
+      private final @Nullable Output<BasicLevelCombiningFunction> combiningFunction;
 
-    public Input<BasicLevelCombiningFunction> getCombiningFunction() {
-        return this.combiningFunction == null ? Input.empty() : this.combiningFunction;
+    public Output<BasicLevelCombiningFunction> getCombiningFunction() {
+        return this.combiningFunction == null ? Output.empty() : this.combiningFunction;
     }
 
     /**
@@ -36,22 +36,22 @@ public final class BasicLevelArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="conditions", required=true)
-      private final Input<List<ConditionArgs>> conditions;
+      private final Output<List<ConditionArgs>> conditions;
 
-    public Input<List<ConditionArgs>> getConditions() {
+    public Output<List<ConditionArgs>> getConditions() {
         return this.conditions;
     }
 
     public BasicLevelArgs(
-        @Nullable Input<BasicLevelCombiningFunction> combiningFunction,
-        Input<List<ConditionArgs>> conditions) {
+        @Nullable Output<BasicLevelCombiningFunction> combiningFunction,
+        Output<List<ConditionArgs>> conditions) {
         this.combiningFunction = combiningFunction;
         this.conditions = Objects.requireNonNull(conditions, "expected parameter 'conditions' to be non-null");
     }
 
     private BasicLevelArgs() {
-        this.combiningFunction = Input.empty();
-        this.conditions = Input.empty();
+        this.combiningFunction = Output.empty();
+        this.conditions = Output.empty();
     }
 
     public static Builder builder() {
@@ -63,8 +63,8 @@ public final class BasicLevelArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<BasicLevelCombiningFunction> combiningFunction;
-        private Input<List<ConditionArgs>> conditions;
+        private @Nullable Output<BasicLevelCombiningFunction> combiningFunction;
+        private Output<List<ConditionArgs>> conditions;
 
         public Builder() {
     	      // Empty
@@ -76,23 +76,23 @@ public final class BasicLevelArgs extends io.pulumi.resources.ResourceArgs {
     	      this.conditions = defaults.conditions;
         }
 
-        public Builder combiningFunction(@Nullable Input<BasicLevelCombiningFunction> combiningFunction) {
+        public Builder combiningFunction(@Nullable Output<BasicLevelCombiningFunction> combiningFunction) {
             this.combiningFunction = combiningFunction;
             return this;
         }
 
         public Builder combiningFunction(@Nullable BasicLevelCombiningFunction combiningFunction) {
-            this.combiningFunction = Input.ofNullable(combiningFunction);
+            this.combiningFunction = Output.ofNullable(combiningFunction);
             return this;
         }
 
-        public Builder conditions(Input<List<ConditionArgs>> conditions) {
+        public Builder conditions(Output<List<ConditionArgs>> conditions) {
             this.conditions = Objects.requireNonNull(conditions);
             return this;
         }
 
         public Builder conditions(List<ConditionArgs> conditions) {
-            this.conditions = Input.of(Objects.requireNonNull(conditions));
+            this.conditions = Output.of(Objects.requireNonNull(conditions));
             return this;
         }
         public BasicLevelArgs build() {

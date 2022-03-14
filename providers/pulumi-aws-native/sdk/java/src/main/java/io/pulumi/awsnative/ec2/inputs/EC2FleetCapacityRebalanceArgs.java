@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.ec2.inputs;
 
 import io.pulumi.awsnative.ec2.enums.EC2FleetCapacityRebalanceReplacementStrategy;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
@@ -16,29 +16,29 @@ public final class EC2FleetCapacityRebalanceArgs extends io.pulumi.resources.Res
     public static final EC2FleetCapacityRebalanceArgs Empty = new EC2FleetCapacityRebalanceArgs();
 
     @InputImport(name="replacementStrategy")
-      private final @Nullable Input<EC2FleetCapacityRebalanceReplacementStrategy> replacementStrategy;
+      private final @Nullable Output<EC2FleetCapacityRebalanceReplacementStrategy> replacementStrategy;
 
-    public Input<EC2FleetCapacityRebalanceReplacementStrategy> getReplacementStrategy() {
-        return this.replacementStrategy == null ? Input.empty() : this.replacementStrategy;
+    public Output<EC2FleetCapacityRebalanceReplacementStrategy> getReplacementStrategy() {
+        return this.replacementStrategy == null ? Output.empty() : this.replacementStrategy;
     }
 
     @InputImport(name="terminationDelay")
-      private final @Nullable Input<Integer> terminationDelay;
+      private final @Nullable Output<Integer> terminationDelay;
 
-    public Input<Integer> getTerminationDelay() {
-        return this.terminationDelay == null ? Input.empty() : this.terminationDelay;
+    public Output<Integer> getTerminationDelay() {
+        return this.terminationDelay == null ? Output.empty() : this.terminationDelay;
     }
 
     public EC2FleetCapacityRebalanceArgs(
-        @Nullable Input<EC2FleetCapacityRebalanceReplacementStrategy> replacementStrategy,
-        @Nullable Input<Integer> terminationDelay) {
+        @Nullable Output<EC2FleetCapacityRebalanceReplacementStrategy> replacementStrategy,
+        @Nullable Output<Integer> terminationDelay) {
         this.replacementStrategy = replacementStrategy;
         this.terminationDelay = terminationDelay;
     }
 
     private EC2FleetCapacityRebalanceArgs() {
-        this.replacementStrategy = Input.empty();
-        this.terminationDelay = Input.empty();
+        this.replacementStrategy = Output.empty();
+        this.terminationDelay = Output.empty();
     }
 
     public static Builder builder() {
@@ -50,8 +50,8 @@ public final class EC2FleetCapacityRebalanceArgs extends io.pulumi.resources.Res
     }
 
     public static final class Builder {
-        private @Nullable Input<EC2FleetCapacityRebalanceReplacementStrategy> replacementStrategy;
-        private @Nullable Input<Integer> terminationDelay;
+        private @Nullable Output<EC2FleetCapacityRebalanceReplacementStrategy> replacementStrategy;
+        private @Nullable Output<Integer> terminationDelay;
 
         public Builder() {
     	      // Empty
@@ -63,23 +63,23 @@ public final class EC2FleetCapacityRebalanceArgs extends io.pulumi.resources.Res
     	      this.terminationDelay = defaults.terminationDelay;
         }
 
-        public Builder replacementStrategy(@Nullable Input<EC2FleetCapacityRebalanceReplacementStrategy> replacementStrategy) {
+        public Builder replacementStrategy(@Nullable Output<EC2FleetCapacityRebalanceReplacementStrategy> replacementStrategy) {
             this.replacementStrategy = replacementStrategy;
             return this;
         }
 
         public Builder replacementStrategy(@Nullable EC2FleetCapacityRebalanceReplacementStrategy replacementStrategy) {
-            this.replacementStrategy = Input.ofNullable(replacementStrategy);
+            this.replacementStrategy = Output.ofNullable(replacementStrategy);
             return this;
         }
 
-        public Builder terminationDelay(@Nullable Input<Integer> terminationDelay) {
+        public Builder terminationDelay(@Nullable Output<Integer> terminationDelay) {
             this.terminationDelay = terminationDelay;
             return this;
         }
 
         public Builder terminationDelay(@Nullable Integer terminationDelay) {
-            this.terminationDelay = Input.ofNullable(terminationDelay);
+            this.terminationDelay = Output.ofNullable(terminationDelay);
             return this;
         }
         public EC2FleetCapacityRebalanceArgs build() {

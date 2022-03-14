@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudiot_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class DeviceConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="binaryData")
-      private final @Nullable Input<String> binaryData;
+      private final @Nullable Output<String> binaryData;
 
-    public Input<String> getBinaryData() {
-        return this.binaryData == null ? Input.empty() : this.binaryData;
+    public Output<String> getBinaryData() {
+        return this.binaryData == null ? Output.empty() : this.binaryData;
     }
 
-    public DeviceConfigArgs(@Nullable Input<String> binaryData) {
+    public DeviceConfigArgs(@Nullable Output<String> binaryData) {
         this.binaryData = binaryData;
     }
 
     private DeviceConfigArgs() {
-        this.binaryData = Input.empty();
+        this.binaryData = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class DeviceConfigArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> binaryData;
+        private @Nullable Output<String> binaryData;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class DeviceConfigArgs extends io.pulumi.resources.ResourceArgs {
     	      this.binaryData = defaults.binaryData;
         }
 
-        public Builder binaryData(@Nullable Input<String> binaryData) {
+        public Builder binaryData(@Nullable Output<String> binaryData) {
             this.binaryData = binaryData;
             return this;
         }
 
         public Builder binaryData(@Nullable String binaryData) {
-            this.binaryData = Input.ofNullable(binaryData);
+            this.binaryData = Output.ofNullable(binaryData);
             return this;
         }
         public DeviceConfigArgs build() {

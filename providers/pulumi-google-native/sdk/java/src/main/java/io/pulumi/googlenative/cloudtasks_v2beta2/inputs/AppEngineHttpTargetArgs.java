@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudtasks_v2beta2.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.cloudtasks_v2beta2.inputs.AppEngineRoutingArgs;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class AppEngineHttpTargetArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="appEngineRoutingOverride")
-      private final @Nullable Input<AppEngineRoutingArgs> appEngineRoutingOverride;
+      private final @Nullable Output<AppEngineRoutingArgs> appEngineRoutingOverride;
 
-    public Input<AppEngineRoutingArgs> getAppEngineRoutingOverride() {
-        return this.appEngineRoutingOverride == null ? Input.empty() : this.appEngineRoutingOverride;
+    public Output<AppEngineRoutingArgs> getAppEngineRoutingOverride() {
+        return this.appEngineRoutingOverride == null ? Output.empty() : this.appEngineRoutingOverride;
     }
 
-    public AppEngineHttpTargetArgs(@Nullable Input<AppEngineRoutingArgs> appEngineRoutingOverride) {
+    public AppEngineHttpTargetArgs(@Nullable Output<AppEngineRoutingArgs> appEngineRoutingOverride) {
         this.appEngineRoutingOverride = appEngineRoutingOverride;
     }
 
     private AppEngineHttpTargetArgs() {
-        this.appEngineRoutingOverride = Input.empty();
+        this.appEngineRoutingOverride = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class AppEngineHttpTargetArgs extends io.pulumi.resources.ResourceA
     }
 
     public static final class Builder {
-        private @Nullable Input<AppEngineRoutingArgs> appEngineRoutingOverride;
+        private @Nullable Output<AppEngineRoutingArgs> appEngineRoutingOverride;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class AppEngineHttpTargetArgs extends io.pulumi.resources.ResourceA
     	      this.appEngineRoutingOverride = defaults.appEngineRoutingOverride;
         }
 
-        public Builder appEngineRoutingOverride(@Nullable Input<AppEngineRoutingArgs> appEngineRoutingOverride) {
+        public Builder appEngineRoutingOverride(@Nullable Output<AppEngineRoutingArgs> appEngineRoutingOverride) {
             this.appEngineRoutingOverride = appEngineRoutingOverride;
             return this;
         }
 
         public Builder appEngineRoutingOverride(@Nullable AppEngineRoutingArgs appEngineRoutingOverride) {
-            this.appEngineRoutingOverride = Input.ofNullable(appEngineRoutingOverride);
+            this.appEngineRoutingOverride = Output.ofNullable(appEngineRoutingOverride);
             return this;
         }
         public AppEngineHttpTargetArgs build() {

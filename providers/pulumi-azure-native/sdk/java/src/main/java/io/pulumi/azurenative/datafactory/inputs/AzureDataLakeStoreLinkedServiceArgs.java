@@ -9,7 +9,7 @@ import io.pulumi.azurenative.datafactory.inputs.IntegrationRuntimeReferenceArgs;
 import io.pulumi.azurenative.datafactory.inputs.ParameterSpecificationArgs;
 import io.pulumi.azurenative.datafactory.inputs.SecureStringArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
@@ -32,10 +32,10 @@ public final class AzureDataLakeStoreLinkedServiceArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="accountName")
-      private final @Nullable Input<Object> accountName;
+      private final @Nullable Output<Object> accountName;
 
-    public Input<Object> getAccountName() {
-        return this.accountName == null ? Input.empty() : this.accountName;
+    public Output<Object> getAccountName() {
+        return this.accountName == null ? Output.empty() : this.accountName;
     }
 
     /**
@@ -43,10 +43,10 @@ public final class AzureDataLakeStoreLinkedServiceArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="annotations")
-      private final @Nullable Input<List<Object>> annotations;
+      private final @Nullable Output<List<Object>> annotations;
 
-    public Input<List<Object>> getAnnotations() {
-        return this.annotations == null ? Input.empty() : this.annotations;
+    public Output<List<Object>> getAnnotations() {
+        return this.annotations == null ? Output.empty() : this.annotations;
     }
 
     /**
@@ -54,10 +54,10 @@ public final class AzureDataLakeStoreLinkedServiceArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="azureCloudType")
-      private final @Nullable Input<Object> azureCloudType;
+      private final @Nullable Output<Object> azureCloudType;
 
-    public Input<Object> getAzureCloudType() {
-        return this.azureCloudType == null ? Input.empty() : this.azureCloudType;
+    public Output<Object> getAzureCloudType() {
+        return this.azureCloudType == null ? Output.empty() : this.azureCloudType;
     }
 
     /**
@@ -65,10 +65,10 @@ public final class AzureDataLakeStoreLinkedServiceArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="connectVia")
-      private final @Nullable Input<IntegrationRuntimeReferenceArgs> connectVia;
+      private final @Nullable Output<IntegrationRuntimeReferenceArgs> connectVia;
 
-    public Input<IntegrationRuntimeReferenceArgs> getConnectVia() {
-        return this.connectVia == null ? Input.empty() : this.connectVia;
+    public Output<IntegrationRuntimeReferenceArgs> getConnectVia() {
+        return this.connectVia == null ? Output.empty() : this.connectVia;
     }
 
     /**
@@ -76,10 +76,10 @@ public final class AzureDataLakeStoreLinkedServiceArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="credential")
-      private final @Nullable Input<CredentialReferenceArgs> credential;
+      private final @Nullable Output<CredentialReferenceArgs> credential;
 
-    public Input<CredentialReferenceArgs> getCredential() {
-        return this.credential == null ? Input.empty() : this.credential;
+    public Output<CredentialReferenceArgs> getCredential() {
+        return this.credential == null ? Output.empty() : this.credential;
     }
 
     /**
@@ -87,9 +87,9 @@ public final class AzureDataLakeStoreLinkedServiceArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="dataLakeStoreUri", required=true)
-      private final Input<Object> dataLakeStoreUri;
+      private final Output<Object> dataLakeStoreUri;
 
-    public Input<Object> getDataLakeStoreUri() {
+    public Output<Object> getDataLakeStoreUri() {
         return this.dataLakeStoreUri;
     }
 
@@ -98,10 +98,10 @@ public final class AzureDataLakeStoreLinkedServiceArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -109,10 +109,10 @@ public final class AzureDataLakeStoreLinkedServiceArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="encryptedCredential")
-      private final @Nullable Input<Object> encryptedCredential;
+      private final @Nullable Output<Object> encryptedCredential;
 
-    public Input<Object> getEncryptedCredential() {
-        return this.encryptedCredential == null ? Input.empty() : this.encryptedCredential;
+    public Output<Object> getEncryptedCredential() {
+        return this.encryptedCredential == null ? Output.empty() : this.encryptedCredential;
     }
 
     /**
@@ -120,10 +120,10 @@ public final class AzureDataLakeStoreLinkedServiceArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="parameters")
-      private final @Nullable Input<Map<String,ParameterSpecificationArgs>> parameters;
+      private final @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters;
 
-    public Input<Map<String,ParameterSpecificationArgs>> getParameters() {
-        return this.parameters == null ? Input.empty() : this.parameters;
+    public Output<Map<String,ParameterSpecificationArgs>> getParameters() {
+        return this.parameters == null ? Output.empty() : this.parameters;
     }
 
     /**
@@ -131,10 +131,10 @@ public final class AzureDataLakeStoreLinkedServiceArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="resourceGroupName")
-      private final @Nullable Input<Object> resourceGroupName;
+      private final @Nullable Output<Object> resourceGroupName;
 
-    public Input<Object> getResourceGroupName() {
-        return this.resourceGroupName == null ? Input.empty() : this.resourceGroupName;
+    public Output<Object> getResourceGroupName() {
+        return this.resourceGroupName == null ? Output.empty() : this.resourceGroupName;
     }
 
     /**
@@ -142,10 +142,10 @@ public final class AzureDataLakeStoreLinkedServiceArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="servicePrincipalId")
-      private final @Nullable Input<Object> servicePrincipalId;
+      private final @Nullable Output<Object> servicePrincipalId;
 
-    public Input<Object> getServicePrincipalId() {
-        return this.servicePrincipalId == null ? Input.empty() : this.servicePrincipalId;
+    public Output<Object> getServicePrincipalId() {
+        return this.servicePrincipalId == null ? Output.empty() : this.servicePrincipalId;
     }
 
     /**
@@ -153,10 +153,10 @@ public final class AzureDataLakeStoreLinkedServiceArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="servicePrincipalKey")
-      private final @Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> servicePrincipalKey;
+      private final @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> servicePrincipalKey;
 
-    public Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> getServicePrincipalKey() {
-        return this.servicePrincipalKey == null ? Input.empty() : this.servicePrincipalKey;
+    public Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> getServicePrincipalKey() {
+        return this.servicePrincipalKey == null ? Output.empty() : this.servicePrincipalKey;
     }
 
     /**
@@ -164,10 +164,10 @@ public final class AzureDataLakeStoreLinkedServiceArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="subscriptionId")
-      private final @Nullable Input<Object> subscriptionId;
+      private final @Nullable Output<Object> subscriptionId;
 
-    public Input<Object> getSubscriptionId() {
-        return this.subscriptionId == null ? Input.empty() : this.subscriptionId;
+    public Output<Object> getSubscriptionId() {
+        return this.subscriptionId == null ? Output.empty() : this.subscriptionId;
     }
 
     /**
@@ -175,10 +175,10 @@ public final class AzureDataLakeStoreLinkedServiceArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="tenant")
-      private final @Nullable Input<Object> tenant;
+      private final @Nullable Output<Object> tenant;
 
-    public Input<Object> getTenant() {
-        return this.tenant == null ? Input.empty() : this.tenant;
+    public Output<Object> getTenant() {
+        return this.tenant == null ? Output.empty() : this.tenant;
     }
 
     /**
@@ -187,28 +187,28 @@ public final class AzureDataLakeStoreLinkedServiceArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<String> type;
+      private final Output<String> type;
 
-    public Input<String> getType() {
+    public Output<String> getType() {
         return this.type;
     }
 
     public AzureDataLakeStoreLinkedServiceArgs(
-        @Nullable Input<Object> accountName,
-        @Nullable Input<List<Object>> annotations,
-        @Nullable Input<Object> azureCloudType,
-        @Nullable Input<IntegrationRuntimeReferenceArgs> connectVia,
-        @Nullable Input<CredentialReferenceArgs> credential,
-        Input<Object> dataLakeStoreUri,
-        @Nullable Input<String> description,
-        @Nullable Input<Object> encryptedCredential,
-        @Nullable Input<Map<String,ParameterSpecificationArgs>> parameters,
-        @Nullable Input<Object> resourceGroupName,
-        @Nullable Input<Object> servicePrincipalId,
-        @Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> servicePrincipalKey,
-        @Nullable Input<Object> subscriptionId,
-        @Nullable Input<Object> tenant,
-        Input<String> type) {
+        @Nullable Output<Object> accountName,
+        @Nullable Output<List<Object>> annotations,
+        @Nullable Output<Object> azureCloudType,
+        @Nullable Output<IntegrationRuntimeReferenceArgs> connectVia,
+        @Nullable Output<CredentialReferenceArgs> credential,
+        Output<Object> dataLakeStoreUri,
+        @Nullable Output<String> description,
+        @Nullable Output<Object> encryptedCredential,
+        @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters,
+        @Nullable Output<Object> resourceGroupName,
+        @Nullable Output<Object> servicePrincipalId,
+        @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> servicePrincipalKey,
+        @Nullable Output<Object> subscriptionId,
+        @Nullable Output<Object> tenant,
+        Output<String> type) {
         this.accountName = accountName;
         this.annotations = annotations;
         this.azureCloudType = azureCloudType;
@@ -227,21 +227,21 @@ public final class AzureDataLakeStoreLinkedServiceArgs extends io.pulumi.resourc
     }
 
     private AzureDataLakeStoreLinkedServiceArgs() {
-        this.accountName = Input.empty();
-        this.annotations = Input.empty();
-        this.azureCloudType = Input.empty();
-        this.connectVia = Input.empty();
-        this.credential = Input.empty();
-        this.dataLakeStoreUri = Input.empty();
-        this.description = Input.empty();
-        this.encryptedCredential = Input.empty();
-        this.parameters = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.servicePrincipalId = Input.empty();
-        this.servicePrincipalKey = Input.empty();
-        this.subscriptionId = Input.empty();
-        this.tenant = Input.empty();
-        this.type = Input.empty();
+        this.accountName = Output.empty();
+        this.annotations = Output.empty();
+        this.azureCloudType = Output.empty();
+        this.connectVia = Output.empty();
+        this.credential = Output.empty();
+        this.dataLakeStoreUri = Output.empty();
+        this.description = Output.empty();
+        this.encryptedCredential = Output.empty();
+        this.parameters = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.servicePrincipalId = Output.empty();
+        this.servicePrincipalKey = Output.empty();
+        this.subscriptionId = Output.empty();
+        this.tenant = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -253,21 +253,21 @@ public final class AzureDataLakeStoreLinkedServiceArgs extends io.pulumi.resourc
     }
 
     public static final class Builder {
-        private @Nullable Input<Object> accountName;
-        private @Nullable Input<List<Object>> annotations;
-        private @Nullable Input<Object> azureCloudType;
-        private @Nullable Input<IntegrationRuntimeReferenceArgs> connectVia;
-        private @Nullable Input<CredentialReferenceArgs> credential;
-        private Input<Object> dataLakeStoreUri;
-        private @Nullable Input<String> description;
-        private @Nullable Input<Object> encryptedCredential;
-        private @Nullable Input<Map<String,ParameterSpecificationArgs>> parameters;
-        private @Nullable Input<Object> resourceGroupName;
-        private @Nullable Input<Object> servicePrincipalId;
-        private @Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> servicePrincipalKey;
-        private @Nullable Input<Object> subscriptionId;
-        private @Nullable Input<Object> tenant;
-        private Input<String> type;
+        private @Nullable Output<Object> accountName;
+        private @Nullable Output<List<Object>> annotations;
+        private @Nullable Output<Object> azureCloudType;
+        private @Nullable Output<IntegrationRuntimeReferenceArgs> connectVia;
+        private @Nullable Output<CredentialReferenceArgs> credential;
+        private Output<Object> dataLakeStoreUri;
+        private @Nullable Output<String> description;
+        private @Nullable Output<Object> encryptedCredential;
+        private @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters;
+        private @Nullable Output<Object> resourceGroupName;
+        private @Nullable Output<Object> servicePrincipalId;
+        private @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> servicePrincipalKey;
+        private @Nullable Output<Object> subscriptionId;
+        private @Nullable Output<Object> tenant;
+        private Output<String> type;
 
         public Builder() {
     	      // Empty
@@ -292,153 +292,153 @@ public final class AzureDataLakeStoreLinkedServiceArgs extends io.pulumi.resourc
     	      this.type = defaults.type;
         }
 
-        public Builder accountName(@Nullable Input<Object> accountName) {
+        public Builder accountName(@Nullable Output<Object> accountName) {
             this.accountName = accountName;
             return this;
         }
 
         public Builder accountName(@Nullable Object accountName) {
-            this.accountName = Input.ofNullable(accountName);
+            this.accountName = Output.ofNullable(accountName);
             return this;
         }
 
-        public Builder annotations(@Nullable Input<List<Object>> annotations) {
+        public Builder annotations(@Nullable Output<List<Object>> annotations) {
             this.annotations = annotations;
             return this;
         }
 
         public Builder annotations(@Nullable List<Object> annotations) {
-            this.annotations = Input.ofNullable(annotations);
+            this.annotations = Output.ofNullable(annotations);
             return this;
         }
 
-        public Builder azureCloudType(@Nullable Input<Object> azureCloudType) {
+        public Builder azureCloudType(@Nullable Output<Object> azureCloudType) {
             this.azureCloudType = azureCloudType;
             return this;
         }
 
         public Builder azureCloudType(@Nullable Object azureCloudType) {
-            this.azureCloudType = Input.ofNullable(azureCloudType);
+            this.azureCloudType = Output.ofNullable(azureCloudType);
             return this;
         }
 
-        public Builder connectVia(@Nullable Input<IntegrationRuntimeReferenceArgs> connectVia) {
+        public Builder connectVia(@Nullable Output<IntegrationRuntimeReferenceArgs> connectVia) {
             this.connectVia = connectVia;
             return this;
         }
 
         public Builder connectVia(@Nullable IntegrationRuntimeReferenceArgs connectVia) {
-            this.connectVia = Input.ofNullable(connectVia);
+            this.connectVia = Output.ofNullable(connectVia);
             return this;
         }
 
-        public Builder credential(@Nullable Input<CredentialReferenceArgs> credential) {
+        public Builder credential(@Nullable Output<CredentialReferenceArgs> credential) {
             this.credential = credential;
             return this;
         }
 
         public Builder credential(@Nullable CredentialReferenceArgs credential) {
-            this.credential = Input.ofNullable(credential);
+            this.credential = Output.ofNullable(credential);
             return this;
         }
 
-        public Builder dataLakeStoreUri(Input<Object> dataLakeStoreUri) {
+        public Builder dataLakeStoreUri(Output<Object> dataLakeStoreUri) {
             this.dataLakeStoreUri = Objects.requireNonNull(dataLakeStoreUri);
             return this;
         }
 
         public Builder dataLakeStoreUri(Object dataLakeStoreUri) {
-            this.dataLakeStoreUri = Input.of(Objects.requireNonNull(dataLakeStoreUri));
+            this.dataLakeStoreUri = Output.of(Objects.requireNonNull(dataLakeStoreUri));
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder encryptedCredential(@Nullable Input<Object> encryptedCredential) {
+        public Builder encryptedCredential(@Nullable Output<Object> encryptedCredential) {
             this.encryptedCredential = encryptedCredential;
             return this;
         }
 
         public Builder encryptedCredential(@Nullable Object encryptedCredential) {
-            this.encryptedCredential = Input.ofNullable(encryptedCredential);
+            this.encryptedCredential = Output.ofNullable(encryptedCredential);
             return this;
         }
 
-        public Builder parameters(@Nullable Input<Map<String,ParameterSpecificationArgs>> parameters) {
+        public Builder parameters(@Nullable Output<Map<String,ParameterSpecificationArgs>> parameters) {
             this.parameters = parameters;
             return this;
         }
 
         public Builder parameters(@Nullable Map<String,ParameterSpecificationArgs> parameters) {
-            this.parameters = Input.ofNullable(parameters);
+            this.parameters = Output.ofNullable(parameters);
             return this;
         }
 
-        public Builder resourceGroupName(@Nullable Input<Object> resourceGroupName) {
+        public Builder resourceGroupName(@Nullable Output<Object> resourceGroupName) {
             this.resourceGroupName = resourceGroupName;
             return this;
         }
 
         public Builder resourceGroupName(@Nullable Object resourceGroupName) {
-            this.resourceGroupName = Input.ofNullable(resourceGroupName);
+            this.resourceGroupName = Output.ofNullable(resourceGroupName);
             return this;
         }
 
-        public Builder servicePrincipalId(@Nullable Input<Object> servicePrincipalId) {
+        public Builder servicePrincipalId(@Nullable Output<Object> servicePrincipalId) {
             this.servicePrincipalId = servicePrincipalId;
             return this;
         }
 
         public Builder servicePrincipalId(@Nullable Object servicePrincipalId) {
-            this.servicePrincipalId = Input.ofNullable(servicePrincipalId);
+            this.servicePrincipalId = Output.ofNullable(servicePrincipalId);
             return this;
         }
 
-        public Builder servicePrincipalKey(@Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> servicePrincipalKey) {
+        public Builder servicePrincipalKey(@Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> servicePrincipalKey) {
             this.servicePrincipalKey = servicePrincipalKey;
             return this;
         }
 
         public Builder servicePrincipalKey(@Nullable Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs> servicePrincipalKey) {
-            this.servicePrincipalKey = Input.ofNullable(servicePrincipalKey);
+            this.servicePrincipalKey = Output.ofNullable(servicePrincipalKey);
             return this;
         }
 
-        public Builder subscriptionId(@Nullable Input<Object> subscriptionId) {
+        public Builder subscriptionId(@Nullable Output<Object> subscriptionId) {
             this.subscriptionId = subscriptionId;
             return this;
         }
 
         public Builder subscriptionId(@Nullable Object subscriptionId) {
-            this.subscriptionId = Input.ofNullable(subscriptionId);
+            this.subscriptionId = Output.ofNullable(subscriptionId);
             return this;
         }
 
-        public Builder tenant(@Nullable Input<Object> tenant) {
+        public Builder tenant(@Nullable Output<Object> tenant) {
             this.tenant = tenant;
             return this;
         }
 
         public Builder tenant(@Nullable Object tenant) {
-            this.tenant = Input.ofNullable(tenant);
+            this.tenant = Output.ofNullable(tenant);
             return this;
         }
 
-        public Builder type(Input<String> type) {
+        public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(String type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
         public AzureDataLakeStoreLinkedServiceArgs build() {

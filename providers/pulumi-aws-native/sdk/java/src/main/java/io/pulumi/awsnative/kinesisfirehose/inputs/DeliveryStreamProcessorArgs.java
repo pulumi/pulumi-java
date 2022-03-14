@@ -5,7 +5,7 @@ package io.pulumi.awsnative.kinesisfirehose.inputs;
 
 import io.pulumi.awsnative.kinesisfirehose.enums.DeliveryStreamProcessorType;
 import io.pulumi.awsnative.kinesisfirehose.inputs.DeliveryStreamProcessorParameterArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
@@ -17,29 +17,29 @@ public final class DeliveryStreamProcessorArgs extends io.pulumi.resources.Resou
     public static final DeliveryStreamProcessorArgs Empty = new DeliveryStreamProcessorArgs();
 
     @InputImport(name="parameters")
-      private final @Nullable Input<List<DeliveryStreamProcessorParameterArgs>> parameters;
+      private final @Nullable Output<List<DeliveryStreamProcessorParameterArgs>> parameters;
 
-    public Input<List<DeliveryStreamProcessorParameterArgs>> getParameters() {
-        return this.parameters == null ? Input.empty() : this.parameters;
+    public Output<List<DeliveryStreamProcessorParameterArgs>> getParameters() {
+        return this.parameters == null ? Output.empty() : this.parameters;
     }
 
     @InputImport(name="type", required=true)
-      private final Input<DeliveryStreamProcessorType> type;
+      private final Output<DeliveryStreamProcessorType> type;
 
-    public Input<DeliveryStreamProcessorType> getType() {
+    public Output<DeliveryStreamProcessorType> getType() {
         return this.type;
     }
 
     public DeliveryStreamProcessorArgs(
-        @Nullable Input<List<DeliveryStreamProcessorParameterArgs>> parameters,
-        Input<DeliveryStreamProcessorType> type) {
+        @Nullable Output<List<DeliveryStreamProcessorParameterArgs>> parameters,
+        Output<DeliveryStreamProcessorType> type) {
         this.parameters = parameters;
         this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
     }
 
     private DeliveryStreamProcessorArgs() {
-        this.parameters = Input.empty();
-        this.type = Input.empty();
+        this.parameters = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -51,8 +51,8 @@ public final class DeliveryStreamProcessorArgs extends io.pulumi.resources.Resou
     }
 
     public static final class Builder {
-        private @Nullable Input<List<DeliveryStreamProcessorParameterArgs>> parameters;
-        private Input<DeliveryStreamProcessorType> type;
+        private @Nullable Output<List<DeliveryStreamProcessorParameterArgs>> parameters;
+        private Output<DeliveryStreamProcessorType> type;
 
         public Builder() {
     	      // Empty
@@ -64,23 +64,23 @@ public final class DeliveryStreamProcessorArgs extends io.pulumi.resources.Resou
     	      this.type = defaults.type;
         }
 
-        public Builder parameters(@Nullable Input<List<DeliveryStreamProcessorParameterArgs>> parameters) {
+        public Builder parameters(@Nullable Output<List<DeliveryStreamProcessorParameterArgs>> parameters) {
             this.parameters = parameters;
             return this;
         }
 
         public Builder parameters(@Nullable List<DeliveryStreamProcessorParameterArgs> parameters) {
-            this.parameters = Input.ofNullable(parameters);
+            this.parameters = Output.ofNullable(parameters);
             return this;
         }
 
-        public Builder type(Input<DeliveryStreamProcessorType> type) {
+        public Builder type(Output<DeliveryStreamProcessorType> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(DeliveryStreamProcessorType type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
         public DeliveryStreamProcessorArgs build() {

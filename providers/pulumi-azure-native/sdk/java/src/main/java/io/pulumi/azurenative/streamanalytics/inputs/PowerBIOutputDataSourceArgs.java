@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.streamanalytics.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class PowerBIOutputDataSourceArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="dataset")
-      private final @Nullable Input<String> dataset;
+      private final @Nullable Output<String> dataset;
 
-    public Input<String> getDataset() {
-        return this.dataset == null ? Input.empty() : this.dataset;
+    public Output<String> getDataset() {
+        return this.dataset == null ? Output.empty() : this.dataset;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class PowerBIOutputDataSourceArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="groupId")
-      private final @Nullable Input<String> groupId;
+      private final @Nullable Output<String> groupId;
 
-    public Input<String> getGroupId() {
-        return this.groupId == null ? Input.empty() : this.groupId;
+    public Output<String> getGroupId() {
+        return this.groupId == null ? Output.empty() : this.groupId;
     }
 
     /**
@@ -45,10 +45,10 @@ public final class PowerBIOutputDataSourceArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="groupName")
-      private final @Nullable Input<String> groupName;
+      private final @Nullable Output<String> groupName;
 
-    public Input<String> getGroupName() {
-        return this.groupName == null ? Input.empty() : this.groupName;
+    public Output<String> getGroupName() {
+        return this.groupName == null ? Output.empty() : this.groupName;
     }
 
     /**
@@ -56,10 +56,10 @@ public final class PowerBIOutputDataSourceArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="refreshToken")
-      private final @Nullable Input<String> refreshToken;
+      private final @Nullable Output<String> refreshToken;
 
-    public Input<String> getRefreshToken() {
-        return this.refreshToken == null ? Input.empty() : this.refreshToken;
+    public Output<String> getRefreshToken() {
+        return this.refreshToken == null ? Output.empty() : this.refreshToken;
     }
 
     /**
@@ -67,10 +67,10 @@ public final class PowerBIOutputDataSourceArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="table")
-      private final @Nullable Input<String> table;
+      private final @Nullable Output<String> table;
 
-    public Input<String> getTable() {
-        return this.table == null ? Input.empty() : this.table;
+    public Output<String> getTable() {
+        return this.table == null ? Output.empty() : this.table;
     }
 
     /**
@@ -78,10 +78,10 @@ public final class PowerBIOutputDataSourceArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="tokenUserDisplayName")
-      private final @Nullable Input<String> tokenUserDisplayName;
+      private final @Nullable Output<String> tokenUserDisplayName;
 
-    public Input<String> getTokenUserDisplayName() {
-        return this.tokenUserDisplayName == null ? Input.empty() : this.tokenUserDisplayName;
+    public Output<String> getTokenUserDisplayName() {
+        return this.tokenUserDisplayName == null ? Output.empty() : this.tokenUserDisplayName;
     }
 
     /**
@@ -89,10 +89,10 @@ public final class PowerBIOutputDataSourceArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="tokenUserPrincipalName")
-      private final @Nullable Input<String> tokenUserPrincipalName;
+      private final @Nullable Output<String> tokenUserPrincipalName;
 
-    public Input<String> getTokenUserPrincipalName() {
-        return this.tokenUserPrincipalName == null ? Input.empty() : this.tokenUserPrincipalName;
+    public Output<String> getTokenUserPrincipalName() {
+        return this.tokenUserPrincipalName == null ? Output.empty() : this.tokenUserPrincipalName;
     }
 
     /**
@@ -101,21 +101,21 @@ public final class PowerBIOutputDataSourceArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<String> type;
+      private final Output<String> type;
 
-    public Input<String> getType() {
+    public Output<String> getType() {
         return this.type;
     }
 
     public PowerBIOutputDataSourceArgs(
-        @Nullable Input<String> dataset,
-        @Nullable Input<String> groupId,
-        @Nullable Input<String> groupName,
-        @Nullable Input<String> refreshToken,
-        @Nullable Input<String> table,
-        @Nullable Input<String> tokenUserDisplayName,
-        @Nullable Input<String> tokenUserPrincipalName,
-        Input<String> type) {
+        @Nullable Output<String> dataset,
+        @Nullable Output<String> groupId,
+        @Nullable Output<String> groupName,
+        @Nullable Output<String> refreshToken,
+        @Nullable Output<String> table,
+        @Nullable Output<String> tokenUserDisplayName,
+        @Nullable Output<String> tokenUserPrincipalName,
+        Output<String> type) {
         this.dataset = dataset;
         this.groupId = groupId;
         this.groupName = groupName;
@@ -127,14 +127,14 @@ public final class PowerBIOutputDataSourceArgs extends io.pulumi.resources.Resou
     }
 
     private PowerBIOutputDataSourceArgs() {
-        this.dataset = Input.empty();
-        this.groupId = Input.empty();
-        this.groupName = Input.empty();
-        this.refreshToken = Input.empty();
-        this.table = Input.empty();
-        this.tokenUserDisplayName = Input.empty();
-        this.tokenUserPrincipalName = Input.empty();
-        this.type = Input.empty();
+        this.dataset = Output.empty();
+        this.groupId = Output.empty();
+        this.groupName = Output.empty();
+        this.refreshToken = Output.empty();
+        this.table = Output.empty();
+        this.tokenUserDisplayName = Output.empty();
+        this.tokenUserPrincipalName = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -146,14 +146,14 @@ public final class PowerBIOutputDataSourceArgs extends io.pulumi.resources.Resou
     }
 
     public static final class Builder {
-        private @Nullable Input<String> dataset;
-        private @Nullable Input<String> groupId;
-        private @Nullable Input<String> groupName;
-        private @Nullable Input<String> refreshToken;
-        private @Nullable Input<String> table;
-        private @Nullable Input<String> tokenUserDisplayName;
-        private @Nullable Input<String> tokenUserPrincipalName;
-        private Input<String> type;
+        private @Nullable Output<String> dataset;
+        private @Nullable Output<String> groupId;
+        private @Nullable Output<String> groupName;
+        private @Nullable Output<String> refreshToken;
+        private @Nullable Output<String> table;
+        private @Nullable Output<String> tokenUserDisplayName;
+        private @Nullable Output<String> tokenUserPrincipalName;
+        private Output<String> type;
 
         public Builder() {
     	      // Empty
@@ -171,83 +171,83 @@ public final class PowerBIOutputDataSourceArgs extends io.pulumi.resources.Resou
     	      this.type = defaults.type;
         }
 
-        public Builder dataset(@Nullable Input<String> dataset) {
+        public Builder dataset(@Nullable Output<String> dataset) {
             this.dataset = dataset;
             return this;
         }
 
         public Builder dataset(@Nullable String dataset) {
-            this.dataset = Input.ofNullable(dataset);
+            this.dataset = Output.ofNullable(dataset);
             return this;
         }
 
-        public Builder groupId(@Nullable Input<String> groupId) {
+        public Builder groupId(@Nullable Output<String> groupId) {
             this.groupId = groupId;
             return this;
         }
 
         public Builder groupId(@Nullable String groupId) {
-            this.groupId = Input.ofNullable(groupId);
+            this.groupId = Output.ofNullable(groupId);
             return this;
         }
 
-        public Builder groupName(@Nullable Input<String> groupName) {
+        public Builder groupName(@Nullable Output<String> groupName) {
             this.groupName = groupName;
             return this;
         }
 
         public Builder groupName(@Nullable String groupName) {
-            this.groupName = Input.ofNullable(groupName);
+            this.groupName = Output.ofNullable(groupName);
             return this;
         }
 
-        public Builder refreshToken(@Nullable Input<String> refreshToken) {
+        public Builder refreshToken(@Nullable Output<String> refreshToken) {
             this.refreshToken = refreshToken;
             return this;
         }
 
         public Builder refreshToken(@Nullable String refreshToken) {
-            this.refreshToken = Input.ofNullable(refreshToken);
+            this.refreshToken = Output.ofNullable(refreshToken);
             return this;
         }
 
-        public Builder table(@Nullable Input<String> table) {
+        public Builder table(@Nullable Output<String> table) {
             this.table = table;
             return this;
         }
 
         public Builder table(@Nullable String table) {
-            this.table = Input.ofNullable(table);
+            this.table = Output.ofNullable(table);
             return this;
         }
 
-        public Builder tokenUserDisplayName(@Nullable Input<String> tokenUserDisplayName) {
+        public Builder tokenUserDisplayName(@Nullable Output<String> tokenUserDisplayName) {
             this.tokenUserDisplayName = tokenUserDisplayName;
             return this;
         }
 
         public Builder tokenUserDisplayName(@Nullable String tokenUserDisplayName) {
-            this.tokenUserDisplayName = Input.ofNullable(tokenUserDisplayName);
+            this.tokenUserDisplayName = Output.ofNullable(tokenUserDisplayName);
             return this;
         }
 
-        public Builder tokenUserPrincipalName(@Nullable Input<String> tokenUserPrincipalName) {
+        public Builder tokenUserPrincipalName(@Nullable Output<String> tokenUserPrincipalName) {
             this.tokenUserPrincipalName = tokenUserPrincipalName;
             return this;
         }
 
         public Builder tokenUserPrincipalName(@Nullable String tokenUserPrincipalName) {
-            this.tokenUserPrincipalName = Input.ofNullable(tokenUserPrincipalName);
+            this.tokenUserPrincipalName = Output.ofNullable(tokenUserPrincipalName);
             return this;
         }
 
-        public Builder type(Input<String> type) {
+        public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(String type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
         public PowerBIOutputDataSourceArgs build() {

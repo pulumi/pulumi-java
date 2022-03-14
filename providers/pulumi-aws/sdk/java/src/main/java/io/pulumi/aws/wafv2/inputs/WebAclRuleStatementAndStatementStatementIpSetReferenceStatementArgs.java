@@ -4,7 +4,7 @@
 package io.pulumi.aws.wafv2.inputs;
 
 import io.pulumi.aws.wafv2.inputs.WebAclRuleStatementAndStatementStatementIpSetReferenceStatementIpSetForwardedIpConfigArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -20,9 +20,9 @@ public final class WebAclRuleStatementAndStatementStatementIpSetReferenceStateme
      * 
      */
     @InputImport(name="arn", required=true)
-      private final Input<String> arn;
+      private final Output<String> arn;
 
-    public Input<String> getArn() {
+    public Output<String> getArn() {
         return this.arn;
     }
 
@@ -31,22 +31,22 @@ public final class WebAclRuleStatementAndStatementStatementIpSetReferenceStateme
      * 
      */
     @InputImport(name="ipSetForwardedIpConfig")
-      private final @Nullable Input<WebAclRuleStatementAndStatementStatementIpSetReferenceStatementIpSetForwardedIpConfigArgs> ipSetForwardedIpConfig;
+      private final @Nullable Output<WebAclRuleStatementAndStatementStatementIpSetReferenceStatementIpSetForwardedIpConfigArgs> ipSetForwardedIpConfig;
 
-    public Input<WebAclRuleStatementAndStatementStatementIpSetReferenceStatementIpSetForwardedIpConfigArgs> getIpSetForwardedIpConfig() {
-        return this.ipSetForwardedIpConfig == null ? Input.empty() : this.ipSetForwardedIpConfig;
+    public Output<WebAclRuleStatementAndStatementStatementIpSetReferenceStatementIpSetForwardedIpConfigArgs> getIpSetForwardedIpConfig() {
+        return this.ipSetForwardedIpConfig == null ? Output.empty() : this.ipSetForwardedIpConfig;
     }
 
     public WebAclRuleStatementAndStatementStatementIpSetReferenceStatementArgs(
-        Input<String> arn,
-        @Nullable Input<WebAclRuleStatementAndStatementStatementIpSetReferenceStatementIpSetForwardedIpConfigArgs> ipSetForwardedIpConfig) {
+        Output<String> arn,
+        @Nullable Output<WebAclRuleStatementAndStatementStatementIpSetReferenceStatementIpSetForwardedIpConfigArgs> ipSetForwardedIpConfig) {
         this.arn = Objects.requireNonNull(arn, "expected parameter 'arn' to be non-null");
         this.ipSetForwardedIpConfig = ipSetForwardedIpConfig;
     }
 
     private WebAclRuleStatementAndStatementStatementIpSetReferenceStatementArgs() {
-        this.arn = Input.empty();
-        this.ipSetForwardedIpConfig = Input.empty();
+        this.arn = Output.empty();
+        this.ipSetForwardedIpConfig = Output.empty();
     }
 
     public static Builder builder() {
@@ -58,8 +58,8 @@ public final class WebAclRuleStatementAndStatementStatementIpSetReferenceStateme
     }
 
     public static final class Builder {
-        private Input<String> arn;
-        private @Nullable Input<WebAclRuleStatementAndStatementStatementIpSetReferenceStatementIpSetForwardedIpConfigArgs> ipSetForwardedIpConfig;
+        private Output<String> arn;
+        private @Nullable Output<WebAclRuleStatementAndStatementStatementIpSetReferenceStatementIpSetForwardedIpConfigArgs> ipSetForwardedIpConfig;
 
         public Builder() {
     	      // Empty
@@ -71,23 +71,23 @@ public final class WebAclRuleStatementAndStatementStatementIpSetReferenceStateme
     	      this.ipSetForwardedIpConfig = defaults.ipSetForwardedIpConfig;
         }
 
-        public Builder arn(Input<String> arn) {
+        public Builder arn(Output<String> arn) {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
 
         public Builder arn(String arn) {
-            this.arn = Input.of(Objects.requireNonNull(arn));
+            this.arn = Output.of(Objects.requireNonNull(arn));
             return this;
         }
 
-        public Builder ipSetForwardedIpConfig(@Nullable Input<WebAclRuleStatementAndStatementStatementIpSetReferenceStatementIpSetForwardedIpConfigArgs> ipSetForwardedIpConfig) {
+        public Builder ipSetForwardedIpConfig(@Nullable Output<WebAclRuleStatementAndStatementStatementIpSetReferenceStatementIpSetForwardedIpConfigArgs> ipSetForwardedIpConfig) {
             this.ipSetForwardedIpConfig = ipSetForwardedIpConfig;
             return this;
         }
 
         public Builder ipSetForwardedIpConfig(@Nullable WebAclRuleStatementAndStatementStatementIpSetReferenceStatementIpSetForwardedIpConfigArgs ipSetForwardedIpConfig) {
-            this.ipSetForwardedIpConfig = Input.ofNullable(ipSetForwardedIpConfig);
+            this.ipSetForwardedIpConfig = Output.ofNullable(ipSetForwardedIpConfig);
             return this;
         }
         public WebAclRuleStatementAndStatementStatementIpSetReferenceStatementArgs build() {

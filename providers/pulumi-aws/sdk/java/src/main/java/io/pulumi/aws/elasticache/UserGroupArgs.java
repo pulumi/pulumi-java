@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.elasticache;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -17,10 +17,10 @@ public final class UserGroupArgs extends io.pulumi.resources.ResourceArgs {
     public static final UserGroupArgs Empty = new UserGroupArgs();
 
     @InputImport(name="arn")
-      private final @Nullable Input<String> arn;
+      private final @Nullable Output<String> arn;
 
-    public Input<String> getArn() {
-        return this.arn == null ? Input.empty() : this.arn;
+    public Output<String> getArn() {
+        return this.arn == null ? Output.empty() : this.arn;
     }
 
     /**
@@ -28,17 +28,17 @@ public final class UserGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="engine", required=true)
-      private final Input<String> engine;
+      private final Output<String> engine;
 
-    public Input<String> getEngine() {
+    public Output<String> getEngine() {
         return this.engine;
     }
 
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -46,9 +46,9 @@ public final class UserGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="userGroupId", required=true)
-      private final Input<String> userGroupId;
+      private final Output<String> userGroupId;
 
-    public Input<String> getUserGroupId() {
+    public Output<String> getUserGroupId() {
         return this.userGroupId;
     }
 
@@ -57,18 +57,18 @@ public final class UserGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="userIds")
-      private final @Nullable Input<List<String>> userIds;
+      private final @Nullable Output<List<String>> userIds;
 
-    public Input<List<String>> getUserIds() {
-        return this.userIds == null ? Input.empty() : this.userIds;
+    public Output<List<String>> getUserIds() {
+        return this.userIds == null ? Output.empty() : this.userIds;
     }
 
     public UserGroupArgs(
-        @Nullable Input<String> arn,
-        Input<String> engine,
-        @Nullable Input<Map<String,String>> tags,
-        Input<String> userGroupId,
-        @Nullable Input<List<String>> userIds) {
+        @Nullable Output<String> arn,
+        Output<String> engine,
+        @Nullable Output<Map<String,String>> tags,
+        Output<String> userGroupId,
+        @Nullable Output<List<String>> userIds) {
         this.arn = arn;
         this.engine = Objects.requireNonNull(engine, "expected parameter 'engine' to be non-null");
         this.tags = tags;
@@ -77,11 +77,11 @@ public final class UserGroupArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private UserGroupArgs() {
-        this.arn = Input.empty();
-        this.engine = Input.empty();
-        this.tags = Input.empty();
-        this.userGroupId = Input.empty();
-        this.userIds = Input.empty();
+        this.arn = Output.empty();
+        this.engine = Output.empty();
+        this.tags = Output.empty();
+        this.userGroupId = Output.empty();
+        this.userIds = Output.empty();
     }
 
     public static Builder builder() {
@@ -93,11 +93,11 @@ public final class UserGroupArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> arn;
-        private Input<String> engine;
-        private @Nullable Input<Map<String,String>> tags;
-        private Input<String> userGroupId;
-        private @Nullable Input<List<String>> userIds;
+        private @Nullable Output<String> arn;
+        private Output<String> engine;
+        private @Nullable Output<Map<String,String>> tags;
+        private Output<String> userGroupId;
+        private @Nullable Output<List<String>> userIds;
 
         public Builder() {
     	      // Empty
@@ -112,53 +112,53 @@ public final class UserGroupArgs extends io.pulumi.resources.ResourceArgs {
     	      this.userIds = defaults.userIds;
         }
 
-        public Builder arn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
 
         public Builder arn(@Nullable String arn) {
-            this.arn = Input.ofNullable(arn);
+            this.arn = Output.ofNullable(arn);
             return this;
         }
 
-        public Builder engine(Input<String> engine) {
+        public Builder engine(Output<String> engine) {
             this.engine = Objects.requireNonNull(engine);
             return this;
         }
 
         public Builder engine(String engine) {
-            this.engine = Input.of(Objects.requireNonNull(engine));
+            this.engine = Output.of(Objects.requireNonNull(engine));
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder userGroupId(Input<String> userGroupId) {
+        public Builder userGroupId(Output<String> userGroupId) {
             this.userGroupId = Objects.requireNonNull(userGroupId);
             return this;
         }
 
         public Builder userGroupId(String userGroupId) {
-            this.userGroupId = Input.of(Objects.requireNonNull(userGroupId));
+            this.userGroupId = Output.of(Objects.requireNonNull(userGroupId));
             return this;
         }
 
-        public Builder userIds(@Nullable Input<List<String>> userIds) {
+        public Builder userIds(@Nullable Output<List<String>> userIds) {
             this.userIds = userIds;
             return this;
         }
 
         public Builder userIds(@Nullable List<String> userIds) {
-            this.userIds = Input.ofNullable(userIds);
+            this.userIds = Output.ofNullable(userIds);
             return this;
         }
         public UserGroupArgs build() {

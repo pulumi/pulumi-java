@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.osconfig.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.osconfig.inputs.PatchDeploymentInstanceFilterGroupLabelGetArgs;
 import java.lang.Boolean;
@@ -22,10 +22,10 @@ public final class PatchDeploymentInstanceFilterGetArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="all")
-      private final @Nullable Input<Boolean> all;
+      private final @Nullable Output<Boolean> all;
 
-    public Input<Boolean> getAll() {
-        return this.all == null ? Input.empty() : this.all;
+    public Output<Boolean> getAll() {
+        return this.all == null ? Output.empty() : this.all;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class PatchDeploymentInstanceFilterGetArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="groupLabels")
-      private final @Nullable Input<List<PatchDeploymentInstanceFilterGroupLabelGetArgs>> groupLabels;
+      private final @Nullable Output<List<PatchDeploymentInstanceFilterGroupLabelGetArgs>> groupLabels;
 
-    public Input<List<PatchDeploymentInstanceFilterGroupLabelGetArgs>> getGroupLabels() {
-        return this.groupLabels == null ? Input.empty() : this.groupLabels;
+    public Output<List<PatchDeploymentInstanceFilterGroupLabelGetArgs>> getGroupLabels() {
+        return this.groupLabels == null ? Output.empty() : this.groupLabels;
     }
 
     /**
@@ -46,10 +46,10 @@ public final class PatchDeploymentInstanceFilterGetArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="instanceNamePrefixes")
-      private final @Nullable Input<List<String>> instanceNamePrefixes;
+      private final @Nullable Output<List<String>> instanceNamePrefixes;
 
-    public Input<List<String>> getInstanceNamePrefixes() {
-        return this.instanceNamePrefixes == null ? Input.empty() : this.instanceNamePrefixes;
+    public Output<List<String>> getInstanceNamePrefixes() {
+        return this.instanceNamePrefixes == null ? Output.empty() : this.instanceNamePrefixes;
     }
 
     /**
@@ -59,10 +59,10 @@ public final class PatchDeploymentInstanceFilterGetArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="instances")
-      private final @Nullable Input<List<String>> instances;
+      private final @Nullable Output<List<String>> instances;
 
-    public Input<List<String>> getInstances() {
-        return this.instances == null ? Input.empty() : this.instances;
+    public Output<List<String>> getInstances() {
+        return this.instances == null ? Output.empty() : this.instances;
     }
 
     /**
@@ -70,18 +70,18 @@ public final class PatchDeploymentInstanceFilterGetArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="zones")
-      private final @Nullable Input<List<String>> zones;
+      private final @Nullable Output<List<String>> zones;
 
-    public Input<List<String>> getZones() {
-        return this.zones == null ? Input.empty() : this.zones;
+    public Output<List<String>> getZones() {
+        return this.zones == null ? Output.empty() : this.zones;
     }
 
     public PatchDeploymentInstanceFilterGetArgs(
-        @Nullable Input<Boolean> all,
-        @Nullable Input<List<PatchDeploymentInstanceFilterGroupLabelGetArgs>> groupLabels,
-        @Nullable Input<List<String>> instanceNamePrefixes,
-        @Nullable Input<List<String>> instances,
-        @Nullable Input<List<String>> zones) {
+        @Nullable Output<Boolean> all,
+        @Nullable Output<List<PatchDeploymentInstanceFilterGroupLabelGetArgs>> groupLabels,
+        @Nullable Output<List<String>> instanceNamePrefixes,
+        @Nullable Output<List<String>> instances,
+        @Nullable Output<List<String>> zones) {
         this.all = all;
         this.groupLabels = groupLabels;
         this.instanceNamePrefixes = instanceNamePrefixes;
@@ -90,11 +90,11 @@ public final class PatchDeploymentInstanceFilterGetArgs extends io.pulumi.resour
     }
 
     private PatchDeploymentInstanceFilterGetArgs() {
-        this.all = Input.empty();
-        this.groupLabels = Input.empty();
-        this.instanceNamePrefixes = Input.empty();
-        this.instances = Input.empty();
-        this.zones = Input.empty();
+        this.all = Output.empty();
+        this.groupLabels = Output.empty();
+        this.instanceNamePrefixes = Output.empty();
+        this.instances = Output.empty();
+        this.zones = Output.empty();
     }
 
     public static Builder builder() {
@@ -106,11 +106,11 @@ public final class PatchDeploymentInstanceFilterGetArgs extends io.pulumi.resour
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> all;
-        private @Nullable Input<List<PatchDeploymentInstanceFilterGroupLabelGetArgs>> groupLabels;
-        private @Nullable Input<List<String>> instanceNamePrefixes;
-        private @Nullable Input<List<String>> instances;
-        private @Nullable Input<List<String>> zones;
+        private @Nullable Output<Boolean> all;
+        private @Nullable Output<List<PatchDeploymentInstanceFilterGroupLabelGetArgs>> groupLabels;
+        private @Nullable Output<List<String>> instanceNamePrefixes;
+        private @Nullable Output<List<String>> instances;
+        private @Nullable Output<List<String>> zones;
 
         public Builder() {
     	      // Empty
@@ -125,53 +125,53 @@ public final class PatchDeploymentInstanceFilterGetArgs extends io.pulumi.resour
     	      this.zones = defaults.zones;
         }
 
-        public Builder all(@Nullable Input<Boolean> all) {
+        public Builder all(@Nullable Output<Boolean> all) {
             this.all = all;
             return this;
         }
 
         public Builder all(@Nullable Boolean all) {
-            this.all = Input.ofNullable(all);
+            this.all = Output.ofNullable(all);
             return this;
         }
 
-        public Builder groupLabels(@Nullable Input<List<PatchDeploymentInstanceFilterGroupLabelGetArgs>> groupLabels) {
+        public Builder groupLabels(@Nullable Output<List<PatchDeploymentInstanceFilterGroupLabelGetArgs>> groupLabels) {
             this.groupLabels = groupLabels;
             return this;
         }
 
         public Builder groupLabels(@Nullable List<PatchDeploymentInstanceFilterGroupLabelGetArgs> groupLabels) {
-            this.groupLabels = Input.ofNullable(groupLabels);
+            this.groupLabels = Output.ofNullable(groupLabels);
             return this;
         }
 
-        public Builder instanceNamePrefixes(@Nullable Input<List<String>> instanceNamePrefixes) {
+        public Builder instanceNamePrefixes(@Nullable Output<List<String>> instanceNamePrefixes) {
             this.instanceNamePrefixes = instanceNamePrefixes;
             return this;
         }
 
         public Builder instanceNamePrefixes(@Nullable List<String> instanceNamePrefixes) {
-            this.instanceNamePrefixes = Input.ofNullable(instanceNamePrefixes);
+            this.instanceNamePrefixes = Output.ofNullable(instanceNamePrefixes);
             return this;
         }
 
-        public Builder instances(@Nullable Input<List<String>> instances) {
+        public Builder instances(@Nullable Output<List<String>> instances) {
             this.instances = instances;
             return this;
         }
 
         public Builder instances(@Nullable List<String> instances) {
-            this.instances = Input.ofNullable(instances);
+            this.instances = Output.ofNullable(instances);
             return this;
         }
 
-        public Builder zones(@Nullable Input<List<String>> zones) {
+        public Builder zones(@Nullable Output<List<String>> zones) {
             this.zones = zones;
             return this;
         }
 
         public Builder zones(@Nullable List<String> zones) {
-            this.zones = Input.ofNullable(zones);
+            this.zones = Output.ofNullable(zones);
             return this;
         }
         public PatchDeploymentInstanceFilterGetArgs build() {

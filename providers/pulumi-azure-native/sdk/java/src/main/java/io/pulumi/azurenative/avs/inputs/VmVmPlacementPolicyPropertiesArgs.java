@@ -6,7 +6,7 @@ package io.pulumi.azurenative.avs.inputs;
 import io.pulumi.azurenative.avs.enums.AffinityType;
 import io.pulumi.azurenative.avs.enums.PlacementPolicyState;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -27,9 +27,9 @@ public final class VmVmPlacementPolicyPropertiesArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="affinityType", required=true)
-      private final Input<Either<String,AffinityType>> affinityType;
+      private final Output<Either<String,AffinityType>> affinityType;
 
-    public Input<Either<String,AffinityType>> getAffinityType() {
+    public Output<Either<String,AffinityType>> getAffinityType() {
         return this.affinityType;
     }
 
@@ -38,10 +38,10 @@ public final class VmVmPlacementPolicyPropertiesArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="displayName")
-      private final @Nullable Input<String> displayName;
+      private final @Nullable Output<String> displayName;
 
-    public Input<String> getDisplayName() {
-        return this.displayName == null ? Input.empty() : this.displayName;
+    public Output<String> getDisplayName() {
+        return this.displayName == null ? Output.empty() : this.displayName;
     }
 
     /**
@@ -49,10 +49,10 @@ public final class VmVmPlacementPolicyPropertiesArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="state")
-      private final @Nullable Input<Either<String,PlacementPolicyState>> state;
+      private final @Nullable Output<Either<String,PlacementPolicyState>> state;
 
-    public Input<Either<String,PlacementPolicyState>> getState() {
-        return this.state == null ? Input.empty() : this.state;
+    public Output<Either<String,PlacementPolicyState>> getState() {
+        return this.state == null ? Output.empty() : this.state;
     }
 
     /**
@@ -61,9 +61,9 @@ public final class VmVmPlacementPolicyPropertiesArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<String> type;
+      private final Output<String> type;
 
-    public Input<String> getType() {
+    public Output<String> getType() {
         return this.type;
     }
 
@@ -72,18 +72,18 @@ public final class VmVmPlacementPolicyPropertiesArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="vmMembers", required=true)
-      private final Input<List<String>> vmMembers;
+      private final Output<List<String>> vmMembers;
 
-    public Input<List<String>> getVmMembers() {
+    public Output<List<String>> getVmMembers() {
         return this.vmMembers;
     }
 
     public VmVmPlacementPolicyPropertiesArgs(
-        Input<Either<String,AffinityType>> affinityType,
-        @Nullable Input<String> displayName,
-        @Nullable Input<Either<String,PlacementPolicyState>> state,
-        Input<String> type,
-        Input<List<String>> vmMembers) {
+        Output<Either<String,AffinityType>> affinityType,
+        @Nullable Output<String> displayName,
+        @Nullable Output<Either<String,PlacementPolicyState>> state,
+        Output<String> type,
+        Output<List<String>> vmMembers) {
         this.affinityType = Objects.requireNonNull(affinityType, "expected parameter 'affinityType' to be non-null");
         this.displayName = displayName;
         this.state = state;
@@ -92,11 +92,11 @@ public final class VmVmPlacementPolicyPropertiesArgs extends io.pulumi.resources
     }
 
     private VmVmPlacementPolicyPropertiesArgs() {
-        this.affinityType = Input.empty();
-        this.displayName = Input.empty();
-        this.state = Input.empty();
-        this.type = Input.empty();
-        this.vmMembers = Input.empty();
+        this.affinityType = Output.empty();
+        this.displayName = Output.empty();
+        this.state = Output.empty();
+        this.type = Output.empty();
+        this.vmMembers = Output.empty();
     }
 
     public static Builder builder() {
@@ -108,11 +108,11 @@ public final class VmVmPlacementPolicyPropertiesArgs extends io.pulumi.resources
     }
 
     public static final class Builder {
-        private Input<Either<String,AffinityType>> affinityType;
-        private @Nullable Input<String> displayName;
-        private @Nullable Input<Either<String,PlacementPolicyState>> state;
-        private Input<String> type;
-        private Input<List<String>> vmMembers;
+        private Output<Either<String,AffinityType>> affinityType;
+        private @Nullable Output<String> displayName;
+        private @Nullable Output<Either<String,PlacementPolicyState>> state;
+        private Output<String> type;
+        private Output<List<String>> vmMembers;
 
         public Builder() {
     	      // Empty
@@ -127,53 +127,53 @@ public final class VmVmPlacementPolicyPropertiesArgs extends io.pulumi.resources
     	      this.vmMembers = defaults.vmMembers;
         }
 
-        public Builder affinityType(Input<Either<String,AffinityType>> affinityType) {
+        public Builder affinityType(Output<Either<String,AffinityType>> affinityType) {
             this.affinityType = Objects.requireNonNull(affinityType);
             return this;
         }
 
         public Builder affinityType(Either<String,AffinityType> affinityType) {
-            this.affinityType = Input.of(Objects.requireNonNull(affinityType));
+            this.affinityType = Output.of(Objects.requireNonNull(affinityType));
             return this;
         }
 
-        public Builder displayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Input.ofNullable(displayName);
+            this.displayName = Output.ofNullable(displayName);
             return this;
         }
 
-        public Builder state(@Nullable Input<Either<String,PlacementPolicyState>> state) {
+        public Builder state(@Nullable Output<Either<String,PlacementPolicyState>> state) {
             this.state = state;
             return this;
         }
 
         public Builder state(@Nullable Either<String,PlacementPolicyState> state) {
-            this.state = Input.ofNullable(state);
+            this.state = Output.ofNullable(state);
             return this;
         }
 
-        public Builder type(Input<String> type) {
+        public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(String type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
 
-        public Builder vmMembers(Input<List<String>> vmMembers) {
+        public Builder vmMembers(Output<List<String>> vmMembers) {
             this.vmMembers = Objects.requireNonNull(vmMembers);
             return this;
         }
 
         public Builder vmMembers(List<String> vmMembers) {
-            this.vmMembers = Input.of(Objects.requireNonNull(vmMembers));
+            this.vmMembers = Output.of(Objects.requireNonNull(vmMembers));
             return this;
         }
         public VmVmPlacementPolicyPropertiesArgs build() {

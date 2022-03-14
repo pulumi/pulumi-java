@@ -4,7 +4,6 @@ import com.google.common.base.MoreObjects;
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.ImmutableSet;
 import com.google.errorprone.annotations.CanIgnoreReturnValue;
-import io.pulumi.core.Input;
 import io.pulumi.core.InputOutput;
 import io.pulumi.core.Output;
 import io.pulumi.core.Tuples.*;
@@ -263,22 +262,6 @@ public final class InputOutputData<T> implements Copyable<InputOutputData<T>> {
         }
         //noinspection unchecked,rawtypes,rawtypes
         return ((InputOutputInternal) obj).getDataAsync().copy();
-    }
-
-    public static <T1, T2, T3, T4, T5, T6, T7, T8> CompletableFuture<InputOutputData<Tuple8<T1, T2, T3, T4, T5, T6, T7, T8>>> tuple(
-            Input<T1> input1, Input<T2> input2, Input<T3> input3, Input<T4> input4,
-            Input<T5> input5, Input<T6> input6, Input<T7> input7, Input<T8> input8
-    ) {
-        return tupleHelperAsync(
-                (Internal.of(input1)).getDataAsync(),
-                (Internal.of(input2)).getDataAsync(),
-                (Internal.of(input3)).getDataAsync(),
-                (Internal.of(input4)).getDataAsync(),
-                (Internal.of(input5)).getDataAsync(),
-                (Internal.of(input6)).getDataAsync(),
-                (Internal.of(input7)).getDataAsync(),
-                (Internal.of(input8)).getDataAsync()
-        );
     }
 
     public static <T1, T2, T3, T4, T5, T6, T7, T8> CompletableFuture<InputOutputData<Tuple8<T1, T2, T3, T4, T5, T6, T7, T8>>> tuple(

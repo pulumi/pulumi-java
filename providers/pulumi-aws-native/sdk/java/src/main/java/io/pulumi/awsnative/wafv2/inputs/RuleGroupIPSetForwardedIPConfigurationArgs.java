@@ -5,7 +5,7 @@ package io.pulumi.awsnative.wafv2.inputs;
 
 import io.pulumi.awsnative.wafv2.enums.RuleGroupIPSetForwardedIPConfigurationFallbackBehavior;
 import io.pulumi.awsnative.wafv2.enums.RuleGroupIPSetForwardedIPConfigurationPosition;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -16,39 +16,39 @@ public final class RuleGroupIPSetForwardedIPConfigurationArgs extends io.pulumi.
     public static final RuleGroupIPSetForwardedIPConfigurationArgs Empty = new RuleGroupIPSetForwardedIPConfigurationArgs();
 
     @InputImport(name="fallbackBehavior", required=true)
-      private final Input<RuleGroupIPSetForwardedIPConfigurationFallbackBehavior> fallbackBehavior;
+      private final Output<RuleGroupIPSetForwardedIPConfigurationFallbackBehavior> fallbackBehavior;
 
-    public Input<RuleGroupIPSetForwardedIPConfigurationFallbackBehavior> getFallbackBehavior() {
+    public Output<RuleGroupIPSetForwardedIPConfigurationFallbackBehavior> getFallbackBehavior() {
         return this.fallbackBehavior;
     }
 
     @InputImport(name="headerName", required=true)
-      private final Input<String> headerName;
+      private final Output<String> headerName;
 
-    public Input<String> getHeaderName() {
+    public Output<String> getHeaderName() {
         return this.headerName;
     }
 
     @InputImport(name="position", required=true)
-      private final Input<RuleGroupIPSetForwardedIPConfigurationPosition> position;
+      private final Output<RuleGroupIPSetForwardedIPConfigurationPosition> position;
 
-    public Input<RuleGroupIPSetForwardedIPConfigurationPosition> getPosition() {
+    public Output<RuleGroupIPSetForwardedIPConfigurationPosition> getPosition() {
         return this.position;
     }
 
     public RuleGroupIPSetForwardedIPConfigurationArgs(
-        Input<RuleGroupIPSetForwardedIPConfigurationFallbackBehavior> fallbackBehavior,
-        Input<String> headerName,
-        Input<RuleGroupIPSetForwardedIPConfigurationPosition> position) {
+        Output<RuleGroupIPSetForwardedIPConfigurationFallbackBehavior> fallbackBehavior,
+        Output<String> headerName,
+        Output<RuleGroupIPSetForwardedIPConfigurationPosition> position) {
         this.fallbackBehavior = Objects.requireNonNull(fallbackBehavior, "expected parameter 'fallbackBehavior' to be non-null");
         this.headerName = Objects.requireNonNull(headerName, "expected parameter 'headerName' to be non-null");
         this.position = Objects.requireNonNull(position, "expected parameter 'position' to be non-null");
     }
 
     private RuleGroupIPSetForwardedIPConfigurationArgs() {
-        this.fallbackBehavior = Input.empty();
-        this.headerName = Input.empty();
-        this.position = Input.empty();
+        this.fallbackBehavior = Output.empty();
+        this.headerName = Output.empty();
+        this.position = Output.empty();
     }
 
     public static Builder builder() {
@@ -60,9 +60,9 @@ public final class RuleGroupIPSetForwardedIPConfigurationArgs extends io.pulumi.
     }
 
     public static final class Builder {
-        private Input<RuleGroupIPSetForwardedIPConfigurationFallbackBehavior> fallbackBehavior;
-        private Input<String> headerName;
-        private Input<RuleGroupIPSetForwardedIPConfigurationPosition> position;
+        private Output<RuleGroupIPSetForwardedIPConfigurationFallbackBehavior> fallbackBehavior;
+        private Output<String> headerName;
+        private Output<RuleGroupIPSetForwardedIPConfigurationPosition> position;
 
         public Builder() {
     	      // Empty
@@ -75,33 +75,33 @@ public final class RuleGroupIPSetForwardedIPConfigurationArgs extends io.pulumi.
     	      this.position = defaults.position;
         }
 
-        public Builder fallbackBehavior(Input<RuleGroupIPSetForwardedIPConfigurationFallbackBehavior> fallbackBehavior) {
+        public Builder fallbackBehavior(Output<RuleGroupIPSetForwardedIPConfigurationFallbackBehavior> fallbackBehavior) {
             this.fallbackBehavior = Objects.requireNonNull(fallbackBehavior);
             return this;
         }
 
         public Builder fallbackBehavior(RuleGroupIPSetForwardedIPConfigurationFallbackBehavior fallbackBehavior) {
-            this.fallbackBehavior = Input.of(Objects.requireNonNull(fallbackBehavior));
+            this.fallbackBehavior = Output.of(Objects.requireNonNull(fallbackBehavior));
             return this;
         }
 
-        public Builder headerName(Input<String> headerName) {
+        public Builder headerName(Output<String> headerName) {
             this.headerName = Objects.requireNonNull(headerName);
             return this;
         }
 
         public Builder headerName(String headerName) {
-            this.headerName = Input.of(Objects.requireNonNull(headerName));
+            this.headerName = Output.of(Objects.requireNonNull(headerName));
             return this;
         }
 
-        public Builder position(Input<RuleGroupIPSetForwardedIPConfigurationPosition> position) {
+        public Builder position(Output<RuleGroupIPSetForwardedIPConfigurationPosition> position) {
             this.position = Objects.requireNonNull(position);
             return this;
         }
 
         public Builder position(RuleGroupIPSetForwardedIPConfigurationPosition position) {
-            this.position = Input.of(Objects.requireNonNull(position));
+            this.position = Output.of(Objects.requireNonNull(position));
             return this;
         }
         public RuleGroupIPSetForwardedIPConfigurationArgs build() {

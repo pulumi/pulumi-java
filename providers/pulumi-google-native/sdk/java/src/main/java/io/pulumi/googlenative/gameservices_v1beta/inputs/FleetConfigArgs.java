@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.gameservices_v1beta.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class FleetConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="fleetSpec")
-      private final @Nullable Input<String> fleetSpec;
+      private final @Nullable Output<String> fleetSpec;
 
-    public Input<String> getFleetSpec() {
-        return this.fleetSpec == null ? Input.empty() : this.fleetSpec;
+    public Output<String> getFleetSpec() {
+        return this.fleetSpec == null ? Output.empty() : this.fleetSpec;
     }
 
     /**
@@ -34,22 +34,22 @@ public final class FleetConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     public FleetConfigArgs(
-        @Nullable Input<String> fleetSpec,
-        @Nullable Input<String> name) {
+        @Nullable Output<String> fleetSpec,
+        @Nullable Output<String> name) {
         this.fleetSpec = fleetSpec;
         this.name = name;
     }
 
     private FleetConfigArgs() {
-        this.fleetSpec = Input.empty();
-        this.name = Input.empty();
+        this.fleetSpec = Output.empty();
+        this.name = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class FleetConfigArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> fleetSpec;
-        private @Nullable Input<String> name;
+        private @Nullable Output<String> fleetSpec;
+        private @Nullable Output<String> name;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class FleetConfigArgs extends io.pulumi.resources.ResourceArgs {
     	      this.name = defaults.name;
         }
 
-        public Builder fleetSpec(@Nullable Input<String> fleetSpec) {
+        public Builder fleetSpec(@Nullable Output<String> fleetSpec) {
             this.fleetSpec = fleetSpec;
             return this;
         }
 
         public Builder fleetSpec(@Nullable String fleetSpec) {
-            this.fleetSpec = Input.ofNullable(fleetSpec);
+            this.fleetSpec = Output.ofNullable(fleetSpec);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
         public FleetConfigArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.dataproc.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -20,9 +20,9 @@ public final class MetastoreServiceMaintenanceWindowArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="dayOfWeek", required=true)
-      private final Input<String> dayOfWeek;
+      private final Output<String> dayOfWeek;
 
-    public Input<String> getDayOfWeek() {
+    public Output<String> getDayOfWeek() {
         return this.dayOfWeek;
     }
 
@@ -31,22 +31,22 @@ public final class MetastoreServiceMaintenanceWindowArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="hourOfDay", required=true)
-      private final Input<Integer> hourOfDay;
+      private final Output<Integer> hourOfDay;
 
-    public Input<Integer> getHourOfDay() {
+    public Output<Integer> getHourOfDay() {
         return this.hourOfDay;
     }
 
     public MetastoreServiceMaintenanceWindowArgs(
-        Input<String> dayOfWeek,
-        Input<Integer> hourOfDay) {
+        Output<String> dayOfWeek,
+        Output<Integer> hourOfDay) {
         this.dayOfWeek = Objects.requireNonNull(dayOfWeek, "expected parameter 'dayOfWeek' to be non-null");
         this.hourOfDay = Objects.requireNonNull(hourOfDay, "expected parameter 'hourOfDay' to be non-null");
     }
 
     private MetastoreServiceMaintenanceWindowArgs() {
-        this.dayOfWeek = Input.empty();
-        this.hourOfDay = Input.empty();
+        this.dayOfWeek = Output.empty();
+        this.hourOfDay = Output.empty();
     }
 
     public static Builder builder() {
@@ -58,8 +58,8 @@ public final class MetastoreServiceMaintenanceWindowArgs extends io.pulumi.resou
     }
 
     public static final class Builder {
-        private Input<String> dayOfWeek;
-        private Input<Integer> hourOfDay;
+        private Output<String> dayOfWeek;
+        private Output<Integer> hourOfDay;
 
         public Builder() {
     	      // Empty
@@ -71,23 +71,23 @@ public final class MetastoreServiceMaintenanceWindowArgs extends io.pulumi.resou
     	      this.hourOfDay = defaults.hourOfDay;
         }
 
-        public Builder dayOfWeek(Input<String> dayOfWeek) {
+        public Builder dayOfWeek(Output<String> dayOfWeek) {
             this.dayOfWeek = Objects.requireNonNull(dayOfWeek);
             return this;
         }
 
         public Builder dayOfWeek(String dayOfWeek) {
-            this.dayOfWeek = Input.of(Objects.requireNonNull(dayOfWeek));
+            this.dayOfWeek = Output.of(Objects.requireNonNull(dayOfWeek));
             return this;
         }
 
-        public Builder hourOfDay(Input<Integer> hourOfDay) {
+        public Builder hourOfDay(Output<Integer> hourOfDay) {
             this.hourOfDay = Objects.requireNonNull(hourOfDay);
             return this;
         }
 
         public Builder hourOfDay(Integer hourOfDay) {
-            this.hourOfDay = Input.of(Objects.requireNonNull(hourOfDay));
+            this.hourOfDay = Output.of(Objects.requireNonNull(hourOfDay));
             return this;
         }
         public MetastoreServiceMaintenanceWindowArgs build() {

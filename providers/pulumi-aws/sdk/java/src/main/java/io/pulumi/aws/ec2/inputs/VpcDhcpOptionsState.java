@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.ec2.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -21,10 +21,10 @@ public final class VpcDhcpOptionsState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="arn")
-      private final @Nullable Input<String> arn;
+      private final @Nullable Output<String> arn;
 
-    public Input<String> getArn() {
-        return this.arn == null ? Input.empty() : this.arn;
+    public Output<String> getArn() {
+        return this.arn == null ? Output.empty() : this.arn;
     }
 
     /**
@@ -32,10 +32,10 @@ public final class VpcDhcpOptionsState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="domainName")
-      private final @Nullable Input<String> domainName;
+      private final @Nullable Output<String> domainName;
 
-    public Input<String> getDomainName() {
-        return this.domainName == null ? Input.empty() : this.domainName;
+    public Output<String> getDomainName() {
+        return this.domainName == null ? Output.empty() : this.domainName;
     }
 
     /**
@@ -43,10 +43,10 @@ public final class VpcDhcpOptionsState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="domainNameServers")
-      private final @Nullable Input<List<String>> domainNameServers;
+      private final @Nullable Output<List<String>> domainNameServers;
 
-    public Input<List<String>> getDomainNameServers() {
-        return this.domainNameServers == null ? Input.empty() : this.domainNameServers;
+    public Output<List<String>> getDomainNameServers() {
+        return this.domainNameServers == null ? Output.empty() : this.domainNameServers;
     }
 
     /**
@@ -54,10 +54,10 @@ public final class VpcDhcpOptionsState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="netbiosNameServers")
-      private final @Nullable Input<List<String>> netbiosNameServers;
+      private final @Nullable Output<List<String>> netbiosNameServers;
 
-    public Input<List<String>> getNetbiosNameServers() {
-        return this.netbiosNameServers == null ? Input.empty() : this.netbiosNameServers;
+    public Output<List<String>> getNetbiosNameServers() {
+        return this.netbiosNameServers == null ? Output.empty() : this.netbiosNameServers;
     }
 
     /**
@@ -65,10 +65,10 @@ public final class VpcDhcpOptionsState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="netbiosNodeType")
-      private final @Nullable Input<String> netbiosNodeType;
+      private final @Nullable Output<String> netbiosNodeType;
 
-    public Input<String> getNetbiosNodeType() {
-        return this.netbiosNodeType == null ? Input.empty() : this.netbiosNodeType;
+    public Output<String> getNetbiosNodeType() {
+        return this.netbiosNodeType == null ? Output.empty() : this.netbiosNodeType;
     }
 
     /**
@@ -76,10 +76,10 @@ public final class VpcDhcpOptionsState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="ntpServers")
-      private final @Nullable Input<List<String>> ntpServers;
+      private final @Nullable Output<List<String>> ntpServers;
 
-    public Input<List<String>> getNtpServers() {
-        return this.ntpServers == null ? Input.empty() : this.ntpServers;
+    public Output<List<String>> getNtpServers() {
+        return this.ntpServers == null ? Output.empty() : this.ntpServers;
     }
 
     /**
@@ -87,10 +87,10 @@ public final class VpcDhcpOptionsState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="ownerId")
-      private final @Nullable Input<String> ownerId;
+      private final @Nullable Output<String> ownerId;
 
-    public Input<String> getOwnerId() {
-        return this.ownerId == null ? Input.empty() : this.ownerId;
+    public Output<String> getOwnerId() {
+        return this.ownerId == null ? Output.empty() : this.ownerId;
     }
 
     /**
@@ -98,10 +98,10 @@ public final class VpcDhcpOptionsState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -109,22 +109,22 @@ public final class VpcDhcpOptionsState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="tagsAll")
-      private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Input<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Input.empty() : this.tagsAll;
+    public Output<Map<String,String>> getTagsAll() {
+        return this.tagsAll == null ? Output.empty() : this.tagsAll;
     }
 
     public VpcDhcpOptionsState(
-        @Nullable Input<String> arn,
-        @Nullable Input<String> domainName,
-        @Nullable Input<List<String>> domainNameServers,
-        @Nullable Input<List<String>> netbiosNameServers,
-        @Nullable Input<String> netbiosNodeType,
-        @Nullable Input<List<String>> ntpServers,
-        @Nullable Input<String> ownerId,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<Map<String,String>> tagsAll) {
+        @Nullable Output<String> arn,
+        @Nullable Output<String> domainName,
+        @Nullable Output<List<String>> domainNameServers,
+        @Nullable Output<List<String>> netbiosNameServers,
+        @Nullable Output<String> netbiosNodeType,
+        @Nullable Output<List<String>> ntpServers,
+        @Nullable Output<String> ownerId,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<Map<String,String>> tagsAll) {
         this.arn = arn;
         this.domainName = domainName;
         this.domainNameServers = domainNameServers;
@@ -137,15 +137,15 @@ public final class VpcDhcpOptionsState extends io.pulumi.resources.ResourceArgs 
     }
 
     private VpcDhcpOptionsState() {
-        this.arn = Input.empty();
-        this.domainName = Input.empty();
-        this.domainNameServers = Input.empty();
-        this.netbiosNameServers = Input.empty();
-        this.netbiosNodeType = Input.empty();
-        this.ntpServers = Input.empty();
-        this.ownerId = Input.empty();
-        this.tags = Input.empty();
-        this.tagsAll = Input.empty();
+        this.arn = Output.empty();
+        this.domainName = Output.empty();
+        this.domainNameServers = Output.empty();
+        this.netbiosNameServers = Output.empty();
+        this.netbiosNodeType = Output.empty();
+        this.ntpServers = Output.empty();
+        this.ownerId = Output.empty();
+        this.tags = Output.empty();
+        this.tagsAll = Output.empty();
     }
 
     public static Builder builder() {
@@ -157,15 +157,15 @@ public final class VpcDhcpOptionsState extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private @Nullable Input<String> arn;
-        private @Nullable Input<String> domainName;
-        private @Nullable Input<List<String>> domainNameServers;
-        private @Nullable Input<List<String>> netbiosNameServers;
-        private @Nullable Input<String> netbiosNodeType;
-        private @Nullable Input<List<String>> ntpServers;
-        private @Nullable Input<String> ownerId;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<Map<String,String>> tagsAll;
+        private @Nullable Output<String> arn;
+        private @Nullable Output<String> domainName;
+        private @Nullable Output<List<String>> domainNameServers;
+        private @Nullable Output<List<String>> netbiosNameServers;
+        private @Nullable Output<String> netbiosNodeType;
+        private @Nullable Output<List<String>> ntpServers;
+        private @Nullable Output<String> ownerId;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<Map<String,String>> tagsAll;
 
         public Builder() {
     	      // Empty
@@ -184,93 +184,93 @@ public final class VpcDhcpOptionsState extends io.pulumi.resources.ResourceArgs 
     	      this.tagsAll = defaults.tagsAll;
         }
 
-        public Builder arn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
 
         public Builder arn(@Nullable String arn) {
-            this.arn = Input.ofNullable(arn);
+            this.arn = Output.ofNullable(arn);
             return this;
         }
 
-        public Builder domainName(@Nullable Input<String> domainName) {
+        public Builder domainName(@Nullable Output<String> domainName) {
             this.domainName = domainName;
             return this;
         }
 
         public Builder domainName(@Nullable String domainName) {
-            this.domainName = Input.ofNullable(domainName);
+            this.domainName = Output.ofNullable(domainName);
             return this;
         }
 
-        public Builder domainNameServers(@Nullable Input<List<String>> domainNameServers) {
+        public Builder domainNameServers(@Nullable Output<List<String>> domainNameServers) {
             this.domainNameServers = domainNameServers;
             return this;
         }
 
         public Builder domainNameServers(@Nullable List<String> domainNameServers) {
-            this.domainNameServers = Input.ofNullable(domainNameServers);
+            this.domainNameServers = Output.ofNullable(domainNameServers);
             return this;
         }
 
-        public Builder netbiosNameServers(@Nullable Input<List<String>> netbiosNameServers) {
+        public Builder netbiosNameServers(@Nullable Output<List<String>> netbiosNameServers) {
             this.netbiosNameServers = netbiosNameServers;
             return this;
         }
 
         public Builder netbiosNameServers(@Nullable List<String> netbiosNameServers) {
-            this.netbiosNameServers = Input.ofNullable(netbiosNameServers);
+            this.netbiosNameServers = Output.ofNullable(netbiosNameServers);
             return this;
         }
 
-        public Builder netbiosNodeType(@Nullable Input<String> netbiosNodeType) {
+        public Builder netbiosNodeType(@Nullable Output<String> netbiosNodeType) {
             this.netbiosNodeType = netbiosNodeType;
             return this;
         }
 
         public Builder netbiosNodeType(@Nullable String netbiosNodeType) {
-            this.netbiosNodeType = Input.ofNullable(netbiosNodeType);
+            this.netbiosNodeType = Output.ofNullable(netbiosNodeType);
             return this;
         }
 
-        public Builder ntpServers(@Nullable Input<List<String>> ntpServers) {
+        public Builder ntpServers(@Nullable Output<List<String>> ntpServers) {
             this.ntpServers = ntpServers;
             return this;
         }
 
         public Builder ntpServers(@Nullable List<String> ntpServers) {
-            this.ntpServers = Input.ofNullable(ntpServers);
+            this.ntpServers = Output.ofNullable(ntpServers);
             return this;
         }
 
-        public Builder ownerId(@Nullable Input<String> ownerId) {
+        public Builder ownerId(@Nullable Output<String> ownerId) {
             this.ownerId = ownerId;
             return this;
         }
 
         public Builder ownerId(@Nullable String ownerId) {
-            this.ownerId = Input.ofNullable(ownerId);
+            this.ownerId = Output.ofNullable(ownerId);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Input.ofNullable(tagsAll);
+            this.tagsAll = Output.ofNullable(tagsAll);
             return this;
         }
         public VpcDhcpOptionsState build() {

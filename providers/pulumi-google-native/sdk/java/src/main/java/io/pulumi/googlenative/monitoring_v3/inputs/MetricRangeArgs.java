@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.monitoring_v3.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.monitoring_v3.inputs.GoogleMonitoringV3RangeArgs;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class MetricRangeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="range")
-      private final @Nullable Input<GoogleMonitoringV3RangeArgs> range;
+      private final @Nullable Output<GoogleMonitoringV3RangeArgs> range;
 
-    public Input<GoogleMonitoringV3RangeArgs> getRange() {
-        return this.range == null ? Input.empty() : this.range;
+    public Output<GoogleMonitoringV3RangeArgs> getRange() {
+        return this.range == null ? Output.empty() : this.range;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class MetricRangeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="timeSeries")
-      private final @Nullable Input<String> timeSeries;
+      private final @Nullable Output<String> timeSeries;
 
-    public Input<String> getTimeSeries() {
-        return this.timeSeries == null ? Input.empty() : this.timeSeries;
+    public Output<String> getTimeSeries() {
+        return this.timeSeries == null ? Output.empty() : this.timeSeries;
     }
 
     public MetricRangeArgs(
-        @Nullable Input<GoogleMonitoringV3RangeArgs> range,
-        @Nullable Input<String> timeSeries) {
+        @Nullable Output<GoogleMonitoringV3RangeArgs> range,
+        @Nullable Output<String> timeSeries) {
         this.range = range;
         this.timeSeries = timeSeries;
     }
 
     private MetricRangeArgs() {
-        this.range = Input.empty();
-        this.timeSeries = Input.empty();
+        this.range = Output.empty();
+        this.timeSeries = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class MetricRangeArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<GoogleMonitoringV3RangeArgs> range;
-        private @Nullable Input<String> timeSeries;
+        private @Nullable Output<GoogleMonitoringV3RangeArgs> range;
+        private @Nullable Output<String> timeSeries;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class MetricRangeArgs extends io.pulumi.resources.ResourceArgs {
     	      this.timeSeries = defaults.timeSeries;
         }
 
-        public Builder range(@Nullable Input<GoogleMonitoringV3RangeArgs> range) {
+        public Builder range(@Nullable Output<GoogleMonitoringV3RangeArgs> range) {
             this.range = range;
             return this;
         }
 
         public Builder range(@Nullable GoogleMonitoringV3RangeArgs range) {
-            this.range = Input.ofNullable(range);
+            this.range = Output.ofNullable(range);
             return this;
         }
 
-        public Builder timeSeries(@Nullable Input<String> timeSeries) {
+        public Builder timeSeries(@Nullable Output<String> timeSeries) {
             this.timeSeries = timeSeries;
             return this;
         }
 
         public Builder timeSeries(@Nullable String timeSeries) {
-            this.timeSeries = Input.ofNullable(timeSeries);
+            this.timeSeries = Output.ofNullable(timeSeries);
             return this;
         }
         public MetricRangeArgs build() {

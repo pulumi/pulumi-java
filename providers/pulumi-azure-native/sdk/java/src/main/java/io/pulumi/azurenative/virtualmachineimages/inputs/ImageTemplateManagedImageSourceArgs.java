@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.virtualmachineimages.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -22,9 +22,9 @@ public final class ImageTemplateManagedImageSourceArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="imageId", required=true)
-      private final Input<String> imageId;
+      private final Output<String> imageId;
 
-    public Input<String> getImageId() {
+    public Output<String> getImageId() {
         return this.imageId;
     }
 
@@ -34,22 +34,22 @@ public final class ImageTemplateManagedImageSourceArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<String> type;
+      private final Output<String> type;
 
-    public Input<String> getType() {
+    public Output<String> getType() {
         return this.type;
     }
 
     public ImageTemplateManagedImageSourceArgs(
-        Input<String> imageId,
-        Input<String> type) {
+        Output<String> imageId,
+        Output<String> type) {
         this.imageId = Objects.requireNonNull(imageId, "expected parameter 'imageId' to be non-null");
         this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
     }
 
     private ImageTemplateManagedImageSourceArgs() {
-        this.imageId = Input.empty();
-        this.type = Input.empty();
+        this.imageId = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class ImageTemplateManagedImageSourceArgs extends io.pulumi.resourc
     }
 
     public static final class Builder {
-        private Input<String> imageId;
-        private Input<String> type;
+        private Output<String> imageId;
+        private Output<String> type;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class ImageTemplateManagedImageSourceArgs extends io.pulumi.resourc
     	      this.type = defaults.type;
         }
 
-        public Builder imageId(Input<String> imageId) {
+        public Builder imageId(Output<String> imageId) {
             this.imageId = Objects.requireNonNull(imageId);
             return this;
         }
 
         public Builder imageId(String imageId) {
-            this.imageId = Input.of(Objects.requireNonNull(imageId));
+            this.imageId = Output.of(Objects.requireNonNull(imageId));
             return this;
         }
 
-        public Builder type(Input<String> type) {
+        public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(String type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
         public ImageTemplateManagedImageSourceArgs build() {

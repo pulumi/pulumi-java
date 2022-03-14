@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.servicemanagement_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.servicemanagement_v1.inputs.AuthProviderArgs;
 import io.pulumi.googlenative.servicemanagement_v1.inputs.AuthenticationRuleArgs;
@@ -25,10 +25,10 @@ public final class AuthenticationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="providers")
-      private final @Nullable Input<List<AuthProviderArgs>> providers;
+      private final @Nullable Output<List<AuthProviderArgs>> providers;
 
-    public Input<List<AuthProviderArgs>> getProviders() {
-        return this.providers == null ? Input.empty() : this.providers;
+    public Output<List<AuthProviderArgs>> getProviders() {
+        return this.providers == null ? Output.empty() : this.providers;
     }
 
     /**
@@ -36,22 +36,22 @@ public final class AuthenticationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="rules")
-      private final @Nullable Input<List<AuthenticationRuleArgs>> rules;
+      private final @Nullable Output<List<AuthenticationRuleArgs>> rules;
 
-    public Input<List<AuthenticationRuleArgs>> getRules() {
-        return this.rules == null ? Input.empty() : this.rules;
+    public Output<List<AuthenticationRuleArgs>> getRules() {
+        return this.rules == null ? Output.empty() : this.rules;
     }
 
     public AuthenticationArgs(
-        @Nullable Input<List<AuthProviderArgs>> providers,
-        @Nullable Input<List<AuthenticationRuleArgs>> rules) {
+        @Nullable Output<List<AuthProviderArgs>> providers,
+        @Nullable Output<List<AuthenticationRuleArgs>> rules) {
         this.providers = providers;
         this.rules = rules;
     }
 
     private AuthenticationArgs() {
-        this.providers = Input.empty();
-        this.rules = Input.empty();
+        this.providers = Output.empty();
+        this.rules = Output.empty();
     }
 
     public static Builder builder() {
@@ -63,8 +63,8 @@ public final class AuthenticationArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<List<AuthProviderArgs>> providers;
-        private @Nullable Input<List<AuthenticationRuleArgs>> rules;
+        private @Nullable Output<List<AuthProviderArgs>> providers;
+        private @Nullable Output<List<AuthenticationRuleArgs>> rules;
 
         public Builder() {
     	      // Empty
@@ -76,23 +76,23 @@ public final class AuthenticationArgs extends io.pulumi.resources.ResourceArgs {
     	      this.rules = defaults.rules;
         }
 
-        public Builder providers(@Nullable Input<List<AuthProviderArgs>> providers) {
+        public Builder providers(@Nullable Output<List<AuthProviderArgs>> providers) {
             this.providers = providers;
             return this;
         }
 
         public Builder providers(@Nullable List<AuthProviderArgs> providers) {
-            this.providers = Input.ofNullable(providers);
+            this.providers = Output.ofNullable(providers);
             return this;
         }
 
-        public Builder rules(@Nullable Input<List<AuthenticationRuleArgs>> rules) {
+        public Builder rules(@Nullable Output<List<AuthenticationRuleArgs>> rules) {
             this.rules = rules;
             return this;
         }
 
         public Builder rules(@Nullable List<AuthenticationRuleArgs> rules) {
-            this.rules = Input.ofNullable(rules);
+            this.rules = Output.ofNullable(rules);
             return this;
         }
         public AuthenticationArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.transcoder_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.transcoder_v1.inputs.AudioStreamArgs;
 import io.pulumi.googlenative.transcoder_v1.inputs.TextStreamArgs;
@@ -26,10 +26,10 @@ public final class ElementaryStreamArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="audioStream")
-      private final @Nullable Input<AudioStreamArgs> audioStream;
+      private final @Nullable Output<AudioStreamArgs> audioStream;
 
-    public Input<AudioStreamArgs> getAudioStream() {
-        return this.audioStream == null ? Input.empty() : this.audioStream;
+    public Output<AudioStreamArgs> getAudioStream() {
+        return this.audioStream == null ? Output.empty() : this.audioStream;
     }
 
     /**
@@ -37,10 +37,10 @@ public final class ElementaryStreamArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="key")
-      private final @Nullable Input<String> key;
+      private final @Nullable Output<String> key;
 
-    public Input<String> getKey() {
-        return this.key == null ? Input.empty() : this.key;
+    public Output<String> getKey() {
+        return this.key == null ? Output.empty() : this.key;
     }
 
     /**
@@ -48,10 +48,10 @@ public final class ElementaryStreamArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="textStream")
-      private final @Nullable Input<TextStreamArgs> textStream;
+      private final @Nullable Output<TextStreamArgs> textStream;
 
-    public Input<TextStreamArgs> getTextStream() {
-        return this.textStream == null ? Input.empty() : this.textStream;
+    public Output<TextStreamArgs> getTextStream() {
+        return this.textStream == null ? Output.empty() : this.textStream;
     }
 
     /**
@@ -59,17 +59,17 @@ public final class ElementaryStreamArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="videoStream")
-      private final @Nullable Input<VideoStreamArgs> videoStream;
+      private final @Nullable Output<VideoStreamArgs> videoStream;
 
-    public Input<VideoStreamArgs> getVideoStream() {
-        return this.videoStream == null ? Input.empty() : this.videoStream;
+    public Output<VideoStreamArgs> getVideoStream() {
+        return this.videoStream == null ? Output.empty() : this.videoStream;
     }
 
     public ElementaryStreamArgs(
-        @Nullable Input<AudioStreamArgs> audioStream,
-        @Nullable Input<String> key,
-        @Nullable Input<TextStreamArgs> textStream,
-        @Nullable Input<VideoStreamArgs> videoStream) {
+        @Nullable Output<AudioStreamArgs> audioStream,
+        @Nullable Output<String> key,
+        @Nullable Output<TextStreamArgs> textStream,
+        @Nullable Output<VideoStreamArgs> videoStream) {
         this.audioStream = audioStream;
         this.key = key;
         this.textStream = textStream;
@@ -77,10 +77,10 @@ public final class ElementaryStreamArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private ElementaryStreamArgs() {
-        this.audioStream = Input.empty();
-        this.key = Input.empty();
-        this.textStream = Input.empty();
-        this.videoStream = Input.empty();
+        this.audioStream = Output.empty();
+        this.key = Output.empty();
+        this.textStream = Output.empty();
+        this.videoStream = Output.empty();
     }
 
     public static Builder builder() {
@@ -92,10 +92,10 @@ public final class ElementaryStreamArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private @Nullable Input<AudioStreamArgs> audioStream;
-        private @Nullable Input<String> key;
-        private @Nullable Input<TextStreamArgs> textStream;
-        private @Nullable Input<VideoStreamArgs> videoStream;
+        private @Nullable Output<AudioStreamArgs> audioStream;
+        private @Nullable Output<String> key;
+        private @Nullable Output<TextStreamArgs> textStream;
+        private @Nullable Output<VideoStreamArgs> videoStream;
 
         public Builder() {
     	      // Empty
@@ -109,43 +109,43 @@ public final class ElementaryStreamArgs extends io.pulumi.resources.ResourceArgs
     	      this.videoStream = defaults.videoStream;
         }
 
-        public Builder audioStream(@Nullable Input<AudioStreamArgs> audioStream) {
+        public Builder audioStream(@Nullable Output<AudioStreamArgs> audioStream) {
             this.audioStream = audioStream;
             return this;
         }
 
         public Builder audioStream(@Nullable AudioStreamArgs audioStream) {
-            this.audioStream = Input.ofNullable(audioStream);
+            this.audioStream = Output.ofNullable(audioStream);
             return this;
         }
 
-        public Builder key(@Nullable Input<String> key) {
+        public Builder key(@Nullable Output<String> key) {
             this.key = key;
             return this;
         }
 
         public Builder key(@Nullable String key) {
-            this.key = Input.ofNullable(key);
+            this.key = Output.ofNullable(key);
             return this;
         }
 
-        public Builder textStream(@Nullable Input<TextStreamArgs> textStream) {
+        public Builder textStream(@Nullable Output<TextStreamArgs> textStream) {
             this.textStream = textStream;
             return this;
         }
 
         public Builder textStream(@Nullable TextStreamArgs textStream) {
-            this.textStream = Input.ofNullable(textStream);
+            this.textStream = Output.ofNullable(textStream);
             return this;
         }
 
-        public Builder videoStream(@Nullable Input<VideoStreamArgs> videoStream) {
+        public Builder videoStream(@Nullable Output<VideoStreamArgs> videoStream) {
             this.videoStream = videoStream;
             return this;
         }
 
         public Builder videoStream(@Nullable VideoStreamArgs videoStream) {
-            this.videoStream = Input.ofNullable(videoStream);
+            this.videoStream = Output.ofNullable(videoStream);
             return this;
         }
         public ElementaryStreamArgs build() {

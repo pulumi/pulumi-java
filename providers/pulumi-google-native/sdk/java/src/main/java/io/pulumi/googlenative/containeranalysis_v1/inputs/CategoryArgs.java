@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class CategoryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="categoryId")
-      private final @Nullable Input<String> categoryId;
+      private final @Nullable Output<String> categoryId;
 
-    public Input<String> getCategoryId() {
-        return this.categoryId == null ? Input.empty() : this.categoryId;
+    public Output<String> getCategoryId() {
+        return this.categoryId == null ? Output.empty() : this.categoryId;
     }
 
     /**
@@ -34,22 +34,22 @@ public final class CategoryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     public CategoryArgs(
-        @Nullable Input<String> categoryId,
-        @Nullable Input<String> name) {
+        @Nullable Output<String> categoryId,
+        @Nullable Output<String> name) {
         this.categoryId = categoryId;
         this.name = name;
     }
 
     private CategoryArgs() {
-        this.categoryId = Input.empty();
-        this.name = Input.empty();
+        this.categoryId = Output.empty();
+        this.name = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class CategoryArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> categoryId;
-        private @Nullable Input<String> name;
+        private @Nullable Output<String> categoryId;
+        private @Nullable Output<String> name;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class CategoryArgs extends io.pulumi.resources.ResourceArgs {
     	      this.name = defaults.name;
         }
 
-        public Builder categoryId(@Nullable Input<String> categoryId) {
+        public Builder categoryId(@Nullable Output<String> categoryId) {
             this.categoryId = categoryId;
             return this;
         }
 
         public Builder categoryId(@Nullable String categoryId) {
-            this.categoryId = Input.ofNullable(categoryId);
+            this.categoryId = Output.ofNullable(categoryId);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
         public CategoryArgs build() {

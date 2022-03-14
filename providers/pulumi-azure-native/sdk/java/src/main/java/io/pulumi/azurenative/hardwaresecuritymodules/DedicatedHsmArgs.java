@@ -5,7 +5,7 @@ package io.pulumi.azurenative.hardwaresecuritymodules;
 
 import io.pulumi.azurenative.hardwaresecuritymodules.inputs.NetworkProfileArgs;
 import io.pulumi.azurenative.hardwaresecuritymodules.inputs.SkuArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -23,10 +23,10 @@ public final class DedicatedHsmArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class DedicatedHsmArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -45,10 +45,10 @@ public final class DedicatedHsmArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="networkProfile")
-      private final @Nullable Input<NetworkProfileArgs> networkProfile;
+      private final @Nullable Output<NetworkProfileArgs> networkProfile;
 
-    public Input<NetworkProfileArgs> getNetworkProfile() {
-        return this.networkProfile == null ? Input.empty() : this.networkProfile;
+    public Output<NetworkProfileArgs> getNetworkProfile() {
+        return this.networkProfile == null ? Output.empty() : this.networkProfile;
     }
 
     /**
@@ -56,9 +56,9 @@ public final class DedicatedHsmArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -67,9 +67,9 @@ public final class DedicatedHsmArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sku", required=true)
-      private final Input<SkuArgs> sku;
+      private final Output<SkuArgs> sku;
 
-    public Input<SkuArgs> getSku() {
+    public Output<SkuArgs> getSku() {
         return this.sku;
     }
 
@@ -78,10 +78,10 @@ public final class DedicatedHsmArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="stampId")
-      private final @Nullable Input<String> stampId;
+      private final @Nullable Output<String> stampId;
 
-    public Input<String> getStampId() {
-        return this.stampId == null ? Input.empty() : this.stampId;
+    public Output<String> getStampId() {
+        return this.stampId == null ? Output.empty() : this.stampId;
     }
 
     /**
@@ -89,10 +89,10 @@ public final class DedicatedHsmArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -100,21 +100,21 @@ public final class DedicatedHsmArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="zones")
-      private final @Nullable Input<List<String>> zones;
+      private final @Nullable Output<List<String>> zones;
 
-    public Input<List<String>> getZones() {
-        return this.zones == null ? Input.empty() : this.zones;
+    public Output<List<String>> getZones() {
+        return this.zones == null ? Output.empty() : this.zones;
     }
 
     public DedicatedHsmArgs(
-        @Nullable Input<String> location,
-        @Nullable Input<String> name,
-        @Nullable Input<NetworkProfileArgs> networkProfile,
-        Input<String> resourceGroupName,
-        Input<SkuArgs> sku,
-        @Nullable Input<String> stampId,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<List<String>> zones) {
+        @Nullable Output<String> location,
+        @Nullable Output<String> name,
+        @Nullable Output<NetworkProfileArgs> networkProfile,
+        Output<String> resourceGroupName,
+        Output<SkuArgs> sku,
+        @Nullable Output<String> stampId,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<List<String>> zones) {
         this.location = location;
         this.name = name;
         this.networkProfile = networkProfile;
@@ -126,14 +126,14 @@ public final class DedicatedHsmArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DedicatedHsmArgs() {
-        this.location = Input.empty();
-        this.name = Input.empty();
-        this.networkProfile = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.sku = Input.empty();
-        this.stampId = Input.empty();
-        this.tags = Input.empty();
-        this.zones = Input.empty();
+        this.location = Output.empty();
+        this.name = Output.empty();
+        this.networkProfile = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.sku = Output.empty();
+        this.stampId = Output.empty();
+        this.tags = Output.empty();
+        this.zones = Output.empty();
     }
 
     public static Builder builder() {
@@ -145,14 +145,14 @@ public final class DedicatedHsmArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> location;
-        private @Nullable Input<String> name;
-        private @Nullable Input<NetworkProfileArgs> networkProfile;
-        private Input<String> resourceGroupName;
-        private Input<SkuArgs> sku;
-        private @Nullable Input<String> stampId;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<List<String>> zones;
+        private @Nullable Output<String> location;
+        private @Nullable Output<String> name;
+        private @Nullable Output<NetworkProfileArgs> networkProfile;
+        private Output<String> resourceGroupName;
+        private Output<SkuArgs> sku;
+        private @Nullable Output<String> stampId;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<List<String>> zones;
 
         public Builder() {
     	      // Empty
@@ -170,83 +170,83 @@ public final class DedicatedHsmArgs extends io.pulumi.resources.ResourceArgs {
     	      this.zones = defaults.zones;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder networkProfile(@Nullable Input<NetworkProfileArgs> networkProfile) {
+        public Builder networkProfile(@Nullable Output<NetworkProfileArgs> networkProfile) {
             this.networkProfile = networkProfile;
             return this;
         }
 
         public Builder networkProfile(@Nullable NetworkProfileArgs networkProfile) {
-            this.networkProfile = Input.ofNullable(networkProfile);
+            this.networkProfile = Output.ofNullable(networkProfile);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder sku(Input<SkuArgs> sku) {
+        public Builder sku(Output<SkuArgs> sku) {
             this.sku = Objects.requireNonNull(sku);
             return this;
         }
 
         public Builder sku(SkuArgs sku) {
-            this.sku = Input.of(Objects.requireNonNull(sku));
+            this.sku = Output.of(Objects.requireNonNull(sku));
             return this;
         }
 
-        public Builder stampId(@Nullable Input<String> stampId) {
+        public Builder stampId(@Nullable Output<String> stampId) {
             this.stampId = stampId;
             return this;
         }
 
         public Builder stampId(@Nullable String stampId) {
-            this.stampId = Input.ofNullable(stampId);
+            this.stampId = Output.ofNullable(stampId);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder zones(@Nullable Input<List<String>> zones) {
+        public Builder zones(@Nullable Output<List<String>> zones) {
             this.zones = zones;
             return this;
         }
 
         public Builder zones(@Nullable List<String> zones) {
-            this.zones = Input.ofNullable(zones);
+            this.zones = Output.ofNullable(zones);
             return this;
         }
         public DedicatedHsmArgs build() {

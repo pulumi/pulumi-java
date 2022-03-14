@@ -9,7 +9,7 @@ import io.pulumi.azurenative.cache.enums.Protocol;
 import io.pulumi.azurenative.cache.inputs.ModuleArgs;
 import io.pulumi.azurenative.cache.inputs.PersistenceArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -27,10 +27,10 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="clientProtocol")
-      private final @Nullable Input<Either<String,Protocol>> clientProtocol;
+      private final @Nullable Output<Either<String,Protocol>> clientProtocol;
 
-    public Input<Either<String,Protocol>> getClientProtocol() {
-        return this.clientProtocol == null ? Input.empty() : this.clientProtocol;
+    public Output<Either<String,Protocol>> getClientProtocol() {
+        return this.clientProtocol == null ? Output.empty() : this.clientProtocol;
     }
 
     /**
@@ -38,9 +38,9 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="clusterName", required=true)
-      private final Input<String> clusterName;
+      private final Output<String> clusterName;
 
-    public Input<String> getClusterName() {
+    public Output<String> getClusterName() {
         return this.clusterName;
     }
 
@@ -49,10 +49,10 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="clusteringPolicy")
-      private final @Nullable Input<Either<String,ClusteringPolicy>> clusteringPolicy;
+      private final @Nullable Output<Either<String,ClusteringPolicy>> clusteringPolicy;
 
-    public Input<Either<String,ClusteringPolicy>> getClusteringPolicy() {
-        return this.clusteringPolicy == null ? Input.empty() : this.clusteringPolicy;
+    public Output<Either<String,ClusteringPolicy>> getClusteringPolicy() {
+        return this.clusteringPolicy == null ? Output.empty() : this.clusteringPolicy;
     }
 
     /**
@@ -60,10 +60,10 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="databaseName")
-      private final @Nullable Input<String> databaseName;
+      private final @Nullable Output<String> databaseName;
 
-    public Input<String> getDatabaseName() {
-        return this.databaseName == null ? Input.empty() : this.databaseName;
+    public Output<String> getDatabaseName() {
+        return this.databaseName == null ? Output.empty() : this.databaseName;
     }
 
     /**
@@ -71,10 +71,10 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="evictionPolicy")
-      private final @Nullable Input<Either<String,EvictionPolicy>> evictionPolicy;
+      private final @Nullable Output<Either<String,EvictionPolicy>> evictionPolicy;
 
-    public Input<Either<String,EvictionPolicy>> getEvictionPolicy() {
-        return this.evictionPolicy == null ? Input.empty() : this.evictionPolicy;
+    public Output<Either<String,EvictionPolicy>> getEvictionPolicy() {
+        return this.evictionPolicy == null ? Output.empty() : this.evictionPolicy;
     }
 
     /**
@@ -82,10 +82,10 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="modules")
-      private final @Nullable Input<List<ModuleArgs>> modules;
+      private final @Nullable Output<List<ModuleArgs>> modules;
 
-    public Input<List<ModuleArgs>> getModules() {
-        return this.modules == null ? Input.empty() : this.modules;
+    public Output<List<ModuleArgs>> getModules() {
+        return this.modules == null ? Output.empty() : this.modules;
     }
 
     /**
@@ -93,10 +93,10 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="persistence")
-      private final @Nullable Input<PersistenceArgs> persistence;
+      private final @Nullable Output<PersistenceArgs> persistence;
 
-    public Input<PersistenceArgs> getPersistence() {
-        return this.persistence == null ? Input.empty() : this.persistence;
+    public Output<PersistenceArgs> getPersistence() {
+        return this.persistence == null ? Output.empty() : this.persistence;
     }
 
     /**
@@ -104,10 +104,10 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="port")
-      private final @Nullable Input<Integer> port;
+      private final @Nullable Output<Integer> port;
 
-    public Input<Integer> getPort() {
-        return this.port == null ? Input.empty() : this.port;
+    public Output<Integer> getPort() {
+        return this.port == null ? Output.empty() : this.port;
     }
 
     /**
@@ -115,22 +115,22 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
     public DatabaseArgs(
-        @Nullable Input<Either<String,Protocol>> clientProtocol,
-        Input<String> clusterName,
-        @Nullable Input<Either<String,ClusteringPolicy>> clusteringPolicy,
-        @Nullable Input<String> databaseName,
-        @Nullable Input<Either<String,EvictionPolicy>> evictionPolicy,
-        @Nullable Input<List<ModuleArgs>> modules,
-        @Nullable Input<PersistenceArgs> persistence,
-        @Nullable Input<Integer> port,
-        Input<String> resourceGroupName) {
+        @Nullable Output<Either<String,Protocol>> clientProtocol,
+        Output<String> clusterName,
+        @Nullable Output<Either<String,ClusteringPolicy>> clusteringPolicy,
+        @Nullable Output<String> databaseName,
+        @Nullable Output<Either<String,EvictionPolicy>> evictionPolicy,
+        @Nullable Output<List<ModuleArgs>> modules,
+        @Nullable Output<PersistenceArgs> persistence,
+        @Nullable Output<Integer> port,
+        Output<String> resourceGroupName) {
         this.clientProtocol = clientProtocol;
         this.clusterName = Objects.requireNonNull(clusterName, "expected parameter 'clusterName' to be non-null");
         this.clusteringPolicy = clusteringPolicy;
@@ -143,15 +143,15 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DatabaseArgs() {
-        this.clientProtocol = Input.empty();
-        this.clusterName = Input.empty();
-        this.clusteringPolicy = Input.empty();
-        this.databaseName = Input.empty();
-        this.evictionPolicy = Input.empty();
-        this.modules = Input.empty();
-        this.persistence = Input.empty();
-        this.port = Input.empty();
-        this.resourceGroupName = Input.empty();
+        this.clientProtocol = Output.empty();
+        this.clusterName = Output.empty();
+        this.clusteringPolicy = Output.empty();
+        this.databaseName = Output.empty();
+        this.evictionPolicy = Output.empty();
+        this.modules = Output.empty();
+        this.persistence = Output.empty();
+        this.port = Output.empty();
+        this.resourceGroupName = Output.empty();
     }
 
     public static Builder builder() {
@@ -163,15 +163,15 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Either<String,Protocol>> clientProtocol;
-        private Input<String> clusterName;
-        private @Nullable Input<Either<String,ClusteringPolicy>> clusteringPolicy;
-        private @Nullable Input<String> databaseName;
-        private @Nullable Input<Either<String,EvictionPolicy>> evictionPolicy;
-        private @Nullable Input<List<ModuleArgs>> modules;
-        private @Nullable Input<PersistenceArgs> persistence;
-        private @Nullable Input<Integer> port;
-        private Input<String> resourceGroupName;
+        private @Nullable Output<Either<String,Protocol>> clientProtocol;
+        private Output<String> clusterName;
+        private @Nullable Output<Either<String,ClusteringPolicy>> clusteringPolicy;
+        private @Nullable Output<String> databaseName;
+        private @Nullable Output<Either<String,EvictionPolicy>> evictionPolicy;
+        private @Nullable Output<List<ModuleArgs>> modules;
+        private @Nullable Output<PersistenceArgs> persistence;
+        private @Nullable Output<Integer> port;
+        private Output<String> resourceGroupName;
 
         public Builder() {
     	      // Empty
@@ -190,93 +190,93 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
     	      this.resourceGroupName = defaults.resourceGroupName;
         }
 
-        public Builder clientProtocol(@Nullable Input<Either<String,Protocol>> clientProtocol) {
+        public Builder clientProtocol(@Nullable Output<Either<String,Protocol>> clientProtocol) {
             this.clientProtocol = clientProtocol;
             return this;
         }
 
         public Builder clientProtocol(@Nullable Either<String,Protocol> clientProtocol) {
-            this.clientProtocol = Input.ofNullable(clientProtocol);
+            this.clientProtocol = Output.ofNullable(clientProtocol);
             return this;
         }
 
-        public Builder clusterName(Input<String> clusterName) {
+        public Builder clusterName(Output<String> clusterName) {
             this.clusterName = Objects.requireNonNull(clusterName);
             return this;
         }
 
         public Builder clusterName(String clusterName) {
-            this.clusterName = Input.of(Objects.requireNonNull(clusterName));
+            this.clusterName = Output.of(Objects.requireNonNull(clusterName));
             return this;
         }
 
-        public Builder clusteringPolicy(@Nullable Input<Either<String,ClusteringPolicy>> clusteringPolicy) {
+        public Builder clusteringPolicy(@Nullable Output<Either<String,ClusteringPolicy>> clusteringPolicy) {
             this.clusteringPolicy = clusteringPolicy;
             return this;
         }
 
         public Builder clusteringPolicy(@Nullable Either<String,ClusteringPolicy> clusteringPolicy) {
-            this.clusteringPolicy = Input.ofNullable(clusteringPolicy);
+            this.clusteringPolicy = Output.ofNullable(clusteringPolicy);
             return this;
         }
 
-        public Builder databaseName(@Nullable Input<String> databaseName) {
+        public Builder databaseName(@Nullable Output<String> databaseName) {
             this.databaseName = databaseName;
             return this;
         }
 
         public Builder databaseName(@Nullable String databaseName) {
-            this.databaseName = Input.ofNullable(databaseName);
+            this.databaseName = Output.ofNullable(databaseName);
             return this;
         }
 
-        public Builder evictionPolicy(@Nullable Input<Either<String,EvictionPolicy>> evictionPolicy) {
+        public Builder evictionPolicy(@Nullable Output<Either<String,EvictionPolicy>> evictionPolicy) {
             this.evictionPolicy = evictionPolicy;
             return this;
         }
 
         public Builder evictionPolicy(@Nullable Either<String,EvictionPolicy> evictionPolicy) {
-            this.evictionPolicy = Input.ofNullable(evictionPolicy);
+            this.evictionPolicy = Output.ofNullable(evictionPolicy);
             return this;
         }
 
-        public Builder modules(@Nullable Input<List<ModuleArgs>> modules) {
+        public Builder modules(@Nullable Output<List<ModuleArgs>> modules) {
             this.modules = modules;
             return this;
         }
 
         public Builder modules(@Nullable List<ModuleArgs> modules) {
-            this.modules = Input.ofNullable(modules);
+            this.modules = Output.ofNullable(modules);
             return this;
         }
 
-        public Builder persistence(@Nullable Input<PersistenceArgs> persistence) {
+        public Builder persistence(@Nullable Output<PersistenceArgs> persistence) {
             this.persistence = persistence;
             return this;
         }
 
         public Builder persistence(@Nullable PersistenceArgs persistence) {
-            this.persistence = Input.ofNullable(persistence);
+            this.persistence = Output.ofNullable(persistence);
             return this;
         }
 
-        public Builder port(@Nullable Input<Integer> port) {
+        public Builder port(@Nullable Output<Integer> port) {
             this.port = port;
             return this;
         }
 
         public Builder port(@Nullable Integer port) {
-            this.port = Input.ofNullable(port);
+            this.port = Output.ofNullable(port);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
         public DatabaseArgs build() {

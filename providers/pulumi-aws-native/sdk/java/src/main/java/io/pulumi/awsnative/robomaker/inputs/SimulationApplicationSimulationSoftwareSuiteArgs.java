@@ -5,7 +5,7 @@ package io.pulumi.awsnative.robomaker.inputs;
 
 import io.pulumi.awsnative.robomaker.enums.SimulationApplicationSimulationSoftwareSuiteName;
 import io.pulumi.awsnative.robomaker.enums.SimulationApplicationSimulationSoftwareSuiteVersion;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,9 +24,9 @@ public final class SimulationApplicationSimulationSoftwareSuiteArgs extends io.p
      * 
      */
     @InputImport(name="name", required=true)
-      private final Input<SimulationApplicationSimulationSoftwareSuiteName> name;
+      private final Output<SimulationApplicationSimulationSoftwareSuiteName> name;
 
-    public Input<SimulationApplicationSimulationSoftwareSuiteName> getName() {
+    public Output<SimulationApplicationSimulationSoftwareSuiteName> getName() {
         return this.name;
     }
 
@@ -35,22 +35,22 @@ public final class SimulationApplicationSimulationSoftwareSuiteArgs extends io.p
      * 
      */
     @InputImport(name="version")
-      private final @Nullable Input<SimulationApplicationSimulationSoftwareSuiteVersion> version;
+      private final @Nullable Output<SimulationApplicationSimulationSoftwareSuiteVersion> version;
 
-    public Input<SimulationApplicationSimulationSoftwareSuiteVersion> getVersion() {
-        return this.version == null ? Input.empty() : this.version;
+    public Output<SimulationApplicationSimulationSoftwareSuiteVersion> getVersion() {
+        return this.version == null ? Output.empty() : this.version;
     }
 
     public SimulationApplicationSimulationSoftwareSuiteArgs(
-        Input<SimulationApplicationSimulationSoftwareSuiteName> name,
-        @Nullable Input<SimulationApplicationSimulationSoftwareSuiteVersion> version) {
+        Output<SimulationApplicationSimulationSoftwareSuiteName> name,
+        @Nullable Output<SimulationApplicationSimulationSoftwareSuiteVersion> version) {
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
         this.version = version;
     }
 
     private SimulationApplicationSimulationSoftwareSuiteArgs() {
-        this.name = Input.empty();
-        this.version = Input.empty();
+        this.name = Output.empty();
+        this.version = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class SimulationApplicationSimulationSoftwareSuiteArgs extends io.p
     }
 
     public static final class Builder {
-        private Input<SimulationApplicationSimulationSoftwareSuiteName> name;
-        private @Nullable Input<SimulationApplicationSimulationSoftwareSuiteVersion> version;
+        private Output<SimulationApplicationSimulationSoftwareSuiteName> name;
+        private @Nullable Output<SimulationApplicationSimulationSoftwareSuiteVersion> version;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class SimulationApplicationSimulationSoftwareSuiteArgs extends io.p
     	      this.version = defaults.version;
         }
 
-        public Builder name(Input<SimulationApplicationSimulationSoftwareSuiteName> name) {
+        public Builder name(Output<SimulationApplicationSimulationSoftwareSuiteName> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(SimulationApplicationSimulationSoftwareSuiteName name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder version(@Nullable Input<SimulationApplicationSimulationSoftwareSuiteVersion> version) {
+        public Builder version(@Nullable Output<SimulationApplicationSimulationSoftwareSuiteVersion> version) {
             this.version = version;
             return this;
         }
 
         public Builder version(@Nullable SimulationApplicationSimulationSoftwareSuiteVersion version) {
-            this.version = Input.ofNullable(version);
+            this.version = Output.ofNullable(version);
             return this;
         }
         public SimulationApplicationSimulationSoftwareSuiteArgs build() {

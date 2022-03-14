@@ -7,7 +7,6 @@ import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.apigateway.ApiKeyArgs;
 import io.pulumi.awsnative.apigateway.outputs.ApiKeyStageKey;
 import io.pulumi.awsnative.apigateway.outputs.ApiKeyTag;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -189,14 +188,14 @@ public class ApiKey extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ApiKey(String name, @Nullable ApiKeyArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:apigateway:ApiKey", name, args == null ? ApiKeyArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws-native:apigateway:ApiKey", name, args == null ? ApiKeyArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private ApiKey(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private ApiKey(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws-native:apigateway:ApiKey", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -211,7 +210,7 @@ public class ApiKey extends io.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static ApiKey get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static ApiKey get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new ApiKey(name, id, options);
     }
 }

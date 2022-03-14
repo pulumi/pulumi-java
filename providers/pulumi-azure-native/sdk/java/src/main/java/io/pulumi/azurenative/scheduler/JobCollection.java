@@ -7,7 +7,6 @@ import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.scheduler.JobCollectionArgs;
 import io.pulumi.azurenative.scheduler.outputs.JobCollectionPropertiesResponse;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -138,20 +137,20 @@ public class JobCollection extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public JobCollection(String name, JobCollectionArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:scheduler:JobCollection", name, args == null ? JobCollectionArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("azure-native:scheduler:JobCollection", name, args == null ? JobCollectionArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private JobCollection(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private JobCollection(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:scheduler:JobCollection", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:scheduler/v20140801preview:JobCollection").build()),
-                Input.of(Alias.builder().setType("azure-native:scheduler/v20160101:JobCollection").build()),
-                Input.of(Alias.builder().setType("azure-native:scheduler/v20160301:JobCollection").build())
+                Output.of(Alias.builder().setType("azure-native:scheduler/v20140801preview:JobCollection").build()),
+                Output.of(Alias.builder().setType("azure-native:scheduler/v20160101:JobCollection").build()),
+                Output.of(Alias.builder().setType("azure-native:scheduler/v20160301:JobCollection").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -165,7 +164,7 @@ public class JobCollection extends io.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static JobCollection get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static JobCollection get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new JobCollection(name, id, options);
     }
 }

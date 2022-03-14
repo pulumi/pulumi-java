@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.iot;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -18,9 +18,9 @@ public final class PolicyAttachmentArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="policy", required=true)
-      private final Input<String> policy;
+      private final Output<String> policy;
 
-    public Input<String> getPolicy() {
+    public Output<String> getPolicy() {
         return this.policy;
     }
 
@@ -29,22 +29,22 @@ public final class PolicyAttachmentArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="target", required=true)
-      private final Input<String> target;
+      private final Output<String> target;
 
-    public Input<String> getTarget() {
+    public Output<String> getTarget() {
         return this.target;
     }
 
     public PolicyAttachmentArgs(
-        Input<String> policy,
-        Input<String> target) {
+        Output<String> policy,
+        Output<String> target) {
         this.policy = Objects.requireNonNull(policy, "expected parameter 'policy' to be non-null");
         this.target = Objects.requireNonNull(target, "expected parameter 'target' to be non-null");
     }
 
     private PolicyAttachmentArgs() {
-        this.policy = Input.empty();
-        this.target = Input.empty();
+        this.policy = Output.empty();
+        this.target = Output.empty();
     }
 
     public static Builder builder() {
@@ -56,8 +56,8 @@ public final class PolicyAttachmentArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private Input<String> policy;
-        private Input<String> target;
+        private Output<String> policy;
+        private Output<String> target;
 
         public Builder() {
     	      // Empty
@@ -69,18 +69,18 @@ public final class PolicyAttachmentArgs extends io.pulumi.resources.ResourceArgs
     	      this.target = defaults.target;
         }
 
-        public Builder policy(Input<String> policy) {
+        public Builder policy(Output<String> policy) {
             this.policy = Objects.requireNonNull(policy);
             return this;
         }
 
-        public Builder target(Input<String> target) {
+        public Builder target(Output<String> target) {
             this.target = Objects.requireNonNull(target);
             return this;
         }
 
         public Builder target(String target) {
-            this.target = Input.of(Objects.requireNonNull(target));
+            this.target = Output.of(Objects.requireNonNull(target));
             return this;
         }
         public PolicyAttachmentArgs build() {

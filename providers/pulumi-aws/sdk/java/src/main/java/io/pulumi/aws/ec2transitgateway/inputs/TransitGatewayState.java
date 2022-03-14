@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.ec2transitgateway.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -21,10 +21,10 @@ public final class TransitGatewayState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="amazonSideAsn")
-      private final @Nullable Input<Integer> amazonSideAsn;
+      private final @Nullable Output<Integer> amazonSideAsn;
 
-    public Input<Integer> getAmazonSideAsn() {
-        return this.amazonSideAsn == null ? Input.empty() : this.amazonSideAsn;
+    public Output<Integer> getAmazonSideAsn() {
+        return this.amazonSideAsn == null ? Output.empty() : this.amazonSideAsn;
     }
 
     /**
@@ -32,10 +32,10 @@ public final class TransitGatewayState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="arn")
-      private final @Nullable Input<String> arn;
+      private final @Nullable Output<String> arn;
 
-    public Input<String> getArn() {
-        return this.arn == null ? Input.empty() : this.arn;
+    public Output<String> getArn() {
+        return this.arn == null ? Output.empty() : this.arn;
     }
 
     /**
@@ -43,10 +43,10 @@ public final class TransitGatewayState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="associationDefaultRouteTableId")
-      private final @Nullable Input<String> associationDefaultRouteTableId;
+      private final @Nullable Output<String> associationDefaultRouteTableId;
 
-    public Input<String> getAssociationDefaultRouteTableId() {
-        return this.associationDefaultRouteTableId == null ? Input.empty() : this.associationDefaultRouteTableId;
+    public Output<String> getAssociationDefaultRouteTableId() {
+        return this.associationDefaultRouteTableId == null ? Output.empty() : this.associationDefaultRouteTableId;
     }
 
     /**
@@ -54,10 +54,10 @@ public final class TransitGatewayState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="autoAcceptSharedAttachments")
-      private final @Nullable Input<String> autoAcceptSharedAttachments;
+      private final @Nullable Output<String> autoAcceptSharedAttachments;
 
-    public Input<String> getAutoAcceptSharedAttachments() {
-        return this.autoAcceptSharedAttachments == null ? Input.empty() : this.autoAcceptSharedAttachments;
+    public Output<String> getAutoAcceptSharedAttachments() {
+        return this.autoAcceptSharedAttachments == null ? Output.empty() : this.autoAcceptSharedAttachments;
     }
 
     /**
@@ -65,10 +65,10 @@ public final class TransitGatewayState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="defaultRouteTableAssociation")
-      private final @Nullable Input<String> defaultRouteTableAssociation;
+      private final @Nullable Output<String> defaultRouteTableAssociation;
 
-    public Input<String> getDefaultRouteTableAssociation() {
-        return this.defaultRouteTableAssociation == null ? Input.empty() : this.defaultRouteTableAssociation;
+    public Output<String> getDefaultRouteTableAssociation() {
+        return this.defaultRouteTableAssociation == null ? Output.empty() : this.defaultRouteTableAssociation;
     }
 
     /**
@@ -76,10 +76,10 @@ public final class TransitGatewayState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="defaultRouteTablePropagation")
-      private final @Nullable Input<String> defaultRouteTablePropagation;
+      private final @Nullable Output<String> defaultRouteTablePropagation;
 
-    public Input<String> getDefaultRouteTablePropagation() {
-        return this.defaultRouteTablePropagation == null ? Input.empty() : this.defaultRouteTablePropagation;
+    public Output<String> getDefaultRouteTablePropagation() {
+        return this.defaultRouteTablePropagation == null ? Output.empty() : this.defaultRouteTablePropagation;
     }
 
     /**
@@ -87,10 +87,10 @@ public final class TransitGatewayState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -98,10 +98,10 @@ public final class TransitGatewayState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="dnsSupport")
-      private final @Nullable Input<String> dnsSupport;
+      private final @Nullable Output<String> dnsSupport;
 
-    public Input<String> getDnsSupport() {
-        return this.dnsSupport == null ? Input.empty() : this.dnsSupport;
+    public Output<String> getDnsSupport() {
+        return this.dnsSupport == null ? Output.empty() : this.dnsSupport;
     }
 
     /**
@@ -109,10 +109,10 @@ public final class TransitGatewayState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="ownerId")
-      private final @Nullable Input<String> ownerId;
+      private final @Nullable Output<String> ownerId;
 
-    public Input<String> getOwnerId() {
-        return this.ownerId == null ? Input.empty() : this.ownerId;
+    public Output<String> getOwnerId() {
+        return this.ownerId == null ? Output.empty() : this.ownerId;
     }
 
     /**
@@ -120,10 +120,10 @@ public final class TransitGatewayState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="propagationDefaultRouteTableId")
-      private final @Nullable Input<String> propagationDefaultRouteTableId;
+      private final @Nullable Output<String> propagationDefaultRouteTableId;
 
-    public Input<String> getPropagationDefaultRouteTableId() {
-        return this.propagationDefaultRouteTableId == null ? Input.empty() : this.propagationDefaultRouteTableId;
+    public Output<String> getPropagationDefaultRouteTableId() {
+        return this.propagationDefaultRouteTableId == null ? Output.empty() : this.propagationDefaultRouteTableId;
     }
 
     /**
@@ -131,10 +131,10 @@ public final class TransitGatewayState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -142,10 +142,10 @@ public final class TransitGatewayState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="tagsAll")
-      private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Input<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Input.empty() : this.tagsAll;
+    public Output<Map<String,String>> getTagsAll() {
+        return this.tagsAll == null ? Output.empty() : this.tagsAll;
     }
 
     /**
@@ -153,26 +153,26 @@ public final class TransitGatewayState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="vpnEcmpSupport")
-      private final @Nullable Input<String> vpnEcmpSupport;
+      private final @Nullable Output<String> vpnEcmpSupport;
 
-    public Input<String> getVpnEcmpSupport() {
-        return this.vpnEcmpSupport == null ? Input.empty() : this.vpnEcmpSupport;
+    public Output<String> getVpnEcmpSupport() {
+        return this.vpnEcmpSupport == null ? Output.empty() : this.vpnEcmpSupport;
     }
 
     public TransitGatewayState(
-        @Nullable Input<Integer> amazonSideAsn,
-        @Nullable Input<String> arn,
-        @Nullable Input<String> associationDefaultRouteTableId,
-        @Nullable Input<String> autoAcceptSharedAttachments,
-        @Nullable Input<String> defaultRouteTableAssociation,
-        @Nullable Input<String> defaultRouteTablePropagation,
-        @Nullable Input<String> description,
-        @Nullable Input<String> dnsSupport,
-        @Nullable Input<String> ownerId,
-        @Nullable Input<String> propagationDefaultRouteTableId,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<Map<String,String>> tagsAll,
-        @Nullable Input<String> vpnEcmpSupport) {
+        @Nullable Output<Integer> amazonSideAsn,
+        @Nullable Output<String> arn,
+        @Nullable Output<String> associationDefaultRouteTableId,
+        @Nullable Output<String> autoAcceptSharedAttachments,
+        @Nullable Output<String> defaultRouteTableAssociation,
+        @Nullable Output<String> defaultRouteTablePropagation,
+        @Nullable Output<String> description,
+        @Nullable Output<String> dnsSupport,
+        @Nullable Output<String> ownerId,
+        @Nullable Output<String> propagationDefaultRouteTableId,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<Map<String,String>> tagsAll,
+        @Nullable Output<String> vpnEcmpSupport) {
         this.amazonSideAsn = amazonSideAsn;
         this.arn = arn;
         this.associationDefaultRouteTableId = associationDefaultRouteTableId;
@@ -189,19 +189,19 @@ public final class TransitGatewayState extends io.pulumi.resources.ResourceArgs 
     }
 
     private TransitGatewayState() {
-        this.amazonSideAsn = Input.empty();
-        this.arn = Input.empty();
-        this.associationDefaultRouteTableId = Input.empty();
-        this.autoAcceptSharedAttachments = Input.empty();
-        this.defaultRouteTableAssociation = Input.empty();
-        this.defaultRouteTablePropagation = Input.empty();
-        this.description = Input.empty();
-        this.dnsSupport = Input.empty();
-        this.ownerId = Input.empty();
-        this.propagationDefaultRouteTableId = Input.empty();
-        this.tags = Input.empty();
-        this.tagsAll = Input.empty();
-        this.vpnEcmpSupport = Input.empty();
+        this.amazonSideAsn = Output.empty();
+        this.arn = Output.empty();
+        this.associationDefaultRouteTableId = Output.empty();
+        this.autoAcceptSharedAttachments = Output.empty();
+        this.defaultRouteTableAssociation = Output.empty();
+        this.defaultRouteTablePropagation = Output.empty();
+        this.description = Output.empty();
+        this.dnsSupport = Output.empty();
+        this.ownerId = Output.empty();
+        this.propagationDefaultRouteTableId = Output.empty();
+        this.tags = Output.empty();
+        this.tagsAll = Output.empty();
+        this.vpnEcmpSupport = Output.empty();
     }
 
     public static Builder builder() {
@@ -213,19 +213,19 @@ public final class TransitGatewayState extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> amazonSideAsn;
-        private @Nullable Input<String> arn;
-        private @Nullable Input<String> associationDefaultRouteTableId;
-        private @Nullable Input<String> autoAcceptSharedAttachments;
-        private @Nullable Input<String> defaultRouteTableAssociation;
-        private @Nullable Input<String> defaultRouteTablePropagation;
-        private @Nullable Input<String> description;
-        private @Nullable Input<String> dnsSupport;
-        private @Nullable Input<String> ownerId;
-        private @Nullable Input<String> propagationDefaultRouteTableId;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<Map<String,String>> tagsAll;
-        private @Nullable Input<String> vpnEcmpSupport;
+        private @Nullable Output<Integer> amazonSideAsn;
+        private @Nullable Output<String> arn;
+        private @Nullable Output<String> associationDefaultRouteTableId;
+        private @Nullable Output<String> autoAcceptSharedAttachments;
+        private @Nullable Output<String> defaultRouteTableAssociation;
+        private @Nullable Output<String> defaultRouteTablePropagation;
+        private @Nullable Output<String> description;
+        private @Nullable Output<String> dnsSupport;
+        private @Nullable Output<String> ownerId;
+        private @Nullable Output<String> propagationDefaultRouteTableId;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<Map<String,String>> tagsAll;
+        private @Nullable Output<String> vpnEcmpSupport;
 
         public Builder() {
     	      // Empty
@@ -248,133 +248,133 @@ public final class TransitGatewayState extends io.pulumi.resources.ResourceArgs 
     	      this.vpnEcmpSupport = defaults.vpnEcmpSupport;
         }
 
-        public Builder amazonSideAsn(@Nullable Input<Integer> amazonSideAsn) {
+        public Builder amazonSideAsn(@Nullable Output<Integer> amazonSideAsn) {
             this.amazonSideAsn = amazonSideAsn;
             return this;
         }
 
         public Builder amazonSideAsn(@Nullable Integer amazonSideAsn) {
-            this.amazonSideAsn = Input.ofNullable(amazonSideAsn);
+            this.amazonSideAsn = Output.ofNullable(amazonSideAsn);
             return this;
         }
 
-        public Builder arn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
 
         public Builder arn(@Nullable String arn) {
-            this.arn = Input.ofNullable(arn);
+            this.arn = Output.ofNullable(arn);
             return this;
         }
 
-        public Builder associationDefaultRouteTableId(@Nullable Input<String> associationDefaultRouteTableId) {
+        public Builder associationDefaultRouteTableId(@Nullable Output<String> associationDefaultRouteTableId) {
             this.associationDefaultRouteTableId = associationDefaultRouteTableId;
             return this;
         }
 
         public Builder associationDefaultRouteTableId(@Nullable String associationDefaultRouteTableId) {
-            this.associationDefaultRouteTableId = Input.ofNullable(associationDefaultRouteTableId);
+            this.associationDefaultRouteTableId = Output.ofNullable(associationDefaultRouteTableId);
             return this;
         }
 
-        public Builder autoAcceptSharedAttachments(@Nullable Input<String> autoAcceptSharedAttachments) {
+        public Builder autoAcceptSharedAttachments(@Nullable Output<String> autoAcceptSharedAttachments) {
             this.autoAcceptSharedAttachments = autoAcceptSharedAttachments;
             return this;
         }
 
         public Builder autoAcceptSharedAttachments(@Nullable String autoAcceptSharedAttachments) {
-            this.autoAcceptSharedAttachments = Input.ofNullable(autoAcceptSharedAttachments);
+            this.autoAcceptSharedAttachments = Output.ofNullable(autoAcceptSharedAttachments);
             return this;
         }
 
-        public Builder defaultRouteTableAssociation(@Nullable Input<String> defaultRouteTableAssociation) {
+        public Builder defaultRouteTableAssociation(@Nullable Output<String> defaultRouteTableAssociation) {
             this.defaultRouteTableAssociation = defaultRouteTableAssociation;
             return this;
         }
 
         public Builder defaultRouteTableAssociation(@Nullable String defaultRouteTableAssociation) {
-            this.defaultRouteTableAssociation = Input.ofNullable(defaultRouteTableAssociation);
+            this.defaultRouteTableAssociation = Output.ofNullable(defaultRouteTableAssociation);
             return this;
         }
 
-        public Builder defaultRouteTablePropagation(@Nullable Input<String> defaultRouteTablePropagation) {
+        public Builder defaultRouteTablePropagation(@Nullable Output<String> defaultRouteTablePropagation) {
             this.defaultRouteTablePropagation = defaultRouteTablePropagation;
             return this;
         }
 
         public Builder defaultRouteTablePropagation(@Nullable String defaultRouteTablePropagation) {
-            this.defaultRouteTablePropagation = Input.ofNullable(defaultRouteTablePropagation);
+            this.defaultRouteTablePropagation = Output.ofNullable(defaultRouteTablePropagation);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder dnsSupport(@Nullable Input<String> dnsSupport) {
+        public Builder dnsSupport(@Nullable Output<String> dnsSupport) {
             this.dnsSupport = dnsSupport;
             return this;
         }
 
         public Builder dnsSupport(@Nullable String dnsSupport) {
-            this.dnsSupport = Input.ofNullable(dnsSupport);
+            this.dnsSupport = Output.ofNullable(dnsSupport);
             return this;
         }
 
-        public Builder ownerId(@Nullable Input<String> ownerId) {
+        public Builder ownerId(@Nullable Output<String> ownerId) {
             this.ownerId = ownerId;
             return this;
         }
 
         public Builder ownerId(@Nullable String ownerId) {
-            this.ownerId = Input.ofNullable(ownerId);
+            this.ownerId = Output.ofNullable(ownerId);
             return this;
         }
 
-        public Builder propagationDefaultRouteTableId(@Nullable Input<String> propagationDefaultRouteTableId) {
+        public Builder propagationDefaultRouteTableId(@Nullable Output<String> propagationDefaultRouteTableId) {
             this.propagationDefaultRouteTableId = propagationDefaultRouteTableId;
             return this;
         }
 
         public Builder propagationDefaultRouteTableId(@Nullable String propagationDefaultRouteTableId) {
-            this.propagationDefaultRouteTableId = Input.ofNullable(propagationDefaultRouteTableId);
+            this.propagationDefaultRouteTableId = Output.ofNullable(propagationDefaultRouteTableId);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Input.ofNullable(tagsAll);
+            this.tagsAll = Output.ofNullable(tagsAll);
             return this;
         }
 
-        public Builder vpnEcmpSupport(@Nullable Input<String> vpnEcmpSupport) {
+        public Builder vpnEcmpSupport(@Nullable Output<String> vpnEcmpSupport) {
             this.vpnEcmpSupport = vpnEcmpSupport;
             return this;
         }
 
         public Builder vpnEcmpSupport(@Nullable String vpnEcmpSupport) {
-            this.vpnEcmpSupport = Input.ofNullable(vpnEcmpSupport);
+            this.vpnEcmpSupport = Output.ofNullable(vpnEcmpSupport);
             return this;
         }
         public TransitGatewayState build() {

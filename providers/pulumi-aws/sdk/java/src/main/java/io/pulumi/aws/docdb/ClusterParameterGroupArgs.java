@@ -4,7 +4,7 @@
 package io.pulumi.aws.docdb;
 
 import io.pulumi.aws.docdb.inputs.ClusterParameterGroupParameterArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -22,10 +22,10 @@ public final class ClusterParameterGroupArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -33,9 +33,9 @@ public final class ClusterParameterGroupArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="family", required=true)
-      private final Input<String> family;
+      private final Output<String> family;
 
-    public Input<String> getFamily() {
+    public Output<String> getFamily() {
         return this.family;
     }
 
@@ -44,10 +44,10 @@ public final class ClusterParameterGroupArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -55,10 +55,10 @@ public final class ClusterParameterGroupArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="namePrefix")
-      private final @Nullable Input<String> namePrefix;
+      private final @Nullable Output<String> namePrefix;
 
-    public Input<String> getNamePrefix() {
-        return this.namePrefix == null ? Input.empty() : this.namePrefix;
+    public Output<String> getNamePrefix() {
+        return this.namePrefix == null ? Output.empty() : this.namePrefix;
     }
 
     /**
@@ -66,10 +66,10 @@ public final class ClusterParameterGroupArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="parameters")
-      private final @Nullable Input<List<ClusterParameterGroupParameterArgs>> parameters;
+      private final @Nullable Output<List<ClusterParameterGroupParameterArgs>> parameters;
 
-    public Input<List<ClusterParameterGroupParameterArgs>> getParameters() {
-        return this.parameters == null ? Input.empty() : this.parameters;
+    public Output<List<ClusterParameterGroupParameterArgs>> getParameters() {
+        return this.parameters == null ? Output.empty() : this.parameters;
     }
 
     /**
@@ -77,19 +77,19 @@ public final class ClusterParameterGroupArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public ClusterParameterGroupArgs(
-        @Nullable Input<String> description,
-        Input<String> family,
-        @Nullable Input<String> name,
-        @Nullable Input<String> namePrefix,
-        @Nullable Input<List<ClusterParameterGroupParameterArgs>> parameters,
-        @Nullable Input<Map<String,String>> tags) {
+        @Nullable Output<String> description,
+        Output<String> family,
+        @Nullable Output<String> name,
+        @Nullable Output<String> namePrefix,
+        @Nullable Output<List<ClusterParameterGroupParameterArgs>> parameters,
+        @Nullable Output<Map<String,String>> tags) {
         this.description = description;
         this.family = Objects.requireNonNull(family, "expected parameter 'family' to be non-null");
         this.name = name;
@@ -99,12 +99,12 @@ public final class ClusterParameterGroupArgs extends io.pulumi.resources.Resourc
     }
 
     private ClusterParameterGroupArgs() {
-        this.description = Input.empty();
-        this.family = Input.empty();
-        this.name = Input.empty();
-        this.namePrefix = Input.empty();
-        this.parameters = Input.empty();
-        this.tags = Input.empty();
+        this.description = Output.empty();
+        this.family = Output.empty();
+        this.name = Output.empty();
+        this.namePrefix = Output.empty();
+        this.parameters = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -116,12 +116,12 @@ public final class ClusterParameterGroupArgs extends io.pulumi.resources.Resourc
     }
 
     public static final class Builder {
-        private @Nullable Input<String> description;
-        private Input<String> family;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> namePrefix;
-        private @Nullable Input<List<ClusterParameterGroupParameterArgs>> parameters;
-        private @Nullable Input<Map<String,String>> tags;
+        private @Nullable Output<String> description;
+        private Output<String> family;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> namePrefix;
+        private @Nullable Output<List<ClusterParameterGroupParameterArgs>> parameters;
+        private @Nullable Output<Map<String,String>> tags;
 
         public Builder() {
     	      // Empty
@@ -137,63 +137,63 @@ public final class ClusterParameterGroupArgs extends io.pulumi.resources.Resourc
     	      this.tags = defaults.tags;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder family(Input<String> family) {
+        public Builder family(Output<String> family) {
             this.family = Objects.requireNonNull(family);
             return this;
         }
 
         public Builder family(String family) {
-            this.family = Input.of(Objects.requireNonNull(family));
+            this.family = Output.of(Objects.requireNonNull(family));
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder namePrefix(@Nullable Input<String> namePrefix) {
+        public Builder namePrefix(@Nullable Output<String> namePrefix) {
             this.namePrefix = namePrefix;
             return this;
         }
 
         public Builder namePrefix(@Nullable String namePrefix) {
-            this.namePrefix = Input.ofNullable(namePrefix);
+            this.namePrefix = Output.ofNullable(namePrefix);
             return this;
         }
 
-        public Builder parameters(@Nullable Input<List<ClusterParameterGroupParameterArgs>> parameters) {
+        public Builder parameters(@Nullable Output<List<ClusterParameterGroupParameterArgs>> parameters) {
             this.parameters = parameters;
             return this;
         }
 
         public Builder parameters(@Nullable List<ClusterParameterGroupParameterArgs> parameters) {
-            this.parameters = Input.ofNullable(parameters);
+            this.parameters = Output.ofNullable(parameters);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public ClusterParameterGroupArgs build() {

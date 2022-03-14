@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.chime;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -20,10 +20,10 @@ public final class VoiceConnectorLoggingArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="enableSipLogs")
-      private final @Nullable Input<Boolean> enableSipLogs;
+      private final @Nullable Output<Boolean> enableSipLogs;
 
-    public Input<Boolean> getEnableSipLogs() {
-        return this.enableSipLogs == null ? Input.empty() : this.enableSipLogs;
+    public Output<Boolean> getEnableSipLogs() {
+        return this.enableSipLogs == null ? Output.empty() : this.enableSipLogs;
     }
 
     /**
@@ -31,22 +31,22 @@ public final class VoiceConnectorLoggingArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="voiceConnectorId", required=true)
-      private final Input<String> voiceConnectorId;
+      private final Output<String> voiceConnectorId;
 
-    public Input<String> getVoiceConnectorId() {
+    public Output<String> getVoiceConnectorId() {
         return this.voiceConnectorId;
     }
 
     public VoiceConnectorLoggingArgs(
-        @Nullable Input<Boolean> enableSipLogs,
-        Input<String> voiceConnectorId) {
+        @Nullable Output<Boolean> enableSipLogs,
+        Output<String> voiceConnectorId) {
         this.enableSipLogs = enableSipLogs;
         this.voiceConnectorId = Objects.requireNonNull(voiceConnectorId, "expected parameter 'voiceConnectorId' to be non-null");
     }
 
     private VoiceConnectorLoggingArgs() {
-        this.enableSipLogs = Input.empty();
-        this.voiceConnectorId = Input.empty();
+        this.enableSipLogs = Output.empty();
+        this.voiceConnectorId = Output.empty();
     }
 
     public static Builder builder() {
@@ -58,8 +58,8 @@ public final class VoiceConnectorLoggingArgs extends io.pulumi.resources.Resourc
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> enableSipLogs;
-        private Input<String> voiceConnectorId;
+        private @Nullable Output<Boolean> enableSipLogs;
+        private Output<String> voiceConnectorId;
 
         public Builder() {
     	      // Empty
@@ -71,23 +71,23 @@ public final class VoiceConnectorLoggingArgs extends io.pulumi.resources.Resourc
     	      this.voiceConnectorId = defaults.voiceConnectorId;
         }
 
-        public Builder enableSipLogs(@Nullable Input<Boolean> enableSipLogs) {
+        public Builder enableSipLogs(@Nullable Output<Boolean> enableSipLogs) {
             this.enableSipLogs = enableSipLogs;
             return this;
         }
 
         public Builder enableSipLogs(@Nullable Boolean enableSipLogs) {
-            this.enableSipLogs = Input.ofNullable(enableSipLogs);
+            this.enableSipLogs = Output.ofNullable(enableSipLogs);
             return this;
         }
 
-        public Builder voiceConnectorId(Input<String> voiceConnectorId) {
+        public Builder voiceConnectorId(Output<String> voiceConnectorId) {
             this.voiceConnectorId = Objects.requireNonNull(voiceConnectorId);
             return this;
         }
 
         public Builder voiceConnectorId(String voiceConnectorId) {
-            this.voiceConnectorId = Input.of(Objects.requireNonNull(voiceConnectorId));
+            this.voiceConnectorId = Output.of(Objects.requireNonNull(voiceConnectorId));
             return this;
         }
         public VoiceConnectorLoggingArgs build() {

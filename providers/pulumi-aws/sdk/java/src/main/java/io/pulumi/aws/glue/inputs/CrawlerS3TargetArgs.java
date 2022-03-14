@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.glue.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -21,10 +21,10 @@ public final class CrawlerS3TargetArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="connectionName")
-      private final @Nullable Input<String> connectionName;
+      private final @Nullable Output<String> connectionName;
 
-    public Input<String> getConnectionName() {
-        return this.connectionName == null ? Input.empty() : this.connectionName;
+    public Output<String> getConnectionName() {
+        return this.connectionName == null ? Output.empty() : this.connectionName;
     }
 
     /**
@@ -32,10 +32,10 @@ public final class CrawlerS3TargetArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="dlqEventQueueArn")
-      private final @Nullable Input<String> dlqEventQueueArn;
+      private final @Nullable Output<String> dlqEventQueueArn;
 
-    public Input<String> getDlqEventQueueArn() {
-        return this.dlqEventQueueArn == null ? Input.empty() : this.dlqEventQueueArn;
+    public Output<String> getDlqEventQueueArn() {
+        return this.dlqEventQueueArn == null ? Output.empty() : this.dlqEventQueueArn;
     }
 
     /**
@@ -43,10 +43,10 @@ public final class CrawlerS3TargetArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="eventQueueArn")
-      private final @Nullable Input<String> eventQueueArn;
+      private final @Nullable Output<String> eventQueueArn;
 
-    public Input<String> getEventQueueArn() {
-        return this.eventQueueArn == null ? Input.empty() : this.eventQueueArn;
+    public Output<String> getEventQueueArn() {
+        return this.eventQueueArn == null ? Output.empty() : this.eventQueueArn;
     }
 
     /**
@@ -54,10 +54,10 @@ public final class CrawlerS3TargetArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="exclusions")
-      private final @Nullable Input<List<String>> exclusions;
+      private final @Nullable Output<List<String>> exclusions;
 
-    public Input<List<String>> getExclusions() {
-        return this.exclusions == null ? Input.empty() : this.exclusions;
+    public Output<List<String>> getExclusions() {
+        return this.exclusions == null ? Output.empty() : this.exclusions;
     }
 
     /**
@@ -65,9 +65,9 @@ public final class CrawlerS3TargetArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="path", required=true)
-      private final Input<String> path;
+      private final Output<String> path;
 
-    public Input<String> getPath() {
+    public Output<String> getPath() {
         return this.path;
     }
 
@@ -76,19 +76,19 @@ public final class CrawlerS3TargetArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="sampleSize")
-      private final @Nullable Input<Integer> sampleSize;
+      private final @Nullable Output<Integer> sampleSize;
 
-    public Input<Integer> getSampleSize() {
-        return this.sampleSize == null ? Input.empty() : this.sampleSize;
+    public Output<Integer> getSampleSize() {
+        return this.sampleSize == null ? Output.empty() : this.sampleSize;
     }
 
     public CrawlerS3TargetArgs(
-        @Nullable Input<String> connectionName,
-        @Nullable Input<String> dlqEventQueueArn,
-        @Nullable Input<String> eventQueueArn,
-        @Nullable Input<List<String>> exclusions,
-        Input<String> path,
-        @Nullable Input<Integer> sampleSize) {
+        @Nullable Output<String> connectionName,
+        @Nullable Output<String> dlqEventQueueArn,
+        @Nullable Output<String> eventQueueArn,
+        @Nullable Output<List<String>> exclusions,
+        Output<String> path,
+        @Nullable Output<Integer> sampleSize) {
         this.connectionName = connectionName;
         this.dlqEventQueueArn = dlqEventQueueArn;
         this.eventQueueArn = eventQueueArn;
@@ -98,12 +98,12 @@ public final class CrawlerS3TargetArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private CrawlerS3TargetArgs() {
-        this.connectionName = Input.empty();
-        this.dlqEventQueueArn = Input.empty();
-        this.eventQueueArn = Input.empty();
-        this.exclusions = Input.empty();
-        this.path = Input.empty();
-        this.sampleSize = Input.empty();
+        this.connectionName = Output.empty();
+        this.dlqEventQueueArn = Output.empty();
+        this.eventQueueArn = Output.empty();
+        this.exclusions = Output.empty();
+        this.path = Output.empty();
+        this.sampleSize = Output.empty();
     }
 
     public static Builder builder() {
@@ -115,12 +115,12 @@ public final class CrawlerS3TargetArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private @Nullable Input<String> connectionName;
-        private @Nullable Input<String> dlqEventQueueArn;
-        private @Nullable Input<String> eventQueueArn;
-        private @Nullable Input<List<String>> exclusions;
-        private Input<String> path;
-        private @Nullable Input<Integer> sampleSize;
+        private @Nullable Output<String> connectionName;
+        private @Nullable Output<String> dlqEventQueueArn;
+        private @Nullable Output<String> eventQueueArn;
+        private @Nullable Output<List<String>> exclusions;
+        private Output<String> path;
+        private @Nullable Output<Integer> sampleSize;
 
         public Builder() {
     	      // Empty
@@ -136,63 +136,63 @@ public final class CrawlerS3TargetArgs extends io.pulumi.resources.ResourceArgs 
     	      this.sampleSize = defaults.sampleSize;
         }
 
-        public Builder connectionName(@Nullable Input<String> connectionName) {
+        public Builder connectionName(@Nullable Output<String> connectionName) {
             this.connectionName = connectionName;
             return this;
         }
 
         public Builder connectionName(@Nullable String connectionName) {
-            this.connectionName = Input.ofNullable(connectionName);
+            this.connectionName = Output.ofNullable(connectionName);
             return this;
         }
 
-        public Builder dlqEventQueueArn(@Nullable Input<String> dlqEventQueueArn) {
+        public Builder dlqEventQueueArn(@Nullable Output<String> dlqEventQueueArn) {
             this.dlqEventQueueArn = dlqEventQueueArn;
             return this;
         }
 
         public Builder dlqEventQueueArn(@Nullable String dlqEventQueueArn) {
-            this.dlqEventQueueArn = Input.ofNullable(dlqEventQueueArn);
+            this.dlqEventQueueArn = Output.ofNullable(dlqEventQueueArn);
             return this;
         }
 
-        public Builder eventQueueArn(@Nullable Input<String> eventQueueArn) {
+        public Builder eventQueueArn(@Nullable Output<String> eventQueueArn) {
             this.eventQueueArn = eventQueueArn;
             return this;
         }
 
         public Builder eventQueueArn(@Nullable String eventQueueArn) {
-            this.eventQueueArn = Input.ofNullable(eventQueueArn);
+            this.eventQueueArn = Output.ofNullable(eventQueueArn);
             return this;
         }
 
-        public Builder exclusions(@Nullable Input<List<String>> exclusions) {
+        public Builder exclusions(@Nullable Output<List<String>> exclusions) {
             this.exclusions = exclusions;
             return this;
         }
 
         public Builder exclusions(@Nullable List<String> exclusions) {
-            this.exclusions = Input.ofNullable(exclusions);
+            this.exclusions = Output.ofNullable(exclusions);
             return this;
         }
 
-        public Builder path(Input<String> path) {
+        public Builder path(Output<String> path) {
             this.path = Objects.requireNonNull(path);
             return this;
         }
 
         public Builder path(String path) {
-            this.path = Input.of(Objects.requireNonNull(path));
+            this.path = Output.of(Objects.requireNonNull(path));
             return this;
         }
 
-        public Builder sampleSize(@Nullable Input<Integer> sampleSize) {
+        public Builder sampleSize(@Nullable Output<Integer> sampleSize) {
             this.sampleSize = sampleSize;
             return this;
         }
 
         public Builder sampleSize(@Nullable Integer sampleSize) {
-            this.sampleSize = Input.ofNullable(sampleSize);
+            this.sampleSize = Output.ofNullable(sampleSize);
             return this;
         }
         public CrawlerS3TargetArgs build() {

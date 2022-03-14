@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.resources;
 
 import io.pulumi.azurenative.resources.inputs.LinkedTemplateArtifactArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
@@ -23,10 +23,10 @@ public final class TemplateSpecVersionArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class TemplateSpecVersionArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="linkedTemplates")
-      private final @Nullable Input<List<LinkedTemplateArtifactArgs>> linkedTemplates;
+      private final @Nullable Output<List<LinkedTemplateArtifactArgs>> linkedTemplates;
 
-    public Input<List<LinkedTemplateArtifactArgs>> getLinkedTemplates() {
-        return this.linkedTemplates == null ? Input.empty() : this.linkedTemplates;
+    public Output<List<LinkedTemplateArtifactArgs>> getLinkedTemplates() {
+        return this.linkedTemplates == null ? Output.empty() : this.linkedTemplates;
     }
 
     /**
@@ -45,10 +45,10 @@ public final class TemplateSpecVersionArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -56,10 +56,10 @@ public final class TemplateSpecVersionArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="mainTemplate")
-      private final @Nullable Input<Object> mainTemplate;
+      private final @Nullable Output<Object> mainTemplate;
 
-    public Input<Object> getMainTemplate() {
-        return this.mainTemplate == null ? Input.empty() : this.mainTemplate;
+    public Output<Object> getMainTemplate() {
+        return this.mainTemplate == null ? Output.empty() : this.mainTemplate;
     }
 
     /**
@@ -67,10 +67,10 @@ public final class TemplateSpecVersionArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="metadata")
-      private final @Nullable Input<Object> metadata;
+      private final @Nullable Output<Object> metadata;
 
-    public Input<Object> getMetadata() {
-        return this.metadata == null ? Input.empty() : this.metadata;
+    public Output<Object> getMetadata() {
+        return this.metadata == null ? Output.empty() : this.metadata;
     }
 
     /**
@@ -78,9 +78,9 @@ public final class TemplateSpecVersionArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -89,10 +89,10 @@ public final class TemplateSpecVersionArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -100,9 +100,9 @@ public final class TemplateSpecVersionArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="templateSpecName", required=true)
-      private final Input<String> templateSpecName;
+      private final Output<String> templateSpecName;
 
-    public Input<String> getTemplateSpecName() {
+    public Output<String> getTemplateSpecName() {
         return this.templateSpecName;
     }
 
@@ -111,10 +111,10 @@ public final class TemplateSpecVersionArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="templateSpecVersion")
-      private final @Nullable Input<String> templateSpecVersion;
+      private final @Nullable Output<String> templateSpecVersion;
 
-    public Input<String> getTemplateSpecVersion() {
-        return this.templateSpecVersion == null ? Input.empty() : this.templateSpecVersion;
+    public Output<String> getTemplateSpecVersion() {
+        return this.templateSpecVersion == null ? Output.empty() : this.templateSpecVersion;
     }
 
     /**
@@ -122,23 +122,23 @@ public final class TemplateSpecVersionArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="uiFormDefinition")
-      private final @Nullable Input<Object> uiFormDefinition;
+      private final @Nullable Output<Object> uiFormDefinition;
 
-    public Input<Object> getUiFormDefinition() {
-        return this.uiFormDefinition == null ? Input.empty() : this.uiFormDefinition;
+    public Output<Object> getUiFormDefinition() {
+        return this.uiFormDefinition == null ? Output.empty() : this.uiFormDefinition;
     }
 
     public TemplateSpecVersionArgs(
-        @Nullable Input<String> description,
-        @Nullable Input<List<LinkedTemplateArtifactArgs>> linkedTemplates,
-        @Nullable Input<String> location,
-        @Nullable Input<Object> mainTemplate,
-        @Nullable Input<Object> metadata,
-        Input<String> resourceGroupName,
-        @Nullable Input<Map<String,String>> tags,
-        Input<String> templateSpecName,
-        @Nullable Input<String> templateSpecVersion,
-        @Nullable Input<Object> uiFormDefinition) {
+        @Nullable Output<String> description,
+        @Nullable Output<List<LinkedTemplateArtifactArgs>> linkedTemplates,
+        @Nullable Output<String> location,
+        @Nullable Output<Object> mainTemplate,
+        @Nullable Output<Object> metadata,
+        Output<String> resourceGroupName,
+        @Nullable Output<Map<String,String>> tags,
+        Output<String> templateSpecName,
+        @Nullable Output<String> templateSpecVersion,
+        @Nullable Output<Object> uiFormDefinition) {
         this.description = description;
         this.linkedTemplates = linkedTemplates;
         this.location = location;
@@ -152,16 +152,16 @@ public final class TemplateSpecVersionArgs extends io.pulumi.resources.ResourceA
     }
 
     private TemplateSpecVersionArgs() {
-        this.description = Input.empty();
-        this.linkedTemplates = Input.empty();
-        this.location = Input.empty();
-        this.mainTemplate = Input.empty();
-        this.metadata = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.tags = Input.empty();
-        this.templateSpecName = Input.empty();
-        this.templateSpecVersion = Input.empty();
-        this.uiFormDefinition = Input.empty();
+        this.description = Output.empty();
+        this.linkedTemplates = Output.empty();
+        this.location = Output.empty();
+        this.mainTemplate = Output.empty();
+        this.metadata = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.tags = Output.empty();
+        this.templateSpecName = Output.empty();
+        this.templateSpecVersion = Output.empty();
+        this.uiFormDefinition = Output.empty();
     }
 
     public static Builder builder() {
@@ -173,16 +173,16 @@ public final class TemplateSpecVersionArgs extends io.pulumi.resources.ResourceA
     }
 
     public static final class Builder {
-        private @Nullable Input<String> description;
-        private @Nullable Input<List<LinkedTemplateArtifactArgs>> linkedTemplates;
-        private @Nullable Input<String> location;
-        private @Nullable Input<Object> mainTemplate;
-        private @Nullable Input<Object> metadata;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<Map<String,String>> tags;
-        private Input<String> templateSpecName;
-        private @Nullable Input<String> templateSpecVersion;
-        private @Nullable Input<Object> uiFormDefinition;
+        private @Nullable Output<String> description;
+        private @Nullable Output<List<LinkedTemplateArtifactArgs>> linkedTemplates;
+        private @Nullable Output<String> location;
+        private @Nullable Output<Object> mainTemplate;
+        private @Nullable Output<Object> metadata;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<Map<String,String>> tags;
+        private Output<String> templateSpecName;
+        private @Nullable Output<String> templateSpecVersion;
+        private @Nullable Output<Object> uiFormDefinition;
 
         public Builder() {
     	      // Empty
@@ -202,103 +202,103 @@ public final class TemplateSpecVersionArgs extends io.pulumi.resources.ResourceA
     	      this.uiFormDefinition = defaults.uiFormDefinition;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder linkedTemplates(@Nullable Input<List<LinkedTemplateArtifactArgs>> linkedTemplates) {
+        public Builder linkedTemplates(@Nullable Output<List<LinkedTemplateArtifactArgs>> linkedTemplates) {
             this.linkedTemplates = linkedTemplates;
             return this;
         }
 
         public Builder linkedTemplates(@Nullable List<LinkedTemplateArtifactArgs> linkedTemplates) {
-            this.linkedTemplates = Input.ofNullable(linkedTemplates);
+            this.linkedTemplates = Output.ofNullable(linkedTemplates);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder mainTemplate(@Nullable Input<Object> mainTemplate) {
+        public Builder mainTemplate(@Nullable Output<Object> mainTemplate) {
             this.mainTemplate = mainTemplate;
             return this;
         }
 
         public Builder mainTemplate(@Nullable Object mainTemplate) {
-            this.mainTemplate = Input.ofNullable(mainTemplate);
+            this.mainTemplate = Output.ofNullable(mainTemplate);
             return this;
         }
 
-        public Builder metadata(@Nullable Input<Object> metadata) {
+        public Builder metadata(@Nullable Output<Object> metadata) {
             this.metadata = metadata;
             return this;
         }
 
         public Builder metadata(@Nullable Object metadata) {
-            this.metadata = Input.ofNullable(metadata);
+            this.metadata = Output.ofNullable(metadata);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder templateSpecName(Input<String> templateSpecName) {
+        public Builder templateSpecName(Output<String> templateSpecName) {
             this.templateSpecName = Objects.requireNonNull(templateSpecName);
             return this;
         }
 
         public Builder templateSpecName(String templateSpecName) {
-            this.templateSpecName = Input.of(Objects.requireNonNull(templateSpecName));
+            this.templateSpecName = Output.of(Objects.requireNonNull(templateSpecName));
             return this;
         }
 
-        public Builder templateSpecVersion(@Nullable Input<String> templateSpecVersion) {
+        public Builder templateSpecVersion(@Nullable Output<String> templateSpecVersion) {
             this.templateSpecVersion = templateSpecVersion;
             return this;
         }
 
         public Builder templateSpecVersion(@Nullable String templateSpecVersion) {
-            this.templateSpecVersion = Input.ofNullable(templateSpecVersion);
+            this.templateSpecVersion = Output.ofNullable(templateSpecVersion);
             return this;
         }
 
-        public Builder uiFormDefinition(@Nullable Input<Object> uiFormDefinition) {
+        public Builder uiFormDefinition(@Nullable Output<Object> uiFormDefinition) {
             this.uiFormDefinition = uiFormDefinition;
             return this;
         }
 
         public Builder uiFormDefinition(@Nullable Object uiFormDefinition) {
-            this.uiFormDefinition = Input.ofNullable(uiFormDefinition);
+            this.uiFormDefinition = Output.ofNullable(uiFormDefinition);
             return this;
         }
         public TemplateSpecVersionArgs build() {

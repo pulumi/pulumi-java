@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.glue.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -20,17 +20,17 @@ public final class CatalogTablePartitionIndexArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="indexName", required=true)
-      private final Input<String> indexName;
+      private final Output<String> indexName;
 
-    public Input<String> getIndexName() {
+    public Output<String> getIndexName() {
         return this.indexName;
     }
 
     @InputImport(name="indexStatus")
-      private final @Nullable Input<String> indexStatus;
+      private final @Nullable Output<String> indexStatus;
 
-    public Input<String> getIndexStatus() {
-        return this.indexStatus == null ? Input.empty() : this.indexStatus;
+    public Output<String> getIndexStatus() {
+        return this.indexStatus == null ? Output.empty() : this.indexStatus;
     }
 
     /**
@@ -38,25 +38,25 @@ public final class CatalogTablePartitionIndexArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="keys", required=true)
-      private final Input<List<String>> keys;
+      private final Output<List<String>> keys;
 
-    public Input<List<String>> getKeys() {
+    public Output<List<String>> getKeys() {
         return this.keys;
     }
 
     public CatalogTablePartitionIndexArgs(
-        Input<String> indexName,
-        @Nullable Input<String> indexStatus,
-        Input<List<String>> keys) {
+        Output<String> indexName,
+        @Nullable Output<String> indexStatus,
+        Output<List<String>> keys) {
         this.indexName = Objects.requireNonNull(indexName, "expected parameter 'indexName' to be non-null");
         this.indexStatus = indexStatus;
         this.keys = Objects.requireNonNull(keys, "expected parameter 'keys' to be non-null");
     }
 
     private CatalogTablePartitionIndexArgs() {
-        this.indexName = Input.empty();
-        this.indexStatus = Input.empty();
-        this.keys = Input.empty();
+        this.indexName = Output.empty();
+        this.indexStatus = Output.empty();
+        this.keys = Output.empty();
     }
 
     public static Builder builder() {
@@ -68,9 +68,9 @@ public final class CatalogTablePartitionIndexArgs extends io.pulumi.resources.Re
     }
 
     public static final class Builder {
-        private Input<String> indexName;
-        private @Nullable Input<String> indexStatus;
-        private Input<List<String>> keys;
+        private Output<String> indexName;
+        private @Nullable Output<String> indexStatus;
+        private Output<List<String>> keys;
 
         public Builder() {
     	      // Empty
@@ -83,33 +83,33 @@ public final class CatalogTablePartitionIndexArgs extends io.pulumi.resources.Re
     	      this.keys = defaults.keys;
         }
 
-        public Builder indexName(Input<String> indexName) {
+        public Builder indexName(Output<String> indexName) {
             this.indexName = Objects.requireNonNull(indexName);
             return this;
         }
 
         public Builder indexName(String indexName) {
-            this.indexName = Input.of(Objects.requireNonNull(indexName));
+            this.indexName = Output.of(Objects.requireNonNull(indexName));
             return this;
         }
 
-        public Builder indexStatus(@Nullable Input<String> indexStatus) {
+        public Builder indexStatus(@Nullable Output<String> indexStatus) {
             this.indexStatus = indexStatus;
             return this;
         }
 
         public Builder indexStatus(@Nullable String indexStatus) {
-            this.indexStatus = Input.ofNullable(indexStatus);
+            this.indexStatus = Output.ofNullable(indexStatus);
             return this;
         }
 
-        public Builder keys(Input<List<String>> keys) {
+        public Builder keys(Output<List<String>> keys) {
             this.keys = Objects.requireNonNull(keys);
             return this;
         }
 
         public Builder keys(List<String> keys) {
-            this.keys = Input.of(Objects.requireNonNull(keys));
+            this.keys = Output.of(Objects.requireNonNull(keys));
             return this;
         }
         public CatalogTablePartitionIndexArgs build() {

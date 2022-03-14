@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.containeranalysis.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -28,9 +28,9 @@ public final class OccurenceAttestationSignatureArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="publicKeyId", required=true)
-      private final Input<String> publicKeyId;
+      private final Output<String> publicKeyId;
 
-    public Input<String> getPublicKeyId() {
+    public Output<String> getPublicKeyId() {
         return this.publicKeyId;
     }
 
@@ -45,22 +45,22 @@ public final class OccurenceAttestationSignatureArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="signature")
-      private final @Nullable Input<String> signature;
+      private final @Nullable Output<String> signature;
 
-    public Input<String> getSignature() {
-        return this.signature == null ? Input.empty() : this.signature;
+    public Output<String> getSignature() {
+        return this.signature == null ? Output.empty() : this.signature;
     }
 
     public OccurenceAttestationSignatureArgs(
-        Input<String> publicKeyId,
-        @Nullable Input<String> signature) {
+        Output<String> publicKeyId,
+        @Nullable Output<String> signature) {
         this.publicKeyId = Objects.requireNonNull(publicKeyId, "expected parameter 'publicKeyId' to be non-null");
         this.signature = signature;
     }
 
     private OccurenceAttestationSignatureArgs() {
-        this.publicKeyId = Input.empty();
-        this.signature = Input.empty();
+        this.publicKeyId = Output.empty();
+        this.signature = Output.empty();
     }
 
     public static Builder builder() {
@@ -72,8 +72,8 @@ public final class OccurenceAttestationSignatureArgs extends io.pulumi.resources
     }
 
     public static final class Builder {
-        private Input<String> publicKeyId;
-        private @Nullable Input<String> signature;
+        private Output<String> publicKeyId;
+        private @Nullable Output<String> signature;
 
         public Builder() {
     	      // Empty
@@ -85,23 +85,23 @@ public final class OccurenceAttestationSignatureArgs extends io.pulumi.resources
     	      this.signature = defaults.signature;
         }
 
-        public Builder publicKeyId(Input<String> publicKeyId) {
+        public Builder publicKeyId(Output<String> publicKeyId) {
             this.publicKeyId = Objects.requireNonNull(publicKeyId);
             return this;
         }
 
         public Builder publicKeyId(String publicKeyId) {
-            this.publicKeyId = Input.of(Objects.requireNonNull(publicKeyId));
+            this.publicKeyId = Output.of(Objects.requireNonNull(publicKeyId));
             return this;
         }
 
-        public Builder signature(@Nullable Input<String> signature) {
+        public Builder signature(@Nullable Output<String> signature) {
             this.signature = signature;
             return this;
         }
 
         public Builder signature(@Nullable String signature) {
-            this.signature = Input.ofNullable(signature);
+            this.signature = Output.ofNullable(signature);
             return this;
         }
         public OccurenceAttestationSignatureArgs build() {

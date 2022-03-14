@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.domainregistration.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -24,10 +24,10 @@ public final class DomainPurchaseConsentArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="agreedAt")
-      private final @Nullable Input<String> agreedAt;
+      private final @Nullable Output<String> agreedAt;
 
-    public Input<String> getAgreedAt() {
-        return this.agreedAt == null ? Input.empty() : this.agreedAt;
+    public Output<String> getAgreedAt() {
+        return this.agreedAt == null ? Output.empty() : this.agreedAt;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class DomainPurchaseConsentArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="agreedBy")
-      private final @Nullable Input<String> agreedBy;
+      private final @Nullable Output<String> agreedBy;
 
-    public Input<String> getAgreedBy() {
-        return this.agreedBy == null ? Input.empty() : this.agreedBy;
+    public Output<String> getAgreedBy() {
+        return this.agreedBy == null ? Output.empty() : this.agreedBy;
     }
 
     /**
@@ -46,25 +46,25 @@ public final class DomainPurchaseConsentArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="agreementKeys")
-      private final @Nullable Input<List<String>> agreementKeys;
+      private final @Nullable Output<List<String>> agreementKeys;
 
-    public Input<List<String>> getAgreementKeys() {
-        return this.agreementKeys == null ? Input.empty() : this.agreementKeys;
+    public Output<List<String>> getAgreementKeys() {
+        return this.agreementKeys == null ? Output.empty() : this.agreementKeys;
     }
 
     public DomainPurchaseConsentArgs(
-        @Nullable Input<String> agreedAt,
-        @Nullable Input<String> agreedBy,
-        @Nullable Input<List<String>> agreementKeys) {
+        @Nullable Output<String> agreedAt,
+        @Nullable Output<String> agreedBy,
+        @Nullable Output<List<String>> agreementKeys) {
         this.agreedAt = agreedAt;
         this.agreedBy = agreedBy;
         this.agreementKeys = agreementKeys;
     }
 
     private DomainPurchaseConsentArgs() {
-        this.agreedAt = Input.empty();
-        this.agreedBy = Input.empty();
-        this.agreementKeys = Input.empty();
+        this.agreedAt = Output.empty();
+        this.agreedBy = Output.empty();
+        this.agreementKeys = Output.empty();
     }
 
     public static Builder builder() {
@@ -76,9 +76,9 @@ public final class DomainPurchaseConsentArgs extends io.pulumi.resources.Resourc
     }
 
     public static final class Builder {
-        private @Nullable Input<String> agreedAt;
-        private @Nullable Input<String> agreedBy;
-        private @Nullable Input<List<String>> agreementKeys;
+        private @Nullable Output<String> agreedAt;
+        private @Nullable Output<String> agreedBy;
+        private @Nullable Output<List<String>> agreementKeys;
 
         public Builder() {
     	      // Empty
@@ -91,33 +91,33 @@ public final class DomainPurchaseConsentArgs extends io.pulumi.resources.Resourc
     	      this.agreementKeys = defaults.agreementKeys;
         }
 
-        public Builder agreedAt(@Nullable Input<String> agreedAt) {
+        public Builder agreedAt(@Nullable Output<String> agreedAt) {
             this.agreedAt = agreedAt;
             return this;
         }
 
         public Builder agreedAt(@Nullable String agreedAt) {
-            this.agreedAt = Input.ofNullable(agreedAt);
+            this.agreedAt = Output.ofNullable(agreedAt);
             return this;
         }
 
-        public Builder agreedBy(@Nullable Input<String> agreedBy) {
+        public Builder agreedBy(@Nullable Output<String> agreedBy) {
             this.agreedBy = agreedBy;
             return this;
         }
 
         public Builder agreedBy(@Nullable String agreedBy) {
-            this.agreedBy = Input.ofNullable(agreedBy);
+            this.agreedBy = Output.ofNullable(agreedBy);
             return this;
         }
 
-        public Builder agreementKeys(@Nullable Input<List<String>> agreementKeys) {
+        public Builder agreementKeys(@Nullable Output<List<String>> agreementKeys) {
             this.agreementKeys = agreementKeys;
             return this;
         }
 
         public Builder agreementKeys(@Nullable List<String> agreementKeys) {
-            this.agreementKeys = Input.ofNullable(agreementKeys);
+            this.agreementKeys = Output.ofNullable(agreementKeys);
             return this;
         }
         public DomainPurchaseConsentArgs build() {

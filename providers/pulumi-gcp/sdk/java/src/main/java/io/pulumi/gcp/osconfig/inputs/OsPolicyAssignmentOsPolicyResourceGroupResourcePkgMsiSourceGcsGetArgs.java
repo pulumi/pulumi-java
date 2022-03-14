@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.osconfig.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -20,9 +20,9 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourcePkgMsiSourceGc
      * 
      */
     @InputImport(name="bucket", required=true)
-      private final Input<String> bucket;
+      private final Output<String> bucket;
 
-    public Input<String> getBucket() {
+    public Output<String> getBucket() {
         return this.bucket;
     }
 
@@ -31,10 +31,10 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourcePkgMsiSourceGc
      * 
      */
     @InputImport(name="generation")
-      private final @Nullable Input<Integer> generation;
+      private final @Nullable Output<Integer> generation;
 
-    public Input<Integer> getGeneration() {
-        return this.generation == null ? Input.empty() : this.generation;
+    public Output<Integer> getGeneration() {
+        return this.generation == null ? Output.empty() : this.generation;
     }
 
     /**
@@ -42,25 +42,25 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourcePkgMsiSourceGc
      * 
      */
     @InputImport(name="object", required=true)
-      private final Input<String> object;
+      private final Output<String> object;
 
-    public Input<String> getObject() {
+    public Output<String> getObject() {
         return this.object;
     }
 
     public OsPolicyAssignmentOsPolicyResourceGroupResourcePkgMsiSourceGcsGetArgs(
-        Input<String> bucket,
-        @Nullable Input<Integer> generation,
-        Input<String> object) {
+        Output<String> bucket,
+        @Nullable Output<Integer> generation,
+        Output<String> object) {
         this.bucket = Objects.requireNonNull(bucket, "expected parameter 'bucket' to be non-null");
         this.generation = generation;
         this.object = Objects.requireNonNull(object, "expected parameter 'object' to be non-null");
     }
 
     private OsPolicyAssignmentOsPolicyResourceGroupResourcePkgMsiSourceGcsGetArgs() {
-        this.bucket = Input.empty();
-        this.generation = Input.empty();
-        this.object = Input.empty();
+        this.bucket = Output.empty();
+        this.generation = Output.empty();
+        this.object = Output.empty();
     }
 
     public static Builder builder() {
@@ -72,9 +72,9 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourcePkgMsiSourceGc
     }
 
     public static final class Builder {
-        private Input<String> bucket;
-        private @Nullable Input<Integer> generation;
-        private Input<String> object;
+        private Output<String> bucket;
+        private @Nullable Output<Integer> generation;
+        private Output<String> object;
 
         public Builder() {
     	      // Empty
@@ -87,33 +87,33 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourcePkgMsiSourceGc
     	      this.object = defaults.object;
         }
 
-        public Builder bucket(Input<String> bucket) {
+        public Builder bucket(Output<String> bucket) {
             this.bucket = Objects.requireNonNull(bucket);
             return this;
         }
 
         public Builder bucket(String bucket) {
-            this.bucket = Input.of(Objects.requireNonNull(bucket));
+            this.bucket = Output.of(Objects.requireNonNull(bucket));
             return this;
         }
 
-        public Builder generation(@Nullable Input<Integer> generation) {
+        public Builder generation(@Nullable Output<Integer> generation) {
             this.generation = generation;
             return this;
         }
 
         public Builder generation(@Nullable Integer generation) {
-            this.generation = Input.ofNullable(generation);
+            this.generation = Output.ofNullable(generation);
             return this;
         }
 
-        public Builder object(Input<String> object) {
+        public Builder object(Output<String> object) {
             this.object = Objects.requireNonNull(object);
             return this;
         }
 
         public Builder object(String object) {
-            this.object = Input.of(Objects.requireNonNull(object));
+            this.object = Output.of(Objects.requireNonNull(object));
             return this;
         }
         public OsPolicyAssignmentOsPolicyResourceGroupResourcePkgMsiSourceGcsGetArgs build() {

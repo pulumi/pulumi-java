@@ -9,7 +9,7 @@ import io.pulumi.aws.ecs.inputs.TaskDefinitionPlacementConstraintArgs;
 import io.pulumi.aws.ecs.inputs.TaskDefinitionProxyConfigurationArgs;
 import io.pulumi.aws.ecs.inputs.TaskDefinitionRuntimePlatformArgs;
 import io.pulumi.aws.ecs.inputs.TaskDefinitionVolumeArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -28,9 +28,9 @@ public final class TaskDefinitionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="containerDefinitions", required=true)
-      private final Input<String> containerDefinitions;
+      private final Output<String> containerDefinitions;
 
-    public Input<String> getContainerDefinitions() {
+    public Output<String> getContainerDefinitions() {
         return this.containerDefinitions;
     }
 
@@ -39,10 +39,10 @@ public final class TaskDefinitionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="cpu")
-      private final @Nullable Input<String> cpu;
+      private final @Nullable Output<String> cpu;
 
-    public Input<String> getCpu() {
-        return this.cpu == null ? Input.empty() : this.cpu;
+    public Output<String> getCpu() {
+        return this.cpu == null ? Output.empty() : this.cpu;
     }
 
     /**
@@ -50,10 +50,10 @@ public final class TaskDefinitionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ephemeralStorage")
-      private final @Nullable Input<TaskDefinitionEphemeralStorageArgs> ephemeralStorage;
+      private final @Nullable Output<TaskDefinitionEphemeralStorageArgs> ephemeralStorage;
 
-    public Input<TaskDefinitionEphemeralStorageArgs> getEphemeralStorage() {
-        return this.ephemeralStorage == null ? Input.empty() : this.ephemeralStorage;
+    public Output<TaskDefinitionEphemeralStorageArgs> getEphemeralStorage() {
+        return this.ephemeralStorage == null ? Output.empty() : this.ephemeralStorage;
     }
 
     /**
@@ -61,10 +61,10 @@ public final class TaskDefinitionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="executionRoleArn")
-      private final @Nullable Input<String> executionRoleArn;
+      private final @Nullable Output<String> executionRoleArn;
 
-    public Input<String> getExecutionRoleArn() {
-        return this.executionRoleArn == null ? Input.empty() : this.executionRoleArn;
+    public Output<String> getExecutionRoleArn() {
+        return this.executionRoleArn == null ? Output.empty() : this.executionRoleArn;
     }
 
     /**
@@ -72,9 +72,9 @@ public final class TaskDefinitionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="family", required=true)
-      private final Input<String> family;
+      private final Output<String> family;
 
-    public Input<String> getFamily() {
+    public Output<String> getFamily() {
         return this.family;
     }
 
@@ -83,10 +83,10 @@ public final class TaskDefinitionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="inferenceAccelerators")
-      private final @Nullable Input<List<TaskDefinitionInferenceAcceleratorArgs>> inferenceAccelerators;
+      private final @Nullable Output<List<TaskDefinitionInferenceAcceleratorArgs>> inferenceAccelerators;
 
-    public Input<List<TaskDefinitionInferenceAcceleratorArgs>> getInferenceAccelerators() {
-        return this.inferenceAccelerators == null ? Input.empty() : this.inferenceAccelerators;
+    public Output<List<TaskDefinitionInferenceAcceleratorArgs>> getInferenceAccelerators() {
+        return this.inferenceAccelerators == null ? Output.empty() : this.inferenceAccelerators;
     }
 
     /**
@@ -94,10 +94,10 @@ public final class TaskDefinitionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ipcMode")
-      private final @Nullable Input<String> ipcMode;
+      private final @Nullable Output<String> ipcMode;
 
-    public Input<String> getIpcMode() {
-        return this.ipcMode == null ? Input.empty() : this.ipcMode;
+    public Output<String> getIpcMode() {
+        return this.ipcMode == null ? Output.empty() : this.ipcMode;
     }
 
     /**
@@ -105,10 +105,10 @@ public final class TaskDefinitionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="memory")
-      private final @Nullable Input<String> memory;
+      private final @Nullable Output<String> memory;
 
-    public Input<String> getMemory() {
-        return this.memory == null ? Input.empty() : this.memory;
+    public Output<String> getMemory() {
+        return this.memory == null ? Output.empty() : this.memory;
     }
 
     /**
@@ -116,10 +116,10 @@ public final class TaskDefinitionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="networkMode")
-      private final @Nullable Input<String> networkMode;
+      private final @Nullable Output<String> networkMode;
 
-    public Input<String> getNetworkMode() {
-        return this.networkMode == null ? Input.empty() : this.networkMode;
+    public Output<String> getNetworkMode() {
+        return this.networkMode == null ? Output.empty() : this.networkMode;
     }
 
     /**
@@ -127,10 +127,10 @@ public final class TaskDefinitionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="pidMode")
-      private final @Nullable Input<String> pidMode;
+      private final @Nullable Output<String> pidMode;
 
-    public Input<String> getPidMode() {
-        return this.pidMode == null ? Input.empty() : this.pidMode;
+    public Output<String> getPidMode() {
+        return this.pidMode == null ? Output.empty() : this.pidMode;
     }
 
     /**
@@ -138,10 +138,10 @@ public final class TaskDefinitionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="placementConstraints")
-      private final @Nullable Input<List<TaskDefinitionPlacementConstraintArgs>> placementConstraints;
+      private final @Nullable Output<List<TaskDefinitionPlacementConstraintArgs>> placementConstraints;
 
-    public Input<List<TaskDefinitionPlacementConstraintArgs>> getPlacementConstraints() {
-        return this.placementConstraints == null ? Input.empty() : this.placementConstraints;
+    public Output<List<TaskDefinitionPlacementConstraintArgs>> getPlacementConstraints() {
+        return this.placementConstraints == null ? Output.empty() : this.placementConstraints;
     }
 
     /**
@@ -149,10 +149,10 @@ public final class TaskDefinitionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="proxyConfiguration")
-      private final @Nullable Input<TaskDefinitionProxyConfigurationArgs> proxyConfiguration;
+      private final @Nullable Output<TaskDefinitionProxyConfigurationArgs> proxyConfiguration;
 
-    public Input<TaskDefinitionProxyConfigurationArgs> getProxyConfiguration() {
-        return this.proxyConfiguration == null ? Input.empty() : this.proxyConfiguration;
+    public Output<TaskDefinitionProxyConfigurationArgs> getProxyConfiguration() {
+        return this.proxyConfiguration == null ? Output.empty() : this.proxyConfiguration;
     }
 
     /**
@@ -160,10 +160,10 @@ public final class TaskDefinitionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="requiresCompatibilities")
-      private final @Nullable Input<List<String>> requiresCompatibilities;
+      private final @Nullable Output<List<String>> requiresCompatibilities;
 
-    public Input<List<String>> getRequiresCompatibilities() {
-        return this.requiresCompatibilities == null ? Input.empty() : this.requiresCompatibilities;
+    public Output<List<String>> getRequiresCompatibilities() {
+        return this.requiresCompatibilities == null ? Output.empty() : this.requiresCompatibilities;
     }
 
     /**
@@ -171,17 +171,17 @@ public final class TaskDefinitionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="runtimePlatform")
-      private final @Nullable Input<TaskDefinitionRuntimePlatformArgs> runtimePlatform;
+      private final @Nullable Output<TaskDefinitionRuntimePlatformArgs> runtimePlatform;
 
-    public Input<TaskDefinitionRuntimePlatformArgs> getRuntimePlatform() {
-        return this.runtimePlatform == null ? Input.empty() : this.runtimePlatform;
+    public Output<TaskDefinitionRuntimePlatformArgs> getRuntimePlatform() {
+        return this.runtimePlatform == null ? Output.empty() : this.runtimePlatform;
     }
 
     @InputImport(name="skipDestroy")
-      private final @Nullable Input<Boolean> skipDestroy;
+      private final @Nullable Output<Boolean> skipDestroy;
 
-    public Input<Boolean> getSkipDestroy() {
-        return this.skipDestroy == null ? Input.empty() : this.skipDestroy;
+    public Output<Boolean> getSkipDestroy() {
+        return this.skipDestroy == null ? Output.empty() : this.skipDestroy;
     }
 
     /**
@@ -189,10 +189,10 @@ public final class TaskDefinitionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -200,10 +200,10 @@ public final class TaskDefinitionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="taskRoleArn")
-      private final @Nullable Input<String> taskRoleArn;
+      private final @Nullable Output<String> taskRoleArn;
 
-    public Input<String> getTaskRoleArn() {
-        return this.taskRoleArn == null ? Input.empty() : this.taskRoleArn;
+    public Output<String> getTaskRoleArn() {
+        return this.taskRoleArn == null ? Output.empty() : this.taskRoleArn;
     }
 
     /**
@@ -211,31 +211,31 @@ public final class TaskDefinitionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="volumes")
-      private final @Nullable Input<List<TaskDefinitionVolumeArgs>> volumes;
+      private final @Nullable Output<List<TaskDefinitionVolumeArgs>> volumes;
 
-    public Input<List<TaskDefinitionVolumeArgs>> getVolumes() {
-        return this.volumes == null ? Input.empty() : this.volumes;
+    public Output<List<TaskDefinitionVolumeArgs>> getVolumes() {
+        return this.volumes == null ? Output.empty() : this.volumes;
     }
 
     public TaskDefinitionArgs(
-        Input<String> containerDefinitions,
-        @Nullable Input<String> cpu,
-        @Nullable Input<TaskDefinitionEphemeralStorageArgs> ephemeralStorage,
-        @Nullable Input<String> executionRoleArn,
-        Input<String> family,
-        @Nullable Input<List<TaskDefinitionInferenceAcceleratorArgs>> inferenceAccelerators,
-        @Nullable Input<String> ipcMode,
-        @Nullable Input<String> memory,
-        @Nullable Input<String> networkMode,
-        @Nullable Input<String> pidMode,
-        @Nullable Input<List<TaskDefinitionPlacementConstraintArgs>> placementConstraints,
-        @Nullable Input<TaskDefinitionProxyConfigurationArgs> proxyConfiguration,
-        @Nullable Input<List<String>> requiresCompatibilities,
-        @Nullable Input<TaskDefinitionRuntimePlatformArgs> runtimePlatform,
-        @Nullable Input<Boolean> skipDestroy,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<String> taskRoleArn,
-        @Nullable Input<List<TaskDefinitionVolumeArgs>> volumes) {
+        Output<String> containerDefinitions,
+        @Nullable Output<String> cpu,
+        @Nullable Output<TaskDefinitionEphemeralStorageArgs> ephemeralStorage,
+        @Nullable Output<String> executionRoleArn,
+        Output<String> family,
+        @Nullable Output<List<TaskDefinitionInferenceAcceleratorArgs>> inferenceAccelerators,
+        @Nullable Output<String> ipcMode,
+        @Nullable Output<String> memory,
+        @Nullable Output<String> networkMode,
+        @Nullable Output<String> pidMode,
+        @Nullable Output<List<TaskDefinitionPlacementConstraintArgs>> placementConstraints,
+        @Nullable Output<TaskDefinitionProxyConfigurationArgs> proxyConfiguration,
+        @Nullable Output<List<String>> requiresCompatibilities,
+        @Nullable Output<TaskDefinitionRuntimePlatformArgs> runtimePlatform,
+        @Nullable Output<Boolean> skipDestroy,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<String> taskRoleArn,
+        @Nullable Output<List<TaskDefinitionVolumeArgs>> volumes) {
         this.containerDefinitions = Objects.requireNonNull(containerDefinitions, "expected parameter 'containerDefinitions' to be non-null");
         this.cpu = cpu;
         this.ephemeralStorage = ephemeralStorage;
@@ -257,24 +257,24 @@ public final class TaskDefinitionArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private TaskDefinitionArgs() {
-        this.containerDefinitions = Input.empty();
-        this.cpu = Input.empty();
-        this.ephemeralStorage = Input.empty();
-        this.executionRoleArn = Input.empty();
-        this.family = Input.empty();
-        this.inferenceAccelerators = Input.empty();
-        this.ipcMode = Input.empty();
-        this.memory = Input.empty();
-        this.networkMode = Input.empty();
-        this.pidMode = Input.empty();
-        this.placementConstraints = Input.empty();
-        this.proxyConfiguration = Input.empty();
-        this.requiresCompatibilities = Input.empty();
-        this.runtimePlatform = Input.empty();
-        this.skipDestroy = Input.empty();
-        this.tags = Input.empty();
-        this.taskRoleArn = Input.empty();
-        this.volumes = Input.empty();
+        this.containerDefinitions = Output.empty();
+        this.cpu = Output.empty();
+        this.ephemeralStorage = Output.empty();
+        this.executionRoleArn = Output.empty();
+        this.family = Output.empty();
+        this.inferenceAccelerators = Output.empty();
+        this.ipcMode = Output.empty();
+        this.memory = Output.empty();
+        this.networkMode = Output.empty();
+        this.pidMode = Output.empty();
+        this.placementConstraints = Output.empty();
+        this.proxyConfiguration = Output.empty();
+        this.requiresCompatibilities = Output.empty();
+        this.runtimePlatform = Output.empty();
+        this.skipDestroy = Output.empty();
+        this.tags = Output.empty();
+        this.taskRoleArn = Output.empty();
+        this.volumes = Output.empty();
     }
 
     public static Builder builder() {
@@ -286,24 +286,24 @@ public final class TaskDefinitionArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> containerDefinitions;
-        private @Nullable Input<String> cpu;
-        private @Nullable Input<TaskDefinitionEphemeralStorageArgs> ephemeralStorage;
-        private @Nullable Input<String> executionRoleArn;
-        private Input<String> family;
-        private @Nullable Input<List<TaskDefinitionInferenceAcceleratorArgs>> inferenceAccelerators;
-        private @Nullable Input<String> ipcMode;
-        private @Nullable Input<String> memory;
-        private @Nullable Input<String> networkMode;
-        private @Nullable Input<String> pidMode;
-        private @Nullable Input<List<TaskDefinitionPlacementConstraintArgs>> placementConstraints;
-        private @Nullable Input<TaskDefinitionProxyConfigurationArgs> proxyConfiguration;
-        private @Nullable Input<List<String>> requiresCompatibilities;
-        private @Nullable Input<TaskDefinitionRuntimePlatformArgs> runtimePlatform;
-        private @Nullable Input<Boolean> skipDestroy;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<String> taskRoleArn;
-        private @Nullable Input<List<TaskDefinitionVolumeArgs>> volumes;
+        private Output<String> containerDefinitions;
+        private @Nullable Output<String> cpu;
+        private @Nullable Output<TaskDefinitionEphemeralStorageArgs> ephemeralStorage;
+        private @Nullable Output<String> executionRoleArn;
+        private Output<String> family;
+        private @Nullable Output<List<TaskDefinitionInferenceAcceleratorArgs>> inferenceAccelerators;
+        private @Nullable Output<String> ipcMode;
+        private @Nullable Output<String> memory;
+        private @Nullable Output<String> networkMode;
+        private @Nullable Output<String> pidMode;
+        private @Nullable Output<List<TaskDefinitionPlacementConstraintArgs>> placementConstraints;
+        private @Nullable Output<TaskDefinitionProxyConfigurationArgs> proxyConfiguration;
+        private @Nullable Output<List<String>> requiresCompatibilities;
+        private @Nullable Output<TaskDefinitionRuntimePlatformArgs> runtimePlatform;
+        private @Nullable Output<Boolean> skipDestroy;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<String> taskRoleArn;
+        private @Nullable Output<List<TaskDefinitionVolumeArgs>> volumes;
 
         public Builder() {
     	      // Empty
@@ -331,183 +331,183 @@ public final class TaskDefinitionArgs extends io.pulumi.resources.ResourceArgs {
     	      this.volumes = defaults.volumes;
         }
 
-        public Builder containerDefinitions(Input<String> containerDefinitions) {
+        public Builder containerDefinitions(Output<String> containerDefinitions) {
             this.containerDefinitions = Objects.requireNonNull(containerDefinitions);
             return this;
         }
 
         public Builder containerDefinitions(String containerDefinitions) {
-            this.containerDefinitions = Input.of(Objects.requireNonNull(containerDefinitions));
+            this.containerDefinitions = Output.of(Objects.requireNonNull(containerDefinitions));
             return this;
         }
 
-        public Builder cpu(@Nullable Input<String> cpu) {
+        public Builder cpu(@Nullable Output<String> cpu) {
             this.cpu = cpu;
             return this;
         }
 
         public Builder cpu(@Nullable String cpu) {
-            this.cpu = Input.ofNullable(cpu);
+            this.cpu = Output.ofNullable(cpu);
             return this;
         }
 
-        public Builder ephemeralStorage(@Nullable Input<TaskDefinitionEphemeralStorageArgs> ephemeralStorage) {
+        public Builder ephemeralStorage(@Nullable Output<TaskDefinitionEphemeralStorageArgs> ephemeralStorage) {
             this.ephemeralStorage = ephemeralStorage;
             return this;
         }
 
         public Builder ephemeralStorage(@Nullable TaskDefinitionEphemeralStorageArgs ephemeralStorage) {
-            this.ephemeralStorage = Input.ofNullable(ephemeralStorage);
+            this.ephemeralStorage = Output.ofNullable(ephemeralStorage);
             return this;
         }
 
-        public Builder executionRoleArn(@Nullable Input<String> executionRoleArn) {
+        public Builder executionRoleArn(@Nullable Output<String> executionRoleArn) {
             this.executionRoleArn = executionRoleArn;
             return this;
         }
 
         public Builder executionRoleArn(@Nullable String executionRoleArn) {
-            this.executionRoleArn = Input.ofNullable(executionRoleArn);
+            this.executionRoleArn = Output.ofNullable(executionRoleArn);
             return this;
         }
 
-        public Builder family(Input<String> family) {
+        public Builder family(Output<String> family) {
             this.family = Objects.requireNonNull(family);
             return this;
         }
 
         public Builder family(String family) {
-            this.family = Input.of(Objects.requireNonNull(family));
+            this.family = Output.of(Objects.requireNonNull(family));
             return this;
         }
 
-        public Builder inferenceAccelerators(@Nullable Input<List<TaskDefinitionInferenceAcceleratorArgs>> inferenceAccelerators) {
+        public Builder inferenceAccelerators(@Nullable Output<List<TaskDefinitionInferenceAcceleratorArgs>> inferenceAccelerators) {
             this.inferenceAccelerators = inferenceAccelerators;
             return this;
         }
 
         public Builder inferenceAccelerators(@Nullable List<TaskDefinitionInferenceAcceleratorArgs> inferenceAccelerators) {
-            this.inferenceAccelerators = Input.ofNullable(inferenceAccelerators);
+            this.inferenceAccelerators = Output.ofNullable(inferenceAccelerators);
             return this;
         }
 
-        public Builder ipcMode(@Nullable Input<String> ipcMode) {
+        public Builder ipcMode(@Nullable Output<String> ipcMode) {
             this.ipcMode = ipcMode;
             return this;
         }
 
         public Builder ipcMode(@Nullable String ipcMode) {
-            this.ipcMode = Input.ofNullable(ipcMode);
+            this.ipcMode = Output.ofNullable(ipcMode);
             return this;
         }
 
-        public Builder memory(@Nullable Input<String> memory) {
+        public Builder memory(@Nullable Output<String> memory) {
             this.memory = memory;
             return this;
         }
 
         public Builder memory(@Nullable String memory) {
-            this.memory = Input.ofNullable(memory);
+            this.memory = Output.ofNullable(memory);
             return this;
         }
 
-        public Builder networkMode(@Nullable Input<String> networkMode) {
+        public Builder networkMode(@Nullable Output<String> networkMode) {
             this.networkMode = networkMode;
             return this;
         }
 
         public Builder networkMode(@Nullable String networkMode) {
-            this.networkMode = Input.ofNullable(networkMode);
+            this.networkMode = Output.ofNullable(networkMode);
             return this;
         }
 
-        public Builder pidMode(@Nullable Input<String> pidMode) {
+        public Builder pidMode(@Nullable Output<String> pidMode) {
             this.pidMode = pidMode;
             return this;
         }
 
         public Builder pidMode(@Nullable String pidMode) {
-            this.pidMode = Input.ofNullable(pidMode);
+            this.pidMode = Output.ofNullable(pidMode);
             return this;
         }
 
-        public Builder placementConstraints(@Nullable Input<List<TaskDefinitionPlacementConstraintArgs>> placementConstraints) {
+        public Builder placementConstraints(@Nullable Output<List<TaskDefinitionPlacementConstraintArgs>> placementConstraints) {
             this.placementConstraints = placementConstraints;
             return this;
         }
 
         public Builder placementConstraints(@Nullable List<TaskDefinitionPlacementConstraintArgs> placementConstraints) {
-            this.placementConstraints = Input.ofNullable(placementConstraints);
+            this.placementConstraints = Output.ofNullable(placementConstraints);
             return this;
         }
 
-        public Builder proxyConfiguration(@Nullable Input<TaskDefinitionProxyConfigurationArgs> proxyConfiguration) {
+        public Builder proxyConfiguration(@Nullable Output<TaskDefinitionProxyConfigurationArgs> proxyConfiguration) {
             this.proxyConfiguration = proxyConfiguration;
             return this;
         }
 
         public Builder proxyConfiguration(@Nullable TaskDefinitionProxyConfigurationArgs proxyConfiguration) {
-            this.proxyConfiguration = Input.ofNullable(proxyConfiguration);
+            this.proxyConfiguration = Output.ofNullable(proxyConfiguration);
             return this;
         }
 
-        public Builder requiresCompatibilities(@Nullable Input<List<String>> requiresCompatibilities) {
+        public Builder requiresCompatibilities(@Nullable Output<List<String>> requiresCompatibilities) {
             this.requiresCompatibilities = requiresCompatibilities;
             return this;
         }
 
         public Builder requiresCompatibilities(@Nullable List<String> requiresCompatibilities) {
-            this.requiresCompatibilities = Input.ofNullable(requiresCompatibilities);
+            this.requiresCompatibilities = Output.ofNullable(requiresCompatibilities);
             return this;
         }
 
-        public Builder runtimePlatform(@Nullable Input<TaskDefinitionRuntimePlatformArgs> runtimePlatform) {
+        public Builder runtimePlatform(@Nullable Output<TaskDefinitionRuntimePlatformArgs> runtimePlatform) {
             this.runtimePlatform = runtimePlatform;
             return this;
         }
 
         public Builder runtimePlatform(@Nullable TaskDefinitionRuntimePlatformArgs runtimePlatform) {
-            this.runtimePlatform = Input.ofNullable(runtimePlatform);
+            this.runtimePlatform = Output.ofNullable(runtimePlatform);
             return this;
         }
 
-        public Builder skipDestroy(@Nullable Input<Boolean> skipDestroy) {
+        public Builder skipDestroy(@Nullable Output<Boolean> skipDestroy) {
             this.skipDestroy = skipDestroy;
             return this;
         }
 
         public Builder skipDestroy(@Nullable Boolean skipDestroy) {
-            this.skipDestroy = Input.ofNullable(skipDestroy);
+            this.skipDestroy = Output.ofNullable(skipDestroy);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder taskRoleArn(@Nullable Input<String> taskRoleArn) {
+        public Builder taskRoleArn(@Nullable Output<String> taskRoleArn) {
             this.taskRoleArn = taskRoleArn;
             return this;
         }
 
         public Builder taskRoleArn(@Nullable String taskRoleArn) {
-            this.taskRoleArn = Input.ofNullable(taskRoleArn);
+            this.taskRoleArn = Output.ofNullable(taskRoleArn);
             return this;
         }
 
-        public Builder volumes(@Nullable Input<List<TaskDefinitionVolumeArgs>> volumes) {
+        public Builder volumes(@Nullable Output<List<TaskDefinitionVolumeArgs>> volumes) {
             this.volumes = volumes;
             return this;
         }
 
         public Builder volumes(@Nullable List<TaskDefinitionVolumeArgs> volumes) {
-            this.volumes = Input.ofNullable(volumes);
+            this.volumes = Output.ofNullable(volumes);
             return this;
         }
         public TaskDefinitionArgs build() {

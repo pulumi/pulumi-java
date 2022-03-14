@@ -8,7 +8,7 @@ import io.pulumi.azurenative.machinelearningservices.inputs.LabelingDatasetConfi
 import io.pulumi.azurenative.machinelearningservices.inputs.LabelingJobImagePropertiesArgs;
 import io.pulumi.azurenative.machinelearningservices.inputs.LabelingJobInstructionsArgs;
 import io.pulumi.azurenative.machinelearningservices.inputs.MLAssistConfigurationArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -29,9 +29,9 @@ public final class LabelingJobPropertiesArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="datasetConfiguration", required=true)
-      private final Input<LabelingDatasetConfigurationArgs> datasetConfiguration;
+      private final Output<LabelingDatasetConfigurationArgs> datasetConfiguration;
 
-    public Input<LabelingDatasetConfigurationArgs> getDatasetConfiguration() {
+    public Output<LabelingDatasetConfigurationArgs> getDatasetConfiguration() {
         return this.datasetConfiguration;
     }
 
@@ -40,9 +40,9 @@ public final class LabelingJobPropertiesArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="jobInstructions", required=true)
-      private final Input<LabelingJobInstructionsArgs> jobInstructions;
+      private final Output<LabelingJobInstructionsArgs> jobInstructions;
 
-    public Input<LabelingJobInstructionsArgs> getJobInstructions() {
+    public Output<LabelingJobInstructionsArgs> getJobInstructions() {
         return this.jobInstructions;
     }
 
@@ -51,9 +51,9 @@ public final class LabelingJobPropertiesArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="labelCategories", required=true)
-      private final Input<Map<String,LabelCategoryArgs>> labelCategories;
+      private final Output<Map<String,LabelCategoryArgs>> labelCategories;
 
-    public Input<Map<String,LabelCategoryArgs>> getLabelCategories() {
+    public Output<Map<String,LabelCategoryArgs>> getLabelCategories() {
         return this.labelCategories;
     }
 
@@ -62,9 +62,9 @@ public final class LabelingJobPropertiesArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="labelingJobMediaProperties", required=true)
-      private final Input<LabelingJobImagePropertiesArgs> labelingJobMediaProperties;
+      private final Output<LabelingJobImagePropertiesArgs> labelingJobMediaProperties;
 
-    public Input<LabelingJobImagePropertiesArgs> getLabelingJobMediaProperties() {
+    public Output<LabelingJobImagePropertiesArgs> getLabelingJobMediaProperties() {
         return this.labelingJobMediaProperties;
     }
 
@@ -73,10 +73,10 @@ public final class LabelingJobPropertiesArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="mlAssistConfiguration")
-      private final @Nullable Input<MLAssistConfigurationArgs> mlAssistConfiguration;
+      private final @Nullable Output<MLAssistConfigurationArgs> mlAssistConfiguration;
 
-    public Input<MLAssistConfigurationArgs> getMlAssistConfiguration() {
-        return this.mlAssistConfiguration == null ? Input.empty() : this.mlAssistConfiguration;
+    public Output<MLAssistConfigurationArgs> getMlAssistConfiguration() {
+        return this.mlAssistConfiguration == null ? Output.empty() : this.mlAssistConfiguration;
     }
 
     /**
@@ -84,10 +84,10 @@ public final class LabelingJobPropertiesArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="properties")
-      private final @Nullable Input<Map<String,String>> properties;
+      private final @Nullable Output<Map<String,String>> properties;
 
-    public Input<Map<String,String>> getProperties() {
-        return this.properties == null ? Input.empty() : this.properties;
+    public Output<Map<String,String>> getProperties() {
+        return this.properties == null ? Output.empty() : this.properties;
     }
 
     /**
@@ -95,20 +95,20 @@ public final class LabelingJobPropertiesArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public LabelingJobPropertiesArgs(
-        Input<LabelingDatasetConfigurationArgs> datasetConfiguration,
-        Input<LabelingJobInstructionsArgs> jobInstructions,
-        Input<Map<String,LabelCategoryArgs>> labelCategories,
-        Input<LabelingJobImagePropertiesArgs> labelingJobMediaProperties,
-        @Nullable Input<MLAssistConfigurationArgs> mlAssistConfiguration,
-        @Nullable Input<Map<String,String>> properties,
-        @Nullable Input<Map<String,String>> tags) {
+        Output<LabelingDatasetConfigurationArgs> datasetConfiguration,
+        Output<LabelingJobInstructionsArgs> jobInstructions,
+        Output<Map<String,LabelCategoryArgs>> labelCategories,
+        Output<LabelingJobImagePropertiesArgs> labelingJobMediaProperties,
+        @Nullable Output<MLAssistConfigurationArgs> mlAssistConfiguration,
+        @Nullable Output<Map<String,String>> properties,
+        @Nullable Output<Map<String,String>> tags) {
         this.datasetConfiguration = Objects.requireNonNull(datasetConfiguration, "expected parameter 'datasetConfiguration' to be non-null");
         this.jobInstructions = Objects.requireNonNull(jobInstructions, "expected parameter 'jobInstructions' to be non-null");
         this.labelCategories = Objects.requireNonNull(labelCategories, "expected parameter 'labelCategories' to be non-null");
@@ -119,13 +119,13 @@ public final class LabelingJobPropertiesArgs extends io.pulumi.resources.Resourc
     }
 
     private LabelingJobPropertiesArgs() {
-        this.datasetConfiguration = Input.empty();
-        this.jobInstructions = Input.empty();
-        this.labelCategories = Input.empty();
-        this.labelingJobMediaProperties = Input.empty();
-        this.mlAssistConfiguration = Input.empty();
-        this.properties = Input.empty();
-        this.tags = Input.empty();
+        this.datasetConfiguration = Output.empty();
+        this.jobInstructions = Output.empty();
+        this.labelCategories = Output.empty();
+        this.labelingJobMediaProperties = Output.empty();
+        this.mlAssistConfiguration = Output.empty();
+        this.properties = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -137,13 +137,13 @@ public final class LabelingJobPropertiesArgs extends io.pulumi.resources.Resourc
     }
 
     public static final class Builder {
-        private Input<LabelingDatasetConfigurationArgs> datasetConfiguration;
-        private Input<LabelingJobInstructionsArgs> jobInstructions;
-        private Input<Map<String,LabelCategoryArgs>> labelCategories;
-        private Input<LabelingJobImagePropertiesArgs> labelingJobMediaProperties;
-        private @Nullable Input<MLAssistConfigurationArgs> mlAssistConfiguration;
-        private @Nullable Input<Map<String,String>> properties;
-        private @Nullable Input<Map<String,String>> tags;
+        private Output<LabelingDatasetConfigurationArgs> datasetConfiguration;
+        private Output<LabelingJobInstructionsArgs> jobInstructions;
+        private Output<Map<String,LabelCategoryArgs>> labelCategories;
+        private Output<LabelingJobImagePropertiesArgs> labelingJobMediaProperties;
+        private @Nullable Output<MLAssistConfigurationArgs> mlAssistConfiguration;
+        private @Nullable Output<Map<String,String>> properties;
+        private @Nullable Output<Map<String,String>> tags;
 
         public Builder() {
     	      // Empty
@@ -160,73 +160,73 @@ public final class LabelingJobPropertiesArgs extends io.pulumi.resources.Resourc
     	      this.tags = defaults.tags;
         }
 
-        public Builder datasetConfiguration(Input<LabelingDatasetConfigurationArgs> datasetConfiguration) {
+        public Builder datasetConfiguration(Output<LabelingDatasetConfigurationArgs> datasetConfiguration) {
             this.datasetConfiguration = Objects.requireNonNull(datasetConfiguration);
             return this;
         }
 
         public Builder datasetConfiguration(LabelingDatasetConfigurationArgs datasetConfiguration) {
-            this.datasetConfiguration = Input.of(Objects.requireNonNull(datasetConfiguration));
+            this.datasetConfiguration = Output.of(Objects.requireNonNull(datasetConfiguration));
             return this;
         }
 
-        public Builder jobInstructions(Input<LabelingJobInstructionsArgs> jobInstructions) {
+        public Builder jobInstructions(Output<LabelingJobInstructionsArgs> jobInstructions) {
             this.jobInstructions = Objects.requireNonNull(jobInstructions);
             return this;
         }
 
         public Builder jobInstructions(LabelingJobInstructionsArgs jobInstructions) {
-            this.jobInstructions = Input.of(Objects.requireNonNull(jobInstructions));
+            this.jobInstructions = Output.of(Objects.requireNonNull(jobInstructions));
             return this;
         }
 
-        public Builder labelCategories(Input<Map<String,LabelCategoryArgs>> labelCategories) {
+        public Builder labelCategories(Output<Map<String,LabelCategoryArgs>> labelCategories) {
             this.labelCategories = Objects.requireNonNull(labelCategories);
             return this;
         }
 
         public Builder labelCategories(Map<String,LabelCategoryArgs> labelCategories) {
-            this.labelCategories = Input.of(Objects.requireNonNull(labelCategories));
+            this.labelCategories = Output.of(Objects.requireNonNull(labelCategories));
             return this;
         }
 
-        public Builder labelingJobMediaProperties(Input<LabelingJobImagePropertiesArgs> labelingJobMediaProperties) {
+        public Builder labelingJobMediaProperties(Output<LabelingJobImagePropertiesArgs> labelingJobMediaProperties) {
             this.labelingJobMediaProperties = Objects.requireNonNull(labelingJobMediaProperties);
             return this;
         }
 
         public Builder labelingJobMediaProperties(LabelingJobImagePropertiesArgs labelingJobMediaProperties) {
-            this.labelingJobMediaProperties = Input.of(Objects.requireNonNull(labelingJobMediaProperties));
+            this.labelingJobMediaProperties = Output.of(Objects.requireNonNull(labelingJobMediaProperties));
             return this;
         }
 
-        public Builder mlAssistConfiguration(@Nullable Input<MLAssistConfigurationArgs> mlAssistConfiguration) {
+        public Builder mlAssistConfiguration(@Nullable Output<MLAssistConfigurationArgs> mlAssistConfiguration) {
             this.mlAssistConfiguration = mlAssistConfiguration;
             return this;
         }
 
         public Builder mlAssistConfiguration(@Nullable MLAssistConfigurationArgs mlAssistConfiguration) {
-            this.mlAssistConfiguration = Input.ofNullable(mlAssistConfiguration);
+            this.mlAssistConfiguration = Output.ofNullable(mlAssistConfiguration);
             return this;
         }
 
-        public Builder properties(@Nullable Input<Map<String,String>> properties) {
+        public Builder properties(@Nullable Output<Map<String,String>> properties) {
             this.properties = properties;
             return this;
         }
 
         public Builder properties(@Nullable Map<String,String> properties) {
-            this.properties = Input.ofNullable(properties);
+            this.properties = Output.ofNullable(properties);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public LabelingJobPropertiesArgs build() {

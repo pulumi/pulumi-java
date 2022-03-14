@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.apigateway;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -18,9 +18,9 @@ public final class RestApiPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="policy", required=true)
-      private final Input<String> policy;
+      private final Output<String> policy;
 
-    public Input<String> getPolicy() {
+    public Output<String> getPolicy() {
         return this.policy;
     }
 
@@ -29,22 +29,22 @@ public final class RestApiPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="restApiId", required=true)
-      private final Input<String> restApiId;
+      private final Output<String> restApiId;
 
-    public Input<String> getRestApiId() {
+    public Output<String> getRestApiId() {
         return this.restApiId;
     }
 
     public RestApiPolicyArgs(
-        Input<String> policy,
-        Input<String> restApiId) {
+        Output<String> policy,
+        Output<String> restApiId) {
         this.policy = Objects.requireNonNull(policy, "expected parameter 'policy' to be non-null");
         this.restApiId = Objects.requireNonNull(restApiId, "expected parameter 'restApiId' to be non-null");
     }
 
     private RestApiPolicyArgs() {
-        this.policy = Input.empty();
-        this.restApiId = Input.empty();
+        this.policy = Output.empty();
+        this.restApiId = Output.empty();
     }
 
     public static Builder builder() {
@@ -56,8 +56,8 @@ public final class RestApiPolicyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> policy;
-        private Input<String> restApiId;
+        private Output<String> policy;
+        private Output<String> restApiId;
 
         public Builder() {
     	      // Empty
@@ -69,23 +69,23 @@ public final class RestApiPolicyArgs extends io.pulumi.resources.ResourceArgs {
     	      this.restApiId = defaults.restApiId;
         }
 
-        public Builder policy(Input<String> policy) {
+        public Builder policy(Output<String> policy) {
             this.policy = Objects.requireNonNull(policy);
             return this;
         }
 
         public Builder policy(String policy) {
-            this.policy = Input.of(Objects.requireNonNull(policy));
+            this.policy = Output.of(Objects.requireNonNull(policy));
             return this;
         }
 
-        public Builder restApiId(Input<String> restApiId) {
+        public Builder restApiId(Output<String> restApiId) {
             this.restApiId = Objects.requireNonNull(restApiId);
             return this;
         }
 
         public Builder restApiId(String restApiId) {
-            this.restApiId = Input.of(Objects.requireNonNull(restApiId));
+            this.restApiId = Output.of(Objects.requireNonNull(restApiId));
             return this;
         }
         public RestApiPolicyArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.healthcare;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.healthcare.inputs.DicomStoreNotificationConfigArgs;
 import io.pulumi.gcp.healthcare.inputs.DicomStoreStreamConfigArgs;
@@ -24,9 +24,9 @@ public final class DicomStoreArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dataset", required=true)
-      private final Input<String> dataset;
+      private final Output<String> dataset;
 
-    public Input<String> getDataset() {
+    public Output<String> getDataset() {
         return this.dataset;
     }
 
@@ -42,10 +42,10 @@ public final class DicomStoreArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labels")
-      private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Output<Map<String,String>> labels;
 
-    public Input<Map<String,String>> getLabels() {
-        return this.labels == null ? Input.empty() : this.labels;
+    public Output<Map<String,String>> getLabels() {
+        return this.labels == null ? Output.empty() : this.labels;
     }
 
     /**
@@ -54,10 +54,10 @@ public final class DicomStoreArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -66,10 +66,10 @@ public final class DicomStoreArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="notificationConfig")
-      private final @Nullable Input<DicomStoreNotificationConfigArgs> notificationConfig;
+      private final @Nullable Output<DicomStoreNotificationConfigArgs> notificationConfig;
 
-    public Input<DicomStoreNotificationConfigArgs> getNotificationConfig() {
-        return this.notificationConfig == null ? Input.empty() : this.notificationConfig;
+    public Output<DicomStoreNotificationConfigArgs> getNotificationConfig() {
+        return this.notificationConfig == null ? Output.empty() : this.notificationConfig;
     }
 
     /**
@@ -79,18 +79,18 @@ public final class DicomStoreArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="streamConfigs")
-      private final @Nullable Input<List<DicomStoreStreamConfigArgs>> streamConfigs;
+      private final @Nullable Output<List<DicomStoreStreamConfigArgs>> streamConfigs;
 
-    public Input<List<DicomStoreStreamConfigArgs>> getStreamConfigs() {
-        return this.streamConfigs == null ? Input.empty() : this.streamConfigs;
+    public Output<List<DicomStoreStreamConfigArgs>> getStreamConfigs() {
+        return this.streamConfigs == null ? Output.empty() : this.streamConfigs;
     }
 
     public DicomStoreArgs(
-        Input<String> dataset,
-        @Nullable Input<Map<String,String>> labels,
-        @Nullable Input<String> name,
-        @Nullable Input<DicomStoreNotificationConfigArgs> notificationConfig,
-        @Nullable Input<List<DicomStoreStreamConfigArgs>> streamConfigs) {
+        Output<String> dataset,
+        @Nullable Output<Map<String,String>> labels,
+        @Nullable Output<String> name,
+        @Nullable Output<DicomStoreNotificationConfigArgs> notificationConfig,
+        @Nullable Output<List<DicomStoreStreamConfigArgs>> streamConfigs) {
         this.dataset = Objects.requireNonNull(dataset, "expected parameter 'dataset' to be non-null");
         this.labels = labels;
         this.name = name;
@@ -99,11 +99,11 @@ public final class DicomStoreArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DicomStoreArgs() {
-        this.dataset = Input.empty();
-        this.labels = Input.empty();
-        this.name = Input.empty();
-        this.notificationConfig = Input.empty();
-        this.streamConfigs = Input.empty();
+        this.dataset = Output.empty();
+        this.labels = Output.empty();
+        this.name = Output.empty();
+        this.notificationConfig = Output.empty();
+        this.streamConfigs = Output.empty();
     }
 
     public static Builder builder() {
@@ -115,11 +115,11 @@ public final class DicomStoreArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> dataset;
-        private @Nullable Input<Map<String,String>> labels;
-        private @Nullable Input<String> name;
-        private @Nullable Input<DicomStoreNotificationConfigArgs> notificationConfig;
-        private @Nullable Input<List<DicomStoreStreamConfigArgs>> streamConfigs;
+        private Output<String> dataset;
+        private @Nullable Output<Map<String,String>> labels;
+        private @Nullable Output<String> name;
+        private @Nullable Output<DicomStoreNotificationConfigArgs> notificationConfig;
+        private @Nullable Output<List<DicomStoreStreamConfigArgs>> streamConfigs;
 
         public Builder() {
     	      // Empty
@@ -134,53 +134,53 @@ public final class DicomStoreArgs extends io.pulumi.resources.ResourceArgs {
     	      this.streamConfigs = defaults.streamConfigs;
         }
 
-        public Builder dataset(Input<String> dataset) {
+        public Builder dataset(Output<String> dataset) {
             this.dataset = Objects.requireNonNull(dataset);
             return this;
         }
 
         public Builder dataset(String dataset) {
-            this.dataset = Input.of(Objects.requireNonNull(dataset));
+            this.dataset = Output.of(Objects.requireNonNull(dataset));
             return this;
         }
 
-        public Builder labels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
         public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Input.ofNullable(labels);
+            this.labels = Output.ofNullable(labels);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder notificationConfig(@Nullable Input<DicomStoreNotificationConfigArgs> notificationConfig) {
+        public Builder notificationConfig(@Nullable Output<DicomStoreNotificationConfigArgs> notificationConfig) {
             this.notificationConfig = notificationConfig;
             return this;
         }
 
         public Builder notificationConfig(@Nullable DicomStoreNotificationConfigArgs notificationConfig) {
-            this.notificationConfig = Input.ofNullable(notificationConfig);
+            this.notificationConfig = Output.ofNullable(notificationConfig);
             return this;
         }
 
-        public Builder streamConfigs(@Nullable Input<List<DicomStoreStreamConfigArgs>> streamConfigs) {
+        public Builder streamConfigs(@Nullable Output<List<DicomStoreStreamConfigArgs>> streamConfigs) {
             this.streamConfigs = streamConfigs;
             return this;
         }
 
         public Builder streamConfigs(@Nullable List<DicomStoreStreamConfigArgs> streamConfigs) {
-            this.streamConfigs = Input.ofNullable(streamConfigs);
+            this.streamConfigs = Output.ofNullable(streamConfigs);
             return this;
         }
         public DicomStoreArgs build() {

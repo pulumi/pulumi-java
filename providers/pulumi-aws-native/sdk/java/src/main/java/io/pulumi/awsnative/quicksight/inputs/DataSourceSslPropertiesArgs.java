@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.quicksight.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
@@ -24,18 +24,18 @@ public final class DataSourceSslPropertiesArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="disableSsl")
-      private final @Nullable Input<Boolean> disableSsl;
+      private final @Nullable Output<Boolean> disableSsl;
 
-    public Input<Boolean> getDisableSsl() {
-        return this.disableSsl == null ? Input.empty() : this.disableSsl;
+    public Output<Boolean> getDisableSsl() {
+        return this.disableSsl == null ? Output.empty() : this.disableSsl;
     }
 
-    public DataSourceSslPropertiesArgs(@Nullable Input<Boolean> disableSsl) {
+    public DataSourceSslPropertiesArgs(@Nullable Output<Boolean> disableSsl) {
         this.disableSsl = disableSsl;
     }
 
     private DataSourceSslPropertiesArgs() {
-        this.disableSsl = Input.empty();
+        this.disableSsl = Output.empty();
     }
 
     public static Builder builder() {
@@ -47,7 +47,7 @@ public final class DataSourceSslPropertiesArgs extends io.pulumi.resources.Resou
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> disableSsl;
+        private @Nullable Output<Boolean> disableSsl;
 
         public Builder() {
     	      // Empty
@@ -58,13 +58,13 @@ public final class DataSourceSslPropertiesArgs extends io.pulumi.resources.Resou
     	      this.disableSsl = defaults.disableSsl;
         }
 
-        public Builder disableSsl(@Nullable Input<Boolean> disableSsl) {
+        public Builder disableSsl(@Nullable Output<Boolean> disableSsl) {
             this.disableSsl = disableSsl;
             return this;
         }
 
         public Builder disableSsl(@Nullable Boolean disableSsl) {
-            this.disableSsl = Input.ofNullable(disableSsl);
+            this.disableSsl = Output.ofNullable(disableSsl);
             return this;
         }
         public DataSourceSslPropertiesArgs build() {

@@ -8,7 +8,6 @@ import io.pulumi.azurenative.policyinsights.AttestationAtResourceArgs;
 import io.pulumi.azurenative.policyinsights.outputs.AttestationEvidenceResponse;
 import io.pulumi.azurenative.policyinsights.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -240,18 +239,18 @@ public class AttestationAtResource extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public AttestationAtResource(String name, AttestationAtResourceArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:policyinsights:AttestationAtResource", name, args == null ? AttestationAtResourceArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("azure-native:policyinsights:AttestationAtResource", name, args == null ? AttestationAtResourceArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private AttestationAtResource(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private AttestationAtResource(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:policyinsights:AttestationAtResource", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:policyinsights/v20210101:AttestationAtResource").build())
+                Output.of(Alias.builder().setType("azure-native:policyinsights/v20210101:AttestationAtResource").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -265,7 +264,7 @@ public class AttestationAtResource extends io.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static AttestationAtResource get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static AttestationAtResource get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new AttestationAtResource(name, id, options);
     }
 }

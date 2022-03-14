@@ -7,7 +7,6 @@ import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.automanage.ConfigurationProfilePreferenceArgs;
 import io.pulumi.azurenative.automanage.outputs.ConfigurationProfilePreferencePropertiesResponse;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -142,18 +141,18 @@ public class ConfigurationProfilePreference extends io.pulumi.resources.CustomRe
      * @param options A bag of options that control this resource's behavior.
      */
     public ConfigurationProfilePreference(String name, ConfigurationProfilePreferenceArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:automanage:ConfigurationProfilePreference", name, args == null ? ConfigurationProfilePreferenceArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("azure-native:automanage:ConfigurationProfilePreference", name, args == null ? ConfigurationProfilePreferenceArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private ConfigurationProfilePreference(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private ConfigurationProfilePreference(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:automanage:ConfigurationProfilePreference", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:automanage/v20200630preview:ConfigurationProfilePreference").build())
+                Output.of(Alias.builder().setType("azure-native:automanage/v20200630preview:ConfigurationProfilePreference").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -167,7 +166,7 @@ public class ConfigurationProfilePreference extends io.pulumi.resources.CustomRe
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static ConfigurationProfilePreference get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static ConfigurationProfilePreference get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new ConfigurationProfilePreference(name, id, options);
     }
 }

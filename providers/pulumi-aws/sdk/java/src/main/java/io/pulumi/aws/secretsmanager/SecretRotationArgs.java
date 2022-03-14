@@ -4,7 +4,7 @@
 package io.pulumi.aws.secretsmanager;
 
 import io.pulumi.aws.secretsmanager.inputs.SecretRotationRotationRulesArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -21,9 +21,9 @@ public final class SecretRotationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="rotationLambdaArn", required=true)
-      private final Input<String> rotationLambdaArn;
+      private final Output<String> rotationLambdaArn;
 
-    public Input<String> getRotationLambdaArn() {
+    public Output<String> getRotationLambdaArn() {
         return this.rotationLambdaArn;
     }
 
@@ -32,9 +32,9 @@ public final class SecretRotationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="rotationRules", required=true)
-      private final Input<SecretRotationRotationRulesArgs> rotationRules;
+      private final Output<SecretRotationRotationRulesArgs> rotationRules;
 
-    public Input<SecretRotationRotationRulesArgs> getRotationRules() {
+    public Output<SecretRotationRotationRulesArgs> getRotationRules() {
         return this.rotationRules;
     }
 
@@ -43,24 +43,24 @@ public final class SecretRotationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="secretId", required=true)
-      private final Input<String> secretId;
+      private final Output<String> secretId;
 
-    public Input<String> getSecretId() {
+    public Output<String> getSecretId() {
         return this.secretId;
     }
 
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public SecretRotationArgs(
-        Input<String> rotationLambdaArn,
-        Input<SecretRotationRotationRulesArgs> rotationRules,
-        Input<String> secretId,
-        @Nullable Input<Map<String,String>> tags) {
+        Output<String> rotationLambdaArn,
+        Output<SecretRotationRotationRulesArgs> rotationRules,
+        Output<String> secretId,
+        @Nullable Output<Map<String,String>> tags) {
         this.rotationLambdaArn = Objects.requireNonNull(rotationLambdaArn, "expected parameter 'rotationLambdaArn' to be non-null");
         this.rotationRules = Objects.requireNonNull(rotationRules, "expected parameter 'rotationRules' to be non-null");
         this.secretId = Objects.requireNonNull(secretId, "expected parameter 'secretId' to be non-null");
@@ -68,10 +68,10 @@ public final class SecretRotationArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private SecretRotationArgs() {
-        this.rotationLambdaArn = Input.empty();
-        this.rotationRules = Input.empty();
-        this.secretId = Input.empty();
-        this.tags = Input.empty();
+        this.rotationLambdaArn = Output.empty();
+        this.rotationRules = Output.empty();
+        this.secretId = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -83,10 +83,10 @@ public final class SecretRotationArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> rotationLambdaArn;
-        private Input<SecretRotationRotationRulesArgs> rotationRules;
-        private Input<String> secretId;
-        private @Nullable Input<Map<String,String>> tags;
+        private Output<String> rotationLambdaArn;
+        private Output<SecretRotationRotationRulesArgs> rotationRules;
+        private Output<String> secretId;
+        private @Nullable Output<Map<String,String>> tags;
 
         public Builder() {
     	      // Empty
@@ -100,43 +100,43 @@ public final class SecretRotationArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder rotationLambdaArn(Input<String> rotationLambdaArn) {
+        public Builder rotationLambdaArn(Output<String> rotationLambdaArn) {
             this.rotationLambdaArn = Objects.requireNonNull(rotationLambdaArn);
             return this;
         }
 
         public Builder rotationLambdaArn(String rotationLambdaArn) {
-            this.rotationLambdaArn = Input.of(Objects.requireNonNull(rotationLambdaArn));
+            this.rotationLambdaArn = Output.of(Objects.requireNonNull(rotationLambdaArn));
             return this;
         }
 
-        public Builder rotationRules(Input<SecretRotationRotationRulesArgs> rotationRules) {
+        public Builder rotationRules(Output<SecretRotationRotationRulesArgs> rotationRules) {
             this.rotationRules = Objects.requireNonNull(rotationRules);
             return this;
         }
 
         public Builder rotationRules(SecretRotationRotationRulesArgs rotationRules) {
-            this.rotationRules = Input.of(Objects.requireNonNull(rotationRules));
+            this.rotationRules = Output.of(Objects.requireNonNull(rotationRules));
             return this;
         }
 
-        public Builder secretId(Input<String> secretId) {
+        public Builder secretId(Output<String> secretId) {
             this.secretId = Objects.requireNonNull(secretId);
             return this;
         }
 
         public Builder secretId(String secretId) {
-            this.secretId = Input.of(Objects.requireNonNull(secretId));
+            this.secretId = Output.of(Objects.requireNonNull(secretId));
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public SecretRotationArgs build() {

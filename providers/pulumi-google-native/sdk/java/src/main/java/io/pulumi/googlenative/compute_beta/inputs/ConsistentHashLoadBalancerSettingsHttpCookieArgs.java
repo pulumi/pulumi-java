@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_beta.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.compute_beta.inputs.DurationArgs;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class ConsistentHashLoadBalancerSettingsHttpCookieArgs extends io.p
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class ConsistentHashLoadBalancerSettingsHttpCookieArgs extends io.p
      * 
      */
     @InputImport(name="path")
-      private final @Nullable Input<String> path;
+      private final @Nullable Output<String> path;
 
-    public Input<String> getPath() {
-        return this.path == null ? Input.empty() : this.path;
+    public Output<String> getPath() {
+        return this.path == null ? Output.empty() : this.path;
     }
 
     /**
@@ -46,25 +46,25 @@ public final class ConsistentHashLoadBalancerSettingsHttpCookieArgs extends io.p
      * 
      */
     @InputImport(name="ttl")
-      private final @Nullable Input<DurationArgs> ttl;
+      private final @Nullable Output<DurationArgs> ttl;
 
-    public Input<DurationArgs> getTtl() {
-        return this.ttl == null ? Input.empty() : this.ttl;
+    public Output<DurationArgs> getTtl() {
+        return this.ttl == null ? Output.empty() : this.ttl;
     }
 
     public ConsistentHashLoadBalancerSettingsHttpCookieArgs(
-        @Nullable Input<String> name,
-        @Nullable Input<String> path,
-        @Nullable Input<DurationArgs> ttl) {
+        @Nullable Output<String> name,
+        @Nullable Output<String> path,
+        @Nullable Output<DurationArgs> ttl) {
         this.name = name;
         this.path = path;
         this.ttl = ttl;
     }
 
     private ConsistentHashLoadBalancerSettingsHttpCookieArgs() {
-        this.name = Input.empty();
-        this.path = Input.empty();
-        this.ttl = Input.empty();
+        this.name = Output.empty();
+        this.path = Output.empty();
+        this.ttl = Output.empty();
     }
 
     public static Builder builder() {
@@ -76,9 +76,9 @@ public final class ConsistentHashLoadBalancerSettingsHttpCookieArgs extends io.p
     }
 
     public static final class Builder {
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> path;
-        private @Nullable Input<DurationArgs> ttl;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> path;
+        private @Nullable Output<DurationArgs> ttl;
 
         public Builder() {
     	      // Empty
@@ -91,33 +91,33 @@ public final class ConsistentHashLoadBalancerSettingsHttpCookieArgs extends io.p
     	      this.ttl = defaults.ttl;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder path(@Nullable Input<String> path) {
+        public Builder path(@Nullable Output<String> path) {
             this.path = path;
             return this;
         }
 
         public Builder path(@Nullable String path) {
-            this.path = Input.ofNullable(path);
+            this.path = Output.ofNullable(path);
             return this;
         }
 
-        public Builder ttl(@Nullable Input<DurationArgs> ttl) {
+        public Builder ttl(@Nullable Output<DurationArgs> ttl) {
             this.ttl = ttl;
             return this;
         }
 
         public Builder ttl(@Nullable DurationArgs ttl) {
-            this.ttl = Input.ofNullable(ttl);
+            this.ttl = Output.ofNullable(ttl);
             return this;
         }
         public ConsistentHashLoadBalancerSettingsHttpCookieArgs build() {

@@ -6,7 +6,7 @@ package io.pulumi.awsnative.route53.inputs;
 import io.pulumi.awsnative.route53.enums.HealthCheckConfigPropertiesInsufficientDataHealthStatus;
 import io.pulumi.awsnative.route53.enums.HealthCheckConfigPropertiesType;
 import io.pulumi.awsnative.route53.inputs.HealthCheckAlarmIdentifierArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -25,142 +25,142 @@ public final class HealthCheckConfigPropertiesArgs extends io.pulumi.resources.R
     public static final HealthCheckConfigPropertiesArgs Empty = new HealthCheckConfigPropertiesArgs();
 
     @InputImport(name="alarmIdentifier")
-      private final @Nullable Input<HealthCheckAlarmIdentifierArgs> alarmIdentifier;
+      private final @Nullable Output<HealthCheckAlarmIdentifierArgs> alarmIdentifier;
 
-    public Input<HealthCheckAlarmIdentifierArgs> getAlarmIdentifier() {
-        return this.alarmIdentifier == null ? Input.empty() : this.alarmIdentifier;
+    public Output<HealthCheckAlarmIdentifierArgs> getAlarmIdentifier() {
+        return this.alarmIdentifier == null ? Output.empty() : this.alarmIdentifier;
     }
 
     @InputImport(name="childHealthChecks")
-      private final @Nullable Input<List<String>> childHealthChecks;
+      private final @Nullable Output<List<String>> childHealthChecks;
 
-    public Input<List<String>> getChildHealthChecks() {
-        return this.childHealthChecks == null ? Input.empty() : this.childHealthChecks;
+    public Output<List<String>> getChildHealthChecks() {
+        return this.childHealthChecks == null ? Output.empty() : this.childHealthChecks;
     }
 
     @InputImport(name="enableSNI")
-      private final @Nullable Input<Boolean> enableSNI;
+      private final @Nullable Output<Boolean> enableSNI;
 
-    public Input<Boolean> getEnableSNI() {
-        return this.enableSNI == null ? Input.empty() : this.enableSNI;
+    public Output<Boolean> getEnableSNI() {
+        return this.enableSNI == null ? Output.empty() : this.enableSNI;
     }
 
     @InputImport(name="failureThreshold")
-      private final @Nullable Input<Integer> failureThreshold;
+      private final @Nullable Output<Integer> failureThreshold;
 
-    public Input<Integer> getFailureThreshold() {
-        return this.failureThreshold == null ? Input.empty() : this.failureThreshold;
+    public Output<Integer> getFailureThreshold() {
+        return this.failureThreshold == null ? Output.empty() : this.failureThreshold;
     }
 
     @InputImport(name="fullyQualifiedDomainName")
-      private final @Nullable Input<String> fullyQualifiedDomainName;
+      private final @Nullable Output<String> fullyQualifiedDomainName;
 
-    public Input<String> getFullyQualifiedDomainName() {
-        return this.fullyQualifiedDomainName == null ? Input.empty() : this.fullyQualifiedDomainName;
+    public Output<String> getFullyQualifiedDomainName() {
+        return this.fullyQualifiedDomainName == null ? Output.empty() : this.fullyQualifiedDomainName;
     }
 
     @InputImport(name="healthThreshold")
-      private final @Nullable Input<Integer> healthThreshold;
+      private final @Nullable Output<Integer> healthThreshold;
 
-    public Input<Integer> getHealthThreshold() {
-        return this.healthThreshold == null ? Input.empty() : this.healthThreshold;
+    public Output<Integer> getHealthThreshold() {
+        return this.healthThreshold == null ? Output.empty() : this.healthThreshold;
     }
 
     @InputImport(name="iPAddress")
-      private final @Nullable Input<String> iPAddress;
+      private final @Nullable Output<String> iPAddress;
 
-    public Input<String> getIPAddress() {
-        return this.iPAddress == null ? Input.empty() : this.iPAddress;
+    public Output<String> getIPAddress() {
+        return this.iPAddress == null ? Output.empty() : this.iPAddress;
     }
 
     @InputImport(name="insufficientDataHealthStatus")
-      private final @Nullable Input<HealthCheckConfigPropertiesInsufficientDataHealthStatus> insufficientDataHealthStatus;
+      private final @Nullable Output<HealthCheckConfigPropertiesInsufficientDataHealthStatus> insufficientDataHealthStatus;
 
-    public Input<HealthCheckConfigPropertiesInsufficientDataHealthStatus> getInsufficientDataHealthStatus() {
-        return this.insufficientDataHealthStatus == null ? Input.empty() : this.insufficientDataHealthStatus;
+    public Output<HealthCheckConfigPropertiesInsufficientDataHealthStatus> getInsufficientDataHealthStatus() {
+        return this.insufficientDataHealthStatus == null ? Output.empty() : this.insufficientDataHealthStatus;
     }
 
     @InputImport(name="inverted")
-      private final @Nullable Input<Boolean> inverted;
+      private final @Nullable Output<Boolean> inverted;
 
-    public Input<Boolean> getInverted() {
-        return this.inverted == null ? Input.empty() : this.inverted;
+    public Output<Boolean> getInverted() {
+        return this.inverted == null ? Output.empty() : this.inverted;
     }
 
     @InputImport(name="measureLatency")
-      private final @Nullable Input<Boolean> measureLatency;
+      private final @Nullable Output<Boolean> measureLatency;
 
-    public Input<Boolean> getMeasureLatency() {
-        return this.measureLatency == null ? Input.empty() : this.measureLatency;
+    public Output<Boolean> getMeasureLatency() {
+        return this.measureLatency == null ? Output.empty() : this.measureLatency;
     }
 
     @InputImport(name="port")
-      private final @Nullable Input<Integer> port;
+      private final @Nullable Output<Integer> port;
 
-    public Input<Integer> getPort() {
-        return this.port == null ? Input.empty() : this.port;
+    public Output<Integer> getPort() {
+        return this.port == null ? Output.empty() : this.port;
     }
 
     @InputImport(name="regions")
-      private final @Nullable Input<List<String>> regions;
+      private final @Nullable Output<List<String>> regions;
 
-    public Input<List<String>> getRegions() {
-        return this.regions == null ? Input.empty() : this.regions;
+    public Output<List<String>> getRegions() {
+        return this.regions == null ? Output.empty() : this.regions;
     }
 
     @InputImport(name="requestInterval")
-      private final @Nullable Input<Integer> requestInterval;
+      private final @Nullable Output<Integer> requestInterval;
 
-    public Input<Integer> getRequestInterval() {
-        return this.requestInterval == null ? Input.empty() : this.requestInterval;
+    public Output<Integer> getRequestInterval() {
+        return this.requestInterval == null ? Output.empty() : this.requestInterval;
     }
 
     @InputImport(name="resourcePath")
-      private final @Nullable Input<String> resourcePath;
+      private final @Nullable Output<String> resourcePath;
 
-    public Input<String> getResourcePath() {
-        return this.resourcePath == null ? Input.empty() : this.resourcePath;
+    public Output<String> getResourcePath() {
+        return this.resourcePath == null ? Output.empty() : this.resourcePath;
     }
 
     @InputImport(name="routingControlArn")
-      private final @Nullable Input<String> routingControlArn;
+      private final @Nullable Output<String> routingControlArn;
 
-    public Input<String> getRoutingControlArn() {
-        return this.routingControlArn == null ? Input.empty() : this.routingControlArn;
+    public Output<String> getRoutingControlArn() {
+        return this.routingControlArn == null ? Output.empty() : this.routingControlArn;
     }
 
     @InputImport(name="searchString")
-      private final @Nullable Input<String> searchString;
+      private final @Nullable Output<String> searchString;
 
-    public Input<String> getSearchString() {
-        return this.searchString == null ? Input.empty() : this.searchString;
+    public Output<String> getSearchString() {
+        return this.searchString == null ? Output.empty() : this.searchString;
     }
 
     @InputImport(name="type", required=true)
-      private final Input<HealthCheckConfigPropertiesType> type;
+      private final Output<HealthCheckConfigPropertiesType> type;
 
-    public Input<HealthCheckConfigPropertiesType> getType() {
+    public Output<HealthCheckConfigPropertiesType> getType() {
         return this.type;
     }
 
     public HealthCheckConfigPropertiesArgs(
-        @Nullable Input<HealthCheckAlarmIdentifierArgs> alarmIdentifier,
-        @Nullable Input<List<String>> childHealthChecks,
-        @Nullable Input<Boolean> enableSNI,
-        @Nullable Input<Integer> failureThreshold,
-        @Nullable Input<String> fullyQualifiedDomainName,
-        @Nullable Input<Integer> healthThreshold,
-        @Nullable Input<String> iPAddress,
-        @Nullable Input<HealthCheckConfigPropertiesInsufficientDataHealthStatus> insufficientDataHealthStatus,
-        @Nullable Input<Boolean> inverted,
-        @Nullable Input<Boolean> measureLatency,
-        @Nullable Input<Integer> port,
-        @Nullable Input<List<String>> regions,
-        @Nullable Input<Integer> requestInterval,
-        @Nullable Input<String> resourcePath,
-        @Nullable Input<String> routingControlArn,
-        @Nullable Input<String> searchString,
-        Input<HealthCheckConfigPropertiesType> type) {
+        @Nullable Output<HealthCheckAlarmIdentifierArgs> alarmIdentifier,
+        @Nullable Output<List<String>> childHealthChecks,
+        @Nullable Output<Boolean> enableSNI,
+        @Nullable Output<Integer> failureThreshold,
+        @Nullable Output<String> fullyQualifiedDomainName,
+        @Nullable Output<Integer> healthThreshold,
+        @Nullable Output<String> iPAddress,
+        @Nullable Output<HealthCheckConfigPropertiesInsufficientDataHealthStatus> insufficientDataHealthStatus,
+        @Nullable Output<Boolean> inverted,
+        @Nullable Output<Boolean> measureLatency,
+        @Nullable Output<Integer> port,
+        @Nullable Output<List<String>> regions,
+        @Nullable Output<Integer> requestInterval,
+        @Nullable Output<String> resourcePath,
+        @Nullable Output<String> routingControlArn,
+        @Nullable Output<String> searchString,
+        Output<HealthCheckConfigPropertiesType> type) {
         this.alarmIdentifier = alarmIdentifier;
         this.childHealthChecks = childHealthChecks;
         this.enableSNI = enableSNI;
@@ -181,23 +181,23 @@ public final class HealthCheckConfigPropertiesArgs extends io.pulumi.resources.R
     }
 
     private HealthCheckConfigPropertiesArgs() {
-        this.alarmIdentifier = Input.empty();
-        this.childHealthChecks = Input.empty();
-        this.enableSNI = Input.empty();
-        this.failureThreshold = Input.empty();
-        this.fullyQualifiedDomainName = Input.empty();
-        this.healthThreshold = Input.empty();
-        this.iPAddress = Input.empty();
-        this.insufficientDataHealthStatus = Input.empty();
-        this.inverted = Input.empty();
-        this.measureLatency = Input.empty();
-        this.port = Input.empty();
-        this.regions = Input.empty();
-        this.requestInterval = Input.empty();
-        this.resourcePath = Input.empty();
-        this.routingControlArn = Input.empty();
-        this.searchString = Input.empty();
-        this.type = Input.empty();
+        this.alarmIdentifier = Output.empty();
+        this.childHealthChecks = Output.empty();
+        this.enableSNI = Output.empty();
+        this.failureThreshold = Output.empty();
+        this.fullyQualifiedDomainName = Output.empty();
+        this.healthThreshold = Output.empty();
+        this.iPAddress = Output.empty();
+        this.insufficientDataHealthStatus = Output.empty();
+        this.inverted = Output.empty();
+        this.measureLatency = Output.empty();
+        this.port = Output.empty();
+        this.regions = Output.empty();
+        this.requestInterval = Output.empty();
+        this.resourcePath = Output.empty();
+        this.routingControlArn = Output.empty();
+        this.searchString = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -209,23 +209,23 @@ public final class HealthCheckConfigPropertiesArgs extends io.pulumi.resources.R
     }
 
     public static final class Builder {
-        private @Nullable Input<HealthCheckAlarmIdentifierArgs> alarmIdentifier;
-        private @Nullable Input<List<String>> childHealthChecks;
-        private @Nullable Input<Boolean> enableSNI;
-        private @Nullable Input<Integer> failureThreshold;
-        private @Nullable Input<String> fullyQualifiedDomainName;
-        private @Nullable Input<Integer> healthThreshold;
-        private @Nullable Input<String> iPAddress;
-        private @Nullable Input<HealthCheckConfigPropertiesInsufficientDataHealthStatus> insufficientDataHealthStatus;
-        private @Nullable Input<Boolean> inverted;
-        private @Nullable Input<Boolean> measureLatency;
-        private @Nullable Input<Integer> port;
-        private @Nullable Input<List<String>> regions;
-        private @Nullable Input<Integer> requestInterval;
-        private @Nullable Input<String> resourcePath;
-        private @Nullable Input<String> routingControlArn;
-        private @Nullable Input<String> searchString;
-        private Input<HealthCheckConfigPropertiesType> type;
+        private @Nullable Output<HealthCheckAlarmIdentifierArgs> alarmIdentifier;
+        private @Nullable Output<List<String>> childHealthChecks;
+        private @Nullable Output<Boolean> enableSNI;
+        private @Nullable Output<Integer> failureThreshold;
+        private @Nullable Output<String> fullyQualifiedDomainName;
+        private @Nullable Output<Integer> healthThreshold;
+        private @Nullable Output<String> iPAddress;
+        private @Nullable Output<HealthCheckConfigPropertiesInsufficientDataHealthStatus> insufficientDataHealthStatus;
+        private @Nullable Output<Boolean> inverted;
+        private @Nullable Output<Boolean> measureLatency;
+        private @Nullable Output<Integer> port;
+        private @Nullable Output<List<String>> regions;
+        private @Nullable Output<Integer> requestInterval;
+        private @Nullable Output<String> resourcePath;
+        private @Nullable Output<String> routingControlArn;
+        private @Nullable Output<String> searchString;
+        private Output<HealthCheckConfigPropertiesType> type;
 
         public Builder() {
     	      // Empty
@@ -252,173 +252,173 @@ public final class HealthCheckConfigPropertiesArgs extends io.pulumi.resources.R
     	      this.type = defaults.type;
         }
 
-        public Builder alarmIdentifier(@Nullable Input<HealthCheckAlarmIdentifierArgs> alarmIdentifier) {
+        public Builder alarmIdentifier(@Nullable Output<HealthCheckAlarmIdentifierArgs> alarmIdentifier) {
             this.alarmIdentifier = alarmIdentifier;
             return this;
         }
 
         public Builder alarmIdentifier(@Nullable HealthCheckAlarmIdentifierArgs alarmIdentifier) {
-            this.alarmIdentifier = Input.ofNullable(alarmIdentifier);
+            this.alarmIdentifier = Output.ofNullable(alarmIdentifier);
             return this;
         }
 
-        public Builder childHealthChecks(@Nullable Input<List<String>> childHealthChecks) {
+        public Builder childHealthChecks(@Nullable Output<List<String>> childHealthChecks) {
             this.childHealthChecks = childHealthChecks;
             return this;
         }
 
         public Builder childHealthChecks(@Nullable List<String> childHealthChecks) {
-            this.childHealthChecks = Input.ofNullable(childHealthChecks);
+            this.childHealthChecks = Output.ofNullable(childHealthChecks);
             return this;
         }
 
-        public Builder enableSNI(@Nullable Input<Boolean> enableSNI) {
+        public Builder enableSNI(@Nullable Output<Boolean> enableSNI) {
             this.enableSNI = enableSNI;
             return this;
         }
 
         public Builder enableSNI(@Nullable Boolean enableSNI) {
-            this.enableSNI = Input.ofNullable(enableSNI);
+            this.enableSNI = Output.ofNullable(enableSNI);
             return this;
         }
 
-        public Builder failureThreshold(@Nullable Input<Integer> failureThreshold) {
+        public Builder failureThreshold(@Nullable Output<Integer> failureThreshold) {
             this.failureThreshold = failureThreshold;
             return this;
         }
 
         public Builder failureThreshold(@Nullable Integer failureThreshold) {
-            this.failureThreshold = Input.ofNullable(failureThreshold);
+            this.failureThreshold = Output.ofNullable(failureThreshold);
             return this;
         }
 
-        public Builder fullyQualifiedDomainName(@Nullable Input<String> fullyQualifiedDomainName) {
+        public Builder fullyQualifiedDomainName(@Nullable Output<String> fullyQualifiedDomainName) {
             this.fullyQualifiedDomainName = fullyQualifiedDomainName;
             return this;
         }
 
         public Builder fullyQualifiedDomainName(@Nullable String fullyQualifiedDomainName) {
-            this.fullyQualifiedDomainName = Input.ofNullable(fullyQualifiedDomainName);
+            this.fullyQualifiedDomainName = Output.ofNullable(fullyQualifiedDomainName);
             return this;
         }
 
-        public Builder healthThreshold(@Nullable Input<Integer> healthThreshold) {
+        public Builder healthThreshold(@Nullable Output<Integer> healthThreshold) {
             this.healthThreshold = healthThreshold;
             return this;
         }
 
         public Builder healthThreshold(@Nullable Integer healthThreshold) {
-            this.healthThreshold = Input.ofNullable(healthThreshold);
+            this.healthThreshold = Output.ofNullable(healthThreshold);
             return this;
         }
 
-        public Builder iPAddress(@Nullable Input<String> iPAddress) {
+        public Builder iPAddress(@Nullable Output<String> iPAddress) {
             this.iPAddress = iPAddress;
             return this;
         }
 
         public Builder iPAddress(@Nullable String iPAddress) {
-            this.iPAddress = Input.ofNullable(iPAddress);
+            this.iPAddress = Output.ofNullable(iPAddress);
             return this;
         }
 
-        public Builder insufficientDataHealthStatus(@Nullable Input<HealthCheckConfigPropertiesInsufficientDataHealthStatus> insufficientDataHealthStatus) {
+        public Builder insufficientDataHealthStatus(@Nullable Output<HealthCheckConfigPropertiesInsufficientDataHealthStatus> insufficientDataHealthStatus) {
             this.insufficientDataHealthStatus = insufficientDataHealthStatus;
             return this;
         }
 
         public Builder insufficientDataHealthStatus(@Nullable HealthCheckConfigPropertiesInsufficientDataHealthStatus insufficientDataHealthStatus) {
-            this.insufficientDataHealthStatus = Input.ofNullable(insufficientDataHealthStatus);
+            this.insufficientDataHealthStatus = Output.ofNullable(insufficientDataHealthStatus);
             return this;
         }
 
-        public Builder inverted(@Nullable Input<Boolean> inverted) {
+        public Builder inverted(@Nullable Output<Boolean> inverted) {
             this.inverted = inverted;
             return this;
         }
 
         public Builder inverted(@Nullable Boolean inverted) {
-            this.inverted = Input.ofNullable(inverted);
+            this.inverted = Output.ofNullable(inverted);
             return this;
         }
 
-        public Builder measureLatency(@Nullable Input<Boolean> measureLatency) {
+        public Builder measureLatency(@Nullable Output<Boolean> measureLatency) {
             this.measureLatency = measureLatency;
             return this;
         }
 
         public Builder measureLatency(@Nullable Boolean measureLatency) {
-            this.measureLatency = Input.ofNullable(measureLatency);
+            this.measureLatency = Output.ofNullable(measureLatency);
             return this;
         }
 
-        public Builder port(@Nullable Input<Integer> port) {
+        public Builder port(@Nullable Output<Integer> port) {
             this.port = port;
             return this;
         }
 
         public Builder port(@Nullable Integer port) {
-            this.port = Input.ofNullable(port);
+            this.port = Output.ofNullable(port);
             return this;
         }
 
-        public Builder regions(@Nullable Input<List<String>> regions) {
+        public Builder regions(@Nullable Output<List<String>> regions) {
             this.regions = regions;
             return this;
         }
 
         public Builder regions(@Nullable List<String> regions) {
-            this.regions = Input.ofNullable(regions);
+            this.regions = Output.ofNullable(regions);
             return this;
         }
 
-        public Builder requestInterval(@Nullable Input<Integer> requestInterval) {
+        public Builder requestInterval(@Nullable Output<Integer> requestInterval) {
             this.requestInterval = requestInterval;
             return this;
         }
 
         public Builder requestInterval(@Nullable Integer requestInterval) {
-            this.requestInterval = Input.ofNullable(requestInterval);
+            this.requestInterval = Output.ofNullable(requestInterval);
             return this;
         }
 
-        public Builder resourcePath(@Nullable Input<String> resourcePath) {
+        public Builder resourcePath(@Nullable Output<String> resourcePath) {
             this.resourcePath = resourcePath;
             return this;
         }
 
         public Builder resourcePath(@Nullable String resourcePath) {
-            this.resourcePath = Input.ofNullable(resourcePath);
+            this.resourcePath = Output.ofNullable(resourcePath);
             return this;
         }
 
-        public Builder routingControlArn(@Nullable Input<String> routingControlArn) {
+        public Builder routingControlArn(@Nullable Output<String> routingControlArn) {
             this.routingControlArn = routingControlArn;
             return this;
         }
 
         public Builder routingControlArn(@Nullable String routingControlArn) {
-            this.routingControlArn = Input.ofNullable(routingControlArn);
+            this.routingControlArn = Output.ofNullable(routingControlArn);
             return this;
         }
 
-        public Builder searchString(@Nullable Input<String> searchString) {
+        public Builder searchString(@Nullable Output<String> searchString) {
             this.searchString = searchString;
             return this;
         }
 
         public Builder searchString(@Nullable String searchString) {
-            this.searchString = Input.ofNullable(searchString);
+            this.searchString = Output.ofNullable(searchString);
             return this;
         }
 
-        public Builder type(Input<HealthCheckConfigPropertiesType> type) {
+        public Builder type(Output<HealthCheckConfigPropertiesType> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(HealthCheckConfigPropertiesType type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
         public HealthCheckConfigPropertiesArgs build() {

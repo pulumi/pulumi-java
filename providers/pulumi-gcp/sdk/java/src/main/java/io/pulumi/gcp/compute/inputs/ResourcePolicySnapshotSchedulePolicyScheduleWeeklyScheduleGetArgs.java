@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.compute.inputs.ResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleDayOfWeekGetArgs;
 import java.util.List;
@@ -20,18 +20,18 @@ public final class ResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleGet
      * 
      */
     @InputImport(name="dayOfWeeks", required=true)
-      private final Input<List<ResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleDayOfWeekGetArgs>> dayOfWeeks;
+      private final Output<List<ResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleDayOfWeekGetArgs>> dayOfWeeks;
 
-    public Input<List<ResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleDayOfWeekGetArgs>> getDayOfWeeks() {
+    public Output<List<ResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleDayOfWeekGetArgs>> getDayOfWeeks() {
         return this.dayOfWeeks;
     }
 
-    public ResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleGetArgs(Input<List<ResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleDayOfWeekGetArgs>> dayOfWeeks) {
+    public ResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleGetArgs(Output<List<ResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleDayOfWeekGetArgs>> dayOfWeeks) {
         this.dayOfWeeks = Objects.requireNonNull(dayOfWeeks, "expected parameter 'dayOfWeeks' to be non-null");
     }
 
     private ResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleGetArgs() {
-        this.dayOfWeeks = Input.empty();
+        this.dayOfWeeks = Output.empty();
     }
 
     public static Builder builder() {
@@ -43,7 +43,7 @@ public final class ResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleGet
     }
 
     public static final class Builder {
-        private Input<List<ResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleDayOfWeekGetArgs>> dayOfWeeks;
+        private Output<List<ResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleDayOfWeekGetArgs>> dayOfWeeks;
 
         public Builder() {
     	      // Empty
@@ -54,13 +54,13 @@ public final class ResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleGet
     	      this.dayOfWeeks = defaults.dayOfWeeks;
         }
 
-        public Builder dayOfWeeks(Input<List<ResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleDayOfWeekGetArgs>> dayOfWeeks) {
+        public Builder dayOfWeeks(Output<List<ResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleDayOfWeekGetArgs>> dayOfWeeks) {
             this.dayOfWeeks = Objects.requireNonNull(dayOfWeeks);
             return this;
         }
 
         public Builder dayOfWeeks(List<ResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleDayOfWeekGetArgs> dayOfWeeks) {
-            this.dayOfWeeks = Input.of(Objects.requireNonNull(dayOfWeeks));
+            this.dayOfWeeks = Output.of(Objects.requireNonNull(dayOfWeeks));
             return this;
         }
         public ResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleGetArgs build() {

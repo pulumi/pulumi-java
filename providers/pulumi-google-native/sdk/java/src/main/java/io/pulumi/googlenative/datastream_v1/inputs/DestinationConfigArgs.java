@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.datastream_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.datastream_v1.inputs.GcsDestinationConfigArgs;
 import java.lang.String;
@@ -24,9 +24,9 @@ public final class DestinationConfigArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="destinationConnectionProfile", required=true)
-      private final Input<String> destinationConnectionProfile;
+      private final Output<String> destinationConnectionProfile;
 
-    public Input<String> getDestinationConnectionProfile() {
+    public Output<String> getDestinationConnectionProfile() {
         return this.destinationConnectionProfile;
     }
 
@@ -35,22 +35,22 @@ public final class DestinationConfigArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="gcsDestinationConfig")
-      private final @Nullable Input<GcsDestinationConfigArgs> gcsDestinationConfig;
+      private final @Nullable Output<GcsDestinationConfigArgs> gcsDestinationConfig;
 
-    public Input<GcsDestinationConfigArgs> getGcsDestinationConfig() {
-        return this.gcsDestinationConfig == null ? Input.empty() : this.gcsDestinationConfig;
+    public Output<GcsDestinationConfigArgs> getGcsDestinationConfig() {
+        return this.gcsDestinationConfig == null ? Output.empty() : this.gcsDestinationConfig;
     }
 
     public DestinationConfigArgs(
-        Input<String> destinationConnectionProfile,
-        @Nullable Input<GcsDestinationConfigArgs> gcsDestinationConfig) {
+        Output<String> destinationConnectionProfile,
+        @Nullable Output<GcsDestinationConfigArgs> gcsDestinationConfig) {
         this.destinationConnectionProfile = Objects.requireNonNull(destinationConnectionProfile, "expected parameter 'destinationConnectionProfile' to be non-null");
         this.gcsDestinationConfig = gcsDestinationConfig;
     }
 
     private DestinationConfigArgs() {
-        this.destinationConnectionProfile = Input.empty();
-        this.gcsDestinationConfig = Input.empty();
+        this.destinationConnectionProfile = Output.empty();
+        this.gcsDestinationConfig = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class DestinationConfigArgs extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private Input<String> destinationConnectionProfile;
-        private @Nullable Input<GcsDestinationConfigArgs> gcsDestinationConfig;
+        private Output<String> destinationConnectionProfile;
+        private @Nullable Output<GcsDestinationConfigArgs> gcsDestinationConfig;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class DestinationConfigArgs extends io.pulumi.resources.ResourceArg
     	      this.gcsDestinationConfig = defaults.gcsDestinationConfig;
         }
 
-        public Builder destinationConnectionProfile(Input<String> destinationConnectionProfile) {
+        public Builder destinationConnectionProfile(Output<String> destinationConnectionProfile) {
             this.destinationConnectionProfile = Objects.requireNonNull(destinationConnectionProfile);
             return this;
         }
 
         public Builder destinationConnectionProfile(String destinationConnectionProfile) {
-            this.destinationConnectionProfile = Input.of(Objects.requireNonNull(destinationConnectionProfile));
+            this.destinationConnectionProfile = Output.of(Objects.requireNonNull(destinationConnectionProfile));
             return this;
         }
 
-        public Builder gcsDestinationConfig(@Nullable Input<GcsDestinationConfigArgs> gcsDestinationConfig) {
+        public Builder gcsDestinationConfig(@Nullable Output<GcsDestinationConfigArgs> gcsDestinationConfig) {
             this.gcsDestinationConfig = gcsDestinationConfig;
             return this;
         }
 
         public Builder gcsDestinationConfig(@Nullable GcsDestinationConfigArgs gcsDestinationConfig) {
-            this.gcsDestinationConfig = Input.ofNullable(gcsDestinationConfig);
+            this.gcsDestinationConfig = Output.ofNullable(gcsDestinationConfig);
             return this;
         }
         public DestinationConfigArgs build() {

@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.networking.k8s.io_v1.inputs;
 
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -25,10 +25,10 @@ public final class NetworkPolicyPortArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="endPort")
-      private final @Nullable Input<Integer> endPort;
+      private final @Nullable Output<Integer> endPort;
 
-    public Input<Integer> getEndPort() {
-        return this.endPort == null ? Input.empty() : this.endPort;
+    public Output<Integer> getEndPort() {
+        return this.endPort == null ? Output.empty() : this.endPort;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class NetworkPolicyPortArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="port")
-      private final @Nullable Input<Either<Integer,String>> port;
+      private final @Nullable Output<Either<Integer,String>> port;
 
-    public Input<Either<Integer,String>> getPort() {
-        return this.port == null ? Input.empty() : this.port;
+    public Output<Either<Integer,String>> getPort() {
+        return this.port == null ? Output.empty() : this.port;
     }
 
     /**
@@ -47,25 +47,25 @@ public final class NetworkPolicyPortArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="protocol")
-      private final @Nullable Input<String> protocol;
+      private final @Nullable Output<String> protocol;
 
-    public Input<String> getProtocol() {
-        return this.protocol == null ? Input.empty() : this.protocol;
+    public Output<String> getProtocol() {
+        return this.protocol == null ? Output.empty() : this.protocol;
     }
 
     public NetworkPolicyPortArgs(
-        @Nullable Input<Integer> endPort,
-        @Nullable Input<Either<Integer,String>> port,
-        @Nullable Input<String> protocol) {
+        @Nullable Output<Integer> endPort,
+        @Nullable Output<Either<Integer,String>> port,
+        @Nullable Output<String> protocol) {
         this.endPort = endPort;
         this.port = port;
         this.protocol = protocol;
     }
 
     private NetworkPolicyPortArgs() {
-        this.endPort = Input.empty();
-        this.port = Input.empty();
-        this.protocol = Input.empty();
+        this.endPort = Output.empty();
+        this.port = Output.empty();
+        this.protocol = Output.empty();
     }
 
     public static Builder builder() {
@@ -77,9 +77,9 @@ public final class NetworkPolicyPortArgs extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> endPort;
-        private @Nullable Input<Either<Integer,String>> port;
-        private @Nullable Input<String> protocol;
+        private @Nullable Output<Integer> endPort;
+        private @Nullable Output<Either<Integer,String>> port;
+        private @Nullable Output<String> protocol;
 
         public Builder() {
     	      // Empty
@@ -92,33 +92,33 @@ public final class NetworkPolicyPortArgs extends io.pulumi.resources.ResourceArg
     	      this.protocol = defaults.protocol;
         }
 
-        public Builder endPort(@Nullable Input<Integer> endPort) {
+        public Builder endPort(@Nullable Output<Integer> endPort) {
             this.endPort = endPort;
             return this;
         }
 
         public Builder endPort(@Nullable Integer endPort) {
-            this.endPort = Input.ofNullable(endPort);
+            this.endPort = Output.ofNullable(endPort);
             return this;
         }
 
-        public Builder port(@Nullable Input<Either<Integer,String>> port) {
+        public Builder port(@Nullable Output<Either<Integer,String>> port) {
             this.port = port;
             return this;
         }
 
         public Builder port(@Nullable Either<Integer,String> port) {
-            this.port = Input.ofNullable(port);
+            this.port = Output.ofNullable(port);
             return this;
         }
 
-        public Builder protocol(@Nullable Input<String> protocol) {
+        public Builder protocol(@Nullable Output<String> protocol) {
             this.protocol = protocol;
             return this;
         }
 
         public Builder protocol(@Nullable String protocol) {
-            this.protocol = Input.ofNullable(protocol);
+            this.protocol = Output.ofNullable(protocol);
             return this;
         }
         public NetworkPolicyPortArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.budgets.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.String;
@@ -21,9 +21,9 @@ public final class BudgetNotificationArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="comparisonOperator", required=true)
-      private final Input<String> comparisonOperator;
+      private final Output<String> comparisonOperator;
 
-    public Input<String> getComparisonOperator() {
+    public Output<String> getComparisonOperator() {
         return this.comparisonOperator;
     }
 
@@ -32,9 +32,9 @@ public final class BudgetNotificationArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="notificationType", required=true)
-      private final Input<String> notificationType;
+      private final Output<String> notificationType;
 
-    public Input<String> getNotificationType() {
+    public Output<String> getNotificationType() {
         return this.notificationType;
     }
 
@@ -43,10 +43,10 @@ public final class BudgetNotificationArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="subscriberEmailAddresses")
-      private final @Nullable Input<List<String>> subscriberEmailAddresses;
+      private final @Nullable Output<List<String>> subscriberEmailAddresses;
 
-    public Input<List<String>> getSubscriberEmailAddresses() {
-        return this.subscriberEmailAddresses == null ? Input.empty() : this.subscriberEmailAddresses;
+    public Output<List<String>> getSubscriberEmailAddresses() {
+        return this.subscriberEmailAddresses == null ? Output.empty() : this.subscriberEmailAddresses;
     }
 
     /**
@@ -54,10 +54,10 @@ public final class BudgetNotificationArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="subscriberSnsTopicArns")
-      private final @Nullable Input<List<String>> subscriberSnsTopicArns;
+      private final @Nullable Output<List<String>> subscriberSnsTopicArns;
 
-    public Input<List<String>> getSubscriberSnsTopicArns() {
-        return this.subscriberSnsTopicArns == null ? Input.empty() : this.subscriberSnsTopicArns;
+    public Output<List<String>> getSubscriberSnsTopicArns() {
+        return this.subscriberSnsTopicArns == null ? Output.empty() : this.subscriberSnsTopicArns;
     }
 
     /**
@@ -65,9 +65,9 @@ public final class BudgetNotificationArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="threshold", required=true)
-      private final Input<Double> threshold;
+      private final Output<Double> threshold;
 
-    public Input<Double> getThreshold() {
+    public Output<Double> getThreshold() {
         return this.threshold;
     }
 
@@ -76,19 +76,19 @@ public final class BudgetNotificationArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="thresholdType", required=true)
-      private final Input<String> thresholdType;
+      private final Output<String> thresholdType;
 
-    public Input<String> getThresholdType() {
+    public Output<String> getThresholdType() {
         return this.thresholdType;
     }
 
     public BudgetNotificationArgs(
-        Input<String> comparisonOperator,
-        Input<String> notificationType,
-        @Nullable Input<List<String>> subscriberEmailAddresses,
-        @Nullable Input<List<String>> subscriberSnsTopicArns,
-        Input<Double> threshold,
-        Input<String> thresholdType) {
+        Output<String> comparisonOperator,
+        Output<String> notificationType,
+        @Nullable Output<List<String>> subscriberEmailAddresses,
+        @Nullable Output<List<String>> subscriberSnsTopicArns,
+        Output<Double> threshold,
+        Output<String> thresholdType) {
         this.comparisonOperator = Objects.requireNonNull(comparisonOperator, "expected parameter 'comparisonOperator' to be non-null");
         this.notificationType = Objects.requireNonNull(notificationType, "expected parameter 'notificationType' to be non-null");
         this.subscriberEmailAddresses = subscriberEmailAddresses;
@@ -98,12 +98,12 @@ public final class BudgetNotificationArgs extends io.pulumi.resources.ResourceAr
     }
 
     private BudgetNotificationArgs() {
-        this.comparisonOperator = Input.empty();
-        this.notificationType = Input.empty();
-        this.subscriberEmailAddresses = Input.empty();
-        this.subscriberSnsTopicArns = Input.empty();
-        this.threshold = Input.empty();
-        this.thresholdType = Input.empty();
+        this.comparisonOperator = Output.empty();
+        this.notificationType = Output.empty();
+        this.subscriberEmailAddresses = Output.empty();
+        this.subscriberSnsTopicArns = Output.empty();
+        this.threshold = Output.empty();
+        this.thresholdType = Output.empty();
     }
 
     public static Builder builder() {
@@ -115,12 +115,12 @@ public final class BudgetNotificationArgs extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private Input<String> comparisonOperator;
-        private Input<String> notificationType;
-        private @Nullable Input<List<String>> subscriberEmailAddresses;
-        private @Nullable Input<List<String>> subscriberSnsTopicArns;
-        private Input<Double> threshold;
-        private Input<String> thresholdType;
+        private Output<String> comparisonOperator;
+        private Output<String> notificationType;
+        private @Nullable Output<List<String>> subscriberEmailAddresses;
+        private @Nullable Output<List<String>> subscriberSnsTopicArns;
+        private Output<Double> threshold;
+        private Output<String> thresholdType;
 
         public Builder() {
     	      // Empty
@@ -136,63 +136,63 @@ public final class BudgetNotificationArgs extends io.pulumi.resources.ResourceAr
     	      this.thresholdType = defaults.thresholdType;
         }
 
-        public Builder comparisonOperator(Input<String> comparisonOperator) {
+        public Builder comparisonOperator(Output<String> comparisonOperator) {
             this.comparisonOperator = Objects.requireNonNull(comparisonOperator);
             return this;
         }
 
         public Builder comparisonOperator(String comparisonOperator) {
-            this.comparisonOperator = Input.of(Objects.requireNonNull(comparisonOperator));
+            this.comparisonOperator = Output.of(Objects.requireNonNull(comparisonOperator));
             return this;
         }
 
-        public Builder notificationType(Input<String> notificationType) {
+        public Builder notificationType(Output<String> notificationType) {
             this.notificationType = Objects.requireNonNull(notificationType);
             return this;
         }
 
         public Builder notificationType(String notificationType) {
-            this.notificationType = Input.of(Objects.requireNonNull(notificationType));
+            this.notificationType = Output.of(Objects.requireNonNull(notificationType));
             return this;
         }
 
-        public Builder subscriberEmailAddresses(@Nullable Input<List<String>> subscriberEmailAddresses) {
+        public Builder subscriberEmailAddresses(@Nullable Output<List<String>> subscriberEmailAddresses) {
             this.subscriberEmailAddresses = subscriberEmailAddresses;
             return this;
         }
 
         public Builder subscriberEmailAddresses(@Nullable List<String> subscriberEmailAddresses) {
-            this.subscriberEmailAddresses = Input.ofNullable(subscriberEmailAddresses);
+            this.subscriberEmailAddresses = Output.ofNullable(subscriberEmailAddresses);
             return this;
         }
 
-        public Builder subscriberSnsTopicArns(@Nullable Input<List<String>> subscriberSnsTopicArns) {
+        public Builder subscriberSnsTopicArns(@Nullable Output<List<String>> subscriberSnsTopicArns) {
             this.subscriberSnsTopicArns = subscriberSnsTopicArns;
             return this;
         }
 
         public Builder subscriberSnsTopicArns(@Nullable List<String> subscriberSnsTopicArns) {
-            this.subscriberSnsTopicArns = Input.ofNullable(subscriberSnsTopicArns);
+            this.subscriberSnsTopicArns = Output.ofNullable(subscriberSnsTopicArns);
             return this;
         }
 
-        public Builder threshold(Input<Double> threshold) {
+        public Builder threshold(Output<Double> threshold) {
             this.threshold = Objects.requireNonNull(threshold);
             return this;
         }
 
         public Builder threshold(Double threshold) {
-            this.threshold = Input.of(Objects.requireNonNull(threshold));
+            this.threshold = Output.of(Objects.requireNonNull(threshold));
             return this;
         }
 
-        public Builder thresholdType(Input<String> thresholdType) {
+        public Builder thresholdType(Output<String> thresholdType) {
             this.thresholdType = Objects.requireNonNull(thresholdType);
             return this;
         }
 
         public Builder thresholdType(String thresholdType) {
-            this.thresholdType = Input.of(Objects.requireNonNull(thresholdType));
+            this.thresholdType = Output.of(Objects.requireNonNull(thresholdType));
             return this;
         }
         public BudgetNotificationArgs build() {

@@ -5,7 +5,7 @@ package io.pulumi.azurenative.managedservices;
 
 import io.pulumi.azurenative.managedservices.inputs.PlanArgs;
 import io.pulumi.azurenative.managedservices.inputs.RegistrationDefinitionPropertiesArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -21,10 +21,10 @@ public final class RegistrationDefinitionArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="plan")
-      private final @Nullable Input<PlanArgs> plan;
+      private final @Nullable Output<PlanArgs> plan;
 
-    public Input<PlanArgs> getPlan() {
-        return this.plan == null ? Input.empty() : this.plan;
+    public Output<PlanArgs> getPlan() {
+        return this.plan == null ? Output.empty() : this.plan;
     }
 
     /**
@@ -32,10 +32,10 @@ public final class RegistrationDefinitionArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="properties")
-      private final @Nullable Input<RegistrationDefinitionPropertiesArgs> properties;
+      private final @Nullable Output<RegistrationDefinitionPropertiesArgs> properties;
 
-    public Input<RegistrationDefinitionPropertiesArgs> getProperties() {
-        return this.properties == null ? Input.empty() : this.properties;
+    public Output<RegistrationDefinitionPropertiesArgs> getProperties() {
+        return this.properties == null ? Output.empty() : this.properties;
     }
 
     /**
@@ -43,10 +43,10 @@ public final class RegistrationDefinitionArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="registrationDefinitionId")
-      private final @Nullable Input<String> registrationDefinitionId;
+      private final @Nullable Output<String> registrationDefinitionId;
 
-    public Input<String> getRegistrationDefinitionId() {
-        return this.registrationDefinitionId == null ? Input.empty() : this.registrationDefinitionId;
+    public Output<String> getRegistrationDefinitionId() {
+        return this.registrationDefinitionId == null ? Output.empty() : this.registrationDefinitionId;
     }
 
     /**
@@ -54,17 +54,17 @@ public final class RegistrationDefinitionArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="scope", required=true)
-      private final Input<String> scope;
+      private final Output<String> scope;
 
-    public Input<String> getScope() {
+    public Output<String> getScope() {
         return this.scope;
     }
 
     public RegistrationDefinitionArgs(
-        @Nullable Input<PlanArgs> plan,
-        @Nullable Input<RegistrationDefinitionPropertiesArgs> properties,
-        @Nullable Input<String> registrationDefinitionId,
-        Input<String> scope) {
+        @Nullable Output<PlanArgs> plan,
+        @Nullable Output<RegistrationDefinitionPropertiesArgs> properties,
+        @Nullable Output<String> registrationDefinitionId,
+        Output<String> scope) {
         this.plan = plan;
         this.properties = properties;
         this.registrationDefinitionId = registrationDefinitionId;
@@ -72,10 +72,10 @@ public final class RegistrationDefinitionArgs extends io.pulumi.resources.Resour
     }
 
     private RegistrationDefinitionArgs() {
-        this.plan = Input.empty();
-        this.properties = Input.empty();
-        this.registrationDefinitionId = Input.empty();
-        this.scope = Input.empty();
+        this.plan = Output.empty();
+        this.properties = Output.empty();
+        this.registrationDefinitionId = Output.empty();
+        this.scope = Output.empty();
     }
 
     public static Builder builder() {
@@ -87,10 +87,10 @@ public final class RegistrationDefinitionArgs extends io.pulumi.resources.Resour
     }
 
     public static final class Builder {
-        private @Nullable Input<PlanArgs> plan;
-        private @Nullable Input<RegistrationDefinitionPropertiesArgs> properties;
-        private @Nullable Input<String> registrationDefinitionId;
-        private Input<String> scope;
+        private @Nullable Output<PlanArgs> plan;
+        private @Nullable Output<RegistrationDefinitionPropertiesArgs> properties;
+        private @Nullable Output<String> registrationDefinitionId;
+        private Output<String> scope;
 
         public Builder() {
     	      // Empty
@@ -104,43 +104,43 @@ public final class RegistrationDefinitionArgs extends io.pulumi.resources.Resour
     	      this.scope = defaults.scope;
         }
 
-        public Builder plan(@Nullable Input<PlanArgs> plan) {
+        public Builder plan(@Nullable Output<PlanArgs> plan) {
             this.plan = plan;
             return this;
         }
 
         public Builder plan(@Nullable PlanArgs plan) {
-            this.plan = Input.ofNullable(plan);
+            this.plan = Output.ofNullable(plan);
             return this;
         }
 
-        public Builder properties(@Nullable Input<RegistrationDefinitionPropertiesArgs> properties) {
+        public Builder properties(@Nullable Output<RegistrationDefinitionPropertiesArgs> properties) {
             this.properties = properties;
             return this;
         }
 
         public Builder properties(@Nullable RegistrationDefinitionPropertiesArgs properties) {
-            this.properties = Input.ofNullable(properties);
+            this.properties = Output.ofNullable(properties);
             return this;
         }
 
-        public Builder registrationDefinitionId(@Nullable Input<String> registrationDefinitionId) {
+        public Builder registrationDefinitionId(@Nullable Output<String> registrationDefinitionId) {
             this.registrationDefinitionId = registrationDefinitionId;
             return this;
         }
 
         public Builder registrationDefinitionId(@Nullable String registrationDefinitionId) {
-            this.registrationDefinitionId = Input.ofNullable(registrationDefinitionId);
+            this.registrationDefinitionId = Output.ofNullable(registrationDefinitionId);
             return this;
         }
 
-        public Builder scope(Input<String> scope) {
+        public Builder scope(Output<String> scope) {
             this.scope = Objects.requireNonNull(scope);
             return this;
         }
 
         public Builder scope(String scope) {
-            this.scope = Input.of(Objects.requireNonNull(scope));
+            this.scope = Output.of(Objects.requireNonNull(scope));
             return this;
         }
         public RegistrationDefinitionArgs build() {

@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.location.inputs;
 
 import io.pulumi.awsnative.location.enums.PlaceIndexIntendedUse;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -15,18 +15,18 @@ public final class PlaceIndexDataSourceConfigurationArgs extends io.pulumi.resou
     public static final PlaceIndexDataSourceConfigurationArgs Empty = new PlaceIndexDataSourceConfigurationArgs();
 
     @InputImport(name="intendedUse")
-      private final @Nullable Input<PlaceIndexIntendedUse> intendedUse;
+      private final @Nullable Output<PlaceIndexIntendedUse> intendedUse;
 
-    public Input<PlaceIndexIntendedUse> getIntendedUse() {
-        return this.intendedUse == null ? Input.empty() : this.intendedUse;
+    public Output<PlaceIndexIntendedUse> getIntendedUse() {
+        return this.intendedUse == null ? Output.empty() : this.intendedUse;
     }
 
-    public PlaceIndexDataSourceConfigurationArgs(@Nullable Input<PlaceIndexIntendedUse> intendedUse) {
+    public PlaceIndexDataSourceConfigurationArgs(@Nullable Output<PlaceIndexIntendedUse> intendedUse) {
         this.intendedUse = intendedUse;
     }
 
     private PlaceIndexDataSourceConfigurationArgs() {
-        this.intendedUse = Input.empty();
+        this.intendedUse = Output.empty();
     }
 
     public static Builder builder() {
@@ -38,7 +38,7 @@ public final class PlaceIndexDataSourceConfigurationArgs extends io.pulumi.resou
     }
 
     public static final class Builder {
-        private @Nullable Input<PlaceIndexIntendedUse> intendedUse;
+        private @Nullable Output<PlaceIndexIntendedUse> intendedUse;
 
         public Builder() {
     	      // Empty
@@ -49,13 +49,13 @@ public final class PlaceIndexDataSourceConfigurationArgs extends io.pulumi.resou
     	      this.intendedUse = defaults.intendedUse;
         }
 
-        public Builder intendedUse(@Nullable Input<PlaceIndexIntendedUse> intendedUse) {
+        public Builder intendedUse(@Nullable Output<PlaceIndexIntendedUse> intendedUse) {
             this.intendedUse = intendedUse;
             return this;
         }
 
         public Builder intendedUse(@Nullable PlaceIndexIntendedUse intendedUse) {
-            this.intendedUse = Input.ofNullable(intendedUse);
+            this.intendedUse = Output.ofNullable(intendedUse);
             return this;
         }
         public PlaceIndexDataSourceConfigurationArgs build() {

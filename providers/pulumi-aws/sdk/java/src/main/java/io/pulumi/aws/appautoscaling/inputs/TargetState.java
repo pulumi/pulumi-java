@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.appautoscaling.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -20,10 +20,10 @@ public final class TargetState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="maxCapacity")
-      private final @Nullable Input<Integer> maxCapacity;
+      private final @Nullable Output<Integer> maxCapacity;
 
-    public Input<Integer> getMaxCapacity() {
-        return this.maxCapacity == null ? Input.empty() : this.maxCapacity;
+    public Output<Integer> getMaxCapacity() {
+        return this.maxCapacity == null ? Output.empty() : this.maxCapacity;
     }
 
     /**
@@ -31,10 +31,10 @@ public final class TargetState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="minCapacity")
-      private final @Nullable Input<Integer> minCapacity;
+      private final @Nullable Output<Integer> minCapacity;
 
-    public Input<Integer> getMinCapacity() {
-        return this.minCapacity == null ? Input.empty() : this.minCapacity;
+    public Output<Integer> getMinCapacity() {
+        return this.minCapacity == null ? Output.empty() : this.minCapacity;
     }
 
     /**
@@ -42,10 +42,10 @@ public final class TargetState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceId")
-      private final @Nullable Input<String> resourceId;
+      private final @Nullable Output<String> resourceId;
 
-    public Input<String> getResourceId() {
-        return this.resourceId == null ? Input.empty() : this.resourceId;
+    public Output<String> getResourceId() {
+        return this.resourceId == null ? Output.empty() : this.resourceId;
     }
 
     /**
@@ -53,10 +53,10 @@ public final class TargetState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="roleArn")
-      private final @Nullable Input<String> roleArn;
+      private final @Nullable Output<String> roleArn;
 
-    public Input<String> getRoleArn() {
-        return this.roleArn == null ? Input.empty() : this.roleArn;
+    public Output<String> getRoleArn() {
+        return this.roleArn == null ? Output.empty() : this.roleArn;
     }
 
     /**
@@ -64,10 +64,10 @@ public final class TargetState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="scalableDimension")
-      private final @Nullable Input<String> scalableDimension;
+      private final @Nullable Output<String> scalableDimension;
 
-    public Input<String> getScalableDimension() {
-        return this.scalableDimension == null ? Input.empty() : this.scalableDimension;
+    public Output<String> getScalableDimension() {
+        return this.scalableDimension == null ? Output.empty() : this.scalableDimension;
     }
 
     /**
@@ -75,19 +75,19 @@ public final class TargetState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serviceNamespace")
-      private final @Nullable Input<String> serviceNamespace;
+      private final @Nullable Output<String> serviceNamespace;
 
-    public Input<String> getServiceNamespace() {
-        return this.serviceNamespace == null ? Input.empty() : this.serviceNamespace;
+    public Output<String> getServiceNamespace() {
+        return this.serviceNamespace == null ? Output.empty() : this.serviceNamespace;
     }
 
     public TargetState(
-        @Nullable Input<Integer> maxCapacity,
-        @Nullable Input<Integer> minCapacity,
-        @Nullable Input<String> resourceId,
-        @Nullable Input<String> roleArn,
-        @Nullable Input<String> scalableDimension,
-        @Nullable Input<String> serviceNamespace) {
+        @Nullable Output<Integer> maxCapacity,
+        @Nullable Output<Integer> minCapacity,
+        @Nullable Output<String> resourceId,
+        @Nullable Output<String> roleArn,
+        @Nullable Output<String> scalableDimension,
+        @Nullable Output<String> serviceNamespace) {
         this.maxCapacity = maxCapacity;
         this.minCapacity = minCapacity;
         this.resourceId = resourceId;
@@ -97,12 +97,12 @@ public final class TargetState extends io.pulumi.resources.ResourceArgs {
     }
 
     private TargetState() {
-        this.maxCapacity = Input.empty();
-        this.minCapacity = Input.empty();
-        this.resourceId = Input.empty();
-        this.roleArn = Input.empty();
-        this.scalableDimension = Input.empty();
-        this.serviceNamespace = Input.empty();
+        this.maxCapacity = Output.empty();
+        this.minCapacity = Output.empty();
+        this.resourceId = Output.empty();
+        this.roleArn = Output.empty();
+        this.scalableDimension = Output.empty();
+        this.serviceNamespace = Output.empty();
     }
 
     public static Builder builder() {
@@ -114,12 +114,12 @@ public final class TargetState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> maxCapacity;
-        private @Nullable Input<Integer> minCapacity;
-        private @Nullable Input<String> resourceId;
-        private @Nullable Input<String> roleArn;
-        private @Nullable Input<String> scalableDimension;
-        private @Nullable Input<String> serviceNamespace;
+        private @Nullable Output<Integer> maxCapacity;
+        private @Nullable Output<Integer> minCapacity;
+        private @Nullable Output<String> resourceId;
+        private @Nullable Output<String> roleArn;
+        private @Nullable Output<String> scalableDimension;
+        private @Nullable Output<String> serviceNamespace;
 
         public Builder() {
     	      // Empty
@@ -135,63 +135,63 @@ public final class TargetState extends io.pulumi.resources.ResourceArgs {
     	      this.serviceNamespace = defaults.serviceNamespace;
         }
 
-        public Builder maxCapacity(@Nullable Input<Integer> maxCapacity) {
+        public Builder maxCapacity(@Nullable Output<Integer> maxCapacity) {
             this.maxCapacity = maxCapacity;
             return this;
         }
 
         public Builder maxCapacity(@Nullable Integer maxCapacity) {
-            this.maxCapacity = Input.ofNullable(maxCapacity);
+            this.maxCapacity = Output.ofNullable(maxCapacity);
             return this;
         }
 
-        public Builder minCapacity(@Nullable Input<Integer> minCapacity) {
+        public Builder minCapacity(@Nullable Output<Integer> minCapacity) {
             this.minCapacity = minCapacity;
             return this;
         }
 
         public Builder minCapacity(@Nullable Integer minCapacity) {
-            this.minCapacity = Input.ofNullable(minCapacity);
+            this.minCapacity = Output.ofNullable(minCapacity);
             return this;
         }
 
-        public Builder resourceId(@Nullable Input<String> resourceId) {
+        public Builder resourceId(@Nullable Output<String> resourceId) {
             this.resourceId = resourceId;
             return this;
         }
 
         public Builder resourceId(@Nullable String resourceId) {
-            this.resourceId = Input.ofNullable(resourceId);
+            this.resourceId = Output.ofNullable(resourceId);
             return this;
         }
 
-        public Builder roleArn(@Nullable Input<String> roleArn) {
+        public Builder roleArn(@Nullable Output<String> roleArn) {
             this.roleArn = roleArn;
             return this;
         }
 
         public Builder roleArn(@Nullable String roleArn) {
-            this.roleArn = Input.ofNullable(roleArn);
+            this.roleArn = Output.ofNullable(roleArn);
             return this;
         }
 
-        public Builder scalableDimension(@Nullable Input<String> scalableDimension) {
+        public Builder scalableDimension(@Nullable Output<String> scalableDimension) {
             this.scalableDimension = scalableDimension;
             return this;
         }
 
         public Builder scalableDimension(@Nullable String scalableDimension) {
-            this.scalableDimension = Input.ofNullable(scalableDimension);
+            this.scalableDimension = Output.ofNullable(scalableDimension);
             return this;
         }
 
-        public Builder serviceNamespace(@Nullable Input<String> serviceNamespace) {
+        public Builder serviceNamespace(@Nullable Output<String> serviceNamespace) {
             this.serviceNamespace = serviceNamespace;
             return this;
         }
 
         public Builder serviceNamespace(@Nullable String serviceNamespace) {
-            this.serviceNamespace = Input.ofNullable(serviceNamespace);
+            this.serviceNamespace = Output.ofNullable(serviceNamespace);
             return this;
         }
         public TargetState build() {

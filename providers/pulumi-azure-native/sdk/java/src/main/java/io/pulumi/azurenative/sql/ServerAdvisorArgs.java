@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.sql;
 
 import io.pulumi.azurenative.sql.enums.AutoExecuteStatus;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -20,10 +20,10 @@ public final class ServerAdvisorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="advisorName")
-      private final @Nullable Input<String> advisorName;
+      private final @Nullable Output<String> advisorName;
 
-    public Input<String> getAdvisorName() {
-        return this.advisorName == null ? Input.empty() : this.advisorName;
+    public Output<String> getAdvisorName() {
+        return this.advisorName == null ? Output.empty() : this.advisorName;
     }
 
     /**
@@ -31,9 +31,9 @@ public final class ServerAdvisorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="autoExecuteStatus", required=true)
-      private final Input<AutoExecuteStatus> autoExecuteStatus;
+      private final Output<AutoExecuteStatus> autoExecuteStatus;
 
-    public Input<AutoExecuteStatus> getAutoExecuteStatus() {
+    public Output<AutoExecuteStatus> getAutoExecuteStatus() {
         return this.autoExecuteStatus;
     }
 
@@ -42,9 +42,9 @@ public final class ServerAdvisorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -53,17 +53,17 @@ public final class ServerAdvisorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serverName", required=true)
-      private final Input<String> serverName;
+      private final Output<String> serverName;
 
-    public Input<String> getServerName() {
+    public Output<String> getServerName() {
         return this.serverName;
     }
 
     public ServerAdvisorArgs(
-        @Nullable Input<String> advisorName,
-        Input<AutoExecuteStatus> autoExecuteStatus,
-        Input<String> resourceGroupName,
-        Input<String> serverName) {
+        @Nullable Output<String> advisorName,
+        Output<AutoExecuteStatus> autoExecuteStatus,
+        Output<String> resourceGroupName,
+        Output<String> serverName) {
         this.advisorName = advisorName;
         this.autoExecuteStatus = Objects.requireNonNull(autoExecuteStatus, "expected parameter 'autoExecuteStatus' to be non-null");
         this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
@@ -71,10 +71,10 @@ public final class ServerAdvisorArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ServerAdvisorArgs() {
-        this.advisorName = Input.empty();
-        this.autoExecuteStatus = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.serverName = Input.empty();
+        this.advisorName = Output.empty();
+        this.autoExecuteStatus = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.serverName = Output.empty();
     }
 
     public static Builder builder() {
@@ -86,10 +86,10 @@ public final class ServerAdvisorArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> advisorName;
-        private Input<AutoExecuteStatus> autoExecuteStatus;
-        private Input<String> resourceGroupName;
-        private Input<String> serverName;
+        private @Nullable Output<String> advisorName;
+        private Output<AutoExecuteStatus> autoExecuteStatus;
+        private Output<String> resourceGroupName;
+        private Output<String> serverName;
 
         public Builder() {
     	      // Empty
@@ -103,43 +103,43 @@ public final class ServerAdvisorArgs extends io.pulumi.resources.ResourceArgs {
     	      this.serverName = defaults.serverName;
         }
 
-        public Builder advisorName(@Nullable Input<String> advisorName) {
+        public Builder advisorName(@Nullable Output<String> advisorName) {
             this.advisorName = advisorName;
             return this;
         }
 
         public Builder advisorName(@Nullable String advisorName) {
-            this.advisorName = Input.ofNullable(advisorName);
+            this.advisorName = Output.ofNullable(advisorName);
             return this;
         }
 
-        public Builder autoExecuteStatus(Input<AutoExecuteStatus> autoExecuteStatus) {
+        public Builder autoExecuteStatus(Output<AutoExecuteStatus> autoExecuteStatus) {
             this.autoExecuteStatus = Objects.requireNonNull(autoExecuteStatus);
             return this;
         }
 
         public Builder autoExecuteStatus(AutoExecuteStatus autoExecuteStatus) {
-            this.autoExecuteStatus = Input.of(Objects.requireNonNull(autoExecuteStatus));
+            this.autoExecuteStatus = Output.of(Objects.requireNonNull(autoExecuteStatus));
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder serverName(Input<String> serverName) {
+        public Builder serverName(Output<String> serverName) {
             this.serverName = Objects.requireNonNull(serverName);
             return this;
         }
 
         public Builder serverName(String serverName) {
-            this.serverName = Input.of(Objects.requireNonNull(serverName));
+            this.serverName = Output.of(Objects.requireNonNull(serverName));
             return this;
         }
         public ServerAdvisorArgs build() {

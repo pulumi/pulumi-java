@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1alpha1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -25,10 +25,10 @@ public final class RecipeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arguments")
-      private final @Nullable Input<List<Map<String,String>>> arguments;
+      private final @Nullable Output<List<Map<String,String>>> arguments;
 
-    public Input<List<Map<String,String>>> getArguments() {
-        return this.arguments == null ? Input.empty() : this.arguments;
+    public Output<List<Map<String,String>>> getArguments() {
+        return this.arguments == null ? Output.empty() : this.arguments;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class RecipeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="definedInMaterial")
-      private final @Nullable Input<String> definedInMaterial;
+      private final @Nullable Output<String> definedInMaterial;
 
-    public Input<String> getDefinedInMaterial() {
-        return this.definedInMaterial == null ? Input.empty() : this.definedInMaterial;
+    public Output<String> getDefinedInMaterial() {
+        return this.definedInMaterial == null ? Output.empty() : this.definedInMaterial;
     }
 
     /**
@@ -47,10 +47,10 @@ public final class RecipeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="entryPoint")
-      private final @Nullable Input<String> entryPoint;
+      private final @Nullable Output<String> entryPoint;
 
-    public Input<String> getEntryPoint() {
-        return this.entryPoint == null ? Input.empty() : this.entryPoint;
+    public Output<String> getEntryPoint() {
+        return this.entryPoint == null ? Output.empty() : this.entryPoint;
     }
 
     /**
@@ -58,10 +58,10 @@ public final class RecipeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="environment")
-      private final @Nullable Input<List<Map<String,String>>> environment;
+      private final @Nullable Output<List<Map<String,String>>> environment;
 
-    public Input<List<Map<String,String>>> getEnvironment() {
-        return this.environment == null ? Input.empty() : this.environment;
+    public Output<List<Map<String,String>>> getEnvironment() {
+        return this.environment == null ? Output.empty() : this.environment;
     }
 
     /**
@@ -69,18 +69,18 @@ public final class RecipeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type")
-      private final @Nullable Input<String> type;
+      private final @Nullable Output<String> type;
 
-    public Input<String> getType() {
-        return this.type == null ? Input.empty() : this.type;
+    public Output<String> getType() {
+        return this.type == null ? Output.empty() : this.type;
     }
 
     public RecipeArgs(
-        @Nullable Input<List<Map<String,String>>> arguments,
-        @Nullable Input<String> definedInMaterial,
-        @Nullable Input<String> entryPoint,
-        @Nullable Input<List<Map<String,String>>> environment,
-        @Nullable Input<String> type) {
+        @Nullable Output<List<Map<String,String>>> arguments,
+        @Nullable Output<String> definedInMaterial,
+        @Nullable Output<String> entryPoint,
+        @Nullable Output<List<Map<String,String>>> environment,
+        @Nullable Output<String> type) {
         this.arguments = arguments;
         this.definedInMaterial = definedInMaterial;
         this.entryPoint = entryPoint;
@@ -89,11 +89,11 @@ public final class RecipeArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private RecipeArgs() {
-        this.arguments = Input.empty();
-        this.definedInMaterial = Input.empty();
-        this.entryPoint = Input.empty();
-        this.environment = Input.empty();
-        this.type = Input.empty();
+        this.arguments = Output.empty();
+        this.definedInMaterial = Output.empty();
+        this.entryPoint = Output.empty();
+        this.environment = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -105,11 +105,11 @@ public final class RecipeArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<List<Map<String,String>>> arguments;
-        private @Nullable Input<String> definedInMaterial;
-        private @Nullable Input<String> entryPoint;
-        private @Nullable Input<List<Map<String,String>>> environment;
-        private @Nullable Input<String> type;
+        private @Nullable Output<List<Map<String,String>>> arguments;
+        private @Nullable Output<String> definedInMaterial;
+        private @Nullable Output<String> entryPoint;
+        private @Nullable Output<List<Map<String,String>>> environment;
+        private @Nullable Output<String> type;
 
         public Builder() {
     	      // Empty
@@ -124,53 +124,53 @@ public final class RecipeArgs extends io.pulumi.resources.ResourceArgs {
     	      this.type = defaults.type;
         }
 
-        public Builder arguments(@Nullable Input<List<Map<String,String>>> arguments) {
+        public Builder arguments(@Nullable Output<List<Map<String,String>>> arguments) {
             this.arguments = arguments;
             return this;
         }
 
         public Builder arguments(@Nullable List<Map<String,String>> arguments) {
-            this.arguments = Input.ofNullable(arguments);
+            this.arguments = Output.ofNullable(arguments);
             return this;
         }
 
-        public Builder definedInMaterial(@Nullable Input<String> definedInMaterial) {
+        public Builder definedInMaterial(@Nullable Output<String> definedInMaterial) {
             this.definedInMaterial = definedInMaterial;
             return this;
         }
 
         public Builder definedInMaterial(@Nullable String definedInMaterial) {
-            this.definedInMaterial = Input.ofNullable(definedInMaterial);
+            this.definedInMaterial = Output.ofNullable(definedInMaterial);
             return this;
         }
 
-        public Builder entryPoint(@Nullable Input<String> entryPoint) {
+        public Builder entryPoint(@Nullable Output<String> entryPoint) {
             this.entryPoint = entryPoint;
             return this;
         }
 
         public Builder entryPoint(@Nullable String entryPoint) {
-            this.entryPoint = Input.ofNullable(entryPoint);
+            this.entryPoint = Output.ofNullable(entryPoint);
             return this;
         }
 
-        public Builder environment(@Nullable Input<List<Map<String,String>>> environment) {
+        public Builder environment(@Nullable Output<List<Map<String,String>>> environment) {
             this.environment = environment;
             return this;
         }
 
         public Builder environment(@Nullable List<Map<String,String>> environment) {
-            this.environment = Input.ofNullable(environment);
+            this.environment = Output.ofNullable(environment);
             return this;
         }
 
-        public Builder type(@Nullable Input<String> type) {
+        public Builder type(@Nullable Output<String> type) {
             this.type = type;
             return this;
         }
 
         public Builder type(@Nullable String type) {
-            this.type = Input.ofNullable(type);
+            this.type = Output.ofNullable(type);
             return this;
         }
         public RecipeArgs build() {

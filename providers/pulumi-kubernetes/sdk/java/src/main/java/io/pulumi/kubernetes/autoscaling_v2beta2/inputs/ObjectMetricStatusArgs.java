@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.autoscaling_v2beta2.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.kubernetes.autoscaling_v2beta2.inputs.CrossVersionObjectReferenceArgs;
 import io.pulumi.kubernetes.autoscaling_v2beta2.inputs.MetricIdentifierArgs;
@@ -24,16 +24,16 @@ public final class ObjectMetricStatusArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="current", required=true)
-      private final Input<MetricValueStatusArgs> current;
+      private final Output<MetricValueStatusArgs> current;
 
-    public Input<MetricValueStatusArgs> getCurrent() {
+    public Output<MetricValueStatusArgs> getCurrent() {
         return this.current;
     }
 
     @InputImport(name="describedObject", required=true)
-      private final Input<CrossVersionObjectReferenceArgs> describedObject;
+      private final Output<CrossVersionObjectReferenceArgs> describedObject;
 
-    public Input<CrossVersionObjectReferenceArgs> getDescribedObject() {
+    public Output<CrossVersionObjectReferenceArgs> getDescribedObject() {
         return this.describedObject;
     }
 
@@ -42,25 +42,25 @@ public final class ObjectMetricStatusArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="metric", required=true)
-      private final Input<MetricIdentifierArgs> metric;
+      private final Output<MetricIdentifierArgs> metric;
 
-    public Input<MetricIdentifierArgs> getMetric() {
+    public Output<MetricIdentifierArgs> getMetric() {
         return this.metric;
     }
 
     public ObjectMetricStatusArgs(
-        Input<MetricValueStatusArgs> current,
-        Input<CrossVersionObjectReferenceArgs> describedObject,
-        Input<MetricIdentifierArgs> metric) {
+        Output<MetricValueStatusArgs> current,
+        Output<CrossVersionObjectReferenceArgs> describedObject,
+        Output<MetricIdentifierArgs> metric) {
         this.current = Objects.requireNonNull(current, "expected parameter 'current' to be non-null");
         this.describedObject = Objects.requireNonNull(describedObject, "expected parameter 'describedObject' to be non-null");
         this.metric = Objects.requireNonNull(metric, "expected parameter 'metric' to be non-null");
     }
 
     private ObjectMetricStatusArgs() {
-        this.current = Input.empty();
-        this.describedObject = Input.empty();
-        this.metric = Input.empty();
+        this.current = Output.empty();
+        this.describedObject = Output.empty();
+        this.metric = Output.empty();
     }
 
     public static Builder builder() {
@@ -72,9 +72,9 @@ public final class ObjectMetricStatusArgs extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private Input<MetricValueStatusArgs> current;
-        private Input<CrossVersionObjectReferenceArgs> describedObject;
-        private Input<MetricIdentifierArgs> metric;
+        private Output<MetricValueStatusArgs> current;
+        private Output<CrossVersionObjectReferenceArgs> describedObject;
+        private Output<MetricIdentifierArgs> metric;
 
         public Builder() {
     	      // Empty
@@ -87,33 +87,33 @@ public final class ObjectMetricStatusArgs extends io.pulumi.resources.ResourceAr
     	      this.metric = defaults.metric;
         }
 
-        public Builder current(Input<MetricValueStatusArgs> current) {
+        public Builder current(Output<MetricValueStatusArgs> current) {
             this.current = Objects.requireNonNull(current);
             return this;
         }
 
         public Builder current(MetricValueStatusArgs current) {
-            this.current = Input.of(Objects.requireNonNull(current));
+            this.current = Output.of(Objects.requireNonNull(current));
             return this;
         }
 
-        public Builder describedObject(Input<CrossVersionObjectReferenceArgs> describedObject) {
+        public Builder describedObject(Output<CrossVersionObjectReferenceArgs> describedObject) {
             this.describedObject = Objects.requireNonNull(describedObject);
             return this;
         }
 
         public Builder describedObject(CrossVersionObjectReferenceArgs describedObject) {
-            this.describedObject = Input.of(Objects.requireNonNull(describedObject));
+            this.describedObject = Output.of(Objects.requireNonNull(describedObject));
             return this;
         }
 
-        public Builder metric(Input<MetricIdentifierArgs> metric) {
+        public Builder metric(Output<MetricIdentifierArgs> metric) {
             this.metric = Objects.requireNonNull(metric);
             return this;
         }
 
         public Builder metric(MetricIdentifierArgs metric) {
-            this.metric = Input.of(Objects.requireNonNull(metric));
+            this.metric = Output.of(Objects.requireNonNull(metric));
             return this;
         }
         public ObjectMetricStatusArgs build() {

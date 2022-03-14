@@ -5,7 +5,7 @@ package io.pulumi.aws.budgets.inputs;
 
 import io.pulumi.aws.budgets.inputs.BudgetCostTypesGetArgs;
 import io.pulumi.aws.budgets.inputs.BudgetNotificationGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -23,10 +23,10 @@ public final class BudgetState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="accountId")
-      private final @Nullable Input<String> accountId;
+      private final @Nullable Output<String> accountId;
 
-    public Input<String> getAccountId() {
-        return this.accountId == null ? Input.empty() : this.accountId;
+    public Output<String> getAccountId() {
+        return this.accountId == null ? Output.empty() : this.accountId;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class BudgetState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arn")
-      private final @Nullable Input<String> arn;
+      private final @Nullable Output<String> arn;
 
-    public Input<String> getArn() {
-        return this.arn == null ? Input.empty() : this.arn;
+    public Output<String> getArn() {
+        return this.arn == null ? Output.empty() : this.arn;
     }
 
     /**
@@ -45,10 +45,10 @@ public final class BudgetState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="budgetType")
-      private final @Nullable Input<String> budgetType;
+      private final @Nullable Output<String> budgetType;
 
-    public Input<String> getBudgetType() {
-        return this.budgetType == null ? Input.empty() : this.budgetType;
+    public Output<String> getBudgetType() {
+        return this.budgetType == null ? Output.empty() : this.budgetType;
     }
 
     /**
@@ -56,10 +56,10 @@ public final class BudgetState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="costFilters")
-      private final @Nullable Input<Map<String,String>> costFilters;
+      private final @Nullable Output<Map<String,String>> costFilters;
 
-    public Input<Map<String,String>> getCostFilters() {
-        return this.costFilters == null ? Input.empty() : this.costFilters;
+    public Output<Map<String,String>> getCostFilters() {
+        return this.costFilters == null ? Output.empty() : this.costFilters;
     }
 
     /**
@@ -67,10 +67,10 @@ public final class BudgetState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="costTypes")
-      private final @Nullable Input<BudgetCostTypesGetArgs> costTypes;
+      private final @Nullable Output<BudgetCostTypesGetArgs> costTypes;
 
-    public Input<BudgetCostTypesGetArgs> getCostTypes() {
-        return this.costTypes == null ? Input.empty() : this.costTypes;
+    public Output<BudgetCostTypesGetArgs> getCostTypes() {
+        return this.costTypes == null ? Output.empty() : this.costTypes;
     }
 
     /**
@@ -78,10 +78,10 @@ public final class BudgetState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="limitAmount")
-      private final @Nullable Input<String> limitAmount;
+      private final @Nullable Output<String> limitAmount;
 
-    public Input<String> getLimitAmount() {
-        return this.limitAmount == null ? Input.empty() : this.limitAmount;
+    public Output<String> getLimitAmount() {
+        return this.limitAmount == null ? Output.empty() : this.limitAmount;
     }
 
     /**
@@ -89,10 +89,10 @@ public final class BudgetState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="limitUnit")
-      private final @Nullable Input<String> limitUnit;
+      private final @Nullable Output<String> limitUnit;
 
-    public Input<String> getLimitUnit() {
-        return this.limitUnit == null ? Input.empty() : this.limitUnit;
+    public Output<String> getLimitUnit() {
+        return this.limitUnit == null ? Output.empty() : this.limitUnit;
     }
 
     /**
@@ -100,10 +100,10 @@ public final class BudgetState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -111,10 +111,10 @@ public final class BudgetState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="namePrefix")
-      private final @Nullable Input<String> namePrefix;
+      private final @Nullable Output<String> namePrefix;
 
-    public Input<String> getNamePrefix() {
-        return this.namePrefix == null ? Input.empty() : this.namePrefix;
+    public Output<String> getNamePrefix() {
+        return this.namePrefix == null ? Output.empty() : this.namePrefix;
     }
 
     /**
@@ -122,10 +122,10 @@ public final class BudgetState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="notifications")
-      private final @Nullable Input<List<BudgetNotificationGetArgs>> notifications;
+      private final @Nullable Output<List<BudgetNotificationGetArgs>> notifications;
 
-    public Input<List<BudgetNotificationGetArgs>> getNotifications() {
-        return this.notifications == null ? Input.empty() : this.notifications;
+    public Output<List<BudgetNotificationGetArgs>> getNotifications() {
+        return this.notifications == null ? Output.empty() : this.notifications;
     }
 
     /**
@@ -133,10 +133,10 @@ public final class BudgetState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="timePeriodEnd")
-      private final @Nullable Input<String> timePeriodEnd;
+      private final @Nullable Output<String> timePeriodEnd;
 
-    public Input<String> getTimePeriodEnd() {
-        return this.timePeriodEnd == null ? Input.empty() : this.timePeriodEnd;
+    public Output<String> getTimePeriodEnd() {
+        return this.timePeriodEnd == null ? Output.empty() : this.timePeriodEnd;
     }
 
     /**
@@ -144,10 +144,10 @@ public final class BudgetState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="timePeriodStart")
-      private final @Nullable Input<String> timePeriodStart;
+      private final @Nullable Output<String> timePeriodStart;
 
-    public Input<String> getTimePeriodStart() {
-        return this.timePeriodStart == null ? Input.empty() : this.timePeriodStart;
+    public Output<String> getTimePeriodStart() {
+        return this.timePeriodStart == null ? Output.empty() : this.timePeriodStart;
     }
 
     /**
@@ -155,26 +155,26 @@ public final class BudgetState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="timeUnit")
-      private final @Nullable Input<String> timeUnit;
+      private final @Nullable Output<String> timeUnit;
 
-    public Input<String> getTimeUnit() {
-        return this.timeUnit == null ? Input.empty() : this.timeUnit;
+    public Output<String> getTimeUnit() {
+        return this.timeUnit == null ? Output.empty() : this.timeUnit;
     }
 
     public BudgetState(
-        @Nullable Input<String> accountId,
-        @Nullable Input<String> arn,
-        @Nullable Input<String> budgetType,
-        @Nullable Input<Map<String,String>> costFilters,
-        @Nullable Input<BudgetCostTypesGetArgs> costTypes,
-        @Nullable Input<String> limitAmount,
-        @Nullable Input<String> limitUnit,
-        @Nullable Input<String> name,
-        @Nullable Input<String> namePrefix,
-        @Nullable Input<List<BudgetNotificationGetArgs>> notifications,
-        @Nullable Input<String> timePeriodEnd,
-        @Nullable Input<String> timePeriodStart,
-        @Nullable Input<String> timeUnit) {
+        @Nullable Output<String> accountId,
+        @Nullable Output<String> arn,
+        @Nullable Output<String> budgetType,
+        @Nullable Output<Map<String,String>> costFilters,
+        @Nullable Output<BudgetCostTypesGetArgs> costTypes,
+        @Nullable Output<String> limitAmount,
+        @Nullable Output<String> limitUnit,
+        @Nullable Output<String> name,
+        @Nullable Output<String> namePrefix,
+        @Nullable Output<List<BudgetNotificationGetArgs>> notifications,
+        @Nullable Output<String> timePeriodEnd,
+        @Nullable Output<String> timePeriodStart,
+        @Nullable Output<String> timeUnit) {
         this.accountId = accountId;
         this.arn = arn;
         this.budgetType = budgetType;
@@ -191,19 +191,19 @@ public final class BudgetState extends io.pulumi.resources.ResourceArgs {
     }
 
     private BudgetState() {
-        this.accountId = Input.empty();
-        this.arn = Input.empty();
-        this.budgetType = Input.empty();
-        this.costFilters = Input.empty();
-        this.costTypes = Input.empty();
-        this.limitAmount = Input.empty();
-        this.limitUnit = Input.empty();
-        this.name = Input.empty();
-        this.namePrefix = Input.empty();
-        this.notifications = Input.empty();
-        this.timePeriodEnd = Input.empty();
-        this.timePeriodStart = Input.empty();
-        this.timeUnit = Input.empty();
+        this.accountId = Output.empty();
+        this.arn = Output.empty();
+        this.budgetType = Output.empty();
+        this.costFilters = Output.empty();
+        this.costTypes = Output.empty();
+        this.limitAmount = Output.empty();
+        this.limitUnit = Output.empty();
+        this.name = Output.empty();
+        this.namePrefix = Output.empty();
+        this.notifications = Output.empty();
+        this.timePeriodEnd = Output.empty();
+        this.timePeriodStart = Output.empty();
+        this.timeUnit = Output.empty();
     }
 
     public static Builder builder() {
@@ -215,19 +215,19 @@ public final class BudgetState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> accountId;
-        private @Nullable Input<String> arn;
-        private @Nullable Input<String> budgetType;
-        private @Nullable Input<Map<String,String>> costFilters;
-        private @Nullable Input<BudgetCostTypesGetArgs> costTypes;
-        private @Nullable Input<String> limitAmount;
-        private @Nullable Input<String> limitUnit;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> namePrefix;
-        private @Nullable Input<List<BudgetNotificationGetArgs>> notifications;
-        private @Nullable Input<String> timePeriodEnd;
-        private @Nullable Input<String> timePeriodStart;
-        private @Nullable Input<String> timeUnit;
+        private @Nullable Output<String> accountId;
+        private @Nullable Output<String> arn;
+        private @Nullable Output<String> budgetType;
+        private @Nullable Output<Map<String,String>> costFilters;
+        private @Nullable Output<BudgetCostTypesGetArgs> costTypes;
+        private @Nullable Output<String> limitAmount;
+        private @Nullable Output<String> limitUnit;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> namePrefix;
+        private @Nullable Output<List<BudgetNotificationGetArgs>> notifications;
+        private @Nullable Output<String> timePeriodEnd;
+        private @Nullable Output<String> timePeriodStart;
+        private @Nullable Output<String> timeUnit;
 
         public Builder() {
     	      // Empty
@@ -250,133 +250,133 @@ public final class BudgetState extends io.pulumi.resources.ResourceArgs {
     	      this.timeUnit = defaults.timeUnit;
         }
 
-        public Builder accountId(@Nullable Input<String> accountId) {
+        public Builder accountId(@Nullable Output<String> accountId) {
             this.accountId = accountId;
             return this;
         }
 
         public Builder accountId(@Nullable String accountId) {
-            this.accountId = Input.ofNullable(accountId);
+            this.accountId = Output.ofNullable(accountId);
             return this;
         }
 
-        public Builder arn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
 
         public Builder arn(@Nullable String arn) {
-            this.arn = Input.ofNullable(arn);
+            this.arn = Output.ofNullable(arn);
             return this;
         }
 
-        public Builder budgetType(@Nullable Input<String> budgetType) {
+        public Builder budgetType(@Nullable Output<String> budgetType) {
             this.budgetType = budgetType;
             return this;
         }
 
         public Builder budgetType(@Nullable String budgetType) {
-            this.budgetType = Input.ofNullable(budgetType);
+            this.budgetType = Output.ofNullable(budgetType);
             return this;
         }
 
-        public Builder costFilters(@Nullable Input<Map<String,String>> costFilters) {
+        public Builder costFilters(@Nullable Output<Map<String,String>> costFilters) {
             this.costFilters = costFilters;
             return this;
         }
 
         public Builder costFilters(@Nullable Map<String,String> costFilters) {
-            this.costFilters = Input.ofNullable(costFilters);
+            this.costFilters = Output.ofNullable(costFilters);
             return this;
         }
 
-        public Builder costTypes(@Nullable Input<BudgetCostTypesGetArgs> costTypes) {
+        public Builder costTypes(@Nullable Output<BudgetCostTypesGetArgs> costTypes) {
             this.costTypes = costTypes;
             return this;
         }
 
         public Builder costTypes(@Nullable BudgetCostTypesGetArgs costTypes) {
-            this.costTypes = Input.ofNullable(costTypes);
+            this.costTypes = Output.ofNullable(costTypes);
             return this;
         }
 
-        public Builder limitAmount(@Nullable Input<String> limitAmount) {
+        public Builder limitAmount(@Nullable Output<String> limitAmount) {
             this.limitAmount = limitAmount;
             return this;
         }
 
         public Builder limitAmount(@Nullable String limitAmount) {
-            this.limitAmount = Input.ofNullable(limitAmount);
+            this.limitAmount = Output.ofNullable(limitAmount);
             return this;
         }
 
-        public Builder limitUnit(@Nullable Input<String> limitUnit) {
+        public Builder limitUnit(@Nullable Output<String> limitUnit) {
             this.limitUnit = limitUnit;
             return this;
         }
 
         public Builder limitUnit(@Nullable String limitUnit) {
-            this.limitUnit = Input.ofNullable(limitUnit);
+            this.limitUnit = Output.ofNullable(limitUnit);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder namePrefix(@Nullable Input<String> namePrefix) {
+        public Builder namePrefix(@Nullable Output<String> namePrefix) {
             this.namePrefix = namePrefix;
             return this;
         }
 
         public Builder namePrefix(@Nullable String namePrefix) {
-            this.namePrefix = Input.ofNullable(namePrefix);
+            this.namePrefix = Output.ofNullable(namePrefix);
             return this;
         }
 
-        public Builder notifications(@Nullable Input<List<BudgetNotificationGetArgs>> notifications) {
+        public Builder notifications(@Nullable Output<List<BudgetNotificationGetArgs>> notifications) {
             this.notifications = notifications;
             return this;
         }
 
         public Builder notifications(@Nullable List<BudgetNotificationGetArgs> notifications) {
-            this.notifications = Input.ofNullable(notifications);
+            this.notifications = Output.ofNullable(notifications);
             return this;
         }
 
-        public Builder timePeriodEnd(@Nullable Input<String> timePeriodEnd) {
+        public Builder timePeriodEnd(@Nullable Output<String> timePeriodEnd) {
             this.timePeriodEnd = timePeriodEnd;
             return this;
         }
 
         public Builder timePeriodEnd(@Nullable String timePeriodEnd) {
-            this.timePeriodEnd = Input.ofNullable(timePeriodEnd);
+            this.timePeriodEnd = Output.ofNullable(timePeriodEnd);
             return this;
         }
 
-        public Builder timePeriodStart(@Nullable Input<String> timePeriodStart) {
+        public Builder timePeriodStart(@Nullable Output<String> timePeriodStart) {
             this.timePeriodStart = timePeriodStart;
             return this;
         }
 
         public Builder timePeriodStart(@Nullable String timePeriodStart) {
-            this.timePeriodStart = Input.ofNullable(timePeriodStart);
+            this.timePeriodStart = Output.ofNullable(timePeriodStart);
             return this;
         }
 
-        public Builder timeUnit(@Nullable Input<String> timeUnit) {
+        public Builder timeUnit(@Nullable Output<String> timeUnit) {
             this.timeUnit = timeUnit;
             return this;
         }
 
         public Builder timeUnit(@Nullable String timeUnit) {
-            this.timeUnit = Input.ofNullable(timeUnit);
+            this.timeUnit = Output.ofNullable(timeUnit);
             return this;
         }
         public BudgetState build() {

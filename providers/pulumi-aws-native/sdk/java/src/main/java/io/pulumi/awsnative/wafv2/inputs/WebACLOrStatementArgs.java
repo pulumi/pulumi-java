@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.wafv2.inputs;
 
 import io.pulumi.awsnative.wafv2.inputs.WebACLStatementArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
@@ -15,18 +15,18 @@ public final class WebACLOrStatementArgs extends io.pulumi.resources.ResourceArg
     public static final WebACLOrStatementArgs Empty = new WebACLOrStatementArgs();
 
     @InputImport(name="statements", required=true)
-      private final Input<List<WebACLStatementArgs>> statements;
+      private final Output<List<WebACLStatementArgs>> statements;
 
-    public Input<List<WebACLStatementArgs>> getStatements() {
+    public Output<List<WebACLStatementArgs>> getStatements() {
         return this.statements;
     }
 
-    public WebACLOrStatementArgs(Input<List<WebACLStatementArgs>> statements) {
+    public WebACLOrStatementArgs(Output<List<WebACLStatementArgs>> statements) {
         this.statements = Objects.requireNonNull(statements, "expected parameter 'statements' to be non-null");
     }
 
     private WebACLOrStatementArgs() {
-        this.statements = Input.empty();
+        this.statements = Output.empty();
     }
 
     public static Builder builder() {
@@ -38,7 +38,7 @@ public final class WebACLOrStatementArgs extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private Input<List<WebACLStatementArgs>> statements;
+        private Output<List<WebACLStatementArgs>> statements;
 
         public Builder() {
     	      // Empty
@@ -49,13 +49,13 @@ public final class WebACLOrStatementArgs extends io.pulumi.resources.ResourceArg
     	      this.statements = defaults.statements;
         }
 
-        public Builder statements(Input<List<WebACLStatementArgs>> statements) {
+        public Builder statements(Output<List<WebACLStatementArgs>> statements) {
             this.statements = Objects.requireNonNull(statements);
             return this;
         }
 
         public Builder statements(List<WebACLStatementArgs> statements) {
-            this.statements = Input.of(Objects.requireNonNull(statements));
+            this.statements = Output.of(Objects.requireNonNull(statements));
             return this;
         }
         public WebACLOrStatementArgs build() {

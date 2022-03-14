@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.servicemanagement_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class CustomHttpPatternArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="kind")
-      private final @Nullable Input<String> kind;
+      private final @Nullable Output<String> kind;
 
-    public Input<String> getKind() {
-        return this.kind == null ? Input.empty() : this.kind;
+    public Output<String> getKind() {
+        return this.kind == null ? Output.empty() : this.kind;
     }
 
     /**
@@ -34,22 +34,22 @@ public final class CustomHttpPatternArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="path")
-      private final @Nullable Input<String> path;
+      private final @Nullable Output<String> path;
 
-    public Input<String> getPath() {
-        return this.path == null ? Input.empty() : this.path;
+    public Output<String> getPath() {
+        return this.path == null ? Output.empty() : this.path;
     }
 
     public CustomHttpPatternArgs(
-        @Nullable Input<String> kind,
-        @Nullable Input<String> path) {
+        @Nullable Output<String> kind,
+        @Nullable Output<String> path) {
         this.kind = kind;
         this.path = path;
     }
 
     private CustomHttpPatternArgs() {
-        this.kind = Input.empty();
-        this.path = Input.empty();
+        this.kind = Output.empty();
+        this.path = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class CustomHttpPatternArgs extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private @Nullable Input<String> kind;
-        private @Nullable Input<String> path;
+        private @Nullable Output<String> kind;
+        private @Nullable Output<String> path;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class CustomHttpPatternArgs extends io.pulumi.resources.ResourceArg
     	      this.path = defaults.path;
         }
 
-        public Builder kind(@Nullable Input<String> kind) {
+        public Builder kind(@Nullable Output<String> kind) {
             this.kind = kind;
             return this;
         }
 
         public Builder kind(@Nullable String kind) {
-            this.kind = Input.ofNullable(kind);
+            this.kind = Output.ofNullable(kind);
             return this;
         }
 
-        public Builder path(@Nullable Input<String> path) {
+        public Builder path(@Nullable Output<String> path) {
             this.path = path;
             return this;
         }
 
         public Builder path(@Nullable String path) {
-            this.path = Input.ofNullable(path);
+            this.path = Output.ofNullable(path);
             return this;
         }
         public CustomHttpPatternArgs build() {

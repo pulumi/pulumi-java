@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.portal.inputs;
 
 import io.pulumi.azurenative.portal.inputs.DashboardPartsArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.Object;
@@ -28,10 +28,10 @@ public final class DashboardLensArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="metadata")
-      private final @Nullable Input<Map<String,Object>> metadata;
+      private final @Nullable Output<Map<String,Object>> metadata;
 
-    public Input<Map<String,Object>> getMetadata() {
-        return this.metadata == null ? Input.empty() : this.metadata;
+    public Output<Map<String,Object>> getMetadata() {
+        return this.metadata == null ? Output.empty() : this.metadata;
     }
 
     /**
@@ -39,9 +39,9 @@ public final class DashboardLensArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="order", required=true)
-      private final Input<Integer> order;
+      private final Output<Integer> order;
 
-    public Input<Integer> getOrder() {
+    public Output<Integer> getOrder() {
         return this.order;
     }
 
@@ -50,25 +50,25 @@ public final class DashboardLensArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="parts", required=true)
-      private final Input<List<DashboardPartsArgs>> parts;
+      private final Output<List<DashboardPartsArgs>> parts;
 
-    public Input<List<DashboardPartsArgs>> getParts() {
+    public Output<List<DashboardPartsArgs>> getParts() {
         return this.parts;
     }
 
     public DashboardLensArgs(
-        @Nullable Input<Map<String,Object>> metadata,
-        Input<Integer> order,
-        Input<List<DashboardPartsArgs>> parts) {
+        @Nullable Output<Map<String,Object>> metadata,
+        Output<Integer> order,
+        Output<List<DashboardPartsArgs>> parts) {
         this.metadata = metadata;
         this.order = Objects.requireNonNull(order, "expected parameter 'order' to be non-null");
         this.parts = Objects.requireNonNull(parts, "expected parameter 'parts' to be non-null");
     }
 
     private DashboardLensArgs() {
-        this.metadata = Input.empty();
-        this.order = Input.empty();
-        this.parts = Input.empty();
+        this.metadata = Output.empty();
+        this.order = Output.empty();
+        this.parts = Output.empty();
     }
 
     public static Builder builder() {
@@ -80,9 +80,9 @@ public final class DashboardLensArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Map<String,Object>> metadata;
-        private Input<Integer> order;
-        private Input<List<DashboardPartsArgs>> parts;
+        private @Nullable Output<Map<String,Object>> metadata;
+        private Output<Integer> order;
+        private Output<List<DashboardPartsArgs>> parts;
 
         public Builder() {
     	      // Empty
@@ -95,33 +95,33 @@ public final class DashboardLensArgs extends io.pulumi.resources.ResourceArgs {
     	      this.parts = defaults.parts;
         }
 
-        public Builder metadata(@Nullable Input<Map<String,Object>> metadata) {
+        public Builder metadata(@Nullable Output<Map<String,Object>> metadata) {
             this.metadata = metadata;
             return this;
         }
 
         public Builder metadata(@Nullable Map<String,Object> metadata) {
-            this.metadata = Input.ofNullable(metadata);
+            this.metadata = Output.ofNullable(metadata);
             return this;
         }
 
-        public Builder order(Input<Integer> order) {
+        public Builder order(Output<Integer> order) {
             this.order = Objects.requireNonNull(order);
             return this;
         }
 
         public Builder order(Integer order) {
-            this.order = Input.of(Objects.requireNonNull(order));
+            this.order = Output.of(Objects.requireNonNull(order));
             return this;
         }
 
-        public Builder parts(Input<List<DashboardPartsArgs>> parts) {
+        public Builder parts(Output<List<DashboardPartsArgs>> parts) {
             this.parts = Objects.requireNonNull(parts);
             return this;
         }
 
         public Builder parts(List<DashboardPartsArgs> parts) {
-            this.parts = Input.of(Objects.requireNonNull(parts));
+            this.parts = Output.of(Objects.requireNonNull(parts));
             return this;
         }
         public DashboardLensArgs build() {

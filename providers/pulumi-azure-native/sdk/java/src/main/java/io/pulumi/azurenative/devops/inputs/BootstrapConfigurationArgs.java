@@ -5,7 +5,7 @@ package io.pulumi.azurenative.devops.inputs;
 
 import io.pulumi.azurenative.devops.inputs.CodeRepositoryArgs;
 import io.pulumi.azurenative.devops.inputs.PipelineTemplateArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,10 +24,10 @@ public final class BootstrapConfigurationArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="sourceRepository")
-      private final @Nullable Input<CodeRepositoryArgs> sourceRepository;
+      private final @Nullable Output<CodeRepositoryArgs> sourceRepository;
 
-    public Input<CodeRepositoryArgs> getSourceRepository() {
-        return this.sourceRepository == null ? Input.empty() : this.sourceRepository;
+    public Output<CodeRepositoryArgs> getSourceRepository() {
+        return this.sourceRepository == null ? Output.empty() : this.sourceRepository;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class BootstrapConfigurationArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="template", required=true)
-      private final Input<PipelineTemplateArgs> template;
+      private final Output<PipelineTemplateArgs> template;
 
-    public Input<PipelineTemplateArgs> getTemplate() {
+    public Output<PipelineTemplateArgs> getTemplate() {
         return this.template;
     }
 
     public BootstrapConfigurationArgs(
-        @Nullable Input<CodeRepositoryArgs> sourceRepository,
-        Input<PipelineTemplateArgs> template) {
+        @Nullable Output<CodeRepositoryArgs> sourceRepository,
+        Output<PipelineTemplateArgs> template) {
         this.sourceRepository = sourceRepository;
         this.template = Objects.requireNonNull(template, "expected parameter 'template' to be non-null");
     }
 
     private BootstrapConfigurationArgs() {
-        this.sourceRepository = Input.empty();
-        this.template = Input.empty();
+        this.sourceRepository = Output.empty();
+        this.template = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class BootstrapConfigurationArgs extends io.pulumi.resources.Resour
     }
 
     public static final class Builder {
-        private @Nullable Input<CodeRepositoryArgs> sourceRepository;
-        private Input<PipelineTemplateArgs> template;
+        private @Nullable Output<CodeRepositoryArgs> sourceRepository;
+        private Output<PipelineTemplateArgs> template;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class BootstrapConfigurationArgs extends io.pulumi.resources.Resour
     	      this.template = defaults.template;
         }
 
-        public Builder sourceRepository(@Nullable Input<CodeRepositoryArgs> sourceRepository) {
+        public Builder sourceRepository(@Nullable Output<CodeRepositoryArgs> sourceRepository) {
             this.sourceRepository = sourceRepository;
             return this;
         }
 
         public Builder sourceRepository(@Nullable CodeRepositoryArgs sourceRepository) {
-            this.sourceRepository = Input.ofNullable(sourceRepository);
+            this.sourceRepository = Output.ofNullable(sourceRepository);
             return this;
         }
 
-        public Builder template(Input<PipelineTemplateArgs> template) {
+        public Builder template(Output<PipelineTemplateArgs> template) {
             this.template = Objects.requireNonNull(template);
             return this;
         }
 
         public Builder template(PipelineTemplateArgs template) {
-            this.template = Input.of(Objects.requireNonNull(template));
+            this.template = Output.of(Objects.requireNonNull(template));
             return this;
         }
         public BootstrapConfigurationArgs build() {

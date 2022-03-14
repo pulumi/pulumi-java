@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.dynamodb.inputs;
 
 import io.pulumi.awsnative.dynamodb.inputs.GlobalTableCapacityAutoScalingSettingsArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -15,18 +15,18 @@ public final class GlobalTableWriteProvisionedThroughputSettingsArgs extends io.
     public static final GlobalTableWriteProvisionedThroughputSettingsArgs Empty = new GlobalTableWriteProvisionedThroughputSettingsArgs();
 
     @InputImport(name="writeCapacityAutoScalingSettings")
-      private final @Nullable Input<GlobalTableCapacityAutoScalingSettingsArgs> writeCapacityAutoScalingSettings;
+      private final @Nullable Output<GlobalTableCapacityAutoScalingSettingsArgs> writeCapacityAutoScalingSettings;
 
-    public Input<GlobalTableCapacityAutoScalingSettingsArgs> getWriteCapacityAutoScalingSettings() {
-        return this.writeCapacityAutoScalingSettings == null ? Input.empty() : this.writeCapacityAutoScalingSettings;
+    public Output<GlobalTableCapacityAutoScalingSettingsArgs> getWriteCapacityAutoScalingSettings() {
+        return this.writeCapacityAutoScalingSettings == null ? Output.empty() : this.writeCapacityAutoScalingSettings;
     }
 
-    public GlobalTableWriteProvisionedThroughputSettingsArgs(@Nullable Input<GlobalTableCapacityAutoScalingSettingsArgs> writeCapacityAutoScalingSettings) {
+    public GlobalTableWriteProvisionedThroughputSettingsArgs(@Nullable Output<GlobalTableCapacityAutoScalingSettingsArgs> writeCapacityAutoScalingSettings) {
         this.writeCapacityAutoScalingSettings = writeCapacityAutoScalingSettings;
     }
 
     private GlobalTableWriteProvisionedThroughputSettingsArgs() {
-        this.writeCapacityAutoScalingSettings = Input.empty();
+        this.writeCapacityAutoScalingSettings = Output.empty();
     }
 
     public static Builder builder() {
@@ -38,7 +38,7 @@ public final class GlobalTableWriteProvisionedThroughputSettingsArgs extends io.
     }
 
     public static final class Builder {
-        private @Nullable Input<GlobalTableCapacityAutoScalingSettingsArgs> writeCapacityAutoScalingSettings;
+        private @Nullable Output<GlobalTableCapacityAutoScalingSettingsArgs> writeCapacityAutoScalingSettings;
 
         public Builder() {
     	      // Empty
@@ -49,13 +49,13 @@ public final class GlobalTableWriteProvisionedThroughputSettingsArgs extends io.
     	      this.writeCapacityAutoScalingSettings = defaults.writeCapacityAutoScalingSettings;
         }
 
-        public Builder writeCapacityAutoScalingSettings(@Nullable Input<GlobalTableCapacityAutoScalingSettingsArgs> writeCapacityAutoScalingSettings) {
+        public Builder writeCapacityAutoScalingSettings(@Nullable Output<GlobalTableCapacityAutoScalingSettingsArgs> writeCapacityAutoScalingSettings) {
             this.writeCapacityAutoScalingSettings = writeCapacityAutoScalingSettings;
             return this;
         }
 
         public Builder writeCapacityAutoScalingSettings(@Nullable GlobalTableCapacityAutoScalingSettingsArgs writeCapacityAutoScalingSettings) {
-            this.writeCapacityAutoScalingSettings = Input.ofNullable(writeCapacityAutoScalingSettings);
+            this.writeCapacityAutoScalingSettings = Output.ofNullable(writeCapacityAutoScalingSettings);
             return this;
         }
         public GlobalTableWriteProvisionedThroughputSettingsArgs build() {

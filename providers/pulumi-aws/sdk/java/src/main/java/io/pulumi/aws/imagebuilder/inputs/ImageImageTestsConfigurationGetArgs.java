@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.imagebuilder.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -20,10 +20,10 @@ public final class ImageImageTestsConfigurationGetArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="imageTestsEnabled")
-      private final @Nullable Input<Boolean> imageTestsEnabled;
+      private final @Nullable Output<Boolean> imageTestsEnabled;
 
-    public Input<Boolean> getImageTestsEnabled() {
-        return this.imageTestsEnabled == null ? Input.empty() : this.imageTestsEnabled;
+    public Output<Boolean> getImageTestsEnabled() {
+        return this.imageTestsEnabled == null ? Output.empty() : this.imageTestsEnabled;
     }
 
     /**
@@ -31,22 +31,22 @@ public final class ImageImageTestsConfigurationGetArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="timeoutMinutes")
-      private final @Nullable Input<Integer> timeoutMinutes;
+      private final @Nullable Output<Integer> timeoutMinutes;
 
-    public Input<Integer> getTimeoutMinutes() {
-        return this.timeoutMinutes == null ? Input.empty() : this.timeoutMinutes;
+    public Output<Integer> getTimeoutMinutes() {
+        return this.timeoutMinutes == null ? Output.empty() : this.timeoutMinutes;
     }
 
     public ImageImageTestsConfigurationGetArgs(
-        @Nullable Input<Boolean> imageTestsEnabled,
-        @Nullable Input<Integer> timeoutMinutes) {
+        @Nullable Output<Boolean> imageTestsEnabled,
+        @Nullable Output<Integer> timeoutMinutes) {
         this.imageTestsEnabled = imageTestsEnabled;
         this.timeoutMinutes = timeoutMinutes;
     }
 
     private ImageImageTestsConfigurationGetArgs() {
-        this.imageTestsEnabled = Input.empty();
-        this.timeoutMinutes = Input.empty();
+        this.imageTestsEnabled = Output.empty();
+        this.timeoutMinutes = Output.empty();
     }
 
     public static Builder builder() {
@@ -58,8 +58,8 @@ public final class ImageImageTestsConfigurationGetArgs extends io.pulumi.resourc
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> imageTestsEnabled;
-        private @Nullable Input<Integer> timeoutMinutes;
+        private @Nullable Output<Boolean> imageTestsEnabled;
+        private @Nullable Output<Integer> timeoutMinutes;
 
         public Builder() {
     	      // Empty
@@ -71,23 +71,23 @@ public final class ImageImageTestsConfigurationGetArgs extends io.pulumi.resourc
     	      this.timeoutMinutes = defaults.timeoutMinutes;
         }
 
-        public Builder imageTestsEnabled(@Nullable Input<Boolean> imageTestsEnabled) {
+        public Builder imageTestsEnabled(@Nullable Output<Boolean> imageTestsEnabled) {
             this.imageTestsEnabled = imageTestsEnabled;
             return this;
         }
 
         public Builder imageTestsEnabled(@Nullable Boolean imageTestsEnabled) {
-            this.imageTestsEnabled = Input.ofNullable(imageTestsEnabled);
+            this.imageTestsEnabled = Output.ofNullable(imageTestsEnabled);
             return this;
         }
 
-        public Builder timeoutMinutes(@Nullable Input<Integer> timeoutMinutes) {
+        public Builder timeoutMinutes(@Nullable Output<Integer> timeoutMinutes) {
             this.timeoutMinutes = timeoutMinutes;
             return this;
         }
 
         public Builder timeoutMinutes(@Nullable Integer timeoutMinutes) {
-            this.timeoutMinutes = Input.ofNullable(timeoutMinutes);
+            this.timeoutMinutes = Output.ofNullable(timeoutMinutes);
             return this;
         }
         public ImageImageTestsConfigurationGetArgs build() {

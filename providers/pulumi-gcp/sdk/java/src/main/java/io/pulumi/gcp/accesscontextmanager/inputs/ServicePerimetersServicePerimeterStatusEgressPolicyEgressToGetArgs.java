@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.accesscontextmanager.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.accesscontextmanager.inputs.ServicePerimetersServicePerimeterStatusEgressPolicyEgressToOperationGetArgs;
 import java.lang.String;
@@ -23,10 +23,10 @@ public final class ServicePerimetersServicePerimeterStatusEgressPolicyEgressToGe
      * 
      */
     @InputImport(name="operations")
-      private final @Nullable Input<List<ServicePerimetersServicePerimeterStatusEgressPolicyEgressToOperationGetArgs>> operations;
+      private final @Nullable Output<List<ServicePerimetersServicePerimeterStatusEgressPolicyEgressToOperationGetArgs>> operations;
 
-    public Input<List<ServicePerimetersServicePerimeterStatusEgressPolicyEgressToOperationGetArgs>> getOperations() {
-        return this.operations == null ? Input.empty() : this.operations;
+    public Output<List<ServicePerimetersServicePerimeterStatusEgressPolicyEgressToOperationGetArgs>> getOperations() {
+        return this.operations == null ? Output.empty() : this.operations;
     }
 
     /**
@@ -38,22 +38,22 @@ public final class ServicePerimetersServicePerimeterStatusEgressPolicyEgressToGe
      * 
      */
     @InputImport(name="resources")
-      private final @Nullable Input<List<String>> resources;
+      private final @Nullable Output<List<String>> resources;
 
-    public Input<List<String>> getResources() {
-        return this.resources == null ? Input.empty() : this.resources;
+    public Output<List<String>> getResources() {
+        return this.resources == null ? Output.empty() : this.resources;
     }
 
     public ServicePerimetersServicePerimeterStatusEgressPolicyEgressToGetArgs(
-        @Nullable Input<List<ServicePerimetersServicePerimeterStatusEgressPolicyEgressToOperationGetArgs>> operations,
-        @Nullable Input<List<String>> resources) {
+        @Nullable Output<List<ServicePerimetersServicePerimeterStatusEgressPolicyEgressToOperationGetArgs>> operations,
+        @Nullable Output<List<String>> resources) {
         this.operations = operations;
         this.resources = resources;
     }
 
     private ServicePerimetersServicePerimeterStatusEgressPolicyEgressToGetArgs() {
-        this.operations = Input.empty();
-        this.resources = Input.empty();
+        this.operations = Output.empty();
+        this.resources = Output.empty();
     }
 
     public static Builder builder() {
@@ -65,8 +65,8 @@ public final class ServicePerimetersServicePerimeterStatusEgressPolicyEgressToGe
     }
 
     public static final class Builder {
-        private @Nullable Input<List<ServicePerimetersServicePerimeterStatusEgressPolicyEgressToOperationGetArgs>> operations;
-        private @Nullable Input<List<String>> resources;
+        private @Nullable Output<List<ServicePerimetersServicePerimeterStatusEgressPolicyEgressToOperationGetArgs>> operations;
+        private @Nullable Output<List<String>> resources;
 
         public Builder() {
     	      // Empty
@@ -78,23 +78,23 @@ public final class ServicePerimetersServicePerimeterStatusEgressPolicyEgressToGe
     	      this.resources = defaults.resources;
         }
 
-        public Builder operations(@Nullable Input<List<ServicePerimetersServicePerimeterStatusEgressPolicyEgressToOperationGetArgs>> operations) {
+        public Builder operations(@Nullable Output<List<ServicePerimetersServicePerimeterStatusEgressPolicyEgressToOperationGetArgs>> operations) {
             this.operations = operations;
             return this;
         }
 
         public Builder operations(@Nullable List<ServicePerimetersServicePerimeterStatusEgressPolicyEgressToOperationGetArgs> operations) {
-            this.operations = Input.ofNullable(operations);
+            this.operations = Output.ofNullable(operations);
             return this;
         }
 
-        public Builder resources(@Nullable Input<List<String>> resources) {
+        public Builder resources(@Nullable Output<List<String>> resources) {
             this.resources = resources;
             return this;
         }
 
         public Builder resources(@Nullable List<String> resources) {
-            this.resources = Input.ofNullable(resources);
+            this.resources = Output.ofNullable(resources);
             return this;
         }
         public ServicePerimetersServicePerimeterStatusEgressPolicyEgressToGetArgs build() {

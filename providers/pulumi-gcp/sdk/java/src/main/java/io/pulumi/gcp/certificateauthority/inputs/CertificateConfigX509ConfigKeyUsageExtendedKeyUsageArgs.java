@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.certificateauthority.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class CertificateConfigX509ConfigKeyUsageExtendedKeyUsageArgs exten
      * 
      */
     @InputImport(name="clientAuth")
-      private final @Nullable Input<Boolean> clientAuth;
+      private final @Nullable Output<Boolean> clientAuth;
 
-    public Input<Boolean> getClientAuth() {
-        return this.clientAuth == null ? Input.empty() : this.clientAuth;
+    public Output<Boolean> getClientAuth() {
+        return this.clientAuth == null ? Output.empty() : this.clientAuth;
     }
 
     /**
@@ -30,10 +30,10 @@ public final class CertificateConfigX509ConfigKeyUsageExtendedKeyUsageArgs exten
      * 
      */
     @InputImport(name="codeSigning")
-      private final @Nullable Input<Boolean> codeSigning;
+      private final @Nullable Output<Boolean> codeSigning;
 
-    public Input<Boolean> getCodeSigning() {
-        return this.codeSigning == null ? Input.empty() : this.codeSigning;
+    public Output<Boolean> getCodeSigning() {
+        return this.codeSigning == null ? Output.empty() : this.codeSigning;
     }
 
     /**
@@ -41,10 +41,10 @@ public final class CertificateConfigX509ConfigKeyUsageExtendedKeyUsageArgs exten
      * 
      */
     @InputImport(name="emailProtection")
-      private final @Nullable Input<Boolean> emailProtection;
+      private final @Nullable Output<Boolean> emailProtection;
 
-    public Input<Boolean> getEmailProtection() {
-        return this.emailProtection == null ? Input.empty() : this.emailProtection;
+    public Output<Boolean> getEmailProtection() {
+        return this.emailProtection == null ? Output.empty() : this.emailProtection;
     }
 
     /**
@@ -52,10 +52,10 @@ public final class CertificateConfigX509ConfigKeyUsageExtendedKeyUsageArgs exten
      * 
      */
     @InputImport(name="ocspSigning")
-      private final @Nullable Input<Boolean> ocspSigning;
+      private final @Nullable Output<Boolean> ocspSigning;
 
-    public Input<Boolean> getOcspSigning() {
-        return this.ocspSigning == null ? Input.empty() : this.ocspSigning;
+    public Output<Boolean> getOcspSigning() {
+        return this.ocspSigning == null ? Output.empty() : this.ocspSigning;
     }
 
     /**
@@ -63,10 +63,10 @@ public final class CertificateConfigX509ConfigKeyUsageExtendedKeyUsageArgs exten
      * 
      */
     @InputImport(name="serverAuth")
-      private final @Nullable Input<Boolean> serverAuth;
+      private final @Nullable Output<Boolean> serverAuth;
 
-    public Input<Boolean> getServerAuth() {
-        return this.serverAuth == null ? Input.empty() : this.serverAuth;
+    public Output<Boolean> getServerAuth() {
+        return this.serverAuth == null ? Output.empty() : this.serverAuth;
     }
 
     /**
@@ -74,19 +74,19 @@ public final class CertificateConfigX509ConfigKeyUsageExtendedKeyUsageArgs exten
      * 
      */
     @InputImport(name="timeStamping")
-      private final @Nullable Input<Boolean> timeStamping;
+      private final @Nullable Output<Boolean> timeStamping;
 
-    public Input<Boolean> getTimeStamping() {
-        return this.timeStamping == null ? Input.empty() : this.timeStamping;
+    public Output<Boolean> getTimeStamping() {
+        return this.timeStamping == null ? Output.empty() : this.timeStamping;
     }
 
     public CertificateConfigX509ConfigKeyUsageExtendedKeyUsageArgs(
-        @Nullable Input<Boolean> clientAuth,
-        @Nullable Input<Boolean> codeSigning,
-        @Nullable Input<Boolean> emailProtection,
-        @Nullable Input<Boolean> ocspSigning,
-        @Nullable Input<Boolean> serverAuth,
-        @Nullable Input<Boolean> timeStamping) {
+        @Nullable Output<Boolean> clientAuth,
+        @Nullable Output<Boolean> codeSigning,
+        @Nullable Output<Boolean> emailProtection,
+        @Nullable Output<Boolean> ocspSigning,
+        @Nullable Output<Boolean> serverAuth,
+        @Nullable Output<Boolean> timeStamping) {
         this.clientAuth = clientAuth;
         this.codeSigning = codeSigning;
         this.emailProtection = emailProtection;
@@ -96,12 +96,12 @@ public final class CertificateConfigX509ConfigKeyUsageExtendedKeyUsageArgs exten
     }
 
     private CertificateConfigX509ConfigKeyUsageExtendedKeyUsageArgs() {
-        this.clientAuth = Input.empty();
-        this.codeSigning = Input.empty();
-        this.emailProtection = Input.empty();
-        this.ocspSigning = Input.empty();
-        this.serverAuth = Input.empty();
-        this.timeStamping = Input.empty();
+        this.clientAuth = Output.empty();
+        this.codeSigning = Output.empty();
+        this.emailProtection = Output.empty();
+        this.ocspSigning = Output.empty();
+        this.serverAuth = Output.empty();
+        this.timeStamping = Output.empty();
     }
 
     public static Builder builder() {
@@ -113,12 +113,12 @@ public final class CertificateConfigX509ConfigKeyUsageExtendedKeyUsageArgs exten
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> clientAuth;
-        private @Nullable Input<Boolean> codeSigning;
-        private @Nullable Input<Boolean> emailProtection;
-        private @Nullable Input<Boolean> ocspSigning;
-        private @Nullable Input<Boolean> serverAuth;
-        private @Nullable Input<Boolean> timeStamping;
+        private @Nullable Output<Boolean> clientAuth;
+        private @Nullable Output<Boolean> codeSigning;
+        private @Nullable Output<Boolean> emailProtection;
+        private @Nullable Output<Boolean> ocspSigning;
+        private @Nullable Output<Boolean> serverAuth;
+        private @Nullable Output<Boolean> timeStamping;
 
         public Builder() {
     	      // Empty
@@ -134,63 +134,63 @@ public final class CertificateConfigX509ConfigKeyUsageExtendedKeyUsageArgs exten
     	      this.timeStamping = defaults.timeStamping;
         }
 
-        public Builder clientAuth(@Nullable Input<Boolean> clientAuth) {
+        public Builder clientAuth(@Nullable Output<Boolean> clientAuth) {
             this.clientAuth = clientAuth;
             return this;
         }
 
         public Builder clientAuth(@Nullable Boolean clientAuth) {
-            this.clientAuth = Input.ofNullable(clientAuth);
+            this.clientAuth = Output.ofNullable(clientAuth);
             return this;
         }
 
-        public Builder codeSigning(@Nullable Input<Boolean> codeSigning) {
+        public Builder codeSigning(@Nullable Output<Boolean> codeSigning) {
             this.codeSigning = codeSigning;
             return this;
         }
 
         public Builder codeSigning(@Nullable Boolean codeSigning) {
-            this.codeSigning = Input.ofNullable(codeSigning);
+            this.codeSigning = Output.ofNullable(codeSigning);
             return this;
         }
 
-        public Builder emailProtection(@Nullable Input<Boolean> emailProtection) {
+        public Builder emailProtection(@Nullable Output<Boolean> emailProtection) {
             this.emailProtection = emailProtection;
             return this;
         }
 
         public Builder emailProtection(@Nullable Boolean emailProtection) {
-            this.emailProtection = Input.ofNullable(emailProtection);
+            this.emailProtection = Output.ofNullable(emailProtection);
             return this;
         }
 
-        public Builder ocspSigning(@Nullable Input<Boolean> ocspSigning) {
+        public Builder ocspSigning(@Nullable Output<Boolean> ocspSigning) {
             this.ocspSigning = ocspSigning;
             return this;
         }
 
         public Builder ocspSigning(@Nullable Boolean ocspSigning) {
-            this.ocspSigning = Input.ofNullable(ocspSigning);
+            this.ocspSigning = Output.ofNullable(ocspSigning);
             return this;
         }
 
-        public Builder serverAuth(@Nullable Input<Boolean> serverAuth) {
+        public Builder serverAuth(@Nullable Output<Boolean> serverAuth) {
             this.serverAuth = serverAuth;
             return this;
         }
 
         public Builder serverAuth(@Nullable Boolean serverAuth) {
-            this.serverAuth = Input.ofNullable(serverAuth);
+            this.serverAuth = Output.ofNullable(serverAuth);
             return this;
         }
 
-        public Builder timeStamping(@Nullable Input<Boolean> timeStamping) {
+        public Builder timeStamping(@Nullable Output<Boolean> timeStamping) {
             this.timeStamping = timeStamping;
             return this;
         }
 
         public Builder timeStamping(@Nullable Boolean timeStamping) {
-            this.timeStamping = Input.ofNullable(timeStamping);
+            this.timeStamping = Output.ofNullable(timeStamping);
             return this;
         }
         public CertificateConfigX509ConfigKeyUsageExtendedKeyUsageArgs build() {

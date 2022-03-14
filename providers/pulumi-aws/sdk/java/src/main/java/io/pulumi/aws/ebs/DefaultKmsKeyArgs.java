@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.ebs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -18,18 +18,18 @@ public final class DefaultKmsKeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="keyArn", required=true)
-      private final Input<String> keyArn;
+      private final Output<String> keyArn;
 
-    public Input<String> getKeyArn() {
+    public Output<String> getKeyArn() {
         return this.keyArn;
     }
 
-    public DefaultKmsKeyArgs(Input<String> keyArn) {
+    public DefaultKmsKeyArgs(Output<String> keyArn) {
         this.keyArn = Objects.requireNonNull(keyArn, "expected parameter 'keyArn' to be non-null");
     }
 
     private DefaultKmsKeyArgs() {
-        this.keyArn = Input.empty();
+        this.keyArn = Output.empty();
     }
 
     public static Builder builder() {
@@ -41,7 +41,7 @@ public final class DefaultKmsKeyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> keyArn;
+        private Output<String> keyArn;
 
         public Builder() {
     	      // Empty
@@ -52,13 +52,13 @@ public final class DefaultKmsKeyArgs extends io.pulumi.resources.ResourceArgs {
     	      this.keyArn = defaults.keyArn;
         }
 
-        public Builder keyArn(Input<String> keyArn) {
+        public Builder keyArn(Output<String> keyArn) {
             this.keyArn = Objects.requireNonNull(keyArn);
             return this;
         }
 
         public Builder keyArn(String keyArn) {
-            this.keyArn = Input.of(Objects.requireNonNull(keyArn));
+            this.keyArn = Output.of(Objects.requireNonNull(keyArn));
             return this;
         }
         public DefaultKmsKeyArgs build() {

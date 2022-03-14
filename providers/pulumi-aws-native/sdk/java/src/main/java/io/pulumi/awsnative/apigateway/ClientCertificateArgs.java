@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.apigateway;
 
 import io.pulumi.awsnative.apigateway.inputs.ClientCertificateTagArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -21,10 +21,10 @@ public final class ClientCertificateArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -32,22 +32,22 @@ public final class ClientCertificateArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<List<ClientCertificateTagArgs>> tags;
+      private final @Nullable Output<List<ClientCertificateTagArgs>> tags;
 
-    public Input<List<ClientCertificateTagArgs>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<List<ClientCertificateTagArgs>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public ClientCertificateArgs(
-        @Nullable Input<String> description,
-        @Nullable Input<List<ClientCertificateTagArgs>> tags) {
+        @Nullable Output<String> description,
+        @Nullable Output<List<ClientCertificateTagArgs>> tags) {
         this.description = description;
         this.tags = tags;
     }
 
     private ClientCertificateArgs() {
-        this.description = Input.empty();
-        this.tags = Input.empty();
+        this.description = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -59,8 +59,8 @@ public final class ClientCertificateArgs extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private @Nullable Input<String> description;
-        private @Nullable Input<List<ClientCertificateTagArgs>> tags;
+        private @Nullable Output<String> description;
+        private @Nullable Output<List<ClientCertificateTagArgs>> tags;
 
         public Builder() {
     	      // Empty
@@ -72,23 +72,23 @@ public final class ClientCertificateArgs extends io.pulumi.resources.ResourceArg
     	      this.tags = defaults.tags;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder tags(@Nullable Input<List<ClientCertificateTagArgs>> tags) {
+        public Builder tags(@Nullable Output<List<ClientCertificateTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable List<ClientCertificateTagArgs> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public ClientCertificateArgs build() {

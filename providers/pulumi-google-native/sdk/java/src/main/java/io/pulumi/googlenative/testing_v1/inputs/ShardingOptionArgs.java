@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.testing_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.testing_v1.inputs.ManualShardingArgs;
 import io.pulumi.googlenative.testing_v1.inputs.UniformShardingArgs;
@@ -24,10 +24,10 @@ public final class ShardingOptionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="manualSharding")
-      private final @Nullable Input<ManualShardingArgs> manualSharding;
+      private final @Nullable Output<ManualShardingArgs> manualSharding;
 
-    public Input<ManualShardingArgs> getManualSharding() {
-        return this.manualSharding == null ? Input.empty() : this.manualSharding;
+    public Output<ManualShardingArgs> getManualSharding() {
+        return this.manualSharding == null ? Output.empty() : this.manualSharding;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class ShardingOptionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="uniformSharding")
-      private final @Nullable Input<UniformShardingArgs> uniformSharding;
+      private final @Nullable Output<UniformShardingArgs> uniformSharding;
 
-    public Input<UniformShardingArgs> getUniformSharding() {
-        return this.uniformSharding == null ? Input.empty() : this.uniformSharding;
+    public Output<UniformShardingArgs> getUniformSharding() {
+        return this.uniformSharding == null ? Output.empty() : this.uniformSharding;
     }
 
     public ShardingOptionArgs(
-        @Nullable Input<ManualShardingArgs> manualSharding,
-        @Nullable Input<UniformShardingArgs> uniformSharding) {
+        @Nullable Output<ManualShardingArgs> manualSharding,
+        @Nullable Output<UniformShardingArgs> uniformSharding) {
         this.manualSharding = manualSharding;
         this.uniformSharding = uniformSharding;
     }
 
     private ShardingOptionArgs() {
-        this.manualSharding = Input.empty();
-        this.uniformSharding = Input.empty();
+        this.manualSharding = Output.empty();
+        this.uniformSharding = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class ShardingOptionArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<ManualShardingArgs> manualSharding;
-        private @Nullable Input<UniformShardingArgs> uniformSharding;
+        private @Nullable Output<ManualShardingArgs> manualSharding;
+        private @Nullable Output<UniformShardingArgs> uniformSharding;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class ShardingOptionArgs extends io.pulumi.resources.ResourceArgs {
     	      this.uniformSharding = defaults.uniformSharding;
         }
 
-        public Builder manualSharding(@Nullable Input<ManualShardingArgs> manualSharding) {
+        public Builder manualSharding(@Nullable Output<ManualShardingArgs> manualSharding) {
             this.manualSharding = manualSharding;
             return this;
         }
 
         public Builder manualSharding(@Nullable ManualShardingArgs manualSharding) {
-            this.manualSharding = Input.ofNullable(manualSharding);
+            this.manualSharding = Output.ofNullable(manualSharding);
             return this;
         }
 
-        public Builder uniformSharding(@Nullable Input<UniformShardingArgs> uniformSharding) {
+        public Builder uniformSharding(@Nullable Output<UniformShardingArgs> uniformSharding) {
             this.uniformSharding = uniformSharding;
             return this;
         }
 
         public Builder uniformSharding(@Nullable UniformShardingArgs uniformSharding) {
-            this.uniformSharding = Input.ofNullable(uniformSharding);
+            this.uniformSharding = Output.ofNullable(uniformSharding);
             return this;
         }
         public ShardingOptionArgs build() {

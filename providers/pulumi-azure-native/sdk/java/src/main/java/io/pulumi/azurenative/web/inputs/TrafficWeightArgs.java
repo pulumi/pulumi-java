@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.web.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -25,10 +25,10 @@ public final class TrafficWeightArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="latestRevision")
-      private final @Nullable Input<Boolean> latestRevision;
+      private final @Nullable Output<Boolean> latestRevision;
 
-    public Input<Boolean> getLatestRevision() {
-        return this.latestRevision == null ? Input.empty() : this.latestRevision;
+    public Output<Boolean> getLatestRevision() {
+        return this.latestRevision == null ? Output.empty() : this.latestRevision;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class TrafficWeightArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="revisionName")
-      private final @Nullable Input<String> revisionName;
+      private final @Nullable Output<String> revisionName;
 
-    public Input<String> getRevisionName() {
-        return this.revisionName == null ? Input.empty() : this.revisionName;
+    public Output<String> getRevisionName() {
+        return this.revisionName == null ? Output.empty() : this.revisionName;
     }
 
     /**
@@ -47,25 +47,25 @@ public final class TrafficWeightArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="weight")
-      private final @Nullable Input<Integer> weight;
+      private final @Nullable Output<Integer> weight;
 
-    public Input<Integer> getWeight() {
-        return this.weight == null ? Input.empty() : this.weight;
+    public Output<Integer> getWeight() {
+        return this.weight == null ? Output.empty() : this.weight;
     }
 
     public TrafficWeightArgs(
-        @Nullable Input<Boolean> latestRevision,
-        @Nullable Input<String> revisionName,
-        @Nullable Input<Integer> weight) {
-        this.latestRevision = latestRevision == null ? Input.ofNullable(false) : latestRevision;
+        @Nullable Output<Boolean> latestRevision,
+        @Nullable Output<String> revisionName,
+        @Nullable Output<Integer> weight) {
+        this.latestRevision = latestRevision == null ? Output.ofNullable(false) : latestRevision;
         this.revisionName = revisionName;
         this.weight = weight;
     }
 
     private TrafficWeightArgs() {
-        this.latestRevision = Input.empty();
-        this.revisionName = Input.empty();
-        this.weight = Input.empty();
+        this.latestRevision = Output.empty();
+        this.revisionName = Output.empty();
+        this.weight = Output.empty();
     }
 
     public static Builder builder() {
@@ -77,9 +77,9 @@ public final class TrafficWeightArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> latestRevision;
-        private @Nullable Input<String> revisionName;
-        private @Nullable Input<Integer> weight;
+        private @Nullable Output<Boolean> latestRevision;
+        private @Nullable Output<String> revisionName;
+        private @Nullable Output<Integer> weight;
 
         public Builder() {
     	      // Empty
@@ -92,33 +92,33 @@ public final class TrafficWeightArgs extends io.pulumi.resources.ResourceArgs {
     	      this.weight = defaults.weight;
         }
 
-        public Builder latestRevision(@Nullable Input<Boolean> latestRevision) {
+        public Builder latestRevision(@Nullable Output<Boolean> latestRevision) {
             this.latestRevision = latestRevision;
             return this;
         }
 
         public Builder latestRevision(@Nullable Boolean latestRevision) {
-            this.latestRevision = Input.ofNullable(latestRevision);
+            this.latestRevision = Output.ofNullable(latestRevision);
             return this;
         }
 
-        public Builder revisionName(@Nullable Input<String> revisionName) {
+        public Builder revisionName(@Nullable Output<String> revisionName) {
             this.revisionName = revisionName;
             return this;
         }
 
         public Builder revisionName(@Nullable String revisionName) {
-            this.revisionName = Input.ofNullable(revisionName);
+            this.revisionName = Output.ofNullable(revisionName);
             return this;
         }
 
-        public Builder weight(@Nullable Input<Integer> weight) {
+        public Builder weight(@Nullable Output<Integer> weight) {
             this.weight = weight;
             return this;
         }
 
         public Builder weight(@Nullable Integer weight) {
-            this.weight = Input.ofNullable(weight);
+            this.weight = Output.ofNullable(weight);
             return this;
         }
         public TrafficWeightArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.cloudidentity.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.cloudidentity.inputs.GroupMembershipMemberKeyGetArgs;
 import io.pulumi.gcp.cloudidentity.inputs.GroupMembershipPreferredMemberKeyGetArgs;
@@ -23,10 +23,10 @@ public final class GroupMembershipState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="createTime")
-      private final @Nullable Input<String> createTime;
+      private final @Nullable Output<String> createTime;
 
-    public Input<String> getCreateTime() {
-        return this.createTime == null ? Input.empty() : this.createTime;
+    public Output<String> getCreateTime() {
+        return this.createTime == null ? Output.empty() : this.createTime;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class GroupMembershipState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="group")
-      private final @Nullable Input<String> group;
+      private final @Nullable Output<String> group;
 
-    public Input<String> getGroup() {
-        return this.group == null ? Input.empty() : this.group;
+    public Output<String> getGroup() {
+        return this.group == null ? Output.empty() : this.group;
     }
 
     /**
@@ -46,10 +46,10 @@ public final class GroupMembershipState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="memberKey")
-      private final @Nullable Input<GroupMembershipMemberKeyGetArgs> memberKey;
+      private final @Nullable Output<GroupMembershipMemberKeyGetArgs> memberKey;
 
-    public Input<GroupMembershipMemberKeyGetArgs> getMemberKey() {
-        return this.memberKey == null ? Input.empty() : this.memberKey;
+    public Output<GroupMembershipMemberKeyGetArgs> getMemberKey() {
+        return this.memberKey == null ? Output.empty() : this.memberKey;
     }
 
     /**
@@ -58,10 +58,10 @@ public final class GroupMembershipState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -70,10 +70,10 @@ public final class GroupMembershipState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="preferredMemberKey")
-      private final @Nullable Input<GroupMembershipPreferredMemberKeyGetArgs> preferredMemberKey;
+      private final @Nullable Output<GroupMembershipPreferredMemberKeyGetArgs> preferredMemberKey;
 
-    public Input<GroupMembershipPreferredMemberKeyGetArgs> getPreferredMemberKey() {
-        return this.preferredMemberKey == null ? Input.empty() : this.preferredMemberKey;
+    public Output<GroupMembershipPreferredMemberKeyGetArgs> getPreferredMemberKey() {
+        return this.preferredMemberKey == null ? Output.empty() : this.preferredMemberKey;
     }
 
     /**
@@ -83,10 +83,10 @@ public final class GroupMembershipState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="roles")
-      private final @Nullable Input<List<GroupMembershipRoleGetArgs>> roles;
+      private final @Nullable Output<List<GroupMembershipRoleGetArgs>> roles;
 
-    public Input<List<GroupMembershipRoleGetArgs>> getRoles() {
-        return this.roles == null ? Input.empty() : this.roles;
+    public Output<List<GroupMembershipRoleGetArgs>> getRoles() {
+        return this.roles == null ? Output.empty() : this.roles;
     }
 
     /**
@@ -94,10 +94,10 @@ public final class GroupMembershipState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="type")
-      private final @Nullable Input<String> type;
+      private final @Nullable Output<String> type;
 
-    public Input<String> getType() {
-        return this.type == null ? Input.empty() : this.type;
+    public Output<String> getType() {
+        return this.type == null ? Output.empty() : this.type;
     }
 
     /**
@@ -105,21 +105,21 @@ public final class GroupMembershipState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="updateTime")
-      private final @Nullable Input<String> updateTime;
+      private final @Nullable Output<String> updateTime;
 
-    public Input<String> getUpdateTime() {
-        return this.updateTime == null ? Input.empty() : this.updateTime;
+    public Output<String> getUpdateTime() {
+        return this.updateTime == null ? Output.empty() : this.updateTime;
     }
 
     public GroupMembershipState(
-        @Nullable Input<String> createTime,
-        @Nullable Input<String> group,
-        @Nullable Input<GroupMembershipMemberKeyGetArgs> memberKey,
-        @Nullable Input<String> name,
-        @Nullable Input<GroupMembershipPreferredMemberKeyGetArgs> preferredMemberKey,
-        @Nullable Input<List<GroupMembershipRoleGetArgs>> roles,
-        @Nullable Input<String> type,
-        @Nullable Input<String> updateTime) {
+        @Nullable Output<String> createTime,
+        @Nullable Output<String> group,
+        @Nullable Output<GroupMembershipMemberKeyGetArgs> memberKey,
+        @Nullable Output<String> name,
+        @Nullable Output<GroupMembershipPreferredMemberKeyGetArgs> preferredMemberKey,
+        @Nullable Output<List<GroupMembershipRoleGetArgs>> roles,
+        @Nullable Output<String> type,
+        @Nullable Output<String> updateTime) {
         this.createTime = createTime;
         this.group = group;
         this.memberKey = memberKey;
@@ -131,14 +131,14 @@ public final class GroupMembershipState extends io.pulumi.resources.ResourceArgs
     }
 
     private GroupMembershipState() {
-        this.createTime = Input.empty();
-        this.group = Input.empty();
-        this.memberKey = Input.empty();
-        this.name = Input.empty();
-        this.preferredMemberKey = Input.empty();
-        this.roles = Input.empty();
-        this.type = Input.empty();
-        this.updateTime = Input.empty();
+        this.createTime = Output.empty();
+        this.group = Output.empty();
+        this.memberKey = Output.empty();
+        this.name = Output.empty();
+        this.preferredMemberKey = Output.empty();
+        this.roles = Output.empty();
+        this.type = Output.empty();
+        this.updateTime = Output.empty();
     }
 
     public static Builder builder() {
@@ -150,14 +150,14 @@ public final class GroupMembershipState extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private @Nullable Input<String> createTime;
-        private @Nullable Input<String> group;
-        private @Nullable Input<GroupMembershipMemberKeyGetArgs> memberKey;
-        private @Nullable Input<String> name;
-        private @Nullable Input<GroupMembershipPreferredMemberKeyGetArgs> preferredMemberKey;
-        private @Nullable Input<List<GroupMembershipRoleGetArgs>> roles;
-        private @Nullable Input<String> type;
-        private @Nullable Input<String> updateTime;
+        private @Nullable Output<String> createTime;
+        private @Nullable Output<String> group;
+        private @Nullable Output<GroupMembershipMemberKeyGetArgs> memberKey;
+        private @Nullable Output<String> name;
+        private @Nullable Output<GroupMembershipPreferredMemberKeyGetArgs> preferredMemberKey;
+        private @Nullable Output<List<GroupMembershipRoleGetArgs>> roles;
+        private @Nullable Output<String> type;
+        private @Nullable Output<String> updateTime;
 
         public Builder() {
     	      // Empty
@@ -175,83 +175,83 @@ public final class GroupMembershipState extends io.pulumi.resources.ResourceArgs
     	      this.updateTime = defaults.updateTime;
         }
 
-        public Builder createTime(@Nullable Input<String> createTime) {
+        public Builder createTime(@Nullable Output<String> createTime) {
             this.createTime = createTime;
             return this;
         }
 
         public Builder createTime(@Nullable String createTime) {
-            this.createTime = Input.ofNullable(createTime);
+            this.createTime = Output.ofNullable(createTime);
             return this;
         }
 
-        public Builder group(@Nullable Input<String> group) {
+        public Builder group(@Nullable Output<String> group) {
             this.group = group;
             return this;
         }
 
         public Builder group(@Nullable String group) {
-            this.group = Input.ofNullable(group);
+            this.group = Output.ofNullable(group);
             return this;
         }
 
-        public Builder memberKey(@Nullable Input<GroupMembershipMemberKeyGetArgs> memberKey) {
+        public Builder memberKey(@Nullable Output<GroupMembershipMemberKeyGetArgs> memberKey) {
             this.memberKey = memberKey;
             return this;
         }
 
         public Builder memberKey(@Nullable GroupMembershipMemberKeyGetArgs memberKey) {
-            this.memberKey = Input.ofNullable(memberKey);
+            this.memberKey = Output.ofNullable(memberKey);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder preferredMemberKey(@Nullable Input<GroupMembershipPreferredMemberKeyGetArgs> preferredMemberKey) {
+        public Builder preferredMemberKey(@Nullable Output<GroupMembershipPreferredMemberKeyGetArgs> preferredMemberKey) {
             this.preferredMemberKey = preferredMemberKey;
             return this;
         }
 
         public Builder preferredMemberKey(@Nullable GroupMembershipPreferredMemberKeyGetArgs preferredMemberKey) {
-            this.preferredMemberKey = Input.ofNullable(preferredMemberKey);
+            this.preferredMemberKey = Output.ofNullable(preferredMemberKey);
             return this;
         }
 
-        public Builder roles(@Nullable Input<List<GroupMembershipRoleGetArgs>> roles) {
+        public Builder roles(@Nullable Output<List<GroupMembershipRoleGetArgs>> roles) {
             this.roles = roles;
             return this;
         }
 
         public Builder roles(@Nullable List<GroupMembershipRoleGetArgs> roles) {
-            this.roles = Input.ofNullable(roles);
+            this.roles = Output.ofNullable(roles);
             return this;
         }
 
-        public Builder type(@Nullable Input<String> type) {
+        public Builder type(@Nullable Output<String> type) {
             this.type = type;
             return this;
         }
 
         public Builder type(@Nullable String type) {
-            this.type = Input.ofNullable(type);
+            this.type = Output.ofNullable(type);
             return this;
         }
 
-        public Builder updateTime(@Nullable Input<String> updateTime) {
+        public Builder updateTime(@Nullable Output<String> updateTime) {
             this.updateTime = updateTime;
             return this;
         }
 
         public Builder updateTime(@Nullable String updateTime) {
-            this.updateTime = Input.ofNullable(updateTime);
+            this.updateTime = Output.ofNullable(updateTime);
             return this;
         }
         public GroupMembershipState build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.detective;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -18,18 +18,18 @@ public final class InvitationAccepterArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="graphArn", required=true)
-      private final Input<String> graphArn;
+      private final Output<String> graphArn;
 
-    public Input<String> getGraphArn() {
+    public Output<String> getGraphArn() {
         return this.graphArn;
     }
 
-    public InvitationAccepterArgs(Input<String> graphArn) {
+    public InvitationAccepterArgs(Output<String> graphArn) {
         this.graphArn = Objects.requireNonNull(graphArn, "expected parameter 'graphArn' to be non-null");
     }
 
     private InvitationAccepterArgs() {
-        this.graphArn = Input.empty();
+        this.graphArn = Output.empty();
     }
 
     public static Builder builder() {
@@ -41,7 +41,7 @@ public final class InvitationAccepterArgs extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private Input<String> graphArn;
+        private Output<String> graphArn;
 
         public Builder() {
     	      // Empty
@@ -52,13 +52,13 @@ public final class InvitationAccepterArgs extends io.pulumi.resources.ResourceAr
     	      this.graphArn = defaults.graphArn;
         }
 
-        public Builder graphArn(Input<String> graphArn) {
+        public Builder graphArn(Output<String> graphArn) {
             this.graphArn = Objects.requireNonNull(graphArn);
             return this;
         }
 
         public Builder graphArn(String graphArn) {
-            this.graphArn = Input.of(Objects.requireNonNull(graphArn));
+            this.graphArn = Output.of(Objects.requireNonNull(graphArn));
             return this;
         }
         public InvitationAccepterArgs build() {

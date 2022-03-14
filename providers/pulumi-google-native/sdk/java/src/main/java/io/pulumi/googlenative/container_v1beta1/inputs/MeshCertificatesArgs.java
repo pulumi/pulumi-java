@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.container_v1beta1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class MeshCertificatesArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="enableCertificates")
-      private final @Nullable Input<Boolean> enableCertificates;
+      private final @Nullable Output<Boolean> enableCertificates;
 
-    public Input<Boolean> getEnableCertificates() {
-        return this.enableCertificates == null ? Input.empty() : this.enableCertificates;
+    public Output<Boolean> getEnableCertificates() {
+        return this.enableCertificates == null ? Output.empty() : this.enableCertificates;
     }
 
-    public MeshCertificatesArgs(@Nullable Input<Boolean> enableCertificates) {
+    public MeshCertificatesArgs(@Nullable Output<Boolean> enableCertificates) {
         this.enableCertificates = enableCertificates;
     }
 
     private MeshCertificatesArgs() {
-        this.enableCertificates = Input.empty();
+        this.enableCertificates = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class MeshCertificatesArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> enableCertificates;
+        private @Nullable Output<Boolean> enableCertificates;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class MeshCertificatesArgs extends io.pulumi.resources.ResourceArgs
     	      this.enableCertificates = defaults.enableCertificates;
         }
 
-        public Builder enableCertificates(@Nullable Input<Boolean> enableCertificates) {
+        public Builder enableCertificates(@Nullable Output<Boolean> enableCertificates) {
             this.enableCertificates = enableCertificates;
             return this;
         }
 
         public Builder enableCertificates(@Nullable Boolean enableCertificates) {
-            this.enableCertificates = Input.ofNullable(enableCertificates);
+            this.enableCertificates = Output.ofNullable(enableCertificates);
             return this;
         }
         public MeshCertificatesArgs build() {

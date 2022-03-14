@@ -4,7 +4,7 @@
 package io.pulumi.aws.wafregional;
 
 import io.pulumi.aws.wafregional.inputs.RegexMatchSetRegexMatchTupleArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -21,10 +21,10 @@ public final class RegexMatchSetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -32,22 +32,22 @@ public final class RegexMatchSetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="regexMatchTuples")
-      private final @Nullable Input<List<RegexMatchSetRegexMatchTupleArgs>> regexMatchTuples;
+      private final @Nullable Output<List<RegexMatchSetRegexMatchTupleArgs>> regexMatchTuples;
 
-    public Input<List<RegexMatchSetRegexMatchTupleArgs>> getRegexMatchTuples() {
-        return this.regexMatchTuples == null ? Input.empty() : this.regexMatchTuples;
+    public Output<List<RegexMatchSetRegexMatchTupleArgs>> getRegexMatchTuples() {
+        return this.regexMatchTuples == null ? Output.empty() : this.regexMatchTuples;
     }
 
     public RegexMatchSetArgs(
-        @Nullable Input<String> name,
-        @Nullable Input<List<RegexMatchSetRegexMatchTupleArgs>> regexMatchTuples) {
+        @Nullable Output<String> name,
+        @Nullable Output<List<RegexMatchSetRegexMatchTupleArgs>> regexMatchTuples) {
         this.name = name;
         this.regexMatchTuples = regexMatchTuples;
     }
 
     private RegexMatchSetArgs() {
-        this.name = Input.empty();
-        this.regexMatchTuples = Input.empty();
+        this.name = Output.empty();
+        this.regexMatchTuples = Output.empty();
     }
 
     public static Builder builder() {
@@ -59,8 +59,8 @@ public final class RegexMatchSetArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> name;
-        private @Nullable Input<List<RegexMatchSetRegexMatchTupleArgs>> regexMatchTuples;
+        private @Nullable Output<String> name;
+        private @Nullable Output<List<RegexMatchSetRegexMatchTupleArgs>> regexMatchTuples;
 
         public Builder() {
     	      // Empty
@@ -72,23 +72,23 @@ public final class RegexMatchSetArgs extends io.pulumi.resources.ResourceArgs {
     	      this.regexMatchTuples = defaults.regexMatchTuples;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder regexMatchTuples(@Nullable Input<List<RegexMatchSetRegexMatchTupleArgs>> regexMatchTuples) {
+        public Builder regexMatchTuples(@Nullable Output<List<RegexMatchSetRegexMatchTupleArgs>> regexMatchTuples) {
             this.regexMatchTuples = regexMatchTuples;
             return this;
         }
 
         public Builder regexMatchTuples(@Nullable List<RegexMatchSetRegexMatchTupleArgs> regexMatchTuples) {
-            this.regexMatchTuples = Input.ofNullable(regexMatchTuples);
+            this.regexMatchTuples = Output.ofNullable(regexMatchTuples);
             return this;
         }
         public RegexMatchSetArgs build() {

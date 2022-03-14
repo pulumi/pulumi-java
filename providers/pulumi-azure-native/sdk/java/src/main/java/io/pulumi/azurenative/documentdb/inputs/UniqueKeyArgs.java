@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.documentdb.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -24,18 +24,18 @@ public final class UniqueKeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="paths")
-      private final @Nullable Input<List<String>> paths;
+      private final @Nullable Output<List<String>> paths;
 
-    public Input<List<String>> getPaths() {
-        return this.paths == null ? Input.empty() : this.paths;
+    public Output<List<String>> getPaths() {
+        return this.paths == null ? Output.empty() : this.paths;
     }
 
-    public UniqueKeyArgs(@Nullable Input<List<String>> paths) {
+    public UniqueKeyArgs(@Nullable Output<List<String>> paths) {
         this.paths = paths;
     }
 
     private UniqueKeyArgs() {
-        this.paths = Input.empty();
+        this.paths = Output.empty();
     }
 
     public static Builder builder() {
@@ -47,7 +47,7 @@ public final class UniqueKeyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> paths;
+        private @Nullable Output<List<String>> paths;
 
         public Builder() {
     	      // Empty
@@ -58,13 +58,13 @@ public final class UniqueKeyArgs extends io.pulumi.resources.ResourceArgs {
     	      this.paths = defaults.paths;
         }
 
-        public Builder paths(@Nullable Input<List<String>> paths) {
+        public Builder paths(@Nullable Output<List<String>> paths) {
             this.paths = paths;
             return this;
         }
 
         public Builder paths(@Nullable List<String> paths) {
-            this.paths = Input.ofNullable(paths);
+            this.paths = Output.ofNullable(paths);
             return this;
         }
         public UniqueKeyArgs build() {

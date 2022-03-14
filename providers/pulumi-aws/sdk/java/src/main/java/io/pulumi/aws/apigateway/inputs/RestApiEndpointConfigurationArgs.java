@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.apigateway.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -20,9 +20,9 @@ public final class RestApiEndpointConfigurationArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="types", required=true)
-      private final Input<String> types;
+      private final Output<String> types;
 
-    public Input<String> getTypes() {
+    public Output<String> getTypes() {
         return this.types;
     }
 
@@ -31,22 +31,22 @@ public final class RestApiEndpointConfigurationArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="vpcEndpointIds")
-      private final @Nullable Input<List<String>> vpcEndpointIds;
+      private final @Nullable Output<List<String>> vpcEndpointIds;
 
-    public Input<List<String>> getVpcEndpointIds() {
-        return this.vpcEndpointIds == null ? Input.empty() : this.vpcEndpointIds;
+    public Output<List<String>> getVpcEndpointIds() {
+        return this.vpcEndpointIds == null ? Output.empty() : this.vpcEndpointIds;
     }
 
     public RestApiEndpointConfigurationArgs(
-        Input<String> types,
-        @Nullable Input<List<String>> vpcEndpointIds) {
+        Output<String> types,
+        @Nullable Output<List<String>> vpcEndpointIds) {
         this.types = Objects.requireNonNull(types, "expected parameter 'types' to be non-null");
         this.vpcEndpointIds = vpcEndpointIds;
     }
 
     private RestApiEndpointConfigurationArgs() {
-        this.types = Input.empty();
-        this.vpcEndpointIds = Input.empty();
+        this.types = Output.empty();
+        this.vpcEndpointIds = Output.empty();
     }
 
     public static Builder builder() {
@@ -58,8 +58,8 @@ public final class RestApiEndpointConfigurationArgs extends io.pulumi.resources.
     }
 
     public static final class Builder {
-        private Input<String> types;
-        private @Nullable Input<List<String>> vpcEndpointIds;
+        private Output<String> types;
+        private @Nullable Output<List<String>> vpcEndpointIds;
 
         public Builder() {
     	      // Empty
@@ -71,23 +71,23 @@ public final class RestApiEndpointConfigurationArgs extends io.pulumi.resources.
     	      this.vpcEndpointIds = defaults.vpcEndpointIds;
         }
 
-        public Builder types(Input<String> types) {
+        public Builder types(Output<String> types) {
             this.types = Objects.requireNonNull(types);
             return this;
         }
 
         public Builder types(String types) {
-            this.types = Input.of(Objects.requireNonNull(types));
+            this.types = Output.of(Objects.requireNonNull(types));
             return this;
         }
 
-        public Builder vpcEndpointIds(@Nullable Input<List<String>> vpcEndpointIds) {
+        public Builder vpcEndpointIds(@Nullable Output<List<String>> vpcEndpointIds) {
             this.vpcEndpointIds = vpcEndpointIds;
             return this;
         }
 
         public Builder vpcEndpointIds(@Nullable List<String> vpcEndpointIds) {
-            this.vpcEndpointIds = Input.ofNullable(vpcEndpointIds);
+            this.vpcEndpointIds = Output.ofNullable(vpcEndpointIds);
             return this;
         }
         public RestApiEndpointConfigurationArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.servicemanagement_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.servicemanagement_v1.inputs.UsageRuleArgs;
 import java.lang.String;
@@ -25,10 +25,10 @@ public final class UsageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="producerNotificationChannel")
-      private final @Nullable Input<String> producerNotificationChannel;
+      private final @Nullable Output<String> producerNotificationChannel;
 
-    public Input<String> getProducerNotificationChannel() {
-        return this.producerNotificationChannel == null ? Input.empty() : this.producerNotificationChannel;
+    public Output<String> getProducerNotificationChannel() {
+        return this.producerNotificationChannel == null ? Output.empty() : this.producerNotificationChannel;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class UsageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="requirements")
-      private final @Nullable Input<List<String>> requirements;
+      private final @Nullable Output<List<String>> requirements;
 
-    public Input<List<String>> getRequirements() {
-        return this.requirements == null ? Input.empty() : this.requirements;
+    public Output<List<String>> getRequirements() {
+        return this.requirements == null ? Output.empty() : this.requirements;
     }
 
     /**
@@ -47,25 +47,25 @@ public final class UsageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="rules")
-      private final @Nullable Input<List<UsageRuleArgs>> rules;
+      private final @Nullable Output<List<UsageRuleArgs>> rules;
 
-    public Input<List<UsageRuleArgs>> getRules() {
-        return this.rules == null ? Input.empty() : this.rules;
+    public Output<List<UsageRuleArgs>> getRules() {
+        return this.rules == null ? Output.empty() : this.rules;
     }
 
     public UsageArgs(
-        @Nullable Input<String> producerNotificationChannel,
-        @Nullable Input<List<String>> requirements,
-        @Nullable Input<List<UsageRuleArgs>> rules) {
+        @Nullable Output<String> producerNotificationChannel,
+        @Nullable Output<List<String>> requirements,
+        @Nullable Output<List<UsageRuleArgs>> rules) {
         this.producerNotificationChannel = producerNotificationChannel;
         this.requirements = requirements;
         this.rules = rules;
     }
 
     private UsageArgs() {
-        this.producerNotificationChannel = Input.empty();
-        this.requirements = Input.empty();
-        this.rules = Input.empty();
+        this.producerNotificationChannel = Output.empty();
+        this.requirements = Output.empty();
+        this.rules = Output.empty();
     }
 
     public static Builder builder() {
@@ -77,9 +77,9 @@ public final class UsageArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> producerNotificationChannel;
-        private @Nullable Input<List<String>> requirements;
-        private @Nullable Input<List<UsageRuleArgs>> rules;
+        private @Nullable Output<String> producerNotificationChannel;
+        private @Nullable Output<List<String>> requirements;
+        private @Nullable Output<List<UsageRuleArgs>> rules;
 
         public Builder() {
     	      // Empty
@@ -92,33 +92,33 @@ public final class UsageArgs extends io.pulumi.resources.ResourceArgs {
     	      this.rules = defaults.rules;
         }
 
-        public Builder producerNotificationChannel(@Nullable Input<String> producerNotificationChannel) {
+        public Builder producerNotificationChannel(@Nullable Output<String> producerNotificationChannel) {
             this.producerNotificationChannel = producerNotificationChannel;
             return this;
         }
 
         public Builder producerNotificationChannel(@Nullable String producerNotificationChannel) {
-            this.producerNotificationChannel = Input.ofNullable(producerNotificationChannel);
+            this.producerNotificationChannel = Output.ofNullable(producerNotificationChannel);
             return this;
         }
 
-        public Builder requirements(@Nullable Input<List<String>> requirements) {
+        public Builder requirements(@Nullable Output<List<String>> requirements) {
             this.requirements = requirements;
             return this;
         }
 
         public Builder requirements(@Nullable List<String> requirements) {
-            this.requirements = Input.ofNullable(requirements);
+            this.requirements = Output.ofNullable(requirements);
             return this;
         }
 
-        public Builder rules(@Nullable Input<List<UsageRuleArgs>> rules) {
+        public Builder rules(@Nullable Output<List<UsageRuleArgs>> rules) {
             this.rules = rules;
             return this;
         }
 
         public Builder rules(@Nullable List<UsageRuleArgs> rules) {
-            this.rules = Input.ofNullable(rules);
+            this.rules = Output.ofNullable(rules);
             return this;
         }
         public UsageArgs build() {

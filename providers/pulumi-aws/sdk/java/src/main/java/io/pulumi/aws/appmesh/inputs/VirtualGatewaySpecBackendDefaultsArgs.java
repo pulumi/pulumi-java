@@ -4,7 +4,7 @@
 package io.pulumi.aws.appmesh.inputs;
 
 import io.pulumi.aws.appmesh.inputs.VirtualGatewaySpecBackendDefaultsClientPolicyArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,18 +19,18 @@ public final class VirtualGatewaySpecBackendDefaultsArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="clientPolicy")
-      private final @Nullable Input<VirtualGatewaySpecBackendDefaultsClientPolicyArgs> clientPolicy;
+      private final @Nullable Output<VirtualGatewaySpecBackendDefaultsClientPolicyArgs> clientPolicy;
 
-    public Input<VirtualGatewaySpecBackendDefaultsClientPolicyArgs> getClientPolicy() {
-        return this.clientPolicy == null ? Input.empty() : this.clientPolicy;
+    public Output<VirtualGatewaySpecBackendDefaultsClientPolicyArgs> getClientPolicy() {
+        return this.clientPolicy == null ? Output.empty() : this.clientPolicy;
     }
 
-    public VirtualGatewaySpecBackendDefaultsArgs(@Nullable Input<VirtualGatewaySpecBackendDefaultsClientPolicyArgs> clientPolicy) {
+    public VirtualGatewaySpecBackendDefaultsArgs(@Nullable Output<VirtualGatewaySpecBackendDefaultsClientPolicyArgs> clientPolicy) {
         this.clientPolicy = clientPolicy;
     }
 
     private VirtualGatewaySpecBackendDefaultsArgs() {
-        this.clientPolicy = Input.empty();
+        this.clientPolicy = Output.empty();
     }
 
     public static Builder builder() {
@@ -42,7 +42,7 @@ public final class VirtualGatewaySpecBackendDefaultsArgs extends io.pulumi.resou
     }
 
     public static final class Builder {
-        private @Nullable Input<VirtualGatewaySpecBackendDefaultsClientPolicyArgs> clientPolicy;
+        private @Nullable Output<VirtualGatewaySpecBackendDefaultsClientPolicyArgs> clientPolicy;
 
         public Builder() {
     	      // Empty
@@ -53,13 +53,13 @@ public final class VirtualGatewaySpecBackendDefaultsArgs extends io.pulumi.resou
     	      this.clientPolicy = defaults.clientPolicy;
         }
 
-        public Builder clientPolicy(@Nullable Input<VirtualGatewaySpecBackendDefaultsClientPolicyArgs> clientPolicy) {
+        public Builder clientPolicy(@Nullable Output<VirtualGatewaySpecBackendDefaultsClientPolicyArgs> clientPolicy) {
             this.clientPolicy = clientPolicy;
             return this;
         }
 
         public Builder clientPolicy(@Nullable VirtualGatewaySpecBackendDefaultsClientPolicyArgs clientPolicy) {
-            this.clientPolicy = Input.ofNullable(clientPolicy);
+            this.clientPolicy = Output.ofNullable(clientPolicy);
             return this;
         }
         public VirtualGatewaySpecBackendDefaultsArgs build() {

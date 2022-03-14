@@ -5,7 +5,7 @@ package io.pulumi.aws.networkfirewall.inputs;
 
 import io.pulumi.aws.networkfirewall.inputs.RuleGroupRuleGroupRuleVariablesIpSetArgs;
 import io.pulumi.aws.networkfirewall.inputs.RuleGroupRuleGroupRuleVariablesPortSetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
@@ -21,10 +21,10 @@ public final class RuleGroupRuleGroupRuleVariablesArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="ipSets")
-      private final @Nullable Input<List<RuleGroupRuleGroupRuleVariablesIpSetArgs>> ipSets;
+      private final @Nullable Output<List<RuleGroupRuleGroupRuleVariablesIpSetArgs>> ipSets;
 
-    public Input<List<RuleGroupRuleGroupRuleVariablesIpSetArgs>> getIpSets() {
-        return this.ipSets == null ? Input.empty() : this.ipSets;
+    public Output<List<RuleGroupRuleGroupRuleVariablesIpSetArgs>> getIpSets() {
+        return this.ipSets == null ? Output.empty() : this.ipSets;
     }
 
     /**
@@ -32,22 +32,22 @@ public final class RuleGroupRuleGroupRuleVariablesArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="portSets")
-      private final @Nullable Input<List<RuleGroupRuleGroupRuleVariablesPortSetArgs>> portSets;
+      private final @Nullable Output<List<RuleGroupRuleGroupRuleVariablesPortSetArgs>> portSets;
 
-    public Input<List<RuleGroupRuleGroupRuleVariablesPortSetArgs>> getPortSets() {
-        return this.portSets == null ? Input.empty() : this.portSets;
+    public Output<List<RuleGroupRuleGroupRuleVariablesPortSetArgs>> getPortSets() {
+        return this.portSets == null ? Output.empty() : this.portSets;
     }
 
     public RuleGroupRuleGroupRuleVariablesArgs(
-        @Nullable Input<List<RuleGroupRuleGroupRuleVariablesIpSetArgs>> ipSets,
-        @Nullable Input<List<RuleGroupRuleGroupRuleVariablesPortSetArgs>> portSets) {
+        @Nullable Output<List<RuleGroupRuleGroupRuleVariablesIpSetArgs>> ipSets,
+        @Nullable Output<List<RuleGroupRuleGroupRuleVariablesPortSetArgs>> portSets) {
         this.ipSets = ipSets;
         this.portSets = portSets;
     }
 
     private RuleGroupRuleGroupRuleVariablesArgs() {
-        this.ipSets = Input.empty();
-        this.portSets = Input.empty();
+        this.ipSets = Output.empty();
+        this.portSets = Output.empty();
     }
 
     public static Builder builder() {
@@ -59,8 +59,8 @@ public final class RuleGroupRuleGroupRuleVariablesArgs extends io.pulumi.resourc
     }
 
     public static final class Builder {
-        private @Nullable Input<List<RuleGroupRuleGroupRuleVariablesIpSetArgs>> ipSets;
-        private @Nullable Input<List<RuleGroupRuleGroupRuleVariablesPortSetArgs>> portSets;
+        private @Nullable Output<List<RuleGroupRuleGroupRuleVariablesIpSetArgs>> ipSets;
+        private @Nullable Output<List<RuleGroupRuleGroupRuleVariablesPortSetArgs>> portSets;
 
         public Builder() {
     	      // Empty
@@ -72,23 +72,23 @@ public final class RuleGroupRuleGroupRuleVariablesArgs extends io.pulumi.resourc
     	      this.portSets = defaults.portSets;
         }
 
-        public Builder ipSets(@Nullable Input<List<RuleGroupRuleGroupRuleVariablesIpSetArgs>> ipSets) {
+        public Builder ipSets(@Nullable Output<List<RuleGroupRuleGroupRuleVariablesIpSetArgs>> ipSets) {
             this.ipSets = ipSets;
             return this;
         }
 
         public Builder ipSets(@Nullable List<RuleGroupRuleGroupRuleVariablesIpSetArgs> ipSets) {
-            this.ipSets = Input.ofNullable(ipSets);
+            this.ipSets = Output.ofNullable(ipSets);
             return this;
         }
 
-        public Builder portSets(@Nullable Input<List<RuleGroupRuleGroupRuleVariablesPortSetArgs>> portSets) {
+        public Builder portSets(@Nullable Output<List<RuleGroupRuleGroupRuleVariablesPortSetArgs>> portSets) {
             this.portSets = portSets;
             return this;
         }
 
         public Builder portSets(@Nullable List<RuleGroupRuleGroupRuleVariablesPortSetArgs> portSets) {
-            this.portSets = Input.ofNullable(portSets);
+            this.portSets = Output.ofNullable(portSets);
             return this;
         }
         public RuleGroupRuleGroupRuleVariablesArgs build() {

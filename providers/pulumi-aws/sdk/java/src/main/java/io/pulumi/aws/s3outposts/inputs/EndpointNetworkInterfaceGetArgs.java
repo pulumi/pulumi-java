@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.s3outposts.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,18 +19,18 @@ public final class EndpointNetworkInterfaceGetArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="networkInterfaceId")
-      private final @Nullable Input<String> networkInterfaceId;
+      private final @Nullable Output<String> networkInterfaceId;
 
-    public Input<String> getNetworkInterfaceId() {
-        return this.networkInterfaceId == null ? Input.empty() : this.networkInterfaceId;
+    public Output<String> getNetworkInterfaceId() {
+        return this.networkInterfaceId == null ? Output.empty() : this.networkInterfaceId;
     }
 
-    public EndpointNetworkInterfaceGetArgs(@Nullable Input<String> networkInterfaceId) {
+    public EndpointNetworkInterfaceGetArgs(@Nullable Output<String> networkInterfaceId) {
         this.networkInterfaceId = networkInterfaceId;
     }
 
     private EndpointNetworkInterfaceGetArgs() {
-        this.networkInterfaceId = Input.empty();
+        this.networkInterfaceId = Output.empty();
     }
 
     public static Builder builder() {
@@ -42,7 +42,7 @@ public final class EndpointNetworkInterfaceGetArgs extends io.pulumi.resources.R
     }
 
     public static final class Builder {
-        private @Nullable Input<String> networkInterfaceId;
+        private @Nullable Output<String> networkInterfaceId;
 
         public Builder() {
     	      // Empty
@@ -53,13 +53,13 @@ public final class EndpointNetworkInterfaceGetArgs extends io.pulumi.resources.R
     	      this.networkInterfaceId = defaults.networkInterfaceId;
         }
 
-        public Builder networkInterfaceId(@Nullable Input<String> networkInterfaceId) {
+        public Builder networkInterfaceId(@Nullable Output<String> networkInterfaceId) {
             this.networkInterfaceId = networkInterfaceId;
             return this;
         }
 
         public Builder networkInterfaceId(@Nullable String networkInterfaceId) {
-            this.networkInterfaceId = Input.ofNullable(networkInterfaceId);
+            this.networkInterfaceId = Output.ofNullable(networkInterfaceId);
             return this;
         }
         public EndpointNetworkInterfaceGetArgs build() {

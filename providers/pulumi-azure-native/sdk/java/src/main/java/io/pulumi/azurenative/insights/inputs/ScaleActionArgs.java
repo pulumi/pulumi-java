@@ -5,7 +5,7 @@ package io.pulumi.azurenative.insights.inputs;
 
 import io.pulumi.azurenative.insights.enums.ScaleDirection;
 import io.pulumi.azurenative.insights.enums.ScaleType;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -25,9 +25,9 @@ public final class ScaleActionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="cooldown", required=true)
-      private final Input<String> cooldown;
+      private final Output<String> cooldown;
 
-    public Input<String> getCooldown() {
+    public Output<String> getCooldown() {
         return this.cooldown;
     }
 
@@ -36,9 +36,9 @@ public final class ScaleActionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="direction", required=true)
-      private final Input<ScaleDirection> direction;
+      private final Output<ScaleDirection> direction;
 
-    public Input<ScaleDirection> getDirection() {
+    public Output<ScaleDirection> getDirection() {
         return this.direction;
     }
 
@@ -47,9 +47,9 @@ public final class ScaleActionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<ScaleType> type;
+      private final Output<ScaleType> type;
 
-    public Input<ScaleType> getType() {
+    public Output<ScaleType> getType() {
         return this.type;
     }
 
@@ -58,28 +58,28 @@ public final class ScaleActionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="value")
-      private final @Nullable Input<String> value;
+      private final @Nullable Output<String> value;
 
-    public Input<String> getValue() {
-        return this.value == null ? Input.empty() : this.value;
+    public Output<String> getValue() {
+        return this.value == null ? Output.empty() : this.value;
     }
 
     public ScaleActionArgs(
-        Input<String> cooldown,
-        Input<ScaleDirection> direction,
-        Input<ScaleType> type,
-        @Nullable Input<String> value) {
+        Output<String> cooldown,
+        Output<ScaleDirection> direction,
+        Output<ScaleType> type,
+        @Nullable Output<String> value) {
         this.cooldown = Objects.requireNonNull(cooldown, "expected parameter 'cooldown' to be non-null");
         this.direction = Objects.requireNonNull(direction, "expected parameter 'direction' to be non-null");
         this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-        this.value = value == null ? Input.ofNullable("1") : value;
+        this.value = value == null ? Output.ofNullable("1") : value;
     }
 
     private ScaleActionArgs() {
-        this.cooldown = Input.empty();
-        this.direction = Input.empty();
-        this.type = Input.empty();
-        this.value = Input.empty();
+        this.cooldown = Output.empty();
+        this.direction = Output.empty();
+        this.type = Output.empty();
+        this.value = Output.empty();
     }
 
     public static Builder builder() {
@@ -91,10 +91,10 @@ public final class ScaleActionArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> cooldown;
-        private Input<ScaleDirection> direction;
-        private Input<ScaleType> type;
-        private @Nullable Input<String> value;
+        private Output<String> cooldown;
+        private Output<ScaleDirection> direction;
+        private Output<ScaleType> type;
+        private @Nullable Output<String> value;
 
         public Builder() {
     	      // Empty
@@ -108,43 +108,43 @@ public final class ScaleActionArgs extends io.pulumi.resources.ResourceArgs {
     	      this.value = defaults.value;
         }
 
-        public Builder cooldown(Input<String> cooldown) {
+        public Builder cooldown(Output<String> cooldown) {
             this.cooldown = Objects.requireNonNull(cooldown);
             return this;
         }
 
         public Builder cooldown(String cooldown) {
-            this.cooldown = Input.of(Objects.requireNonNull(cooldown));
+            this.cooldown = Output.of(Objects.requireNonNull(cooldown));
             return this;
         }
 
-        public Builder direction(Input<ScaleDirection> direction) {
+        public Builder direction(Output<ScaleDirection> direction) {
             this.direction = Objects.requireNonNull(direction);
             return this;
         }
 
         public Builder direction(ScaleDirection direction) {
-            this.direction = Input.of(Objects.requireNonNull(direction));
+            this.direction = Output.of(Objects.requireNonNull(direction));
             return this;
         }
 
-        public Builder type(Input<ScaleType> type) {
+        public Builder type(Output<ScaleType> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(ScaleType type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
 
-        public Builder value(@Nullable Input<String> value) {
+        public Builder value(@Nullable Output<String> value) {
             this.value = value;
             return this;
         }
 
         public Builder value(@Nullable String value) {
-            this.value = Input.ofNullable(value);
+            this.value = Output.ofNullable(value);
             return this;
         }
         public ScaleActionArgs build() {

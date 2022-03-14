@@ -4,7 +4,7 @@
 package io.pulumi.aws.cloudfront.inputs;
 
 import io.pulumi.aws.cloudfront.inputs.RealtimeLogConfigEndpointKinesisStreamConfigGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,9 +19,9 @@ public final class RealtimeLogConfigEndpointGetArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="kinesisStreamConfig", required=true)
-      private final Input<RealtimeLogConfigEndpointKinesisStreamConfigGetArgs> kinesisStreamConfig;
+      private final Output<RealtimeLogConfigEndpointKinesisStreamConfigGetArgs> kinesisStreamConfig;
 
-    public Input<RealtimeLogConfigEndpointKinesisStreamConfigGetArgs> getKinesisStreamConfig() {
+    public Output<RealtimeLogConfigEndpointKinesisStreamConfigGetArgs> getKinesisStreamConfig() {
         return this.kinesisStreamConfig;
     }
 
@@ -30,22 +30,22 @@ public final class RealtimeLogConfigEndpointGetArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="streamType", required=true)
-      private final Input<String> streamType;
+      private final Output<String> streamType;
 
-    public Input<String> getStreamType() {
+    public Output<String> getStreamType() {
         return this.streamType;
     }
 
     public RealtimeLogConfigEndpointGetArgs(
-        Input<RealtimeLogConfigEndpointKinesisStreamConfigGetArgs> kinesisStreamConfig,
-        Input<String> streamType) {
+        Output<RealtimeLogConfigEndpointKinesisStreamConfigGetArgs> kinesisStreamConfig,
+        Output<String> streamType) {
         this.kinesisStreamConfig = Objects.requireNonNull(kinesisStreamConfig, "expected parameter 'kinesisStreamConfig' to be non-null");
         this.streamType = Objects.requireNonNull(streamType, "expected parameter 'streamType' to be non-null");
     }
 
     private RealtimeLogConfigEndpointGetArgs() {
-        this.kinesisStreamConfig = Input.empty();
-        this.streamType = Input.empty();
+        this.kinesisStreamConfig = Output.empty();
+        this.streamType = Output.empty();
     }
 
     public static Builder builder() {
@@ -57,8 +57,8 @@ public final class RealtimeLogConfigEndpointGetArgs extends io.pulumi.resources.
     }
 
     public static final class Builder {
-        private Input<RealtimeLogConfigEndpointKinesisStreamConfigGetArgs> kinesisStreamConfig;
-        private Input<String> streamType;
+        private Output<RealtimeLogConfigEndpointKinesisStreamConfigGetArgs> kinesisStreamConfig;
+        private Output<String> streamType;
 
         public Builder() {
     	      // Empty
@@ -70,23 +70,23 @@ public final class RealtimeLogConfigEndpointGetArgs extends io.pulumi.resources.
     	      this.streamType = defaults.streamType;
         }
 
-        public Builder kinesisStreamConfig(Input<RealtimeLogConfigEndpointKinesisStreamConfigGetArgs> kinesisStreamConfig) {
+        public Builder kinesisStreamConfig(Output<RealtimeLogConfigEndpointKinesisStreamConfigGetArgs> kinesisStreamConfig) {
             this.kinesisStreamConfig = Objects.requireNonNull(kinesisStreamConfig);
             return this;
         }
 
         public Builder kinesisStreamConfig(RealtimeLogConfigEndpointKinesisStreamConfigGetArgs kinesisStreamConfig) {
-            this.kinesisStreamConfig = Input.of(Objects.requireNonNull(kinesisStreamConfig));
+            this.kinesisStreamConfig = Output.of(Objects.requireNonNull(kinesisStreamConfig));
             return this;
         }
 
-        public Builder streamType(Input<String> streamType) {
+        public Builder streamType(Output<String> streamType) {
             this.streamType = Objects.requireNonNull(streamType);
             return this;
         }
 
         public Builder streamType(String streamType) {
-            this.streamType = Input.of(Objects.requireNonNull(streamType));
+            this.streamType = Output.of(Objects.requireNonNull(streamType));
             return this;
         }
         public RealtimeLogConfigEndpointGetArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.securityhub.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class InviteAccepterState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="invitationId")
-      private final @Nullable Input<String> invitationId;
+      private final @Nullable Output<String> invitationId;
 
-    public Input<String> getInvitationId() {
-        return this.invitationId == null ? Input.empty() : this.invitationId;
+    public Output<String> getInvitationId() {
+        return this.invitationId == null ? Output.empty() : this.invitationId;
     }
 
     /**
@@ -30,22 +30,22 @@ public final class InviteAccepterState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="masterId")
-      private final @Nullable Input<String> masterId;
+      private final @Nullable Output<String> masterId;
 
-    public Input<String> getMasterId() {
-        return this.masterId == null ? Input.empty() : this.masterId;
+    public Output<String> getMasterId() {
+        return this.masterId == null ? Output.empty() : this.masterId;
     }
 
     public InviteAccepterState(
-        @Nullable Input<String> invitationId,
-        @Nullable Input<String> masterId) {
+        @Nullable Output<String> invitationId,
+        @Nullable Output<String> masterId) {
         this.invitationId = invitationId;
         this.masterId = masterId;
     }
 
     private InviteAccepterState() {
-        this.invitationId = Input.empty();
-        this.masterId = Input.empty();
+        this.invitationId = Output.empty();
+        this.masterId = Output.empty();
     }
 
     public static Builder builder() {
@@ -57,8 +57,8 @@ public final class InviteAccepterState extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private @Nullable Input<String> invitationId;
-        private @Nullable Input<String> masterId;
+        private @Nullable Output<String> invitationId;
+        private @Nullable Output<String> masterId;
 
         public Builder() {
     	      // Empty
@@ -70,23 +70,23 @@ public final class InviteAccepterState extends io.pulumi.resources.ResourceArgs 
     	      this.masterId = defaults.masterId;
         }
 
-        public Builder invitationId(@Nullable Input<String> invitationId) {
+        public Builder invitationId(@Nullable Output<String> invitationId) {
             this.invitationId = invitationId;
             return this;
         }
 
         public Builder invitationId(@Nullable String invitationId) {
-            this.invitationId = Input.ofNullable(invitationId);
+            this.invitationId = Output.ofNullable(invitationId);
             return this;
         }
 
-        public Builder masterId(@Nullable Input<String> masterId) {
+        public Builder masterId(@Nullable Output<String> masterId) {
             this.masterId = masterId;
             return this;
         }
 
         public Builder masterId(@Nullable String masterId) {
-            this.masterId = Input.ofNullable(masterId);
+            this.masterId = Output.ofNullable(masterId);
             return this;
         }
         public InviteAccepterState build() {

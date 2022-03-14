@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.synapse.inputs;
 
 import io.pulumi.azurenative.synapse.inputs.SecureStringArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -24,9 +24,9 @@ public final class ComponentSetupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="componentName", required=true)
-      private final Input<String> componentName;
+      private final Output<String> componentName;
 
-    public Input<String> getComponentName() {
+    public Output<String> getComponentName() {
         return this.componentName;
     }
 
@@ -35,10 +35,10 @@ public final class ComponentSetupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="licenseKey")
-      private final @Nullable Input<SecureStringArgs> licenseKey;
+      private final @Nullable Output<SecureStringArgs> licenseKey;
 
-    public Input<SecureStringArgs> getLicenseKey() {
-        return this.licenseKey == null ? Input.empty() : this.licenseKey;
+    public Output<SecureStringArgs> getLicenseKey() {
+        return this.licenseKey == null ? Output.empty() : this.licenseKey;
     }
 
     /**
@@ -47,25 +47,25 @@ public final class ComponentSetupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<String> type;
+      private final Output<String> type;
 
-    public Input<String> getType() {
+    public Output<String> getType() {
         return this.type;
     }
 
     public ComponentSetupArgs(
-        Input<String> componentName,
-        @Nullable Input<SecureStringArgs> licenseKey,
-        Input<String> type) {
+        Output<String> componentName,
+        @Nullable Output<SecureStringArgs> licenseKey,
+        Output<String> type) {
         this.componentName = Objects.requireNonNull(componentName, "expected parameter 'componentName' to be non-null");
         this.licenseKey = licenseKey;
         this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
     }
 
     private ComponentSetupArgs() {
-        this.componentName = Input.empty();
-        this.licenseKey = Input.empty();
-        this.type = Input.empty();
+        this.componentName = Output.empty();
+        this.licenseKey = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -77,9 +77,9 @@ public final class ComponentSetupArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> componentName;
-        private @Nullable Input<SecureStringArgs> licenseKey;
-        private Input<String> type;
+        private Output<String> componentName;
+        private @Nullable Output<SecureStringArgs> licenseKey;
+        private Output<String> type;
 
         public Builder() {
     	      // Empty
@@ -92,33 +92,33 @@ public final class ComponentSetupArgs extends io.pulumi.resources.ResourceArgs {
     	      this.type = defaults.type;
         }
 
-        public Builder componentName(Input<String> componentName) {
+        public Builder componentName(Output<String> componentName) {
             this.componentName = Objects.requireNonNull(componentName);
             return this;
         }
 
         public Builder componentName(String componentName) {
-            this.componentName = Input.of(Objects.requireNonNull(componentName));
+            this.componentName = Output.of(Objects.requireNonNull(componentName));
             return this;
         }
 
-        public Builder licenseKey(@Nullable Input<SecureStringArgs> licenseKey) {
+        public Builder licenseKey(@Nullable Output<SecureStringArgs> licenseKey) {
             this.licenseKey = licenseKey;
             return this;
         }
 
         public Builder licenseKey(@Nullable SecureStringArgs licenseKey) {
-            this.licenseKey = Input.ofNullable(licenseKey);
+            this.licenseKey = Output.ofNullable(licenseKey);
             return this;
         }
 
-        public Builder type(Input<String> type) {
+        public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(String type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
         public ComponentSetupArgs build() {

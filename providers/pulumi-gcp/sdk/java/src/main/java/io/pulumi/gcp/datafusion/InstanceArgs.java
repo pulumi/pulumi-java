@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.datafusion;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.datafusion.inputs.InstanceNetworkConfigArgs;
 import java.lang.Boolean;
@@ -22,10 +22,10 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dataprocServiceAccount")
-      private final @Nullable Input<String> dataprocServiceAccount;
+      private final @Nullable Output<String> dataprocServiceAccount;
 
-    public Input<String> getDataprocServiceAccount() {
-        return this.dataprocServiceAccount == null ? Input.empty() : this.dataprocServiceAccount;
+    public Output<String> getDataprocServiceAccount() {
+        return this.dataprocServiceAccount == null ? Output.empty() : this.dataprocServiceAccount;
     }
 
     /**
@@ -33,10 +33,10 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -44,10 +44,10 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enableStackdriverLogging")
-      private final @Nullable Input<Boolean> enableStackdriverLogging;
+      private final @Nullable Output<Boolean> enableStackdriverLogging;
 
-    public Input<Boolean> getEnableStackdriverLogging() {
-        return this.enableStackdriverLogging == null ? Input.empty() : this.enableStackdriverLogging;
+    public Output<Boolean> getEnableStackdriverLogging() {
+        return this.enableStackdriverLogging == null ? Output.empty() : this.enableStackdriverLogging;
     }
 
     /**
@@ -55,10 +55,10 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enableStackdriverMonitoring")
-      private final @Nullable Input<Boolean> enableStackdriverMonitoring;
+      private final @Nullable Output<Boolean> enableStackdriverMonitoring;
 
-    public Input<Boolean> getEnableStackdriverMonitoring() {
-        return this.enableStackdriverMonitoring == null ? Input.empty() : this.enableStackdriverMonitoring;
+    public Output<Boolean> getEnableStackdriverMonitoring() {
+        return this.enableStackdriverMonitoring == null ? Output.empty() : this.enableStackdriverMonitoring;
     }
 
     /**
@@ -67,10 +67,10 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labels")
-      private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Output<Map<String,String>> labels;
 
-    public Input<Map<String,String>> getLabels() {
-        return this.labels == null ? Input.empty() : this.labels;
+    public Output<Map<String,String>> getLabels() {
+        return this.labels == null ? Output.empty() : this.labels;
     }
 
     /**
@@ -78,10 +78,10 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -90,10 +90,10 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="networkConfig")
-      private final @Nullable Input<InstanceNetworkConfigArgs> networkConfig;
+      private final @Nullable Output<InstanceNetworkConfigArgs> networkConfig;
 
-    public Input<InstanceNetworkConfigArgs> getNetworkConfig() {
-        return this.networkConfig == null ? Input.empty() : this.networkConfig;
+    public Output<InstanceNetworkConfigArgs> getNetworkConfig() {
+        return this.networkConfig == null ? Output.empty() : this.networkConfig;
     }
 
     /**
@@ -101,10 +101,10 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="options")
-      private final @Nullable Input<Map<String,String>> options;
+      private final @Nullable Output<Map<String,String>> options;
 
-    public Input<Map<String,String>> getOptions() {
-        return this.options == null ? Input.empty() : this.options;
+    public Output<Map<String,String>> getOptions() {
+        return this.options == null ? Output.empty() : this.options;
     }
 
     /**
@@ -114,10 +114,10 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="privateInstance")
-      private final @Nullable Input<Boolean> privateInstance;
+      private final @Nullable Output<Boolean> privateInstance;
 
-    public Input<Boolean> getPrivateInstance() {
-        return this.privateInstance == null ? Input.empty() : this.privateInstance;
+    public Output<Boolean> getPrivateInstance() {
+        return this.privateInstance == null ? Output.empty() : this.privateInstance;
     }
 
     /**
@@ -126,10 +126,10 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -137,10 +137,10 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="region")
-      private final @Nullable Input<String> region;
+      private final @Nullable Output<String> region;
 
-    public Input<String> getRegion() {
-        return this.region == null ? Input.empty() : this.region;
+    public Output<String> getRegion() {
+        return this.region == null ? Output.empty() : this.region;
     }
 
     /**
@@ -158,9 +158,9 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<String> type;
+      private final Output<String> type;
 
-    public Input<String> getType() {
+    public Output<String> getType() {
         return this.type;
     }
 
@@ -169,26 +169,26 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="version")
-      private final @Nullable Input<String> version;
+      private final @Nullable Output<String> version;
 
-    public Input<String> getVersion() {
-        return this.version == null ? Input.empty() : this.version;
+    public Output<String> getVersion() {
+        return this.version == null ? Output.empty() : this.version;
     }
 
     public InstanceArgs(
-        @Nullable Input<String> dataprocServiceAccount,
-        @Nullable Input<String> description,
-        @Nullable Input<Boolean> enableStackdriverLogging,
-        @Nullable Input<Boolean> enableStackdriverMonitoring,
-        @Nullable Input<Map<String,String>> labels,
-        @Nullable Input<String> name,
-        @Nullable Input<InstanceNetworkConfigArgs> networkConfig,
-        @Nullable Input<Map<String,String>> options,
-        @Nullable Input<Boolean> privateInstance,
-        @Nullable Input<String> project,
-        @Nullable Input<String> region,
-        Input<String> type,
-        @Nullable Input<String> version) {
+        @Nullable Output<String> dataprocServiceAccount,
+        @Nullable Output<String> description,
+        @Nullable Output<Boolean> enableStackdriverLogging,
+        @Nullable Output<Boolean> enableStackdriverMonitoring,
+        @Nullable Output<Map<String,String>> labels,
+        @Nullable Output<String> name,
+        @Nullable Output<InstanceNetworkConfigArgs> networkConfig,
+        @Nullable Output<Map<String,String>> options,
+        @Nullable Output<Boolean> privateInstance,
+        @Nullable Output<String> project,
+        @Nullable Output<String> region,
+        Output<String> type,
+        @Nullable Output<String> version) {
         this.dataprocServiceAccount = dataprocServiceAccount;
         this.description = description;
         this.enableStackdriverLogging = enableStackdriverLogging;
@@ -205,19 +205,19 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private InstanceArgs() {
-        this.dataprocServiceAccount = Input.empty();
-        this.description = Input.empty();
-        this.enableStackdriverLogging = Input.empty();
-        this.enableStackdriverMonitoring = Input.empty();
-        this.labels = Input.empty();
-        this.name = Input.empty();
-        this.networkConfig = Input.empty();
-        this.options = Input.empty();
-        this.privateInstance = Input.empty();
-        this.project = Input.empty();
-        this.region = Input.empty();
-        this.type = Input.empty();
-        this.version = Input.empty();
+        this.dataprocServiceAccount = Output.empty();
+        this.description = Output.empty();
+        this.enableStackdriverLogging = Output.empty();
+        this.enableStackdriverMonitoring = Output.empty();
+        this.labels = Output.empty();
+        this.name = Output.empty();
+        this.networkConfig = Output.empty();
+        this.options = Output.empty();
+        this.privateInstance = Output.empty();
+        this.project = Output.empty();
+        this.region = Output.empty();
+        this.type = Output.empty();
+        this.version = Output.empty();
     }
 
     public static Builder builder() {
@@ -229,19 +229,19 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> dataprocServiceAccount;
-        private @Nullable Input<String> description;
-        private @Nullable Input<Boolean> enableStackdriverLogging;
-        private @Nullable Input<Boolean> enableStackdriverMonitoring;
-        private @Nullable Input<Map<String,String>> labels;
-        private @Nullable Input<String> name;
-        private @Nullable Input<InstanceNetworkConfigArgs> networkConfig;
-        private @Nullable Input<Map<String,String>> options;
-        private @Nullable Input<Boolean> privateInstance;
-        private @Nullable Input<String> project;
-        private @Nullable Input<String> region;
-        private Input<String> type;
-        private @Nullable Input<String> version;
+        private @Nullable Output<String> dataprocServiceAccount;
+        private @Nullable Output<String> description;
+        private @Nullable Output<Boolean> enableStackdriverLogging;
+        private @Nullable Output<Boolean> enableStackdriverMonitoring;
+        private @Nullable Output<Map<String,String>> labels;
+        private @Nullable Output<String> name;
+        private @Nullable Output<InstanceNetworkConfigArgs> networkConfig;
+        private @Nullable Output<Map<String,String>> options;
+        private @Nullable Output<Boolean> privateInstance;
+        private @Nullable Output<String> project;
+        private @Nullable Output<String> region;
+        private Output<String> type;
+        private @Nullable Output<String> version;
 
         public Builder() {
     	      // Empty
@@ -264,133 +264,133 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
     	      this.version = defaults.version;
         }
 
-        public Builder dataprocServiceAccount(@Nullable Input<String> dataprocServiceAccount) {
+        public Builder dataprocServiceAccount(@Nullable Output<String> dataprocServiceAccount) {
             this.dataprocServiceAccount = dataprocServiceAccount;
             return this;
         }
 
         public Builder dataprocServiceAccount(@Nullable String dataprocServiceAccount) {
-            this.dataprocServiceAccount = Input.ofNullable(dataprocServiceAccount);
+            this.dataprocServiceAccount = Output.ofNullable(dataprocServiceAccount);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder enableStackdriverLogging(@Nullable Input<Boolean> enableStackdriverLogging) {
+        public Builder enableStackdriverLogging(@Nullable Output<Boolean> enableStackdriverLogging) {
             this.enableStackdriverLogging = enableStackdriverLogging;
             return this;
         }
 
         public Builder enableStackdriverLogging(@Nullable Boolean enableStackdriverLogging) {
-            this.enableStackdriverLogging = Input.ofNullable(enableStackdriverLogging);
+            this.enableStackdriverLogging = Output.ofNullable(enableStackdriverLogging);
             return this;
         }
 
-        public Builder enableStackdriverMonitoring(@Nullable Input<Boolean> enableStackdriverMonitoring) {
+        public Builder enableStackdriverMonitoring(@Nullable Output<Boolean> enableStackdriverMonitoring) {
             this.enableStackdriverMonitoring = enableStackdriverMonitoring;
             return this;
         }
 
         public Builder enableStackdriverMonitoring(@Nullable Boolean enableStackdriverMonitoring) {
-            this.enableStackdriverMonitoring = Input.ofNullable(enableStackdriverMonitoring);
+            this.enableStackdriverMonitoring = Output.ofNullable(enableStackdriverMonitoring);
             return this;
         }
 
-        public Builder labels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
         public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Input.ofNullable(labels);
+            this.labels = Output.ofNullable(labels);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder networkConfig(@Nullable Input<InstanceNetworkConfigArgs> networkConfig) {
+        public Builder networkConfig(@Nullable Output<InstanceNetworkConfigArgs> networkConfig) {
             this.networkConfig = networkConfig;
             return this;
         }
 
         public Builder networkConfig(@Nullable InstanceNetworkConfigArgs networkConfig) {
-            this.networkConfig = Input.ofNullable(networkConfig);
+            this.networkConfig = Output.ofNullable(networkConfig);
             return this;
         }
 
-        public Builder options(@Nullable Input<Map<String,String>> options) {
+        public Builder options(@Nullable Output<Map<String,String>> options) {
             this.options = options;
             return this;
         }
 
         public Builder options(@Nullable Map<String,String> options) {
-            this.options = Input.ofNullable(options);
+            this.options = Output.ofNullable(options);
             return this;
         }
 
-        public Builder privateInstance(@Nullable Input<Boolean> privateInstance) {
+        public Builder privateInstance(@Nullable Output<Boolean> privateInstance) {
             this.privateInstance = privateInstance;
             return this;
         }
 
         public Builder privateInstance(@Nullable Boolean privateInstance) {
-            this.privateInstance = Input.ofNullable(privateInstance);
+            this.privateInstance = Output.ofNullable(privateInstance);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder region(@Nullable Input<String> region) {
+        public Builder region(@Nullable Output<String> region) {
             this.region = region;
             return this;
         }
 
         public Builder region(@Nullable String region) {
-            this.region = Input.ofNullable(region);
+            this.region = Output.ofNullable(region);
             return this;
         }
 
-        public Builder type(Input<String> type) {
+        public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(String type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
 
-        public Builder version(@Nullable Input<String> version) {
+        public Builder version(@Nullable Output<String> version) {
             this.version = version;
             return this;
         }
 
         public Builder version(@Nullable String version) {
-            this.version = Input.ofNullable(version);
+            this.version = Output.ofNullable(version);
             return this;
         }
         public InstanceArgs build() {

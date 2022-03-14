@@ -6,7 +6,6 @@ package io.pulumi.aws.route53recoverycontrol;
 import io.pulumi.aws.Utilities;
 import io.pulumi.aws.route53recoverycontrol.ControlPanelArgs;
 import io.pulumi.aws.route53recoverycontrol.inputs.ControlPanelState;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -154,14 +153,14 @@ public class ControlPanel extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ControlPanel(String name, ControlPanelArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:route53recoverycontrol/controlPanel:ControlPanel", name, args == null ? ControlPanelArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws:route53recoverycontrol/controlPanel:ControlPanel", name, args == null ? ControlPanelArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private ControlPanel(String name, Input<String> id, @Nullable ControlPanelState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private ControlPanel(String name, Output<String> id, @Nullable ControlPanelState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws:route53recoverycontrol/controlPanel:ControlPanel", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -177,7 +176,7 @@ public class ControlPanel extends io.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static ControlPanel get(String name, Input<String> id, @Nullable ControlPanelState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static ControlPanel get(String name, Output<String> id, @Nullable ControlPanelState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new ControlPanel(name, id, state, options);
     }
 }

@@ -8,7 +8,7 @@ import io.pulumi.azurenative.keyvault.enums.NetworkRuleBypassOptions;
 import io.pulumi.azurenative.keyvault.inputs.IPRuleArgs;
 import io.pulumi.azurenative.keyvault.inputs.VirtualNetworkRuleArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -29,10 +29,10 @@ public final class NetworkRuleSetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="bypass")
-      private final @Nullable Input<Either<String,NetworkRuleBypassOptions>> bypass;
+      private final @Nullable Output<Either<String,NetworkRuleBypassOptions>> bypass;
 
-    public Input<Either<String,NetworkRuleBypassOptions>> getBypass() {
-        return this.bypass == null ? Input.empty() : this.bypass;
+    public Output<Either<String,NetworkRuleBypassOptions>> getBypass() {
+        return this.bypass == null ? Output.empty() : this.bypass;
     }
 
     /**
@@ -40,10 +40,10 @@ public final class NetworkRuleSetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="defaultAction")
-      private final @Nullable Input<Either<String,NetworkRuleAction>> defaultAction;
+      private final @Nullable Output<Either<String,NetworkRuleAction>> defaultAction;
 
-    public Input<Either<String,NetworkRuleAction>> getDefaultAction() {
-        return this.defaultAction == null ? Input.empty() : this.defaultAction;
+    public Output<Either<String,NetworkRuleAction>> getDefaultAction() {
+        return this.defaultAction == null ? Output.empty() : this.defaultAction;
     }
 
     /**
@@ -51,10 +51,10 @@ public final class NetworkRuleSetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ipRules")
-      private final @Nullable Input<List<IPRuleArgs>> ipRules;
+      private final @Nullable Output<List<IPRuleArgs>> ipRules;
 
-    public Input<List<IPRuleArgs>> getIpRules() {
-        return this.ipRules == null ? Input.empty() : this.ipRules;
+    public Output<List<IPRuleArgs>> getIpRules() {
+        return this.ipRules == null ? Output.empty() : this.ipRules;
     }
 
     /**
@@ -62,17 +62,17 @@ public final class NetworkRuleSetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="virtualNetworkRules")
-      private final @Nullable Input<List<VirtualNetworkRuleArgs>> virtualNetworkRules;
+      private final @Nullable Output<List<VirtualNetworkRuleArgs>> virtualNetworkRules;
 
-    public Input<List<VirtualNetworkRuleArgs>> getVirtualNetworkRules() {
-        return this.virtualNetworkRules == null ? Input.empty() : this.virtualNetworkRules;
+    public Output<List<VirtualNetworkRuleArgs>> getVirtualNetworkRules() {
+        return this.virtualNetworkRules == null ? Output.empty() : this.virtualNetworkRules;
     }
 
     public NetworkRuleSetArgs(
-        @Nullable Input<Either<String,NetworkRuleBypassOptions>> bypass,
-        @Nullable Input<Either<String,NetworkRuleAction>> defaultAction,
-        @Nullable Input<List<IPRuleArgs>> ipRules,
-        @Nullable Input<List<VirtualNetworkRuleArgs>> virtualNetworkRules) {
+        @Nullable Output<Either<String,NetworkRuleBypassOptions>> bypass,
+        @Nullable Output<Either<String,NetworkRuleAction>> defaultAction,
+        @Nullable Output<List<IPRuleArgs>> ipRules,
+        @Nullable Output<List<VirtualNetworkRuleArgs>> virtualNetworkRules) {
         this.bypass = bypass;
         this.defaultAction = defaultAction;
         this.ipRules = ipRules;
@@ -80,10 +80,10 @@ public final class NetworkRuleSetArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private NetworkRuleSetArgs() {
-        this.bypass = Input.empty();
-        this.defaultAction = Input.empty();
-        this.ipRules = Input.empty();
-        this.virtualNetworkRules = Input.empty();
+        this.bypass = Output.empty();
+        this.defaultAction = Output.empty();
+        this.ipRules = Output.empty();
+        this.virtualNetworkRules = Output.empty();
     }
 
     public static Builder builder() {
@@ -95,10 +95,10 @@ public final class NetworkRuleSetArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Either<String,NetworkRuleBypassOptions>> bypass;
-        private @Nullable Input<Either<String,NetworkRuleAction>> defaultAction;
-        private @Nullable Input<List<IPRuleArgs>> ipRules;
-        private @Nullable Input<List<VirtualNetworkRuleArgs>> virtualNetworkRules;
+        private @Nullable Output<Either<String,NetworkRuleBypassOptions>> bypass;
+        private @Nullable Output<Either<String,NetworkRuleAction>> defaultAction;
+        private @Nullable Output<List<IPRuleArgs>> ipRules;
+        private @Nullable Output<List<VirtualNetworkRuleArgs>> virtualNetworkRules;
 
         public Builder() {
     	      // Empty
@@ -112,43 +112,43 @@ public final class NetworkRuleSetArgs extends io.pulumi.resources.ResourceArgs {
     	      this.virtualNetworkRules = defaults.virtualNetworkRules;
         }
 
-        public Builder bypass(@Nullable Input<Either<String,NetworkRuleBypassOptions>> bypass) {
+        public Builder bypass(@Nullable Output<Either<String,NetworkRuleBypassOptions>> bypass) {
             this.bypass = bypass;
             return this;
         }
 
         public Builder bypass(@Nullable Either<String,NetworkRuleBypassOptions> bypass) {
-            this.bypass = Input.ofNullable(bypass);
+            this.bypass = Output.ofNullable(bypass);
             return this;
         }
 
-        public Builder defaultAction(@Nullable Input<Either<String,NetworkRuleAction>> defaultAction) {
+        public Builder defaultAction(@Nullable Output<Either<String,NetworkRuleAction>> defaultAction) {
             this.defaultAction = defaultAction;
             return this;
         }
 
         public Builder defaultAction(@Nullable Either<String,NetworkRuleAction> defaultAction) {
-            this.defaultAction = Input.ofNullable(defaultAction);
+            this.defaultAction = Output.ofNullable(defaultAction);
             return this;
         }
 
-        public Builder ipRules(@Nullable Input<List<IPRuleArgs>> ipRules) {
+        public Builder ipRules(@Nullable Output<List<IPRuleArgs>> ipRules) {
             this.ipRules = ipRules;
             return this;
         }
 
         public Builder ipRules(@Nullable List<IPRuleArgs> ipRules) {
-            this.ipRules = Input.ofNullable(ipRules);
+            this.ipRules = Output.ofNullable(ipRules);
             return this;
         }
 
-        public Builder virtualNetworkRules(@Nullable Input<List<VirtualNetworkRuleArgs>> virtualNetworkRules) {
+        public Builder virtualNetworkRules(@Nullable Output<List<VirtualNetworkRuleArgs>> virtualNetworkRules) {
             this.virtualNetworkRules = virtualNetworkRules;
             return this;
         }
 
         public Builder virtualNetworkRules(@Nullable List<VirtualNetworkRuleArgs> virtualNetworkRules) {
-            this.virtualNetworkRules = Input.ofNullable(virtualNetworkRules);
+            this.virtualNetworkRules = Output.ofNullable(virtualNetworkRules);
             return this;
         }
         public NetworkRuleSetArgs build() {

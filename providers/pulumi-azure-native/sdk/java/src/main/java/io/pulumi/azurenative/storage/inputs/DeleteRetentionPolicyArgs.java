@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.storage.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -24,10 +24,10 @@ public final class DeleteRetentionPolicyArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="days")
-      private final @Nullable Input<Integer> days;
+      private final @Nullable Output<Integer> days;
 
-    public Input<Integer> getDays() {
-        return this.days == null ? Input.empty() : this.days;
+    public Output<Integer> getDays() {
+        return this.days == null ? Output.empty() : this.days;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class DeleteRetentionPolicyArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="enabled")
-      private final @Nullable Input<Boolean> enabled;
+      private final @Nullable Output<Boolean> enabled;
 
-    public Input<Boolean> getEnabled() {
-        return this.enabled == null ? Input.empty() : this.enabled;
+    public Output<Boolean> getEnabled() {
+        return this.enabled == null ? Output.empty() : this.enabled;
     }
 
     public DeleteRetentionPolicyArgs(
-        @Nullable Input<Integer> days,
-        @Nullable Input<Boolean> enabled) {
+        @Nullable Output<Integer> days,
+        @Nullable Output<Boolean> enabled) {
         this.days = days;
         this.enabled = enabled;
     }
 
     private DeleteRetentionPolicyArgs() {
-        this.days = Input.empty();
-        this.enabled = Input.empty();
+        this.days = Output.empty();
+        this.enabled = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class DeleteRetentionPolicyArgs extends io.pulumi.resources.Resourc
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> days;
-        private @Nullable Input<Boolean> enabled;
+        private @Nullable Output<Integer> days;
+        private @Nullable Output<Boolean> enabled;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class DeleteRetentionPolicyArgs extends io.pulumi.resources.Resourc
     	      this.enabled = defaults.enabled;
         }
 
-        public Builder days(@Nullable Input<Integer> days) {
+        public Builder days(@Nullable Output<Integer> days) {
             this.days = days;
             return this;
         }
 
         public Builder days(@Nullable Integer days) {
-            this.days = Input.ofNullable(days);
+            this.days = Output.ofNullable(days);
             return this;
         }
 
-        public Builder enabled(@Nullable Input<Boolean> enabled) {
+        public Builder enabled(@Nullable Output<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
 
         public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Input.ofNullable(enabled);
+            this.enabled = Output.ofNullable(enabled);
             return this;
         }
         public DeleteRetentionPolicyArgs build() {

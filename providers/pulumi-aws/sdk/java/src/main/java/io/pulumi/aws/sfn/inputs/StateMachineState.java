@@ -5,7 +5,7 @@ package io.pulumi.aws.sfn.inputs;
 
 import io.pulumi.aws.sfn.inputs.StateMachineLoggingConfigurationGetArgs;
 import io.pulumi.aws.sfn.inputs.StateMachineTracingConfigurationGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -22,10 +22,10 @@ public final class StateMachineState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arn")
-      private final @Nullable Input<String> arn;
+      private final @Nullable Output<String> arn;
 
-    public Input<String> getArn() {
-        return this.arn == null ? Input.empty() : this.arn;
+    public Output<String> getArn() {
+        return this.arn == null ? Output.empty() : this.arn;
     }
 
     /**
@@ -33,10 +33,10 @@ public final class StateMachineState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="creationDate")
-      private final @Nullable Input<String> creationDate;
+      private final @Nullable Output<String> creationDate;
 
-    public Input<String> getCreationDate() {
-        return this.creationDate == null ? Input.empty() : this.creationDate;
+    public Output<String> getCreationDate() {
+        return this.creationDate == null ? Output.empty() : this.creationDate;
     }
 
     /**
@@ -44,10 +44,10 @@ public final class StateMachineState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="definition")
-      private final @Nullable Input<String> definition;
+      private final @Nullable Output<String> definition;
 
-    public Input<String> getDefinition() {
-        return this.definition == null ? Input.empty() : this.definition;
+    public Output<String> getDefinition() {
+        return this.definition == null ? Output.empty() : this.definition;
     }
 
     /**
@@ -55,10 +55,10 @@ public final class StateMachineState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="loggingConfiguration")
-      private final @Nullable Input<StateMachineLoggingConfigurationGetArgs> loggingConfiguration;
+      private final @Nullable Output<StateMachineLoggingConfigurationGetArgs> loggingConfiguration;
 
-    public Input<StateMachineLoggingConfigurationGetArgs> getLoggingConfiguration() {
-        return this.loggingConfiguration == null ? Input.empty() : this.loggingConfiguration;
+    public Output<StateMachineLoggingConfigurationGetArgs> getLoggingConfiguration() {
+        return this.loggingConfiguration == null ? Output.empty() : this.loggingConfiguration;
     }
 
     /**
@@ -66,10 +66,10 @@ public final class StateMachineState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -77,10 +77,10 @@ public final class StateMachineState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="roleArn")
-      private final @Nullable Input<String> roleArn;
+      private final @Nullable Output<String> roleArn;
 
-    public Input<String> getRoleArn() {
-        return this.roleArn == null ? Input.empty() : this.roleArn;
+    public Output<String> getRoleArn() {
+        return this.roleArn == null ? Output.empty() : this.roleArn;
     }
 
     /**
@@ -88,10 +88,10 @@ public final class StateMachineState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="status")
-      private final @Nullable Input<String> status;
+      private final @Nullable Output<String> status;
 
-    public Input<String> getStatus() {
-        return this.status == null ? Input.empty() : this.status;
+    public Output<String> getStatus() {
+        return this.status == null ? Output.empty() : this.status;
     }
 
     /**
@@ -99,10 +99,10 @@ public final class StateMachineState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -110,10 +110,10 @@ public final class StateMachineState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tagsAll")
-      private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Input<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Input.empty() : this.tagsAll;
+    public Output<Map<String,String>> getTagsAll() {
+        return this.tagsAll == null ? Output.empty() : this.tagsAll;
     }
 
     /**
@@ -121,10 +121,10 @@ public final class StateMachineState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tracingConfiguration")
-      private final @Nullable Input<StateMachineTracingConfigurationGetArgs> tracingConfiguration;
+      private final @Nullable Output<StateMachineTracingConfigurationGetArgs> tracingConfiguration;
 
-    public Input<StateMachineTracingConfigurationGetArgs> getTracingConfiguration() {
-        return this.tracingConfiguration == null ? Input.empty() : this.tracingConfiguration;
+    public Output<StateMachineTracingConfigurationGetArgs> getTracingConfiguration() {
+        return this.tracingConfiguration == null ? Output.empty() : this.tracingConfiguration;
     }
 
     /**
@@ -132,24 +132,24 @@ public final class StateMachineState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type")
-      private final @Nullable Input<String> type;
+      private final @Nullable Output<String> type;
 
-    public Input<String> getType() {
-        return this.type == null ? Input.empty() : this.type;
+    public Output<String> getType() {
+        return this.type == null ? Output.empty() : this.type;
     }
 
     public StateMachineState(
-        @Nullable Input<String> arn,
-        @Nullable Input<String> creationDate,
-        @Nullable Input<String> definition,
-        @Nullable Input<StateMachineLoggingConfigurationGetArgs> loggingConfiguration,
-        @Nullable Input<String> name,
-        @Nullable Input<String> roleArn,
-        @Nullable Input<String> status,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<Map<String,String>> tagsAll,
-        @Nullable Input<StateMachineTracingConfigurationGetArgs> tracingConfiguration,
-        @Nullable Input<String> type) {
+        @Nullable Output<String> arn,
+        @Nullable Output<String> creationDate,
+        @Nullable Output<String> definition,
+        @Nullable Output<StateMachineLoggingConfigurationGetArgs> loggingConfiguration,
+        @Nullable Output<String> name,
+        @Nullable Output<String> roleArn,
+        @Nullable Output<String> status,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<Map<String,String>> tagsAll,
+        @Nullable Output<StateMachineTracingConfigurationGetArgs> tracingConfiguration,
+        @Nullable Output<String> type) {
         this.arn = arn;
         this.creationDate = creationDate;
         this.definition = definition;
@@ -164,17 +164,17 @@ public final class StateMachineState extends io.pulumi.resources.ResourceArgs {
     }
 
     private StateMachineState() {
-        this.arn = Input.empty();
-        this.creationDate = Input.empty();
-        this.definition = Input.empty();
-        this.loggingConfiguration = Input.empty();
-        this.name = Input.empty();
-        this.roleArn = Input.empty();
-        this.status = Input.empty();
-        this.tags = Input.empty();
-        this.tagsAll = Input.empty();
-        this.tracingConfiguration = Input.empty();
-        this.type = Input.empty();
+        this.arn = Output.empty();
+        this.creationDate = Output.empty();
+        this.definition = Output.empty();
+        this.loggingConfiguration = Output.empty();
+        this.name = Output.empty();
+        this.roleArn = Output.empty();
+        this.status = Output.empty();
+        this.tags = Output.empty();
+        this.tagsAll = Output.empty();
+        this.tracingConfiguration = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -186,17 +186,17 @@ public final class StateMachineState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> arn;
-        private @Nullable Input<String> creationDate;
-        private @Nullable Input<String> definition;
-        private @Nullable Input<StateMachineLoggingConfigurationGetArgs> loggingConfiguration;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> roleArn;
-        private @Nullable Input<String> status;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<Map<String,String>> tagsAll;
-        private @Nullable Input<StateMachineTracingConfigurationGetArgs> tracingConfiguration;
-        private @Nullable Input<String> type;
+        private @Nullable Output<String> arn;
+        private @Nullable Output<String> creationDate;
+        private @Nullable Output<String> definition;
+        private @Nullable Output<StateMachineLoggingConfigurationGetArgs> loggingConfiguration;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> roleArn;
+        private @Nullable Output<String> status;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<Map<String,String>> tagsAll;
+        private @Nullable Output<StateMachineTracingConfigurationGetArgs> tracingConfiguration;
+        private @Nullable Output<String> type;
 
         public Builder() {
     	      // Empty
@@ -217,113 +217,113 @@ public final class StateMachineState extends io.pulumi.resources.ResourceArgs {
     	      this.type = defaults.type;
         }
 
-        public Builder arn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
 
         public Builder arn(@Nullable String arn) {
-            this.arn = Input.ofNullable(arn);
+            this.arn = Output.ofNullable(arn);
             return this;
         }
 
-        public Builder creationDate(@Nullable Input<String> creationDate) {
+        public Builder creationDate(@Nullable Output<String> creationDate) {
             this.creationDate = creationDate;
             return this;
         }
 
         public Builder creationDate(@Nullable String creationDate) {
-            this.creationDate = Input.ofNullable(creationDate);
+            this.creationDate = Output.ofNullable(creationDate);
             return this;
         }
 
-        public Builder definition(@Nullable Input<String> definition) {
+        public Builder definition(@Nullable Output<String> definition) {
             this.definition = definition;
             return this;
         }
 
         public Builder definition(@Nullable String definition) {
-            this.definition = Input.ofNullable(definition);
+            this.definition = Output.ofNullable(definition);
             return this;
         }
 
-        public Builder loggingConfiguration(@Nullable Input<StateMachineLoggingConfigurationGetArgs> loggingConfiguration) {
+        public Builder loggingConfiguration(@Nullable Output<StateMachineLoggingConfigurationGetArgs> loggingConfiguration) {
             this.loggingConfiguration = loggingConfiguration;
             return this;
         }
 
         public Builder loggingConfiguration(@Nullable StateMachineLoggingConfigurationGetArgs loggingConfiguration) {
-            this.loggingConfiguration = Input.ofNullable(loggingConfiguration);
+            this.loggingConfiguration = Output.ofNullable(loggingConfiguration);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder roleArn(@Nullable Input<String> roleArn) {
+        public Builder roleArn(@Nullable Output<String> roleArn) {
             this.roleArn = roleArn;
             return this;
         }
 
         public Builder roleArn(@Nullable String roleArn) {
-            this.roleArn = Input.ofNullable(roleArn);
+            this.roleArn = Output.ofNullable(roleArn);
             return this;
         }
 
-        public Builder status(@Nullable Input<String> status) {
+        public Builder status(@Nullable Output<String> status) {
             this.status = status;
             return this;
         }
 
         public Builder status(@Nullable String status) {
-            this.status = Input.ofNullable(status);
+            this.status = Output.ofNullable(status);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Input.ofNullable(tagsAll);
+            this.tagsAll = Output.ofNullable(tagsAll);
             return this;
         }
 
-        public Builder tracingConfiguration(@Nullable Input<StateMachineTracingConfigurationGetArgs> tracingConfiguration) {
+        public Builder tracingConfiguration(@Nullable Output<StateMachineTracingConfigurationGetArgs> tracingConfiguration) {
             this.tracingConfiguration = tracingConfiguration;
             return this;
         }
 
         public Builder tracingConfiguration(@Nullable StateMachineTracingConfigurationGetArgs tracingConfiguration) {
-            this.tracingConfiguration = Input.ofNullable(tracingConfiguration);
+            this.tracingConfiguration = Output.ofNullable(tracingConfiguration);
             return this;
         }
 
-        public Builder type(@Nullable Input<String> type) {
+        public Builder type(@Nullable Output<String> type) {
             this.type = type;
             return this;
         }
 
         public Builder type(@Nullable String type) {
-            this.type = Input.ofNullable(type);
+            this.type = Output.ofNullable(type);
             return this;
         }
         public StateMachineState build() {

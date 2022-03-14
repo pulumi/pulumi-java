@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.helm.sh_v3.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class RepositoryOptsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="caFile")
-      private final @Nullable Input<String> caFile;
+      private final @Nullable Output<String> caFile;
 
-    public Input<String> getCaFile() {
-        return this.caFile == null ? Input.empty() : this.caFile;
+    public Output<String> getCaFile() {
+        return this.caFile == null ? Output.empty() : this.caFile;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class RepositoryOptsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="certFile")
-      private final @Nullable Input<String> certFile;
+      private final @Nullable Output<String> certFile;
 
-    public Input<String> getCertFile() {
-        return this.certFile == null ? Input.empty() : this.certFile;
+    public Output<String> getCertFile() {
+        return this.certFile == null ? Output.empty() : this.certFile;
     }
 
     /**
@@ -45,10 +45,10 @@ public final class RepositoryOptsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="keyFile")
-      private final @Nullable Input<String> keyFile;
+      private final @Nullable Output<String> keyFile;
 
-    public Input<String> getKeyFile() {
-        return this.keyFile == null ? Input.empty() : this.keyFile;
+    public Output<String> getKeyFile() {
+        return this.keyFile == null ? Output.empty() : this.keyFile;
     }
 
     /**
@@ -56,10 +56,10 @@ public final class RepositoryOptsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="password")
-      private final @Nullable Input<String> password;
+      private final @Nullable Output<String> password;
 
-    public Input<String> getPassword() {
-        return this.password == null ? Input.empty() : this.password;
+    public Output<String> getPassword() {
+        return this.password == null ? Output.empty() : this.password;
     }
 
     /**
@@ -67,10 +67,10 @@ public final class RepositoryOptsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="repo")
-      private final @Nullable Input<String> repo;
+      private final @Nullable Output<String> repo;
 
-    public Input<String> getRepo() {
-        return this.repo == null ? Input.empty() : this.repo;
+    public Output<String> getRepo() {
+        return this.repo == null ? Output.empty() : this.repo;
     }
 
     /**
@@ -78,19 +78,19 @@ public final class RepositoryOptsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="username")
-      private final @Nullable Input<String> username;
+      private final @Nullable Output<String> username;
 
-    public Input<String> getUsername() {
-        return this.username == null ? Input.empty() : this.username;
+    public Output<String> getUsername() {
+        return this.username == null ? Output.empty() : this.username;
     }
 
     public RepositoryOptsArgs(
-        @Nullable Input<String> caFile,
-        @Nullable Input<String> certFile,
-        @Nullable Input<String> keyFile,
-        @Nullable Input<String> password,
-        @Nullable Input<String> repo,
-        @Nullable Input<String> username) {
+        @Nullable Output<String> caFile,
+        @Nullable Output<String> certFile,
+        @Nullable Output<String> keyFile,
+        @Nullable Output<String> password,
+        @Nullable Output<String> repo,
+        @Nullable Output<String> username) {
         this.caFile = caFile;
         this.certFile = certFile;
         this.keyFile = keyFile;
@@ -100,12 +100,12 @@ public final class RepositoryOptsArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private RepositoryOptsArgs() {
-        this.caFile = Input.empty();
-        this.certFile = Input.empty();
-        this.keyFile = Input.empty();
-        this.password = Input.empty();
-        this.repo = Input.empty();
-        this.username = Input.empty();
+        this.caFile = Output.empty();
+        this.certFile = Output.empty();
+        this.keyFile = Output.empty();
+        this.password = Output.empty();
+        this.repo = Output.empty();
+        this.username = Output.empty();
     }
 
     public static Builder builder() {
@@ -117,12 +117,12 @@ public final class RepositoryOptsArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> caFile;
-        private @Nullable Input<String> certFile;
-        private @Nullable Input<String> keyFile;
-        private @Nullable Input<String> password;
-        private @Nullable Input<String> repo;
-        private @Nullable Input<String> username;
+        private @Nullable Output<String> caFile;
+        private @Nullable Output<String> certFile;
+        private @Nullable Output<String> keyFile;
+        private @Nullable Output<String> password;
+        private @Nullable Output<String> repo;
+        private @Nullable Output<String> username;
 
         public Builder() {
     	      // Empty
@@ -138,63 +138,63 @@ public final class RepositoryOptsArgs extends io.pulumi.resources.ResourceArgs {
     	      this.username = defaults.username;
         }
 
-        public Builder caFile(@Nullable Input<String> caFile) {
+        public Builder caFile(@Nullable Output<String> caFile) {
             this.caFile = caFile;
             return this;
         }
 
         public Builder caFile(@Nullable String caFile) {
-            this.caFile = Input.ofNullable(caFile);
+            this.caFile = Output.ofNullable(caFile);
             return this;
         }
 
-        public Builder certFile(@Nullable Input<String> certFile) {
+        public Builder certFile(@Nullable Output<String> certFile) {
             this.certFile = certFile;
             return this;
         }
 
         public Builder certFile(@Nullable String certFile) {
-            this.certFile = Input.ofNullable(certFile);
+            this.certFile = Output.ofNullable(certFile);
             return this;
         }
 
-        public Builder keyFile(@Nullable Input<String> keyFile) {
+        public Builder keyFile(@Nullable Output<String> keyFile) {
             this.keyFile = keyFile;
             return this;
         }
 
         public Builder keyFile(@Nullable String keyFile) {
-            this.keyFile = Input.ofNullable(keyFile);
+            this.keyFile = Output.ofNullable(keyFile);
             return this;
         }
 
-        public Builder password(@Nullable Input<String> password) {
-            this.password = Input.ofNullable(password).asSecret();
+        public Builder password(@Nullable Output<String> password) {
+            this.password = Output.ofNullable(password).asSecret();
             return this;
         }
 
         public Builder password(@Nullable String password) {
-            this.password = Input.ofNullable(password).asSecret();
+            this.password = Output.ofNullable(password).asSecret();
             return this;
         }
 
-        public Builder repo(@Nullable Input<String> repo) {
+        public Builder repo(@Nullable Output<String> repo) {
             this.repo = repo;
             return this;
         }
 
         public Builder repo(@Nullable String repo) {
-            this.repo = Input.ofNullable(repo);
+            this.repo = Output.ofNullable(repo);
             return this;
         }
 
-        public Builder username(@Nullable Input<String> username) {
+        public Builder username(@Nullable Output<String> username) {
             this.username = username;
             return this;
         }
 
         public Builder username(@Nullable String username) {
-            this.username = Input.ofNullable(username);
+            this.username = Output.ofNullable(username);
             return this;
         }
         public RepositoryOptsArgs build() {

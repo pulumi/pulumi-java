@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.servicelinker.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,9 +23,9 @@ public final class ServicePrincipalCertificateAuthInfoArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="authType", required=true)
-      private final Input<String> authType;
+      private final Output<String> authType;
 
-    public Input<String> getAuthType() {
+    public Output<String> getAuthType() {
         return this.authType;
     }
 
@@ -34,9 +34,9 @@ public final class ServicePrincipalCertificateAuthInfoArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="certificate", required=true)
-      private final Input<String> certificate;
+      private final Output<String> certificate;
 
-    public Input<String> getCertificate() {
+    public Output<String> getCertificate() {
         return this.certificate;
     }
 
@@ -45,9 +45,9 @@ public final class ServicePrincipalCertificateAuthInfoArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="clientId", required=true)
-      private final Input<String> clientId;
+      private final Output<String> clientId;
 
-    public Input<String> getClientId() {
+    public Output<String> getClientId() {
         return this.clientId;
     }
 
@@ -56,17 +56,17 @@ public final class ServicePrincipalCertificateAuthInfoArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="principalId", required=true)
-      private final Input<String> principalId;
+      private final Output<String> principalId;
 
-    public Input<String> getPrincipalId() {
+    public Output<String> getPrincipalId() {
         return this.principalId;
     }
 
     public ServicePrincipalCertificateAuthInfoArgs(
-        Input<String> authType,
-        Input<String> certificate,
-        Input<String> clientId,
-        Input<String> principalId) {
+        Output<String> authType,
+        Output<String> certificate,
+        Output<String> clientId,
+        Output<String> principalId) {
         this.authType = Objects.requireNonNull(authType, "expected parameter 'authType' to be non-null");
         this.certificate = Objects.requireNonNull(certificate, "expected parameter 'certificate' to be non-null");
         this.clientId = Objects.requireNonNull(clientId, "expected parameter 'clientId' to be non-null");
@@ -74,10 +74,10 @@ public final class ServicePrincipalCertificateAuthInfoArgs extends io.pulumi.res
     }
 
     private ServicePrincipalCertificateAuthInfoArgs() {
-        this.authType = Input.empty();
-        this.certificate = Input.empty();
-        this.clientId = Input.empty();
-        this.principalId = Input.empty();
+        this.authType = Output.empty();
+        this.certificate = Output.empty();
+        this.clientId = Output.empty();
+        this.principalId = Output.empty();
     }
 
     public static Builder builder() {
@@ -89,10 +89,10 @@ public final class ServicePrincipalCertificateAuthInfoArgs extends io.pulumi.res
     }
 
     public static final class Builder {
-        private Input<String> authType;
-        private Input<String> certificate;
-        private Input<String> clientId;
-        private Input<String> principalId;
+        private Output<String> authType;
+        private Output<String> certificate;
+        private Output<String> clientId;
+        private Output<String> principalId;
 
         public Builder() {
     	      // Empty
@@ -106,43 +106,43 @@ public final class ServicePrincipalCertificateAuthInfoArgs extends io.pulumi.res
     	      this.principalId = defaults.principalId;
         }
 
-        public Builder authType(Input<String> authType) {
+        public Builder authType(Output<String> authType) {
             this.authType = Objects.requireNonNull(authType);
             return this;
         }
 
         public Builder authType(String authType) {
-            this.authType = Input.of(Objects.requireNonNull(authType));
+            this.authType = Output.of(Objects.requireNonNull(authType));
             return this;
         }
 
-        public Builder certificate(Input<String> certificate) {
+        public Builder certificate(Output<String> certificate) {
             this.certificate = Objects.requireNonNull(certificate);
             return this;
         }
 
         public Builder certificate(String certificate) {
-            this.certificate = Input.of(Objects.requireNonNull(certificate));
+            this.certificate = Output.of(Objects.requireNonNull(certificate));
             return this;
         }
 
-        public Builder clientId(Input<String> clientId) {
+        public Builder clientId(Output<String> clientId) {
             this.clientId = Objects.requireNonNull(clientId);
             return this;
         }
 
         public Builder clientId(String clientId) {
-            this.clientId = Input.of(Objects.requireNonNull(clientId));
+            this.clientId = Output.of(Objects.requireNonNull(clientId));
             return this;
         }
 
-        public Builder principalId(Input<String> principalId) {
+        public Builder principalId(Output<String> principalId) {
             this.principalId = Objects.requireNonNull(principalId);
             return this;
         }
 
         public Builder principalId(String principalId) {
-            this.principalId = Input.of(Objects.requireNonNull(principalId));
+            this.principalId = Output.of(Objects.requireNonNull(principalId));
             return this;
         }
         public ServicePrincipalCertificateAuthInfoArgs build() {

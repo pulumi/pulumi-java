@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.lambda.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class FunctionDeadLetterConfigArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="targetArn")
-      private final @Nullable Input<String> targetArn;
+      private final @Nullable Output<String> targetArn;
 
-    public Input<String> getTargetArn() {
-        return this.targetArn == null ? Input.empty() : this.targetArn;
+    public Output<String> getTargetArn() {
+        return this.targetArn == null ? Output.empty() : this.targetArn;
     }
 
-    public FunctionDeadLetterConfigArgs(@Nullable Input<String> targetArn) {
+    public FunctionDeadLetterConfigArgs(@Nullable Output<String> targetArn) {
         this.targetArn = targetArn;
     }
 
     private FunctionDeadLetterConfigArgs() {
-        this.targetArn = Input.empty();
+        this.targetArn = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class FunctionDeadLetterConfigArgs extends io.pulumi.resources.Reso
     }
 
     public static final class Builder {
-        private @Nullable Input<String> targetArn;
+        private @Nullable Output<String> targetArn;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class FunctionDeadLetterConfigArgs extends io.pulumi.resources.Reso
     	      this.targetArn = defaults.targetArn;
         }
 
-        public Builder targetArn(@Nullable Input<String> targetArn) {
+        public Builder targetArn(@Nullable Output<String> targetArn) {
             this.targetArn = targetArn;
             return this;
         }
 
         public Builder targetArn(@Nullable String targetArn) {
-            this.targetArn = Input.ofNullable(targetArn);
+            this.targetArn = Output.ofNullable(targetArn);
             return this;
         }
         public FunctionDeadLetterConfigArgs build() {

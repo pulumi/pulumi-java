@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.devices.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -23,9 +23,9 @@ public final class EnrichmentPropertiesArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="endpointNames", required=true)
-      private final Input<List<String>> endpointNames;
+      private final Output<List<String>> endpointNames;
 
-    public Input<List<String>> getEndpointNames() {
+    public Output<List<String>> getEndpointNames() {
         return this.endpointNames;
     }
 
@@ -34,9 +34,9 @@ public final class EnrichmentPropertiesArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="key", required=true)
-      private final Input<String> key;
+      private final Output<String> key;
 
-    public Input<String> getKey() {
+    public Output<String> getKey() {
         return this.key;
     }
 
@@ -45,25 +45,25 @@ public final class EnrichmentPropertiesArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="value", required=true)
-      private final Input<String> value;
+      private final Output<String> value;
 
-    public Input<String> getValue() {
+    public Output<String> getValue() {
         return this.value;
     }
 
     public EnrichmentPropertiesArgs(
-        Input<List<String>> endpointNames,
-        Input<String> key,
-        Input<String> value) {
+        Output<List<String>> endpointNames,
+        Output<String> key,
+        Output<String> value) {
         this.endpointNames = Objects.requireNonNull(endpointNames, "expected parameter 'endpointNames' to be non-null");
         this.key = Objects.requireNonNull(key, "expected parameter 'key' to be non-null");
         this.value = Objects.requireNonNull(value, "expected parameter 'value' to be non-null");
     }
 
     private EnrichmentPropertiesArgs() {
-        this.endpointNames = Input.empty();
-        this.key = Input.empty();
-        this.value = Input.empty();
+        this.endpointNames = Output.empty();
+        this.key = Output.empty();
+        this.value = Output.empty();
     }
 
     public static Builder builder() {
@@ -75,9 +75,9 @@ public final class EnrichmentPropertiesArgs extends io.pulumi.resources.Resource
     }
 
     public static final class Builder {
-        private Input<List<String>> endpointNames;
-        private Input<String> key;
-        private Input<String> value;
+        private Output<List<String>> endpointNames;
+        private Output<String> key;
+        private Output<String> value;
 
         public Builder() {
     	      // Empty
@@ -90,33 +90,33 @@ public final class EnrichmentPropertiesArgs extends io.pulumi.resources.Resource
     	      this.value = defaults.value;
         }
 
-        public Builder endpointNames(Input<List<String>> endpointNames) {
+        public Builder endpointNames(Output<List<String>> endpointNames) {
             this.endpointNames = Objects.requireNonNull(endpointNames);
             return this;
         }
 
         public Builder endpointNames(List<String> endpointNames) {
-            this.endpointNames = Input.of(Objects.requireNonNull(endpointNames));
+            this.endpointNames = Output.of(Objects.requireNonNull(endpointNames));
             return this;
         }
 
-        public Builder key(Input<String> key) {
+        public Builder key(Output<String> key) {
             this.key = Objects.requireNonNull(key);
             return this;
         }
 
         public Builder key(String key) {
-            this.key = Input.of(Objects.requireNonNull(key));
+            this.key = Output.of(Objects.requireNonNull(key));
             return this;
         }
 
-        public Builder value(Input<String> value) {
+        public Builder value(Output<String> value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }
 
         public Builder value(String value) {
-            this.value = Input.of(Objects.requireNonNull(value));
+            this.value = Output.of(Objects.requireNonNull(value));
             return this;
         }
         public EnrichmentPropertiesArgs build() {

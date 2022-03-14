@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -20,9 +20,9 @@ public final class ProjectMetadataArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="metadata", required=true)
-      private final Input<Map<String,String>> metadata;
+      private final Output<Map<String,String>> metadata;
 
-    public Input<Map<String,String>> getMetadata() {
+    public Output<Map<String,String>> getMetadata() {
         return this.metadata;
     }
 
@@ -32,22 +32,22 @@ public final class ProjectMetadataArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     public ProjectMetadataArgs(
-        Input<Map<String,String>> metadata,
-        @Nullable Input<String> project) {
+        Output<Map<String,String>> metadata,
+        @Nullable Output<String> project) {
         this.metadata = Objects.requireNonNull(metadata, "expected parameter 'metadata' to be non-null");
         this.project = project;
     }
 
     private ProjectMetadataArgs() {
-        this.metadata = Input.empty();
-        this.project = Input.empty();
+        this.metadata = Output.empty();
+        this.project = Output.empty();
     }
 
     public static Builder builder() {
@@ -59,8 +59,8 @@ public final class ProjectMetadataArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private Input<Map<String,String>> metadata;
-        private @Nullable Input<String> project;
+        private Output<Map<String,String>> metadata;
+        private @Nullable Output<String> project;
 
         public Builder() {
     	      // Empty
@@ -72,23 +72,23 @@ public final class ProjectMetadataArgs extends io.pulumi.resources.ResourceArgs 
     	      this.project = defaults.project;
         }
 
-        public Builder metadata(Input<Map<String,String>> metadata) {
+        public Builder metadata(Output<Map<String,String>> metadata) {
             this.metadata = Objects.requireNonNull(metadata);
             return this;
         }
 
         public Builder metadata(Map<String,String> metadata) {
-            this.metadata = Input.of(Objects.requireNonNull(metadata));
+            this.metadata = Output.of(Objects.requireNonNull(metadata));
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
         public ProjectMetadataArgs build() {

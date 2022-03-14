@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dataproc_v1beta2.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class AutoscalingConfigArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="policyUri")
-      private final @Nullable Input<String> policyUri;
+      private final @Nullable Output<String> policyUri;
 
-    public Input<String> getPolicyUri() {
-        return this.policyUri == null ? Input.empty() : this.policyUri;
+    public Output<String> getPolicyUri() {
+        return this.policyUri == null ? Output.empty() : this.policyUri;
     }
 
-    public AutoscalingConfigArgs(@Nullable Input<String> policyUri) {
+    public AutoscalingConfigArgs(@Nullable Output<String> policyUri) {
         this.policyUri = policyUri;
     }
 
     private AutoscalingConfigArgs() {
-        this.policyUri = Input.empty();
+        this.policyUri = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class AutoscalingConfigArgs extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private @Nullable Input<String> policyUri;
+        private @Nullable Output<String> policyUri;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class AutoscalingConfigArgs extends io.pulumi.resources.ResourceArg
     	      this.policyUri = defaults.policyUri;
         }
 
-        public Builder policyUri(@Nullable Input<String> policyUri) {
+        public Builder policyUri(@Nullable Output<String> policyUri) {
             this.policyUri = policyUri;
             return this;
         }
 
         public Builder policyUri(@Nullable String policyUri) {
-            this.policyUri = Input.ofNullable(policyUri);
+            this.policyUri = Output.ofNullable(policyUri);
             return this;
         }
         public AutoscalingConfigArgs build() {

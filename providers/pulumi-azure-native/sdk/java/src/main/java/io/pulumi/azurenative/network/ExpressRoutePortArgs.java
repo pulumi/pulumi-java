@@ -7,7 +7,7 @@ import io.pulumi.azurenative.network.enums.ExpressRoutePortsEncapsulation;
 import io.pulumi.azurenative.network.inputs.ExpressRouteLinkArgs;
 import io.pulumi.azurenative.network.inputs.ManagedServiceIdentityArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -26,10 +26,10 @@ public final class ExpressRoutePortArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="bandwidthInGbps")
-      private final @Nullable Input<Integer> bandwidthInGbps;
+      private final @Nullable Output<Integer> bandwidthInGbps;
 
-    public Input<Integer> getBandwidthInGbps() {
-        return this.bandwidthInGbps == null ? Input.empty() : this.bandwidthInGbps;
+    public Output<Integer> getBandwidthInGbps() {
+        return this.bandwidthInGbps == null ? Output.empty() : this.bandwidthInGbps;
     }
 
     /**
@@ -37,10 +37,10 @@ public final class ExpressRoutePortArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="encapsulation")
-      private final @Nullable Input<Either<String,ExpressRoutePortsEncapsulation>> encapsulation;
+      private final @Nullable Output<Either<String,ExpressRoutePortsEncapsulation>> encapsulation;
 
-    public Input<Either<String,ExpressRoutePortsEncapsulation>> getEncapsulation() {
-        return this.encapsulation == null ? Input.empty() : this.encapsulation;
+    public Output<Either<String,ExpressRoutePortsEncapsulation>> getEncapsulation() {
+        return this.encapsulation == null ? Output.empty() : this.encapsulation;
     }
 
     /**
@@ -48,10 +48,10 @@ public final class ExpressRoutePortArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="expressRoutePortName")
-      private final @Nullable Input<String> expressRoutePortName;
+      private final @Nullable Output<String> expressRoutePortName;
 
-    public Input<String> getExpressRoutePortName() {
-        return this.expressRoutePortName == null ? Input.empty() : this.expressRoutePortName;
+    public Output<String> getExpressRoutePortName() {
+        return this.expressRoutePortName == null ? Output.empty() : this.expressRoutePortName;
     }
 
     /**
@@ -59,10 +59,10 @@ public final class ExpressRoutePortArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="id")
-      private final @Nullable Input<String> id;
+      private final @Nullable Output<String> id;
 
-    public Input<String> getId() {
-        return this.id == null ? Input.empty() : this.id;
+    public Output<String> getId() {
+        return this.id == null ? Output.empty() : this.id;
     }
 
     /**
@@ -70,10 +70,10 @@ public final class ExpressRoutePortArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="identity")
-      private final @Nullable Input<ManagedServiceIdentityArgs> identity;
+      private final @Nullable Output<ManagedServiceIdentityArgs> identity;
 
-    public Input<ManagedServiceIdentityArgs> getIdentity() {
-        return this.identity == null ? Input.empty() : this.identity;
+    public Output<ManagedServiceIdentityArgs> getIdentity() {
+        return this.identity == null ? Output.empty() : this.identity;
     }
 
     /**
@@ -81,10 +81,10 @@ public final class ExpressRoutePortArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="links")
-      private final @Nullable Input<List<ExpressRouteLinkArgs>> links;
+      private final @Nullable Output<List<ExpressRouteLinkArgs>> links;
 
-    public Input<List<ExpressRouteLinkArgs>> getLinks() {
-        return this.links == null ? Input.empty() : this.links;
+    public Output<List<ExpressRouteLinkArgs>> getLinks() {
+        return this.links == null ? Output.empty() : this.links;
     }
 
     /**
@@ -92,10 +92,10 @@ public final class ExpressRoutePortArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -103,10 +103,10 @@ public final class ExpressRoutePortArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="peeringLocation")
-      private final @Nullable Input<String> peeringLocation;
+      private final @Nullable Output<String> peeringLocation;
 
-    public Input<String> getPeeringLocation() {
-        return this.peeringLocation == null ? Input.empty() : this.peeringLocation;
+    public Output<String> getPeeringLocation() {
+        return this.peeringLocation == null ? Output.empty() : this.peeringLocation;
     }
 
     /**
@@ -114,9 +114,9 @@ public final class ExpressRoutePortArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -125,23 +125,23 @@ public final class ExpressRoutePortArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public ExpressRoutePortArgs(
-        @Nullable Input<Integer> bandwidthInGbps,
-        @Nullable Input<Either<String,ExpressRoutePortsEncapsulation>> encapsulation,
-        @Nullable Input<String> expressRoutePortName,
-        @Nullable Input<String> id,
-        @Nullable Input<ManagedServiceIdentityArgs> identity,
-        @Nullable Input<List<ExpressRouteLinkArgs>> links,
-        @Nullable Input<String> location,
-        @Nullable Input<String> peeringLocation,
-        Input<String> resourceGroupName,
-        @Nullable Input<Map<String,String>> tags) {
+        @Nullable Output<Integer> bandwidthInGbps,
+        @Nullable Output<Either<String,ExpressRoutePortsEncapsulation>> encapsulation,
+        @Nullable Output<String> expressRoutePortName,
+        @Nullable Output<String> id,
+        @Nullable Output<ManagedServiceIdentityArgs> identity,
+        @Nullable Output<List<ExpressRouteLinkArgs>> links,
+        @Nullable Output<String> location,
+        @Nullable Output<String> peeringLocation,
+        Output<String> resourceGroupName,
+        @Nullable Output<Map<String,String>> tags) {
         this.bandwidthInGbps = bandwidthInGbps;
         this.encapsulation = encapsulation;
         this.expressRoutePortName = expressRoutePortName;
@@ -155,16 +155,16 @@ public final class ExpressRoutePortArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private ExpressRoutePortArgs() {
-        this.bandwidthInGbps = Input.empty();
-        this.encapsulation = Input.empty();
-        this.expressRoutePortName = Input.empty();
-        this.id = Input.empty();
-        this.identity = Input.empty();
-        this.links = Input.empty();
-        this.location = Input.empty();
-        this.peeringLocation = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.tags = Input.empty();
+        this.bandwidthInGbps = Output.empty();
+        this.encapsulation = Output.empty();
+        this.expressRoutePortName = Output.empty();
+        this.id = Output.empty();
+        this.identity = Output.empty();
+        this.links = Output.empty();
+        this.location = Output.empty();
+        this.peeringLocation = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -176,16 +176,16 @@ public final class ExpressRoutePortArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> bandwidthInGbps;
-        private @Nullable Input<Either<String,ExpressRoutePortsEncapsulation>> encapsulation;
-        private @Nullable Input<String> expressRoutePortName;
-        private @Nullable Input<String> id;
-        private @Nullable Input<ManagedServiceIdentityArgs> identity;
-        private @Nullable Input<List<ExpressRouteLinkArgs>> links;
-        private @Nullable Input<String> location;
-        private @Nullable Input<String> peeringLocation;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<Map<String,String>> tags;
+        private @Nullable Output<Integer> bandwidthInGbps;
+        private @Nullable Output<Either<String,ExpressRoutePortsEncapsulation>> encapsulation;
+        private @Nullable Output<String> expressRoutePortName;
+        private @Nullable Output<String> id;
+        private @Nullable Output<ManagedServiceIdentityArgs> identity;
+        private @Nullable Output<List<ExpressRouteLinkArgs>> links;
+        private @Nullable Output<String> location;
+        private @Nullable Output<String> peeringLocation;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<Map<String,String>> tags;
 
         public Builder() {
     	      // Empty
@@ -205,103 +205,103 @@ public final class ExpressRoutePortArgs extends io.pulumi.resources.ResourceArgs
     	      this.tags = defaults.tags;
         }
 
-        public Builder bandwidthInGbps(@Nullable Input<Integer> bandwidthInGbps) {
+        public Builder bandwidthInGbps(@Nullable Output<Integer> bandwidthInGbps) {
             this.bandwidthInGbps = bandwidthInGbps;
             return this;
         }
 
         public Builder bandwidthInGbps(@Nullable Integer bandwidthInGbps) {
-            this.bandwidthInGbps = Input.ofNullable(bandwidthInGbps);
+            this.bandwidthInGbps = Output.ofNullable(bandwidthInGbps);
             return this;
         }
 
-        public Builder encapsulation(@Nullable Input<Either<String,ExpressRoutePortsEncapsulation>> encapsulation) {
+        public Builder encapsulation(@Nullable Output<Either<String,ExpressRoutePortsEncapsulation>> encapsulation) {
             this.encapsulation = encapsulation;
             return this;
         }
 
         public Builder encapsulation(@Nullable Either<String,ExpressRoutePortsEncapsulation> encapsulation) {
-            this.encapsulation = Input.ofNullable(encapsulation);
+            this.encapsulation = Output.ofNullable(encapsulation);
             return this;
         }
 
-        public Builder expressRoutePortName(@Nullable Input<String> expressRoutePortName) {
+        public Builder expressRoutePortName(@Nullable Output<String> expressRoutePortName) {
             this.expressRoutePortName = expressRoutePortName;
             return this;
         }
 
         public Builder expressRoutePortName(@Nullable String expressRoutePortName) {
-            this.expressRoutePortName = Input.ofNullable(expressRoutePortName);
+            this.expressRoutePortName = Output.ofNullable(expressRoutePortName);
             return this;
         }
 
-        public Builder id(@Nullable Input<String> id) {
+        public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
 
         public Builder id(@Nullable String id) {
-            this.id = Input.ofNullable(id);
+            this.id = Output.ofNullable(id);
             return this;
         }
 
-        public Builder identity(@Nullable Input<ManagedServiceIdentityArgs> identity) {
+        public Builder identity(@Nullable Output<ManagedServiceIdentityArgs> identity) {
             this.identity = identity;
             return this;
         }
 
         public Builder identity(@Nullable ManagedServiceIdentityArgs identity) {
-            this.identity = Input.ofNullable(identity);
+            this.identity = Output.ofNullable(identity);
             return this;
         }
 
-        public Builder links(@Nullable Input<List<ExpressRouteLinkArgs>> links) {
+        public Builder links(@Nullable Output<List<ExpressRouteLinkArgs>> links) {
             this.links = links;
             return this;
         }
 
         public Builder links(@Nullable List<ExpressRouteLinkArgs> links) {
-            this.links = Input.ofNullable(links);
+            this.links = Output.ofNullable(links);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder peeringLocation(@Nullable Input<String> peeringLocation) {
+        public Builder peeringLocation(@Nullable Output<String> peeringLocation) {
             this.peeringLocation = peeringLocation;
             return this;
         }
 
         public Builder peeringLocation(@Nullable String peeringLocation) {
-            this.peeringLocation = Input.ofNullable(peeringLocation);
+            this.peeringLocation = Output.ofNullable(peeringLocation);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public ExpressRoutePortArgs build() {

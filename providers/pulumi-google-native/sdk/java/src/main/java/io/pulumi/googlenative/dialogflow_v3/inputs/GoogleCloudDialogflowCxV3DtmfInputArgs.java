@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v3.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class GoogleCloudDialogflowCxV3DtmfInputArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="digits")
-      private final @Nullable Input<String> digits;
+      private final @Nullable Output<String> digits;
 
-    public Input<String> getDigits() {
-        return this.digits == null ? Input.empty() : this.digits;
+    public Output<String> getDigits() {
+        return this.digits == null ? Output.empty() : this.digits;
     }
 
     /**
@@ -34,22 +34,22 @@ public final class GoogleCloudDialogflowCxV3DtmfInputArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="finishDigit")
-      private final @Nullable Input<String> finishDigit;
+      private final @Nullable Output<String> finishDigit;
 
-    public Input<String> getFinishDigit() {
-        return this.finishDigit == null ? Input.empty() : this.finishDigit;
+    public Output<String> getFinishDigit() {
+        return this.finishDigit == null ? Output.empty() : this.finishDigit;
     }
 
     public GoogleCloudDialogflowCxV3DtmfInputArgs(
-        @Nullable Input<String> digits,
-        @Nullable Input<String> finishDigit) {
+        @Nullable Output<String> digits,
+        @Nullable Output<String> finishDigit) {
         this.digits = digits;
         this.finishDigit = finishDigit;
     }
 
     private GoogleCloudDialogflowCxV3DtmfInputArgs() {
-        this.digits = Input.empty();
-        this.finishDigit = Input.empty();
+        this.digits = Output.empty();
+        this.finishDigit = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class GoogleCloudDialogflowCxV3DtmfInputArgs extends io.pulumi.reso
     }
 
     public static final class Builder {
-        private @Nullable Input<String> digits;
-        private @Nullable Input<String> finishDigit;
+        private @Nullable Output<String> digits;
+        private @Nullable Output<String> finishDigit;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class GoogleCloudDialogflowCxV3DtmfInputArgs extends io.pulumi.reso
     	      this.finishDigit = defaults.finishDigit;
         }
 
-        public Builder digits(@Nullable Input<String> digits) {
+        public Builder digits(@Nullable Output<String> digits) {
             this.digits = digits;
             return this;
         }
 
         public Builder digits(@Nullable String digits) {
-            this.digits = Input.ofNullable(digits);
+            this.digits = Output.ofNullable(digits);
             return this;
         }
 
-        public Builder finishDigit(@Nullable Input<String> finishDigit) {
+        public Builder finishDigit(@Nullable Output<String> finishDigit) {
             this.finishDigit = finishDigit;
             return this;
         }
 
         public Builder finishDigit(@Nullable String finishDigit) {
-            this.finishDigit = Input.ofNullable(finishDigit);
+            this.finishDigit = Output.ofNullable(finishDigit);
             return this;
         }
         public GoogleCloudDialogflowCxV3DtmfInputArgs build() {

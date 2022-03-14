@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.iot.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,9 +19,9 @@ public final class TopicRuleErrorActionFirehoseArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="deliveryStreamName", required=true)
-      private final Input<String> deliveryStreamName;
+      private final Output<String> deliveryStreamName;
 
-    public Input<String> getDeliveryStreamName() {
+    public Output<String> getDeliveryStreamName() {
         return this.deliveryStreamName;
     }
 
@@ -30,9 +30,9 @@ public final class TopicRuleErrorActionFirehoseArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="roleArn", required=true)
-      private final Input<String> roleArn;
+      private final Output<String> roleArn;
 
-    public Input<String> getRoleArn() {
+    public Output<String> getRoleArn() {
         return this.roleArn;
     }
 
@@ -41,25 +41,25 @@ public final class TopicRuleErrorActionFirehoseArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="separator")
-      private final @Nullable Input<String> separator;
+      private final @Nullable Output<String> separator;
 
-    public Input<String> getSeparator() {
-        return this.separator == null ? Input.empty() : this.separator;
+    public Output<String> getSeparator() {
+        return this.separator == null ? Output.empty() : this.separator;
     }
 
     public TopicRuleErrorActionFirehoseArgs(
-        Input<String> deliveryStreamName,
-        Input<String> roleArn,
-        @Nullable Input<String> separator) {
+        Output<String> deliveryStreamName,
+        Output<String> roleArn,
+        @Nullable Output<String> separator) {
         this.deliveryStreamName = Objects.requireNonNull(deliveryStreamName, "expected parameter 'deliveryStreamName' to be non-null");
         this.roleArn = Objects.requireNonNull(roleArn, "expected parameter 'roleArn' to be non-null");
         this.separator = separator;
     }
 
     private TopicRuleErrorActionFirehoseArgs() {
-        this.deliveryStreamName = Input.empty();
-        this.roleArn = Input.empty();
-        this.separator = Input.empty();
+        this.deliveryStreamName = Output.empty();
+        this.roleArn = Output.empty();
+        this.separator = Output.empty();
     }
 
     public static Builder builder() {
@@ -71,9 +71,9 @@ public final class TopicRuleErrorActionFirehoseArgs extends io.pulumi.resources.
     }
 
     public static final class Builder {
-        private Input<String> deliveryStreamName;
-        private Input<String> roleArn;
-        private @Nullable Input<String> separator;
+        private Output<String> deliveryStreamName;
+        private Output<String> roleArn;
+        private @Nullable Output<String> separator;
 
         public Builder() {
     	      // Empty
@@ -86,33 +86,33 @@ public final class TopicRuleErrorActionFirehoseArgs extends io.pulumi.resources.
     	      this.separator = defaults.separator;
         }
 
-        public Builder deliveryStreamName(Input<String> deliveryStreamName) {
+        public Builder deliveryStreamName(Output<String> deliveryStreamName) {
             this.deliveryStreamName = Objects.requireNonNull(deliveryStreamName);
             return this;
         }
 
         public Builder deliveryStreamName(String deliveryStreamName) {
-            this.deliveryStreamName = Input.of(Objects.requireNonNull(deliveryStreamName));
+            this.deliveryStreamName = Output.of(Objects.requireNonNull(deliveryStreamName));
             return this;
         }
 
-        public Builder roleArn(Input<String> roleArn) {
+        public Builder roleArn(Output<String> roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
 
         public Builder roleArn(String roleArn) {
-            this.roleArn = Input.of(Objects.requireNonNull(roleArn));
+            this.roleArn = Output.of(Objects.requireNonNull(roleArn));
             return this;
         }
 
-        public Builder separator(@Nullable Input<String> separator) {
+        public Builder separator(@Nullable Output<String> separator) {
             this.separator = separator;
             return this;
         }
 
         public Builder separator(@Nullable String separator) {
-            this.separator = Input.ofNullable(separator);
+            this.separator = Output.ofNullable(separator);
             return this;
         }
         public TopicRuleErrorActionFirehoseArgs build() {

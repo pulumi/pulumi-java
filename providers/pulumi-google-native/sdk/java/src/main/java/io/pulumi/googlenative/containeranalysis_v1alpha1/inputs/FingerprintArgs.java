@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1alpha1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -24,10 +24,10 @@ public final class FingerprintArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="v1Name")
-      private final @Nullable Input<String> v1Name;
+      private final @Nullable Output<String> v1Name;
 
-    public Input<String> getV1Name() {
-        return this.v1Name == null ? Input.empty() : this.v1Name;
+    public Output<String> getV1Name() {
+        return this.v1Name == null ? Output.empty() : this.v1Name;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class FingerprintArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="v2Blob")
-      private final @Nullable Input<List<String>> v2Blob;
+      private final @Nullable Output<List<String>> v2Blob;
 
-    public Input<List<String>> getV2Blob() {
-        return this.v2Blob == null ? Input.empty() : this.v2Blob;
+    public Output<List<String>> getV2Blob() {
+        return this.v2Blob == null ? Output.empty() : this.v2Blob;
     }
 
     public FingerprintArgs(
-        @Nullable Input<String> v1Name,
-        @Nullable Input<List<String>> v2Blob) {
+        @Nullable Output<String> v1Name,
+        @Nullable Output<List<String>> v2Blob) {
         this.v1Name = v1Name;
         this.v2Blob = v2Blob;
     }
 
     private FingerprintArgs() {
-        this.v1Name = Input.empty();
-        this.v2Blob = Input.empty();
+        this.v1Name = Output.empty();
+        this.v2Blob = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class FingerprintArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> v1Name;
-        private @Nullable Input<List<String>> v2Blob;
+        private @Nullable Output<String> v1Name;
+        private @Nullable Output<List<String>> v2Blob;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class FingerprintArgs extends io.pulumi.resources.ResourceArgs {
     	      this.v2Blob = defaults.v2Blob;
         }
 
-        public Builder v1Name(@Nullable Input<String> v1Name) {
+        public Builder v1Name(@Nullable Output<String> v1Name) {
             this.v1Name = v1Name;
             return this;
         }
 
         public Builder v1Name(@Nullable String v1Name) {
-            this.v1Name = Input.ofNullable(v1Name);
+            this.v1Name = Output.ofNullable(v1Name);
             return this;
         }
 
-        public Builder v2Blob(@Nullable Input<List<String>> v2Blob) {
+        public Builder v2Blob(@Nullable Output<List<String>> v2Blob) {
             this.v2Blob = v2Blob;
             return this;
         }
 
         public Builder v2Blob(@Nullable List<String> v2Blob) {
-            this.v2Blob = Input.ofNullable(v2Blob);
+            this.v2Blob = Output.ofNullable(v2Blob);
             return this;
         }
         public FingerprintArgs build() {

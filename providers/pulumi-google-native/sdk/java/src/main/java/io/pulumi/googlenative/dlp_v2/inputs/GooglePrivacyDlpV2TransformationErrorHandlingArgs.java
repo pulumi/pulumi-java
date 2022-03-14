@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dlp_v2.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2LeaveUntransformedArgs;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2ThrowErrorArgs;
@@ -24,10 +24,10 @@ public final class GooglePrivacyDlpV2TransformationErrorHandlingArgs extends io.
      * 
      */
     @InputImport(name="leaveUntransformed")
-      private final @Nullable Input<GooglePrivacyDlpV2LeaveUntransformedArgs> leaveUntransformed;
+      private final @Nullable Output<GooglePrivacyDlpV2LeaveUntransformedArgs> leaveUntransformed;
 
-    public Input<GooglePrivacyDlpV2LeaveUntransformedArgs> getLeaveUntransformed() {
-        return this.leaveUntransformed == null ? Input.empty() : this.leaveUntransformed;
+    public Output<GooglePrivacyDlpV2LeaveUntransformedArgs> getLeaveUntransformed() {
+        return this.leaveUntransformed == null ? Output.empty() : this.leaveUntransformed;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class GooglePrivacyDlpV2TransformationErrorHandlingArgs extends io.
      * 
      */
     @InputImport(name="throwError")
-      private final @Nullable Input<GooglePrivacyDlpV2ThrowErrorArgs> throwError;
+      private final @Nullable Output<GooglePrivacyDlpV2ThrowErrorArgs> throwError;
 
-    public Input<GooglePrivacyDlpV2ThrowErrorArgs> getThrowError() {
-        return this.throwError == null ? Input.empty() : this.throwError;
+    public Output<GooglePrivacyDlpV2ThrowErrorArgs> getThrowError() {
+        return this.throwError == null ? Output.empty() : this.throwError;
     }
 
     public GooglePrivacyDlpV2TransformationErrorHandlingArgs(
-        @Nullable Input<GooglePrivacyDlpV2LeaveUntransformedArgs> leaveUntransformed,
-        @Nullable Input<GooglePrivacyDlpV2ThrowErrorArgs> throwError) {
+        @Nullable Output<GooglePrivacyDlpV2LeaveUntransformedArgs> leaveUntransformed,
+        @Nullable Output<GooglePrivacyDlpV2ThrowErrorArgs> throwError) {
         this.leaveUntransformed = leaveUntransformed;
         this.throwError = throwError;
     }
 
     private GooglePrivacyDlpV2TransformationErrorHandlingArgs() {
-        this.leaveUntransformed = Input.empty();
-        this.throwError = Input.empty();
+        this.leaveUntransformed = Output.empty();
+        this.throwError = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class GooglePrivacyDlpV2TransformationErrorHandlingArgs extends io.
     }
 
     public static final class Builder {
-        private @Nullable Input<GooglePrivacyDlpV2LeaveUntransformedArgs> leaveUntransformed;
-        private @Nullable Input<GooglePrivacyDlpV2ThrowErrorArgs> throwError;
+        private @Nullable Output<GooglePrivacyDlpV2LeaveUntransformedArgs> leaveUntransformed;
+        private @Nullable Output<GooglePrivacyDlpV2ThrowErrorArgs> throwError;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class GooglePrivacyDlpV2TransformationErrorHandlingArgs extends io.
     	      this.throwError = defaults.throwError;
         }
 
-        public Builder leaveUntransformed(@Nullable Input<GooglePrivacyDlpV2LeaveUntransformedArgs> leaveUntransformed) {
+        public Builder leaveUntransformed(@Nullable Output<GooglePrivacyDlpV2LeaveUntransformedArgs> leaveUntransformed) {
             this.leaveUntransformed = leaveUntransformed;
             return this;
         }
 
         public Builder leaveUntransformed(@Nullable GooglePrivacyDlpV2LeaveUntransformedArgs leaveUntransformed) {
-            this.leaveUntransformed = Input.ofNullable(leaveUntransformed);
+            this.leaveUntransformed = Output.ofNullable(leaveUntransformed);
             return this;
         }
 
-        public Builder throwError(@Nullable Input<GooglePrivacyDlpV2ThrowErrorArgs> throwError) {
+        public Builder throwError(@Nullable Output<GooglePrivacyDlpV2ThrowErrorArgs> throwError) {
             this.throwError = throwError;
             return this;
         }
 
         public Builder throwError(@Nullable GooglePrivacyDlpV2ThrowErrorArgs throwError) {
-            this.throwError = Input.ofNullable(throwError);
+            this.throwError = Output.ofNullable(throwError);
             return this;
         }
         public GooglePrivacyDlpV2TransformationErrorHandlingArgs build() {

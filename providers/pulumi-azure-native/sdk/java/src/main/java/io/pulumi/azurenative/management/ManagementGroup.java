@@ -8,7 +8,6 @@ import io.pulumi.azurenative.management.ManagementGroupArgs;
 import io.pulumi.azurenative.management.outputs.ManagementGroupChildInfoResponse;
 import io.pulumi.azurenative.management.outputs.ManagementGroupDetailsResponse;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -156,25 +155,25 @@ public class ManagementGroup extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ManagementGroup(String name, @Nullable ManagementGroupArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:management:ManagementGroup", name, args == null ? ManagementGroupArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("azure-native:management:ManagementGroup", name, args == null ? ManagementGroupArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private ManagementGroup(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private ManagementGroup(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:management:ManagementGroup", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:management/v20171101preview:ManagementGroup").build()),
-                Input.of(Alias.builder().setType("azure-native:management/v20180101preview:ManagementGroup").build()),
-                Input.of(Alias.builder().setType("azure-native:management/v20180301preview:ManagementGroup").build()),
-                Input.of(Alias.builder().setType("azure-native:management/v20191101:ManagementGroup").build()),
-                Input.of(Alias.builder().setType("azure-native:management/v20200201:ManagementGroup").build()),
-                Input.of(Alias.builder().setType("azure-native:management/v20200501:ManagementGroup").build()),
-                Input.of(Alias.builder().setType("azure-native:management/v20201001:ManagementGroup").build()),
-                Input.of(Alias.builder().setType("azure-native:management/v20210401:ManagementGroup").build())
+                Output.of(Alias.builder().setType("azure-native:management/v20171101preview:ManagementGroup").build()),
+                Output.of(Alias.builder().setType("azure-native:management/v20180101preview:ManagementGroup").build()),
+                Output.of(Alias.builder().setType("azure-native:management/v20180301preview:ManagementGroup").build()),
+                Output.of(Alias.builder().setType("azure-native:management/v20191101:ManagementGroup").build()),
+                Output.of(Alias.builder().setType("azure-native:management/v20200201:ManagementGroup").build()),
+                Output.of(Alias.builder().setType("azure-native:management/v20200501:ManagementGroup").build()),
+                Output.of(Alias.builder().setType("azure-native:management/v20201001:ManagementGroup").build()),
+                Output.of(Alias.builder().setType("azure-native:management/v20210401:ManagementGroup").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -188,7 +187,7 @@ public class ManagementGroup extends io.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static ManagementGroup get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static ManagementGroup get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new ManagementGroup(name, id, options);
     }
 }

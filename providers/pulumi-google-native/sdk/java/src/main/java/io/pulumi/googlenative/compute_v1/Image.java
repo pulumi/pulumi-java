@@ -3,7 +3,6 @@
 
 package io.pulumi.googlenative.compute_v1;
 
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -485,14 +484,14 @@ public class Image extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Image(String name, @Nullable ImageArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:compute/v1:Image", name, args == null ? ImageArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("google-native:compute/v1:Image", name, args == null ? ImageArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private Image(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private Image(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("google-native:compute/v1:Image", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -507,7 +506,7 @@ public class Image extends io.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static Image get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static Image get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Image(name, id, options);
     }
 }

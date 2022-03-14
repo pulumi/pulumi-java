@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.lambda.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -20,10 +20,10 @@ public final class ProvisionedConcurrencyConfigState extends io.pulumi.resources
      * 
      */
     @InputImport(name="functionName")
-      private final @Nullable Input<String> functionName;
+      private final @Nullable Output<String> functionName;
 
-    public Input<String> getFunctionName() {
-        return this.functionName == null ? Input.empty() : this.functionName;
+    public Output<String> getFunctionName() {
+        return this.functionName == null ? Output.empty() : this.functionName;
     }
 
     /**
@@ -31,10 +31,10 @@ public final class ProvisionedConcurrencyConfigState extends io.pulumi.resources
      * 
      */
     @InputImport(name="provisionedConcurrentExecutions")
-      private final @Nullable Input<Integer> provisionedConcurrentExecutions;
+      private final @Nullable Output<Integer> provisionedConcurrentExecutions;
 
-    public Input<Integer> getProvisionedConcurrentExecutions() {
-        return this.provisionedConcurrentExecutions == null ? Input.empty() : this.provisionedConcurrentExecutions;
+    public Output<Integer> getProvisionedConcurrentExecutions() {
+        return this.provisionedConcurrentExecutions == null ? Output.empty() : this.provisionedConcurrentExecutions;
     }
 
     /**
@@ -42,25 +42,25 @@ public final class ProvisionedConcurrencyConfigState extends io.pulumi.resources
      * 
      */
     @InputImport(name="qualifier")
-      private final @Nullable Input<String> qualifier;
+      private final @Nullable Output<String> qualifier;
 
-    public Input<String> getQualifier() {
-        return this.qualifier == null ? Input.empty() : this.qualifier;
+    public Output<String> getQualifier() {
+        return this.qualifier == null ? Output.empty() : this.qualifier;
     }
 
     public ProvisionedConcurrencyConfigState(
-        @Nullable Input<String> functionName,
-        @Nullable Input<Integer> provisionedConcurrentExecutions,
-        @Nullable Input<String> qualifier) {
+        @Nullable Output<String> functionName,
+        @Nullable Output<Integer> provisionedConcurrentExecutions,
+        @Nullable Output<String> qualifier) {
         this.functionName = functionName;
         this.provisionedConcurrentExecutions = provisionedConcurrentExecutions;
         this.qualifier = qualifier;
     }
 
     private ProvisionedConcurrencyConfigState() {
-        this.functionName = Input.empty();
-        this.provisionedConcurrentExecutions = Input.empty();
-        this.qualifier = Input.empty();
+        this.functionName = Output.empty();
+        this.provisionedConcurrentExecutions = Output.empty();
+        this.qualifier = Output.empty();
     }
 
     public static Builder builder() {
@@ -72,9 +72,9 @@ public final class ProvisionedConcurrencyConfigState extends io.pulumi.resources
     }
 
     public static final class Builder {
-        private @Nullable Input<String> functionName;
-        private @Nullable Input<Integer> provisionedConcurrentExecutions;
-        private @Nullable Input<String> qualifier;
+        private @Nullable Output<String> functionName;
+        private @Nullable Output<Integer> provisionedConcurrentExecutions;
+        private @Nullable Output<String> qualifier;
 
         public Builder() {
     	      // Empty
@@ -87,33 +87,33 @@ public final class ProvisionedConcurrencyConfigState extends io.pulumi.resources
     	      this.qualifier = defaults.qualifier;
         }
 
-        public Builder functionName(@Nullable Input<String> functionName) {
+        public Builder functionName(@Nullable Output<String> functionName) {
             this.functionName = functionName;
             return this;
         }
 
         public Builder functionName(@Nullable String functionName) {
-            this.functionName = Input.ofNullable(functionName);
+            this.functionName = Output.ofNullable(functionName);
             return this;
         }
 
-        public Builder provisionedConcurrentExecutions(@Nullable Input<Integer> provisionedConcurrentExecutions) {
+        public Builder provisionedConcurrentExecutions(@Nullable Output<Integer> provisionedConcurrentExecutions) {
             this.provisionedConcurrentExecutions = provisionedConcurrentExecutions;
             return this;
         }
 
         public Builder provisionedConcurrentExecutions(@Nullable Integer provisionedConcurrentExecutions) {
-            this.provisionedConcurrentExecutions = Input.ofNullable(provisionedConcurrentExecutions);
+            this.provisionedConcurrentExecutions = Output.ofNullable(provisionedConcurrentExecutions);
             return this;
         }
 
-        public Builder qualifier(@Nullable Input<String> qualifier) {
+        public Builder qualifier(@Nullable Output<String> qualifier) {
             this.qualifier = qualifier;
             return this;
         }
 
         public Builder qualifier(@Nullable String qualifier) {
-            this.qualifier = Input.ofNullable(qualifier);
+            this.qualifier = Output.ofNullable(qualifier);
             return this;
         }
         public ProvisionedConcurrencyConfigState build() {

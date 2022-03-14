@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.authorization.inputs;
 
 import io.pulumi.azurenative.authorization.inputs.ParameterValuesValueArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -26,10 +26,10 @@ public final class PolicyDefinitionReferenceArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="groupNames")
-      private final @Nullable Input<List<String>> groupNames;
+      private final @Nullable Output<List<String>> groupNames;
 
-    public Input<List<String>> getGroupNames() {
-        return this.groupNames == null ? Input.empty() : this.groupNames;
+    public Output<List<String>> getGroupNames() {
+        return this.groupNames == null ? Output.empty() : this.groupNames;
     }
 
     /**
@@ -37,10 +37,10 @@ public final class PolicyDefinitionReferenceArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="parameters")
-      private final @Nullable Input<Map<String,ParameterValuesValueArgs>> parameters;
+      private final @Nullable Output<Map<String,ParameterValuesValueArgs>> parameters;
 
-    public Input<Map<String,ParameterValuesValueArgs>> getParameters() {
-        return this.parameters == null ? Input.empty() : this.parameters;
+    public Output<Map<String,ParameterValuesValueArgs>> getParameters() {
+        return this.parameters == null ? Output.empty() : this.parameters;
     }
 
     /**
@@ -48,9 +48,9 @@ public final class PolicyDefinitionReferenceArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="policyDefinitionId", required=true)
-      private final Input<String> policyDefinitionId;
+      private final Output<String> policyDefinitionId;
 
-    public Input<String> getPolicyDefinitionId() {
+    public Output<String> getPolicyDefinitionId() {
         return this.policyDefinitionId;
     }
 
@@ -59,17 +59,17 @@ public final class PolicyDefinitionReferenceArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="policyDefinitionReferenceId")
-      private final @Nullable Input<String> policyDefinitionReferenceId;
+      private final @Nullable Output<String> policyDefinitionReferenceId;
 
-    public Input<String> getPolicyDefinitionReferenceId() {
-        return this.policyDefinitionReferenceId == null ? Input.empty() : this.policyDefinitionReferenceId;
+    public Output<String> getPolicyDefinitionReferenceId() {
+        return this.policyDefinitionReferenceId == null ? Output.empty() : this.policyDefinitionReferenceId;
     }
 
     public PolicyDefinitionReferenceArgs(
-        @Nullable Input<List<String>> groupNames,
-        @Nullable Input<Map<String,ParameterValuesValueArgs>> parameters,
-        Input<String> policyDefinitionId,
-        @Nullable Input<String> policyDefinitionReferenceId) {
+        @Nullable Output<List<String>> groupNames,
+        @Nullable Output<Map<String,ParameterValuesValueArgs>> parameters,
+        Output<String> policyDefinitionId,
+        @Nullable Output<String> policyDefinitionReferenceId) {
         this.groupNames = groupNames;
         this.parameters = parameters;
         this.policyDefinitionId = Objects.requireNonNull(policyDefinitionId, "expected parameter 'policyDefinitionId' to be non-null");
@@ -77,10 +77,10 @@ public final class PolicyDefinitionReferenceArgs extends io.pulumi.resources.Res
     }
 
     private PolicyDefinitionReferenceArgs() {
-        this.groupNames = Input.empty();
-        this.parameters = Input.empty();
-        this.policyDefinitionId = Input.empty();
-        this.policyDefinitionReferenceId = Input.empty();
+        this.groupNames = Output.empty();
+        this.parameters = Output.empty();
+        this.policyDefinitionId = Output.empty();
+        this.policyDefinitionReferenceId = Output.empty();
     }
 
     public static Builder builder() {
@@ -92,10 +92,10 @@ public final class PolicyDefinitionReferenceArgs extends io.pulumi.resources.Res
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> groupNames;
-        private @Nullable Input<Map<String,ParameterValuesValueArgs>> parameters;
-        private Input<String> policyDefinitionId;
-        private @Nullable Input<String> policyDefinitionReferenceId;
+        private @Nullable Output<List<String>> groupNames;
+        private @Nullable Output<Map<String,ParameterValuesValueArgs>> parameters;
+        private Output<String> policyDefinitionId;
+        private @Nullable Output<String> policyDefinitionReferenceId;
 
         public Builder() {
     	      // Empty
@@ -109,43 +109,43 @@ public final class PolicyDefinitionReferenceArgs extends io.pulumi.resources.Res
     	      this.policyDefinitionReferenceId = defaults.policyDefinitionReferenceId;
         }
 
-        public Builder groupNames(@Nullable Input<List<String>> groupNames) {
+        public Builder groupNames(@Nullable Output<List<String>> groupNames) {
             this.groupNames = groupNames;
             return this;
         }
 
         public Builder groupNames(@Nullable List<String> groupNames) {
-            this.groupNames = Input.ofNullable(groupNames);
+            this.groupNames = Output.ofNullable(groupNames);
             return this;
         }
 
-        public Builder parameters(@Nullable Input<Map<String,ParameterValuesValueArgs>> parameters) {
+        public Builder parameters(@Nullable Output<Map<String,ParameterValuesValueArgs>> parameters) {
             this.parameters = parameters;
             return this;
         }
 
         public Builder parameters(@Nullable Map<String,ParameterValuesValueArgs> parameters) {
-            this.parameters = Input.ofNullable(parameters);
+            this.parameters = Output.ofNullable(parameters);
             return this;
         }
 
-        public Builder policyDefinitionId(Input<String> policyDefinitionId) {
+        public Builder policyDefinitionId(Output<String> policyDefinitionId) {
             this.policyDefinitionId = Objects.requireNonNull(policyDefinitionId);
             return this;
         }
 
         public Builder policyDefinitionId(String policyDefinitionId) {
-            this.policyDefinitionId = Input.of(Objects.requireNonNull(policyDefinitionId));
+            this.policyDefinitionId = Output.of(Objects.requireNonNull(policyDefinitionId));
             return this;
         }
 
-        public Builder policyDefinitionReferenceId(@Nullable Input<String> policyDefinitionReferenceId) {
+        public Builder policyDefinitionReferenceId(@Nullable Output<String> policyDefinitionReferenceId) {
             this.policyDefinitionReferenceId = policyDefinitionReferenceId;
             return this;
         }
 
         public Builder policyDefinitionReferenceId(@Nullable String policyDefinitionReferenceId) {
-            this.policyDefinitionReferenceId = Input.ofNullable(policyDefinitionReferenceId);
+            this.policyDefinitionReferenceId = Output.ofNullable(policyDefinitionReferenceId);
             return this;
         }
         public PolicyDefinitionReferenceArgs build() {

@@ -6,7 +6,6 @@ package io.pulumi.azurenative.synapse;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.synapse.WorkspaceSqlAadAdminArgs;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -156,24 +155,24 @@ public class WorkspaceSqlAadAdmin extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public WorkspaceSqlAadAdmin(String name, WorkspaceSqlAadAdminArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:synapse:WorkspaceSqlAadAdmin", name, args == null ? WorkspaceSqlAadAdminArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("azure-native:synapse:WorkspaceSqlAadAdmin", name, args == null ? WorkspaceSqlAadAdminArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private WorkspaceSqlAadAdmin(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private WorkspaceSqlAadAdmin(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:synapse:WorkspaceSqlAadAdmin", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:synapse/v20190601preview:WorkspaceSqlAadAdmin").build()),
-                Input.of(Alias.builder().setType("azure-native:synapse/v20201201:WorkspaceSqlAadAdmin").build()),
-                Input.of(Alias.builder().setType("azure-native:synapse/v20210301:WorkspaceSqlAadAdmin").build()),
-                Input.of(Alias.builder().setType("azure-native:synapse/v20210401preview:WorkspaceSqlAadAdmin").build()),
-                Input.of(Alias.builder().setType("azure-native:synapse/v20210501:WorkspaceSqlAadAdmin").build()),
-                Input.of(Alias.builder().setType("azure-native:synapse/v20210601:WorkspaceSqlAadAdmin").build()),
-                Input.of(Alias.builder().setType("azure-native:synapse/v20210601preview:WorkspaceSqlAadAdmin").build())
+                Output.of(Alias.builder().setType("azure-native:synapse/v20190601preview:WorkspaceSqlAadAdmin").build()),
+                Output.of(Alias.builder().setType("azure-native:synapse/v20201201:WorkspaceSqlAadAdmin").build()),
+                Output.of(Alias.builder().setType("azure-native:synapse/v20210301:WorkspaceSqlAadAdmin").build()),
+                Output.of(Alias.builder().setType("azure-native:synapse/v20210401preview:WorkspaceSqlAadAdmin").build()),
+                Output.of(Alias.builder().setType("azure-native:synapse/v20210501:WorkspaceSqlAadAdmin").build()),
+                Output.of(Alias.builder().setType("azure-native:synapse/v20210601:WorkspaceSqlAadAdmin").build()),
+                Output.of(Alias.builder().setType("azure-native:synapse/v20210601preview:WorkspaceSqlAadAdmin").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -187,7 +186,7 @@ public class WorkspaceSqlAadAdmin extends io.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static WorkspaceSqlAadAdmin get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static WorkspaceSqlAadAdmin get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new WorkspaceSqlAadAdmin(name, id, options);
     }
 }

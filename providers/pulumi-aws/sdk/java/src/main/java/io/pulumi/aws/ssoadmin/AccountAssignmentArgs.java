@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.ssoadmin;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,9 +19,9 @@ public final class AccountAssignmentArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="instanceArn", required=true)
-      private final Input<String> instanceArn;
+      private final Output<String> instanceArn;
 
-    public Input<String> getInstanceArn() {
+    public Output<String> getInstanceArn() {
         return this.instanceArn;
     }
 
@@ -30,9 +30,9 @@ public final class AccountAssignmentArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="permissionSetArn", required=true)
-      private final Input<String> permissionSetArn;
+      private final Output<String> permissionSetArn;
 
-    public Input<String> getPermissionSetArn() {
+    public Output<String> getPermissionSetArn() {
         return this.permissionSetArn;
     }
 
@@ -41,9 +41,9 @@ public final class AccountAssignmentArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="principalId", required=true)
-      private final Input<String> principalId;
+      private final Output<String> principalId;
 
-    public Input<String> getPrincipalId() {
+    public Output<String> getPrincipalId() {
         return this.principalId;
     }
 
@@ -52,9 +52,9 @@ public final class AccountAssignmentArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="principalType", required=true)
-      private final Input<String> principalType;
+      private final Output<String> principalType;
 
-    public Input<String> getPrincipalType() {
+    public Output<String> getPrincipalType() {
         return this.principalType;
     }
 
@@ -63,9 +63,9 @@ public final class AccountAssignmentArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="targetId", required=true)
-      private final Input<String> targetId;
+      private final Output<String> targetId;
 
-    public Input<String> getTargetId() {
+    public Output<String> getTargetId() {
         return this.targetId;
     }
 
@@ -74,19 +74,19 @@ public final class AccountAssignmentArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="targetType")
-      private final @Nullable Input<String> targetType;
+      private final @Nullable Output<String> targetType;
 
-    public Input<String> getTargetType() {
-        return this.targetType == null ? Input.empty() : this.targetType;
+    public Output<String> getTargetType() {
+        return this.targetType == null ? Output.empty() : this.targetType;
     }
 
     public AccountAssignmentArgs(
-        Input<String> instanceArn,
-        Input<String> permissionSetArn,
-        Input<String> principalId,
-        Input<String> principalType,
-        Input<String> targetId,
-        @Nullable Input<String> targetType) {
+        Output<String> instanceArn,
+        Output<String> permissionSetArn,
+        Output<String> principalId,
+        Output<String> principalType,
+        Output<String> targetId,
+        @Nullable Output<String> targetType) {
         this.instanceArn = Objects.requireNonNull(instanceArn, "expected parameter 'instanceArn' to be non-null");
         this.permissionSetArn = Objects.requireNonNull(permissionSetArn, "expected parameter 'permissionSetArn' to be non-null");
         this.principalId = Objects.requireNonNull(principalId, "expected parameter 'principalId' to be non-null");
@@ -96,12 +96,12 @@ public final class AccountAssignmentArgs extends io.pulumi.resources.ResourceArg
     }
 
     private AccountAssignmentArgs() {
-        this.instanceArn = Input.empty();
-        this.permissionSetArn = Input.empty();
-        this.principalId = Input.empty();
-        this.principalType = Input.empty();
-        this.targetId = Input.empty();
-        this.targetType = Input.empty();
+        this.instanceArn = Output.empty();
+        this.permissionSetArn = Output.empty();
+        this.principalId = Output.empty();
+        this.principalType = Output.empty();
+        this.targetId = Output.empty();
+        this.targetType = Output.empty();
     }
 
     public static Builder builder() {
@@ -113,12 +113,12 @@ public final class AccountAssignmentArgs extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private Input<String> instanceArn;
-        private Input<String> permissionSetArn;
-        private Input<String> principalId;
-        private Input<String> principalType;
-        private Input<String> targetId;
-        private @Nullable Input<String> targetType;
+        private Output<String> instanceArn;
+        private Output<String> permissionSetArn;
+        private Output<String> principalId;
+        private Output<String> principalType;
+        private Output<String> targetId;
+        private @Nullable Output<String> targetType;
 
         public Builder() {
     	      // Empty
@@ -134,63 +134,63 @@ public final class AccountAssignmentArgs extends io.pulumi.resources.ResourceArg
     	      this.targetType = defaults.targetType;
         }
 
-        public Builder instanceArn(Input<String> instanceArn) {
+        public Builder instanceArn(Output<String> instanceArn) {
             this.instanceArn = Objects.requireNonNull(instanceArn);
             return this;
         }
 
         public Builder instanceArn(String instanceArn) {
-            this.instanceArn = Input.of(Objects.requireNonNull(instanceArn));
+            this.instanceArn = Output.of(Objects.requireNonNull(instanceArn));
             return this;
         }
 
-        public Builder permissionSetArn(Input<String> permissionSetArn) {
+        public Builder permissionSetArn(Output<String> permissionSetArn) {
             this.permissionSetArn = Objects.requireNonNull(permissionSetArn);
             return this;
         }
 
         public Builder permissionSetArn(String permissionSetArn) {
-            this.permissionSetArn = Input.of(Objects.requireNonNull(permissionSetArn));
+            this.permissionSetArn = Output.of(Objects.requireNonNull(permissionSetArn));
             return this;
         }
 
-        public Builder principalId(Input<String> principalId) {
+        public Builder principalId(Output<String> principalId) {
             this.principalId = Objects.requireNonNull(principalId);
             return this;
         }
 
         public Builder principalId(String principalId) {
-            this.principalId = Input.of(Objects.requireNonNull(principalId));
+            this.principalId = Output.of(Objects.requireNonNull(principalId));
             return this;
         }
 
-        public Builder principalType(Input<String> principalType) {
+        public Builder principalType(Output<String> principalType) {
             this.principalType = Objects.requireNonNull(principalType);
             return this;
         }
 
         public Builder principalType(String principalType) {
-            this.principalType = Input.of(Objects.requireNonNull(principalType));
+            this.principalType = Output.of(Objects.requireNonNull(principalType));
             return this;
         }
 
-        public Builder targetId(Input<String> targetId) {
+        public Builder targetId(Output<String> targetId) {
             this.targetId = Objects.requireNonNull(targetId);
             return this;
         }
 
         public Builder targetId(String targetId) {
-            this.targetId = Input.of(Objects.requireNonNull(targetId));
+            this.targetId = Output.of(Objects.requireNonNull(targetId));
             return this;
         }
 
-        public Builder targetType(@Nullable Input<String> targetType) {
+        public Builder targetType(@Nullable Output<String> targetType) {
             this.targetType = targetType;
             return this;
         }
 
         public Builder targetType(@Nullable String targetType) {
-            this.targetType = Input.ofNullable(targetType);
+            this.targetType = Output.ofNullable(targetType);
             return this;
         }
         public AccountAssignmentArgs build() {

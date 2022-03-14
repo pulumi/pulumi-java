@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.identityplatform;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.identityplatform.inputs.InboundSamlConfigIdpConfigArgs;
 import io.pulumi.gcp.identityplatform.inputs.InboundSamlConfigSpConfigArgs;
@@ -22,9 +22,9 @@ public final class InboundSamlConfigArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="displayName", required=true)
-      private final Input<String> displayName;
+      private final Output<String> displayName;
 
-    public Input<String> getDisplayName() {
+    public Output<String> getDisplayName() {
         return this.displayName;
     }
 
@@ -33,10 +33,10 @@ public final class InboundSamlConfigArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="enabled")
-      private final @Nullable Input<Boolean> enabled;
+      private final @Nullable Output<Boolean> enabled;
 
-    public Input<Boolean> getEnabled() {
-        return this.enabled == null ? Input.empty() : this.enabled;
+    public Output<Boolean> getEnabled() {
+        return this.enabled == null ? Output.empty() : this.enabled;
     }
 
     /**
@@ -45,9 +45,9 @@ public final class InboundSamlConfigArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="idpConfig", required=true)
-      private final Input<InboundSamlConfigIdpConfigArgs> idpConfig;
+      private final Output<InboundSamlConfigIdpConfigArgs> idpConfig;
 
-    public Input<InboundSamlConfigIdpConfigArgs> getIdpConfig() {
+    public Output<InboundSamlConfigIdpConfigArgs> getIdpConfig() {
         return this.idpConfig;
     }
 
@@ -58,10 +58,10 @@ public final class InboundSamlConfigArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -70,10 +70,10 @@ public final class InboundSamlConfigArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -83,19 +83,19 @@ public final class InboundSamlConfigArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="spConfig", required=true)
-      private final Input<InboundSamlConfigSpConfigArgs> spConfig;
+      private final Output<InboundSamlConfigSpConfigArgs> spConfig;
 
-    public Input<InboundSamlConfigSpConfigArgs> getSpConfig() {
+    public Output<InboundSamlConfigSpConfigArgs> getSpConfig() {
         return this.spConfig;
     }
 
     public InboundSamlConfigArgs(
-        Input<String> displayName,
-        @Nullable Input<Boolean> enabled,
-        Input<InboundSamlConfigIdpConfigArgs> idpConfig,
-        @Nullable Input<String> name,
-        @Nullable Input<String> project,
-        Input<InboundSamlConfigSpConfigArgs> spConfig) {
+        Output<String> displayName,
+        @Nullable Output<Boolean> enabled,
+        Output<InboundSamlConfigIdpConfigArgs> idpConfig,
+        @Nullable Output<String> name,
+        @Nullable Output<String> project,
+        Output<InboundSamlConfigSpConfigArgs> spConfig) {
         this.displayName = Objects.requireNonNull(displayName, "expected parameter 'displayName' to be non-null");
         this.enabled = enabled;
         this.idpConfig = Objects.requireNonNull(idpConfig, "expected parameter 'idpConfig' to be non-null");
@@ -105,12 +105,12 @@ public final class InboundSamlConfigArgs extends io.pulumi.resources.ResourceArg
     }
 
     private InboundSamlConfigArgs() {
-        this.displayName = Input.empty();
-        this.enabled = Input.empty();
-        this.idpConfig = Input.empty();
-        this.name = Input.empty();
-        this.project = Input.empty();
-        this.spConfig = Input.empty();
+        this.displayName = Output.empty();
+        this.enabled = Output.empty();
+        this.idpConfig = Output.empty();
+        this.name = Output.empty();
+        this.project = Output.empty();
+        this.spConfig = Output.empty();
     }
 
     public static Builder builder() {
@@ -122,12 +122,12 @@ public final class InboundSamlConfigArgs extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private Input<String> displayName;
-        private @Nullable Input<Boolean> enabled;
-        private Input<InboundSamlConfigIdpConfigArgs> idpConfig;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> project;
-        private Input<InboundSamlConfigSpConfigArgs> spConfig;
+        private Output<String> displayName;
+        private @Nullable Output<Boolean> enabled;
+        private Output<InboundSamlConfigIdpConfigArgs> idpConfig;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> project;
+        private Output<InboundSamlConfigSpConfigArgs> spConfig;
 
         public Builder() {
     	      // Empty
@@ -143,63 +143,63 @@ public final class InboundSamlConfigArgs extends io.pulumi.resources.ResourceArg
     	      this.spConfig = defaults.spConfig;
         }
 
-        public Builder displayName(Input<String> displayName) {
+        public Builder displayName(Output<String> displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
         public Builder displayName(String displayName) {
-            this.displayName = Input.of(Objects.requireNonNull(displayName));
+            this.displayName = Output.of(Objects.requireNonNull(displayName));
             return this;
         }
 
-        public Builder enabled(@Nullable Input<Boolean> enabled) {
+        public Builder enabled(@Nullable Output<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
 
         public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Input.ofNullable(enabled);
+            this.enabled = Output.ofNullable(enabled);
             return this;
         }
 
-        public Builder idpConfig(Input<InboundSamlConfigIdpConfigArgs> idpConfig) {
+        public Builder idpConfig(Output<InboundSamlConfigIdpConfigArgs> idpConfig) {
             this.idpConfig = Objects.requireNonNull(idpConfig);
             return this;
         }
 
         public Builder idpConfig(InboundSamlConfigIdpConfigArgs idpConfig) {
-            this.idpConfig = Input.of(Objects.requireNonNull(idpConfig));
+            this.idpConfig = Output.of(Objects.requireNonNull(idpConfig));
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder spConfig(Input<InboundSamlConfigSpConfigArgs> spConfig) {
+        public Builder spConfig(Output<InboundSamlConfigSpConfigArgs> spConfig) {
             this.spConfig = Objects.requireNonNull(spConfig);
             return this;
         }
 
         public Builder spConfig(InboundSamlConfigSpConfigArgs spConfig) {
-            this.spConfig = Input.of(Objects.requireNonNull(spConfig));
+            this.spConfig = Output.of(Objects.requireNonNull(spConfig));
             return this;
         }
         public InboundSamlConfigArgs build() {

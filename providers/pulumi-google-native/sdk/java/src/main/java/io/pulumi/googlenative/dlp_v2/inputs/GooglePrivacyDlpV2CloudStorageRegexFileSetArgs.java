@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dlp_v2.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -24,10 +24,10 @@ public final class GooglePrivacyDlpV2CloudStorageRegexFileSetArgs extends io.pul
      * 
      */
     @InputImport(name="bucketName")
-      private final @Nullable Input<String> bucketName;
+      private final @Nullable Output<String> bucketName;
 
-    public Input<String> getBucketName() {
-        return this.bucketName == null ? Input.empty() : this.bucketName;
+    public Output<String> getBucketName() {
+        return this.bucketName == null ? Output.empty() : this.bucketName;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class GooglePrivacyDlpV2CloudStorageRegexFileSetArgs extends io.pul
      * 
      */
     @InputImport(name="excludeRegex")
-      private final @Nullable Input<List<String>> excludeRegex;
+      private final @Nullable Output<List<String>> excludeRegex;
 
-    public Input<List<String>> getExcludeRegex() {
-        return this.excludeRegex == null ? Input.empty() : this.excludeRegex;
+    public Output<List<String>> getExcludeRegex() {
+        return this.excludeRegex == null ? Output.empty() : this.excludeRegex;
     }
 
     /**
@@ -46,25 +46,25 @@ public final class GooglePrivacyDlpV2CloudStorageRegexFileSetArgs extends io.pul
      * 
      */
     @InputImport(name="includeRegex")
-      private final @Nullable Input<List<String>> includeRegex;
+      private final @Nullable Output<List<String>> includeRegex;
 
-    public Input<List<String>> getIncludeRegex() {
-        return this.includeRegex == null ? Input.empty() : this.includeRegex;
+    public Output<List<String>> getIncludeRegex() {
+        return this.includeRegex == null ? Output.empty() : this.includeRegex;
     }
 
     public GooglePrivacyDlpV2CloudStorageRegexFileSetArgs(
-        @Nullable Input<String> bucketName,
-        @Nullable Input<List<String>> excludeRegex,
-        @Nullable Input<List<String>> includeRegex) {
+        @Nullable Output<String> bucketName,
+        @Nullable Output<List<String>> excludeRegex,
+        @Nullable Output<List<String>> includeRegex) {
         this.bucketName = bucketName;
         this.excludeRegex = excludeRegex;
         this.includeRegex = includeRegex;
     }
 
     private GooglePrivacyDlpV2CloudStorageRegexFileSetArgs() {
-        this.bucketName = Input.empty();
-        this.excludeRegex = Input.empty();
-        this.includeRegex = Input.empty();
+        this.bucketName = Output.empty();
+        this.excludeRegex = Output.empty();
+        this.includeRegex = Output.empty();
     }
 
     public static Builder builder() {
@@ -76,9 +76,9 @@ public final class GooglePrivacyDlpV2CloudStorageRegexFileSetArgs extends io.pul
     }
 
     public static final class Builder {
-        private @Nullable Input<String> bucketName;
-        private @Nullable Input<List<String>> excludeRegex;
-        private @Nullable Input<List<String>> includeRegex;
+        private @Nullable Output<String> bucketName;
+        private @Nullable Output<List<String>> excludeRegex;
+        private @Nullable Output<List<String>> includeRegex;
 
         public Builder() {
     	      // Empty
@@ -91,33 +91,33 @@ public final class GooglePrivacyDlpV2CloudStorageRegexFileSetArgs extends io.pul
     	      this.includeRegex = defaults.includeRegex;
         }
 
-        public Builder bucketName(@Nullable Input<String> bucketName) {
+        public Builder bucketName(@Nullable Output<String> bucketName) {
             this.bucketName = bucketName;
             return this;
         }
 
         public Builder bucketName(@Nullable String bucketName) {
-            this.bucketName = Input.ofNullable(bucketName);
+            this.bucketName = Output.ofNullable(bucketName);
             return this;
         }
 
-        public Builder excludeRegex(@Nullable Input<List<String>> excludeRegex) {
+        public Builder excludeRegex(@Nullable Output<List<String>> excludeRegex) {
             this.excludeRegex = excludeRegex;
             return this;
         }
 
         public Builder excludeRegex(@Nullable List<String> excludeRegex) {
-            this.excludeRegex = Input.ofNullable(excludeRegex);
+            this.excludeRegex = Output.ofNullable(excludeRegex);
             return this;
         }
 
-        public Builder includeRegex(@Nullable Input<List<String>> includeRegex) {
+        public Builder includeRegex(@Nullable Output<List<String>> includeRegex) {
             this.includeRegex = includeRegex;
             return this;
         }
 
         public Builder includeRegex(@Nullable List<String> includeRegex) {
-            this.includeRegex = Input.ofNullable(includeRegex);
+            this.includeRegex = Output.ofNullable(includeRegex);
             return this;
         }
         public GooglePrivacyDlpV2CloudStorageRegexFileSetArgs build() {

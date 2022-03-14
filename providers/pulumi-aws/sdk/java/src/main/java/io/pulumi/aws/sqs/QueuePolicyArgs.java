@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.sqs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -18,9 +18,9 @@ public final class QueuePolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="policy", required=true)
-      private final Input<String> policy;
+      private final Output<String> policy;
 
-    public Input<String> getPolicy() {
+    public Output<String> getPolicy() {
         return this.policy;
     }
 
@@ -29,22 +29,22 @@ public final class QueuePolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="queueUrl", required=true)
-      private final Input<String> queueUrl;
+      private final Output<String> queueUrl;
 
-    public Input<String> getQueueUrl() {
+    public Output<String> getQueueUrl() {
         return this.queueUrl;
     }
 
     public QueuePolicyArgs(
-        Input<String> policy,
-        Input<String> queueUrl) {
+        Output<String> policy,
+        Output<String> queueUrl) {
         this.policy = Objects.requireNonNull(policy, "expected parameter 'policy' to be non-null");
         this.queueUrl = Objects.requireNonNull(queueUrl, "expected parameter 'queueUrl' to be non-null");
     }
 
     private QueuePolicyArgs() {
-        this.policy = Input.empty();
-        this.queueUrl = Input.empty();
+        this.policy = Output.empty();
+        this.queueUrl = Output.empty();
     }
 
     public static Builder builder() {
@@ -56,8 +56,8 @@ public final class QueuePolicyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> policy;
-        private Input<String> queueUrl;
+        private Output<String> policy;
+        private Output<String> queueUrl;
 
         public Builder() {
     	      // Empty
@@ -69,18 +69,18 @@ public final class QueuePolicyArgs extends io.pulumi.resources.ResourceArgs {
     	      this.queueUrl = defaults.queueUrl;
         }
 
-        public Builder policy(Input<String> policy) {
+        public Builder policy(Output<String> policy) {
             this.policy = Objects.requireNonNull(policy);
             return this;
         }
 
-        public Builder queueUrl(Input<String> queueUrl) {
+        public Builder queueUrl(Output<String> queueUrl) {
             this.queueUrl = Objects.requireNonNull(queueUrl);
             return this;
         }
 
         public Builder queueUrl(String queueUrl) {
-            this.queueUrl = Input.of(Objects.requireNonNull(queueUrl));
+            this.queueUrl = Output.of(Objects.requireNonNull(queueUrl));
             return this;
         }
         public QueuePolicyArgs build() {

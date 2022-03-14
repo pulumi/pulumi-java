@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.changeanalysis.inputs;
 
 import io.pulumi.azurenative.changeanalysis.inputs.NotificationSettingsArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,18 +23,18 @@ public final class ConfigurationProfileResourcePropertiesArgs extends io.pulumi.
      * 
      */
     @InputImport(name="notifications")
-      private final @Nullable Input<NotificationSettingsArgs> notifications;
+      private final @Nullable Output<NotificationSettingsArgs> notifications;
 
-    public Input<NotificationSettingsArgs> getNotifications() {
-        return this.notifications == null ? Input.empty() : this.notifications;
+    public Output<NotificationSettingsArgs> getNotifications() {
+        return this.notifications == null ? Output.empty() : this.notifications;
     }
 
-    public ConfigurationProfileResourcePropertiesArgs(@Nullable Input<NotificationSettingsArgs> notifications) {
+    public ConfigurationProfileResourcePropertiesArgs(@Nullable Output<NotificationSettingsArgs> notifications) {
         this.notifications = notifications;
     }
 
     private ConfigurationProfileResourcePropertiesArgs() {
-        this.notifications = Input.empty();
+        this.notifications = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class ConfigurationProfileResourcePropertiesArgs extends io.pulumi.
     }
 
     public static final class Builder {
-        private @Nullable Input<NotificationSettingsArgs> notifications;
+        private @Nullable Output<NotificationSettingsArgs> notifications;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class ConfigurationProfileResourcePropertiesArgs extends io.pulumi.
     	      this.notifications = defaults.notifications;
         }
 
-        public Builder notifications(@Nullable Input<NotificationSettingsArgs> notifications) {
+        public Builder notifications(@Nullable Output<NotificationSettingsArgs> notifications) {
             this.notifications = notifications;
             return this;
         }
 
         public Builder notifications(@Nullable NotificationSettingsArgs notifications) {
-            this.notifications = Input.ofNullable(notifications);
+            this.notifications = Output.ofNullable(notifications);
             return this;
         }
         public ConfigurationProfileResourcePropertiesArgs build() {

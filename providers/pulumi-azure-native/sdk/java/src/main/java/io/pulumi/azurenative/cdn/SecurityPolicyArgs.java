@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.cdn;
 
 import io.pulumi.azurenative.cdn.inputs.SecurityPolicyWebApplicationFirewallParametersArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -20,10 +20,10 @@ public final class SecurityPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="parameters")
-      private final @Nullable Input<SecurityPolicyWebApplicationFirewallParametersArgs> parameters;
+      private final @Nullable Output<SecurityPolicyWebApplicationFirewallParametersArgs> parameters;
 
-    public Input<SecurityPolicyWebApplicationFirewallParametersArgs> getParameters() {
-        return this.parameters == null ? Input.empty() : this.parameters;
+    public Output<SecurityPolicyWebApplicationFirewallParametersArgs> getParameters() {
+        return this.parameters == null ? Output.empty() : this.parameters;
     }
 
     /**
@@ -31,9 +31,9 @@ public final class SecurityPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="profileName", required=true)
-      private final Input<String> profileName;
+      private final Output<String> profileName;
 
-    public Input<String> getProfileName() {
+    public Output<String> getProfileName() {
         return this.profileName;
     }
 
@@ -42,9 +42,9 @@ public final class SecurityPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -53,17 +53,17 @@ public final class SecurityPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="securityPolicyName")
-      private final @Nullable Input<String> securityPolicyName;
+      private final @Nullable Output<String> securityPolicyName;
 
-    public Input<String> getSecurityPolicyName() {
-        return this.securityPolicyName == null ? Input.empty() : this.securityPolicyName;
+    public Output<String> getSecurityPolicyName() {
+        return this.securityPolicyName == null ? Output.empty() : this.securityPolicyName;
     }
 
     public SecurityPolicyArgs(
-        @Nullable Input<SecurityPolicyWebApplicationFirewallParametersArgs> parameters,
-        Input<String> profileName,
-        Input<String> resourceGroupName,
-        @Nullable Input<String> securityPolicyName) {
+        @Nullable Output<SecurityPolicyWebApplicationFirewallParametersArgs> parameters,
+        Output<String> profileName,
+        Output<String> resourceGroupName,
+        @Nullable Output<String> securityPolicyName) {
         this.parameters = parameters;
         this.profileName = Objects.requireNonNull(profileName, "expected parameter 'profileName' to be non-null");
         this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
@@ -71,10 +71,10 @@ public final class SecurityPolicyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private SecurityPolicyArgs() {
-        this.parameters = Input.empty();
-        this.profileName = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.securityPolicyName = Input.empty();
+        this.parameters = Output.empty();
+        this.profileName = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.securityPolicyName = Output.empty();
     }
 
     public static Builder builder() {
@@ -86,10 +86,10 @@ public final class SecurityPolicyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<SecurityPolicyWebApplicationFirewallParametersArgs> parameters;
-        private Input<String> profileName;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<String> securityPolicyName;
+        private @Nullable Output<SecurityPolicyWebApplicationFirewallParametersArgs> parameters;
+        private Output<String> profileName;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<String> securityPolicyName;
 
         public Builder() {
     	      // Empty
@@ -103,43 +103,43 @@ public final class SecurityPolicyArgs extends io.pulumi.resources.ResourceArgs {
     	      this.securityPolicyName = defaults.securityPolicyName;
         }
 
-        public Builder parameters(@Nullable Input<SecurityPolicyWebApplicationFirewallParametersArgs> parameters) {
+        public Builder parameters(@Nullable Output<SecurityPolicyWebApplicationFirewallParametersArgs> parameters) {
             this.parameters = parameters;
             return this;
         }
 
         public Builder parameters(@Nullable SecurityPolicyWebApplicationFirewallParametersArgs parameters) {
-            this.parameters = Input.ofNullable(parameters);
+            this.parameters = Output.ofNullable(parameters);
             return this;
         }
 
-        public Builder profileName(Input<String> profileName) {
+        public Builder profileName(Output<String> profileName) {
             this.profileName = Objects.requireNonNull(profileName);
             return this;
         }
 
         public Builder profileName(String profileName) {
-            this.profileName = Input.of(Objects.requireNonNull(profileName));
+            this.profileName = Output.of(Objects.requireNonNull(profileName));
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder securityPolicyName(@Nullable Input<String> securityPolicyName) {
+        public Builder securityPolicyName(@Nullable Output<String> securityPolicyName) {
             this.securityPolicyName = securityPolicyName;
             return this;
         }
 
         public Builder securityPolicyName(@Nullable String securityPolicyName) {
-            this.securityPolicyName = Input.ofNullable(securityPolicyName);
+            this.securityPolicyName = Output.ofNullable(securityPolicyName);
             return this;
         }
         public SecurityPolicyArgs build() {

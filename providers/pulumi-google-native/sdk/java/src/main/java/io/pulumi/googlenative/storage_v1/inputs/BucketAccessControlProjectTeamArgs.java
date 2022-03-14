@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.storage_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class BucketAccessControlProjectTeamArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="projectNumber")
-      private final @Nullable Input<String> projectNumber;
+      private final @Nullable Output<String> projectNumber;
 
-    public Input<String> getProjectNumber() {
-        return this.projectNumber == null ? Input.empty() : this.projectNumber;
+    public Output<String> getProjectNumber() {
+        return this.projectNumber == null ? Output.empty() : this.projectNumber;
     }
 
     /**
@@ -34,22 +34,22 @@ public final class BucketAccessControlProjectTeamArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="team")
-      private final @Nullable Input<String> team;
+      private final @Nullable Output<String> team;
 
-    public Input<String> getTeam() {
-        return this.team == null ? Input.empty() : this.team;
+    public Output<String> getTeam() {
+        return this.team == null ? Output.empty() : this.team;
     }
 
     public BucketAccessControlProjectTeamArgs(
-        @Nullable Input<String> projectNumber,
-        @Nullable Input<String> team) {
+        @Nullable Output<String> projectNumber,
+        @Nullable Output<String> team) {
         this.projectNumber = projectNumber;
         this.team = team;
     }
 
     private BucketAccessControlProjectTeamArgs() {
-        this.projectNumber = Input.empty();
-        this.team = Input.empty();
+        this.projectNumber = Output.empty();
+        this.team = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class BucketAccessControlProjectTeamArgs extends io.pulumi.resource
     }
 
     public static final class Builder {
-        private @Nullable Input<String> projectNumber;
-        private @Nullable Input<String> team;
+        private @Nullable Output<String> projectNumber;
+        private @Nullable Output<String> team;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class BucketAccessControlProjectTeamArgs extends io.pulumi.resource
     	      this.team = defaults.team;
         }
 
-        public Builder projectNumber(@Nullable Input<String> projectNumber) {
+        public Builder projectNumber(@Nullable Output<String> projectNumber) {
             this.projectNumber = projectNumber;
             return this;
         }
 
         public Builder projectNumber(@Nullable String projectNumber) {
-            this.projectNumber = Input.ofNullable(projectNumber);
+            this.projectNumber = Output.ofNullable(projectNumber);
             return this;
         }
 
-        public Builder team(@Nullable Input<String> team) {
+        public Builder team(@Nullable Output<String> team) {
             this.team = team;
             return this;
         }
 
         public Builder team(@Nullable String team) {
-            this.team = Input.ofNullable(team);
+            this.team = Output.ofNullable(team);
             return this;
         }
         public BucketAccessControlProjectTeamArgs build() {

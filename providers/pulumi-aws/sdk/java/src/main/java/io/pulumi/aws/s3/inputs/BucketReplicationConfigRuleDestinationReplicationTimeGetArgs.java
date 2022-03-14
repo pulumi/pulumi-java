@@ -4,7 +4,7 @@
 package io.pulumi.aws.s3.inputs;
 
 import io.pulumi.aws.s3.inputs.BucketReplicationConfigRuleDestinationReplicationTimeTimeGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,9 +19,9 @@ public final class BucketReplicationConfigRuleDestinationReplicationTimeGetArgs 
      * 
      */
     @InputImport(name="status", required=true)
-      private final Input<String> status;
+      private final Output<String> status;
 
-    public Input<String> getStatus() {
+    public Output<String> getStatus() {
         return this.status;
     }
 
@@ -30,22 +30,22 @@ public final class BucketReplicationConfigRuleDestinationReplicationTimeGetArgs 
      * 
      */
     @InputImport(name="time", required=true)
-      private final Input<BucketReplicationConfigRuleDestinationReplicationTimeTimeGetArgs> time;
+      private final Output<BucketReplicationConfigRuleDestinationReplicationTimeTimeGetArgs> time;
 
-    public Input<BucketReplicationConfigRuleDestinationReplicationTimeTimeGetArgs> getTime() {
+    public Output<BucketReplicationConfigRuleDestinationReplicationTimeTimeGetArgs> getTime() {
         return this.time;
     }
 
     public BucketReplicationConfigRuleDestinationReplicationTimeGetArgs(
-        Input<String> status,
-        Input<BucketReplicationConfigRuleDestinationReplicationTimeTimeGetArgs> time) {
+        Output<String> status,
+        Output<BucketReplicationConfigRuleDestinationReplicationTimeTimeGetArgs> time) {
         this.status = Objects.requireNonNull(status, "expected parameter 'status' to be non-null");
         this.time = Objects.requireNonNull(time, "expected parameter 'time' to be non-null");
     }
 
     private BucketReplicationConfigRuleDestinationReplicationTimeGetArgs() {
-        this.status = Input.empty();
-        this.time = Input.empty();
+        this.status = Output.empty();
+        this.time = Output.empty();
     }
 
     public static Builder builder() {
@@ -57,8 +57,8 @@ public final class BucketReplicationConfigRuleDestinationReplicationTimeGetArgs 
     }
 
     public static final class Builder {
-        private Input<String> status;
-        private Input<BucketReplicationConfigRuleDestinationReplicationTimeTimeGetArgs> time;
+        private Output<String> status;
+        private Output<BucketReplicationConfigRuleDestinationReplicationTimeTimeGetArgs> time;
 
         public Builder() {
     	      // Empty
@@ -70,23 +70,23 @@ public final class BucketReplicationConfigRuleDestinationReplicationTimeGetArgs 
     	      this.time = defaults.time;
         }
 
-        public Builder status(Input<String> status) {
+        public Builder status(Output<String> status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
 
         public Builder status(String status) {
-            this.status = Input.of(Objects.requireNonNull(status));
+            this.status = Output.of(Objects.requireNonNull(status));
             return this;
         }
 
-        public Builder time(Input<BucketReplicationConfigRuleDestinationReplicationTimeTimeGetArgs> time) {
+        public Builder time(Output<BucketReplicationConfigRuleDestinationReplicationTimeTimeGetArgs> time) {
             this.time = Objects.requireNonNull(time);
             return this;
         }
 
         public Builder time(BucketReplicationConfigRuleDestinationReplicationTimeTimeGetArgs time) {
-            this.time = Input.of(Objects.requireNonNull(time));
+            this.time = Output.of(Objects.requireNonNull(time));
             return this;
         }
         public BucketReplicationConfigRuleDestinationReplicationTimeGetArgs build() {

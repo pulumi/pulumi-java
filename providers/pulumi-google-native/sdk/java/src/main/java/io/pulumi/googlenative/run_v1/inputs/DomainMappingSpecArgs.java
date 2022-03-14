@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.run_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.run_v1.enums.DomainMappingSpecCertificateMode;
 import java.lang.Boolean;
@@ -25,10 +25,10 @@ public final class DomainMappingSpecArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="certificateMode")
-      private final @Nullable Input<DomainMappingSpecCertificateMode> certificateMode;
+      private final @Nullable Output<DomainMappingSpecCertificateMode> certificateMode;
 
-    public Input<DomainMappingSpecCertificateMode> getCertificateMode() {
-        return this.certificateMode == null ? Input.empty() : this.certificateMode;
+    public Output<DomainMappingSpecCertificateMode> getCertificateMode() {
+        return this.certificateMode == null ? Output.empty() : this.certificateMode;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class DomainMappingSpecArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="forceOverride")
-      private final @Nullable Input<Boolean> forceOverride;
+      private final @Nullable Output<Boolean> forceOverride;
 
-    public Input<Boolean> getForceOverride() {
-        return this.forceOverride == null ? Input.empty() : this.forceOverride;
+    public Output<Boolean> getForceOverride() {
+        return this.forceOverride == null ? Output.empty() : this.forceOverride;
     }
 
     /**
@@ -47,25 +47,25 @@ public final class DomainMappingSpecArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="routeName")
-      private final @Nullable Input<String> routeName;
+      private final @Nullable Output<String> routeName;
 
-    public Input<String> getRouteName() {
-        return this.routeName == null ? Input.empty() : this.routeName;
+    public Output<String> getRouteName() {
+        return this.routeName == null ? Output.empty() : this.routeName;
     }
 
     public DomainMappingSpecArgs(
-        @Nullable Input<DomainMappingSpecCertificateMode> certificateMode,
-        @Nullable Input<Boolean> forceOverride,
-        @Nullable Input<String> routeName) {
+        @Nullable Output<DomainMappingSpecCertificateMode> certificateMode,
+        @Nullable Output<Boolean> forceOverride,
+        @Nullable Output<String> routeName) {
         this.certificateMode = certificateMode;
         this.forceOverride = forceOverride;
         this.routeName = routeName;
     }
 
     private DomainMappingSpecArgs() {
-        this.certificateMode = Input.empty();
-        this.forceOverride = Input.empty();
-        this.routeName = Input.empty();
+        this.certificateMode = Output.empty();
+        this.forceOverride = Output.empty();
+        this.routeName = Output.empty();
     }
 
     public static Builder builder() {
@@ -77,9 +77,9 @@ public final class DomainMappingSpecArgs extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private @Nullable Input<DomainMappingSpecCertificateMode> certificateMode;
-        private @Nullable Input<Boolean> forceOverride;
-        private @Nullable Input<String> routeName;
+        private @Nullable Output<DomainMappingSpecCertificateMode> certificateMode;
+        private @Nullable Output<Boolean> forceOverride;
+        private @Nullable Output<String> routeName;
 
         public Builder() {
     	      // Empty
@@ -92,33 +92,33 @@ public final class DomainMappingSpecArgs extends io.pulumi.resources.ResourceArg
     	      this.routeName = defaults.routeName;
         }
 
-        public Builder certificateMode(@Nullable Input<DomainMappingSpecCertificateMode> certificateMode) {
+        public Builder certificateMode(@Nullable Output<DomainMappingSpecCertificateMode> certificateMode) {
             this.certificateMode = certificateMode;
             return this;
         }
 
         public Builder certificateMode(@Nullable DomainMappingSpecCertificateMode certificateMode) {
-            this.certificateMode = Input.ofNullable(certificateMode);
+            this.certificateMode = Output.ofNullable(certificateMode);
             return this;
         }
 
-        public Builder forceOverride(@Nullable Input<Boolean> forceOverride) {
+        public Builder forceOverride(@Nullable Output<Boolean> forceOverride) {
             this.forceOverride = forceOverride;
             return this;
         }
 
         public Builder forceOverride(@Nullable Boolean forceOverride) {
-            this.forceOverride = Input.ofNullable(forceOverride);
+            this.forceOverride = Output.ofNullable(forceOverride);
             return this;
         }
 
-        public Builder routeName(@Nullable Input<String> routeName) {
+        public Builder routeName(@Nullable Output<String> routeName) {
             this.routeName = routeName;
             return this;
         }
 
         public Builder routeName(@Nullable String routeName) {
-            this.routeName = Input.ofNullable(routeName);
+            this.routeName = Output.ofNullable(routeName);
             return this;
         }
         public DomainMappingSpecArgs build() {

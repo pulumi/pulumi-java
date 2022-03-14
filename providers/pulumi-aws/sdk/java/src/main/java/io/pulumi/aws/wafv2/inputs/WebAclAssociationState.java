@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.wafv2.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class WebAclAssociationState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="resourceArn")
-      private final @Nullable Input<String> resourceArn;
+      private final @Nullable Output<String> resourceArn;
 
-    public Input<String> getResourceArn() {
-        return this.resourceArn == null ? Input.empty() : this.resourceArn;
+    public Output<String> getResourceArn() {
+        return this.resourceArn == null ? Output.empty() : this.resourceArn;
     }
 
     /**
@@ -30,22 +30,22 @@ public final class WebAclAssociationState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="webAclArn")
-      private final @Nullable Input<String> webAclArn;
+      private final @Nullable Output<String> webAclArn;
 
-    public Input<String> getWebAclArn() {
-        return this.webAclArn == null ? Input.empty() : this.webAclArn;
+    public Output<String> getWebAclArn() {
+        return this.webAclArn == null ? Output.empty() : this.webAclArn;
     }
 
     public WebAclAssociationState(
-        @Nullable Input<String> resourceArn,
-        @Nullable Input<String> webAclArn) {
+        @Nullable Output<String> resourceArn,
+        @Nullable Output<String> webAclArn) {
         this.resourceArn = resourceArn;
         this.webAclArn = webAclArn;
     }
 
     private WebAclAssociationState() {
-        this.resourceArn = Input.empty();
-        this.webAclArn = Input.empty();
+        this.resourceArn = Output.empty();
+        this.webAclArn = Output.empty();
     }
 
     public static Builder builder() {
@@ -57,8 +57,8 @@ public final class WebAclAssociationState extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private @Nullable Input<String> resourceArn;
-        private @Nullable Input<String> webAclArn;
+        private @Nullable Output<String> resourceArn;
+        private @Nullable Output<String> webAclArn;
 
         public Builder() {
     	      // Empty
@@ -70,23 +70,23 @@ public final class WebAclAssociationState extends io.pulumi.resources.ResourceAr
     	      this.webAclArn = defaults.webAclArn;
         }
 
-        public Builder resourceArn(@Nullable Input<String> resourceArn) {
+        public Builder resourceArn(@Nullable Output<String> resourceArn) {
             this.resourceArn = resourceArn;
             return this;
         }
 
         public Builder resourceArn(@Nullable String resourceArn) {
-            this.resourceArn = Input.ofNullable(resourceArn);
+            this.resourceArn = Output.ofNullable(resourceArn);
             return this;
         }
 
-        public Builder webAclArn(@Nullable Input<String> webAclArn) {
+        public Builder webAclArn(@Nullable Output<String> webAclArn) {
             this.webAclArn = webAclArn;
             return this;
         }
 
         public Builder webAclArn(@Nullable String webAclArn) {
-            this.webAclArn = Input.ofNullable(webAclArn);
+            this.webAclArn = Output.ofNullable(webAclArn);
             return this;
         }
         public WebAclAssociationState build() {

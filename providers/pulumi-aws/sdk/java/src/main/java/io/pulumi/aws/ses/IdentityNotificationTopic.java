@@ -6,7 +6,6 @@ package io.pulumi.aws.ses;
 import io.pulumi.aws.Utilities;
 import io.pulumi.aws.ses.IdentityNotificationTopicArgs;
 import io.pulumi.aws.ses.inputs.IdentityNotificationTopicState;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -125,14 +124,14 @@ public class IdentityNotificationTopic extends io.pulumi.resources.CustomResourc
      * @param options A bag of options that control this resource's behavior.
      */
     public IdentityNotificationTopic(String name, IdentityNotificationTopicArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:ses/identityNotificationTopic:IdentityNotificationTopic", name, args == null ? IdentityNotificationTopicArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws:ses/identityNotificationTopic:IdentityNotificationTopic", name, args == null ? IdentityNotificationTopicArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private IdentityNotificationTopic(String name, Input<String> id, @Nullable IdentityNotificationTopicState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private IdentityNotificationTopic(String name, Output<String> id, @Nullable IdentityNotificationTopicState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws:ses/identityNotificationTopic:IdentityNotificationTopic", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -148,7 +147,7 @@ public class IdentityNotificationTopic extends io.pulumi.resources.CustomResourc
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static IdentityNotificationTopic get(String name, Input<String> id, @Nullable IdentityNotificationTopicState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static IdentityNotificationTopic get(String name, Output<String> id, @Nullable IdentityNotificationTopicState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new IdentityNotificationTopic(name, id, state, options);
     }
 }

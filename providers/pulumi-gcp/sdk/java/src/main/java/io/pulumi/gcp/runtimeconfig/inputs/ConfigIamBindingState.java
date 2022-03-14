@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.runtimeconfig.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.runtimeconfig.inputs.ConfigIamBindingConditionGetArgs;
 import java.lang.String;
@@ -17,10 +17,10 @@ public final class ConfigIamBindingState extends io.pulumi.resources.ResourceArg
     public static final ConfigIamBindingState Empty = new ConfigIamBindingState();
 
     @InputImport(name="condition")
-      private final @Nullable Input<ConfigIamBindingConditionGetArgs> condition;
+      private final @Nullable Output<ConfigIamBindingConditionGetArgs> condition;
 
-    public Input<ConfigIamBindingConditionGetArgs> getCondition() {
-        return this.condition == null ? Input.empty() : this.condition;
+    public Output<ConfigIamBindingConditionGetArgs> getCondition() {
+        return this.condition == null ? Output.empty() : this.condition;
     }
 
     /**
@@ -28,10 +28,10 @@ public final class ConfigIamBindingState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="config")
-      private final @Nullable Input<String> config;
+      private final @Nullable Output<String> config;
 
-    public Input<String> getConfig() {
-        return this.config == null ? Input.empty() : this.config;
+    public Output<String> getConfig() {
+        return this.config == null ? Output.empty() : this.config;
     }
 
     /**
@@ -39,17 +39,17 @@ public final class ConfigIamBindingState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="etag")
-      private final @Nullable Input<String> etag;
+      private final @Nullable Output<String> etag;
 
-    public Input<String> getEtag() {
-        return this.etag == null ? Input.empty() : this.etag;
+    public Output<String> getEtag() {
+        return this.etag == null ? Output.empty() : this.etag;
     }
 
     @InputImport(name="members")
-      private final @Nullable Input<List<String>> members;
+      private final @Nullable Output<List<String>> members;
 
-    public Input<List<String>> getMembers() {
-        return this.members == null ? Input.empty() : this.members;
+    public Output<List<String>> getMembers() {
+        return this.members == null ? Output.empty() : this.members;
     }
 
     /**
@@ -58,10 +58,10 @@ public final class ConfigIamBindingState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -71,19 +71,19 @@ public final class ConfigIamBindingState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="role")
-      private final @Nullable Input<String> role;
+      private final @Nullable Output<String> role;
 
-    public Input<String> getRole() {
-        return this.role == null ? Input.empty() : this.role;
+    public Output<String> getRole() {
+        return this.role == null ? Output.empty() : this.role;
     }
 
     public ConfigIamBindingState(
-        @Nullable Input<ConfigIamBindingConditionGetArgs> condition,
-        @Nullable Input<String> config,
-        @Nullable Input<String> etag,
-        @Nullable Input<List<String>> members,
-        @Nullable Input<String> project,
-        @Nullable Input<String> role) {
+        @Nullable Output<ConfigIamBindingConditionGetArgs> condition,
+        @Nullable Output<String> config,
+        @Nullable Output<String> etag,
+        @Nullable Output<List<String>> members,
+        @Nullable Output<String> project,
+        @Nullable Output<String> role) {
         this.condition = condition;
         this.config = config;
         this.etag = etag;
@@ -93,12 +93,12 @@ public final class ConfigIamBindingState extends io.pulumi.resources.ResourceArg
     }
 
     private ConfigIamBindingState() {
-        this.condition = Input.empty();
-        this.config = Input.empty();
-        this.etag = Input.empty();
-        this.members = Input.empty();
-        this.project = Input.empty();
-        this.role = Input.empty();
+        this.condition = Output.empty();
+        this.config = Output.empty();
+        this.etag = Output.empty();
+        this.members = Output.empty();
+        this.project = Output.empty();
+        this.role = Output.empty();
     }
 
     public static Builder builder() {
@@ -110,12 +110,12 @@ public final class ConfigIamBindingState extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private @Nullable Input<ConfigIamBindingConditionGetArgs> condition;
-        private @Nullable Input<String> config;
-        private @Nullable Input<String> etag;
-        private @Nullable Input<List<String>> members;
-        private @Nullable Input<String> project;
-        private @Nullable Input<String> role;
+        private @Nullable Output<ConfigIamBindingConditionGetArgs> condition;
+        private @Nullable Output<String> config;
+        private @Nullable Output<String> etag;
+        private @Nullable Output<List<String>> members;
+        private @Nullable Output<String> project;
+        private @Nullable Output<String> role;
 
         public Builder() {
     	      // Empty
@@ -131,63 +131,63 @@ public final class ConfigIamBindingState extends io.pulumi.resources.ResourceArg
     	      this.role = defaults.role;
         }
 
-        public Builder condition(@Nullable Input<ConfigIamBindingConditionGetArgs> condition) {
+        public Builder condition(@Nullable Output<ConfigIamBindingConditionGetArgs> condition) {
             this.condition = condition;
             return this;
         }
 
         public Builder condition(@Nullable ConfigIamBindingConditionGetArgs condition) {
-            this.condition = Input.ofNullable(condition);
+            this.condition = Output.ofNullable(condition);
             return this;
         }
 
-        public Builder config(@Nullable Input<String> config) {
+        public Builder config(@Nullable Output<String> config) {
             this.config = config;
             return this;
         }
 
         public Builder config(@Nullable String config) {
-            this.config = Input.ofNullable(config);
+            this.config = Output.ofNullable(config);
             return this;
         }
 
-        public Builder etag(@Nullable Input<String> etag) {
+        public Builder etag(@Nullable Output<String> etag) {
             this.etag = etag;
             return this;
         }
 
         public Builder etag(@Nullable String etag) {
-            this.etag = Input.ofNullable(etag);
+            this.etag = Output.ofNullable(etag);
             return this;
         }
 
-        public Builder members(@Nullable Input<List<String>> members) {
+        public Builder members(@Nullable Output<List<String>> members) {
             this.members = members;
             return this;
         }
 
         public Builder members(@Nullable List<String> members) {
-            this.members = Input.ofNullable(members);
+            this.members = Output.ofNullable(members);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder role(@Nullable Input<String> role) {
+        public Builder role(@Nullable Output<String> role) {
             this.role = role;
             return this;
         }
 
         public Builder role(@Nullable String role) {
-            this.role = Input.ofNullable(role);
+            this.role = Output.ofNullable(role);
             return this;
         }
         public ConfigIamBindingState build() {

@@ -5,7 +5,7 @@ package io.pulumi.azurenative.avs;
 
 import io.pulumi.azurenative.avs.inputs.DiskPoolVolumeArgs;
 import io.pulumi.azurenative.avs.inputs.NetAppVolumeArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -21,9 +21,9 @@ public final class DatastoreArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="clusterName", required=true)
-      private final Input<String> clusterName;
+      private final Output<String> clusterName;
 
-    public Input<String> getClusterName() {
+    public Output<String> getClusterName() {
         return this.clusterName;
     }
 
@@ -32,10 +32,10 @@ public final class DatastoreArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="datastoreName")
-      private final @Nullable Input<String> datastoreName;
+      private final @Nullable Output<String> datastoreName;
 
-    public Input<String> getDatastoreName() {
-        return this.datastoreName == null ? Input.empty() : this.datastoreName;
+    public Output<String> getDatastoreName() {
+        return this.datastoreName == null ? Output.empty() : this.datastoreName;
     }
 
     /**
@@ -43,10 +43,10 @@ public final class DatastoreArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="diskPoolVolume")
-      private final @Nullable Input<DiskPoolVolumeArgs> diskPoolVolume;
+      private final @Nullable Output<DiskPoolVolumeArgs> diskPoolVolume;
 
-    public Input<DiskPoolVolumeArgs> getDiskPoolVolume() {
-        return this.diskPoolVolume == null ? Input.empty() : this.diskPoolVolume;
+    public Output<DiskPoolVolumeArgs> getDiskPoolVolume() {
+        return this.diskPoolVolume == null ? Output.empty() : this.diskPoolVolume;
     }
 
     /**
@@ -54,10 +54,10 @@ public final class DatastoreArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="netAppVolume")
-      private final @Nullable Input<NetAppVolumeArgs> netAppVolume;
+      private final @Nullable Output<NetAppVolumeArgs> netAppVolume;
 
-    public Input<NetAppVolumeArgs> getNetAppVolume() {
-        return this.netAppVolume == null ? Input.empty() : this.netAppVolume;
+    public Output<NetAppVolumeArgs> getNetAppVolume() {
+        return this.netAppVolume == null ? Output.empty() : this.netAppVolume;
     }
 
     /**
@@ -65,9 +65,9 @@ public final class DatastoreArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="privateCloudName", required=true)
-      private final Input<String> privateCloudName;
+      private final Output<String> privateCloudName;
 
-    public Input<String> getPrivateCloudName() {
+    public Output<String> getPrivateCloudName() {
         return this.privateCloudName;
     }
 
@@ -76,19 +76,19 @@ public final class DatastoreArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
     public DatastoreArgs(
-        Input<String> clusterName,
-        @Nullable Input<String> datastoreName,
-        @Nullable Input<DiskPoolVolumeArgs> diskPoolVolume,
-        @Nullable Input<NetAppVolumeArgs> netAppVolume,
-        Input<String> privateCloudName,
-        Input<String> resourceGroupName) {
+        Output<String> clusterName,
+        @Nullable Output<String> datastoreName,
+        @Nullable Output<DiskPoolVolumeArgs> diskPoolVolume,
+        @Nullable Output<NetAppVolumeArgs> netAppVolume,
+        Output<String> privateCloudName,
+        Output<String> resourceGroupName) {
         this.clusterName = Objects.requireNonNull(clusterName, "expected parameter 'clusterName' to be non-null");
         this.datastoreName = datastoreName;
         this.diskPoolVolume = diskPoolVolume;
@@ -98,12 +98,12 @@ public final class DatastoreArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DatastoreArgs() {
-        this.clusterName = Input.empty();
-        this.datastoreName = Input.empty();
-        this.diskPoolVolume = Input.empty();
-        this.netAppVolume = Input.empty();
-        this.privateCloudName = Input.empty();
-        this.resourceGroupName = Input.empty();
+        this.clusterName = Output.empty();
+        this.datastoreName = Output.empty();
+        this.diskPoolVolume = Output.empty();
+        this.netAppVolume = Output.empty();
+        this.privateCloudName = Output.empty();
+        this.resourceGroupName = Output.empty();
     }
 
     public static Builder builder() {
@@ -115,12 +115,12 @@ public final class DatastoreArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> clusterName;
-        private @Nullable Input<String> datastoreName;
-        private @Nullable Input<DiskPoolVolumeArgs> diskPoolVolume;
-        private @Nullable Input<NetAppVolumeArgs> netAppVolume;
-        private Input<String> privateCloudName;
-        private Input<String> resourceGroupName;
+        private Output<String> clusterName;
+        private @Nullable Output<String> datastoreName;
+        private @Nullable Output<DiskPoolVolumeArgs> diskPoolVolume;
+        private @Nullable Output<NetAppVolumeArgs> netAppVolume;
+        private Output<String> privateCloudName;
+        private Output<String> resourceGroupName;
 
         public Builder() {
     	      // Empty
@@ -136,63 +136,63 @@ public final class DatastoreArgs extends io.pulumi.resources.ResourceArgs {
     	      this.resourceGroupName = defaults.resourceGroupName;
         }
 
-        public Builder clusterName(Input<String> clusterName) {
+        public Builder clusterName(Output<String> clusterName) {
             this.clusterName = Objects.requireNonNull(clusterName);
             return this;
         }
 
         public Builder clusterName(String clusterName) {
-            this.clusterName = Input.of(Objects.requireNonNull(clusterName));
+            this.clusterName = Output.of(Objects.requireNonNull(clusterName));
             return this;
         }
 
-        public Builder datastoreName(@Nullable Input<String> datastoreName) {
+        public Builder datastoreName(@Nullable Output<String> datastoreName) {
             this.datastoreName = datastoreName;
             return this;
         }
 
         public Builder datastoreName(@Nullable String datastoreName) {
-            this.datastoreName = Input.ofNullable(datastoreName);
+            this.datastoreName = Output.ofNullable(datastoreName);
             return this;
         }
 
-        public Builder diskPoolVolume(@Nullable Input<DiskPoolVolumeArgs> diskPoolVolume) {
+        public Builder diskPoolVolume(@Nullable Output<DiskPoolVolumeArgs> diskPoolVolume) {
             this.diskPoolVolume = diskPoolVolume;
             return this;
         }
 
         public Builder diskPoolVolume(@Nullable DiskPoolVolumeArgs diskPoolVolume) {
-            this.diskPoolVolume = Input.ofNullable(diskPoolVolume);
+            this.diskPoolVolume = Output.ofNullable(diskPoolVolume);
             return this;
         }
 
-        public Builder netAppVolume(@Nullable Input<NetAppVolumeArgs> netAppVolume) {
+        public Builder netAppVolume(@Nullable Output<NetAppVolumeArgs> netAppVolume) {
             this.netAppVolume = netAppVolume;
             return this;
         }
 
         public Builder netAppVolume(@Nullable NetAppVolumeArgs netAppVolume) {
-            this.netAppVolume = Input.ofNullable(netAppVolume);
+            this.netAppVolume = Output.ofNullable(netAppVolume);
             return this;
         }
 
-        public Builder privateCloudName(Input<String> privateCloudName) {
+        public Builder privateCloudName(Output<String> privateCloudName) {
             this.privateCloudName = Objects.requireNonNull(privateCloudName);
             return this;
         }
 
         public Builder privateCloudName(String privateCloudName) {
-            this.privateCloudName = Input.of(Objects.requireNonNull(privateCloudName));
+            this.privateCloudName = Output.of(Objects.requireNonNull(privateCloudName));
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
         public DatastoreArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.appengine_v1beta.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class EntrypointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="shell")
-      private final @Nullable Input<String> shell;
+      private final @Nullable Output<String> shell;
 
-    public Input<String> getShell() {
-        return this.shell == null ? Input.empty() : this.shell;
+    public Output<String> getShell() {
+        return this.shell == null ? Output.empty() : this.shell;
     }
 
-    public EntrypointArgs(@Nullable Input<String> shell) {
+    public EntrypointArgs(@Nullable Output<String> shell) {
         this.shell = shell;
     }
 
     private EntrypointArgs() {
-        this.shell = Input.empty();
+        this.shell = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class EntrypointArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> shell;
+        private @Nullable Output<String> shell;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class EntrypointArgs extends io.pulumi.resources.ResourceArgs {
     	      this.shell = defaults.shell;
         }
 
-        public Builder shell(@Nullable Input<String> shell) {
+        public Builder shell(@Nullable Output<String> shell) {
             this.shell = shell;
             return this;
         }
 
         public Builder shell(@Nullable String shell) {
-            this.shell = Input.ofNullable(shell);
+            this.shell = Output.ofNullable(shell);
             return this;
         }
         public EntrypointArgs build() {

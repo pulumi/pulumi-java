@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.file_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.file_v1.enums.NetworkConfigConnectMode;
 import io.pulumi.googlenative.file_v1.enums.NetworkConfigModesItem;
@@ -26,10 +26,10 @@ public final class NetworkConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="connectMode")
-      private final @Nullable Input<NetworkConfigConnectMode> connectMode;
+      private final @Nullable Output<NetworkConfigConnectMode> connectMode;
 
-    public Input<NetworkConfigConnectMode> getConnectMode() {
-        return this.connectMode == null ? Input.empty() : this.connectMode;
+    public Output<NetworkConfigConnectMode> getConnectMode() {
+        return this.connectMode == null ? Output.empty() : this.connectMode;
     }
 
     /**
@@ -37,10 +37,10 @@ public final class NetworkConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="modes")
-      private final @Nullable Input<List<NetworkConfigModesItem>> modes;
+      private final @Nullable Output<List<NetworkConfigModesItem>> modes;
 
-    public Input<List<NetworkConfigModesItem>> getModes() {
-        return this.modes == null ? Input.empty() : this.modes;
+    public Output<List<NetworkConfigModesItem>> getModes() {
+        return this.modes == null ? Output.empty() : this.modes;
     }
 
     /**
@@ -48,10 +48,10 @@ public final class NetworkConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="network")
-      private final @Nullable Input<String> network;
+      private final @Nullable Output<String> network;
 
-    public Input<String> getNetwork() {
-        return this.network == null ? Input.empty() : this.network;
+    public Output<String> getNetwork() {
+        return this.network == null ? Output.empty() : this.network;
     }
 
     /**
@@ -59,17 +59,17 @@ public final class NetworkConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="reservedIpRange")
-      private final @Nullable Input<String> reservedIpRange;
+      private final @Nullable Output<String> reservedIpRange;
 
-    public Input<String> getReservedIpRange() {
-        return this.reservedIpRange == null ? Input.empty() : this.reservedIpRange;
+    public Output<String> getReservedIpRange() {
+        return this.reservedIpRange == null ? Output.empty() : this.reservedIpRange;
     }
 
     public NetworkConfigArgs(
-        @Nullable Input<NetworkConfigConnectMode> connectMode,
-        @Nullable Input<List<NetworkConfigModesItem>> modes,
-        @Nullable Input<String> network,
-        @Nullable Input<String> reservedIpRange) {
+        @Nullable Output<NetworkConfigConnectMode> connectMode,
+        @Nullable Output<List<NetworkConfigModesItem>> modes,
+        @Nullable Output<String> network,
+        @Nullable Output<String> reservedIpRange) {
         this.connectMode = connectMode;
         this.modes = modes;
         this.network = network;
@@ -77,10 +77,10 @@ public final class NetworkConfigArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private NetworkConfigArgs() {
-        this.connectMode = Input.empty();
-        this.modes = Input.empty();
-        this.network = Input.empty();
-        this.reservedIpRange = Input.empty();
+        this.connectMode = Output.empty();
+        this.modes = Output.empty();
+        this.network = Output.empty();
+        this.reservedIpRange = Output.empty();
     }
 
     public static Builder builder() {
@@ -92,10 +92,10 @@ public final class NetworkConfigArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<NetworkConfigConnectMode> connectMode;
-        private @Nullable Input<List<NetworkConfigModesItem>> modes;
-        private @Nullable Input<String> network;
-        private @Nullable Input<String> reservedIpRange;
+        private @Nullable Output<NetworkConfigConnectMode> connectMode;
+        private @Nullable Output<List<NetworkConfigModesItem>> modes;
+        private @Nullable Output<String> network;
+        private @Nullable Output<String> reservedIpRange;
 
         public Builder() {
     	      // Empty
@@ -109,43 +109,43 @@ public final class NetworkConfigArgs extends io.pulumi.resources.ResourceArgs {
     	      this.reservedIpRange = defaults.reservedIpRange;
         }
 
-        public Builder connectMode(@Nullable Input<NetworkConfigConnectMode> connectMode) {
+        public Builder connectMode(@Nullable Output<NetworkConfigConnectMode> connectMode) {
             this.connectMode = connectMode;
             return this;
         }
 
         public Builder connectMode(@Nullable NetworkConfigConnectMode connectMode) {
-            this.connectMode = Input.ofNullable(connectMode);
+            this.connectMode = Output.ofNullable(connectMode);
             return this;
         }
 
-        public Builder modes(@Nullable Input<List<NetworkConfigModesItem>> modes) {
+        public Builder modes(@Nullable Output<List<NetworkConfigModesItem>> modes) {
             this.modes = modes;
             return this;
         }
 
         public Builder modes(@Nullable List<NetworkConfigModesItem> modes) {
-            this.modes = Input.ofNullable(modes);
+            this.modes = Output.ofNullable(modes);
             return this;
         }
 
-        public Builder network(@Nullable Input<String> network) {
+        public Builder network(@Nullable Output<String> network) {
             this.network = network;
             return this;
         }
 
         public Builder network(@Nullable String network) {
-            this.network = Input.ofNullable(network);
+            this.network = Output.ofNullable(network);
             return this;
         }
 
-        public Builder reservedIpRange(@Nullable Input<String> reservedIpRange) {
+        public Builder reservedIpRange(@Nullable Output<String> reservedIpRange) {
             this.reservedIpRange = reservedIpRange;
             return this;
         }
 
         public Builder reservedIpRange(@Nullable String reservedIpRange) {
-            this.reservedIpRange = Input.ofNullable(reservedIpRange);
+            this.reservedIpRange = Output.ofNullable(reservedIpRange);
             return this;
         }
         public NetworkConfigArgs build() {

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.datafactory.inputs;
 
 import io.pulumi.azurenative.datafactory.inputs.LinkedServiceReferenceArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.util.Objects;
@@ -24,10 +24,10 @@ public final class DataFlowStagingInfoArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="folderPath")
-      private final @Nullable Input<Object> folderPath;
+      private final @Nullable Output<Object> folderPath;
 
-    public Input<Object> getFolderPath() {
-        return this.folderPath == null ? Input.empty() : this.folderPath;
+    public Output<Object> getFolderPath() {
+        return this.folderPath == null ? Output.empty() : this.folderPath;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class DataFlowStagingInfoArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="linkedService")
-      private final @Nullable Input<LinkedServiceReferenceArgs> linkedService;
+      private final @Nullable Output<LinkedServiceReferenceArgs> linkedService;
 
-    public Input<LinkedServiceReferenceArgs> getLinkedService() {
-        return this.linkedService == null ? Input.empty() : this.linkedService;
+    public Output<LinkedServiceReferenceArgs> getLinkedService() {
+        return this.linkedService == null ? Output.empty() : this.linkedService;
     }
 
     public DataFlowStagingInfoArgs(
-        @Nullable Input<Object> folderPath,
-        @Nullable Input<LinkedServiceReferenceArgs> linkedService) {
+        @Nullable Output<Object> folderPath,
+        @Nullable Output<LinkedServiceReferenceArgs> linkedService) {
         this.folderPath = folderPath;
         this.linkedService = linkedService;
     }
 
     private DataFlowStagingInfoArgs() {
-        this.folderPath = Input.empty();
-        this.linkedService = Input.empty();
+        this.folderPath = Output.empty();
+        this.linkedService = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class DataFlowStagingInfoArgs extends io.pulumi.resources.ResourceA
     }
 
     public static final class Builder {
-        private @Nullable Input<Object> folderPath;
-        private @Nullable Input<LinkedServiceReferenceArgs> linkedService;
+        private @Nullable Output<Object> folderPath;
+        private @Nullable Output<LinkedServiceReferenceArgs> linkedService;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class DataFlowStagingInfoArgs extends io.pulumi.resources.ResourceA
     	      this.linkedService = defaults.linkedService;
         }
 
-        public Builder folderPath(@Nullable Input<Object> folderPath) {
+        public Builder folderPath(@Nullable Output<Object> folderPath) {
             this.folderPath = folderPath;
             return this;
         }
 
         public Builder folderPath(@Nullable Object folderPath) {
-            this.folderPath = Input.ofNullable(folderPath);
+            this.folderPath = Output.ofNullable(folderPath);
             return this;
         }
 
-        public Builder linkedService(@Nullable Input<LinkedServiceReferenceArgs> linkedService) {
+        public Builder linkedService(@Nullable Output<LinkedServiceReferenceArgs> linkedService) {
             this.linkedService = linkedService;
             return this;
         }
 
         public Builder linkedService(@Nullable LinkedServiceReferenceArgs linkedService) {
-            this.linkedService = Input.ofNullable(linkedService);
+            this.linkedService = Output.ofNullable(linkedService);
             return this;
         }
         public DataFlowStagingInfoArgs build() {

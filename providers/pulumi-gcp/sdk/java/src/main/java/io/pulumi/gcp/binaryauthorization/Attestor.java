@@ -3,7 +3,6 @@
 
 package io.pulumi.gcp.binaryauthorization;
 
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -145,14 +144,14 @@ public class Attestor extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Attestor(String name, AttestorArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:binaryauthorization/attestor:Attestor", name, args == null ? AttestorArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("gcp:binaryauthorization/attestor:Attestor", name, args == null ? AttestorArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private Attestor(String name, Input<String> id, @Nullable AttestorState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private Attestor(String name, Output<String> id, @Nullable AttestorState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("gcp:binaryauthorization/attestor:Attestor", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -168,7 +167,7 @@ public class Attestor extends io.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static Attestor get(String name, Input<String> id, @Nullable AttestorState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static Attestor get(String name, Output<String> id, @Nullable AttestorState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Attestor(name, id, state, options);
     }
 }

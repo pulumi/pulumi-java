@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.elb.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class AttachmentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="elb")
-      private final @Nullable Input<String> elb;
+      private final @Nullable Output<String> elb;
 
-    public Input<String> getElb() {
-        return this.elb == null ? Input.empty() : this.elb;
+    public Output<String> getElb() {
+        return this.elb == null ? Output.empty() : this.elb;
     }
 
     /**
@@ -30,22 +30,22 @@ public final class AttachmentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="instance")
-      private final @Nullable Input<String> instance;
+      private final @Nullable Output<String> instance;
 
-    public Input<String> getInstance() {
-        return this.instance == null ? Input.empty() : this.instance;
+    public Output<String> getInstance() {
+        return this.instance == null ? Output.empty() : this.instance;
     }
 
     public AttachmentState(
-        @Nullable Input<String> elb,
-        @Nullable Input<String> instance) {
+        @Nullable Output<String> elb,
+        @Nullable Output<String> instance) {
         this.elb = elb;
         this.instance = instance;
     }
 
     private AttachmentState() {
-        this.elb = Input.empty();
-        this.instance = Input.empty();
+        this.elb = Output.empty();
+        this.instance = Output.empty();
     }
 
     public static Builder builder() {
@@ -57,8 +57,8 @@ public final class AttachmentState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> elb;
-        private @Nullable Input<String> instance;
+        private @Nullable Output<String> elb;
+        private @Nullable Output<String> instance;
 
         public Builder() {
     	      // Empty
@@ -70,23 +70,23 @@ public final class AttachmentState extends io.pulumi.resources.ResourceArgs {
     	      this.instance = defaults.instance;
         }
 
-        public Builder elb(@Nullable Input<String> elb) {
+        public Builder elb(@Nullable Output<String> elb) {
             this.elb = elb;
             return this;
         }
 
         public Builder elb(@Nullable String elb) {
-            this.elb = Input.ofNullable(elb);
+            this.elb = Output.ofNullable(elb);
             return this;
         }
 
-        public Builder instance(@Nullable Input<String> instance) {
+        public Builder instance(@Nullable Output<String> instance) {
             this.instance = instance;
             return this;
         }
 
         public Builder instance(@Nullable String instance) {
-            this.instance = Input.ofNullable(instance);
+            this.instance = Output.ofNullable(instance);
             return this;
         }
         public AttachmentState build() {

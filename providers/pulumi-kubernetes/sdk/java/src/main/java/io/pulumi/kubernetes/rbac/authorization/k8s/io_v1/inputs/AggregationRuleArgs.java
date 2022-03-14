@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.rbac.authorization.k8s.io_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.kubernetes.meta_v1.inputs.LabelSelectorArgs;
 import java.util.List;
@@ -24,18 +24,18 @@ public final class AggregationRuleArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="clusterRoleSelectors")
-      private final @Nullable Input<List<LabelSelectorArgs>> clusterRoleSelectors;
+      private final @Nullable Output<List<LabelSelectorArgs>> clusterRoleSelectors;
 
-    public Input<List<LabelSelectorArgs>> getClusterRoleSelectors() {
-        return this.clusterRoleSelectors == null ? Input.empty() : this.clusterRoleSelectors;
+    public Output<List<LabelSelectorArgs>> getClusterRoleSelectors() {
+        return this.clusterRoleSelectors == null ? Output.empty() : this.clusterRoleSelectors;
     }
 
-    public AggregationRuleArgs(@Nullable Input<List<LabelSelectorArgs>> clusterRoleSelectors) {
+    public AggregationRuleArgs(@Nullable Output<List<LabelSelectorArgs>> clusterRoleSelectors) {
         this.clusterRoleSelectors = clusterRoleSelectors;
     }
 
     private AggregationRuleArgs() {
-        this.clusterRoleSelectors = Input.empty();
+        this.clusterRoleSelectors = Output.empty();
     }
 
     public static Builder builder() {
@@ -47,7 +47,7 @@ public final class AggregationRuleArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private @Nullable Input<List<LabelSelectorArgs>> clusterRoleSelectors;
+        private @Nullable Output<List<LabelSelectorArgs>> clusterRoleSelectors;
 
         public Builder() {
     	      // Empty
@@ -58,13 +58,13 @@ public final class AggregationRuleArgs extends io.pulumi.resources.ResourceArgs 
     	      this.clusterRoleSelectors = defaults.clusterRoleSelectors;
         }
 
-        public Builder clusterRoleSelectors(@Nullable Input<List<LabelSelectorArgs>> clusterRoleSelectors) {
+        public Builder clusterRoleSelectors(@Nullable Output<List<LabelSelectorArgs>> clusterRoleSelectors) {
             this.clusterRoleSelectors = clusterRoleSelectors;
             return this;
         }
 
         public Builder clusterRoleSelectors(@Nullable List<LabelSelectorArgs> clusterRoleSelectors) {
-            this.clusterRoleSelectors = Input.ofNullable(clusterRoleSelectors);
+            this.clusterRoleSelectors = Output.ofNullable(clusterRoleSelectors);
             return this;
         }
         public AggregationRuleArgs build() {

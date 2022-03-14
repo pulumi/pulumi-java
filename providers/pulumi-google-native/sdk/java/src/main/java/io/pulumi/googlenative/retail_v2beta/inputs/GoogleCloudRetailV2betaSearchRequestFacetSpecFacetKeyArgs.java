@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.retail_v2beta.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.retail_v2beta.inputs.GoogleCloudRetailV2betaIntervalArgs;
 import java.lang.String;
@@ -25,10 +25,10 @@ public final class GoogleCloudRetailV2betaSearchRequestFacetSpecFacetKeyArgs ext
      * 
      */
     @InputImport(name="contains")
-      private final @Nullable Input<List<String>> contains;
+      private final @Nullable Output<List<String>> contains;
 
-    public Input<List<String>> getContains() {
-        return this.contains == null ? Input.empty() : this.contains;
+    public Output<List<String>> getContains() {
+        return this.contains == null ? Output.empty() : this.contains;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class GoogleCloudRetailV2betaSearchRequestFacetSpecFacetKeyArgs ext
      * 
      */
     @InputImport(name="intervals")
-      private final @Nullable Input<List<GoogleCloudRetailV2betaIntervalArgs>> intervals;
+      private final @Nullable Output<List<GoogleCloudRetailV2betaIntervalArgs>> intervals;
 
-    public Input<List<GoogleCloudRetailV2betaIntervalArgs>> getIntervals() {
-        return this.intervals == null ? Input.empty() : this.intervals;
+    public Output<List<GoogleCloudRetailV2betaIntervalArgs>> getIntervals() {
+        return this.intervals == null ? Output.empty() : this.intervals;
     }
 
     /**
@@ -47,9 +47,9 @@ public final class GoogleCloudRetailV2betaSearchRequestFacetSpecFacetKeyArgs ext
      * 
      */
     @InputImport(name="key", required=true)
-      private final Input<String> key;
+      private final Output<String> key;
 
-    public Input<String> getKey() {
+    public Output<String> getKey() {
         return this.key;
     }
 
@@ -58,10 +58,10 @@ public final class GoogleCloudRetailV2betaSearchRequestFacetSpecFacetKeyArgs ext
      * 
      */
     @InputImport(name="orderBy")
-      private final @Nullable Input<String> orderBy;
+      private final @Nullable Output<String> orderBy;
 
-    public Input<String> getOrderBy() {
-        return this.orderBy == null ? Input.empty() : this.orderBy;
+    public Output<String> getOrderBy() {
+        return this.orderBy == null ? Output.empty() : this.orderBy;
     }
 
     /**
@@ -69,10 +69,10 @@ public final class GoogleCloudRetailV2betaSearchRequestFacetSpecFacetKeyArgs ext
      * 
      */
     @InputImport(name="prefixes")
-      private final @Nullable Input<List<String>> prefixes;
+      private final @Nullable Output<List<String>> prefixes;
 
-    public Input<List<String>> getPrefixes() {
-        return this.prefixes == null ? Input.empty() : this.prefixes;
+    public Output<List<String>> getPrefixes() {
+        return this.prefixes == null ? Output.empty() : this.prefixes;
     }
 
     /**
@@ -80,10 +80,10 @@ public final class GoogleCloudRetailV2betaSearchRequestFacetSpecFacetKeyArgs ext
      * 
      */
     @InputImport(name="query")
-      private final @Nullable Input<String> query;
+      private final @Nullable Output<String> query;
 
-    public Input<String> getQuery() {
-        return this.query == null ? Input.empty() : this.query;
+    public Output<String> getQuery() {
+        return this.query == null ? Output.empty() : this.query;
     }
 
     /**
@@ -91,20 +91,20 @@ public final class GoogleCloudRetailV2betaSearchRequestFacetSpecFacetKeyArgs ext
      * 
      */
     @InputImport(name="restrictedValues")
-      private final @Nullable Input<List<String>> restrictedValues;
+      private final @Nullable Output<List<String>> restrictedValues;
 
-    public Input<List<String>> getRestrictedValues() {
-        return this.restrictedValues == null ? Input.empty() : this.restrictedValues;
+    public Output<List<String>> getRestrictedValues() {
+        return this.restrictedValues == null ? Output.empty() : this.restrictedValues;
     }
 
     public GoogleCloudRetailV2betaSearchRequestFacetSpecFacetKeyArgs(
-        @Nullable Input<List<String>> contains,
-        @Nullable Input<List<GoogleCloudRetailV2betaIntervalArgs>> intervals,
-        Input<String> key,
-        @Nullable Input<String> orderBy,
-        @Nullable Input<List<String>> prefixes,
-        @Nullable Input<String> query,
-        @Nullable Input<List<String>> restrictedValues) {
+        @Nullable Output<List<String>> contains,
+        @Nullable Output<List<GoogleCloudRetailV2betaIntervalArgs>> intervals,
+        Output<String> key,
+        @Nullable Output<String> orderBy,
+        @Nullable Output<List<String>> prefixes,
+        @Nullable Output<String> query,
+        @Nullable Output<List<String>> restrictedValues) {
         this.contains = contains;
         this.intervals = intervals;
         this.key = Objects.requireNonNull(key, "expected parameter 'key' to be non-null");
@@ -115,13 +115,13 @@ public final class GoogleCloudRetailV2betaSearchRequestFacetSpecFacetKeyArgs ext
     }
 
     private GoogleCloudRetailV2betaSearchRequestFacetSpecFacetKeyArgs() {
-        this.contains = Input.empty();
-        this.intervals = Input.empty();
-        this.key = Input.empty();
-        this.orderBy = Input.empty();
-        this.prefixes = Input.empty();
-        this.query = Input.empty();
-        this.restrictedValues = Input.empty();
+        this.contains = Output.empty();
+        this.intervals = Output.empty();
+        this.key = Output.empty();
+        this.orderBy = Output.empty();
+        this.prefixes = Output.empty();
+        this.query = Output.empty();
+        this.restrictedValues = Output.empty();
     }
 
     public static Builder builder() {
@@ -133,13 +133,13 @@ public final class GoogleCloudRetailV2betaSearchRequestFacetSpecFacetKeyArgs ext
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> contains;
-        private @Nullable Input<List<GoogleCloudRetailV2betaIntervalArgs>> intervals;
-        private Input<String> key;
-        private @Nullable Input<String> orderBy;
-        private @Nullable Input<List<String>> prefixes;
-        private @Nullable Input<String> query;
-        private @Nullable Input<List<String>> restrictedValues;
+        private @Nullable Output<List<String>> contains;
+        private @Nullable Output<List<GoogleCloudRetailV2betaIntervalArgs>> intervals;
+        private Output<String> key;
+        private @Nullable Output<String> orderBy;
+        private @Nullable Output<List<String>> prefixes;
+        private @Nullable Output<String> query;
+        private @Nullable Output<List<String>> restrictedValues;
 
         public Builder() {
     	      // Empty
@@ -156,73 +156,73 @@ public final class GoogleCloudRetailV2betaSearchRequestFacetSpecFacetKeyArgs ext
     	      this.restrictedValues = defaults.restrictedValues;
         }
 
-        public Builder contains(@Nullable Input<List<String>> contains) {
+        public Builder contains(@Nullable Output<List<String>> contains) {
             this.contains = contains;
             return this;
         }
 
         public Builder contains(@Nullable List<String> contains) {
-            this.contains = Input.ofNullable(contains);
+            this.contains = Output.ofNullable(contains);
             return this;
         }
 
-        public Builder intervals(@Nullable Input<List<GoogleCloudRetailV2betaIntervalArgs>> intervals) {
+        public Builder intervals(@Nullable Output<List<GoogleCloudRetailV2betaIntervalArgs>> intervals) {
             this.intervals = intervals;
             return this;
         }
 
         public Builder intervals(@Nullable List<GoogleCloudRetailV2betaIntervalArgs> intervals) {
-            this.intervals = Input.ofNullable(intervals);
+            this.intervals = Output.ofNullable(intervals);
             return this;
         }
 
-        public Builder key(Input<String> key) {
+        public Builder key(Output<String> key) {
             this.key = Objects.requireNonNull(key);
             return this;
         }
 
         public Builder key(String key) {
-            this.key = Input.of(Objects.requireNonNull(key));
+            this.key = Output.of(Objects.requireNonNull(key));
             return this;
         }
 
-        public Builder orderBy(@Nullable Input<String> orderBy) {
+        public Builder orderBy(@Nullable Output<String> orderBy) {
             this.orderBy = orderBy;
             return this;
         }
 
         public Builder orderBy(@Nullable String orderBy) {
-            this.orderBy = Input.ofNullable(orderBy);
+            this.orderBy = Output.ofNullable(orderBy);
             return this;
         }
 
-        public Builder prefixes(@Nullable Input<List<String>> prefixes) {
+        public Builder prefixes(@Nullable Output<List<String>> prefixes) {
             this.prefixes = prefixes;
             return this;
         }
 
         public Builder prefixes(@Nullable List<String> prefixes) {
-            this.prefixes = Input.ofNullable(prefixes);
+            this.prefixes = Output.ofNullable(prefixes);
             return this;
         }
 
-        public Builder query(@Nullable Input<String> query) {
+        public Builder query(@Nullable Output<String> query) {
             this.query = query;
             return this;
         }
 
         public Builder query(@Nullable String query) {
-            this.query = Input.ofNullable(query);
+            this.query = Output.ofNullable(query);
             return this;
         }
 
-        public Builder restrictedValues(@Nullable Input<List<String>> restrictedValues) {
+        public Builder restrictedValues(@Nullable Output<List<String>> restrictedValues) {
             this.restrictedValues = restrictedValues;
             return this;
         }
 
         public Builder restrictedValues(@Nullable List<String> restrictedValues) {
-            this.restrictedValues = Input.ofNullable(restrictedValues);
+            this.restrictedValues = Output.ofNullable(restrictedValues);
             return this;
         }
         public GoogleCloudRetailV2betaSearchRequestFacetSpecFacetKeyArgs build() {

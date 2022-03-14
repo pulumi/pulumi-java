@@ -5,7 +5,7 @@ package io.pulumi.azurenative.cdn.inputs;
 
 import io.pulumi.azurenative.cdn.enums.HeaderAction;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -25,9 +25,9 @@ public final class HeaderActionParametersArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="headerAction", required=true)
-      private final Input<Either<String,HeaderAction>> headerAction;
+      private final Output<Either<String,HeaderAction>> headerAction;
 
-    public Input<Either<String,HeaderAction>> getHeaderAction() {
+    public Output<Either<String,HeaderAction>> getHeaderAction() {
         return this.headerAction;
     }
 
@@ -36,16 +36,16 @@ public final class HeaderActionParametersArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="headerName", required=true)
-      private final Input<String> headerName;
+      private final Output<String> headerName;
 
-    public Input<String> getHeaderName() {
+    public Output<String> getHeaderName() {
         return this.headerName;
     }
 
     @InputImport(name="odataType", required=true)
-      private final Input<String> odataType;
+      private final Output<String> odataType;
 
-    public Input<String> getOdataType() {
+    public Output<String> getOdataType() {
         return this.odataType;
     }
 
@@ -54,17 +54,17 @@ public final class HeaderActionParametersArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="value")
-      private final @Nullable Input<String> value;
+      private final @Nullable Output<String> value;
 
-    public Input<String> getValue() {
-        return this.value == null ? Input.empty() : this.value;
+    public Output<String> getValue() {
+        return this.value == null ? Output.empty() : this.value;
     }
 
     public HeaderActionParametersArgs(
-        Input<Either<String,HeaderAction>> headerAction,
-        Input<String> headerName,
-        Input<String> odataType,
-        @Nullable Input<String> value) {
+        Output<Either<String,HeaderAction>> headerAction,
+        Output<String> headerName,
+        Output<String> odataType,
+        @Nullable Output<String> value) {
         this.headerAction = Objects.requireNonNull(headerAction, "expected parameter 'headerAction' to be non-null");
         this.headerName = Objects.requireNonNull(headerName, "expected parameter 'headerName' to be non-null");
         this.odataType = Objects.requireNonNull(odataType, "expected parameter 'odataType' to be non-null");
@@ -72,10 +72,10 @@ public final class HeaderActionParametersArgs extends io.pulumi.resources.Resour
     }
 
     private HeaderActionParametersArgs() {
-        this.headerAction = Input.empty();
-        this.headerName = Input.empty();
-        this.odataType = Input.empty();
-        this.value = Input.empty();
+        this.headerAction = Output.empty();
+        this.headerName = Output.empty();
+        this.odataType = Output.empty();
+        this.value = Output.empty();
     }
 
     public static Builder builder() {
@@ -87,10 +87,10 @@ public final class HeaderActionParametersArgs extends io.pulumi.resources.Resour
     }
 
     public static final class Builder {
-        private Input<Either<String,HeaderAction>> headerAction;
-        private Input<String> headerName;
-        private Input<String> odataType;
-        private @Nullable Input<String> value;
+        private Output<Either<String,HeaderAction>> headerAction;
+        private Output<String> headerName;
+        private Output<String> odataType;
+        private @Nullable Output<String> value;
 
         public Builder() {
     	      // Empty
@@ -104,43 +104,43 @@ public final class HeaderActionParametersArgs extends io.pulumi.resources.Resour
     	      this.value = defaults.value;
         }
 
-        public Builder headerAction(Input<Either<String,HeaderAction>> headerAction) {
+        public Builder headerAction(Output<Either<String,HeaderAction>> headerAction) {
             this.headerAction = Objects.requireNonNull(headerAction);
             return this;
         }
 
         public Builder headerAction(Either<String,HeaderAction> headerAction) {
-            this.headerAction = Input.of(Objects.requireNonNull(headerAction));
+            this.headerAction = Output.of(Objects.requireNonNull(headerAction));
             return this;
         }
 
-        public Builder headerName(Input<String> headerName) {
+        public Builder headerName(Output<String> headerName) {
             this.headerName = Objects.requireNonNull(headerName);
             return this;
         }
 
         public Builder headerName(String headerName) {
-            this.headerName = Input.of(Objects.requireNonNull(headerName));
+            this.headerName = Output.of(Objects.requireNonNull(headerName));
             return this;
         }
 
-        public Builder odataType(Input<String> odataType) {
+        public Builder odataType(Output<String> odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
 
         public Builder odataType(String odataType) {
-            this.odataType = Input.of(Objects.requireNonNull(odataType));
+            this.odataType = Output.of(Objects.requireNonNull(odataType));
             return this;
         }
 
-        public Builder value(@Nullable Input<String> value) {
+        public Builder value(@Nullable Output<String> value) {
             this.value = value;
             return this;
         }
 
         public Builder value(@Nullable String value) {
-            this.value = Input.ofNullable(value);
+            this.value = Output.ofNullable(value);
             return this;
         }
         public HeaderActionParametersArgs build() {

@@ -7,7 +7,6 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.s3control.ObjectLambdaAccessPointArgs;
 import io.pulumi.aws.s3control.inputs.ObjectLambdaAccessPointState;
 import io.pulumi.aws.s3control.outputs.ObjectLambdaAccessPointConfiguration;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -118,14 +117,14 @@ public class ObjectLambdaAccessPoint extends io.pulumi.resources.CustomResource 
      * @param options A bag of options that control this resource's behavior.
      */
     public ObjectLambdaAccessPoint(String name, ObjectLambdaAccessPointArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:s3control/objectLambdaAccessPoint:ObjectLambdaAccessPoint", name, args == null ? ObjectLambdaAccessPointArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws:s3control/objectLambdaAccessPoint:ObjectLambdaAccessPoint", name, args == null ? ObjectLambdaAccessPointArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private ObjectLambdaAccessPoint(String name, Input<String> id, @Nullable ObjectLambdaAccessPointState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private ObjectLambdaAccessPoint(String name, Output<String> id, @Nullable ObjectLambdaAccessPointState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws:s3control/objectLambdaAccessPoint:ObjectLambdaAccessPoint", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -141,7 +140,7 @@ public class ObjectLambdaAccessPoint extends io.pulumi.resources.CustomResource 
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static ObjectLambdaAccessPoint get(String name, Input<String> id, @Nullable ObjectLambdaAccessPointState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static ObjectLambdaAccessPoint get(String name, Output<String> id, @Nullable ObjectLambdaAccessPointState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new ObjectLambdaAccessPoint(name, id, state, options);
     }
 }

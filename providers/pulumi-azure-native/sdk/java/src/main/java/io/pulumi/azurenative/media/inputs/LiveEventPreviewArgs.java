@@ -5,7 +5,7 @@ package io.pulumi.azurenative.media.inputs;
 
 import io.pulumi.azurenative.media.inputs.LiveEventEndpointArgs;
 import io.pulumi.azurenative.media.inputs.LiveEventPreviewAccessControlArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -26,10 +26,10 @@ public final class LiveEventPreviewArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="accessControl")
-      private final @Nullable Input<LiveEventPreviewAccessControlArgs> accessControl;
+      private final @Nullable Output<LiveEventPreviewAccessControlArgs> accessControl;
 
-    public Input<LiveEventPreviewAccessControlArgs> getAccessControl() {
-        return this.accessControl == null ? Input.empty() : this.accessControl;
+    public Output<LiveEventPreviewAccessControlArgs> getAccessControl() {
+        return this.accessControl == null ? Output.empty() : this.accessControl;
     }
 
     /**
@@ -37,10 +37,10 @@ public final class LiveEventPreviewArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="alternativeMediaId")
-      private final @Nullable Input<String> alternativeMediaId;
+      private final @Nullable Output<String> alternativeMediaId;
 
-    public Input<String> getAlternativeMediaId() {
-        return this.alternativeMediaId == null ? Input.empty() : this.alternativeMediaId;
+    public Output<String> getAlternativeMediaId() {
+        return this.alternativeMediaId == null ? Output.empty() : this.alternativeMediaId;
     }
 
     /**
@@ -48,10 +48,10 @@ public final class LiveEventPreviewArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="endpoints")
-      private final @Nullable Input<List<LiveEventEndpointArgs>> endpoints;
+      private final @Nullable Output<List<LiveEventEndpointArgs>> endpoints;
 
-    public Input<List<LiveEventEndpointArgs>> getEndpoints() {
-        return this.endpoints == null ? Input.empty() : this.endpoints;
+    public Output<List<LiveEventEndpointArgs>> getEndpoints() {
+        return this.endpoints == null ? Output.empty() : this.endpoints;
     }
 
     /**
@@ -59,10 +59,10 @@ public final class LiveEventPreviewArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="previewLocator")
-      private final @Nullable Input<String> previewLocator;
+      private final @Nullable Output<String> previewLocator;
 
-    public Input<String> getPreviewLocator() {
-        return this.previewLocator == null ? Input.empty() : this.previewLocator;
+    public Output<String> getPreviewLocator() {
+        return this.previewLocator == null ? Output.empty() : this.previewLocator;
     }
 
     /**
@@ -70,18 +70,18 @@ public final class LiveEventPreviewArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="streamingPolicyName")
-      private final @Nullable Input<String> streamingPolicyName;
+      private final @Nullable Output<String> streamingPolicyName;
 
-    public Input<String> getStreamingPolicyName() {
-        return this.streamingPolicyName == null ? Input.empty() : this.streamingPolicyName;
+    public Output<String> getStreamingPolicyName() {
+        return this.streamingPolicyName == null ? Output.empty() : this.streamingPolicyName;
     }
 
     public LiveEventPreviewArgs(
-        @Nullable Input<LiveEventPreviewAccessControlArgs> accessControl,
-        @Nullable Input<String> alternativeMediaId,
-        @Nullable Input<List<LiveEventEndpointArgs>> endpoints,
-        @Nullable Input<String> previewLocator,
-        @Nullable Input<String> streamingPolicyName) {
+        @Nullable Output<LiveEventPreviewAccessControlArgs> accessControl,
+        @Nullable Output<String> alternativeMediaId,
+        @Nullable Output<List<LiveEventEndpointArgs>> endpoints,
+        @Nullable Output<String> previewLocator,
+        @Nullable Output<String> streamingPolicyName) {
         this.accessControl = accessControl;
         this.alternativeMediaId = alternativeMediaId;
         this.endpoints = endpoints;
@@ -90,11 +90,11 @@ public final class LiveEventPreviewArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private LiveEventPreviewArgs() {
-        this.accessControl = Input.empty();
-        this.alternativeMediaId = Input.empty();
-        this.endpoints = Input.empty();
-        this.previewLocator = Input.empty();
-        this.streamingPolicyName = Input.empty();
+        this.accessControl = Output.empty();
+        this.alternativeMediaId = Output.empty();
+        this.endpoints = Output.empty();
+        this.previewLocator = Output.empty();
+        this.streamingPolicyName = Output.empty();
     }
 
     public static Builder builder() {
@@ -106,11 +106,11 @@ public final class LiveEventPreviewArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private @Nullable Input<LiveEventPreviewAccessControlArgs> accessControl;
-        private @Nullable Input<String> alternativeMediaId;
-        private @Nullable Input<List<LiveEventEndpointArgs>> endpoints;
-        private @Nullable Input<String> previewLocator;
-        private @Nullable Input<String> streamingPolicyName;
+        private @Nullable Output<LiveEventPreviewAccessControlArgs> accessControl;
+        private @Nullable Output<String> alternativeMediaId;
+        private @Nullable Output<List<LiveEventEndpointArgs>> endpoints;
+        private @Nullable Output<String> previewLocator;
+        private @Nullable Output<String> streamingPolicyName;
 
         public Builder() {
     	      // Empty
@@ -125,53 +125,53 @@ public final class LiveEventPreviewArgs extends io.pulumi.resources.ResourceArgs
     	      this.streamingPolicyName = defaults.streamingPolicyName;
         }
 
-        public Builder accessControl(@Nullable Input<LiveEventPreviewAccessControlArgs> accessControl) {
+        public Builder accessControl(@Nullable Output<LiveEventPreviewAccessControlArgs> accessControl) {
             this.accessControl = accessControl;
             return this;
         }
 
         public Builder accessControl(@Nullable LiveEventPreviewAccessControlArgs accessControl) {
-            this.accessControl = Input.ofNullable(accessControl);
+            this.accessControl = Output.ofNullable(accessControl);
             return this;
         }
 
-        public Builder alternativeMediaId(@Nullable Input<String> alternativeMediaId) {
+        public Builder alternativeMediaId(@Nullable Output<String> alternativeMediaId) {
             this.alternativeMediaId = alternativeMediaId;
             return this;
         }
 
         public Builder alternativeMediaId(@Nullable String alternativeMediaId) {
-            this.alternativeMediaId = Input.ofNullable(alternativeMediaId);
+            this.alternativeMediaId = Output.ofNullable(alternativeMediaId);
             return this;
         }
 
-        public Builder endpoints(@Nullable Input<List<LiveEventEndpointArgs>> endpoints) {
+        public Builder endpoints(@Nullable Output<List<LiveEventEndpointArgs>> endpoints) {
             this.endpoints = endpoints;
             return this;
         }
 
         public Builder endpoints(@Nullable List<LiveEventEndpointArgs> endpoints) {
-            this.endpoints = Input.ofNullable(endpoints);
+            this.endpoints = Output.ofNullable(endpoints);
             return this;
         }
 
-        public Builder previewLocator(@Nullable Input<String> previewLocator) {
+        public Builder previewLocator(@Nullable Output<String> previewLocator) {
             this.previewLocator = previewLocator;
             return this;
         }
 
         public Builder previewLocator(@Nullable String previewLocator) {
-            this.previewLocator = Input.ofNullable(previewLocator);
+            this.previewLocator = Output.ofNullable(previewLocator);
             return this;
         }
 
-        public Builder streamingPolicyName(@Nullable Input<String> streamingPolicyName) {
+        public Builder streamingPolicyName(@Nullable Output<String> streamingPolicyName) {
             this.streamingPolicyName = streamingPolicyName;
             return this;
         }
 
         public Builder streamingPolicyName(@Nullable String streamingPolicyName) {
-            this.streamingPolicyName = Input.ofNullable(streamingPolicyName);
+            this.streamingPolicyName = Output.ofNullable(streamingPolicyName);
             return this;
         }
         public LiveEventPreviewArgs build() {

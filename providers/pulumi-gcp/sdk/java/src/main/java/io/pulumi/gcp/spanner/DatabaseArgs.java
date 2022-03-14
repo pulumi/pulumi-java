@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.spanner;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.spanner.inputs.DatabaseEncryptionConfigArgs;
 import java.lang.Boolean;
@@ -25,10 +25,10 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ddls")
-      private final @Nullable Input<List<String>> ddls;
+      private final @Nullable Output<List<String>> ddls;
 
-    public Input<List<String>> getDdls() {
-        return this.ddls == null ? Input.empty() : this.ddls;
+    public Output<List<String>> getDdls() {
+        return this.ddls == null ? Output.empty() : this.ddls;
     }
 
     /**
@@ -37,10 +37,10 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="deletionProtection")
-      private final @Nullable Input<Boolean> deletionProtection;
+      private final @Nullable Output<Boolean> deletionProtection;
 
-    public Input<Boolean> getDeletionProtection() {
-        return this.deletionProtection == null ? Input.empty() : this.deletionProtection;
+    public Output<Boolean> getDeletionProtection() {
+        return this.deletionProtection == null ? Output.empty() : this.deletionProtection;
     }
 
     /**
@@ -49,10 +49,10 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="encryptionConfig")
-      private final @Nullable Input<DatabaseEncryptionConfigArgs> encryptionConfig;
+      private final @Nullable Output<DatabaseEncryptionConfigArgs> encryptionConfig;
 
-    public Input<DatabaseEncryptionConfigArgs> getEncryptionConfig() {
-        return this.encryptionConfig == null ? Input.empty() : this.encryptionConfig;
+    public Output<DatabaseEncryptionConfigArgs> getEncryptionConfig() {
+        return this.encryptionConfig == null ? Output.empty() : this.encryptionConfig;
     }
 
     /**
@@ -60,9 +60,9 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="instance", required=true)
-      private final Input<String> instance;
+      private final Output<String> instance;
 
-    public Input<String> getInstance() {
+    public Output<String> getInstance() {
         return this.instance;
     }
 
@@ -72,10 +72,10 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -84,19 +84,19 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     public DatabaseArgs(
-        @Nullable Input<List<String>> ddls,
-        @Nullable Input<Boolean> deletionProtection,
-        @Nullable Input<DatabaseEncryptionConfigArgs> encryptionConfig,
-        Input<String> instance,
-        @Nullable Input<String> name,
-        @Nullable Input<String> project) {
+        @Nullable Output<List<String>> ddls,
+        @Nullable Output<Boolean> deletionProtection,
+        @Nullable Output<DatabaseEncryptionConfigArgs> encryptionConfig,
+        Output<String> instance,
+        @Nullable Output<String> name,
+        @Nullable Output<String> project) {
         this.ddls = ddls;
         this.deletionProtection = deletionProtection;
         this.encryptionConfig = encryptionConfig;
@@ -106,12 +106,12 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DatabaseArgs() {
-        this.ddls = Input.empty();
-        this.deletionProtection = Input.empty();
-        this.encryptionConfig = Input.empty();
-        this.instance = Input.empty();
-        this.name = Input.empty();
-        this.project = Input.empty();
+        this.ddls = Output.empty();
+        this.deletionProtection = Output.empty();
+        this.encryptionConfig = Output.empty();
+        this.instance = Output.empty();
+        this.name = Output.empty();
+        this.project = Output.empty();
     }
 
     public static Builder builder() {
@@ -123,12 +123,12 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> ddls;
-        private @Nullable Input<Boolean> deletionProtection;
-        private @Nullable Input<DatabaseEncryptionConfigArgs> encryptionConfig;
-        private Input<String> instance;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> project;
+        private @Nullable Output<List<String>> ddls;
+        private @Nullable Output<Boolean> deletionProtection;
+        private @Nullable Output<DatabaseEncryptionConfigArgs> encryptionConfig;
+        private Output<String> instance;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> project;
 
         public Builder() {
     	      // Empty
@@ -144,63 +144,63 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
     	      this.project = defaults.project;
         }
 
-        public Builder ddls(@Nullable Input<List<String>> ddls) {
+        public Builder ddls(@Nullable Output<List<String>> ddls) {
             this.ddls = ddls;
             return this;
         }
 
         public Builder ddls(@Nullable List<String> ddls) {
-            this.ddls = Input.ofNullable(ddls);
+            this.ddls = Output.ofNullable(ddls);
             return this;
         }
 
-        public Builder deletionProtection(@Nullable Input<Boolean> deletionProtection) {
+        public Builder deletionProtection(@Nullable Output<Boolean> deletionProtection) {
             this.deletionProtection = deletionProtection;
             return this;
         }
 
         public Builder deletionProtection(@Nullable Boolean deletionProtection) {
-            this.deletionProtection = Input.ofNullable(deletionProtection);
+            this.deletionProtection = Output.ofNullable(deletionProtection);
             return this;
         }
 
-        public Builder encryptionConfig(@Nullable Input<DatabaseEncryptionConfigArgs> encryptionConfig) {
+        public Builder encryptionConfig(@Nullable Output<DatabaseEncryptionConfigArgs> encryptionConfig) {
             this.encryptionConfig = encryptionConfig;
             return this;
         }
 
         public Builder encryptionConfig(@Nullable DatabaseEncryptionConfigArgs encryptionConfig) {
-            this.encryptionConfig = Input.ofNullable(encryptionConfig);
+            this.encryptionConfig = Output.ofNullable(encryptionConfig);
             return this;
         }
 
-        public Builder instance(Input<String> instance) {
+        public Builder instance(Output<String> instance) {
             this.instance = Objects.requireNonNull(instance);
             return this;
         }
 
         public Builder instance(String instance) {
-            this.instance = Input.of(Objects.requireNonNull(instance));
+            this.instance = Output.of(Objects.requireNonNull(instance));
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
         public DatabaseArgs build() {

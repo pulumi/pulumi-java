@@ -7,7 +7,7 @@ import io.pulumi.azurenative.customerinsights.enums.EntityType;
 import io.pulumi.azurenative.customerinsights.enums.InstanceOperationType;
 import io.pulumi.azurenative.customerinsights.inputs.ParticipantPropertyReferenceArgs;
 import io.pulumi.azurenative.customerinsights.inputs.TypePropertiesMappingArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -26,10 +26,10 @@ public final class LinkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<Map<String,String>> description;
+      private final @Nullable Output<Map<String,String>> description;
 
-    public Input<Map<String,String>> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<Map<String,String>> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -37,10 +37,10 @@ public final class LinkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName")
-      private final @Nullable Input<Map<String,String>> displayName;
+      private final @Nullable Output<Map<String,String>> displayName;
 
-    public Input<Map<String,String>> getDisplayName() {
-        return this.displayName == null ? Input.empty() : this.displayName;
+    public Output<Map<String,String>> getDisplayName() {
+        return this.displayName == null ? Output.empty() : this.displayName;
     }
 
     /**
@@ -48,9 +48,9 @@ public final class LinkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="hubName", required=true)
-      private final Input<String> hubName;
+      private final Output<String> hubName;
 
-    public Input<String> getHubName() {
+    public Output<String> getHubName() {
         return this.hubName;
     }
 
@@ -59,10 +59,10 @@ public final class LinkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="linkName")
-      private final @Nullable Input<String> linkName;
+      private final @Nullable Output<String> linkName;
 
-    public Input<String> getLinkName() {
-        return this.linkName == null ? Input.empty() : this.linkName;
+    public Output<String> getLinkName() {
+        return this.linkName == null ? Output.empty() : this.linkName;
     }
 
     /**
@@ -70,10 +70,10 @@ public final class LinkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="mappings")
-      private final @Nullable Input<List<TypePropertiesMappingArgs>> mappings;
+      private final @Nullable Output<List<TypePropertiesMappingArgs>> mappings;
 
-    public Input<List<TypePropertiesMappingArgs>> getMappings() {
-        return this.mappings == null ? Input.empty() : this.mappings;
+    public Output<List<TypePropertiesMappingArgs>> getMappings() {
+        return this.mappings == null ? Output.empty() : this.mappings;
     }
 
     /**
@@ -81,10 +81,10 @@ public final class LinkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="operationType")
-      private final @Nullable Input<InstanceOperationType> operationType;
+      private final @Nullable Output<InstanceOperationType> operationType;
 
-    public Input<InstanceOperationType> getOperationType() {
-        return this.operationType == null ? Input.empty() : this.operationType;
+    public Output<InstanceOperationType> getOperationType() {
+        return this.operationType == null ? Output.empty() : this.operationType;
     }
 
     /**
@@ -92,9 +92,9 @@ public final class LinkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="participantPropertyReferences", required=true)
-      private final Input<List<ParticipantPropertyReferenceArgs>> participantPropertyReferences;
+      private final Output<List<ParticipantPropertyReferenceArgs>> participantPropertyReferences;
 
-    public Input<List<ParticipantPropertyReferenceArgs>> getParticipantPropertyReferences() {
+    public Output<List<ParticipantPropertyReferenceArgs>> getParticipantPropertyReferences() {
         return this.participantPropertyReferences;
     }
 
@@ -103,10 +103,10 @@ public final class LinkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="referenceOnly")
-      private final @Nullable Input<Boolean> referenceOnly;
+      private final @Nullable Output<Boolean> referenceOnly;
 
-    public Input<Boolean> getReferenceOnly() {
-        return this.referenceOnly == null ? Input.empty() : this.referenceOnly;
+    public Output<Boolean> getReferenceOnly() {
+        return this.referenceOnly == null ? Output.empty() : this.referenceOnly;
     }
 
     /**
@@ -114,9 +114,9 @@ public final class LinkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -125,9 +125,9 @@ public final class LinkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sourceEntityType", required=true)
-      private final Input<EntityType> sourceEntityType;
+      private final Output<EntityType> sourceEntityType;
 
-    public Input<EntityType> getSourceEntityType() {
+    public Output<EntityType> getSourceEntityType() {
         return this.sourceEntityType;
     }
 
@@ -136,9 +136,9 @@ public final class LinkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sourceEntityTypeName", required=true)
-      private final Input<String> sourceEntityTypeName;
+      private final Output<String> sourceEntityTypeName;
 
-    public Input<String> getSourceEntityTypeName() {
+    public Output<String> getSourceEntityTypeName() {
         return this.sourceEntityTypeName;
     }
 
@@ -147,9 +147,9 @@ public final class LinkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="targetEntityType", required=true)
-      private final Input<EntityType> targetEntityType;
+      private final Output<EntityType> targetEntityType;
 
-    public Input<EntityType> getTargetEntityType() {
+    public Output<EntityType> getTargetEntityType() {
         return this.targetEntityType;
     }
 
@@ -158,26 +158,26 @@ public final class LinkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="targetEntityTypeName", required=true)
-      private final Input<String> targetEntityTypeName;
+      private final Output<String> targetEntityTypeName;
 
-    public Input<String> getTargetEntityTypeName() {
+    public Output<String> getTargetEntityTypeName() {
         return this.targetEntityTypeName;
     }
 
     public LinkArgs(
-        @Nullable Input<Map<String,String>> description,
-        @Nullable Input<Map<String,String>> displayName,
-        Input<String> hubName,
-        @Nullable Input<String> linkName,
-        @Nullable Input<List<TypePropertiesMappingArgs>> mappings,
-        @Nullable Input<InstanceOperationType> operationType,
-        Input<List<ParticipantPropertyReferenceArgs>> participantPropertyReferences,
-        @Nullable Input<Boolean> referenceOnly,
-        Input<String> resourceGroupName,
-        Input<EntityType> sourceEntityType,
-        Input<String> sourceEntityTypeName,
-        Input<EntityType> targetEntityType,
-        Input<String> targetEntityTypeName) {
+        @Nullable Output<Map<String,String>> description,
+        @Nullable Output<Map<String,String>> displayName,
+        Output<String> hubName,
+        @Nullable Output<String> linkName,
+        @Nullable Output<List<TypePropertiesMappingArgs>> mappings,
+        @Nullable Output<InstanceOperationType> operationType,
+        Output<List<ParticipantPropertyReferenceArgs>> participantPropertyReferences,
+        @Nullable Output<Boolean> referenceOnly,
+        Output<String> resourceGroupName,
+        Output<EntityType> sourceEntityType,
+        Output<String> sourceEntityTypeName,
+        Output<EntityType> targetEntityType,
+        Output<String> targetEntityTypeName) {
         this.description = description;
         this.displayName = displayName;
         this.hubName = Objects.requireNonNull(hubName, "expected parameter 'hubName' to be non-null");
@@ -194,19 +194,19 @@ public final class LinkArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private LinkArgs() {
-        this.description = Input.empty();
-        this.displayName = Input.empty();
-        this.hubName = Input.empty();
-        this.linkName = Input.empty();
-        this.mappings = Input.empty();
-        this.operationType = Input.empty();
-        this.participantPropertyReferences = Input.empty();
-        this.referenceOnly = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.sourceEntityType = Input.empty();
-        this.sourceEntityTypeName = Input.empty();
-        this.targetEntityType = Input.empty();
-        this.targetEntityTypeName = Input.empty();
+        this.description = Output.empty();
+        this.displayName = Output.empty();
+        this.hubName = Output.empty();
+        this.linkName = Output.empty();
+        this.mappings = Output.empty();
+        this.operationType = Output.empty();
+        this.participantPropertyReferences = Output.empty();
+        this.referenceOnly = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.sourceEntityType = Output.empty();
+        this.sourceEntityTypeName = Output.empty();
+        this.targetEntityType = Output.empty();
+        this.targetEntityTypeName = Output.empty();
     }
 
     public static Builder builder() {
@@ -218,19 +218,19 @@ public final class LinkArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Map<String,String>> description;
-        private @Nullable Input<Map<String,String>> displayName;
-        private Input<String> hubName;
-        private @Nullable Input<String> linkName;
-        private @Nullable Input<List<TypePropertiesMappingArgs>> mappings;
-        private @Nullable Input<InstanceOperationType> operationType;
-        private Input<List<ParticipantPropertyReferenceArgs>> participantPropertyReferences;
-        private @Nullable Input<Boolean> referenceOnly;
-        private Input<String> resourceGroupName;
-        private Input<EntityType> sourceEntityType;
-        private Input<String> sourceEntityTypeName;
-        private Input<EntityType> targetEntityType;
-        private Input<String> targetEntityTypeName;
+        private @Nullable Output<Map<String,String>> description;
+        private @Nullable Output<Map<String,String>> displayName;
+        private Output<String> hubName;
+        private @Nullable Output<String> linkName;
+        private @Nullable Output<List<TypePropertiesMappingArgs>> mappings;
+        private @Nullable Output<InstanceOperationType> operationType;
+        private Output<List<ParticipantPropertyReferenceArgs>> participantPropertyReferences;
+        private @Nullable Output<Boolean> referenceOnly;
+        private Output<String> resourceGroupName;
+        private Output<EntityType> sourceEntityType;
+        private Output<String> sourceEntityTypeName;
+        private Output<EntityType> targetEntityType;
+        private Output<String> targetEntityTypeName;
 
         public Builder() {
     	      // Empty
@@ -253,133 +253,133 @@ public final class LinkArgs extends io.pulumi.resources.ResourceArgs {
     	      this.targetEntityTypeName = defaults.targetEntityTypeName;
         }
 
-        public Builder description(@Nullable Input<Map<String,String>> description) {
+        public Builder description(@Nullable Output<Map<String,String>> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable Map<String,String> description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder displayName(@Nullable Input<Map<String,String>> displayName) {
+        public Builder displayName(@Nullable Output<Map<String,String>> displayName) {
             this.displayName = displayName;
             return this;
         }
 
         public Builder displayName(@Nullable Map<String,String> displayName) {
-            this.displayName = Input.ofNullable(displayName);
+            this.displayName = Output.ofNullable(displayName);
             return this;
         }
 
-        public Builder hubName(Input<String> hubName) {
+        public Builder hubName(Output<String> hubName) {
             this.hubName = Objects.requireNonNull(hubName);
             return this;
         }
 
         public Builder hubName(String hubName) {
-            this.hubName = Input.of(Objects.requireNonNull(hubName));
+            this.hubName = Output.of(Objects.requireNonNull(hubName));
             return this;
         }
 
-        public Builder linkName(@Nullable Input<String> linkName) {
+        public Builder linkName(@Nullable Output<String> linkName) {
             this.linkName = linkName;
             return this;
         }
 
         public Builder linkName(@Nullable String linkName) {
-            this.linkName = Input.ofNullable(linkName);
+            this.linkName = Output.ofNullable(linkName);
             return this;
         }
 
-        public Builder mappings(@Nullable Input<List<TypePropertiesMappingArgs>> mappings) {
+        public Builder mappings(@Nullable Output<List<TypePropertiesMappingArgs>> mappings) {
             this.mappings = mappings;
             return this;
         }
 
         public Builder mappings(@Nullable List<TypePropertiesMappingArgs> mappings) {
-            this.mappings = Input.ofNullable(mappings);
+            this.mappings = Output.ofNullable(mappings);
             return this;
         }
 
-        public Builder operationType(@Nullable Input<InstanceOperationType> operationType) {
+        public Builder operationType(@Nullable Output<InstanceOperationType> operationType) {
             this.operationType = operationType;
             return this;
         }
 
         public Builder operationType(@Nullable InstanceOperationType operationType) {
-            this.operationType = Input.ofNullable(operationType);
+            this.operationType = Output.ofNullable(operationType);
             return this;
         }
 
-        public Builder participantPropertyReferences(Input<List<ParticipantPropertyReferenceArgs>> participantPropertyReferences) {
+        public Builder participantPropertyReferences(Output<List<ParticipantPropertyReferenceArgs>> participantPropertyReferences) {
             this.participantPropertyReferences = Objects.requireNonNull(participantPropertyReferences);
             return this;
         }
 
         public Builder participantPropertyReferences(List<ParticipantPropertyReferenceArgs> participantPropertyReferences) {
-            this.participantPropertyReferences = Input.of(Objects.requireNonNull(participantPropertyReferences));
+            this.participantPropertyReferences = Output.of(Objects.requireNonNull(participantPropertyReferences));
             return this;
         }
 
-        public Builder referenceOnly(@Nullable Input<Boolean> referenceOnly) {
+        public Builder referenceOnly(@Nullable Output<Boolean> referenceOnly) {
             this.referenceOnly = referenceOnly;
             return this;
         }
 
         public Builder referenceOnly(@Nullable Boolean referenceOnly) {
-            this.referenceOnly = Input.ofNullable(referenceOnly);
+            this.referenceOnly = Output.ofNullable(referenceOnly);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder sourceEntityType(Input<EntityType> sourceEntityType) {
+        public Builder sourceEntityType(Output<EntityType> sourceEntityType) {
             this.sourceEntityType = Objects.requireNonNull(sourceEntityType);
             return this;
         }
 
         public Builder sourceEntityType(EntityType sourceEntityType) {
-            this.sourceEntityType = Input.of(Objects.requireNonNull(sourceEntityType));
+            this.sourceEntityType = Output.of(Objects.requireNonNull(sourceEntityType));
             return this;
         }
 
-        public Builder sourceEntityTypeName(Input<String> sourceEntityTypeName) {
+        public Builder sourceEntityTypeName(Output<String> sourceEntityTypeName) {
             this.sourceEntityTypeName = Objects.requireNonNull(sourceEntityTypeName);
             return this;
         }
 
         public Builder sourceEntityTypeName(String sourceEntityTypeName) {
-            this.sourceEntityTypeName = Input.of(Objects.requireNonNull(sourceEntityTypeName));
+            this.sourceEntityTypeName = Output.of(Objects.requireNonNull(sourceEntityTypeName));
             return this;
         }
 
-        public Builder targetEntityType(Input<EntityType> targetEntityType) {
+        public Builder targetEntityType(Output<EntityType> targetEntityType) {
             this.targetEntityType = Objects.requireNonNull(targetEntityType);
             return this;
         }
 
         public Builder targetEntityType(EntityType targetEntityType) {
-            this.targetEntityType = Input.of(Objects.requireNonNull(targetEntityType));
+            this.targetEntityType = Output.of(Objects.requireNonNull(targetEntityType));
             return this;
         }
 
-        public Builder targetEntityTypeName(Input<String> targetEntityTypeName) {
+        public Builder targetEntityTypeName(Output<String> targetEntityTypeName) {
             this.targetEntityTypeName = Objects.requireNonNull(targetEntityTypeName);
             return this;
         }
 
         public Builder targetEntityTypeName(String targetEntityTypeName) {
-            this.targetEntityTypeName = Input.of(Objects.requireNonNull(targetEntityTypeName));
+            this.targetEntityTypeName = Output.of(Objects.requireNonNull(targetEntityTypeName));
             return this;
         }
         public LinkArgs build() {

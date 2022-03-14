@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.dataloss.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.dataloss.inputs.PreventionJobTriggerInspectJobStorageConfigTimespanConfigTimestampFieldArgs;
 import java.lang.Boolean;
@@ -23,10 +23,10 @@ public final class PreventionJobTriggerInspectJobStorageConfigTimespanConfigArgs
      * 
      */
     @InputImport(name="enableAutoPopulationOfTimespanConfig")
-      private final @Nullable Input<Boolean> enableAutoPopulationOfTimespanConfig;
+      private final @Nullable Output<Boolean> enableAutoPopulationOfTimespanConfig;
 
-    public Input<Boolean> getEnableAutoPopulationOfTimespanConfig() {
-        return this.enableAutoPopulationOfTimespanConfig == null ? Input.empty() : this.enableAutoPopulationOfTimespanConfig;
+    public Output<Boolean> getEnableAutoPopulationOfTimespanConfig() {
+        return this.enableAutoPopulationOfTimespanConfig == null ? Output.empty() : this.enableAutoPopulationOfTimespanConfig;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class PreventionJobTriggerInspectJobStorageConfigTimespanConfigArgs
      * 
      */
     @InputImport(name="endTime")
-      private final @Nullable Input<String> endTime;
+      private final @Nullable Output<String> endTime;
 
-    public Input<String> getEndTime() {
-        return this.endTime == null ? Input.empty() : this.endTime;
+    public Output<String> getEndTime() {
+        return this.endTime == null ? Output.empty() : this.endTime;
     }
 
     /**
@@ -45,10 +45,10 @@ public final class PreventionJobTriggerInspectJobStorageConfigTimespanConfigArgs
      * 
      */
     @InputImport(name="startTime")
-      private final @Nullable Input<String> startTime;
+      private final @Nullable Output<String> startTime;
 
-    public Input<String> getStartTime() {
-        return this.startTime == null ? Input.empty() : this.startTime;
+    public Output<String> getStartTime() {
+        return this.startTime == null ? Output.empty() : this.startTime;
     }
 
     /**
@@ -57,17 +57,17 @@ public final class PreventionJobTriggerInspectJobStorageConfigTimespanConfigArgs
      * 
      */
     @InputImport(name="timestampField", required=true)
-      private final Input<PreventionJobTriggerInspectJobStorageConfigTimespanConfigTimestampFieldArgs> timestampField;
+      private final Output<PreventionJobTriggerInspectJobStorageConfigTimespanConfigTimestampFieldArgs> timestampField;
 
-    public Input<PreventionJobTriggerInspectJobStorageConfigTimespanConfigTimestampFieldArgs> getTimestampField() {
+    public Output<PreventionJobTriggerInspectJobStorageConfigTimespanConfigTimestampFieldArgs> getTimestampField() {
         return this.timestampField;
     }
 
     public PreventionJobTriggerInspectJobStorageConfigTimespanConfigArgs(
-        @Nullable Input<Boolean> enableAutoPopulationOfTimespanConfig,
-        @Nullable Input<String> endTime,
-        @Nullable Input<String> startTime,
-        Input<PreventionJobTriggerInspectJobStorageConfigTimespanConfigTimestampFieldArgs> timestampField) {
+        @Nullable Output<Boolean> enableAutoPopulationOfTimespanConfig,
+        @Nullable Output<String> endTime,
+        @Nullable Output<String> startTime,
+        Output<PreventionJobTriggerInspectJobStorageConfigTimespanConfigTimestampFieldArgs> timestampField) {
         this.enableAutoPopulationOfTimespanConfig = enableAutoPopulationOfTimespanConfig;
         this.endTime = endTime;
         this.startTime = startTime;
@@ -75,10 +75,10 @@ public final class PreventionJobTriggerInspectJobStorageConfigTimespanConfigArgs
     }
 
     private PreventionJobTriggerInspectJobStorageConfigTimespanConfigArgs() {
-        this.enableAutoPopulationOfTimespanConfig = Input.empty();
-        this.endTime = Input.empty();
-        this.startTime = Input.empty();
-        this.timestampField = Input.empty();
+        this.enableAutoPopulationOfTimespanConfig = Output.empty();
+        this.endTime = Output.empty();
+        this.startTime = Output.empty();
+        this.timestampField = Output.empty();
     }
 
     public static Builder builder() {
@@ -90,10 +90,10 @@ public final class PreventionJobTriggerInspectJobStorageConfigTimespanConfigArgs
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> enableAutoPopulationOfTimespanConfig;
-        private @Nullable Input<String> endTime;
-        private @Nullable Input<String> startTime;
-        private Input<PreventionJobTriggerInspectJobStorageConfigTimespanConfigTimestampFieldArgs> timestampField;
+        private @Nullable Output<Boolean> enableAutoPopulationOfTimespanConfig;
+        private @Nullable Output<String> endTime;
+        private @Nullable Output<String> startTime;
+        private Output<PreventionJobTriggerInspectJobStorageConfigTimespanConfigTimestampFieldArgs> timestampField;
 
         public Builder() {
     	      // Empty
@@ -107,43 +107,43 @@ public final class PreventionJobTriggerInspectJobStorageConfigTimespanConfigArgs
     	      this.timestampField = defaults.timestampField;
         }
 
-        public Builder enableAutoPopulationOfTimespanConfig(@Nullable Input<Boolean> enableAutoPopulationOfTimespanConfig) {
+        public Builder enableAutoPopulationOfTimespanConfig(@Nullable Output<Boolean> enableAutoPopulationOfTimespanConfig) {
             this.enableAutoPopulationOfTimespanConfig = enableAutoPopulationOfTimespanConfig;
             return this;
         }
 
         public Builder enableAutoPopulationOfTimespanConfig(@Nullable Boolean enableAutoPopulationOfTimespanConfig) {
-            this.enableAutoPopulationOfTimespanConfig = Input.ofNullable(enableAutoPopulationOfTimespanConfig);
+            this.enableAutoPopulationOfTimespanConfig = Output.ofNullable(enableAutoPopulationOfTimespanConfig);
             return this;
         }
 
-        public Builder endTime(@Nullable Input<String> endTime) {
+        public Builder endTime(@Nullable Output<String> endTime) {
             this.endTime = endTime;
             return this;
         }
 
         public Builder endTime(@Nullable String endTime) {
-            this.endTime = Input.ofNullable(endTime);
+            this.endTime = Output.ofNullable(endTime);
             return this;
         }
 
-        public Builder startTime(@Nullable Input<String> startTime) {
+        public Builder startTime(@Nullable Output<String> startTime) {
             this.startTime = startTime;
             return this;
         }
 
         public Builder startTime(@Nullable String startTime) {
-            this.startTime = Input.ofNullable(startTime);
+            this.startTime = Output.ofNullable(startTime);
             return this;
         }
 
-        public Builder timestampField(Input<PreventionJobTriggerInspectJobStorageConfigTimespanConfigTimestampFieldArgs> timestampField) {
+        public Builder timestampField(Output<PreventionJobTriggerInspectJobStorageConfigTimespanConfigTimestampFieldArgs> timestampField) {
             this.timestampField = Objects.requireNonNull(timestampField);
             return this;
         }
 
         public Builder timestampField(PreventionJobTriggerInspectJobStorageConfigTimespanConfigTimestampFieldArgs timestampField) {
-            this.timestampField = Input.of(Objects.requireNonNull(timestampField));
+            this.timestampField = Output.of(Objects.requireNonNull(timestampField));
             return this;
         }
         public PreventionJobTriggerInspectJobStorageConfigTimespanConfigArgs build() {

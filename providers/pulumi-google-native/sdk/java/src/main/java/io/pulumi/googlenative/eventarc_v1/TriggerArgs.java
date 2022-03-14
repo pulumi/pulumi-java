@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.eventarc_v1;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.eventarc_v1.inputs.DestinationArgs;
 import io.pulumi.googlenative.eventarc_v1.inputs.EventFilterArgs;
@@ -24,9 +24,9 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="destination", required=true)
-      private final Input<DestinationArgs> destination;
+      private final Output<DestinationArgs> destination;
 
-    public Input<DestinationArgs> getDestination() {
+    public Output<DestinationArgs> getDestination() {
         return this.destination;
     }
 
@@ -35,9 +35,9 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="eventFilters", required=true)
-      private final Input<List<EventFilterArgs>> eventFilters;
+      private final Output<List<EventFilterArgs>> eventFilters;
 
-    public Input<List<EventFilterArgs>> getEventFilters() {
+    public Output<List<EventFilterArgs>> getEventFilters() {
         return this.eventFilters;
     }
 
@@ -46,17 +46,17 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labels")
-      private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Output<Map<String,String>> labels;
 
-    public Input<Map<String,String>> getLabels() {
-        return this.labels == null ? Input.empty() : this.labels;
+    public Output<Map<String,String>> getLabels() {
+        return this.labels == null ? Output.empty() : this.labels;
     }
 
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -64,17 +64,17 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -82,10 +82,10 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serviceAccount")
-      private final @Nullable Input<String> serviceAccount;
+      private final @Nullable Output<String> serviceAccount;
 
-    public Input<String> getServiceAccount() {
-        return this.serviceAccount == null ? Input.empty() : this.serviceAccount;
+    public Output<String> getServiceAccount() {
+        return this.serviceAccount == null ? Output.empty() : this.serviceAccount;
     }
 
     /**
@@ -93,37 +93,37 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="transport")
-      private final @Nullable Input<TransportArgs> transport;
+      private final @Nullable Output<TransportArgs> transport;
 
-    public Input<TransportArgs> getTransport() {
-        return this.transport == null ? Input.empty() : this.transport;
+    public Output<TransportArgs> getTransport() {
+        return this.transport == null ? Output.empty() : this.transport;
     }
 
     @InputImport(name="triggerId", required=true)
-      private final Input<String> triggerId;
+      private final Output<String> triggerId;
 
-    public Input<String> getTriggerId() {
+    public Output<String> getTriggerId() {
         return this.triggerId;
     }
 
     @InputImport(name="validateOnly", required=true)
-      private final Input<String> validateOnly;
+      private final Output<String> validateOnly;
 
-    public Input<String> getValidateOnly() {
+    public Output<String> getValidateOnly() {
         return this.validateOnly;
     }
 
     public TriggerArgs(
-        Input<DestinationArgs> destination,
-        Input<List<EventFilterArgs>> eventFilters,
-        @Nullable Input<Map<String,String>> labels,
-        @Nullable Input<String> location,
-        @Nullable Input<String> name,
-        @Nullable Input<String> project,
-        @Nullable Input<String> serviceAccount,
-        @Nullable Input<TransportArgs> transport,
-        Input<String> triggerId,
-        Input<String> validateOnly) {
+        Output<DestinationArgs> destination,
+        Output<List<EventFilterArgs>> eventFilters,
+        @Nullable Output<Map<String,String>> labels,
+        @Nullable Output<String> location,
+        @Nullable Output<String> name,
+        @Nullable Output<String> project,
+        @Nullable Output<String> serviceAccount,
+        @Nullable Output<TransportArgs> transport,
+        Output<String> triggerId,
+        Output<String> validateOnly) {
         this.destination = Objects.requireNonNull(destination, "expected parameter 'destination' to be non-null");
         this.eventFilters = Objects.requireNonNull(eventFilters, "expected parameter 'eventFilters' to be non-null");
         this.labels = labels;
@@ -137,16 +137,16 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private TriggerArgs() {
-        this.destination = Input.empty();
-        this.eventFilters = Input.empty();
-        this.labels = Input.empty();
-        this.location = Input.empty();
-        this.name = Input.empty();
-        this.project = Input.empty();
-        this.serviceAccount = Input.empty();
-        this.transport = Input.empty();
-        this.triggerId = Input.empty();
-        this.validateOnly = Input.empty();
+        this.destination = Output.empty();
+        this.eventFilters = Output.empty();
+        this.labels = Output.empty();
+        this.location = Output.empty();
+        this.name = Output.empty();
+        this.project = Output.empty();
+        this.serviceAccount = Output.empty();
+        this.transport = Output.empty();
+        this.triggerId = Output.empty();
+        this.validateOnly = Output.empty();
     }
 
     public static Builder builder() {
@@ -158,16 +158,16 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<DestinationArgs> destination;
-        private Input<List<EventFilterArgs>> eventFilters;
-        private @Nullable Input<Map<String,String>> labels;
-        private @Nullable Input<String> location;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> project;
-        private @Nullable Input<String> serviceAccount;
-        private @Nullable Input<TransportArgs> transport;
-        private Input<String> triggerId;
-        private Input<String> validateOnly;
+        private Output<DestinationArgs> destination;
+        private Output<List<EventFilterArgs>> eventFilters;
+        private @Nullable Output<Map<String,String>> labels;
+        private @Nullable Output<String> location;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> project;
+        private @Nullable Output<String> serviceAccount;
+        private @Nullable Output<TransportArgs> transport;
+        private Output<String> triggerId;
+        private Output<String> validateOnly;
 
         public Builder() {
     	      // Empty
@@ -187,103 +187,103 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
     	      this.validateOnly = defaults.validateOnly;
         }
 
-        public Builder destination(Input<DestinationArgs> destination) {
+        public Builder destination(Output<DestinationArgs> destination) {
             this.destination = Objects.requireNonNull(destination);
             return this;
         }
 
         public Builder destination(DestinationArgs destination) {
-            this.destination = Input.of(Objects.requireNonNull(destination));
+            this.destination = Output.of(Objects.requireNonNull(destination));
             return this;
         }
 
-        public Builder eventFilters(Input<List<EventFilterArgs>> eventFilters) {
+        public Builder eventFilters(Output<List<EventFilterArgs>> eventFilters) {
             this.eventFilters = Objects.requireNonNull(eventFilters);
             return this;
         }
 
         public Builder eventFilters(List<EventFilterArgs> eventFilters) {
-            this.eventFilters = Input.of(Objects.requireNonNull(eventFilters));
+            this.eventFilters = Output.of(Objects.requireNonNull(eventFilters));
             return this;
         }
 
-        public Builder labels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
         public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Input.ofNullable(labels);
+            this.labels = Output.ofNullable(labels);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder serviceAccount(@Nullable Input<String> serviceAccount) {
+        public Builder serviceAccount(@Nullable Output<String> serviceAccount) {
             this.serviceAccount = serviceAccount;
             return this;
         }
 
         public Builder serviceAccount(@Nullable String serviceAccount) {
-            this.serviceAccount = Input.ofNullable(serviceAccount);
+            this.serviceAccount = Output.ofNullable(serviceAccount);
             return this;
         }
 
-        public Builder transport(@Nullable Input<TransportArgs> transport) {
+        public Builder transport(@Nullable Output<TransportArgs> transport) {
             this.transport = transport;
             return this;
         }
 
         public Builder transport(@Nullable TransportArgs transport) {
-            this.transport = Input.ofNullable(transport);
+            this.transport = Output.ofNullable(transport);
             return this;
         }
 
-        public Builder triggerId(Input<String> triggerId) {
+        public Builder triggerId(Output<String> triggerId) {
             this.triggerId = Objects.requireNonNull(triggerId);
             return this;
         }
 
         public Builder triggerId(String triggerId) {
-            this.triggerId = Input.of(Objects.requireNonNull(triggerId));
+            this.triggerId = Output.of(Objects.requireNonNull(triggerId));
             return this;
         }
 
-        public Builder validateOnly(Input<String> validateOnly) {
+        public Builder validateOnly(Output<String> validateOnly) {
             this.validateOnly = Objects.requireNonNull(validateOnly);
             return this;
         }
 
         public Builder validateOnly(String validateOnly) {
-            this.validateOnly = Input.of(Objects.requireNonNull(validateOnly));
+            this.validateOnly = Output.of(Objects.requireNonNull(validateOnly));
             return this;
         }
         public TriggerArgs build() {

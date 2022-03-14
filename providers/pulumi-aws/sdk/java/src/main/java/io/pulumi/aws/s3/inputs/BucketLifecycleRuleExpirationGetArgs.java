@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.s3.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -21,10 +21,10 @@ public final class BucketLifecycleRuleExpirationGetArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="date")
-      private final @Nullable Input<String> date;
+      private final @Nullable Output<String> date;
 
-    public Input<String> getDate() {
-        return this.date == null ? Input.empty() : this.date;
+    public Output<String> getDate() {
+        return this.date == null ? Output.empty() : this.date;
     }
 
     /**
@@ -32,10 +32,10 @@ public final class BucketLifecycleRuleExpirationGetArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="days")
-      private final @Nullable Input<Integer> days;
+      private final @Nullable Output<Integer> days;
 
-    public Input<Integer> getDays() {
-        return this.days == null ? Input.empty() : this.days;
+    public Output<Integer> getDays() {
+        return this.days == null ? Output.empty() : this.days;
     }
 
     /**
@@ -43,25 +43,25 @@ public final class BucketLifecycleRuleExpirationGetArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="expiredObjectDeleteMarker")
-      private final @Nullable Input<Boolean> expiredObjectDeleteMarker;
+      private final @Nullable Output<Boolean> expiredObjectDeleteMarker;
 
-    public Input<Boolean> getExpiredObjectDeleteMarker() {
-        return this.expiredObjectDeleteMarker == null ? Input.empty() : this.expiredObjectDeleteMarker;
+    public Output<Boolean> getExpiredObjectDeleteMarker() {
+        return this.expiredObjectDeleteMarker == null ? Output.empty() : this.expiredObjectDeleteMarker;
     }
 
     public BucketLifecycleRuleExpirationGetArgs(
-        @Nullable Input<String> date,
-        @Nullable Input<Integer> days,
-        @Nullable Input<Boolean> expiredObjectDeleteMarker) {
+        @Nullable Output<String> date,
+        @Nullable Output<Integer> days,
+        @Nullable Output<Boolean> expiredObjectDeleteMarker) {
         this.date = date;
         this.days = days;
         this.expiredObjectDeleteMarker = expiredObjectDeleteMarker;
     }
 
     private BucketLifecycleRuleExpirationGetArgs() {
-        this.date = Input.empty();
-        this.days = Input.empty();
-        this.expiredObjectDeleteMarker = Input.empty();
+        this.date = Output.empty();
+        this.days = Output.empty();
+        this.expiredObjectDeleteMarker = Output.empty();
     }
 
     public static Builder builder() {
@@ -73,9 +73,9 @@ public final class BucketLifecycleRuleExpirationGetArgs extends io.pulumi.resour
     }
 
     public static final class Builder {
-        private @Nullable Input<String> date;
-        private @Nullable Input<Integer> days;
-        private @Nullable Input<Boolean> expiredObjectDeleteMarker;
+        private @Nullable Output<String> date;
+        private @Nullable Output<Integer> days;
+        private @Nullable Output<Boolean> expiredObjectDeleteMarker;
 
         public Builder() {
     	      // Empty
@@ -88,33 +88,33 @@ public final class BucketLifecycleRuleExpirationGetArgs extends io.pulumi.resour
     	      this.expiredObjectDeleteMarker = defaults.expiredObjectDeleteMarker;
         }
 
-        public Builder date(@Nullable Input<String> date) {
+        public Builder date(@Nullable Output<String> date) {
             this.date = date;
             return this;
         }
 
         public Builder date(@Nullable String date) {
-            this.date = Input.ofNullable(date);
+            this.date = Output.ofNullable(date);
             return this;
         }
 
-        public Builder days(@Nullable Input<Integer> days) {
+        public Builder days(@Nullable Output<Integer> days) {
             this.days = days;
             return this;
         }
 
         public Builder days(@Nullable Integer days) {
-            this.days = Input.ofNullable(days);
+            this.days = Output.ofNullable(days);
             return this;
         }
 
-        public Builder expiredObjectDeleteMarker(@Nullable Input<Boolean> expiredObjectDeleteMarker) {
+        public Builder expiredObjectDeleteMarker(@Nullable Output<Boolean> expiredObjectDeleteMarker) {
             this.expiredObjectDeleteMarker = expiredObjectDeleteMarker;
             return this;
         }
 
         public Builder expiredObjectDeleteMarker(@Nullable Boolean expiredObjectDeleteMarker) {
-            this.expiredObjectDeleteMarker = Input.ofNullable(expiredObjectDeleteMarker);
+            this.expiredObjectDeleteMarker = Output.ofNullable(expiredObjectDeleteMarker);
             return this;
         }
         public BucketLifecycleRuleExpirationGetArgs build() {

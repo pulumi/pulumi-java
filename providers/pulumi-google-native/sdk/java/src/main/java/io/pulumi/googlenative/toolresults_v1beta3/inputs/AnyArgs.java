@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.toolresults_v1beta3.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class AnyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="typeUrl")
-      private final @Nullable Input<String> typeUrl;
+      private final @Nullable Output<String> typeUrl;
 
-    public Input<String> getTypeUrl() {
-        return this.typeUrl == null ? Input.empty() : this.typeUrl;
+    public Output<String> getTypeUrl() {
+        return this.typeUrl == null ? Output.empty() : this.typeUrl;
     }
 
     /**
@@ -34,22 +34,22 @@ public final class AnyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="value")
-      private final @Nullable Input<String> value;
+      private final @Nullable Output<String> value;
 
-    public Input<String> getValue() {
-        return this.value == null ? Input.empty() : this.value;
+    public Output<String> getValue() {
+        return this.value == null ? Output.empty() : this.value;
     }
 
     public AnyArgs(
-        @Nullable Input<String> typeUrl,
-        @Nullable Input<String> value) {
+        @Nullable Output<String> typeUrl,
+        @Nullable Output<String> value) {
         this.typeUrl = typeUrl;
         this.value = value;
     }
 
     private AnyArgs() {
-        this.typeUrl = Input.empty();
-        this.value = Input.empty();
+        this.typeUrl = Output.empty();
+        this.value = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class AnyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> typeUrl;
-        private @Nullable Input<String> value;
+        private @Nullable Output<String> typeUrl;
+        private @Nullable Output<String> value;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class AnyArgs extends io.pulumi.resources.ResourceArgs {
     	      this.value = defaults.value;
         }
 
-        public Builder typeUrl(@Nullable Input<String> typeUrl) {
+        public Builder typeUrl(@Nullable Output<String> typeUrl) {
             this.typeUrl = typeUrl;
             return this;
         }
 
         public Builder typeUrl(@Nullable String typeUrl) {
-            this.typeUrl = Input.ofNullable(typeUrl);
+            this.typeUrl = Output.ofNullable(typeUrl);
             return this;
         }
 
-        public Builder value(@Nullable Input<String> value) {
+        public Builder value(@Nullable Output<String> value) {
             this.value = value;
             return this;
         }
 
         public Builder value(@Nullable String value) {
-            this.value = Input.ofNullable(value);
+            this.value = Output.ofNullable(value);
             return this;
         }
         public AnyArgs build() {

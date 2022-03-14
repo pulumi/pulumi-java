@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datashare;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,9 +19,9 @@ public final class ADLSGen1FileDataSetArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="accountName", required=true)
-      private final Input<String> accountName;
+      private final Output<String> accountName;
 
-    public Input<String> getAccountName() {
+    public Output<String> getAccountName() {
         return this.accountName;
     }
 
@@ -30,10 +30,10 @@ public final class ADLSGen1FileDataSetArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="dataSetName")
-      private final @Nullable Input<String> dataSetName;
+      private final @Nullable Output<String> dataSetName;
 
-    public Input<String> getDataSetName() {
-        return this.dataSetName == null ? Input.empty() : this.dataSetName;
+    public Output<String> getDataSetName() {
+        return this.dataSetName == null ? Output.empty() : this.dataSetName;
     }
 
     /**
@@ -41,9 +41,9 @@ public final class ADLSGen1FileDataSetArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="fileName", required=true)
-      private final Input<String> fileName;
+      private final Output<String> fileName;
 
-    public Input<String> getFileName() {
+    public Output<String> getFileName() {
         return this.fileName;
     }
 
@@ -52,9 +52,9 @@ public final class ADLSGen1FileDataSetArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="folderPath", required=true)
-      private final Input<String> folderPath;
+      private final Output<String> folderPath;
 
-    public Input<String> getFolderPath() {
+    public Output<String> getFolderPath() {
         return this.folderPath;
     }
 
@@ -64,9 +64,9 @@ public final class ADLSGen1FileDataSetArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="kind", required=true)
-      private final Input<String> kind;
+      private final Output<String> kind;
 
-    public Input<String> getKind() {
+    public Output<String> getKind() {
         return this.kind;
     }
 
@@ -75,9 +75,9 @@ public final class ADLSGen1FileDataSetArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="resourceGroup", required=true)
-      private final Input<String> resourceGroup;
+      private final Output<String> resourceGroup;
 
-    public Input<String> getResourceGroup() {
+    public Output<String> getResourceGroup() {
         return this.resourceGroup;
     }
 
@@ -86,9 +86,9 @@ public final class ADLSGen1FileDataSetArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -97,9 +97,9 @@ public final class ADLSGen1FileDataSetArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="shareName", required=true)
-      private final Input<String> shareName;
+      private final Output<String> shareName;
 
-    public Input<String> getShareName() {
+    public Output<String> getShareName() {
         return this.shareName;
     }
 
@@ -108,22 +108,22 @@ public final class ADLSGen1FileDataSetArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="subscriptionId", required=true)
-      private final Input<String> subscriptionId;
+      private final Output<String> subscriptionId;
 
-    public Input<String> getSubscriptionId() {
+    public Output<String> getSubscriptionId() {
         return this.subscriptionId;
     }
 
     public ADLSGen1FileDataSetArgs(
-        Input<String> accountName,
-        @Nullable Input<String> dataSetName,
-        Input<String> fileName,
-        Input<String> folderPath,
-        Input<String> kind,
-        Input<String> resourceGroup,
-        Input<String> resourceGroupName,
-        Input<String> shareName,
-        Input<String> subscriptionId) {
+        Output<String> accountName,
+        @Nullable Output<String> dataSetName,
+        Output<String> fileName,
+        Output<String> folderPath,
+        Output<String> kind,
+        Output<String> resourceGroup,
+        Output<String> resourceGroupName,
+        Output<String> shareName,
+        Output<String> subscriptionId) {
         this.accountName = Objects.requireNonNull(accountName, "expected parameter 'accountName' to be non-null");
         this.dataSetName = dataSetName;
         this.fileName = Objects.requireNonNull(fileName, "expected parameter 'fileName' to be non-null");
@@ -136,15 +136,15 @@ public final class ADLSGen1FileDataSetArgs extends io.pulumi.resources.ResourceA
     }
 
     private ADLSGen1FileDataSetArgs() {
-        this.accountName = Input.empty();
-        this.dataSetName = Input.empty();
-        this.fileName = Input.empty();
-        this.folderPath = Input.empty();
-        this.kind = Input.empty();
-        this.resourceGroup = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.shareName = Input.empty();
-        this.subscriptionId = Input.empty();
+        this.accountName = Output.empty();
+        this.dataSetName = Output.empty();
+        this.fileName = Output.empty();
+        this.folderPath = Output.empty();
+        this.kind = Output.empty();
+        this.resourceGroup = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.shareName = Output.empty();
+        this.subscriptionId = Output.empty();
     }
 
     public static Builder builder() {
@@ -156,15 +156,15 @@ public final class ADLSGen1FileDataSetArgs extends io.pulumi.resources.ResourceA
     }
 
     public static final class Builder {
-        private Input<String> accountName;
-        private @Nullable Input<String> dataSetName;
-        private Input<String> fileName;
-        private Input<String> folderPath;
-        private Input<String> kind;
-        private Input<String> resourceGroup;
-        private Input<String> resourceGroupName;
-        private Input<String> shareName;
-        private Input<String> subscriptionId;
+        private Output<String> accountName;
+        private @Nullable Output<String> dataSetName;
+        private Output<String> fileName;
+        private Output<String> folderPath;
+        private Output<String> kind;
+        private Output<String> resourceGroup;
+        private Output<String> resourceGroupName;
+        private Output<String> shareName;
+        private Output<String> subscriptionId;
 
         public Builder() {
     	      // Empty
@@ -183,93 +183,93 @@ public final class ADLSGen1FileDataSetArgs extends io.pulumi.resources.ResourceA
     	      this.subscriptionId = defaults.subscriptionId;
         }
 
-        public Builder accountName(Input<String> accountName) {
+        public Builder accountName(Output<String> accountName) {
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
 
         public Builder accountName(String accountName) {
-            this.accountName = Input.of(Objects.requireNonNull(accountName));
+            this.accountName = Output.of(Objects.requireNonNull(accountName));
             return this;
         }
 
-        public Builder dataSetName(@Nullable Input<String> dataSetName) {
+        public Builder dataSetName(@Nullable Output<String> dataSetName) {
             this.dataSetName = dataSetName;
             return this;
         }
 
         public Builder dataSetName(@Nullable String dataSetName) {
-            this.dataSetName = Input.ofNullable(dataSetName);
+            this.dataSetName = Output.ofNullable(dataSetName);
             return this;
         }
 
-        public Builder fileName(Input<String> fileName) {
+        public Builder fileName(Output<String> fileName) {
             this.fileName = Objects.requireNonNull(fileName);
             return this;
         }
 
         public Builder fileName(String fileName) {
-            this.fileName = Input.of(Objects.requireNonNull(fileName));
+            this.fileName = Output.of(Objects.requireNonNull(fileName));
             return this;
         }
 
-        public Builder folderPath(Input<String> folderPath) {
+        public Builder folderPath(Output<String> folderPath) {
             this.folderPath = Objects.requireNonNull(folderPath);
             return this;
         }
 
         public Builder folderPath(String folderPath) {
-            this.folderPath = Input.of(Objects.requireNonNull(folderPath));
+            this.folderPath = Output.of(Objects.requireNonNull(folderPath));
             return this;
         }
 
-        public Builder kind(Input<String> kind) {
+        public Builder kind(Output<String> kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
         public Builder kind(String kind) {
-            this.kind = Input.of(Objects.requireNonNull(kind));
+            this.kind = Output.of(Objects.requireNonNull(kind));
             return this;
         }
 
-        public Builder resourceGroup(Input<String> resourceGroup) {
+        public Builder resourceGroup(Output<String> resourceGroup) {
             this.resourceGroup = Objects.requireNonNull(resourceGroup);
             return this;
         }
 
         public Builder resourceGroup(String resourceGroup) {
-            this.resourceGroup = Input.of(Objects.requireNonNull(resourceGroup));
+            this.resourceGroup = Output.of(Objects.requireNonNull(resourceGroup));
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder shareName(Input<String> shareName) {
+        public Builder shareName(Output<String> shareName) {
             this.shareName = Objects.requireNonNull(shareName);
             return this;
         }
 
         public Builder shareName(String shareName) {
-            this.shareName = Input.of(Objects.requireNonNull(shareName));
+            this.shareName = Output.of(Objects.requireNonNull(shareName));
             return this;
         }
 
-        public Builder subscriptionId(Input<String> subscriptionId) {
+        public Builder subscriptionId(Output<String> subscriptionId) {
             this.subscriptionId = Objects.requireNonNull(subscriptionId);
             return this;
         }
 
         public Builder subscriptionId(String subscriptionId) {
-            this.subscriptionId = Input.of(Objects.requireNonNull(subscriptionId));
+            this.subscriptionId = Output.of(Objects.requireNonNull(subscriptionId));
             return this;
         }
         public ADLSGen1FileDataSetArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.accesscontextmanager.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -21,10 +21,10 @@ public final class ServicePerimetersServicePerimeterStatusEgressPolicyEgressToOp
      * 
      */
     @InputImport(name="method")
-      private final @Nullable Input<String> method;
+      private final @Nullable Output<String> method;
 
-    public Input<String> getMethod() {
-        return this.method == null ? Input.empty() : this.method;
+    public Output<String> getMethod() {
+        return this.method == null ? Output.empty() : this.method;
     }
 
     /**
@@ -33,22 +33,22 @@ public final class ServicePerimetersServicePerimeterStatusEgressPolicyEgressToOp
      * 
      */
     @InputImport(name="permission")
-      private final @Nullable Input<String> permission;
+      private final @Nullable Output<String> permission;
 
-    public Input<String> getPermission() {
-        return this.permission == null ? Input.empty() : this.permission;
+    public Output<String> getPermission() {
+        return this.permission == null ? Output.empty() : this.permission;
     }
 
     public ServicePerimetersServicePerimeterStatusEgressPolicyEgressToOperationMethodSelectorGetArgs(
-        @Nullable Input<String> method,
-        @Nullable Input<String> permission) {
+        @Nullable Output<String> method,
+        @Nullable Output<String> permission) {
         this.method = method;
         this.permission = permission;
     }
 
     private ServicePerimetersServicePerimeterStatusEgressPolicyEgressToOperationMethodSelectorGetArgs() {
-        this.method = Input.empty();
-        this.permission = Input.empty();
+        this.method = Output.empty();
+        this.permission = Output.empty();
     }
 
     public static Builder builder() {
@@ -60,8 +60,8 @@ public final class ServicePerimetersServicePerimeterStatusEgressPolicyEgressToOp
     }
 
     public static final class Builder {
-        private @Nullable Input<String> method;
-        private @Nullable Input<String> permission;
+        private @Nullable Output<String> method;
+        private @Nullable Output<String> permission;
 
         public Builder() {
     	      // Empty
@@ -73,23 +73,23 @@ public final class ServicePerimetersServicePerimeterStatusEgressPolicyEgressToOp
     	      this.permission = defaults.permission;
         }
 
-        public Builder method(@Nullable Input<String> method) {
+        public Builder method(@Nullable Output<String> method) {
             this.method = method;
             return this;
         }
 
         public Builder method(@Nullable String method) {
-            this.method = Input.ofNullable(method);
+            this.method = Output.ofNullable(method);
             return this;
         }
 
-        public Builder permission(@Nullable Input<String> permission) {
+        public Builder permission(@Nullable Output<String> permission) {
             this.permission = permission;
             return this;
         }
 
         public Builder permission(@Nullable String permission) {
-            this.permission = Input.ofNullable(permission);
+            this.permission = Output.ofNullable(permission);
             return this;
         }
         public ServicePerimetersServicePerimeterStatusEgressPolicyEgressToOperationMethodSelectorGetArgs build() {

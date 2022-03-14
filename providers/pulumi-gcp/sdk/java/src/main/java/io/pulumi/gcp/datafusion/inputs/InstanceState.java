@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.datafusion.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.datafusion.inputs.InstanceNetworkConfigGetArgs;
 import java.lang.Boolean;
@@ -22,10 +22,10 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="createTime")
-      private final @Nullable Input<String> createTime;
+      private final @Nullable Output<String> createTime;
 
-    public Input<String> getCreateTime() {
-        return this.createTime == null ? Input.empty() : this.createTime;
+    public Output<String> getCreateTime() {
+        return this.createTime == null ? Output.empty() : this.createTime;
     }
 
     /**
@@ -33,10 +33,10 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dataprocServiceAccount")
-      private final @Nullable Input<String> dataprocServiceAccount;
+      private final @Nullable Output<String> dataprocServiceAccount;
 
-    public Input<String> getDataprocServiceAccount() {
-        return this.dataprocServiceAccount == null ? Input.empty() : this.dataprocServiceAccount;
+    public Output<String> getDataprocServiceAccount() {
+        return this.dataprocServiceAccount == null ? Output.empty() : this.dataprocServiceAccount;
     }
 
     /**
@@ -44,10 +44,10 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -55,10 +55,10 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enableStackdriverLogging")
-      private final @Nullable Input<Boolean> enableStackdriverLogging;
+      private final @Nullable Output<Boolean> enableStackdriverLogging;
 
-    public Input<Boolean> getEnableStackdriverLogging() {
-        return this.enableStackdriverLogging == null ? Input.empty() : this.enableStackdriverLogging;
+    public Output<Boolean> getEnableStackdriverLogging() {
+        return this.enableStackdriverLogging == null ? Output.empty() : this.enableStackdriverLogging;
     }
 
     /**
@@ -66,10 +66,10 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enableStackdriverMonitoring")
-      private final @Nullable Input<Boolean> enableStackdriverMonitoring;
+      private final @Nullable Output<Boolean> enableStackdriverMonitoring;
 
-    public Input<Boolean> getEnableStackdriverMonitoring() {
-        return this.enableStackdriverMonitoring == null ? Input.empty() : this.enableStackdriverMonitoring;
+    public Output<Boolean> getEnableStackdriverMonitoring() {
+        return this.enableStackdriverMonitoring == null ? Output.empty() : this.enableStackdriverMonitoring;
     }
 
     /**
@@ -78,10 +78,10 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labels")
-      private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Output<Map<String,String>> labels;
 
-    public Input<Map<String,String>> getLabels() {
-        return this.labels == null ? Input.empty() : this.labels;
+    public Output<Map<String,String>> getLabels() {
+        return this.labels == null ? Output.empty() : this.labels;
     }
 
     /**
@@ -89,10 +89,10 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -101,10 +101,10 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="networkConfig")
-      private final @Nullable Input<InstanceNetworkConfigGetArgs> networkConfig;
+      private final @Nullable Output<InstanceNetworkConfigGetArgs> networkConfig;
 
-    public Input<InstanceNetworkConfigGetArgs> getNetworkConfig() {
-        return this.networkConfig == null ? Input.empty() : this.networkConfig;
+    public Output<InstanceNetworkConfigGetArgs> getNetworkConfig() {
+        return this.networkConfig == null ? Output.empty() : this.networkConfig;
     }
 
     /**
@@ -112,10 +112,10 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="options")
-      private final @Nullable Input<Map<String,String>> options;
+      private final @Nullable Output<Map<String,String>> options;
 
-    public Input<Map<String,String>> getOptions() {
-        return this.options == null ? Input.empty() : this.options;
+    public Output<Map<String,String>> getOptions() {
+        return this.options == null ? Output.empty() : this.options;
     }
 
     /**
@@ -125,10 +125,10 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="privateInstance")
-      private final @Nullable Input<Boolean> privateInstance;
+      private final @Nullable Output<Boolean> privateInstance;
 
-    public Input<Boolean> getPrivateInstance() {
-        return this.privateInstance == null ? Input.empty() : this.privateInstance;
+    public Output<Boolean> getPrivateInstance() {
+        return this.privateInstance == null ? Output.empty() : this.privateInstance;
     }
 
     /**
@@ -137,10 +137,10 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -148,10 +148,10 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="region")
-      private final @Nullable Input<String> region;
+      private final @Nullable Output<String> region;
 
-    public Input<String> getRegion() {
-        return this.region == null ? Input.empty() : this.region;
+    public Output<String> getRegion() {
+        return this.region == null ? Output.empty() : this.region;
     }
 
     /**
@@ -159,10 +159,10 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serviceAccount")
-      private final @Nullable Input<String> serviceAccount;
+      private final @Nullable Output<String> serviceAccount;
 
-    public Input<String> getServiceAccount() {
-        return this.serviceAccount == null ? Input.empty() : this.serviceAccount;
+    public Output<String> getServiceAccount() {
+        return this.serviceAccount == null ? Output.empty() : this.serviceAccount;
     }
 
     /**
@@ -170,10 +170,10 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serviceEndpoint")
-      private final @Nullable Input<String> serviceEndpoint;
+      private final @Nullable Output<String> serviceEndpoint;
 
-    public Input<String> getServiceEndpoint() {
-        return this.serviceEndpoint == null ? Input.empty() : this.serviceEndpoint;
+    public Output<String> getServiceEndpoint() {
+        return this.serviceEndpoint == null ? Output.empty() : this.serviceEndpoint;
     }
 
     /**
@@ -183,10 +183,10 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="state")
-      private final @Nullable Input<String> state;
+      private final @Nullable Output<String> state;
 
-    public Input<String> getState() {
-        return this.state == null ? Input.empty() : this.state;
+    public Output<String> getState() {
+        return this.state == null ? Output.empty() : this.state;
     }
 
     /**
@@ -194,10 +194,10 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="stateMessage")
-      private final @Nullable Input<String> stateMessage;
+      private final @Nullable Output<String> stateMessage;
 
-    public Input<String> getStateMessage() {
-        return this.stateMessage == null ? Input.empty() : this.stateMessage;
+    public Output<String> getStateMessage() {
+        return this.stateMessage == null ? Output.empty() : this.stateMessage;
     }
 
     /**
@@ -215,10 +215,10 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type")
-      private final @Nullable Input<String> type;
+      private final @Nullable Output<String> type;
 
-    public Input<String> getType() {
-        return this.type == null ? Input.empty() : this.type;
+    public Output<String> getType() {
+        return this.type == null ? Output.empty() : this.type;
     }
 
     /**
@@ -226,10 +226,10 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="updateTime")
-      private final @Nullable Input<String> updateTime;
+      private final @Nullable Output<String> updateTime;
 
-    public Input<String> getUpdateTime() {
-        return this.updateTime == null ? Input.empty() : this.updateTime;
+    public Output<String> getUpdateTime() {
+        return this.updateTime == null ? Output.empty() : this.updateTime;
     }
 
     /**
@@ -237,32 +237,32 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="version")
-      private final @Nullable Input<String> version;
+      private final @Nullable Output<String> version;
 
-    public Input<String> getVersion() {
-        return this.version == null ? Input.empty() : this.version;
+    public Output<String> getVersion() {
+        return this.version == null ? Output.empty() : this.version;
     }
 
     public InstanceState(
-        @Nullable Input<String> createTime,
-        @Nullable Input<String> dataprocServiceAccount,
-        @Nullable Input<String> description,
-        @Nullable Input<Boolean> enableStackdriverLogging,
-        @Nullable Input<Boolean> enableStackdriverMonitoring,
-        @Nullable Input<Map<String,String>> labels,
-        @Nullable Input<String> name,
-        @Nullable Input<InstanceNetworkConfigGetArgs> networkConfig,
-        @Nullable Input<Map<String,String>> options,
-        @Nullable Input<Boolean> privateInstance,
-        @Nullable Input<String> project,
-        @Nullable Input<String> region,
-        @Nullable Input<String> serviceAccount,
-        @Nullable Input<String> serviceEndpoint,
-        @Nullable Input<String> state,
-        @Nullable Input<String> stateMessage,
-        @Nullable Input<String> type,
-        @Nullable Input<String> updateTime,
-        @Nullable Input<String> version) {
+        @Nullable Output<String> createTime,
+        @Nullable Output<String> dataprocServiceAccount,
+        @Nullable Output<String> description,
+        @Nullable Output<Boolean> enableStackdriverLogging,
+        @Nullable Output<Boolean> enableStackdriverMonitoring,
+        @Nullable Output<Map<String,String>> labels,
+        @Nullable Output<String> name,
+        @Nullable Output<InstanceNetworkConfigGetArgs> networkConfig,
+        @Nullable Output<Map<String,String>> options,
+        @Nullable Output<Boolean> privateInstance,
+        @Nullable Output<String> project,
+        @Nullable Output<String> region,
+        @Nullable Output<String> serviceAccount,
+        @Nullable Output<String> serviceEndpoint,
+        @Nullable Output<String> state,
+        @Nullable Output<String> stateMessage,
+        @Nullable Output<String> type,
+        @Nullable Output<String> updateTime,
+        @Nullable Output<String> version) {
         this.createTime = createTime;
         this.dataprocServiceAccount = dataprocServiceAccount;
         this.description = description;
@@ -285,25 +285,25 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
     }
 
     private InstanceState() {
-        this.createTime = Input.empty();
-        this.dataprocServiceAccount = Input.empty();
-        this.description = Input.empty();
-        this.enableStackdriverLogging = Input.empty();
-        this.enableStackdriverMonitoring = Input.empty();
-        this.labels = Input.empty();
-        this.name = Input.empty();
-        this.networkConfig = Input.empty();
-        this.options = Input.empty();
-        this.privateInstance = Input.empty();
-        this.project = Input.empty();
-        this.region = Input.empty();
-        this.serviceAccount = Input.empty();
-        this.serviceEndpoint = Input.empty();
-        this.state = Input.empty();
-        this.stateMessage = Input.empty();
-        this.type = Input.empty();
-        this.updateTime = Input.empty();
-        this.version = Input.empty();
+        this.createTime = Output.empty();
+        this.dataprocServiceAccount = Output.empty();
+        this.description = Output.empty();
+        this.enableStackdriverLogging = Output.empty();
+        this.enableStackdriverMonitoring = Output.empty();
+        this.labels = Output.empty();
+        this.name = Output.empty();
+        this.networkConfig = Output.empty();
+        this.options = Output.empty();
+        this.privateInstance = Output.empty();
+        this.project = Output.empty();
+        this.region = Output.empty();
+        this.serviceAccount = Output.empty();
+        this.serviceEndpoint = Output.empty();
+        this.state = Output.empty();
+        this.stateMessage = Output.empty();
+        this.type = Output.empty();
+        this.updateTime = Output.empty();
+        this.version = Output.empty();
     }
 
     public static Builder builder() {
@@ -315,25 +315,25 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> createTime;
-        private @Nullable Input<String> dataprocServiceAccount;
-        private @Nullable Input<String> description;
-        private @Nullable Input<Boolean> enableStackdriverLogging;
-        private @Nullable Input<Boolean> enableStackdriverMonitoring;
-        private @Nullable Input<Map<String,String>> labels;
-        private @Nullable Input<String> name;
-        private @Nullable Input<InstanceNetworkConfigGetArgs> networkConfig;
-        private @Nullable Input<Map<String,String>> options;
-        private @Nullable Input<Boolean> privateInstance;
-        private @Nullable Input<String> project;
-        private @Nullable Input<String> region;
-        private @Nullable Input<String> serviceAccount;
-        private @Nullable Input<String> serviceEndpoint;
-        private @Nullable Input<String> state;
-        private @Nullable Input<String> stateMessage;
-        private @Nullable Input<String> type;
-        private @Nullable Input<String> updateTime;
-        private @Nullable Input<String> version;
+        private @Nullable Output<String> createTime;
+        private @Nullable Output<String> dataprocServiceAccount;
+        private @Nullable Output<String> description;
+        private @Nullable Output<Boolean> enableStackdriverLogging;
+        private @Nullable Output<Boolean> enableStackdriverMonitoring;
+        private @Nullable Output<Map<String,String>> labels;
+        private @Nullable Output<String> name;
+        private @Nullable Output<InstanceNetworkConfigGetArgs> networkConfig;
+        private @Nullable Output<Map<String,String>> options;
+        private @Nullable Output<Boolean> privateInstance;
+        private @Nullable Output<String> project;
+        private @Nullable Output<String> region;
+        private @Nullable Output<String> serviceAccount;
+        private @Nullable Output<String> serviceEndpoint;
+        private @Nullable Output<String> state;
+        private @Nullable Output<String> stateMessage;
+        private @Nullable Output<String> type;
+        private @Nullable Output<String> updateTime;
+        private @Nullable Output<String> version;
 
         public Builder() {
     	      // Empty
@@ -362,193 +362,193 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
     	      this.version = defaults.version;
         }
 
-        public Builder createTime(@Nullable Input<String> createTime) {
+        public Builder createTime(@Nullable Output<String> createTime) {
             this.createTime = createTime;
             return this;
         }
 
         public Builder createTime(@Nullable String createTime) {
-            this.createTime = Input.ofNullable(createTime);
+            this.createTime = Output.ofNullable(createTime);
             return this;
         }
 
-        public Builder dataprocServiceAccount(@Nullable Input<String> dataprocServiceAccount) {
+        public Builder dataprocServiceAccount(@Nullable Output<String> dataprocServiceAccount) {
             this.dataprocServiceAccount = dataprocServiceAccount;
             return this;
         }
 
         public Builder dataprocServiceAccount(@Nullable String dataprocServiceAccount) {
-            this.dataprocServiceAccount = Input.ofNullable(dataprocServiceAccount);
+            this.dataprocServiceAccount = Output.ofNullable(dataprocServiceAccount);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder enableStackdriverLogging(@Nullable Input<Boolean> enableStackdriverLogging) {
+        public Builder enableStackdriverLogging(@Nullable Output<Boolean> enableStackdriverLogging) {
             this.enableStackdriverLogging = enableStackdriverLogging;
             return this;
         }
 
         public Builder enableStackdriverLogging(@Nullable Boolean enableStackdriverLogging) {
-            this.enableStackdriverLogging = Input.ofNullable(enableStackdriverLogging);
+            this.enableStackdriverLogging = Output.ofNullable(enableStackdriverLogging);
             return this;
         }
 
-        public Builder enableStackdriverMonitoring(@Nullable Input<Boolean> enableStackdriverMonitoring) {
+        public Builder enableStackdriverMonitoring(@Nullable Output<Boolean> enableStackdriverMonitoring) {
             this.enableStackdriverMonitoring = enableStackdriverMonitoring;
             return this;
         }
 
         public Builder enableStackdriverMonitoring(@Nullable Boolean enableStackdriverMonitoring) {
-            this.enableStackdriverMonitoring = Input.ofNullable(enableStackdriverMonitoring);
+            this.enableStackdriverMonitoring = Output.ofNullable(enableStackdriverMonitoring);
             return this;
         }
 
-        public Builder labels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
         public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Input.ofNullable(labels);
+            this.labels = Output.ofNullable(labels);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder networkConfig(@Nullable Input<InstanceNetworkConfigGetArgs> networkConfig) {
+        public Builder networkConfig(@Nullable Output<InstanceNetworkConfigGetArgs> networkConfig) {
             this.networkConfig = networkConfig;
             return this;
         }
 
         public Builder networkConfig(@Nullable InstanceNetworkConfigGetArgs networkConfig) {
-            this.networkConfig = Input.ofNullable(networkConfig);
+            this.networkConfig = Output.ofNullable(networkConfig);
             return this;
         }
 
-        public Builder options(@Nullable Input<Map<String,String>> options) {
+        public Builder options(@Nullable Output<Map<String,String>> options) {
             this.options = options;
             return this;
         }
 
         public Builder options(@Nullable Map<String,String> options) {
-            this.options = Input.ofNullable(options);
+            this.options = Output.ofNullable(options);
             return this;
         }
 
-        public Builder privateInstance(@Nullable Input<Boolean> privateInstance) {
+        public Builder privateInstance(@Nullable Output<Boolean> privateInstance) {
             this.privateInstance = privateInstance;
             return this;
         }
 
         public Builder privateInstance(@Nullable Boolean privateInstance) {
-            this.privateInstance = Input.ofNullable(privateInstance);
+            this.privateInstance = Output.ofNullable(privateInstance);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder region(@Nullable Input<String> region) {
+        public Builder region(@Nullable Output<String> region) {
             this.region = region;
             return this;
         }
 
         public Builder region(@Nullable String region) {
-            this.region = Input.ofNullable(region);
+            this.region = Output.ofNullable(region);
             return this;
         }
 
-        public Builder serviceAccount(@Nullable Input<String> serviceAccount) {
+        public Builder serviceAccount(@Nullable Output<String> serviceAccount) {
             this.serviceAccount = serviceAccount;
             return this;
         }
 
         public Builder serviceAccount(@Nullable String serviceAccount) {
-            this.serviceAccount = Input.ofNullable(serviceAccount);
+            this.serviceAccount = Output.ofNullable(serviceAccount);
             return this;
         }
 
-        public Builder serviceEndpoint(@Nullable Input<String> serviceEndpoint) {
+        public Builder serviceEndpoint(@Nullable Output<String> serviceEndpoint) {
             this.serviceEndpoint = serviceEndpoint;
             return this;
         }
 
         public Builder serviceEndpoint(@Nullable String serviceEndpoint) {
-            this.serviceEndpoint = Input.ofNullable(serviceEndpoint);
+            this.serviceEndpoint = Output.ofNullable(serviceEndpoint);
             return this;
         }
 
-        public Builder state(@Nullable Input<String> state) {
+        public Builder state(@Nullable Output<String> state) {
             this.state = state;
             return this;
         }
 
         public Builder state(@Nullable String state) {
-            this.state = Input.ofNullable(state);
+            this.state = Output.ofNullable(state);
             return this;
         }
 
-        public Builder stateMessage(@Nullable Input<String> stateMessage) {
+        public Builder stateMessage(@Nullable Output<String> stateMessage) {
             this.stateMessage = stateMessage;
             return this;
         }
 
         public Builder stateMessage(@Nullable String stateMessage) {
-            this.stateMessage = Input.ofNullable(stateMessage);
+            this.stateMessage = Output.ofNullable(stateMessage);
             return this;
         }
 
-        public Builder type(@Nullable Input<String> type) {
+        public Builder type(@Nullable Output<String> type) {
             this.type = type;
             return this;
         }
 
         public Builder type(@Nullable String type) {
-            this.type = Input.ofNullable(type);
+            this.type = Output.ofNullable(type);
             return this;
         }
 
-        public Builder updateTime(@Nullable Input<String> updateTime) {
+        public Builder updateTime(@Nullable Output<String> updateTime) {
             this.updateTime = updateTime;
             return this;
         }
 
         public Builder updateTime(@Nullable String updateTime) {
-            this.updateTime = Input.ofNullable(updateTime);
+            this.updateTime = Output.ofNullable(updateTime);
             return this;
         }
 
-        public Builder version(@Nullable Input<String> version) {
+        public Builder version(@Nullable Output<String> version) {
             this.version = version;
             return this;
         }
 
         public Builder version(@Nullable String version) {
-            this.version = Input.ofNullable(version);
+            this.version = Output.ofNullable(version);
             return this;
         }
         public InstanceState build() {

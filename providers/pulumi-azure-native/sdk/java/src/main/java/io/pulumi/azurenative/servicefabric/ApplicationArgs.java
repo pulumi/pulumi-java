@@ -7,7 +7,7 @@ import io.pulumi.azurenative.servicefabric.inputs.ApplicationMetricDescriptionAr
 import io.pulumi.azurenative.servicefabric.inputs.ApplicationUpgradePolicyArgs;
 import io.pulumi.azurenative.servicefabric.inputs.ApplicationUserAssignedIdentityArgs;
 import io.pulumi.azurenative.servicefabric.inputs.ManagedIdentityArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Double;
@@ -27,10 +27,10 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="applicationName")
-      private final @Nullable Input<String> applicationName;
+      private final @Nullable Output<String> applicationName;
 
-    public Input<String> getApplicationName() {
-        return this.applicationName == null ? Input.empty() : this.applicationName;
+    public Output<String> getApplicationName() {
+        return this.applicationName == null ? Output.empty() : this.applicationName;
     }
 
     /**
@@ -38,9 +38,9 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="clusterName", required=true)
-      private final Input<String> clusterName;
+      private final Output<String> clusterName;
 
-    public Input<String> getClusterName() {
+    public Output<String> getClusterName() {
         return this.clusterName;
     }
 
@@ -49,10 +49,10 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="identity")
-      private final @Nullable Input<ManagedIdentityArgs> identity;
+      private final @Nullable Output<ManagedIdentityArgs> identity;
 
-    public Input<ManagedIdentityArgs> getIdentity() {
-        return this.identity == null ? Input.empty() : this.identity;
+    public Output<ManagedIdentityArgs> getIdentity() {
+        return this.identity == null ? Output.empty() : this.identity;
     }
 
     /**
@@ -60,10 +60,10 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -71,10 +71,10 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="managedIdentities")
-      private final @Nullable Input<List<ApplicationUserAssignedIdentityArgs>> managedIdentities;
+      private final @Nullable Output<List<ApplicationUserAssignedIdentityArgs>> managedIdentities;
 
-    public Input<List<ApplicationUserAssignedIdentityArgs>> getManagedIdentities() {
-        return this.managedIdentities == null ? Input.empty() : this.managedIdentities;
+    public Output<List<ApplicationUserAssignedIdentityArgs>> getManagedIdentities() {
+        return this.managedIdentities == null ? Output.empty() : this.managedIdentities;
     }
 
     /**
@@ -82,10 +82,10 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="maximumNodes")
-      private final @Nullable Input<Double> maximumNodes;
+      private final @Nullable Output<Double> maximumNodes;
 
-    public Input<Double> getMaximumNodes() {
-        return this.maximumNodes == null ? Input.empty() : this.maximumNodes;
+    public Output<Double> getMaximumNodes() {
+        return this.maximumNodes == null ? Output.empty() : this.maximumNodes;
     }
 
     /**
@@ -93,10 +93,10 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="metrics")
-      private final @Nullable Input<List<ApplicationMetricDescriptionArgs>> metrics;
+      private final @Nullable Output<List<ApplicationMetricDescriptionArgs>> metrics;
 
-    public Input<List<ApplicationMetricDescriptionArgs>> getMetrics() {
-        return this.metrics == null ? Input.empty() : this.metrics;
+    public Output<List<ApplicationMetricDescriptionArgs>> getMetrics() {
+        return this.metrics == null ? Output.empty() : this.metrics;
     }
 
     /**
@@ -104,10 +104,10 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="minimumNodes")
-      private final @Nullable Input<Double> minimumNodes;
+      private final @Nullable Output<Double> minimumNodes;
 
-    public Input<Double> getMinimumNodes() {
-        return this.minimumNodes == null ? Input.empty() : this.minimumNodes;
+    public Output<Double> getMinimumNodes() {
+        return this.minimumNodes == null ? Output.empty() : this.minimumNodes;
     }
 
     /**
@@ -115,10 +115,10 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="parameters")
-      private final @Nullable Input<Map<String,String>> parameters;
+      private final @Nullable Output<Map<String,String>> parameters;
 
-    public Input<Map<String,String>> getParameters() {
-        return this.parameters == null ? Input.empty() : this.parameters;
+    public Output<Map<String,String>> getParameters() {
+        return this.parameters == null ? Output.empty() : this.parameters;
     }
 
     /**
@@ -126,10 +126,10 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="removeApplicationCapacity")
-      private final @Nullable Input<Boolean> removeApplicationCapacity;
+      private final @Nullable Output<Boolean> removeApplicationCapacity;
 
-    public Input<Boolean> getRemoveApplicationCapacity() {
-        return this.removeApplicationCapacity == null ? Input.empty() : this.removeApplicationCapacity;
+    public Output<Boolean> getRemoveApplicationCapacity() {
+        return this.removeApplicationCapacity == null ? Output.empty() : this.removeApplicationCapacity;
     }
 
     /**
@@ -137,9 +137,9 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -148,10 +148,10 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -159,10 +159,10 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="typeName")
-      private final @Nullable Input<String> typeName;
+      private final @Nullable Output<String> typeName;
 
-    public Input<String> getTypeName() {
-        return this.typeName == null ? Input.empty() : this.typeName;
+    public Output<String> getTypeName() {
+        return this.typeName == null ? Output.empty() : this.typeName;
     }
 
     /**
@@ -170,10 +170,10 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="typeVersion")
-      private final @Nullable Input<String> typeVersion;
+      private final @Nullable Output<String> typeVersion;
 
-    public Input<String> getTypeVersion() {
-        return this.typeVersion == null ? Input.empty() : this.typeVersion;
+    public Output<String> getTypeVersion() {
+        return this.typeVersion == null ? Output.empty() : this.typeVersion;
     }
 
     /**
@@ -181,34 +181,34 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="upgradePolicy")
-      private final @Nullable Input<ApplicationUpgradePolicyArgs> upgradePolicy;
+      private final @Nullable Output<ApplicationUpgradePolicyArgs> upgradePolicy;
 
-    public Input<ApplicationUpgradePolicyArgs> getUpgradePolicy() {
-        return this.upgradePolicy == null ? Input.empty() : this.upgradePolicy;
+    public Output<ApplicationUpgradePolicyArgs> getUpgradePolicy() {
+        return this.upgradePolicy == null ? Output.empty() : this.upgradePolicy;
     }
 
     public ApplicationArgs(
-        @Nullable Input<String> applicationName,
-        Input<String> clusterName,
-        @Nullable Input<ManagedIdentityArgs> identity,
-        @Nullable Input<String> location,
-        @Nullable Input<List<ApplicationUserAssignedIdentityArgs>> managedIdentities,
-        @Nullable Input<Double> maximumNodes,
-        @Nullable Input<List<ApplicationMetricDescriptionArgs>> metrics,
-        @Nullable Input<Double> minimumNodes,
-        @Nullable Input<Map<String,String>> parameters,
-        @Nullable Input<Boolean> removeApplicationCapacity,
-        Input<String> resourceGroupName,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<String> typeName,
-        @Nullable Input<String> typeVersion,
-        @Nullable Input<ApplicationUpgradePolicyArgs> upgradePolicy) {
+        @Nullable Output<String> applicationName,
+        Output<String> clusterName,
+        @Nullable Output<ManagedIdentityArgs> identity,
+        @Nullable Output<String> location,
+        @Nullable Output<List<ApplicationUserAssignedIdentityArgs>> managedIdentities,
+        @Nullable Output<Double> maximumNodes,
+        @Nullable Output<List<ApplicationMetricDescriptionArgs>> metrics,
+        @Nullable Output<Double> minimumNodes,
+        @Nullable Output<Map<String,String>> parameters,
+        @Nullable Output<Boolean> removeApplicationCapacity,
+        Output<String> resourceGroupName,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<String> typeName,
+        @Nullable Output<String> typeVersion,
+        @Nullable Output<ApplicationUpgradePolicyArgs> upgradePolicy) {
         this.applicationName = applicationName;
         this.clusterName = Objects.requireNonNull(clusterName, "expected parameter 'clusterName' to be non-null");
         this.identity = identity;
         this.location = location;
         this.managedIdentities = managedIdentities;
-        this.maximumNodes = maximumNodes == null ? Input.ofNullable(0e+00) : maximumNodes;
+        this.maximumNodes = maximumNodes == null ? Output.ofNullable(0e+00) : maximumNodes;
         this.metrics = metrics;
         this.minimumNodes = minimumNodes;
         this.parameters = parameters;
@@ -221,21 +221,21 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ApplicationArgs() {
-        this.applicationName = Input.empty();
-        this.clusterName = Input.empty();
-        this.identity = Input.empty();
-        this.location = Input.empty();
-        this.managedIdentities = Input.empty();
-        this.maximumNodes = Input.empty();
-        this.metrics = Input.empty();
-        this.minimumNodes = Input.empty();
-        this.parameters = Input.empty();
-        this.removeApplicationCapacity = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.tags = Input.empty();
-        this.typeName = Input.empty();
-        this.typeVersion = Input.empty();
-        this.upgradePolicy = Input.empty();
+        this.applicationName = Output.empty();
+        this.clusterName = Output.empty();
+        this.identity = Output.empty();
+        this.location = Output.empty();
+        this.managedIdentities = Output.empty();
+        this.maximumNodes = Output.empty();
+        this.metrics = Output.empty();
+        this.minimumNodes = Output.empty();
+        this.parameters = Output.empty();
+        this.removeApplicationCapacity = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.tags = Output.empty();
+        this.typeName = Output.empty();
+        this.typeVersion = Output.empty();
+        this.upgradePolicy = Output.empty();
     }
 
     public static Builder builder() {
@@ -247,21 +247,21 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> applicationName;
-        private Input<String> clusterName;
-        private @Nullable Input<ManagedIdentityArgs> identity;
-        private @Nullable Input<String> location;
-        private @Nullable Input<List<ApplicationUserAssignedIdentityArgs>> managedIdentities;
-        private @Nullable Input<Double> maximumNodes;
-        private @Nullable Input<List<ApplicationMetricDescriptionArgs>> metrics;
-        private @Nullable Input<Double> minimumNodes;
-        private @Nullable Input<Map<String,String>> parameters;
-        private @Nullable Input<Boolean> removeApplicationCapacity;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<String> typeName;
-        private @Nullable Input<String> typeVersion;
-        private @Nullable Input<ApplicationUpgradePolicyArgs> upgradePolicy;
+        private @Nullable Output<String> applicationName;
+        private Output<String> clusterName;
+        private @Nullable Output<ManagedIdentityArgs> identity;
+        private @Nullable Output<String> location;
+        private @Nullable Output<List<ApplicationUserAssignedIdentityArgs>> managedIdentities;
+        private @Nullable Output<Double> maximumNodes;
+        private @Nullable Output<List<ApplicationMetricDescriptionArgs>> metrics;
+        private @Nullable Output<Double> minimumNodes;
+        private @Nullable Output<Map<String,String>> parameters;
+        private @Nullable Output<Boolean> removeApplicationCapacity;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<String> typeName;
+        private @Nullable Output<String> typeVersion;
+        private @Nullable Output<ApplicationUpgradePolicyArgs> upgradePolicy;
 
         public Builder() {
     	      // Empty
@@ -286,153 +286,153 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
     	      this.upgradePolicy = defaults.upgradePolicy;
         }
 
-        public Builder applicationName(@Nullable Input<String> applicationName) {
+        public Builder applicationName(@Nullable Output<String> applicationName) {
             this.applicationName = applicationName;
             return this;
         }
 
         public Builder applicationName(@Nullable String applicationName) {
-            this.applicationName = Input.ofNullable(applicationName);
+            this.applicationName = Output.ofNullable(applicationName);
             return this;
         }
 
-        public Builder clusterName(Input<String> clusterName) {
+        public Builder clusterName(Output<String> clusterName) {
             this.clusterName = Objects.requireNonNull(clusterName);
             return this;
         }
 
         public Builder clusterName(String clusterName) {
-            this.clusterName = Input.of(Objects.requireNonNull(clusterName));
+            this.clusterName = Output.of(Objects.requireNonNull(clusterName));
             return this;
         }
 
-        public Builder identity(@Nullable Input<ManagedIdentityArgs> identity) {
+        public Builder identity(@Nullable Output<ManagedIdentityArgs> identity) {
             this.identity = identity;
             return this;
         }
 
         public Builder identity(@Nullable ManagedIdentityArgs identity) {
-            this.identity = Input.ofNullable(identity);
+            this.identity = Output.ofNullable(identity);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder managedIdentities(@Nullable Input<List<ApplicationUserAssignedIdentityArgs>> managedIdentities) {
+        public Builder managedIdentities(@Nullable Output<List<ApplicationUserAssignedIdentityArgs>> managedIdentities) {
             this.managedIdentities = managedIdentities;
             return this;
         }
 
         public Builder managedIdentities(@Nullable List<ApplicationUserAssignedIdentityArgs> managedIdentities) {
-            this.managedIdentities = Input.ofNullable(managedIdentities);
+            this.managedIdentities = Output.ofNullable(managedIdentities);
             return this;
         }
 
-        public Builder maximumNodes(@Nullable Input<Double> maximumNodes) {
+        public Builder maximumNodes(@Nullable Output<Double> maximumNodes) {
             this.maximumNodes = maximumNodes;
             return this;
         }
 
         public Builder maximumNodes(@Nullable Double maximumNodes) {
-            this.maximumNodes = Input.ofNullable(maximumNodes);
+            this.maximumNodes = Output.ofNullable(maximumNodes);
             return this;
         }
 
-        public Builder metrics(@Nullable Input<List<ApplicationMetricDescriptionArgs>> metrics) {
+        public Builder metrics(@Nullable Output<List<ApplicationMetricDescriptionArgs>> metrics) {
             this.metrics = metrics;
             return this;
         }
 
         public Builder metrics(@Nullable List<ApplicationMetricDescriptionArgs> metrics) {
-            this.metrics = Input.ofNullable(metrics);
+            this.metrics = Output.ofNullable(metrics);
             return this;
         }
 
-        public Builder minimumNodes(@Nullable Input<Double> minimumNodes) {
+        public Builder minimumNodes(@Nullable Output<Double> minimumNodes) {
             this.minimumNodes = minimumNodes;
             return this;
         }
 
         public Builder minimumNodes(@Nullable Double minimumNodes) {
-            this.minimumNodes = Input.ofNullable(minimumNodes);
+            this.minimumNodes = Output.ofNullable(minimumNodes);
             return this;
         }
 
-        public Builder parameters(@Nullable Input<Map<String,String>> parameters) {
+        public Builder parameters(@Nullable Output<Map<String,String>> parameters) {
             this.parameters = parameters;
             return this;
         }
 
         public Builder parameters(@Nullable Map<String,String> parameters) {
-            this.parameters = Input.ofNullable(parameters);
+            this.parameters = Output.ofNullable(parameters);
             return this;
         }
 
-        public Builder removeApplicationCapacity(@Nullable Input<Boolean> removeApplicationCapacity) {
+        public Builder removeApplicationCapacity(@Nullable Output<Boolean> removeApplicationCapacity) {
             this.removeApplicationCapacity = removeApplicationCapacity;
             return this;
         }
 
         public Builder removeApplicationCapacity(@Nullable Boolean removeApplicationCapacity) {
-            this.removeApplicationCapacity = Input.ofNullable(removeApplicationCapacity);
+            this.removeApplicationCapacity = Output.ofNullable(removeApplicationCapacity);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder typeName(@Nullable Input<String> typeName) {
+        public Builder typeName(@Nullable Output<String> typeName) {
             this.typeName = typeName;
             return this;
         }
 
         public Builder typeName(@Nullable String typeName) {
-            this.typeName = Input.ofNullable(typeName);
+            this.typeName = Output.ofNullable(typeName);
             return this;
         }
 
-        public Builder typeVersion(@Nullable Input<String> typeVersion) {
+        public Builder typeVersion(@Nullable Output<String> typeVersion) {
             this.typeVersion = typeVersion;
             return this;
         }
 
         public Builder typeVersion(@Nullable String typeVersion) {
-            this.typeVersion = Input.ofNullable(typeVersion);
+            this.typeVersion = Output.ofNullable(typeVersion);
             return this;
         }
 
-        public Builder upgradePolicy(@Nullable Input<ApplicationUpgradePolicyArgs> upgradePolicy) {
+        public Builder upgradePolicy(@Nullable Output<ApplicationUpgradePolicyArgs> upgradePolicy) {
             this.upgradePolicy = upgradePolicy;
             return this;
         }
 
         public Builder upgradePolicy(@Nullable ApplicationUpgradePolicyArgs upgradePolicy) {
-            this.upgradePolicy = Input.ofNullable(upgradePolicy);
+            this.upgradePolicy = Output.ofNullable(upgradePolicy);
             return this;
         }
         public ApplicationArgs build() {

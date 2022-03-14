@@ -6,7 +6,6 @@ package io.pulumi.awsnative.ec2;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.ec2.RouteTableArgs;
 import io.pulumi.awsnative.ec2.outputs.RouteTableTag;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -101,14 +100,14 @@ public class RouteTable extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public RouteTable(String name, RouteTableArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:ec2:RouteTable", name, args == null ? RouteTableArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws-native:ec2:RouteTable", name, args == null ? RouteTableArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private RouteTable(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private RouteTable(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws-native:ec2:RouteTable", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -123,7 +122,7 @@ public class RouteTable extends io.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static RouteTable get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static RouteTable get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new RouteTable(name, id, options);
     }
 }

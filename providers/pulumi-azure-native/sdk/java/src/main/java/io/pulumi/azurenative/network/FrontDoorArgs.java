@@ -11,7 +11,7 @@ import io.pulumi.azurenative.network.inputs.HealthProbeSettingsModelArgs;
 import io.pulumi.azurenative.network.inputs.LoadBalancingSettingsModelArgs;
 import io.pulumi.azurenative.network.inputs.RoutingRuleArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -29,10 +29,10 @@ public final class FrontDoorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="backendPools")
-      private final @Nullable Input<List<BackendPoolArgs>> backendPools;
+      private final @Nullable Output<List<BackendPoolArgs>> backendPools;
 
-    public Input<List<BackendPoolArgs>> getBackendPools() {
-        return this.backendPools == null ? Input.empty() : this.backendPools;
+    public Output<List<BackendPoolArgs>> getBackendPools() {
+        return this.backendPools == null ? Output.empty() : this.backendPools;
     }
 
     /**
@@ -40,10 +40,10 @@ public final class FrontDoorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="backendPoolsSettings")
-      private final @Nullable Input<BackendPoolsSettingsArgs> backendPoolsSettings;
+      private final @Nullable Output<BackendPoolsSettingsArgs> backendPoolsSettings;
 
-    public Input<BackendPoolsSettingsArgs> getBackendPoolsSettings() {
-        return this.backendPoolsSettings == null ? Input.empty() : this.backendPoolsSettings;
+    public Output<BackendPoolsSettingsArgs> getBackendPoolsSettings() {
+        return this.backendPoolsSettings == null ? Output.empty() : this.backendPoolsSettings;
     }
 
     /**
@@ -51,10 +51,10 @@ public final class FrontDoorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enabledState")
-      private final @Nullable Input<Either<String,FrontDoorEnabledState>> enabledState;
+      private final @Nullable Output<Either<String,FrontDoorEnabledState>> enabledState;
 
-    public Input<Either<String,FrontDoorEnabledState>> getEnabledState() {
-        return this.enabledState == null ? Input.empty() : this.enabledState;
+    public Output<Either<String,FrontDoorEnabledState>> getEnabledState() {
+        return this.enabledState == null ? Output.empty() : this.enabledState;
     }
 
     /**
@@ -62,10 +62,10 @@ public final class FrontDoorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="friendlyName")
-      private final @Nullable Input<String> friendlyName;
+      private final @Nullable Output<String> friendlyName;
 
-    public Input<String> getFriendlyName() {
-        return this.friendlyName == null ? Input.empty() : this.friendlyName;
+    public Output<String> getFriendlyName() {
+        return this.friendlyName == null ? Output.empty() : this.friendlyName;
     }
 
     /**
@@ -73,10 +73,10 @@ public final class FrontDoorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="frontDoorName")
-      private final @Nullable Input<String> frontDoorName;
+      private final @Nullable Output<String> frontDoorName;
 
-    public Input<String> getFrontDoorName() {
-        return this.frontDoorName == null ? Input.empty() : this.frontDoorName;
+    public Output<String> getFrontDoorName() {
+        return this.frontDoorName == null ? Output.empty() : this.frontDoorName;
     }
 
     /**
@@ -84,10 +84,10 @@ public final class FrontDoorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="frontendEndpoints")
-      private final @Nullable Input<List<FrontendEndpointArgs>> frontendEndpoints;
+      private final @Nullable Output<List<FrontendEndpointArgs>> frontendEndpoints;
 
-    public Input<List<FrontendEndpointArgs>> getFrontendEndpoints() {
-        return this.frontendEndpoints == null ? Input.empty() : this.frontendEndpoints;
+    public Output<List<FrontendEndpointArgs>> getFrontendEndpoints() {
+        return this.frontendEndpoints == null ? Output.empty() : this.frontendEndpoints;
     }
 
     /**
@@ -95,10 +95,10 @@ public final class FrontDoorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="healthProbeSettings")
-      private final @Nullable Input<List<HealthProbeSettingsModelArgs>> healthProbeSettings;
+      private final @Nullable Output<List<HealthProbeSettingsModelArgs>> healthProbeSettings;
 
-    public Input<List<HealthProbeSettingsModelArgs>> getHealthProbeSettings() {
-        return this.healthProbeSettings == null ? Input.empty() : this.healthProbeSettings;
+    public Output<List<HealthProbeSettingsModelArgs>> getHealthProbeSettings() {
+        return this.healthProbeSettings == null ? Output.empty() : this.healthProbeSettings;
     }
 
     /**
@@ -106,10 +106,10 @@ public final class FrontDoorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="loadBalancingSettings")
-      private final @Nullable Input<List<LoadBalancingSettingsModelArgs>> loadBalancingSettings;
+      private final @Nullable Output<List<LoadBalancingSettingsModelArgs>> loadBalancingSettings;
 
-    public Input<List<LoadBalancingSettingsModelArgs>> getLoadBalancingSettings() {
-        return this.loadBalancingSettings == null ? Input.empty() : this.loadBalancingSettings;
+    public Output<List<LoadBalancingSettingsModelArgs>> getLoadBalancingSettings() {
+        return this.loadBalancingSettings == null ? Output.empty() : this.loadBalancingSettings;
     }
 
     /**
@@ -117,10 +117,10 @@ public final class FrontDoorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -128,9 +128,9 @@ public final class FrontDoorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -139,10 +139,10 @@ public final class FrontDoorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="routingRules")
-      private final @Nullable Input<List<RoutingRuleArgs>> routingRules;
+      private final @Nullable Output<List<RoutingRuleArgs>> routingRules;
 
-    public Input<List<RoutingRuleArgs>> getRoutingRules() {
-        return this.routingRules == null ? Input.empty() : this.routingRules;
+    public Output<List<RoutingRuleArgs>> getRoutingRules() {
+        return this.routingRules == null ? Output.empty() : this.routingRules;
     }
 
     /**
@@ -150,25 +150,25 @@ public final class FrontDoorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public FrontDoorArgs(
-        @Nullable Input<List<BackendPoolArgs>> backendPools,
-        @Nullable Input<BackendPoolsSettingsArgs> backendPoolsSettings,
-        @Nullable Input<Either<String,FrontDoorEnabledState>> enabledState,
-        @Nullable Input<String> friendlyName,
-        @Nullable Input<String> frontDoorName,
-        @Nullable Input<List<FrontendEndpointArgs>> frontendEndpoints,
-        @Nullable Input<List<HealthProbeSettingsModelArgs>> healthProbeSettings,
-        @Nullable Input<List<LoadBalancingSettingsModelArgs>> loadBalancingSettings,
-        @Nullable Input<String> location,
-        Input<String> resourceGroupName,
-        @Nullable Input<List<RoutingRuleArgs>> routingRules,
-        @Nullable Input<Map<String,String>> tags) {
+        @Nullable Output<List<BackendPoolArgs>> backendPools,
+        @Nullable Output<BackendPoolsSettingsArgs> backendPoolsSettings,
+        @Nullable Output<Either<String,FrontDoorEnabledState>> enabledState,
+        @Nullable Output<String> friendlyName,
+        @Nullable Output<String> frontDoorName,
+        @Nullable Output<List<FrontendEndpointArgs>> frontendEndpoints,
+        @Nullable Output<List<HealthProbeSettingsModelArgs>> healthProbeSettings,
+        @Nullable Output<List<LoadBalancingSettingsModelArgs>> loadBalancingSettings,
+        @Nullable Output<String> location,
+        Output<String> resourceGroupName,
+        @Nullable Output<List<RoutingRuleArgs>> routingRules,
+        @Nullable Output<Map<String,String>> tags) {
         this.backendPools = backendPools;
         this.backendPoolsSettings = backendPoolsSettings;
         this.enabledState = enabledState;
@@ -184,18 +184,18 @@ public final class FrontDoorArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private FrontDoorArgs() {
-        this.backendPools = Input.empty();
-        this.backendPoolsSettings = Input.empty();
-        this.enabledState = Input.empty();
-        this.friendlyName = Input.empty();
-        this.frontDoorName = Input.empty();
-        this.frontendEndpoints = Input.empty();
-        this.healthProbeSettings = Input.empty();
-        this.loadBalancingSettings = Input.empty();
-        this.location = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.routingRules = Input.empty();
-        this.tags = Input.empty();
+        this.backendPools = Output.empty();
+        this.backendPoolsSettings = Output.empty();
+        this.enabledState = Output.empty();
+        this.friendlyName = Output.empty();
+        this.frontDoorName = Output.empty();
+        this.frontendEndpoints = Output.empty();
+        this.healthProbeSettings = Output.empty();
+        this.loadBalancingSettings = Output.empty();
+        this.location = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.routingRules = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -207,18 +207,18 @@ public final class FrontDoorArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<List<BackendPoolArgs>> backendPools;
-        private @Nullable Input<BackendPoolsSettingsArgs> backendPoolsSettings;
-        private @Nullable Input<Either<String,FrontDoorEnabledState>> enabledState;
-        private @Nullable Input<String> friendlyName;
-        private @Nullable Input<String> frontDoorName;
-        private @Nullable Input<List<FrontendEndpointArgs>> frontendEndpoints;
-        private @Nullable Input<List<HealthProbeSettingsModelArgs>> healthProbeSettings;
-        private @Nullable Input<List<LoadBalancingSettingsModelArgs>> loadBalancingSettings;
-        private @Nullable Input<String> location;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<List<RoutingRuleArgs>> routingRules;
-        private @Nullable Input<Map<String,String>> tags;
+        private @Nullable Output<List<BackendPoolArgs>> backendPools;
+        private @Nullable Output<BackendPoolsSettingsArgs> backendPoolsSettings;
+        private @Nullable Output<Either<String,FrontDoorEnabledState>> enabledState;
+        private @Nullable Output<String> friendlyName;
+        private @Nullable Output<String> frontDoorName;
+        private @Nullable Output<List<FrontendEndpointArgs>> frontendEndpoints;
+        private @Nullable Output<List<HealthProbeSettingsModelArgs>> healthProbeSettings;
+        private @Nullable Output<List<LoadBalancingSettingsModelArgs>> loadBalancingSettings;
+        private @Nullable Output<String> location;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<List<RoutingRuleArgs>> routingRules;
+        private @Nullable Output<Map<String,String>> tags;
 
         public Builder() {
     	      // Empty
@@ -240,123 +240,123 @@ public final class FrontDoorArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder backendPools(@Nullable Input<List<BackendPoolArgs>> backendPools) {
+        public Builder backendPools(@Nullable Output<List<BackendPoolArgs>> backendPools) {
             this.backendPools = backendPools;
             return this;
         }
 
         public Builder backendPools(@Nullable List<BackendPoolArgs> backendPools) {
-            this.backendPools = Input.ofNullable(backendPools);
+            this.backendPools = Output.ofNullable(backendPools);
             return this;
         }
 
-        public Builder backendPoolsSettings(@Nullable Input<BackendPoolsSettingsArgs> backendPoolsSettings) {
+        public Builder backendPoolsSettings(@Nullable Output<BackendPoolsSettingsArgs> backendPoolsSettings) {
             this.backendPoolsSettings = backendPoolsSettings;
             return this;
         }
 
         public Builder backendPoolsSettings(@Nullable BackendPoolsSettingsArgs backendPoolsSettings) {
-            this.backendPoolsSettings = Input.ofNullable(backendPoolsSettings);
+            this.backendPoolsSettings = Output.ofNullable(backendPoolsSettings);
             return this;
         }
 
-        public Builder enabledState(@Nullable Input<Either<String,FrontDoorEnabledState>> enabledState) {
+        public Builder enabledState(@Nullable Output<Either<String,FrontDoorEnabledState>> enabledState) {
             this.enabledState = enabledState;
             return this;
         }
 
         public Builder enabledState(@Nullable Either<String,FrontDoorEnabledState> enabledState) {
-            this.enabledState = Input.ofNullable(enabledState);
+            this.enabledState = Output.ofNullable(enabledState);
             return this;
         }
 
-        public Builder friendlyName(@Nullable Input<String> friendlyName) {
+        public Builder friendlyName(@Nullable Output<String> friendlyName) {
             this.friendlyName = friendlyName;
             return this;
         }
 
         public Builder friendlyName(@Nullable String friendlyName) {
-            this.friendlyName = Input.ofNullable(friendlyName);
+            this.friendlyName = Output.ofNullable(friendlyName);
             return this;
         }
 
-        public Builder frontDoorName(@Nullable Input<String> frontDoorName) {
+        public Builder frontDoorName(@Nullable Output<String> frontDoorName) {
             this.frontDoorName = frontDoorName;
             return this;
         }
 
         public Builder frontDoorName(@Nullable String frontDoorName) {
-            this.frontDoorName = Input.ofNullable(frontDoorName);
+            this.frontDoorName = Output.ofNullable(frontDoorName);
             return this;
         }
 
-        public Builder frontendEndpoints(@Nullable Input<List<FrontendEndpointArgs>> frontendEndpoints) {
+        public Builder frontendEndpoints(@Nullable Output<List<FrontendEndpointArgs>> frontendEndpoints) {
             this.frontendEndpoints = frontendEndpoints;
             return this;
         }
 
         public Builder frontendEndpoints(@Nullable List<FrontendEndpointArgs> frontendEndpoints) {
-            this.frontendEndpoints = Input.ofNullable(frontendEndpoints);
+            this.frontendEndpoints = Output.ofNullable(frontendEndpoints);
             return this;
         }
 
-        public Builder healthProbeSettings(@Nullable Input<List<HealthProbeSettingsModelArgs>> healthProbeSettings) {
+        public Builder healthProbeSettings(@Nullable Output<List<HealthProbeSettingsModelArgs>> healthProbeSettings) {
             this.healthProbeSettings = healthProbeSettings;
             return this;
         }
 
         public Builder healthProbeSettings(@Nullable List<HealthProbeSettingsModelArgs> healthProbeSettings) {
-            this.healthProbeSettings = Input.ofNullable(healthProbeSettings);
+            this.healthProbeSettings = Output.ofNullable(healthProbeSettings);
             return this;
         }
 
-        public Builder loadBalancingSettings(@Nullable Input<List<LoadBalancingSettingsModelArgs>> loadBalancingSettings) {
+        public Builder loadBalancingSettings(@Nullable Output<List<LoadBalancingSettingsModelArgs>> loadBalancingSettings) {
             this.loadBalancingSettings = loadBalancingSettings;
             return this;
         }
 
         public Builder loadBalancingSettings(@Nullable List<LoadBalancingSettingsModelArgs> loadBalancingSettings) {
-            this.loadBalancingSettings = Input.ofNullable(loadBalancingSettings);
+            this.loadBalancingSettings = Output.ofNullable(loadBalancingSettings);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder routingRules(@Nullable Input<List<RoutingRuleArgs>> routingRules) {
+        public Builder routingRules(@Nullable Output<List<RoutingRuleArgs>> routingRules) {
             this.routingRules = routingRules;
             return this;
         }
 
         public Builder routingRules(@Nullable List<RoutingRuleArgs> routingRules) {
-            this.routingRules = Input.ofNullable(routingRules);
+            this.routingRules = Output.ofNullable(routingRules);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public FrontDoorArgs build() {

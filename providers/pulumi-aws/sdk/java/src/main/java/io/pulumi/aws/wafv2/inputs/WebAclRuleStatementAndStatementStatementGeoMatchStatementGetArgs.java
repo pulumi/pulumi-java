@@ -4,7 +4,7 @@
 package io.pulumi.aws.wafv2.inputs;
 
 import io.pulumi.aws.wafv2.inputs.WebAclRuleStatementAndStatementStatementGeoMatchStatementForwardedIpConfigGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -21,9 +21,9 @@ public final class WebAclRuleStatementAndStatementStatementGeoMatchStatementGetA
      * 
      */
     @InputImport(name="countryCodes", required=true)
-      private final Input<List<String>> countryCodes;
+      private final Output<List<String>> countryCodes;
 
-    public Input<List<String>> getCountryCodes() {
+    public Output<List<String>> getCountryCodes() {
         return this.countryCodes;
     }
 
@@ -32,22 +32,22 @@ public final class WebAclRuleStatementAndStatementStatementGeoMatchStatementGetA
      * 
      */
     @InputImport(name="forwardedIpConfig")
-      private final @Nullable Input<WebAclRuleStatementAndStatementStatementGeoMatchStatementForwardedIpConfigGetArgs> forwardedIpConfig;
+      private final @Nullable Output<WebAclRuleStatementAndStatementStatementGeoMatchStatementForwardedIpConfigGetArgs> forwardedIpConfig;
 
-    public Input<WebAclRuleStatementAndStatementStatementGeoMatchStatementForwardedIpConfigGetArgs> getForwardedIpConfig() {
-        return this.forwardedIpConfig == null ? Input.empty() : this.forwardedIpConfig;
+    public Output<WebAclRuleStatementAndStatementStatementGeoMatchStatementForwardedIpConfigGetArgs> getForwardedIpConfig() {
+        return this.forwardedIpConfig == null ? Output.empty() : this.forwardedIpConfig;
     }
 
     public WebAclRuleStatementAndStatementStatementGeoMatchStatementGetArgs(
-        Input<List<String>> countryCodes,
-        @Nullable Input<WebAclRuleStatementAndStatementStatementGeoMatchStatementForwardedIpConfigGetArgs> forwardedIpConfig) {
+        Output<List<String>> countryCodes,
+        @Nullable Output<WebAclRuleStatementAndStatementStatementGeoMatchStatementForwardedIpConfigGetArgs> forwardedIpConfig) {
         this.countryCodes = Objects.requireNonNull(countryCodes, "expected parameter 'countryCodes' to be non-null");
         this.forwardedIpConfig = forwardedIpConfig;
     }
 
     private WebAclRuleStatementAndStatementStatementGeoMatchStatementGetArgs() {
-        this.countryCodes = Input.empty();
-        this.forwardedIpConfig = Input.empty();
+        this.countryCodes = Output.empty();
+        this.forwardedIpConfig = Output.empty();
     }
 
     public static Builder builder() {
@@ -59,8 +59,8 @@ public final class WebAclRuleStatementAndStatementStatementGeoMatchStatementGetA
     }
 
     public static final class Builder {
-        private Input<List<String>> countryCodes;
-        private @Nullable Input<WebAclRuleStatementAndStatementStatementGeoMatchStatementForwardedIpConfigGetArgs> forwardedIpConfig;
+        private Output<List<String>> countryCodes;
+        private @Nullable Output<WebAclRuleStatementAndStatementStatementGeoMatchStatementForwardedIpConfigGetArgs> forwardedIpConfig;
 
         public Builder() {
     	      // Empty
@@ -72,23 +72,23 @@ public final class WebAclRuleStatementAndStatementStatementGeoMatchStatementGetA
     	      this.forwardedIpConfig = defaults.forwardedIpConfig;
         }
 
-        public Builder countryCodes(Input<List<String>> countryCodes) {
+        public Builder countryCodes(Output<List<String>> countryCodes) {
             this.countryCodes = Objects.requireNonNull(countryCodes);
             return this;
         }
 
         public Builder countryCodes(List<String> countryCodes) {
-            this.countryCodes = Input.of(Objects.requireNonNull(countryCodes));
+            this.countryCodes = Output.of(Objects.requireNonNull(countryCodes));
             return this;
         }
 
-        public Builder forwardedIpConfig(@Nullable Input<WebAclRuleStatementAndStatementStatementGeoMatchStatementForwardedIpConfigGetArgs> forwardedIpConfig) {
+        public Builder forwardedIpConfig(@Nullable Output<WebAclRuleStatementAndStatementStatementGeoMatchStatementForwardedIpConfigGetArgs> forwardedIpConfig) {
             this.forwardedIpConfig = forwardedIpConfig;
             return this;
         }
 
         public Builder forwardedIpConfig(@Nullable WebAclRuleStatementAndStatementStatementGeoMatchStatementForwardedIpConfigGetArgs forwardedIpConfig) {
-            this.forwardedIpConfig = Input.ofNullable(forwardedIpConfig);
+            this.forwardedIpConfig = Output.ofNullable(forwardedIpConfig);
             return this;
         }
         public WebAclRuleStatementAndStatementStatementGeoMatchStatementGetArgs build() {

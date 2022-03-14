@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.appplatform.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -26,10 +26,10 @@ public final class GatewayApiRouteArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -37,10 +37,10 @@ public final class GatewayApiRouteArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="filters")
-      private final @Nullable Input<List<String>> filters;
+      private final @Nullable Output<List<String>> filters;
 
-    public Input<List<String>> getFilters() {
-        return this.filters == null ? Input.empty() : this.filters;
+    public Output<List<String>> getFilters() {
+        return this.filters == null ? Output.empty() : this.filters;
     }
 
     /**
@@ -48,10 +48,10 @@ public final class GatewayApiRouteArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="order")
-      private final @Nullable Input<Integer> order;
+      private final @Nullable Output<Integer> order;
 
-    public Input<Integer> getOrder() {
-        return this.order == null ? Input.empty() : this.order;
+    public Output<Integer> getOrder() {
+        return this.order == null ? Output.empty() : this.order;
     }
 
     /**
@@ -59,10 +59,10 @@ public final class GatewayApiRouteArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="predicates")
-      private final @Nullable Input<List<String>> predicates;
+      private final @Nullable Output<List<String>> predicates;
 
-    public Input<List<String>> getPredicates() {
-        return this.predicates == null ? Input.empty() : this.predicates;
+    public Output<List<String>> getPredicates() {
+        return this.predicates == null ? Output.empty() : this.predicates;
     }
 
     /**
@@ -70,10 +70,10 @@ public final class GatewayApiRouteArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="ssoEnabled")
-      private final @Nullable Input<Boolean> ssoEnabled;
+      private final @Nullable Output<Boolean> ssoEnabled;
 
-    public Input<Boolean> getSsoEnabled() {
-        return this.ssoEnabled == null ? Input.empty() : this.ssoEnabled;
+    public Output<Boolean> getSsoEnabled() {
+        return this.ssoEnabled == null ? Output.empty() : this.ssoEnabled;
     }
 
     /**
@@ -81,10 +81,10 @@ public final class GatewayApiRouteArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<List<String>> tags;
+      private final @Nullable Output<List<String>> tags;
 
-    public Input<List<String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<List<String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -92,10 +92,10 @@ public final class GatewayApiRouteArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="title")
-      private final @Nullable Input<String> title;
+      private final @Nullable Output<String> title;
 
-    public Input<String> getTitle() {
-        return this.title == null ? Input.empty() : this.title;
+    public Output<String> getTitle() {
+        return this.title == null ? Output.empty() : this.title;
     }
 
     /**
@@ -103,10 +103,10 @@ public final class GatewayApiRouteArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="tokenRelay")
-      private final @Nullable Input<Boolean> tokenRelay;
+      private final @Nullable Output<Boolean> tokenRelay;
 
-    public Input<Boolean> getTokenRelay() {
-        return this.tokenRelay == null ? Input.empty() : this.tokenRelay;
+    public Output<Boolean> getTokenRelay() {
+        return this.tokenRelay == null ? Output.empty() : this.tokenRelay;
     }
 
     /**
@@ -114,22 +114,22 @@ public final class GatewayApiRouteArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="uri")
-      private final @Nullable Input<String> uri;
+      private final @Nullable Output<String> uri;
 
-    public Input<String> getUri() {
-        return this.uri == null ? Input.empty() : this.uri;
+    public Output<String> getUri() {
+        return this.uri == null ? Output.empty() : this.uri;
     }
 
     public GatewayApiRouteArgs(
-        @Nullable Input<String> description,
-        @Nullable Input<List<String>> filters,
-        @Nullable Input<Integer> order,
-        @Nullable Input<List<String>> predicates,
-        @Nullable Input<Boolean> ssoEnabled,
-        @Nullable Input<List<String>> tags,
-        @Nullable Input<String> title,
-        @Nullable Input<Boolean> tokenRelay,
-        @Nullable Input<String> uri) {
+        @Nullable Output<String> description,
+        @Nullable Output<List<String>> filters,
+        @Nullable Output<Integer> order,
+        @Nullable Output<List<String>> predicates,
+        @Nullable Output<Boolean> ssoEnabled,
+        @Nullable Output<List<String>> tags,
+        @Nullable Output<String> title,
+        @Nullable Output<Boolean> tokenRelay,
+        @Nullable Output<String> uri) {
         this.description = description;
         this.filters = filters;
         this.order = order;
@@ -142,15 +142,15 @@ public final class GatewayApiRouteArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private GatewayApiRouteArgs() {
-        this.description = Input.empty();
-        this.filters = Input.empty();
-        this.order = Input.empty();
-        this.predicates = Input.empty();
-        this.ssoEnabled = Input.empty();
-        this.tags = Input.empty();
-        this.title = Input.empty();
-        this.tokenRelay = Input.empty();
-        this.uri = Input.empty();
+        this.description = Output.empty();
+        this.filters = Output.empty();
+        this.order = Output.empty();
+        this.predicates = Output.empty();
+        this.ssoEnabled = Output.empty();
+        this.tags = Output.empty();
+        this.title = Output.empty();
+        this.tokenRelay = Output.empty();
+        this.uri = Output.empty();
     }
 
     public static Builder builder() {
@@ -162,15 +162,15 @@ public final class GatewayApiRouteArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private @Nullable Input<String> description;
-        private @Nullable Input<List<String>> filters;
-        private @Nullable Input<Integer> order;
-        private @Nullable Input<List<String>> predicates;
-        private @Nullable Input<Boolean> ssoEnabled;
-        private @Nullable Input<List<String>> tags;
-        private @Nullable Input<String> title;
-        private @Nullable Input<Boolean> tokenRelay;
-        private @Nullable Input<String> uri;
+        private @Nullable Output<String> description;
+        private @Nullable Output<List<String>> filters;
+        private @Nullable Output<Integer> order;
+        private @Nullable Output<List<String>> predicates;
+        private @Nullable Output<Boolean> ssoEnabled;
+        private @Nullable Output<List<String>> tags;
+        private @Nullable Output<String> title;
+        private @Nullable Output<Boolean> tokenRelay;
+        private @Nullable Output<String> uri;
 
         public Builder() {
     	      // Empty
@@ -189,93 +189,93 @@ public final class GatewayApiRouteArgs extends io.pulumi.resources.ResourceArgs 
     	      this.uri = defaults.uri;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder filters(@Nullable Input<List<String>> filters) {
+        public Builder filters(@Nullable Output<List<String>> filters) {
             this.filters = filters;
             return this;
         }
 
         public Builder filters(@Nullable List<String> filters) {
-            this.filters = Input.ofNullable(filters);
+            this.filters = Output.ofNullable(filters);
             return this;
         }
 
-        public Builder order(@Nullable Input<Integer> order) {
+        public Builder order(@Nullable Output<Integer> order) {
             this.order = order;
             return this;
         }
 
         public Builder order(@Nullable Integer order) {
-            this.order = Input.ofNullable(order);
+            this.order = Output.ofNullable(order);
             return this;
         }
 
-        public Builder predicates(@Nullable Input<List<String>> predicates) {
+        public Builder predicates(@Nullable Output<List<String>> predicates) {
             this.predicates = predicates;
             return this;
         }
 
         public Builder predicates(@Nullable List<String> predicates) {
-            this.predicates = Input.ofNullable(predicates);
+            this.predicates = Output.ofNullable(predicates);
             return this;
         }
 
-        public Builder ssoEnabled(@Nullable Input<Boolean> ssoEnabled) {
+        public Builder ssoEnabled(@Nullable Output<Boolean> ssoEnabled) {
             this.ssoEnabled = ssoEnabled;
             return this;
         }
 
         public Builder ssoEnabled(@Nullable Boolean ssoEnabled) {
-            this.ssoEnabled = Input.ofNullable(ssoEnabled);
+            this.ssoEnabled = Output.ofNullable(ssoEnabled);
             return this;
         }
 
-        public Builder tags(@Nullable Input<List<String>> tags) {
+        public Builder tags(@Nullable Output<List<String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable List<String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder title(@Nullable Input<String> title) {
+        public Builder title(@Nullable Output<String> title) {
             this.title = title;
             return this;
         }
 
         public Builder title(@Nullable String title) {
-            this.title = Input.ofNullable(title);
+            this.title = Output.ofNullable(title);
             return this;
         }
 
-        public Builder tokenRelay(@Nullable Input<Boolean> tokenRelay) {
+        public Builder tokenRelay(@Nullable Output<Boolean> tokenRelay) {
             this.tokenRelay = tokenRelay;
             return this;
         }
 
         public Builder tokenRelay(@Nullable Boolean tokenRelay) {
-            this.tokenRelay = Input.ofNullable(tokenRelay);
+            this.tokenRelay = Output.ofNullable(tokenRelay);
             return this;
         }
 
-        public Builder uri(@Nullable Input<String> uri) {
+        public Builder uri(@Nullable Output<String> uri) {
             this.uri = uri;
             return this;
         }
 
         public Builder uri(@Nullable String uri) {
-            this.uri = Input.ofNullable(uri);
+            this.uri = Output.ofNullable(uri);
             return this;
         }
         public GatewayApiRouteArgs build() {

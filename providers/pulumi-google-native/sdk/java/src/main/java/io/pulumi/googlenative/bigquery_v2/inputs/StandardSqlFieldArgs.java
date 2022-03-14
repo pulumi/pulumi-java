@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.bigquery_v2.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.bigquery_v2.inputs.StandardSqlDataTypeArgs;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class StandardSqlFieldArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class StandardSqlFieldArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="type")
-      private final @Nullable Input<StandardSqlDataTypeArgs> type;
+      private final @Nullable Output<StandardSqlDataTypeArgs> type;
 
-    public Input<StandardSqlDataTypeArgs> getType() {
-        return this.type == null ? Input.empty() : this.type;
+    public Output<StandardSqlDataTypeArgs> getType() {
+        return this.type == null ? Output.empty() : this.type;
     }
 
     public StandardSqlFieldArgs(
-        @Nullable Input<String> name,
-        @Nullable Input<StandardSqlDataTypeArgs> type) {
+        @Nullable Output<String> name,
+        @Nullable Output<StandardSqlDataTypeArgs> type) {
         this.name = name;
         this.type = type;
     }
 
     private StandardSqlFieldArgs() {
-        this.name = Input.empty();
-        this.type = Input.empty();
+        this.name = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class StandardSqlFieldArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private @Nullable Input<String> name;
-        private @Nullable Input<StandardSqlDataTypeArgs> type;
+        private @Nullable Output<String> name;
+        private @Nullable Output<StandardSqlDataTypeArgs> type;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class StandardSqlFieldArgs extends io.pulumi.resources.ResourceArgs
     	      this.type = defaults.type;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder type(@Nullable Input<StandardSqlDataTypeArgs> type) {
+        public Builder type(@Nullable Output<StandardSqlDataTypeArgs> type) {
             this.type = type;
             return this;
         }
 
         public Builder type(@Nullable StandardSqlDataTypeArgs type) {
-            this.type = Input.ofNullable(type);
+            this.type = Output.ofNullable(type);
             return this;
         }
         public StandardSqlFieldArgs build() {

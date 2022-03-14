@@ -10,7 +10,7 @@ import io.pulumi.azurenative.machinelearningservices.inputs.PersonalComputeInsta
 import io.pulumi.azurenative.machinelearningservices.inputs.ResourceIdArgs;
 import io.pulumi.azurenative.machinelearningservices.inputs.SetupScriptsArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -30,10 +30,10 @@ public final class ComputeInstancePropertiesArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="applicationSharingPolicy")
-      private final @Nullable Input<Either<String,ApplicationSharingPolicy>> applicationSharingPolicy;
+      private final @Nullable Output<Either<String,ApplicationSharingPolicy>> applicationSharingPolicy;
 
-    public Input<Either<String,ApplicationSharingPolicy>> getApplicationSharingPolicy() {
-        return this.applicationSharingPolicy == null ? Input.empty() : this.applicationSharingPolicy;
+    public Output<Either<String,ApplicationSharingPolicy>> getApplicationSharingPolicy() {
+        return this.applicationSharingPolicy == null ? Output.empty() : this.applicationSharingPolicy;
     }
 
     /**
@@ -41,10 +41,10 @@ public final class ComputeInstancePropertiesArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="computeInstanceAuthorizationType")
-      private final @Nullable Input<Either<String,ComputeInstanceAuthorizationType>> computeInstanceAuthorizationType;
+      private final @Nullable Output<Either<String,ComputeInstanceAuthorizationType>> computeInstanceAuthorizationType;
 
-    public Input<Either<String,ComputeInstanceAuthorizationType>> getComputeInstanceAuthorizationType() {
-        return this.computeInstanceAuthorizationType == null ? Input.empty() : this.computeInstanceAuthorizationType;
+    public Output<Either<String,ComputeInstanceAuthorizationType>> getComputeInstanceAuthorizationType() {
+        return this.computeInstanceAuthorizationType == null ? Output.empty() : this.computeInstanceAuthorizationType;
     }
 
     /**
@@ -52,10 +52,10 @@ public final class ComputeInstancePropertiesArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="personalComputeInstanceSettings")
-      private final @Nullable Input<PersonalComputeInstanceSettingsArgs> personalComputeInstanceSettings;
+      private final @Nullable Output<PersonalComputeInstanceSettingsArgs> personalComputeInstanceSettings;
 
-    public Input<PersonalComputeInstanceSettingsArgs> getPersonalComputeInstanceSettings() {
-        return this.personalComputeInstanceSettings == null ? Input.empty() : this.personalComputeInstanceSettings;
+    public Output<PersonalComputeInstanceSettingsArgs> getPersonalComputeInstanceSettings() {
+        return this.personalComputeInstanceSettings == null ? Output.empty() : this.personalComputeInstanceSettings;
     }
 
     /**
@@ -63,10 +63,10 @@ public final class ComputeInstancePropertiesArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="setupScripts")
-      private final @Nullable Input<SetupScriptsArgs> setupScripts;
+      private final @Nullable Output<SetupScriptsArgs> setupScripts;
 
-    public Input<SetupScriptsArgs> getSetupScripts() {
-        return this.setupScripts == null ? Input.empty() : this.setupScripts;
+    public Output<SetupScriptsArgs> getSetupScripts() {
+        return this.setupScripts == null ? Output.empty() : this.setupScripts;
     }
 
     /**
@@ -74,10 +74,10 @@ public final class ComputeInstancePropertiesArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="sshSettings")
-      private final @Nullable Input<ComputeInstanceSshSettingsArgs> sshSettings;
+      private final @Nullable Output<ComputeInstanceSshSettingsArgs> sshSettings;
 
-    public Input<ComputeInstanceSshSettingsArgs> getSshSettings() {
-        return this.sshSettings == null ? Input.empty() : this.sshSettings;
+    public Output<ComputeInstanceSshSettingsArgs> getSshSettings() {
+        return this.sshSettings == null ? Output.empty() : this.sshSettings;
     }
 
     /**
@@ -85,10 +85,10 @@ public final class ComputeInstancePropertiesArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="subnet")
-      private final @Nullable Input<ResourceIdArgs> subnet;
+      private final @Nullable Output<ResourceIdArgs> subnet;
 
-    public Input<ResourceIdArgs> getSubnet() {
-        return this.subnet == null ? Input.empty() : this.subnet;
+    public Output<ResourceIdArgs> getSubnet() {
+        return this.subnet == null ? Output.empty() : this.subnet;
     }
 
     /**
@@ -96,22 +96,22 @@ public final class ComputeInstancePropertiesArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="vmSize")
-      private final @Nullable Input<String> vmSize;
+      private final @Nullable Output<String> vmSize;
 
-    public Input<String> getVmSize() {
-        return this.vmSize == null ? Input.empty() : this.vmSize;
+    public Output<String> getVmSize() {
+        return this.vmSize == null ? Output.empty() : this.vmSize;
     }
 
     public ComputeInstancePropertiesArgs(
-        @Nullable Input<Either<String,ApplicationSharingPolicy>> applicationSharingPolicy,
-        @Nullable Input<Either<String,ComputeInstanceAuthorizationType>> computeInstanceAuthorizationType,
-        @Nullable Input<PersonalComputeInstanceSettingsArgs> personalComputeInstanceSettings,
-        @Nullable Input<SetupScriptsArgs> setupScripts,
-        @Nullable Input<ComputeInstanceSshSettingsArgs> sshSettings,
-        @Nullable Input<ResourceIdArgs> subnet,
-        @Nullable Input<String> vmSize) {
-        this.applicationSharingPolicy = applicationSharingPolicy == null ? Input.ofLeft("Shared") : applicationSharingPolicy;
-        this.computeInstanceAuthorizationType = computeInstanceAuthorizationType == null ? Input.ofLeft("personal") : computeInstanceAuthorizationType;
+        @Nullable Output<Either<String,ApplicationSharingPolicy>> applicationSharingPolicy,
+        @Nullable Output<Either<String,ComputeInstanceAuthorizationType>> computeInstanceAuthorizationType,
+        @Nullable Output<PersonalComputeInstanceSettingsArgs> personalComputeInstanceSettings,
+        @Nullable Output<SetupScriptsArgs> setupScripts,
+        @Nullable Output<ComputeInstanceSshSettingsArgs> sshSettings,
+        @Nullable Output<ResourceIdArgs> subnet,
+        @Nullable Output<String> vmSize) {
+        this.applicationSharingPolicy = applicationSharingPolicy == null ? Output.ofLeft("Shared") : applicationSharingPolicy;
+        this.computeInstanceAuthorizationType = computeInstanceAuthorizationType == null ? Output.ofLeft("personal") : computeInstanceAuthorizationType;
         this.personalComputeInstanceSettings = personalComputeInstanceSettings;
         this.setupScripts = setupScripts;
         this.sshSettings = sshSettings;
@@ -120,13 +120,13 @@ public final class ComputeInstancePropertiesArgs extends io.pulumi.resources.Res
     }
 
     private ComputeInstancePropertiesArgs() {
-        this.applicationSharingPolicy = Input.empty();
-        this.computeInstanceAuthorizationType = Input.empty();
-        this.personalComputeInstanceSettings = Input.empty();
-        this.setupScripts = Input.empty();
-        this.sshSettings = Input.empty();
-        this.subnet = Input.empty();
-        this.vmSize = Input.empty();
+        this.applicationSharingPolicy = Output.empty();
+        this.computeInstanceAuthorizationType = Output.empty();
+        this.personalComputeInstanceSettings = Output.empty();
+        this.setupScripts = Output.empty();
+        this.sshSettings = Output.empty();
+        this.subnet = Output.empty();
+        this.vmSize = Output.empty();
     }
 
     public static Builder builder() {
@@ -138,13 +138,13 @@ public final class ComputeInstancePropertiesArgs extends io.pulumi.resources.Res
     }
 
     public static final class Builder {
-        private @Nullable Input<Either<String,ApplicationSharingPolicy>> applicationSharingPolicy;
-        private @Nullable Input<Either<String,ComputeInstanceAuthorizationType>> computeInstanceAuthorizationType;
-        private @Nullable Input<PersonalComputeInstanceSettingsArgs> personalComputeInstanceSettings;
-        private @Nullable Input<SetupScriptsArgs> setupScripts;
-        private @Nullable Input<ComputeInstanceSshSettingsArgs> sshSettings;
-        private @Nullable Input<ResourceIdArgs> subnet;
-        private @Nullable Input<String> vmSize;
+        private @Nullable Output<Either<String,ApplicationSharingPolicy>> applicationSharingPolicy;
+        private @Nullable Output<Either<String,ComputeInstanceAuthorizationType>> computeInstanceAuthorizationType;
+        private @Nullable Output<PersonalComputeInstanceSettingsArgs> personalComputeInstanceSettings;
+        private @Nullable Output<SetupScriptsArgs> setupScripts;
+        private @Nullable Output<ComputeInstanceSshSettingsArgs> sshSettings;
+        private @Nullable Output<ResourceIdArgs> subnet;
+        private @Nullable Output<String> vmSize;
 
         public Builder() {
     	      // Empty
@@ -161,73 +161,73 @@ public final class ComputeInstancePropertiesArgs extends io.pulumi.resources.Res
     	      this.vmSize = defaults.vmSize;
         }
 
-        public Builder applicationSharingPolicy(@Nullable Input<Either<String,ApplicationSharingPolicy>> applicationSharingPolicy) {
+        public Builder applicationSharingPolicy(@Nullable Output<Either<String,ApplicationSharingPolicy>> applicationSharingPolicy) {
             this.applicationSharingPolicy = applicationSharingPolicy;
             return this;
         }
 
         public Builder applicationSharingPolicy(@Nullable Either<String,ApplicationSharingPolicy> applicationSharingPolicy) {
-            this.applicationSharingPolicy = Input.ofNullable(applicationSharingPolicy);
+            this.applicationSharingPolicy = Output.ofNullable(applicationSharingPolicy);
             return this;
         }
 
-        public Builder computeInstanceAuthorizationType(@Nullable Input<Either<String,ComputeInstanceAuthorizationType>> computeInstanceAuthorizationType) {
+        public Builder computeInstanceAuthorizationType(@Nullable Output<Either<String,ComputeInstanceAuthorizationType>> computeInstanceAuthorizationType) {
             this.computeInstanceAuthorizationType = computeInstanceAuthorizationType;
             return this;
         }
 
         public Builder computeInstanceAuthorizationType(@Nullable Either<String,ComputeInstanceAuthorizationType> computeInstanceAuthorizationType) {
-            this.computeInstanceAuthorizationType = Input.ofNullable(computeInstanceAuthorizationType);
+            this.computeInstanceAuthorizationType = Output.ofNullable(computeInstanceAuthorizationType);
             return this;
         }
 
-        public Builder personalComputeInstanceSettings(@Nullable Input<PersonalComputeInstanceSettingsArgs> personalComputeInstanceSettings) {
+        public Builder personalComputeInstanceSettings(@Nullable Output<PersonalComputeInstanceSettingsArgs> personalComputeInstanceSettings) {
             this.personalComputeInstanceSettings = personalComputeInstanceSettings;
             return this;
         }
 
         public Builder personalComputeInstanceSettings(@Nullable PersonalComputeInstanceSettingsArgs personalComputeInstanceSettings) {
-            this.personalComputeInstanceSettings = Input.ofNullable(personalComputeInstanceSettings);
+            this.personalComputeInstanceSettings = Output.ofNullable(personalComputeInstanceSettings);
             return this;
         }
 
-        public Builder setupScripts(@Nullable Input<SetupScriptsArgs> setupScripts) {
+        public Builder setupScripts(@Nullable Output<SetupScriptsArgs> setupScripts) {
             this.setupScripts = setupScripts;
             return this;
         }
 
         public Builder setupScripts(@Nullable SetupScriptsArgs setupScripts) {
-            this.setupScripts = Input.ofNullable(setupScripts);
+            this.setupScripts = Output.ofNullable(setupScripts);
             return this;
         }
 
-        public Builder sshSettings(@Nullable Input<ComputeInstanceSshSettingsArgs> sshSettings) {
+        public Builder sshSettings(@Nullable Output<ComputeInstanceSshSettingsArgs> sshSettings) {
             this.sshSettings = sshSettings;
             return this;
         }
 
         public Builder sshSettings(@Nullable ComputeInstanceSshSettingsArgs sshSettings) {
-            this.sshSettings = Input.ofNullable(sshSettings);
+            this.sshSettings = Output.ofNullable(sshSettings);
             return this;
         }
 
-        public Builder subnet(@Nullable Input<ResourceIdArgs> subnet) {
+        public Builder subnet(@Nullable Output<ResourceIdArgs> subnet) {
             this.subnet = subnet;
             return this;
         }
 
         public Builder subnet(@Nullable ResourceIdArgs subnet) {
-            this.subnet = Input.ofNullable(subnet);
+            this.subnet = Output.ofNullable(subnet);
             return this;
         }
 
-        public Builder vmSize(@Nullable Input<String> vmSize) {
+        public Builder vmSize(@Nullable Output<String> vmSize) {
             this.vmSize = vmSize;
             return this;
         }
 
         public Builder vmSize(@Nullable String vmSize) {
-            this.vmSize = Input.ofNullable(vmSize);
+            this.vmSize = Output.ofNullable(vmSize);
             return this;
         }
         public ComputeInstancePropertiesArgs build() {

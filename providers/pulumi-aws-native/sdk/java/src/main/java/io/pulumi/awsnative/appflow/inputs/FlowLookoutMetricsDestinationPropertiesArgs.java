@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.appflow.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -15,18 +15,18 @@ public final class FlowLookoutMetricsDestinationPropertiesArgs extends io.pulumi
     public static final FlowLookoutMetricsDestinationPropertiesArgs Empty = new FlowLookoutMetricsDestinationPropertiesArgs();
 
     @InputImport(name="object")
-      private final @Nullable Input<String> object;
+      private final @Nullable Output<String> object;
 
-    public Input<String> getObject() {
-        return this.object == null ? Input.empty() : this.object;
+    public Output<String> getObject() {
+        return this.object == null ? Output.empty() : this.object;
     }
 
-    public FlowLookoutMetricsDestinationPropertiesArgs(@Nullable Input<String> object) {
+    public FlowLookoutMetricsDestinationPropertiesArgs(@Nullable Output<String> object) {
         this.object = object;
     }
 
     private FlowLookoutMetricsDestinationPropertiesArgs() {
-        this.object = Input.empty();
+        this.object = Output.empty();
     }
 
     public static Builder builder() {
@@ -38,7 +38,7 @@ public final class FlowLookoutMetricsDestinationPropertiesArgs extends io.pulumi
     }
 
     public static final class Builder {
-        private @Nullable Input<String> object;
+        private @Nullable Output<String> object;
 
         public Builder() {
     	      // Empty
@@ -49,13 +49,13 @@ public final class FlowLookoutMetricsDestinationPropertiesArgs extends io.pulumi
     	      this.object = defaults.object;
         }
 
-        public Builder object(@Nullable Input<String> object) {
+        public Builder object(@Nullable Output<String> object) {
             this.object = object;
             return this;
         }
 
         public Builder object(@Nullable String object) {
-            this.object = Input.ofNullable(object);
+            this.object = Output.ofNullable(object);
             return this;
         }
         public FlowLookoutMetricsDestinationPropertiesArgs build() {

@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.autoscaling;
 
 import io.pulumi.awsnative.autoscaling.inputs.WarmPoolInstanceReusePolicyArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -17,46 +17,46 @@ public final class WarmPoolArgs extends io.pulumi.resources.ResourceArgs {
     public static final WarmPoolArgs Empty = new WarmPoolArgs();
 
     @InputImport(name="autoScalingGroupName", required=true)
-      private final Input<String> autoScalingGroupName;
+      private final Output<String> autoScalingGroupName;
 
-    public Input<String> getAutoScalingGroupName() {
+    public Output<String> getAutoScalingGroupName() {
         return this.autoScalingGroupName;
     }
 
     @InputImport(name="instanceReusePolicy")
-      private final @Nullable Input<WarmPoolInstanceReusePolicyArgs> instanceReusePolicy;
+      private final @Nullable Output<WarmPoolInstanceReusePolicyArgs> instanceReusePolicy;
 
-    public Input<WarmPoolInstanceReusePolicyArgs> getInstanceReusePolicy() {
-        return this.instanceReusePolicy == null ? Input.empty() : this.instanceReusePolicy;
+    public Output<WarmPoolInstanceReusePolicyArgs> getInstanceReusePolicy() {
+        return this.instanceReusePolicy == null ? Output.empty() : this.instanceReusePolicy;
     }
 
     @InputImport(name="maxGroupPreparedCapacity")
-      private final @Nullable Input<Integer> maxGroupPreparedCapacity;
+      private final @Nullable Output<Integer> maxGroupPreparedCapacity;
 
-    public Input<Integer> getMaxGroupPreparedCapacity() {
-        return this.maxGroupPreparedCapacity == null ? Input.empty() : this.maxGroupPreparedCapacity;
+    public Output<Integer> getMaxGroupPreparedCapacity() {
+        return this.maxGroupPreparedCapacity == null ? Output.empty() : this.maxGroupPreparedCapacity;
     }
 
     @InputImport(name="minSize")
-      private final @Nullable Input<Integer> minSize;
+      private final @Nullable Output<Integer> minSize;
 
-    public Input<Integer> getMinSize() {
-        return this.minSize == null ? Input.empty() : this.minSize;
+    public Output<Integer> getMinSize() {
+        return this.minSize == null ? Output.empty() : this.minSize;
     }
 
     @InputImport(name="poolState")
-      private final @Nullable Input<String> poolState;
+      private final @Nullable Output<String> poolState;
 
-    public Input<String> getPoolState() {
-        return this.poolState == null ? Input.empty() : this.poolState;
+    public Output<String> getPoolState() {
+        return this.poolState == null ? Output.empty() : this.poolState;
     }
 
     public WarmPoolArgs(
-        Input<String> autoScalingGroupName,
-        @Nullable Input<WarmPoolInstanceReusePolicyArgs> instanceReusePolicy,
-        @Nullable Input<Integer> maxGroupPreparedCapacity,
-        @Nullable Input<Integer> minSize,
-        @Nullable Input<String> poolState) {
+        Output<String> autoScalingGroupName,
+        @Nullable Output<WarmPoolInstanceReusePolicyArgs> instanceReusePolicy,
+        @Nullable Output<Integer> maxGroupPreparedCapacity,
+        @Nullable Output<Integer> minSize,
+        @Nullable Output<String> poolState) {
         this.autoScalingGroupName = Objects.requireNonNull(autoScalingGroupName, "expected parameter 'autoScalingGroupName' to be non-null");
         this.instanceReusePolicy = instanceReusePolicy;
         this.maxGroupPreparedCapacity = maxGroupPreparedCapacity;
@@ -65,11 +65,11 @@ public final class WarmPoolArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private WarmPoolArgs() {
-        this.autoScalingGroupName = Input.empty();
-        this.instanceReusePolicy = Input.empty();
-        this.maxGroupPreparedCapacity = Input.empty();
-        this.minSize = Input.empty();
-        this.poolState = Input.empty();
+        this.autoScalingGroupName = Output.empty();
+        this.instanceReusePolicy = Output.empty();
+        this.maxGroupPreparedCapacity = Output.empty();
+        this.minSize = Output.empty();
+        this.poolState = Output.empty();
     }
 
     public static Builder builder() {
@@ -81,11 +81,11 @@ public final class WarmPoolArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> autoScalingGroupName;
-        private @Nullable Input<WarmPoolInstanceReusePolicyArgs> instanceReusePolicy;
-        private @Nullable Input<Integer> maxGroupPreparedCapacity;
-        private @Nullable Input<Integer> minSize;
-        private @Nullable Input<String> poolState;
+        private Output<String> autoScalingGroupName;
+        private @Nullable Output<WarmPoolInstanceReusePolicyArgs> instanceReusePolicy;
+        private @Nullable Output<Integer> maxGroupPreparedCapacity;
+        private @Nullable Output<Integer> minSize;
+        private @Nullable Output<String> poolState;
 
         public Builder() {
     	      // Empty
@@ -100,53 +100,53 @@ public final class WarmPoolArgs extends io.pulumi.resources.ResourceArgs {
     	      this.poolState = defaults.poolState;
         }
 
-        public Builder autoScalingGroupName(Input<String> autoScalingGroupName) {
+        public Builder autoScalingGroupName(Output<String> autoScalingGroupName) {
             this.autoScalingGroupName = Objects.requireNonNull(autoScalingGroupName);
             return this;
         }
 
         public Builder autoScalingGroupName(String autoScalingGroupName) {
-            this.autoScalingGroupName = Input.of(Objects.requireNonNull(autoScalingGroupName));
+            this.autoScalingGroupName = Output.of(Objects.requireNonNull(autoScalingGroupName));
             return this;
         }
 
-        public Builder instanceReusePolicy(@Nullable Input<WarmPoolInstanceReusePolicyArgs> instanceReusePolicy) {
+        public Builder instanceReusePolicy(@Nullable Output<WarmPoolInstanceReusePolicyArgs> instanceReusePolicy) {
             this.instanceReusePolicy = instanceReusePolicy;
             return this;
         }
 
         public Builder instanceReusePolicy(@Nullable WarmPoolInstanceReusePolicyArgs instanceReusePolicy) {
-            this.instanceReusePolicy = Input.ofNullable(instanceReusePolicy);
+            this.instanceReusePolicy = Output.ofNullable(instanceReusePolicy);
             return this;
         }
 
-        public Builder maxGroupPreparedCapacity(@Nullable Input<Integer> maxGroupPreparedCapacity) {
+        public Builder maxGroupPreparedCapacity(@Nullable Output<Integer> maxGroupPreparedCapacity) {
             this.maxGroupPreparedCapacity = maxGroupPreparedCapacity;
             return this;
         }
 
         public Builder maxGroupPreparedCapacity(@Nullable Integer maxGroupPreparedCapacity) {
-            this.maxGroupPreparedCapacity = Input.ofNullable(maxGroupPreparedCapacity);
+            this.maxGroupPreparedCapacity = Output.ofNullable(maxGroupPreparedCapacity);
             return this;
         }
 
-        public Builder minSize(@Nullable Input<Integer> minSize) {
+        public Builder minSize(@Nullable Output<Integer> minSize) {
             this.minSize = minSize;
             return this;
         }
 
         public Builder minSize(@Nullable Integer minSize) {
-            this.minSize = Input.ofNullable(minSize);
+            this.minSize = Output.ofNullable(minSize);
             return this;
         }
 
-        public Builder poolState(@Nullable Input<String> poolState) {
+        public Builder poolState(@Nullable Output<String> poolState) {
             this.poolState = poolState;
             return this;
         }
 
         public Builder poolState(@Nullable String poolState) {
-            this.poolState = Input.ofNullable(poolState);
+            this.poolState = Output.ofNullable(poolState);
             return this;
         }
         public WarmPoolArgs build() {

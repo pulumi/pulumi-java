@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.ecs.inputs;
 
 import io.pulumi.awsnative.ecs.inputs.TaskDefinitionSecretArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
@@ -18,39 +18,39 @@ public final class TaskDefinitionLogConfigurationArgs extends io.pulumi.resource
     public static final TaskDefinitionLogConfigurationArgs Empty = new TaskDefinitionLogConfigurationArgs();
 
     @InputImport(name="logDriver", required=true)
-      private final Input<String> logDriver;
+      private final Output<String> logDriver;
 
-    public Input<String> getLogDriver() {
+    public Output<String> getLogDriver() {
         return this.logDriver;
     }
 
     @InputImport(name="options")
-      private final @Nullable Input<Object> options;
+      private final @Nullable Output<Object> options;
 
-    public Input<Object> getOptions() {
-        return this.options == null ? Input.empty() : this.options;
+    public Output<Object> getOptions() {
+        return this.options == null ? Output.empty() : this.options;
     }
 
     @InputImport(name="secretOptions")
-      private final @Nullable Input<List<TaskDefinitionSecretArgs>> secretOptions;
+      private final @Nullable Output<List<TaskDefinitionSecretArgs>> secretOptions;
 
-    public Input<List<TaskDefinitionSecretArgs>> getSecretOptions() {
-        return this.secretOptions == null ? Input.empty() : this.secretOptions;
+    public Output<List<TaskDefinitionSecretArgs>> getSecretOptions() {
+        return this.secretOptions == null ? Output.empty() : this.secretOptions;
     }
 
     public TaskDefinitionLogConfigurationArgs(
-        Input<String> logDriver,
-        @Nullable Input<Object> options,
-        @Nullable Input<List<TaskDefinitionSecretArgs>> secretOptions) {
+        Output<String> logDriver,
+        @Nullable Output<Object> options,
+        @Nullable Output<List<TaskDefinitionSecretArgs>> secretOptions) {
         this.logDriver = Objects.requireNonNull(logDriver, "expected parameter 'logDriver' to be non-null");
         this.options = options;
         this.secretOptions = secretOptions;
     }
 
     private TaskDefinitionLogConfigurationArgs() {
-        this.logDriver = Input.empty();
-        this.options = Input.empty();
-        this.secretOptions = Input.empty();
+        this.logDriver = Output.empty();
+        this.options = Output.empty();
+        this.secretOptions = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,9 +62,9 @@ public final class TaskDefinitionLogConfigurationArgs extends io.pulumi.resource
     }
 
     public static final class Builder {
-        private Input<String> logDriver;
-        private @Nullable Input<Object> options;
-        private @Nullable Input<List<TaskDefinitionSecretArgs>> secretOptions;
+        private Output<String> logDriver;
+        private @Nullable Output<Object> options;
+        private @Nullable Output<List<TaskDefinitionSecretArgs>> secretOptions;
 
         public Builder() {
     	      // Empty
@@ -77,33 +77,33 @@ public final class TaskDefinitionLogConfigurationArgs extends io.pulumi.resource
     	      this.secretOptions = defaults.secretOptions;
         }
 
-        public Builder logDriver(Input<String> logDriver) {
+        public Builder logDriver(Output<String> logDriver) {
             this.logDriver = Objects.requireNonNull(logDriver);
             return this;
         }
 
         public Builder logDriver(String logDriver) {
-            this.logDriver = Input.of(Objects.requireNonNull(logDriver));
+            this.logDriver = Output.of(Objects.requireNonNull(logDriver));
             return this;
         }
 
-        public Builder options(@Nullable Input<Object> options) {
+        public Builder options(@Nullable Output<Object> options) {
             this.options = options;
             return this;
         }
 
         public Builder options(@Nullable Object options) {
-            this.options = Input.ofNullable(options);
+            this.options = Output.ofNullable(options);
             return this;
         }
 
-        public Builder secretOptions(@Nullable Input<List<TaskDefinitionSecretArgs>> secretOptions) {
+        public Builder secretOptions(@Nullable Output<List<TaskDefinitionSecretArgs>> secretOptions) {
             this.secretOptions = secretOptions;
             return this;
         }
 
         public Builder secretOptions(@Nullable List<TaskDefinitionSecretArgs> secretOptions) {
-            this.secretOptions = Input.ofNullable(secretOptions);
+            this.secretOptions = Output.ofNullable(secretOptions);
             return this;
         }
         public TaskDefinitionLogConfigurationArgs build() {

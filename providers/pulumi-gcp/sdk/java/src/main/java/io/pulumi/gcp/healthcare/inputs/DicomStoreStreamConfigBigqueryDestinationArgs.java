@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.healthcare.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -18,18 +18,18 @@ public final class DicomStoreStreamConfigBigqueryDestinationArgs extends io.pulu
      * 
      */
     @InputImport(name="tableUri", required=true)
-      private final Input<String> tableUri;
+      private final Output<String> tableUri;
 
-    public Input<String> getTableUri() {
+    public Output<String> getTableUri() {
         return this.tableUri;
     }
 
-    public DicomStoreStreamConfigBigqueryDestinationArgs(Input<String> tableUri) {
+    public DicomStoreStreamConfigBigqueryDestinationArgs(Output<String> tableUri) {
         this.tableUri = Objects.requireNonNull(tableUri, "expected parameter 'tableUri' to be non-null");
     }
 
     private DicomStoreStreamConfigBigqueryDestinationArgs() {
-        this.tableUri = Input.empty();
+        this.tableUri = Output.empty();
     }
 
     public static Builder builder() {
@@ -41,7 +41,7 @@ public final class DicomStoreStreamConfigBigqueryDestinationArgs extends io.pulu
     }
 
     public static final class Builder {
-        private Input<String> tableUri;
+        private Output<String> tableUri;
 
         public Builder() {
     	      // Empty
@@ -52,13 +52,13 @@ public final class DicomStoreStreamConfigBigqueryDestinationArgs extends io.pulu
     	      this.tableUri = defaults.tableUri;
         }
 
-        public Builder tableUri(Input<String> tableUri) {
+        public Builder tableUri(Output<String> tableUri) {
             this.tableUri = Objects.requireNonNull(tableUri);
             return this;
         }
 
         public Builder tableUri(String tableUri) {
-            this.tableUri = Input.of(Objects.requireNonNull(tableUri));
+            this.tableUri = Output.of(Objects.requireNonNull(tableUri));
             return this;
         }
         public DicomStoreStreamConfigBigqueryDestinationArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.spanner.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,18 +19,18 @@ public final class DatabaseEncryptionConfigGetArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="kmsKeyName", required=true)
-      private final Input<String> kmsKeyName;
+      private final Output<String> kmsKeyName;
 
-    public Input<String> getKmsKeyName() {
+    public Output<String> getKmsKeyName() {
         return this.kmsKeyName;
     }
 
-    public DatabaseEncryptionConfigGetArgs(Input<String> kmsKeyName) {
+    public DatabaseEncryptionConfigGetArgs(Output<String> kmsKeyName) {
         this.kmsKeyName = Objects.requireNonNull(kmsKeyName, "expected parameter 'kmsKeyName' to be non-null");
     }
 
     private DatabaseEncryptionConfigGetArgs() {
-        this.kmsKeyName = Input.empty();
+        this.kmsKeyName = Output.empty();
     }
 
     public static Builder builder() {
@@ -42,7 +42,7 @@ public final class DatabaseEncryptionConfigGetArgs extends io.pulumi.resources.R
     }
 
     public static final class Builder {
-        private Input<String> kmsKeyName;
+        private Output<String> kmsKeyName;
 
         public Builder() {
     	      // Empty
@@ -53,13 +53,13 @@ public final class DatabaseEncryptionConfigGetArgs extends io.pulumi.resources.R
     	      this.kmsKeyName = defaults.kmsKeyName;
         }
 
-        public Builder kmsKeyName(Input<String> kmsKeyName) {
+        public Builder kmsKeyName(Output<String> kmsKeyName) {
             this.kmsKeyName = Objects.requireNonNull(kmsKeyName);
             return this;
         }
 
         public Builder kmsKeyName(String kmsKeyName) {
-            this.kmsKeyName = Input.of(Objects.requireNonNull(kmsKeyName));
+            this.kmsKeyName = Output.of(Objects.requireNonNull(kmsKeyName));
             return this;
         }
         public DatabaseEncryptionConfigGetArgs build() {

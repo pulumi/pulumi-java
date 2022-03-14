@@ -4,7 +4,7 @@
 package io.pulumi.plant.tree_v1.inputs;
 
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.plant.tree_v1.enums.Farm;
 import java.lang.String;
@@ -17,18 +17,18 @@ public final class RubberTreeState extends io.pulumi.resources.ResourceArgs {
     public static final RubberTreeState Empty = new RubberTreeState();
 
     @InputImport(name="farm")
-      private final @Nullable Input<Either<Farm,String>> farm;
+      private final @Nullable Output<Either<Farm,String>> farm;
 
-    public Input<Either<Farm,String>> getFarm() {
-        return this.farm == null ? Input.empty() : this.farm;
+    public Output<Either<Farm,String>> getFarm() {
+        return this.farm == null ? Output.empty() : this.farm;
     }
 
-    public RubberTreeState(@Nullable Input<Either<Farm,String>> farm) {
-        this.farm = farm == null ? Input.ofRight("(unknown)") : farm;
+    public RubberTreeState(@Nullable Output<Either<Farm,String>> farm) {
+        this.farm = farm == null ? Output.ofRight("(unknown)") : farm;
     }
 
     private RubberTreeState() {
-        this.farm = Input.empty();
+        this.farm = Output.empty();
     }
 
     public static Builder builder() {
@@ -40,7 +40,7 @@ public final class RubberTreeState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Either<Farm,String>> farm;
+        private @Nullable Output<Either<Farm,String>> farm;
 
         public Builder() {
     	      // Empty
@@ -51,13 +51,13 @@ public final class RubberTreeState extends io.pulumi.resources.ResourceArgs {
     	      this.farm = defaults.farm;
         }
 
-        public Builder farm(@Nullable Input<Either<Farm,String>> farm) {
+        public Builder farm(@Nullable Output<Either<Farm,String>> farm) {
             this.farm = farm;
             return this;
         }
 
         public Builder farm(@Nullable Either<Farm,String> farm) {
-            this.farm = Input.ofNullable(farm);
+            this.farm = Output.ofNullable(farm);
             return this;
         }
         public RubberTreeState build() {

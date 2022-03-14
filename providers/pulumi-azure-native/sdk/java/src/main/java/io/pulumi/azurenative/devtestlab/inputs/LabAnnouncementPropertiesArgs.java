@@ -5,7 +5,7 @@ package io.pulumi.azurenative.devtestlab.inputs;
 
 import io.pulumi.azurenative.devtestlab.enums.EnableStatus;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -26,10 +26,10 @@ public final class LabAnnouncementPropertiesArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="enabled")
-      private final @Nullable Input<Either<String,EnableStatus>> enabled;
+      private final @Nullable Output<Either<String,EnableStatus>> enabled;
 
-    public Input<Either<String,EnableStatus>> getEnabled() {
-        return this.enabled == null ? Input.empty() : this.enabled;
+    public Output<Either<String,EnableStatus>> getEnabled() {
+        return this.enabled == null ? Output.empty() : this.enabled;
     }
 
     /**
@@ -37,10 +37,10 @@ public final class LabAnnouncementPropertiesArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="expirationDate")
-      private final @Nullable Input<String> expirationDate;
+      private final @Nullable Output<String> expirationDate;
 
-    public Input<String> getExpirationDate() {
-        return this.expirationDate == null ? Input.empty() : this.expirationDate;
+    public Output<String> getExpirationDate() {
+        return this.expirationDate == null ? Output.empty() : this.expirationDate;
     }
 
     /**
@@ -48,10 +48,10 @@ public final class LabAnnouncementPropertiesArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="expired")
-      private final @Nullable Input<Boolean> expired;
+      private final @Nullable Output<Boolean> expired;
 
-    public Input<Boolean> getExpired() {
-        return this.expired == null ? Input.empty() : this.expired;
+    public Output<Boolean> getExpired() {
+        return this.expired == null ? Output.empty() : this.expired;
     }
 
     /**
@@ -59,10 +59,10 @@ public final class LabAnnouncementPropertiesArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="markdown")
-      private final @Nullable Input<String> markdown;
+      private final @Nullable Output<String> markdown;
 
-    public Input<String> getMarkdown() {
-        return this.markdown == null ? Input.empty() : this.markdown;
+    public Output<String> getMarkdown() {
+        return this.markdown == null ? Output.empty() : this.markdown;
     }
 
     /**
@@ -70,18 +70,18 @@ public final class LabAnnouncementPropertiesArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="title")
-      private final @Nullable Input<String> title;
+      private final @Nullable Output<String> title;
 
-    public Input<String> getTitle() {
-        return this.title == null ? Input.empty() : this.title;
+    public Output<String> getTitle() {
+        return this.title == null ? Output.empty() : this.title;
     }
 
     public LabAnnouncementPropertiesArgs(
-        @Nullable Input<Either<String,EnableStatus>> enabled,
-        @Nullable Input<String> expirationDate,
-        @Nullable Input<Boolean> expired,
-        @Nullable Input<String> markdown,
-        @Nullable Input<String> title) {
+        @Nullable Output<Either<String,EnableStatus>> enabled,
+        @Nullable Output<String> expirationDate,
+        @Nullable Output<Boolean> expired,
+        @Nullable Output<String> markdown,
+        @Nullable Output<String> title) {
         this.enabled = enabled;
         this.expirationDate = expirationDate;
         this.expired = expired;
@@ -90,11 +90,11 @@ public final class LabAnnouncementPropertiesArgs extends io.pulumi.resources.Res
     }
 
     private LabAnnouncementPropertiesArgs() {
-        this.enabled = Input.empty();
-        this.expirationDate = Input.empty();
-        this.expired = Input.empty();
-        this.markdown = Input.empty();
-        this.title = Input.empty();
+        this.enabled = Output.empty();
+        this.expirationDate = Output.empty();
+        this.expired = Output.empty();
+        this.markdown = Output.empty();
+        this.title = Output.empty();
     }
 
     public static Builder builder() {
@@ -106,11 +106,11 @@ public final class LabAnnouncementPropertiesArgs extends io.pulumi.resources.Res
     }
 
     public static final class Builder {
-        private @Nullable Input<Either<String,EnableStatus>> enabled;
-        private @Nullable Input<String> expirationDate;
-        private @Nullable Input<Boolean> expired;
-        private @Nullable Input<String> markdown;
-        private @Nullable Input<String> title;
+        private @Nullable Output<Either<String,EnableStatus>> enabled;
+        private @Nullable Output<String> expirationDate;
+        private @Nullable Output<Boolean> expired;
+        private @Nullable Output<String> markdown;
+        private @Nullable Output<String> title;
 
         public Builder() {
     	      // Empty
@@ -125,53 +125,53 @@ public final class LabAnnouncementPropertiesArgs extends io.pulumi.resources.Res
     	      this.title = defaults.title;
         }
 
-        public Builder enabled(@Nullable Input<Either<String,EnableStatus>> enabled) {
+        public Builder enabled(@Nullable Output<Either<String,EnableStatus>> enabled) {
             this.enabled = enabled;
             return this;
         }
 
         public Builder enabled(@Nullable Either<String,EnableStatus> enabled) {
-            this.enabled = Input.ofNullable(enabled);
+            this.enabled = Output.ofNullable(enabled);
             return this;
         }
 
-        public Builder expirationDate(@Nullable Input<String> expirationDate) {
+        public Builder expirationDate(@Nullable Output<String> expirationDate) {
             this.expirationDate = expirationDate;
             return this;
         }
 
         public Builder expirationDate(@Nullable String expirationDate) {
-            this.expirationDate = Input.ofNullable(expirationDate);
+            this.expirationDate = Output.ofNullable(expirationDate);
             return this;
         }
 
-        public Builder expired(@Nullable Input<Boolean> expired) {
+        public Builder expired(@Nullable Output<Boolean> expired) {
             this.expired = expired;
             return this;
         }
 
         public Builder expired(@Nullable Boolean expired) {
-            this.expired = Input.ofNullable(expired);
+            this.expired = Output.ofNullable(expired);
             return this;
         }
 
-        public Builder markdown(@Nullable Input<String> markdown) {
+        public Builder markdown(@Nullable Output<String> markdown) {
             this.markdown = markdown;
             return this;
         }
 
         public Builder markdown(@Nullable String markdown) {
-            this.markdown = Input.ofNullable(markdown);
+            this.markdown = Output.ofNullable(markdown);
             return this;
         }
 
-        public Builder title(@Nullable Input<String> title) {
+        public Builder title(@Nullable Output<String> title) {
             this.title = title;
             return this;
         }
 
         public Builder title(@Nullable String title) {
-            this.title = Input.ofNullable(title);
+            this.title = Output.ofNullable(title);
             return this;
         }
         public LabAnnouncementPropertiesArgs build() {

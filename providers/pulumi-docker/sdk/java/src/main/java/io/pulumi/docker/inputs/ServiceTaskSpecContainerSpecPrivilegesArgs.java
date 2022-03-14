@@ -3,7 +3,7 @@
 
 package io.pulumi.docker.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.docker.inputs.ServiceTaskSpecContainerSpecPrivilegesCredentialSpecArgs;
 import io.pulumi.docker.inputs.ServiceTaskSpecContainerSpecPrivilegesSeLinuxContextArgs;
@@ -16,29 +16,29 @@ public final class ServiceTaskSpecContainerSpecPrivilegesArgs extends io.pulumi.
     public static final ServiceTaskSpecContainerSpecPrivilegesArgs Empty = new ServiceTaskSpecContainerSpecPrivilegesArgs();
 
     @InputImport(name="credentialSpec")
-      private final @Nullable Input<ServiceTaskSpecContainerSpecPrivilegesCredentialSpecArgs> credentialSpec;
+      private final @Nullable Output<ServiceTaskSpecContainerSpecPrivilegesCredentialSpecArgs> credentialSpec;
 
-    public Input<ServiceTaskSpecContainerSpecPrivilegesCredentialSpecArgs> getCredentialSpec() {
-        return this.credentialSpec == null ? Input.empty() : this.credentialSpec;
+    public Output<ServiceTaskSpecContainerSpecPrivilegesCredentialSpecArgs> getCredentialSpec() {
+        return this.credentialSpec == null ? Output.empty() : this.credentialSpec;
     }
 
     @InputImport(name="seLinuxContext")
-      private final @Nullable Input<ServiceTaskSpecContainerSpecPrivilegesSeLinuxContextArgs> seLinuxContext;
+      private final @Nullable Output<ServiceTaskSpecContainerSpecPrivilegesSeLinuxContextArgs> seLinuxContext;
 
-    public Input<ServiceTaskSpecContainerSpecPrivilegesSeLinuxContextArgs> getSeLinuxContext() {
-        return this.seLinuxContext == null ? Input.empty() : this.seLinuxContext;
+    public Output<ServiceTaskSpecContainerSpecPrivilegesSeLinuxContextArgs> getSeLinuxContext() {
+        return this.seLinuxContext == null ? Output.empty() : this.seLinuxContext;
     }
 
     public ServiceTaskSpecContainerSpecPrivilegesArgs(
-        @Nullable Input<ServiceTaskSpecContainerSpecPrivilegesCredentialSpecArgs> credentialSpec,
-        @Nullable Input<ServiceTaskSpecContainerSpecPrivilegesSeLinuxContextArgs> seLinuxContext) {
+        @Nullable Output<ServiceTaskSpecContainerSpecPrivilegesCredentialSpecArgs> credentialSpec,
+        @Nullable Output<ServiceTaskSpecContainerSpecPrivilegesSeLinuxContextArgs> seLinuxContext) {
         this.credentialSpec = credentialSpec;
         this.seLinuxContext = seLinuxContext;
     }
 
     private ServiceTaskSpecContainerSpecPrivilegesArgs() {
-        this.credentialSpec = Input.empty();
-        this.seLinuxContext = Input.empty();
+        this.credentialSpec = Output.empty();
+        this.seLinuxContext = Output.empty();
     }
 
     public static Builder builder() {
@@ -50,8 +50,8 @@ public final class ServiceTaskSpecContainerSpecPrivilegesArgs extends io.pulumi.
     }
 
     public static final class Builder {
-        private @Nullable Input<ServiceTaskSpecContainerSpecPrivilegesCredentialSpecArgs> credentialSpec;
-        private @Nullable Input<ServiceTaskSpecContainerSpecPrivilegesSeLinuxContextArgs> seLinuxContext;
+        private @Nullable Output<ServiceTaskSpecContainerSpecPrivilegesCredentialSpecArgs> credentialSpec;
+        private @Nullable Output<ServiceTaskSpecContainerSpecPrivilegesSeLinuxContextArgs> seLinuxContext;
 
         public Builder() {
     	      // Empty
@@ -63,23 +63,23 @@ public final class ServiceTaskSpecContainerSpecPrivilegesArgs extends io.pulumi.
     	      this.seLinuxContext = defaults.seLinuxContext;
         }
 
-        public Builder credentialSpec(@Nullable Input<ServiceTaskSpecContainerSpecPrivilegesCredentialSpecArgs> credentialSpec) {
+        public Builder credentialSpec(@Nullable Output<ServiceTaskSpecContainerSpecPrivilegesCredentialSpecArgs> credentialSpec) {
             this.credentialSpec = credentialSpec;
             return this;
         }
 
         public Builder credentialSpec(@Nullable ServiceTaskSpecContainerSpecPrivilegesCredentialSpecArgs credentialSpec) {
-            this.credentialSpec = Input.ofNullable(credentialSpec);
+            this.credentialSpec = Output.ofNullable(credentialSpec);
             return this;
         }
 
-        public Builder seLinuxContext(@Nullable Input<ServiceTaskSpecContainerSpecPrivilegesSeLinuxContextArgs> seLinuxContext) {
+        public Builder seLinuxContext(@Nullable Output<ServiceTaskSpecContainerSpecPrivilegesSeLinuxContextArgs> seLinuxContext) {
             this.seLinuxContext = seLinuxContext;
             return this;
         }
 
         public Builder seLinuxContext(@Nullable ServiceTaskSpecContainerSpecPrivilegesSeLinuxContextArgs seLinuxContext) {
-            this.seLinuxContext = Input.ofNullable(seLinuxContext);
+            this.seLinuxContext = Output.ofNullable(seLinuxContext);
             return this;
         }
         public ServiceTaskSpecContainerSpecPrivilegesArgs build() {

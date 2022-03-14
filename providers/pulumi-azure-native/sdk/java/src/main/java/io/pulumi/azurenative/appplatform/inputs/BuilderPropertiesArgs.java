@@ -5,7 +5,7 @@ package io.pulumi.azurenative.appplatform.inputs;
 
 import io.pulumi.azurenative.appplatform.inputs.BuildpacksGroupPropertiesArgs;
 import io.pulumi.azurenative.appplatform.inputs.StackPropertiesArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
@@ -25,10 +25,10 @@ public final class BuilderPropertiesArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="buildpackGroups")
-      private final @Nullable Input<List<BuildpacksGroupPropertiesArgs>> buildpackGroups;
+      private final @Nullable Output<List<BuildpacksGroupPropertiesArgs>> buildpackGroups;
 
-    public Input<List<BuildpacksGroupPropertiesArgs>> getBuildpackGroups() {
-        return this.buildpackGroups == null ? Input.empty() : this.buildpackGroups;
+    public Output<List<BuildpacksGroupPropertiesArgs>> getBuildpackGroups() {
+        return this.buildpackGroups == null ? Output.empty() : this.buildpackGroups;
     }
 
     /**
@@ -36,22 +36,22 @@ public final class BuilderPropertiesArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="stack")
-      private final @Nullable Input<StackPropertiesArgs> stack;
+      private final @Nullable Output<StackPropertiesArgs> stack;
 
-    public Input<StackPropertiesArgs> getStack() {
-        return this.stack == null ? Input.empty() : this.stack;
+    public Output<StackPropertiesArgs> getStack() {
+        return this.stack == null ? Output.empty() : this.stack;
     }
 
     public BuilderPropertiesArgs(
-        @Nullable Input<List<BuildpacksGroupPropertiesArgs>> buildpackGroups,
-        @Nullable Input<StackPropertiesArgs> stack) {
+        @Nullable Output<List<BuildpacksGroupPropertiesArgs>> buildpackGroups,
+        @Nullable Output<StackPropertiesArgs> stack) {
         this.buildpackGroups = buildpackGroups;
         this.stack = stack;
     }
 
     private BuilderPropertiesArgs() {
-        this.buildpackGroups = Input.empty();
-        this.stack = Input.empty();
+        this.buildpackGroups = Output.empty();
+        this.stack = Output.empty();
     }
 
     public static Builder builder() {
@@ -63,8 +63,8 @@ public final class BuilderPropertiesArgs extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private @Nullable Input<List<BuildpacksGroupPropertiesArgs>> buildpackGroups;
-        private @Nullable Input<StackPropertiesArgs> stack;
+        private @Nullable Output<List<BuildpacksGroupPropertiesArgs>> buildpackGroups;
+        private @Nullable Output<StackPropertiesArgs> stack;
 
         public Builder() {
     	      // Empty
@@ -76,23 +76,23 @@ public final class BuilderPropertiesArgs extends io.pulumi.resources.ResourceArg
     	      this.stack = defaults.stack;
         }
 
-        public Builder buildpackGroups(@Nullable Input<List<BuildpacksGroupPropertiesArgs>> buildpackGroups) {
+        public Builder buildpackGroups(@Nullable Output<List<BuildpacksGroupPropertiesArgs>> buildpackGroups) {
             this.buildpackGroups = buildpackGroups;
             return this;
         }
 
         public Builder buildpackGroups(@Nullable List<BuildpacksGroupPropertiesArgs> buildpackGroups) {
-            this.buildpackGroups = Input.ofNullable(buildpackGroups);
+            this.buildpackGroups = Output.ofNullable(buildpackGroups);
             return this;
         }
 
-        public Builder stack(@Nullable Input<StackPropertiesArgs> stack) {
+        public Builder stack(@Nullable Output<StackPropertiesArgs> stack) {
             this.stack = stack;
             return this;
         }
 
         public Builder stack(@Nullable StackPropertiesArgs stack) {
-            this.stack = Input.ofNullable(stack);
+            this.stack = Output.ofNullable(stack);
             return this;
         }
         public BuilderPropertiesArgs build() {

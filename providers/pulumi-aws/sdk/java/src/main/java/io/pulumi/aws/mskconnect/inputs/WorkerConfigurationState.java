@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.mskconnect.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -20,10 +20,10 @@ public final class WorkerConfigurationState extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="arn")
-      private final @Nullable Input<String> arn;
+      private final @Nullable Output<String> arn;
 
-    public Input<String> getArn() {
-        return this.arn == null ? Input.empty() : this.arn;
+    public Output<String> getArn() {
+        return this.arn == null ? Output.empty() : this.arn;
     }
 
     /**
@@ -31,10 +31,10 @@ public final class WorkerConfigurationState extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -42,10 +42,10 @@ public final class WorkerConfigurationState extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="latestRevision")
-      private final @Nullable Input<Integer> latestRevision;
+      private final @Nullable Output<Integer> latestRevision;
 
-    public Input<Integer> getLatestRevision() {
-        return this.latestRevision == null ? Input.empty() : this.latestRevision;
+    public Output<Integer> getLatestRevision() {
+        return this.latestRevision == null ? Output.empty() : this.latestRevision;
     }
 
     /**
@@ -53,10 +53,10 @@ public final class WorkerConfigurationState extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -64,18 +64,18 @@ public final class WorkerConfigurationState extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="propertiesFileContent")
-      private final @Nullable Input<String> propertiesFileContent;
+      private final @Nullable Output<String> propertiesFileContent;
 
-    public Input<String> getPropertiesFileContent() {
-        return this.propertiesFileContent == null ? Input.empty() : this.propertiesFileContent;
+    public Output<String> getPropertiesFileContent() {
+        return this.propertiesFileContent == null ? Output.empty() : this.propertiesFileContent;
     }
 
     public WorkerConfigurationState(
-        @Nullable Input<String> arn,
-        @Nullable Input<String> description,
-        @Nullable Input<Integer> latestRevision,
-        @Nullable Input<String> name,
-        @Nullable Input<String> propertiesFileContent) {
+        @Nullable Output<String> arn,
+        @Nullable Output<String> description,
+        @Nullable Output<Integer> latestRevision,
+        @Nullable Output<String> name,
+        @Nullable Output<String> propertiesFileContent) {
         this.arn = arn;
         this.description = description;
         this.latestRevision = latestRevision;
@@ -84,11 +84,11 @@ public final class WorkerConfigurationState extends io.pulumi.resources.Resource
     }
 
     private WorkerConfigurationState() {
-        this.arn = Input.empty();
-        this.description = Input.empty();
-        this.latestRevision = Input.empty();
-        this.name = Input.empty();
-        this.propertiesFileContent = Input.empty();
+        this.arn = Output.empty();
+        this.description = Output.empty();
+        this.latestRevision = Output.empty();
+        this.name = Output.empty();
+        this.propertiesFileContent = Output.empty();
     }
 
     public static Builder builder() {
@@ -100,11 +100,11 @@ public final class WorkerConfigurationState extends io.pulumi.resources.Resource
     }
 
     public static final class Builder {
-        private @Nullable Input<String> arn;
-        private @Nullable Input<String> description;
-        private @Nullable Input<Integer> latestRevision;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> propertiesFileContent;
+        private @Nullable Output<String> arn;
+        private @Nullable Output<String> description;
+        private @Nullable Output<Integer> latestRevision;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> propertiesFileContent;
 
         public Builder() {
     	      // Empty
@@ -119,53 +119,53 @@ public final class WorkerConfigurationState extends io.pulumi.resources.Resource
     	      this.propertiesFileContent = defaults.propertiesFileContent;
         }
 
-        public Builder arn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
 
         public Builder arn(@Nullable String arn) {
-            this.arn = Input.ofNullable(arn);
+            this.arn = Output.ofNullable(arn);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder latestRevision(@Nullable Input<Integer> latestRevision) {
+        public Builder latestRevision(@Nullable Output<Integer> latestRevision) {
             this.latestRevision = latestRevision;
             return this;
         }
 
         public Builder latestRevision(@Nullable Integer latestRevision) {
-            this.latestRevision = Input.ofNullable(latestRevision);
+            this.latestRevision = Output.ofNullable(latestRevision);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder propertiesFileContent(@Nullable Input<String> propertiesFileContent) {
+        public Builder propertiesFileContent(@Nullable Output<String> propertiesFileContent) {
             this.propertiesFileContent = propertiesFileContent;
             return this;
         }
 
         public Builder propertiesFileContent(@Nullable String propertiesFileContent) {
-            this.propertiesFileContent = Input.ofNullable(propertiesFileContent);
+            this.propertiesFileContent = Output.ofNullable(propertiesFileContent);
             return this;
         }
         public WorkerConfigurationState build() {

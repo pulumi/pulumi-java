@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.storage.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -20,10 +20,10 @@ public final class ObjectACLState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="bucket")
-      private final @Nullable Input<String> bucket;
+      private final @Nullable Output<String> bucket;
 
-    public Input<String> getBucket() {
-        return this.bucket == null ? Input.empty() : this.bucket;
+    public Output<String> getBucket() {
+        return this.bucket == null ? Output.empty() : this.bucket;
     }
 
     /**
@@ -31,10 +31,10 @@ public final class ObjectACLState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="object")
-      private final @Nullable Input<String> object;
+      private final @Nullable Output<String> object;
 
-    public Input<String> getObject() {
-        return this.object == null ? Input.empty() : this.object;
+    public Output<String> getObject() {
+        return this.object == null ? Output.empty() : this.object;
     }
 
     /**
@@ -42,10 +42,10 @@ public final class ObjectACLState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="predefinedAcl")
-      private final @Nullable Input<String> predefinedAcl;
+      private final @Nullable Output<String> predefinedAcl;
 
-    public Input<String> getPredefinedAcl() {
-        return this.predefinedAcl == null ? Input.empty() : this.predefinedAcl;
+    public Output<String> getPredefinedAcl() {
+        return this.predefinedAcl == null ? Output.empty() : this.predefinedAcl;
     }
 
     /**
@@ -54,17 +54,17 @@ public final class ObjectACLState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="roleEntities")
-      private final @Nullable Input<List<String>> roleEntities;
+      private final @Nullable Output<List<String>> roleEntities;
 
-    public Input<List<String>> getRoleEntities() {
-        return this.roleEntities == null ? Input.empty() : this.roleEntities;
+    public Output<List<String>> getRoleEntities() {
+        return this.roleEntities == null ? Output.empty() : this.roleEntities;
     }
 
     public ObjectACLState(
-        @Nullable Input<String> bucket,
-        @Nullable Input<String> object,
-        @Nullable Input<String> predefinedAcl,
-        @Nullable Input<List<String>> roleEntities) {
+        @Nullable Output<String> bucket,
+        @Nullable Output<String> object,
+        @Nullable Output<String> predefinedAcl,
+        @Nullable Output<List<String>> roleEntities) {
         this.bucket = bucket;
         this.object = object;
         this.predefinedAcl = predefinedAcl;
@@ -72,10 +72,10 @@ public final class ObjectACLState extends io.pulumi.resources.ResourceArgs {
     }
 
     private ObjectACLState() {
-        this.bucket = Input.empty();
-        this.object = Input.empty();
-        this.predefinedAcl = Input.empty();
-        this.roleEntities = Input.empty();
+        this.bucket = Output.empty();
+        this.object = Output.empty();
+        this.predefinedAcl = Output.empty();
+        this.roleEntities = Output.empty();
     }
 
     public static Builder builder() {
@@ -87,10 +87,10 @@ public final class ObjectACLState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> bucket;
-        private @Nullable Input<String> object;
-        private @Nullable Input<String> predefinedAcl;
-        private @Nullable Input<List<String>> roleEntities;
+        private @Nullable Output<String> bucket;
+        private @Nullable Output<String> object;
+        private @Nullable Output<String> predefinedAcl;
+        private @Nullable Output<List<String>> roleEntities;
 
         public Builder() {
     	      // Empty
@@ -104,43 +104,43 @@ public final class ObjectACLState extends io.pulumi.resources.ResourceArgs {
     	      this.roleEntities = defaults.roleEntities;
         }
 
-        public Builder bucket(@Nullable Input<String> bucket) {
+        public Builder bucket(@Nullable Output<String> bucket) {
             this.bucket = bucket;
             return this;
         }
 
         public Builder bucket(@Nullable String bucket) {
-            this.bucket = Input.ofNullable(bucket);
+            this.bucket = Output.ofNullable(bucket);
             return this;
         }
 
-        public Builder object(@Nullable Input<String> object) {
+        public Builder object(@Nullable Output<String> object) {
             this.object = object;
             return this;
         }
 
         public Builder object(@Nullable String object) {
-            this.object = Input.ofNullable(object);
+            this.object = Output.ofNullable(object);
             return this;
         }
 
-        public Builder predefinedAcl(@Nullable Input<String> predefinedAcl) {
+        public Builder predefinedAcl(@Nullable Output<String> predefinedAcl) {
             this.predefinedAcl = predefinedAcl;
             return this;
         }
 
         public Builder predefinedAcl(@Nullable String predefinedAcl) {
-            this.predefinedAcl = Input.ofNullable(predefinedAcl);
+            this.predefinedAcl = Output.ofNullable(predefinedAcl);
             return this;
         }
 
-        public Builder roleEntities(@Nullable Input<List<String>> roleEntities) {
+        public Builder roleEntities(@Nullable Output<List<String>> roleEntities) {
             this.roleEntities = roleEntities;
             return this;
         }
 
         public Builder roleEntities(@Nullable List<String> roleEntities) {
-            this.roleEntities = Input.ofNullable(roleEntities);
+            this.roleEntities = Output.ofNullable(roleEntities);
             return this;
         }
         public ObjectACLState build() {

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.botservice.inputs;
 
 import io.pulumi.azurenative.botservice.inputs.DirectLineSiteArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -25,10 +25,10 @@ public final class DirectLineChannelPropertiesArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="directLineEmbedCode")
-      private final @Nullable Input<String> directLineEmbedCode;
+      private final @Nullable Output<String> directLineEmbedCode;
 
-    public Input<String> getDirectLineEmbedCode() {
-        return this.directLineEmbedCode == null ? Input.empty() : this.directLineEmbedCode;
+    public Output<String> getDirectLineEmbedCode() {
+        return this.directLineEmbedCode == null ? Output.empty() : this.directLineEmbedCode;
     }
 
     /**
@@ -36,22 +36,22 @@ public final class DirectLineChannelPropertiesArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="sites")
-      private final @Nullable Input<List<DirectLineSiteArgs>> sites;
+      private final @Nullable Output<List<DirectLineSiteArgs>> sites;
 
-    public Input<List<DirectLineSiteArgs>> getSites() {
-        return this.sites == null ? Input.empty() : this.sites;
+    public Output<List<DirectLineSiteArgs>> getSites() {
+        return this.sites == null ? Output.empty() : this.sites;
     }
 
     public DirectLineChannelPropertiesArgs(
-        @Nullable Input<String> directLineEmbedCode,
-        @Nullable Input<List<DirectLineSiteArgs>> sites) {
+        @Nullable Output<String> directLineEmbedCode,
+        @Nullable Output<List<DirectLineSiteArgs>> sites) {
         this.directLineEmbedCode = directLineEmbedCode;
         this.sites = sites;
     }
 
     private DirectLineChannelPropertiesArgs() {
-        this.directLineEmbedCode = Input.empty();
-        this.sites = Input.empty();
+        this.directLineEmbedCode = Output.empty();
+        this.sites = Output.empty();
     }
 
     public static Builder builder() {
@@ -63,8 +63,8 @@ public final class DirectLineChannelPropertiesArgs extends io.pulumi.resources.R
     }
 
     public static final class Builder {
-        private @Nullable Input<String> directLineEmbedCode;
-        private @Nullable Input<List<DirectLineSiteArgs>> sites;
+        private @Nullable Output<String> directLineEmbedCode;
+        private @Nullable Output<List<DirectLineSiteArgs>> sites;
 
         public Builder() {
     	      // Empty
@@ -76,23 +76,23 @@ public final class DirectLineChannelPropertiesArgs extends io.pulumi.resources.R
     	      this.sites = defaults.sites;
         }
 
-        public Builder directLineEmbedCode(@Nullable Input<String> directLineEmbedCode) {
+        public Builder directLineEmbedCode(@Nullable Output<String> directLineEmbedCode) {
             this.directLineEmbedCode = directLineEmbedCode;
             return this;
         }
 
         public Builder directLineEmbedCode(@Nullable String directLineEmbedCode) {
-            this.directLineEmbedCode = Input.ofNullable(directLineEmbedCode);
+            this.directLineEmbedCode = Output.ofNullable(directLineEmbedCode);
             return this;
         }
 
-        public Builder sites(@Nullable Input<List<DirectLineSiteArgs>> sites) {
+        public Builder sites(@Nullable Output<List<DirectLineSiteArgs>> sites) {
             this.sites = sites;
             return this;
         }
 
         public Builder sites(@Nullable List<DirectLineSiteArgs> sites) {
-            this.sites = Input.ofNullable(sites);
+            this.sites = Output.ofNullable(sites);
             return this;
         }
         public DirectLineChannelPropertiesArgs build() {

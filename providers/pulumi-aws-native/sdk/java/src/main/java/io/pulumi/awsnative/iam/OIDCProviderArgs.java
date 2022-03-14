@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.iam;
 
 import io.pulumi.awsnative.iam.inputs.OIDCProviderTagArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -17,38 +17,38 @@ public final class OIDCProviderArgs extends io.pulumi.resources.ResourceArgs {
     public static final OIDCProviderArgs Empty = new OIDCProviderArgs();
 
     @InputImport(name="clientIdList")
-      private final @Nullable Input<List<String>> clientIdList;
+      private final @Nullable Output<List<String>> clientIdList;
 
-    public Input<List<String>> getClientIdList() {
-        return this.clientIdList == null ? Input.empty() : this.clientIdList;
+    public Output<List<String>> getClientIdList() {
+        return this.clientIdList == null ? Output.empty() : this.clientIdList;
     }
 
     @InputImport(name="tags")
-      private final @Nullable Input<List<OIDCProviderTagArgs>> tags;
+      private final @Nullable Output<List<OIDCProviderTagArgs>> tags;
 
-    public Input<List<OIDCProviderTagArgs>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<List<OIDCProviderTagArgs>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     @InputImport(name="thumbprintList", required=true)
-      private final Input<List<String>> thumbprintList;
+      private final Output<List<String>> thumbprintList;
 
-    public Input<List<String>> getThumbprintList() {
+    public Output<List<String>> getThumbprintList() {
         return this.thumbprintList;
     }
 
     @InputImport(name="url")
-      private final @Nullable Input<String> url;
+      private final @Nullable Output<String> url;
 
-    public Input<String> getUrl() {
-        return this.url == null ? Input.empty() : this.url;
+    public Output<String> getUrl() {
+        return this.url == null ? Output.empty() : this.url;
     }
 
     public OIDCProviderArgs(
-        @Nullable Input<List<String>> clientIdList,
-        @Nullable Input<List<OIDCProviderTagArgs>> tags,
-        Input<List<String>> thumbprintList,
-        @Nullable Input<String> url) {
+        @Nullable Output<List<String>> clientIdList,
+        @Nullable Output<List<OIDCProviderTagArgs>> tags,
+        Output<List<String>> thumbprintList,
+        @Nullable Output<String> url) {
         this.clientIdList = clientIdList;
         this.tags = tags;
         this.thumbprintList = Objects.requireNonNull(thumbprintList, "expected parameter 'thumbprintList' to be non-null");
@@ -56,10 +56,10 @@ public final class OIDCProviderArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private OIDCProviderArgs() {
-        this.clientIdList = Input.empty();
-        this.tags = Input.empty();
-        this.thumbprintList = Input.empty();
-        this.url = Input.empty();
+        this.clientIdList = Output.empty();
+        this.tags = Output.empty();
+        this.thumbprintList = Output.empty();
+        this.url = Output.empty();
     }
 
     public static Builder builder() {
@@ -71,10 +71,10 @@ public final class OIDCProviderArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> clientIdList;
-        private @Nullable Input<List<OIDCProviderTagArgs>> tags;
-        private Input<List<String>> thumbprintList;
-        private @Nullable Input<String> url;
+        private @Nullable Output<List<String>> clientIdList;
+        private @Nullable Output<List<OIDCProviderTagArgs>> tags;
+        private Output<List<String>> thumbprintList;
+        private @Nullable Output<String> url;
 
         public Builder() {
     	      // Empty
@@ -88,43 +88,43 @@ public final class OIDCProviderArgs extends io.pulumi.resources.ResourceArgs {
     	      this.url = defaults.url;
         }
 
-        public Builder clientIdList(@Nullable Input<List<String>> clientIdList) {
+        public Builder clientIdList(@Nullable Output<List<String>> clientIdList) {
             this.clientIdList = clientIdList;
             return this;
         }
 
         public Builder clientIdList(@Nullable List<String> clientIdList) {
-            this.clientIdList = Input.ofNullable(clientIdList);
+            this.clientIdList = Output.ofNullable(clientIdList);
             return this;
         }
 
-        public Builder tags(@Nullable Input<List<OIDCProviderTagArgs>> tags) {
+        public Builder tags(@Nullable Output<List<OIDCProviderTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable List<OIDCProviderTagArgs> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder thumbprintList(Input<List<String>> thumbprintList) {
+        public Builder thumbprintList(Output<List<String>> thumbprintList) {
             this.thumbprintList = Objects.requireNonNull(thumbprintList);
             return this;
         }
 
         public Builder thumbprintList(List<String> thumbprintList) {
-            this.thumbprintList = Input.of(Objects.requireNonNull(thumbprintList));
+            this.thumbprintList = Output.of(Objects.requireNonNull(thumbprintList));
             return this;
         }
 
-        public Builder url(@Nullable Input<String> url) {
+        public Builder url(@Nullable Output<String> url) {
             this.url = url;
             return this;
         }
 
         public Builder url(@Nullable String url) {
-            this.url = Input.ofNullable(url);
+            this.url = Output.ofNullable(url);
             return this;
         }
         public OIDCProviderArgs build() {

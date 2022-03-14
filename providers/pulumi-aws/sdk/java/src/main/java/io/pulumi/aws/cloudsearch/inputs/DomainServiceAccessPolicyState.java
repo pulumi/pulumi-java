@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.cloudsearch.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class DomainServiceAccessPolicyState extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="accessPolicy")
-      private final @Nullable Input<String> accessPolicy;
+      private final @Nullable Output<String> accessPolicy;
 
-    public Input<String> getAccessPolicy() {
-        return this.accessPolicy == null ? Input.empty() : this.accessPolicy;
+    public Output<String> getAccessPolicy() {
+        return this.accessPolicy == null ? Output.empty() : this.accessPolicy;
     }
 
     /**
@@ -30,22 +30,22 @@ public final class DomainServiceAccessPolicyState extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="domainName")
-      private final @Nullable Input<String> domainName;
+      private final @Nullable Output<String> domainName;
 
-    public Input<String> getDomainName() {
-        return this.domainName == null ? Input.empty() : this.domainName;
+    public Output<String> getDomainName() {
+        return this.domainName == null ? Output.empty() : this.domainName;
     }
 
     public DomainServiceAccessPolicyState(
-        @Nullable Input<String> accessPolicy,
-        @Nullable Input<String> domainName) {
+        @Nullable Output<String> accessPolicy,
+        @Nullable Output<String> domainName) {
         this.accessPolicy = accessPolicy;
         this.domainName = domainName;
     }
 
     private DomainServiceAccessPolicyState() {
-        this.accessPolicy = Input.empty();
-        this.domainName = Input.empty();
+        this.accessPolicy = Output.empty();
+        this.domainName = Output.empty();
     }
 
     public static Builder builder() {
@@ -57,8 +57,8 @@ public final class DomainServiceAccessPolicyState extends io.pulumi.resources.Re
     }
 
     public static final class Builder {
-        private @Nullable Input<String> accessPolicy;
-        private @Nullable Input<String> domainName;
+        private @Nullable Output<String> accessPolicy;
+        private @Nullable Output<String> domainName;
 
         public Builder() {
     	      // Empty
@@ -70,23 +70,23 @@ public final class DomainServiceAccessPolicyState extends io.pulumi.resources.Re
     	      this.domainName = defaults.domainName;
         }
 
-        public Builder accessPolicy(@Nullable Input<String> accessPolicy) {
+        public Builder accessPolicy(@Nullable Output<String> accessPolicy) {
             this.accessPolicy = accessPolicy;
             return this;
         }
 
         public Builder accessPolicy(@Nullable String accessPolicy) {
-            this.accessPolicy = Input.ofNullable(accessPolicy);
+            this.accessPolicy = Output.ofNullable(accessPolicy);
             return this;
         }
 
-        public Builder domainName(@Nullable Input<String> domainName) {
+        public Builder domainName(@Nullable Output<String> domainName) {
             this.domainName = domainName;
             return this;
         }
 
         public Builder domainName(@Nullable String domainName) {
-            this.domainName = Input.ofNullable(domainName);
+            this.domainName = Output.ofNullable(domainName);
             return this;
         }
         public DomainServiceAccessPolicyState build() {

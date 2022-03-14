@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.compute_v1.enums.SubsettingPolicy;
 import java.util.Objects;
@@ -19,18 +19,18 @@ public final class SubsettingArgs extends io.pulumi.resources.ResourceArgs {
     public static final SubsettingArgs Empty = new SubsettingArgs();
 
     @InputImport(name="policy")
-      private final @Nullable Input<SubsettingPolicy> policy;
+      private final @Nullable Output<SubsettingPolicy> policy;
 
-    public Input<SubsettingPolicy> getPolicy() {
-        return this.policy == null ? Input.empty() : this.policy;
+    public Output<SubsettingPolicy> getPolicy() {
+        return this.policy == null ? Output.empty() : this.policy;
     }
 
-    public SubsettingArgs(@Nullable Input<SubsettingPolicy> policy) {
+    public SubsettingArgs(@Nullable Output<SubsettingPolicy> policy) {
         this.policy = policy;
     }
 
     private SubsettingArgs() {
-        this.policy = Input.empty();
+        this.policy = Output.empty();
     }
 
     public static Builder builder() {
@@ -42,7 +42,7 @@ public final class SubsettingArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<SubsettingPolicy> policy;
+        private @Nullable Output<SubsettingPolicy> policy;
 
         public Builder() {
     	      // Empty
@@ -53,13 +53,13 @@ public final class SubsettingArgs extends io.pulumi.resources.ResourceArgs {
     	      this.policy = defaults.policy;
         }
 
-        public Builder policy(@Nullable Input<SubsettingPolicy> policy) {
+        public Builder policy(@Nullable Output<SubsettingPolicy> policy) {
             this.policy = policy;
             return this;
         }
 
         public Builder policy(@Nullable SubsettingPolicy policy) {
-            this.policy = Input.ofNullable(policy);
+            this.policy = Output.ofNullable(policy);
             return this;
         }
         public SubsettingArgs build() {

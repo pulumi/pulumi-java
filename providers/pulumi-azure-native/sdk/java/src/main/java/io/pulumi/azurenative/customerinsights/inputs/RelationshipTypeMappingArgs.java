@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.customerinsights.inputs;
 
 import io.pulumi.azurenative.customerinsights.inputs.RelationshipTypeFieldMappingArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class RelationshipTypeMappingArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="fieldMappings", required=true)
-      private final Input<List<RelationshipTypeFieldMappingArgs>> fieldMappings;
+      private final Output<List<RelationshipTypeFieldMappingArgs>> fieldMappings;
 
-    public Input<List<RelationshipTypeFieldMappingArgs>> getFieldMappings() {
+    public Output<List<RelationshipTypeFieldMappingArgs>> getFieldMappings() {
         return this.fieldMappings;
     }
 
-    public RelationshipTypeMappingArgs(Input<List<RelationshipTypeFieldMappingArgs>> fieldMappings) {
+    public RelationshipTypeMappingArgs(Output<List<RelationshipTypeFieldMappingArgs>> fieldMappings) {
         this.fieldMappings = Objects.requireNonNull(fieldMappings, "expected parameter 'fieldMappings' to be non-null");
     }
 
     private RelationshipTypeMappingArgs() {
-        this.fieldMappings = Input.empty();
+        this.fieldMappings = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class RelationshipTypeMappingArgs extends io.pulumi.resources.Resou
     }
 
     public static final class Builder {
-        private Input<List<RelationshipTypeFieldMappingArgs>> fieldMappings;
+        private Output<List<RelationshipTypeFieldMappingArgs>> fieldMappings;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class RelationshipTypeMappingArgs extends io.pulumi.resources.Resou
     	      this.fieldMappings = defaults.fieldMappings;
         }
 
-        public Builder fieldMappings(Input<List<RelationshipTypeFieldMappingArgs>> fieldMappings) {
+        public Builder fieldMappings(Output<List<RelationshipTypeFieldMappingArgs>> fieldMappings) {
             this.fieldMappings = Objects.requireNonNull(fieldMappings);
             return this;
         }
 
         public Builder fieldMappings(List<RelationshipTypeFieldMappingArgs> fieldMappings) {
-            this.fieldMappings = Input.of(Objects.requireNonNull(fieldMappings));
+            this.fieldMappings = Output.of(Objects.requireNonNull(fieldMappings));
             return this;
         }
         public RelationshipTypeMappingArgs build() {

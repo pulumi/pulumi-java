@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.recoveryservices.inputs;
 
 import io.pulumi.azurenative.recoveryservices.inputs.InquiryValidationArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.String;
@@ -25,10 +25,10 @@ public final class WorkloadInquiryDetailsArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="inquiryValidation")
-      private final @Nullable Input<InquiryValidationArgs> inquiryValidation;
+      private final @Nullable Output<InquiryValidationArgs> inquiryValidation;
 
-    public Input<InquiryValidationArgs> getInquiryValidation() {
-        return this.inquiryValidation == null ? Input.empty() : this.inquiryValidation;
+    public Output<InquiryValidationArgs> getInquiryValidation() {
+        return this.inquiryValidation == null ? Output.empty() : this.inquiryValidation;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class WorkloadInquiryDetailsArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="itemCount")
-      private final @Nullable Input<Double> itemCount;
+      private final @Nullable Output<Double> itemCount;
 
-    public Input<Double> getItemCount() {
-        return this.itemCount == null ? Input.empty() : this.itemCount;
+    public Output<Double> getItemCount() {
+        return this.itemCount == null ? Output.empty() : this.itemCount;
     }
 
     /**
@@ -47,25 +47,25 @@ public final class WorkloadInquiryDetailsArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="type")
-      private final @Nullable Input<String> type;
+      private final @Nullable Output<String> type;
 
-    public Input<String> getType() {
-        return this.type == null ? Input.empty() : this.type;
+    public Output<String> getType() {
+        return this.type == null ? Output.empty() : this.type;
     }
 
     public WorkloadInquiryDetailsArgs(
-        @Nullable Input<InquiryValidationArgs> inquiryValidation,
-        @Nullable Input<Double> itemCount,
-        @Nullable Input<String> type) {
+        @Nullable Output<InquiryValidationArgs> inquiryValidation,
+        @Nullable Output<Double> itemCount,
+        @Nullable Output<String> type) {
         this.inquiryValidation = inquiryValidation;
         this.itemCount = itemCount;
         this.type = type;
     }
 
     private WorkloadInquiryDetailsArgs() {
-        this.inquiryValidation = Input.empty();
-        this.itemCount = Input.empty();
-        this.type = Input.empty();
+        this.inquiryValidation = Output.empty();
+        this.itemCount = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -77,9 +77,9 @@ public final class WorkloadInquiryDetailsArgs extends io.pulumi.resources.Resour
     }
 
     public static final class Builder {
-        private @Nullable Input<InquiryValidationArgs> inquiryValidation;
-        private @Nullable Input<Double> itemCount;
-        private @Nullable Input<String> type;
+        private @Nullable Output<InquiryValidationArgs> inquiryValidation;
+        private @Nullable Output<Double> itemCount;
+        private @Nullable Output<String> type;
 
         public Builder() {
     	      // Empty
@@ -92,33 +92,33 @@ public final class WorkloadInquiryDetailsArgs extends io.pulumi.resources.Resour
     	      this.type = defaults.type;
         }
 
-        public Builder inquiryValidation(@Nullable Input<InquiryValidationArgs> inquiryValidation) {
+        public Builder inquiryValidation(@Nullable Output<InquiryValidationArgs> inquiryValidation) {
             this.inquiryValidation = inquiryValidation;
             return this;
         }
 
         public Builder inquiryValidation(@Nullable InquiryValidationArgs inquiryValidation) {
-            this.inquiryValidation = Input.ofNullable(inquiryValidation);
+            this.inquiryValidation = Output.ofNullable(inquiryValidation);
             return this;
         }
 
-        public Builder itemCount(@Nullable Input<Double> itemCount) {
+        public Builder itemCount(@Nullable Output<Double> itemCount) {
             this.itemCount = itemCount;
             return this;
         }
 
         public Builder itemCount(@Nullable Double itemCount) {
-            this.itemCount = Input.ofNullable(itemCount);
+            this.itemCount = Output.ofNullable(itemCount);
             return this;
         }
 
-        public Builder type(@Nullable Input<String> type) {
+        public Builder type(@Nullable Output<String> type) {
             this.type = type;
             return this;
         }
 
         public Builder type(@Nullable String type) {
-            this.type = Input.ofNullable(type);
+            this.type = Output.ofNullable(type);
             return this;
         }
         public WorkloadInquiryDetailsArgs build() {

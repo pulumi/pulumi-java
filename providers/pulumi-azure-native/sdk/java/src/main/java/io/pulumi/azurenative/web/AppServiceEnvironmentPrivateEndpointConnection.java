@@ -8,7 +8,6 @@ import io.pulumi.azurenative.web.AppServiceEnvironmentPrivateEndpointConnectionA
 import io.pulumi.azurenative.web.outputs.ArmIdWrapperResponse;
 import io.pulumi.azurenative.web.outputs.PrivateLinkConnectionStateResponse;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -159,22 +158,22 @@ public class AppServiceEnvironmentPrivateEndpointConnection extends io.pulumi.re
      * @param options A bag of options that control this resource's behavior.
      */
     public AppServiceEnvironmentPrivateEndpointConnection(String name, AppServiceEnvironmentPrivateEndpointConnectionArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:web:AppServiceEnvironmentPrivateEndpointConnection", name, args == null ? AppServiceEnvironmentPrivateEndpointConnectionArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("azure-native:web:AppServiceEnvironmentPrivateEndpointConnection", name, args == null ? AppServiceEnvironmentPrivateEndpointConnectionArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private AppServiceEnvironmentPrivateEndpointConnection(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private AppServiceEnvironmentPrivateEndpointConnection(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:web:AppServiceEnvironmentPrivateEndpointConnection", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:web/v20201201:AppServiceEnvironmentPrivateEndpointConnection").build()),
-                Input.of(Alias.builder().setType("azure-native:web/v20210101:AppServiceEnvironmentPrivateEndpointConnection").build()),
-                Input.of(Alias.builder().setType("azure-native:web/v20210115:AppServiceEnvironmentPrivateEndpointConnection").build()),
-                Input.of(Alias.builder().setType("azure-native:web/v20210201:AppServiceEnvironmentPrivateEndpointConnection").build()),
-                Input.of(Alias.builder().setType("azure-native:web/v20210301:AppServiceEnvironmentPrivateEndpointConnection").build())
+                Output.of(Alias.builder().setType("azure-native:web/v20201201:AppServiceEnvironmentPrivateEndpointConnection").build()),
+                Output.of(Alias.builder().setType("azure-native:web/v20210101:AppServiceEnvironmentPrivateEndpointConnection").build()),
+                Output.of(Alias.builder().setType("azure-native:web/v20210115:AppServiceEnvironmentPrivateEndpointConnection").build()),
+                Output.of(Alias.builder().setType("azure-native:web/v20210201:AppServiceEnvironmentPrivateEndpointConnection").build()),
+                Output.of(Alias.builder().setType("azure-native:web/v20210301:AppServiceEnvironmentPrivateEndpointConnection").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -188,7 +187,7 @@ public class AppServiceEnvironmentPrivateEndpointConnection extends io.pulumi.re
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static AppServiceEnvironmentPrivateEndpointConnection get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static AppServiceEnvironmentPrivateEndpointConnection get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new AppServiceEnvironmentPrivateEndpointConnection(name, id, options);
     }
 }

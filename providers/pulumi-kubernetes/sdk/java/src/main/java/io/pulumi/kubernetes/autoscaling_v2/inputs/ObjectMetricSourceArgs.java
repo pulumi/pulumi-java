@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.autoscaling_v2.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.kubernetes.autoscaling_v2.inputs.CrossVersionObjectReferenceArgs;
 import io.pulumi.kubernetes.autoscaling_v2.inputs.MetricIdentifierArgs;
@@ -24,9 +24,9 @@ public final class ObjectMetricSourceArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="describedObject", required=true)
-      private final Input<CrossVersionObjectReferenceArgs> describedObject;
+      private final Output<CrossVersionObjectReferenceArgs> describedObject;
 
-    public Input<CrossVersionObjectReferenceArgs> getDescribedObject() {
+    public Output<CrossVersionObjectReferenceArgs> getDescribedObject() {
         return this.describedObject;
     }
 
@@ -35,9 +35,9 @@ public final class ObjectMetricSourceArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="metric", required=true)
-      private final Input<MetricIdentifierArgs> metric;
+      private final Output<MetricIdentifierArgs> metric;
 
-    public Input<MetricIdentifierArgs> getMetric() {
+    public Output<MetricIdentifierArgs> getMetric() {
         return this.metric;
     }
 
@@ -46,25 +46,25 @@ public final class ObjectMetricSourceArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="target", required=true)
-      private final Input<MetricTargetArgs> target;
+      private final Output<MetricTargetArgs> target;
 
-    public Input<MetricTargetArgs> getTarget() {
+    public Output<MetricTargetArgs> getTarget() {
         return this.target;
     }
 
     public ObjectMetricSourceArgs(
-        Input<CrossVersionObjectReferenceArgs> describedObject,
-        Input<MetricIdentifierArgs> metric,
-        Input<MetricTargetArgs> target) {
+        Output<CrossVersionObjectReferenceArgs> describedObject,
+        Output<MetricIdentifierArgs> metric,
+        Output<MetricTargetArgs> target) {
         this.describedObject = Objects.requireNonNull(describedObject, "expected parameter 'describedObject' to be non-null");
         this.metric = Objects.requireNonNull(metric, "expected parameter 'metric' to be non-null");
         this.target = Objects.requireNonNull(target, "expected parameter 'target' to be non-null");
     }
 
     private ObjectMetricSourceArgs() {
-        this.describedObject = Input.empty();
-        this.metric = Input.empty();
-        this.target = Input.empty();
+        this.describedObject = Output.empty();
+        this.metric = Output.empty();
+        this.target = Output.empty();
     }
 
     public static Builder builder() {
@@ -76,9 +76,9 @@ public final class ObjectMetricSourceArgs extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private Input<CrossVersionObjectReferenceArgs> describedObject;
-        private Input<MetricIdentifierArgs> metric;
-        private Input<MetricTargetArgs> target;
+        private Output<CrossVersionObjectReferenceArgs> describedObject;
+        private Output<MetricIdentifierArgs> metric;
+        private Output<MetricTargetArgs> target;
 
         public Builder() {
     	      // Empty
@@ -91,33 +91,33 @@ public final class ObjectMetricSourceArgs extends io.pulumi.resources.ResourceAr
     	      this.target = defaults.target;
         }
 
-        public Builder describedObject(Input<CrossVersionObjectReferenceArgs> describedObject) {
+        public Builder describedObject(Output<CrossVersionObjectReferenceArgs> describedObject) {
             this.describedObject = Objects.requireNonNull(describedObject);
             return this;
         }
 
         public Builder describedObject(CrossVersionObjectReferenceArgs describedObject) {
-            this.describedObject = Input.of(Objects.requireNonNull(describedObject));
+            this.describedObject = Output.of(Objects.requireNonNull(describedObject));
             return this;
         }
 
-        public Builder metric(Input<MetricIdentifierArgs> metric) {
+        public Builder metric(Output<MetricIdentifierArgs> metric) {
             this.metric = Objects.requireNonNull(metric);
             return this;
         }
 
         public Builder metric(MetricIdentifierArgs metric) {
-            this.metric = Input.of(Objects.requireNonNull(metric));
+            this.metric = Output.of(Objects.requireNonNull(metric));
             return this;
         }
 
-        public Builder target(Input<MetricTargetArgs> target) {
+        public Builder target(Output<MetricTargetArgs> target) {
             this.target = Objects.requireNonNull(target);
             return this;
         }
 
         public Builder target(MetricTargetArgs target) {
-            this.target = Input.of(Objects.requireNonNull(target));
+            this.target = Output.of(Objects.requireNonNull(target));
             return this;
         }
         public ObjectMetricSourceArgs build() {

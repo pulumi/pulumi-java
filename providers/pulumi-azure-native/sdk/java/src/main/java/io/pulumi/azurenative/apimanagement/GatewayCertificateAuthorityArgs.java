@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.apimanagement;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -20,10 +20,10 @@ public final class GatewayCertificateAuthorityArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="certificateId")
-      private final @Nullable Input<String> certificateId;
+      private final @Nullable Output<String> certificateId;
 
-    public Input<String> getCertificateId() {
-        return this.certificateId == null ? Input.empty() : this.certificateId;
+    public Output<String> getCertificateId() {
+        return this.certificateId == null ? Output.empty() : this.certificateId;
     }
 
     /**
@@ -31,9 +31,9 @@ public final class GatewayCertificateAuthorityArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="gatewayId", required=true)
-      private final Input<String> gatewayId;
+      private final Output<String> gatewayId;
 
-    public Input<String> getGatewayId() {
+    public Output<String> getGatewayId() {
         return this.gatewayId;
     }
 
@@ -42,10 +42,10 @@ public final class GatewayCertificateAuthorityArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="isTrusted")
-      private final @Nullable Input<Boolean> isTrusted;
+      private final @Nullable Output<Boolean> isTrusted;
 
-    public Input<Boolean> getIsTrusted() {
-        return this.isTrusted == null ? Input.empty() : this.isTrusted;
+    public Output<Boolean> getIsTrusted() {
+        return this.isTrusted == null ? Output.empty() : this.isTrusted;
     }
 
     /**
@@ -53,9 +53,9 @@ public final class GatewayCertificateAuthorityArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -64,18 +64,18 @@ public final class GatewayCertificateAuthorityArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="serviceName", required=true)
-      private final Input<String> serviceName;
+      private final Output<String> serviceName;
 
-    public Input<String> getServiceName() {
+    public Output<String> getServiceName() {
         return this.serviceName;
     }
 
     public GatewayCertificateAuthorityArgs(
-        @Nullable Input<String> certificateId,
-        Input<String> gatewayId,
-        @Nullable Input<Boolean> isTrusted,
-        Input<String> resourceGroupName,
-        Input<String> serviceName) {
+        @Nullable Output<String> certificateId,
+        Output<String> gatewayId,
+        @Nullable Output<Boolean> isTrusted,
+        Output<String> resourceGroupName,
+        Output<String> serviceName) {
         this.certificateId = certificateId;
         this.gatewayId = Objects.requireNonNull(gatewayId, "expected parameter 'gatewayId' to be non-null");
         this.isTrusted = isTrusted;
@@ -84,11 +84,11 @@ public final class GatewayCertificateAuthorityArgs extends io.pulumi.resources.R
     }
 
     private GatewayCertificateAuthorityArgs() {
-        this.certificateId = Input.empty();
-        this.gatewayId = Input.empty();
-        this.isTrusted = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.serviceName = Input.empty();
+        this.certificateId = Output.empty();
+        this.gatewayId = Output.empty();
+        this.isTrusted = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.serviceName = Output.empty();
     }
 
     public static Builder builder() {
@@ -100,11 +100,11 @@ public final class GatewayCertificateAuthorityArgs extends io.pulumi.resources.R
     }
 
     public static final class Builder {
-        private @Nullable Input<String> certificateId;
-        private Input<String> gatewayId;
-        private @Nullable Input<Boolean> isTrusted;
-        private Input<String> resourceGroupName;
-        private Input<String> serviceName;
+        private @Nullable Output<String> certificateId;
+        private Output<String> gatewayId;
+        private @Nullable Output<Boolean> isTrusted;
+        private Output<String> resourceGroupName;
+        private Output<String> serviceName;
 
         public Builder() {
     	      // Empty
@@ -119,53 +119,53 @@ public final class GatewayCertificateAuthorityArgs extends io.pulumi.resources.R
     	      this.serviceName = defaults.serviceName;
         }
 
-        public Builder certificateId(@Nullable Input<String> certificateId) {
+        public Builder certificateId(@Nullable Output<String> certificateId) {
             this.certificateId = certificateId;
             return this;
         }
 
         public Builder certificateId(@Nullable String certificateId) {
-            this.certificateId = Input.ofNullable(certificateId);
+            this.certificateId = Output.ofNullable(certificateId);
             return this;
         }
 
-        public Builder gatewayId(Input<String> gatewayId) {
+        public Builder gatewayId(Output<String> gatewayId) {
             this.gatewayId = Objects.requireNonNull(gatewayId);
             return this;
         }
 
         public Builder gatewayId(String gatewayId) {
-            this.gatewayId = Input.of(Objects.requireNonNull(gatewayId));
+            this.gatewayId = Output.of(Objects.requireNonNull(gatewayId));
             return this;
         }
 
-        public Builder isTrusted(@Nullable Input<Boolean> isTrusted) {
+        public Builder isTrusted(@Nullable Output<Boolean> isTrusted) {
             this.isTrusted = isTrusted;
             return this;
         }
 
         public Builder isTrusted(@Nullable Boolean isTrusted) {
-            this.isTrusted = Input.ofNullable(isTrusted);
+            this.isTrusted = Output.ofNullable(isTrusted);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder serviceName(Input<String> serviceName) {
+        public Builder serviceName(Output<String> serviceName) {
             this.serviceName = Objects.requireNonNull(serviceName);
             return this;
         }
 
         public Builder serviceName(String serviceName) {
-            this.serviceName = Input.of(Objects.requireNonNull(serviceName));
+            this.serviceName = Output.of(Objects.requireNonNull(serviceName));
             return this;
         }
         public GatewayCertificateAuthorityArgs build() {

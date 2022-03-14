@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.logic.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,9 +23,9 @@ public final class X12SecuritySettingsArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="authorizationQualifier", required=true)
-      private final Input<String> authorizationQualifier;
+      private final Output<String> authorizationQualifier;
 
-    public Input<String> getAuthorizationQualifier() {
+    public Output<String> getAuthorizationQualifier() {
         return this.authorizationQualifier;
     }
 
@@ -34,10 +34,10 @@ public final class X12SecuritySettingsArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="authorizationValue")
-      private final @Nullable Input<String> authorizationValue;
+      private final @Nullable Output<String> authorizationValue;
 
-    public Input<String> getAuthorizationValue() {
-        return this.authorizationValue == null ? Input.empty() : this.authorizationValue;
+    public Output<String> getAuthorizationValue() {
+        return this.authorizationValue == null ? Output.empty() : this.authorizationValue;
     }
 
     /**
@@ -45,10 +45,10 @@ public final class X12SecuritySettingsArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="passwordValue")
-      private final @Nullable Input<String> passwordValue;
+      private final @Nullable Output<String> passwordValue;
 
-    public Input<String> getPasswordValue() {
-        return this.passwordValue == null ? Input.empty() : this.passwordValue;
+    public Output<String> getPasswordValue() {
+        return this.passwordValue == null ? Output.empty() : this.passwordValue;
     }
 
     /**
@@ -56,17 +56,17 @@ public final class X12SecuritySettingsArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="securityQualifier", required=true)
-      private final Input<String> securityQualifier;
+      private final Output<String> securityQualifier;
 
-    public Input<String> getSecurityQualifier() {
+    public Output<String> getSecurityQualifier() {
         return this.securityQualifier;
     }
 
     public X12SecuritySettingsArgs(
-        Input<String> authorizationQualifier,
-        @Nullable Input<String> authorizationValue,
-        @Nullable Input<String> passwordValue,
-        Input<String> securityQualifier) {
+        Output<String> authorizationQualifier,
+        @Nullable Output<String> authorizationValue,
+        @Nullable Output<String> passwordValue,
+        Output<String> securityQualifier) {
         this.authorizationQualifier = Objects.requireNonNull(authorizationQualifier, "expected parameter 'authorizationQualifier' to be non-null");
         this.authorizationValue = authorizationValue;
         this.passwordValue = passwordValue;
@@ -74,10 +74,10 @@ public final class X12SecuritySettingsArgs extends io.pulumi.resources.ResourceA
     }
 
     private X12SecuritySettingsArgs() {
-        this.authorizationQualifier = Input.empty();
-        this.authorizationValue = Input.empty();
-        this.passwordValue = Input.empty();
-        this.securityQualifier = Input.empty();
+        this.authorizationQualifier = Output.empty();
+        this.authorizationValue = Output.empty();
+        this.passwordValue = Output.empty();
+        this.securityQualifier = Output.empty();
     }
 
     public static Builder builder() {
@@ -89,10 +89,10 @@ public final class X12SecuritySettingsArgs extends io.pulumi.resources.ResourceA
     }
 
     public static final class Builder {
-        private Input<String> authorizationQualifier;
-        private @Nullable Input<String> authorizationValue;
-        private @Nullable Input<String> passwordValue;
-        private Input<String> securityQualifier;
+        private Output<String> authorizationQualifier;
+        private @Nullable Output<String> authorizationValue;
+        private @Nullable Output<String> passwordValue;
+        private Output<String> securityQualifier;
 
         public Builder() {
     	      // Empty
@@ -106,43 +106,43 @@ public final class X12SecuritySettingsArgs extends io.pulumi.resources.ResourceA
     	      this.securityQualifier = defaults.securityQualifier;
         }
 
-        public Builder authorizationQualifier(Input<String> authorizationQualifier) {
+        public Builder authorizationQualifier(Output<String> authorizationQualifier) {
             this.authorizationQualifier = Objects.requireNonNull(authorizationQualifier);
             return this;
         }
 
         public Builder authorizationQualifier(String authorizationQualifier) {
-            this.authorizationQualifier = Input.of(Objects.requireNonNull(authorizationQualifier));
+            this.authorizationQualifier = Output.of(Objects.requireNonNull(authorizationQualifier));
             return this;
         }
 
-        public Builder authorizationValue(@Nullable Input<String> authorizationValue) {
+        public Builder authorizationValue(@Nullable Output<String> authorizationValue) {
             this.authorizationValue = authorizationValue;
             return this;
         }
 
         public Builder authorizationValue(@Nullable String authorizationValue) {
-            this.authorizationValue = Input.ofNullable(authorizationValue);
+            this.authorizationValue = Output.ofNullable(authorizationValue);
             return this;
         }
 
-        public Builder passwordValue(@Nullable Input<String> passwordValue) {
+        public Builder passwordValue(@Nullable Output<String> passwordValue) {
             this.passwordValue = passwordValue;
             return this;
         }
 
         public Builder passwordValue(@Nullable String passwordValue) {
-            this.passwordValue = Input.ofNullable(passwordValue);
+            this.passwordValue = Output.ofNullable(passwordValue);
             return this;
         }
 
-        public Builder securityQualifier(Input<String> securityQualifier) {
+        public Builder securityQualifier(Output<String> securityQualifier) {
             this.securityQualifier = Objects.requireNonNull(securityQualifier);
             return this;
         }
 
         public Builder securityQualifier(String securityQualifier) {
-            this.securityQualifier = Input.of(Objects.requireNonNull(securityQualifier));
+            this.securityQualifier = Output.of(Objects.requireNonNull(securityQualifier));
             return this;
         }
         public X12SecuritySettingsArgs build() {

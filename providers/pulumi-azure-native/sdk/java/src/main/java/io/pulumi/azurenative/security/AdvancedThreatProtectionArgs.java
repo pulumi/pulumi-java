@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.security;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -20,10 +20,10 @@ public final class AdvancedThreatProtectionArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="isEnabled")
-      private final @Nullable Input<Boolean> isEnabled;
+      private final @Nullable Output<Boolean> isEnabled;
 
-    public Input<Boolean> getIsEnabled() {
-        return this.isEnabled == null ? Input.empty() : this.isEnabled;
+    public Output<Boolean> getIsEnabled() {
+        return this.isEnabled == null ? Output.empty() : this.isEnabled;
     }
 
     /**
@@ -31,9 +31,9 @@ public final class AdvancedThreatProtectionArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="resourceId", required=true)
-      private final Input<String> resourceId;
+      private final Output<String> resourceId;
 
-    public Input<String> getResourceId() {
+    public Output<String> getResourceId() {
         return this.resourceId;
     }
 
@@ -42,25 +42,25 @@ public final class AdvancedThreatProtectionArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="settingName")
-      private final @Nullable Input<String> settingName;
+      private final @Nullable Output<String> settingName;
 
-    public Input<String> getSettingName() {
-        return this.settingName == null ? Input.empty() : this.settingName;
+    public Output<String> getSettingName() {
+        return this.settingName == null ? Output.empty() : this.settingName;
     }
 
     public AdvancedThreatProtectionArgs(
-        @Nullable Input<Boolean> isEnabled,
-        Input<String> resourceId,
-        @Nullable Input<String> settingName) {
+        @Nullable Output<Boolean> isEnabled,
+        Output<String> resourceId,
+        @Nullable Output<String> settingName) {
         this.isEnabled = isEnabled;
         this.resourceId = Objects.requireNonNull(resourceId, "expected parameter 'resourceId' to be non-null");
         this.settingName = settingName;
     }
 
     private AdvancedThreatProtectionArgs() {
-        this.isEnabled = Input.empty();
-        this.resourceId = Input.empty();
-        this.settingName = Input.empty();
+        this.isEnabled = Output.empty();
+        this.resourceId = Output.empty();
+        this.settingName = Output.empty();
     }
 
     public static Builder builder() {
@@ -72,9 +72,9 @@ public final class AdvancedThreatProtectionArgs extends io.pulumi.resources.Reso
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> isEnabled;
-        private Input<String> resourceId;
-        private @Nullable Input<String> settingName;
+        private @Nullable Output<Boolean> isEnabled;
+        private Output<String> resourceId;
+        private @Nullable Output<String> settingName;
 
         public Builder() {
     	      // Empty
@@ -87,33 +87,33 @@ public final class AdvancedThreatProtectionArgs extends io.pulumi.resources.Reso
     	      this.settingName = defaults.settingName;
         }
 
-        public Builder isEnabled(@Nullable Input<Boolean> isEnabled) {
+        public Builder isEnabled(@Nullable Output<Boolean> isEnabled) {
             this.isEnabled = isEnabled;
             return this;
         }
 
         public Builder isEnabled(@Nullable Boolean isEnabled) {
-            this.isEnabled = Input.ofNullable(isEnabled);
+            this.isEnabled = Output.ofNullable(isEnabled);
             return this;
         }
 
-        public Builder resourceId(Input<String> resourceId) {
+        public Builder resourceId(Output<String> resourceId) {
             this.resourceId = Objects.requireNonNull(resourceId);
             return this;
         }
 
         public Builder resourceId(String resourceId) {
-            this.resourceId = Input.of(Objects.requireNonNull(resourceId));
+            this.resourceId = Output.of(Objects.requireNonNull(resourceId));
             return this;
         }
 
-        public Builder settingName(@Nullable Input<String> settingName) {
+        public Builder settingName(@Nullable Output<String> settingName) {
             this.settingName = settingName;
             return this;
         }
 
         public Builder settingName(@Nullable String settingName) {
-            this.settingName = Input.ofNullable(settingName);
+            this.settingName = Output.ofNullable(settingName);
             return this;
         }
         public AdvancedThreatProtectionArgs build() {

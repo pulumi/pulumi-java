@@ -12,7 +12,6 @@ import io.pulumi.azurenative.media.outputs.LiveEventPreviewResponse;
 import io.pulumi.azurenative.media.outputs.LiveEventTranscriptionResponse;
 import io.pulumi.azurenative.media.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -330,23 +329,23 @@ public class LiveEvent extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public LiveEvent(String name, LiveEventArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:media:LiveEvent", name, args == null ? LiveEventArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("azure-native:media:LiveEvent", name, args == null ? LiveEventArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private LiveEvent(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private LiveEvent(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:media:LiveEvent", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:media/v20180330preview:LiveEvent").build()),
-                Input.of(Alias.builder().setType("azure-native:media/v20180601preview:LiveEvent").build()),
-                Input.of(Alias.builder().setType("azure-native:media/v20180701:LiveEvent").build()),
-                Input.of(Alias.builder().setType("azure-native:media/v20190501preview:LiveEvent").build()),
-                Input.of(Alias.builder().setType("azure-native:media/v20200501:LiveEvent").build()),
-                Input.of(Alias.builder().setType("azure-native:media/v20210601:LiveEvent").build())
+                Output.of(Alias.builder().setType("azure-native:media/v20180330preview:LiveEvent").build()),
+                Output.of(Alias.builder().setType("azure-native:media/v20180601preview:LiveEvent").build()),
+                Output.of(Alias.builder().setType("azure-native:media/v20180701:LiveEvent").build()),
+                Output.of(Alias.builder().setType("azure-native:media/v20190501preview:LiveEvent").build()),
+                Output.of(Alias.builder().setType("azure-native:media/v20200501:LiveEvent").build()),
+                Output.of(Alias.builder().setType("azure-native:media/v20210601:LiveEvent").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -360,7 +359,7 @@ public class LiveEvent extends io.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static LiveEvent get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static LiveEvent get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new LiveEvent(name, id, options);
     }
 }

@@ -4,7 +4,7 @@
 package io.pulumi.aws.lex.inputs;
 
 import io.pulumi.aws.lex.inputs.BotAliasConversationLogsLogSettingGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -21,9 +21,9 @@ public final class BotAliasConversationLogsGetArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="iamRoleArn", required=true)
-      private final Input<String> iamRoleArn;
+      private final Output<String> iamRoleArn;
 
-    public Input<String> getIamRoleArn() {
+    public Output<String> getIamRoleArn() {
         return this.iamRoleArn;
     }
 
@@ -32,22 +32,22 @@ public final class BotAliasConversationLogsGetArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="logSettings")
-      private final @Nullable Input<List<BotAliasConversationLogsLogSettingGetArgs>> logSettings;
+      private final @Nullable Output<List<BotAliasConversationLogsLogSettingGetArgs>> logSettings;
 
-    public Input<List<BotAliasConversationLogsLogSettingGetArgs>> getLogSettings() {
-        return this.logSettings == null ? Input.empty() : this.logSettings;
+    public Output<List<BotAliasConversationLogsLogSettingGetArgs>> getLogSettings() {
+        return this.logSettings == null ? Output.empty() : this.logSettings;
     }
 
     public BotAliasConversationLogsGetArgs(
-        Input<String> iamRoleArn,
-        @Nullable Input<List<BotAliasConversationLogsLogSettingGetArgs>> logSettings) {
+        Output<String> iamRoleArn,
+        @Nullable Output<List<BotAliasConversationLogsLogSettingGetArgs>> logSettings) {
         this.iamRoleArn = Objects.requireNonNull(iamRoleArn, "expected parameter 'iamRoleArn' to be non-null");
         this.logSettings = logSettings;
     }
 
     private BotAliasConversationLogsGetArgs() {
-        this.iamRoleArn = Input.empty();
-        this.logSettings = Input.empty();
+        this.iamRoleArn = Output.empty();
+        this.logSettings = Output.empty();
     }
 
     public static Builder builder() {
@@ -59,8 +59,8 @@ public final class BotAliasConversationLogsGetArgs extends io.pulumi.resources.R
     }
 
     public static final class Builder {
-        private Input<String> iamRoleArn;
-        private @Nullable Input<List<BotAliasConversationLogsLogSettingGetArgs>> logSettings;
+        private Output<String> iamRoleArn;
+        private @Nullable Output<List<BotAliasConversationLogsLogSettingGetArgs>> logSettings;
 
         public Builder() {
     	      // Empty
@@ -72,23 +72,23 @@ public final class BotAliasConversationLogsGetArgs extends io.pulumi.resources.R
     	      this.logSettings = defaults.logSettings;
         }
 
-        public Builder iamRoleArn(Input<String> iamRoleArn) {
+        public Builder iamRoleArn(Output<String> iamRoleArn) {
             this.iamRoleArn = Objects.requireNonNull(iamRoleArn);
             return this;
         }
 
         public Builder iamRoleArn(String iamRoleArn) {
-            this.iamRoleArn = Input.of(Objects.requireNonNull(iamRoleArn));
+            this.iamRoleArn = Output.of(Objects.requireNonNull(iamRoleArn));
             return this;
         }
 
-        public Builder logSettings(@Nullable Input<List<BotAliasConversationLogsLogSettingGetArgs>> logSettings) {
+        public Builder logSettings(@Nullable Output<List<BotAliasConversationLogsLogSettingGetArgs>> logSettings) {
             this.logSettings = logSettings;
             return this;
         }
 
         public Builder logSettings(@Nullable List<BotAliasConversationLogsLogSettingGetArgs> logSettings) {
-            this.logSettings = Input.ofNullable(logSettings);
+            this.logSettings = Output.ofNullable(logSettings);
             return this;
         }
         public BotAliasConversationLogsGetArgs build() {

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.logz;
 
 import io.pulumi.azurenative.logz.inputs.MetricsTagRulesPropertiesArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -20,9 +20,9 @@ public final class MetricsSourceTagRuleArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="metricsSourceName", required=true)
-      private final Input<String> metricsSourceName;
+      private final Output<String> metricsSourceName;
 
-    public Input<String> getMetricsSourceName() {
+    public Output<String> getMetricsSourceName() {
         return this.metricsSourceName;
     }
 
@@ -31,9 +31,9 @@ public final class MetricsSourceTagRuleArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="monitorName", required=true)
-      private final Input<String> monitorName;
+      private final Output<String> monitorName;
 
-    public Input<String> getMonitorName() {
+    public Output<String> getMonitorName() {
         return this.monitorName;
     }
 
@@ -42,10 +42,10 @@ public final class MetricsSourceTagRuleArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="properties")
-      private final @Nullable Input<MetricsTagRulesPropertiesArgs> properties;
+      private final @Nullable Output<MetricsTagRulesPropertiesArgs> properties;
 
-    public Input<MetricsTagRulesPropertiesArgs> getProperties() {
-        return this.properties == null ? Input.empty() : this.properties;
+    public Output<MetricsTagRulesPropertiesArgs> getProperties() {
+        return this.properties == null ? Output.empty() : this.properties;
     }
 
     /**
@@ -53,25 +53,25 @@ public final class MetricsSourceTagRuleArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
     @InputImport(name="ruleSetName")
-      private final @Nullable Input<String> ruleSetName;
+      private final @Nullable Output<String> ruleSetName;
 
-    public Input<String> getRuleSetName() {
-        return this.ruleSetName == null ? Input.empty() : this.ruleSetName;
+    public Output<String> getRuleSetName() {
+        return this.ruleSetName == null ? Output.empty() : this.ruleSetName;
     }
 
     public MetricsSourceTagRuleArgs(
-        Input<String> metricsSourceName,
-        Input<String> monitorName,
-        @Nullable Input<MetricsTagRulesPropertiesArgs> properties,
-        Input<String> resourceGroupName,
-        @Nullable Input<String> ruleSetName) {
+        Output<String> metricsSourceName,
+        Output<String> monitorName,
+        @Nullable Output<MetricsTagRulesPropertiesArgs> properties,
+        Output<String> resourceGroupName,
+        @Nullable Output<String> ruleSetName) {
         this.metricsSourceName = Objects.requireNonNull(metricsSourceName, "expected parameter 'metricsSourceName' to be non-null");
         this.monitorName = Objects.requireNonNull(monitorName, "expected parameter 'monitorName' to be non-null");
         this.properties = properties;
@@ -80,11 +80,11 @@ public final class MetricsSourceTagRuleArgs extends io.pulumi.resources.Resource
     }
 
     private MetricsSourceTagRuleArgs() {
-        this.metricsSourceName = Input.empty();
-        this.monitorName = Input.empty();
-        this.properties = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.ruleSetName = Input.empty();
+        this.metricsSourceName = Output.empty();
+        this.monitorName = Output.empty();
+        this.properties = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.ruleSetName = Output.empty();
     }
 
     public static Builder builder() {
@@ -96,11 +96,11 @@ public final class MetricsSourceTagRuleArgs extends io.pulumi.resources.Resource
     }
 
     public static final class Builder {
-        private Input<String> metricsSourceName;
-        private Input<String> monitorName;
-        private @Nullable Input<MetricsTagRulesPropertiesArgs> properties;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<String> ruleSetName;
+        private Output<String> metricsSourceName;
+        private Output<String> monitorName;
+        private @Nullable Output<MetricsTagRulesPropertiesArgs> properties;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<String> ruleSetName;
 
         public Builder() {
     	      // Empty
@@ -115,53 +115,53 @@ public final class MetricsSourceTagRuleArgs extends io.pulumi.resources.Resource
     	      this.ruleSetName = defaults.ruleSetName;
         }
 
-        public Builder metricsSourceName(Input<String> metricsSourceName) {
+        public Builder metricsSourceName(Output<String> metricsSourceName) {
             this.metricsSourceName = Objects.requireNonNull(metricsSourceName);
             return this;
         }
 
         public Builder metricsSourceName(String metricsSourceName) {
-            this.metricsSourceName = Input.of(Objects.requireNonNull(metricsSourceName));
+            this.metricsSourceName = Output.of(Objects.requireNonNull(metricsSourceName));
             return this;
         }
 
-        public Builder monitorName(Input<String> monitorName) {
+        public Builder monitorName(Output<String> monitorName) {
             this.monitorName = Objects.requireNonNull(monitorName);
             return this;
         }
 
         public Builder monitorName(String monitorName) {
-            this.monitorName = Input.of(Objects.requireNonNull(monitorName));
+            this.monitorName = Output.of(Objects.requireNonNull(monitorName));
             return this;
         }
 
-        public Builder properties(@Nullable Input<MetricsTagRulesPropertiesArgs> properties) {
+        public Builder properties(@Nullable Output<MetricsTagRulesPropertiesArgs> properties) {
             this.properties = properties;
             return this;
         }
 
         public Builder properties(@Nullable MetricsTagRulesPropertiesArgs properties) {
-            this.properties = Input.ofNullable(properties);
+            this.properties = Output.ofNullable(properties);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder ruleSetName(@Nullable Input<String> ruleSetName) {
+        public Builder ruleSetName(@Nullable Output<String> ruleSetName) {
             this.ruleSetName = ruleSetName;
             return this;
         }
 
         public Builder ruleSetName(@Nullable String ruleSetName) {
-            this.ruleSetName = Input.ofNullable(ruleSetName);
+            this.ruleSetName = Output.ofNullable(ruleSetName);
             return this;
         }
         public MetricsSourceTagRuleArgs build() {

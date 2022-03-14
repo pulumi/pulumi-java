@@ -3,7 +3,7 @@
 
 package io.pulumi.docker.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -14,29 +14,29 @@ public final class SecretLabelGetArgs extends io.pulumi.resources.ResourceArgs {
     public static final SecretLabelGetArgs Empty = new SecretLabelGetArgs();
 
     @InputImport(name="label", required=true)
-      private final Input<String> label;
+      private final Output<String> label;
 
-    public Input<String> getLabel() {
+    public Output<String> getLabel() {
         return this.label;
     }
 
     @InputImport(name="value", required=true)
-      private final Input<String> value;
+      private final Output<String> value;
 
-    public Input<String> getValue() {
+    public Output<String> getValue() {
         return this.value;
     }
 
     public SecretLabelGetArgs(
-        Input<String> label,
-        Input<String> value) {
+        Output<String> label,
+        Output<String> value) {
         this.label = Objects.requireNonNull(label, "expected parameter 'label' to be non-null");
         this.value = Objects.requireNonNull(value, "expected parameter 'value' to be non-null");
     }
 
     private SecretLabelGetArgs() {
-        this.label = Input.empty();
-        this.value = Input.empty();
+        this.label = Output.empty();
+        this.value = Output.empty();
     }
 
     public static Builder builder() {
@@ -48,8 +48,8 @@ public final class SecretLabelGetArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> label;
-        private Input<String> value;
+        private Output<String> label;
+        private Output<String> value;
 
         public Builder() {
     	      // Empty
@@ -61,23 +61,23 @@ public final class SecretLabelGetArgs extends io.pulumi.resources.ResourceArgs {
     	      this.value = defaults.value;
         }
 
-        public Builder label(Input<String> label) {
+        public Builder label(Output<String> label) {
             this.label = Objects.requireNonNull(label);
             return this;
         }
 
         public Builder label(String label) {
-            this.label = Input.of(Objects.requireNonNull(label));
+            this.label = Output.of(Objects.requireNonNull(label));
             return this;
         }
 
-        public Builder value(Input<String> value) {
+        public Builder value(Output<String> value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }
 
         public Builder value(String value) {
-            this.value = Input.of(Objects.requireNonNull(value));
+            this.value = Output.of(Objects.requireNonNull(value));
             return this;
         }
         public SecretLabelGetArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.sqladmin_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class DiskEncryptionConfigurationArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="kind")
-      private final @Nullable Input<String> kind;
+      private final @Nullable Output<String> kind;
 
-    public Input<String> getKind() {
-        return this.kind == null ? Input.empty() : this.kind;
+    public Output<String> getKind() {
+        return this.kind == null ? Output.empty() : this.kind;
     }
 
     /**
@@ -34,22 +34,22 @@ public final class DiskEncryptionConfigurationArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="kmsKeyName")
-      private final @Nullable Input<String> kmsKeyName;
+      private final @Nullable Output<String> kmsKeyName;
 
-    public Input<String> getKmsKeyName() {
-        return this.kmsKeyName == null ? Input.empty() : this.kmsKeyName;
+    public Output<String> getKmsKeyName() {
+        return this.kmsKeyName == null ? Output.empty() : this.kmsKeyName;
     }
 
     public DiskEncryptionConfigurationArgs(
-        @Nullable Input<String> kind,
-        @Nullable Input<String> kmsKeyName) {
+        @Nullable Output<String> kind,
+        @Nullable Output<String> kmsKeyName) {
         this.kind = kind;
         this.kmsKeyName = kmsKeyName;
     }
 
     private DiskEncryptionConfigurationArgs() {
-        this.kind = Input.empty();
-        this.kmsKeyName = Input.empty();
+        this.kind = Output.empty();
+        this.kmsKeyName = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class DiskEncryptionConfigurationArgs extends io.pulumi.resources.R
     }
 
     public static final class Builder {
-        private @Nullable Input<String> kind;
-        private @Nullable Input<String> kmsKeyName;
+        private @Nullable Output<String> kind;
+        private @Nullable Output<String> kmsKeyName;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class DiskEncryptionConfigurationArgs extends io.pulumi.resources.R
     	      this.kmsKeyName = defaults.kmsKeyName;
         }
 
-        public Builder kind(@Nullable Input<String> kind) {
+        public Builder kind(@Nullable Output<String> kind) {
             this.kind = kind;
             return this;
         }
 
         public Builder kind(@Nullable String kind) {
-            this.kind = Input.ofNullable(kind);
+            this.kind = Output.ofNullable(kind);
             return this;
         }
 
-        public Builder kmsKeyName(@Nullable Input<String> kmsKeyName) {
+        public Builder kmsKeyName(@Nullable Output<String> kmsKeyName) {
             this.kmsKeyName = kmsKeyName;
             return this;
         }
 
         public Builder kmsKeyName(@Nullable String kmsKeyName) {
-            this.kmsKeyName = Input.ofNullable(kmsKeyName);
+            this.kmsKeyName = Output.ofNullable(kmsKeyName);
             return this;
         }
         public DiskEncryptionConfigurationArgs build() {

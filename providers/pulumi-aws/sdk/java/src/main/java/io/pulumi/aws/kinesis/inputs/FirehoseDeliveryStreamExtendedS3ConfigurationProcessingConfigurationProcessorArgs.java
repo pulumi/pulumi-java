@@ -4,7 +4,7 @@
 package io.pulumi.aws.kinesis.inputs;
 
 import io.pulumi.aws.kinesis.inputs.FirehoseDeliveryStreamExtendedS3ConfigurationProcessingConfigurationProcessorParameterArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -21,10 +21,10 @@ public final class FirehoseDeliveryStreamExtendedS3ConfigurationProcessingConfig
      * 
      */
     @InputImport(name="parameters")
-      private final @Nullable Input<List<FirehoseDeliveryStreamExtendedS3ConfigurationProcessingConfigurationProcessorParameterArgs>> parameters;
+      private final @Nullable Output<List<FirehoseDeliveryStreamExtendedS3ConfigurationProcessingConfigurationProcessorParameterArgs>> parameters;
 
-    public Input<List<FirehoseDeliveryStreamExtendedS3ConfigurationProcessingConfigurationProcessorParameterArgs>> getParameters() {
-        return this.parameters == null ? Input.empty() : this.parameters;
+    public Output<List<FirehoseDeliveryStreamExtendedS3ConfigurationProcessingConfigurationProcessorParameterArgs>> getParameters() {
+        return this.parameters == null ? Output.empty() : this.parameters;
     }
 
     /**
@@ -32,22 +32,22 @@ public final class FirehoseDeliveryStreamExtendedS3ConfigurationProcessingConfig
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<String> type;
+      private final Output<String> type;
 
-    public Input<String> getType() {
+    public Output<String> getType() {
         return this.type;
     }
 
     public FirehoseDeliveryStreamExtendedS3ConfigurationProcessingConfigurationProcessorArgs(
-        @Nullable Input<List<FirehoseDeliveryStreamExtendedS3ConfigurationProcessingConfigurationProcessorParameterArgs>> parameters,
-        Input<String> type) {
+        @Nullable Output<List<FirehoseDeliveryStreamExtendedS3ConfigurationProcessingConfigurationProcessorParameterArgs>> parameters,
+        Output<String> type) {
         this.parameters = parameters;
         this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
     }
 
     private FirehoseDeliveryStreamExtendedS3ConfigurationProcessingConfigurationProcessorArgs() {
-        this.parameters = Input.empty();
-        this.type = Input.empty();
+        this.parameters = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -59,8 +59,8 @@ public final class FirehoseDeliveryStreamExtendedS3ConfigurationProcessingConfig
     }
 
     public static final class Builder {
-        private @Nullable Input<List<FirehoseDeliveryStreamExtendedS3ConfigurationProcessingConfigurationProcessorParameterArgs>> parameters;
-        private Input<String> type;
+        private @Nullable Output<List<FirehoseDeliveryStreamExtendedS3ConfigurationProcessingConfigurationProcessorParameterArgs>> parameters;
+        private Output<String> type;
 
         public Builder() {
     	      // Empty
@@ -72,23 +72,23 @@ public final class FirehoseDeliveryStreamExtendedS3ConfigurationProcessingConfig
     	      this.type = defaults.type;
         }
 
-        public Builder parameters(@Nullable Input<List<FirehoseDeliveryStreamExtendedS3ConfigurationProcessingConfigurationProcessorParameterArgs>> parameters) {
+        public Builder parameters(@Nullable Output<List<FirehoseDeliveryStreamExtendedS3ConfigurationProcessingConfigurationProcessorParameterArgs>> parameters) {
             this.parameters = parameters;
             return this;
         }
 
         public Builder parameters(@Nullable List<FirehoseDeliveryStreamExtendedS3ConfigurationProcessingConfigurationProcessorParameterArgs> parameters) {
-            this.parameters = Input.ofNullable(parameters);
+            this.parameters = Output.ofNullable(parameters);
             return this;
         }
 
-        public Builder type(Input<String> type) {
+        public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(String type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
         public FirehoseDeliveryStreamExtendedS3ConfigurationProcessingConfigurationProcessorArgs build() {

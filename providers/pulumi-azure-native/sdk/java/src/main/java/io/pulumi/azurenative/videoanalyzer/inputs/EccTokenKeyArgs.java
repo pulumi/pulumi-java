@@ -5,7 +5,7 @@ package io.pulumi.azurenative.videoanalyzer.inputs;
 
 import io.pulumi.azurenative.videoanalyzer.enums.AccessPolicyEccAlgo;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -24,9 +24,9 @@ public final class EccTokenKeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="alg", required=true)
-      private final Input<Either<String,AccessPolicyEccAlgo>> alg;
+      private final Output<Either<String,AccessPolicyEccAlgo>> alg;
 
-    public Input<Either<String,AccessPolicyEccAlgo>> getAlg() {
+    public Output<Either<String,AccessPolicyEccAlgo>> getAlg() {
         return this.alg;
     }
 
@@ -35,9 +35,9 @@ public final class EccTokenKeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kid", required=true)
-      private final Input<String> kid;
+      private final Output<String> kid;
 
-    public Input<String> getKid() {
+    public Output<String> getKid() {
         return this.kid;
     }
 
@@ -47,9 +47,9 @@ public final class EccTokenKeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<String> type;
+      private final Output<String> type;
 
-    public Input<String> getType() {
+    public Output<String> getType() {
         return this.type;
     }
 
@@ -58,9 +58,9 @@ public final class EccTokenKeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="x", required=true)
-      private final Input<String> x;
+      private final Output<String> x;
 
-    public Input<String> getX() {
+    public Output<String> getX() {
         return this.x;
     }
 
@@ -69,18 +69,18 @@ public final class EccTokenKeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="y", required=true)
-      private final Input<String> y;
+      private final Output<String> y;
 
-    public Input<String> getY() {
+    public Output<String> getY() {
         return this.y;
     }
 
     public EccTokenKeyArgs(
-        Input<Either<String,AccessPolicyEccAlgo>> alg,
-        Input<String> kid,
-        Input<String> type,
-        Input<String> x,
-        Input<String> y) {
+        Output<Either<String,AccessPolicyEccAlgo>> alg,
+        Output<String> kid,
+        Output<String> type,
+        Output<String> x,
+        Output<String> y) {
         this.alg = Objects.requireNonNull(alg, "expected parameter 'alg' to be non-null");
         this.kid = Objects.requireNonNull(kid, "expected parameter 'kid' to be non-null");
         this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
@@ -89,11 +89,11 @@ public final class EccTokenKeyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private EccTokenKeyArgs() {
-        this.alg = Input.empty();
-        this.kid = Input.empty();
-        this.type = Input.empty();
-        this.x = Input.empty();
-        this.y = Input.empty();
+        this.alg = Output.empty();
+        this.kid = Output.empty();
+        this.type = Output.empty();
+        this.x = Output.empty();
+        this.y = Output.empty();
     }
 
     public static Builder builder() {
@@ -105,11 +105,11 @@ public final class EccTokenKeyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<Either<String,AccessPolicyEccAlgo>> alg;
-        private Input<String> kid;
-        private Input<String> type;
-        private Input<String> x;
-        private Input<String> y;
+        private Output<Either<String,AccessPolicyEccAlgo>> alg;
+        private Output<String> kid;
+        private Output<String> type;
+        private Output<String> x;
+        private Output<String> y;
 
         public Builder() {
     	      // Empty
@@ -124,53 +124,53 @@ public final class EccTokenKeyArgs extends io.pulumi.resources.ResourceArgs {
     	      this.y = defaults.y;
         }
 
-        public Builder alg(Input<Either<String,AccessPolicyEccAlgo>> alg) {
+        public Builder alg(Output<Either<String,AccessPolicyEccAlgo>> alg) {
             this.alg = Objects.requireNonNull(alg);
             return this;
         }
 
         public Builder alg(Either<String,AccessPolicyEccAlgo> alg) {
-            this.alg = Input.of(Objects.requireNonNull(alg));
+            this.alg = Output.of(Objects.requireNonNull(alg));
             return this;
         }
 
-        public Builder kid(Input<String> kid) {
+        public Builder kid(Output<String> kid) {
             this.kid = Objects.requireNonNull(kid);
             return this;
         }
 
         public Builder kid(String kid) {
-            this.kid = Input.of(Objects.requireNonNull(kid));
+            this.kid = Output.of(Objects.requireNonNull(kid));
             return this;
         }
 
-        public Builder type(Input<String> type) {
+        public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(String type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
 
-        public Builder x(Input<String> x) {
+        public Builder x(Output<String> x) {
             this.x = Objects.requireNonNull(x);
             return this;
         }
 
         public Builder x(String x) {
-            this.x = Input.of(Objects.requireNonNull(x));
+            this.x = Output.of(Objects.requireNonNull(x));
             return this;
         }
 
-        public Builder y(Input<String> y) {
+        public Builder y(Output<String> y) {
             this.y = Objects.requireNonNull(y);
             return this;
         }
 
         public Builder y(String y) {
-            this.y = Input.of(Objects.requireNonNull(y));
+            this.y = Output.of(Objects.requireNonNull(y));
             return this;
         }
         public EccTokenKeyArgs build() {

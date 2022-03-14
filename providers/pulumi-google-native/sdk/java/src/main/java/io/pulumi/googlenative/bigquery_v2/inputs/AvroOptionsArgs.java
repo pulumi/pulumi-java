@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.bigquery_v2.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
@@ -19,18 +19,18 @@ public final class AvroOptionsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="useAvroLogicalTypes")
-      private final @Nullable Input<Boolean> useAvroLogicalTypes;
+      private final @Nullable Output<Boolean> useAvroLogicalTypes;
 
-    public Input<Boolean> getUseAvroLogicalTypes() {
-        return this.useAvroLogicalTypes == null ? Input.empty() : this.useAvroLogicalTypes;
+    public Output<Boolean> getUseAvroLogicalTypes() {
+        return this.useAvroLogicalTypes == null ? Output.empty() : this.useAvroLogicalTypes;
     }
 
-    public AvroOptionsArgs(@Nullable Input<Boolean> useAvroLogicalTypes) {
+    public AvroOptionsArgs(@Nullable Output<Boolean> useAvroLogicalTypes) {
         this.useAvroLogicalTypes = useAvroLogicalTypes;
     }
 
     private AvroOptionsArgs() {
-        this.useAvroLogicalTypes = Input.empty();
+        this.useAvroLogicalTypes = Output.empty();
     }
 
     public static Builder builder() {
@@ -42,7 +42,7 @@ public final class AvroOptionsArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> useAvroLogicalTypes;
+        private @Nullable Output<Boolean> useAvroLogicalTypes;
 
         public Builder() {
     	      // Empty
@@ -53,13 +53,13 @@ public final class AvroOptionsArgs extends io.pulumi.resources.ResourceArgs {
     	      this.useAvroLogicalTypes = defaults.useAvroLogicalTypes;
         }
 
-        public Builder useAvroLogicalTypes(@Nullable Input<Boolean> useAvroLogicalTypes) {
+        public Builder useAvroLogicalTypes(@Nullable Output<Boolean> useAvroLogicalTypes) {
             this.useAvroLogicalTypes = useAvroLogicalTypes;
             return this;
         }
 
         public Builder useAvroLogicalTypes(@Nullable Boolean useAvroLogicalTypes) {
-            this.useAvroLogicalTypes = Input.ofNullable(useAvroLogicalTypes);
+            this.useAvroLogicalTypes = Output.ofNullable(useAvroLogicalTypes);
             return this;
         }
         public AvroOptionsArgs build() {

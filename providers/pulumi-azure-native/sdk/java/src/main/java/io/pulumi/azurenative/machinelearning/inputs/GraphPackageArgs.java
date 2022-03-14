@@ -6,7 +6,7 @@ package io.pulumi.azurenative.machinelearning.inputs;
 import io.pulumi.azurenative.machinelearning.inputs.GraphEdgeArgs;
 import io.pulumi.azurenative.machinelearning.inputs.GraphNodeArgs;
 import io.pulumi.azurenative.machinelearning.inputs.GraphParameterArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -28,10 +28,10 @@ public final class GraphPackageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="edges")
-      private final @Nullable Input<List<GraphEdgeArgs>> edges;
+      private final @Nullable Output<List<GraphEdgeArgs>> edges;
 
-    public Input<List<GraphEdgeArgs>> getEdges() {
-        return this.edges == null ? Input.empty() : this.edges;
+    public Output<List<GraphEdgeArgs>> getEdges() {
+        return this.edges == null ? Output.empty() : this.edges;
     }
 
     /**
@@ -39,10 +39,10 @@ public final class GraphPackageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="graphParameters")
-      private final @Nullable Input<Map<String,GraphParameterArgs>> graphParameters;
+      private final @Nullable Output<Map<String,GraphParameterArgs>> graphParameters;
 
-    public Input<Map<String,GraphParameterArgs>> getGraphParameters() {
-        return this.graphParameters == null ? Input.empty() : this.graphParameters;
+    public Output<Map<String,GraphParameterArgs>> getGraphParameters() {
+        return this.graphParameters == null ? Output.empty() : this.graphParameters;
     }
 
     /**
@@ -50,25 +50,25 @@ public final class GraphPackageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="nodes")
-      private final @Nullable Input<Map<String,GraphNodeArgs>> nodes;
+      private final @Nullable Output<Map<String,GraphNodeArgs>> nodes;
 
-    public Input<Map<String,GraphNodeArgs>> getNodes() {
-        return this.nodes == null ? Input.empty() : this.nodes;
+    public Output<Map<String,GraphNodeArgs>> getNodes() {
+        return this.nodes == null ? Output.empty() : this.nodes;
     }
 
     public GraphPackageArgs(
-        @Nullable Input<List<GraphEdgeArgs>> edges,
-        @Nullable Input<Map<String,GraphParameterArgs>> graphParameters,
-        @Nullable Input<Map<String,GraphNodeArgs>> nodes) {
+        @Nullable Output<List<GraphEdgeArgs>> edges,
+        @Nullable Output<Map<String,GraphParameterArgs>> graphParameters,
+        @Nullable Output<Map<String,GraphNodeArgs>> nodes) {
         this.edges = edges;
         this.graphParameters = graphParameters;
         this.nodes = nodes;
     }
 
     private GraphPackageArgs() {
-        this.edges = Input.empty();
-        this.graphParameters = Input.empty();
-        this.nodes = Input.empty();
+        this.edges = Output.empty();
+        this.graphParameters = Output.empty();
+        this.nodes = Output.empty();
     }
 
     public static Builder builder() {
@@ -80,9 +80,9 @@ public final class GraphPackageArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<List<GraphEdgeArgs>> edges;
-        private @Nullable Input<Map<String,GraphParameterArgs>> graphParameters;
-        private @Nullable Input<Map<String,GraphNodeArgs>> nodes;
+        private @Nullable Output<List<GraphEdgeArgs>> edges;
+        private @Nullable Output<Map<String,GraphParameterArgs>> graphParameters;
+        private @Nullable Output<Map<String,GraphNodeArgs>> nodes;
 
         public Builder() {
     	      // Empty
@@ -95,33 +95,33 @@ public final class GraphPackageArgs extends io.pulumi.resources.ResourceArgs {
     	      this.nodes = defaults.nodes;
         }
 
-        public Builder edges(@Nullable Input<List<GraphEdgeArgs>> edges) {
+        public Builder edges(@Nullable Output<List<GraphEdgeArgs>> edges) {
             this.edges = edges;
             return this;
         }
 
         public Builder edges(@Nullable List<GraphEdgeArgs> edges) {
-            this.edges = Input.ofNullable(edges);
+            this.edges = Output.ofNullable(edges);
             return this;
         }
 
-        public Builder graphParameters(@Nullable Input<Map<String,GraphParameterArgs>> graphParameters) {
+        public Builder graphParameters(@Nullable Output<Map<String,GraphParameterArgs>> graphParameters) {
             this.graphParameters = graphParameters;
             return this;
         }
 
         public Builder graphParameters(@Nullable Map<String,GraphParameterArgs> graphParameters) {
-            this.graphParameters = Input.ofNullable(graphParameters);
+            this.graphParameters = Output.ofNullable(graphParameters);
             return this;
         }
 
-        public Builder nodes(@Nullable Input<Map<String,GraphNodeArgs>> nodes) {
+        public Builder nodes(@Nullable Output<Map<String,GraphNodeArgs>> nodes) {
             this.nodes = nodes;
             return this;
         }
 
         public Builder nodes(@Nullable Map<String,GraphNodeArgs> nodes) {
-            this.nodes = Input.ofNullable(nodes);
+            this.nodes = Output.ofNullable(nodes);
             return this;
         }
         public GraphPackageArgs build() {

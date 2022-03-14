@@ -9,7 +9,6 @@ import io.pulumi.azurenative.compute.outputs.GalleryImageVersionPublishingProfil
 import io.pulumi.azurenative.compute.outputs.GalleryImageVersionStorageProfileResponse;
 import io.pulumi.azurenative.compute.outputs.ReplicationStatusResponse;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -186,23 +185,23 @@ public class GalleryImageVersion extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public GalleryImageVersion(String name, GalleryImageVersionArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:compute:GalleryImageVersion", name, args == null ? GalleryImageVersionArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("azure-native:compute:GalleryImageVersion", name, args == null ? GalleryImageVersionArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private GalleryImageVersion(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private GalleryImageVersion(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:compute:GalleryImageVersion", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:compute/v20180601:GalleryImageVersion").build()),
-                Input.of(Alias.builder().setType("azure-native:compute/v20190301:GalleryImageVersion").build()),
-                Input.of(Alias.builder().setType("azure-native:compute/v20190701:GalleryImageVersion").build()),
-                Input.of(Alias.builder().setType("azure-native:compute/v20191201:GalleryImageVersion").build()),
-                Input.of(Alias.builder().setType("azure-native:compute/v20200930:GalleryImageVersion").build()),
-                Input.of(Alias.builder().setType("azure-native:compute/v20210701:GalleryImageVersion").build())
+                Output.of(Alias.builder().setType("azure-native:compute/v20180601:GalleryImageVersion").build()),
+                Output.of(Alias.builder().setType("azure-native:compute/v20190301:GalleryImageVersion").build()),
+                Output.of(Alias.builder().setType("azure-native:compute/v20190701:GalleryImageVersion").build()),
+                Output.of(Alias.builder().setType("azure-native:compute/v20191201:GalleryImageVersion").build()),
+                Output.of(Alias.builder().setType("azure-native:compute/v20200930:GalleryImageVersion").build()),
+                Output.of(Alias.builder().setType("azure-native:compute/v20210701:GalleryImageVersion").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -216,7 +215,7 @@ public class GalleryImageVersion extends io.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static GalleryImageVersion get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static GalleryImageVersion get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new GalleryImageVersion(name, id, options);
     }
 }

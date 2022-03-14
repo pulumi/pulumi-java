@@ -6,7 +6,7 @@ package io.pulumi.azurenative.blueprint.inputs;
 import io.pulumi.azurenative.blueprint.enums.ManagedServiceIdentityType;
 import io.pulumi.azurenative.blueprint.inputs.UserAssignedIdentityArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -27,10 +27,10 @@ public final class ManagedServiceIdentityArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="principalId")
-      private final @Nullable Input<String> principalId;
+      private final @Nullable Output<String> principalId;
 
-    public Input<String> getPrincipalId() {
-        return this.principalId == null ? Input.empty() : this.principalId;
+    public Output<String> getPrincipalId() {
+        return this.principalId == null ? Output.empty() : this.principalId;
     }
 
     /**
@@ -38,10 +38,10 @@ public final class ManagedServiceIdentityArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="tenantId")
-      private final @Nullable Input<String> tenantId;
+      private final @Nullable Output<String> tenantId;
 
-    public Input<String> getTenantId() {
-        return this.tenantId == null ? Input.empty() : this.tenantId;
+    public Output<String> getTenantId() {
+        return this.tenantId == null ? Output.empty() : this.tenantId;
     }
 
     /**
@@ -49,9 +49,9 @@ public final class ManagedServiceIdentityArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<Either<String,ManagedServiceIdentityType>> type;
+      private final Output<Either<String,ManagedServiceIdentityType>> type;
 
-    public Input<Either<String,ManagedServiceIdentityType>> getType() {
+    public Output<Either<String,ManagedServiceIdentityType>> getType() {
         return this.type;
     }
 
@@ -60,17 +60,17 @@ public final class ManagedServiceIdentityArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="userAssignedIdentities")
-      private final @Nullable Input<Map<String,UserAssignedIdentityArgs>> userAssignedIdentities;
+      private final @Nullable Output<Map<String,UserAssignedIdentityArgs>> userAssignedIdentities;
 
-    public Input<Map<String,UserAssignedIdentityArgs>> getUserAssignedIdentities() {
-        return this.userAssignedIdentities == null ? Input.empty() : this.userAssignedIdentities;
+    public Output<Map<String,UserAssignedIdentityArgs>> getUserAssignedIdentities() {
+        return this.userAssignedIdentities == null ? Output.empty() : this.userAssignedIdentities;
     }
 
     public ManagedServiceIdentityArgs(
-        @Nullable Input<String> principalId,
-        @Nullable Input<String> tenantId,
-        Input<Either<String,ManagedServiceIdentityType>> type,
-        @Nullable Input<Map<String,UserAssignedIdentityArgs>> userAssignedIdentities) {
+        @Nullable Output<String> principalId,
+        @Nullable Output<String> tenantId,
+        Output<Either<String,ManagedServiceIdentityType>> type,
+        @Nullable Output<Map<String,UserAssignedIdentityArgs>> userAssignedIdentities) {
         this.principalId = principalId;
         this.tenantId = tenantId;
         this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
@@ -78,10 +78,10 @@ public final class ManagedServiceIdentityArgs extends io.pulumi.resources.Resour
     }
 
     private ManagedServiceIdentityArgs() {
-        this.principalId = Input.empty();
-        this.tenantId = Input.empty();
-        this.type = Input.empty();
-        this.userAssignedIdentities = Input.empty();
+        this.principalId = Output.empty();
+        this.tenantId = Output.empty();
+        this.type = Output.empty();
+        this.userAssignedIdentities = Output.empty();
     }
 
     public static Builder builder() {
@@ -93,10 +93,10 @@ public final class ManagedServiceIdentityArgs extends io.pulumi.resources.Resour
     }
 
     public static final class Builder {
-        private @Nullable Input<String> principalId;
-        private @Nullable Input<String> tenantId;
-        private Input<Either<String,ManagedServiceIdentityType>> type;
-        private @Nullable Input<Map<String,UserAssignedIdentityArgs>> userAssignedIdentities;
+        private @Nullable Output<String> principalId;
+        private @Nullable Output<String> tenantId;
+        private Output<Either<String,ManagedServiceIdentityType>> type;
+        private @Nullable Output<Map<String,UserAssignedIdentityArgs>> userAssignedIdentities;
 
         public Builder() {
     	      // Empty
@@ -110,43 +110,43 @@ public final class ManagedServiceIdentityArgs extends io.pulumi.resources.Resour
     	      this.userAssignedIdentities = defaults.userAssignedIdentities;
         }
 
-        public Builder principalId(@Nullable Input<String> principalId) {
+        public Builder principalId(@Nullable Output<String> principalId) {
             this.principalId = principalId;
             return this;
         }
 
         public Builder principalId(@Nullable String principalId) {
-            this.principalId = Input.ofNullable(principalId);
+            this.principalId = Output.ofNullable(principalId);
             return this;
         }
 
-        public Builder tenantId(@Nullable Input<String> tenantId) {
+        public Builder tenantId(@Nullable Output<String> tenantId) {
             this.tenantId = tenantId;
             return this;
         }
 
         public Builder tenantId(@Nullable String tenantId) {
-            this.tenantId = Input.ofNullable(tenantId);
+            this.tenantId = Output.ofNullable(tenantId);
             return this;
         }
 
-        public Builder type(Input<Either<String,ManagedServiceIdentityType>> type) {
+        public Builder type(Output<Either<String,ManagedServiceIdentityType>> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(Either<String,ManagedServiceIdentityType> type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
 
-        public Builder userAssignedIdentities(@Nullable Input<Map<String,UserAssignedIdentityArgs>> userAssignedIdentities) {
+        public Builder userAssignedIdentities(@Nullable Output<Map<String,UserAssignedIdentityArgs>> userAssignedIdentities) {
             this.userAssignedIdentities = userAssignedIdentities;
             return this;
         }
 
         public Builder userAssignedIdentities(@Nullable Map<String,UserAssignedIdentityArgs> userAssignedIdentities) {
-            this.userAssignedIdentities = Input.ofNullable(userAssignedIdentities);
+            this.userAssignedIdentities = Output.ofNullable(userAssignedIdentities);
             return this;
         }
         public ManagedServiceIdentityArgs build() {

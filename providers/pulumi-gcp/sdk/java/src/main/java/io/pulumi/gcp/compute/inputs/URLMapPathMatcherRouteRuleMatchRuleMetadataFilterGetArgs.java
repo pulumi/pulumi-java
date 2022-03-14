@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.compute.inputs.URLMapPathMatcherRouteRuleMatchRuleMetadataFilterFilterLabelGetArgs;
 import java.lang.String;
@@ -23,9 +23,9 @@ public final class URLMapPathMatcherRouteRuleMatchRuleMetadataFilterGetArgs exte
      * 
      */
     @InputImport(name="filterLabels", required=true)
-      private final Input<List<URLMapPathMatcherRouteRuleMatchRuleMetadataFilterFilterLabelGetArgs>> filterLabels;
+      private final Output<List<URLMapPathMatcherRouteRuleMatchRuleMetadataFilterFilterLabelGetArgs>> filterLabels;
 
-    public Input<List<URLMapPathMatcherRouteRuleMatchRuleMetadataFilterFilterLabelGetArgs>> getFilterLabels() {
+    public Output<List<URLMapPathMatcherRouteRuleMatchRuleMetadataFilterFilterLabelGetArgs>> getFilterLabels() {
         return this.filterLabels;
     }
 
@@ -40,22 +40,22 @@ public final class URLMapPathMatcherRouteRuleMatchRuleMetadataFilterGetArgs exte
      * 
      */
     @InputImport(name="filterMatchCriteria", required=true)
-      private final Input<String> filterMatchCriteria;
+      private final Output<String> filterMatchCriteria;
 
-    public Input<String> getFilterMatchCriteria() {
+    public Output<String> getFilterMatchCriteria() {
         return this.filterMatchCriteria;
     }
 
     public URLMapPathMatcherRouteRuleMatchRuleMetadataFilterGetArgs(
-        Input<List<URLMapPathMatcherRouteRuleMatchRuleMetadataFilterFilterLabelGetArgs>> filterLabels,
-        Input<String> filterMatchCriteria) {
+        Output<List<URLMapPathMatcherRouteRuleMatchRuleMetadataFilterFilterLabelGetArgs>> filterLabels,
+        Output<String> filterMatchCriteria) {
         this.filterLabels = Objects.requireNonNull(filterLabels, "expected parameter 'filterLabels' to be non-null");
         this.filterMatchCriteria = Objects.requireNonNull(filterMatchCriteria, "expected parameter 'filterMatchCriteria' to be non-null");
     }
 
     private URLMapPathMatcherRouteRuleMatchRuleMetadataFilterGetArgs() {
-        this.filterLabels = Input.empty();
-        this.filterMatchCriteria = Input.empty();
+        this.filterLabels = Output.empty();
+        this.filterMatchCriteria = Output.empty();
     }
 
     public static Builder builder() {
@@ -67,8 +67,8 @@ public final class URLMapPathMatcherRouteRuleMatchRuleMetadataFilterGetArgs exte
     }
 
     public static final class Builder {
-        private Input<List<URLMapPathMatcherRouteRuleMatchRuleMetadataFilterFilterLabelGetArgs>> filterLabels;
-        private Input<String> filterMatchCriteria;
+        private Output<List<URLMapPathMatcherRouteRuleMatchRuleMetadataFilterFilterLabelGetArgs>> filterLabels;
+        private Output<String> filterMatchCriteria;
 
         public Builder() {
     	      // Empty
@@ -80,23 +80,23 @@ public final class URLMapPathMatcherRouteRuleMatchRuleMetadataFilterGetArgs exte
     	      this.filterMatchCriteria = defaults.filterMatchCriteria;
         }
 
-        public Builder filterLabels(Input<List<URLMapPathMatcherRouteRuleMatchRuleMetadataFilterFilterLabelGetArgs>> filterLabels) {
+        public Builder filterLabels(Output<List<URLMapPathMatcherRouteRuleMatchRuleMetadataFilterFilterLabelGetArgs>> filterLabels) {
             this.filterLabels = Objects.requireNonNull(filterLabels);
             return this;
         }
 
         public Builder filterLabels(List<URLMapPathMatcherRouteRuleMatchRuleMetadataFilterFilterLabelGetArgs> filterLabels) {
-            this.filterLabels = Input.of(Objects.requireNonNull(filterLabels));
+            this.filterLabels = Output.of(Objects.requireNonNull(filterLabels));
             return this;
         }
 
-        public Builder filterMatchCriteria(Input<String> filterMatchCriteria) {
+        public Builder filterMatchCriteria(Output<String> filterMatchCriteria) {
             this.filterMatchCriteria = Objects.requireNonNull(filterMatchCriteria);
             return this;
         }
 
         public Builder filterMatchCriteria(String filterMatchCriteria) {
-            this.filterMatchCriteria = Input.of(Objects.requireNonNull(filterMatchCriteria));
+            this.filterMatchCriteria = Output.of(Objects.requireNonNull(filterMatchCriteria));
             return this;
         }
         public URLMapPathMatcherRouteRuleMatchRuleMetadataFilterGetArgs build() {

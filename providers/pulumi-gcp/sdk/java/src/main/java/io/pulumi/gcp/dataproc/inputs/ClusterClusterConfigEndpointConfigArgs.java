@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.dataproc.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Object;
@@ -23,29 +23,29 @@ public final class ClusterClusterConfigEndpointConfigArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="enableHttpPortAccess", required=true)
-      private final Input<Boolean> enableHttpPortAccess;
+      private final Output<Boolean> enableHttpPortAccess;
 
-    public Input<Boolean> getEnableHttpPortAccess() {
+    public Output<Boolean> getEnableHttpPortAccess() {
         return this.enableHttpPortAccess;
     }
 
     @InputImport(name="httpPorts")
-      private final @Nullable Input<Map<String,Object>> httpPorts;
+      private final @Nullable Output<Map<String,Object>> httpPorts;
 
-    public Input<Map<String,Object>> getHttpPorts() {
-        return this.httpPorts == null ? Input.empty() : this.httpPorts;
+    public Output<Map<String,Object>> getHttpPorts() {
+        return this.httpPorts == null ? Output.empty() : this.httpPorts;
     }
 
     public ClusterClusterConfigEndpointConfigArgs(
-        Input<Boolean> enableHttpPortAccess,
-        @Nullable Input<Map<String,Object>> httpPorts) {
+        Output<Boolean> enableHttpPortAccess,
+        @Nullable Output<Map<String,Object>> httpPorts) {
         this.enableHttpPortAccess = Objects.requireNonNull(enableHttpPortAccess, "expected parameter 'enableHttpPortAccess' to be non-null");
         this.httpPorts = httpPorts;
     }
 
     private ClusterClusterConfigEndpointConfigArgs() {
-        this.enableHttpPortAccess = Input.empty();
-        this.httpPorts = Input.empty();
+        this.enableHttpPortAccess = Output.empty();
+        this.httpPorts = Output.empty();
     }
 
     public static Builder builder() {
@@ -57,8 +57,8 @@ public final class ClusterClusterConfigEndpointConfigArgs extends io.pulumi.reso
     }
 
     public static final class Builder {
-        private Input<Boolean> enableHttpPortAccess;
-        private @Nullable Input<Map<String,Object>> httpPorts;
+        private Output<Boolean> enableHttpPortAccess;
+        private @Nullable Output<Map<String,Object>> httpPorts;
 
         public Builder() {
     	      // Empty
@@ -70,23 +70,23 @@ public final class ClusterClusterConfigEndpointConfigArgs extends io.pulumi.reso
     	      this.httpPorts = defaults.httpPorts;
         }
 
-        public Builder enableHttpPortAccess(Input<Boolean> enableHttpPortAccess) {
+        public Builder enableHttpPortAccess(Output<Boolean> enableHttpPortAccess) {
             this.enableHttpPortAccess = Objects.requireNonNull(enableHttpPortAccess);
             return this;
         }
 
         public Builder enableHttpPortAccess(Boolean enableHttpPortAccess) {
-            this.enableHttpPortAccess = Input.of(Objects.requireNonNull(enableHttpPortAccess));
+            this.enableHttpPortAccess = Output.of(Objects.requireNonNull(enableHttpPortAccess));
             return this;
         }
 
-        public Builder httpPorts(@Nullable Input<Map<String,Object>> httpPorts) {
+        public Builder httpPorts(@Nullable Output<Map<String,Object>> httpPorts) {
             this.httpPorts = httpPorts;
             return this;
         }
 
         public Builder httpPorts(@Nullable Map<String,Object> httpPorts) {
-            this.httpPorts = Input.ofNullable(httpPorts);
+            this.httpPorts = Output.ofNullable(httpPorts);
             return this;
         }
         public ClusterClusterConfigEndpointConfigArgs build() {

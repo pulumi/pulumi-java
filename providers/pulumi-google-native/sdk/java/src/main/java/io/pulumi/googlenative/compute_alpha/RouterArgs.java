@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.compute_alpha.inputs.RouterBgpArgs;
 import io.pulumi.googlenative.compute_alpha.inputs.RouterBgpPeerArgs;
@@ -26,10 +26,10 @@ public final class RouterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="bgp")
-      private final @Nullable Input<RouterBgpArgs> bgp;
+      private final @Nullable Output<RouterBgpArgs> bgp;
 
-    public Input<RouterBgpArgs> getBgp() {
-        return this.bgp == null ? Input.empty() : this.bgp;
+    public Output<RouterBgpArgs> getBgp() {
+        return this.bgp == null ? Output.empty() : this.bgp;
     }
 
     /**
@@ -37,10 +37,10 @@ public final class RouterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="bgpPeers")
-      private final @Nullable Input<List<RouterBgpPeerArgs>> bgpPeers;
+      private final @Nullable Output<List<RouterBgpPeerArgs>> bgpPeers;
 
-    public Input<List<RouterBgpPeerArgs>> getBgpPeers() {
-        return this.bgpPeers == null ? Input.empty() : this.bgpPeers;
+    public Output<List<RouterBgpPeerArgs>> getBgpPeers() {
+        return this.bgpPeers == null ? Output.empty() : this.bgpPeers;
     }
 
     /**
@@ -48,10 +48,10 @@ public final class RouterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -59,10 +59,10 @@ public final class RouterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="encryptedInterconnectRouter")
-      private final @Nullable Input<Boolean> encryptedInterconnectRouter;
+      private final @Nullable Output<Boolean> encryptedInterconnectRouter;
 
-    public Input<Boolean> getEncryptedInterconnectRouter() {
-        return this.encryptedInterconnectRouter == null ? Input.empty() : this.encryptedInterconnectRouter;
+    public Output<Boolean> getEncryptedInterconnectRouter() {
+        return this.encryptedInterconnectRouter == null ? Output.empty() : this.encryptedInterconnectRouter;
     }
 
     /**
@@ -70,10 +70,10 @@ public final class RouterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="interfaces")
-      private final @Nullable Input<List<RouterInterfaceArgs>> interfaces;
+      private final @Nullable Output<List<RouterInterfaceArgs>> interfaces;
 
-    public Input<List<RouterInterfaceArgs>> getInterfaces() {
-        return this.interfaces == null ? Input.empty() : this.interfaces;
+    public Output<List<RouterInterfaceArgs>> getInterfaces() {
+        return this.interfaces == null ? Output.empty() : this.interfaces;
     }
 
     /**
@@ -81,10 +81,10 @@ public final class RouterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="md5AuthenticationKeys")
-      private final @Nullable Input<List<RouterMd5AuthenticationKeyArgs>> md5AuthenticationKeys;
+      private final @Nullable Output<List<RouterMd5AuthenticationKeyArgs>> md5AuthenticationKeys;
 
-    public Input<List<RouterMd5AuthenticationKeyArgs>> getMd5AuthenticationKeys() {
-        return this.md5AuthenticationKeys == null ? Input.empty() : this.md5AuthenticationKeys;
+    public Output<List<RouterMd5AuthenticationKeyArgs>> getMd5AuthenticationKeys() {
+        return this.md5AuthenticationKeys == null ? Output.empty() : this.md5AuthenticationKeys;
     }
 
     /**
@@ -92,10 +92,10 @@ public final class RouterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -103,10 +103,10 @@ public final class RouterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="nats")
-      private final @Nullable Input<List<RouterNatArgs>> nats;
+      private final @Nullable Output<List<RouterNatArgs>> nats;
 
-    public Input<List<RouterNatArgs>> getNats() {
-        return this.nats == null ? Input.empty() : this.nats;
+    public Output<List<RouterNatArgs>> getNats() {
+        return this.nats == null ? Output.empty() : this.nats;
     }
 
     /**
@@ -114,46 +114,46 @@ public final class RouterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="network")
-      private final @Nullable Input<String> network;
+      private final @Nullable Output<String> network;
 
-    public Input<String> getNetwork() {
-        return this.network == null ? Input.empty() : this.network;
+    public Output<String> getNetwork() {
+        return this.network == null ? Output.empty() : this.network;
     }
 
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     @InputImport(name="region", required=true)
-      private final Input<String> region;
+      private final Output<String> region;
 
-    public Input<String> getRegion() {
+    public Output<String> getRegion() {
         return this.region;
     }
 
     @InputImport(name="requestId")
-      private final @Nullable Input<String> requestId;
+      private final @Nullable Output<String> requestId;
 
-    public Input<String> getRequestId() {
-        return this.requestId == null ? Input.empty() : this.requestId;
+    public Output<String> getRequestId() {
+        return this.requestId == null ? Output.empty() : this.requestId;
     }
 
     public RouterArgs(
-        @Nullable Input<RouterBgpArgs> bgp,
-        @Nullable Input<List<RouterBgpPeerArgs>> bgpPeers,
-        @Nullable Input<String> description,
-        @Nullable Input<Boolean> encryptedInterconnectRouter,
-        @Nullable Input<List<RouterInterfaceArgs>> interfaces,
-        @Nullable Input<List<RouterMd5AuthenticationKeyArgs>> md5AuthenticationKeys,
-        @Nullable Input<String> name,
-        @Nullable Input<List<RouterNatArgs>> nats,
-        @Nullable Input<String> network,
-        @Nullable Input<String> project,
-        Input<String> region,
-        @Nullable Input<String> requestId) {
+        @Nullable Output<RouterBgpArgs> bgp,
+        @Nullable Output<List<RouterBgpPeerArgs>> bgpPeers,
+        @Nullable Output<String> description,
+        @Nullable Output<Boolean> encryptedInterconnectRouter,
+        @Nullable Output<List<RouterInterfaceArgs>> interfaces,
+        @Nullable Output<List<RouterMd5AuthenticationKeyArgs>> md5AuthenticationKeys,
+        @Nullable Output<String> name,
+        @Nullable Output<List<RouterNatArgs>> nats,
+        @Nullable Output<String> network,
+        @Nullable Output<String> project,
+        Output<String> region,
+        @Nullable Output<String> requestId) {
         this.bgp = bgp;
         this.bgpPeers = bgpPeers;
         this.description = description;
@@ -169,18 +169,18 @@ public final class RouterArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private RouterArgs() {
-        this.bgp = Input.empty();
-        this.bgpPeers = Input.empty();
-        this.description = Input.empty();
-        this.encryptedInterconnectRouter = Input.empty();
-        this.interfaces = Input.empty();
-        this.md5AuthenticationKeys = Input.empty();
-        this.name = Input.empty();
-        this.nats = Input.empty();
-        this.network = Input.empty();
-        this.project = Input.empty();
-        this.region = Input.empty();
-        this.requestId = Input.empty();
+        this.bgp = Output.empty();
+        this.bgpPeers = Output.empty();
+        this.description = Output.empty();
+        this.encryptedInterconnectRouter = Output.empty();
+        this.interfaces = Output.empty();
+        this.md5AuthenticationKeys = Output.empty();
+        this.name = Output.empty();
+        this.nats = Output.empty();
+        this.network = Output.empty();
+        this.project = Output.empty();
+        this.region = Output.empty();
+        this.requestId = Output.empty();
     }
 
     public static Builder builder() {
@@ -192,18 +192,18 @@ public final class RouterArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<RouterBgpArgs> bgp;
-        private @Nullable Input<List<RouterBgpPeerArgs>> bgpPeers;
-        private @Nullable Input<String> description;
-        private @Nullable Input<Boolean> encryptedInterconnectRouter;
-        private @Nullable Input<List<RouterInterfaceArgs>> interfaces;
-        private @Nullable Input<List<RouterMd5AuthenticationKeyArgs>> md5AuthenticationKeys;
-        private @Nullable Input<String> name;
-        private @Nullable Input<List<RouterNatArgs>> nats;
-        private @Nullable Input<String> network;
-        private @Nullable Input<String> project;
-        private Input<String> region;
-        private @Nullable Input<String> requestId;
+        private @Nullable Output<RouterBgpArgs> bgp;
+        private @Nullable Output<List<RouterBgpPeerArgs>> bgpPeers;
+        private @Nullable Output<String> description;
+        private @Nullable Output<Boolean> encryptedInterconnectRouter;
+        private @Nullable Output<List<RouterInterfaceArgs>> interfaces;
+        private @Nullable Output<List<RouterMd5AuthenticationKeyArgs>> md5AuthenticationKeys;
+        private @Nullable Output<String> name;
+        private @Nullable Output<List<RouterNatArgs>> nats;
+        private @Nullable Output<String> network;
+        private @Nullable Output<String> project;
+        private Output<String> region;
+        private @Nullable Output<String> requestId;
 
         public Builder() {
     	      // Empty
@@ -225,123 +225,123 @@ public final class RouterArgs extends io.pulumi.resources.ResourceArgs {
     	      this.requestId = defaults.requestId;
         }
 
-        public Builder bgp(@Nullable Input<RouterBgpArgs> bgp) {
+        public Builder bgp(@Nullable Output<RouterBgpArgs> bgp) {
             this.bgp = bgp;
             return this;
         }
 
         public Builder bgp(@Nullable RouterBgpArgs bgp) {
-            this.bgp = Input.ofNullable(bgp);
+            this.bgp = Output.ofNullable(bgp);
             return this;
         }
 
-        public Builder bgpPeers(@Nullable Input<List<RouterBgpPeerArgs>> bgpPeers) {
+        public Builder bgpPeers(@Nullable Output<List<RouterBgpPeerArgs>> bgpPeers) {
             this.bgpPeers = bgpPeers;
             return this;
         }
 
         public Builder bgpPeers(@Nullable List<RouterBgpPeerArgs> bgpPeers) {
-            this.bgpPeers = Input.ofNullable(bgpPeers);
+            this.bgpPeers = Output.ofNullable(bgpPeers);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder encryptedInterconnectRouter(@Nullable Input<Boolean> encryptedInterconnectRouter) {
+        public Builder encryptedInterconnectRouter(@Nullable Output<Boolean> encryptedInterconnectRouter) {
             this.encryptedInterconnectRouter = encryptedInterconnectRouter;
             return this;
         }
 
         public Builder encryptedInterconnectRouter(@Nullable Boolean encryptedInterconnectRouter) {
-            this.encryptedInterconnectRouter = Input.ofNullable(encryptedInterconnectRouter);
+            this.encryptedInterconnectRouter = Output.ofNullable(encryptedInterconnectRouter);
             return this;
         }
 
-        public Builder interfaces(@Nullable Input<List<RouterInterfaceArgs>> interfaces) {
+        public Builder interfaces(@Nullable Output<List<RouterInterfaceArgs>> interfaces) {
             this.interfaces = interfaces;
             return this;
         }
 
         public Builder interfaces(@Nullable List<RouterInterfaceArgs> interfaces) {
-            this.interfaces = Input.ofNullable(interfaces);
+            this.interfaces = Output.ofNullable(interfaces);
             return this;
         }
 
-        public Builder md5AuthenticationKeys(@Nullable Input<List<RouterMd5AuthenticationKeyArgs>> md5AuthenticationKeys) {
+        public Builder md5AuthenticationKeys(@Nullable Output<List<RouterMd5AuthenticationKeyArgs>> md5AuthenticationKeys) {
             this.md5AuthenticationKeys = md5AuthenticationKeys;
             return this;
         }
 
         public Builder md5AuthenticationKeys(@Nullable List<RouterMd5AuthenticationKeyArgs> md5AuthenticationKeys) {
-            this.md5AuthenticationKeys = Input.ofNullable(md5AuthenticationKeys);
+            this.md5AuthenticationKeys = Output.ofNullable(md5AuthenticationKeys);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder nats(@Nullable Input<List<RouterNatArgs>> nats) {
+        public Builder nats(@Nullable Output<List<RouterNatArgs>> nats) {
             this.nats = nats;
             return this;
         }
 
         public Builder nats(@Nullable List<RouterNatArgs> nats) {
-            this.nats = Input.ofNullable(nats);
+            this.nats = Output.ofNullable(nats);
             return this;
         }
 
-        public Builder network(@Nullable Input<String> network) {
+        public Builder network(@Nullable Output<String> network) {
             this.network = network;
             return this;
         }
 
         public Builder network(@Nullable String network) {
-            this.network = Input.ofNullable(network);
+            this.network = Output.ofNullable(network);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder region(Input<String> region) {
+        public Builder region(Output<String> region) {
             this.region = Objects.requireNonNull(region);
             return this;
         }
 
         public Builder region(String region) {
-            this.region = Input.of(Objects.requireNonNull(region));
+            this.region = Output.of(Objects.requireNonNull(region));
             return this;
         }
 
-        public Builder requestId(@Nullable Input<String> requestId) {
+        public Builder requestId(@Nullable Output<String> requestId) {
             this.requestId = requestId;
             return this;
         }
 
         public Builder requestId(@Nullable String requestId) {
-            this.requestId = Input.ofNullable(requestId);
+            this.requestId = Output.ofNullable(requestId);
             return this;
         }
         public RouterArgs build() {

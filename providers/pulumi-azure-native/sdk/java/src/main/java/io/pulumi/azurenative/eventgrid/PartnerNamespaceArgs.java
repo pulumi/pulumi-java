@@ -6,7 +6,7 @@ package io.pulumi.azurenative.eventgrid;
 import io.pulumi.azurenative.eventgrid.enums.PublicNetworkAccess;
 import io.pulumi.azurenative.eventgrid.inputs.InboundIpRuleArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -25,10 +25,10 @@ public final class PartnerNamespaceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="disableLocalAuth")
-      private final @Nullable Input<Boolean> disableLocalAuth;
+      private final @Nullable Output<Boolean> disableLocalAuth;
 
-    public Input<Boolean> getDisableLocalAuth() {
-        return this.disableLocalAuth == null ? Input.empty() : this.disableLocalAuth;
+    public Output<Boolean> getDisableLocalAuth() {
+        return this.disableLocalAuth == null ? Output.empty() : this.disableLocalAuth;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class PartnerNamespaceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="inboundIpRules")
-      private final @Nullable Input<List<InboundIpRuleArgs>> inboundIpRules;
+      private final @Nullable Output<List<InboundIpRuleArgs>> inboundIpRules;
 
-    public Input<List<InboundIpRuleArgs>> getInboundIpRules() {
-        return this.inboundIpRules == null ? Input.empty() : this.inboundIpRules;
+    public Output<List<InboundIpRuleArgs>> getInboundIpRules() {
+        return this.inboundIpRules == null ? Output.empty() : this.inboundIpRules;
     }
 
     /**
@@ -47,10 +47,10 @@ public final class PartnerNamespaceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -58,10 +58,10 @@ public final class PartnerNamespaceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="partnerNamespaceName")
-      private final @Nullable Input<String> partnerNamespaceName;
+      private final @Nullable Output<String> partnerNamespaceName;
 
-    public Input<String> getPartnerNamespaceName() {
-        return this.partnerNamespaceName == null ? Input.empty() : this.partnerNamespaceName;
+    public Output<String> getPartnerNamespaceName() {
+        return this.partnerNamespaceName == null ? Output.empty() : this.partnerNamespaceName;
     }
 
     /**
@@ -70,10 +70,10 @@ public final class PartnerNamespaceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="partnerRegistrationFullyQualifiedId")
-      private final @Nullable Input<String> partnerRegistrationFullyQualifiedId;
+      private final @Nullable Output<String> partnerRegistrationFullyQualifiedId;
 
-    public Input<String> getPartnerRegistrationFullyQualifiedId() {
-        return this.partnerRegistrationFullyQualifiedId == null ? Input.empty() : this.partnerRegistrationFullyQualifiedId;
+    public Output<String> getPartnerRegistrationFullyQualifiedId() {
+        return this.partnerRegistrationFullyQualifiedId == null ? Output.empty() : this.partnerRegistrationFullyQualifiedId;
     }
 
     /**
@@ -82,10 +82,10 @@ public final class PartnerNamespaceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="publicNetworkAccess")
-      private final @Nullable Input<Either<String,PublicNetworkAccess>> publicNetworkAccess;
+      private final @Nullable Output<Either<String,PublicNetworkAccess>> publicNetworkAccess;
 
-    public Input<Either<String,PublicNetworkAccess>> getPublicNetworkAccess() {
-        return this.publicNetworkAccess == null ? Input.empty() : this.publicNetworkAccess;
+    public Output<Either<String,PublicNetworkAccess>> getPublicNetworkAccess() {
+        return this.publicNetworkAccess == null ? Output.empty() : this.publicNetworkAccess;
     }
 
     /**
@@ -93,9 +93,9 @@ public final class PartnerNamespaceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -104,40 +104,40 @@ public final class PartnerNamespaceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public PartnerNamespaceArgs(
-        @Nullable Input<Boolean> disableLocalAuth,
-        @Nullable Input<List<InboundIpRuleArgs>> inboundIpRules,
-        @Nullable Input<String> location,
-        @Nullable Input<String> partnerNamespaceName,
-        @Nullable Input<String> partnerRegistrationFullyQualifiedId,
-        @Nullable Input<Either<String,PublicNetworkAccess>> publicNetworkAccess,
-        Input<String> resourceGroupName,
-        @Nullable Input<Map<String,String>> tags) {
-        this.disableLocalAuth = disableLocalAuth == null ? Input.ofNullable(false) : disableLocalAuth;
+        @Nullable Output<Boolean> disableLocalAuth,
+        @Nullable Output<List<InboundIpRuleArgs>> inboundIpRules,
+        @Nullable Output<String> location,
+        @Nullable Output<String> partnerNamespaceName,
+        @Nullable Output<String> partnerRegistrationFullyQualifiedId,
+        @Nullable Output<Either<String,PublicNetworkAccess>> publicNetworkAccess,
+        Output<String> resourceGroupName,
+        @Nullable Output<Map<String,String>> tags) {
+        this.disableLocalAuth = disableLocalAuth == null ? Output.ofNullable(false) : disableLocalAuth;
         this.inboundIpRules = inboundIpRules;
         this.location = location;
         this.partnerNamespaceName = partnerNamespaceName;
         this.partnerRegistrationFullyQualifiedId = partnerRegistrationFullyQualifiedId;
-        this.publicNetworkAccess = publicNetworkAccess == null ? Input.ofLeft("Enabled") : publicNetworkAccess;
+        this.publicNetworkAccess = publicNetworkAccess == null ? Output.ofLeft("Enabled") : publicNetworkAccess;
         this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
         this.tags = tags;
     }
 
     private PartnerNamespaceArgs() {
-        this.disableLocalAuth = Input.empty();
-        this.inboundIpRules = Input.empty();
-        this.location = Input.empty();
-        this.partnerNamespaceName = Input.empty();
-        this.partnerRegistrationFullyQualifiedId = Input.empty();
-        this.publicNetworkAccess = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.tags = Input.empty();
+        this.disableLocalAuth = Output.empty();
+        this.inboundIpRules = Output.empty();
+        this.location = Output.empty();
+        this.partnerNamespaceName = Output.empty();
+        this.partnerRegistrationFullyQualifiedId = Output.empty();
+        this.publicNetworkAccess = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -149,14 +149,14 @@ public final class PartnerNamespaceArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> disableLocalAuth;
-        private @Nullable Input<List<InboundIpRuleArgs>> inboundIpRules;
-        private @Nullable Input<String> location;
-        private @Nullable Input<String> partnerNamespaceName;
-        private @Nullable Input<String> partnerRegistrationFullyQualifiedId;
-        private @Nullable Input<Either<String,PublicNetworkAccess>> publicNetworkAccess;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<Map<String,String>> tags;
+        private @Nullable Output<Boolean> disableLocalAuth;
+        private @Nullable Output<List<InboundIpRuleArgs>> inboundIpRules;
+        private @Nullable Output<String> location;
+        private @Nullable Output<String> partnerNamespaceName;
+        private @Nullable Output<String> partnerRegistrationFullyQualifiedId;
+        private @Nullable Output<Either<String,PublicNetworkAccess>> publicNetworkAccess;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<Map<String,String>> tags;
 
         public Builder() {
     	      // Empty
@@ -174,83 +174,83 @@ public final class PartnerNamespaceArgs extends io.pulumi.resources.ResourceArgs
     	      this.tags = defaults.tags;
         }
 
-        public Builder disableLocalAuth(@Nullable Input<Boolean> disableLocalAuth) {
+        public Builder disableLocalAuth(@Nullable Output<Boolean> disableLocalAuth) {
             this.disableLocalAuth = disableLocalAuth;
             return this;
         }
 
         public Builder disableLocalAuth(@Nullable Boolean disableLocalAuth) {
-            this.disableLocalAuth = Input.ofNullable(disableLocalAuth);
+            this.disableLocalAuth = Output.ofNullable(disableLocalAuth);
             return this;
         }
 
-        public Builder inboundIpRules(@Nullable Input<List<InboundIpRuleArgs>> inboundIpRules) {
+        public Builder inboundIpRules(@Nullable Output<List<InboundIpRuleArgs>> inboundIpRules) {
             this.inboundIpRules = inboundIpRules;
             return this;
         }
 
         public Builder inboundIpRules(@Nullable List<InboundIpRuleArgs> inboundIpRules) {
-            this.inboundIpRules = Input.ofNullable(inboundIpRules);
+            this.inboundIpRules = Output.ofNullable(inboundIpRules);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder partnerNamespaceName(@Nullable Input<String> partnerNamespaceName) {
+        public Builder partnerNamespaceName(@Nullable Output<String> partnerNamespaceName) {
             this.partnerNamespaceName = partnerNamespaceName;
             return this;
         }
 
         public Builder partnerNamespaceName(@Nullable String partnerNamespaceName) {
-            this.partnerNamespaceName = Input.ofNullable(partnerNamespaceName);
+            this.partnerNamespaceName = Output.ofNullable(partnerNamespaceName);
             return this;
         }
 
-        public Builder partnerRegistrationFullyQualifiedId(@Nullable Input<String> partnerRegistrationFullyQualifiedId) {
+        public Builder partnerRegistrationFullyQualifiedId(@Nullable Output<String> partnerRegistrationFullyQualifiedId) {
             this.partnerRegistrationFullyQualifiedId = partnerRegistrationFullyQualifiedId;
             return this;
         }
 
         public Builder partnerRegistrationFullyQualifiedId(@Nullable String partnerRegistrationFullyQualifiedId) {
-            this.partnerRegistrationFullyQualifiedId = Input.ofNullable(partnerRegistrationFullyQualifiedId);
+            this.partnerRegistrationFullyQualifiedId = Output.ofNullable(partnerRegistrationFullyQualifiedId);
             return this;
         }
 
-        public Builder publicNetworkAccess(@Nullable Input<Either<String,PublicNetworkAccess>> publicNetworkAccess) {
+        public Builder publicNetworkAccess(@Nullable Output<Either<String,PublicNetworkAccess>> publicNetworkAccess) {
             this.publicNetworkAccess = publicNetworkAccess;
             return this;
         }
 
         public Builder publicNetworkAccess(@Nullable Either<String,PublicNetworkAccess> publicNetworkAccess) {
-            this.publicNetworkAccess = Input.ofNullable(publicNetworkAccess);
+            this.publicNetworkAccess = Output.ofNullable(publicNetworkAccess);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public PartnerNamespaceArgs build() {

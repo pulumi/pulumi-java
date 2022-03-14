@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dataflow_v1b3.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class FileIODetailsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="filePattern")
-      private final @Nullable Input<String> filePattern;
+      private final @Nullable Output<String> filePattern;
 
-    public Input<String> getFilePattern() {
-        return this.filePattern == null ? Input.empty() : this.filePattern;
+    public Output<String> getFilePattern() {
+        return this.filePattern == null ? Output.empty() : this.filePattern;
     }
 
-    public FileIODetailsArgs(@Nullable Input<String> filePattern) {
+    public FileIODetailsArgs(@Nullable Output<String> filePattern) {
         this.filePattern = filePattern;
     }
 
     private FileIODetailsArgs() {
-        this.filePattern = Input.empty();
+        this.filePattern = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class FileIODetailsArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> filePattern;
+        private @Nullable Output<String> filePattern;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class FileIODetailsArgs extends io.pulumi.resources.ResourceArgs {
     	      this.filePattern = defaults.filePattern;
         }
 
-        public Builder filePattern(@Nullable Input<String> filePattern) {
+        public Builder filePattern(@Nullable Output<String> filePattern) {
             this.filePattern = filePattern;
             return this;
         }
 
         public Builder filePattern(@Nullable String filePattern) {
-            this.filePattern = Input.ofNullable(filePattern);
+            this.filePattern = Output.ofNullable(filePattern);
             return this;
         }
         public FileIODetailsArgs build() {

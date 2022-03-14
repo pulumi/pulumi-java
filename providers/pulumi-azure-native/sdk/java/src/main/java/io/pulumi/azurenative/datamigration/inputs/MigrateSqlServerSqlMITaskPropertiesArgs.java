@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.datamigration.inputs;
 
 import io.pulumi.azurenative.datamigration.inputs.MigrateSqlServerSqlMITaskInputArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -24,10 +24,10 @@ public final class MigrateSqlServerSqlMITaskPropertiesArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="input")
-      private final @Nullable Input<MigrateSqlServerSqlMITaskInputArgs> input;
+      private final @Nullable Output<MigrateSqlServerSqlMITaskInputArgs> input;
 
-    public Input<MigrateSqlServerSqlMITaskInputArgs> getInput() {
-        return this.input == null ? Input.empty() : this.input;
+    public Output<MigrateSqlServerSqlMITaskInputArgs> getInput() {
+        return this.input == null ? Output.empty() : this.input;
     }
 
     /**
@@ -36,22 +36,22 @@ public final class MigrateSqlServerSqlMITaskPropertiesArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="taskType", required=true)
-      private final Input<String> taskType;
+      private final Output<String> taskType;
 
-    public Input<String> getTaskType() {
+    public Output<String> getTaskType() {
         return this.taskType;
     }
 
     public MigrateSqlServerSqlMITaskPropertiesArgs(
-        @Nullable Input<MigrateSqlServerSqlMITaskInputArgs> input,
-        Input<String> taskType) {
+        @Nullable Output<MigrateSqlServerSqlMITaskInputArgs> input,
+        Output<String> taskType) {
         this.input = input;
         this.taskType = Objects.requireNonNull(taskType, "expected parameter 'taskType' to be non-null");
     }
 
     private MigrateSqlServerSqlMITaskPropertiesArgs() {
-        this.input = Input.empty();
-        this.taskType = Input.empty();
+        this.input = Output.empty();
+        this.taskType = Output.empty();
     }
 
     public static Builder builder() {
@@ -63,8 +63,8 @@ public final class MigrateSqlServerSqlMITaskPropertiesArgs extends io.pulumi.res
     }
 
     public static final class Builder {
-        private @Nullable Input<MigrateSqlServerSqlMITaskInputArgs> input;
-        private Input<String> taskType;
+        private @Nullable Output<MigrateSqlServerSqlMITaskInputArgs> input;
+        private Output<String> taskType;
 
         public Builder() {
     	      // Empty
@@ -76,23 +76,23 @@ public final class MigrateSqlServerSqlMITaskPropertiesArgs extends io.pulumi.res
     	      this.taskType = defaults.taskType;
         }
 
-        public Builder input(@Nullable Input<MigrateSqlServerSqlMITaskInputArgs> input) {
+        public Builder input(@Nullable Output<MigrateSqlServerSqlMITaskInputArgs> input) {
             this.input = input;
             return this;
         }
 
         public Builder input(@Nullable MigrateSqlServerSqlMITaskInputArgs input) {
-            this.input = Input.ofNullable(input);
+            this.input = Output.ofNullable(input);
             return this;
         }
 
-        public Builder taskType(Input<String> taskType) {
+        public Builder taskType(Output<String> taskType) {
             this.taskType = Objects.requireNonNull(taskType);
             return this;
         }
 
         public Builder taskType(String taskType) {
-            this.taskType = Input.of(Objects.requireNonNull(taskType));
+            this.taskType = Output.of(Objects.requireNonNull(taskType));
             return this;
         }
         public MigrateSqlServerSqlMITaskPropertiesArgs build() {

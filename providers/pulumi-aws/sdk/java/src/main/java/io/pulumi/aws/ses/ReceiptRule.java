@@ -13,7 +13,6 @@ import io.pulumi.aws.ses.outputs.ReceiptRuleS3Action;
 import io.pulumi.aws.ses.outputs.ReceiptRuleSnsAction;
 import io.pulumi.aws.ses.outputs.ReceiptRuleStopAction;
 import io.pulumi.aws.ses.outputs.ReceiptRuleWorkmailAction;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -287,14 +286,14 @@ public class ReceiptRule extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ReceiptRule(String name, ReceiptRuleArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:ses/receiptRule:ReceiptRule", name, args == null ? ReceiptRuleArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws:ses/receiptRule:ReceiptRule", name, args == null ? ReceiptRuleArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private ReceiptRule(String name, Input<String> id, @Nullable ReceiptRuleState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private ReceiptRule(String name, Output<String> id, @Nullable ReceiptRuleState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws:ses/receiptRule:ReceiptRule", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -310,7 +309,7 @@ public class ReceiptRule extends io.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static ReceiptRule get(String name, Input<String> id, @Nullable ReceiptRuleState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static ReceiptRule get(String name, Output<String> id, @Nullable ReceiptRuleState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new ReceiptRule(name, id, state, options);
     }
 }

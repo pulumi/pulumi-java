@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.osconfig.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -20,18 +20,18 @@ public final class OsPolicyAssignmentInstanceFilterInclusionLabelArgs extends io
      * 
      */
     @InputImport(name="labels")
-      private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Output<Map<String,String>> labels;
 
-    public Input<Map<String,String>> getLabels() {
-        return this.labels == null ? Input.empty() : this.labels;
+    public Output<Map<String,String>> getLabels() {
+        return this.labels == null ? Output.empty() : this.labels;
     }
 
-    public OsPolicyAssignmentInstanceFilterInclusionLabelArgs(@Nullable Input<Map<String,String>> labels) {
+    public OsPolicyAssignmentInstanceFilterInclusionLabelArgs(@Nullable Output<Map<String,String>> labels) {
         this.labels = labels;
     }
 
     private OsPolicyAssignmentInstanceFilterInclusionLabelArgs() {
-        this.labels = Input.empty();
+        this.labels = Output.empty();
     }
 
     public static Builder builder() {
@@ -43,7 +43,7 @@ public final class OsPolicyAssignmentInstanceFilterInclusionLabelArgs extends io
     }
 
     public static final class Builder {
-        private @Nullable Input<Map<String,String>> labels;
+        private @Nullable Output<Map<String,String>> labels;
 
         public Builder() {
     	      // Empty
@@ -54,13 +54,13 @@ public final class OsPolicyAssignmentInstanceFilterInclusionLabelArgs extends io
     	      this.labels = defaults.labels;
         }
 
-        public Builder labels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
         public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Input.ofNullable(labels);
+            this.labels = Output.ofNullable(labels);
             return this;
         }
         public OsPolicyAssignmentInstanceFilterInclusionLabelArgs build() {

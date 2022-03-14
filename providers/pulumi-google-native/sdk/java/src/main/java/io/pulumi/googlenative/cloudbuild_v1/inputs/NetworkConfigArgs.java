@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudbuild_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.cloudbuild_v1.enums.NetworkConfigEgressOption;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class NetworkConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="egressOption")
-      private final @Nullable Input<NetworkConfigEgressOption> egressOption;
+      private final @Nullable Output<NetworkConfigEgressOption> egressOption;
 
-    public Input<NetworkConfigEgressOption> getEgressOption() {
-        return this.egressOption == null ? Input.empty() : this.egressOption;
+    public Output<NetworkConfigEgressOption> getEgressOption() {
+        return this.egressOption == null ? Output.empty() : this.egressOption;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class NetworkConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="peeredNetwork", required=true)
-      private final Input<String> peeredNetwork;
+      private final Output<String> peeredNetwork;
 
-    public Input<String> getPeeredNetwork() {
+    public Output<String> getPeeredNetwork() {
         return this.peeredNetwork;
     }
 
     public NetworkConfigArgs(
-        @Nullable Input<NetworkConfigEgressOption> egressOption,
-        Input<String> peeredNetwork) {
+        @Nullable Output<NetworkConfigEgressOption> egressOption,
+        Output<String> peeredNetwork) {
         this.egressOption = egressOption;
         this.peeredNetwork = Objects.requireNonNull(peeredNetwork, "expected parameter 'peeredNetwork' to be non-null");
     }
 
     private NetworkConfigArgs() {
-        this.egressOption = Input.empty();
-        this.peeredNetwork = Input.empty();
+        this.egressOption = Output.empty();
+        this.peeredNetwork = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class NetworkConfigArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<NetworkConfigEgressOption> egressOption;
-        private Input<String> peeredNetwork;
+        private @Nullable Output<NetworkConfigEgressOption> egressOption;
+        private Output<String> peeredNetwork;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class NetworkConfigArgs extends io.pulumi.resources.ResourceArgs {
     	      this.peeredNetwork = defaults.peeredNetwork;
         }
 
-        public Builder egressOption(@Nullable Input<NetworkConfigEgressOption> egressOption) {
+        public Builder egressOption(@Nullable Output<NetworkConfigEgressOption> egressOption) {
             this.egressOption = egressOption;
             return this;
         }
 
         public Builder egressOption(@Nullable NetworkConfigEgressOption egressOption) {
-            this.egressOption = Input.ofNullable(egressOption);
+            this.egressOption = Output.ofNullable(egressOption);
             return this;
         }
 
-        public Builder peeredNetwork(Input<String> peeredNetwork) {
+        public Builder peeredNetwork(Output<String> peeredNetwork) {
             this.peeredNetwork = Objects.requireNonNull(peeredNetwork);
             return this;
         }
 
         public Builder peeredNetwork(String peeredNetwork) {
-            this.peeredNetwork = Input.of(Objects.requireNonNull(peeredNetwork));
+            this.peeredNetwork = Output.of(Objects.requireNonNull(peeredNetwork));
             return this;
         }
         public NetworkConfigArgs build() {

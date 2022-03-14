@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -18,18 +18,18 @@ public final class ResourcePolicyInstanceSchedulePolicyVmStartScheduleArgs exten
      * 
      */
     @InputImport(name="schedule", required=true)
-      private final Input<String> schedule;
+      private final Output<String> schedule;
 
-    public Input<String> getSchedule() {
+    public Output<String> getSchedule() {
         return this.schedule;
     }
 
-    public ResourcePolicyInstanceSchedulePolicyVmStartScheduleArgs(Input<String> schedule) {
+    public ResourcePolicyInstanceSchedulePolicyVmStartScheduleArgs(Output<String> schedule) {
         this.schedule = Objects.requireNonNull(schedule, "expected parameter 'schedule' to be non-null");
     }
 
     private ResourcePolicyInstanceSchedulePolicyVmStartScheduleArgs() {
-        this.schedule = Input.empty();
+        this.schedule = Output.empty();
     }
 
     public static Builder builder() {
@@ -41,7 +41,7 @@ public final class ResourcePolicyInstanceSchedulePolicyVmStartScheduleArgs exten
     }
 
     public static final class Builder {
-        private Input<String> schedule;
+        private Output<String> schedule;
 
         public Builder() {
     	      // Empty
@@ -52,13 +52,13 @@ public final class ResourcePolicyInstanceSchedulePolicyVmStartScheduleArgs exten
     	      this.schedule = defaults.schedule;
         }
 
-        public Builder schedule(Input<String> schedule) {
+        public Builder schedule(Output<String> schedule) {
             this.schedule = Objects.requireNonNull(schedule);
             return this;
         }
 
         public Builder schedule(String schedule) {
-            this.schedule = Input.of(Objects.requireNonNull(schedule));
+            this.schedule = Output.of(Objects.requireNonNull(schedule));
             return this;
         }
         public ResourcePolicyInstanceSchedulePolicyVmStartScheduleArgs build() {

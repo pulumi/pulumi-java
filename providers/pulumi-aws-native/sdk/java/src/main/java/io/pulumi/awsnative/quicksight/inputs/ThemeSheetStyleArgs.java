@@ -5,7 +5,7 @@ package io.pulumi.awsnative.quicksight.inputs;
 
 import io.pulumi.awsnative.quicksight.inputs.ThemeTileLayoutStyleArgs;
 import io.pulumi.awsnative.quicksight.inputs.ThemeTileStyleArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,29 +20,29 @@ public final class ThemeSheetStyleArgs extends io.pulumi.resources.ResourceArgs 
     public static final ThemeSheetStyleArgs Empty = new ThemeSheetStyleArgs();
 
     @InputImport(name="tile")
-      private final @Nullable Input<ThemeTileStyleArgs> tile;
+      private final @Nullable Output<ThemeTileStyleArgs> tile;
 
-    public Input<ThemeTileStyleArgs> getTile() {
-        return this.tile == null ? Input.empty() : this.tile;
+    public Output<ThemeTileStyleArgs> getTile() {
+        return this.tile == null ? Output.empty() : this.tile;
     }
 
     @InputImport(name="tileLayout")
-      private final @Nullable Input<ThemeTileLayoutStyleArgs> tileLayout;
+      private final @Nullable Output<ThemeTileLayoutStyleArgs> tileLayout;
 
-    public Input<ThemeTileLayoutStyleArgs> getTileLayout() {
-        return this.tileLayout == null ? Input.empty() : this.tileLayout;
+    public Output<ThemeTileLayoutStyleArgs> getTileLayout() {
+        return this.tileLayout == null ? Output.empty() : this.tileLayout;
     }
 
     public ThemeSheetStyleArgs(
-        @Nullable Input<ThemeTileStyleArgs> tile,
-        @Nullable Input<ThemeTileLayoutStyleArgs> tileLayout) {
+        @Nullable Output<ThemeTileStyleArgs> tile,
+        @Nullable Output<ThemeTileLayoutStyleArgs> tileLayout) {
         this.tile = tile;
         this.tileLayout = tileLayout;
     }
 
     private ThemeSheetStyleArgs() {
-        this.tile = Input.empty();
-        this.tileLayout = Input.empty();
+        this.tile = Output.empty();
+        this.tileLayout = Output.empty();
     }
 
     public static Builder builder() {
@@ -54,8 +54,8 @@ public final class ThemeSheetStyleArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private @Nullable Input<ThemeTileStyleArgs> tile;
-        private @Nullable Input<ThemeTileLayoutStyleArgs> tileLayout;
+        private @Nullable Output<ThemeTileStyleArgs> tile;
+        private @Nullable Output<ThemeTileLayoutStyleArgs> tileLayout;
 
         public Builder() {
     	      // Empty
@@ -67,23 +67,23 @@ public final class ThemeSheetStyleArgs extends io.pulumi.resources.ResourceArgs 
     	      this.tileLayout = defaults.tileLayout;
         }
 
-        public Builder tile(@Nullable Input<ThemeTileStyleArgs> tile) {
+        public Builder tile(@Nullable Output<ThemeTileStyleArgs> tile) {
             this.tile = tile;
             return this;
         }
 
         public Builder tile(@Nullable ThemeTileStyleArgs tile) {
-            this.tile = Input.ofNullable(tile);
+            this.tile = Output.ofNullable(tile);
             return this;
         }
 
-        public Builder tileLayout(@Nullable Input<ThemeTileLayoutStyleArgs> tileLayout) {
+        public Builder tileLayout(@Nullable Output<ThemeTileLayoutStyleArgs> tileLayout) {
             this.tileLayout = tileLayout;
             return this;
         }
 
         public Builder tileLayout(@Nullable ThemeTileLayoutStyleArgs tileLayout) {
-            this.tileLayout = Input.ofNullable(tileLayout);
+            this.tileLayout = Output.ofNullable(tileLayout);
             return this;
         }
         public ThemeSheetStyleArgs build() {

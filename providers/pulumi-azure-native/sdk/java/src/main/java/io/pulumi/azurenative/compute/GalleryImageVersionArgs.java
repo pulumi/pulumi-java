@@ -5,7 +5,7 @@ package io.pulumi.azurenative.compute;
 
 import io.pulumi.azurenative.compute.inputs.GalleryImageVersionPublishingProfileArgs;
 import io.pulumi.azurenative.compute.inputs.GalleryImageVersionStorageProfileArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -22,9 +22,9 @@ public final class GalleryImageVersionArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="galleryImageName", required=true)
-      private final Input<String> galleryImageName;
+      private final Output<String> galleryImageName;
 
-    public Input<String> getGalleryImageName() {
+    public Output<String> getGalleryImageName() {
         return this.galleryImageName;
     }
 
@@ -33,10 +33,10 @@ public final class GalleryImageVersionArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="galleryImageVersionName")
-      private final @Nullable Input<String> galleryImageVersionName;
+      private final @Nullable Output<String> galleryImageVersionName;
 
-    public Input<String> getGalleryImageVersionName() {
-        return this.galleryImageVersionName == null ? Input.empty() : this.galleryImageVersionName;
+    public Output<String> getGalleryImageVersionName() {
+        return this.galleryImageVersionName == null ? Output.empty() : this.galleryImageVersionName;
     }
 
     /**
@@ -44,9 +44,9 @@ public final class GalleryImageVersionArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="galleryName", required=true)
-      private final Input<String> galleryName;
+      private final Output<String> galleryName;
 
-    public Input<String> getGalleryName() {
+    public Output<String> getGalleryName() {
         return this.galleryName;
     }
 
@@ -55,10 +55,10 @@ public final class GalleryImageVersionArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -66,10 +66,10 @@ public final class GalleryImageVersionArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="publishingProfile")
-      private final @Nullable Input<GalleryImageVersionPublishingProfileArgs> publishingProfile;
+      private final @Nullable Output<GalleryImageVersionPublishingProfileArgs> publishingProfile;
 
-    public Input<GalleryImageVersionPublishingProfileArgs> getPublishingProfile() {
-        return this.publishingProfile == null ? Input.empty() : this.publishingProfile;
+    public Output<GalleryImageVersionPublishingProfileArgs> getPublishingProfile() {
+        return this.publishingProfile == null ? Output.empty() : this.publishingProfile;
     }
 
     /**
@@ -77,9 +77,9 @@ public final class GalleryImageVersionArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -88,9 +88,9 @@ public final class GalleryImageVersionArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="storageProfile", required=true)
-      private final Input<GalleryImageVersionStorageProfileArgs> storageProfile;
+      private final Output<GalleryImageVersionStorageProfileArgs> storageProfile;
 
-    public Input<GalleryImageVersionStorageProfileArgs> getStorageProfile() {
+    public Output<GalleryImageVersionStorageProfileArgs> getStorageProfile() {
         return this.storageProfile;
     }
 
@@ -99,21 +99,21 @@ public final class GalleryImageVersionArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public GalleryImageVersionArgs(
-        Input<String> galleryImageName,
-        @Nullable Input<String> galleryImageVersionName,
-        Input<String> galleryName,
-        @Nullable Input<String> location,
-        @Nullable Input<GalleryImageVersionPublishingProfileArgs> publishingProfile,
-        Input<String> resourceGroupName,
-        Input<GalleryImageVersionStorageProfileArgs> storageProfile,
-        @Nullable Input<Map<String,String>> tags) {
+        Output<String> galleryImageName,
+        @Nullable Output<String> galleryImageVersionName,
+        Output<String> galleryName,
+        @Nullable Output<String> location,
+        @Nullable Output<GalleryImageVersionPublishingProfileArgs> publishingProfile,
+        Output<String> resourceGroupName,
+        Output<GalleryImageVersionStorageProfileArgs> storageProfile,
+        @Nullable Output<Map<String,String>> tags) {
         this.galleryImageName = Objects.requireNonNull(galleryImageName, "expected parameter 'galleryImageName' to be non-null");
         this.galleryImageVersionName = galleryImageVersionName;
         this.galleryName = Objects.requireNonNull(galleryName, "expected parameter 'galleryName' to be non-null");
@@ -125,14 +125,14 @@ public final class GalleryImageVersionArgs extends io.pulumi.resources.ResourceA
     }
 
     private GalleryImageVersionArgs() {
-        this.galleryImageName = Input.empty();
-        this.galleryImageVersionName = Input.empty();
-        this.galleryName = Input.empty();
-        this.location = Input.empty();
-        this.publishingProfile = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.storageProfile = Input.empty();
-        this.tags = Input.empty();
+        this.galleryImageName = Output.empty();
+        this.galleryImageVersionName = Output.empty();
+        this.galleryName = Output.empty();
+        this.location = Output.empty();
+        this.publishingProfile = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.storageProfile = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -144,14 +144,14 @@ public final class GalleryImageVersionArgs extends io.pulumi.resources.ResourceA
     }
 
     public static final class Builder {
-        private Input<String> galleryImageName;
-        private @Nullable Input<String> galleryImageVersionName;
-        private Input<String> galleryName;
-        private @Nullable Input<String> location;
-        private @Nullable Input<GalleryImageVersionPublishingProfileArgs> publishingProfile;
-        private Input<String> resourceGroupName;
-        private Input<GalleryImageVersionStorageProfileArgs> storageProfile;
-        private @Nullable Input<Map<String,String>> tags;
+        private Output<String> galleryImageName;
+        private @Nullable Output<String> galleryImageVersionName;
+        private Output<String> galleryName;
+        private @Nullable Output<String> location;
+        private @Nullable Output<GalleryImageVersionPublishingProfileArgs> publishingProfile;
+        private Output<String> resourceGroupName;
+        private Output<GalleryImageVersionStorageProfileArgs> storageProfile;
+        private @Nullable Output<Map<String,String>> tags;
 
         public Builder() {
     	      // Empty
@@ -169,83 +169,83 @@ public final class GalleryImageVersionArgs extends io.pulumi.resources.ResourceA
     	      this.tags = defaults.tags;
         }
 
-        public Builder galleryImageName(Input<String> galleryImageName) {
+        public Builder galleryImageName(Output<String> galleryImageName) {
             this.galleryImageName = Objects.requireNonNull(galleryImageName);
             return this;
         }
 
         public Builder galleryImageName(String galleryImageName) {
-            this.galleryImageName = Input.of(Objects.requireNonNull(galleryImageName));
+            this.galleryImageName = Output.of(Objects.requireNonNull(galleryImageName));
             return this;
         }
 
-        public Builder galleryImageVersionName(@Nullable Input<String> galleryImageVersionName) {
+        public Builder galleryImageVersionName(@Nullable Output<String> galleryImageVersionName) {
             this.galleryImageVersionName = galleryImageVersionName;
             return this;
         }
 
         public Builder galleryImageVersionName(@Nullable String galleryImageVersionName) {
-            this.galleryImageVersionName = Input.ofNullable(galleryImageVersionName);
+            this.galleryImageVersionName = Output.ofNullable(galleryImageVersionName);
             return this;
         }
 
-        public Builder galleryName(Input<String> galleryName) {
+        public Builder galleryName(Output<String> galleryName) {
             this.galleryName = Objects.requireNonNull(galleryName);
             return this;
         }
 
         public Builder galleryName(String galleryName) {
-            this.galleryName = Input.of(Objects.requireNonNull(galleryName));
+            this.galleryName = Output.of(Objects.requireNonNull(galleryName));
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder publishingProfile(@Nullable Input<GalleryImageVersionPublishingProfileArgs> publishingProfile) {
+        public Builder publishingProfile(@Nullable Output<GalleryImageVersionPublishingProfileArgs> publishingProfile) {
             this.publishingProfile = publishingProfile;
             return this;
         }
 
         public Builder publishingProfile(@Nullable GalleryImageVersionPublishingProfileArgs publishingProfile) {
-            this.publishingProfile = Input.ofNullable(publishingProfile);
+            this.publishingProfile = Output.ofNullable(publishingProfile);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder storageProfile(Input<GalleryImageVersionStorageProfileArgs> storageProfile) {
+        public Builder storageProfile(Output<GalleryImageVersionStorageProfileArgs> storageProfile) {
             this.storageProfile = Objects.requireNonNull(storageProfile);
             return this;
         }
 
         public Builder storageProfile(GalleryImageVersionStorageProfileArgs storageProfile) {
-            this.storageProfile = Input.of(Objects.requireNonNull(storageProfile));
+            this.storageProfile = Output.of(Objects.requireNonNull(storageProfile));
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public GalleryImageVersionArgs build() {

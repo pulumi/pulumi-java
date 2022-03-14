@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.cloudfront.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -16,39 +16,39 @@ public final class DistributionLambdaFunctionAssociationArgs extends io.pulumi.r
     public static final DistributionLambdaFunctionAssociationArgs Empty = new DistributionLambdaFunctionAssociationArgs();
 
     @InputImport(name="eventType")
-      private final @Nullable Input<String> eventType;
+      private final @Nullable Output<String> eventType;
 
-    public Input<String> getEventType() {
-        return this.eventType == null ? Input.empty() : this.eventType;
+    public Output<String> getEventType() {
+        return this.eventType == null ? Output.empty() : this.eventType;
     }
 
     @InputImport(name="includeBody")
-      private final @Nullable Input<Boolean> includeBody;
+      private final @Nullable Output<Boolean> includeBody;
 
-    public Input<Boolean> getIncludeBody() {
-        return this.includeBody == null ? Input.empty() : this.includeBody;
+    public Output<Boolean> getIncludeBody() {
+        return this.includeBody == null ? Output.empty() : this.includeBody;
     }
 
     @InputImport(name="lambdaFunctionARN")
-      private final @Nullable Input<String> lambdaFunctionARN;
+      private final @Nullable Output<String> lambdaFunctionARN;
 
-    public Input<String> getLambdaFunctionARN() {
-        return this.lambdaFunctionARN == null ? Input.empty() : this.lambdaFunctionARN;
+    public Output<String> getLambdaFunctionARN() {
+        return this.lambdaFunctionARN == null ? Output.empty() : this.lambdaFunctionARN;
     }
 
     public DistributionLambdaFunctionAssociationArgs(
-        @Nullable Input<String> eventType,
-        @Nullable Input<Boolean> includeBody,
-        @Nullable Input<String> lambdaFunctionARN) {
+        @Nullable Output<String> eventType,
+        @Nullable Output<Boolean> includeBody,
+        @Nullable Output<String> lambdaFunctionARN) {
         this.eventType = eventType;
         this.includeBody = includeBody;
         this.lambdaFunctionARN = lambdaFunctionARN;
     }
 
     private DistributionLambdaFunctionAssociationArgs() {
-        this.eventType = Input.empty();
-        this.includeBody = Input.empty();
-        this.lambdaFunctionARN = Input.empty();
+        this.eventType = Output.empty();
+        this.includeBody = Output.empty();
+        this.lambdaFunctionARN = Output.empty();
     }
 
     public static Builder builder() {
@@ -60,9 +60,9 @@ public final class DistributionLambdaFunctionAssociationArgs extends io.pulumi.r
     }
 
     public static final class Builder {
-        private @Nullable Input<String> eventType;
-        private @Nullable Input<Boolean> includeBody;
-        private @Nullable Input<String> lambdaFunctionARN;
+        private @Nullable Output<String> eventType;
+        private @Nullable Output<Boolean> includeBody;
+        private @Nullable Output<String> lambdaFunctionARN;
 
         public Builder() {
     	      // Empty
@@ -75,33 +75,33 @@ public final class DistributionLambdaFunctionAssociationArgs extends io.pulumi.r
     	      this.lambdaFunctionARN = defaults.lambdaFunctionARN;
         }
 
-        public Builder eventType(@Nullable Input<String> eventType) {
+        public Builder eventType(@Nullable Output<String> eventType) {
             this.eventType = eventType;
             return this;
         }
 
         public Builder eventType(@Nullable String eventType) {
-            this.eventType = Input.ofNullable(eventType);
+            this.eventType = Output.ofNullable(eventType);
             return this;
         }
 
-        public Builder includeBody(@Nullable Input<Boolean> includeBody) {
+        public Builder includeBody(@Nullable Output<Boolean> includeBody) {
             this.includeBody = includeBody;
             return this;
         }
 
         public Builder includeBody(@Nullable Boolean includeBody) {
-            this.includeBody = Input.ofNullable(includeBody);
+            this.includeBody = Output.ofNullable(includeBody);
             return this;
         }
 
-        public Builder lambdaFunctionARN(@Nullable Input<String> lambdaFunctionARN) {
+        public Builder lambdaFunctionARN(@Nullable Output<String> lambdaFunctionARN) {
             this.lambdaFunctionARN = lambdaFunctionARN;
             return this;
         }
 
         public Builder lambdaFunctionARN(@Nullable String lambdaFunctionARN) {
-            this.lambdaFunctionARN = Input.ofNullable(lambdaFunctionARN);
+            this.lambdaFunctionARN = Output.ofNullable(lambdaFunctionARN);
             return this;
         }
         public DistributionLambdaFunctionAssociationArgs build() {

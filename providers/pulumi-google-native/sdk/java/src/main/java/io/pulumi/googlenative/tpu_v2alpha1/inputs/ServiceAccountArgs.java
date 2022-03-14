@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.tpu_v2alpha1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -24,10 +24,10 @@ public final class ServiceAccountArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="email")
-      private final @Nullable Input<String> email;
+      private final @Nullable Output<String> email;
 
-    public Input<String> getEmail() {
-        return this.email == null ? Input.empty() : this.email;
+    public Output<String> getEmail() {
+        return this.email == null ? Output.empty() : this.email;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class ServiceAccountArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="scope")
-      private final @Nullable Input<List<String>> scope;
+      private final @Nullable Output<List<String>> scope;
 
-    public Input<List<String>> getScope() {
-        return this.scope == null ? Input.empty() : this.scope;
+    public Output<List<String>> getScope() {
+        return this.scope == null ? Output.empty() : this.scope;
     }
 
     public ServiceAccountArgs(
-        @Nullable Input<String> email,
-        @Nullable Input<List<String>> scope) {
+        @Nullable Output<String> email,
+        @Nullable Output<List<String>> scope) {
         this.email = email;
         this.scope = scope;
     }
 
     private ServiceAccountArgs() {
-        this.email = Input.empty();
-        this.scope = Input.empty();
+        this.email = Output.empty();
+        this.scope = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class ServiceAccountArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> email;
-        private @Nullable Input<List<String>> scope;
+        private @Nullable Output<String> email;
+        private @Nullable Output<List<String>> scope;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class ServiceAccountArgs extends io.pulumi.resources.ResourceArgs {
     	      this.scope = defaults.scope;
         }
 
-        public Builder email(@Nullable Input<String> email) {
+        public Builder email(@Nullable Output<String> email) {
             this.email = email;
             return this;
         }
 
         public Builder email(@Nullable String email) {
-            this.email = Input.ofNullable(email);
+            this.email = Output.ofNullable(email);
             return this;
         }
 
-        public Builder scope(@Nullable Input<List<String>> scope) {
+        public Builder scope(@Nullable Output<List<String>> scope) {
             this.scope = scope;
             return this;
         }
 
         public Builder scope(@Nullable List<String> scope) {
-            this.scope = Input.ofNullable(scope);
+            this.scope = Output.ofNullable(scope);
             return this;
         }
         public ServiceAccountArgs build() {

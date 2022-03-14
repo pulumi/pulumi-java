@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.testbase;
 
 import io.pulumi.azurenative.testbase.inputs.NotificationEventReceiverArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -21,10 +21,10 @@ public final class CustomerEventArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="customerEventName")
-      private final @Nullable Input<String> customerEventName;
+      private final @Nullable Output<String> customerEventName;
 
-    public Input<String> getCustomerEventName() {
-        return this.customerEventName == null ? Input.empty() : this.customerEventName;
+    public Output<String> getCustomerEventName() {
+        return this.customerEventName == null ? Output.empty() : this.customerEventName;
     }
 
     /**
@@ -32,9 +32,9 @@ public final class CustomerEventArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="eventName", required=true)
-      private final Input<String> eventName;
+      private final Output<String> eventName;
 
-    public Input<String> getEventName() {
+    public Output<String> getEventName() {
         return this.eventName;
     }
 
@@ -43,9 +43,9 @@ public final class CustomerEventArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="receivers", required=true)
-      private final Input<List<NotificationEventReceiverArgs>> receivers;
+      private final Output<List<NotificationEventReceiverArgs>> receivers;
 
-    public Input<List<NotificationEventReceiverArgs>> getReceivers() {
+    public Output<List<NotificationEventReceiverArgs>> getReceivers() {
         return this.receivers;
     }
 
@@ -54,9 +54,9 @@ public final class CustomerEventArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -65,18 +65,18 @@ public final class CustomerEventArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="testBaseAccountName", required=true)
-      private final Input<String> testBaseAccountName;
+      private final Output<String> testBaseAccountName;
 
-    public Input<String> getTestBaseAccountName() {
+    public Output<String> getTestBaseAccountName() {
         return this.testBaseAccountName;
     }
 
     public CustomerEventArgs(
-        @Nullable Input<String> customerEventName,
-        Input<String> eventName,
-        Input<List<NotificationEventReceiverArgs>> receivers,
-        Input<String> resourceGroupName,
-        Input<String> testBaseAccountName) {
+        @Nullable Output<String> customerEventName,
+        Output<String> eventName,
+        Output<List<NotificationEventReceiverArgs>> receivers,
+        Output<String> resourceGroupName,
+        Output<String> testBaseAccountName) {
         this.customerEventName = customerEventName;
         this.eventName = Objects.requireNonNull(eventName, "expected parameter 'eventName' to be non-null");
         this.receivers = Objects.requireNonNull(receivers, "expected parameter 'receivers' to be non-null");
@@ -85,11 +85,11 @@ public final class CustomerEventArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private CustomerEventArgs() {
-        this.customerEventName = Input.empty();
-        this.eventName = Input.empty();
-        this.receivers = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.testBaseAccountName = Input.empty();
+        this.customerEventName = Output.empty();
+        this.eventName = Output.empty();
+        this.receivers = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.testBaseAccountName = Output.empty();
     }
 
     public static Builder builder() {
@@ -101,11 +101,11 @@ public final class CustomerEventArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> customerEventName;
-        private Input<String> eventName;
-        private Input<List<NotificationEventReceiverArgs>> receivers;
-        private Input<String> resourceGroupName;
-        private Input<String> testBaseAccountName;
+        private @Nullable Output<String> customerEventName;
+        private Output<String> eventName;
+        private Output<List<NotificationEventReceiverArgs>> receivers;
+        private Output<String> resourceGroupName;
+        private Output<String> testBaseAccountName;
 
         public Builder() {
     	      // Empty
@@ -120,53 +120,53 @@ public final class CustomerEventArgs extends io.pulumi.resources.ResourceArgs {
     	      this.testBaseAccountName = defaults.testBaseAccountName;
         }
 
-        public Builder customerEventName(@Nullable Input<String> customerEventName) {
+        public Builder customerEventName(@Nullable Output<String> customerEventName) {
             this.customerEventName = customerEventName;
             return this;
         }
 
         public Builder customerEventName(@Nullable String customerEventName) {
-            this.customerEventName = Input.ofNullable(customerEventName);
+            this.customerEventName = Output.ofNullable(customerEventName);
             return this;
         }
 
-        public Builder eventName(Input<String> eventName) {
+        public Builder eventName(Output<String> eventName) {
             this.eventName = Objects.requireNonNull(eventName);
             return this;
         }
 
         public Builder eventName(String eventName) {
-            this.eventName = Input.of(Objects.requireNonNull(eventName));
+            this.eventName = Output.of(Objects.requireNonNull(eventName));
             return this;
         }
 
-        public Builder receivers(Input<List<NotificationEventReceiverArgs>> receivers) {
+        public Builder receivers(Output<List<NotificationEventReceiverArgs>> receivers) {
             this.receivers = Objects.requireNonNull(receivers);
             return this;
         }
 
         public Builder receivers(List<NotificationEventReceiverArgs> receivers) {
-            this.receivers = Input.of(Objects.requireNonNull(receivers));
+            this.receivers = Output.of(Objects.requireNonNull(receivers));
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder testBaseAccountName(Input<String> testBaseAccountName) {
+        public Builder testBaseAccountName(Output<String> testBaseAccountName) {
             this.testBaseAccountName = Objects.requireNonNull(testBaseAccountName);
             return this;
         }
 
         public Builder testBaseAccountName(String testBaseAccountName) {
-            this.testBaseAccountName = Input.of(Objects.requireNonNull(testBaseAccountName));
+            this.testBaseAccountName = Output.of(Objects.requireNonNull(testBaseAccountName));
             return this;
         }
         public CustomerEventArgs build() {

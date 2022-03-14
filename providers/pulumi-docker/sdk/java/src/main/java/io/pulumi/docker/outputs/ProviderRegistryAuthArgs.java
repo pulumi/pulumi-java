@@ -3,7 +3,7 @@
 
 package io.pulumi.docker.outputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
@@ -11,19 +11,19 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ProviderRegistryAuthArgs {
-    private final Input<String> address;
-    private final @Nullable Input<String> configFile;
-    private final @Nullable Input<String> configFileContent;
-    private final @Nullable Input<String> password;
-    private final @Nullable Input<String> username;
+    private final Output<String> address;
+    private final @Nullable Output<String> configFile;
+    private final @Nullable Output<String> configFileContent;
+    private final @Nullable Output<String> password;
+    private final @Nullable Output<String> username;
 
     @OutputCustomType.Constructor
     private ProviderRegistryAuthArgs(
-        @OutputCustomType.Parameter("address") Input<String> address,
-        @OutputCustomType.Parameter("configFile") @Nullable Input<String> configFile,
-        @OutputCustomType.Parameter("configFileContent") @Nullable Input<String> configFileContent,
-        @OutputCustomType.Parameter("password") @Nullable Input<String> password,
-        @OutputCustomType.Parameter("username") @Nullable Input<String> username) {
+        @OutputCustomType.Parameter("address") Output<String> address,
+        @OutputCustomType.Parameter("configFile") @Nullable Output<String> configFile,
+        @OutputCustomType.Parameter("configFileContent") @Nullable Output<String> configFileContent,
+        @OutputCustomType.Parameter("password") @Nullable Output<String> password,
+        @OutputCustomType.Parameter("username") @Nullable Output<String> username) {
         this.address = address;
         this.configFile = configFile;
         this.configFileContent = configFileContent;
@@ -31,19 +31,19 @@ public final class ProviderRegistryAuthArgs {
         this.username = username;
     }
 
-    public Input<String> getAddress() {
+    public Output<String> getAddress() {
         return this.address;
     }
-    public @Nullable Input<String> getConfigFile() {
+    public @Nullable Output<String> getConfigFile() {
         return this.configFile;
     }
-    public @Nullable Input<String> getConfigFileContent() {
+    public @Nullable Output<String> getConfigFileContent() {
         return this.configFileContent;
     }
-    public @Nullable Input<String> getPassword() {
+    public @Nullable Output<String> getPassword() {
         return this.password;
     }
-    public @Nullable Input<String> getUsername() {
+    public @Nullable Output<String> getUsername() {
         return this.username;
     }
 
@@ -56,11 +56,11 @@ public final class ProviderRegistryAuthArgs {
     }
 
     public static final class Builder {
-        private Input<String> address;
-        private @Nullable Input<String> configFile;
-        private @Nullable Input<String> configFileContent;
-        private @Nullable Input<String> password;
-        private @Nullable Input<String> username;
+        private Output<String> address;
+        private @Nullable Output<String> configFile;
+        private @Nullable Output<String> configFileContent;
+        private @Nullable Output<String> password;
+        private @Nullable Output<String> username;
 
         public Builder() {
     	      // Empty
@@ -75,27 +75,27 @@ public final class ProviderRegistryAuthArgs {
     	      this.username = defaults.username;
         }
 
-        public Builder address(Input<String> address) {
+        public Builder address(Output<String> address) {
             this.address = Objects.requireNonNull(address);
             return this;
         }
 
-        public Builder configFile(@Nullable Input<String> configFile) {
+        public Builder configFile(@Nullable Output<String> configFile) {
             this.configFile = configFile;
             return this;
         }
 
-        public Builder configFileContent(@Nullable Input<String> configFileContent) {
+        public Builder configFileContent(@Nullable Output<String> configFileContent) {
             this.configFileContent = configFileContent;
             return this;
         }
 
-        public Builder password(@Nullable Input<String> password) {
+        public Builder password(@Nullable Output<String> password) {
             this.password = password;
             return this;
         }
 
-        public Builder username(@Nullable Input<String> username) {
+        public Builder username(@Nullable Output<String> username) {
             this.username = username;
             return this;
         }

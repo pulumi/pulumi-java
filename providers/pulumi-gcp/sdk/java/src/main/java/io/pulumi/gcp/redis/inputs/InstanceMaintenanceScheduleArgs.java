@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.redis.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -22,10 +22,10 @@ public final class InstanceMaintenanceScheduleArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="endTime")
-      private final @Nullable Input<String> endTime;
+      private final @Nullable Output<String> endTime;
 
-    public Input<String> getEndTime() {
-        return this.endTime == null ? Input.empty() : this.endTime;
+    public Output<String> getEndTime() {
+        return this.endTime == null ? Output.empty() : this.endTime;
     }
 
     /**
@@ -37,10 +37,10 @@ public final class InstanceMaintenanceScheduleArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="scheduleDeadlineTime")
-      private final @Nullable Input<String> scheduleDeadlineTime;
+      private final @Nullable Output<String> scheduleDeadlineTime;
 
-    public Input<String> getScheduleDeadlineTime() {
-        return this.scheduleDeadlineTime == null ? Input.empty() : this.scheduleDeadlineTime;
+    public Output<String> getScheduleDeadlineTime() {
+        return this.scheduleDeadlineTime == null ? Output.empty() : this.scheduleDeadlineTime;
     }
 
     /**
@@ -51,25 +51,25 @@ public final class InstanceMaintenanceScheduleArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="startTime")
-      private final @Nullable Input<String> startTime;
+      private final @Nullable Output<String> startTime;
 
-    public Input<String> getStartTime() {
-        return this.startTime == null ? Input.empty() : this.startTime;
+    public Output<String> getStartTime() {
+        return this.startTime == null ? Output.empty() : this.startTime;
     }
 
     public InstanceMaintenanceScheduleArgs(
-        @Nullable Input<String> endTime,
-        @Nullable Input<String> scheduleDeadlineTime,
-        @Nullable Input<String> startTime) {
+        @Nullable Output<String> endTime,
+        @Nullable Output<String> scheduleDeadlineTime,
+        @Nullable Output<String> startTime) {
         this.endTime = endTime;
         this.scheduleDeadlineTime = scheduleDeadlineTime;
         this.startTime = startTime;
     }
 
     private InstanceMaintenanceScheduleArgs() {
-        this.endTime = Input.empty();
-        this.scheduleDeadlineTime = Input.empty();
-        this.startTime = Input.empty();
+        this.endTime = Output.empty();
+        this.scheduleDeadlineTime = Output.empty();
+        this.startTime = Output.empty();
     }
 
     public static Builder builder() {
@@ -81,9 +81,9 @@ public final class InstanceMaintenanceScheduleArgs extends io.pulumi.resources.R
     }
 
     public static final class Builder {
-        private @Nullable Input<String> endTime;
-        private @Nullable Input<String> scheduleDeadlineTime;
-        private @Nullable Input<String> startTime;
+        private @Nullable Output<String> endTime;
+        private @Nullable Output<String> scheduleDeadlineTime;
+        private @Nullable Output<String> startTime;
 
         public Builder() {
     	      // Empty
@@ -96,33 +96,33 @@ public final class InstanceMaintenanceScheduleArgs extends io.pulumi.resources.R
     	      this.startTime = defaults.startTime;
         }
 
-        public Builder endTime(@Nullable Input<String> endTime) {
+        public Builder endTime(@Nullable Output<String> endTime) {
             this.endTime = endTime;
             return this;
         }
 
         public Builder endTime(@Nullable String endTime) {
-            this.endTime = Input.ofNullable(endTime);
+            this.endTime = Output.ofNullable(endTime);
             return this;
         }
 
-        public Builder scheduleDeadlineTime(@Nullable Input<String> scheduleDeadlineTime) {
+        public Builder scheduleDeadlineTime(@Nullable Output<String> scheduleDeadlineTime) {
             this.scheduleDeadlineTime = scheduleDeadlineTime;
             return this;
         }
 
         public Builder scheduleDeadlineTime(@Nullable String scheduleDeadlineTime) {
-            this.scheduleDeadlineTime = Input.ofNullable(scheduleDeadlineTime);
+            this.scheduleDeadlineTime = Output.ofNullable(scheduleDeadlineTime);
             return this;
         }
 
-        public Builder startTime(@Nullable Input<String> startTime) {
+        public Builder startTime(@Nullable Output<String> startTime) {
             this.startTime = startTime;
             return this;
         }
 
         public Builder startTime(@Nullable String startTime) {
-            this.startTime = Input.ofNullable(startTime);
+            this.startTime = Output.ofNullable(startTime);
             return this;
         }
         public InstanceMaintenanceScheduleArgs build() {

@@ -5,7 +5,7 @@ package io.pulumi.azurenative.testbase.inputs;
 
 import io.pulumi.azurenative.testbase.enums.Tier;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -26,10 +26,10 @@ public final class TestBaseAccountSKUArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="locations")
-      private final @Nullable Input<List<String>> locations;
+      private final @Nullable Output<List<String>> locations;
 
-    public Input<List<String>> getLocations() {
-        return this.locations == null ? Input.empty() : this.locations;
+    public Output<List<String>> getLocations() {
+        return this.locations == null ? Output.empty() : this.locations;
     }
 
     /**
@@ -37,9 +37,9 @@ public final class TestBaseAccountSKUArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="name", required=true)
-      private final Input<String> name;
+      private final Output<String> name;
 
-    public Input<String> getName() {
+    public Output<String> getName() {
         return this.name;
     }
 
@@ -48,10 +48,10 @@ public final class TestBaseAccountSKUArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="resourceType")
-      private final @Nullable Input<String> resourceType;
+      private final @Nullable Output<String> resourceType;
 
-    public Input<String> getPropResourceType() {
-        return this.resourceType == null ? Input.empty() : this.resourceType;
+    public Output<String> getPropResourceType() {
+        return this.resourceType == null ? Output.empty() : this.resourceType;
     }
 
     /**
@@ -59,17 +59,17 @@ public final class TestBaseAccountSKUArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="tier", required=true)
-      private final Input<Either<String,Tier>> tier;
+      private final Output<Either<String,Tier>> tier;
 
-    public Input<Either<String,Tier>> getTier() {
+    public Output<Either<String,Tier>> getTier() {
         return this.tier;
     }
 
     public TestBaseAccountSKUArgs(
-        @Nullable Input<List<String>> locations,
-        Input<String> name,
-        @Nullable Input<String> resourceType,
-        Input<Either<String,Tier>> tier) {
+        @Nullable Output<List<String>> locations,
+        Output<String> name,
+        @Nullable Output<String> resourceType,
+        Output<Either<String,Tier>> tier) {
         this.locations = locations;
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
         this.resourceType = resourceType;
@@ -77,10 +77,10 @@ public final class TestBaseAccountSKUArgs extends io.pulumi.resources.ResourceAr
     }
 
     private TestBaseAccountSKUArgs() {
-        this.locations = Input.empty();
-        this.name = Input.empty();
-        this.resourceType = Input.empty();
-        this.tier = Input.empty();
+        this.locations = Output.empty();
+        this.name = Output.empty();
+        this.resourceType = Output.empty();
+        this.tier = Output.empty();
     }
 
     public static Builder builder() {
@@ -92,10 +92,10 @@ public final class TestBaseAccountSKUArgs extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> locations;
-        private Input<String> name;
-        private @Nullable Input<String> resourceType;
-        private Input<Either<String,Tier>> tier;
+        private @Nullable Output<List<String>> locations;
+        private Output<String> name;
+        private @Nullable Output<String> resourceType;
+        private Output<Either<String,Tier>> tier;
 
         public Builder() {
     	      // Empty
@@ -109,43 +109,43 @@ public final class TestBaseAccountSKUArgs extends io.pulumi.resources.ResourceAr
     	      this.tier = defaults.tier;
         }
 
-        public Builder locations(@Nullable Input<List<String>> locations) {
+        public Builder locations(@Nullable Output<List<String>> locations) {
             this.locations = locations;
             return this;
         }
 
         public Builder locations(@Nullable List<String> locations) {
-            this.locations = Input.ofNullable(locations);
+            this.locations = Output.ofNullable(locations);
             return this;
         }
 
-        public Builder name(Input<String> name) {
+        public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(String name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder resourceType(@Nullable Input<String> resourceType) {
+        public Builder resourceType(@Nullable Output<String> resourceType) {
             this.resourceType = resourceType;
             return this;
         }
 
         public Builder resourceType(@Nullable String resourceType) {
-            this.resourceType = Input.ofNullable(resourceType);
+            this.resourceType = Output.ofNullable(resourceType);
             return this;
         }
 
-        public Builder tier(Input<Either<String,Tier>> tier) {
+        public Builder tier(Output<Either<String,Tier>> tier) {
             this.tier = Objects.requireNonNull(tier);
             return this;
         }
 
         public Builder tier(Either<String,Tier> tier) {
-            this.tier = Input.of(Objects.requireNonNull(tier));
+            this.tier = Output.of(Objects.requireNonNull(tier));
             return this;
         }
         public TestBaseAccountSKUArgs build() {

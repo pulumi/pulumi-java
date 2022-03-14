@@ -9,7 +9,6 @@ import io.pulumi.aws.cloudsearch.inputs.DomainState;
 import io.pulumi.aws.cloudsearch.outputs.DomainEndpointOptions;
 import io.pulumi.aws.cloudsearch.outputs.DomainIndexField;
 import io.pulumi.aws.cloudsearch.outputs.DomainScalingParameters;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -195,14 +194,14 @@ public class Domain extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Domain(String name, @Nullable DomainArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:cloudsearch/domain:Domain", name, args == null ? DomainArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws:cloudsearch/domain:Domain", name, args == null ? DomainArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private Domain(String name, Input<String> id, @Nullable DomainState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private Domain(String name, Output<String> id, @Nullable DomainState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws:cloudsearch/domain:Domain", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -218,7 +217,7 @@ public class Domain extends io.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static Domain get(String name, Input<String> id, @Nullable DomainState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static Domain get(String name, Output<String> id, @Nullable DomainState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Domain(name, id, state, options);
     }
 }

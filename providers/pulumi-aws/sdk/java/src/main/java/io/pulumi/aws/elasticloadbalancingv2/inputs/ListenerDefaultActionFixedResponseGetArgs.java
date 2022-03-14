@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.elasticloadbalancingv2.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,9 +19,9 @@ public final class ListenerDefaultActionFixedResponseGetArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="contentType", required=true)
-      private final Input<String> contentType;
+      private final Output<String> contentType;
 
-    public Input<String> getContentType() {
+    public Output<String> getContentType() {
         return this.contentType;
     }
 
@@ -30,10 +30,10 @@ public final class ListenerDefaultActionFixedResponseGetArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="messageBody")
-      private final @Nullable Input<String> messageBody;
+      private final @Nullable Output<String> messageBody;
 
-    public Input<String> getMessageBody() {
-        return this.messageBody == null ? Input.empty() : this.messageBody;
+    public Output<String> getMessageBody() {
+        return this.messageBody == null ? Output.empty() : this.messageBody;
     }
 
     /**
@@ -41,25 +41,25 @@ public final class ListenerDefaultActionFixedResponseGetArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="statusCode")
-      private final @Nullable Input<String> statusCode;
+      private final @Nullable Output<String> statusCode;
 
-    public Input<String> getStatusCode() {
-        return this.statusCode == null ? Input.empty() : this.statusCode;
+    public Output<String> getStatusCode() {
+        return this.statusCode == null ? Output.empty() : this.statusCode;
     }
 
     public ListenerDefaultActionFixedResponseGetArgs(
-        Input<String> contentType,
-        @Nullable Input<String> messageBody,
-        @Nullable Input<String> statusCode) {
+        Output<String> contentType,
+        @Nullable Output<String> messageBody,
+        @Nullable Output<String> statusCode) {
         this.contentType = Objects.requireNonNull(contentType, "expected parameter 'contentType' to be non-null");
         this.messageBody = messageBody;
         this.statusCode = statusCode;
     }
 
     private ListenerDefaultActionFixedResponseGetArgs() {
-        this.contentType = Input.empty();
-        this.messageBody = Input.empty();
-        this.statusCode = Input.empty();
+        this.contentType = Output.empty();
+        this.messageBody = Output.empty();
+        this.statusCode = Output.empty();
     }
 
     public static Builder builder() {
@@ -71,9 +71,9 @@ public final class ListenerDefaultActionFixedResponseGetArgs extends io.pulumi.r
     }
 
     public static final class Builder {
-        private Input<String> contentType;
-        private @Nullable Input<String> messageBody;
-        private @Nullable Input<String> statusCode;
+        private Output<String> contentType;
+        private @Nullable Output<String> messageBody;
+        private @Nullable Output<String> statusCode;
 
         public Builder() {
     	      // Empty
@@ -86,33 +86,33 @@ public final class ListenerDefaultActionFixedResponseGetArgs extends io.pulumi.r
     	      this.statusCode = defaults.statusCode;
         }
 
-        public Builder contentType(Input<String> contentType) {
+        public Builder contentType(Output<String> contentType) {
             this.contentType = Objects.requireNonNull(contentType);
             return this;
         }
 
         public Builder contentType(String contentType) {
-            this.contentType = Input.of(Objects.requireNonNull(contentType));
+            this.contentType = Output.of(Objects.requireNonNull(contentType));
             return this;
         }
 
-        public Builder messageBody(@Nullable Input<String> messageBody) {
+        public Builder messageBody(@Nullable Output<String> messageBody) {
             this.messageBody = messageBody;
             return this;
         }
 
         public Builder messageBody(@Nullable String messageBody) {
-            this.messageBody = Input.ofNullable(messageBody);
+            this.messageBody = Output.ofNullable(messageBody);
             return this;
         }
 
-        public Builder statusCode(@Nullable Input<String> statusCode) {
+        public Builder statusCode(@Nullable Output<String> statusCode) {
             this.statusCode = statusCode;
             return this;
         }
 
         public Builder statusCode(@Nullable String statusCode) {
-            this.statusCode = Input.ofNullable(statusCode);
+            this.statusCode = Output.ofNullable(statusCode);
             return this;
         }
         public ListenerDefaultActionFixedResponseGetArgs build() {

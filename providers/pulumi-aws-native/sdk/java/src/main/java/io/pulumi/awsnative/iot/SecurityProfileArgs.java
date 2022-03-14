@@ -6,7 +6,7 @@ package io.pulumi.awsnative.iot;
 import io.pulumi.awsnative.iot.inputs.SecurityProfileBehaviorArgs;
 import io.pulumi.awsnative.iot.inputs.SecurityProfileMetricToRetainArgs;
 import io.pulumi.awsnative.iot.inputs.SecurityProfileTagArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class SecurityProfileArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="additionalMetricsToRetainV2")
-      private final @Nullable Input<List<SecurityProfileMetricToRetainArgs>> additionalMetricsToRetainV2;
+      private final @Nullable Output<List<SecurityProfileMetricToRetainArgs>> additionalMetricsToRetainV2;
 
-    public Input<List<SecurityProfileMetricToRetainArgs>> getAdditionalMetricsToRetainV2() {
-        return this.additionalMetricsToRetainV2 == null ? Input.empty() : this.additionalMetricsToRetainV2;
+    public Output<List<SecurityProfileMetricToRetainArgs>> getAdditionalMetricsToRetainV2() {
+        return this.additionalMetricsToRetainV2 == null ? Output.empty() : this.additionalMetricsToRetainV2;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class SecurityProfileArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="alertTargets")
-      private final @Nullable Input<Object> alertTargets;
+      private final @Nullable Output<Object> alertTargets;
 
-    public Input<Object> getAlertTargets() {
-        return this.alertTargets == null ? Input.empty() : this.alertTargets;
+    public Output<Object> getAlertTargets() {
+        return this.alertTargets == null ? Output.empty() : this.alertTargets;
     }
 
     /**
@@ -46,10 +46,10 @@ public final class SecurityProfileArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="behaviors")
-      private final @Nullable Input<List<SecurityProfileBehaviorArgs>> behaviors;
+      private final @Nullable Output<List<SecurityProfileBehaviorArgs>> behaviors;
 
-    public Input<List<SecurityProfileBehaviorArgs>> getBehaviors() {
-        return this.behaviors == null ? Input.empty() : this.behaviors;
+    public Output<List<SecurityProfileBehaviorArgs>> getBehaviors() {
+        return this.behaviors == null ? Output.empty() : this.behaviors;
     }
 
     /**
@@ -57,10 +57,10 @@ public final class SecurityProfileArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="securityProfileDescription")
-      private final @Nullable Input<String> securityProfileDescription;
+      private final @Nullable Output<String> securityProfileDescription;
 
-    public Input<String> getSecurityProfileDescription() {
-        return this.securityProfileDescription == null ? Input.empty() : this.securityProfileDescription;
+    public Output<String> getSecurityProfileDescription() {
+        return this.securityProfileDescription == null ? Output.empty() : this.securityProfileDescription;
     }
 
     /**
@@ -68,10 +68,10 @@ public final class SecurityProfileArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="securityProfileName")
-      private final @Nullable Input<String> securityProfileName;
+      private final @Nullable Output<String> securityProfileName;
 
-    public Input<String> getSecurityProfileName() {
-        return this.securityProfileName == null ? Input.empty() : this.securityProfileName;
+    public Output<String> getSecurityProfileName() {
+        return this.securityProfileName == null ? Output.empty() : this.securityProfileName;
     }
 
     /**
@@ -79,10 +79,10 @@ public final class SecurityProfileArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<List<SecurityProfileTagArgs>> tags;
+      private final @Nullable Output<List<SecurityProfileTagArgs>> tags;
 
-    public Input<List<SecurityProfileTagArgs>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<List<SecurityProfileTagArgs>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -90,20 +90,20 @@ public final class SecurityProfileArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="targetArns")
-      private final @Nullable Input<List<String>> targetArns;
+      private final @Nullable Output<List<String>> targetArns;
 
-    public Input<List<String>> getTargetArns() {
-        return this.targetArns == null ? Input.empty() : this.targetArns;
+    public Output<List<String>> getTargetArns() {
+        return this.targetArns == null ? Output.empty() : this.targetArns;
     }
 
     public SecurityProfileArgs(
-        @Nullable Input<List<SecurityProfileMetricToRetainArgs>> additionalMetricsToRetainV2,
-        @Nullable Input<Object> alertTargets,
-        @Nullable Input<List<SecurityProfileBehaviorArgs>> behaviors,
-        @Nullable Input<String> securityProfileDescription,
-        @Nullable Input<String> securityProfileName,
-        @Nullable Input<List<SecurityProfileTagArgs>> tags,
-        @Nullable Input<List<String>> targetArns) {
+        @Nullable Output<List<SecurityProfileMetricToRetainArgs>> additionalMetricsToRetainV2,
+        @Nullable Output<Object> alertTargets,
+        @Nullable Output<List<SecurityProfileBehaviorArgs>> behaviors,
+        @Nullable Output<String> securityProfileDescription,
+        @Nullable Output<String> securityProfileName,
+        @Nullable Output<List<SecurityProfileTagArgs>> tags,
+        @Nullable Output<List<String>> targetArns) {
         this.additionalMetricsToRetainV2 = additionalMetricsToRetainV2;
         this.alertTargets = alertTargets;
         this.behaviors = behaviors;
@@ -114,13 +114,13 @@ public final class SecurityProfileArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private SecurityProfileArgs() {
-        this.additionalMetricsToRetainV2 = Input.empty();
-        this.alertTargets = Input.empty();
-        this.behaviors = Input.empty();
-        this.securityProfileDescription = Input.empty();
-        this.securityProfileName = Input.empty();
-        this.tags = Input.empty();
-        this.targetArns = Input.empty();
+        this.additionalMetricsToRetainV2 = Output.empty();
+        this.alertTargets = Output.empty();
+        this.behaviors = Output.empty();
+        this.securityProfileDescription = Output.empty();
+        this.securityProfileName = Output.empty();
+        this.tags = Output.empty();
+        this.targetArns = Output.empty();
     }
 
     public static Builder builder() {
@@ -132,13 +132,13 @@ public final class SecurityProfileArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private @Nullable Input<List<SecurityProfileMetricToRetainArgs>> additionalMetricsToRetainV2;
-        private @Nullable Input<Object> alertTargets;
-        private @Nullable Input<List<SecurityProfileBehaviorArgs>> behaviors;
-        private @Nullable Input<String> securityProfileDescription;
-        private @Nullable Input<String> securityProfileName;
-        private @Nullable Input<List<SecurityProfileTagArgs>> tags;
-        private @Nullable Input<List<String>> targetArns;
+        private @Nullable Output<List<SecurityProfileMetricToRetainArgs>> additionalMetricsToRetainV2;
+        private @Nullable Output<Object> alertTargets;
+        private @Nullable Output<List<SecurityProfileBehaviorArgs>> behaviors;
+        private @Nullable Output<String> securityProfileDescription;
+        private @Nullable Output<String> securityProfileName;
+        private @Nullable Output<List<SecurityProfileTagArgs>> tags;
+        private @Nullable Output<List<String>> targetArns;
 
         public Builder() {
     	      // Empty
@@ -155,73 +155,73 @@ public final class SecurityProfileArgs extends io.pulumi.resources.ResourceArgs 
     	      this.targetArns = defaults.targetArns;
         }
 
-        public Builder additionalMetricsToRetainV2(@Nullable Input<List<SecurityProfileMetricToRetainArgs>> additionalMetricsToRetainV2) {
+        public Builder additionalMetricsToRetainV2(@Nullable Output<List<SecurityProfileMetricToRetainArgs>> additionalMetricsToRetainV2) {
             this.additionalMetricsToRetainV2 = additionalMetricsToRetainV2;
             return this;
         }
 
         public Builder additionalMetricsToRetainV2(@Nullable List<SecurityProfileMetricToRetainArgs> additionalMetricsToRetainV2) {
-            this.additionalMetricsToRetainV2 = Input.ofNullable(additionalMetricsToRetainV2);
+            this.additionalMetricsToRetainV2 = Output.ofNullable(additionalMetricsToRetainV2);
             return this;
         }
 
-        public Builder alertTargets(@Nullable Input<Object> alertTargets) {
+        public Builder alertTargets(@Nullable Output<Object> alertTargets) {
             this.alertTargets = alertTargets;
             return this;
         }
 
         public Builder alertTargets(@Nullable Object alertTargets) {
-            this.alertTargets = Input.ofNullable(alertTargets);
+            this.alertTargets = Output.ofNullable(alertTargets);
             return this;
         }
 
-        public Builder behaviors(@Nullable Input<List<SecurityProfileBehaviorArgs>> behaviors) {
+        public Builder behaviors(@Nullable Output<List<SecurityProfileBehaviorArgs>> behaviors) {
             this.behaviors = behaviors;
             return this;
         }
 
         public Builder behaviors(@Nullable List<SecurityProfileBehaviorArgs> behaviors) {
-            this.behaviors = Input.ofNullable(behaviors);
+            this.behaviors = Output.ofNullable(behaviors);
             return this;
         }
 
-        public Builder securityProfileDescription(@Nullable Input<String> securityProfileDescription) {
+        public Builder securityProfileDescription(@Nullable Output<String> securityProfileDescription) {
             this.securityProfileDescription = securityProfileDescription;
             return this;
         }
 
         public Builder securityProfileDescription(@Nullable String securityProfileDescription) {
-            this.securityProfileDescription = Input.ofNullable(securityProfileDescription);
+            this.securityProfileDescription = Output.ofNullable(securityProfileDescription);
             return this;
         }
 
-        public Builder securityProfileName(@Nullable Input<String> securityProfileName) {
+        public Builder securityProfileName(@Nullable Output<String> securityProfileName) {
             this.securityProfileName = securityProfileName;
             return this;
         }
 
         public Builder securityProfileName(@Nullable String securityProfileName) {
-            this.securityProfileName = Input.ofNullable(securityProfileName);
+            this.securityProfileName = Output.ofNullable(securityProfileName);
             return this;
         }
 
-        public Builder tags(@Nullable Input<List<SecurityProfileTagArgs>> tags) {
+        public Builder tags(@Nullable Output<List<SecurityProfileTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable List<SecurityProfileTagArgs> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder targetArns(@Nullable Input<List<String>> targetArns) {
+        public Builder targetArns(@Nullable Output<List<String>> targetArns) {
             this.targetArns = targetArns;
             return this;
         }
 
         public Builder targetArns(@Nullable List<String> targetArns) {
-            this.targetArns = Input.ofNullable(targetArns);
+            this.targetArns = Output.ofNullable(targetArns);
             return this;
         }
         public SecurityProfileArgs build() {

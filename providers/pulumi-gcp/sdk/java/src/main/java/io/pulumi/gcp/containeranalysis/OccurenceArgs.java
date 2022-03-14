@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.containeranalysis;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.containeranalysis.inputs.OccurenceAttestationArgs;
 import java.lang.String;
@@ -28,9 +28,9 @@ public final class OccurenceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="attestation", required=true)
-      private final Input<OccurenceAttestationArgs> attestation;
+      private final Output<OccurenceAttestationArgs> attestation;
 
-    public Input<OccurenceAttestationArgs> getAttestation() {
+    public Output<OccurenceAttestationArgs> getAttestation() {
         return this.attestation;
     }
 
@@ -41,9 +41,9 @@ public final class OccurenceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="noteName", required=true)
-      private final Input<String> noteName;
+      private final Output<String> noteName;
 
-    public Input<String> getNoteName() {
+    public Output<String> getNoteName() {
         return this.noteName;
     }
 
@@ -53,10 +53,10 @@ public final class OccurenceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -64,10 +64,10 @@ public final class OccurenceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="remediation")
-      private final @Nullable Input<String> remediation;
+      private final @Nullable Output<String> remediation;
 
-    public Input<String> getRemediation() {
-        return this.remediation == null ? Input.empty() : this.remediation;
+    public Output<String> getRemediation() {
+        return this.remediation == null ? Output.empty() : this.remediation;
     }
 
     /**
@@ -77,18 +77,18 @@ public final class OccurenceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceUri", required=true)
-      private final Input<String> resourceUri;
+      private final Output<String> resourceUri;
 
-    public Input<String> getResourceUri() {
+    public Output<String> getResourceUri() {
         return this.resourceUri;
     }
 
     public OccurenceArgs(
-        Input<OccurenceAttestationArgs> attestation,
-        Input<String> noteName,
-        @Nullable Input<String> project,
-        @Nullable Input<String> remediation,
-        Input<String> resourceUri) {
+        Output<OccurenceAttestationArgs> attestation,
+        Output<String> noteName,
+        @Nullable Output<String> project,
+        @Nullable Output<String> remediation,
+        Output<String> resourceUri) {
         this.attestation = Objects.requireNonNull(attestation, "expected parameter 'attestation' to be non-null");
         this.noteName = Objects.requireNonNull(noteName, "expected parameter 'noteName' to be non-null");
         this.project = project;
@@ -97,11 +97,11 @@ public final class OccurenceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private OccurenceArgs() {
-        this.attestation = Input.empty();
-        this.noteName = Input.empty();
-        this.project = Input.empty();
-        this.remediation = Input.empty();
-        this.resourceUri = Input.empty();
+        this.attestation = Output.empty();
+        this.noteName = Output.empty();
+        this.project = Output.empty();
+        this.remediation = Output.empty();
+        this.resourceUri = Output.empty();
     }
 
     public static Builder builder() {
@@ -113,11 +113,11 @@ public final class OccurenceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<OccurenceAttestationArgs> attestation;
-        private Input<String> noteName;
-        private @Nullable Input<String> project;
-        private @Nullable Input<String> remediation;
-        private Input<String> resourceUri;
+        private Output<OccurenceAttestationArgs> attestation;
+        private Output<String> noteName;
+        private @Nullable Output<String> project;
+        private @Nullable Output<String> remediation;
+        private Output<String> resourceUri;
 
         public Builder() {
     	      // Empty
@@ -132,53 +132,53 @@ public final class OccurenceArgs extends io.pulumi.resources.ResourceArgs {
     	      this.resourceUri = defaults.resourceUri;
         }
 
-        public Builder attestation(Input<OccurenceAttestationArgs> attestation) {
+        public Builder attestation(Output<OccurenceAttestationArgs> attestation) {
             this.attestation = Objects.requireNonNull(attestation);
             return this;
         }
 
         public Builder attestation(OccurenceAttestationArgs attestation) {
-            this.attestation = Input.of(Objects.requireNonNull(attestation));
+            this.attestation = Output.of(Objects.requireNonNull(attestation));
             return this;
         }
 
-        public Builder noteName(Input<String> noteName) {
+        public Builder noteName(Output<String> noteName) {
             this.noteName = Objects.requireNonNull(noteName);
             return this;
         }
 
         public Builder noteName(String noteName) {
-            this.noteName = Input.of(Objects.requireNonNull(noteName));
+            this.noteName = Output.of(Objects.requireNonNull(noteName));
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder remediation(@Nullable Input<String> remediation) {
+        public Builder remediation(@Nullable Output<String> remediation) {
             this.remediation = remediation;
             return this;
         }
 
         public Builder remediation(@Nullable String remediation) {
-            this.remediation = Input.ofNullable(remediation);
+            this.remediation = Output.ofNullable(remediation);
             return this;
         }
 
-        public Builder resourceUri(Input<String> resourceUri) {
+        public Builder resourceUri(Output<String> resourceUri) {
             this.resourceUri = Objects.requireNonNull(resourceUri);
             return this;
         }
 
         public Builder resourceUri(String resourceUri) {
-            this.resourceUri = Input.of(Objects.requireNonNull(resourceUri));
+            this.resourceUri = Output.of(Objects.requireNonNull(resourceUri));
             return this;
         }
         public OccurenceArgs build() {

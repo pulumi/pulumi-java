@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.spanner;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.spanner.inputs.DatabaseIAMMemberConditionArgs;
 import java.lang.String;
@@ -16,10 +16,10 @@ public final class DatabaseIAMMemberArgs extends io.pulumi.resources.ResourceArg
     public static final DatabaseIAMMemberArgs Empty = new DatabaseIAMMemberArgs();
 
     @InputImport(name="condition")
-      private final @Nullable Input<DatabaseIAMMemberConditionArgs> condition;
+      private final @Nullable Output<DatabaseIAMMemberConditionArgs> condition;
 
-    public Input<DatabaseIAMMemberConditionArgs> getCondition() {
-        return this.condition == null ? Input.empty() : this.condition;
+    public Output<DatabaseIAMMemberConditionArgs> getCondition() {
+        return this.condition == null ? Output.empty() : this.condition;
     }
 
     /**
@@ -27,9 +27,9 @@ public final class DatabaseIAMMemberArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="database", required=true)
-      private final Input<String> database;
+      private final Output<String> database;
 
-    public Input<String> getDatabase() {
+    public Output<String> getDatabase() {
         return this.database;
     }
 
@@ -38,16 +38,16 @@ public final class DatabaseIAMMemberArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="instance", required=true)
-      private final Input<String> instance;
+      private final Output<String> instance;
 
-    public Input<String> getInstance() {
+    public Output<String> getInstance() {
         return this.instance;
     }
 
     @InputImport(name="member", required=true)
-      private final Input<String> member;
+      private final Output<String> member;
 
-    public Input<String> getMember() {
+    public Output<String> getMember() {
         return this.member;
     }
 
@@ -57,10 +57,10 @@ public final class DatabaseIAMMemberArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -70,19 +70,19 @@ public final class DatabaseIAMMemberArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="role", required=true)
-      private final Input<String> role;
+      private final Output<String> role;
 
-    public Input<String> getRole() {
+    public Output<String> getRole() {
         return this.role;
     }
 
     public DatabaseIAMMemberArgs(
-        @Nullable Input<DatabaseIAMMemberConditionArgs> condition,
-        Input<String> database,
-        Input<String> instance,
-        Input<String> member,
-        @Nullable Input<String> project,
-        Input<String> role) {
+        @Nullable Output<DatabaseIAMMemberConditionArgs> condition,
+        Output<String> database,
+        Output<String> instance,
+        Output<String> member,
+        @Nullable Output<String> project,
+        Output<String> role) {
         this.condition = condition;
         this.database = Objects.requireNonNull(database, "expected parameter 'database' to be non-null");
         this.instance = Objects.requireNonNull(instance, "expected parameter 'instance' to be non-null");
@@ -92,12 +92,12 @@ public final class DatabaseIAMMemberArgs extends io.pulumi.resources.ResourceArg
     }
 
     private DatabaseIAMMemberArgs() {
-        this.condition = Input.empty();
-        this.database = Input.empty();
-        this.instance = Input.empty();
-        this.member = Input.empty();
-        this.project = Input.empty();
-        this.role = Input.empty();
+        this.condition = Output.empty();
+        this.database = Output.empty();
+        this.instance = Output.empty();
+        this.member = Output.empty();
+        this.project = Output.empty();
+        this.role = Output.empty();
     }
 
     public static Builder builder() {
@@ -109,12 +109,12 @@ public final class DatabaseIAMMemberArgs extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private @Nullable Input<DatabaseIAMMemberConditionArgs> condition;
-        private Input<String> database;
-        private Input<String> instance;
-        private Input<String> member;
-        private @Nullable Input<String> project;
-        private Input<String> role;
+        private @Nullable Output<DatabaseIAMMemberConditionArgs> condition;
+        private Output<String> database;
+        private Output<String> instance;
+        private Output<String> member;
+        private @Nullable Output<String> project;
+        private Output<String> role;
 
         public Builder() {
     	      // Empty
@@ -130,63 +130,63 @@ public final class DatabaseIAMMemberArgs extends io.pulumi.resources.ResourceArg
     	      this.role = defaults.role;
         }
 
-        public Builder condition(@Nullable Input<DatabaseIAMMemberConditionArgs> condition) {
+        public Builder condition(@Nullable Output<DatabaseIAMMemberConditionArgs> condition) {
             this.condition = condition;
             return this;
         }
 
         public Builder condition(@Nullable DatabaseIAMMemberConditionArgs condition) {
-            this.condition = Input.ofNullable(condition);
+            this.condition = Output.ofNullable(condition);
             return this;
         }
 
-        public Builder database(Input<String> database) {
+        public Builder database(Output<String> database) {
             this.database = Objects.requireNonNull(database);
             return this;
         }
 
         public Builder database(String database) {
-            this.database = Input.of(Objects.requireNonNull(database));
+            this.database = Output.of(Objects.requireNonNull(database));
             return this;
         }
 
-        public Builder instance(Input<String> instance) {
+        public Builder instance(Output<String> instance) {
             this.instance = Objects.requireNonNull(instance);
             return this;
         }
 
         public Builder instance(String instance) {
-            this.instance = Input.of(Objects.requireNonNull(instance));
+            this.instance = Output.of(Objects.requireNonNull(instance));
             return this;
         }
 
-        public Builder member(Input<String> member) {
+        public Builder member(Output<String> member) {
             this.member = Objects.requireNonNull(member);
             return this;
         }
 
         public Builder member(String member) {
-            this.member = Input.of(Objects.requireNonNull(member));
+            this.member = Output.of(Objects.requireNonNull(member));
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder role(Input<String> role) {
+        public Builder role(Output<String> role) {
             this.role = Objects.requireNonNull(role);
             return this;
         }
 
         public Builder role(String role) {
-            this.role = Input.of(Objects.requireNonNull(role));
+            this.role = Output.of(Objects.requireNonNull(role));
             return this;
         }
         public DatabaseIAMMemberArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.servicefabric.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -18,9 +18,9 @@ public final class ApplicationUserAssignedIdentityArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="name", required=true)
-      private final Input<String> name;
+      private final Output<String> name;
 
-    public Input<String> getName() {
+    public Output<String> getName() {
         return this.name;
     }
 
@@ -29,22 +29,22 @@ public final class ApplicationUserAssignedIdentityArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="principalId", required=true)
-      private final Input<String> principalId;
+      private final Output<String> principalId;
 
-    public Input<String> getPrincipalId() {
+    public Output<String> getPrincipalId() {
         return this.principalId;
     }
 
     public ApplicationUserAssignedIdentityArgs(
-        Input<String> name,
-        Input<String> principalId) {
+        Output<String> name,
+        Output<String> principalId) {
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
         this.principalId = Objects.requireNonNull(principalId, "expected parameter 'principalId' to be non-null");
     }
 
     private ApplicationUserAssignedIdentityArgs() {
-        this.name = Input.empty();
-        this.principalId = Input.empty();
+        this.name = Output.empty();
+        this.principalId = Output.empty();
     }
 
     public static Builder builder() {
@@ -56,8 +56,8 @@ public final class ApplicationUserAssignedIdentityArgs extends io.pulumi.resourc
     }
 
     public static final class Builder {
-        private Input<String> name;
-        private Input<String> principalId;
+        private Output<String> name;
+        private Output<String> principalId;
 
         public Builder() {
     	      // Empty
@@ -69,23 +69,23 @@ public final class ApplicationUserAssignedIdentityArgs extends io.pulumi.resourc
     	      this.principalId = defaults.principalId;
         }
 
-        public Builder name(Input<String> name) {
+        public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(String name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder principalId(Input<String> principalId) {
+        public Builder principalId(Output<String> principalId) {
             this.principalId = Objects.requireNonNull(principalId);
             return this;
         }
 
         public Builder principalId(String principalId) {
-            this.principalId = Input.of(Objects.requireNonNull(principalId));
+            this.principalId = Output.of(Objects.requireNonNull(principalId));
             return this;
         }
         public ApplicationUserAssignedIdentityArgs build() {

@@ -5,7 +5,7 @@ package io.pulumi.azurenative.batch.inputs;
 
 import io.pulumi.azurenative.batch.enums.AutoUserScope;
 import io.pulumi.azurenative.batch.enums.ElevationLevel;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,10 +20,10 @@ public final class AutoUserSpecificationArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="elevationLevel")
-      private final @Nullable Input<ElevationLevel> elevationLevel;
+      private final @Nullable Output<ElevationLevel> elevationLevel;
 
-    public Input<ElevationLevel> getElevationLevel() {
-        return this.elevationLevel == null ? Input.empty() : this.elevationLevel;
+    public Output<ElevationLevel> getElevationLevel() {
+        return this.elevationLevel == null ? Output.empty() : this.elevationLevel;
     }
 
     /**
@@ -31,22 +31,22 @@ public final class AutoUserSpecificationArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="scope")
-      private final @Nullable Input<AutoUserScope> scope;
+      private final @Nullable Output<AutoUserScope> scope;
 
-    public Input<AutoUserScope> getScope() {
-        return this.scope == null ? Input.empty() : this.scope;
+    public Output<AutoUserScope> getScope() {
+        return this.scope == null ? Output.empty() : this.scope;
     }
 
     public AutoUserSpecificationArgs(
-        @Nullable Input<ElevationLevel> elevationLevel,
-        @Nullable Input<AutoUserScope> scope) {
+        @Nullable Output<ElevationLevel> elevationLevel,
+        @Nullable Output<AutoUserScope> scope) {
         this.elevationLevel = elevationLevel;
         this.scope = scope;
     }
 
     private AutoUserSpecificationArgs() {
-        this.elevationLevel = Input.empty();
-        this.scope = Input.empty();
+        this.elevationLevel = Output.empty();
+        this.scope = Output.empty();
     }
 
     public static Builder builder() {
@@ -58,8 +58,8 @@ public final class AutoUserSpecificationArgs extends io.pulumi.resources.Resourc
     }
 
     public static final class Builder {
-        private @Nullable Input<ElevationLevel> elevationLevel;
-        private @Nullable Input<AutoUserScope> scope;
+        private @Nullable Output<ElevationLevel> elevationLevel;
+        private @Nullable Output<AutoUserScope> scope;
 
         public Builder() {
     	      // Empty
@@ -71,23 +71,23 @@ public final class AutoUserSpecificationArgs extends io.pulumi.resources.Resourc
     	      this.scope = defaults.scope;
         }
 
-        public Builder elevationLevel(@Nullable Input<ElevationLevel> elevationLevel) {
+        public Builder elevationLevel(@Nullable Output<ElevationLevel> elevationLevel) {
             this.elevationLevel = elevationLevel;
             return this;
         }
 
         public Builder elevationLevel(@Nullable ElevationLevel elevationLevel) {
-            this.elevationLevel = Input.ofNullable(elevationLevel);
+            this.elevationLevel = Output.ofNullable(elevationLevel);
             return this;
         }
 
-        public Builder scope(@Nullable Input<AutoUserScope> scope) {
+        public Builder scope(@Nullable Output<AutoUserScope> scope) {
             this.scope = scope;
             return this;
         }
 
         public Builder scope(@Nullable AutoUserScope scope) {
-            this.scope = Input.ofNullable(scope);
+            this.scope = Output.ofNullable(scope);
             return this;
         }
         public AutoUserSpecificationArgs build() {

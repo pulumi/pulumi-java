@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.recoveryservices.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class AzureVmWorkloadProtectedItemExtendedInfoArgs extends io.pulum
      * 
      */
     @InputImport(name="oldestRecoveryPoint")
-      private final @Nullable Input<String> oldestRecoveryPoint;
+      private final @Nullable Output<String> oldestRecoveryPoint;
 
-    public Input<String> getOldestRecoveryPoint() {
-        return this.oldestRecoveryPoint == null ? Input.empty() : this.oldestRecoveryPoint;
+    public Output<String> getOldestRecoveryPoint() {
+        return this.oldestRecoveryPoint == null ? Output.empty() : this.oldestRecoveryPoint;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class AzureVmWorkloadProtectedItemExtendedInfoArgs extends io.pulum
      * 
      */
     @InputImport(name="policyState")
-      private final @Nullable Input<String> policyState;
+      private final @Nullable Output<String> policyState;
 
-    public Input<String> getPolicyState() {
-        return this.policyState == null ? Input.empty() : this.policyState;
+    public Output<String> getPolicyState() {
+        return this.policyState == null ? Output.empty() : this.policyState;
     }
 
     /**
@@ -46,25 +46,25 @@ public final class AzureVmWorkloadProtectedItemExtendedInfoArgs extends io.pulum
      * 
      */
     @InputImport(name="recoveryPointCount")
-      private final @Nullable Input<Integer> recoveryPointCount;
+      private final @Nullable Output<Integer> recoveryPointCount;
 
-    public Input<Integer> getRecoveryPointCount() {
-        return this.recoveryPointCount == null ? Input.empty() : this.recoveryPointCount;
+    public Output<Integer> getRecoveryPointCount() {
+        return this.recoveryPointCount == null ? Output.empty() : this.recoveryPointCount;
     }
 
     public AzureVmWorkloadProtectedItemExtendedInfoArgs(
-        @Nullable Input<String> oldestRecoveryPoint,
-        @Nullable Input<String> policyState,
-        @Nullable Input<Integer> recoveryPointCount) {
+        @Nullable Output<String> oldestRecoveryPoint,
+        @Nullable Output<String> policyState,
+        @Nullable Output<Integer> recoveryPointCount) {
         this.oldestRecoveryPoint = oldestRecoveryPoint;
         this.policyState = policyState;
         this.recoveryPointCount = recoveryPointCount;
     }
 
     private AzureVmWorkloadProtectedItemExtendedInfoArgs() {
-        this.oldestRecoveryPoint = Input.empty();
-        this.policyState = Input.empty();
-        this.recoveryPointCount = Input.empty();
+        this.oldestRecoveryPoint = Output.empty();
+        this.policyState = Output.empty();
+        this.recoveryPointCount = Output.empty();
     }
 
     public static Builder builder() {
@@ -76,9 +76,9 @@ public final class AzureVmWorkloadProtectedItemExtendedInfoArgs extends io.pulum
     }
 
     public static final class Builder {
-        private @Nullable Input<String> oldestRecoveryPoint;
-        private @Nullable Input<String> policyState;
-        private @Nullable Input<Integer> recoveryPointCount;
+        private @Nullable Output<String> oldestRecoveryPoint;
+        private @Nullable Output<String> policyState;
+        private @Nullable Output<Integer> recoveryPointCount;
 
         public Builder() {
     	      // Empty
@@ -91,33 +91,33 @@ public final class AzureVmWorkloadProtectedItemExtendedInfoArgs extends io.pulum
     	      this.recoveryPointCount = defaults.recoveryPointCount;
         }
 
-        public Builder oldestRecoveryPoint(@Nullable Input<String> oldestRecoveryPoint) {
+        public Builder oldestRecoveryPoint(@Nullable Output<String> oldestRecoveryPoint) {
             this.oldestRecoveryPoint = oldestRecoveryPoint;
             return this;
         }
 
         public Builder oldestRecoveryPoint(@Nullable String oldestRecoveryPoint) {
-            this.oldestRecoveryPoint = Input.ofNullable(oldestRecoveryPoint);
+            this.oldestRecoveryPoint = Output.ofNullable(oldestRecoveryPoint);
             return this;
         }
 
-        public Builder policyState(@Nullable Input<String> policyState) {
+        public Builder policyState(@Nullable Output<String> policyState) {
             this.policyState = policyState;
             return this;
         }
 
         public Builder policyState(@Nullable String policyState) {
-            this.policyState = Input.ofNullable(policyState);
+            this.policyState = Output.ofNullable(policyState);
             return this;
         }
 
-        public Builder recoveryPointCount(@Nullable Input<Integer> recoveryPointCount) {
+        public Builder recoveryPointCount(@Nullable Output<Integer> recoveryPointCount) {
             this.recoveryPointCount = recoveryPointCount;
             return this;
         }
 
         public Builder recoveryPointCount(@Nullable Integer recoveryPointCount) {
-            this.recoveryPointCount = Input.ofNullable(recoveryPointCount);
+            this.recoveryPointCount = Output.ofNullable(recoveryPointCount);
             return this;
         }
         public AzureVmWorkloadProtectedItemExtendedInfoArgs build() {

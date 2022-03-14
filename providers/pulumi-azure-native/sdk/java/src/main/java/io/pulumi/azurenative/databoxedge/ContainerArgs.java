@@ -5,7 +5,7 @@ package io.pulumi.azurenative.databoxedge;
 
 import io.pulumi.azurenative.databoxedge.enums.AzureContainerDataFormat;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -21,10 +21,10 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="containerName")
-      private final @Nullable Input<String> containerName;
+      private final @Nullable Output<String> containerName;
 
-    public Input<String> getContainerName() {
-        return this.containerName == null ? Input.empty() : this.containerName;
+    public Output<String> getContainerName() {
+        return this.containerName == null ? Output.empty() : this.containerName;
     }
 
     /**
@@ -32,9 +32,9 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dataFormat", required=true)
-      private final Input<Either<String,AzureContainerDataFormat>> dataFormat;
+      private final Output<Either<String,AzureContainerDataFormat>> dataFormat;
 
-    public Input<Either<String,AzureContainerDataFormat>> getDataFormat() {
+    public Output<Either<String,AzureContainerDataFormat>> getDataFormat() {
         return this.dataFormat;
     }
 
@@ -43,9 +43,9 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="deviceName", required=true)
-      private final Input<String> deviceName;
+      private final Output<String> deviceName;
 
-    public Input<String> getDeviceName() {
+    public Output<String> getDeviceName() {
         return this.deviceName;
     }
 
@@ -54,9 +54,9 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -65,18 +65,18 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="storageAccountName", required=true)
-      private final Input<String> storageAccountName;
+      private final Output<String> storageAccountName;
 
-    public Input<String> getStorageAccountName() {
+    public Output<String> getStorageAccountName() {
         return this.storageAccountName;
     }
 
     public ContainerArgs(
-        @Nullable Input<String> containerName,
-        Input<Either<String,AzureContainerDataFormat>> dataFormat,
-        Input<String> deviceName,
-        Input<String> resourceGroupName,
-        Input<String> storageAccountName) {
+        @Nullable Output<String> containerName,
+        Output<Either<String,AzureContainerDataFormat>> dataFormat,
+        Output<String> deviceName,
+        Output<String> resourceGroupName,
+        Output<String> storageAccountName) {
         this.containerName = containerName;
         this.dataFormat = Objects.requireNonNull(dataFormat, "expected parameter 'dataFormat' to be non-null");
         this.deviceName = Objects.requireNonNull(deviceName, "expected parameter 'deviceName' to be non-null");
@@ -85,11 +85,11 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ContainerArgs() {
-        this.containerName = Input.empty();
-        this.dataFormat = Input.empty();
-        this.deviceName = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.storageAccountName = Input.empty();
+        this.containerName = Output.empty();
+        this.dataFormat = Output.empty();
+        this.deviceName = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.storageAccountName = Output.empty();
     }
 
     public static Builder builder() {
@@ -101,11 +101,11 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> containerName;
-        private Input<Either<String,AzureContainerDataFormat>> dataFormat;
-        private Input<String> deviceName;
-        private Input<String> resourceGroupName;
-        private Input<String> storageAccountName;
+        private @Nullable Output<String> containerName;
+        private Output<Either<String,AzureContainerDataFormat>> dataFormat;
+        private Output<String> deviceName;
+        private Output<String> resourceGroupName;
+        private Output<String> storageAccountName;
 
         public Builder() {
     	      // Empty
@@ -120,53 +120,53 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
     	      this.storageAccountName = defaults.storageAccountName;
         }
 
-        public Builder containerName(@Nullable Input<String> containerName) {
+        public Builder containerName(@Nullable Output<String> containerName) {
             this.containerName = containerName;
             return this;
         }
 
         public Builder containerName(@Nullable String containerName) {
-            this.containerName = Input.ofNullable(containerName);
+            this.containerName = Output.ofNullable(containerName);
             return this;
         }
 
-        public Builder dataFormat(Input<Either<String,AzureContainerDataFormat>> dataFormat) {
+        public Builder dataFormat(Output<Either<String,AzureContainerDataFormat>> dataFormat) {
             this.dataFormat = Objects.requireNonNull(dataFormat);
             return this;
         }
 
         public Builder dataFormat(Either<String,AzureContainerDataFormat> dataFormat) {
-            this.dataFormat = Input.of(Objects.requireNonNull(dataFormat));
+            this.dataFormat = Output.of(Objects.requireNonNull(dataFormat));
             return this;
         }
 
-        public Builder deviceName(Input<String> deviceName) {
+        public Builder deviceName(Output<String> deviceName) {
             this.deviceName = Objects.requireNonNull(deviceName);
             return this;
         }
 
         public Builder deviceName(String deviceName) {
-            this.deviceName = Input.of(Objects.requireNonNull(deviceName));
+            this.deviceName = Output.of(Objects.requireNonNull(deviceName));
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder storageAccountName(Input<String> storageAccountName) {
+        public Builder storageAccountName(Output<String> storageAccountName) {
             this.storageAccountName = Objects.requireNonNull(storageAccountName);
             return this;
         }
 
         public Builder storageAccountName(String storageAccountName) {
-            this.storageAccountName = Input.of(Objects.requireNonNull(storageAccountName));
+            this.storageAccountName = Output.of(Objects.requireNonNull(storageAccountName));
             return this;
         }
         public ContainerArgs build() {

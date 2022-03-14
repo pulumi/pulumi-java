@@ -6,7 +6,7 @@ package io.pulumi.aws.networkfirewall.inputs;
 import io.pulumi.aws.networkfirewall.inputs.RuleGroupRuleGroupRulesSourceRulesSourceListGetArgs;
 import io.pulumi.aws.networkfirewall.inputs.RuleGroupRuleGroupRulesSourceStatefulRuleGetArgs;
 import io.pulumi.aws.networkfirewall.inputs.RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -23,10 +23,10 @@ public final class RuleGroupRuleGroupRulesSourceGetArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="rulesSourceList")
-      private final @Nullable Input<RuleGroupRuleGroupRulesSourceRulesSourceListGetArgs> rulesSourceList;
+      private final @Nullable Output<RuleGroupRuleGroupRulesSourceRulesSourceListGetArgs> rulesSourceList;
 
-    public Input<RuleGroupRuleGroupRulesSourceRulesSourceListGetArgs> getRulesSourceList() {
-        return this.rulesSourceList == null ? Input.empty() : this.rulesSourceList;
+    public Output<RuleGroupRuleGroupRulesSourceRulesSourceListGetArgs> getRulesSourceList() {
+        return this.rulesSourceList == null ? Output.empty() : this.rulesSourceList;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class RuleGroupRuleGroupRulesSourceGetArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="rulesString")
-      private final @Nullable Input<String> rulesString;
+      private final @Nullable Output<String> rulesString;
 
-    public Input<String> getRulesString() {
-        return this.rulesString == null ? Input.empty() : this.rulesString;
+    public Output<String> getRulesString() {
+        return this.rulesString == null ? Output.empty() : this.rulesString;
     }
 
     /**
@@ -45,10 +45,10 @@ public final class RuleGroupRuleGroupRulesSourceGetArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="statefulRules")
-      private final @Nullable Input<List<RuleGroupRuleGroupRulesSourceStatefulRuleGetArgs>> statefulRules;
+      private final @Nullable Output<List<RuleGroupRuleGroupRulesSourceStatefulRuleGetArgs>> statefulRules;
 
-    public Input<List<RuleGroupRuleGroupRulesSourceStatefulRuleGetArgs>> getStatefulRules() {
-        return this.statefulRules == null ? Input.empty() : this.statefulRules;
+    public Output<List<RuleGroupRuleGroupRulesSourceStatefulRuleGetArgs>> getStatefulRules() {
+        return this.statefulRules == null ? Output.empty() : this.statefulRules;
     }
 
     /**
@@ -56,17 +56,17 @@ public final class RuleGroupRuleGroupRulesSourceGetArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="statelessRulesAndCustomActions")
-      private final @Nullable Input<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsGetArgs> statelessRulesAndCustomActions;
+      private final @Nullable Output<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsGetArgs> statelessRulesAndCustomActions;
 
-    public Input<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsGetArgs> getStatelessRulesAndCustomActions() {
-        return this.statelessRulesAndCustomActions == null ? Input.empty() : this.statelessRulesAndCustomActions;
+    public Output<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsGetArgs> getStatelessRulesAndCustomActions() {
+        return this.statelessRulesAndCustomActions == null ? Output.empty() : this.statelessRulesAndCustomActions;
     }
 
     public RuleGroupRuleGroupRulesSourceGetArgs(
-        @Nullable Input<RuleGroupRuleGroupRulesSourceRulesSourceListGetArgs> rulesSourceList,
-        @Nullable Input<String> rulesString,
-        @Nullable Input<List<RuleGroupRuleGroupRulesSourceStatefulRuleGetArgs>> statefulRules,
-        @Nullable Input<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsGetArgs> statelessRulesAndCustomActions) {
+        @Nullable Output<RuleGroupRuleGroupRulesSourceRulesSourceListGetArgs> rulesSourceList,
+        @Nullable Output<String> rulesString,
+        @Nullable Output<List<RuleGroupRuleGroupRulesSourceStatefulRuleGetArgs>> statefulRules,
+        @Nullable Output<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsGetArgs> statelessRulesAndCustomActions) {
         this.rulesSourceList = rulesSourceList;
         this.rulesString = rulesString;
         this.statefulRules = statefulRules;
@@ -74,10 +74,10 @@ public final class RuleGroupRuleGroupRulesSourceGetArgs extends io.pulumi.resour
     }
 
     private RuleGroupRuleGroupRulesSourceGetArgs() {
-        this.rulesSourceList = Input.empty();
-        this.rulesString = Input.empty();
-        this.statefulRules = Input.empty();
-        this.statelessRulesAndCustomActions = Input.empty();
+        this.rulesSourceList = Output.empty();
+        this.rulesString = Output.empty();
+        this.statefulRules = Output.empty();
+        this.statelessRulesAndCustomActions = Output.empty();
     }
 
     public static Builder builder() {
@@ -89,10 +89,10 @@ public final class RuleGroupRuleGroupRulesSourceGetArgs extends io.pulumi.resour
     }
 
     public static final class Builder {
-        private @Nullable Input<RuleGroupRuleGroupRulesSourceRulesSourceListGetArgs> rulesSourceList;
-        private @Nullable Input<String> rulesString;
-        private @Nullable Input<List<RuleGroupRuleGroupRulesSourceStatefulRuleGetArgs>> statefulRules;
-        private @Nullable Input<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsGetArgs> statelessRulesAndCustomActions;
+        private @Nullable Output<RuleGroupRuleGroupRulesSourceRulesSourceListGetArgs> rulesSourceList;
+        private @Nullable Output<String> rulesString;
+        private @Nullable Output<List<RuleGroupRuleGroupRulesSourceStatefulRuleGetArgs>> statefulRules;
+        private @Nullable Output<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsGetArgs> statelessRulesAndCustomActions;
 
         public Builder() {
     	      // Empty
@@ -106,43 +106,43 @@ public final class RuleGroupRuleGroupRulesSourceGetArgs extends io.pulumi.resour
     	      this.statelessRulesAndCustomActions = defaults.statelessRulesAndCustomActions;
         }
 
-        public Builder rulesSourceList(@Nullable Input<RuleGroupRuleGroupRulesSourceRulesSourceListGetArgs> rulesSourceList) {
+        public Builder rulesSourceList(@Nullable Output<RuleGroupRuleGroupRulesSourceRulesSourceListGetArgs> rulesSourceList) {
             this.rulesSourceList = rulesSourceList;
             return this;
         }
 
         public Builder rulesSourceList(@Nullable RuleGroupRuleGroupRulesSourceRulesSourceListGetArgs rulesSourceList) {
-            this.rulesSourceList = Input.ofNullable(rulesSourceList);
+            this.rulesSourceList = Output.ofNullable(rulesSourceList);
             return this;
         }
 
-        public Builder rulesString(@Nullable Input<String> rulesString) {
+        public Builder rulesString(@Nullable Output<String> rulesString) {
             this.rulesString = rulesString;
             return this;
         }
 
         public Builder rulesString(@Nullable String rulesString) {
-            this.rulesString = Input.ofNullable(rulesString);
+            this.rulesString = Output.ofNullable(rulesString);
             return this;
         }
 
-        public Builder statefulRules(@Nullable Input<List<RuleGroupRuleGroupRulesSourceStatefulRuleGetArgs>> statefulRules) {
+        public Builder statefulRules(@Nullable Output<List<RuleGroupRuleGroupRulesSourceStatefulRuleGetArgs>> statefulRules) {
             this.statefulRules = statefulRules;
             return this;
         }
 
         public Builder statefulRules(@Nullable List<RuleGroupRuleGroupRulesSourceStatefulRuleGetArgs> statefulRules) {
-            this.statefulRules = Input.ofNullable(statefulRules);
+            this.statefulRules = Output.ofNullable(statefulRules);
             return this;
         }
 
-        public Builder statelessRulesAndCustomActions(@Nullable Input<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsGetArgs> statelessRulesAndCustomActions) {
+        public Builder statelessRulesAndCustomActions(@Nullable Output<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsGetArgs> statelessRulesAndCustomActions) {
             this.statelessRulesAndCustomActions = statelessRulesAndCustomActions;
             return this;
         }
 
         public Builder statelessRulesAndCustomActions(@Nullable RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsGetArgs statelessRulesAndCustomActions) {
-            this.statelessRulesAndCustomActions = Input.ofNullable(statelessRulesAndCustomActions);
+            this.statelessRulesAndCustomActions = Output.ofNullable(statelessRulesAndCustomActions);
             return this;
         }
         public RuleGroupRuleGroupRulesSourceGetArgs build() {

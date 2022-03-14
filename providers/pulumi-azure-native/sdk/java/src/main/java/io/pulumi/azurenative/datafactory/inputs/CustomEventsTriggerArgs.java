@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.datafactory.inputs;
 
 import io.pulumi.azurenative.datafactory.inputs.TriggerPipelineReferenceArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
@@ -26,10 +26,10 @@ public final class CustomEventsTriggerArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="annotations")
-      private final @Nullable Input<List<Object>> annotations;
+      private final @Nullable Output<List<Object>> annotations;
 
-    public Input<List<Object>> getAnnotations() {
-        return this.annotations == null ? Input.empty() : this.annotations;
+    public Output<List<Object>> getAnnotations() {
+        return this.annotations == null ? Output.empty() : this.annotations;
     }
 
     /**
@@ -37,10 +37,10 @@ public final class CustomEventsTriggerArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -48,9 +48,9 @@ public final class CustomEventsTriggerArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="events", required=true)
-      private final Input<List<Object>> events;
+      private final Output<List<Object>> events;
 
-    public Input<List<Object>> getEvents() {
+    public Output<List<Object>> getEvents() {
         return this.events;
     }
 
@@ -59,10 +59,10 @@ public final class CustomEventsTriggerArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="pipelines")
-      private final @Nullable Input<List<TriggerPipelineReferenceArgs>> pipelines;
+      private final @Nullable Output<List<TriggerPipelineReferenceArgs>> pipelines;
 
-    public Input<List<TriggerPipelineReferenceArgs>> getPipelines() {
-        return this.pipelines == null ? Input.empty() : this.pipelines;
+    public Output<List<TriggerPipelineReferenceArgs>> getPipelines() {
+        return this.pipelines == null ? Output.empty() : this.pipelines;
     }
 
     /**
@@ -70,9 +70,9 @@ public final class CustomEventsTriggerArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="scope", required=true)
-      private final Input<String> scope;
+      private final Output<String> scope;
 
-    public Input<String> getScope() {
+    public Output<String> getScope() {
         return this.scope;
     }
 
@@ -81,10 +81,10 @@ public final class CustomEventsTriggerArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="subjectBeginsWith")
-      private final @Nullable Input<String> subjectBeginsWith;
+      private final @Nullable Output<String> subjectBeginsWith;
 
-    public Input<String> getSubjectBeginsWith() {
-        return this.subjectBeginsWith == null ? Input.empty() : this.subjectBeginsWith;
+    public Output<String> getSubjectBeginsWith() {
+        return this.subjectBeginsWith == null ? Output.empty() : this.subjectBeginsWith;
     }
 
     /**
@@ -92,10 +92,10 @@ public final class CustomEventsTriggerArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="subjectEndsWith")
-      private final @Nullable Input<String> subjectEndsWith;
+      private final @Nullable Output<String> subjectEndsWith;
 
-    public Input<String> getSubjectEndsWith() {
-        return this.subjectEndsWith == null ? Input.empty() : this.subjectEndsWith;
+    public Output<String> getSubjectEndsWith() {
+        return this.subjectEndsWith == null ? Output.empty() : this.subjectEndsWith;
     }
 
     /**
@@ -104,21 +104,21 @@ public final class CustomEventsTriggerArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<String> type;
+      private final Output<String> type;
 
-    public Input<String> getType() {
+    public Output<String> getType() {
         return this.type;
     }
 
     public CustomEventsTriggerArgs(
-        @Nullable Input<List<Object>> annotations,
-        @Nullable Input<String> description,
-        Input<List<Object>> events,
-        @Nullable Input<List<TriggerPipelineReferenceArgs>> pipelines,
-        Input<String> scope,
-        @Nullable Input<String> subjectBeginsWith,
-        @Nullable Input<String> subjectEndsWith,
-        Input<String> type) {
+        @Nullable Output<List<Object>> annotations,
+        @Nullable Output<String> description,
+        Output<List<Object>> events,
+        @Nullable Output<List<TriggerPipelineReferenceArgs>> pipelines,
+        Output<String> scope,
+        @Nullable Output<String> subjectBeginsWith,
+        @Nullable Output<String> subjectEndsWith,
+        Output<String> type) {
         this.annotations = annotations;
         this.description = description;
         this.events = Objects.requireNonNull(events, "expected parameter 'events' to be non-null");
@@ -130,14 +130,14 @@ public final class CustomEventsTriggerArgs extends io.pulumi.resources.ResourceA
     }
 
     private CustomEventsTriggerArgs() {
-        this.annotations = Input.empty();
-        this.description = Input.empty();
-        this.events = Input.empty();
-        this.pipelines = Input.empty();
-        this.scope = Input.empty();
-        this.subjectBeginsWith = Input.empty();
-        this.subjectEndsWith = Input.empty();
-        this.type = Input.empty();
+        this.annotations = Output.empty();
+        this.description = Output.empty();
+        this.events = Output.empty();
+        this.pipelines = Output.empty();
+        this.scope = Output.empty();
+        this.subjectBeginsWith = Output.empty();
+        this.subjectEndsWith = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -149,14 +149,14 @@ public final class CustomEventsTriggerArgs extends io.pulumi.resources.ResourceA
     }
 
     public static final class Builder {
-        private @Nullable Input<List<Object>> annotations;
-        private @Nullable Input<String> description;
-        private Input<List<Object>> events;
-        private @Nullable Input<List<TriggerPipelineReferenceArgs>> pipelines;
-        private Input<String> scope;
-        private @Nullable Input<String> subjectBeginsWith;
-        private @Nullable Input<String> subjectEndsWith;
-        private Input<String> type;
+        private @Nullable Output<List<Object>> annotations;
+        private @Nullable Output<String> description;
+        private Output<List<Object>> events;
+        private @Nullable Output<List<TriggerPipelineReferenceArgs>> pipelines;
+        private Output<String> scope;
+        private @Nullable Output<String> subjectBeginsWith;
+        private @Nullable Output<String> subjectEndsWith;
+        private Output<String> type;
 
         public Builder() {
     	      // Empty
@@ -174,83 +174,83 @@ public final class CustomEventsTriggerArgs extends io.pulumi.resources.ResourceA
     	      this.type = defaults.type;
         }
 
-        public Builder annotations(@Nullable Input<List<Object>> annotations) {
+        public Builder annotations(@Nullable Output<List<Object>> annotations) {
             this.annotations = annotations;
             return this;
         }
 
         public Builder annotations(@Nullable List<Object> annotations) {
-            this.annotations = Input.ofNullable(annotations);
+            this.annotations = Output.ofNullable(annotations);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder events(Input<List<Object>> events) {
+        public Builder events(Output<List<Object>> events) {
             this.events = Objects.requireNonNull(events);
             return this;
         }
 
         public Builder events(List<Object> events) {
-            this.events = Input.of(Objects.requireNonNull(events));
+            this.events = Output.of(Objects.requireNonNull(events));
             return this;
         }
 
-        public Builder pipelines(@Nullable Input<List<TriggerPipelineReferenceArgs>> pipelines) {
+        public Builder pipelines(@Nullable Output<List<TriggerPipelineReferenceArgs>> pipelines) {
             this.pipelines = pipelines;
             return this;
         }
 
         public Builder pipelines(@Nullable List<TriggerPipelineReferenceArgs> pipelines) {
-            this.pipelines = Input.ofNullable(pipelines);
+            this.pipelines = Output.ofNullable(pipelines);
             return this;
         }
 
-        public Builder scope(Input<String> scope) {
+        public Builder scope(Output<String> scope) {
             this.scope = Objects.requireNonNull(scope);
             return this;
         }
 
         public Builder scope(String scope) {
-            this.scope = Input.of(Objects.requireNonNull(scope));
+            this.scope = Output.of(Objects.requireNonNull(scope));
             return this;
         }
 
-        public Builder subjectBeginsWith(@Nullable Input<String> subjectBeginsWith) {
+        public Builder subjectBeginsWith(@Nullable Output<String> subjectBeginsWith) {
             this.subjectBeginsWith = subjectBeginsWith;
             return this;
         }
 
         public Builder subjectBeginsWith(@Nullable String subjectBeginsWith) {
-            this.subjectBeginsWith = Input.ofNullable(subjectBeginsWith);
+            this.subjectBeginsWith = Output.ofNullable(subjectBeginsWith);
             return this;
         }
 
-        public Builder subjectEndsWith(@Nullable Input<String> subjectEndsWith) {
+        public Builder subjectEndsWith(@Nullable Output<String> subjectEndsWith) {
             this.subjectEndsWith = subjectEndsWith;
             return this;
         }
 
         public Builder subjectEndsWith(@Nullable String subjectEndsWith) {
-            this.subjectEndsWith = Input.ofNullable(subjectEndsWith);
+            this.subjectEndsWith = Output.ofNullable(subjectEndsWith);
             return this;
         }
 
-        public Builder type(Input<String> type) {
+        public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(String type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
         public CustomEventsTriggerArgs build() {

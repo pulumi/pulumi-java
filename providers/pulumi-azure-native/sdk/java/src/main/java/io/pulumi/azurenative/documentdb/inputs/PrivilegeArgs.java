@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.documentdb.inputs;
 
 import io.pulumi.azurenative.documentdb.inputs.PrivilegeResourceArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -25,10 +25,10 @@ public final class PrivilegeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="actions")
-      private final @Nullable Input<List<String>> actions;
+      private final @Nullable Output<List<String>> actions;
 
-    public Input<List<String>> getActions() {
-        return this.actions == null ? Input.empty() : this.actions;
+    public Output<List<String>> getActions() {
+        return this.actions == null ? Output.empty() : this.actions;
     }
 
     /**
@@ -36,22 +36,22 @@ public final class PrivilegeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resource")
-      private final @Nullable Input<PrivilegeResourceArgs> resource;
+      private final @Nullable Output<PrivilegeResourceArgs> resource;
 
-    public Input<PrivilegeResourceArgs> getResource() {
-        return this.resource == null ? Input.empty() : this.resource;
+    public Output<PrivilegeResourceArgs> getResource() {
+        return this.resource == null ? Output.empty() : this.resource;
     }
 
     public PrivilegeArgs(
-        @Nullable Input<List<String>> actions,
-        @Nullable Input<PrivilegeResourceArgs> resource) {
+        @Nullable Output<List<String>> actions,
+        @Nullable Output<PrivilegeResourceArgs> resource) {
         this.actions = actions;
         this.resource = resource;
     }
 
     private PrivilegeArgs() {
-        this.actions = Input.empty();
-        this.resource = Input.empty();
+        this.actions = Output.empty();
+        this.resource = Output.empty();
     }
 
     public static Builder builder() {
@@ -63,8 +63,8 @@ public final class PrivilegeArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> actions;
-        private @Nullable Input<PrivilegeResourceArgs> resource;
+        private @Nullable Output<List<String>> actions;
+        private @Nullable Output<PrivilegeResourceArgs> resource;
 
         public Builder() {
     	      // Empty
@@ -76,23 +76,23 @@ public final class PrivilegeArgs extends io.pulumi.resources.ResourceArgs {
     	      this.resource = defaults.resource;
         }
 
-        public Builder actions(@Nullable Input<List<String>> actions) {
+        public Builder actions(@Nullable Output<List<String>> actions) {
             this.actions = actions;
             return this;
         }
 
         public Builder actions(@Nullable List<String> actions) {
-            this.actions = Input.ofNullable(actions);
+            this.actions = Output.ofNullable(actions);
             return this;
         }
 
-        public Builder resource(@Nullable Input<PrivilegeResourceArgs> resource) {
+        public Builder resource(@Nullable Output<PrivilegeResourceArgs> resource) {
             this.resource = resource;
             return this;
         }
 
         public Builder resource(@Nullable PrivilegeResourceArgs resource) {
-            this.resource = Input.ofNullable(resource);
+            this.resource = Output.ofNullable(resource);
             return this;
         }
         public PrivilegeArgs build() {

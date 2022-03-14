@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.documentdb.inputs;
 
 import io.pulumi.azurenative.documentdb.inputs.IndexesArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -25,10 +25,10 @@ public final class IncludedPathArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="indexes")
-      private final @Nullable Input<List<IndexesArgs>> indexes;
+      private final @Nullable Output<List<IndexesArgs>> indexes;
 
-    public Input<List<IndexesArgs>> getIndexes() {
-        return this.indexes == null ? Input.empty() : this.indexes;
+    public Output<List<IndexesArgs>> getIndexes() {
+        return this.indexes == null ? Output.empty() : this.indexes;
     }
 
     /**
@@ -36,22 +36,22 @@ public final class IncludedPathArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="path")
-      private final @Nullable Input<String> path;
+      private final @Nullable Output<String> path;
 
-    public Input<String> getPath() {
-        return this.path == null ? Input.empty() : this.path;
+    public Output<String> getPath() {
+        return this.path == null ? Output.empty() : this.path;
     }
 
     public IncludedPathArgs(
-        @Nullable Input<List<IndexesArgs>> indexes,
-        @Nullable Input<String> path) {
+        @Nullable Output<List<IndexesArgs>> indexes,
+        @Nullable Output<String> path) {
         this.indexes = indexes;
         this.path = path;
     }
 
     private IncludedPathArgs() {
-        this.indexes = Input.empty();
-        this.path = Input.empty();
+        this.indexes = Output.empty();
+        this.path = Output.empty();
     }
 
     public static Builder builder() {
@@ -63,8 +63,8 @@ public final class IncludedPathArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<List<IndexesArgs>> indexes;
-        private @Nullable Input<String> path;
+        private @Nullable Output<List<IndexesArgs>> indexes;
+        private @Nullable Output<String> path;
 
         public Builder() {
     	      // Empty
@@ -76,23 +76,23 @@ public final class IncludedPathArgs extends io.pulumi.resources.ResourceArgs {
     	      this.path = defaults.path;
         }
 
-        public Builder indexes(@Nullable Input<List<IndexesArgs>> indexes) {
+        public Builder indexes(@Nullable Output<List<IndexesArgs>> indexes) {
             this.indexes = indexes;
             return this;
         }
 
         public Builder indexes(@Nullable List<IndexesArgs> indexes) {
-            this.indexes = Input.ofNullable(indexes);
+            this.indexes = Output.ofNullable(indexes);
             return this;
         }
 
-        public Builder path(@Nullable Input<String> path) {
+        public Builder path(@Nullable Output<String> path) {
             this.path = path;
             return this;
         }
 
         public Builder path(@Nullable String path) {
-            this.path = Input.ofNullable(path);
+            this.path = Output.ofNullable(path);
             return this;
         }
         public IncludedPathArgs build() {

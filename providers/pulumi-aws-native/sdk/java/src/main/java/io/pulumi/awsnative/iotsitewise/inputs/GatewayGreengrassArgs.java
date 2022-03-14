@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.iotsitewise.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -22,18 +22,18 @@ public final class GatewayGreengrassArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="groupArn", required=true)
-      private final Input<String> groupArn;
+      private final Output<String> groupArn;
 
-    public Input<String> getGroupArn() {
+    public Output<String> getGroupArn() {
         return this.groupArn;
     }
 
-    public GatewayGreengrassArgs(Input<String> groupArn) {
+    public GatewayGreengrassArgs(Output<String> groupArn) {
         this.groupArn = Objects.requireNonNull(groupArn, "expected parameter 'groupArn' to be non-null");
     }
 
     private GatewayGreengrassArgs() {
-        this.groupArn = Input.empty();
+        this.groupArn = Output.empty();
     }
 
     public static Builder builder() {
@@ -45,7 +45,7 @@ public final class GatewayGreengrassArgs extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private Input<String> groupArn;
+        private Output<String> groupArn;
 
         public Builder() {
     	      // Empty
@@ -56,13 +56,13 @@ public final class GatewayGreengrassArgs extends io.pulumi.resources.ResourceArg
     	      this.groupArn = defaults.groupArn;
         }
 
-        public Builder groupArn(Input<String> groupArn) {
+        public Builder groupArn(Output<String> groupArn) {
             this.groupArn = Objects.requireNonNull(groupArn);
             return this;
         }
 
         public Builder groupArn(String groupArn) {
-            this.groupArn = Input.of(Objects.requireNonNull(groupArn));
+            this.groupArn = Output.of(Objects.requireNonNull(groupArn));
             return this;
         }
         public GatewayGreengrassArgs build() {

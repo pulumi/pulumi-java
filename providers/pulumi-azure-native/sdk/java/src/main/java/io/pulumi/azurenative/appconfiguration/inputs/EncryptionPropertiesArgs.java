@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.appconfiguration.inputs;
 
 import io.pulumi.azurenative.appconfiguration.inputs.KeyVaultPropertiesArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,18 +23,18 @@ public final class EncryptionPropertiesArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="keyVaultProperties")
-      private final @Nullable Input<KeyVaultPropertiesArgs> keyVaultProperties;
+      private final @Nullable Output<KeyVaultPropertiesArgs> keyVaultProperties;
 
-    public Input<KeyVaultPropertiesArgs> getKeyVaultProperties() {
-        return this.keyVaultProperties == null ? Input.empty() : this.keyVaultProperties;
+    public Output<KeyVaultPropertiesArgs> getKeyVaultProperties() {
+        return this.keyVaultProperties == null ? Output.empty() : this.keyVaultProperties;
     }
 
-    public EncryptionPropertiesArgs(@Nullable Input<KeyVaultPropertiesArgs> keyVaultProperties) {
+    public EncryptionPropertiesArgs(@Nullable Output<KeyVaultPropertiesArgs> keyVaultProperties) {
         this.keyVaultProperties = keyVaultProperties;
     }
 
     private EncryptionPropertiesArgs() {
-        this.keyVaultProperties = Input.empty();
+        this.keyVaultProperties = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class EncryptionPropertiesArgs extends io.pulumi.resources.Resource
     }
 
     public static final class Builder {
-        private @Nullable Input<KeyVaultPropertiesArgs> keyVaultProperties;
+        private @Nullable Output<KeyVaultPropertiesArgs> keyVaultProperties;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class EncryptionPropertiesArgs extends io.pulumi.resources.Resource
     	      this.keyVaultProperties = defaults.keyVaultProperties;
         }
 
-        public Builder keyVaultProperties(@Nullable Input<KeyVaultPropertiesArgs> keyVaultProperties) {
+        public Builder keyVaultProperties(@Nullable Output<KeyVaultPropertiesArgs> keyVaultProperties) {
             this.keyVaultProperties = keyVaultProperties;
             return this;
         }
 
         public Builder keyVaultProperties(@Nullable KeyVaultPropertiesArgs keyVaultProperties) {
-            this.keyVaultProperties = Input.ofNullable(keyVaultProperties);
+            this.keyVaultProperties = Output.ofNullable(keyVaultProperties);
             return this;
         }
         public EncryptionPropertiesArgs build() {

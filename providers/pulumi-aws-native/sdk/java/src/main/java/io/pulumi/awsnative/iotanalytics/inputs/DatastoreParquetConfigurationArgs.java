@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.iotanalytics.inputs;
 
 import io.pulumi.awsnative.iotanalytics.inputs.DatastoreSchemaDefinitionArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -15,18 +15,18 @@ public final class DatastoreParquetConfigurationArgs extends io.pulumi.resources
     public static final DatastoreParquetConfigurationArgs Empty = new DatastoreParquetConfigurationArgs();
 
     @InputImport(name="schemaDefinition")
-      private final @Nullable Input<DatastoreSchemaDefinitionArgs> schemaDefinition;
+      private final @Nullable Output<DatastoreSchemaDefinitionArgs> schemaDefinition;
 
-    public Input<DatastoreSchemaDefinitionArgs> getSchemaDefinition() {
-        return this.schemaDefinition == null ? Input.empty() : this.schemaDefinition;
+    public Output<DatastoreSchemaDefinitionArgs> getSchemaDefinition() {
+        return this.schemaDefinition == null ? Output.empty() : this.schemaDefinition;
     }
 
-    public DatastoreParquetConfigurationArgs(@Nullable Input<DatastoreSchemaDefinitionArgs> schemaDefinition) {
+    public DatastoreParquetConfigurationArgs(@Nullable Output<DatastoreSchemaDefinitionArgs> schemaDefinition) {
         this.schemaDefinition = schemaDefinition;
     }
 
     private DatastoreParquetConfigurationArgs() {
-        this.schemaDefinition = Input.empty();
+        this.schemaDefinition = Output.empty();
     }
 
     public static Builder builder() {
@@ -38,7 +38,7 @@ public final class DatastoreParquetConfigurationArgs extends io.pulumi.resources
     }
 
     public static final class Builder {
-        private @Nullable Input<DatastoreSchemaDefinitionArgs> schemaDefinition;
+        private @Nullable Output<DatastoreSchemaDefinitionArgs> schemaDefinition;
 
         public Builder() {
     	      // Empty
@@ -49,13 +49,13 @@ public final class DatastoreParquetConfigurationArgs extends io.pulumi.resources
     	      this.schemaDefinition = defaults.schemaDefinition;
         }
 
-        public Builder schemaDefinition(@Nullable Input<DatastoreSchemaDefinitionArgs> schemaDefinition) {
+        public Builder schemaDefinition(@Nullable Output<DatastoreSchemaDefinitionArgs> schemaDefinition) {
             this.schemaDefinition = schemaDefinition;
             return this;
         }
 
         public Builder schemaDefinition(@Nullable DatastoreSchemaDefinitionArgs schemaDefinition) {
-            this.schemaDefinition = Input.ofNullable(schemaDefinition);
+            this.schemaDefinition = Output.ofNullable(schemaDefinition);
             return this;
         }
         public DatastoreParquetConfigurationArgs build() {

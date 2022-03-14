@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -25,10 +25,10 @@ public final class RegionPerInstanceConfigPreservedStateDiskGetArgs extends io.p
      * 
      */
     @InputImport(name="deleteRule")
-      private final @Nullable Input<String> deleteRule;
+      private final @Nullable Output<String> deleteRule;
 
-    public Input<String> getDeleteRule() {
-        return this.deleteRule == null ? Input.empty() : this.deleteRule;
+    public Output<String> getDeleteRule() {
+        return this.deleteRule == null ? Output.empty() : this.deleteRule;
     }
 
     /**
@@ -36,9 +36,9 @@ public final class RegionPerInstanceConfigPreservedStateDiskGetArgs extends io.p
      * 
      */
     @InputImport(name="deviceName", required=true)
-      private final Input<String> deviceName;
+      private final Output<String> deviceName;
 
-    public Input<String> getDeviceName() {
+    public Output<String> getDeviceName() {
         return this.deviceName;
     }
 
@@ -49,10 +49,10 @@ public final class RegionPerInstanceConfigPreservedStateDiskGetArgs extends io.p
      * 
      */
     @InputImport(name="mode")
-      private final @Nullable Input<String> mode;
+      private final @Nullable Output<String> mode;
 
-    public Input<String> getMode() {
-        return this.mode == null ? Input.empty() : this.mode;
+    public Output<String> getMode() {
+        return this.mode == null ? Output.empty() : this.mode;
     }
 
     /**
@@ -61,17 +61,17 @@ public final class RegionPerInstanceConfigPreservedStateDiskGetArgs extends io.p
      * 
      */
     @InputImport(name="source", required=true)
-      private final Input<String> source;
+      private final Output<String> source;
 
-    public Input<String> getSource() {
+    public Output<String> getSource() {
         return this.source;
     }
 
     public RegionPerInstanceConfigPreservedStateDiskGetArgs(
-        @Nullable Input<String> deleteRule,
-        Input<String> deviceName,
-        @Nullable Input<String> mode,
-        Input<String> source) {
+        @Nullable Output<String> deleteRule,
+        Output<String> deviceName,
+        @Nullable Output<String> mode,
+        Output<String> source) {
         this.deleteRule = deleteRule;
         this.deviceName = Objects.requireNonNull(deviceName, "expected parameter 'deviceName' to be non-null");
         this.mode = mode;
@@ -79,10 +79,10 @@ public final class RegionPerInstanceConfigPreservedStateDiskGetArgs extends io.p
     }
 
     private RegionPerInstanceConfigPreservedStateDiskGetArgs() {
-        this.deleteRule = Input.empty();
-        this.deviceName = Input.empty();
-        this.mode = Input.empty();
-        this.source = Input.empty();
+        this.deleteRule = Output.empty();
+        this.deviceName = Output.empty();
+        this.mode = Output.empty();
+        this.source = Output.empty();
     }
 
     public static Builder builder() {
@@ -94,10 +94,10 @@ public final class RegionPerInstanceConfigPreservedStateDiskGetArgs extends io.p
     }
 
     public static final class Builder {
-        private @Nullable Input<String> deleteRule;
-        private Input<String> deviceName;
-        private @Nullable Input<String> mode;
-        private Input<String> source;
+        private @Nullable Output<String> deleteRule;
+        private Output<String> deviceName;
+        private @Nullable Output<String> mode;
+        private Output<String> source;
 
         public Builder() {
     	      // Empty
@@ -111,43 +111,43 @@ public final class RegionPerInstanceConfigPreservedStateDiskGetArgs extends io.p
     	      this.source = defaults.source;
         }
 
-        public Builder deleteRule(@Nullable Input<String> deleteRule) {
+        public Builder deleteRule(@Nullable Output<String> deleteRule) {
             this.deleteRule = deleteRule;
             return this;
         }
 
         public Builder deleteRule(@Nullable String deleteRule) {
-            this.deleteRule = Input.ofNullable(deleteRule);
+            this.deleteRule = Output.ofNullable(deleteRule);
             return this;
         }
 
-        public Builder deviceName(Input<String> deviceName) {
+        public Builder deviceName(Output<String> deviceName) {
             this.deviceName = Objects.requireNonNull(deviceName);
             return this;
         }
 
         public Builder deviceName(String deviceName) {
-            this.deviceName = Input.of(Objects.requireNonNull(deviceName));
+            this.deviceName = Output.of(Objects.requireNonNull(deviceName));
             return this;
         }
 
-        public Builder mode(@Nullable Input<String> mode) {
+        public Builder mode(@Nullable Output<String> mode) {
             this.mode = mode;
             return this;
         }
 
         public Builder mode(@Nullable String mode) {
-            this.mode = Input.ofNullable(mode);
+            this.mode = Output.ofNullable(mode);
             return this;
         }
 
-        public Builder source(Input<String> source) {
+        public Builder source(Output<String> source) {
             this.source = Objects.requireNonNull(source);
             return this;
         }
 
         public Builder source(String source) {
-            this.source = Input.of(Objects.requireNonNull(source));
+            this.source = Output.of(Objects.requireNonNull(source));
             return this;
         }
         public RegionPerInstanceConfigPreservedStateDiskGetArgs build() {

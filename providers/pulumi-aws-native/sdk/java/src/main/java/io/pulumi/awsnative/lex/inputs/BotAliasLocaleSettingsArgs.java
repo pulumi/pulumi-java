@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.lex.inputs;
 
 import io.pulumi.awsnative.lex.inputs.BotAliasCodeHookSpecificationArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
@@ -20,10 +20,10 @@ public final class BotAliasLocaleSettingsArgs extends io.pulumi.resources.Resour
     public static final BotAliasLocaleSettingsArgs Empty = new BotAliasLocaleSettingsArgs();
 
     @InputImport(name="codeHookSpecification")
-      private final @Nullable Input<BotAliasCodeHookSpecificationArgs> codeHookSpecification;
+      private final @Nullable Output<BotAliasCodeHookSpecificationArgs> codeHookSpecification;
 
-    public Input<BotAliasCodeHookSpecificationArgs> getCodeHookSpecification() {
-        return this.codeHookSpecification == null ? Input.empty() : this.codeHookSpecification;
+    public Output<BotAliasCodeHookSpecificationArgs> getCodeHookSpecification() {
+        return this.codeHookSpecification == null ? Output.empty() : this.codeHookSpecification;
     }
 
     /**
@@ -31,22 +31,22 @@ public final class BotAliasLocaleSettingsArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="enabled", required=true)
-      private final Input<Boolean> enabled;
+      private final Output<Boolean> enabled;
 
-    public Input<Boolean> getEnabled() {
+    public Output<Boolean> getEnabled() {
         return this.enabled;
     }
 
     public BotAliasLocaleSettingsArgs(
-        @Nullable Input<BotAliasCodeHookSpecificationArgs> codeHookSpecification,
-        Input<Boolean> enabled) {
+        @Nullable Output<BotAliasCodeHookSpecificationArgs> codeHookSpecification,
+        Output<Boolean> enabled) {
         this.codeHookSpecification = codeHookSpecification;
         this.enabled = Objects.requireNonNull(enabled, "expected parameter 'enabled' to be non-null");
     }
 
     private BotAliasLocaleSettingsArgs() {
-        this.codeHookSpecification = Input.empty();
-        this.enabled = Input.empty();
+        this.codeHookSpecification = Output.empty();
+        this.enabled = Output.empty();
     }
 
     public static Builder builder() {
@@ -58,8 +58,8 @@ public final class BotAliasLocaleSettingsArgs extends io.pulumi.resources.Resour
     }
 
     public static final class Builder {
-        private @Nullable Input<BotAliasCodeHookSpecificationArgs> codeHookSpecification;
-        private Input<Boolean> enabled;
+        private @Nullable Output<BotAliasCodeHookSpecificationArgs> codeHookSpecification;
+        private Output<Boolean> enabled;
 
         public Builder() {
     	      // Empty
@@ -71,23 +71,23 @@ public final class BotAliasLocaleSettingsArgs extends io.pulumi.resources.Resour
     	      this.enabled = defaults.enabled;
         }
 
-        public Builder codeHookSpecification(@Nullable Input<BotAliasCodeHookSpecificationArgs> codeHookSpecification) {
+        public Builder codeHookSpecification(@Nullable Output<BotAliasCodeHookSpecificationArgs> codeHookSpecification) {
             this.codeHookSpecification = codeHookSpecification;
             return this;
         }
 
         public Builder codeHookSpecification(@Nullable BotAliasCodeHookSpecificationArgs codeHookSpecification) {
-            this.codeHookSpecification = Input.ofNullable(codeHookSpecification);
+            this.codeHookSpecification = Output.ofNullable(codeHookSpecification);
             return this;
         }
 
-        public Builder enabled(Input<Boolean> enabled) {
+        public Builder enabled(Output<Boolean> enabled) {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
 
         public Builder enabled(Boolean enabled) {
-            this.enabled = Input.of(Objects.requireNonNull(enabled));
+            this.enabled = Output.of(Objects.requireNonNull(enabled));
             return this;
         }
         public BotAliasLocaleSettingsArgs build() {

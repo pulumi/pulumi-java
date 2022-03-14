@@ -5,7 +5,7 @@ package io.pulumi.azurenative.connectedvmwarevsphere.inputs;
 
 import io.pulumi.azurenative.connectedvmwarevsphere.enums.IPAddressAllocationMethod;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -26,10 +26,10 @@ public final class NicIPSettingsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="allocationMethod")
-      private final @Nullable Input<Either<String,IPAddressAllocationMethod>> allocationMethod;
+      private final @Nullable Output<Either<String,IPAddressAllocationMethod>> allocationMethod;
 
-    public Input<Either<String,IPAddressAllocationMethod>> getAllocationMethod() {
-        return this.allocationMethod == null ? Input.empty() : this.allocationMethod;
+    public Output<Either<String,IPAddressAllocationMethod>> getAllocationMethod() {
+        return this.allocationMethod == null ? Output.empty() : this.allocationMethod;
     }
 
     /**
@@ -37,10 +37,10 @@ public final class NicIPSettingsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dnsServers")
-      private final @Nullable Input<List<String>> dnsServers;
+      private final @Nullable Output<List<String>> dnsServers;
 
-    public Input<List<String>> getDnsServers() {
-        return this.dnsServers == null ? Input.empty() : this.dnsServers;
+    public Output<List<String>> getDnsServers() {
+        return this.dnsServers == null ? Output.empty() : this.dnsServers;
     }
 
     /**
@@ -48,10 +48,10 @@ public final class NicIPSettingsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="gateway")
-      private final @Nullable Input<List<String>> gateway;
+      private final @Nullable Output<List<String>> gateway;
 
-    public Input<List<String>> getGateway() {
-        return this.gateway == null ? Input.empty() : this.gateway;
+    public Output<List<String>> getGateway() {
+        return this.gateway == null ? Output.empty() : this.gateway;
     }
 
     /**
@@ -59,10 +59,10 @@ public final class NicIPSettingsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ipAddress")
-      private final @Nullable Input<String> ipAddress;
+      private final @Nullable Output<String> ipAddress;
 
-    public Input<String> getIpAddress() {
-        return this.ipAddress == null ? Input.empty() : this.ipAddress;
+    public Output<String> getIpAddress() {
+        return this.ipAddress == null ? Output.empty() : this.ipAddress;
     }
 
     /**
@@ -70,18 +70,18 @@ public final class NicIPSettingsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="subnetMask")
-      private final @Nullable Input<String> subnetMask;
+      private final @Nullable Output<String> subnetMask;
 
-    public Input<String> getSubnetMask() {
-        return this.subnetMask == null ? Input.empty() : this.subnetMask;
+    public Output<String> getSubnetMask() {
+        return this.subnetMask == null ? Output.empty() : this.subnetMask;
     }
 
     public NicIPSettingsArgs(
-        @Nullable Input<Either<String,IPAddressAllocationMethod>> allocationMethod,
-        @Nullable Input<List<String>> dnsServers,
-        @Nullable Input<List<String>> gateway,
-        @Nullable Input<String> ipAddress,
-        @Nullable Input<String> subnetMask) {
+        @Nullable Output<Either<String,IPAddressAllocationMethod>> allocationMethod,
+        @Nullable Output<List<String>> dnsServers,
+        @Nullable Output<List<String>> gateway,
+        @Nullable Output<String> ipAddress,
+        @Nullable Output<String> subnetMask) {
         this.allocationMethod = allocationMethod;
         this.dnsServers = dnsServers;
         this.gateway = gateway;
@@ -90,11 +90,11 @@ public final class NicIPSettingsArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private NicIPSettingsArgs() {
-        this.allocationMethod = Input.empty();
-        this.dnsServers = Input.empty();
-        this.gateway = Input.empty();
-        this.ipAddress = Input.empty();
-        this.subnetMask = Input.empty();
+        this.allocationMethod = Output.empty();
+        this.dnsServers = Output.empty();
+        this.gateway = Output.empty();
+        this.ipAddress = Output.empty();
+        this.subnetMask = Output.empty();
     }
 
     public static Builder builder() {
@@ -106,11 +106,11 @@ public final class NicIPSettingsArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Either<String,IPAddressAllocationMethod>> allocationMethod;
-        private @Nullable Input<List<String>> dnsServers;
-        private @Nullable Input<List<String>> gateway;
-        private @Nullable Input<String> ipAddress;
-        private @Nullable Input<String> subnetMask;
+        private @Nullable Output<Either<String,IPAddressAllocationMethod>> allocationMethod;
+        private @Nullable Output<List<String>> dnsServers;
+        private @Nullable Output<List<String>> gateway;
+        private @Nullable Output<String> ipAddress;
+        private @Nullable Output<String> subnetMask;
 
         public Builder() {
     	      // Empty
@@ -125,53 +125,53 @@ public final class NicIPSettingsArgs extends io.pulumi.resources.ResourceArgs {
     	      this.subnetMask = defaults.subnetMask;
         }
 
-        public Builder allocationMethod(@Nullable Input<Either<String,IPAddressAllocationMethod>> allocationMethod) {
+        public Builder allocationMethod(@Nullable Output<Either<String,IPAddressAllocationMethod>> allocationMethod) {
             this.allocationMethod = allocationMethod;
             return this;
         }
 
         public Builder allocationMethod(@Nullable Either<String,IPAddressAllocationMethod> allocationMethod) {
-            this.allocationMethod = Input.ofNullable(allocationMethod);
+            this.allocationMethod = Output.ofNullable(allocationMethod);
             return this;
         }
 
-        public Builder dnsServers(@Nullable Input<List<String>> dnsServers) {
+        public Builder dnsServers(@Nullable Output<List<String>> dnsServers) {
             this.dnsServers = dnsServers;
             return this;
         }
 
         public Builder dnsServers(@Nullable List<String> dnsServers) {
-            this.dnsServers = Input.ofNullable(dnsServers);
+            this.dnsServers = Output.ofNullable(dnsServers);
             return this;
         }
 
-        public Builder gateway(@Nullable Input<List<String>> gateway) {
+        public Builder gateway(@Nullable Output<List<String>> gateway) {
             this.gateway = gateway;
             return this;
         }
 
         public Builder gateway(@Nullable List<String> gateway) {
-            this.gateway = Input.ofNullable(gateway);
+            this.gateway = Output.ofNullable(gateway);
             return this;
         }
 
-        public Builder ipAddress(@Nullable Input<String> ipAddress) {
+        public Builder ipAddress(@Nullable Output<String> ipAddress) {
             this.ipAddress = ipAddress;
             return this;
         }
 
         public Builder ipAddress(@Nullable String ipAddress) {
-            this.ipAddress = Input.ofNullable(ipAddress);
+            this.ipAddress = Output.ofNullable(ipAddress);
             return this;
         }
 
-        public Builder subnetMask(@Nullable Input<String> subnetMask) {
+        public Builder subnetMask(@Nullable Output<String> subnetMask) {
             this.subnetMask = subnetMask;
             return this;
         }
 
         public Builder subnetMask(@Nullable String subnetMask) {
-            this.subnetMask = Input.ofNullable(subnetMask);
+            this.subnetMask = Output.ofNullable(subnetMask);
             return this;
         }
         public NicIPSettingsArgs build() {

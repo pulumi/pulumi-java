@@ -5,7 +5,7 @@ package io.pulumi.awsnative.connect.inputs;
 
 import io.pulumi.awsnative.connect.enums.HoursOfOperationConfigDay;
 import io.pulumi.awsnative.connect.inputs.HoursOfOperationTimeSliceArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 
@@ -23,9 +23,9 @@ public final class HoursOfOperationConfigArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="day", required=true)
-      private final Input<HoursOfOperationConfigDay> day;
+      private final Output<HoursOfOperationConfigDay> day;
 
-    public Input<HoursOfOperationConfigDay> getDay() {
+    public Output<HoursOfOperationConfigDay> getDay() {
         return this.day;
     }
 
@@ -34,9 +34,9 @@ public final class HoursOfOperationConfigArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="endTime", required=true)
-      private final Input<HoursOfOperationTimeSliceArgs> endTime;
+      private final Output<HoursOfOperationTimeSliceArgs> endTime;
 
-    public Input<HoursOfOperationTimeSliceArgs> getEndTime() {
+    public Output<HoursOfOperationTimeSliceArgs> getEndTime() {
         return this.endTime;
     }
 
@@ -45,25 +45,25 @@ public final class HoursOfOperationConfigArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="startTime", required=true)
-      private final Input<HoursOfOperationTimeSliceArgs> startTime;
+      private final Output<HoursOfOperationTimeSliceArgs> startTime;
 
-    public Input<HoursOfOperationTimeSliceArgs> getStartTime() {
+    public Output<HoursOfOperationTimeSliceArgs> getStartTime() {
         return this.startTime;
     }
 
     public HoursOfOperationConfigArgs(
-        Input<HoursOfOperationConfigDay> day,
-        Input<HoursOfOperationTimeSliceArgs> endTime,
-        Input<HoursOfOperationTimeSliceArgs> startTime) {
+        Output<HoursOfOperationConfigDay> day,
+        Output<HoursOfOperationTimeSliceArgs> endTime,
+        Output<HoursOfOperationTimeSliceArgs> startTime) {
         this.day = Objects.requireNonNull(day, "expected parameter 'day' to be non-null");
         this.endTime = Objects.requireNonNull(endTime, "expected parameter 'endTime' to be non-null");
         this.startTime = Objects.requireNonNull(startTime, "expected parameter 'startTime' to be non-null");
     }
 
     private HoursOfOperationConfigArgs() {
-        this.day = Input.empty();
-        this.endTime = Input.empty();
-        this.startTime = Input.empty();
+        this.day = Output.empty();
+        this.endTime = Output.empty();
+        this.startTime = Output.empty();
     }
 
     public static Builder builder() {
@@ -75,9 +75,9 @@ public final class HoursOfOperationConfigArgs extends io.pulumi.resources.Resour
     }
 
     public static final class Builder {
-        private Input<HoursOfOperationConfigDay> day;
-        private Input<HoursOfOperationTimeSliceArgs> endTime;
-        private Input<HoursOfOperationTimeSliceArgs> startTime;
+        private Output<HoursOfOperationConfigDay> day;
+        private Output<HoursOfOperationTimeSliceArgs> endTime;
+        private Output<HoursOfOperationTimeSliceArgs> startTime;
 
         public Builder() {
     	      // Empty
@@ -90,33 +90,33 @@ public final class HoursOfOperationConfigArgs extends io.pulumi.resources.Resour
     	      this.startTime = defaults.startTime;
         }
 
-        public Builder day(Input<HoursOfOperationConfigDay> day) {
+        public Builder day(Output<HoursOfOperationConfigDay> day) {
             this.day = Objects.requireNonNull(day);
             return this;
         }
 
         public Builder day(HoursOfOperationConfigDay day) {
-            this.day = Input.of(Objects.requireNonNull(day));
+            this.day = Output.of(Objects.requireNonNull(day));
             return this;
         }
 
-        public Builder endTime(Input<HoursOfOperationTimeSliceArgs> endTime) {
+        public Builder endTime(Output<HoursOfOperationTimeSliceArgs> endTime) {
             this.endTime = Objects.requireNonNull(endTime);
             return this;
         }
 
         public Builder endTime(HoursOfOperationTimeSliceArgs endTime) {
-            this.endTime = Input.of(Objects.requireNonNull(endTime));
+            this.endTime = Output.of(Objects.requireNonNull(endTime));
             return this;
         }
 
-        public Builder startTime(Input<HoursOfOperationTimeSliceArgs> startTime) {
+        public Builder startTime(Output<HoursOfOperationTimeSliceArgs> startTime) {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
         }
 
         public Builder startTime(HoursOfOperationTimeSliceArgs startTime) {
-            this.startTime = Input.of(Objects.requireNonNull(startTime));
+            this.startTime = Output.of(Objects.requireNonNull(startTime));
             return this;
         }
         public HoursOfOperationConfigArgs build() {

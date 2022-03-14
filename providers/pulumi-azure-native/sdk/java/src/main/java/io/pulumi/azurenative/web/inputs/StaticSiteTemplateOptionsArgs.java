@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.web.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class StaticSiteTemplateOptionsArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class StaticSiteTemplateOptionsArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="isPrivate")
-      private final @Nullable Input<Boolean> isPrivate;
+      private final @Nullable Output<Boolean> isPrivate;
 
-    public Input<Boolean> getIsPrivate() {
-        return this.isPrivate == null ? Input.empty() : this.isPrivate;
+    public Output<Boolean> getIsPrivate() {
+        return this.isPrivate == null ? Output.empty() : this.isPrivate;
     }
 
     /**
@@ -46,10 +46,10 @@ public final class StaticSiteTemplateOptionsArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="owner")
-      private final @Nullable Input<String> owner;
+      private final @Nullable Output<String> owner;
 
-    public Input<String> getOwner() {
-        return this.owner == null ? Input.empty() : this.owner;
+    public Output<String> getOwner() {
+        return this.owner == null ? Output.empty() : this.owner;
     }
 
     /**
@@ -57,10 +57,10 @@ public final class StaticSiteTemplateOptionsArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="repositoryName")
-      private final @Nullable Input<String> repositoryName;
+      private final @Nullable Output<String> repositoryName;
 
-    public Input<String> getRepositoryName() {
-        return this.repositoryName == null ? Input.empty() : this.repositoryName;
+    public Output<String> getRepositoryName() {
+        return this.repositoryName == null ? Output.empty() : this.repositoryName;
     }
 
     /**
@@ -68,18 +68,18 @@ public final class StaticSiteTemplateOptionsArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="templateRepositoryUrl")
-      private final @Nullable Input<String> templateRepositoryUrl;
+      private final @Nullable Output<String> templateRepositoryUrl;
 
-    public Input<String> getTemplateRepositoryUrl() {
-        return this.templateRepositoryUrl == null ? Input.empty() : this.templateRepositoryUrl;
+    public Output<String> getTemplateRepositoryUrl() {
+        return this.templateRepositoryUrl == null ? Output.empty() : this.templateRepositoryUrl;
     }
 
     public StaticSiteTemplateOptionsArgs(
-        @Nullable Input<String> description,
-        @Nullable Input<Boolean> isPrivate,
-        @Nullable Input<String> owner,
-        @Nullable Input<String> repositoryName,
-        @Nullable Input<String> templateRepositoryUrl) {
+        @Nullable Output<String> description,
+        @Nullable Output<Boolean> isPrivate,
+        @Nullable Output<String> owner,
+        @Nullable Output<String> repositoryName,
+        @Nullable Output<String> templateRepositoryUrl) {
         this.description = description;
         this.isPrivate = isPrivate;
         this.owner = owner;
@@ -88,11 +88,11 @@ public final class StaticSiteTemplateOptionsArgs extends io.pulumi.resources.Res
     }
 
     private StaticSiteTemplateOptionsArgs() {
-        this.description = Input.empty();
-        this.isPrivate = Input.empty();
-        this.owner = Input.empty();
-        this.repositoryName = Input.empty();
-        this.templateRepositoryUrl = Input.empty();
+        this.description = Output.empty();
+        this.isPrivate = Output.empty();
+        this.owner = Output.empty();
+        this.repositoryName = Output.empty();
+        this.templateRepositoryUrl = Output.empty();
     }
 
     public static Builder builder() {
@@ -104,11 +104,11 @@ public final class StaticSiteTemplateOptionsArgs extends io.pulumi.resources.Res
     }
 
     public static final class Builder {
-        private @Nullable Input<String> description;
-        private @Nullable Input<Boolean> isPrivate;
-        private @Nullable Input<String> owner;
-        private @Nullable Input<String> repositoryName;
-        private @Nullable Input<String> templateRepositoryUrl;
+        private @Nullable Output<String> description;
+        private @Nullable Output<Boolean> isPrivate;
+        private @Nullable Output<String> owner;
+        private @Nullable Output<String> repositoryName;
+        private @Nullable Output<String> templateRepositoryUrl;
 
         public Builder() {
     	      // Empty
@@ -123,53 +123,53 @@ public final class StaticSiteTemplateOptionsArgs extends io.pulumi.resources.Res
     	      this.templateRepositoryUrl = defaults.templateRepositoryUrl;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder isPrivate(@Nullable Input<Boolean> isPrivate) {
+        public Builder isPrivate(@Nullable Output<Boolean> isPrivate) {
             this.isPrivate = isPrivate;
             return this;
         }
 
         public Builder isPrivate(@Nullable Boolean isPrivate) {
-            this.isPrivate = Input.ofNullable(isPrivate);
+            this.isPrivate = Output.ofNullable(isPrivate);
             return this;
         }
 
-        public Builder owner(@Nullable Input<String> owner) {
+        public Builder owner(@Nullable Output<String> owner) {
             this.owner = owner;
             return this;
         }
 
         public Builder owner(@Nullable String owner) {
-            this.owner = Input.ofNullable(owner);
+            this.owner = Output.ofNullable(owner);
             return this;
         }
 
-        public Builder repositoryName(@Nullable Input<String> repositoryName) {
+        public Builder repositoryName(@Nullable Output<String> repositoryName) {
             this.repositoryName = repositoryName;
             return this;
         }
 
         public Builder repositoryName(@Nullable String repositoryName) {
-            this.repositoryName = Input.ofNullable(repositoryName);
+            this.repositoryName = Output.ofNullable(repositoryName);
             return this;
         }
 
-        public Builder templateRepositoryUrl(@Nullable Input<String> templateRepositoryUrl) {
+        public Builder templateRepositoryUrl(@Nullable Output<String> templateRepositoryUrl) {
             this.templateRepositoryUrl = templateRepositoryUrl;
             return this;
         }
 
         public Builder templateRepositoryUrl(@Nullable String templateRepositoryUrl) {
-            this.templateRepositoryUrl = Input.ofNullable(templateRepositoryUrl);
+            this.templateRepositoryUrl = Output.ofNullable(templateRepositoryUrl);
             return this;
         }
         public StaticSiteTemplateOptionsArgs build() {

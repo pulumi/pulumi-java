@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.cognitiveservices;
 
 import io.pulumi.azurenative.cognitiveservices.inputs.CommitmentPlanPropertiesArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -20,9 +20,9 @@ public final class CommitmentPlanArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="accountName", required=true)
-      private final Input<String> accountName;
+      private final Output<String> accountName;
 
-    public Input<String> getAccountName() {
+    public Output<String> getAccountName() {
         return this.accountName;
     }
 
@@ -31,10 +31,10 @@ public final class CommitmentPlanArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="commitmentPlanName")
-      private final @Nullable Input<String> commitmentPlanName;
+      private final @Nullable Output<String> commitmentPlanName;
 
-    public Input<String> getCommitmentPlanName() {
-        return this.commitmentPlanName == null ? Input.empty() : this.commitmentPlanName;
+    public Output<String> getCommitmentPlanName() {
+        return this.commitmentPlanName == null ? Output.empty() : this.commitmentPlanName;
     }
 
     /**
@@ -42,10 +42,10 @@ public final class CommitmentPlanArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="properties")
-      private final @Nullable Input<CommitmentPlanPropertiesArgs> properties;
+      private final @Nullable Output<CommitmentPlanPropertiesArgs> properties;
 
-    public Input<CommitmentPlanPropertiesArgs> getProperties() {
-        return this.properties == null ? Input.empty() : this.properties;
+    public Output<CommitmentPlanPropertiesArgs> getProperties() {
+        return this.properties == null ? Output.empty() : this.properties;
     }
 
     /**
@@ -53,17 +53,17 @@ public final class CommitmentPlanArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
     public CommitmentPlanArgs(
-        Input<String> accountName,
-        @Nullable Input<String> commitmentPlanName,
-        @Nullable Input<CommitmentPlanPropertiesArgs> properties,
-        Input<String> resourceGroupName) {
+        Output<String> accountName,
+        @Nullable Output<String> commitmentPlanName,
+        @Nullable Output<CommitmentPlanPropertiesArgs> properties,
+        Output<String> resourceGroupName) {
         this.accountName = Objects.requireNonNull(accountName, "expected parameter 'accountName' to be non-null");
         this.commitmentPlanName = commitmentPlanName;
         this.properties = properties;
@@ -71,10 +71,10 @@ public final class CommitmentPlanArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private CommitmentPlanArgs() {
-        this.accountName = Input.empty();
-        this.commitmentPlanName = Input.empty();
-        this.properties = Input.empty();
-        this.resourceGroupName = Input.empty();
+        this.accountName = Output.empty();
+        this.commitmentPlanName = Output.empty();
+        this.properties = Output.empty();
+        this.resourceGroupName = Output.empty();
     }
 
     public static Builder builder() {
@@ -86,10 +86,10 @@ public final class CommitmentPlanArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> accountName;
-        private @Nullable Input<String> commitmentPlanName;
-        private @Nullable Input<CommitmentPlanPropertiesArgs> properties;
-        private Input<String> resourceGroupName;
+        private Output<String> accountName;
+        private @Nullable Output<String> commitmentPlanName;
+        private @Nullable Output<CommitmentPlanPropertiesArgs> properties;
+        private Output<String> resourceGroupName;
 
         public Builder() {
     	      // Empty
@@ -103,43 +103,43 @@ public final class CommitmentPlanArgs extends io.pulumi.resources.ResourceArgs {
     	      this.resourceGroupName = defaults.resourceGroupName;
         }
 
-        public Builder accountName(Input<String> accountName) {
+        public Builder accountName(Output<String> accountName) {
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
 
         public Builder accountName(String accountName) {
-            this.accountName = Input.of(Objects.requireNonNull(accountName));
+            this.accountName = Output.of(Objects.requireNonNull(accountName));
             return this;
         }
 
-        public Builder commitmentPlanName(@Nullable Input<String> commitmentPlanName) {
+        public Builder commitmentPlanName(@Nullable Output<String> commitmentPlanName) {
             this.commitmentPlanName = commitmentPlanName;
             return this;
         }
 
         public Builder commitmentPlanName(@Nullable String commitmentPlanName) {
-            this.commitmentPlanName = Input.ofNullable(commitmentPlanName);
+            this.commitmentPlanName = Output.ofNullable(commitmentPlanName);
             return this;
         }
 
-        public Builder properties(@Nullable Input<CommitmentPlanPropertiesArgs> properties) {
+        public Builder properties(@Nullable Output<CommitmentPlanPropertiesArgs> properties) {
             this.properties = properties;
             return this;
         }
 
         public Builder properties(@Nullable CommitmentPlanPropertiesArgs properties) {
-            this.properties = Input.ofNullable(properties);
+            this.properties = Output.ofNullable(properties);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
         public CommitmentPlanArgs build() {

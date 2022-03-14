@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.machinelearningservices.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -22,9 +22,9 @@ public final class IdAssetReferenceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="assetId", required=true)
-      private final Input<String> assetId;
+      private final Output<String> assetId;
 
-    public Input<String> getAssetId() {
+    public Output<String> getAssetId() {
         return this.assetId;
     }
 
@@ -34,22 +34,22 @@ public final class IdAssetReferenceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="referenceType", required=true)
-      private final Input<String> referenceType;
+      private final Output<String> referenceType;
 
-    public Input<String> getReferenceType() {
+    public Output<String> getReferenceType() {
         return this.referenceType;
     }
 
     public IdAssetReferenceArgs(
-        Input<String> assetId,
-        Input<String> referenceType) {
+        Output<String> assetId,
+        Output<String> referenceType) {
         this.assetId = Objects.requireNonNull(assetId, "expected parameter 'assetId' to be non-null");
         this.referenceType = Objects.requireNonNull(referenceType, "expected parameter 'referenceType' to be non-null");
     }
 
     private IdAssetReferenceArgs() {
-        this.assetId = Input.empty();
-        this.referenceType = Input.empty();
+        this.assetId = Output.empty();
+        this.referenceType = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class IdAssetReferenceArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private Input<String> assetId;
-        private Input<String> referenceType;
+        private Output<String> assetId;
+        private Output<String> referenceType;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class IdAssetReferenceArgs extends io.pulumi.resources.ResourceArgs
     	      this.referenceType = defaults.referenceType;
         }
 
-        public Builder assetId(Input<String> assetId) {
+        public Builder assetId(Output<String> assetId) {
             this.assetId = Objects.requireNonNull(assetId);
             return this;
         }
 
         public Builder assetId(String assetId) {
-            this.assetId = Input.of(Objects.requireNonNull(assetId));
+            this.assetId = Output.of(Objects.requireNonNull(assetId));
             return this;
         }
 
-        public Builder referenceType(Input<String> referenceType) {
+        public Builder referenceType(Output<String> referenceType) {
             this.referenceType = Objects.requireNonNull(referenceType);
             return this;
         }
 
         public Builder referenceType(String referenceType) {
-            this.referenceType = Input.of(Objects.requireNonNull(referenceType));
+            this.referenceType = Output.of(Objects.requireNonNull(referenceType));
             return this;
         }
         public IdAssetReferenceArgs build() {

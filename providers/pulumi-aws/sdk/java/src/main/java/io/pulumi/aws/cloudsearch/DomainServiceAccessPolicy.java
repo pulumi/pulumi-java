@@ -6,7 +6,6 @@ package io.pulumi.aws.cloudsearch;
 import io.pulumi.aws.Utilities;
 import io.pulumi.aws.cloudsearch.DomainServiceAccessPolicyArgs;
 import io.pulumi.aws.cloudsearch.inputs.DomainServiceAccessPolicyState;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -92,14 +91,14 @@ public class DomainServiceAccessPolicy extends io.pulumi.resources.CustomResourc
      * @param options A bag of options that control this resource's behavior.
      */
     public DomainServiceAccessPolicy(String name, DomainServiceAccessPolicyArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:cloudsearch/domainServiceAccessPolicy:DomainServiceAccessPolicy", name, args == null ? DomainServiceAccessPolicyArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws:cloudsearch/domainServiceAccessPolicy:DomainServiceAccessPolicy", name, args == null ? DomainServiceAccessPolicyArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private DomainServiceAccessPolicy(String name, Input<String> id, @Nullable DomainServiceAccessPolicyState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private DomainServiceAccessPolicy(String name, Output<String> id, @Nullable DomainServiceAccessPolicyState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws:cloudsearch/domainServiceAccessPolicy:DomainServiceAccessPolicy", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -115,7 +114,7 @@ public class DomainServiceAccessPolicy extends io.pulumi.resources.CustomResourc
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static DomainServiceAccessPolicy get(String name, Input<String> id, @Nullable DomainServiceAccessPolicyState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static DomainServiceAccessPolicy get(String name, Output<String> id, @Nullable DomainServiceAccessPolicyState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new DomainServiceAccessPolicy(name, id, state, options);
     }
 }

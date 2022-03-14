@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.apprunner.inputs;
 
 import io.pulumi.awsnative.apprunner.enums.ServiceHealthCheckConfigurationProtocol;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -25,10 +25,10 @@ public final class ServiceHealthCheckConfigurationArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="healthyThreshold")
-      private final @Nullable Input<Integer> healthyThreshold;
+      private final @Nullable Output<Integer> healthyThreshold;
 
-    public Input<Integer> getHealthyThreshold() {
-        return this.healthyThreshold == null ? Input.empty() : this.healthyThreshold;
+    public Output<Integer> getHealthyThreshold() {
+        return this.healthyThreshold == null ? Output.empty() : this.healthyThreshold;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class ServiceHealthCheckConfigurationArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="interval")
-      private final @Nullable Input<Integer> interval;
+      private final @Nullable Output<Integer> interval;
 
-    public Input<Integer> getInterval() {
-        return this.interval == null ? Input.empty() : this.interval;
+    public Output<Integer> getInterval() {
+        return this.interval == null ? Output.empty() : this.interval;
     }
 
     /**
@@ -47,10 +47,10 @@ public final class ServiceHealthCheckConfigurationArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="path")
-      private final @Nullable Input<String> path;
+      private final @Nullable Output<String> path;
 
-    public Input<String> getPath() {
-        return this.path == null ? Input.empty() : this.path;
+    public Output<String> getPath() {
+        return this.path == null ? Output.empty() : this.path;
     }
 
     /**
@@ -58,10 +58,10 @@ public final class ServiceHealthCheckConfigurationArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="protocol")
-      private final @Nullable Input<ServiceHealthCheckConfigurationProtocol> protocol;
+      private final @Nullable Output<ServiceHealthCheckConfigurationProtocol> protocol;
 
-    public Input<ServiceHealthCheckConfigurationProtocol> getProtocol() {
-        return this.protocol == null ? Input.empty() : this.protocol;
+    public Output<ServiceHealthCheckConfigurationProtocol> getProtocol() {
+        return this.protocol == null ? Output.empty() : this.protocol;
     }
 
     /**
@@ -69,10 +69,10 @@ public final class ServiceHealthCheckConfigurationArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="timeout")
-      private final @Nullable Input<Integer> timeout;
+      private final @Nullable Output<Integer> timeout;
 
-    public Input<Integer> getTimeout() {
-        return this.timeout == null ? Input.empty() : this.timeout;
+    public Output<Integer> getTimeout() {
+        return this.timeout == null ? Output.empty() : this.timeout;
     }
 
     /**
@@ -80,19 +80,19 @@ public final class ServiceHealthCheckConfigurationArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="unhealthyThreshold")
-      private final @Nullable Input<Integer> unhealthyThreshold;
+      private final @Nullable Output<Integer> unhealthyThreshold;
 
-    public Input<Integer> getUnhealthyThreshold() {
-        return this.unhealthyThreshold == null ? Input.empty() : this.unhealthyThreshold;
+    public Output<Integer> getUnhealthyThreshold() {
+        return this.unhealthyThreshold == null ? Output.empty() : this.unhealthyThreshold;
     }
 
     public ServiceHealthCheckConfigurationArgs(
-        @Nullable Input<Integer> healthyThreshold,
-        @Nullable Input<Integer> interval,
-        @Nullable Input<String> path,
-        @Nullable Input<ServiceHealthCheckConfigurationProtocol> protocol,
-        @Nullable Input<Integer> timeout,
-        @Nullable Input<Integer> unhealthyThreshold) {
+        @Nullable Output<Integer> healthyThreshold,
+        @Nullable Output<Integer> interval,
+        @Nullable Output<String> path,
+        @Nullable Output<ServiceHealthCheckConfigurationProtocol> protocol,
+        @Nullable Output<Integer> timeout,
+        @Nullable Output<Integer> unhealthyThreshold) {
         this.healthyThreshold = healthyThreshold;
         this.interval = interval;
         this.path = path;
@@ -102,12 +102,12 @@ public final class ServiceHealthCheckConfigurationArgs extends io.pulumi.resourc
     }
 
     private ServiceHealthCheckConfigurationArgs() {
-        this.healthyThreshold = Input.empty();
-        this.interval = Input.empty();
-        this.path = Input.empty();
-        this.protocol = Input.empty();
-        this.timeout = Input.empty();
-        this.unhealthyThreshold = Input.empty();
+        this.healthyThreshold = Output.empty();
+        this.interval = Output.empty();
+        this.path = Output.empty();
+        this.protocol = Output.empty();
+        this.timeout = Output.empty();
+        this.unhealthyThreshold = Output.empty();
     }
 
     public static Builder builder() {
@@ -119,12 +119,12 @@ public final class ServiceHealthCheckConfigurationArgs extends io.pulumi.resourc
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> healthyThreshold;
-        private @Nullable Input<Integer> interval;
-        private @Nullable Input<String> path;
-        private @Nullable Input<ServiceHealthCheckConfigurationProtocol> protocol;
-        private @Nullable Input<Integer> timeout;
-        private @Nullable Input<Integer> unhealthyThreshold;
+        private @Nullable Output<Integer> healthyThreshold;
+        private @Nullable Output<Integer> interval;
+        private @Nullable Output<String> path;
+        private @Nullable Output<ServiceHealthCheckConfigurationProtocol> protocol;
+        private @Nullable Output<Integer> timeout;
+        private @Nullable Output<Integer> unhealthyThreshold;
 
         public Builder() {
     	      // Empty
@@ -140,63 +140,63 @@ public final class ServiceHealthCheckConfigurationArgs extends io.pulumi.resourc
     	      this.unhealthyThreshold = defaults.unhealthyThreshold;
         }
 
-        public Builder healthyThreshold(@Nullable Input<Integer> healthyThreshold) {
+        public Builder healthyThreshold(@Nullable Output<Integer> healthyThreshold) {
             this.healthyThreshold = healthyThreshold;
             return this;
         }
 
         public Builder healthyThreshold(@Nullable Integer healthyThreshold) {
-            this.healthyThreshold = Input.ofNullable(healthyThreshold);
+            this.healthyThreshold = Output.ofNullable(healthyThreshold);
             return this;
         }
 
-        public Builder interval(@Nullable Input<Integer> interval) {
+        public Builder interval(@Nullable Output<Integer> interval) {
             this.interval = interval;
             return this;
         }
 
         public Builder interval(@Nullable Integer interval) {
-            this.interval = Input.ofNullable(interval);
+            this.interval = Output.ofNullable(interval);
             return this;
         }
 
-        public Builder path(@Nullable Input<String> path) {
+        public Builder path(@Nullable Output<String> path) {
             this.path = path;
             return this;
         }
 
         public Builder path(@Nullable String path) {
-            this.path = Input.ofNullable(path);
+            this.path = Output.ofNullable(path);
             return this;
         }
 
-        public Builder protocol(@Nullable Input<ServiceHealthCheckConfigurationProtocol> protocol) {
+        public Builder protocol(@Nullable Output<ServiceHealthCheckConfigurationProtocol> protocol) {
             this.protocol = protocol;
             return this;
         }
 
         public Builder protocol(@Nullable ServiceHealthCheckConfigurationProtocol protocol) {
-            this.protocol = Input.ofNullable(protocol);
+            this.protocol = Output.ofNullable(protocol);
             return this;
         }
 
-        public Builder timeout(@Nullable Input<Integer> timeout) {
+        public Builder timeout(@Nullable Output<Integer> timeout) {
             this.timeout = timeout;
             return this;
         }
 
         public Builder timeout(@Nullable Integer timeout) {
-            this.timeout = Input.ofNullable(timeout);
+            this.timeout = Output.ofNullable(timeout);
             return this;
         }
 
-        public Builder unhealthyThreshold(@Nullable Input<Integer> unhealthyThreshold) {
+        public Builder unhealthyThreshold(@Nullable Output<Integer> unhealthyThreshold) {
             this.unhealthyThreshold = unhealthyThreshold;
             return this;
         }
 
         public Builder unhealthyThreshold(@Nullable Integer unhealthyThreshold) {
-            this.unhealthyThreshold = Input.ofNullable(unhealthyThreshold);
+            this.unhealthyThreshold = Output.ofNullable(unhealthyThreshold);
             return this;
         }
         public ServiceHealthCheckConfigurationArgs build() {

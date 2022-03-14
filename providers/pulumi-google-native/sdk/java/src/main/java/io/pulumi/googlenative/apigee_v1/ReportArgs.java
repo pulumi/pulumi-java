@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.apigee_v1;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.apigee_v1.inputs.GoogleCloudApigeeV1CustomReportMetricArgs;
 import io.pulumi.googlenative.apigee_v1.inputs.GoogleCloudApigeeV1ReportPropertyArgs;
@@ -22,10 +22,10 @@ public final class ReportArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="chartType")
-      private final @Nullable Input<String> chartType;
+      private final @Nullable Output<String> chartType;
 
-    public Input<String> getChartType() {
-        return this.chartType == null ? Input.empty() : this.chartType;
+    public Output<String> getChartType() {
+        return this.chartType == null ? Output.empty() : this.chartType;
     }
 
     /**
@@ -33,10 +33,10 @@ public final class ReportArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="comments")
-      private final @Nullable Input<List<String>> comments;
+      private final @Nullable Output<List<String>> comments;
 
-    public Input<List<String>> getComments() {
-        return this.comments == null ? Input.empty() : this.comments;
+    public Output<List<String>> getComments() {
+        return this.comments == null ? Output.empty() : this.comments;
     }
 
     /**
@@ -44,10 +44,10 @@ public final class ReportArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dimensions")
-      private final @Nullable Input<List<String>> dimensions;
+      private final @Nullable Output<List<String>> dimensions;
 
-    public Input<List<String>> getDimensions() {
-        return this.dimensions == null ? Input.empty() : this.dimensions;
+    public Output<List<String>> getDimensions() {
+        return this.dimensions == null ? Output.empty() : this.dimensions;
     }
 
     /**
@@ -55,10 +55,10 @@ public final class ReportArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName")
-      private final @Nullable Input<String> displayName;
+      private final @Nullable Output<String> displayName;
 
-    public Input<String> getDisplayName() {
-        return this.displayName == null ? Input.empty() : this.displayName;
+    public Output<String> getDisplayName() {
+        return this.displayName == null ? Output.empty() : this.displayName;
     }
 
     /**
@@ -66,10 +66,10 @@ public final class ReportArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="filter")
-      private final @Nullable Input<String> filter;
+      private final @Nullable Output<String> filter;
 
-    public Input<String> getFilter() {
-        return this.filter == null ? Input.empty() : this.filter;
+    public Output<String> getFilter() {
+        return this.filter == null ? Output.empty() : this.filter;
     }
 
     /**
@@ -77,10 +77,10 @@ public final class ReportArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="fromTime")
-      private final @Nullable Input<String> fromTime;
+      private final @Nullable Output<String> fromTime;
 
-    public Input<String> getFromTime() {
-        return this.fromTime == null ? Input.empty() : this.fromTime;
+    public Output<String> getFromTime() {
+        return this.fromTime == null ? Output.empty() : this.fromTime;
     }
 
     /**
@@ -88,10 +88,10 @@ public final class ReportArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="limit")
-      private final @Nullable Input<String> limit;
+      private final @Nullable Output<String> limit;
 
-    public Input<String> getLimit() {
-        return this.limit == null ? Input.empty() : this.limit;
+    public Output<String> getLimit() {
+        return this.limit == null ? Output.empty() : this.limit;
     }
 
     /**
@@ -99,9 +99,9 @@ public final class ReportArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="metrics", required=true)
-      private final Input<List<GoogleCloudApigeeV1CustomReportMetricArgs>> metrics;
+      private final Output<List<GoogleCloudApigeeV1CustomReportMetricArgs>> metrics;
 
-    public Input<List<GoogleCloudApigeeV1CustomReportMetricArgs>> getMetrics() {
+    public Output<List<GoogleCloudApigeeV1CustomReportMetricArgs>> getMetrics() {
         return this.metrics;
     }
 
@@ -110,10 +110,10 @@ public final class ReportArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -121,16 +121,16 @@ public final class ReportArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="offset")
-      private final @Nullable Input<String> offset;
+      private final @Nullable Output<String> offset;
 
-    public Input<String> getOffset() {
-        return this.offset == null ? Input.empty() : this.offset;
+    public Output<String> getOffset() {
+        return this.offset == null ? Output.empty() : this.offset;
     }
 
     @InputImport(name="organizationId", required=true)
-      private final Input<String> organizationId;
+      private final Output<String> organizationId;
 
-    public Input<String> getOrganizationId() {
+    public Output<String> getOrganizationId() {
         return this.organizationId;
     }
 
@@ -139,10 +139,10 @@ public final class ReportArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="properties")
-      private final @Nullable Input<List<GoogleCloudApigeeV1ReportPropertyArgs>> properties;
+      private final @Nullable Output<List<GoogleCloudApigeeV1ReportPropertyArgs>> properties;
 
-    public Input<List<GoogleCloudApigeeV1ReportPropertyArgs>> getProperties() {
-        return this.properties == null ? Input.empty() : this.properties;
+    public Output<List<GoogleCloudApigeeV1ReportPropertyArgs>> getProperties() {
+        return this.properties == null ? Output.empty() : this.properties;
     }
 
     /**
@@ -150,10 +150,10 @@ public final class ReportArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sortByCols")
-      private final @Nullable Input<List<String>> sortByCols;
+      private final @Nullable Output<List<String>> sortByCols;
 
-    public Input<List<String>> getSortByCols() {
-        return this.sortByCols == null ? Input.empty() : this.sortByCols;
+    public Output<List<String>> getSortByCols() {
+        return this.sortByCols == null ? Output.empty() : this.sortByCols;
     }
 
     /**
@@ -161,10 +161,10 @@ public final class ReportArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sortOrder")
-      private final @Nullable Input<String> sortOrder;
+      private final @Nullable Output<String> sortOrder;
 
-    public Input<String> getSortOrder() {
-        return this.sortOrder == null ? Input.empty() : this.sortOrder;
+    public Output<String> getSortOrder() {
+        return this.sortOrder == null ? Output.empty() : this.sortOrder;
     }
 
     /**
@@ -172,10 +172,10 @@ public final class ReportArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<List<String>> tags;
+      private final @Nullable Output<List<String>> tags;
 
-    public Input<List<String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<List<String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -183,10 +183,10 @@ public final class ReportArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="timeUnit")
-      private final @Nullable Input<String> timeUnit;
+      private final @Nullable Output<String> timeUnit;
 
-    public Input<String> getTimeUnit() {
-        return this.timeUnit == null ? Input.empty() : this.timeUnit;
+    public Output<String> getTimeUnit() {
+        return this.timeUnit == null ? Output.empty() : this.timeUnit;
     }
 
     /**
@@ -194,10 +194,10 @@ public final class ReportArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="toTime")
-      private final @Nullable Input<String> toTime;
+      private final @Nullable Output<String> toTime;
 
-    public Input<String> getToTime() {
-        return this.toTime == null ? Input.empty() : this.toTime;
+    public Output<String> getToTime() {
+        return this.toTime == null ? Output.empty() : this.toTime;
     }
 
     /**
@@ -205,31 +205,31 @@ public final class ReportArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="topk")
-      private final @Nullable Input<String> topk;
+      private final @Nullable Output<String> topk;
 
-    public Input<String> getTopk() {
-        return this.topk == null ? Input.empty() : this.topk;
+    public Output<String> getTopk() {
+        return this.topk == null ? Output.empty() : this.topk;
     }
 
     public ReportArgs(
-        @Nullable Input<String> chartType,
-        @Nullable Input<List<String>> comments,
-        @Nullable Input<List<String>> dimensions,
-        @Nullable Input<String> displayName,
-        @Nullable Input<String> filter,
-        @Nullable Input<String> fromTime,
-        @Nullable Input<String> limit,
-        Input<List<GoogleCloudApigeeV1CustomReportMetricArgs>> metrics,
-        @Nullable Input<String> name,
-        @Nullable Input<String> offset,
-        Input<String> organizationId,
-        @Nullable Input<List<GoogleCloudApigeeV1ReportPropertyArgs>> properties,
-        @Nullable Input<List<String>> sortByCols,
-        @Nullable Input<String> sortOrder,
-        @Nullable Input<List<String>> tags,
-        @Nullable Input<String> timeUnit,
-        @Nullable Input<String> toTime,
-        @Nullable Input<String> topk) {
+        @Nullable Output<String> chartType,
+        @Nullable Output<List<String>> comments,
+        @Nullable Output<List<String>> dimensions,
+        @Nullable Output<String> displayName,
+        @Nullable Output<String> filter,
+        @Nullable Output<String> fromTime,
+        @Nullable Output<String> limit,
+        Output<List<GoogleCloudApigeeV1CustomReportMetricArgs>> metrics,
+        @Nullable Output<String> name,
+        @Nullable Output<String> offset,
+        Output<String> organizationId,
+        @Nullable Output<List<GoogleCloudApigeeV1ReportPropertyArgs>> properties,
+        @Nullable Output<List<String>> sortByCols,
+        @Nullable Output<String> sortOrder,
+        @Nullable Output<List<String>> tags,
+        @Nullable Output<String> timeUnit,
+        @Nullable Output<String> toTime,
+        @Nullable Output<String> topk) {
         this.chartType = chartType;
         this.comments = comments;
         this.dimensions = dimensions;
@@ -251,24 +251,24 @@ public final class ReportArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ReportArgs() {
-        this.chartType = Input.empty();
-        this.comments = Input.empty();
-        this.dimensions = Input.empty();
-        this.displayName = Input.empty();
-        this.filter = Input.empty();
-        this.fromTime = Input.empty();
-        this.limit = Input.empty();
-        this.metrics = Input.empty();
-        this.name = Input.empty();
-        this.offset = Input.empty();
-        this.organizationId = Input.empty();
-        this.properties = Input.empty();
-        this.sortByCols = Input.empty();
-        this.sortOrder = Input.empty();
-        this.tags = Input.empty();
-        this.timeUnit = Input.empty();
-        this.toTime = Input.empty();
-        this.topk = Input.empty();
+        this.chartType = Output.empty();
+        this.comments = Output.empty();
+        this.dimensions = Output.empty();
+        this.displayName = Output.empty();
+        this.filter = Output.empty();
+        this.fromTime = Output.empty();
+        this.limit = Output.empty();
+        this.metrics = Output.empty();
+        this.name = Output.empty();
+        this.offset = Output.empty();
+        this.organizationId = Output.empty();
+        this.properties = Output.empty();
+        this.sortByCols = Output.empty();
+        this.sortOrder = Output.empty();
+        this.tags = Output.empty();
+        this.timeUnit = Output.empty();
+        this.toTime = Output.empty();
+        this.topk = Output.empty();
     }
 
     public static Builder builder() {
@@ -280,24 +280,24 @@ public final class ReportArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> chartType;
-        private @Nullable Input<List<String>> comments;
-        private @Nullable Input<List<String>> dimensions;
-        private @Nullable Input<String> displayName;
-        private @Nullable Input<String> filter;
-        private @Nullable Input<String> fromTime;
-        private @Nullable Input<String> limit;
-        private Input<List<GoogleCloudApigeeV1CustomReportMetricArgs>> metrics;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> offset;
-        private Input<String> organizationId;
-        private @Nullable Input<List<GoogleCloudApigeeV1ReportPropertyArgs>> properties;
-        private @Nullable Input<List<String>> sortByCols;
-        private @Nullable Input<String> sortOrder;
-        private @Nullable Input<List<String>> tags;
-        private @Nullable Input<String> timeUnit;
-        private @Nullable Input<String> toTime;
-        private @Nullable Input<String> topk;
+        private @Nullable Output<String> chartType;
+        private @Nullable Output<List<String>> comments;
+        private @Nullable Output<List<String>> dimensions;
+        private @Nullable Output<String> displayName;
+        private @Nullable Output<String> filter;
+        private @Nullable Output<String> fromTime;
+        private @Nullable Output<String> limit;
+        private Output<List<GoogleCloudApigeeV1CustomReportMetricArgs>> metrics;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> offset;
+        private Output<String> organizationId;
+        private @Nullable Output<List<GoogleCloudApigeeV1ReportPropertyArgs>> properties;
+        private @Nullable Output<List<String>> sortByCols;
+        private @Nullable Output<String> sortOrder;
+        private @Nullable Output<List<String>> tags;
+        private @Nullable Output<String> timeUnit;
+        private @Nullable Output<String> toTime;
+        private @Nullable Output<String> topk;
 
         public Builder() {
     	      // Empty
@@ -325,183 +325,183 @@ public final class ReportArgs extends io.pulumi.resources.ResourceArgs {
     	      this.topk = defaults.topk;
         }
 
-        public Builder chartType(@Nullable Input<String> chartType) {
+        public Builder chartType(@Nullable Output<String> chartType) {
             this.chartType = chartType;
             return this;
         }
 
         public Builder chartType(@Nullable String chartType) {
-            this.chartType = Input.ofNullable(chartType);
+            this.chartType = Output.ofNullable(chartType);
             return this;
         }
 
-        public Builder comments(@Nullable Input<List<String>> comments) {
+        public Builder comments(@Nullable Output<List<String>> comments) {
             this.comments = comments;
             return this;
         }
 
         public Builder comments(@Nullable List<String> comments) {
-            this.comments = Input.ofNullable(comments);
+            this.comments = Output.ofNullable(comments);
             return this;
         }
 
-        public Builder dimensions(@Nullable Input<List<String>> dimensions) {
+        public Builder dimensions(@Nullable Output<List<String>> dimensions) {
             this.dimensions = dimensions;
             return this;
         }
 
         public Builder dimensions(@Nullable List<String> dimensions) {
-            this.dimensions = Input.ofNullable(dimensions);
+            this.dimensions = Output.ofNullable(dimensions);
             return this;
         }
 
-        public Builder displayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Input.ofNullable(displayName);
+            this.displayName = Output.ofNullable(displayName);
             return this;
         }
 
-        public Builder filter(@Nullable Input<String> filter) {
+        public Builder filter(@Nullable Output<String> filter) {
             this.filter = filter;
             return this;
         }
 
         public Builder filter(@Nullable String filter) {
-            this.filter = Input.ofNullable(filter);
+            this.filter = Output.ofNullable(filter);
             return this;
         }
 
-        public Builder fromTime(@Nullable Input<String> fromTime) {
+        public Builder fromTime(@Nullable Output<String> fromTime) {
             this.fromTime = fromTime;
             return this;
         }
 
         public Builder fromTime(@Nullable String fromTime) {
-            this.fromTime = Input.ofNullable(fromTime);
+            this.fromTime = Output.ofNullable(fromTime);
             return this;
         }
 
-        public Builder limit(@Nullable Input<String> limit) {
+        public Builder limit(@Nullable Output<String> limit) {
             this.limit = limit;
             return this;
         }
 
         public Builder limit(@Nullable String limit) {
-            this.limit = Input.ofNullable(limit);
+            this.limit = Output.ofNullable(limit);
             return this;
         }
 
-        public Builder metrics(Input<List<GoogleCloudApigeeV1CustomReportMetricArgs>> metrics) {
+        public Builder metrics(Output<List<GoogleCloudApigeeV1CustomReportMetricArgs>> metrics) {
             this.metrics = Objects.requireNonNull(metrics);
             return this;
         }
 
         public Builder metrics(List<GoogleCloudApigeeV1CustomReportMetricArgs> metrics) {
-            this.metrics = Input.of(Objects.requireNonNull(metrics));
+            this.metrics = Output.of(Objects.requireNonNull(metrics));
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder offset(@Nullable Input<String> offset) {
+        public Builder offset(@Nullable Output<String> offset) {
             this.offset = offset;
             return this;
         }
 
         public Builder offset(@Nullable String offset) {
-            this.offset = Input.ofNullable(offset);
+            this.offset = Output.ofNullable(offset);
             return this;
         }
 
-        public Builder organizationId(Input<String> organizationId) {
+        public Builder organizationId(Output<String> organizationId) {
             this.organizationId = Objects.requireNonNull(organizationId);
             return this;
         }
 
         public Builder organizationId(String organizationId) {
-            this.organizationId = Input.of(Objects.requireNonNull(organizationId));
+            this.organizationId = Output.of(Objects.requireNonNull(organizationId));
             return this;
         }
 
-        public Builder properties(@Nullable Input<List<GoogleCloudApigeeV1ReportPropertyArgs>> properties) {
+        public Builder properties(@Nullable Output<List<GoogleCloudApigeeV1ReportPropertyArgs>> properties) {
             this.properties = properties;
             return this;
         }
 
         public Builder properties(@Nullable List<GoogleCloudApigeeV1ReportPropertyArgs> properties) {
-            this.properties = Input.ofNullable(properties);
+            this.properties = Output.ofNullable(properties);
             return this;
         }
 
-        public Builder sortByCols(@Nullable Input<List<String>> sortByCols) {
+        public Builder sortByCols(@Nullable Output<List<String>> sortByCols) {
             this.sortByCols = sortByCols;
             return this;
         }
 
         public Builder sortByCols(@Nullable List<String> sortByCols) {
-            this.sortByCols = Input.ofNullable(sortByCols);
+            this.sortByCols = Output.ofNullable(sortByCols);
             return this;
         }
 
-        public Builder sortOrder(@Nullable Input<String> sortOrder) {
+        public Builder sortOrder(@Nullable Output<String> sortOrder) {
             this.sortOrder = sortOrder;
             return this;
         }
 
         public Builder sortOrder(@Nullable String sortOrder) {
-            this.sortOrder = Input.ofNullable(sortOrder);
+            this.sortOrder = Output.ofNullable(sortOrder);
             return this;
         }
 
-        public Builder tags(@Nullable Input<List<String>> tags) {
+        public Builder tags(@Nullable Output<List<String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable List<String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder timeUnit(@Nullable Input<String> timeUnit) {
+        public Builder timeUnit(@Nullable Output<String> timeUnit) {
             this.timeUnit = timeUnit;
             return this;
         }
 
         public Builder timeUnit(@Nullable String timeUnit) {
-            this.timeUnit = Input.ofNullable(timeUnit);
+            this.timeUnit = Output.ofNullable(timeUnit);
             return this;
         }
 
-        public Builder toTime(@Nullable Input<String> toTime) {
+        public Builder toTime(@Nullable Output<String> toTime) {
             this.toTime = toTime;
             return this;
         }
 
         public Builder toTime(@Nullable String toTime) {
-            this.toTime = Input.ofNullable(toTime);
+            this.toTime = Output.ofNullable(toTime);
             return this;
         }
 
-        public Builder topk(@Nullable Input<String> topk) {
+        public Builder topk(@Nullable Output<String> topk) {
             this.topk = topk;
             return this;
         }
 
         public Builder topk(@Nullable String topk) {
-            this.topk = Input.ofNullable(topk);
+            this.topk = Output.ofNullable(topk);
             return this;
         }
         public ReportArgs build() {

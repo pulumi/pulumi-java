@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.importexport.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -22,9 +22,9 @@ public final class ReturnShippingArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="carrierAccountNumber", required=true)
-      private final Input<String> carrierAccountNumber;
+      private final Output<String> carrierAccountNumber;
 
-    public Input<String> getCarrierAccountNumber() {
+    public Output<String> getCarrierAccountNumber() {
         return this.carrierAccountNumber;
     }
 
@@ -33,22 +33,22 @@ public final class ReturnShippingArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="carrierName", required=true)
-      private final Input<String> carrierName;
+      private final Output<String> carrierName;
 
-    public Input<String> getCarrierName() {
+    public Output<String> getCarrierName() {
         return this.carrierName;
     }
 
     public ReturnShippingArgs(
-        Input<String> carrierAccountNumber,
-        Input<String> carrierName) {
+        Output<String> carrierAccountNumber,
+        Output<String> carrierName) {
         this.carrierAccountNumber = Objects.requireNonNull(carrierAccountNumber, "expected parameter 'carrierAccountNumber' to be non-null");
         this.carrierName = Objects.requireNonNull(carrierName, "expected parameter 'carrierName' to be non-null");
     }
 
     private ReturnShippingArgs() {
-        this.carrierAccountNumber = Input.empty();
-        this.carrierName = Input.empty();
+        this.carrierAccountNumber = Output.empty();
+        this.carrierName = Output.empty();
     }
 
     public static Builder builder() {
@@ -60,8 +60,8 @@ public final class ReturnShippingArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> carrierAccountNumber;
-        private Input<String> carrierName;
+        private Output<String> carrierAccountNumber;
+        private Output<String> carrierName;
 
         public Builder() {
     	      // Empty
@@ -73,23 +73,23 @@ public final class ReturnShippingArgs extends io.pulumi.resources.ResourceArgs {
     	      this.carrierName = defaults.carrierName;
         }
 
-        public Builder carrierAccountNumber(Input<String> carrierAccountNumber) {
+        public Builder carrierAccountNumber(Output<String> carrierAccountNumber) {
             this.carrierAccountNumber = Objects.requireNonNull(carrierAccountNumber);
             return this;
         }
 
         public Builder carrierAccountNumber(String carrierAccountNumber) {
-            this.carrierAccountNumber = Input.of(Objects.requireNonNull(carrierAccountNumber));
+            this.carrierAccountNumber = Output.of(Objects.requireNonNull(carrierAccountNumber));
             return this;
         }
 
-        public Builder carrierName(Input<String> carrierName) {
+        public Builder carrierName(Output<String> carrierName) {
             this.carrierName = Objects.requireNonNull(carrierName);
             return this;
         }
 
         public Builder carrierName(String carrierName) {
-            this.carrierName = Input.of(Objects.requireNonNull(carrierName));
+            this.carrierName = Output.of(Objects.requireNonNull(carrierName));
             return this;
         }
         public ReturnShippingArgs build() {

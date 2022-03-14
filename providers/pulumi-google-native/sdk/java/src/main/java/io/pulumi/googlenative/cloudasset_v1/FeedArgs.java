@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudasset_v1;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.cloudasset_v1.enums.FeedContentType;
 import io.pulumi.googlenative.cloudasset_v1.inputs.ExprArgs;
@@ -23,10 +23,10 @@ public final class FeedArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="assetNames")
-      private final @Nullable Input<List<String>> assetNames;
+      private final @Nullable Output<List<String>> assetNames;
 
-    public Input<List<String>> getAssetNames() {
-        return this.assetNames == null ? Input.empty() : this.assetNames;
+    public Output<List<String>> getAssetNames() {
+        return this.assetNames == null ? Output.empty() : this.assetNames;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class FeedArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="assetTypes")
-      private final @Nullable Input<List<String>> assetTypes;
+      private final @Nullable Output<List<String>> assetTypes;
 
-    public Input<List<String>> getAssetTypes() {
-        return this.assetTypes == null ? Input.empty() : this.assetTypes;
+    public Output<List<String>> getAssetTypes() {
+        return this.assetTypes == null ? Output.empty() : this.assetTypes;
     }
 
     /**
@@ -45,10 +45,10 @@ public final class FeedArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="condition")
-      private final @Nullable Input<ExprArgs> condition;
+      private final @Nullable Output<ExprArgs> condition;
 
-    public Input<ExprArgs> getCondition() {
-        return this.condition == null ? Input.empty() : this.condition;
+    public Output<ExprArgs> getCondition() {
+        return this.condition == null ? Output.empty() : this.condition;
     }
 
     /**
@@ -56,10 +56,10 @@ public final class FeedArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="contentType")
-      private final @Nullable Input<FeedContentType> contentType;
+      private final @Nullable Output<FeedContentType> contentType;
 
-    public Input<FeedContentType> getContentType() {
-        return this.contentType == null ? Input.empty() : this.contentType;
+    public Output<FeedContentType> getContentType() {
+        return this.contentType == null ? Output.empty() : this.contentType;
     }
 
     /**
@@ -67,9 +67,9 @@ public final class FeedArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="feedId", required=true)
-      private final Input<String> feedId;
+      private final Output<String> feedId;
 
-    public Input<String> getFeedId() {
+    public Output<String> getFeedId() {
         return this.feedId;
     }
 
@@ -78,9 +78,9 @@ public final class FeedArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="feedOutputConfig", required=true)
-      private final Input<FeedOutputConfigArgs> feedOutputConfig;
+      private final Output<FeedOutputConfigArgs> feedOutputConfig;
 
-    public Input<FeedOutputConfigArgs> getFeedOutputConfig() {
+    public Output<FeedOutputConfigArgs> getFeedOutputConfig() {
         return this.feedOutputConfig;
     }
 
@@ -89,9 +89,9 @@ public final class FeedArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name", required=true)
-      private final Input<String> name;
+      private final Output<String> name;
 
-    public Input<String> getName() {
+    public Output<String> getName() {
         return this.name;
     }
 
@@ -100,37 +100,37 @@ public final class FeedArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="relationshipTypes")
-      private final @Nullable Input<List<String>> relationshipTypes;
+      private final @Nullable Output<List<String>> relationshipTypes;
 
-    public Input<List<String>> getRelationshipTypes() {
-        return this.relationshipTypes == null ? Input.empty() : this.relationshipTypes;
+    public Output<List<String>> getRelationshipTypes() {
+        return this.relationshipTypes == null ? Output.empty() : this.relationshipTypes;
     }
 
     @InputImport(name="v1Id", required=true)
-      private final Input<String> v1Id;
+      private final Output<String> v1Id;
 
-    public Input<String> getV1Id() {
+    public Output<String> getV1Id() {
         return this.v1Id;
     }
 
     @InputImport(name="v1Id1", required=true)
-      private final Input<String> v1Id1;
+      private final Output<String> v1Id1;
 
-    public Input<String> getV1Id1() {
+    public Output<String> getV1Id1() {
         return this.v1Id1;
     }
 
     public FeedArgs(
-        @Nullable Input<List<String>> assetNames,
-        @Nullable Input<List<String>> assetTypes,
-        @Nullable Input<ExprArgs> condition,
-        @Nullable Input<FeedContentType> contentType,
-        Input<String> feedId,
-        Input<FeedOutputConfigArgs> feedOutputConfig,
-        Input<String> name,
-        @Nullable Input<List<String>> relationshipTypes,
-        Input<String> v1Id,
-        Input<String> v1Id1) {
+        @Nullable Output<List<String>> assetNames,
+        @Nullable Output<List<String>> assetTypes,
+        @Nullable Output<ExprArgs> condition,
+        @Nullable Output<FeedContentType> contentType,
+        Output<String> feedId,
+        Output<FeedOutputConfigArgs> feedOutputConfig,
+        Output<String> name,
+        @Nullable Output<List<String>> relationshipTypes,
+        Output<String> v1Id,
+        Output<String> v1Id1) {
         this.assetNames = assetNames;
         this.assetTypes = assetTypes;
         this.condition = condition;
@@ -144,16 +144,16 @@ public final class FeedArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private FeedArgs() {
-        this.assetNames = Input.empty();
-        this.assetTypes = Input.empty();
-        this.condition = Input.empty();
-        this.contentType = Input.empty();
-        this.feedId = Input.empty();
-        this.feedOutputConfig = Input.empty();
-        this.name = Input.empty();
-        this.relationshipTypes = Input.empty();
-        this.v1Id = Input.empty();
-        this.v1Id1 = Input.empty();
+        this.assetNames = Output.empty();
+        this.assetTypes = Output.empty();
+        this.condition = Output.empty();
+        this.contentType = Output.empty();
+        this.feedId = Output.empty();
+        this.feedOutputConfig = Output.empty();
+        this.name = Output.empty();
+        this.relationshipTypes = Output.empty();
+        this.v1Id = Output.empty();
+        this.v1Id1 = Output.empty();
     }
 
     public static Builder builder() {
@@ -165,16 +165,16 @@ public final class FeedArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> assetNames;
-        private @Nullable Input<List<String>> assetTypes;
-        private @Nullable Input<ExprArgs> condition;
-        private @Nullable Input<FeedContentType> contentType;
-        private Input<String> feedId;
-        private Input<FeedOutputConfigArgs> feedOutputConfig;
-        private Input<String> name;
-        private @Nullable Input<List<String>> relationshipTypes;
-        private Input<String> v1Id;
-        private Input<String> v1Id1;
+        private @Nullable Output<List<String>> assetNames;
+        private @Nullable Output<List<String>> assetTypes;
+        private @Nullable Output<ExprArgs> condition;
+        private @Nullable Output<FeedContentType> contentType;
+        private Output<String> feedId;
+        private Output<FeedOutputConfigArgs> feedOutputConfig;
+        private Output<String> name;
+        private @Nullable Output<List<String>> relationshipTypes;
+        private Output<String> v1Id;
+        private Output<String> v1Id1;
 
         public Builder() {
     	      // Empty
@@ -194,103 +194,103 @@ public final class FeedArgs extends io.pulumi.resources.ResourceArgs {
     	      this.v1Id1 = defaults.v1Id1;
         }
 
-        public Builder assetNames(@Nullable Input<List<String>> assetNames) {
+        public Builder assetNames(@Nullable Output<List<String>> assetNames) {
             this.assetNames = assetNames;
             return this;
         }
 
         public Builder assetNames(@Nullable List<String> assetNames) {
-            this.assetNames = Input.ofNullable(assetNames);
+            this.assetNames = Output.ofNullable(assetNames);
             return this;
         }
 
-        public Builder assetTypes(@Nullable Input<List<String>> assetTypes) {
+        public Builder assetTypes(@Nullable Output<List<String>> assetTypes) {
             this.assetTypes = assetTypes;
             return this;
         }
 
         public Builder assetTypes(@Nullable List<String> assetTypes) {
-            this.assetTypes = Input.ofNullable(assetTypes);
+            this.assetTypes = Output.ofNullable(assetTypes);
             return this;
         }
 
-        public Builder condition(@Nullable Input<ExprArgs> condition) {
+        public Builder condition(@Nullable Output<ExprArgs> condition) {
             this.condition = condition;
             return this;
         }
 
         public Builder condition(@Nullable ExprArgs condition) {
-            this.condition = Input.ofNullable(condition);
+            this.condition = Output.ofNullable(condition);
             return this;
         }
 
-        public Builder contentType(@Nullable Input<FeedContentType> contentType) {
+        public Builder contentType(@Nullable Output<FeedContentType> contentType) {
             this.contentType = contentType;
             return this;
         }
 
         public Builder contentType(@Nullable FeedContentType contentType) {
-            this.contentType = Input.ofNullable(contentType);
+            this.contentType = Output.ofNullable(contentType);
             return this;
         }
 
-        public Builder feedId(Input<String> feedId) {
+        public Builder feedId(Output<String> feedId) {
             this.feedId = Objects.requireNonNull(feedId);
             return this;
         }
 
         public Builder feedId(String feedId) {
-            this.feedId = Input.of(Objects.requireNonNull(feedId));
+            this.feedId = Output.of(Objects.requireNonNull(feedId));
             return this;
         }
 
-        public Builder feedOutputConfig(Input<FeedOutputConfigArgs> feedOutputConfig) {
+        public Builder feedOutputConfig(Output<FeedOutputConfigArgs> feedOutputConfig) {
             this.feedOutputConfig = Objects.requireNonNull(feedOutputConfig);
             return this;
         }
 
         public Builder feedOutputConfig(FeedOutputConfigArgs feedOutputConfig) {
-            this.feedOutputConfig = Input.of(Objects.requireNonNull(feedOutputConfig));
+            this.feedOutputConfig = Output.of(Objects.requireNonNull(feedOutputConfig));
             return this;
         }
 
-        public Builder name(Input<String> name) {
+        public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(String name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder relationshipTypes(@Nullable Input<List<String>> relationshipTypes) {
+        public Builder relationshipTypes(@Nullable Output<List<String>> relationshipTypes) {
             this.relationshipTypes = relationshipTypes;
             return this;
         }
 
         public Builder relationshipTypes(@Nullable List<String> relationshipTypes) {
-            this.relationshipTypes = Input.ofNullable(relationshipTypes);
+            this.relationshipTypes = Output.ofNullable(relationshipTypes);
             return this;
         }
 
-        public Builder v1Id(Input<String> v1Id) {
+        public Builder v1Id(Output<String> v1Id) {
             this.v1Id = Objects.requireNonNull(v1Id);
             return this;
         }
 
         public Builder v1Id(String v1Id) {
-            this.v1Id = Input.of(Objects.requireNonNull(v1Id));
+            this.v1Id = Output.of(Objects.requireNonNull(v1Id));
             return this;
         }
 
-        public Builder v1Id1(Input<String> v1Id1) {
+        public Builder v1Id1(Output<String> v1Id1) {
             this.v1Id1 = Objects.requireNonNull(v1Id1);
             return this;
         }
 
         public Builder v1Id1(String v1Id1) {
-            this.v1Id1 = Input.of(Objects.requireNonNull(v1Id1));
+            this.v1Id1 = Output.of(Objects.requireNonNull(v1Id1));
             return this;
         }
         public FeedArgs build() {

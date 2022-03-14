@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.ml_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class GoogleCloudMlV1__ManualScalingArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="nodes")
-      private final @Nullable Input<Integer> nodes;
+      private final @Nullable Output<Integer> nodes;
 
-    public Input<Integer> getNodes() {
-        return this.nodes == null ? Input.empty() : this.nodes;
+    public Output<Integer> getNodes() {
+        return this.nodes == null ? Output.empty() : this.nodes;
     }
 
-    public GoogleCloudMlV1__ManualScalingArgs(@Nullable Input<Integer> nodes) {
+    public GoogleCloudMlV1__ManualScalingArgs(@Nullable Output<Integer> nodes) {
         this.nodes = nodes;
     }
 
     private GoogleCloudMlV1__ManualScalingArgs() {
-        this.nodes = Input.empty();
+        this.nodes = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class GoogleCloudMlV1__ManualScalingArgs extends io.pulumi.resource
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> nodes;
+        private @Nullable Output<Integer> nodes;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class GoogleCloudMlV1__ManualScalingArgs extends io.pulumi.resource
     	      this.nodes = defaults.nodes;
         }
 
-        public Builder nodes(@Nullable Input<Integer> nodes) {
+        public Builder nodes(@Nullable Output<Integer> nodes) {
             this.nodes = nodes;
             return this;
         }
 
         public Builder nodes(@Nullable Integer nodes) {
-            this.nodes = Input.ofNullable(nodes);
+            this.nodes = Output.ofNullable(nodes);
             return this;
         }
         public GoogleCloudMlV1__ManualScalingArgs build() {

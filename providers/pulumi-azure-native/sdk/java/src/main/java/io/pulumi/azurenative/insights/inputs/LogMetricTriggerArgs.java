@@ -6,7 +6,7 @@ package io.pulumi.azurenative.insights.inputs;
 import io.pulumi.azurenative.insights.enums.ConditionalOperator;
 import io.pulumi.azurenative.insights.enums.MetricTriggerType;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.String;
@@ -27,10 +27,10 @@ public final class LogMetricTriggerArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="metricColumn")
-      private final @Nullable Input<String> metricColumn;
+      private final @Nullable Output<String> metricColumn;
 
-    public Input<String> getMetricColumn() {
-        return this.metricColumn == null ? Input.empty() : this.metricColumn;
+    public Output<String> getMetricColumn() {
+        return this.metricColumn == null ? Output.empty() : this.metricColumn;
     }
 
     /**
@@ -38,10 +38,10 @@ public final class LogMetricTriggerArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="metricTriggerType")
-      private final @Nullable Input<Either<String,MetricTriggerType>> metricTriggerType;
+      private final @Nullable Output<Either<String,MetricTriggerType>> metricTriggerType;
 
-    public Input<Either<String,MetricTriggerType>> getMetricTriggerType() {
-        return this.metricTriggerType == null ? Input.empty() : this.metricTriggerType;
+    public Output<Either<String,MetricTriggerType>> getMetricTriggerType() {
+        return this.metricTriggerType == null ? Output.empty() : this.metricTriggerType;
     }
 
     /**
@@ -49,10 +49,10 @@ public final class LogMetricTriggerArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="threshold")
-      private final @Nullable Input<Double> threshold;
+      private final @Nullable Output<Double> threshold;
 
-    public Input<Double> getThreshold() {
-        return this.threshold == null ? Input.empty() : this.threshold;
+    public Output<Double> getThreshold() {
+        return this.threshold == null ? Output.empty() : this.threshold;
     }
 
     /**
@@ -60,17 +60,17 @@ public final class LogMetricTriggerArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="thresholdOperator")
-      private final @Nullable Input<Either<String,ConditionalOperator>> thresholdOperator;
+      private final @Nullable Output<Either<String,ConditionalOperator>> thresholdOperator;
 
-    public Input<Either<String,ConditionalOperator>> getThresholdOperator() {
-        return this.thresholdOperator == null ? Input.empty() : this.thresholdOperator;
+    public Output<Either<String,ConditionalOperator>> getThresholdOperator() {
+        return this.thresholdOperator == null ? Output.empty() : this.thresholdOperator;
     }
 
     public LogMetricTriggerArgs(
-        @Nullable Input<String> metricColumn,
-        @Nullable Input<Either<String,MetricTriggerType>> metricTriggerType,
-        @Nullable Input<Double> threshold,
-        @Nullable Input<Either<String,ConditionalOperator>> thresholdOperator) {
+        @Nullable Output<String> metricColumn,
+        @Nullable Output<Either<String,MetricTriggerType>> metricTriggerType,
+        @Nullable Output<Double> threshold,
+        @Nullable Output<Either<String,ConditionalOperator>> thresholdOperator) {
         this.metricColumn = metricColumn;
         this.metricTriggerType = metricTriggerType;
         this.threshold = threshold;
@@ -78,10 +78,10 @@ public final class LogMetricTriggerArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private LogMetricTriggerArgs() {
-        this.metricColumn = Input.empty();
-        this.metricTriggerType = Input.empty();
-        this.threshold = Input.empty();
-        this.thresholdOperator = Input.empty();
+        this.metricColumn = Output.empty();
+        this.metricTriggerType = Output.empty();
+        this.threshold = Output.empty();
+        this.thresholdOperator = Output.empty();
     }
 
     public static Builder builder() {
@@ -93,10 +93,10 @@ public final class LogMetricTriggerArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private @Nullable Input<String> metricColumn;
-        private @Nullable Input<Either<String,MetricTriggerType>> metricTriggerType;
-        private @Nullable Input<Double> threshold;
-        private @Nullable Input<Either<String,ConditionalOperator>> thresholdOperator;
+        private @Nullable Output<String> metricColumn;
+        private @Nullable Output<Either<String,MetricTriggerType>> metricTriggerType;
+        private @Nullable Output<Double> threshold;
+        private @Nullable Output<Either<String,ConditionalOperator>> thresholdOperator;
 
         public Builder() {
     	      // Empty
@@ -110,43 +110,43 @@ public final class LogMetricTriggerArgs extends io.pulumi.resources.ResourceArgs
     	      this.thresholdOperator = defaults.thresholdOperator;
         }
 
-        public Builder metricColumn(@Nullable Input<String> metricColumn) {
+        public Builder metricColumn(@Nullable Output<String> metricColumn) {
             this.metricColumn = metricColumn;
             return this;
         }
 
         public Builder metricColumn(@Nullable String metricColumn) {
-            this.metricColumn = Input.ofNullable(metricColumn);
+            this.metricColumn = Output.ofNullable(metricColumn);
             return this;
         }
 
-        public Builder metricTriggerType(@Nullable Input<Either<String,MetricTriggerType>> metricTriggerType) {
+        public Builder metricTriggerType(@Nullable Output<Either<String,MetricTriggerType>> metricTriggerType) {
             this.metricTriggerType = metricTriggerType;
             return this;
         }
 
         public Builder metricTriggerType(@Nullable Either<String,MetricTriggerType> metricTriggerType) {
-            this.metricTriggerType = Input.ofNullable(metricTriggerType);
+            this.metricTriggerType = Output.ofNullable(metricTriggerType);
             return this;
         }
 
-        public Builder threshold(@Nullable Input<Double> threshold) {
+        public Builder threshold(@Nullable Output<Double> threshold) {
             this.threshold = threshold;
             return this;
         }
 
         public Builder threshold(@Nullable Double threshold) {
-            this.threshold = Input.ofNullable(threshold);
+            this.threshold = Output.ofNullable(threshold);
             return this;
         }
 
-        public Builder thresholdOperator(@Nullable Input<Either<String,ConditionalOperator>> thresholdOperator) {
+        public Builder thresholdOperator(@Nullable Output<Either<String,ConditionalOperator>> thresholdOperator) {
             this.thresholdOperator = thresholdOperator;
             return this;
         }
 
         public Builder thresholdOperator(@Nullable Either<String,ConditionalOperator> thresholdOperator) {
-            this.thresholdOperator = Input.ofNullable(thresholdOperator);
+            this.thresholdOperator = Output.ofNullable(thresholdOperator);
             return this;
         }
         public LogMetricTriggerArgs build() {

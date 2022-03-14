@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.accesscontextmanager.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -22,10 +22,10 @@ public final class AccessLevelBasicConditionDevicePolicyOsConstraintGetArgs exte
      * 
      */
     @InputImport(name="minimumVersion")
-      private final @Nullable Input<String> minimumVersion;
+      private final @Nullable Output<String> minimumVersion;
 
-    public Input<String> getMinimumVersion() {
-        return this.minimumVersion == null ? Input.empty() : this.minimumVersion;
+    public Output<String> getMinimumVersion() {
+        return this.minimumVersion == null ? Output.empty() : this.minimumVersion;
     }
 
     /**
@@ -34,9 +34,9 @@ public final class AccessLevelBasicConditionDevicePolicyOsConstraintGetArgs exte
      * 
      */
     @InputImport(name="osType", required=true)
-      private final Input<String> osType;
+      private final Output<String> osType;
 
-    public Input<String> getOsType() {
+    public Output<String> getOsType() {
         return this.osType;
     }
 
@@ -45,25 +45,25 @@ public final class AccessLevelBasicConditionDevicePolicyOsConstraintGetArgs exte
      * 
      */
     @InputImport(name="requireVerifiedChromeOs")
-      private final @Nullable Input<Boolean> requireVerifiedChromeOs;
+      private final @Nullable Output<Boolean> requireVerifiedChromeOs;
 
-    public Input<Boolean> getRequireVerifiedChromeOs() {
-        return this.requireVerifiedChromeOs == null ? Input.empty() : this.requireVerifiedChromeOs;
+    public Output<Boolean> getRequireVerifiedChromeOs() {
+        return this.requireVerifiedChromeOs == null ? Output.empty() : this.requireVerifiedChromeOs;
     }
 
     public AccessLevelBasicConditionDevicePolicyOsConstraintGetArgs(
-        @Nullable Input<String> minimumVersion,
-        Input<String> osType,
-        @Nullable Input<Boolean> requireVerifiedChromeOs) {
+        @Nullable Output<String> minimumVersion,
+        Output<String> osType,
+        @Nullable Output<Boolean> requireVerifiedChromeOs) {
         this.minimumVersion = minimumVersion;
         this.osType = Objects.requireNonNull(osType, "expected parameter 'osType' to be non-null");
         this.requireVerifiedChromeOs = requireVerifiedChromeOs;
     }
 
     private AccessLevelBasicConditionDevicePolicyOsConstraintGetArgs() {
-        this.minimumVersion = Input.empty();
-        this.osType = Input.empty();
-        this.requireVerifiedChromeOs = Input.empty();
+        this.minimumVersion = Output.empty();
+        this.osType = Output.empty();
+        this.requireVerifiedChromeOs = Output.empty();
     }
 
     public static Builder builder() {
@@ -75,9 +75,9 @@ public final class AccessLevelBasicConditionDevicePolicyOsConstraintGetArgs exte
     }
 
     public static final class Builder {
-        private @Nullable Input<String> minimumVersion;
-        private Input<String> osType;
-        private @Nullable Input<Boolean> requireVerifiedChromeOs;
+        private @Nullable Output<String> minimumVersion;
+        private Output<String> osType;
+        private @Nullable Output<Boolean> requireVerifiedChromeOs;
 
         public Builder() {
     	      // Empty
@@ -90,33 +90,33 @@ public final class AccessLevelBasicConditionDevicePolicyOsConstraintGetArgs exte
     	      this.requireVerifiedChromeOs = defaults.requireVerifiedChromeOs;
         }
 
-        public Builder minimumVersion(@Nullable Input<String> minimumVersion) {
+        public Builder minimumVersion(@Nullable Output<String> minimumVersion) {
             this.minimumVersion = minimumVersion;
             return this;
         }
 
         public Builder minimumVersion(@Nullable String minimumVersion) {
-            this.minimumVersion = Input.ofNullable(minimumVersion);
+            this.minimumVersion = Output.ofNullable(minimumVersion);
             return this;
         }
 
-        public Builder osType(Input<String> osType) {
+        public Builder osType(Output<String> osType) {
             this.osType = Objects.requireNonNull(osType);
             return this;
         }
 
         public Builder osType(String osType) {
-            this.osType = Input.of(Objects.requireNonNull(osType));
+            this.osType = Output.of(Objects.requireNonNull(osType));
             return this;
         }
 
-        public Builder requireVerifiedChromeOs(@Nullable Input<Boolean> requireVerifiedChromeOs) {
+        public Builder requireVerifiedChromeOs(@Nullable Output<Boolean> requireVerifiedChromeOs) {
             this.requireVerifiedChromeOs = requireVerifiedChromeOs;
             return this;
         }
 
         public Builder requireVerifiedChromeOs(@Nullable Boolean requireVerifiedChromeOs) {
-            this.requireVerifiedChromeOs = Input.ofNullable(requireVerifiedChromeOs);
+            this.requireVerifiedChromeOs = Output.ofNullable(requireVerifiedChromeOs);
             return this;
         }
         public AccessLevelBasicConditionDevicePolicyOsConstraintGetArgs build() {

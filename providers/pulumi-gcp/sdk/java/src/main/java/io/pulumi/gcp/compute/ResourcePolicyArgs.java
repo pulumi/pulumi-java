@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.compute.inputs.ResourcePolicyGroupPlacementPolicyArgs;
 import io.pulumi.gcp.compute.inputs.ResourcePolicyInstanceSchedulePolicyArgs;
@@ -22,10 +22,10 @@ public final class ResourcePolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class ResourcePolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="groupPlacementPolicy")
-      private final @Nullable Input<ResourcePolicyGroupPlacementPolicyArgs> groupPlacementPolicy;
+      private final @Nullable Output<ResourcePolicyGroupPlacementPolicyArgs> groupPlacementPolicy;
 
-    public Input<ResourcePolicyGroupPlacementPolicyArgs> getGroupPlacementPolicy() {
-        return this.groupPlacementPolicy == null ? Input.empty() : this.groupPlacementPolicy;
+    public Output<ResourcePolicyGroupPlacementPolicyArgs> getGroupPlacementPolicy() {
+        return this.groupPlacementPolicy == null ? Output.empty() : this.groupPlacementPolicy;
     }
 
     /**
@@ -46,10 +46,10 @@ public final class ResourcePolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="instanceSchedulePolicy")
-      private final @Nullable Input<ResourcePolicyInstanceSchedulePolicyArgs> instanceSchedulePolicy;
+      private final @Nullable Output<ResourcePolicyInstanceSchedulePolicyArgs> instanceSchedulePolicy;
 
-    public Input<ResourcePolicyInstanceSchedulePolicyArgs> getInstanceSchedulePolicy() {
-        return this.instanceSchedulePolicy == null ? Input.empty() : this.instanceSchedulePolicy;
+    public Output<ResourcePolicyInstanceSchedulePolicyArgs> getInstanceSchedulePolicy() {
+        return this.instanceSchedulePolicy == null ? Output.empty() : this.instanceSchedulePolicy;
     }
 
     /**
@@ -63,10 +63,10 @@ public final class ResourcePolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -75,10 +75,10 @@ public final class ResourcePolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -86,10 +86,10 @@ public final class ResourcePolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="region")
-      private final @Nullable Input<String> region;
+      private final @Nullable Output<String> region;
 
-    public Input<String> getRegion() {
-        return this.region == null ? Input.empty() : this.region;
+    public Output<String> getRegion() {
+        return this.region == null ? Output.empty() : this.region;
     }
 
     /**
@@ -98,20 +98,20 @@ public final class ResourcePolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="snapshotSchedulePolicy")
-      private final @Nullable Input<ResourcePolicySnapshotSchedulePolicyArgs> snapshotSchedulePolicy;
+      private final @Nullable Output<ResourcePolicySnapshotSchedulePolicyArgs> snapshotSchedulePolicy;
 
-    public Input<ResourcePolicySnapshotSchedulePolicyArgs> getSnapshotSchedulePolicy() {
-        return this.snapshotSchedulePolicy == null ? Input.empty() : this.snapshotSchedulePolicy;
+    public Output<ResourcePolicySnapshotSchedulePolicyArgs> getSnapshotSchedulePolicy() {
+        return this.snapshotSchedulePolicy == null ? Output.empty() : this.snapshotSchedulePolicy;
     }
 
     public ResourcePolicyArgs(
-        @Nullable Input<String> description,
-        @Nullable Input<ResourcePolicyGroupPlacementPolicyArgs> groupPlacementPolicy,
-        @Nullable Input<ResourcePolicyInstanceSchedulePolicyArgs> instanceSchedulePolicy,
-        @Nullable Input<String> name,
-        @Nullable Input<String> project,
-        @Nullable Input<String> region,
-        @Nullable Input<ResourcePolicySnapshotSchedulePolicyArgs> snapshotSchedulePolicy) {
+        @Nullable Output<String> description,
+        @Nullable Output<ResourcePolicyGroupPlacementPolicyArgs> groupPlacementPolicy,
+        @Nullable Output<ResourcePolicyInstanceSchedulePolicyArgs> instanceSchedulePolicy,
+        @Nullable Output<String> name,
+        @Nullable Output<String> project,
+        @Nullable Output<String> region,
+        @Nullable Output<ResourcePolicySnapshotSchedulePolicyArgs> snapshotSchedulePolicy) {
         this.description = description;
         this.groupPlacementPolicy = groupPlacementPolicy;
         this.instanceSchedulePolicy = instanceSchedulePolicy;
@@ -122,13 +122,13 @@ public final class ResourcePolicyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ResourcePolicyArgs() {
-        this.description = Input.empty();
-        this.groupPlacementPolicy = Input.empty();
-        this.instanceSchedulePolicy = Input.empty();
-        this.name = Input.empty();
-        this.project = Input.empty();
-        this.region = Input.empty();
-        this.snapshotSchedulePolicy = Input.empty();
+        this.description = Output.empty();
+        this.groupPlacementPolicy = Output.empty();
+        this.instanceSchedulePolicy = Output.empty();
+        this.name = Output.empty();
+        this.project = Output.empty();
+        this.region = Output.empty();
+        this.snapshotSchedulePolicy = Output.empty();
     }
 
     public static Builder builder() {
@@ -140,13 +140,13 @@ public final class ResourcePolicyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> description;
-        private @Nullable Input<ResourcePolicyGroupPlacementPolicyArgs> groupPlacementPolicy;
-        private @Nullable Input<ResourcePolicyInstanceSchedulePolicyArgs> instanceSchedulePolicy;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> project;
-        private @Nullable Input<String> region;
-        private @Nullable Input<ResourcePolicySnapshotSchedulePolicyArgs> snapshotSchedulePolicy;
+        private @Nullable Output<String> description;
+        private @Nullable Output<ResourcePolicyGroupPlacementPolicyArgs> groupPlacementPolicy;
+        private @Nullable Output<ResourcePolicyInstanceSchedulePolicyArgs> instanceSchedulePolicy;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> project;
+        private @Nullable Output<String> region;
+        private @Nullable Output<ResourcePolicySnapshotSchedulePolicyArgs> snapshotSchedulePolicy;
 
         public Builder() {
     	      // Empty
@@ -163,73 +163,73 @@ public final class ResourcePolicyArgs extends io.pulumi.resources.ResourceArgs {
     	      this.snapshotSchedulePolicy = defaults.snapshotSchedulePolicy;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder groupPlacementPolicy(@Nullable Input<ResourcePolicyGroupPlacementPolicyArgs> groupPlacementPolicy) {
+        public Builder groupPlacementPolicy(@Nullable Output<ResourcePolicyGroupPlacementPolicyArgs> groupPlacementPolicy) {
             this.groupPlacementPolicy = groupPlacementPolicy;
             return this;
         }
 
         public Builder groupPlacementPolicy(@Nullable ResourcePolicyGroupPlacementPolicyArgs groupPlacementPolicy) {
-            this.groupPlacementPolicy = Input.ofNullable(groupPlacementPolicy);
+            this.groupPlacementPolicy = Output.ofNullable(groupPlacementPolicy);
             return this;
         }
 
-        public Builder instanceSchedulePolicy(@Nullable Input<ResourcePolicyInstanceSchedulePolicyArgs> instanceSchedulePolicy) {
+        public Builder instanceSchedulePolicy(@Nullable Output<ResourcePolicyInstanceSchedulePolicyArgs> instanceSchedulePolicy) {
             this.instanceSchedulePolicy = instanceSchedulePolicy;
             return this;
         }
 
         public Builder instanceSchedulePolicy(@Nullable ResourcePolicyInstanceSchedulePolicyArgs instanceSchedulePolicy) {
-            this.instanceSchedulePolicy = Input.ofNullable(instanceSchedulePolicy);
+            this.instanceSchedulePolicy = Output.ofNullable(instanceSchedulePolicy);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder region(@Nullable Input<String> region) {
+        public Builder region(@Nullable Output<String> region) {
             this.region = region;
             return this;
         }
 
         public Builder region(@Nullable String region) {
-            this.region = Input.ofNullable(region);
+            this.region = Output.ofNullable(region);
             return this;
         }
 
-        public Builder snapshotSchedulePolicy(@Nullable Input<ResourcePolicySnapshotSchedulePolicyArgs> snapshotSchedulePolicy) {
+        public Builder snapshotSchedulePolicy(@Nullable Output<ResourcePolicySnapshotSchedulePolicyArgs> snapshotSchedulePolicy) {
             this.snapshotSchedulePolicy = snapshotSchedulePolicy;
             return this;
         }
 
         public Builder snapshotSchedulePolicy(@Nullable ResourcePolicySnapshotSchedulePolicyArgs snapshotSchedulePolicy) {
-            this.snapshotSchedulePolicy = Input.ofNullable(snapshotSchedulePolicy);
+            this.snapshotSchedulePolicy = Output.ofNullable(snapshotSchedulePolicy);
             return this;
         }
         public ResourcePolicyArgs build() {

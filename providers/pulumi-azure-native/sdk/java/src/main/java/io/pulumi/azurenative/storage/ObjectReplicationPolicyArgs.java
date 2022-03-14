@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.storage;
 
 import io.pulumi.azurenative.storage.inputs.ObjectReplicationPolicyRuleArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -21,9 +21,9 @@ public final class ObjectReplicationPolicyArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="accountName", required=true)
-      private final Input<String> accountName;
+      private final Output<String> accountName;
 
-    public Input<String> getAccountName() {
+    public Output<String> getAccountName() {
         return this.accountName;
     }
 
@@ -32,9 +32,9 @@ public final class ObjectReplicationPolicyArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="destinationAccount", required=true)
-      private final Input<String> destinationAccount;
+      private final Output<String> destinationAccount;
 
-    public Input<String> getDestinationAccount() {
+    public Output<String> getDestinationAccount() {
         return this.destinationAccount;
     }
 
@@ -43,10 +43,10 @@ public final class ObjectReplicationPolicyArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="objectReplicationPolicyId")
-      private final @Nullable Input<String> objectReplicationPolicyId;
+      private final @Nullable Output<String> objectReplicationPolicyId;
 
-    public Input<String> getObjectReplicationPolicyId() {
-        return this.objectReplicationPolicyId == null ? Input.empty() : this.objectReplicationPolicyId;
+    public Output<String> getObjectReplicationPolicyId() {
+        return this.objectReplicationPolicyId == null ? Output.empty() : this.objectReplicationPolicyId;
     }
 
     /**
@@ -54,9 +54,9 @@ public final class ObjectReplicationPolicyArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -65,10 +65,10 @@ public final class ObjectReplicationPolicyArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="rules")
-      private final @Nullable Input<List<ObjectReplicationPolicyRuleArgs>> rules;
+      private final @Nullable Output<List<ObjectReplicationPolicyRuleArgs>> rules;
 
-    public Input<List<ObjectReplicationPolicyRuleArgs>> getRules() {
-        return this.rules == null ? Input.empty() : this.rules;
+    public Output<List<ObjectReplicationPolicyRuleArgs>> getRules() {
+        return this.rules == null ? Output.empty() : this.rules;
     }
 
     /**
@@ -76,19 +76,19 @@ public final class ObjectReplicationPolicyArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="sourceAccount", required=true)
-      private final Input<String> sourceAccount;
+      private final Output<String> sourceAccount;
 
-    public Input<String> getSourceAccount() {
+    public Output<String> getSourceAccount() {
         return this.sourceAccount;
     }
 
     public ObjectReplicationPolicyArgs(
-        Input<String> accountName,
-        Input<String> destinationAccount,
-        @Nullable Input<String> objectReplicationPolicyId,
-        Input<String> resourceGroupName,
-        @Nullable Input<List<ObjectReplicationPolicyRuleArgs>> rules,
-        Input<String> sourceAccount) {
+        Output<String> accountName,
+        Output<String> destinationAccount,
+        @Nullable Output<String> objectReplicationPolicyId,
+        Output<String> resourceGroupName,
+        @Nullable Output<List<ObjectReplicationPolicyRuleArgs>> rules,
+        Output<String> sourceAccount) {
         this.accountName = Objects.requireNonNull(accountName, "expected parameter 'accountName' to be non-null");
         this.destinationAccount = Objects.requireNonNull(destinationAccount, "expected parameter 'destinationAccount' to be non-null");
         this.objectReplicationPolicyId = objectReplicationPolicyId;
@@ -98,12 +98,12 @@ public final class ObjectReplicationPolicyArgs extends io.pulumi.resources.Resou
     }
 
     private ObjectReplicationPolicyArgs() {
-        this.accountName = Input.empty();
-        this.destinationAccount = Input.empty();
-        this.objectReplicationPolicyId = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.rules = Input.empty();
-        this.sourceAccount = Input.empty();
+        this.accountName = Output.empty();
+        this.destinationAccount = Output.empty();
+        this.objectReplicationPolicyId = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.rules = Output.empty();
+        this.sourceAccount = Output.empty();
     }
 
     public static Builder builder() {
@@ -115,12 +115,12 @@ public final class ObjectReplicationPolicyArgs extends io.pulumi.resources.Resou
     }
 
     public static final class Builder {
-        private Input<String> accountName;
-        private Input<String> destinationAccount;
-        private @Nullable Input<String> objectReplicationPolicyId;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<List<ObjectReplicationPolicyRuleArgs>> rules;
-        private Input<String> sourceAccount;
+        private Output<String> accountName;
+        private Output<String> destinationAccount;
+        private @Nullable Output<String> objectReplicationPolicyId;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<List<ObjectReplicationPolicyRuleArgs>> rules;
+        private Output<String> sourceAccount;
 
         public Builder() {
     	      // Empty
@@ -136,63 +136,63 @@ public final class ObjectReplicationPolicyArgs extends io.pulumi.resources.Resou
     	      this.sourceAccount = defaults.sourceAccount;
         }
 
-        public Builder accountName(Input<String> accountName) {
+        public Builder accountName(Output<String> accountName) {
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
 
         public Builder accountName(String accountName) {
-            this.accountName = Input.of(Objects.requireNonNull(accountName));
+            this.accountName = Output.of(Objects.requireNonNull(accountName));
             return this;
         }
 
-        public Builder destinationAccount(Input<String> destinationAccount) {
+        public Builder destinationAccount(Output<String> destinationAccount) {
             this.destinationAccount = Objects.requireNonNull(destinationAccount);
             return this;
         }
 
         public Builder destinationAccount(String destinationAccount) {
-            this.destinationAccount = Input.of(Objects.requireNonNull(destinationAccount));
+            this.destinationAccount = Output.of(Objects.requireNonNull(destinationAccount));
             return this;
         }
 
-        public Builder objectReplicationPolicyId(@Nullable Input<String> objectReplicationPolicyId) {
+        public Builder objectReplicationPolicyId(@Nullable Output<String> objectReplicationPolicyId) {
             this.objectReplicationPolicyId = objectReplicationPolicyId;
             return this;
         }
 
         public Builder objectReplicationPolicyId(@Nullable String objectReplicationPolicyId) {
-            this.objectReplicationPolicyId = Input.ofNullable(objectReplicationPolicyId);
+            this.objectReplicationPolicyId = Output.ofNullable(objectReplicationPolicyId);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder rules(@Nullable Input<List<ObjectReplicationPolicyRuleArgs>> rules) {
+        public Builder rules(@Nullable Output<List<ObjectReplicationPolicyRuleArgs>> rules) {
             this.rules = rules;
             return this;
         }
 
         public Builder rules(@Nullable List<ObjectReplicationPolicyRuleArgs> rules) {
-            this.rules = Input.ofNullable(rules);
+            this.rules = Output.ofNullable(rules);
             return this;
         }
 
-        public Builder sourceAccount(Input<String> sourceAccount) {
+        public Builder sourceAccount(Output<String> sourceAccount) {
             this.sourceAccount = Objects.requireNonNull(sourceAccount);
             return this;
         }
 
         public Builder sourceAccount(String sourceAccount) {
-            this.sourceAccount = Input.of(Objects.requireNonNull(sourceAccount));
+            this.sourceAccount = Output.of(Objects.requireNonNull(sourceAccount));
             return this;
         }
         public ObjectReplicationPolicyArgs build() {

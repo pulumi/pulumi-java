@@ -5,7 +5,7 @@ package io.pulumi.aws.ssm;
 
 import io.pulumi.aws.ssm.enums.ParameterType;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -23,10 +23,10 @@ public final class ParameterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="allowedPattern")
-      private final @Nullable Input<String> allowedPattern;
+      private final @Nullable Output<String> allowedPattern;
 
-    public Input<String> getAllowedPattern() {
-        return this.allowedPattern == null ? Input.empty() : this.allowedPattern;
+    public Output<String> getAllowedPattern() {
+        return this.allowedPattern == null ? Output.empty() : this.allowedPattern;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class ParameterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arn")
-      private final @Nullable Input<String> arn;
+      private final @Nullable Output<String> arn;
 
-    public Input<String> getArn() {
-        return this.arn == null ? Input.empty() : this.arn;
+    public Output<String> getArn() {
+        return this.arn == null ? Output.empty() : this.arn;
     }
 
     /**
@@ -46,10 +46,10 @@ public final class ParameterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dataType")
-      private final @Nullable Input<String> dataType;
+      private final @Nullable Output<String> dataType;
 
-    public Input<String> getDataType() {
-        return this.dataType == null ? Input.empty() : this.dataType;
+    public Output<String> getDataType() {
+        return this.dataType == null ? Output.empty() : this.dataType;
     }
 
     /**
@@ -57,10 +57,10 @@ public final class ParameterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -68,10 +68,10 @@ public final class ParameterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="keyId")
-      private final @Nullable Input<String> keyId;
+      private final @Nullable Output<String> keyId;
 
-    public Input<String> getKeyId() {
-        return this.keyId == null ? Input.empty() : this.keyId;
+    public Output<String> getKeyId() {
+        return this.keyId == null ? Output.empty() : this.keyId;
     }
 
     /**
@@ -79,10 +79,10 @@ public final class ParameterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -90,10 +90,10 @@ public final class ParameterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="overwrite")
-      private final @Nullable Input<Boolean> overwrite;
+      private final @Nullable Output<Boolean> overwrite;
 
-    public Input<Boolean> getOverwrite() {
-        return this.overwrite == null ? Input.empty() : this.overwrite;
+    public Output<Boolean> getOverwrite() {
+        return this.overwrite == null ? Output.empty() : this.overwrite;
     }
 
     /**
@@ -101,10 +101,10 @@ public final class ParameterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -112,10 +112,10 @@ public final class ParameterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tier")
-      private final @Nullable Input<String> tier;
+      private final @Nullable Output<String> tier;
 
-    public Input<String> getTier() {
-        return this.tier == null ? Input.empty() : this.tier;
+    public Output<String> getTier() {
+        return this.tier == null ? Output.empty() : this.tier;
     }
 
     /**
@@ -123,9 +123,9 @@ public final class ParameterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<Either<String,ParameterType>> type;
+      private final Output<Either<String,ParameterType>> type;
 
-    public Input<Either<String,ParameterType>> getType() {
+    public Output<Either<String,ParameterType>> getType() {
         return this.type;
     }
 
@@ -134,24 +134,24 @@ public final class ParameterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="value", required=true)
-      private final Input<String> value;
+      private final Output<String> value;
 
-    public Input<String> getValue() {
+    public Output<String> getValue() {
         return this.value;
     }
 
     public ParameterArgs(
-        @Nullable Input<String> allowedPattern,
-        @Nullable Input<String> arn,
-        @Nullable Input<String> dataType,
-        @Nullable Input<String> description,
-        @Nullable Input<String> keyId,
-        @Nullable Input<String> name,
-        @Nullable Input<Boolean> overwrite,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<String> tier,
-        Input<Either<String,ParameterType>> type,
-        Input<String> value) {
+        @Nullable Output<String> allowedPattern,
+        @Nullable Output<String> arn,
+        @Nullable Output<String> dataType,
+        @Nullable Output<String> description,
+        @Nullable Output<String> keyId,
+        @Nullable Output<String> name,
+        @Nullable Output<Boolean> overwrite,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<String> tier,
+        Output<Either<String,ParameterType>> type,
+        Output<String> value) {
         this.allowedPattern = allowedPattern;
         this.arn = arn;
         this.dataType = dataType;
@@ -166,17 +166,17 @@ public final class ParameterArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ParameterArgs() {
-        this.allowedPattern = Input.empty();
-        this.arn = Input.empty();
-        this.dataType = Input.empty();
-        this.description = Input.empty();
-        this.keyId = Input.empty();
-        this.name = Input.empty();
-        this.overwrite = Input.empty();
-        this.tags = Input.empty();
-        this.tier = Input.empty();
-        this.type = Input.empty();
-        this.value = Input.empty();
+        this.allowedPattern = Output.empty();
+        this.arn = Output.empty();
+        this.dataType = Output.empty();
+        this.description = Output.empty();
+        this.keyId = Output.empty();
+        this.name = Output.empty();
+        this.overwrite = Output.empty();
+        this.tags = Output.empty();
+        this.tier = Output.empty();
+        this.type = Output.empty();
+        this.value = Output.empty();
     }
 
     public static Builder builder() {
@@ -188,17 +188,17 @@ public final class ParameterArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> allowedPattern;
-        private @Nullable Input<String> arn;
-        private @Nullable Input<String> dataType;
-        private @Nullable Input<String> description;
-        private @Nullable Input<String> keyId;
-        private @Nullable Input<String> name;
-        private @Nullable Input<Boolean> overwrite;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<String> tier;
-        private Input<Either<String,ParameterType>> type;
-        private Input<String> value;
+        private @Nullable Output<String> allowedPattern;
+        private @Nullable Output<String> arn;
+        private @Nullable Output<String> dataType;
+        private @Nullable Output<String> description;
+        private @Nullable Output<String> keyId;
+        private @Nullable Output<String> name;
+        private @Nullable Output<Boolean> overwrite;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<String> tier;
+        private Output<Either<String,ParameterType>> type;
+        private Output<String> value;
 
         public Builder() {
     	      // Empty
@@ -219,113 +219,113 @@ public final class ParameterArgs extends io.pulumi.resources.ResourceArgs {
     	      this.value = defaults.value;
         }
 
-        public Builder allowedPattern(@Nullable Input<String> allowedPattern) {
+        public Builder allowedPattern(@Nullable Output<String> allowedPattern) {
             this.allowedPattern = allowedPattern;
             return this;
         }
 
         public Builder allowedPattern(@Nullable String allowedPattern) {
-            this.allowedPattern = Input.ofNullable(allowedPattern);
+            this.allowedPattern = Output.ofNullable(allowedPattern);
             return this;
         }
 
-        public Builder arn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
 
         public Builder arn(@Nullable String arn) {
-            this.arn = Input.ofNullable(arn);
+            this.arn = Output.ofNullable(arn);
             return this;
         }
 
-        public Builder dataType(@Nullable Input<String> dataType) {
+        public Builder dataType(@Nullable Output<String> dataType) {
             this.dataType = dataType;
             return this;
         }
 
         public Builder dataType(@Nullable String dataType) {
-            this.dataType = Input.ofNullable(dataType);
+            this.dataType = Output.ofNullable(dataType);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder keyId(@Nullable Input<String> keyId) {
+        public Builder keyId(@Nullable Output<String> keyId) {
             this.keyId = keyId;
             return this;
         }
 
         public Builder keyId(@Nullable String keyId) {
-            this.keyId = Input.ofNullable(keyId);
+            this.keyId = Output.ofNullable(keyId);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder overwrite(@Nullable Input<Boolean> overwrite) {
+        public Builder overwrite(@Nullable Output<Boolean> overwrite) {
             this.overwrite = overwrite;
             return this;
         }
 
         public Builder overwrite(@Nullable Boolean overwrite) {
-            this.overwrite = Input.ofNullable(overwrite);
+            this.overwrite = Output.ofNullable(overwrite);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder tier(@Nullable Input<String> tier) {
+        public Builder tier(@Nullable Output<String> tier) {
             this.tier = tier;
             return this;
         }
 
         public Builder tier(@Nullable String tier) {
-            this.tier = Input.ofNullable(tier);
+            this.tier = Output.ofNullable(tier);
             return this;
         }
 
-        public Builder type(Input<Either<String,ParameterType>> type) {
+        public Builder type(Output<Either<String,ParameterType>> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(Either<String,ParameterType> type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
 
-        public Builder value(Input<String> value) {
+        public Builder value(Output<String> value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }
 
         public Builder value(String value) {
-            this.value = Input.of(Objects.requireNonNull(value));
+            this.value = Output.of(Objects.requireNonNull(value));
             return this;
         }
         public ParameterArgs build() {

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.signalrservice.inputs;
 
 import io.pulumi.azurenative.signalrservice.inputs.UpstreamTemplateArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
@@ -24,18 +24,18 @@ public final class ServerlessUpstreamSettingsArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="templates")
-      private final @Nullable Input<List<UpstreamTemplateArgs>> templates;
+      private final @Nullable Output<List<UpstreamTemplateArgs>> templates;
 
-    public Input<List<UpstreamTemplateArgs>> getTemplates() {
-        return this.templates == null ? Input.empty() : this.templates;
+    public Output<List<UpstreamTemplateArgs>> getTemplates() {
+        return this.templates == null ? Output.empty() : this.templates;
     }
 
-    public ServerlessUpstreamSettingsArgs(@Nullable Input<List<UpstreamTemplateArgs>> templates) {
+    public ServerlessUpstreamSettingsArgs(@Nullable Output<List<UpstreamTemplateArgs>> templates) {
         this.templates = templates;
     }
 
     private ServerlessUpstreamSettingsArgs() {
-        this.templates = Input.empty();
+        this.templates = Output.empty();
     }
 
     public static Builder builder() {
@@ -47,7 +47,7 @@ public final class ServerlessUpstreamSettingsArgs extends io.pulumi.resources.Re
     }
 
     public static final class Builder {
-        private @Nullable Input<List<UpstreamTemplateArgs>> templates;
+        private @Nullable Output<List<UpstreamTemplateArgs>> templates;
 
         public Builder() {
     	      // Empty
@@ -58,13 +58,13 @@ public final class ServerlessUpstreamSettingsArgs extends io.pulumi.resources.Re
     	      this.templates = defaults.templates;
         }
 
-        public Builder templates(@Nullable Input<List<UpstreamTemplateArgs>> templates) {
+        public Builder templates(@Nullable Output<List<UpstreamTemplateArgs>> templates) {
             this.templates = templates;
             return this;
         }
 
         public Builder templates(@Nullable List<UpstreamTemplateArgs> templates) {
-            this.templates = Input.ofNullable(templates);
+            this.templates = Output.ofNullable(templates);
             return this;
         }
         public ServerlessUpstreamSettingsArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.serviceAccount.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -23,10 +23,10 @@ public final class AccountState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="accountId")
-      private final @Nullable Input<String> accountId;
+      private final @Nullable Output<String> accountId;
 
-    public Input<String> getAccountId() {
-        return this.accountId == null ? Input.empty() : this.accountId;
+    public Output<String> getAccountId() {
+        return this.accountId == null ? Output.empty() : this.accountId;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class AccountState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -47,10 +47,10 @@ public final class AccountState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="disabled")
-      private final @Nullable Input<Boolean> disabled;
+      private final @Nullable Output<Boolean> disabled;
 
-    public Input<Boolean> getDisabled() {
-        return this.disabled == null ? Input.empty() : this.disabled;
+    public Output<Boolean> getDisabled() {
+        return this.disabled == null ? Output.empty() : this.disabled;
     }
 
     /**
@@ -59,10 +59,10 @@ public final class AccountState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName")
-      private final @Nullable Input<String> displayName;
+      private final @Nullable Output<String> displayName;
 
-    public Input<String> getDisplayName() {
-        return this.displayName == null ? Input.empty() : this.displayName;
+    public Output<String> getDisplayName() {
+        return this.displayName == null ? Output.empty() : this.displayName;
     }
 
     /**
@@ -72,10 +72,10 @@ public final class AccountState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="email")
-      private final @Nullable Input<String> email;
+      private final @Nullable Output<String> email;
 
-    public Input<String> getEmail() {
-        return this.email == null ? Input.empty() : this.email;
+    public Output<String> getEmail() {
+        return this.email == null ? Output.empty() : this.email;
     }
 
     /**
@@ -83,10 +83,10 @@ public final class AccountState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -95,10 +95,10 @@ public final class AccountState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -106,21 +106,21 @@ public final class AccountState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="uniqueId")
-      private final @Nullable Input<String> uniqueId;
+      private final @Nullable Output<String> uniqueId;
 
-    public Input<String> getUniqueId() {
-        return this.uniqueId == null ? Input.empty() : this.uniqueId;
+    public Output<String> getUniqueId() {
+        return this.uniqueId == null ? Output.empty() : this.uniqueId;
     }
 
     public AccountState(
-        @Nullable Input<String> accountId,
-        @Nullable Input<String> description,
-        @Nullable Input<Boolean> disabled,
-        @Nullable Input<String> displayName,
-        @Nullable Input<String> email,
-        @Nullable Input<String> name,
-        @Nullable Input<String> project,
-        @Nullable Input<String> uniqueId) {
+        @Nullable Output<String> accountId,
+        @Nullable Output<String> description,
+        @Nullable Output<Boolean> disabled,
+        @Nullable Output<String> displayName,
+        @Nullable Output<String> email,
+        @Nullable Output<String> name,
+        @Nullable Output<String> project,
+        @Nullable Output<String> uniqueId) {
         this.accountId = accountId;
         this.description = description;
         this.disabled = disabled;
@@ -132,14 +132,14 @@ public final class AccountState extends io.pulumi.resources.ResourceArgs {
     }
 
     private AccountState() {
-        this.accountId = Input.empty();
-        this.description = Input.empty();
-        this.disabled = Input.empty();
-        this.displayName = Input.empty();
-        this.email = Input.empty();
-        this.name = Input.empty();
-        this.project = Input.empty();
-        this.uniqueId = Input.empty();
+        this.accountId = Output.empty();
+        this.description = Output.empty();
+        this.disabled = Output.empty();
+        this.displayName = Output.empty();
+        this.email = Output.empty();
+        this.name = Output.empty();
+        this.project = Output.empty();
+        this.uniqueId = Output.empty();
     }
 
     public static Builder builder() {
@@ -151,14 +151,14 @@ public final class AccountState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> accountId;
-        private @Nullable Input<String> description;
-        private @Nullable Input<Boolean> disabled;
-        private @Nullable Input<String> displayName;
-        private @Nullable Input<String> email;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> project;
-        private @Nullable Input<String> uniqueId;
+        private @Nullable Output<String> accountId;
+        private @Nullable Output<String> description;
+        private @Nullable Output<Boolean> disabled;
+        private @Nullable Output<String> displayName;
+        private @Nullable Output<String> email;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> project;
+        private @Nullable Output<String> uniqueId;
 
         public Builder() {
     	      // Empty
@@ -176,83 +176,83 @@ public final class AccountState extends io.pulumi.resources.ResourceArgs {
     	      this.uniqueId = defaults.uniqueId;
         }
 
-        public Builder accountId(@Nullable Input<String> accountId) {
+        public Builder accountId(@Nullable Output<String> accountId) {
             this.accountId = accountId;
             return this;
         }
 
         public Builder accountId(@Nullable String accountId) {
-            this.accountId = Input.ofNullable(accountId);
+            this.accountId = Output.ofNullable(accountId);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder disabled(@Nullable Input<Boolean> disabled) {
+        public Builder disabled(@Nullable Output<Boolean> disabled) {
             this.disabled = disabled;
             return this;
         }
 
         public Builder disabled(@Nullable Boolean disabled) {
-            this.disabled = Input.ofNullable(disabled);
+            this.disabled = Output.ofNullable(disabled);
             return this;
         }
 
-        public Builder displayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Input.ofNullable(displayName);
+            this.displayName = Output.ofNullable(displayName);
             return this;
         }
 
-        public Builder email(@Nullable Input<String> email) {
+        public Builder email(@Nullable Output<String> email) {
             this.email = email;
             return this;
         }
 
         public Builder email(@Nullable String email) {
-            this.email = Input.ofNullable(email);
+            this.email = Output.ofNullable(email);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder uniqueId(@Nullable Input<String> uniqueId) {
+        public Builder uniqueId(@Nullable Output<String> uniqueId) {
             this.uniqueId = uniqueId;
             return this;
         }
 
         public Builder uniqueId(@Nullable String uniqueId) {
-            this.uniqueId = Input.ofNullable(uniqueId);
+            this.uniqueId = Output.ofNullable(uniqueId);
             return this;
         }
         public AccountState build() {

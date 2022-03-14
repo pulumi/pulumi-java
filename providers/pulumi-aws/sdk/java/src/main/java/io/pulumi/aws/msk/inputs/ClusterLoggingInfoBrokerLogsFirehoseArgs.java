@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.msk.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -20,10 +20,10 @@ public final class ClusterLoggingInfoBrokerLogsFirehoseArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="deliveryStream")
-      private final @Nullable Input<String> deliveryStream;
+      private final @Nullable Output<String> deliveryStream;
 
-    public Input<String> getDeliveryStream() {
-        return this.deliveryStream == null ? Input.empty() : this.deliveryStream;
+    public Output<String> getDeliveryStream() {
+        return this.deliveryStream == null ? Output.empty() : this.deliveryStream;
     }
 
     /**
@@ -31,22 +31,22 @@ public final class ClusterLoggingInfoBrokerLogsFirehoseArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="enabled", required=true)
-      private final Input<Boolean> enabled;
+      private final Output<Boolean> enabled;
 
-    public Input<Boolean> getEnabled() {
+    public Output<Boolean> getEnabled() {
         return this.enabled;
     }
 
     public ClusterLoggingInfoBrokerLogsFirehoseArgs(
-        @Nullable Input<String> deliveryStream,
-        Input<Boolean> enabled) {
+        @Nullable Output<String> deliveryStream,
+        Output<Boolean> enabled) {
         this.deliveryStream = deliveryStream;
         this.enabled = Objects.requireNonNull(enabled, "expected parameter 'enabled' to be non-null");
     }
 
     private ClusterLoggingInfoBrokerLogsFirehoseArgs() {
-        this.deliveryStream = Input.empty();
-        this.enabled = Input.empty();
+        this.deliveryStream = Output.empty();
+        this.enabled = Output.empty();
     }
 
     public static Builder builder() {
@@ -58,8 +58,8 @@ public final class ClusterLoggingInfoBrokerLogsFirehoseArgs extends io.pulumi.re
     }
 
     public static final class Builder {
-        private @Nullable Input<String> deliveryStream;
-        private Input<Boolean> enabled;
+        private @Nullable Output<String> deliveryStream;
+        private Output<Boolean> enabled;
 
         public Builder() {
     	      // Empty
@@ -71,23 +71,23 @@ public final class ClusterLoggingInfoBrokerLogsFirehoseArgs extends io.pulumi.re
     	      this.enabled = defaults.enabled;
         }
 
-        public Builder deliveryStream(@Nullable Input<String> deliveryStream) {
+        public Builder deliveryStream(@Nullable Output<String> deliveryStream) {
             this.deliveryStream = deliveryStream;
             return this;
         }
 
         public Builder deliveryStream(@Nullable String deliveryStream) {
-            this.deliveryStream = Input.ofNullable(deliveryStream);
+            this.deliveryStream = Output.ofNullable(deliveryStream);
             return this;
         }
 
-        public Builder enabled(Input<Boolean> enabled) {
+        public Builder enabled(Output<Boolean> enabled) {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
 
         public Builder enabled(Boolean enabled) {
-            this.enabled = Input.of(Objects.requireNonNull(enabled));
+            this.enabled = Output.of(Objects.requireNonNull(enabled));
             return this;
         }
         public ClusterLoggingInfoBrokerLogsFirehoseArgs build() {

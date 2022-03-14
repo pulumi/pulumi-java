@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.ec2.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -18,18 +18,18 @@ public final class IPAMPoolProvisionedCidrArgs extends io.pulumi.resources.Resou
     public static final IPAMPoolProvisionedCidrArgs Empty = new IPAMPoolProvisionedCidrArgs();
 
     @InputImport(name="cidr", required=true)
-      private final Input<String> cidr;
+      private final Output<String> cidr;
 
-    public Input<String> getCidr() {
+    public Output<String> getCidr() {
         return this.cidr;
     }
 
-    public IPAMPoolProvisionedCidrArgs(Input<String> cidr) {
+    public IPAMPoolProvisionedCidrArgs(Output<String> cidr) {
         this.cidr = Objects.requireNonNull(cidr, "expected parameter 'cidr' to be non-null");
     }
 
     private IPAMPoolProvisionedCidrArgs() {
-        this.cidr = Input.empty();
+        this.cidr = Output.empty();
     }
 
     public static Builder builder() {
@@ -41,7 +41,7 @@ public final class IPAMPoolProvisionedCidrArgs extends io.pulumi.resources.Resou
     }
 
     public static final class Builder {
-        private Input<String> cidr;
+        private Output<String> cidr;
 
         public Builder() {
     	      // Empty
@@ -52,13 +52,13 @@ public final class IPAMPoolProvisionedCidrArgs extends io.pulumi.resources.Resou
     	      this.cidr = defaults.cidr;
         }
 
-        public Builder cidr(Input<String> cidr) {
+        public Builder cidr(Output<String> cidr) {
             this.cidr = Objects.requireNonNull(cidr);
             return this;
         }
 
         public Builder cidr(String cidr) {
-            this.cidr = Input.of(Objects.requireNonNull(cidr));
+            this.cidr = Output.of(Objects.requireNonNull(cidr));
             return this;
         }
         public IPAMPoolProvisionedCidrArgs build() {

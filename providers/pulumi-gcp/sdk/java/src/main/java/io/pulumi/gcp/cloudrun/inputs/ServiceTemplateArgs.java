@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.cloudrun.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.cloudrun.inputs.ServiceTemplateMetadataArgs;
 import io.pulumi.gcp.cloudrun.inputs.ServiceTemplateSpecArgs;
@@ -22,10 +22,10 @@ public final class ServiceTemplateArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="metadata")
-      private final @Nullable Input<ServiceTemplateMetadataArgs> metadata;
+      private final @Nullable Output<ServiceTemplateMetadataArgs> metadata;
 
-    public Input<ServiceTemplateMetadataArgs> getMetadata() {
-        return this.metadata == null ? Input.empty() : this.metadata;
+    public Output<ServiceTemplateMetadataArgs> getMetadata() {
+        return this.metadata == null ? Output.empty() : this.metadata;
     }
 
     /**
@@ -34,22 +34,22 @@ public final class ServiceTemplateArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="spec")
-      private final @Nullable Input<ServiceTemplateSpecArgs> spec;
+      private final @Nullable Output<ServiceTemplateSpecArgs> spec;
 
-    public Input<ServiceTemplateSpecArgs> getSpec() {
-        return this.spec == null ? Input.empty() : this.spec;
+    public Output<ServiceTemplateSpecArgs> getSpec() {
+        return this.spec == null ? Output.empty() : this.spec;
     }
 
     public ServiceTemplateArgs(
-        @Nullable Input<ServiceTemplateMetadataArgs> metadata,
-        @Nullable Input<ServiceTemplateSpecArgs> spec) {
+        @Nullable Output<ServiceTemplateMetadataArgs> metadata,
+        @Nullable Output<ServiceTemplateSpecArgs> spec) {
         this.metadata = metadata;
         this.spec = spec;
     }
 
     private ServiceTemplateArgs() {
-        this.metadata = Input.empty();
-        this.spec = Input.empty();
+        this.metadata = Output.empty();
+        this.spec = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class ServiceTemplateArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private @Nullable Input<ServiceTemplateMetadataArgs> metadata;
-        private @Nullable Input<ServiceTemplateSpecArgs> spec;
+        private @Nullable Output<ServiceTemplateMetadataArgs> metadata;
+        private @Nullable Output<ServiceTemplateSpecArgs> spec;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class ServiceTemplateArgs extends io.pulumi.resources.ResourceArgs 
     	      this.spec = defaults.spec;
         }
 
-        public Builder metadata(@Nullable Input<ServiceTemplateMetadataArgs> metadata) {
+        public Builder metadata(@Nullable Output<ServiceTemplateMetadataArgs> metadata) {
             this.metadata = metadata;
             return this;
         }
 
         public Builder metadata(@Nullable ServiceTemplateMetadataArgs metadata) {
-            this.metadata = Input.ofNullable(metadata);
+            this.metadata = Output.ofNullable(metadata);
             return this;
         }
 
-        public Builder spec(@Nullable Input<ServiceTemplateSpecArgs> spec) {
+        public Builder spec(@Nullable Output<ServiceTemplateSpecArgs> spec) {
             this.spec = spec;
             return this;
         }
 
         public Builder spec(@Nullable ServiceTemplateSpecArgs spec) {
-            this.spec = Input.ofNullable(spec);
+            this.spec = Output.ofNullable(spec);
             return this;
         }
         public ServiceTemplateArgs build() {

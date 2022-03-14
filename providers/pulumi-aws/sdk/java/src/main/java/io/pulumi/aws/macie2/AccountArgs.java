@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.macie2;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="findingPublishingFrequency")
-      private final @Nullable Input<String> findingPublishingFrequency;
+      private final @Nullable Output<String> findingPublishingFrequency;
 
-    public Input<String> getFindingPublishingFrequency() {
-        return this.findingPublishingFrequency == null ? Input.empty() : this.findingPublishingFrequency;
+    public Output<String> getFindingPublishingFrequency() {
+        return this.findingPublishingFrequency == null ? Output.empty() : this.findingPublishingFrequency;
     }
 
     /**
@@ -30,22 +30,22 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="status")
-      private final @Nullable Input<String> status;
+      private final @Nullable Output<String> status;
 
-    public Input<String> getStatus() {
-        return this.status == null ? Input.empty() : this.status;
+    public Output<String> getStatus() {
+        return this.status == null ? Output.empty() : this.status;
     }
 
     public AccountArgs(
-        @Nullable Input<String> findingPublishingFrequency,
-        @Nullable Input<String> status) {
+        @Nullable Output<String> findingPublishingFrequency,
+        @Nullable Output<String> status) {
         this.findingPublishingFrequency = findingPublishingFrequency;
         this.status = status;
     }
 
     private AccountArgs() {
-        this.findingPublishingFrequency = Input.empty();
-        this.status = Input.empty();
+        this.findingPublishingFrequency = Output.empty();
+        this.status = Output.empty();
     }
 
     public static Builder builder() {
@@ -57,8 +57,8 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> findingPublishingFrequency;
-        private @Nullable Input<String> status;
+        private @Nullable Output<String> findingPublishingFrequency;
+        private @Nullable Output<String> status;
 
         public Builder() {
     	      // Empty
@@ -70,23 +70,23 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
     	      this.status = defaults.status;
         }
 
-        public Builder findingPublishingFrequency(@Nullable Input<String> findingPublishingFrequency) {
+        public Builder findingPublishingFrequency(@Nullable Output<String> findingPublishingFrequency) {
             this.findingPublishingFrequency = findingPublishingFrequency;
             return this;
         }
 
         public Builder findingPublishingFrequency(@Nullable String findingPublishingFrequency) {
-            this.findingPublishingFrequency = Input.ofNullable(findingPublishingFrequency);
+            this.findingPublishingFrequency = Output.ofNullable(findingPublishingFrequency);
             return this;
         }
 
-        public Builder status(@Nullable Input<String> status) {
+        public Builder status(@Nullable Output<String> status) {
             this.status = status;
             return this;
         }
 
         public Builder status(@Nullable String status) {
-            this.status = Input.ofNullable(status);
+            this.status = Output.ofNullable(status);
             return this;
         }
         public AccountArgs build() {

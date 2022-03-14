@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.glue.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -20,10 +20,10 @@ public final class CatalogTableStorageDescriptorColumnGetArgs extends io.pulumi.
      * 
      */
     @InputImport(name="comment")
-      private final @Nullable Input<String> comment;
+      private final @Nullable Output<String> comment;
 
-    public Input<String> getComment() {
-        return this.comment == null ? Input.empty() : this.comment;
+    public Output<String> getComment() {
+        return this.comment == null ? Output.empty() : this.comment;
     }
 
     /**
@@ -31,9 +31,9 @@ public final class CatalogTableStorageDescriptorColumnGetArgs extends io.pulumi.
      * 
      */
     @InputImport(name="name", required=true)
-      private final Input<String> name;
+      private final Output<String> name;
 
-    public Input<String> getName() {
+    public Output<String> getName() {
         return this.name;
     }
 
@@ -42,10 +42,10 @@ public final class CatalogTableStorageDescriptorColumnGetArgs extends io.pulumi.
      * 
      */
     @InputImport(name="parameters")
-      private final @Nullable Input<Map<String,String>> parameters;
+      private final @Nullable Output<Map<String,String>> parameters;
 
-    public Input<Map<String,String>> getParameters() {
-        return this.parameters == null ? Input.empty() : this.parameters;
+    public Output<Map<String,String>> getParameters() {
+        return this.parameters == null ? Output.empty() : this.parameters;
     }
 
     /**
@@ -53,17 +53,17 @@ public final class CatalogTableStorageDescriptorColumnGetArgs extends io.pulumi.
      * 
      */
     @InputImport(name="type")
-      private final @Nullable Input<String> type;
+      private final @Nullable Output<String> type;
 
-    public Input<String> getType() {
-        return this.type == null ? Input.empty() : this.type;
+    public Output<String> getType() {
+        return this.type == null ? Output.empty() : this.type;
     }
 
     public CatalogTableStorageDescriptorColumnGetArgs(
-        @Nullable Input<String> comment,
-        Input<String> name,
-        @Nullable Input<Map<String,String>> parameters,
-        @Nullable Input<String> type) {
+        @Nullable Output<String> comment,
+        Output<String> name,
+        @Nullable Output<Map<String,String>> parameters,
+        @Nullable Output<String> type) {
         this.comment = comment;
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
         this.parameters = parameters;
@@ -71,10 +71,10 @@ public final class CatalogTableStorageDescriptorColumnGetArgs extends io.pulumi.
     }
 
     private CatalogTableStorageDescriptorColumnGetArgs() {
-        this.comment = Input.empty();
-        this.name = Input.empty();
-        this.parameters = Input.empty();
-        this.type = Input.empty();
+        this.comment = Output.empty();
+        this.name = Output.empty();
+        this.parameters = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -86,10 +86,10 @@ public final class CatalogTableStorageDescriptorColumnGetArgs extends io.pulumi.
     }
 
     public static final class Builder {
-        private @Nullable Input<String> comment;
-        private Input<String> name;
-        private @Nullable Input<Map<String,String>> parameters;
-        private @Nullable Input<String> type;
+        private @Nullable Output<String> comment;
+        private Output<String> name;
+        private @Nullable Output<Map<String,String>> parameters;
+        private @Nullable Output<String> type;
 
         public Builder() {
     	      // Empty
@@ -103,43 +103,43 @@ public final class CatalogTableStorageDescriptorColumnGetArgs extends io.pulumi.
     	      this.type = defaults.type;
         }
 
-        public Builder comment(@Nullable Input<String> comment) {
+        public Builder comment(@Nullable Output<String> comment) {
             this.comment = comment;
             return this;
         }
 
         public Builder comment(@Nullable String comment) {
-            this.comment = Input.ofNullable(comment);
+            this.comment = Output.ofNullable(comment);
             return this;
         }
 
-        public Builder name(Input<String> name) {
+        public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(String name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder parameters(@Nullable Input<Map<String,String>> parameters) {
+        public Builder parameters(@Nullable Output<Map<String,String>> parameters) {
             this.parameters = parameters;
             return this;
         }
 
         public Builder parameters(@Nullable Map<String,String> parameters) {
-            this.parameters = Input.ofNullable(parameters);
+            this.parameters = Output.ofNullable(parameters);
             return this;
         }
 
-        public Builder type(@Nullable Input<String> type) {
+        public Builder type(@Nullable Output<String> type) {
             this.type = type;
             return this;
         }
 
         public Builder type(@Nullable String type) {
-            this.type = Input.ofNullable(type);
+            this.type = Output.ofNullable(type);
             return this;
         }
         public CatalogTableStorageDescriptorColumnGetArgs build() {

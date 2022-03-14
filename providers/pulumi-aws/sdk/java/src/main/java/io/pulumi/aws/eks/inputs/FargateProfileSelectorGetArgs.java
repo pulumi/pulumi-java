@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.eks.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -20,10 +20,10 @@ public final class FargateProfileSelectorGetArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="labels")
-      private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Output<Map<String,String>> labels;
 
-    public Input<Map<String,String>> getLabels() {
-        return this.labels == null ? Input.empty() : this.labels;
+    public Output<Map<String,String>> getLabels() {
+        return this.labels == null ? Output.empty() : this.labels;
     }
 
     /**
@@ -31,22 +31,22 @@ public final class FargateProfileSelectorGetArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="namespace", required=true)
-      private final Input<String> namespace;
+      private final Output<String> namespace;
 
-    public Input<String> getNamespace() {
+    public Output<String> getNamespace() {
         return this.namespace;
     }
 
     public FargateProfileSelectorGetArgs(
-        @Nullable Input<Map<String,String>> labels,
-        Input<String> namespace) {
+        @Nullable Output<Map<String,String>> labels,
+        Output<String> namespace) {
         this.labels = labels;
         this.namespace = Objects.requireNonNull(namespace, "expected parameter 'namespace' to be non-null");
     }
 
     private FargateProfileSelectorGetArgs() {
-        this.labels = Input.empty();
-        this.namespace = Input.empty();
+        this.labels = Output.empty();
+        this.namespace = Output.empty();
     }
 
     public static Builder builder() {
@@ -58,8 +58,8 @@ public final class FargateProfileSelectorGetArgs extends io.pulumi.resources.Res
     }
 
     public static final class Builder {
-        private @Nullable Input<Map<String,String>> labels;
-        private Input<String> namespace;
+        private @Nullable Output<Map<String,String>> labels;
+        private Output<String> namespace;
 
         public Builder() {
     	      // Empty
@@ -71,23 +71,23 @@ public final class FargateProfileSelectorGetArgs extends io.pulumi.resources.Res
     	      this.namespace = defaults.namespace;
         }
 
-        public Builder labels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
         public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Input.ofNullable(labels);
+            this.labels = Output.ofNullable(labels);
             return this;
         }
 
-        public Builder namespace(Input<String> namespace) {
+        public Builder namespace(Output<String> namespace) {
             this.namespace = Objects.requireNonNull(namespace);
             return this;
         }
 
         public Builder namespace(String namespace) {
-            this.namespace = Input.of(Objects.requireNonNull(namespace));
+            this.namespace = Output.of(Objects.requireNonNull(namespace));
             return this;
         }
         public FargateProfileSelectorGetArgs build() {

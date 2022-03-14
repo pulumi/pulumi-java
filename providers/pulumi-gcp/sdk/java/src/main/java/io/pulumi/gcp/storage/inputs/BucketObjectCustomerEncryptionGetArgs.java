@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.storage.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class BucketObjectCustomerEncryptionGetArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="encryptionAlgorithm")
-      private final @Nullable Input<String> encryptionAlgorithm;
+      private final @Nullable Output<String> encryptionAlgorithm;
 
-    public Input<String> getEncryptionAlgorithm() {
-        return this.encryptionAlgorithm == null ? Input.empty() : this.encryptionAlgorithm;
+    public Output<String> getEncryptionAlgorithm() {
+        return this.encryptionAlgorithm == null ? Output.empty() : this.encryptionAlgorithm;
     }
 
     /**
@@ -30,22 +30,22 @@ public final class BucketObjectCustomerEncryptionGetArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="encryptionKey", required=true)
-      private final Input<String> encryptionKey;
+      private final Output<String> encryptionKey;
 
-    public Input<String> getEncryptionKey() {
+    public Output<String> getEncryptionKey() {
         return this.encryptionKey;
     }
 
     public BucketObjectCustomerEncryptionGetArgs(
-        @Nullable Input<String> encryptionAlgorithm,
-        Input<String> encryptionKey) {
+        @Nullable Output<String> encryptionAlgorithm,
+        Output<String> encryptionKey) {
         this.encryptionAlgorithm = encryptionAlgorithm;
         this.encryptionKey = Objects.requireNonNull(encryptionKey, "expected parameter 'encryptionKey' to be non-null");
     }
 
     private BucketObjectCustomerEncryptionGetArgs() {
-        this.encryptionAlgorithm = Input.empty();
-        this.encryptionKey = Input.empty();
+        this.encryptionAlgorithm = Output.empty();
+        this.encryptionKey = Output.empty();
     }
 
     public static Builder builder() {
@@ -57,8 +57,8 @@ public final class BucketObjectCustomerEncryptionGetArgs extends io.pulumi.resou
     }
 
     public static final class Builder {
-        private @Nullable Input<String> encryptionAlgorithm;
-        private Input<String> encryptionKey;
+        private @Nullable Output<String> encryptionAlgorithm;
+        private Output<String> encryptionKey;
 
         public Builder() {
     	      // Empty
@@ -70,23 +70,23 @@ public final class BucketObjectCustomerEncryptionGetArgs extends io.pulumi.resou
     	      this.encryptionKey = defaults.encryptionKey;
         }
 
-        public Builder encryptionAlgorithm(@Nullable Input<String> encryptionAlgorithm) {
+        public Builder encryptionAlgorithm(@Nullable Output<String> encryptionAlgorithm) {
             this.encryptionAlgorithm = encryptionAlgorithm;
             return this;
         }
 
         public Builder encryptionAlgorithm(@Nullable String encryptionAlgorithm) {
-            this.encryptionAlgorithm = Input.ofNullable(encryptionAlgorithm);
+            this.encryptionAlgorithm = Output.ofNullable(encryptionAlgorithm);
             return this;
         }
 
-        public Builder encryptionKey(Input<String> encryptionKey) {
+        public Builder encryptionKey(Output<String> encryptionKey) {
             this.encryptionKey = Objects.requireNonNull(encryptionKey);
             return this;
         }
 
         public Builder encryptionKey(String encryptionKey) {
-            this.encryptionKey = Input.of(Objects.requireNonNull(encryptionKey));
+            this.encryptionKey = Output.of(Objects.requireNonNull(encryptionKey));
             return this;
         }
         public BucketObjectCustomerEncryptionGetArgs build() {

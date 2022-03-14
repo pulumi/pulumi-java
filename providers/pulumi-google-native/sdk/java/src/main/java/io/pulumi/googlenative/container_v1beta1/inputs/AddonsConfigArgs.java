@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.container_v1beta1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.container_v1beta1.inputs.CloudRunConfigArgs;
 import io.pulumi.googlenative.container_v1beta1.inputs.ConfigConnectorConfigArgs;
@@ -34,10 +34,10 @@ public final class AddonsConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="cloudRunConfig")
-      private final @Nullable Input<CloudRunConfigArgs> cloudRunConfig;
+      private final @Nullable Output<CloudRunConfigArgs> cloudRunConfig;
 
-    public Input<CloudRunConfigArgs> getCloudRunConfig() {
-        return this.cloudRunConfig == null ? Input.empty() : this.cloudRunConfig;
+    public Output<CloudRunConfigArgs> getCloudRunConfig() {
+        return this.cloudRunConfig == null ? Output.empty() : this.cloudRunConfig;
     }
 
     /**
@@ -45,10 +45,10 @@ public final class AddonsConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="configConnectorConfig")
-      private final @Nullable Input<ConfigConnectorConfigArgs> configConnectorConfig;
+      private final @Nullable Output<ConfigConnectorConfigArgs> configConnectorConfig;
 
-    public Input<ConfigConnectorConfigArgs> getConfigConnectorConfig() {
-        return this.configConnectorConfig == null ? Input.empty() : this.configConnectorConfig;
+    public Output<ConfigConnectorConfigArgs> getConfigConnectorConfig() {
+        return this.configConnectorConfig == null ? Output.empty() : this.configConnectorConfig;
     }
 
     /**
@@ -56,10 +56,10 @@ public final class AddonsConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dnsCacheConfig")
-      private final @Nullable Input<DnsCacheConfigArgs> dnsCacheConfig;
+      private final @Nullable Output<DnsCacheConfigArgs> dnsCacheConfig;
 
-    public Input<DnsCacheConfigArgs> getDnsCacheConfig() {
-        return this.dnsCacheConfig == null ? Input.empty() : this.dnsCacheConfig;
+    public Output<DnsCacheConfigArgs> getDnsCacheConfig() {
+        return this.dnsCacheConfig == null ? Output.empty() : this.dnsCacheConfig;
     }
 
     /**
@@ -67,10 +67,10 @@ public final class AddonsConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="gcePersistentDiskCsiDriverConfig")
-      private final @Nullable Input<GcePersistentDiskCsiDriverConfigArgs> gcePersistentDiskCsiDriverConfig;
+      private final @Nullable Output<GcePersistentDiskCsiDriverConfigArgs> gcePersistentDiskCsiDriverConfig;
 
-    public Input<GcePersistentDiskCsiDriverConfigArgs> getGcePersistentDiskCsiDriverConfig() {
-        return this.gcePersistentDiskCsiDriverConfig == null ? Input.empty() : this.gcePersistentDiskCsiDriverConfig;
+    public Output<GcePersistentDiskCsiDriverConfigArgs> getGcePersistentDiskCsiDriverConfig() {
+        return this.gcePersistentDiskCsiDriverConfig == null ? Output.empty() : this.gcePersistentDiskCsiDriverConfig;
     }
 
     /**
@@ -78,10 +78,10 @@ public final class AddonsConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="gcpFilestoreCsiDriverConfig")
-      private final @Nullable Input<GcpFilestoreCsiDriverConfigArgs> gcpFilestoreCsiDriverConfig;
+      private final @Nullable Output<GcpFilestoreCsiDriverConfigArgs> gcpFilestoreCsiDriverConfig;
 
-    public Input<GcpFilestoreCsiDriverConfigArgs> getGcpFilestoreCsiDriverConfig() {
-        return this.gcpFilestoreCsiDriverConfig == null ? Input.empty() : this.gcpFilestoreCsiDriverConfig;
+    public Output<GcpFilestoreCsiDriverConfigArgs> getGcpFilestoreCsiDriverConfig() {
+        return this.gcpFilestoreCsiDriverConfig == null ? Output.empty() : this.gcpFilestoreCsiDriverConfig;
     }
 
     /**
@@ -89,10 +89,10 @@ public final class AddonsConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="gkeBackupAgentConfig")
-      private final @Nullable Input<GkeBackupAgentConfigArgs> gkeBackupAgentConfig;
+      private final @Nullable Output<GkeBackupAgentConfigArgs> gkeBackupAgentConfig;
 
-    public Input<GkeBackupAgentConfigArgs> getGkeBackupAgentConfig() {
-        return this.gkeBackupAgentConfig == null ? Input.empty() : this.gkeBackupAgentConfig;
+    public Output<GkeBackupAgentConfigArgs> getGkeBackupAgentConfig() {
+        return this.gkeBackupAgentConfig == null ? Output.empty() : this.gkeBackupAgentConfig;
     }
 
     /**
@@ -100,10 +100,10 @@ public final class AddonsConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="horizontalPodAutoscaling")
-      private final @Nullable Input<HorizontalPodAutoscalingArgs> horizontalPodAutoscaling;
+      private final @Nullable Output<HorizontalPodAutoscalingArgs> horizontalPodAutoscaling;
 
-    public Input<HorizontalPodAutoscalingArgs> getHorizontalPodAutoscaling() {
-        return this.horizontalPodAutoscaling == null ? Input.empty() : this.horizontalPodAutoscaling;
+    public Output<HorizontalPodAutoscalingArgs> getHorizontalPodAutoscaling() {
+        return this.horizontalPodAutoscaling == null ? Output.empty() : this.horizontalPodAutoscaling;
     }
 
     /**
@@ -111,10 +111,10 @@ public final class AddonsConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="httpLoadBalancing")
-      private final @Nullable Input<HttpLoadBalancingArgs> httpLoadBalancing;
+      private final @Nullable Output<HttpLoadBalancingArgs> httpLoadBalancing;
 
-    public Input<HttpLoadBalancingArgs> getHttpLoadBalancing() {
-        return this.httpLoadBalancing == null ? Input.empty() : this.httpLoadBalancing;
+    public Output<HttpLoadBalancingArgs> getHttpLoadBalancing() {
+        return this.httpLoadBalancing == null ? Output.empty() : this.httpLoadBalancing;
     }
 
     /**
@@ -122,10 +122,10 @@ public final class AddonsConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="istioConfig")
-      private final @Nullable Input<IstioConfigArgs> istioConfig;
+      private final @Nullable Output<IstioConfigArgs> istioConfig;
 
-    public Input<IstioConfigArgs> getIstioConfig() {
-        return this.istioConfig == null ? Input.empty() : this.istioConfig;
+    public Output<IstioConfigArgs> getIstioConfig() {
+        return this.istioConfig == null ? Output.empty() : this.istioConfig;
     }
 
     /**
@@ -133,10 +133,10 @@ public final class AddonsConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kalmConfig")
-      private final @Nullable Input<KalmConfigArgs> kalmConfig;
+      private final @Nullable Output<KalmConfigArgs> kalmConfig;
 
-    public Input<KalmConfigArgs> getKalmConfig() {
-        return this.kalmConfig == null ? Input.empty() : this.kalmConfig;
+    public Output<KalmConfigArgs> getKalmConfig() {
+        return this.kalmConfig == null ? Output.empty() : this.kalmConfig;
     }
 
     /**
@@ -144,10 +144,10 @@ public final class AddonsConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kubernetesDashboard")
-      private final @Nullable Input<KubernetesDashboardArgs> kubernetesDashboard;
+      private final @Nullable Output<KubernetesDashboardArgs> kubernetesDashboard;
 
-    public Input<KubernetesDashboardArgs> getKubernetesDashboard() {
-        return this.kubernetesDashboard == null ? Input.empty() : this.kubernetesDashboard;
+    public Output<KubernetesDashboardArgs> getKubernetesDashboard() {
+        return this.kubernetesDashboard == null ? Output.empty() : this.kubernetesDashboard;
     }
 
     /**
@@ -155,25 +155,25 @@ public final class AddonsConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="networkPolicyConfig")
-      private final @Nullable Input<NetworkPolicyConfigArgs> networkPolicyConfig;
+      private final @Nullable Output<NetworkPolicyConfigArgs> networkPolicyConfig;
 
-    public Input<NetworkPolicyConfigArgs> getNetworkPolicyConfig() {
-        return this.networkPolicyConfig == null ? Input.empty() : this.networkPolicyConfig;
+    public Output<NetworkPolicyConfigArgs> getNetworkPolicyConfig() {
+        return this.networkPolicyConfig == null ? Output.empty() : this.networkPolicyConfig;
     }
 
     public AddonsConfigArgs(
-        @Nullable Input<CloudRunConfigArgs> cloudRunConfig,
-        @Nullable Input<ConfigConnectorConfigArgs> configConnectorConfig,
-        @Nullable Input<DnsCacheConfigArgs> dnsCacheConfig,
-        @Nullable Input<GcePersistentDiskCsiDriverConfigArgs> gcePersistentDiskCsiDriverConfig,
-        @Nullable Input<GcpFilestoreCsiDriverConfigArgs> gcpFilestoreCsiDriverConfig,
-        @Nullable Input<GkeBackupAgentConfigArgs> gkeBackupAgentConfig,
-        @Nullable Input<HorizontalPodAutoscalingArgs> horizontalPodAutoscaling,
-        @Nullable Input<HttpLoadBalancingArgs> httpLoadBalancing,
-        @Nullable Input<IstioConfigArgs> istioConfig,
-        @Nullable Input<KalmConfigArgs> kalmConfig,
-        @Nullable Input<KubernetesDashboardArgs> kubernetesDashboard,
-        @Nullable Input<NetworkPolicyConfigArgs> networkPolicyConfig) {
+        @Nullable Output<CloudRunConfigArgs> cloudRunConfig,
+        @Nullable Output<ConfigConnectorConfigArgs> configConnectorConfig,
+        @Nullable Output<DnsCacheConfigArgs> dnsCacheConfig,
+        @Nullable Output<GcePersistentDiskCsiDriverConfigArgs> gcePersistentDiskCsiDriverConfig,
+        @Nullable Output<GcpFilestoreCsiDriverConfigArgs> gcpFilestoreCsiDriverConfig,
+        @Nullable Output<GkeBackupAgentConfigArgs> gkeBackupAgentConfig,
+        @Nullable Output<HorizontalPodAutoscalingArgs> horizontalPodAutoscaling,
+        @Nullable Output<HttpLoadBalancingArgs> httpLoadBalancing,
+        @Nullable Output<IstioConfigArgs> istioConfig,
+        @Nullable Output<KalmConfigArgs> kalmConfig,
+        @Nullable Output<KubernetesDashboardArgs> kubernetesDashboard,
+        @Nullable Output<NetworkPolicyConfigArgs> networkPolicyConfig) {
         this.cloudRunConfig = cloudRunConfig;
         this.configConnectorConfig = configConnectorConfig;
         this.dnsCacheConfig = dnsCacheConfig;
@@ -189,18 +189,18 @@ public final class AddonsConfigArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private AddonsConfigArgs() {
-        this.cloudRunConfig = Input.empty();
-        this.configConnectorConfig = Input.empty();
-        this.dnsCacheConfig = Input.empty();
-        this.gcePersistentDiskCsiDriverConfig = Input.empty();
-        this.gcpFilestoreCsiDriverConfig = Input.empty();
-        this.gkeBackupAgentConfig = Input.empty();
-        this.horizontalPodAutoscaling = Input.empty();
-        this.httpLoadBalancing = Input.empty();
-        this.istioConfig = Input.empty();
-        this.kalmConfig = Input.empty();
-        this.kubernetesDashboard = Input.empty();
-        this.networkPolicyConfig = Input.empty();
+        this.cloudRunConfig = Output.empty();
+        this.configConnectorConfig = Output.empty();
+        this.dnsCacheConfig = Output.empty();
+        this.gcePersistentDiskCsiDriverConfig = Output.empty();
+        this.gcpFilestoreCsiDriverConfig = Output.empty();
+        this.gkeBackupAgentConfig = Output.empty();
+        this.horizontalPodAutoscaling = Output.empty();
+        this.httpLoadBalancing = Output.empty();
+        this.istioConfig = Output.empty();
+        this.kalmConfig = Output.empty();
+        this.kubernetesDashboard = Output.empty();
+        this.networkPolicyConfig = Output.empty();
     }
 
     public static Builder builder() {
@@ -212,18 +212,18 @@ public final class AddonsConfigArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<CloudRunConfigArgs> cloudRunConfig;
-        private @Nullable Input<ConfigConnectorConfigArgs> configConnectorConfig;
-        private @Nullable Input<DnsCacheConfigArgs> dnsCacheConfig;
-        private @Nullable Input<GcePersistentDiskCsiDriverConfigArgs> gcePersistentDiskCsiDriverConfig;
-        private @Nullable Input<GcpFilestoreCsiDriverConfigArgs> gcpFilestoreCsiDriverConfig;
-        private @Nullable Input<GkeBackupAgentConfigArgs> gkeBackupAgentConfig;
-        private @Nullable Input<HorizontalPodAutoscalingArgs> horizontalPodAutoscaling;
-        private @Nullable Input<HttpLoadBalancingArgs> httpLoadBalancing;
-        private @Nullable Input<IstioConfigArgs> istioConfig;
-        private @Nullable Input<KalmConfigArgs> kalmConfig;
-        private @Nullable Input<KubernetesDashboardArgs> kubernetesDashboard;
-        private @Nullable Input<NetworkPolicyConfigArgs> networkPolicyConfig;
+        private @Nullable Output<CloudRunConfigArgs> cloudRunConfig;
+        private @Nullable Output<ConfigConnectorConfigArgs> configConnectorConfig;
+        private @Nullable Output<DnsCacheConfigArgs> dnsCacheConfig;
+        private @Nullable Output<GcePersistentDiskCsiDriverConfigArgs> gcePersistentDiskCsiDriverConfig;
+        private @Nullable Output<GcpFilestoreCsiDriverConfigArgs> gcpFilestoreCsiDriverConfig;
+        private @Nullable Output<GkeBackupAgentConfigArgs> gkeBackupAgentConfig;
+        private @Nullable Output<HorizontalPodAutoscalingArgs> horizontalPodAutoscaling;
+        private @Nullable Output<HttpLoadBalancingArgs> httpLoadBalancing;
+        private @Nullable Output<IstioConfigArgs> istioConfig;
+        private @Nullable Output<KalmConfigArgs> kalmConfig;
+        private @Nullable Output<KubernetesDashboardArgs> kubernetesDashboard;
+        private @Nullable Output<NetworkPolicyConfigArgs> networkPolicyConfig;
 
         public Builder() {
     	      // Empty
@@ -245,123 +245,123 @@ public final class AddonsConfigArgs extends io.pulumi.resources.ResourceArgs {
     	      this.networkPolicyConfig = defaults.networkPolicyConfig;
         }
 
-        public Builder cloudRunConfig(@Nullable Input<CloudRunConfigArgs> cloudRunConfig) {
+        public Builder cloudRunConfig(@Nullable Output<CloudRunConfigArgs> cloudRunConfig) {
             this.cloudRunConfig = cloudRunConfig;
             return this;
         }
 
         public Builder cloudRunConfig(@Nullable CloudRunConfigArgs cloudRunConfig) {
-            this.cloudRunConfig = Input.ofNullable(cloudRunConfig);
+            this.cloudRunConfig = Output.ofNullable(cloudRunConfig);
             return this;
         }
 
-        public Builder configConnectorConfig(@Nullable Input<ConfigConnectorConfigArgs> configConnectorConfig) {
+        public Builder configConnectorConfig(@Nullable Output<ConfigConnectorConfigArgs> configConnectorConfig) {
             this.configConnectorConfig = configConnectorConfig;
             return this;
         }
 
         public Builder configConnectorConfig(@Nullable ConfigConnectorConfigArgs configConnectorConfig) {
-            this.configConnectorConfig = Input.ofNullable(configConnectorConfig);
+            this.configConnectorConfig = Output.ofNullable(configConnectorConfig);
             return this;
         }
 
-        public Builder dnsCacheConfig(@Nullable Input<DnsCacheConfigArgs> dnsCacheConfig) {
+        public Builder dnsCacheConfig(@Nullable Output<DnsCacheConfigArgs> dnsCacheConfig) {
             this.dnsCacheConfig = dnsCacheConfig;
             return this;
         }
 
         public Builder dnsCacheConfig(@Nullable DnsCacheConfigArgs dnsCacheConfig) {
-            this.dnsCacheConfig = Input.ofNullable(dnsCacheConfig);
+            this.dnsCacheConfig = Output.ofNullable(dnsCacheConfig);
             return this;
         }
 
-        public Builder gcePersistentDiskCsiDriverConfig(@Nullable Input<GcePersistentDiskCsiDriverConfigArgs> gcePersistentDiskCsiDriverConfig) {
+        public Builder gcePersistentDiskCsiDriverConfig(@Nullable Output<GcePersistentDiskCsiDriverConfigArgs> gcePersistentDiskCsiDriverConfig) {
             this.gcePersistentDiskCsiDriverConfig = gcePersistentDiskCsiDriverConfig;
             return this;
         }
 
         public Builder gcePersistentDiskCsiDriverConfig(@Nullable GcePersistentDiskCsiDriverConfigArgs gcePersistentDiskCsiDriverConfig) {
-            this.gcePersistentDiskCsiDriverConfig = Input.ofNullable(gcePersistentDiskCsiDriverConfig);
+            this.gcePersistentDiskCsiDriverConfig = Output.ofNullable(gcePersistentDiskCsiDriverConfig);
             return this;
         }
 
-        public Builder gcpFilestoreCsiDriverConfig(@Nullable Input<GcpFilestoreCsiDriverConfigArgs> gcpFilestoreCsiDriverConfig) {
+        public Builder gcpFilestoreCsiDriverConfig(@Nullable Output<GcpFilestoreCsiDriverConfigArgs> gcpFilestoreCsiDriverConfig) {
             this.gcpFilestoreCsiDriverConfig = gcpFilestoreCsiDriverConfig;
             return this;
         }
 
         public Builder gcpFilestoreCsiDriverConfig(@Nullable GcpFilestoreCsiDriverConfigArgs gcpFilestoreCsiDriverConfig) {
-            this.gcpFilestoreCsiDriverConfig = Input.ofNullable(gcpFilestoreCsiDriverConfig);
+            this.gcpFilestoreCsiDriverConfig = Output.ofNullable(gcpFilestoreCsiDriverConfig);
             return this;
         }
 
-        public Builder gkeBackupAgentConfig(@Nullable Input<GkeBackupAgentConfigArgs> gkeBackupAgentConfig) {
+        public Builder gkeBackupAgentConfig(@Nullable Output<GkeBackupAgentConfigArgs> gkeBackupAgentConfig) {
             this.gkeBackupAgentConfig = gkeBackupAgentConfig;
             return this;
         }
 
         public Builder gkeBackupAgentConfig(@Nullable GkeBackupAgentConfigArgs gkeBackupAgentConfig) {
-            this.gkeBackupAgentConfig = Input.ofNullable(gkeBackupAgentConfig);
+            this.gkeBackupAgentConfig = Output.ofNullable(gkeBackupAgentConfig);
             return this;
         }
 
-        public Builder horizontalPodAutoscaling(@Nullable Input<HorizontalPodAutoscalingArgs> horizontalPodAutoscaling) {
+        public Builder horizontalPodAutoscaling(@Nullable Output<HorizontalPodAutoscalingArgs> horizontalPodAutoscaling) {
             this.horizontalPodAutoscaling = horizontalPodAutoscaling;
             return this;
         }
 
         public Builder horizontalPodAutoscaling(@Nullable HorizontalPodAutoscalingArgs horizontalPodAutoscaling) {
-            this.horizontalPodAutoscaling = Input.ofNullable(horizontalPodAutoscaling);
+            this.horizontalPodAutoscaling = Output.ofNullable(horizontalPodAutoscaling);
             return this;
         }
 
-        public Builder httpLoadBalancing(@Nullable Input<HttpLoadBalancingArgs> httpLoadBalancing) {
+        public Builder httpLoadBalancing(@Nullable Output<HttpLoadBalancingArgs> httpLoadBalancing) {
             this.httpLoadBalancing = httpLoadBalancing;
             return this;
         }
 
         public Builder httpLoadBalancing(@Nullable HttpLoadBalancingArgs httpLoadBalancing) {
-            this.httpLoadBalancing = Input.ofNullable(httpLoadBalancing);
+            this.httpLoadBalancing = Output.ofNullable(httpLoadBalancing);
             return this;
         }
 
-        public Builder istioConfig(@Nullable Input<IstioConfigArgs> istioConfig) {
+        public Builder istioConfig(@Nullable Output<IstioConfigArgs> istioConfig) {
             this.istioConfig = istioConfig;
             return this;
         }
 
         public Builder istioConfig(@Nullable IstioConfigArgs istioConfig) {
-            this.istioConfig = Input.ofNullable(istioConfig);
+            this.istioConfig = Output.ofNullable(istioConfig);
             return this;
         }
 
-        public Builder kalmConfig(@Nullable Input<KalmConfigArgs> kalmConfig) {
+        public Builder kalmConfig(@Nullable Output<KalmConfigArgs> kalmConfig) {
             this.kalmConfig = kalmConfig;
             return this;
         }
 
         public Builder kalmConfig(@Nullable KalmConfigArgs kalmConfig) {
-            this.kalmConfig = Input.ofNullable(kalmConfig);
+            this.kalmConfig = Output.ofNullable(kalmConfig);
             return this;
         }
 
-        public Builder kubernetesDashboard(@Nullable Input<KubernetesDashboardArgs> kubernetesDashboard) {
+        public Builder kubernetesDashboard(@Nullable Output<KubernetesDashboardArgs> kubernetesDashboard) {
             this.kubernetesDashboard = kubernetesDashboard;
             return this;
         }
 
         public Builder kubernetesDashboard(@Nullable KubernetesDashboardArgs kubernetesDashboard) {
-            this.kubernetesDashboard = Input.ofNullable(kubernetesDashboard);
+            this.kubernetesDashboard = Output.ofNullable(kubernetesDashboard);
             return this;
         }
 
-        public Builder networkPolicyConfig(@Nullable Input<NetworkPolicyConfigArgs> networkPolicyConfig) {
+        public Builder networkPolicyConfig(@Nullable Output<NetworkPolicyConfigArgs> networkPolicyConfig) {
             this.networkPolicyConfig = networkPolicyConfig;
             return this;
         }
 
         public Builder networkPolicyConfig(@Nullable NetworkPolicyConfigArgs networkPolicyConfig) {
-            this.networkPolicyConfig = Input.ofNullable(networkPolicyConfig);
+            this.networkPolicyConfig = Output.ofNullable(networkPolicyConfig);
             return this;
         }
         public AddonsConfigArgs build() {

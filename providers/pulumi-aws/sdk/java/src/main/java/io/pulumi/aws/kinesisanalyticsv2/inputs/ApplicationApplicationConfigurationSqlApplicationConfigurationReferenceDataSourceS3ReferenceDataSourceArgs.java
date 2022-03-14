@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.kinesisanalyticsv2.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -18,9 +18,9 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
      * 
      */
     @InputImport(name="bucketArn", required=true)
-      private final Input<String> bucketArn;
+      private final Output<String> bucketArn;
 
-    public Input<String> getBucketArn() {
+    public Output<String> getBucketArn() {
         return this.bucketArn;
     }
 
@@ -29,22 +29,22 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
      * 
      */
     @InputImport(name="fileKey", required=true)
-      private final Input<String> fileKey;
+      private final Output<String> fileKey;
 
-    public Input<String> getFileKey() {
+    public Output<String> getFileKey() {
         return this.fileKey;
     }
 
     public ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceS3ReferenceDataSourceArgs(
-        Input<String> bucketArn,
-        Input<String> fileKey) {
+        Output<String> bucketArn,
+        Output<String> fileKey) {
         this.bucketArn = Objects.requireNonNull(bucketArn, "expected parameter 'bucketArn' to be non-null");
         this.fileKey = Objects.requireNonNull(fileKey, "expected parameter 'fileKey' to be non-null");
     }
 
     private ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceS3ReferenceDataSourceArgs() {
-        this.bucketArn = Input.empty();
-        this.fileKey = Input.empty();
+        this.bucketArn = Output.empty();
+        this.fileKey = Output.empty();
     }
 
     public static Builder builder() {
@@ -56,8 +56,8 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
     }
 
     public static final class Builder {
-        private Input<String> bucketArn;
-        private Input<String> fileKey;
+        private Output<String> bucketArn;
+        private Output<String> fileKey;
 
         public Builder() {
     	      // Empty
@@ -69,23 +69,23 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
     	      this.fileKey = defaults.fileKey;
         }
 
-        public Builder bucketArn(Input<String> bucketArn) {
+        public Builder bucketArn(Output<String> bucketArn) {
             this.bucketArn = Objects.requireNonNull(bucketArn);
             return this;
         }
 
         public Builder bucketArn(String bucketArn) {
-            this.bucketArn = Input.of(Objects.requireNonNull(bucketArn));
+            this.bucketArn = Output.of(Objects.requireNonNull(bucketArn));
             return this;
         }
 
-        public Builder fileKey(Input<String> fileKey) {
+        public Builder fileKey(Output<String> fileKey) {
             this.fileKey = Objects.requireNonNull(fileKey);
             return this;
         }
 
         public Builder fileKey(String fileKey) {
-            this.fileKey = Input.of(Objects.requireNonNull(fileKey));
+            this.fileKey = Output.of(Objects.requireNonNull(fileKey));
             return this;
         }
         public ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceS3ReferenceDataSourceArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.testing_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -24,10 +24,10 @@ public final class StartActivityIntentArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="action")
-      private final @Nullable Input<String> action;
+      private final @Nullable Output<String> action;
 
-    public Input<String> getAction() {
-        return this.action == null ? Input.empty() : this.action;
+    public Output<String> getAction() {
+        return this.action == null ? Output.empty() : this.action;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class StartActivityIntentArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="categories")
-      private final @Nullable Input<List<String>> categories;
+      private final @Nullable Output<List<String>> categories;
 
-    public Input<List<String>> getCategories() {
-        return this.categories == null ? Input.empty() : this.categories;
+    public Output<List<String>> getCategories() {
+        return this.categories == null ? Output.empty() : this.categories;
     }
 
     /**
@@ -46,25 +46,25 @@ public final class StartActivityIntentArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="uri")
-      private final @Nullable Input<String> uri;
+      private final @Nullable Output<String> uri;
 
-    public Input<String> getUri() {
-        return this.uri == null ? Input.empty() : this.uri;
+    public Output<String> getUri() {
+        return this.uri == null ? Output.empty() : this.uri;
     }
 
     public StartActivityIntentArgs(
-        @Nullable Input<String> action,
-        @Nullable Input<List<String>> categories,
-        @Nullable Input<String> uri) {
+        @Nullable Output<String> action,
+        @Nullable Output<List<String>> categories,
+        @Nullable Output<String> uri) {
         this.action = action;
         this.categories = categories;
         this.uri = uri;
     }
 
     private StartActivityIntentArgs() {
-        this.action = Input.empty();
-        this.categories = Input.empty();
-        this.uri = Input.empty();
+        this.action = Output.empty();
+        this.categories = Output.empty();
+        this.uri = Output.empty();
     }
 
     public static Builder builder() {
@@ -76,9 +76,9 @@ public final class StartActivityIntentArgs extends io.pulumi.resources.ResourceA
     }
 
     public static final class Builder {
-        private @Nullable Input<String> action;
-        private @Nullable Input<List<String>> categories;
-        private @Nullable Input<String> uri;
+        private @Nullable Output<String> action;
+        private @Nullable Output<List<String>> categories;
+        private @Nullable Output<String> uri;
 
         public Builder() {
     	      // Empty
@@ -91,33 +91,33 @@ public final class StartActivityIntentArgs extends io.pulumi.resources.ResourceA
     	      this.uri = defaults.uri;
         }
 
-        public Builder action(@Nullable Input<String> action) {
+        public Builder action(@Nullable Output<String> action) {
             this.action = action;
             return this;
         }
 
         public Builder action(@Nullable String action) {
-            this.action = Input.ofNullable(action);
+            this.action = Output.ofNullable(action);
             return this;
         }
 
-        public Builder categories(@Nullable Input<List<String>> categories) {
+        public Builder categories(@Nullable Output<List<String>> categories) {
             this.categories = categories;
             return this;
         }
 
         public Builder categories(@Nullable List<String> categories) {
-            this.categories = Input.ofNullable(categories);
+            this.categories = Output.ofNullable(categories);
             return this;
         }
 
-        public Builder uri(@Nullable Input<String> uri) {
+        public Builder uri(@Nullable Output<String> uri) {
             this.uri = uri;
             return this;
         }
 
         public Builder uri(@Nullable String uri) {
-            this.uri = Input.ofNullable(uri);
+            this.uri = Output.ofNullable(uri);
             return this;
         }
         public StartActivityIntentArgs build() {

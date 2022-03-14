@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.websecurityscanner_v1beta.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -22,18 +22,18 @@ public final class IapTestServiceAccountInfoArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="targetAudienceClientId", required=true)
-      private final Input<String> targetAudienceClientId;
+      private final Output<String> targetAudienceClientId;
 
-    public Input<String> getTargetAudienceClientId() {
+    public Output<String> getTargetAudienceClientId() {
         return this.targetAudienceClientId;
     }
 
-    public IapTestServiceAccountInfoArgs(Input<String> targetAudienceClientId) {
+    public IapTestServiceAccountInfoArgs(Output<String> targetAudienceClientId) {
         this.targetAudienceClientId = Objects.requireNonNull(targetAudienceClientId, "expected parameter 'targetAudienceClientId' to be non-null");
     }
 
     private IapTestServiceAccountInfoArgs() {
-        this.targetAudienceClientId = Input.empty();
+        this.targetAudienceClientId = Output.empty();
     }
 
     public static Builder builder() {
@@ -45,7 +45,7 @@ public final class IapTestServiceAccountInfoArgs extends io.pulumi.resources.Res
     }
 
     public static final class Builder {
-        private Input<String> targetAudienceClientId;
+        private Output<String> targetAudienceClientId;
 
         public Builder() {
     	      // Empty
@@ -56,13 +56,13 @@ public final class IapTestServiceAccountInfoArgs extends io.pulumi.resources.Res
     	      this.targetAudienceClientId = defaults.targetAudienceClientId;
         }
 
-        public Builder targetAudienceClientId(Input<String> targetAudienceClientId) {
+        public Builder targetAudienceClientId(Output<String> targetAudienceClientId) {
             this.targetAudienceClientId = Objects.requireNonNull(targetAudienceClientId);
             return this;
         }
 
         public Builder targetAudienceClientId(String targetAudienceClientId) {
-            this.targetAudienceClientId = Input.of(Objects.requireNonNull(targetAudienceClientId));
+            this.targetAudienceClientId = Output.of(Objects.requireNonNull(targetAudienceClientId));
             return this;
         }
         public IapTestServiceAccountInfoArgs build() {

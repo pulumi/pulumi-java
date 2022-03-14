@@ -10,7 +10,7 @@ import io.pulumi.azurenative.hybridnetwork.inputs.NetworkInterfaceArgs;
 import io.pulumi.azurenative.hybridnetwork.inputs.OsProfileArgs;
 import io.pulumi.azurenative.hybridnetwork.inputs.StorageProfileArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
@@ -32,10 +32,10 @@ public final class NetworkFunctionRoleConfigurationArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="customProfile")
-      private final @Nullable Input<CustomProfileArgs> customProfile;
+      private final @Nullable Output<CustomProfileArgs> customProfile;
 
-    public Input<CustomProfileArgs> getCustomProfile() {
-        return this.customProfile == null ? Input.empty() : this.customProfile;
+    public Output<CustomProfileArgs> getCustomProfile() {
+        return this.customProfile == null ? Output.empty() : this.customProfile;
     }
 
     /**
@@ -43,10 +43,10 @@ public final class NetworkFunctionRoleConfigurationArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="networkInterfaces")
-      private final @Nullable Input<List<NetworkInterfaceArgs>> networkInterfaces;
+      private final @Nullable Output<List<NetworkInterfaceArgs>> networkInterfaces;
 
-    public Input<List<NetworkInterfaceArgs>> getNetworkInterfaces() {
-        return this.networkInterfaces == null ? Input.empty() : this.networkInterfaces;
+    public Output<List<NetworkInterfaceArgs>> getNetworkInterfaces() {
+        return this.networkInterfaces == null ? Output.empty() : this.networkInterfaces;
     }
 
     /**
@@ -54,10 +54,10 @@ public final class NetworkFunctionRoleConfigurationArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="osProfile")
-      private final @Nullable Input<OsProfileArgs> osProfile;
+      private final @Nullable Output<OsProfileArgs> osProfile;
 
-    public Input<OsProfileArgs> getOsProfile() {
-        return this.osProfile == null ? Input.empty() : this.osProfile;
+    public Output<OsProfileArgs> getOsProfile() {
+        return this.osProfile == null ? Output.empty() : this.osProfile;
     }
 
     /**
@@ -65,10 +65,10 @@ public final class NetworkFunctionRoleConfigurationArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="roleName")
-      private final @Nullable Input<String> roleName;
+      private final @Nullable Output<String> roleName;
 
-    public Input<String> getRoleName() {
-        return this.roleName == null ? Input.empty() : this.roleName;
+    public Output<String> getRoleName() {
+        return this.roleName == null ? Output.empty() : this.roleName;
     }
 
     /**
@@ -76,10 +76,10 @@ public final class NetworkFunctionRoleConfigurationArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="roleType")
-      private final @Nullable Input<Either<String,NetworkFunctionRoleConfigurationType>> roleType;
+      private final @Nullable Output<Either<String,NetworkFunctionRoleConfigurationType>> roleType;
 
-    public Input<Either<String,NetworkFunctionRoleConfigurationType>> getRoleType() {
-        return this.roleType == null ? Input.empty() : this.roleType;
+    public Output<Either<String,NetworkFunctionRoleConfigurationType>> getRoleType() {
+        return this.roleType == null ? Output.empty() : this.roleType;
     }
 
     /**
@@ -87,10 +87,10 @@ public final class NetworkFunctionRoleConfigurationArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="storageProfile")
-      private final @Nullable Input<StorageProfileArgs> storageProfile;
+      private final @Nullable Output<StorageProfileArgs> storageProfile;
 
-    public Input<StorageProfileArgs> getStorageProfile() {
-        return this.storageProfile == null ? Input.empty() : this.storageProfile;
+    public Output<StorageProfileArgs> getStorageProfile() {
+        return this.storageProfile == null ? Output.empty() : this.storageProfile;
     }
 
     /**
@@ -98,10 +98,10 @@ public final class NetworkFunctionRoleConfigurationArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="userDataParameters")
-      private final @Nullable Input<Object> userDataParameters;
+      private final @Nullable Output<Object> userDataParameters;
 
-    public Input<Object> getUserDataParameters() {
-        return this.userDataParameters == null ? Input.empty() : this.userDataParameters;
+    public Output<Object> getUserDataParameters() {
+        return this.userDataParameters == null ? Output.empty() : this.userDataParameters;
     }
 
     /**
@@ -109,10 +109,10 @@ public final class NetworkFunctionRoleConfigurationArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="userDataTemplate")
-      private final @Nullable Input<Object> userDataTemplate;
+      private final @Nullable Output<Object> userDataTemplate;
 
-    public Input<Object> getUserDataTemplate() {
-        return this.userDataTemplate == null ? Input.empty() : this.userDataTemplate;
+    public Output<Object> getUserDataTemplate() {
+        return this.userDataTemplate == null ? Output.empty() : this.userDataTemplate;
     }
 
     /**
@@ -120,22 +120,22 @@ public final class NetworkFunctionRoleConfigurationArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="virtualMachineSize")
-      private final @Nullable Input<Either<String,VirtualMachineSizeTypes>> virtualMachineSize;
+      private final @Nullable Output<Either<String,VirtualMachineSizeTypes>> virtualMachineSize;
 
-    public Input<Either<String,VirtualMachineSizeTypes>> getVirtualMachineSize() {
-        return this.virtualMachineSize == null ? Input.empty() : this.virtualMachineSize;
+    public Output<Either<String,VirtualMachineSizeTypes>> getVirtualMachineSize() {
+        return this.virtualMachineSize == null ? Output.empty() : this.virtualMachineSize;
     }
 
     public NetworkFunctionRoleConfigurationArgs(
-        @Nullable Input<CustomProfileArgs> customProfile,
-        @Nullable Input<List<NetworkInterfaceArgs>> networkInterfaces,
-        @Nullable Input<OsProfileArgs> osProfile,
-        @Nullable Input<String> roleName,
-        @Nullable Input<Either<String,NetworkFunctionRoleConfigurationType>> roleType,
-        @Nullable Input<StorageProfileArgs> storageProfile,
-        @Nullable Input<Object> userDataParameters,
-        @Nullable Input<Object> userDataTemplate,
-        @Nullable Input<Either<String,VirtualMachineSizeTypes>> virtualMachineSize) {
+        @Nullable Output<CustomProfileArgs> customProfile,
+        @Nullable Output<List<NetworkInterfaceArgs>> networkInterfaces,
+        @Nullable Output<OsProfileArgs> osProfile,
+        @Nullable Output<String> roleName,
+        @Nullable Output<Either<String,NetworkFunctionRoleConfigurationType>> roleType,
+        @Nullable Output<StorageProfileArgs> storageProfile,
+        @Nullable Output<Object> userDataParameters,
+        @Nullable Output<Object> userDataTemplate,
+        @Nullable Output<Either<String,VirtualMachineSizeTypes>> virtualMachineSize) {
         this.customProfile = customProfile;
         this.networkInterfaces = networkInterfaces;
         this.osProfile = osProfile;
@@ -148,15 +148,15 @@ public final class NetworkFunctionRoleConfigurationArgs extends io.pulumi.resour
     }
 
     private NetworkFunctionRoleConfigurationArgs() {
-        this.customProfile = Input.empty();
-        this.networkInterfaces = Input.empty();
-        this.osProfile = Input.empty();
-        this.roleName = Input.empty();
-        this.roleType = Input.empty();
-        this.storageProfile = Input.empty();
-        this.userDataParameters = Input.empty();
-        this.userDataTemplate = Input.empty();
-        this.virtualMachineSize = Input.empty();
+        this.customProfile = Output.empty();
+        this.networkInterfaces = Output.empty();
+        this.osProfile = Output.empty();
+        this.roleName = Output.empty();
+        this.roleType = Output.empty();
+        this.storageProfile = Output.empty();
+        this.userDataParameters = Output.empty();
+        this.userDataTemplate = Output.empty();
+        this.virtualMachineSize = Output.empty();
     }
 
     public static Builder builder() {
@@ -168,15 +168,15 @@ public final class NetworkFunctionRoleConfigurationArgs extends io.pulumi.resour
     }
 
     public static final class Builder {
-        private @Nullable Input<CustomProfileArgs> customProfile;
-        private @Nullable Input<List<NetworkInterfaceArgs>> networkInterfaces;
-        private @Nullable Input<OsProfileArgs> osProfile;
-        private @Nullable Input<String> roleName;
-        private @Nullable Input<Either<String,NetworkFunctionRoleConfigurationType>> roleType;
-        private @Nullable Input<StorageProfileArgs> storageProfile;
-        private @Nullable Input<Object> userDataParameters;
-        private @Nullable Input<Object> userDataTemplate;
-        private @Nullable Input<Either<String,VirtualMachineSizeTypes>> virtualMachineSize;
+        private @Nullable Output<CustomProfileArgs> customProfile;
+        private @Nullable Output<List<NetworkInterfaceArgs>> networkInterfaces;
+        private @Nullable Output<OsProfileArgs> osProfile;
+        private @Nullable Output<String> roleName;
+        private @Nullable Output<Either<String,NetworkFunctionRoleConfigurationType>> roleType;
+        private @Nullable Output<StorageProfileArgs> storageProfile;
+        private @Nullable Output<Object> userDataParameters;
+        private @Nullable Output<Object> userDataTemplate;
+        private @Nullable Output<Either<String,VirtualMachineSizeTypes>> virtualMachineSize;
 
         public Builder() {
     	      // Empty
@@ -195,93 +195,93 @@ public final class NetworkFunctionRoleConfigurationArgs extends io.pulumi.resour
     	      this.virtualMachineSize = defaults.virtualMachineSize;
         }
 
-        public Builder customProfile(@Nullable Input<CustomProfileArgs> customProfile) {
+        public Builder customProfile(@Nullable Output<CustomProfileArgs> customProfile) {
             this.customProfile = customProfile;
             return this;
         }
 
         public Builder customProfile(@Nullable CustomProfileArgs customProfile) {
-            this.customProfile = Input.ofNullable(customProfile);
+            this.customProfile = Output.ofNullable(customProfile);
             return this;
         }
 
-        public Builder networkInterfaces(@Nullable Input<List<NetworkInterfaceArgs>> networkInterfaces) {
+        public Builder networkInterfaces(@Nullable Output<List<NetworkInterfaceArgs>> networkInterfaces) {
             this.networkInterfaces = networkInterfaces;
             return this;
         }
 
         public Builder networkInterfaces(@Nullable List<NetworkInterfaceArgs> networkInterfaces) {
-            this.networkInterfaces = Input.ofNullable(networkInterfaces);
+            this.networkInterfaces = Output.ofNullable(networkInterfaces);
             return this;
         }
 
-        public Builder osProfile(@Nullable Input<OsProfileArgs> osProfile) {
+        public Builder osProfile(@Nullable Output<OsProfileArgs> osProfile) {
             this.osProfile = osProfile;
             return this;
         }
 
         public Builder osProfile(@Nullable OsProfileArgs osProfile) {
-            this.osProfile = Input.ofNullable(osProfile);
+            this.osProfile = Output.ofNullable(osProfile);
             return this;
         }
 
-        public Builder roleName(@Nullable Input<String> roleName) {
+        public Builder roleName(@Nullable Output<String> roleName) {
             this.roleName = roleName;
             return this;
         }
 
         public Builder roleName(@Nullable String roleName) {
-            this.roleName = Input.ofNullable(roleName);
+            this.roleName = Output.ofNullable(roleName);
             return this;
         }
 
-        public Builder roleType(@Nullable Input<Either<String,NetworkFunctionRoleConfigurationType>> roleType) {
+        public Builder roleType(@Nullable Output<Either<String,NetworkFunctionRoleConfigurationType>> roleType) {
             this.roleType = roleType;
             return this;
         }
 
         public Builder roleType(@Nullable Either<String,NetworkFunctionRoleConfigurationType> roleType) {
-            this.roleType = Input.ofNullable(roleType);
+            this.roleType = Output.ofNullable(roleType);
             return this;
         }
 
-        public Builder storageProfile(@Nullable Input<StorageProfileArgs> storageProfile) {
+        public Builder storageProfile(@Nullable Output<StorageProfileArgs> storageProfile) {
             this.storageProfile = storageProfile;
             return this;
         }
 
         public Builder storageProfile(@Nullable StorageProfileArgs storageProfile) {
-            this.storageProfile = Input.ofNullable(storageProfile);
+            this.storageProfile = Output.ofNullable(storageProfile);
             return this;
         }
 
-        public Builder userDataParameters(@Nullable Input<Object> userDataParameters) {
+        public Builder userDataParameters(@Nullable Output<Object> userDataParameters) {
             this.userDataParameters = userDataParameters;
             return this;
         }
 
         public Builder userDataParameters(@Nullable Object userDataParameters) {
-            this.userDataParameters = Input.ofNullable(userDataParameters);
+            this.userDataParameters = Output.ofNullable(userDataParameters);
             return this;
         }
 
-        public Builder userDataTemplate(@Nullable Input<Object> userDataTemplate) {
+        public Builder userDataTemplate(@Nullable Output<Object> userDataTemplate) {
             this.userDataTemplate = userDataTemplate;
             return this;
         }
 
         public Builder userDataTemplate(@Nullable Object userDataTemplate) {
-            this.userDataTemplate = Input.ofNullable(userDataTemplate);
+            this.userDataTemplate = Output.ofNullable(userDataTemplate);
             return this;
         }
 
-        public Builder virtualMachineSize(@Nullable Input<Either<String,VirtualMachineSizeTypes>> virtualMachineSize) {
+        public Builder virtualMachineSize(@Nullable Output<Either<String,VirtualMachineSizeTypes>> virtualMachineSize) {
             this.virtualMachineSize = virtualMachineSize;
             return this;
         }
 
         public Builder virtualMachineSize(@Nullable Either<String,VirtualMachineSizeTypes> virtualMachineSize) {
-            this.virtualMachineSize = Input.ofNullable(virtualMachineSize);
+            this.virtualMachineSize = Output.ofNullable(virtualMachineSize);
             return this;
         }
         public NetworkFunctionRoleConfigurationArgs build() {

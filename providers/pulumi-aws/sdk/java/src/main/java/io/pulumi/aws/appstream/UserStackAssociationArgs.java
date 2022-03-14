@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.appstream;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -20,9 +20,9 @@ public final class UserStackAssociationArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="authenticationType", required=true)
-      private final Input<String> authenticationType;
+      private final Output<String> authenticationType;
 
-    public Input<String> getAuthenticationType() {
+    public Output<String> getAuthenticationType() {
         return this.authenticationType;
     }
 
@@ -31,10 +31,10 @@ public final class UserStackAssociationArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="sendEmailNotification")
-      private final @Nullable Input<Boolean> sendEmailNotification;
+      private final @Nullable Output<Boolean> sendEmailNotification;
 
-    public Input<Boolean> getSendEmailNotification() {
-        return this.sendEmailNotification == null ? Input.empty() : this.sendEmailNotification;
+    public Output<Boolean> getSendEmailNotification() {
+        return this.sendEmailNotification == null ? Output.empty() : this.sendEmailNotification;
     }
 
     /**
@@ -42,9 +42,9 @@ public final class UserStackAssociationArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="stackName", required=true)
-      private final Input<String> stackName;
+      private final Output<String> stackName;
 
-    public Input<String> getStackName() {
+    public Output<String> getStackName() {
         return this.stackName;
     }
 
@@ -53,17 +53,17 @@ public final class UserStackAssociationArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="userName", required=true)
-      private final Input<String> userName;
+      private final Output<String> userName;
 
-    public Input<String> getUserName() {
+    public Output<String> getUserName() {
         return this.userName;
     }
 
     public UserStackAssociationArgs(
-        Input<String> authenticationType,
-        @Nullable Input<Boolean> sendEmailNotification,
-        Input<String> stackName,
-        Input<String> userName) {
+        Output<String> authenticationType,
+        @Nullable Output<Boolean> sendEmailNotification,
+        Output<String> stackName,
+        Output<String> userName) {
         this.authenticationType = Objects.requireNonNull(authenticationType, "expected parameter 'authenticationType' to be non-null");
         this.sendEmailNotification = sendEmailNotification;
         this.stackName = Objects.requireNonNull(stackName, "expected parameter 'stackName' to be non-null");
@@ -71,10 +71,10 @@ public final class UserStackAssociationArgs extends io.pulumi.resources.Resource
     }
 
     private UserStackAssociationArgs() {
-        this.authenticationType = Input.empty();
-        this.sendEmailNotification = Input.empty();
-        this.stackName = Input.empty();
-        this.userName = Input.empty();
+        this.authenticationType = Output.empty();
+        this.sendEmailNotification = Output.empty();
+        this.stackName = Output.empty();
+        this.userName = Output.empty();
     }
 
     public static Builder builder() {
@@ -86,10 +86,10 @@ public final class UserStackAssociationArgs extends io.pulumi.resources.Resource
     }
 
     public static final class Builder {
-        private Input<String> authenticationType;
-        private @Nullable Input<Boolean> sendEmailNotification;
-        private Input<String> stackName;
-        private Input<String> userName;
+        private Output<String> authenticationType;
+        private @Nullable Output<Boolean> sendEmailNotification;
+        private Output<String> stackName;
+        private Output<String> userName;
 
         public Builder() {
     	      // Empty
@@ -103,43 +103,43 @@ public final class UserStackAssociationArgs extends io.pulumi.resources.Resource
     	      this.userName = defaults.userName;
         }
 
-        public Builder authenticationType(Input<String> authenticationType) {
+        public Builder authenticationType(Output<String> authenticationType) {
             this.authenticationType = Objects.requireNonNull(authenticationType);
             return this;
         }
 
         public Builder authenticationType(String authenticationType) {
-            this.authenticationType = Input.of(Objects.requireNonNull(authenticationType));
+            this.authenticationType = Output.of(Objects.requireNonNull(authenticationType));
             return this;
         }
 
-        public Builder sendEmailNotification(@Nullable Input<Boolean> sendEmailNotification) {
+        public Builder sendEmailNotification(@Nullable Output<Boolean> sendEmailNotification) {
             this.sendEmailNotification = sendEmailNotification;
             return this;
         }
 
         public Builder sendEmailNotification(@Nullable Boolean sendEmailNotification) {
-            this.sendEmailNotification = Input.ofNullable(sendEmailNotification);
+            this.sendEmailNotification = Output.ofNullable(sendEmailNotification);
             return this;
         }
 
-        public Builder stackName(Input<String> stackName) {
+        public Builder stackName(Output<String> stackName) {
             this.stackName = Objects.requireNonNull(stackName);
             return this;
         }
 
         public Builder stackName(String stackName) {
-            this.stackName = Input.of(Objects.requireNonNull(stackName));
+            this.stackName = Output.of(Objects.requireNonNull(stackName));
             return this;
         }
 
-        public Builder userName(Input<String> userName) {
+        public Builder userName(Output<String> userName) {
             this.userName = Objects.requireNonNull(userName);
             return this;
         }
 
         public Builder userName(String userName) {
-            this.userName = Input.of(Objects.requireNonNull(userName));
+            this.userName = Output.of(Objects.requireNonNull(userName));
             return this;
         }
         public UserStackAssociationArgs build() {

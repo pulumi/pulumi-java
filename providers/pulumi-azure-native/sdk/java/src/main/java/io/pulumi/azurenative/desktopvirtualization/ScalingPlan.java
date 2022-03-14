@@ -11,7 +11,6 @@ import io.pulumi.azurenative.desktopvirtualization.outputs.ResourceModelWithAllo
 import io.pulumi.azurenative.desktopvirtualization.outputs.ScalingHostPoolReferenceResponse;
 import io.pulumi.azurenative.desktopvirtualization.outputs.ScalingScheduleResponse;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -319,24 +318,24 @@ public class ScalingPlan extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ScalingPlan(String name, ScalingPlanArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:desktopvirtualization:ScalingPlan", name, args == null ? ScalingPlanArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("azure-native:desktopvirtualization:ScalingPlan", name, args == null ? ScalingPlanArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private ScalingPlan(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private ScalingPlan(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:desktopvirtualization:ScalingPlan", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:desktopvirtualization/v20201110preview:ScalingPlan").build()),
-                Input.of(Alias.builder().setType("azure-native:desktopvirtualization/v20210114preview:ScalingPlan").build()),
-                Input.of(Alias.builder().setType("azure-native:desktopvirtualization/v20210201preview:ScalingPlan").build()),
-                Input.of(Alias.builder().setType("azure-native:desktopvirtualization/v20210309preview:ScalingPlan").build()),
-                Input.of(Alias.builder().setType("azure-native:desktopvirtualization/v20210401preview:ScalingPlan").build()),
-                Input.of(Alias.builder().setType("azure-native:desktopvirtualization/v20210712:ScalingPlan").build()),
-                Input.of(Alias.builder().setType("azure-native:desktopvirtualization/v20210903preview:ScalingPlan").build())
+                Output.of(Alias.builder().setType("azure-native:desktopvirtualization/v20201110preview:ScalingPlan").build()),
+                Output.of(Alias.builder().setType("azure-native:desktopvirtualization/v20210114preview:ScalingPlan").build()),
+                Output.of(Alias.builder().setType("azure-native:desktopvirtualization/v20210201preview:ScalingPlan").build()),
+                Output.of(Alias.builder().setType("azure-native:desktopvirtualization/v20210309preview:ScalingPlan").build()),
+                Output.of(Alias.builder().setType("azure-native:desktopvirtualization/v20210401preview:ScalingPlan").build()),
+                Output.of(Alias.builder().setType("azure-native:desktopvirtualization/v20210712:ScalingPlan").build()),
+                Output.of(Alias.builder().setType("azure-native:desktopvirtualization/v20210903preview:ScalingPlan").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -350,7 +349,7 @@ public class ScalingPlan extends io.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static ScalingPlan get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static ScalingPlan get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new ScalingPlan(name, id, options);
     }
 }

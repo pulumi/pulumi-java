@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v3.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class GoogleCloudDialogflowCxV3AdvancedSettingsLoggingSettingsArgs 
      * 
      */
     @InputImport(name="enableInteractionLogging")
-      private final @Nullable Input<Boolean> enableInteractionLogging;
+      private final @Nullable Output<Boolean> enableInteractionLogging;
 
-    public Input<Boolean> getEnableInteractionLogging() {
-        return this.enableInteractionLogging == null ? Input.empty() : this.enableInteractionLogging;
+    public Output<Boolean> getEnableInteractionLogging() {
+        return this.enableInteractionLogging == null ? Output.empty() : this.enableInteractionLogging;
     }
 
     /**
@@ -34,22 +34,22 @@ public final class GoogleCloudDialogflowCxV3AdvancedSettingsLoggingSettingsArgs 
      * 
      */
     @InputImport(name="enableStackdriverLogging")
-      private final @Nullable Input<Boolean> enableStackdriverLogging;
+      private final @Nullable Output<Boolean> enableStackdriverLogging;
 
-    public Input<Boolean> getEnableStackdriverLogging() {
-        return this.enableStackdriverLogging == null ? Input.empty() : this.enableStackdriverLogging;
+    public Output<Boolean> getEnableStackdriverLogging() {
+        return this.enableStackdriverLogging == null ? Output.empty() : this.enableStackdriverLogging;
     }
 
     public GoogleCloudDialogflowCxV3AdvancedSettingsLoggingSettingsArgs(
-        @Nullable Input<Boolean> enableInteractionLogging,
-        @Nullable Input<Boolean> enableStackdriverLogging) {
+        @Nullable Output<Boolean> enableInteractionLogging,
+        @Nullable Output<Boolean> enableStackdriverLogging) {
         this.enableInteractionLogging = enableInteractionLogging;
         this.enableStackdriverLogging = enableStackdriverLogging;
     }
 
     private GoogleCloudDialogflowCxV3AdvancedSettingsLoggingSettingsArgs() {
-        this.enableInteractionLogging = Input.empty();
-        this.enableStackdriverLogging = Input.empty();
+        this.enableInteractionLogging = Output.empty();
+        this.enableStackdriverLogging = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class GoogleCloudDialogflowCxV3AdvancedSettingsLoggingSettingsArgs 
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> enableInteractionLogging;
-        private @Nullable Input<Boolean> enableStackdriverLogging;
+        private @Nullable Output<Boolean> enableInteractionLogging;
+        private @Nullable Output<Boolean> enableStackdriverLogging;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class GoogleCloudDialogflowCxV3AdvancedSettingsLoggingSettingsArgs 
     	      this.enableStackdriverLogging = defaults.enableStackdriverLogging;
         }
 
-        public Builder enableInteractionLogging(@Nullable Input<Boolean> enableInteractionLogging) {
+        public Builder enableInteractionLogging(@Nullable Output<Boolean> enableInteractionLogging) {
             this.enableInteractionLogging = enableInteractionLogging;
             return this;
         }
 
         public Builder enableInteractionLogging(@Nullable Boolean enableInteractionLogging) {
-            this.enableInteractionLogging = Input.ofNullable(enableInteractionLogging);
+            this.enableInteractionLogging = Output.ofNullable(enableInteractionLogging);
             return this;
         }
 
-        public Builder enableStackdriverLogging(@Nullable Input<Boolean> enableStackdriverLogging) {
+        public Builder enableStackdriverLogging(@Nullable Output<Boolean> enableStackdriverLogging) {
             this.enableStackdriverLogging = enableStackdriverLogging;
             return this;
         }
 
         public Builder enableStackdriverLogging(@Nullable Boolean enableStackdriverLogging) {
-            this.enableStackdriverLogging = Input.ofNullable(enableStackdriverLogging);
+            this.enableStackdriverLogging = Output.ofNullable(enableStackdriverLogging);
             return this;
         }
         public GoogleCloudDialogflowCxV3AdvancedSettingsLoggingSettingsArgs build() {

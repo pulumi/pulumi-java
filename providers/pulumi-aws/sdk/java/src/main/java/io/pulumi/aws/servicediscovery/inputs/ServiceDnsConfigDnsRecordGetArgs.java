@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.servicediscovery.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -19,9 +19,9 @@ public final class ServiceDnsConfigDnsRecordGetArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="ttl", required=true)
-      private final Input<Integer> ttl;
+      private final Output<Integer> ttl;
 
-    public Input<Integer> getTtl() {
+    public Output<Integer> getTtl() {
         return this.ttl;
     }
 
@@ -30,22 +30,22 @@ public final class ServiceDnsConfigDnsRecordGetArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<String> type;
+      private final Output<String> type;
 
-    public Input<String> getType() {
+    public Output<String> getType() {
         return this.type;
     }
 
     public ServiceDnsConfigDnsRecordGetArgs(
-        Input<Integer> ttl,
-        Input<String> type) {
+        Output<Integer> ttl,
+        Output<String> type) {
         this.ttl = Objects.requireNonNull(ttl, "expected parameter 'ttl' to be non-null");
         this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
     }
 
     private ServiceDnsConfigDnsRecordGetArgs() {
-        this.ttl = Input.empty();
-        this.type = Input.empty();
+        this.ttl = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -57,8 +57,8 @@ public final class ServiceDnsConfigDnsRecordGetArgs extends io.pulumi.resources.
     }
 
     public static final class Builder {
-        private Input<Integer> ttl;
-        private Input<String> type;
+        private Output<Integer> ttl;
+        private Output<String> type;
 
         public Builder() {
     	      // Empty
@@ -70,23 +70,23 @@ public final class ServiceDnsConfigDnsRecordGetArgs extends io.pulumi.resources.
     	      this.type = defaults.type;
         }
 
-        public Builder ttl(Input<Integer> ttl) {
+        public Builder ttl(Output<Integer> ttl) {
             this.ttl = Objects.requireNonNull(ttl);
             return this;
         }
 
         public Builder ttl(Integer ttl) {
-            this.ttl = Input.of(Objects.requireNonNull(ttl));
+            this.ttl = Output.of(Objects.requireNonNull(ttl));
             return this;
         }
 
-        public Builder type(Input<String> type) {
+        public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(String type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
         public ServiceDnsConfigDnsRecordGetArgs build() {

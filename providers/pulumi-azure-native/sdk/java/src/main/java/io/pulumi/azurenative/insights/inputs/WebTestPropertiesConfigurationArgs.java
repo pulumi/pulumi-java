@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.insights.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class WebTestPropertiesConfigurationArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="webTest")
-      private final @Nullable Input<String> webTest;
+      private final @Nullable Output<String> webTest;
 
-    public Input<String> getWebTest() {
-        return this.webTest == null ? Input.empty() : this.webTest;
+    public Output<String> getWebTest() {
+        return this.webTest == null ? Output.empty() : this.webTest;
     }
 
-    public WebTestPropertiesConfigurationArgs(@Nullable Input<String> webTest) {
+    public WebTestPropertiesConfigurationArgs(@Nullable Output<String> webTest) {
         this.webTest = webTest;
     }
 
     private WebTestPropertiesConfigurationArgs() {
-        this.webTest = Input.empty();
+        this.webTest = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class WebTestPropertiesConfigurationArgs extends io.pulumi.resource
     }
 
     public static final class Builder {
-        private @Nullable Input<String> webTest;
+        private @Nullable Output<String> webTest;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class WebTestPropertiesConfigurationArgs extends io.pulumi.resource
     	      this.webTest = defaults.webTest;
         }
 
-        public Builder webTest(@Nullable Input<String> webTest) {
+        public Builder webTest(@Nullable Output<String> webTest) {
             this.webTest = webTest;
             return this;
         }
 
         public Builder webTest(@Nullable String webTest) {
-            this.webTest = Input.ofNullable(webTest);
+            this.webTest = Output.ofNullable(webTest);
             return this;
         }
         public WebTestPropertiesConfigurationArgs build() {

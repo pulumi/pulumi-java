@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.privateca_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.privateca_v1.inputs.PublicKeyArgs;
 import io.pulumi.googlenative.privateca_v1.inputs.SubjectConfigArgs;
@@ -25,10 +25,10 @@ public final class CertificateConfigArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="publicKey")
-      private final @Nullable Input<PublicKeyArgs> publicKey;
+      private final @Nullable Output<PublicKeyArgs> publicKey;
 
-    public Input<PublicKeyArgs> getPublicKey() {
-        return this.publicKey == null ? Input.empty() : this.publicKey;
+    public Output<PublicKeyArgs> getPublicKey() {
+        return this.publicKey == null ? Output.empty() : this.publicKey;
     }
 
     /**
@@ -36,9 +36,9 @@ public final class CertificateConfigArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="subjectConfig", required=true)
-      private final Input<SubjectConfigArgs> subjectConfig;
+      private final Output<SubjectConfigArgs> subjectConfig;
 
-    public Input<SubjectConfigArgs> getSubjectConfig() {
+    public Output<SubjectConfigArgs> getSubjectConfig() {
         return this.subjectConfig;
     }
 
@@ -47,25 +47,25 @@ public final class CertificateConfigArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="x509Config", required=true)
-      private final Input<X509ParametersArgs> x509Config;
+      private final Output<X509ParametersArgs> x509Config;
 
-    public Input<X509ParametersArgs> getX509Config() {
+    public Output<X509ParametersArgs> getX509Config() {
         return this.x509Config;
     }
 
     public CertificateConfigArgs(
-        @Nullable Input<PublicKeyArgs> publicKey,
-        Input<SubjectConfigArgs> subjectConfig,
-        Input<X509ParametersArgs> x509Config) {
+        @Nullable Output<PublicKeyArgs> publicKey,
+        Output<SubjectConfigArgs> subjectConfig,
+        Output<X509ParametersArgs> x509Config) {
         this.publicKey = publicKey;
         this.subjectConfig = Objects.requireNonNull(subjectConfig, "expected parameter 'subjectConfig' to be non-null");
         this.x509Config = Objects.requireNonNull(x509Config, "expected parameter 'x509Config' to be non-null");
     }
 
     private CertificateConfigArgs() {
-        this.publicKey = Input.empty();
-        this.subjectConfig = Input.empty();
-        this.x509Config = Input.empty();
+        this.publicKey = Output.empty();
+        this.subjectConfig = Output.empty();
+        this.x509Config = Output.empty();
     }
 
     public static Builder builder() {
@@ -77,9 +77,9 @@ public final class CertificateConfigArgs extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private @Nullable Input<PublicKeyArgs> publicKey;
-        private Input<SubjectConfigArgs> subjectConfig;
-        private Input<X509ParametersArgs> x509Config;
+        private @Nullable Output<PublicKeyArgs> publicKey;
+        private Output<SubjectConfigArgs> subjectConfig;
+        private Output<X509ParametersArgs> x509Config;
 
         public Builder() {
     	      // Empty
@@ -92,33 +92,33 @@ public final class CertificateConfigArgs extends io.pulumi.resources.ResourceArg
     	      this.x509Config = defaults.x509Config;
         }
 
-        public Builder publicKey(@Nullable Input<PublicKeyArgs> publicKey) {
+        public Builder publicKey(@Nullable Output<PublicKeyArgs> publicKey) {
             this.publicKey = publicKey;
             return this;
         }
 
         public Builder publicKey(@Nullable PublicKeyArgs publicKey) {
-            this.publicKey = Input.ofNullable(publicKey);
+            this.publicKey = Output.ofNullable(publicKey);
             return this;
         }
 
-        public Builder subjectConfig(Input<SubjectConfigArgs> subjectConfig) {
+        public Builder subjectConfig(Output<SubjectConfigArgs> subjectConfig) {
             this.subjectConfig = Objects.requireNonNull(subjectConfig);
             return this;
         }
 
         public Builder subjectConfig(SubjectConfigArgs subjectConfig) {
-            this.subjectConfig = Input.of(Objects.requireNonNull(subjectConfig));
+            this.subjectConfig = Output.of(Objects.requireNonNull(subjectConfig));
             return this;
         }
 
-        public Builder x509Config(Input<X509ParametersArgs> x509Config) {
+        public Builder x509Config(Output<X509ParametersArgs> x509Config) {
             this.x509Config = Objects.requireNonNull(x509Config);
             return this;
         }
 
         public Builder x509Config(X509ParametersArgs x509Config) {
-            this.x509Config = Input.of(Objects.requireNonNull(x509Config));
+            this.x509Config = Output.of(Objects.requireNonNull(x509Config));
             return this;
         }
         public CertificateConfigArgs build() {

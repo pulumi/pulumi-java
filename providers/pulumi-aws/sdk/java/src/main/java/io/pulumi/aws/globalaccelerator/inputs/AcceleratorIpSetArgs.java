@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.globalaccelerator.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -20,10 +20,10 @@ public final class AcceleratorIpSetArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="ipAddresses")
-      private final @Nullable Input<List<String>> ipAddresses;
+      private final @Nullable Output<List<String>> ipAddresses;
 
-    public Input<List<String>> getIpAddresses() {
-        return this.ipAddresses == null ? Input.empty() : this.ipAddresses;
+    public Output<List<String>> getIpAddresses() {
+        return this.ipAddresses == null ? Output.empty() : this.ipAddresses;
     }
 
     /**
@@ -31,22 +31,22 @@ public final class AcceleratorIpSetArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="ipFamily")
-      private final @Nullable Input<String> ipFamily;
+      private final @Nullable Output<String> ipFamily;
 
-    public Input<String> getIpFamily() {
-        return this.ipFamily == null ? Input.empty() : this.ipFamily;
+    public Output<String> getIpFamily() {
+        return this.ipFamily == null ? Output.empty() : this.ipFamily;
     }
 
     public AcceleratorIpSetArgs(
-        @Nullable Input<List<String>> ipAddresses,
-        @Nullable Input<String> ipFamily) {
+        @Nullable Output<List<String>> ipAddresses,
+        @Nullable Output<String> ipFamily) {
         this.ipAddresses = ipAddresses;
         this.ipFamily = ipFamily;
     }
 
     private AcceleratorIpSetArgs() {
-        this.ipAddresses = Input.empty();
-        this.ipFamily = Input.empty();
+        this.ipAddresses = Output.empty();
+        this.ipFamily = Output.empty();
     }
 
     public static Builder builder() {
@@ -58,8 +58,8 @@ public final class AcceleratorIpSetArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> ipAddresses;
-        private @Nullable Input<String> ipFamily;
+        private @Nullable Output<List<String>> ipAddresses;
+        private @Nullable Output<String> ipFamily;
 
         public Builder() {
     	      // Empty
@@ -71,23 +71,23 @@ public final class AcceleratorIpSetArgs extends io.pulumi.resources.ResourceArgs
     	      this.ipFamily = defaults.ipFamily;
         }
 
-        public Builder ipAddresses(@Nullable Input<List<String>> ipAddresses) {
+        public Builder ipAddresses(@Nullable Output<List<String>> ipAddresses) {
             this.ipAddresses = ipAddresses;
             return this;
         }
 
         public Builder ipAddresses(@Nullable List<String> ipAddresses) {
-            this.ipAddresses = Input.ofNullable(ipAddresses);
+            this.ipAddresses = Output.ofNullable(ipAddresses);
             return this;
         }
 
-        public Builder ipFamily(@Nullable Input<String> ipFamily) {
+        public Builder ipFamily(@Nullable Output<String> ipFamily) {
             this.ipFamily = ipFamily;
             return this;
         }
 
         public Builder ipFamily(@Nullable String ipFamily) {
-            this.ipFamily = Input.ofNullable(ipFamily);
+            this.ipFamily = Output.ofNullable(ipFamily);
             return this;
         }
         public AcceleratorIpSetArgs build() {

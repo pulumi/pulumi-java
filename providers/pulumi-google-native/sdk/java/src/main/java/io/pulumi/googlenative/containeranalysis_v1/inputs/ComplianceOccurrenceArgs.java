@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.containeranalysis_v1.inputs.NonCompliantFileArgs;
 import java.lang.String;
@@ -21,29 +21,29 @@ public final class ComplianceOccurrenceArgs extends io.pulumi.resources.Resource
     public static final ComplianceOccurrenceArgs Empty = new ComplianceOccurrenceArgs();
 
     @InputImport(name="nonComplianceReason")
-      private final @Nullable Input<String> nonComplianceReason;
+      private final @Nullable Output<String> nonComplianceReason;
 
-    public Input<String> getNonComplianceReason() {
-        return this.nonComplianceReason == null ? Input.empty() : this.nonComplianceReason;
+    public Output<String> getNonComplianceReason() {
+        return this.nonComplianceReason == null ? Output.empty() : this.nonComplianceReason;
     }
 
     @InputImport(name="nonCompliantFiles")
-      private final @Nullable Input<List<NonCompliantFileArgs>> nonCompliantFiles;
+      private final @Nullable Output<List<NonCompliantFileArgs>> nonCompliantFiles;
 
-    public Input<List<NonCompliantFileArgs>> getNonCompliantFiles() {
-        return this.nonCompliantFiles == null ? Input.empty() : this.nonCompliantFiles;
+    public Output<List<NonCompliantFileArgs>> getNonCompliantFiles() {
+        return this.nonCompliantFiles == null ? Output.empty() : this.nonCompliantFiles;
     }
 
     public ComplianceOccurrenceArgs(
-        @Nullable Input<String> nonComplianceReason,
-        @Nullable Input<List<NonCompliantFileArgs>> nonCompliantFiles) {
+        @Nullable Output<String> nonComplianceReason,
+        @Nullable Output<List<NonCompliantFileArgs>> nonCompliantFiles) {
         this.nonComplianceReason = nonComplianceReason;
         this.nonCompliantFiles = nonCompliantFiles;
     }
 
     private ComplianceOccurrenceArgs() {
-        this.nonComplianceReason = Input.empty();
-        this.nonCompliantFiles = Input.empty();
+        this.nonComplianceReason = Output.empty();
+        this.nonCompliantFiles = Output.empty();
     }
 
     public static Builder builder() {
@@ -55,8 +55,8 @@ public final class ComplianceOccurrenceArgs extends io.pulumi.resources.Resource
     }
 
     public static final class Builder {
-        private @Nullable Input<String> nonComplianceReason;
-        private @Nullable Input<List<NonCompliantFileArgs>> nonCompliantFiles;
+        private @Nullable Output<String> nonComplianceReason;
+        private @Nullable Output<List<NonCompliantFileArgs>> nonCompliantFiles;
 
         public Builder() {
     	      // Empty
@@ -68,23 +68,23 @@ public final class ComplianceOccurrenceArgs extends io.pulumi.resources.Resource
     	      this.nonCompliantFiles = defaults.nonCompliantFiles;
         }
 
-        public Builder nonComplianceReason(@Nullable Input<String> nonComplianceReason) {
+        public Builder nonComplianceReason(@Nullable Output<String> nonComplianceReason) {
             this.nonComplianceReason = nonComplianceReason;
             return this;
         }
 
         public Builder nonComplianceReason(@Nullable String nonComplianceReason) {
-            this.nonComplianceReason = Input.ofNullable(nonComplianceReason);
+            this.nonComplianceReason = Output.ofNullable(nonComplianceReason);
             return this;
         }
 
-        public Builder nonCompliantFiles(@Nullable Input<List<NonCompliantFileArgs>> nonCompliantFiles) {
+        public Builder nonCompliantFiles(@Nullable Output<List<NonCompliantFileArgs>> nonCompliantFiles) {
             this.nonCompliantFiles = nonCompliantFiles;
             return this;
         }
 
         public Builder nonCompliantFiles(@Nullable List<NonCompliantFileArgs> nonCompliantFiles) {
-            this.nonCompliantFiles = Input.ofNullable(nonCompliantFiles);
+            this.nonCompliantFiles = Output.ofNullable(nonCompliantFiles);
             return this;
         }
         public ComplianceOccurrenceArgs build() {

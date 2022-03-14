@@ -6,7 +6,7 @@ package io.pulumi.azurenative.security;
 import io.pulumi.azurenative.security.inputs.AssignedComponentItemArgs;
 import io.pulumi.azurenative.security.inputs.AssignedStandardItemArgs;
 import io.pulumi.azurenative.security.inputs.AssignmentPropertiesAdditionalDataArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class AssignmentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="additionalData")
-      private final @Nullable Input<AssignmentPropertiesAdditionalDataArgs> additionalData;
+      private final @Nullable Output<AssignmentPropertiesAdditionalDataArgs> additionalData;
 
-    public Input<AssignmentPropertiesAdditionalDataArgs> getAdditionalData() {
-        return this.additionalData == null ? Input.empty() : this.additionalData;
+    public Output<AssignmentPropertiesAdditionalDataArgs> getAdditionalData() {
+        return this.additionalData == null ? Output.empty() : this.additionalData;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class AssignmentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="assignedComponent")
-      private final @Nullable Input<AssignedComponentItemArgs> assignedComponent;
+      private final @Nullable Output<AssignedComponentItemArgs> assignedComponent;
 
-    public Input<AssignedComponentItemArgs> getAssignedComponent() {
-        return this.assignedComponent == null ? Input.empty() : this.assignedComponent;
+    public Output<AssignedComponentItemArgs> getAssignedComponent() {
+        return this.assignedComponent == null ? Output.empty() : this.assignedComponent;
     }
 
     /**
@@ -46,10 +46,10 @@ public final class AssignmentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="assignedStandard")
-      private final @Nullable Input<AssignedStandardItemArgs> assignedStandard;
+      private final @Nullable Output<AssignedStandardItemArgs> assignedStandard;
 
-    public Input<AssignedStandardItemArgs> getAssignedStandard() {
-        return this.assignedStandard == null ? Input.empty() : this.assignedStandard;
+    public Output<AssignedStandardItemArgs> getAssignedStandard() {
+        return this.assignedStandard == null ? Output.empty() : this.assignedStandard;
     }
 
     /**
@@ -57,10 +57,10 @@ public final class AssignmentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="assignmentId")
-      private final @Nullable Input<String> assignmentId;
+      private final @Nullable Output<String> assignmentId;
 
-    public Input<String> getAssignmentId() {
-        return this.assignmentId == null ? Input.empty() : this.assignmentId;
+    public Output<String> getAssignmentId() {
+        return this.assignmentId == null ? Output.empty() : this.assignmentId;
     }
 
     /**
@@ -68,10 +68,10 @@ public final class AssignmentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -79,10 +79,10 @@ public final class AssignmentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName")
-      private final @Nullable Input<String> displayName;
+      private final @Nullable Output<String> displayName;
 
-    public Input<String> getDisplayName() {
-        return this.displayName == null ? Input.empty() : this.displayName;
+    public Output<String> getDisplayName() {
+        return this.displayName == null ? Output.empty() : this.displayName;
     }
 
     /**
@@ -90,10 +90,10 @@ public final class AssignmentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="effect")
-      private final @Nullable Input<String> effect;
+      private final @Nullable Output<String> effect;
 
-    public Input<String> getEffect() {
-        return this.effect == null ? Input.empty() : this.effect;
+    public Output<String> getEffect() {
+        return this.effect == null ? Output.empty() : this.effect;
     }
 
     /**
@@ -101,10 +101,10 @@ public final class AssignmentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="expiresOn")
-      private final @Nullable Input<String> expiresOn;
+      private final @Nullable Output<String> expiresOn;
 
-    public Input<String> getExpiresOn() {
-        return this.expiresOn == null ? Input.empty() : this.expiresOn;
+    public Output<String> getExpiresOn() {
+        return this.expiresOn == null ? Output.empty() : this.expiresOn;
     }
 
     /**
@@ -112,10 +112,10 @@ public final class AssignmentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kind")
-      private final @Nullable Input<String> kind;
+      private final @Nullable Output<String> kind;
 
-    public Input<String> getKind() {
-        return this.kind == null ? Input.empty() : this.kind;
+    public Output<String> getKind() {
+        return this.kind == null ? Output.empty() : this.kind;
     }
 
     /**
@@ -123,10 +123,10 @@ public final class AssignmentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -134,10 +134,10 @@ public final class AssignmentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="metadata")
-      private final @Nullable Input<Object> metadata;
+      private final @Nullable Output<Object> metadata;
 
-    public Input<Object> getMetadata() {
-        return this.metadata == null ? Input.empty() : this.metadata;
+    public Output<Object> getMetadata() {
+        return this.metadata == null ? Output.empty() : this.metadata;
     }
 
     /**
@@ -145,9 +145,9 @@ public final class AssignmentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -156,10 +156,10 @@ public final class AssignmentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="scope")
-      private final @Nullable Input<String> scope;
+      private final @Nullable Output<String> scope;
 
-    public Input<String> getScope() {
-        return this.scope == null ? Input.empty() : this.scope;
+    public Output<String> getScope() {
+        return this.scope == null ? Output.empty() : this.scope;
     }
 
     /**
@@ -167,27 +167,27 @@ public final class AssignmentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public AssignmentArgs(
-        @Nullable Input<AssignmentPropertiesAdditionalDataArgs> additionalData,
-        @Nullable Input<AssignedComponentItemArgs> assignedComponent,
-        @Nullable Input<AssignedStandardItemArgs> assignedStandard,
-        @Nullable Input<String> assignmentId,
-        @Nullable Input<String> description,
-        @Nullable Input<String> displayName,
-        @Nullable Input<String> effect,
-        @Nullable Input<String> expiresOn,
-        @Nullable Input<String> kind,
-        @Nullable Input<String> location,
-        @Nullable Input<Object> metadata,
-        Input<String> resourceGroupName,
-        @Nullable Input<String> scope,
-        @Nullable Input<Map<String,String>> tags) {
+        @Nullable Output<AssignmentPropertiesAdditionalDataArgs> additionalData,
+        @Nullable Output<AssignedComponentItemArgs> assignedComponent,
+        @Nullable Output<AssignedStandardItemArgs> assignedStandard,
+        @Nullable Output<String> assignmentId,
+        @Nullable Output<String> description,
+        @Nullable Output<String> displayName,
+        @Nullable Output<String> effect,
+        @Nullable Output<String> expiresOn,
+        @Nullable Output<String> kind,
+        @Nullable Output<String> location,
+        @Nullable Output<Object> metadata,
+        Output<String> resourceGroupName,
+        @Nullable Output<String> scope,
+        @Nullable Output<Map<String,String>> tags) {
         this.additionalData = additionalData;
         this.assignedComponent = assignedComponent;
         this.assignedStandard = assignedStandard;
@@ -205,20 +205,20 @@ public final class AssignmentArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private AssignmentArgs() {
-        this.additionalData = Input.empty();
-        this.assignedComponent = Input.empty();
-        this.assignedStandard = Input.empty();
-        this.assignmentId = Input.empty();
-        this.description = Input.empty();
-        this.displayName = Input.empty();
-        this.effect = Input.empty();
-        this.expiresOn = Input.empty();
-        this.kind = Input.empty();
-        this.location = Input.empty();
-        this.metadata = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.scope = Input.empty();
-        this.tags = Input.empty();
+        this.additionalData = Output.empty();
+        this.assignedComponent = Output.empty();
+        this.assignedStandard = Output.empty();
+        this.assignmentId = Output.empty();
+        this.description = Output.empty();
+        this.displayName = Output.empty();
+        this.effect = Output.empty();
+        this.expiresOn = Output.empty();
+        this.kind = Output.empty();
+        this.location = Output.empty();
+        this.metadata = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.scope = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -230,20 +230,20 @@ public final class AssignmentArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<AssignmentPropertiesAdditionalDataArgs> additionalData;
-        private @Nullable Input<AssignedComponentItemArgs> assignedComponent;
-        private @Nullable Input<AssignedStandardItemArgs> assignedStandard;
-        private @Nullable Input<String> assignmentId;
-        private @Nullable Input<String> description;
-        private @Nullable Input<String> displayName;
-        private @Nullable Input<String> effect;
-        private @Nullable Input<String> expiresOn;
-        private @Nullable Input<String> kind;
-        private @Nullable Input<String> location;
-        private @Nullable Input<Object> metadata;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<String> scope;
-        private @Nullable Input<Map<String,String>> tags;
+        private @Nullable Output<AssignmentPropertiesAdditionalDataArgs> additionalData;
+        private @Nullable Output<AssignedComponentItemArgs> assignedComponent;
+        private @Nullable Output<AssignedStandardItemArgs> assignedStandard;
+        private @Nullable Output<String> assignmentId;
+        private @Nullable Output<String> description;
+        private @Nullable Output<String> displayName;
+        private @Nullable Output<String> effect;
+        private @Nullable Output<String> expiresOn;
+        private @Nullable Output<String> kind;
+        private @Nullable Output<String> location;
+        private @Nullable Output<Object> metadata;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<String> scope;
+        private @Nullable Output<Map<String,String>> tags;
 
         public Builder() {
     	      // Empty
@@ -267,143 +267,143 @@ public final class AssignmentArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder additionalData(@Nullable Input<AssignmentPropertiesAdditionalDataArgs> additionalData) {
+        public Builder additionalData(@Nullable Output<AssignmentPropertiesAdditionalDataArgs> additionalData) {
             this.additionalData = additionalData;
             return this;
         }
 
         public Builder additionalData(@Nullable AssignmentPropertiesAdditionalDataArgs additionalData) {
-            this.additionalData = Input.ofNullable(additionalData);
+            this.additionalData = Output.ofNullable(additionalData);
             return this;
         }
 
-        public Builder assignedComponent(@Nullable Input<AssignedComponentItemArgs> assignedComponent) {
+        public Builder assignedComponent(@Nullable Output<AssignedComponentItemArgs> assignedComponent) {
             this.assignedComponent = assignedComponent;
             return this;
         }
 
         public Builder assignedComponent(@Nullable AssignedComponentItemArgs assignedComponent) {
-            this.assignedComponent = Input.ofNullable(assignedComponent);
+            this.assignedComponent = Output.ofNullable(assignedComponent);
             return this;
         }
 
-        public Builder assignedStandard(@Nullable Input<AssignedStandardItemArgs> assignedStandard) {
+        public Builder assignedStandard(@Nullable Output<AssignedStandardItemArgs> assignedStandard) {
             this.assignedStandard = assignedStandard;
             return this;
         }
 
         public Builder assignedStandard(@Nullable AssignedStandardItemArgs assignedStandard) {
-            this.assignedStandard = Input.ofNullable(assignedStandard);
+            this.assignedStandard = Output.ofNullable(assignedStandard);
             return this;
         }
 
-        public Builder assignmentId(@Nullable Input<String> assignmentId) {
+        public Builder assignmentId(@Nullable Output<String> assignmentId) {
             this.assignmentId = assignmentId;
             return this;
         }
 
         public Builder assignmentId(@Nullable String assignmentId) {
-            this.assignmentId = Input.ofNullable(assignmentId);
+            this.assignmentId = Output.ofNullable(assignmentId);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder displayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Input.ofNullable(displayName);
+            this.displayName = Output.ofNullable(displayName);
             return this;
         }
 
-        public Builder effect(@Nullable Input<String> effect) {
+        public Builder effect(@Nullable Output<String> effect) {
             this.effect = effect;
             return this;
         }
 
         public Builder effect(@Nullable String effect) {
-            this.effect = Input.ofNullable(effect);
+            this.effect = Output.ofNullable(effect);
             return this;
         }
 
-        public Builder expiresOn(@Nullable Input<String> expiresOn) {
+        public Builder expiresOn(@Nullable Output<String> expiresOn) {
             this.expiresOn = expiresOn;
             return this;
         }
 
         public Builder expiresOn(@Nullable String expiresOn) {
-            this.expiresOn = Input.ofNullable(expiresOn);
+            this.expiresOn = Output.ofNullable(expiresOn);
             return this;
         }
 
-        public Builder kind(@Nullable Input<String> kind) {
+        public Builder kind(@Nullable Output<String> kind) {
             this.kind = kind;
             return this;
         }
 
         public Builder kind(@Nullable String kind) {
-            this.kind = Input.ofNullable(kind);
+            this.kind = Output.ofNullable(kind);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder metadata(@Nullable Input<Object> metadata) {
+        public Builder metadata(@Nullable Output<Object> metadata) {
             this.metadata = metadata;
             return this;
         }
 
         public Builder metadata(@Nullable Object metadata) {
-            this.metadata = Input.ofNullable(metadata);
+            this.metadata = Output.ofNullable(metadata);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder scope(@Nullable Input<String> scope) {
+        public Builder scope(@Nullable Output<String> scope) {
             this.scope = scope;
             return this;
         }
 
         public Builder scope(@Nullable String scope) {
-            this.scope = Input.ofNullable(scope);
+            this.scope = Output.ofNullable(scope);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public AssignmentArgs build() {

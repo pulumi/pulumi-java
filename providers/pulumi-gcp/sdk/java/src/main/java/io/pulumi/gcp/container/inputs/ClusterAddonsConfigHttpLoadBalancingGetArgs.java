@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.container.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
@@ -19,18 +19,18 @@ public final class ClusterAddonsConfigHttpLoadBalancingGetArgs extends io.pulumi
      * 
      */
     @InputImport(name="disabled", required=true)
-      private final Input<Boolean> disabled;
+      private final Output<Boolean> disabled;
 
-    public Input<Boolean> getDisabled() {
+    public Output<Boolean> getDisabled() {
         return this.disabled;
     }
 
-    public ClusterAddonsConfigHttpLoadBalancingGetArgs(Input<Boolean> disabled) {
+    public ClusterAddonsConfigHttpLoadBalancingGetArgs(Output<Boolean> disabled) {
         this.disabled = Objects.requireNonNull(disabled, "expected parameter 'disabled' to be non-null");
     }
 
     private ClusterAddonsConfigHttpLoadBalancingGetArgs() {
-        this.disabled = Input.empty();
+        this.disabled = Output.empty();
     }
 
     public static Builder builder() {
@@ -42,7 +42,7 @@ public final class ClusterAddonsConfigHttpLoadBalancingGetArgs extends io.pulumi
     }
 
     public static final class Builder {
-        private Input<Boolean> disabled;
+        private Output<Boolean> disabled;
 
         public Builder() {
     	      // Empty
@@ -53,13 +53,13 @@ public final class ClusterAddonsConfigHttpLoadBalancingGetArgs extends io.pulumi
     	      this.disabled = defaults.disabled;
         }
 
-        public Builder disabled(Input<Boolean> disabled) {
+        public Builder disabled(Output<Boolean> disabled) {
             this.disabled = Objects.requireNonNull(disabled);
             return this;
         }
 
         public Builder disabled(Boolean disabled) {
-            this.disabled = Input.of(Objects.requireNonNull(disabled));
+            this.disabled = Output.of(Objects.requireNonNull(disabled));
             return this;
         }
         public ClusterAddonsConfigHttpLoadBalancingGetArgs build() {

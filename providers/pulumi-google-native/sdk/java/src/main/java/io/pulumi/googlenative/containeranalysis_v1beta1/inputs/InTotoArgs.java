@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1beta1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.containeranalysis_v1beta1.inputs.ArtifactRuleArgs;
 import io.pulumi.googlenative.containeranalysis_v1beta1.inputs.SigningKeyArgs;
@@ -26,10 +26,10 @@ public final class InTotoArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="expectedCommand")
-      private final @Nullable Input<List<String>> expectedCommand;
+      private final @Nullable Output<List<String>> expectedCommand;
 
-    public Input<List<String>> getExpectedCommand() {
-        return this.expectedCommand == null ? Input.empty() : this.expectedCommand;
+    public Output<List<String>> getExpectedCommand() {
+        return this.expectedCommand == null ? Output.empty() : this.expectedCommand;
     }
 
     /**
@@ -37,17 +37,17 @@ public final class InTotoArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="expectedMaterials")
-      private final @Nullable Input<List<ArtifactRuleArgs>> expectedMaterials;
+      private final @Nullable Output<List<ArtifactRuleArgs>> expectedMaterials;
 
-    public Input<List<ArtifactRuleArgs>> getExpectedMaterials() {
-        return this.expectedMaterials == null ? Input.empty() : this.expectedMaterials;
+    public Output<List<ArtifactRuleArgs>> getExpectedMaterials() {
+        return this.expectedMaterials == null ? Output.empty() : this.expectedMaterials;
     }
 
     @InputImport(name="expectedProducts")
-      private final @Nullable Input<List<ArtifactRuleArgs>> expectedProducts;
+      private final @Nullable Output<List<ArtifactRuleArgs>> expectedProducts;
 
-    public Input<List<ArtifactRuleArgs>> getExpectedProducts() {
-        return this.expectedProducts == null ? Input.empty() : this.expectedProducts;
+    public Output<List<ArtifactRuleArgs>> getExpectedProducts() {
+        return this.expectedProducts == null ? Output.empty() : this.expectedProducts;
     }
 
     /**
@@ -55,10 +55,10 @@ public final class InTotoArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="signingKeys")
-      private final @Nullable Input<List<SigningKeyArgs>> signingKeys;
+      private final @Nullable Output<List<SigningKeyArgs>> signingKeys;
 
-    public Input<List<SigningKeyArgs>> getSigningKeys() {
-        return this.signingKeys == null ? Input.empty() : this.signingKeys;
+    public Output<List<SigningKeyArgs>> getSigningKeys() {
+        return this.signingKeys == null ? Output.empty() : this.signingKeys;
     }
 
     /**
@@ -66,10 +66,10 @@ public final class InTotoArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="stepName")
-      private final @Nullable Input<String> stepName;
+      private final @Nullable Output<String> stepName;
 
-    public Input<String> getStepName() {
-        return this.stepName == null ? Input.empty() : this.stepName;
+    public Output<String> getStepName() {
+        return this.stepName == null ? Output.empty() : this.stepName;
     }
 
     /**
@@ -77,19 +77,19 @@ public final class InTotoArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="threshold")
-      private final @Nullable Input<String> threshold;
+      private final @Nullable Output<String> threshold;
 
-    public Input<String> getThreshold() {
-        return this.threshold == null ? Input.empty() : this.threshold;
+    public Output<String> getThreshold() {
+        return this.threshold == null ? Output.empty() : this.threshold;
     }
 
     public InTotoArgs(
-        @Nullable Input<List<String>> expectedCommand,
-        @Nullable Input<List<ArtifactRuleArgs>> expectedMaterials,
-        @Nullable Input<List<ArtifactRuleArgs>> expectedProducts,
-        @Nullable Input<List<SigningKeyArgs>> signingKeys,
-        @Nullable Input<String> stepName,
-        @Nullable Input<String> threshold) {
+        @Nullable Output<List<String>> expectedCommand,
+        @Nullable Output<List<ArtifactRuleArgs>> expectedMaterials,
+        @Nullable Output<List<ArtifactRuleArgs>> expectedProducts,
+        @Nullable Output<List<SigningKeyArgs>> signingKeys,
+        @Nullable Output<String> stepName,
+        @Nullable Output<String> threshold) {
         this.expectedCommand = expectedCommand;
         this.expectedMaterials = expectedMaterials;
         this.expectedProducts = expectedProducts;
@@ -99,12 +99,12 @@ public final class InTotoArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private InTotoArgs() {
-        this.expectedCommand = Input.empty();
-        this.expectedMaterials = Input.empty();
-        this.expectedProducts = Input.empty();
-        this.signingKeys = Input.empty();
-        this.stepName = Input.empty();
-        this.threshold = Input.empty();
+        this.expectedCommand = Output.empty();
+        this.expectedMaterials = Output.empty();
+        this.expectedProducts = Output.empty();
+        this.signingKeys = Output.empty();
+        this.stepName = Output.empty();
+        this.threshold = Output.empty();
     }
 
     public static Builder builder() {
@@ -116,12 +116,12 @@ public final class InTotoArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> expectedCommand;
-        private @Nullable Input<List<ArtifactRuleArgs>> expectedMaterials;
-        private @Nullable Input<List<ArtifactRuleArgs>> expectedProducts;
-        private @Nullable Input<List<SigningKeyArgs>> signingKeys;
-        private @Nullable Input<String> stepName;
-        private @Nullable Input<String> threshold;
+        private @Nullable Output<List<String>> expectedCommand;
+        private @Nullable Output<List<ArtifactRuleArgs>> expectedMaterials;
+        private @Nullable Output<List<ArtifactRuleArgs>> expectedProducts;
+        private @Nullable Output<List<SigningKeyArgs>> signingKeys;
+        private @Nullable Output<String> stepName;
+        private @Nullable Output<String> threshold;
 
         public Builder() {
     	      // Empty
@@ -137,63 +137,63 @@ public final class InTotoArgs extends io.pulumi.resources.ResourceArgs {
     	      this.threshold = defaults.threshold;
         }
 
-        public Builder expectedCommand(@Nullable Input<List<String>> expectedCommand) {
+        public Builder expectedCommand(@Nullable Output<List<String>> expectedCommand) {
             this.expectedCommand = expectedCommand;
             return this;
         }
 
         public Builder expectedCommand(@Nullable List<String> expectedCommand) {
-            this.expectedCommand = Input.ofNullable(expectedCommand);
+            this.expectedCommand = Output.ofNullable(expectedCommand);
             return this;
         }
 
-        public Builder expectedMaterials(@Nullable Input<List<ArtifactRuleArgs>> expectedMaterials) {
+        public Builder expectedMaterials(@Nullable Output<List<ArtifactRuleArgs>> expectedMaterials) {
             this.expectedMaterials = expectedMaterials;
             return this;
         }
 
         public Builder expectedMaterials(@Nullable List<ArtifactRuleArgs> expectedMaterials) {
-            this.expectedMaterials = Input.ofNullable(expectedMaterials);
+            this.expectedMaterials = Output.ofNullable(expectedMaterials);
             return this;
         }
 
-        public Builder expectedProducts(@Nullable Input<List<ArtifactRuleArgs>> expectedProducts) {
+        public Builder expectedProducts(@Nullable Output<List<ArtifactRuleArgs>> expectedProducts) {
             this.expectedProducts = expectedProducts;
             return this;
         }
 
         public Builder expectedProducts(@Nullable List<ArtifactRuleArgs> expectedProducts) {
-            this.expectedProducts = Input.ofNullable(expectedProducts);
+            this.expectedProducts = Output.ofNullable(expectedProducts);
             return this;
         }
 
-        public Builder signingKeys(@Nullable Input<List<SigningKeyArgs>> signingKeys) {
+        public Builder signingKeys(@Nullable Output<List<SigningKeyArgs>> signingKeys) {
             this.signingKeys = signingKeys;
             return this;
         }
 
         public Builder signingKeys(@Nullable List<SigningKeyArgs> signingKeys) {
-            this.signingKeys = Input.ofNullable(signingKeys);
+            this.signingKeys = Output.ofNullable(signingKeys);
             return this;
         }
 
-        public Builder stepName(@Nullable Input<String> stepName) {
+        public Builder stepName(@Nullable Output<String> stepName) {
             this.stepName = stepName;
             return this;
         }
 
         public Builder stepName(@Nullable String stepName) {
-            this.stepName = Input.ofNullable(stepName);
+            this.stepName = Output.ofNullable(stepName);
             return this;
         }
 
-        public Builder threshold(@Nullable Input<String> threshold) {
+        public Builder threshold(@Nullable Output<String> threshold) {
             this.threshold = threshold;
             return this;
         }
 
         public Builder threshold(@Nullable String threshold) {
-            this.threshold = Input.ofNullable(threshold);
+            this.threshold = Output.ofNullable(threshold);
             return this;
         }
         public InTotoArgs build() {

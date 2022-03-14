@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v2beta1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class GoogleCloudDialogflowV2beta1IntentTrainingPhrasePartArgs exte
      * 
      */
     @InputImport(name="alias")
-      private final @Nullable Input<String> alias;
+      private final @Nullable Output<String> alias;
 
-    public Input<String> getAlias() {
-        return this.alias == null ? Input.empty() : this.alias;
+    public Output<String> getAlias() {
+        return this.alias == null ? Output.empty() : this.alias;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class GoogleCloudDialogflowV2beta1IntentTrainingPhrasePartArgs exte
      * 
      */
     @InputImport(name="entityType")
-      private final @Nullable Input<String> entityType;
+      private final @Nullable Output<String> entityType;
 
-    public Input<String> getEntityType() {
-        return this.entityType == null ? Input.empty() : this.entityType;
+    public Output<String> getEntityType() {
+        return this.entityType == null ? Output.empty() : this.entityType;
     }
 
     /**
@@ -46,9 +46,9 @@ public final class GoogleCloudDialogflowV2beta1IntentTrainingPhrasePartArgs exte
      * 
      */
     @InputImport(name="text", required=true)
-      private final Input<String> text;
+      private final Output<String> text;
 
-    public Input<String> getText() {
+    public Output<String> getText() {
         return this.text;
     }
 
@@ -57,17 +57,17 @@ public final class GoogleCloudDialogflowV2beta1IntentTrainingPhrasePartArgs exte
      * 
      */
     @InputImport(name="userDefined")
-      private final @Nullable Input<Boolean> userDefined;
+      private final @Nullable Output<Boolean> userDefined;
 
-    public Input<Boolean> getUserDefined() {
-        return this.userDefined == null ? Input.empty() : this.userDefined;
+    public Output<Boolean> getUserDefined() {
+        return this.userDefined == null ? Output.empty() : this.userDefined;
     }
 
     public GoogleCloudDialogflowV2beta1IntentTrainingPhrasePartArgs(
-        @Nullable Input<String> alias,
-        @Nullable Input<String> entityType,
-        Input<String> text,
-        @Nullable Input<Boolean> userDefined) {
+        @Nullable Output<String> alias,
+        @Nullable Output<String> entityType,
+        Output<String> text,
+        @Nullable Output<Boolean> userDefined) {
         this.alias = alias;
         this.entityType = entityType;
         this.text = Objects.requireNonNull(text, "expected parameter 'text' to be non-null");
@@ -75,10 +75,10 @@ public final class GoogleCloudDialogflowV2beta1IntentTrainingPhrasePartArgs exte
     }
 
     private GoogleCloudDialogflowV2beta1IntentTrainingPhrasePartArgs() {
-        this.alias = Input.empty();
-        this.entityType = Input.empty();
-        this.text = Input.empty();
-        this.userDefined = Input.empty();
+        this.alias = Output.empty();
+        this.entityType = Output.empty();
+        this.text = Output.empty();
+        this.userDefined = Output.empty();
     }
 
     public static Builder builder() {
@@ -90,10 +90,10 @@ public final class GoogleCloudDialogflowV2beta1IntentTrainingPhrasePartArgs exte
     }
 
     public static final class Builder {
-        private @Nullable Input<String> alias;
-        private @Nullable Input<String> entityType;
-        private Input<String> text;
-        private @Nullable Input<Boolean> userDefined;
+        private @Nullable Output<String> alias;
+        private @Nullable Output<String> entityType;
+        private Output<String> text;
+        private @Nullable Output<Boolean> userDefined;
 
         public Builder() {
     	      // Empty
@@ -107,43 +107,43 @@ public final class GoogleCloudDialogflowV2beta1IntentTrainingPhrasePartArgs exte
     	      this.userDefined = defaults.userDefined;
         }
 
-        public Builder alias(@Nullable Input<String> alias) {
+        public Builder alias(@Nullable Output<String> alias) {
             this.alias = alias;
             return this;
         }
 
         public Builder alias(@Nullable String alias) {
-            this.alias = Input.ofNullable(alias);
+            this.alias = Output.ofNullable(alias);
             return this;
         }
 
-        public Builder entityType(@Nullable Input<String> entityType) {
+        public Builder entityType(@Nullable Output<String> entityType) {
             this.entityType = entityType;
             return this;
         }
 
         public Builder entityType(@Nullable String entityType) {
-            this.entityType = Input.ofNullable(entityType);
+            this.entityType = Output.ofNullable(entityType);
             return this;
         }
 
-        public Builder text(Input<String> text) {
+        public Builder text(Output<String> text) {
             this.text = Objects.requireNonNull(text);
             return this;
         }
 
         public Builder text(String text) {
-            this.text = Input.of(Objects.requireNonNull(text));
+            this.text = Output.of(Objects.requireNonNull(text));
             return this;
         }
 
-        public Builder userDefined(@Nullable Input<Boolean> userDefined) {
+        public Builder userDefined(@Nullable Output<Boolean> userDefined) {
             this.userDefined = userDefined;
             return this;
         }
 
         public Builder userDefined(@Nullable Boolean userDefined) {
-            this.userDefined = Input.ofNullable(userDefined);
+            this.userDefined = Output.ofNullable(userDefined);
             return this;
         }
         public GoogleCloudDialogflowV2beta1IntentTrainingPhrasePartArgs build() {

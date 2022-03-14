@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -24,10 +24,10 @@ public final class HostRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class HostRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="hosts")
-      private final @Nullable Input<List<String>> hosts;
+      private final @Nullable Output<List<String>> hosts;
 
-    public Input<List<String>> getHosts() {
-        return this.hosts == null ? Input.empty() : this.hosts;
+    public Output<List<String>> getHosts() {
+        return this.hosts == null ? Output.empty() : this.hosts;
     }
 
     /**
@@ -46,25 +46,25 @@ public final class HostRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="pathMatcher")
-      private final @Nullable Input<String> pathMatcher;
+      private final @Nullable Output<String> pathMatcher;
 
-    public Input<String> getPathMatcher() {
-        return this.pathMatcher == null ? Input.empty() : this.pathMatcher;
+    public Output<String> getPathMatcher() {
+        return this.pathMatcher == null ? Output.empty() : this.pathMatcher;
     }
 
     public HostRuleArgs(
-        @Nullable Input<String> description,
-        @Nullable Input<List<String>> hosts,
-        @Nullable Input<String> pathMatcher) {
+        @Nullable Output<String> description,
+        @Nullable Output<List<String>> hosts,
+        @Nullable Output<String> pathMatcher) {
         this.description = description;
         this.hosts = hosts;
         this.pathMatcher = pathMatcher;
     }
 
     private HostRuleArgs() {
-        this.description = Input.empty();
-        this.hosts = Input.empty();
-        this.pathMatcher = Input.empty();
+        this.description = Output.empty();
+        this.hosts = Output.empty();
+        this.pathMatcher = Output.empty();
     }
 
     public static Builder builder() {
@@ -76,9 +76,9 @@ public final class HostRuleArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> description;
-        private @Nullable Input<List<String>> hosts;
-        private @Nullable Input<String> pathMatcher;
+        private @Nullable Output<String> description;
+        private @Nullable Output<List<String>> hosts;
+        private @Nullable Output<String> pathMatcher;
 
         public Builder() {
     	      // Empty
@@ -91,33 +91,33 @@ public final class HostRuleArgs extends io.pulumi.resources.ResourceArgs {
     	      this.pathMatcher = defaults.pathMatcher;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder hosts(@Nullable Input<List<String>> hosts) {
+        public Builder hosts(@Nullable Output<List<String>> hosts) {
             this.hosts = hosts;
             return this;
         }
 
         public Builder hosts(@Nullable List<String> hosts) {
-            this.hosts = Input.ofNullable(hosts);
+            this.hosts = Output.ofNullable(hosts);
             return this;
         }
 
-        public Builder pathMatcher(@Nullable Input<String> pathMatcher) {
+        public Builder pathMatcher(@Nullable Output<String> pathMatcher) {
             this.pathMatcher = pathMatcher;
             return this;
         }
 
         public Builder pathMatcher(@Nullable String pathMatcher) {
-            this.pathMatcher = Input.ofNullable(pathMatcher);
+            this.pathMatcher = Output.ofNullable(pathMatcher);
             return this;
         }
         public HostRuleArgs build() {

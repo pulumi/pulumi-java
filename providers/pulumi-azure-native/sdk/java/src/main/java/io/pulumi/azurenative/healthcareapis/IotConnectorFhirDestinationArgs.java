@@ -6,7 +6,7 @@ package io.pulumi.azurenative.healthcareapis;
 import io.pulumi.azurenative.healthcareapis.enums.IotIdentityResolutionType;
 import io.pulumi.azurenative.healthcareapis.inputs.IotMappingPropertiesArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -22,10 +22,10 @@ public final class IotConnectorFhirDestinationArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="fhirDestinationName")
-      private final @Nullable Input<String> fhirDestinationName;
+      private final @Nullable Output<String> fhirDestinationName;
 
-    public Input<String> getFhirDestinationName() {
-        return this.fhirDestinationName == null ? Input.empty() : this.fhirDestinationName;
+    public Output<String> getFhirDestinationName() {
+        return this.fhirDestinationName == null ? Output.empty() : this.fhirDestinationName;
     }
 
     /**
@@ -33,9 +33,9 @@ public final class IotConnectorFhirDestinationArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="fhirMapping", required=true)
-      private final Input<IotMappingPropertiesArgs> fhirMapping;
+      private final Output<IotMappingPropertiesArgs> fhirMapping;
 
-    public Input<IotMappingPropertiesArgs> getFhirMapping() {
+    public Output<IotMappingPropertiesArgs> getFhirMapping() {
         return this.fhirMapping;
     }
 
@@ -44,9 +44,9 @@ public final class IotConnectorFhirDestinationArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="fhirServiceResourceId", required=true)
-      private final Input<String> fhirServiceResourceId;
+      private final Output<String> fhirServiceResourceId;
 
-    public Input<String> getFhirServiceResourceId() {
+    public Output<String> getFhirServiceResourceId() {
         return this.fhirServiceResourceId;
     }
 
@@ -55,9 +55,9 @@ public final class IotConnectorFhirDestinationArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="iotConnectorName", required=true)
-      private final Input<String> iotConnectorName;
+      private final Output<String> iotConnectorName;
 
-    public Input<String> getIotConnectorName() {
+    public Output<String> getIotConnectorName() {
         return this.iotConnectorName;
     }
 
@@ -66,10 +66,10 @@ public final class IotConnectorFhirDestinationArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -77,9 +77,9 @@ public final class IotConnectorFhirDestinationArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -88,9 +88,9 @@ public final class IotConnectorFhirDestinationArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="resourceIdentityResolutionType", required=true)
-      private final Input<Either<String,IotIdentityResolutionType>> resourceIdentityResolutionType;
+      private final Output<Either<String,IotIdentityResolutionType>> resourceIdentityResolutionType;
 
-    public Input<Either<String,IotIdentityResolutionType>> getResourceIdentityResolutionType() {
+    public Output<Either<String,IotIdentityResolutionType>> getResourceIdentityResolutionType() {
         return this.resourceIdentityResolutionType;
     }
 
@@ -99,21 +99,21 @@ public final class IotConnectorFhirDestinationArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="workspaceName", required=true)
-      private final Input<String> workspaceName;
+      private final Output<String> workspaceName;
 
-    public Input<String> getWorkspaceName() {
+    public Output<String> getWorkspaceName() {
         return this.workspaceName;
     }
 
     public IotConnectorFhirDestinationArgs(
-        @Nullable Input<String> fhirDestinationName,
-        Input<IotMappingPropertiesArgs> fhirMapping,
-        Input<String> fhirServiceResourceId,
-        Input<String> iotConnectorName,
-        @Nullable Input<String> location,
-        Input<String> resourceGroupName,
-        Input<Either<String,IotIdentityResolutionType>> resourceIdentityResolutionType,
-        Input<String> workspaceName) {
+        @Nullable Output<String> fhirDestinationName,
+        Output<IotMappingPropertiesArgs> fhirMapping,
+        Output<String> fhirServiceResourceId,
+        Output<String> iotConnectorName,
+        @Nullable Output<String> location,
+        Output<String> resourceGroupName,
+        Output<Either<String,IotIdentityResolutionType>> resourceIdentityResolutionType,
+        Output<String> workspaceName) {
         this.fhirDestinationName = fhirDestinationName;
         this.fhirMapping = Objects.requireNonNull(fhirMapping, "expected parameter 'fhirMapping' to be non-null");
         this.fhirServiceResourceId = Objects.requireNonNull(fhirServiceResourceId, "expected parameter 'fhirServiceResourceId' to be non-null");
@@ -125,14 +125,14 @@ public final class IotConnectorFhirDestinationArgs extends io.pulumi.resources.R
     }
 
     private IotConnectorFhirDestinationArgs() {
-        this.fhirDestinationName = Input.empty();
-        this.fhirMapping = Input.empty();
-        this.fhirServiceResourceId = Input.empty();
-        this.iotConnectorName = Input.empty();
-        this.location = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.resourceIdentityResolutionType = Input.empty();
-        this.workspaceName = Input.empty();
+        this.fhirDestinationName = Output.empty();
+        this.fhirMapping = Output.empty();
+        this.fhirServiceResourceId = Output.empty();
+        this.iotConnectorName = Output.empty();
+        this.location = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.resourceIdentityResolutionType = Output.empty();
+        this.workspaceName = Output.empty();
     }
 
     public static Builder builder() {
@@ -144,14 +144,14 @@ public final class IotConnectorFhirDestinationArgs extends io.pulumi.resources.R
     }
 
     public static final class Builder {
-        private @Nullable Input<String> fhirDestinationName;
-        private Input<IotMappingPropertiesArgs> fhirMapping;
-        private Input<String> fhirServiceResourceId;
-        private Input<String> iotConnectorName;
-        private @Nullable Input<String> location;
-        private Input<String> resourceGroupName;
-        private Input<Either<String,IotIdentityResolutionType>> resourceIdentityResolutionType;
-        private Input<String> workspaceName;
+        private @Nullable Output<String> fhirDestinationName;
+        private Output<IotMappingPropertiesArgs> fhirMapping;
+        private Output<String> fhirServiceResourceId;
+        private Output<String> iotConnectorName;
+        private @Nullable Output<String> location;
+        private Output<String> resourceGroupName;
+        private Output<Either<String,IotIdentityResolutionType>> resourceIdentityResolutionType;
+        private Output<String> workspaceName;
 
         public Builder() {
     	      // Empty
@@ -169,83 +169,83 @@ public final class IotConnectorFhirDestinationArgs extends io.pulumi.resources.R
     	      this.workspaceName = defaults.workspaceName;
         }
 
-        public Builder fhirDestinationName(@Nullable Input<String> fhirDestinationName) {
+        public Builder fhirDestinationName(@Nullable Output<String> fhirDestinationName) {
             this.fhirDestinationName = fhirDestinationName;
             return this;
         }
 
         public Builder fhirDestinationName(@Nullable String fhirDestinationName) {
-            this.fhirDestinationName = Input.ofNullable(fhirDestinationName);
+            this.fhirDestinationName = Output.ofNullable(fhirDestinationName);
             return this;
         }
 
-        public Builder fhirMapping(Input<IotMappingPropertiesArgs> fhirMapping) {
+        public Builder fhirMapping(Output<IotMappingPropertiesArgs> fhirMapping) {
             this.fhirMapping = Objects.requireNonNull(fhirMapping);
             return this;
         }
 
         public Builder fhirMapping(IotMappingPropertiesArgs fhirMapping) {
-            this.fhirMapping = Input.of(Objects.requireNonNull(fhirMapping));
+            this.fhirMapping = Output.of(Objects.requireNonNull(fhirMapping));
             return this;
         }
 
-        public Builder fhirServiceResourceId(Input<String> fhirServiceResourceId) {
+        public Builder fhirServiceResourceId(Output<String> fhirServiceResourceId) {
             this.fhirServiceResourceId = Objects.requireNonNull(fhirServiceResourceId);
             return this;
         }
 
         public Builder fhirServiceResourceId(String fhirServiceResourceId) {
-            this.fhirServiceResourceId = Input.of(Objects.requireNonNull(fhirServiceResourceId));
+            this.fhirServiceResourceId = Output.of(Objects.requireNonNull(fhirServiceResourceId));
             return this;
         }
 
-        public Builder iotConnectorName(Input<String> iotConnectorName) {
+        public Builder iotConnectorName(Output<String> iotConnectorName) {
             this.iotConnectorName = Objects.requireNonNull(iotConnectorName);
             return this;
         }
 
         public Builder iotConnectorName(String iotConnectorName) {
-            this.iotConnectorName = Input.of(Objects.requireNonNull(iotConnectorName));
+            this.iotConnectorName = Output.of(Objects.requireNonNull(iotConnectorName));
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder resourceIdentityResolutionType(Input<Either<String,IotIdentityResolutionType>> resourceIdentityResolutionType) {
+        public Builder resourceIdentityResolutionType(Output<Either<String,IotIdentityResolutionType>> resourceIdentityResolutionType) {
             this.resourceIdentityResolutionType = Objects.requireNonNull(resourceIdentityResolutionType);
             return this;
         }
 
         public Builder resourceIdentityResolutionType(Either<String,IotIdentityResolutionType> resourceIdentityResolutionType) {
-            this.resourceIdentityResolutionType = Input.of(Objects.requireNonNull(resourceIdentityResolutionType));
+            this.resourceIdentityResolutionType = Output.of(Objects.requireNonNull(resourceIdentityResolutionType));
             return this;
         }
 
-        public Builder workspaceName(Input<String> workspaceName) {
+        public Builder workspaceName(Output<String> workspaceName) {
             this.workspaceName = Objects.requireNonNull(workspaceName);
             return this;
         }
 
         public Builder workspaceName(String workspaceName) {
-            this.workspaceName = Input.of(Objects.requireNonNull(workspaceName));
+            this.workspaceName = Output.of(Objects.requireNonNull(workspaceName));
             return this;
         }
         public IotConnectorFhirDestinationArgs build() {

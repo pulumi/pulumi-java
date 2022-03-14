@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.container_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.container_v1.enums.SandboxConfigType;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class SandboxConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type")
-      private final @Nullable Input<SandboxConfigType> type;
+      private final @Nullable Output<SandboxConfigType> type;
 
-    public Input<SandboxConfigType> getType() {
-        return this.type == null ? Input.empty() : this.type;
+    public Output<SandboxConfigType> getType() {
+        return this.type == null ? Output.empty() : this.type;
     }
 
-    public SandboxConfigArgs(@Nullable Input<SandboxConfigType> type) {
+    public SandboxConfigArgs(@Nullable Output<SandboxConfigType> type) {
         this.type = type;
     }
 
     private SandboxConfigArgs() {
-        this.type = Input.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class SandboxConfigArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<SandboxConfigType> type;
+        private @Nullable Output<SandboxConfigType> type;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class SandboxConfigArgs extends io.pulumi.resources.ResourceArgs {
     	      this.type = defaults.type;
         }
 
-        public Builder type(@Nullable Input<SandboxConfigType> type) {
+        public Builder type(@Nullable Output<SandboxConfigType> type) {
             this.type = type;
             return this;
         }
 
         public Builder type(@Nullable SandboxConfigType type) {
-            this.type = Input.ofNullable(type);
+            this.type = Output.ofNullable(type);
             return this;
         }
         public SandboxConfigArgs build() {

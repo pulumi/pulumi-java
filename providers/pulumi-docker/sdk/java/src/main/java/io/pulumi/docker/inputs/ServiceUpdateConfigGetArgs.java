@@ -3,7 +3,7 @@
 
 package io.pulumi.docker.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -16,54 +16,54 @@ public final class ServiceUpdateConfigGetArgs extends io.pulumi.resources.Resour
     public static final ServiceUpdateConfigGetArgs Empty = new ServiceUpdateConfigGetArgs();
 
     @InputImport(name="delay")
-      private final @Nullable Input<String> delay;
+      private final @Nullable Output<String> delay;
 
-    public Input<String> getDelay() {
-        return this.delay == null ? Input.empty() : this.delay;
+    public Output<String> getDelay() {
+        return this.delay == null ? Output.empty() : this.delay;
     }
 
     @InputImport(name="failureAction")
-      private final @Nullable Input<String> failureAction;
+      private final @Nullable Output<String> failureAction;
 
-    public Input<String> getFailureAction() {
-        return this.failureAction == null ? Input.empty() : this.failureAction;
+    public Output<String> getFailureAction() {
+        return this.failureAction == null ? Output.empty() : this.failureAction;
     }
 
     @InputImport(name="maxFailureRatio")
-      private final @Nullable Input<String> maxFailureRatio;
+      private final @Nullable Output<String> maxFailureRatio;
 
-    public Input<String> getMaxFailureRatio() {
-        return this.maxFailureRatio == null ? Input.empty() : this.maxFailureRatio;
+    public Output<String> getMaxFailureRatio() {
+        return this.maxFailureRatio == null ? Output.empty() : this.maxFailureRatio;
     }
 
     @InputImport(name="monitor")
-      private final @Nullable Input<String> monitor;
+      private final @Nullable Output<String> monitor;
 
-    public Input<String> getMonitor() {
-        return this.monitor == null ? Input.empty() : this.monitor;
+    public Output<String> getMonitor() {
+        return this.monitor == null ? Output.empty() : this.monitor;
     }
 
     @InputImport(name="order")
-      private final @Nullable Input<String> order;
+      private final @Nullable Output<String> order;
 
-    public Input<String> getOrder() {
-        return this.order == null ? Input.empty() : this.order;
+    public Output<String> getOrder() {
+        return this.order == null ? Output.empty() : this.order;
     }
 
     @InputImport(name="parallelism")
-      private final @Nullable Input<Integer> parallelism;
+      private final @Nullable Output<Integer> parallelism;
 
-    public Input<Integer> getParallelism() {
-        return this.parallelism == null ? Input.empty() : this.parallelism;
+    public Output<Integer> getParallelism() {
+        return this.parallelism == null ? Output.empty() : this.parallelism;
     }
 
     public ServiceUpdateConfigGetArgs(
-        @Nullable Input<String> delay,
-        @Nullable Input<String> failureAction,
-        @Nullable Input<String> maxFailureRatio,
-        @Nullable Input<String> monitor,
-        @Nullable Input<String> order,
-        @Nullable Input<Integer> parallelism) {
+        @Nullable Output<String> delay,
+        @Nullable Output<String> failureAction,
+        @Nullable Output<String> maxFailureRatio,
+        @Nullable Output<String> monitor,
+        @Nullable Output<String> order,
+        @Nullable Output<Integer> parallelism) {
         this.delay = delay;
         this.failureAction = failureAction;
         this.maxFailureRatio = maxFailureRatio;
@@ -73,12 +73,12 @@ public final class ServiceUpdateConfigGetArgs extends io.pulumi.resources.Resour
     }
 
     private ServiceUpdateConfigGetArgs() {
-        this.delay = Input.empty();
-        this.failureAction = Input.empty();
-        this.maxFailureRatio = Input.empty();
-        this.monitor = Input.empty();
-        this.order = Input.empty();
-        this.parallelism = Input.empty();
+        this.delay = Output.empty();
+        this.failureAction = Output.empty();
+        this.maxFailureRatio = Output.empty();
+        this.monitor = Output.empty();
+        this.order = Output.empty();
+        this.parallelism = Output.empty();
     }
 
     public static Builder builder() {
@@ -90,12 +90,12 @@ public final class ServiceUpdateConfigGetArgs extends io.pulumi.resources.Resour
     }
 
     public static final class Builder {
-        private @Nullable Input<String> delay;
-        private @Nullable Input<String> failureAction;
-        private @Nullable Input<String> maxFailureRatio;
-        private @Nullable Input<String> monitor;
-        private @Nullable Input<String> order;
-        private @Nullable Input<Integer> parallelism;
+        private @Nullable Output<String> delay;
+        private @Nullable Output<String> failureAction;
+        private @Nullable Output<String> maxFailureRatio;
+        private @Nullable Output<String> monitor;
+        private @Nullable Output<String> order;
+        private @Nullable Output<Integer> parallelism;
 
         public Builder() {
     	      // Empty
@@ -111,63 +111,63 @@ public final class ServiceUpdateConfigGetArgs extends io.pulumi.resources.Resour
     	      this.parallelism = defaults.parallelism;
         }
 
-        public Builder delay(@Nullable Input<String> delay) {
+        public Builder delay(@Nullable Output<String> delay) {
             this.delay = delay;
             return this;
         }
 
         public Builder delay(@Nullable String delay) {
-            this.delay = Input.ofNullable(delay);
+            this.delay = Output.ofNullable(delay);
             return this;
         }
 
-        public Builder failureAction(@Nullable Input<String> failureAction) {
+        public Builder failureAction(@Nullable Output<String> failureAction) {
             this.failureAction = failureAction;
             return this;
         }
 
         public Builder failureAction(@Nullable String failureAction) {
-            this.failureAction = Input.ofNullable(failureAction);
+            this.failureAction = Output.ofNullable(failureAction);
             return this;
         }
 
-        public Builder maxFailureRatio(@Nullable Input<String> maxFailureRatio) {
+        public Builder maxFailureRatio(@Nullable Output<String> maxFailureRatio) {
             this.maxFailureRatio = maxFailureRatio;
             return this;
         }
 
         public Builder maxFailureRatio(@Nullable String maxFailureRatio) {
-            this.maxFailureRatio = Input.ofNullable(maxFailureRatio);
+            this.maxFailureRatio = Output.ofNullable(maxFailureRatio);
             return this;
         }
 
-        public Builder monitor(@Nullable Input<String> monitor) {
+        public Builder monitor(@Nullable Output<String> monitor) {
             this.monitor = monitor;
             return this;
         }
 
         public Builder monitor(@Nullable String monitor) {
-            this.monitor = Input.ofNullable(monitor);
+            this.monitor = Output.ofNullable(monitor);
             return this;
         }
 
-        public Builder order(@Nullable Input<String> order) {
+        public Builder order(@Nullable Output<String> order) {
             this.order = order;
             return this;
         }
 
         public Builder order(@Nullable String order) {
-            this.order = Input.ofNullable(order);
+            this.order = Output.ofNullable(order);
             return this;
         }
 
-        public Builder parallelism(@Nullable Input<Integer> parallelism) {
+        public Builder parallelism(@Nullable Output<Integer> parallelism) {
             this.parallelism = parallelism;
             return this;
         }
 
         public Builder parallelism(@Nullable Integer parallelism) {
-            this.parallelism = Input.ofNullable(parallelism);
+            this.parallelism = Output.ofNullable(parallelism);
             return this;
         }
         public ServiceUpdateConfigGetArgs build() {

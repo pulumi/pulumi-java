@@ -9,7 +9,6 @@ import io.pulumi.aws.appstream.inputs.ImageBuilderState;
 import io.pulumi.aws.appstream.outputs.ImageBuilderAccessEndpoint;
 import io.pulumi.aws.appstream.outputs.ImageBuilderDomainJoinInfo;
 import io.pulumi.aws.appstream.outputs.ImageBuilderVpcConfig;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -312,14 +311,14 @@ public class ImageBuilder extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ImageBuilder(String name, ImageBuilderArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:appstream/imageBuilder:ImageBuilder", name, args == null ? ImageBuilderArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws:appstream/imageBuilder:ImageBuilder", name, args == null ? ImageBuilderArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private ImageBuilder(String name, Input<String> id, @Nullable ImageBuilderState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private ImageBuilder(String name, Output<String> id, @Nullable ImageBuilderState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws:appstream/imageBuilder:ImageBuilder", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -335,7 +334,7 @@ public class ImageBuilder extends io.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static ImageBuilder get(String name, Input<String> id, @Nullable ImageBuilderState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static ImageBuilder get(String name, Output<String> id, @Nullable ImageBuilderState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new ImageBuilder(name, id, state, options);
     }
 }

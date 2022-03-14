@@ -6,7 +6,7 @@ package io.pulumi.azurenative.mixedreality;
 import io.pulumi.azurenative.mixedreality.inputs.IdentityArgs;
 import io.pulumi.azurenative.mixedreality.inputs.ObjectAnchorsAccountIdentityArgs;
 import io.pulumi.azurenative.mixedreality.inputs.SkuArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -23,17 +23,17 @@ public final class ObjectAnchorsAccountArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="accountName")
-      private final @Nullable Input<String> accountName;
+      private final @Nullable Output<String> accountName;
 
-    public Input<String> getAccountName() {
-        return this.accountName == null ? Input.empty() : this.accountName;
+    public Output<String> getAccountName() {
+        return this.accountName == null ? Output.empty() : this.accountName;
     }
 
     @InputImport(name="identity")
-      private final @Nullable Input<ObjectAnchorsAccountIdentityArgs> identity;
+      private final @Nullable Output<ObjectAnchorsAccountIdentityArgs> identity;
 
-    public Input<ObjectAnchorsAccountIdentityArgs> getIdentity() {
-        return this.identity == null ? Input.empty() : this.identity;
+    public Output<ObjectAnchorsAccountIdentityArgs> getIdentity() {
+        return this.identity == null ? Output.empty() : this.identity;
     }
 
     /**
@@ -41,10 +41,10 @@ public final class ObjectAnchorsAccountArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="kind")
-      private final @Nullable Input<SkuArgs> kind;
+      private final @Nullable Output<SkuArgs> kind;
 
-    public Input<SkuArgs> getKind() {
-        return this.kind == null ? Input.empty() : this.kind;
+    public Output<SkuArgs> getKind() {
+        return this.kind == null ? Output.empty() : this.kind;
     }
 
     /**
@@ -52,10 +52,10 @@ public final class ObjectAnchorsAccountArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -63,10 +63,10 @@ public final class ObjectAnchorsAccountArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="plan")
-      private final @Nullable Input<IdentityArgs> plan;
+      private final @Nullable Output<IdentityArgs> plan;
 
-    public Input<IdentityArgs> getPlan() {
-        return this.plan == null ? Input.empty() : this.plan;
+    public Output<IdentityArgs> getPlan() {
+        return this.plan == null ? Output.empty() : this.plan;
     }
 
     /**
@@ -74,9 +74,9 @@ public final class ObjectAnchorsAccountArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -85,10 +85,10 @@ public final class ObjectAnchorsAccountArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="sku")
-      private final @Nullable Input<SkuArgs> sku;
+      private final @Nullable Output<SkuArgs> sku;
 
-    public Input<SkuArgs> getSku() {
-        return this.sku == null ? Input.empty() : this.sku;
+    public Output<SkuArgs> getSku() {
+        return this.sku == null ? Output.empty() : this.sku;
     }
 
     /**
@@ -96,10 +96,10 @@ public final class ObjectAnchorsAccountArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="storageAccountName")
-      private final @Nullable Input<String> storageAccountName;
+      private final @Nullable Output<String> storageAccountName;
 
-    public Input<String> getStorageAccountName() {
-        return this.storageAccountName == null ? Input.empty() : this.storageAccountName;
+    public Output<String> getStorageAccountName() {
+        return this.storageAccountName == null ? Output.empty() : this.storageAccountName;
     }
 
     /**
@@ -107,22 +107,22 @@ public final class ObjectAnchorsAccountArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public ObjectAnchorsAccountArgs(
-        @Nullable Input<String> accountName,
-        @Nullable Input<ObjectAnchorsAccountIdentityArgs> identity,
-        @Nullable Input<SkuArgs> kind,
-        @Nullable Input<String> location,
-        @Nullable Input<IdentityArgs> plan,
-        Input<String> resourceGroupName,
-        @Nullable Input<SkuArgs> sku,
-        @Nullable Input<String> storageAccountName,
-        @Nullable Input<Map<String,String>> tags) {
+        @Nullable Output<String> accountName,
+        @Nullable Output<ObjectAnchorsAccountIdentityArgs> identity,
+        @Nullable Output<SkuArgs> kind,
+        @Nullable Output<String> location,
+        @Nullable Output<IdentityArgs> plan,
+        Output<String> resourceGroupName,
+        @Nullable Output<SkuArgs> sku,
+        @Nullable Output<String> storageAccountName,
+        @Nullable Output<Map<String,String>> tags) {
         this.accountName = accountName;
         this.identity = identity;
         this.kind = kind;
@@ -135,15 +135,15 @@ public final class ObjectAnchorsAccountArgs extends io.pulumi.resources.Resource
     }
 
     private ObjectAnchorsAccountArgs() {
-        this.accountName = Input.empty();
-        this.identity = Input.empty();
-        this.kind = Input.empty();
-        this.location = Input.empty();
-        this.plan = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.sku = Input.empty();
-        this.storageAccountName = Input.empty();
-        this.tags = Input.empty();
+        this.accountName = Output.empty();
+        this.identity = Output.empty();
+        this.kind = Output.empty();
+        this.location = Output.empty();
+        this.plan = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.sku = Output.empty();
+        this.storageAccountName = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -155,15 +155,15 @@ public final class ObjectAnchorsAccountArgs extends io.pulumi.resources.Resource
     }
 
     public static final class Builder {
-        private @Nullable Input<String> accountName;
-        private @Nullable Input<ObjectAnchorsAccountIdentityArgs> identity;
-        private @Nullable Input<SkuArgs> kind;
-        private @Nullable Input<String> location;
-        private @Nullable Input<IdentityArgs> plan;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<SkuArgs> sku;
-        private @Nullable Input<String> storageAccountName;
-        private @Nullable Input<Map<String,String>> tags;
+        private @Nullable Output<String> accountName;
+        private @Nullable Output<ObjectAnchorsAccountIdentityArgs> identity;
+        private @Nullable Output<SkuArgs> kind;
+        private @Nullable Output<String> location;
+        private @Nullable Output<IdentityArgs> plan;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<SkuArgs> sku;
+        private @Nullable Output<String> storageAccountName;
+        private @Nullable Output<Map<String,String>> tags;
 
         public Builder() {
     	      // Empty
@@ -182,93 +182,93 @@ public final class ObjectAnchorsAccountArgs extends io.pulumi.resources.Resource
     	      this.tags = defaults.tags;
         }
 
-        public Builder accountName(@Nullable Input<String> accountName) {
+        public Builder accountName(@Nullable Output<String> accountName) {
             this.accountName = accountName;
             return this;
         }
 
         public Builder accountName(@Nullable String accountName) {
-            this.accountName = Input.ofNullable(accountName);
+            this.accountName = Output.ofNullable(accountName);
             return this;
         }
 
-        public Builder identity(@Nullable Input<ObjectAnchorsAccountIdentityArgs> identity) {
+        public Builder identity(@Nullable Output<ObjectAnchorsAccountIdentityArgs> identity) {
             this.identity = identity;
             return this;
         }
 
         public Builder identity(@Nullable ObjectAnchorsAccountIdentityArgs identity) {
-            this.identity = Input.ofNullable(identity);
+            this.identity = Output.ofNullable(identity);
             return this;
         }
 
-        public Builder kind(@Nullable Input<SkuArgs> kind) {
+        public Builder kind(@Nullable Output<SkuArgs> kind) {
             this.kind = kind;
             return this;
         }
 
         public Builder kind(@Nullable SkuArgs kind) {
-            this.kind = Input.ofNullable(kind);
+            this.kind = Output.ofNullable(kind);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder plan(@Nullable Input<IdentityArgs> plan) {
+        public Builder plan(@Nullable Output<IdentityArgs> plan) {
             this.plan = plan;
             return this;
         }
 
         public Builder plan(@Nullable IdentityArgs plan) {
-            this.plan = Input.ofNullable(plan);
+            this.plan = Output.ofNullable(plan);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder sku(@Nullable Input<SkuArgs> sku) {
+        public Builder sku(@Nullable Output<SkuArgs> sku) {
             this.sku = sku;
             return this;
         }
 
         public Builder sku(@Nullable SkuArgs sku) {
-            this.sku = Input.ofNullable(sku);
+            this.sku = Output.ofNullable(sku);
             return this;
         }
 
-        public Builder storageAccountName(@Nullable Input<String> storageAccountName) {
+        public Builder storageAccountName(@Nullable Output<String> storageAccountName) {
             this.storageAccountName = storageAccountName;
             return this;
         }
 
         public Builder storageAccountName(@Nullable String storageAccountName) {
-            this.storageAccountName = Input.ofNullable(storageAccountName);
+            this.storageAccountName = Output.ofNullable(storageAccountName);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public ObjectAnchorsAccountArgs build() {

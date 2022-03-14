@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.iotanalytics.inputs;
 
 import io.pulumi.awsnative.iotanalytics.inputs.DatastorePartitionArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
@@ -16,18 +16,18 @@ public final class DatastorePartitionsArgs extends io.pulumi.resources.ResourceA
     public static final DatastorePartitionsArgs Empty = new DatastorePartitionsArgs();
 
     @InputImport(name="partitions")
-      private final @Nullable Input<List<DatastorePartitionArgs>> partitions;
+      private final @Nullable Output<List<DatastorePartitionArgs>> partitions;
 
-    public Input<List<DatastorePartitionArgs>> getPartitions() {
-        return this.partitions == null ? Input.empty() : this.partitions;
+    public Output<List<DatastorePartitionArgs>> getPartitions() {
+        return this.partitions == null ? Output.empty() : this.partitions;
     }
 
-    public DatastorePartitionsArgs(@Nullable Input<List<DatastorePartitionArgs>> partitions) {
+    public DatastorePartitionsArgs(@Nullable Output<List<DatastorePartitionArgs>> partitions) {
         this.partitions = partitions;
     }
 
     private DatastorePartitionsArgs() {
-        this.partitions = Input.empty();
+        this.partitions = Output.empty();
     }
 
     public static Builder builder() {
@@ -39,7 +39,7 @@ public final class DatastorePartitionsArgs extends io.pulumi.resources.ResourceA
     }
 
     public static final class Builder {
-        private @Nullable Input<List<DatastorePartitionArgs>> partitions;
+        private @Nullable Output<List<DatastorePartitionArgs>> partitions;
 
         public Builder() {
     	      // Empty
@@ -50,13 +50,13 @@ public final class DatastorePartitionsArgs extends io.pulumi.resources.ResourceA
     	      this.partitions = defaults.partitions;
         }
 
-        public Builder partitions(@Nullable Input<List<DatastorePartitionArgs>> partitions) {
+        public Builder partitions(@Nullable Output<List<DatastorePartitionArgs>> partitions) {
             this.partitions = partitions;
             return this;
         }
 
         public Builder partitions(@Nullable List<DatastorePartitionArgs> partitions) {
-            this.partitions = Input.ofNullable(partitions);
+            this.partitions = Output.ofNullable(partitions);
             return this;
         }
         public DatastorePartitionsArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.storagegateway;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -21,9 +21,9 @@ public final class TapePoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="poolName", required=true)
-      private final Input<String> poolName;
+      private final Output<String> poolName;
 
-    public Input<String> getPoolName() {
+    public Output<String> getPoolName() {
         return this.poolName;
     }
 
@@ -32,10 +32,10 @@ public final class TapePoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="retentionLockTimeInDays")
-      private final @Nullable Input<Integer> retentionLockTimeInDays;
+      private final @Nullable Output<Integer> retentionLockTimeInDays;
 
-    public Input<Integer> getRetentionLockTimeInDays() {
-        return this.retentionLockTimeInDays == null ? Input.empty() : this.retentionLockTimeInDays;
+    public Output<Integer> getRetentionLockTimeInDays() {
+        return this.retentionLockTimeInDays == null ? Output.empty() : this.retentionLockTimeInDays;
     }
 
     /**
@@ -43,10 +43,10 @@ public final class TapePoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="retentionLockType")
-      private final @Nullable Input<String> retentionLockType;
+      private final @Nullable Output<String> retentionLockType;
 
-    public Input<String> getRetentionLockType() {
-        return this.retentionLockType == null ? Input.empty() : this.retentionLockType;
+    public Output<String> getRetentionLockType() {
+        return this.retentionLockType == null ? Output.empty() : this.retentionLockType;
     }
 
     /**
@@ -54,9 +54,9 @@ public final class TapePoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="storageClass", required=true)
-      private final Input<String> storageClass;
+      private final Output<String> storageClass;
 
-    public Input<String> getStorageClass() {
+    public Output<String> getStorageClass() {
         return this.storageClass;
     }
 
@@ -65,18 +65,18 @@ public final class TapePoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public TapePoolArgs(
-        Input<String> poolName,
-        @Nullable Input<Integer> retentionLockTimeInDays,
-        @Nullable Input<String> retentionLockType,
-        Input<String> storageClass,
-        @Nullable Input<Map<String,String>> tags) {
+        Output<String> poolName,
+        @Nullable Output<Integer> retentionLockTimeInDays,
+        @Nullable Output<String> retentionLockType,
+        Output<String> storageClass,
+        @Nullable Output<Map<String,String>> tags) {
         this.poolName = Objects.requireNonNull(poolName, "expected parameter 'poolName' to be non-null");
         this.retentionLockTimeInDays = retentionLockTimeInDays;
         this.retentionLockType = retentionLockType;
@@ -85,11 +85,11 @@ public final class TapePoolArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private TapePoolArgs() {
-        this.poolName = Input.empty();
-        this.retentionLockTimeInDays = Input.empty();
-        this.retentionLockType = Input.empty();
-        this.storageClass = Input.empty();
-        this.tags = Input.empty();
+        this.poolName = Output.empty();
+        this.retentionLockTimeInDays = Output.empty();
+        this.retentionLockType = Output.empty();
+        this.storageClass = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -101,11 +101,11 @@ public final class TapePoolArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> poolName;
-        private @Nullable Input<Integer> retentionLockTimeInDays;
-        private @Nullable Input<String> retentionLockType;
-        private Input<String> storageClass;
-        private @Nullable Input<Map<String,String>> tags;
+        private Output<String> poolName;
+        private @Nullable Output<Integer> retentionLockTimeInDays;
+        private @Nullable Output<String> retentionLockType;
+        private Output<String> storageClass;
+        private @Nullable Output<Map<String,String>> tags;
 
         public Builder() {
     	      // Empty
@@ -120,53 +120,53 @@ public final class TapePoolArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder poolName(Input<String> poolName) {
+        public Builder poolName(Output<String> poolName) {
             this.poolName = Objects.requireNonNull(poolName);
             return this;
         }
 
         public Builder poolName(String poolName) {
-            this.poolName = Input.of(Objects.requireNonNull(poolName));
+            this.poolName = Output.of(Objects.requireNonNull(poolName));
             return this;
         }
 
-        public Builder retentionLockTimeInDays(@Nullable Input<Integer> retentionLockTimeInDays) {
+        public Builder retentionLockTimeInDays(@Nullable Output<Integer> retentionLockTimeInDays) {
             this.retentionLockTimeInDays = retentionLockTimeInDays;
             return this;
         }
 
         public Builder retentionLockTimeInDays(@Nullable Integer retentionLockTimeInDays) {
-            this.retentionLockTimeInDays = Input.ofNullable(retentionLockTimeInDays);
+            this.retentionLockTimeInDays = Output.ofNullable(retentionLockTimeInDays);
             return this;
         }
 
-        public Builder retentionLockType(@Nullable Input<String> retentionLockType) {
+        public Builder retentionLockType(@Nullable Output<String> retentionLockType) {
             this.retentionLockType = retentionLockType;
             return this;
         }
 
         public Builder retentionLockType(@Nullable String retentionLockType) {
-            this.retentionLockType = Input.ofNullable(retentionLockType);
+            this.retentionLockType = Output.ofNullable(retentionLockType);
             return this;
         }
 
-        public Builder storageClass(Input<String> storageClass) {
+        public Builder storageClass(Output<String> storageClass) {
             this.storageClass = Objects.requireNonNull(storageClass);
             return this;
         }
 
         public Builder storageClass(String storageClass) {
-            this.storageClass = Input.of(Objects.requireNonNull(storageClass));
+            this.storageClass = Output.of(Objects.requireNonNull(storageClass));
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public TapePoolArgs build() {

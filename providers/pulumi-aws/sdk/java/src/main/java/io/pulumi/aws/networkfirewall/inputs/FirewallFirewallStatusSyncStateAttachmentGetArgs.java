@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.networkfirewall.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class FirewallFirewallStatusSyncStateAttachmentGetArgs extends io.p
      * 
      */
     @InputImport(name="endpointId")
-      private final @Nullable Input<String> endpointId;
+      private final @Nullable Output<String> endpointId;
 
-    public Input<String> getEndpointId() {
-        return this.endpointId == null ? Input.empty() : this.endpointId;
+    public Output<String> getEndpointId() {
+        return this.endpointId == null ? Output.empty() : this.endpointId;
     }
 
     /**
@@ -30,22 +30,22 @@ public final class FirewallFirewallStatusSyncStateAttachmentGetArgs extends io.p
      * 
      */
     @InputImport(name="subnetId")
-      private final @Nullable Input<String> subnetId;
+      private final @Nullable Output<String> subnetId;
 
-    public Input<String> getSubnetId() {
-        return this.subnetId == null ? Input.empty() : this.subnetId;
+    public Output<String> getSubnetId() {
+        return this.subnetId == null ? Output.empty() : this.subnetId;
     }
 
     public FirewallFirewallStatusSyncStateAttachmentGetArgs(
-        @Nullable Input<String> endpointId,
-        @Nullable Input<String> subnetId) {
+        @Nullable Output<String> endpointId,
+        @Nullable Output<String> subnetId) {
         this.endpointId = endpointId;
         this.subnetId = subnetId;
     }
 
     private FirewallFirewallStatusSyncStateAttachmentGetArgs() {
-        this.endpointId = Input.empty();
-        this.subnetId = Input.empty();
+        this.endpointId = Output.empty();
+        this.subnetId = Output.empty();
     }
 
     public static Builder builder() {
@@ -57,8 +57,8 @@ public final class FirewallFirewallStatusSyncStateAttachmentGetArgs extends io.p
     }
 
     public static final class Builder {
-        private @Nullable Input<String> endpointId;
-        private @Nullable Input<String> subnetId;
+        private @Nullable Output<String> endpointId;
+        private @Nullable Output<String> subnetId;
 
         public Builder() {
     	      // Empty
@@ -70,23 +70,23 @@ public final class FirewallFirewallStatusSyncStateAttachmentGetArgs extends io.p
     	      this.subnetId = defaults.subnetId;
         }
 
-        public Builder endpointId(@Nullable Input<String> endpointId) {
+        public Builder endpointId(@Nullable Output<String> endpointId) {
             this.endpointId = endpointId;
             return this;
         }
 
         public Builder endpointId(@Nullable String endpointId) {
-            this.endpointId = Input.ofNullable(endpointId);
+            this.endpointId = Output.ofNullable(endpointId);
             return this;
         }
 
-        public Builder subnetId(@Nullable Input<String> subnetId) {
+        public Builder subnetId(@Nullable Output<String> subnetId) {
             this.subnetId = subnetId;
             return this;
         }
 
         public Builder subnetId(@Nullable String subnetId) {
-            this.subnetId = Input.ofNullable(subnetId);
+            this.subnetId = Output.ofNullable(subnetId);
             return this;
         }
         public FirewallFirewallStatusSyncStateAttachmentGetArgs build() {

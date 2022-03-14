@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.compute.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -24,18 +24,18 @@ public final class DisallowedArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="diskTypes")
-      private final @Nullable Input<List<String>> diskTypes;
+      private final @Nullable Output<List<String>> diskTypes;
 
-    public Input<List<String>> getDiskTypes() {
-        return this.diskTypes == null ? Input.empty() : this.diskTypes;
+    public Output<List<String>> getDiskTypes() {
+        return this.diskTypes == null ? Output.empty() : this.diskTypes;
     }
 
-    public DisallowedArgs(@Nullable Input<List<String>> diskTypes) {
+    public DisallowedArgs(@Nullable Output<List<String>> diskTypes) {
         this.diskTypes = diskTypes;
     }
 
     private DisallowedArgs() {
-        this.diskTypes = Input.empty();
+        this.diskTypes = Output.empty();
     }
 
     public static Builder builder() {
@@ -47,7 +47,7 @@ public final class DisallowedArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> diskTypes;
+        private @Nullable Output<List<String>> diskTypes;
 
         public Builder() {
     	      // Empty
@@ -58,13 +58,13 @@ public final class DisallowedArgs extends io.pulumi.resources.ResourceArgs {
     	      this.diskTypes = defaults.diskTypes;
         }
 
-        public Builder diskTypes(@Nullable Input<List<String>> diskTypes) {
+        public Builder diskTypes(@Nullable Output<List<String>> diskTypes) {
             this.diskTypes = diskTypes;
             return this;
         }
 
         public Builder diskTypes(@Nullable List<String> diskTypes) {
-            this.diskTypes = Input.ofNullable(diskTypes);
+            this.diskTypes = Output.ofNullable(diskTypes);
             return this;
         }
         public DisallowedArgs build() {

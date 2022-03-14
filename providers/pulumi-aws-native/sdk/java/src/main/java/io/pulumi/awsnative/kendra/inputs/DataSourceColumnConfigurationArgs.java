@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.kendra.inputs;
 
 import io.pulumi.awsnative.kendra.inputs.DataSourceToIndexFieldMappingArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -17,46 +17,46 @@ public final class DataSourceColumnConfigurationArgs extends io.pulumi.resources
     public static final DataSourceColumnConfigurationArgs Empty = new DataSourceColumnConfigurationArgs();
 
     @InputImport(name="changeDetectingColumns", required=true)
-      private final Input<List<String>> changeDetectingColumns;
+      private final Output<List<String>> changeDetectingColumns;
 
-    public Input<List<String>> getChangeDetectingColumns() {
+    public Output<List<String>> getChangeDetectingColumns() {
         return this.changeDetectingColumns;
     }
 
     @InputImport(name="documentDataColumnName", required=true)
-      private final Input<String> documentDataColumnName;
+      private final Output<String> documentDataColumnName;
 
-    public Input<String> getDocumentDataColumnName() {
+    public Output<String> getDocumentDataColumnName() {
         return this.documentDataColumnName;
     }
 
     @InputImport(name="documentIdColumnName", required=true)
-      private final Input<String> documentIdColumnName;
+      private final Output<String> documentIdColumnName;
 
-    public Input<String> getDocumentIdColumnName() {
+    public Output<String> getDocumentIdColumnName() {
         return this.documentIdColumnName;
     }
 
     @InputImport(name="documentTitleColumnName")
-      private final @Nullable Input<String> documentTitleColumnName;
+      private final @Nullable Output<String> documentTitleColumnName;
 
-    public Input<String> getDocumentTitleColumnName() {
-        return this.documentTitleColumnName == null ? Input.empty() : this.documentTitleColumnName;
+    public Output<String> getDocumentTitleColumnName() {
+        return this.documentTitleColumnName == null ? Output.empty() : this.documentTitleColumnName;
     }
 
     @InputImport(name="fieldMappings")
-      private final @Nullable Input<List<DataSourceToIndexFieldMappingArgs>> fieldMappings;
+      private final @Nullable Output<List<DataSourceToIndexFieldMappingArgs>> fieldMappings;
 
-    public Input<List<DataSourceToIndexFieldMappingArgs>> getFieldMappings() {
-        return this.fieldMappings == null ? Input.empty() : this.fieldMappings;
+    public Output<List<DataSourceToIndexFieldMappingArgs>> getFieldMappings() {
+        return this.fieldMappings == null ? Output.empty() : this.fieldMappings;
     }
 
     public DataSourceColumnConfigurationArgs(
-        Input<List<String>> changeDetectingColumns,
-        Input<String> documentDataColumnName,
-        Input<String> documentIdColumnName,
-        @Nullable Input<String> documentTitleColumnName,
-        @Nullable Input<List<DataSourceToIndexFieldMappingArgs>> fieldMappings) {
+        Output<List<String>> changeDetectingColumns,
+        Output<String> documentDataColumnName,
+        Output<String> documentIdColumnName,
+        @Nullable Output<String> documentTitleColumnName,
+        @Nullable Output<List<DataSourceToIndexFieldMappingArgs>> fieldMappings) {
         this.changeDetectingColumns = Objects.requireNonNull(changeDetectingColumns, "expected parameter 'changeDetectingColumns' to be non-null");
         this.documentDataColumnName = Objects.requireNonNull(documentDataColumnName, "expected parameter 'documentDataColumnName' to be non-null");
         this.documentIdColumnName = Objects.requireNonNull(documentIdColumnName, "expected parameter 'documentIdColumnName' to be non-null");
@@ -65,11 +65,11 @@ public final class DataSourceColumnConfigurationArgs extends io.pulumi.resources
     }
 
     private DataSourceColumnConfigurationArgs() {
-        this.changeDetectingColumns = Input.empty();
-        this.documentDataColumnName = Input.empty();
-        this.documentIdColumnName = Input.empty();
-        this.documentTitleColumnName = Input.empty();
-        this.fieldMappings = Input.empty();
+        this.changeDetectingColumns = Output.empty();
+        this.documentDataColumnName = Output.empty();
+        this.documentIdColumnName = Output.empty();
+        this.documentTitleColumnName = Output.empty();
+        this.fieldMappings = Output.empty();
     }
 
     public static Builder builder() {
@@ -81,11 +81,11 @@ public final class DataSourceColumnConfigurationArgs extends io.pulumi.resources
     }
 
     public static final class Builder {
-        private Input<List<String>> changeDetectingColumns;
-        private Input<String> documentDataColumnName;
-        private Input<String> documentIdColumnName;
-        private @Nullable Input<String> documentTitleColumnName;
-        private @Nullable Input<List<DataSourceToIndexFieldMappingArgs>> fieldMappings;
+        private Output<List<String>> changeDetectingColumns;
+        private Output<String> documentDataColumnName;
+        private Output<String> documentIdColumnName;
+        private @Nullable Output<String> documentTitleColumnName;
+        private @Nullable Output<List<DataSourceToIndexFieldMappingArgs>> fieldMappings;
 
         public Builder() {
     	      // Empty
@@ -100,53 +100,53 @@ public final class DataSourceColumnConfigurationArgs extends io.pulumi.resources
     	      this.fieldMappings = defaults.fieldMappings;
         }
 
-        public Builder changeDetectingColumns(Input<List<String>> changeDetectingColumns) {
+        public Builder changeDetectingColumns(Output<List<String>> changeDetectingColumns) {
             this.changeDetectingColumns = Objects.requireNonNull(changeDetectingColumns);
             return this;
         }
 
         public Builder changeDetectingColumns(List<String> changeDetectingColumns) {
-            this.changeDetectingColumns = Input.of(Objects.requireNonNull(changeDetectingColumns));
+            this.changeDetectingColumns = Output.of(Objects.requireNonNull(changeDetectingColumns));
             return this;
         }
 
-        public Builder documentDataColumnName(Input<String> documentDataColumnName) {
+        public Builder documentDataColumnName(Output<String> documentDataColumnName) {
             this.documentDataColumnName = Objects.requireNonNull(documentDataColumnName);
             return this;
         }
 
         public Builder documentDataColumnName(String documentDataColumnName) {
-            this.documentDataColumnName = Input.of(Objects.requireNonNull(documentDataColumnName));
+            this.documentDataColumnName = Output.of(Objects.requireNonNull(documentDataColumnName));
             return this;
         }
 
-        public Builder documentIdColumnName(Input<String> documentIdColumnName) {
+        public Builder documentIdColumnName(Output<String> documentIdColumnName) {
             this.documentIdColumnName = Objects.requireNonNull(documentIdColumnName);
             return this;
         }
 
         public Builder documentIdColumnName(String documentIdColumnName) {
-            this.documentIdColumnName = Input.of(Objects.requireNonNull(documentIdColumnName));
+            this.documentIdColumnName = Output.of(Objects.requireNonNull(documentIdColumnName));
             return this;
         }
 
-        public Builder documentTitleColumnName(@Nullable Input<String> documentTitleColumnName) {
+        public Builder documentTitleColumnName(@Nullable Output<String> documentTitleColumnName) {
             this.documentTitleColumnName = documentTitleColumnName;
             return this;
         }
 
         public Builder documentTitleColumnName(@Nullable String documentTitleColumnName) {
-            this.documentTitleColumnName = Input.ofNullable(documentTitleColumnName);
+            this.documentTitleColumnName = Output.ofNullable(documentTitleColumnName);
             return this;
         }
 
-        public Builder fieldMappings(@Nullable Input<List<DataSourceToIndexFieldMappingArgs>> fieldMappings) {
+        public Builder fieldMappings(@Nullable Output<List<DataSourceToIndexFieldMappingArgs>> fieldMappings) {
             this.fieldMappings = fieldMappings;
             return this;
         }
 
         public Builder fieldMappings(@Nullable List<DataSourceToIndexFieldMappingArgs> fieldMappings) {
-            this.fieldMappings = Input.ofNullable(fieldMappings);
+            this.fieldMappings = Output.ofNullable(fieldMappings);
             return this;
         }
         public DataSourceColumnConfigurationArgs build() {

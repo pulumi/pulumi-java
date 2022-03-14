@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.networkfirewall.inputs;
 
 import io.pulumi.awsnative.networkfirewall.enums.RuleGroupRuleOrder;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -15,18 +15,18 @@ public final class RuleGroupStatefulRuleOptionsArgs extends io.pulumi.resources.
     public static final RuleGroupStatefulRuleOptionsArgs Empty = new RuleGroupStatefulRuleOptionsArgs();
 
     @InputImport(name="ruleOrder")
-      private final @Nullable Input<RuleGroupRuleOrder> ruleOrder;
+      private final @Nullable Output<RuleGroupRuleOrder> ruleOrder;
 
-    public Input<RuleGroupRuleOrder> getRuleOrder() {
-        return this.ruleOrder == null ? Input.empty() : this.ruleOrder;
+    public Output<RuleGroupRuleOrder> getRuleOrder() {
+        return this.ruleOrder == null ? Output.empty() : this.ruleOrder;
     }
 
-    public RuleGroupStatefulRuleOptionsArgs(@Nullable Input<RuleGroupRuleOrder> ruleOrder) {
+    public RuleGroupStatefulRuleOptionsArgs(@Nullable Output<RuleGroupRuleOrder> ruleOrder) {
         this.ruleOrder = ruleOrder;
     }
 
     private RuleGroupStatefulRuleOptionsArgs() {
-        this.ruleOrder = Input.empty();
+        this.ruleOrder = Output.empty();
     }
 
     public static Builder builder() {
@@ -38,7 +38,7 @@ public final class RuleGroupStatefulRuleOptionsArgs extends io.pulumi.resources.
     }
 
     public static final class Builder {
-        private @Nullable Input<RuleGroupRuleOrder> ruleOrder;
+        private @Nullable Output<RuleGroupRuleOrder> ruleOrder;
 
         public Builder() {
     	      // Empty
@@ -49,13 +49,13 @@ public final class RuleGroupStatefulRuleOptionsArgs extends io.pulumi.resources.
     	      this.ruleOrder = defaults.ruleOrder;
         }
 
-        public Builder ruleOrder(@Nullable Input<RuleGroupRuleOrder> ruleOrder) {
+        public Builder ruleOrder(@Nullable Output<RuleGroupRuleOrder> ruleOrder) {
             this.ruleOrder = ruleOrder;
             return this;
         }
 
         public Builder ruleOrder(@Nullable RuleGroupRuleOrder ruleOrder) {
-            this.ruleOrder = Input.ofNullable(ruleOrder);
+            this.ruleOrder = Output.ofNullable(ruleOrder);
             return this;
         }
         public RuleGroupStatefulRuleOptionsArgs build() {

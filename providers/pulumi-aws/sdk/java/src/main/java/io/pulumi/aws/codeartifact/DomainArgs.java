@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.codeartifact;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -20,9 +20,9 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="domain", required=true)
-      private final Input<String> domain;
+      private final Output<String> domain;
 
-    public Input<String> getDomain() {
+    public Output<String> getDomain() {
         return this.domain;
     }
 
@@ -31,10 +31,10 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="encryptionKey")
-      private final @Nullable Input<String> encryptionKey;
+      private final @Nullable Output<String> encryptionKey;
 
-    public Input<String> getEncryptionKey() {
-        return this.encryptionKey == null ? Input.empty() : this.encryptionKey;
+    public Output<String> getEncryptionKey() {
+        return this.encryptionKey == null ? Output.empty() : this.encryptionKey;
     }
 
     /**
@@ -42,25 +42,25 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public DomainArgs(
-        Input<String> domain,
-        @Nullable Input<String> encryptionKey,
-        @Nullable Input<Map<String,String>> tags) {
+        Output<String> domain,
+        @Nullable Output<String> encryptionKey,
+        @Nullable Output<Map<String,String>> tags) {
         this.domain = Objects.requireNonNull(domain, "expected parameter 'domain' to be non-null");
         this.encryptionKey = encryptionKey;
         this.tags = tags;
     }
 
     private DomainArgs() {
-        this.domain = Input.empty();
-        this.encryptionKey = Input.empty();
-        this.tags = Input.empty();
+        this.domain = Output.empty();
+        this.encryptionKey = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -72,9 +72,9 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> domain;
-        private @Nullable Input<String> encryptionKey;
-        private @Nullable Input<Map<String,String>> tags;
+        private Output<String> domain;
+        private @Nullable Output<String> encryptionKey;
+        private @Nullable Output<Map<String,String>> tags;
 
         public Builder() {
     	      // Empty
@@ -87,33 +87,33 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder domain(Input<String> domain) {
+        public Builder domain(Output<String> domain) {
             this.domain = Objects.requireNonNull(domain);
             return this;
         }
 
         public Builder domain(String domain) {
-            this.domain = Input.of(Objects.requireNonNull(domain));
+            this.domain = Output.of(Objects.requireNonNull(domain));
             return this;
         }
 
-        public Builder encryptionKey(@Nullable Input<String> encryptionKey) {
+        public Builder encryptionKey(@Nullable Output<String> encryptionKey) {
             this.encryptionKey = encryptionKey;
             return this;
         }
 
         public Builder encryptionKey(@Nullable String encryptionKey) {
-            this.encryptionKey = Input.ofNullable(encryptionKey);
+            this.encryptionKey = Output.ofNullable(encryptionKey);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public DomainArgs build() {

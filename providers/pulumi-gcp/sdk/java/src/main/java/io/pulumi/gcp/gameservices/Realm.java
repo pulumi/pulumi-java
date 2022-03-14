@@ -3,7 +3,6 @@
 
 package io.pulumi.gcp.gameservices;
 
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -203,14 +202,14 @@ public class Realm extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Realm(String name, RealmArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:gameservices/realm:Realm", name, args == null ? RealmArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("gcp:gameservices/realm:Realm", name, args == null ? RealmArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private Realm(String name, Input<String> id, @Nullable RealmState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private Realm(String name, Output<String> id, @Nullable RealmState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("gcp:gameservices/realm:Realm", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -226,7 +225,7 @@ public class Realm extends io.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static Realm get(String name, Input<String> id, @Nullable RealmState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static Realm get(String name, Output<String> id, @Nullable RealmState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Realm(name, id, state, options);
     }
 }

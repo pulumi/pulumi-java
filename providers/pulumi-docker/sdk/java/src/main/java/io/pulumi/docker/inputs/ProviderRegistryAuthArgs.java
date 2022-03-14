@@ -3,7 +3,7 @@
 
 package io.pulumi.docker.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -15,46 +15,46 @@ public final class ProviderRegistryAuthArgs extends io.pulumi.resources.Resource
     public static final ProviderRegistryAuthArgs Empty = new ProviderRegistryAuthArgs();
 
     @InputImport(name="address", required=true)
-      private final Input<String> address;
+      private final Output<String> address;
 
-    public Input<String> getAddress() {
+    public Output<String> getAddress() {
         return this.address;
     }
 
     @InputImport(name="configFile")
-      private final @Nullable Input<String> configFile;
+      private final @Nullable Output<String> configFile;
 
-    public Input<String> getConfigFile() {
-        return this.configFile == null ? Input.empty() : this.configFile;
+    public Output<String> getConfigFile() {
+        return this.configFile == null ? Output.empty() : this.configFile;
     }
 
     @InputImport(name="configFileContent")
-      private final @Nullable Input<String> configFileContent;
+      private final @Nullable Output<String> configFileContent;
 
-    public Input<String> getConfigFileContent() {
-        return this.configFileContent == null ? Input.empty() : this.configFileContent;
+    public Output<String> getConfigFileContent() {
+        return this.configFileContent == null ? Output.empty() : this.configFileContent;
     }
 
     @InputImport(name="password")
-      private final @Nullable Input<String> password;
+      private final @Nullable Output<String> password;
 
-    public Input<String> getPassword() {
-        return this.password == null ? Input.empty() : this.password;
+    public Output<String> getPassword() {
+        return this.password == null ? Output.empty() : this.password;
     }
 
     @InputImport(name="username")
-      private final @Nullable Input<String> username;
+      private final @Nullable Output<String> username;
 
-    public Input<String> getUsername() {
-        return this.username == null ? Input.empty() : this.username;
+    public Output<String> getUsername() {
+        return this.username == null ? Output.empty() : this.username;
     }
 
     public ProviderRegistryAuthArgs(
-        Input<String> address,
-        @Nullable Input<String> configFile,
-        @Nullable Input<String> configFileContent,
-        @Nullable Input<String> password,
-        @Nullable Input<String> username) {
+        Output<String> address,
+        @Nullable Output<String> configFile,
+        @Nullable Output<String> configFileContent,
+        @Nullable Output<String> password,
+        @Nullable Output<String> username) {
         this.address = Objects.requireNonNull(address, "expected parameter 'address' to be non-null");
         this.configFile = configFile;
         this.configFileContent = configFileContent;
@@ -63,11 +63,11 @@ public final class ProviderRegistryAuthArgs extends io.pulumi.resources.Resource
     }
 
     private ProviderRegistryAuthArgs() {
-        this.address = Input.empty();
-        this.configFile = Input.empty();
-        this.configFileContent = Input.empty();
-        this.password = Input.empty();
-        this.username = Input.empty();
+        this.address = Output.empty();
+        this.configFile = Output.empty();
+        this.configFileContent = Output.empty();
+        this.password = Output.empty();
+        this.username = Output.empty();
     }
 
     public static Builder builder() {
@@ -79,11 +79,11 @@ public final class ProviderRegistryAuthArgs extends io.pulumi.resources.Resource
     }
 
     public static final class Builder {
-        private Input<String> address;
-        private @Nullable Input<String> configFile;
-        private @Nullable Input<String> configFileContent;
-        private @Nullable Input<String> password;
-        private @Nullable Input<String> username;
+        private Output<String> address;
+        private @Nullable Output<String> configFile;
+        private @Nullable Output<String> configFileContent;
+        private @Nullable Output<String> password;
+        private @Nullable Output<String> username;
 
         public Builder() {
     	      // Empty
@@ -98,53 +98,53 @@ public final class ProviderRegistryAuthArgs extends io.pulumi.resources.Resource
     	      this.username = defaults.username;
         }
 
-        public Builder address(Input<String> address) {
+        public Builder address(Output<String> address) {
             this.address = Objects.requireNonNull(address);
             return this;
         }
 
         public Builder address(String address) {
-            this.address = Input.of(Objects.requireNonNull(address));
+            this.address = Output.of(Objects.requireNonNull(address));
             return this;
         }
 
-        public Builder configFile(@Nullable Input<String> configFile) {
+        public Builder configFile(@Nullable Output<String> configFile) {
             this.configFile = configFile;
             return this;
         }
 
         public Builder configFile(@Nullable String configFile) {
-            this.configFile = Input.ofNullable(configFile);
+            this.configFile = Output.ofNullable(configFile);
             return this;
         }
 
-        public Builder configFileContent(@Nullable Input<String> configFileContent) {
+        public Builder configFileContent(@Nullable Output<String> configFileContent) {
             this.configFileContent = configFileContent;
             return this;
         }
 
         public Builder configFileContent(@Nullable String configFileContent) {
-            this.configFileContent = Input.ofNullable(configFileContent);
+            this.configFileContent = Output.ofNullable(configFileContent);
             return this;
         }
 
-        public Builder password(@Nullable Input<String> password) {
+        public Builder password(@Nullable Output<String> password) {
             this.password = password;
             return this;
         }
 
         public Builder password(@Nullable String password) {
-            this.password = Input.ofNullable(password);
+            this.password = Output.ofNullable(password);
             return this;
         }
 
-        public Builder username(@Nullable Input<String> username) {
+        public Builder username(@Nullable Output<String> username) {
             this.username = username;
             return this;
         }
 
         public Builder username(@Nullable String username) {
-            this.username = Input.ofNullable(username);
+            this.username = Output.ofNullable(username);
             return this;
         }
         public ProviderRegistryAuthArgs build() {

@@ -6,7 +6,6 @@ package io.pulumi.azurenative.apimanagement;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.apimanagement.OpenIdConnectProviderArgs;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -168,30 +167,30 @@ public class OpenIdConnectProvider extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public OpenIdConnectProvider(String name, OpenIdConnectProviderArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:apimanagement:OpenIdConnectProvider", name, args == null ? OpenIdConnectProviderArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("azure-native:apimanagement:OpenIdConnectProvider", name, args == null ? OpenIdConnectProviderArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private OpenIdConnectProvider(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private OpenIdConnectProvider(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:apimanagement:OpenIdConnectProvider", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:apimanagement/v20160707:OpenIdConnectProvider").build()),
-                Input.of(Alias.builder().setType("azure-native:apimanagement/v20161010:OpenIdConnectProvider").build()),
-                Input.of(Alias.builder().setType("azure-native:apimanagement/v20170301:OpenIdConnectProvider").build()),
-                Input.of(Alias.builder().setType("azure-native:apimanagement/v20180101:OpenIdConnectProvider").build()),
-                Input.of(Alias.builder().setType("azure-native:apimanagement/v20180601preview:OpenIdConnectProvider").build()),
-                Input.of(Alias.builder().setType("azure-native:apimanagement/v20190101:OpenIdConnectProvider").build()),
-                Input.of(Alias.builder().setType("azure-native:apimanagement/v20191201:OpenIdConnectProvider").build()),
-                Input.of(Alias.builder().setType("azure-native:apimanagement/v20191201preview:OpenIdConnectProvider").build()),
-                Input.of(Alias.builder().setType("azure-native:apimanagement/v20200601preview:OpenIdConnectProvider").build()),
-                Input.of(Alias.builder().setType("azure-native:apimanagement/v20201201:OpenIdConnectProvider").build()),
-                Input.of(Alias.builder().setType("azure-native:apimanagement/v20210101preview:OpenIdConnectProvider").build()),
-                Input.of(Alias.builder().setType("azure-native:apimanagement/v20210401preview:OpenIdConnectProvider").build()),
-                Input.of(Alias.builder().setType("azure-native:apimanagement/v20210801:OpenIdConnectProvider").build())
+                Output.of(Alias.builder().setType("azure-native:apimanagement/v20160707:OpenIdConnectProvider").build()),
+                Output.of(Alias.builder().setType("azure-native:apimanagement/v20161010:OpenIdConnectProvider").build()),
+                Output.of(Alias.builder().setType("azure-native:apimanagement/v20170301:OpenIdConnectProvider").build()),
+                Output.of(Alias.builder().setType("azure-native:apimanagement/v20180101:OpenIdConnectProvider").build()),
+                Output.of(Alias.builder().setType("azure-native:apimanagement/v20180601preview:OpenIdConnectProvider").build()),
+                Output.of(Alias.builder().setType("azure-native:apimanagement/v20190101:OpenIdConnectProvider").build()),
+                Output.of(Alias.builder().setType("azure-native:apimanagement/v20191201:OpenIdConnectProvider").build()),
+                Output.of(Alias.builder().setType("azure-native:apimanagement/v20191201preview:OpenIdConnectProvider").build()),
+                Output.of(Alias.builder().setType("azure-native:apimanagement/v20200601preview:OpenIdConnectProvider").build()),
+                Output.of(Alias.builder().setType("azure-native:apimanagement/v20201201:OpenIdConnectProvider").build()),
+                Output.of(Alias.builder().setType("azure-native:apimanagement/v20210101preview:OpenIdConnectProvider").build()),
+                Output.of(Alias.builder().setType("azure-native:apimanagement/v20210401preview:OpenIdConnectProvider").build()),
+                Output.of(Alias.builder().setType("azure-native:apimanagement/v20210801:OpenIdConnectProvider").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -205,7 +204,7 @@ public class OpenIdConnectProvider extends io.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static OpenIdConnectProvider get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static OpenIdConnectProvider get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new OpenIdConnectProvider(name, id, options);
     }
 }

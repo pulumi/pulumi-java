@@ -5,7 +5,7 @@ package io.pulumi.azurenative.deploymentmanager.inputs;
 
 import io.pulumi.azurenative.deploymentmanager.inputs.RestRequestArgs;
 import io.pulumi.azurenative.deploymentmanager.inputs.RestResponseArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -25,9 +25,9 @@ public final class RestHealthCheckArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="name", required=true)
-      private final Input<String> name;
+      private final Output<String> name;
 
-    public Input<String> getName() {
+    public Output<String> getName() {
         return this.name;
     }
 
@@ -36,9 +36,9 @@ public final class RestHealthCheckArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="request", required=true)
-      private final Input<RestRequestArgs> request;
+      private final Output<RestRequestArgs> request;
 
-    public Input<RestRequestArgs> getRequest() {
+    public Output<RestRequestArgs> getRequest() {
         return this.request;
     }
 
@@ -47,25 +47,25 @@ public final class RestHealthCheckArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="response")
-      private final @Nullable Input<RestResponseArgs> response;
+      private final @Nullable Output<RestResponseArgs> response;
 
-    public Input<RestResponseArgs> getResponse() {
-        return this.response == null ? Input.empty() : this.response;
+    public Output<RestResponseArgs> getResponse() {
+        return this.response == null ? Output.empty() : this.response;
     }
 
     public RestHealthCheckArgs(
-        Input<String> name,
-        Input<RestRequestArgs> request,
-        @Nullable Input<RestResponseArgs> response) {
+        Output<String> name,
+        Output<RestRequestArgs> request,
+        @Nullable Output<RestResponseArgs> response) {
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
         this.request = Objects.requireNonNull(request, "expected parameter 'request' to be non-null");
         this.response = response;
     }
 
     private RestHealthCheckArgs() {
-        this.name = Input.empty();
-        this.request = Input.empty();
-        this.response = Input.empty();
+        this.name = Output.empty();
+        this.request = Output.empty();
+        this.response = Output.empty();
     }
 
     public static Builder builder() {
@@ -77,9 +77,9 @@ public final class RestHealthCheckArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private Input<String> name;
-        private Input<RestRequestArgs> request;
-        private @Nullable Input<RestResponseArgs> response;
+        private Output<String> name;
+        private Output<RestRequestArgs> request;
+        private @Nullable Output<RestResponseArgs> response;
 
         public Builder() {
     	      // Empty
@@ -92,33 +92,33 @@ public final class RestHealthCheckArgs extends io.pulumi.resources.ResourceArgs 
     	      this.response = defaults.response;
         }
 
-        public Builder name(Input<String> name) {
+        public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(String name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder request(Input<RestRequestArgs> request) {
+        public Builder request(Output<RestRequestArgs> request) {
             this.request = Objects.requireNonNull(request);
             return this;
         }
 
         public Builder request(RestRequestArgs request) {
-            this.request = Input.of(Objects.requireNonNull(request));
+            this.request = Output.of(Objects.requireNonNull(request));
             return this;
         }
 
-        public Builder response(@Nullable Input<RestResponseArgs> response) {
+        public Builder response(@Nullable Output<RestResponseArgs> response) {
             this.response = response;
             return this;
         }
 
         public Builder response(@Nullable RestResponseArgs response) {
-            this.response = Input.ofNullable(response);
+            this.response = Output.ofNullable(response);
             return this;
         }
         public RestHealthCheckArgs build() {

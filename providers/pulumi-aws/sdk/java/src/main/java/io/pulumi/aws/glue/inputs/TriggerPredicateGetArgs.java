@@ -4,7 +4,7 @@
 package io.pulumi.aws.glue.inputs;
 
 import io.pulumi.aws.glue.inputs.TriggerPredicateConditionGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -21,9 +21,9 @@ public final class TriggerPredicateGetArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="conditions", required=true)
-      private final Input<List<TriggerPredicateConditionGetArgs>> conditions;
+      private final Output<List<TriggerPredicateConditionGetArgs>> conditions;
 
-    public Input<List<TriggerPredicateConditionGetArgs>> getConditions() {
+    public Output<List<TriggerPredicateConditionGetArgs>> getConditions() {
         return this.conditions;
     }
 
@@ -32,22 +32,22 @@ public final class TriggerPredicateGetArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="logical")
-      private final @Nullable Input<String> logical;
+      private final @Nullable Output<String> logical;
 
-    public Input<String> getLogical() {
-        return this.logical == null ? Input.empty() : this.logical;
+    public Output<String> getLogical() {
+        return this.logical == null ? Output.empty() : this.logical;
     }
 
     public TriggerPredicateGetArgs(
-        Input<List<TriggerPredicateConditionGetArgs>> conditions,
-        @Nullable Input<String> logical) {
+        Output<List<TriggerPredicateConditionGetArgs>> conditions,
+        @Nullable Output<String> logical) {
         this.conditions = Objects.requireNonNull(conditions, "expected parameter 'conditions' to be non-null");
         this.logical = logical;
     }
 
     private TriggerPredicateGetArgs() {
-        this.conditions = Input.empty();
-        this.logical = Input.empty();
+        this.conditions = Output.empty();
+        this.logical = Output.empty();
     }
 
     public static Builder builder() {
@@ -59,8 +59,8 @@ public final class TriggerPredicateGetArgs extends io.pulumi.resources.ResourceA
     }
 
     public static final class Builder {
-        private Input<List<TriggerPredicateConditionGetArgs>> conditions;
-        private @Nullable Input<String> logical;
+        private Output<List<TriggerPredicateConditionGetArgs>> conditions;
+        private @Nullable Output<String> logical;
 
         public Builder() {
     	      // Empty
@@ -72,23 +72,23 @@ public final class TriggerPredicateGetArgs extends io.pulumi.resources.ResourceA
     	      this.logical = defaults.logical;
         }
 
-        public Builder conditions(Input<List<TriggerPredicateConditionGetArgs>> conditions) {
+        public Builder conditions(Output<List<TriggerPredicateConditionGetArgs>> conditions) {
             this.conditions = Objects.requireNonNull(conditions);
             return this;
         }
 
         public Builder conditions(List<TriggerPredicateConditionGetArgs> conditions) {
-            this.conditions = Input.of(Objects.requireNonNull(conditions));
+            this.conditions = Output.of(Objects.requireNonNull(conditions));
             return this;
         }
 
-        public Builder logical(@Nullable Input<String> logical) {
+        public Builder logical(@Nullable Output<String> logical) {
             this.logical = logical;
             return this;
         }
 
         public Builder logical(@Nullable String logical) {
-            this.logical = Input.ofNullable(logical);
+            this.logical = Output.ofNullable(logical);
             return this;
         }
         public TriggerPredicateGetArgs build() {

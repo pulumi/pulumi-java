@@ -4,7 +4,7 @@
 package io.pulumi.aws.chime.inputs;
 
 import io.pulumi.aws.chime.inputs.VoiceConnectorTerminationCredentialsCredentialGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -21,10 +21,10 @@ public final class VoiceConnectorTerminationCredentialsState extends io.pulumi.r
      * 
      */
     @InputImport(name="credentials")
-      private final @Nullable Input<List<VoiceConnectorTerminationCredentialsCredentialGetArgs>> credentials;
+      private final @Nullable Output<List<VoiceConnectorTerminationCredentialsCredentialGetArgs>> credentials;
 
-    public Input<List<VoiceConnectorTerminationCredentialsCredentialGetArgs>> getCredentials() {
-        return this.credentials == null ? Input.empty() : this.credentials;
+    public Output<List<VoiceConnectorTerminationCredentialsCredentialGetArgs>> getCredentials() {
+        return this.credentials == null ? Output.empty() : this.credentials;
     }
 
     /**
@@ -32,22 +32,22 @@ public final class VoiceConnectorTerminationCredentialsState extends io.pulumi.r
      * 
      */
     @InputImport(name="voiceConnectorId")
-      private final @Nullable Input<String> voiceConnectorId;
+      private final @Nullable Output<String> voiceConnectorId;
 
-    public Input<String> getVoiceConnectorId() {
-        return this.voiceConnectorId == null ? Input.empty() : this.voiceConnectorId;
+    public Output<String> getVoiceConnectorId() {
+        return this.voiceConnectorId == null ? Output.empty() : this.voiceConnectorId;
     }
 
     public VoiceConnectorTerminationCredentialsState(
-        @Nullable Input<List<VoiceConnectorTerminationCredentialsCredentialGetArgs>> credentials,
-        @Nullable Input<String> voiceConnectorId) {
+        @Nullable Output<List<VoiceConnectorTerminationCredentialsCredentialGetArgs>> credentials,
+        @Nullable Output<String> voiceConnectorId) {
         this.credentials = credentials;
         this.voiceConnectorId = voiceConnectorId;
     }
 
     private VoiceConnectorTerminationCredentialsState() {
-        this.credentials = Input.empty();
-        this.voiceConnectorId = Input.empty();
+        this.credentials = Output.empty();
+        this.voiceConnectorId = Output.empty();
     }
 
     public static Builder builder() {
@@ -59,8 +59,8 @@ public final class VoiceConnectorTerminationCredentialsState extends io.pulumi.r
     }
 
     public static final class Builder {
-        private @Nullable Input<List<VoiceConnectorTerminationCredentialsCredentialGetArgs>> credentials;
-        private @Nullable Input<String> voiceConnectorId;
+        private @Nullable Output<List<VoiceConnectorTerminationCredentialsCredentialGetArgs>> credentials;
+        private @Nullable Output<String> voiceConnectorId;
 
         public Builder() {
     	      // Empty
@@ -72,23 +72,23 @@ public final class VoiceConnectorTerminationCredentialsState extends io.pulumi.r
     	      this.voiceConnectorId = defaults.voiceConnectorId;
         }
 
-        public Builder credentials(@Nullable Input<List<VoiceConnectorTerminationCredentialsCredentialGetArgs>> credentials) {
+        public Builder credentials(@Nullable Output<List<VoiceConnectorTerminationCredentialsCredentialGetArgs>> credentials) {
             this.credentials = credentials;
             return this;
         }
 
         public Builder credentials(@Nullable List<VoiceConnectorTerminationCredentialsCredentialGetArgs> credentials) {
-            this.credentials = Input.ofNullable(credentials);
+            this.credentials = Output.ofNullable(credentials);
             return this;
         }
 
-        public Builder voiceConnectorId(@Nullable Input<String> voiceConnectorId) {
+        public Builder voiceConnectorId(@Nullable Output<String> voiceConnectorId) {
             this.voiceConnectorId = voiceConnectorId;
             return this;
         }
 
         public Builder voiceConnectorId(@Nullable String voiceConnectorId) {
-            this.voiceConnectorId = Input.ofNullable(voiceConnectorId);
+            this.voiceConnectorId = Output.ofNullable(voiceConnectorId);
             return this;
         }
         public VoiceConnectorTerminationCredentialsState build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.apiregistration.k8s.io_v1beta1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.kubernetes.apiregistration.k8s.io_v1beta1.inputs.ServiceReferenceArgs;
 import java.lang.Boolean;
@@ -26,10 +26,10 @@ public final class APIServiceSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="caBundle")
-      private final @Nullable Input<String> caBundle;
+      private final @Nullable Output<String> caBundle;
 
-    public Input<String> getCaBundle() {
-        return this.caBundle == null ? Input.empty() : this.caBundle;
+    public Output<String> getCaBundle() {
+        return this.caBundle == null ? Output.empty() : this.caBundle;
     }
 
     /**
@@ -37,10 +37,10 @@ public final class APIServiceSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="group")
-      private final @Nullable Input<String> group;
+      private final @Nullable Output<String> group;
 
-    public Input<String> getGroup() {
-        return this.group == null ? Input.empty() : this.group;
+    public Output<String> getGroup() {
+        return this.group == null ? Output.empty() : this.group;
     }
 
     /**
@@ -48,9 +48,9 @@ public final class APIServiceSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="groupPriorityMinimum", required=true)
-      private final Input<Integer> groupPriorityMinimum;
+      private final Output<Integer> groupPriorityMinimum;
 
-    public Input<Integer> getGroupPriorityMinimum() {
+    public Output<Integer> getGroupPriorityMinimum() {
         return this.groupPriorityMinimum;
     }
 
@@ -59,10 +59,10 @@ public final class APIServiceSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="insecureSkipTLSVerify")
-      private final @Nullable Input<Boolean> insecureSkipTLSVerify;
+      private final @Nullable Output<Boolean> insecureSkipTLSVerify;
 
-    public Input<Boolean> getInsecureSkipTLSVerify() {
-        return this.insecureSkipTLSVerify == null ? Input.empty() : this.insecureSkipTLSVerify;
+    public Output<Boolean> getInsecureSkipTLSVerify() {
+        return this.insecureSkipTLSVerify == null ? Output.empty() : this.insecureSkipTLSVerify;
     }
 
     /**
@@ -70,9 +70,9 @@ public final class APIServiceSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="service", required=true)
-      private final Input<ServiceReferenceArgs> service;
+      private final Output<ServiceReferenceArgs> service;
 
-    public Input<ServiceReferenceArgs> getService() {
+    public Output<ServiceReferenceArgs> getService() {
         return this.service;
     }
 
@@ -81,10 +81,10 @@ public final class APIServiceSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="version")
-      private final @Nullable Input<String> version;
+      private final @Nullable Output<String> version;
 
-    public Input<String> getVersion() {
-        return this.version == null ? Input.empty() : this.version;
+    public Output<String> getVersion() {
+        return this.version == null ? Output.empty() : this.version;
     }
 
     /**
@@ -92,20 +92,20 @@ public final class APIServiceSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="versionPriority", required=true)
-      private final Input<Integer> versionPriority;
+      private final Output<Integer> versionPriority;
 
-    public Input<Integer> getVersionPriority() {
+    public Output<Integer> getVersionPriority() {
         return this.versionPriority;
     }
 
     public APIServiceSpecArgs(
-        @Nullable Input<String> caBundle,
-        @Nullable Input<String> group,
-        Input<Integer> groupPriorityMinimum,
-        @Nullable Input<Boolean> insecureSkipTLSVerify,
-        Input<ServiceReferenceArgs> service,
-        @Nullable Input<String> version,
-        Input<Integer> versionPriority) {
+        @Nullable Output<String> caBundle,
+        @Nullable Output<String> group,
+        Output<Integer> groupPriorityMinimum,
+        @Nullable Output<Boolean> insecureSkipTLSVerify,
+        Output<ServiceReferenceArgs> service,
+        @Nullable Output<String> version,
+        Output<Integer> versionPriority) {
         this.caBundle = caBundle;
         this.group = group;
         this.groupPriorityMinimum = Objects.requireNonNull(groupPriorityMinimum, "expected parameter 'groupPriorityMinimum' to be non-null");
@@ -116,13 +116,13 @@ public final class APIServiceSpecArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private APIServiceSpecArgs() {
-        this.caBundle = Input.empty();
-        this.group = Input.empty();
-        this.groupPriorityMinimum = Input.empty();
-        this.insecureSkipTLSVerify = Input.empty();
-        this.service = Input.empty();
-        this.version = Input.empty();
-        this.versionPriority = Input.empty();
+        this.caBundle = Output.empty();
+        this.group = Output.empty();
+        this.groupPriorityMinimum = Output.empty();
+        this.insecureSkipTLSVerify = Output.empty();
+        this.service = Output.empty();
+        this.version = Output.empty();
+        this.versionPriority = Output.empty();
     }
 
     public static Builder builder() {
@@ -134,13 +134,13 @@ public final class APIServiceSpecArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> caBundle;
-        private @Nullable Input<String> group;
-        private Input<Integer> groupPriorityMinimum;
-        private @Nullable Input<Boolean> insecureSkipTLSVerify;
-        private Input<ServiceReferenceArgs> service;
-        private @Nullable Input<String> version;
-        private Input<Integer> versionPriority;
+        private @Nullable Output<String> caBundle;
+        private @Nullable Output<String> group;
+        private Output<Integer> groupPriorityMinimum;
+        private @Nullable Output<Boolean> insecureSkipTLSVerify;
+        private Output<ServiceReferenceArgs> service;
+        private @Nullable Output<String> version;
+        private Output<Integer> versionPriority;
 
         public Builder() {
     	      // Empty
@@ -157,73 +157,73 @@ public final class APIServiceSpecArgs extends io.pulumi.resources.ResourceArgs {
     	      this.versionPriority = defaults.versionPriority;
         }
 
-        public Builder caBundle(@Nullable Input<String> caBundle) {
+        public Builder caBundle(@Nullable Output<String> caBundle) {
             this.caBundle = caBundle;
             return this;
         }
 
         public Builder caBundle(@Nullable String caBundle) {
-            this.caBundle = Input.ofNullable(caBundle);
+            this.caBundle = Output.ofNullable(caBundle);
             return this;
         }
 
-        public Builder group(@Nullable Input<String> group) {
+        public Builder group(@Nullable Output<String> group) {
             this.group = group;
             return this;
         }
 
         public Builder group(@Nullable String group) {
-            this.group = Input.ofNullable(group);
+            this.group = Output.ofNullable(group);
             return this;
         }
 
-        public Builder groupPriorityMinimum(Input<Integer> groupPriorityMinimum) {
+        public Builder groupPriorityMinimum(Output<Integer> groupPriorityMinimum) {
             this.groupPriorityMinimum = Objects.requireNonNull(groupPriorityMinimum);
             return this;
         }
 
         public Builder groupPriorityMinimum(Integer groupPriorityMinimum) {
-            this.groupPriorityMinimum = Input.of(Objects.requireNonNull(groupPriorityMinimum));
+            this.groupPriorityMinimum = Output.of(Objects.requireNonNull(groupPriorityMinimum));
             return this;
         }
 
-        public Builder insecureSkipTLSVerify(@Nullable Input<Boolean> insecureSkipTLSVerify) {
+        public Builder insecureSkipTLSVerify(@Nullable Output<Boolean> insecureSkipTLSVerify) {
             this.insecureSkipTLSVerify = insecureSkipTLSVerify;
             return this;
         }
 
         public Builder insecureSkipTLSVerify(@Nullable Boolean insecureSkipTLSVerify) {
-            this.insecureSkipTLSVerify = Input.ofNullable(insecureSkipTLSVerify);
+            this.insecureSkipTLSVerify = Output.ofNullable(insecureSkipTLSVerify);
             return this;
         }
 
-        public Builder service(Input<ServiceReferenceArgs> service) {
+        public Builder service(Output<ServiceReferenceArgs> service) {
             this.service = Objects.requireNonNull(service);
             return this;
         }
 
         public Builder service(ServiceReferenceArgs service) {
-            this.service = Input.of(Objects.requireNonNull(service));
+            this.service = Output.of(Objects.requireNonNull(service));
             return this;
         }
 
-        public Builder version(@Nullable Input<String> version) {
+        public Builder version(@Nullable Output<String> version) {
             this.version = version;
             return this;
         }
 
         public Builder version(@Nullable String version) {
-            this.version = Input.ofNullable(version);
+            this.version = Output.ofNullable(version);
             return this;
         }
 
-        public Builder versionPriority(Input<Integer> versionPriority) {
+        public Builder versionPriority(Output<Integer> versionPriority) {
             this.versionPriority = Objects.requireNonNull(versionPriority);
             return this;
         }
 
         public Builder versionPriority(Integer versionPriority) {
-            this.versionPriority = Input.of(Objects.requireNonNull(versionPriority));
+            this.versionPriority = Output.of(Objects.requireNonNull(versionPriority));
             return this;
         }
         public APIServiceSpecArgs build() {

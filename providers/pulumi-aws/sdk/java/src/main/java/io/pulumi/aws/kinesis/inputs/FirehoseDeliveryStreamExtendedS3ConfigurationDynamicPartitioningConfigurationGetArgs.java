@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.kinesis.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -20,10 +20,10 @@ public final class FirehoseDeliveryStreamExtendedS3ConfigurationDynamicPartition
      * 
      */
     @InputImport(name="enabled")
-      private final @Nullable Input<Boolean> enabled;
+      private final @Nullable Output<Boolean> enabled;
 
-    public Input<Boolean> getEnabled() {
-        return this.enabled == null ? Input.empty() : this.enabled;
+    public Output<Boolean> getEnabled() {
+        return this.enabled == null ? Output.empty() : this.enabled;
     }
 
     /**
@@ -31,22 +31,22 @@ public final class FirehoseDeliveryStreamExtendedS3ConfigurationDynamicPartition
      * 
      */
     @InputImport(name="retryDuration")
-      private final @Nullable Input<Integer> retryDuration;
+      private final @Nullable Output<Integer> retryDuration;
 
-    public Input<Integer> getRetryDuration() {
-        return this.retryDuration == null ? Input.empty() : this.retryDuration;
+    public Output<Integer> getRetryDuration() {
+        return this.retryDuration == null ? Output.empty() : this.retryDuration;
     }
 
     public FirehoseDeliveryStreamExtendedS3ConfigurationDynamicPartitioningConfigurationGetArgs(
-        @Nullable Input<Boolean> enabled,
-        @Nullable Input<Integer> retryDuration) {
+        @Nullable Output<Boolean> enabled,
+        @Nullable Output<Integer> retryDuration) {
         this.enabled = enabled;
         this.retryDuration = retryDuration;
     }
 
     private FirehoseDeliveryStreamExtendedS3ConfigurationDynamicPartitioningConfigurationGetArgs() {
-        this.enabled = Input.empty();
-        this.retryDuration = Input.empty();
+        this.enabled = Output.empty();
+        this.retryDuration = Output.empty();
     }
 
     public static Builder builder() {
@@ -58,8 +58,8 @@ public final class FirehoseDeliveryStreamExtendedS3ConfigurationDynamicPartition
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> enabled;
-        private @Nullable Input<Integer> retryDuration;
+        private @Nullable Output<Boolean> enabled;
+        private @Nullable Output<Integer> retryDuration;
 
         public Builder() {
     	      // Empty
@@ -71,23 +71,23 @@ public final class FirehoseDeliveryStreamExtendedS3ConfigurationDynamicPartition
     	      this.retryDuration = defaults.retryDuration;
         }
 
-        public Builder enabled(@Nullable Input<Boolean> enabled) {
+        public Builder enabled(@Nullable Output<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
 
         public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Input.ofNullable(enabled);
+            this.enabled = Output.ofNullable(enabled);
             return this;
         }
 
-        public Builder retryDuration(@Nullable Input<Integer> retryDuration) {
+        public Builder retryDuration(@Nullable Output<Integer> retryDuration) {
             this.retryDuration = retryDuration;
             return this;
         }
 
         public Builder retryDuration(@Nullable Integer retryDuration) {
-            this.retryDuration = Input.ofNullable(retryDuration);
+            this.retryDuration = Output.ofNullable(retryDuration);
             return this;
         }
         public FirehoseDeliveryStreamExtendedS3ConfigurationDynamicPartitioningConfigurationGetArgs build() {

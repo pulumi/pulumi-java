@@ -9,7 +9,6 @@ import io.pulumi.azurenative.healthbot.outputs.HealthBotPropertiesResponse;
 import io.pulumi.azurenative.healthbot.outputs.SkuResponse;
 import io.pulumi.azurenative.healthbot.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -172,23 +171,23 @@ public class Bot extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Bot(String name, BotArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:healthbot:Bot", name, args == null ? BotArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("azure-native:healthbot:Bot", name, args == null ? BotArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private Bot(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private Bot(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:healthbot:Bot", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:healthbot/v20201020:Bot").build()),
-                Input.of(Alias.builder().setType("azure-native:healthbot/v20201020preview:Bot").build()),
-                Input.of(Alias.builder().setType("azure-native:healthbot/v20201208:Bot").build()),
-                Input.of(Alias.builder().setType("azure-native:healthbot/v20201208preview:Bot").build()),
-                Input.of(Alias.builder().setType("azure-native:healthbot/v20210610:Bot").build()),
-                Input.of(Alias.builder().setType("azure-native:healthbot/v20210824:Bot").build())
+                Output.of(Alias.builder().setType("azure-native:healthbot/v20201020:Bot").build()),
+                Output.of(Alias.builder().setType("azure-native:healthbot/v20201020preview:Bot").build()),
+                Output.of(Alias.builder().setType("azure-native:healthbot/v20201208:Bot").build()),
+                Output.of(Alias.builder().setType("azure-native:healthbot/v20201208preview:Bot").build()),
+                Output.of(Alias.builder().setType("azure-native:healthbot/v20210610:Bot").build()),
+                Output.of(Alias.builder().setType("azure-native:healthbot/v20210824:Bot").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -202,7 +201,7 @@ public class Bot extends io.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static Bot get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static Bot get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Bot(name, id, options);
     }
 }

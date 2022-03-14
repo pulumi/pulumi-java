@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.appautoscaling.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,9 +19,9 @@ public final class PolicyTargetTrackingScalingPolicyConfigurationPredefinedMetri
      * 
      */
     @InputImport(name="predefinedMetricType", required=true)
-      private final Input<String> predefinedMetricType;
+      private final Output<String> predefinedMetricType;
 
-    public Input<String> getPredefinedMetricType() {
+    public Output<String> getPredefinedMetricType() {
         return this.predefinedMetricType;
     }
 
@@ -30,22 +30,22 @@ public final class PolicyTargetTrackingScalingPolicyConfigurationPredefinedMetri
      * 
      */
     @InputImport(name="resourceLabel")
-      private final @Nullable Input<String> resourceLabel;
+      private final @Nullable Output<String> resourceLabel;
 
-    public Input<String> getResourceLabel() {
-        return this.resourceLabel == null ? Input.empty() : this.resourceLabel;
+    public Output<String> getResourceLabel() {
+        return this.resourceLabel == null ? Output.empty() : this.resourceLabel;
     }
 
     public PolicyTargetTrackingScalingPolicyConfigurationPredefinedMetricSpecificationGetArgs(
-        Input<String> predefinedMetricType,
-        @Nullable Input<String> resourceLabel) {
+        Output<String> predefinedMetricType,
+        @Nullable Output<String> resourceLabel) {
         this.predefinedMetricType = Objects.requireNonNull(predefinedMetricType, "expected parameter 'predefinedMetricType' to be non-null");
         this.resourceLabel = resourceLabel;
     }
 
     private PolicyTargetTrackingScalingPolicyConfigurationPredefinedMetricSpecificationGetArgs() {
-        this.predefinedMetricType = Input.empty();
-        this.resourceLabel = Input.empty();
+        this.predefinedMetricType = Output.empty();
+        this.resourceLabel = Output.empty();
     }
 
     public static Builder builder() {
@@ -57,8 +57,8 @@ public final class PolicyTargetTrackingScalingPolicyConfigurationPredefinedMetri
     }
 
     public static final class Builder {
-        private Input<String> predefinedMetricType;
-        private @Nullable Input<String> resourceLabel;
+        private Output<String> predefinedMetricType;
+        private @Nullable Output<String> resourceLabel;
 
         public Builder() {
     	      // Empty
@@ -70,23 +70,23 @@ public final class PolicyTargetTrackingScalingPolicyConfigurationPredefinedMetri
     	      this.resourceLabel = defaults.resourceLabel;
         }
 
-        public Builder predefinedMetricType(Input<String> predefinedMetricType) {
+        public Builder predefinedMetricType(Output<String> predefinedMetricType) {
             this.predefinedMetricType = Objects.requireNonNull(predefinedMetricType);
             return this;
         }
 
         public Builder predefinedMetricType(String predefinedMetricType) {
-            this.predefinedMetricType = Input.of(Objects.requireNonNull(predefinedMetricType));
+            this.predefinedMetricType = Output.of(Objects.requireNonNull(predefinedMetricType));
             return this;
         }
 
-        public Builder resourceLabel(@Nullable Input<String> resourceLabel) {
+        public Builder resourceLabel(@Nullable Output<String> resourceLabel) {
             this.resourceLabel = resourceLabel;
             return this;
         }
 
         public Builder resourceLabel(@Nullable String resourceLabel) {
-            this.resourceLabel = Input.ofNullable(resourceLabel);
+            this.resourceLabel = Output.ofNullable(resourceLabel);
             return this;
         }
         public PolicyTargetTrackingScalingPolicyConfigurationPredefinedMetricSpecificationGetArgs build() {

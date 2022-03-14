@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.firestore_v1beta1;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.firestore_v1beta1.enums.IndexState;
 import io.pulumi.googlenative.firestore_v1beta1.inputs.GoogleFirestoreAdminV1beta1IndexFieldArgs;
@@ -22,16 +22,16 @@ public final class IndexArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="collectionId")
-      private final @Nullable Input<String> collectionId;
+      private final @Nullable Output<String> collectionId;
 
-    public Input<String> getCollectionId() {
-        return this.collectionId == null ? Input.empty() : this.collectionId;
+    public Output<String> getCollectionId() {
+        return this.collectionId == null ? Output.empty() : this.collectionId;
     }
 
     @InputImport(name="databaseId", required=true)
-      private final Input<String> databaseId;
+      private final Output<String> databaseId;
 
-    public Input<String> getDatabaseId() {
+    public Output<String> getDatabaseId() {
         return this.databaseId;
     }
 
@@ -40,10 +40,10 @@ public final class IndexArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="fields")
-      private final @Nullable Input<List<GoogleFirestoreAdminV1beta1IndexFieldArgs>> fields;
+      private final @Nullable Output<List<GoogleFirestoreAdminV1beta1IndexFieldArgs>> fields;
 
-    public Input<List<GoogleFirestoreAdminV1beta1IndexFieldArgs>> getFields() {
-        return this.fields == null ? Input.empty() : this.fields;
+    public Output<List<GoogleFirestoreAdminV1beta1IndexFieldArgs>> getFields() {
+        return this.fields == null ? Output.empty() : this.fields;
     }
 
     /**
@@ -51,17 +51,17 @@ public final class IndexArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -69,19 +69,19 @@ public final class IndexArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="state")
-      private final @Nullable Input<IndexState> state;
+      private final @Nullable Output<IndexState> state;
 
-    public Input<IndexState> getState() {
-        return this.state == null ? Input.empty() : this.state;
+    public Output<IndexState> getState() {
+        return this.state == null ? Output.empty() : this.state;
     }
 
     public IndexArgs(
-        @Nullable Input<String> collectionId,
-        Input<String> databaseId,
-        @Nullable Input<List<GoogleFirestoreAdminV1beta1IndexFieldArgs>> fields,
-        @Nullable Input<String> name,
-        @Nullable Input<String> project,
-        @Nullable Input<IndexState> state) {
+        @Nullable Output<String> collectionId,
+        Output<String> databaseId,
+        @Nullable Output<List<GoogleFirestoreAdminV1beta1IndexFieldArgs>> fields,
+        @Nullable Output<String> name,
+        @Nullable Output<String> project,
+        @Nullable Output<IndexState> state) {
         this.collectionId = collectionId;
         this.databaseId = Objects.requireNonNull(databaseId, "expected parameter 'databaseId' to be non-null");
         this.fields = fields;
@@ -91,12 +91,12 @@ public final class IndexArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private IndexArgs() {
-        this.collectionId = Input.empty();
-        this.databaseId = Input.empty();
-        this.fields = Input.empty();
-        this.name = Input.empty();
-        this.project = Input.empty();
-        this.state = Input.empty();
+        this.collectionId = Output.empty();
+        this.databaseId = Output.empty();
+        this.fields = Output.empty();
+        this.name = Output.empty();
+        this.project = Output.empty();
+        this.state = Output.empty();
     }
 
     public static Builder builder() {
@@ -108,12 +108,12 @@ public final class IndexArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> collectionId;
-        private Input<String> databaseId;
-        private @Nullable Input<List<GoogleFirestoreAdminV1beta1IndexFieldArgs>> fields;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> project;
-        private @Nullable Input<IndexState> state;
+        private @Nullable Output<String> collectionId;
+        private Output<String> databaseId;
+        private @Nullable Output<List<GoogleFirestoreAdminV1beta1IndexFieldArgs>> fields;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> project;
+        private @Nullable Output<IndexState> state;
 
         public Builder() {
     	      // Empty
@@ -129,63 +129,63 @@ public final class IndexArgs extends io.pulumi.resources.ResourceArgs {
     	      this.state = defaults.state;
         }
 
-        public Builder collectionId(@Nullable Input<String> collectionId) {
+        public Builder collectionId(@Nullable Output<String> collectionId) {
             this.collectionId = collectionId;
             return this;
         }
 
         public Builder collectionId(@Nullable String collectionId) {
-            this.collectionId = Input.ofNullable(collectionId);
+            this.collectionId = Output.ofNullable(collectionId);
             return this;
         }
 
-        public Builder databaseId(Input<String> databaseId) {
+        public Builder databaseId(Output<String> databaseId) {
             this.databaseId = Objects.requireNonNull(databaseId);
             return this;
         }
 
         public Builder databaseId(String databaseId) {
-            this.databaseId = Input.of(Objects.requireNonNull(databaseId));
+            this.databaseId = Output.of(Objects.requireNonNull(databaseId));
             return this;
         }
 
-        public Builder fields(@Nullable Input<List<GoogleFirestoreAdminV1beta1IndexFieldArgs>> fields) {
+        public Builder fields(@Nullable Output<List<GoogleFirestoreAdminV1beta1IndexFieldArgs>> fields) {
             this.fields = fields;
             return this;
         }
 
         public Builder fields(@Nullable List<GoogleFirestoreAdminV1beta1IndexFieldArgs> fields) {
-            this.fields = Input.ofNullable(fields);
+            this.fields = Output.ofNullable(fields);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder state(@Nullable Input<IndexState> state) {
+        public Builder state(@Nullable Output<IndexState> state) {
             this.state = state;
             return this;
         }
 
         public Builder state(@Nullable IndexState state) {
-            this.state = Input.ofNullable(state);
+            this.state = Output.ofNullable(state);
             return this;
         }
         public IndexArgs build() {

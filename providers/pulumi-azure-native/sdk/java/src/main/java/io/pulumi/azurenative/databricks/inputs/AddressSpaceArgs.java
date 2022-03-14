@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.databricks.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -24,18 +24,18 @@ public final class AddressSpaceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="addressPrefixes")
-      private final @Nullable Input<List<String>> addressPrefixes;
+      private final @Nullable Output<List<String>> addressPrefixes;
 
-    public Input<List<String>> getAddressPrefixes() {
-        return this.addressPrefixes == null ? Input.empty() : this.addressPrefixes;
+    public Output<List<String>> getAddressPrefixes() {
+        return this.addressPrefixes == null ? Output.empty() : this.addressPrefixes;
     }
 
-    public AddressSpaceArgs(@Nullable Input<List<String>> addressPrefixes) {
+    public AddressSpaceArgs(@Nullable Output<List<String>> addressPrefixes) {
         this.addressPrefixes = addressPrefixes;
     }
 
     private AddressSpaceArgs() {
-        this.addressPrefixes = Input.empty();
+        this.addressPrefixes = Output.empty();
     }
 
     public static Builder builder() {
@@ -47,7 +47,7 @@ public final class AddressSpaceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> addressPrefixes;
+        private @Nullable Output<List<String>> addressPrefixes;
 
         public Builder() {
     	      // Empty
@@ -58,13 +58,13 @@ public final class AddressSpaceArgs extends io.pulumi.resources.ResourceArgs {
     	      this.addressPrefixes = defaults.addressPrefixes;
         }
 
-        public Builder addressPrefixes(@Nullable Input<List<String>> addressPrefixes) {
+        public Builder addressPrefixes(@Nullable Output<List<String>> addressPrefixes) {
             this.addressPrefixes = addressPrefixes;
             return this;
         }
 
         public Builder addressPrefixes(@Nullable List<String> addressPrefixes) {
-            this.addressPrefixes = Input.ofNullable(addressPrefixes);
+            this.addressPrefixes = Output.ofNullable(addressPrefixes);
             return this;
         }
         public AddressSpaceArgs build() {

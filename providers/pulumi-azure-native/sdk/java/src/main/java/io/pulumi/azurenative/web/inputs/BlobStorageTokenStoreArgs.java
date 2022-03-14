@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.web.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class BlobStorageTokenStoreArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="sasUrlSettingName")
-      private final @Nullable Input<String> sasUrlSettingName;
+      private final @Nullable Output<String> sasUrlSettingName;
 
-    public Input<String> getSasUrlSettingName() {
-        return this.sasUrlSettingName == null ? Input.empty() : this.sasUrlSettingName;
+    public Output<String> getSasUrlSettingName() {
+        return this.sasUrlSettingName == null ? Output.empty() : this.sasUrlSettingName;
     }
 
-    public BlobStorageTokenStoreArgs(@Nullable Input<String> sasUrlSettingName) {
+    public BlobStorageTokenStoreArgs(@Nullable Output<String> sasUrlSettingName) {
         this.sasUrlSettingName = sasUrlSettingName;
     }
 
     private BlobStorageTokenStoreArgs() {
-        this.sasUrlSettingName = Input.empty();
+        this.sasUrlSettingName = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class BlobStorageTokenStoreArgs extends io.pulumi.resources.Resourc
     }
 
     public static final class Builder {
-        private @Nullable Input<String> sasUrlSettingName;
+        private @Nullable Output<String> sasUrlSettingName;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class BlobStorageTokenStoreArgs extends io.pulumi.resources.Resourc
     	      this.sasUrlSettingName = defaults.sasUrlSettingName;
         }
 
-        public Builder sasUrlSettingName(@Nullable Input<String> sasUrlSettingName) {
+        public Builder sasUrlSettingName(@Nullable Output<String> sasUrlSettingName) {
             this.sasUrlSettingName = sasUrlSettingName;
             return this;
         }
 
         public Builder sasUrlSettingName(@Nullable String sasUrlSettingName) {
-            this.sasUrlSettingName = Input.ofNullable(sasUrlSettingName);
+            this.sasUrlSettingName = Output.ofNullable(sasUrlSettingName);
             return this;
         }
         public BlobStorageTokenStoreArgs build() {

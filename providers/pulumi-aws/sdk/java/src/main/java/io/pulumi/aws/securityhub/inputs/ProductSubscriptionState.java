@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.securityhub.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class ProductSubscriptionState extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="arn")
-      private final @Nullable Input<String> arn;
+      private final @Nullable Output<String> arn;
 
-    public Input<String> getArn() {
-        return this.arn == null ? Input.empty() : this.arn;
+    public Output<String> getArn() {
+        return this.arn == null ? Output.empty() : this.arn;
     }
 
     /**
@@ -30,22 +30,22 @@ public final class ProductSubscriptionState extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="productArn")
-      private final @Nullable Input<String> productArn;
+      private final @Nullable Output<String> productArn;
 
-    public Input<String> getProductArn() {
-        return this.productArn == null ? Input.empty() : this.productArn;
+    public Output<String> getProductArn() {
+        return this.productArn == null ? Output.empty() : this.productArn;
     }
 
     public ProductSubscriptionState(
-        @Nullable Input<String> arn,
-        @Nullable Input<String> productArn) {
+        @Nullable Output<String> arn,
+        @Nullable Output<String> productArn) {
         this.arn = arn;
         this.productArn = productArn;
     }
 
     private ProductSubscriptionState() {
-        this.arn = Input.empty();
-        this.productArn = Input.empty();
+        this.arn = Output.empty();
+        this.productArn = Output.empty();
     }
 
     public static Builder builder() {
@@ -57,8 +57,8 @@ public final class ProductSubscriptionState extends io.pulumi.resources.Resource
     }
 
     public static final class Builder {
-        private @Nullable Input<String> arn;
-        private @Nullable Input<String> productArn;
+        private @Nullable Output<String> arn;
+        private @Nullable Output<String> productArn;
 
         public Builder() {
     	      // Empty
@@ -70,23 +70,23 @@ public final class ProductSubscriptionState extends io.pulumi.resources.Resource
     	      this.productArn = defaults.productArn;
         }
 
-        public Builder arn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
 
         public Builder arn(@Nullable String arn) {
-            this.arn = Input.ofNullable(arn);
+            this.arn = Output.ofNullable(arn);
             return this;
         }
 
-        public Builder productArn(@Nullable Input<String> productArn) {
+        public Builder productArn(@Nullable Output<String> productArn) {
             this.productArn = productArn;
             return this;
         }
 
         public Builder productArn(@Nullable String productArn) {
-            this.productArn = Input.ofNullable(productArn);
+            this.productArn = Output.ofNullable(productArn);
             return this;
         }
         public ProductSubscriptionState build() {

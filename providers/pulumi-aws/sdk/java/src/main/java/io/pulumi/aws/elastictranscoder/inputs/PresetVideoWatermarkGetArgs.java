@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.elastictranscoder.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class PresetVideoWatermarkGetArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="horizontalAlign")
-      private final @Nullable Input<String> horizontalAlign;
+      private final @Nullable Output<String> horizontalAlign;
 
-    public Input<String> getHorizontalAlign() {
-        return this.horizontalAlign == null ? Input.empty() : this.horizontalAlign;
+    public Output<String> getHorizontalAlign() {
+        return this.horizontalAlign == null ? Output.empty() : this.horizontalAlign;
     }
 
     /**
@@ -30,10 +30,10 @@ public final class PresetVideoWatermarkGetArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="horizontalOffset")
-      private final @Nullable Input<String> horizontalOffset;
+      private final @Nullable Output<String> horizontalOffset;
 
-    public Input<String> getHorizontalOffset() {
-        return this.horizontalOffset == null ? Input.empty() : this.horizontalOffset;
+    public Output<String> getHorizontalOffset() {
+        return this.horizontalOffset == null ? Output.empty() : this.horizontalOffset;
     }
 
     /**
@@ -41,10 +41,10 @@ public final class PresetVideoWatermarkGetArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="id")
-      private final @Nullable Input<String> id;
+      private final @Nullable Output<String> id;
 
-    public Input<String> getId() {
-        return this.id == null ? Input.empty() : this.id;
+    public Output<String> getId() {
+        return this.id == null ? Output.empty() : this.id;
     }
 
     /**
@@ -52,10 +52,10 @@ public final class PresetVideoWatermarkGetArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="maxHeight")
-      private final @Nullable Input<String> maxHeight;
+      private final @Nullable Output<String> maxHeight;
 
-    public Input<String> getMaxHeight() {
-        return this.maxHeight == null ? Input.empty() : this.maxHeight;
+    public Output<String> getMaxHeight() {
+        return this.maxHeight == null ? Output.empty() : this.maxHeight;
     }
 
     /**
@@ -63,10 +63,10 @@ public final class PresetVideoWatermarkGetArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="maxWidth")
-      private final @Nullable Input<String> maxWidth;
+      private final @Nullable Output<String> maxWidth;
 
-    public Input<String> getMaxWidth() {
-        return this.maxWidth == null ? Input.empty() : this.maxWidth;
+    public Output<String> getMaxWidth() {
+        return this.maxWidth == null ? Output.empty() : this.maxWidth;
     }
 
     /**
@@ -74,10 +74,10 @@ public final class PresetVideoWatermarkGetArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="opacity")
-      private final @Nullable Input<String> opacity;
+      private final @Nullable Output<String> opacity;
 
-    public Input<String> getOpacity() {
-        return this.opacity == null ? Input.empty() : this.opacity;
+    public Output<String> getOpacity() {
+        return this.opacity == null ? Output.empty() : this.opacity;
     }
 
     /**
@@ -85,10 +85,10 @@ public final class PresetVideoWatermarkGetArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="sizingPolicy")
-      private final @Nullable Input<String> sizingPolicy;
+      private final @Nullable Output<String> sizingPolicy;
 
-    public Input<String> getSizingPolicy() {
-        return this.sizingPolicy == null ? Input.empty() : this.sizingPolicy;
+    public Output<String> getSizingPolicy() {
+        return this.sizingPolicy == null ? Output.empty() : this.sizingPolicy;
     }
 
     /**
@@ -96,10 +96,10 @@ public final class PresetVideoWatermarkGetArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="target")
-      private final @Nullable Input<String> target;
+      private final @Nullable Output<String> target;
 
-    public Input<String> getTarget() {
-        return this.target == null ? Input.empty() : this.target;
+    public Output<String> getTarget() {
+        return this.target == null ? Output.empty() : this.target;
     }
 
     /**
@@ -107,10 +107,10 @@ public final class PresetVideoWatermarkGetArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="verticalAlign")
-      private final @Nullable Input<String> verticalAlign;
+      private final @Nullable Output<String> verticalAlign;
 
-    public Input<String> getVerticalAlign() {
-        return this.verticalAlign == null ? Input.empty() : this.verticalAlign;
+    public Output<String> getVerticalAlign() {
+        return this.verticalAlign == null ? Output.empty() : this.verticalAlign;
     }
 
     /**
@@ -118,23 +118,23 @@ public final class PresetVideoWatermarkGetArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="verticalOffset")
-      private final @Nullable Input<String> verticalOffset;
+      private final @Nullable Output<String> verticalOffset;
 
-    public Input<String> getVerticalOffset() {
-        return this.verticalOffset == null ? Input.empty() : this.verticalOffset;
+    public Output<String> getVerticalOffset() {
+        return this.verticalOffset == null ? Output.empty() : this.verticalOffset;
     }
 
     public PresetVideoWatermarkGetArgs(
-        @Nullable Input<String> horizontalAlign,
-        @Nullable Input<String> horizontalOffset,
-        @Nullable Input<String> id,
-        @Nullable Input<String> maxHeight,
-        @Nullable Input<String> maxWidth,
-        @Nullable Input<String> opacity,
-        @Nullable Input<String> sizingPolicy,
-        @Nullable Input<String> target,
-        @Nullable Input<String> verticalAlign,
-        @Nullable Input<String> verticalOffset) {
+        @Nullable Output<String> horizontalAlign,
+        @Nullable Output<String> horizontalOffset,
+        @Nullable Output<String> id,
+        @Nullable Output<String> maxHeight,
+        @Nullable Output<String> maxWidth,
+        @Nullable Output<String> opacity,
+        @Nullable Output<String> sizingPolicy,
+        @Nullable Output<String> target,
+        @Nullable Output<String> verticalAlign,
+        @Nullable Output<String> verticalOffset) {
         this.horizontalAlign = horizontalAlign;
         this.horizontalOffset = horizontalOffset;
         this.id = id;
@@ -148,16 +148,16 @@ public final class PresetVideoWatermarkGetArgs extends io.pulumi.resources.Resou
     }
 
     private PresetVideoWatermarkGetArgs() {
-        this.horizontalAlign = Input.empty();
-        this.horizontalOffset = Input.empty();
-        this.id = Input.empty();
-        this.maxHeight = Input.empty();
-        this.maxWidth = Input.empty();
-        this.opacity = Input.empty();
-        this.sizingPolicy = Input.empty();
-        this.target = Input.empty();
-        this.verticalAlign = Input.empty();
-        this.verticalOffset = Input.empty();
+        this.horizontalAlign = Output.empty();
+        this.horizontalOffset = Output.empty();
+        this.id = Output.empty();
+        this.maxHeight = Output.empty();
+        this.maxWidth = Output.empty();
+        this.opacity = Output.empty();
+        this.sizingPolicy = Output.empty();
+        this.target = Output.empty();
+        this.verticalAlign = Output.empty();
+        this.verticalOffset = Output.empty();
     }
 
     public static Builder builder() {
@@ -169,16 +169,16 @@ public final class PresetVideoWatermarkGetArgs extends io.pulumi.resources.Resou
     }
 
     public static final class Builder {
-        private @Nullable Input<String> horizontalAlign;
-        private @Nullable Input<String> horizontalOffset;
-        private @Nullable Input<String> id;
-        private @Nullable Input<String> maxHeight;
-        private @Nullable Input<String> maxWidth;
-        private @Nullable Input<String> opacity;
-        private @Nullable Input<String> sizingPolicy;
-        private @Nullable Input<String> target;
-        private @Nullable Input<String> verticalAlign;
-        private @Nullable Input<String> verticalOffset;
+        private @Nullable Output<String> horizontalAlign;
+        private @Nullable Output<String> horizontalOffset;
+        private @Nullable Output<String> id;
+        private @Nullable Output<String> maxHeight;
+        private @Nullable Output<String> maxWidth;
+        private @Nullable Output<String> opacity;
+        private @Nullable Output<String> sizingPolicy;
+        private @Nullable Output<String> target;
+        private @Nullable Output<String> verticalAlign;
+        private @Nullable Output<String> verticalOffset;
 
         public Builder() {
     	      // Empty
@@ -198,103 +198,103 @@ public final class PresetVideoWatermarkGetArgs extends io.pulumi.resources.Resou
     	      this.verticalOffset = defaults.verticalOffset;
         }
 
-        public Builder horizontalAlign(@Nullable Input<String> horizontalAlign) {
+        public Builder horizontalAlign(@Nullable Output<String> horizontalAlign) {
             this.horizontalAlign = horizontalAlign;
             return this;
         }
 
         public Builder horizontalAlign(@Nullable String horizontalAlign) {
-            this.horizontalAlign = Input.ofNullable(horizontalAlign);
+            this.horizontalAlign = Output.ofNullable(horizontalAlign);
             return this;
         }
 
-        public Builder horizontalOffset(@Nullable Input<String> horizontalOffset) {
+        public Builder horizontalOffset(@Nullable Output<String> horizontalOffset) {
             this.horizontalOffset = horizontalOffset;
             return this;
         }
 
         public Builder horizontalOffset(@Nullable String horizontalOffset) {
-            this.horizontalOffset = Input.ofNullable(horizontalOffset);
+            this.horizontalOffset = Output.ofNullable(horizontalOffset);
             return this;
         }
 
-        public Builder id(@Nullable Input<String> id) {
+        public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
 
         public Builder id(@Nullable String id) {
-            this.id = Input.ofNullable(id);
+            this.id = Output.ofNullable(id);
             return this;
         }
 
-        public Builder maxHeight(@Nullable Input<String> maxHeight) {
+        public Builder maxHeight(@Nullable Output<String> maxHeight) {
             this.maxHeight = maxHeight;
             return this;
         }
 
         public Builder maxHeight(@Nullable String maxHeight) {
-            this.maxHeight = Input.ofNullable(maxHeight);
+            this.maxHeight = Output.ofNullable(maxHeight);
             return this;
         }
 
-        public Builder maxWidth(@Nullable Input<String> maxWidth) {
+        public Builder maxWidth(@Nullable Output<String> maxWidth) {
             this.maxWidth = maxWidth;
             return this;
         }
 
         public Builder maxWidth(@Nullable String maxWidth) {
-            this.maxWidth = Input.ofNullable(maxWidth);
+            this.maxWidth = Output.ofNullable(maxWidth);
             return this;
         }
 
-        public Builder opacity(@Nullable Input<String> opacity) {
+        public Builder opacity(@Nullable Output<String> opacity) {
             this.opacity = opacity;
             return this;
         }
 
         public Builder opacity(@Nullable String opacity) {
-            this.opacity = Input.ofNullable(opacity);
+            this.opacity = Output.ofNullable(opacity);
             return this;
         }
 
-        public Builder sizingPolicy(@Nullable Input<String> sizingPolicy) {
+        public Builder sizingPolicy(@Nullable Output<String> sizingPolicy) {
             this.sizingPolicy = sizingPolicy;
             return this;
         }
 
         public Builder sizingPolicy(@Nullable String sizingPolicy) {
-            this.sizingPolicy = Input.ofNullable(sizingPolicy);
+            this.sizingPolicy = Output.ofNullable(sizingPolicy);
             return this;
         }
 
-        public Builder target(@Nullable Input<String> target) {
+        public Builder target(@Nullable Output<String> target) {
             this.target = target;
             return this;
         }
 
         public Builder target(@Nullable String target) {
-            this.target = Input.ofNullable(target);
+            this.target = Output.ofNullable(target);
             return this;
         }
 
-        public Builder verticalAlign(@Nullable Input<String> verticalAlign) {
+        public Builder verticalAlign(@Nullable Output<String> verticalAlign) {
             this.verticalAlign = verticalAlign;
             return this;
         }
 
         public Builder verticalAlign(@Nullable String verticalAlign) {
-            this.verticalAlign = Input.ofNullable(verticalAlign);
+            this.verticalAlign = Output.ofNullable(verticalAlign);
             return this;
         }
 
-        public Builder verticalOffset(@Nullable Input<String> verticalOffset) {
+        public Builder verticalOffset(@Nullable Output<String> verticalOffset) {
             this.verticalOffset = verticalOffset;
             return this;
         }
 
         public Builder verticalOffset(@Nullable String verticalOffset) {
-            this.verticalOffset = Input.ofNullable(verticalOffset);
+            this.verticalOffset = Output.ofNullable(verticalOffset);
             return this;
         }
         public PresetVideoWatermarkGetArgs build() {

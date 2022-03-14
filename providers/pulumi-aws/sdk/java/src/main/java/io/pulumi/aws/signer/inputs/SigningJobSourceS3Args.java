@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.signer.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -18,9 +18,9 @@ public final class SigningJobSourceS3Args extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="bucket", required=true)
-      private final Input<String> bucket;
+      private final Output<String> bucket;
 
-    public Input<String> getBucket() {
+    public Output<String> getBucket() {
         return this.bucket;
     }
 
@@ -29,9 +29,9 @@ public final class SigningJobSourceS3Args extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="key", required=true)
-      private final Input<String> key;
+      private final Output<String> key;
 
-    public Input<String> getKey() {
+    public Output<String> getKey() {
         return this.key;
     }
 
@@ -40,25 +40,25 @@ public final class SigningJobSourceS3Args extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="version", required=true)
-      private final Input<String> version;
+      private final Output<String> version;
 
-    public Input<String> getVersion() {
+    public Output<String> getVersion() {
         return this.version;
     }
 
     public SigningJobSourceS3Args(
-        Input<String> bucket,
-        Input<String> key,
-        Input<String> version) {
+        Output<String> bucket,
+        Output<String> key,
+        Output<String> version) {
         this.bucket = Objects.requireNonNull(bucket, "expected parameter 'bucket' to be non-null");
         this.key = Objects.requireNonNull(key, "expected parameter 'key' to be non-null");
         this.version = Objects.requireNonNull(version, "expected parameter 'version' to be non-null");
     }
 
     private SigningJobSourceS3Args() {
-        this.bucket = Input.empty();
-        this.key = Input.empty();
-        this.version = Input.empty();
+        this.bucket = Output.empty();
+        this.key = Output.empty();
+        this.version = Output.empty();
     }
 
     public static Builder builder() {
@@ -70,9 +70,9 @@ public final class SigningJobSourceS3Args extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private Input<String> bucket;
-        private Input<String> key;
-        private Input<String> version;
+        private Output<String> bucket;
+        private Output<String> key;
+        private Output<String> version;
 
         public Builder() {
     	      // Empty
@@ -85,33 +85,33 @@ public final class SigningJobSourceS3Args extends io.pulumi.resources.ResourceAr
     	      this.version = defaults.version;
         }
 
-        public Builder bucket(Input<String> bucket) {
+        public Builder bucket(Output<String> bucket) {
             this.bucket = Objects.requireNonNull(bucket);
             return this;
         }
 
         public Builder bucket(String bucket) {
-            this.bucket = Input.of(Objects.requireNonNull(bucket));
+            this.bucket = Output.of(Objects.requireNonNull(bucket));
             return this;
         }
 
-        public Builder key(Input<String> key) {
+        public Builder key(Output<String> key) {
             this.key = Objects.requireNonNull(key);
             return this;
         }
 
         public Builder key(String key) {
-            this.key = Input.of(Objects.requireNonNull(key));
+            this.key = Output.of(Objects.requireNonNull(key));
             return this;
         }
 
-        public Builder version(Input<String> version) {
+        public Builder version(Output<String> version) {
             this.version = Objects.requireNonNull(version);
             return this;
         }
 
         public Builder version(String version) {
-            this.version = Input.of(Objects.requireNonNull(version));
+            this.version = Output.of(Objects.requireNonNull(version));
             return this;
         }
         public SigningJobSourceS3Args build() {

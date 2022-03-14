@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.compute_v1.inputs.DurationArgs;
 import java.lang.Double;
@@ -24,10 +24,10 @@ public final class HttpFaultDelayArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="fixedDelay")
-      private final @Nullable Input<DurationArgs> fixedDelay;
+      private final @Nullable Output<DurationArgs> fixedDelay;
 
-    public Input<DurationArgs> getFixedDelay() {
-        return this.fixedDelay == null ? Input.empty() : this.fixedDelay;
+    public Output<DurationArgs> getFixedDelay() {
+        return this.fixedDelay == null ? Output.empty() : this.fixedDelay;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class HttpFaultDelayArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="percentage")
-      private final @Nullable Input<Double> percentage;
+      private final @Nullable Output<Double> percentage;
 
-    public Input<Double> getPercentage() {
-        return this.percentage == null ? Input.empty() : this.percentage;
+    public Output<Double> getPercentage() {
+        return this.percentage == null ? Output.empty() : this.percentage;
     }
 
     public HttpFaultDelayArgs(
-        @Nullable Input<DurationArgs> fixedDelay,
-        @Nullable Input<Double> percentage) {
+        @Nullable Output<DurationArgs> fixedDelay,
+        @Nullable Output<Double> percentage) {
         this.fixedDelay = fixedDelay;
         this.percentage = percentage;
     }
 
     private HttpFaultDelayArgs() {
-        this.fixedDelay = Input.empty();
-        this.percentage = Input.empty();
+        this.fixedDelay = Output.empty();
+        this.percentage = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class HttpFaultDelayArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<DurationArgs> fixedDelay;
-        private @Nullable Input<Double> percentage;
+        private @Nullable Output<DurationArgs> fixedDelay;
+        private @Nullable Output<Double> percentage;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class HttpFaultDelayArgs extends io.pulumi.resources.ResourceArgs {
     	      this.percentage = defaults.percentage;
         }
 
-        public Builder fixedDelay(@Nullable Input<DurationArgs> fixedDelay) {
+        public Builder fixedDelay(@Nullable Output<DurationArgs> fixedDelay) {
             this.fixedDelay = fixedDelay;
             return this;
         }
 
         public Builder fixedDelay(@Nullable DurationArgs fixedDelay) {
-            this.fixedDelay = Input.ofNullable(fixedDelay);
+            this.fixedDelay = Output.ofNullable(fixedDelay);
             return this;
         }
 
-        public Builder percentage(@Nullable Input<Double> percentage) {
+        public Builder percentage(@Nullable Output<Double> percentage) {
             this.percentage = percentage;
             return this;
         }
 
         public Builder percentage(@Nullable Double percentage) {
-            this.percentage = Input.ofNullable(percentage);
+            this.percentage = Output.ofNullable(percentage);
             return this;
         }
         public HttpFaultDelayArgs build() {

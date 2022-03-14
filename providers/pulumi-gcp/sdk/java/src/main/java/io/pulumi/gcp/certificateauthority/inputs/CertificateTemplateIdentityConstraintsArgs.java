@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.certificateauthority.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.certificateauthority.inputs.CertificateTemplateIdentityConstraintsCelExpressionArgs;
 import java.lang.Boolean;
@@ -20,9 +20,9 @@ public final class CertificateTemplateIdentityConstraintsArgs extends io.pulumi.
      * 
      */
     @InputImport(name="allowSubjectAltNamesPassthrough", required=true)
-      private final Input<Boolean> allowSubjectAltNamesPassthrough;
+      private final Output<Boolean> allowSubjectAltNamesPassthrough;
 
-    public Input<Boolean> getAllowSubjectAltNamesPassthrough() {
+    public Output<Boolean> getAllowSubjectAltNamesPassthrough() {
         return this.allowSubjectAltNamesPassthrough;
     }
 
@@ -31,9 +31,9 @@ public final class CertificateTemplateIdentityConstraintsArgs extends io.pulumi.
      * 
      */
     @InputImport(name="allowSubjectPassthrough", required=true)
-      private final Input<Boolean> allowSubjectPassthrough;
+      private final Output<Boolean> allowSubjectPassthrough;
 
-    public Input<Boolean> getAllowSubjectPassthrough() {
+    public Output<Boolean> getAllowSubjectPassthrough() {
         return this.allowSubjectPassthrough;
     }
 
@@ -42,25 +42,25 @@ public final class CertificateTemplateIdentityConstraintsArgs extends io.pulumi.
      * 
      */
     @InputImport(name="celExpression")
-      private final @Nullable Input<CertificateTemplateIdentityConstraintsCelExpressionArgs> celExpression;
+      private final @Nullable Output<CertificateTemplateIdentityConstraintsCelExpressionArgs> celExpression;
 
-    public Input<CertificateTemplateIdentityConstraintsCelExpressionArgs> getCelExpression() {
-        return this.celExpression == null ? Input.empty() : this.celExpression;
+    public Output<CertificateTemplateIdentityConstraintsCelExpressionArgs> getCelExpression() {
+        return this.celExpression == null ? Output.empty() : this.celExpression;
     }
 
     public CertificateTemplateIdentityConstraintsArgs(
-        Input<Boolean> allowSubjectAltNamesPassthrough,
-        Input<Boolean> allowSubjectPassthrough,
-        @Nullable Input<CertificateTemplateIdentityConstraintsCelExpressionArgs> celExpression) {
+        Output<Boolean> allowSubjectAltNamesPassthrough,
+        Output<Boolean> allowSubjectPassthrough,
+        @Nullable Output<CertificateTemplateIdentityConstraintsCelExpressionArgs> celExpression) {
         this.allowSubjectAltNamesPassthrough = Objects.requireNonNull(allowSubjectAltNamesPassthrough, "expected parameter 'allowSubjectAltNamesPassthrough' to be non-null");
         this.allowSubjectPassthrough = Objects.requireNonNull(allowSubjectPassthrough, "expected parameter 'allowSubjectPassthrough' to be non-null");
         this.celExpression = celExpression;
     }
 
     private CertificateTemplateIdentityConstraintsArgs() {
-        this.allowSubjectAltNamesPassthrough = Input.empty();
-        this.allowSubjectPassthrough = Input.empty();
-        this.celExpression = Input.empty();
+        this.allowSubjectAltNamesPassthrough = Output.empty();
+        this.allowSubjectPassthrough = Output.empty();
+        this.celExpression = Output.empty();
     }
 
     public static Builder builder() {
@@ -72,9 +72,9 @@ public final class CertificateTemplateIdentityConstraintsArgs extends io.pulumi.
     }
 
     public static final class Builder {
-        private Input<Boolean> allowSubjectAltNamesPassthrough;
-        private Input<Boolean> allowSubjectPassthrough;
-        private @Nullable Input<CertificateTemplateIdentityConstraintsCelExpressionArgs> celExpression;
+        private Output<Boolean> allowSubjectAltNamesPassthrough;
+        private Output<Boolean> allowSubjectPassthrough;
+        private @Nullable Output<CertificateTemplateIdentityConstraintsCelExpressionArgs> celExpression;
 
         public Builder() {
     	      // Empty
@@ -87,33 +87,33 @@ public final class CertificateTemplateIdentityConstraintsArgs extends io.pulumi.
     	      this.celExpression = defaults.celExpression;
         }
 
-        public Builder allowSubjectAltNamesPassthrough(Input<Boolean> allowSubjectAltNamesPassthrough) {
+        public Builder allowSubjectAltNamesPassthrough(Output<Boolean> allowSubjectAltNamesPassthrough) {
             this.allowSubjectAltNamesPassthrough = Objects.requireNonNull(allowSubjectAltNamesPassthrough);
             return this;
         }
 
         public Builder allowSubjectAltNamesPassthrough(Boolean allowSubjectAltNamesPassthrough) {
-            this.allowSubjectAltNamesPassthrough = Input.of(Objects.requireNonNull(allowSubjectAltNamesPassthrough));
+            this.allowSubjectAltNamesPassthrough = Output.of(Objects.requireNonNull(allowSubjectAltNamesPassthrough));
             return this;
         }
 
-        public Builder allowSubjectPassthrough(Input<Boolean> allowSubjectPassthrough) {
+        public Builder allowSubjectPassthrough(Output<Boolean> allowSubjectPassthrough) {
             this.allowSubjectPassthrough = Objects.requireNonNull(allowSubjectPassthrough);
             return this;
         }
 
         public Builder allowSubjectPassthrough(Boolean allowSubjectPassthrough) {
-            this.allowSubjectPassthrough = Input.of(Objects.requireNonNull(allowSubjectPassthrough));
+            this.allowSubjectPassthrough = Output.of(Objects.requireNonNull(allowSubjectPassthrough));
             return this;
         }
 
-        public Builder celExpression(@Nullable Input<CertificateTemplateIdentityConstraintsCelExpressionArgs> celExpression) {
+        public Builder celExpression(@Nullable Output<CertificateTemplateIdentityConstraintsCelExpressionArgs> celExpression) {
             this.celExpression = celExpression;
             return this;
         }
 
         public Builder celExpression(@Nullable CertificateTemplateIdentityConstraintsCelExpressionArgs celExpression) {
-            this.celExpression = Input.ofNullable(celExpression);
+            this.celExpression = Output.ofNullable(celExpression);
             return this;
         }
         public CertificateTemplateIdentityConstraintsArgs build() {

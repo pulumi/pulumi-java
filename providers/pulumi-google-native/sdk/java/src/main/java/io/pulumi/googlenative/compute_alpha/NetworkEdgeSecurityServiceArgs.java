@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,17 +19,17 @@ public final class NetworkEdgeSecurityServiceArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     @InputImport(name="kind")
-      private final @Nullable Input<String> kind;
+      private final @Nullable Output<String> kind;
 
-    public Input<String> getKind() {
-        return this.kind == null ? Input.empty() : this.kind;
+    public Output<String> getKind() {
+        return this.kind == null ? Output.empty() : this.kind;
     }
 
     /**
@@ -37,31 +37,31 @@ public final class NetworkEdgeSecurityServiceArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     @InputImport(name="region", required=true)
-      private final Input<String> region;
+      private final Output<String> region;
 
-    public Input<String> getRegion() {
+    public Output<String> getRegion() {
         return this.region;
     }
 
     @InputImport(name="requestId")
-      private final @Nullable Input<String> requestId;
+      private final @Nullable Output<String> requestId;
 
-    public Input<String> getRequestId() {
-        return this.requestId == null ? Input.empty() : this.requestId;
+    public Output<String> getRequestId() {
+        return this.requestId == null ? Output.empty() : this.requestId;
     }
 
     /**
@@ -69,28 +69,28 @@ public final class NetworkEdgeSecurityServiceArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="securityPolicy")
-      private final @Nullable Input<String> securityPolicy;
+      private final @Nullable Output<String> securityPolicy;
 
-    public Input<String> getSecurityPolicy() {
-        return this.securityPolicy == null ? Input.empty() : this.securityPolicy;
+    public Output<String> getSecurityPolicy() {
+        return this.securityPolicy == null ? Output.empty() : this.securityPolicy;
     }
 
     @InputImport(name="validateOnly")
-      private final @Nullable Input<String> validateOnly;
+      private final @Nullable Output<String> validateOnly;
 
-    public Input<String> getValidateOnly() {
-        return this.validateOnly == null ? Input.empty() : this.validateOnly;
+    public Output<String> getValidateOnly() {
+        return this.validateOnly == null ? Output.empty() : this.validateOnly;
     }
 
     public NetworkEdgeSecurityServiceArgs(
-        @Nullable Input<String> description,
-        @Nullable Input<String> kind,
-        @Nullable Input<String> name,
-        @Nullable Input<String> project,
-        Input<String> region,
-        @Nullable Input<String> requestId,
-        @Nullable Input<String> securityPolicy,
-        @Nullable Input<String> validateOnly) {
+        @Nullable Output<String> description,
+        @Nullable Output<String> kind,
+        @Nullable Output<String> name,
+        @Nullable Output<String> project,
+        Output<String> region,
+        @Nullable Output<String> requestId,
+        @Nullable Output<String> securityPolicy,
+        @Nullable Output<String> validateOnly) {
         this.description = description;
         this.kind = kind;
         this.name = name;
@@ -102,14 +102,14 @@ public final class NetworkEdgeSecurityServiceArgs extends io.pulumi.resources.Re
     }
 
     private NetworkEdgeSecurityServiceArgs() {
-        this.description = Input.empty();
-        this.kind = Input.empty();
-        this.name = Input.empty();
-        this.project = Input.empty();
-        this.region = Input.empty();
-        this.requestId = Input.empty();
-        this.securityPolicy = Input.empty();
-        this.validateOnly = Input.empty();
+        this.description = Output.empty();
+        this.kind = Output.empty();
+        this.name = Output.empty();
+        this.project = Output.empty();
+        this.region = Output.empty();
+        this.requestId = Output.empty();
+        this.securityPolicy = Output.empty();
+        this.validateOnly = Output.empty();
     }
 
     public static Builder builder() {
@@ -121,14 +121,14 @@ public final class NetworkEdgeSecurityServiceArgs extends io.pulumi.resources.Re
     }
 
     public static final class Builder {
-        private @Nullable Input<String> description;
-        private @Nullable Input<String> kind;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> project;
-        private Input<String> region;
-        private @Nullable Input<String> requestId;
-        private @Nullable Input<String> securityPolicy;
-        private @Nullable Input<String> validateOnly;
+        private @Nullable Output<String> description;
+        private @Nullable Output<String> kind;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> project;
+        private Output<String> region;
+        private @Nullable Output<String> requestId;
+        private @Nullable Output<String> securityPolicy;
+        private @Nullable Output<String> validateOnly;
 
         public Builder() {
     	      // Empty
@@ -146,83 +146,83 @@ public final class NetworkEdgeSecurityServiceArgs extends io.pulumi.resources.Re
     	      this.validateOnly = defaults.validateOnly;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder kind(@Nullable Input<String> kind) {
+        public Builder kind(@Nullable Output<String> kind) {
             this.kind = kind;
             return this;
         }
 
         public Builder kind(@Nullable String kind) {
-            this.kind = Input.ofNullable(kind);
+            this.kind = Output.ofNullable(kind);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder region(Input<String> region) {
+        public Builder region(Output<String> region) {
             this.region = Objects.requireNonNull(region);
             return this;
         }
 
         public Builder region(String region) {
-            this.region = Input.of(Objects.requireNonNull(region));
+            this.region = Output.of(Objects.requireNonNull(region));
             return this;
         }
 
-        public Builder requestId(@Nullable Input<String> requestId) {
+        public Builder requestId(@Nullable Output<String> requestId) {
             this.requestId = requestId;
             return this;
         }
 
         public Builder requestId(@Nullable String requestId) {
-            this.requestId = Input.ofNullable(requestId);
+            this.requestId = Output.ofNullable(requestId);
             return this;
         }
 
-        public Builder securityPolicy(@Nullable Input<String> securityPolicy) {
+        public Builder securityPolicy(@Nullable Output<String> securityPolicy) {
             this.securityPolicy = securityPolicy;
             return this;
         }
 
         public Builder securityPolicy(@Nullable String securityPolicy) {
-            this.securityPolicy = Input.ofNullable(securityPolicy);
+            this.securityPolicy = Output.ofNullable(securityPolicy);
             return this;
         }
 
-        public Builder validateOnly(@Nullable Input<String> validateOnly) {
+        public Builder validateOnly(@Nullable Output<String> validateOnly) {
             this.validateOnly = validateOnly;
             return this;
         }
 
         public Builder validateOnly(@Nullable String validateOnly) {
-            this.validateOnly = Input.ofNullable(validateOnly);
+            this.validateOnly = Output.ofNullable(validateOnly);
             return this;
         }
         public NetworkEdgeSecurityServiceArgs build() {

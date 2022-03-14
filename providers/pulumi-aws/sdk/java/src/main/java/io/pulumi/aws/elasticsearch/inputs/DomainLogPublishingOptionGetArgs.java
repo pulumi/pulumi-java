@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.elasticsearch.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -20,9 +20,9 @@ public final class DomainLogPublishingOptionGetArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="cloudwatchLogGroupArn", required=true)
-      private final Input<String> cloudwatchLogGroupArn;
+      private final Output<String> cloudwatchLogGroupArn;
 
-    public Input<String> getCloudwatchLogGroupArn() {
+    public Output<String> getCloudwatchLogGroupArn() {
         return this.cloudwatchLogGroupArn;
     }
 
@@ -31,10 +31,10 @@ public final class DomainLogPublishingOptionGetArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="enabled")
-      private final @Nullable Input<Boolean> enabled;
+      private final @Nullable Output<Boolean> enabled;
 
-    public Input<Boolean> getEnabled() {
-        return this.enabled == null ? Input.empty() : this.enabled;
+    public Output<Boolean> getEnabled() {
+        return this.enabled == null ? Output.empty() : this.enabled;
     }
 
     /**
@@ -42,25 +42,25 @@ public final class DomainLogPublishingOptionGetArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="logType", required=true)
-      private final Input<String> logType;
+      private final Output<String> logType;
 
-    public Input<String> getLogType() {
+    public Output<String> getLogType() {
         return this.logType;
     }
 
     public DomainLogPublishingOptionGetArgs(
-        Input<String> cloudwatchLogGroupArn,
-        @Nullable Input<Boolean> enabled,
-        Input<String> logType) {
+        Output<String> cloudwatchLogGroupArn,
+        @Nullable Output<Boolean> enabled,
+        Output<String> logType) {
         this.cloudwatchLogGroupArn = Objects.requireNonNull(cloudwatchLogGroupArn, "expected parameter 'cloudwatchLogGroupArn' to be non-null");
         this.enabled = enabled;
         this.logType = Objects.requireNonNull(logType, "expected parameter 'logType' to be non-null");
     }
 
     private DomainLogPublishingOptionGetArgs() {
-        this.cloudwatchLogGroupArn = Input.empty();
-        this.enabled = Input.empty();
-        this.logType = Input.empty();
+        this.cloudwatchLogGroupArn = Output.empty();
+        this.enabled = Output.empty();
+        this.logType = Output.empty();
     }
 
     public static Builder builder() {
@@ -72,9 +72,9 @@ public final class DomainLogPublishingOptionGetArgs extends io.pulumi.resources.
     }
 
     public static final class Builder {
-        private Input<String> cloudwatchLogGroupArn;
-        private @Nullable Input<Boolean> enabled;
-        private Input<String> logType;
+        private Output<String> cloudwatchLogGroupArn;
+        private @Nullable Output<Boolean> enabled;
+        private Output<String> logType;
 
         public Builder() {
     	      // Empty
@@ -87,33 +87,33 @@ public final class DomainLogPublishingOptionGetArgs extends io.pulumi.resources.
     	      this.logType = defaults.logType;
         }
 
-        public Builder cloudwatchLogGroupArn(Input<String> cloudwatchLogGroupArn) {
+        public Builder cloudwatchLogGroupArn(Output<String> cloudwatchLogGroupArn) {
             this.cloudwatchLogGroupArn = Objects.requireNonNull(cloudwatchLogGroupArn);
             return this;
         }
 
         public Builder cloudwatchLogGroupArn(String cloudwatchLogGroupArn) {
-            this.cloudwatchLogGroupArn = Input.of(Objects.requireNonNull(cloudwatchLogGroupArn));
+            this.cloudwatchLogGroupArn = Output.of(Objects.requireNonNull(cloudwatchLogGroupArn));
             return this;
         }
 
-        public Builder enabled(@Nullable Input<Boolean> enabled) {
+        public Builder enabled(@Nullable Output<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
 
         public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Input.ofNullable(enabled);
+            this.enabled = Output.ofNullable(enabled);
             return this;
         }
 
-        public Builder logType(Input<String> logType) {
+        public Builder logType(Output<String> logType) {
             this.logType = Objects.requireNonNull(logType);
             return this;
         }
 
         public Builder logType(String logType) {
-            this.logType = Input.of(Objects.requireNonNull(logType));
+            this.logType = Output.of(Objects.requireNonNull(logType));
             return this;
         }
         public DomainLogPublishingOptionGetArgs build() {

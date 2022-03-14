@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.datafactory.inputs;
 
 import io.pulumi.azurenative.datafactory.inputs.LinkedServiceReferenceArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.util.Objects;
@@ -24,10 +24,10 @@ public final class StagingSettingsArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="enableCompression")
-      private final @Nullable Input<Object> enableCompression;
+      private final @Nullable Output<Object> enableCompression;
 
-    public Input<Object> getEnableCompression() {
-        return this.enableCompression == null ? Input.empty() : this.enableCompression;
+    public Output<Object> getEnableCompression() {
+        return this.enableCompression == null ? Output.empty() : this.enableCompression;
     }
 
     /**
@@ -35,9 +35,9 @@ public final class StagingSettingsArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="linkedServiceName", required=true)
-      private final Input<LinkedServiceReferenceArgs> linkedServiceName;
+      private final Output<LinkedServiceReferenceArgs> linkedServiceName;
 
-    public Input<LinkedServiceReferenceArgs> getLinkedServiceName() {
+    public Output<LinkedServiceReferenceArgs> getLinkedServiceName() {
         return this.linkedServiceName;
     }
 
@@ -46,25 +46,25 @@ public final class StagingSettingsArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="path")
-      private final @Nullable Input<Object> path;
+      private final @Nullable Output<Object> path;
 
-    public Input<Object> getPath() {
-        return this.path == null ? Input.empty() : this.path;
+    public Output<Object> getPath() {
+        return this.path == null ? Output.empty() : this.path;
     }
 
     public StagingSettingsArgs(
-        @Nullable Input<Object> enableCompression,
-        Input<LinkedServiceReferenceArgs> linkedServiceName,
-        @Nullable Input<Object> path) {
+        @Nullable Output<Object> enableCompression,
+        Output<LinkedServiceReferenceArgs> linkedServiceName,
+        @Nullable Output<Object> path) {
         this.enableCompression = enableCompression;
         this.linkedServiceName = Objects.requireNonNull(linkedServiceName, "expected parameter 'linkedServiceName' to be non-null");
         this.path = path;
     }
 
     private StagingSettingsArgs() {
-        this.enableCompression = Input.empty();
-        this.linkedServiceName = Input.empty();
-        this.path = Input.empty();
+        this.enableCompression = Output.empty();
+        this.linkedServiceName = Output.empty();
+        this.path = Output.empty();
     }
 
     public static Builder builder() {
@@ -76,9 +76,9 @@ public final class StagingSettingsArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private @Nullable Input<Object> enableCompression;
-        private Input<LinkedServiceReferenceArgs> linkedServiceName;
-        private @Nullable Input<Object> path;
+        private @Nullable Output<Object> enableCompression;
+        private Output<LinkedServiceReferenceArgs> linkedServiceName;
+        private @Nullable Output<Object> path;
 
         public Builder() {
     	      // Empty
@@ -91,33 +91,33 @@ public final class StagingSettingsArgs extends io.pulumi.resources.ResourceArgs 
     	      this.path = defaults.path;
         }
 
-        public Builder enableCompression(@Nullable Input<Object> enableCompression) {
+        public Builder enableCompression(@Nullable Output<Object> enableCompression) {
             this.enableCompression = enableCompression;
             return this;
         }
 
         public Builder enableCompression(@Nullable Object enableCompression) {
-            this.enableCompression = Input.ofNullable(enableCompression);
+            this.enableCompression = Output.ofNullable(enableCompression);
             return this;
         }
 
-        public Builder linkedServiceName(Input<LinkedServiceReferenceArgs> linkedServiceName) {
+        public Builder linkedServiceName(Output<LinkedServiceReferenceArgs> linkedServiceName) {
             this.linkedServiceName = Objects.requireNonNull(linkedServiceName);
             return this;
         }
 
         public Builder linkedServiceName(LinkedServiceReferenceArgs linkedServiceName) {
-            this.linkedServiceName = Input.of(Objects.requireNonNull(linkedServiceName));
+            this.linkedServiceName = Output.of(Objects.requireNonNull(linkedServiceName));
             return this;
         }
 
-        public Builder path(@Nullable Input<Object> path) {
+        public Builder path(@Nullable Output<Object> path) {
             this.path = path;
             return this;
         }
 
         public Builder path(@Nullable Object path) {
-            this.path = Input.ofNullable(path);
+            this.path = Output.ofNullable(path);
             return this;
         }
         public StagingSettingsArgs build() {

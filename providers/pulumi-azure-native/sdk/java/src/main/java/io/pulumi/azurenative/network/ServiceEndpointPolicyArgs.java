@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.network;
 
 import io.pulumi.azurenative.network.inputs.ServiceEndpointPolicyDefinitionArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -22,10 +22,10 @@ public final class ServiceEndpointPolicyArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="id")
-      private final @Nullable Input<String> id;
+      private final @Nullable Output<String> id;
 
-    public Input<String> getId() {
-        return this.id == null ? Input.empty() : this.id;
+    public Output<String> getId() {
+        return this.id == null ? Output.empty() : this.id;
     }
 
     /**
@@ -33,10 +33,10 @@ public final class ServiceEndpointPolicyArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -44,9 +44,9 @@ public final class ServiceEndpointPolicyArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -55,10 +55,10 @@ public final class ServiceEndpointPolicyArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="serviceEndpointPolicyDefinitions")
-      private final @Nullable Input<List<ServiceEndpointPolicyDefinitionArgs>> serviceEndpointPolicyDefinitions;
+      private final @Nullable Output<List<ServiceEndpointPolicyDefinitionArgs>> serviceEndpointPolicyDefinitions;
 
-    public Input<List<ServiceEndpointPolicyDefinitionArgs>> getServiceEndpointPolicyDefinitions() {
-        return this.serviceEndpointPolicyDefinitions == null ? Input.empty() : this.serviceEndpointPolicyDefinitions;
+    public Output<List<ServiceEndpointPolicyDefinitionArgs>> getServiceEndpointPolicyDefinitions() {
+        return this.serviceEndpointPolicyDefinitions == null ? Output.empty() : this.serviceEndpointPolicyDefinitions;
     }
 
     /**
@@ -66,10 +66,10 @@ public final class ServiceEndpointPolicyArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="serviceEndpointPolicyName")
-      private final @Nullable Input<String> serviceEndpointPolicyName;
+      private final @Nullable Output<String> serviceEndpointPolicyName;
 
-    public Input<String> getServiceEndpointPolicyName() {
-        return this.serviceEndpointPolicyName == null ? Input.empty() : this.serviceEndpointPolicyName;
+    public Output<String> getServiceEndpointPolicyName() {
+        return this.serviceEndpointPolicyName == null ? Output.empty() : this.serviceEndpointPolicyName;
     }
 
     /**
@@ -77,19 +77,19 @@ public final class ServiceEndpointPolicyArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public ServiceEndpointPolicyArgs(
-        @Nullable Input<String> id,
-        @Nullable Input<String> location,
-        Input<String> resourceGroupName,
-        @Nullable Input<List<ServiceEndpointPolicyDefinitionArgs>> serviceEndpointPolicyDefinitions,
-        @Nullable Input<String> serviceEndpointPolicyName,
-        @Nullable Input<Map<String,String>> tags) {
+        @Nullable Output<String> id,
+        @Nullable Output<String> location,
+        Output<String> resourceGroupName,
+        @Nullable Output<List<ServiceEndpointPolicyDefinitionArgs>> serviceEndpointPolicyDefinitions,
+        @Nullable Output<String> serviceEndpointPolicyName,
+        @Nullable Output<Map<String,String>> tags) {
         this.id = id;
         this.location = location;
         this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
@@ -99,12 +99,12 @@ public final class ServiceEndpointPolicyArgs extends io.pulumi.resources.Resourc
     }
 
     private ServiceEndpointPolicyArgs() {
-        this.id = Input.empty();
-        this.location = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.serviceEndpointPolicyDefinitions = Input.empty();
-        this.serviceEndpointPolicyName = Input.empty();
-        this.tags = Input.empty();
+        this.id = Output.empty();
+        this.location = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.serviceEndpointPolicyDefinitions = Output.empty();
+        this.serviceEndpointPolicyName = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -116,12 +116,12 @@ public final class ServiceEndpointPolicyArgs extends io.pulumi.resources.Resourc
     }
 
     public static final class Builder {
-        private @Nullable Input<String> id;
-        private @Nullable Input<String> location;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<List<ServiceEndpointPolicyDefinitionArgs>> serviceEndpointPolicyDefinitions;
-        private @Nullable Input<String> serviceEndpointPolicyName;
-        private @Nullable Input<Map<String,String>> tags;
+        private @Nullable Output<String> id;
+        private @Nullable Output<String> location;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<List<ServiceEndpointPolicyDefinitionArgs>> serviceEndpointPolicyDefinitions;
+        private @Nullable Output<String> serviceEndpointPolicyName;
+        private @Nullable Output<Map<String,String>> tags;
 
         public Builder() {
     	      // Empty
@@ -137,63 +137,63 @@ public final class ServiceEndpointPolicyArgs extends io.pulumi.resources.Resourc
     	      this.tags = defaults.tags;
         }
 
-        public Builder id(@Nullable Input<String> id) {
+        public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
 
         public Builder id(@Nullable String id) {
-            this.id = Input.ofNullable(id);
+            this.id = Output.ofNullable(id);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder serviceEndpointPolicyDefinitions(@Nullable Input<List<ServiceEndpointPolicyDefinitionArgs>> serviceEndpointPolicyDefinitions) {
+        public Builder serviceEndpointPolicyDefinitions(@Nullable Output<List<ServiceEndpointPolicyDefinitionArgs>> serviceEndpointPolicyDefinitions) {
             this.serviceEndpointPolicyDefinitions = serviceEndpointPolicyDefinitions;
             return this;
         }
 
         public Builder serviceEndpointPolicyDefinitions(@Nullable List<ServiceEndpointPolicyDefinitionArgs> serviceEndpointPolicyDefinitions) {
-            this.serviceEndpointPolicyDefinitions = Input.ofNullable(serviceEndpointPolicyDefinitions);
+            this.serviceEndpointPolicyDefinitions = Output.ofNullable(serviceEndpointPolicyDefinitions);
             return this;
         }
 
-        public Builder serviceEndpointPolicyName(@Nullable Input<String> serviceEndpointPolicyName) {
+        public Builder serviceEndpointPolicyName(@Nullable Output<String> serviceEndpointPolicyName) {
             this.serviceEndpointPolicyName = serviceEndpointPolicyName;
             return this;
         }
 
         public Builder serviceEndpointPolicyName(@Nullable String serviceEndpointPolicyName) {
-            this.serviceEndpointPolicyName = Input.ofNullable(serviceEndpointPolicyName);
+            this.serviceEndpointPolicyName = Output.ofNullable(serviceEndpointPolicyName);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public ServiceEndpointPolicyArgs build() {

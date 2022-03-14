@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.web.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class ApiResourceDefinitionsArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="modifiedSwaggerUrl")
-      private final @Nullable Input<String> modifiedSwaggerUrl;
+      private final @Nullable Output<String> modifiedSwaggerUrl;
 
-    public Input<String> getModifiedSwaggerUrl() {
-        return this.modifiedSwaggerUrl == null ? Input.empty() : this.modifiedSwaggerUrl;
+    public Output<String> getModifiedSwaggerUrl() {
+        return this.modifiedSwaggerUrl == null ? Output.empty() : this.modifiedSwaggerUrl;
     }
 
     /**
@@ -34,22 +34,22 @@ public final class ApiResourceDefinitionsArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="originalSwaggerUrl")
-      private final @Nullable Input<String> originalSwaggerUrl;
+      private final @Nullable Output<String> originalSwaggerUrl;
 
-    public Input<String> getOriginalSwaggerUrl() {
-        return this.originalSwaggerUrl == null ? Input.empty() : this.originalSwaggerUrl;
+    public Output<String> getOriginalSwaggerUrl() {
+        return this.originalSwaggerUrl == null ? Output.empty() : this.originalSwaggerUrl;
     }
 
     public ApiResourceDefinitionsArgs(
-        @Nullable Input<String> modifiedSwaggerUrl,
-        @Nullable Input<String> originalSwaggerUrl) {
+        @Nullable Output<String> modifiedSwaggerUrl,
+        @Nullable Output<String> originalSwaggerUrl) {
         this.modifiedSwaggerUrl = modifiedSwaggerUrl;
         this.originalSwaggerUrl = originalSwaggerUrl;
     }
 
     private ApiResourceDefinitionsArgs() {
-        this.modifiedSwaggerUrl = Input.empty();
-        this.originalSwaggerUrl = Input.empty();
+        this.modifiedSwaggerUrl = Output.empty();
+        this.originalSwaggerUrl = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class ApiResourceDefinitionsArgs extends io.pulumi.resources.Resour
     }
 
     public static final class Builder {
-        private @Nullable Input<String> modifiedSwaggerUrl;
-        private @Nullable Input<String> originalSwaggerUrl;
+        private @Nullable Output<String> modifiedSwaggerUrl;
+        private @Nullable Output<String> originalSwaggerUrl;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class ApiResourceDefinitionsArgs extends io.pulumi.resources.Resour
     	      this.originalSwaggerUrl = defaults.originalSwaggerUrl;
         }
 
-        public Builder modifiedSwaggerUrl(@Nullable Input<String> modifiedSwaggerUrl) {
+        public Builder modifiedSwaggerUrl(@Nullable Output<String> modifiedSwaggerUrl) {
             this.modifiedSwaggerUrl = modifiedSwaggerUrl;
             return this;
         }
 
         public Builder modifiedSwaggerUrl(@Nullable String modifiedSwaggerUrl) {
-            this.modifiedSwaggerUrl = Input.ofNullable(modifiedSwaggerUrl);
+            this.modifiedSwaggerUrl = Output.ofNullable(modifiedSwaggerUrl);
             return this;
         }
 
-        public Builder originalSwaggerUrl(@Nullable Input<String> originalSwaggerUrl) {
+        public Builder originalSwaggerUrl(@Nullable Output<String> originalSwaggerUrl) {
             this.originalSwaggerUrl = originalSwaggerUrl;
             return this;
         }
 
         public Builder originalSwaggerUrl(@Nullable String originalSwaggerUrl) {
-            this.originalSwaggerUrl = Input.ofNullable(originalSwaggerUrl);
+            this.originalSwaggerUrl = Output.ofNullable(originalSwaggerUrl);
             return this;
         }
         public ApiResourceDefinitionsArgs build() {

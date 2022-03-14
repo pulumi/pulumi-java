@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.datalabeling_v1beta1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class GoogleCloudDatalabelingV1beta1SentimentConfigArgs extends io.
      * 
      */
     @InputImport(name="enableLabelSentimentSelection")
-      private final @Nullable Input<Boolean> enableLabelSentimentSelection;
+      private final @Nullable Output<Boolean> enableLabelSentimentSelection;
 
-    public Input<Boolean> getEnableLabelSentimentSelection() {
-        return this.enableLabelSentimentSelection == null ? Input.empty() : this.enableLabelSentimentSelection;
+    public Output<Boolean> getEnableLabelSentimentSelection() {
+        return this.enableLabelSentimentSelection == null ? Output.empty() : this.enableLabelSentimentSelection;
     }
 
-    public GoogleCloudDatalabelingV1beta1SentimentConfigArgs(@Nullable Input<Boolean> enableLabelSentimentSelection) {
+    public GoogleCloudDatalabelingV1beta1SentimentConfigArgs(@Nullable Output<Boolean> enableLabelSentimentSelection) {
         this.enableLabelSentimentSelection = enableLabelSentimentSelection;
     }
 
     private GoogleCloudDatalabelingV1beta1SentimentConfigArgs() {
-        this.enableLabelSentimentSelection = Input.empty();
+        this.enableLabelSentimentSelection = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class GoogleCloudDatalabelingV1beta1SentimentConfigArgs extends io.
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> enableLabelSentimentSelection;
+        private @Nullable Output<Boolean> enableLabelSentimentSelection;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class GoogleCloudDatalabelingV1beta1SentimentConfigArgs extends io.
     	      this.enableLabelSentimentSelection = defaults.enableLabelSentimentSelection;
         }
 
-        public Builder enableLabelSentimentSelection(@Nullable Input<Boolean> enableLabelSentimentSelection) {
+        public Builder enableLabelSentimentSelection(@Nullable Output<Boolean> enableLabelSentimentSelection) {
             this.enableLabelSentimentSelection = enableLabelSentimentSelection;
             return this;
         }
 
         public Builder enableLabelSentimentSelection(@Nullable Boolean enableLabelSentimentSelection) {
-            this.enableLabelSentimentSelection = Input.ofNullable(enableLabelSentimentSelection);
+            this.enableLabelSentimentSelection = Output.ofNullable(enableLabelSentimentSelection);
             return this;
         }
         public GoogleCloudDatalabelingV1beta1SentimentConfigArgs build() {

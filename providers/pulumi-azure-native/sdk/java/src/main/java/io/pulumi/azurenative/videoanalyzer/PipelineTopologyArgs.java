@@ -11,7 +11,7 @@ import io.pulumi.azurenative.videoanalyzer.inputs.SkuArgs;
 import io.pulumi.azurenative.videoanalyzer.inputs.VideoSinkArgs;
 import io.pulumi.azurenative.videoanalyzer.inputs.VideoSourceArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -28,9 +28,9 @@ public final class PipelineTopologyArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="accountName", required=true)
-      private final Input<String> accountName;
+      private final Output<String> accountName;
 
-    public Input<String> getAccountName() {
+    public Output<String> getAccountName() {
         return this.accountName;
     }
 
@@ -39,10 +39,10 @@ public final class PipelineTopologyArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -50,9 +50,9 @@ public final class PipelineTopologyArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="kind", required=true)
-      private final Input<Either<String,Kind>> kind;
+      private final Output<Either<String,Kind>> kind;
 
-    public Input<Either<String,Kind>> getKind() {
+    public Output<Either<String,Kind>> getKind() {
         return this.kind;
     }
 
@@ -61,10 +61,10 @@ public final class PipelineTopologyArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="parameters")
-      private final @Nullable Input<List<ParameterDeclarationArgs>> parameters;
+      private final @Nullable Output<List<ParameterDeclarationArgs>> parameters;
 
-    public Input<List<ParameterDeclarationArgs>> getParameters() {
-        return this.parameters == null ? Input.empty() : this.parameters;
+    public Output<List<ParameterDeclarationArgs>> getParameters() {
+        return this.parameters == null ? Output.empty() : this.parameters;
     }
 
     /**
@@ -72,10 +72,10 @@ public final class PipelineTopologyArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="pipelineTopologyName")
-      private final @Nullable Input<String> pipelineTopologyName;
+      private final @Nullable Output<String> pipelineTopologyName;
 
-    public Input<String> getPipelineTopologyName() {
-        return this.pipelineTopologyName == null ? Input.empty() : this.pipelineTopologyName;
+    public Output<String> getPipelineTopologyName() {
+        return this.pipelineTopologyName == null ? Output.empty() : this.pipelineTopologyName;
     }
 
     /**
@@ -83,10 +83,10 @@ public final class PipelineTopologyArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="processors")
-      private final @Nullable Input<List<EncoderProcessorArgs>> processors;
+      private final @Nullable Output<List<EncoderProcessorArgs>> processors;
 
-    public Input<List<EncoderProcessorArgs>> getProcessors() {
-        return this.processors == null ? Input.empty() : this.processors;
+    public Output<List<EncoderProcessorArgs>> getProcessors() {
+        return this.processors == null ? Output.empty() : this.processors;
     }
 
     /**
@@ -94,9 +94,9 @@ public final class PipelineTopologyArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -105,9 +105,9 @@ public final class PipelineTopologyArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="sinks", required=true)
-      private final Input<List<VideoSinkArgs>> sinks;
+      private final Output<List<VideoSinkArgs>> sinks;
 
-    public Input<List<VideoSinkArgs>> getSinks() {
+    public Output<List<VideoSinkArgs>> getSinks() {
         return this.sinks;
     }
 
@@ -116,9 +116,9 @@ public final class PipelineTopologyArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="sku", required=true)
-      private final Input<SkuArgs> sku;
+      private final Output<SkuArgs> sku;
 
-    public Input<SkuArgs> getSku() {
+    public Output<SkuArgs> getSku() {
         return this.sku;
     }
 
@@ -127,23 +127,23 @@ public final class PipelineTopologyArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="sources", required=true)
-      private final Input<List<Either<RtspSourceArgs,VideoSourceArgs>>> sources;
+      private final Output<List<Either<RtspSourceArgs,VideoSourceArgs>>> sources;
 
-    public Input<List<Either<RtspSourceArgs,VideoSourceArgs>>> getSources() {
+    public Output<List<Either<RtspSourceArgs,VideoSourceArgs>>> getSources() {
         return this.sources;
     }
 
     public PipelineTopologyArgs(
-        Input<String> accountName,
-        @Nullable Input<String> description,
-        Input<Either<String,Kind>> kind,
-        @Nullable Input<List<ParameterDeclarationArgs>> parameters,
-        @Nullable Input<String> pipelineTopologyName,
-        @Nullable Input<List<EncoderProcessorArgs>> processors,
-        Input<String> resourceGroupName,
-        Input<List<VideoSinkArgs>> sinks,
-        Input<SkuArgs> sku,
-        Input<List<Either<RtspSourceArgs,VideoSourceArgs>>> sources) {
+        Output<String> accountName,
+        @Nullable Output<String> description,
+        Output<Either<String,Kind>> kind,
+        @Nullable Output<List<ParameterDeclarationArgs>> parameters,
+        @Nullable Output<String> pipelineTopologyName,
+        @Nullable Output<List<EncoderProcessorArgs>> processors,
+        Output<String> resourceGroupName,
+        Output<List<VideoSinkArgs>> sinks,
+        Output<SkuArgs> sku,
+        Output<List<Either<RtspSourceArgs,VideoSourceArgs>>> sources) {
         this.accountName = Objects.requireNonNull(accountName, "expected parameter 'accountName' to be non-null");
         this.description = description;
         this.kind = Objects.requireNonNull(kind, "expected parameter 'kind' to be non-null");
@@ -157,16 +157,16 @@ public final class PipelineTopologyArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private PipelineTopologyArgs() {
-        this.accountName = Input.empty();
-        this.description = Input.empty();
-        this.kind = Input.empty();
-        this.parameters = Input.empty();
-        this.pipelineTopologyName = Input.empty();
-        this.processors = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.sinks = Input.empty();
-        this.sku = Input.empty();
-        this.sources = Input.empty();
+        this.accountName = Output.empty();
+        this.description = Output.empty();
+        this.kind = Output.empty();
+        this.parameters = Output.empty();
+        this.pipelineTopologyName = Output.empty();
+        this.processors = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.sinks = Output.empty();
+        this.sku = Output.empty();
+        this.sources = Output.empty();
     }
 
     public static Builder builder() {
@@ -178,16 +178,16 @@ public final class PipelineTopologyArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private Input<String> accountName;
-        private @Nullable Input<String> description;
-        private Input<Either<String,Kind>> kind;
-        private @Nullable Input<List<ParameterDeclarationArgs>> parameters;
-        private @Nullable Input<String> pipelineTopologyName;
-        private @Nullable Input<List<EncoderProcessorArgs>> processors;
-        private Input<String> resourceGroupName;
-        private Input<List<VideoSinkArgs>> sinks;
-        private Input<SkuArgs> sku;
-        private Input<List<Either<RtspSourceArgs,VideoSourceArgs>>> sources;
+        private Output<String> accountName;
+        private @Nullable Output<String> description;
+        private Output<Either<String,Kind>> kind;
+        private @Nullable Output<List<ParameterDeclarationArgs>> parameters;
+        private @Nullable Output<String> pipelineTopologyName;
+        private @Nullable Output<List<EncoderProcessorArgs>> processors;
+        private Output<String> resourceGroupName;
+        private Output<List<VideoSinkArgs>> sinks;
+        private Output<SkuArgs> sku;
+        private Output<List<Either<RtspSourceArgs,VideoSourceArgs>>> sources;
 
         public Builder() {
     	      // Empty
@@ -207,103 +207,103 @@ public final class PipelineTopologyArgs extends io.pulumi.resources.ResourceArgs
     	      this.sources = defaults.sources;
         }
 
-        public Builder accountName(Input<String> accountName) {
+        public Builder accountName(Output<String> accountName) {
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
 
         public Builder accountName(String accountName) {
-            this.accountName = Input.of(Objects.requireNonNull(accountName));
+            this.accountName = Output.of(Objects.requireNonNull(accountName));
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder kind(Input<Either<String,Kind>> kind) {
+        public Builder kind(Output<Either<String,Kind>> kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
         public Builder kind(Either<String,Kind> kind) {
-            this.kind = Input.of(Objects.requireNonNull(kind));
+            this.kind = Output.of(Objects.requireNonNull(kind));
             return this;
         }
 
-        public Builder parameters(@Nullable Input<List<ParameterDeclarationArgs>> parameters) {
+        public Builder parameters(@Nullable Output<List<ParameterDeclarationArgs>> parameters) {
             this.parameters = parameters;
             return this;
         }
 
         public Builder parameters(@Nullable List<ParameterDeclarationArgs> parameters) {
-            this.parameters = Input.ofNullable(parameters);
+            this.parameters = Output.ofNullable(parameters);
             return this;
         }
 
-        public Builder pipelineTopologyName(@Nullable Input<String> pipelineTopologyName) {
+        public Builder pipelineTopologyName(@Nullable Output<String> pipelineTopologyName) {
             this.pipelineTopologyName = pipelineTopologyName;
             return this;
         }
 
         public Builder pipelineTopologyName(@Nullable String pipelineTopologyName) {
-            this.pipelineTopologyName = Input.ofNullable(pipelineTopologyName);
+            this.pipelineTopologyName = Output.ofNullable(pipelineTopologyName);
             return this;
         }
 
-        public Builder processors(@Nullable Input<List<EncoderProcessorArgs>> processors) {
+        public Builder processors(@Nullable Output<List<EncoderProcessorArgs>> processors) {
             this.processors = processors;
             return this;
         }
 
         public Builder processors(@Nullable List<EncoderProcessorArgs> processors) {
-            this.processors = Input.ofNullable(processors);
+            this.processors = Output.ofNullable(processors);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder sinks(Input<List<VideoSinkArgs>> sinks) {
+        public Builder sinks(Output<List<VideoSinkArgs>> sinks) {
             this.sinks = Objects.requireNonNull(sinks);
             return this;
         }
 
         public Builder sinks(List<VideoSinkArgs> sinks) {
-            this.sinks = Input.of(Objects.requireNonNull(sinks));
+            this.sinks = Output.of(Objects.requireNonNull(sinks));
             return this;
         }
 
-        public Builder sku(Input<SkuArgs> sku) {
+        public Builder sku(Output<SkuArgs> sku) {
             this.sku = Objects.requireNonNull(sku);
             return this;
         }
 
         public Builder sku(SkuArgs sku) {
-            this.sku = Input.of(Objects.requireNonNull(sku));
+            this.sku = Output.of(Objects.requireNonNull(sku));
             return this;
         }
 
-        public Builder sources(Input<List<Either<RtspSourceArgs,VideoSourceArgs>>> sources) {
+        public Builder sources(Output<List<Either<RtspSourceArgs,VideoSourceArgs>>> sources) {
             this.sources = Objects.requireNonNull(sources);
             return this;
         }
 
         public Builder sources(List<Either<RtspSourceArgs,VideoSourceArgs>> sources) {
-            this.sources = Input.of(Objects.requireNonNull(sources));
+            this.sources = Output.of(Objects.requireNonNull(sources));
             return this;
         }
         public PipelineTopologyArgs build() {

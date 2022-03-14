@@ -5,7 +5,7 @@ package io.pulumi.azurenative.offazure.inputs;
 
 import io.pulumi.azurenative.offazure.inputs.SiteAgentPropertiesArgs;
 import io.pulumi.azurenative.offazure.inputs.SiteSpnPropertiesArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -25,10 +25,10 @@ public final class SitePropertiesArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="agentDetails")
-      private final @Nullable Input<SiteAgentPropertiesArgs> agentDetails;
+      private final @Nullable Output<SiteAgentPropertiesArgs> agentDetails;
 
-    public Input<SiteAgentPropertiesArgs> getAgentDetails() {
-        return this.agentDetails == null ? Input.empty() : this.agentDetails;
+    public Output<SiteAgentPropertiesArgs> getAgentDetails() {
+        return this.agentDetails == null ? Output.empty() : this.agentDetails;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class SitePropertiesArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="applianceName")
-      private final @Nullable Input<String> applianceName;
+      private final @Nullable Output<String> applianceName;
 
-    public Input<String> getApplianceName() {
-        return this.applianceName == null ? Input.empty() : this.applianceName;
+    public Output<String> getApplianceName() {
+        return this.applianceName == null ? Output.empty() : this.applianceName;
     }
 
     /**
@@ -47,10 +47,10 @@ public final class SitePropertiesArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="discoverySolutionId")
-      private final @Nullable Input<String> discoverySolutionId;
+      private final @Nullable Output<String> discoverySolutionId;
 
-    public Input<String> getDiscoverySolutionId() {
-        return this.discoverySolutionId == null ? Input.empty() : this.discoverySolutionId;
+    public Output<String> getDiscoverySolutionId() {
+        return this.discoverySolutionId == null ? Output.empty() : this.discoverySolutionId;
     }
 
     /**
@@ -58,17 +58,17 @@ public final class SitePropertiesArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="servicePrincipalIdentityDetails")
-      private final @Nullable Input<SiteSpnPropertiesArgs> servicePrincipalIdentityDetails;
+      private final @Nullable Output<SiteSpnPropertiesArgs> servicePrincipalIdentityDetails;
 
-    public Input<SiteSpnPropertiesArgs> getServicePrincipalIdentityDetails() {
-        return this.servicePrincipalIdentityDetails == null ? Input.empty() : this.servicePrincipalIdentityDetails;
+    public Output<SiteSpnPropertiesArgs> getServicePrincipalIdentityDetails() {
+        return this.servicePrincipalIdentityDetails == null ? Output.empty() : this.servicePrincipalIdentityDetails;
     }
 
     public SitePropertiesArgs(
-        @Nullable Input<SiteAgentPropertiesArgs> agentDetails,
-        @Nullable Input<String> applianceName,
-        @Nullable Input<String> discoverySolutionId,
-        @Nullable Input<SiteSpnPropertiesArgs> servicePrincipalIdentityDetails) {
+        @Nullable Output<SiteAgentPropertiesArgs> agentDetails,
+        @Nullable Output<String> applianceName,
+        @Nullable Output<String> discoverySolutionId,
+        @Nullable Output<SiteSpnPropertiesArgs> servicePrincipalIdentityDetails) {
         this.agentDetails = agentDetails;
         this.applianceName = applianceName;
         this.discoverySolutionId = discoverySolutionId;
@@ -76,10 +76,10 @@ public final class SitePropertiesArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private SitePropertiesArgs() {
-        this.agentDetails = Input.empty();
-        this.applianceName = Input.empty();
-        this.discoverySolutionId = Input.empty();
-        this.servicePrincipalIdentityDetails = Input.empty();
+        this.agentDetails = Output.empty();
+        this.applianceName = Output.empty();
+        this.discoverySolutionId = Output.empty();
+        this.servicePrincipalIdentityDetails = Output.empty();
     }
 
     public static Builder builder() {
@@ -91,10 +91,10 @@ public final class SitePropertiesArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<SiteAgentPropertiesArgs> agentDetails;
-        private @Nullable Input<String> applianceName;
-        private @Nullable Input<String> discoverySolutionId;
-        private @Nullable Input<SiteSpnPropertiesArgs> servicePrincipalIdentityDetails;
+        private @Nullable Output<SiteAgentPropertiesArgs> agentDetails;
+        private @Nullable Output<String> applianceName;
+        private @Nullable Output<String> discoverySolutionId;
+        private @Nullable Output<SiteSpnPropertiesArgs> servicePrincipalIdentityDetails;
 
         public Builder() {
     	      // Empty
@@ -108,43 +108,43 @@ public final class SitePropertiesArgs extends io.pulumi.resources.ResourceArgs {
     	      this.servicePrincipalIdentityDetails = defaults.servicePrincipalIdentityDetails;
         }
 
-        public Builder agentDetails(@Nullable Input<SiteAgentPropertiesArgs> agentDetails) {
+        public Builder agentDetails(@Nullable Output<SiteAgentPropertiesArgs> agentDetails) {
             this.agentDetails = agentDetails;
             return this;
         }
 
         public Builder agentDetails(@Nullable SiteAgentPropertiesArgs agentDetails) {
-            this.agentDetails = Input.ofNullable(agentDetails);
+            this.agentDetails = Output.ofNullable(agentDetails);
             return this;
         }
 
-        public Builder applianceName(@Nullable Input<String> applianceName) {
+        public Builder applianceName(@Nullable Output<String> applianceName) {
             this.applianceName = applianceName;
             return this;
         }
 
         public Builder applianceName(@Nullable String applianceName) {
-            this.applianceName = Input.ofNullable(applianceName);
+            this.applianceName = Output.ofNullable(applianceName);
             return this;
         }
 
-        public Builder discoverySolutionId(@Nullable Input<String> discoverySolutionId) {
+        public Builder discoverySolutionId(@Nullable Output<String> discoverySolutionId) {
             this.discoverySolutionId = discoverySolutionId;
             return this;
         }
 
         public Builder discoverySolutionId(@Nullable String discoverySolutionId) {
-            this.discoverySolutionId = Input.ofNullable(discoverySolutionId);
+            this.discoverySolutionId = Output.ofNullable(discoverySolutionId);
             return this;
         }
 
-        public Builder servicePrincipalIdentityDetails(@Nullable Input<SiteSpnPropertiesArgs> servicePrincipalIdentityDetails) {
+        public Builder servicePrincipalIdentityDetails(@Nullable Output<SiteSpnPropertiesArgs> servicePrincipalIdentityDetails) {
             this.servicePrincipalIdentityDetails = servicePrincipalIdentityDetails;
             return this;
         }
 
         public Builder servicePrincipalIdentityDetails(@Nullable SiteSpnPropertiesArgs servicePrincipalIdentityDetails) {
-            this.servicePrincipalIdentityDetails = Input.ofNullable(servicePrincipalIdentityDetails);
+            this.servicePrincipalIdentityDetails = Output.ofNullable(servicePrincipalIdentityDetails);
             return this;
         }
         public SitePropertiesArgs build() {

@@ -6,7 +6,7 @@ package io.pulumi.azurenative.media.inputs;
 import io.pulumi.azurenative.media.enums.AudioAnalysisMode;
 import io.pulumi.azurenative.media.enums.InsightsType;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -27,10 +27,10 @@ public final class VideoAnalyzerPresetArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="audioLanguage")
-      private final @Nullable Input<String> audioLanguage;
+      private final @Nullable Output<String> audioLanguage;
 
-    public Input<String> getAudioLanguage() {
-        return this.audioLanguage == null ? Input.empty() : this.audioLanguage;
+    public Output<String> getAudioLanguage() {
+        return this.audioLanguage == null ? Output.empty() : this.audioLanguage;
     }
 
     /**
@@ -38,10 +38,10 @@ public final class VideoAnalyzerPresetArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="experimentalOptions")
-      private final @Nullable Input<Map<String,String>> experimentalOptions;
+      private final @Nullable Output<Map<String,String>> experimentalOptions;
 
-    public Input<Map<String,String>> getExperimentalOptions() {
-        return this.experimentalOptions == null ? Input.empty() : this.experimentalOptions;
+    public Output<Map<String,String>> getExperimentalOptions() {
+        return this.experimentalOptions == null ? Output.empty() : this.experimentalOptions;
     }
 
     /**
@@ -49,10 +49,10 @@ public final class VideoAnalyzerPresetArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="insightsToExtract")
-      private final @Nullable Input<Either<String,InsightsType>> insightsToExtract;
+      private final @Nullable Output<Either<String,InsightsType>> insightsToExtract;
 
-    public Input<Either<String,InsightsType>> getInsightsToExtract() {
-        return this.insightsToExtract == null ? Input.empty() : this.insightsToExtract;
+    public Output<Either<String,InsightsType>> getInsightsToExtract() {
+        return this.insightsToExtract == null ? Output.empty() : this.insightsToExtract;
     }
 
     /**
@@ -60,10 +60,10 @@ public final class VideoAnalyzerPresetArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="mode")
-      private final @Nullable Input<Either<String,AudioAnalysisMode>> mode;
+      private final @Nullable Output<Either<String,AudioAnalysisMode>> mode;
 
-    public Input<Either<String,AudioAnalysisMode>> getMode() {
-        return this.mode == null ? Input.empty() : this.mode;
+    public Output<Either<String,AudioAnalysisMode>> getMode() {
+        return this.mode == null ? Output.empty() : this.mode;
     }
 
     /**
@@ -72,18 +72,18 @@ public final class VideoAnalyzerPresetArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="odataType", required=true)
-      private final Input<String> odataType;
+      private final Output<String> odataType;
 
-    public Input<String> getOdataType() {
+    public Output<String> getOdataType() {
         return this.odataType;
     }
 
     public VideoAnalyzerPresetArgs(
-        @Nullable Input<String> audioLanguage,
-        @Nullable Input<Map<String,String>> experimentalOptions,
-        @Nullable Input<Either<String,InsightsType>> insightsToExtract,
-        @Nullable Input<Either<String,AudioAnalysisMode>> mode,
-        Input<String> odataType) {
+        @Nullable Output<String> audioLanguage,
+        @Nullable Output<Map<String,String>> experimentalOptions,
+        @Nullable Output<Either<String,InsightsType>> insightsToExtract,
+        @Nullable Output<Either<String,AudioAnalysisMode>> mode,
+        Output<String> odataType) {
         this.audioLanguage = audioLanguage;
         this.experimentalOptions = experimentalOptions;
         this.insightsToExtract = insightsToExtract;
@@ -92,11 +92,11 @@ public final class VideoAnalyzerPresetArgs extends io.pulumi.resources.ResourceA
     }
 
     private VideoAnalyzerPresetArgs() {
-        this.audioLanguage = Input.empty();
-        this.experimentalOptions = Input.empty();
-        this.insightsToExtract = Input.empty();
-        this.mode = Input.empty();
-        this.odataType = Input.empty();
+        this.audioLanguage = Output.empty();
+        this.experimentalOptions = Output.empty();
+        this.insightsToExtract = Output.empty();
+        this.mode = Output.empty();
+        this.odataType = Output.empty();
     }
 
     public static Builder builder() {
@@ -108,11 +108,11 @@ public final class VideoAnalyzerPresetArgs extends io.pulumi.resources.ResourceA
     }
 
     public static final class Builder {
-        private @Nullable Input<String> audioLanguage;
-        private @Nullable Input<Map<String,String>> experimentalOptions;
-        private @Nullable Input<Either<String,InsightsType>> insightsToExtract;
-        private @Nullable Input<Either<String,AudioAnalysisMode>> mode;
-        private Input<String> odataType;
+        private @Nullable Output<String> audioLanguage;
+        private @Nullable Output<Map<String,String>> experimentalOptions;
+        private @Nullable Output<Either<String,InsightsType>> insightsToExtract;
+        private @Nullable Output<Either<String,AudioAnalysisMode>> mode;
+        private Output<String> odataType;
 
         public Builder() {
     	      // Empty
@@ -127,53 +127,53 @@ public final class VideoAnalyzerPresetArgs extends io.pulumi.resources.ResourceA
     	      this.odataType = defaults.odataType;
         }
 
-        public Builder audioLanguage(@Nullable Input<String> audioLanguage) {
+        public Builder audioLanguage(@Nullable Output<String> audioLanguage) {
             this.audioLanguage = audioLanguage;
             return this;
         }
 
         public Builder audioLanguage(@Nullable String audioLanguage) {
-            this.audioLanguage = Input.ofNullable(audioLanguage);
+            this.audioLanguage = Output.ofNullable(audioLanguage);
             return this;
         }
 
-        public Builder experimentalOptions(@Nullable Input<Map<String,String>> experimentalOptions) {
+        public Builder experimentalOptions(@Nullable Output<Map<String,String>> experimentalOptions) {
             this.experimentalOptions = experimentalOptions;
             return this;
         }
 
         public Builder experimentalOptions(@Nullable Map<String,String> experimentalOptions) {
-            this.experimentalOptions = Input.ofNullable(experimentalOptions);
+            this.experimentalOptions = Output.ofNullable(experimentalOptions);
             return this;
         }
 
-        public Builder insightsToExtract(@Nullable Input<Either<String,InsightsType>> insightsToExtract) {
+        public Builder insightsToExtract(@Nullable Output<Either<String,InsightsType>> insightsToExtract) {
             this.insightsToExtract = insightsToExtract;
             return this;
         }
 
         public Builder insightsToExtract(@Nullable Either<String,InsightsType> insightsToExtract) {
-            this.insightsToExtract = Input.ofNullable(insightsToExtract);
+            this.insightsToExtract = Output.ofNullable(insightsToExtract);
             return this;
         }
 
-        public Builder mode(@Nullable Input<Either<String,AudioAnalysisMode>> mode) {
+        public Builder mode(@Nullable Output<Either<String,AudioAnalysisMode>> mode) {
             this.mode = mode;
             return this;
         }
 
         public Builder mode(@Nullable Either<String,AudioAnalysisMode> mode) {
-            this.mode = Input.ofNullable(mode);
+            this.mode = Output.ofNullable(mode);
             return this;
         }
 
-        public Builder odataType(Input<String> odataType) {
+        public Builder odataType(Output<String> odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
 
         public Builder odataType(String odataType) {
-            this.odataType = Input.of(Objects.requireNonNull(odataType));
+            this.odataType = Output.of(Objects.requireNonNull(odataType));
             return this;
         }
         public VideoAnalyzerPresetArgs build() {

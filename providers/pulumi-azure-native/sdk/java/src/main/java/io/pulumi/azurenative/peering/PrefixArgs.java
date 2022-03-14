@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.peering;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,9 +19,9 @@ public final class PrefixArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="peeringServiceName", required=true)
-      private final Input<String> peeringServiceName;
+      private final Output<String> peeringServiceName;
 
-    public Input<String> getPeeringServiceName() {
+    public Output<String> getPeeringServiceName() {
         return this.peeringServiceName;
     }
 
@@ -30,10 +30,10 @@ public final class PrefixArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="peeringServicePrefixKey")
-      private final @Nullable Input<String> peeringServicePrefixKey;
+      private final @Nullable Output<String> peeringServicePrefixKey;
 
-    public Input<String> getPeeringServicePrefixKey() {
-        return this.peeringServicePrefixKey == null ? Input.empty() : this.peeringServicePrefixKey;
+    public Output<String> getPeeringServicePrefixKey() {
+        return this.peeringServicePrefixKey == null ? Output.empty() : this.peeringServicePrefixKey;
     }
 
     /**
@@ -41,10 +41,10 @@ public final class PrefixArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="prefix")
-      private final @Nullable Input<String> prefix;
+      private final @Nullable Output<String> prefix;
 
-    public Input<String> getPrefix() {
-        return this.prefix == null ? Input.empty() : this.prefix;
+    public Output<String> getPrefix() {
+        return this.prefix == null ? Output.empty() : this.prefix;
     }
 
     /**
@@ -52,10 +52,10 @@ public final class PrefixArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="prefixName")
-      private final @Nullable Input<String> prefixName;
+      private final @Nullable Output<String> prefixName;
 
-    public Input<String> getPrefixName() {
-        return this.prefixName == null ? Input.empty() : this.prefixName;
+    public Output<String> getPrefixName() {
+        return this.prefixName == null ? Output.empty() : this.prefixName;
     }
 
     /**
@@ -63,18 +63,18 @@ public final class PrefixArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
     public PrefixArgs(
-        Input<String> peeringServiceName,
-        @Nullable Input<String> peeringServicePrefixKey,
-        @Nullable Input<String> prefix,
-        @Nullable Input<String> prefixName,
-        Input<String> resourceGroupName) {
+        Output<String> peeringServiceName,
+        @Nullable Output<String> peeringServicePrefixKey,
+        @Nullable Output<String> prefix,
+        @Nullable Output<String> prefixName,
+        Output<String> resourceGroupName) {
         this.peeringServiceName = Objects.requireNonNull(peeringServiceName, "expected parameter 'peeringServiceName' to be non-null");
         this.peeringServicePrefixKey = peeringServicePrefixKey;
         this.prefix = prefix;
@@ -83,11 +83,11 @@ public final class PrefixArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private PrefixArgs() {
-        this.peeringServiceName = Input.empty();
-        this.peeringServicePrefixKey = Input.empty();
-        this.prefix = Input.empty();
-        this.prefixName = Input.empty();
-        this.resourceGroupName = Input.empty();
+        this.peeringServiceName = Output.empty();
+        this.peeringServicePrefixKey = Output.empty();
+        this.prefix = Output.empty();
+        this.prefixName = Output.empty();
+        this.resourceGroupName = Output.empty();
     }
 
     public static Builder builder() {
@@ -99,11 +99,11 @@ public final class PrefixArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> peeringServiceName;
-        private @Nullable Input<String> peeringServicePrefixKey;
-        private @Nullable Input<String> prefix;
-        private @Nullable Input<String> prefixName;
-        private Input<String> resourceGroupName;
+        private Output<String> peeringServiceName;
+        private @Nullable Output<String> peeringServicePrefixKey;
+        private @Nullable Output<String> prefix;
+        private @Nullable Output<String> prefixName;
+        private Output<String> resourceGroupName;
 
         public Builder() {
     	      // Empty
@@ -118,53 +118,53 @@ public final class PrefixArgs extends io.pulumi.resources.ResourceArgs {
     	      this.resourceGroupName = defaults.resourceGroupName;
         }
 
-        public Builder peeringServiceName(Input<String> peeringServiceName) {
+        public Builder peeringServiceName(Output<String> peeringServiceName) {
             this.peeringServiceName = Objects.requireNonNull(peeringServiceName);
             return this;
         }
 
         public Builder peeringServiceName(String peeringServiceName) {
-            this.peeringServiceName = Input.of(Objects.requireNonNull(peeringServiceName));
+            this.peeringServiceName = Output.of(Objects.requireNonNull(peeringServiceName));
             return this;
         }
 
-        public Builder peeringServicePrefixKey(@Nullable Input<String> peeringServicePrefixKey) {
+        public Builder peeringServicePrefixKey(@Nullable Output<String> peeringServicePrefixKey) {
             this.peeringServicePrefixKey = peeringServicePrefixKey;
             return this;
         }
 
         public Builder peeringServicePrefixKey(@Nullable String peeringServicePrefixKey) {
-            this.peeringServicePrefixKey = Input.ofNullable(peeringServicePrefixKey);
+            this.peeringServicePrefixKey = Output.ofNullable(peeringServicePrefixKey);
             return this;
         }
 
-        public Builder prefix(@Nullable Input<String> prefix) {
+        public Builder prefix(@Nullable Output<String> prefix) {
             this.prefix = prefix;
             return this;
         }
 
         public Builder prefix(@Nullable String prefix) {
-            this.prefix = Input.ofNullable(prefix);
+            this.prefix = Output.ofNullable(prefix);
             return this;
         }
 
-        public Builder prefixName(@Nullable Input<String> prefixName) {
+        public Builder prefixName(@Nullable Output<String> prefixName) {
             this.prefixName = prefixName;
             return this;
         }
 
         public Builder prefixName(@Nullable String prefixName) {
-            this.prefixName = Input.ofNullable(prefixName);
+            this.prefixName = Output.ofNullable(prefixName);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
         public PrefixArgs build() {

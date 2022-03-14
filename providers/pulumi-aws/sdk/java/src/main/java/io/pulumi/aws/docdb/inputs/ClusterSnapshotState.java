@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.docdb.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -22,10 +22,10 @@ public final class ClusterSnapshotState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="availabilityZones")
-      private final @Nullable Input<List<String>> availabilityZones;
+      private final @Nullable Output<List<String>> availabilityZones;
 
-    public Input<List<String>> getAvailabilityZones() {
-        return this.availabilityZones == null ? Input.empty() : this.availabilityZones;
+    public Output<List<String>> getAvailabilityZones() {
+        return this.availabilityZones == null ? Output.empty() : this.availabilityZones;
     }
 
     /**
@@ -33,10 +33,10 @@ public final class ClusterSnapshotState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="dbClusterIdentifier")
-      private final @Nullable Input<String> dbClusterIdentifier;
+      private final @Nullable Output<String> dbClusterIdentifier;
 
-    public Input<String> getDbClusterIdentifier() {
-        return this.dbClusterIdentifier == null ? Input.empty() : this.dbClusterIdentifier;
+    public Output<String> getDbClusterIdentifier() {
+        return this.dbClusterIdentifier == null ? Output.empty() : this.dbClusterIdentifier;
     }
 
     /**
@@ -44,10 +44,10 @@ public final class ClusterSnapshotState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="dbClusterSnapshotArn")
-      private final @Nullable Input<String> dbClusterSnapshotArn;
+      private final @Nullable Output<String> dbClusterSnapshotArn;
 
-    public Input<String> getDbClusterSnapshotArn() {
-        return this.dbClusterSnapshotArn == null ? Input.empty() : this.dbClusterSnapshotArn;
+    public Output<String> getDbClusterSnapshotArn() {
+        return this.dbClusterSnapshotArn == null ? Output.empty() : this.dbClusterSnapshotArn;
     }
 
     /**
@@ -55,10 +55,10 @@ public final class ClusterSnapshotState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="dbClusterSnapshotIdentifier")
-      private final @Nullable Input<String> dbClusterSnapshotIdentifier;
+      private final @Nullable Output<String> dbClusterSnapshotIdentifier;
 
-    public Input<String> getDbClusterSnapshotIdentifier() {
-        return this.dbClusterSnapshotIdentifier == null ? Input.empty() : this.dbClusterSnapshotIdentifier;
+    public Output<String> getDbClusterSnapshotIdentifier() {
+        return this.dbClusterSnapshotIdentifier == null ? Output.empty() : this.dbClusterSnapshotIdentifier;
     }
 
     /**
@@ -66,10 +66,10 @@ public final class ClusterSnapshotState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="engine")
-      private final @Nullable Input<String> engine;
+      private final @Nullable Output<String> engine;
 
-    public Input<String> getEngine() {
-        return this.engine == null ? Input.empty() : this.engine;
+    public Output<String> getEngine() {
+        return this.engine == null ? Output.empty() : this.engine;
     }
 
     /**
@@ -77,10 +77,10 @@ public final class ClusterSnapshotState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="engineVersion")
-      private final @Nullable Input<String> engineVersion;
+      private final @Nullable Output<String> engineVersion;
 
-    public Input<String> getEngineVersion() {
-        return this.engineVersion == null ? Input.empty() : this.engineVersion;
+    public Output<String> getEngineVersion() {
+        return this.engineVersion == null ? Output.empty() : this.engineVersion;
     }
 
     /**
@@ -88,10 +88,10 @@ public final class ClusterSnapshotState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="kmsKeyId")
-      private final @Nullable Input<String> kmsKeyId;
+      private final @Nullable Output<String> kmsKeyId;
 
-    public Input<String> getKmsKeyId() {
-        return this.kmsKeyId == null ? Input.empty() : this.kmsKeyId;
+    public Output<String> getKmsKeyId() {
+        return this.kmsKeyId == null ? Output.empty() : this.kmsKeyId;
     }
 
     /**
@@ -99,24 +99,24 @@ public final class ClusterSnapshotState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="port")
-      private final @Nullable Input<Integer> port;
+      private final @Nullable Output<Integer> port;
 
-    public Input<Integer> getPort() {
-        return this.port == null ? Input.empty() : this.port;
+    public Output<Integer> getPort() {
+        return this.port == null ? Output.empty() : this.port;
     }
 
     @InputImport(name="snapshotType")
-      private final @Nullable Input<String> snapshotType;
+      private final @Nullable Output<String> snapshotType;
 
-    public Input<String> getSnapshotType() {
-        return this.snapshotType == null ? Input.empty() : this.snapshotType;
+    public Output<String> getSnapshotType() {
+        return this.snapshotType == null ? Output.empty() : this.snapshotType;
     }
 
     @InputImport(name="sourceDbClusterSnapshotArn")
-      private final @Nullable Input<String> sourceDbClusterSnapshotArn;
+      private final @Nullable Output<String> sourceDbClusterSnapshotArn;
 
-    public Input<String> getSourceDbClusterSnapshotArn() {
-        return this.sourceDbClusterSnapshotArn == null ? Input.empty() : this.sourceDbClusterSnapshotArn;
+    public Output<String> getSourceDbClusterSnapshotArn() {
+        return this.sourceDbClusterSnapshotArn == null ? Output.empty() : this.sourceDbClusterSnapshotArn;
     }
 
     /**
@@ -124,10 +124,10 @@ public final class ClusterSnapshotState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="status")
-      private final @Nullable Input<String> status;
+      private final @Nullable Output<String> status;
 
-    public Input<String> getStatus() {
-        return this.status == null ? Input.empty() : this.status;
+    public Output<String> getStatus() {
+        return this.status == null ? Output.empty() : this.status;
     }
 
     /**
@@ -135,10 +135,10 @@ public final class ClusterSnapshotState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="storageEncrypted")
-      private final @Nullable Input<Boolean> storageEncrypted;
+      private final @Nullable Output<Boolean> storageEncrypted;
 
-    public Input<Boolean> getStorageEncrypted() {
-        return this.storageEncrypted == null ? Input.empty() : this.storageEncrypted;
+    public Output<Boolean> getStorageEncrypted() {
+        return this.storageEncrypted == null ? Output.empty() : this.storageEncrypted;
     }
 
     /**
@@ -146,26 +146,26 @@ public final class ClusterSnapshotState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="vpcId")
-      private final @Nullable Input<String> vpcId;
+      private final @Nullable Output<String> vpcId;
 
-    public Input<String> getVpcId() {
-        return this.vpcId == null ? Input.empty() : this.vpcId;
+    public Output<String> getVpcId() {
+        return this.vpcId == null ? Output.empty() : this.vpcId;
     }
 
     public ClusterSnapshotState(
-        @Nullable Input<List<String>> availabilityZones,
-        @Nullable Input<String> dbClusterIdentifier,
-        @Nullable Input<String> dbClusterSnapshotArn,
-        @Nullable Input<String> dbClusterSnapshotIdentifier,
-        @Nullable Input<String> engine,
-        @Nullable Input<String> engineVersion,
-        @Nullable Input<String> kmsKeyId,
-        @Nullable Input<Integer> port,
-        @Nullable Input<String> snapshotType,
-        @Nullable Input<String> sourceDbClusterSnapshotArn,
-        @Nullable Input<String> status,
-        @Nullable Input<Boolean> storageEncrypted,
-        @Nullable Input<String> vpcId) {
+        @Nullable Output<List<String>> availabilityZones,
+        @Nullable Output<String> dbClusterIdentifier,
+        @Nullable Output<String> dbClusterSnapshotArn,
+        @Nullable Output<String> dbClusterSnapshotIdentifier,
+        @Nullable Output<String> engine,
+        @Nullable Output<String> engineVersion,
+        @Nullable Output<String> kmsKeyId,
+        @Nullable Output<Integer> port,
+        @Nullable Output<String> snapshotType,
+        @Nullable Output<String> sourceDbClusterSnapshotArn,
+        @Nullable Output<String> status,
+        @Nullable Output<Boolean> storageEncrypted,
+        @Nullable Output<String> vpcId) {
         this.availabilityZones = availabilityZones;
         this.dbClusterIdentifier = dbClusterIdentifier;
         this.dbClusterSnapshotArn = dbClusterSnapshotArn;
@@ -182,19 +182,19 @@ public final class ClusterSnapshotState extends io.pulumi.resources.ResourceArgs
     }
 
     private ClusterSnapshotState() {
-        this.availabilityZones = Input.empty();
-        this.dbClusterIdentifier = Input.empty();
-        this.dbClusterSnapshotArn = Input.empty();
-        this.dbClusterSnapshotIdentifier = Input.empty();
-        this.engine = Input.empty();
-        this.engineVersion = Input.empty();
-        this.kmsKeyId = Input.empty();
-        this.port = Input.empty();
-        this.snapshotType = Input.empty();
-        this.sourceDbClusterSnapshotArn = Input.empty();
-        this.status = Input.empty();
-        this.storageEncrypted = Input.empty();
-        this.vpcId = Input.empty();
+        this.availabilityZones = Output.empty();
+        this.dbClusterIdentifier = Output.empty();
+        this.dbClusterSnapshotArn = Output.empty();
+        this.dbClusterSnapshotIdentifier = Output.empty();
+        this.engine = Output.empty();
+        this.engineVersion = Output.empty();
+        this.kmsKeyId = Output.empty();
+        this.port = Output.empty();
+        this.snapshotType = Output.empty();
+        this.sourceDbClusterSnapshotArn = Output.empty();
+        this.status = Output.empty();
+        this.storageEncrypted = Output.empty();
+        this.vpcId = Output.empty();
     }
 
     public static Builder builder() {
@@ -206,19 +206,19 @@ public final class ClusterSnapshotState extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> availabilityZones;
-        private @Nullable Input<String> dbClusterIdentifier;
-        private @Nullable Input<String> dbClusterSnapshotArn;
-        private @Nullable Input<String> dbClusterSnapshotIdentifier;
-        private @Nullable Input<String> engine;
-        private @Nullable Input<String> engineVersion;
-        private @Nullable Input<String> kmsKeyId;
-        private @Nullable Input<Integer> port;
-        private @Nullable Input<String> snapshotType;
-        private @Nullable Input<String> sourceDbClusterSnapshotArn;
-        private @Nullable Input<String> status;
-        private @Nullable Input<Boolean> storageEncrypted;
-        private @Nullable Input<String> vpcId;
+        private @Nullable Output<List<String>> availabilityZones;
+        private @Nullable Output<String> dbClusterIdentifier;
+        private @Nullable Output<String> dbClusterSnapshotArn;
+        private @Nullable Output<String> dbClusterSnapshotIdentifier;
+        private @Nullable Output<String> engine;
+        private @Nullable Output<String> engineVersion;
+        private @Nullable Output<String> kmsKeyId;
+        private @Nullable Output<Integer> port;
+        private @Nullable Output<String> snapshotType;
+        private @Nullable Output<String> sourceDbClusterSnapshotArn;
+        private @Nullable Output<String> status;
+        private @Nullable Output<Boolean> storageEncrypted;
+        private @Nullable Output<String> vpcId;
 
         public Builder() {
     	      // Empty
@@ -241,133 +241,133 @@ public final class ClusterSnapshotState extends io.pulumi.resources.ResourceArgs
     	      this.vpcId = defaults.vpcId;
         }
 
-        public Builder availabilityZones(@Nullable Input<List<String>> availabilityZones) {
+        public Builder availabilityZones(@Nullable Output<List<String>> availabilityZones) {
             this.availabilityZones = availabilityZones;
             return this;
         }
 
         public Builder availabilityZones(@Nullable List<String> availabilityZones) {
-            this.availabilityZones = Input.ofNullable(availabilityZones);
+            this.availabilityZones = Output.ofNullable(availabilityZones);
             return this;
         }
 
-        public Builder dbClusterIdentifier(@Nullable Input<String> dbClusterIdentifier) {
+        public Builder dbClusterIdentifier(@Nullable Output<String> dbClusterIdentifier) {
             this.dbClusterIdentifier = dbClusterIdentifier;
             return this;
         }
 
         public Builder dbClusterIdentifier(@Nullable String dbClusterIdentifier) {
-            this.dbClusterIdentifier = Input.ofNullable(dbClusterIdentifier);
+            this.dbClusterIdentifier = Output.ofNullable(dbClusterIdentifier);
             return this;
         }
 
-        public Builder dbClusterSnapshotArn(@Nullable Input<String> dbClusterSnapshotArn) {
+        public Builder dbClusterSnapshotArn(@Nullable Output<String> dbClusterSnapshotArn) {
             this.dbClusterSnapshotArn = dbClusterSnapshotArn;
             return this;
         }
 
         public Builder dbClusterSnapshotArn(@Nullable String dbClusterSnapshotArn) {
-            this.dbClusterSnapshotArn = Input.ofNullable(dbClusterSnapshotArn);
+            this.dbClusterSnapshotArn = Output.ofNullable(dbClusterSnapshotArn);
             return this;
         }
 
-        public Builder dbClusterSnapshotIdentifier(@Nullable Input<String> dbClusterSnapshotIdentifier) {
+        public Builder dbClusterSnapshotIdentifier(@Nullable Output<String> dbClusterSnapshotIdentifier) {
             this.dbClusterSnapshotIdentifier = dbClusterSnapshotIdentifier;
             return this;
         }
 
         public Builder dbClusterSnapshotIdentifier(@Nullable String dbClusterSnapshotIdentifier) {
-            this.dbClusterSnapshotIdentifier = Input.ofNullable(dbClusterSnapshotIdentifier);
+            this.dbClusterSnapshotIdentifier = Output.ofNullable(dbClusterSnapshotIdentifier);
             return this;
         }
 
-        public Builder engine(@Nullable Input<String> engine) {
+        public Builder engine(@Nullable Output<String> engine) {
             this.engine = engine;
             return this;
         }
 
         public Builder engine(@Nullable String engine) {
-            this.engine = Input.ofNullable(engine);
+            this.engine = Output.ofNullable(engine);
             return this;
         }
 
-        public Builder engineVersion(@Nullable Input<String> engineVersion) {
+        public Builder engineVersion(@Nullable Output<String> engineVersion) {
             this.engineVersion = engineVersion;
             return this;
         }
 
         public Builder engineVersion(@Nullable String engineVersion) {
-            this.engineVersion = Input.ofNullable(engineVersion);
+            this.engineVersion = Output.ofNullable(engineVersion);
             return this;
         }
 
-        public Builder kmsKeyId(@Nullable Input<String> kmsKeyId) {
+        public Builder kmsKeyId(@Nullable Output<String> kmsKeyId) {
             this.kmsKeyId = kmsKeyId;
             return this;
         }
 
         public Builder kmsKeyId(@Nullable String kmsKeyId) {
-            this.kmsKeyId = Input.ofNullable(kmsKeyId);
+            this.kmsKeyId = Output.ofNullable(kmsKeyId);
             return this;
         }
 
-        public Builder port(@Nullable Input<Integer> port) {
+        public Builder port(@Nullable Output<Integer> port) {
             this.port = port;
             return this;
         }
 
         public Builder port(@Nullable Integer port) {
-            this.port = Input.ofNullable(port);
+            this.port = Output.ofNullable(port);
             return this;
         }
 
-        public Builder snapshotType(@Nullable Input<String> snapshotType) {
+        public Builder snapshotType(@Nullable Output<String> snapshotType) {
             this.snapshotType = snapshotType;
             return this;
         }
 
         public Builder snapshotType(@Nullable String snapshotType) {
-            this.snapshotType = Input.ofNullable(snapshotType);
+            this.snapshotType = Output.ofNullable(snapshotType);
             return this;
         }
 
-        public Builder sourceDbClusterSnapshotArn(@Nullable Input<String> sourceDbClusterSnapshotArn) {
+        public Builder sourceDbClusterSnapshotArn(@Nullable Output<String> sourceDbClusterSnapshotArn) {
             this.sourceDbClusterSnapshotArn = sourceDbClusterSnapshotArn;
             return this;
         }
 
         public Builder sourceDbClusterSnapshotArn(@Nullable String sourceDbClusterSnapshotArn) {
-            this.sourceDbClusterSnapshotArn = Input.ofNullable(sourceDbClusterSnapshotArn);
+            this.sourceDbClusterSnapshotArn = Output.ofNullable(sourceDbClusterSnapshotArn);
             return this;
         }
 
-        public Builder status(@Nullable Input<String> status) {
+        public Builder status(@Nullable Output<String> status) {
             this.status = status;
             return this;
         }
 
         public Builder status(@Nullable String status) {
-            this.status = Input.ofNullable(status);
+            this.status = Output.ofNullable(status);
             return this;
         }
 
-        public Builder storageEncrypted(@Nullable Input<Boolean> storageEncrypted) {
+        public Builder storageEncrypted(@Nullable Output<Boolean> storageEncrypted) {
             this.storageEncrypted = storageEncrypted;
             return this;
         }
 
         public Builder storageEncrypted(@Nullable Boolean storageEncrypted) {
-            this.storageEncrypted = Input.ofNullable(storageEncrypted);
+            this.storageEncrypted = Output.ofNullable(storageEncrypted);
             return this;
         }
 
-        public Builder vpcId(@Nullable Input<String> vpcId) {
+        public Builder vpcId(@Nullable Output<String> vpcId) {
             this.vpcId = vpcId;
             return this;
         }
 
         public Builder vpcId(@Nullable String vpcId) {
-            this.vpcId = Input.ofNullable(vpcId);
+            this.vpcId = Output.ofNullable(vpcId);
             return this;
         }
         public ClusterSnapshotState build() {

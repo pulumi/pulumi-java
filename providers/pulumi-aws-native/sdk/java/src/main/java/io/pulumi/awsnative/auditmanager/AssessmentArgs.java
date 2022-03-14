@@ -9,7 +9,7 @@ import io.pulumi.awsnative.auditmanager.inputs.AssessmentReportsDestinationArgs;
 import io.pulumi.awsnative.auditmanager.inputs.AssessmentRoleArgs;
 import io.pulumi.awsnative.auditmanager.inputs.AssessmentScopeArgs;
 import io.pulumi.awsnative.auditmanager.inputs.AssessmentTagArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -22,38 +22,38 @@ public final class AssessmentArgs extends io.pulumi.resources.ResourceArgs {
     public static final AssessmentArgs Empty = new AssessmentArgs();
 
     @InputImport(name="assessmentReportsDestination")
-      private final @Nullable Input<AssessmentReportsDestinationArgs> assessmentReportsDestination;
+      private final @Nullable Output<AssessmentReportsDestinationArgs> assessmentReportsDestination;
 
-    public Input<AssessmentReportsDestinationArgs> getAssessmentReportsDestination() {
-        return this.assessmentReportsDestination == null ? Input.empty() : this.assessmentReportsDestination;
+    public Output<AssessmentReportsDestinationArgs> getAssessmentReportsDestination() {
+        return this.assessmentReportsDestination == null ? Output.empty() : this.assessmentReportsDestination;
     }
 
     @InputImport(name="awsAccount")
-      private final @Nullable Input<AssessmentAWSAccountArgs> awsAccount;
+      private final @Nullable Output<AssessmentAWSAccountArgs> awsAccount;
 
-    public Input<AssessmentAWSAccountArgs> getAwsAccount() {
-        return this.awsAccount == null ? Input.empty() : this.awsAccount;
+    public Output<AssessmentAWSAccountArgs> getAwsAccount() {
+        return this.awsAccount == null ? Output.empty() : this.awsAccount;
     }
 
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     @InputImport(name="frameworkId")
-      private final @Nullable Input<String> frameworkId;
+      private final @Nullable Output<String> frameworkId;
 
-    public Input<String> getFrameworkId() {
-        return this.frameworkId == null ? Input.empty() : this.frameworkId;
+    public Output<String> getFrameworkId() {
+        return this.frameworkId == null ? Output.empty() : this.frameworkId;
     }
 
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -61,24 +61,24 @@ public final class AssessmentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="roles")
-      private final @Nullable Input<List<AssessmentRoleArgs>> roles;
+      private final @Nullable Output<List<AssessmentRoleArgs>> roles;
 
-    public Input<List<AssessmentRoleArgs>> getRoles() {
-        return this.roles == null ? Input.empty() : this.roles;
+    public Output<List<AssessmentRoleArgs>> getRoles() {
+        return this.roles == null ? Output.empty() : this.roles;
     }
 
     @InputImport(name="scope")
-      private final @Nullable Input<AssessmentScopeArgs> scope;
+      private final @Nullable Output<AssessmentScopeArgs> scope;
 
-    public Input<AssessmentScopeArgs> getScope() {
-        return this.scope == null ? Input.empty() : this.scope;
+    public Output<AssessmentScopeArgs> getScope() {
+        return this.scope == null ? Output.empty() : this.scope;
     }
 
     @InputImport(name="status")
-      private final @Nullable Input<AssessmentStatus> status;
+      private final @Nullable Output<AssessmentStatus> status;
 
-    public Input<AssessmentStatus> getStatus() {
-        return this.status == null ? Input.empty() : this.status;
+    public Output<AssessmentStatus> getStatus() {
+        return this.status == null ? Output.empty() : this.status;
     }
 
     /**
@@ -86,22 +86,22 @@ public final class AssessmentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<List<AssessmentTagArgs>> tags;
+      private final @Nullable Output<List<AssessmentTagArgs>> tags;
 
-    public Input<List<AssessmentTagArgs>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<List<AssessmentTagArgs>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public AssessmentArgs(
-        @Nullable Input<AssessmentReportsDestinationArgs> assessmentReportsDestination,
-        @Nullable Input<AssessmentAWSAccountArgs> awsAccount,
-        @Nullable Input<String> description,
-        @Nullable Input<String> frameworkId,
-        @Nullable Input<String> name,
-        @Nullable Input<List<AssessmentRoleArgs>> roles,
-        @Nullable Input<AssessmentScopeArgs> scope,
-        @Nullable Input<AssessmentStatus> status,
-        @Nullable Input<List<AssessmentTagArgs>> tags) {
+        @Nullable Output<AssessmentReportsDestinationArgs> assessmentReportsDestination,
+        @Nullable Output<AssessmentAWSAccountArgs> awsAccount,
+        @Nullable Output<String> description,
+        @Nullable Output<String> frameworkId,
+        @Nullable Output<String> name,
+        @Nullable Output<List<AssessmentRoleArgs>> roles,
+        @Nullable Output<AssessmentScopeArgs> scope,
+        @Nullable Output<AssessmentStatus> status,
+        @Nullable Output<List<AssessmentTagArgs>> tags) {
         this.assessmentReportsDestination = assessmentReportsDestination;
         this.awsAccount = awsAccount;
         this.description = description;
@@ -114,15 +114,15 @@ public final class AssessmentArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private AssessmentArgs() {
-        this.assessmentReportsDestination = Input.empty();
-        this.awsAccount = Input.empty();
-        this.description = Input.empty();
-        this.frameworkId = Input.empty();
-        this.name = Input.empty();
-        this.roles = Input.empty();
-        this.scope = Input.empty();
-        this.status = Input.empty();
-        this.tags = Input.empty();
+        this.assessmentReportsDestination = Output.empty();
+        this.awsAccount = Output.empty();
+        this.description = Output.empty();
+        this.frameworkId = Output.empty();
+        this.name = Output.empty();
+        this.roles = Output.empty();
+        this.scope = Output.empty();
+        this.status = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -134,15 +134,15 @@ public final class AssessmentArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<AssessmentReportsDestinationArgs> assessmentReportsDestination;
-        private @Nullable Input<AssessmentAWSAccountArgs> awsAccount;
-        private @Nullable Input<String> description;
-        private @Nullable Input<String> frameworkId;
-        private @Nullable Input<String> name;
-        private @Nullable Input<List<AssessmentRoleArgs>> roles;
-        private @Nullable Input<AssessmentScopeArgs> scope;
-        private @Nullable Input<AssessmentStatus> status;
-        private @Nullable Input<List<AssessmentTagArgs>> tags;
+        private @Nullable Output<AssessmentReportsDestinationArgs> assessmentReportsDestination;
+        private @Nullable Output<AssessmentAWSAccountArgs> awsAccount;
+        private @Nullable Output<String> description;
+        private @Nullable Output<String> frameworkId;
+        private @Nullable Output<String> name;
+        private @Nullable Output<List<AssessmentRoleArgs>> roles;
+        private @Nullable Output<AssessmentScopeArgs> scope;
+        private @Nullable Output<AssessmentStatus> status;
+        private @Nullable Output<List<AssessmentTagArgs>> tags;
 
         public Builder() {
     	      // Empty
@@ -161,93 +161,93 @@ public final class AssessmentArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder assessmentReportsDestination(@Nullable Input<AssessmentReportsDestinationArgs> assessmentReportsDestination) {
+        public Builder assessmentReportsDestination(@Nullable Output<AssessmentReportsDestinationArgs> assessmentReportsDestination) {
             this.assessmentReportsDestination = assessmentReportsDestination;
             return this;
         }
 
         public Builder assessmentReportsDestination(@Nullable AssessmentReportsDestinationArgs assessmentReportsDestination) {
-            this.assessmentReportsDestination = Input.ofNullable(assessmentReportsDestination);
+            this.assessmentReportsDestination = Output.ofNullable(assessmentReportsDestination);
             return this;
         }
 
-        public Builder awsAccount(@Nullable Input<AssessmentAWSAccountArgs> awsAccount) {
+        public Builder awsAccount(@Nullable Output<AssessmentAWSAccountArgs> awsAccount) {
             this.awsAccount = awsAccount;
             return this;
         }
 
         public Builder awsAccount(@Nullable AssessmentAWSAccountArgs awsAccount) {
-            this.awsAccount = Input.ofNullable(awsAccount);
+            this.awsAccount = Output.ofNullable(awsAccount);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder frameworkId(@Nullable Input<String> frameworkId) {
+        public Builder frameworkId(@Nullable Output<String> frameworkId) {
             this.frameworkId = frameworkId;
             return this;
         }
 
         public Builder frameworkId(@Nullable String frameworkId) {
-            this.frameworkId = Input.ofNullable(frameworkId);
+            this.frameworkId = Output.ofNullable(frameworkId);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder roles(@Nullable Input<List<AssessmentRoleArgs>> roles) {
+        public Builder roles(@Nullable Output<List<AssessmentRoleArgs>> roles) {
             this.roles = roles;
             return this;
         }
 
         public Builder roles(@Nullable List<AssessmentRoleArgs> roles) {
-            this.roles = Input.ofNullable(roles);
+            this.roles = Output.ofNullable(roles);
             return this;
         }
 
-        public Builder scope(@Nullable Input<AssessmentScopeArgs> scope) {
+        public Builder scope(@Nullable Output<AssessmentScopeArgs> scope) {
             this.scope = scope;
             return this;
         }
 
         public Builder scope(@Nullable AssessmentScopeArgs scope) {
-            this.scope = Input.ofNullable(scope);
+            this.scope = Output.ofNullable(scope);
             return this;
         }
 
-        public Builder status(@Nullable Input<AssessmentStatus> status) {
+        public Builder status(@Nullable Output<AssessmentStatus> status) {
             this.status = status;
             return this;
         }
 
         public Builder status(@Nullable AssessmentStatus status) {
-            this.status = Input.ofNullable(status);
+            this.status = Output.ofNullable(status);
             return this;
         }
 
-        public Builder tags(@Nullable Input<List<AssessmentTagArgs>> tags) {
+        public Builder tags(@Nullable Output<List<AssessmentTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable List<AssessmentTagArgs> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public AssessmentArgs build() {

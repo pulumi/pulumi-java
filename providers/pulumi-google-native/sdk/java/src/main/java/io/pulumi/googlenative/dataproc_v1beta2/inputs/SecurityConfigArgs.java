@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dataproc_v1beta2.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dataproc_v1beta2.inputs.KerberosConfigArgs;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class SecurityConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kerberosConfig")
-      private final @Nullable Input<KerberosConfigArgs> kerberosConfig;
+      private final @Nullable Output<KerberosConfigArgs> kerberosConfig;
 
-    public Input<KerberosConfigArgs> getKerberosConfig() {
-        return this.kerberosConfig == null ? Input.empty() : this.kerberosConfig;
+    public Output<KerberosConfigArgs> getKerberosConfig() {
+        return this.kerberosConfig == null ? Output.empty() : this.kerberosConfig;
     }
 
-    public SecurityConfigArgs(@Nullable Input<KerberosConfigArgs> kerberosConfig) {
+    public SecurityConfigArgs(@Nullable Output<KerberosConfigArgs> kerberosConfig) {
         this.kerberosConfig = kerberosConfig;
     }
 
     private SecurityConfigArgs() {
-        this.kerberosConfig = Input.empty();
+        this.kerberosConfig = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class SecurityConfigArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<KerberosConfigArgs> kerberosConfig;
+        private @Nullable Output<KerberosConfigArgs> kerberosConfig;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class SecurityConfigArgs extends io.pulumi.resources.ResourceArgs {
     	      this.kerberosConfig = defaults.kerberosConfig;
         }
 
-        public Builder kerberosConfig(@Nullable Input<KerberosConfigArgs> kerberosConfig) {
+        public Builder kerberosConfig(@Nullable Output<KerberosConfigArgs> kerberosConfig) {
             this.kerberosConfig = kerberosConfig;
             return this;
         }
 
         public Builder kerberosConfig(@Nullable KerberosConfigArgs kerberosConfig) {
-            this.kerberosConfig = Input.ofNullable(kerberosConfig);
+            this.kerberosConfig = Output.ofNullable(kerberosConfig);
             return this;
         }
         public SecurityConfigArgs build() {

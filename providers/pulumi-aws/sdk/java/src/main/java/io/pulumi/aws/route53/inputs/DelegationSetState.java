@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.route53.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -20,10 +20,10 @@ public final class DelegationSetState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arn")
-      private final @Nullable Input<String> arn;
+      private final @Nullable Output<String> arn;
 
-    public Input<String> getArn() {
-        return this.arn == null ? Input.empty() : this.arn;
+    public Output<String> getArn() {
+        return this.arn == null ? Output.empty() : this.arn;
     }
 
     /**
@@ -32,10 +32,10 @@ public final class DelegationSetState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="nameServers")
-      private final @Nullable Input<List<String>> nameServers;
+      private final @Nullable Output<List<String>> nameServers;
 
-    public Input<List<String>> getNameServers() {
-        return this.nameServers == null ? Input.empty() : this.nameServers;
+    public Output<List<String>> getNameServers() {
+        return this.nameServers == null ? Output.empty() : this.nameServers;
     }
 
     /**
@@ -44,25 +44,25 @@ public final class DelegationSetState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="referenceName")
-      private final @Nullable Input<String> referenceName;
+      private final @Nullable Output<String> referenceName;
 
-    public Input<String> getReferenceName() {
-        return this.referenceName == null ? Input.empty() : this.referenceName;
+    public Output<String> getReferenceName() {
+        return this.referenceName == null ? Output.empty() : this.referenceName;
     }
 
     public DelegationSetState(
-        @Nullable Input<String> arn,
-        @Nullable Input<List<String>> nameServers,
-        @Nullable Input<String> referenceName) {
+        @Nullable Output<String> arn,
+        @Nullable Output<List<String>> nameServers,
+        @Nullable Output<String> referenceName) {
         this.arn = arn;
         this.nameServers = nameServers;
         this.referenceName = referenceName;
     }
 
     private DelegationSetState() {
-        this.arn = Input.empty();
-        this.nameServers = Input.empty();
-        this.referenceName = Input.empty();
+        this.arn = Output.empty();
+        this.nameServers = Output.empty();
+        this.referenceName = Output.empty();
     }
 
     public static Builder builder() {
@@ -74,9 +74,9 @@ public final class DelegationSetState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> arn;
-        private @Nullable Input<List<String>> nameServers;
-        private @Nullable Input<String> referenceName;
+        private @Nullable Output<String> arn;
+        private @Nullable Output<List<String>> nameServers;
+        private @Nullable Output<String> referenceName;
 
         public Builder() {
     	      // Empty
@@ -89,33 +89,33 @@ public final class DelegationSetState extends io.pulumi.resources.ResourceArgs {
     	      this.referenceName = defaults.referenceName;
         }
 
-        public Builder arn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
 
         public Builder arn(@Nullable String arn) {
-            this.arn = Input.ofNullable(arn);
+            this.arn = Output.ofNullable(arn);
             return this;
         }
 
-        public Builder nameServers(@Nullable Input<List<String>> nameServers) {
+        public Builder nameServers(@Nullable Output<List<String>> nameServers) {
             this.nameServers = nameServers;
             return this;
         }
 
         public Builder nameServers(@Nullable List<String> nameServers) {
-            this.nameServers = Input.ofNullable(nameServers);
+            this.nameServers = Output.ofNullable(nameServers);
             return this;
         }
 
-        public Builder referenceName(@Nullable Input<String> referenceName) {
+        public Builder referenceName(@Nullable Output<String> referenceName) {
             this.referenceName = referenceName;
             return this;
         }
 
         public Builder referenceName(@Nullable String referenceName) {
-            this.referenceName = Input.ofNullable(referenceName);
+            this.referenceName = Output.ofNullable(referenceName);
             return this;
         }
         public DelegationSetState build() {

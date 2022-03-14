@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.clouddeploy_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class GkeClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="cluster")
-      private final @Nullable Input<String> cluster;
+      private final @Nullable Output<String> cluster;
 
-    public Input<String> getCluster() {
-        return this.cluster == null ? Input.empty() : this.cluster;
+    public Output<String> getCluster() {
+        return this.cluster == null ? Output.empty() : this.cluster;
     }
 
-    public GkeClusterArgs(@Nullable Input<String> cluster) {
+    public GkeClusterArgs(@Nullable Output<String> cluster) {
         this.cluster = cluster;
     }
 
     private GkeClusterArgs() {
-        this.cluster = Input.empty();
+        this.cluster = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class GkeClusterArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> cluster;
+        private @Nullable Output<String> cluster;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class GkeClusterArgs extends io.pulumi.resources.ResourceArgs {
     	      this.cluster = defaults.cluster;
         }
 
-        public Builder cluster(@Nullable Input<String> cluster) {
+        public Builder cluster(@Nullable Output<String> cluster) {
             this.cluster = cluster;
             return this;
         }
 
         public Builder cluster(@Nullable String cluster) {
-            this.cluster = Input.ofNullable(cluster);
+            this.cluster = Output.ofNullable(cluster);
             return this;
         }
         public GkeClusterArgs build() {

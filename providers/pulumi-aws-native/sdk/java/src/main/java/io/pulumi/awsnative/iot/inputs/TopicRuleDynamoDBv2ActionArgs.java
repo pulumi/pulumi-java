@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.iot.inputs;
 
 import io.pulumi.awsnative.iot.inputs.TopicRulePutItemInputArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -16,29 +16,29 @@ public final class TopicRuleDynamoDBv2ActionArgs extends io.pulumi.resources.Res
     public static final TopicRuleDynamoDBv2ActionArgs Empty = new TopicRuleDynamoDBv2ActionArgs();
 
     @InputImport(name="putItem")
-      private final @Nullable Input<TopicRulePutItemInputArgs> putItem;
+      private final @Nullable Output<TopicRulePutItemInputArgs> putItem;
 
-    public Input<TopicRulePutItemInputArgs> getPutItem() {
-        return this.putItem == null ? Input.empty() : this.putItem;
+    public Output<TopicRulePutItemInputArgs> getPutItem() {
+        return this.putItem == null ? Output.empty() : this.putItem;
     }
 
     @InputImport(name="roleArn")
-      private final @Nullable Input<String> roleArn;
+      private final @Nullable Output<String> roleArn;
 
-    public Input<String> getRoleArn() {
-        return this.roleArn == null ? Input.empty() : this.roleArn;
+    public Output<String> getRoleArn() {
+        return this.roleArn == null ? Output.empty() : this.roleArn;
     }
 
     public TopicRuleDynamoDBv2ActionArgs(
-        @Nullable Input<TopicRulePutItemInputArgs> putItem,
-        @Nullable Input<String> roleArn) {
+        @Nullable Output<TopicRulePutItemInputArgs> putItem,
+        @Nullable Output<String> roleArn) {
         this.putItem = putItem;
         this.roleArn = roleArn;
     }
 
     private TopicRuleDynamoDBv2ActionArgs() {
-        this.putItem = Input.empty();
-        this.roleArn = Input.empty();
+        this.putItem = Output.empty();
+        this.roleArn = Output.empty();
     }
 
     public static Builder builder() {
@@ -50,8 +50,8 @@ public final class TopicRuleDynamoDBv2ActionArgs extends io.pulumi.resources.Res
     }
 
     public static final class Builder {
-        private @Nullable Input<TopicRulePutItemInputArgs> putItem;
-        private @Nullable Input<String> roleArn;
+        private @Nullable Output<TopicRulePutItemInputArgs> putItem;
+        private @Nullable Output<String> roleArn;
 
         public Builder() {
     	      // Empty
@@ -63,23 +63,23 @@ public final class TopicRuleDynamoDBv2ActionArgs extends io.pulumi.resources.Res
     	      this.roleArn = defaults.roleArn;
         }
 
-        public Builder putItem(@Nullable Input<TopicRulePutItemInputArgs> putItem) {
+        public Builder putItem(@Nullable Output<TopicRulePutItemInputArgs> putItem) {
             this.putItem = putItem;
             return this;
         }
 
         public Builder putItem(@Nullable TopicRulePutItemInputArgs putItem) {
-            this.putItem = Input.ofNullable(putItem);
+            this.putItem = Output.ofNullable(putItem);
             return this;
         }
 
-        public Builder roleArn(@Nullable Input<String> roleArn) {
+        public Builder roleArn(@Nullable Output<String> roleArn) {
             this.roleArn = roleArn;
             return this;
         }
 
         public Builder roleArn(@Nullable String roleArn) {
-            this.roleArn = Input.ofNullable(roleArn);
+            this.roleArn = Output.ofNullable(roleArn);
             return this;
         }
         public TopicRuleDynamoDBv2ActionArgs build() {

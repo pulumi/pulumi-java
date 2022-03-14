@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.apps_v1beta2.inputs;
 
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -25,18 +25,18 @@ public final class RollingUpdateDaemonSetArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="maxUnavailable")
-      private final @Nullable Input<Either<Integer,String>> maxUnavailable;
+      private final @Nullable Output<Either<Integer,String>> maxUnavailable;
 
-    public Input<Either<Integer,String>> getMaxUnavailable() {
-        return this.maxUnavailable == null ? Input.empty() : this.maxUnavailable;
+    public Output<Either<Integer,String>> getMaxUnavailable() {
+        return this.maxUnavailable == null ? Output.empty() : this.maxUnavailable;
     }
 
-    public RollingUpdateDaemonSetArgs(@Nullable Input<Either<Integer,String>> maxUnavailable) {
+    public RollingUpdateDaemonSetArgs(@Nullable Output<Either<Integer,String>> maxUnavailable) {
         this.maxUnavailable = maxUnavailable;
     }
 
     private RollingUpdateDaemonSetArgs() {
-        this.maxUnavailable = Input.empty();
+        this.maxUnavailable = Output.empty();
     }
 
     public static Builder builder() {
@@ -48,7 +48,7 @@ public final class RollingUpdateDaemonSetArgs extends io.pulumi.resources.Resour
     }
 
     public static final class Builder {
-        private @Nullable Input<Either<Integer,String>> maxUnavailable;
+        private @Nullable Output<Either<Integer,String>> maxUnavailable;
 
         public Builder() {
     	      // Empty
@@ -59,13 +59,13 @@ public final class RollingUpdateDaemonSetArgs extends io.pulumi.resources.Resour
     	      this.maxUnavailable = defaults.maxUnavailable;
         }
 
-        public Builder maxUnavailable(@Nullable Input<Either<Integer,String>> maxUnavailable) {
+        public Builder maxUnavailable(@Nullable Output<Either<Integer,String>> maxUnavailable) {
             this.maxUnavailable = maxUnavailable;
             return this;
         }
 
         public Builder maxUnavailable(@Nullable Either<Integer,String> maxUnavailable) {
-            this.maxUnavailable = Input.ofNullable(maxUnavailable);
+            this.maxUnavailable = Output.ofNullable(maxUnavailable);
             return this;
         }
         public RollingUpdateDaemonSetArgs build() {

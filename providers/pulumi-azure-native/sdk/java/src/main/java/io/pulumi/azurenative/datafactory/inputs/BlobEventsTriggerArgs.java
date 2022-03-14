@@ -6,7 +6,7 @@ package io.pulumi.azurenative.datafactory.inputs;
 import io.pulumi.azurenative.datafactory.enums.BlobEventTypes;
 import io.pulumi.azurenative.datafactory.inputs.TriggerPipelineReferenceArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Object;
@@ -29,10 +29,10 @@ public final class BlobEventsTriggerArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="annotations")
-      private final @Nullable Input<List<Object>> annotations;
+      private final @Nullable Output<List<Object>> annotations;
 
-    public Input<List<Object>> getAnnotations() {
-        return this.annotations == null ? Input.empty() : this.annotations;
+    public Output<List<Object>> getAnnotations() {
+        return this.annotations == null ? Output.empty() : this.annotations;
     }
 
     /**
@@ -40,10 +40,10 @@ public final class BlobEventsTriggerArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="blobPathBeginsWith")
-      private final @Nullable Input<String> blobPathBeginsWith;
+      private final @Nullable Output<String> blobPathBeginsWith;
 
-    public Input<String> getBlobPathBeginsWith() {
-        return this.blobPathBeginsWith == null ? Input.empty() : this.blobPathBeginsWith;
+    public Output<String> getBlobPathBeginsWith() {
+        return this.blobPathBeginsWith == null ? Output.empty() : this.blobPathBeginsWith;
     }
 
     /**
@@ -51,10 +51,10 @@ public final class BlobEventsTriggerArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="blobPathEndsWith")
-      private final @Nullable Input<String> blobPathEndsWith;
+      private final @Nullable Output<String> blobPathEndsWith;
 
-    public Input<String> getBlobPathEndsWith() {
-        return this.blobPathEndsWith == null ? Input.empty() : this.blobPathEndsWith;
+    public Output<String> getBlobPathEndsWith() {
+        return this.blobPathEndsWith == null ? Output.empty() : this.blobPathEndsWith;
     }
 
     /**
@@ -62,10 +62,10 @@ public final class BlobEventsTriggerArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -73,9 +73,9 @@ public final class BlobEventsTriggerArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="events", required=true)
-      private final Input<List<Either<String,BlobEventTypes>>> events;
+      private final Output<List<Either<String,BlobEventTypes>>> events;
 
-    public Input<List<Either<String,BlobEventTypes>>> getEvents() {
+    public Output<List<Either<String,BlobEventTypes>>> getEvents() {
         return this.events;
     }
 
@@ -84,10 +84,10 @@ public final class BlobEventsTriggerArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="ignoreEmptyBlobs")
-      private final @Nullable Input<Boolean> ignoreEmptyBlobs;
+      private final @Nullable Output<Boolean> ignoreEmptyBlobs;
 
-    public Input<Boolean> getIgnoreEmptyBlobs() {
-        return this.ignoreEmptyBlobs == null ? Input.empty() : this.ignoreEmptyBlobs;
+    public Output<Boolean> getIgnoreEmptyBlobs() {
+        return this.ignoreEmptyBlobs == null ? Output.empty() : this.ignoreEmptyBlobs;
     }
 
     /**
@@ -95,10 +95,10 @@ public final class BlobEventsTriggerArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="pipelines")
-      private final @Nullable Input<List<TriggerPipelineReferenceArgs>> pipelines;
+      private final @Nullable Output<List<TriggerPipelineReferenceArgs>> pipelines;
 
-    public Input<List<TriggerPipelineReferenceArgs>> getPipelines() {
-        return this.pipelines == null ? Input.empty() : this.pipelines;
+    public Output<List<TriggerPipelineReferenceArgs>> getPipelines() {
+        return this.pipelines == null ? Output.empty() : this.pipelines;
     }
 
     /**
@@ -106,9 +106,9 @@ public final class BlobEventsTriggerArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="scope", required=true)
-      private final Input<String> scope;
+      private final Output<String> scope;
 
-    public Input<String> getScope() {
+    public Output<String> getScope() {
         return this.scope;
     }
 
@@ -118,22 +118,22 @@ public final class BlobEventsTriggerArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<String> type;
+      private final Output<String> type;
 
-    public Input<String> getType() {
+    public Output<String> getType() {
         return this.type;
     }
 
     public BlobEventsTriggerArgs(
-        @Nullable Input<List<Object>> annotations,
-        @Nullable Input<String> blobPathBeginsWith,
-        @Nullable Input<String> blobPathEndsWith,
-        @Nullable Input<String> description,
-        Input<List<Either<String,BlobEventTypes>>> events,
-        @Nullable Input<Boolean> ignoreEmptyBlobs,
-        @Nullable Input<List<TriggerPipelineReferenceArgs>> pipelines,
-        Input<String> scope,
-        Input<String> type) {
+        @Nullable Output<List<Object>> annotations,
+        @Nullable Output<String> blobPathBeginsWith,
+        @Nullable Output<String> blobPathEndsWith,
+        @Nullable Output<String> description,
+        Output<List<Either<String,BlobEventTypes>>> events,
+        @Nullable Output<Boolean> ignoreEmptyBlobs,
+        @Nullable Output<List<TriggerPipelineReferenceArgs>> pipelines,
+        Output<String> scope,
+        Output<String> type) {
         this.annotations = annotations;
         this.blobPathBeginsWith = blobPathBeginsWith;
         this.blobPathEndsWith = blobPathEndsWith;
@@ -146,15 +146,15 @@ public final class BlobEventsTriggerArgs extends io.pulumi.resources.ResourceArg
     }
 
     private BlobEventsTriggerArgs() {
-        this.annotations = Input.empty();
-        this.blobPathBeginsWith = Input.empty();
-        this.blobPathEndsWith = Input.empty();
-        this.description = Input.empty();
-        this.events = Input.empty();
-        this.ignoreEmptyBlobs = Input.empty();
-        this.pipelines = Input.empty();
-        this.scope = Input.empty();
-        this.type = Input.empty();
+        this.annotations = Output.empty();
+        this.blobPathBeginsWith = Output.empty();
+        this.blobPathEndsWith = Output.empty();
+        this.description = Output.empty();
+        this.events = Output.empty();
+        this.ignoreEmptyBlobs = Output.empty();
+        this.pipelines = Output.empty();
+        this.scope = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -166,15 +166,15 @@ public final class BlobEventsTriggerArgs extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private @Nullable Input<List<Object>> annotations;
-        private @Nullable Input<String> blobPathBeginsWith;
-        private @Nullable Input<String> blobPathEndsWith;
-        private @Nullable Input<String> description;
-        private Input<List<Either<String,BlobEventTypes>>> events;
-        private @Nullable Input<Boolean> ignoreEmptyBlobs;
-        private @Nullable Input<List<TriggerPipelineReferenceArgs>> pipelines;
-        private Input<String> scope;
-        private Input<String> type;
+        private @Nullable Output<List<Object>> annotations;
+        private @Nullable Output<String> blobPathBeginsWith;
+        private @Nullable Output<String> blobPathEndsWith;
+        private @Nullable Output<String> description;
+        private Output<List<Either<String,BlobEventTypes>>> events;
+        private @Nullable Output<Boolean> ignoreEmptyBlobs;
+        private @Nullable Output<List<TriggerPipelineReferenceArgs>> pipelines;
+        private Output<String> scope;
+        private Output<String> type;
 
         public Builder() {
     	      // Empty
@@ -193,93 +193,93 @@ public final class BlobEventsTriggerArgs extends io.pulumi.resources.ResourceArg
     	      this.type = defaults.type;
         }
 
-        public Builder annotations(@Nullable Input<List<Object>> annotations) {
+        public Builder annotations(@Nullable Output<List<Object>> annotations) {
             this.annotations = annotations;
             return this;
         }
 
         public Builder annotations(@Nullable List<Object> annotations) {
-            this.annotations = Input.ofNullable(annotations);
+            this.annotations = Output.ofNullable(annotations);
             return this;
         }
 
-        public Builder blobPathBeginsWith(@Nullable Input<String> blobPathBeginsWith) {
+        public Builder blobPathBeginsWith(@Nullable Output<String> blobPathBeginsWith) {
             this.blobPathBeginsWith = blobPathBeginsWith;
             return this;
         }
 
         public Builder blobPathBeginsWith(@Nullable String blobPathBeginsWith) {
-            this.blobPathBeginsWith = Input.ofNullable(blobPathBeginsWith);
+            this.blobPathBeginsWith = Output.ofNullable(blobPathBeginsWith);
             return this;
         }
 
-        public Builder blobPathEndsWith(@Nullable Input<String> blobPathEndsWith) {
+        public Builder blobPathEndsWith(@Nullable Output<String> blobPathEndsWith) {
             this.blobPathEndsWith = blobPathEndsWith;
             return this;
         }
 
         public Builder blobPathEndsWith(@Nullable String blobPathEndsWith) {
-            this.blobPathEndsWith = Input.ofNullable(blobPathEndsWith);
+            this.blobPathEndsWith = Output.ofNullable(blobPathEndsWith);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder events(Input<List<Either<String,BlobEventTypes>>> events) {
+        public Builder events(Output<List<Either<String,BlobEventTypes>>> events) {
             this.events = Objects.requireNonNull(events);
             return this;
         }
 
         public Builder events(List<Either<String,BlobEventTypes>> events) {
-            this.events = Input.of(Objects.requireNonNull(events));
+            this.events = Output.of(Objects.requireNonNull(events));
             return this;
         }
 
-        public Builder ignoreEmptyBlobs(@Nullable Input<Boolean> ignoreEmptyBlobs) {
+        public Builder ignoreEmptyBlobs(@Nullable Output<Boolean> ignoreEmptyBlobs) {
             this.ignoreEmptyBlobs = ignoreEmptyBlobs;
             return this;
         }
 
         public Builder ignoreEmptyBlobs(@Nullable Boolean ignoreEmptyBlobs) {
-            this.ignoreEmptyBlobs = Input.ofNullable(ignoreEmptyBlobs);
+            this.ignoreEmptyBlobs = Output.ofNullable(ignoreEmptyBlobs);
             return this;
         }
 
-        public Builder pipelines(@Nullable Input<List<TriggerPipelineReferenceArgs>> pipelines) {
+        public Builder pipelines(@Nullable Output<List<TriggerPipelineReferenceArgs>> pipelines) {
             this.pipelines = pipelines;
             return this;
         }
 
         public Builder pipelines(@Nullable List<TriggerPipelineReferenceArgs> pipelines) {
-            this.pipelines = Input.ofNullable(pipelines);
+            this.pipelines = Output.ofNullable(pipelines);
             return this;
         }
 
-        public Builder scope(Input<String> scope) {
+        public Builder scope(Output<String> scope) {
             this.scope = Objects.requireNonNull(scope);
             return this;
         }
 
         public Builder scope(String scope) {
-            this.scope = Input.of(Objects.requireNonNull(scope));
+            this.scope = Output.of(Objects.requireNonNull(scope));
             return this;
         }
 
-        public Builder type(Input<String> type) {
+        public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(String type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
         public BlobEventsTriggerArgs build() {

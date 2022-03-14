@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.codebuild.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -20,10 +20,10 @@ public final class ProjectLogsConfigS3LogsArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="bucketOwnerAccess")
-      private final @Nullable Input<String> bucketOwnerAccess;
+      private final @Nullable Output<String> bucketOwnerAccess;
 
-    public Input<String> getBucketOwnerAccess() {
-        return this.bucketOwnerAccess == null ? Input.empty() : this.bucketOwnerAccess;
+    public Output<String> getBucketOwnerAccess() {
+        return this.bucketOwnerAccess == null ? Output.empty() : this.bucketOwnerAccess;
     }
 
     /**
@@ -31,10 +31,10 @@ public final class ProjectLogsConfigS3LogsArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="encryptionDisabled")
-      private final @Nullable Input<Boolean> encryptionDisabled;
+      private final @Nullable Output<Boolean> encryptionDisabled;
 
-    public Input<Boolean> getEncryptionDisabled() {
-        return this.encryptionDisabled == null ? Input.empty() : this.encryptionDisabled;
+    public Output<Boolean> getEncryptionDisabled() {
+        return this.encryptionDisabled == null ? Output.empty() : this.encryptionDisabled;
     }
 
     /**
@@ -42,10 +42,10 @@ public final class ProjectLogsConfigS3LogsArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -53,17 +53,17 @@ public final class ProjectLogsConfigS3LogsArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="status")
-      private final @Nullable Input<String> status;
+      private final @Nullable Output<String> status;
 
-    public Input<String> getStatus() {
-        return this.status == null ? Input.empty() : this.status;
+    public Output<String> getStatus() {
+        return this.status == null ? Output.empty() : this.status;
     }
 
     public ProjectLogsConfigS3LogsArgs(
-        @Nullable Input<String> bucketOwnerAccess,
-        @Nullable Input<Boolean> encryptionDisabled,
-        @Nullable Input<String> location,
-        @Nullable Input<String> status) {
+        @Nullable Output<String> bucketOwnerAccess,
+        @Nullable Output<Boolean> encryptionDisabled,
+        @Nullable Output<String> location,
+        @Nullable Output<String> status) {
         this.bucketOwnerAccess = bucketOwnerAccess;
         this.encryptionDisabled = encryptionDisabled;
         this.location = location;
@@ -71,10 +71,10 @@ public final class ProjectLogsConfigS3LogsArgs extends io.pulumi.resources.Resou
     }
 
     private ProjectLogsConfigS3LogsArgs() {
-        this.bucketOwnerAccess = Input.empty();
-        this.encryptionDisabled = Input.empty();
-        this.location = Input.empty();
-        this.status = Input.empty();
+        this.bucketOwnerAccess = Output.empty();
+        this.encryptionDisabled = Output.empty();
+        this.location = Output.empty();
+        this.status = Output.empty();
     }
 
     public static Builder builder() {
@@ -86,10 +86,10 @@ public final class ProjectLogsConfigS3LogsArgs extends io.pulumi.resources.Resou
     }
 
     public static final class Builder {
-        private @Nullable Input<String> bucketOwnerAccess;
-        private @Nullable Input<Boolean> encryptionDisabled;
-        private @Nullable Input<String> location;
-        private @Nullable Input<String> status;
+        private @Nullable Output<String> bucketOwnerAccess;
+        private @Nullable Output<Boolean> encryptionDisabled;
+        private @Nullable Output<String> location;
+        private @Nullable Output<String> status;
 
         public Builder() {
     	      // Empty
@@ -103,43 +103,43 @@ public final class ProjectLogsConfigS3LogsArgs extends io.pulumi.resources.Resou
     	      this.status = defaults.status;
         }
 
-        public Builder bucketOwnerAccess(@Nullable Input<String> bucketOwnerAccess) {
+        public Builder bucketOwnerAccess(@Nullable Output<String> bucketOwnerAccess) {
             this.bucketOwnerAccess = bucketOwnerAccess;
             return this;
         }
 
         public Builder bucketOwnerAccess(@Nullable String bucketOwnerAccess) {
-            this.bucketOwnerAccess = Input.ofNullable(bucketOwnerAccess);
+            this.bucketOwnerAccess = Output.ofNullable(bucketOwnerAccess);
             return this;
         }
 
-        public Builder encryptionDisabled(@Nullable Input<Boolean> encryptionDisabled) {
+        public Builder encryptionDisabled(@Nullable Output<Boolean> encryptionDisabled) {
             this.encryptionDisabled = encryptionDisabled;
             return this;
         }
 
         public Builder encryptionDisabled(@Nullable Boolean encryptionDisabled) {
-            this.encryptionDisabled = Input.ofNullable(encryptionDisabled);
+            this.encryptionDisabled = Output.ofNullable(encryptionDisabled);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder status(@Nullable Input<String> status) {
+        public Builder status(@Nullable Output<String> status) {
             this.status = status;
             return this;
         }
 
         public Builder status(@Nullable String status) {
-            this.status = Input.ofNullable(status);
+            this.status = Output.ofNullable(status);
             return this;
         }
         public ProjectLogsConfigS3LogsArgs build() {

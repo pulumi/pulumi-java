@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.appmesh.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -18,18 +18,18 @@ public final class GatewayRouteSpecHttp2RouteActionTargetVirtualServiceGetArgs e
      * 
      */
     @InputImport(name="virtualServiceName", required=true)
-      private final Input<String> virtualServiceName;
+      private final Output<String> virtualServiceName;
 
-    public Input<String> getVirtualServiceName() {
+    public Output<String> getVirtualServiceName() {
         return this.virtualServiceName;
     }
 
-    public GatewayRouteSpecHttp2RouteActionTargetVirtualServiceGetArgs(Input<String> virtualServiceName) {
+    public GatewayRouteSpecHttp2RouteActionTargetVirtualServiceGetArgs(Output<String> virtualServiceName) {
         this.virtualServiceName = Objects.requireNonNull(virtualServiceName, "expected parameter 'virtualServiceName' to be non-null");
     }
 
     private GatewayRouteSpecHttp2RouteActionTargetVirtualServiceGetArgs() {
-        this.virtualServiceName = Input.empty();
+        this.virtualServiceName = Output.empty();
     }
 
     public static Builder builder() {
@@ -41,7 +41,7 @@ public final class GatewayRouteSpecHttp2RouteActionTargetVirtualServiceGetArgs e
     }
 
     public static final class Builder {
-        private Input<String> virtualServiceName;
+        private Output<String> virtualServiceName;
 
         public Builder() {
     	      // Empty
@@ -52,13 +52,13 @@ public final class GatewayRouteSpecHttp2RouteActionTargetVirtualServiceGetArgs e
     	      this.virtualServiceName = defaults.virtualServiceName;
         }
 
-        public Builder virtualServiceName(Input<String> virtualServiceName) {
+        public Builder virtualServiceName(Output<String> virtualServiceName) {
             this.virtualServiceName = Objects.requireNonNull(virtualServiceName);
             return this;
         }
 
         public Builder virtualServiceName(String virtualServiceName) {
-            this.virtualServiceName = Input.of(Objects.requireNonNull(virtualServiceName));
+            this.virtualServiceName = Output.of(Objects.requireNonNull(virtualServiceName));
             return this;
         }
         public GatewayRouteSpecHttp2RouteActionTargetVirtualServiceGetArgs build() {

@@ -10,7 +10,6 @@ import io.pulumi.azurenative.hanaonazure.outputs.NetworkProfileResponse;
 import io.pulumi.azurenative.hanaonazure.outputs.OSProfileResponse;
 import io.pulumi.azurenative.hanaonazure.outputs.StorageProfileResponse;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -271,18 +270,18 @@ public class HanaInstance extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public HanaInstance(String name, HanaInstanceArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:hanaonazure:HanaInstance", name, args == null ? HanaInstanceArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("azure-native:hanaonazure:HanaInstance", name, args == null ? HanaInstanceArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private HanaInstance(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private HanaInstance(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:hanaonazure:HanaInstance", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:hanaonazure/v20171103preview:HanaInstance").build())
+                Output.of(Alias.builder().setType("azure-native:hanaonazure/v20171103preview:HanaInstance").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -296,7 +295,7 @@ public class HanaInstance extends io.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static HanaInstance get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static HanaInstance get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new HanaInstance(name, id, options);
     }
 }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v3.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class GoogleCloudDialogflowCxV3SpeechToTextSettingsArgs extends io.
      * 
      */
     @InputImport(name="enableSpeechAdaptation")
-      private final @Nullable Input<Boolean> enableSpeechAdaptation;
+      private final @Nullable Output<Boolean> enableSpeechAdaptation;
 
-    public Input<Boolean> getEnableSpeechAdaptation() {
-        return this.enableSpeechAdaptation == null ? Input.empty() : this.enableSpeechAdaptation;
+    public Output<Boolean> getEnableSpeechAdaptation() {
+        return this.enableSpeechAdaptation == null ? Output.empty() : this.enableSpeechAdaptation;
     }
 
-    public GoogleCloudDialogflowCxV3SpeechToTextSettingsArgs(@Nullable Input<Boolean> enableSpeechAdaptation) {
+    public GoogleCloudDialogflowCxV3SpeechToTextSettingsArgs(@Nullable Output<Boolean> enableSpeechAdaptation) {
         this.enableSpeechAdaptation = enableSpeechAdaptation;
     }
 
     private GoogleCloudDialogflowCxV3SpeechToTextSettingsArgs() {
-        this.enableSpeechAdaptation = Input.empty();
+        this.enableSpeechAdaptation = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class GoogleCloudDialogflowCxV3SpeechToTextSettingsArgs extends io.
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> enableSpeechAdaptation;
+        private @Nullable Output<Boolean> enableSpeechAdaptation;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class GoogleCloudDialogflowCxV3SpeechToTextSettingsArgs extends io.
     	      this.enableSpeechAdaptation = defaults.enableSpeechAdaptation;
         }
 
-        public Builder enableSpeechAdaptation(@Nullable Input<Boolean> enableSpeechAdaptation) {
+        public Builder enableSpeechAdaptation(@Nullable Output<Boolean> enableSpeechAdaptation) {
             this.enableSpeechAdaptation = enableSpeechAdaptation;
             return this;
         }
 
         public Builder enableSpeechAdaptation(@Nullable Boolean enableSpeechAdaptation) {
-            this.enableSpeechAdaptation = Input.ofNullable(enableSpeechAdaptation);
+            this.enableSpeechAdaptation = Output.ofNullable(enableSpeechAdaptation);
             return this;
         }
         public GoogleCloudDialogflowCxV3SpeechToTextSettingsArgs build() {

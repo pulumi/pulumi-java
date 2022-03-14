@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.cloudformation;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class ModuleDefaultVersionArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="arn")
-      private final @Nullable Input<String> arn;
+      private final @Nullable Output<String> arn;
 
-    public Input<String> getArn() {
-        return this.arn == null ? Input.empty() : this.arn;
+    public Output<String> getArn() {
+        return this.arn == null ? Output.empty() : this.arn;
     }
 
     /**
@@ -30,10 +30,10 @@ public final class ModuleDefaultVersionArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="moduleName")
-      private final @Nullable Input<String> moduleName;
+      private final @Nullable Output<String> moduleName;
 
-    public Input<String> getModuleName() {
-        return this.moduleName == null ? Input.empty() : this.moduleName;
+    public Output<String> getModuleName() {
+        return this.moduleName == null ? Output.empty() : this.moduleName;
     }
 
     /**
@@ -41,25 +41,25 @@ public final class ModuleDefaultVersionArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="versionId")
-      private final @Nullable Input<String> versionId;
+      private final @Nullable Output<String> versionId;
 
-    public Input<String> getVersionId() {
-        return this.versionId == null ? Input.empty() : this.versionId;
+    public Output<String> getVersionId() {
+        return this.versionId == null ? Output.empty() : this.versionId;
     }
 
     public ModuleDefaultVersionArgs(
-        @Nullable Input<String> arn,
-        @Nullable Input<String> moduleName,
-        @Nullable Input<String> versionId) {
+        @Nullable Output<String> arn,
+        @Nullable Output<String> moduleName,
+        @Nullable Output<String> versionId) {
         this.arn = arn;
         this.moduleName = moduleName;
         this.versionId = versionId;
     }
 
     private ModuleDefaultVersionArgs() {
-        this.arn = Input.empty();
-        this.moduleName = Input.empty();
-        this.versionId = Input.empty();
+        this.arn = Output.empty();
+        this.moduleName = Output.empty();
+        this.versionId = Output.empty();
     }
 
     public static Builder builder() {
@@ -71,9 +71,9 @@ public final class ModuleDefaultVersionArgs extends io.pulumi.resources.Resource
     }
 
     public static final class Builder {
-        private @Nullable Input<String> arn;
-        private @Nullable Input<String> moduleName;
-        private @Nullable Input<String> versionId;
+        private @Nullable Output<String> arn;
+        private @Nullable Output<String> moduleName;
+        private @Nullable Output<String> versionId;
 
         public Builder() {
     	      // Empty
@@ -86,33 +86,33 @@ public final class ModuleDefaultVersionArgs extends io.pulumi.resources.Resource
     	      this.versionId = defaults.versionId;
         }
 
-        public Builder arn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
 
         public Builder arn(@Nullable String arn) {
-            this.arn = Input.ofNullable(arn);
+            this.arn = Output.ofNullable(arn);
             return this;
         }
 
-        public Builder moduleName(@Nullable Input<String> moduleName) {
+        public Builder moduleName(@Nullable Output<String> moduleName) {
             this.moduleName = moduleName;
             return this;
         }
 
         public Builder moduleName(@Nullable String moduleName) {
-            this.moduleName = Input.ofNullable(moduleName);
+            this.moduleName = Output.ofNullable(moduleName);
             return this;
         }
 
-        public Builder versionId(@Nullable Input<String> versionId) {
+        public Builder versionId(@Nullable Output<String> versionId) {
             this.versionId = versionId;
             return this;
         }
 
         public Builder versionId(@Nullable String versionId) {
-            this.versionId = Input.ofNullable(versionId);
+            this.versionId = Output.ofNullable(versionId);
             return this;
         }
         public ModuleDefaultVersionArgs build() {

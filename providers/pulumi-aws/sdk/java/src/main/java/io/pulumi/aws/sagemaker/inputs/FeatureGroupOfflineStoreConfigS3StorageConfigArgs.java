@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.sagemaker.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class FeatureGroupOfflineStoreConfigS3StorageConfigArgs extends io.
      * 
      */
     @InputImport(name="kmsKeyId")
-      private final @Nullable Input<String> kmsKeyId;
+      private final @Nullable Output<String> kmsKeyId;
 
-    public Input<String> getKmsKeyId() {
-        return this.kmsKeyId == null ? Input.empty() : this.kmsKeyId;
+    public Output<String> getKmsKeyId() {
+        return this.kmsKeyId == null ? Output.empty() : this.kmsKeyId;
     }
 
     /**
@@ -30,22 +30,22 @@ public final class FeatureGroupOfflineStoreConfigS3StorageConfigArgs extends io.
      * 
      */
     @InputImport(name="s3Uri", required=true)
-      private final Input<String> s3Uri;
+      private final Output<String> s3Uri;
 
-    public Input<String> getS3Uri() {
+    public Output<String> getS3Uri() {
         return this.s3Uri;
     }
 
     public FeatureGroupOfflineStoreConfigS3StorageConfigArgs(
-        @Nullable Input<String> kmsKeyId,
-        Input<String> s3Uri) {
+        @Nullable Output<String> kmsKeyId,
+        Output<String> s3Uri) {
         this.kmsKeyId = kmsKeyId;
         this.s3Uri = Objects.requireNonNull(s3Uri, "expected parameter 's3Uri' to be non-null");
     }
 
     private FeatureGroupOfflineStoreConfigS3StorageConfigArgs() {
-        this.kmsKeyId = Input.empty();
-        this.s3Uri = Input.empty();
+        this.kmsKeyId = Output.empty();
+        this.s3Uri = Output.empty();
     }
 
     public static Builder builder() {
@@ -57,8 +57,8 @@ public final class FeatureGroupOfflineStoreConfigS3StorageConfigArgs extends io.
     }
 
     public static final class Builder {
-        private @Nullable Input<String> kmsKeyId;
-        private Input<String> s3Uri;
+        private @Nullable Output<String> kmsKeyId;
+        private Output<String> s3Uri;
 
         public Builder() {
     	      // Empty
@@ -70,23 +70,23 @@ public final class FeatureGroupOfflineStoreConfigS3StorageConfigArgs extends io.
     	      this.s3Uri = defaults.s3Uri;
         }
 
-        public Builder kmsKeyId(@Nullable Input<String> kmsKeyId) {
+        public Builder kmsKeyId(@Nullable Output<String> kmsKeyId) {
             this.kmsKeyId = kmsKeyId;
             return this;
         }
 
         public Builder kmsKeyId(@Nullable String kmsKeyId) {
-            this.kmsKeyId = Input.ofNullable(kmsKeyId);
+            this.kmsKeyId = Output.ofNullable(kmsKeyId);
             return this;
         }
 
-        public Builder s3Uri(Input<String> s3Uri) {
+        public Builder s3Uri(Output<String> s3Uri) {
             this.s3Uri = Objects.requireNonNull(s3Uri);
             return this;
         }
 
         public Builder s3Uri(String s3Uri) {
-            this.s3Uri = Input.of(Objects.requireNonNull(s3Uri));
+            this.s3Uri = Output.of(Objects.requireNonNull(s3Uri));
             return this;
         }
         public FeatureGroupOfflineStoreConfigS3StorageConfigArgs build() {

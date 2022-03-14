@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.appflow.inputs;
 
 import io.pulumi.awsnative.appflow.enums.FlowOperatorPropertiesKeys;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,29 +19,29 @@ public final class FlowTaskPropertiesObjectArgs extends io.pulumi.resources.Reso
     public static final FlowTaskPropertiesObjectArgs Empty = new FlowTaskPropertiesObjectArgs();
 
     @InputImport(name="key", required=true)
-      private final Input<FlowOperatorPropertiesKeys> key;
+      private final Output<FlowOperatorPropertiesKeys> key;
 
-    public Input<FlowOperatorPropertiesKeys> getKey() {
+    public Output<FlowOperatorPropertiesKeys> getKey() {
         return this.key;
     }
 
     @InputImport(name="value", required=true)
-      private final Input<String> value;
+      private final Output<String> value;
 
-    public Input<String> getValue() {
+    public Output<String> getValue() {
         return this.value;
     }
 
     public FlowTaskPropertiesObjectArgs(
-        Input<FlowOperatorPropertiesKeys> key,
-        Input<String> value) {
+        Output<FlowOperatorPropertiesKeys> key,
+        Output<String> value) {
         this.key = Objects.requireNonNull(key, "expected parameter 'key' to be non-null");
         this.value = Objects.requireNonNull(value, "expected parameter 'value' to be non-null");
     }
 
     private FlowTaskPropertiesObjectArgs() {
-        this.key = Input.empty();
-        this.value = Input.empty();
+        this.key = Output.empty();
+        this.value = Output.empty();
     }
 
     public static Builder builder() {
@@ -53,8 +53,8 @@ public final class FlowTaskPropertiesObjectArgs extends io.pulumi.resources.Reso
     }
 
     public static final class Builder {
-        private Input<FlowOperatorPropertiesKeys> key;
-        private Input<String> value;
+        private Output<FlowOperatorPropertiesKeys> key;
+        private Output<String> value;
 
         public Builder() {
     	      // Empty
@@ -66,23 +66,23 @@ public final class FlowTaskPropertiesObjectArgs extends io.pulumi.resources.Reso
     	      this.value = defaults.value;
         }
 
-        public Builder key(Input<FlowOperatorPropertiesKeys> key) {
+        public Builder key(Output<FlowOperatorPropertiesKeys> key) {
             this.key = Objects.requireNonNull(key);
             return this;
         }
 
         public Builder key(FlowOperatorPropertiesKeys key) {
-            this.key = Input.of(Objects.requireNonNull(key));
+            this.key = Output.of(Objects.requireNonNull(key));
             return this;
         }
 
-        public Builder value(Input<String> value) {
+        public Builder value(Output<String> value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }
 
         public Builder value(String value) {
-            this.value = Input.of(Objects.requireNonNull(value));
+            this.value = Output.of(Objects.requireNonNull(value));
             return this;
         }
         public FlowTaskPropertiesObjectArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.emr.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -20,9 +20,9 @@ public final class ManagedScalingPolicyComputeLimitArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="maximumCapacityUnits", required=true)
-      private final Input<Integer> maximumCapacityUnits;
+      private final Output<Integer> maximumCapacityUnits;
 
-    public Input<Integer> getMaximumCapacityUnits() {
+    public Output<Integer> getMaximumCapacityUnits() {
         return this.maximumCapacityUnits;
     }
 
@@ -31,10 +31,10 @@ public final class ManagedScalingPolicyComputeLimitArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="maximumCoreCapacityUnits")
-      private final @Nullable Input<Integer> maximumCoreCapacityUnits;
+      private final @Nullable Output<Integer> maximumCoreCapacityUnits;
 
-    public Input<Integer> getMaximumCoreCapacityUnits() {
-        return this.maximumCoreCapacityUnits == null ? Input.empty() : this.maximumCoreCapacityUnits;
+    public Output<Integer> getMaximumCoreCapacityUnits() {
+        return this.maximumCoreCapacityUnits == null ? Output.empty() : this.maximumCoreCapacityUnits;
     }
 
     /**
@@ -42,10 +42,10 @@ public final class ManagedScalingPolicyComputeLimitArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="maximumOndemandCapacityUnits")
-      private final @Nullable Input<Integer> maximumOndemandCapacityUnits;
+      private final @Nullable Output<Integer> maximumOndemandCapacityUnits;
 
-    public Input<Integer> getMaximumOndemandCapacityUnits() {
-        return this.maximumOndemandCapacityUnits == null ? Input.empty() : this.maximumOndemandCapacityUnits;
+    public Output<Integer> getMaximumOndemandCapacityUnits() {
+        return this.maximumOndemandCapacityUnits == null ? Output.empty() : this.maximumOndemandCapacityUnits;
     }
 
     /**
@@ -53,9 +53,9 @@ public final class ManagedScalingPolicyComputeLimitArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="minimumCapacityUnits", required=true)
-      private final Input<Integer> minimumCapacityUnits;
+      private final Output<Integer> minimumCapacityUnits;
 
-    public Input<Integer> getMinimumCapacityUnits() {
+    public Output<Integer> getMinimumCapacityUnits() {
         return this.minimumCapacityUnits;
     }
 
@@ -64,18 +64,18 @@ public final class ManagedScalingPolicyComputeLimitArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="unitType", required=true)
-      private final Input<String> unitType;
+      private final Output<String> unitType;
 
-    public Input<String> getUnitType() {
+    public Output<String> getUnitType() {
         return this.unitType;
     }
 
     public ManagedScalingPolicyComputeLimitArgs(
-        Input<Integer> maximumCapacityUnits,
-        @Nullable Input<Integer> maximumCoreCapacityUnits,
-        @Nullable Input<Integer> maximumOndemandCapacityUnits,
-        Input<Integer> minimumCapacityUnits,
-        Input<String> unitType) {
+        Output<Integer> maximumCapacityUnits,
+        @Nullable Output<Integer> maximumCoreCapacityUnits,
+        @Nullable Output<Integer> maximumOndemandCapacityUnits,
+        Output<Integer> minimumCapacityUnits,
+        Output<String> unitType) {
         this.maximumCapacityUnits = Objects.requireNonNull(maximumCapacityUnits, "expected parameter 'maximumCapacityUnits' to be non-null");
         this.maximumCoreCapacityUnits = maximumCoreCapacityUnits;
         this.maximumOndemandCapacityUnits = maximumOndemandCapacityUnits;
@@ -84,11 +84,11 @@ public final class ManagedScalingPolicyComputeLimitArgs extends io.pulumi.resour
     }
 
     private ManagedScalingPolicyComputeLimitArgs() {
-        this.maximumCapacityUnits = Input.empty();
-        this.maximumCoreCapacityUnits = Input.empty();
-        this.maximumOndemandCapacityUnits = Input.empty();
-        this.minimumCapacityUnits = Input.empty();
-        this.unitType = Input.empty();
+        this.maximumCapacityUnits = Output.empty();
+        this.maximumCoreCapacityUnits = Output.empty();
+        this.maximumOndemandCapacityUnits = Output.empty();
+        this.minimumCapacityUnits = Output.empty();
+        this.unitType = Output.empty();
     }
 
     public static Builder builder() {
@@ -100,11 +100,11 @@ public final class ManagedScalingPolicyComputeLimitArgs extends io.pulumi.resour
     }
 
     public static final class Builder {
-        private Input<Integer> maximumCapacityUnits;
-        private @Nullable Input<Integer> maximumCoreCapacityUnits;
-        private @Nullable Input<Integer> maximumOndemandCapacityUnits;
-        private Input<Integer> minimumCapacityUnits;
-        private Input<String> unitType;
+        private Output<Integer> maximumCapacityUnits;
+        private @Nullable Output<Integer> maximumCoreCapacityUnits;
+        private @Nullable Output<Integer> maximumOndemandCapacityUnits;
+        private Output<Integer> minimumCapacityUnits;
+        private Output<String> unitType;
 
         public Builder() {
     	      // Empty
@@ -119,53 +119,53 @@ public final class ManagedScalingPolicyComputeLimitArgs extends io.pulumi.resour
     	      this.unitType = defaults.unitType;
         }
 
-        public Builder maximumCapacityUnits(Input<Integer> maximumCapacityUnits) {
+        public Builder maximumCapacityUnits(Output<Integer> maximumCapacityUnits) {
             this.maximumCapacityUnits = Objects.requireNonNull(maximumCapacityUnits);
             return this;
         }
 
         public Builder maximumCapacityUnits(Integer maximumCapacityUnits) {
-            this.maximumCapacityUnits = Input.of(Objects.requireNonNull(maximumCapacityUnits));
+            this.maximumCapacityUnits = Output.of(Objects.requireNonNull(maximumCapacityUnits));
             return this;
         }
 
-        public Builder maximumCoreCapacityUnits(@Nullable Input<Integer> maximumCoreCapacityUnits) {
+        public Builder maximumCoreCapacityUnits(@Nullable Output<Integer> maximumCoreCapacityUnits) {
             this.maximumCoreCapacityUnits = maximumCoreCapacityUnits;
             return this;
         }
 
         public Builder maximumCoreCapacityUnits(@Nullable Integer maximumCoreCapacityUnits) {
-            this.maximumCoreCapacityUnits = Input.ofNullable(maximumCoreCapacityUnits);
+            this.maximumCoreCapacityUnits = Output.ofNullable(maximumCoreCapacityUnits);
             return this;
         }
 
-        public Builder maximumOndemandCapacityUnits(@Nullable Input<Integer> maximumOndemandCapacityUnits) {
+        public Builder maximumOndemandCapacityUnits(@Nullable Output<Integer> maximumOndemandCapacityUnits) {
             this.maximumOndemandCapacityUnits = maximumOndemandCapacityUnits;
             return this;
         }
 
         public Builder maximumOndemandCapacityUnits(@Nullable Integer maximumOndemandCapacityUnits) {
-            this.maximumOndemandCapacityUnits = Input.ofNullable(maximumOndemandCapacityUnits);
+            this.maximumOndemandCapacityUnits = Output.ofNullable(maximumOndemandCapacityUnits);
             return this;
         }
 
-        public Builder minimumCapacityUnits(Input<Integer> minimumCapacityUnits) {
+        public Builder minimumCapacityUnits(Output<Integer> minimumCapacityUnits) {
             this.minimumCapacityUnits = Objects.requireNonNull(minimumCapacityUnits);
             return this;
         }
 
         public Builder minimumCapacityUnits(Integer minimumCapacityUnits) {
-            this.minimumCapacityUnits = Input.of(Objects.requireNonNull(minimumCapacityUnits));
+            this.minimumCapacityUnits = Output.of(Objects.requireNonNull(minimumCapacityUnits));
             return this;
         }
 
-        public Builder unitType(Input<String> unitType) {
+        public Builder unitType(Output<String> unitType) {
             this.unitType = Objects.requireNonNull(unitType);
             return this;
         }
 
         public Builder unitType(String unitType) {
-            this.unitType = Input.of(Objects.requireNonNull(unitType));
+            this.unitType = Output.of(Objects.requireNonNull(unitType));
             return this;
         }
         public ManagedScalingPolicyComputeLimitArgs build() {

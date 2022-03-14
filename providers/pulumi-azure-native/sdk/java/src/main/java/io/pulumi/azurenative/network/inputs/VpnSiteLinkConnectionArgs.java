@@ -8,7 +8,7 @@ import io.pulumi.azurenative.network.enums.VpnLinkConnectionMode;
 import io.pulumi.azurenative.network.inputs.IpsecPolicyArgs;
 import io.pulumi.azurenative.network.inputs.SubResourceArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -31,10 +31,10 @@ public final class VpnSiteLinkConnectionArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="connectionBandwidth")
-      private final @Nullable Input<Integer> connectionBandwidth;
+      private final @Nullable Output<Integer> connectionBandwidth;
 
-    public Input<Integer> getConnectionBandwidth() {
-        return this.connectionBandwidth == null ? Input.empty() : this.connectionBandwidth;
+    public Output<Integer> getConnectionBandwidth() {
+        return this.connectionBandwidth == null ? Output.empty() : this.connectionBandwidth;
     }
 
     /**
@@ -42,10 +42,10 @@ public final class VpnSiteLinkConnectionArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="egressNatRules")
-      private final @Nullable Input<List<SubResourceArgs>> egressNatRules;
+      private final @Nullable Output<List<SubResourceArgs>> egressNatRules;
 
-    public Input<List<SubResourceArgs>> getEgressNatRules() {
-        return this.egressNatRules == null ? Input.empty() : this.egressNatRules;
+    public Output<List<SubResourceArgs>> getEgressNatRules() {
+        return this.egressNatRules == null ? Output.empty() : this.egressNatRules;
     }
 
     /**
@@ -53,10 +53,10 @@ public final class VpnSiteLinkConnectionArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="enableBgp")
-      private final @Nullable Input<Boolean> enableBgp;
+      private final @Nullable Output<Boolean> enableBgp;
 
-    public Input<Boolean> getEnableBgp() {
-        return this.enableBgp == null ? Input.empty() : this.enableBgp;
+    public Output<Boolean> getEnableBgp() {
+        return this.enableBgp == null ? Output.empty() : this.enableBgp;
     }
 
     /**
@@ -64,10 +64,10 @@ public final class VpnSiteLinkConnectionArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="enableRateLimiting")
-      private final @Nullable Input<Boolean> enableRateLimiting;
+      private final @Nullable Output<Boolean> enableRateLimiting;
 
-    public Input<Boolean> getEnableRateLimiting() {
-        return this.enableRateLimiting == null ? Input.empty() : this.enableRateLimiting;
+    public Output<Boolean> getEnableRateLimiting() {
+        return this.enableRateLimiting == null ? Output.empty() : this.enableRateLimiting;
     }
 
     /**
@@ -75,10 +75,10 @@ public final class VpnSiteLinkConnectionArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="id")
-      private final @Nullable Input<String> id;
+      private final @Nullable Output<String> id;
 
-    public Input<String> getId() {
-        return this.id == null ? Input.empty() : this.id;
+    public Output<String> getId() {
+        return this.id == null ? Output.empty() : this.id;
     }
 
     /**
@@ -86,10 +86,10 @@ public final class VpnSiteLinkConnectionArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="ingressNatRules")
-      private final @Nullable Input<List<SubResourceArgs>> ingressNatRules;
+      private final @Nullable Output<List<SubResourceArgs>> ingressNatRules;
 
-    public Input<List<SubResourceArgs>> getIngressNatRules() {
-        return this.ingressNatRules == null ? Input.empty() : this.ingressNatRules;
+    public Output<List<SubResourceArgs>> getIngressNatRules() {
+        return this.ingressNatRules == null ? Output.empty() : this.ingressNatRules;
     }
 
     /**
@@ -97,10 +97,10 @@ public final class VpnSiteLinkConnectionArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="ipsecPolicies")
-      private final @Nullable Input<List<IpsecPolicyArgs>> ipsecPolicies;
+      private final @Nullable Output<List<IpsecPolicyArgs>> ipsecPolicies;
 
-    public Input<List<IpsecPolicyArgs>> getIpsecPolicies() {
-        return this.ipsecPolicies == null ? Input.empty() : this.ipsecPolicies;
+    public Output<List<IpsecPolicyArgs>> getIpsecPolicies() {
+        return this.ipsecPolicies == null ? Output.empty() : this.ipsecPolicies;
     }
 
     /**
@@ -108,10 +108,10 @@ public final class VpnSiteLinkConnectionArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -119,10 +119,10 @@ public final class VpnSiteLinkConnectionArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="routingWeight")
-      private final @Nullable Input<Integer> routingWeight;
+      private final @Nullable Output<Integer> routingWeight;
 
-    public Input<Integer> getRoutingWeight() {
-        return this.routingWeight == null ? Input.empty() : this.routingWeight;
+    public Output<Integer> getRoutingWeight() {
+        return this.routingWeight == null ? Output.empty() : this.routingWeight;
     }
 
     /**
@@ -130,10 +130,10 @@ public final class VpnSiteLinkConnectionArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="sharedKey")
-      private final @Nullable Input<String> sharedKey;
+      private final @Nullable Output<String> sharedKey;
 
-    public Input<String> getSharedKey() {
-        return this.sharedKey == null ? Input.empty() : this.sharedKey;
+    public Output<String> getSharedKey() {
+        return this.sharedKey == null ? Output.empty() : this.sharedKey;
     }
 
     /**
@@ -141,10 +141,10 @@ public final class VpnSiteLinkConnectionArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="useLocalAzureIpAddress")
-      private final @Nullable Input<Boolean> useLocalAzureIpAddress;
+      private final @Nullable Output<Boolean> useLocalAzureIpAddress;
 
-    public Input<Boolean> getUseLocalAzureIpAddress() {
-        return this.useLocalAzureIpAddress == null ? Input.empty() : this.useLocalAzureIpAddress;
+    public Output<Boolean> getUseLocalAzureIpAddress() {
+        return this.useLocalAzureIpAddress == null ? Output.empty() : this.useLocalAzureIpAddress;
     }
 
     /**
@@ -152,10 +152,10 @@ public final class VpnSiteLinkConnectionArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="usePolicyBasedTrafficSelectors")
-      private final @Nullable Input<Boolean> usePolicyBasedTrafficSelectors;
+      private final @Nullable Output<Boolean> usePolicyBasedTrafficSelectors;
 
-    public Input<Boolean> getUsePolicyBasedTrafficSelectors() {
-        return this.usePolicyBasedTrafficSelectors == null ? Input.empty() : this.usePolicyBasedTrafficSelectors;
+    public Output<Boolean> getUsePolicyBasedTrafficSelectors() {
+        return this.usePolicyBasedTrafficSelectors == null ? Output.empty() : this.usePolicyBasedTrafficSelectors;
     }
 
     /**
@@ -163,10 +163,10 @@ public final class VpnSiteLinkConnectionArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="vpnConnectionProtocolType")
-      private final @Nullable Input<Either<String,VirtualNetworkGatewayConnectionProtocol>> vpnConnectionProtocolType;
+      private final @Nullable Output<Either<String,VirtualNetworkGatewayConnectionProtocol>> vpnConnectionProtocolType;
 
-    public Input<Either<String,VirtualNetworkGatewayConnectionProtocol>> getVpnConnectionProtocolType() {
-        return this.vpnConnectionProtocolType == null ? Input.empty() : this.vpnConnectionProtocolType;
+    public Output<Either<String,VirtualNetworkGatewayConnectionProtocol>> getVpnConnectionProtocolType() {
+        return this.vpnConnectionProtocolType == null ? Output.empty() : this.vpnConnectionProtocolType;
     }
 
     /**
@@ -174,10 +174,10 @@ public final class VpnSiteLinkConnectionArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="vpnLinkConnectionMode")
-      private final @Nullable Input<Either<String,VpnLinkConnectionMode>> vpnLinkConnectionMode;
+      private final @Nullable Output<Either<String,VpnLinkConnectionMode>> vpnLinkConnectionMode;
 
-    public Input<Either<String,VpnLinkConnectionMode>> getVpnLinkConnectionMode() {
-        return this.vpnLinkConnectionMode == null ? Input.empty() : this.vpnLinkConnectionMode;
+    public Output<Either<String,VpnLinkConnectionMode>> getVpnLinkConnectionMode() {
+        return this.vpnLinkConnectionMode == null ? Output.empty() : this.vpnLinkConnectionMode;
     }
 
     /**
@@ -185,28 +185,28 @@ public final class VpnSiteLinkConnectionArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="vpnSiteLink")
-      private final @Nullable Input<SubResourceArgs> vpnSiteLink;
+      private final @Nullable Output<SubResourceArgs> vpnSiteLink;
 
-    public Input<SubResourceArgs> getVpnSiteLink() {
-        return this.vpnSiteLink == null ? Input.empty() : this.vpnSiteLink;
+    public Output<SubResourceArgs> getVpnSiteLink() {
+        return this.vpnSiteLink == null ? Output.empty() : this.vpnSiteLink;
     }
 
     public VpnSiteLinkConnectionArgs(
-        @Nullable Input<Integer> connectionBandwidth,
-        @Nullable Input<List<SubResourceArgs>> egressNatRules,
-        @Nullable Input<Boolean> enableBgp,
-        @Nullable Input<Boolean> enableRateLimiting,
-        @Nullable Input<String> id,
-        @Nullable Input<List<SubResourceArgs>> ingressNatRules,
-        @Nullable Input<List<IpsecPolicyArgs>> ipsecPolicies,
-        @Nullable Input<String> name,
-        @Nullable Input<Integer> routingWeight,
-        @Nullable Input<String> sharedKey,
-        @Nullable Input<Boolean> useLocalAzureIpAddress,
-        @Nullable Input<Boolean> usePolicyBasedTrafficSelectors,
-        @Nullable Input<Either<String,VirtualNetworkGatewayConnectionProtocol>> vpnConnectionProtocolType,
-        @Nullable Input<Either<String,VpnLinkConnectionMode>> vpnLinkConnectionMode,
-        @Nullable Input<SubResourceArgs> vpnSiteLink) {
+        @Nullable Output<Integer> connectionBandwidth,
+        @Nullable Output<List<SubResourceArgs>> egressNatRules,
+        @Nullable Output<Boolean> enableBgp,
+        @Nullable Output<Boolean> enableRateLimiting,
+        @Nullable Output<String> id,
+        @Nullable Output<List<SubResourceArgs>> ingressNatRules,
+        @Nullable Output<List<IpsecPolicyArgs>> ipsecPolicies,
+        @Nullable Output<String> name,
+        @Nullable Output<Integer> routingWeight,
+        @Nullable Output<String> sharedKey,
+        @Nullable Output<Boolean> useLocalAzureIpAddress,
+        @Nullable Output<Boolean> usePolicyBasedTrafficSelectors,
+        @Nullable Output<Either<String,VirtualNetworkGatewayConnectionProtocol>> vpnConnectionProtocolType,
+        @Nullable Output<Either<String,VpnLinkConnectionMode>> vpnLinkConnectionMode,
+        @Nullable Output<SubResourceArgs> vpnSiteLink) {
         this.connectionBandwidth = connectionBandwidth;
         this.egressNatRules = egressNatRules;
         this.enableBgp = enableBgp;
@@ -225,21 +225,21 @@ public final class VpnSiteLinkConnectionArgs extends io.pulumi.resources.Resourc
     }
 
     private VpnSiteLinkConnectionArgs() {
-        this.connectionBandwidth = Input.empty();
-        this.egressNatRules = Input.empty();
-        this.enableBgp = Input.empty();
-        this.enableRateLimiting = Input.empty();
-        this.id = Input.empty();
-        this.ingressNatRules = Input.empty();
-        this.ipsecPolicies = Input.empty();
-        this.name = Input.empty();
-        this.routingWeight = Input.empty();
-        this.sharedKey = Input.empty();
-        this.useLocalAzureIpAddress = Input.empty();
-        this.usePolicyBasedTrafficSelectors = Input.empty();
-        this.vpnConnectionProtocolType = Input.empty();
-        this.vpnLinkConnectionMode = Input.empty();
-        this.vpnSiteLink = Input.empty();
+        this.connectionBandwidth = Output.empty();
+        this.egressNatRules = Output.empty();
+        this.enableBgp = Output.empty();
+        this.enableRateLimiting = Output.empty();
+        this.id = Output.empty();
+        this.ingressNatRules = Output.empty();
+        this.ipsecPolicies = Output.empty();
+        this.name = Output.empty();
+        this.routingWeight = Output.empty();
+        this.sharedKey = Output.empty();
+        this.useLocalAzureIpAddress = Output.empty();
+        this.usePolicyBasedTrafficSelectors = Output.empty();
+        this.vpnConnectionProtocolType = Output.empty();
+        this.vpnLinkConnectionMode = Output.empty();
+        this.vpnSiteLink = Output.empty();
     }
 
     public static Builder builder() {
@@ -251,21 +251,21 @@ public final class VpnSiteLinkConnectionArgs extends io.pulumi.resources.Resourc
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> connectionBandwidth;
-        private @Nullable Input<List<SubResourceArgs>> egressNatRules;
-        private @Nullable Input<Boolean> enableBgp;
-        private @Nullable Input<Boolean> enableRateLimiting;
-        private @Nullable Input<String> id;
-        private @Nullable Input<List<SubResourceArgs>> ingressNatRules;
-        private @Nullable Input<List<IpsecPolicyArgs>> ipsecPolicies;
-        private @Nullable Input<String> name;
-        private @Nullable Input<Integer> routingWeight;
-        private @Nullable Input<String> sharedKey;
-        private @Nullable Input<Boolean> useLocalAzureIpAddress;
-        private @Nullable Input<Boolean> usePolicyBasedTrafficSelectors;
-        private @Nullable Input<Either<String,VirtualNetworkGatewayConnectionProtocol>> vpnConnectionProtocolType;
-        private @Nullable Input<Either<String,VpnLinkConnectionMode>> vpnLinkConnectionMode;
-        private @Nullable Input<SubResourceArgs> vpnSiteLink;
+        private @Nullable Output<Integer> connectionBandwidth;
+        private @Nullable Output<List<SubResourceArgs>> egressNatRules;
+        private @Nullable Output<Boolean> enableBgp;
+        private @Nullable Output<Boolean> enableRateLimiting;
+        private @Nullable Output<String> id;
+        private @Nullable Output<List<SubResourceArgs>> ingressNatRules;
+        private @Nullable Output<List<IpsecPolicyArgs>> ipsecPolicies;
+        private @Nullable Output<String> name;
+        private @Nullable Output<Integer> routingWeight;
+        private @Nullable Output<String> sharedKey;
+        private @Nullable Output<Boolean> useLocalAzureIpAddress;
+        private @Nullable Output<Boolean> usePolicyBasedTrafficSelectors;
+        private @Nullable Output<Either<String,VirtualNetworkGatewayConnectionProtocol>> vpnConnectionProtocolType;
+        private @Nullable Output<Either<String,VpnLinkConnectionMode>> vpnLinkConnectionMode;
+        private @Nullable Output<SubResourceArgs> vpnSiteLink;
 
         public Builder() {
     	      // Empty
@@ -290,153 +290,153 @@ public final class VpnSiteLinkConnectionArgs extends io.pulumi.resources.Resourc
     	      this.vpnSiteLink = defaults.vpnSiteLink;
         }
 
-        public Builder connectionBandwidth(@Nullable Input<Integer> connectionBandwidth) {
+        public Builder connectionBandwidth(@Nullable Output<Integer> connectionBandwidth) {
             this.connectionBandwidth = connectionBandwidth;
             return this;
         }
 
         public Builder connectionBandwidth(@Nullable Integer connectionBandwidth) {
-            this.connectionBandwidth = Input.ofNullable(connectionBandwidth);
+            this.connectionBandwidth = Output.ofNullable(connectionBandwidth);
             return this;
         }
 
-        public Builder egressNatRules(@Nullable Input<List<SubResourceArgs>> egressNatRules) {
+        public Builder egressNatRules(@Nullable Output<List<SubResourceArgs>> egressNatRules) {
             this.egressNatRules = egressNatRules;
             return this;
         }
 
         public Builder egressNatRules(@Nullable List<SubResourceArgs> egressNatRules) {
-            this.egressNatRules = Input.ofNullable(egressNatRules);
+            this.egressNatRules = Output.ofNullable(egressNatRules);
             return this;
         }
 
-        public Builder enableBgp(@Nullable Input<Boolean> enableBgp) {
+        public Builder enableBgp(@Nullable Output<Boolean> enableBgp) {
             this.enableBgp = enableBgp;
             return this;
         }
 
         public Builder enableBgp(@Nullable Boolean enableBgp) {
-            this.enableBgp = Input.ofNullable(enableBgp);
+            this.enableBgp = Output.ofNullable(enableBgp);
             return this;
         }
 
-        public Builder enableRateLimiting(@Nullable Input<Boolean> enableRateLimiting) {
+        public Builder enableRateLimiting(@Nullable Output<Boolean> enableRateLimiting) {
             this.enableRateLimiting = enableRateLimiting;
             return this;
         }
 
         public Builder enableRateLimiting(@Nullable Boolean enableRateLimiting) {
-            this.enableRateLimiting = Input.ofNullable(enableRateLimiting);
+            this.enableRateLimiting = Output.ofNullable(enableRateLimiting);
             return this;
         }
 
-        public Builder id(@Nullable Input<String> id) {
+        public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
 
         public Builder id(@Nullable String id) {
-            this.id = Input.ofNullable(id);
+            this.id = Output.ofNullable(id);
             return this;
         }
 
-        public Builder ingressNatRules(@Nullable Input<List<SubResourceArgs>> ingressNatRules) {
+        public Builder ingressNatRules(@Nullable Output<List<SubResourceArgs>> ingressNatRules) {
             this.ingressNatRules = ingressNatRules;
             return this;
         }
 
         public Builder ingressNatRules(@Nullable List<SubResourceArgs> ingressNatRules) {
-            this.ingressNatRules = Input.ofNullable(ingressNatRules);
+            this.ingressNatRules = Output.ofNullable(ingressNatRules);
             return this;
         }
 
-        public Builder ipsecPolicies(@Nullable Input<List<IpsecPolicyArgs>> ipsecPolicies) {
+        public Builder ipsecPolicies(@Nullable Output<List<IpsecPolicyArgs>> ipsecPolicies) {
             this.ipsecPolicies = ipsecPolicies;
             return this;
         }
 
         public Builder ipsecPolicies(@Nullable List<IpsecPolicyArgs> ipsecPolicies) {
-            this.ipsecPolicies = Input.ofNullable(ipsecPolicies);
+            this.ipsecPolicies = Output.ofNullable(ipsecPolicies);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder routingWeight(@Nullable Input<Integer> routingWeight) {
+        public Builder routingWeight(@Nullable Output<Integer> routingWeight) {
             this.routingWeight = routingWeight;
             return this;
         }
 
         public Builder routingWeight(@Nullable Integer routingWeight) {
-            this.routingWeight = Input.ofNullable(routingWeight);
+            this.routingWeight = Output.ofNullable(routingWeight);
             return this;
         }
 
-        public Builder sharedKey(@Nullable Input<String> sharedKey) {
+        public Builder sharedKey(@Nullable Output<String> sharedKey) {
             this.sharedKey = sharedKey;
             return this;
         }
 
         public Builder sharedKey(@Nullable String sharedKey) {
-            this.sharedKey = Input.ofNullable(sharedKey);
+            this.sharedKey = Output.ofNullable(sharedKey);
             return this;
         }
 
-        public Builder useLocalAzureIpAddress(@Nullable Input<Boolean> useLocalAzureIpAddress) {
+        public Builder useLocalAzureIpAddress(@Nullable Output<Boolean> useLocalAzureIpAddress) {
             this.useLocalAzureIpAddress = useLocalAzureIpAddress;
             return this;
         }
 
         public Builder useLocalAzureIpAddress(@Nullable Boolean useLocalAzureIpAddress) {
-            this.useLocalAzureIpAddress = Input.ofNullable(useLocalAzureIpAddress);
+            this.useLocalAzureIpAddress = Output.ofNullable(useLocalAzureIpAddress);
             return this;
         }
 
-        public Builder usePolicyBasedTrafficSelectors(@Nullable Input<Boolean> usePolicyBasedTrafficSelectors) {
+        public Builder usePolicyBasedTrafficSelectors(@Nullable Output<Boolean> usePolicyBasedTrafficSelectors) {
             this.usePolicyBasedTrafficSelectors = usePolicyBasedTrafficSelectors;
             return this;
         }
 
         public Builder usePolicyBasedTrafficSelectors(@Nullable Boolean usePolicyBasedTrafficSelectors) {
-            this.usePolicyBasedTrafficSelectors = Input.ofNullable(usePolicyBasedTrafficSelectors);
+            this.usePolicyBasedTrafficSelectors = Output.ofNullable(usePolicyBasedTrafficSelectors);
             return this;
         }
 
-        public Builder vpnConnectionProtocolType(@Nullable Input<Either<String,VirtualNetworkGatewayConnectionProtocol>> vpnConnectionProtocolType) {
+        public Builder vpnConnectionProtocolType(@Nullable Output<Either<String,VirtualNetworkGatewayConnectionProtocol>> vpnConnectionProtocolType) {
             this.vpnConnectionProtocolType = vpnConnectionProtocolType;
             return this;
         }
 
         public Builder vpnConnectionProtocolType(@Nullable Either<String,VirtualNetworkGatewayConnectionProtocol> vpnConnectionProtocolType) {
-            this.vpnConnectionProtocolType = Input.ofNullable(vpnConnectionProtocolType);
+            this.vpnConnectionProtocolType = Output.ofNullable(vpnConnectionProtocolType);
             return this;
         }
 
-        public Builder vpnLinkConnectionMode(@Nullable Input<Either<String,VpnLinkConnectionMode>> vpnLinkConnectionMode) {
+        public Builder vpnLinkConnectionMode(@Nullable Output<Either<String,VpnLinkConnectionMode>> vpnLinkConnectionMode) {
             this.vpnLinkConnectionMode = vpnLinkConnectionMode;
             return this;
         }
 
         public Builder vpnLinkConnectionMode(@Nullable Either<String,VpnLinkConnectionMode> vpnLinkConnectionMode) {
-            this.vpnLinkConnectionMode = Input.ofNullable(vpnLinkConnectionMode);
+            this.vpnLinkConnectionMode = Output.ofNullable(vpnLinkConnectionMode);
             return this;
         }
 
-        public Builder vpnSiteLink(@Nullable Input<SubResourceArgs> vpnSiteLink) {
+        public Builder vpnSiteLink(@Nullable Output<SubResourceArgs> vpnSiteLink) {
             this.vpnSiteLink = vpnSiteLink;
             return this;
         }
 
         public Builder vpnSiteLink(@Nullable SubResourceArgs vpnSiteLink) {
-            this.vpnSiteLink = Input.ofNullable(vpnSiteLink);
+            this.vpnSiteLink = Output.ofNullable(vpnSiteLink);
             return this;
         }
         public VpnSiteLinkConnectionArgs build() {

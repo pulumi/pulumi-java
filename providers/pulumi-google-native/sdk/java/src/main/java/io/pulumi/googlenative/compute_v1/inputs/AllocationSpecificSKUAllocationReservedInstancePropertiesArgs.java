@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.compute_v1.inputs.AcceleratorConfigArgs;
 import io.pulumi.googlenative.compute_v1.inputs.AllocationSpecificSKUAllocationAllocatedInstancePropertiesReservedDiskArgs;
@@ -26,10 +26,10 @@ public final class AllocationSpecificSKUAllocationReservedInstancePropertiesArgs
      * 
      */
     @InputImport(name="guestAccelerators")
-      private final @Nullable Input<List<AcceleratorConfigArgs>> guestAccelerators;
+      private final @Nullable Output<List<AcceleratorConfigArgs>> guestAccelerators;
 
-    public Input<List<AcceleratorConfigArgs>> getGuestAccelerators() {
-        return this.guestAccelerators == null ? Input.empty() : this.guestAccelerators;
+    public Output<List<AcceleratorConfigArgs>> getGuestAccelerators() {
+        return this.guestAccelerators == null ? Output.empty() : this.guestAccelerators;
     }
 
     /**
@@ -37,10 +37,10 @@ public final class AllocationSpecificSKUAllocationReservedInstancePropertiesArgs
      * 
      */
     @InputImport(name="localSsds")
-      private final @Nullable Input<List<AllocationSpecificSKUAllocationAllocatedInstancePropertiesReservedDiskArgs>> localSsds;
+      private final @Nullable Output<List<AllocationSpecificSKUAllocationAllocatedInstancePropertiesReservedDiskArgs>> localSsds;
 
-    public Input<List<AllocationSpecificSKUAllocationAllocatedInstancePropertiesReservedDiskArgs>> getLocalSsds() {
-        return this.localSsds == null ? Input.empty() : this.localSsds;
+    public Output<List<AllocationSpecificSKUAllocationAllocatedInstancePropertiesReservedDiskArgs>> getLocalSsds() {
+        return this.localSsds == null ? Output.empty() : this.localSsds;
     }
 
     /**
@@ -48,10 +48,10 @@ public final class AllocationSpecificSKUAllocationReservedInstancePropertiesArgs
      * 
      */
     @InputImport(name="locationHint")
-      private final @Nullable Input<String> locationHint;
+      private final @Nullable Output<String> locationHint;
 
-    public Input<String> getLocationHint() {
-        return this.locationHint == null ? Input.empty() : this.locationHint;
+    public Output<String> getLocationHint() {
+        return this.locationHint == null ? Output.empty() : this.locationHint;
     }
 
     /**
@@ -59,10 +59,10 @@ public final class AllocationSpecificSKUAllocationReservedInstancePropertiesArgs
      * 
      */
     @InputImport(name="machineType")
-      private final @Nullable Input<String> machineType;
+      private final @Nullable Output<String> machineType;
 
-    public Input<String> getMachineType() {
-        return this.machineType == null ? Input.empty() : this.machineType;
+    public Output<String> getMachineType() {
+        return this.machineType == null ? Output.empty() : this.machineType;
     }
 
     /**
@@ -70,18 +70,18 @@ public final class AllocationSpecificSKUAllocationReservedInstancePropertiesArgs
      * 
      */
     @InputImport(name="minCpuPlatform")
-      private final @Nullable Input<String> minCpuPlatform;
+      private final @Nullable Output<String> minCpuPlatform;
 
-    public Input<String> getMinCpuPlatform() {
-        return this.minCpuPlatform == null ? Input.empty() : this.minCpuPlatform;
+    public Output<String> getMinCpuPlatform() {
+        return this.minCpuPlatform == null ? Output.empty() : this.minCpuPlatform;
     }
 
     public AllocationSpecificSKUAllocationReservedInstancePropertiesArgs(
-        @Nullable Input<List<AcceleratorConfigArgs>> guestAccelerators,
-        @Nullable Input<List<AllocationSpecificSKUAllocationAllocatedInstancePropertiesReservedDiskArgs>> localSsds,
-        @Nullable Input<String> locationHint,
-        @Nullable Input<String> machineType,
-        @Nullable Input<String> minCpuPlatform) {
+        @Nullable Output<List<AcceleratorConfigArgs>> guestAccelerators,
+        @Nullable Output<List<AllocationSpecificSKUAllocationAllocatedInstancePropertiesReservedDiskArgs>> localSsds,
+        @Nullable Output<String> locationHint,
+        @Nullable Output<String> machineType,
+        @Nullable Output<String> minCpuPlatform) {
         this.guestAccelerators = guestAccelerators;
         this.localSsds = localSsds;
         this.locationHint = locationHint;
@@ -90,11 +90,11 @@ public final class AllocationSpecificSKUAllocationReservedInstancePropertiesArgs
     }
 
     private AllocationSpecificSKUAllocationReservedInstancePropertiesArgs() {
-        this.guestAccelerators = Input.empty();
-        this.localSsds = Input.empty();
-        this.locationHint = Input.empty();
-        this.machineType = Input.empty();
-        this.minCpuPlatform = Input.empty();
+        this.guestAccelerators = Output.empty();
+        this.localSsds = Output.empty();
+        this.locationHint = Output.empty();
+        this.machineType = Output.empty();
+        this.minCpuPlatform = Output.empty();
     }
 
     public static Builder builder() {
@@ -106,11 +106,11 @@ public final class AllocationSpecificSKUAllocationReservedInstancePropertiesArgs
     }
 
     public static final class Builder {
-        private @Nullable Input<List<AcceleratorConfigArgs>> guestAccelerators;
-        private @Nullable Input<List<AllocationSpecificSKUAllocationAllocatedInstancePropertiesReservedDiskArgs>> localSsds;
-        private @Nullable Input<String> locationHint;
-        private @Nullable Input<String> machineType;
-        private @Nullable Input<String> minCpuPlatform;
+        private @Nullable Output<List<AcceleratorConfigArgs>> guestAccelerators;
+        private @Nullable Output<List<AllocationSpecificSKUAllocationAllocatedInstancePropertiesReservedDiskArgs>> localSsds;
+        private @Nullable Output<String> locationHint;
+        private @Nullable Output<String> machineType;
+        private @Nullable Output<String> minCpuPlatform;
 
         public Builder() {
     	      // Empty
@@ -125,53 +125,53 @@ public final class AllocationSpecificSKUAllocationReservedInstancePropertiesArgs
     	      this.minCpuPlatform = defaults.minCpuPlatform;
         }
 
-        public Builder guestAccelerators(@Nullable Input<List<AcceleratorConfigArgs>> guestAccelerators) {
+        public Builder guestAccelerators(@Nullable Output<List<AcceleratorConfigArgs>> guestAccelerators) {
             this.guestAccelerators = guestAccelerators;
             return this;
         }
 
         public Builder guestAccelerators(@Nullable List<AcceleratorConfigArgs> guestAccelerators) {
-            this.guestAccelerators = Input.ofNullable(guestAccelerators);
+            this.guestAccelerators = Output.ofNullable(guestAccelerators);
             return this;
         }
 
-        public Builder localSsds(@Nullable Input<List<AllocationSpecificSKUAllocationAllocatedInstancePropertiesReservedDiskArgs>> localSsds) {
+        public Builder localSsds(@Nullable Output<List<AllocationSpecificSKUAllocationAllocatedInstancePropertiesReservedDiskArgs>> localSsds) {
             this.localSsds = localSsds;
             return this;
         }
 
         public Builder localSsds(@Nullable List<AllocationSpecificSKUAllocationAllocatedInstancePropertiesReservedDiskArgs> localSsds) {
-            this.localSsds = Input.ofNullable(localSsds);
+            this.localSsds = Output.ofNullable(localSsds);
             return this;
         }
 
-        public Builder locationHint(@Nullable Input<String> locationHint) {
+        public Builder locationHint(@Nullable Output<String> locationHint) {
             this.locationHint = locationHint;
             return this;
         }
 
         public Builder locationHint(@Nullable String locationHint) {
-            this.locationHint = Input.ofNullable(locationHint);
+            this.locationHint = Output.ofNullable(locationHint);
             return this;
         }
 
-        public Builder machineType(@Nullable Input<String> machineType) {
+        public Builder machineType(@Nullable Output<String> machineType) {
             this.machineType = machineType;
             return this;
         }
 
         public Builder machineType(@Nullable String machineType) {
-            this.machineType = Input.ofNullable(machineType);
+            this.machineType = Output.ofNullable(machineType);
             return this;
         }
 
-        public Builder minCpuPlatform(@Nullable Input<String> minCpuPlatform) {
+        public Builder minCpuPlatform(@Nullable Output<String> minCpuPlatform) {
             this.minCpuPlatform = minCpuPlatform;
             return this;
         }
 
         public Builder minCpuPlatform(@Nullable String minCpuPlatform) {
-            this.minCpuPlatform = Input.ofNullable(minCpuPlatform);
+            this.minCpuPlatform = Output.ofNullable(minCpuPlatform);
             return this;
         }
         public AllocationSpecificSKUAllocationReservedInstancePropertiesArgs build() {

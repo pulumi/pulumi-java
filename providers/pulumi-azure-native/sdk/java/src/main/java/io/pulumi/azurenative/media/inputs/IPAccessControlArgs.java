@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.media.inputs;
 
 import io.pulumi.azurenative.media.inputs.IPRangeArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
@@ -24,18 +24,18 @@ public final class IPAccessControlArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="allow")
-      private final @Nullable Input<List<IPRangeArgs>> allow;
+      private final @Nullable Output<List<IPRangeArgs>> allow;
 
-    public Input<List<IPRangeArgs>> getAllow() {
-        return this.allow == null ? Input.empty() : this.allow;
+    public Output<List<IPRangeArgs>> getAllow() {
+        return this.allow == null ? Output.empty() : this.allow;
     }
 
-    public IPAccessControlArgs(@Nullable Input<List<IPRangeArgs>> allow) {
+    public IPAccessControlArgs(@Nullable Output<List<IPRangeArgs>> allow) {
         this.allow = allow;
     }
 
     private IPAccessControlArgs() {
-        this.allow = Input.empty();
+        this.allow = Output.empty();
     }
 
     public static Builder builder() {
@@ -47,7 +47,7 @@ public final class IPAccessControlArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private @Nullable Input<List<IPRangeArgs>> allow;
+        private @Nullable Output<List<IPRangeArgs>> allow;
 
         public Builder() {
     	      // Empty
@@ -58,13 +58,13 @@ public final class IPAccessControlArgs extends io.pulumi.resources.ResourceArgs 
     	      this.allow = defaults.allow;
         }
 
-        public Builder allow(@Nullable Input<List<IPRangeArgs>> allow) {
+        public Builder allow(@Nullable Output<List<IPRangeArgs>> allow) {
             this.allow = allow;
             return this;
         }
 
         public Builder allow(@Nullable List<IPRangeArgs> allow) {
-            this.allow = Input.ofNullable(allow);
+            this.allow = Output.ofNullable(allow);
             return this;
         }
         public IPAccessControlArgs build() {

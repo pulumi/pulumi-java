@@ -8,7 +8,6 @@ import io.pulumi.aws.opsworks.HaproxyLayerArgs;
 import io.pulumi.aws.opsworks.inputs.HaproxyLayerState;
 import io.pulumi.aws.opsworks.outputs.HaproxyLayerCloudwatchConfiguration;
 import io.pulumi.aws.opsworks.outputs.HaproxyLayerEbsVolume;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -438,14 +437,14 @@ public class HaproxyLayer extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public HaproxyLayer(String name, HaproxyLayerArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:opsworks/haproxyLayer:HaproxyLayer", name, args == null ? HaproxyLayerArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws:opsworks/haproxyLayer:HaproxyLayer", name, args == null ? HaproxyLayerArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private HaproxyLayer(String name, Input<String> id, @Nullable HaproxyLayerState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private HaproxyLayer(String name, Output<String> id, @Nullable HaproxyLayerState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws:opsworks/haproxyLayer:HaproxyLayer", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -461,7 +460,7 @@ public class HaproxyLayer extends io.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static HaproxyLayer get(String name, Input<String> id, @Nullable HaproxyLayerState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static HaproxyLayer get(String name, Output<String> id, @Nullable HaproxyLayerState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new HaproxyLayer(name, id, state, options);
     }
 }

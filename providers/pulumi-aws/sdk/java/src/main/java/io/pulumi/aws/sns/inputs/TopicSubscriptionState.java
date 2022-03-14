@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.sns.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -21,10 +21,10 @@ public final class TopicSubscriptionState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="arn")
-      private final @Nullable Input<String> arn;
+      private final @Nullable Output<String> arn;
 
-    public Input<String> getArn() {
-        return this.arn == null ? Input.empty() : this.arn;
+    public Output<String> getArn() {
+        return this.arn == null ? Output.empty() : this.arn;
     }
 
     /**
@@ -32,10 +32,10 @@ public final class TopicSubscriptionState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="confirmationTimeoutInMinutes")
-      private final @Nullable Input<Integer> confirmationTimeoutInMinutes;
+      private final @Nullable Output<Integer> confirmationTimeoutInMinutes;
 
-    public Input<Integer> getConfirmationTimeoutInMinutes() {
-        return this.confirmationTimeoutInMinutes == null ? Input.empty() : this.confirmationTimeoutInMinutes;
+    public Output<Integer> getConfirmationTimeoutInMinutes() {
+        return this.confirmationTimeoutInMinutes == null ? Output.empty() : this.confirmationTimeoutInMinutes;
     }
 
     /**
@@ -43,10 +43,10 @@ public final class TopicSubscriptionState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="confirmationWasAuthenticated")
-      private final @Nullable Input<Boolean> confirmationWasAuthenticated;
+      private final @Nullable Output<Boolean> confirmationWasAuthenticated;
 
-    public Input<Boolean> getConfirmationWasAuthenticated() {
-        return this.confirmationWasAuthenticated == null ? Input.empty() : this.confirmationWasAuthenticated;
+    public Output<Boolean> getConfirmationWasAuthenticated() {
+        return this.confirmationWasAuthenticated == null ? Output.empty() : this.confirmationWasAuthenticated;
     }
 
     /**
@@ -54,10 +54,10 @@ public final class TopicSubscriptionState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="deliveryPolicy")
-      private final @Nullable Input<String> deliveryPolicy;
+      private final @Nullable Output<String> deliveryPolicy;
 
-    public Input<String> getDeliveryPolicy() {
-        return this.deliveryPolicy == null ? Input.empty() : this.deliveryPolicy;
+    public Output<String> getDeliveryPolicy() {
+        return this.deliveryPolicy == null ? Output.empty() : this.deliveryPolicy;
     }
 
     /**
@@ -65,10 +65,10 @@ public final class TopicSubscriptionState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="endpoint")
-      private final @Nullable Input<String> endpoint;
+      private final @Nullable Output<String> endpoint;
 
-    public Input<String> getEndpoint() {
-        return this.endpoint == null ? Input.empty() : this.endpoint;
+    public Output<String> getEndpoint() {
+        return this.endpoint == null ? Output.empty() : this.endpoint;
     }
 
     /**
@@ -76,10 +76,10 @@ public final class TopicSubscriptionState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="endpointAutoConfirms")
-      private final @Nullable Input<Boolean> endpointAutoConfirms;
+      private final @Nullable Output<Boolean> endpointAutoConfirms;
 
-    public Input<Boolean> getEndpointAutoConfirms() {
-        return this.endpointAutoConfirms == null ? Input.empty() : this.endpointAutoConfirms;
+    public Output<Boolean> getEndpointAutoConfirms() {
+        return this.endpointAutoConfirms == null ? Output.empty() : this.endpointAutoConfirms;
     }
 
     /**
@@ -87,10 +87,10 @@ public final class TopicSubscriptionState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="filterPolicy")
-      private final @Nullable Input<String> filterPolicy;
+      private final @Nullable Output<String> filterPolicy;
 
-    public Input<String> getFilterPolicy() {
-        return this.filterPolicy == null ? Input.empty() : this.filterPolicy;
+    public Output<String> getFilterPolicy() {
+        return this.filterPolicy == null ? Output.empty() : this.filterPolicy;
     }
 
     /**
@@ -98,10 +98,10 @@ public final class TopicSubscriptionState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="ownerId")
-      private final @Nullable Input<String> ownerId;
+      private final @Nullable Output<String> ownerId;
 
-    public Input<String> getOwnerId() {
-        return this.ownerId == null ? Input.empty() : this.ownerId;
+    public Output<String> getOwnerId() {
+        return this.ownerId == null ? Output.empty() : this.ownerId;
     }
 
     /**
@@ -109,10 +109,10 @@ public final class TopicSubscriptionState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="pendingConfirmation")
-      private final @Nullable Input<Boolean> pendingConfirmation;
+      private final @Nullable Output<Boolean> pendingConfirmation;
 
-    public Input<Boolean> getPendingConfirmation() {
-        return this.pendingConfirmation == null ? Input.empty() : this.pendingConfirmation;
+    public Output<Boolean> getPendingConfirmation() {
+        return this.pendingConfirmation == null ? Output.empty() : this.pendingConfirmation;
     }
 
     /**
@@ -120,10 +120,10 @@ public final class TopicSubscriptionState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="protocol")
-      private final @Nullable Input<String> protocol;
+      private final @Nullable Output<String> protocol;
 
-    public Input<String> getProtocol() {
-        return this.protocol == null ? Input.empty() : this.protocol;
+    public Output<String> getProtocol() {
+        return this.protocol == null ? Output.empty() : this.protocol;
     }
 
     /**
@@ -131,10 +131,10 @@ public final class TopicSubscriptionState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="rawMessageDelivery")
-      private final @Nullable Input<Boolean> rawMessageDelivery;
+      private final @Nullable Output<Boolean> rawMessageDelivery;
 
-    public Input<Boolean> getRawMessageDelivery() {
-        return this.rawMessageDelivery == null ? Input.empty() : this.rawMessageDelivery;
+    public Output<Boolean> getRawMessageDelivery() {
+        return this.rawMessageDelivery == null ? Output.empty() : this.rawMessageDelivery;
     }
 
     /**
@@ -142,10 +142,10 @@ public final class TopicSubscriptionState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="redrivePolicy")
-      private final @Nullable Input<String> redrivePolicy;
+      private final @Nullable Output<String> redrivePolicy;
 
-    public Input<String> getRedrivePolicy() {
-        return this.redrivePolicy == null ? Input.empty() : this.redrivePolicy;
+    public Output<String> getRedrivePolicy() {
+        return this.redrivePolicy == null ? Output.empty() : this.redrivePolicy;
     }
 
     /**
@@ -153,10 +153,10 @@ public final class TopicSubscriptionState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="subscriptionRoleArn")
-      private final @Nullable Input<String> subscriptionRoleArn;
+      private final @Nullable Output<String> subscriptionRoleArn;
 
-    public Input<String> getSubscriptionRoleArn() {
-        return this.subscriptionRoleArn == null ? Input.empty() : this.subscriptionRoleArn;
+    public Output<String> getSubscriptionRoleArn() {
+        return this.subscriptionRoleArn == null ? Output.empty() : this.subscriptionRoleArn;
     }
 
     /**
@@ -164,27 +164,27 @@ public final class TopicSubscriptionState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="topic")
-      private final @Nullable Input<String> topic;
+      private final @Nullable Output<String> topic;
 
-    public Input<String> getTopic() {
-        return this.topic == null ? Input.empty() : this.topic;
+    public Output<String> getTopic() {
+        return this.topic == null ? Output.empty() : this.topic;
     }
 
     public TopicSubscriptionState(
-        @Nullable Input<String> arn,
-        @Nullable Input<Integer> confirmationTimeoutInMinutes,
-        @Nullable Input<Boolean> confirmationWasAuthenticated,
-        @Nullable Input<String> deliveryPolicy,
-        @Nullable Input<String> endpoint,
-        @Nullable Input<Boolean> endpointAutoConfirms,
-        @Nullable Input<String> filterPolicy,
-        @Nullable Input<String> ownerId,
-        @Nullable Input<Boolean> pendingConfirmation,
-        @Nullable Input<String> protocol,
-        @Nullable Input<Boolean> rawMessageDelivery,
-        @Nullable Input<String> redrivePolicy,
-        @Nullable Input<String> subscriptionRoleArn,
-        @Nullable Input<String> topic) {
+        @Nullable Output<String> arn,
+        @Nullable Output<Integer> confirmationTimeoutInMinutes,
+        @Nullable Output<Boolean> confirmationWasAuthenticated,
+        @Nullable Output<String> deliveryPolicy,
+        @Nullable Output<String> endpoint,
+        @Nullable Output<Boolean> endpointAutoConfirms,
+        @Nullable Output<String> filterPolicy,
+        @Nullable Output<String> ownerId,
+        @Nullable Output<Boolean> pendingConfirmation,
+        @Nullable Output<String> protocol,
+        @Nullable Output<Boolean> rawMessageDelivery,
+        @Nullable Output<String> redrivePolicy,
+        @Nullable Output<String> subscriptionRoleArn,
+        @Nullable Output<String> topic) {
         this.arn = arn;
         this.confirmationTimeoutInMinutes = confirmationTimeoutInMinutes;
         this.confirmationWasAuthenticated = confirmationWasAuthenticated;
@@ -202,20 +202,20 @@ public final class TopicSubscriptionState extends io.pulumi.resources.ResourceAr
     }
 
     private TopicSubscriptionState() {
-        this.arn = Input.empty();
-        this.confirmationTimeoutInMinutes = Input.empty();
-        this.confirmationWasAuthenticated = Input.empty();
-        this.deliveryPolicy = Input.empty();
-        this.endpoint = Input.empty();
-        this.endpointAutoConfirms = Input.empty();
-        this.filterPolicy = Input.empty();
-        this.ownerId = Input.empty();
-        this.pendingConfirmation = Input.empty();
-        this.protocol = Input.empty();
-        this.rawMessageDelivery = Input.empty();
-        this.redrivePolicy = Input.empty();
-        this.subscriptionRoleArn = Input.empty();
-        this.topic = Input.empty();
+        this.arn = Output.empty();
+        this.confirmationTimeoutInMinutes = Output.empty();
+        this.confirmationWasAuthenticated = Output.empty();
+        this.deliveryPolicy = Output.empty();
+        this.endpoint = Output.empty();
+        this.endpointAutoConfirms = Output.empty();
+        this.filterPolicy = Output.empty();
+        this.ownerId = Output.empty();
+        this.pendingConfirmation = Output.empty();
+        this.protocol = Output.empty();
+        this.rawMessageDelivery = Output.empty();
+        this.redrivePolicy = Output.empty();
+        this.subscriptionRoleArn = Output.empty();
+        this.topic = Output.empty();
     }
 
     public static Builder builder() {
@@ -227,20 +227,20 @@ public final class TopicSubscriptionState extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private @Nullable Input<String> arn;
-        private @Nullable Input<Integer> confirmationTimeoutInMinutes;
-        private @Nullable Input<Boolean> confirmationWasAuthenticated;
-        private @Nullable Input<String> deliveryPolicy;
-        private @Nullable Input<String> endpoint;
-        private @Nullable Input<Boolean> endpointAutoConfirms;
-        private @Nullable Input<String> filterPolicy;
-        private @Nullable Input<String> ownerId;
-        private @Nullable Input<Boolean> pendingConfirmation;
-        private @Nullable Input<String> protocol;
-        private @Nullable Input<Boolean> rawMessageDelivery;
-        private @Nullable Input<String> redrivePolicy;
-        private @Nullable Input<String> subscriptionRoleArn;
-        private @Nullable Input<String> topic;
+        private @Nullable Output<String> arn;
+        private @Nullable Output<Integer> confirmationTimeoutInMinutes;
+        private @Nullable Output<Boolean> confirmationWasAuthenticated;
+        private @Nullable Output<String> deliveryPolicy;
+        private @Nullable Output<String> endpoint;
+        private @Nullable Output<Boolean> endpointAutoConfirms;
+        private @Nullable Output<String> filterPolicy;
+        private @Nullable Output<String> ownerId;
+        private @Nullable Output<Boolean> pendingConfirmation;
+        private @Nullable Output<String> protocol;
+        private @Nullable Output<Boolean> rawMessageDelivery;
+        private @Nullable Output<String> redrivePolicy;
+        private @Nullable Output<String> subscriptionRoleArn;
+        private @Nullable Output<String> topic;
 
         public Builder() {
     	      // Empty
@@ -264,137 +264,137 @@ public final class TopicSubscriptionState extends io.pulumi.resources.ResourceAr
     	      this.topic = defaults.topic;
         }
 
-        public Builder arn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
 
         public Builder arn(@Nullable String arn) {
-            this.arn = Input.ofNullable(arn);
+            this.arn = Output.ofNullable(arn);
             return this;
         }
 
-        public Builder confirmationTimeoutInMinutes(@Nullable Input<Integer> confirmationTimeoutInMinutes) {
+        public Builder confirmationTimeoutInMinutes(@Nullable Output<Integer> confirmationTimeoutInMinutes) {
             this.confirmationTimeoutInMinutes = confirmationTimeoutInMinutes;
             return this;
         }
 
         public Builder confirmationTimeoutInMinutes(@Nullable Integer confirmationTimeoutInMinutes) {
-            this.confirmationTimeoutInMinutes = Input.ofNullable(confirmationTimeoutInMinutes);
+            this.confirmationTimeoutInMinutes = Output.ofNullable(confirmationTimeoutInMinutes);
             return this;
         }
 
-        public Builder confirmationWasAuthenticated(@Nullable Input<Boolean> confirmationWasAuthenticated) {
+        public Builder confirmationWasAuthenticated(@Nullable Output<Boolean> confirmationWasAuthenticated) {
             this.confirmationWasAuthenticated = confirmationWasAuthenticated;
             return this;
         }
 
         public Builder confirmationWasAuthenticated(@Nullable Boolean confirmationWasAuthenticated) {
-            this.confirmationWasAuthenticated = Input.ofNullable(confirmationWasAuthenticated);
+            this.confirmationWasAuthenticated = Output.ofNullable(confirmationWasAuthenticated);
             return this;
         }
 
-        public Builder deliveryPolicy(@Nullable Input<String> deliveryPolicy) {
+        public Builder deliveryPolicy(@Nullable Output<String> deliveryPolicy) {
             this.deliveryPolicy = deliveryPolicy;
             return this;
         }
 
         public Builder deliveryPolicy(@Nullable String deliveryPolicy) {
-            this.deliveryPolicy = Input.ofNullable(deliveryPolicy);
+            this.deliveryPolicy = Output.ofNullable(deliveryPolicy);
             return this;
         }
 
-        public Builder endpoint(@Nullable Input<String> endpoint) {
+        public Builder endpoint(@Nullable Output<String> endpoint) {
             this.endpoint = endpoint;
             return this;
         }
 
         public Builder endpoint(@Nullable String endpoint) {
-            this.endpoint = Input.ofNullable(endpoint);
+            this.endpoint = Output.ofNullable(endpoint);
             return this;
         }
 
-        public Builder endpointAutoConfirms(@Nullable Input<Boolean> endpointAutoConfirms) {
+        public Builder endpointAutoConfirms(@Nullable Output<Boolean> endpointAutoConfirms) {
             this.endpointAutoConfirms = endpointAutoConfirms;
             return this;
         }
 
         public Builder endpointAutoConfirms(@Nullable Boolean endpointAutoConfirms) {
-            this.endpointAutoConfirms = Input.ofNullable(endpointAutoConfirms);
+            this.endpointAutoConfirms = Output.ofNullable(endpointAutoConfirms);
             return this;
         }
 
-        public Builder filterPolicy(@Nullable Input<String> filterPolicy) {
+        public Builder filterPolicy(@Nullable Output<String> filterPolicy) {
             this.filterPolicy = filterPolicy;
             return this;
         }
 
         public Builder filterPolicy(@Nullable String filterPolicy) {
-            this.filterPolicy = Input.ofNullable(filterPolicy);
+            this.filterPolicy = Output.ofNullable(filterPolicy);
             return this;
         }
 
-        public Builder ownerId(@Nullable Input<String> ownerId) {
+        public Builder ownerId(@Nullable Output<String> ownerId) {
             this.ownerId = ownerId;
             return this;
         }
 
         public Builder ownerId(@Nullable String ownerId) {
-            this.ownerId = Input.ofNullable(ownerId);
+            this.ownerId = Output.ofNullable(ownerId);
             return this;
         }
 
-        public Builder pendingConfirmation(@Nullable Input<Boolean> pendingConfirmation) {
+        public Builder pendingConfirmation(@Nullable Output<Boolean> pendingConfirmation) {
             this.pendingConfirmation = pendingConfirmation;
             return this;
         }
 
         public Builder pendingConfirmation(@Nullable Boolean pendingConfirmation) {
-            this.pendingConfirmation = Input.ofNullable(pendingConfirmation);
+            this.pendingConfirmation = Output.ofNullable(pendingConfirmation);
             return this;
         }
 
-        public Builder protocol(@Nullable Input<String> protocol) {
+        public Builder protocol(@Nullable Output<String> protocol) {
             this.protocol = protocol;
             return this;
         }
 
         public Builder protocol(@Nullable String protocol) {
-            this.protocol = Input.ofNullable(protocol);
+            this.protocol = Output.ofNullable(protocol);
             return this;
         }
 
-        public Builder rawMessageDelivery(@Nullable Input<Boolean> rawMessageDelivery) {
+        public Builder rawMessageDelivery(@Nullable Output<Boolean> rawMessageDelivery) {
             this.rawMessageDelivery = rawMessageDelivery;
             return this;
         }
 
         public Builder rawMessageDelivery(@Nullable Boolean rawMessageDelivery) {
-            this.rawMessageDelivery = Input.ofNullable(rawMessageDelivery);
+            this.rawMessageDelivery = Output.ofNullable(rawMessageDelivery);
             return this;
         }
 
-        public Builder redrivePolicy(@Nullable Input<String> redrivePolicy) {
+        public Builder redrivePolicy(@Nullable Output<String> redrivePolicy) {
             this.redrivePolicy = redrivePolicy;
             return this;
         }
 
         public Builder redrivePolicy(@Nullable String redrivePolicy) {
-            this.redrivePolicy = Input.ofNullable(redrivePolicy);
+            this.redrivePolicy = Output.ofNullable(redrivePolicy);
             return this;
         }
 
-        public Builder subscriptionRoleArn(@Nullable Input<String> subscriptionRoleArn) {
+        public Builder subscriptionRoleArn(@Nullable Output<String> subscriptionRoleArn) {
             this.subscriptionRoleArn = subscriptionRoleArn;
             return this;
         }
 
         public Builder subscriptionRoleArn(@Nullable String subscriptionRoleArn) {
-            this.subscriptionRoleArn = Input.ofNullable(subscriptionRoleArn);
+            this.subscriptionRoleArn = Output.ofNullable(subscriptionRoleArn);
             return this;
         }
 
-        public Builder topic(@Nullable Input<String> topic) {
+        public Builder topic(@Nullable Output<String> topic) {
             this.topic = topic;
             return this;
         }

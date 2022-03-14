@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.cognitiveservices.inputs;
 
 import io.pulumi.azurenative.cognitiveservices.inputs.PrivateEndpointConnectionPropertiesArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -24,10 +24,10 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="properties")
-      private final @Nullable Input<PrivateEndpointConnectionPropertiesArgs> properties;
+      private final @Nullable Output<PrivateEndpointConnectionPropertiesArgs> properties;
 
-    public Input<PrivateEndpointConnectionPropertiesArgs> getProperties() {
-        return this.properties == null ? Input.empty() : this.properties;
+    public Output<PrivateEndpointConnectionPropertiesArgs> getProperties() {
+        return this.properties == null ? Output.empty() : this.properties;
     }
 
     public PrivateEndpointConnectionArgs(
-        @Nullable Input<String> location,
-        @Nullable Input<PrivateEndpointConnectionPropertiesArgs> properties) {
+        @Nullable Output<String> location,
+        @Nullable Output<PrivateEndpointConnectionPropertiesArgs> properties) {
         this.location = location;
         this.properties = properties;
     }
 
     private PrivateEndpointConnectionArgs() {
-        this.location = Input.empty();
-        this.properties = Input.empty();
+        this.location = Output.empty();
+        this.properties = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
     }
 
     public static final class Builder {
-        private @Nullable Input<String> location;
-        private @Nullable Input<PrivateEndpointConnectionPropertiesArgs> properties;
+        private @Nullable Output<String> location;
+        private @Nullable Output<PrivateEndpointConnectionPropertiesArgs> properties;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
     	      this.properties = defaults.properties;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder properties(@Nullable Input<PrivateEndpointConnectionPropertiesArgs> properties) {
+        public Builder properties(@Nullable Output<PrivateEndpointConnectionPropertiesArgs> properties) {
             this.properties = properties;
             return this;
         }
 
         public Builder properties(@Nullable PrivateEndpointConnectionPropertiesArgs properties) {
-            this.properties = Input.ofNullable(properties);
+            this.properties = Output.ofNullable(properties);
             return this;
         }
         public PrivateEndpointConnectionArgs build() {

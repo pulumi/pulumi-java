@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.machinelearning.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -22,9 +22,9 @@ public final class GraphParameterLinkArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="nodeId", required=true)
-      private final Input<String> nodeId;
+      private final Output<String> nodeId;
 
-    public Input<String> getNodeId() {
+    public Output<String> getNodeId() {
         return this.nodeId;
     }
 
@@ -33,22 +33,22 @@ public final class GraphParameterLinkArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="parameterKey", required=true)
-      private final Input<String> parameterKey;
+      private final Output<String> parameterKey;
 
-    public Input<String> getParameterKey() {
+    public Output<String> getParameterKey() {
         return this.parameterKey;
     }
 
     public GraphParameterLinkArgs(
-        Input<String> nodeId,
-        Input<String> parameterKey) {
+        Output<String> nodeId,
+        Output<String> parameterKey) {
         this.nodeId = Objects.requireNonNull(nodeId, "expected parameter 'nodeId' to be non-null");
         this.parameterKey = Objects.requireNonNull(parameterKey, "expected parameter 'parameterKey' to be non-null");
     }
 
     private GraphParameterLinkArgs() {
-        this.nodeId = Input.empty();
-        this.parameterKey = Input.empty();
+        this.nodeId = Output.empty();
+        this.parameterKey = Output.empty();
     }
 
     public static Builder builder() {
@@ -60,8 +60,8 @@ public final class GraphParameterLinkArgs extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private Input<String> nodeId;
-        private Input<String> parameterKey;
+        private Output<String> nodeId;
+        private Output<String> parameterKey;
 
         public Builder() {
     	      // Empty
@@ -73,23 +73,23 @@ public final class GraphParameterLinkArgs extends io.pulumi.resources.ResourceAr
     	      this.parameterKey = defaults.parameterKey;
         }
 
-        public Builder nodeId(Input<String> nodeId) {
+        public Builder nodeId(Output<String> nodeId) {
             this.nodeId = Objects.requireNonNull(nodeId);
             return this;
         }
 
         public Builder nodeId(String nodeId) {
-            this.nodeId = Input.of(Objects.requireNonNull(nodeId));
+            this.nodeId = Output.of(Objects.requireNonNull(nodeId));
             return this;
         }
 
-        public Builder parameterKey(Input<String> parameterKey) {
+        public Builder parameterKey(Output<String> parameterKey) {
             this.parameterKey = Objects.requireNonNull(parameterKey);
             return this;
         }
 
         public Builder parameterKey(String parameterKey) {
-            this.parameterKey = Input.of(Objects.requireNonNull(parameterKey));
+            this.parameterKey = Output.of(Objects.requireNonNull(parameterKey));
             return this;
         }
         public GraphParameterLinkArgs build() {

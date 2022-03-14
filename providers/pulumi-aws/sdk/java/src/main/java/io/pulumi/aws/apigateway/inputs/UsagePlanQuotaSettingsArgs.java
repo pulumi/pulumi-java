@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.apigateway.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -20,9 +20,9 @@ public final class UsagePlanQuotaSettingsArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="limit", required=true)
-      private final Input<Integer> limit;
+      private final Output<Integer> limit;
 
-    public Input<Integer> getLimit() {
+    public Output<Integer> getLimit() {
         return this.limit;
     }
 
@@ -31,10 +31,10 @@ public final class UsagePlanQuotaSettingsArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="offset")
-      private final @Nullable Input<Integer> offset;
+      private final @Nullable Output<Integer> offset;
 
-    public Input<Integer> getOffset() {
-        return this.offset == null ? Input.empty() : this.offset;
+    public Output<Integer> getOffset() {
+        return this.offset == null ? Output.empty() : this.offset;
     }
 
     /**
@@ -42,25 +42,25 @@ public final class UsagePlanQuotaSettingsArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="period", required=true)
-      private final Input<String> period;
+      private final Output<String> period;
 
-    public Input<String> getPeriod() {
+    public Output<String> getPeriod() {
         return this.period;
     }
 
     public UsagePlanQuotaSettingsArgs(
-        Input<Integer> limit,
-        @Nullable Input<Integer> offset,
-        Input<String> period) {
+        Output<Integer> limit,
+        @Nullable Output<Integer> offset,
+        Output<String> period) {
         this.limit = Objects.requireNonNull(limit, "expected parameter 'limit' to be non-null");
         this.offset = offset;
         this.period = Objects.requireNonNull(period, "expected parameter 'period' to be non-null");
     }
 
     private UsagePlanQuotaSettingsArgs() {
-        this.limit = Input.empty();
-        this.offset = Input.empty();
-        this.period = Input.empty();
+        this.limit = Output.empty();
+        this.offset = Output.empty();
+        this.period = Output.empty();
     }
 
     public static Builder builder() {
@@ -72,9 +72,9 @@ public final class UsagePlanQuotaSettingsArgs extends io.pulumi.resources.Resour
     }
 
     public static final class Builder {
-        private Input<Integer> limit;
-        private @Nullable Input<Integer> offset;
-        private Input<String> period;
+        private Output<Integer> limit;
+        private @Nullable Output<Integer> offset;
+        private Output<String> period;
 
         public Builder() {
     	      // Empty
@@ -87,33 +87,33 @@ public final class UsagePlanQuotaSettingsArgs extends io.pulumi.resources.Resour
     	      this.period = defaults.period;
         }
 
-        public Builder limit(Input<Integer> limit) {
+        public Builder limit(Output<Integer> limit) {
             this.limit = Objects.requireNonNull(limit);
             return this;
         }
 
         public Builder limit(Integer limit) {
-            this.limit = Input.of(Objects.requireNonNull(limit));
+            this.limit = Output.of(Objects.requireNonNull(limit));
             return this;
         }
 
-        public Builder offset(@Nullable Input<Integer> offset) {
+        public Builder offset(@Nullable Output<Integer> offset) {
             this.offset = offset;
             return this;
         }
 
         public Builder offset(@Nullable Integer offset) {
-            this.offset = Input.ofNullable(offset);
+            this.offset = Output.ofNullable(offset);
             return this;
         }
 
-        public Builder period(Input<String> period) {
+        public Builder period(Output<String> period) {
             this.period = Objects.requireNonNull(period);
             return this;
         }
 
         public Builder period(String period) {
-            this.period = Input.of(Objects.requireNonNull(period));
+            this.period = Output.of(Objects.requireNonNull(period));
             return this;
         }
         public UsagePlanQuotaSettingsArgs build() {

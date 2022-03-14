@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.networkconnectivity_v1;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.networkconnectivity_v1.inputs.LinkedInterconnectAttachmentsArgs;
 import io.pulumi.googlenative.networkconnectivity_v1.inputs.LinkedRouterApplianceInstancesArgs;
@@ -23,10 +23,10 @@ public final class SpokeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class SpokeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="hub")
-      private final @Nullable Input<String> hub;
+      private final @Nullable Output<String> hub;
 
-    public Input<String> getHub() {
-        return this.hub == null ? Input.empty() : this.hub;
+    public Output<String> getHub() {
+        return this.hub == null ? Output.empty() : this.hub;
     }
 
     /**
@@ -45,10 +45,10 @@ public final class SpokeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labels")
-      private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Output<Map<String,String>> labels;
 
-    public Input<Map<String,String>> getLabels() {
-        return this.labels == null ? Input.empty() : this.labels;
+    public Output<Map<String,String>> getLabels() {
+        return this.labels == null ? Output.empty() : this.labels;
     }
 
     /**
@@ -56,10 +56,10 @@ public final class SpokeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="linkedInterconnectAttachments")
-      private final @Nullable Input<LinkedInterconnectAttachmentsArgs> linkedInterconnectAttachments;
+      private final @Nullable Output<LinkedInterconnectAttachmentsArgs> linkedInterconnectAttachments;
 
-    public Input<LinkedInterconnectAttachmentsArgs> getLinkedInterconnectAttachments() {
-        return this.linkedInterconnectAttachments == null ? Input.empty() : this.linkedInterconnectAttachments;
+    public Output<LinkedInterconnectAttachmentsArgs> getLinkedInterconnectAttachments() {
+        return this.linkedInterconnectAttachments == null ? Output.empty() : this.linkedInterconnectAttachments;
     }
 
     /**
@@ -67,10 +67,10 @@ public final class SpokeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="linkedRouterApplianceInstances")
-      private final @Nullable Input<LinkedRouterApplianceInstancesArgs> linkedRouterApplianceInstances;
+      private final @Nullable Output<LinkedRouterApplianceInstancesArgs> linkedRouterApplianceInstances;
 
-    public Input<LinkedRouterApplianceInstancesArgs> getLinkedRouterApplianceInstances() {
-        return this.linkedRouterApplianceInstances == null ? Input.empty() : this.linkedRouterApplianceInstances;
+    public Output<LinkedRouterApplianceInstancesArgs> getLinkedRouterApplianceInstances() {
+        return this.linkedRouterApplianceInstances == null ? Output.empty() : this.linkedRouterApplianceInstances;
     }
 
     /**
@@ -78,17 +78,17 @@ public final class SpokeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="linkedVpnTunnels")
-      private final @Nullable Input<LinkedVpnTunnelsArgs> linkedVpnTunnels;
+      private final @Nullable Output<LinkedVpnTunnelsArgs> linkedVpnTunnels;
 
-    public Input<LinkedVpnTunnelsArgs> getLinkedVpnTunnels() {
-        return this.linkedVpnTunnels == null ? Input.empty() : this.linkedVpnTunnels;
+    public Output<LinkedVpnTunnelsArgs> getLinkedVpnTunnels() {
+        return this.linkedVpnTunnels == null ? Output.empty() : this.linkedVpnTunnels;
     }
 
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -96,45 +96,45 @@ public final class SpokeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     @InputImport(name="requestId")
-      private final @Nullable Input<String> requestId;
+      private final @Nullable Output<String> requestId;
 
-    public Input<String> getRequestId() {
-        return this.requestId == null ? Input.empty() : this.requestId;
+    public Output<String> getRequestId() {
+        return this.requestId == null ? Output.empty() : this.requestId;
     }
 
     @InputImport(name="spokeId", required=true)
-      private final Input<String> spokeId;
+      private final Output<String> spokeId;
 
-    public Input<String> getSpokeId() {
+    public Output<String> getSpokeId() {
         return this.spokeId;
     }
 
     public SpokeArgs(
-        @Nullable Input<String> description,
-        @Nullable Input<String> hub,
-        @Nullable Input<Map<String,String>> labels,
-        @Nullable Input<LinkedInterconnectAttachmentsArgs> linkedInterconnectAttachments,
-        @Nullable Input<LinkedRouterApplianceInstancesArgs> linkedRouterApplianceInstances,
-        @Nullable Input<LinkedVpnTunnelsArgs> linkedVpnTunnels,
-        @Nullable Input<String> location,
-        @Nullable Input<String> name,
-        @Nullable Input<String> project,
-        @Nullable Input<String> requestId,
-        Input<String> spokeId) {
+        @Nullable Output<String> description,
+        @Nullable Output<String> hub,
+        @Nullable Output<Map<String,String>> labels,
+        @Nullable Output<LinkedInterconnectAttachmentsArgs> linkedInterconnectAttachments,
+        @Nullable Output<LinkedRouterApplianceInstancesArgs> linkedRouterApplianceInstances,
+        @Nullable Output<LinkedVpnTunnelsArgs> linkedVpnTunnels,
+        @Nullable Output<String> location,
+        @Nullable Output<String> name,
+        @Nullable Output<String> project,
+        @Nullable Output<String> requestId,
+        Output<String> spokeId) {
         this.description = description;
         this.hub = hub;
         this.labels = labels;
@@ -149,17 +149,17 @@ public final class SpokeArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private SpokeArgs() {
-        this.description = Input.empty();
-        this.hub = Input.empty();
-        this.labels = Input.empty();
-        this.linkedInterconnectAttachments = Input.empty();
-        this.linkedRouterApplianceInstances = Input.empty();
-        this.linkedVpnTunnels = Input.empty();
-        this.location = Input.empty();
-        this.name = Input.empty();
-        this.project = Input.empty();
-        this.requestId = Input.empty();
-        this.spokeId = Input.empty();
+        this.description = Output.empty();
+        this.hub = Output.empty();
+        this.labels = Output.empty();
+        this.linkedInterconnectAttachments = Output.empty();
+        this.linkedRouterApplianceInstances = Output.empty();
+        this.linkedVpnTunnels = Output.empty();
+        this.location = Output.empty();
+        this.name = Output.empty();
+        this.project = Output.empty();
+        this.requestId = Output.empty();
+        this.spokeId = Output.empty();
     }
 
     public static Builder builder() {
@@ -171,17 +171,17 @@ public final class SpokeArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> description;
-        private @Nullable Input<String> hub;
-        private @Nullable Input<Map<String,String>> labels;
-        private @Nullable Input<LinkedInterconnectAttachmentsArgs> linkedInterconnectAttachments;
-        private @Nullable Input<LinkedRouterApplianceInstancesArgs> linkedRouterApplianceInstances;
-        private @Nullable Input<LinkedVpnTunnelsArgs> linkedVpnTunnels;
-        private @Nullable Input<String> location;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> project;
-        private @Nullable Input<String> requestId;
-        private Input<String> spokeId;
+        private @Nullable Output<String> description;
+        private @Nullable Output<String> hub;
+        private @Nullable Output<Map<String,String>> labels;
+        private @Nullable Output<LinkedInterconnectAttachmentsArgs> linkedInterconnectAttachments;
+        private @Nullable Output<LinkedRouterApplianceInstancesArgs> linkedRouterApplianceInstances;
+        private @Nullable Output<LinkedVpnTunnelsArgs> linkedVpnTunnels;
+        private @Nullable Output<String> location;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> project;
+        private @Nullable Output<String> requestId;
+        private Output<String> spokeId;
 
         public Builder() {
     	      // Empty
@@ -202,113 +202,113 @@ public final class SpokeArgs extends io.pulumi.resources.ResourceArgs {
     	      this.spokeId = defaults.spokeId;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder hub(@Nullable Input<String> hub) {
+        public Builder hub(@Nullable Output<String> hub) {
             this.hub = hub;
             return this;
         }
 
         public Builder hub(@Nullable String hub) {
-            this.hub = Input.ofNullable(hub);
+            this.hub = Output.ofNullable(hub);
             return this;
         }
 
-        public Builder labels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
         public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Input.ofNullable(labels);
+            this.labels = Output.ofNullable(labels);
             return this;
         }
 
-        public Builder linkedInterconnectAttachments(@Nullable Input<LinkedInterconnectAttachmentsArgs> linkedInterconnectAttachments) {
+        public Builder linkedInterconnectAttachments(@Nullable Output<LinkedInterconnectAttachmentsArgs> linkedInterconnectAttachments) {
             this.linkedInterconnectAttachments = linkedInterconnectAttachments;
             return this;
         }
 
         public Builder linkedInterconnectAttachments(@Nullable LinkedInterconnectAttachmentsArgs linkedInterconnectAttachments) {
-            this.linkedInterconnectAttachments = Input.ofNullable(linkedInterconnectAttachments);
+            this.linkedInterconnectAttachments = Output.ofNullable(linkedInterconnectAttachments);
             return this;
         }
 
-        public Builder linkedRouterApplianceInstances(@Nullable Input<LinkedRouterApplianceInstancesArgs> linkedRouterApplianceInstances) {
+        public Builder linkedRouterApplianceInstances(@Nullable Output<LinkedRouterApplianceInstancesArgs> linkedRouterApplianceInstances) {
             this.linkedRouterApplianceInstances = linkedRouterApplianceInstances;
             return this;
         }
 
         public Builder linkedRouterApplianceInstances(@Nullable LinkedRouterApplianceInstancesArgs linkedRouterApplianceInstances) {
-            this.linkedRouterApplianceInstances = Input.ofNullable(linkedRouterApplianceInstances);
+            this.linkedRouterApplianceInstances = Output.ofNullable(linkedRouterApplianceInstances);
             return this;
         }
 
-        public Builder linkedVpnTunnels(@Nullable Input<LinkedVpnTunnelsArgs> linkedVpnTunnels) {
+        public Builder linkedVpnTunnels(@Nullable Output<LinkedVpnTunnelsArgs> linkedVpnTunnels) {
             this.linkedVpnTunnels = linkedVpnTunnels;
             return this;
         }
 
         public Builder linkedVpnTunnels(@Nullable LinkedVpnTunnelsArgs linkedVpnTunnels) {
-            this.linkedVpnTunnels = Input.ofNullable(linkedVpnTunnels);
+            this.linkedVpnTunnels = Output.ofNullable(linkedVpnTunnels);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder requestId(@Nullable Input<String> requestId) {
+        public Builder requestId(@Nullable Output<String> requestId) {
             this.requestId = requestId;
             return this;
         }
 
         public Builder requestId(@Nullable String requestId) {
-            this.requestId = Input.ofNullable(requestId);
+            this.requestId = Output.ofNullable(requestId);
             return this;
         }
 
-        public Builder spokeId(Input<String> spokeId) {
+        public Builder spokeId(Output<String> spokeId) {
             this.spokeId = Objects.requireNonNull(spokeId);
             return this;
         }
 
         public Builder spokeId(String spokeId) {
-            this.spokeId = Input.of(Objects.requireNonNull(spokeId));
+            this.spokeId = Output.of(Objects.requireNonNull(spokeId));
             return this;
         }
         public SpokeArgs build() {

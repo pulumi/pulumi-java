@@ -6,7 +6,7 @@ package io.pulumi.azurenative.securityinsights.inputs;
 import io.pulumi.azurenative.securityinsights.enums.Kind;
 import io.pulumi.azurenative.securityinsights.enums.Operator;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -27,10 +27,10 @@ public final class MetadataDependenciesArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="contentId")
-      private final @Nullable Input<String> contentId;
+      private final @Nullable Output<String> contentId;
 
-    public Input<String> getContentId() {
-        return this.contentId == null ? Input.empty() : this.contentId;
+    public Output<String> getContentId() {
+        return this.contentId == null ? Output.empty() : this.contentId;
     }
 
     /**
@@ -38,10 +38,10 @@ public final class MetadataDependenciesArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="criteria")
-      private final @Nullable Input<List<MetadataDependenciesArgs>> criteria;
+      private final @Nullable Output<List<MetadataDependenciesArgs>> criteria;
 
-    public Input<List<MetadataDependenciesArgs>> getCriteria() {
-        return this.criteria == null ? Input.empty() : this.criteria;
+    public Output<List<MetadataDependenciesArgs>> getCriteria() {
+        return this.criteria == null ? Output.empty() : this.criteria;
     }
 
     /**
@@ -49,10 +49,10 @@ public final class MetadataDependenciesArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="kind")
-      private final @Nullable Input<Either<String,Kind>> kind;
+      private final @Nullable Output<Either<String,Kind>> kind;
 
-    public Input<Either<String,Kind>> getKind() {
-        return this.kind == null ? Input.empty() : this.kind;
+    public Output<Either<String,Kind>> getKind() {
+        return this.kind == null ? Output.empty() : this.kind;
     }
 
     /**
@@ -60,10 +60,10 @@ public final class MetadataDependenciesArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -71,10 +71,10 @@ public final class MetadataDependenciesArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="operator")
-      private final @Nullable Input<Either<String,Operator>> operator;
+      private final @Nullable Output<Either<String,Operator>> operator;
 
-    public Input<Either<String,Operator>> getOperator() {
-        return this.operator == null ? Input.empty() : this.operator;
+    public Output<Either<String,Operator>> getOperator() {
+        return this.operator == null ? Output.empty() : this.operator;
     }
 
     /**
@@ -82,19 +82,19 @@ public final class MetadataDependenciesArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="version")
-      private final @Nullable Input<String> version;
+      private final @Nullable Output<String> version;
 
-    public Input<String> getVersion() {
-        return this.version == null ? Input.empty() : this.version;
+    public Output<String> getVersion() {
+        return this.version == null ? Output.empty() : this.version;
     }
 
     public MetadataDependenciesArgs(
-        @Nullable Input<String> contentId,
-        @Nullable Input<List<MetadataDependenciesArgs>> criteria,
-        @Nullable Input<Either<String,Kind>> kind,
-        @Nullable Input<String> name,
-        @Nullable Input<Either<String,Operator>> operator,
-        @Nullable Input<String> version) {
+        @Nullable Output<String> contentId,
+        @Nullable Output<List<MetadataDependenciesArgs>> criteria,
+        @Nullable Output<Either<String,Kind>> kind,
+        @Nullable Output<String> name,
+        @Nullable Output<Either<String,Operator>> operator,
+        @Nullable Output<String> version) {
         this.contentId = contentId;
         this.criteria = criteria;
         this.kind = kind;
@@ -104,12 +104,12 @@ public final class MetadataDependenciesArgs extends io.pulumi.resources.Resource
     }
 
     private MetadataDependenciesArgs() {
-        this.contentId = Input.empty();
-        this.criteria = Input.empty();
-        this.kind = Input.empty();
-        this.name = Input.empty();
-        this.operator = Input.empty();
-        this.version = Input.empty();
+        this.contentId = Output.empty();
+        this.criteria = Output.empty();
+        this.kind = Output.empty();
+        this.name = Output.empty();
+        this.operator = Output.empty();
+        this.version = Output.empty();
     }
 
     public static Builder builder() {
@@ -121,12 +121,12 @@ public final class MetadataDependenciesArgs extends io.pulumi.resources.Resource
     }
 
     public static final class Builder {
-        private @Nullable Input<String> contentId;
-        private @Nullable Input<List<MetadataDependenciesArgs>> criteria;
-        private @Nullable Input<Either<String,Kind>> kind;
-        private @Nullable Input<String> name;
-        private @Nullable Input<Either<String,Operator>> operator;
-        private @Nullable Input<String> version;
+        private @Nullable Output<String> contentId;
+        private @Nullable Output<List<MetadataDependenciesArgs>> criteria;
+        private @Nullable Output<Either<String,Kind>> kind;
+        private @Nullable Output<String> name;
+        private @Nullable Output<Either<String,Operator>> operator;
+        private @Nullable Output<String> version;
 
         public Builder() {
     	      // Empty
@@ -142,63 +142,63 @@ public final class MetadataDependenciesArgs extends io.pulumi.resources.Resource
     	      this.version = defaults.version;
         }
 
-        public Builder contentId(@Nullable Input<String> contentId) {
+        public Builder contentId(@Nullable Output<String> contentId) {
             this.contentId = contentId;
             return this;
         }
 
         public Builder contentId(@Nullable String contentId) {
-            this.contentId = Input.ofNullable(contentId);
+            this.contentId = Output.ofNullable(contentId);
             return this;
         }
 
-        public Builder criteria(@Nullable Input<List<MetadataDependenciesArgs>> criteria) {
+        public Builder criteria(@Nullable Output<List<MetadataDependenciesArgs>> criteria) {
             this.criteria = criteria;
             return this;
         }
 
         public Builder criteria(@Nullable List<MetadataDependenciesArgs> criteria) {
-            this.criteria = Input.ofNullable(criteria);
+            this.criteria = Output.ofNullable(criteria);
             return this;
         }
 
-        public Builder kind(@Nullable Input<Either<String,Kind>> kind) {
+        public Builder kind(@Nullable Output<Either<String,Kind>> kind) {
             this.kind = kind;
             return this;
         }
 
         public Builder kind(@Nullable Either<String,Kind> kind) {
-            this.kind = Input.ofNullable(kind);
+            this.kind = Output.ofNullable(kind);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder operator(@Nullable Input<Either<String,Operator>> operator) {
+        public Builder operator(@Nullable Output<Either<String,Operator>> operator) {
             this.operator = operator;
             return this;
         }
 
         public Builder operator(@Nullable Either<String,Operator> operator) {
-            this.operator = Input.ofNullable(operator);
+            this.operator = Output.ofNullable(operator);
             return this;
         }
 
-        public Builder version(@Nullable Input<String> version) {
+        public Builder version(@Nullable Output<String> version) {
             this.version = version;
             return this;
         }
 
         public Builder version(@Nullable String version) {
-            this.version = Input.ofNullable(version);
+            this.version = Output.ofNullable(version);
             return this;
         }
         public MetadataDependenciesArgs build() {

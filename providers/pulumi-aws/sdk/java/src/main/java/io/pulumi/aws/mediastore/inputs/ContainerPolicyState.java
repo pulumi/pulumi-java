@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.mediastore.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class ContainerPolicyState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="containerName")
-      private final @Nullable Input<String> containerName;
+      private final @Nullable Output<String> containerName;
 
-    public Input<String> getContainerName() {
-        return this.containerName == null ? Input.empty() : this.containerName;
+    public Output<String> getContainerName() {
+        return this.containerName == null ? Output.empty() : this.containerName;
     }
 
     /**
@@ -30,22 +30,22 @@ public final class ContainerPolicyState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="policy")
-      private final @Nullable Input<String> policy;
+      private final @Nullable Output<String> policy;
 
-    public Input<String> getPolicy() {
-        return this.policy == null ? Input.empty() : this.policy;
+    public Output<String> getPolicy() {
+        return this.policy == null ? Output.empty() : this.policy;
     }
 
     public ContainerPolicyState(
-        @Nullable Input<String> containerName,
-        @Nullable Input<String> policy) {
+        @Nullable Output<String> containerName,
+        @Nullable Output<String> policy) {
         this.containerName = containerName;
         this.policy = policy;
     }
 
     private ContainerPolicyState() {
-        this.containerName = Input.empty();
-        this.policy = Input.empty();
+        this.containerName = Output.empty();
+        this.policy = Output.empty();
     }
 
     public static Builder builder() {
@@ -57,8 +57,8 @@ public final class ContainerPolicyState extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private @Nullable Input<String> containerName;
-        private @Nullable Input<String> policy;
+        private @Nullable Output<String> containerName;
+        private @Nullable Output<String> policy;
 
         public Builder() {
     	      // Empty
@@ -70,23 +70,23 @@ public final class ContainerPolicyState extends io.pulumi.resources.ResourceArgs
     	      this.policy = defaults.policy;
         }
 
-        public Builder containerName(@Nullable Input<String> containerName) {
+        public Builder containerName(@Nullable Output<String> containerName) {
             this.containerName = containerName;
             return this;
         }
 
         public Builder containerName(@Nullable String containerName) {
-            this.containerName = Input.ofNullable(containerName);
+            this.containerName = Output.ofNullable(containerName);
             return this;
         }
 
-        public Builder policy(@Nullable Input<String> policy) {
+        public Builder policy(@Nullable Output<String> policy) {
             this.policy = policy;
             return this;
         }
 
         public Builder policy(@Nullable String policy) {
-            this.policy = Input.ofNullable(policy);
+            this.policy = Output.ofNullable(policy);
             return this;
         }
         public ContainerPolicyState build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.privateca_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.privateca_v1.enums.PublicKeyFormat;
 import java.lang.String;
@@ -23,9 +23,9 @@ public final class PublicKeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="format", required=true)
-      private final Input<PublicKeyFormat> format;
+      private final Output<PublicKeyFormat> format;
 
-    public Input<PublicKeyFormat> getFormat() {
+    public Output<PublicKeyFormat> getFormat() {
         return this.format;
     }
 
@@ -34,22 +34,22 @@ public final class PublicKeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="key", required=true)
-      private final Input<String> key;
+      private final Output<String> key;
 
-    public Input<String> getKey() {
+    public Output<String> getKey() {
         return this.key;
     }
 
     public PublicKeyArgs(
-        Input<PublicKeyFormat> format,
-        Input<String> key) {
+        Output<PublicKeyFormat> format,
+        Output<String> key) {
         this.format = Objects.requireNonNull(format, "expected parameter 'format' to be non-null");
         this.key = Objects.requireNonNull(key, "expected parameter 'key' to be non-null");
     }
 
     private PublicKeyArgs() {
-        this.format = Input.empty();
-        this.key = Input.empty();
+        this.format = Output.empty();
+        this.key = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class PublicKeyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<PublicKeyFormat> format;
-        private Input<String> key;
+        private Output<PublicKeyFormat> format;
+        private Output<String> key;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class PublicKeyArgs extends io.pulumi.resources.ResourceArgs {
     	      this.key = defaults.key;
         }
 
-        public Builder format(Input<PublicKeyFormat> format) {
+        public Builder format(Output<PublicKeyFormat> format) {
             this.format = Objects.requireNonNull(format);
             return this;
         }
 
         public Builder format(PublicKeyFormat format) {
-            this.format = Input.of(Objects.requireNonNull(format));
+            this.format = Output.of(Objects.requireNonNull(format));
             return this;
         }
 
-        public Builder key(Input<String> key) {
+        public Builder key(Output<String> key) {
             this.key = Objects.requireNonNull(key);
             return this;
         }
 
         public Builder key(String key) {
-            this.key = Input.of(Objects.requireNonNull(key));
+            this.key = Output.of(Objects.requireNonNull(key));
             return this;
         }
         public PublicKeyArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.s3.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
@@ -22,18 +22,18 @@ public final class StorageLensCloudWatchMetricsArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="isEnabled", required=true)
-      private final Input<Boolean> isEnabled;
+      private final Output<Boolean> isEnabled;
 
-    public Input<Boolean> getIsEnabled() {
+    public Output<Boolean> getIsEnabled() {
         return this.isEnabled;
     }
 
-    public StorageLensCloudWatchMetricsArgs(Input<Boolean> isEnabled) {
+    public StorageLensCloudWatchMetricsArgs(Output<Boolean> isEnabled) {
         this.isEnabled = Objects.requireNonNull(isEnabled, "expected parameter 'isEnabled' to be non-null");
     }
 
     private StorageLensCloudWatchMetricsArgs() {
-        this.isEnabled = Input.empty();
+        this.isEnabled = Output.empty();
     }
 
     public static Builder builder() {
@@ -45,7 +45,7 @@ public final class StorageLensCloudWatchMetricsArgs extends io.pulumi.resources.
     }
 
     public static final class Builder {
-        private Input<Boolean> isEnabled;
+        private Output<Boolean> isEnabled;
 
         public Builder() {
     	      // Empty
@@ -56,13 +56,13 @@ public final class StorageLensCloudWatchMetricsArgs extends io.pulumi.resources.
     	      this.isEnabled = defaults.isEnabled;
         }
 
-        public Builder isEnabled(Input<Boolean> isEnabled) {
+        public Builder isEnabled(Output<Boolean> isEnabled) {
             this.isEnabled = Objects.requireNonNull(isEnabled);
             return this;
         }
 
         public Builder isEnabled(Boolean isEnabled) {
-            this.isEnabled = Input.of(Objects.requireNonNull(isEnabled));
+            this.isEnabled = Output.of(Objects.requireNonNull(isEnabled));
             return this;
         }
         public StorageLensCloudWatchMetricsArgs build() {

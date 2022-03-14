@@ -3,7 +3,7 @@
 
 package io.pulumi.docker;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.docker.inputs.VolumeLabelArgs;
 import java.lang.Object;
@@ -23,10 +23,10 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="driver")
-      private final @Nullable Input<String> driver;
+      private final @Nullable Output<String> driver;
 
-    public Input<String> getDriver() {
-        return this.driver == null ? Input.empty() : this.driver;
+    public Output<String> getDriver() {
+        return this.driver == null ? Output.empty() : this.driver;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="driverOpts")
-      private final @Nullable Input<Map<String,Object>> driverOpts;
+      private final @Nullable Output<Map<String,Object>> driverOpts;
 
-    public Input<Map<String,Object>> getDriverOpts() {
-        return this.driverOpts == null ? Input.empty() : this.driverOpts;
+    public Output<Map<String,Object>> getDriverOpts() {
+        return this.driverOpts == null ? Output.empty() : this.driverOpts;
     }
 
     /**
@@ -45,10 +45,10 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labels")
-      private final @Nullable Input<List<VolumeLabelArgs>> labels;
+      private final @Nullable Output<List<VolumeLabelArgs>> labels;
 
-    public Input<List<VolumeLabelArgs>> getLabels() {
-        return this.labels == null ? Input.empty() : this.labels;
+    public Output<List<VolumeLabelArgs>> getLabels() {
+        return this.labels == null ? Output.empty() : this.labels;
     }
 
     /**
@@ -56,17 +56,17 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     public VolumeArgs(
-        @Nullable Input<String> driver,
-        @Nullable Input<Map<String,Object>> driverOpts,
-        @Nullable Input<List<VolumeLabelArgs>> labels,
-        @Nullable Input<String> name) {
+        @Nullable Output<String> driver,
+        @Nullable Output<Map<String,Object>> driverOpts,
+        @Nullable Output<List<VolumeLabelArgs>> labels,
+        @Nullable Output<String> name) {
         this.driver = driver;
         this.driverOpts = driverOpts;
         this.labels = labels;
@@ -74,10 +74,10 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private VolumeArgs() {
-        this.driver = Input.empty();
-        this.driverOpts = Input.empty();
-        this.labels = Input.empty();
-        this.name = Input.empty();
+        this.driver = Output.empty();
+        this.driverOpts = Output.empty();
+        this.labels = Output.empty();
+        this.name = Output.empty();
     }
 
     public static Builder builder() {
@@ -89,10 +89,10 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> driver;
-        private @Nullable Input<Map<String,Object>> driverOpts;
-        private @Nullable Input<List<VolumeLabelArgs>> labels;
-        private @Nullable Input<String> name;
+        private @Nullable Output<String> driver;
+        private @Nullable Output<Map<String,Object>> driverOpts;
+        private @Nullable Output<List<VolumeLabelArgs>> labels;
+        private @Nullable Output<String> name;
 
         public Builder() {
     	      // Empty
@@ -106,43 +106,43 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
     	      this.name = defaults.name;
         }
 
-        public Builder driver(@Nullable Input<String> driver) {
+        public Builder driver(@Nullable Output<String> driver) {
             this.driver = driver;
             return this;
         }
 
         public Builder driver(@Nullable String driver) {
-            this.driver = Input.ofNullable(driver);
+            this.driver = Output.ofNullable(driver);
             return this;
         }
 
-        public Builder driverOpts(@Nullable Input<Map<String,Object>> driverOpts) {
+        public Builder driverOpts(@Nullable Output<Map<String,Object>> driverOpts) {
             this.driverOpts = driverOpts;
             return this;
         }
 
         public Builder driverOpts(@Nullable Map<String,Object> driverOpts) {
-            this.driverOpts = Input.ofNullable(driverOpts);
+            this.driverOpts = Output.ofNullable(driverOpts);
             return this;
         }
 
-        public Builder labels(@Nullable Input<List<VolumeLabelArgs>> labels) {
+        public Builder labels(@Nullable Output<List<VolumeLabelArgs>> labels) {
             this.labels = labels;
             return this;
         }
 
         public Builder labels(@Nullable List<VolumeLabelArgs> labels) {
-            this.labels = Input.ofNullable(labels);
+            this.labels = Output.ofNullable(labels);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
         public VolumeArgs build() {

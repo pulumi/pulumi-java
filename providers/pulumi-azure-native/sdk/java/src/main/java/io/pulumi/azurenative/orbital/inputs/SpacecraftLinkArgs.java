@@ -6,7 +6,7 @@ package io.pulumi.azurenative.orbital.inputs;
 import io.pulumi.azurenative.orbital.enums.Direction;
 import io.pulumi.azurenative.orbital.enums.Polarization;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.String;
@@ -26,9 +26,9 @@ public final class SpacecraftLinkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="bandwidthMHz", required=true)
-      private final Input<Double> bandwidthMHz;
+      private final Output<Double> bandwidthMHz;
 
-    public Input<Double> getBandwidthMHz() {
+    public Output<Double> getBandwidthMHz() {
         return this.bandwidthMHz;
     }
 
@@ -37,9 +37,9 @@ public final class SpacecraftLinkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="centerFrequencyMHz", required=true)
-      private final Input<Double> centerFrequencyMHz;
+      private final Output<Double> centerFrequencyMHz;
 
-    public Input<Double> getCenterFrequencyMHz() {
+    public Output<Double> getCenterFrequencyMHz() {
         return this.centerFrequencyMHz;
     }
 
@@ -48,9 +48,9 @@ public final class SpacecraftLinkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="direction", required=true)
-      private final Input<Either<String,Direction>> direction;
+      private final Output<Either<String,Direction>> direction;
 
-    public Input<Either<String,Direction>> getDirection() {
+    public Output<Either<String,Direction>> getDirection() {
         return this.direction;
     }
 
@@ -59,17 +59,17 @@ public final class SpacecraftLinkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="polarization", required=true)
-      private final Input<Either<String,Polarization>> polarization;
+      private final Output<Either<String,Polarization>> polarization;
 
-    public Input<Either<String,Polarization>> getPolarization() {
+    public Output<Either<String,Polarization>> getPolarization() {
         return this.polarization;
     }
 
     public SpacecraftLinkArgs(
-        Input<Double> bandwidthMHz,
-        Input<Double> centerFrequencyMHz,
-        Input<Either<String,Direction>> direction,
-        Input<Either<String,Polarization>> polarization) {
+        Output<Double> bandwidthMHz,
+        Output<Double> centerFrequencyMHz,
+        Output<Either<String,Direction>> direction,
+        Output<Either<String,Polarization>> polarization) {
         this.bandwidthMHz = Objects.requireNonNull(bandwidthMHz, "expected parameter 'bandwidthMHz' to be non-null");
         this.centerFrequencyMHz = Objects.requireNonNull(centerFrequencyMHz, "expected parameter 'centerFrequencyMHz' to be non-null");
         this.direction = Objects.requireNonNull(direction, "expected parameter 'direction' to be non-null");
@@ -77,10 +77,10 @@ public final class SpacecraftLinkArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private SpacecraftLinkArgs() {
-        this.bandwidthMHz = Input.empty();
-        this.centerFrequencyMHz = Input.empty();
-        this.direction = Input.empty();
-        this.polarization = Input.empty();
+        this.bandwidthMHz = Output.empty();
+        this.centerFrequencyMHz = Output.empty();
+        this.direction = Output.empty();
+        this.polarization = Output.empty();
     }
 
     public static Builder builder() {
@@ -92,10 +92,10 @@ public final class SpacecraftLinkArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<Double> bandwidthMHz;
-        private Input<Double> centerFrequencyMHz;
-        private Input<Either<String,Direction>> direction;
-        private Input<Either<String,Polarization>> polarization;
+        private Output<Double> bandwidthMHz;
+        private Output<Double> centerFrequencyMHz;
+        private Output<Either<String,Direction>> direction;
+        private Output<Either<String,Polarization>> polarization;
 
         public Builder() {
     	      // Empty
@@ -109,43 +109,43 @@ public final class SpacecraftLinkArgs extends io.pulumi.resources.ResourceArgs {
     	      this.polarization = defaults.polarization;
         }
 
-        public Builder bandwidthMHz(Input<Double> bandwidthMHz) {
+        public Builder bandwidthMHz(Output<Double> bandwidthMHz) {
             this.bandwidthMHz = Objects.requireNonNull(bandwidthMHz);
             return this;
         }
 
         public Builder bandwidthMHz(Double bandwidthMHz) {
-            this.bandwidthMHz = Input.of(Objects.requireNonNull(bandwidthMHz));
+            this.bandwidthMHz = Output.of(Objects.requireNonNull(bandwidthMHz));
             return this;
         }
 
-        public Builder centerFrequencyMHz(Input<Double> centerFrequencyMHz) {
+        public Builder centerFrequencyMHz(Output<Double> centerFrequencyMHz) {
             this.centerFrequencyMHz = Objects.requireNonNull(centerFrequencyMHz);
             return this;
         }
 
         public Builder centerFrequencyMHz(Double centerFrequencyMHz) {
-            this.centerFrequencyMHz = Input.of(Objects.requireNonNull(centerFrequencyMHz));
+            this.centerFrequencyMHz = Output.of(Objects.requireNonNull(centerFrequencyMHz));
             return this;
         }
 
-        public Builder direction(Input<Either<String,Direction>> direction) {
+        public Builder direction(Output<Either<String,Direction>> direction) {
             this.direction = Objects.requireNonNull(direction);
             return this;
         }
 
         public Builder direction(Either<String,Direction> direction) {
-            this.direction = Input.of(Objects.requireNonNull(direction));
+            this.direction = Output.of(Objects.requireNonNull(direction));
             return this;
         }
 
-        public Builder polarization(Input<Either<String,Polarization>> polarization) {
+        public Builder polarization(Output<Either<String,Polarization>> polarization) {
             this.polarization = Objects.requireNonNull(polarization);
             return this;
         }
 
         public Builder polarization(Either<String,Polarization> polarization) {
-            this.polarization = Input.of(Objects.requireNonNull(polarization));
+            this.polarization = Output.of(Objects.requireNonNull(polarization));
             return this;
         }
         public SpacecraftLinkArgs build() {

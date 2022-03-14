@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datamigration.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -22,9 +22,9 @@ public final class AzureActiveDirectoryAppArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="appKey", required=true)
-      private final Input<String> appKey;
+      private final Output<String> appKey;
 
-    public Input<String> getAppKey() {
+    public Output<String> getAppKey() {
         return this.appKey;
     }
 
@@ -33,9 +33,9 @@ public final class AzureActiveDirectoryAppArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="applicationId", required=true)
-      private final Input<String> applicationId;
+      private final Output<String> applicationId;
 
-    public Input<String> getApplicationId() {
+    public Output<String> getApplicationId() {
         return this.applicationId;
     }
 
@@ -44,25 +44,25 @@ public final class AzureActiveDirectoryAppArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="tenantId", required=true)
-      private final Input<String> tenantId;
+      private final Output<String> tenantId;
 
-    public Input<String> getTenantId() {
+    public Output<String> getTenantId() {
         return this.tenantId;
     }
 
     public AzureActiveDirectoryAppArgs(
-        Input<String> appKey,
-        Input<String> applicationId,
-        Input<String> tenantId) {
+        Output<String> appKey,
+        Output<String> applicationId,
+        Output<String> tenantId) {
         this.appKey = Objects.requireNonNull(appKey, "expected parameter 'appKey' to be non-null");
         this.applicationId = Objects.requireNonNull(applicationId, "expected parameter 'applicationId' to be non-null");
         this.tenantId = Objects.requireNonNull(tenantId, "expected parameter 'tenantId' to be non-null");
     }
 
     private AzureActiveDirectoryAppArgs() {
-        this.appKey = Input.empty();
-        this.applicationId = Input.empty();
-        this.tenantId = Input.empty();
+        this.appKey = Output.empty();
+        this.applicationId = Output.empty();
+        this.tenantId = Output.empty();
     }
 
     public static Builder builder() {
@@ -74,9 +74,9 @@ public final class AzureActiveDirectoryAppArgs extends io.pulumi.resources.Resou
     }
 
     public static final class Builder {
-        private Input<String> appKey;
-        private Input<String> applicationId;
-        private Input<String> tenantId;
+        private Output<String> appKey;
+        private Output<String> applicationId;
+        private Output<String> tenantId;
 
         public Builder() {
     	      // Empty
@@ -89,33 +89,33 @@ public final class AzureActiveDirectoryAppArgs extends io.pulumi.resources.Resou
     	      this.tenantId = defaults.tenantId;
         }
 
-        public Builder appKey(Input<String> appKey) {
+        public Builder appKey(Output<String> appKey) {
             this.appKey = Objects.requireNonNull(appKey);
             return this;
         }
 
         public Builder appKey(String appKey) {
-            this.appKey = Input.of(Objects.requireNonNull(appKey));
+            this.appKey = Output.of(Objects.requireNonNull(appKey));
             return this;
         }
 
-        public Builder applicationId(Input<String> applicationId) {
+        public Builder applicationId(Output<String> applicationId) {
             this.applicationId = Objects.requireNonNull(applicationId);
             return this;
         }
 
         public Builder applicationId(String applicationId) {
-            this.applicationId = Input.of(Objects.requireNonNull(applicationId));
+            this.applicationId = Output.of(Objects.requireNonNull(applicationId));
             return this;
         }
 
-        public Builder tenantId(Input<String> tenantId) {
+        public Builder tenantId(Output<String> tenantId) {
             this.tenantId = Objects.requireNonNull(tenantId);
             return this;
         }
 
         public Builder tenantId(String tenantId) {
-            this.tenantId = Input.of(Objects.requireNonNull(tenantId));
+            this.tenantId = Output.of(Objects.requireNonNull(tenantId));
             return this;
         }
         public AzureActiveDirectoryAppArgs build() {

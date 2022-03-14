@@ -5,7 +5,7 @@ package io.pulumi.azurenative.apimanagement;
 
 import io.pulumi.azurenative.apimanagement.enums.VersioningScheme;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -21,10 +21,10 @@ public final class ApiVersionSetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -32,9 +32,9 @@ public final class ApiVersionSetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName", required=true)
-      private final Input<String> displayName;
+      private final Output<String> displayName;
 
-    public Input<String> getDisplayName() {
+    public Output<String> getDisplayName() {
         return this.displayName;
     }
 
@@ -43,9 +43,9 @@ public final class ApiVersionSetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -54,9 +54,9 @@ public final class ApiVersionSetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serviceName", required=true)
-      private final Input<String> serviceName;
+      private final Output<String> serviceName;
 
-    public Input<String> getServiceName() {
+    public Output<String> getServiceName() {
         return this.serviceName;
     }
 
@@ -65,10 +65,10 @@ public final class ApiVersionSetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="versionHeaderName")
-      private final @Nullable Input<String> versionHeaderName;
+      private final @Nullable Output<String> versionHeaderName;
 
-    public Input<String> getVersionHeaderName() {
-        return this.versionHeaderName == null ? Input.empty() : this.versionHeaderName;
+    public Output<String> getVersionHeaderName() {
+        return this.versionHeaderName == null ? Output.empty() : this.versionHeaderName;
     }
 
     /**
@@ -76,10 +76,10 @@ public final class ApiVersionSetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="versionQueryName")
-      private final @Nullable Input<String> versionQueryName;
+      private final @Nullable Output<String> versionQueryName;
 
-    public Input<String> getVersionQueryName() {
-        return this.versionQueryName == null ? Input.empty() : this.versionQueryName;
+    public Output<String> getVersionQueryName() {
+        return this.versionQueryName == null ? Output.empty() : this.versionQueryName;
     }
 
     /**
@@ -87,10 +87,10 @@ public final class ApiVersionSetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="versionSetId")
-      private final @Nullable Input<String> versionSetId;
+      private final @Nullable Output<String> versionSetId;
 
-    public Input<String> getVersionSetId() {
-        return this.versionSetId == null ? Input.empty() : this.versionSetId;
+    public Output<String> getVersionSetId() {
+        return this.versionSetId == null ? Output.empty() : this.versionSetId;
     }
 
     /**
@@ -98,21 +98,21 @@ public final class ApiVersionSetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="versioningScheme", required=true)
-      private final Input<Either<String,VersioningScheme>> versioningScheme;
+      private final Output<Either<String,VersioningScheme>> versioningScheme;
 
-    public Input<Either<String,VersioningScheme>> getVersioningScheme() {
+    public Output<Either<String,VersioningScheme>> getVersioningScheme() {
         return this.versioningScheme;
     }
 
     public ApiVersionSetArgs(
-        @Nullable Input<String> description,
-        Input<String> displayName,
-        Input<String> resourceGroupName,
-        Input<String> serviceName,
-        @Nullable Input<String> versionHeaderName,
-        @Nullable Input<String> versionQueryName,
-        @Nullable Input<String> versionSetId,
-        Input<Either<String,VersioningScheme>> versioningScheme) {
+        @Nullable Output<String> description,
+        Output<String> displayName,
+        Output<String> resourceGroupName,
+        Output<String> serviceName,
+        @Nullable Output<String> versionHeaderName,
+        @Nullable Output<String> versionQueryName,
+        @Nullable Output<String> versionSetId,
+        Output<Either<String,VersioningScheme>> versioningScheme) {
         this.description = description;
         this.displayName = Objects.requireNonNull(displayName, "expected parameter 'displayName' to be non-null");
         this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
@@ -124,14 +124,14 @@ public final class ApiVersionSetArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ApiVersionSetArgs() {
-        this.description = Input.empty();
-        this.displayName = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.serviceName = Input.empty();
-        this.versionHeaderName = Input.empty();
-        this.versionQueryName = Input.empty();
-        this.versionSetId = Input.empty();
-        this.versioningScheme = Input.empty();
+        this.description = Output.empty();
+        this.displayName = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.serviceName = Output.empty();
+        this.versionHeaderName = Output.empty();
+        this.versionQueryName = Output.empty();
+        this.versionSetId = Output.empty();
+        this.versioningScheme = Output.empty();
     }
 
     public static Builder builder() {
@@ -143,14 +143,14 @@ public final class ApiVersionSetArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> description;
-        private Input<String> displayName;
-        private Input<String> resourceGroupName;
-        private Input<String> serviceName;
-        private @Nullable Input<String> versionHeaderName;
-        private @Nullable Input<String> versionQueryName;
-        private @Nullable Input<String> versionSetId;
-        private Input<Either<String,VersioningScheme>> versioningScheme;
+        private @Nullable Output<String> description;
+        private Output<String> displayName;
+        private Output<String> resourceGroupName;
+        private Output<String> serviceName;
+        private @Nullable Output<String> versionHeaderName;
+        private @Nullable Output<String> versionQueryName;
+        private @Nullable Output<String> versionSetId;
+        private Output<Either<String,VersioningScheme>> versioningScheme;
 
         public Builder() {
     	      // Empty
@@ -168,83 +168,83 @@ public final class ApiVersionSetArgs extends io.pulumi.resources.ResourceArgs {
     	      this.versioningScheme = defaults.versioningScheme;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder displayName(Input<String> displayName) {
+        public Builder displayName(Output<String> displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
         public Builder displayName(String displayName) {
-            this.displayName = Input.of(Objects.requireNonNull(displayName));
+            this.displayName = Output.of(Objects.requireNonNull(displayName));
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder serviceName(Input<String> serviceName) {
+        public Builder serviceName(Output<String> serviceName) {
             this.serviceName = Objects.requireNonNull(serviceName);
             return this;
         }
 
         public Builder serviceName(String serviceName) {
-            this.serviceName = Input.of(Objects.requireNonNull(serviceName));
+            this.serviceName = Output.of(Objects.requireNonNull(serviceName));
             return this;
         }
 
-        public Builder versionHeaderName(@Nullable Input<String> versionHeaderName) {
+        public Builder versionHeaderName(@Nullable Output<String> versionHeaderName) {
             this.versionHeaderName = versionHeaderName;
             return this;
         }
 
         public Builder versionHeaderName(@Nullable String versionHeaderName) {
-            this.versionHeaderName = Input.ofNullable(versionHeaderName);
+            this.versionHeaderName = Output.ofNullable(versionHeaderName);
             return this;
         }
 
-        public Builder versionQueryName(@Nullable Input<String> versionQueryName) {
+        public Builder versionQueryName(@Nullable Output<String> versionQueryName) {
             this.versionQueryName = versionQueryName;
             return this;
         }
 
         public Builder versionQueryName(@Nullable String versionQueryName) {
-            this.versionQueryName = Input.ofNullable(versionQueryName);
+            this.versionQueryName = Output.ofNullable(versionQueryName);
             return this;
         }
 
-        public Builder versionSetId(@Nullable Input<String> versionSetId) {
+        public Builder versionSetId(@Nullable Output<String> versionSetId) {
             this.versionSetId = versionSetId;
             return this;
         }
 
         public Builder versionSetId(@Nullable String versionSetId) {
-            this.versionSetId = Input.ofNullable(versionSetId);
+            this.versionSetId = Output.ofNullable(versionSetId);
             return this;
         }
 
-        public Builder versioningScheme(Input<Either<String,VersioningScheme>> versioningScheme) {
+        public Builder versioningScheme(Output<Either<String,VersioningScheme>> versioningScheme) {
             this.versioningScheme = Objects.requireNonNull(versioningScheme);
             return this;
         }
 
         public Builder versioningScheme(Either<String,VersioningScheme> versioningScheme) {
-            this.versioningScheme = Input.of(Objects.requireNonNull(versioningScheme));
+            this.versioningScheme = Output.of(Objects.requireNonNull(versioningScheme));
             return this;
         }
         public ApiVersionSetArgs build() {

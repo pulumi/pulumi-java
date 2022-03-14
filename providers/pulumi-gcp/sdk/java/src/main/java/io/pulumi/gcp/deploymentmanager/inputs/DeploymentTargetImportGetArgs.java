@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.deploymentmanager.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class DeploymentTargetImportGetArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="content")
-      private final @Nullable Input<String> content;
+      private final @Nullable Output<String> content;
 
-    public Input<String> getContent() {
-        return this.content == null ? Input.empty() : this.content;
+    public Output<String> getContent() {
+        return this.content == null ? Output.empty() : this.content;
     }
 
     /**
@@ -31,22 +31,22 @@ public final class DeploymentTargetImportGetArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     public DeploymentTargetImportGetArgs(
-        @Nullable Input<String> content,
-        @Nullable Input<String> name) {
+        @Nullable Output<String> content,
+        @Nullable Output<String> name) {
         this.content = content;
         this.name = name;
     }
 
     private DeploymentTargetImportGetArgs() {
-        this.content = Input.empty();
-        this.name = Input.empty();
+        this.content = Output.empty();
+        this.name = Output.empty();
     }
 
     public static Builder builder() {
@@ -58,8 +58,8 @@ public final class DeploymentTargetImportGetArgs extends io.pulumi.resources.Res
     }
 
     public static final class Builder {
-        private @Nullable Input<String> content;
-        private @Nullable Input<String> name;
+        private @Nullable Output<String> content;
+        private @Nullable Output<String> name;
 
         public Builder() {
     	      // Empty
@@ -71,23 +71,23 @@ public final class DeploymentTargetImportGetArgs extends io.pulumi.resources.Res
     	      this.name = defaults.name;
         }
 
-        public Builder content(@Nullable Input<String> content) {
+        public Builder content(@Nullable Output<String> content) {
             this.content = content;
             return this;
         }
 
         public Builder content(@Nullable String content) {
-            this.content = Input.ofNullable(content);
+            this.content = Output.ofNullable(content);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
         public DeploymentTargetImportGetArgs build() {

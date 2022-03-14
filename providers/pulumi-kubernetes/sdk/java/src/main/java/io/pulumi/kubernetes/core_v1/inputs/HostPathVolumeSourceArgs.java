@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.core_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,9 +23,9 @@ public final class HostPathVolumeSourceArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="path", required=true)
-      private final Input<String> path;
+      private final Output<String> path;
 
-    public Input<String> getPath() {
+    public Output<String> getPath() {
         return this.path;
     }
 
@@ -34,22 +34,22 @@ public final class HostPathVolumeSourceArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="type")
-      private final @Nullable Input<String> type;
+      private final @Nullable Output<String> type;
 
-    public Input<String> getType() {
-        return this.type == null ? Input.empty() : this.type;
+    public Output<String> getType() {
+        return this.type == null ? Output.empty() : this.type;
     }
 
     public HostPathVolumeSourceArgs(
-        Input<String> path,
-        @Nullable Input<String> type) {
+        Output<String> path,
+        @Nullable Output<String> type) {
         this.path = Objects.requireNonNull(path, "expected parameter 'path' to be non-null");
         this.type = type;
     }
 
     private HostPathVolumeSourceArgs() {
-        this.path = Input.empty();
-        this.type = Input.empty();
+        this.path = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class HostPathVolumeSourceArgs extends io.pulumi.resources.Resource
     }
 
     public static final class Builder {
-        private Input<String> path;
-        private @Nullable Input<String> type;
+        private Output<String> path;
+        private @Nullable Output<String> type;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class HostPathVolumeSourceArgs extends io.pulumi.resources.Resource
     	      this.type = defaults.type;
         }
 
-        public Builder path(Input<String> path) {
+        public Builder path(Output<String> path) {
             this.path = Objects.requireNonNull(path);
             return this;
         }
 
         public Builder path(String path) {
-            this.path = Input.of(Objects.requireNonNull(path));
+            this.path = Output.of(Objects.requireNonNull(path));
             return this;
         }
 
-        public Builder type(@Nullable Input<String> type) {
+        public Builder type(@Nullable Output<String> type) {
             this.type = type;
             return this;
         }
 
         public Builder type(@Nullable String type) {
-            this.type = Input.ofNullable(type);
+            this.type = Output.ofNullable(type);
             return this;
         }
         public HostPathVolumeSourceArgs build() {

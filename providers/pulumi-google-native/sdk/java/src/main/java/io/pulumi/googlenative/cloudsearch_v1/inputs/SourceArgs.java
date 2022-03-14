@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudsearch_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.cloudsearch_v1.enums.SourcePredefinedSource;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class SourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class SourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="predefinedSource")
-      private final @Nullable Input<SourcePredefinedSource> predefinedSource;
+      private final @Nullable Output<SourcePredefinedSource> predefinedSource;
 
-    public Input<SourcePredefinedSource> getPredefinedSource() {
-        return this.predefinedSource == null ? Input.empty() : this.predefinedSource;
+    public Output<SourcePredefinedSource> getPredefinedSource() {
+        return this.predefinedSource == null ? Output.empty() : this.predefinedSource;
     }
 
     public SourceArgs(
-        @Nullable Input<String> name,
-        @Nullable Input<SourcePredefinedSource> predefinedSource) {
+        @Nullable Output<String> name,
+        @Nullable Output<SourcePredefinedSource> predefinedSource) {
         this.name = name;
         this.predefinedSource = predefinedSource;
     }
 
     private SourceArgs() {
-        this.name = Input.empty();
-        this.predefinedSource = Input.empty();
+        this.name = Output.empty();
+        this.predefinedSource = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class SourceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> name;
-        private @Nullable Input<SourcePredefinedSource> predefinedSource;
+        private @Nullable Output<String> name;
+        private @Nullable Output<SourcePredefinedSource> predefinedSource;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class SourceArgs extends io.pulumi.resources.ResourceArgs {
     	      this.predefinedSource = defaults.predefinedSource;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder predefinedSource(@Nullable Input<SourcePredefinedSource> predefinedSource) {
+        public Builder predefinedSource(@Nullable Output<SourcePredefinedSource> predefinedSource) {
             this.predefinedSource = predefinedSource;
             return this;
         }
 
         public Builder predefinedSource(@Nullable SourcePredefinedSource predefinedSource) {
-            this.predefinedSource = Input.ofNullable(predefinedSource);
+            this.predefinedSource = Output.ofNullable(predefinedSource);
             return this;
         }
         public SourceArgs build() {

@@ -5,7 +5,7 @@ package io.pulumi.azurenative.appplatform;
 
 import io.pulumi.azurenative.appplatform.inputs.AppResourcePropertiesArgs;
 import io.pulumi.azurenative.appplatform.inputs.ManagedIdentityPropertiesArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -21,10 +21,10 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="appName")
-      private final @Nullable Input<String> appName;
+      private final @Nullable Output<String> appName;
 
-    public Input<String> getAppName() {
-        return this.appName == null ? Input.empty() : this.appName;
+    public Output<String> getAppName() {
+        return this.appName == null ? Output.empty() : this.appName;
     }
 
     /**
@@ -32,10 +32,10 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="identity")
-      private final @Nullable Input<ManagedIdentityPropertiesArgs> identity;
+      private final @Nullable Output<ManagedIdentityPropertiesArgs> identity;
 
-    public Input<ManagedIdentityPropertiesArgs> getIdentity() {
-        return this.identity == null ? Input.empty() : this.identity;
+    public Output<ManagedIdentityPropertiesArgs> getIdentity() {
+        return this.identity == null ? Output.empty() : this.identity;
     }
 
     /**
@@ -43,10 +43,10 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -54,10 +54,10 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="properties")
-      private final @Nullable Input<AppResourcePropertiesArgs> properties;
+      private final @Nullable Output<AppResourcePropertiesArgs> properties;
 
-    public Input<AppResourcePropertiesArgs> getProperties() {
-        return this.properties == null ? Input.empty() : this.properties;
+    public Output<AppResourcePropertiesArgs> getProperties() {
+        return this.properties == null ? Output.empty() : this.properties;
     }
 
     /**
@@ -65,9 +65,9 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -76,19 +76,19 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serviceName", required=true)
-      private final Input<String> serviceName;
+      private final Output<String> serviceName;
 
-    public Input<String> getServiceName() {
+    public Output<String> getServiceName() {
         return this.serviceName;
     }
 
     public AppArgs(
-        @Nullable Input<String> appName,
-        @Nullable Input<ManagedIdentityPropertiesArgs> identity,
-        @Nullable Input<String> location,
-        @Nullable Input<AppResourcePropertiesArgs> properties,
-        Input<String> resourceGroupName,
-        Input<String> serviceName) {
+        @Nullable Output<String> appName,
+        @Nullable Output<ManagedIdentityPropertiesArgs> identity,
+        @Nullable Output<String> location,
+        @Nullable Output<AppResourcePropertiesArgs> properties,
+        Output<String> resourceGroupName,
+        Output<String> serviceName) {
         this.appName = appName;
         this.identity = identity;
         this.location = location;
@@ -98,12 +98,12 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private AppArgs() {
-        this.appName = Input.empty();
-        this.identity = Input.empty();
-        this.location = Input.empty();
-        this.properties = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.serviceName = Input.empty();
+        this.appName = Output.empty();
+        this.identity = Output.empty();
+        this.location = Output.empty();
+        this.properties = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.serviceName = Output.empty();
     }
 
     public static Builder builder() {
@@ -115,12 +115,12 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> appName;
-        private @Nullable Input<ManagedIdentityPropertiesArgs> identity;
-        private @Nullable Input<String> location;
-        private @Nullable Input<AppResourcePropertiesArgs> properties;
-        private Input<String> resourceGroupName;
-        private Input<String> serviceName;
+        private @Nullable Output<String> appName;
+        private @Nullable Output<ManagedIdentityPropertiesArgs> identity;
+        private @Nullable Output<String> location;
+        private @Nullable Output<AppResourcePropertiesArgs> properties;
+        private Output<String> resourceGroupName;
+        private Output<String> serviceName;
 
         public Builder() {
     	      // Empty
@@ -136,63 +136,63 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
     	      this.serviceName = defaults.serviceName;
         }
 
-        public Builder appName(@Nullable Input<String> appName) {
+        public Builder appName(@Nullable Output<String> appName) {
             this.appName = appName;
             return this;
         }
 
         public Builder appName(@Nullable String appName) {
-            this.appName = Input.ofNullable(appName);
+            this.appName = Output.ofNullable(appName);
             return this;
         }
 
-        public Builder identity(@Nullable Input<ManagedIdentityPropertiesArgs> identity) {
+        public Builder identity(@Nullable Output<ManagedIdentityPropertiesArgs> identity) {
             this.identity = identity;
             return this;
         }
 
         public Builder identity(@Nullable ManagedIdentityPropertiesArgs identity) {
-            this.identity = Input.ofNullable(identity);
+            this.identity = Output.ofNullable(identity);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder properties(@Nullable Input<AppResourcePropertiesArgs> properties) {
+        public Builder properties(@Nullable Output<AppResourcePropertiesArgs> properties) {
             this.properties = properties;
             return this;
         }
 
         public Builder properties(@Nullable AppResourcePropertiesArgs properties) {
-            this.properties = Input.ofNullable(properties);
+            this.properties = Output.ofNullable(properties);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder serviceName(Input<String> serviceName) {
+        public Builder serviceName(Output<String> serviceName) {
             this.serviceName = Objects.requireNonNull(serviceName);
             return this;
         }
 
         public Builder serviceName(String serviceName) {
-            this.serviceName = Input.of(Objects.requireNonNull(serviceName));
+            this.serviceName = Output.of(Objects.requireNonNull(serviceName));
             return this;
         }
         public AppArgs build() {

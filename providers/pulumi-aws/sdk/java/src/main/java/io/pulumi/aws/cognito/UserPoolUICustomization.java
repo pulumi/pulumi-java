@@ -6,7 +6,6 @@ package io.pulumi.aws.cognito;
 import io.pulumi.aws.Utilities;
 import io.pulumi.aws.cognito.UserPoolUICustomizationArgs;
 import io.pulumi.aws.cognito.inputs.UserPoolUICustomizationState;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -182,14 +181,14 @@ public class UserPoolUICustomization extends io.pulumi.resources.CustomResource 
      * @param options A bag of options that control this resource's behavior.
      */
     public UserPoolUICustomization(String name, UserPoolUICustomizationArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:cognito/userPoolUICustomization:UserPoolUICustomization", name, args == null ? UserPoolUICustomizationArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws:cognito/userPoolUICustomization:UserPoolUICustomization", name, args == null ? UserPoolUICustomizationArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private UserPoolUICustomization(String name, Input<String> id, @Nullable UserPoolUICustomizationState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private UserPoolUICustomization(String name, Output<String> id, @Nullable UserPoolUICustomizationState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws:cognito/userPoolUICustomization:UserPoolUICustomization", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -205,7 +204,7 @@ public class UserPoolUICustomization extends io.pulumi.resources.CustomResource 
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static UserPoolUICustomization get(String name, Input<String> id, @Nullable UserPoolUICustomizationState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static UserPoolUICustomization get(String name, Output<String> id, @Nullable UserPoolUICustomizationState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new UserPoolUICustomization(name, id, state, options);
     }
 }

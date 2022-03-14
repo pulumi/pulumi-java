@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.metastore_v1beta;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.metastore_v1beta.inputs.AuditConfigArgs;
 import io.pulumi.googlenative.metastore_v1beta.inputs.BindingArgs;
@@ -23,16 +23,16 @@ public final class ServiceBackupIamPolicyArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="auditConfigs")
-      private final @Nullable Input<List<AuditConfigArgs>> auditConfigs;
+      private final @Nullable Output<List<AuditConfigArgs>> auditConfigs;
 
-    public Input<List<AuditConfigArgs>> getAuditConfigs() {
-        return this.auditConfigs == null ? Input.empty() : this.auditConfigs;
+    public Output<List<AuditConfigArgs>> getAuditConfigs() {
+        return this.auditConfigs == null ? Output.empty() : this.auditConfigs;
     }
 
     @InputImport(name="backupId", required=true)
-      private final Input<String> backupId;
+      private final Output<String> backupId;
 
-    public Input<String> getBackupId() {
+    public Output<String> getBackupId() {
         return this.backupId;
     }
 
@@ -41,10 +41,10 @@ public final class ServiceBackupIamPolicyArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="bindings")
-      private final @Nullable Input<List<BindingArgs>> bindings;
+      private final @Nullable Output<List<BindingArgs>> bindings;
 
-    public Input<List<BindingArgs>> getBindings() {
-        return this.bindings == null ? Input.empty() : this.bindings;
+    public Output<List<BindingArgs>> getBindings() {
+        return this.bindings == null ? Output.empty() : this.bindings;
     }
 
     /**
@@ -52,30 +52,30 @@ public final class ServiceBackupIamPolicyArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="etag")
-      private final @Nullable Input<String> etag;
+      private final @Nullable Output<String> etag;
 
-    public Input<String> getEtag() {
-        return this.etag == null ? Input.empty() : this.etag;
+    public Output<String> getEtag() {
+        return this.etag == null ? Output.empty() : this.etag;
     }
 
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     @InputImport(name="serviceId", required=true)
-      private final Input<String> serviceId;
+      private final Output<String> serviceId;
 
-    public Input<String> getServiceId() {
+    public Output<String> getServiceId() {
         return this.serviceId;
     }
 
@@ -84,10 +84,10 @@ public final class ServiceBackupIamPolicyArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="updateMask")
-      private final @Nullable Input<String> updateMask;
+      private final @Nullable Output<String> updateMask;
 
-    public Input<String> getUpdateMask() {
-        return this.updateMask == null ? Input.empty() : this.updateMask;
+    public Output<String> getUpdateMask() {
+        return this.updateMask == null ? Output.empty() : this.updateMask;
     }
 
     /**
@@ -95,22 +95,22 @@ public final class ServiceBackupIamPolicyArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="version")
-      private final @Nullable Input<Integer> version;
+      private final @Nullable Output<Integer> version;
 
-    public Input<Integer> getVersion() {
-        return this.version == null ? Input.empty() : this.version;
+    public Output<Integer> getVersion() {
+        return this.version == null ? Output.empty() : this.version;
     }
 
     public ServiceBackupIamPolicyArgs(
-        @Nullable Input<List<AuditConfigArgs>> auditConfigs,
-        Input<String> backupId,
-        @Nullable Input<List<BindingArgs>> bindings,
-        @Nullable Input<String> etag,
-        @Nullable Input<String> location,
-        @Nullable Input<String> project,
-        Input<String> serviceId,
-        @Nullable Input<String> updateMask,
-        @Nullable Input<Integer> version) {
+        @Nullable Output<List<AuditConfigArgs>> auditConfigs,
+        Output<String> backupId,
+        @Nullable Output<List<BindingArgs>> bindings,
+        @Nullable Output<String> etag,
+        @Nullable Output<String> location,
+        @Nullable Output<String> project,
+        Output<String> serviceId,
+        @Nullable Output<String> updateMask,
+        @Nullable Output<Integer> version) {
         this.auditConfigs = auditConfigs;
         this.backupId = Objects.requireNonNull(backupId, "expected parameter 'backupId' to be non-null");
         this.bindings = bindings;
@@ -123,15 +123,15 @@ public final class ServiceBackupIamPolicyArgs extends io.pulumi.resources.Resour
     }
 
     private ServiceBackupIamPolicyArgs() {
-        this.auditConfigs = Input.empty();
-        this.backupId = Input.empty();
-        this.bindings = Input.empty();
-        this.etag = Input.empty();
-        this.location = Input.empty();
-        this.project = Input.empty();
-        this.serviceId = Input.empty();
-        this.updateMask = Input.empty();
-        this.version = Input.empty();
+        this.auditConfigs = Output.empty();
+        this.backupId = Output.empty();
+        this.bindings = Output.empty();
+        this.etag = Output.empty();
+        this.location = Output.empty();
+        this.project = Output.empty();
+        this.serviceId = Output.empty();
+        this.updateMask = Output.empty();
+        this.version = Output.empty();
     }
 
     public static Builder builder() {
@@ -143,15 +143,15 @@ public final class ServiceBackupIamPolicyArgs extends io.pulumi.resources.Resour
     }
 
     public static final class Builder {
-        private @Nullable Input<List<AuditConfigArgs>> auditConfigs;
-        private Input<String> backupId;
-        private @Nullable Input<List<BindingArgs>> bindings;
-        private @Nullable Input<String> etag;
-        private @Nullable Input<String> location;
-        private @Nullable Input<String> project;
-        private Input<String> serviceId;
-        private @Nullable Input<String> updateMask;
-        private @Nullable Input<Integer> version;
+        private @Nullable Output<List<AuditConfigArgs>> auditConfigs;
+        private Output<String> backupId;
+        private @Nullable Output<List<BindingArgs>> bindings;
+        private @Nullable Output<String> etag;
+        private @Nullable Output<String> location;
+        private @Nullable Output<String> project;
+        private Output<String> serviceId;
+        private @Nullable Output<String> updateMask;
+        private @Nullable Output<Integer> version;
 
         public Builder() {
     	      // Empty
@@ -170,93 +170,93 @@ public final class ServiceBackupIamPolicyArgs extends io.pulumi.resources.Resour
     	      this.version = defaults.version;
         }
 
-        public Builder auditConfigs(@Nullable Input<List<AuditConfigArgs>> auditConfigs) {
+        public Builder auditConfigs(@Nullable Output<List<AuditConfigArgs>> auditConfigs) {
             this.auditConfigs = auditConfigs;
             return this;
         }
 
         public Builder auditConfigs(@Nullable List<AuditConfigArgs> auditConfigs) {
-            this.auditConfigs = Input.ofNullable(auditConfigs);
+            this.auditConfigs = Output.ofNullable(auditConfigs);
             return this;
         }
 
-        public Builder backupId(Input<String> backupId) {
+        public Builder backupId(Output<String> backupId) {
             this.backupId = Objects.requireNonNull(backupId);
             return this;
         }
 
         public Builder backupId(String backupId) {
-            this.backupId = Input.of(Objects.requireNonNull(backupId));
+            this.backupId = Output.of(Objects.requireNonNull(backupId));
             return this;
         }
 
-        public Builder bindings(@Nullable Input<List<BindingArgs>> bindings) {
+        public Builder bindings(@Nullable Output<List<BindingArgs>> bindings) {
             this.bindings = bindings;
             return this;
         }
 
         public Builder bindings(@Nullable List<BindingArgs> bindings) {
-            this.bindings = Input.ofNullable(bindings);
+            this.bindings = Output.ofNullable(bindings);
             return this;
         }
 
-        public Builder etag(@Nullable Input<String> etag) {
+        public Builder etag(@Nullable Output<String> etag) {
             this.etag = etag;
             return this;
         }
 
         public Builder etag(@Nullable String etag) {
-            this.etag = Input.ofNullable(etag);
+            this.etag = Output.ofNullable(etag);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder serviceId(Input<String> serviceId) {
+        public Builder serviceId(Output<String> serviceId) {
             this.serviceId = Objects.requireNonNull(serviceId);
             return this;
         }
 
         public Builder serviceId(String serviceId) {
-            this.serviceId = Input.of(Objects.requireNonNull(serviceId));
+            this.serviceId = Output.of(Objects.requireNonNull(serviceId));
             return this;
         }
 
-        public Builder updateMask(@Nullable Input<String> updateMask) {
+        public Builder updateMask(@Nullable Output<String> updateMask) {
             this.updateMask = updateMask;
             return this;
         }
 
         public Builder updateMask(@Nullable String updateMask) {
-            this.updateMask = Input.ofNullable(updateMask);
+            this.updateMask = Output.ofNullable(updateMask);
             return this;
         }
 
-        public Builder version(@Nullable Input<Integer> version) {
+        public Builder version(@Nullable Output<Integer> version) {
             this.version = version;
             return this;
         }
 
         public Builder version(@Nullable Integer version) {
-            this.version = Input.ofNullable(version);
+            this.version = Output.ofNullable(version);
             return this;
         }
         public ServiceBackupIamPolicyArgs build() {

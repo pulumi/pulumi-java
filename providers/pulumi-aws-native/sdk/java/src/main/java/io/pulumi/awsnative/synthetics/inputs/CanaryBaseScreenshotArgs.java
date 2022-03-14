@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.synthetics.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -20,10 +20,10 @@ public final class CanaryBaseScreenshotArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="ignoreCoordinates")
-      private final @Nullable Input<List<String>> ignoreCoordinates;
+      private final @Nullable Output<List<String>> ignoreCoordinates;
 
-    public Input<List<String>> getIgnoreCoordinates() {
-        return this.ignoreCoordinates == null ? Input.empty() : this.ignoreCoordinates;
+    public Output<List<String>> getIgnoreCoordinates() {
+        return this.ignoreCoordinates == null ? Output.empty() : this.ignoreCoordinates;
     }
 
     /**
@@ -31,22 +31,22 @@ public final class CanaryBaseScreenshotArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="screenshotName", required=true)
-      private final Input<String> screenshotName;
+      private final Output<String> screenshotName;
 
-    public Input<String> getScreenshotName() {
+    public Output<String> getScreenshotName() {
         return this.screenshotName;
     }
 
     public CanaryBaseScreenshotArgs(
-        @Nullable Input<List<String>> ignoreCoordinates,
-        Input<String> screenshotName) {
+        @Nullable Output<List<String>> ignoreCoordinates,
+        Output<String> screenshotName) {
         this.ignoreCoordinates = ignoreCoordinates;
         this.screenshotName = Objects.requireNonNull(screenshotName, "expected parameter 'screenshotName' to be non-null");
     }
 
     private CanaryBaseScreenshotArgs() {
-        this.ignoreCoordinates = Input.empty();
-        this.screenshotName = Input.empty();
+        this.ignoreCoordinates = Output.empty();
+        this.screenshotName = Output.empty();
     }
 
     public static Builder builder() {
@@ -58,8 +58,8 @@ public final class CanaryBaseScreenshotArgs extends io.pulumi.resources.Resource
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> ignoreCoordinates;
-        private Input<String> screenshotName;
+        private @Nullable Output<List<String>> ignoreCoordinates;
+        private Output<String> screenshotName;
 
         public Builder() {
     	      // Empty
@@ -71,23 +71,23 @@ public final class CanaryBaseScreenshotArgs extends io.pulumi.resources.Resource
     	      this.screenshotName = defaults.screenshotName;
         }
 
-        public Builder ignoreCoordinates(@Nullable Input<List<String>> ignoreCoordinates) {
+        public Builder ignoreCoordinates(@Nullable Output<List<String>> ignoreCoordinates) {
             this.ignoreCoordinates = ignoreCoordinates;
             return this;
         }
 
         public Builder ignoreCoordinates(@Nullable List<String> ignoreCoordinates) {
-            this.ignoreCoordinates = Input.ofNullable(ignoreCoordinates);
+            this.ignoreCoordinates = Output.ofNullable(ignoreCoordinates);
             return this;
         }
 
-        public Builder screenshotName(Input<String> screenshotName) {
+        public Builder screenshotName(Output<String> screenshotName) {
             this.screenshotName = Objects.requireNonNull(screenshotName);
             return this;
         }
 
         public Builder screenshotName(String screenshotName) {
-            this.screenshotName = Input.of(Objects.requireNonNull(screenshotName));
+            this.screenshotName = Output.of(Objects.requireNonNull(screenshotName));
             return this;
         }
         public CanaryBaseScreenshotArgs build() {

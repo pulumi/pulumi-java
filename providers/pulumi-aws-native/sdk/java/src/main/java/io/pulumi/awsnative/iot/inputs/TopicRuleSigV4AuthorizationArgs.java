@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.iot.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -14,39 +14,39 @@ public final class TopicRuleSigV4AuthorizationArgs extends io.pulumi.resources.R
     public static final TopicRuleSigV4AuthorizationArgs Empty = new TopicRuleSigV4AuthorizationArgs();
 
     @InputImport(name="roleArn", required=true)
-      private final Input<String> roleArn;
+      private final Output<String> roleArn;
 
-    public Input<String> getRoleArn() {
+    public Output<String> getRoleArn() {
         return this.roleArn;
     }
 
     @InputImport(name="serviceName", required=true)
-      private final Input<String> serviceName;
+      private final Output<String> serviceName;
 
-    public Input<String> getServiceName() {
+    public Output<String> getServiceName() {
         return this.serviceName;
     }
 
     @InputImport(name="signingRegion", required=true)
-      private final Input<String> signingRegion;
+      private final Output<String> signingRegion;
 
-    public Input<String> getSigningRegion() {
+    public Output<String> getSigningRegion() {
         return this.signingRegion;
     }
 
     public TopicRuleSigV4AuthorizationArgs(
-        Input<String> roleArn,
-        Input<String> serviceName,
-        Input<String> signingRegion) {
+        Output<String> roleArn,
+        Output<String> serviceName,
+        Output<String> signingRegion) {
         this.roleArn = Objects.requireNonNull(roleArn, "expected parameter 'roleArn' to be non-null");
         this.serviceName = Objects.requireNonNull(serviceName, "expected parameter 'serviceName' to be non-null");
         this.signingRegion = Objects.requireNonNull(signingRegion, "expected parameter 'signingRegion' to be non-null");
     }
 
     private TopicRuleSigV4AuthorizationArgs() {
-        this.roleArn = Input.empty();
-        this.serviceName = Input.empty();
-        this.signingRegion = Input.empty();
+        this.roleArn = Output.empty();
+        this.serviceName = Output.empty();
+        this.signingRegion = Output.empty();
     }
 
     public static Builder builder() {
@@ -58,9 +58,9 @@ public final class TopicRuleSigV4AuthorizationArgs extends io.pulumi.resources.R
     }
 
     public static final class Builder {
-        private Input<String> roleArn;
-        private Input<String> serviceName;
-        private Input<String> signingRegion;
+        private Output<String> roleArn;
+        private Output<String> serviceName;
+        private Output<String> signingRegion;
 
         public Builder() {
     	      // Empty
@@ -73,33 +73,33 @@ public final class TopicRuleSigV4AuthorizationArgs extends io.pulumi.resources.R
     	      this.signingRegion = defaults.signingRegion;
         }
 
-        public Builder roleArn(Input<String> roleArn) {
+        public Builder roleArn(Output<String> roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
 
         public Builder roleArn(String roleArn) {
-            this.roleArn = Input.of(Objects.requireNonNull(roleArn));
+            this.roleArn = Output.of(Objects.requireNonNull(roleArn));
             return this;
         }
 
-        public Builder serviceName(Input<String> serviceName) {
+        public Builder serviceName(Output<String> serviceName) {
             this.serviceName = Objects.requireNonNull(serviceName);
             return this;
         }
 
         public Builder serviceName(String serviceName) {
-            this.serviceName = Input.of(Objects.requireNonNull(serviceName));
+            this.serviceName = Output.of(Objects.requireNonNull(serviceName));
             return this;
         }
 
-        public Builder signingRegion(Input<String> signingRegion) {
+        public Builder signingRegion(Output<String> signingRegion) {
             this.signingRegion = Objects.requireNonNull(signingRegion);
             return this;
         }
 
         public Builder signingRegion(String signingRegion) {
-            this.signingRegion = Input.of(Objects.requireNonNull(signingRegion));
+            this.signingRegion = Output.of(Objects.requireNonNull(signingRegion));
             return this;
         }
         public TopicRuleSigV4AuthorizationArgs build() {

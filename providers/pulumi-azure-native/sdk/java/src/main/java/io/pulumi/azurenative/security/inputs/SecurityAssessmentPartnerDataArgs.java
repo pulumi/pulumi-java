@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.security.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -22,9 +22,9 @@ public final class SecurityAssessmentPartnerDataArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="partnerName", required=true)
-      private final Input<String> partnerName;
+      private final Output<String> partnerName;
 
-    public Input<String> getPartnerName() {
+    public Output<String> getPartnerName() {
         return this.partnerName;
     }
 
@@ -33,22 +33,22 @@ public final class SecurityAssessmentPartnerDataArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="secret", required=true)
-      private final Input<String> secret;
+      private final Output<String> secret;
 
-    public Input<String> getSecret() {
+    public Output<String> getSecret() {
         return this.secret;
     }
 
     public SecurityAssessmentPartnerDataArgs(
-        Input<String> partnerName,
-        Input<String> secret) {
+        Output<String> partnerName,
+        Output<String> secret) {
         this.partnerName = Objects.requireNonNull(partnerName, "expected parameter 'partnerName' to be non-null");
         this.secret = Objects.requireNonNull(secret, "expected parameter 'secret' to be non-null");
     }
 
     private SecurityAssessmentPartnerDataArgs() {
-        this.partnerName = Input.empty();
-        this.secret = Input.empty();
+        this.partnerName = Output.empty();
+        this.secret = Output.empty();
     }
 
     public static Builder builder() {
@@ -60,8 +60,8 @@ public final class SecurityAssessmentPartnerDataArgs extends io.pulumi.resources
     }
 
     public static final class Builder {
-        private Input<String> partnerName;
-        private Input<String> secret;
+        private Output<String> partnerName;
+        private Output<String> secret;
 
         public Builder() {
     	      // Empty
@@ -73,23 +73,23 @@ public final class SecurityAssessmentPartnerDataArgs extends io.pulumi.resources
     	      this.secret = defaults.secret;
         }
 
-        public Builder partnerName(Input<String> partnerName) {
+        public Builder partnerName(Output<String> partnerName) {
             this.partnerName = Objects.requireNonNull(partnerName);
             return this;
         }
 
         public Builder partnerName(String partnerName) {
-            this.partnerName = Input.of(Objects.requireNonNull(partnerName));
+            this.partnerName = Output.of(Objects.requireNonNull(partnerName));
             return this;
         }
 
-        public Builder secret(Input<String> secret) {
+        public Builder secret(Output<String> secret) {
             this.secret = Objects.requireNonNull(secret);
             return this;
         }
 
         public Builder secret(String secret) {
-            this.secret = Input.of(Objects.requireNonNull(secret));
+            this.secret = Output.of(Objects.requireNonNull(secret));
             return this;
         }
         public SecurityAssessmentPartnerDataArgs build() {

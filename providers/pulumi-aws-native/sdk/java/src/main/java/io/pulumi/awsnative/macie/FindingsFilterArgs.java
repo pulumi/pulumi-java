@@ -5,7 +5,7 @@ package io.pulumi.awsnative.macie;
 
 import io.pulumi.awsnative.macie.enums.FindingsFilterFindingFilterAction;
 import io.pulumi.awsnative.macie.inputs.FindingsFilterFindingCriteriaArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -22,10 +22,10 @@ public final class FindingsFilterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="action")
-      private final @Nullable Input<FindingsFilterFindingFilterAction> action;
+      private final @Nullable Output<FindingsFilterFindingFilterAction> action;
 
-    public Input<FindingsFilterFindingFilterAction> getAction() {
-        return this.action == null ? Input.empty() : this.action;
+    public Output<FindingsFilterFindingFilterAction> getAction() {
+        return this.action == null ? Output.empty() : this.action;
     }
 
     /**
@@ -33,10 +33,10 @@ public final class FindingsFilterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -44,9 +44,9 @@ public final class FindingsFilterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="findingCriteria", required=true)
-      private final Input<FindingsFilterFindingCriteriaArgs> findingCriteria;
+      private final Output<FindingsFilterFindingCriteriaArgs> findingCriteria;
 
-    public Input<FindingsFilterFindingCriteriaArgs> getFindingCriteria() {
+    public Output<FindingsFilterFindingCriteriaArgs> getFindingCriteria() {
         return this.findingCriteria;
     }
 
@@ -55,10 +55,10 @@ public final class FindingsFilterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -66,18 +66,18 @@ public final class FindingsFilterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="position")
-      private final @Nullable Input<Integer> position;
+      private final @Nullable Output<Integer> position;
 
-    public Input<Integer> getPosition() {
-        return this.position == null ? Input.empty() : this.position;
+    public Output<Integer> getPosition() {
+        return this.position == null ? Output.empty() : this.position;
     }
 
     public FindingsFilterArgs(
-        @Nullable Input<FindingsFilterFindingFilterAction> action,
-        @Nullable Input<String> description,
-        Input<FindingsFilterFindingCriteriaArgs> findingCriteria,
-        @Nullable Input<String> name,
-        @Nullable Input<Integer> position) {
+        @Nullable Output<FindingsFilterFindingFilterAction> action,
+        @Nullable Output<String> description,
+        Output<FindingsFilterFindingCriteriaArgs> findingCriteria,
+        @Nullable Output<String> name,
+        @Nullable Output<Integer> position) {
         this.action = action;
         this.description = description;
         this.findingCriteria = Objects.requireNonNull(findingCriteria, "expected parameter 'findingCriteria' to be non-null");
@@ -86,11 +86,11 @@ public final class FindingsFilterArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private FindingsFilterArgs() {
-        this.action = Input.empty();
-        this.description = Input.empty();
-        this.findingCriteria = Input.empty();
-        this.name = Input.empty();
-        this.position = Input.empty();
+        this.action = Output.empty();
+        this.description = Output.empty();
+        this.findingCriteria = Output.empty();
+        this.name = Output.empty();
+        this.position = Output.empty();
     }
 
     public static Builder builder() {
@@ -102,11 +102,11 @@ public final class FindingsFilterArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<FindingsFilterFindingFilterAction> action;
-        private @Nullable Input<String> description;
-        private Input<FindingsFilterFindingCriteriaArgs> findingCriteria;
-        private @Nullable Input<String> name;
-        private @Nullable Input<Integer> position;
+        private @Nullable Output<FindingsFilterFindingFilterAction> action;
+        private @Nullable Output<String> description;
+        private Output<FindingsFilterFindingCriteriaArgs> findingCriteria;
+        private @Nullable Output<String> name;
+        private @Nullable Output<Integer> position;
 
         public Builder() {
     	      // Empty
@@ -121,53 +121,53 @@ public final class FindingsFilterArgs extends io.pulumi.resources.ResourceArgs {
     	      this.position = defaults.position;
         }
 
-        public Builder action(@Nullable Input<FindingsFilterFindingFilterAction> action) {
+        public Builder action(@Nullable Output<FindingsFilterFindingFilterAction> action) {
             this.action = action;
             return this;
         }
 
         public Builder action(@Nullable FindingsFilterFindingFilterAction action) {
-            this.action = Input.ofNullable(action);
+            this.action = Output.ofNullable(action);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder findingCriteria(Input<FindingsFilterFindingCriteriaArgs> findingCriteria) {
+        public Builder findingCriteria(Output<FindingsFilterFindingCriteriaArgs> findingCriteria) {
             this.findingCriteria = Objects.requireNonNull(findingCriteria);
             return this;
         }
 
         public Builder findingCriteria(FindingsFilterFindingCriteriaArgs findingCriteria) {
-            this.findingCriteria = Input.of(Objects.requireNonNull(findingCriteria));
+            this.findingCriteria = Output.of(Objects.requireNonNull(findingCriteria));
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder position(@Nullable Input<Integer> position) {
+        public Builder position(@Nullable Output<Integer> position) {
             this.position = position;
             return this;
         }
 
         public Builder position(@Nullable Integer position) {
-            this.position = Input.ofNullable(position);
+            this.position = Output.ofNullable(position);
             return this;
         }
         public FindingsFilterArgs build() {

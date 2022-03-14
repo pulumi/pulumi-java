@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.networkfirewall.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -16,29 +16,29 @@ public final class FirewallPolicyStatefulRuleGroupReferenceArgs extends io.pulum
     public static final FirewallPolicyStatefulRuleGroupReferenceArgs Empty = new FirewallPolicyStatefulRuleGroupReferenceArgs();
 
     @InputImport(name="priority")
-      private final @Nullable Input<Integer> priority;
+      private final @Nullable Output<Integer> priority;
 
-    public Input<Integer> getPriority() {
-        return this.priority == null ? Input.empty() : this.priority;
+    public Output<Integer> getPriority() {
+        return this.priority == null ? Output.empty() : this.priority;
     }
 
     @InputImport(name="resourceArn", required=true)
-      private final Input<String> resourceArn;
+      private final Output<String> resourceArn;
 
-    public Input<String> getResourceArn() {
+    public Output<String> getResourceArn() {
         return this.resourceArn;
     }
 
     public FirewallPolicyStatefulRuleGroupReferenceArgs(
-        @Nullable Input<Integer> priority,
-        Input<String> resourceArn) {
+        @Nullable Output<Integer> priority,
+        Output<String> resourceArn) {
         this.priority = priority;
         this.resourceArn = Objects.requireNonNull(resourceArn, "expected parameter 'resourceArn' to be non-null");
     }
 
     private FirewallPolicyStatefulRuleGroupReferenceArgs() {
-        this.priority = Input.empty();
-        this.resourceArn = Input.empty();
+        this.priority = Output.empty();
+        this.resourceArn = Output.empty();
     }
 
     public static Builder builder() {
@@ -50,8 +50,8 @@ public final class FirewallPolicyStatefulRuleGroupReferenceArgs extends io.pulum
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> priority;
-        private Input<String> resourceArn;
+        private @Nullable Output<Integer> priority;
+        private Output<String> resourceArn;
 
         public Builder() {
     	      // Empty
@@ -63,23 +63,23 @@ public final class FirewallPolicyStatefulRuleGroupReferenceArgs extends io.pulum
     	      this.resourceArn = defaults.resourceArn;
         }
 
-        public Builder priority(@Nullable Input<Integer> priority) {
+        public Builder priority(@Nullable Output<Integer> priority) {
             this.priority = priority;
             return this;
         }
 
         public Builder priority(@Nullable Integer priority) {
-            this.priority = Input.ofNullable(priority);
+            this.priority = Output.ofNullable(priority);
             return this;
         }
 
-        public Builder resourceArn(Input<String> resourceArn) {
+        public Builder resourceArn(Output<String> resourceArn) {
             this.resourceArn = Objects.requireNonNull(resourceArn);
             return this;
         }
 
         public Builder resourceArn(String resourceArn) {
-            this.resourceArn = Input.of(Objects.requireNonNull(resourceArn));
+            this.resourceArn = Output.of(Objects.requireNonNull(resourceArn));
             return this;
         }
         public FirewallPolicyStatefulRuleGroupReferenceArgs build() {

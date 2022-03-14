@@ -9,7 +9,6 @@ import io.pulumi.azurenative.machinelearningservices.outputs.BatchDeploymentResp
 import io.pulumi.azurenative.machinelearningservices.outputs.ResourceIdentityResponse;
 import io.pulumi.azurenative.machinelearningservices.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -185,18 +184,18 @@ public class BatchDeployment extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public BatchDeployment(String name, BatchDeploymentArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:machinelearningservices:BatchDeployment", name, args == null ? BatchDeploymentArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("azure-native:machinelearningservices:BatchDeployment", name, args == null ? BatchDeploymentArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private BatchDeployment(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private BatchDeployment(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:machinelearningservices:BatchDeployment", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:machinelearningservices/v20210301preview:BatchDeployment").build())
+                Output.of(Alias.builder().setType("azure-native:machinelearningservices/v20210301preview:BatchDeployment").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -210,7 +209,7 @@ public class BatchDeployment extends io.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static BatchDeployment get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static BatchDeployment get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new BatchDeployment(name, id, options);
     }
 }

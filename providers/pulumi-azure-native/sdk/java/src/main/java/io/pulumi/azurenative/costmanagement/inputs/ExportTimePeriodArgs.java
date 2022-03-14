@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.costmanagement.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -22,9 +22,9 @@ public final class ExportTimePeriodArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="from", required=true)
-      private final Input<String> from;
+      private final Output<String> from;
 
-    public Input<String> getFrom() {
+    public Output<String> getFrom() {
         return this.from;
     }
 
@@ -33,22 +33,22 @@ public final class ExportTimePeriodArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="to", required=true)
-      private final Input<String> to;
+      private final Output<String> to;
 
-    public Input<String> getTo() {
+    public Output<String> getTo() {
         return this.to;
     }
 
     public ExportTimePeriodArgs(
-        Input<String> from,
-        Input<String> to) {
+        Output<String> from,
+        Output<String> to) {
         this.from = Objects.requireNonNull(from, "expected parameter 'from' to be non-null");
         this.to = Objects.requireNonNull(to, "expected parameter 'to' to be non-null");
     }
 
     private ExportTimePeriodArgs() {
-        this.from = Input.empty();
-        this.to = Input.empty();
+        this.from = Output.empty();
+        this.to = Output.empty();
     }
 
     public static Builder builder() {
@@ -60,8 +60,8 @@ public final class ExportTimePeriodArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private Input<String> from;
-        private Input<String> to;
+        private Output<String> from;
+        private Output<String> to;
 
         public Builder() {
     	      // Empty
@@ -73,23 +73,23 @@ public final class ExportTimePeriodArgs extends io.pulumi.resources.ResourceArgs
     	      this.to = defaults.to;
         }
 
-        public Builder from(Input<String> from) {
+        public Builder from(Output<String> from) {
             this.from = Objects.requireNonNull(from);
             return this;
         }
 
         public Builder from(String from) {
-            this.from = Input.of(Objects.requireNonNull(from));
+            this.from = Output.of(Objects.requireNonNull(from));
             return this;
         }
 
-        public Builder to(Input<String> to) {
+        public Builder to(Output<String> to) {
             this.to = Objects.requireNonNull(to);
             return this;
         }
 
         public Builder to(String to) {
-            this.to = Input.of(Objects.requireNonNull(to));
+            this.to = Output.of(Objects.requireNonNull(to));
             return this;
         }
         public ExportTimePeriodArgs build() {

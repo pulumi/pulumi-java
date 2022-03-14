@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.machinelearningservices.inputs;
 
 import io.pulumi.azurenative.machinelearningservices.inputs.CosmosDbSettingsArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,18 +19,18 @@ public final class ServiceManagedResourcesSettingsArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="cosmosDb")
-      private final @Nullable Input<CosmosDbSettingsArgs> cosmosDb;
+      private final @Nullable Output<CosmosDbSettingsArgs> cosmosDb;
 
-    public Input<CosmosDbSettingsArgs> getCosmosDb() {
-        return this.cosmosDb == null ? Input.empty() : this.cosmosDb;
+    public Output<CosmosDbSettingsArgs> getCosmosDb() {
+        return this.cosmosDb == null ? Output.empty() : this.cosmosDb;
     }
 
-    public ServiceManagedResourcesSettingsArgs(@Nullable Input<CosmosDbSettingsArgs> cosmosDb) {
+    public ServiceManagedResourcesSettingsArgs(@Nullable Output<CosmosDbSettingsArgs> cosmosDb) {
         this.cosmosDb = cosmosDb;
     }
 
     private ServiceManagedResourcesSettingsArgs() {
-        this.cosmosDb = Input.empty();
+        this.cosmosDb = Output.empty();
     }
 
     public static Builder builder() {
@@ -42,7 +42,7 @@ public final class ServiceManagedResourcesSettingsArgs extends io.pulumi.resourc
     }
 
     public static final class Builder {
-        private @Nullable Input<CosmosDbSettingsArgs> cosmosDb;
+        private @Nullable Output<CosmosDbSettingsArgs> cosmosDb;
 
         public Builder() {
     	      // Empty
@@ -53,13 +53,13 @@ public final class ServiceManagedResourcesSettingsArgs extends io.pulumi.resourc
     	      this.cosmosDb = defaults.cosmosDb;
         }
 
-        public Builder cosmosDb(@Nullable Input<CosmosDbSettingsArgs> cosmosDb) {
+        public Builder cosmosDb(@Nullable Output<CosmosDbSettingsArgs> cosmosDb) {
             this.cosmosDb = cosmosDb;
             return this;
         }
 
         public Builder cosmosDb(@Nullable CosmosDbSettingsArgs cosmosDb) {
-            this.cosmosDb = Input.ofNullable(cosmosDb);
+            this.cosmosDb = Output.ofNullable(cosmosDb);
             return this;
         }
         public ServiceManagedResourcesSettingsArgs build() {

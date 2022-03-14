@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.imagebuilder.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class ImagePipelineScheduleGetArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="pipelineExecutionStartCondition")
-      private final @Nullable Input<String> pipelineExecutionStartCondition;
+      private final @Nullable Output<String> pipelineExecutionStartCondition;
 
-    public Input<String> getPipelineExecutionStartCondition() {
-        return this.pipelineExecutionStartCondition == null ? Input.empty() : this.pipelineExecutionStartCondition;
+    public Output<String> getPipelineExecutionStartCondition() {
+        return this.pipelineExecutionStartCondition == null ? Output.empty() : this.pipelineExecutionStartCondition;
     }
 
     /**
@@ -30,22 +30,22 @@ public final class ImagePipelineScheduleGetArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="scheduleExpression", required=true)
-      private final Input<String> scheduleExpression;
+      private final Output<String> scheduleExpression;
 
-    public Input<String> getScheduleExpression() {
+    public Output<String> getScheduleExpression() {
         return this.scheduleExpression;
     }
 
     public ImagePipelineScheduleGetArgs(
-        @Nullable Input<String> pipelineExecutionStartCondition,
-        Input<String> scheduleExpression) {
+        @Nullable Output<String> pipelineExecutionStartCondition,
+        Output<String> scheduleExpression) {
         this.pipelineExecutionStartCondition = pipelineExecutionStartCondition;
         this.scheduleExpression = Objects.requireNonNull(scheduleExpression, "expected parameter 'scheduleExpression' to be non-null");
     }
 
     private ImagePipelineScheduleGetArgs() {
-        this.pipelineExecutionStartCondition = Input.empty();
-        this.scheduleExpression = Input.empty();
+        this.pipelineExecutionStartCondition = Output.empty();
+        this.scheduleExpression = Output.empty();
     }
 
     public static Builder builder() {
@@ -57,8 +57,8 @@ public final class ImagePipelineScheduleGetArgs extends io.pulumi.resources.Reso
     }
 
     public static final class Builder {
-        private @Nullable Input<String> pipelineExecutionStartCondition;
-        private Input<String> scheduleExpression;
+        private @Nullable Output<String> pipelineExecutionStartCondition;
+        private Output<String> scheduleExpression;
 
         public Builder() {
     	      // Empty
@@ -70,23 +70,23 @@ public final class ImagePipelineScheduleGetArgs extends io.pulumi.resources.Reso
     	      this.scheduleExpression = defaults.scheduleExpression;
         }
 
-        public Builder pipelineExecutionStartCondition(@Nullable Input<String> pipelineExecutionStartCondition) {
+        public Builder pipelineExecutionStartCondition(@Nullable Output<String> pipelineExecutionStartCondition) {
             this.pipelineExecutionStartCondition = pipelineExecutionStartCondition;
             return this;
         }
 
         public Builder pipelineExecutionStartCondition(@Nullable String pipelineExecutionStartCondition) {
-            this.pipelineExecutionStartCondition = Input.ofNullable(pipelineExecutionStartCondition);
+            this.pipelineExecutionStartCondition = Output.ofNullable(pipelineExecutionStartCondition);
             return this;
         }
 
-        public Builder scheduleExpression(Input<String> scheduleExpression) {
+        public Builder scheduleExpression(Output<String> scheduleExpression) {
             this.scheduleExpression = Objects.requireNonNull(scheduleExpression);
             return this;
         }
 
         public Builder scheduleExpression(String scheduleExpression) {
-            this.scheduleExpression = Input.of(Objects.requireNonNull(scheduleExpression));
+            this.scheduleExpression = Output.of(Objects.requireNonNull(scheduleExpression));
             return this;
         }
         public ImagePipelineScheduleGetArgs build() {

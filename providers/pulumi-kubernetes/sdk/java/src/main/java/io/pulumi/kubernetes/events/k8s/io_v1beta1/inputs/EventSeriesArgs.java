@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.events.k8s.io_v1beta1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -24,9 +24,9 @@ public final class EventSeriesArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="count", required=true)
-      private final Input<Integer> count;
+      private final Output<Integer> count;
 
-    public Input<Integer> getCount() {
+    public Output<Integer> getCount() {
         return this.count;
     }
 
@@ -35,9 +35,9 @@ public final class EventSeriesArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="lastObservedTime", required=true)
-      private final Input<String> lastObservedTime;
+      private final Output<String> lastObservedTime;
 
-    public Input<String> getLastObservedTime() {
+    public Output<String> getLastObservedTime() {
         return this.lastObservedTime;
     }
 
@@ -46,25 +46,25 @@ public final class EventSeriesArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="state")
-      private final @Nullable Input<String> state;
+      private final @Nullable Output<String> state;
 
-    public Input<String> getState() {
-        return this.state == null ? Input.empty() : this.state;
+    public Output<String> getState() {
+        return this.state == null ? Output.empty() : this.state;
     }
 
     public EventSeriesArgs(
-        Input<Integer> count,
-        Input<String> lastObservedTime,
-        @Nullable Input<String> state) {
+        Output<Integer> count,
+        Output<String> lastObservedTime,
+        @Nullable Output<String> state) {
         this.count = Objects.requireNonNull(count, "expected parameter 'count' to be non-null");
         this.lastObservedTime = Objects.requireNonNull(lastObservedTime, "expected parameter 'lastObservedTime' to be non-null");
         this.state = state;
     }
 
     private EventSeriesArgs() {
-        this.count = Input.empty();
-        this.lastObservedTime = Input.empty();
-        this.state = Input.empty();
+        this.count = Output.empty();
+        this.lastObservedTime = Output.empty();
+        this.state = Output.empty();
     }
 
     public static Builder builder() {
@@ -76,9 +76,9 @@ public final class EventSeriesArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<Integer> count;
-        private Input<String> lastObservedTime;
-        private @Nullable Input<String> state;
+        private Output<Integer> count;
+        private Output<String> lastObservedTime;
+        private @Nullable Output<String> state;
 
         public Builder() {
     	      // Empty
@@ -91,33 +91,33 @@ public final class EventSeriesArgs extends io.pulumi.resources.ResourceArgs {
     	      this.state = defaults.state;
         }
 
-        public Builder count(Input<Integer> count) {
+        public Builder count(Output<Integer> count) {
             this.count = Objects.requireNonNull(count);
             return this;
         }
 
         public Builder count(Integer count) {
-            this.count = Input.of(Objects.requireNonNull(count));
+            this.count = Output.of(Objects.requireNonNull(count));
             return this;
         }
 
-        public Builder lastObservedTime(Input<String> lastObservedTime) {
+        public Builder lastObservedTime(Output<String> lastObservedTime) {
             this.lastObservedTime = Objects.requireNonNull(lastObservedTime);
             return this;
         }
 
         public Builder lastObservedTime(String lastObservedTime) {
-            this.lastObservedTime = Input.of(Objects.requireNonNull(lastObservedTime));
+            this.lastObservedTime = Output.of(Objects.requireNonNull(lastObservedTime));
             return this;
         }
 
-        public Builder state(@Nullable Input<String> state) {
+        public Builder state(@Nullable Output<String> state) {
             this.state = state;
             return this;
         }
 
         public Builder state(@Nullable String state) {
-            this.state = Input.ofNullable(state);
+            this.state = Output.ofNullable(state);
             return this;
         }
         public EventSeriesArgs build() {

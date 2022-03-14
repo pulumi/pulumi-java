@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudfunctions_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class SecretVersionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="path")
-      private final @Nullable Input<String> path;
+      private final @Nullable Output<String> path;
 
-    public Input<String> getPath() {
-        return this.path == null ? Input.empty() : this.path;
+    public Output<String> getPath() {
+        return this.path == null ? Output.empty() : this.path;
     }
 
     /**
@@ -34,22 +34,22 @@ public final class SecretVersionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="version")
-      private final @Nullable Input<String> version;
+      private final @Nullable Output<String> version;
 
-    public Input<String> getVersion() {
-        return this.version == null ? Input.empty() : this.version;
+    public Output<String> getVersion() {
+        return this.version == null ? Output.empty() : this.version;
     }
 
     public SecretVersionArgs(
-        @Nullable Input<String> path,
-        @Nullable Input<String> version) {
+        @Nullable Output<String> path,
+        @Nullable Output<String> version) {
         this.path = path;
         this.version = version;
     }
 
     private SecretVersionArgs() {
-        this.path = Input.empty();
-        this.version = Input.empty();
+        this.path = Output.empty();
+        this.version = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class SecretVersionArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> path;
-        private @Nullable Input<String> version;
+        private @Nullable Output<String> path;
+        private @Nullable Output<String> version;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class SecretVersionArgs extends io.pulumi.resources.ResourceArgs {
     	      this.version = defaults.version;
         }
 
-        public Builder path(@Nullable Input<String> path) {
+        public Builder path(@Nullable Output<String> path) {
             this.path = path;
             return this;
         }
 
         public Builder path(@Nullable String path) {
-            this.path = Input.ofNullable(path);
+            this.path = Output.ofNullable(path);
             return this;
         }
 
-        public Builder version(@Nullable Input<String> version) {
+        public Builder version(@Nullable Output<String> version) {
             this.version = version;
             return this;
         }
 
         public Builder version(@Nullable String version) {
-            this.version = Input.ofNullable(version);
+            this.version = Output.ofNullable(version);
             return this;
         }
         public SecretVersionArgs build() {

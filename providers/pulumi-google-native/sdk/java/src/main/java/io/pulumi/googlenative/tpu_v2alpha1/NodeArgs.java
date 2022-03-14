@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.tpu_v2alpha1;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.tpu_v2alpha1.enums.NodeHealth;
 import io.pulumi.googlenative.tpu_v2alpha1.inputs.AttachedDiskArgs;
@@ -26,9 +26,9 @@ public final class NodeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="acceleratorType", required=true)
-      private final Input<String> acceleratorType;
+      private final Output<String> acceleratorType;
 
-    public Input<String> getAcceleratorType() {
+    public Output<String> getAcceleratorType() {
         return this.acceleratorType;
     }
 
@@ -37,10 +37,10 @@ public final class NodeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="cidrBlock")
-      private final @Nullable Input<String> cidrBlock;
+      private final @Nullable Output<String> cidrBlock;
 
-    public Input<String> getCidrBlock() {
-        return this.cidrBlock == null ? Input.empty() : this.cidrBlock;
+    public Output<String> getCidrBlock() {
+        return this.cidrBlock == null ? Output.empty() : this.cidrBlock;
     }
 
     /**
@@ -48,10 +48,10 @@ public final class NodeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dataDisks")
-      private final @Nullable Input<List<AttachedDiskArgs>> dataDisks;
+      private final @Nullable Output<List<AttachedDiskArgs>> dataDisks;
 
-    public Input<List<AttachedDiskArgs>> getDataDisks() {
-        return this.dataDisks == null ? Input.empty() : this.dataDisks;
+    public Output<List<AttachedDiskArgs>> getDataDisks() {
+        return this.dataDisks == null ? Output.empty() : this.dataDisks;
     }
 
     /**
@@ -59,10 +59,10 @@ public final class NodeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -70,10 +70,10 @@ public final class NodeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="health")
-      private final @Nullable Input<NodeHealth> health;
+      private final @Nullable Output<NodeHealth> health;
 
-    public Input<NodeHealth> getHealth() {
-        return this.health == null ? Input.empty() : this.health;
+    public Output<NodeHealth> getHealth() {
+        return this.health == null ? Output.empty() : this.health;
     }
 
     /**
@@ -81,17 +81,17 @@ public final class NodeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labels")
-      private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Output<Map<String,String>> labels;
 
-    public Input<Map<String,String>> getLabels() {
-        return this.labels == null ? Input.empty() : this.labels;
+    public Output<Map<String,String>> getLabels() {
+        return this.labels == null ? Output.empty() : this.labels;
     }
 
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -99,10 +99,10 @@ public final class NodeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="metadata")
-      private final @Nullable Input<Map<String,String>> metadata;
+      private final @Nullable Output<Map<String,String>> metadata;
 
-    public Input<Map<String,String>> getMetadata() {
-        return this.metadata == null ? Input.empty() : this.metadata;
+    public Output<Map<String,String>> getMetadata() {
+        return this.metadata == null ? Output.empty() : this.metadata;
     }
 
     /**
@@ -110,24 +110,24 @@ public final class NodeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="networkConfig")
-      private final @Nullable Input<NetworkConfigArgs> networkConfig;
+      private final @Nullable Output<NetworkConfigArgs> networkConfig;
 
-    public Input<NetworkConfigArgs> getNetworkConfig() {
-        return this.networkConfig == null ? Input.empty() : this.networkConfig;
+    public Output<NetworkConfigArgs> getNetworkConfig() {
+        return this.networkConfig == null ? Output.empty() : this.networkConfig;
     }
 
     @InputImport(name="nodeId")
-      private final @Nullable Input<String> nodeId;
+      private final @Nullable Output<String> nodeId;
 
-    public Input<String> getNodeId() {
-        return this.nodeId == null ? Input.empty() : this.nodeId;
+    public Output<String> getNodeId() {
+        return this.nodeId == null ? Output.empty() : this.nodeId;
     }
 
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -135,9 +135,9 @@ public final class NodeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="runtimeVersion", required=true)
-      private final Input<String> runtimeVersion;
+      private final Output<String> runtimeVersion;
 
-    public Input<String> getRuntimeVersion() {
+    public Output<String> getRuntimeVersion() {
         return this.runtimeVersion;
     }
 
@@ -146,10 +146,10 @@ public final class NodeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="schedulingConfig")
-      private final @Nullable Input<SchedulingConfigArgs> schedulingConfig;
+      private final @Nullable Output<SchedulingConfigArgs> schedulingConfig;
 
-    public Input<SchedulingConfigArgs> getSchedulingConfig() {
-        return this.schedulingConfig == null ? Input.empty() : this.schedulingConfig;
+    public Output<SchedulingConfigArgs> getSchedulingConfig() {
+        return this.schedulingConfig == null ? Output.empty() : this.schedulingConfig;
     }
 
     /**
@@ -157,10 +157,10 @@ public final class NodeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serviceAccount")
-      private final @Nullable Input<ServiceAccountArgs> serviceAccount;
+      private final @Nullable Output<ServiceAccountArgs> serviceAccount;
 
-    public Input<ServiceAccountArgs> getServiceAccount() {
-        return this.serviceAccount == null ? Input.empty() : this.serviceAccount;
+    public Output<ServiceAccountArgs> getServiceAccount() {
+        return this.serviceAccount == null ? Output.empty() : this.serviceAccount;
     }
 
     /**
@@ -168,28 +168,28 @@ public final class NodeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<List<String>> tags;
+      private final @Nullable Output<List<String>> tags;
 
-    public Input<List<String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<List<String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public NodeArgs(
-        Input<String> acceleratorType,
-        @Nullable Input<String> cidrBlock,
-        @Nullable Input<List<AttachedDiskArgs>> dataDisks,
-        @Nullable Input<String> description,
-        @Nullable Input<NodeHealth> health,
-        @Nullable Input<Map<String,String>> labels,
-        @Nullable Input<String> location,
-        @Nullable Input<Map<String,String>> metadata,
-        @Nullable Input<NetworkConfigArgs> networkConfig,
-        @Nullable Input<String> nodeId,
-        @Nullable Input<String> project,
-        Input<String> runtimeVersion,
-        @Nullable Input<SchedulingConfigArgs> schedulingConfig,
-        @Nullable Input<ServiceAccountArgs> serviceAccount,
-        @Nullable Input<List<String>> tags) {
+        Output<String> acceleratorType,
+        @Nullable Output<String> cidrBlock,
+        @Nullable Output<List<AttachedDiskArgs>> dataDisks,
+        @Nullable Output<String> description,
+        @Nullable Output<NodeHealth> health,
+        @Nullable Output<Map<String,String>> labels,
+        @Nullable Output<String> location,
+        @Nullable Output<Map<String,String>> metadata,
+        @Nullable Output<NetworkConfigArgs> networkConfig,
+        @Nullable Output<String> nodeId,
+        @Nullable Output<String> project,
+        Output<String> runtimeVersion,
+        @Nullable Output<SchedulingConfigArgs> schedulingConfig,
+        @Nullable Output<ServiceAccountArgs> serviceAccount,
+        @Nullable Output<List<String>> tags) {
         this.acceleratorType = Objects.requireNonNull(acceleratorType, "expected parameter 'acceleratorType' to be non-null");
         this.cidrBlock = cidrBlock;
         this.dataDisks = dataDisks;
@@ -208,21 +208,21 @@ public final class NodeArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private NodeArgs() {
-        this.acceleratorType = Input.empty();
-        this.cidrBlock = Input.empty();
-        this.dataDisks = Input.empty();
-        this.description = Input.empty();
-        this.health = Input.empty();
-        this.labels = Input.empty();
-        this.location = Input.empty();
-        this.metadata = Input.empty();
-        this.networkConfig = Input.empty();
-        this.nodeId = Input.empty();
-        this.project = Input.empty();
-        this.runtimeVersion = Input.empty();
-        this.schedulingConfig = Input.empty();
-        this.serviceAccount = Input.empty();
-        this.tags = Input.empty();
+        this.acceleratorType = Output.empty();
+        this.cidrBlock = Output.empty();
+        this.dataDisks = Output.empty();
+        this.description = Output.empty();
+        this.health = Output.empty();
+        this.labels = Output.empty();
+        this.location = Output.empty();
+        this.metadata = Output.empty();
+        this.networkConfig = Output.empty();
+        this.nodeId = Output.empty();
+        this.project = Output.empty();
+        this.runtimeVersion = Output.empty();
+        this.schedulingConfig = Output.empty();
+        this.serviceAccount = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -234,21 +234,21 @@ public final class NodeArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> acceleratorType;
-        private @Nullable Input<String> cidrBlock;
-        private @Nullable Input<List<AttachedDiskArgs>> dataDisks;
-        private @Nullable Input<String> description;
-        private @Nullable Input<NodeHealth> health;
-        private @Nullable Input<Map<String,String>> labels;
-        private @Nullable Input<String> location;
-        private @Nullable Input<Map<String,String>> metadata;
-        private @Nullable Input<NetworkConfigArgs> networkConfig;
-        private @Nullable Input<String> nodeId;
-        private @Nullable Input<String> project;
-        private Input<String> runtimeVersion;
-        private @Nullable Input<SchedulingConfigArgs> schedulingConfig;
-        private @Nullable Input<ServiceAccountArgs> serviceAccount;
-        private @Nullable Input<List<String>> tags;
+        private Output<String> acceleratorType;
+        private @Nullable Output<String> cidrBlock;
+        private @Nullable Output<List<AttachedDiskArgs>> dataDisks;
+        private @Nullable Output<String> description;
+        private @Nullable Output<NodeHealth> health;
+        private @Nullable Output<Map<String,String>> labels;
+        private @Nullable Output<String> location;
+        private @Nullable Output<Map<String,String>> metadata;
+        private @Nullable Output<NetworkConfigArgs> networkConfig;
+        private @Nullable Output<String> nodeId;
+        private @Nullable Output<String> project;
+        private Output<String> runtimeVersion;
+        private @Nullable Output<SchedulingConfigArgs> schedulingConfig;
+        private @Nullable Output<ServiceAccountArgs> serviceAccount;
+        private @Nullable Output<List<String>> tags;
 
         public Builder() {
     	      // Empty
@@ -273,153 +273,153 @@ public final class NodeArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder acceleratorType(Input<String> acceleratorType) {
+        public Builder acceleratorType(Output<String> acceleratorType) {
             this.acceleratorType = Objects.requireNonNull(acceleratorType);
             return this;
         }
 
         public Builder acceleratorType(String acceleratorType) {
-            this.acceleratorType = Input.of(Objects.requireNonNull(acceleratorType));
+            this.acceleratorType = Output.of(Objects.requireNonNull(acceleratorType));
             return this;
         }
 
-        public Builder cidrBlock(@Nullable Input<String> cidrBlock) {
+        public Builder cidrBlock(@Nullable Output<String> cidrBlock) {
             this.cidrBlock = cidrBlock;
             return this;
         }
 
         public Builder cidrBlock(@Nullable String cidrBlock) {
-            this.cidrBlock = Input.ofNullable(cidrBlock);
+            this.cidrBlock = Output.ofNullable(cidrBlock);
             return this;
         }
 
-        public Builder dataDisks(@Nullable Input<List<AttachedDiskArgs>> dataDisks) {
+        public Builder dataDisks(@Nullable Output<List<AttachedDiskArgs>> dataDisks) {
             this.dataDisks = dataDisks;
             return this;
         }
 
         public Builder dataDisks(@Nullable List<AttachedDiskArgs> dataDisks) {
-            this.dataDisks = Input.ofNullable(dataDisks);
+            this.dataDisks = Output.ofNullable(dataDisks);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder health(@Nullable Input<NodeHealth> health) {
+        public Builder health(@Nullable Output<NodeHealth> health) {
             this.health = health;
             return this;
         }
 
         public Builder health(@Nullable NodeHealth health) {
-            this.health = Input.ofNullable(health);
+            this.health = Output.ofNullable(health);
             return this;
         }
 
-        public Builder labels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
         public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Input.ofNullable(labels);
+            this.labels = Output.ofNullable(labels);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder metadata(@Nullable Input<Map<String,String>> metadata) {
+        public Builder metadata(@Nullable Output<Map<String,String>> metadata) {
             this.metadata = metadata;
             return this;
         }
 
         public Builder metadata(@Nullable Map<String,String> metadata) {
-            this.metadata = Input.ofNullable(metadata);
+            this.metadata = Output.ofNullable(metadata);
             return this;
         }
 
-        public Builder networkConfig(@Nullable Input<NetworkConfigArgs> networkConfig) {
+        public Builder networkConfig(@Nullable Output<NetworkConfigArgs> networkConfig) {
             this.networkConfig = networkConfig;
             return this;
         }
 
         public Builder networkConfig(@Nullable NetworkConfigArgs networkConfig) {
-            this.networkConfig = Input.ofNullable(networkConfig);
+            this.networkConfig = Output.ofNullable(networkConfig);
             return this;
         }
 
-        public Builder nodeId(@Nullable Input<String> nodeId) {
+        public Builder nodeId(@Nullable Output<String> nodeId) {
             this.nodeId = nodeId;
             return this;
         }
 
         public Builder nodeId(@Nullable String nodeId) {
-            this.nodeId = Input.ofNullable(nodeId);
+            this.nodeId = Output.ofNullable(nodeId);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder runtimeVersion(Input<String> runtimeVersion) {
+        public Builder runtimeVersion(Output<String> runtimeVersion) {
             this.runtimeVersion = Objects.requireNonNull(runtimeVersion);
             return this;
         }
 
         public Builder runtimeVersion(String runtimeVersion) {
-            this.runtimeVersion = Input.of(Objects.requireNonNull(runtimeVersion));
+            this.runtimeVersion = Output.of(Objects.requireNonNull(runtimeVersion));
             return this;
         }
 
-        public Builder schedulingConfig(@Nullable Input<SchedulingConfigArgs> schedulingConfig) {
+        public Builder schedulingConfig(@Nullable Output<SchedulingConfigArgs> schedulingConfig) {
             this.schedulingConfig = schedulingConfig;
             return this;
         }
 
         public Builder schedulingConfig(@Nullable SchedulingConfigArgs schedulingConfig) {
-            this.schedulingConfig = Input.ofNullable(schedulingConfig);
+            this.schedulingConfig = Output.ofNullable(schedulingConfig);
             return this;
         }
 
-        public Builder serviceAccount(@Nullable Input<ServiceAccountArgs> serviceAccount) {
+        public Builder serviceAccount(@Nullable Output<ServiceAccountArgs> serviceAccount) {
             this.serviceAccount = serviceAccount;
             return this;
         }
 
         public Builder serviceAccount(@Nullable ServiceAccountArgs serviceAccount) {
-            this.serviceAccount = Input.ofNullable(serviceAccount);
+            this.serviceAccount = Output.ofNullable(serviceAccount);
             return this;
         }
 
-        public Builder tags(@Nullable Input<List<String>> tags) {
+        public Builder tags(@Nullable Output<List<String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable List<String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public NodeArgs build() {

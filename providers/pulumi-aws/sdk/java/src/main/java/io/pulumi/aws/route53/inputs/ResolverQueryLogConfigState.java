@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.route53.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -20,10 +20,10 @@ public final class ResolverQueryLogConfigState extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="arn")
-      private final @Nullable Input<String> arn;
+      private final @Nullable Output<String> arn;
 
-    public Input<String> getArn() {
-        return this.arn == null ? Input.empty() : this.arn;
+    public Output<String> getArn() {
+        return this.arn == null ? Output.empty() : this.arn;
     }
 
     /**
@@ -32,10 +32,10 @@ public final class ResolverQueryLogConfigState extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="destinationArn")
-      private final @Nullable Input<String> destinationArn;
+      private final @Nullable Output<String> destinationArn;
 
-    public Input<String> getDestinationArn() {
-        return this.destinationArn == null ? Input.empty() : this.destinationArn;
+    public Output<String> getDestinationArn() {
+        return this.destinationArn == null ? Output.empty() : this.destinationArn;
     }
 
     /**
@@ -43,10 +43,10 @@ public final class ResolverQueryLogConfigState extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -54,10 +54,10 @@ public final class ResolverQueryLogConfigState extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="ownerId")
-      private final @Nullable Input<String> ownerId;
+      private final @Nullable Output<String> ownerId;
 
-    public Input<String> getOwnerId() {
-        return this.ownerId == null ? Input.empty() : this.ownerId;
+    public Output<String> getOwnerId() {
+        return this.ownerId == null ? Output.empty() : this.ownerId;
     }
 
     /**
@@ -67,10 +67,10 @@ public final class ResolverQueryLogConfigState extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="shareStatus")
-      private final @Nullable Input<String> shareStatus;
+      private final @Nullable Output<String> shareStatus;
 
-    public Input<String> getShareStatus() {
-        return this.shareStatus == null ? Input.empty() : this.shareStatus;
+    public Output<String> getShareStatus() {
+        return this.shareStatus == null ? Output.empty() : this.shareStatus;
     }
 
     /**
@@ -78,10 +78,10 @@ public final class ResolverQueryLogConfigState extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -89,20 +89,20 @@ public final class ResolverQueryLogConfigState extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="tagsAll")
-      private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Input<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Input.empty() : this.tagsAll;
+    public Output<Map<String,String>> getTagsAll() {
+        return this.tagsAll == null ? Output.empty() : this.tagsAll;
     }
 
     public ResolverQueryLogConfigState(
-        @Nullable Input<String> arn,
-        @Nullable Input<String> destinationArn,
-        @Nullable Input<String> name,
-        @Nullable Input<String> ownerId,
-        @Nullable Input<String> shareStatus,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<Map<String,String>> tagsAll) {
+        @Nullable Output<String> arn,
+        @Nullable Output<String> destinationArn,
+        @Nullable Output<String> name,
+        @Nullable Output<String> ownerId,
+        @Nullable Output<String> shareStatus,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<Map<String,String>> tagsAll) {
         this.arn = arn;
         this.destinationArn = destinationArn;
         this.name = name;
@@ -113,13 +113,13 @@ public final class ResolverQueryLogConfigState extends io.pulumi.resources.Resou
     }
 
     private ResolverQueryLogConfigState() {
-        this.arn = Input.empty();
-        this.destinationArn = Input.empty();
-        this.name = Input.empty();
-        this.ownerId = Input.empty();
-        this.shareStatus = Input.empty();
-        this.tags = Input.empty();
-        this.tagsAll = Input.empty();
+        this.arn = Output.empty();
+        this.destinationArn = Output.empty();
+        this.name = Output.empty();
+        this.ownerId = Output.empty();
+        this.shareStatus = Output.empty();
+        this.tags = Output.empty();
+        this.tagsAll = Output.empty();
     }
 
     public static Builder builder() {
@@ -131,13 +131,13 @@ public final class ResolverQueryLogConfigState extends io.pulumi.resources.Resou
     }
 
     public static final class Builder {
-        private @Nullable Input<String> arn;
-        private @Nullable Input<String> destinationArn;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> ownerId;
-        private @Nullable Input<String> shareStatus;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<Map<String,String>> tagsAll;
+        private @Nullable Output<String> arn;
+        private @Nullable Output<String> destinationArn;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> ownerId;
+        private @Nullable Output<String> shareStatus;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<Map<String,String>> tagsAll;
 
         public Builder() {
     	      // Empty
@@ -154,73 +154,73 @@ public final class ResolverQueryLogConfigState extends io.pulumi.resources.Resou
     	      this.tagsAll = defaults.tagsAll;
         }
 
-        public Builder arn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
 
         public Builder arn(@Nullable String arn) {
-            this.arn = Input.ofNullable(arn);
+            this.arn = Output.ofNullable(arn);
             return this;
         }
 
-        public Builder destinationArn(@Nullable Input<String> destinationArn) {
+        public Builder destinationArn(@Nullable Output<String> destinationArn) {
             this.destinationArn = destinationArn;
             return this;
         }
 
         public Builder destinationArn(@Nullable String destinationArn) {
-            this.destinationArn = Input.ofNullable(destinationArn);
+            this.destinationArn = Output.ofNullable(destinationArn);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder ownerId(@Nullable Input<String> ownerId) {
+        public Builder ownerId(@Nullable Output<String> ownerId) {
             this.ownerId = ownerId;
             return this;
         }
 
         public Builder ownerId(@Nullable String ownerId) {
-            this.ownerId = Input.ofNullable(ownerId);
+            this.ownerId = Output.ofNullable(ownerId);
             return this;
         }
 
-        public Builder shareStatus(@Nullable Input<String> shareStatus) {
+        public Builder shareStatus(@Nullable Output<String> shareStatus) {
             this.shareStatus = shareStatus;
             return this;
         }
 
         public Builder shareStatus(@Nullable String shareStatus) {
-            this.shareStatus = Input.ofNullable(shareStatus);
+            this.shareStatus = Output.ofNullable(shareStatus);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Input.ofNullable(tagsAll);
+            this.tagsAll = Output.ofNullable(tagsAll);
             return this;
         }
         public ResolverQueryLogConfigState build() {

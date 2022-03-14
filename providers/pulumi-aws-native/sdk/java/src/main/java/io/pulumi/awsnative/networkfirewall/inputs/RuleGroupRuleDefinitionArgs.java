@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.networkfirewall.inputs;
 
 import io.pulumi.awsnative.networkfirewall.inputs.RuleGroupMatchAttributesArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -16,29 +16,29 @@ public final class RuleGroupRuleDefinitionArgs extends io.pulumi.resources.Resou
     public static final RuleGroupRuleDefinitionArgs Empty = new RuleGroupRuleDefinitionArgs();
 
     @InputImport(name="actions", required=true)
-      private final Input<List<String>> actions;
+      private final Output<List<String>> actions;
 
-    public Input<List<String>> getActions() {
+    public Output<List<String>> getActions() {
         return this.actions;
     }
 
     @InputImport(name="matchAttributes", required=true)
-      private final Input<RuleGroupMatchAttributesArgs> matchAttributes;
+      private final Output<RuleGroupMatchAttributesArgs> matchAttributes;
 
-    public Input<RuleGroupMatchAttributesArgs> getMatchAttributes() {
+    public Output<RuleGroupMatchAttributesArgs> getMatchAttributes() {
         return this.matchAttributes;
     }
 
     public RuleGroupRuleDefinitionArgs(
-        Input<List<String>> actions,
-        Input<RuleGroupMatchAttributesArgs> matchAttributes) {
+        Output<List<String>> actions,
+        Output<RuleGroupMatchAttributesArgs> matchAttributes) {
         this.actions = Objects.requireNonNull(actions, "expected parameter 'actions' to be non-null");
         this.matchAttributes = Objects.requireNonNull(matchAttributes, "expected parameter 'matchAttributes' to be non-null");
     }
 
     private RuleGroupRuleDefinitionArgs() {
-        this.actions = Input.empty();
-        this.matchAttributes = Input.empty();
+        this.actions = Output.empty();
+        this.matchAttributes = Output.empty();
     }
 
     public static Builder builder() {
@@ -50,8 +50,8 @@ public final class RuleGroupRuleDefinitionArgs extends io.pulumi.resources.Resou
     }
 
     public static final class Builder {
-        private Input<List<String>> actions;
-        private Input<RuleGroupMatchAttributesArgs> matchAttributes;
+        private Output<List<String>> actions;
+        private Output<RuleGroupMatchAttributesArgs> matchAttributes;
 
         public Builder() {
     	      // Empty
@@ -63,23 +63,23 @@ public final class RuleGroupRuleDefinitionArgs extends io.pulumi.resources.Resou
     	      this.matchAttributes = defaults.matchAttributes;
         }
 
-        public Builder actions(Input<List<String>> actions) {
+        public Builder actions(Output<List<String>> actions) {
             this.actions = Objects.requireNonNull(actions);
             return this;
         }
 
         public Builder actions(List<String> actions) {
-            this.actions = Input.of(Objects.requireNonNull(actions));
+            this.actions = Output.of(Objects.requireNonNull(actions));
             return this;
         }
 
-        public Builder matchAttributes(Input<RuleGroupMatchAttributesArgs> matchAttributes) {
+        public Builder matchAttributes(Output<RuleGroupMatchAttributesArgs> matchAttributes) {
             this.matchAttributes = Objects.requireNonNull(matchAttributes);
             return this;
         }
 
         public Builder matchAttributes(RuleGroupMatchAttributesArgs matchAttributes) {
-            this.matchAttributes = Input.of(Objects.requireNonNull(matchAttributes));
+            this.matchAttributes = Output.of(Objects.requireNonNull(matchAttributes));
             return this;
         }
         public RuleGroupRuleDefinitionArgs build() {

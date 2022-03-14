@@ -4,7 +4,7 @@
 package io.pulumi.aws.s3.inputs;
 
 import io.pulumi.aws.s3.inputs.BucketServerSideEncryptionConfigurationRuleGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 
@@ -18,18 +18,18 @@ public final class BucketServerSideEncryptionConfigurationGetArgs extends io.pul
      * 
      */
     @InputImport(name="rule", required=true)
-      private final Input<BucketServerSideEncryptionConfigurationRuleGetArgs> rule;
+      private final Output<BucketServerSideEncryptionConfigurationRuleGetArgs> rule;
 
-    public Input<BucketServerSideEncryptionConfigurationRuleGetArgs> getRule() {
+    public Output<BucketServerSideEncryptionConfigurationRuleGetArgs> getRule() {
         return this.rule;
     }
 
-    public BucketServerSideEncryptionConfigurationGetArgs(Input<BucketServerSideEncryptionConfigurationRuleGetArgs> rule) {
+    public BucketServerSideEncryptionConfigurationGetArgs(Output<BucketServerSideEncryptionConfigurationRuleGetArgs> rule) {
         this.rule = Objects.requireNonNull(rule, "expected parameter 'rule' to be non-null");
     }
 
     private BucketServerSideEncryptionConfigurationGetArgs() {
-        this.rule = Input.empty();
+        this.rule = Output.empty();
     }
 
     public static Builder builder() {
@@ -41,7 +41,7 @@ public final class BucketServerSideEncryptionConfigurationGetArgs extends io.pul
     }
 
     public static final class Builder {
-        private Input<BucketServerSideEncryptionConfigurationRuleGetArgs> rule;
+        private Output<BucketServerSideEncryptionConfigurationRuleGetArgs> rule;
 
         public Builder() {
     	      // Empty
@@ -52,13 +52,13 @@ public final class BucketServerSideEncryptionConfigurationGetArgs extends io.pul
     	      this.rule = defaults.rule;
         }
 
-        public Builder rule(Input<BucketServerSideEncryptionConfigurationRuleGetArgs> rule) {
+        public Builder rule(Output<BucketServerSideEncryptionConfigurationRuleGetArgs> rule) {
             this.rule = Objects.requireNonNull(rule);
             return this;
         }
 
         public Builder rule(BucketServerSideEncryptionConfigurationRuleGetArgs rule) {
-            this.rule = Input.of(Objects.requireNonNull(rule));
+            this.rule = Output.of(Objects.requireNonNull(rule));
             return this;
         }
         public BucketServerSideEncryptionConfigurationGetArgs build() {

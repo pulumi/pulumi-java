@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.notebooks.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class EnvironmentVmImageArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="imageFamily")
-      private final @Nullable Input<String> imageFamily;
+      private final @Nullable Output<String> imageFamily;
 
-    public Input<String> getImageFamily() {
-        return this.imageFamily == null ? Input.empty() : this.imageFamily;
+    public Output<String> getImageFamily() {
+        return this.imageFamily == null ? Output.empty() : this.imageFamily;
     }
 
     /**
@@ -30,10 +30,10 @@ public final class EnvironmentVmImageArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="imageName")
-      private final @Nullable Input<String> imageName;
+      private final @Nullable Output<String> imageName;
 
-    public Input<String> getImageName() {
-        return this.imageName == null ? Input.empty() : this.imageName;
+    public Output<String> getImageName() {
+        return this.imageName == null ? Output.empty() : this.imageName;
     }
 
     /**
@@ -42,25 +42,25 @@ public final class EnvironmentVmImageArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="project", required=true)
-      private final Input<String> project;
+      private final Output<String> project;
 
-    public Input<String> getProject() {
+    public Output<String> getProject() {
         return this.project;
     }
 
     public EnvironmentVmImageArgs(
-        @Nullable Input<String> imageFamily,
-        @Nullable Input<String> imageName,
-        Input<String> project) {
+        @Nullable Output<String> imageFamily,
+        @Nullable Output<String> imageName,
+        Output<String> project) {
         this.imageFamily = imageFamily;
         this.imageName = imageName;
         this.project = Objects.requireNonNull(project, "expected parameter 'project' to be non-null");
     }
 
     private EnvironmentVmImageArgs() {
-        this.imageFamily = Input.empty();
-        this.imageName = Input.empty();
-        this.project = Input.empty();
+        this.imageFamily = Output.empty();
+        this.imageName = Output.empty();
+        this.project = Output.empty();
     }
 
     public static Builder builder() {
@@ -72,9 +72,9 @@ public final class EnvironmentVmImageArgs extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private @Nullable Input<String> imageFamily;
-        private @Nullable Input<String> imageName;
-        private Input<String> project;
+        private @Nullable Output<String> imageFamily;
+        private @Nullable Output<String> imageName;
+        private Output<String> project;
 
         public Builder() {
     	      // Empty
@@ -87,33 +87,33 @@ public final class EnvironmentVmImageArgs extends io.pulumi.resources.ResourceAr
     	      this.project = defaults.project;
         }
 
-        public Builder imageFamily(@Nullable Input<String> imageFamily) {
+        public Builder imageFamily(@Nullable Output<String> imageFamily) {
             this.imageFamily = imageFamily;
             return this;
         }
 
         public Builder imageFamily(@Nullable String imageFamily) {
-            this.imageFamily = Input.ofNullable(imageFamily);
+            this.imageFamily = Output.ofNullable(imageFamily);
             return this;
         }
 
-        public Builder imageName(@Nullable Input<String> imageName) {
+        public Builder imageName(@Nullable Output<String> imageName) {
             this.imageName = imageName;
             return this;
         }
 
         public Builder imageName(@Nullable String imageName) {
-            this.imageName = Input.ofNullable(imageName);
+            this.imageName = Output.ofNullable(imageName);
             return this;
         }
 
-        public Builder project(Input<String> project) {
+        public Builder project(Output<String> project) {
             this.project = Objects.requireNonNull(project);
             return this;
         }
 
         public Builder project(String project) {
-            this.project = Input.of(Objects.requireNonNull(project));
+            this.project = Output.of(Objects.requireNonNull(project));
             return this;
         }
         public EnvironmentVmImageArgs build() {

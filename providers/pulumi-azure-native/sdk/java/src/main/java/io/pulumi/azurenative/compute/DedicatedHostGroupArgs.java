@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.compute;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -23,10 +23,10 @@ public final class DedicatedHostGroupArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="hostGroupName")
-      private final @Nullable Input<String> hostGroupName;
+      private final @Nullable Output<String> hostGroupName;
 
-    public Input<String> getHostGroupName() {
-        return this.hostGroupName == null ? Input.empty() : this.hostGroupName;
+    public Output<String> getHostGroupName() {
+        return this.hostGroupName == null ? Output.empty() : this.hostGroupName;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class DedicatedHostGroupArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -45,9 +45,9 @@ public final class DedicatedHostGroupArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="platformFaultDomainCount", required=true)
-      private final Input<Integer> platformFaultDomainCount;
+      private final Output<Integer> platformFaultDomainCount;
 
-    public Input<Integer> getPlatformFaultDomainCount() {
+    public Output<Integer> getPlatformFaultDomainCount() {
         return this.platformFaultDomainCount;
     }
 
@@ -56,9 +56,9 @@ public final class DedicatedHostGroupArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -67,10 +67,10 @@ public final class DedicatedHostGroupArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="supportAutomaticPlacement")
-      private final @Nullable Input<Boolean> supportAutomaticPlacement;
+      private final @Nullable Output<Boolean> supportAutomaticPlacement;
 
-    public Input<Boolean> getSupportAutomaticPlacement() {
-        return this.supportAutomaticPlacement == null ? Input.empty() : this.supportAutomaticPlacement;
+    public Output<Boolean> getSupportAutomaticPlacement() {
+        return this.supportAutomaticPlacement == null ? Output.empty() : this.supportAutomaticPlacement;
     }
 
     /**
@@ -78,10 +78,10 @@ public final class DedicatedHostGroupArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -89,20 +89,20 @@ public final class DedicatedHostGroupArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="zones")
-      private final @Nullable Input<List<String>> zones;
+      private final @Nullable Output<List<String>> zones;
 
-    public Input<List<String>> getZones() {
-        return this.zones == null ? Input.empty() : this.zones;
+    public Output<List<String>> getZones() {
+        return this.zones == null ? Output.empty() : this.zones;
     }
 
     public DedicatedHostGroupArgs(
-        @Nullable Input<String> hostGroupName,
-        @Nullable Input<String> location,
-        Input<Integer> platformFaultDomainCount,
-        Input<String> resourceGroupName,
-        @Nullable Input<Boolean> supportAutomaticPlacement,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<List<String>> zones) {
+        @Nullable Output<String> hostGroupName,
+        @Nullable Output<String> location,
+        Output<Integer> platformFaultDomainCount,
+        Output<String> resourceGroupName,
+        @Nullable Output<Boolean> supportAutomaticPlacement,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<List<String>> zones) {
         this.hostGroupName = hostGroupName;
         this.location = location;
         this.platformFaultDomainCount = Objects.requireNonNull(platformFaultDomainCount, "expected parameter 'platformFaultDomainCount' to be non-null");
@@ -113,13 +113,13 @@ public final class DedicatedHostGroupArgs extends io.pulumi.resources.ResourceAr
     }
 
     private DedicatedHostGroupArgs() {
-        this.hostGroupName = Input.empty();
-        this.location = Input.empty();
-        this.platformFaultDomainCount = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.supportAutomaticPlacement = Input.empty();
-        this.tags = Input.empty();
-        this.zones = Input.empty();
+        this.hostGroupName = Output.empty();
+        this.location = Output.empty();
+        this.platformFaultDomainCount = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.supportAutomaticPlacement = Output.empty();
+        this.tags = Output.empty();
+        this.zones = Output.empty();
     }
 
     public static Builder builder() {
@@ -131,13 +131,13 @@ public final class DedicatedHostGroupArgs extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private @Nullable Input<String> hostGroupName;
-        private @Nullable Input<String> location;
-        private Input<Integer> platformFaultDomainCount;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<Boolean> supportAutomaticPlacement;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<List<String>> zones;
+        private @Nullable Output<String> hostGroupName;
+        private @Nullable Output<String> location;
+        private Output<Integer> platformFaultDomainCount;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<Boolean> supportAutomaticPlacement;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<List<String>> zones;
 
         public Builder() {
     	      // Empty
@@ -154,73 +154,73 @@ public final class DedicatedHostGroupArgs extends io.pulumi.resources.ResourceAr
     	      this.zones = defaults.zones;
         }
 
-        public Builder hostGroupName(@Nullable Input<String> hostGroupName) {
+        public Builder hostGroupName(@Nullable Output<String> hostGroupName) {
             this.hostGroupName = hostGroupName;
             return this;
         }
 
         public Builder hostGroupName(@Nullable String hostGroupName) {
-            this.hostGroupName = Input.ofNullable(hostGroupName);
+            this.hostGroupName = Output.ofNullable(hostGroupName);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder platformFaultDomainCount(Input<Integer> platformFaultDomainCount) {
+        public Builder platformFaultDomainCount(Output<Integer> platformFaultDomainCount) {
             this.platformFaultDomainCount = Objects.requireNonNull(platformFaultDomainCount);
             return this;
         }
 
         public Builder platformFaultDomainCount(Integer platformFaultDomainCount) {
-            this.platformFaultDomainCount = Input.of(Objects.requireNonNull(platformFaultDomainCount));
+            this.platformFaultDomainCount = Output.of(Objects.requireNonNull(platformFaultDomainCount));
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder supportAutomaticPlacement(@Nullable Input<Boolean> supportAutomaticPlacement) {
+        public Builder supportAutomaticPlacement(@Nullable Output<Boolean> supportAutomaticPlacement) {
             this.supportAutomaticPlacement = supportAutomaticPlacement;
             return this;
         }
 
         public Builder supportAutomaticPlacement(@Nullable Boolean supportAutomaticPlacement) {
-            this.supportAutomaticPlacement = Input.ofNullable(supportAutomaticPlacement);
+            this.supportAutomaticPlacement = Output.ofNullable(supportAutomaticPlacement);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder zones(@Nullable Input<List<String>> zones) {
+        public Builder zones(@Nullable Output<List<String>> zones) {
             this.zones = zones;
             return this;
         }
 
         public Builder zones(@Nullable List<String> zones) {
-            this.zones = Input.ofNullable(zones);
+            this.zones = Output.ofNullable(zones);
             return this;
         }
         public DedicatedHostGroupArgs build() {

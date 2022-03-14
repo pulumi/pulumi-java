@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.apigee_v1;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.apigee_v1.enums.RatePlanBillingPeriod;
 import io.pulumi.googlenative.apigee_v1.enums.RatePlanConsumptionPricingType;
@@ -28,16 +28,16 @@ public final class RatePlanArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="apiproduct")
-      private final @Nullable Input<String> apiproduct;
+      private final @Nullable Output<String> apiproduct;
 
-    public Input<String> getApiproduct() {
-        return this.apiproduct == null ? Input.empty() : this.apiproduct;
+    public Output<String> getApiproduct() {
+        return this.apiproduct == null ? Output.empty() : this.apiproduct;
     }
 
     @InputImport(name="apiproductId", required=true)
-      private final Input<String> apiproductId;
+      private final Output<String> apiproductId;
 
-    public Input<String> getApiproductId() {
+    public Output<String> getApiproductId() {
         return this.apiproductId;
     }
 
@@ -46,10 +46,10 @@ public final class RatePlanArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="billingPeriod")
-      private final @Nullable Input<RatePlanBillingPeriod> billingPeriod;
+      private final @Nullable Output<RatePlanBillingPeriod> billingPeriod;
 
-    public Input<RatePlanBillingPeriod> getBillingPeriod() {
-        return this.billingPeriod == null ? Input.empty() : this.billingPeriod;
+    public Output<RatePlanBillingPeriod> getBillingPeriod() {
+        return this.billingPeriod == null ? Output.empty() : this.billingPeriod;
     }
 
     /**
@@ -57,10 +57,10 @@ public final class RatePlanArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="consumptionPricingRates")
-      private final @Nullable Input<List<GoogleCloudApigeeV1RateRangeArgs>> consumptionPricingRates;
+      private final @Nullable Output<List<GoogleCloudApigeeV1RateRangeArgs>> consumptionPricingRates;
 
-    public Input<List<GoogleCloudApigeeV1RateRangeArgs>> getConsumptionPricingRates() {
-        return this.consumptionPricingRates == null ? Input.empty() : this.consumptionPricingRates;
+    public Output<List<GoogleCloudApigeeV1RateRangeArgs>> getConsumptionPricingRates() {
+        return this.consumptionPricingRates == null ? Output.empty() : this.consumptionPricingRates;
     }
 
     /**
@@ -68,10 +68,10 @@ public final class RatePlanArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="consumptionPricingType")
-      private final @Nullable Input<RatePlanConsumptionPricingType> consumptionPricingType;
+      private final @Nullable Output<RatePlanConsumptionPricingType> consumptionPricingType;
 
-    public Input<RatePlanConsumptionPricingType> getConsumptionPricingType() {
-        return this.consumptionPricingType == null ? Input.empty() : this.consumptionPricingType;
+    public Output<RatePlanConsumptionPricingType> getConsumptionPricingType() {
+        return this.consumptionPricingType == null ? Output.empty() : this.consumptionPricingType;
     }
 
     /**
@@ -79,10 +79,10 @@ public final class RatePlanArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="currencyCode")
-      private final @Nullable Input<String> currencyCode;
+      private final @Nullable Output<String> currencyCode;
 
-    public Input<String> getCurrencyCode() {
-        return this.currencyCode == null ? Input.empty() : this.currencyCode;
+    public Output<String> getCurrencyCode() {
+        return this.currencyCode == null ? Output.empty() : this.currencyCode;
     }
 
     /**
@@ -90,10 +90,10 @@ public final class RatePlanArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -101,10 +101,10 @@ public final class RatePlanArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName")
-      private final @Nullable Input<String> displayName;
+      private final @Nullable Output<String> displayName;
 
-    public Input<String> getDisplayName() {
-        return this.displayName == null ? Input.empty() : this.displayName;
+    public Output<String> getDisplayName() {
+        return this.displayName == null ? Output.empty() : this.displayName;
     }
 
     /**
@@ -112,10 +112,10 @@ public final class RatePlanArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="endTime")
-      private final @Nullable Input<String> endTime;
+      private final @Nullable Output<String> endTime;
 
-    public Input<String> getEndTime() {
-        return this.endTime == null ? Input.empty() : this.endTime;
+    public Output<String> getEndTime() {
+        return this.endTime == null ? Output.empty() : this.endTime;
     }
 
     /**
@@ -123,10 +123,10 @@ public final class RatePlanArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="fixedFeeFrequency")
-      private final @Nullable Input<Integer> fixedFeeFrequency;
+      private final @Nullable Output<Integer> fixedFeeFrequency;
 
-    public Input<Integer> getFixedFeeFrequency() {
-        return this.fixedFeeFrequency == null ? Input.empty() : this.fixedFeeFrequency;
+    public Output<Integer> getFixedFeeFrequency() {
+        return this.fixedFeeFrequency == null ? Output.empty() : this.fixedFeeFrequency;
     }
 
     /**
@@ -134,16 +134,16 @@ public final class RatePlanArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="fixedRecurringFee")
-      private final @Nullable Input<GoogleTypeMoneyArgs> fixedRecurringFee;
+      private final @Nullable Output<GoogleTypeMoneyArgs> fixedRecurringFee;
 
-    public Input<GoogleTypeMoneyArgs> getFixedRecurringFee() {
-        return this.fixedRecurringFee == null ? Input.empty() : this.fixedRecurringFee;
+    public Output<GoogleTypeMoneyArgs> getFixedRecurringFee() {
+        return this.fixedRecurringFee == null ? Output.empty() : this.fixedRecurringFee;
     }
 
     @InputImport(name="organizationId", required=true)
-      private final Input<String> organizationId;
+      private final Output<String> organizationId;
 
-    public Input<String> getOrganizationId() {
+    public Output<String> getOrganizationId() {
         return this.organizationId;
     }
 
@@ -152,10 +152,10 @@ public final class RatePlanArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="revenueShareRates")
-      private final @Nullable Input<List<GoogleCloudApigeeV1RevenueShareRangeArgs>> revenueShareRates;
+      private final @Nullable Output<List<GoogleCloudApigeeV1RevenueShareRangeArgs>> revenueShareRates;
 
-    public Input<List<GoogleCloudApigeeV1RevenueShareRangeArgs>> getRevenueShareRates() {
-        return this.revenueShareRates == null ? Input.empty() : this.revenueShareRates;
+    public Output<List<GoogleCloudApigeeV1RevenueShareRangeArgs>> getRevenueShareRates() {
+        return this.revenueShareRates == null ? Output.empty() : this.revenueShareRates;
     }
 
     /**
@@ -163,10 +163,10 @@ public final class RatePlanArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="revenueShareType")
-      private final @Nullable Input<RatePlanRevenueShareType> revenueShareType;
+      private final @Nullable Output<RatePlanRevenueShareType> revenueShareType;
 
-    public Input<RatePlanRevenueShareType> getRevenueShareType() {
-        return this.revenueShareType == null ? Input.empty() : this.revenueShareType;
+    public Output<RatePlanRevenueShareType> getRevenueShareType() {
+        return this.revenueShareType == null ? Output.empty() : this.revenueShareType;
     }
 
     /**
@@ -174,10 +174,10 @@ public final class RatePlanArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="setupFee")
-      private final @Nullable Input<GoogleTypeMoneyArgs> setupFee;
+      private final @Nullable Output<GoogleTypeMoneyArgs> setupFee;
 
-    public Input<GoogleTypeMoneyArgs> getSetupFee() {
-        return this.setupFee == null ? Input.empty() : this.setupFee;
+    public Output<GoogleTypeMoneyArgs> getSetupFee() {
+        return this.setupFee == null ? Output.empty() : this.setupFee;
     }
 
     /**
@@ -185,10 +185,10 @@ public final class RatePlanArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="startTime")
-      private final @Nullable Input<String> startTime;
+      private final @Nullable Output<String> startTime;
 
-    public Input<String> getStartTime() {
-        return this.startTime == null ? Input.empty() : this.startTime;
+    public Output<String> getStartTime() {
+        return this.startTime == null ? Output.empty() : this.startTime;
     }
 
     /**
@@ -196,30 +196,30 @@ public final class RatePlanArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="state")
-      private final @Nullable Input<RatePlanState> state;
+      private final @Nullable Output<RatePlanState> state;
 
-    public Input<RatePlanState> getState() {
-        return this.state == null ? Input.empty() : this.state;
+    public Output<RatePlanState> getState() {
+        return this.state == null ? Output.empty() : this.state;
     }
 
     public RatePlanArgs(
-        @Nullable Input<String> apiproduct,
-        Input<String> apiproductId,
-        @Nullable Input<RatePlanBillingPeriod> billingPeriod,
-        @Nullable Input<List<GoogleCloudApigeeV1RateRangeArgs>> consumptionPricingRates,
-        @Nullable Input<RatePlanConsumptionPricingType> consumptionPricingType,
-        @Nullable Input<String> currencyCode,
-        @Nullable Input<String> description,
-        @Nullable Input<String> displayName,
-        @Nullable Input<String> endTime,
-        @Nullable Input<Integer> fixedFeeFrequency,
-        @Nullable Input<GoogleTypeMoneyArgs> fixedRecurringFee,
-        Input<String> organizationId,
-        @Nullable Input<List<GoogleCloudApigeeV1RevenueShareRangeArgs>> revenueShareRates,
-        @Nullable Input<RatePlanRevenueShareType> revenueShareType,
-        @Nullable Input<GoogleTypeMoneyArgs> setupFee,
-        @Nullable Input<String> startTime,
-        @Nullable Input<RatePlanState> state) {
+        @Nullable Output<String> apiproduct,
+        Output<String> apiproductId,
+        @Nullable Output<RatePlanBillingPeriod> billingPeriod,
+        @Nullable Output<List<GoogleCloudApigeeV1RateRangeArgs>> consumptionPricingRates,
+        @Nullable Output<RatePlanConsumptionPricingType> consumptionPricingType,
+        @Nullable Output<String> currencyCode,
+        @Nullable Output<String> description,
+        @Nullable Output<String> displayName,
+        @Nullable Output<String> endTime,
+        @Nullable Output<Integer> fixedFeeFrequency,
+        @Nullable Output<GoogleTypeMoneyArgs> fixedRecurringFee,
+        Output<String> organizationId,
+        @Nullable Output<List<GoogleCloudApigeeV1RevenueShareRangeArgs>> revenueShareRates,
+        @Nullable Output<RatePlanRevenueShareType> revenueShareType,
+        @Nullable Output<GoogleTypeMoneyArgs> setupFee,
+        @Nullable Output<String> startTime,
+        @Nullable Output<RatePlanState> state) {
         this.apiproduct = apiproduct;
         this.apiproductId = Objects.requireNonNull(apiproductId, "expected parameter 'apiproductId' to be non-null");
         this.billingPeriod = billingPeriod;
@@ -240,23 +240,23 @@ public final class RatePlanArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private RatePlanArgs() {
-        this.apiproduct = Input.empty();
-        this.apiproductId = Input.empty();
-        this.billingPeriod = Input.empty();
-        this.consumptionPricingRates = Input.empty();
-        this.consumptionPricingType = Input.empty();
-        this.currencyCode = Input.empty();
-        this.description = Input.empty();
-        this.displayName = Input.empty();
-        this.endTime = Input.empty();
-        this.fixedFeeFrequency = Input.empty();
-        this.fixedRecurringFee = Input.empty();
-        this.organizationId = Input.empty();
-        this.revenueShareRates = Input.empty();
-        this.revenueShareType = Input.empty();
-        this.setupFee = Input.empty();
-        this.startTime = Input.empty();
-        this.state = Input.empty();
+        this.apiproduct = Output.empty();
+        this.apiproductId = Output.empty();
+        this.billingPeriod = Output.empty();
+        this.consumptionPricingRates = Output.empty();
+        this.consumptionPricingType = Output.empty();
+        this.currencyCode = Output.empty();
+        this.description = Output.empty();
+        this.displayName = Output.empty();
+        this.endTime = Output.empty();
+        this.fixedFeeFrequency = Output.empty();
+        this.fixedRecurringFee = Output.empty();
+        this.organizationId = Output.empty();
+        this.revenueShareRates = Output.empty();
+        this.revenueShareType = Output.empty();
+        this.setupFee = Output.empty();
+        this.startTime = Output.empty();
+        this.state = Output.empty();
     }
 
     public static Builder builder() {
@@ -268,23 +268,23 @@ public final class RatePlanArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> apiproduct;
-        private Input<String> apiproductId;
-        private @Nullable Input<RatePlanBillingPeriod> billingPeriod;
-        private @Nullable Input<List<GoogleCloudApigeeV1RateRangeArgs>> consumptionPricingRates;
-        private @Nullable Input<RatePlanConsumptionPricingType> consumptionPricingType;
-        private @Nullable Input<String> currencyCode;
-        private @Nullable Input<String> description;
-        private @Nullable Input<String> displayName;
-        private @Nullable Input<String> endTime;
-        private @Nullable Input<Integer> fixedFeeFrequency;
-        private @Nullable Input<GoogleTypeMoneyArgs> fixedRecurringFee;
-        private Input<String> organizationId;
-        private @Nullable Input<List<GoogleCloudApigeeV1RevenueShareRangeArgs>> revenueShareRates;
-        private @Nullable Input<RatePlanRevenueShareType> revenueShareType;
-        private @Nullable Input<GoogleTypeMoneyArgs> setupFee;
-        private @Nullable Input<String> startTime;
-        private @Nullable Input<RatePlanState> state;
+        private @Nullable Output<String> apiproduct;
+        private Output<String> apiproductId;
+        private @Nullable Output<RatePlanBillingPeriod> billingPeriod;
+        private @Nullable Output<List<GoogleCloudApigeeV1RateRangeArgs>> consumptionPricingRates;
+        private @Nullable Output<RatePlanConsumptionPricingType> consumptionPricingType;
+        private @Nullable Output<String> currencyCode;
+        private @Nullable Output<String> description;
+        private @Nullable Output<String> displayName;
+        private @Nullable Output<String> endTime;
+        private @Nullable Output<Integer> fixedFeeFrequency;
+        private @Nullable Output<GoogleTypeMoneyArgs> fixedRecurringFee;
+        private Output<String> organizationId;
+        private @Nullable Output<List<GoogleCloudApigeeV1RevenueShareRangeArgs>> revenueShareRates;
+        private @Nullable Output<RatePlanRevenueShareType> revenueShareType;
+        private @Nullable Output<GoogleTypeMoneyArgs> setupFee;
+        private @Nullable Output<String> startTime;
+        private @Nullable Output<RatePlanState> state;
 
         public Builder() {
     	      // Empty
@@ -311,173 +311,173 @@ public final class RatePlanArgs extends io.pulumi.resources.ResourceArgs {
     	      this.state = defaults.state;
         }
 
-        public Builder apiproduct(@Nullable Input<String> apiproduct) {
+        public Builder apiproduct(@Nullable Output<String> apiproduct) {
             this.apiproduct = apiproduct;
             return this;
         }
 
         public Builder apiproduct(@Nullable String apiproduct) {
-            this.apiproduct = Input.ofNullable(apiproduct);
+            this.apiproduct = Output.ofNullable(apiproduct);
             return this;
         }
 
-        public Builder apiproductId(Input<String> apiproductId) {
+        public Builder apiproductId(Output<String> apiproductId) {
             this.apiproductId = Objects.requireNonNull(apiproductId);
             return this;
         }
 
         public Builder apiproductId(String apiproductId) {
-            this.apiproductId = Input.of(Objects.requireNonNull(apiproductId));
+            this.apiproductId = Output.of(Objects.requireNonNull(apiproductId));
             return this;
         }
 
-        public Builder billingPeriod(@Nullable Input<RatePlanBillingPeriod> billingPeriod) {
+        public Builder billingPeriod(@Nullable Output<RatePlanBillingPeriod> billingPeriod) {
             this.billingPeriod = billingPeriod;
             return this;
         }
 
         public Builder billingPeriod(@Nullable RatePlanBillingPeriod billingPeriod) {
-            this.billingPeriod = Input.ofNullable(billingPeriod);
+            this.billingPeriod = Output.ofNullable(billingPeriod);
             return this;
         }
 
-        public Builder consumptionPricingRates(@Nullable Input<List<GoogleCloudApigeeV1RateRangeArgs>> consumptionPricingRates) {
+        public Builder consumptionPricingRates(@Nullable Output<List<GoogleCloudApigeeV1RateRangeArgs>> consumptionPricingRates) {
             this.consumptionPricingRates = consumptionPricingRates;
             return this;
         }
 
         public Builder consumptionPricingRates(@Nullable List<GoogleCloudApigeeV1RateRangeArgs> consumptionPricingRates) {
-            this.consumptionPricingRates = Input.ofNullable(consumptionPricingRates);
+            this.consumptionPricingRates = Output.ofNullable(consumptionPricingRates);
             return this;
         }
 
-        public Builder consumptionPricingType(@Nullable Input<RatePlanConsumptionPricingType> consumptionPricingType) {
+        public Builder consumptionPricingType(@Nullable Output<RatePlanConsumptionPricingType> consumptionPricingType) {
             this.consumptionPricingType = consumptionPricingType;
             return this;
         }
 
         public Builder consumptionPricingType(@Nullable RatePlanConsumptionPricingType consumptionPricingType) {
-            this.consumptionPricingType = Input.ofNullable(consumptionPricingType);
+            this.consumptionPricingType = Output.ofNullable(consumptionPricingType);
             return this;
         }
 
-        public Builder currencyCode(@Nullable Input<String> currencyCode) {
+        public Builder currencyCode(@Nullable Output<String> currencyCode) {
             this.currencyCode = currencyCode;
             return this;
         }
 
         public Builder currencyCode(@Nullable String currencyCode) {
-            this.currencyCode = Input.ofNullable(currencyCode);
+            this.currencyCode = Output.ofNullable(currencyCode);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder displayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Input.ofNullable(displayName);
+            this.displayName = Output.ofNullable(displayName);
             return this;
         }
 
-        public Builder endTime(@Nullable Input<String> endTime) {
+        public Builder endTime(@Nullable Output<String> endTime) {
             this.endTime = endTime;
             return this;
         }
 
         public Builder endTime(@Nullable String endTime) {
-            this.endTime = Input.ofNullable(endTime);
+            this.endTime = Output.ofNullable(endTime);
             return this;
         }
 
-        public Builder fixedFeeFrequency(@Nullable Input<Integer> fixedFeeFrequency) {
+        public Builder fixedFeeFrequency(@Nullable Output<Integer> fixedFeeFrequency) {
             this.fixedFeeFrequency = fixedFeeFrequency;
             return this;
         }
 
         public Builder fixedFeeFrequency(@Nullable Integer fixedFeeFrequency) {
-            this.fixedFeeFrequency = Input.ofNullable(fixedFeeFrequency);
+            this.fixedFeeFrequency = Output.ofNullable(fixedFeeFrequency);
             return this;
         }
 
-        public Builder fixedRecurringFee(@Nullable Input<GoogleTypeMoneyArgs> fixedRecurringFee) {
+        public Builder fixedRecurringFee(@Nullable Output<GoogleTypeMoneyArgs> fixedRecurringFee) {
             this.fixedRecurringFee = fixedRecurringFee;
             return this;
         }
 
         public Builder fixedRecurringFee(@Nullable GoogleTypeMoneyArgs fixedRecurringFee) {
-            this.fixedRecurringFee = Input.ofNullable(fixedRecurringFee);
+            this.fixedRecurringFee = Output.ofNullable(fixedRecurringFee);
             return this;
         }
 
-        public Builder organizationId(Input<String> organizationId) {
+        public Builder organizationId(Output<String> organizationId) {
             this.organizationId = Objects.requireNonNull(organizationId);
             return this;
         }
 
         public Builder organizationId(String organizationId) {
-            this.organizationId = Input.of(Objects.requireNonNull(organizationId));
+            this.organizationId = Output.of(Objects.requireNonNull(organizationId));
             return this;
         }
 
-        public Builder revenueShareRates(@Nullable Input<List<GoogleCloudApigeeV1RevenueShareRangeArgs>> revenueShareRates) {
+        public Builder revenueShareRates(@Nullable Output<List<GoogleCloudApigeeV1RevenueShareRangeArgs>> revenueShareRates) {
             this.revenueShareRates = revenueShareRates;
             return this;
         }
 
         public Builder revenueShareRates(@Nullable List<GoogleCloudApigeeV1RevenueShareRangeArgs> revenueShareRates) {
-            this.revenueShareRates = Input.ofNullable(revenueShareRates);
+            this.revenueShareRates = Output.ofNullable(revenueShareRates);
             return this;
         }
 
-        public Builder revenueShareType(@Nullable Input<RatePlanRevenueShareType> revenueShareType) {
+        public Builder revenueShareType(@Nullable Output<RatePlanRevenueShareType> revenueShareType) {
             this.revenueShareType = revenueShareType;
             return this;
         }
 
         public Builder revenueShareType(@Nullable RatePlanRevenueShareType revenueShareType) {
-            this.revenueShareType = Input.ofNullable(revenueShareType);
+            this.revenueShareType = Output.ofNullable(revenueShareType);
             return this;
         }
 
-        public Builder setupFee(@Nullable Input<GoogleTypeMoneyArgs> setupFee) {
+        public Builder setupFee(@Nullable Output<GoogleTypeMoneyArgs> setupFee) {
             this.setupFee = setupFee;
             return this;
         }
 
         public Builder setupFee(@Nullable GoogleTypeMoneyArgs setupFee) {
-            this.setupFee = Input.ofNullable(setupFee);
+            this.setupFee = Output.ofNullable(setupFee);
             return this;
         }
 
-        public Builder startTime(@Nullable Input<String> startTime) {
+        public Builder startTime(@Nullable Output<String> startTime) {
             this.startTime = startTime;
             return this;
         }
 
         public Builder startTime(@Nullable String startTime) {
-            this.startTime = Input.ofNullable(startTime);
+            this.startTime = Output.ofNullable(startTime);
             return this;
         }
 
-        public Builder state(@Nullable Input<RatePlanState> state) {
+        public Builder state(@Nullable Output<RatePlanState> state) {
             this.state = state;
             return this;
         }
 
         public Builder state(@Nullable RatePlanState state) {
-            this.state = Input.ofNullable(state);
+            this.state = Output.ofNullable(state);
             return this;
         }
         public RatePlanArgs build() {

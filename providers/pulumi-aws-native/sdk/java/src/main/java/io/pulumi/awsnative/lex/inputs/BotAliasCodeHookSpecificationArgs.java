@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.lex.inputs;
 
 import io.pulumi.awsnative.lex.inputs.BotAliasLambdaCodeHookArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 
@@ -18,18 +18,18 @@ public final class BotAliasCodeHookSpecificationArgs extends io.pulumi.resources
     public static final BotAliasCodeHookSpecificationArgs Empty = new BotAliasCodeHookSpecificationArgs();
 
     @InputImport(name="lambdaCodeHook", required=true)
-      private final Input<BotAliasLambdaCodeHookArgs> lambdaCodeHook;
+      private final Output<BotAliasLambdaCodeHookArgs> lambdaCodeHook;
 
-    public Input<BotAliasLambdaCodeHookArgs> getLambdaCodeHook() {
+    public Output<BotAliasLambdaCodeHookArgs> getLambdaCodeHook() {
         return this.lambdaCodeHook;
     }
 
-    public BotAliasCodeHookSpecificationArgs(Input<BotAliasLambdaCodeHookArgs> lambdaCodeHook) {
+    public BotAliasCodeHookSpecificationArgs(Output<BotAliasLambdaCodeHookArgs> lambdaCodeHook) {
         this.lambdaCodeHook = Objects.requireNonNull(lambdaCodeHook, "expected parameter 'lambdaCodeHook' to be non-null");
     }
 
     private BotAliasCodeHookSpecificationArgs() {
-        this.lambdaCodeHook = Input.empty();
+        this.lambdaCodeHook = Output.empty();
     }
 
     public static Builder builder() {
@@ -41,7 +41,7 @@ public final class BotAliasCodeHookSpecificationArgs extends io.pulumi.resources
     }
 
     public static final class Builder {
-        private Input<BotAliasLambdaCodeHookArgs> lambdaCodeHook;
+        private Output<BotAliasLambdaCodeHookArgs> lambdaCodeHook;
 
         public Builder() {
     	      // Empty
@@ -52,13 +52,13 @@ public final class BotAliasCodeHookSpecificationArgs extends io.pulumi.resources
     	      this.lambdaCodeHook = defaults.lambdaCodeHook;
         }
 
-        public Builder lambdaCodeHook(Input<BotAliasLambdaCodeHookArgs> lambdaCodeHook) {
+        public Builder lambdaCodeHook(Output<BotAliasLambdaCodeHookArgs> lambdaCodeHook) {
             this.lambdaCodeHook = Objects.requireNonNull(lambdaCodeHook);
             return this;
         }
 
         public Builder lambdaCodeHook(BotAliasLambdaCodeHookArgs lambdaCodeHook) {
-            this.lambdaCodeHook = Input.of(Objects.requireNonNull(lambdaCodeHook));
+            this.lambdaCodeHook = Output.of(Objects.requireNonNull(lambdaCodeHook));
             return this;
         }
         public BotAliasCodeHookSpecificationArgs build() {

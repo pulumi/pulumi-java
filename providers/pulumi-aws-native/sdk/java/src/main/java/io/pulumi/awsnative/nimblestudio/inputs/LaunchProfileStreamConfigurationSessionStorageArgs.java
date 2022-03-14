@@ -5,7 +5,7 @@ package io.pulumi.awsnative.nimblestudio.inputs;
 
 import io.pulumi.awsnative.nimblestudio.enums.LaunchProfileStreamingSessionStorageMode;
 import io.pulumi.awsnative.nimblestudio.inputs.LaunchProfileStreamingSessionStorageRootArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
@@ -26,29 +26,29 @@ public final class LaunchProfileStreamConfigurationSessionStorageArgs extends io
      * 
      */
     @InputImport(name="mode")
-      private final @Nullable Input<List<LaunchProfileStreamingSessionStorageMode>> mode;
+      private final @Nullable Output<List<LaunchProfileStreamingSessionStorageMode>> mode;
 
-    public Input<List<LaunchProfileStreamingSessionStorageMode>> getMode() {
-        return this.mode == null ? Input.empty() : this.mode;
+    public Output<List<LaunchProfileStreamingSessionStorageMode>> getMode() {
+        return this.mode == null ? Output.empty() : this.mode;
     }
 
     @InputImport(name="root")
-      private final @Nullable Input<LaunchProfileStreamingSessionStorageRootArgs> root;
+      private final @Nullable Output<LaunchProfileStreamingSessionStorageRootArgs> root;
 
-    public Input<LaunchProfileStreamingSessionStorageRootArgs> getRoot() {
-        return this.root == null ? Input.empty() : this.root;
+    public Output<LaunchProfileStreamingSessionStorageRootArgs> getRoot() {
+        return this.root == null ? Output.empty() : this.root;
     }
 
     public LaunchProfileStreamConfigurationSessionStorageArgs(
-        @Nullable Input<List<LaunchProfileStreamingSessionStorageMode>> mode,
-        @Nullable Input<LaunchProfileStreamingSessionStorageRootArgs> root) {
+        @Nullable Output<List<LaunchProfileStreamingSessionStorageMode>> mode,
+        @Nullable Output<LaunchProfileStreamingSessionStorageRootArgs> root) {
         this.mode = mode;
         this.root = root;
     }
 
     private LaunchProfileStreamConfigurationSessionStorageArgs() {
-        this.mode = Input.empty();
-        this.root = Input.empty();
+        this.mode = Output.empty();
+        this.root = Output.empty();
     }
 
     public static Builder builder() {
@@ -60,8 +60,8 @@ public final class LaunchProfileStreamConfigurationSessionStorageArgs extends io
     }
 
     public static final class Builder {
-        private @Nullable Input<List<LaunchProfileStreamingSessionStorageMode>> mode;
-        private @Nullable Input<LaunchProfileStreamingSessionStorageRootArgs> root;
+        private @Nullable Output<List<LaunchProfileStreamingSessionStorageMode>> mode;
+        private @Nullable Output<LaunchProfileStreamingSessionStorageRootArgs> root;
 
         public Builder() {
     	      // Empty
@@ -73,23 +73,23 @@ public final class LaunchProfileStreamConfigurationSessionStorageArgs extends io
     	      this.root = defaults.root;
         }
 
-        public Builder mode(@Nullable Input<List<LaunchProfileStreamingSessionStorageMode>> mode) {
+        public Builder mode(@Nullable Output<List<LaunchProfileStreamingSessionStorageMode>> mode) {
             this.mode = mode;
             return this;
         }
 
         public Builder mode(@Nullable List<LaunchProfileStreamingSessionStorageMode> mode) {
-            this.mode = Input.ofNullable(mode);
+            this.mode = Output.ofNullable(mode);
             return this;
         }
 
-        public Builder root(@Nullable Input<LaunchProfileStreamingSessionStorageRootArgs> root) {
+        public Builder root(@Nullable Output<LaunchProfileStreamingSessionStorageRootArgs> root) {
             this.root = root;
             return this;
         }
 
         public Builder root(@Nullable LaunchProfileStreamingSessionStorageRootArgs root) {
-            this.root = Input.ofNullable(root);
+            this.root = Output.ofNullable(root);
             return this;
         }
         public LaunchProfileStreamConfigurationSessionStorageArgs build() {

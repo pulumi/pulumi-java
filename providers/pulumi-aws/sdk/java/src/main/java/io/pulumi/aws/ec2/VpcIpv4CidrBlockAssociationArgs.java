@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.ec2;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -20,10 +20,10 @@ public final class VpcIpv4CidrBlockAssociationArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="cidrBlock")
-      private final @Nullable Input<String> cidrBlock;
+      private final @Nullable Output<String> cidrBlock;
 
-    public Input<String> getCidrBlock() {
-        return this.cidrBlock == null ? Input.empty() : this.cidrBlock;
+    public Output<String> getCidrBlock() {
+        return this.cidrBlock == null ? Output.empty() : this.cidrBlock;
     }
 
     /**
@@ -31,10 +31,10 @@ public final class VpcIpv4CidrBlockAssociationArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="ipv4IpamPoolId")
-      private final @Nullable Input<String> ipv4IpamPoolId;
+      private final @Nullable Output<String> ipv4IpamPoolId;
 
-    public Input<String> getIpv4IpamPoolId() {
-        return this.ipv4IpamPoolId == null ? Input.empty() : this.ipv4IpamPoolId;
+    public Output<String> getIpv4IpamPoolId() {
+        return this.ipv4IpamPoolId == null ? Output.empty() : this.ipv4IpamPoolId;
     }
 
     /**
@@ -42,10 +42,10 @@ public final class VpcIpv4CidrBlockAssociationArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="ipv4NetmaskLength")
-      private final @Nullable Input<Integer> ipv4NetmaskLength;
+      private final @Nullable Output<Integer> ipv4NetmaskLength;
 
-    public Input<Integer> getIpv4NetmaskLength() {
-        return this.ipv4NetmaskLength == null ? Input.empty() : this.ipv4NetmaskLength;
+    public Output<Integer> getIpv4NetmaskLength() {
+        return this.ipv4NetmaskLength == null ? Output.empty() : this.ipv4NetmaskLength;
     }
 
     /**
@@ -53,17 +53,17 @@ public final class VpcIpv4CidrBlockAssociationArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="vpcId", required=true)
-      private final Input<String> vpcId;
+      private final Output<String> vpcId;
 
-    public Input<String> getVpcId() {
+    public Output<String> getVpcId() {
         return this.vpcId;
     }
 
     public VpcIpv4CidrBlockAssociationArgs(
-        @Nullable Input<String> cidrBlock,
-        @Nullable Input<String> ipv4IpamPoolId,
-        @Nullable Input<Integer> ipv4NetmaskLength,
-        Input<String> vpcId) {
+        @Nullable Output<String> cidrBlock,
+        @Nullable Output<String> ipv4IpamPoolId,
+        @Nullable Output<Integer> ipv4NetmaskLength,
+        Output<String> vpcId) {
         this.cidrBlock = cidrBlock;
         this.ipv4IpamPoolId = ipv4IpamPoolId;
         this.ipv4NetmaskLength = ipv4NetmaskLength;
@@ -71,10 +71,10 @@ public final class VpcIpv4CidrBlockAssociationArgs extends io.pulumi.resources.R
     }
 
     private VpcIpv4CidrBlockAssociationArgs() {
-        this.cidrBlock = Input.empty();
-        this.ipv4IpamPoolId = Input.empty();
-        this.ipv4NetmaskLength = Input.empty();
-        this.vpcId = Input.empty();
+        this.cidrBlock = Output.empty();
+        this.ipv4IpamPoolId = Output.empty();
+        this.ipv4NetmaskLength = Output.empty();
+        this.vpcId = Output.empty();
     }
 
     public static Builder builder() {
@@ -86,10 +86,10 @@ public final class VpcIpv4CidrBlockAssociationArgs extends io.pulumi.resources.R
     }
 
     public static final class Builder {
-        private @Nullable Input<String> cidrBlock;
-        private @Nullable Input<String> ipv4IpamPoolId;
-        private @Nullable Input<Integer> ipv4NetmaskLength;
-        private Input<String> vpcId;
+        private @Nullable Output<String> cidrBlock;
+        private @Nullable Output<String> ipv4IpamPoolId;
+        private @Nullable Output<Integer> ipv4NetmaskLength;
+        private Output<String> vpcId;
 
         public Builder() {
     	      // Empty
@@ -103,43 +103,43 @@ public final class VpcIpv4CidrBlockAssociationArgs extends io.pulumi.resources.R
     	      this.vpcId = defaults.vpcId;
         }
 
-        public Builder cidrBlock(@Nullable Input<String> cidrBlock) {
+        public Builder cidrBlock(@Nullable Output<String> cidrBlock) {
             this.cidrBlock = cidrBlock;
             return this;
         }
 
         public Builder cidrBlock(@Nullable String cidrBlock) {
-            this.cidrBlock = Input.ofNullable(cidrBlock);
+            this.cidrBlock = Output.ofNullable(cidrBlock);
             return this;
         }
 
-        public Builder ipv4IpamPoolId(@Nullable Input<String> ipv4IpamPoolId) {
+        public Builder ipv4IpamPoolId(@Nullable Output<String> ipv4IpamPoolId) {
             this.ipv4IpamPoolId = ipv4IpamPoolId;
             return this;
         }
 
         public Builder ipv4IpamPoolId(@Nullable String ipv4IpamPoolId) {
-            this.ipv4IpamPoolId = Input.ofNullable(ipv4IpamPoolId);
+            this.ipv4IpamPoolId = Output.ofNullable(ipv4IpamPoolId);
             return this;
         }
 
-        public Builder ipv4NetmaskLength(@Nullable Input<Integer> ipv4NetmaskLength) {
+        public Builder ipv4NetmaskLength(@Nullable Output<Integer> ipv4NetmaskLength) {
             this.ipv4NetmaskLength = ipv4NetmaskLength;
             return this;
         }
 
         public Builder ipv4NetmaskLength(@Nullable Integer ipv4NetmaskLength) {
-            this.ipv4NetmaskLength = Input.ofNullable(ipv4NetmaskLength);
+            this.ipv4NetmaskLength = Output.ofNullable(ipv4NetmaskLength);
             return this;
         }
 
-        public Builder vpcId(Input<String> vpcId) {
+        public Builder vpcId(Output<String> vpcId) {
             this.vpcId = Objects.requireNonNull(vpcId);
             return this;
         }
 
         public Builder vpcId(String vpcId) {
-            this.vpcId = Input.of(Objects.requireNonNull(vpcId));
+            this.vpcId = Output.of(Objects.requireNonNull(vpcId));
             return this;
         }
         public VpcIpv4CidrBlockAssociationArgs build() {

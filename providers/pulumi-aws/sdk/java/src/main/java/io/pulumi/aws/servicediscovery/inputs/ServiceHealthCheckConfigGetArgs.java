@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.servicediscovery.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -20,10 +20,10 @@ public final class ServiceHealthCheckConfigGetArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="failureThreshold")
-      private final @Nullable Input<Integer> failureThreshold;
+      private final @Nullable Output<Integer> failureThreshold;
 
-    public Input<Integer> getFailureThreshold() {
-        return this.failureThreshold == null ? Input.empty() : this.failureThreshold;
+    public Output<Integer> getFailureThreshold() {
+        return this.failureThreshold == null ? Output.empty() : this.failureThreshold;
     }
 
     /**
@@ -31,10 +31,10 @@ public final class ServiceHealthCheckConfigGetArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="resourcePath")
-      private final @Nullable Input<String> resourcePath;
+      private final @Nullable Output<String> resourcePath;
 
-    public Input<String> getResourcePath() {
-        return this.resourcePath == null ? Input.empty() : this.resourcePath;
+    public Output<String> getResourcePath() {
+        return this.resourcePath == null ? Output.empty() : this.resourcePath;
     }
 
     /**
@@ -42,25 +42,25 @@ public final class ServiceHealthCheckConfigGetArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="type")
-      private final @Nullable Input<String> type;
+      private final @Nullable Output<String> type;
 
-    public Input<String> getType() {
-        return this.type == null ? Input.empty() : this.type;
+    public Output<String> getType() {
+        return this.type == null ? Output.empty() : this.type;
     }
 
     public ServiceHealthCheckConfigGetArgs(
-        @Nullable Input<Integer> failureThreshold,
-        @Nullable Input<String> resourcePath,
-        @Nullable Input<String> type) {
+        @Nullable Output<Integer> failureThreshold,
+        @Nullable Output<String> resourcePath,
+        @Nullable Output<String> type) {
         this.failureThreshold = failureThreshold;
         this.resourcePath = resourcePath;
         this.type = type;
     }
 
     private ServiceHealthCheckConfigGetArgs() {
-        this.failureThreshold = Input.empty();
-        this.resourcePath = Input.empty();
-        this.type = Input.empty();
+        this.failureThreshold = Output.empty();
+        this.resourcePath = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -72,9 +72,9 @@ public final class ServiceHealthCheckConfigGetArgs extends io.pulumi.resources.R
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> failureThreshold;
-        private @Nullable Input<String> resourcePath;
-        private @Nullable Input<String> type;
+        private @Nullable Output<Integer> failureThreshold;
+        private @Nullable Output<String> resourcePath;
+        private @Nullable Output<String> type;
 
         public Builder() {
     	      // Empty
@@ -87,33 +87,33 @@ public final class ServiceHealthCheckConfigGetArgs extends io.pulumi.resources.R
     	      this.type = defaults.type;
         }
 
-        public Builder failureThreshold(@Nullable Input<Integer> failureThreshold) {
+        public Builder failureThreshold(@Nullable Output<Integer> failureThreshold) {
             this.failureThreshold = failureThreshold;
             return this;
         }
 
         public Builder failureThreshold(@Nullable Integer failureThreshold) {
-            this.failureThreshold = Input.ofNullable(failureThreshold);
+            this.failureThreshold = Output.ofNullable(failureThreshold);
             return this;
         }
 
-        public Builder resourcePath(@Nullable Input<String> resourcePath) {
+        public Builder resourcePath(@Nullable Output<String> resourcePath) {
             this.resourcePath = resourcePath;
             return this;
         }
 
         public Builder resourcePath(@Nullable String resourcePath) {
-            this.resourcePath = Input.ofNullable(resourcePath);
+            this.resourcePath = Output.ofNullable(resourcePath);
             return this;
         }
 
-        public Builder type(@Nullable Input<String> type) {
+        public Builder type(@Nullable Output<String> type) {
             this.type = type;
             return this;
         }
 
         public Builder type(@Nullable String type) {
-            this.type = Input.ofNullable(type);
+            this.type = Output.ofNullable(type);
             return this;
         }
         public ServiceHealthCheckConfigGetArgs build() {

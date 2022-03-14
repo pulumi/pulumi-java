@@ -6,7 +6,7 @@ package io.pulumi.awsnative.ivs;
 import io.pulumi.awsnative.ivs.enums.ChannelLatencyMode;
 import io.pulumi.awsnative.ivs.enums.ChannelType;
 import io.pulumi.awsnative.ivs.inputs.ChannelTagArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class ChannelArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="authorized")
-      private final @Nullable Input<Boolean> authorized;
+      private final @Nullable Output<Boolean> authorized;
 
-    public Input<Boolean> getAuthorized() {
-        return this.authorized == null ? Input.empty() : this.authorized;
+    public Output<Boolean> getAuthorized() {
+        return this.authorized == null ? Output.empty() : this.authorized;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class ChannelArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="latencyMode")
-      private final @Nullable Input<ChannelLatencyMode> latencyMode;
+      private final @Nullable Output<ChannelLatencyMode> latencyMode;
 
-    public Input<ChannelLatencyMode> getLatencyMode() {
-        return this.latencyMode == null ? Input.empty() : this.latencyMode;
+    public Output<ChannelLatencyMode> getLatencyMode() {
+        return this.latencyMode == null ? Output.empty() : this.latencyMode;
     }
 
     /**
@@ -46,10 +46,10 @@ public final class ChannelArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -57,10 +57,10 @@ public final class ChannelArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="recordingConfigurationArn")
-      private final @Nullable Input<String> recordingConfigurationArn;
+      private final @Nullable Output<String> recordingConfigurationArn;
 
-    public Input<String> getRecordingConfigurationArn() {
-        return this.recordingConfigurationArn == null ? Input.empty() : this.recordingConfigurationArn;
+    public Output<String> getRecordingConfigurationArn() {
+        return this.recordingConfigurationArn == null ? Output.empty() : this.recordingConfigurationArn;
     }
 
     /**
@@ -68,10 +68,10 @@ public final class ChannelArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<List<ChannelTagArgs>> tags;
+      private final @Nullable Output<List<ChannelTagArgs>> tags;
 
-    public Input<List<ChannelTagArgs>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<List<ChannelTagArgs>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -79,19 +79,19 @@ public final class ChannelArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type")
-      private final @Nullable Input<ChannelType> type;
+      private final @Nullable Output<ChannelType> type;
 
-    public Input<ChannelType> getType() {
-        return this.type == null ? Input.empty() : this.type;
+    public Output<ChannelType> getType() {
+        return this.type == null ? Output.empty() : this.type;
     }
 
     public ChannelArgs(
-        @Nullable Input<Boolean> authorized,
-        @Nullable Input<ChannelLatencyMode> latencyMode,
-        @Nullable Input<String> name,
-        @Nullable Input<String> recordingConfigurationArn,
-        @Nullable Input<List<ChannelTagArgs>> tags,
-        @Nullable Input<ChannelType> type) {
+        @Nullable Output<Boolean> authorized,
+        @Nullable Output<ChannelLatencyMode> latencyMode,
+        @Nullable Output<String> name,
+        @Nullable Output<String> recordingConfigurationArn,
+        @Nullable Output<List<ChannelTagArgs>> tags,
+        @Nullable Output<ChannelType> type) {
         this.authorized = authorized;
         this.latencyMode = latencyMode;
         this.name = name;
@@ -101,12 +101,12 @@ public final class ChannelArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ChannelArgs() {
-        this.authorized = Input.empty();
-        this.latencyMode = Input.empty();
-        this.name = Input.empty();
-        this.recordingConfigurationArn = Input.empty();
-        this.tags = Input.empty();
-        this.type = Input.empty();
+        this.authorized = Output.empty();
+        this.latencyMode = Output.empty();
+        this.name = Output.empty();
+        this.recordingConfigurationArn = Output.empty();
+        this.tags = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -118,12 +118,12 @@ public final class ChannelArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> authorized;
-        private @Nullable Input<ChannelLatencyMode> latencyMode;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> recordingConfigurationArn;
-        private @Nullable Input<List<ChannelTagArgs>> tags;
-        private @Nullable Input<ChannelType> type;
+        private @Nullable Output<Boolean> authorized;
+        private @Nullable Output<ChannelLatencyMode> latencyMode;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> recordingConfigurationArn;
+        private @Nullable Output<List<ChannelTagArgs>> tags;
+        private @Nullable Output<ChannelType> type;
 
         public Builder() {
     	      // Empty
@@ -139,63 +139,63 @@ public final class ChannelArgs extends io.pulumi.resources.ResourceArgs {
     	      this.type = defaults.type;
         }
 
-        public Builder authorized(@Nullable Input<Boolean> authorized) {
+        public Builder authorized(@Nullable Output<Boolean> authorized) {
             this.authorized = authorized;
             return this;
         }
 
         public Builder authorized(@Nullable Boolean authorized) {
-            this.authorized = Input.ofNullable(authorized);
+            this.authorized = Output.ofNullable(authorized);
             return this;
         }
 
-        public Builder latencyMode(@Nullable Input<ChannelLatencyMode> latencyMode) {
+        public Builder latencyMode(@Nullable Output<ChannelLatencyMode> latencyMode) {
             this.latencyMode = latencyMode;
             return this;
         }
 
         public Builder latencyMode(@Nullable ChannelLatencyMode latencyMode) {
-            this.latencyMode = Input.ofNullable(latencyMode);
+            this.latencyMode = Output.ofNullable(latencyMode);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder recordingConfigurationArn(@Nullable Input<String> recordingConfigurationArn) {
+        public Builder recordingConfigurationArn(@Nullable Output<String> recordingConfigurationArn) {
             this.recordingConfigurationArn = recordingConfigurationArn;
             return this;
         }
 
         public Builder recordingConfigurationArn(@Nullable String recordingConfigurationArn) {
-            this.recordingConfigurationArn = Input.ofNullable(recordingConfigurationArn);
+            this.recordingConfigurationArn = Output.ofNullable(recordingConfigurationArn);
             return this;
         }
 
-        public Builder tags(@Nullable Input<List<ChannelTagArgs>> tags) {
+        public Builder tags(@Nullable Output<List<ChannelTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable List<ChannelTagArgs> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder type(@Nullable Input<ChannelType> type) {
+        public Builder type(@Nullable Output<ChannelType> type) {
             this.type = type;
             return this;
         }
 
         public Builder type(@Nullable ChannelType type) {
-            this.type = Input.ofNullable(type);
+            this.type = Output.ofNullable(type);
             return this;
         }
         public ChannelArgs build() {

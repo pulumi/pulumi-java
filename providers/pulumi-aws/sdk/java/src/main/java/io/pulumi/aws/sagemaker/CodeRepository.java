@@ -7,7 +7,6 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.sagemaker.CodeRepositoryArgs;
 import io.pulumi.aws.sagemaker.inputs.CodeRepositoryState;
 import io.pulumi.aws.sagemaker.outputs.CodeRepositoryGitConfig;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -140,14 +139,14 @@ public class CodeRepository extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public CodeRepository(String name, CodeRepositoryArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:sagemaker/codeRepository:CodeRepository", name, args == null ? CodeRepositoryArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws:sagemaker/codeRepository:CodeRepository", name, args == null ? CodeRepositoryArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private CodeRepository(String name, Input<String> id, @Nullable CodeRepositoryState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private CodeRepository(String name, Output<String> id, @Nullable CodeRepositoryState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws:sagemaker/codeRepository:CodeRepository", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -163,7 +162,7 @@ public class CodeRepository extends io.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static CodeRepository get(String name, Input<String> id, @Nullable CodeRepositoryState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static CodeRepository get(String name, Output<String> id, @Nullable CodeRepositoryState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new CodeRepository(name, id, state, options);
     }
 }

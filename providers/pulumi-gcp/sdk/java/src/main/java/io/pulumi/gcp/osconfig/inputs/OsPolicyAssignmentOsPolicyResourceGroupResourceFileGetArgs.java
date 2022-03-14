@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.osconfig.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.osconfig.inputs.OsPolicyAssignmentOsPolicyResourceGroupResourceFileFileGetArgs;
 import java.lang.String;
@@ -20,10 +20,10 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceFileGetArgs ex
      * 
      */
     @InputImport(name="content")
-      private final @Nullable Input<String> content;
+      private final @Nullable Output<String> content;
 
-    public Input<String> getContent() {
-        return this.content == null ? Input.empty() : this.content;
+    public Output<String> getContent() {
+        return this.content == null ? Output.empty() : this.content;
     }
 
     /**
@@ -31,10 +31,10 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceFileGetArgs ex
      * 
      */
     @InputImport(name="file")
-      private final @Nullable Input<OsPolicyAssignmentOsPolicyResourceGroupResourceFileFileGetArgs> file;
+      private final @Nullable Output<OsPolicyAssignmentOsPolicyResourceGroupResourceFileFileGetArgs> file;
 
-    public Input<OsPolicyAssignmentOsPolicyResourceGroupResourceFileFileGetArgs> getFile() {
-        return this.file == null ? Input.empty() : this.file;
+    public Output<OsPolicyAssignmentOsPolicyResourceGroupResourceFileFileGetArgs> getFile() {
+        return this.file == null ? Output.empty() : this.file;
     }
 
     /**
@@ -42,9 +42,9 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceFileGetArgs ex
      * 
      */
     @InputImport(name="path", required=true)
-      private final Input<String> path;
+      private final Output<String> path;
 
-    public Input<String> getPath() {
+    public Output<String> getPath() {
         return this.path;
     }
 
@@ -54,10 +54,10 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceFileGetArgs ex
      * 
      */
     @InputImport(name="permissions")
-      private final @Nullable Input<String> permissions;
+      private final @Nullable Output<String> permissions;
 
-    public Input<String> getPermissions() {
-        return this.permissions == null ? Input.empty() : this.permissions;
+    public Output<String> getPermissions() {
+        return this.permissions == null ? Output.empty() : this.permissions;
     }
 
     /**
@@ -65,18 +65,18 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceFileGetArgs ex
      * 
      */
     @InputImport(name="state", required=true)
-      private final Input<String> state;
+      private final Output<String> state;
 
-    public Input<String> getState() {
+    public Output<String> getState() {
         return this.state;
     }
 
     public OsPolicyAssignmentOsPolicyResourceGroupResourceFileGetArgs(
-        @Nullable Input<String> content,
-        @Nullable Input<OsPolicyAssignmentOsPolicyResourceGroupResourceFileFileGetArgs> file,
-        Input<String> path,
-        @Nullable Input<String> permissions,
-        Input<String> state) {
+        @Nullable Output<String> content,
+        @Nullable Output<OsPolicyAssignmentOsPolicyResourceGroupResourceFileFileGetArgs> file,
+        Output<String> path,
+        @Nullable Output<String> permissions,
+        Output<String> state) {
         this.content = content;
         this.file = file;
         this.path = Objects.requireNonNull(path, "expected parameter 'path' to be non-null");
@@ -85,11 +85,11 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceFileGetArgs ex
     }
 
     private OsPolicyAssignmentOsPolicyResourceGroupResourceFileGetArgs() {
-        this.content = Input.empty();
-        this.file = Input.empty();
-        this.path = Input.empty();
-        this.permissions = Input.empty();
-        this.state = Input.empty();
+        this.content = Output.empty();
+        this.file = Output.empty();
+        this.path = Output.empty();
+        this.permissions = Output.empty();
+        this.state = Output.empty();
     }
 
     public static Builder builder() {
@@ -101,11 +101,11 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceFileGetArgs ex
     }
 
     public static final class Builder {
-        private @Nullable Input<String> content;
-        private @Nullable Input<OsPolicyAssignmentOsPolicyResourceGroupResourceFileFileGetArgs> file;
-        private Input<String> path;
-        private @Nullable Input<String> permissions;
-        private Input<String> state;
+        private @Nullable Output<String> content;
+        private @Nullable Output<OsPolicyAssignmentOsPolicyResourceGroupResourceFileFileGetArgs> file;
+        private Output<String> path;
+        private @Nullable Output<String> permissions;
+        private Output<String> state;
 
         public Builder() {
     	      // Empty
@@ -120,53 +120,53 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceFileGetArgs ex
     	      this.state = defaults.state;
         }
 
-        public Builder content(@Nullable Input<String> content) {
+        public Builder content(@Nullable Output<String> content) {
             this.content = content;
             return this;
         }
 
         public Builder content(@Nullable String content) {
-            this.content = Input.ofNullable(content);
+            this.content = Output.ofNullable(content);
             return this;
         }
 
-        public Builder file(@Nullable Input<OsPolicyAssignmentOsPolicyResourceGroupResourceFileFileGetArgs> file) {
+        public Builder file(@Nullable Output<OsPolicyAssignmentOsPolicyResourceGroupResourceFileFileGetArgs> file) {
             this.file = file;
             return this;
         }
 
         public Builder file(@Nullable OsPolicyAssignmentOsPolicyResourceGroupResourceFileFileGetArgs file) {
-            this.file = Input.ofNullable(file);
+            this.file = Output.ofNullable(file);
             return this;
         }
 
-        public Builder path(Input<String> path) {
+        public Builder path(Output<String> path) {
             this.path = Objects.requireNonNull(path);
             return this;
         }
 
         public Builder path(String path) {
-            this.path = Input.of(Objects.requireNonNull(path));
+            this.path = Output.of(Objects.requireNonNull(path));
             return this;
         }
 
-        public Builder permissions(@Nullable Input<String> permissions) {
+        public Builder permissions(@Nullable Output<String> permissions) {
             this.permissions = permissions;
             return this;
         }
 
         public Builder permissions(@Nullable String permissions) {
-            this.permissions = Input.ofNullable(permissions);
+            this.permissions = Output.ofNullable(permissions);
             return this;
         }
 
-        public Builder state(Input<String> state) {
+        public Builder state(Output<String> state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
 
         public Builder state(String state) {
-            this.state = Input.of(Objects.requireNonNull(state));
+            this.state = Output.of(Objects.requireNonNull(state));
             return this;
         }
         public OsPolicyAssignmentOsPolicyResourceGroupResourceFileGetArgs build() {

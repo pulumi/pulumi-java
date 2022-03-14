@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.compute.inputs.RegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDelayFixedDelayGetArgs;
 import java.lang.Double;
@@ -20,9 +20,9 @@ public final class RegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolic
      * 
      */
     @InputImport(name="fixedDelay", required=true)
-      private final Input<RegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDelayFixedDelayGetArgs> fixedDelay;
+      private final Output<RegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDelayFixedDelayGetArgs> fixedDelay;
 
-    public Input<RegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDelayFixedDelayGetArgs> getFixedDelay() {
+    public Output<RegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDelayFixedDelayGetArgs> getFixedDelay() {
         return this.fixedDelay;
     }
 
@@ -33,22 +33,22 @@ public final class RegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolic
      * 
      */
     @InputImport(name="percentage", required=true)
-      private final Input<Double> percentage;
+      private final Output<Double> percentage;
 
-    public Input<Double> getPercentage() {
+    public Output<Double> getPercentage() {
         return this.percentage;
     }
 
     public RegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDelayGetArgs(
-        Input<RegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDelayFixedDelayGetArgs> fixedDelay,
-        Input<Double> percentage) {
+        Output<RegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDelayFixedDelayGetArgs> fixedDelay,
+        Output<Double> percentage) {
         this.fixedDelay = Objects.requireNonNull(fixedDelay, "expected parameter 'fixedDelay' to be non-null");
         this.percentage = Objects.requireNonNull(percentage, "expected parameter 'percentage' to be non-null");
     }
 
     private RegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDelayGetArgs() {
-        this.fixedDelay = Input.empty();
-        this.percentage = Input.empty();
+        this.fixedDelay = Output.empty();
+        this.percentage = Output.empty();
     }
 
     public static Builder builder() {
@@ -60,8 +60,8 @@ public final class RegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolic
     }
 
     public static final class Builder {
-        private Input<RegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDelayFixedDelayGetArgs> fixedDelay;
-        private Input<Double> percentage;
+        private Output<RegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDelayFixedDelayGetArgs> fixedDelay;
+        private Output<Double> percentage;
 
         public Builder() {
     	      // Empty
@@ -73,23 +73,23 @@ public final class RegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolic
     	      this.percentage = defaults.percentage;
         }
 
-        public Builder fixedDelay(Input<RegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDelayFixedDelayGetArgs> fixedDelay) {
+        public Builder fixedDelay(Output<RegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDelayFixedDelayGetArgs> fixedDelay) {
             this.fixedDelay = Objects.requireNonNull(fixedDelay);
             return this;
         }
 
         public Builder fixedDelay(RegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDelayFixedDelayGetArgs fixedDelay) {
-            this.fixedDelay = Input.of(Objects.requireNonNull(fixedDelay));
+            this.fixedDelay = Output.of(Objects.requireNonNull(fixedDelay));
             return this;
         }
 
-        public Builder percentage(Input<Double> percentage) {
+        public Builder percentage(Output<Double> percentage) {
             this.percentage = Objects.requireNonNull(percentage);
             return this;
         }
 
         public Builder percentage(Double percentage) {
-            this.percentage = Input.of(Objects.requireNonNull(percentage));
+            this.percentage = Output.of(Objects.requireNonNull(percentage));
             return this;
         }
         public RegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDelayGetArgs build() {

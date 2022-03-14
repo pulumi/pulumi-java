@@ -6,7 +6,7 @@ package io.pulumi.azurenative.containerregistry;
 import io.pulumi.azurenative.containerregistry.enums.TokenStatus;
 import io.pulumi.azurenative.containerregistry.inputs.TokenCredentialsPropertiesArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -22,10 +22,10 @@ public final class TokenArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="credentials")
-      private final @Nullable Input<TokenCredentialsPropertiesArgs> credentials;
+      private final @Nullable Output<TokenCredentialsPropertiesArgs> credentials;
 
-    public Input<TokenCredentialsPropertiesArgs> getCredentials() {
-        return this.credentials == null ? Input.empty() : this.credentials;
+    public Output<TokenCredentialsPropertiesArgs> getCredentials() {
+        return this.credentials == null ? Output.empty() : this.credentials;
     }
 
     /**
@@ -33,9 +33,9 @@ public final class TokenArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="registryName", required=true)
-      private final Input<String> registryName;
+      private final Output<String> registryName;
 
-    public Input<String> getRegistryName() {
+    public Output<String> getRegistryName() {
         return this.registryName;
     }
 
@@ -44,9 +44,9 @@ public final class TokenArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -55,10 +55,10 @@ public final class TokenArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="scopeMapId")
-      private final @Nullable Input<String> scopeMapId;
+      private final @Nullable Output<String> scopeMapId;
 
-    public Input<String> getScopeMapId() {
-        return this.scopeMapId == null ? Input.empty() : this.scopeMapId;
+    public Output<String> getScopeMapId() {
+        return this.scopeMapId == null ? Output.empty() : this.scopeMapId;
     }
 
     /**
@@ -66,10 +66,10 @@ public final class TokenArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="status")
-      private final @Nullable Input<Either<String,TokenStatus>> status;
+      private final @Nullable Output<Either<String,TokenStatus>> status;
 
-    public Input<Either<String,TokenStatus>> getStatus() {
-        return this.status == null ? Input.empty() : this.status;
+    public Output<Either<String,TokenStatus>> getStatus() {
+        return this.status == null ? Output.empty() : this.status;
     }
 
     /**
@@ -77,19 +77,19 @@ public final class TokenArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tokenName")
-      private final @Nullable Input<String> tokenName;
+      private final @Nullable Output<String> tokenName;
 
-    public Input<String> getTokenName() {
-        return this.tokenName == null ? Input.empty() : this.tokenName;
+    public Output<String> getTokenName() {
+        return this.tokenName == null ? Output.empty() : this.tokenName;
     }
 
     public TokenArgs(
-        @Nullable Input<TokenCredentialsPropertiesArgs> credentials,
-        Input<String> registryName,
-        Input<String> resourceGroupName,
-        @Nullable Input<String> scopeMapId,
-        @Nullable Input<Either<String,TokenStatus>> status,
-        @Nullable Input<String> tokenName) {
+        @Nullable Output<TokenCredentialsPropertiesArgs> credentials,
+        Output<String> registryName,
+        Output<String> resourceGroupName,
+        @Nullable Output<String> scopeMapId,
+        @Nullable Output<Either<String,TokenStatus>> status,
+        @Nullable Output<String> tokenName) {
         this.credentials = credentials;
         this.registryName = Objects.requireNonNull(registryName, "expected parameter 'registryName' to be non-null");
         this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
@@ -99,12 +99,12 @@ public final class TokenArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private TokenArgs() {
-        this.credentials = Input.empty();
-        this.registryName = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.scopeMapId = Input.empty();
-        this.status = Input.empty();
-        this.tokenName = Input.empty();
+        this.credentials = Output.empty();
+        this.registryName = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.scopeMapId = Output.empty();
+        this.status = Output.empty();
+        this.tokenName = Output.empty();
     }
 
     public static Builder builder() {
@@ -116,12 +116,12 @@ public final class TokenArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<TokenCredentialsPropertiesArgs> credentials;
-        private Input<String> registryName;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<String> scopeMapId;
-        private @Nullable Input<Either<String,TokenStatus>> status;
-        private @Nullable Input<String> tokenName;
+        private @Nullable Output<TokenCredentialsPropertiesArgs> credentials;
+        private Output<String> registryName;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<String> scopeMapId;
+        private @Nullable Output<Either<String,TokenStatus>> status;
+        private @Nullable Output<String> tokenName;
 
         public Builder() {
     	      // Empty
@@ -137,63 +137,63 @@ public final class TokenArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tokenName = defaults.tokenName;
         }
 
-        public Builder credentials(@Nullable Input<TokenCredentialsPropertiesArgs> credentials) {
+        public Builder credentials(@Nullable Output<TokenCredentialsPropertiesArgs> credentials) {
             this.credentials = credentials;
             return this;
         }
 
         public Builder credentials(@Nullable TokenCredentialsPropertiesArgs credentials) {
-            this.credentials = Input.ofNullable(credentials);
+            this.credentials = Output.ofNullable(credentials);
             return this;
         }
 
-        public Builder registryName(Input<String> registryName) {
+        public Builder registryName(Output<String> registryName) {
             this.registryName = Objects.requireNonNull(registryName);
             return this;
         }
 
         public Builder registryName(String registryName) {
-            this.registryName = Input.of(Objects.requireNonNull(registryName));
+            this.registryName = Output.of(Objects.requireNonNull(registryName));
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder scopeMapId(@Nullable Input<String> scopeMapId) {
+        public Builder scopeMapId(@Nullable Output<String> scopeMapId) {
             this.scopeMapId = scopeMapId;
             return this;
         }
 
         public Builder scopeMapId(@Nullable String scopeMapId) {
-            this.scopeMapId = Input.ofNullable(scopeMapId);
+            this.scopeMapId = Output.ofNullable(scopeMapId);
             return this;
         }
 
-        public Builder status(@Nullable Input<Either<String,TokenStatus>> status) {
+        public Builder status(@Nullable Output<Either<String,TokenStatus>> status) {
             this.status = status;
             return this;
         }
 
         public Builder status(@Nullable Either<String,TokenStatus> status) {
-            this.status = Input.ofNullable(status);
+            this.status = Output.ofNullable(status);
             return this;
         }
 
-        public Builder tokenName(@Nullable Input<String> tokenName) {
+        public Builder tokenName(@Nullable Output<String> tokenName) {
             this.tokenName = tokenName;
             return this;
         }
 
         public Builder tokenName(@Nullable String tokenName) {
-            this.tokenName = Input.ofNullable(tokenName);
+            this.tokenName = Output.ofNullable(tokenName);
             return this;
         }
         public TokenArgs build() {

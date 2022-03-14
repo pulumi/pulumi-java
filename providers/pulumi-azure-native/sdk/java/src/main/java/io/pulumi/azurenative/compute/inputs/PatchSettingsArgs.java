@@ -6,7 +6,7 @@ package io.pulumi.azurenative.compute.inputs;
 import io.pulumi.azurenative.compute.enums.WindowsPatchAssessmentMode;
 import io.pulumi.azurenative.compute.enums.WindowsVMGuestPatchMode;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -27,10 +27,10 @@ public final class PatchSettingsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="assessmentMode")
-      private final @Nullable Input<Either<String,WindowsPatchAssessmentMode>> assessmentMode;
+      private final @Nullable Output<Either<String,WindowsPatchAssessmentMode>> assessmentMode;
 
-    public Input<Either<String,WindowsPatchAssessmentMode>> getAssessmentMode() {
-        return this.assessmentMode == null ? Input.empty() : this.assessmentMode;
+    public Output<Either<String,WindowsPatchAssessmentMode>> getAssessmentMode() {
+        return this.assessmentMode == null ? Output.empty() : this.assessmentMode;
     }
 
     /**
@@ -38,10 +38,10 @@ public final class PatchSettingsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enableHotpatching")
-      private final @Nullable Input<Boolean> enableHotpatching;
+      private final @Nullable Output<Boolean> enableHotpatching;
 
-    public Input<Boolean> getEnableHotpatching() {
-        return this.enableHotpatching == null ? Input.empty() : this.enableHotpatching;
+    public Output<Boolean> getEnableHotpatching() {
+        return this.enableHotpatching == null ? Output.empty() : this.enableHotpatching;
     }
 
     /**
@@ -49,25 +49,25 @@ public final class PatchSettingsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="patchMode")
-      private final @Nullable Input<Either<String,WindowsVMGuestPatchMode>> patchMode;
+      private final @Nullable Output<Either<String,WindowsVMGuestPatchMode>> patchMode;
 
-    public Input<Either<String,WindowsVMGuestPatchMode>> getPatchMode() {
-        return this.patchMode == null ? Input.empty() : this.patchMode;
+    public Output<Either<String,WindowsVMGuestPatchMode>> getPatchMode() {
+        return this.patchMode == null ? Output.empty() : this.patchMode;
     }
 
     public PatchSettingsArgs(
-        @Nullable Input<Either<String,WindowsPatchAssessmentMode>> assessmentMode,
-        @Nullable Input<Boolean> enableHotpatching,
-        @Nullable Input<Either<String,WindowsVMGuestPatchMode>> patchMode) {
+        @Nullable Output<Either<String,WindowsPatchAssessmentMode>> assessmentMode,
+        @Nullable Output<Boolean> enableHotpatching,
+        @Nullable Output<Either<String,WindowsVMGuestPatchMode>> patchMode) {
         this.assessmentMode = assessmentMode;
         this.enableHotpatching = enableHotpatching;
         this.patchMode = patchMode;
     }
 
     private PatchSettingsArgs() {
-        this.assessmentMode = Input.empty();
-        this.enableHotpatching = Input.empty();
-        this.patchMode = Input.empty();
+        this.assessmentMode = Output.empty();
+        this.enableHotpatching = Output.empty();
+        this.patchMode = Output.empty();
     }
 
     public static Builder builder() {
@@ -79,9 +79,9 @@ public final class PatchSettingsArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Either<String,WindowsPatchAssessmentMode>> assessmentMode;
-        private @Nullable Input<Boolean> enableHotpatching;
-        private @Nullable Input<Either<String,WindowsVMGuestPatchMode>> patchMode;
+        private @Nullable Output<Either<String,WindowsPatchAssessmentMode>> assessmentMode;
+        private @Nullable Output<Boolean> enableHotpatching;
+        private @Nullable Output<Either<String,WindowsVMGuestPatchMode>> patchMode;
 
         public Builder() {
     	      // Empty
@@ -94,33 +94,33 @@ public final class PatchSettingsArgs extends io.pulumi.resources.ResourceArgs {
     	      this.patchMode = defaults.patchMode;
         }
 
-        public Builder assessmentMode(@Nullable Input<Either<String,WindowsPatchAssessmentMode>> assessmentMode) {
+        public Builder assessmentMode(@Nullable Output<Either<String,WindowsPatchAssessmentMode>> assessmentMode) {
             this.assessmentMode = assessmentMode;
             return this;
         }
 
         public Builder assessmentMode(@Nullable Either<String,WindowsPatchAssessmentMode> assessmentMode) {
-            this.assessmentMode = Input.ofNullable(assessmentMode);
+            this.assessmentMode = Output.ofNullable(assessmentMode);
             return this;
         }
 
-        public Builder enableHotpatching(@Nullable Input<Boolean> enableHotpatching) {
+        public Builder enableHotpatching(@Nullable Output<Boolean> enableHotpatching) {
             this.enableHotpatching = enableHotpatching;
             return this;
         }
 
         public Builder enableHotpatching(@Nullable Boolean enableHotpatching) {
-            this.enableHotpatching = Input.ofNullable(enableHotpatching);
+            this.enableHotpatching = Output.ofNullable(enableHotpatching);
             return this;
         }
 
-        public Builder patchMode(@Nullable Input<Either<String,WindowsVMGuestPatchMode>> patchMode) {
+        public Builder patchMode(@Nullable Output<Either<String,WindowsVMGuestPatchMode>> patchMode) {
             this.patchMode = patchMode;
             return this;
         }
 
         public Builder patchMode(@Nullable Either<String,WindowsVMGuestPatchMode> patchMode) {
-            this.patchMode = Input.ofNullable(patchMode);
+            this.patchMode = Output.ofNullable(patchMode);
             return this;
         }
         public PatchSettingsArgs build() {

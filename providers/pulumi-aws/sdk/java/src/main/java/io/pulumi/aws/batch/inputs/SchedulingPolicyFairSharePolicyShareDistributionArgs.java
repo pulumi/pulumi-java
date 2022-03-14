@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.batch.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.String;
@@ -20,9 +20,9 @@ public final class SchedulingPolicyFairSharePolicyShareDistributionArgs extends 
      * 
      */
     @InputImport(name="shareIdentifier", required=true)
-      private final Input<String> shareIdentifier;
+      private final Output<String> shareIdentifier;
 
-    public Input<String> getShareIdentifier() {
+    public Output<String> getShareIdentifier() {
         return this.shareIdentifier;
     }
 
@@ -31,22 +31,22 @@ public final class SchedulingPolicyFairSharePolicyShareDistributionArgs extends 
      * 
      */
     @InputImport(name="weightFactor")
-      private final @Nullable Input<Double> weightFactor;
+      private final @Nullable Output<Double> weightFactor;
 
-    public Input<Double> getWeightFactor() {
-        return this.weightFactor == null ? Input.empty() : this.weightFactor;
+    public Output<Double> getWeightFactor() {
+        return this.weightFactor == null ? Output.empty() : this.weightFactor;
     }
 
     public SchedulingPolicyFairSharePolicyShareDistributionArgs(
-        Input<String> shareIdentifier,
-        @Nullable Input<Double> weightFactor) {
+        Output<String> shareIdentifier,
+        @Nullable Output<Double> weightFactor) {
         this.shareIdentifier = Objects.requireNonNull(shareIdentifier, "expected parameter 'shareIdentifier' to be non-null");
         this.weightFactor = weightFactor;
     }
 
     private SchedulingPolicyFairSharePolicyShareDistributionArgs() {
-        this.shareIdentifier = Input.empty();
-        this.weightFactor = Input.empty();
+        this.shareIdentifier = Output.empty();
+        this.weightFactor = Output.empty();
     }
 
     public static Builder builder() {
@@ -58,8 +58,8 @@ public final class SchedulingPolicyFairSharePolicyShareDistributionArgs extends 
     }
 
     public static final class Builder {
-        private Input<String> shareIdentifier;
-        private @Nullable Input<Double> weightFactor;
+        private Output<String> shareIdentifier;
+        private @Nullable Output<Double> weightFactor;
 
         public Builder() {
     	      // Empty
@@ -71,23 +71,23 @@ public final class SchedulingPolicyFairSharePolicyShareDistributionArgs extends 
     	      this.weightFactor = defaults.weightFactor;
         }
 
-        public Builder shareIdentifier(Input<String> shareIdentifier) {
+        public Builder shareIdentifier(Output<String> shareIdentifier) {
             this.shareIdentifier = Objects.requireNonNull(shareIdentifier);
             return this;
         }
 
         public Builder shareIdentifier(String shareIdentifier) {
-            this.shareIdentifier = Input.of(Objects.requireNonNull(shareIdentifier));
+            this.shareIdentifier = Output.of(Objects.requireNonNull(shareIdentifier));
             return this;
         }
 
-        public Builder weightFactor(@Nullable Input<Double> weightFactor) {
+        public Builder weightFactor(@Nullable Output<Double> weightFactor) {
             this.weightFactor = weightFactor;
             return this;
         }
 
         public Builder weightFactor(@Nullable Double weightFactor) {
-            this.weightFactor = Input.ofNullable(weightFactor);
+            this.weightFactor = Output.ofNullable(weightFactor);
             return this;
         }
         public SchedulingPolicyFairSharePolicyShareDistributionArgs build() {

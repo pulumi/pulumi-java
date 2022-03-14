@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.apigateway.inputs;
 
 import io.pulumi.awsnative.apigateway.enums.MethodIntegrationResponseContentHandling;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
@@ -21,10 +21,10 @@ public final class MethodIntegrationResponseArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="contentHandling")
-      private final @Nullable Input<MethodIntegrationResponseContentHandling> contentHandling;
+      private final @Nullable Output<MethodIntegrationResponseContentHandling> contentHandling;
 
-    public Input<MethodIntegrationResponseContentHandling> getContentHandling() {
-        return this.contentHandling == null ? Input.empty() : this.contentHandling;
+    public Output<MethodIntegrationResponseContentHandling> getContentHandling() {
+        return this.contentHandling == null ? Output.empty() : this.contentHandling;
     }
 
     /**
@@ -32,10 +32,10 @@ public final class MethodIntegrationResponseArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="responseParameters")
-      private final @Nullable Input<Object> responseParameters;
+      private final @Nullable Output<Object> responseParameters;
 
-    public Input<Object> getResponseParameters() {
-        return this.responseParameters == null ? Input.empty() : this.responseParameters;
+    public Output<Object> getResponseParameters() {
+        return this.responseParameters == null ? Output.empty() : this.responseParameters;
     }
 
     /**
@@ -43,10 +43,10 @@ public final class MethodIntegrationResponseArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="responseTemplates")
-      private final @Nullable Input<Object> responseTemplates;
+      private final @Nullable Output<Object> responseTemplates;
 
-    public Input<Object> getResponseTemplates() {
-        return this.responseTemplates == null ? Input.empty() : this.responseTemplates;
+    public Output<Object> getResponseTemplates() {
+        return this.responseTemplates == null ? Output.empty() : this.responseTemplates;
     }
 
     /**
@@ -54,10 +54,10 @@ public final class MethodIntegrationResponseArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="selectionPattern")
-      private final @Nullable Input<String> selectionPattern;
+      private final @Nullable Output<String> selectionPattern;
 
-    public Input<String> getSelectionPattern() {
-        return this.selectionPattern == null ? Input.empty() : this.selectionPattern;
+    public Output<String> getSelectionPattern() {
+        return this.selectionPattern == null ? Output.empty() : this.selectionPattern;
     }
 
     /**
@@ -65,18 +65,18 @@ public final class MethodIntegrationResponseArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="statusCode", required=true)
-      private final Input<String> statusCode;
+      private final Output<String> statusCode;
 
-    public Input<String> getStatusCode() {
+    public Output<String> getStatusCode() {
         return this.statusCode;
     }
 
     public MethodIntegrationResponseArgs(
-        @Nullable Input<MethodIntegrationResponseContentHandling> contentHandling,
-        @Nullable Input<Object> responseParameters,
-        @Nullable Input<Object> responseTemplates,
-        @Nullable Input<String> selectionPattern,
-        Input<String> statusCode) {
+        @Nullable Output<MethodIntegrationResponseContentHandling> contentHandling,
+        @Nullable Output<Object> responseParameters,
+        @Nullable Output<Object> responseTemplates,
+        @Nullable Output<String> selectionPattern,
+        Output<String> statusCode) {
         this.contentHandling = contentHandling;
         this.responseParameters = responseParameters;
         this.responseTemplates = responseTemplates;
@@ -85,11 +85,11 @@ public final class MethodIntegrationResponseArgs extends io.pulumi.resources.Res
     }
 
     private MethodIntegrationResponseArgs() {
-        this.contentHandling = Input.empty();
-        this.responseParameters = Input.empty();
-        this.responseTemplates = Input.empty();
-        this.selectionPattern = Input.empty();
-        this.statusCode = Input.empty();
+        this.contentHandling = Output.empty();
+        this.responseParameters = Output.empty();
+        this.responseTemplates = Output.empty();
+        this.selectionPattern = Output.empty();
+        this.statusCode = Output.empty();
     }
 
     public static Builder builder() {
@@ -101,11 +101,11 @@ public final class MethodIntegrationResponseArgs extends io.pulumi.resources.Res
     }
 
     public static final class Builder {
-        private @Nullable Input<MethodIntegrationResponseContentHandling> contentHandling;
-        private @Nullable Input<Object> responseParameters;
-        private @Nullable Input<Object> responseTemplates;
-        private @Nullable Input<String> selectionPattern;
-        private Input<String> statusCode;
+        private @Nullable Output<MethodIntegrationResponseContentHandling> contentHandling;
+        private @Nullable Output<Object> responseParameters;
+        private @Nullable Output<Object> responseTemplates;
+        private @Nullable Output<String> selectionPattern;
+        private Output<String> statusCode;
 
         public Builder() {
     	      // Empty
@@ -120,53 +120,53 @@ public final class MethodIntegrationResponseArgs extends io.pulumi.resources.Res
     	      this.statusCode = defaults.statusCode;
         }
 
-        public Builder contentHandling(@Nullable Input<MethodIntegrationResponseContentHandling> contentHandling) {
+        public Builder contentHandling(@Nullable Output<MethodIntegrationResponseContentHandling> contentHandling) {
             this.contentHandling = contentHandling;
             return this;
         }
 
         public Builder contentHandling(@Nullable MethodIntegrationResponseContentHandling contentHandling) {
-            this.contentHandling = Input.ofNullable(contentHandling);
+            this.contentHandling = Output.ofNullable(contentHandling);
             return this;
         }
 
-        public Builder responseParameters(@Nullable Input<Object> responseParameters) {
+        public Builder responseParameters(@Nullable Output<Object> responseParameters) {
             this.responseParameters = responseParameters;
             return this;
         }
 
         public Builder responseParameters(@Nullable Object responseParameters) {
-            this.responseParameters = Input.ofNullable(responseParameters);
+            this.responseParameters = Output.ofNullable(responseParameters);
             return this;
         }
 
-        public Builder responseTemplates(@Nullable Input<Object> responseTemplates) {
+        public Builder responseTemplates(@Nullable Output<Object> responseTemplates) {
             this.responseTemplates = responseTemplates;
             return this;
         }
 
         public Builder responseTemplates(@Nullable Object responseTemplates) {
-            this.responseTemplates = Input.ofNullable(responseTemplates);
+            this.responseTemplates = Output.ofNullable(responseTemplates);
             return this;
         }
 
-        public Builder selectionPattern(@Nullable Input<String> selectionPattern) {
+        public Builder selectionPattern(@Nullable Output<String> selectionPattern) {
             this.selectionPattern = selectionPattern;
             return this;
         }
 
         public Builder selectionPattern(@Nullable String selectionPattern) {
-            this.selectionPattern = Input.ofNullable(selectionPattern);
+            this.selectionPattern = Output.ofNullable(selectionPattern);
             return this;
         }
 
-        public Builder statusCode(Input<String> statusCode) {
+        public Builder statusCode(Output<String> statusCode) {
             this.statusCode = Objects.requireNonNull(statusCode);
             return this;
         }
 
         public Builder statusCode(String statusCode) {
-            this.statusCode = Input.of(Objects.requireNonNull(statusCode));
+            this.statusCode = Output.of(Objects.requireNonNull(statusCode));
             return this;
         }
         public MethodIntegrationResponseArgs build() {

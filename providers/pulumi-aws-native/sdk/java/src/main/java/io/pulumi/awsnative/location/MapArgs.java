@@ -5,7 +5,7 @@ package io.pulumi.awsnative.location;
 
 import io.pulumi.awsnative.location.enums.MapPricingPlan;
 import io.pulumi.awsnative.location.inputs.MapConfigurationArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -17,38 +17,38 @@ public final class MapArgs extends io.pulumi.resources.ResourceArgs {
     public static final MapArgs Empty = new MapArgs();
 
     @InputImport(name="configuration", required=true)
-      private final Input<MapConfigurationArgs> configuration;
+      private final Output<MapConfigurationArgs> configuration;
 
-    public Input<MapConfigurationArgs> getConfiguration() {
+    public Output<MapConfigurationArgs> getConfiguration() {
         return this.configuration;
     }
 
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     @InputImport(name="mapName")
-      private final @Nullable Input<String> mapName;
+      private final @Nullable Output<String> mapName;
 
-    public Input<String> getMapName() {
-        return this.mapName == null ? Input.empty() : this.mapName;
+    public Output<String> getMapName() {
+        return this.mapName == null ? Output.empty() : this.mapName;
     }
 
     @InputImport(name="pricingPlan")
-      private final @Nullable Input<MapPricingPlan> pricingPlan;
+      private final @Nullable Output<MapPricingPlan> pricingPlan;
 
-    public Input<MapPricingPlan> getPricingPlan() {
-        return this.pricingPlan == null ? Input.empty() : this.pricingPlan;
+    public Output<MapPricingPlan> getPricingPlan() {
+        return this.pricingPlan == null ? Output.empty() : this.pricingPlan;
     }
 
     public MapArgs(
-        Input<MapConfigurationArgs> configuration,
-        @Nullable Input<String> description,
-        @Nullable Input<String> mapName,
-        @Nullable Input<MapPricingPlan> pricingPlan) {
+        Output<MapConfigurationArgs> configuration,
+        @Nullable Output<String> description,
+        @Nullable Output<String> mapName,
+        @Nullable Output<MapPricingPlan> pricingPlan) {
         this.configuration = Objects.requireNonNull(configuration, "expected parameter 'configuration' to be non-null");
         this.description = description;
         this.mapName = mapName;
@@ -56,10 +56,10 @@ public final class MapArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private MapArgs() {
-        this.configuration = Input.empty();
-        this.description = Input.empty();
-        this.mapName = Input.empty();
-        this.pricingPlan = Input.empty();
+        this.configuration = Output.empty();
+        this.description = Output.empty();
+        this.mapName = Output.empty();
+        this.pricingPlan = Output.empty();
     }
 
     public static Builder builder() {
@@ -71,10 +71,10 @@ public final class MapArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<MapConfigurationArgs> configuration;
-        private @Nullable Input<String> description;
-        private @Nullable Input<String> mapName;
-        private @Nullable Input<MapPricingPlan> pricingPlan;
+        private Output<MapConfigurationArgs> configuration;
+        private @Nullable Output<String> description;
+        private @Nullable Output<String> mapName;
+        private @Nullable Output<MapPricingPlan> pricingPlan;
 
         public Builder() {
     	      // Empty
@@ -88,43 +88,43 @@ public final class MapArgs extends io.pulumi.resources.ResourceArgs {
     	      this.pricingPlan = defaults.pricingPlan;
         }
 
-        public Builder configuration(Input<MapConfigurationArgs> configuration) {
+        public Builder configuration(Output<MapConfigurationArgs> configuration) {
             this.configuration = Objects.requireNonNull(configuration);
             return this;
         }
 
         public Builder configuration(MapConfigurationArgs configuration) {
-            this.configuration = Input.of(Objects.requireNonNull(configuration));
+            this.configuration = Output.of(Objects.requireNonNull(configuration));
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder mapName(@Nullable Input<String> mapName) {
+        public Builder mapName(@Nullable Output<String> mapName) {
             this.mapName = mapName;
             return this;
         }
 
         public Builder mapName(@Nullable String mapName) {
-            this.mapName = Input.ofNullable(mapName);
+            this.mapName = Output.ofNullable(mapName);
             return this;
         }
 
-        public Builder pricingPlan(@Nullable Input<MapPricingPlan> pricingPlan) {
+        public Builder pricingPlan(@Nullable Output<MapPricingPlan> pricingPlan) {
             this.pricingPlan = pricingPlan;
             return this;
         }
 
         public Builder pricingPlan(@Nullable MapPricingPlan pricingPlan) {
-            this.pricingPlan = Input.ofNullable(pricingPlan);
+            this.pricingPlan = Output.ofNullable(pricingPlan);
             return this;
         }
         public MapArgs build() {

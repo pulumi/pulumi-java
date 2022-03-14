@@ -6,7 +6,6 @@ package io.pulumi.aws.ssm;
 import io.pulumi.aws.Utilities;
 import io.pulumi.aws.ssm.MaintenanceWindowArgs;
 import io.pulumi.aws.ssm.inputs.MaintenanceWindowState;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -255,14 +254,14 @@ public class MaintenanceWindow extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public MaintenanceWindow(String name, MaintenanceWindowArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:ssm/maintenanceWindow:MaintenanceWindow", name, args == null ? MaintenanceWindowArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws:ssm/maintenanceWindow:MaintenanceWindow", name, args == null ? MaintenanceWindowArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private MaintenanceWindow(String name, Input<String> id, @Nullable MaintenanceWindowState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private MaintenanceWindow(String name, Output<String> id, @Nullable MaintenanceWindowState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws:ssm/maintenanceWindow:MaintenanceWindow", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -278,7 +277,7 @@ public class MaintenanceWindow extends io.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static MaintenanceWindow get(String name, Input<String> id, @Nullable MaintenanceWindowState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static MaintenanceWindow get(String name, Output<String> id, @Nullable MaintenanceWindowState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new MaintenanceWindow(name, id, state, options);
     }
 }

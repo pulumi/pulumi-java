@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.compute.inputs.RegionUrlMapPathMatcherDefaultUrlRedirectGetArgs;
 import io.pulumi.gcp.compute.inputs.RegionUrlMapPathMatcherPathRuleGetArgs;
@@ -25,10 +25,10 @@ public final class RegionUrlMapPathMatcherGetArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="defaultService")
-      private final @Nullable Input<String> defaultService;
+      private final @Nullable Output<String> defaultService;
 
-    public Input<String> getDefaultService() {
-        return this.defaultService == null ? Input.empty() : this.defaultService;
+    public Output<String> getDefaultService() {
+        return this.defaultService == null ? Output.empty() : this.defaultService;
     }
 
     /**
@@ -39,10 +39,10 @@ public final class RegionUrlMapPathMatcherGetArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="defaultUrlRedirect")
-      private final @Nullable Input<RegionUrlMapPathMatcherDefaultUrlRedirectGetArgs> defaultUrlRedirect;
+      private final @Nullable Output<RegionUrlMapPathMatcherDefaultUrlRedirectGetArgs> defaultUrlRedirect;
 
-    public Input<RegionUrlMapPathMatcherDefaultUrlRedirectGetArgs> getDefaultUrlRedirect() {
-        return this.defaultUrlRedirect == null ? Input.empty() : this.defaultUrlRedirect;
+    public Output<RegionUrlMapPathMatcherDefaultUrlRedirectGetArgs> getDefaultUrlRedirect() {
+        return this.defaultUrlRedirect == null ? Output.empty() : this.defaultUrlRedirect;
     }
 
     /**
@@ -50,10 +50,10 @@ public final class RegionUrlMapPathMatcherGetArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -62,9 +62,9 @@ public final class RegionUrlMapPathMatcherGetArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="name", required=true)
-      private final Input<String> name;
+      private final Output<String> name;
 
-    public Input<String> getName() {
+    public Output<String> getName() {
         return this.name;
     }
 
@@ -79,10 +79,10 @@ public final class RegionUrlMapPathMatcherGetArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="pathRules")
-      private final @Nullable Input<List<RegionUrlMapPathMatcherPathRuleGetArgs>> pathRules;
+      private final @Nullable Output<List<RegionUrlMapPathMatcherPathRuleGetArgs>> pathRules;
 
-    public Input<List<RegionUrlMapPathMatcherPathRuleGetArgs>> getPathRules() {
-        return this.pathRules == null ? Input.empty() : this.pathRules;
+    public Output<List<RegionUrlMapPathMatcherPathRuleGetArgs>> getPathRules() {
+        return this.pathRules == null ? Output.empty() : this.pathRules;
     }
 
     /**
@@ -96,19 +96,19 @@ public final class RegionUrlMapPathMatcherGetArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="routeRules")
-      private final @Nullable Input<List<RegionUrlMapPathMatcherRouteRuleGetArgs>> routeRules;
+      private final @Nullable Output<List<RegionUrlMapPathMatcherRouteRuleGetArgs>> routeRules;
 
-    public Input<List<RegionUrlMapPathMatcherRouteRuleGetArgs>> getRouteRules() {
-        return this.routeRules == null ? Input.empty() : this.routeRules;
+    public Output<List<RegionUrlMapPathMatcherRouteRuleGetArgs>> getRouteRules() {
+        return this.routeRules == null ? Output.empty() : this.routeRules;
     }
 
     public RegionUrlMapPathMatcherGetArgs(
-        @Nullable Input<String> defaultService,
-        @Nullable Input<RegionUrlMapPathMatcherDefaultUrlRedirectGetArgs> defaultUrlRedirect,
-        @Nullable Input<String> description,
-        Input<String> name,
-        @Nullable Input<List<RegionUrlMapPathMatcherPathRuleGetArgs>> pathRules,
-        @Nullable Input<List<RegionUrlMapPathMatcherRouteRuleGetArgs>> routeRules) {
+        @Nullable Output<String> defaultService,
+        @Nullable Output<RegionUrlMapPathMatcherDefaultUrlRedirectGetArgs> defaultUrlRedirect,
+        @Nullable Output<String> description,
+        Output<String> name,
+        @Nullable Output<List<RegionUrlMapPathMatcherPathRuleGetArgs>> pathRules,
+        @Nullable Output<List<RegionUrlMapPathMatcherRouteRuleGetArgs>> routeRules) {
         this.defaultService = defaultService;
         this.defaultUrlRedirect = defaultUrlRedirect;
         this.description = description;
@@ -118,12 +118,12 @@ public final class RegionUrlMapPathMatcherGetArgs extends io.pulumi.resources.Re
     }
 
     private RegionUrlMapPathMatcherGetArgs() {
-        this.defaultService = Input.empty();
-        this.defaultUrlRedirect = Input.empty();
-        this.description = Input.empty();
-        this.name = Input.empty();
-        this.pathRules = Input.empty();
-        this.routeRules = Input.empty();
+        this.defaultService = Output.empty();
+        this.defaultUrlRedirect = Output.empty();
+        this.description = Output.empty();
+        this.name = Output.empty();
+        this.pathRules = Output.empty();
+        this.routeRules = Output.empty();
     }
 
     public static Builder builder() {
@@ -135,12 +135,12 @@ public final class RegionUrlMapPathMatcherGetArgs extends io.pulumi.resources.Re
     }
 
     public static final class Builder {
-        private @Nullable Input<String> defaultService;
-        private @Nullable Input<RegionUrlMapPathMatcherDefaultUrlRedirectGetArgs> defaultUrlRedirect;
-        private @Nullable Input<String> description;
-        private Input<String> name;
-        private @Nullable Input<List<RegionUrlMapPathMatcherPathRuleGetArgs>> pathRules;
-        private @Nullable Input<List<RegionUrlMapPathMatcherRouteRuleGetArgs>> routeRules;
+        private @Nullable Output<String> defaultService;
+        private @Nullable Output<RegionUrlMapPathMatcherDefaultUrlRedirectGetArgs> defaultUrlRedirect;
+        private @Nullable Output<String> description;
+        private Output<String> name;
+        private @Nullable Output<List<RegionUrlMapPathMatcherPathRuleGetArgs>> pathRules;
+        private @Nullable Output<List<RegionUrlMapPathMatcherRouteRuleGetArgs>> routeRules;
 
         public Builder() {
     	      // Empty
@@ -156,63 +156,63 @@ public final class RegionUrlMapPathMatcherGetArgs extends io.pulumi.resources.Re
     	      this.routeRules = defaults.routeRules;
         }
 
-        public Builder defaultService(@Nullable Input<String> defaultService) {
+        public Builder defaultService(@Nullable Output<String> defaultService) {
             this.defaultService = defaultService;
             return this;
         }
 
         public Builder defaultService(@Nullable String defaultService) {
-            this.defaultService = Input.ofNullable(defaultService);
+            this.defaultService = Output.ofNullable(defaultService);
             return this;
         }
 
-        public Builder defaultUrlRedirect(@Nullable Input<RegionUrlMapPathMatcherDefaultUrlRedirectGetArgs> defaultUrlRedirect) {
+        public Builder defaultUrlRedirect(@Nullable Output<RegionUrlMapPathMatcherDefaultUrlRedirectGetArgs> defaultUrlRedirect) {
             this.defaultUrlRedirect = defaultUrlRedirect;
             return this;
         }
 
         public Builder defaultUrlRedirect(@Nullable RegionUrlMapPathMatcherDefaultUrlRedirectGetArgs defaultUrlRedirect) {
-            this.defaultUrlRedirect = Input.ofNullable(defaultUrlRedirect);
+            this.defaultUrlRedirect = Output.ofNullable(defaultUrlRedirect);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder name(Input<String> name) {
+        public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(String name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder pathRules(@Nullable Input<List<RegionUrlMapPathMatcherPathRuleGetArgs>> pathRules) {
+        public Builder pathRules(@Nullable Output<List<RegionUrlMapPathMatcherPathRuleGetArgs>> pathRules) {
             this.pathRules = pathRules;
             return this;
         }
 
         public Builder pathRules(@Nullable List<RegionUrlMapPathMatcherPathRuleGetArgs> pathRules) {
-            this.pathRules = Input.ofNullable(pathRules);
+            this.pathRules = Output.ofNullable(pathRules);
             return this;
         }
 
-        public Builder routeRules(@Nullable Input<List<RegionUrlMapPathMatcherRouteRuleGetArgs>> routeRules) {
+        public Builder routeRules(@Nullable Output<List<RegionUrlMapPathMatcherRouteRuleGetArgs>> routeRules) {
             this.routeRules = routeRules;
             return this;
         }
 
         public Builder routeRules(@Nullable List<RegionUrlMapPathMatcherRouteRuleGetArgs> routeRules) {
-            this.routeRules = Input.ofNullable(routeRules);
+            this.routeRules = Output.ofNullable(routeRules);
             return this;
         }
         public RegionUrlMapPathMatcherGetArgs build() {

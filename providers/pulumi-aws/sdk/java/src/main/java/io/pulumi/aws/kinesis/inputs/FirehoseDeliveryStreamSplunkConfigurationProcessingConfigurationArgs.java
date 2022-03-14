@@ -4,7 +4,7 @@
 package io.pulumi.aws.kinesis.inputs;
 
 import io.pulumi.aws.kinesis.inputs.FirehoseDeliveryStreamSplunkConfigurationProcessingConfigurationProcessorArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.List;
@@ -21,10 +21,10 @@ public final class FirehoseDeliveryStreamSplunkConfigurationProcessingConfigurat
      * 
      */
     @InputImport(name="enabled")
-      private final @Nullable Input<Boolean> enabled;
+      private final @Nullable Output<Boolean> enabled;
 
-    public Input<Boolean> getEnabled() {
-        return this.enabled == null ? Input.empty() : this.enabled;
+    public Output<Boolean> getEnabled() {
+        return this.enabled == null ? Output.empty() : this.enabled;
     }
 
     /**
@@ -32,22 +32,22 @@ public final class FirehoseDeliveryStreamSplunkConfigurationProcessingConfigurat
      * 
      */
     @InputImport(name="processors")
-      private final @Nullable Input<List<FirehoseDeliveryStreamSplunkConfigurationProcessingConfigurationProcessorArgs>> processors;
+      private final @Nullable Output<List<FirehoseDeliveryStreamSplunkConfigurationProcessingConfigurationProcessorArgs>> processors;
 
-    public Input<List<FirehoseDeliveryStreamSplunkConfigurationProcessingConfigurationProcessorArgs>> getProcessors() {
-        return this.processors == null ? Input.empty() : this.processors;
+    public Output<List<FirehoseDeliveryStreamSplunkConfigurationProcessingConfigurationProcessorArgs>> getProcessors() {
+        return this.processors == null ? Output.empty() : this.processors;
     }
 
     public FirehoseDeliveryStreamSplunkConfigurationProcessingConfigurationArgs(
-        @Nullable Input<Boolean> enabled,
-        @Nullable Input<List<FirehoseDeliveryStreamSplunkConfigurationProcessingConfigurationProcessorArgs>> processors) {
+        @Nullable Output<Boolean> enabled,
+        @Nullable Output<List<FirehoseDeliveryStreamSplunkConfigurationProcessingConfigurationProcessorArgs>> processors) {
         this.enabled = enabled;
         this.processors = processors;
     }
 
     private FirehoseDeliveryStreamSplunkConfigurationProcessingConfigurationArgs() {
-        this.enabled = Input.empty();
-        this.processors = Input.empty();
+        this.enabled = Output.empty();
+        this.processors = Output.empty();
     }
 
     public static Builder builder() {
@@ -59,8 +59,8 @@ public final class FirehoseDeliveryStreamSplunkConfigurationProcessingConfigurat
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> enabled;
-        private @Nullable Input<List<FirehoseDeliveryStreamSplunkConfigurationProcessingConfigurationProcessorArgs>> processors;
+        private @Nullable Output<Boolean> enabled;
+        private @Nullable Output<List<FirehoseDeliveryStreamSplunkConfigurationProcessingConfigurationProcessorArgs>> processors;
 
         public Builder() {
     	      // Empty
@@ -72,23 +72,23 @@ public final class FirehoseDeliveryStreamSplunkConfigurationProcessingConfigurat
     	      this.processors = defaults.processors;
         }
 
-        public Builder enabled(@Nullable Input<Boolean> enabled) {
+        public Builder enabled(@Nullable Output<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
 
         public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Input.ofNullable(enabled);
+            this.enabled = Output.ofNullable(enabled);
             return this;
         }
 
-        public Builder processors(@Nullable Input<List<FirehoseDeliveryStreamSplunkConfigurationProcessingConfigurationProcessorArgs>> processors) {
+        public Builder processors(@Nullable Output<List<FirehoseDeliveryStreamSplunkConfigurationProcessingConfigurationProcessorArgs>> processors) {
             this.processors = processors;
             return this;
         }
 
         public Builder processors(@Nullable List<FirehoseDeliveryStreamSplunkConfigurationProcessingConfigurationProcessorArgs> processors) {
-            this.processors = Input.ofNullable(processors);
+            this.processors = Output.ofNullable(processors);
             return this;
         }
         public FirehoseDeliveryStreamSplunkConfigurationProcessingConfigurationArgs build() {

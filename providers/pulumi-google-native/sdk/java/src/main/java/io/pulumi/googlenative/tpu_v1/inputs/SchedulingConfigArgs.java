@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.tpu_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class SchedulingConfigArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="preemptible")
-      private final @Nullable Input<Boolean> preemptible;
+      private final @Nullable Output<Boolean> preemptible;
 
-    public Input<Boolean> getPreemptible() {
-        return this.preemptible == null ? Input.empty() : this.preemptible;
+    public Output<Boolean> getPreemptible() {
+        return this.preemptible == null ? Output.empty() : this.preemptible;
     }
 
     /**
@@ -34,22 +34,22 @@ public final class SchedulingConfigArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="reserved")
-      private final @Nullable Input<Boolean> reserved;
+      private final @Nullable Output<Boolean> reserved;
 
-    public Input<Boolean> getReserved() {
-        return this.reserved == null ? Input.empty() : this.reserved;
+    public Output<Boolean> getReserved() {
+        return this.reserved == null ? Output.empty() : this.reserved;
     }
 
     public SchedulingConfigArgs(
-        @Nullable Input<Boolean> preemptible,
-        @Nullable Input<Boolean> reserved) {
+        @Nullable Output<Boolean> preemptible,
+        @Nullable Output<Boolean> reserved) {
         this.preemptible = preemptible;
         this.reserved = reserved;
     }
 
     private SchedulingConfigArgs() {
-        this.preemptible = Input.empty();
-        this.reserved = Input.empty();
+        this.preemptible = Output.empty();
+        this.reserved = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class SchedulingConfigArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> preemptible;
-        private @Nullable Input<Boolean> reserved;
+        private @Nullable Output<Boolean> preemptible;
+        private @Nullable Output<Boolean> reserved;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class SchedulingConfigArgs extends io.pulumi.resources.ResourceArgs
     	      this.reserved = defaults.reserved;
         }
 
-        public Builder preemptible(@Nullable Input<Boolean> preemptible) {
+        public Builder preemptible(@Nullable Output<Boolean> preemptible) {
             this.preemptible = preemptible;
             return this;
         }
 
         public Builder preemptible(@Nullable Boolean preemptible) {
-            this.preemptible = Input.ofNullable(preemptible);
+            this.preemptible = Output.ofNullable(preemptible);
             return this;
         }
 
-        public Builder reserved(@Nullable Input<Boolean> reserved) {
+        public Builder reserved(@Nullable Output<Boolean> reserved) {
             this.reserved = reserved;
             return this;
         }
 
         public Builder reserved(@Nullable Boolean reserved) {
-            this.reserved = Input.ofNullable(reserved);
+            this.reserved = Output.ofNullable(reserved);
             return this;
         }
         public SchedulingConfigArgs build() {

@@ -6,7 +6,6 @@ package io.pulumi.aws.iam;
 import io.pulumi.aws.Utilities;
 import io.pulumi.aws.iam.GroupPolicyAttachmentArgs;
 import io.pulumi.aws.iam.inputs.GroupPolicyAttachmentState;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -98,14 +97,14 @@ public class GroupPolicyAttachment extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public GroupPolicyAttachment(String name, GroupPolicyAttachmentArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:iam/groupPolicyAttachment:GroupPolicyAttachment", name, args == null ? GroupPolicyAttachmentArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws:iam/groupPolicyAttachment:GroupPolicyAttachment", name, args == null ? GroupPolicyAttachmentArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private GroupPolicyAttachment(String name, Input<String> id, @Nullable GroupPolicyAttachmentState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private GroupPolicyAttachment(String name, Output<String> id, @Nullable GroupPolicyAttachmentState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws:iam/groupPolicyAttachment:GroupPolicyAttachment", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -121,7 +120,7 @@ public class GroupPolicyAttachment extends io.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static GroupPolicyAttachment get(String name, Input<String> id, @Nullable GroupPolicyAttachmentState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static GroupPolicyAttachment get(String name, Output<String> id, @Nullable GroupPolicyAttachmentState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new GroupPolicyAttachment(name, id, state, options);
     }
 }

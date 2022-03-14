@@ -5,7 +5,7 @@ package io.pulumi.awsnative.groundstation.inputs;
 
 import io.pulumi.awsnative.groundstation.enums.ConfigPolarization;
 import io.pulumi.awsnative.groundstation.inputs.ConfigFrequencyArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -16,29 +16,29 @@ public final class ConfigUplinkSpectrumConfigArgs extends io.pulumi.resources.Re
     public static final ConfigUplinkSpectrumConfigArgs Empty = new ConfigUplinkSpectrumConfigArgs();
 
     @InputImport(name="centerFrequency")
-      private final @Nullable Input<ConfigFrequencyArgs> centerFrequency;
+      private final @Nullable Output<ConfigFrequencyArgs> centerFrequency;
 
-    public Input<ConfigFrequencyArgs> getCenterFrequency() {
-        return this.centerFrequency == null ? Input.empty() : this.centerFrequency;
+    public Output<ConfigFrequencyArgs> getCenterFrequency() {
+        return this.centerFrequency == null ? Output.empty() : this.centerFrequency;
     }
 
     @InputImport(name="polarization")
-      private final @Nullable Input<ConfigPolarization> polarization;
+      private final @Nullable Output<ConfigPolarization> polarization;
 
-    public Input<ConfigPolarization> getPolarization() {
-        return this.polarization == null ? Input.empty() : this.polarization;
+    public Output<ConfigPolarization> getPolarization() {
+        return this.polarization == null ? Output.empty() : this.polarization;
     }
 
     public ConfigUplinkSpectrumConfigArgs(
-        @Nullable Input<ConfigFrequencyArgs> centerFrequency,
-        @Nullable Input<ConfigPolarization> polarization) {
+        @Nullable Output<ConfigFrequencyArgs> centerFrequency,
+        @Nullable Output<ConfigPolarization> polarization) {
         this.centerFrequency = centerFrequency;
         this.polarization = polarization;
     }
 
     private ConfigUplinkSpectrumConfigArgs() {
-        this.centerFrequency = Input.empty();
-        this.polarization = Input.empty();
+        this.centerFrequency = Output.empty();
+        this.polarization = Output.empty();
     }
 
     public static Builder builder() {
@@ -50,8 +50,8 @@ public final class ConfigUplinkSpectrumConfigArgs extends io.pulumi.resources.Re
     }
 
     public static final class Builder {
-        private @Nullable Input<ConfigFrequencyArgs> centerFrequency;
-        private @Nullable Input<ConfigPolarization> polarization;
+        private @Nullable Output<ConfigFrequencyArgs> centerFrequency;
+        private @Nullable Output<ConfigPolarization> polarization;
 
         public Builder() {
     	      // Empty
@@ -63,23 +63,23 @@ public final class ConfigUplinkSpectrumConfigArgs extends io.pulumi.resources.Re
     	      this.polarization = defaults.polarization;
         }
 
-        public Builder centerFrequency(@Nullable Input<ConfigFrequencyArgs> centerFrequency) {
+        public Builder centerFrequency(@Nullable Output<ConfigFrequencyArgs> centerFrequency) {
             this.centerFrequency = centerFrequency;
             return this;
         }
 
         public Builder centerFrequency(@Nullable ConfigFrequencyArgs centerFrequency) {
-            this.centerFrequency = Input.ofNullable(centerFrequency);
+            this.centerFrequency = Output.ofNullable(centerFrequency);
             return this;
         }
 
-        public Builder polarization(@Nullable Input<ConfigPolarization> polarization) {
+        public Builder polarization(@Nullable Output<ConfigPolarization> polarization) {
             this.polarization = polarization;
             return this;
         }
 
         public Builder polarization(@Nullable ConfigPolarization polarization) {
-            this.polarization = Input.ofNullable(polarization);
+            this.polarization = Output.ofNullable(polarization);
             return this;
         }
         public ConfigUplinkSpectrumConfigArgs build() {

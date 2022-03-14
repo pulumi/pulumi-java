@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.s3.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -18,18 +18,18 @@ public final class BucketReplicationConfigRuleDestinationAccessControlTranslatio
      * 
      */
     @InputImport(name="owner", required=true)
-      private final Input<String> owner;
+      private final Output<String> owner;
 
-    public Input<String> getOwner() {
+    public Output<String> getOwner() {
         return this.owner;
     }
 
-    public BucketReplicationConfigRuleDestinationAccessControlTranslationGetArgs(Input<String> owner) {
+    public BucketReplicationConfigRuleDestinationAccessControlTranslationGetArgs(Output<String> owner) {
         this.owner = Objects.requireNonNull(owner, "expected parameter 'owner' to be non-null");
     }
 
     private BucketReplicationConfigRuleDestinationAccessControlTranslationGetArgs() {
-        this.owner = Input.empty();
+        this.owner = Output.empty();
     }
 
     public static Builder builder() {
@@ -41,7 +41,7 @@ public final class BucketReplicationConfigRuleDestinationAccessControlTranslatio
     }
 
     public static final class Builder {
-        private Input<String> owner;
+        private Output<String> owner;
 
         public Builder() {
     	      // Empty
@@ -52,13 +52,13 @@ public final class BucketReplicationConfigRuleDestinationAccessControlTranslatio
     	      this.owner = defaults.owner;
         }
 
-        public Builder owner(Input<String> owner) {
+        public Builder owner(Output<String> owner) {
             this.owner = Objects.requireNonNull(owner);
             return this;
         }
 
         public Builder owner(String owner) {
-            this.owner = Input.of(Objects.requireNonNull(owner));
+            this.owner = Output.of(Objects.requireNonNull(owner));
             return this;
         }
         public BucketReplicationConfigRuleDestinationAccessControlTranslationGetArgs build() {

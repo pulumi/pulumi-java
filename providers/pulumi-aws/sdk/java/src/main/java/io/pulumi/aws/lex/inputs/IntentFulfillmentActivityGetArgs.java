@@ -4,7 +4,7 @@
 package io.pulumi.aws.lex.inputs;
 
 import io.pulumi.aws.lex.inputs.IntentFulfillmentActivityCodeHookGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -21,10 +21,10 @@ public final class IntentFulfillmentActivityGetArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="codeHook")
-      private final @Nullable Input<IntentFulfillmentActivityCodeHookGetArgs> codeHook;
+      private final @Nullable Output<IntentFulfillmentActivityCodeHookGetArgs> codeHook;
 
-    public Input<IntentFulfillmentActivityCodeHookGetArgs> getCodeHook() {
-        return this.codeHook == null ? Input.empty() : this.codeHook;
+    public Output<IntentFulfillmentActivityCodeHookGetArgs> getCodeHook() {
+        return this.codeHook == null ? Output.empty() : this.codeHook;
     }
 
     /**
@@ -33,22 +33,22 @@ public final class IntentFulfillmentActivityGetArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<String> type;
+      private final Output<String> type;
 
-    public Input<String> getType() {
+    public Output<String> getType() {
         return this.type;
     }
 
     public IntentFulfillmentActivityGetArgs(
-        @Nullable Input<IntentFulfillmentActivityCodeHookGetArgs> codeHook,
-        Input<String> type) {
+        @Nullable Output<IntentFulfillmentActivityCodeHookGetArgs> codeHook,
+        Output<String> type) {
         this.codeHook = codeHook;
         this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
     }
 
     private IntentFulfillmentActivityGetArgs() {
-        this.codeHook = Input.empty();
-        this.type = Input.empty();
+        this.codeHook = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -60,8 +60,8 @@ public final class IntentFulfillmentActivityGetArgs extends io.pulumi.resources.
     }
 
     public static final class Builder {
-        private @Nullable Input<IntentFulfillmentActivityCodeHookGetArgs> codeHook;
-        private Input<String> type;
+        private @Nullable Output<IntentFulfillmentActivityCodeHookGetArgs> codeHook;
+        private Output<String> type;
 
         public Builder() {
     	      // Empty
@@ -73,23 +73,23 @@ public final class IntentFulfillmentActivityGetArgs extends io.pulumi.resources.
     	      this.type = defaults.type;
         }
 
-        public Builder codeHook(@Nullable Input<IntentFulfillmentActivityCodeHookGetArgs> codeHook) {
+        public Builder codeHook(@Nullable Output<IntentFulfillmentActivityCodeHookGetArgs> codeHook) {
             this.codeHook = codeHook;
             return this;
         }
 
         public Builder codeHook(@Nullable IntentFulfillmentActivityCodeHookGetArgs codeHook) {
-            this.codeHook = Input.ofNullable(codeHook);
+            this.codeHook = Output.ofNullable(codeHook);
             return this;
         }
 
-        public Builder type(Input<String> type) {
+        public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(String type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
         public IntentFulfillmentActivityGetArgs build() {

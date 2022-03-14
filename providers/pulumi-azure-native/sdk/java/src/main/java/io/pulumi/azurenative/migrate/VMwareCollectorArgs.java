@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.migrate;
 
 import io.pulumi.azurenative.migrate.inputs.CollectorPropertiesArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -16,10 +16,10 @@ public final class VMwareCollectorArgs extends io.pulumi.resources.ResourceArgs 
     public static final VMwareCollectorArgs Empty = new VMwareCollectorArgs();
 
     @InputImport(name="eTag")
-      private final @Nullable Input<String> eTag;
+      private final @Nullable Output<String> eTag;
 
-    public Input<String> getETag() {
-        return this.eTag == null ? Input.empty() : this.eTag;
+    public Output<String> getETag() {
+        return this.eTag == null ? Output.empty() : this.eTag;
     }
 
     /**
@@ -27,17 +27,17 @@ public final class VMwareCollectorArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="projectName", required=true)
-      private final Input<String> projectName;
+      private final Output<String> projectName;
 
-    public Input<String> getProjectName() {
+    public Output<String> getProjectName() {
         return this.projectName;
     }
 
     @InputImport(name="properties")
-      private final @Nullable Input<CollectorPropertiesArgs> properties;
+      private final @Nullable Output<CollectorPropertiesArgs> properties;
 
-    public Input<CollectorPropertiesArgs> getProperties() {
-        return this.properties == null ? Input.empty() : this.properties;
+    public Output<CollectorPropertiesArgs> getProperties() {
+        return this.properties == null ? Output.empty() : this.properties;
     }
 
     /**
@@ -45,9 +45,9 @@ public final class VMwareCollectorArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -56,18 +56,18 @@ public final class VMwareCollectorArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="vmWareCollectorName")
-      private final @Nullable Input<String> vmWareCollectorName;
+      private final @Nullable Output<String> vmWareCollectorName;
 
-    public Input<String> getVmWareCollectorName() {
-        return this.vmWareCollectorName == null ? Input.empty() : this.vmWareCollectorName;
+    public Output<String> getVmWareCollectorName() {
+        return this.vmWareCollectorName == null ? Output.empty() : this.vmWareCollectorName;
     }
 
     public VMwareCollectorArgs(
-        @Nullable Input<String> eTag,
-        Input<String> projectName,
-        @Nullable Input<CollectorPropertiesArgs> properties,
-        Input<String> resourceGroupName,
-        @Nullable Input<String> vmWareCollectorName) {
+        @Nullable Output<String> eTag,
+        Output<String> projectName,
+        @Nullable Output<CollectorPropertiesArgs> properties,
+        Output<String> resourceGroupName,
+        @Nullable Output<String> vmWareCollectorName) {
         this.eTag = eTag;
         this.projectName = Objects.requireNonNull(projectName, "expected parameter 'projectName' to be non-null");
         this.properties = properties;
@@ -76,11 +76,11 @@ public final class VMwareCollectorArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private VMwareCollectorArgs() {
-        this.eTag = Input.empty();
-        this.projectName = Input.empty();
-        this.properties = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.vmWareCollectorName = Input.empty();
+        this.eTag = Output.empty();
+        this.projectName = Output.empty();
+        this.properties = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.vmWareCollectorName = Output.empty();
     }
 
     public static Builder builder() {
@@ -92,11 +92,11 @@ public final class VMwareCollectorArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private @Nullable Input<String> eTag;
-        private Input<String> projectName;
-        private @Nullable Input<CollectorPropertiesArgs> properties;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<String> vmWareCollectorName;
+        private @Nullable Output<String> eTag;
+        private Output<String> projectName;
+        private @Nullable Output<CollectorPropertiesArgs> properties;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<String> vmWareCollectorName;
 
         public Builder() {
     	      // Empty
@@ -111,53 +111,53 @@ public final class VMwareCollectorArgs extends io.pulumi.resources.ResourceArgs 
     	      this.vmWareCollectorName = defaults.vmWareCollectorName;
         }
 
-        public Builder eTag(@Nullable Input<String> eTag) {
+        public Builder eTag(@Nullable Output<String> eTag) {
             this.eTag = eTag;
             return this;
         }
 
         public Builder eTag(@Nullable String eTag) {
-            this.eTag = Input.ofNullable(eTag);
+            this.eTag = Output.ofNullable(eTag);
             return this;
         }
 
-        public Builder projectName(Input<String> projectName) {
+        public Builder projectName(Output<String> projectName) {
             this.projectName = Objects.requireNonNull(projectName);
             return this;
         }
 
         public Builder projectName(String projectName) {
-            this.projectName = Input.of(Objects.requireNonNull(projectName));
+            this.projectName = Output.of(Objects.requireNonNull(projectName));
             return this;
         }
 
-        public Builder properties(@Nullable Input<CollectorPropertiesArgs> properties) {
+        public Builder properties(@Nullable Output<CollectorPropertiesArgs> properties) {
             this.properties = properties;
             return this;
         }
 
         public Builder properties(@Nullable CollectorPropertiesArgs properties) {
-            this.properties = Input.ofNullable(properties);
+            this.properties = Output.ofNullable(properties);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder vmWareCollectorName(@Nullable Input<String> vmWareCollectorName) {
+        public Builder vmWareCollectorName(@Nullable Output<String> vmWareCollectorName) {
             this.vmWareCollectorName = vmWareCollectorName;
             return this;
         }
 
         public Builder vmWareCollectorName(@Nullable String vmWareCollectorName) {
-            this.vmWareCollectorName = Input.ofNullable(vmWareCollectorName);
+            this.vmWareCollectorName = Output.ofNullable(vmWareCollectorName);
             return this;
         }
         public VMwareCollectorArgs build() {

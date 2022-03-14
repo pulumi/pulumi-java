@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.sql.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class ManagedInstancePairInfoArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="partnerManagedInstanceId")
-      private final @Nullable Input<String> partnerManagedInstanceId;
+      private final @Nullable Output<String> partnerManagedInstanceId;
 
-    public Input<String> getPartnerManagedInstanceId() {
-        return this.partnerManagedInstanceId == null ? Input.empty() : this.partnerManagedInstanceId;
+    public Output<String> getPartnerManagedInstanceId() {
+        return this.partnerManagedInstanceId == null ? Output.empty() : this.partnerManagedInstanceId;
     }
 
     /**
@@ -34,22 +34,22 @@ public final class ManagedInstancePairInfoArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="primaryManagedInstanceId")
-      private final @Nullable Input<String> primaryManagedInstanceId;
+      private final @Nullable Output<String> primaryManagedInstanceId;
 
-    public Input<String> getPrimaryManagedInstanceId() {
-        return this.primaryManagedInstanceId == null ? Input.empty() : this.primaryManagedInstanceId;
+    public Output<String> getPrimaryManagedInstanceId() {
+        return this.primaryManagedInstanceId == null ? Output.empty() : this.primaryManagedInstanceId;
     }
 
     public ManagedInstancePairInfoArgs(
-        @Nullable Input<String> partnerManagedInstanceId,
-        @Nullable Input<String> primaryManagedInstanceId) {
+        @Nullable Output<String> partnerManagedInstanceId,
+        @Nullable Output<String> primaryManagedInstanceId) {
         this.partnerManagedInstanceId = partnerManagedInstanceId;
         this.primaryManagedInstanceId = primaryManagedInstanceId;
     }
 
     private ManagedInstancePairInfoArgs() {
-        this.partnerManagedInstanceId = Input.empty();
-        this.primaryManagedInstanceId = Input.empty();
+        this.partnerManagedInstanceId = Output.empty();
+        this.primaryManagedInstanceId = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class ManagedInstancePairInfoArgs extends io.pulumi.resources.Resou
     }
 
     public static final class Builder {
-        private @Nullable Input<String> partnerManagedInstanceId;
-        private @Nullable Input<String> primaryManagedInstanceId;
+        private @Nullable Output<String> partnerManagedInstanceId;
+        private @Nullable Output<String> primaryManagedInstanceId;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class ManagedInstancePairInfoArgs extends io.pulumi.resources.Resou
     	      this.primaryManagedInstanceId = defaults.primaryManagedInstanceId;
         }
 
-        public Builder partnerManagedInstanceId(@Nullable Input<String> partnerManagedInstanceId) {
+        public Builder partnerManagedInstanceId(@Nullable Output<String> partnerManagedInstanceId) {
             this.partnerManagedInstanceId = partnerManagedInstanceId;
             return this;
         }
 
         public Builder partnerManagedInstanceId(@Nullable String partnerManagedInstanceId) {
-            this.partnerManagedInstanceId = Input.ofNullable(partnerManagedInstanceId);
+            this.partnerManagedInstanceId = Output.ofNullable(partnerManagedInstanceId);
             return this;
         }
 
-        public Builder primaryManagedInstanceId(@Nullable Input<String> primaryManagedInstanceId) {
+        public Builder primaryManagedInstanceId(@Nullable Output<String> primaryManagedInstanceId) {
             this.primaryManagedInstanceId = primaryManagedInstanceId;
             return this;
         }
 
         public Builder primaryManagedInstanceId(@Nullable String primaryManagedInstanceId) {
-            this.primaryManagedInstanceId = Input.ofNullable(primaryManagedInstanceId);
+            this.primaryManagedInstanceId = Output.ofNullable(primaryManagedInstanceId);
             return this;
         }
         public ManagedInstancePairInfoArgs build() {

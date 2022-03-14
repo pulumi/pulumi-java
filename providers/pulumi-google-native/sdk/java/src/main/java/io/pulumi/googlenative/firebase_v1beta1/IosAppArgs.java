@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.firebase_v1beta1;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class IosAppArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="appId")
-      private final @Nullable Input<String> appId;
+      private final @Nullable Output<String> appId;
 
-    public Input<String> getAppId() {
-        return this.appId == null ? Input.empty() : this.appId;
+    public Output<String> getAppId() {
+        return this.appId == null ? Output.empty() : this.appId;
     }
 
     /**
@@ -30,10 +30,10 @@ public final class IosAppArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="appStoreId")
-      private final @Nullable Input<String> appStoreId;
+      private final @Nullable Output<String> appStoreId;
 
-    public Input<String> getAppStoreId() {
-        return this.appStoreId == null ? Input.empty() : this.appStoreId;
+    public Output<String> getAppStoreId() {
+        return this.appStoreId == null ? Output.empty() : this.appStoreId;
     }
 
     /**
@@ -41,10 +41,10 @@ public final class IosAppArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="bundleId")
-      private final @Nullable Input<String> bundleId;
+      private final @Nullable Output<String> bundleId;
 
-    public Input<String> getBundleId() {
-        return this.bundleId == null ? Input.empty() : this.bundleId;
+    public Output<String> getBundleId() {
+        return this.bundleId == null ? Output.empty() : this.bundleId;
     }
 
     /**
@@ -52,10 +52,10 @@ public final class IosAppArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName")
-      private final @Nullable Input<String> displayName;
+      private final @Nullable Output<String> displayName;
 
-    public Input<String> getDisplayName() {
-        return this.displayName == null ? Input.empty() : this.displayName;
+    public Output<String> getDisplayName() {
+        return this.displayName == null ? Output.empty() : this.displayName;
     }
 
     /**
@@ -63,10 +63,10 @@ public final class IosAppArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -74,10 +74,10 @@ public final class IosAppArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -85,20 +85,20 @@ public final class IosAppArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="teamId")
-      private final @Nullable Input<String> teamId;
+      private final @Nullable Output<String> teamId;
 
-    public Input<String> getTeamId() {
-        return this.teamId == null ? Input.empty() : this.teamId;
+    public Output<String> getTeamId() {
+        return this.teamId == null ? Output.empty() : this.teamId;
     }
 
     public IosAppArgs(
-        @Nullable Input<String> appId,
-        @Nullable Input<String> appStoreId,
-        @Nullable Input<String> bundleId,
-        @Nullable Input<String> displayName,
-        @Nullable Input<String> name,
-        @Nullable Input<String> project,
-        @Nullable Input<String> teamId) {
+        @Nullable Output<String> appId,
+        @Nullable Output<String> appStoreId,
+        @Nullable Output<String> bundleId,
+        @Nullable Output<String> displayName,
+        @Nullable Output<String> name,
+        @Nullable Output<String> project,
+        @Nullable Output<String> teamId) {
         this.appId = appId;
         this.appStoreId = appStoreId;
         this.bundleId = bundleId;
@@ -109,13 +109,13 @@ public final class IosAppArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private IosAppArgs() {
-        this.appId = Input.empty();
-        this.appStoreId = Input.empty();
-        this.bundleId = Input.empty();
-        this.displayName = Input.empty();
-        this.name = Input.empty();
-        this.project = Input.empty();
-        this.teamId = Input.empty();
+        this.appId = Output.empty();
+        this.appStoreId = Output.empty();
+        this.bundleId = Output.empty();
+        this.displayName = Output.empty();
+        this.name = Output.empty();
+        this.project = Output.empty();
+        this.teamId = Output.empty();
     }
 
     public static Builder builder() {
@@ -127,13 +127,13 @@ public final class IosAppArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> appId;
-        private @Nullable Input<String> appStoreId;
-        private @Nullable Input<String> bundleId;
-        private @Nullable Input<String> displayName;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> project;
-        private @Nullable Input<String> teamId;
+        private @Nullable Output<String> appId;
+        private @Nullable Output<String> appStoreId;
+        private @Nullable Output<String> bundleId;
+        private @Nullable Output<String> displayName;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> project;
+        private @Nullable Output<String> teamId;
 
         public Builder() {
     	      // Empty
@@ -150,73 +150,73 @@ public final class IosAppArgs extends io.pulumi.resources.ResourceArgs {
     	      this.teamId = defaults.teamId;
         }
 
-        public Builder appId(@Nullable Input<String> appId) {
+        public Builder appId(@Nullable Output<String> appId) {
             this.appId = appId;
             return this;
         }
 
         public Builder appId(@Nullable String appId) {
-            this.appId = Input.ofNullable(appId);
+            this.appId = Output.ofNullable(appId);
             return this;
         }
 
-        public Builder appStoreId(@Nullable Input<String> appStoreId) {
+        public Builder appStoreId(@Nullable Output<String> appStoreId) {
             this.appStoreId = appStoreId;
             return this;
         }
 
         public Builder appStoreId(@Nullable String appStoreId) {
-            this.appStoreId = Input.ofNullable(appStoreId);
+            this.appStoreId = Output.ofNullable(appStoreId);
             return this;
         }
 
-        public Builder bundleId(@Nullable Input<String> bundleId) {
+        public Builder bundleId(@Nullable Output<String> bundleId) {
             this.bundleId = bundleId;
             return this;
         }
 
         public Builder bundleId(@Nullable String bundleId) {
-            this.bundleId = Input.ofNullable(bundleId);
+            this.bundleId = Output.ofNullable(bundleId);
             return this;
         }
 
-        public Builder displayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Input.ofNullable(displayName);
+            this.displayName = Output.ofNullable(displayName);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder teamId(@Nullable Input<String> teamId) {
+        public Builder teamId(@Nullable Output<String> teamId) {
             this.teamId = teamId;
             return this;
         }
 
         public Builder teamId(@Nullable String teamId) {
-            this.teamId = Input.ofNullable(teamId);
+            this.teamId = Output.ofNullable(teamId);
             return this;
         }
         public IosAppArgs build() {

@@ -6,7 +6,7 @@ package io.pulumi.azurenative.policyinsights;
 import io.pulumi.azurenative.policyinsights.enums.ResourceDiscoveryMode;
 import io.pulumi.azurenative.policyinsights.inputs.RemediationFiltersArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -22,10 +22,10 @@ public final class RemediationAtSubscriptionArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="filters")
-      private final @Nullable Input<RemediationFiltersArgs> filters;
+      private final @Nullable Output<RemediationFiltersArgs> filters;
 
-    public Input<RemediationFiltersArgs> getFilters() {
-        return this.filters == null ? Input.empty() : this.filters;
+    public Output<RemediationFiltersArgs> getFilters() {
+        return this.filters == null ? Output.empty() : this.filters;
     }
 
     /**
@@ -33,10 +33,10 @@ public final class RemediationAtSubscriptionArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="policyAssignmentId")
-      private final @Nullable Input<String> policyAssignmentId;
+      private final @Nullable Output<String> policyAssignmentId;
 
-    public Input<String> getPolicyAssignmentId() {
-        return this.policyAssignmentId == null ? Input.empty() : this.policyAssignmentId;
+    public Output<String> getPolicyAssignmentId() {
+        return this.policyAssignmentId == null ? Output.empty() : this.policyAssignmentId;
     }
 
     /**
@@ -44,10 +44,10 @@ public final class RemediationAtSubscriptionArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="policyDefinitionReferenceId")
-      private final @Nullable Input<String> policyDefinitionReferenceId;
+      private final @Nullable Output<String> policyDefinitionReferenceId;
 
-    public Input<String> getPolicyDefinitionReferenceId() {
-        return this.policyDefinitionReferenceId == null ? Input.empty() : this.policyDefinitionReferenceId;
+    public Output<String> getPolicyDefinitionReferenceId() {
+        return this.policyDefinitionReferenceId == null ? Output.empty() : this.policyDefinitionReferenceId;
     }
 
     /**
@@ -55,10 +55,10 @@ public final class RemediationAtSubscriptionArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="remediationName")
-      private final @Nullable Input<String> remediationName;
+      private final @Nullable Output<String> remediationName;
 
-    public Input<String> getRemediationName() {
-        return this.remediationName == null ? Input.empty() : this.remediationName;
+    public Output<String> getRemediationName() {
+        return this.remediationName == null ? Output.empty() : this.remediationName;
     }
 
     /**
@@ -66,18 +66,18 @@ public final class RemediationAtSubscriptionArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="resourceDiscoveryMode")
-      private final @Nullable Input<Either<String,ResourceDiscoveryMode>> resourceDiscoveryMode;
+      private final @Nullable Output<Either<String,ResourceDiscoveryMode>> resourceDiscoveryMode;
 
-    public Input<Either<String,ResourceDiscoveryMode>> getResourceDiscoveryMode() {
-        return this.resourceDiscoveryMode == null ? Input.empty() : this.resourceDiscoveryMode;
+    public Output<Either<String,ResourceDiscoveryMode>> getResourceDiscoveryMode() {
+        return this.resourceDiscoveryMode == null ? Output.empty() : this.resourceDiscoveryMode;
     }
 
     public RemediationAtSubscriptionArgs(
-        @Nullable Input<RemediationFiltersArgs> filters,
-        @Nullable Input<String> policyAssignmentId,
-        @Nullable Input<String> policyDefinitionReferenceId,
-        @Nullable Input<String> remediationName,
-        @Nullable Input<Either<String,ResourceDiscoveryMode>> resourceDiscoveryMode) {
+        @Nullable Output<RemediationFiltersArgs> filters,
+        @Nullable Output<String> policyAssignmentId,
+        @Nullable Output<String> policyDefinitionReferenceId,
+        @Nullable Output<String> remediationName,
+        @Nullable Output<Either<String,ResourceDiscoveryMode>> resourceDiscoveryMode) {
         this.filters = filters;
         this.policyAssignmentId = policyAssignmentId;
         this.policyDefinitionReferenceId = policyDefinitionReferenceId;
@@ -86,11 +86,11 @@ public final class RemediationAtSubscriptionArgs extends io.pulumi.resources.Res
     }
 
     private RemediationAtSubscriptionArgs() {
-        this.filters = Input.empty();
-        this.policyAssignmentId = Input.empty();
-        this.policyDefinitionReferenceId = Input.empty();
-        this.remediationName = Input.empty();
-        this.resourceDiscoveryMode = Input.empty();
+        this.filters = Output.empty();
+        this.policyAssignmentId = Output.empty();
+        this.policyDefinitionReferenceId = Output.empty();
+        this.remediationName = Output.empty();
+        this.resourceDiscoveryMode = Output.empty();
     }
 
     public static Builder builder() {
@@ -102,11 +102,11 @@ public final class RemediationAtSubscriptionArgs extends io.pulumi.resources.Res
     }
 
     public static final class Builder {
-        private @Nullable Input<RemediationFiltersArgs> filters;
-        private @Nullable Input<String> policyAssignmentId;
-        private @Nullable Input<String> policyDefinitionReferenceId;
-        private @Nullable Input<String> remediationName;
-        private @Nullable Input<Either<String,ResourceDiscoveryMode>> resourceDiscoveryMode;
+        private @Nullable Output<RemediationFiltersArgs> filters;
+        private @Nullable Output<String> policyAssignmentId;
+        private @Nullable Output<String> policyDefinitionReferenceId;
+        private @Nullable Output<String> remediationName;
+        private @Nullable Output<Either<String,ResourceDiscoveryMode>> resourceDiscoveryMode;
 
         public Builder() {
     	      // Empty
@@ -121,53 +121,53 @@ public final class RemediationAtSubscriptionArgs extends io.pulumi.resources.Res
     	      this.resourceDiscoveryMode = defaults.resourceDiscoveryMode;
         }
 
-        public Builder filters(@Nullable Input<RemediationFiltersArgs> filters) {
+        public Builder filters(@Nullable Output<RemediationFiltersArgs> filters) {
             this.filters = filters;
             return this;
         }
 
         public Builder filters(@Nullable RemediationFiltersArgs filters) {
-            this.filters = Input.ofNullable(filters);
+            this.filters = Output.ofNullable(filters);
             return this;
         }
 
-        public Builder policyAssignmentId(@Nullable Input<String> policyAssignmentId) {
+        public Builder policyAssignmentId(@Nullable Output<String> policyAssignmentId) {
             this.policyAssignmentId = policyAssignmentId;
             return this;
         }
 
         public Builder policyAssignmentId(@Nullable String policyAssignmentId) {
-            this.policyAssignmentId = Input.ofNullable(policyAssignmentId);
+            this.policyAssignmentId = Output.ofNullable(policyAssignmentId);
             return this;
         }
 
-        public Builder policyDefinitionReferenceId(@Nullable Input<String> policyDefinitionReferenceId) {
+        public Builder policyDefinitionReferenceId(@Nullable Output<String> policyDefinitionReferenceId) {
             this.policyDefinitionReferenceId = policyDefinitionReferenceId;
             return this;
         }
 
         public Builder policyDefinitionReferenceId(@Nullable String policyDefinitionReferenceId) {
-            this.policyDefinitionReferenceId = Input.ofNullable(policyDefinitionReferenceId);
+            this.policyDefinitionReferenceId = Output.ofNullable(policyDefinitionReferenceId);
             return this;
         }
 
-        public Builder remediationName(@Nullable Input<String> remediationName) {
+        public Builder remediationName(@Nullable Output<String> remediationName) {
             this.remediationName = remediationName;
             return this;
         }
 
         public Builder remediationName(@Nullable String remediationName) {
-            this.remediationName = Input.ofNullable(remediationName);
+            this.remediationName = Output.ofNullable(remediationName);
             return this;
         }
 
-        public Builder resourceDiscoveryMode(@Nullable Input<Either<String,ResourceDiscoveryMode>> resourceDiscoveryMode) {
+        public Builder resourceDiscoveryMode(@Nullable Output<Either<String,ResourceDiscoveryMode>> resourceDiscoveryMode) {
             this.resourceDiscoveryMode = resourceDiscoveryMode;
             return this;
         }
 
         public Builder resourceDiscoveryMode(@Nullable Either<String,ResourceDiscoveryMode> resourceDiscoveryMode) {
-            this.resourceDiscoveryMode = Input.ofNullable(resourceDiscoveryMode);
+            this.resourceDiscoveryMode = Output.ofNullable(resourceDiscoveryMode);
             return this;
         }
         public RemediationAtSubscriptionArgs build() {

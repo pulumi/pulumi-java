@@ -6,7 +6,6 @@ package io.pulumi.aws.cloudwatch;
 import io.pulumi.aws.Utilities;
 import io.pulumi.aws.cloudwatch.LogSubscriptionFilterArgs;
 import io.pulumi.aws.cloudwatch.inputs.LogSubscriptionFilterState;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -152,14 +151,14 @@ public class LogSubscriptionFilter extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public LogSubscriptionFilter(String name, LogSubscriptionFilterArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:cloudwatch/logSubscriptionFilter:LogSubscriptionFilter", name, args == null ? LogSubscriptionFilterArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws:cloudwatch/logSubscriptionFilter:LogSubscriptionFilter", name, args == null ? LogSubscriptionFilterArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private LogSubscriptionFilter(String name, Input<String> id, @Nullable LogSubscriptionFilterState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private LogSubscriptionFilter(String name, Output<String> id, @Nullable LogSubscriptionFilterState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws:cloudwatch/logSubscriptionFilter:LogSubscriptionFilter", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -175,7 +174,7 @@ public class LogSubscriptionFilter extends io.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static LogSubscriptionFilter get(String name, Input<String> id, @Nullable LogSubscriptionFilterState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static LogSubscriptionFilter get(String name, Output<String> id, @Nullable LogSubscriptionFilterState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new LogSubscriptionFilter(name, id, state, options);
     }
 }

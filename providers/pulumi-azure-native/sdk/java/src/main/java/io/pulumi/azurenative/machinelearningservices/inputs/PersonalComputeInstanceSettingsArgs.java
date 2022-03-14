@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.machinelearningservices.inputs;
 
 import io.pulumi.azurenative.machinelearningservices.inputs.AssignedUserArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,18 +23,18 @@ public final class PersonalComputeInstanceSettingsArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="assignedUser")
-      private final @Nullable Input<AssignedUserArgs> assignedUser;
+      private final @Nullable Output<AssignedUserArgs> assignedUser;
 
-    public Input<AssignedUserArgs> getAssignedUser() {
-        return this.assignedUser == null ? Input.empty() : this.assignedUser;
+    public Output<AssignedUserArgs> getAssignedUser() {
+        return this.assignedUser == null ? Output.empty() : this.assignedUser;
     }
 
-    public PersonalComputeInstanceSettingsArgs(@Nullable Input<AssignedUserArgs> assignedUser) {
+    public PersonalComputeInstanceSettingsArgs(@Nullable Output<AssignedUserArgs> assignedUser) {
         this.assignedUser = assignedUser;
     }
 
     private PersonalComputeInstanceSettingsArgs() {
-        this.assignedUser = Input.empty();
+        this.assignedUser = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class PersonalComputeInstanceSettingsArgs extends io.pulumi.resourc
     }
 
     public static final class Builder {
-        private @Nullable Input<AssignedUserArgs> assignedUser;
+        private @Nullable Output<AssignedUserArgs> assignedUser;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class PersonalComputeInstanceSettingsArgs extends io.pulumi.resourc
     	      this.assignedUser = defaults.assignedUser;
         }
 
-        public Builder assignedUser(@Nullable Input<AssignedUserArgs> assignedUser) {
+        public Builder assignedUser(@Nullable Output<AssignedUserArgs> assignedUser) {
             this.assignedUser = assignedUser;
             return this;
         }
 
         public Builder assignedUser(@Nullable AssignedUserArgs assignedUser) {
-            this.assignedUser = Input.ofNullable(assignedUser);
+            this.assignedUser = Output.ofNullable(assignedUser);
             return this;
         }
         public PersonalComputeInstanceSettingsArgs build() {

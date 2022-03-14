@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.apigatewayv2.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -20,10 +20,10 @@ public final class RouteResponseState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="apiId")
-      private final @Nullable Input<String> apiId;
+      private final @Nullable Output<String> apiId;
 
-    public Input<String> getApiId() {
-        return this.apiId == null ? Input.empty() : this.apiId;
+    public Output<String> getApiId() {
+        return this.apiId == null ? Output.empty() : this.apiId;
     }
 
     /**
@@ -31,10 +31,10 @@ public final class RouteResponseState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="modelSelectionExpression")
-      private final @Nullable Input<String> modelSelectionExpression;
+      private final @Nullable Output<String> modelSelectionExpression;
 
-    public Input<String> getModelSelectionExpression() {
-        return this.modelSelectionExpression == null ? Input.empty() : this.modelSelectionExpression;
+    public Output<String> getModelSelectionExpression() {
+        return this.modelSelectionExpression == null ? Output.empty() : this.modelSelectionExpression;
     }
 
     /**
@@ -42,10 +42,10 @@ public final class RouteResponseState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="responseModels")
-      private final @Nullable Input<Map<String,String>> responseModels;
+      private final @Nullable Output<Map<String,String>> responseModels;
 
-    public Input<Map<String,String>> getResponseModels() {
-        return this.responseModels == null ? Input.empty() : this.responseModels;
+    public Output<Map<String,String>> getResponseModels() {
+        return this.responseModels == null ? Output.empty() : this.responseModels;
     }
 
     /**
@@ -53,10 +53,10 @@ public final class RouteResponseState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="routeId")
-      private final @Nullable Input<String> routeId;
+      private final @Nullable Output<String> routeId;
 
-    public Input<String> getRouteId() {
-        return this.routeId == null ? Input.empty() : this.routeId;
+    public Output<String> getRouteId() {
+        return this.routeId == null ? Output.empty() : this.routeId;
     }
 
     /**
@@ -64,18 +64,18 @@ public final class RouteResponseState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="routeResponseKey")
-      private final @Nullable Input<String> routeResponseKey;
+      private final @Nullable Output<String> routeResponseKey;
 
-    public Input<String> getRouteResponseKey() {
-        return this.routeResponseKey == null ? Input.empty() : this.routeResponseKey;
+    public Output<String> getRouteResponseKey() {
+        return this.routeResponseKey == null ? Output.empty() : this.routeResponseKey;
     }
 
     public RouteResponseState(
-        @Nullable Input<String> apiId,
-        @Nullable Input<String> modelSelectionExpression,
-        @Nullable Input<Map<String,String>> responseModels,
-        @Nullable Input<String> routeId,
-        @Nullable Input<String> routeResponseKey) {
+        @Nullable Output<String> apiId,
+        @Nullable Output<String> modelSelectionExpression,
+        @Nullable Output<Map<String,String>> responseModels,
+        @Nullable Output<String> routeId,
+        @Nullable Output<String> routeResponseKey) {
         this.apiId = apiId;
         this.modelSelectionExpression = modelSelectionExpression;
         this.responseModels = responseModels;
@@ -84,11 +84,11 @@ public final class RouteResponseState extends io.pulumi.resources.ResourceArgs {
     }
 
     private RouteResponseState() {
-        this.apiId = Input.empty();
-        this.modelSelectionExpression = Input.empty();
-        this.responseModels = Input.empty();
-        this.routeId = Input.empty();
-        this.routeResponseKey = Input.empty();
+        this.apiId = Output.empty();
+        this.modelSelectionExpression = Output.empty();
+        this.responseModels = Output.empty();
+        this.routeId = Output.empty();
+        this.routeResponseKey = Output.empty();
     }
 
     public static Builder builder() {
@@ -100,11 +100,11 @@ public final class RouteResponseState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> apiId;
-        private @Nullable Input<String> modelSelectionExpression;
-        private @Nullable Input<Map<String,String>> responseModels;
-        private @Nullable Input<String> routeId;
-        private @Nullable Input<String> routeResponseKey;
+        private @Nullable Output<String> apiId;
+        private @Nullable Output<String> modelSelectionExpression;
+        private @Nullable Output<Map<String,String>> responseModels;
+        private @Nullable Output<String> routeId;
+        private @Nullable Output<String> routeResponseKey;
 
         public Builder() {
     	      // Empty
@@ -119,53 +119,53 @@ public final class RouteResponseState extends io.pulumi.resources.ResourceArgs {
     	      this.routeResponseKey = defaults.routeResponseKey;
         }
 
-        public Builder apiId(@Nullable Input<String> apiId) {
+        public Builder apiId(@Nullable Output<String> apiId) {
             this.apiId = apiId;
             return this;
         }
 
         public Builder apiId(@Nullable String apiId) {
-            this.apiId = Input.ofNullable(apiId);
+            this.apiId = Output.ofNullable(apiId);
             return this;
         }
 
-        public Builder modelSelectionExpression(@Nullable Input<String> modelSelectionExpression) {
+        public Builder modelSelectionExpression(@Nullable Output<String> modelSelectionExpression) {
             this.modelSelectionExpression = modelSelectionExpression;
             return this;
         }
 
         public Builder modelSelectionExpression(@Nullable String modelSelectionExpression) {
-            this.modelSelectionExpression = Input.ofNullable(modelSelectionExpression);
+            this.modelSelectionExpression = Output.ofNullable(modelSelectionExpression);
             return this;
         }
 
-        public Builder responseModels(@Nullable Input<Map<String,String>> responseModels) {
+        public Builder responseModels(@Nullable Output<Map<String,String>> responseModels) {
             this.responseModels = responseModels;
             return this;
         }
 
         public Builder responseModels(@Nullable Map<String,String> responseModels) {
-            this.responseModels = Input.ofNullable(responseModels);
+            this.responseModels = Output.ofNullable(responseModels);
             return this;
         }
 
-        public Builder routeId(@Nullable Input<String> routeId) {
+        public Builder routeId(@Nullable Output<String> routeId) {
             this.routeId = routeId;
             return this;
         }
 
         public Builder routeId(@Nullable String routeId) {
-            this.routeId = Input.ofNullable(routeId);
+            this.routeId = Output.ofNullable(routeId);
             return this;
         }
 
-        public Builder routeResponseKey(@Nullable Input<String> routeResponseKey) {
+        public Builder routeResponseKey(@Nullable Output<String> routeResponseKey) {
             this.routeResponseKey = routeResponseKey;
             return this;
         }
 
         public Builder routeResponseKey(@Nullable String routeResponseKey) {
-            this.routeResponseKey = Input.ofNullable(routeResponseKey);
+            this.routeResponseKey = Output.ofNullable(routeResponseKey);
             return this;
         }
         public RouteResponseState build() {

@@ -6,7 +6,7 @@ package io.pulumi.awsnative.sagemaker.inputs;
 import io.pulumi.awsnative.sagemaker.inputs.DomainJupyterServerAppSettingsArgs;
 import io.pulumi.awsnative.sagemaker.inputs.DomainKernelGatewayAppSettingsArgs;
 import io.pulumi.awsnative.sagemaker.inputs.DomainSharingSettingsArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -27,10 +27,10 @@ public final class DomainUserSettingsArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="executionRole")
-      private final @Nullable Input<String> executionRole;
+      private final @Nullable Output<String> executionRole;
 
-    public Input<String> getExecutionRole() {
-        return this.executionRole == null ? Input.empty() : this.executionRole;
+    public Output<String> getExecutionRole() {
+        return this.executionRole == null ? Output.empty() : this.executionRole;
     }
 
     /**
@@ -38,10 +38,10 @@ public final class DomainUserSettingsArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="jupyterServerAppSettings")
-      private final @Nullable Input<DomainJupyterServerAppSettingsArgs> jupyterServerAppSettings;
+      private final @Nullable Output<DomainJupyterServerAppSettingsArgs> jupyterServerAppSettings;
 
-    public Input<DomainJupyterServerAppSettingsArgs> getJupyterServerAppSettings() {
-        return this.jupyterServerAppSettings == null ? Input.empty() : this.jupyterServerAppSettings;
+    public Output<DomainJupyterServerAppSettingsArgs> getJupyterServerAppSettings() {
+        return this.jupyterServerAppSettings == null ? Output.empty() : this.jupyterServerAppSettings;
     }
 
     /**
@@ -49,10 +49,10 @@ public final class DomainUserSettingsArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="kernelGatewayAppSettings")
-      private final @Nullable Input<DomainKernelGatewayAppSettingsArgs> kernelGatewayAppSettings;
+      private final @Nullable Output<DomainKernelGatewayAppSettingsArgs> kernelGatewayAppSettings;
 
-    public Input<DomainKernelGatewayAppSettingsArgs> getKernelGatewayAppSettings() {
-        return this.kernelGatewayAppSettings == null ? Input.empty() : this.kernelGatewayAppSettings;
+    public Output<DomainKernelGatewayAppSettingsArgs> getKernelGatewayAppSettings() {
+        return this.kernelGatewayAppSettings == null ? Output.empty() : this.kernelGatewayAppSettings;
     }
 
     /**
@@ -60,10 +60,10 @@ public final class DomainUserSettingsArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="securityGroups")
-      private final @Nullable Input<List<String>> securityGroups;
+      private final @Nullable Output<List<String>> securityGroups;
 
-    public Input<List<String>> getSecurityGroups() {
-        return this.securityGroups == null ? Input.empty() : this.securityGroups;
+    public Output<List<String>> getSecurityGroups() {
+        return this.securityGroups == null ? Output.empty() : this.securityGroups;
     }
 
     /**
@@ -71,18 +71,18 @@ public final class DomainUserSettingsArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="sharingSettings")
-      private final @Nullable Input<DomainSharingSettingsArgs> sharingSettings;
+      private final @Nullable Output<DomainSharingSettingsArgs> sharingSettings;
 
-    public Input<DomainSharingSettingsArgs> getSharingSettings() {
-        return this.sharingSettings == null ? Input.empty() : this.sharingSettings;
+    public Output<DomainSharingSettingsArgs> getSharingSettings() {
+        return this.sharingSettings == null ? Output.empty() : this.sharingSettings;
     }
 
     public DomainUserSettingsArgs(
-        @Nullable Input<String> executionRole,
-        @Nullable Input<DomainJupyterServerAppSettingsArgs> jupyterServerAppSettings,
-        @Nullable Input<DomainKernelGatewayAppSettingsArgs> kernelGatewayAppSettings,
-        @Nullable Input<List<String>> securityGroups,
-        @Nullable Input<DomainSharingSettingsArgs> sharingSettings) {
+        @Nullable Output<String> executionRole,
+        @Nullable Output<DomainJupyterServerAppSettingsArgs> jupyterServerAppSettings,
+        @Nullable Output<DomainKernelGatewayAppSettingsArgs> kernelGatewayAppSettings,
+        @Nullable Output<List<String>> securityGroups,
+        @Nullable Output<DomainSharingSettingsArgs> sharingSettings) {
         this.executionRole = executionRole;
         this.jupyterServerAppSettings = jupyterServerAppSettings;
         this.kernelGatewayAppSettings = kernelGatewayAppSettings;
@@ -91,11 +91,11 @@ public final class DomainUserSettingsArgs extends io.pulumi.resources.ResourceAr
     }
 
     private DomainUserSettingsArgs() {
-        this.executionRole = Input.empty();
-        this.jupyterServerAppSettings = Input.empty();
-        this.kernelGatewayAppSettings = Input.empty();
-        this.securityGroups = Input.empty();
-        this.sharingSettings = Input.empty();
+        this.executionRole = Output.empty();
+        this.jupyterServerAppSettings = Output.empty();
+        this.kernelGatewayAppSettings = Output.empty();
+        this.securityGroups = Output.empty();
+        this.sharingSettings = Output.empty();
     }
 
     public static Builder builder() {
@@ -107,11 +107,11 @@ public final class DomainUserSettingsArgs extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private @Nullable Input<String> executionRole;
-        private @Nullable Input<DomainJupyterServerAppSettingsArgs> jupyterServerAppSettings;
-        private @Nullable Input<DomainKernelGatewayAppSettingsArgs> kernelGatewayAppSettings;
-        private @Nullable Input<List<String>> securityGroups;
-        private @Nullable Input<DomainSharingSettingsArgs> sharingSettings;
+        private @Nullable Output<String> executionRole;
+        private @Nullable Output<DomainJupyterServerAppSettingsArgs> jupyterServerAppSettings;
+        private @Nullable Output<DomainKernelGatewayAppSettingsArgs> kernelGatewayAppSettings;
+        private @Nullable Output<List<String>> securityGroups;
+        private @Nullable Output<DomainSharingSettingsArgs> sharingSettings;
 
         public Builder() {
     	      // Empty
@@ -126,53 +126,53 @@ public final class DomainUserSettingsArgs extends io.pulumi.resources.ResourceAr
     	      this.sharingSettings = defaults.sharingSettings;
         }
 
-        public Builder executionRole(@Nullable Input<String> executionRole) {
+        public Builder executionRole(@Nullable Output<String> executionRole) {
             this.executionRole = executionRole;
             return this;
         }
 
         public Builder executionRole(@Nullable String executionRole) {
-            this.executionRole = Input.ofNullable(executionRole);
+            this.executionRole = Output.ofNullable(executionRole);
             return this;
         }
 
-        public Builder jupyterServerAppSettings(@Nullable Input<DomainJupyterServerAppSettingsArgs> jupyterServerAppSettings) {
+        public Builder jupyterServerAppSettings(@Nullable Output<DomainJupyterServerAppSettingsArgs> jupyterServerAppSettings) {
             this.jupyterServerAppSettings = jupyterServerAppSettings;
             return this;
         }
 
         public Builder jupyterServerAppSettings(@Nullable DomainJupyterServerAppSettingsArgs jupyterServerAppSettings) {
-            this.jupyterServerAppSettings = Input.ofNullable(jupyterServerAppSettings);
+            this.jupyterServerAppSettings = Output.ofNullable(jupyterServerAppSettings);
             return this;
         }
 
-        public Builder kernelGatewayAppSettings(@Nullable Input<DomainKernelGatewayAppSettingsArgs> kernelGatewayAppSettings) {
+        public Builder kernelGatewayAppSettings(@Nullable Output<DomainKernelGatewayAppSettingsArgs> kernelGatewayAppSettings) {
             this.kernelGatewayAppSettings = kernelGatewayAppSettings;
             return this;
         }
 
         public Builder kernelGatewayAppSettings(@Nullable DomainKernelGatewayAppSettingsArgs kernelGatewayAppSettings) {
-            this.kernelGatewayAppSettings = Input.ofNullable(kernelGatewayAppSettings);
+            this.kernelGatewayAppSettings = Output.ofNullable(kernelGatewayAppSettings);
             return this;
         }
 
-        public Builder securityGroups(@Nullable Input<List<String>> securityGroups) {
+        public Builder securityGroups(@Nullable Output<List<String>> securityGroups) {
             this.securityGroups = securityGroups;
             return this;
         }
 
         public Builder securityGroups(@Nullable List<String> securityGroups) {
-            this.securityGroups = Input.ofNullable(securityGroups);
+            this.securityGroups = Output.ofNullable(securityGroups);
             return this;
         }
 
-        public Builder sharingSettings(@Nullable Input<DomainSharingSettingsArgs> sharingSettings) {
+        public Builder sharingSettings(@Nullable Output<DomainSharingSettingsArgs> sharingSettings) {
             this.sharingSettings = sharingSettings;
             return this;
         }
 
         public Builder sharingSettings(@Nullable DomainSharingSettingsArgs sharingSettings) {
-            this.sharingSettings = Input.ofNullable(sharingSettings);
+            this.sharingSettings = Output.ofNullable(sharingSettings);
             return this;
         }
         public DomainUserSettingsArgs build() {

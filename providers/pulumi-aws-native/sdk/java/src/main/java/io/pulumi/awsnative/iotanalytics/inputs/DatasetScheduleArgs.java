@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.iotanalytics.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -14,18 +14,18 @@ public final class DatasetScheduleArgs extends io.pulumi.resources.ResourceArgs 
     public static final DatasetScheduleArgs Empty = new DatasetScheduleArgs();
 
     @InputImport(name="scheduleExpression", required=true)
-      private final Input<String> scheduleExpression;
+      private final Output<String> scheduleExpression;
 
-    public Input<String> getScheduleExpression() {
+    public Output<String> getScheduleExpression() {
         return this.scheduleExpression;
     }
 
-    public DatasetScheduleArgs(Input<String> scheduleExpression) {
+    public DatasetScheduleArgs(Output<String> scheduleExpression) {
         this.scheduleExpression = Objects.requireNonNull(scheduleExpression, "expected parameter 'scheduleExpression' to be non-null");
     }
 
     private DatasetScheduleArgs() {
-        this.scheduleExpression = Input.empty();
+        this.scheduleExpression = Output.empty();
     }
 
     public static Builder builder() {
@@ -37,7 +37,7 @@ public final class DatasetScheduleArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private Input<String> scheduleExpression;
+        private Output<String> scheduleExpression;
 
         public Builder() {
     	      // Empty
@@ -48,13 +48,13 @@ public final class DatasetScheduleArgs extends io.pulumi.resources.ResourceArgs 
     	      this.scheduleExpression = defaults.scheduleExpression;
         }
 
-        public Builder scheduleExpression(Input<String> scheduleExpression) {
+        public Builder scheduleExpression(Output<String> scheduleExpression) {
             this.scheduleExpression = Objects.requireNonNull(scheduleExpression);
             return this;
         }
 
         public Builder scheduleExpression(String scheduleExpression) {
-            this.scheduleExpression = Input.of(Objects.requireNonNull(scheduleExpression));
+            this.scheduleExpression = Output.of(Objects.requireNonNull(scheduleExpression));
             return this;
         }
         public DatasetScheduleArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.core_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.kubernetes.core_v1.inputs.ObjectFieldSelectorArgs;
 import io.pulumi.kubernetes.core_v1.inputs.ResourceFieldSelectorArgs;
@@ -26,10 +26,10 @@ public final class DownwardAPIVolumeFileArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="fieldRef")
-      private final @Nullable Input<ObjectFieldSelectorArgs> fieldRef;
+      private final @Nullable Output<ObjectFieldSelectorArgs> fieldRef;
 
-    public Input<ObjectFieldSelectorArgs> getFieldRef() {
-        return this.fieldRef == null ? Input.empty() : this.fieldRef;
+    public Output<ObjectFieldSelectorArgs> getFieldRef() {
+        return this.fieldRef == null ? Output.empty() : this.fieldRef;
     }
 
     /**
@@ -37,10 +37,10 @@ public final class DownwardAPIVolumeFileArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="mode")
-      private final @Nullable Input<Integer> mode;
+      private final @Nullable Output<Integer> mode;
 
-    public Input<Integer> getMode() {
-        return this.mode == null ? Input.empty() : this.mode;
+    public Output<Integer> getMode() {
+        return this.mode == null ? Output.empty() : this.mode;
     }
 
     /**
@@ -48,9 +48,9 @@ public final class DownwardAPIVolumeFileArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="path", required=true)
-      private final Input<String> path;
+      private final Output<String> path;
 
-    public Input<String> getPath() {
+    public Output<String> getPath() {
         return this.path;
     }
 
@@ -59,17 +59,17 @@ public final class DownwardAPIVolumeFileArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="resourceFieldRef")
-      private final @Nullable Input<ResourceFieldSelectorArgs> resourceFieldRef;
+      private final @Nullable Output<ResourceFieldSelectorArgs> resourceFieldRef;
 
-    public Input<ResourceFieldSelectorArgs> getResourceFieldRef() {
-        return this.resourceFieldRef == null ? Input.empty() : this.resourceFieldRef;
+    public Output<ResourceFieldSelectorArgs> getResourceFieldRef() {
+        return this.resourceFieldRef == null ? Output.empty() : this.resourceFieldRef;
     }
 
     public DownwardAPIVolumeFileArgs(
-        @Nullable Input<ObjectFieldSelectorArgs> fieldRef,
-        @Nullable Input<Integer> mode,
-        Input<String> path,
-        @Nullable Input<ResourceFieldSelectorArgs> resourceFieldRef) {
+        @Nullable Output<ObjectFieldSelectorArgs> fieldRef,
+        @Nullable Output<Integer> mode,
+        Output<String> path,
+        @Nullable Output<ResourceFieldSelectorArgs> resourceFieldRef) {
         this.fieldRef = fieldRef;
         this.mode = mode;
         this.path = Objects.requireNonNull(path, "expected parameter 'path' to be non-null");
@@ -77,10 +77,10 @@ public final class DownwardAPIVolumeFileArgs extends io.pulumi.resources.Resourc
     }
 
     private DownwardAPIVolumeFileArgs() {
-        this.fieldRef = Input.empty();
-        this.mode = Input.empty();
-        this.path = Input.empty();
-        this.resourceFieldRef = Input.empty();
+        this.fieldRef = Output.empty();
+        this.mode = Output.empty();
+        this.path = Output.empty();
+        this.resourceFieldRef = Output.empty();
     }
 
     public static Builder builder() {
@@ -92,10 +92,10 @@ public final class DownwardAPIVolumeFileArgs extends io.pulumi.resources.Resourc
     }
 
     public static final class Builder {
-        private @Nullable Input<ObjectFieldSelectorArgs> fieldRef;
-        private @Nullable Input<Integer> mode;
-        private Input<String> path;
-        private @Nullable Input<ResourceFieldSelectorArgs> resourceFieldRef;
+        private @Nullable Output<ObjectFieldSelectorArgs> fieldRef;
+        private @Nullable Output<Integer> mode;
+        private Output<String> path;
+        private @Nullable Output<ResourceFieldSelectorArgs> resourceFieldRef;
 
         public Builder() {
     	      // Empty
@@ -109,43 +109,43 @@ public final class DownwardAPIVolumeFileArgs extends io.pulumi.resources.Resourc
     	      this.resourceFieldRef = defaults.resourceFieldRef;
         }
 
-        public Builder fieldRef(@Nullable Input<ObjectFieldSelectorArgs> fieldRef) {
+        public Builder fieldRef(@Nullable Output<ObjectFieldSelectorArgs> fieldRef) {
             this.fieldRef = fieldRef;
             return this;
         }
 
         public Builder fieldRef(@Nullable ObjectFieldSelectorArgs fieldRef) {
-            this.fieldRef = Input.ofNullable(fieldRef);
+            this.fieldRef = Output.ofNullable(fieldRef);
             return this;
         }
 
-        public Builder mode(@Nullable Input<Integer> mode) {
+        public Builder mode(@Nullable Output<Integer> mode) {
             this.mode = mode;
             return this;
         }
 
         public Builder mode(@Nullable Integer mode) {
-            this.mode = Input.ofNullable(mode);
+            this.mode = Output.ofNullable(mode);
             return this;
         }
 
-        public Builder path(Input<String> path) {
+        public Builder path(Output<String> path) {
             this.path = Objects.requireNonNull(path);
             return this;
         }
 
         public Builder path(String path) {
-            this.path = Input.of(Objects.requireNonNull(path));
+            this.path = Output.of(Objects.requireNonNull(path));
             return this;
         }
 
-        public Builder resourceFieldRef(@Nullable Input<ResourceFieldSelectorArgs> resourceFieldRef) {
+        public Builder resourceFieldRef(@Nullable Output<ResourceFieldSelectorArgs> resourceFieldRef) {
             this.resourceFieldRef = resourceFieldRef;
             return this;
         }
 
         public Builder resourceFieldRef(@Nullable ResourceFieldSelectorArgs resourceFieldRef) {
-            this.resourceFieldRef = Input.ofNullable(resourceFieldRef);
+            this.resourceFieldRef = Output.ofNullable(resourceFieldRef);
             return this;
         }
         public DownwardAPIVolumeFileArgs build() {

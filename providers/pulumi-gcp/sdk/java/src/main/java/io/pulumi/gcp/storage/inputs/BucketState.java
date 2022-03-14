@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.storage.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.storage.inputs.BucketCorGetArgs;
 import io.pulumi.gcp.storage.inputs.BucketEncryptionGetArgs;
@@ -29,17 +29,17 @@ public final class BucketState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="cors")
-      private final @Nullable Input<List<BucketCorGetArgs>> cors;
+      private final @Nullable Output<List<BucketCorGetArgs>> cors;
 
-    public Input<List<BucketCorGetArgs>> getCors() {
-        return this.cors == null ? Input.empty() : this.cors;
+    public Output<List<BucketCorGetArgs>> getCors() {
+        return this.cors == null ? Output.empty() : this.cors;
     }
 
     @InputImport(name="defaultEventBasedHold")
-      private final @Nullable Input<Boolean> defaultEventBasedHold;
+      private final @Nullable Output<Boolean> defaultEventBasedHold;
 
-    public Input<Boolean> getDefaultEventBasedHold() {
-        return this.defaultEventBasedHold == null ? Input.empty() : this.defaultEventBasedHold;
+    public Output<Boolean> getDefaultEventBasedHold() {
+        return this.defaultEventBasedHold == null ? Output.empty() : this.defaultEventBasedHold;
     }
 
     /**
@@ -47,10 +47,10 @@ public final class BucketState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="encryption")
-      private final @Nullable Input<BucketEncryptionGetArgs> encryption;
+      private final @Nullable Output<BucketEncryptionGetArgs> encryption;
 
-    public Input<BucketEncryptionGetArgs> getEncryption() {
-        return this.encryption == null ? Input.empty() : this.encryption;
+    public Output<BucketEncryptionGetArgs> getEncryption() {
+        return this.encryption == null ? Output.empty() : this.encryption;
     }
 
     /**
@@ -60,10 +60,10 @@ public final class BucketState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="forceDestroy")
-      private final @Nullable Input<Boolean> forceDestroy;
+      private final @Nullable Output<Boolean> forceDestroy;
 
-    public Input<Boolean> getForceDestroy() {
-        return this.forceDestroy == null ? Input.empty() : this.forceDestroy;
+    public Output<Boolean> getForceDestroy() {
+        return this.forceDestroy == null ? Output.empty() : this.forceDestroy;
     }
 
     /**
@@ -71,10 +71,10 @@ public final class BucketState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labels")
-      private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Output<Map<String,String>> labels;
 
-    public Input<Map<String,String>> getLabels() {
-        return this.labels == null ? Input.empty() : this.labels;
+    public Output<Map<String,String>> getLabels() {
+        return this.labels == null ? Output.empty() : this.labels;
     }
 
     /**
@@ -82,10 +82,10 @@ public final class BucketState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="lifecycleRules")
-      private final @Nullable Input<List<BucketLifecycleRuleGetArgs>> lifecycleRules;
+      private final @Nullable Output<List<BucketLifecycleRuleGetArgs>> lifecycleRules;
 
-    public Input<List<BucketLifecycleRuleGetArgs>> getLifecycleRules() {
-        return this.lifecycleRules == null ? Input.empty() : this.lifecycleRules;
+    public Output<List<BucketLifecycleRuleGetArgs>> getLifecycleRules() {
+        return this.lifecycleRules == null ? Output.empty() : this.lifecycleRules;
     }
 
     /**
@@ -93,10 +93,10 @@ public final class BucketState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -104,10 +104,10 @@ public final class BucketState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="logging")
-      private final @Nullable Input<BucketLoggingGetArgs> logging;
+      private final @Nullable Output<BucketLoggingGetArgs> logging;
 
-    public Input<BucketLoggingGetArgs> getLogging() {
-        return this.logging == null ? Input.empty() : this.logging;
+    public Output<BucketLoggingGetArgs> getLogging() {
+        return this.logging == null ? Output.empty() : this.logging;
     }
 
     /**
@@ -115,10 +115,10 @@ public final class BucketState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -127,10 +127,10 @@ public final class BucketState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -138,10 +138,10 @@ public final class BucketState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="publicAccessPrevention")
-      private final @Nullable Input<String> publicAccessPrevention;
+      private final @Nullable Output<String> publicAccessPrevention;
 
-    public Input<String> getPublicAccessPrevention() {
-        return this.publicAccessPrevention == null ? Input.empty() : this.publicAccessPrevention;
+    public Output<String> getPublicAccessPrevention() {
+        return this.publicAccessPrevention == null ? Output.empty() : this.publicAccessPrevention;
     }
 
     /**
@@ -149,10 +149,10 @@ public final class BucketState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="requesterPays")
-      private final @Nullable Input<Boolean> requesterPays;
+      private final @Nullable Output<Boolean> requesterPays;
 
-    public Input<Boolean> getRequesterPays() {
-        return this.requesterPays == null ? Input.empty() : this.requesterPays;
+    public Output<Boolean> getRequesterPays() {
+        return this.requesterPays == null ? Output.empty() : this.requesterPays;
     }
 
     /**
@@ -160,10 +160,10 @@ public final class BucketState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="retentionPolicy")
-      private final @Nullable Input<BucketRetentionPolicyGetArgs> retentionPolicy;
+      private final @Nullable Output<BucketRetentionPolicyGetArgs> retentionPolicy;
 
-    public Input<BucketRetentionPolicyGetArgs> getRetentionPolicy() {
-        return this.retentionPolicy == null ? Input.empty() : this.retentionPolicy;
+    public Output<BucketRetentionPolicyGetArgs> getRetentionPolicy() {
+        return this.retentionPolicy == null ? Output.empty() : this.retentionPolicy;
     }
 
     /**
@@ -171,10 +171,10 @@ public final class BucketState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="selfLink")
-      private final @Nullable Input<String> selfLink;
+      private final @Nullable Output<String> selfLink;
 
-    public Input<String> getSelfLink() {
-        return this.selfLink == null ? Input.empty() : this.selfLink;
+    public Output<String> getSelfLink() {
+        return this.selfLink == null ? Output.empty() : this.selfLink;
     }
 
     /**
@@ -182,10 +182,10 @@ public final class BucketState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="storageClass")
-      private final @Nullable Input<String> storageClass;
+      private final @Nullable Output<String> storageClass;
 
-    public Input<String> getStorageClass() {
-        return this.storageClass == null ? Input.empty() : this.storageClass;
+    public Output<String> getStorageClass() {
+        return this.storageClass == null ? Output.empty() : this.storageClass;
     }
 
     /**
@@ -193,10 +193,10 @@ public final class BucketState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="uniformBucketLevelAccess")
-      private final @Nullable Input<Boolean> uniformBucketLevelAccess;
+      private final @Nullable Output<Boolean> uniformBucketLevelAccess;
 
-    public Input<Boolean> getUniformBucketLevelAccess() {
-        return this.uniformBucketLevelAccess == null ? Input.empty() : this.uniformBucketLevelAccess;
+    public Output<Boolean> getUniformBucketLevelAccess() {
+        return this.uniformBucketLevelAccess == null ? Output.empty() : this.uniformBucketLevelAccess;
     }
 
     /**
@@ -204,10 +204,10 @@ public final class BucketState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="url")
-      private final @Nullable Input<String> url;
+      private final @Nullable Output<String> url;
 
-    public Input<String> getUrl() {
-        return this.url == null ? Input.empty() : this.url;
+    public Output<String> getUrl() {
+        return this.url == null ? Output.empty() : this.url;
     }
 
     /**
@@ -215,10 +215,10 @@ public final class BucketState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="versioning")
-      private final @Nullable Input<BucketVersioningGetArgs> versioning;
+      private final @Nullable Output<BucketVersioningGetArgs> versioning;
 
-    public Input<BucketVersioningGetArgs> getVersioning() {
-        return this.versioning == null ? Input.empty() : this.versioning;
+    public Output<BucketVersioningGetArgs> getVersioning() {
+        return this.versioning == null ? Output.empty() : this.versioning;
     }
 
     /**
@@ -226,32 +226,32 @@ public final class BucketState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="website")
-      private final @Nullable Input<BucketWebsiteGetArgs> website;
+      private final @Nullable Output<BucketWebsiteGetArgs> website;
 
-    public Input<BucketWebsiteGetArgs> getWebsite() {
-        return this.website == null ? Input.empty() : this.website;
+    public Output<BucketWebsiteGetArgs> getWebsite() {
+        return this.website == null ? Output.empty() : this.website;
     }
 
     public BucketState(
-        @Nullable Input<List<BucketCorGetArgs>> cors,
-        @Nullable Input<Boolean> defaultEventBasedHold,
-        @Nullable Input<BucketEncryptionGetArgs> encryption,
-        @Nullable Input<Boolean> forceDestroy,
-        @Nullable Input<Map<String,String>> labels,
-        @Nullable Input<List<BucketLifecycleRuleGetArgs>> lifecycleRules,
-        @Nullable Input<String> location,
-        @Nullable Input<BucketLoggingGetArgs> logging,
-        @Nullable Input<String> name,
-        @Nullable Input<String> project,
-        @Nullable Input<String> publicAccessPrevention,
-        @Nullable Input<Boolean> requesterPays,
-        @Nullable Input<BucketRetentionPolicyGetArgs> retentionPolicy,
-        @Nullable Input<String> selfLink,
-        @Nullable Input<String> storageClass,
-        @Nullable Input<Boolean> uniformBucketLevelAccess,
-        @Nullable Input<String> url,
-        @Nullable Input<BucketVersioningGetArgs> versioning,
-        @Nullable Input<BucketWebsiteGetArgs> website) {
+        @Nullable Output<List<BucketCorGetArgs>> cors,
+        @Nullable Output<Boolean> defaultEventBasedHold,
+        @Nullable Output<BucketEncryptionGetArgs> encryption,
+        @Nullable Output<Boolean> forceDestroy,
+        @Nullable Output<Map<String,String>> labels,
+        @Nullable Output<List<BucketLifecycleRuleGetArgs>> lifecycleRules,
+        @Nullable Output<String> location,
+        @Nullable Output<BucketLoggingGetArgs> logging,
+        @Nullable Output<String> name,
+        @Nullable Output<String> project,
+        @Nullable Output<String> publicAccessPrevention,
+        @Nullable Output<Boolean> requesterPays,
+        @Nullable Output<BucketRetentionPolicyGetArgs> retentionPolicy,
+        @Nullable Output<String> selfLink,
+        @Nullable Output<String> storageClass,
+        @Nullable Output<Boolean> uniformBucketLevelAccess,
+        @Nullable Output<String> url,
+        @Nullable Output<BucketVersioningGetArgs> versioning,
+        @Nullable Output<BucketWebsiteGetArgs> website) {
         this.cors = cors;
         this.defaultEventBasedHold = defaultEventBasedHold;
         this.encryption = encryption;
@@ -274,25 +274,25 @@ public final class BucketState extends io.pulumi.resources.ResourceArgs {
     }
 
     private BucketState() {
-        this.cors = Input.empty();
-        this.defaultEventBasedHold = Input.empty();
-        this.encryption = Input.empty();
-        this.forceDestroy = Input.empty();
-        this.labels = Input.empty();
-        this.lifecycleRules = Input.empty();
-        this.location = Input.empty();
-        this.logging = Input.empty();
-        this.name = Input.empty();
-        this.project = Input.empty();
-        this.publicAccessPrevention = Input.empty();
-        this.requesterPays = Input.empty();
-        this.retentionPolicy = Input.empty();
-        this.selfLink = Input.empty();
-        this.storageClass = Input.empty();
-        this.uniformBucketLevelAccess = Input.empty();
-        this.url = Input.empty();
-        this.versioning = Input.empty();
-        this.website = Input.empty();
+        this.cors = Output.empty();
+        this.defaultEventBasedHold = Output.empty();
+        this.encryption = Output.empty();
+        this.forceDestroy = Output.empty();
+        this.labels = Output.empty();
+        this.lifecycleRules = Output.empty();
+        this.location = Output.empty();
+        this.logging = Output.empty();
+        this.name = Output.empty();
+        this.project = Output.empty();
+        this.publicAccessPrevention = Output.empty();
+        this.requesterPays = Output.empty();
+        this.retentionPolicy = Output.empty();
+        this.selfLink = Output.empty();
+        this.storageClass = Output.empty();
+        this.uniformBucketLevelAccess = Output.empty();
+        this.url = Output.empty();
+        this.versioning = Output.empty();
+        this.website = Output.empty();
     }
 
     public static Builder builder() {
@@ -304,25 +304,25 @@ public final class BucketState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<List<BucketCorGetArgs>> cors;
-        private @Nullable Input<Boolean> defaultEventBasedHold;
-        private @Nullable Input<BucketEncryptionGetArgs> encryption;
-        private @Nullable Input<Boolean> forceDestroy;
-        private @Nullable Input<Map<String,String>> labels;
-        private @Nullable Input<List<BucketLifecycleRuleGetArgs>> lifecycleRules;
-        private @Nullable Input<String> location;
-        private @Nullable Input<BucketLoggingGetArgs> logging;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> project;
-        private @Nullable Input<String> publicAccessPrevention;
-        private @Nullable Input<Boolean> requesterPays;
-        private @Nullable Input<BucketRetentionPolicyGetArgs> retentionPolicy;
-        private @Nullable Input<String> selfLink;
-        private @Nullable Input<String> storageClass;
-        private @Nullable Input<Boolean> uniformBucketLevelAccess;
-        private @Nullable Input<String> url;
-        private @Nullable Input<BucketVersioningGetArgs> versioning;
-        private @Nullable Input<BucketWebsiteGetArgs> website;
+        private @Nullable Output<List<BucketCorGetArgs>> cors;
+        private @Nullable Output<Boolean> defaultEventBasedHold;
+        private @Nullable Output<BucketEncryptionGetArgs> encryption;
+        private @Nullable Output<Boolean> forceDestroy;
+        private @Nullable Output<Map<String,String>> labels;
+        private @Nullable Output<List<BucketLifecycleRuleGetArgs>> lifecycleRules;
+        private @Nullable Output<String> location;
+        private @Nullable Output<BucketLoggingGetArgs> logging;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> project;
+        private @Nullable Output<String> publicAccessPrevention;
+        private @Nullable Output<Boolean> requesterPays;
+        private @Nullable Output<BucketRetentionPolicyGetArgs> retentionPolicy;
+        private @Nullable Output<String> selfLink;
+        private @Nullable Output<String> storageClass;
+        private @Nullable Output<Boolean> uniformBucketLevelAccess;
+        private @Nullable Output<String> url;
+        private @Nullable Output<BucketVersioningGetArgs> versioning;
+        private @Nullable Output<BucketWebsiteGetArgs> website;
 
         public Builder() {
     	      // Empty
@@ -351,193 +351,193 @@ public final class BucketState extends io.pulumi.resources.ResourceArgs {
     	      this.website = defaults.website;
         }
 
-        public Builder cors(@Nullable Input<List<BucketCorGetArgs>> cors) {
+        public Builder cors(@Nullable Output<List<BucketCorGetArgs>> cors) {
             this.cors = cors;
             return this;
         }
 
         public Builder cors(@Nullable List<BucketCorGetArgs> cors) {
-            this.cors = Input.ofNullable(cors);
+            this.cors = Output.ofNullable(cors);
             return this;
         }
 
-        public Builder defaultEventBasedHold(@Nullable Input<Boolean> defaultEventBasedHold) {
+        public Builder defaultEventBasedHold(@Nullable Output<Boolean> defaultEventBasedHold) {
             this.defaultEventBasedHold = defaultEventBasedHold;
             return this;
         }
 
         public Builder defaultEventBasedHold(@Nullable Boolean defaultEventBasedHold) {
-            this.defaultEventBasedHold = Input.ofNullable(defaultEventBasedHold);
+            this.defaultEventBasedHold = Output.ofNullable(defaultEventBasedHold);
             return this;
         }
 
-        public Builder encryption(@Nullable Input<BucketEncryptionGetArgs> encryption) {
+        public Builder encryption(@Nullable Output<BucketEncryptionGetArgs> encryption) {
             this.encryption = encryption;
             return this;
         }
 
         public Builder encryption(@Nullable BucketEncryptionGetArgs encryption) {
-            this.encryption = Input.ofNullable(encryption);
+            this.encryption = Output.ofNullable(encryption);
             return this;
         }
 
-        public Builder forceDestroy(@Nullable Input<Boolean> forceDestroy) {
+        public Builder forceDestroy(@Nullable Output<Boolean> forceDestroy) {
             this.forceDestroy = forceDestroy;
             return this;
         }
 
         public Builder forceDestroy(@Nullable Boolean forceDestroy) {
-            this.forceDestroy = Input.ofNullable(forceDestroy);
+            this.forceDestroy = Output.ofNullable(forceDestroy);
             return this;
         }
 
-        public Builder labels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
         public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Input.ofNullable(labels);
+            this.labels = Output.ofNullable(labels);
             return this;
         }
 
-        public Builder lifecycleRules(@Nullable Input<List<BucketLifecycleRuleGetArgs>> lifecycleRules) {
+        public Builder lifecycleRules(@Nullable Output<List<BucketLifecycleRuleGetArgs>> lifecycleRules) {
             this.lifecycleRules = lifecycleRules;
             return this;
         }
 
         public Builder lifecycleRules(@Nullable List<BucketLifecycleRuleGetArgs> lifecycleRules) {
-            this.lifecycleRules = Input.ofNullable(lifecycleRules);
+            this.lifecycleRules = Output.ofNullable(lifecycleRules);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder logging(@Nullable Input<BucketLoggingGetArgs> logging) {
+        public Builder logging(@Nullable Output<BucketLoggingGetArgs> logging) {
             this.logging = logging;
             return this;
         }
 
         public Builder logging(@Nullable BucketLoggingGetArgs logging) {
-            this.logging = Input.ofNullable(logging);
+            this.logging = Output.ofNullable(logging);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder publicAccessPrevention(@Nullable Input<String> publicAccessPrevention) {
+        public Builder publicAccessPrevention(@Nullable Output<String> publicAccessPrevention) {
             this.publicAccessPrevention = publicAccessPrevention;
             return this;
         }
 
         public Builder publicAccessPrevention(@Nullable String publicAccessPrevention) {
-            this.publicAccessPrevention = Input.ofNullable(publicAccessPrevention);
+            this.publicAccessPrevention = Output.ofNullable(publicAccessPrevention);
             return this;
         }
 
-        public Builder requesterPays(@Nullable Input<Boolean> requesterPays) {
+        public Builder requesterPays(@Nullable Output<Boolean> requesterPays) {
             this.requesterPays = requesterPays;
             return this;
         }
 
         public Builder requesterPays(@Nullable Boolean requesterPays) {
-            this.requesterPays = Input.ofNullable(requesterPays);
+            this.requesterPays = Output.ofNullable(requesterPays);
             return this;
         }
 
-        public Builder retentionPolicy(@Nullable Input<BucketRetentionPolicyGetArgs> retentionPolicy) {
+        public Builder retentionPolicy(@Nullable Output<BucketRetentionPolicyGetArgs> retentionPolicy) {
             this.retentionPolicy = retentionPolicy;
             return this;
         }
 
         public Builder retentionPolicy(@Nullable BucketRetentionPolicyGetArgs retentionPolicy) {
-            this.retentionPolicy = Input.ofNullable(retentionPolicy);
+            this.retentionPolicy = Output.ofNullable(retentionPolicy);
             return this;
         }
 
-        public Builder selfLink(@Nullable Input<String> selfLink) {
+        public Builder selfLink(@Nullable Output<String> selfLink) {
             this.selfLink = selfLink;
             return this;
         }
 
         public Builder selfLink(@Nullable String selfLink) {
-            this.selfLink = Input.ofNullable(selfLink);
+            this.selfLink = Output.ofNullable(selfLink);
             return this;
         }
 
-        public Builder storageClass(@Nullable Input<String> storageClass) {
+        public Builder storageClass(@Nullable Output<String> storageClass) {
             this.storageClass = storageClass;
             return this;
         }
 
         public Builder storageClass(@Nullable String storageClass) {
-            this.storageClass = Input.ofNullable(storageClass);
+            this.storageClass = Output.ofNullable(storageClass);
             return this;
         }
 
-        public Builder uniformBucketLevelAccess(@Nullable Input<Boolean> uniformBucketLevelAccess) {
+        public Builder uniformBucketLevelAccess(@Nullable Output<Boolean> uniformBucketLevelAccess) {
             this.uniformBucketLevelAccess = uniformBucketLevelAccess;
             return this;
         }
 
         public Builder uniformBucketLevelAccess(@Nullable Boolean uniformBucketLevelAccess) {
-            this.uniformBucketLevelAccess = Input.ofNullable(uniformBucketLevelAccess);
+            this.uniformBucketLevelAccess = Output.ofNullable(uniformBucketLevelAccess);
             return this;
         }
 
-        public Builder url(@Nullable Input<String> url) {
+        public Builder url(@Nullable Output<String> url) {
             this.url = url;
             return this;
         }
 
         public Builder url(@Nullable String url) {
-            this.url = Input.ofNullable(url);
+            this.url = Output.ofNullable(url);
             return this;
         }
 
-        public Builder versioning(@Nullable Input<BucketVersioningGetArgs> versioning) {
+        public Builder versioning(@Nullable Output<BucketVersioningGetArgs> versioning) {
             this.versioning = versioning;
             return this;
         }
 
         public Builder versioning(@Nullable BucketVersioningGetArgs versioning) {
-            this.versioning = Input.ofNullable(versioning);
+            this.versioning = Output.ofNullable(versioning);
             return this;
         }
 
-        public Builder website(@Nullable Input<BucketWebsiteGetArgs> website) {
+        public Builder website(@Nullable Output<BucketWebsiteGetArgs> website) {
             this.website = website;
             return this;
         }
 
         public Builder website(@Nullable BucketWebsiteGetArgs website) {
-            this.website = Input.ofNullable(website);
+            this.website = Output.ofNullable(website);
             return this;
         }
         public BucketState build() {

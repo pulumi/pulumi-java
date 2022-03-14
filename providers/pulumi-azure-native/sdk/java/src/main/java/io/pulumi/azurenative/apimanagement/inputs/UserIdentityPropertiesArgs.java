@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.apimanagement.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class UserIdentityPropertiesArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="clientId")
-      private final @Nullable Input<String> clientId;
+      private final @Nullable Output<String> clientId;
 
-    public Input<String> getClientId() {
-        return this.clientId == null ? Input.empty() : this.clientId;
+    public Output<String> getClientId() {
+        return this.clientId == null ? Output.empty() : this.clientId;
     }
 
     /**
@@ -30,22 +30,22 @@ public final class UserIdentityPropertiesArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="principalId")
-      private final @Nullable Input<String> principalId;
+      private final @Nullable Output<String> principalId;
 
-    public Input<String> getPrincipalId() {
-        return this.principalId == null ? Input.empty() : this.principalId;
+    public Output<String> getPrincipalId() {
+        return this.principalId == null ? Output.empty() : this.principalId;
     }
 
     public UserIdentityPropertiesArgs(
-        @Nullable Input<String> clientId,
-        @Nullable Input<String> principalId) {
+        @Nullable Output<String> clientId,
+        @Nullable Output<String> principalId) {
         this.clientId = clientId;
         this.principalId = principalId;
     }
 
     private UserIdentityPropertiesArgs() {
-        this.clientId = Input.empty();
-        this.principalId = Input.empty();
+        this.clientId = Output.empty();
+        this.principalId = Output.empty();
     }
 
     public static Builder builder() {
@@ -57,8 +57,8 @@ public final class UserIdentityPropertiesArgs extends io.pulumi.resources.Resour
     }
 
     public static final class Builder {
-        private @Nullable Input<String> clientId;
-        private @Nullable Input<String> principalId;
+        private @Nullable Output<String> clientId;
+        private @Nullable Output<String> principalId;
 
         public Builder() {
     	      // Empty
@@ -70,23 +70,23 @@ public final class UserIdentityPropertiesArgs extends io.pulumi.resources.Resour
     	      this.principalId = defaults.principalId;
         }
 
-        public Builder clientId(@Nullable Input<String> clientId) {
+        public Builder clientId(@Nullable Output<String> clientId) {
             this.clientId = clientId;
             return this;
         }
 
         public Builder clientId(@Nullable String clientId) {
-            this.clientId = Input.ofNullable(clientId);
+            this.clientId = Output.ofNullable(clientId);
             return this;
         }
 
-        public Builder principalId(@Nullable Input<String> principalId) {
+        public Builder principalId(@Nullable Output<String> principalId) {
             this.principalId = principalId;
             return this;
         }
 
         public Builder principalId(@Nullable String principalId) {
-            this.principalId = Input.ofNullable(principalId);
+            this.principalId = Output.ofNullable(principalId);
             return this;
         }
         public UserIdentityPropertiesArgs build() {

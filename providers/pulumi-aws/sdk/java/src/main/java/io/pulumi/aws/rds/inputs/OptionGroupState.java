@@ -4,7 +4,7 @@
 package io.pulumi.aws.rds.inputs;
 
 import io.pulumi.aws.rds.inputs.OptionGroupOptionGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -22,10 +22,10 @@ public final class OptionGroupState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arn")
-      private final @Nullable Input<String> arn;
+      private final @Nullable Output<String> arn;
 
-    public Input<String> getArn() {
-        return this.arn == null ? Input.empty() : this.arn;
+    public Output<String> getArn() {
+        return this.arn == null ? Output.empty() : this.arn;
     }
 
     /**
@@ -33,10 +33,10 @@ public final class OptionGroupState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="engineName")
-      private final @Nullable Input<String> engineName;
+      private final @Nullable Output<String> engineName;
 
-    public Input<String> getEngineName() {
-        return this.engineName == null ? Input.empty() : this.engineName;
+    public Output<String> getEngineName() {
+        return this.engineName == null ? Output.empty() : this.engineName;
     }
 
     /**
@@ -44,10 +44,10 @@ public final class OptionGroupState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="majorEngineVersion")
-      private final @Nullable Input<String> majorEngineVersion;
+      private final @Nullable Output<String> majorEngineVersion;
 
-    public Input<String> getMajorEngineVersion() {
-        return this.majorEngineVersion == null ? Input.empty() : this.majorEngineVersion;
+    public Output<String> getMajorEngineVersion() {
+        return this.majorEngineVersion == null ? Output.empty() : this.majorEngineVersion;
     }
 
     /**
@@ -55,10 +55,10 @@ public final class OptionGroupState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -66,10 +66,10 @@ public final class OptionGroupState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="namePrefix")
-      private final @Nullable Input<String> namePrefix;
+      private final @Nullable Output<String> namePrefix;
 
-    public Input<String> getNamePrefix() {
-        return this.namePrefix == null ? Input.empty() : this.namePrefix;
+    public Output<String> getNamePrefix() {
+        return this.namePrefix == null ? Output.empty() : this.namePrefix;
     }
 
     /**
@@ -77,10 +77,10 @@ public final class OptionGroupState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="optionGroupDescription")
-      private final @Nullable Input<String> optionGroupDescription;
+      private final @Nullable Output<String> optionGroupDescription;
 
-    public Input<String> getOptionGroupDescription() {
-        return this.optionGroupDescription == null ? Input.empty() : this.optionGroupDescription;
+    public Output<String> getOptionGroupDescription() {
+        return this.optionGroupDescription == null ? Output.empty() : this.optionGroupDescription;
     }
 
     /**
@@ -88,10 +88,10 @@ public final class OptionGroupState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="options")
-      private final @Nullable Input<List<OptionGroupOptionGetArgs>> options;
+      private final @Nullable Output<List<OptionGroupOptionGetArgs>> options;
 
-    public Input<List<OptionGroupOptionGetArgs>> getOptions() {
-        return this.options == null ? Input.empty() : this.options;
+    public Output<List<OptionGroupOptionGetArgs>> getOptions() {
+        return this.options == null ? Output.empty() : this.options;
     }
 
     /**
@@ -99,10 +99,10 @@ public final class OptionGroupState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -110,43 +110,43 @@ public final class OptionGroupState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tagsAll")
-      private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Input<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Input.empty() : this.tagsAll;
+    public Output<Map<String,String>> getTagsAll() {
+        return this.tagsAll == null ? Output.empty() : this.tagsAll;
     }
 
     public OptionGroupState(
-        @Nullable Input<String> arn,
-        @Nullable Input<String> engineName,
-        @Nullable Input<String> majorEngineVersion,
-        @Nullable Input<String> name,
-        @Nullable Input<String> namePrefix,
-        @Nullable Input<String> optionGroupDescription,
-        @Nullable Input<List<OptionGroupOptionGetArgs>> options,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<Map<String,String>> tagsAll) {
+        @Nullable Output<String> arn,
+        @Nullable Output<String> engineName,
+        @Nullable Output<String> majorEngineVersion,
+        @Nullable Output<String> name,
+        @Nullable Output<String> namePrefix,
+        @Nullable Output<String> optionGroupDescription,
+        @Nullable Output<List<OptionGroupOptionGetArgs>> options,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<Map<String,String>> tagsAll) {
         this.arn = arn;
         this.engineName = engineName;
         this.majorEngineVersion = majorEngineVersion;
         this.name = name;
         this.namePrefix = namePrefix;
-        this.optionGroupDescription = optionGroupDescription == null ? Input.ofNullable("Managed by Pulumi") : optionGroupDescription;
+        this.optionGroupDescription = optionGroupDescription == null ? Output.ofNullable("Managed by Pulumi") : optionGroupDescription;
         this.options = options;
         this.tags = tags;
         this.tagsAll = tagsAll;
     }
 
     private OptionGroupState() {
-        this.arn = Input.empty();
-        this.engineName = Input.empty();
-        this.majorEngineVersion = Input.empty();
-        this.name = Input.empty();
-        this.namePrefix = Input.empty();
-        this.optionGroupDescription = Input.empty();
-        this.options = Input.empty();
-        this.tags = Input.empty();
-        this.tagsAll = Input.empty();
+        this.arn = Output.empty();
+        this.engineName = Output.empty();
+        this.majorEngineVersion = Output.empty();
+        this.name = Output.empty();
+        this.namePrefix = Output.empty();
+        this.optionGroupDescription = Output.empty();
+        this.options = Output.empty();
+        this.tags = Output.empty();
+        this.tagsAll = Output.empty();
     }
 
     public static Builder builder() {
@@ -158,15 +158,15 @@ public final class OptionGroupState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> arn;
-        private @Nullable Input<String> engineName;
-        private @Nullable Input<String> majorEngineVersion;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> namePrefix;
-        private @Nullable Input<String> optionGroupDescription;
-        private @Nullable Input<List<OptionGroupOptionGetArgs>> options;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<Map<String,String>> tagsAll;
+        private @Nullable Output<String> arn;
+        private @Nullable Output<String> engineName;
+        private @Nullable Output<String> majorEngineVersion;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> namePrefix;
+        private @Nullable Output<String> optionGroupDescription;
+        private @Nullable Output<List<OptionGroupOptionGetArgs>> options;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<Map<String,String>> tagsAll;
 
         public Builder() {
     	      // Empty
@@ -185,93 +185,93 @@ public final class OptionGroupState extends io.pulumi.resources.ResourceArgs {
     	      this.tagsAll = defaults.tagsAll;
         }
 
-        public Builder arn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
 
         public Builder arn(@Nullable String arn) {
-            this.arn = Input.ofNullable(arn);
+            this.arn = Output.ofNullable(arn);
             return this;
         }
 
-        public Builder engineName(@Nullable Input<String> engineName) {
+        public Builder engineName(@Nullable Output<String> engineName) {
             this.engineName = engineName;
             return this;
         }
 
         public Builder engineName(@Nullable String engineName) {
-            this.engineName = Input.ofNullable(engineName);
+            this.engineName = Output.ofNullable(engineName);
             return this;
         }
 
-        public Builder majorEngineVersion(@Nullable Input<String> majorEngineVersion) {
+        public Builder majorEngineVersion(@Nullable Output<String> majorEngineVersion) {
             this.majorEngineVersion = majorEngineVersion;
             return this;
         }
 
         public Builder majorEngineVersion(@Nullable String majorEngineVersion) {
-            this.majorEngineVersion = Input.ofNullable(majorEngineVersion);
+            this.majorEngineVersion = Output.ofNullable(majorEngineVersion);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder namePrefix(@Nullable Input<String> namePrefix) {
+        public Builder namePrefix(@Nullable Output<String> namePrefix) {
             this.namePrefix = namePrefix;
             return this;
         }
 
         public Builder namePrefix(@Nullable String namePrefix) {
-            this.namePrefix = Input.ofNullable(namePrefix);
+            this.namePrefix = Output.ofNullable(namePrefix);
             return this;
         }
 
-        public Builder optionGroupDescription(@Nullable Input<String> optionGroupDescription) {
+        public Builder optionGroupDescription(@Nullable Output<String> optionGroupDescription) {
             this.optionGroupDescription = optionGroupDescription;
             return this;
         }
 
         public Builder optionGroupDescription(@Nullable String optionGroupDescription) {
-            this.optionGroupDescription = Input.ofNullable(optionGroupDescription);
+            this.optionGroupDescription = Output.ofNullable(optionGroupDescription);
             return this;
         }
 
-        public Builder options(@Nullable Input<List<OptionGroupOptionGetArgs>> options) {
+        public Builder options(@Nullable Output<List<OptionGroupOptionGetArgs>> options) {
             this.options = options;
             return this;
         }
 
         public Builder options(@Nullable List<OptionGroupOptionGetArgs> options) {
-            this.options = Input.ofNullable(options);
+            this.options = Output.ofNullable(options);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Input.ofNullable(tagsAll);
+            this.tagsAll = Output.ofNullable(tagsAll);
             return this;
         }
         public OptionGroupState build() {

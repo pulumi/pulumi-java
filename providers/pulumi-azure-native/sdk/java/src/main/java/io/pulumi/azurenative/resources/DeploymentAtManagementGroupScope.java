@@ -7,7 +7,6 @@ import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.resources.DeploymentAtManagementGroupScopeArgs;
 import io.pulumi.azurenative.resources.outputs.DeploymentPropertiesExtendedResponse;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -142,27 +141,27 @@ public class DeploymentAtManagementGroupScope extends io.pulumi.resources.Custom
      * @param options A bag of options that control this resource's behavior.
      */
     public DeploymentAtManagementGroupScope(String name, DeploymentAtManagementGroupScopeArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:resources:DeploymentAtManagementGroupScope", name, args == null ? DeploymentAtManagementGroupScopeArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("azure-native:resources:DeploymentAtManagementGroupScope", name, args == null ? DeploymentAtManagementGroupScopeArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private DeploymentAtManagementGroupScope(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private DeploymentAtManagementGroupScope(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:resources:DeploymentAtManagementGroupScope", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:resources/v20190501:DeploymentAtManagementGroupScope").build()),
-                Input.of(Alias.builder().setType("azure-native:resources/v20190510:DeploymentAtManagementGroupScope").build()),
-                Input.of(Alias.builder().setType("azure-native:resources/v20190701:DeploymentAtManagementGroupScope").build()),
-                Input.of(Alias.builder().setType("azure-native:resources/v20190801:DeploymentAtManagementGroupScope").build()),
-                Input.of(Alias.builder().setType("azure-native:resources/v20191001:DeploymentAtManagementGroupScope").build()),
-                Input.of(Alias.builder().setType("azure-native:resources/v20200601:DeploymentAtManagementGroupScope").build()),
-                Input.of(Alias.builder().setType("azure-native:resources/v20200801:DeploymentAtManagementGroupScope").build()),
-                Input.of(Alias.builder().setType("azure-native:resources/v20201001:DeploymentAtManagementGroupScope").build()),
-                Input.of(Alias.builder().setType("azure-native:resources/v20210101:DeploymentAtManagementGroupScope").build()),
-                Input.of(Alias.builder().setType("azure-native:resources/v20210401:DeploymentAtManagementGroupScope").build())
+                Output.of(Alias.builder().setType("azure-native:resources/v20190501:DeploymentAtManagementGroupScope").build()),
+                Output.of(Alias.builder().setType("azure-native:resources/v20190510:DeploymentAtManagementGroupScope").build()),
+                Output.of(Alias.builder().setType("azure-native:resources/v20190701:DeploymentAtManagementGroupScope").build()),
+                Output.of(Alias.builder().setType("azure-native:resources/v20190801:DeploymentAtManagementGroupScope").build()),
+                Output.of(Alias.builder().setType("azure-native:resources/v20191001:DeploymentAtManagementGroupScope").build()),
+                Output.of(Alias.builder().setType("azure-native:resources/v20200601:DeploymentAtManagementGroupScope").build()),
+                Output.of(Alias.builder().setType("azure-native:resources/v20200801:DeploymentAtManagementGroupScope").build()),
+                Output.of(Alias.builder().setType("azure-native:resources/v20201001:DeploymentAtManagementGroupScope").build()),
+                Output.of(Alias.builder().setType("azure-native:resources/v20210101:DeploymentAtManagementGroupScope").build()),
+                Output.of(Alias.builder().setType("azure-native:resources/v20210401:DeploymentAtManagementGroupScope").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -176,7 +175,7 @@ public class DeploymentAtManagementGroupScope extends io.pulumi.resources.Custom
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static DeploymentAtManagementGroupScope get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static DeploymentAtManagementGroupScope get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new DeploymentAtManagementGroupScope(name, id, options);
     }
 }

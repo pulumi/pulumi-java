@@ -4,7 +4,7 @@
 package io.pulumi.aws.appmesh.inputs;
 
 import io.pulumi.aws.appmesh.inputs.RouteSpecGrpcRouteMatchMetadataMatchRangeGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -20,10 +20,10 @@ public final class RouteSpecGrpcRouteMatchMetadataMatchGetArgs extends io.pulumi
      * 
      */
     @InputImport(name="exact")
-      private final @Nullable Input<String> exact;
+      private final @Nullable Output<String> exact;
 
-    public Input<String> getExact() {
-        return this.exact == null ? Input.empty() : this.exact;
+    public Output<String> getExact() {
+        return this.exact == null ? Output.empty() : this.exact;
     }
 
     /**
@@ -32,10 +32,10 @@ public final class RouteSpecGrpcRouteMatchMetadataMatchGetArgs extends io.pulumi
      * 
      */
     @InputImport(name="prefix")
-      private final @Nullable Input<String> prefix;
+      private final @Nullable Output<String> prefix;
 
-    public Input<String> getPrefix() {
-        return this.prefix == null ? Input.empty() : this.prefix;
+    public Output<String> getPrefix() {
+        return this.prefix == null ? Output.empty() : this.prefix;
     }
 
     /**
@@ -43,10 +43,10 @@ public final class RouteSpecGrpcRouteMatchMetadataMatchGetArgs extends io.pulumi
      * 
      */
     @InputImport(name="range")
-      private final @Nullable Input<RouteSpecGrpcRouteMatchMetadataMatchRangeGetArgs> range;
+      private final @Nullable Output<RouteSpecGrpcRouteMatchMetadataMatchRangeGetArgs> range;
 
-    public Input<RouteSpecGrpcRouteMatchMetadataMatchRangeGetArgs> getRange() {
-        return this.range == null ? Input.empty() : this.range;
+    public Output<RouteSpecGrpcRouteMatchMetadataMatchRangeGetArgs> getRange() {
+        return this.range == null ? Output.empty() : this.range;
     }
 
     /**
@@ -54,10 +54,10 @@ public final class RouteSpecGrpcRouteMatchMetadataMatchGetArgs extends io.pulumi
      * 
      */
     @InputImport(name="regex")
-      private final @Nullable Input<String> regex;
+      private final @Nullable Output<String> regex;
 
-    public Input<String> getRegex() {
-        return this.regex == null ? Input.empty() : this.regex;
+    public Output<String> getRegex() {
+        return this.regex == null ? Output.empty() : this.regex;
     }
 
     /**
@@ -65,18 +65,18 @@ public final class RouteSpecGrpcRouteMatchMetadataMatchGetArgs extends io.pulumi
      * 
      */
     @InputImport(name="suffix")
-      private final @Nullable Input<String> suffix;
+      private final @Nullable Output<String> suffix;
 
-    public Input<String> getSuffix() {
-        return this.suffix == null ? Input.empty() : this.suffix;
+    public Output<String> getSuffix() {
+        return this.suffix == null ? Output.empty() : this.suffix;
     }
 
     public RouteSpecGrpcRouteMatchMetadataMatchGetArgs(
-        @Nullable Input<String> exact,
-        @Nullable Input<String> prefix,
-        @Nullable Input<RouteSpecGrpcRouteMatchMetadataMatchRangeGetArgs> range,
-        @Nullable Input<String> regex,
-        @Nullable Input<String> suffix) {
+        @Nullable Output<String> exact,
+        @Nullable Output<String> prefix,
+        @Nullable Output<RouteSpecGrpcRouteMatchMetadataMatchRangeGetArgs> range,
+        @Nullable Output<String> regex,
+        @Nullable Output<String> suffix) {
         this.exact = exact;
         this.prefix = prefix;
         this.range = range;
@@ -85,11 +85,11 @@ public final class RouteSpecGrpcRouteMatchMetadataMatchGetArgs extends io.pulumi
     }
 
     private RouteSpecGrpcRouteMatchMetadataMatchGetArgs() {
-        this.exact = Input.empty();
-        this.prefix = Input.empty();
-        this.range = Input.empty();
-        this.regex = Input.empty();
-        this.suffix = Input.empty();
+        this.exact = Output.empty();
+        this.prefix = Output.empty();
+        this.range = Output.empty();
+        this.regex = Output.empty();
+        this.suffix = Output.empty();
     }
 
     public static Builder builder() {
@@ -101,11 +101,11 @@ public final class RouteSpecGrpcRouteMatchMetadataMatchGetArgs extends io.pulumi
     }
 
     public static final class Builder {
-        private @Nullable Input<String> exact;
-        private @Nullable Input<String> prefix;
-        private @Nullable Input<RouteSpecGrpcRouteMatchMetadataMatchRangeGetArgs> range;
-        private @Nullable Input<String> regex;
-        private @Nullable Input<String> suffix;
+        private @Nullable Output<String> exact;
+        private @Nullable Output<String> prefix;
+        private @Nullable Output<RouteSpecGrpcRouteMatchMetadataMatchRangeGetArgs> range;
+        private @Nullable Output<String> regex;
+        private @Nullable Output<String> suffix;
 
         public Builder() {
     	      // Empty
@@ -120,53 +120,53 @@ public final class RouteSpecGrpcRouteMatchMetadataMatchGetArgs extends io.pulumi
     	      this.suffix = defaults.suffix;
         }
 
-        public Builder exact(@Nullable Input<String> exact) {
+        public Builder exact(@Nullable Output<String> exact) {
             this.exact = exact;
             return this;
         }
 
         public Builder exact(@Nullable String exact) {
-            this.exact = Input.ofNullable(exact);
+            this.exact = Output.ofNullable(exact);
             return this;
         }
 
-        public Builder prefix(@Nullable Input<String> prefix) {
+        public Builder prefix(@Nullable Output<String> prefix) {
             this.prefix = prefix;
             return this;
         }
 
         public Builder prefix(@Nullable String prefix) {
-            this.prefix = Input.ofNullable(prefix);
+            this.prefix = Output.ofNullable(prefix);
             return this;
         }
 
-        public Builder range(@Nullable Input<RouteSpecGrpcRouteMatchMetadataMatchRangeGetArgs> range) {
+        public Builder range(@Nullable Output<RouteSpecGrpcRouteMatchMetadataMatchRangeGetArgs> range) {
             this.range = range;
             return this;
         }
 
         public Builder range(@Nullable RouteSpecGrpcRouteMatchMetadataMatchRangeGetArgs range) {
-            this.range = Input.ofNullable(range);
+            this.range = Output.ofNullable(range);
             return this;
         }
 
-        public Builder regex(@Nullable Input<String> regex) {
+        public Builder regex(@Nullable Output<String> regex) {
             this.regex = regex;
             return this;
         }
 
         public Builder regex(@Nullable String regex) {
-            this.regex = Input.ofNullable(regex);
+            this.regex = Output.ofNullable(regex);
             return this;
         }
 
-        public Builder suffix(@Nullable Input<String> suffix) {
+        public Builder suffix(@Nullable Output<String> suffix) {
             this.suffix = suffix;
             return this;
         }
 
         public Builder suffix(@Nullable String suffix) {
-            this.suffix = Input.ofNullable(suffix);
+            this.suffix = Output.ofNullable(suffix);
             return this;
         }
         public RouteSpecGrpcRouteMatchMetadataMatchGetArgs build() {

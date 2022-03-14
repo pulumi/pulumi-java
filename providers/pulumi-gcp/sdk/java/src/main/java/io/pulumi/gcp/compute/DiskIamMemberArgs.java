@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.compute.inputs.DiskIamMemberConditionArgs;
 import java.lang.String;
@@ -16,16 +16,16 @@ public final class DiskIamMemberArgs extends io.pulumi.resources.ResourceArgs {
     public static final DiskIamMemberArgs Empty = new DiskIamMemberArgs();
 
     @InputImport(name="condition")
-      private final @Nullable Input<DiskIamMemberConditionArgs> condition;
+      private final @Nullable Output<DiskIamMemberConditionArgs> condition;
 
-    public Input<DiskIamMemberConditionArgs> getCondition() {
-        return this.condition == null ? Input.empty() : this.condition;
+    public Output<DiskIamMemberConditionArgs> getCondition() {
+        return this.condition == null ? Output.empty() : this.condition;
     }
 
     @InputImport(name="member", required=true)
-      private final Input<String> member;
+      private final Output<String> member;
 
-    public Input<String> getMember() {
+    public Output<String> getMember() {
         return this.member;
     }
 
@@ -34,10 +34,10 @@ public final class DiskIamMemberArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -46,10 +46,10 @@ public final class DiskIamMemberArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -59,9 +59,9 @@ public final class DiskIamMemberArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="role", required=true)
-      private final Input<String> role;
+      private final Output<String> role;
 
-    public Input<String> getRole() {
+    public Output<String> getRole() {
         return this.role;
     }
 
@@ -72,19 +72,19 @@ public final class DiskIamMemberArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="zone")
-      private final @Nullable Input<String> zone;
+      private final @Nullable Output<String> zone;
 
-    public Input<String> getZone() {
-        return this.zone == null ? Input.empty() : this.zone;
+    public Output<String> getZone() {
+        return this.zone == null ? Output.empty() : this.zone;
     }
 
     public DiskIamMemberArgs(
-        @Nullable Input<DiskIamMemberConditionArgs> condition,
-        Input<String> member,
-        @Nullable Input<String> name,
-        @Nullable Input<String> project,
-        Input<String> role,
-        @Nullable Input<String> zone) {
+        @Nullable Output<DiskIamMemberConditionArgs> condition,
+        Output<String> member,
+        @Nullable Output<String> name,
+        @Nullable Output<String> project,
+        Output<String> role,
+        @Nullable Output<String> zone) {
         this.condition = condition;
         this.member = Objects.requireNonNull(member, "expected parameter 'member' to be non-null");
         this.name = name;
@@ -94,12 +94,12 @@ public final class DiskIamMemberArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DiskIamMemberArgs() {
-        this.condition = Input.empty();
-        this.member = Input.empty();
-        this.name = Input.empty();
-        this.project = Input.empty();
-        this.role = Input.empty();
-        this.zone = Input.empty();
+        this.condition = Output.empty();
+        this.member = Output.empty();
+        this.name = Output.empty();
+        this.project = Output.empty();
+        this.role = Output.empty();
+        this.zone = Output.empty();
     }
 
     public static Builder builder() {
@@ -111,12 +111,12 @@ public final class DiskIamMemberArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<DiskIamMemberConditionArgs> condition;
-        private Input<String> member;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> project;
-        private Input<String> role;
-        private @Nullable Input<String> zone;
+        private @Nullable Output<DiskIamMemberConditionArgs> condition;
+        private Output<String> member;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> project;
+        private Output<String> role;
+        private @Nullable Output<String> zone;
 
         public Builder() {
     	      // Empty
@@ -132,63 +132,63 @@ public final class DiskIamMemberArgs extends io.pulumi.resources.ResourceArgs {
     	      this.zone = defaults.zone;
         }
 
-        public Builder condition(@Nullable Input<DiskIamMemberConditionArgs> condition) {
+        public Builder condition(@Nullable Output<DiskIamMemberConditionArgs> condition) {
             this.condition = condition;
             return this;
         }
 
         public Builder condition(@Nullable DiskIamMemberConditionArgs condition) {
-            this.condition = Input.ofNullable(condition);
+            this.condition = Output.ofNullable(condition);
             return this;
         }
 
-        public Builder member(Input<String> member) {
+        public Builder member(Output<String> member) {
             this.member = Objects.requireNonNull(member);
             return this;
         }
 
         public Builder member(String member) {
-            this.member = Input.of(Objects.requireNonNull(member));
+            this.member = Output.of(Objects.requireNonNull(member));
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder role(Input<String> role) {
+        public Builder role(Output<String> role) {
             this.role = Objects.requireNonNull(role);
             return this;
         }
 
         public Builder role(String role) {
-            this.role = Input.of(Objects.requireNonNull(role));
+            this.role = Output.of(Objects.requireNonNull(role));
             return this;
         }
 
-        public Builder zone(@Nullable Input<String> zone) {
+        public Builder zone(@Nullable Output<String> zone) {
             this.zone = zone;
             return this;
         }
 
         public Builder zone(@Nullable String zone) {
-            this.zone = Input.ofNullable(zone);
+            this.zone = Output.ofNullable(zone);
             return this;
         }
         public DiskIamMemberArgs build() {

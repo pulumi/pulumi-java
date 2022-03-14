@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dataproc_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dataproc_v1.inputs.SparkHistoryServerConfigArgs;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class PeripheralsConfigArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="metastoreService")
-      private final @Nullable Input<String> metastoreService;
+      private final @Nullable Output<String> metastoreService;
 
-    public Input<String> getMetastoreService() {
-        return this.metastoreService == null ? Input.empty() : this.metastoreService;
+    public Output<String> getMetastoreService() {
+        return this.metastoreService == null ? Output.empty() : this.metastoreService;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class PeripheralsConfigArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="sparkHistoryServerConfig")
-      private final @Nullable Input<SparkHistoryServerConfigArgs> sparkHistoryServerConfig;
+      private final @Nullable Output<SparkHistoryServerConfigArgs> sparkHistoryServerConfig;
 
-    public Input<SparkHistoryServerConfigArgs> getSparkHistoryServerConfig() {
-        return this.sparkHistoryServerConfig == null ? Input.empty() : this.sparkHistoryServerConfig;
+    public Output<SparkHistoryServerConfigArgs> getSparkHistoryServerConfig() {
+        return this.sparkHistoryServerConfig == null ? Output.empty() : this.sparkHistoryServerConfig;
     }
 
     public PeripheralsConfigArgs(
-        @Nullable Input<String> metastoreService,
-        @Nullable Input<SparkHistoryServerConfigArgs> sparkHistoryServerConfig) {
+        @Nullable Output<String> metastoreService,
+        @Nullable Output<SparkHistoryServerConfigArgs> sparkHistoryServerConfig) {
         this.metastoreService = metastoreService;
         this.sparkHistoryServerConfig = sparkHistoryServerConfig;
     }
 
     private PeripheralsConfigArgs() {
-        this.metastoreService = Input.empty();
-        this.sparkHistoryServerConfig = Input.empty();
+        this.metastoreService = Output.empty();
+        this.sparkHistoryServerConfig = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class PeripheralsConfigArgs extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private @Nullable Input<String> metastoreService;
-        private @Nullable Input<SparkHistoryServerConfigArgs> sparkHistoryServerConfig;
+        private @Nullable Output<String> metastoreService;
+        private @Nullable Output<SparkHistoryServerConfigArgs> sparkHistoryServerConfig;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class PeripheralsConfigArgs extends io.pulumi.resources.ResourceArg
     	      this.sparkHistoryServerConfig = defaults.sparkHistoryServerConfig;
         }
 
-        public Builder metastoreService(@Nullable Input<String> metastoreService) {
+        public Builder metastoreService(@Nullable Output<String> metastoreService) {
             this.metastoreService = metastoreService;
             return this;
         }
 
         public Builder metastoreService(@Nullable String metastoreService) {
-            this.metastoreService = Input.ofNullable(metastoreService);
+            this.metastoreService = Output.ofNullable(metastoreService);
             return this;
         }
 
-        public Builder sparkHistoryServerConfig(@Nullable Input<SparkHistoryServerConfigArgs> sparkHistoryServerConfig) {
+        public Builder sparkHistoryServerConfig(@Nullable Output<SparkHistoryServerConfigArgs> sparkHistoryServerConfig) {
             this.sparkHistoryServerConfig = sparkHistoryServerConfig;
             return this;
         }
 
         public Builder sparkHistoryServerConfig(@Nullable SparkHistoryServerConfigArgs sparkHistoryServerConfig) {
-            this.sparkHistoryServerConfig = Input.ofNullable(sparkHistoryServerConfig);
+            this.sparkHistoryServerConfig = Output.ofNullable(sparkHistoryServerConfig);
             return this;
         }
         public PeripheralsConfigArgs build() {

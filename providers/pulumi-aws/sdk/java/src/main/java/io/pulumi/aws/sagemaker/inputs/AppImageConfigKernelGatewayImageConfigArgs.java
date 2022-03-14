@@ -5,7 +5,7 @@ package io.pulumi.aws.sagemaker.inputs;
 
 import io.pulumi.aws.sagemaker.inputs.AppImageConfigKernelGatewayImageConfigFileSystemConfigArgs;
 import io.pulumi.aws.sagemaker.inputs.AppImageConfigKernelGatewayImageConfigKernelSpecArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,10 +20,10 @@ public final class AppImageConfigKernelGatewayImageConfigArgs extends io.pulumi.
      * 
      */
     @InputImport(name="fileSystemConfig")
-      private final @Nullable Input<AppImageConfigKernelGatewayImageConfigFileSystemConfigArgs> fileSystemConfig;
+      private final @Nullable Output<AppImageConfigKernelGatewayImageConfigFileSystemConfigArgs> fileSystemConfig;
 
-    public Input<AppImageConfigKernelGatewayImageConfigFileSystemConfigArgs> getFileSystemConfig() {
-        return this.fileSystemConfig == null ? Input.empty() : this.fileSystemConfig;
+    public Output<AppImageConfigKernelGatewayImageConfigFileSystemConfigArgs> getFileSystemConfig() {
+        return this.fileSystemConfig == null ? Output.empty() : this.fileSystemConfig;
     }
 
     /**
@@ -31,22 +31,22 @@ public final class AppImageConfigKernelGatewayImageConfigArgs extends io.pulumi.
      * 
      */
     @InputImport(name="kernelSpec", required=true)
-      private final Input<AppImageConfigKernelGatewayImageConfigKernelSpecArgs> kernelSpec;
+      private final Output<AppImageConfigKernelGatewayImageConfigKernelSpecArgs> kernelSpec;
 
-    public Input<AppImageConfigKernelGatewayImageConfigKernelSpecArgs> getKernelSpec() {
+    public Output<AppImageConfigKernelGatewayImageConfigKernelSpecArgs> getKernelSpec() {
         return this.kernelSpec;
     }
 
     public AppImageConfigKernelGatewayImageConfigArgs(
-        @Nullable Input<AppImageConfigKernelGatewayImageConfigFileSystemConfigArgs> fileSystemConfig,
-        Input<AppImageConfigKernelGatewayImageConfigKernelSpecArgs> kernelSpec) {
+        @Nullable Output<AppImageConfigKernelGatewayImageConfigFileSystemConfigArgs> fileSystemConfig,
+        Output<AppImageConfigKernelGatewayImageConfigKernelSpecArgs> kernelSpec) {
         this.fileSystemConfig = fileSystemConfig;
         this.kernelSpec = Objects.requireNonNull(kernelSpec, "expected parameter 'kernelSpec' to be non-null");
     }
 
     private AppImageConfigKernelGatewayImageConfigArgs() {
-        this.fileSystemConfig = Input.empty();
-        this.kernelSpec = Input.empty();
+        this.fileSystemConfig = Output.empty();
+        this.kernelSpec = Output.empty();
     }
 
     public static Builder builder() {
@@ -58,8 +58,8 @@ public final class AppImageConfigKernelGatewayImageConfigArgs extends io.pulumi.
     }
 
     public static final class Builder {
-        private @Nullable Input<AppImageConfigKernelGatewayImageConfigFileSystemConfigArgs> fileSystemConfig;
-        private Input<AppImageConfigKernelGatewayImageConfigKernelSpecArgs> kernelSpec;
+        private @Nullable Output<AppImageConfigKernelGatewayImageConfigFileSystemConfigArgs> fileSystemConfig;
+        private Output<AppImageConfigKernelGatewayImageConfigKernelSpecArgs> kernelSpec;
 
         public Builder() {
     	      // Empty
@@ -71,23 +71,23 @@ public final class AppImageConfigKernelGatewayImageConfigArgs extends io.pulumi.
     	      this.kernelSpec = defaults.kernelSpec;
         }
 
-        public Builder fileSystemConfig(@Nullable Input<AppImageConfigKernelGatewayImageConfigFileSystemConfigArgs> fileSystemConfig) {
+        public Builder fileSystemConfig(@Nullable Output<AppImageConfigKernelGatewayImageConfigFileSystemConfigArgs> fileSystemConfig) {
             this.fileSystemConfig = fileSystemConfig;
             return this;
         }
 
         public Builder fileSystemConfig(@Nullable AppImageConfigKernelGatewayImageConfigFileSystemConfigArgs fileSystemConfig) {
-            this.fileSystemConfig = Input.ofNullable(fileSystemConfig);
+            this.fileSystemConfig = Output.ofNullable(fileSystemConfig);
             return this;
         }
 
-        public Builder kernelSpec(Input<AppImageConfigKernelGatewayImageConfigKernelSpecArgs> kernelSpec) {
+        public Builder kernelSpec(Output<AppImageConfigKernelGatewayImageConfigKernelSpecArgs> kernelSpec) {
             this.kernelSpec = Objects.requireNonNull(kernelSpec);
             return this;
         }
 
         public Builder kernelSpec(AppImageConfigKernelGatewayImageConfigKernelSpecArgs kernelSpec) {
-            this.kernelSpec = Input.of(Objects.requireNonNull(kernelSpec));
+            this.kernelSpec = Output.of(Objects.requireNonNull(kernelSpec));
             return this;
         }
         public AppImageConfigKernelGatewayImageConfigArgs build() {

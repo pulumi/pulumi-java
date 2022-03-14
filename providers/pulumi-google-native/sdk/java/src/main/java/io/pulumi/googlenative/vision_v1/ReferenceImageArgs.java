@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.vision_v1;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.vision_v1.inputs.BoundingPolyArgs;
 import java.lang.String;
@@ -21,17 +21,17 @@ public final class ReferenceImageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="boundingPolys")
-      private final @Nullable Input<List<BoundingPolyArgs>> boundingPolys;
+      private final @Nullable Output<List<BoundingPolyArgs>> boundingPolys;
 
-    public Input<List<BoundingPolyArgs>> getBoundingPolys() {
-        return this.boundingPolys == null ? Input.empty() : this.boundingPolys;
+    public Output<List<BoundingPolyArgs>> getBoundingPolys() {
+        return this.boundingPolys == null ? Output.empty() : this.boundingPolys;
     }
 
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -39,31 +39,31 @@ public final class ReferenceImageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     @InputImport(name="productId", required=true)
-      private final Input<String> productId;
+      private final Output<String> productId;
 
-    public Input<String> getProductId() {
+    public Output<String> getProductId() {
         return this.productId;
     }
 
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     @InputImport(name="referenceImageId")
-      private final @Nullable Input<String> referenceImageId;
+      private final @Nullable Output<String> referenceImageId;
 
-    public Input<String> getReferenceImageId() {
-        return this.referenceImageId == null ? Input.empty() : this.referenceImageId;
+    public Output<String> getReferenceImageId() {
+        return this.referenceImageId == null ? Output.empty() : this.referenceImageId;
     }
 
     /**
@@ -71,20 +71,20 @@ public final class ReferenceImageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="uri", required=true)
-      private final Input<String> uri;
+      private final Output<String> uri;
 
-    public Input<String> getUri() {
+    public Output<String> getUri() {
         return this.uri;
     }
 
     public ReferenceImageArgs(
-        @Nullable Input<List<BoundingPolyArgs>> boundingPolys,
-        @Nullable Input<String> location,
-        @Nullable Input<String> name,
-        Input<String> productId,
-        @Nullable Input<String> project,
-        @Nullable Input<String> referenceImageId,
-        Input<String> uri) {
+        @Nullable Output<List<BoundingPolyArgs>> boundingPolys,
+        @Nullable Output<String> location,
+        @Nullable Output<String> name,
+        Output<String> productId,
+        @Nullable Output<String> project,
+        @Nullable Output<String> referenceImageId,
+        Output<String> uri) {
         this.boundingPolys = boundingPolys;
         this.location = location;
         this.name = name;
@@ -95,13 +95,13 @@ public final class ReferenceImageArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ReferenceImageArgs() {
-        this.boundingPolys = Input.empty();
-        this.location = Input.empty();
-        this.name = Input.empty();
-        this.productId = Input.empty();
-        this.project = Input.empty();
-        this.referenceImageId = Input.empty();
-        this.uri = Input.empty();
+        this.boundingPolys = Output.empty();
+        this.location = Output.empty();
+        this.name = Output.empty();
+        this.productId = Output.empty();
+        this.project = Output.empty();
+        this.referenceImageId = Output.empty();
+        this.uri = Output.empty();
     }
 
     public static Builder builder() {
@@ -113,13 +113,13 @@ public final class ReferenceImageArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<List<BoundingPolyArgs>> boundingPolys;
-        private @Nullable Input<String> location;
-        private @Nullable Input<String> name;
-        private Input<String> productId;
-        private @Nullable Input<String> project;
-        private @Nullable Input<String> referenceImageId;
-        private Input<String> uri;
+        private @Nullable Output<List<BoundingPolyArgs>> boundingPolys;
+        private @Nullable Output<String> location;
+        private @Nullable Output<String> name;
+        private Output<String> productId;
+        private @Nullable Output<String> project;
+        private @Nullable Output<String> referenceImageId;
+        private Output<String> uri;
 
         public Builder() {
     	      // Empty
@@ -136,73 +136,73 @@ public final class ReferenceImageArgs extends io.pulumi.resources.ResourceArgs {
     	      this.uri = defaults.uri;
         }
 
-        public Builder boundingPolys(@Nullable Input<List<BoundingPolyArgs>> boundingPolys) {
+        public Builder boundingPolys(@Nullable Output<List<BoundingPolyArgs>> boundingPolys) {
             this.boundingPolys = boundingPolys;
             return this;
         }
 
         public Builder boundingPolys(@Nullable List<BoundingPolyArgs> boundingPolys) {
-            this.boundingPolys = Input.ofNullable(boundingPolys);
+            this.boundingPolys = Output.ofNullable(boundingPolys);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder productId(Input<String> productId) {
+        public Builder productId(Output<String> productId) {
             this.productId = Objects.requireNonNull(productId);
             return this;
         }
 
         public Builder productId(String productId) {
-            this.productId = Input.of(Objects.requireNonNull(productId));
+            this.productId = Output.of(Objects.requireNonNull(productId));
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder referenceImageId(@Nullable Input<String> referenceImageId) {
+        public Builder referenceImageId(@Nullable Output<String> referenceImageId) {
             this.referenceImageId = referenceImageId;
             return this;
         }
 
         public Builder referenceImageId(@Nullable String referenceImageId) {
-            this.referenceImageId = Input.ofNullable(referenceImageId);
+            this.referenceImageId = Output.ofNullable(referenceImageId);
             return this;
         }
 
-        public Builder uri(Input<String> uri) {
+        public Builder uri(Output<String> uri) {
             this.uri = Objects.requireNonNull(uri);
             return this;
         }
 
         public Builder uri(String uri) {
-            this.uri = Input.of(Objects.requireNonNull(uri));
+            this.uri = Output.of(Objects.requireNonNull(uri));
             return this;
         }
         public ReferenceImageArgs build() {

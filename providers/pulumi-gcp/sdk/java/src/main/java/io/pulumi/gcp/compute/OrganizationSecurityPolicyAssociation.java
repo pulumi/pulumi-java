@@ -3,7 +3,6 @@
 
 package io.pulumi.gcp.compute;
 
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -130,14 +129,14 @@ public class OrganizationSecurityPolicyAssociation extends io.pulumi.resources.C
      * @param options A bag of options that control this resource's behavior.
      */
     public OrganizationSecurityPolicyAssociation(String name, OrganizationSecurityPolicyAssociationArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:compute/organizationSecurityPolicyAssociation:OrganizationSecurityPolicyAssociation", name, args == null ? OrganizationSecurityPolicyAssociationArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("gcp:compute/organizationSecurityPolicyAssociation:OrganizationSecurityPolicyAssociation", name, args == null ? OrganizationSecurityPolicyAssociationArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private OrganizationSecurityPolicyAssociation(String name, Input<String> id, @Nullable OrganizationSecurityPolicyAssociationState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private OrganizationSecurityPolicyAssociation(String name, Output<String> id, @Nullable OrganizationSecurityPolicyAssociationState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("gcp:compute/organizationSecurityPolicyAssociation:OrganizationSecurityPolicyAssociation", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -153,7 +152,7 @@ public class OrganizationSecurityPolicyAssociation extends io.pulumi.resources.C
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static OrganizationSecurityPolicyAssociation get(String name, Input<String> id, @Nullable OrganizationSecurityPolicyAssociationState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static OrganizationSecurityPolicyAssociation get(String name, Output<String> id, @Nullable OrganizationSecurityPolicyAssociationState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new OrganizationSecurityPolicyAssociation(name, id, state, options);
     }
 }

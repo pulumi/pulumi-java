@@ -7,7 +7,7 @@ import io.pulumi.azurenative.insights.enums.ItemScope;
 import io.pulumi.azurenative.insights.enums.ItemType;
 import io.pulumi.azurenative.insights.inputs.ApplicationInsightsComponentAnalyticsItemPropertiesArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class AnalyticsItemArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="content")
-      private final @Nullable Input<String> content;
+      private final @Nullable Output<String> content;
 
-    public Input<String> getContent() {
-        return this.content == null ? Input.empty() : this.content;
+    public Output<String> getContent() {
+        return this.content == null ? Output.empty() : this.content;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class AnalyticsItemArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="id")
-      private final @Nullable Input<String> id;
+      private final @Nullable Output<String> id;
 
-    public Input<String> getId() {
-        return this.id == null ? Input.empty() : this.id;
+    public Output<String> getId() {
+        return this.id == null ? Output.empty() : this.id;
     }
 
     /**
@@ -46,10 +46,10 @@ public final class AnalyticsItemArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -57,10 +57,10 @@ public final class AnalyticsItemArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="overrideItem")
-      private final @Nullable Input<Boolean> overrideItem;
+      private final @Nullable Output<Boolean> overrideItem;
 
-    public Input<Boolean> getOverrideItem() {
-        return this.overrideItem == null ? Input.empty() : this.overrideItem;
+    public Output<Boolean> getOverrideItem() {
+        return this.overrideItem == null ? Output.empty() : this.overrideItem;
     }
 
     /**
@@ -68,10 +68,10 @@ public final class AnalyticsItemArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="properties")
-      private final @Nullable Input<ApplicationInsightsComponentAnalyticsItemPropertiesArgs> properties;
+      private final @Nullable Output<ApplicationInsightsComponentAnalyticsItemPropertiesArgs> properties;
 
-    public Input<ApplicationInsightsComponentAnalyticsItemPropertiesArgs> getProperties() {
-        return this.properties == null ? Input.empty() : this.properties;
+    public Output<ApplicationInsightsComponentAnalyticsItemPropertiesArgs> getProperties() {
+        return this.properties == null ? Output.empty() : this.properties;
     }
 
     /**
@@ -79,9 +79,9 @@ public final class AnalyticsItemArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -90,9 +90,9 @@ public final class AnalyticsItemArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceName", required=true)
-      private final Input<String> resourceName;
+      private final Output<String> resourceName;
 
-    public Input<String> getPropResourceName() {
+    public Output<String> getPropResourceName() {
         return this.resourceName;
     }
 
@@ -101,10 +101,10 @@ public final class AnalyticsItemArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="scope")
-      private final @Nullable Input<Either<String,ItemScope>> scope;
+      private final @Nullable Output<Either<String,ItemScope>> scope;
 
-    public Input<Either<String,ItemScope>> getScope() {
-        return this.scope == null ? Input.empty() : this.scope;
+    public Output<Either<String,ItemScope>> getScope() {
+        return this.scope == null ? Output.empty() : this.scope;
     }
 
     /**
@@ -112,9 +112,9 @@ public final class AnalyticsItemArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="scopePath", required=true)
-      private final Input<String> scopePath;
+      private final Output<String> scopePath;
 
-    public Input<String> getScopePath() {
+    public Output<String> getScopePath() {
         return this.scopePath;
     }
 
@@ -123,23 +123,23 @@ public final class AnalyticsItemArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type")
-      private final @Nullable Input<Either<String,ItemType>> type;
+      private final @Nullable Output<Either<String,ItemType>> type;
 
-    public Input<Either<String,ItemType>> getType() {
-        return this.type == null ? Input.empty() : this.type;
+    public Output<Either<String,ItemType>> getType() {
+        return this.type == null ? Output.empty() : this.type;
     }
 
     public AnalyticsItemArgs(
-        @Nullable Input<String> content,
-        @Nullable Input<String> id,
-        @Nullable Input<String> name,
-        @Nullable Input<Boolean> overrideItem,
-        @Nullable Input<ApplicationInsightsComponentAnalyticsItemPropertiesArgs> properties,
-        Input<String> resourceGroupName,
-        Input<String> resourceName,
-        @Nullable Input<Either<String,ItemScope>> scope,
-        Input<String> scopePath,
-        @Nullable Input<Either<String,ItemType>> type) {
+        @Nullable Output<String> content,
+        @Nullable Output<String> id,
+        @Nullable Output<String> name,
+        @Nullable Output<Boolean> overrideItem,
+        @Nullable Output<ApplicationInsightsComponentAnalyticsItemPropertiesArgs> properties,
+        Output<String> resourceGroupName,
+        Output<String> resourceName,
+        @Nullable Output<Either<String,ItemScope>> scope,
+        Output<String> scopePath,
+        @Nullable Output<Either<String,ItemType>> type) {
         this.content = content;
         this.id = id;
         this.name = name;
@@ -153,16 +153,16 @@ public final class AnalyticsItemArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private AnalyticsItemArgs() {
-        this.content = Input.empty();
-        this.id = Input.empty();
-        this.name = Input.empty();
-        this.overrideItem = Input.empty();
-        this.properties = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.resourceName = Input.empty();
-        this.scope = Input.empty();
-        this.scopePath = Input.empty();
-        this.type = Input.empty();
+        this.content = Output.empty();
+        this.id = Output.empty();
+        this.name = Output.empty();
+        this.overrideItem = Output.empty();
+        this.properties = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.resourceName = Output.empty();
+        this.scope = Output.empty();
+        this.scopePath = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -174,16 +174,16 @@ public final class AnalyticsItemArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> content;
-        private @Nullable Input<String> id;
-        private @Nullable Input<String> name;
-        private @Nullable Input<Boolean> overrideItem;
-        private @Nullable Input<ApplicationInsightsComponentAnalyticsItemPropertiesArgs> properties;
-        private Input<String> resourceGroupName;
-        private Input<String> resourceName;
-        private @Nullable Input<Either<String,ItemScope>> scope;
-        private Input<String> scopePath;
-        private @Nullable Input<Either<String,ItemType>> type;
+        private @Nullable Output<String> content;
+        private @Nullable Output<String> id;
+        private @Nullable Output<String> name;
+        private @Nullable Output<Boolean> overrideItem;
+        private @Nullable Output<ApplicationInsightsComponentAnalyticsItemPropertiesArgs> properties;
+        private Output<String> resourceGroupName;
+        private Output<String> resourceName;
+        private @Nullable Output<Either<String,ItemScope>> scope;
+        private Output<String> scopePath;
+        private @Nullable Output<Either<String,ItemType>> type;
 
         public Builder() {
     	      // Empty
@@ -203,103 +203,103 @@ public final class AnalyticsItemArgs extends io.pulumi.resources.ResourceArgs {
     	      this.type = defaults.type;
         }
 
-        public Builder content(@Nullable Input<String> content) {
+        public Builder content(@Nullable Output<String> content) {
             this.content = content;
             return this;
         }
 
         public Builder content(@Nullable String content) {
-            this.content = Input.ofNullable(content);
+            this.content = Output.ofNullable(content);
             return this;
         }
 
-        public Builder id(@Nullable Input<String> id) {
+        public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
 
         public Builder id(@Nullable String id) {
-            this.id = Input.ofNullable(id);
+            this.id = Output.ofNullable(id);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder overrideItem(@Nullable Input<Boolean> overrideItem) {
+        public Builder overrideItem(@Nullable Output<Boolean> overrideItem) {
             this.overrideItem = overrideItem;
             return this;
         }
 
         public Builder overrideItem(@Nullable Boolean overrideItem) {
-            this.overrideItem = Input.ofNullable(overrideItem);
+            this.overrideItem = Output.ofNullable(overrideItem);
             return this;
         }
 
-        public Builder properties(@Nullable Input<ApplicationInsightsComponentAnalyticsItemPropertiesArgs> properties) {
+        public Builder properties(@Nullable Output<ApplicationInsightsComponentAnalyticsItemPropertiesArgs> properties) {
             this.properties = properties;
             return this;
         }
 
         public Builder properties(@Nullable ApplicationInsightsComponentAnalyticsItemPropertiesArgs properties) {
-            this.properties = Input.ofNullable(properties);
+            this.properties = Output.ofNullable(properties);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder resourceName(Input<String> resourceName) {
+        public Builder resourceName(Output<String> resourceName) {
             this.resourceName = Objects.requireNonNull(resourceName);
             return this;
         }
 
         public Builder resourceName(String resourceName) {
-            this.resourceName = Input.of(Objects.requireNonNull(resourceName));
+            this.resourceName = Output.of(Objects.requireNonNull(resourceName));
             return this;
         }
 
-        public Builder scope(@Nullable Input<Either<String,ItemScope>> scope) {
+        public Builder scope(@Nullable Output<Either<String,ItemScope>> scope) {
             this.scope = scope;
             return this;
         }
 
         public Builder scope(@Nullable Either<String,ItemScope> scope) {
-            this.scope = Input.ofNullable(scope);
+            this.scope = Output.ofNullable(scope);
             return this;
         }
 
-        public Builder scopePath(Input<String> scopePath) {
+        public Builder scopePath(Output<String> scopePath) {
             this.scopePath = Objects.requireNonNull(scopePath);
             return this;
         }
 
         public Builder scopePath(String scopePath) {
-            this.scopePath = Input.of(Objects.requireNonNull(scopePath));
+            this.scopePath = Output.of(Objects.requireNonNull(scopePath));
             return this;
         }
 
-        public Builder type(@Nullable Input<Either<String,ItemType>> type) {
+        public Builder type(@Nullable Output<Either<String,ItemType>> type) {
             this.type = type;
             return this;
         }
 
         public Builder type(@Nullable Either<String,ItemType> type) {
-            this.type = Input.ofNullable(type);
+            this.type = Output.ofNullable(type);
             return this;
         }
         public AnalyticsItemArgs build() {

@@ -7,7 +7,7 @@ import io.pulumi.azurenative.signalrservice.enums.ACLAction;
 import io.pulumi.azurenative.signalrservice.inputs.NetworkACLArgs;
 import io.pulumi.azurenative.signalrservice.inputs.PrivateEndpointACLArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -28,10 +28,10 @@ public final class SignalRNetworkACLsArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="defaultAction")
-      private final @Nullable Input<Either<String,ACLAction>> defaultAction;
+      private final @Nullable Output<Either<String,ACLAction>> defaultAction;
 
-    public Input<Either<String,ACLAction>> getDefaultAction() {
-        return this.defaultAction == null ? Input.empty() : this.defaultAction;
+    public Output<Either<String,ACLAction>> getDefaultAction() {
+        return this.defaultAction == null ? Output.empty() : this.defaultAction;
     }
 
     /**
@@ -39,10 +39,10 @@ public final class SignalRNetworkACLsArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="privateEndpoints")
-      private final @Nullable Input<List<PrivateEndpointACLArgs>> privateEndpoints;
+      private final @Nullable Output<List<PrivateEndpointACLArgs>> privateEndpoints;
 
-    public Input<List<PrivateEndpointACLArgs>> getPrivateEndpoints() {
-        return this.privateEndpoints == null ? Input.empty() : this.privateEndpoints;
+    public Output<List<PrivateEndpointACLArgs>> getPrivateEndpoints() {
+        return this.privateEndpoints == null ? Output.empty() : this.privateEndpoints;
     }
 
     /**
@@ -50,25 +50,25 @@ public final class SignalRNetworkACLsArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="publicNetwork")
-      private final @Nullable Input<NetworkACLArgs> publicNetwork;
+      private final @Nullable Output<NetworkACLArgs> publicNetwork;
 
-    public Input<NetworkACLArgs> getPublicNetwork() {
-        return this.publicNetwork == null ? Input.empty() : this.publicNetwork;
+    public Output<NetworkACLArgs> getPublicNetwork() {
+        return this.publicNetwork == null ? Output.empty() : this.publicNetwork;
     }
 
     public SignalRNetworkACLsArgs(
-        @Nullable Input<Either<String,ACLAction>> defaultAction,
-        @Nullable Input<List<PrivateEndpointACLArgs>> privateEndpoints,
-        @Nullable Input<NetworkACLArgs> publicNetwork) {
-        this.defaultAction = defaultAction == null ? Input.ofLeft("Deny") : defaultAction;
+        @Nullable Output<Either<String,ACLAction>> defaultAction,
+        @Nullable Output<List<PrivateEndpointACLArgs>> privateEndpoints,
+        @Nullable Output<NetworkACLArgs> publicNetwork) {
+        this.defaultAction = defaultAction == null ? Output.ofLeft("Deny") : defaultAction;
         this.privateEndpoints = privateEndpoints;
         this.publicNetwork = publicNetwork;
     }
 
     private SignalRNetworkACLsArgs() {
-        this.defaultAction = Input.empty();
-        this.privateEndpoints = Input.empty();
-        this.publicNetwork = Input.empty();
+        this.defaultAction = Output.empty();
+        this.privateEndpoints = Output.empty();
+        this.publicNetwork = Output.empty();
     }
 
     public static Builder builder() {
@@ -80,9 +80,9 @@ public final class SignalRNetworkACLsArgs extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private @Nullable Input<Either<String,ACLAction>> defaultAction;
-        private @Nullable Input<List<PrivateEndpointACLArgs>> privateEndpoints;
-        private @Nullable Input<NetworkACLArgs> publicNetwork;
+        private @Nullable Output<Either<String,ACLAction>> defaultAction;
+        private @Nullable Output<List<PrivateEndpointACLArgs>> privateEndpoints;
+        private @Nullable Output<NetworkACLArgs> publicNetwork;
 
         public Builder() {
     	      // Empty
@@ -95,33 +95,33 @@ public final class SignalRNetworkACLsArgs extends io.pulumi.resources.ResourceAr
     	      this.publicNetwork = defaults.publicNetwork;
         }
 
-        public Builder defaultAction(@Nullable Input<Either<String,ACLAction>> defaultAction) {
+        public Builder defaultAction(@Nullable Output<Either<String,ACLAction>> defaultAction) {
             this.defaultAction = defaultAction;
             return this;
         }
 
         public Builder defaultAction(@Nullable Either<String,ACLAction> defaultAction) {
-            this.defaultAction = Input.ofNullable(defaultAction);
+            this.defaultAction = Output.ofNullable(defaultAction);
             return this;
         }
 
-        public Builder privateEndpoints(@Nullable Input<List<PrivateEndpointACLArgs>> privateEndpoints) {
+        public Builder privateEndpoints(@Nullable Output<List<PrivateEndpointACLArgs>> privateEndpoints) {
             this.privateEndpoints = privateEndpoints;
             return this;
         }
 
         public Builder privateEndpoints(@Nullable List<PrivateEndpointACLArgs> privateEndpoints) {
-            this.privateEndpoints = Input.ofNullable(privateEndpoints);
+            this.privateEndpoints = Output.ofNullable(privateEndpoints);
             return this;
         }
 
-        public Builder publicNetwork(@Nullable Input<NetworkACLArgs> publicNetwork) {
+        public Builder publicNetwork(@Nullable Output<NetworkACLArgs> publicNetwork) {
             this.publicNetwork = publicNetwork;
             return this;
         }
 
         public Builder publicNetwork(@Nullable NetworkACLArgs publicNetwork) {
-            this.publicNetwork = Input.ofNullable(publicNetwork);
+            this.publicNetwork = Output.ofNullable(publicNetwork);
             return this;
         }
         public SignalRNetworkACLsArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v3beta1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dialogflow_v3beta1.inputs.GoogleCloudDialogflowCxV3beta1AdvancedSettingsLoggingSettingsArgs;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class GoogleCloudDialogflowCxV3beta1AdvancedSettingsArgs extends io
      * 
      */
     @InputImport(name="loggingSettings")
-      private final @Nullable Input<GoogleCloudDialogflowCxV3beta1AdvancedSettingsLoggingSettingsArgs> loggingSettings;
+      private final @Nullable Output<GoogleCloudDialogflowCxV3beta1AdvancedSettingsLoggingSettingsArgs> loggingSettings;
 
-    public Input<GoogleCloudDialogflowCxV3beta1AdvancedSettingsLoggingSettingsArgs> getLoggingSettings() {
-        return this.loggingSettings == null ? Input.empty() : this.loggingSettings;
+    public Output<GoogleCloudDialogflowCxV3beta1AdvancedSettingsLoggingSettingsArgs> getLoggingSettings() {
+        return this.loggingSettings == null ? Output.empty() : this.loggingSettings;
     }
 
-    public GoogleCloudDialogflowCxV3beta1AdvancedSettingsArgs(@Nullable Input<GoogleCloudDialogflowCxV3beta1AdvancedSettingsLoggingSettingsArgs> loggingSettings) {
+    public GoogleCloudDialogflowCxV3beta1AdvancedSettingsArgs(@Nullable Output<GoogleCloudDialogflowCxV3beta1AdvancedSettingsLoggingSettingsArgs> loggingSettings) {
         this.loggingSettings = loggingSettings;
     }
 
     private GoogleCloudDialogflowCxV3beta1AdvancedSettingsArgs() {
-        this.loggingSettings = Input.empty();
+        this.loggingSettings = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class GoogleCloudDialogflowCxV3beta1AdvancedSettingsArgs extends io
     }
 
     public static final class Builder {
-        private @Nullable Input<GoogleCloudDialogflowCxV3beta1AdvancedSettingsLoggingSettingsArgs> loggingSettings;
+        private @Nullable Output<GoogleCloudDialogflowCxV3beta1AdvancedSettingsLoggingSettingsArgs> loggingSettings;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class GoogleCloudDialogflowCxV3beta1AdvancedSettingsArgs extends io
     	      this.loggingSettings = defaults.loggingSettings;
         }
 
-        public Builder loggingSettings(@Nullable Input<GoogleCloudDialogflowCxV3beta1AdvancedSettingsLoggingSettingsArgs> loggingSettings) {
+        public Builder loggingSettings(@Nullable Output<GoogleCloudDialogflowCxV3beta1AdvancedSettingsLoggingSettingsArgs> loggingSettings) {
             this.loggingSettings = loggingSettings;
             return this;
         }
 
         public Builder loggingSettings(@Nullable GoogleCloudDialogflowCxV3beta1AdvancedSettingsLoggingSettingsArgs loggingSettings) {
-            this.loggingSettings = Input.ofNullable(loggingSettings);
+            this.loggingSettings = Output.ofNullable(loggingSettings);
             return this;
         }
         public GoogleCloudDialogflowCxV3beta1AdvancedSettingsArgs build() {

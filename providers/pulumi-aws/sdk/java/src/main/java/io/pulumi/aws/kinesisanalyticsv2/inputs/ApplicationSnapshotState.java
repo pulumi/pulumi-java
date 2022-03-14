@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.kinesisanalyticsv2.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -20,10 +20,10 @@ public final class ApplicationSnapshotState extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="applicationName")
-      private final @Nullable Input<String> applicationName;
+      private final @Nullable Output<String> applicationName;
 
-    public Input<String> getApplicationName() {
-        return this.applicationName == null ? Input.empty() : this.applicationName;
+    public Output<String> getApplicationName() {
+        return this.applicationName == null ? Output.empty() : this.applicationName;
     }
 
     /**
@@ -31,10 +31,10 @@ public final class ApplicationSnapshotState extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="applicationVersionId")
-      private final @Nullable Input<Integer> applicationVersionId;
+      private final @Nullable Output<Integer> applicationVersionId;
 
-    public Input<Integer> getApplicationVersionId() {
-        return this.applicationVersionId == null ? Input.empty() : this.applicationVersionId;
+    public Output<Integer> getApplicationVersionId() {
+        return this.applicationVersionId == null ? Output.empty() : this.applicationVersionId;
     }
 
     /**
@@ -42,10 +42,10 @@ public final class ApplicationSnapshotState extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="snapshotCreationTimestamp")
-      private final @Nullable Input<String> snapshotCreationTimestamp;
+      private final @Nullable Output<String> snapshotCreationTimestamp;
 
-    public Input<String> getSnapshotCreationTimestamp() {
-        return this.snapshotCreationTimestamp == null ? Input.empty() : this.snapshotCreationTimestamp;
+    public Output<String> getSnapshotCreationTimestamp() {
+        return this.snapshotCreationTimestamp == null ? Output.empty() : this.snapshotCreationTimestamp;
     }
 
     /**
@@ -53,17 +53,17 @@ public final class ApplicationSnapshotState extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="snapshotName")
-      private final @Nullable Input<String> snapshotName;
+      private final @Nullable Output<String> snapshotName;
 
-    public Input<String> getSnapshotName() {
-        return this.snapshotName == null ? Input.empty() : this.snapshotName;
+    public Output<String> getSnapshotName() {
+        return this.snapshotName == null ? Output.empty() : this.snapshotName;
     }
 
     public ApplicationSnapshotState(
-        @Nullable Input<String> applicationName,
-        @Nullable Input<Integer> applicationVersionId,
-        @Nullable Input<String> snapshotCreationTimestamp,
-        @Nullable Input<String> snapshotName) {
+        @Nullable Output<String> applicationName,
+        @Nullable Output<Integer> applicationVersionId,
+        @Nullable Output<String> snapshotCreationTimestamp,
+        @Nullable Output<String> snapshotName) {
         this.applicationName = applicationName;
         this.applicationVersionId = applicationVersionId;
         this.snapshotCreationTimestamp = snapshotCreationTimestamp;
@@ -71,10 +71,10 @@ public final class ApplicationSnapshotState extends io.pulumi.resources.Resource
     }
 
     private ApplicationSnapshotState() {
-        this.applicationName = Input.empty();
-        this.applicationVersionId = Input.empty();
-        this.snapshotCreationTimestamp = Input.empty();
-        this.snapshotName = Input.empty();
+        this.applicationName = Output.empty();
+        this.applicationVersionId = Output.empty();
+        this.snapshotCreationTimestamp = Output.empty();
+        this.snapshotName = Output.empty();
     }
 
     public static Builder builder() {
@@ -86,10 +86,10 @@ public final class ApplicationSnapshotState extends io.pulumi.resources.Resource
     }
 
     public static final class Builder {
-        private @Nullable Input<String> applicationName;
-        private @Nullable Input<Integer> applicationVersionId;
-        private @Nullable Input<String> snapshotCreationTimestamp;
-        private @Nullable Input<String> snapshotName;
+        private @Nullable Output<String> applicationName;
+        private @Nullable Output<Integer> applicationVersionId;
+        private @Nullable Output<String> snapshotCreationTimestamp;
+        private @Nullable Output<String> snapshotName;
 
         public Builder() {
     	      // Empty
@@ -103,43 +103,43 @@ public final class ApplicationSnapshotState extends io.pulumi.resources.Resource
     	      this.snapshotName = defaults.snapshotName;
         }
 
-        public Builder applicationName(@Nullable Input<String> applicationName) {
+        public Builder applicationName(@Nullable Output<String> applicationName) {
             this.applicationName = applicationName;
             return this;
         }
 
         public Builder applicationName(@Nullable String applicationName) {
-            this.applicationName = Input.ofNullable(applicationName);
+            this.applicationName = Output.ofNullable(applicationName);
             return this;
         }
 
-        public Builder applicationVersionId(@Nullable Input<Integer> applicationVersionId) {
+        public Builder applicationVersionId(@Nullable Output<Integer> applicationVersionId) {
             this.applicationVersionId = applicationVersionId;
             return this;
         }
 
         public Builder applicationVersionId(@Nullable Integer applicationVersionId) {
-            this.applicationVersionId = Input.ofNullable(applicationVersionId);
+            this.applicationVersionId = Output.ofNullable(applicationVersionId);
             return this;
         }
 
-        public Builder snapshotCreationTimestamp(@Nullable Input<String> snapshotCreationTimestamp) {
+        public Builder snapshotCreationTimestamp(@Nullable Output<String> snapshotCreationTimestamp) {
             this.snapshotCreationTimestamp = snapshotCreationTimestamp;
             return this;
         }
 
         public Builder snapshotCreationTimestamp(@Nullable String snapshotCreationTimestamp) {
-            this.snapshotCreationTimestamp = Input.ofNullable(snapshotCreationTimestamp);
+            this.snapshotCreationTimestamp = Output.ofNullable(snapshotCreationTimestamp);
             return this;
         }
 
-        public Builder snapshotName(@Nullable Input<String> snapshotName) {
+        public Builder snapshotName(@Nullable Output<String> snapshotName) {
             this.snapshotName = snapshotName;
             return this;
         }
 
         public Builder snapshotName(@Nullable String snapshotName) {
-            this.snapshotName = Input.ofNullable(snapshotName);
+            this.snapshotName = Output.ofNullable(snapshotName);
             return this;
         }
         public ApplicationSnapshotState build() {

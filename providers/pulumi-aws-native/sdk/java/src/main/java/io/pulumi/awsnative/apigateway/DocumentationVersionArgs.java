@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.apigateway;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class DocumentationVersionArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -30,9 +30,9 @@ public final class DocumentationVersionArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="documentationVersion", required=true)
-      private final Input<String> documentationVersion;
+      private final Output<String> documentationVersion;
 
-    public Input<String> getDocumentationVersion() {
+    public Output<String> getDocumentationVersion() {
         return this.documentationVersion;
     }
 
@@ -41,25 +41,25 @@ public final class DocumentationVersionArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="restApiId", required=true)
-      private final Input<String> restApiId;
+      private final Output<String> restApiId;
 
-    public Input<String> getRestApiId() {
+    public Output<String> getRestApiId() {
         return this.restApiId;
     }
 
     public DocumentationVersionArgs(
-        @Nullable Input<String> description,
-        Input<String> documentationVersion,
-        Input<String> restApiId) {
+        @Nullable Output<String> description,
+        Output<String> documentationVersion,
+        Output<String> restApiId) {
         this.description = description;
         this.documentationVersion = Objects.requireNonNull(documentationVersion, "expected parameter 'documentationVersion' to be non-null");
         this.restApiId = Objects.requireNonNull(restApiId, "expected parameter 'restApiId' to be non-null");
     }
 
     private DocumentationVersionArgs() {
-        this.description = Input.empty();
-        this.documentationVersion = Input.empty();
-        this.restApiId = Input.empty();
+        this.description = Output.empty();
+        this.documentationVersion = Output.empty();
+        this.restApiId = Output.empty();
     }
 
     public static Builder builder() {
@@ -71,9 +71,9 @@ public final class DocumentationVersionArgs extends io.pulumi.resources.Resource
     }
 
     public static final class Builder {
-        private @Nullable Input<String> description;
-        private Input<String> documentationVersion;
-        private Input<String> restApiId;
+        private @Nullable Output<String> description;
+        private Output<String> documentationVersion;
+        private Output<String> restApiId;
 
         public Builder() {
     	      // Empty
@@ -86,33 +86,33 @@ public final class DocumentationVersionArgs extends io.pulumi.resources.Resource
     	      this.restApiId = defaults.restApiId;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder documentationVersion(Input<String> documentationVersion) {
+        public Builder documentationVersion(Output<String> documentationVersion) {
             this.documentationVersion = Objects.requireNonNull(documentationVersion);
             return this;
         }
 
         public Builder documentationVersion(String documentationVersion) {
-            this.documentationVersion = Input.of(Objects.requireNonNull(documentationVersion));
+            this.documentationVersion = Output.of(Objects.requireNonNull(documentationVersion));
             return this;
         }
 
-        public Builder restApiId(Input<String> restApiId) {
+        public Builder restApiId(Output<String> restApiId) {
             this.restApiId = Objects.requireNonNull(restApiId);
             return this;
         }
 
         public Builder restApiId(String restApiId) {
-            this.restApiId = Input.of(Objects.requireNonNull(restApiId));
+            this.restApiId = Output.of(Objects.requireNonNull(restApiId));
             return this;
         }
         public DocumentationVersionArgs build() {

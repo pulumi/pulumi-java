@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.codedeploy.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class DeploymentGroupOnPremisesInstanceTagFilterGetArgs extends io.
      * 
      */
     @InputImport(name="key")
-      private final @Nullable Input<String> key;
+      private final @Nullable Output<String> key;
 
-    public Input<String> getKey() {
-        return this.key == null ? Input.empty() : this.key;
+    public Output<String> getKey() {
+        return this.key == null ? Output.empty() : this.key;
     }
 
     /**
@@ -30,10 +30,10 @@ public final class DeploymentGroupOnPremisesInstanceTagFilterGetArgs extends io.
      * 
      */
     @InputImport(name="type")
-      private final @Nullable Input<String> type;
+      private final @Nullable Output<String> type;
 
-    public Input<String> getType() {
-        return this.type == null ? Input.empty() : this.type;
+    public Output<String> getType() {
+        return this.type == null ? Output.empty() : this.type;
     }
 
     /**
@@ -41,25 +41,25 @@ public final class DeploymentGroupOnPremisesInstanceTagFilterGetArgs extends io.
      * 
      */
     @InputImport(name="value")
-      private final @Nullable Input<String> value;
+      private final @Nullable Output<String> value;
 
-    public Input<String> getValue() {
-        return this.value == null ? Input.empty() : this.value;
+    public Output<String> getValue() {
+        return this.value == null ? Output.empty() : this.value;
     }
 
     public DeploymentGroupOnPremisesInstanceTagFilterGetArgs(
-        @Nullable Input<String> key,
-        @Nullable Input<String> type,
-        @Nullable Input<String> value) {
+        @Nullable Output<String> key,
+        @Nullable Output<String> type,
+        @Nullable Output<String> value) {
         this.key = key;
         this.type = type;
         this.value = value;
     }
 
     private DeploymentGroupOnPremisesInstanceTagFilterGetArgs() {
-        this.key = Input.empty();
-        this.type = Input.empty();
-        this.value = Input.empty();
+        this.key = Output.empty();
+        this.type = Output.empty();
+        this.value = Output.empty();
     }
 
     public static Builder builder() {
@@ -71,9 +71,9 @@ public final class DeploymentGroupOnPremisesInstanceTagFilterGetArgs extends io.
     }
 
     public static final class Builder {
-        private @Nullable Input<String> key;
-        private @Nullable Input<String> type;
-        private @Nullable Input<String> value;
+        private @Nullable Output<String> key;
+        private @Nullable Output<String> type;
+        private @Nullable Output<String> value;
 
         public Builder() {
     	      // Empty
@@ -86,33 +86,33 @@ public final class DeploymentGroupOnPremisesInstanceTagFilterGetArgs extends io.
     	      this.value = defaults.value;
         }
 
-        public Builder key(@Nullable Input<String> key) {
+        public Builder key(@Nullable Output<String> key) {
             this.key = key;
             return this;
         }
 
         public Builder key(@Nullable String key) {
-            this.key = Input.ofNullable(key);
+            this.key = Output.ofNullable(key);
             return this;
         }
 
-        public Builder type(@Nullable Input<String> type) {
+        public Builder type(@Nullable Output<String> type) {
             this.type = type;
             return this;
         }
 
         public Builder type(@Nullable String type) {
-            this.type = Input.ofNullable(type);
+            this.type = Output.ofNullable(type);
             return this;
         }
 
-        public Builder value(@Nullable Input<String> value) {
+        public Builder value(@Nullable Output<String> value) {
             this.value = value;
             return this;
         }
 
         public Builder value(@Nullable String value) {
-            this.value = Input.ofNullable(value);
+            this.value = Output.ofNullable(value);
             return this;
         }
         public DeploymentGroupOnPremisesInstanceTagFilterGetArgs build() {

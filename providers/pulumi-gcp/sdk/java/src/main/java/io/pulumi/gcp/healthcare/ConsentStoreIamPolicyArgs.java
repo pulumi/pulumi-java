@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.healthcare;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -18,9 +18,9 @@ public final class ConsentStoreIamPolicyArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="consentStoreId", required=true)
-      private final Input<String> consentStoreId;
+      private final Output<String> consentStoreId;
 
-    public Input<String> getConsentStoreId() {
+    public Output<String> getConsentStoreId() {
         return this.consentStoreId;
     }
 
@@ -31,9 +31,9 @@ public final class ConsentStoreIamPolicyArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="dataset", required=true)
-      private final Input<String> dataset;
+      private final Output<String> dataset;
 
-    public Input<String> getDataset() {
+    public Output<String> getDataset() {
         return this.dataset;
     }
 
@@ -43,25 +43,25 @@ public final class ConsentStoreIamPolicyArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="policyData", required=true)
-      private final Input<String> policyData;
+      private final Output<String> policyData;
 
-    public Input<String> getPolicyData() {
+    public Output<String> getPolicyData() {
         return this.policyData;
     }
 
     public ConsentStoreIamPolicyArgs(
-        Input<String> consentStoreId,
-        Input<String> dataset,
-        Input<String> policyData) {
+        Output<String> consentStoreId,
+        Output<String> dataset,
+        Output<String> policyData) {
         this.consentStoreId = Objects.requireNonNull(consentStoreId, "expected parameter 'consentStoreId' to be non-null");
         this.dataset = Objects.requireNonNull(dataset, "expected parameter 'dataset' to be non-null");
         this.policyData = Objects.requireNonNull(policyData, "expected parameter 'policyData' to be non-null");
     }
 
     private ConsentStoreIamPolicyArgs() {
-        this.consentStoreId = Input.empty();
-        this.dataset = Input.empty();
-        this.policyData = Input.empty();
+        this.consentStoreId = Output.empty();
+        this.dataset = Output.empty();
+        this.policyData = Output.empty();
     }
 
     public static Builder builder() {
@@ -73,9 +73,9 @@ public final class ConsentStoreIamPolicyArgs extends io.pulumi.resources.Resourc
     }
 
     public static final class Builder {
-        private Input<String> consentStoreId;
-        private Input<String> dataset;
-        private Input<String> policyData;
+        private Output<String> consentStoreId;
+        private Output<String> dataset;
+        private Output<String> policyData;
 
         public Builder() {
     	      // Empty
@@ -88,33 +88,33 @@ public final class ConsentStoreIamPolicyArgs extends io.pulumi.resources.Resourc
     	      this.policyData = defaults.policyData;
         }
 
-        public Builder consentStoreId(Input<String> consentStoreId) {
+        public Builder consentStoreId(Output<String> consentStoreId) {
             this.consentStoreId = Objects.requireNonNull(consentStoreId);
             return this;
         }
 
         public Builder consentStoreId(String consentStoreId) {
-            this.consentStoreId = Input.of(Objects.requireNonNull(consentStoreId));
+            this.consentStoreId = Output.of(Objects.requireNonNull(consentStoreId));
             return this;
         }
 
-        public Builder dataset(Input<String> dataset) {
+        public Builder dataset(Output<String> dataset) {
             this.dataset = Objects.requireNonNull(dataset);
             return this;
         }
 
         public Builder dataset(String dataset) {
-            this.dataset = Input.of(Objects.requireNonNull(dataset));
+            this.dataset = Output.of(Objects.requireNonNull(dataset));
             return this;
         }
 
-        public Builder policyData(Input<String> policyData) {
+        public Builder policyData(Output<String> policyData) {
             this.policyData = Objects.requireNonNull(policyData);
             return this;
         }
 
         public Builder policyData(String policyData) {
-            this.policyData = Input.of(Objects.requireNonNull(policyData));
+            this.policyData = Output.of(Objects.requireNonNull(policyData));
             return this;
         }
         public ConsentStoreIamPolicyArgs build() {

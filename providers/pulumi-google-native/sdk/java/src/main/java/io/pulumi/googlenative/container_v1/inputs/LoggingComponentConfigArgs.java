@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.container_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.container_v1.enums.LoggingComponentConfigEnableComponentsItem;
 import java.util.List;
@@ -24,18 +24,18 @@ public final class LoggingComponentConfigArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="enableComponents")
-      private final @Nullable Input<List<LoggingComponentConfigEnableComponentsItem>> enableComponents;
+      private final @Nullable Output<List<LoggingComponentConfigEnableComponentsItem>> enableComponents;
 
-    public Input<List<LoggingComponentConfigEnableComponentsItem>> getEnableComponents() {
-        return this.enableComponents == null ? Input.empty() : this.enableComponents;
+    public Output<List<LoggingComponentConfigEnableComponentsItem>> getEnableComponents() {
+        return this.enableComponents == null ? Output.empty() : this.enableComponents;
     }
 
-    public LoggingComponentConfigArgs(@Nullable Input<List<LoggingComponentConfigEnableComponentsItem>> enableComponents) {
+    public LoggingComponentConfigArgs(@Nullable Output<List<LoggingComponentConfigEnableComponentsItem>> enableComponents) {
         this.enableComponents = enableComponents;
     }
 
     private LoggingComponentConfigArgs() {
-        this.enableComponents = Input.empty();
+        this.enableComponents = Output.empty();
     }
 
     public static Builder builder() {
@@ -47,7 +47,7 @@ public final class LoggingComponentConfigArgs extends io.pulumi.resources.Resour
     }
 
     public static final class Builder {
-        private @Nullable Input<List<LoggingComponentConfigEnableComponentsItem>> enableComponents;
+        private @Nullable Output<List<LoggingComponentConfigEnableComponentsItem>> enableComponents;
 
         public Builder() {
     	      // Empty
@@ -58,13 +58,13 @@ public final class LoggingComponentConfigArgs extends io.pulumi.resources.Resour
     	      this.enableComponents = defaults.enableComponents;
         }
 
-        public Builder enableComponents(@Nullable Input<List<LoggingComponentConfigEnableComponentsItem>> enableComponents) {
+        public Builder enableComponents(@Nullable Output<List<LoggingComponentConfigEnableComponentsItem>> enableComponents) {
             this.enableComponents = enableComponents;
             return this;
         }
 
         public Builder enableComponents(@Nullable List<LoggingComponentConfigEnableComponentsItem> enableComponents) {
-            this.enableComponents = Input.ofNullable(enableComponents);
+            this.enableComponents = Output.ofNullable(enableComponents);
             return this;
         }
         public LoggingComponentConfigArgs build() {

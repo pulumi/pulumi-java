@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.insights.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
@@ -22,9 +22,9 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="frequencyInMinutes", required=true)
-      private final Input<Integer> frequencyInMinutes;
+      private final Output<Integer> frequencyInMinutes;
 
-    public Input<Integer> getFrequencyInMinutes() {
+    public Output<Integer> getFrequencyInMinutes() {
         return this.frequencyInMinutes;
     }
 
@@ -33,22 +33,22 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="timeWindowInMinutes", required=true)
-      private final Input<Integer> timeWindowInMinutes;
+      private final Output<Integer> timeWindowInMinutes;
 
-    public Input<Integer> getTimeWindowInMinutes() {
+    public Output<Integer> getTimeWindowInMinutes() {
         return this.timeWindowInMinutes;
     }
 
     public ScheduleArgs(
-        Input<Integer> frequencyInMinutes,
-        Input<Integer> timeWindowInMinutes) {
+        Output<Integer> frequencyInMinutes,
+        Output<Integer> timeWindowInMinutes) {
         this.frequencyInMinutes = Objects.requireNonNull(frequencyInMinutes, "expected parameter 'frequencyInMinutes' to be non-null");
         this.timeWindowInMinutes = Objects.requireNonNull(timeWindowInMinutes, "expected parameter 'timeWindowInMinutes' to be non-null");
     }
 
     private ScheduleArgs() {
-        this.frequencyInMinutes = Input.empty();
-        this.timeWindowInMinutes = Input.empty();
+        this.frequencyInMinutes = Output.empty();
+        this.timeWindowInMinutes = Output.empty();
     }
 
     public static Builder builder() {
@@ -60,8 +60,8 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<Integer> frequencyInMinutes;
-        private Input<Integer> timeWindowInMinutes;
+        private Output<Integer> frequencyInMinutes;
+        private Output<Integer> timeWindowInMinutes;
 
         public Builder() {
     	      // Empty
@@ -73,23 +73,23 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
     	      this.timeWindowInMinutes = defaults.timeWindowInMinutes;
         }
 
-        public Builder frequencyInMinutes(Input<Integer> frequencyInMinutes) {
+        public Builder frequencyInMinutes(Output<Integer> frequencyInMinutes) {
             this.frequencyInMinutes = Objects.requireNonNull(frequencyInMinutes);
             return this;
         }
 
         public Builder frequencyInMinutes(Integer frequencyInMinutes) {
-            this.frequencyInMinutes = Input.of(Objects.requireNonNull(frequencyInMinutes));
+            this.frequencyInMinutes = Output.of(Objects.requireNonNull(frequencyInMinutes));
             return this;
         }
 
-        public Builder timeWindowInMinutes(Input<Integer> timeWindowInMinutes) {
+        public Builder timeWindowInMinutes(Output<Integer> timeWindowInMinutes) {
             this.timeWindowInMinutes = Objects.requireNonNull(timeWindowInMinutes);
             return this;
         }
 
         public Builder timeWindowInMinutes(Integer timeWindowInMinutes) {
-            this.timeWindowInMinutes = Input.of(Objects.requireNonNull(timeWindowInMinutes));
+            this.timeWindowInMinutes = Output.of(Objects.requireNonNull(timeWindowInMinutes));
             return this;
         }
         public ScheduleArgs build() {

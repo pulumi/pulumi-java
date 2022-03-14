@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.containeranalysis_v1.inputs.VersionArgs;
 import java.lang.String;
@@ -24,9 +24,9 @@ public final class PackageIssueArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="affectedCpeUri", required=true)
-      private final Input<String> affectedCpeUri;
+      private final Output<String> affectedCpeUri;
 
-    public Input<String> getAffectedCpeUri() {
+    public Output<String> getAffectedCpeUri() {
         return this.affectedCpeUri;
     }
 
@@ -35,9 +35,9 @@ public final class PackageIssueArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="affectedPackage", required=true)
-      private final Input<String> affectedPackage;
+      private final Output<String> affectedPackage;
 
-    public Input<String> getAffectedPackage() {
+    public Output<String> getAffectedPackage() {
         return this.affectedPackage;
     }
 
@@ -46,9 +46,9 @@ public final class PackageIssueArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="affectedVersion", required=true)
-      private final Input<VersionArgs> affectedVersion;
+      private final Output<VersionArgs> affectedVersion;
 
-    public Input<VersionArgs> getAffectedVersion() {
+    public Output<VersionArgs> getAffectedVersion() {
         return this.affectedVersion;
     }
 
@@ -57,10 +57,10 @@ public final class PackageIssueArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="fixedCpeUri")
-      private final @Nullable Input<String> fixedCpeUri;
+      private final @Nullable Output<String> fixedCpeUri;
 
-    public Input<String> getFixedCpeUri() {
-        return this.fixedCpeUri == null ? Input.empty() : this.fixedCpeUri;
+    public Output<String> getFixedCpeUri() {
+        return this.fixedCpeUri == null ? Output.empty() : this.fixedCpeUri;
     }
 
     /**
@@ -68,10 +68,10 @@ public final class PackageIssueArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="fixedPackage")
-      private final @Nullable Input<String> fixedPackage;
+      private final @Nullable Output<String> fixedPackage;
 
-    public Input<String> getFixedPackage() {
-        return this.fixedPackage == null ? Input.empty() : this.fixedPackage;
+    public Output<String> getFixedPackage() {
+        return this.fixedPackage == null ? Output.empty() : this.fixedPackage;
     }
 
     /**
@@ -79,9 +79,9 @@ public final class PackageIssueArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="fixedVersion", required=true)
-      private final Input<VersionArgs> fixedVersion;
+      private final Output<VersionArgs> fixedVersion;
 
-    public Input<VersionArgs> getFixedVersion() {
+    public Output<VersionArgs> getFixedVersion() {
         return this.fixedVersion;
     }
 
@@ -90,20 +90,20 @@ public final class PackageIssueArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="packageType")
-      private final @Nullable Input<String> packageType;
+      private final @Nullable Output<String> packageType;
 
-    public Input<String> getPackageType() {
-        return this.packageType == null ? Input.empty() : this.packageType;
+    public Output<String> getPackageType() {
+        return this.packageType == null ? Output.empty() : this.packageType;
     }
 
     public PackageIssueArgs(
-        Input<String> affectedCpeUri,
-        Input<String> affectedPackage,
-        Input<VersionArgs> affectedVersion,
-        @Nullable Input<String> fixedCpeUri,
-        @Nullable Input<String> fixedPackage,
-        Input<VersionArgs> fixedVersion,
-        @Nullable Input<String> packageType) {
+        Output<String> affectedCpeUri,
+        Output<String> affectedPackage,
+        Output<VersionArgs> affectedVersion,
+        @Nullable Output<String> fixedCpeUri,
+        @Nullable Output<String> fixedPackage,
+        Output<VersionArgs> fixedVersion,
+        @Nullable Output<String> packageType) {
         this.affectedCpeUri = Objects.requireNonNull(affectedCpeUri, "expected parameter 'affectedCpeUri' to be non-null");
         this.affectedPackage = Objects.requireNonNull(affectedPackage, "expected parameter 'affectedPackage' to be non-null");
         this.affectedVersion = Objects.requireNonNull(affectedVersion, "expected parameter 'affectedVersion' to be non-null");
@@ -114,13 +114,13 @@ public final class PackageIssueArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private PackageIssueArgs() {
-        this.affectedCpeUri = Input.empty();
-        this.affectedPackage = Input.empty();
-        this.affectedVersion = Input.empty();
-        this.fixedCpeUri = Input.empty();
-        this.fixedPackage = Input.empty();
-        this.fixedVersion = Input.empty();
-        this.packageType = Input.empty();
+        this.affectedCpeUri = Output.empty();
+        this.affectedPackage = Output.empty();
+        this.affectedVersion = Output.empty();
+        this.fixedCpeUri = Output.empty();
+        this.fixedPackage = Output.empty();
+        this.fixedVersion = Output.empty();
+        this.packageType = Output.empty();
     }
 
     public static Builder builder() {
@@ -132,13 +132,13 @@ public final class PackageIssueArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> affectedCpeUri;
-        private Input<String> affectedPackage;
-        private Input<VersionArgs> affectedVersion;
-        private @Nullable Input<String> fixedCpeUri;
-        private @Nullable Input<String> fixedPackage;
-        private Input<VersionArgs> fixedVersion;
-        private @Nullable Input<String> packageType;
+        private Output<String> affectedCpeUri;
+        private Output<String> affectedPackage;
+        private Output<VersionArgs> affectedVersion;
+        private @Nullable Output<String> fixedCpeUri;
+        private @Nullable Output<String> fixedPackage;
+        private Output<VersionArgs> fixedVersion;
+        private @Nullable Output<String> packageType;
 
         public Builder() {
     	      // Empty
@@ -155,73 +155,73 @@ public final class PackageIssueArgs extends io.pulumi.resources.ResourceArgs {
     	      this.packageType = defaults.packageType;
         }
 
-        public Builder affectedCpeUri(Input<String> affectedCpeUri) {
+        public Builder affectedCpeUri(Output<String> affectedCpeUri) {
             this.affectedCpeUri = Objects.requireNonNull(affectedCpeUri);
             return this;
         }
 
         public Builder affectedCpeUri(String affectedCpeUri) {
-            this.affectedCpeUri = Input.of(Objects.requireNonNull(affectedCpeUri));
+            this.affectedCpeUri = Output.of(Objects.requireNonNull(affectedCpeUri));
             return this;
         }
 
-        public Builder affectedPackage(Input<String> affectedPackage) {
+        public Builder affectedPackage(Output<String> affectedPackage) {
             this.affectedPackage = Objects.requireNonNull(affectedPackage);
             return this;
         }
 
         public Builder affectedPackage(String affectedPackage) {
-            this.affectedPackage = Input.of(Objects.requireNonNull(affectedPackage));
+            this.affectedPackage = Output.of(Objects.requireNonNull(affectedPackage));
             return this;
         }
 
-        public Builder affectedVersion(Input<VersionArgs> affectedVersion) {
+        public Builder affectedVersion(Output<VersionArgs> affectedVersion) {
             this.affectedVersion = Objects.requireNonNull(affectedVersion);
             return this;
         }
 
         public Builder affectedVersion(VersionArgs affectedVersion) {
-            this.affectedVersion = Input.of(Objects.requireNonNull(affectedVersion));
+            this.affectedVersion = Output.of(Objects.requireNonNull(affectedVersion));
             return this;
         }
 
-        public Builder fixedCpeUri(@Nullable Input<String> fixedCpeUri) {
+        public Builder fixedCpeUri(@Nullable Output<String> fixedCpeUri) {
             this.fixedCpeUri = fixedCpeUri;
             return this;
         }
 
         public Builder fixedCpeUri(@Nullable String fixedCpeUri) {
-            this.fixedCpeUri = Input.ofNullable(fixedCpeUri);
+            this.fixedCpeUri = Output.ofNullable(fixedCpeUri);
             return this;
         }
 
-        public Builder fixedPackage(@Nullable Input<String> fixedPackage) {
+        public Builder fixedPackage(@Nullable Output<String> fixedPackage) {
             this.fixedPackage = fixedPackage;
             return this;
         }
 
         public Builder fixedPackage(@Nullable String fixedPackage) {
-            this.fixedPackage = Input.ofNullable(fixedPackage);
+            this.fixedPackage = Output.ofNullable(fixedPackage);
             return this;
         }
 
-        public Builder fixedVersion(Input<VersionArgs> fixedVersion) {
+        public Builder fixedVersion(Output<VersionArgs> fixedVersion) {
             this.fixedVersion = Objects.requireNonNull(fixedVersion);
             return this;
         }
 
         public Builder fixedVersion(VersionArgs fixedVersion) {
-            this.fixedVersion = Input.of(Objects.requireNonNull(fixedVersion));
+            this.fixedVersion = Output.of(Objects.requireNonNull(fixedVersion));
             return this;
         }
 
-        public Builder packageType(@Nullable Input<String> packageType) {
+        public Builder packageType(@Nullable Output<String> packageType) {
             this.packageType = packageType;
             return this;
         }
 
         public Builder packageType(@Nullable String packageType) {
-            this.packageType = Input.ofNullable(packageType);
+            this.packageType = Output.ofNullable(packageType);
             return this;
         }
         public PackageIssueArgs build() {

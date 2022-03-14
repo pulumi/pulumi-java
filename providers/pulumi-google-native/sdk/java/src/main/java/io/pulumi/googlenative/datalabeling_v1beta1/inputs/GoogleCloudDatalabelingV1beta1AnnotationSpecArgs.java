@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.datalabeling_v1beta1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class GoogleCloudDatalabelingV1beta1AnnotationSpecArgs extends io.p
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -34,22 +34,22 @@ public final class GoogleCloudDatalabelingV1beta1AnnotationSpecArgs extends io.p
      * 
      */
     @InputImport(name="displayName", required=true)
-      private final Input<String> displayName;
+      private final Output<String> displayName;
 
-    public Input<String> getDisplayName() {
+    public Output<String> getDisplayName() {
         return this.displayName;
     }
 
     public GoogleCloudDatalabelingV1beta1AnnotationSpecArgs(
-        @Nullable Input<String> description,
-        Input<String> displayName) {
+        @Nullable Output<String> description,
+        Output<String> displayName) {
         this.description = description;
         this.displayName = Objects.requireNonNull(displayName, "expected parameter 'displayName' to be non-null");
     }
 
     private GoogleCloudDatalabelingV1beta1AnnotationSpecArgs() {
-        this.description = Input.empty();
-        this.displayName = Input.empty();
+        this.description = Output.empty();
+        this.displayName = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class GoogleCloudDatalabelingV1beta1AnnotationSpecArgs extends io.p
     }
 
     public static final class Builder {
-        private @Nullable Input<String> description;
-        private Input<String> displayName;
+        private @Nullable Output<String> description;
+        private Output<String> displayName;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class GoogleCloudDatalabelingV1beta1AnnotationSpecArgs extends io.p
     	      this.displayName = defaults.displayName;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder displayName(Input<String> displayName) {
+        public Builder displayName(Output<String> displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
         public Builder displayName(String displayName) {
-            this.displayName = Input.of(Objects.requireNonNull(displayName));
+            this.displayName = Output.of(Objects.requireNonNull(displayName));
             return this;
         }
         public GoogleCloudDatalabelingV1beta1AnnotationSpecArgs build() {

@@ -6,7 +6,7 @@ package io.pulumi.azurenative.providerhub.inputs;
 import io.pulumi.azurenative.providerhub.enums.ProvisioningState;
 import io.pulumi.azurenative.providerhub.inputs.SkuSettingArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -19,29 +19,29 @@ public final class SkuResourcePropertiesArgs extends io.pulumi.resources.Resourc
     public static final SkuResourcePropertiesArgs Empty = new SkuResourcePropertiesArgs();
 
     @InputImport(name="provisioningState")
-      private final @Nullable Input<Either<String,ProvisioningState>> provisioningState;
+      private final @Nullable Output<Either<String,ProvisioningState>> provisioningState;
 
-    public Input<Either<String,ProvisioningState>> getProvisioningState() {
-        return this.provisioningState == null ? Input.empty() : this.provisioningState;
+    public Output<Either<String,ProvisioningState>> getProvisioningState() {
+        return this.provisioningState == null ? Output.empty() : this.provisioningState;
     }
 
     @InputImport(name="skuSettings", required=true)
-      private final Input<List<SkuSettingArgs>> skuSettings;
+      private final Output<List<SkuSettingArgs>> skuSettings;
 
-    public Input<List<SkuSettingArgs>> getSkuSettings() {
+    public Output<List<SkuSettingArgs>> getSkuSettings() {
         return this.skuSettings;
     }
 
     public SkuResourcePropertiesArgs(
-        @Nullable Input<Either<String,ProvisioningState>> provisioningState,
-        Input<List<SkuSettingArgs>> skuSettings) {
+        @Nullable Output<Either<String,ProvisioningState>> provisioningState,
+        Output<List<SkuSettingArgs>> skuSettings) {
         this.provisioningState = provisioningState;
         this.skuSettings = Objects.requireNonNull(skuSettings, "expected parameter 'skuSettings' to be non-null");
     }
 
     private SkuResourcePropertiesArgs() {
-        this.provisioningState = Input.empty();
-        this.skuSettings = Input.empty();
+        this.provisioningState = Output.empty();
+        this.skuSettings = Output.empty();
     }
 
     public static Builder builder() {
@@ -53,8 +53,8 @@ public final class SkuResourcePropertiesArgs extends io.pulumi.resources.Resourc
     }
 
     public static final class Builder {
-        private @Nullable Input<Either<String,ProvisioningState>> provisioningState;
-        private Input<List<SkuSettingArgs>> skuSettings;
+        private @Nullable Output<Either<String,ProvisioningState>> provisioningState;
+        private Output<List<SkuSettingArgs>> skuSettings;
 
         public Builder() {
     	      // Empty
@@ -66,23 +66,23 @@ public final class SkuResourcePropertiesArgs extends io.pulumi.resources.Resourc
     	      this.skuSettings = defaults.skuSettings;
         }
 
-        public Builder provisioningState(@Nullable Input<Either<String,ProvisioningState>> provisioningState) {
+        public Builder provisioningState(@Nullable Output<Either<String,ProvisioningState>> provisioningState) {
             this.provisioningState = provisioningState;
             return this;
         }
 
         public Builder provisioningState(@Nullable Either<String,ProvisioningState> provisioningState) {
-            this.provisioningState = Input.ofNullable(provisioningState);
+            this.provisioningState = Output.ofNullable(provisioningState);
             return this;
         }
 
-        public Builder skuSettings(Input<List<SkuSettingArgs>> skuSettings) {
+        public Builder skuSettings(Output<List<SkuSettingArgs>> skuSettings) {
             this.skuSettings = Objects.requireNonNull(skuSettings);
             return this;
         }
 
         public Builder skuSettings(List<SkuSettingArgs> skuSettings) {
-            this.skuSettings = Input.of(Objects.requireNonNull(skuSettings));
+            this.skuSettings = Output.of(Objects.requireNonNull(skuSettings));
             return this;
         }
         public SkuResourcePropertiesArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.eventarc;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.eventarc.inputs.TriggerDestinationArgs;
 import io.pulumi.gcp.eventarc.inputs.TriggerMatchingCriteriaArgs;
@@ -24,9 +24,9 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="destination", required=true)
-      private final Input<TriggerDestinationArgs> destination;
+      private final Output<TriggerDestinationArgs> destination;
 
-    public Input<TriggerDestinationArgs> getDestination() {
+    public Output<TriggerDestinationArgs> getDestination() {
         return this.destination;
     }
 
@@ -35,10 +35,10 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labels")
-      private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Output<Map<String,String>> labels;
 
-    public Input<Map<String,String>> getLabels() {
-        return this.labels == null ? Input.empty() : this.labels;
+    public Output<Map<String,String>> getLabels() {
+        return this.labels == null ? Output.empty() : this.labels;
     }
 
     /**
@@ -46,9 +46,9 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location", required=true)
-      private final Input<String> location;
+      private final Output<String> location;
 
-    public Input<String> getLocation() {
+    public Output<String> getLocation() {
         return this.location;
     }
 
@@ -57,9 +57,9 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="matchingCriterias", required=true)
-      private final Input<List<TriggerMatchingCriteriaArgs>> matchingCriterias;
+      private final Output<List<TriggerMatchingCriteriaArgs>> matchingCriterias;
 
-    public Input<List<TriggerMatchingCriteriaArgs>> getMatchingCriterias() {
+    public Output<List<TriggerMatchingCriteriaArgs>> getMatchingCriterias() {
         return this.matchingCriterias;
     }
 
@@ -68,10 +68,10 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -79,10 +79,10 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -90,10 +90,10 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serviceAccount")
-      private final @Nullable Input<String> serviceAccount;
+      private final @Nullable Output<String> serviceAccount;
 
-    public Input<String> getServiceAccount() {
-        return this.serviceAccount == null ? Input.empty() : this.serviceAccount;
+    public Output<String> getServiceAccount() {
+        return this.serviceAccount == null ? Output.empty() : this.serviceAccount;
     }
 
     /**
@@ -101,21 +101,21 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="transports")
-      private final @Nullable Input<List<TriggerTransportArgs>> transports;
+      private final @Nullable Output<List<TriggerTransportArgs>> transports;
 
-    public Input<List<TriggerTransportArgs>> getTransports() {
-        return this.transports == null ? Input.empty() : this.transports;
+    public Output<List<TriggerTransportArgs>> getTransports() {
+        return this.transports == null ? Output.empty() : this.transports;
     }
 
     public TriggerArgs(
-        Input<TriggerDestinationArgs> destination,
-        @Nullable Input<Map<String,String>> labels,
-        Input<String> location,
-        Input<List<TriggerMatchingCriteriaArgs>> matchingCriterias,
-        @Nullable Input<String> name,
-        @Nullable Input<String> project,
-        @Nullable Input<String> serviceAccount,
-        @Nullable Input<List<TriggerTransportArgs>> transports) {
+        Output<TriggerDestinationArgs> destination,
+        @Nullable Output<Map<String,String>> labels,
+        Output<String> location,
+        Output<List<TriggerMatchingCriteriaArgs>> matchingCriterias,
+        @Nullable Output<String> name,
+        @Nullable Output<String> project,
+        @Nullable Output<String> serviceAccount,
+        @Nullable Output<List<TriggerTransportArgs>> transports) {
         this.destination = Objects.requireNonNull(destination, "expected parameter 'destination' to be non-null");
         this.labels = labels;
         this.location = Objects.requireNonNull(location, "expected parameter 'location' to be non-null");
@@ -127,14 +127,14 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private TriggerArgs() {
-        this.destination = Input.empty();
-        this.labels = Input.empty();
-        this.location = Input.empty();
-        this.matchingCriterias = Input.empty();
-        this.name = Input.empty();
-        this.project = Input.empty();
-        this.serviceAccount = Input.empty();
-        this.transports = Input.empty();
+        this.destination = Output.empty();
+        this.labels = Output.empty();
+        this.location = Output.empty();
+        this.matchingCriterias = Output.empty();
+        this.name = Output.empty();
+        this.project = Output.empty();
+        this.serviceAccount = Output.empty();
+        this.transports = Output.empty();
     }
 
     public static Builder builder() {
@@ -146,14 +146,14 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<TriggerDestinationArgs> destination;
-        private @Nullable Input<Map<String,String>> labels;
-        private Input<String> location;
-        private Input<List<TriggerMatchingCriteriaArgs>> matchingCriterias;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> project;
-        private @Nullable Input<String> serviceAccount;
-        private @Nullable Input<List<TriggerTransportArgs>> transports;
+        private Output<TriggerDestinationArgs> destination;
+        private @Nullable Output<Map<String,String>> labels;
+        private Output<String> location;
+        private Output<List<TriggerMatchingCriteriaArgs>> matchingCriterias;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> project;
+        private @Nullable Output<String> serviceAccount;
+        private @Nullable Output<List<TriggerTransportArgs>> transports;
 
         public Builder() {
     	      // Empty
@@ -171,83 +171,83 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
     	      this.transports = defaults.transports;
         }
 
-        public Builder destination(Input<TriggerDestinationArgs> destination) {
+        public Builder destination(Output<TriggerDestinationArgs> destination) {
             this.destination = Objects.requireNonNull(destination);
             return this;
         }
 
         public Builder destination(TriggerDestinationArgs destination) {
-            this.destination = Input.of(Objects.requireNonNull(destination));
+            this.destination = Output.of(Objects.requireNonNull(destination));
             return this;
         }
 
-        public Builder labels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
         public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Input.ofNullable(labels);
+            this.labels = Output.ofNullable(labels);
             return this;
         }
 
-        public Builder location(Input<String> location) {
+        public Builder location(Output<String> location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
         public Builder location(String location) {
-            this.location = Input.of(Objects.requireNonNull(location));
+            this.location = Output.of(Objects.requireNonNull(location));
             return this;
         }
 
-        public Builder matchingCriterias(Input<List<TriggerMatchingCriteriaArgs>> matchingCriterias) {
+        public Builder matchingCriterias(Output<List<TriggerMatchingCriteriaArgs>> matchingCriterias) {
             this.matchingCriterias = Objects.requireNonNull(matchingCriterias);
             return this;
         }
 
         public Builder matchingCriterias(List<TriggerMatchingCriteriaArgs> matchingCriterias) {
-            this.matchingCriterias = Input.of(Objects.requireNonNull(matchingCriterias));
+            this.matchingCriterias = Output.of(Objects.requireNonNull(matchingCriterias));
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder serviceAccount(@Nullable Input<String> serviceAccount) {
+        public Builder serviceAccount(@Nullable Output<String> serviceAccount) {
             this.serviceAccount = serviceAccount;
             return this;
         }
 
         public Builder serviceAccount(@Nullable String serviceAccount) {
-            this.serviceAccount = Input.ofNullable(serviceAccount);
+            this.serviceAccount = Output.ofNullable(serviceAccount);
             return this;
         }
 
-        public Builder transports(@Nullable Input<List<TriggerTransportArgs>> transports) {
+        public Builder transports(@Nullable Output<List<TriggerTransportArgs>> transports) {
             this.transports = transports;
             return this;
         }
 
         public Builder transports(@Nullable List<TriggerTransportArgs> transports) {
-            this.transports = Input.ofNullable(transports);
+            this.transports = Output.ofNullable(transports);
             return this;
         }
         public TriggerArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.securitycenter.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -36,18 +36,18 @@ public final class NotificationConfigStreamingConfigGetArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="filter", required=true)
-      private final Input<String> filter;
+      private final Output<String> filter;
 
-    public Input<String> getFilter() {
+    public Output<String> getFilter() {
         return this.filter;
     }
 
-    public NotificationConfigStreamingConfigGetArgs(Input<String> filter) {
+    public NotificationConfigStreamingConfigGetArgs(Output<String> filter) {
         this.filter = Objects.requireNonNull(filter, "expected parameter 'filter' to be non-null");
     }
 
     private NotificationConfigStreamingConfigGetArgs() {
-        this.filter = Input.empty();
+        this.filter = Output.empty();
     }
 
     public static Builder builder() {
@@ -59,7 +59,7 @@ public final class NotificationConfigStreamingConfigGetArgs extends io.pulumi.re
     }
 
     public static final class Builder {
-        private Input<String> filter;
+        private Output<String> filter;
 
         public Builder() {
     	      // Empty
@@ -70,13 +70,13 @@ public final class NotificationConfigStreamingConfigGetArgs extends io.pulumi.re
     	      this.filter = defaults.filter;
         }
 
-        public Builder filter(Input<String> filter) {
+        public Builder filter(Output<String> filter) {
             this.filter = Objects.requireNonNull(filter);
             return this;
         }
 
         public Builder filter(String filter) {
-            this.filter = Input.of(Objects.requireNonNull(filter));
+            this.filter = Output.of(Objects.requireNonNull(filter));
             return this;
         }
         public NotificationConfigStreamingConfigGetArgs build() {

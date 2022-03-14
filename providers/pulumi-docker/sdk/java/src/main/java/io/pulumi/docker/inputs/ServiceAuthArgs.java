@@ -3,7 +3,7 @@
 
 package io.pulumi.docker.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -15,39 +15,39 @@ public final class ServiceAuthArgs extends io.pulumi.resources.ResourceArgs {
     public static final ServiceAuthArgs Empty = new ServiceAuthArgs();
 
     @InputImport(name="password")
-      private final @Nullable Input<String> password;
+      private final @Nullable Output<String> password;
 
-    public Input<String> getPassword() {
-        return this.password == null ? Input.empty() : this.password;
+    public Output<String> getPassword() {
+        return this.password == null ? Output.empty() : this.password;
     }
 
     @InputImport(name="serverAddress", required=true)
-      private final Input<String> serverAddress;
+      private final Output<String> serverAddress;
 
-    public Input<String> getServerAddress() {
+    public Output<String> getServerAddress() {
         return this.serverAddress;
     }
 
     @InputImport(name="username")
-      private final @Nullable Input<String> username;
+      private final @Nullable Output<String> username;
 
-    public Input<String> getUsername() {
-        return this.username == null ? Input.empty() : this.username;
+    public Output<String> getUsername() {
+        return this.username == null ? Output.empty() : this.username;
     }
 
     public ServiceAuthArgs(
-        @Nullable Input<String> password,
-        Input<String> serverAddress,
-        @Nullable Input<String> username) {
+        @Nullable Output<String> password,
+        Output<String> serverAddress,
+        @Nullable Output<String> username) {
         this.password = password;
         this.serverAddress = Objects.requireNonNull(serverAddress, "expected parameter 'serverAddress' to be non-null");
         this.username = username;
     }
 
     private ServiceAuthArgs() {
-        this.password = Input.empty();
-        this.serverAddress = Input.empty();
-        this.username = Input.empty();
+        this.password = Output.empty();
+        this.serverAddress = Output.empty();
+        this.username = Output.empty();
     }
 
     public static Builder builder() {
@@ -59,9 +59,9 @@ public final class ServiceAuthArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> password;
-        private Input<String> serverAddress;
-        private @Nullable Input<String> username;
+        private @Nullable Output<String> password;
+        private Output<String> serverAddress;
+        private @Nullable Output<String> username;
 
         public Builder() {
     	      // Empty
@@ -74,33 +74,33 @@ public final class ServiceAuthArgs extends io.pulumi.resources.ResourceArgs {
     	      this.username = defaults.username;
         }
 
-        public Builder password(@Nullable Input<String> password) {
+        public Builder password(@Nullable Output<String> password) {
             this.password = password;
             return this;
         }
 
         public Builder password(@Nullable String password) {
-            this.password = Input.ofNullable(password);
+            this.password = Output.ofNullable(password);
             return this;
         }
 
-        public Builder serverAddress(Input<String> serverAddress) {
+        public Builder serverAddress(Output<String> serverAddress) {
             this.serverAddress = Objects.requireNonNull(serverAddress);
             return this;
         }
 
         public Builder serverAddress(String serverAddress) {
-            this.serverAddress = Input.of(Objects.requireNonNull(serverAddress));
+            this.serverAddress = Output.of(Objects.requireNonNull(serverAddress));
             return this;
         }
 
-        public Builder username(@Nullable Input<String> username) {
+        public Builder username(@Nullable Output<String> username) {
             this.username = username;
             return this;
         }
 
         public Builder username(@Nullable String username) {
-            this.username = Input.ofNullable(username);
+            this.username = Output.ofNullable(username);
             return this;
         }
         public ServiceAuthArgs build() {

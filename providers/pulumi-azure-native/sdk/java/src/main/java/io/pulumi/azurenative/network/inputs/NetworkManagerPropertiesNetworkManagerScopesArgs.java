@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -24,10 +24,10 @@ public final class NetworkManagerPropertiesNetworkManagerScopesArgs extends io.p
      * 
      */
     @InputImport(name="managementGroups")
-      private final @Nullable Input<List<String>> managementGroups;
+      private final @Nullable Output<List<String>> managementGroups;
 
-    public Input<List<String>> getManagementGroups() {
-        return this.managementGroups == null ? Input.empty() : this.managementGroups;
+    public Output<List<String>> getManagementGroups() {
+        return this.managementGroups == null ? Output.empty() : this.managementGroups;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class NetworkManagerPropertiesNetworkManagerScopesArgs extends io.p
      * 
      */
     @InputImport(name="subscriptions")
-      private final @Nullable Input<List<String>> subscriptions;
+      private final @Nullable Output<List<String>> subscriptions;
 
-    public Input<List<String>> getSubscriptions() {
-        return this.subscriptions == null ? Input.empty() : this.subscriptions;
+    public Output<List<String>> getSubscriptions() {
+        return this.subscriptions == null ? Output.empty() : this.subscriptions;
     }
 
     public NetworkManagerPropertiesNetworkManagerScopesArgs(
-        @Nullable Input<List<String>> managementGroups,
-        @Nullable Input<List<String>> subscriptions) {
+        @Nullable Output<List<String>> managementGroups,
+        @Nullable Output<List<String>> subscriptions) {
         this.managementGroups = managementGroups;
         this.subscriptions = subscriptions;
     }
 
     private NetworkManagerPropertiesNetworkManagerScopesArgs() {
-        this.managementGroups = Input.empty();
-        this.subscriptions = Input.empty();
+        this.managementGroups = Output.empty();
+        this.subscriptions = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class NetworkManagerPropertiesNetworkManagerScopesArgs extends io.p
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> managementGroups;
-        private @Nullable Input<List<String>> subscriptions;
+        private @Nullable Output<List<String>> managementGroups;
+        private @Nullable Output<List<String>> subscriptions;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class NetworkManagerPropertiesNetworkManagerScopesArgs extends io.p
     	      this.subscriptions = defaults.subscriptions;
         }
 
-        public Builder managementGroups(@Nullable Input<List<String>> managementGroups) {
+        public Builder managementGroups(@Nullable Output<List<String>> managementGroups) {
             this.managementGroups = managementGroups;
             return this;
         }
 
         public Builder managementGroups(@Nullable List<String> managementGroups) {
-            this.managementGroups = Input.ofNullable(managementGroups);
+            this.managementGroups = Output.ofNullable(managementGroups);
             return this;
         }
 
-        public Builder subscriptions(@Nullable Input<List<String>> subscriptions) {
+        public Builder subscriptions(@Nullable Output<List<String>> subscriptions) {
             this.subscriptions = subscriptions;
             return this;
         }
 
         public Builder subscriptions(@Nullable List<String> subscriptions) {
-            this.subscriptions = Input.ofNullable(subscriptions);
+            this.subscriptions = Output.ofNullable(subscriptions);
             return this;
         }
         public NetworkManagerPropertiesNetworkManagerScopesArgs build() {

@@ -7,7 +7,7 @@ import io.pulumi.azurenative.deploymentmanager.enums.RestRequestMethod;
 import io.pulumi.azurenative.deploymentmanager.inputs.ApiKeyAuthenticationArgs;
 import io.pulumi.azurenative.deploymentmanager.inputs.RolloutIdentityAuthenticationArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -26,9 +26,9 @@ public final class RestRequestArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="authentication", required=true)
-      private final Input<Either<ApiKeyAuthenticationArgs,RolloutIdentityAuthenticationArgs>> authentication;
+      private final Output<Either<ApiKeyAuthenticationArgs,RolloutIdentityAuthenticationArgs>> authentication;
 
-    public Input<Either<ApiKeyAuthenticationArgs,RolloutIdentityAuthenticationArgs>> getAuthentication() {
+    public Output<Either<ApiKeyAuthenticationArgs,RolloutIdentityAuthenticationArgs>> getAuthentication() {
         return this.authentication;
     }
 
@@ -37,9 +37,9 @@ public final class RestRequestArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="method", required=true)
-      private final Input<RestRequestMethod> method;
+      private final Output<RestRequestMethod> method;
 
-    public Input<RestRequestMethod> getMethod() {
+    public Output<RestRequestMethod> getMethod() {
         return this.method;
     }
 
@@ -48,25 +48,25 @@ public final class RestRequestArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="uri", required=true)
-      private final Input<String> uri;
+      private final Output<String> uri;
 
-    public Input<String> getUri() {
+    public Output<String> getUri() {
         return this.uri;
     }
 
     public RestRequestArgs(
-        Input<Either<ApiKeyAuthenticationArgs,RolloutIdentityAuthenticationArgs>> authentication,
-        Input<RestRequestMethod> method,
-        Input<String> uri) {
+        Output<Either<ApiKeyAuthenticationArgs,RolloutIdentityAuthenticationArgs>> authentication,
+        Output<RestRequestMethod> method,
+        Output<String> uri) {
         this.authentication = Objects.requireNonNull(authentication, "expected parameter 'authentication' to be non-null");
         this.method = Objects.requireNonNull(method, "expected parameter 'method' to be non-null");
         this.uri = Objects.requireNonNull(uri, "expected parameter 'uri' to be non-null");
     }
 
     private RestRequestArgs() {
-        this.authentication = Input.empty();
-        this.method = Input.empty();
-        this.uri = Input.empty();
+        this.authentication = Output.empty();
+        this.method = Output.empty();
+        this.uri = Output.empty();
     }
 
     public static Builder builder() {
@@ -78,9 +78,9 @@ public final class RestRequestArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<Either<ApiKeyAuthenticationArgs,RolloutIdentityAuthenticationArgs>> authentication;
-        private Input<RestRequestMethod> method;
-        private Input<String> uri;
+        private Output<Either<ApiKeyAuthenticationArgs,RolloutIdentityAuthenticationArgs>> authentication;
+        private Output<RestRequestMethod> method;
+        private Output<String> uri;
 
         public Builder() {
     	      // Empty
@@ -93,33 +93,33 @@ public final class RestRequestArgs extends io.pulumi.resources.ResourceArgs {
     	      this.uri = defaults.uri;
         }
 
-        public Builder authentication(Input<Either<ApiKeyAuthenticationArgs,RolloutIdentityAuthenticationArgs>> authentication) {
+        public Builder authentication(Output<Either<ApiKeyAuthenticationArgs,RolloutIdentityAuthenticationArgs>> authentication) {
             this.authentication = Objects.requireNonNull(authentication);
             return this;
         }
 
         public Builder authentication(Either<ApiKeyAuthenticationArgs,RolloutIdentityAuthenticationArgs> authentication) {
-            this.authentication = Input.of(Objects.requireNonNull(authentication));
+            this.authentication = Output.of(Objects.requireNonNull(authentication));
             return this;
         }
 
-        public Builder method(Input<RestRequestMethod> method) {
+        public Builder method(Output<RestRequestMethod> method) {
             this.method = Objects.requireNonNull(method);
             return this;
         }
 
         public Builder method(RestRequestMethod method) {
-            this.method = Input.of(Objects.requireNonNull(method));
+            this.method = Output.of(Objects.requireNonNull(method));
             return this;
         }
 
-        public Builder uri(Input<String> uri) {
+        public Builder uri(Output<String> uri) {
             this.uri = Objects.requireNonNull(uri);
             return this;
         }
 
         public Builder uri(String uri) {
-            this.uri = Input.of(Objects.requireNonNull(uri));
+            this.uri = Output.of(Objects.requireNonNull(uri));
             return this;
         }
         public RestRequestArgs build() {

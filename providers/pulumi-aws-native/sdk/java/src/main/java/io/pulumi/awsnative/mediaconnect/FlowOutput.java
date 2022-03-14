@@ -8,7 +8,6 @@ import io.pulumi.awsnative.mediaconnect.FlowOutputArgs;
 import io.pulumi.awsnative.mediaconnect.enums.FlowOutputProtocol;
 import io.pulumi.awsnative.mediaconnect.outputs.FlowOutputEncryption;
 import io.pulumi.awsnative.mediaconnect.outputs.FlowOutputVpcInterfaceAttachment;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -272,14 +271,14 @@ public class FlowOutput extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public FlowOutput(String name, FlowOutputArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:mediaconnect:FlowOutput", name, args == null ? FlowOutputArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws-native:mediaconnect:FlowOutput", name, args == null ? FlowOutputArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private FlowOutput(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private FlowOutput(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws-native:mediaconnect:FlowOutput", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -294,7 +293,7 @@ public class FlowOutput extends io.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static FlowOutput get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static FlowOutput get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new FlowOutput(name, id, options);
     }
 }

@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.directconnect;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -18,9 +18,9 @@ public final class ConnectionAssociationArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="connectionId", required=true)
-      private final Input<String> connectionId;
+      private final Output<String> connectionId;
 
-    public Input<String> getConnectionId() {
+    public Output<String> getConnectionId() {
         return this.connectionId;
     }
 
@@ -29,22 +29,22 @@ public final class ConnectionAssociationArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="lagId", required=true)
-      private final Input<String> lagId;
+      private final Output<String> lagId;
 
-    public Input<String> getLagId() {
+    public Output<String> getLagId() {
         return this.lagId;
     }
 
     public ConnectionAssociationArgs(
-        Input<String> connectionId,
-        Input<String> lagId) {
+        Output<String> connectionId,
+        Output<String> lagId) {
         this.connectionId = Objects.requireNonNull(connectionId, "expected parameter 'connectionId' to be non-null");
         this.lagId = Objects.requireNonNull(lagId, "expected parameter 'lagId' to be non-null");
     }
 
     private ConnectionAssociationArgs() {
-        this.connectionId = Input.empty();
-        this.lagId = Input.empty();
+        this.connectionId = Output.empty();
+        this.lagId = Output.empty();
     }
 
     public static Builder builder() {
@@ -56,8 +56,8 @@ public final class ConnectionAssociationArgs extends io.pulumi.resources.Resourc
     }
 
     public static final class Builder {
-        private Input<String> connectionId;
-        private Input<String> lagId;
+        private Output<String> connectionId;
+        private Output<String> lagId;
 
         public Builder() {
     	      // Empty
@@ -69,23 +69,23 @@ public final class ConnectionAssociationArgs extends io.pulumi.resources.Resourc
     	      this.lagId = defaults.lagId;
         }
 
-        public Builder connectionId(Input<String> connectionId) {
+        public Builder connectionId(Output<String> connectionId) {
             this.connectionId = Objects.requireNonNull(connectionId);
             return this;
         }
 
         public Builder connectionId(String connectionId) {
-            this.connectionId = Input.of(Objects.requireNonNull(connectionId));
+            this.connectionId = Output.of(Objects.requireNonNull(connectionId));
             return this;
         }
 
-        public Builder lagId(Input<String> lagId) {
+        public Builder lagId(Output<String> lagId) {
             this.lagId = Objects.requireNonNull(lagId);
             return this;
         }
 
         public Builder lagId(String lagId) {
-            this.lagId = Input.of(Objects.requireNonNull(lagId));
+            this.lagId = Output.of(Objects.requireNonNull(lagId));
             return this;
         }
         public ConnectionAssociationArgs build() {

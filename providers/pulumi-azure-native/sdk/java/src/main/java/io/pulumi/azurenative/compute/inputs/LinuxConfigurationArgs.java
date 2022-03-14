@@ -5,7 +5,7 @@ package io.pulumi.azurenative.compute.inputs;
 
 import io.pulumi.azurenative.compute.inputs.LinuxPatchSettingsArgs;
 import io.pulumi.azurenative.compute.inputs.SshConfigurationArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
@@ -25,10 +25,10 @@ public final class LinuxConfigurationArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="disablePasswordAuthentication")
-      private final @Nullable Input<Boolean> disablePasswordAuthentication;
+      private final @Nullable Output<Boolean> disablePasswordAuthentication;
 
-    public Input<Boolean> getDisablePasswordAuthentication() {
-        return this.disablePasswordAuthentication == null ? Input.empty() : this.disablePasswordAuthentication;
+    public Output<Boolean> getDisablePasswordAuthentication() {
+        return this.disablePasswordAuthentication == null ? Output.empty() : this.disablePasswordAuthentication;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class LinuxConfigurationArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="patchSettings")
-      private final @Nullable Input<LinuxPatchSettingsArgs> patchSettings;
+      private final @Nullable Output<LinuxPatchSettingsArgs> patchSettings;
 
-    public Input<LinuxPatchSettingsArgs> getPatchSettings() {
-        return this.patchSettings == null ? Input.empty() : this.patchSettings;
+    public Output<LinuxPatchSettingsArgs> getPatchSettings() {
+        return this.patchSettings == null ? Output.empty() : this.patchSettings;
     }
 
     /**
@@ -47,10 +47,10 @@ public final class LinuxConfigurationArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="provisionVMAgent")
-      private final @Nullable Input<Boolean> provisionVMAgent;
+      private final @Nullable Output<Boolean> provisionVMAgent;
 
-    public Input<Boolean> getProvisionVMAgent() {
-        return this.provisionVMAgent == null ? Input.empty() : this.provisionVMAgent;
+    public Output<Boolean> getProvisionVMAgent() {
+        return this.provisionVMAgent == null ? Output.empty() : this.provisionVMAgent;
     }
 
     /**
@@ -58,17 +58,17 @@ public final class LinuxConfigurationArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="ssh")
-      private final @Nullable Input<SshConfigurationArgs> ssh;
+      private final @Nullable Output<SshConfigurationArgs> ssh;
 
-    public Input<SshConfigurationArgs> getSsh() {
-        return this.ssh == null ? Input.empty() : this.ssh;
+    public Output<SshConfigurationArgs> getSsh() {
+        return this.ssh == null ? Output.empty() : this.ssh;
     }
 
     public LinuxConfigurationArgs(
-        @Nullable Input<Boolean> disablePasswordAuthentication,
-        @Nullable Input<LinuxPatchSettingsArgs> patchSettings,
-        @Nullable Input<Boolean> provisionVMAgent,
-        @Nullable Input<SshConfigurationArgs> ssh) {
+        @Nullable Output<Boolean> disablePasswordAuthentication,
+        @Nullable Output<LinuxPatchSettingsArgs> patchSettings,
+        @Nullable Output<Boolean> provisionVMAgent,
+        @Nullable Output<SshConfigurationArgs> ssh) {
         this.disablePasswordAuthentication = disablePasswordAuthentication;
         this.patchSettings = patchSettings;
         this.provisionVMAgent = provisionVMAgent;
@@ -76,10 +76,10 @@ public final class LinuxConfigurationArgs extends io.pulumi.resources.ResourceAr
     }
 
     private LinuxConfigurationArgs() {
-        this.disablePasswordAuthentication = Input.empty();
-        this.patchSettings = Input.empty();
-        this.provisionVMAgent = Input.empty();
-        this.ssh = Input.empty();
+        this.disablePasswordAuthentication = Output.empty();
+        this.patchSettings = Output.empty();
+        this.provisionVMAgent = Output.empty();
+        this.ssh = Output.empty();
     }
 
     public static Builder builder() {
@@ -91,10 +91,10 @@ public final class LinuxConfigurationArgs extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> disablePasswordAuthentication;
-        private @Nullable Input<LinuxPatchSettingsArgs> patchSettings;
-        private @Nullable Input<Boolean> provisionVMAgent;
-        private @Nullable Input<SshConfigurationArgs> ssh;
+        private @Nullable Output<Boolean> disablePasswordAuthentication;
+        private @Nullable Output<LinuxPatchSettingsArgs> patchSettings;
+        private @Nullable Output<Boolean> provisionVMAgent;
+        private @Nullable Output<SshConfigurationArgs> ssh;
 
         public Builder() {
     	      // Empty
@@ -108,43 +108,43 @@ public final class LinuxConfigurationArgs extends io.pulumi.resources.ResourceAr
     	      this.ssh = defaults.ssh;
         }
 
-        public Builder disablePasswordAuthentication(@Nullable Input<Boolean> disablePasswordAuthentication) {
+        public Builder disablePasswordAuthentication(@Nullable Output<Boolean> disablePasswordAuthentication) {
             this.disablePasswordAuthentication = disablePasswordAuthentication;
             return this;
         }
 
         public Builder disablePasswordAuthentication(@Nullable Boolean disablePasswordAuthentication) {
-            this.disablePasswordAuthentication = Input.ofNullable(disablePasswordAuthentication);
+            this.disablePasswordAuthentication = Output.ofNullable(disablePasswordAuthentication);
             return this;
         }
 
-        public Builder patchSettings(@Nullable Input<LinuxPatchSettingsArgs> patchSettings) {
+        public Builder patchSettings(@Nullable Output<LinuxPatchSettingsArgs> patchSettings) {
             this.patchSettings = patchSettings;
             return this;
         }
 
         public Builder patchSettings(@Nullable LinuxPatchSettingsArgs patchSettings) {
-            this.patchSettings = Input.ofNullable(patchSettings);
+            this.patchSettings = Output.ofNullable(patchSettings);
             return this;
         }
 
-        public Builder provisionVMAgent(@Nullable Input<Boolean> provisionVMAgent) {
+        public Builder provisionVMAgent(@Nullable Output<Boolean> provisionVMAgent) {
             this.provisionVMAgent = provisionVMAgent;
             return this;
         }
 
         public Builder provisionVMAgent(@Nullable Boolean provisionVMAgent) {
-            this.provisionVMAgent = Input.ofNullable(provisionVMAgent);
+            this.provisionVMAgent = Output.ofNullable(provisionVMAgent);
             return this;
         }
 
-        public Builder ssh(@Nullable Input<SshConfigurationArgs> ssh) {
+        public Builder ssh(@Nullable Output<SshConfigurationArgs> ssh) {
             this.ssh = ssh;
             return this;
         }
 
         public Builder ssh(@Nullable SshConfigurationArgs ssh) {
-            this.ssh = Input.ofNullable(ssh);
+            this.ssh = Output.ofNullable(ssh);
             return this;
         }
         public LinuxConfigurationArgs build() {

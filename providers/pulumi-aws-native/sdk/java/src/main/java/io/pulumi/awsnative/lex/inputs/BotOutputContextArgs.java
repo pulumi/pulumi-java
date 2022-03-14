@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.lex.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -19,39 +19,39 @@ public final class BotOutputContextArgs extends io.pulumi.resources.ResourceArgs
     public static final BotOutputContextArgs Empty = new BotOutputContextArgs();
 
     @InputImport(name="name", required=true)
-      private final Input<String> name;
+      private final Output<String> name;
 
-    public Input<String> getName() {
+    public Output<String> getName() {
         return this.name;
     }
 
     @InputImport(name="timeToLiveInSeconds", required=true)
-      private final Input<Integer> timeToLiveInSeconds;
+      private final Output<Integer> timeToLiveInSeconds;
 
-    public Input<Integer> getTimeToLiveInSeconds() {
+    public Output<Integer> getTimeToLiveInSeconds() {
         return this.timeToLiveInSeconds;
     }
 
     @InputImport(name="turnsToLive", required=true)
-      private final Input<Integer> turnsToLive;
+      private final Output<Integer> turnsToLive;
 
-    public Input<Integer> getTurnsToLive() {
+    public Output<Integer> getTurnsToLive() {
         return this.turnsToLive;
     }
 
     public BotOutputContextArgs(
-        Input<String> name,
-        Input<Integer> timeToLiveInSeconds,
-        Input<Integer> turnsToLive) {
+        Output<String> name,
+        Output<Integer> timeToLiveInSeconds,
+        Output<Integer> turnsToLive) {
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
         this.timeToLiveInSeconds = Objects.requireNonNull(timeToLiveInSeconds, "expected parameter 'timeToLiveInSeconds' to be non-null");
         this.turnsToLive = Objects.requireNonNull(turnsToLive, "expected parameter 'turnsToLive' to be non-null");
     }
 
     private BotOutputContextArgs() {
-        this.name = Input.empty();
-        this.timeToLiveInSeconds = Input.empty();
-        this.turnsToLive = Input.empty();
+        this.name = Output.empty();
+        this.timeToLiveInSeconds = Output.empty();
+        this.turnsToLive = Output.empty();
     }
 
     public static Builder builder() {
@@ -63,9 +63,9 @@ public final class BotOutputContextArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private Input<String> name;
-        private Input<Integer> timeToLiveInSeconds;
-        private Input<Integer> turnsToLive;
+        private Output<String> name;
+        private Output<Integer> timeToLiveInSeconds;
+        private Output<Integer> turnsToLive;
 
         public Builder() {
     	      // Empty
@@ -78,33 +78,33 @@ public final class BotOutputContextArgs extends io.pulumi.resources.ResourceArgs
     	      this.turnsToLive = defaults.turnsToLive;
         }
 
-        public Builder name(Input<String> name) {
+        public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(String name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder timeToLiveInSeconds(Input<Integer> timeToLiveInSeconds) {
+        public Builder timeToLiveInSeconds(Output<Integer> timeToLiveInSeconds) {
             this.timeToLiveInSeconds = Objects.requireNonNull(timeToLiveInSeconds);
             return this;
         }
 
         public Builder timeToLiveInSeconds(Integer timeToLiveInSeconds) {
-            this.timeToLiveInSeconds = Input.of(Objects.requireNonNull(timeToLiveInSeconds));
+            this.timeToLiveInSeconds = Output.of(Objects.requireNonNull(timeToLiveInSeconds));
             return this;
         }
 
-        public Builder turnsToLive(Input<Integer> turnsToLive) {
+        public Builder turnsToLive(Output<Integer> turnsToLive) {
             this.turnsToLive = Objects.requireNonNull(turnsToLive);
             return this;
         }
 
         public Builder turnsToLive(Integer turnsToLive) {
-            this.turnsToLive = Input.of(Objects.requireNonNull(turnsToLive));
+            this.turnsToLive = Output.of(Objects.requireNonNull(turnsToLive));
             return this;
         }
         public BotOutputContextArgs build() {

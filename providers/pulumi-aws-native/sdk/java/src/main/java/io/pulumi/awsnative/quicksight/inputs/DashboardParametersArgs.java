@@ -7,7 +7,7 @@ import io.pulumi.awsnative.quicksight.inputs.DashboardDateTimeParameterArgs;
 import io.pulumi.awsnative.quicksight.inputs.DashboardDecimalParameterArgs;
 import io.pulumi.awsnative.quicksight.inputs.DashboardIntegerParameterArgs;
 import io.pulumi.awsnative.quicksight.inputs.DashboardStringParameterArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
@@ -27,10 +27,10 @@ public final class DashboardParametersArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="dateTimeParameters")
-      private final @Nullable Input<List<DashboardDateTimeParameterArgs>> dateTimeParameters;
+      private final @Nullable Output<List<DashboardDateTimeParameterArgs>> dateTimeParameters;
 
-    public Input<List<DashboardDateTimeParameterArgs>> getDateTimeParameters() {
-        return this.dateTimeParameters == null ? Input.empty() : this.dateTimeParameters;
+    public Output<List<DashboardDateTimeParameterArgs>> getDateTimeParameters() {
+        return this.dateTimeParameters == null ? Output.empty() : this.dateTimeParameters;
     }
 
     /**
@@ -38,10 +38,10 @@ public final class DashboardParametersArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="decimalParameters")
-      private final @Nullable Input<List<DashboardDecimalParameterArgs>> decimalParameters;
+      private final @Nullable Output<List<DashboardDecimalParameterArgs>> decimalParameters;
 
-    public Input<List<DashboardDecimalParameterArgs>> getDecimalParameters() {
-        return this.decimalParameters == null ? Input.empty() : this.decimalParameters;
+    public Output<List<DashboardDecimalParameterArgs>> getDecimalParameters() {
+        return this.decimalParameters == null ? Output.empty() : this.decimalParameters;
     }
 
     /**
@@ -49,10 +49,10 @@ public final class DashboardParametersArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="integerParameters")
-      private final @Nullable Input<List<DashboardIntegerParameterArgs>> integerParameters;
+      private final @Nullable Output<List<DashboardIntegerParameterArgs>> integerParameters;
 
-    public Input<List<DashboardIntegerParameterArgs>> getIntegerParameters() {
-        return this.integerParameters == null ? Input.empty() : this.integerParameters;
+    public Output<List<DashboardIntegerParameterArgs>> getIntegerParameters() {
+        return this.integerParameters == null ? Output.empty() : this.integerParameters;
     }
 
     /**
@@ -60,17 +60,17 @@ public final class DashboardParametersArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="stringParameters")
-      private final @Nullable Input<List<DashboardStringParameterArgs>> stringParameters;
+      private final @Nullable Output<List<DashboardStringParameterArgs>> stringParameters;
 
-    public Input<List<DashboardStringParameterArgs>> getStringParameters() {
-        return this.stringParameters == null ? Input.empty() : this.stringParameters;
+    public Output<List<DashboardStringParameterArgs>> getStringParameters() {
+        return this.stringParameters == null ? Output.empty() : this.stringParameters;
     }
 
     public DashboardParametersArgs(
-        @Nullable Input<List<DashboardDateTimeParameterArgs>> dateTimeParameters,
-        @Nullable Input<List<DashboardDecimalParameterArgs>> decimalParameters,
-        @Nullable Input<List<DashboardIntegerParameterArgs>> integerParameters,
-        @Nullable Input<List<DashboardStringParameterArgs>> stringParameters) {
+        @Nullable Output<List<DashboardDateTimeParameterArgs>> dateTimeParameters,
+        @Nullable Output<List<DashboardDecimalParameterArgs>> decimalParameters,
+        @Nullable Output<List<DashboardIntegerParameterArgs>> integerParameters,
+        @Nullable Output<List<DashboardStringParameterArgs>> stringParameters) {
         this.dateTimeParameters = dateTimeParameters;
         this.decimalParameters = decimalParameters;
         this.integerParameters = integerParameters;
@@ -78,10 +78,10 @@ public final class DashboardParametersArgs extends io.pulumi.resources.ResourceA
     }
 
     private DashboardParametersArgs() {
-        this.dateTimeParameters = Input.empty();
-        this.decimalParameters = Input.empty();
-        this.integerParameters = Input.empty();
-        this.stringParameters = Input.empty();
+        this.dateTimeParameters = Output.empty();
+        this.decimalParameters = Output.empty();
+        this.integerParameters = Output.empty();
+        this.stringParameters = Output.empty();
     }
 
     public static Builder builder() {
@@ -93,10 +93,10 @@ public final class DashboardParametersArgs extends io.pulumi.resources.ResourceA
     }
 
     public static final class Builder {
-        private @Nullable Input<List<DashboardDateTimeParameterArgs>> dateTimeParameters;
-        private @Nullable Input<List<DashboardDecimalParameterArgs>> decimalParameters;
-        private @Nullable Input<List<DashboardIntegerParameterArgs>> integerParameters;
-        private @Nullable Input<List<DashboardStringParameterArgs>> stringParameters;
+        private @Nullable Output<List<DashboardDateTimeParameterArgs>> dateTimeParameters;
+        private @Nullable Output<List<DashboardDecimalParameterArgs>> decimalParameters;
+        private @Nullable Output<List<DashboardIntegerParameterArgs>> integerParameters;
+        private @Nullable Output<List<DashboardStringParameterArgs>> stringParameters;
 
         public Builder() {
     	      // Empty
@@ -110,43 +110,43 @@ public final class DashboardParametersArgs extends io.pulumi.resources.ResourceA
     	      this.stringParameters = defaults.stringParameters;
         }
 
-        public Builder dateTimeParameters(@Nullable Input<List<DashboardDateTimeParameterArgs>> dateTimeParameters) {
+        public Builder dateTimeParameters(@Nullable Output<List<DashboardDateTimeParameterArgs>> dateTimeParameters) {
             this.dateTimeParameters = dateTimeParameters;
             return this;
         }
 
         public Builder dateTimeParameters(@Nullable List<DashboardDateTimeParameterArgs> dateTimeParameters) {
-            this.dateTimeParameters = Input.ofNullable(dateTimeParameters);
+            this.dateTimeParameters = Output.ofNullable(dateTimeParameters);
             return this;
         }
 
-        public Builder decimalParameters(@Nullable Input<List<DashboardDecimalParameterArgs>> decimalParameters) {
+        public Builder decimalParameters(@Nullable Output<List<DashboardDecimalParameterArgs>> decimalParameters) {
             this.decimalParameters = decimalParameters;
             return this;
         }
 
         public Builder decimalParameters(@Nullable List<DashboardDecimalParameterArgs> decimalParameters) {
-            this.decimalParameters = Input.ofNullable(decimalParameters);
+            this.decimalParameters = Output.ofNullable(decimalParameters);
             return this;
         }
 
-        public Builder integerParameters(@Nullable Input<List<DashboardIntegerParameterArgs>> integerParameters) {
+        public Builder integerParameters(@Nullable Output<List<DashboardIntegerParameterArgs>> integerParameters) {
             this.integerParameters = integerParameters;
             return this;
         }
 
         public Builder integerParameters(@Nullable List<DashboardIntegerParameterArgs> integerParameters) {
-            this.integerParameters = Input.ofNullable(integerParameters);
+            this.integerParameters = Output.ofNullable(integerParameters);
             return this;
         }
 
-        public Builder stringParameters(@Nullable Input<List<DashboardStringParameterArgs>> stringParameters) {
+        public Builder stringParameters(@Nullable Output<List<DashboardStringParameterArgs>> stringParameters) {
             this.stringParameters = stringParameters;
             return this;
         }
 
         public Builder stringParameters(@Nullable List<DashboardStringParameterArgs> stringParameters) {
-            this.stringParameters = Input.ofNullable(stringParameters);
+            this.stringParameters = Output.ofNullable(stringParameters);
             return this;
         }
         public DashboardParametersArgs build() {

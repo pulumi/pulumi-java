@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,9 +19,9 @@ public final class OrganizationSecurityPolicyAssociationArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="attachmentId", required=true)
-      private final Input<String> attachmentId;
+      private final Output<String> attachmentId;
 
-    public Input<String> getAttachmentId() {
+    public Output<String> getAttachmentId() {
         return this.attachmentId;
     }
 
@@ -30,10 +30,10 @@ public final class OrganizationSecurityPolicyAssociationArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -41,25 +41,25 @@ public final class OrganizationSecurityPolicyAssociationArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="policyId", required=true)
-      private final Input<String> policyId;
+      private final Output<String> policyId;
 
-    public Input<String> getPolicyId() {
+    public Output<String> getPolicyId() {
         return this.policyId;
     }
 
     public OrganizationSecurityPolicyAssociationArgs(
-        Input<String> attachmentId,
-        @Nullable Input<String> name,
-        Input<String> policyId) {
+        Output<String> attachmentId,
+        @Nullable Output<String> name,
+        Output<String> policyId) {
         this.attachmentId = Objects.requireNonNull(attachmentId, "expected parameter 'attachmentId' to be non-null");
         this.name = name;
         this.policyId = Objects.requireNonNull(policyId, "expected parameter 'policyId' to be non-null");
     }
 
     private OrganizationSecurityPolicyAssociationArgs() {
-        this.attachmentId = Input.empty();
-        this.name = Input.empty();
-        this.policyId = Input.empty();
+        this.attachmentId = Output.empty();
+        this.name = Output.empty();
+        this.policyId = Output.empty();
     }
 
     public static Builder builder() {
@@ -71,9 +71,9 @@ public final class OrganizationSecurityPolicyAssociationArgs extends io.pulumi.r
     }
 
     public static final class Builder {
-        private Input<String> attachmentId;
-        private @Nullable Input<String> name;
-        private Input<String> policyId;
+        private Output<String> attachmentId;
+        private @Nullable Output<String> name;
+        private Output<String> policyId;
 
         public Builder() {
     	      // Empty
@@ -86,33 +86,33 @@ public final class OrganizationSecurityPolicyAssociationArgs extends io.pulumi.r
     	      this.policyId = defaults.policyId;
         }
 
-        public Builder attachmentId(Input<String> attachmentId) {
+        public Builder attachmentId(Output<String> attachmentId) {
             this.attachmentId = Objects.requireNonNull(attachmentId);
             return this;
         }
 
         public Builder attachmentId(String attachmentId) {
-            this.attachmentId = Input.of(Objects.requireNonNull(attachmentId));
+            this.attachmentId = Output.of(Objects.requireNonNull(attachmentId));
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder policyId(Input<String> policyId) {
+        public Builder policyId(Output<String> policyId) {
             this.policyId = Objects.requireNonNull(policyId);
             return this;
         }
 
         public Builder policyId(String policyId) {
-            this.policyId = Input.of(Objects.requireNonNull(policyId));
+            this.policyId = Output.of(Objects.requireNonNull(policyId));
             return this;
         }
         public OrganizationSecurityPolicyAssociationArgs build() {

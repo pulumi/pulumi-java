@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.datastream_v1alpha1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.datastream_v1alpha1.inputs.MysqlRdbmsArgs;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class MysqlSourceConfigArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="allowlist")
-      private final @Nullable Input<MysqlRdbmsArgs> allowlist;
+      private final @Nullable Output<MysqlRdbmsArgs> allowlist;
 
-    public Input<MysqlRdbmsArgs> getAllowlist() {
-        return this.allowlist == null ? Input.empty() : this.allowlist;
+    public Output<MysqlRdbmsArgs> getAllowlist() {
+        return this.allowlist == null ? Output.empty() : this.allowlist;
     }
 
     /**
@@ -34,22 +34,22 @@ public final class MysqlSourceConfigArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="rejectlist")
-      private final @Nullable Input<MysqlRdbmsArgs> rejectlist;
+      private final @Nullable Output<MysqlRdbmsArgs> rejectlist;
 
-    public Input<MysqlRdbmsArgs> getRejectlist() {
-        return this.rejectlist == null ? Input.empty() : this.rejectlist;
+    public Output<MysqlRdbmsArgs> getRejectlist() {
+        return this.rejectlist == null ? Output.empty() : this.rejectlist;
     }
 
     public MysqlSourceConfigArgs(
-        @Nullable Input<MysqlRdbmsArgs> allowlist,
-        @Nullable Input<MysqlRdbmsArgs> rejectlist) {
+        @Nullable Output<MysqlRdbmsArgs> allowlist,
+        @Nullable Output<MysqlRdbmsArgs> rejectlist) {
         this.allowlist = allowlist;
         this.rejectlist = rejectlist;
     }
 
     private MysqlSourceConfigArgs() {
-        this.allowlist = Input.empty();
-        this.rejectlist = Input.empty();
+        this.allowlist = Output.empty();
+        this.rejectlist = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class MysqlSourceConfigArgs extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private @Nullable Input<MysqlRdbmsArgs> allowlist;
-        private @Nullable Input<MysqlRdbmsArgs> rejectlist;
+        private @Nullable Output<MysqlRdbmsArgs> allowlist;
+        private @Nullable Output<MysqlRdbmsArgs> rejectlist;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class MysqlSourceConfigArgs extends io.pulumi.resources.ResourceArg
     	      this.rejectlist = defaults.rejectlist;
         }
 
-        public Builder allowlist(@Nullable Input<MysqlRdbmsArgs> allowlist) {
+        public Builder allowlist(@Nullable Output<MysqlRdbmsArgs> allowlist) {
             this.allowlist = allowlist;
             return this;
         }
 
         public Builder allowlist(@Nullable MysqlRdbmsArgs allowlist) {
-            this.allowlist = Input.ofNullable(allowlist);
+            this.allowlist = Output.ofNullable(allowlist);
             return this;
         }
 
-        public Builder rejectlist(@Nullable Input<MysqlRdbmsArgs> rejectlist) {
+        public Builder rejectlist(@Nullable Output<MysqlRdbmsArgs> rejectlist) {
             this.rejectlist = rejectlist;
             return this;
         }
 
         public Builder rejectlist(@Nullable MysqlRdbmsArgs rejectlist) {
-            this.rejectlist = Input.ofNullable(rejectlist);
+            this.rejectlist = Output.ofNullable(rejectlist);
             return this;
         }
         public MysqlSourceConfigArgs build() {

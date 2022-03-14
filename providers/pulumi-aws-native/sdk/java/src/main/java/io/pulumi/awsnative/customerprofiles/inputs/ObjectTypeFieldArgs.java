@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.customerprofiles.inputs;
 
 import io.pulumi.awsnative.customerprofiles.enums.ObjectTypeFieldContentType;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -24,10 +24,10 @@ public final class ObjectTypeFieldArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="contentType")
-      private final @Nullable Input<ObjectTypeFieldContentType> contentType;
+      private final @Nullable Output<ObjectTypeFieldContentType> contentType;
 
-    public Input<ObjectTypeFieldContentType> getContentType() {
-        return this.contentType == null ? Input.empty() : this.contentType;
+    public Output<ObjectTypeFieldContentType> getContentType() {
+        return this.contentType == null ? Output.empty() : this.contentType;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class ObjectTypeFieldArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="source")
-      private final @Nullable Input<String> source;
+      private final @Nullable Output<String> source;
 
-    public Input<String> getSource() {
-        return this.source == null ? Input.empty() : this.source;
+    public Output<String> getSource() {
+        return this.source == null ? Output.empty() : this.source;
     }
 
     /**
@@ -46,25 +46,25 @@ public final class ObjectTypeFieldArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="target")
-      private final @Nullable Input<String> target;
+      private final @Nullable Output<String> target;
 
-    public Input<String> getTarget() {
-        return this.target == null ? Input.empty() : this.target;
+    public Output<String> getTarget() {
+        return this.target == null ? Output.empty() : this.target;
     }
 
     public ObjectTypeFieldArgs(
-        @Nullable Input<ObjectTypeFieldContentType> contentType,
-        @Nullable Input<String> source,
-        @Nullable Input<String> target) {
+        @Nullable Output<ObjectTypeFieldContentType> contentType,
+        @Nullable Output<String> source,
+        @Nullable Output<String> target) {
         this.contentType = contentType;
         this.source = source;
         this.target = target;
     }
 
     private ObjectTypeFieldArgs() {
-        this.contentType = Input.empty();
-        this.source = Input.empty();
-        this.target = Input.empty();
+        this.contentType = Output.empty();
+        this.source = Output.empty();
+        this.target = Output.empty();
     }
 
     public static Builder builder() {
@@ -76,9 +76,9 @@ public final class ObjectTypeFieldArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private @Nullable Input<ObjectTypeFieldContentType> contentType;
-        private @Nullable Input<String> source;
-        private @Nullable Input<String> target;
+        private @Nullable Output<ObjectTypeFieldContentType> contentType;
+        private @Nullable Output<String> source;
+        private @Nullable Output<String> target;
 
         public Builder() {
     	      // Empty
@@ -91,33 +91,33 @@ public final class ObjectTypeFieldArgs extends io.pulumi.resources.ResourceArgs 
     	      this.target = defaults.target;
         }
 
-        public Builder contentType(@Nullable Input<ObjectTypeFieldContentType> contentType) {
+        public Builder contentType(@Nullable Output<ObjectTypeFieldContentType> contentType) {
             this.contentType = contentType;
             return this;
         }
 
         public Builder contentType(@Nullable ObjectTypeFieldContentType contentType) {
-            this.contentType = Input.ofNullable(contentType);
+            this.contentType = Output.ofNullable(contentType);
             return this;
         }
 
-        public Builder source(@Nullable Input<String> source) {
+        public Builder source(@Nullable Output<String> source) {
             this.source = source;
             return this;
         }
 
         public Builder source(@Nullable String source) {
-            this.source = Input.ofNullable(source);
+            this.source = Output.ofNullable(source);
             return this;
         }
 
-        public Builder target(@Nullable Input<String> target) {
+        public Builder target(@Nullable Output<String> target) {
             this.target = target;
             return this;
         }
 
         public Builder target(@Nullable String target) {
-            this.target = Input.ofNullable(target);
+            this.target = Output.ofNullable(target);
             return this;
         }
         public ObjectTypeFieldArgs build() {

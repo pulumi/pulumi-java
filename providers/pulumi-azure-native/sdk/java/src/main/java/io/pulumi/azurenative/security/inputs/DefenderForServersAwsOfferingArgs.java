@@ -5,7 +5,7 @@ package io.pulumi.azurenative.security.inputs;
 
 import io.pulumi.azurenative.security.inputs.DefenderForServersAwsOfferingArcAutoProvisioningArgs;
 import io.pulumi.azurenative.security.inputs.DefenderForServersAwsOfferingDefenderForServersArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -25,10 +25,10 @@ public final class DefenderForServersAwsOfferingArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="arcAutoProvisioning")
-      private final @Nullable Input<DefenderForServersAwsOfferingArcAutoProvisioningArgs> arcAutoProvisioning;
+      private final @Nullable Output<DefenderForServersAwsOfferingArcAutoProvisioningArgs> arcAutoProvisioning;
 
-    public Input<DefenderForServersAwsOfferingArcAutoProvisioningArgs> getArcAutoProvisioning() {
-        return this.arcAutoProvisioning == null ? Input.empty() : this.arcAutoProvisioning;
+    public Output<DefenderForServersAwsOfferingArcAutoProvisioningArgs> getArcAutoProvisioning() {
+        return this.arcAutoProvisioning == null ? Output.empty() : this.arcAutoProvisioning;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class DefenderForServersAwsOfferingArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="defenderForServers")
-      private final @Nullable Input<DefenderForServersAwsOfferingDefenderForServersArgs> defenderForServers;
+      private final @Nullable Output<DefenderForServersAwsOfferingDefenderForServersArgs> defenderForServers;
 
-    public Input<DefenderForServersAwsOfferingDefenderForServersArgs> getDefenderForServers() {
-        return this.defenderForServers == null ? Input.empty() : this.defenderForServers;
+    public Output<DefenderForServersAwsOfferingDefenderForServersArgs> getDefenderForServers() {
+        return this.defenderForServers == null ? Output.empty() : this.defenderForServers;
     }
 
     /**
@@ -48,25 +48,25 @@ public final class DefenderForServersAwsOfferingArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="offeringType", required=true)
-      private final Input<String> offeringType;
+      private final Output<String> offeringType;
 
-    public Input<String> getOfferingType() {
+    public Output<String> getOfferingType() {
         return this.offeringType;
     }
 
     public DefenderForServersAwsOfferingArgs(
-        @Nullable Input<DefenderForServersAwsOfferingArcAutoProvisioningArgs> arcAutoProvisioning,
-        @Nullable Input<DefenderForServersAwsOfferingDefenderForServersArgs> defenderForServers,
-        Input<String> offeringType) {
+        @Nullable Output<DefenderForServersAwsOfferingArcAutoProvisioningArgs> arcAutoProvisioning,
+        @Nullable Output<DefenderForServersAwsOfferingDefenderForServersArgs> defenderForServers,
+        Output<String> offeringType) {
         this.arcAutoProvisioning = arcAutoProvisioning;
         this.defenderForServers = defenderForServers;
         this.offeringType = Objects.requireNonNull(offeringType, "expected parameter 'offeringType' to be non-null");
     }
 
     private DefenderForServersAwsOfferingArgs() {
-        this.arcAutoProvisioning = Input.empty();
-        this.defenderForServers = Input.empty();
-        this.offeringType = Input.empty();
+        this.arcAutoProvisioning = Output.empty();
+        this.defenderForServers = Output.empty();
+        this.offeringType = Output.empty();
     }
 
     public static Builder builder() {
@@ -78,9 +78,9 @@ public final class DefenderForServersAwsOfferingArgs extends io.pulumi.resources
     }
 
     public static final class Builder {
-        private @Nullable Input<DefenderForServersAwsOfferingArcAutoProvisioningArgs> arcAutoProvisioning;
-        private @Nullable Input<DefenderForServersAwsOfferingDefenderForServersArgs> defenderForServers;
-        private Input<String> offeringType;
+        private @Nullable Output<DefenderForServersAwsOfferingArcAutoProvisioningArgs> arcAutoProvisioning;
+        private @Nullable Output<DefenderForServersAwsOfferingDefenderForServersArgs> defenderForServers;
+        private Output<String> offeringType;
 
         public Builder() {
     	      // Empty
@@ -93,33 +93,33 @@ public final class DefenderForServersAwsOfferingArgs extends io.pulumi.resources
     	      this.offeringType = defaults.offeringType;
         }
 
-        public Builder arcAutoProvisioning(@Nullable Input<DefenderForServersAwsOfferingArcAutoProvisioningArgs> arcAutoProvisioning) {
+        public Builder arcAutoProvisioning(@Nullable Output<DefenderForServersAwsOfferingArcAutoProvisioningArgs> arcAutoProvisioning) {
             this.arcAutoProvisioning = arcAutoProvisioning;
             return this;
         }
 
         public Builder arcAutoProvisioning(@Nullable DefenderForServersAwsOfferingArcAutoProvisioningArgs arcAutoProvisioning) {
-            this.arcAutoProvisioning = Input.ofNullable(arcAutoProvisioning);
+            this.arcAutoProvisioning = Output.ofNullable(arcAutoProvisioning);
             return this;
         }
 
-        public Builder defenderForServers(@Nullable Input<DefenderForServersAwsOfferingDefenderForServersArgs> defenderForServers) {
+        public Builder defenderForServers(@Nullable Output<DefenderForServersAwsOfferingDefenderForServersArgs> defenderForServers) {
             this.defenderForServers = defenderForServers;
             return this;
         }
 
         public Builder defenderForServers(@Nullable DefenderForServersAwsOfferingDefenderForServersArgs defenderForServers) {
-            this.defenderForServers = Input.ofNullable(defenderForServers);
+            this.defenderForServers = Output.ofNullable(defenderForServers);
             return this;
         }
 
-        public Builder offeringType(Input<String> offeringType) {
+        public Builder offeringType(Output<String> offeringType) {
             this.offeringType = Objects.requireNonNull(offeringType);
             return this;
         }
 
         public Builder offeringType(String offeringType) {
-            this.offeringType = Input.of(Objects.requireNonNull(offeringType));
+            this.offeringType = Output.of(Objects.requireNonNull(offeringType));
             return this;
         }
         public DefenderForServersAwsOfferingArgs build() {

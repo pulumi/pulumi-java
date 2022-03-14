@@ -4,7 +4,7 @@
 package io.pulumi.aws.cloudwatch.inputs;
 
 import io.pulumi.aws.cloudwatch.inputs.MetricAlarmMetricQueryGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Double;
@@ -25,10 +25,10 @@ public final class MetricAlarmState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="actionsEnabled")
-      private final @Nullable Input<Boolean> actionsEnabled;
+      private final @Nullable Output<Boolean> actionsEnabled;
 
-    public Input<Boolean> getActionsEnabled() {
-        return this.actionsEnabled == null ? Input.empty() : this.actionsEnabled;
+    public Output<Boolean> getActionsEnabled() {
+        return this.actionsEnabled == null ? Output.empty() : this.actionsEnabled;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class MetricAlarmState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="alarmActions")
-      private final @Nullable Input<List<String>> alarmActions;
+      private final @Nullable Output<List<String>> alarmActions;
 
-    public Input<List<String>> getAlarmActions() {
-        return this.alarmActions == null ? Input.empty() : this.alarmActions;
+    public Output<List<String>> getAlarmActions() {
+        return this.alarmActions == null ? Output.empty() : this.alarmActions;
     }
 
     /**
@@ -47,10 +47,10 @@ public final class MetricAlarmState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="alarmDescription")
-      private final @Nullable Input<String> alarmDescription;
+      private final @Nullable Output<String> alarmDescription;
 
-    public Input<String> getAlarmDescription() {
-        return this.alarmDescription == null ? Input.empty() : this.alarmDescription;
+    public Output<String> getAlarmDescription() {
+        return this.alarmDescription == null ? Output.empty() : this.alarmDescription;
     }
 
     /**
@@ -58,10 +58,10 @@ public final class MetricAlarmState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arn")
-      private final @Nullable Input<String> arn;
+      private final @Nullable Output<String> arn;
 
-    public Input<String> getArn() {
-        return this.arn == null ? Input.empty() : this.arn;
+    public Output<String> getArn() {
+        return this.arn == null ? Output.empty() : this.arn;
     }
 
     /**
@@ -69,10 +69,10 @@ public final class MetricAlarmState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="comparisonOperator")
-      private final @Nullable Input<String> comparisonOperator;
+      private final @Nullable Output<String> comparisonOperator;
 
-    public Input<String> getComparisonOperator() {
-        return this.comparisonOperator == null ? Input.empty() : this.comparisonOperator;
+    public Output<String> getComparisonOperator() {
+        return this.comparisonOperator == null ? Output.empty() : this.comparisonOperator;
     }
 
     /**
@@ -80,10 +80,10 @@ public final class MetricAlarmState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="datapointsToAlarm")
-      private final @Nullable Input<Integer> datapointsToAlarm;
+      private final @Nullable Output<Integer> datapointsToAlarm;
 
-    public Input<Integer> getDatapointsToAlarm() {
-        return this.datapointsToAlarm == null ? Input.empty() : this.datapointsToAlarm;
+    public Output<Integer> getDatapointsToAlarm() {
+        return this.datapointsToAlarm == null ? Output.empty() : this.datapointsToAlarm;
     }
 
     /**
@@ -91,10 +91,10 @@ public final class MetricAlarmState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dimensions")
-      private final @Nullable Input<Map<String,String>> dimensions;
+      private final @Nullable Output<Map<String,String>> dimensions;
 
-    public Input<Map<String,String>> getDimensions() {
-        return this.dimensions == null ? Input.empty() : this.dimensions;
+    public Output<Map<String,String>> getDimensions() {
+        return this.dimensions == null ? Output.empty() : this.dimensions;
     }
 
     /**
@@ -107,10 +107,10 @@ public final class MetricAlarmState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="evaluateLowSampleCountPercentiles")
-      private final @Nullable Input<String> evaluateLowSampleCountPercentiles;
+      private final @Nullable Output<String> evaluateLowSampleCountPercentiles;
 
-    public Input<String> getEvaluateLowSampleCountPercentiles() {
-        return this.evaluateLowSampleCountPercentiles == null ? Input.empty() : this.evaluateLowSampleCountPercentiles;
+    public Output<String> getEvaluateLowSampleCountPercentiles() {
+        return this.evaluateLowSampleCountPercentiles == null ? Output.empty() : this.evaluateLowSampleCountPercentiles;
     }
 
     /**
@@ -118,10 +118,10 @@ public final class MetricAlarmState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="evaluationPeriods")
-      private final @Nullable Input<Integer> evaluationPeriods;
+      private final @Nullable Output<Integer> evaluationPeriods;
 
-    public Input<Integer> getEvaluationPeriods() {
-        return this.evaluationPeriods == null ? Input.empty() : this.evaluationPeriods;
+    public Output<Integer> getEvaluationPeriods() {
+        return this.evaluationPeriods == null ? Output.empty() : this.evaluationPeriods;
     }
 
     /**
@@ -129,10 +129,10 @@ public final class MetricAlarmState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="extendedStatistic")
-      private final @Nullable Input<String> extendedStatistic;
+      private final @Nullable Output<String> extendedStatistic;
 
-    public Input<String> getExtendedStatistic() {
-        return this.extendedStatistic == null ? Input.empty() : this.extendedStatistic;
+    public Output<String> getExtendedStatistic() {
+        return this.extendedStatistic == null ? Output.empty() : this.extendedStatistic;
     }
 
     /**
@@ -140,10 +140,10 @@ public final class MetricAlarmState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="insufficientDataActions")
-      private final @Nullable Input<List<String>> insufficientDataActions;
+      private final @Nullable Output<List<String>> insufficientDataActions;
 
-    public Input<List<String>> getInsufficientDataActions() {
-        return this.insufficientDataActions == null ? Input.empty() : this.insufficientDataActions;
+    public Output<List<String>> getInsufficientDataActions() {
+        return this.insufficientDataActions == null ? Output.empty() : this.insufficientDataActions;
     }
 
     /**
@@ -152,10 +152,10 @@ public final class MetricAlarmState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="metricName")
-      private final @Nullable Input<String> metricName;
+      private final @Nullable Output<String> metricName;
 
-    public Input<String> getMetricName() {
-        return this.metricName == null ? Input.empty() : this.metricName;
+    public Output<String> getMetricName() {
+        return this.metricName == null ? Output.empty() : this.metricName;
     }
 
     /**
@@ -163,10 +163,10 @@ public final class MetricAlarmState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="metricQueries")
-      private final @Nullable Input<List<MetricAlarmMetricQueryGetArgs>> metricQueries;
+      private final @Nullable Output<List<MetricAlarmMetricQueryGetArgs>> metricQueries;
 
-    public Input<List<MetricAlarmMetricQueryGetArgs>> getMetricQueries() {
-        return this.metricQueries == null ? Input.empty() : this.metricQueries;
+    public Output<List<MetricAlarmMetricQueryGetArgs>> getMetricQueries() {
+        return this.metricQueries == null ? Output.empty() : this.metricQueries;
     }
 
     /**
@@ -174,10 +174,10 @@ public final class MetricAlarmState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -186,10 +186,10 @@ public final class MetricAlarmState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="namespace")
-      private final @Nullable Input<String> namespace;
+      private final @Nullable Output<String> namespace;
 
-    public Input<String> getNamespace() {
-        return this.namespace == null ? Input.empty() : this.namespace;
+    public Output<String> getNamespace() {
+        return this.namespace == null ? Output.empty() : this.namespace;
     }
 
     /**
@@ -197,10 +197,10 @@ public final class MetricAlarmState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="okActions")
-      private final @Nullable Input<List<String>> okActions;
+      private final @Nullable Output<List<String>> okActions;
 
-    public Input<List<String>> getOkActions() {
-        return this.okActions == null ? Input.empty() : this.okActions;
+    public Output<List<String>> getOkActions() {
+        return this.okActions == null ? Output.empty() : this.okActions;
     }
 
     /**
@@ -208,10 +208,10 @@ public final class MetricAlarmState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="period")
-      private final @Nullable Input<Integer> period;
+      private final @Nullable Output<Integer> period;
 
-    public Input<Integer> getPeriod() {
-        return this.period == null ? Input.empty() : this.period;
+    public Output<Integer> getPeriod() {
+        return this.period == null ? Output.empty() : this.period;
     }
 
     /**
@@ -220,10 +220,10 @@ public final class MetricAlarmState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="statistic")
-      private final @Nullable Input<String> statistic;
+      private final @Nullable Output<String> statistic;
 
-    public Input<String> getStatistic() {
-        return this.statistic == null ? Input.empty() : this.statistic;
+    public Output<String> getStatistic() {
+        return this.statistic == null ? Output.empty() : this.statistic;
     }
 
     /**
@@ -231,10 +231,10 @@ public final class MetricAlarmState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -242,10 +242,10 @@ public final class MetricAlarmState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tagsAll")
-      private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Input<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Input.empty() : this.tagsAll;
+    public Output<Map<String,String>> getTagsAll() {
+        return this.tagsAll == null ? Output.empty() : this.tagsAll;
     }
 
     /**
@@ -253,10 +253,10 @@ public final class MetricAlarmState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="threshold")
-      private final @Nullable Input<Double> threshold;
+      private final @Nullable Output<Double> threshold;
 
-    public Input<Double> getThreshold() {
-        return this.threshold == null ? Input.empty() : this.threshold;
+    public Output<Double> getThreshold() {
+        return this.threshold == null ? Output.empty() : this.threshold;
     }
 
     /**
@@ -264,10 +264,10 @@ public final class MetricAlarmState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="thresholdMetricId")
-      private final @Nullable Input<String> thresholdMetricId;
+      private final @Nullable Output<String> thresholdMetricId;
 
-    public Input<String> getThresholdMetricId() {
-        return this.thresholdMetricId == null ? Input.empty() : this.thresholdMetricId;
+    public Output<String> getThresholdMetricId() {
+        return this.thresholdMetricId == null ? Output.empty() : this.thresholdMetricId;
     }
 
     /**
@@ -275,10 +275,10 @@ public final class MetricAlarmState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="treatMissingData")
-      private final @Nullable Input<String> treatMissingData;
+      private final @Nullable Output<String> treatMissingData;
 
-    public Input<String> getTreatMissingData() {
-        return this.treatMissingData == null ? Input.empty() : this.treatMissingData;
+    public Output<String> getTreatMissingData() {
+        return this.treatMissingData == null ? Output.empty() : this.treatMissingData;
     }
 
     /**
@@ -286,37 +286,37 @@ public final class MetricAlarmState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="unit")
-      private final @Nullable Input<String> unit;
+      private final @Nullable Output<String> unit;
 
-    public Input<String> getUnit() {
-        return this.unit == null ? Input.empty() : this.unit;
+    public Output<String> getUnit() {
+        return this.unit == null ? Output.empty() : this.unit;
     }
 
     public MetricAlarmState(
-        @Nullable Input<Boolean> actionsEnabled,
-        @Nullable Input<List<String>> alarmActions,
-        @Nullable Input<String> alarmDescription,
-        @Nullable Input<String> arn,
-        @Nullable Input<String> comparisonOperator,
-        @Nullable Input<Integer> datapointsToAlarm,
-        @Nullable Input<Map<String,String>> dimensions,
-        @Nullable Input<String> evaluateLowSampleCountPercentiles,
-        @Nullable Input<Integer> evaluationPeriods,
-        @Nullable Input<String> extendedStatistic,
-        @Nullable Input<List<String>> insufficientDataActions,
-        @Nullable Input<String> metricName,
-        @Nullable Input<List<MetricAlarmMetricQueryGetArgs>> metricQueries,
-        @Nullable Input<String> name,
-        @Nullable Input<String> namespace,
-        @Nullable Input<List<String>> okActions,
-        @Nullable Input<Integer> period,
-        @Nullable Input<String> statistic,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<Map<String,String>> tagsAll,
-        @Nullable Input<Double> threshold,
-        @Nullable Input<String> thresholdMetricId,
-        @Nullable Input<String> treatMissingData,
-        @Nullable Input<String> unit) {
+        @Nullable Output<Boolean> actionsEnabled,
+        @Nullable Output<List<String>> alarmActions,
+        @Nullable Output<String> alarmDescription,
+        @Nullable Output<String> arn,
+        @Nullable Output<String> comparisonOperator,
+        @Nullable Output<Integer> datapointsToAlarm,
+        @Nullable Output<Map<String,String>> dimensions,
+        @Nullable Output<String> evaluateLowSampleCountPercentiles,
+        @Nullable Output<Integer> evaluationPeriods,
+        @Nullable Output<String> extendedStatistic,
+        @Nullable Output<List<String>> insufficientDataActions,
+        @Nullable Output<String> metricName,
+        @Nullable Output<List<MetricAlarmMetricQueryGetArgs>> metricQueries,
+        @Nullable Output<String> name,
+        @Nullable Output<String> namespace,
+        @Nullable Output<List<String>> okActions,
+        @Nullable Output<Integer> period,
+        @Nullable Output<String> statistic,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<Map<String,String>> tagsAll,
+        @Nullable Output<Double> threshold,
+        @Nullable Output<String> thresholdMetricId,
+        @Nullable Output<String> treatMissingData,
+        @Nullable Output<String> unit) {
         this.actionsEnabled = actionsEnabled;
         this.alarmActions = alarmActions;
         this.alarmDescription = alarmDescription;
@@ -344,30 +344,30 @@ public final class MetricAlarmState extends io.pulumi.resources.ResourceArgs {
     }
 
     private MetricAlarmState() {
-        this.actionsEnabled = Input.empty();
-        this.alarmActions = Input.empty();
-        this.alarmDescription = Input.empty();
-        this.arn = Input.empty();
-        this.comparisonOperator = Input.empty();
-        this.datapointsToAlarm = Input.empty();
-        this.dimensions = Input.empty();
-        this.evaluateLowSampleCountPercentiles = Input.empty();
-        this.evaluationPeriods = Input.empty();
-        this.extendedStatistic = Input.empty();
-        this.insufficientDataActions = Input.empty();
-        this.metricName = Input.empty();
-        this.metricQueries = Input.empty();
-        this.name = Input.empty();
-        this.namespace = Input.empty();
-        this.okActions = Input.empty();
-        this.period = Input.empty();
-        this.statistic = Input.empty();
-        this.tags = Input.empty();
-        this.tagsAll = Input.empty();
-        this.threshold = Input.empty();
-        this.thresholdMetricId = Input.empty();
-        this.treatMissingData = Input.empty();
-        this.unit = Input.empty();
+        this.actionsEnabled = Output.empty();
+        this.alarmActions = Output.empty();
+        this.alarmDescription = Output.empty();
+        this.arn = Output.empty();
+        this.comparisonOperator = Output.empty();
+        this.datapointsToAlarm = Output.empty();
+        this.dimensions = Output.empty();
+        this.evaluateLowSampleCountPercentiles = Output.empty();
+        this.evaluationPeriods = Output.empty();
+        this.extendedStatistic = Output.empty();
+        this.insufficientDataActions = Output.empty();
+        this.metricName = Output.empty();
+        this.metricQueries = Output.empty();
+        this.name = Output.empty();
+        this.namespace = Output.empty();
+        this.okActions = Output.empty();
+        this.period = Output.empty();
+        this.statistic = Output.empty();
+        this.tags = Output.empty();
+        this.tagsAll = Output.empty();
+        this.threshold = Output.empty();
+        this.thresholdMetricId = Output.empty();
+        this.treatMissingData = Output.empty();
+        this.unit = Output.empty();
     }
 
     public static Builder builder() {
@@ -379,30 +379,30 @@ public final class MetricAlarmState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> actionsEnabled;
-        private @Nullable Input<List<String>> alarmActions;
-        private @Nullable Input<String> alarmDescription;
-        private @Nullable Input<String> arn;
-        private @Nullable Input<String> comparisonOperator;
-        private @Nullable Input<Integer> datapointsToAlarm;
-        private @Nullable Input<Map<String,String>> dimensions;
-        private @Nullable Input<String> evaluateLowSampleCountPercentiles;
-        private @Nullable Input<Integer> evaluationPeriods;
-        private @Nullable Input<String> extendedStatistic;
-        private @Nullable Input<List<String>> insufficientDataActions;
-        private @Nullable Input<String> metricName;
-        private @Nullable Input<List<MetricAlarmMetricQueryGetArgs>> metricQueries;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> namespace;
-        private @Nullable Input<List<String>> okActions;
-        private @Nullable Input<Integer> period;
-        private @Nullable Input<String> statistic;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<Map<String,String>> tagsAll;
-        private @Nullable Input<Double> threshold;
-        private @Nullable Input<String> thresholdMetricId;
-        private @Nullable Input<String> treatMissingData;
-        private @Nullable Input<String> unit;
+        private @Nullable Output<Boolean> actionsEnabled;
+        private @Nullable Output<List<String>> alarmActions;
+        private @Nullable Output<String> alarmDescription;
+        private @Nullable Output<String> arn;
+        private @Nullable Output<String> comparisonOperator;
+        private @Nullable Output<Integer> datapointsToAlarm;
+        private @Nullable Output<Map<String,String>> dimensions;
+        private @Nullable Output<String> evaluateLowSampleCountPercentiles;
+        private @Nullable Output<Integer> evaluationPeriods;
+        private @Nullable Output<String> extendedStatistic;
+        private @Nullable Output<List<String>> insufficientDataActions;
+        private @Nullable Output<String> metricName;
+        private @Nullable Output<List<MetricAlarmMetricQueryGetArgs>> metricQueries;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> namespace;
+        private @Nullable Output<List<String>> okActions;
+        private @Nullable Output<Integer> period;
+        private @Nullable Output<String> statistic;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<Map<String,String>> tagsAll;
+        private @Nullable Output<Double> threshold;
+        private @Nullable Output<String> thresholdMetricId;
+        private @Nullable Output<String> treatMissingData;
+        private @Nullable Output<String> unit;
 
         public Builder() {
     	      // Empty
@@ -436,243 +436,243 @@ public final class MetricAlarmState extends io.pulumi.resources.ResourceArgs {
     	      this.unit = defaults.unit;
         }
 
-        public Builder actionsEnabled(@Nullable Input<Boolean> actionsEnabled) {
+        public Builder actionsEnabled(@Nullable Output<Boolean> actionsEnabled) {
             this.actionsEnabled = actionsEnabled;
             return this;
         }
 
         public Builder actionsEnabled(@Nullable Boolean actionsEnabled) {
-            this.actionsEnabled = Input.ofNullable(actionsEnabled);
+            this.actionsEnabled = Output.ofNullable(actionsEnabled);
             return this;
         }
 
-        public Builder alarmActions(@Nullable Input<List<String>> alarmActions) {
+        public Builder alarmActions(@Nullable Output<List<String>> alarmActions) {
             this.alarmActions = alarmActions;
             return this;
         }
 
         public Builder alarmActions(@Nullable List<String> alarmActions) {
-            this.alarmActions = Input.ofNullable(alarmActions);
+            this.alarmActions = Output.ofNullable(alarmActions);
             return this;
         }
 
-        public Builder alarmDescription(@Nullable Input<String> alarmDescription) {
+        public Builder alarmDescription(@Nullable Output<String> alarmDescription) {
             this.alarmDescription = alarmDescription;
             return this;
         }
 
         public Builder alarmDescription(@Nullable String alarmDescription) {
-            this.alarmDescription = Input.ofNullable(alarmDescription);
+            this.alarmDescription = Output.ofNullable(alarmDescription);
             return this;
         }
 
-        public Builder arn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
 
         public Builder arn(@Nullable String arn) {
-            this.arn = Input.ofNullable(arn);
+            this.arn = Output.ofNullable(arn);
             return this;
         }
 
-        public Builder comparisonOperator(@Nullable Input<String> comparisonOperator) {
+        public Builder comparisonOperator(@Nullable Output<String> comparisonOperator) {
             this.comparisonOperator = comparisonOperator;
             return this;
         }
 
         public Builder comparisonOperator(@Nullable String comparisonOperator) {
-            this.comparisonOperator = Input.ofNullable(comparisonOperator);
+            this.comparisonOperator = Output.ofNullable(comparisonOperator);
             return this;
         }
 
-        public Builder datapointsToAlarm(@Nullable Input<Integer> datapointsToAlarm) {
+        public Builder datapointsToAlarm(@Nullable Output<Integer> datapointsToAlarm) {
             this.datapointsToAlarm = datapointsToAlarm;
             return this;
         }
 
         public Builder datapointsToAlarm(@Nullable Integer datapointsToAlarm) {
-            this.datapointsToAlarm = Input.ofNullable(datapointsToAlarm);
+            this.datapointsToAlarm = Output.ofNullable(datapointsToAlarm);
             return this;
         }
 
-        public Builder dimensions(@Nullable Input<Map<String,String>> dimensions) {
+        public Builder dimensions(@Nullable Output<Map<String,String>> dimensions) {
             this.dimensions = dimensions;
             return this;
         }
 
         public Builder dimensions(@Nullable Map<String,String> dimensions) {
-            this.dimensions = Input.ofNullable(dimensions);
+            this.dimensions = Output.ofNullable(dimensions);
             return this;
         }
 
-        public Builder evaluateLowSampleCountPercentiles(@Nullable Input<String> evaluateLowSampleCountPercentiles) {
+        public Builder evaluateLowSampleCountPercentiles(@Nullable Output<String> evaluateLowSampleCountPercentiles) {
             this.evaluateLowSampleCountPercentiles = evaluateLowSampleCountPercentiles;
             return this;
         }
 
         public Builder evaluateLowSampleCountPercentiles(@Nullable String evaluateLowSampleCountPercentiles) {
-            this.evaluateLowSampleCountPercentiles = Input.ofNullable(evaluateLowSampleCountPercentiles);
+            this.evaluateLowSampleCountPercentiles = Output.ofNullable(evaluateLowSampleCountPercentiles);
             return this;
         }
 
-        public Builder evaluationPeriods(@Nullable Input<Integer> evaluationPeriods) {
+        public Builder evaluationPeriods(@Nullable Output<Integer> evaluationPeriods) {
             this.evaluationPeriods = evaluationPeriods;
             return this;
         }
 
         public Builder evaluationPeriods(@Nullable Integer evaluationPeriods) {
-            this.evaluationPeriods = Input.ofNullable(evaluationPeriods);
+            this.evaluationPeriods = Output.ofNullable(evaluationPeriods);
             return this;
         }
 
-        public Builder extendedStatistic(@Nullable Input<String> extendedStatistic) {
+        public Builder extendedStatistic(@Nullable Output<String> extendedStatistic) {
             this.extendedStatistic = extendedStatistic;
             return this;
         }
 
         public Builder extendedStatistic(@Nullable String extendedStatistic) {
-            this.extendedStatistic = Input.ofNullable(extendedStatistic);
+            this.extendedStatistic = Output.ofNullable(extendedStatistic);
             return this;
         }
 
-        public Builder insufficientDataActions(@Nullable Input<List<String>> insufficientDataActions) {
+        public Builder insufficientDataActions(@Nullable Output<List<String>> insufficientDataActions) {
             this.insufficientDataActions = insufficientDataActions;
             return this;
         }
 
         public Builder insufficientDataActions(@Nullable List<String> insufficientDataActions) {
-            this.insufficientDataActions = Input.ofNullable(insufficientDataActions);
+            this.insufficientDataActions = Output.ofNullable(insufficientDataActions);
             return this;
         }
 
-        public Builder metricName(@Nullable Input<String> metricName) {
+        public Builder metricName(@Nullable Output<String> metricName) {
             this.metricName = metricName;
             return this;
         }
 
         public Builder metricName(@Nullable String metricName) {
-            this.metricName = Input.ofNullable(metricName);
+            this.metricName = Output.ofNullable(metricName);
             return this;
         }
 
-        public Builder metricQueries(@Nullable Input<List<MetricAlarmMetricQueryGetArgs>> metricQueries) {
+        public Builder metricQueries(@Nullable Output<List<MetricAlarmMetricQueryGetArgs>> metricQueries) {
             this.metricQueries = metricQueries;
             return this;
         }
 
         public Builder metricQueries(@Nullable List<MetricAlarmMetricQueryGetArgs> metricQueries) {
-            this.metricQueries = Input.ofNullable(metricQueries);
+            this.metricQueries = Output.ofNullable(metricQueries);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder namespace(@Nullable Input<String> namespace) {
+        public Builder namespace(@Nullable Output<String> namespace) {
             this.namespace = namespace;
             return this;
         }
 
         public Builder namespace(@Nullable String namespace) {
-            this.namespace = Input.ofNullable(namespace);
+            this.namespace = Output.ofNullable(namespace);
             return this;
         }
 
-        public Builder okActions(@Nullable Input<List<String>> okActions) {
+        public Builder okActions(@Nullable Output<List<String>> okActions) {
             this.okActions = okActions;
             return this;
         }
 
         public Builder okActions(@Nullable List<String> okActions) {
-            this.okActions = Input.ofNullable(okActions);
+            this.okActions = Output.ofNullable(okActions);
             return this;
         }
 
-        public Builder period(@Nullable Input<Integer> period) {
+        public Builder period(@Nullable Output<Integer> period) {
             this.period = period;
             return this;
         }
 
         public Builder period(@Nullable Integer period) {
-            this.period = Input.ofNullable(period);
+            this.period = Output.ofNullable(period);
             return this;
         }
 
-        public Builder statistic(@Nullable Input<String> statistic) {
+        public Builder statistic(@Nullable Output<String> statistic) {
             this.statistic = statistic;
             return this;
         }
 
         public Builder statistic(@Nullable String statistic) {
-            this.statistic = Input.ofNullable(statistic);
+            this.statistic = Output.ofNullable(statistic);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Input.ofNullable(tagsAll);
+            this.tagsAll = Output.ofNullable(tagsAll);
             return this;
         }
 
-        public Builder threshold(@Nullable Input<Double> threshold) {
+        public Builder threshold(@Nullable Output<Double> threshold) {
             this.threshold = threshold;
             return this;
         }
 
         public Builder threshold(@Nullable Double threshold) {
-            this.threshold = Input.ofNullable(threshold);
+            this.threshold = Output.ofNullable(threshold);
             return this;
         }
 
-        public Builder thresholdMetricId(@Nullable Input<String> thresholdMetricId) {
+        public Builder thresholdMetricId(@Nullable Output<String> thresholdMetricId) {
             this.thresholdMetricId = thresholdMetricId;
             return this;
         }
 
         public Builder thresholdMetricId(@Nullable String thresholdMetricId) {
-            this.thresholdMetricId = Input.ofNullable(thresholdMetricId);
+            this.thresholdMetricId = Output.ofNullable(thresholdMetricId);
             return this;
         }
 
-        public Builder treatMissingData(@Nullable Input<String> treatMissingData) {
+        public Builder treatMissingData(@Nullable Output<String> treatMissingData) {
             this.treatMissingData = treatMissingData;
             return this;
         }
 
         public Builder treatMissingData(@Nullable String treatMissingData) {
-            this.treatMissingData = Input.ofNullable(treatMissingData);
+            this.treatMissingData = Output.ofNullable(treatMissingData);
             return this;
         }
 
-        public Builder unit(@Nullable Input<String> unit) {
+        public Builder unit(@Nullable Output<String> unit) {
             this.unit = unit;
             return this;
         }
 
         public Builder unit(@Nullable String unit) {
-            this.unit = Input.ofNullable(unit);
+            this.unit = Output.ofNullable(unit);
             return this;
         }
         public MetricAlarmState build() {

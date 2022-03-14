@@ -3,7 +3,6 @@
 
 package io.pulumi.gcp.dns;
 
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -320,14 +319,14 @@ public class ManagedZone extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ManagedZone(String name, ManagedZoneArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:dns/managedZone:ManagedZone", name, args == null ? ManagedZoneArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("gcp:dns/managedZone:ManagedZone", name, args == null ? ManagedZoneArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private ManagedZone(String name, Input<String> id, @Nullable ManagedZoneState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private ManagedZone(String name, Output<String> id, @Nullable ManagedZoneState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("gcp:dns/managedZone:ManagedZone", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -343,7 +342,7 @@ public class ManagedZone extends io.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static ManagedZone get(String name, Input<String> id, @Nullable ManagedZoneState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static ManagedZone get(String name, Output<String> id, @Nullable ManagedZoneState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new ManagedZone(name, id, state, options);
     }
 }

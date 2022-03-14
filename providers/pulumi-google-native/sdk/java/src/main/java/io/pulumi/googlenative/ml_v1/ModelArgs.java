@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.ml_v1;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -22,10 +22,10 @@ public final class ModelArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -33,10 +33,10 @@ public final class ModelArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="etag")
-      private final @Nullable Input<String> etag;
+      private final @Nullable Output<String> etag;
 
-    public Input<String> getEtag() {
-        return this.etag == null ? Input.empty() : this.etag;
+    public Output<String> getEtag() {
+        return this.etag == null ? Output.empty() : this.etag;
     }
 
     /**
@@ -44,10 +44,10 @@ public final class ModelArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labels")
-      private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Output<Map<String,String>> labels;
 
-    public Input<Map<String,String>> getLabels() {
-        return this.labels == null ? Input.empty() : this.labels;
+    public Output<Map<String,String>> getLabels() {
+        return this.labels == null ? Output.empty() : this.labels;
     }
 
     /**
@@ -55,10 +55,10 @@ public final class ModelArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -66,10 +66,10 @@ public final class ModelArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="onlinePredictionConsoleLogging")
-      private final @Nullable Input<Boolean> onlinePredictionConsoleLogging;
+      private final @Nullable Output<Boolean> onlinePredictionConsoleLogging;
 
-    public Input<Boolean> getOnlinePredictionConsoleLogging() {
-        return this.onlinePredictionConsoleLogging == null ? Input.empty() : this.onlinePredictionConsoleLogging;
+    public Output<Boolean> getOnlinePredictionConsoleLogging() {
+        return this.onlinePredictionConsoleLogging == null ? Output.empty() : this.onlinePredictionConsoleLogging;
     }
 
     /**
@@ -77,17 +77,17 @@ public final class ModelArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="onlinePredictionLogging")
-      private final @Nullable Input<Boolean> onlinePredictionLogging;
+      private final @Nullable Output<Boolean> onlinePredictionLogging;
 
-    public Input<Boolean> getOnlinePredictionLogging() {
-        return this.onlinePredictionLogging == null ? Input.empty() : this.onlinePredictionLogging;
+    public Output<Boolean> getOnlinePredictionLogging() {
+        return this.onlinePredictionLogging == null ? Output.empty() : this.onlinePredictionLogging;
     }
 
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -95,21 +95,21 @@ public final class ModelArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="regions")
-      private final @Nullable Input<List<String>> regions;
+      private final @Nullable Output<List<String>> regions;
 
-    public Input<List<String>> getRegions() {
-        return this.regions == null ? Input.empty() : this.regions;
+    public Output<List<String>> getRegions() {
+        return this.regions == null ? Output.empty() : this.regions;
     }
 
     public ModelArgs(
-        @Nullable Input<String> description,
-        @Nullable Input<String> etag,
-        @Nullable Input<Map<String,String>> labels,
-        @Nullable Input<String> name,
-        @Nullable Input<Boolean> onlinePredictionConsoleLogging,
-        @Nullable Input<Boolean> onlinePredictionLogging,
-        @Nullable Input<String> project,
-        @Nullable Input<List<String>> regions) {
+        @Nullable Output<String> description,
+        @Nullable Output<String> etag,
+        @Nullable Output<Map<String,String>> labels,
+        @Nullable Output<String> name,
+        @Nullable Output<Boolean> onlinePredictionConsoleLogging,
+        @Nullable Output<Boolean> onlinePredictionLogging,
+        @Nullable Output<String> project,
+        @Nullable Output<List<String>> regions) {
         this.description = description;
         this.etag = etag;
         this.labels = labels;
@@ -121,14 +121,14 @@ public final class ModelArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ModelArgs() {
-        this.description = Input.empty();
-        this.etag = Input.empty();
-        this.labels = Input.empty();
-        this.name = Input.empty();
-        this.onlinePredictionConsoleLogging = Input.empty();
-        this.onlinePredictionLogging = Input.empty();
-        this.project = Input.empty();
-        this.regions = Input.empty();
+        this.description = Output.empty();
+        this.etag = Output.empty();
+        this.labels = Output.empty();
+        this.name = Output.empty();
+        this.onlinePredictionConsoleLogging = Output.empty();
+        this.onlinePredictionLogging = Output.empty();
+        this.project = Output.empty();
+        this.regions = Output.empty();
     }
 
     public static Builder builder() {
@@ -140,14 +140,14 @@ public final class ModelArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> description;
-        private @Nullable Input<String> etag;
-        private @Nullable Input<Map<String,String>> labels;
-        private @Nullable Input<String> name;
-        private @Nullable Input<Boolean> onlinePredictionConsoleLogging;
-        private @Nullable Input<Boolean> onlinePredictionLogging;
-        private @Nullable Input<String> project;
-        private @Nullable Input<List<String>> regions;
+        private @Nullable Output<String> description;
+        private @Nullable Output<String> etag;
+        private @Nullable Output<Map<String,String>> labels;
+        private @Nullable Output<String> name;
+        private @Nullable Output<Boolean> onlinePredictionConsoleLogging;
+        private @Nullable Output<Boolean> onlinePredictionLogging;
+        private @Nullable Output<String> project;
+        private @Nullable Output<List<String>> regions;
 
         public Builder() {
     	      // Empty
@@ -165,83 +165,83 @@ public final class ModelArgs extends io.pulumi.resources.ResourceArgs {
     	      this.regions = defaults.regions;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder etag(@Nullable Input<String> etag) {
+        public Builder etag(@Nullable Output<String> etag) {
             this.etag = etag;
             return this;
         }
 
         public Builder etag(@Nullable String etag) {
-            this.etag = Input.ofNullable(etag);
+            this.etag = Output.ofNullable(etag);
             return this;
         }
 
-        public Builder labels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
         public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Input.ofNullable(labels);
+            this.labels = Output.ofNullable(labels);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder onlinePredictionConsoleLogging(@Nullable Input<Boolean> onlinePredictionConsoleLogging) {
+        public Builder onlinePredictionConsoleLogging(@Nullable Output<Boolean> onlinePredictionConsoleLogging) {
             this.onlinePredictionConsoleLogging = onlinePredictionConsoleLogging;
             return this;
         }
 
         public Builder onlinePredictionConsoleLogging(@Nullable Boolean onlinePredictionConsoleLogging) {
-            this.onlinePredictionConsoleLogging = Input.ofNullable(onlinePredictionConsoleLogging);
+            this.onlinePredictionConsoleLogging = Output.ofNullable(onlinePredictionConsoleLogging);
             return this;
         }
 
-        public Builder onlinePredictionLogging(@Nullable Input<Boolean> onlinePredictionLogging) {
+        public Builder onlinePredictionLogging(@Nullable Output<Boolean> onlinePredictionLogging) {
             this.onlinePredictionLogging = onlinePredictionLogging;
             return this;
         }
 
         public Builder onlinePredictionLogging(@Nullable Boolean onlinePredictionLogging) {
-            this.onlinePredictionLogging = Input.ofNullable(onlinePredictionLogging);
+            this.onlinePredictionLogging = Output.ofNullable(onlinePredictionLogging);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder regions(@Nullable Input<List<String>> regions) {
+        public Builder regions(@Nullable Output<List<String>> regions) {
             this.regions = regions;
             return this;
         }
 
         public Builder regions(@Nullable List<String> regions) {
-            this.regions = Input.ofNullable(regions);
+            this.regions = Output.ofNullable(regions);
             return this;
         }
         public ModelArgs build() {

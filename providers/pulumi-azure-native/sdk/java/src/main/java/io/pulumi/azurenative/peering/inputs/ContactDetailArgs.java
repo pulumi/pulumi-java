@@ -5,7 +5,7 @@ package io.pulumi.azurenative.peering.inputs;
 
 import io.pulumi.azurenative.peering.enums.Role;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -25,10 +25,10 @@ public final class ContactDetailArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="email")
-      private final @Nullable Input<String> email;
+      private final @Nullable Output<String> email;
 
-    public Input<String> getEmail() {
-        return this.email == null ? Input.empty() : this.email;
+    public Output<String> getEmail() {
+        return this.email == null ? Output.empty() : this.email;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class ContactDetailArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="phone")
-      private final @Nullable Input<String> phone;
+      private final @Nullable Output<String> phone;
 
-    public Input<String> getPhone() {
-        return this.phone == null ? Input.empty() : this.phone;
+    public Output<String> getPhone() {
+        return this.phone == null ? Output.empty() : this.phone;
     }
 
     /**
@@ -47,25 +47,25 @@ public final class ContactDetailArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="role")
-      private final @Nullable Input<Either<String,Role>> role;
+      private final @Nullable Output<Either<String,Role>> role;
 
-    public Input<Either<String,Role>> getRole() {
-        return this.role == null ? Input.empty() : this.role;
+    public Output<Either<String,Role>> getRole() {
+        return this.role == null ? Output.empty() : this.role;
     }
 
     public ContactDetailArgs(
-        @Nullable Input<String> email,
-        @Nullable Input<String> phone,
-        @Nullable Input<Either<String,Role>> role) {
+        @Nullable Output<String> email,
+        @Nullable Output<String> phone,
+        @Nullable Output<Either<String,Role>> role) {
         this.email = email;
         this.phone = phone;
         this.role = role;
     }
 
     private ContactDetailArgs() {
-        this.email = Input.empty();
-        this.phone = Input.empty();
-        this.role = Input.empty();
+        this.email = Output.empty();
+        this.phone = Output.empty();
+        this.role = Output.empty();
     }
 
     public static Builder builder() {
@@ -77,9 +77,9 @@ public final class ContactDetailArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> email;
-        private @Nullable Input<String> phone;
-        private @Nullable Input<Either<String,Role>> role;
+        private @Nullable Output<String> email;
+        private @Nullable Output<String> phone;
+        private @Nullable Output<Either<String,Role>> role;
 
         public Builder() {
     	      // Empty
@@ -92,33 +92,33 @@ public final class ContactDetailArgs extends io.pulumi.resources.ResourceArgs {
     	      this.role = defaults.role;
         }
 
-        public Builder email(@Nullable Input<String> email) {
+        public Builder email(@Nullable Output<String> email) {
             this.email = email;
             return this;
         }
 
         public Builder email(@Nullable String email) {
-            this.email = Input.ofNullable(email);
+            this.email = Output.ofNullable(email);
             return this;
         }
 
-        public Builder phone(@Nullable Input<String> phone) {
+        public Builder phone(@Nullable Output<String> phone) {
             this.phone = phone;
             return this;
         }
 
         public Builder phone(@Nullable String phone) {
-            this.phone = Input.ofNullable(phone);
+            this.phone = Output.ofNullable(phone);
             return this;
         }
 
-        public Builder role(@Nullable Input<Either<String,Role>> role) {
+        public Builder role(@Nullable Output<Either<String,Role>> role) {
             this.role = role;
             return this;
         }
 
         public Builder role(@Nullable Either<String,Role> role) {
-            this.role = Input.ofNullable(role);
+            this.role = Output.ofNullable(role);
             return this;
         }
         public ContactDetailArgs build() {

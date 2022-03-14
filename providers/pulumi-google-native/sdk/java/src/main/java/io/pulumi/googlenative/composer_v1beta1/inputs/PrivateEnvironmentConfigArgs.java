@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.composer_v1beta1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.composer_v1beta1.inputs.PrivateClusterConfigArgs;
 import java.lang.Boolean;
@@ -25,10 +25,10 @@ public final class PrivateEnvironmentConfigArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="cloudComposerConnectionSubnetwork")
-      private final @Nullable Input<String> cloudComposerConnectionSubnetwork;
+      private final @Nullable Output<String> cloudComposerConnectionSubnetwork;
 
-    public Input<String> getCloudComposerConnectionSubnetwork() {
-        return this.cloudComposerConnectionSubnetwork == null ? Input.empty() : this.cloudComposerConnectionSubnetwork;
+    public Output<String> getCloudComposerConnectionSubnetwork() {
+        return this.cloudComposerConnectionSubnetwork == null ? Output.empty() : this.cloudComposerConnectionSubnetwork;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class PrivateEnvironmentConfigArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="cloudComposerNetworkIpv4CidrBlock")
-      private final @Nullable Input<String> cloudComposerNetworkIpv4CidrBlock;
+      private final @Nullable Output<String> cloudComposerNetworkIpv4CidrBlock;
 
-    public Input<String> getCloudComposerNetworkIpv4CidrBlock() {
-        return this.cloudComposerNetworkIpv4CidrBlock == null ? Input.empty() : this.cloudComposerNetworkIpv4CidrBlock;
+    public Output<String> getCloudComposerNetworkIpv4CidrBlock() {
+        return this.cloudComposerNetworkIpv4CidrBlock == null ? Output.empty() : this.cloudComposerNetworkIpv4CidrBlock;
     }
 
     /**
@@ -47,10 +47,10 @@ public final class PrivateEnvironmentConfigArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="cloudSqlIpv4CidrBlock")
-      private final @Nullable Input<String> cloudSqlIpv4CidrBlock;
+      private final @Nullable Output<String> cloudSqlIpv4CidrBlock;
 
-    public Input<String> getCloudSqlIpv4CidrBlock() {
-        return this.cloudSqlIpv4CidrBlock == null ? Input.empty() : this.cloudSqlIpv4CidrBlock;
+    public Output<String> getCloudSqlIpv4CidrBlock() {
+        return this.cloudSqlIpv4CidrBlock == null ? Output.empty() : this.cloudSqlIpv4CidrBlock;
     }
 
     /**
@@ -58,10 +58,10 @@ public final class PrivateEnvironmentConfigArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="enablePrivateEnvironment")
-      private final @Nullable Input<Boolean> enablePrivateEnvironment;
+      private final @Nullable Output<Boolean> enablePrivateEnvironment;
 
-    public Input<Boolean> getEnablePrivateEnvironment() {
-        return this.enablePrivateEnvironment == null ? Input.empty() : this.enablePrivateEnvironment;
+    public Output<Boolean> getEnablePrivateEnvironment() {
+        return this.enablePrivateEnvironment == null ? Output.empty() : this.enablePrivateEnvironment;
     }
 
     /**
@@ -69,10 +69,10 @@ public final class PrivateEnvironmentConfigArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="enablePrivatelyUsedPublicIps")
-      private final @Nullable Input<Boolean> enablePrivatelyUsedPublicIps;
+      private final @Nullable Output<Boolean> enablePrivatelyUsedPublicIps;
 
-    public Input<Boolean> getEnablePrivatelyUsedPublicIps() {
-        return this.enablePrivatelyUsedPublicIps == null ? Input.empty() : this.enablePrivatelyUsedPublicIps;
+    public Output<Boolean> getEnablePrivatelyUsedPublicIps() {
+        return this.enablePrivatelyUsedPublicIps == null ? Output.empty() : this.enablePrivatelyUsedPublicIps;
     }
 
     /**
@@ -80,10 +80,10 @@ public final class PrivateEnvironmentConfigArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="privateClusterConfig")
-      private final @Nullable Input<PrivateClusterConfigArgs> privateClusterConfig;
+      private final @Nullable Output<PrivateClusterConfigArgs> privateClusterConfig;
 
-    public Input<PrivateClusterConfigArgs> getPrivateClusterConfig() {
-        return this.privateClusterConfig == null ? Input.empty() : this.privateClusterConfig;
+    public Output<PrivateClusterConfigArgs> getPrivateClusterConfig() {
+        return this.privateClusterConfig == null ? Output.empty() : this.privateClusterConfig;
     }
 
     /**
@@ -91,20 +91,20 @@ public final class PrivateEnvironmentConfigArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="webServerIpv4CidrBlock")
-      private final @Nullable Input<String> webServerIpv4CidrBlock;
+      private final @Nullable Output<String> webServerIpv4CidrBlock;
 
-    public Input<String> getWebServerIpv4CidrBlock() {
-        return this.webServerIpv4CidrBlock == null ? Input.empty() : this.webServerIpv4CidrBlock;
+    public Output<String> getWebServerIpv4CidrBlock() {
+        return this.webServerIpv4CidrBlock == null ? Output.empty() : this.webServerIpv4CidrBlock;
     }
 
     public PrivateEnvironmentConfigArgs(
-        @Nullable Input<String> cloudComposerConnectionSubnetwork,
-        @Nullable Input<String> cloudComposerNetworkIpv4CidrBlock,
-        @Nullable Input<String> cloudSqlIpv4CidrBlock,
-        @Nullable Input<Boolean> enablePrivateEnvironment,
-        @Nullable Input<Boolean> enablePrivatelyUsedPublicIps,
-        @Nullable Input<PrivateClusterConfigArgs> privateClusterConfig,
-        @Nullable Input<String> webServerIpv4CidrBlock) {
+        @Nullable Output<String> cloudComposerConnectionSubnetwork,
+        @Nullable Output<String> cloudComposerNetworkIpv4CidrBlock,
+        @Nullable Output<String> cloudSqlIpv4CidrBlock,
+        @Nullable Output<Boolean> enablePrivateEnvironment,
+        @Nullable Output<Boolean> enablePrivatelyUsedPublicIps,
+        @Nullable Output<PrivateClusterConfigArgs> privateClusterConfig,
+        @Nullable Output<String> webServerIpv4CidrBlock) {
         this.cloudComposerConnectionSubnetwork = cloudComposerConnectionSubnetwork;
         this.cloudComposerNetworkIpv4CidrBlock = cloudComposerNetworkIpv4CidrBlock;
         this.cloudSqlIpv4CidrBlock = cloudSqlIpv4CidrBlock;
@@ -115,13 +115,13 @@ public final class PrivateEnvironmentConfigArgs extends io.pulumi.resources.Reso
     }
 
     private PrivateEnvironmentConfigArgs() {
-        this.cloudComposerConnectionSubnetwork = Input.empty();
-        this.cloudComposerNetworkIpv4CidrBlock = Input.empty();
-        this.cloudSqlIpv4CidrBlock = Input.empty();
-        this.enablePrivateEnvironment = Input.empty();
-        this.enablePrivatelyUsedPublicIps = Input.empty();
-        this.privateClusterConfig = Input.empty();
-        this.webServerIpv4CidrBlock = Input.empty();
+        this.cloudComposerConnectionSubnetwork = Output.empty();
+        this.cloudComposerNetworkIpv4CidrBlock = Output.empty();
+        this.cloudSqlIpv4CidrBlock = Output.empty();
+        this.enablePrivateEnvironment = Output.empty();
+        this.enablePrivatelyUsedPublicIps = Output.empty();
+        this.privateClusterConfig = Output.empty();
+        this.webServerIpv4CidrBlock = Output.empty();
     }
 
     public static Builder builder() {
@@ -133,13 +133,13 @@ public final class PrivateEnvironmentConfigArgs extends io.pulumi.resources.Reso
     }
 
     public static final class Builder {
-        private @Nullable Input<String> cloudComposerConnectionSubnetwork;
-        private @Nullable Input<String> cloudComposerNetworkIpv4CidrBlock;
-        private @Nullable Input<String> cloudSqlIpv4CidrBlock;
-        private @Nullable Input<Boolean> enablePrivateEnvironment;
-        private @Nullable Input<Boolean> enablePrivatelyUsedPublicIps;
-        private @Nullable Input<PrivateClusterConfigArgs> privateClusterConfig;
-        private @Nullable Input<String> webServerIpv4CidrBlock;
+        private @Nullable Output<String> cloudComposerConnectionSubnetwork;
+        private @Nullable Output<String> cloudComposerNetworkIpv4CidrBlock;
+        private @Nullable Output<String> cloudSqlIpv4CidrBlock;
+        private @Nullable Output<Boolean> enablePrivateEnvironment;
+        private @Nullable Output<Boolean> enablePrivatelyUsedPublicIps;
+        private @Nullable Output<PrivateClusterConfigArgs> privateClusterConfig;
+        private @Nullable Output<String> webServerIpv4CidrBlock;
 
         public Builder() {
     	      // Empty
@@ -156,73 +156,73 @@ public final class PrivateEnvironmentConfigArgs extends io.pulumi.resources.Reso
     	      this.webServerIpv4CidrBlock = defaults.webServerIpv4CidrBlock;
         }
 
-        public Builder cloudComposerConnectionSubnetwork(@Nullable Input<String> cloudComposerConnectionSubnetwork) {
+        public Builder cloudComposerConnectionSubnetwork(@Nullable Output<String> cloudComposerConnectionSubnetwork) {
             this.cloudComposerConnectionSubnetwork = cloudComposerConnectionSubnetwork;
             return this;
         }
 
         public Builder cloudComposerConnectionSubnetwork(@Nullable String cloudComposerConnectionSubnetwork) {
-            this.cloudComposerConnectionSubnetwork = Input.ofNullable(cloudComposerConnectionSubnetwork);
+            this.cloudComposerConnectionSubnetwork = Output.ofNullable(cloudComposerConnectionSubnetwork);
             return this;
         }
 
-        public Builder cloudComposerNetworkIpv4CidrBlock(@Nullable Input<String> cloudComposerNetworkIpv4CidrBlock) {
+        public Builder cloudComposerNetworkIpv4CidrBlock(@Nullable Output<String> cloudComposerNetworkIpv4CidrBlock) {
             this.cloudComposerNetworkIpv4CidrBlock = cloudComposerNetworkIpv4CidrBlock;
             return this;
         }
 
         public Builder cloudComposerNetworkIpv4CidrBlock(@Nullable String cloudComposerNetworkIpv4CidrBlock) {
-            this.cloudComposerNetworkIpv4CidrBlock = Input.ofNullable(cloudComposerNetworkIpv4CidrBlock);
+            this.cloudComposerNetworkIpv4CidrBlock = Output.ofNullable(cloudComposerNetworkIpv4CidrBlock);
             return this;
         }
 
-        public Builder cloudSqlIpv4CidrBlock(@Nullable Input<String> cloudSqlIpv4CidrBlock) {
+        public Builder cloudSqlIpv4CidrBlock(@Nullable Output<String> cloudSqlIpv4CidrBlock) {
             this.cloudSqlIpv4CidrBlock = cloudSqlIpv4CidrBlock;
             return this;
         }
 
         public Builder cloudSqlIpv4CidrBlock(@Nullable String cloudSqlIpv4CidrBlock) {
-            this.cloudSqlIpv4CidrBlock = Input.ofNullable(cloudSqlIpv4CidrBlock);
+            this.cloudSqlIpv4CidrBlock = Output.ofNullable(cloudSqlIpv4CidrBlock);
             return this;
         }
 
-        public Builder enablePrivateEnvironment(@Nullable Input<Boolean> enablePrivateEnvironment) {
+        public Builder enablePrivateEnvironment(@Nullable Output<Boolean> enablePrivateEnvironment) {
             this.enablePrivateEnvironment = enablePrivateEnvironment;
             return this;
         }
 
         public Builder enablePrivateEnvironment(@Nullable Boolean enablePrivateEnvironment) {
-            this.enablePrivateEnvironment = Input.ofNullable(enablePrivateEnvironment);
+            this.enablePrivateEnvironment = Output.ofNullable(enablePrivateEnvironment);
             return this;
         }
 
-        public Builder enablePrivatelyUsedPublicIps(@Nullable Input<Boolean> enablePrivatelyUsedPublicIps) {
+        public Builder enablePrivatelyUsedPublicIps(@Nullable Output<Boolean> enablePrivatelyUsedPublicIps) {
             this.enablePrivatelyUsedPublicIps = enablePrivatelyUsedPublicIps;
             return this;
         }
 
         public Builder enablePrivatelyUsedPublicIps(@Nullable Boolean enablePrivatelyUsedPublicIps) {
-            this.enablePrivatelyUsedPublicIps = Input.ofNullable(enablePrivatelyUsedPublicIps);
+            this.enablePrivatelyUsedPublicIps = Output.ofNullable(enablePrivatelyUsedPublicIps);
             return this;
         }
 
-        public Builder privateClusterConfig(@Nullable Input<PrivateClusterConfigArgs> privateClusterConfig) {
+        public Builder privateClusterConfig(@Nullable Output<PrivateClusterConfigArgs> privateClusterConfig) {
             this.privateClusterConfig = privateClusterConfig;
             return this;
         }
 
         public Builder privateClusterConfig(@Nullable PrivateClusterConfigArgs privateClusterConfig) {
-            this.privateClusterConfig = Input.ofNullable(privateClusterConfig);
+            this.privateClusterConfig = Output.ofNullable(privateClusterConfig);
             return this;
         }
 
-        public Builder webServerIpv4CidrBlock(@Nullable Input<String> webServerIpv4CidrBlock) {
+        public Builder webServerIpv4CidrBlock(@Nullable Output<String> webServerIpv4CidrBlock) {
             this.webServerIpv4CidrBlock = webServerIpv4CidrBlock;
             return this;
         }
 
         public Builder webServerIpv4CidrBlock(@Nullable String webServerIpv4CidrBlock) {
-            this.webServerIpv4CidrBlock = Input.ofNullable(webServerIpv4CidrBlock);
+            this.webServerIpv4CidrBlock = Output.ofNullable(webServerIpv4CidrBlock);
             return this;
         }
         public PrivateEnvironmentConfigArgs build() {

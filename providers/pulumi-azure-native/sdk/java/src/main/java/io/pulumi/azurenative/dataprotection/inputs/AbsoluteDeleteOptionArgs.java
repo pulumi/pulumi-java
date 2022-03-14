@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.dataprotection.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -22,9 +22,9 @@ public final class AbsoluteDeleteOptionArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="duration", required=true)
-      private final Input<String> duration;
+      private final Output<String> duration;
 
-    public Input<String> getDuration() {
+    public Output<String> getDuration() {
         return this.duration;
     }
 
@@ -34,22 +34,22 @@ public final class AbsoluteDeleteOptionArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="objectType", required=true)
-      private final Input<String> objectType;
+      private final Output<String> objectType;
 
-    public Input<String> getObjectType() {
+    public Output<String> getObjectType() {
         return this.objectType;
     }
 
     public AbsoluteDeleteOptionArgs(
-        Input<String> duration,
-        Input<String> objectType) {
+        Output<String> duration,
+        Output<String> objectType) {
         this.duration = Objects.requireNonNull(duration, "expected parameter 'duration' to be non-null");
         this.objectType = Objects.requireNonNull(objectType, "expected parameter 'objectType' to be non-null");
     }
 
     private AbsoluteDeleteOptionArgs() {
-        this.duration = Input.empty();
-        this.objectType = Input.empty();
+        this.duration = Output.empty();
+        this.objectType = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class AbsoluteDeleteOptionArgs extends io.pulumi.resources.Resource
     }
 
     public static final class Builder {
-        private Input<String> duration;
-        private Input<String> objectType;
+        private Output<String> duration;
+        private Output<String> objectType;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class AbsoluteDeleteOptionArgs extends io.pulumi.resources.Resource
     	      this.objectType = defaults.objectType;
         }
 
-        public Builder duration(Input<String> duration) {
+        public Builder duration(Output<String> duration) {
             this.duration = Objects.requireNonNull(duration);
             return this;
         }
 
         public Builder duration(String duration) {
-            this.duration = Input.of(Objects.requireNonNull(duration));
+            this.duration = Output.of(Objects.requireNonNull(duration));
             return this;
         }
 
-        public Builder objectType(Input<String> objectType) {
+        public Builder objectType(Output<String> objectType) {
             this.objectType = Objects.requireNonNull(objectType);
             return this;
         }
 
         public Builder objectType(String objectType) {
-            this.objectType = Input.of(Objects.requireNonNull(objectType));
+            this.objectType = Output.of(Objects.requireNonNull(objectType));
             return this;
         }
         public AbsoluteDeleteOptionArgs build() {

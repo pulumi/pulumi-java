@@ -4,7 +4,7 @@
 package io.pulumi.aws.networkfirewall.inputs;
 
 import io.pulumi.aws.networkfirewall.inputs.FirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionPublishMetricActionDimensionGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
@@ -19,18 +19,18 @@ public final class FirewallPolicyFirewallPolicyStatelessCustomActionActionDefini
      * 
      */
     @InputImport(name="dimensions", required=true)
-      private final Input<List<FirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionPublishMetricActionDimensionGetArgs>> dimensions;
+      private final Output<List<FirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionPublishMetricActionDimensionGetArgs>> dimensions;
 
-    public Input<List<FirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionPublishMetricActionDimensionGetArgs>> getDimensions() {
+    public Output<List<FirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionPublishMetricActionDimensionGetArgs>> getDimensions() {
         return this.dimensions;
     }
 
-    public FirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionPublishMetricActionGetArgs(Input<List<FirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionPublishMetricActionDimensionGetArgs>> dimensions) {
+    public FirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionPublishMetricActionGetArgs(Output<List<FirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionPublishMetricActionDimensionGetArgs>> dimensions) {
         this.dimensions = Objects.requireNonNull(dimensions, "expected parameter 'dimensions' to be non-null");
     }
 
     private FirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionPublishMetricActionGetArgs() {
-        this.dimensions = Input.empty();
+        this.dimensions = Output.empty();
     }
 
     public static Builder builder() {
@@ -42,7 +42,7 @@ public final class FirewallPolicyFirewallPolicyStatelessCustomActionActionDefini
     }
 
     public static final class Builder {
-        private Input<List<FirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionPublishMetricActionDimensionGetArgs>> dimensions;
+        private Output<List<FirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionPublishMetricActionDimensionGetArgs>> dimensions;
 
         public Builder() {
     	      // Empty
@@ -53,13 +53,13 @@ public final class FirewallPolicyFirewallPolicyStatelessCustomActionActionDefini
     	      this.dimensions = defaults.dimensions;
         }
 
-        public Builder dimensions(Input<List<FirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionPublishMetricActionDimensionGetArgs>> dimensions) {
+        public Builder dimensions(Output<List<FirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionPublishMetricActionDimensionGetArgs>> dimensions) {
             this.dimensions = Objects.requireNonNull(dimensions);
             return this;
         }
 
         public Builder dimensions(List<FirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionPublishMetricActionDimensionGetArgs> dimensions) {
-            this.dimensions = Input.of(Objects.requireNonNull(dimensions));
+            this.dimensions = Output.of(Objects.requireNonNull(dimensions));
             return this;
         }
         public FirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionPublishMetricActionGetArgs build() {

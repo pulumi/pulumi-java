@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.sso;
 
 import io.pulumi.awsnative.sso.inputs.PermissionSetTagArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
@@ -22,10 +22,10 @@ public final class PermissionSetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -33,10 +33,10 @@ public final class PermissionSetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="inlinePolicy")
-      private final @Nullable Input<Object> inlinePolicy;
+      private final @Nullable Output<Object> inlinePolicy;
 
-    public Input<Object> getInlinePolicy() {
-        return this.inlinePolicy == null ? Input.empty() : this.inlinePolicy;
+    public Output<Object> getInlinePolicy() {
+        return this.inlinePolicy == null ? Output.empty() : this.inlinePolicy;
     }
 
     /**
@@ -44,17 +44,17 @@ public final class PermissionSetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="instanceArn", required=true)
-      private final Input<String> instanceArn;
+      private final Output<String> instanceArn;
 
-    public Input<String> getInstanceArn() {
+    public Output<String> getInstanceArn() {
         return this.instanceArn;
     }
 
     @InputImport(name="managedPolicies")
-      private final @Nullable Input<List<String>> managedPolicies;
+      private final @Nullable Output<List<String>> managedPolicies;
 
-    public Input<List<String>> getManagedPolicies() {
-        return this.managedPolicies == null ? Input.empty() : this.managedPolicies;
+    public Output<List<String>> getManagedPolicies() {
+        return this.managedPolicies == null ? Output.empty() : this.managedPolicies;
     }
 
     /**
@@ -62,10 +62,10 @@ public final class PermissionSetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -73,10 +73,10 @@ public final class PermissionSetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="relayStateType")
-      private final @Nullable Input<String> relayStateType;
+      private final @Nullable Output<String> relayStateType;
 
-    public Input<String> getRelayStateType() {
-        return this.relayStateType == null ? Input.empty() : this.relayStateType;
+    public Output<String> getRelayStateType() {
+        return this.relayStateType == null ? Output.empty() : this.relayStateType;
     }
 
     /**
@@ -84,28 +84,28 @@ public final class PermissionSetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sessionDuration")
-      private final @Nullable Input<String> sessionDuration;
+      private final @Nullable Output<String> sessionDuration;
 
-    public Input<String> getSessionDuration() {
-        return this.sessionDuration == null ? Input.empty() : this.sessionDuration;
+    public Output<String> getSessionDuration() {
+        return this.sessionDuration == null ? Output.empty() : this.sessionDuration;
     }
 
     @InputImport(name="tags")
-      private final @Nullable Input<List<PermissionSetTagArgs>> tags;
+      private final @Nullable Output<List<PermissionSetTagArgs>> tags;
 
-    public Input<List<PermissionSetTagArgs>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<List<PermissionSetTagArgs>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public PermissionSetArgs(
-        @Nullable Input<String> description,
-        @Nullable Input<Object> inlinePolicy,
-        Input<String> instanceArn,
-        @Nullable Input<List<String>> managedPolicies,
-        @Nullable Input<String> name,
-        @Nullable Input<String> relayStateType,
-        @Nullable Input<String> sessionDuration,
-        @Nullable Input<List<PermissionSetTagArgs>> tags) {
+        @Nullable Output<String> description,
+        @Nullable Output<Object> inlinePolicy,
+        Output<String> instanceArn,
+        @Nullable Output<List<String>> managedPolicies,
+        @Nullable Output<String> name,
+        @Nullable Output<String> relayStateType,
+        @Nullable Output<String> sessionDuration,
+        @Nullable Output<List<PermissionSetTagArgs>> tags) {
         this.description = description;
         this.inlinePolicy = inlinePolicy;
         this.instanceArn = Objects.requireNonNull(instanceArn, "expected parameter 'instanceArn' to be non-null");
@@ -117,14 +117,14 @@ public final class PermissionSetArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private PermissionSetArgs() {
-        this.description = Input.empty();
-        this.inlinePolicy = Input.empty();
-        this.instanceArn = Input.empty();
-        this.managedPolicies = Input.empty();
-        this.name = Input.empty();
-        this.relayStateType = Input.empty();
-        this.sessionDuration = Input.empty();
-        this.tags = Input.empty();
+        this.description = Output.empty();
+        this.inlinePolicy = Output.empty();
+        this.instanceArn = Output.empty();
+        this.managedPolicies = Output.empty();
+        this.name = Output.empty();
+        this.relayStateType = Output.empty();
+        this.sessionDuration = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -136,14 +136,14 @@ public final class PermissionSetArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> description;
-        private @Nullable Input<Object> inlinePolicy;
-        private Input<String> instanceArn;
-        private @Nullable Input<List<String>> managedPolicies;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> relayStateType;
-        private @Nullable Input<String> sessionDuration;
-        private @Nullable Input<List<PermissionSetTagArgs>> tags;
+        private @Nullable Output<String> description;
+        private @Nullable Output<Object> inlinePolicy;
+        private Output<String> instanceArn;
+        private @Nullable Output<List<String>> managedPolicies;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> relayStateType;
+        private @Nullable Output<String> sessionDuration;
+        private @Nullable Output<List<PermissionSetTagArgs>> tags;
 
         public Builder() {
     	      // Empty
@@ -161,83 +161,83 @@ public final class PermissionSetArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder inlinePolicy(@Nullable Input<Object> inlinePolicy) {
+        public Builder inlinePolicy(@Nullable Output<Object> inlinePolicy) {
             this.inlinePolicy = inlinePolicy;
             return this;
         }
 
         public Builder inlinePolicy(@Nullable Object inlinePolicy) {
-            this.inlinePolicy = Input.ofNullable(inlinePolicy);
+            this.inlinePolicy = Output.ofNullable(inlinePolicy);
             return this;
         }
 
-        public Builder instanceArn(Input<String> instanceArn) {
+        public Builder instanceArn(Output<String> instanceArn) {
             this.instanceArn = Objects.requireNonNull(instanceArn);
             return this;
         }
 
         public Builder instanceArn(String instanceArn) {
-            this.instanceArn = Input.of(Objects.requireNonNull(instanceArn));
+            this.instanceArn = Output.of(Objects.requireNonNull(instanceArn));
             return this;
         }
 
-        public Builder managedPolicies(@Nullable Input<List<String>> managedPolicies) {
+        public Builder managedPolicies(@Nullable Output<List<String>> managedPolicies) {
             this.managedPolicies = managedPolicies;
             return this;
         }
 
         public Builder managedPolicies(@Nullable List<String> managedPolicies) {
-            this.managedPolicies = Input.ofNullable(managedPolicies);
+            this.managedPolicies = Output.ofNullable(managedPolicies);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder relayStateType(@Nullable Input<String> relayStateType) {
+        public Builder relayStateType(@Nullable Output<String> relayStateType) {
             this.relayStateType = relayStateType;
             return this;
         }
 
         public Builder relayStateType(@Nullable String relayStateType) {
-            this.relayStateType = Input.ofNullable(relayStateType);
+            this.relayStateType = Output.ofNullable(relayStateType);
             return this;
         }
 
-        public Builder sessionDuration(@Nullable Input<String> sessionDuration) {
+        public Builder sessionDuration(@Nullable Output<String> sessionDuration) {
             this.sessionDuration = sessionDuration;
             return this;
         }
 
         public Builder sessionDuration(@Nullable String sessionDuration) {
-            this.sessionDuration = Input.ofNullable(sessionDuration);
+            this.sessionDuration = Output.ofNullable(sessionDuration);
             return this;
         }
 
-        public Builder tags(@Nullable Input<List<PermissionSetTagArgs>> tags) {
+        public Builder tags(@Nullable Output<List<PermissionSetTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable List<PermissionSetTagArgs> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public PermissionSetArgs build() {

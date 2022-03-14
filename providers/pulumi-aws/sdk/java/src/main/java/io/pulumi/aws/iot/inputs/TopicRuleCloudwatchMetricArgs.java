@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.iot.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,9 +19,9 @@ public final class TopicRuleCloudwatchMetricArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="metricName", required=true)
-      private final Input<String> metricName;
+      private final Output<String> metricName;
 
-    public Input<String> getMetricName() {
+    public Output<String> getMetricName() {
         return this.metricName;
     }
 
@@ -30,9 +30,9 @@ public final class TopicRuleCloudwatchMetricArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="metricNamespace", required=true)
-      private final Input<String> metricNamespace;
+      private final Output<String> metricNamespace;
 
-    public Input<String> getMetricNamespace() {
+    public Output<String> getMetricNamespace() {
         return this.metricNamespace;
     }
 
@@ -41,10 +41,10 @@ public final class TopicRuleCloudwatchMetricArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="metricTimestamp")
-      private final @Nullable Input<String> metricTimestamp;
+      private final @Nullable Output<String> metricTimestamp;
 
-    public Input<String> getMetricTimestamp() {
-        return this.metricTimestamp == null ? Input.empty() : this.metricTimestamp;
+    public Output<String> getMetricTimestamp() {
+        return this.metricTimestamp == null ? Output.empty() : this.metricTimestamp;
     }
 
     /**
@@ -52,9 +52,9 @@ public final class TopicRuleCloudwatchMetricArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="metricUnit", required=true)
-      private final Input<String> metricUnit;
+      private final Output<String> metricUnit;
 
-    public Input<String> getMetricUnit() {
+    public Output<String> getMetricUnit() {
         return this.metricUnit;
     }
 
@@ -63,9 +63,9 @@ public final class TopicRuleCloudwatchMetricArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="metricValue", required=true)
-      private final Input<String> metricValue;
+      private final Output<String> metricValue;
 
-    public Input<String> getMetricValue() {
+    public Output<String> getMetricValue() {
         return this.metricValue;
     }
 
@@ -74,19 +74,19 @@ public final class TopicRuleCloudwatchMetricArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="roleArn", required=true)
-      private final Input<String> roleArn;
+      private final Output<String> roleArn;
 
-    public Input<String> getRoleArn() {
+    public Output<String> getRoleArn() {
         return this.roleArn;
     }
 
     public TopicRuleCloudwatchMetricArgs(
-        Input<String> metricName,
-        Input<String> metricNamespace,
-        @Nullable Input<String> metricTimestamp,
-        Input<String> metricUnit,
-        Input<String> metricValue,
-        Input<String> roleArn) {
+        Output<String> metricName,
+        Output<String> metricNamespace,
+        @Nullable Output<String> metricTimestamp,
+        Output<String> metricUnit,
+        Output<String> metricValue,
+        Output<String> roleArn) {
         this.metricName = Objects.requireNonNull(metricName, "expected parameter 'metricName' to be non-null");
         this.metricNamespace = Objects.requireNonNull(metricNamespace, "expected parameter 'metricNamespace' to be non-null");
         this.metricTimestamp = metricTimestamp;
@@ -96,12 +96,12 @@ public final class TopicRuleCloudwatchMetricArgs extends io.pulumi.resources.Res
     }
 
     private TopicRuleCloudwatchMetricArgs() {
-        this.metricName = Input.empty();
-        this.metricNamespace = Input.empty();
-        this.metricTimestamp = Input.empty();
-        this.metricUnit = Input.empty();
-        this.metricValue = Input.empty();
-        this.roleArn = Input.empty();
+        this.metricName = Output.empty();
+        this.metricNamespace = Output.empty();
+        this.metricTimestamp = Output.empty();
+        this.metricUnit = Output.empty();
+        this.metricValue = Output.empty();
+        this.roleArn = Output.empty();
     }
 
     public static Builder builder() {
@@ -113,12 +113,12 @@ public final class TopicRuleCloudwatchMetricArgs extends io.pulumi.resources.Res
     }
 
     public static final class Builder {
-        private Input<String> metricName;
-        private Input<String> metricNamespace;
-        private @Nullable Input<String> metricTimestamp;
-        private Input<String> metricUnit;
-        private Input<String> metricValue;
-        private Input<String> roleArn;
+        private Output<String> metricName;
+        private Output<String> metricNamespace;
+        private @Nullable Output<String> metricTimestamp;
+        private Output<String> metricUnit;
+        private Output<String> metricValue;
+        private Output<String> roleArn;
 
         public Builder() {
     	      // Empty
@@ -134,63 +134,63 @@ public final class TopicRuleCloudwatchMetricArgs extends io.pulumi.resources.Res
     	      this.roleArn = defaults.roleArn;
         }
 
-        public Builder metricName(Input<String> metricName) {
+        public Builder metricName(Output<String> metricName) {
             this.metricName = Objects.requireNonNull(metricName);
             return this;
         }
 
         public Builder metricName(String metricName) {
-            this.metricName = Input.of(Objects.requireNonNull(metricName));
+            this.metricName = Output.of(Objects.requireNonNull(metricName));
             return this;
         }
 
-        public Builder metricNamespace(Input<String> metricNamespace) {
+        public Builder metricNamespace(Output<String> metricNamespace) {
             this.metricNamespace = Objects.requireNonNull(metricNamespace);
             return this;
         }
 
         public Builder metricNamespace(String metricNamespace) {
-            this.metricNamespace = Input.of(Objects.requireNonNull(metricNamespace));
+            this.metricNamespace = Output.of(Objects.requireNonNull(metricNamespace));
             return this;
         }
 
-        public Builder metricTimestamp(@Nullable Input<String> metricTimestamp) {
+        public Builder metricTimestamp(@Nullable Output<String> metricTimestamp) {
             this.metricTimestamp = metricTimestamp;
             return this;
         }
 
         public Builder metricTimestamp(@Nullable String metricTimestamp) {
-            this.metricTimestamp = Input.ofNullable(metricTimestamp);
+            this.metricTimestamp = Output.ofNullable(metricTimestamp);
             return this;
         }
 
-        public Builder metricUnit(Input<String> metricUnit) {
+        public Builder metricUnit(Output<String> metricUnit) {
             this.metricUnit = Objects.requireNonNull(metricUnit);
             return this;
         }
 
         public Builder metricUnit(String metricUnit) {
-            this.metricUnit = Input.of(Objects.requireNonNull(metricUnit));
+            this.metricUnit = Output.of(Objects.requireNonNull(metricUnit));
             return this;
         }
 
-        public Builder metricValue(Input<String> metricValue) {
+        public Builder metricValue(Output<String> metricValue) {
             this.metricValue = Objects.requireNonNull(metricValue);
             return this;
         }
 
         public Builder metricValue(String metricValue) {
-            this.metricValue = Input.of(Objects.requireNonNull(metricValue));
+            this.metricValue = Output.of(Objects.requireNonNull(metricValue));
             return this;
         }
 
-        public Builder roleArn(Input<String> roleArn) {
+        public Builder roleArn(Output<String> roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
 
         public Builder roleArn(String roleArn) {
-            this.roleArn = Input.of(Objects.requireNonNull(roleArn));
+            this.roleArn = Output.of(Objects.requireNonNull(roleArn));
             return this;
         }
         public TopicRuleCloudwatchMetricArgs build() {

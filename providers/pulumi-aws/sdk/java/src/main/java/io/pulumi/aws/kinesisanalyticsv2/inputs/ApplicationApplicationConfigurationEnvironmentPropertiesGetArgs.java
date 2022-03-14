@@ -4,7 +4,7 @@
 package io.pulumi.aws.kinesisanalyticsv2.inputs;
 
 import io.pulumi.aws.kinesisanalyticsv2.inputs.ApplicationApplicationConfigurationEnvironmentPropertiesPropertyGroupGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
@@ -19,18 +19,18 @@ public final class ApplicationApplicationConfigurationEnvironmentPropertiesGetAr
      * 
      */
     @InputImport(name="propertyGroups", required=true)
-      private final Input<List<ApplicationApplicationConfigurationEnvironmentPropertiesPropertyGroupGetArgs>> propertyGroups;
+      private final Output<List<ApplicationApplicationConfigurationEnvironmentPropertiesPropertyGroupGetArgs>> propertyGroups;
 
-    public Input<List<ApplicationApplicationConfigurationEnvironmentPropertiesPropertyGroupGetArgs>> getPropertyGroups() {
+    public Output<List<ApplicationApplicationConfigurationEnvironmentPropertiesPropertyGroupGetArgs>> getPropertyGroups() {
         return this.propertyGroups;
     }
 
-    public ApplicationApplicationConfigurationEnvironmentPropertiesGetArgs(Input<List<ApplicationApplicationConfigurationEnvironmentPropertiesPropertyGroupGetArgs>> propertyGroups) {
+    public ApplicationApplicationConfigurationEnvironmentPropertiesGetArgs(Output<List<ApplicationApplicationConfigurationEnvironmentPropertiesPropertyGroupGetArgs>> propertyGroups) {
         this.propertyGroups = Objects.requireNonNull(propertyGroups, "expected parameter 'propertyGroups' to be non-null");
     }
 
     private ApplicationApplicationConfigurationEnvironmentPropertiesGetArgs() {
-        this.propertyGroups = Input.empty();
+        this.propertyGroups = Output.empty();
     }
 
     public static Builder builder() {
@@ -42,7 +42,7 @@ public final class ApplicationApplicationConfigurationEnvironmentPropertiesGetAr
     }
 
     public static final class Builder {
-        private Input<List<ApplicationApplicationConfigurationEnvironmentPropertiesPropertyGroupGetArgs>> propertyGroups;
+        private Output<List<ApplicationApplicationConfigurationEnvironmentPropertiesPropertyGroupGetArgs>> propertyGroups;
 
         public Builder() {
     	      // Empty
@@ -53,13 +53,13 @@ public final class ApplicationApplicationConfigurationEnvironmentPropertiesGetAr
     	      this.propertyGroups = defaults.propertyGroups;
         }
 
-        public Builder propertyGroups(Input<List<ApplicationApplicationConfigurationEnvironmentPropertiesPropertyGroupGetArgs>> propertyGroups) {
+        public Builder propertyGroups(Output<List<ApplicationApplicationConfigurationEnvironmentPropertiesPropertyGroupGetArgs>> propertyGroups) {
             this.propertyGroups = Objects.requireNonNull(propertyGroups);
             return this;
         }
 
         public Builder propertyGroups(List<ApplicationApplicationConfigurationEnvironmentPropertiesPropertyGroupGetArgs> propertyGroups) {
-            this.propertyGroups = Input.of(Objects.requireNonNull(propertyGroups));
+            this.propertyGroups = Output.of(Objects.requireNonNull(propertyGroups));
             return this;
         }
         public ApplicationApplicationConfigurationEnvironmentPropertiesGetArgs build() {

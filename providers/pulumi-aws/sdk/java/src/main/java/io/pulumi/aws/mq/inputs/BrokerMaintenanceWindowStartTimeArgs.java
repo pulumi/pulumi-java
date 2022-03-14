@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.mq.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -18,9 +18,9 @@ public final class BrokerMaintenanceWindowStartTimeArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="dayOfWeek", required=true)
-      private final Input<String> dayOfWeek;
+      private final Output<String> dayOfWeek;
 
-    public Input<String> getDayOfWeek() {
+    public Output<String> getDayOfWeek() {
         return this.dayOfWeek;
     }
 
@@ -29,9 +29,9 @@ public final class BrokerMaintenanceWindowStartTimeArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="timeOfDay", required=true)
-      private final Input<String> timeOfDay;
+      private final Output<String> timeOfDay;
 
-    public Input<String> getTimeOfDay() {
+    public Output<String> getTimeOfDay() {
         return this.timeOfDay;
     }
 
@@ -40,25 +40,25 @@ public final class BrokerMaintenanceWindowStartTimeArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="timeZone", required=true)
-      private final Input<String> timeZone;
+      private final Output<String> timeZone;
 
-    public Input<String> getTimeZone() {
+    public Output<String> getTimeZone() {
         return this.timeZone;
     }
 
     public BrokerMaintenanceWindowStartTimeArgs(
-        Input<String> dayOfWeek,
-        Input<String> timeOfDay,
-        Input<String> timeZone) {
+        Output<String> dayOfWeek,
+        Output<String> timeOfDay,
+        Output<String> timeZone) {
         this.dayOfWeek = Objects.requireNonNull(dayOfWeek, "expected parameter 'dayOfWeek' to be non-null");
         this.timeOfDay = Objects.requireNonNull(timeOfDay, "expected parameter 'timeOfDay' to be non-null");
         this.timeZone = Objects.requireNonNull(timeZone, "expected parameter 'timeZone' to be non-null");
     }
 
     private BrokerMaintenanceWindowStartTimeArgs() {
-        this.dayOfWeek = Input.empty();
-        this.timeOfDay = Input.empty();
-        this.timeZone = Input.empty();
+        this.dayOfWeek = Output.empty();
+        this.timeOfDay = Output.empty();
+        this.timeZone = Output.empty();
     }
 
     public static Builder builder() {
@@ -70,9 +70,9 @@ public final class BrokerMaintenanceWindowStartTimeArgs extends io.pulumi.resour
     }
 
     public static final class Builder {
-        private Input<String> dayOfWeek;
-        private Input<String> timeOfDay;
-        private Input<String> timeZone;
+        private Output<String> dayOfWeek;
+        private Output<String> timeOfDay;
+        private Output<String> timeZone;
 
         public Builder() {
     	      // Empty
@@ -85,33 +85,33 @@ public final class BrokerMaintenanceWindowStartTimeArgs extends io.pulumi.resour
     	      this.timeZone = defaults.timeZone;
         }
 
-        public Builder dayOfWeek(Input<String> dayOfWeek) {
+        public Builder dayOfWeek(Output<String> dayOfWeek) {
             this.dayOfWeek = Objects.requireNonNull(dayOfWeek);
             return this;
         }
 
         public Builder dayOfWeek(String dayOfWeek) {
-            this.dayOfWeek = Input.of(Objects.requireNonNull(dayOfWeek));
+            this.dayOfWeek = Output.of(Objects.requireNonNull(dayOfWeek));
             return this;
         }
 
-        public Builder timeOfDay(Input<String> timeOfDay) {
+        public Builder timeOfDay(Output<String> timeOfDay) {
             this.timeOfDay = Objects.requireNonNull(timeOfDay);
             return this;
         }
 
         public Builder timeOfDay(String timeOfDay) {
-            this.timeOfDay = Input.of(Objects.requireNonNull(timeOfDay));
+            this.timeOfDay = Output.of(Objects.requireNonNull(timeOfDay));
             return this;
         }
 
-        public Builder timeZone(Input<String> timeZone) {
+        public Builder timeZone(Output<String> timeZone) {
             this.timeZone = Objects.requireNonNull(timeZone);
             return this;
         }
 
         public Builder timeZone(String timeZone) {
-            this.timeZone = Input.of(Objects.requireNonNull(timeZone));
+            this.timeZone = Output.of(Objects.requireNonNull(timeZone));
             return this;
         }
         public BrokerMaintenanceWindowStartTimeArgs build() {

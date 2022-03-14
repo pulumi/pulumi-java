@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.ecr.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class PullThroughCacheRuleState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="ecrRepositoryPrefix")
-      private final @Nullable Input<String> ecrRepositoryPrefix;
+      private final @Nullable Output<String> ecrRepositoryPrefix;
 
-    public Input<String> getEcrRepositoryPrefix() {
-        return this.ecrRepositoryPrefix == null ? Input.empty() : this.ecrRepositoryPrefix;
+    public Output<String> getEcrRepositoryPrefix() {
+        return this.ecrRepositoryPrefix == null ? Output.empty() : this.ecrRepositoryPrefix;
     }
 
     /**
@@ -30,10 +30,10 @@ public final class PullThroughCacheRuleState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="registryId")
-      private final @Nullable Input<String> registryId;
+      private final @Nullable Output<String> registryId;
 
-    public Input<String> getRegistryId() {
-        return this.registryId == null ? Input.empty() : this.registryId;
+    public Output<String> getRegistryId() {
+        return this.registryId == null ? Output.empty() : this.registryId;
     }
 
     /**
@@ -41,25 +41,25 @@ public final class PullThroughCacheRuleState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="upstreamRegistryUrl")
-      private final @Nullable Input<String> upstreamRegistryUrl;
+      private final @Nullable Output<String> upstreamRegistryUrl;
 
-    public Input<String> getUpstreamRegistryUrl() {
-        return this.upstreamRegistryUrl == null ? Input.empty() : this.upstreamRegistryUrl;
+    public Output<String> getUpstreamRegistryUrl() {
+        return this.upstreamRegistryUrl == null ? Output.empty() : this.upstreamRegistryUrl;
     }
 
     public PullThroughCacheRuleState(
-        @Nullable Input<String> ecrRepositoryPrefix,
-        @Nullable Input<String> registryId,
-        @Nullable Input<String> upstreamRegistryUrl) {
+        @Nullable Output<String> ecrRepositoryPrefix,
+        @Nullable Output<String> registryId,
+        @Nullable Output<String> upstreamRegistryUrl) {
         this.ecrRepositoryPrefix = ecrRepositoryPrefix;
         this.registryId = registryId;
         this.upstreamRegistryUrl = upstreamRegistryUrl;
     }
 
     private PullThroughCacheRuleState() {
-        this.ecrRepositoryPrefix = Input.empty();
-        this.registryId = Input.empty();
-        this.upstreamRegistryUrl = Input.empty();
+        this.ecrRepositoryPrefix = Output.empty();
+        this.registryId = Output.empty();
+        this.upstreamRegistryUrl = Output.empty();
     }
 
     public static Builder builder() {
@@ -71,9 +71,9 @@ public final class PullThroughCacheRuleState extends io.pulumi.resources.Resourc
     }
 
     public static final class Builder {
-        private @Nullable Input<String> ecrRepositoryPrefix;
-        private @Nullable Input<String> registryId;
-        private @Nullable Input<String> upstreamRegistryUrl;
+        private @Nullable Output<String> ecrRepositoryPrefix;
+        private @Nullable Output<String> registryId;
+        private @Nullable Output<String> upstreamRegistryUrl;
 
         public Builder() {
     	      // Empty
@@ -86,33 +86,33 @@ public final class PullThroughCacheRuleState extends io.pulumi.resources.Resourc
     	      this.upstreamRegistryUrl = defaults.upstreamRegistryUrl;
         }
 
-        public Builder ecrRepositoryPrefix(@Nullable Input<String> ecrRepositoryPrefix) {
+        public Builder ecrRepositoryPrefix(@Nullable Output<String> ecrRepositoryPrefix) {
             this.ecrRepositoryPrefix = ecrRepositoryPrefix;
             return this;
         }
 
         public Builder ecrRepositoryPrefix(@Nullable String ecrRepositoryPrefix) {
-            this.ecrRepositoryPrefix = Input.ofNullable(ecrRepositoryPrefix);
+            this.ecrRepositoryPrefix = Output.ofNullable(ecrRepositoryPrefix);
             return this;
         }
 
-        public Builder registryId(@Nullable Input<String> registryId) {
+        public Builder registryId(@Nullable Output<String> registryId) {
             this.registryId = registryId;
             return this;
         }
 
         public Builder registryId(@Nullable String registryId) {
-            this.registryId = Input.ofNullable(registryId);
+            this.registryId = Output.ofNullable(registryId);
             return this;
         }
 
-        public Builder upstreamRegistryUrl(@Nullable Input<String> upstreamRegistryUrl) {
+        public Builder upstreamRegistryUrl(@Nullable Output<String> upstreamRegistryUrl) {
             this.upstreamRegistryUrl = upstreamRegistryUrl;
             return this;
         }
 
         public Builder upstreamRegistryUrl(@Nullable String upstreamRegistryUrl) {
-            this.upstreamRegistryUrl = Input.ofNullable(upstreamRegistryUrl);
+            this.upstreamRegistryUrl = Output.ofNullable(upstreamRegistryUrl);
             return this;
         }
         public PullThroughCacheRuleState build() {

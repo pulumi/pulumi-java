@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1beta1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.containeranalysis_v1beta1.inputs.FingerprintArgs;
 import java.lang.String;
@@ -23,9 +23,9 @@ public final class BasisArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="fingerprint", required=true)
-      private final Input<FingerprintArgs> fingerprint;
+      private final Output<FingerprintArgs> fingerprint;
 
-    public Input<FingerprintArgs> getFingerprint() {
+    public Output<FingerprintArgs> getFingerprint() {
         return this.fingerprint;
     }
 
@@ -34,22 +34,22 @@ public final class BasisArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceUrl", required=true)
-      private final Input<String> resourceUrl;
+      private final Output<String> resourceUrl;
 
-    public Input<String> getResourceUrl() {
+    public Output<String> getResourceUrl() {
         return this.resourceUrl;
     }
 
     public BasisArgs(
-        Input<FingerprintArgs> fingerprint,
-        Input<String> resourceUrl) {
+        Output<FingerprintArgs> fingerprint,
+        Output<String> resourceUrl) {
         this.fingerprint = Objects.requireNonNull(fingerprint, "expected parameter 'fingerprint' to be non-null");
         this.resourceUrl = Objects.requireNonNull(resourceUrl, "expected parameter 'resourceUrl' to be non-null");
     }
 
     private BasisArgs() {
-        this.fingerprint = Input.empty();
-        this.resourceUrl = Input.empty();
+        this.fingerprint = Output.empty();
+        this.resourceUrl = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class BasisArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<FingerprintArgs> fingerprint;
-        private Input<String> resourceUrl;
+        private Output<FingerprintArgs> fingerprint;
+        private Output<String> resourceUrl;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class BasisArgs extends io.pulumi.resources.ResourceArgs {
     	      this.resourceUrl = defaults.resourceUrl;
         }
 
-        public Builder fingerprint(Input<FingerprintArgs> fingerprint) {
+        public Builder fingerprint(Output<FingerprintArgs> fingerprint) {
             this.fingerprint = Objects.requireNonNull(fingerprint);
             return this;
         }
 
         public Builder fingerprint(FingerprintArgs fingerprint) {
-            this.fingerprint = Input.of(Objects.requireNonNull(fingerprint));
+            this.fingerprint = Output.of(Objects.requireNonNull(fingerprint));
             return this;
         }
 
-        public Builder resourceUrl(Input<String> resourceUrl) {
+        public Builder resourceUrl(Output<String> resourceUrl) {
             this.resourceUrl = Objects.requireNonNull(resourceUrl);
             return this;
         }
 
         public Builder resourceUrl(String resourceUrl) {
-            this.resourceUrl = Input.of(Objects.requireNonNull(resourceUrl));
+            this.resourceUrl = Output.of(Objects.requireNonNull(resourceUrl));
             return this;
         }
         public BasisArgs build() {

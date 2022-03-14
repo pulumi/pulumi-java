@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.backup;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -19,18 +19,18 @@ public final class GlobalSettingsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="globalSettings", required=true)
-      private final Input<Map<String,String>> globalSettings;
+      private final Output<Map<String,String>> globalSettings;
 
-    public Input<Map<String,String>> getGlobalSettings() {
+    public Output<Map<String,String>> getGlobalSettings() {
         return this.globalSettings;
     }
 
-    public GlobalSettingsArgs(Input<Map<String,String>> globalSettings) {
+    public GlobalSettingsArgs(Output<Map<String,String>> globalSettings) {
         this.globalSettings = Objects.requireNonNull(globalSettings, "expected parameter 'globalSettings' to be non-null");
     }
 
     private GlobalSettingsArgs() {
-        this.globalSettings = Input.empty();
+        this.globalSettings = Output.empty();
     }
 
     public static Builder builder() {
@@ -42,7 +42,7 @@ public final class GlobalSettingsArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<Map<String,String>> globalSettings;
+        private Output<Map<String,String>> globalSettings;
 
         public Builder() {
     	      // Empty
@@ -53,13 +53,13 @@ public final class GlobalSettingsArgs extends io.pulumi.resources.ResourceArgs {
     	      this.globalSettings = defaults.globalSettings;
         }
 
-        public Builder globalSettings(Input<Map<String,String>> globalSettings) {
+        public Builder globalSettings(Output<Map<String,String>> globalSettings) {
             this.globalSettings = Objects.requireNonNull(globalSettings);
             return this;
         }
 
         public Builder globalSettings(Map<String,String> globalSettings) {
-            this.globalSettings = Input.of(Objects.requireNonNull(globalSettings));
+            this.globalSettings = Output.of(Objects.requireNonNull(globalSettings));
             return this;
         }
         public GlobalSettingsArgs build() {

@@ -6,7 +6,7 @@ package io.pulumi.azurenative.web.inputs;
 import io.pulumi.azurenative.web.inputs.AzureActiveDirectoryLoginArgs;
 import io.pulumi.azurenative.web.inputs.AzureActiveDirectoryRegistrationArgs;
 import io.pulumi.azurenative.web.inputs.AzureActiveDirectoryValidationArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
@@ -26,10 +26,10 @@ public final class AzureActiveDirectoryArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="enabled")
-      private final @Nullable Input<Boolean> enabled;
+      private final @Nullable Output<Boolean> enabled;
 
-    public Input<Boolean> getEnabled() {
-        return this.enabled == null ? Input.empty() : this.enabled;
+    public Output<Boolean> getEnabled() {
+        return this.enabled == null ? Output.empty() : this.enabled;
     }
 
     /**
@@ -39,10 +39,10 @@ public final class AzureActiveDirectoryArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="isAutoProvisioned")
-      private final @Nullable Input<Boolean> isAutoProvisioned;
+      private final @Nullable Output<Boolean> isAutoProvisioned;
 
-    public Input<Boolean> getIsAutoProvisioned() {
-        return this.isAutoProvisioned == null ? Input.empty() : this.isAutoProvisioned;
+    public Output<Boolean> getIsAutoProvisioned() {
+        return this.isAutoProvisioned == null ? Output.empty() : this.isAutoProvisioned;
     }
 
     /**
@@ -50,10 +50,10 @@ public final class AzureActiveDirectoryArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="login")
-      private final @Nullable Input<AzureActiveDirectoryLoginArgs> login;
+      private final @Nullable Output<AzureActiveDirectoryLoginArgs> login;
 
-    public Input<AzureActiveDirectoryLoginArgs> getLogin() {
-        return this.login == null ? Input.empty() : this.login;
+    public Output<AzureActiveDirectoryLoginArgs> getLogin() {
+        return this.login == null ? Output.empty() : this.login;
     }
 
     /**
@@ -61,10 +61,10 @@ public final class AzureActiveDirectoryArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="registration")
-      private final @Nullable Input<AzureActiveDirectoryRegistrationArgs> registration;
+      private final @Nullable Output<AzureActiveDirectoryRegistrationArgs> registration;
 
-    public Input<AzureActiveDirectoryRegistrationArgs> getRegistration() {
-        return this.registration == null ? Input.empty() : this.registration;
+    public Output<AzureActiveDirectoryRegistrationArgs> getRegistration() {
+        return this.registration == null ? Output.empty() : this.registration;
     }
 
     /**
@@ -72,18 +72,18 @@ public final class AzureActiveDirectoryArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="validation")
-      private final @Nullable Input<AzureActiveDirectoryValidationArgs> validation;
+      private final @Nullable Output<AzureActiveDirectoryValidationArgs> validation;
 
-    public Input<AzureActiveDirectoryValidationArgs> getValidation() {
-        return this.validation == null ? Input.empty() : this.validation;
+    public Output<AzureActiveDirectoryValidationArgs> getValidation() {
+        return this.validation == null ? Output.empty() : this.validation;
     }
 
     public AzureActiveDirectoryArgs(
-        @Nullable Input<Boolean> enabled,
-        @Nullable Input<Boolean> isAutoProvisioned,
-        @Nullable Input<AzureActiveDirectoryLoginArgs> login,
-        @Nullable Input<AzureActiveDirectoryRegistrationArgs> registration,
-        @Nullable Input<AzureActiveDirectoryValidationArgs> validation) {
+        @Nullable Output<Boolean> enabled,
+        @Nullable Output<Boolean> isAutoProvisioned,
+        @Nullable Output<AzureActiveDirectoryLoginArgs> login,
+        @Nullable Output<AzureActiveDirectoryRegistrationArgs> registration,
+        @Nullable Output<AzureActiveDirectoryValidationArgs> validation) {
         this.enabled = enabled;
         this.isAutoProvisioned = isAutoProvisioned;
         this.login = login;
@@ -92,11 +92,11 @@ public final class AzureActiveDirectoryArgs extends io.pulumi.resources.Resource
     }
 
     private AzureActiveDirectoryArgs() {
-        this.enabled = Input.empty();
-        this.isAutoProvisioned = Input.empty();
-        this.login = Input.empty();
-        this.registration = Input.empty();
-        this.validation = Input.empty();
+        this.enabled = Output.empty();
+        this.isAutoProvisioned = Output.empty();
+        this.login = Output.empty();
+        this.registration = Output.empty();
+        this.validation = Output.empty();
     }
 
     public static Builder builder() {
@@ -108,11 +108,11 @@ public final class AzureActiveDirectoryArgs extends io.pulumi.resources.Resource
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> enabled;
-        private @Nullable Input<Boolean> isAutoProvisioned;
-        private @Nullable Input<AzureActiveDirectoryLoginArgs> login;
-        private @Nullable Input<AzureActiveDirectoryRegistrationArgs> registration;
-        private @Nullable Input<AzureActiveDirectoryValidationArgs> validation;
+        private @Nullable Output<Boolean> enabled;
+        private @Nullable Output<Boolean> isAutoProvisioned;
+        private @Nullable Output<AzureActiveDirectoryLoginArgs> login;
+        private @Nullable Output<AzureActiveDirectoryRegistrationArgs> registration;
+        private @Nullable Output<AzureActiveDirectoryValidationArgs> validation;
 
         public Builder() {
     	      // Empty
@@ -127,53 +127,53 @@ public final class AzureActiveDirectoryArgs extends io.pulumi.resources.Resource
     	      this.validation = defaults.validation;
         }
 
-        public Builder enabled(@Nullable Input<Boolean> enabled) {
+        public Builder enabled(@Nullable Output<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
 
         public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Input.ofNullable(enabled);
+            this.enabled = Output.ofNullable(enabled);
             return this;
         }
 
-        public Builder isAutoProvisioned(@Nullable Input<Boolean> isAutoProvisioned) {
+        public Builder isAutoProvisioned(@Nullable Output<Boolean> isAutoProvisioned) {
             this.isAutoProvisioned = isAutoProvisioned;
             return this;
         }
 
         public Builder isAutoProvisioned(@Nullable Boolean isAutoProvisioned) {
-            this.isAutoProvisioned = Input.ofNullable(isAutoProvisioned);
+            this.isAutoProvisioned = Output.ofNullable(isAutoProvisioned);
             return this;
         }
 
-        public Builder login(@Nullable Input<AzureActiveDirectoryLoginArgs> login) {
+        public Builder login(@Nullable Output<AzureActiveDirectoryLoginArgs> login) {
             this.login = login;
             return this;
         }
 
         public Builder login(@Nullable AzureActiveDirectoryLoginArgs login) {
-            this.login = Input.ofNullable(login);
+            this.login = Output.ofNullable(login);
             return this;
         }
 
-        public Builder registration(@Nullable Input<AzureActiveDirectoryRegistrationArgs> registration) {
+        public Builder registration(@Nullable Output<AzureActiveDirectoryRegistrationArgs> registration) {
             this.registration = registration;
             return this;
         }
 
         public Builder registration(@Nullable AzureActiveDirectoryRegistrationArgs registration) {
-            this.registration = Input.ofNullable(registration);
+            this.registration = Output.ofNullable(registration);
             return this;
         }
 
-        public Builder validation(@Nullable Input<AzureActiveDirectoryValidationArgs> validation) {
+        public Builder validation(@Nullable Output<AzureActiveDirectoryValidationArgs> validation) {
             this.validation = validation;
             return this;
         }
 
         public Builder validation(@Nullable AzureActiveDirectoryValidationArgs validation) {
-            this.validation = Input.ofNullable(validation);
+            this.validation = Output.ofNullable(validation);
             return this;
         }
         public AzureActiveDirectoryArgs build() {

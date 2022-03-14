@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.appplatform.inputs;
 
 import io.pulumi.azurenative.appplatform.inputs.BuildpackPropertiesArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -25,10 +25,10 @@ public final class BuildpacksGroupPropertiesArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="buildpacks")
-      private final @Nullable Input<List<BuildpackPropertiesArgs>> buildpacks;
+      private final @Nullable Output<List<BuildpackPropertiesArgs>> buildpacks;
 
-    public Input<List<BuildpackPropertiesArgs>> getBuildpacks() {
-        return this.buildpacks == null ? Input.empty() : this.buildpacks;
+    public Output<List<BuildpackPropertiesArgs>> getBuildpacks() {
+        return this.buildpacks == null ? Output.empty() : this.buildpacks;
     }
 
     /**
@@ -36,22 +36,22 @@ public final class BuildpacksGroupPropertiesArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     public BuildpacksGroupPropertiesArgs(
-        @Nullable Input<List<BuildpackPropertiesArgs>> buildpacks,
-        @Nullable Input<String> name) {
+        @Nullable Output<List<BuildpackPropertiesArgs>> buildpacks,
+        @Nullable Output<String> name) {
         this.buildpacks = buildpacks;
         this.name = name;
     }
 
     private BuildpacksGroupPropertiesArgs() {
-        this.buildpacks = Input.empty();
-        this.name = Input.empty();
+        this.buildpacks = Output.empty();
+        this.name = Output.empty();
     }
 
     public static Builder builder() {
@@ -63,8 +63,8 @@ public final class BuildpacksGroupPropertiesArgs extends io.pulumi.resources.Res
     }
 
     public static final class Builder {
-        private @Nullable Input<List<BuildpackPropertiesArgs>> buildpacks;
-        private @Nullable Input<String> name;
+        private @Nullable Output<List<BuildpackPropertiesArgs>> buildpacks;
+        private @Nullable Output<String> name;
 
         public Builder() {
     	      // Empty
@@ -76,23 +76,23 @@ public final class BuildpacksGroupPropertiesArgs extends io.pulumi.resources.Res
     	      this.name = defaults.name;
         }
 
-        public Builder buildpacks(@Nullable Input<List<BuildpackPropertiesArgs>> buildpacks) {
+        public Builder buildpacks(@Nullable Output<List<BuildpackPropertiesArgs>> buildpacks) {
             this.buildpacks = buildpacks;
             return this;
         }
 
         public Builder buildpacks(@Nullable List<BuildpackPropertiesArgs> buildpacks) {
-            this.buildpacks = Input.ofNullable(buildpacks);
+            this.buildpacks = Output.ofNullable(buildpacks);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
         public BuildpacksGroupPropertiesArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.web;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,9 +19,9 @@ public final class WebAppSiteExtensionArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="name", required=true)
-      private final Input<String> name;
+      private final Output<String> name;
 
-    public Input<String> getName() {
+    public Output<String> getName() {
         return this.name;
     }
 
@@ -30,9 +30,9 @@ public final class WebAppSiteExtensionArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -41,25 +41,25 @@ public final class WebAppSiteExtensionArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="siteExtensionId")
-      private final @Nullable Input<String> siteExtensionId;
+      private final @Nullable Output<String> siteExtensionId;
 
-    public Input<String> getSiteExtensionId() {
-        return this.siteExtensionId == null ? Input.empty() : this.siteExtensionId;
+    public Output<String> getSiteExtensionId() {
+        return this.siteExtensionId == null ? Output.empty() : this.siteExtensionId;
     }
 
     public WebAppSiteExtensionArgs(
-        Input<String> name,
-        Input<String> resourceGroupName,
-        @Nullable Input<String> siteExtensionId) {
+        Output<String> name,
+        Output<String> resourceGroupName,
+        @Nullable Output<String> siteExtensionId) {
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
         this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
         this.siteExtensionId = siteExtensionId;
     }
 
     private WebAppSiteExtensionArgs() {
-        this.name = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.siteExtensionId = Input.empty();
+        this.name = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.siteExtensionId = Output.empty();
     }
 
     public static Builder builder() {
@@ -71,9 +71,9 @@ public final class WebAppSiteExtensionArgs extends io.pulumi.resources.ResourceA
     }
 
     public static final class Builder {
-        private Input<String> name;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<String> siteExtensionId;
+        private Output<String> name;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<String> siteExtensionId;
 
         public Builder() {
     	      // Empty
@@ -86,33 +86,33 @@ public final class WebAppSiteExtensionArgs extends io.pulumi.resources.ResourceA
     	      this.siteExtensionId = defaults.siteExtensionId;
         }
 
-        public Builder name(Input<String> name) {
+        public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(String name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder siteExtensionId(@Nullable Input<String> siteExtensionId) {
+        public Builder siteExtensionId(@Nullable Output<String> siteExtensionId) {
             this.siteExtensionId = siteExtensionId;
             return this;
         }
 
         public Builder siteExtensionId(@Nullable String siteExtensionId) {
-            this.siteExtensionId = Input.ofNullable(siteExtensionId);
+            this.siteExtensionId = Output.ofNullable(siteExtensionId);
             return this;
         }
         public WebAppSiteExtensionArgs build() {

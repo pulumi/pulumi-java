@@ -6,7 +6,7 @@ package io.pulumi.awsnative.ec2.inputs;
 import io.pulumi.awsnative.ec2.enums.EC2FleetSpotOptionsRequestAllocationStrategy;
 import io.pulumi.awsnative.ec2.enums.EC2FleetSpotOptionsRequestInstanceInterruptionBehavior;
 import io.pulumi.awsnative.ec2.inputs.EC2FleetMaintenanceStrategiesArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -20,70 +20,70 @@ public final class EC2FleetSpotOptionsRequestArgs extends io.pulumi.resources.Re
     public static final EC2FleetSpotOptionsRequestArgs Empty = new EC2FleetSpotOptionsRequestArgs();
 
     @InputImport(name="allocationStrategy")
-      private final @Nullable Input<EC2FleetSpotOptionsRequestAllocationStrategy> allocationStrategy;
+      private final @Nullable Output<EC2FleetSpotOptionsRequestAllocationStrategy> allocationStrategy;
 
-    public Input<EC2FleetSpotOptionsRequestAllocationStrategy> getAllocationStrategy() {
-        return this.allocationStrategy == null ? Input.empty() : this.allocationStrategy;
+    public Output<EC2FleetSpotOptionsRequestAllocationStrategy> getAllocationStrategy() {
+        return this.allocationStrategy == null ? Output.empty() : this.allocationStrategy;
     }
 
     @InputImport(name="instanceInterruptionBehavior")
-      private final @Nullable Input<EC2FleetSpotOptionsRequestInstanceInterruptionBehavior> instanceInterruptionBehavior;
+      private final @Nullable Output<EC2FleetSpotOptionsRequestInstanceInterruptionBehavior> instanceInterruptionBehavior;
 
-    public Input<EC2FleetSpotOptionsRequestInstanceInterruptionBehavior> getInstanceInterruptionBehavior() {
-        return this.instanceInterruptionBehavior == null ? Input.empty() : this.instanceInterruptionBehavior;
+    public Output<EC2FleetSpotOptionsRequestInstanceInterruptionBehavior> getInstanceInterruptionBehavior() {
+        return this.instanceInterruptionBehavior == null ? Output.empty() : this.instanceInterruptionBehavior;
     }
 
     @InputImport(name="instancePoolsToUseCount")
-      private final @Nullable Input<Integer> instancePoolsToUseCount;
+      private final @Nullable Output<Integer> instancePoolsToUseCount;
 
-    public Input<Integer> getInstancePoolsToUseCount() {
-        return this.instancePoolsToUseCount == null ? Input.empty() : this.instancePoolsToUseCount;
+    public Output<Integer> getInstancePoolsToUseCount() {
+        return this.instancePoolsToUseCount == null ? Output.empty() : this.instancePoolsToUseCount;
     }
 
     @InputImport(name="maintenanceStrategies")
-      private final @Nullable Input<EC2FleetMaintenanceStrategiesArgs> maintenanceStrategies;
+      private final @Nullable Output<EC2FleetMaintenanceStrategiesArgs> maintenanceStrategies;
 
-    public Input<EC2FleetMaintenanceStrategiesArgs> getMaintenanceStrategies() {
-        return this.maintenanceStrategies == null ? Input.empty() : this.maintenanceStrategies;
+    public Output<EC2FleetMaintenanceStrategiesArgs> getMaintenanceStrategies() {
+        return this.maintenanceStrategies == null ? Output.empty() : this.maintenanceStrategies;
     }
 
     @InputImport(name="maxTotalPrice")
-      private final @Nullable Input<String> maxTotalPrice;
+      private final @Nullable Output<String> maxTotalPrice;
 
-    public Input<String> getMaxTotalPrice() {
-        return this.maxTotalPrice == null ? Input.empty() : this.maxTotalPrice;
+    public Output<String> getMaxTotalPrice() {
+        return this.maxTotalPrice == null ? Output.empty() : this.maxTotalPrice;
     }
 
     @InputImport(name="minTargetCapacity")
-      private final @Nullable Input<Integer> minTargetCapacity;
+      private final @Nullable Output<Integer> minTargetCapacity;
 
-    public Input<Integer> getMinTargetCapacity() {
-        return this.minTargetCapacity == null ? Input.empty() : this.minTargetCapacity;
+    public Output<Integer> getMinTargetCapacity() {
+        return this.minTargetCapacity == null ? Output.empty() : this.minTargetCapacity;
     }
 
     @InputImport(name="singleAvailabilityZone")
-      private final @Nullable Input<Boolean> singleAvailabilityZone;
+      private final @Nullable Output<Boolean> singleAvailabilityZone;
 
-    public Input<Boolean> getSingleAvailabilityZone() {
-        return this.singleAvailabilityZone == null ? Input.empty() : this.singleAvailabilityZone;
+    public Output<Boolean> getSingleAvailabilityZone() {
+        return this.singleAvailabilityZone == null ? Output.empty() : this.singleAvailabilityZone;
     }
 
     @InputImport(name="singleInstanceType")
-      private final @Nullable Input<Boolean> singleInstanceType;
+      private final @Nullable Output<Boolean> singleInstanceType;
 
-    public Input<Boolean> getSingleInstanceType() {
-        return this.singleInstanceType == null ? Input.empty() : this.singleInstanceType;
+    public Output<Boolean> getSingleInstanceType() {
+        return this.singleInstanceType == null ? Output.empty() : this.singleInstanceType;
     }
 
     public EC2FleetSpotOptionsRequestArgs(
-        @Nullable Input<EC2FleetSpotOptionsRequestAllocationStrategy> allocationStrategy,
-        @Nullable Input<EC2FleetSpotOptionsRequestInstanceInterruptionBehavior> instanceInterruptionBehavior,
-        @Nullable Input<Integer> instancePoolsToUseCount,
-        @Nullable Input<EC2FleetMaintenanceStrategiesArgs> maintenanceStrategies,
-        @Nullable Input<String> maxTotalPrice,
-        @Nullable Input<Integer> minTargetCapacity,
-        @Nullable Input<Boolean> singleAvailabilityZone,
-        @Nullable Input<Boolean> singleInstanceType) {
+        @Nullable Output<EC2FleetSpotOptionsRequestAllocationStrategy> allocationStrategy,
+        @Nullable Output<EC2FleetSpotOptionsRequestInstanceInterruptionBehavior> instanceInterruptionBehavior,
+        @Nullable Output<Integer> instancePoolsToUseCount,
+        @Nullable Output<EC2FleetMaintenanceStrategiesArgs> maintenanceStrategies,
+        @Nullable Output<String> maxTotalPrice,
+        @Nullable Output<Integer> minTargetCapacity,
+        @Nullable Output<Boolean> singleAvailabilityZone,
+        @Nullable Output<Boolean> singleInstanceType) {
         this.allocationStrategy = allocationStrategy;
         this.instanceInterruptionBehavior = instanceInterruptionBehavior;
         this.instancePoolsToUseCount = instancePoolsToUseCount;
@@ -95,14 +95,14 @@ public final class EC2FleetSpotOptionsRequestArgs extends io.pulumi.resources.Re
     }
 
     private EC2FleetSpotOptionsRequestArgs() {
-        this.allocationStrategy = Input.empty();
-        this.instanceInterruptionBehavior = Input.empty();
-        this.instancePoolsToUseCount = Input.empty();
-        this.maintenanceStrategies = Input.empty();
-        this.maxTotalPrice = Input.empty();
-        this.minTargetCapacity = Input.empty();
-        this.singleAvailabilityZone = Input.empty();
-        this.singleInstanceType = Input.empty();
+        this.allocationStrategy = Output.empty();
+        this.instanceInterruptionBehavior = Output.empty();
+        this.instancePoolsToUseCount = Output.empty();
+        this.maintenanceStrategies = Output.empty();
+        this.maxTotalPrice = Output.empty();
+        this.minTargetCapacity = Output.empty();
+        this.singleAvailabilityZone = Output.empty();
+        this.singleInstanceType = Output.empty();
     }
 
     public static Builder builder() {
@@ -114,14 +114,14 @@ public final class EC2FleetSpotOptionsRequestArgs extends io.pulumi.resources.Re
     }
 
     public static final class Builder {
-        private @Nullable Input<EC2FleetSpotOptionsRequestAllocationStrategy> allocationStrategy;
-        private @Nullable Input<EC2FleetSpotOptionsRequestInstanceInterruptionBehavior> instanceInterruptionBehavior;
-        private @Nullable Input<Integer> instancePoolsToUseCount;
-        private @Nullable Input<EC2FleetMaintenanceStrategiesArgs> maintenanceStrategies;
-        private @Nullable Input<String> maxTotalPrice;
-        private @Nullable Input<Integer> minTargetCapacity;
-        private @Nullable Input<Boolean> singleAvailabilityZone;
-        private @Nullable Input<Boolean> singleInstanceType;
+        private @Nullable Output<EC2FleetSpotOptionsRequestAllocationStrategy> allocationStrategy;
+        private @Nullable Output<EC2FleetSpotOptionsRequestInstanceInterruptionBehavior> instanceInterruptionBehavior;
+        private @Nullable Output<Integer> instancePoolsToUseCount;
+        private @Nullable Output<EC2FleetMaintenanceStrategiesArgs> maintenanceStrategies;
+        private @Nullable Output<String> maxTotalPrice;
+        private @Nullable Output<Integer> minTargetCapacity;
+        private @Nullable Output<Boolean> singleAvailabilityZone;
+        private @Nullable Output<Boolean> singleInstanceType;
 
         public Builder() {
     	      // Empty
@@ -139,83 +139,83 @@ public final class EC2FleetSpotOptionsRequestArgs extends io.pulumi.resources.Re
     	      this.singleInstanceType = defaults.singleInstanceType;
         }
 
-        public Builder allocationStrategy(@Nullable Input<EC2FleetSpotOptionsRequestAllocationStrategy> allocationStrategy) {
+        public Builder allocationStrategy(@Nullable Output<EC2FleetSpotOptionsRequestAllocationStrategy> allocationStrategy) {
             this.allocationStrategy = allocationStrategy;
             return this;
         }
 
         public Builder allocationStrategy(@Nullable EC2FleetSpotOptionsRequestAllocationStrategy allocationStrategy) {
-            this.allocationStrategy = Input.ofNullable(allocationStrategy);
+            this.allocationStrategy = Output.ofNullable(allocationStrategy);
             return this;
         }
 
-        public Builder instanceInterruptionBehavior(@Nullable Input<EC2FleetSpotOptionsRequestInstanceInterruptionBehavior> instanceInterruptionBehavior) {
+        public Builder instanceInterruptionBehavior(@Nullable Output<EC2FleetSpotOptionsRequestInstanceInterruptionBehavior> instanceInterruptionBehavior) {
             this.instanceInterruptionBehavior = instanceInterruptionBehavior;
             return this;
         }
 
         public Builder instanceInterruptionBehavior(@Nullable EC2FleetSpotOptionsRequestInstanceInterruptionBehavior instanceInterruptionBehavior) {
-            this.instanceInterruptionBehavior = Input.ofNullable(instanceInterruptionBehavior);
+            this.instanceInterruptionBehavior = Output.ofNullable(instanceInterruptionBehavior);
             return this;
         }
 
-        public Builder instancePoolsToUseCount(@Nullable Input<Integer> instancePoolsToUseCount) {
+        public Builder instancePoolsToUseCount(@Nullable Output<Integer> instancePoolsToUseCount) {
             this.instancePoolsToUseCount = instancePoolsToUseCount;
             return this;
         }
 
         public Builder instancePoolsToUseCount(@Nullable Integer instancePoolsToUseCount) {
-            this.instancePoolsToUseCount = Input.ofNullable(instancePoolsToUseCount);
+            this.instancePoolsToUseCount = Output.ofNullable(instancePoolsToUseCount);
             return this;
         }
 
-        public Builder maintenanceStrategies(@Nullable Input<EC2FleetMaintenanceStrategiesArgs> maintenanceStrategies) {
+        public Builder maintenanceStrategies(@Nullable Output<EC2FleetMaintenanceStrategiesArgs> maintenanceStrategies) {
             this.maintenanceStrategies = maintenanceStrategies;
             return this;
         }
 
         public Builder maintenanceStrategies(@Nullable EC2FleetMaintenanceStrategiesArgs maintenanceStrategies) {
-            this.maintenanceStrategies = Input.ofNullable(maintenanceStrategies);
+            this.maintenanceStrategies = Output.ofNullable(maintenanceStrategies);
             return this;
         }
 
-        public Builder maxTotalPrice(@Nullable Input<String> maxTotalPrice) {
+        public Builder maxTotalPrice(@Nullable Output<String> maxTotalPrice) {
             this.maxTotalPrice = maxTotalPrice;
             return this;
         }
 
         public Builder maxTotalPrice(@Nullable String maxTotalPrice) {
-            this.maxTotalPrice = Input.ofNullable(maxTotalPrice);
+            this.maxTotalPrice = Output.ofNullable(maxTotalPrice);
             return this;
         }
 
-        public Builder minTargetCapacity(@Nullable Input<Integer> minTargetCapacity) {
+        public Builder minTargetCapacity(@Nullable Output<Integer> minTargetCapacity) {
             this.minTargetCapacity = minTargetCapacity;
             return this;
         }
 
         public Builder minTargetCapacity(@Nullable Integer minTargetCapacity) {
-            this.minTargetCapacity = Input.ofNullable(minTargetCapacity);
+            this.minTargetCapacity = Output.ofNullable(minTargetCapacity);
             return this;
         }
 
-        public Builder singleAvailabilityZone(@Nullable Input<Boolean> singleAvailabilityZone) {
+        public Builder singleAvailabilityZone(@Nullable Output<Boolean> singleAvailabilityZone) {
             this.singleAvailabilityZone = singleAvailabilityZone;
             return this;
         }
 
         public Builder singleAvailabilityZone(@Nullable Boolean singleAvailabilityZone) {
-            this.singleAvailabilityZone = Input.ofNullable(singleAvailabilityZone);
+            this.singleAvailabilityZone = Output.ofNullable(singleAvailabilityZone);
             return this;
         }
 
-        public Builder singleInstanceType(@Nullable Input<Boolean> singleInstanceType) {
+        public Builder singleInstanceType(@Nullable Output<Boolean> singleInstanceType) {
             this.singleInstanceType = singleInstanceType;
             return this;
         }
 
         public Builder singleInstanceType(@Nullable Boolean singleInstanceType) {
-            this.singleInstanceType = Input.ofNullable(singleInstanceType);
+            this.singleInstanceType = Output.ofNullable(singleInstanceType);
             return this;
         }
         public EC2FleetSpotOptionsRequestArgs build() {

@@ -5,7 +5,7 @@ package io.pulumi.azurenative.loadtestservice.inputs;
 
 import io.pulumi.azurenative.loadtestservice.enums.SystemAssignedServiceIdentityType;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -24,18 +24,18 @@ public final class SystemAssignedServiceIdentityArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<Either<String,SystemAssignedServiceIdentityType>> type;
+      private final Output<Either<String,SystemAssignedServiceIdentityType>> type;
 
-    public Input<Either<String,SystemAssignedServiceIdentityType>> getType() {
+    public Output<Either<String,SystemAssignedServiceIdentityType>> getType() {
         return this.type;
     }
 
-    public SystemAssignedServiceIdentityArgs(Input<Either<String,SystemAssignedServiceIdentityType>> type) {
+    public SystemAssignedServiceIdentityArgs(Output<Either<String,SystemAssignedServiceIdentityType>> type) {
         this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
     }
 
     private SystemAssignedServiceIdentityArgs() {
-        this.type = Input.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -47,7 +47,7 @@ public final class SystemAssignedServiceIdentityArgs extends io.pulumi.resources
     }
 
     public static final class Builder {
-        private Input<Either<String,SystemAssignedServiceIdentityType>> type;
+        private Output<Either<String,SystemAssignedServiceIdentityType>> type;
 
         public Builder() {
     	      // Empty
@@ -58,13 +58,13 @@ public final class SystemAssignedServiceIdentityArgs extends io.pulumi.resources
     	      this.type = defaults.type;
         }
 
-        public Builder type(Input<Either<String,SystemAssignedServiceIdentityType>> type) {
+        public Builder type(Output<Either<String,SystemAssignedServiceIdentityType>> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(Either<String,SystemAssignedServiceIdentityType> type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
         public SystemAssignedServiceIdentityArgs build() {

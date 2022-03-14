@@ -4,7 +4,7 @@
 package io.pulumi.aws.networkfirewall.inputs;
 
 import io.pulumi.aws.networkfirewall.inputs.RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCustomActionActionDefinitionGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,9 +19,9 @@ public final class RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCu
      * 
      */
     @InputImport(name="actionDefinition", required=true)
-      private final Input<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCustomActionActionDefinitionGetArgs> actionDefinition;
+      private final Output<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCustomActionActionDefinitionGetArgs> actionDefinition;
 
-    public Input<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCustomActionActionDefinitionGetArgs> getActionDefinition() {
+    public Output<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCustomActionActionDefinitionGetArgs> getActionDefinition() {
         return this.actionDefinition;
     }
 
@@ -30,22 +30,22 @@ public final class RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCu
      * 
      */
     @InputImport(name="actionName", required=true)
-      private final Input<String> actionName;
+      private final Output<String> actionName;
 
-    public Input<String> getActionName() {
+    public Output<String> getActionName() {
         return this.actionName;
     }
 
     public RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCustomActionGetArgs(
-        Input<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCustomActionActionDefinitionGetArgs> actionDefinition,
-        Input<String> actionName) {
+        Output<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCustomActionActionDefinitionGetArgs> actionDefinition,
+        Output<String> actionName) {
         this.actionDefinition = Objects.requireNonNull(actionDefinition, "expected parameter 'actionDefinition' to be non-null");
         this.actionName = Objects.requireNonNull(actionName, "expected parameter 'actionName' to be non-null");
     }
 
     private RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCustomActionGetArgs() {
-        this.actionDefinition = Input.empty();
-        this.actionName = Input.empty();
+        this.actionDefinition = Output.empty();
+        this.actionName = Output.empty();
     }
 
     public static Builder builder() {
@@ -57,8 +57,8 @@ public final class RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCu
     }
 
     public static final class Builder {
-        private Input<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCustomActionActionDefinitionGetArgs> actionDefinition;
-        private Input<String> actionName;
+        private Output<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCustomActionActionDefinitionGetArgs> actionDefinition;
+        private Output<String> actionName;
 
         public Builder() {
     	      // Empty
@@ -70,23 +70,23 @@ public final class RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCu
     	      this.actionName = defaults.actionName;
         }
 
-        public Builder actionDefinition(Input<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCustomActionActionDefinitionGetArgs> actionDefinition) {
+        public Builder actionDefinition(Output<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCustomActionActionDefinitionGetArgs> actionDefinition) {
             this.actionDefinition = Objects.requireNonNull(actionDefinition);
             return this;
         }
 
         public Builder actionDefinition(RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCustomActionActionDefinitionGetArgs actionDefinition) {
-            this.actionDefinition = Input.of(Objects.requireNonNull(actionDefinition));
+            this.actionDefinition = Output.of(Objects.requireNonNull(actionDefinition));
             return this;
         }
 
-        public Builder actionName(Input<String> actionName) {
+        public Builder actionName(Output<String> actionName) {
             this.actionName = Objects.requireNonNull(actionName);
             return this;
         }
 
         public Builder actionName(String actionName) {
-            this.actionName = Input.of(Objects.requireNonNull(actionName));
+            this.actionName = Output.of(Objects.requireNonNull(actionName));
             return this;
         }
         public RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCustomActionGetArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.elasticache.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -16,10 +16,10 @@ public final class ClusterCacheNodeGetArgs extends io.pulumi.resources.ResourceA
     public static final ClusterCacheNodeGetArgs Empty = new ClusterCacheNodeGetArgs();
 
     @InputImport(name="address")
-      private final @Nullable Input<String> address;
+      private final @Nullable Output<String> address;
 
-    public Input<String> getAddress() {
-        return this.address == null ? Input.empty() : this.address;
+    public Output<String> getAddress() {
+        return this.address == null ? Output.empty() : this.address;
     }
 
     /**
@@ -27,17 +27,17 @@ public final class ClusterCacheNodeGetArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="availabilityZone")
-      private final @Nullable Input<String> availabilityZone;
+      private final @Nullable Output<String> availabilityZone;
 
-    public Input<String> getAvailabilityZone() {
-        return this.availabilityZone == null ? Input.empty() : this.availabilityZone;
+    public Output<String> getAvailabilityZone() {
+        return this.availabilityZone == null ? Output.empty() : this.availabilityZone;
     }
 
     @InputImport(name="id")
-      private final @Nullable Input<String> id;
+      private final @Nullable Output<String> id;
 
-    public Input<String> getId() {
-        return this.id == null ? Input.empty() : this.id;
+    public Output<String> getId() {
+        return this.id == null ? Output.empty() : this.id;
     }
 
     /**
@@ -45,17 +45,17 @@ public final class ClusterCacheNodeGetArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="port")
-      private final @Nullable Input<Integer> port;
+      private final @Nullable Output<Integer> port;
 
-    public Input<Integer> getPort() {
-        return this.port == null ? Input.empty() : this.port;
+    public Output<Integer> getPort() {
+        return this.port == null ? Output.empty() : this.port;
     }
 
     public ClusterCacheNodeGetArgs(
-        @Nullable Input<String> address,
-        @Nullable Input<String> availabilityZone,
-        @Nullable Input<String> id,
-        @Nullable Input<Integer> port) {
+        @Nullable Output<String> address,
+        @Nullable Output<String> availabilityZone,
+        @Nullable Output<String> id,
+        @Nullable Output<Integer> port) {
         this.address = address;
         this.availabilityZone = availabilityZone;
         this.id = id;
@@ -63,10 +63,10 @@ public final class ClusterCacheNodeGetArgs extends io.pulumi.resources.ResourceA
     }
 
     private ClusterCacheNodeGetArgs() {
-        this.address = Input.empty();
-        this.availabilityZone = Input.empty();
-        this.id = Input.empty();
-        this.port = Input.empty();
+        this.address = Output.empty();
+        this.availabilityZone = Output.empty();
+        this.id = Output.empty();
+        this.port = Output.empty();
     }
 
     public static Builder builder() {
@@ -78,10 +78,10 @@ public final class ClusterCacheNodeGetArgs extends io.pulumi.resources.ResourceA
     }
 
     public static final class Builder {
-        private @Nullable Input<String> address;
-        private @Nullable Input<String> availabilityZone;
-        private @Nullable Input<String> id;
-        private @Nullable Input<Integer> port;
+        private @Nullable Output<String> address;
+        private @Nullable Output<String> availabilityZone;
+        private @Nullable Output<String> id;
+        private @Nullable Output<Integer> port;
 
         public Builder() {
     	      // Empty
@@ -95,43 +95,43 @@ public final class ClusterCacheNodeGetArgs extends io.pulumi.resources.ResourceA
     	      this.port = defaults.port;
         }
 
-        public Builder address(@Nullable Input<String> address) {
+        public Builder address(@Nullable Output<String> address) {
             this.address = address;
             return this;
         }
 
         public Builder address(@Nullable String address) {
-            this.address = Input.ofNullable(address);
+            this.address = Output.ofNullable(address);
             return this;
         }
 
-        public Builder availabilityZone(@Nullable Input<String> availabilityZone) {
+        public Builder availabilityZone(@Nullable Output<String> availabilityZone) {
             this.availabilityZone = availabilityZone;
             return this;
         }
 
         public Builder availabilityZone(@Nullable String availabilityZone) {
-            this.availabilityZone = Input.ofNullable(availabilityZone);
+            this.availabilityZone = Output.ofNullable(availabilityZone);
             return this;
         }
 
-        public Builder id(@Nullable Input<String> id) {
+        public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
 
         public Builder id(@Nullable String id) {
-            this.id = Input.ofNullable(id);
+            this.id = Output.ofNullable(id);
             return this;
         }
 
-        public Builder port(@Nullable Input<Integer> port) {
+        public Builder port(@Nullable Output<Integer> port) {
             this.port = port;
             return this;
         }
 
         public Builder port(@Nullable Integer port) {
-            this.port = Input.ofNullable(port);
+            this.port = Output.ofNullable(port);
             return this;
         }
         public ClusterCacheNodeGetArgs build() {

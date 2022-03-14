@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.gkehub.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.gkehub.inputs.FeatureMembershipConfigmanagementGetArgs;
 import java.lang.String;
@@ -20,10 +20,10 @@ public final class FeatureMembershipState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="configmanagement")
-      private final @Nullable Input<FeatureMembershipConfigmanagementGetArgs> configmanagement;
+      private final @Nullable Output<FeatureMembershipConfigmanagementGetArgs> configmanagement;
 
-    public Input<FeatureMembershipConfigmanagementGetArgs> getConfigmanagement() {
-        return this.configmanagement == null ? Input.empty() : this.configmanagement;
+    public Output<FeatureMembershipConfigmanagementGetArgs> getConfigmanagement() {
+        return this.configmanagement == null ? Output.empty() : this.configmanagement;
     }
 
     /**
@@ -31,10 +31,10 @@ public final class FeatureMembershipState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="feature")
-      private final @Nullable Input<String> feature;
+      private final @Nullable Output<String> feature;
 
-    public Input<String> getFeature() {
-        return this.feature == null ? Input.empty() : this.feature;
+    public Output<String> getFeature() {
+        return this.feature == null ? Output.empty() : this.feature;
     }
 
     /**
@@ -42,10 +42,10 @@ public final class FeatureMembershipState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -53,10 +53,10 @@ public final class FeatureMembershipState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="membership")
-      private final @Nullable Input<String> membership;
+      private final @Nullable Output<String> membership;
 
-    public Input<String> getMembership() {
-        return this.membership == null ? Input.empty() : this.membership;
+    public Output<String> getMembership() {
+        return this.membership == null ? Output.empty() : this.membership;
     }
 
     /**
@@ -64,18 +64,18 @@ public final class FeatureMembershipState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     public FeatureMembershipState(
-        @Nullable Input<FeatureMembershipConfigmanagementGetArgs> configmanagement,
-        @Nullable Input<String> feature,
-        @Nullable Input<String> location,
-        @Nullable Input<String> membership,
-        @Nullable Input<String> project) {
+        @Nullable Output<FeatureMembershipConfigmanagementGetArgs> configmanagement,
+        @Nullable Output<String> feature,
+        @Nullable Output<String> location,
+        @Nullable Output<String> membership,
+        @Nullable Output<String> project) {
         this.configmanagement = configmanagement;
         this.feature = feature;
         this.location = location;
@@ -84,11 +84,11 @@ public final class FeatureMembershipState extends io.pulumi.resources.ResourceAr
     }
 
     private FeatureMembershipState() {
-        this.configmanagement = Input.empty();
-        this.feature = Input.empty();
-        this.location = Input.empty();
-        this.membership = Input.empty();
-        this.project = Input.empty();
+        this.configmanagement = Output.empty();
+        this.feature = Output.empty();
+        this.location = Output.empty();
+        this.membership = Output.empty();
+        this.project = Output.empty();
     }
 
     public static Builder builder() {
@@ -100,11 +100,11 @@ public final class FeatureMembershipState extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private @Nullable Input<FeatureMembershipConfigmanagementGetArgs> configmanagement;
-        private @Nullable Input<String> feature;
-        private @Nullable Input<String> location;
-        private @Nullable Input<String> membership;
-        private @Nullable Input<String> project;
+        private @Nullable Output<FeatureMembershipConfigmanagementGetArgs> configmanagement;
+        private @Nullable Output<String> feature;
+        private @Nullable Output<String> location;
+        private @Nullable Output<String> membership;
+        private @Nullable Output<String> project;
 
         public Builder() {
     	      // Empty
@@ -119,53 +119,53 @@ public final class FeatureMembershipState extends io.pulumi.resources.ResourceAr
     	      this.project = defaults.project;
         }
 
-        public Builder configmanagement(@Nullable Input<FeatureMembershipConfigmanagementGetArgs> configmanagement) {
+        public Builder configmanagement(@Nullable Output<FeatureMembershipConfigmanagementGetArgs> configmanagement) {
             this.configmanagement = configmanagement;
             return this;
         }
 
         public Builder configmanagement(@Nullable FeatureMembershipConfigmanagementGetArgs configmanagement) {
-            this.configmanagement = Input.ofNullable(configmanagement);
+            this.configmanagement = Output.ofNullable(configmanagement);
             return this;
         }
 
-        public Builder feature(@Nullable Input<String> feature) {
+        public Builder feature(@Nullable Output<String> feature) {
             this.feature = feature;
             return this;
         }
 
         public Builder feature(@Nullable String feature) {
-            this.feature = Input.ofNullable(feature);
+            this.feature = Output.ofNullable(feature);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder membership(@Nullable Input<String> membership) {
+        public Builder membership(@Nullable Output<String> membership) {
             this.membership = membership;
             return this;
         }
 
         public Builder membership(@Nullable String membership) {
-            this.membership = Input.ofNullable(membership);
+            this.membership = Output.ofNullable(membership);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
         public FeatureMembershipState build() {

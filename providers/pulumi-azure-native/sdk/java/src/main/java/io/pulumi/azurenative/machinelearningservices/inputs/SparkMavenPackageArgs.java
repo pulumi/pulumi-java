@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.machinelearningservices.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -15,39 +15,39 @@ public final class SparkMavenPackageArgs extends io.pulumi.resources.ResourceArg
     public static final SparkMavenPackageArgs Empty = new SparkMavenPackageArgs();
 
     @InputImport(name="artifact")
-      private final @Nullable Input<String> artifact;
+      private final @Nullable Output<String> artifact;
 
-    public Input<String> getArtifact() {
-        return this.artifact == null ? Input.empty() : this.artifact;
+    public Output<String> getArtifact() {
+        return this.artifact == null ? Output.empty() : this.artifact;
     }
 
     @InputImport(name="group")
-      private final @Nullable Input<String> group;
+      private final @Nullable Output<String> group;
 
-    public Input<String> getGroup() {
-        return this.group == null ? Input.empty() : this.group;
+    public Output<String> getGroup() {
+        return this.group == null ? Output.empty() : this.group;
     }
 
     @InputImport(name="version")
-      private final @Nullable Input<String> version;
+      private final @Nullable Output<String> version;
 
-    public Input<String> getVersion() {
-        return this.version == null ? Input.empty() : this.version;
+    public Output<String> getVersion() {
+        return this.version == null ? Output.empty() : this.version;
     }
 
     public SparkMavenPackageArgs(
-        @Nullable Input<String> artifact,
-        @Nullable Input<String> group,
-        @Nullable Input<String> version) {
+        @Nullable Output<String> artifact,
+        @Nullable Output<String> group,
+        @Nullable Output<String> version) {
         this.artifact = artifact;
         this.group = group;
         this.version = version;
     }
 
     private SparkMavenPackageArgs() {
-        this.artifact = Input.empty();
-        this.group = Input.empty();
-        this.version = Input.empty();
+        this.artifact = Output.empty();
+        this.group = Output.empty();
+        this.version = Output.empty();
     }
 
     public static Builder builder() {
@@ -59,9 +59,9 @@ public final class SparkMavenPackageArgs extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private @Nullable Input<String> artifact;
-        private @Nullable Input<String> group;
-        private @Nullable Input<String> version;
+        private @Nullable Output<String> artifact;
+        private @Nullable Output<String> group;
+        private @Nullable Output<String> version;
 
         public Builder() {
     	      // Empty
@@ -74,33 +74,33 @@ public final class SparkMavenPackageArgs extends io.pulumi.resources.ResourceArg
     	      this.version = defaults.version;
         }
 
-        public Builder artifact(@Nullable Input<String> artifact) {
+        public Builder artifact(@Nullable Output<String> artifact) {
             this.artifact = artifact;
             return this;
         }
 
         public Builder artifact(@Nullable String artifact) {
-            this.artifact = Input.ofNullable(artifact);
+            this.artifact = Output.ofNullable(artifact);
             return this;
         }
 
-        public Builder group(@Nullable Input<String> group) {
+        public Builder group(@Nullable Output<String> group) {
             this.group = group;
             return this;
         }
 
         public Builder group(@Nullable String group) {
-            this.group = Input.ofNullable(group);
+            this.group = Output.ofNullable(group);
             return this;
         }
 
-        public Builder version(@Nullable Input<String> version) {
+        public Builder version(@Nullable Output<String> version) {
             this.version = version;
             return this;
         }
 
         public Builder version(@Nullable String version) {
-            this.version = Input.ofNullable(version);
+            this.version = Output.ofNullable(version);
             return this;
         }
         public SparkMavenPackageArgs build() {

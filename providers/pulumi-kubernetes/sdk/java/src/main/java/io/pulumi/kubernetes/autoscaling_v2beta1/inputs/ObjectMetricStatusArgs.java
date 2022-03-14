@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.autoscaling_v2beta1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.kubernetes.autoscaling_v2beta1.inputs.CrossVersionObjectReferenceArgs;
 import io.pulumi.kubernetes.meta_v1.inputs.LabelSelectorArgs;
@@ -25,10 +25,10 @@ public final class ObjectMetricStatusArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="averageValue")
-      private final @Nullable Input<String> averageValue;
+      private final @Nullable Output<String> averageValue;
 
-    public Input<String> getAverageValue() {
-        return this.averageValue == null ? Input.empty() : this.averageValue;
+    public Output<String> getAverageValue() {
+        return this.averageValue == null ? Output.empty() : this.averageValue;
     }
 
     /**
@@ -36,9 +36,9 @@ public final class ObjectMetricStatusArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="currentValue", required=true)
-      private final Input<String> currentValue;
+      private final Output<String> currentValue;
 
-    public Input<String> getCurrentValue() {
+    public Output<String> getCurrentValue() {
         return this.currentValue;
     }
 
@@ -47,9 +47,9 @@ public final class ObjectMetricStatusArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="metricName", required=true)
-      private final Input<String> metricName;
+      private final Output<String> metricName;
 
-    public Input<String> getMetricName() {
+    public Output<String> getMetricName() {
         return this.metricName;
     }
 
@@ -58,10 +58,10 @@ public final class ObjectMetricStatusArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="selector")
-      private final @Nullable Input<LabelSelectorArgs> selector;
+      private final @Nullable Output<LabelSelectorArgs> selector;
 
-    public Input<LabelSelectorArgs> getSelector() {
-        return this.selector == null ? Input.empty() : this.selector;
+    public Output<LabelSelectorArgs> getSelector() {
+        return this.selector == null ? Output.empty() : this.selector;
     }
 
     /**
@@ -69,18 +69,18 @@ public final class ObjectMetricStatusArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="target", required=true)
-      private final Input<CrossVersionObjectReferenceArgs> target;
+      private final Output<CrossVersionObjectReferenceArgs> target;
 
-    public Input<CrossVersionObjectReferenceArgs> getTarget() {
+    public Output<CrossVersionObjectReferenceArgs> getTarget() {
         return this.target;
     }
 
     public ObjectMetricStatusArgs(
-        @Nullable Input<String> averageValue,
-        Input<String> currentValue,
-        Input<String> metricName,
-        @Nullable Input<LabelSelectorArgs> selector,
-        Input<CrossVersionObjectReferenceArgs> target) {
+        @Nullable Output<String> averageValue,
+        Output<String> currentValue,
+        Output<String> metricName,
+        @Nullable Output<LabelSelectorArgs> selector,
+        Output<CrossVersionObjectReferenceArgs> target) {
         this.averageValue = averageValue;
         this.currentValue = Objects.requireNonNull(currentValue, "expected parameter 'currentValue' to be non-null");
         this.metricName = Objects.requireNonNull(metricName, "expected parameter 'metricName' to be non-null");
@@ -89,11 +89,11 @@ public final class ObjectMetricStatusArgs extends io.pulumi.resources.ResourceAr
     }
 
     private ObjectMetricStatusArgs() {
-        this.averageValue = Input.empty();
-        this.currentValue = Input.empty();
-        this.metricName = Input.empty();
-        this.selector = Input.empty();
-        this.target = Input.empty();
+        this.averageValue = Output.empty();
+        this.currentValue = Output.empty();
+        this.metricName = Output.empty();
+        this.selector = Output.empty();
+        this.target = Output.empty();
     }
 
     public static Builder builder() {
@@ -105,11 +105,11 @@ public final class ObjectMetricStatusArgs extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private @Nullable Input<String> averageValue;
-        private Input<String> currentValue;
-        private Input<String> metricName;
-        private @Nullable Input<LabelSelectorArgs> selector;
-        private Input<CrossVersionObjectReferenceArgs> target;
+        private @Nullable Output<String> averageValue;
+        private Output<String> currentValue;
+        private Output<String> metricName;
+        private @Nullable Output<LabelSelectorArgs> selector;
+        private Output<CrossVersionObjectReferenceArgs> target;
 
         public Builder() {
     	      // Empty
@@ -124,53 +124,53 @@ public final class ObjectMetricStatusArgs extends io.pulumi.resources.ResourceAr
     	      this.target = defaults.target;
         }
 
-        public Builder averageValue(@Nullable Input<String> averageValue) {
+        public Builder averageValue(@Nullable Output<String> averageValue) {
             this.averageValue = averageValue;
             return this;
         }
 
         public Builder averageValue(@Nullable String averageValue) {
-            this.averageValue = Input.ofNullable(averageValue);
+            this.averageValue = Output.ofNullable(averageValue);
             return this;
         }
 
-        public Builder currentValue(Input<String> currentValue) {
+        public Builder currentValue(Output<String> currentValue) {
             this.currentValue = Objects.requireNonNull(currentValue);
             return this;
         }
 
         public Builder currentValue(String currentValue) {
-            this.currentValue = Input.of(Objects.requireNonNull(currentValue));
+            this.currentValue = Output.of(Objects.requireNonNull(currentValue));
             return this;
         }
 
-        public Builder metricName(Input<String> metricName) {
+        public Builder metricName(Output<String> metricName) {
             this.metricName = Objects.requireNonNull(metricName);
             return this;
         }
 
         public Builder metricName(String metricName) {
-            this.metricName = Input.of(Objects.requireNonNull(metricName));
+            this.metricName = Output.of(Objects.requireNonNull(metricName));
             return this;
         }
 
-        public Builder selector(@Nullable Input<LabelSelectorArgs> selector) {
+        public Builder selector(@Nullable Output<LabelSelectorArgs> selector) {
             this.selector = selector;
             return this;
         }
 
         public Builder selector(@Nullable LabelSelectorArgs selector) {
-            this.selector = Input.ofNullable(selector);
+            this.selector = Output.ofNullable(selector);
             return this;
         }
 
-        public Builder target(Input<CrossVersionObjectReferenceArgs> target) {
+        public Builder target(Output<CrossVersionObjectReferenceArgs> target) {
             this.target = Objects.requireNonNull(target);
             return this;
         }
 
         public Builder target(CrossVersionObjectReferenceArgs target) {
-            this.target = Input.of(Objects.requireNonNull(target));
+            this.target = Output.of(Objects.requireNonNull(target));
             return this;
         }
         public ObjectMetricStatusArgs build() {

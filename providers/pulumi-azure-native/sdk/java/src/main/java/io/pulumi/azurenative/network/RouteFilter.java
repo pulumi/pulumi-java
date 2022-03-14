@@ -8,7 +8,6 @@ import io.pulumi.azurenative.network.RouteFilterArgs;
 import io.pulumi.azurenative.network.outputs.ExpressRouteCircuitPeeringResponse;
 import io.pulumi.azurenative.network.outputs.RouteFilterRuleResponse;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -199,51 +198,51 @@ public class RouteFilter extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public RouteFilter(String name, RouteFilterArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:network:RouteFilter", name, args == null ? RouteFilterArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("azure-native:network:RouteFilter", name, args == null ? RouteFilterArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private RouteFilter(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private RouteFilter(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:network:RouteFilter", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:network/v20161201:RouteFilter").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20170301:RouteFilter").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20170601:RouteFilter").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20170801:RouteFilter").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20170901:RouteFilter").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20171001:RouteFilter").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20171101:RouteFilter").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20180101:RouteFilter").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20180201:RouteFilter").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20180401:RouteFilter").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20180601:RouteFilter").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20180701:RouteFilter").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20180801:RouteFilter").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20181001:RouteFilter").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20181101:RouteFilter").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20181201:RouteFilter").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20190201:RouteFilter").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20190401:RouteFilter").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20190601:RouteFilter").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20190701:RouteFilter").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20190801:RouteFilter").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20190901:RouteFilter").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20191101:RouteFilter").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20191201:RouteFilter").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20200301:RouteFilter").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20200401:RouteFilter").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20200501:RouteFilter").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20200601:RouteFilter").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20200701:RouteFilter").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20200801:RouteFilter").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20201101:RouteFilter").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20210201:RouteFilter").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20210301:RouteFilter").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20210501:RouteFilter").build())
+                Output.of(Alias.builder().setType("azure-native:network/v20161201:RouteFilter").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20170301:RouteFilter").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20170601:RouteFilter").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20170801:RouteFilter").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20170901:RouteFilter").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20171001:RouteFilter").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20171101:RouteFilter").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20180101:RouteFilter").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20180201:RouteFilter").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20180401:RouteFilter").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20180601:RouteFilter").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20180701:RouteFilter").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20180801:RouteFilter").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20181001:RouteFilter").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20181101:RouteFilter").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20181201:RouteFilter").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20190201:RouteFilter").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20190401:RouteFilter").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20190601:RouteFilter").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20190701:RouteFilter").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20190801:RouteFilter").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20190901:RouteFilter").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20191101:RouteFilter").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20191201:RouteFilter").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20200301:RouteFilter").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20200401:RouteFilter").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20200501:RouteFilter").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20200601:RouteFilter").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20200701:RouteFilter").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20200801:RouteFilter").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20201101:RouteFilter").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20210201:RouteFilter").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20210301:RouteFilter").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20210501:RouteFilter").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -257,7 +256,7 @@ public class RouteFilter extends io.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static RouteFilter get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static RouteFilter get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new RouteFilter(name, id, options);
     }
 }

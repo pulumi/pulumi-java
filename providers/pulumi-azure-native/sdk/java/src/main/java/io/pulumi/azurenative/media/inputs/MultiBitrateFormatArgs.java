@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.media.inputs;
 
 import io.pulumi.azurenative.media.inputs.OutputFileArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -25,9 +25,9 @@ public final class MultiBitrateFormatArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="filenamePattern", required=true)
-      private final Input<String> filenamePattern;
+      private final Output<String> filenamePattern;
 
-    public Input<String> getFilenamePattern() {
+    public Output<String> getFilenamePattern() {
         return this.filenamePattern;
     }
 
@@ -37,9 +37,9 @@ public final class MultiBitrateFormatArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="odataType", required=true)
-      private final Input<String> odataType;
+      private final Output<String> odataType;
 
-    public Input<String> getOdataType() {
+    public Output<String> getOdataType() {
         return this.odataType;
     }
 
@@ -48,25 +48,25 @@ public final class MultiBitrateFormatArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="outputFiles")
-      private final @Nullable Input<List<OutputFileArgs>> outputFiles;
+      private final @Nullable Output<List<OutputFileArgs>> outputFiles;
 
-    public Input<List<OutputFileArgs>> getOutputFiles() {
-        return this.outputFiles == null ? Input.empty() : this.outputFiles;
+    public Output<List<OutputFileArgs>> getOutputFiles() {
+        return this.outputFiles == null ? Output.empty() : this.outputFiles;
     }
 
     public MultiBitrateFormatArgs(
-        Input<String> filenamePattern,
-        Input<String> odataType,
-        @Nullable Input<List<OutputFileArgs>> outputFiles) {
+        Output<String> filenamePattern,
+        Output<String> odataType,
+        @Nullable Output<List<OutputFileArgs>> outputFiles) {
         this.filenamePattern = Objects.requireNonNull(filenamePattern, "expected parameter 'filenamePattern' to be non-null");
         this.odataType = Objects.requireNonNull(odataType, "expected parameter 'odataType' to be non-null");
         this.outputFiles = outputFiles;
     }
 
     private MultiBitrateFormatArgs() {
-        this.filenamePattern = Input.empty();
-        this.odataType = Input.empty();
-        this.outputFiles = Input.empty();
+        this.filenamePattern = Output.empty();
+        this.odataType = Output.empty();
+        this.outputFiles = Output.empty();
     }
 
     public static Builder builder() {
@@ -78,9 +78,9 @@ public final class MultiBitrateFormatArgs extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private Input<String> filenamePattern;
-        private Input<String> odataType;
-        private @Nullable Input<List<OutputFileArgs>> outputFiles;
+        private Output<String> filenamePattern;
+        private Output<String> odataType;
+        private @Nullable Output<List<OutputFileArgs>> outputFiles;
 
         public Builder() {
     	      // Empty
@@ -93,33 +93,33 @@ public final class MultiBitrateFormatArgs extends io.pulumi.resources.ResourceAr
     	      this.outputFiles = defaults.outputFiles;
         }
 
-        public Builder filenamePattern(Input<String> filenamePattern) {
+        public Builder filenamePattern(Output<String> filenamePattern) {
             this.filenamePattern = Objects.requireNonNull(filenamePattern);
             return this;
         }
 
         public Builder filenamePattern(String filenamePattern) {
-            this.filenamePattern = Input.of(Objects.requireNonNull(filenamePattern));
+            this.filenamePattern = Output.of(Objects.requireNonNull(filenamePattern));
             return this;
         }
 
-        public Builder odataType(Input<String> odataType) {
+        public Builder odataType(Output<String> odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
 
         public Builder odataType(String odataType) {
-            this.odataType = Input.of(Objects.requireNonNull(odataType));
+            this.odataType = Output.of(Objects.requireNonNull(odataType));
             return this;
         }
 
-        public Builder outputFiles(@Nullable Input<List<OutputFileArgs>> outputFiles) {
+        public Builder outputFiles(@Nullable Output<List<OutputFileArgs>> outputFiles) {
             this.outputFiles = outputFiles;
             return this;
         }
 
         public Builder outputFiles(@Nullable List<OutputFileArgs> outputFiles) {
-            this.outputFiles = Input.ofNullable(outputFiles);
+            this.outputFiles = Output.ofNullable(outputFiles);
             return this;
         }
         public MultiBitrateFormatArgs build() {

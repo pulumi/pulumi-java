@@ -16,7 +16,6 @@ import io.pulumi.aws.cloudfront.outputs.DistributionRestrictions;
 import io.pulumi.aws.cloudfront.outputs.DistributionTrustedKeyGroup;
 import io.pulumi.aws.cloudfront.outputs.DistributionTrustedSigner;
 import io.pulumi.aws.cloudfront.outputs.DistributionViewerCertificate;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -584,14 +583,14 @@ public class Distribution extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Distribution(String name, DistributionArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:cloudfront/distribution:Distribution", name, args == null ? DistributionArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws:cloudfront/distribution:Distribution", name, args == null ? DistributionArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private Distribution(String name, Input<String> id, @Nullable DistributionState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private Distribution(String name, Output<String> id, @Nullable DistributionState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws:cloudfront/distribution:Distribution", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -607,7 +606,7 @@ public class Distribution extends io.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static Distribution get(String name, Input<String> id, @Nullable DistributionState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static Distribution get(String name, Output<String> id, @Nullable DistributionState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Distribution(name, id, state, options);
     }
 }

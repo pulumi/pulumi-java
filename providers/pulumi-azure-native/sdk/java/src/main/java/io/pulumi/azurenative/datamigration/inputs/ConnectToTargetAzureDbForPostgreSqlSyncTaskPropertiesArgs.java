@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.datamigration.inputs;
 
 import io.pulumi.azurenative.datamigration.inputs.ConnectToTargetAzureDbForPostgreSqlSyncTaskInputArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -24,10 +24,10 @@ public final class ConnectToTargetAzureDbForPostgreSqlSyncTaskPropertiesArgs ext
      * 
      */
     @InputImport(name="input")
-      private final @Nullable Input<ConnectToTargetAzureDbForPostgreSqlSyncTaskInputArgs> input;
+      private final @Nullable Output<ConnectToTargetAzureDbForPostgreSqlSyncTaskInputArgs> input;
 
-    public Input<ConnectToTargetAzureDbForPostgreSqlSyncTaskInputArgs> getInput() {
-        return this.input == null ? Input.empty() : this.input;
+    public Output<ConnectToTargetAzureDbForPostgreSqlSyncTaskInputArgs> getInput() {
+        return this.input == null ? Output.empty() : this.input;
     }
 
     /**
@@ -36,22 +36,22 @@ public final class ConnectToTargetAzureDbForPostgreSqlSyncTaskPropertiesArgs ext
      * 
      */
     @InputImport(name="taskType", required=true)
-      private final Input<String> taskType;
+      private final Output<String> taskType;
 
-    public Input<String> getTaskType() {
+    public Output<String> getTaskType() {
         return this.taskType;
     }
 
     public ConnectToTargetAzureDbForPostgreSqlSyncTaskPropertiesArgs(
-        @Nullable Input<ConnectToTargetAzureDbForPostgreSqlSyncTaskInputArgs> input,
-        Input<String> taskType) {
+        @Nullable Output<ConnectToTargetAzureDbForPostgreSqlSyncTaskInputArgs> input,
+        Output<String> taskType) {
         this.input = input;
         this.taskType = Objects.requireNonNull(taskType, "expected parameter 'taskType' to be non-null");
     }
 
     private ConnectToTargetAzureDbForPostgreSqlSyncTaskPropertiesArgs() {
-        this.input = Input.empty();
-        this.taskType = Input.empty();
+        this.input = Output.empty();
+        this.taskType = Output.empty();
     }
 
     public static Builder builder() {
@@ -63,8 +63,8 @@ public final class ConnectToTargetAzureDbForPostgreSqlSyncTaskPropertiesArgs ext
     }
 
     public static final class Builder {
-        private @Nullable Input<ConnectToTargetAzureDbForPostgreSqlSyncTaskInputArgs> input;
-        private Input<String> taskType;
+        private @Nullable Output<ConnectToTargetAzureDbForPostgreSqlSyncTaskInputArgs> input;
+        private Output<String> taskType;
 
         public Builder() {
     	      // Empty
@@ -76,23 +76,23 @@ public final class ConnectToTargetAzureDbForPostgreSqlSyncTaskPropertiesArgs ext
     	      this.taskType = defaults.taskType;
         }
 
-        public Builder input(@Nullable Input<ConnectToTargetAzureDbForPostgreSqlSyncTaskInputArgs> input) {
+        public Builder input(@Nullable Output<ConnectToTargetAzureDbForPostgreSqlSyncTaskInputArgs> input) {
             this.input = input;
             return this;
         }
 
         public Builder input(@Nullable ConnectToTargetAzureDbForPostgreSqlSyncTaskInputArgs input) {
-            this.input = Input.ofNullable(input);
+            this.input = Output.ofNullable(input);
             return this;
         }
 
-        public Builder taskType(Input<String> taskType) {
+        public Builder taskType(Output<String> taskType) {
             this.taskType = Objects.requireNonNull(taskType);
             return this;
         }
 
         public Builder taskType(String taskType) {
-            this.taskType = Input.of(Objects.requireNonNull(taskType));
+            this.taskType = Output.of(Objects.requireNonNull(taskType));
             return this;
         }
         public ConnectToTargetAzureDbForPostgreSqlSyncTaskPropertiesArgs build() {

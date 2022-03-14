@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dlp_v2.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2KmsWrappedCryptoKeyArgs;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2TransientCryptoKeyArgs;
@@ -25,10 +25,10 @@ public final class GooglePrivacyDlpV2CryptoKeyArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="kmsWrapped")
-      private final @Nullable Input<GooglePrivacyDlpV2KmsWrappedCryptoKeyArgs> kmsWrapped;
+      private final @Nullable Output<GooglePrivacyDlpV2KmsWrappedCryptoKeyArgs> kmsWrapped;
 
-    public Input<GooglePrivacyDlpV2KmsWrappedCryptoKeyArgs> getKmsWrapped() {
-        return this.kmsWrapped == null ? Input.empty() : this.kmsWrapped;
+    public Output<GooglePrivacyDlpV2KmsWrappedCryptoKeyArgs> getKmsWrapped() {
+        return this.kmsWrapped == null ? Output.empty() : this.kmsWrapped;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class GooglePrivacyDlpV2CryptoKeyArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="transient")
-      private final @Nullable Input<GooglePrivacyDlpV2TransientCryptoKeyArgs> $transient;
+      private final @Nullable Output<GooglePrivacyDlpV2TransientCryptoKeyArgs> $transient;
 
-    public Input<GooglePrivacyDlpV2TransientCryptoKeyArgs> get$transient() {
-        return this.$transient == null ? Input.empty() : this.$transient;
+    public Output<GooglePrivacyDlpV2TransientCryptoKeyArgs> get$transient() {
+        return this.$transient == null ? Output.empty() : this.$transient;
     }
 
     /**
@@ -47,25 +47,25 @@ public final class GooglePrivacyDlpV2CryptoKeyArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="unwrapped")
-      private final @Nullable Input<GooglePrivacyDlpV2UnwrappedCryptoKeyArgs> unwrapped;
+      private final @Nullable Output<GooglePrivacyDlpV2UnwrappedCryptoKeyArgs> unwrapped;
 
-    public Input<GooglePrivacyDlpV2UnwrappedCryptoKeyArgs> getUnwrapped() {
-        return this.unwrapped == null ? Input.empty() : this.unwrapped;
+    public Output<GooglePrivacyDlpV2UnwrappedCryptoKeyArgs> getUnwrapped() {
+        return this.unwrapped == null ? Output.empty() : this.unwrapped;
     }
 
     public GooglePrivacyDlpV2CryptoKeyArgs(
-        @Nullable Input<GooglePrivacyDlpV2KmsWrappedCryptoKeyArgs> kmsWrapped,
-        @Nullable Input<GooglePrivacyDlpV2TransientCryptoKeyArgs> $transient,
-        @Nullable Input<GooglePrivacyDlpV2UnwrappedCryptoKeyArgs> unwrapped) {
+        @Nullable Output<GooglePrivacyDlpV2KmsWrappedCryptoKeyArgs> kmsWrapped,
+        @Nullable Output<GooglePrivacyDlpV2TransientCryptoKeyArgs> $transient,
+        @Nullable Output<GooglePrivacyDlpV2UnwrappedCryptoKeyArgs> unwrapped) {
         this.kmsWrapped = kmsWrapped;
         this.$transient = $transient;
         this.unwrapped = unwrapped;
     }
 
     private GooglePrivacyDlpV2CryptoKeyArgs() {
-        this.kmsWrapped = Input.empty();
-        this.$transient = Input.empty();
-        this.unwrapped = Input.empty();
+        this.kmsWrapped = Output.empty();
+        this.$transient = Output.empty();
+        this.unwrapped = Output.empty();
     }
 
     public static Builder builder() {
@@ -77,9 +77,9 @@ public final class GooglePrivacyDlpV2CryptoKeyArgs extends io.pulumi.resources.R
     }
 
     public static final class Builder {
-        private @Nullable Input<GooglePrivacyDlpV2KmsWrappedCryptoKeyArgs> kmsWrapped;
-        private @Nullable Input<GooglePrivacyDlpV2TransientCryptoKeyArgs> $transient;
-        private @Nullable Input<GooglePrivacyDlpV2UnwrappedCryptoKeyArgs> unwrapped;
+        private @Nullable Output<GooglePrivacyDlpV2KmsWrappedCryptoKeyArgs> kmsWrapped;
+        private @Nullable Output<GooglePrivacyDlpV2TransientCryptoKeyArgs> $transient;
+        private @Nullable Output<GooglePrivacyDlpV2UnwrappedCryptoKeyArgs> unwrapped;
 
         public Builder() {
     	      // Empty
@@ -92,33 +92,33 @@ public final class GooglePrivacyDlpV2CryptoKeyArgs extends io.pulumi.resources.R
     	      this.unwrapped = defaults.unwrapped;
         }
 
-        public Builder kmsWrapped(@Nullable Input<GooglePrivacyDlpV2KmsWrappedCryptoKeyArgs> kmsWrapped) {
+        public Builder kmsWrapped(@Nullable Output<GooglePrivacyDlpV2KmsWrappedCryptoKeyArgs> kmsWrapped) {
             this.kmsWrapped = kmsWrapped;
             return this;
         }
 
         public Builder kmsWrapped(@Nullable GooglePrivacyDlpV2KmsWrappedCryptoKeyArgs kmsWrapped) {
-            this.kmsWrapped = Input.ofNullable(kmsWrapped);
+            this.kmsWrapped = Output.ofNullable(kmsWrapped);
             return this;
         }
 
-        public Builder $transient(@Nullable Input<GooglePrivacyDlpV2TransientCryptoKeyArgs> $transient) {
+        public Builder $transient(@Nullable Output<GooglePrivacyDlpV2TransientCryptoKeyArgs> $transient) {
             this.$transient = $transient;
             return this;
         }
 
         public Builder $transient(@Nullable GooglePrivacyDlpV2TransientCryptoKeyArgs $transient) {
-            this.$transient = Input.ofNullable($transient);
+            this.$transient = Output.ofNullable($transient);
             return this;
         }
 
-        public Builder unwrapped(@Nullable Input<GooglePrivacyDlpV2UnwrappedCryptoKeyArgs> unwrapped) {
+        public Builder unwrapped(@Nullable Output<GooglePrivacyDlpV2UnwrappedCryptoKeyArgs> unwrapped) {
             this.unwrapped = unwrapped;
             return this;
         }
 
         public Builder unwrapped(@Nullable GooglePrivacyDlpV2UnwrappedCryptoKeyArgs unwrapped) {
-            this.unwrapped = Input.ofNullable(unwrapped);
+            this.unwrapped = Output.ofNullable(unwrapped);
             return this;
         }
         public GooglePrivacyDlpV2CryptoKeyArgs build() {

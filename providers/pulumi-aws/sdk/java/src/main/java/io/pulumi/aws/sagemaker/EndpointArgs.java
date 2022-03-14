@@ -4,7 +4,7 @@
 package io.pulumi.aws.sagemaker;
 
 import io.pulumi.aws.sagemaker.inputs.EndpointDeploymentConfigArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -21,10 +21,10 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="deploymentConfig")
-      private final @Nullable Input<EndpointDeploymentConfigArgs> deploymentConfig;
+      private final @Nullable Output<EndpointDeploymentConfigArgs> deploymentConfig;
 
-    public Input<EndpointDeploymentConfigArgs> getDeploymentConfig() {
-        return this.deploymentConfig == null ? Input.empty() : this.deploymentConfig;
+    public Output<EndpointDeploymentConfigArgs> getDeploymentConfig() {
+        return this.deploymentConfig == null ? Output.empty() : this.deploymentConfig;
     }
 
     /**
@@ -32,9 +32,9 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="endpointConfigName", required=true)
-      private final Input<String> endpointConfigName;
+      private final Output<String> endpointConfigName;
 
-    public Input<String> getEndpointConfigName() {
+    public Output<String> getEndpointConfigName() {
         return this.endpointConfigName;
     }
 
@@ -43,10 +43,10 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -54,17 +54,17 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public EndpointArgs(
-        @Nullable Input<EndpointDeploymentConfigArgs> deploymentConfig,
-        Input<String> endpointConfigName,
-        @Nullable Input<String> name,
-        @Nullable Input<Map<String,String>> tags) {
+        @Nullable Output<EndpointDeploymentConfigArgs> deploymentConfig,
+        Output<String> endpointConfigName,
+        @Nullable Output<String> name,
+        @Nullable Output<Map<String,String>> tags) {
         this.deploymentConfig = deploymentConfig;
         this.endpointConfigName = Objects.requireNonNull(endpointConfigName, "expected parameter 'endpointConfigName' to be non-null");
         this.name = name;
@@ -72,10 +72,10 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private EndpointArgs() {
-        this.deploymentConfig = Input.empty();
-        this.endpointConfigName = Input.empty();
-        this.name = Input.empty();
-        this.tags = Input.empty();
+        this.deploymentConfig = Output.empty();
+        this.endpointConfigName = Output.empty();
+        this.name = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -87,10 +87,10 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<EndpointDeploymentConfigArgs> deploymentConfig;
-        private Input<String> endpointConfigName;
-        private @Nullable Input<String> name;
-        private @Nullable Input<Map<String,String>> tags;
+        private @Nullable Output<EndpointDeploymentConfigArgs> deploymentConfig;
+        private Output<String> endpointConfigName;
+        private @Nullable Output<String> name;
+        private @Nullable Output<Map<String,String>> tags;
 
         public Builder() {
     	      // Empty
@@ -104,43 +104,43 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder deploymentConfig(@Nullable Input<EndpointDeploymentConfigArgs> deploymentConfig) {
+        public Builder deploymentConfig(@Nullable Output<EndpointDeploymentConfigArgs> deploymentConfig) {
             this.deploymentConfig = deploymentConfig;
             return this;
         }
 
         public Builder deploymentConfig(@Nullable EndpointDeploymentConfigArgs deploymentConfig) {
-            this.deploymentConfig = Input.ofNullable(deploymentConfig);
+            this.deploymentConfig = Output.ofNullable(deploymentConfig);
             return this;
         }
 
-        public Builder endpointConfigName(Input<String> endpointConfigName) {
+        public Builder endpointConfigName(Output<String> endpointConfigName) {
             this.endpointConfigName = Objects.requireNonNull(endpointConfigName);
             return this;
         }
 
         public Builder endpointConfigName(String endpointConfigName) {
-            this.endpointConfigName = Input.of(Objects.requireNonNull(endpointConfigName));
+            this.endpointConfigName = Output.of(Objects.requireNonNull(endpointConfigName));
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public EndpointArgs build() {

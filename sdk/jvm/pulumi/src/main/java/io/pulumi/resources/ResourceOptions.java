@@ -1,7 +1,7 @@
 package io.pulumi.resources;
 
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 
 import javax.annotation.Nullable;
 import java.util.List;
@@ -16,11 +16,11 @@ import static io.pulumi.resources.Resources.mergeNullableList;
 public abstract class ResourceOptions {
 
     @Nullable
-    protected Input<String> id;
+    protected Output<String> id;
     @Nullable
     protected Resource parent;
     @Nullable
-    protected Input<List<Resource>> dependsOn;
+    protected Output<List<Resource>> dependsOn;
     protected boolean protect;
     @Nullable
     protected List<String> ignoreChanges;
@@ -33,7 +33,7 @@ public abstract class ResourceOptions {
     @Nullable
     protected List<ResourceTransformation> resourceTransformations;
     @Nullable
-    protected List<Input<Alias>> aliases;
+    protected List<Output<Alias>> aliases;
     @Nullable
     protected String urn;
     @Nullable
@@ -42,16 +42,16 @@ public abstract class ResourceOptions {
     protected ResourceOptions() { /* empty */ }
 
     protected ResourceOptions(
-            @Nullable Input<String> id,
+            @Nullable Output<String> id,
             @Nullable Resource parent,
-            @Nullable Input<List<Resource>> dependsOn,
+            @Nullable Output<List<Resource>> dependsOn,
             boolean protect,
             @Nullable List<String> ignoreChanges,
             @Nullable String version,
             @Nullable ProviderResource provider,
             @Nullable CustomTimeouts customTimeouts,
             @Nullable List<ResourceTransformation> resourceTransformations,
-            @Nullable List<Input<Alias>> aliases,
+            @Nullable List<Output<Alias>> aliases,
             @Nullable String urn,
             @Nullable List<String> replaceOnChanges
     ) {
@@ -76,13 +76,13 @@ public abstract class ResourceOptions {
             this.options = options;
         }
 
-        public B setId(@Nullable Input<String> id) {
+        public B setId(@Nullable Output<String> id) {
             options.id = id;
             return (B) this;
         }
 
         public B setId(@Nullable String id) {
-            options.id = Input.ofNullable(id);
+            options.id = Output.ofNullable(id);
             return (B) this;
         }
 
@@ -91,13 +91,13 @@ public abstract class ResourceOptions {
             return (B) this;
         }
 
-        public B setDependsOn(@Nullable Input<List<Resource>> dependsOn) {
+        public B setDependsOn(@Nullable Output<List<Resource>> dependsOn) {
             options.dependsOn = dependsOn;
             return (B) this;
         }
 
         public B setDependsOn(@Nullable List<Resource> dependsOn) {
-            options.dependsOn = Input.ofNullable(dependsOn);
+            options.dependsOn = Output.ofNullable(dependsOn);
             return (B) this;
         }
 
@@ -131,7 +131,7 @@ public abstract class ResourceOptions {
             return (B) this;
         }
 
-        public B setAliases(@Nullable List<Input<Alias>> aliases) {
+        public B setAliases(@Nullable List<Output<Alias>> aliases) {
             options.aliases = aliases;
             return (B) this;
         }
@@ -150,7 +150,7 @@ public abstract class ResourceOptions {
     /**
      * An optional existing ID to load, rather than create.
      */
-    public Optional<Input<String>> getId() {
+    public Optional<Output<String>> getId() {
         return Optional.ofNullable(id);
     }
 
@@ -164,8 +164,8 @@ public abstract class ResourceOptions {
     /**
      * Optional additional explicit dependencies on other resources.
      */
-    public Input<List<Resource>> getDependsOn() {
-        return this.dependsOn == null ? Input.ofList() : this.dependsOn;
+    public Output<List<Resource>> getDependsOn() {
+        return this.dependsOn == null ? Output.ofList() : this.dependsOn;
     }
 
     /**
@@ -222,7 +222,7 @@ public abstract class ResourceOptions {
     /**
      * An optional list of aliases to treat this resource as matching.
      */
-    public List<Input<Alias>> getAliases() {
+    public List<Output<Alias>> getAliases() {
         return this.aliases == null ? List.of() : List.copyOf(this.aliases);
     }
 
@@ -247,7 +247,7 @@ public abstract class ResourceOptions {
         return mergeSharedOptions(options1, options2, null);
     }
 
-    protected static <T extends ResourceOptions> T mergeSharedOptions(T options1, T options2, @Nullable Input<String> id) {
+    protected static <T extends ResourceOptions> T mergeSharedOptions(T options1, T options2, @Nullable Output<String> id) {
         Objects.requireNonNull(options1);
         Objects.requireNonNull(options2);
 
@@ -264,7 +264,7 @@ public abstract class ResourceOptions {
         options1.aliases = mergeNullableList(options1.aliases, options2.aliases);
         options1.replaceOnChanges = mergeNullableList(options1.replaceOnChanges, options2.replaceOnChanges);
 
-        options1.dependsOn = Input.concatList(options1.dependsOn, options2.dependsOn);
+        options1.dependsOn = Output.concatList(options1.dependsOn, options2.dependsOn);
 
         // Override the ID if one was specified for consistency with other language SDKs.
         options1.id = id == null ? options1.id : id;

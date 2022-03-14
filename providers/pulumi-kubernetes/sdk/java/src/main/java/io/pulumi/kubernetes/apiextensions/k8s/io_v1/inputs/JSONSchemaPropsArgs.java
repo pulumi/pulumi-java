@@ -5,7 +5,7 @@ package io.pulumi.kubernetes.apiextensions.k8s.io_v1.inputs;
 
 import com.google.gson.JsonElement;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.kubernetes.apiextensions.k8s.io_v1.inputs.ExternalDocumentationArgs;
 import io.pulumi.kubernetes.apiextensions.k8s.io_v1.inputs.ValidationRuleArgs;
@@ -28,45 +28,45 @@ public final class JSONSchemaPropsArgs extends io.pulumi.resources.ResourceArgs 
     public static final JSONSchemaPropsArgs Empty = new JSONSchemaPropsArgs();
 
     @InputImport(name="$ref")
-      private final @Nullable Input<String> $ref;
+      private final @Nullable Output<String> $ref;
 
-    public Input<String> get$ref() {
-        return this.$ref == null ? Input.empty() : this.$ref;
+    public Output<String> get$ref() {
+        return this.$ref == null ? Output.empty() : this.$ref;
     }
 
     @InputImport(name="$schema")
-      private final @Nullable Input<String> $schema;
+      private final @Nullable Output<String> $schema;
 
-    public Input<String> get$schema() {
-        return this.$schema == null ? Input.empty() : this.$schema;
+    public Output<String> get$schema() {
+        return this.$schema == null ? Output.empty() : this.$schema;
     }
 
     @InputImport(name="additionalItems")
-      private final @Nullable Input<Either<JSONSchemaPropsArgs,Boolean>> additionalItems;
+      private final @Nullable Output<Either<JSONSchemaPropsArgs,Boolean>> additionalItems;
 
-    public Input<Either<JSONSchemaPropsArgs,Boolean>> getAdditionalItems() {
-        return this.additionalItems == null ? Input.empty() : this.additionalItems;
+    public Output<Either<JSONSchemaPropsArgs,Boolean>> getAdditionalItems() {
+        return this.additionalItems == null ? Output.empty() : this.additionalItems;
     }
 
     @InputImport(name="additionalProperties")
-      private final @Nullable Input<Either<JSONSchemaPropsArgs,Boolean>> additionalProperties;
+      private final @Nullable Output<Either<JSONSchemaPropsArgs,Boolean>> additionalProperties;
 
-    public Input<Either<JSONSchemaPropsArgs,Boolean>> getAdditionalProperties() {
-        return this.additionalProperties == null ? Input.empty() : this.additionalProperties;
+    public Output<Either<JSONSchemaPropsArgs,Boolean>> getAdditionalProperties() {
+        return this.additionalProperties == null ? Output.empty() : this.additionalProperties;
     }
 
     @InputImport(name="allOf")
-      private final @Nullable Input<List<JSONSchemaPropsArgs>> allOf;
+      private final @Nullable Output<List<JSONSchemaPropsArgs>> allOf;
 
-    public Input<List<JSONSchemaPropsArgs>> getAllOf() {
-        return this.allOf == null ? Input.empty() : this.allOf;
+    public Output<List<JSONSchemaPropsArgs>> getAllOf() {
+        return this.allOf == null ? Output.empty() : this.allOf;
     }
 
     @InputImport(name="anyOf")
-      private final @Nullable Input<List<JSONSchemaPropsArgs>> anyOf;
+      private final @Nullable Output<List<JSONSchemaPropsArgs>> anyOf;
 
-    public Input<List<JSONSchemaPropsArgs>> getAnyOf() {
-        return this.anyOf == null ? Input.empty() : this.anyOf;
+    public Output<List<JSONSchemaPropsArgs>> getAnyOf() {
+        return this.anyOf == null ? Output.empty() : this.anyOf;
     }
 
     /**
@@ -74,66 +74,66 @@ public final class JSONSchemaPropsArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="default")
-      private final @Nullable Input<JsonElement> $default;
+      private final @Nullable Output<JsonElement> $default;
 
-    public Input<JsonElement> get$default() {
-        return this.$default == null ? Input.empty() : this.$default;
+    public Output<JsonElement> get$default() {
+        return this.$default == null ? Output.empty() : this.$default;
     }
 
     @InputImport(name="definitions")
-      private final @Nullable Input<Map<String,JSONSchemaPropsArgs>> definitions;
+      private final @Nullable Output<Map<String,JSONSchemaPropsArgs>> definitions;
 
-    public Input<Map<String,JSONSchemaPropsArgs>> getDefinitions() {
-        return this.definitions == null ? Input.empty() : this.definitions;
+    public Output<Map<String,JSONSchemaPropsArgs>> getDefinitions() {
+        return this.definitions == null ? Output.empty() : this.definitions;
     }
 
     @InputImport(name="dependencies")
-      private final @Nullable Input<Map<String,Either<JSONSchemaPropsArgs,List<String>>>> dependencies;
+      private final @Nullable Output<Map<String,Either<JSONSchemaPropsArgs,List<String>>>> dependencies;
 
-    public Input<Map<String,Either<JSONSchemaPropsArgs,List<String>>>> getDependencies() {
-        return this.dependencies == null ? Input.empty() : this.dependencies;
+    public Output<Map<String,Either<JSONSchemaPropsArgs,List<String>>>> getDependencies() {
+        return this.dependencies == null ? Output.empty() : this.dependencies;
     }
 
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     @InputImport(name="enum")
-      private final @Nullable Input<List<JsonElement>> $enum;
+      private final @Nullable Output<List<JsonElement>> $enum;
 
-    public Input<List<JsonElement>> get$enum() {
-        return this.$enum == null ? Input.empty() : this.$enum;
+    public Output<List<JsonElement>> get$enum() {
+        return this.$enum == null ? Output.empty() : this.$enum;
     }
 
     @InputImport(name="example")
-      private final @Nullable Input<JsonElement> example;
+      private final @Nullable Output<JsonElement> example;
 
-    public Input<JsonElement> getExample() {
-        return this.example == null ? Input.empty() : this.example;
+    public Output<JsonElement> getExample() {
+        return this.example == null ? Output.empty() : this.example;
     }
 
     @InputImport(name="exclusiveMaximum")
-      private final @Nullable Input<Boolean> exclusiveMaximum;
+      private final @Nullable Output<Boolean> exclusiveMaximum;
 
-    public Input<Boolean> getExclusiveMaximum() {
-        return this.exclusiveMaximum == null ? Input.empty() : this.exclusiveMaximum;
+    public Output<Boolean> getExclusiveMaximum() {
+        return this.exclusiveMaximum == null ? Output.empty() : this.exclusiveMaximum;
     }
 
     @InputImport(name="exclusiveMinimum")
-      private final @Nullable Input<Boolean> exclusiveMinimum;
+      private final @Nullable Output<Boolean> exclusiveMinimum;
 
-    public Input<Boolean> getExclusiveMinimum() {
-        return this.exclusiveMinimum == null ? Input.empty() : this.exclusiveMinimum;
+    public Output<Boolean> getExclusiveMinimum() {
+        return this.exclusiveMinimum == null ? Output.empty() : this.exclusiveMinimum;
     }
 
     @InputImport(name="externalDocs")
-      private final @Nullable Input<ExternalDocumentationArgs> externalDocs;
+      private final @Nullable Output<ExternalDocumentationArgs> externalDocs;
 
-    public Input<ExternalDocumentationArgs> getExternalDocs() {
-        return this.externalDocs == null ? Input.empty() : this.externalDocs;
+    public Output<ExternalDocumentationArgs> getExternalDocs() {
+        return this.externalDocs == null ? Output.empty() : this.externalDocs;
     }
 
     /**
@@ -143,157 +143,157 @@ public final class JSONSchemaPropsArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="format")
-      private final @Nullable Input<String> format;
+      private final @Nullable Output<String> format;
 
-    public Input<String> getFormat() {
-        return this.format == null ? Input.empty() : this.format;
+    public Output<String> getFormat() {
+        return this.format == null ? Output.empty() : this.format;
     }
 
     @InputImport(name="id")
-      private final @Nullable Input<String> id;
+      private final @Nullable Output<String> id;
 
-    public Input<String> getId() {
-        return this.id == null ? Input.empty() : this.id;
+    public Output<String> getId() {
+        return this.id == null ? Output.empty() : this.id;
     }
 
     @InputImport(name="items")
-      private final @Nullable Input<Either<JSONSchemaPropsArgs,List<JsonElement>>> items;
+      private final @Nullable Output<Either<JSONSchemaPropsArgs,List<JsonElement>>> items;
 
-    public Input<Either<JSONSchemaPropsArgs,List<JsonElement>>> getItems() {
-        return this.items == null ? Input.empty() : this.items;
+    public Output<Either<JSONSchemaPropsArgs,List<JsonElement>>> getItems() {
+        return this.items == null ? Output.empty() : this.items;
     }
 
     @InputImport(name="maxItems")
-      private final @Nullable Input<Integer> maxItems;
+      private final @Nullable Output<Integer> maxItems;
 
-    public Input<Integer> getMaxItems() {
-        return this.maxItems == null ? Input.empty() : this.maxItems;
+    public Output<Integer> getMaxItems() {
+        return this.maxItems == null ? Output.empty() : this.maxItems;
     }
 
     @InputImport(name="maxLength")
-      private final @Nullable Input<Integer> maxLength;
+      private final @Nullable Output<Integer> maxLength;
 
-    public Input<Integer> getMaxLength() {
-        return this.maxLength == null ? Input.empty() : this.maxLength;
+    public Output<Integer> getMaxLength() {
+        return this.maxLength == null ? Output.empty() : this.maxLength;
     }
 
     @InputImport(name="maxProperties")
-      private final @Nullable Input<Integer> maxProperties;
+      private final @Nullable Output<Integer> maxProperties;
 
-    public Input<Integer> getMaxProperties() {
-        return this.maxProperties == null ? Input.empty() : this.maxProperties;
+    public Output<Integer> getMaxProperties() {
+        return this.maxProperties == null ? Output.empty() : this.maxProperties;
     }
 
     @InputImport(name="maximum")
-      private final @Nullable Input<Double> maximum;
+      private final @Nullable Output<Double> maximum;
 
-    public Input<Double> getMaximum() {
-        return this.maximum == null ? Input.empty() : this.maximum;
+    public Output<Double> getMaximum() {
+        return this.maximum == null ? Output.empty() : this.maximum;
     }
 
     @InputImport(name="minItems")
-      private final @Nullable Input<Integer> minItems;
+      private final @Nullable Output<Integer> minItems;
 
-    public Input<Integer> getMinItems() {
-        return this.minItems == null ? Input.empty() : this.minItems;
+    public Output<Integer> getMinItems() {
+        return this.minItems == null ? Output.empty() : this.minItems;
     }
 
     @InputImport(name="minLength")
-      private final @Nullable Input<Integer> minLength;
+      private final @Nullable Output<Integer> minLength;
 
-    public Input<Integer> getMinLength() {
-        return this.minLength == null ? Input.empty() : this.minLength;
+    public Output<Integer> getMinLength() {
+        return this.minLength == null ? Output.empty() : this.minLength;
     }
 
     @InputImport(name="minProperties")
-      private final @Nullable Input<Integer> minProperties;
+      private final @Nullable Output<Integer> minProperties;
 
-    public Input<Integer> getMinProperties() {
-        return this.minProperties == null ? Input.empty() : this.minProperties;
+    public Output<Integer> getMinProperties() {
+        return this.minProperties == null ? Output.empty() : this.minProperties;
     }
 
     @InputImport(name="minimum")
-      private final @Nullable Input<Double> minimum;
+      private final @Nullable Output<Double> minimum;
 
-    public Input<Double> getMinimum() {
-        return this.minimum == null ? Input.empty() : this.minimum;
+    public Output<Double> getMinimum() {
+        return this.minimum == null ? Output.empty() : this.minimum;
     }
 
     @InputImport(name="multipleOf")
-      private final @Nullable Input<Double> multipleOf;
+      private final @Nullable Output<Double> multipleOf;
 
-    public Input<Double> getMultipleOf() {
-        return this.multipleOf == null ? Input.empty() : this.multipleOf;
+    public Output<Double> getMultipleOf() {
+        return this.multipleOf == null ? Output.empty() : this.multipleOf;
     }
 
     @InputImport(name="not")
-      private final @Nullable Input<JSONSchemaPropsArgs> not;
+      private final @Nullable Output<JSONSchemaPropsArgs> not;
 
-    public Input<JSONSchemaPropsArgs> getNot() {
-        return this.not == null ? Input.empty() : this.not;
+    public Output<JSONSchemaPropsArgs> getNot() {
+        return this.not == null ? Output.empty() : this.not;
     }
 
     @InputImport(name="nullable")
-      private final @Nullable Input<Boolean> nullable;
+      private final @Nullable Output<Boolean> nullable;
 
-    public Input<Boolean> getNullable() {
-        return this.nullable == null ? Input.empty() : this.nullable;
+    public Output<Boolean> getNullable() {
+        return this.nullable == null ? Output.empty() : this.nullable;
     }
 
     @InputImport(name="oneOf")
-      private final @Nullable Input<List<JSONSchemaPropsArgs>> oneOf;
+      private final @Nullable Output<List<JSONSchemaPropsArgs>> oneOf;
 
-    public Input<List<JSONSchemaPropsArgs>> getOneOf() {
-        return this.oneOf == null ? Input.empty() : this.oneOf;
+    public Output<List<JSONSchemaPropsArgs>> getOneOf() {
+        return this.oneOf == null ? Output.empty() : this.oneOf;
     }
 
     @InputImport(name="pattern")
-      private final @Nullable Input<String> pattern;
+      private final @Nullable Output<String> pattern;
 
-    public Input<String> getPattern() {
-        return this.pattern == null ? Input.empty() : this.pattern;
+    public Output<String> getPattern() {
+        return this.pattern == null ? Output.empty() : this.pattern;
     }
 
     @InputImport(name="patternProperties")
-      private final @Nullable Input<Map<String,JSONSchemaPropsArgs>> patternProperties;
+      private final @Nullable Output<Map<String,JSONSchemaPropsArgs>> patternProperties;
 
-    public Input<Map<String,JSONSchemaPropsArgs>> getPatternProperties() {
-        return this.patternProperties == null ? Input.empty() : this.patternProperties;
+    public Output<Map<String,JSONSchemaPropsArgs>> getPatternProperties() {
+        return this.patternProperties == null ? Output.empty() : this.patternProperties;
     }
 
     @InputImport(name="properties")
-      private final @Nullable Input<Map<String,JSONSchemaPropsArgs>> properties;
+      private final @Nullable Output<Map<String,JSONSchemaPropsArgs>> properties;
 
-    public Input<Map<String,JSONSchemaPropsArgs>> getProperties() {
-        return this.properties == null ? Input.empty() : this.properties;
+    public Output<Map<String,JSONSchemaPropsArgs>> getProperties() {
+        return this.properties == null ? Output.empty() : this.properties;
     }
 
     @InputImport(name="required")
-      private final @Nullable Input<List<String>> required;
+      private final @Nullable Output<List<String>> required;
 
-    public Input<List<String>> getRequired() {
-        return this.required == null ? Input.empty() : this.required;
+    public Output<List<String>> getRequired() {
+        return this.required == null ? Output.empty() : this.required;
     }
 
     @InputImport(name="title")
-      private final @Nullable Input<String> title;
+      private final @Nullable Output<String> title;
 
-    public Input<String> getTitle() {
-        return this.title == null ? Input.empty() : this.title;
+    public Output<String> getTitle() {
+        return this.title == null ? Output.empty() : this.title;
     }
 
     @InputImport(name="type")
-      private final @Nullable Input<String> type;
+      private final @Nullable Output<String> type;
 
-    public Input<String> getType() {
-        return this.type == null ? Input.empty() : this.type;
+    public Output<String> getType() {
+        return this.type == null ? Output.empty() : this.type;
     }
 
     @InputImport(name="uniqueItems")
-      private final @Nullable Input<Boolean> uniqueItems;
+      private final @Nullable Output<Boolean> uniqueItems;
 
-    public Input<Boolean> getUniqueItems() {
-        return this.uniqueItems == null ? Input.empty() : this.uniqueItems;
+    public Output<Boolean> getUniqueItems() {
+        return this.uniqueItems == null ? Output.empty() : this.uniqueItems;
     }
 
     /**
@@ -301,10 +301,10 @@ public final class JSONSchemaPropsArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="x_kubernetes_embedded_resource")
-      private final @Nullable Input<Boolean> x_kubernetes_embedded_resource;
+      private final @Nullable Output<Boolean> x_kubernetes_embedded_resource;
 
-    public Input<Boolean> getX_kubernetes_embedded_resource() {
-        return this.x_kubernetes_embedded_resource == null ? Input.empty() : this.x_kubernetes_embedded_resource;
+    public Output<Boolean> getX_kubernetes_embedded_resource() {
+        return this.x_kubernetes_embedded_resource == null ? Output.empty() : this.x_kubernetes_embedded_resource;
     }
 
     /**
@@ -321,10 +321,10 @@ public final class JSONSchemaPropsArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="x_kubernetes_int_or_string")
-      private final @Nullable Input<Boolean> x_kubernetes_int_or_string;
+      private final @Nullable Output<Boolean> x_kubernetes_int_or_string;
 
-    public Input<Boolean> getX_kubernetes_int_or_string() {
-        return this.x_kubernetes_int_or_string == null ? Input.empty() : this.x_kubernetes_int_or_string;
+    public Output<Boolean> getX_kubernetes_int_or_string() {
+        return this.x_kubernetes_int_or_string == null ? Output.empty() : this.x_kubernetes_int_or_string;
     }
 
     /**
@@ -336,10 +336,10 @@ public final class JSONSchemaPropsArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="x_kubernetes_list_map_keys")
-      private final @Nullable Input<List<String>> x_kubernetes_list_map_keys;
+      private final @Nullable Output<List<String>> x_kubernetes_list_map_keys;
 
-    public Input<List<String>> getX_kubernetes_list_map_keys() {
-        return this.x_kubernetes_list_map_keys == null ? Input.empty() : this.x_kubernetes_list_map_keys;
+    public Output<List<String>> getX_kubernetes_list_map_keys() {
+        return this.x_kubernetes_list_map_keys == null ? Output.empty() : this.x_kubernetes_list_map_keys;
     }
 
     /**
@@ -360,10 +360,10 @@ public final class JSONSchemaPropsArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="x_kubernetes_list_type")
-      private final @Nullable Input<String> x_kubernetes_list_type;
+      private final @Nullable Output<String> x_kubernetes_list_type;
 
-    public Input<String> getX_kubernetes_list_type() {
-        return this.x_kubernetes_list_type == null ? Input.empty() : this.x_kubernetes_list_type;
+    public Output<String> getX_kubernetes_list_type() {
+        return this.x_kubernetes_list_type == null ? Output.empty() : this.x_kubernetes_list_type;
     }
 
     /**
@@ -378,10 +378,10 @@ public final class JSONSchemaPropsArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="x_kubernetes_map_type")
-      private final @Nullable Input<String> x_kubernetes_map_type;
+      private final @Nullable Output<String> x_kubernetes_map_type;
 
-    public Input<String> getX_kubernetes_map_type() {
-        return this.x_kubernetes_map_type == null ? Input.empty() : this.x_kubernetes_map_type;
+    public Output<String> getX_kubernetes_map_type() {
+        return this.x_kubernetes_map_type == null ? Output.empty() : this.x_kubernetes_map_type;
     }
 
     /**
@@ -389,10 +389,10 @@ public final class JSONSchemaPropsArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="x_kubernetes_preserve_unknown_fields")
-      private final @Nullable Input<Boolean> x_kubernetes_preserve_unknown_fields;
+      private final @Nullable Output<Boolean> x_kubernetes_preserve_unknown_fields;
 
-    public Input<Boolean> getX_kubernetes_preserve_unknown_fields() {
-        return this.x_kubernetes_preserve_unknown_fields == null ? Input.empty() : this.x_kubernetes_preserve_unknown_fields;
+    public Output<Boolean> getX_kubernetes_preserve_unknown_fields() {
+        return this.x_kubernetes_preserve_unknown_fields == null ? Output.empty() : this.x_kubernetes_preserve_unknown_fields;
     }
 
     /**
@@ -400,57 +400,57 @@ public final class JSONSchemaPropsArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="x_kubernetes_validations")
-      private final @Nullable Input<List<ValidationRuleArgs>> x_kubernetes_validations;
+      private final @Nullable Output<List<ValidationRuleArgs>> x_kubernetes_validations;
 
-    public Input<List<ValidationRuleArgs>> getX_kubernetes_validations() {
-        return this.x_kubernetes_validations == null ? Input.empty() : this.x_kubernetes_validations;
+    public Output<List<ValidationRuleArgs>> getX_kubernetes_validations() {
+        return this.x_kubernetes_validations == null ? Output.empty() : this.x_kubernetes_validations;
     }
 
     public JSONSchemaPropsArgs(
-        @Nullable Input<String> $ref,
-        @Nullable Input<String> $schema,
-        @Nullable Input<Either<JSONSchemaPropsArgs,Boolean>> additionalItems,
-        @Nullable Input<Either<JSONSchemaPropsArgs,Boolean>> additionalProperties,
-        @Nullable Input<List<JSONSchemaPropsArgs>> allOf,
-        @Nullable Input<List<JSONSchemaPropsArgs>> anyOf,
-        @Nullable Input<JsonElement> $default,
-        @Nullable Input<Map<String,JSONSchemaPropsArgs>> definitions,
-        @Nullable Input<Map<String,Either<JSONSchemaPropsArgs,List<String>>>> dependencies,
-        @Nullable Input<String> description,
-        @Nullable Input<List<JsonElement>> $enum,
-        @Nullable Input<JsonElement> example,
-        @Nullable Input<Boolean> exclusiveMaximum,
-        @Nullable Input<Boolean> exclusiveMinimum,
-        @Nullable Input<ExternalDocumentationArgs> externalDocs,
-        @Nullable Input<String> format,
-        @Nullable Input<String> id,
-        @Nullable Input<Either<JSONSchemaPropsArgs,List<JsonElement>>> items,
-        @Nullable Input<Integer> maxItems,
-        @Nullable Input<Integer> maxLength,
-        @Nullable Input<Integer> maxProperties,
-        @Nullable Input<Double> maximum,
-        @Nullable Input<Integer> minItems,
-        @Nullable Input<Integer> minLength,
-        @Nullable Input<Integer> minProperties,
-        @Nullable Input<Double> minimum,
-        @Nullable Input<Double> multipleOf,
-        @Nullable Input<JSONSchemaPropsArgs> not,
-        @Nullable Input<Boolean> nullable,
-        @Nullable Input<List<JSONSchemaPropsArgs>> oneOf,
-        @Nullable Input<String> pattern,
-        @Nullable Input<Map<String,JSONSchemaPropsArgs>> patternProperties,
-        @Nullable Input<Map<String,JSONSchemaPropsArgs>> properties,
-        @Nullable Input<List<String>> required,
-        @Nullable Input<String> title,
-        @Nullable Input<String> type,
-        @Nullable Input<Boolean> uniqueItems,
-        @Nullable Input<Boolean> x_kubernetes_embedded_resource,
-        @Nullable Input<Boolean> x_kubernetes_int_or_string,
-        @Nullable Input<List<String>> x_kubernetes_list_map_keys,
-        @Nullable Input<String> x_kubernetes_list_type,
-        @Nullable Input<String> x_kubernetes_map_type,
-        @Nullable Input<Boolean> x_kubernetes_preserve_unknown_fields,
-        @Nullable Input<List<ValidationRuleArgs>> x_kubernetes_validations) {
+        @Nullable Output<String> $ref,
+        @Nullable Output<String> $schema,
+        @Nullable Output<Either<JSONSchemaPropsArgs,Boolean>> additionalItems,
+        @Nullable Output<Either<JSONSchemaPropsArgs,Boolean>> additionalProperties,
+        @Nullable Output<List<JSONSchemaPropsArgs>> allOf,
+        @Nullable Output<List<JSONSchemaPropsArgs>> anyOf,
+        @Nullable Output<JsonElement> $default,
+        @Nullable Output<Map<String,JSONSchemaPropsArgs>> definitions,
+        @Nullable Output<Map<String,Either<JSONSchemaPropsArgs,List<String>>>> dependencies,
+        @Nullable Output<String> description,
+        @Nullable Output<List<JsonElement>> $enum,
+        @Nullable Output<JsonElement> example,
+        @Nullable Output<Boolean> exclusiveMaximum,
+        @Nullable Output<Boolean> exclusiveMinimum,
+        @Nullable Output<ExternalDocumentationArgs> externalDocs,
+        @Nullable Output<String> format,
+        @Nullable Output<String> id,
+        @Nullable Output<Either<JSONSchemaPropsArgs,List<JsonElement>>> items,
+        @Nullable Output<Integer> maxItems,
+        @Nullable Output<Integer> maxLength,
+        @Nullable Output<Integer> maxProperties,
+        @Nullable Output<Double> maximum,
+        @Nullable Output<Integer> minItems,
+        @Nullable Output<Integer> minLength,
+        @Nullable Output<Integer> minProperties,
+        @Nullable Output<Double> minimum,
+        @Nullable Output<Double> multipleOf,
+        @Nullable Output<JSONSchemaPropsArgs> not,
+        @Nullable Output<Boolean> nullable,
+        @Nullable Output<List<JSONSchemaPropsArgs>> oneOf,
+        @Nullable Output<String> pattern,
+        @Nullable Output<Map<String,JSONSchemaPropsArgs>> patternProperties,
+        @Nullable Output<Map<String,JSONSchemaPropsArgs>> properties,
+        @Nullable Output<List<String>> required,
+        @Nullable Output<String> title,
+        @Nullable Output<String> type,
+        @Nullable Output<Boolean> uniqueItems,
+        @Nullable Output<Boolean> x_kubernetes_embedded_resource,
+        @Nullable Output<Boolean> x_kubernetes_int_or_string,
+        @Nullable Output<List<String>> x_kubernetes_list_map_keys,
+        @Nullable Output<String> x_kubernetes_list_type,
+        @Nullable Output<String> x_kubernetes_map_type,
+        @Nullable Output<Boolean> x_kubernetes_preserve_unknown_fields,
+        @Nullable Output<List<ValidationRuleArgs>> x_kubernetes_validations) {
         this.$ref = $ref;
         this.$schema = $schema;
         this.additionalItems = additionalItems;
@@ -498,50 +498,50 @@ public final class JSONSchemaPropsArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private JSONSchemaPropsArgs() {
-        this.$ref = Input.empty();
-        this.$schema = Input.empty();
-        this.additionalItems = Input.empty();
-        this.additionalProperties = Input.empty();
-        this.allOf = Input.empty();
-        this.anyOf = Input.empty();
-        this.$default = Input.empty();
-        this.definitions = Input.empty();
-        this.dependencies = Input.empty();
-        this.description = Input.empty();
-        this.$enum = Input.empty();
-        this.example = Input.empty();
-        this.exclusiveMaximum = Input.empty();
-        this.exclusiveMinimum = Input.empty();
-        this.externalDocs = Input.empty();
-        this.format = Input.empty();
-        this.id = Input.empty();
-        this.items = Input.empty();
-        this.maxItems = Input.empty();
-        this.maxLength = Input.empty();
-        this.maxProperties = Input.empty();
-        this.maximum = Input.empty();
-        this.minItems = Input.empty();
-        this.minLength = Input.empty();
-        this.minProperties = Input.empty();
-        this.minimum = Input.empty();
-        this.multipleOf = Input.empty();
-        this.not = Input.empty();
-        this.nullable = Input.empty();
-        this.oneOf = Input.empty();
-        this.pattern = Input.empty();
-        this.patternProperties = Input.empty();
-        this.properties = Input.empty();
-        this.required = Input.empty();
-        this.title = Input.empty();
-        this.type = Input.empty();
-        this.uniqueItems = Input.empty();
-        this.x_kubernetes_embedded_resource = Input.empty();
-        this.x_kubernetes_int_or_string = Input.empty();
-        this.x_kubernetes_list_map_keys = Input.empty();
-        this.x_kubernetes_list_type = Input.empty();
-        this.x_kubernetes_map_type = Input.empty();
-        this.x_kubernetes_preserve_unknown_fields = Input.empty();
-        this.x_kubernetes_validations = Input.empty();
+        this.$ref = Output.empty();
+        this.$schema = Output.empty();
+        this.additionalItems = Output.empty();
+        this.additionalProperties = Output.empty();
+        this.allOf = Output.empty();
+        this.anyOf = Output.empty();
+        this.$default = Output.empty();
+        this.definitions = Output.empty();
+        this.dependencies = Output.empty();
+        this.description = Output.empty();
+        this.$enum = Output.empty();
+        this.example = Output.empty();
+        this.exclusiveMaximum = Output.empty();
+        this.exclusiveMinimum = Output.empty();
+        this.externalDocs = Output.empty();
+        this.format = Output.empty();
+        this.id = Output.empty();
+        this.items = Output.empty();
+        this.maxItems = Output.empty();
+        this.maxLength = Output.empty();
+        this.maxProperties = Output.empty();
+        this.maximum = Output.empty();
+        this.minItems = Output.empty();
+        this.minLength = Output.empty();
+        this.minProperties = Output.empty();
+        this.minimum = Output.empty();
+        this.multipleOf = Output.empty();
+        this.not = Output.empty();
+        this.nullable = Output.empty();
+        this.oneOf = Output.empty();
+        this.pattern = Output.empty();
+        this.patternProperties = Output.empty();
+        this.properties = Output.empty();
+        this.required = Output.empty();
+        this.title = Output.empty();
+        this.type = Output.empty();
+        this.uniqueItems = Output.empty();
+        this.x_kubernetes_embedded_resource = Output.empty();
+        this.x_kubernetes_int_or_string = Output.empty();
+        this.x_kubernetes_list_map_keys = Output.empty();
+        this.x_kubernetes_list_type = Output.empty();
+        this.x_kubernetes_map_type = Output.empty();
+        this.x_kubernetes_preserve_unknown_fields = Output.empty();
+        this.x_kubernetes_validations = Output.empty();
     }
 
     public static Builder builder() {
@@ -553,50 +553,50 @@ public final class JSONSchemaPropsArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private @Nullable Input<String> $ref;
-        private @Nullable Input<String> $schema;
-        private @Nullable Input<Either<JSONSchemaPropsArgs,Boolean>> additionalItems;
-        private @Nullable Input<Either<JSONSchemaPropsArgs,Boolean>> additionalProperties;
-        private @Nullable Input<List<JSONSchemaPropsArgs>> allOf;
-        private @Nullable Input<List<JSONSchemaPropsArgs>> anyOf;
-        private @Nullable Input<JsonElement> $default;
-        private @Nullable Input<Map<String,JSONSchemaPropsArgs>> definitions;
-        private @Nullable Input<Map<String,Either<JSONSchemaPropsArgs,List<String>>>> dependencies;
-        private @Nullable Input<String> description;
-        private @Nullable Input<List<JsonElement>> $enum;
-        private @Nullable Input<JsonElement> example;
-        private @Nullable Input<Boolean> exclusiveMaximum;
-        private @Nullable Input<Boolean> exclusiveMinimum;
-        private @Nullable Input<ExternalDocumentationArgs> externalDocs;
-        private @Nullable Input<String> format;
-        private @Nullable Input<String> id;
-        private @Nullable Input<Either<JSONSchemaPropsArgs,List<JsonElement>>> items;
-        private @Nullable Input<Integer> maxItems;
-        private @Nullable Input<Integer> maxLength;
-        private @Nullable Input<Integer> maxProperties;
-        private @Nullable Input<Double> maximum;
-        private @Nullable Input<Integer> minItems;
-        private @Nullable Input<Integer> minLength;
-        private @Nullable Input<Integer> minProperties;
-        private @Nullable Input<Double> minimum;
-        private @Nullable Input<Double> multipleOf;
-        private @Nullable Input<JSONSchemaPropsArgs> not;
-        private @Nullable Input<Boolean> nullable;
-        private @Nullable Input<List<JSONSchemaPropsArgs>> oneOf;
-        private @Nullable Input<String> pattern;
-        private @Nullable Input<Map<String,JSONSchemaPropsArgs>> patternProperties;
-        private @Nullable Input<Map<String,JSONSchemaPropsArgs>> properties;
-        private @Nullable Input<List<String>> required;
-        private @Nullable Input<String> title;
-        private @Nullable Input<String> type;
-        private @Nullable Input<Boolean> uniqueItems;
-        private @Nullable Input<Boolean> x_kubernetes_embedded_resource;
-        private @Nullable Input<Boolean> x_kubernetes_int_or_string;
-        private @Nullable Input<List<String>> x_kubernetes_list_map_keys;
-        private @Nullable Input<String> x_kubernetes_list_type;
-        private @Nullable Input<String> x_kubernetes_map_type;
-        private @Nullable Input<Boolean> x_kubernetes_preserve_unknown_fields;
-        private @Nullable Input<List<ValidationRuleArgs>> x_kubernetes_validations;
+        private @Nullable Output<String> $ref;
+        private @Nullable Output<String> $schema;
+        private @Nullable Output<Either<JSONSchemaPropsArgs,Boolean>> additionalItems;
+        private @Nullable Output<Either<JSONSchemaPropsArgs,Boolean>> additionalProperties;
+        private @Nullable Output<List<JSONSchemaPropsArgs>> allOf;
+        private @Nullable Output<List<JSONSchemaPropsArgs>> anyOf;
+        private @Nullable Output<JsonElement> $default;
+        private @Nullable Output<Map<String,JSONSchemaPropsArgs>> definitions;
+        private @Nullable Output<Map<String,Either<JSONSchemaPropsArgs,List<String>>>> dependencies;
+        private @Nullable Output<String> description;
+        private @Nullable Output<List<JsonElement>> $enum;
+        private @Nullable Output<JsonElement> example;
+        private @Nullable Output<Boolean> exclusiveMaximum;
+        private @Nullable Output<Boolean> exclusiveMinimum;
+        private @Nullable Output<ExternalDocumentationArgs> externalDocs;
+        private @Nullable Output<String> format;
+        private @Nullable Output<String> id;
+        private @Nullable Output<Either<JSONSchemaPropsArgs,List<JsonElement>>> items;
+        private @Nullable Output<Integer> maxItems;
+        private @Nullable Output<Integer> maxLength;
+        private @Nullable Output<Integer> maxProperties;
+        private @Nullable Output<Double> maximum;
+        private @Nullable Output<Integer> minItems;
+        private @Nullable Output<Integer> minLength;
+        private @Nullable Output<Integer> minProperties;
+        private @Nullable Output<Double> minimum;
+        private @Nullable Output<Double> multipleOf;
+        private @Nullable Output<JSONSchemaPropsArgs> not;
+        private @Nullable Output<Boolean> nullable;
+        private @Nullable Output<List<JSONSchemaPropsArgs>> oneOf;
+        private @Nullable Output<String> pattern;
+        private @Nullable Output<Map<String,JSONSchemaPropsArgs>> patternProperties;
+        private @Nullable Output<Map<String,JSONSchemaPropsArgs>> properties;
+        private @Nullable Output<List<String>> required;
+        private @Nullable Output<String> title;
+        private @Nullable Output<String> type;
+        private @Nullable Output<Boolean> uniqueItems;
+        private @Nullable Output<Boolean> x_kubernetes_embedded_resource;
+        private @Nullable Output<Boolean> x_kubernetes_int_or_string;
+        private @Nullable Output<List<String>> x_kubernetes_list_map_keys;
+        private @Nullable Output<String> x_kubernetes_list_type;
+        private @Nullable Output<String> x_kubernetes_map_type;
+        private @Nullable Output<Boolean> x_kubernetes_preserve_unknown_fields;
+        private @Nullable Output<List<ValidationRuleArgs>> x_kubernetes_validations;
 
         public Builder() {
     	      // Empty
@@ -650,443 +650,443 @@ public final class JSONSchemaPropsArgs extends io.pulumi.resources.ResourceArgs 
     	      this.x_kubernetes_validations = defaults.x_kubernetes_validations;
         }
 
-        public Builder $ref(@Nullable Input<String> $ref) {
+        public Builder $ref(@Nullable Output<String> $ref) {
             this.$ref = $ref;
             return this;
         }
 
         public Builder $ref(@Nullable String $ref) {
-            this.$ref = Input.ofNullable($ref);
+            this.$ref = Output.ofNullable($ref);
             return this;
         }
 
-        public Builder $schema(@Nullable Input<String> $schema) {
+        public Builder $schema(@Nullable Output<String> $schema) {
             this.$schema = $schema;
             return this;
         }
 
         public Builder $schema(@Nullable String $schema) {
-            this.$schema = Input.ofNullable($schema);
+            this.$schema = Output.ofNullable($schema);
             return this;
         }
 
-        public Builder additionalItems(@Nullable Input<Either<JSONSchemaPropsArgs,Boolean>> additionalItems) {
+        public Builder additionalItems(@Nullable Output<Either<JSONSchemaPropsArgs,Boolean>> additionalItems) {
             this.additionalItems = additionalItems;
             return this;
         }
 
         public Builder additionalItems(@Nullable Either<JSONSchemaPropsArgs,Boolean> additionalItems) {
-            this.additionalItems = Input.ofNullable(additionalItems);
+            this.additionalItems = Output.ofNullable(additionalItems);
             return this;
         }
 
-        public Builder additionalProperties(@Nullable Input<Either<JSONSchemaPropsArgs,Boolean>> additionalProperties) {
+        public Builder additionalProperties(@Nullable Output<Either<JSONSchemaPropsArgs,Boolean>> additionalProperties) {
             this.additionalProperties = additionalProperties;
             return this;
         }
 
         public Builder additionalProperties(@Nullable Either<JSONSchemaPropsArgs,Boolean> additionalProperties) {
-            this.additionalProperties = Input.ofNullable(additionalProperties);
+            this.additionalProperties = Output.ofNullable(additionalProperties);
             return this;
         }
 
-        public Builder allOf(@Nullable Input<List<JSONSchemaPropsArgs>> allOf) {
+        public Builder allOf(@Nullable Output<List<JSONSchemaPropsArgs>> allOf) {
             this.allOf = allOf;
             return this;
         }
 
         public Builder allOf(@Nullable List<JSONSchemaPropsArgs> allOf) {
-            this.allOf = Input.ofNullable(allOf);
+            this.allOf = Output.ofNullable(allOf);
             return this;
         }
 
-        public Builder anyOf(@Nullable Input<List<JSONSchemaPropsArgs>> anyOf) {
+        public Builder anyOf(@Nullable Output<List<JSONSchemaPropsArgs>> anyOf) {
             this.anyOf = anyOf;
             return this;
         }
 
         public Builder anyOf(@Nullable List<JSONSchemaPropsArgs> anyOf) {
-            this.anyOf = Input.ofNullable(anyOf);
+            this.anyOf = Output.ofNullable(anyOf);
             return this;
         }
 
-        public Builder $default(@Nullable Input<JsonElement> $default) {
+        public Builder $default(@Nullable Output<JsonElement> $default) {
             this.$default = $default;
             return this;
         }
 
         public Builder $default(@Nullable JsonElement $default) {
-            this.$default = Input.ofNullable($default);
+            this.$default = Output.ofNullable($default);
             return this;
         }
 
-        public Builder definitions(@Nullable Input<Map<String,JSONSchemaPropsArgs>> definitions) {
+        public Builder definitions(@Nullable Output<Map<String,JSONSchemaPropsArgs>> definitions) {
             this.definitions = definitions;
             return this;
         }
 
         public Builder definitions(@Nullable Map<String,JSONSchemaPropsArgs> definitions) {
-            this.definitions = Input.ofNullable(definitions);
+            this.definitions = Output.ofNullable(definitions);
             return this;
         }
 
-        public Builder dependencies(@Nullable Input<Map<String,Either<JSONSchemaPropsArgs,List<String>>>> dependencies) {
+        public Builder dependencies(@Nullable Output<Map<String,Either<JSONSchemaPropsArgs,List<String>>>> dependencies) {
             this.dependencies = dependencies;
             return this;
         }
 
         public Builder dependencies(@Nullable Map<String,Either<JSONSchemaPropsArgs,List<String>>> dependencies) {
-            this.dependencies = Input.ofNullable(dependencies);
+            this.dependencies = Output.ofNullable(dependencies);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder $enum(@Nullable Input<List<JsonElement>> $enum) {
+        public Builder $enum(@Nullable Output<List<JsonElement>> $enum) {
             this.$enum = $enum;
             return this;
         }
 
         public Builder $enum(@Nullable List<JsonElement> $enum) {
-            this.$enum = Input.ofNullable($enum);
+            this.$enum = Output.ofNullable($enum);
             return this;
         }
 
-        public Builder example(@Nullable Input<JsonElement> example) {
+        public Builder example(@Nullable Output<JsonElement> example) {
             this.example = example;
             return this;
         }
 
         public Builder example(@Nullable JsonElement example) {
-            this.example = Input.ofNullable(example);
+            this.example = Output.ofNullable(example);
             return this;
         }
 
-        public Builder exclusiveMaximum(@Nullable Input<Boolean> exclusiveMaximum) {
+        public Builder exclusiveMaximum(@Nullable Output<Boolean> exclusiveMaximum) {
             this.exclusiveMaximum = exclusiveMaximum;
             return this;
         }
 
         public Builder exclusiveMaximum(@Nullable Boolean exclusiveMaximum) {
-            this.exclusiveMaximum = Input.ofNullable(exclusiveMaximum);
+            this.exclusiveMaximum = Output.ofNullable(exclusiveMaximum);
             return this;
         }
 
-        public Builder exclusiveMinimum(@Nullable Input<Boolean> exclusiveMinimum) {
+        public Builder exclusiveMinimum(@Nullable Output<Boolean> exclusiveMinimum) {
             this.exclusiveMinimum = exclusiveMinimum;
             return this;
         }
 
         public Builder exclusiveMinimum(@Nullable Boolean exclusiveMinimum) {
-            this.exclusiveMinimum = Input.ofNullable(exclusiveMinimum);
+            this.exclusiveMinimum = Output.ofNullable(exclusiveMinimum);
             return this;
         }
 
-        public Builder externalDocs(@Nullable Input<ExternalDocumentationArgs> externalDocs) {
+        public Builder externalDocs(@Nullable Output<ExternalDocumentationArgs> externalDocs) {
             this.externalDocs = externalDocs;
             return this;
         }
 
         public Builder externalDocs(@Nullable ExternalDocumentationArgs externalDocs) {
-            this.externalDocs = Input.ofNullable(externalDocs);
+            this.externalDocs = Output.ofNullable(externalDocs);
             return this;
         }
 
-        public Builder format(@Nullable Input<String> format) {
+        public Builder format(@Nullable Output<String> format) {
             this.format = format;
             return this;
         }
 
         public Builder format(@Nullable String format) {
-            this.format = Input.ofNullable(format);
+            this.format = Output.ofNullable(format);
             return this;
         }
 
-        public Builder id(@Nullable Input<String> id) {
+        public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
 
         public Builder id(@Nullable String id) {
-            this.id = Input.ofNullable(id);
+            this.id = Output.ofNullable(id);
             return this;
         }
 
-        public Builder items(@Nullable Input<Either<JSONSchemaPropsArgs,List<JsonElement>>> items) {
+        public Builder items(@Nullable Output<Either<JSONSchemaPropsArgs,List<JsonElement>>> items) {
             this.items = items;
             return this;
         }
 
         public Builder items(@Nullable Either<JSONSchemaPropsArgs,List<JsonElement>> items) {
-            this.items = Input.ofNullable(items);
+            this.items = Output.ofNullable(items);
             return this;
         }
 
-        public Builder maxItems(@Nullable Input<Integer> maxItems) {
+        public Builder maxItems(@Nullable Output<Integer> maxItems) {
             this.maxItems = maxItems;
             return this;
         }
 
         public Builder maxItems(@Nullable Integer maxItems) {
-            this.maxItems = Input.ofNullable(maxItems);
+            this.maxItems = Output.ofNullable(maxItems);
             return this;
         }
 
-        public Builder maxLength(@Nullable Input<Integer> maxLength) {
+        public Builder maxLength(@Nullable Output<Integer> maxLength) {
             this.maxLength = maxLength;
             return this;
         }
 
         public Builder maxLength(@Nullable Integer maxLength) {
-            this.maxLength = Input.ofNullable(maxLength);
+            this.maxLength = Output.ofNullable(maxLength);
             return this;
         }
 
-        public Builder maxProperties(@Nullable Input<Integer> maxProperties) {
+        public Builder maxProperties(@Nullable Output<Integer> maxProperties) {
             this.maxProperties = maxProperties;
             return this;
         }
 
         public Builder maxProperties(@Nullable Integer maxProperties) {
-            this.maxProperties = Input.ofNullable(maxProperties);
+            this.maxProperties = Output.ofNullable(maxProperties);
             return this;
         }
 
-        public Builder maximum(@Nullable Input<Double> maximum) {
+        public Builder maximum(@Nullable Output<Double> maximum) {
             this.maximum = maximum;
             return this;
         }
 
         public Builder maximum(@Nullable Double maximum) {
-            this.maximum = Input.ofNullable(maximum);
+            this.maximum = Output.ofNullable(maximum);
             return this;
         }
 
-        public Builder minItems(@Nullable Input<Integer> minItems) {
+        public Builder minItems(@Nullable Output<Integer> minItems) {
             this.minItems = minItems;
             return this;
         }
 
         public Builder minItems(@Nullable Integer minItems) {
-            this.minItems = Input.ofNullable(minItems);
+            this.minItems = Output.ofNullable(minItems);
             return this;
         }
 
-        public Builder minLength(@Nullable Input<Integer> minLength) {
+        public Builder minLength(@Nullable Output<Integer> minLength) {
             this.minLength = minLength;
             return this;
         }
 
         public Builder minLength(@Nullable Integer minLength) {
-            this.minLength = Input.ofNullable(minLength);
+            this.minLength = Output.ofNullable(minLength);
             return this;
         }
 
-        public Builder minProperties(@Nullable Input<Integer> minProperties) {
+        public Builder minProperties(@Nullable Output<Integer> minProperties) {
             this.minProperties = minProperties;
             return this;
         }
 
         public Builder minProperties(@Nullable Integer minProperties) {
-            this.minProperties = Input.ofNullable(minProperties);
+            this.minProperties = Output.ofNullable(minProperties);
             return this;
         }
 
-        public Builder minimum(@Nullable Input<Double> minimum) {
+        public Builder minimum(@Nullable Output<Double> minimum) {
             this.minimum = minimum;
             return this;
         }
 
         public Builder minimum(@Nullable Double minimum) {
-            this.minimum = Input.ofNullable(minimum);
+            this.minimum = Output.ofNullable(minimum);
             return this;
         }
 
-        public Builder multipleOf(@Nullable Input<Double> multipleOf) {
+        public Builder multipleOf(@Nullable Output<Double> multipleOf) {
             this.multipleOf = multipleOf;
             return this;
         }
 
         public Builder multipleOf(@Nullable Double multipleOf) {
-            this.multipleOf = Input.ofNullable(multipleOf);
+            this.multipleOf = Output.ofNullable(multipleOf);
             return this;
         }
 
-        public Builder not(@Nullable Input<JSONSchemaPropsArgs> not) {
+        public Builder not(@Nullable Output<JSONSchemaPropsArgs> not) {
             this.not = not;
             return this;
         }
 
         public Builder not(@Nullable JSONSchemaPropsArgs not) {
-            this.not = Input.ofNullable(not);
+            this.not = Output.ofNullable(not);
             return this;
         }
 
-        public Builder nullable(@Nullable Input<Boolean> nullable) {
+        public Builder nullable(@Nullable Output<Boolean> nullable) {
             this.nullable = nullable;
             return this;
         }
 
         public Builder nullable(@Nullable Boolean nullable) {
-            this.nullable = Input.ofNullable(nullable);
+            this.nullable = Output.ofNullable(nullable);
             return this;
         }
 
-        public Builder oneOf(@Nullable Input<List<JSONSchemaPropsArgs>> oneOf) {
+        public Builder oneOf(@Nullable Output<List<JSONSchemaPropsArgs>> oneOf) {
             this.oneOf = oneOf;
             return this;
         }
 
         public Builder oneOf(@Nullable List<JSONSchemaPropsArgs> oneOf) {
-            this.oneOf = Input.ofNullable(oneOf);
+            this.oneOf = Output.ofNullable(oneOf);
             return this;
         }
 
-        public Builder pattern(@Nullable Input<String> pattern) {
+        public Builder pattern(@Nullable Output<String> pattern) {
             this.pattern = pattern;
             return this;
         }
 
         public Builder pattern(@Nullable String pattern) {
-            this.pattern = Input.ofNullable(pattern);
+            this.pattern = Output.ofNullable(pattern);
             return this;
         }
 
-        public Builder patternProperties(@Nullable Input<Map<String,JSONSchemaPropsArgs>> patternProperties) {
+        public Builder patternProperties(@Nullable Output<Map<String,JSONSchemaPropsArgs>> patternProperties) {
             this.patternProperties = patternProperties;
             return this;
         }
 
         public Builder patternProperties(@Nullable Map<String,JSONSchemaPropsArgs> patternProperties) {
-            this.patternProperties = Input.ofNullable(patternProperties);
+            this.patternProperties = Output.ofNullable(patternProperties);
             return this;
         }
 
-        public Builder properties(@Nullable Input<Map<String,JSONSchemaPropsArgs>> properties) {
+        public Builder properties(@Nullable Output<Map<String,JSONSchemaPropsArgs>> properties) {
             this.properties = properties;
             return this;
         }
 
         public Builder properties(@Nullable Map<String,JSONSchemaPropsArgs> properties) {
-            this.properties = Input.ofNullable(properties);
+            this.properties = Output.ofNullable(properties);
             return this;
         }
 
-        public Builder required(@Nullable Input<List<String>> required) {
+        public Builder required(@Nullable Output<List<String>> required) {
             this.required = required;
             return this;
         }
 
         public Builder required(@Nullable List<String> required) {
-            this.required = Input.ofNullable(required);
+            this.required = Output.ofNullable(required);
             return this;
         }
 
-        public Builder title(@Nullable Input<String> title) {
+        public Builder title(@Nullable Output<String> title) {
             this.title = title;
             return this;
         }
 
         public Builder title(@Nullable String title) {
-            this.title = Input.ofNullable(title);
+            this.title = Output.ofNullable(title);
             return this;
         }
 
-        public Builder type(@Nullable Input<String> type) {
+        public Builder type(@Nullable Output<String> type) {
             this.type = type;
             return this;
         }
 
         public Builder type(@Nullable String type) {
-            this.type = Input.ofNullable(type);
+            this.type = Output.ofNullable(type);
             return this;
         }
 
-        public Builder uniqueItems(@Nullable Input<Boolean> uniqueItems) {
+        public Builder uniqueItems(@Nullable Output<Boolean> uniqueItems) {
             this.uniqueItems = uniqueItems;
             return this;
         }
 
         public Builder uniqueItems(@Nullable Boolean uniqueItems) {
-            this.uniqueItems = Input.ofNullable(uniqueItems);
+            this.uniqueItems = Output.ofNullable(uniqueItems);
             return this;
         }
 
-        public Builder x_kubernetes_embedded_resource(@Nullable Input<Boolean> x_kubernetes_embedded_resource) {
+        public Builder x_kubernetes_embedded_resource(@Nullable Output<Boolean> x_kubernetes_embedded_resource) {
             this.x_kubernetes_embedded_resource = x_kubernetes_embedded_resource;
             return this;
         }
 
         public Builder x_kubernetes_embedded_resource(@Nullable Boolean x_kubernetes_embedded_resource) {
-            this.x_kubernetes_embedded_resource = Input.ofNullable(x_kubernetes_embedded_resource);
+            this.x_kubernetes_embedded_resource = Output.ofNullable(x_kubernetes_embedded_resource);
             return this;
         }
 
-        public Builder x_kubernetes_int_or_string(@Nullable Input<Boolean> x_kubernetes_int_or_string) {
+        public Builder x_kubernetes_int_or_string(@Nullable Output<Boolean> x_kubernetes_int_or_string) {
             this.x_kubernetes_int_or_string = x_kubernetes_int_or_string;
             return this;
         }
 
         public Builder x_kubernetes_int_or_string(@Nullable Boolean x_kubernetes_int_or_string) {
-            this.x_kubernetes_int_or_string = Input.ofNullable(x_kubernetes_int_or_string);
+            this.x_kubernetes_int_or_string = Output.ofNullable(x_kubernetes_int_or_string);
             return this;
         }
 
-        public Builder x_kubernetes_list_map_keys(@Nullable Input<List<String>> x_kubernetes_list_map_keys) {
+        public Builder x_kubernetes_list_map_keys(@Nullable Output<List<String>> x_kubernetes_list_map_keys) {
             this.x_kubernetes_list_map_keys = x_kubernetes_list_map_keys;
             return this;
         }
 
         public Builder x_kubernetes_list_map_keys(@Nullable List<String> x_kubernetes_list_map_keys) {
-            this.x_kubernetes_list_map_keys = Input.ofNullable(x_kubernetes_list_map_keys);
+            this.x_kubernetes_list_map_keys = Output.ofNullable(x_kubernetes_list_map_keys);
             return this;
         }
 
-        public Builder x_kubernetes_list_type(@Nullable Input<String> x_kubernetes_list_type) {
+        public Builder x_kubernetes_list_type(@Nullable Output<String> x_kubernetes_list_type) {
             this.x_kubernetes_list_type = x_kubernetes_list_type;
             return this;
         }
 
         public Builder x_kubernetes_list_type(@Nullable String x_kubernetes_list_type) {
-            this.x_kubernetes_list_type = Input.ofNullable(x_kubernetes_list_type);
+            this.x_kubernetes_list_type = Output.ofNullable(x_kubernetes_list_type);
             return this;
         }
 
-        public Builder x_kubernetes_map_type(@Nullable Input<String> x_kubernetes_map_type) {
+        public Builder x_kubernetes_map_type(@Nullable Output<String> x_kubernetes_map_type) {
             this.x_kubernetes_map_type = x_kubernetes_map_type;
             return this;
         }
 
         public Builder x_kubernetes_map_type(@Nullable String x_kubernetes_map_type) {
-            this.x_kubernetes_map_type = Input.ofNullable(x_kubernetes_map_type);
+            this.x_kubernetes_map_type = Output.ofNullable(x_kubernetes_map_type);
             return this;
         }
 
-        public Builder x_kubernetes_preserve_unknown_fields(@Nullable Input<Boolean> x_kubernetes_preserve_unknown_fields) {
+        public Builder x_kubernetes_preserve_unknown_fields(@Nullable Output<Boolean> x_kubernetes_preserve_unknown_fields) {
             this.x_kubernetes_preserve_unknown_fields = x_kubernetes_preserve_unknown_fields;
             return this;
         }
 
         public Builder x_kubernetes_preserve_unknown_fields(@Nullable Boolean x_kubernetes_preserve_unknown_fields) {
-            this.x_kubernetes_preserve_unknown_fields = Input.ofNullable(x_kubernetes_preserve_unknown_fields);
+            this.x_kubernetes_preserve_unknown_fields = Output.ofNullable(x_kubernetes_preserve_unknown_fields);
             return this;
         }
 
-        public Builder x_kubernetes_validations(@Nullable Input<List<ValidationRuleArgs>> x_kubernetes_validations) {
+        public Builder x_kubernetes_validations(@Nullable Output<List<ValidationRuleArgs>> x_kubernetes_validations) {
             this.x_kubernetes_validations = x_kubernetes_validations;
             return this;
         }
 
         public Builder x_kubernetes_validations(@Nullable List<ValidationRuleArgs> x_kubernetes_validations) {
-            this.x_kubernetes_validations = Input.ofNullable(x_kubernetes_validations);
+            this.x_kubernetes_validations = Output.ofNullable(x_kubernetes_validations);
             return this;
         }
         public JSONSchemaPropsArgs build() {

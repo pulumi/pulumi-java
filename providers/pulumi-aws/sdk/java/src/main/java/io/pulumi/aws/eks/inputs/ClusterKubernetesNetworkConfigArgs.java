@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.eks.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class ClusterKubernetesNetworkConfigArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="ipFamily")
-      private final @Nullable Input<String> ipFamily;
+      private final @Nullable Output<String> ipFamily;
 
-    public Input<String> getIpFamily() {
-        return this.ipFamily == null ? Input.empty() : this.ipFamily;
+    public Output<String> getIpFamily() {
+        return this.ipFamily == null ? Output.empty() : this.ipFamily;
     }
 
     /**
@@ -30,22 +30,22 @@ public final class ClusterKubernetesNetworkConfigArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="serviceIpv4Cidr")
-      private final @Nullable Input<String> serviceIpv4Cidr;
+      private final @Nullable Output<String> serviceIpv4Cidr;
 
-    public Input<String> getServiceIpv4Cidr() {
-        return this.serviceIpv4Cidr == null ? Input.empty() : this.serviceIpv4Cidr;
+    public Output<String> getServiceIpv4Cidr() {
+        return this.serviceIpv4Cidr == null ? Output.empty() : this.serviceIpv4Cidr;
     }
 
     public ClusterKubernetesNetworkConfigArgs(
-        @Nullable Input<String> ipFamily,
-        @Nullable Input<String> serviceIpv4Cidr) {
+        @Nullable Output<String> ipFamily,
+        @Nullable Output<String> serviceIpv4Cidr) {
         this.ipFamily = ipFamily;
         this.serviceIpv4Cidr = serviceIpv4Cidr;
     }
 
     private ClusterKubernetesNetworkConfigArgs() {
-        this.ipFamily = Input.empty();
-        this.serviceIpv4Cidr = Input.empty();
+        this.ipFamily = Output.empty();
+        this.serviceIpv4Cidr = Output.empty();
     }
 
     public static Builder builder() {
@@ -57,8 +57,8 @@ public final class ClusterKubernetesNetworkConfigArgs extends io.pulumi.resource
     }
 
     public static final class Builder {
-        private @Nullable Input<String> ipFamily;
-        private @Nullable Input<String> serviceIpv4Cidr;
+        private @Nullable Output<String> ipFamily;
+        private @Nullable Output<String> serviceIpv4Cidr;
 
         public Builder() {
     	      // Empty
@@ -70,23 +70,23 @@ public final class ClusterKubernetesNetworkConfigArgs extends io.pulumi.resource
     	      this.serviceIpv4Cidr = defaults.serviceIpv4Cidr;
         }
 
-        public Builder ipFamily(@Nullable Input<String> ipFamily) {
+        public Builder ipFamily(@Nullable Output<String> ipFamily) {
             this.ipFamily = ipFamily;
             return this;
         }
 
         public Builder ipFamily(@Nullable String ipFamily) {
-            this.ipFamily = Input.ofNullable(ipFamily);
+            this.ipFamily = Output.ofNullable(ipFamily);
             return this;
         }
 
-        public Builder serviceIpv4Cidr(@Nullable Input<String> serviceIpv4Cidr) {
+        public Builder serviceIpv4Cidr(@Nullable Output<String> serviceIpv4Cidr) {
             this.serviceIpv4Cidr = serviceIpv4Cidr;
             return this;
         }
 
         public Builder serviceIpv4Cidr(@Nullable String serviceIpv4Cidr) {
-            this.serviceIpv4Cidr = Input.ofNullable(serviceIpv4Cidr);
+            this.serviceIpv4Cidr = Output.ofNullable(serviceIpv4Cidr);
             return this;
         }
         public ClusterKubernetesNetworkConfigArgs build() {

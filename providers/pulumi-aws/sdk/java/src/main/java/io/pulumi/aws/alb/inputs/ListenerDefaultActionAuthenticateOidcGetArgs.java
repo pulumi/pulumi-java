@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.alb.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -21,10 +21,10 @@ public final class ListenerDefaultActionAuthenticateOidcGetArgs extends io.pulum
      * 
      */
     @InputImport(name="authenticationRequestExtraParams")
-      private final @Nullable Input<Map<String,String>> authenticationRequestExtraParams;
+      private final @Nullable Output<Map<String,String>> authenticationRequestExtraParams;
 
-    public Input<Map<String,String>> getAuthenticationRequestExtraParams() {
-        return this.authenticationRequestExtraParams == null ? Input.empty() : this.authenticationRequestExtraParams;
+    public Output<Map<String,String>> getAuthenticationRequestExtraParams() {
+        return this.authenticationRequestExtraParams == null ? Output.empty() : this.authenticationRequestExtraParams;
     }
 
     /**
@@ -32,9 +32,9 @@ public final class ListenerDefaultActionAuthenticateOidcGetArgs extends io.pulum
      * 
      */
     @InputImport(name="authorizationEndpoint", required=true)
-      private final Input<String> authorizationEndpoint;
+      private final Output<String> authorizationEndpoint;
 
-    public Input<String> getAuthorizationEndpoint() {
+    public Output<String> getAuthorizationEndpoint() {
         return this.authorizationEndpoint;
     }
 
@@ -43,9 +43,9 @@ public final class ListenerDefaultActionAuthenticateOidcGetArgs extends io.pulum
      * 
      */
     @InputImport(name="clientId", required=true)
-      private final Input<String> clientId;
+      private final Output<String> clientId;
 
-    public Input<String> getClientId() {
+    public Output<String> getClientId() {
         return this.clientId;
     }
 
@@ -54,9 +54,9 @@ public final class ListenerDefaultActionAuthenticateOidcGetArgs extends io.pulum
      * 
      */
     @InputImport(name="clientSecret", required=true)
-      private final Input<String> clientSecret;
+      private final Output<String> clientSecret;
 
-    public Input<String> getClientSecret() {
+    public Output<String> getClientSecret() {
         return this.clientSecret;
     }
 
@@ -65,9 +65,9 @@ public final class ListenerDefaultActionAuthenticateOidcGetArgs extends io.pulum
      * 
      */
     @InputImport(name="issuer", required=true)
-      private final Input<String> issuer;
+      private final Output<String> issuer;
 
-    public Input<String> getIssuer() {
+    public Output<String> getIssuer() {
         return this.issuer;
     }
 
@@ -76,10 +76,10 @@ public final class ListenerDefaultActionAuthenticateOidcGetArgs extends io.pulum
      * 
      */
     @InputImport(name="onUnauthenticatedRequest")
-      private final @Nullable Input<String> onUnauthenticatedRequest;
+      private final @Nullable Output<String> onUnauthenticatedRequest;
 
-    public Input<String> getOnUnauthenticatedRequest() {
-        return this.onUnauthenticatedRequest == null ? Input.empty() : this.onUnauthenticatedRequest;
+    public Output<String> getOnUnauthenticatedRequest() {
+        return this.onUnauthenticatedRequest == null ? Output.empty() : this.onUnauthenticatedRequest;
     }
 
     /**
@@ -87,10 +87,10 @@ public final class ListenerDefaultActionAuthenticateOidcGetArgs extends io.pulum
      * 
      */
     @InputImport(name="scope")
-      private final @Nullable Input<String> scope;
+      private final @Nullable Output<String> scope;
 
-    public Input<String> getScope() {
-        return this.scope == null ? Input.empty() : this.scope;
+    public Output<String> getScope() {
+        return this.scope == null ? Output.empty() : this.scope;
     }
 
     /**
@@ -98,10 +98,10 @@ public final class ListenerDefaultActionAuthenticateOidcGetArgs extends io.pulum
      * 
      */
     @InputImport(name="sessionCookieName")
-      private final @Nullable Input<String> sessionCookieName;
+      private final @Nullable Output<String> sessionCookieName;
 
-    public Input<String> getSessionCookieName() {
-        return this.sessionCookieName == null ? Input.empty() : this.sessionCookieName;
+    public Output<String> getSessionCookieName() {
+        return this.sessionCookieName == null ? Output.empty() : this.sessionCookieName;
     }
 
     /**
@@ -109,10 +109,10 @@ public final class ListenerDefaultActionAuthenticateOidcGetArgs extends io.pulum
      * 
      */
     @InputImport(name="sessionTimeout")
-      private final @Nullable Input<Integer> sessionTimeout;
+      private final @Nullable Output<Integer> sessionTimeout;
 
-    public Input<Integer> getSessionTimeout() {
-        return this.sessionTimeout == null ? Input.empty() : this.sessionTimeout;
+    public Output<Integer> getSessionTimeout() {
+        return this.sessionTimeout == null ? Output.empty() : this.sessionTimeout;
     }
 
     /**
@@ -120,9 +120,9 @@ public final class ListenerDefaultActionAuthenticateOidcGetArgs extends io.pulum
      * 
      */
     @InputImport(name="tokenEndpoint", required=true)
-      private final Input<String> tokenEndpoint;
+      private final Output<String> tokenEndpoint;
 
-    public Input<String> getTokenEndpoint() {
+    public Output<String> getTokenEndpoint() {
         return this.tokenEndpoint;
     }
 
@@ -131,24 +131,24 @@ public final class ListenerDefaultActionAuthenticateOidcGetArgs extends io.pulum
      * 
      */
     @InputImport(name="userInfoEndpoint", required=true)
-      private final Input<String> userInfoEndpoint;
+      private final Output<String> userInfoEndpoint;
 
-    public Input<String> getUserInfoEndpoint() {
+    public Output<String> getUserInfoEndpoint() {
         return this.userInfoEndpoint;
     }
 
     public ListenerDefaultActionAuthenticateOidcGetArgs(
-        @Nullable Input<Map<String,String>> authenticationRequestExtraParams,
-        Input<String> authorizationEndpoint,
-        Input<String> clientId,
-        Input<String> clientSecret,
-        Input<String> issuer,
-        @Nullable Input<String> onUnauthenticatedRequest,
-        @Nullable Input<String> scope,
-        @Nullable Input<String> sessionCookieName,
-        @Nullable Input<Integer> sessionTimeout,
-        Input<String> tokenEndpoint,
-        Input<String> userInfoEndpoint) {
+        @Nullable Output<Map<String,String>> authenticationRequestExtraParams,
+        Output<String> authorizationEndpoint,
+        Output<String> clientId,
+        Output<String> clientSecret,
+        Output<String> issuer,
+        @Nullable Output<String> onUnauthenticatedRequest,
+        @Nullable Output<String> scope,
+        @Nullable Output<String> sessionCookieName,
+        @Nullable Output<Integer> sessionTimeout,
+        Output<String> tokenEndpoint,
+        Output<String> userInfoEndpoint) {
         this.authenticationRequestExtraParams = authenticationRequestExtraParams;
         this.authorizationEndpoint = Objects.requireNonNull(authorizationEndpoint, "expected parameter 'authorizationEndpoint' to be non-null");
         this.clientId = Objects.requireNonNull(clientId, "expected parameter 'clientId' to be non-null");
@@ -163,17 +163,17 @@ public final class ListenerDefaultActionAuthenticateOidcGetArgs extends io.pulum
     }
 
     private ListenerDefaultActionAuthenticateOidcGetArgs() {
-        this.authenticationRequestExtraParams = Input.empty();
-        this.authorizationEndpoint = Input.empty();
-        this.clientId = Input.empty();
-        this.clientSecret = Input.empty();
-        this.issuer = Input.empty();
-        this.onUnauthenticatedRequest = Input.empty();
-        this.scope = Input.empty();
-        this.sessionCookieName = Input.empty();
-        this.sessionTimeout = Input.empty();
-        this.tokenEndpoint = Input.empty();
-        this.userInfoEndpoint = Input.empty();
+        this.authenticationRequestExtraParams = Output.empty();
+        this.authorizationEndpoint = Output.empty();
+        this.clientId = Output.empty();
+        this.clientSecret = Output.empty();
+        this.issuer = Output.empty();
+        this.onUnauthenticatedRequest = Output.empty();
+        this.scope = Output.empty();
+        this.sessionCookieName = Output.empty();
+        this.sessionTimeout = Output.empty();
+        this.tokenEndpoint = Output.empty();
+        this.userInfoEndpoint = Output.empty();
     }
 
     public static Builder builder() {
@@ -185,17 +185,17 @@ public final class ListenerDefaultActionAuthenticateOidcGetArgs extends io.pulum
     }
 
     public static final class Builder {
-        private @Nullable Input<Map<String,String>> authenticationRequestExtraParams;
-        private Input<String> authorizationEndpoint;
-        private Input<String> clientId;
-        private Input<String> clientSecret;
-        private Input<String> issuer;
-        private @Nullable Input<String> onUnauthenticatedRequest;
-        private @Nullable Input<String> scope;
-        private @Nullable Input<String> sessionCookieName;
-        private @Nullable Input<Integer> sessionTimeout;
-        private Input<String> tokenEndpoint;
-        private Input<String> userInfoEndpoint;
+        private @Nullable Output<Map<String,String>> authenticationRequestExtraParams;
+        private Output<String> authorizationEndpoint;
+        private Output<String> clientId;
+        private Output<String> clientSecret;
+        private Output<String> issuer;
+        private @Nullable Output<String> onUnauthenticatedRequest;
+        private @Nullable Output<String> scope;
+        private @Nullable Output<String> sessionCookieName;
+        private @Nullable Output<Integer> sessionTimeout;
+        private Output<String> tokenEndpoint;
+        private Output<String> userInfoEndpoint;
 
         public Builder() {
     	      // Empty
@@ -216,113 +216,113 @@ public final class ListenerDefaultActionAuthenticateOidcGetArgs extends io.pulum
     	      this.userInfoEndpoint = defaults.userInfoEndpoint;
         }
 
-        public Builder authenticationRequestExtraParams(@Nullable Input<Map<String,String>> authenticationRequestExtraParams) {
+        public Builder authenticationRequestExtraParams(@Nullable Output<Map<String,String>> authenticationRequestExtraParams) {
             this.authenticationRequestExtraParams = authenticationRequestExtraParams;
             return this;
         }
 
         public Builder authenticationRequestExtraParams(@Nullable Map<String,String> authenticationRequestExtraParams) {
-            this.authenticationRequestExtraParams = Input.ofNullable(authenticationRequestExtraParams);
+            this.authenticationRequestExtraParams = Output.ofNullable(authenticationRequestExtraParams);
             return this;
         }
 
-        public Builder authorizationEndpoint(Input<String> authorizationEndpoint) {
+        public Builder authorizationEndpoint(Output<String> authorizationEndpoint) {
             this.authorizationEndpoint = Objects.requireNonNull(authorizationEndpoint);
             return this;
         }
 
         public Builder authorizationEndpoint(String authorizationEndpoint) {
-            this.authorizationEndpoint = Input.of(Objects.requireNonNull(authorizationEndpoint));
+            this.authorizationEndpoint = Output.of(Objects.requireNonNull(authorizationEndpoint));
             return this;
         }
 
-        public Builder clientId(Input<String> clientId) {
+        public Builder clientId(Output<String> clientId) {
             this.clientId = Objects.requireNonNull(clientId);
             return this;
         }
 
         public Builder clientId(String clientId) {
-            this.clientId = Input.of(Objects.requireNonNull(clientId));
+            this.clientId = Output.of(Objects.requireNonNull(clientId));
             return this;
         }
 
-        public Builder clientSecret(Input<String> clientSecret) {
+        public Builder clientSecret(Output<String> clientSecret) {
             this.clientSecret = Objects.requireNonNull(clientSecret);
             return this;
         }
 
         public Builder clientSecret(String clientSecret) {
-            this.clientSecret = Input.of(Objects.requireNonNull(clientSecret));
+            this.clientSecret = Output.of(Objects.requireNonNull(clientSecret));
             return this;
         }
 
-        public Builder issuer(Input<String> issuer) {
+        public Builder issuer(Output<String> issuer) {
             this.issuer = Objects.requireNonNull(issuer);
             return this;
         }
 
         public Builder issuer(String issuer) {
-            this.issuer = Input.of(Objects.requireNonNull(issuer));
+            this.issuer = Output.of(Objects.requireNonNull(issuer));
             return this;
         }
 
-        public Builder onUnauthenticatedRequest(@Nullable Input<String> onUnauthenticatedRequest) {
+        public Builder onUnauthenticatedRequest(@Nullable Output<String> onUnauthenticatedRequest) {
             this.onUnauthenticatedRequest = onUnauthenticatedRequest;
             return this;
         }
 
         public Builder onUnauthenticatedRequest(@Nullable String onUnauthenticatedRequest) {
-            this.onUnauthenticatedRequest = Input.ofNullable(onUnauthenticatedRequest);
+            this.onUnauthenticatedRequest = Output.ofNullable(onUnauthenticatedRequest);
             return this;
         }
 
-        public Builder scope(@Nullable Input<String> scope) {
+        public Builder scope(@Nullable Output<String> scope) {
             this.scope = scope;
             return this;
         }
 
         public Builder scope(@Nullable String scope) {
-            this.scope = Input.ofNullable(scope);
+            this.scope = Output.ofNullable(scope);
             return this;
         }
 
-        public Builder sessionCookieName(@Nullable Input<String> sessionCookieName) {
+        public Builder sessionCookieName(@Nullable Output<String> sessionCookieName) {
             this.sessionCookieName = sessionCookieName;
             return this;
         }
 
         public Builder sessionCookieName(@Nullable String sessionCookieName) {
-            this.sessionCookieName = Input.ofNullable(sessionCookieName);
+            this.sessionCookieName = Output.ofNullable(sessionCookieName);
             return this;
         }
 
-        public Builder sessionTimeout(@Nullable Input<Integer> sessionTimeout) {
+        public Builder sessionTimeout(@Nullable Output<Integer> sessionTimeout) {
             this.sessionTimeout = sessionTimeout;
             return this;
         }
 
         public Builder sessionTimeout(@Nullable Integer sessionTimeout) {
-            this.sessionTimeout = Input.ofNullable(sessionTimeout);
+            this.sessionTimeout = Output.ofNullable(sessionTimeout);
             return this;
         }
 
-        public Builder tokenEndpoint(Input<String> tokenEndpoint) {
+        public Builder tokenEndpoint(Output<String> tokenEndpoint) {
             this.tokenEndpoint = Objects.requireNonNull(tokenEndpoint);
             return this;
         }
 
         public Builder tokenEndpoint(String tokenEndpoint) {
-            this.tokenEndpoint = Input.of(Objects.requireNonNull(tokenEndpoint));
+            this.tokenEndpoint = Output.of(Objects.requireNonNull(tokenEndpoint));
             return this;
         }
 
-        public Builder userInfoEndpoint(Input<String> userInfoEndpoint) {
+        public Builder userInfoEndpoint(Output<String> userInfoEndpoint) {
             this.userInfoEndpoint = Objects.requireNonNull(userInfoEndpoint);
             return this;
         }
 
         public Builder userInfoEndpoint(String userInfoEndpoint) {
-            this.userInfoEndpoint = Input.of(Objects.requireNonNull(userInfoEndpoint));
+            this.userInfoEndpoint = Output.of(Objects.requireNonNull(userInfoEndpoint));
             return this;
         }
         public ListenerDefaultActionAuthenticateOidcGetArgs build() {

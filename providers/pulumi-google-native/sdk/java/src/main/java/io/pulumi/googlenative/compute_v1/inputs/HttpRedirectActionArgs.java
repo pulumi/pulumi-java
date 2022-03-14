@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.compute_v1.enums.HttpRedirectActionRedirectResponseCode;
 import java.lang.Boolean;
@@ -25,10 +25,10 @@ public final class HttpRedirectActionArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="hostRedirect")
-      private final @Nullable Input<String> hostRedirect;
+      private final @Nullable Output<String> hostRedirect;
 
-    public Input<String> getHostRedirect() {
-        return this.hostRedirect == null ? Input.empty() : this.hostRedirect;
+    public Output<String> getHostRedirect() {
+        return this.hostRedirect == null ? Output.empty() : this.hostRedirect;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class HttpRedirectActionArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="httpsRedirect")
-      private final @Nullable Input<Boolean> httpsRedirect;
+      private final @Nullable Output<Boolean> httpsRedirect;
 
-    public Input<Boolean> getHttpsRedirect() {
-        return this.httpsRedirect == null ? Input.empty() : this.httpsRedirect;
+    public Output<Boolean> getHttpsRedirect() {
+        return this.httpsRedirect == null ? Output.empty() : this.httpsRedirect;
     }
 
     /**
@@ -47,10 +47,10 @@ public final class HttpRedirectActionArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="pathRedirect")
-      private final @Nullable Input<String> pathRedirect;
+      private final @Nullable Output<String> pathRedirect;
 
-    public Input<String> getPathRedirect() {
-        return this.pathRedirect == null ? Input.empty() : this.pathRedirect;
+    public Output<String> getPathRedirect() {
+        return this.pathRedirect == null ? Output.empty() : this.pathRedirect;
     }
 
     /**
@@ -58,10 +58,10 @@ public final class HttpRedirectActionArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="prefixRedirect")
-      private final @Nullable Input<String> prefixRedirect;
+      private final @Nullable Output<String> prefixRedirect;
 
-    public Input<String> getPrefixRedirect() {
-        return this.prefixRedirect == null ? Input.empty() : this.prefixRedirect;
+    public Output<String> getPrefixRedirect() {
+        return this.prefixRedirect == null ? Output.empty() : this.prefixRedirect;
     }
 
     /**
@@ -69,10 +69,10 @@ public final class HttpRedirectActionArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="redirectResponseCode")
-      private final @Nullable Input<HttpRedirectActionRedirectResponseCode> redirectResponseCode;
+      private final @Nullable Output<HttpRedirectActionRedirectResponseCode> redirectResponseCode;
 
-    public Input<HttpRedirectActionRedirectResponseCode> getRedirectResponseCode() {
-        return this.redirectResponseCode == null ? Input.empty() : this.redirectResponseCode;
+    public Output<HttpRedirectActionRedirectResponseCode> getRedirectResponseCode() {
+        return this.redirectResponseCode == null ? Output.empty() : this.redirectResponseCode;
     }
 
     /**
@@ -80,19 +80,19 @@ public final class HttpRedirectActionArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="stripQuery")
-      private final @Nullable Input<Boolean> stripQuery;
+      private final @Nullable Output<Boolean> stripQuery;
 
-    public Input<Boolean> getStripQuery() {
-        return this.stripQuery == null ? Input.empty() : this.stripQuery;
+    public Output<Boolean> getStripQuery() {
+        return this.stripQuery == null ? Output.empty() : this.stripQuery;
     }
 
     public HttpRedirectActionArgs(
-        @Nullable Input<String> hostRedirect,
-        @Nullable Input<Boolean> httpsRedirect,
-        @Nullable Input<String> pathRedirect,
-        @Nullable Input<String> prefixRedirect,
-        @Nullable Input<HttpRedirectActionRedirectResponseCode> redirectResponseCode,
-        @Nullable Input<Boolean> stripQuery) {
+        @Nullable Output<String> hostRedirect,
+        @Nullable Output<Boolean> httpsRedirect,
+        @Nullable Output<String> pathRedirect,
+        @Nullable Output<String> prefixRedirect,
+        @Nullable Output<HttpRedirectActionRedirectResponseCode> redirectResponseCode,
+        @Nullable Output<Boolean> stripQuery) {
         this.hostRedirect = hostRedirect;
         this.httpsRedirect = httpsRedirect;
         this.pathRedirect = pathRedirect;
@@ -102,12 +102,12 @@ public final class HttpRedirectActionArgs extends io.pulumi.resources.ResourceAr
     }
 
     private HttpRedirectActionArgs() {
-        this.hostRedirect = Input.empty();
-        this.httpsRedirect = Input.empty();
-        this.pathRedirect = Input.empty();
-        this.prefixRedirect = Input.empty();
-        this.redirectResponseCode = Input.empty();
-        this.stripQuery = Input.empty();
+        this.hostRedirect = Output.empty();
+        this.httpsRedirect = Output.empty();
+        this.pathRedirect = Output.empty();
+        this.prefixRedirect = Output.empty();
+        this.redirectResponseCode = Output.empty();
+        this.stripQuery = Output.empty();
     }
 
     public static Builder builder() {
@@ -119,12 +119,12 @@ public final class HttpRedirectActionArgs extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private @Nullable Input<String> hostRedirect;
-        private @Nullable Input<Boolean> httpsRedirect;
-        private @Nullable Input<String> pathRedirect;
-        private @Nullable Input<String> prefixRedirect;
-        private @Nullable Input<HttpRedirectActionRedirectResponseCode> redirectResponseCode;
-        private @Nullable Input<Boolean> stripQuery;
+        private @Nullable Output<String> hostRedirect;
+        private @Nullable Output<Boolean> httpsRedirect;
+        private @Nullable Output<String> pathRedirect;
+        private @Nullable Output<String> prefixRedirect;
+        private @Nullable Output<HttpRedirectActionRedirectResponseCode> redirectResponseCode;
+        private @Nullable Output<Boolean> stripQuery;
 
         public Builder() {
     	      // Empty
@@ -140,63 +140,63 @@ public final class HttpRedirectActionArgs extends io.pulumi.resources.ResourceAr
     	      this.stripQuery = defaults.stripQuery;
         }
 
-        public Builder hostRedirect(@Nullable Input<String> hostRedirect) {
+        public Builder hostRedirect(@Nullable Output<String> hostRedirect) {
             this.hostRedirect = hostRedirect;
             return this;
         }
 
         public Builder hostRedirect(@Nullable String hostRedirect) {
-            this.hostRedirect = Input.ofNullable(hostRedirect);
+            this.hostRedirect = Output.ofNullable(hostRedirect);
             return this;
         }
 
-        public Builder httpsRedirect(@Nullable Input<Boolean> httpsRedirect) {
+        public Builder httpsRedirect(@Nullable Output<Boolean> httpsRedirect) {
             this.httpsRedirect = httpsRedirect;
             return this;
         }
 
         public Builder httpsRedirect(@Nullable Boolean httpsRedirect) {
-            this.httpsRedirect = Input.ofNullable(httpsRedirect);
+            this.httpsRedirect = Output.ofNullable(httpsRedirect);
             return this;
         }
 
-        public Builder pathRedirect(@Nullable Input<String> pathRedirect) {
+        public Builder pathRedirect(@Nullable Output<String> pathRedirect) {
             this.pathRedirect = pathRedirect;
             return this;
         }
 
         public Builder pathRedirect(@Nullable String pathRedirect) {
-            this.pathRedirect = Input.ofNullable(pathRedirect);
+            this.pathRedirect = Output.ofNullable(pathRedirect);
             return this;
         }
 
-        public Builder prefixRedirect(@Nullable Input<String> prefixRedirect) {
+        public Builder prefixRedirect(@Nullable Output<String> prefixRedirect) {
             this.prefixRedirect = prefixRedirect;
             return this;
         }
 
         public Builder prefixRedirect(@Nullable String prefixRedirect) {
-            this.prefixRedirect = Input.ofNullable(prefixRedirect);
+            this.prefixRedirect = Output.ofNullable(prefixRedirect);
             return this;
         }
 
-        public Builder redirectResponseCode(@Nullable Input<HttpRedirectActionRedirectResponseCode> redirectResponseCode) {
+        public Builder redirectResponseCode(@Nullable Output<HttpRedirectActionRedirectResponseCode> redirectResponseCode) {
             this.redirectResponseCode = redirectResponseCode;
             return this;
         }
 
         public Builder redirectResponseCode(@Nullable HttpRedirectActionRedirectResponseCode redirectResponseCode) {
-            this.redirectResponseCode = Input.ofNullable(redirectResponseCode);
+            this.redirectResponseCode = Output.ofNullable(redirectResponseCode);
             return this;
         }
 
-        public Builder stripQuery(@Nullable Input<Boolean> stripQuery) {
+        public Builder stripQuery(@Nullable Output<Boolean> stripQuery) {
             this.stripQuery = stripQuery;
             return this;
         }
 
         public Builder stripQuery(@Nullable Boolean stripQuery) {
-            this.stripQuery = Input.ofNullable(stripQuery);
+            this.stripQuery = Output.ofNullable(stripQuery);
             return this;
         }
         public HttpRedirectActionArgs build() {

@@ -6,7 +6,6 @@ package io.pulumi.aws.amp;
 import io.pulumi.aws.Utilities;
 import io.pulumi.aws.amp.AlertManagerDefinitionArgs;
 import io.pulumi.aws.amp.inputs.AlertManagerDefinitionState;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -96,14 +95,14 @@ public class AlertManagerDefinition extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public AlertManagerDefinition(String name, AlertManagerDefinitionArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:amp/alertManagerDefinition:AlertManagerDefinition", name, args == null ? AlertManagerDefinitionArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws:amp/alertManagerDefinition:AlertManagerDefinition", name, args == null ? AlertManagerDefinitionArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private AlertManagerDefinition(String name, Input<String> id, @Nullable AlertManagerDefinitionState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private AlertManagerDefinition(String name, Output<String> id, @Nullable AlertManagerDefinitionState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws:amp/alertManagerDefinition:AlertManagerDefinition", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -119,7 +118,7 @@ public class AlertManagerDefinition extends io.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static AlertManagerDefinition get(String name, Input<String> id, @Nullable AlertManagerDefinitionState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static AlertManagerDefinition get(String name, Output<String> id, @Nullable AlertManagerDefinitionState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new AlertManagerDefinition(name, id, state, options);
     }
 }

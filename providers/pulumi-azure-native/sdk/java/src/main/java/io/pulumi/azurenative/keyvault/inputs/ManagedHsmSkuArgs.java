@@ -6,7 +6,7 @@ package io.pulumi.azurenative.keyvault.inputs;
 import io.pulumi.azurenative.keyvault.enums.ManagedHsmSkuFamily;
 import io.pulumi.azurenative.keyvault.enums.ManagedHsmSkuName;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -25,9 +25,9 @@ public final class ManagedHsmSkuArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="family", required=true)
-      private final Input<Either<String,ManagedHsmSkuFamily>> family;
+      private final Output<Either<String,ManagedHsmSkuFamily>> family;
 
-    public Input<Either<String,ManagedHsmSkuFamily>> getFamily() {
+    public Output<Either<String,ManagedHsmSkuFamily>> getFamily() {
         return this.family;
     }
 
@@ -36,22 +36,22 @@ public final class ManagedHsmSkuArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name", required=true)
-      private final Input<ManagedHsmSkuName> name;
+      private final Output<ManagedHsmSkuName> name;
 
-    public Input<ManagedHsmSkuName> getName() {
+    public Output<ManagedHsmSkuName> getName() {
         return this.name;
     }
 
     public ManagedHsmSkuArgs(
-        Input<Either<String,ManagedHsmSkuFamily>> family,
-        Input<ManagedHsmSkuName> name) {
+        Output<Either<String,ManagedHsmSkuFamily>> family,
+        Output<ManagedHsmSkuName> name) {
         this.family = Objects.requireNonNull(family, "expected parameter 'family' to be non-null");
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
     }
 
     private ManagedHsmSkuArgs() {
-        this.family = Input.empty();
-        this.name = Input.empty();
+        this.family = Output.empty();
+        this.name = Output.empty();
     }
 
     public static Builder builder() {
@@ -63,8 +63,8 @@ public final class ManagedHsmSkuArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<Either<String,ManagedHsmSkuFamily>> family;
-        private Input<ManagedHsmSkuName> name;
+        private Output<Either<String,ManagedHsmSkuFamily>> family;
+        private Output<ManagedHsmSkuName> name;
 
         public Builder() {
     	      // Empty
@@ -76,23 +76,23 @@ public final class ManagedHsmSkuArgs extends io.pulumi.resources.ResourceArgs {
     	      this.name = defaults.name;
         }
 
-        public Builder family(Input<Either<String,ManagedHsmSkuFamily>> family) {
+        public Builder family(Output<Either<String,ManagedHsmSkuFamily>> family) {
             this.family = Objects.requireNonNull(family);
             return this;
         }
 
         public Builder family(Either<String,ManagedHsmSkuFamily> family) {
-            this.family = Input.of(Objects.requireNonNull(family));
+            this.family = Output.of(Objects.requireNonNull(family));
             return this;
         }
 
-        public Builder name(Input<ManagedHsmSkuName> name) {
+        public Builder name(Output<ManagedHsmSkuName> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(ManagedHsmSkuName name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
         public ManagedHsmSkuArgs build() {

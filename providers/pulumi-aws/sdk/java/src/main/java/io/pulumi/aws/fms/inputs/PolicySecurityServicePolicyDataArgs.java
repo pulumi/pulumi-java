@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.fms.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class PolicySecurityServicePolicyDataArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="managedServiceData")
-      private final @Nullable Input<String> managedServiceData;
+      private final @Nullable Output<String> managedServiceData;
 
-    public Input<String> getManagedServiceData() {
-        return this.managedServiceData == null ? Input.empty() : this.managedServiceData;
+    public Output<String> getManagedServiceData() {
+        return this.managedServiceData == null ? Output.empty() : this.managedServiceData;
     }
 
     /**
@@ -30,22 +30,22 @@ public final class PolicySecurityServicePolicyDataArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<String> type;
+      private final Output<String> type;
 
-    public Input<String> getType() {
+    public Output<String> getType() {
         return this.type;
     }
 
     public PolicySecurityServicePolicyDataArgs(
-        @Nullable Input<String> managedServiceData,
-        Input<String> type) {
+        @Nullable Output<String> managedServiceData,
+        Output<String> type) {
         this.managedServiceData = managedServiceData;
         this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
     }
 
     private PolicySecurityServicePolicyDataArgs() {
-        this.managedServiceData = Input.empty();
-        this.type = Input.empty();
+        this.managedServiceData = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -57,8 +57,8 @@ public final class PolicySecurityServicePolicyDataArgs extends io.pulumi.resourc
     }
 
     public static final class Builder {
-        private @Nullable Input<String> managedServiceData;
-        private Input<String> type;
+        private @Nullable Output<String> managedServiceData;
+        private Output<String> type;
 
         public Builder() {
     	      // Empty
@@ -70,23 +70,23 @@ public final class PolicySecurityServicePolicyDataArgs extends io.pulumi.resourc
     	      this.type = defaults.type;
         }
 
-        public Builder managedServiceData(@Nullable Input<String> managedServiceData) {
+        public Builder managedServiceData(@Nullable Output<String> managedServiceData) {
             this.managedServiceData = managedServiceData;
             return this;
         }
 
         public Builder managedServiceData(@Nullable String managedServiceData) {
-            this.managedServiceData = Input.ofNullable(managedServiceData);
+            this.managedServiceData = Output.ofNullable(managedServiceData);
             return this;
         }
 
-        public Builder type(Input<String> type) {
+        public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(String type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
         public PolicySecurityServicePolicyDataArgs build() {

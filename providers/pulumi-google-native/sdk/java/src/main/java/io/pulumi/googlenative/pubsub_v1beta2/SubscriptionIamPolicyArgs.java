@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.pubsub_v1beta2;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.pubsub_v1beta2.inputs.BindingArgs;
 import java.lang.Integer;
@@ -22,10 +22,10 @@ public final class SubscriptionIamPolicyArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="bindings")
-      private final @Nullable Input<List<BindingArgs>> bindings;
+      private final @Nullable Output<List<BindingArgs>> bindings;
 
-    public Input<List<BindingArgs>> getBindings() {
-        return this.bindings == null ? Input.empty() : this.bindings;
+    public Output<List<BindingArgs>> getBindings() {
+        return this.bindings == null ? Output.empty() : this.bindings;
     }
 
     /**
@@ -33,23 +33,23 @@ public final class SubscriptionIamPolicyArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="etag")
-      private final @Nullable Input<String> etag;
+      private final @Nullable Output<String> etag;
 
-    public Input<String> getEtag() {
-        return this.etag == null ? Input.empty() : this.etag;
+    public Output<String> getEtag() {
+        return this.etag == null ? Output.empty() : this.etag;
     }
 
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     @InputImport(name="subscriptionId", required=true)
-      private final Input<String> subscriptionId;
+      private final Output<String> subscriptionId;
 
-    public Input<String> getSubscriptionId() {
+    public Output<String> getSubscriptionId() {
         return this.subscriptionId;
     }
 
@@ -58,18 +58,18 @@ public final class SubscriptionIamPolicyArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="version")
-      private final @Nullable Input<Integer> version;
+      private final @Nullable Output<Integer> version;
 
-    public Input<Integer> getVersion() {
-        return this.version == null ? Input.empty() : this.version;
+    public Output<Integer> getVersion() {
+        return this.version == null ? Output.empty() : this.version;
     }
 
     public SubscriptionIamPolicyArgs(
-        @Nullable Input<List<BindingArgs>> bindings,
-        @Nullable Input<String> etag,
-        @Nullable Input<String> project,
-        Input<String> subscriptionId,
-        @Nullable Input<Integer> version) {
+        @Nullable Output<List<BindingArgs>> bindings,
+        @Nullable Output<String> etag,
+        @Nullable Output<String> project,
+        Output<String> subscriptionId,
+        @Nullable Output<Integer> version) {
         this.bindings = bindings;
         this.etag = etag;
         this.project = project;
@@ -78,11 +78,11 @@ public final class SubscriptionIamPolicyArgs extends io.pulumi.resources.Resourc
     }
 
     private SubscriptionIamPolicyArgs() {
-        this.bindings = Input.empty();
-        this.etag = Input.empty();
-        this.project = Input.empty();
-        this.subscriptionId = Input.empty();
-        this.version = Input.empty();
+        this.bindings = Output.empty();
+        this.etag = Output.empty();
+        this.project = Output.empty();
+        this.subscriptionId = Output.empty();
+        this.version = Output.empty();
     }
 
     public static Builder builder() {
@@ -94,11 +94,11 @@ public final class SubscriptionIamPolicyArgs extends io.pulumi.resources.Resourc
     }
 
     public static final class Builder {
-        private @Nullable Input<List<BindingArgs>> bindings;
-        private @Nullable Input<String> etag;
-        private @Nullable Input<String> project;
-        private Input<String> subscriptionId;
-        private @Nullable Input<Integer> version;
+        private @Nullable Output<List<BindingArgs>> bindings;
+        private @Nullable Output<String> etag;
+        private @Nullable Output<String> project;
+        private Output<String> subscriptionId;
+        private @Nullable Output<Integer> version;
 
         public Builder() {
     	      // Empty
@@ -113,53 +113,53 @@ public final class SubscriptionIamPolicyArgs extends io.pulumi.resources.Resourc
     	      this.version = defaults.version;
         }
 
-        public Builder bindings(@Nullable Input<List<BindingArgs>> bindings) {
+        public Builder bindings(@Nullable Output<List<BindingArgs>> bindings) {
             this.bindings = bindings;
             return this;
         }
 
         public Builder bindings(@Nullable List<BindingArgs> bindings) {
-            this.bindings = Input.ofNullable(bindings);
+            this.bindings = Output.ofNullable(bindings);
             return this;
         }
 
-        public Builder etag(@Nullable Input<String> etag) {
+        public Builder etag(@Nullable Output<String> etag) {
             this.etag = etag;
             return this;
         }
 
         public Builder etag(@Nullable String etag) {
-            this.etag = Input.ofNullable(etag);
+            this.etag = Output.ofNullable(etag);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder subscriptionId(Input<String> subscriptionId) {
+        public Builder subscriptionId(Output<String> subscriptionId) {
             this.subscriptionId = Objects.requireNonNull(subscriptionId);
             return this;
         }
 
         public Builder subscriptionId(String subscriptionId) {
-            this.subscriptionId = Input.of(Objects.requireNonNull(subscriptionId));
+            this.subscriptionId = Output.of(Objects.requireNonNull(subscriptionId));
             return this;
         }
 
-        public Builder version(@Nullable Input<Integer> version) {
+        public Builder version(@Nullable Output<Integer> version) {
             this.version = version;
             return this;
         }
 
         public Builder version(@Nullable Integer version) {
-            this.version = Input.ofNullable(version);
+            this.version = Output.ofNullable(version);
             return this;
         }
         public SubscriptionIamPolicyArgs build() {

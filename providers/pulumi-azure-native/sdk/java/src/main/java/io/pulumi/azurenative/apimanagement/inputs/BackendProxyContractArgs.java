@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.apimanagement.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class BackendProxyContractArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="password")
-      private final @Nullable Input<String> password;
+      private final @Nullable Output<String> password;
 
-    public Input<String> getPassword() {
-        return this.password == null ? Input.empty() : this.password;
+    public Output<String> getPassword() {
+        return this.password == null ? Output.empty() : this.password;
     }
 
     /**
@@ -34,9 +34,9 @@ public final class BackendProxyContractArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="url", required=true)
-      private final Input<String> url;
+      private final Output<String> url;
 
-    public Input<String> getUrl() {
+    public Output<String> getUrl() {
         return this.url;
     }
 
@@ -45,25 +45,25 @@ public final class BackendProxyContractArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="username")
-      private final @Nullable Input<String> username;
+      private final @Nullable Output<String> username;
 
-    public Input<String> getUsername() {
-        return this.username == null ? Input.empty() : this.username;
+    public Output<String> getUsername() {
+        return this.username == null ? Output.empty() : this.username;
     }
 
     public BackendProxyContractArgs(
-        @Nullable Input<String> password,
-        Input<String> url,
-        @Nullable Input<String> username) {
+        @Nullable Output<String> password,
+        Output<String> url,
+        @Nullable Output<String> username) {
         this.password = password;
         this.url = Objects.requireNonNull(url, "expected parameter 'url' to be non-null");
         this.username = username;
     }
 
     private BackendProxyContractArgs() {
-        this.password = Input.empty();
-        this.url = Input.empty();
-        this.username = Input.empty();
+        this.password = Output.empty();
+        this.url = Output.empty();
+        this.username = Output.empty();
     }
 
     public static Builder builder() {
@@ -75,9 +75,9 @@ public final class BackendProxyContractArgs extends io.pulumi.resources.Resource
     }
 
     public static final class Builder {
-        private @Nullable Input<String> password;
-        private Input<String> url;
-        private @Nullable Input<String> username;
+        private @Nullable Output<String> password;
+        private Output<String> url;
+        private @Nullable Output<String> username;
 
         public Builder() {
     	      // Empty
@@ -90,33 +90,33 @@ public final class BackendProxyContractArgs extends io.pulumi.resources.Resource
     	      this.username = defaults.username;
         }
 
-        public Builder password(@Nullable Input<String> password) {
+        public Builder password(@Nullable Output<String> password) {
             this.password = password;
             return this;
         }
 
         public Builder password(@Nullable String password) {
-            this.password = Input.ofNullable(password);
+            this.password = Output.ofNullable(password);
             return this;
         }
 
-        public Builder url(Input<String> url) {
+        public Builder url(Output<String> url) {
             this.url = Objects.requireNonNull(url);
             return this;
         }
 
         public Builder url(String url) {
-            this.url = Input.of(Objects.requireNonNull(url));
+            this.url = Output.of(Objects.requireNonNull(url));
             return this;
         }
 
-        public Builder username(@Nullable Input<String> username) {
+        public Builder username(@Nullable Output<String> username) {
             this.username = username;
             return this;
         }
 
         public Builder username(@Nullable String username) {
-            this.username = Input.ofNullable(username);
+            this.username = Output.ofNullable(username);
             return this;
         }
         public BackendProxyContractArgs build() {

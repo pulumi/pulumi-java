@@ -32,28 +32,28 @@ public final class MyStack extends Stack {
 
         var storageAccount = new StorageAccount("storageaccount",
                 $ -> $.kind(Either.ofRight(Kind.StorageV2))
-                        .resourceGroupName(resourceGroup.getName().toInput())
+                        .resourceGroupName(resourceGroup.getName())
                         .sku(SkuArgs.builder()
                                 .name(Either.ofRight(SkuName.Standard_LRS))
                                 .build()));
 
         var staticWebsite = new StorageAccountStaticWebsite("staticWebsite",
-                $ -> $.accountName(storageAccount.getName().toInput())
-                        .resourceGroupName(resourceGroup.getName().toInput())
+                $ -> $.accountName(storageAccount.getName())
+                        .resourceGroupName(resourceGroup.getName())
                         .indexDocument("index.html")
                         .error404Document("404.html"));
 
         var indexHtml = new Blob("index.html",
-                $ -> $.accountName(storageAccount.getName().toInput())
-                        .resourceGroupName(resourceGroup.getName().toInput())
-                        .containerName(staticWebsite.getContainerName().toInput())
+                $ -> $.accountName(storageAccount.getName())
+                        .resourceGroupName(resourceGroup.getName())
+                        .containerName(staticWebsite.getContainerName())
                         .source(new Asset.FileAsset("./wwwroot/index.html"))
                         .contentType("text/html"));
 
         var notFoundHtml = new Blob("404.html",
-                $ -> $.accountName(storageAccount.getName().toInput())
-                        .resourceGroupName(resourceGroup.getName().toInput())
-                        .containerName(staticWebsite.getContainerName().toInput())
+                $ -> $.accountName(storageAccount.getName())
+                        .resourceGroupName(resourceGroup.getName())
+                        .containerName(staticWebsite.getContainerName())
                         .source(new Asset.FileAsset("./wwwroot/404.html"))
                         .contentType("text/html"));
 
@@ -63,7 +63,7 @@ public final class MyStack extends Stack {
 
         // (Optional) Add a CDN in front of the storage account.
         var profile = new Profile("profile",
-                $ -> $.resourceGroupName(resourceGroup.getName().toInput())
+                $ -> $.resourceGroupName(resourceGroup.getName())
                         .location("global")
                         .sku(io.pulumi.azurenative.cdn.inputs.SkuArgs.builder()
                                 .name(Either.ofRight(io.pulumi.azurenative.cdn.enums.SkuName.Standard_Microsoft))
@@ -75,15 +75,15 @@ public final class MyStack extends Stack {
         var endpoint = new Endpoint("endpoint",
                 $ -> $.isHttpAllowed(false)
                         .isHttpsAllowed(true)
-                        .originHostHeader(endpointOrigin.toInput())
+                        .originHostHeader(endpointOrigin)
                         .origins(List.of(DeepCreatedOriginArgs.builder()
-                                .hostName(endpointOrigin.toInput())
+                                .hostName(endpointOrigin)
                                 .httpsPort(443)
                                 .name("origin-storage-account")
                                 .build()))
-                        .profileName(profile.getName().toInput())
+                        .profileName(profile.getName())
                         .queryStringCachingBehavior(QueryStringCachingBehavior.NotSet)
-                        .resourceGroupName(resourceGroup.getName().toInput())
+                        .resourceGroupName(resourceGroup.getName())
                 );
 
 

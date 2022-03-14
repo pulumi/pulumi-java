@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.compute_v1.enums.ResourceCommitmentType;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class ResourceCommitmentArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="acceleratorType")
-      private final @Nullable Input<String> acceleratorType;
+      private final @Nullable Output<String> acceleratorType;
 
-    public Input<String> getAcceleratorType() {
-        return this.acceleratorType == null ? Input.empty() : this.acceleratorType;
+    public Output<String> getAcceleratorType() {
+        return this.acceleratorType == null ? Output.empty() : this.acceleratorType;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class ResourceCommitmentArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="amount")
-      private final @Nullable Input<String> amount;
+      private final @Nullable Output<String> amount;
 
-    public Input<String> getAmount() {
-        return this.amount == null ? Input.empty() : this.amount;
+    public Output<String> getAmount() {
+        return this.amount == null ? Output.empty() : this.amount;
     }
 
     /**
@@ -46,25 +46,25 @@ public final class ResourceCommitmentArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="type")
-      private final @Nullable Input<ResourceCommitmentType> type;
+      private final @Nullable Output<ResourceCommitmentType> type;
 
-    public Input<ResourceCommitmentType> getType() {
-        return this.type == null ? Input.empty() : this.type;
+    public Output<ResourceCommitmentType> getType() {
+        return this.type == null ? Output.empty() : this.type;
     }
 
     public ResourceCommitmentArgs(
-        @Nullable Input<String> acceleratorType,
-        @Nullable Input<String> amount,
-        @Nullable Input<ResourceCommitmentType> type) {
+        @Nullable Output<String> acceleratorType,
+        @Nullable Output<String> amount,
+        @Nullable Output<ResourceCommitmentType> type) {
         this.acceleratorType = acceleratorType;
         this.amount = amount;
         this.type = type;
     }
 
     private ResourceCommitmentArgs() {
-        this.acceleratorType = Input.empty();
-        this.amount = Input.empty();
-        this.type = Input.empty();
+        this.acceleratorType = Output.empty();
+        this.amount = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -76,9 +76,9 @@ public final class ResourceCommitmentArgs extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private @Nullable Input<String> acceleratorType;
-        private @Nullable Input<String> amount;
-        private @Nullable Input<ResourceCommitmentType> type;
+        private @Nullable Output<String> acceleratorType;
+        private @Nullable Output<String> amount;
+        private @Nullable Output<ResourceCommitmentType> type;
 
         public Builder() {
     	      // Empty
@@ -91,33 +91,33 @@ public final class ResourceCommitmentArgs extends io.pulumi.resources.ResourceAr
     	      this.type = defaults.type;
         }
 
-        public Builder acceleratorType(@Nullable Input<String> acceleratorType) {
+        public Builder acceleratorType(@Nullable Output<String> acceleratorType) {
             this.acceleratorType = acceleratorType;
             return this;
         }
 
         public Builder acceleratorType(@Nullable String acceleratorType) {
-            this.acceleratorType = Input.ofNullable(acceleratorType);
+            this.acceleratorType = Output.ofNullable(acceleratorType);
             return this;
         }
 
-        public Builder amount(@Nullable Input<String> amount) {
+        public Builder amount(@Nullable Output<String> amount) {
             this.amount = amount;
             return this;
         }
 
         public Builder amount(@Nullable String amount) {
-            this.amount = Input.ofNullable(amount);
+            this.amount = Output.ofNullable(amount);
             return this;
         }
 
-        public Builder type(@Nullable Input<ResourceCommitmentType> type) {
+        public Builder type(@Nullable Output<ResourceCommitmentType> type) {
             this.type = type;
             return this;
         }
 
         public Builder type(@Nullable ResourceCommitmentType type) {
-            this.type = Input.ofNullable(type);
+            this.type = Output.ofNullable(type);
             return this;
         }
         public ResourceCommitmentArgs build() {

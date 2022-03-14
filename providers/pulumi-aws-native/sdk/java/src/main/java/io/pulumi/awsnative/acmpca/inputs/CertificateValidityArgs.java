@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.acmpca.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.String;
@@ -19,29 +19,29 @@ public final class CertificateValidityArgs extends io.pulumi.resources.ResourceA
     public static final CertificateValidityArgs Empty = new CertificateValidityArgs();
 
     @InputImport(name="type", required=true)
-      private final Input<String> type;
+      private final Output<String> type;
 
-    public Input<String> getType() {
+    public Output<String> getType() {
         return this.type;
     }
 
     @InputImport(name="value", required=true)
-      private final Input<Double> value;
+      private final Output<Double> value;
 
-    public Input<Double> getValue() {
+    public Output<Double> getValue() {
         return this.value;
     }
 
     public CertificateValidityArgs(
-        Input<String> type,
-        Input<Double> value) {
+        Output<String> type,
+        Output<Double> value) {
         this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
         this.value = Objects.requireNonNull(value, "expected parameter 'value' to be non-null");
     }
 
     private CertificateValidityArgs() {
-        this.type = Input.empty();
-        this.value = Input.empty();
+        this.type = Output.empty();
+        this.value = Output.empty();
     }
 
     public static Builder builder() {
@@ -53,8 +53,8 @@ public final class CertificateValidityArgs extends io.pulumi.resources.ResourceA
     }
 
     public static final class Builder {
-        private Input<String> type;
-        private Input<Double> value;
+        private Output<String> type;
+        private Output<Double> value;
 
         public Builder() {
     	      // Empty
@@ -66,23 +66,23 @@ public final class CertificateValidityArgs extends io.pulumi.resources.ResourceA
     	      this.value = defaults.value;
         }
 
-        public Builder type(Input<String> type) {
+        public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(String type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
 
-        public Builder value(Input<Double> value) {
+        public Builder value(Output<Double> value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }
 
         public Builder value(Double value) {
-            this.value = Input.of(Objects.requireNonNull(value));
+            this.value = Output.of(Objects.requireNonNull(value));
             return this;
         }
         public CertificateValidityArgs build() {

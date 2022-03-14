@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.servicefabric.inputs;
 
 import io.pulumi.azurenative.servicefabric.inputs.ServiceTypeDeltaHealthPolicyArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -25,10 +25,10 @@ public final class ApplicationDeltaHealthPolicyArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="defaultServiceTypeDeltaHealthPolicy")
-      private final @Nullable Input<ServiceTypeDeltaHealthPolicyArgs> defaultServiceTypeDeltaHealthPolicy;
+      private final @Nullable Output<ServiceTypeDeltaHealthPolicyArgs> defaultServiceTypeDeltaHealthPolicy;
 
-    public Input<ServiceTypeDeltaHealthPolicyArgs> getDefaultServiceTypeDeltaHealthPolicy() {
-        return this.defaultServiceTypeDeltaHealthPolicy == null ? Input.empty() : this.defaultServiceTypeDeltaHealthPolicy;
+    public Output<ServiceTypeDeltaHealthPolicyArgs> getDefaultServiceTypeDeltaHealthPolicy() {
+        return this.defaultServiceTypeDeltaHealthPolicy == null ? Output.empty() : this.defaultServiceTypeDeltaHealthPolicy;
     }
 
     /**
@@ -36,22 +36,22 @@ public final class ApplicationDeltaHealthPolicyArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="serviceTypeDeltaHealthPolicies")
-      private final @Nullable Input<Map<String,ServiceTypeDeltaHealthPolicyArgs>> serviceTypeDeltaHealthPolicies;
+      private final @Nullable Output<Map<String,ServiceTypeDeltaHealthPolicyArgs>> serviceTypeDeltaHealthPolicies;
 
-    public Input<Map<String,ServiceTypeDeltaHealthPolicyArgs>> getServiceTypeDeltaHealthPolicies() {
-        return this.serviceTypeDeltaHealthPolicies == null ? Input.empty() : this.serviceTypeDeltaHealthPolicies;
+    public Output<Map<String,ServiceTypeDeltaHealthPolicyArgs>> getServiceTypeDeltaHealthPolicies() {
+        return this.serviceTypeDeltaHealthPolicies == null ? Output.empty() : this.serviceTypeDeltaHealthPolicies;
     }
 
     public ApplicationDeltaHealthPolicyArgs(
-        @Nullable Input<ServiceTypeDeltaHealthPolicyArgs> defaultServiceTypeDeltaHealthPolicy,
-        @Nullable Input<Map<String,ServiceTypeDeltaHealthPolicyArgs>> serviceTypeDeltaHealthPolicies) {
+        @Nullable Output<ServiceTypeDeltaHealthPolicyArgs> defaultServiceTypeDeltaHealthPolicy,
+        @Nullable Output<Map<String,ServiceTypeDeltaHealthPolicyArgs>> serviceTypeDeltaHealthPolicies) {
         this.defaultServiceTypeDeltaHealthPolicy = defaultServiceTypeDeltaHealthPolicy;
         this.serviceTypeDeltaHealthPolicies = serviceTypeDeltaHealthPolicies;
     }
 
     private ApplicationDeltaHealthPolicyArgs() {
-        this.defaultServiceTypeDeltaHealthPolicy = Input.empty();
-        this.serviceTypeDeltaHealthPolicies = Input.empty();
+        this.defaultServiceTypeDeltaHealthPolicy = Output.empty();
+        this.serviceTypeDeltaHealthPolicies = Output.empty();
     }
 
     public static Builder builder() {
@@ -63,8 +63,8 @@ public final class ApplicationDeltaHealthPolicyArgs extends io.pulumi.resources.
     }
 
     public static final class Builder {
-        private @Nullable Input<ServiceTypeDeltaHealthPolicyArgs> defaultServiceTypeDeltaHealthPolicy;
-        private @Nullable Input<Map<String,ServiceTypeDeltaHealthPolicyArgs>> serviceTypeDeltaHealthPolicies;
+        private @Nullable Output<ServiceTypeDeltaHealthPolicyArgs> defaultServiceTypeDeltaHealthPolicy;
+        private @Nullable Output<Map<String,ServiceTypeDeltaHealthPolicyArgs>> serviceTypeDeltaHealthPolicies;
 
         public Builder() {
     	      // Empty
@@ -76,23 +76,23 @@ public final class ApplicationDeltaHealthPolicyArgs extends io.pulumi.resources.
     	      this.serviceTypeDeltaHealthPolicies = defaults.serviceTypeDeltaHealthPolicies;
         }
 
-        public Builder defaultServiceTypeDeltaHealthPolicy(@Nullable Input<ServiceTypeDeltaHealthPolicyArgs> defaultServiceTypeDeltaHealthPolicy) {
+        public Builder defaultServiceTypeDeltaHealthPolicy(@Nullable Output<ServiceTypeDeltaHealthPolicyArgs> defaultServiceTypeDeltaHealthPolicy) {
             this.defaultServiceTypeDeltaHealthPolicy = defaultServiceTypeDeltaHealthPolicy;
             return this;
         }
 
         public Builder defaultServiceTypeDeltaHealthPolicy(@Nullable ServiceTypeDeltaHealthPolicyArgs defaultServiceTypeDeltaHealthPolicy) {
-            this.defaultServiceTypeDeltaHealthPolicy = Input.ofNullable(defaultServiceTypeDeltaHealthPolicy);
+            this.defaultServiceTypeDeltaHealthPolicy = Output.ofNullable(defaultServiceTypeDeltaHealthPolicy);
             return this;
         }
 
-        public Builder serviceTypeDeltaHealthPolicies(@Nullable Input<Map<String,ServiceTypeDeltaHealthPolicyArgs>> serviceTypeDeltaHealthPolicies) {
+        public Builder serviceTypeDeltaHealthPolicies(@Nullable Output<Map<String,ServiceTypeDeltaHealthPolicyArgs>> serviceTypeDeltaHealthPolicies) {
             this.serviceTypeDeltaHealthPolicies = serviceTypeDeltaHealthPolicies;
             return this;
         }
 
         public Builder serviceTypeDeltaHealthPolicies(@Nullable Map<String,ServiceTypeDeltaHealthPolicyArgs> serviceTypeDeltaHealthPolicies) {
-            this.serviceTypeDeltaHealthPolicies = Input.ofNullable(serviceTypeDeltaHealthPolicies);
+            this.serviceTypeDeltaHealthPolicies = Output.ofNullable(serviceTypeDeltaHealthPolicies);
             return this;
         }
         public ApplicationDeltaHealthPolicyArgs build() {

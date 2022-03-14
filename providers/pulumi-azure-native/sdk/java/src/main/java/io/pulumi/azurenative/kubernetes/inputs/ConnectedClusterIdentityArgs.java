@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.kubernetes.inputs;
 
 import io.pulumi.azurenative.kubernetes.enums.ResourceIdentityType;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 
@@ -22,18 +22,18 @@ public final class ConnectedClusterIdentityArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<ResourceIdentityType> type;
+      private final Output<ResourceIdentityType> type;
 
-    public Input<ResourceIdentityType> getType() {
+    public Output<ResourceIdentityType> getType() {
         return this.type;
     }
 
-    public ConnectedClusterIdentityArgs(Input<ResourceIdentityType> type) {
-        this.type = type == null ? Input.ofNullable(io.pulumi.azurenative.kubernetes.enums.ResourceIdentityType.SystemAssigned) : Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
+    public ConnectedClusterIdentityArgs(Output<ResourceIdentityType> type) {
+        this.type = type == null ? Output.ofNullable(io.pulumi.azurenative.kubernetes.enums.ResourceIdentityType.SystemAssigned) : Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
     }
 
     private ConnectedClusterIdentityArgs() {
-        this.type = Input.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -45,7 +45,7 @@ public final class ConnectedClusterIdentityArgs extends io.pulumi.resources.Reso
     }
 
     public static final class Builder {
-        private Input<ResourceIdentityType> type;
+        private Output<ResourceIdentityType> type;
 
         public Builder() {
     	      // Empty
@@ -56,13 +56,13 @@ public final class ConnectedClusterIdentityArgs extends io.pulumi.resources.Reso
     	      this.type = defaults.type;
         }
 
-        public Builder type(Input<ResourceIdentityType> type) {
+        public Builder type(Output<ResourceIdentityType> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(ResourceIdentityType type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
         public ConnectedClusterIdentityArgs build() {

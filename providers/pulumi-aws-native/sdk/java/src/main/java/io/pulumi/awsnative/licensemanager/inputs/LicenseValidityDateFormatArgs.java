@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.licensemanager.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -18,9 +18,9 @@ public final class LicenseValidityDateFormatArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="begin", required=true)
-      private final Input<String> begin;
+      private final Output<String> begin;
 
-    public Input<String> getBegin() {
+    public Output<String> getBegin() {
         return this.begin;
     }
 
@@ -29,22 +29,22 @@ public final class LicenseValidityDateFormatArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="end", required=true)
-      private final Input<String> end;
+      private final Output<String> end;
 
-    public Input<String> getEnd() {
+    public Output<String> getEnd() {
         return this.end;
     }
 
     public LicenseValidityDateFormatArgs(
-        Input<String> begin,
-        Input<String> end) {
+        Output<String> begin,
+        Output<String> end) {
         this.begin = Objects.requireNonNull(begin, "expected parameter 'begin' to be non-null");
         this.end = Objects.requireNonNull(end, "expected parameter 'end' to be non-null");
     }
 
     private LicenseValidityDateFormatArgs() {
-        this.begin = Input.empty();
-        this.end = Input.empty();
+        this.begin = Output.empty();
+        this.end = Output.empty();
     }
 
     public static Builder builder() {
@@ -56,8 +56,8 @@ public final class LicenseValidityDateFormatArgs extends io.pulumi.resources.Res
     }
 
     public static final class Builder {
-        private Input<String> begin;
-        private Input<String> end;
+        private Output<String> begin;
+        private Output<String> end;
 
         public Builder() {
     	      // Empty
@@ -69,23 +69,23 @@ public final class LicenseValidityDateFormatArgs extends io.pulumi.resources.Res
     	      this.end = defaults.end;
         }
 
-        public Builder begin(Input<String> begin) {
+        public Builder begin(Output<String> begin) {
             this.begin = Objects.requireNonNull(begin);
             return this;
         }
 
         public Builder begin(String begin) {
-            this.begin = Input.of(Objects.requireNonNull(begin));
+            this.begin = Output.of(Objects.requireNonNull(begin));
             return this;
         }
 
-        public Builder end(Input<String> end) {
+        public Builder end(Output<String> end) {
             this.end = Objects.requireNonNull(end);
             return this;
         }
 
         public Builder end(String end) {
-            this.end = Input.of(Objects.requireNonNull(end));
+            this.end = Output.of(Objects.requireNonNull(end));
             return this;
         }
         public LicenseValidityDateFormatArgs build() {

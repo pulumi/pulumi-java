@@ -6,7 +6,7 @@ package io.pulumi.azurenative.containerservice;
 import io.pulumi.azurenative.containerservice.enums.SnapshotType;
 import io.pulumi.azurenative.containerservice.inputs.CreationDataArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -23,10 +23,10 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="creationData")
-      private final @Nullable Input<CreationDataArgs> creationData;
+      private final @Nullable Output<CreationDataArgs> creationData;
 
-    public Input<CreationDataArgs> getCreationData() {
-        return this.creationData == null ? Input.empty() : this.creationData;
+    public Output<CreationDataArgs> getCreationData() {
+        return this.creationData == null ? Output.empty() : this.creationData;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -45,9 +45,9 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -56,10 +56,10 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceName")
-      private final @Nullable Input<String> resourceName;
+      private final @Nullable Output<String> resourceName;
 
-    public Input<String> getPropResourceName() {
-        return this.resourceName == null ? Input.empty() : this.resourceName;
+    public Output<String> getPropResourceName() {
+        return this.resourceName == null ? Output.empty() : this.resourceName;
     }
 
     /**
@@ -67,10 +67,10 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="snapshotType")
-      private final @Nullable Input<Either<String,SnapshotType>> snapshotType;
+      private final @Nullable Output<Either<String,SnapshotType>> snapshotType;
 
-    public Input<Either<String,SnapshotType>> getSnapshotType() {
-        return this.snapshotType == null ? Input.empty() : this.snapshotType;
+    public Output<Either<String,SnapshotType>> getSnapshotType() {
+        return this.snapshotType == null ? Output.empty() : this.snapshotType;
     }
 
     /**
@@ -78,19 +78,19 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public SnapshotArgs(
-        @Nullable Input<CreationDataArgs> creationData,
-        @Nullable Input<String> location,
-        Input<String> resourceGroupName,
-        @Nullable Input<String> resourceName,
-        @Nullable Input<Either<String,SnapshotType>> snapshotType,
-        @Nullable Input<Map<String,String>> tags) {
+        @Nullable Output<CreationDataArgs> creationData,
+        @Nullable Output<String> location,
+        Output<String> resourceGroupName,
+        @Nullable Output<String> resourceName,
+        @Nullable Output<Either<String,SnapshotType>> snapshotType,
+        @Nullable Output<Map<String,String>> tags) {
         this.creationData = creationData;
         this.location = location;
         this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
@@ -100,12 +100,12 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private SnapshotArgs() {
-        this.creationData = Input.empty();
-        this.location = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.resourceName = Input.empty();
-        this.snapshotType = Input.empty();
-        this.tags = Input.empty();
+        this.creationData = Output.empty();
+        this.location = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.resourceName = Output.empty();
+        this.snapshotType = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -117,12 +117,12 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<CreationDataArgs> creationData;
-        private @Nullable Input<String> location;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<String> resourceName;
-        private @Nullable Input<Either<String,SnapshotType>> snapshotType;
-        private @Nullable Input<Map<String,String>> tags;
+        private @Nullable Output<CreationDataArgs> creationData;
+        private @Nullable Output<String> location;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<String> resourceName;
+        private @Nullable Output<Either<String,SnapshotType>> snapshotType;
+        private @Nullable Output<Map<String,String>> tags;
 
         public Builder() {
     	      // Empty
@@ -138,63 +138,63 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder creationData(@Nullable Input<CreationDataArgs> creationData) {
+        public Builder creationData(@Nullable Output<CreationDataArgs> creationData) {
             this.creationData = creationData;
             return this;
         }
 
         public Builder creationData(@Nullable CreationDataArgs creationData) {
-            this.creationData = Input.ofNullable(creationData);
+            this.creationData = Output.ofNullable(creationData);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder resourceName(@Nullable Input<String> resourceName) {
+        public Builder resourceName(@Nullable Output<String> resourceName) {
             this.resourceName = resourceName;
             return this;
         }
 
         public Builder resourceName(@Nullable String resourceName) {
-            this.resourceName = Input.ofNullable(resourceName);
+            this.resourceName = Output.ofNullable(resourceName);
             return this;
         }
 
-        public Builder snapshotType(@Nullable Input<Either<String,SnapshotType>> snapshotType) {
+        public Builder snapshotType(@Nullable Output<Either<String,SnapshotType>> snapshotType) {
             this.snapshotType = snapshotType;
             return this;
         }
 
         public Builder snapshotType(@Nullable Either<String,SnapshotType> snapshotType) {
-            this.snapshotType = Input.ofNullable(snapshotType);
+            this.snapshotType = Output.ofNullable(snapshotType);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public SnapshotArgs build() {

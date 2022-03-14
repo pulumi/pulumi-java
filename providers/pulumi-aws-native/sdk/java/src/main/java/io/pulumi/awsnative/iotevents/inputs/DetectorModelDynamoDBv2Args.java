@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.iotevents.inputs;
 
 import io.pulumi.awsnative.iotevents.inputs.DetectorModelPayloadArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -22,10 +22,10 @@ public final class DetectorModelDynamoDBv2Args extends io.pulumi.resources.Resou
     public static final DetectorModelDynamoDBv2Args Empty = new DetectorModelDynamoDBv2Args();
 
     @InputImport(name="payload")
-      private final @Nullable Input<DetectorModelPayloadArgs> payload;
+      private final @Nullable Output<DetectorModelPayloadArgs> payload;
 
-    public Input<DetectorModelPayloadArgs> getPayload() {
-        return this.payload == null ? Input.empty() : this.payload;
+    public Output<DetectorModelPayloadArgs> getPayload() {
+        return this.payload == null ? Output.empty() : this.payload;
     }
 
     /**
@@ -33,22 +33,22 @@ public final class DetectorModelDynamoDBv2Args extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="tableName", required=true)
-      private final Input<String> tableName;
+      private final Output<String> tableName;
 
-    public Input<String> getTableName() {
+    public Output<String> getTableName() {
         return this.tableName;
     }
 
     public DetectorModelDynamoDBv2Args(
-        @Nullable Input<DetectorModelPayloadArgs> payload,
-        Input<String> tableName) {
+        @Nullable Output<DetectorModelPayloadArgs> payload,
+        Output<String> tableName) {
         this.payload = payload;
         this.tableName = Objects.requireNonNull(tableName, "expected parameter 'tableName' to be non-null");
     }
 
     private DetectorModelDynamoDBv2Args() {
-        this.payload = Input.empty();
-        this.tableName = Input.empty();
+        this.payload = Output.empty();
+        this.tableName = Output.empty();
     }
 
     public static Builder builder() {
@@ -60,8 +60,8 @@ public final class DetectorModelDynamoDBv2Args extends io.pulumi.resources.Resou
     }
 
     public static final class Builder {
-        private @Nullable Input<DetectorModelPayloadArgs> payload;
-        private Input<String> tableName;
+        private @Nullable Output<DetectorModelPayloadArgs> payload;
+        private Output<String> tableName;
 
         public Builder() {
     	      // Empty
@@ -73,23 +73,23 @@ public final class DetectorModelDynamoDBv2Args extends io.pulumi.resources.Resou
     	      this.tableName = defaults.tableName;
         }
 
-        public Builder payload(@Nullable Input<DetectorModelPayloadArgs> payload) {
+        public Builder payload(@Nullable Output<DetectorModelPayloadArgs> payload) {
             this.payload = payload;
             return this;
         }
 
         public Builder payload(@Nullable DetectorModelPayloadArgs payload) {
-            this.payload = Input.ofNullable(payload);
+            this.payload = Output.ofNullable(payload);
             return this;
         }
 
-        public Builder tableName(Input<String> tableName) {
+        public Builder tableName(Output<String> tableName) {
             this.tableName = Objects.requireNonNull(tableName);
             return this;
         }
 
         public Builder tableName(String tableName) {
-            this.tableName = Input.of(Objects.requireNonNull(tableName));
+            this.tableName = Output.of(Objects.requireNonNull(tableName));
             return this;
         }
         public DetectorModelDynamoDBv2Args build() {

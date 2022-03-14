@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.containerservice.inputs;
 
 import io.pulumi.azurenative.containerservice.inputs.UserAssignedIdentityArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -20,10 +20,10 @@ public final class ManagedClusterPodIdentityArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="bindingSelector")
-      private final @Nullable Input<String> bindingSelector;
+      private final @Nullable Output<String> bindingSelector;
 
-    public Input<String> getBindingSelector() {
-        return this.bindingSelector == null ? Input.empty() : this.bindingSelector;
+    public Output<String> getBindingSelector() {
+        return this.bindingSelector == null ? Output.empty() : this.bindingSelector;
     }
 
     /**
@@ -31,9 +31,9 @@ public final class ManagedClusterPodIdentityArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="identity", required=true)
-      private final Input<UserAssignedIdentityArgs> identity;
+      private final Output<UserAssignedIdentityArgs> identity;
 
-    public Input<UserAssignedIdentityArgs> getIdentity() {
+    public Output<UserAssignedIdentityArgs> getIdentity() {
         return this.identity;
     }
 
@@ -42,9 +42,9 @@ public final class ManagedClusterPodIdentityArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="name", required=true)
-      private final Input<String> name;
+      private final Output<String> name;
 
-    public Input<String> getName() {
+    public Output<String> getName() {
         return this.name;
     }
 
@@ -53,17 +53,17 @@ public final class ManagedClusterPodIdentityArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="namespace", required=true)
-      private final Input<String> namespace;
+      private final Output<String> namespace;
 
-    public Input<String> getNamespace() {
+    public Output<String> getNamespace() {
         return this.namespace;
     }
 
     public ManagedClusterPodIdentityArgs(
-        @Nullable Input<String> bindingSelector,
-        Input<UserAssignedIdentityArgs> identity,
-        Input<String> name,
-        Input<String> namespace) {
+        @Nullable Output<String> bindingSelector,
+        Output<UserAssignedIdentityArgs> identity,
+        Output<String> name,
+        Output<String> namespace) {
         this.bindingSelector = bindingSelector;
         this.identity = Objects.requireNonNull(identity, "expected parameter 'identity' to be non-null");
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
@@ -71,10 +71,10 @@ public final class ManagedClusterPodIdentityArgs extends io.pulumi.resources.Res
     }
 
     private ManagedClusterPodIdentityArgs() {
-        this.bindingSelector = Input.empty();
-        this.identity = Input.empty();
-        this.name = Input.empty();
-        this.namespace = Input.empty();
+        this.bindingSelector = Output.empty();
+        this.identity = Output.empty();
+        this.name = Output.empty();
+        this.namespace = Output.empty();
     }
 
     public static Builder builder() {
@@ -86,10 +86,10 @@ public final class ManagedClusterPodIdentityArgs extends io.pulumi.resources.Res
     }
 
     public static final class Builder {
-        private @Nullable Input<String> bindingSelector;
-        private Input<UserAssignedIdentityArgs> identity;
-        private Input<String> name;
-        private Input<String> namespace;
+        private @Nullable Output<String> bindingSelector;
+        private Output<UserAssignedIdentityArgs> identity;
+        private Output<String> name;
+        private Output<String> namespace;
 
         public Builder() {
     	      // Empty
@@ -103,43 +103,43 @@ public final class ManagedClusterPodIdentityArgs extends io.pulumi.resources.Res
     	      this.namespace = defaults.namespace;
         }
 
-        public Builder bindingSelector(@Nullable Input<String> bindingSelector) {
+        public Builder bindingSelector(@Nullable Output<String> bindingSelector) {
             this.bindingSelector = bindingSelector;
             return this;
         }
 
         public Builder bindingSelector(@Nullable String bindingSelector) {
-            this.bindingSelector = Input.ofNullable(bindingSelector);
+            this.bindingSelector = Output.ofNullable(bindingSelector);
             return this;
         }
 
-        public Builder identity(Input<UserAssignedIdentityArgs> identity) {
+        public Builder identity(Output<UserAssignedIdentityArgs> identity) {
             this.identity = Objects.requireNonNull(identity);
             return this;
         }
 
         public Builder identity(UserAssignedIdentityArgs identity) {
-            this.identity = Input.of(Objects.requireNonNull(identity));
+            this.identity = Output.of(Objects.requireNonNull(identity));
             return this;
         }
 
-        public Builder name(Input<String> name) {
+        public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(String name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder namespace(Input<String> namespace) {
+        public Builder namespace(Output<String> namespace) {
             this.namespace = Objects.requireNonNull(namespace);
             return this;
         }
 
         public Builder namespace(String namespace) {
-            this.namespace = Input.of(Objects.requireNonNull(namespace));
+            this.namespace = Output.of(Objects.requireNonNull(namespace));
             return this;
         }
         public ManagedClusterPodIdentityArgs build() {

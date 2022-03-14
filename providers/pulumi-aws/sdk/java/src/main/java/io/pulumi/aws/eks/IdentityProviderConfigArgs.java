@@ -4,7 +4,7 @@
 package io.pulumi.aws.eks;
 
 import io.pulumi.aws.eks.inputs.IdentityProviderConfigOidcArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -21,9 +21,9 @@ public final class IdentityProviderConfigArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="clusterName", required=true)
-      private final Input<String> clusterName;
+      private final Output<String> clusterName;
 
-    public Input<String> getClusterName() {
+    public Output<String> getClusterName() {
         return this.clusterName;
     }
 
@@ -32,9 +32,9 @@ public final class IdentityProviderConfigArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="oidc", required=true)
-      private final Input<IdentityProviderConfigOidcArgs> oidc;
+      private final Output<IdentityProviderConfigOidcArgs> oidc;
 
-    public Input<IdentityProviderConfigOidcArgs> getOidc() {
+    public Output<IdentityProviderConfigOidcArgs> getOidc() {
         return this.oidc;
     }
 
@@ -43,25 +43,25 @@ public final class IdentityProviderConfigArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public IdentityProviderConfigArgs(
-        Input<String> clusterName,
-        Input<IdentityProviderConfigOidcArgs> oidc,
-        @Nullable Input<Map<String,String>> tags) {
+        Output<String> clusterName,
+        Output<IdentityProviderConfigOidcArgs> oidc,
+        @Nullable Output<Map<String,String>> tags) {
         this.clusterName = Objects.requireNonNull(clusterName, "expected parameter 'clusterName' to be non-null");
         this.oidc = Objects.requireNonNull(oidc, "expected parameter 'oidc' to be non-null");
         this.tags = tags;
     }
 
     private IdentityProviderConfigArgs() {
-        this.clusterName = Input.empty();
-        this.oidc = Input.empty();
-        this.tags = Input.empty();
+        this.clusterName = Output.empty();
+        this.oidc = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -73,9 +73,9 @@ public final class IdentityProviderConfigArgs extends io.pulumi.resources.Resour
     }
 
     public static final class Builder {
-        private Input<String> clusterName;
-        private Input<IdentityProviderConfigOidcArgs> oidc;
-        private @Nullable Input<Map<String,String>> tags;
+        private Output<String> clusterName;
+        private Output<IdentityProviderConfigOidcArgs> oidc;
+        private @Nullable Output<Map<String,String>> tags;
 
         public Builder() {
     	      // Empty
@@ -88,33 +88,33 @@ public final class IdentityProviderConfigArgs extends io.pulumi.resources.Resour
     	      this.tags = defaults.tags;
         }
 
-        public Builder clusterName(Input<String> clusterName) {
+        public Builder clusterName(Output<String> clusterName) {
             this.clusterName = Objects.requireNonNull(clusterName);
             return this;
         }
 
         public Builder clusterName(String clusterName) {
-            this.clusterName = Input.of(Objects.requireNonNull(clusterName));
+            this.clusterName = Output.of(Objects.requireNonNull(clusterName));
             return this;
         }
 
-        public Builder oidc(Input<IdentityProviderConfigOidcArgs> oidc) {
+        public Builder oidc(Output<IdentityProviderConfigOidcArgs> oidc) {
             this.oidc = Objects.requireNonNull(oidc);
             return this;
         }
 
         public Builder oidc(IdentityProviderConfigOidcArgs oidc) {
-            this.oidc = Input.of(Objects.requireNonNull(oidc));
+            this.oidc = Output.of(Objects.requireNonNull(oidc));
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public IdentityProviderConfigArgs build() {

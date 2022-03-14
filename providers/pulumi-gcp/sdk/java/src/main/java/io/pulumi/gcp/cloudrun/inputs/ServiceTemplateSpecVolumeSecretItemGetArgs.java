@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.cloudrun.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -21,9 +21,9 @@ public final class ServiceTemplateSpecVolumeSecretItemGetArgs extends io.pulumi.
      * 
      */
     @InputImport(name="key", required=true)
-      private final Input<String> key;
+      private final Output<String> key;
 
-    public Input<String> getKey() {
+    public Output<String> getKey() {
         return this.key;
     }
 
@@ -35,10 +35,10 @@ public final class ServiceTemplateSpecVolumeSecretItemGetArgs extends io.pulumi.
      * 
      */
     @InputImport(name="mode")
-      private final @Nullable Input<Integer> mode;
+      private final @Nullable Output<Integer> mode;
 
-    public Input<Integer> getMode() {
-        return this.mode == null ? Input.empty() : this.mode;
+    public Output<Integer> getMode() {
+        return this.mode == null ? Output.empty() : this.mode;
     }
 
     /**
@@ -49,25 +49,25 @@ public final class ServiceTemplateSpecVolumeSecretItemGetArgs extends io.pulumi.
      * 
      */
     @InputImport(name="path", required=true)
-      private final Input<String> path;
+      private final Output<String> path;
 
-    public Input<String> getPath() {
+    public Output<String> getPath() {
         return this.path;
     }
 
     public ServiceTemplateSpecVolumeSecretItemGetArgs(
-        Input<String> key,
-        @Nullable Input<Integer> mode,
-        Input<String> path) {
+        Output<String> key,
+        @Nullable Output<Integer> mode,
+        Output<String> path) {
         this.key = Objects.requireNonNull(key, "expected parameter 'key' to be non-null");
         this.mode = mode;
         this.path = Objects.requireNonNull(path, "expected parameter 'path' to be non-null");
     }
 
     private ServiceTemplateSpecVolumeSecretItemGetArgs() {
-        this.key = Input.empty();
-        this.mode = Input.empty();
-        this.path = Input.empty();
+        this.key = Output.empty();
+        this.mode = Output.empty();
+        this.path = Output.empty();
     }
 
     public static Builder builder() {
@@ -79,9 +79,9 @@ public final class ServiceTemplateSpecVolumeSecretItemGetArgs extends io.pulumi.
     }
 
     public static final class Builder {
-        private Input<String> key;
-        private @Nullable Input<Integer> mode;
-        private Input<String> path;
+        private Output<String> key;
+        private @Nullable Output<Integer> mode;
+        private Output<String> path;
 
         public Builder() {
     	      // Empty
@@ -94,33 +94,33 @@ public final class ServiceTemplateSpecVolumeSecretItemGetArgs extends io.pulumi.
     	      this.path = defaults.path;
         }
 
-        public Builder key(Input<String> key) {
+        public Builder key(Output<String> key) {
             this.key = Objects.requireNonNull(key);
             return this;
         }
 
         public Builder key(String key) {
-            this.key = Input.of(Objects.requireNonNull(key));
+            this.key = Output.of(Objects.requireNonNull(key));
             return this;
         }
 
-        public Builder mode(@Nullable Input<Integer> mode) {
+        public Builder mode(@Nullable Output<Integer> mode) {
             this.mode = mode;
             return this;
         }
 
         public Builder mode(@Nullable Integer mode) {
-            this.mode = Input.ofNullable(mode);
+            this.mode = Output.ofNullable(mode);
             return this;
         }
 
-        public Builder path(Input<String> path) {
+        public Builder path(Output<String> path) {
             this.path = Objects.requireNonNull(path);
             return this;
         }
 
         public Builder path(String path) {
-            this.path = Input.of(Objects.requireNonNull(path));
+            this.path = Output.of(Objects.requireNonNull(path));
             return this;
         }
         public ServiceTemplateSpecVolumeSecretItemGetArgs build() {

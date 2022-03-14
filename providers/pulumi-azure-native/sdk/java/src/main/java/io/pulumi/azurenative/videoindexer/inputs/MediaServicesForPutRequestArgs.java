@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.videoindexer.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class MediaServicesForPutRequestArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="resourceId")
-      private final @Nullable Input<String> resourceId;
+      private final @Nullable Output<String> resourceId;
 
-    public Input<String> getResourceId() {
-        return this.resourceId == null ? Input.empty() : this.resourceId;
+    public Output<String> getResourceId() {
+        return this.resourceId == null ? Output.empty() : this.resourceId;
     }
 
     /**
@@ -34,22 +34,22 @@ public final class MediaServicesForPutRequestArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="userAssignedIdentity")
-      private final @Nullable Input<String> userAssignedIdentity;
+      private final @Nullable Output<String> userAssignedIdentity;
 
-    public Input<String> getUserAssignedIdentity() {
-        return this.userAssignedIdentity == null ? Input.empty() : this.userAssignedIdentity;
+    public Output<String> getUserAssignedIdentity() {
+        return this.userAssignedIdentity == null ? Output.empty() : this.userAssignedIdentity;
     }
 
     public MediaServicesForPutRequestArgs(
-        @Nullable Input<String> resourceId,
-        @Nullable Input<String> userAssignedIdentity) {
+        @Nullable Output<String> resourceId,
+        @Nullable Output<String> userAssignedIdentity) {
         this.resourceId = resourceId;
         this.userAssignedIdentity = userAssignedIdentity;
     }
 
     private MediaServicesForPutRequestArgs() {
-        this.resourceId = Input.empty();
-        this.userAssignedIdentity = Input.empty();
+        this.resourceId = Output.empty();
+        this.userAssignedIdentity = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class MediaServicesForPutRequestArgs extends io.pulumi.resources.Re
     }
 
     public static final class Builder {
-        private @Nullable Input<String> resourceId;
-        private @Nullable Input<String> userAssignedIdentity;
+        private @Nullable Output<String> resourceId;
+        private @Nullable Output<String> userAssignedIdentity;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class MediaServicesForPutRequestArgs extends io.pulumi.resources.Re
     	      this.userAssignedIdentity = defaults.userAssignedIdentity;
         }
 
-        public Builder resourceId(@Nullable Input<String> resourceId) {
+        public Builder resourceId(@Nullable Output<String> resourceId) {
             this.resourceId = resourceId;
             return this;
         }
 
         public Builder resourceId(@Nullable String resourceId) {
-            this.resourceId = Input.ofNullable(resourceId);
+            this.resourceId = Output.ofNullable(resourceId);
             return this;
         }
 
-        public Builder userAssignedIdentity(@Nullable Input<String> userAssignedIdentity) {
+        public Builder userAssignedIdentity(@Nullable Output<String> userAssignedIdentity) {
             this.userAssignedIdentity = userAssignedIdentity;
             return this;
         }
 
         public Builder userAssignedIdentity(@Nullable String userAssignedIdentity) {
-            this.userAssignedIdentity = Input.ofNullable(userAssignedIdentity);
+            this.userAssignedIdentity = Output.ofNullable(userAssignedIdentity);
             return this;
         }
         public MediaServicesForPutRequestArgs build() {

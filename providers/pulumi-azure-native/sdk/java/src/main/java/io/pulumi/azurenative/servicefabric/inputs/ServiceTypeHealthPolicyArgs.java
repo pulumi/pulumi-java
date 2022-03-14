@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.servicefabric.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class ServiceTypeHealthPolicyArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="maxPercentUnhealthyServices")
-      private final @Nullable Input<Integer> maxPercentUnhealthyServices;
+      private final @Nullable Output<Integer> maxPercentUnhealthyServices;
 
-    public Input<Integer> getMaxPercentUnhealthyServices() {
-        return this.maxPercentUnhealthyServices == null ? Input.empty() : this.maxPercentUnhealthyServices;
+    public Output<Integer> getMaxPercentUnhealthyServices() {
+        return this.maxPercentUnhealthyServices == null ? Output.empty() : this.maxPercentUnhealthyServices;
     }
 
-    public ServiceTypeHealthPolicyArgs(@Nullable Input<Integer> maxPercentUnhealthyServices) {
-        this.maxPercentUnhealthyServices = maxPercentUnhealthyServices == null ? Input.ofNullable(0) : maxPercentUnhealthyServices;
+    public ServiceTypeHealthPolicyArgs(@Nullable Output<Integer> maxPercentUnhealthyServices) {
+        this.maxPercentUnhealthyServices = maxPercentUnhealthyServices == null ? Output.ofNullable(0) : maxPercentUnhealthyServices;
     }
 
     private ServiceTypeHealthPolicyArgs() {
-        this.maxPercentUnhealthyServices = Input.empty();
+        this.maxPercentUnhealthyServices = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class ServiceTypeHealthPolicyArgs extends io.pulumi.resources.Resou
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> maxPercentUnhealthyServices;
+        private @Nullable Output<Integer> maxPercentUnhealthyServices;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class ServiceTypeHealthPolicyArgs extends io.pulumi.resources.Resou
     	      this.maxPercentUnhealthyServices = defaults.maxPercentUnhealthyServices;
         }
 
-        public Builder maxPercentUnhealthyServices(@Nullable Input<Integer> maxPercentUnhealthyServices) {
+        public Builder maxPercentUnhealthyServices(@Nullable Output<Integer> maxPercentUnhealthyServices) {
             this.maxPercentUnhealthyServices = maxPercentUnhealthyServices;
             return this;
         }
 
         public Builder maxPercentUnhealthyServices(@Nullable Integer maxPercentUnhealthyServices) {
-            this.maxPercentUnhealthyServices = Input.ofNullable(maxPercentUnhealthyServices);
+            this.maxPercentUnhealthyServices = Output.ofNullable(maxPercentUnhealthyServices);
             return this;
         }
         public ServiceTypeHealthPolicyArgs build() {

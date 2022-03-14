@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.cdn.inputs;
 
 import io.pulumi.azurenative.cdn.inputs.RateLimitRuleArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
@@ -24,18 +24,18 @@ public final class RateLimitRuleListArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="rules")
-      private final @Nullable Input<List<RateLimitRuleArgs>> rules;
+      private final @Nullable Output<List<RateLimitRuleArgs>> rules;
 
-    public Input<List<RateLimitRuleArgs>> getRules() {
-        return this.rules == null ? Input.empty() : this.rules;
+    public Output<List<RateLimitRuleArgs>> getRules() {
+        return this.rules == null ? Output.empty() : this.rules;
     }
 
-    public RateLimitRuleListArgs(@Nullable Input<List<RateLimitRuleArgs>> rules) {
+    public RateLimitRuleListArgs(@Nullable Output<List<RateLimitRuleArgs>> rules) {
         this.rules = rules;
     }
 
     private RateLimitRuleListArgs() {
-        this.rules = Input.empty();
+        this.rules = Output.empty();
     }
 
     public static Builder builder() {
@@ -47,7 +47,7 @@ public final class RateLimitRuleListArgs extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private @Nullable Input<List<RateLimitRuleArgs>> rules;
+        private @Nullable Output<List<RateLimitRuleArgs>> rules;
 
         public Builder() {
     	      // Empty
@@ -58,13 +58,13 @@ public final class RateLimitRuleListArgs extends io.pulumi.resources.ResourceArg
     	      this.rules = defaults.rules;
         }
 
-        public Builder rules(@Nullable Input<List<RateLimitRuleArgs>> rules) {
+        public Builder rules(@Nullable Output<List<RateLimitRuleArgs>> rules) {
             this.rules = rules;
             return this;
         }
 
         public Builder rules(@Nullable List<RateLimitRuleArgs> rules) {
-            this.rules = Input.ofNullable(rules);
+            this.rules = Output.ofNullable(rules);
             return this;
         }
         public RateLimitRuleListArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.hdinsight.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class AutoscaleCapacityArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="maxInstanceCount")
-      private final @Nullable Input<Integer> maxInstanceCount;
+      private final @Nullable Output<Integer> maxInstanceCount;
 
-    public Input<Integer> getMaxInstanceCount() {
-        return this.maxInstanceCount == null ? Input.empty() : this.maxInstanceCount;
+    public Output<Integer> getMaxInstanceCount() {
+        return this.maxInstanceCount == null ? Output.empty() : this.maxInstanceCount;
     }
 
     /**
@@ -34,22 +34,22 @@ public final class AutoscaleCapacityArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="minInstanceCount")
-      private final @Nullable Input<Integer> minInstanceCount;
+      private final @Nullable Output<Integer> minInstanceCount;
 
-    public Input<Integer> getMinInstanceCount() {
-        return this.minInstanceCount == null ? Input.empty() : this.minInstanceCount;
+    public Output<Integer> getMinInstanceCount() {
+        return this.minInstanceCount == null ? Output.empty() : this.minInstanceCount;
     }
 
     public AutoscaleCapacityArgs(
-        @Nullable Input<Integer> maxInstanceCount,
-        @Nullable Input<Integer> minInstanceCount) {
+        @Nullable Output<Integer> maxInstanceCount,
+        @Nullable Output<Integer> minInstanceCount) {
         this.maxInstanceCount = maxInstanceCount;
         this.minInstanceCount = minInstanceCount;
     }
 
     private AutoscaleCapacityArgs() {
-        this.maxInstanceCount = Input.empty();
-        this.minInstanceCount = Input.empty();
+        this.maxInstanceCount = Output.empty();
+        this.minInstanceCount = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class AutoscaleCapacityArgs extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> maxInstanceCount;
-        private @Nullable Input<Integer> minInstanceCount;
+        private @Nullable Output<Integer> maxInstanceCount;
+        private @Nullable Output<Integer> minInstanceCount;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class AutoscaleCapacityArgs extends io.pulumi.resources.ResourceArg
     	      this.minInstanceCount = defaults.minInstanceCount;
         }
 
-        public Builder maxInstanceCount(@Nullable Input<Integer> maxInstanceCount) {
+        public Builder maxInstanceCount(@Nullable Output<Integer> maxInstanceCount) {
             this.maxInstanceCount = maxInstanceCount;
             return this;
         }
 
         public Builder maxInstanceCount(@Nullable Integer maxInstanceCount) {
-            this.maxInstanceCount = Input.ofNullable(maxInstanceCount);
+            this.maxInstanceCount = Output.ofNullable(maxInstanceCount);
             return this;
         }
 
-        public Builder minInstanceCount(@Nullable Input<Integer> minInstanceCount) {
+        public Builder minInstanceCount(@Nullable Output<Integer> minInstanceCount) {
             this.minInstanceCount = minInstanceCount;
             return this;
         }
 
         public Builder minInstanceCount(@Nullable Integer minInstanceCount) {
-            this.minInstanceCount = Input.ofNullable(minInstanceCount);
+            this.minInstanceCount = Output.ofNullable(minInstanceCount);
             return this;
         }
         public AutoscaleCapacityArgs build() {

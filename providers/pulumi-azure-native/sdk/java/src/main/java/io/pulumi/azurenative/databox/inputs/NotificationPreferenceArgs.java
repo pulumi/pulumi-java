@@ -5,7 +5,7 @@ package io.pulumi.azurenative.databox.inputs;
 
 import io.pulumi.azurenative.databox.enums.NotificationStageName;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -25,9 +25,9 @@ public final class NotificationPreferenceArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="sendNotification", required=true)
-      private final Input<Boolean> sendNotification;
+      private final Output<Boolean> sendNotification;
 
-    public Input<Boolean> getSendNotification() {
+    public Output<Boolean> getSendNotification() {
         return this.sendNotification;
     }
 
@@ -36,22 +36,22 @@ public final class NotificationPreferenceArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="stageName", required=true)
-      private final Input<Either<String,NotificationStageName>> stageName;
+      private final Output<Either<String,NotificationStageName>> stageName;
 
-    public Input<Either<String,NotificationStageName>> getStageName() {
+    public Output<Either<String,NotificationStageName>> getStageName() {
         return this.stageName;
     }
 
     public NotificationPreferenceArgs(
-        Input<Boolean> sendNotification,
-        Input<Either<String,NotificationStageName>> stageName) {
-        this.sendNotification = sendNotification == null ? Input.ofNullable(true) : Objects.requireNonNull(sendNotification, "expected parameter 'sendNotification' to be non-null");
+        Output<Boolean> sendNotification,
+        Output<Either<String,NotificationStageName>> stageName) {
+        this.sendNotification = sendNotification == null ? Output.ofNullable(true) : Objects.requireNonNull(sendNotification, "expected parameter 'sendNotification' to be non-null");
         this.stageName = Objects.requireNonNull(stageName, "expected parameter 'stageName' to be non-null");
     }
 
     private NotificationPreferenceArgs() {
-        this.sendNotification = Input.empty();
-        this.stageName = Input.empty();
+        this.sendNotification = Output.empty();
+        this.stageName = Output.empty();
     }
 
     public static Builder builder() {
@@ -63,8 +63,8 @@ public final class NotificationPreferenceArgs extends io.pulumi.resources.Resour
     }
 
     public static final class Builder {
-        private Input<Boolean> sendNotification;
-        private Input<Either<String,NotificationStageName>> stageName;
+        private Output<Boolean> sendNotification;
+        private Output<Either<String,NotificationStageName>> stageName;
 
         public Builder() {
     	      // Empty
@@ -76,23 +76,23 @@ public final class NotificationPreferenceArgs extends io.pulumi.resources.Resour
     	      this.stageName = defaults.stageName;
         }
 
-        public Builder sendNotification(Input<Boolean> sendNotification) {
+        public Builder sendNotification(Output<Boolean> sendNotification) {
             this.sendNotification = Objects.requireNonNull(sendNotification);
             return this;
         }
 
         public Builder sendNotification(Boolean sendNotification) {
-            this.sendNotification = Input.of(Objects.requireNonNull(sendNotification));
+            this.sendNotification = Output.of(Objects.requireNonNull(sendNotification));
             return this;
         }
 
-        public Builder stageName(Input<Either<String,NotificationStageName>> stageName) {
+        public Builder stageName(Output<Either<String,NotificationStageName>> stageName) {
             this.stageName = Objects.requireNonNull(stageName);
             return this;
         }
 
         public Builder stageName(Either<String,NotificationStageName> stageName) {
-            this.stageName = Input.of(Objects.requireNonNull(stageName));
+            this.stageName = Output.of(Objects.requireNonNull(stageName));
             return this;
         }
         public NotificationPreferenceArgs build() {

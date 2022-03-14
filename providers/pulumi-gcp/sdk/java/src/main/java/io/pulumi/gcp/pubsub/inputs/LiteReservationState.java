@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.pubsub.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -20,10 +20,10 @@ public final class LiteReservationState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -32,10 +32,10 @@ public final class LiteReservationState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -43,10 +43,10 @@ public final class LiteReservationState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="region")
-      private final @Nullable Input<String> region;
+      private final @Nullable Output<String> region;
 
-    public Input<String> getRegion() {
-        return this.region == null ? Input.empty() : this.region;
+    public Output<String> getRegion() {
+        return this.region == null ? Output.empty() : this.region;
     }
 
     /**
@@ -56,17 +56,17 @@ public final class LiteReservationState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="throughputCapacity")
-      private final @Nullable Input<Integer> throughputCapacity;
+      private final @Nullable Output<Integer> throughputCapacity;
 
-    public Input<Integer> getThroughputCapacity() {
-        return this.throughputCapacity == null ? Input.empty() : this.throughputCapacity;
+    public Output<Integer> getThroughputCapacity() {
+        return this.throughputCapacity == null ? Output.empty() : this.throughputCapacity;
     }
 
     public LiteReservationState(
-        @Nullable Input<String> name,
-        @Nullable Input<String> project,
-        @Nullable Input<String> region,
-        @Nullable Input<Integer> throughputCapacity) {
+        @Nullable Output<String> name,
+        @Nullable Output<String> project,
+        @Nullable Output<String> region,
+        @Nullable Output<Integer> throughputCapacity) {
         this.name = name;
         this.project = project;
         this.region = region;
@@ -74,10 +74,10 @@ public final class LiteReservationState extends io.pulumi.resources.ResourceArgs
     }
 
     private LiteReservationState() {
-        this.name = Input.empty();
-        this.project = Input.empty();
-        this.region = Input.empty();
-        this.throughputCapacity = Input.empty();
+        this.name = Output.empty();
+        this.project = Output.empty();
+        this.region = Output.empty();
+        this.throughputCapacity = Output.empty();
     }
 
     public static Builder builder() {
@@ -89,10 +89,10 @@ public final class LiteReservationState extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> project;
-        private @Nullable Input<String> region;
-        private @Nullable Input<Integer> throughputCapacity;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> project;
+        private @Nullable Output<String> region;
+        private @Nullable Output<Integer> throughputCapacity;
 
         public Builder() {
     	      // Empty
@@ -106,43 +106,43 @@ public final class LiteReservationState extends io.pulumi.resources.ResourceArgs
     	      this.throughputCapacity = defaults.throughputCapacity;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder region(@Nullable Input<String> region) {
+        public Builder region(@Nullable Output<String> region) {
             this.region = region;
             return this;
         }
 
         public Builder region(@Nullable String region) {
-            this.region = Input.ofNullable(region);
+            this.region = Output.ofNullable(region);
             return this;
         }
 
-        public Builder throughputCapacity(@Nullable Input<Integer> throughputCapacity) {
+        public Builder throughputCapacity(@Nullable Output<Integer> throughputCapacity) {
             this.throughputCapacity = throughputCapacity;
             return this;
         }
 
         public Builder throughputCapacity(@Nullable Integer throughputCapacity) {
-            this.throughputCapacity = Input.ofNullable(throughputCapacity);
+            this.throughputCapacity = Output.ofNullable(throughputCapacity);
             return this;
         }
         public LiteReservationState build() {

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.documentdb.inputs;
 
 import io.pulumi.azurenative.documentdb.enums.DefaultConsistencyLevel;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.Integer;
@@ -25,9 +25,9 @@ public final class ConsistencyPolicyArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="defaultConsistencyLevel", required=true)
-      private final Input<DefaultConsistencyLevel> defaultConsistencyLevel;
+      private final Output<DefaultConsistencyLevel> defaultConsistencyLevel;
 
-    public Input<DefaultConsistencyLevel> getDefaultConsistencyLevel() {
+    public Output<DefaultConsistencyLevel> getDefaultConsistencyLevel() {
         return this.defaultConsistencyLevel;
     }
 
@@ -36,10 +36,10 @@ public final class ConsistencyPolicyArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="maxIntervalInSeconds")
-      private final @Nullable Input<Integer> maxIntervalInSeconds;
+      private final @Nullable Output<Integer> maxIntervalInSeconds;
 
-    public Input<Integer> getMaxIntervalInSeconds() {
-        return this.maxIntervalInSeconds == null ? Input.empty() : this.maxIntervalInSeconds;
+    public Output<Integer> getMaxIntervalInSeconds() {
+        return this.maxIntervalInSeconds == null ? Output.empty() : this.maxIntervalInSeconds;
     }
 
     /**
@@ -47,25 +47,25 @@ public final class ConsistencyPolicyArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="maxStalenessPrefix")
-      private final @Nullable Input<Double> maxStalenessPrefix;
+      private final @Nullable Output<Double> maxStalenessPrefix;
 
-    public Input<Double> getMaxStalenessPrefix() {
-        return this.maxStalenessPrefix == null ? Input.empty() : this.maxStalenessPrefix;
+    public Output<Double> getMaxStalenessPrefix() {
+        return this.maxStalenessPrefix == null ? Output.empty() : this.maxStalenessPrefix;
     }
 
     public ConsistencyPolicyArgs(
-        Input<DefaultConsistencyLevel> defaultConsistencyLevel,
-        @Nullable Input<Integer> maxIntervalInSeconds,
-        @Nullable Input<Double> maxStalenessPrefix) {
+        Output<DefaultConsistencyLevel> defaultConsistencyLevel,
+        @Nullable Output<Integer> maxIntervalInSeconds,
+        @Nullable Output<Double> maxStalenessPrefix) {
         this.defaultConsistencyLevel = Objects.requireNonNull(defaultConsistencyLevel, "expected parameter 'defaultConsistencyLevel' to be non-null");
         this.maxIntervalInSeconds = maxIntervalInSeconds;
         this.maxStalenessPrefix = maxStalenessPrefix;
     }
 
     private ConsistencyPolicyArgs() {
-        this.defaultConsistencyLevel = Input.empty();
-        this.maxIntervalInSeconds = Input.empty();
-        this.maxStalenessPrefix = Input.empty();
+        this.defaultConsistencyLevel = Output.empty();
+        this.maxIntervalInSeconds = Output.empty();
+        this.maxStalenessPrefix = Output.empty();
     }
 
     public static Builder builder() {
@@ -77,9 +77,9 @@ public final class ConsistencyPolicyArgs extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private Input<DefaultConsistencyLevel> defaultConsistencyLevel;
-        private @Nullable Input<Integer> maxIntervalInSeconds;
-        private @Nullable Input<Double> maxStalenessPrefix;
+        private Output<DefaultConsistencyLevel> defaultConsistencyLevel;
+        private @Nullable Output<Integer> maxIntervalInSeconds;
+        private @Nullable Output<Double> maxStalenessPrefix;
 
         public Builder() {
     	      // Empty
@@ -92,33 +92,33 @@ public final class ConsistencyPolicyArgs extends io.pulumi.resources.ResourceArg
     	      this.maxStalenessPrefix = defaults.maxStalenessPrefix;
         }
 
-        public Builder defaultConsistencyLevel(Input<DefaultConsistencyLevel> defaultConsistencyLevel) {
+        public Builder defaultConsistencyLevel(Output<DefaultConsistencyLevel> defaultConsistencyLevel) {
             this.defaultConsistencyLevel = Objects.requireNonNull(defaultConsistencyLevel);
             return this;
         }
 
         public Builder defaultConsistencyLevel(DefaultConsistencyLevel defaultConsistencyLevel) {
-            this.defaultConsistencyLevel = Input.of(Objects.requireNonNull(defaultConsistencyLevel));
+            this.defaultConsistencyLevel = Output.of(Objects.requireNonNull(defaultConsistencyLevel));
             return this;
         }
 
-        public Builder maxIntervalInSeconds(@Nullable Input<Integer> maxIntervalInSeconds) {
+        public Builder maxIntervalInSeconds(@Nullable Output<Integer> maxIntervalInSeconds) {
             this.maxIntervalInSeconds = maxIntervalInSeconds;
             return this;
         }
 
         public Builder maxIntervalInSeconds(@Nullable Integer maxIntervalInSeconds) {
-            this.maxIntervalInSeconds = Input.ofNullable(maxIntervalInSeconds);
+            this.maxIntervalInSeconds = Output.ofNullable(maxIntervalInSeconds);
             return this;
         }
 
-        public Builder maxStalenessPrefix(@Nullable Input<Double> maxStalenessPrefix) {
+        public Builder maxStalenessPrefix(@Nullable Output<Double> maxStalenessPrefix) {
             this.maxStalenessPrefix = maxStalenessPrefix;
             return this;
         }
 
         public Builder maxStalenessPrefix(@Nullable Double maxStalenessPrefix) {
-            this.maxStalenessPrefix = Input.ofNullable(maxStalenessPrefix);
+            this.maxStalenessPrefix = Output.ofNullable(maxStalenessPrefix);
             return this;
         }
         public ConsistencyPolicyArgs build() {

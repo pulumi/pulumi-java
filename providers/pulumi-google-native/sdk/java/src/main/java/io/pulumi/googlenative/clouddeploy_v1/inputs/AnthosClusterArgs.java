@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.clouddeploy_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class AnthosClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="membership")
-      private final @Nullable Input<String> membership;
+      private final @Nullable Output<String> membership;
 
-    public Input<String> getMembership() {
-        return this.membership == null ? Input.empty() : this.membership;
+    public Output<String> getMembership() {
+        return this.membership == null ? Output.empty() : this.membership;
     }
 
-    public AnthosClusterArgs(@Nullable Input<String> membership) {
+    public AnthosClusterArgs(@Nullable Output<String> membership) {
         this.membership = membership;
     }
 
     private AnthosClusterArgs() {
-        this.membership = Input.empty();
+        this.membership = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class AnthosClusterArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> membership;
+        private @Nullable Output<String> membership;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class AnthosClusterArgs extends io.pulumi.resources.ResourceArgs {
     	      this.membership = defaults.membership;
         }
 
-        public Builder membership(@Nullable Input<String> membership) {
+        public Builder membership(@Nullable Output<String> membership) {
             this.membership = membership;
             return this;
         }
 
         public Builder membership(@Nullable String membership) {
-            this.membership = Input.ofNullable(membership);
+            this.membership = Output.ofNullable(membership);
             return this;
         }
         public AnthosClusterArgs build() {

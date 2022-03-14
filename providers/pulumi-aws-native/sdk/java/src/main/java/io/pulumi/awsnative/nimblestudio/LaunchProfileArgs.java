@@ -5,7 +5,7 @@ package io.pulumi.awsnative.nimblestudio;
 
 import io.pulumi.awsnative.nimblestudio.inputs.LaunchProfileStreamConfigurationArgs;
 import io.pulumi.awsnative.nimblestudio.inputs.LaunchProfileTagsArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -22,10 +22,10 @@ public final class LaunchProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -34,9 +34,9 @@ public final class LaunchProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ec2SubnetIds", required=true)
-      private final Input<List<String>> ec2SubnetIds;
+      private final Output<List<String>> ec2SubnetIds;
 
-    public Input<List<String>> getEc2SubnetIds() {
+    public Output<List<String>> getEc2SubnetIds() {
         return this.ec2SubnetIds;
     }
 
@@ -46,9 +46,9 @@ public final class LaunchProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="launchProfileProtocolVersions", required=true)
-      private final Input<List<String>> launchProfileProtocolVersions;
+      private final Output<List<String>> launchProfileProtocolVersions;
 
-    public Input<List<String>> getLaunchProfileProtocolVersions() {
+    public Output<List<String>> getLaunchProfileProtocolVersions() {
         return this.launchProfileProtocolVersions;
     }
 
@@ -57,16 +57,16 @@ public final class LaunchProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     @InputImport(name="streamConfiguration", required=true)
-      private final Input<LaunchProfileStreamConfigurationArgs> streamConfiguration;
+      private final Output<LaunchProfileStreamConfigurationArgs> streamConfiguration;
 
-    public Input<LaunchProfileStreamConfigurationArgs> getStreamConfiguration() {
+    public Output<LaunchProfileStreamConfigurationArgs> getStreamConfiguration() {
         return this.streamConfiguration;
     }
 
@@ -76,9 +76,9 @@ public final class LaunchProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="studioComponentIds", required=true)
-      private final Input<List<String>> studioComponentIds;
+      private final Output<List<String>> studioComponentIds;
 
-    public Input<List<String>> getStudioComponentIds() {
+    public Output<List<String>> getStudioComponentIds() {
         return this.studioComponentIds;
     }
 
@@ -87,28 +87,28 @@ public final class LaunchProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="studioId", required=true)
-      private final Input<String> studioId;
+      private final Output<String> studioId;
 
-    public Input<String> getStudioId() {
+    public Output<String> getStudioId() {
         return this.studioId;
     }
 
     @InputImport(name="tags")
-      private final @Nullable Input<LaunchProfileTagsArgs> tags;
+      private final @Nullable Output<LaunchProfileTagsArgs> tags;
 
-    public Input<LaunchProfileTagsArgs> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<LaunchProfileTagsArgs> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public LaunchProfileArgs(
-        @Nullable Input<String> description,
-        Input<List<String>> ec2SubnetIds,
-        Input<List<String>> launchProfileProtocolVersions,
-        @Nullable Input<String> name,
-        Input<LaunchProfileStreamConfigurationArgs> streamConfiguration,
-        Input<List<String>> studioComponentIds,
-        Input<String> studioId,
-        @Nullable Input<LaunchProfileTagsArgs> tags) {
+        @Nullable Output<String> description,
+        Output<List<String>> ec2SubnetIds,
+        Output<List<String>> launchProfileProtocolVersions,
+        @Nullable Output<String> name,
+        Output<LaunchProfileStreamConfigurationArgs> streamConfiguration,
+        Output<List<String>> studioComponentIds,
+        Output<String> studioId,
+        @Nullable Output<LaunchProfileTagsArgs> tags) {
         this.description = description;
         this.ec2SubnetIds = Objects.requireNonNull(ec2SubnetIds, "expected parameter 'ec2SubnetIds' to be non-null");
         this.launchProfileProtocolVersions = Objects.requireNonNull(launchProfileProtocolVersions, "expected parameter 'launchProfileProtocolVersions' to be non-null");
@@ -120,14 +120,14 @@ public final class LaunchProfileArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private LaunchProfileArgs() {
-        this.description = Input.empty();
-        this.ec2SubnetIds = Input.empty();
-        this.launchProfileProtocolVersions = Input.empty();
-        this.name = Input.empty();
-        this.streamConfiguration = Input.empty();
-        this.studioComponentIds = Input.empty();
-        this.studioId = Input.empty();
-        this.tags = Input.empty();
+        this.description = Output.empty();
+        this.ec2SubnetIds = Output.empty();
+        this.launchProfileProtocolVersions = Output.empty();
+        this.name = Output.empty();
+        this.streamConfiguration = Output.empty();
+        this.studioComponentIds = Output.empty();
+        this.studioId = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -139,14 +139,14 @@ public final class LaunchProfileArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> description;
-        private Input<List<String>> ec2SubnetIds;
-        private Input<List<String>> launchProfileProtocolVersions;
-        private @Nullable Input<String> name;
-        private Input<LaunchProfileStreamConfigurationArgs> streamConfiguration;
-        private Input<List<String>> studioComponentIds;
-        private Input<String> studioId;
-        private @Nullable Input<LaunchProfileTagsArgs> tags;
+        private @Nullable Output<String> description;
+        private Output<List<String>> ec2SubnetIds;
+        private Output<List<String>> launchProfileProtocolVersions;
+        private @Nullable Output<String> name;
+        private Output<LaunchProfileStreamConfigurationArgs> streamConfiguration;
+        private Output<List<String>> studioComponentIds;
+        private Output<String> studioId;
+        private @Nullable Output<LaunchProfileTagsArgs> tags;
 
         public Builder() {
     	      // Empty
@@ -164,83 +164,83 @@ public final class LaunchProfileArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder ec2SubnetIds(Input<List<String>> ec2SubnetIds) {
+        public Builder ec2SubnetIds(Output<List<String>> ec2SubnetIds) {
             this.ec2SubnetIds = Objects.requireNonNull(ec2SubnetIds);
             return this;
         }
 
         public Builder ec2SubnetIds(List<String> ec2SubnetIds) {
-            this.ec2SubnetIds = Input.of(Objects.requireNonNull(ec2SubnetIds));
+            this.ec2SubnetIds = Output.of(Objects.requireNonNull(ec2SubnetIds));
             return this;
         }
 
-        public Builder launchProfileProtocolVersions(Input<List<String>> launchProfileProtocolVersions) {
+        public Builder launchProfileProtocolVersions(Output<List<String>> launchProfileProtocolVersions) {
             this.launchProfileProtocolVersions = Objects.requireNonNull(launchProfileProtocolVersions);
             return this;
         }
 
         public Builder launchProfileProtocolVersions(List<String> launchProfileProtocolVersions) {
-            this.launchProfileProtocolVersions = Input.of(Objects.requireNonNull(launchProfileProtocolVersions));
+            this.launchProfileProtocolVersions = Output.of(Objects.requireNonNull(launchProfileProtocolVersions));
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder streamConfiguration(Input<LaunchProfileStreamConfigurationArgs> streamConfiguration) {
+        public Builder streamConfiguration(Output<LaunchProfileStreamConfigurationArgs> streamConfiguration) {
             this.streamConfiguration = Objects.requireNonNull(streamConfiguration);
             return this;
         }
 
         public Builder streamConfiguration(LaunchProfileStreamConfigurationArgs streamConfiguration) {
-            this.streamConfiguration = Input.of(Objects.requireNonNull(streamConfiguration));
+            this.streamConfiguration = Output.of(Objects.requireNonNull(streamConfiguration));
             return this;
         }
 
-        public Builder studioComponentIds(Input<List<String>> studioComponentIds) {
+        public Builder studioComponentIds(Output<List<String>> studioComponentIds) {
             this.studioComponentIds = Objects.requireNonNull(studioComponentIds);
             return this;
         }
 
         public Builder studioComponentIds(List<String> studioComponentIds) {
-            this.studioComponentIds = Input.of(Objects.requireNonNull(studioComponentIds));
+            this.studioComponentIds = Output.of(Objects.requireNonNull(studioComponentIds));
             return this;
         }
 
-        public Builder studioId(Input<String> studioId) {
+        public Builder studioId(Output<String> studioId) {
             this.studioId = Objects.requireNonNull(studioId);
             return this;
         }
 
         public Builder studioId(String studioId) {
-            this.studioId = Input.of(Objects.requireNonNull(studioId));
+            this.studioId = Output.of(Objects.requireNonNull(studioId));
             return this;
         }
 
-        public Builder tags(@Nullable Input<LaunchProfileTagsArgs> tags) {
+        public Builder tags(@Nullable Output<LaunchProfileTagsArgs> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable LaunchProfileTagsArgs tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public LaunchProfileArgs build() {

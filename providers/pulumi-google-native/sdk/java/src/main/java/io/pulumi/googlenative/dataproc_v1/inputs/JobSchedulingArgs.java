@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dataproc_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class JobSchedulingArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="maxFailuresPerHour")
-      private final @Nullable Input<Integer> maxFailuresPerHour;
+      private final @Nullable Output<Integer> maxFailuresPerHour;
 
-    public Input<Integer> getMaxFailuresPerHour() {
-        return this.maxFailuresPerHour == null ? Input.empty() : this.maxFailuresPerHour;
+    public Output<Integer> getMaxFailuresPerHour() {
+        return this.maxFailuresPerHour == null ? Output.empty() : this.maxFailuresPerHour;
     }
 
     /**
@@ -34,22 +34,22 @@ public final class JobSchedulingArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="maxFailuresTotal")
-      private final @Nullable Input<Integer> maxFailuresTotal;
+      private final @Nullable Output<Integer> maxFailuresTotal;
 
-    public Input<Integer> getMaxFailuresTotal() {
-        return this.maxFailuresTotal == null ? Input.empty() : this.maxFailuresTotal;
+    public Output<Integer> getMaxFailuresTotal() {
+        return this.maxFailuresTotal == null ? Output.empty() : this.maxFailuresTotal;
     }
 
     public JobSchedulingArgs(
-        @Nullable Input<Integer> maxFailuresPerHour,
-        @Nullable Input<Integer> maxFailuresTotal) {
+        @Nullable Output<Integer> maxFailuresPerHour,
+        @Nullable Output<Integer> maxFailuresTotal) {
         this.maxFailuresPerHour = maxFailuresPerHour;
         this.maxFailuresTotal = maxFailuresTotal;
     }
 
     private JobSchedulingArgs() {
-        this.maxFailuresPerHour = Input.empty();
-        this.maxFailuresTotal = Input.empty();
+        this.maxFailuresPerHour = Output.empty();
+        this.maxFailuresTotal = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class JobSchedulingArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> maxFailuresPerHour;
-        private @Nullable Input<Integer> maxFailuresTotal;
+        private @Nullable Output<Integer> maxFailuresPerHour;
+        private @Nullable Output<Integer> maxFailuresTotal;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class JobSchedulingArgs extends io.pulumi.resources.ResourceArgs {
     	      this.maxFailuresTotal = defaults.maxFailuresTotal;
         }
 
-        public Builder maxFailuresPerHour(@Nullable Input<Integer> maxFailuresPerHour) {
+        public Builder maxFailuresPerHour(@Nullable Output<Integer> maxFailuresPerHour) {
             this.maxFailuresPerHour = maxFailuresPerHour;
             return this;
         }
 
         public Builder maxFailuresPerHour(@Nullable Integer maxFailuresPerHour) {
-            this.maxFailuresPerHour = Input.ofNullable(maxFailuresPerHour);
+            this.maxFailuresPerHour = Output.ofNullable(maxFailuresPerHour);
             return this;
         }
 
-        public Builder maxFailuresTotal(@Nullable Input<Integer> maxFailuresTotal) {
+        public Builder maxFailuresTotal(@Nullable Output<Integer> maxFailuresTotal) {
             this.maxFailuresTotal = maxFailuresTotal;
             return this;
         }
 
         public Builder maxFailuresTotal(@Nullable Integer maxFailuresTotal) {
-            this.maxFailuresTotal = Input.ofNullable(maxFailuresTotal);
+            this.maxFailuresTotal = Output.ofNullable(maxFailuresTotal);
             return this;
         }
         public JobSchedulingArgs build() {

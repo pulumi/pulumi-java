@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.auditregistration.k8s.io_v1alpha1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.kubernetes.auditregistration.k8s.io_v1alpha1.inputs.PolicyArgs;
 import io.pulumi.kubernetes.auditregistration.k8s.io_v1alpha1.inputs.WebhookArgs;
@@ -23,9 +23,9 @@ public final class AuditSinkSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="policy", required=true)
-      private final Input<PolicyArgs> policy;
+      private final Output<PolicyArgs> policy;
 
-    public Input<PolicyArgs> getPolicy() {
+    public Output<PolicyArgs> getPolicy() {
         return this.policy;
     }
 
@@ -34,22 +34,22 @@ public final class AuditSinkSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="webhook", required=true)
-      private final Input<WebhookArgs> webhook;
+      private final Output<WebhookArgs> webhook;
 
-    public Input<WebhookArgs> getWebhook() {
+    public Output<WebhookArgs> getWebhook() {
         return this.webhook;
     }
 
     public AuditSinkSpecArgs(
-        Input<PolicyArgs> policy,
-        Input<WebhookArgs> webhook) {
+        Output<PolicyArgs> policy,
+        Output<WebhookArgs> webhook) {
         this.policy = Objects.requireNonNull(policy, "expected parameter 'policy' to be non-null");
         this.webhook = Objects.requireNonNull(webhook, "expected parameter 'webhook' to be non-null");
     }
 
     private AuditSinkSpecArgs() {
-        this.policy = Input.empty();
-        this.webhook = Input.empty();
+        this.policy = Output.empty();
+        this.webhook = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class AuditSinkSpecArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<PolicyArgs> policy;
-        private Input<WebhookArgs> webhook;
+        private Output<PolicyArgs> policy;
+        private Output<WebhookArgs> webhook;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class AuditSinkSpecArgs extends io.pulumi.resources.ResourceArgs {
     	      this.webhook = defaults.webhook;
         }
 
-        public Builder policy(Input<PolicyArgs> policy) {
+        public Builder policy(Output<PolicyArgs> policy) {
             this.policy = Objects.requireNonNull(policy);
             return this;
         }
 
         public Builder policy(PolicyArgs policy) {
-            this.policy = Input.of(Objects.requireNonNull(policy));
+            this.policy = Output.of(Objects.requireNonNull(policy));
             return this;
         }
 
-        public Builder webhook(Input<WebhookArgs> webhook) {
+        public Builder webhook(Output<WebhookArgs> webhook) {
             this.webhook = Objects.requireNonNull(webhook);
             return this;
         }
 
         public Builder webhook(WebhookArgs webhook) {
-            this.webhook = Input.of(Objects.requireNonNull(webhook));
+            this.webhook = Output.of(Objects.requireNonNull(webhook));
             return this;
         }
         public AuditSinkSpecArgs build() {

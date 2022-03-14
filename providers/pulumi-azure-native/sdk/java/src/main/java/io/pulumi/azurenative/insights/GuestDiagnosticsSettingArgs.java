@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.insights;
 
 import io.pulumi.azurenative.insights.inputs.DataSourceArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -22,10 +22,10 @@ public final class GuestDiagnosticsSettingArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="dataSources")
-      private final @Nullable Input<List<DataSourceArgs>> dataSources;
+      private final @Nullable Output<List<DataSourceArgs>> dataSources;
 
-    public Input<List<DataSourceArgs>> getDataSources() {
-        return this.dataSources == null ? Input.empty() : this.dataSources;
+    public Output<List<DataSourceArgs>> getDataSources() {
+        return this.dataSources == null ? Output.empty() : this.dataSources;
     }
 
     /**
@@ -33,10 +33,10 @@ public final class GuestDiagnosticsSettingArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="diagnosticSettingsName")
-      private final @Nullable Input<String> diagnosticSettingsName;
+      private final @Nullable Output<String> diagnosticSettingsName;
 
-    public Input<String> getDiagnosticSettingsName() {
-        return this.diagnosticSettingsName == null ? Input.empty() : this.diagnosticSettingsName;
+    public Output<String> getDiagnosticSettingsName() {
+        return this.diagnosticSettingsName == null ? Output.empty() : this.diagnosticSettingsName;
     }
 
     /**
@@ -44,10 +44,10 @@ public final class GuestDiagnosticsSettingArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -55,17 +55,17 @@ public final class GuestDiagnosticsSettingArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="osType")
-      private final @Nullable Input<String> osType;
+      private final @Nullable Output<String> osType;
 
-    public Input<String> getOsType() {
-        return this.osType == null ? Input.empty() : this.osType;
+    public Output<String> getOsType() {
+        return this.osType == null ? Output.empty() : this.osType;
     }
 
     @InputImport(name="proxySetting")
-      private final @Nullable Input<String> proxySetting;
+      private final @Nullable Output<String> proxySetting;
 
-    public Input<String> getProxySetting() {
-        return this.proxySetting == null ? Input.empty() : this.proxySetting;
+    public Output<String> getProxySetting() {
+        return this.proxySetting == null ? Output.empty() : this.proxySetting;
     }
 
     /**
@@ -73,9 +73,9 @@ public final class GuestDiagnosticsSettingArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -84,20 +84,20 @@ public final class GuestDiagnosticsSettingArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public GuestDiagnosticsSettingArgs(
-        @Nullable Input<List<DataSourceArgs>> dataSources,
-        @Nullable Input<String> diagnosticSettingsName,
-        @Nullable Input<String> location,
-        @Nullable Input<String> osType,
-        @Nullable Input<String> proxySetting,
-        Input<String> resourceGroupName,
-        @Nullable Input<Map<String,String>> tags) {
+        @Nullable Output<List<DataSourceArgs>> dataSources,
+        @Nullable Output<String> diagnosticSettingsName,
+        @Nullable Output<String> location,
+        @Nullable Output<String> osType,
+        @Nullable Output<String> proxySetting,
+        Output<String> resourceGroupName,
+        @Nullable Output<Map<String,String>> tags) {
         this.dataSources = dataSources;
         this.diagnosticSettingsName = diagnosticSettingsName;
         this.location = location;
@@ -108,13 +108,13 @@ public final class GuestDiagnosticsSettingArgs extends io.pulumi.resources.Resou
     }
 
     private GuestDiagnosticsSettingArgs() {
-        this.dataSources = Input.empty();
-        this.diagnosticSettingsName = Input.empty();
-        this.location = Input.empty();
-        this.osType = Input.empty();
-        this.proxySetting = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.tags = Input.empty();
+        this.dataSources = Output.empty();
+        this.diagnosticSettingsName = Output.empty();
+        this.location = Output.empty();
+        this.osType = Output.empty();
+        this.proxySetting = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -126,13 +126,13 @@ public final class GuestDiagnosticsSettingArgs extends io.pulumi.resources.Resou
     }
 
     public static final class Builder {
-        private @Nullable Input<List<DataSourceArgs>> dataSources;
-        private @Nullable Input<String> diagnosticSettingsName;
-        private @Nullable Input<String> location;
-        private @Nullable Input<String> osType;
-        private @Nullable Input<String> proxySetting;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<Map<String,String>> tags;
+        private @Nullable Output<List<DataSourceArgs>> dataSources;
+        private @Nullable Output<String> diagnosticSettingsName;
+        private @Nullable Output<String> location;
+        private @Nullable Output<String> osType;
+        private @Nullable Output<String> proxySetting;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<Map<String,String>> tags;
 
         public Builder() {
     	      // Empty
@@ -149,73 +149,73 @@ public final class GuestDiagnosticsSettingArgs extends io.pulumi.resources.Resou
     	      this.tags = defaults.tags;
         }
 
-        public Builder dataSources(@Nullable Input<List<DataSourceArgs>> dataSources) {
+        public Builder dataSources(@Nullable Output<List<DataSourceArgs>> dataSources) {
             this.dataSources = dataSources;
             return this;
         }
 
         public Builder dataSources(@Nullable List<DataSourceArgs> dataSources) {
-            this.dataSources = Input.ofNullable(dataSources);
+            this.dataSources = Output.ofNullable(dataSources);
             return this;
         }
 
-        public Builder diagnosticSettingsName(@Nullable Input<String> diagnosticSettingsName) {
+        public Builder diagnosticSettingsName(@Nullable Output<String> diagnosticSettingsName) {
             this.diagnosticSettingsName = diagnosticSettingsName;
             return this;
         }
 
         public Builder diagnosticSettingsName(@Nullable String diagnosticSettingsName) {
-            this.diagnosticSettingsName = Input.ofNullable(diagnosticSettingsName);
+            this.diagnosticSettingsName = Output.ofNullable(diagnosticSettingsName);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder osType(@Nullable Input<String> osType) {
+        public Builder osType(@Nullable Output<String> osType) {
             this.osType = osType;
             return this;
         }
 
         public Builder osType(@Nullable String osType) {
-            this.osType = Input.ofNullable(osType);
+            this.osType = Output.ofNullable(osType);
             return this;
         }
 
-        public Builder proxySetting(@Nullable Input<String> proxySetting) {
+        public Builder proxySetting(@Nullable Output<String> proxySetting) {
             this.proxySetting = proxySetting;
             return this;
         }
 
         public Builder proxySetting(@Nullable String proxySetting) {
-            this.proxySetting = Input.ofNullable(proxySetting);
+            this.proxySetting = Output.ofNullable(proxySetting);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public GuestDiagnosticsSettingArgs build() {

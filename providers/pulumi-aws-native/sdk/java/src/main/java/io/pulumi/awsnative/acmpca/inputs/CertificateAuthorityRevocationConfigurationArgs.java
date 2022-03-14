@@ -5,7 +5,7 @@ package io.pulumi.awsnative.acmpca.inputs;
 
 import io.pulumi.awsnative.acmpca.inputs.CertificateAuthorityCrlConfigurationArgs;
 import io.pulumi.awsnative.acmpca.inputs.CertificateAuthorityOcspConfigurationArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,29 +20,29 @@ public final class CertificateAuthorityRevocationConfigurationArgs extends io.pu
     public static final CertificateAuthorityRevocationConfigurationArgs Empty = new CertificateAuthorityRevocationConfigurationArgs();
 
     @InputImport(name="crlConfiguration")
-      private final @Nullable Input<CertificateAuthorityCrlConfigurationArgs> crlConfiguration;
+      private final @Nullable Output<CertificateAuthorityCrlConfigurationArgs> crlConfiguration;
 
-    public Input<CertificateAuthorityCrlConfigurationArgs> getCrlConfiguration() {
-        return this.crlConfiguration == null ? Input.empty() : this.crlConfiguration;
+    public Output<CertificateAuthorityCrlConfigurationArgs> getCrlConfiguration() {
+        return this.crlConfiguration == null ? Output.empty() : this.crlConfiguration;
     }
 
     @InputImport(name="ocspConfiguration")
-      private final @Nullable Input<CertificateAuthorityOcspConfigurationArgs> ocspConfiguration;
+      private final @Nullable Output<CertificateAuthorityOcspConfigurationArgs> ocspConfiguration;
 
-    public Input<CertificateAuthorityOcspConfigurationArgs> getOcspConfiguration() {
-        return this.ocspConfiguration == null ? Input.empty() : this.ocspConfiguration;
+    public Output<CertificateAuthorityOcspConfigurationArgs> getOcspConfiguration() {
+        return this.ocspConfiguration == null ? Output.empty() : this.ocspConfiguration;
     }
 
     public CertificateAuthorityRevocationConfigurationArgs(
-        @Nullable Input<CertificateAuthorityCrlConfigurationArgs> crlConfiguration,
-        @Nullable Input<CertificateAuthorityOcspConfigurationArgs> ocspConfiguration) {
+        @Nullable Output<CertificateAuthorityCrlConfigurationArgs> crlConfiguration,
+        @Nullable Output<CertificateAuthorityOcspConfigurationArgs> ocspConfiguration) {
         this.crlConfiguration = crlConfiguration;
         this.ocspConfiguration = ocspConfiguration;
     }
 
     private CertificateAuthorityRevocationConfigurationArgs() {
-        this.crlConfiguration = Input.empty();
-        this.ocspConfiguration = Input.empty();
+        this.crlConfiguration = Output.empty();
+        this.ocspConfiguration = Output.empty();
     }
 
     public static Builder builder() {
@@ -54,8 +54,8 @@ public final class CertificateAuthorityRevocationConfigurationArgs extends io.pu
     }
 
     public static final class Builder {
-        private @Nullable Input<CertificateAuthorityCrlConfigurationArgs> crlConfiguration;
-        private @Nullable Input<CertificateAuthorityOcspConfigurationArgs> ocspConfiguration;
+        private @Nullable Output<CertificateAuthorityCrlConfigurationArgs> crlConfiguration;
+        private @Nullable Output<CertificateAuthorityOcspConfigurationArgs> ocspConfiguration;
 
         public Builder() {
     	      // Empty
@@ -67,23 +67,23 @@ public final class CertificateAuthorityRevocationConfigurationArgs extends io.pu
     	      this.ocspConfiguration = defaults.ocspConfiguration;
         }
 
-        public Builder crlConfiguration(@Nullable Input<CertificateAuthorityCrlConfigurationArgs> crlConfiguration) {
+        public Builder crlConfiguration(@Nullable Output<CertificateAuthorityCrlConfigurationArgs> crlConfiguration) {
             this.crlConfiguration = crlConfiguration;
             return this;
         }
 
         public Builder crlConfiguration(@Nullable CertificateAuthorityCrlConfigurationArgs crlConfiguration) {
-            this.crlConfiguration = Input.ofNullable(crlConfiguration);
+            this.crlConfiguration = Output.ofNullable(crlConfiguration);
             return this;
         }
 
-        public Builder ocspConfiguration(@Nullable Input<CertificateAuthorityOcspConfigurationArgs> ocspConfiguration) {
+        public Builder ocspConfiguration(@Nullable Output<CertificateAuthorityOcspConfigurationArgs> ocspConfiguration) {
             this.ocspConfiguration = ocspConfiguration;
             return this;
         }
 
         public Builder ocspConfiguration(@Nullable CertificateAuthorityOcspConfigurationArgs ocspConfiguration) {
-            this.ocspConfiguration = Input.ofNullable(ocspConfiguration);
+            this.ocspConfiguration = Output.ofNullable(ocspConfiguration);
             return this;
         }
         public CertificateAuthorityRevocationConfigurationArgs build() {

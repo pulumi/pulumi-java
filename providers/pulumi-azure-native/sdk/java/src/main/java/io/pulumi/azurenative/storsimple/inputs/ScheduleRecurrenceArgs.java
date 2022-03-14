@@ -5,7 +5,7 @@ package io.pulumi.azurenative.storsimple.inputs;
 
 import io.pulumi.azurenative.storsimple.enums.DayOfWeek;
 import io.pulumi.azurenative.storsimple.enums.RecurrenceType;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.List;
@@ -26,9 +26,9 @@ public final class ScheduleRecurrenceArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="recurrenceType", required=true)
-      private final Input<RecurrenceType> recurrenceType;
+      private final Output<RecurrenceType> recurrenceType;
 
-    public Input<RecurrenceType> getRecurrenceType() {
+    public Output<RecurrenceType> getRecurrenceType() {
         return this.recurrenceType;
     }
 
@@ -37,9 +37,9 @@ public final class ScheduleRecurrenceArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="recurrenceValue", required=true)
-      private final Input<Integer> recurrenceValue;
+      private final Output<Integer> recurrenceValue;
 
-    public Input<Integer> getRecurrenceValue() {
+    public Output<Integer> getRecurrenceValue() {
         return this.recurrenceValue;
     }
 
@@ -48,25 +48,25 @@ public final class ScheduleRecurrenceArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="weeklyDaysList")
-      private final @Nullable Input<List<DayOfWeek>> weeklyDaysList;
+      private final @Nullable Output<List<DayOfWeek>> weeklyDaysList;
 
-    public Input<List<DayOfWeek>> getWeeklyDaysList() {
-        return this.weeklyDaysList == null ? Input.empty() : this.weeklyDaysList;
+    public Output<List<DayOfWeek>> getWeeklyDaysList() {
+        return this.weeklyDaysList == null ? Output.empty() : this.weeklyDaysList;
     }
 
     public ScheduleRecurrenceArgs(
-        Input<RecurrenceType> recurrenceType,
-        Input<Integer> recurrenceValue,
-        @Nullable Input<List<DayOfWeek>> weeklyDaysList) {
+        Output<RecurrenceType> recurrenceType,
+        Output<Integer> recurrenceValue,
+        @Nullable Output<List<DayOfWeek>> weeklyDaysList) {
         this.recurrenceType = Objects.requireNonNull(recurrenceType, "expected parameter 'recurrenceType' to be non-null");
         this.recurrenceValue = Objects.requireNonNull(recurrenceValue, "expected parameter 'recurrenceValue' to be non-null");
         this.weeklyDaysList = weeklyDaysList;
     }
 
     private ScheduleRecurrenceArgs() {
-        this.recurrenceType = Input.empty();
-        this.recurrenceValue = Input.empty();
-        this.weeklyDaysList = Input.empty();
+        this.recurrenceType = Output.empty();
+        this.recurrenceValue = Output.empty();
+        this.weeklyDaysList = Output.empty();
     }
 
     public static Builder builder() {
@@ -78,9 +78,9 @@ public final class ScheduleRecurrenceArgs extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private Input<RecurrenceType> recurrenceType;
-        private Input<Integer> recurrenceValue;
-        private @Nullable Input<List<DayOfWeek>> weeklyDaysList;
+        private Output<RecurrenceType> recurrenceType;
+        private Output<Integer> recurrenceValue;
+        private @Nullable Output<List<DayOfWeek>> weeklyDaysList;
 
         public Builder() {
     	      // Empty
@@ -93,33 +93,33 @@ public final class ScheduleRecurrenceArgs extends io.pulumi.resources.ResourceAr
     	      this.weeklyDaysList = defaults.weeklyDaysList;
         }
 
-        public Builder recurrenceType(Input<RecurrenceType> recurrenceType) {
+        public Builder recurrenceType(Output<RecurrenceType> recurrenceType) {
             this.recurrenceType = Objects.requireNonNull(recurrenceType);
             return this;
         }
 
         public Builder recurrenceType(RecurrenceType recurrenceType) {
-            this.recurrenceType = Input.of(Objects.requireNonNull(recurrenceType));
+            this.recurrenceType = Output.of(Objects.requireNonNull(recurrenceType));
             return this;
         }
 
-        public Builder recurrenceValue(Input<Integer> recurrenceValue) {
+        public Builder recurrenceValue(Output<Integer> recurrenceValue) {
             this.recurrenceValue = Objects.requireNonNull(recurrenceValue);
             return this;
         }
 
         public Builder recurrenceValue(Integer recurrenceValue) {
-            this.recurrenceValue = Input.of(Objects.requireNonNull(recurrenceValue));
+            this.recurrenceValue = Output.of(Objects.requireNonNull(recurrenceValue));
             return this;
         }
 
-        public Builder weeklyDaysList(@Nullable Input<List<DayOfWeek>> weeklyDaysList) {
+        public Builder weeklyDaysList(@Nullable Output<List<DayOfWeek>> weeklyDaysList) {
             this.weeklyDaysList = weeklyDaysList;
             return this;
         }
 
         public Builder weeklyDaysList(@Nullable List<DayOfWeek> weeklyDaysList) {
-            this.weeklyDaysList = Input.ofNullable(weeklyDaysList);
+            this.weeklyDaysList = Output.ofNullable(weeklyDaysList);
             return this;
         }
         public ScheduleRecurrenceArgs build() {

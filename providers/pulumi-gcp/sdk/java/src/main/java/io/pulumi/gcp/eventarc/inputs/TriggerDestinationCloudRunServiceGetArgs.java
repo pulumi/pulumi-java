@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.eventarc.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class TriggerDestinationCloudRunServiceGetArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="path")
-      private final @Nullable Input<String> path;
+      private final @Nullable Output<String> path;
 
-    public Input<String> getPath() {
-        return this.path == null ? Input.empty() : this.path;
+    public Output<String> getPath() {
+        return this.path == null ? Output.empty() : this.path;
     }
 
     /**
@@ -30,10 +30,10 @@ public final class TriggerDestinationCloudRunServiceGetArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="region")
-      private final @Nullable Input<String> region;
+      private final @Nullable Output<String> region;
 
-    public Input<String> getRegion() {
-        return this.region == null ? Input.empty() : this.region;
+    public Output<String> getRegion() {
+        return this.region == null ? Output.empty() : this.region;
     }
 
     /**
@@ -41,25 +41,25 @@ public final class TriggerDestinationCloudRunServiceGetArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="service", required=true)
-      private final Input<String> service;
+      private final Output<String> service;
 
-    public Input<String> getService() {
+    public Output<String> getService() {
         return this.service;
     }
 
     public TriggerDestinationCloudRunServiceGetArgs(
-        @Nullable Input<String> path,
-        @Nullable Input<String> region,
-        Input<String> service) {
+        @Nullable Output<String> path,
+        @Nullable Output<String> region,
+        Output<String> service) {
         this.path = path;
         this.region = region;
         this.service = Objects.requireNonNull(service, "expected parameter 'service' to be non-null");
     }
 
     private TriggerDestinationCloudRunServiceGetArgs() {
-        this.path = Input.empty();
-        this.region = Input.empty();
-        this.service = Input.empty();
+        this.path = Output.empty();
+        this.region = Output.empty();
+        this.service = Output.empty();
     }
 
     public static Builder builder() {
@@ -71,9 +71,9 @@ public final class TriggerDestinationCloudRunServiceGetArgs extends io.pulumi.re
     }
 
     public static final class Builder {
-        private @Nullable Input<String> path;
-        private @Nullable Input<String> region;
-        private Input<String> service;
+        private @Nullable Output<String> path;
+        private @Nullable Output<String> region;
+        private Output<String> service;
 
         public Builder() {
     	      // Empty
@@ -86,33 +86,33 @@ public final class TriggerDestinationCloudRunServiceGetArgs extends io.pulumi.re
     	      this.service = defaults.service;
         }
 
-        public Builder path(@Nullable Input<String> path) {
+        public Builder path(@Nullable Output<String> path) {
             this.path = path;
             return this;
         }
 
         public Builder path(@Nullable String path) {
-            this.path = Input.ofNullable(path);
+            this.path = Output.ofNullable(path);
             return this;
         }
 
-        public Builder region(@Nullable Input<String> region) {
+        public Builder region(@Nullable Output<String> region) {
             this.region = region;
             return this;
         }
 
         public Builder region(@Nullable String region) {
-            this.region = Input.ofNullable(region);
+            this.region = Output.ofNullable(region);
             return this;
         }
 
-        public Builder service(Input<String> service) {
+        public Builder service(Output<String> service) {
             this.service = Objects.requireNonNull(service);
             return this;
         }
 
         public Builder service(String service) {
-            this.service = Input.of(Objects.requireNonNull(service));
+            this.service = Output.of(Objects.requireNonNull(service));
             return this;
         }
         public TriggerDestinationCloudRunServiceGetArgs build() {

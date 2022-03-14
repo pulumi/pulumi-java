@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.compute.inputs.InstanceIAMMemberConditionArgs;
 import java.lang.String;
@@ -21,10 +21,10 @@ public final class InstanceIAMMemberArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="condition")
-      private final @Nullable Input<InstanceIAMMemberConditionArgs> condition;
+      private final @Nullable Output<InstanceIAMMemberConditionArgs> condition;
 
-    public Input<InstanceIAMMemberConditionArgs> getCondition() {
-        return this.condition == null ? Input.empty() : this.condition;
+    public Output<InstanceIAMMemberConditionArgs> getCondition() {
+        return this.condition == null ? Output.empty() : this.condition;
     }
 
     /**
@@ -32,16 +32,16 @@ public final class InstanceIAMMemberArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="instanceName", required=true)
-      private final Input<String> instanceName;
+      private final Output<String> instanceName;
 
-    public Input<String> getInstanceName() {
+    public Output<String> getInstanceName() {
         return this.instanceName;
     }
 
     @InputImport(name="member", required=true)
-      private final Input<String> member;
+      private final Output<String> member;
 
-    public Input<String> getMember() {
+    public Output<String> getMember() {
         return this.member;
     }
 
@@ -51,10 +51,10 @@ public final class InstanceIAMMemberArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -64,9 +64,9 @@ public final class InstanceIAMMemberArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="role", required=true)
-      private final Input<String> role;
+      private final Output<String> role;
 
-    public Input<String> getRole() {
+    public Output<String> getRole() {
         return this.role;
     }
 
@@ -77,19 +77,19 @@ public final class InstanceIAMMemberArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="zone")
-      private final @Nullable Input<String> zone;
+      private final @Nullable Output<String> zone;
 
-    public Input<String> getZone() {
-        return this.zone == null ? Input.empty() : this.zone;
+    public Output<String> getZone() {
+        return this.zone == null ? Output.empty() : this.zone;
     }
 
     public InstanceIAMMemberArgs(
-        @Nullable Input<InstanceIAMMemberConditionArgs> condition,
-        Input<String> instanceName,
-        Input<String> member,
-        @Nullable Input<String> project,
-        Input<String> role,
-        @Nullable Input<String> zone) {
+        @Nullable Output<InstanceIAMMemberConditionArgs> condition,
+        Output<String> instanceName,
+        Output<String> member,
+        @Nullable Output<String> project,
+        Output<String> role,
+        @Nullable Output<String> zone) {
         this.condition = condition;
         this.instanceName = Objects.requireNonNull(instanceName, "expected parameter 'instanceName' to be non-null");
         this.member = Objects.requireNonNull(member, "expected parameter 'member' to be non-null");
@@ -99,12 +99,12 @@ public final class InstanceIAMMemberArgs extends io.pulumi.resources.ResourceArg
     }
 
     private InstanceIAMMemberArgs() {
-        this.condition = Input.empty();
-        this.instanceName = Input.empty();
-        this.member = Input.empty();
-        this.project = Input.empty();
-        this.role = Input.empty();
-        this.zone = Input.empty();
+        this.condition = Output.empty();
+        this.instanceName = Output.empty();
+        this.member = Output.empty();
+        this.project = Output.empty();
+        this.role = Output.empty();
+        this.zone = Output.empty();
     }
 
     public static Builder builder() {
@@ -116,12 +116,12 @@ public final class InstanceIAMMemberArgs extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private @Nullable Input<InstanceIAMMemberConditionArgs> condition;
-        private Input<String> instanceName;
-        private Input<String> member;
-        private @Nullable Input<String> project;
-        private Input<String> role;
-        private @Nullable Input<String> zone;
+        private @Nullable Output<InstanceIAMMemberConditionArgs> condition;
+        private Output<String> instanceName;
+        private Output<String> member;
+        private @Nullable Output<String> project;
+        private Output<String> role;
+        private @Nullable Output<String> zone;
 
         public Builder() {
     	      // Empty
@@ -137,63 +137,63 @@ public final class InstanceIAMMemberArgs extends io.pulumi.resources.ResourceArg
     	      this.zone = defaults.zone;
         }
 
-        public Builder condition(@Nullable Input<InstanceIAMMemberConditionArgs> condition) {
+        public Builder condition(@Nullable Output<InstanceIAMMemberConditionArgs> condition) {
             this.condition = condition;
             return this;
         }
 
         public Builder condition(@Nullable InstanceIAMMemberConditionArgs condition) {
-            this.condition = Input.ofNullable(condition);
+            this.condition = Output.ofNullable(condition);
             return this;
         }
 
-        public Builder instanceName(Input<String> instanceName) {
+        public Builder instanceName(Output<String> instanceName) {
             this.instanceName = Objects.requireNonNull(instanceName);
             return this;
         }
 
         public Builder instanceName(String instanceName) {
-            this.instanceName = Input.of(Objects.requireNonNull(instanceName));
+            this.instanceName = Output.of(Objects.requireNonNull(instanceName));
             return this;
         }
 
-        public Builder member(Input<String> member) {
+        public Builder member(Output<String> member) {
             this.member = Objects.requireNonNull(member);
             return this;
         }
 
         public Builder member(String member) {
-            this.member = Input.of(Objects.requireNonNull(member));
+            this.member = Output.of(Objects.requireNonNull(member));
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder role(Input<String> role) {
+        public Builder role(Output<String> role) {
             this.role = Objects.requireNonNull(role);
             return this;
         }
 
         public Builder role(String role) {
-            this.role = Input.of(Objects.requireNonNull(role));
+            this.role = Output.of(Objects.requireNonNull(role));
             return this;
         }
 
-        public Builder zone(@Nullable Input<String> zone) {
+        public Builder zone(@Nullable Output<String> zone) {
             this.zone = zone;
             return this;
         }
 
         public Builder zone(@Nullable String zone) {
-            this.zone = Input.ofNullable(zone);
+            this.zone = Output.ofNullable(zone);
             return this;
         }
         public InstanceIAMMemberArgs build() {

@@ -9,7 +9,7 @@ import io.pulumi.azurenative.datafactory.inputs.IntegrationRuntimeReferenceArgs;
 import io.pulumi.azurenative.datafactory.inputs.ParameterSpecificationArgs;
 import io.pulumi.azurenative.datafactory.inputs.SecureStringArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
@@ -32,10 +32,10 @@ public final class PrestoLinkedServiceArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="allowHostNameCNMismatch")
-      private final @Nullable Input<Object> allowHostNameCNMismatch;
+      private final @Nullable Output<Object> allowHostNameCNMismatch;
 
-    public Input<Object> getAllowHostNameCNMismatch() {
-        return this.allowHostNameCNMismatch == null ? Input.empty() : this.allowHostNameCNMismatch;
+    public Output<Object> getAllowHostNameCNMismatch() {
+        return this.allowHostNameCNMismatch == null ? Output.empty() : this.allowHostNameCNMismatch;
     }
 
     /**
@@ -43,10 +43,10 @@ public final class PrestoLinkedServiceArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="allowSelfSignedServerCert")
-      private final @Nullable Input<Object> allowSelfSignedServerCert;
+      private final @Nullable Output<Object> allowSelfSignedServerCert;
 
-    public Input<Object> getAllowSelfSignedServerCert() {
-        return this.allowSelfSignedServerCert == null ? Input.empty() : this.allowSelfSignedServerCert;
+    public Output<Object> getAllowSelfSignedServerCert() {
+        return this.allowSelfSignedServerCert == null ? Output.empty() : this.allowSelfSignedServerCert;
     }
 
     /**
@@ -54,10 +54,10 @@ public final class PrestoLinkedServiceArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="annotations")
-      private final @Nullable Input<List<Object>> annotations;
+      private final @Nullable Output<List<Object>> annotations;
 
-    public Input<List<Object>> getAnnotations() {
-        return this.annotations == null ? Input.empty() : this.annotations;
+    public Output<List<Object>> getAnnotations() {
+        return this.annotations == null ? Output.empty() : this.annotations;
     }
 
     /**
@@ -65,9 +65,9 @@ public final class PrestoLinkedServiceArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="authenticationType", required=true)
-      private final Input<Either<String,PrestoAuthenticationType>> authenticationType;
+      private final Output<Either<String,PrestoAuthenticationType>> authenticationType;
 
-    public Input<Either<String,PrestoAuthenticationType>> getAuthenticationType() {
+    public Output<Either<String,PrestoAuthenticationType>> getAuthenticationType() {
         return this.authenticationType;
     }
 
@@ -76,9 +76,9 @@ public final class PrestoLinkedServiceArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="catalog", required=true)
-      private final Input<Object> catalog;
+      private final Output<Object> catalog;
 
-    public Input<Object> getCatalog() {
+    public Output<Object> getCatalog() {
         return this.catalog;
     }
 
@@ -87,10 +87,10 @@ public final class PrestoLinkedServiceArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="connectVia")
-      private final @Nullable Input<IntegrationRuntimeReferenceArgs> connectVia;
+      private final @Nullable Output<IntegrationRuntimeReferenceArgs> connectVia;
 
-    public Input<IntegrationRuntimeReferenceArgs> getConnectVia() {
-        return this.connectVia == null ? Input.empty() : this.connectVia;
+    public Output<IntegrationRuntimeReferenceArgs> getConnectVia() {
+        return this.connectVia == null ? Output.empty() : this.connectVia;
     }
 
     /**
@@ -98,10 +98,10 @@ public final class PrestoLinkedServiceArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -109,10 +109,10 @@ public final class PrestoLinkedServiceArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="enableSsl")
-      private final @Nullable Input<Object> enableSsl;
+      private final @Nullable Output<Object> enableSsl;
 
-    public Input<Object> getEnableSsl() {
-        return this.enableSsl == null ? Input.empty() : this.enableSsl;
+    public Output<Object> getEnableSsl() {
+        return this.enableSsl == null ? Output.empty() : this.enableSsl;
     }
 
     /**
@@ -120,10 +120,10 @@ public final class PrestoLinkedServiceArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="encryptedCredential")
-      private final @Nullable Input<Object> encryptedCredential;
+      private final @Nullable Output<Object> encryptedCredential;
 
-    public Input<Object> getEncryptedCredential() {
-        return this.encryptedCredential == null ? Input.empty() : this.encryptedCredential;
+    public Output<Object> getEncryptedCredential() {
+        return this.encryptedCredential == null ? Output.empty() : this.encryptedCredential;
     }
 
     /**
@@ -131,9 +131,9 @@ public final class PrestoLinkedServiceArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="host", required=true)
-      private final Input<Object> host;
+      private final Output<Object> host;
 
-    public Input<Object> getHost() {
+    public Output<Object> getHost() {
         return this.host;
     }
 
@@ -142,10 +142,10 @@ public final class PrestoLinkedServiceArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="parameters")
-      private final @Nullable Input<Map<String,ParameterSpecificationArgs>> parameters;
+      private final @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters;
 
-    public Input<Map<String,ParameterSpecificationArgs>> getParameters() {
-        return this.parameters == null ? Input.empty() : this.parameters;
+    public Output<Map<String,ParameterSpecificationArgs>> getParameters() {
+        return this.parameters == null ? Output.empty() : this.parameters;
     }
 
     /**
@@ -153,10 +153,10 @@ public final class PrestoLinkedServiceArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="password")
-      private final @Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password;
+      private final @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password;
 
-    public Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> getPassword() {
-        return this.password == null ? Input.empty() : this.password;
+    public Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> getPassword() {
+        return this.password == null ? Output.empty() : this.password;
     }
 
     /**
@@ -164,10 +164,10 @@ public final class PrestoLinkedServiceArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="port")
-      private final @Nullable Input<Object> port;
+      private final @Nullable Output<Object> port;
 
-    public Input<Object> getPort() {
-        return this.port == null ? Input.empty() : this.port;
+    public Output<Object> getPort() {
+        return this.port == null ? Output.empty() : this.port;
     }
 
     /**
@@ -175,9 +175,9 @@ public final class PrestoLinkedServiceArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="serverVersion", required=true)
-      private final Input<Object> serverVersion;
+      private final Output<Object> serverVersion;
 
-    public Input<Object> getServerVersion() {
+    public Output<Object> getServerVersion() {
         return this.serverVersion;
     }
 
@@ -186,10 +186,10 @@ public final class PrestoLinkedServiceArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="timeZoneID")
-      private final @Nullable Input<Object> timeZoneID;
+      private final @Nullable Output<Object> timeZoneID;
 
-    public Input<Object> getTimeZoneID() {
-        return this.timeZoneID == null ? Input.empty() : this.timeZoneID;
+    public Output<Object> getTimeZoneID() {
+        return this.timeZoneID == null ? Output.empty() : this.timeZoneID;
     }
 
     /**
@@ -197,10 +197,10 @@ public final class PrestoLinkedServiceArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="trustedCertPath")
-      private final @Nullable Input<Object> trustedCertPath;
+      private final @Nullable Output<Object> trustedCertPath;
 
-    public Input<Object> getTrustedCertPath() {
-        return this.trustedCertPath == null ? Input.empty() : this.trustedCertPath;
+    public Output<Object> getTrustedCertPath() {
+        return this.trustedCertPath == null ? Output.empty() : this.trustedCertPath;
     }
 
     /**
@@ -209,9 +209,9 @@ public final class PrestoLinkedServiceArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<String> type;
+      private final Output<String> type;
 
-    public Input<String> getType() {
+    public Output<String> getType() {
         return this.type;
     }
 
@@ -220,10 +220,10 @@ public final class PrestoLinkedServiceArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="useSystemTrustStore")
-      private final @Nullable Input<Object> useSystemTrustStore;
+      private final @Nullable Output<Object> useSystemTrustStore;
 
-    public Input<Object> getUseSystemTrustStore() {
-        return this.useSystemTrustStore == null ? Input.empty() : this.useSystemTrustStore;
+    public Output<Object> getUseSystemTrustStore() {
+        return this.useSystemTrustStore == null ? Output.empty() : this.useSystemTrustStore;
     }
 
     /**
@@ -231,32 +231,32 @@ public final class PrestoLinkedServiceArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="username")
-      private final @Nullable Input<Object> username;
+      private final @Nullable Output<Object> username;
 
-    public Input<Object> getUsername() {
-        return this.username == null ? Input.empty() : this.username;
+    public Output<Object> getUsername() {
+        return this.username == null ? Output.empty() : this.username;
     }
 
     public PrestoLinkedServiceArgs(
-        @Nullable Input<Object> allowHostNameCNMismatch,
-        @Nullable Input<Object> allowSelfSignedServerCert,
-        @Nullable Input<List<Object>> annotations,
-        Input<Either<String,PrestoAuthenticationType>> authenticationType,
-        Input<Object> catalog,
-        @Nullable Input<IntegrationRuntimeReferenceArgs> connectVia,
-        @Nullable Input<String> description,
-        @Nullable Input<Object> enableSsl,
-        @Nullable Input<Object> encryptedCredential,
-        Input<Object> host,
-        @Nullable Input<Map<String,ParameterSpecificationArgs>> parameters,
-        @Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password,
-        @Nullable Input<Object> port,
-        Input<Object> serverVersion,
-        @Nullable Input<Object> timeZoneID,
-        @Nullable Input<Object> trustedCertPath,
-        Input<String> type,
-        @Nullable Input<Object> useSystemTrustStore,
-        @Nullable Input<Object> username) {
+        @Nullable Output<Object> allowHostNameCNMismatch,
+        @Nullable Output<Object> allowSelfSignedServerCert,
+        @Nullable Output<List<Object>> annotations,
+        Output<Either<String,PrestoAuthenticationType>> authenticationType,
+        Output<Object> catalog,
+        @Nullable Output<IntegrationRuntimeReferenceArgs> connectVia,
+        @Nullable Output<String> description,
+        @Nullable Output<Object> enableSsl,
+        @Nullable Output<Object> encryptedCredential,
+        Output<Object> host,
+        @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters,
+        @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password,
+        @Nullable Output<Object> port,
+        Output<Object> serverVersion,
+        @Nullable Output<Object> timeZoneID,
+        @Nullable Output<Object> trustedCertPath,
+        Output<String> type,
+        @Nullable Output<Object> useSystemTrustStore,
+        @Nullable Output<Object> username) {
         this.allowHostNameCNMismatch = allowHostNameCNMismatch;
         this.allowSelfSignedServerCert = allowSelfSignedServerCert;
         this.annotations = annotations;
@@ -279,25 +279,25 @@ public final class PrestoLinkedServiceArgs extends io.pulumi.resources.ResourceA
     }
 
     private PrestoLinkedServiceArgs() {
-        this.allowHostNameCNMismatch = Input.empty();
-        this.allowSelfSignedServerCert = Input.empty();
-        this.annotations = Input.empty();
-        this.authenticationType = Input.empty();
-        this.catalog = Input.empty();
-        this.connectVia = Input.empty();
-        this.description = Input.empty();
-        this.enableSsl = Input.empty();
-        this.encryptedCredential = Input.empty();
-        this.host = Input.empty();
-        this.parameters = Input.empty();
-        this.password = Input.empty();
-        this.port = Input.empty();
-        this.serverVersion = Input.empty();
-        this.timeZoneID = Input.empty();
-        this.trustedCertPath = Input.empty();
-        this.type = Input.empty();
-        this.useSystemTrustStore = Input.empty();
-        this.username = Input.empty();
+        this.allowHostNameCNMismatch = Output.empty();
+        this.allowSelfSignedServerCert = Output.empty();
+        this.annotations = Output.empty();
+        this.authenticationType = Output.empty();
+        this.catalog = Output.empty();
+        this.connectVia = Output.empty();
+        this.description = Output.empty();
+        this.enableSsl = Output.empty();
+        this.encryptedCredential = Output.empty();
+        this.host = Output.empty();
+        this.parameters = Output.empty();
+        this.password = Output.empty();
+        this.port = Output.empty();
+        this.serverVersion = Output.empty();
+        this.timeZoneID = Output.empty();
+        this.trustedCertPath = Output.empty();
+        this.type = Output.empty();
+        this.useSystemTrustStore = Output.empty();
+        this.username = Output.empty();
     }
 
     public static Builder builder() {
@@ -309,25 +309,25 @@ public final class PrestoLinkedServiceArgs extends io.pulumi.resources.ResourceA
     }
 
     public static final class Builder {
-        private @Nullable Input<Object> allowHostNameCNMismatch;
-        private @Nullable Input<Object> allowSelfSignedServerCert;
-        private @Nullable Input<List<Object>> annotations;
-        private Input<Either<String,PrestoAuthenticationType>> authenticationType;
-        private Input<Object> catalog;
-        private @Nullable Input<IntegrationRuntimeReferenceArgs> connectVia;
-        private @Nullable Input<String> description;
-        private @Nullable Input<Object> enableSsl;
-        private @Nullable Input<Object> encryptedCredential;
-        private Input<Object> host;
-        private @Nullable Input<Map<String,ParameterSpecificationArgs>> parameters;
-        private @Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password;
-        private @Nullable Input<Object> port;
-        private Input<Object> serverVersion;
-        private @Nullable Input<Object> timeZoneID;
-        private @Nullable Input<Object> trustedCertPath;
-        private Input<String> type;
-        private @Nullable Input<Object> useSystemTrustStore;
-        private @Nullable Input<Object> username;
+        private @Nullable Output<Object> allowHostNameCNMismatch;
+        private @Nullable Output<Object> allowSelfSignedServerCert;
+        private @Nullable Output<List<Object>> annotations;
+        private Output<Either<String,PrestoAuthenticationType>> authenticationType;
+        private Output<Object> catalog;
+        private @Nullable Output<IntegrationRuntimeReferenceArgs> connectVia;
+        private @Nullable Output<String> description;
+        private @Nullable Output<Object> enableSsl;
+        private @Nullable Output<Object> encryptedCredential;
+        private Output<Object> host;
+        private @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters;
+        private @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password;
+        private @Nullable Output<Object> port;
+        private Output<Object> serverVersion;
+        private @Nullable Output<Object> timeZoneID;
+        private @Nullable Output<Object> trustedCertPath;
+        private Output<String> type;
+        private @Nullable Output<Object> useSystemTrustStore;
+        private @Nullable Output<Object> username;
 
         public Builder() {
     	      // Empty
@@ -356,193 +356,193 @@ public final class PrestoLinkedServiceArgs extends io.pulumi.resources.ResourceA
     	      this.username = defaults.username;
         }
 
-        public Builder allowHostNameCNMismatch(@Nullable Input<Object> allowHostNameCNMismatch) {
+        public Builder allowHostNameCNMismatch(@Nullable Output<Object> allowHostNameCNMismatch) {
             this.allowHostNameCNMismatch = allowHostNameCNMismatch;
             return this;
         }
 
         public Builder allowHostNameCNMismatch(@Nullable Object allowHostNameCNMismatch) {
-            this.allowHostNameCNMismatch = Input.ofNullable(allowHostNameCNMismatch);
+            this.allowHostNameCNMismatch = Output.ofNullable(allowHostNameCNMismatch);
             return this;
         }
 
-        public Builder allowSelfSignedServerCert(@Nullable Input<Object> allowSelfSignedServerCert) {
+        public Builder allowSelfSignedServerCert(@Nullable Output<Object> allowSelfSignedServerCert) {
             this.allowSelfSignedServerCert = allowSelfSignedServerCert;
             return this;
         }
 
         public Builder allowSelfSignedServerCert(@Nullable Object allowSelfSignedServerCert) {
-            this.allowSelfSignedServerCert = Input.ofNullable(allowSelfSignedServerCert);
+            this.allowSelfSignedServerCert = Output.ofNullable(allowSelfSignedServerCert);
             return this;
         }
 
-        public Builder annotations(@Nullable Input<List<Object>> annotations) {
+        public Builder annotations(@Nullable Output<List<Object>> annotations) {
             this.annotations = annotations;
             return this;
         }
 
         public Builder annotations(@Nullable List<Object> annotations) {
-            this.annotations = Input.ofNullable(annotations);
+            this.annotations = Output.ofNullable(annotations);
             return this;
         }
 
-        public Builder authenticationType(Input<Either<String,PrestoAuthenticationType>> authenticationType) {
+        public Builder authenticationType(Output<Either<String,PrestoAuthenticationType>> authenticationType) {
             this.authenticationType = Objects.requireNonNull(authenticationType);
             return this;
         }
 
         public Builder authenticationType(Either<String,PrestoAuthenticationType> authenticationType) {
-            this.authenticationType = Input.of(Objects.requireNonNull(authenticationType));
+            this.authenticationType = Output.of(Objects.requireNonNull(authenticationType));
             return this;
         }
 
-        public Builder catalog(Input<Object> catalog) {
+        public Builder catalog(Output<Object> catalog) {
             this.catalog = Objects.requireNonNull(catalog);
             return this;
         }
 
         public Builder catalog(Object catalog) {
-            this.catalog = Input.of(Objects.requireNonNull(catalog));
+            this.catalog = Output.of(Objects.requireNonNull(catalog));
             return this;
         }
 
-        public Builder connectVia(@Nullable Input<IntegrationRuntimeReferenceArgs> connectVia) {
+        public Builder connectVia(@Nullable Output<IntegrationRuntimeReferenceArgs> connectVia) {
             this.connectVia = connectVia;
             return this;
         }
 
         public Builder connectVia(@Nullable IntegrationRuntimeReferenceArgs connectVia) {
-            this.connectVia = Input.ofNullable(connectVia);
+            this.connectVia = Output.ofNullable(connectVia);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder enableSsl(@Nullable Input<Object> enableSsl) {
+        public Builder enableSsl(@Nullable Output<Object> enableSsl) {
             this.enableSsl = enableSsl;
             return this;
         }
 
         public Builder enableSsl(@Nullable Object enableSsl) {
-            this.enableSsl = Input.ofNullable(enableSsl);
+            this.enableSsl = Output.ofNullable(enableSsl);
             return this;
         }
 
-        public Builder encryptedCredential(@Nullable Input<Object> encryptedCredential) {
+        public Builder encryptedCredential(@Nullable Output<Object> encryptedCredential) {
             this.encryptedCredential = encryptedCredential;
             return this;
         }
 
         public Builder encryptedCredential(@Nullable Object encryptedCredential) {
-            this.encryptedCredential = Input.ofNullable(encryptedCredential);
+            this.encryptedCredential = Output.ofNullable(encryptedCredential);
             return this;
         }
 
-        public Builder host(Input<Object> host) {
+        public Builder host(Output<Object> host) {
             this.host = Objects.requireNonNull(host);
             return this;
         }
 
         public Builder host(Object host) {
-            this.host = Input.of(Objects.requireNonNull(host));
+            this.host = Output.of(Objects.requireNonNull(host));
             return this;
         }
 
-        public Builder parameters(@Nullable Input<Map<String,ParameterSpecificationArgs>> parameters) {
+        public Builder parameters(@Nullable Output<Map<String,ParameterSpecificationArgs>> parameters) {
             this.parameters = parameters;
             return this;
         }
 
         public Builder parameters(@Nullable Map<String,ParameterSpecificationArgs> parameters) {
-            this.parameters = Input.ofNullable(parameters);
+            this.parameters = Output.ofNullable(parameters);
             return this;
         }
 
-        public Builder password(@Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password) {
+        public Builder password(@Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password) {
             this.password = password;
             return this;
         }
 
         public Builder password(@Nullable Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs> password) {
-            this.password = Input.ofNullable(password);
+            this.password = Output.ofNullable(password);
             return this;
         }
 
-        public Builder port(@Nullable Input<Object> port) {
+        public Builder port(@Nullable Output<Object> port) {
             this.port = port;
             return this;
         }
 
         public Builder port(@Nullable Object port) {
-            this.port = Input.ofNullable(port);
+            this.port = Output.ofNullable(port);
             return this;
         }
 
-        public Builder serverVersion(Input<Object> serverVersion) {
+        public Builder serverVersion(Output<Object> serverVersion) {
             this.serverVersion = Objects.requireNonNull(serverVersion);
             return this;
         }
 
         public Builder serverVersion(Object serverVersion) {
-            this.serverVersion = Input.of(Objects.requireNonNull(serverVersion));
+            this.serverVersion = Output.of(Objects.requireNonNull(serverVersion));
             return this;
         }
 
-        public Builder timeZoneID(@Nullable Input<Object> timeZoneID) {
+        public Builder timeZoneID(@Nullable Output<Object> timeZoneID) {
             this.timeZoneID = timeZoneID;
             return this;
         }
 
         public Builder timeZoneID(@Nullable Object timeZoneID) {
-            this.timeZoneID = Input.ofNullable(timeZoneID);
+            this.timeZoneID = Output.ofNullable(timeZoneID);
             return this;
         }
 
-        public Builder trustedCertPath(@Nullable Input<Object> trustedCertPath) {
+        public Builder trustedCertPath(@Nullable Output<Object> trustedCertPath) {
             this.trustedCertPath = trustedCertPath;
             return this;
         }
 
         public Builder trustedCertPath(@Nullable Object trustedCertPath) {
-            this.trustedCertPath = Input.ofNullable(trustedCertPath);
+            this.trustedCertPath = Output.ofNullable(trustedCertPath);
             return this;
         }
 
-        public Builder type(Input<String> type) {
+        public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(String type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
 
-        public Builder useSystemTrustStore(@Nullable Input<Object> useSystemTrustStore) {
+        public Builder useSystemTrustStore(@Nullable Output<Object> useSystemTrustStore) {
             this.useSystemTrustStore = useSystemTrustStore;
             return this;
         }
 
         public Builder useSystemTrustStore(@Nullable Object useSystemTrustStore) {
-            this.useSystemTrustStore = Input.ofNullable(useSystemTrustStore);
+            this.useSystemTrustStore = Output.ofNullable(useSystemTrustStore);
             return this;
         }
 
-        public Builder username(@Nullable Input<Object> username) {
+        public Builder username(@Nullable Output<Object> username) {
             this.username = username;
             return this;
         }
 
         public Builder username(@Nullable Object username) {
-            this.username = Input.ofNullable(username);
+            this.username = Output.ofNullable(username);
             return this;
         }
         public PrestoLinkedServiceArgs build() {

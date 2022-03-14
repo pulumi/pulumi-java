@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.automation.inputs;
 
 import io.pulumi.azurenative.automation.inputs.TagSettingsPropertiesArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -25,10 +25,10 @@ public final class AzureQueryPropertiesArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="locations")
-      private final @Nullable Input<List<String>> locations;
+      private final @Nullable Output<List<String>> locations;
 
-    public Input<List<String>> getLocations() {
-        return this.locations == null ? Input.empty() : this.locations;
+    public Output<List<String>> getLocations() {
+        return this.locations == null ? Output.empty() : this.locations;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class AzureQueryPropertiesArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="scope")
-      private final @Nullable Input<List<String>> scope;
+      private final @Nullable Output<List<String>> scope;
 
-    public Input<List<String>> getScope() {
-        return this.scope == null ? Input.empty() : this.scope;
+    public Output<List<String>> getScope() {
+        return this.scope == null ? Output.empty() : this.scope;
     }
 
     /**
@@ -47,25 +47,25 @@ public final class AzureQueryPropertiesArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="tagSettings")
-      private final @Nullable Input<TagSettingsPropertiesArgs> tagSettings;
+      private final @Nullable Output<TagSettingsPropertiesArgs> tagSettings;
 
-    public Input<TagSettingsPropertiesArgs> getTagSettings() {
-        return this.tagSettings == null ? Input.empty() : this.tagSettings;
+    public Output<TagSettingsPropertiesArgs> getTagSettings() {
+        return this.tagSettings == null ? Output.empty() : this.tagSettings;
     }
 
     public AzureQueryPropertiesArgs(
-        @Nullable Input<List<String>> locations,
-        @Nullable Input<List<String>> scope,
-        @Nullable Input<TagSettingsPropertiesArgs> tagSettings) {
+        @Nullable Output<List<String>> locations,
+        @Nullable Output<List<String>> scope,
+        @Nullable Output<TagSettingsPropertiesArgs> tagSettings) {
         this.locations = locations;
         this.scope = scope;
         this.tagSettings = tagSettings;
     }
 
     private AzureQueryPropertiesArgs() {
-        this.locations = Input.empty();
-        this.scope = Input.empty();
-        this.tagSettings = Input.empty();
+        this.locations = Output.empty();
+        this.scope = Output.empty();
+        this.tagSettings = Output.empty();
     }
 
     public static Builder builder() {
@@ -77,9 +77,9 @@ public final class AzureQueryPropertiesArgs extends io.pulumi.resources.Resource
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> locations;
-        private @Nullable Input<List<String>> scope;
-        private @Nullable Input<TagSettingsPropertiesArgs> tagSettings;
+        private @Nullable Output<List<String>> locations;
+        private @Nullable Output<List<String>> scope;
+        private @Nullable Output<TagSettingsPropertiesArgs> tagSettings;
 
         public Builder() {
     	      // Empty
@@ -92,33 +92,33 @@ public final class AzureQueryPropertiesArgs extends io.pulumi.resources.Resource
     	      this.tagSettings = defaults.tagSettings;
         }
 
-        public Builder locations(@Nullable Input<List<String>> locations) {
+        public Builder locations(@Nullable Output<List<String>> locations) {
             this.locations = locations;
             return this;
         }
 
         public Builder locations(@Nullable List<String> locations) {
-            this.locations = Input.ofNullable(locations);
+            this.locations = Output.ofNullable(locations);
             return this;
         }
 
-        public Builder scope(@Nullable Input<List<String>> scope) {
+        public Builder scope(@Nullable Output<List<String>> scope) {
             this.scope = scope;
             return this;
         }
 
         public Builder scope(@Nullable List<String> scope) {
-            this.scope = Input.ofNullable(scope);
+            this.scope = Output.ofNullable(scope);
             return this;
         }
 
-        public Builder tagSettings(@Nullable Input<TagSettingsPropertiesArgs> tagSettings) {
+        public Builder tagSettings(@Nullable Output<TagSettingsPropertiesArgs> tagSettings) {
             this.tagSettings = tagSettings;
             return this;
         }
 
         public Builder tagSettings(@Nullable TagSettingsPropertiesArgs tagSettings) {
-            this.tagSettings = Input.ofNullable(tagSettings);
+            this.tagSettings = Output.ofNullable(tagSettings);
             return this;
         }
         public AzureQueryPropertiesArgs build() {

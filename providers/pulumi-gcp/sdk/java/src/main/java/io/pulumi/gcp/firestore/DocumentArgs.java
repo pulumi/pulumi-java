@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.firestore;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,9 +19,9 @@ public final class DocumentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="collection", required=true)
-      private final Input<String> collection;
+      private final Output<String> collection;
 
-    public Input<String> getCollection() {
+    public Output<String> getCollection() {
         return this.collection;
     }
 
@@ -30,10 +30,10 @@ public final class DocumentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="database")
-      private final @Nullable Input<String> database;
+      private final @Nullable Output<String> database;
 
-    public Input<String> getDatabase() {
-        return this.database == null ? Input.empty() : this.database;
+    public Output<String> getDatabase() {
+        return this.database == null ? Output.empty() : this.database;
     }
 
     /**
@@ -41,9 +41,9 @@ public final class DocumentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="documentId", required=true)
-      private final Input<String> documentId;
+      private final Output<String> documentId;
 
-    public Input<String> getDocumentId() {
+    public Output<String> getDocumentId() {
         return this.documentId;
     }
 
@@ -52,9 +52,9 @@ public final class DocumentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="fields", required=true)
-      private final Input<String> fields;
+      private final Output<String> fields;
 
-    public Input<String> getFields() {
+    public Output<String> getFields() {
         return this.fields;
     }
 
@@ -64,18 +64,18 @@ public final class DocumentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     public DocumentArgs(
-        Input<String> collection,
-        @Nullable Input<String> database,
-        Input<String> documentId,
-        Input<String> fields,
-        @Nullable Input<String> project) {
+        Output<String> collection,
+        @Nullable Output<String> database,
+        Output<String> documentId,
+        Output<String> fields,
+        @Nullable Output<String> project) {
         this.collection = Objects.requireNonNull(collection, "expected parameter 'collection' to be non-null");
         this.database = database;
         this.documentId = Objects.requireNonNull(documentId, "expected parameter 'documentId' to be non-null");
@@ -84,11 +84,11 @@ public final class DocumentArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DocumentArgs() {
-        this.collection = Input.empty();
-        this.database = Input.empty();
-        this.documentId = Input.empty();
-        this.fields = Input.empty();
-        this.project = Input.empty();
+        this.collection = Output.empty();
+        this.database = Output.empty();
+        this.documentId = Output.empty();
+        this.fields = Output.empty();
+        this.project = Output.empty();
     }
 
     public static Builder builder() {
@@ -100,11 +100,11 @@ public final class DocumentArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> collection;
-        private @Nullable Input<String> database;
-        private Input<String> documentId;
-        private Input<String> fields;
-        private @Nullable Input<String> project;
+        private Output<String> collection;
+        private @Nullable Output<String> database;
+        private Output<String> documentId;
+        private Output<String> fields;
+        private @Nullable Output<String> project;
 
         public Builder() {
     	      // Empty
@@ -119,53 +119,53 @@ public final class DocumentArgs extends io.pulumi.resources.ResourceArgs {
     	      this.project = defaults.project;
         }
 
-        public Builder collection(Input<String> collection) {
+        public Builder collection(Output<String> collection) {
             this.collection = Objects.requireNonNull(collection);
             return this;
         }
 
         public Builder collection(String collection) {
-            this.collection = Input.of(Objects.requireNonNull(collection));
+            this.collection = Output.of(Objects.requireNonNull(collection));
             return this;
         }
 
-        public Builder database(@Nullable Input<String> database) {
+        public Builder database(@Nullable Output<String> database) {
             this.database = database;
             return this;
         }
 
         public Builder database(@Nullable String database) {
-            this.database = Input.ofNullable(database);
+            this.database = Output.ofNullable(database);
             return this;
         }
 
-        public Builder documentId(Input<String> documentId) {
+        public Builder documentId(Output<String> documentId) {
             this.documentId = Objects.requireNonNull(documentId);
             return this;
         }
 
         public Builder documentId(String documentId) {
-            this.documentId = Input.of(Objects.requireNonNull(documentId));
+            this.documentId = Output.of(Objects.requireNonNull(documentId));
             return this;
         }
 
-        public Builder fields(Input<String> fields) {
+        public Builder fields(Output<String> fields) {
             this.fields = Objects.requireNonNull(fields);
             return this;
         }
 
         public Builder fields(String fields) {
-            this.fields = Input.of(Objects.requireNonNull(fields));
+            this.fields = Output.of(Objects.requireNonNull(fields));
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
         public DocumentArgs build() {

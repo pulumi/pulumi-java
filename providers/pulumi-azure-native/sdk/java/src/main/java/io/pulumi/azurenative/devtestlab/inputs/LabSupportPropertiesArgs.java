@@ -5,7 +5,7 @@ package io.pulumi.azurenative.devtestlab.inputs;
 
 import io.pulumi.azurenative.devtestlab.enums.EnableStatus;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -25,10 +25,10 @@ public final class LabSupportPropertiesArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="enabled")
-      private final @Nullable Input<Either<String,EnableStatus>> enabled;
+      private final @Nullable Output<Either<String,EnableStatus>> enabled;
 
-    public Input<Either<String,EnableStatus>> getEnabled() {
-        return this.enabled == null ? Input.empty() : this.enabled;
+    public Output<Either<String,EnableStatus>> getEnabled() {
+        return this.enabled == null ? Output.empty() : this.enabled;
     }
 
     /**
@@ -36,22 +36,22 @@ public final class LabSupportPropertiesArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="markdown")
-      private final @Nullable Input<String> markdown;
+      private final @Nullable Output<String> markdown;
 
-    public Input<String> getMarkdown() {
-        return this.markdown == null ? Input.empty() : this.markdown;
+    public Output<String> getMarkdown() {
+        return this.markdown == null ? Output.empty() : this.markdown;
     }
 
     public LabSupportPropertiesArgs(
-        @Nullable Input<Either<String,EnableStatus>> enabled,
-        @Nullable Input<String> markdown) {
+        @Nullable Output<Either<String,EnableStatus>> enabled,
+        @Nullable Output<String> markdown) {
         this.enabled = enabled;
         this.markdown = markdown;
     }
 
     private LabSupportPropertiesArgs() {
-        this.enabled = Input.empty();
-        this.markdown = Input.empty();
+        this.enabled = Output.empty();
+        this.markdown = Output.empty();
     }
 
     public static Builder builder() {
@@ -63,8 +63,8 @@ public final class LabSupportPropertiesArgs extends io.pulumi.resources.Resource
     }
 
     public static final class Builder {
-        private @Nullable Input<Either<String,EnableStatus>> enabled;
-        private @Nullable Input<String> markdown;
+        private @Nullable Output<Either<String,EnableStatus>> enabled;
+        private @Nullable Output<String> markdown;
 
         public Builder() {
     	      // Empty
@@ -76,23 +76,23 @@ public final class LabSupportPropertiesArgs extends io.pulumi.resources.Resource
     	      this.markdown = defaults.markdown;
         }
 
-        public Builder enabled(@Nullable Input<Either<String,EnableStatus>> enabled) {
+        public Builder enabled(@Nullable Output<Either<String,EnableStatus>> enabled) {
             this.enabled = enabled;
             return this;
         }
 
         public Builder enabled(@Nullable Either<String,EnableStatus> enabled) {
-            this.enabled = Input.ofNullable(enabled);
+            this.enabled = Output.ofNullable(enabled);
             return this;
         }
 
-        public Builder markdown(@Nullable Input<String> markdown) {
+        public Builder markdown(@Nullable Output<String> markdown) {
             this.markdown = markdown;
             return this;
         }
 
         public Builder markdown(@Nullable String markdown) {
-            this.markdown = Input.ofNullable(markdown);
+            this.markdown = Output.ofNullable(markdown);
             return this;
         }
         public LabSupportPropertiesArgs build() {

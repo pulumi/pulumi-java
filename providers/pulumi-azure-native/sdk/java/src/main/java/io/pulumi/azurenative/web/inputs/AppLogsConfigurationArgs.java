@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.web.inputs;
 
 import io.pulumi.azurenative.web.inputs.LogAnalyticsConfigurationArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -16,29 +16,29 @@ public final class AppLogsConfigurationArgs extends io.pulumi.resources.Resource
     public static final AppLogsConfigurationArgs Empty = new AppLogsConfigurationArgs();
 
     @InputImport(name="destination")
-      private final @Nullable Input<String> destination;
+      private final @Nullable Output<String> destination;
 
-    public Input<String> getDestination() {
-        return this.destination == null ? Input.empty() : this.destination;
+    public Output<String> getDestination() {
+        return this.destination == null ? Output.empty() : this.destination;
     }
 
     @InputImport(name="logAnalyticsConfiguration")
-      private final @Nullable Input<LogAnalyticsConfigurationArgs> logAnalyticsConfiguration;
+      private final @Nullable Output<LogAnalyticsConfigurationArgs> logAnalyticsConfiguration;
 
-    public Input<LogAnalyticsConfigurationArgs> getLogAnalyticsConfiguration() {
-        return this.logAnalyticsConfiguration == null ? Input.empty() : this.logAnalyticsConfiguration;
+    public Output<LogAnalyticsConfigurationArgs> getLogAnalyticsConfiguration() {
+        return this.logAnalyticsConfiguration == null ? Output.empty() : this.logAnalyticsConfiguration;
     }
 
     public AppLogsConfigurationArgs(
-        @Nullable Input<String> destination,
-        @Nullable Input<LogAnalyticsConfigurationArgs> logAnalyticsConfiguration) {
+        @Nullable Output<String> destination,
+        @Nullable Output<LogAnalyticsConfigurationArgs> logAnalyticsConfiguration) {
         this.destination = destination;
         this.logAnalyticsConfiguration = logAnalyticsConfiguration;
     }
 
     private AppLogsConfigurationArgs() {
-        this.destination = Input.empty();
-        this.logAnalyticsConfiguration = Input.empty();
+        this.destination = Output.empty();
+        this.logAnalyticsConfiguration = Output.empty();
     }
 
     public static Builder builder() {
@@ -50,8 +50,8 @@ public final class AppLogsConfigurationArgs extends io.pulumi.resources.Resource
     }
 
     public static final class Builder {
-        private @Nullable Input<String> destination;
-        private @Nullable Input<LogAnalyticsConfigurationArgs> logAnalyticsConfiguration;
+        private @Nullable Output<String> destination;
+        private @Nullable Output<LogAnalyticsConfigurationArgs> logAnalyticsConfiguration;
 
         public Builder() {
     	      // Empty
@@ -63,23 +63,23 @@ public final class AppLogsConfigurationArgs extends io.pulumi.resources.Resource
     	      this.logAnalyticsConfiguration = defaults.logAnalyticsConfiguration;
         }
 
-        public Builder destination(@Nullable Input<String> destination) {
+        public Builder destination(@Nullable Output<String> destination) {
             this.destination = destination;
             return this;
         }
 
         public Builder destination(@Nullable String destination) {
-            this.destination = Input.ofNullable(destination);
+            this.destination = Output.ofNullable(destination);
             return this;
         }
 
-        public Builder logAnalyticsConfiguration(@Nullable Input<LogAnalyticsConfigurationArgs> logAnalyticsConfiguration) {
+        public Builder logAnalyticsConfiguration(@Nullable Output<LogAnalyticsConfigurationArgs> logAnalyticsConfiguration) {
             this.logAnalyticsConfiguration = logAnalyticsConfiguration;
             return this;
         }
 
         public Builder logAnalyticsConfiguration(@Nullable LogAnalyticsConfigurationArgs logAnalyticsConfiguration) {
-            this.logAnalyticsConfiguration = Input.ofNullable(logAnalyticsConfiguration);
+            this.logAnalyticsConfiguration = Output.ofNullable(logAnalyticsConfiguration);
             return this;
         }
         public AppLogsConfigurationArgs build() {

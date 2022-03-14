@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.azurenative.network.inputs.SubResourceArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -24,10 +24,10 @@ public final class FirewallPolicyLogAnalyticsWorkspaceArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="region")
-      private final @Nullable Input<String> region;
+      private final @Nullable Output<String> region;
 
-    public Input<String> getRegion() {
-        return this.region == null ? Input.empty() : this.region;
+    public Output<String> getRegion() {
+        return this.region == null ? Output.empty() : this.region;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class FirewallPolicyLogAnalyticsWorkspaceArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="workspaceId")
-      private final @Nullable Input<SubResourceArgs> workspaceId;
+      private final @Nullable Output<SubResourceArgs> workspaceId;
 
-    public Input<SubResourceArgs> getWorkspaceId() {
-        return this.workspaceId == null ? Input.empty() : this.workspaceId;
+    public Output<SubResourceArgs> getWorkspaceId() {
+        return this.workspaceId == null ? Output.empty() : this.workspaceId;
     }
 
     public FirewallPolicyLogAnalyticsWorkspaceArgs(
-        @Nullable Input<String> region,
-        @Nullable Input<SubResourceArgs> workspaceId) {
+        @Nullable Output<String> region,
+        @Nullable Output<SubResourceArgs> workspaceId) {
         this.region = region;
         this.workspaceId = workspaceId;
     }
 
     private FirewallPolicyLogAnalyticsWorkspaceArgs() {
-        this.region = Input.empty();
-        this.workspaceId = Input.empty();
+        this.region = Output.empty();
+        this.workspaceId = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class FirewallPolicyLogAnalyticsWorkspaceArgs extends io.pulumi.res
     }
 
     public static final class Builder {
-        private @Nullable Input<String> region;
-        private @Nullable Input<SubResourceArgs> workspaceId;
+        private @Nullable Output<String> region;
+        private @Nullable Output<SubResourceArgs> workspaceId;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class FirewallPolicyLogAnalyticsWorkspaceArgs extends io.pulumi.res
     	      this.workspaceId = defaults.workspaceId;
         }
 
-        public Builder region(@Nullable Input<String> region) {
+        public Builder region(@Nullable Output<String> region) {
             this.region = region;
             return this;
         }
 
         public Builder region(@Nullable String region) {
-            this.region = Input.ofNullable(region);
+            this.region = Output.ofNullable(region);
             return this;
         }
 
-        public Builder workspaceId(@Nullable Input<SubResourceArgs> workspaceId) {
+        public Builder workspaceId(@Nullable Output<SubResourceArgs> workspaceId) {
             this.workspaceId = workspaceId;
             return this;
         }
 
         public Builder workspaceId(@Nullable SubResourceArgs workspaceId) {
-            this.workspaceId = Input.ofNullable(workspaceId);
+            this.workspaceId = Output.ofNullable(workspaceId);
             return this;
         }
         public FirewallPolicyLogAnalyticsWorkspaceArgs build() {

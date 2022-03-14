@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.automation;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -20,9 +20,9 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="automationAccountName", required=true)
-      private final Input<String> automationAccountName;
+      private final Output<String> automationAccountName;
 
-    public Input<String> getAutomationAccountName() {
+    public Output<String> getAutomationAccountName() {
         return this.automationAccountName;
     }
 
@@ -31,9 +31,9 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="base64Value", required=true)
-      private final Input<String> base64Value;
+      private final Output<String> base64Value;
 
-    public Input<String> getBase64Value() {
+    public Output<String> getBase64Value() {
         return this.base64Value;
     }
 
@@ -42,10 +42,10 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="certificateName")
-      private final @Nullable Input<String> certificateName;
+      private final @Nullable Output<String> certificateName;
 
-    public Input<String> getCertificateName() {
-        return this.certificateName == null ? Input.empty() : this.certificateName;
+    public Output<String> getCertificateName() {
+        return this.certificateName == null ? Output.empty() : this.certificateName;
     }
 
     /**
@@ -53,10 +53,10 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -64,10 +64,10 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="isExportable")
-      private final @Nullable Input<Boolean> isExportable;
+      private final @Nullable Output<Boolean> isExportable;
 
-    public Input<Boolean> getIsExportable() {
-        return this.isExportable == null ? Input.empty() : this.isExportable;
+    public Output<Boolean> getIsExportable() {
+        return this.isExportable == null ? Output.empty() : this.isExportable;
     }
 
     /**
@@ -75,9 +75,9 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name", required=true)
-      private final Input<String> name;
+      private final Output<String> name;
 
-    public Input<String> getName() {
+    public Output<String> getName() {
         return this.name;
     }
 
@@ -86,9 +86,9 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -97,21 +97,21 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="thumbprint")
-      private final @Nullable Input<String> thumbprint;
+      private final @Nullable Output<String> thumbprint;
 
-    public Input<String> getThumbprint() {
-        return this.thumbprint == null ? Input.empty() : this.thumbprint;
+    public Output<String> getThumbprint() {
+        return this.thumbprint == null ? Output.empty() : this.thumbprint;
     }
 
     public CertificateArgs(
-        Input<String> automationAccountName,
-        Input<String> base64Value,
-        @Nullable Input<String> certificateName,
-        @Nullable Input<String> description,
-        @Nullable Input<Boolean> isExportable,
-        Input<String> name,
-        Input<String> resourceGroupName,
-        @Nullable Input<String> thumbprint) {
+        Output<String> automationAccountName,
+        Output<String> base64Value,
+        @Nullable Output<String> certificateName,
+        @Nullable Output<String> description,
+        @Nullable Output<Boolean> isExportable,
+        Output<String> name,
+        Output<String> resourceGroupName,
+        @Nullable Output<String> thumbprint) {
         this.automationAccountName = Objects.requireNonNull(automationAccountName, "expected parameter 'automationAccountName' to be non-null");
         this.base64Value = Objects.requireNonNull(base64Value, "expected parameter 'base64Value' to be non-null");
         this.certificateName = certificateName;
@@ -123,14 +123,14 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private CertificateArgs() {
-        this.automationAccountName = Input.empty();
-        this.base64Value = Input.empty();
-        this.certificateName = Input.empty();
-        this.description = Input.empty();
-        this.isExportable = Input.empty();
-        this.name = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.thumbprint = Input.empty();
+        this.automationAccountName = Output.empty();
+        this.base64Value = Output.empty();
+        this.certificateName = Output.empty();
+        this.description = Output.empty();
+        this.isExportable = Output.empty();
+        this.name = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.thumbprint = Output.empty();
     }
 
     public static Builder builder() {
@@ -142,14 +142,14 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> automationAccountName;
-        private Input<String> base64Value;
-        private @Nullable Input<String> certificateName;
-        private @Nullable Input<String> description;
-        private @Nullable Input<Boolean> isExportable;
-        private Input<String> name;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<String> thumbprint;
+        private Output<String> automationAccountName;
+        private Output<String> base64Value;
+        private @Nullable Output<String> certificateName;
+        private @Nullable Output<String> description;
+        private @Nullable Output<Boolean> isExportable;
+        private Output<String> name;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<String> thumbprint;
 
         public Builder() {
     	      // Empty
@@ -167,83 +167,83 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
     	      this.thumbprint = defaults.thumbprint;
         }
 
-        public Builder automationAccountName(Input<String> automationAccountName) {
+        public Builder automationAccountName(Output<String> automationAccountName) {
             this.automationAccountName = Objects.requireNonNull(automationAccountName);
             return this;
         }
 
         public Builder automationAccountName(String automationAccountName) {
-            this.automationAccountName = Input.of(Objects.requireNonNull(automationAccountName));
+            this.automationAccountName = Output.of(Objects.requireNonNull(automationAccountName));
             return this;
         }
 
-        public Builder base64Value(Input<String> base64Value) {
+        public Builder base64Value(Output<String> base64Value) {
             this.base64Value = Objects.requireNonNull(base64Value);
             return this;
         }
 
         public Builder base64Value(String base64Value) {
-            this.base64Value = Input.of(Objects.requireNonNull(base64Value));
+            this.base64Value = Output.of(Objects.requireNonNull(base64Value));
             return this;
         }
 
-        public Builder certificateName(@Nullable Input<String> certificateName) {
+        public Builder certificateName(@Nullable Output<String> certificateName) {
             this.certificateName = certificateName;
             return this;
         }
 
         public Builder certificateName(@Nullable String certificateName) {
-            this.certificateName = Input.ofNullable(certificateName);
+            this.certificateName = Output.ofNullable(certificateName);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder isExportable(@Nullable Input<Boolean> isExportable) {
+        public Builder isExportable(@Nullable Output<Boolean> isExportable) {
             this.isExportable = isExportable;
             return this;
         }
 
         public Builder isExportable(@Nullable Boolean isExportable) {
-            this.isExportable = Input.ofNullable(isExportable);
+            this.isExportable = Output.ofNullable(isExportable);
             return this;
         }
 
-        public Builder name(Input<String> name) {
+        public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(String name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder thumbprint(@Nullable Input<String> thumbprint) {
+        public Builder thumbprint(@Nullable Output<String> thumbprint) {
             this.thumbprint = thumbprint;
             return this;
         }
 
         public Builder thumbprint(@Nullable String thumbprint) {
-            this.thumbprint = Input.ofNullable(thumbprint);
+            this.thumbprint = Output.ofNullable(thumbprint);
             return this;
         }
         public CertificateArgs build() {

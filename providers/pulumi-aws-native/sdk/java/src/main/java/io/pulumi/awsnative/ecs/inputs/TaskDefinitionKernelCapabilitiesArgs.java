@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.ecs.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -16,29 +16,29 @@ public final class TaskDefinitionKernelCapabilitiesArgs extends io.pulumi.resour
     public static final TaskDefinitionKernelCapabilitiesArgs Empty = new TaskDefinitionKernelCapabilitiesArgs();
 
     @InputImport(name="add")
-      private final @Nullable Input<List<String>> add;
+      private final @Nullable Output<List<String>> add;
 
-    public Input<List<String>> getAdd() {
-        return this.add == null ? Input.empty() : this.add;
+    public Output<List<String>> getAdd() {
+        return this.add == null ? Output.empty() : this.add;
     }
 
     @InputImport(name="drop")
-      private final @Nullable Input<List<String>> drop;
+      private final @Nullable Output<List<String>> drop;
 
-    public Input<List<String>> getDrop() {
-        return this.drop == null ? Input.empty() : this.drop;
+    public Output<List<String>> getDrop() {
+        return this.drop == null ? Output.empty() : this.drop;
     }
 
     public TaskDefinitionKernelCapabilitiesArgs(
-        @Nullable Input<List<String>> add,
-        @Nullable Input<List<String>> drop) {
+        @Nullable Output<List<String>> add,
+        @Nullable Output<List<String>> drop) {
         this.add = add;
         this.drop = drop;
     }
 
     private TaskDefinitionKernelCapabilitiesArgs() {
-        this.add = Input.empty();
-        this.drop = Input.empty();
+        this.add = Output.empty();
+        this.drop = Output.empty();
     }
 
     public static Builder builder() {
@@ -50,8 +50,8 @@ public final class TaskDefinitionKernelCapabilitiesArgs extends io.pulumi.resour
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> add;
-        private @Nullable Input<List<String>> drop;
+        private @Nullable Output<List<String>> add;
+        private @Nullable Output<List<String>> drop;
 
         public Builder() {
     	      // Empty
@@ -63,23 +63,23 @@ public final class TaskDefinitionKernelCapabilitiesArgs extends io.pulumi.resour
     	      this.drop = defaults.drop;
         }
 
-        public Builder add(@Nullable Input<List<String>> add) {
+        public Builder add(@Nullable Output<List<String>> add) {
             this.add = add;
             return this;
         }
 
         public Builder add(@Nullable List<String> add) {
-            this.add = Input.ofNullable(add);
+            this.add = Output.ofNullable(add);
             return this;
         }
 
-        public Builder drop(@Nullable Input<List<String>> drop) {
+        public Builder drop(@Nullable Output<List<String>> drop) {
             this.drop = drop;
             return this;
         }
 
         public Builder drop(@Nullable List<String> drop) {
-            this.drop = Input.ofNullable(drop);
+            this.drop = Output.ofNullable(drop);
             return this;
         }
         public TaskDefinitionKernelCapabilitiesArgs build() {

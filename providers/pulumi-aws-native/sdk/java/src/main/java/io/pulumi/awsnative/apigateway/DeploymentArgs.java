@@ -5,7 +5,7 @@ package io.pulumi.awsnative.apigateway;
 
 import io.pulumi.awsnative.apigateway.inputs.DeploymentCanarySettingsArgs;
 import io.pulumi.awsnative.apigateway.inputs.DeploymentStageDescriptionArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -21,10 +21,10 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="deploymentCanarySettings")
-      private final @Nullable Input<DeploymentCanarySettingsArgs> deploymentCanarySettings;
+      private final @Nullable Output<DeploymentCanarySettingsArgs> deploymentCanarySettings;
 
-    public Input<DeploymentCanarySettingsArgs> getDeploymentCanarySettings() {
-        return this.deploymentCanarySettings == null ? Input.empty() : this.deploymentCanarySettings;
+    public Output<DeploymentCanarySettingsArgs> getDeploymentCanarySettings() {
+        return this.deploymentCanarySettings == null ? Output.empty() : this.deploymentCanarySettings;
     }
 
     /**
@@ -32,10 +32,10 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -43,9 +43,9 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="restApiId", required=true)
-      private final Input<String> restApiId;
+      private final Output<String> restApiId;
 
-    public Input<String> getRestApiId() {
+    public Output<String> getRestApiId() {
         return this.restApiId;
     }
 
@@ -54,10 +54,10 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="stageDescription")
-      private final @Nullable Input<DeploymentStageDescriptionArgs> stageDescription;
+      private final @Nullable Output<DeploymentStageDescriptionArgs> stageDescription;
 
-    public Input<DeploymentStageDescriptionArgs> getStageDescription() {
-        return this.stageDescription == null ? Input.empty() : this.stageDescription;
+    public Output<DeploymentStageDescriptionArgs> getStageDescription() {
+        return this.stageDescription == null ? Output.empty() : this.stageDescription;
     }
 
     /**
@@ -65,18 +65,18 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="stageName")
-      private final @Nullable Input<String> stageName;
+      private final @Nullable Output<String> stageName;
 
-    public Input<String> getStageName() {
-        return this.stageName == null ? Input.empty() : this.stageName;
+    public Output<String> getStageName() {
+        return this.stageName == null ? Output.empty() : this.stageName;
     }
 
     public DeploymentArgs(
-        @Nullable Input<DeploymentCanarySettingsArgs> deploymentCanarySettings,
-        @Nullable Input<String> description,
-        Input<String> restApiId,
-        @Nullable Input<DeploymentStageDescriptionArgs> stageDescription,
-        @Nullable Input<String> stageName) {
+        @Nullable Output<DeploymentCanarySettingsArgs> deploymentCanarySettings,
+        @Nullable Output<String> description,
+        Output<String> restApiId,
+        @Nullable Output<DeploymentStageDescriptionArgs> stageDescription,
+        @Nullable Output<String> stageName) {
         this.deploymentCanarySettings = deploymentCanarySettings;
         this.description = description;
         this.restApiId = Objects.requireNonNull(restApiId, "expected parameter 'restApiId' to be non-null");
@@ -85,11 +85,11 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DeploymentArgs() {
-        this.deploymentCanarySettings = Input.empty();
-        this.description = Input.empty();
-        this.restApiId = Input.empty();
-        this.stageDescription = Input.empty();
-        this.stageName = Input.empty();
+        this.deploymentCanarySettings = Output.empty();
+        this.description = Output.empty();
+        this.restApiId = Output.empty();
+        this.stageDescription = Output.empty();
+        this.stageName = Output.empty();
     }
 
     public static Builder builder() {
@@ -101,11 +101,11 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<DeploymentCanarySettingsArgs> deploymentCanarySettings;
-        private @Nullable Input<String> description;
-        private Input<String> restApiId;
-        private @Nullable Input<DeploymentStageDescriptionArgs> stageDescription;
-        private @Nullable Input<String> stageName;
+        private @Nullable Output<DeploymentCanarySettingsArgs> deploymentCanarySettings;
+        private @Nullable Output<String> description;
+        private Output<String> restApiId;
+        private @Nullable Output<DeploymentStageDescriptionArgs> stageDescription;
+        private @Nullable Output<String> stageName;
 
         public Builder() {
     	      // Empty
@@ -120,53 +120,53 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
     	      this.stageName = defaults.stageName;
         }
 
-        public Builder deploymentCanarySettings(@Nullable Input<DeploymentCanarySettingsArgs> deploymentCanarySettings) {
+        public Builder deploymentCanarySettings(@Nullable Output<DeploymentCanarySettingsArgs> deploymentCanarySettings) {
             this.deploymentCanarySettings = deploymentCanarySettings;
             return this;
         }
 
         public Builder deploymentCanarySettings(@Nullable DeploymentCanarySettingsArgs deploymentCanarySettings) {
-            this.deploymentCanarySettings = Input.ofNullable(deploymentCanarySettings);
+            this.deploymentCanarySettings = Output.ofNullable(deploymentCanarySettings);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder restApiId(Input<String> restApiId) {
+        public Builder restApiId(Output<String> restApiId) {
             this.restApiId = Objects.requireNonNull(restApiId);
             return this;
         }
 
         public Builder restApiId(String restApiId) {
-            this.restApiId = Input.of(Objects.requireNonNull(restApiId));
+            this.restApiId = Output.of(Objects.requireNonNull(restApiId));
             return this;
         }
 
-        public Builder stageDescription(@Nullable Input<DeploymentStageDescriptionArgs> stageDescription) {
+        public Builder stageDescription(@Nullable Output<DeploymentStageDescriptionArgs> stageDescription) {
             this.stageDescription = stageDescription;
             return this;
         }
 
         public Builder stageDescription(@Nullable DeploymentStageDescriptionArgs stageDescription) {
-            this.stageDescription = Input.ofNullable(stageDescription);
+            this.stageDescription = Output.ofNullable(stageDescription);
             return this;
         }
 
-        public Builder stageName(@Nullable Input<String> stageName) {
+        public Builder stageName(@Nullable Output<String> stageName) {
             this.stageName = stageName;
             return this;
         }
 
         public Builder stageName(@Nullable String stageName) {
-            this.stageName = Input.ofNullable(stageName);
+            this.stageName = Output.ofNullable(stageName);
             return this;
         }
         public DeploymentArgs build() {

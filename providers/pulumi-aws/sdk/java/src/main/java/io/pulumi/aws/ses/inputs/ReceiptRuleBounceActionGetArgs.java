@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.ses.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -20,9 +20,9 @@ public final class ReceiptRuleBounceActionGetArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="message", required=true)
-      private final Input<String> message;
+      private final Output<String> message;
 
-    public Input<String> getMessage() {
+    public Output<String> getMessage() {
         return this.message;
     }
 
@@ -31,9 +31,9 @@ public final class ReceiptRuleBounceActionGetArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="position", required=true)
-      private final Input<Integer> position;
+      private final Output<Integer> position;
 
-    public Input<Integer> getPosition() {
+    public Output<Integer> getPosition() {
         return this.position;
     }
 
@@ -42,9 +42,9 @@ public final class ReceiptRuleBounceActionGetArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="sender", required=true)
-      private final Input<String> sender;
+      private final Output<String> sender;
 
-    public Input<String> getSender() {
+    public Output<String> getSender() {
         return this.sender;
     }
 
@@ -53,9 +53,9 @@ public final class ReceiptRuleBounceActionGetArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="smtpReplyCode", required=true)
-      private final Input<String> smtpReplyCode;
+      private final Output<String> smtpReplyCode;
 
-    public Input<String> getSmtpReplyCode() {
+    public Output<String> getSmtpReplyCode() {
         return this.smtpReplyCode;
     }
 
@@ -64,10 +64,10 @@ public final class ReceiptRuleBounceActionGetArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="statusCode")
-      private final @Nullable Input<String> statusCode;
+      private final @Nullable Output<String> statusCode;
 
-    public Input<String> getStatusCode() {
-        return this.statusCode == null ? Input.empty() : this.statusCode;
+    public Output<String> getStatusCode() {
+        return this.statusCode == null ? Output.empty() : this.statusCode;
     }
 
     /**
@@ -75,19 +75,19 @@ public final class ReceiptRuleBounceActionGetArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="topicArn")
-      private final @Nullable Input<String> topicArn;
+      private final @Nullable Output<String> topicArn;
 
-    public Input<String> getTopicArn() {
-        return this.topicArn == null ? Input.empty() : this.topicArn;
+    public Output<String> getTopicArn() {
+        return this.topicArn == null ? Output.empty() : this.topicArn;
     }
 
     public ReceiptRuleBounceActionGetArgs(
-        Input<String> message,
-        Input<Integer> position,
-        Input<String> sender,
-        Input<String> smtpReplyCode,
-        @Nullable Input<String> statusCode,
-        @Nullable Input<String> topicArn) {
+        Output<String> message,
+        Output<Integer> position,
+        Output<String> sender,
+        Output<String> smtpReplyCode,
+        @Nullable Output<String> statusCode,
+        @Nullable Output<String> topicArn) {
         this.message = Objects.requireNonNull(message, "expected parameter 'message' to be non-null");
         this.position = Objects.requireNonNull(position, "expected parameter 'position' to be non-null");
         this.sender = Objects.requireNonNull(sender, "expected parameter 'sender' to be non-null");
@@ -97,12 +97,12 @@ public final class ReceiptRuleBounceActionGetArgs extends io.pulumi.resources.Re
     }
 
     private ReceiptRuleBounceActionGetArgs() {
-        this.message = Input.empty();
-        this.position = Input.empty();
-        this.sender = Input.empty();
-        this.smtpReplyCode = Input.empty();
-        this.statusCode = Input.empty();
-        this.topicArn = Input.empty();
+        this.message = Output.empty();
+        this.position = Output.empty();
+        this.sender = Output.empty();
+        this.smtpReplyCode = Output.empty();
+        this.statusCode = Output.empty();
+        this.topicArn = Output.empty();
     }
 
     public static Builder builder() {
@@ -114,12 +114,12 @@ public final class ReceiptRuleBounceActionGetArgs extends io.pulumi.resources.Re
     }
 
     public static final class Builder {
-        private Input<String> message;
-        private Input<Integer> position;
-        private Input<String> sender;
-        private Input<String> smtpReplyCode;
-        private @Nullable Input<String> statusCode;
-        private @Nullable Input<String> topicArn;
+        private Output<String> message;
+        private Output<Integer> position;
+        private Output<String> sender;
+        private Output<String> smtpReplyCode;
+        private @Nullable Output<String> statusCode;
+        private @Nullable Output<String> topicArn;
 
         public Builder() {
     	      // Empty
@@ -135,63 +135,63 @@ public final class ReceiptRuleBounceActionGetArgs extends io.pulumi.resources.Re
     	      this.topicArn = defaults.topicArn;
         }
 
-        public Builder message(Input<String> message) {
+        public Builder message(Output<String> message) {
             this.message = Objects.requireNonNull(message);
             return this;
         }
 
         public Builder message(String message) {
-            this.message = Input.of(Objects.requireNonNull(message));
+            this.message = Output.of(Objects.requireNonNull(message));
             return this;
         }
 
-        public Builder position(Input<Integer> position) {
+        public Builder position(Output<Integer> position) {
             this.position = Objects.requireNonNull(position);
             return this;
         }
 
         public Builder position(Integer position) {
-            this.position = Input.of(Objects.requireNonNull(position));
+            this.position = Output.of(Objects.requireNonNull(position));
             return this;
         }
 
-        public Builder sender(Input<String> sender) {
+        public Builder sender(Output<String> sender) {
             this.sender = Objects.requireNonNull(sender);
             return this;
         }
 
         public Builder sender(String sender) {
-            this.sender = Input.of(Objects.requireNonNull(sender));
+            this.sender = Output.of(Objects.requireNonNull(sender));
             return this;
         }
 
-        public Builder smtpReplyCode(Input<String> smtpReplyCode) {
+        public Builder smtpReplyCode(Output<String> smtpReplyCode) {
             this.smtpReplyCode = Objects.requireNonNull(smtpReplyCode);
             return this;
         }
 
         public Builder smtpReplyCode(String smtpReplyCode) {
-            this.smtpReplyCode = Input.of(Objects.requireNonNull(smtpReplyCode));
+            this.smtpReplyCode = Output.of(Objects.requireNonNull(smtpReplyCode));
             return this;
         }
 
-        public Builder statusCode(@Nullable Input<String> statusCode) {
+        public Builder statusCode(@Nullable Output<String> statusCode) {
             this.statusCode = statusCode;
             return this;
         }
 
         public Builder statusCode(@Nullable String statusCode) {
-            this.statusCode = Input.ofNullable(statusCode);
+            this.statusCode = Output.ofNullable(statusCode);
             return this;
         }
 
-        public Builder topicArn(@Nullable Input<String> topicArn) {
+        public Builder topicArn(@Nullable Output<String> topicArn) {
             this.topicArn = topicArn;
             return this;
         }
 
         public Builder topicArn(@Nullable String topicArn) {
-            this.topicArn = Input.ofNullable(topicArn);
+            this.topicArn = Output.ofNullable(topicArn);
             return this;
         }
         public ReceiptRuleBounceActionGetArgs build() {

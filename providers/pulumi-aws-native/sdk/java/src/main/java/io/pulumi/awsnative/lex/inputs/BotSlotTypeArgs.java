@@ -6,7 +6,7 @@ package io.pulumi.awsnative.lex.inputs;
 import io.pulumi.awsnative.lex.inputs.BotExternalSourceSettingArgs;
 import io.pulumi.awsnative.lex.inputs.BotSlotTypeValueArgs;
 import io.pulumi.awsnative.lex.inputs.BotSlotValueSelectionSettingArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -23,54 +23,54 @@ public final class BotSlotTypeArgs extends io.pulumi.resources.ResourceArgs {
     public static final BotSlotTypeArgs Empty = new BotSlotTypeArgs();
 
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     @InputImport(name="externalSourceSetting")
-      private final @Nullable Input<BotExternalSourceSettingArgs> externalSourceSetting;
+      private final @Nullable Output<BotExternalSourceSettingArgs> externalSourceSetting;
 
-    public Input<BotExternalSourceSettingArgs> getExternalSourceSetting() {
-        return this.externalSourceSetting == null ? Input.empty() : this.externalSourceSetting;
+    public Output<BotExternalSourceSettingArgs> getExternalSourceSetting() {
+        return this.externalSourceSetting == null ? Output.empty() : this.externalSourceSetting;
     }
 
     @InputImport(name="name", required=true)
-      private final Input<String> name;
+      private final Output<String> name;
 
-    public Input<String> getName() {
+    public Output<String> getName() {
         return this.name;
     }
 
     @InputImport(name="parentSlotTypeSignature")
-      private final @Nullable Input<String> parentSlotTypeSignature;
+      private final @Nullable Output<String> parentSlotTypeSignature;
 
-    public Input<String> getParentSlotTypeSignature() {
-        return this.parentSlotTypeSignature == null ? Input.empty() : this.parentSlotTypeSignature;
+    public Output<String> getParentSlotTypeSignature() {
+        return this.parentSlotTypeSignature == null ? Output.empty() : this.parentSlotTypeSignature;
     }
 
     @InputImport(name="slotTypeValues")
-      private final @Nullable Input<List<BotSlotTypeValueArgs>> slotTypeValues;
+      private final @Nullable Output<List<BotSlotTypeValueArgs>> slotTypeValues;
 
-    public Input<List<BotSlotTypeValueArgs>> getSlotTypeValues() {
-        return this.slotTypeValues == null ? Input.empty() : this.slotTypeValues;
+    public Output<List<BotSlotTypeValueArgs>> getSlotTypeValues() {
+        return this.slotTypeValues == null ? Output.empty() : this.slotTypeValues;
     }
 
     @InputImport(name="valueSelectionSetting")
-      private final @Nullable Input<BotSlotValueSelectionSettingArgs> valueSelectionSetting;
+      private final @Nullable Output<BotSlotValueSelectionSettingArgs> valueSelectionSetting;
 
-    public Input<BotSlotValueSelectionSettingArgs> getValueSelectionSetting() {
-        return this.valueSelectionSetting == null ? Input.empty() : this.valueSelectionSetting;
+    public Output<BotSlotValueSelectionSettingArgs> getValueSelectionSetting() {
+        return this.valueSelectionSetting == null ? Output.empty() : this.valueSelectionSetting;
     }
 
     public BotSlotTypeArgs(
-        @Nullable Input<String> description,
-        @Nullable Input<BotExternalSourceSettingArgs> externalSourceSetting,
-        Input<String> name,
-        @Nullable Input<String> parentSlotTypeSignature,
-        @Nullable Input<List<BotSlotTypeValueArgs>> slotTypeValues,
-        @Nullable Input<BotSlotValueSelectionSettingArgs> valueSelectionSetting) {
+        @Nullable Output<String> description,
+        @Nullable Output<BotExternalSourceSettingArgs> externalSourceSetting,
+        Output<String> name,
+        @Nullable Output<String> parentSlotTypeSignature,
+        @Nullable Output<List<BotSlotTypeValueArgs>> slotTypeValues,
+        @Nullable Output<BotSlotValueSelectionSettingArgs> valueSelectionSetting) {
         this.description = description;
         this.externalSourceSetting = externalSourceSetting;
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
@@ -80,12 +80,12 @@ public final class BotSlotTypeArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private BotSlotTypeArgs() {
-        this.description = Input.empty();
-        this.externalSourceSetting = Input.empty();
-        this.name = Input.empty();
-        this.parentSlotTypeSignature = Input.empty();
-        this.slotTypeValues = Input.empty();
-        this.valueSelectionSetting = Input.empty();
+        this.description = Output.empty();
+        this.externalSourceSetting = Output.empty();
+        this.name = Output.empty();
+        this.parentSlotTypeSignature = Output.empty();
+        this.slotTypeValues = Output.empty();
+        this.valueSelectionSetting = Output.empty();
     }
 
     public static Builder builder() {
@@ -97,12 +97,12 @@ public final class BotSlotTypeArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> description;
-        private @Nullable Input<BotExternalSourceSettingArgs> externalSourceSetting;
-        private Input<String> name;
-        private @Nullable Input<String> parentSlotTypeSignature;
-        private @Nullable Input<List<BotSlotTypeValueArgs>> slotTypeValues;
-        private @Nullable Input<BotSlotValueSelectionSettingArgs> valueSelectionSetting;
+        private @Nullable Output<String> description;
+        private @Nullable Output<BotExternalSourceSettingArgs> externalSourceSetting;
+        private Output<String> name;
+        private @Nullable Output<String> parentSlotTypeSignature;
+        private @Nullable Output<List<BotSlotTypeValueArgs>> slotTypeValues;
+        private @Nullable Output<BotSlotValueSelectionSettingArgs> valueSelectionSetting;
 
         public Builder() {
     	      // Empty
@@ -118,63 +118,63 @@ public final class BotSlotTypeArgs extends io.pulumi.resources.ResourceArgs {
     	      this.valueSelectionSetting = defaults.valueSelectionSetting;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder externalSourceSetting(@Nullable Input<BotExternalSourceSettingArgs> externalSourceSetting) {
+        public Builder externalSourceSetting(@Nullable Output<BotExternalSourceSettingArgs> externalSourceSetting) {
             this.externalSourceSetting = externalSourceSetting;
             return this;
         }
 
         public Builder externalSourceSetting(@Nullable BotExternalSourceSettingArgs externalSourceSetting) {
-            this.externalSourceSetting = Input.ofNullable(externalSourceSetting);
+            this.externalSourceSetting = Output.ofNullable(externalSourceSetting);
             return this;
         }
 
-        public Builder name(Input<String> name) {
+        public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(String name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder parentSlotTypeSignature(@Nullable Input<String> parentSlotTypeSignature) {
+        public Builder parentSlotTypeSignature(@Nullable Output<String> parentSlotTypeSignature) {
             this.parentSlotTypeSignature = parentSlotTypeSignature;
             return this;
         }
 
         public Builder parentSlotTypeSignature(@Nullable String parentSlotTypeSignature) {
-            this.parentSlotTypeSignature = Input.ofNullable(parentSlotTypeSignature);
+            this.parentSlotTypeSignature = Output.ofNullable(parentSlotTypeSignature);
             return this;
         }
 
-        public Builder slotTypeValues(@Nullable Input<List<BotSlotTypeValueArgs>> slotTypeValues) {
+        public Builder slotTypeValues(@Nullable Output<List<BotSlotTypeValueArgs>> slotTypeValues) {
             this.slotTypeValues = slotTypeValues;
             return this;
         }
 
         public Builder slotTypeValues(@Nullable List<BotSlotTypeValueArgs> slotTypeValues) {
-            this.slotTypeValues = Input.ofNullable(slotTypeValues);
+            this.slotTypeValues = Output.ofNullable(slotTypeValues);
             return this;
         }
 
-        public Builder valueSelectionSetting(@Nullable Input<BotSlotValueSelectionSettingArgs> valueSelectionSetting) {
+        public Builder valueSelectionSetting(@Nullable Output<BotSlotValueSelectionSettingArgs> valueSelectionSetting) {
             this.valueSelectionSetting = valueSelectionSetting;
             return this;
         }
 
         public Builder valueSelectionSetting(@Nullable BotSlotValueSelectionSettingArgs valueSelectionSetting) {
-            this.valueSelectionSetting = Input.ofNullable(valueSelectionSetting);
+            this.valueSelectionSetting = Output.ofNullable(valueSelectionSetting);
             return this;
         }
         public BotSlotTypeArgs build() {

@@ -9,7 +9,7 @@ import io.pulumi.azurenative.hdinsight.inputs.HardwareProfileArgs;
 import io.pulumi.azurenative.hdinsight.inputs.OsProfileArgs;
 import io.pulumi.azurenative.hdinsight.inputs.ScriptActionArgs;
 import io.pulumi.azurenative.hdinsight.inputs.VirtualNetworkProfileArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -32,10 +32,10 @@ public final class RoleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="autoscaleConfiguration")
-      private final @Nullable Input<AutoscaleArgs> autoscaleConfiguration;
+      private final @Nullable Output<AutoscaleArgs> autoscaleConfiguration;
 
-    public Input<AutoscaleArgs> getAutoscaleConfiguration() {
-        return this.autoscaleConfiguration == null ? Input.empty() : this.autoscaleConfiguration;
+    public Output<AutoscaleArgs> getAutoscaleConfiguration() {
+        return this.autoscaleConfiguration == null ? Output.empty() : this.autoscaleConfiguration;
     }
 
     /**
@@ -43,10 +43,10 @@ public final class RoleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dataDisksGroups")
-      private final @Nullable Input<List<DataDisksGroupsArgs>> dataDisksGroups;
+      private final @Nullable Output<List<DataDisksGroupsArgs>> dataDisksGroups;
 
-    public Input<List<DataDisksGroupsArgs>> getDataDisksGroups() {
-        return this.dataDisksGroups == null ? Input.empty() : this.dataDisksGroups;
+    public Output<List<DataDisksGroupsArgs>> getDataDisksGroups() {
+        return this.dataDisksGroups == null ? Output.empty() : this.dataDisksGroups;
     }
 
     /**
@@ -54,10 +54,10 @@ public final class RoleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="encryptDataDisks")
-      private final @Nullable Input<Boolean> encryptDataDisks;
+      private final @Nullable Output<Boolean> encryptDataDisks;
 
-    public Input<Boolean> getEncryptDataDisks() {
-        return this.encryptDataDisks == null ? Input.empty() : this.encryptDataDisks;
+    public Output<Boolean> getEncryptDataDisks() {
+        return this.encryptDataDisks == null ? Output.empty() : this.encryptDataDisks;
     }
 
     /**
@@ -65,10 +65,10 @@ public final class RoleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="hardwareProfile")
-      private final @Nullable Input<HardwareProfileArgs> hardwareProfile;
+      private final @Nullable Output<HardwareProfileArgs> hardwareProfile;
 
-    public Input<HardwareProfileArgs> getHardwareProfile() {
-        return this.hardwareProfile == null ? Input.empty() : this.hardwareProfile;
+    public Output<HardwareProfileArgs> getHardwareProfile() {
+        return this.hardwareProfile == null ? Output.empty() : this.hardwareProfile;
     }
 
     /**
@@ -76,10 +76,10 @@ public final class RoleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="minInstanceCount")
-      private final @Nullable Input<Integer> minInstanceCount;
+      private final @Nullable Output<Integer> minInstanceCount;
 
-    public Input<Integer> getMinInstanceCount() {
-        return this.minInstanceCount == null ? Input.empty() : this.minInstanceCount;
+    public Output<Integer> getMinInstanceCount() {
+        return this.minInstanceCount == null ? Output.empty() : this.minInstanceCount;
     }
 
     /**
@@ -87,10 +87,10 @@ public final class RoleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -98,10 +98,10 @@ public final class RoleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="osProfile")
-      private final @Nullable Input<OsProfileArgs> osProfile;
+      private final @Nullable Output<OsProfileArgs> osProfile;
 
-    public Input<OsProfileArgs> getOsProfile() {
-        return this.osProfile == null ? Input.empty() : this.osProfile;
+    public Output<OsProfileArgs> getOsProfile() {
+        return this.osProfile == null ? Output.empty() : this.osProfile;
     }
 
     /**
@@ -109,10 +109,10 @@ public final class RoleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="scriptActions")
-      private final @Nullable Input<List<ScriptActionArgs>> scriptActions;
+      private final @Nullable Output<List<ScriptActionArgs>> scriptActions;
 
-    public Input<List<ScriptActionArgs>> getScriptActions() {
-        return this.scriptActions == null ? Input.empty() : this.scriptActions;
+    public Output<List<ScriptActionArgs>> getScriptActions() {
+        return this.scriptActions == null ? Output.empty() : this.scriptActions;
     }
 
     /**
@@ -120,10 +120,10 @@ public final class RoleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="targetInstanceCount")
-      private final @Nullable Input<Integer> targetInstanceCount;
+      private final @Nullable Output<Integer> targetInstanceCount;
 
-    public Input<Integer> getTargetInstanceCount() {
-        return this.targetInstanceCount == null ? Input.empty() : this.targetInstanceCount;
+    public Output<Integer> getTargetInstanceCount() {
+        return this.targetInstanceCount == null ? Output.empty() : this.targetInstanceCount;
     }
 
     /**
@@ -131,10 +131,10 @@ public final class RoleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="vMGroupName")
-      private final @Nullable Input<String> vMGroupName;
+      private final @Nullable Output<String> vMGroupName;
 
-    public Input<String> getVMGroupName() {
-        return this.vMGroupName == null ? Input.empty() : this.vMGroupName;
+    public Output<String> getVMGroupName() {
+        return this.vMGroupName == null ? Output.empty() : this.vMGroupName;
     }
 
     /**
@@ -142,27 +142,27 @@ public final class RoleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="virtualNetworkProfile")
-      private final @Nullable Input<VirtualNetworkProfileArgs> virtualNetworkProfile;
+      private final @Nullable Output<VirtualNetworkProfileArgs> virtualNetworkProfile;
 
-    public Input<VirtualNetworkProfileArgs> getVirtualNetworkProfile() {
-        return this.virtualNetworkProfile == null ? Input.empty() : this.virtualNetworkProfile;
+    public Output<VirtualNetworkProfileArgs> getVirtualNetworkProfile() {
+        return this.virtualNetworkProfile == null ? Output.empty() : this.virtualNetworkProfile;
     }
 
     public RoleArgs(
-        @Nullable Input<AutoscaleArgs> autoscaleConfiguration,
-        @Nullable Input<List<DataDisksGroupsArgs>> dataDisksGroups,
-        @Nullable Input<Boolean> encryptDataDisks,
-        @Nullable Input<HardwareProfileArgs> hardwareProfile,
-        @Nullable Input<Integer> minInstanceCount,
-        @Nullable Input<String> name,
-        @Nullable Input<OsProfileArgs> osProfile,
-        @Nullable Input<List<ScriptActionArgs>> scriptActions,
-        @Nullable Input<Integer> targetInstanceCount,
-        @Nullable Input<String> vMGroupName,
-        @Nullable Input<VirtualNetworkProfileArgs> virtualNetworkProfile) {
+        @Nullable Output<AutoscaleArgs> autoscaleConfiguration,
+        @Nullable Output<List<DataDisksGroupsArgs>> dataDisksGroups,
+        @Nullable Output<Boolean> encryptDataDisks,
+        @Nullable Output<HardwareProfileArgs> hardwareProfile,
+        @Nullable Output<Integer> minInstanceCount,
+        @Nullable Output<String> name,
+        @Nullable Output<OsProfileArgs> osProfile,
+        @Nullable Output<List<ScriptActionArgs>> scriptActions,
+        @Nullable Output<Integer> targetInstanceCount,
+        @Nullable Output<String> vMGroupName,
+        @Nullable Output<VirtualNetworkProfileArgs> virtualNetworkProfile) {
         this.autoscaleConfiguration = autoscaleConfiguration;
         this.dataDisksGroups = dataDisksGroups;
-        this.encryptDataDisks = encryptDataDisks == null ? Input.ofNullable(false) : encryptDataDisks;
+        this.encryptDataDisks = encryptDataDisks == null ? Output.ofNullable(false) : encryptDataDisks;
         this.hardwareProfile = hardwareProfile;
         this.minInstanceCount = minInstanceCount;
         this.name = name;
@@ -174,17 +174,17 @@ public final class RoleArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private RoleArgs() {
-        this.autoscaleConfiguration = Input.empty();
-        this.dataDisksGroups = Input.empty();
-        this.encryptDataDisks = Input.empty();
-        this.hardwareProfile = Input.empty();
-        this.minInstanceCount = Input.empty();
-        this.name = Input.empty();
-        this.osProfile = Input.empty();
-        this.scriptActions = Input.empty();
-        this.targetInstanceCount = Input.empty();
-        this.vMGroupName = Input.empty();
-        this.virtualNetworkProfile = Input.empty();
+        this.autoscaleConfiguration = Output.empty();
+        this.dataDisksGroups = Output.empty();
+        this.encryptDataDisks = Output.empty();
+        this.hardwareProfile = Output.empty();
+        this.minInstanceCount = Output.empty();
+        this.name = Output.empty();
+        this.osProfile = Output.empty();
+        this.scriptActions = Output.empty();
+        this.targetInstanceCount = Output.empty();
+        this.vMGroupName = Output.empty();
+        this.virtualNetworkProfile = Output.empty();
     }
 
     public static Builder builder() {
@@ -196,17 +196,17 @@ public final class RoleArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<AutoscaleArgs> autoscaleConfiguration;
-        private @Nullable Input<List<DataDisksGroupsArgs>> dataDisksGroups;
-        private @Nullable Input<Boolean> encryptDataDisks;
-        private @Nullable Input<HardwareProfileArgs> hardwareProfile;
-        private @Nullable Input<Integer> minInstanceCount;
-        private @Nullable Input<String> name;
-        private @Nullable Input<OsProfileArgs> osProfile;
-        private @Nullable Input<List<ScriptActionArgs>> scriptActions;
-        private @Nullable Input<Integer> targetInstanceCount;
-        private @Nullable Input<String> vMGroupName;
-        private @Nullable Input<VirtualNetworkProfileArgs> virtualNetworkProfile;
+        private @Nullable Output<AutoscaleArgs> autoscaleConfiguration;
+        private @Nullable Output<List<DataDisksGroupsArgs>> dataDisksGroups;
+        private @Nullable Output<Boolean> encryptDataDisks;
+        private @Nullable Output<HardwareProfileArgs> hardwareProfile;
+        private @Nullable Output<Integer> minInstanceCount;
+        private @Nullable Output<String> name;
+        private @Nullable Output<OsProfileArgs> osProfile;
+        private @Nullable Output<List<ScriptActionArgs>> scriptActions;
+        private @Nullable Output<Integer> targetInstanceCount;
+        private @Nullable Output<String> vMGroupName;
+        private @Nullable Output<VirtualNetworkProfileArgs> virtualNetworkProfile;
 
         public Builder() {
     	      // Empty
@@ -227,113 +227,113 @@ public final class RoleArgs extends io.pulumi.resources.ResourceArgs {
     	      this.virtualNetworkProfile = defaults.virtualNetworkProfile;
         }
 
-        public Builder autoscaleConfiguration(@Nullable Input<AutoscaleArgs> autoscaleConfiguration) {
+        public Builder autoscaleConfiguration(@Nullable Output<AutoscaleArgs> autoscaleConfiguration) {
             this.autoscaleConfiguration = autoscaleConfiguration;
             return this;
         }
 
         public Builder autoscaleConfiguration(@Nullable AutoscaleArgs autoscaleConfiguration) {
-            this.autoscaleConfiguration = Input.ofNullable(autoscaleConfiguration);
+            this.autoscaleConfiguration = Output.ofNullable(autoscaleConfiguration);
             return this;
         }
 
-        public Builder dataDisksGroups(@Nullable Input<List<DataDisksGroupsArgs>> dataDisksGroups) {
+        public Builder dataDisksGroups(@Nullable Output<List<DataDisksGroupsArgs>> dataDisksGroups) {
             this.dataDisksGroups = dataDisksGroups;
             return this;
         }
 
         public Builder dataDisksGroups(@Nullable List<DataDisksGroupsArgs> dataDisksGroups) {
-            this.dataDisksGroups = Input.ofNullable(dataDisksGroups);
+            this.dataDisksGroups = Output.ofNullable(dataDisksGroups);
             return this;
         }
 
-        public Builder encryptDataDisks(@Nullable Input<Boolean> encryptDataDisks) {
+        public Builder encryptDataDisks(@Nullable Output<Boolean> encryptDataDisks) {
             this.encryptDataDisks = encryptDataDisks;
             return this;
         }
 
         public Builder encryptDataDisks(@Nullable Boolean encryptDataDisks) {
-            this.encryptDataDisks = Input.ofNullable(encryptDataDisks);
+            this.encryptDataDisks = Output.ofNullable(encryptDataDisks);
             return this;
         }
 
-        public Builder hardwareProfile(@Nullable Input<HardwareProfileArgs> hardwareProfile) {
+        public Builder hardwareProfile(@Nullable Output<HardwareProfileArgs> hardwareProfile) {
             this.hardwareProfile = hardwareProfile;
             return this;
         }
 
         public Builder hardwareProfile(@Nullable HardwareProfileArgs hardwareProfile) {
-            this.hardwareProfile = Input.ofNullable(hardwareProfile);
+            this.hardwareProfile = Output.ofNullable(hardwareProfile);
             return this;
         }
 
-        public Builder minInstanceCount(@Nullable Input<Integer> minInstanceCount) {
+        public Builder minInstanceCount(@Nullable Output<Integer> minInstanceCount) {
             this.minInstanceCount = minInstanceCount;
             return this;
         }
 
         public Builder minInstanceCount(@Nullable Integer minInstanceCount) {
-            this.minInstanceCount = Input.ofNullable(minInstanceCount);
+            this.minInstanceCount = Output.ofNullable(minInstanceCount);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder osProfile(@Nullable Input<OsProfileArgs> osProfile) {
+        public Builder osProfile(@Nullable Output<OsProfileArgs> osProfile) {
             this.osProfile = osProfile;
             return this;
         }
 
         public Builder osProfile(@Nullable OsProfileArgs osProfile) {
-            this.osProfile = Input.ofNullable(osProfile);
+            this.osProfile = Output.ofNullable(osProfile);
             return this;
         }
 
-        public Builder scriptActions(@Nullable Input<List<ScriptActionArgs>> scriptActions) {
+        public Builder scriptActions(@Nullable Output<List<ScriptActionArgs>> scriptActions) {
             this.scriptActions = scriptActions;
             return this;
         }
 
         public Builder scriptActions(@Nullable List<ScriptActionArgs> scriptActions) {
-            this.scriptActions = Input.ofNullable(scriptActions);
+            this.scriptActions = Output.ofNullable(scriptActions);
             return this;
         }
 
-        public Builder targetInstanceCount(@Nullable Input<Integer> targetInstanceCount) {
+        public Builder targetInstanceCount(@Nullable Output<Integer> targetInstanceCount) {
             this.targetInstanceCount = targetInstanceCount;
             return this;
         }
 
         public Builder targetInstanceCount(@Nullable Integer targetInstanceCount) {
-            this.targetInstanceCount = Input.ofNullable(targetInstanceCount);
+            this.targetInstanceCount = Output.ofNullable(targetInstanceCount);
             return this;
         }
 
-        public Builder vMGroupName(@Nullable Input<String> vMGroupName) {
+        public Builder vMGroupName(@Nullable Output<String> vMGroupName) {
             this.vMGroupName = vMGroupName;
             return this;
         }
 
         public Builder vMGroupName(@Nullable String vMGroupName) {
-            this.vMGroupName = Input.ofNullable(vMGroupName);
+            this.vMGroupName = Output.ofNullable(vMGroupName);
             return this;
         }
 
-        public Builder virtualNetworkProfile(@Nullable Input<VirtualNetworkProfileArgs> virtualNetworkProfile) {
+        public Builder virtualNetworkProfile(@Nullable Output<VirtualNetworkProfileArgs> virtualNetworkProfile) {
             this.virtualNetworkProfile = virtualNetworkProfile;
             return this;
         }
 
         public Builder virtualNetworkProfile(@Nullable VirtualNetworkProfileArgs virtualNetworkProfile) {
-            this.virtualNetworkProfile = Input.ofNullable(virtualNetworkProfile);
+            this.virtualNetworkProfile = Output.ofNullable(virtualNetworkProfile);
             return this;
         }
         public RoleArgs build() {

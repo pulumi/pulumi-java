@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.bigquery_v2.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.bigquery_v2.inputs.BqmlTrainingRunArgs;
 import io.pulumi.googlenative.bigquery_v2.inputs.ModelDefinitionModelOptionsArgs;
@@ -21,10 +21,10 @@ public final class ModelDefinitionArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="modelOptions")
-      private final @Nullable Input<ModelDefinitionModelOptionsArgs> modelOptions;
+      private final @Nullable Output<ModelDefinitionModelOptionsArgs> modelOptions;
 
-    public Input<ModelDefinitionModelOptionsArgs> getModelOptions() {
-        return this.modelOptions == null ? Input.empty() : this.modelOptions;
+    public Output<ModelDefinitionModelOptionsArgs> getModelOptions() {
+        return this.modelOptions == null ? Output.empty() : this.modelOptions;
     }
 
     /**
@@ -32,22 +32,22 @@ public final class ModelDefinitionArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="trainingRuns")
-      private final @Nullable Input<List<BqmlTrainingRunArgs>> trainingRuns;
+      private final @Nullable Output<List<BqmlTrainingRunArgs>> trainingRuns;
 
-    public Input<List<BqmlTrainingRunArgs>> getTrainingRuns() {
-        return this.trainingRuns == null ? Input.empty() : this.trainingRuns;
+    public Output<List<BqmlTrainingRunArgs>> getTrainingRuns() {
+        return this.trainingRuns == null ? Output.empty() : this.trainingRuns;
     }
 
     public ModelDefinitionArgs(
-        @Nullable Input<ModelDefinitionModelOptionsArgs> modelOptions,
-        @Nullable Input<List<BqmlTrainingRunArgs>> trainingRuns) {
+        @Nullable Output<ModelDefinitionModelOptionsArgs> modelOptions,
+        @Nullable Output<List<BqmlTrainingRunArgs>> trainingRuns) {
         this.modelOptions = modelOptions;
         this.trainingRuns = trainingRuns;
     }
 
     private ModelDefinitionArgs() {
-        this.modelOptions = Input.empty();
-        this.trainingRuns = Input.empty();
+        this.modelOptions = Output.empty();
+        this.trainingRuns = Output.empty();
     }
 
     public static Builder builder() {
@@ -59,8 +59,8 @@ public final class ModelDefinitionArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private @Nullable Input<ModelDefinitionModelOptionsArgs> modelOptions;
-        private @Nullable Input<List<BqmlTrainingRunArgs>> trainingRuns;
+        private @Nullable Output<ModelDefinitionModelOptionsArgs> modelOptions;
+        private @Nullable Output<List<BqmlTrainingRunArgs>> trainingRuns;
 
         public Builder() {
     	      // Empty
@@ -72,23 +72,23 @@ public final class ModelDefinitionArgs extends io.pulumi.resources.ResourceArgs 
     	      this.trainingRuns = defaults.trainingRuns;
         }
 
-        public Builder modelOptions(@Nullable Input<ModelDefinitionModelOptionsArgs> modelOptions) {
+        public Builder modelOptions(@Nullable Output<ModelDefinitionModelOptionsArgs> modelOptions) {
             this.modelOptions = modelOptions;
             return this;
         }
 
         public Builder modelOptions(@Nullable ModelDefinitionModelOptionsArgs modelOptions) {
-            this.modelOptions = Input.ofNullable(modelOptions);
+            this.modelOptions = Output.ofNullable(modelOptions);
             return this;
         }
 
-        public Builder trainingRuns(@Nullable Input<List<BqmlTrainingRunArgs>> trainingRuns) {
+        public Builder trainingRuns(@Nullable Output<List<BqmlTrainingRunArgs>> trainingRuns) {
             this.trainingRuns = trainingRuns;
             return this;
         }
 
         public Builder trainingRuns(@Nullable List<BqmlTrainingRunArgs> trainingRuns) {
-            this.trainingRuns = Input.ofNullable(trainingRuns);
+            this.trainingRuns = Output.ofNullable(trainingRuns);
             return this;
         }
         public ModelDefinitionArgs build() {

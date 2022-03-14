@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datafactory.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
@@ -25,10 +25,10 @@ public final class IntegrationRuntimeReferenceArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="parameters")
-      private final @Nullable Input<Map<String,Object>> parameters;
+      private final @Nullable Output<Map<String,Object>> parameters;
 
-    public Input<Map<String,Object>> getParameters() {
-        return this.parameters == null ? Input.empty() : this.parameters;
+    public Output<Map<String,Object>> getParameters() {
+        return this.parameters == null ? Output.empty() : this.parameters;
     }
 
     /**
@@ -36,9 +36,9 @@ public final class IntegrationRuntimeReferenceArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="referenceName", required=true)
-      private final Input<String> referenceName;
+      private final Output<String> referenceName;
 
-    public Input<String> getReferenceName() {
+    public Output<String> getReferenceName() {
         return this.referenceName;
     }
 
@@ -47,25 +47,25 @@ public final class IntegrationRuntimeReferenceArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<String> type;
+      private final Output<String> type;
 
-    public Input<String> getType() {
+    public Output<String> getType() {
         return this.type;
     }
 
     public IntegrationRuntimeReferenceArgs(
-        @Nullable Input<Map<String,Object>> parameters,
-        Input<String> referenceName,
-        Input<String> type) {
+        @Nullable Output<Map<String,Object>> parameters,
+        Output<String> referenceName,
+        Output<String> type) {
         this.parameters = parameters;
         this.referenceName = Objects.requireNonNull(referenceName, "expected parameter 'referenceName' to be non-null");
         this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
     }
 
     private IntegrationRuntimeReferenceArgs() {
-        this.parameters = Input.empty();
-        this.referenceName = Input.empty();
-        this.type = Input.empty();
+        this.parameters = Output.empty();
+        this.referenceName = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -77,9 +77,9 @@ public final class IntegrationRuntimeReferenceArgs extends io.pulumi.resources.R
     }
 
     public static final class Builder {
-        private @Nullable Input<Map<String,Object>> parameters;
-        private Input<String> referenceName;
-        private Input<String> type;
+        private @Nullable Output<Map<String,Object>> parameters;
+        private Output<String> referenceName;
+        private Output<String> type;
 
         public Builder() {
     	      // Empty
@@ -92,33 +92,33 @@ public final class IntegrationRuntimeReferenceArgs extends io.pulumi.resources.R
     	      this.type = defaults.type;
         }
 
-        public Builder parameters(@Nullable Input<Map<String,Object>> parameters) {
+        public Builder parameters(@Nullable Output<Map<String,Object>> parameters) {
             this.parameters = parameters;
             return this;
         }
 
         public Builder parameters(@Nullable Map<String,Object> parameters) {
-            this.parameters = Input.ofNullable(parameters);
+            this.parameters = Output.ofNullable(parameters);
             return this;
         }
 
-        public Builder referenceName(Input<String> referenceName) {
+        public Builder referenceName(Output<String> referenceName) {
             this.referenceName = Objects.requireNonNull(referenceName);
             return this;
         }
 
         public Builder referenceName(String referenceName) {
-            this.referenceName = Input.of(Objects.requireNonNull(referenceName));
+            this.referenceName = Output.of(Objects.requireNonNull(referenceName));
             return this;
         }
 
-        public Builder type(Input<String> type) {
+        public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(String type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
         public IntegrationRuntimeReferenceArgs build() {

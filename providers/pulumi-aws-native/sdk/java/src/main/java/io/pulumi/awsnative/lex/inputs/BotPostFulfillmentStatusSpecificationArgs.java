@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.lex.inputs;
 
 import io.pulumi.awsnative.lex.inputs.BotResponseSpecificationArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,39 +19,39 @@ public final class BotPostFulfillmentStatusSpecificationArgs extends io.pulumi.r
     public static final BotPostFulfillmentStatusSpecificationArgs Empty = new BotPostFulfillmentStatusSpecificationArgs();
 
     @InputImport(name="failureResponse")
-      private final @Nullable Input<BotResponseSpecificationArgs> failureResponse;
+      private final @Nullable Output<BotResponseSpecificationArgs> failureResponse;
 
-    public Input<BotResponseSpecificationArgs> getFailureResponse() {
-        return this.failureResponse == null ? Input.empty() : this.failureResponse;
+    public Output<BotResponseSpecificationArgs> getFailureResponse() {
+        return this.failureResponse == null ? Output.empty() : this.failureResponse;
     }
 
     @InputImport(name="successResponse")
-      private final @Nullable Input<BotResponseSpecificationArgs> successResponse;
+      private final @Nullable Output<BotResponseSpecificationArgs> successResponse;
 
-    public Input<BotResponseSpecificationArgs> getSuccessResponse() {
-        return this.successResponse == null ? Input.empty() : this.successResponse;
+    public Output<BotResponseSpecificationArgs> getSuccessResponse() {
+        return this.successResponse == null ? Output.empty() : this.successResponse;
     }
 
     @InputImport(name="timeoutResponse")
-      private final @Nullable Input<BotResponseSpecificationArgs> timeoutResponse;
+      private final @Nullable Output<BotResponseSpecificationArgs> timeoutResponse;
 
-    public Input<BotResponseSpecificationArgs> getTimeoutResponse() {
-        return this.timeoutResponse == null ? Input.empty() : this.timeoutResponse;
+    public Output<BotResponseSpecificationArgs> getTimeoutResponse() {
+        return this.timeoutResponse == null ? Output.empty() : this.timeoutResponse;
     }
 
     public BotPostFulfillmentStatusSpecificationArgs(
-        @Nullable Input<BotResponseSpecificationArgs> failureResponse,
-        @Nullable Input<BotResponseSpecificationArgs> successResponse,
-        @Nullable Input<BotResponseSpecificationArgs> timeoutResponse) {
+        @Nullable Output<BotResponseSpecificationArgs> failureResponse,
+        @Nullable Output<BotResponseSpecificationArgs> successResponse,
+        @Nullable Output<BotResponseSpecificationArgs> timeoutResponse) {
         this.failureResponse = failureResponse;
         this.successResponse = successResponse;
         this.timeoutResponse = timeoutResponse;
     }
 
     private BotPostFulfillmentStatusSpecificationArgs() {
-        this.failureResponse = Input.empty();
-        this.successResponse = Input.empty();
-        this.timeoutResponse = Input.empty();
+        this.failureResponse = Output.empty();
+        this.successResponse = Output.empty();
+        this.timeoutResponse = Output.empty();
     }
 
     public static Builder builder() {
@@ -63,9 +63,9 @@ public final class BotPostFulfillmentStatusSpecificationArgs extends io.pulumi.r
     }
 
     public static final class Builder {
-        private @Nullable Input<BotResponseSpecificationArgs> failureResponse;
-        private @Nullable Input<BotResponseSpecificationArgs> successResponse;
-        private @Nullable Input<BotResponseSpecificationArgs> timeoutResponse;
+        private @Nullable Output<BotResponseSpecificationArgs> failureResponse;
+        private @Nullable Output<BotResponseSpecificationArgs> successResponse;
+        private @Nullable Output<BotResponseSpecificationArgs> timeoutResponse;
 
         public Builder() {
     	      // Empty
@@ -78,33 +78,33 @@ public final class BotPostFulfillmentStatusSpecificationArgs extends io.pulumi.r
     	      this.timeoutResponse = defaults.timeoutResponse;
         }
 
-        public Builder failureResponse(@Nullable Input<BotResponseSpecificationArgs> failureResponse) {
+        public Builder failureResponse(@Nullable Output<BotResponseSpecificationArgs> failureResponse) {
             this.failureResponse = failureResponse;
             return this;
         }
 
         public Builder failureResponse(@Nullable BotResponseSpecificationArgs failureResponse) {
-            this.failureResponse = Input.ofNullable(failureResponse);
+            this.failureResponse = Output.ofNullable(failureResponse);
             return this;
         }
 
-        public Builder successResponse(@Nullable Input<BotResponseSpecificationArgs> successResponse) {
+        public Builder successResponse(@Nullable Output<BotResponseSpecificationArgs> successResponse) {
             this.successResponse = successResponse;
             return this;
         }
 
         public Builder successResponse(@Nullable BotResponseSpecificationArgs successResponse) {
-            this.successResponse = Input.ofNullable(successResponse);
+            this.successResponse = Output.ofNullable(successResponse);
             return this;
         }
 
-        public Builder timeoutResponse(@Nullable Input<BotResponseSpecificationArgs> timeoutResponse) {
+        public Builder timeoutResponse(@Nullable Output<BotResponseSpecificationArgs> timeoutResponse) {
             this.timeoutResponse = timeoutResponse;
             return this;
         }
 
         public Builder timeoutResponse(@Nullable BotResponseSpecificationArgs timeoutResponse) {
-            this.timeoutResponse = Input.ofNullable(timeoutResponse);
+            this.timeoutResponse = Output.ofNullable(timeoutResponse);
             return this;
         }
         public BotPostFulfillmentStatusSpecificationArgs build() {

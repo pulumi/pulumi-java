@@ -9,7 +9,7 @@ import io.pulumi.azurenative.logz.inputs.LogzOrganizationPropertiesArgs;
 import io.pulumi.azurenative.logz.inputs.PlanDataArgs;
 import io.pulumi.azurenative.logz.inputs.UserInfoArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -25,10 +25,10 @@ public final class MonitorPropertiesArgs extends io.pulumi.resources.ResourceArg
     public static final MonitorPropertiesArgs Empty = new MonitorPropertiesArgs();
 
     @InputImport(name="logzOrganizationProperties")
-      private final @Nullable Input<LogzOrganizationPropertiesArgs> logzOrganizationProperties;
+      private final @Nullable Output<LogzOrganizationPropertiesArgs> logzOrganizationProperties;
 
-    public Input<LogzOrganizationPropertiesArgs> getLogzOrganizationProperties() {
-        return this.logzOrganizationProperties == null ? Input.empty() : this.logzOrganizationProperties;
+    public Output<LogzOrganizationPropertiesArgs> getLogzOrganizationProperties() {
+        return this.logzOrganizationProperties == null ? Output.empty() : this.logzOrganizationProperties;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class MonitorPropertiesArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="marketplaceSubscriptionStatus")
-      private final @Nullable Input<Either<String,MarketplaceSubscriptionStatus>> marketplaceSubscriptionStatus;
+      private final @Nullable Output<Either<String,MarketplaceSubscriptionStatus>> marketplaceSubscriptionStatus;
 
-    public Input<Either<String,MarketplaceSubscriptionStatus>> getMarketplaceSubscriptionStatus() {
-        return this.marketplaceSubscriptionStatus == null ? Input.empty() : this.marketplaceSubscriptionStatus;
+    public Output<Either<String,MarketplaceSubscriptionStatus>> getMarketplaceSubscriptionStatus() {
+        return this.marketplaceSubscriptionStatus == null ? Output.empty() : this.marketplaceSubscriptionStatus;
     }
 
     /**
@@ -47,32 +47,32 @@ public final class MonitorPropertiesArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="monitoringStatus")
-      private final @Nullable Input<Either<String,MonitoringStatus>> monitoringStatus;
+      private final @Nullable Output<Either<String,MonitoringStatus>> monitoringStatus;
 
-    public Input<Either<String,MonitoringStatus>> getMonitoringStatus() {
-        return this.monitoringStatus == null ? Input.empty() : this.monitoringStatus;
+    public Output<Either<String,MonitoringStatus>> getMonitoringStatus() {
+        return this.monitoringStatus == null ? Output.empty() : this.monitoringStatus;
     }
 
     @InputImport(name="planData")
-      private final @Nullable Input<PlanDataArgs> planData;
+      private final @Nullable Output<PlanDataArgs> planData;
 
-    public Input<PlanDataArgs> getPlanData() {
-        return this.planData == null ? Input.empty() : this.planData;
+    public Output<PlanDataArgs> getPlanData() {
+        return this.planData == null ? Output.empty() : this.planData;
     }
 
     @InputImport(name="userInfo")
-      private final @Nullable Input<UserInfoArgs> userInfo;
+      private final @Nullable Output<UserInfoArgs> userInfo;
 
-    public Input<UserInfoArgs> getUserInfo() {
-        return this.userInfo == null ? Input.empty() : this.userInfo;
+    public Output<UserInfoArgs> getUserInfo() {
+        return this.userInfo == null ? Output.empty() : this.userInfo;
     }
 
     public MonitorPropertiesArgs(
-        @Nullable Input<LogzOrganizationPropertiesArgs> logzOrganizationProperties,
-        @Nullable Input<Either<String,MarketplaceSubscriptionStatus>> marketplaceSubscriptionStatus,
-        @Nullable Input<Either<String,MonitoringStatus>> monitoringStatus,
-        @Nullable Input<PlanDataArgs> planData,
-        @Nullable Input<UserInfoArgs> userInfo) {
+        @Nullable Output<LogzOrganizationPropertiesArgs> logzOrganizationProperties,
+        @Nullable Output<Either<String,MarketplaceSubscriptionStatus>> marketplaceSubscriptionStatus,
+        @Nullable Output<Either<String,MonitoringStatus>> monitoringStatus,
+        @Nullable Output<PlanDataArgs> planData,
+        @Nullable Output<UserInfoArgs> userInfo) {
         this.logzOrganizationProperties = logzOrganizationProperties;
         this.marketplaceSubscriptionStatus = marketplaceSubscriptionStatus;
         this.monitoringStatus = monitoringStatus;
@@ -81,11 +81,11 @@ public final class MonitorPropertiesArgs extends io.pulumi.resources.ResourceArg
     }
 
     private MonitorPropertiesArgs() {
-        this.logzOrganizationProperties = Input.empty();
-        this.marketplaceSubscriptionStatus = Input.empty();
-        this.monitoringStatus = Input.empty();
-        this.planData = Input.empty();
-        this.userInfo = Input.empty();
+        this.logzOrganizationProperties = Output.empty();
+        this.marketplaceSubscriptionStatus = Output.empty();
+        this.monitoringStatus = Output.empty();
+        this.planData = Output.empty();
+        this.userInfo = Output.empty();
     }
 
     public static Builder builder() {
@@ -97,11 +97,11 @@ public final class MonitorPropertiesArgs extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private @Nullable Input<LogzOrganizationPropertiesArgs> logzOrganizationProperties;
-        private @Nullable Input<Either<String,MarketplaceSubscriptionStatus>> marketplaceSubscriptionStatus;
-        private @Nullable Input<Either<String,MonitoringStatus>> monitoringStatus;
-        private @Nullable Input<PlanDataArgs> planData;
-        private @Nullable Input<UserInfoArgs> userInfo;
+        private @Nullable Output<LogzOrganizationPropertiesArgs> logzOrganizationProperties;
+        private @Nullable Output<Either<String,MarketplaceSubscriptionStatus>> marketplaceSubscriptionStatus;
+        private @Nullable Output<Either<String,MonitoringStatus>> monitoringStatus;
+        private @Nullable Output<PlanDataArgs> planData;
+        private @Nullable Output<UserInfoArgs> userInfo;
 
         public Builder() {
     	      // Empty
@@ -116,53 +116,53 @@ public final class MonitorPropertiesArgs extends io.pulumi.resources.ResourceArg
     	      this.userInfo = defaults.userInfo;
         }
 
-        public Builder logzOrganizationProperties(@Nullable Input<LogzOrganizationPropertiesArgs> logzOrganizationProperties) {
+        public Builder logzOrganizationProperties(@Nullable Output<LogzOrganizationPropertiesArgs> logzOrganizationProperties) {
             this.logzOrganizationProperties = logzOrganizationProperties;
             return this;
         }
 
         public Builder logzOrganizationProperties(@Nullable LogzOrganizationPropertiesArgs logzOrganizationProperties) {
-            this.logzOrganizationProperties = Input.ofNullable(logzOrganizationProperties);
+            this.logzOrganizationProperties = Output.ofNullable(logzOrganizationProperties);
             return this;
         }
 
-        public Builder marketplaceSubscriptionStatus(@Nullable Input<Either<String,MarketplaceSubscriptionStatus>> marketplaceSubscriptionStatus) {
+        public Builder marketplaceSubscriptionStatus(@Nullable Output<Either<String,MarketplaceSubscriptionStatus>> marketplaceSubscriptionStatus) {
             this.marketplaceSubscriptionStatus = marketplaceSubscriptionStatus;
             return this;
         }
 
         public Builder marketplaceSubscriptionStatus(@Nullable Either<String,MarketplaceSubscriptionStatus> marketplaceSubscriptionStatus) {
-            this.marketplaceSubscriptionStatus = Input.ofNullable(marketplaceSubscriptionStatus);
+            this.marketplaceSubscriptionStatus = Output.ofNullable(marketplaceSubscriptionStatus);
             return this;
         }
 
-        public Builder monitoringStatus(@Nullable Input<Either<String,MonitoringStatus>> monitoringStatus) {
+        public Builder monitoringStatus(@Nullable Output<Either<String,MonitoringStatus>> monitoringStatus) {
             this.monitoringStatus = monitoringStatus;
             return this;
         }
 
         public Builder monitoringStatus(@Nullable Either<String,MonitoringStatus> monitoringStatus) {
-            this.monitoringStatus = Input.ofNullable(monitoringStatus);
+            this.monitoringStatus = Output.ofNullable(monitoringStatus);
             return this;
         }
 
-        public Builder planData(@Nullable Input<PlanDataArgs> planData) {
+        public Builder planData(@Nullable Output<PlanDataArgs> planData) {
             this.planData = planData;
             return this;
         }
 
         public Builder planData(@Nullable PlanDataArgs planData) {
-            this.planData = Input.ofNullable(planData);
+            this.planData = Output.ofNullable(planData);
             return this;
         }
 
-        public Builder userInfo(@Nullable Input<UserInfoArgs> userInfo) {
+        public Builder userInfo(@Nullable Output<UserInfoArgs> userInfo) {
             this.userInfo = userInfo;
             return this;
         }
 
         public Builder userInfo(@Nullable UserInfoArgs userInfo) {
-            this.userInfo = Input.ofNullable(userInfo);
+            this.userInfo = Output.ofNullable(userInfo);
             return this;
         }
         public MonitorPropertiesArgs build() {

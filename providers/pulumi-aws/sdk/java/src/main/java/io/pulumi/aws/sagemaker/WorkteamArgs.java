@@ -5,7 +5,7 @@ package io.pulumi.aws.sagemaker;
 
 import io.pulumi.aws.sagemaker.inputs.WorkteamMemberDefinitionArgs;
 import io.pulumi.aws.sagemaker.inputs.WorkteamNotificationConfigurationArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -23,9 +23,9 @@ public final class WorkteamArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description", required=true)
-      private final Input<String> description;
+      private final Output<String> description;
 
-    public Input<String> getDescription() {
+    public Output<String> getDescription() {
         return this.description;
     }
 
@@ -34,9 +34,9 @@ public final class WorkteamArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="memberDefinitions", required=true)
-      private final Input<List<WorkteamMemberDefinitionArgs>> memberDefinitions;
+      private final Output<List<WorkteamMemberDefinitionArgs>> memberDefinitions;
 
-    public Input<List<WorkteamMemberDefinitionArgs>> getMemberDefinitions() {
+    public Output<List<WorkteamMemberDefinitionArgs>> getMemberDefinitions() {
         return this.memberDefinitions;
     }
 
@@ -45,10 +45,10 @@ public final class WorkteamArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="notificationConfiguration")
-      private final @Nullable Input<WorkteamNotificationConfigurationArgs> notificationConfiguration;
+      private final @Nullable Output<WorkteamNotificationConfigurationArgs> notificationConfiguration;
 
-    public Input<WorkteamNotificationConfigurationArgs> getNotificationConfiguration() {
-        return this.notificationConfiguration == null ? Input.empty() : this.notificationConfiguration;
+    public Output<WorkteamNotificationConfigurationArgs> getNotificationConfiguration() {
+        return this.notificationConfiguration == null ? Output.empty() : this.notificationConfiguration;
     }
 
     /**
@@ -56,10 +56,10 @@ public final class WorkteamArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -67,9 +67,9 @@ public final class WorkteamArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="workforceName", required=true)
-      private final Input<String> workforceName;
+      private final Output<String> workforceName;
 
-    public Input<String> getWorkforceName() {
+    public Output<String> getWorkforceName() {
         return this.workforceName;
     }
 
@@ -78,19 +78,19 @@ public final class WorkteamArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="workteamName", required=true)
-      private final Input<String> workteamName;
+      private final Output<String> workteamName;
 
-    public Input<String> getWorkteamName() {
+    public Output<String> getWorkteamName() {
         return this.workteamName;
     }
 
     public WorkteamArgs(
-        Input<String> description,
-        Input<List<WorkteamMemberDefinitionArgs>> memberDefinitions,
-        @Nullable Input<WorkteamNotificationConfigurationArgs> notificationConfiguration,
-        @Nullable Input<Map<String,String>> tags,
-        Input<String> workforceName,
-        Input<String> workteamName) {
+        Output<String> description,
+        Output<List<WorkteamMemberDefinitionArgs>> memberDefinitions,
+        @Nullable Output<WorkteamNotificationConfigurationArgs> notificationConfiguration,
+        @Nullable Output<Map<String,String>> tags,
+        Output<String> workforceName,
+        Output<String> workteamName) {
         this.description = Objects.requireNonNull(description, "expected parameter 'description' to be non-null");
         this.memberDefinitions = Objects.requireNonNull(memberDefinitions, "expected parameter 'memberDefinitions' to be non-null");
         this.notificationConfiguration = notificationConfiguration;
@@ -100,12 +100,12 @@ public final class WorkteamArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private WorkteamArgs() {
-        this.description = Input.empty();
-        this.memberDefinitions = Input.empty();
-        this.notificationConfiguration = Input.empty();
-        this.tags = Input.empty();
-        this.workforceName = Input.empty();
-        this.workteamName = Input.empty();
+        this.description = Output.empty();
+        this.memberDefinitions = Output.empty();
+        this.notificationConfiguration = Output.empty();
+        this.tags = Output.empty();
+        this.workforceName = Output.empty();
+        this.workteamName = Output.empty();
     }
 
     public static Builder builder() {
@@ -117,12 +117,12 @@ public final class WorkteamArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> description;
-        private Input<List<WorkteamMemberDefinitionArgs>> memberDefinitions;
-        private @Nullable Input<WorkteamNotificationConfigurationArgs> notificationConfiguration;
-        private @Nullable Input<Map<String,String>> tags;
-        private Input<String> workforceName;
-        private Input<String> workteamName;
+        private Output<String> description;
+        private Output<List<WorkteamMemberDefinitionArgs>> memberDefinitions;
+        private @Nullable Output<WorkteamNotificationConfigurationArgs> notificationConfiguration;
+        private @Nullable Output<Map<String,String>> tags;
+        private Output<String> workforceName;
+        private Output<String> workteamName;
 
         public Builder() {
     	      // Empty
@@ -138,63 +138,63 @@ public final class WorkteamArgs extends io.pulumi.resources.ResourceArgs {
     	      this.workteamName = defaults.workteamName;
         }
 
-        public Builder description(Input<String> description) {
+        public Builder description(Output<String> description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
         public Builder description(String description) {
-            this.description = Input.of(Objects.requireNonNull(description));
+            this.description = Output.of(Objects.requireNonNull(description));
             return this;
         }
 
-        public Builder memberDefinitions(Input<List<WorkteamMemberDefinitionArgs>> memberDefinitions) {
+        public Builder memberDefinitions(Output<List<WorkteamMemberDefinitionArgs>> memberDefinitions) {
             this.memberDefinitions = Objects.requireNonNull(memberDefinitions);
             return this;
         }
 
         public Builder memberDefinitions(List<WorkteamMemberDefinitionArgs> memberDefinitions) {
-            this.memberDefinitions = Input.of(Objects.requireNonNull(memberDefinitions));
+            this.memberDefinitions = Output.of(Objects.requireNonNull(memberDefinitions));
             return this;
         }
 
-        public Builder notificationConfiguration(@Nullable Input<WorkteamNotificationConfigurationArgs> notificationConfiguration) {
+        public Builder notificationConfiguration(@Nullable Output<WorkteamNotificationConfigurationArgs> notificationConfiguration) {
             this.notificationConfiguration = notificationConfiguration;
             return this;
         }
 
         public Builder notificationConfiguration(@Nullable WorkteamNotificationConfigurationArgs notificationConfiguration) {
-            this.notificationConfiguration = Input.ofNullable(notificationConfiguration);
+            this.notificationConfiguration = Output.ofNullable(notificationConfiguration);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder workforceName(Input<String> workforceName) {
+        public Builder workforceName(Output<String> workforceName) {
             this.workforceName = Objects.requireNonNull(workforceName);
             return this;
         }
 
         public Builder workforceName(String workforceName) {
-            this.workforceName = Input.of(Objects.requireNonNull(workforceName));
+            this.workforceName = Output.of(Objects.requireNonNull(workforceName));
             return this;
         }
 
-        public Builder workteamName(Input<String> workteamName) {
+        public Builder workteamName(Output<String> workteamName) {
             this.workteamName = Objects.requireNonNull(workteamName);
             return this;
         }
 
         public Builder workteamName(String workteamName) {
-            this.workteamName = Input.of(Objects.requireNonNull(workteamName));
+            this.workteamName = Output.of(Objects.requireNonNull(workteamName));
             return this;
         }
         public WorkteamArgs build() {

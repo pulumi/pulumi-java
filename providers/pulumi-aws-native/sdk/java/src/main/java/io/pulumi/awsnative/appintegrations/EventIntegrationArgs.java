@@ -5,7 +5,7 @@ package io.pulumi.awsnative.appintegrations;
 
 import io.pulumi.awsnative.appintegrations.inputs.EventIntegrationEventFilterArgs;
 import io.pulumi.awsnative.appintegrations.inputs.EventIntegrationTagArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -22,10 +22,10 @@ public final class EventIntegrationArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -33,9 +33,9 @@ public final class EventIntegrationArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="eventBridgeBus", required=true)
-      private final Input<String> eventBridgeBus;
+      private final Output<String> eventBridgeBus;
 
-    public Input<String> getEventBridgeBus() {
+    public Output<String> getEventBridgeBus() {
         return this.eventBridgeBus;
     }
 
@@ -44,9 +44,9 @@ public final class EventIntegrationArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="eventFilter", required=true)
-      private final Input<EventIntegrationEventFilterArgs> eventFilter;
+      private final Output<EventIntegrationEventFilterArgs> eventFilter;
 
-    public Input<EventIntegrationEventFilterArgs> getEventFilter() {
+    public Output<EventIntegrationEventFilterArgs> getEventFilter() {
         return this.eventFilter;
     }
 
@@ -55,10 +55,10 @@ public final class EventIntegrationArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -66,18 +66,18 @@ public final class EventIntegrationArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<List<EventIntegrationTagArgs>> tags;
+      private final @Nullable Output<List<EventIntegrationTagArgs>> tags;
 
-    public Input<List<EventIntegrationTagArgs>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<List<EventIntegrationTagArgs>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public EventIntegrationArgs(
-        @Nullable Input<String> description,
-        Input<String> eventBridgeBus,
-        Input<EventIntegrationEventFilterArgs> eventFilter,
-        @Nullable Input<String> name,
-        @Nullable Input<List<EventIntegrationTagArgs>> tags) {
+        @Nullable Output<String> description,
+        Output<String> eventBridgeBus,
+        Output<EventIntegrationEventFilterArgs> eventFilter,
+        @Nullable Output<String> name,
+        @Nullable Output<List<EventIntegrationTagArgs>> tags) {
         this.description = description;
         this.eventBridgeBus = Objects.requireNonNull(eventBridgeBus, "expected parameter 'eventBridgeBus' to be non-null");
         this.eventFilter = Objects.requireNonNull(eventFilter, "expected parameter 'eventFilter' to be non-null");
@@ -86,11 +86,11 @@ public final class EventIntegrationArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private EventIntegrationArgs() {
-        this.description = Input.empty();
-        this.eventBridgeBus = Input.empty();
-        this.eventFilter = Input.empty();
-        this.name = Input.empty();
-        this.tags = Input.empty();
+        this.description = Output.empty();
+        this.eventBridgeBus = Output.empty();
+        this.eventFilter = Output.empty();
+        this.name = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -102,11 +102,11 @@ public final class EventIntegrationArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private @Nullable Input<String> description;
-        private Input<String> eventBridgeBus;
-        private Input<EventIntegrationEventFilterArgs> eventFilter;
-        private @Nullable Input<String> name;
-        private @Nullable Input<List<EventIntegrationTagArgs>> tags;
+        private @Nullable Output<String> description;
+        private Output<String> eventBridgeBus;
+        private Output<EventIntegrationEventFilterArgs> eventFilter;
+        private @Nullable Output<String> name;
+        private @Nullable Output<List<EventIntegrationTagArgs>> tags;
 
         public Builder() {
     	      // Empty
@@ -121,53 +121,53 @@ public final class EventIntegrationArgs extends io.pulumi.resources.ResourceArgs
     	      this.tags = defaults.tags;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder eventBridgeBus(Input<String> eventBridgeBus) {
+        public Builder eventBridgeBus(Output<String> eventBridgeBus) {
             this.eventBridgeBus = Objects.requireNonNull(eventBridgeBus);
             return this;
         }
 
         public Builder eventBridgeBus(String eventBridgeBus) {
-            this.eventBridgeBus = Input.of(Objects.requireNonNull(eventBridgeBus));
+            this.eventBridgeBus = Output.of(Objects.requireNonNull(eventBridgeBus));
             return this;
         }
 
-        public Builder eventFilter(Input<EventIntegrationEventFilterArgs> eventFilter) {
+        public Builder eventFilter(Output<EventIntegrationEventFilterArgs> eventFilter) {
             this.eventFilter = Objects.requireNonNull(eventFilter);
             return this;
         }
 
         public Builder eventFilter(EventIntegrationEventFilterArgs eventFilter) {
-            this.eventFilter = Input.of(Objects.requireNonNull(eventFilter));
+            this.eventFilter = Output.of(Objects.requireNonNull(eventFilter));
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder tags(@Nullable Input<List<EventIntegrationTagArgs>> tags) {
+        public Builder tags(@Nullable Output<List<EventIntegrationTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable List<EventIntegrationTagArgs> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public EventIntegrationArgs build() {

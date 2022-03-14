@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.toolresults_v1beta3.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.toolresults_v1beta3.enums.PrimaryStepRollUp;
 import io.pulumi.googlenative.toolresults_v1beta3.inputs.IndividualOutcomeArgs;
@@ -25,10 +25,10 @@ public final class PrimaryStepArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="individualOutcome")
-      private final @Nullable Input<List<IndividualOutcomeArgs>> individualOutcome;
+      private final @Nullable Output<List<IndividualOutcomeArgs>> individualOutcome;
 
-    public Input<List<IndividualOutcomeArgs>> getIndividualOutcome() {
-        return this.individualOutcome == null ? Input.empty() : this.individualOutcome;
+    public Output<List<IndividualOutcomeArgs>> getIndividualOutcome() {
+        return this.individualOutcome == null ? Output.empty() : this.individualOutcome;
     }
 
     /**
@@ -36,22 +36,22 @@ public final class PrimaryStepArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="rollUp")
-      private final @Nullable Input<PrimaryStepRollUp> rollUp;
+      private final @Nullable Output<PrimaryStepRollUp> rollUp;
 
-    public Input<PrimaryStepRollUp> getRollUp() {
-        return this.rollUp == null ? Input.empty() : this.rollUp;
+    public Output<PrimaryStepRollUp> getRollUp() {
+        return this.rollUp == null ? Output.empty() : this.rollUp;
     }
 
     public PrimaryStepArgs(
-        @Nullable Input<List<IndividualOutcomeArgs>> individualOutcome,
-        @Nullable Input<PrimaryStepRollUp> rollUp) {
+        @Nullable Output<List<IndividualOutcomeArgs>> individualOutcome,
+        @Nullable Output<PrimaryStepRollUp> rollUp) {
         this.individualOutcome = individualOutcome;
         this.rollUp = rollUp;
     }
 
     private PrimaryStepArgs() {
-        this.individualOutcome = Input.empty();
-        this.rollUp = Input.empty();
+        this.individualOutcome = Output.empty();
+        this.rollUp = Output.empty();
     }
 
     public static Builder builder() {
@@ -63,8 +63,8 @@ public final class PrimaryStepArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<List<IndividualOutcomeArgs>> individualOutcome;
-        private @Nullable Input<PrimaryStepRollUp> rollUp;
+        private @Nullable Output<List<IndividualOutcomeArgs>> individualOutcome;
+        private @Nullable Output<PrimaryStepRollUp> rollUp;
 
         public Builder() {
     	      // Empty
@@ -76,23 +76,23 @@ public final class PrimaryStepArgs extends io.pulumi.resources.ResourceArgs {
     	      this.rollUp = defaults.rollUp;
         }
 
-        public Builder individualOutcome(@Nullable Input<List<IndividualOutcomeArgs>> individualOutcome) {
+        public Builder individualOutcome(@Nullable Output<List<IndividualOutcomeArgs>> individualOutcome) {
             this.individualOutcome = individualOutcome;
             return this;
         }
 
         public Builder individualOutcome(@Nullable List<IndividualOutcomeArgs> individualOutcome) {
-            this.individualOutcome = Input.ofNullable(individualOutcome);
+            this.individualOutcome = Output.ofNullable(individualOutcome);
             return this;
         }
 
-        public Builder rollUp(@Nullable Input<PrimaryStepRollUp> rollUp) {
+        public Builder rollUp(@Nullable Output<PrimaryStepRollUp> rollUp) {
             this.rollUp = rollUp;
             return this;
         }
 
         public Builder rollUp(@Nullable PrimaryStepRollUp rollUp) {
-            this.rollUp = Input.ofNullable(rollUp);
+            this.rollUp = Output.ofNullable(rollUp);
             return this;
         }
         public PrimaryStepArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.appstream.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -20,10 +20,10 @@ public final class ImageBuilderVpcConfigGetArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="securityGroupIds")
-      private final @Nullable Input<List<String>> securityGroupIds;
+      private final @Nullable Output<List<String>> securityGroupIds;
 
-    public Input<List<String>> getSecurityGroupIds() {
-        return this.securityGroupIds == null ? Input.empty() : this.securityGroupIds;
+    public Output<List<String>> getSecurityGroupIds() {
+        return this.securityGroupIds == null ? Output.empty() : this.securityGroupIds;
     }
 
     /**
@@ -31,22 +31,22 @@ public final class ImageBuilderVpcConfigGetArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="subnetIds")
-      private final @Nullable Input<List<String>> subnetIds;
+      private final @Nullable Output<List<String>> subnetIds;
 
-    public Input<List<String>> getSubnetIds() {
-        return this.subnetIds == null ? Input.empty() : this.subnetIds;
+    public Output<List<String>> getSubnetIds() {
+        return this.subnetIds == null ? Output.empty() : this.subnetIds;
     }
 
     public ImageBuilderVpcConfigGetArgs(
-        @Nullable Input<List<String>> securityGroupIds,
-        @Nullable Input<List<String>> subnetIds) {
+        @Nullable Output<List<String>> securityGroupIds,
+        @Nullable Output<List<String>> subnetIds) {
         this.securityGroupIds = securityGroupIds;
         this.subnetIds = subnetIds;
     }
 
     private ImageBuilderVpcConfigGetArgs() {
-        this.securityGroupIds = Input.empty();
-        this.subnetIds = Input.empty();
+        this.securityGroupIds = Output.empty();
+        this.subnetIds = Output.empty();
     }
 
     public static Builder builder() {
@@ -58,8 +58,8 @@ public final class ImageBuilderVpcConfigGetArgs extends io.pulumi.resources.Reso
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> securityGroupIds;
-        private @Nullable Input<List<String>> subnetIds;
+        private @Nullable Output<List<String>> securityGroupIds;
+        private @Nullable Output<List<String>> subnetIds;
 
         public Builder() {
     	      // Empty
@@ -71,23 +71,23 @@ public final class ImageBuilderVpcConfigGetArgs extends io.pulumi.resources.Reso
     	      this.subnetIds = defaults.subnetIds;
         }
 
-        public Builder securityGroupIds(@Nullable Input<List<String>> securityGroupIds) {
+        public Builder securityGroupIds(@Nullable Output<List<String>> securityGroupIds) {
             this.securityGroupIds = securityGroupIds;
             return this;
         }
 
         public Builder securityGroupIds(@Nullable List<String> securityGroupIds) {
-            this.securityGroupIds = Input.ofNullable(securityGroupIds);
+            this.securityGroupIds = Output.ofNullable(securityGroupIds);
             return this;
         }
 
-        public Builder subnetIds(@Nullable Input<List<String>> subnetIds) {
+        public Builder subnetIds(@Nullable Output<List<String>> subnetIds) {
             this.subnetIds = subnetIds;
             return this;
         }
 
         public Builder subnetIds(@Nullable List<String> subnetIds) {
-            this.subnetIds = Input.ofNullable(subnetIds);
+            this.subnetIds = Output.ofNullable(subnetIds);
             return this;
         }
         public ImageBuilderVpcConfigGetArgs build() {

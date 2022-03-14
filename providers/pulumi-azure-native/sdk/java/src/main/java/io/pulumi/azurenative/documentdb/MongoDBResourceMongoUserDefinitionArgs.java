@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.documentdb;
 
 import io.pulumi.azurenative.documentdb.inputs.RoleArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -21,9 +21,9 @@ public final class MongoDBResourceMongoUserDefinitionArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="accountName", required=true)
-      private final Input<String> accountName;
+      private final Output<String> accountName;
 
-    public Input<String> getAccountName() {
+    public Output<String> getAccountName() {
         return this.accountName;
     }
 
@@ -32,10 +32,10 @@ public final class MongoDBResourceMongoUserDefinitionArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="customData")
-      private final @Nullable Input<String> customData;
+      private final @Nullable Output<String> customData;
 
-    public Input<String> getCustomData() {
-        return this.customData == null ? Input.empty() : this.customData;
+    public Output<String> getCustomData() {
+        return this.customData == null ? Output.empty() : this.customData;
     }
 
     /**
@@ -43,10 +43,10 @@ public final class MongoDBResourceMongoUserDefinitionArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="databaseName")
-      private final @Nullable Input<String> databaseName;
+      private final @Nullable Output<String> databaseName;
 
-    public Input<String> getDatabaseName() {
-        return this.databaseName == null ? Input.empty() : this.databaseName;
+    public Output<String> getDatabaseName() {
+        return this.databaseName == null ? Output.empty() : this.databaseName;
     }
 
     /**
@@ -54,10 +54,10 @@ public final class MongoDBResourceMongoUserDefinitionArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="mechanisms")
-      private final @Nullable Input<String> mechanisms;
+      private final @Nullable Output<String> mechanisms;
 
-    public Input<String> getMechanisms() {
-        return this.mechanisms == null ? Input.empty() : this.mechanisms;
+    public Output<String> getMechanisms() {
+        return this.mechanisms == null ? Output.empty() : this.mechanisms;
     }
 
     /**
@@ -65,10 +65,10 @@ public final class MongoDBResourceMongoUserDefinitionArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="mongoUserDefinitionId")
-      private final @Nullable Input<String> mongoUserDefinitionId;
+      private final @Nullable Output<String> mongoUserDefinitionId;
 
-    public Input<String> getMongoUserDefinitionId() {
-        return this.mongoUserDefinitionId == null ? Input.empty() : this.mongoUserDefinitionId;
+    public Output<String> getMongoUserDefinitionId() {
+        return this.mongoUserDefinitionId == null ? Output.empty() : this.mongoUserDefinitionId;
     }
 
     /**
@@ -76,10 +76,10 @@ public final class MongoDBResourceMongoUserDefinitionArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="password")
-      private final @Nullable Input<String> password;
+      private final @Nullable Output<String> password;
 
-    public Input<String> getPassword() {
-        return this.password == null ? Input.empty() : this.password;
+    public Output<String> getPassword() {
+        return this.password == null ? Output.empty() : this.password;
     }
 
     /**
@@ -87,9 +87,9 @@ public final class MongoDBResourceMongoUserDefinitionArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -98,10 +98,10 @@ public final class MongoDBResourceMongoUserDefinitionArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="roles")
-      private final @Nullable Input<List<RoleArgs>> roles;
+      private final @Nullable Output<List<RoleArgs>> roles;
 
-    public Input<List<RoleArgs>> getRoles() {
-        return this.roles == null ? Input.empty() : this.roles;
+    public Output<List<RoleArgs>> getRoles() {
+        return this.roles == null ? Output.empty() : this.roles;
     }
 
     /**
@@ -109,22 +109,22 @@ public final class MongoDBResourceMongoUserDefinitionArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="userName")
-      private final @Nullable Input<String> userName;
+      private final @Nullable Output<String> userName;
 
-    public Input<String> getUserName() {
-        return this.userName == null ? Input.empty() : this.userName;
+    public Output<String> getUserName() {
+        return this.userName == null ? Output.empty() : this.userName;
     }
 
     public MongoDBResourceMongoUserDefinitionArgs(
-        Input<String> accountName,
-        @Nullable Input<String> customData,
-        @Nullable Input<String> databaseName,
-        @Nullable Input<String> mechanisms,
-        @Nullable Input<String> mongoUserDefinitionId,
-        @Nullable Input<String> password,
-        Input<String> resourceGroupName,
-        @Nullable Input<List<RoleArgs>> roles,
-        @Nullable Input<String> userName) {
+        Output<String> accountName,
+        @Nullable Output<String> customData,
+        @Nullable Output<String> databaseName,
+        @Nullable Output<String> mechanisms,
+        @Nullable Output<String> mongoUserDefinitionId,
+        @Nullable Output<String> password,
+        Output<String> resourceGroupName,
+        @Nullable Output<List<RoleArgs>> roles,
+        @Nullable Output<String> userName) {
         this.accountName = Objects.requireNonNull(accountName, "expected parameter 'accountName' to be non-null");
         this.customData = customData;
         this.databaseName = databaseName;
@@ -137,15 +137,15 @@ public final class MongoDBResourceMongoUserDefinitionArgs extends io.pulumi.reso
     }
 
     private MongoDBResourceMongoUserDefinitionArgs() {
-        this.accountName = Input.empty();
-        this.customData = Input.empty();
-        this.databaseName = Input.empty();
-        this.mechanisms = Input.empty();
-        this.mongoUserDefinitionId = Input.empty();
-        this.password = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.roles = Input.empty();
-        this.userName = Input.empty();
+        this.accountName = Output.empty();
+        this.customData = Output.empty();
+        this.databaseName = Output.empty();
+        this.mechanisms = Output.empty();
+        this.mongoUserDefinitionId = Output.empty();
+        this.password = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.roles = Output.empty();
+        this.userName = Output.empty();
     }
 
     public static Builder builder() {
@@ -157,15 +157,15 @@ public final class MongoDBResourceMongoUserDefinitionArgs extends io.pulumi.reso
     }
 
     public static final class Builder {
-        private Input<String> accountName;
-        private @Nullable Input<String> customData;
-        private @Nullable Input<String> databaseName;
-        private @Nullable Input<String> mechanisms;
-        private @Nullable Input<String> mongoUserDefinitionId;
-        private @Nullable Input<String> password;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<List<RoleArgs>> roles;
-        private @Nullable Input<String> userName;
+        private Output<String> accountName;
+        private @Nullable Output<String> customData;
+        private @Nullable Output<String> databaseName;
+        private @Nullable Output<String> mechanisms;
+        private @Nullable Output<String> mongoUserDefinitionId;
+        private @Nullable Output<String> password;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<List<RoleArgs>> roles;
+        private @Nullable Output<String> userName;
 
         public Builder() {
     	      // Empty
@@ -184,93 +184,93 @@ public final class MongoDBResourceMongoUserDefinitionArgs extends io.pulumi.reso
     	      this.userName = defaults.userName;
         }
 
-        public Builder accountName(Input<String> accountName) {
+        public Builder accountName(Output<String> accountName) {
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
 
         public Builder accountName(String accountName) {
-            this.accountName = Input.of(Objects.requireNonNull(accountName));
+            this.accountName = Output.of(Objects.requireNonNull(accountName));
             return this;
         }
 
-        public Builder customData(@Nullable Input<String> customData) {
+        public Builder customData(@Nullable Output<String> customData) {
             this.customData = customData;
             return this;
         }
 
         public Builder customData(@Nullable String customData) {
-            this.customData = Input.ofNullable(customData);
+            this.customData = Output.ofNullable(customData);
             return this;
         }
 
-        public Builder databaseName(@Nullable Input<String> databaseName) {
+        public Builder databaseName(@Nullable Output<String> databaseName) {
             this.databaseName = databaseName;
             return this;
         }
 
         public Builder databaseName(@Nullable String databaseName) {
-            this.databaseName = Input.ofNullable(databaseName);
+            this.databaseName = Output.ofNullable(databaseName);
             return this;
         }
 
-        public Builder mechanisms(@Nullable Input<String> mechanisms) {
+        public Builder mechanisms(@Nullable Output<String> mechanisms) {
             this.mechanisms = mechanisms;
             return this;
         }
 
         public Builder mechanisms(@Nullable String mechanisms) {
-            this.mechanisms = Input.ofNullable(mechanisms);
+            this.mechanisms = Output.ofNullable(mechanisms);
             return this;
         }
 
-        public Builder mongoUserDefinitionId(@Nullable Input<String> mongoUserDefinitionId) {
+        public Builder mongoUserDefinitionId(@Nullable Output<String> mongoUserDefinitionId) {
             this.mongoUserDefinitionId = mongoUserDefinitionId;
             return this;
         }
 
         public Builder mongoUserDefinitionId(@Nullable String mongoUserDefinitionId) {
-            this.mongoUserDefinitionId = Input.ofNullable(mongoUserDefinitionId);
+            this.mongoUserDefinitionId = Output.ofNullable(mongoUserDefinitionId);
             return this;
         }
 
-        public Builder password(@Nullable Input<String> password) {
+        public Builder password(@Nullable Output<String> password) {
             this.password = password;
             return this;
         }
 
         public Builder password(@Nullable String password) {
-            this.password = Input.ofNullable(password);
+            this.password = Output.ofNullable(password);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder roles(@Nullable Input<List<RoleArgs>> roles) {
+        public Builder roles(@Nullable Output<List<RoleArgs>> roles) {
             this.roles = roles;
             return this;
         }
 
         public Builder roles(@Nullable List<RoleArgs> roles) {
-            this.roles = Input.ofNullable(roles);
+            this.roles = Output.ofNullable(roles);
             return this;
         }
 
-        public Builder userName(@Nullable Input<String> userName) {
+        public Builder userName(@Nullable Output<String> userName) {
             this.userName = userName;
             return this;
         }
 
         public Builder userName(@Nullable String userName) {
-            this.userName = Input.ofNullable(userName);
+            this.userName = Output.ofNullable(userName);
             return this;
         }
         public MongoDBResourceMongoUserDefinitionArgs build() {

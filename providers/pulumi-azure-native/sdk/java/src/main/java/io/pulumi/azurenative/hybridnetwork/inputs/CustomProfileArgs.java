@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.hybridnetwork.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class CustomProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="metadataConfigurationPath")
-      private final @Nullable Input<String> metadataConfigurationPath;
+      private final @Nullable Output<String> metadataConfigurationPath;
 
-    public Input<String> getMetadataConfigurationPath() {
-        return this.metadataConfigurationPath == null ? Input.empty() : this.metadataConfigurationPath;
+    public Output<String> getMetadataConfigurationPath() {
+        return this.metadataConfigurationPath == null ? Output.empty() : this.metadataConfigurationPath;
     }
 
-    public CustomProfileArgs(@Nullable Input<String> metadataConfigurationPath) {
+    public CustomProfileArgs(@Nullable Output<String> metadataConfigurationPath) {
         this.metadataConfigurationPath = metadataConfigurationPath;
     }
 
     private CustomProfileArgs() {
-        this.metadataConfigurationPath = Input.empty();
+        this.metadataConfigurationPath = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class CustomProfileArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> metadataConfigurationPath;
+        private @Nullable Output<String> metadataConfigurationPath;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class CustomProfileArgs extends io.pulumi.resources.ResourceArgs {
     	      this.metadataConfigurationPath = defaults.metadataConfigurationPath;
         }
 
-        public Builder metadataConfigurationPath(@Nullable Input<String> metadataConfigurationPath) {
+        public Builder metadataConfigurationPath(@Nullable Output<String> metadataConfigurationPath) {
             this.metadataConfigurationPath = metadataConfigurationPath;
             return this;
         }
 
         public Builder metadataConfigurationPath(@Nullable String metadataConfigurationPath) {
-            this.metadataConfigurationPath = Input.ofNullable(metadataConfigurationPath);
+            this.metadataConfigurationPath = Output.ofNullable(metadataConfigurationPath);
             return this;
         }
         public CustomProfileArgs build() {

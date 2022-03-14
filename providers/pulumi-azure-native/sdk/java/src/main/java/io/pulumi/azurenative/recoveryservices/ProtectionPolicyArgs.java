@@ -9,7 +9,7 @@ import io.pulumi.azurenative.recoveryservices.inputs.AzureSqlProtectionPolicyArg
 import io.pulumi.azurenative.recoveryservices.inputs.AzureVmWorkloadProtectionPolicyArgs;
 import io.pulumi.azurenative.recoveryservices.inputs.GenericProtectionPolicyArgs;
 import io.pulumi.azurenative.recoveryservices.inputs.MabProtectionPolicyArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
@@ -27,10 +27,10 @@ public final class ProtectionPolicyArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="eTag")
-      private final @Nullable Input<String> eTag;
+      private final @Nullable Output<String> eTag;
 
-    public Input<String> getETag() {
-        return this.eTag == null ? Input.empty() : this.eTag;
+    public Output<String> getETag() {
+        return this.eTag == null ? Output.empty() : this.eTag;
     }
 
     /**
@@ -38,10 +38,10 @@ public final class ProtectionPolicyArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -49,10 +49,10 @@ public final class ProtectionPolicyArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="policyName")
-      private final @Nullable Input<String> policyName;
+      private final @Nullable Output<String> policyName;
 
-    public Input<String> getPolicyName() {
-        return this.policyName == null ? Input.empty() : this.policyName;
+    public Output<String> getPolicyName() {
+        return this.policyName == null ? Output.empty() : this.policyName;
     }
 
     /**
@@ -60,10 +60,10 @@ public final class ProtectionPolicyArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="properties")
-      private final @Nullable Input<Object> properties;
+      private final @Nullable Output<Object> properties;
 
-    public Input<Object> getProperties() {
-        return this.properties == null ? Input.empty() : this.properties;
+    public Output<Object> getProperties() {
+        return this.properties == null ? Output.empty() : this.properties;
     }
 
     /**
@@ -71,9 +71,9 @@ public final class ProtectionPolicyArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -82,10 +82,10 @@ public final class ProtectionPolicyArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -93,20 +93,20 @@ public final class ProtectionPolicyArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="vaultName", required=true)
-      private final Input<String> vaultName;
+      private final Output<String> vaultName;
 
-    public Input<String> getVaultName() {
+    public Output<String> getVaultName() {
         return this.vaultName;
     }
 
     public ProtectionPolicyArgs(
-        @Nullable Input<String> eTag,
-        @Nullable Input<String> location,
-        @Nullable Input<String> policyName,
-        @Nullable Input<Object> properties,
-        Input<String> resourceGroupName,
-        @Nullable Input<Map<String,String>> tags,
-        Input<String> vaultName) {
+        @Nullable Output<String> eTag,
+        @Nullable Output<String> location,
+        @Nullable Output<String> policyName,
+        @Nullable Output<Object> properties,
+        Output<String> resourceGroupName,
+        @Nullable Output<Map<String,String>> tags,
+        Output<String> vaultName) {
         this.eTag = eTag;
         this.location = location;
         this.policyName = policyName;
@@ -117,13 +117,13 @@ public final class ProtectionPolicyArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private ProtectionPolicyArgs() {
-        this.eTag = Input.empty();
-        this.location = Input.empty();
-        this.policyName = Input.empty();
-        this.properties = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.tags = Input.empty();
-        this.vaultName = Input.empty();
+        this.eTag = Output.empty();
+        this.location = Output.empty();
+        this.policyName = Output.empty();
+        this.properties = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.tags = Output.empty();
+        this.vaultName = Output.empty();
     }
 
     public static Builder builder() {
@@ -135,13 +135,13 @@ public final class ProtectionPolicyArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private @Nullable Input<String> eTag;
-        private @Nullable Input<String> location;
-        private @Nullable Input<String> policyName;
-        private @Nullable Input<Object> properties;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<Map<String,String>> tags;
-        private Input<String> vaultName;
+        private @Nullable Output<String> eTag;
+        private @Nullable Output<String> location;
+        private @Nullable Output<String> policyName;
+        private @Nullable Output<Object> properties;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<Map<String,String>> tags;
+        private Output<String> vaultName;
 
         public Builder() {
     	      // Empty
@@ -158,73 +158,73 @@ public final class ProtectionPolicyArgs extends io.pulumi.resources.ResourceArgs
     	      this.vaultName = defaults.vaultName;
         }
 
-        public Builder eTag(@Nullable Input<String> eTag) {
+        public Builder eTag(@Nullable Output<String> eTag) {
             this.eTag = eTag;
             return this;
         }
 
         public Builder eTag(@Nullable String eTag) {
-            this.eTag = Input.ofNullable(eTag);
+            this.eTag = Output.ofNullable(eTag);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder policyName(@Nullable Input<String> policyName) {
+        public Builder policyName(@Nullable Output<String> policyName) {
             this.policyName = policyName;
             return this;
         }
 
         public Builder policyName(@Nullable String policyName) {
-            this.policyName = Input.ofNullable(policyName);
+            this.policyName = Output.ofNullable(policyName);
             return this;
         }
 
-        public Builder properties(@Nullable Input<Object> properties) {
+        public Builder properties(@Nullable Output<Object> properties) {
             this.properties = properties;
             return this;
         }
 
         public Builder properties(@Nullable Object properties) {
-            this.properties = Input.ofNullable(properties);
+            this.properties = Output.ofNullable(properties);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder vaultName(Input<String> vaultName) {
+        public Builder vaultName(Output<String> vaultName) {
             this.vaultName = Objects.requireNonNull(vaultName);
             return this;
         }
 
         public Builder vaultName(String vaultName) {
-            this.vaultName = Input.of(Objects.requireNonNull(vaultName));
+            this.vaultName = Output.of(Objects.requireNonNull(vaultName));
             return this;
         }
         public ProtectionPolicyArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.dataloss.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.dataloss.inputs.PreventionStoredInfoTypeDictionaryGetArgs;
 import io.pulumi.gcp.dataloss.inputs.PreventionStoredInfoTypeLargeCustomDictionaryGetArgs;
@@ -22,10 +22,10 @@ public final class PreventionStoredInfoTypeState extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class PreventionStoredInfoTypeState extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="dictionary")
-      private final @Nullable Input<PreventionStoredInfoTypeDictionaryGetArgs> dictionary;
+      private final @Nullable Output<PreventionStoredInfoTypeDictionaryGetArgs> dictionary;
 
-    public Input<PreventionStoredInfoTypeDictionaryGetArgs> getDictionary() {
-        return this.dictionary == null ? Input.empty() : this.dictionary;
+    public Output<PreventionStoredInfoTypeDictionaryGetArgs> getDictionary() {
+        return this.dictionary == null ? Output.empty() : this.dictionary;
     }
 
     /**
@@ -45,10 +45,10 @@ public final class PreventionStoredInfoTypeState extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="displayName")
-      private final @Nullable Input<String> displayName;
+      private final @Nullable Output<String> displayName;
 
-    public Input<String> getDisplayName() {
-        return this.displayName == null ? Input.empty() : this.displayName;
+    public Output<String> getDisplayName() {
+        return this.displayName == null ? Output.empty() : this.displayName;
     }
 
     /**
@@ -57,10 +57,10 @@ public final class PreventionStoredInfoTypeState extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="largeCustomDictionary")
-      private final @Nullable Input<PreventionStoredInfoTypeLargeCustomDictionaryGetArgs> largeCustomDictionary;
+      private final @Nullable Output<PreventionStoredInfoTypeLargeCustomDictionaryGetArgs> largeCustomDictionary;
 
-    public Input<PreventionStoredInfoTypeLargeCustomDictionaryGetArgs> getLargeCustomDictionary() {
-        return this.largeCustomDictionary == null ? Input.empty() : this.largeCustomDictionary;
+    public Output<PreventionStoredInfoTypeLargeCustomDictionaryGetArgs> getLargeCustomDictionary() {
+        return this.largeCustomDictionary == null ? Output.empty() : this.largeCustomDictionary;
     }
 
     /**
@@ -68,10 +68,10 @@ public final class PreventionStoredInfoTypeState extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -83,10 +83,10 @@ public final class PreventionStoredInfoTypeState extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="parent")
-      private final @Nullable Input<String> parent;
+      private final @Nullable Output<String> parent;
 
-    public Input<String> getParent() {
-        return this.parent == null ? Input.empty() : this.parent;
+    public Output<String> getParent() {
+        return this.parent == null ? Output.empty() : this.parent;
     }
 
     /**
@@ -95,20 +95,20 @@ public final class PreventionStoredInfoTypeState extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="regex")
-      private final @Nullable Input<PreventionStoredInfoTypeRegexGetArgs> regex;
+      private final @Nullable Output<PreventionStoredInfoTypeRegexGetArgs> regex;
 
-    public Input<PreventionStoredInfoTypeRegexGetArgs> getRegex() {
-        return this.regex == null ? Input.empty() : this.regex;
+    public Output<PreventionStoredInfoTypeRegexGetArgs> getRegex() {
+        return this.regex == null ? Output.empty() : this.regex;
     }
 
     public PreventionStoredInfoTypeState(
-        @Nullable Input<String> description,
-        @Nullable Input<PreventionStoredInfoTypeDictionaryGetArgs> dictionary,
-        @Nullable Input<String> displayName,
-        @Nullable Input<PreventionStoredInfoTypeLargeCustomDictionaryGetArgs> largeCustomDictionary,
-        @Nullable Input<String> name,
-        @Nullable Input<String> parent,
-        @Nullable Input<PreventionStoredInfoTypeRegexGetArgs> regex) {
+        @Nullable Output<String> description,
+        @Nullable Output<PreventionStoredInfoTypeDictionaryGetArgs> dictionary,
+        @Nullable Output<String> displayName,
+        @Nullable Output<PreventionStoredInfoTypeLargeCustomDictionaryGetArgs> largeCustomDictionary,
+        @Nullable Output<String> name,
+        @Nullable Output<String> parent,
+        @Nullable Output<PreventionStoredInfoTypeRegexGetArgs> regex) {
         this.description = description;
         this.dictionary = dictionary;
         this.displayName = displayName;
@@ -119,13 +119,13 @@ public final class PreventionStoredInfoTypeState extends io.pulumi.resources.Res
     }
 
     private PreventionStoredInfoTypeState() {
-        this.description = Input.empty();
-        this.dictionary = Input.empty();
-        this.displayName = Input.empty();
-        this.largeCustomDictionary = Input.empty();
-        this.name = Input.empty();
-        this.parent = Input.empty();
-        this.regex = Input.empty();
+        this.description = Output.empty();
+        this.dictionary = Output.empty();
+        this.displayName = Output.empty();
+        this.largeCustomDictionary = Output.empty();
+        this.name = Output.empty();
+        this.parent = Output.empty();
+        this.regex = Output.empty();
     }
 
     public static Builder builder() {
@@ -137,13 +137,13 @@ public final class PreventionStoredInfoTypeState extends io.pulumi.resources.Res
     }
 
     public static final class Builder {
-        private @Nullable Input<String> description;
-        private @Nullable Input<PreventionStoredInfoTypeDictionaryGetArgs> dictionary;
-        private @Nullable Input<String> displayName;
-        private @Nullable Input<PreventionStoredInfoTypeLargeCustomDictionaryGetArgs> largeCustomDictionary;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> parent;
-        private @Nullable Input<PreventionStoredInfoTypeRegexGetArgs> regex;
+        private @Nullable Output<String> description;
+        private @Nullable Output<PreventionStoredInfoTypeDictionaryGetArgs> dictionary;
+        private @Nullable Output<String> displayName;
+        private @Nullable Output<PreventionStoredInfoTypeLargeCustomDictionaryGetArgs> largeCustomDictionary;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> parent;
+        private @Nullable Output<PreventionStoredInfoTypeRegexGetArgs> regex;
 
         public Builder() {
     	      // Empty
@@ -160,73 +160,73 @@ public final class PreventionStoredInfoTypeState extends io.pulumi.resources.Res
     	      this.regex = defaults.regex;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder dictionary(@Nullable Input<PreventionStoredInfoTypeDictionaryGetArgs> dictionary) {
+        public Builder dictionary(@Nullable Output<PreventionStoredInfoTypeDictionaryGetArgs> dictionary) {
             this.dictionary = dictionary;
             return this;
         }
 
         public Builder dictionary(@Nullable PreventionStoredInfoTypeDictionaryGetArgs dictionary) {
-            this.dictionary = Input.ofNullable(dictionary);
+            this.dictionary = Output.ofNullable(dictionary);
             return this;
         }
 
-        public Builder displayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Input.ofNullable(displayName);
+            this.displayName = Output.ofNullable(displayName);
             return this;
         }
 
-        public Builder largeCustomDictionary(@Nullable Input<PreventionStoredInfoTypeLargeCustomDictionaryGetArgs> largeCustomDictionary) {
+        public Builder largeCustomDictionary(@Nullable Output<PreventionStoredInfoTypeLargeCustomDictionaryGetArgs> largeCustomDictionary) {
             this.largeCustomDictionary = largeCustomDictionary;
             return this;
         }
 
         public Builder largeCustomDictionary(@Nullable PreventionStoredInfoTypeLargeCustomDictionaryGetArgs largeCustomDictionary) {
-            this.largeCustomDictionary = Input.ofNullable(largeCustomDictionary);
+            this.largeCustomDictionary = Output.ofNullable(largeCustomDictionary);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder parent(@Nullable Input<String> parent) {
+        public Builder parent(@Nullable Output<String> parent) {
             this.parent = parent;
             return this;
         }
 
         public Builder parent(@Nullable String parent) {
-            this.parent = Input.ofNullable(parent);
+            this.parent = Output.ofNullable(parent);
             return this;
         }
 
-        public Builder regex(@Nullable Input<PreventionStoredInfoTypeRegexGetArgs> regex) {
+        public Builder regex(@Nullable Output<PreventionStoredInfoTypeRegexGetArgs> regex) {
             this.regex = regex;
             return this;
         }
 
         public Builder regex(@Nullable PreventionStoredInfoTypeRegexGetArgs regex) {
-            this.regex = Input.ofNullable(regex);
+            this.regex = Output.ofNullable(regex);
             return this;
         }
         public PreventionStoredInfoTypeState build() {

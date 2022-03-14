@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.iot.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
@@ -18,18 +18,18 @@ public final class TimeoutConfigPropertiesArgs extends io.pulumi.resources.Resou
     public static final TimeoutConfigPropertiesArgs Empty = new TimeoutConfigPropertiesArgs();
 
     @InputImport(name="inProgressTimeoutInMinutes", required=true)
-      private final Input<Integer> inProgressTimeoutInMinutes;
+      private final Output<Integer> inProgressTimeoutInMinutes;
 
-    public Input<Integer> getInProgressTimeoutInMinutes() {
+    public Output<Integer> getInProgressTimeoutInMinutes() {
         return this.inProgressTimeoutInMinutes;
     }
 
-    public TimeoutConfigPropertiesArgs(Input<Integer> inProgressTimeoutInMinutes) {
+    public TimeoutConfigPropertiesArgs(Output<Integer> inProgressTimeoutInMinutes) {
         this.inProgressTimeoutInMinutes = Objects.requireNonNull(inProgressTimeoutInMinutes, "expected parameter 'inProgressTimeoutInMinutes' to be non-null");
     }
 
     private TimeoutConfigPropertiesArgs() {
-        this.inProgressTimeoutInMinutes = Input.empty();
+        this.inProgressTimeoutInMinutes = Output.empty();
     }
 
     public static Builder builder() {
@@ -41,7 +41,7 @@ public final class TimeoutConfigPropertiesArgs extends io.pulumi.resources.Resou
     }
 
     public static final class Builder {
-        private Input<Integer> inProgressTimeoutInMinutes;
+        private Output<Integer> inProgressTimeoutInMinutes;
 
         public Builder() {
     	      // Empty
@@ -52,13 +52,13 @@ public final class TimeoutConfigPropertiesArgs extends io.pulumi.resources.Resou
     	      this.inProgressTimeoutInMinutes = defaults.inProgressTimeoutInMinutes;
         }
 
-        public Builder inProgressTimeoutInMinutes(Input<Integer> inProgressTimeoutInMinutes) {
+        public Builder inProgressTimeoutInMinutes(Output<Integer> inProgressTimeoutInMinutes) {
             this.inProgressTimeoutInMinutes = Objects.requireNonNull(inProgressTimeoutInMinutes);
             return this;
         }
 
         public Builder inProgressTimeoutInMinutes(Integer inProgressTimeoutInMinutes) {
-            this.inProgressTimeoutInMinutes = Input.of(Objects.requireNonNull(inProgressTimeoutInMinutes));
+            this.inProgressTimeoutInMinutes = Output.of(Objects.requireNonNull(inProgressTimeoutInMinutes));
             return this;
         }
         public TimeoutConfigPropertiesArgs build() {

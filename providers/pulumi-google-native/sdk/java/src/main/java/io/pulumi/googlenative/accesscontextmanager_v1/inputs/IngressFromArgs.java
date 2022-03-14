@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.accesscontextmanager_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.accesscontextmanager_v1.enums.IngressFromIdentityType;
 import io.pulumi.googlenative.accesscontextmanager_v1.inputs.IngressSourceArgs;
@@ -26,10 +26,10 @@ public final class IngressFromArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="identities")
-      private final @Nullable Input<List<String>> identities;
+      private final @Nullable Output<List<String>> identities;
 
-    public Input<List<String>> getIdentities() {
-        return this.identities == null ? Input.empty() : this.identities;
+    public Output<List<String>> getIdentities() {
+        return this.identities == null ? Output.empty() : this.identities;
     }
 
     /**
@@ -37,10 +37,10 @@ public final class IngressFromArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="identityType")
-      private final @Nullable Input<IngressFromIdentityType> identityType;
+      private final @Nullable Output<IngressFromIdentityType> identityType;
 
-    public Input<IngressFromIdentityType> getIdentityType() {
-        return this.identityType == null ? Input.empty() : this.identityType;
+    public Output<IngressFromIdentityType> getIdentityType() {
+        return this.identityType == null ? Output.empty() : this.identityType;
     }
 
     /**
@@ -48,25 +48,25 @@ public final class IngressFromArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sources")
-      private final @Nullable Input<List<IngressSourceArgs>> sources;
+      private final @Nullable Output<List<IngressSourceArgs>> sources;
 
-    public Input<List<IngressSourceArgs>> getSources() {
-        return this.sources == null ? Input.empty() : this.sources;
+    public Output<List<IngressSourceArgs>> getSources() {
+        return this.sources == null ? Output.empty() : this.sources;
     }
 
     public IngressFromArgs(
-        @Nullable Input<List<String>> identities,
-        @Nullable Input<IngressFromIdentityType> identityType,
-        @Nullable Input<List<IngressSourceArgs>> sources) {
+        @Nullable Output<List<String>> identities,
+        @Nullable Output<IngressFromIdentityType> identityType,
+        @Nullable Output<List<IngressSourceArgs>> sources) {
         this.identities = identities;
         this.identityType = identityType;
         this.sources = sources;
     }
 
     private IngressFromArgs() {
-        this.identities = Input.empty();
-        this.identityType = Input.empty();
-        this.sources = Input.empty();
+        this.identities = Output.empty();
+        this.identityType = Output.empty();
+        this.sources = Output.empty();
     }
 
     public static Builder builder() {
@@ -78,9 +78,9 @@ public final class IngressFromArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> identities;
-        private @Nullable Input<IngressFromIdentityType> identityType;
-        private @Nullable Input<List<IngressSourceArgs>> sources;
+        private @Nullable Output<List<String>> identities;
+        private @Nullable Output<IngressFromIdentityType> identityType;
+        private @Nullable Output<List<IngressSourceArgs>> sources;
 
         public Builder() {
     	      // Empty
@@ -93,33 +93,33 @@ public final class IngressFromArgs extends io.pulumi.resources.ResourceArgs {
     	      this.sources = defaults.sources;
         }
 
-        public Builder identities(@Nullable Input<List<String>> identities) {
+        public Builder identities(@Nullable Output<List<String>> identities) {
             this.identities = identities;
             return this;
         }
 
         public Builder identities(@Nullable List<String> identities) {
-            this.identities = Input.ofNullable(identities);
+            this.identities = Output.ofNullable(identities);
             return this;
         }
 
-        public Builder identityType(@Nullable Input<IngressFromIdentityType> identityType) {
+        public Builder identityType(@Nullable Output<IngressFromIdentityType> identityType) {
             this.identityType = identityType;
             return this;
         }
 
         public Builder identityType(@Nullable IngressFromIdentityType identityType) {
-            this.identityType = Input.ofNullable(identityType);
+            this.identityType = Output.ofNullable(identityType);
             return this;
         }
 
-        public Builder sources(@Nullable Input<List<IngressSourceArgs>> sources) {
+        public Builder sources(@Nullable Output<List<IngressSourceArgs>> sources) {
             this.sources = sources;
             return this;
         }
 
         public Builder sources(@Nullable List<IngressSourceArgs> sources) {
-            this.sources = Input.ofNullable(sources);
+            this.sources = Output.ofNullable(sources);
             return this;
         }
         public IngressFromArgs build() {

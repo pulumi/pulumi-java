@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.wafv2.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -22,18 +22,18 @@ public final class LoggingConfigurationConditionLabelNameConditionPropertiesArgs
      * 
      */
     @InputImport(name="labelName", required=true)
-      private final Input<String> labelName;
+      private final Output<String> labelName;
 
-    public Input<String> getLabelName() {
+    public Output<String> getLabelName() {
         return this.labelName;
     }
 
-    public LoggingConfigurationConditionLabelNameConditionPropertiesArgs(Input<String> labelName) {
+    public LoggingConfigurationConditionLabelNameConditionPropertiesArgs(Output<String> labelName) {
         this.labelName = Objects.requireNonNull(labelName, "expected parameter 'labelName' to be non-null");
     }
 
     private LoggingConfigurationConditionLabelNameConditionPropertiesArgs() {
-        this.labelName = Input.empty();
+        this.labelName = Output.empty();
     }
 
     public static Builder builder() {
@@ -45,7 +45,7 @@ public final class LoggingConfigurationConditionLabelNameConditionPropertiesArgs
     }
 
     public static final class Builder {
-        private Input<String> labelName;
+        private Output<String> labelName;
 
         public Builder() {
     	      // Empty
@@ -56,13 +56,13 @@ public final class LoggingConfigurationConditionLabelNameConditionPropertiesArgs
     	      this.labelName = defaults.labelName;
         }
 
-        public Builder labelName(Input<String> labelName) {
+        public Builder labelName(Output<String> labelName) {
             this.labelName = Objects.requireNonNull(labelName);
             return this;
         }
 
         public Builder labelName(String labelName) {
-            this.labelName = Input.of(Objects.requireNonNull(labelName));
+            this.labelName = Output.of(Objects.requireNonNull(labelName));
             return this;
         }
         public LoggingConfigurationConditionLabelNameConditionPropertiesArgs build() {

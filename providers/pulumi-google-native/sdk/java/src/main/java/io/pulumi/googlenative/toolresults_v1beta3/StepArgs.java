@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.toolresults_v1beta3;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.toolresults_v1beta3.enums.StepState;
 import io.pulumi.googlenative.toolresults_v1beta3.inputs.DurationArgs;
@@ -30,10 +30,10 @@ public final class StepArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="completionTime")
-      private final @Nullable Input<TimestampArgs> completionTime;
+      private final @Nullable Output<TimestampArgs> completionTime;
 
-    public Input<TimestampArgs> getCompletionTime() {
-        return this.completionTime == null ? Input.empty() : this.completionTime;
+    public Output<TimestampArgs> getCompletionTime() {
+        return this.completionTime == null ? Output.empty() : this.completionTime;
     }
 
     /**
@@ -41,10 +41,10 @@ public final class StepArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="creationTime")
-      private final @Nullable Input<TimestampArgs> creationTime;
+      private final @Nullable Output<TimestampArgs> creationTime;
 
-    public Input<TimestampArgs> getCreationTime() {
-        return this.creationTime == null ? Input.empty() : this.creationTime;
+    public Output<TimestampArgs> getCreationTime() {
+        return this.creationTime == null ? Output.empty() : this.creationTime;
     }
 
     /**
@@ -52,10 +52,10 @@ public final class StepArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -63,10 +63,10 @@ public final class StepArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="deviceUsageDuration")
-      private final @Nullable Input<DurationArgs> deviceUsageDuration;
+      private final @Nullable Output<DurationArgs> deviceUsageDuration;
 
-    public Input<DurationArgs> getDeviceUsageDuration() {
-        return this.deviceUsageDuration == null ? Input.empty() : this.deviceUsageDuration;
+    public Output<DurationArgs> getDeviceUsageDuration() {
+        return this.deviceUsageDuration == null ? Output.empty() : this.deviceUsageDuration;
     }
 
     /**
@@ -74,16 +74,16 @@ public final class StepArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dimensionValue")
-      private final @Nullable Input<List<StepDimensionValueEntryArgs>> dimensionValue;
+      private final @Nullable Output<List<StepDimensionValueEntryArgs>> dimensionValue;
 
-    public Input<List<StepDimensionValueEntryArgs>> getDimensionValue() {
-        return this.dimensionValue == null ? Input.empty() : this.dimensionValue;
+    public Output<List<StepDimensionValueEntryArgs>> getDimensionValue() {
+        return this.dimensionValue == null ? Output.empty() : this.dimensionValue;
     }
 
     @InputImport(name="executionId", required=true)
-      private final Input<String> executionId;
+      private final Output<String> executionId;
 
-    public Input<String> getExecutionId() {
+    public Output<String> getExecutionId() {
         return this.executionId;
     }
 
@@ -92,16 +92,16 @@ public final class StepArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="hasImages")
-      private final @Nullable Input<Boolean> hasImages;
+      private final @Nullable Output<Boolean> hasImages;
 
-    public Input<Boolean> getHasImages() {
-        return this.hasImages == null ? Input.empty() : this.hasImages;
+    public Output<Boolean> getHasImages() {
+        return this.hasImages == null ? Output.empty() : this.hasImages;
     }
 
     @InputImport(name="historyId", required=true)
-      private final Input<String> historyId;
+      private final Output<String> historyId;
 
-    public Input<String> getHistoryId() {
+    public Output<String> getHistoryId() {
         return this.historyId;
     }
 
@@ -110,10 +110,10 @@ public final class StepArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labels")
-      private final @Nullable Input<List<StepLabelsEntryArgs>> labels;
+      private final @Nullable Output<List<StepLabelsEntryArgs>> labels;
 
-    public Input<List<StepLabelsEntryArgs>> getLabels() {
-        return this.labels == null ? Input.empty() : this.labels;
+    public Output<List<StepLabelsEntryArgs>> getLabels() {
+        return this.labels == null ? Output.empty() : this.labels;
     }
 
     /**
@@ -121,10 +121,10 @@ public final class StepArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="multiStep")
-      private final @Nullable Input<MultiStepArgs> multiStep;
+      private final @Nullable Output<MultiStepArgs> multiStep;
 
-    public Input<MultiStepArgs> getMultiStep() {
-        return this.multiStep == null ? Input.empty() : this.multiStep;
+    public Output<MultiStepArgs> getMultiStep() {
+        return this.multiStep == null ? Output.empty() : this.multiStep;
     }
 
     /**
@@ -132,10 +132,10 @@ public final class StepArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -143,24 +143,24 @@ public final class StepArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="outcome")
-      private final @Nullable Input<OutcomeArgs> outcome;
+      private final @Nullable Output<OutcomeArgs> outcome;
 
-    public Input<OutcomeArgs> getOutcome() {
-        return this.outcome == null ? Input.empty() : this.outcome;
+    public Output<OutcomeArgs> getOutcome() {
+        return this.outcome == null ? Output.empty() : this.outcome;
     }
 
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     @InputImport(name="requestId")
-      private final @Nullable Input<String> requestId;
+      private final @Nullable Output<String> requestId;
 
-    public Input<String> getRequestId() {
-        return this.requestId == null ? Input.empty() : this.requestId;
+    public Output<String> getRequestId() {
+        return this.requestId == null ? Output.empty() : this.requestId;
     }
 
     /**
@@ -168,10 +168,10 @@ public final class StepArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="runDuration")
-      private final @Nullable Input<DurationArgs> runDuration;
+      private final @Nullable Output<DurationArgs> runDuration;
 
-    public Input<DurationArgs> getRunDuration() {
-        return this.runDuration == null ? Input.empty() : this.runDuration;
+    public Output<DurationArgs> getRunDuration() {
+        return this.runDuration == null ? Output.empty() : this.runDuration;
     }
 
     /**
@@ -179,10 +179,10 @@ public final class StepArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="state")
-      private final @Nullable Input<StepState> state;
+      private final @Nullable Output<StepState> state;
 
-    public Input<StepState> getState() {
-        return this.state == null ? Input.empty() : this.state;
+    public Output<StepState> getState() {
+        return this.state == null ? Output.empty() : this.state;
     }
 
     /**
@@ -190,10 +190,10 @@ public final class StepArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="stepId")
-      private final @Nullable Input<String> stepId;
+      private final @Nullable Output<String> stepId;
 
-    public Input<String> getStepId() {
-        return this.stepId == null ? Input.empty() : this.stepId;
+    public Output<String> getStepId() {
+        return this.stepId == null ? Output.empty() : this.stepId;
     }
 
     /**
@@ -201,10 +201,10 @@ public final class StepArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="testExecutionStep")
-      private final @Nullable Input<TestExecutionStepArgs> testExecutionStep;
+      private final @Nullable Output<TestExecutionStepArgs> testExecutionStep;
 
-    public Input<TestExecutionStepArgs> getTestExecutionStep() {
-        return this.testExecutionStep == null ? Input.empty() : this.testExecutionStep;
+    public Output<TestExecutionStepArgs> getTestExecutionStep() {
+        return this.testExecutionStep == null ? Output.empty() : this.testExecutionStep;
     }
 
     /**
@@ -212,32 +212,32 @@ public final class StepArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="toolExecutionStep")
-      private final @Nullable Input<ToolExecutionStepArgs> toolExecutionStep;
+      private final @Nullable Output<ToolExecutionStepArgs> toolExecutionStep;
 
-    public Input<ToolExecutionStepArgs> getToolExecutionStep() {
-        return this.toolExecutionStep == null ? Input.empty() : this.toolExecutionStep;
+    public Output<ToolExecutionStepArgs> getToolExecutionStep() {
+        return this.toolExecutionStep == null ? Output.empty() : this.toolExecutionStep;
     }
 
     public StepArgs(
-        @Nullable Input<TimestampArgs> completionTime,
-        @Nullable Input<TimestampArgs> creationTime,
-        @Nullable Input<String> description,
-        @Nullable Input<DurationArgs> deviceUsageDuration,
-        @Nullable Input<List<StepDimensionValueEntryArgs>> dimensionValue,
-        Input<String> executionId,
-        @Nullable Input<Boolean> hasImages,
-        Input<String> historyId,
-        @Nullable Input<List<StepLabelsEntryArgs>> labels,
-        @Nullable Input<MultiStepArgs> multiStep,
-        @Nullable Input<String> name,
-        @Nullable Input<OutcomeArgs> outcome,
-        @Nullable Input<String> project,
-        @Nullable Input<String> requestId,
-        @Nullable Input<DurationArgs> runDuration,
-        @Nullable Input<StepState> state,
-        @Nullable Input<String> stepId,
-        @Nullable Input<TestExecutionStepArgs> testExecutionStep,
-        @Nullable Input<ToolExecutionStepArgs> toolExecutionStep) {
+        @Nullable Output<TimestampArgs> completionTime,
+        @Nullable Output<TimestampArgs> creationTime,
+        @Nullable Output<String> description,
+        @Nullable Output<DurationArgs> deviceUsageDuration,
+        @Nullable Output<List<StepDimensionValueEntryArgs>> dimensionValue,
+        Output<String> executionId,
+        @Nullable Output<Boolean> hasImages,
+        Output<String> historyId,
+        @Nullable Output<List<StepLabelsEntryArgs>> labels,
+        @Nullable Output<MultiStepArgs> multiStep,
+        @Nullable Output<String> name,
+        @Nullable Output<OutcomeArgs> outcome,
+        @Nullable Output<String> project,
+        @Nullable Output<String> requestId,
+        @Nullable Output<DurationArgs> runDuration,
+        @Nullable Output<StepState> state,
+        @Nullable Output<String> stepId,
+        @Nullable Output<TestExecutionStepArgs> testExecutionStep,
+        @Nullable Output<ToolExecutionStepArgs> toolExecutionStep) {
         this.completionTime = completionTime;
         this.creationTime = creationTime;
         this.description = description;
@@ -260,25 +260,25 @@ public final class StepArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private StepArgs() {
-        this.completionTime = Input.empty();
-        this.creationTime = Input.empty();
-        this.description = Input.empty();
-        this.deviceUsageDuration = Input.empty();
-        this.dimensionValue = Input.empty();
-        this.executionId = Input.empty();
-        this.hasImages = Input.empty();
-        this.historyId = Input.empty();
-        this.labels = Input.empty();
-        this.multiStep = Input.empty();
-        this.name = Input.empty();
-        this.outcome = Input.empty();
-        this.project = Input.empty();
-        this.requestId = Input.empty();
-        this.runDuration = Input.empty();
-        this.state = Input.empty();
-        this.stepId = Input.empty();
-        this.testExecutionStep = Input.empty();
-        this.toolExecutionStep = Input.empty();
+        this.completionTime = Output.empty();
+        this.creationTime = Output.empty();
+        this.description = Output.empty();
+        this.deviceUsageDuration = Output.empty();
+        this.dimensionValue = Output.empty();
+        this.executionId = Output.empty();
+        this.hasImages = Output.empty();
+        this.historyId = Output.empty();
+        this.labels = Output.empty();
+        this.multiStep = Output.empty();
+        this.name = Output.empty();
+        this.outcome = Output.empty();
+        this.project = Output.empty();
+        this.requestId = Output.empty();
+        this.runDuration = Output.empty();
+        this.state = Output.empty();
+        this.stepId = Output.empty();
+        this.testExecutionStep = Output.empty();
+        this.toolExecutionStep = Output.empty();
     }
 
     public static Builder builder() {
@@ -290,25 +290,25 @@ public final class StepArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<TimestampArgs> completionTime;
-        private @Nullable Input<TimestampArgs> creationTime;
-        private @Nullable Input<String> description;
-        private @Nullable Input<DurationArgs> deviceUsageDuration;
-        private @Nullable Input<List<StepDimensionValueEntryArgs>> dimensionValue;
-        private Input<String> executionId;
-        private @Nullable Input<Boolean> hasImages;
-        private Input<String> historyId;
-        private @Nullable Input<List<StepLabelsEntryArgs>> labels;
-        private @Nullable Input<MultiStepArgs> multiStep;
-        private @Nullable Input<String> name;
-        private @Nullable Input<OutcomeArgs> outcome;
-        private @Nullable Input<String> project;
-        private @Nullable Input<String> requestId;
-        private @Nullable Input<DurationArgs> runDuration;
-        private @Nullable Input<StepState> state;
-        private @Nullable Input<String> stepId;
-        private @Nullable Input<TestExecutionStepArgs> testExecutionStep;
-        private @Nullable Input<ToolExecutionStepArgs> toolExecutionStep;
+        private @Nullable Output<TimestampArgs> completionTime;
+        private @Nullable Output<TimestampArgs> creationTime;
+        private @Nullable Output<String> description;
+        private @Nullable Output<DurationArgs> deviceUsageDuration;
+        private @Nullable Output<List<StepDimensionValueEntryArgs>> dimensionValue;
+        private Output<String> executionId;
+        private @Nullable Output<Boolean> hasImages;
+        private Output<String> historyId;
+        private @Nullable Output<List<StepLabelsEntryArgs>> labels;
+        private @Nullable Output<MultiStepArgs> multiStep;
+        private @Nullable Output<String> name;
+        private @Nullable Output<OutcomeArgs> outcome;
+        private @Nullable Output<String> project;
+        private @Nullable Output<String> requestId;
+        private @Nullable Output<DurationArgs> runDuration;
+        private @Nullable Output<StepState> state;
+        private @Nullable Output<String> stepId;
+        private @Nullable Output<TestExecutionStepArgs> testExecutionStep;
+        private @Nullable Output<ToolExecutionStepArgs> toolExecutionStep;
 
         public Builder() {
     	      // Empty
@@ -337,193 +337,193 @@ public final class StepArgs extends io.pulumi.resources.ResourceArgs {
     	      this.toolExecutionStep = defaults.toolExecutionStep;
         }
 
-        public Builder completionTime(@Nullable Input<TimestampArgs> completionTime) {
+        public Builder completionTime(@Nullable Output<TimestampArgs> completionTime) {
             this.completionTime = completionTime;
             return this;
         }
 
         public Builder completionTime(@Nullable TimestampArgs completionTime) {
-            this.completionTime = Input.ofNullable(completionTime);
+            this.completionTime = Output.ofNullable(completionTime);
             return this;
         }
 
-        public Builder creationTime(@Nullable Input<TimestampArgs> creationTime) {
+        public Builder creationTime(@Nullable Output<TimestampArgs> creationTime) {
             this.creationTime = creationTime;
             return this;
         }
 
         public Builder creationTime(@Nullable TimestampArgs creationTime) {
-            this.creationTime = Input.ofNullable(creationTime);
+            this.creationTime = Output.ofNullable(creationTime);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder deviceUsageDuration(@Nullable Input<DurationArgs> deviceUsageDuration) {
+        public Builder deviceUsageDuration(@Nullable Output<DurationArgs> deviceUsageDuration) {
             this.deviceUsageDuration = deviceUsageDuration;
             return this;
         }
 
         public Builder deviceUsageDuration(@Nullable DurationArgs deviceUsageDuration) {
-            this.deviceUsageDuration = Input.ofNullable(deviceUsageDuration);
+            this.deviceUsageDuration = Output.ofNullable(deviceUsageDuration);
             return this;
         }
 
-        public Builder dimensionValue(@Nullable Input<List<StepDimensionValueEntryArgs>> dimensionValue) {
+        public Builder dimensionValue(@Nullable Output<List<StepDimensionValueEntryArgs>> dimensionValue) {
             this.dimensionValue = dimensionValue;
             return this;
         }
 
         public Builder dimensionValue(@Nullable List<StepDimensionValueEntryArgs> dimensionValue) {
-            this.dimensionValue = Input.ofNullable(dimensionValue);
+            this.dimensionValue = Output.ofNullable(dimensionValue);
             return this;
         }
 
-        public Builder executionId(Input<String> executionId) {
+        public Builder executionId(Output<String> executionId) {
             this.executionId = Objects.requireNonNull(executionId);
             return this;
         }
 
         public Builder executionId(String executionId) {
-            this.executionId = Input.of(Objects.requireNonNull(executionId));
+            this.executionId = Output.of(Objects.requireNonNull(executionId));
             return this;
         }
 
-        public Builder hasImages(@Nullable Input<Boolean> hasImages) {
+        public Builder hasImages(@Nullable Output<Boolean> hasImages) {
             this.hasImages = hasImages;
             return this;
         }
 
         public Builder hasImages(@Nullable Boolean hasImages) {
-            this.hasImages = Input.ofNullable(hasImages);
+            this.hasImages = Output.ofNullable(hasImages);
             return this;
         }
 
-        public Builder historyId(Input<String> historyId) {
+        public Builder historyId(Output<String> historyId) {
             this.historyId = Objects.requireNonNull(historyId);
             return this;
         }
 
         public Builder historyId(String historyId) {
-            this.historyId = Input.of(Objects.requireNonNull(historyId));
+            this.historyId = Output.of(Objects.requireNonNull(historyId));
             return this;
         }
 
-        public Builder labels(@Nullable Input<List<StepLabelsEntryArgs>> labels) {
+        public Builder labels(@Nullable Output<List<StepLabelsEntryArgs>> labels) {
             this.labels = labels;
             return this;
         }
 
         public Builder labels(@Nullable List<StepLabelsEntryArgs> labels) {
-            this.labels = Input.ofNullable(labels);
+            this.labels = Output.ofNullable(labels);
             return this;
         }
 
-        public Builder multiStep(@Nullable Input<MultiStepArgs> multiStep) {
+        public Builder multiStep(@Nullable Output<MultiStepArgs> multiStep) {
             this.multiStep = multiStep;
             return this;
         }
 
         public Builder multiStep(@Nullable MultiStepArgs multiStep) {
-            this.multiStep = Input.ofNullable(multiStep);
+            this.multiStep = Output.ofNullable(multiStep);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder outcome(@Nullable Input<OutcomeArgs> outcome) {
+        public Builder outcome(@Nullable Output<OutcomeArgs> outcome) {
             this.outcome = outcome;
             return this;
         }
 
         public Builder outcome(@Nullable OutcomeArgs outcome) {
-            this.outcome = Input.ofNullable(outcome);
+            this.outcome = Output.ofNullable(outcome);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder requestId(@Nullable Input<String> requestId) {
+        public Builder requestId(@Nullable Output<String> requestId) {
             this.requestId = requestId;
             return this;
         }
 
         public Builder requestId(@Nullable String requestId) {
-            this.requestId = Input.ofNullable(requestId);
+            this.requestId = Output.ofNullable(requestId);
             return this;
         }
 
-        public Builder runDuration(@Nullable Input<DurationArgs> runDuration) {
+        public Builder runDuration(@Nullable Output<DurationArgs> runDuration) {
             this.runDuration = runDuration;
             return this;
         }
 
         public Builder runDuration(@Nullable DurationArgs runDuration) {
-            this.runDuration = Input.ofNullable(runDuration);
+            this.runDuration = Output.ofNullable(runDuration);
             return this;
         }
 
-        public Builder state(@Nullable Input<StepState> state) {
+        public Builder state(@Nullable Output<StepState> state) {
             this.state = state;
             return this;
         }
 
         public Builder state(@Nullable StepState state) {
-            this.state = Input.ofNullable(state);
+            this.state = Output.ofNullable(state);
             return this;
         }
 
-        public Builder stepId(@Nullable Input<String> stepId) {
+        public Builder stepId(@Nullable Output<String> stepId) {
             this.stepId = stepId;
             return this;
         }
 
         public Builder stepId(@Nullable String stepId) {
-            this.stepId = Input.ofNullable(stepId);
+            this.stepId = Output.ofNullable(stepId);
             return this;
         }
 
-        public Builder testExecutionStep(@Nullable Input<TestExecutionStepArgs> testExecutionStep) {
+        public Builder testExecutionStep(@Nullable Output<TestExecutionStepArgs> testExecutionStep) {
             this.testExecutionStep = testExecutionStep;
             return this;
         }
 
         public Builder testExecutionStep(@Nullable TestExecutionStepArgs testExecutionStep) {
-            this.testExecutionStep = Input.ofNullable(testExecutionStep);
+            this.testExecutionStep = Output.ofNullable(testExecutionStep);
             return this;
         }
 
-        public Builder toolExecutionStep(@Nullable Input<ToolExecutionStepArgs> toolExecutionStep) {
+        public Builder toolExecutionStep(@Nullable Output<ToolExecutionStepArgs> toolExecutionStep) {
             this.toolExecutionStep = toolExecutionStep;
             return this;
         }
 
         public Builder toolExecutionStep(@Nullable ToolExecutionStepArgs toolExecutionStep) {
-            this.toolExecutionStep = Input.ofNullable(toolExecutionStep);
+            this.toolExecutionStep = Output.ofNullable(toolExecutionStep);
             return this;
         }
         public StepArgs build() {

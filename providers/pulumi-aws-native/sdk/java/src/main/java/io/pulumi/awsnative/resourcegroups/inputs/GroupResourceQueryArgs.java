@@ -5,7 +5,7 @@ package io.pulumi.awsnative.resourcegroups.inputs;
 
 import io.pulumi.awsnative.resourcegroups.enums.GroupResourceQueryType;
 import io.pulumi.awsnative.resourcegroups.inputs.GroupQueryArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -16,29 +16,29 @@ public final class GroupResourceQueryArgs extends io.pulumi.resources.ResourceAr
     public static final GroupResourceQueryArgs Empty = new GroupResourceQueryArgs();
 
     @InputImport(name="query")
-      private final @Nullable Input<GroupQueryArgs> query;
+      private final @Nullable Output<GroupQueryArgs> query;
 
-    public Input<GroupQueryArgs> getQuery() {
-        return this.query == null ? Input.empty() : this.query;
+    public Output<GroupQueryArgs> getQuery() {
+        return this.query == null ? Output.empty() : this.query;
     }
 
     @InputImport(name="type")
-      private final @Nullable Input<GroupResourceQueryType> type;
+      private final @Nullable Output<GroupResourceQueryType> type;
 
-    public Input<GroupResourceQueryType> getType() {
-        return this.type == null ? Input.empty() : this.type;
+    public Output<GroupResourceQueryType> getType() {
+        return this.type == null ? Output.empty() : this.type;
     }
 
     public GroupResourceQueryArgs(
-        @Nullable Input<GroupQueryArgs> query,
-        @Nullable Input<GroupResourceQueryType> type) {
+        @Nullable Output<GroupQueryArgs> query,
+        @Nullable Output<GroupResourceQueryType> type) {
         this.query = query;
         this.type = type;
     }
 
     private GroupResourceQueryArgs() {
-        this.query = Input.empty();
-        this.type = Input.empty();
+        this.query = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -50,8 +50,8 @@ public final class GroupResourceQueryArgs extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private @Nullable Input<GroupQueryArgs> query;
-        private @Nullable Input<GroupResourceQueryType> type;
+        private @Nullable Output<GroupQueryArgs> query;
+        private @Nullable Output<GroupResourceQueryType> type;
 
         public Builder() {
     	      // Empty
@@ -63,23 +63,23 @@ public final class GroupResourceQueryArgs extends io.pulumi.resources.ResourceAr
     	      this.type = defaults.type;
         }
 
-        public Builder query(@Nullable Input<GroupQueryArgs> query) {
+        public Builder query(@Nullable Output<GroupQueryArgs> query) {
             this.query = query;
             return this;
         }
 
         public Builder query(@Nullable GroupQueryArgs query) {
-            this.query = Input.ofNullable(query);
+            this.query = Output.ofNullable(query);
             return this;
         }
 
-        public Builder type(@Nullable Input<GroupResourceQueryType> type) {
+        public Builder type(@Nullable Output<GroupResourceQueryType> type) {
             this.type = type;
             return this;
         }
 
         public Builder type(@Nullable GroupResourceQueryType type) {
-            this.type = Input.ofNullable(type);
+            this.type = Output.ofNullable(type);
             return this;
         }
         public GroupResourceQueryArgs build() {

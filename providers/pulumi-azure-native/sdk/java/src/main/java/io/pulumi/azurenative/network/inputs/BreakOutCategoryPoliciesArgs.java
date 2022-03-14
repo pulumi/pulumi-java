@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class BreakOutCategoryPoliciesArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="allow")
-      private final @Nullable Input<Boolean> allow;
+      private final @Nullable Output<Boolean> allow;
 
-    public Input<Boolean> getAllow() {
-        return this.allow == null ? Input.empty() : this.allow;
+    public Output<Boolean> getAllow() {
+        return this.allow == null ? Output.empty() : this.allow;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class BreakOutCategoryPoliciesArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="default")
-      private final @Nullable Input<Boolean> $default;
+      private final @Nullable Output<Boolean> $default;
 
-    public Input<Boolean> get$default() {
-        return this.$default == null ? Input.empty() : this.$default;
+    public Output<Boolean> get$default() {
+        return this.$default == null ? Output.empty() : this.$default;
     }
 
     /**
@@ -45,25 +45,25 @@ public final class BreakOutCategoryPoliciesArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="optimize")
-      private final @Nullable Input<Boolean> optimize;
+      private final @Nullable Output<Boolean> optimize;
 
-    public Input<Boolean> getOptimize() {
-        return this.optimize == null ? Input.empty() : this.optimize;
+    public Output<Boolean> getOptimize() {
+        return this.optimize == null ? Output.empty() : this.optimize;
     }
 
     public BreakOutCategoryPoliciesArgs(
-        @Nullable Input<Boolean> allow,
-        @Nullable Input<Boolean> $default,
-        @Nullable Input<Boolean> optimize) {
+        @Nullable Output<Boolean> allow,
+        @Nullable Output<Boolean> $default,
+        @Nullable Output<Boolean> optimize) {
         this.allow = allow;
         this.$default = $default;
         this.optimize = optimize;
     }
 
     private BreakOutCategoryPoliciesArgs() {
-        this.allow = Input.empty();
-        this.$default = Input.empty();
-        this.optimize = Input.empty();
+        this.allow = Output.empty();
+        this.$default = Output.empty();
+        this.optimize = Output.empty();
     }
 
     public static Builder builder() {
@@ -75,9 +75,9 @@ public final class BreakOutCategoryPoliciesArgs extends io.pulumi.resources.Reso
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> allow;
-        private @Nullable Input<Boolean> $default;
-        private @Nullable Input<Boolean> optimize;
+        private @Nullable Output<Boolean> allow;
+        private @Nullable Output<Boolean> $default;
+        private @Nullable Output<Boolean> optimize;
 
         public Builder() {
     	      // Empty
@@ -90,33 +90,33 @@ public final class BreakOutCategoryPoliciesArgs extends io.pulumi.resources.Reso
     	      this.optimize = defaults.optimize;
         }
 
-        public Builder allow(@Nullable Input<Boolean> allow) {
+        public Builder allow(@Nullable Output<Boolean> allow) {
             this.allow = allow;
             return this;
         }
 
         public Builder allow(@Nullable Boolean allow) {
-            this.allow = Input.ofNullable(allow);
+            this.allow = Output.ofNullable(allow);
             return this;
         }
 
-        public Builder $default(@Nullable Input<Boolean> $default) {
+        public Builder $default(@Nullable Output<Boolean> $default) {
             this.$default = $default;
             return this;
         }
 
         public Builder $default(@Nullable Boolean $default) {
-            this.$default = Input.ofNullable($default);
+            this.$default = Output.ofNullable($default);
             return this;
         }
 
-        public Builder optimize(@Nullable Input<Boolean> optimize) {
+        public Builder optimize(@Nullable Output<Boolean> optimize) {
             this.optimize = optimize;
             return this;
         }
 
         public Builder optimize(@Nullable Boolean optimize) {
-            this.optimize = Input.ofNullable(optimize);
+            this.optimize = Output.ofNullable(optimize);
             return this;
         }
         public BreakOutCategoryPoliciesArgs build() {

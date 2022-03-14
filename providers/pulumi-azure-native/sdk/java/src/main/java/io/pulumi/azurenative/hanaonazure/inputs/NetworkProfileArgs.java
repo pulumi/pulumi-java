@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.hanaonazure.inputs;
 
 import io.pulumi.azurenative.hanaonazure.inputs.IpAddressArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
@@ -24,18 +24,18 @@ public final class NetworkProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="networkInterfaces")
-      private final @Nullable Input<List<IpAddressArgs>> networkInterfaces;
+      private final @Nullable Output<List<IpAddressArgs>> networkInterfaces;
 
-    public Input<List<IpAddressArgs>> getNetworkInterfaces() {
-        return this.networkInterfaces == null ? Input.empty() : this.networkInterfaces;
+    public Output<List<IpAddressArgs>> getNetworkInterfaces() {
+        return this.networkInterfaces == null ? Output.empty() : this.networkInterfaces;
     }
 
-    public NetworkProfileArgs(@Nullable Input<List<IpAddressArgs>> networkInterfaces) {
+    public NetworkProfileArgs(@Nullable Output<List<IpAddressArgs>> networkInterfaces) {
         this.networkInterfaces = networkInterfaces;
     }
 
     private NetworkProfileArgs() {
-        this.networkInterfaces = Input.empty();
+        this.networkInterfaces = Output.empty();
     }
 
     public static Builder builder() {
@@ -47,7 +47,7 @@ public final class NetworkProfileArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<List<IpAddressArgs>> networkInterfaces;
+        private @Nullable Output<List<IpAddressArgs>> networkInterfaces;
 
         public Builder() {
     	      // Empty
@@ -58,13 +58,13 @@ public final class NetworkProfileArgs extends io.pulumi.resources.ResourceArgs {
     	      this.networkInterfaces = defaults.networkInterfaces;
         }
 
-        public Builder networkInterfaces(@Nullable Input<List<IpAddressArgs>> networkInterfaces) {
+        public Builder networkInterfaces(@Nullable Output<List<IpAddressArgs>> networkInterfaces) {
             this.networkInterfaces = networkInterfaces;
             return this;
         }
 
         public Builder networkInterfaces(@Nullable List<IpAddressArgs> networkInterfaces) {
-            this.networkInterfaces = Input.ofNullable(networkInterfaces);
+            this.networkInterfaces = Output.ofNullable(networkInterfaces);
             return this;
         }
         public NetworkProfileArgs build() {

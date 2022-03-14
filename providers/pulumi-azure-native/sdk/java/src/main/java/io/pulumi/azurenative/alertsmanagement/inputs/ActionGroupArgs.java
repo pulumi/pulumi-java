@@ -7,7 +7,7 @@ import io.pulumi.azurenative.alertsmanagement.enums.ActionRuleStatus;
 import io.pulumi.azurenative.alertsmanagement.inputs.ConditionsArgs;
 import io.pulumi.azurenative.alertsmanagement.inputs.ScopeArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -27,9 +27,9 @@ public final class ActionGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="actionGroupId", required=true)
-      private final Input<String> actionGroupId;
+      private final Output<String> actionGroupId;
 
-    public Input<String> getActionGroupId() {
+    public Output<String> getActionGroupId() {
         return this.actionGroupId;
     }
 
@@ -38,10 +38,10 @@ public final class ActionGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="conditions")
-      private final @Nullable Input<ConditionsArgs> conditions;
+      private final @Nullable Output<ConditionsArgs> conditions;
 
-    public Input<ConditionsArgs> getConditions() {
-        return this.conditions == null ? Input.empty() : this.conditions;
+    public Output<ConditionsArgs> getConditions() {
+        return this.conditions == null ? Output.empty() : this.conditions;
     }
 
     /**
@@ -49,10 +49,10 @@ public final class ActionGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -60,10 +60,10 @@ public final class ActionGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="scope")
-      private final @Nullable Input<ScopeArgs> scope;
+      private final @Nullable Output<ScopeArgs> scope;
 
-    public Input<ScopeArgs> getScope() {
-        return this.scope == null ? Input.empty() : this.scope;
+    public Output<ScopeArgs> getScope() {
+        return this.scope == null ? Output.empty() : this.scope;
     }
 
     /**
@@ -71,10 +71,10 @@ public final class ActionGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="status")
-      private final @Nullable Input<Either<String,ActionRuleStatus>> status;
+      private final @Nullable Output<Either<String,ActionRuleStatus>> status;
 
-    public Input<Either<String,ActionRuleStatus>> getStatus() {
-        return this.status == null ? Input.empty() : this.status;
+    public Output<Either<String,ActionRuleStatus>> getStatus() {
+        return this.status == null ? Output.empty() : this.status;
     }
 
     /**
@@ -83,19 +83,19 @@ public final class ActionGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<String> type;
+      private final Output<String> type;
 
-    public Input<String> getType() {
+    public Output<String> getType() {
         return this.type;
     }
 
     public ActionGroupArgs(
-        Input<String> actionGroupId,
-        @Nullable Input<ConditionsArgs> conditions,
-        @Nullable Input<String> description,
-        @Nullable Input<ScopeArgs> scope,
-        @Nullable Input<Either<String,ActionRuleStatus>> status,
-        Input<String> type) {
+        Output<String> actionGroupId,
+        @Nullable Output<ConditionsArgs> conditions,
+        @Nullable Output<String> description,
+        @Nullable Output<ScopeArgs> scope,
+        @Nullable Output<Either<String,ActionRuleStatus>> status,
+        Output<String> type) {
         this.actionGroupId = Objects.requireNonNull(actionGroupId, "expected parameter 'actionGroupId' to be non-null");
         this.conditions = conditions;
         this.description = description;
@@ -105,12 +105,12 @@ public final class ActionGroupArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ActionGroupArgs() {
-        this.actionGroupId = Input.empty();
-        this.conditions = Input.empty();
-        this.description = Input.empty();
-        this.scope = Input.empty();
-        this.status = Input.empty();
-        this.type = Input.empty();
+        this.actionGroupId = Output.empty();
+        this.conditions = Output.empty();
+        this.description = Output.empty();
+        this.scope = Output.empty();
+        this.status = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -122,12 +122,12 @@ public final class ActionGroupArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> actionGroupId;
-        private @Nullable Input<ConditionsArgs> conditions;
-        private @Nullable Input<String> description;
-        private @Nullable Input<ScopeArgs> scope;
-        private @Nullable Input<Either<String,ActionRuleStatus>> status;
-        private Input<String> type;
+        private Output<String> actionGroupId;
+        private @Nullable Output<ConditionsArgs> conditions;
+        private @Nullable Output<String> description;
+        private @Nullable Output<ScopeArgs> scope;
+        private @Nullable Output<Either<String,ActionRuleStatus>> status;
+        private Output<String> type;
 
         public Builder() {
     	      // Empty
@@ -143,63 +143,63 @@ public final class ActionGroupArgs extends io.pulumi.resources.ResourceArgs {
     	      this.type = defaults.type;
         }
 
-        public Builder actionGroupId(Input<String> actionGroupId) {
+        public Builder actionGroupId(Output<String> actionGroupId) {
             this.actionGroupId = Objects.requireNonNull(actionGroupId);
             return this;
         }
 
         public Builder actionGroupId(String actionGroupId) {
-            this.actionGroupId = Input.of(Objects.requireNonNull(actionGroupId));
+            this.actionGroupId = Output.of(Objects.requireNonNull(actionGroupId));
             return this;
         }
 
-        public Builder conditions(@Nullable Input<ConditionsArgs> conditions) {
+        public Builder conditions(@Nullable Output<ConditionsArgs> conditions) {
             this.conditions = conditions;
             return this;
         }
 
         public Builder conditions(@Nullable ConditionsArgs conditions) {
-            this.conditions = Input.ofNullable(conditions);
+            this.conditions = Output.ofNullable(conditions);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder scope(@Nullable Input<ScopeArgs> scope) {
+        public Builder scope(@Nullable Output<ScopeArgs> scope) {
             this.scope = scope;
             return this;
         }
 
         public Builder scope(@Nullable ScopeArgs scope) {
-            this.scope = Input.ofNullable(scope);
+            this.scope = Output.ofNullable(scope);
             return this;
         }
 
-        public Builder status(@Nullable Input<Either<String,ActionRuleStatus>> status) {
+        public Builder status(@Nullable Output<Either<String,ActionRuleStatus>> status) {
             this.status = status;
             return this;
         }
 
         public Builder status(@Nullable Either<String,ActionRuleStatus> status) {
-            this.status = Input.ofNullable(status);
+            this.status = Output.ofNullable(status);
             return this;
         }
 
-        public Builder type(Input<String> type) {
+        public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(String type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
         public ActionGroupArgs build() {

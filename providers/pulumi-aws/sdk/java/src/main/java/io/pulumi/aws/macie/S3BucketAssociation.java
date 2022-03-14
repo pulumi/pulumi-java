@@ -7,7 +7,6 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.macie.S3BucketAssociationArgs;
 import io.pulumi.aws.macie.inputs.S3BucketAssociationState;
 import io.pulumi.aws.macie.outputs.S3BucketAssociationClassificationType;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -121,14 +120,14 @@ public class S3BucketAssociation extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public S3BucketAssociation(String name, S3BucketAssociationArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:macie/s3BucketAssociation:S3BucketAssociation", name, args == null ? S3BucketAssociationArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws:macie/s3BucketAssociation:S3BucketAssociation", name, args == null ? S3BucketAssociationArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private S3BucketAssociation(String name, Input<String> id, @Nullable S3BucketAssociationState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private S3BucketAssociation(String name, Output<String> id, @Nullable S3BucketAssociationState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws:macie/s3BucketAssociation:S3BucketAssociation", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -144,7 +143,7 @@ public class S3BucketAssociation extends io.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static S3BucketAssociation get(String name, Input<String> id, @Nullable S3BucketAssociationState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static S3BucketAssociation get(String name, Output<String> id, @Nullable S3BucketAssociationState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new S3BucketAssociation(name, id, state, options);
     }
 }

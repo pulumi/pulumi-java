@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.monitoring.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.Integer;
@@ -22,10 +22,10 @@ public final class AlertPolicyConditionConditionThresholdTriggerArgs extends io.
      * 
      */
     @InputImport(name="count")
-      private final @Nullable Input<Integer> count;
+      private final @Nullable Output<Integer> count;
 
-    public Input<Integer> getCount() {
-        return this.count == null ? Input.empty() : this.count;
+    public Output<Integer> getCount() {
+        return this.count == null ? Output.empty() : this.count;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class AlertPolicyConditionConditionThresholdTriggerArgs extends io.
      * 
      */
     @InputImport(name="percent")
-      private final @Nullable Input<Double> percent;
+      private final @Nullable Output<Double> percent;
 
-    public Input<Double> getPercent() {
-        return this.percent == null ? Input.empty() : this.percent;
+    public Output<Double> getPercent() {
+        return this.percent == null ? Output.empty() : this.percent;
     }
 
     public AlertPolicyConditionConditionThresholdTriggerArgs(
-        @Nullable Input<Integer> count,
-        @Nullable Input<Double> percent) {
+        @Nullable Output<Integer> count,
+        @Nullable Output<Double> percent) {
         this.count = count;
         this.percent = percent;
     }
 
     private AlertPolicyConditionConditionThresholdTriggerArgs() {
-        this.count = Input.empty();
-        this.percent = Input.empty();
+        this.count = Output.empty();
+        this.percent = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class AlertPolicyConditionConditionThresholdTriggerArgs extends io.
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> count;
-        private @Nullable Input<Double> percent;
+        private @Nullable Output<Integer> count;
+        private @Nullable Output<Double> percent;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class AlertPolicyConditionConditionThresholdTriggerArgs extends io.
     	      this.percent = defaults.percent;
         }
 
-        public Builder count(@Nullable Input<Integer> count) {
+        public Builder count(@Nullable Output<Integer> count) {
             this.count = count;
             return this;
         }
 
         public Builder count(@Nullable Integer count) {
-            this.count = Input.ofNullable(count);
+            this.count = Output.ofNullable(count);
             return this;
         }
 
-        public Builder percent(@Nullable Input<Double> percent) {
+        public Builder percent(@Nullable Output<Double> percent) {
             this.percent = percent;
             return this;
         }
 
         public Builder percent(@Nullable Double percent) {
-            this.percent = Input.ofNullable(percent);
+            this.percent = Output.ofNullable(percent);
             return this;
         }
         public AlertPolicyConditionConditionThresholdTriggerArgs build() {

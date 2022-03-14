@@ -5,7 +5,7 @@ package io.pulumi.awsnative.opsworkscm;
 
 import io.pulumi.awsnative.opsworkscm.inputs.ServerEngineAttributeArgs;
 import io.pulumi.awsnative.opsworkscm.inputs.ServerTagArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -20,174 +20,174 @@ public final class ServerArgs extends io.pulumi.resources.ResourceArgs {
     public static final ServerArgs Empty = new ServerArgs();
 
     @InputImport(name="associatePublicIpAddress")
-      private final @Nullable Input<Boolean> associatePublicIpAddress;
+      private final @Nullable Output<Boolean> associatePublicIpAddress;
 
-    public Input<Boolean> getAssociatePublicIpAddress() {
-        return this.associatePublicIpAddress == null ? Input.empty() : this.associatePublicIpAddress;
+    public Output<Boolean> getAssociatePublicIpAddress() {
+        return this.associatePublicIpAddress == null ? Output.empty() : this.associatePublicIpAddress;
     }
 
     @InputImport(name="backupId")
-      private final @Nullable Input<String> backupId;
+      private final @Nullable Output<String> backupId;
 
-    public Input<String> getBackupId() {
-        return this.backupId == null ? Input.empty() : this.backupId;
+    public Output<String> getBackupId() {
+        return this.backupId == null ? Output.empty() : this.backupId;
     }
 
     @InputImport(name="backupRetentionCount")
-      private final @Nullable Input<Integer> backupRetentionCount;
+      private final @Nullable Output<Integer> backupRetentionCount;
 
-    public Input<Integer> getBackupRetentionCount() {
-        return this.backupRetentionCount == null ? Input.empty() : this.backupRetentionCount;
+    public Output<Integer> getBackupRetentionCount() {
+        return this.backupRetentionCount == null ? Output.empty() : this.backupRetentionCount;
     }
 
     @InputImport(name="customCertificate")
-      private final @Nullable Input<String> customCertificate;
+      private final @Nullable Output<String> customCertificate;
 
-    public Input<String> getCustomCertificate() {
-        return this.customCertificate == null ? Input.empty() : this.customCertificate;
+    public Output<String> getCustomCertificate() {
+        return this.customCertificate == null ? Output.empty() : this.customCertificate;
     }
 
     @InputImport(name="customDomain")
-      private final @Nullable Input<String> customDomain;
+      private final @Nullable Output<String> customDomain;
 
-    public Input<String> getCustomDomain() {
-        return this.customDomain == null ? Input.empty() : this.customDomain;
+    public Output<String> getCustomDomain() {
+        return this.customDomain == null ? Output.empty() : this.customDomain;
     }
 
     @InputImport(name="customPrivateKey")
-      private final @Nullable Input<String> customPrivateKey;
+      private final @Nullable Output<String> customPrivateKey;
 
-    public Input<String> getCustomPrivateKey() {
-        return this.customPrivateKey == null ? Input.empty() : this.customPrivateKey;
+    public Output<String> getCustomPrivateKey() {
+        return this.customPrivateKey == null ? Output.empty() : this.customPrivateKey;
     }
 
     @InputImport(name="disableAutomatedBackup")
-      private final @Nullable Input<Boolean> disableAutomatedBackup;
+      private final @Nullable Output<Boolean> disableAutomatedBackup;
 
-    public Input<Boolean> getDisableAutomatedBackup() {
-        return this.disableAutomatedBackup == null ? Input.empty() : this.disableAutomatedBackup;
+    public Output<Boolean> getDisableAutomatedBackup() {
+        return this.disableAutomatedBackup == null ? Output.empty() : this.disableAutomatedBackup;
     }
 
     @InputImport(name="engine")
-      private final @Nullable Input<String> engine;
+      private final @Nullable Output<String> engine;
 
-    public Input<String> getEngine() {
-        return this.engine == null ? Input.empty() : this.engine;
+    public Output<String> getEngine() {
+        return this.engine == null ? Output.empty() : this.engine;
     }
 
     @InputImport(name="engineAttributes")
-      private final @Nullable Input<List<ServerEngineAttributeArgs>> engineAttributes;
+      private final @Nullable Output<List<ServerEngineAttributeArgs>> engineAttributes;
 
-    public Input<List<ServerEngineAttributeArgs>> getEngineAttributes() {
-        return this.engineAttributes == null ? Input.empty() : this.engineAttributes;
+    public Output<List<ServerEngineAttributeArgs>> getEngineAttributes() {
+        return this.engineAttributes == null ? Output.empty() : this.engineAttributes;
     }
 
     @InputImport(name="engineModel")
-      private final @Nullable Input<String> engineModel;
+      private final @Nullable Output<String> engineModel;
 
-    public Input<String> getEngineModel() {
-        return this.engineModel == null ? Input.empty() : this.engineModel;
+    public Output<String> getEngineModel() {
+        return this.engineModel == null ? Output.empty() : this.engineModel;
     }
 
     @InputImport(name="engineVersion")
-      private final @Nullable Input<String> engineVersion;
+      private final @Nullable Output<String> engineVersion;
 
-    public Input<String> getEngineVersion() {
-        return this.engineVersion == null ? Input.empty() : this.engineVersion;
+    public Output<String> getEngineVersion() {
+        return this.engineVersion == null ? Output.empty() : this.engineVersion;
     }
 
     @InputImport(name="instanceProfileArn", required=true)
-      private final Input<String> instanceProfileArn;
+      private final Output<String> instanceProfileArn;
 
-    public Input<String> getInstanceProfileArn() {
+    public Output<String> getInstanceProfileArn() {
         return this.instanceProfileArn;
     }
 
     @InputImport(name="instanceType", required=true)
-      private final Input<String> instanceType;
+      private final Output<String> instanceType;
 
-    public Input<String> getInstanceType() {
+    public Output<String> getInstanceType() {
         return this.instanceType;
     }
 
     @InputImport(name="keyPair")
-      private final @Nullable Input<String> keyPair;
+      private final @Nullable Output<String> keyPair;
 
-    public Input<String> getKeyPair() {
-        return this.keyPair == null ? Input.empty() : this.keyPair;
+    public Output<String> getKeyPair() {
+        return this.keyPair == null ? Output.empty() : this.keyPair;
     }
 
     @InputImport(name="preferredBackupWindow")
-      private final @Nullable Input<String> preferredBackupWindow;
+      private final @Nullable Output<String> preferredBackupWindow;
 
-    public Input<String> getPreferredBackupWindow() {
-        return this.preferredBackupWindow == null ? Input.empty() : this.preferredBackupWindow;
+    public Output<String> getPreferredBackupWindow() {
+        return this.preferredBackupWindow == null ? Output.empty() : this.preferredBackupWindow;
     }
 
     @InputImport(name="preferredMaintenanceWindow")
-      private final @Nullable Input<String> preferredMaintenanceWindow;
+      private final @Nullable Output<String> preferredMaintenanceWindow;
 
-    public Input<String> getPreferredMaintenanceWindow() {
-        return this.preferredMaintenanceWindow == null ? Input.empty() : this.preferredMaintenanceWindow;
+    public Output<String> getPreferredMaintenanceWindow() {
+        return this.preferredMaintenanceWindow == null ? Output.empty() : this.preferredMaintenanceWindow;
     }
 
     @InputImport(name="securityGroupIds")
-      private final @Nullable Input<List<String>> securityGroupIds;
+      private final @Nullable Output<List<String>> securityGroupIds;
 
-    public Input<List<String>> getSecurityGroupIds() {
-        return this.securityGroupIds == null ? Input.empty() : this.securityGroupIds;
+    public Output<List<String>> getSecurityGroupIds() {
+        return this.securityGroupIds == null ? Output.empty() : this.securityGroupIds;
     }
 
     @InputImport(name="serverName")
-      private final @Nullable Input<String> serverName;
+      private final @Nullable Output<String> serverName;
 
-    public Input<String> getServerName() {
-        return this.serverName == null ? Input.empty() : this.serverName;
+    public Output<String> getServerName() {
+        return this.serverName == null ? Output.empty() : this.serverName;
     }
 
     @InputImport(name="serviceRoleArn", required=true)
-      private final Input<String> serviceRoleArn;
+      private final Output<String> serviceRoleArn;
 
-    public Input<String> getServiceRoleArn() {
+    public Output<String> getServiceRoleArn() {
         return this.serviceRoleArn;
     }
 
     @InputImport(name="subnetIds")
-      private final @Nullable Input<List<String>> subnetIds;
+      private final @Nullable Output<List<String>> subnetIds;
 
-    public Input<List<String>> getSubnetIds() {
-        return this.subnetIds == null ? Input.empty() : this.subnetIds;
+    public Output<List<String>> getSubnetIds() {
+        return this.subnetIds == null ? Output.empty() : this.subnetIds;
     }
 
     @InputImport(name="tags")
-      private final @Nullable Input<List<ServerTagArgs>> tags;
+      private final @Nullable Output<List<ServerTagArgs>> tags;
 
-    public Input<List<ServerTagArgs>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<List<ServerTagArgs>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public ServerArgs(
-        @Nullable Input<Boolean> associatePublicIpAddress,
-        @Nullable Input<String> backupId,
-        @Nullable Input<Integer> backupRetentionCount,
-        @Nullable Input<String> customCertificate,
-        @Nullable Input<String> customDomain,
-        @Nullable Input<String> customPrivateKey,
-        @Nullable Input<Boolean> disableAutomatedBackup,
-        @Nullable Input<String> engine,
-        @Nullable Input<List<ServerEngineAttributeArgs>> engineAttributes,
-        @Nullable Input<String> engineModel,
-        @Nullable Input<String> engineVersion,
-        Input<String> instanceProfileArn,
-        Input<String> instanceType,
-        @Nullable Input<String> keyPair,
-        @Nullable Input<String> preferredBackupWindow,
-        @Nullable Input<String> preferredMaintenanceWindow,
-        @Nullable Input<List<String>> securityGroupIds,
-        @Nullable Input<String> serverName,
-        Input<String> serviceRoleArn,
-        @Nullable Input<List<String>> subnetIds,
-        @Nullable Input<List<ServerTagArgs>> tags) {
+        @Nullable Output<Boolean> associatePublicIpAddress,
+        @Nullable Output<String> backupId,
+        @Nullable Output<Integer> backupRetentionCount,
+        @Nullable Output<String> customCertificate,
+        @Nullable Output<String> customDomain,
+        @Nullable Output<String> customPrivateKey,
+        @Nullable Output<Boolean> disableAutomatedBackup,
+        @Nullable Output<String> engine,
+        @Nullable Output<List<ServerEngineAttributeArgs>> engineAttributes,
+        @Nullable Output<String> engineModel,
+        @Nullable Output<String> engineVersion,
+        Output<String> instanceProfileArn,
+        Output<String> instanceType,
+        @Nullable Output<String> keyPair,
+        @Nullable Output<String> preferredBackupWindow,
+        @Nullable Output<String> preferredMaintenanceWindow,
+        @Nullable Output<List<String>> securityGroupIds,
+        @Nullable Output<String> serverName,
+        Output<String> serviceRoleArn,
+        @Nullable Output<List<String>> subnetIds,
+        @Nullable Output<List<ServerTagArgs>> tags) {
         this.associatePublicIpAddress = associatePublicIpAddress;
         this.backupId = backupId;
         this.backupRetentionCount = backupRetentionCount;
@@ -212,27 +212,27 @@ public final class ServerArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ServerArgs() {
-        this.associatePublicIpAddress = Input.empty();
-        this.backupId = Input.empty();
-        this.backupRetentionCount = Input.empty();
-        this.customCertificate = Input.empty();
-        this.customDomain = Input.empty();
-        this.customPrivateKey = Input.empty();
-        this.disableAutomatedBackup = Input.empty();
-        this.engine = Input.empty();
-        this.engineAttributes = Input.empty();
-        this.engineModel = Input.empty();
-        this.engineVersion = Input.empty();
-        this.instanceProfileArn = Input.empty();
-        this.instanceType = Input.empty();
-        this.keyPair = Input.empty();
-        this.preferredBackupWindow = Input.empty();
-        this.preferredMaintenanceWindow = Input.empty();
-        this.securityGroupIds = Input.empty();
-        this.serverName = Input.empty();
-        this.serviceRoleArn = Input.empty();
-        this.subnetIds = Input.empty();
-        this.tags = Input.empty();
+        this.associatePublicIpAddress = Output.empty();
+        this.backupId = Output.empty();
+        this.backupRetentionCount = Output.empty();
+        this.customCertificate = Output.empty();
+        this.customDomain = Output.empty();
+        this.customPrivateKey = Output.empty();
+        this.disableAutomatedBackup = Output.empty();
+        this.engine = Output.empty();
+        this.engineAttributes = Output.empty();
+        this.engineModel = Output.empty();
+        this.engineVersion = Output.empty();
+        this.instanceProfileArn = Output.empty();
+        this.instanceType = Output.empty();
+        this.keyPair = Output.empty();
+        this.preferredBackupWindow = Output.empty();
+        this.preferredMaintenanceWindow = Output.empty();
+        this.securityGroupIds = Output.empty();
+        this.serverName = Output.empty();
+        this.serviceRoleArn = Output.empty();
+        this.subnetIds = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -244,27 +244,27 @@ public final class ServerArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> associatePublicIpAddress;
-        private @Nullable Input<String> backupId;
-        private @Nullable Input<Integer> backupRetentionCount;
-        private @Nullable Input<String> customCertificate;
-        private @Nullable Input<String> customDomain;
-        private @Nullable Input<String> customPrivateKey;
-        private @Nullable Input<Boolean> disableAutomatedBackup;
-        private @Nullable Input<String> engine;
-        private @Nullable Input<List<ServerEngineAttributeArgs>> engineAttributes;
-        private @Nullable Input<String> engineModel;
-        private @Nullable Input<String> engineVersion;
-        private Input<String> instanceProfileArn;
-        private Input<String> instanceType;
-        private @Nullable Input<String> keyPair;
-        private @Nullable Input<String> preferredBackupWindow;
-        private @Nullable Input<String> preferredMaintenanceWindow;
-        private @Nullable Input<List<String>> securityGroupIds;
-        private @Nullable Input<String> serverName;
-        private Input<String> serviceRoleArn;
-        private @Nullable Input<List<String>> subnetIds;
-        private @Nullable Input<List<ServerTagArgs>> tags;
+        private @Nullable Output<Boolean> associatePublicIpAddress;
+        private @Nullable Output<String> backupId;
+        private @Nullable Output<Integer> backupRetentionCount;
+        private @Nullable Output<String> customCertificate;
+        private @Nullable Output<String> customDomain;
+        private @Nullable Output<String> customPrivateKey;
+        private @Nullable Output<Boolean> disableAutomatedBackup;
+        private @Nullable Output<String> engine;
+        private @Nullable Output<List<ServerEngineAttributeArgs>> engineAttributes;
+        private @Nullable Output<String> engineModel;
+        private @Nullable Output<String> engineVersion;
+        private Output<String> instanceProfileArn;
+        private Output<String> instanceType;
+        private @Nullable Output<String> keyPair;
+        private @Nullable Output<String> preferredBackupWindow;
+        private @Nullable Output<String> preferredMaintenanceWindow;
+        private @Nullable Output<List<String>> securityGroupIds;
+        private @Nullable Output<String> serverName;
+        private Output<String> serviceRoleArn;
+        private @Nullable Output<List<String>> subnetIds;
+        private @Nullable Output<List<ServerTagArgs>> tags;
 
         public Builder() {
     	      // Empty
@@ -295,213 +295,213 @@ public final class ServerArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder associatePublicIpAddress(@Nullable Input<Boolean> associatePublicIpAddress) {
+        public Builder associatePublicIpAddress(@Nullable Output<Boolean> associatePublicIpAddress) {
             this.associatePublicIpAddress = associatePublicIpAddress;
             return this;
         }
 
         public Builder associatePublicIpAddress(@Nullable Boolean associatePublicIpAddress) {
-            this.associatePublicIpAddress = Input.ofNullable(associatePublicIpAddress);
+            this.associatePublicIpAddress = Output.ofNullable(associatePublicIpAddress);
             return this;
         }
 
-        public Builder backupId(@Nullable Input<String> backupId) {
+        public Builder backupId(@Nullable Output<String> backupId) {
             this.backupId = backupId;
             return this;
         }
 
         public Builder backupId(@Nullable String backupId) {
-            this.backupId = Input.ofNullable(backupId);
+            this.backupId = Output.ofNullable(backupId);
             return this;
         }
 
-        public Builder backupRetentionCount(@Nullable Input<Integer> backupRetentionCount) {
+        public Builder backupRetentionCount(@Nullable Output<Integer> backupRetentionCount) {
             this.backupRetentionCount = backupRetentionCount;
             return this;
         }
 
         public Builder backupRetentionCount(@Nullable Integer backupRetentionCount) {
-            this.backupRetentionCount = Input.ofNullable(backupRetentionCount);
+            this.backupRetentionCount = Output.ofNullable(backupRetentionCount);
             return this;
         }
 
-        public Builder customCertificate(@Nullable Input<String> customCertificate) {
+        public Builder customCertificate(@Nullable Output<String> customCertificate) {
             this.customCertificate = customCertificate;
             return this;
         }
 
         public Builder customCertificate(@Nullable String customCertificate) {
-            this.customCertificate = Input.ofNullable(customCertificate);
+            this.customCertificate = Output.ofNullable(customCertificate);
             return this;
         }
 
-        public Builder customDomain(@Nullable Input<String> customDomain) {
+        public Builder customDomain(@Nullable Output<String> customDomain) {
             this.customDomain = customDomain;
             return this;
         }
 
         public Builder customDomain(@Nullable String customDomain) {
-            this.customDomain = Input.ofNullable(customDomain);
+            this.customDomain = Output.ofNullable(customDomain);
             return this;
         }
 
-        public Builder customPrivateKey(@Nullable Input<String> customPrivateKey) {
+        public Builder customPrivateKey(@Nullable Output<String> customPrivateKey) {
             this.customPrivateKey = customPrivateKey;
             return this;
         }
 
         public Builder customPrivateKey(@Nullable String customPrivateKey) {
-            this.customPrivateKey = Input.ofNullable(customPrivateKey);
+            this.customPrivateKey = Output.ofNullable(customPrivateKey);
             return this;
         }
 
-        public Builder disableAutomatedBackup(@Nullable Input<Boolean> disableAutomatedBackup) {
+        public Builder disableAutomatedBackup(@Nullable Output<Boolean> disableAutomatedBackup) {
             this.disableAutomatedBackup = disableAutomatedBackup;
             return this;
         }
 
         public Builder disableAutomatedBackup(@Nullable Boolean disableAutomatedBackup) {
-            this.disableAutomatedBackup = Input.ofNullable(disableAutomatedBackup);
+            this.disableAutomatedBackup = Output.ofNullable(disableAutomatedBackup);
             return this;
         }
 
-        public Builder engine(@Nullable Input<String> engine) {
+        public Builder engine(@Nullable Output<String> engine) {
             this.engine = engine;
             return this;
         }
 
         public Builder engine(@Nullable String engine) {
-            this.engine = Input.ofNullable(engine);
+            this.engine = Output.ofNullable(engine);
             return this;
         }
 
-        public Builder engineAttributes(@Nullable Input<List<ServerEngineAttributeArgs>> engineAttributes) {
+        public Builder engineAttributes(@Nullable Output<List<ServerEngineAttributeArgs>> engineAttributes) {
             this.engineAttributes = engineAttributes;
             return this;
         }
 
         public Builder engineAttributes(@Nullable List<ServerEngineAttributeArgs> engineAttributes) {
-            this.engineAttributes = Input.ofNullable(engineAttributes);
+            this.engineAttributes = Output.ofNullable(engineAttributes);
             return this;
         }
 
-        public Builder engineModel(@Nullable Input<String> engineModel) {
+        public Builder engineModel(@Nullable Output<String> engineModel) {
             this.engineModel = engineModel;
             return this;
         }
 
         public Builder engineModel(@Nullable String engineModel) {
-            this.engineModel = Input.ofNullable(engineModel);
+            this.engineModel = Output.ofNullable(engineModel);
             return this;
         }
 
-        public Builder engineVersion(@Nullable Input<String> engineVersion) {
+        public Builder engineVersion(@Nullable Output<String> engineVersion) {
             this.engineVersion = engineVersion;
             return this;
         }
 
         public Builder engineVersion(@Nullable String engineVersion) {
-            this.engineVersion = Input.ofNullable(engineVersion);
+            this.engineVersion = Output.ofNullable(engineVersion);
             return this;
         }
 
-        public Builder instanceProfileArn(Input<String> instanceProfileArn) {
+        public Builder instanceProfileArn(Output<String> instanceProfileArn) {
             this.instanceProfileArn = Objects.requireNonNull(instanceProfileArn);
             return this;
         }
 
         public Builder instanceProfileArn(String instanceProfileArn) {
-            this.instanceProfileArn = Input.of(Objects.requireNonNull(instanceProfileArn));
+            this.instanceProfileArn = Output.of(Objects.requireNonNull(instanceProfileArn));
             return this;
         }
 
-        public Builder instanceType(Input<String> instanceType) {
+        public Builder instanceType(Output<String> instanceType) {
             this.instanceType = Objects.requireNonNull(instanceType);
             return this;
         }
 
         public Builder instanceType(String instanceType) {
-            this.instanceType = Input.of(Objects.requireNonNull(instanceType));
+            this.instanceType = Output.of(Objects.requireNonNull(instanceType));
             return this;
         }
 
-        public Builder keyPair(@Nullable Input<String> keyPair) {
+        public Builder keyPair(@Nullable Output<String> keyPair) {
             this.keyPair = keyPair;
             return this;
         }
 
         public Builder keyPair(@Nullable String keyPair) {
-            this.keyPair = Input.ofNullable(keyPair);
+            this.keyPair = Output.ofNullable(keyPair);
             return this;
         }
 
-        public Builder preferredBackupWindow(@Nullable Input<String> preferredBackupWindow) {
+        public Builder preferredBackupWindow(@Nullable Output<String> preferredBackupWindow) {
             this.preferredBackupWindow = preferredBackupWindow;
             return this;
         }
 
         public Builder preferredBackupWindow(@Nullable String preferredBackupWindow) {
-            this.preferredBackupWindow = Input.ofNullable(preferredBackupWindow);
+            this.preferredBackupWindow = Output.ofNullable(preferredBackupWindow);
             return this;
         }
 
-        public Builder preferredMaintenanceWindow(@Nullable Input<String> preferredMaintenanceWindow) {
+        public Builder preferredMaintenanceWindow(@Nullable Output<String> preferredMaintenanceWindow) {
             this.preferredMaintenanceWindow = preferredMaintenanceWindow;
             return this;
         }
 
         public Builder preferredMaintenanceWindow(@Nullable String preferredMaintenanceWindow) {
-            this.preferredMaintenanceWindow = Input.ofNullable(preferredMaintenanceWindow);
+            this.preferredMaintenanceWindow = Output.ofNullable(preferredMaintenanceWindow);
             return this;
         }
 
-        public Builder securityGroupIds(@Nullable Input<List<String>> securityGroupIds) {
+        public Builder securityGroupIds(@Nullable Output<List<String>> securityGroupIds) {
             this.securityGroupIds = securityGroupIds;
             return this;
         }
 
         public Builder securityGroupIds(@Nullable List<String> securityGroupIds) {
-            this.securityGroupIds = Input.ofNullable(securityGroupIds);
+            this.securityGroupIds = Output.ofNullable(securityGroupIds);
             return this;
         }
 
-        public Builder serverName(@Nullable Input<String> serverName) {
+        public Builder serverName(@Nullable Output<String> serverName) {
             this.serverName = serverName;
             return this;
         }
 
         public Builder serverName(@Nullable String serverName) {
-            this.serverName = Input.ofNullable(serverName);
+            this.serverName = Output.ofNullable(serverName);
             return this;
         }
 
-        public Builder serviceRoleArn(Input<String> serviceRoleArn) {
+        public Builder serviceRoleArn(Output<String> serviceRoleArn) {
             this.serviceRoleArn = Objects.requireNonNull(serviceRoleArn);
             return this;
         }
 
         public Builder serviceRoleArn(String serviceRoleArn) {
-            this.serviceRoleArn = Input.of(Objects.requireNonNull(serviceRoleArn));
+            this.serviceRoleArn = Output.of(Objects.requireNonNull(serviceRoleArn));
             return this;
         }
 
-        public Builder subnetIds(@Nullable Input<List<String>> subnetIds) {
+        public Builder subnetIds(@Nullable Output<List<String>> subnetIds) {
             this.subnetIds = subnetIds;
             return this;
         }
 
         public Builder subnetIds(@Nullable List<String> subnetIds) {
-            this.subnetIds = Input.ofNullable(subnetIds);
+            this.subnetIds = Output.ofNullable(subnetIds);
             return this;
         }
 
-        public Builder tags(@Nullable Input<List<ServerTagArgs>> tags) {
+        public Builder tags(@Nullable Output<List<ServerTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable List<ServerTagArgs> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public ServerArgs build() {

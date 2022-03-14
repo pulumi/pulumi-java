@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -20,18 +20,18 @@ public final class SecurityPolicyRuleMatcherConfigArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="srcIpRanges")
-      private final @Nullable Input<List<String>> srcIpRanges;
+      private final @Nullable Output<List<String>> srcIpRanges;
 
-    public Input<List<String>> getSrcIpRanges() {
-        return this.srcIpRanges == null ? Input.empty() : this.srcIpRanges;
+    public Output<List<String>> getSrcIpRanges() {
+        return this.srcIpRanges == null ? Output.empty() : this.srcIpRanges;
     }
 
-    public SecurityPolicyRuleMatcherConfigArgs(@Nullable Input<List<String>> srcIpRanges) {
+    public SecurityPolicyRuleMatcherConfigArgs(@Nullable Output<List<String>> srcIpRanges) {
         this.srcIpRanges = srcIpRanges;
     }
 
     private SecurityPolicyRuleMatcherConfigArgs() {
-        this.srcIpRanges = Input.empty();
+        this.srcIpRanges = Output.empty();
     }
 
     public static Builder builder() {
@@ -43,7 +43,7 @@ public final class SecurityPolicyRuleMatcherConfigArgs extends io.pulumi.resourc
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> srcIpRanges;
+        private @Nullable Output<List<String>> srcIpRanges;
 
         public Builder() {
     	      // Empty
@@ -54,13 +54,13 @@ public final class SecurityPolicyRuleMatcherConfigArgs extends io.pulumi.resourc
     	      this.srcIpRanges = defaults.srcIpRanges;
         }
 
-        public Builder srcIpRanges(@Nullable Input<List<String>> srcIpRanges) {
+        public Builder srcIpRanges(@Nullable Output<List<String>> srcIpRanges) {
             this.srcIpRanges = srcIpRanges;
             return this;
         }
 
         public Builder srcIpRanges(@Nullable List<String> srcIpRanges) {
-            this.srcIpRanges = Input.ofNullable(srcIpRanges);
+            this.srcIpRanges = Output.ofNullable(srcIpRanges);
             return this;
         }
         public SecurityPolicyRuleMatcherConfigArgs build() {

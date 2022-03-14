@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.sql.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.sql.inputs.DatabaseInstanceCloneGetArgs;
 import io.pulumi.gcp.sql.inputs.DatabaseInstanceIpAddressGetArgs;
@@ -29,10 +29,10 @@ public final class DatabaseInstanceState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="clone")
-      private final @Nullable Input<DatabaseInstanceCloneGetArgs> clone;
+      private final @Nullable Output<DatabaseInstanceCloneGetArgs> clone;
 
-    public Input<DatabaseInstanceCloneGetArgs> getClone() {
-        return this.clone == null ? Input.empty() : this.clone;
+    public Output<DatabaseInstanceCloneGetArgs> getClone() {
+        return this.clone == null ? Output.empty() : this.clone;
     }
 
     /**
@@ -41,10 +41,10 @@ public final class DatabaseInstanceState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="connectionName")
-      private final @Nullable Input<String> connectionName;
+      private final @Nullable Output<String> connectionName;
 
-    public Input<String> getConnectionName() {
-        return this.connectionName == null ? Input.empty() : this.connectionName;
+    public Output<String> getConnectionName() {
+        return this.connectionName == null ? Output.empty() : this.connectionName;
     }
 
     /**
@@ -60,10 +60,10 @@ public final class DatabaseInstanceState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="databaseVersion")
-      private final @Nullable Input<String> databaseVersion;
+      private final @Nullable Output<String> databaseVersion;
 
-    public Input<String> getDatabaseVersion() {
-        return this.databaseVersion == null ? Input.empty() : this.databaseVersion;
+    public Output<String> getDatabaseVersion() {
+        return this.databaseVersion == null ? Output.empty() : this.databaseVersion;
     }
 
     /**
@@ -72,10 +72,10 @@ public final class DatabaseInstanceState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="deletionProtection")
-      private final @Nullable Input<Boolean> deletionProtection;
+      private final @Nullable Output<Boolean> deletionProtection;
 
-    public Input<Boolean> getDeletionProtection() {
-        return this.deletionProtection == null ? Input.empty() : this.deletionProtection;
+    public Output<Boolean> getDeletionProtection() {
+        return this.deletionProtection == null ? Output.empty() : this.deletionProtection;
     }
 
     /**
@@ -90,10 +90,10 @@ public final class DatabaseInstanceState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="encryptionKeyName")
-      private final @Nullable Input<String> encryptionKeyName;
+      private final @Nullable Output<String> encryptionKeyName;
 
-    public Input<String> getEncryptionKeyName() {
-        return this.encryptionKeyName == null ? Input.empty() : this.encryptionKeyName;
+    public Output<String> getEncryptionKeyName() {
+        return this.encryptionKeyName == null ? Output.empty() : this.encryptionKeyName;
     }
 
     /**
@@ -101,17 +101,17 @@ public final class DatabaseInstanceState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="firstIpAddress")
-      private final @Nullable Input<String> firstIpAddress;
+      private final @Nullable Output<String> firstIpAddress;
 
-    public Input<String> getFirstIpAddress() {
-        return this.firstIpAddress == null ? Input.empty() : this.firstIpAddress;
+    public Output<String> getFirstIpAddress() {
+        return this.firstIpAddress == null ? Output.empty() : this.firstIpAddress;
     }
 
     @InputImport(name="ipAddresses")
-      private final @Nullable Input<List<DatabaseInstanceIpAddressGetArgs>> ipAddresses;
+      private final @Nullable Output<List<DatabaseInstanceIpAddressGetArgs>> ipAddresses;
 
-    public Input<List<DatabaseInstanceIpAddressGetArgs>> getIpAddresses() {
-        return this.ipAddresses == null ? Input.empty() : this.ipAddresses;
+    public Output<List<DatabaseInstanceIpAddressGetArgs>> getIpAddresses() {
+        return this.ipAddresses == null ? Output.empty() : this.ipAddresses;
     }
 
     /**
@@ -121,10 +121,10 @@ public final class DatabaseInstanceState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="masterInstanceName")
-      private final @Nullable Input<String> masterInstanceName;
+      private final @Nullable Output<String> masterInstanceName;
 
-    public Input<String> getMasterInstanceName() {
-        return this.masterInstanceName == null ? Input.empty() : this.masterInstanceName;
+    public Output<String> getMasterInstanceName() {
+        return this.masterInstanceName == null ? Output.empty() : this.masterInstanceName;
     }
 
     /**
@@ -132,10 +132,10 @@ public final class DatabaseInstanceState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -143,10 +143,10 @@ public final class DatabaseInstanceState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="privateIpAddress")
-      private final @Nullable Input<String> privateIpAddress;
+      private final @Nullable Output<String> privateIpAddress;
 
-    public Input<String> getPrivateIpAddress() {
-        return this.privateIpAddress == null ? Input.empty() : this.privateIpAddress;
+    public Output<String> getPrivateIpAddress() {
+        return this.privateIpAddress == null ? Output.empty() : this.privateIpAddress;
     }
 
     /**
@@ -154,10 +154,10 @@ public final class DatabaseInstanceState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -165,10 +165,10 @@ public final class DatabaseInstanceState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="publicIpAddress")
-      private final @Nullable Input<String> publicIpAddress;
+      private final @Nullable Output<String> publicIpAddress;
 
-    public Input<String> getPublicIpAddress() {
-        return this.publicIpAddress == null ? Input.empty() : this.publicIpAddress;
+    public Output<String> getPublicIpAddress() {
+        return this.publicIpAddress == null ? Output.empty() : this.publicIpAddress;
     }
 
     /**
@@ -181,10 +181,10 @@ public final class DatabaseInstanceState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="region")
-      private final @Nullable Input<String> region;
+      private final @Nullable Output<String> region;
 
-    public Input<String> getRegion() {
-        return this.region == null ? Input.empty() : this.region;
+    public Output<String> getRegion() {
+        return this.region == null ? Output.empty() : this.region;
     }
 
     /**
@@ -193,10 +193,10 @@ public final class DatabaseInstanceState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="replicaConfiguration")
-      private final @Nullable Input<DatabaseInstanceReplicaConfigurationGetArgs> replicaConfiguration;
+      private final @Nullable Output<DatabaseInstanceReplicaConfigurationGetArgs> replicaConfiguration;
 
-    public Input<DatabaseInstanceReplicaConfigurationGetArgs> getReplicaConfiguration() {
-        return this.replicaConfiguration == null ? Input.empty() : this.replicaConfiguration;
+    public Output<DatabaseInstanceReplicaConfigurationGetArgs> getReplicaConfiguration() {
+        return this.replicaConfiguration == null ? Output.empty() : this.replicaConfiguration;
     }
 
     /**
@@ -207,10 +207,10 @@ public final class DatabaseInstanceState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="restoreBackupContext")
-      private final @Nullable Input<DatabaseInstanceRestoreBackupContextGetArgs> restoreBackupContext;
+      private final @Nullable Output<DatabaseInstanceRestoreBackupContextGetArgs> restoreBackupContext;
 
-    public Input<DatabaseInstanceRestoreBackupContextGetArgs> getRestoreBackupContext() {
-        return this.restoreBackupContext == null ? Input.empty() : this.restoreBackupContext;
+    public Output<DatabaseInstanceRestoreBackupContextGetArgs> getRestoreBackupContext() {
+        return this.restoreBackupContext == null ? Output.empty() : this.restoreBackupContext;
     }
 
     /**
@@ -218,10 +218,10 @@ public final class DatabaseInstanceState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="rootPassword")
-      private final @Nullable Input<String> rootPassword;
+      private final @Nullable Output<String> rootPassword;
 
-    public Input<String> getRootPassword() {
-        return this.rootPassword == null ? Input.empty() : this.rootPassword;
+    public Output<String> getRootPassword() {
+        return this.rootPassword == null ? Output.empty() : this.rootPassword;
     }
 
     /**
@@ -229,17 +229,17 @@ public final class DatabaseInstanceState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="selfLink")
-      private final @Nullable Input<String> selfLink;
+      private final @Nullable Output<String> selfLink;
 
-    public Input<String> getSelfLink() {
-        return this.selfLink == null ? Input.empty() : this.selfLink;
+    public Output<String> getSelfLink() {
+        return this.selfLink == null ? Output.empty() : this.selfLink;
     }
 
     @InputImport(name="serverCaCerts")
-      private final @Nullable Input<List<DatabaseInstanceServerCaCertGetArgs>> serverCaCerts;
+      private final @Nullable Output<List<DatabaseInstanceServerCaCertGetArgs>> serverCaCerts;
 
-    public Input<List<DatabaseInstanceServerCaCertGetArgs>> getServerCaCerts() {
-        return this.serverCaCerts == null ? Input.empty() : this.serverCaCerts;
+    public Output<List<DatabaseInstanceServerCaCertGetArgs>> getServerCaCerts() {
+        return this.serverCaCerts == null ? Output.empty() : this.serverCaCerts;
     }
 
     /**
@@ -248,10 +248,10 @@ public final class DatabaseInstanceState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="serviceAccountEmailAddress")
-      private final @Nullable Input<String> serviceAccountEmailAddress;
+      private final @Nullable Output<String> serviceAccountEmailAddress;
 
-    public Input<String> getServiceAccountEmailAddress() {
-        return this.serviceAccountEmailAddress == null ? Input.empty() : this.serviceAccountEmailAddress;
+    public Output<String> getServiceAccountEmailAddress() {
+        return this.serviceAccountEmailAddress == null ? Output.empty() : this.serviceAccountEmailAddress;
     }
 
     /**
@@ -260,33 +260,33 @@ public final class DatabaseInstanceState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="settings")
-      private final @Nullable Input<DatabaseInstanceSettingsGetArgs> settings;
+      private final @Nullable Output<DatabaseInstanceSettingsGetArgs> settings;
 
-    public Input<DatabaseInstanceSettingsGetArgs> getSettings() {
-        return this.settings == null ? Input.empty() : this.settings;
+    public Output<DatabaseInstanceSettingsGetArgs> getSettings() {
+        return this.settings == null ? Output.empty() : this.settings;
     }
 
     public DatabaseInstanceState(
-        @Nullable Input<DatabaseInstanceCloneGetArgs> clone,
-        @Nullable Input<String> connectionName,
-        @Nullable Input<String> databaseVersion,
-        @Nullable Input<Boolean> deletionProtection,
-        @Nullable Input<String> encryptionKeyName,
-        @Nullable Input<String> firstIpAddress,
-        @Nullable Input<List<DatabaseInstanceIpAddressGetArgs>> ipAddresses,
-        @Nullable Input<String> masterInstanceName,
-        @Nullable Input<String> name,
-        @Nullable Input<String> privateIpAddress,
-        @Nullable Input<String> project,
-        @Nullable Input<String> publicIpAddress,
-        @Nullable Input<String> region,
-        @Nullable Input<DatabaseInstanceReplicaConfigurationGetArgs> replicaConfiguration,
-        @Nullable Input<DatabaseInstanceRestoreBackupContextGetArgs> restoreBackupContext,
-        @Nullable Input<String> rootPassword,
-        @Nullable Input<String> selfLink,
-        @Nullable Input<List<DatabaseInstanceServerCaCertGetArgs>> serverCaCerts,
-        @Nullable Input<String> serviceAccountEmailAddress,
-        @Nullable Input<DatabaseInstanceSettingsGetArgs> settings) {
+        @Nullable Output<DatabaseInstanceCloneGetArgs> clone,
+        @Nullable Output<String> connectionName,
+        @Nullable Output<String> databaseVersion,
+        @Nullable Output<Boolean> deletionProtection,
+        @Nullable Output<String> encryptionKeyName,
+        @Nullable Output<String> firstIpAddress,
+        @Nullable Output<List<DatabaseInstanceIpAddressGetArgs>> ipAddresses,
+        @Nullable Output<String> masterInstanceName,
+        @Nullable Output<String> name,
+        @Nullable Output<String> privateIpAddress,
+        @Nullable Output<String> project,
+        @Nullable Output<String> publicIpAddress,
+        @Nullable Output<String> region,
+        @Nullable Output<DatabaseInstanceReplicaConfigurationGetArgs> replicaConfiguration,
+        @Nullable Output<DatabaseInstanceRestoreBackupContextGetArgs> restoreBackupContext,
+        @Nullable Output<String> rootPassword,
+        @Nullable Output<String> selfLink,
+        @Nullable Output<List<DatabaseInstanceServerCaCertGetArgs>> serverCaCerts,
+        @Nullable Output<String> serviceAccountEmailAddress,
+        @Nullable Output<DatabaseInstanceSettingsGetArgs> settings) {
         this.clone = clone;
         this.connectionName = connectionName;
         this.databaseVersion = databaseVersion;
@@ -310,26 +310,26 @@ public final class DatabaseInstanceState extends io.pulumi.resources.ResourceArg
     }
 
     private DatabaseInstanceState() {
-        this.clone = Input.empty();
-        this.connectionName = Input.empty();
-        this.databaseVersion = Input.empty();
-        this.deletionProtection = Input.empty();
-        this.encryptionKeyName = Input.empty();
-        this.firstIpAddress = Input.empty();
-        this.ipAddresses = Input.empty();
-        this.masterInstanceName = Input.empty();
-        this.name = Input.empty();
-        this.privateIpAddress = Input.empty();
-        this.project = Input.empty();
-        this.publicIpAddress = Input.empty();
-        this.region = Input.empty();
-        this.replicaConfiguration = Input.empty();
-        this.restoreBackupContext = Input.empty();
-        this.rootPassword = Input.empty();
-        this.selfLink = Input.empty();
-        this.serverCaCerts = Input.empty();
-        this.serviceAccountEmailAddress = Input.empty();
-        this.settings = Input.empty();
+        this.clone = Output.empty();
+        this.connectionName = Output.empty();
+        this.databaseVersion = Output.empty();
+        this.deletionProtection = Output.empty();
+        this.encryptionKeyName = Output.empty();
+        this.firstIpAddress = Output.empty();
+        this.ipAddresses = Output.empty();
+        this.masterInstanceName = Output.empty();
+        this.name = Output.empty();
+        this.privateIpAddress = Output.empty();
+        this.project = Output.empty();
+        this.publicIpAddress = Output.empty();
+        this.region = Output.empty();
+        this.replicaConfiguration = Output.empty();
+        this.restoreBackupContext = Output.empty();
+        this.rootPassword = Output.empty();
+        this.selfLink = Output.empty();
+        this.serverCaCerts = Output.empty();
+        this.serviceAccountEmailAddress = Output.empty();
+        this.settings = Output.empty();
     }
 
     public static Builder builder() {
@@ -341,26 +341,26 @@ public final class DatabaseInstanceState extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private @Nullable Input<DatabaseInstanceCloneGetArgs> clone;
-        private @Nullable Input<String> connectionName;
-        private @Nullable Input<String> databaseVersion;
-        private @Nullable Input<Boolean> deletionProtection;
-        private @Nullable Input<String> encryptionKeyName;
-        private @Nullable Input<String> firstIpAddress;
-        private @Nullable Input<List<DatabaseInstanceIpAddressGetArgs>> ipAddresses;
-        private @Nullable Input<String> masterInstanceName;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> privateIpAddress;
-        private @Nullable Input<String> project;
-        private @Nullable Input<String> publicIpAddress;
-        private @Nullable Input<String> region;
-        private @Nullable Input<DatabaseInstanceReplicaConfigurationGetArgs> replicaConfiguration;
-        private @Nullable Input<DatabaseInstanceRestoreBackupContextGetArgs> restoreBackupContext;
-        private @Nullable Input<String> rootPassword;
-        private @Nullable Input<String> selfLink;
-        private @Nullable Input<List<DatabaseInstanceServerCaCertGetArgs>> serverCaCerts;
-        private @Nullable Input<String> serviceAccountEmailAddress;
-        private @Nullable Input<DatabaseInstanceSettingsGetArgs> settings;
+        private @Nullable Output<DatabaseInstanceCloneGetArgs> clone;
+        private @Nullable Output<String> connectionName;
+        private @Nullable Output<String> databaseVersion;
+        private @Nullable Output<Boolean> deletionProtection;
+        private @Nullable Output<String> encryptionKeyName;
+        private @Nullable Output<String> firstIpAddress;
+        private @Nullable Output<List<DatabaseInstanceIpAddressGetArgs>> ipAddresses;
+        private @Nullable Output<String> masterInstanceName;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> privateIpAddress;
+        private @Nullable Output<String> project;
+        private @Nullable Output<String> publicIpAddress;
+        private @Nullable Output<String> region;
+        private @Nullable Output<DatabaseInstanceReplicaConfigurationGetArgs> replicaConfiguration;
+        private @Nullable Output<DatabaseInstanceRestoreBackupContextGetArgs> restoreBackupContext;
+        private @Nullable Output<String> rootPassword;
+        private @Nullable Output<String> selfLink;
+        private @Nullable Output<List<DatabaseInstanceServerCaCertGetArgs>> serverCaCerts;
+        private @Nullable Output<String> serviceAccountEmailAddress;
+        private @Nullable Output<DatabaseInstanceSettingsGetArgs> settings;
 
         public Builder() {
     	      // Empty
@@ -390,203 +390,203 @@ public final class DatabaseInstanceState extends io.pulumi.resources.ResourceArg
     	      this.settings = defaults.settings;
         }
 
-        public Builder clone(@Nullable Input<DatabaseInstanceCloneGetArgs> clone) {
+        public Builder clone(@Nullable Output<DatabaseInstanceCloneGetArgs> clone) {
             this.clone = clone;
             return this;
         }
 
         public Builder clone(@Nullable DatabaseInstanceCloneGetArgs clone) {
-            this.clone = Input.ofNullable(clone);
+            this.clone = Output.ofNullable(clone);
             return this;
         }
 
-        public Builder connectionName(@Nullable Input<String> connectionName) {
+        public Builder connectionName(@Nullable Output<String> connectionName) {
             this.connectionName = connectionName;
             return this;
         }
 
         public Builder connectionName(@Nullable String connectionName) {
-            this.connectionName = Input.ofNullable(connectionName);
+            this.connectionName = Output.ofNullable(connectionName);
             return this;
         }
 
-        public Builder databaseVersion(@Nullable Input<String> databaseVersion) {
+        public Builder databaseVersion(@Nullable Output<String> databaseVersion) {
             this.databaseVersion = databaseVersion;
             return this;
         }
 
         public Builder databaseVersion(@Nullable String databaseVersion) {
-            this.databaseVersion = Input.ofNullable(databaseVersion);
+            this.databaseVersion = Output.ofNullable(databaseVersion);
             return this;
         }
 
-        public Builder deletionProtection(@Nullable Input<Boolean> deletionProtection) {
+        public Builder deletionProtection(@Nullable Output<Boolean> deletionProtection) {
             this.deletionProtection = deletionProtection;
             return this;
         }
 
         public Builder deletionProtection(@Nullable Boolean deletionProtection) {
-            this.deletionProtection = Input.ofNullable(deletionProtection);
+            this.deletionProtection = Output.ofNullable(deletionProtection);
             return this;
         }
 
-        public Builder encryptionKeyName(@Nullable Input<String> encryptionKeyName) {
+        public Builder encryptionKeyName(@Nullable Output<String> encryptionKeyName) {
             this.encryptionKeyName = encryptionKeyName;
             return this;
         }
 
         public Builder encryptionKeyName(@Nullable String encryptionKeyName) {
-            this.encryptionKeyName = Input.ofNullable(encryptionKeyName);
+            this.encryptionKeyName = Output.ofNullable(encryptionKeyName);
             return this;
         }
 
-        public Builder firstIpAddress(@Nullable Input<String> firstIpAddress) {
+        public Builder firstIpAddress(@Nullable Output<String> firstIpAddress) {
             this.firstIpAddress = firstIpAddress;
             return this;
         }
 
         public Builder firstIpAddress(@Nullable String firstIpAddress) {
-            this.firstIpAddress = Input.ofNullable(firstIpAddress);
+            this.firstIpAddress = Output.ofNullable(firstIpAddress);
             return this;
         }
 
-        public Builder ipAddresses(@Nullable Input<List<DatabaseInstanceIpAddressGetArgs>> ipAddresses) {
+        public Builder ipAddresses(@Nullable Output<List<DatabaseInstanceIpAddressGetArgs>> ipAddresses) {
             this.ipAddresses = ipAddresses;
             return this;
         }
 
         public Builder ipAddresses(@Nullable List<DatabaseInstanceIpAddressGetArgs> ipAddresses) {
-            this.ipAddresses = Input.ofNullable(ipAddresses);
+            this.ipAddresses = Output.ofNullable(ipAddresses);
             return this;
         }
 
-        public Builder masterInstanceName(@Nullable Input<String> masterInstanceName) {
+        public Builder masterInstanceName(@Nullable Output<String> masterInstanceName) {
             this.masterInstanceName = masterInstanceName;
             return this;
         }
 
         public Builder masterInstanceName(@Nullable String masterInstanceName) {
-            this.masterInstanceName = Input.ofNullable(masterInstanceName);
+            this.masterInstanceName = Output.ofNullable(masterInstanceName);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder privateIpAddress(@Nullable Input<String> privateIpAddress) {
+        public Builder privateIpAddress(@Nullable Output<String> privateIpAddress) {
             this.privateIpAddress = privateIpAddress;
             return this;
         }
 
         public Builder privateIpAddress(@Nullable String privateIpAddress) {
-            this.privateIpAddress = Input.ofNullable(privateIpAddress);
+            this.privateIpAddress = Output.ofNullable(privateIpAddress);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder publicIpAddress(@Nullable Input<String> publicIpAddress) {
+        public Builder publicIpAddress(@Nullable Output<String> publicIpAddress) {
             this.publicIpAddress = publicIpAddress;
             return this;
         }
 
         public Builder publicIpAddress(@Nullable String publicIpAddress) {
-            this.publicIpAddress = Input.ofNullable(publicIpAddress);
+            this.publicIpAddress = Output.ofNullable(publicIpAddress);
             return this;
         }
 
-        public Builder region(@Nullable Input<String> region) {
+        public Builder region(@Nullable Output<String> region) {
             this.region = region;
             return this;
         }
 
         public Builder region(@Nullable String region) {
-            this.region = Input.ofNullable(region);
+            this.region = Output.ofNullable(region);
             return this;
         }
 
-        public Builder replicaConfiguration(@Nullable Input<DatabaseInstanceReplicaConfigurationGetArgs> replicaConfiguration) {
+        public Builder replicaConfiguration(@Nullable Output<DatabaseInstanceReplicaConfigurationGetArgs> replicaConfiguration) {
             this.replicaConfiguration = replicaConfiguration;
             return this;
         }
 
         public Builder replicaConfiguration(@Nullable DatabaseInstanceReplicaConfigurationGetArgs replicaConfiguration) {
-            this.replicaConfiguration = Input.ofNullable(replicaConfiguration);
+            this.replicaConfiguration = Output.ofNullable(replicaConfiguration);
             return this;
         }
 
-        public Builder restoreBackupContext(@Nullable Input<DatabaseInstanceRestoreBackupContextGetArgs> restoreBackupContext) {
+        public Builder restoreBackupContext(@Nullable Output<DatabaseInstanceRestoreBackupContextGetArgs> restoreBackupContext) {
             this.restoreBackupContext = restoreBackupContext;
             return this;
         }
 
         public Builder restoreBackupContext(@Nullable DatabaseInstanceRestoreBackupContextGetArgs restoreBackupContext) {
-            this.restoreBackupContext = Input.ofNullable(restoreBackupContext);
+            this.restoreBackupContext = Output.ofNullable(restoreBackupContext);
             return this;
         }
 
-        public Builder rootPassword(@Nullable Input<String> rootPassword) {
+        public Builder rootPassword(@Nullable Output<String> rootPassword) {
             this.rootPassword = rootPassword;
             return this;
         }
 
         public Builder rootPassword(@Nullable String rootPassword) {
-            this.rootPassword = Input.ofNullable(rootPassword);
+            this.rootPassword = Output.ofNullable(rootPassword);
             return this;
         }
 
-        public Builder selfLink(@Nullable Input<String> selfLink) {
+        public Builder selfLink(@Nullable Output<String> selfLink) {
             this.selfLink = selfLink;
             return this;
         }
 
         public Builder selfLink(@Nullable String selfLink) {
-            this.selfLink = Input.ofNullable(selfLink);
+            this.selfLink = Output.ofNullable(selfLink);
             return this;
         }
 
-        public Builder serverCaCerts(@Nullable Input<List<DatabaseInstanceServerCaCertGetArgs>> serverCaCerts) {
+        public Builder serverCaCerts(@Nullable Output<List<DatabaseInstanceServerCaCertGetArgs>> serverCaCerts) {
             this.serverCaCerts = serverCaCerts;
             return this;
         }
 
         public Builder serverCaCerts(@Nullable List<DatabaseInstanceServerCaCertGetArgs> serverCaCerts) {
-            this.serverCaCerts = Input.ofNullable(serverCaCerts);
+            this.serverCaCerts = Output.ofNullable(serverCaCerts);
             return this;
         }
 
-        public Builder serviceAccountEmailAddress(@Nullable Input<String> serviceAccountEmailAddress) {
+        public Builder serviceAccountEmailAddress(@Nullable Output<String> serviceAccountEmailAddress) {
             this.serviceAccountEmailAddress = serviceAccountEmailAddress;
             return this;
         }
 
         public Builder serviceAccountEmailAddress(@Nullable String serviceAccountEmailAddress) {
-            this.serviceAccountEmailAddress = Input.ofNullable(serviceAccountEmailAddress);
+            this.serviceAccountEmailAddress = Output.ofNullable(serviceAccountEmailAddress);
             return this;
         }
 
-        public Builder settings(@Nullable Input<DatabaseInstanceSettingsGetArgs> settings) {
+        public Builder settings(@Nullable Output<DatabaseInstanceSettingsGetArgs> settings) {
             this.settings = settings;
             return this;
         }
 
         public Builder settings(@Nullable DatabaseInstanceSettingsGetArgs settings) {
-            this.settings = Input.ofNullable(settings);
+            this.settings = Output.ofNullable(settings);
             return this;
         }
         public DatabaseInstanceState build() {

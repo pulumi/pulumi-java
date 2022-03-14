@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.worklink.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -18,9 +18,9 @@ public final class FleetIdentityProviderArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="samlMetadata", required=true)
-      private final Input<String> samlMetadata;
+      private final Output<String> samlMetadata;
 
-    public Input<String> getSamlMetadata() {
+    public Output<String> getSamlMetadata() {
         return this.samlMetadata;
     }
 
@@ -29,22 +29,22 @@ public final class FleetIdentityProviderArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<String> type;
+      private final Output<String> type;
 
-    public Input<String> getType() {
+    public Output<String> getType() {
         return this.type;
     }
 
     public FleetIdentityProviderArgs(
-        Input<String> samlMetadata,
-        Input<String> type) {
+        Output<String> samlMetadata,
+        Output<String> type) {
         this.samlMetadata = Objects.requireNonNull(samlMetadata, "expected parameter 'samlMetadata' to be non-null");
         this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
     }
 
     private FleetIdentityProviderArgs() {
-        this.samlMetadata = Input.empty();
-        this.type = Input.empty();
+        this.samlMetadata = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -56,8 +56,8 @@ public final class FleetIdentityProviderArgs extends io.pulumi.resources.Resourc
     }
 
     public static final class Builder {
-        private Input<String> samlMetadata;
-        private Input<String> type;
+        private Output<String> samlMetadata;
+        private Output<String> type;
 
         public Builder() {
     	      // Empty
@@ -69,23 +69,23 @@ public final class FleetIdentityProviderArgs extends io.pulumi.resources.Resourc
     	      this.type = defaults.type;
         }
 
-        public Builder samlMetadata(Input<String> samlMetadata) {
+        public Builder samlMetadata(Output<String> samlMetadata) {
             this.samlMetadata = Objects.requireNonNull(samlMetadata);
             return this;
         }
 
         public Builder samlMetadata(String samlMetadata) {
-            this.samlMetadata = Input.of(Objects.requireNonNull(samlMetadata));
+            this.samlMetadata = Output.of(Objects.requireNonNull(samlMetadata));
             return this;
         }
 
-        public Builder type(Input<String> type) {
+        public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(String type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
         public FleetIdentityProviderArgs build() {

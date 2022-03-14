@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.gamelift.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
@@ -22,9 +22,9 @@ public final class FleetLocationCapacityArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="desiredEC2Instances", required=true)
-      private final Input<Integer> desiredEC2Instances;
+      private final Output<Integer> desiredEC2Instances;
 
-    public Input<Integer> getDesiredEC2Instances() {
+    public Output<Integer> getDesiredEC2Instances() {
         return this.desiredEC2Instances;
     }
 
@@ -33,9 +33,9 @@ public final class FleetLocationCapacityArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="maxSize", required=true)
-      private final Input<Integer> maxSize;
+      private final Output<Integer> maxSize;
 
-    public Input<Integer> getMaxSize() {
+    public Output<Integer> getMaxSize() {
         return this.maxSize;
     }
 
@@ -44,25 +44,25 @@ public final class FleetLocationCapacityArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="minSize", required=true)
-      private final Input<Integer> minSize;
+      private final Output<Integer> minSize;
 
-    public Input<Integer> getMinSize() {
+    public Output<Integer> getMinSize() {
         return this.minSize;
     }
 
     public FleetLocationCapacityArgs(
-        Input<Integer> desiredEC2Instances,
-        Input<Integer> maxSize,
-        Input<Integer> minSize) {
+        Output<Integer> desiredEC2Instances,
+        Output<Integer> maxSize,
+        Output<Integer> minSize) {
         this.desiredEC2Instances = Objects.requireNonNull(desiredEC2Instances, "expected parameter 'desiredEC2Instances' to be non-null");
         this.maxSize = Objects.requireNonNull(maxSize, "expected parameter 'maxSize' to be non-null");
         this.minSize = Objects.requireNonNull(minSize, "expected parameter 'minSize' to be non-null");
     }
 
     private FleetLocationCapacityArgs() {
-        this.desiredEC2Instances = Input.empty();
-        this.maxSize = Input.empty();
-        this.minSize = Input.empty();
+        this.desiredEC2Instances = Output.empty();
+        this.maxSize = Output.empty();
+        this.minSize = Output.empty();
     }
 
     public static Builder builder() {
@@ -74,9 +74,9 @@ public final class FleetLocationCapacityArgs extends io.pulumi.resources.Resourc
     }
 
     public static final class Builder {
-        private Input<Integer> desiredEC2Instances;
-        private Input<Integer> maxSize;
-        private Input<Integer> minSize;
+        private Output<Integer> desiredEC2Instances;
+        private Output<Integer> maxSize;
+        private Output<Integer> minSize;
 
         public Builder() {
     	      // Empty
@@ -89,33 +89,33 @@ public final class FleetLocationCapacityArgs extends io.pulumi.resources.Resourc
     	      this.minSize = defaults.minSize;
         }
 
-        public Builder desiredEC2Instances(Input<Integer> desiredEC2Instances) {
+        public Builder desiredEC2Instances(Output<Integer> desiredEC2Instances) {
             this.desiredEC2Instances = Objects.requireNonNull(desiredEC2Instances);
             return this;
         }
 
         public Builder desiredEC2Instances(Integer desiredEC2Instances) {
-            this.desiredEC2Instances = Input.of(Objects.requireNonNull(desiredEC2Instances));
+            this.desiredEC2Instances = Output.of(Objects.requireNonNull(desiredEC2Instances));
             return this;
         }
 
-        public Builder maxSize(Input<Integer> maxSize) {
+        public Builder maxSize(Output<Integer> maxSize) {
             this.maxSize = Objects.requireNonNull(maxSize);
             return this;
         }
 
         public Builder maxSize(Integer maxSize) {
-            this.maxSize = Input.of(Objects.requireNonNull(maxSize));
+            this.maxSize = Output.of(Objects.requireNonNull(maxSize));
             return this;
         }
 
-        public Builder minSize(Input<Integer> minSize) {
+        public Builder minSize(Output<Integer> minSize) {
             this.minSize = Objects.requireNonNull(minSize);
             return this;
         }
 
         public Builder minSize(Integer minSize) {
-            this.minSize = Input.of(Objects.requireNonNull(minSize));
+            this.minSize = Output.of(Objects.requireNonNull(minSize));
             return this;
         }
         public FleetLocationCapacityArgs build() {

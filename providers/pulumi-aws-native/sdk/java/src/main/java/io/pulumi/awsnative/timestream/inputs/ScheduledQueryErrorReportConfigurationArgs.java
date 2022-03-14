@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.timestream.inputs;
 
 import io.pulumi.awsnative.timestream.inputs.ScheduledQueryS3ConfigurationArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 
@@ -18,18 +18,18 @@ public final class ScheduledQueryErrorReportConfigurationArgs extends io.pulumi.
     public static final ScheduledQueryErrorReportConfigurationArgs Empty = new ScheduledQueryErrorReportConfigurationArgs();
 
     @InputImport(name="s3Configuration", required=true)
-      private final Input<ScheduledQueryS3ConfigurationArgs> s3Configuration;
+      private final Output<ScheduledQueryS3ConfigurationArgs> s3Configuration;
 
-    public Input<ScheduledQueryS3ConfigurationArgs> getS3Configuration() {
+    public Output<ScheduledQueryS3ConfigurationArgs> getS3Configuration() {
         return this.s3Configuration;
     }
 
-    public ScheduledQueryErrorReportConfigurationArgs(Input<ScheduledQueryS3ConfigurationArgs> s3Configuration) {
+    public ScheduledQueryErrorReportConfigurationArgs(Output<ScheduledQueryS3ConfigurationArgs> s3Configuration) {
         this.s3Configuration = Objects.requireNonNull(s3Configuration, "expected parameter 's3Configuration' to be non-null");
     }
 
     private ScheduledQueryErrorReportConfigurationArgs() {
-        this.s3Configuration = Input.empty();
+        this.s3Configuration = Output.empty();
     }
 
     public static Builder builder() {
@@ -41,7 +41,7 @@ public final class ScheduledQueryErrorReportConfigurationArgs extends io.pulumi.
     }
 
     public static final class Builder {
-        private Input<ScheduledQueryS3ConfigurationArgs> s3Configuration;
+        private Output<ScheduledQueryS3ConfigurationArgs> s3Configuration;
 
         public Builder() {
     	      // Empty
@@ -52,13 +52,13 @@ public final class ScheduledQueryErrorReportConfigurationArgs extends io.pulumi.
     	      this.s3Configuration = defaults.s3Configuration;
         }
 
-        public Builder s3Configuration(Input<ScheduledQueryS3ConfigurationArgs> s3Configuration) {
+        public Builder s3Configuration(Output<ScheduledQueryS3ConfigurationArgs> s3Configuration) {
             this.s3Configuration = Objects.requireNonNull(s3Configuration);
             return this;
         }
 
         public Builder s3Configuration(ScheduledQueryS3ConfigurationArgs s3Configuration) {
-            this.s3Configuration = Input.of(Objects.requireNonNull(s3Configuration));
+            this.s3Configuration = Output.of(Objects.requireNonNull(s3Configuration));
             return this;
         }
         public ScheduledQueryErrorReportConfigurationArgs build() {

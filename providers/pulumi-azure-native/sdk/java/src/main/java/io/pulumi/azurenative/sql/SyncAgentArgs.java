@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.sql;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,9 +19,9 @@ public final class SyncAgentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -30,9 +30,9 @@ public final class SyncAgentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serverName", required=true)
-      private final Input<String> serverName;
+      private final Output<String> serverName;
 
-    public Input<String> getServerName() {
+    public Output<String> getServerName() {
         return this.serverName;
     }
 
@@ -41,10 +41,10 @@ public final class SyncAgentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="syncAgentName")
-      private final @Nullable Input<String> syncAgentName;
+      private final @Nullable Output<String> syncAgentName;
 
-    public Input<String> getSyncAgentName() {
-        return this.syncAgentName == null ? Input.empty() : this.syncAgentName;
+    public Output<String> getSyncAgentName() {
+        return this.syncAgentName == null ? Output.empty() : this.syncAgentName;
     }
 
     /**
@@ -52,17 +52,17 @@ public final class SyncAgentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="syncDatabaseId")
-      private final @Nullable Input<String> syncDatabaseId;
+      private final @Nullable Output<String> syncDatabaseId;
 
-    public Input<String> getSyncDatabaseId() {
-        return this.syncDatabaseId == null ? Input.empty() : this.syncDatabaseId;
+    public Output<String> getSyncDatabaseId() {
+        return this.syncDatabaseId == null ? Output.empty() : this.syncDatabaseId;
     }
 
     public SyncAgentArgs(
-        Input<String> resourceGroupName,
-        Input<String> serverName,
-        @Nullable Input<String> syncAgentName,
-        @Nullable Input<String> syncDatabaseId) {
+        Output<String> resourceGroupName,
+        Output<String> serverName,
+        @Nullable Output<String> syncAgentName,
+        @Nullable Output<String> syncDatabaseId) {
         this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
         this.serverName = Objects.requireNonNull(serverName, "expected parameter 'serverName' to be non-null");
         this.syncAgentName = syncAgentName;
@@ -70,10 +70,10 @@ public final class SyncAgentArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private SyncAgentArgs() {
-        this.resourceGroupName = Input.empty();
-        this.serverName = Input.empty();
-        this.syncAgentName = Input.empty();
-        this.syncDatabaseId = Input.empty();
+        this.resourceGroupName = Output.empty();
+        this.serverName = Output.empty();
+        this.syncAgentName = Output.empty();
+        this.syncDatabaseId = Output.empty();
     }
 
     public static Builder builder() {
@@ -85,10 +85,10 @@ public final class SyncAgentArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> resourceGroupName;
-        private Input<String> serverName;
-        private @Nullable Input<String> syncAgentName;
-        private @Nullable Input<String> syncDatabaseId;
+        private Output<String> resourceGroupName;
+        private Output<String> serverName;
+        private @Nullable Output<String> syncAgentName;
+        private @Nullable Output<String> syncDatabaseId;
 
         public Builder() {
     	      // Empty
@@ -102,43 +102,43 @@ public final class SyncAgentArgs extends io.pulumi.resources.ResourceArgs {
     	      this.syncDatabaseId = defaults.syncDatabaseId;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder serverName(Input<String> serverName) {
+        public Builder serverName(Output<String> serverName) {
             this.serverName = Objects.requireNonNull(serverName);
             return this;
         }
 
         public Builder serverName(String serverName) {
-            this.serverName = Input.of(Objects.requireNonNull(serverName));
+            this.serverName = Output.of(Objects.requireNonNull(serverName));
             return this;
         }
 
-        public Builder syncAgentName(@Nullable Input<String> syncAgentName) {
+        public Builder syncAgentName(@Nullable Output<String> syncAgentName) {
             this.syncAgentName = syncAgentName;
             return this;
         }
 
         public Builder syncAgentName(@Nullable String syncAgentName) {
-            this.syncAgentName = Input.ofNullable(syncAgentName);
+            this.syncAgentName = Output.ofNullable(syncAgentName);
             return this;
         }
 
-        public Builder syncDatabaseId(@Nullable Input<String> syncDatabaseId) {
+        public Builder syncDatabaseId(@Nullable Output<String> syncDatabaseId) {
             this.syncDatabaseId = syncDatabaseId;
             return this;
         }
 
         public Builder syncDatabaseId(@Nullable String syncDatabaseId) {
-            this.syncDatabaseId = Input.ofNullable(syncDatabaseId);
+            this.syncDatabaseId = Output.ofNullable(syncDatabaseId);
             return this;
         }
         public SyncAgentArgs build() {

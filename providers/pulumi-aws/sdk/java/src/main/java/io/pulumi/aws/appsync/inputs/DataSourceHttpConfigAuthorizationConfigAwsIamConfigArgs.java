@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.appsync.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class DataSourceHttpConfigAuthorizationConfigAwsIamConfigArgs exten
      * 
      */
     @InputImport(name="signingRegion")
-      private final @Nullable Input<String> signingRegion;
+      private final @Nullable Output<String> signingRegion;
 
-    public Input<String> getSigningRegion() {
-        return this.signingRegion == null ? Input.empty() : this.signingRegion;
+    public Output<String> getSigningRegion() {
+        return this.signingRegion == null ? Output.empty() : this.signingRegion;
     }
 
     /**
@@ -30,22 +30,22 @@ public final class DataSourceHttpConfigAuthorizationConfigAwsIamConfigArgs exten
      * 
      */
     @InputImport(name="signingServiceName")
-      private final @Nullable Input<String> signingServiceName;
+      private final @Nullable Output<String> signingServiceName;
 
-    public Input<String> getSigningServiceName() {
-        return this.signingServiceName == null ? Input.empty() : this.signingServiceName;
+    public Output<String> getSigningServiceName() {
+        return this.signingServiceName == null ? Output.empty() : this.signingServiceName;
     }
 
     public DataSourceHttpConfigAuthorizationConfigAwsIamConfigArgs(
-        @Nullable Input<String> signingRegion,
-        @Nullable Input<String> signingServiceName) {
+        @Nullable Output<String> signingRegion,
+        @Nullable Output<String> signingServiceName) {
         this.signingRegion = signingRegion;
         this.signingServiceName = signingServiceName;
     }
 
     private DataSourceHttpConfigAuthorizationConfigAwsIamConfigArgs() {
-        this.signingRegion = Input.empty();
-        this.signingServiceName = Input.empty();
+        this.signingRegion = Output.empty();
+        this.signingServiceName = Output.empty();
     }
 
     public static Builder builder() {
@@ -57,8 +57,8 @@ public final class DataSourceHttpConfigAuthorizationConfigAwsIamConfigArgs exten
     }
 
     public static final class Builder {
-        private @Nullable Input<String> signingRegion;
-        private @Nullable Input<String> signingServiceName;
+        private @Nullable Output<String> signingRegion;
+        private @Nullable Output<String> signingServiceName;
 
         public Builder() {
     	      // Empty
@@ -70,23 +70,23 @@ public final class DataSourceHttpConfigAuthorizationConfigAwsIamConfigArgs exten
     	      this.signingServiceName = defaults.signingServiceName;
         }
 
-        public Builder signingRegion(@Nullable Input<String> signingRegion) {
+        public Builder signingRegion(@Nullable Output<String> signingRegion) {
             this.signingRegion = signingRegion;
             return this;
         }
 
         public Builder signingRegion(@Nullable String signingRegion) {
-            this.signingRegion = Input.ofNullable(signingRegion);
+            this.signingRegion = Output.ofNullable(signingRegion);
             return this;
         }
 
-        public Builder signingServiceName(@Nullable Input<String> signingServiceName) {
+        public Builder signingServiceName(@Nullable Output<String> signingServiceName) {
             this.signingServiceName = signingServiceName;
             return this;
         }
 
         public Builder signingServiceName(@Nullable String signingServiceName) {
-            this.signingServiceName = Input.ofNullable(signingServiceName);
+            this.signingServiceName = Output.ofNullable(signingServiceName);
             return this;
         }
         public DataSourceHttpConfigAuthorizationConfigAwsIamConfigArgs build() {

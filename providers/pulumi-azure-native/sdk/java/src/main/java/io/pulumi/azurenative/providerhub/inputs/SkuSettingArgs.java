@@ -7,7 +7,7 @@ import io.pulumi.azurenative.providerhub.inputs.SkuCapabilityArgs;
 import io.pulumi.azurenative.providerhub.inputs.SkuCostArgs;
 import io.pulumi.azurenative.providerhub.inputs.SkuLocationInfoArgs;
 import io.pulumi.azurenative.providerhub.inputs.SkuSettingCapacityArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -20,102 +20,102 @@ public final class SkuSettingArgs extends io.pulumi.resources.ResourceArgs {
     public static final SkuSettingArgs Empty = new SkuSettingArgs();
 
     @InputImport(name="capabilities")
-      private final @Nullable Input<List<SkuCapabilityArgs>> capabilities;
+      private final @Nullable Output<List<SkuCapabilityArgs>> capabilities;
 
-    public Input<List<SkuCapabilityArgs>> getCapabilities() {
-        return this.capabilities == null ? Input.empty() : this.capabilities;
+    public Output<List<SkuCapabilityArgs>> getCapabilities() {
+        return this.capabilities == null ? Output.empty() : this.capabilities;
     }
 
     @InputImport(name="capacity")
-      private final @Nullable Input<SkuSettingCapacityArgs> capacity;
+      private final @Nullable Output<SkuSettingCapacityArgs> capacity;
 
-    public Input<SkuSettingCapacityArgs> getCapacity() {
-        return this.capacity == null ? Input.empty() : this.capacity;
+    public Output<SkuSettingCapacityArgs> getCapacity() {
+        return this.capacity == null ? Output.empty() : this.capacity;
     }
 
     @InputImport(name="costs")
-      private final @Nullable Input<List<SkuCostArgs>> costs;
+      private final @Nullable Output<List<SkuCostArgs>> costs;
 
-    public Input<List<SkuCostArgs>> getCosts() {
-        return this.costs == null ? Input.empty() : this.costs;
+    public Output<List<SkuCostArgs>> getCosts() {
+        return this.costs == null ? Output.empty() : this.costs;
     }
 
     @InputImport(name="family")
-      private final @Nullable Input<String> family;
+      private final @Nullable Output<String> family;
 
-    public Input<String> getFamily() {
-        return this.family == null ? Input.empty() : this.family;
+    public Output<String> getFamily() {
+        return this.family == null ? Output.empty() : this.family;
     }
 
     @InputImport(name="kind")
-      private final @Nullable Input<String> kind;
+      private final @Nullable Output<String> kind;
 
-    public Input<String> getKind() {
-        return this.kind == null ? Input.empty() : this.kind;
+    public Output<String> getKind() {
+        return this.kind == null ? Output.empty() : this.kind;
     }
 
     @InputImport(name="locationInfo")
-      private final @Nullable Input<List<SkuLocationInfoArgs>> locationInfo;
+      private final @Nullable Output<List<SkuLocationInfoArgs>> locationInfo;
 
-    public Input<List<SkuLocationInfoArgs>> getLocationInfo() {
-        return this.locationInfo == null ? Input.empty() : this.locationInfo;
+    public Output<List<SkuLocationInfoArgs>> getLocationInfo() {
+        return this.locationInfo == null ? Output.empty() : this.locationInfo;
     }
 
     @InputImport(name="locations")
-      private final @Nullable Input<List<String>> locations;
+      private final @Nullable Output<List<String>> locations;
 
-    public Input<List<String>> getLocations() {
-        return this.locations == null ? Input.empty() : this.locations;
+    public Output<List<String>> getLocations() {
+        return this.locations == null ? Output.empty() : this.locations;
     }
 
     @InputImport(name="name", required=true)
-      private final Input<String> name;
+      private final Output<String> name;
 
-    public Input<String> getName() {
+    public Output<String> getName() {
         return this.name;
     }
 
     @InputImport(name="requiredFeatures")
-      private final @Nullable Input<List<String>> requiredFeatures;
+      private final @Nullable Output<List<String>> requiredFeatures;
 
-    public Input<List<String>> getRequiredFeatures() {
-        return this.requiredFeatures == null ? Input.empty() : this.requiredFeatures;
+    public Output<List<String>> getRequiredFeatures() {
+        return this.requiredFeatures == null ? Output.empty() : this.requiredFeatures;
     }
 
     @InputImport(name="requiredQuotaIds")
-      private final @Nullable Input<List<String>> requiredQuotaIds;
+      private final @Nullable Output<List<String>> requiredQuotaIds;
 
-    public Input<List<String>> getRequiredQuotaIds() {
-        return this.requiredQuotaIds == null ? Input.empty() : this.requiredQuotaIds;
+    public Output<List<String>> getRequiredQuotaIds() {
+        return this.requiredQuotaIds == null ? Output.empty() : this.requiredQuotaIds;
     }
 
     @InputImport(name="size")
-      private final @Nullable Input<String> size;
+      private final @Nullable Output<String> size;
 
-    public Input<String> getSize() {
-        return this.size == null ? Input.empty() : this.size;
+    public Output<String> getSize() {
+        return this.size == null ? Output.empty() : this.size;
     }
 
     @InputImport(name="tier")
-      private final @Nullable Input<String> tier;
+      private final @Nullable Output<String> tier;
 
-    public Input<String> getTier() {
-        return this.tier == null ? Input.empty() : this.tier;
+    public Output<String> getTier() {
+        return this.tier == null ? Output.empty() : this.tier;
     }
 
     public SkuSettingArgs(
-        @Nullable Input<List<SkuCapabilityArgs>> capabilities,
-        @Nullable Input<SkuSettingCapacityArgs> capacity,
-        @Nullable Input<List<SkuCostArgs>> costs,
-        @Nullable Input<String> family,
-        @Nullable Input<String> kind,
-        @Nullable Input<List<SkuLocationInfoArgs>> locationInfo,
-        @Nullable Input<List<String>> locations,
-        Input<String> name,
-        @Nullable Input<List<String>> requiredFeatures,
-        @Nullable Input<List<String>> requiredQuotaIds,
-        @Nullable Input<String> size,
-        @Nullable Input<String> tier) {
+        @Nullable Output<List<SkuCapabilityArgs>> capabilities,
+        @Nullable Output<SkuSettingCapacityArgs> capacity,
+        @Nullable Output<List<SkuCostArgs>> costs,
+        @Nullable Output<String> family,
+        @Nullable Output<String> kind,
+        @Nullable Output<List<SkuLocationInfoArgs>> locationInfo,
+        @Nullable Output<List<String>> locations,
+        Output<String> name,
+        @Nullable Output<List<String>> requiredFeatures,
+        @Nullable Output<List<String>> requiredQuotaIds,
+        @Nullable Output<String> size,
+        @Nullable Output<String> tier) {
         this.capabilities = capabilities;
         this.capacity = capacity;
         this.costs = costs;
@@ -131,18 +131,18 @@ public final class SkuSettingArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private SkuSettingArgs() {
-        this.capabilities = Input.empty();
-        this.capacity = Input.empty();
-        this.costs = Input.empty();
-        this.family = Input.empty();
-        this.kind = Input.empty();
-        this.locationInfo = Input.empty();
-        this.locations = Input.empty();
-        this.name = Input.empty();
-        this.requiredFeatures = Input.empty();
-        this.requiredQuotaIds = Input.empty();
-        this.size = Input.empty();
-        this.tier = Input.empty();
+        this.capabilities = Output.empty();
+        this.capacity = Output.empty();
+        this.costs = Output.empty();
+        this.family = Output.empty();
+        this.kind = Output.empty();
+        this.locationInfo = Output.empty();
+        this.locations = Output.empty();
+        this.name = Output.empty();
+        this.requiredFeatures = Output.empty();
+        this.requiredQuotaIds = Output.empty();
+        this.size = Output.empty();
+        this.tier = Output.empty();
     }
 
     public static Builder builder() {
@@ -154,18 +154,18 @@ public final class SkuSettingArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<List<SkuCapabilityArgs>> capabilities;
-        private @Nullable Input<SkuSettingCapacityArgs> capacity;
-        private @Nullable Input<List<SkuCostArgs>> costs;
-        private @Nullable Input<String> family;
-        private @Nullable Input<String> kind;
-        private @Nullable Input<List<SkuLocationInfoArgs>> locationInfo;
-        private @Nullable Input<List<String>> locations;
-        private Input<String> name;
-        private @Nullable Input<List<String>> requiredFeatures;
-        private @Nullable Input<List<String>> requiredQuotaIds;
-        private @Nullable Input<String> size;
-        private @Nullable Input<String> tier;
+        private @Nullable Output<List<SkuCapabilityArgs>> capabilities;
+        private @Nullable Output<SkuSettingCapacityArgs> capacity;
+        private @Nullable Output<List<SkuCostArgs>> costs;
+        private @Nullable Output<String> family;
+        private @Nullable Output<String> kind;
+        private @Nullable Output<List<SkuLocationInfoArgs>> locationInfo;
+        private @Nullable Output<List<String>> locations;
+        private Output<String> name;
+        private @Nullable Output<List<String>> requiredFeatures;
+        private @Nullable Output<List<String>> requiredQuotaIds;
+        private @Nullable Output<String> size;
+        private @Nullable Output<String> tier;
 
         public Builder() {
     	      // Empty
@@ -187,123 +187,123 @@ public final class SkuSettingArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tier = defaults.tier;
         }
 
-        public Builder capabilities(@Nullable Input<List<SkuCapabilityArgs>> capabilities) {
+        public Builder capabilities(@Nullable Output<List<SkuCapabilityArgs>> capabilities) {
             this.capabilities = capabilities;
             return this;
         }
 
         public Builder capabilities(@Nullable List<SkuCapabilityArgs> capabilities) {
-            this.capabilities = Input.ofNullable(capabilities);
+            this.capabilities = Output.ofNullable(capabilities);
             return this;
         }
 
-        public Builder capacity(@Nullable Input<SkuSettingCapacityArgs> capacity) {
+        public Builder capacity(@Nullable Output<SkuSettingCapacityArgs> capacity) {
             this.capacity = capacity;
             return this;
         }
 
         public Builder capacity(@Nullable SkuSettingCapacityArgs capacity) {
-            this.capacity = Input.ofNullable(capacity);
+            this.capacity = Output.ofNullable(capacity);
             return this;
         }
 
-        public Builder costs(@Nullable Input<List<SkuCostArgs>> costs) {
+        public Builder costs(@Nullable Output<List<SkuCostArgs>> costs) {
             this.costs = costs;
             return this;
         }
 
         public Builder costs(@Nullable List<SkuCostArgs> costs) {
-            this.costs = Input.ofNullable(costs);
+            this.costs = Output.ofNullable(costs);
             return this;
         }
 
-        public Builder family(@Nullable Input<String> family) {
+        public Builder family(@Nullable Output<String> family) {
             this.family = family;
             return this;
         }
 
         public Builder family(@Nullable String family) {
-            this.family = Input.ofNullable(family);
+            this.family = Output.ofNullable(family);
             return this;
         }
 
-        public Builder kind(@Nullable Input<String> kind) {
+        public Builder kind(@Nullable Output<String> kind) {
             this.kind = kind;
             return this;
         }
 
         public Builder kind(@Nullable String kind) {
-            this.kind = Input.ofNullable(kind);
+            this.kind = Output.ofNullable(kind);
             return this;
         }
 
-        public Builder locationInfo(@Nullable Input<List<SkuLocationInfoArgs>> locationInfo) {
+        public Builder locationInfo(@Nullable Output<List<SkuLocationInfoArgs>> locationInfo) {
             this.locationInfo = locationInfo;
             return this;
         }
 
         public Builder locationInfo(@Nullable List<SkuLocationInfoArgs> locationInfo) {
-            this.locationInfo = Input.ofNullable(locationInfo);
+            this.locationInfo = Output.ofNullable(locationInfo);
             return this;
         }
 
-        public Builder locations(@Nullable Input<List<String>> locations) {
+        public Builder locations(@Nullable Output<List<String>> locations) {
             this.locations = locations;
             return this;
         }
 
         public Builder locations(@Nullable List<String> locations) {
-            this.locations = Input.ofNullable(locations);
+            this.locations = Output.ofNullable(locations);
             return this;
         }
 
-        public Builder name(Input<String> name) {
+        public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(String name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder requiredFeatures(@Nullable Input<List<String>> requiredFeatures) {
+        public Builder requiredFeatures(@Nullable Output<List<String>> requiredFeatures) {
             this.requiredFeatures = requiredFeatures;
             return this;
         }
 
         public Builder requiredFeatures(@Nullable List<String> requiredFeatures) {
-            this.requiredFeatures = Input.ofNullable(requiredFeatures);
+            this.requiredFeatures = Output.ofNullable(requiredFeatures);
             return this;
         }
 
-        public Builder requiredQuotaIds(@Nullable Input<List<String>> requiredQuotaIds) {
+        public Builder requiredQuotaIds(@Nullable Output<List<String>> requiredQuotaIds) {
             this.requiredQuotaIds = requiredQuotaIds;
             return this;
         }
 
         public Builder requiredQuotaIds(@Nullable List<String> requiredQuotaIds) {
-            this.requiredQuotaIds = Input.ofNullable(requiredQuotaIds);
+            this.requiredQuotaIds = Output.ofNullable(requiredQuotaIds);
             return this;
         }
 
-        public Builder size(@Nullable Input<String> size) {
+        public Builder size(@Nullable Output<String> size) {
             this.size = size;
             return this;
         }
 
         public Builder size(@Nullable String size) {
-            this.size = Input.ofNullable(size);
+            this.size = Output.ofNullable(size);
             return this;
         }
 
-        public Builder tier(@Nullable Input<String> tier) {
+        public Builder tier(@Nullable Output<String> tier) {
             this.tier = tier;
             return this;
         }
 
         public Builder tier(@Nullable String tier) {
-            this.tier = Input.ofNullable(tier);
+            this.tier = Output.ofNullable(tier);
             return this;
         }
         public SkuSettingArgs build() {

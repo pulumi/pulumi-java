@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.securityinsights.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -25,10 +25,10 @@ public final class ThreatIntelligenceGranularMarkingModelArgs extends io.pulumi.
      * 
      */
     @InputImport(name="language")
-      private final @Nullable Input<String> language;
+      private final @Nullable Output<String> language;
 
-    public Input<String> getLanguage() {
-        return this.language == null ? Input.empty() : this.language;
+    public Output<String> getLanguage() {
+        return this.language == null ? Output.empty() : this.language;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class ThreatIntelligenceGranularMarkingModelArgs extends io.pulumi.
      * 
      */
     @InputImport(name="markingRef")
-      private final @Nullable Input<Integer> markingRef;
+      private final @Nullable Output<Integer> markingRef;
 
-    public Input<Integer> getMarkingRef() {
-        return this.markingRef == null ? Input.empty() : this.markingRef;
+    public Output<Integer> getMarkingRef() {
+        return this.markingRef == null ? Output.empty() : this.markingRef;
     }
 
     /**
@@ -47,25 +47,25 @@ public final class ThreatIntelligenceGranularMarkingModelArgs extends io.pulumi.
      * 
      */
     @InputImport(name="selectors")
-      private final @Nullable Input<List<String>> selectors;
+      private final @Nullable Output<List<String>> selectors;
 
-    public Input<List<String>> getSelectors() {
-        return this.selectors == null ? Input.empty() : this.selectors;
+    public Output<List<String>> getSelectors() {
+        return this.selectors == null ? Output.empty() : this.selectors;
     }
 
     public ThreatIntelligenceGranularMarkingModelArgs(
-        @Nullable Input<String> language,
-        @Nullable Input<Integer> markingRef,
-        @Nullable Input<List<String>> selectors) {
+        @Nullable Output<String> language,
+        @Nullable Output<Integer> markingRef,
+        @Nullable Output<List<String>> selectors) {
         this.language = language;
         this.markingRef = markingRef;
         this.selectors = selectors;
     }
 
     private ThreatIntelligenceGranularMarkingModelArgs() {
-        this.language = Input.empty();
-        this.markingRef = Input.empty();
-        this.selectors = Input.empty();
+        this.language = Output.empty();
+        this.markingRef = Output.empty();
+        this.selectors = Output.empty();
     }
 
     public static Builder builder() {
@@ -77,9 +77,9 @@ public final class ThreatIntelligenceGranularMarkingModelArgs extends io.pulumi.
     }
 
     public static final class Builder {
-        private @Nullable Input<String> language;
-        private @Nullable Input<Integer> markingRef;
-        private @Nullable Input<List<String>> selectors;
+        private @Nullable Output<String> language;
+        private @Nullable Output<Integer> markingRef;
+        private @Nullable Output<List<String>> selectors;
 
         public Builder() {
     	      // Empty
@@ -92,33 +92,33 @@ public final class ThreatIntelligenceGranularMarkingModelArgs extends io.pulumi.
     	      this.selectors = defaults.selectors;
         }
 
-        public Builder language(@Nullable Input<String> language) {
+        public Builder language(@Nullable Output<String> language) {
             this.language = language;
             return this;
         }
 
         public Builder language(@Nullable String language) {
-            this.language = Input.ofNullable(language);
+            this.language = Output.ofNullable(language);
             return this;
         }
 
-        public Builder markingRef(@Nullable Input<Integer> markingRef) {
+        public Builder markingRef(@Nullable Output<Integer> markingRef) {
             this.markingRef = markingRef;
             return this;
         }
 
         public Builder markingRef(@Nullable Integer markingRef) {
-            this.markingRef = Input.ofNullable(markingRef);
+            this.markingRef = Output.ofNullable(markingRef);
             return this;
         }
 
-        public Builder selectors(@Nullable Input<List<String>> selectors) {
+        public Builder selectors(@Nullable Output<List<String>> selectors) {
             this.selectors = selectors;
             return this;
         }
 
         public Builder selectors(@Nullable List<String> selectors) {
-            this.selectors = Input.ofNullable(selectors);
+            this.selectors = Output.ofNullable(selectors);
             return this;
         }
         public ThreatIntelligenceGranularMarkingModelArgs build() {

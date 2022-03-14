@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.compute_alpha.enums.SecurityPolicyRuleRateLimitOptionsEnforceOnKey;
 import io.pulumi.googlenative.compute_alpha.inputs.SecurityPolicyRuleRateLimitOptionsThresholdArgs;
@@ -23,10 +23,10 @@ public final class SecurityPolicyRuleRateLimitOptionsArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="banDurationSec")
-      private final @Nullable Input<Integer> banDurationSec;
+      private final @Nullable Output<Integer> banDurationSec;
 
-    public Input<Integer> getBanDurationSec() {
-        return this.banDurationSec == null ? Input.empty() : this.banDurationSec;
+    public Output<Integer> getBanDurationSec() {
+        return this.banDurationSec == null ? Output.empty() : this.banDurationSec;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class SecurityPolicyRuleRateLimitOptionsArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="banThreshold")
-      private final @Nullable Input<SecurityPolicyRuleRateLimitOptionsThresholdArgs> banThreshold;
+      private final @Nullable Output<SecurityPolicyRuleRateLimitOptionsThresholdArgs> banThreshold;
 
-    public Input<SecurityPolicyRuleRateLimitOptionsThresholdArgs> getBanThreshold() {
-        return this.banThreshold == null ? Input.empty() : this.banThreshold;
+    public Output<SecurityPolicyRuleRateLimitOptionsThresholdArgs> getBanThreshold() {
+        return this.banThreshold == null ? Output.empty() : this.banThreshold;
     }
 
     /**
@@ -45,10 +45,10 @@ public final class SecurityPolicyRuleRateLimitOptionsArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="conformAction")
-      private final @Nullable Input<String> conformAction;
+      private final @Nullable Output<String> conformAction;
 
-    public Input<String> getConformAction() {
-        return this.conformAction == null ? Input.empty() : this.conformAction;
+    public Output<String> getConformAction() {
+        return this.conformAction == null ? Output.empty() : this.conformAction;
     }
 
     /**
@@ -56,10 +56,10 @@ public final class SecurityPolicyRuleRateLimitOptionsArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="enforceOnKey")
-      private final @Nullable Input<SecurityPolicyRuleRateLimitOptionsEnforceOnKey> enforceOnKey;
+      private final @Nullable Output<SecurityPolicyRuleRateLimitOptionsEnforceOnKey> enforceOnKey;
 
-    public Input<SecurityPolicyRuleRateLimitOptionsEnforceOnKey> getEnforceOnKey() {
-        return this.enforceOnKey == null ? Input.empty() : this.enforceOnKey;
+    public Output<SecurityPolicyRuleRateLimitOptionsEnforceOnKey> getEnforceOnKey() {
+        return this.enforceOnKey == null ? Output.empty() : this.enforceOnKey;
     }
 
     /**
@@ -67,10 +67,10 @@ public final class SecurityPolicyRuleRateLimitOptionsArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="enforceOnKeyName")
-      private final @Nullable Input<String> enforceOnKeyName;
+      private final @Nullable Output<String> enforceOnKeyName;
 
-    public Input<String> getEnforceOnKeyName() {
-        return this.enforceOnKeyName == null ? Input.empty() : this.enforceOnKeyName;
+    public Output<String> getEnforceOnKeyName() {
+        return this.enforceOnKeyName == null ? Output.empty() : this.enforceOnKeyName;
     }
 
     /**
@@ -78,10 +78,10 @@ public final class SecurityPolicyRuleRateLimitOptionsArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="exceedAction")
-      private final @Nullable Input<String> exceedAction;
+      private final @Nullable Output<String> exceedAction;
 
-    public Input<String> getExceedAction() {
-        return this.exceedAction == null ? Input.empty() : this.exceedAction;
+    public Output<String> getExceedAction() {
+        return this.exceedAction == null ? Output.empty() : this.exceedAction;
     }
 
     /**
@@ -89,10 +89,10 @@ public final class SecurityPolicyRuleRateLimitOptionsArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="exceedRedirectOptions")
-      private final @Nullable Input<SecurityPolicyRuleRedirectOptionsArgs> exceedRedirectOptions;
+      private final @Nullable Output<SecurityPolicyRuleRedirectOptionsArgs> exceedRedirectOptions;
 
-    public Input<SecurityPolicyRuleRedirectOptionsArgs> getExceedRedirectOptions() {
-        return this.exceedRedirectOptions == null ? Input.empty() : this.exceedRedirectOptions;
+    public Output<SecurityPolicyRuleRedirectOptionsArgs> getExceedRedirectOptions() {
+        return this.exceedRedirectOptions == null ? Output.empty() : this.exceedRedirectOptions;
     }
 
     /**
@@ -100,21 +100,21 @@ public final class SecurityPolicyRuleRateLimitOptionsArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="rateLimitThreshold")
-      private final @Nullable Input<SecurityPolicyRuleRateLimitOptionsThresholdArgs> rateLimitThreshold;
+      private final @Nullable Output<SecurityPolicyRuleRateLimitOptionsThresholdArgs> rateLimitThreshold;
 
-    public Input<SecurityPolicyRuleRateLimitOptionsThresholdArgs> getRateLimitThreshold() {
-        return this.rateLimitThreshold == null ? Input.empty() : this.rateLimitThreshold;
+    public Output<SecurityPolicyRuleRateLimitOptionsThresholdArgs> getRateLimitThreshold() {
+        return this.rateLimitThreshold == null ? Output.empty() : this.rateLimitThreshold;
     }
 
     public SecurityPolicyRuleRateLimitOptionsArgs(
-        @Nullable Input<Integer> banDurationSec,
-        @Nullable Input<SecurityPolicyRuleRateLimitOptionsThresholdArgs> banThreshold,
-        @Nullable Input<String> conformAction,
-        @Nullable Input<SecurityPolicyRuleRateLimitOptionsEnforceOnKey> enforceOnKey,
-        @Nullable Input<String> enforceOnKeyName,
-        @Nullable Input<String> exceedAction,
-        @Nullable Input<SecurityPolicyRuleRedirectOptionsArgs> exceedRedirectOptions,
-        @Nullable Input<SecurityPolicyRuleRateLimitOptionsThresholdArgs> rateLimitThreshold) {
+        @Nullable Output<Integer> banDurationSec,
+        @Nullable Output<SecurityPolicyRuleRateLimitOptionsThresholdArgs> banThreshold,
+        @Nullable Output<String> conformAction,
+        @Nullable Output<SecurityPolicyRuleRateLimitOptionsEnforceOnKey> enforceOnKey,
+        @Nullable Output<String> enforceOnKeyName,
+        @Nullable Output<String> exceedAction,
+        @Nullable Output<SecurityPolicyRuleRedirectOptionsArgs> exceedRedirectOptions,
+        @Nullable Output<SecurityPolicyRuleRateLimitOptionsThresholdArgs> rateLimitThreshold) {
         this.banDurationSec = banDurationSec;
         this.banThreshold = banThreshold;
         this.conformAction = conformAction;
@@ -126,14 +126,14 @@ public final class SecurityPolicyRuleRateLimitOptionsArgs extends io.pulumi.reso
     }
 
     private SecurityPolicyRuleRateLimitOptionsArgs() {
-        this.banDurationSec = Input.empty();
-        this.banThreshold = Input.empty();
-        this.conformAction = Input.empty();
-        this.enforceOnKey = Input.empty();
-        this.enforceOnKeyName = Input.empty();
-        this.exceedAction = Input.empty();
-        this.exceedRedirectOptions = Input.empty();
-        this.rateLimitThreshold = Input.empty();
+        this.banDurationSec = Output.empty();
+        this.banThreshold = Output.empty();
+        this.conformAction = Output.empty();
+        this.enforceOnKey = Output.empty();
+        this.enforceOnKeyName = Output.empty();
+        this.exceedAction = Output.empty();
+        this.exceedRedirectOptions = Output.empty();
+        this.rateLimitThreshold = Output.empty();
     }
 
     public static Builder builder() {
@@ -145,14 +145,14 @@ public final class SecurityPolicyRuleRateLimitOptionsArgs extends io.pulumi.reso
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> banDurationSec;
-        private @Nullable Input<SecurityPolicyRuleRateLimitOptionsThresholdArgs> banThreshold;
-        private @Nullable Input<String> conformAction;
-        private @Nullable Input<SecurityPolicyRuleRateLimitOptionsEnforceOnKey> enforceOnKey;
-        private @Nullable Input<String> enforceOnKeyName;
-        private @Nullable Input<String> exceedAction;
-        private @Nullable Input<SecurityPolicyRuleRedirectOptionsArgs> exceedRedirectOptions;
-        private @Nullable Input<SecurityPolicyRuleRateLimitOptionsThresholdArgs> rateLimitThreshold;
+        private @Nullable Output<Integer> banDurationSec;
+        private @Nullable Output<SecurityPolicyRuleRateLimitOptionsThresholdArgs> banThreshold;
+        private @Nullable Output<String> conformAction;
+        private @Nullable Output<SecurityPolicyRuleRateLimitOptionsEnforceOnKey> enforceOnKey;
+        private @Nullable Output<String> enforceOnKeyName;
+        private @Nullable Output<String> exceedAction;
+        private @Nullable Output<SecurityPolicyRuleRedirectOptionsArgs> exceedRedirectOptions;
+        private @Nullable Output<SecurityPolicyRuleRateLimitOptionsThresholdArgs> rateLimitThreshold;
 
         public Builder() {
     	      // Empty
@@ -170,83 +170,83 @@ public final class SecurityPolicyRuleRateLimitOptionsArgs extends io.pulumi.reso
     	      this.rateLimitThreshold = defaults.rateLimitThreshold;
         }
 
-        public Builder banDurationSec(@Nullable Input<Integer> banDurationSec) {
+        public Builder banDurationSec(@Nullable Output<Integer> banDurationSec) {
             this.banDurationSec = banDurationSec;
             return this;
         }
 
         public Builder banDurationSec(@Nullable Integer banDurationSec) {
-            this.banDurationSec = Input.ofNullable(banDurationSec);
+            this.banDurationSec = Output.ofNullable(banDurationSec);
             return this;
         }
 
-        public Builder banThreshold(@Nullable Input<SecurityPolicyRuleRateLimitOptionsThresholdArgs> banThreshold) {
+        public Builder banThreshold(@Nullable Output<SecurityPolicyRuleRateLimitOptionsThresholdArgs> banThreshold) {
             this.banThreshold = banThreshold;
             return this;
         }
 
         public Builder banThreshold(@Nullable SecurityPolicyRuleRateLimitOptionsThresholdArgs banThreshold) {
-            this.banThreshold = Input.ofNullable(banThreshold);
+            this.banThreshold = Output.ofNullable(banThreshold);
             return this;
         }
 
-        public Builder conformAction(@Nullable Input<String> conformAction) {
+        public Builder conformAction(@Nullable Output<String> conformAction) {
             this.conformAction = conformAction;
             return this;
         }
 
         public Builder conformAction(@Nullable String conformAction) {
-            this.conformAction = Input.ofNullable(conformAction);
+            this.conformAction = Output.ofNullable(conformAction);
             return this;
         }
 
-        public Builder enforceOnKey(@Nullable Input<SecurityPolicyRuleRateLimitOptionsEnforceOnKey> enforceOnKey) {
+        public Builder enforceOnKey(@Nullable Output<SecurityPolicyRuleRateLimitOptionsEnforceOnKey> enforceOnKey) {
             this.enforceOnKey = enforceOnKey;
             return this;
         }
 
         public Builder enforceOnKey(@Nullable SecurityPolicyRuleRateLimitOptionsEnforceOnKey enforceOnKey) {
-            this.enforceOnKey = Input.ofNullable(enforceOnKey);
+            this.enforceOnKey = Output.ofNullable(enforceOnKey);
             return this;
         }
 
-        public Builder enforceOnKeyName(@Nullable Input<String> enforceOnKeyName) {
+        public Builder enforceOnKeyName(@Nullable Output<String> enforceOnKeyName) {
             this.enforceOnKeyName = enforceOnKeyName;
             return this;
         }
 
         public Builder enforceOnKeyName(@Nullable String enforceOnKeyName) {
-            this.enforceOnKeyName = Input.ofNullable(enforceOnKeyName);
+            this.enforceOnKeyName = Output.ofNullable(enforceOnKeyName);
             return this;
         }
 
-        public Builder exceedAction(@Nullable Input<String> exceedAction) {
+        public Builder exceedAction(@Nullable Output<String> exceedAction) {
             this.exceedAction = exceedAction;
             return this;
         }
 
         public Builder exceedAction(@Nullable String exceedAction) {
-            this.exceedAction = Input.ofNullable(exceedAction);
+            this.exceedAction = Output.ofNullable(exceedAction);
             return this;
         }
 
-        public Builder exceedRedirectOptions(@Nullable Input<SecurityPolicyRuleRedirectOptionsArgs> exceedRedirectOptions) {
+        public Builder exceedRedirectOptions(@Nullable Output<SecurityPolicyRuleRedirectOptionsArgs> exceedRedirectOptions) {
             this.exceedRedirectOptions = exceedRedirectOptions;
             return this;
         }
 
         public Builder exceedRedirectOptions(@Nullable SecurityPolicyRuleRedirectOptionsArgs exceedRedirectOptions) {
-            this.exceedRedirectOptions = Input.ofNullable(exceedRedirectOptions);
+            this.exceedRedirectOptions = Output.ofNullable(exceedRedirectOptions);
             return this;
         }
 
-        public Builder rateLimitThreshold(@Nullable Input<SecurityPolicyRuleRateLimitOptionsThresholdArgs> rateLimitThreshold) {
+        public Builder rateLimitThreshold(@Nullable Output<SecurityPolicyRuleRateLimitOptionsThresholdArgs> rateLimitThreshold) {
             this.rateLimitThreshold = rateLimitThreshold;
             return this;
         }
 
         public Builder rateLimitThreshold(@Nullable SecurityPolicyRuleRateLimitOptionsThresholdArgs rateLimitThreshold) {
-            this.rateLimitThreshold = Input.ofNullable(rateLimitThreshold);
+            this.rateLimitThreshold = Output.ofNullable(rateLimitThreshold);
             return this;
         }
         public SecurityPolicyRuleRateLimitOptionsArgs build() {

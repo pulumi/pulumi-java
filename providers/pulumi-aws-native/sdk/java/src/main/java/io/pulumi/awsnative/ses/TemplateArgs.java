@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.ses;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -14,18 +14,18 @@ public final class TemplateArgs extends io.pulumi.resources.ResourceArgs {
     public static final TemplateArgs Empty = new TemplateArgs();
 
     @InputImport(name="template")
-      private final @Nullable Input<io.pulumi.awsnative.ses.inputs.TemplateArgs> template;
+      private final @Nullable Output<io.pulumi.awsnative.ses.inputs.TemplateArgs> template;
 
-    public Input<io.pulumi.awsnative.ses.inputs.TemplateArgs> getTemplate() {
-        return this.template == null ? Input.empty() : this.template;
+    public Output<io.pulumi.awsnative.ses.inputs.TemplateArgs> getTemplate() {
+        return this.template == null ? Output.empty() : this.template;
     }
 
-    public TemplateArgs(@Nullable Input<io.pulumi.awsnative.ses.inputs.TemplateArgs> template) {
+    public TemplateArgs(@Nullable Output<io.pulumi.awsnative.ses.inputs.TemplateArgs> template) {
         this.template = template;
     }
 
     private TemplateArgs() {
-        this.template = Input.empty();
+        this.template = Output.empty();
     }
 
     public static Builder builder() {
@@ -37,7 +37,7 @@ public final class TemplateArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<io.pulumi.awsnative.ses.inputs.TemplateArgs> template;
+        private @Nullable Output<io.pulumi.awsnative.ses.inputs.TemplateArgs> template;
 
         public Builder() {
     	      // Empty
@@ -48,13 +48,13 @@ public final class TemplateArgs extends io.pulumi.resources.ResourceArgs {
     	      this.template = defaults.template;
         }
 
-        public Builder template(@Nullable Input<io.pulumi.awsnative.ses.inputs.TemplateArgs> template) {
+        public Builder template(@Nullable Output<io.pulumi.awsnative.ses.inputs.TemplateArgs> template) {
             this.template = template;
             return this;
         }
 
         public Builder template(@Nullable io.pulumi.awsnative.ses.inputs.TemplateArgs template) {
-            this.template = Input.ofNullable(template);
+            this.template = Output.ofNullable(template);
             return this;
         }
         public TemplateArgs build() {

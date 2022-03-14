@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.glue.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -21,10 +21,10 @@ public final class CatalogTableStorageDescriptorSkewedInfoArgs extends io.pulumi
      * 
      */
     @InputImport(name="skewedColumnNames")
-      private final @Nullable Input<List<String>> skewedColumnNames;
+      private final @Nullable Output<List<String>> skewedColumnNames;
 
-    public Input<List<String>> getSkewedColumnNames() {
-        return this.skewedColumnNames == null ? Input.empty() : this.skewedColumnNames;
+    public Output<List<String>> getSkewedColumnNames() {
+        return this.skewedColumnNames == null ? Output.empty() : this.skewedColumnNames;
     }
 
     /**
@@ -32,10 +32,10 @@ public final class CatalogTableStorageDescriptorSkewedInfoArgs extends io.pulumi
      * 
      */
     @InputImport(name="skewedColumnValueLocationMaps")
-      private final @Nullable Input<Map<String,String>> skewedColumnValueLocationMaps;
+      private final @Nullable Output<Map<String,String>> skewedColumnValueLocationMaps;
 
-    public Input<Map<String,String>> getSkewedColumnValueLocationMaps() {
-        return this.skewedColumnValueLocationMaps == null ? Input.empty() : this.skewedColumnValueLocationMaps;
+    public Output<Map<String,String>> getSkewedColumnValueLocationMaps() {
+        return this.skewedColumnValueLocationMaps == null ? Output.empty() : this.skewedColumnValueLocationMaps;
     }
 
     /**
@@ -43,25 +43,25 @@ public final class CatalogTableStorageDescriptorSkewedInfoArgs extends io.pulumi
      * 
      */
     @InputImport(name="skewedColumnValues")
-      private final @Nullable Input<List<String>> skewedColumnValues;
+      private final @Nullable Output<List<String>> skewedColumnValues;
 
-    public Input<List<String>> getSkewedColumnValues() {
-        return this.skewedColumnValues == null ? Input.empty() : this.skewedColumnValues;
+    public Output<List<String>> getSkewedColumnValues() {
+        return this.skewedColumnValues == null ? Output.empty() : this.skewedColumnValues;
     }
 
     public CatalogTableStorageDescriptorSkewedInfoArgs(
-        @Nullable Input<List<String>> skewedColumnNames,
-        @Nullable Input<Map<String,String>> skewedColumnValueLocationMaps,
-        @Nullable Input<List<String>> skewedColumnValues) {
+        @Nullable Output<List<String>> skewedColumnNames,
+        @Nullable Output<Map<String,String>> skewedColumnValueLocationMaps,
+        @Nullable Output<List<String>> skewedColumnValues) {
         this.skewedColumnNames = skewedColumnNames;
         this.skewedColumnValueLocationMaps = skewedColumnValueLocationMaps;
         this.skewedColumnValues = skewedColumnValues;
     }
 
     private CatalogTableStorageDescriptorSkewedInfoArgs() {
-        this.skewedColumnNames = Input.empty();
-        this.skewedColumnValueLocationMaps = Input.empty();
-        this.skewedColumnValues = Input.empty();
+        this.skewedColumnNames = Output.empty();
+        this.skewedColumnValueLocationMaps = Output.empty();
+        this.skewedColumnValues = Output.empty();
     }
 
     public static Builder builder() {
@@ -73,9 +73,9 @@ public final class CatalogTableStorageDescriptorSkewedInfoArgs extends io.pulumi
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> skewedColumnNames;
-        private @Nullable Input<Map<String,String>> skewedColumnValueLocationMaps;
-        private @Nullable Input<List<String>> skewedColumnValues;
+        private @Nullable Output<List<String>> skewedColumnNames;
+        private @Nullable Output<Map<String,String>> skewedColumnValueLocationMaps;
+        private @Nullable Output<List<String>> skewedColumnValues;
 
         public Builder() {
     	      // Empty
@@ -88,33 +88,33 @@ public final class CatalogTableStorageDescriptorSkewedInfoArgs extends io.pulumi
     	      this.skewedColumnValues = defaults.skewedColumnValues;
         }
 
-        public Builder skewedColumnNames(@Nullable Input<List<String>> skewedColumnNames) {
+        public Builder skewedColumnNames(@Nullable Output<List<String>> skewedColumnNames) {
             this.skewedColumnNames = skewedColumnNames;
             return this;
         }
 
         public Builder skewedColumnNames(@Nullable List<String> skewedColumnNames) {
-            this.skewedColumnNames = Input.ofNullable(skewedColumnNames);
+            this.skewedColumnNames = Output.ofNullable(skewedColumnNames);
             return this;
         }
 
-        public Builder skewedColumnValueLocationMaps(@Nullable Input<Map<String,String>> skewedColumnValueLocationMaps) {
+        public Builder skewedColumnValueLocationMaps(@Nullable Output<Map<String,String>> skewedColumnValueLocationMaps) {
             this.skewedColumnValueLocationMaps = skewedColumnValueLocationMaps;
             return this;
         }
 
         public Builder skewedColumnValueLocationMaps(@Nullable Map<String,String> skewedColumnValueLocationMaps) {
-            this.skewedColumnValueLocationMaps = Input.ofNullable(skewedColumnValueLocationMaps);
+            this.skewedColumnValueLocationMaps = Output.ofNullable(skewedColumnValueLocationMaps);
             return this;
         }
 
-        public Builder skewedColumnValues(@Nullable Input<List<String>> skewedColumnValues) {
+        public Builder skewedColumnValues(@Nullable Output<List<String>> skewedColumnValues) {
             this.skewedColumnValues = skewedColumnValues;
             return this;
         }
 
         public Builder skewedColumnValues(@Nullable List<String> skewedColumnValues) {
-            this.skewedColumnValues = Input.ofNullable(skewedColumnValues);
+            this.skewedColumnValues = Output.ofNullable(skewedColumnValues);
             return this;
         }
         public CatalogTableStorageDescriptorSkewedInfoArgs build() {

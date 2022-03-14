@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.synapse.inputs;
 
 import io.pulumi.azurenative.synapse.inputs.SecureStringArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -24,10 +24,10 @@ public final class IntegrationRuntimeCustomSetupScriptPropertiesArgs extends io.
      * 
      */
     @InputImport(name="blobContainerUri")
-      private final @Nullable Input<String> blobContainerUri;
+      private final @Nullable Output<String> blobContainerUri;
 
-    public Input<String> getBlobContainerUri() {
-        return this.blobContainerUri == null ? Input.empty() : this.blobContainerUri;
+    public Output<String> getBlobContainerUri() {
+        return this.blobContainerUri == null ? Output.empty() : this.blobContainerUri;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class IntegrationRuntimeCustomSetupScriptPropertiesArgs extends io.
      * 
      */
     @InputImport(name="sasToken")
-      private final @Nullable Input<SecureStringArgs> sasToken;
+      private final @Nullable Output<SecureStringArgs> sasToken;
 
-    public Input<SecureStringArgs> getSasToken() {
-        return this.sasToken == null ? Input.empty() : this.sasToken;
+    public Output<SecureStringArgs> getSasToken() {
+        return this.sasToken == null ? Output.empty() : this.sasToken;
     }
 
     public IntegrationRuntimeCustomSetupScriptPropertiesArgs(
-        @Nullable Input<String> blobContainerUri,
-        @Nullable Input<SecureStringArgs> sasToken) {
+        @Nullable Output<String> blobContainerUri,
+        @Nullable Output<SecureStringArgs> sasToken) {
         this.blobContainerUri = blobContainerUri;
         this.sasToken = sasToken;
     }
 
     private IntegrationRuntimeCustomSetupScriptPropertiesArgs() {
-        this.blobContainerUri = Input.empty();
-        this.sasToken = Input.empty();
+        this.blobContainerUri = Output.empty();
+        this.sasToken = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class IntegrationRuntimeCustomSetupScriptPropertiesArgs extends io.
     }
 
     public static final class Builder {
-        private @Nullable Input<String> blobContainerUri;
-        private @Nullable Input<SecureStringArgs> sasToken;
+        private @Nullable Output<String> blobContainerUri;
+        private @Nullable Output<SecureStringArgs> sasToken;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class IntegrationRuntimeCustomSetupScriptPropertiesArgs extends io.
     	      this.sasToken = defaults.sasToken;
         }
 
-        public Builder blobContainerUri(@Nullable Input<String> blobContainerUri) {
+        public Builder blobContainerUri(@Nullable Output<String> blobContainerUri) {
             this.blobContainerUri = blobContainerUri;
             return this;
         }
 
         public Builder blobContainerUri(@Nullable String blobContainerUri) {
-            this.blobContainerUri = Input.ofNullable(blobContainerUri);
+            this.blobContainerUri = Output.ofNullable(blobContainerUri);
             return this;
         }
 
-        public Builder sasToken(@Nullable Input<SecureStringArgs> sasToken) {
+        public Builder sasToken(@Nullable Output<SecureStringArgs> sasToken) {
             this.sasToken = sasToken;
             return this;
         }
 
         public Builder sasToken(@Nullable SecureStringArgs sasToken) {
-            this.sasToken = Input.ofNullable(sasToken);
+            this.sasToken = Output.ofNullable(sasToken);
             return this;
         }
         public IntegrationRuntimeCustomSetupScriptPropertiesArgs build() {

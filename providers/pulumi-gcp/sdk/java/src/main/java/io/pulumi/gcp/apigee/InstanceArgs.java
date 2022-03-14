@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.apigee;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -31,10 +31,10 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="diskEncryptionKeyName")
-      private final @Nullable Input<String> diskEncryptionKeyName;
+      private final @Nullable Output<String> diskEncryptionKeyName;
 
-    public Input<String> getDiskEncryptionKeyName() {
-        return this.diskEncryptionKeyName == null ? Input.empty() : this.diskEncryptionKeyName;
+    public Output<String> getDiskEncryptionKeyName() {
+        return this.diskEncryptionKeyName == null ? Output.empty() : this.diskEncryptionKeyName;
     }
 
     /**
@@ -42,10 +42,10 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName")
-      private final @Nullable Input<String> displayName;
+      private final @Nullable Output<String> displayName;
 
-    public Input<String> getDisplayName() {
-        return this.displayName == null ? Input.empty() : this.displayName;
+    public Output<String> getDisplayName() {
+        return this.displayName == null ? Output.empty() : this.displayName;
     }
 
     /**
@@ -59,10 +59,10 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ipRange")
-      private final @Nullable Input<String> ipRange;
+      private final @Nullable Output<String> ipRange;
 
-    public Input<String> getIpRange() {
-        return this.ipRange == null ? Input.empty() : this.ipRange;
+    public Output<String> getIpRange() {
+        return this.ipRange == null ? Output.empty() : this.ipRange;
     }
 
     /**
@@ -72,9 +72,9 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location", required=true)
-      private final Input<String> location;
+      private final Output<String> location;
 
-    public Input<String> getLocation() {
+    public Output<String> getLocation() {
         return this.location;
     }
 
@@ -83,10 +83,10 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -95,9 +95,9 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="orgId", required=true)
-      private final Input<String> orgId;
+      private final Output<String> orgId;
 
-    public Input<String> getOrgId() {
+    public Output<String> getOrgId() {
         return this.orgId;
     }
 
@@ -107,21 +107,21 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="peeringCidrRange")
-      private final @Nullable Input<String> peeringCidrRange;
+      private final @Nullable Output<String> peeringCidrRange;
 
-    public Input<String> getPeeringCidrRange() {
-        return this.peeringCidrRange == null ? Input.empty() : this.peeringCidrRange;
+    public Output<String> getPeeringCidrRange() {
+        return this.peeringCidrRange == null ? Output.empty() : this.peeringCidrRange;
     }
 
     public InstanceArgs(
-        @Nullable Input<String> description,
-        @Nullable Input<String> diskEncryptionKeyName,
-        @Nullable Input<String> displayName,
-        @Nullable Input<String> ipRange,
-        Input<String> location,
-        @Nullable Input<String> name,
-        Input<String> orgId,
-        @Nullable Input<String> peeringCidrRange) {
+        @Nullable Output<String> description,
+        @Nullable Output<String> diskEncryptionKeyName,
+        @Nullable Output<String> displayName,
+        @Nullable Output<String> ipRange,
+        Output<String> location,
+        @Nullable Output<String> name,
+        Output<String> orgId,
+        @Nullable Output<String> peeringCidrRange) {
         this.description = description;
         this.diskEncryptionKeyName = diskEncryptionKeyName;
         this.displayName = displayName;
@@ -133,14 +133,14 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private InstanceArgs() {
-        this.description = Input.empty();
-        this.diskEncryptionKeyName = Input.empty();
-        this.displayName = Input.empty();
-        this.ipRange = Input.empty();
-        this.location = Input.empty();
-        this.name = Input.empty();
-        this.orgId = Input.empty();
-        this.peeringCidrRange = Input.empty();
+        this.description = Output.empty();
+        this.diskEncryptionKeyName = Output.empty();
+        this.displayName = Output.empty();
+        this.ipRange = Output.empty();
+        this.location = Output.empty();
+        this.name = Output.empty();
+        this.orgId = Output.empty();
+        this.peeringCidrRange = Output.empty();
     }
 
     public static Builder builder() {
@@ -152,14 +152,14 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> description;
-        private @Nullable Input<String> diskEncryptionKeyName;
-        private @Nullable Input<String> displayName;
-        private @Nullable Input<String> ipRange;
-        private Input<String> location;
-        private @Nullable Input<String> name;
-        private Input<String> orgId;
-        private @Nullable Input<String> peeringCidrRange;
+        private @Nullable Output<String> description;
+        private @Nullable Output<String> diskEncryptionKeyName;
+        private @Nullable Output<String> displayName;
+        private @Nullable Output<String> ipRange;
+        private Output<String> location;
+        private @Nullable Output<String> name;
+        private Output<String> orgId;
+        private @Nullable Output<String> peeringCidrRange;
 
         public Builder() {
     	      // Empty
@@ -177,83 +177,83 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
     	      this.peeringCidrRange = defaults.peeringCidrRange;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder diskEncryptionKeyName(@Nullable Input<String> diskEncryptionKeyName) {
+        public Builder diskEncryptionKeyName(@Nullable Output<String> diskEncryptionKeyName) {
             this.diskEncryptionKeyName = diskEncryptionKeyName;
             return this;
         }
 
         public Builder diskEncryptionKeyName(@Nullable String diskEncryptionKeyName) {
-            this.diskEncryptionKeyName = Input.ofNullable(diskEncryptionKeyName);
+            this.diskEncryptionKeyName = Output.ofNullable(diskEncryptionKeyName);
             return this;
         }
 
-        public Builder displayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Input.ofNullable(displayName);
+            this.displayName = Output.ofNullable(displayName);
             return this;
         }
 
-        public Builder ipRange(@Nullable Input<String> ipRange) {
+        public Builder ipRange(@Nullable Output<String> ipRange) {
             this.ipRange = ipRange;
             return this;
         }
 
         public Builder ipRange(@Nullable String ipRange) {
-            this.ipRange = Input.ofNullable(ipRange);
+            this.ipRange = Output.ofNullable(ipRange);
             return this;
         }
 
-        public Builder location(Input<String> location) {
+        public Builder location(Output<String> location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
         public Builder location(String location) {
-            this.location = Input.of(Objects.requireNonNull(location));
+            this.location = Output.of(Objects.requireNonNull(location));
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder orgId(Input<String> orgId) {
+        public Builder orgId(Output<String> orgId) {
             this.orgId = Objects.requireNonNull(orgId);
             return this;
         }
 
         public Builder orgId(String orgId) {
-            this.orgId = Input.of(Objects.requireNonNull(orgId));
+            this.orgId = Output.of(Objects.requireNonNull(orgId));
             return this;
         }
 
-        public Builder peeringCidrRange(@Nullable Input<String> peeringCidrRange) {
+        public Builder peeringCidrRange(@Nullable Output<String> peeringCidrRange) {
             this.peeringCidrRange = peeringCidrRange;
             return this;
         }
 
         public Builder peeringCidrRange(@Nullable String peeringCidrRange) {
-            this.peeringCidrRange = Input.ofNullable(peeringCidrRange);
+            this.peeringCidrRange = Output.ofNullable(peeringCidrRange);
             return this;
         }
         public InstanceArgs build() {

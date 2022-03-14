@@ -4,7 +4,7 @@
 package io.pulumi.aws.networkfirewall.inputs;
 
 import io.pulumi.aws.networkfirewall.inputs.RuleGroupRuleGroupRuleVariablesIpSetIpSetGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,9 +19,9 @@ public final class RuleGroupRuleGroupRuleVariablesIpSetGetArgs extends io.pulumi
      * 
      */
     @InputImport(name="ipSet", required=true)
-      private final Input<RuleGroupRuleGroupRuleVariablesIpSetIpSetGetArgs> ipSet;
+      private final Output<RuleGroupRuleGroupRuleVariablesIpSetIpSetGetArgs> ipSet;
 
-    public Input<RuleGroupRuleGroupRuleVariablesIpSetIpSetGetArgs> getIpSet() {
+    public Output<RuleGroupRuleGroupRuleVariablesIpSetIpSetGetArgs> getIpSet() {
         return this.ipSet;
     }
 
@@ -30,22 +30,22 @@ public final class RuleGroupRuleGroupRuleVariablesIpSetGetArgs extends io.pulumi
      * 
      */
     @InputImport(name="key", required=true)
-      private final Input<String> key;
+      private final Output<String> key;
 
-    public Input<String> getKey() {
+    public Output<String> getKey() {
         return this.key;
     }
 
     public RuleGroupRuleGroupRuleVariablesIpSetGetArgs(
-        Input<RuleGroupRuleGroupRuleVariablesIpSetIpSetGetArgs> ipSet,
-        Input<String> key) {
+        Output<RuleGroupRuleGroupRuleVariablesIpSetIpSetGetArgs> ipSet,
+        Output<String> key) {
         this.ipSet = Objects.requireNonNull(ipSet, "expected parameter 'ipSet' to be non-null");
         this.key = Objects.requireNonNull(key, "expected parameter 'key' to be non-null");
     }
 
     private RuleGroupRuleGroupRuleVariablesIpSetGetArgs() {
-        this.ipSet = Input.empty();
-        this.key = Input.empty();
+        this.ipSet = Output.empty();
+        this.key = Output.empty();
     }
 
     public static Builder builder() {
@@ -57,8 +57,8 @@ public final class RuleGroupRuleGroupRuleVariablesIpSetGetArgs extends io.pulumi
     }
 
     public static final class Builder {
-        private Input<RuleGroupRuleGroupRuleVariablesIpSetIpSetGetArgs> ipSet;
-        private Input<String> key;
+        private Output<RuleGroupRuleGroupRuleVariablesIpSetIpSetGetArgs> ipSet;
+        private Output<String> key;
 
         public Builder() {
     	      // Empty
@@ -70,23 +70,23 @@ public final class RuleGroupRuleGroupRuleVariablesIpSetGetArgs extends io.pulumi
     	      this.key = defaults.key;
         }
 
-        public Builder ipSet(Input<RuleGroupRuleGroupRuleVariablesIpSetIpSetGetArgs> ipSet) {
+        public Builder ipSet(Output<RuleGroupRuleGroupRuleVariablesIpSetIpSetGetArgs> ipSet) {
             this.ipSet = Objects.requireNonNull(ipSet);
             return this;
         }
 
         public Builder ipSet(RuleGroupRuleGroupRuleVariablesIpSetIpSetGetArgs ipSet) {
-            this.ipSet = Input.of(Objects.requireNonNull(ipSet));
+            this.ipSet = Output.of(Objects.requireNonNull(ipSet));
             return this;
         }
 
-        public Builder key(Input<String> key) {
+        public Builder key(Output<String> key) {
             this.key = Objects.requireNonNull(key);
             return this;
         }
 
         public Builder key(String key) {
-            this.key = Input.of(Objects.requireNonNull(key));
+            this.key = Output.of(Objects.requireNonNull(key));
             return this;
         }
         public RuleGroupRuleGroupRuleVariablesIpSetGetArgs build() {

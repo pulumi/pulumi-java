@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.containeranalysis.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.containeranalysis.inputs.OccurenceAttestationGetArgs;
 import java.lang.String;
@@ -28,10 +28,10 @@ public final class OccurenceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="attestation")
-      private final @Nullable Input<OccurenceAttestationGetArgs> attestation;
+      private final @Nullable Output<OccurenceAttestationGetArgs> attestation;
 
-    public Input<OccurenceAttestationGetArgs> getAttestation() {
-        return this.attestation == null ? Input.empty() : this.attestation;
+    public Output<OccurenceAttestationGetArgs> getAttestation() {
+        return this.attestation == null ? Output.empty() : this.attestation;
     }
 
     /**
@@ -39,10 +39,10 @@ public final class OccurenceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="createTime")
-      private final @Nullable Input<String> createTime;
+      private final @Nullable Output<String> createTime;
 
-    public Input<String> getCreateTime() {
-        return this.createTime == null ? Input.empty() : this.createTime;
+    public Output<String> getCreateTime() {
+        return this.createTime == null ? Output.empty() : this.createTime;
     }
 
     /**
@@ -51,10 +51,10 @@ public final class OccurenceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kind")
-      private final @Nullable Input<String> kind;
+      private final @Nullable Output<String> kind;
 
-    public Input<String> getKind() {
-        return this.kind == null ? Input.empty() : this.kind;
+    public Output<String> getKind() {
+        return this.kind == null ? Output.empty() : this.kind;
     }
 
     /**
@@ -62,10 +62,10 @@ public final class OccurenceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -75,10 +75,10 @@ public final class OccurenceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="noteName")
-      private final @Nullable Input<String> noteName;
+      private final @Nullable Output<String> noteName;
 
-    public Input<String> getNoteName() {
-        return this.noteName == null ? Input.empty() : this.noteName;
+    public Output<String> getNoteName() {
+        return this.noteName == null ? Output.empty() : this.noteName;
     }
 
     /**
@@ -87,10 +87,10 @@ public final class OccurenceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -98,10 +98,10 @@ public final class OccurenceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="remediation")
-      private final @Nullable Input<String> remediation;
+      private final @Nullable Output<String> remediation;
 
-    public Input<String> getRemediation() {
-        return this.remediation == null ? Input.empty() : this.remediation;
+    public Output<String> getRemediation() {
+        return this.remediation == null ? Output.empty() : this.remediation;
     }
 
     /**
@@ -111,10 +111,10 @@ public final class OccurenceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceUri")
-      private final @Nullable Input<String> resourceUri;
+      private final @Nullable Output<String> resourceUri;
 
-    public Input<String> getResourceUri() {
-        return this.resourceUri == null ? Input.empty() : this.resourceUri;
+    public Output<String> getResourceUri() {
+        return this.resourceUri == null ? Output.empty() : this.resourceUri;
     }
 
     /**
@@ -122,22 +122,22 @@ public final class OccurenceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="updateTime")
-      private final @Nullable Input<String> updateTime;
+      private final @Nullable Output<String> updateTime;
 
-    public Input<String> getUpdateTime() {
-        return this.updateTime == null ? Input.empty() : this.updateTime;
+    public Output<String> getUpdateTime() {
+        return this.updateTime == null ? Output.empty() : this.updateTime;
     }
 
     public OccurenceState(
-        @Nullable Input<OccurenceAttestationGetArgs> attestation,
-        @Nullable Input<String> createTime,
-        @Nullable Input<String> kind,
-        @Nullable Input<String> name,
-        @Nullable Input<String> noteName,
-        @Nullable Input<String> project,
-        @Nullable Input<String> remediation,
-        @Nullable Input<String> resourceUri,
-        @Nullable Input<String> updateTime) {
+        @Nullable Output<OccurenceAttestationGetArgs> attestation,
+        @Nullable Output<String> createTime,
+        @Nullable Output<String> kind,
+        @Nullable Output<String> name,
+        @Nullable Output<String> noteName,
+        @Nullable Output<String> project,
+        @Nullable Output<String> remediation,
+        @Nullable Output<String> resourceUri,
+        @Nullable Output<String> updateTime) {
         this.attestation = attestation;
         this.createTime = createTime;
         this.kind = kind;
@@ -150,15 +150,15 @@ public final class OccurenceState extends io.pulumi.resources.ResourceArgs {
     }
 
     private OccurenceState() {
-        this.attestation = Input.empty();
-        this.createTime = Input.empty();
-        this.kind = Input.empty();
-        this.name = Input.empty();
-        this.noteName = Input.empty();
-        this.project = Input.empty();
-        this.remediation = Input.empty();
-        this.resourceUri = Input.empty();
-        this.updateTime = Input.empty();
+        this.attestation = Output.empty();
+        this.createTime = Output.empty();
+        this.kind = Output.empty();
+        this.name = Output.empty();
+        this.noteName = Output.empty();
+        this.project = Output.empty();
+        this.remediation = Output.empty();
+        this.resourceUri = Output.empty();
+        this.updateTime = Output.empty();
     }
 
     public static Builder builder() {
@@ -170,15 +170,15 @@ public final class OccurenceState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<OccurenceAttestationGetArgs> attestation;
-        private @Nullable Input<String> createTime;
-        private @Nullable Input<String> kind;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> noteName;
-        private @Nullable Input<String> project;
-        private @Nullable Input<String> remediation;
-        private @Nullable Input<String> resourceUri;
-        private @Nullable Input<String> updateTime;
+        private @Nullable Output<OccurenceAttestationGetArgs> attestation;
+        private @Nullable Output<String> createTime;
+        private @Nullable Output<String> kind;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> noteName;
+        private @Nullable Output<String> project;
+        private @Nullable Output<String> remediation;
+        private @Nullable Output<String> resourceUri;
+        private @Nullable Output<String> updateTime;
 
         public Builder() {
     	      // Empty
@@ -197,93 +197,93 @@ public final class OccurenceState extends io.pulumi.resources.ResourceArgs {
     	      this.updateTime = defaults.updateTime;
         }
 
-        public Builder attestation(@Nullable Input<OccurenceAttestationGetArgs> attestation) {
+        public Builder attestation(@Nullable Output<OccurenceAttestationGetArgs> attestation) {
             this.attestation = attestation;
             return this;
         }
 
         public Builder attestation(@Nullable OccurenceAttestationGetArgs attestation) {
-            this.attestation = Input.ofNullable(attestation);
+            this.attestation = Output.ofNullable(attestation);
             return this;
         }
 
-        public Builder createTime(@Nullable Input<String> createTime) {
+        public Builder createTime(@Nullable Output<String> createTime) {
             this.createTime = createTime;
             return this;
         }
 
         public Builder createTime(@Nullable String createTime) {
-            this.createTime = Input.ofNullable(createTime);
+            this.createTime = Output.ofNullable(createTime);
             return this;
         }
 
-        public Builder kind(@Nullable Input<String> kind) {
+        public Builder kind(@Nullable Output<String> kind) {
             this.kind = kind;
             return this;
         }
 
         public Builder kind(@Nullable String kind) {
-            this.kind = Input.ofNullable(kind);
+            this.kind = Output.ofNullable(kind);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder noteName(@Nullable Input<String> noteName) {
+        public Builder noteName(@Nullable Output<String> noteName) {
             this.noteName = noteName;
             return this;
         }
 
         public Builder noteName(@Nullable String noteName) {
-            this.noteName = Input.ofNullable(noteName);
+            this.noteName = Output.ofNullable(noteName);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder remediation(@Nullable Input<String> remediation) {
+        public Builder remediation(@Nullable Output<String> remediation) {
             this.remediation = remediation;
             return this;
         }
 
         public Builder remediation(@Nullable String remediation) {
-            this.remediation = Input.ofNullable(remediation);
+            this.remediation = Output.ofNullable(remediation);
             return this;
         }
 
-        public Builder resourceUri(@Nullable Input<String> resourceUri) {
+        public Builder resourceUri(@Nullable Output<String> resourceUri) {
             this.resourceUri = resourceUri;
             return this;
         }
 
         public Builder resourceUri(@Nullable String resourceUri) {
-            this.resourceUri = Input.ofNullable(resourceUri);
+            this.resourceUri = Output.ofNullable(resourceUri);
             return this;
         }
 
-        public Builder updateTime(@Nullable Input<String> updateTime) {
+        public Builder updateTime(@Nullable Output<String> updateTime) {
             this.updateTime = updateTime;
             return this;
         }
 
         public Builder updateTime(@Nullable String updateTime) {
-            this.updateTime = Input.ofNullable(updateTime);
+            this.updateTime = Output.ofNullable(updateTime);
             return this;
         }
         public OccurenceState build() {

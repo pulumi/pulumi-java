@@ -3,7 +3,6 @@
 
 package io.pulumi.gcp.gkehub;
 
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -189,14 +188,14 @@ public class Membership extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Membership(String name, MembershipArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:gkehub/membership:Membership", name, args == null ? MembershipArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("gcp:gkehub/membership:Membership", name, args == null ? MembershipArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private Membership(String name, Input<String> id, @Nullable MembershipState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private Membership(String name, Output<String> id, @Nullable MembershipState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("gcp:gkehub/membership:Membership", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -212,7 +211,7 @@ public class Membership extends io.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static Membership get(String name, Input<String> id, @Nullable MembershipState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static Membership get(String name, Output<String> id, @Nullable MembershipState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Membership(name, id, state, options);
     }
 }

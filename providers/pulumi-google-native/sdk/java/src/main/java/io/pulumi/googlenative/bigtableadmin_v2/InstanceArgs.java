@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.bigtableadmin_v2;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.bigtableadmin_v2.enums.InstanceType;
 import java.lang.String;
@@ -21,9 +21,9 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="clusters", required=true)
-      private final Input<Map<String,String>> clusters;
+      private final Output<Map<String,String>> clusters;
 
-    public Input<Map<String,String>> getClusters() {
+    public Output<Map<String,String>> getClusters() {
         return this.clusters;
     }
 
@@ -32,9 +32,9 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName", required=true)
-      private final Input<String> displayName;
+      private final Output<String> displayName;
 
-    public Input<String> getDisplayName() {
+    public Output<String> getDisplayName() {
         return this.displayName;
     }
 
@@ -43,9 +43,9 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="instanceId", required=true)
-      private final Input<String> instanceId;
+      private final Output<String> instanceId;
 
-    public Input<String> getInstanceId() {
+    public Output<String> getInstanceId() {
         return this.instanceId;
     }
 
@@ -54,9 +54,9 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labels", required=true)
-      private final Input<Map<String,String>> labels;
+      private final Output<Map<String,String>> labels;
 
-    public Input<Map<String,String>> getLabels() {
+    public Output<Map<String,String>> getLabels() {
         return this.labels;
     }
 
@@ -65,10 +65,10 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -76,17 +76,17 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="parent", required=true)
-      private final Input<String> parent;
+      private final Output<String> parent;
 
-    public Input<String> getParent() {
+    public Output<String> getParent() {
         return this.parent;
     }
 
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -94,21 +94,21 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<InstanceType> type;
+      private final Output<InstanceType> type;
 
-    public Input<InstanceType> getType() {
+    public Output<InstanceType> getType() {
         return this.type;
     }
 
     public InstanceArgs(
-        Input<Map<String,String>> clusters,
-        Input<String> displayName,
-        Input<String> instanceId,
-        Input<Map<String,String>> labels,
-        @Nullable Input<String> name,
-        Input<String> parent,
-        @Nullable Input<String> project,
-        Input<InstanceType> type) {
+        Output<Map<String,String>> clusters,
+        Output<String> displayName,
+        Output<String> instanceId,
+        Output<Map<String,String>> labels,
+        @Nullable Output<String> name,
+        Output<String> parent,
+        @Nullable Output<String> project,
+        Output<InstanceType> type) {
         this.clusters = Objects.requireNonNull(clusters, "expected parameter 'clusters' to be non-null");
         this.displayName = Objects.requireNonNull(displayName, "expected parameter 'displayName' to be non-null");
         this.instanceId = Objects.requireNonNull(instanceId, "expected parameter 'instanceId' to be non-null");
@@ -120,14 +120,14 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private InstanceArgs() {
-        this.clusters = Input.empty();
-        this.displayName = Input.empty();
-        this.instanceId = Input.empty();
-        this.labels = Input.empty();
-        this.name = Input.empty();
-        this.parent = Input.empty();
-        this.project = Input.empty();
-        this.type = Input.empty();
+        this.clusters = Output.empty();
+        this.displayName = Output.empty();
+        this.instanceId = Output.empty();
+        this.labels = Output.empty();
+        this.name = Output.empty();
+        this.parent = Output.empty();
+        this.project = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -139,14 +139,14 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<Map<String,String>> clusters;
-        private Input<String> displayName;
-        private Input<String> instanceId;
-        private Input<Map<String,String>> labels;
-        private @Nullable Input<String> name;
-        private Input<String> parent;
-        private @Nullable Input<String> project;
-        private Input<InstanceType> type;
+        private Output<Map<String,String>> clusters;
+        private Output<String> displayName;
+        private Output<String> instanceId;
+        private Output<Map<String,String>> labels;
+        private @Nullable Output<String> name;
+        private Output<String> parent;
+        private @Nullable Output<String> project;
+        private Output<InstanceType> type;
 
         public Builder() {
     	      // Empty
@@ -164,83 +164,83 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
     	      this.type = defaults.type;
         }
 
-        public Builder clusters(Input<Map<String,String>> clusters) {
+        public Builder clusters(Output<Map<String,String>> clusters) {
             this.clusters = Objects.requireNonNull(clusters);
             return this;
         }
 
         public Builder clusters(Map<String,String> clusters) {
-            this.clusters = Input.of(Objects.requireNonNull(clusters));
+            this.clusters = Output.of(Objects.requireNonNull(clusters));
             return this;
         }
 
-        public Builder displayName(Input<String> displayName) {
+        public Builder displayName(Output<String> displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
         public Builder displayName(String displayName) {
-            this.displayName = Input.of(Objects.requireNonNull(displayName));
+            this.displayName = Output.of(Objects.requireNonNull(displayName));
             return this;
         }
 
-        public Builder instanceId(Input<String> instanceId) {
+        public Builder instanceId(Output<String> instanceId) {
             this.instanceId = Objects.requireNonNull(instanceId);
             return this;
         }
 
         public Builder instanceId(String instanceId) {
-            this.instanceId = Input.of(Objects.requireNonNull(instanceId));
+            this.instanceId = Output.of(Objects.requireNonNull(instanceId));
             return this;
         }
 
-        public Builder labels(Input<Map<String,String>> labels) {
+        public Builder labels(Output<Map<String,String>> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
 
         public Builder labels(Map<String,String> labels) {
-            this.labels = Input.of(Objects.requireNonNull(labels));
+            this.labels = Output.of(Objects.requireNonNull(labels));
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder parent(Input<String> parent) {
+        public Builder parent(Output<String> parent) {
             this.parent = Objects.requireNonNull(parent);
             return this;
         }
 
         public Builder parent(String parent) {
-            this.parent = Input.of(Objects.requireNonNull(parent));
+            this.parent = Output.of(Objects.requireNonNull(parent));
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder type(Input<InstanceType> type) {
+        public Builder type(Output<InstanceType> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(InstanceType type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
         public InstanceArgs build() {

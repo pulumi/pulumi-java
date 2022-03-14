@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.ec2transitgateway;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -18,9 +18,9 @@ public final class RouteTableAssociationArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="transitGatewayAttachmentId", required=true)
-      private final Input<String> transitGatewayAttachmentId;
+      private final Output<String> transitGatewayAttachmentId;
 
-    public Input<String> getTransitGatewayAttachmentId() {
+    public Output<String> getTransitGatewayAttachmentId() {
         return this.transitGatewayAttachmentId;
     }
 
@@ -29,22 +29,22 @@ public final class RouteTableAssociationArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="transitGatewayRouteTableId", required=true)
-      private final Input<String> transitGatewayRouteTableId;
+      private final Output<String> transitGatewayRouteTableId;
 
-    public Input<String> getTransitGatewayRouteTableId() {
+    public Output<String> getTransitGatewayRouteTableId() {
         return this.transitGatewayRouteTableId;
     }
 
     public RouteTableAssociationArgs(
-        Input<String> transitGatewayAttachmentId,
-        Input<String> transitGatewayRouteTableId) {
+        Output<String> transitGatewayAttachmentId,
+        Output<String> transitGatewayRouteTableId) {
         this.transitGatewayAttachmentId = Objects.requireNonNull(transitGatewayAttachmentId, "expected parameter 'transitGatewayAttachmentId' to be non-null");
         this.transitGatewayRouteTableId = Objects.requireNonNull(transitGatewayRouteTableId, "expected parameter 'transitGatewayRouteTableId' to be non-null");
     }
 
     private RouteTableAssociationArgs() {
-        this.transitGatewayAttachmentId = Input.empty();
-        this.transitGatewayRouteTableId = Input.empty();
+        this.transitGatewayAttachmentId = Output.empty();
+        this.transitGatewayRouteTableId = Output.empty();
     }
 
     public static Builder builder() {
@@ -56,8 +56,8 @@ public final class RouteTableAssociationArgs extends io.pulumi.resources.Resourc
     }
 
     public static final class Builder {
-        private Input<String> transitGatewayAttachmentId;
-        private Input<String> transitGatewayRouteTableId;
+        private Output<String> transitGatewayAttachmentId;
+        private Output<String> transitGatewayRouteTableId;
 
         public Builder() {
     	      // Empty
@@ -69,23 +69,23 @@ public final class RouteTableAssociationArgs extends io.pulumi.resources.Resourc
     	      this.transitGatewayRouteTableId = defaults.transitGatewayRouteTableId;
         }
 
-        public Builder transitGatewayAttachmentId(Input<String> transitGatewayAttachmentId) {
+        public Builder transitGatewayAttachmentId(Output<String> transitGatewayAttachmentId) {
             this.transitGatewayAttachmentId = Objects.requireNonNull(transitGatewayAttachmentId);
             return this;
         }
 
         public Builder transitGatewayAttachmentId(String transitGatewayAttachmentId) {
-            this.transitGatewayAttachmentId = Input.of(Objects.requireNonNull(transitGatewayAttachmentId));
+            this.transitGatewayAttachmentId = Output.of(Objects.requireNonNull(transitGatewayAttachmentId));
             return this;
         }
 
-        public Builder transitGatewayRouteTableId(Input<String> transitGatewayRouteTableId) {
+        public Builder transitGatewayRouteTableId(Output<String> transitGatewayRouteTableId) {
             this.transitGatewayRouteTableId = Objects.requireNonNull(transitGatewayRouteTableId);
             return this;
         }
 
         public Builder transitGatewayRouteTableId(String transitGatewayRouteTableId) {
-            this.transitGatewayRouteTableId = Input.of(Objects.requireNonNull(transitGatewayRouteTableId));
+            this.transitGatewayRouteTableId = Output.of(Objects.requireNonNull(transitGatewayRouteTableId));
             return this;
         }
         public RouteTableAssociationArgs build() {

@@ -4,7 +4,7 @@
 package io.pulumi.aws.glue.inputs;
 
 import io.pulumi.aws.glue.inputs.TriggerActionNotificationPropertyArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -22,10 +22,10 @@ public final class TriggerActionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arguments")
-      private final @Nullable Input<Map<String,String>> arguments;
+      private final @Nullable Output<Map<String,String>> arguments;
 
-    public Input<Map<String,String>> getArguments() {
-        return this.arguments == null ? Input.empty() : this.arguments;
+    public Output<Map<String,String>> getArguments() {
+        return this.arguments == null ? Output.empty() : this.arguments;
     }
 
     /**
@@ -33,10 +33,10 @@ public final class TriggerActionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="crawlerName")
-      private final @Nullable Input<String> crawlerName;
+      private final @Nullable Output<String> crawlerName;
 
-    public Input<String> getCrawlerName() {
-        return this.crawlerName == null ? Input.empty() : this.crawlerName;
+    public Output<String> getCrawlerName() {
+        return this.crawlerName == null ? Output.empty() : this.crawlerName;
     }
 
     /**
@@ -44,10 +44,10 @@ public final class TriggerActionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="jobName")
-      private final @Nullable Input<String> jobName;
+      private final @Nullable Output<String> jobName;
 
-    public Input<String> getJobName() {
-        return this.jobName == null ? Input.empty() : this.jobName;
+    public Output<String> getJobName() {
+        return this.jobName == null ? Output.empty() : this.jobName;
     }
 
     /**
@@ -55,10 +55,10 @@ public final class TriggerActionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="notificationProperty")
-      private final @Nullable Input<TriggerActionNotificationPropertyArgs> notificationProperty;
+      private final @Nullable Output<TriggerActionNotificationPropertyArgs> notificationProperty;
 
-    public Input<TriggerActionNotificationPropertyArgs> getNotificationProperty() {
-        return this.notificationProperty == null ? Input.empty() : this.notificationProperty;
+    public Output<TriggerActionNotificationPropertyArgs> getNotificationProperty() {
+        return this.notificationProperty == null ? Output.empty() : this.notificationProperty;
     }
 
     /**
@@ -66,10 +66,10 @@ public final class TriggerActionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="securityConfiguration")
-      private final @Nullable Input<String> securityConfiguration;
+      private final @Nullable Output<String> securityConfiguration;
 
-    public Input<String> getSecurityConfiguration() {
-        return this.securityConfiguration == null ? Input.empty() : this.securityConfiguration;
+    public Output<String> getSecurityConfiguration() {
+        return this.securityConfiguration == null ? Output.empty() : this.securityConfiguration;
     }
 
     /**
@@ -77,19 +77,19 @@ public final class TriggerActionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="timeout")
-      private final @Nullable Input<Integer> timeout;
+      private final @Nullable Output<Integer> timeout;
 
-    public Input<Integer> getTimeout() {
-        return this.timeout == null ? Input.empty() : this.timeout;
+    public Output<Integer> getTimeout() {
+        return this.timeout == null ? Output.empty() : this.timeout;
     }
 
     public TriggerActionArgs(
-        @Nullable Input<Map<String,String>> arguments,
-        @Nullable Input<String> crawlerName,
-        @Nullable Input<String> jobName,
-        @Nullable Input<TriggerActionNotificationPropertyArgs> notificationProperty,
-        @Nullable Input<String> securityConfiguration,
-        @Nullable Input<Integer> timeout) {
+        @Nullable Output<Map<String,String>> arguments,
+        @Nullable Output<String> crawlerName,
+        @Nullable Output<String> jobName,
+        @Nullable Output<TriggerActionNotificationPropertyArgs> notificationProperty,
+        @Nullable Output<String> securityConfiguration,
+        @Nullable Output<Integer> timeout) {
         this.arguments = arguments;
         this.crawlerName = crawlerName;
         this.jobName = jobName;
@@ -99,12 +99,12 @@ public final class TriggerActionArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private TriggerActionArgs() {
-        this.arguments = Input.empty();
-        this.crawlerName = Input.empty();
-        this.jobName = Input.empty();
-        this.notificationProperty = Input.empty();
-        this.securityConfiguration = Input.empty();
-        this.timeout = Input.empty();
+        this.arguments = Output.empty();
+        this.crawlerName = Output.empty();
+        this.jobName = Output.empty();
+        this.notificationProperty = Output.empty();
+        this.securityConfiguration = Output.empty();
+        this.timeout = Output.empty();
     }
 
     public static Builder builder() {
@@ -116,12 +116,12 @@ public final class TriggerActionArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Map<String,String>> arguments;
-        private @Nullable Input<String> crawlerName;
-        private @Nullable Input<String> jobName;
-        private @Nullable Input<TriggerActionNotificationPropertyArgs> notificationProperty;
-        private @Nullable Input<String> securityConfiguration;
-        private @Nullable Input<Integer> timeout;
+        private @Nullable Output<Map<String,String>> arguments;
+        private @Nullable Output<String> crawlerName;
+        private @Nullable Output<String> jobName;
+        private @Nullable Output<TriggerActionNotificationPropertyArgs> notificationProperty;
+        private @Nullable Output<String> securityConfiguration;
+        private @Nullable Output<Integer> timeout;
 
         public Builder() {
     	      // Empty
@@ -137,63 +137,63 @@ public final class TriggerActionArgs extends io.pulumi.resources.ResourceArgs {
     	      this.timeout = defaults.timeout;
         }
 
-        public Builder arguments(@Nullable Input<Map<String,String>> arguments) {
+        public Builder arguments(@Nullable Output<Map<String,String>> arguments) {
             this.arguments = arguments;
             return this;
         }
 
         public Builder arguments(@Nullable Map<String,String> arguments) {
-            this.arguments = Input.ofNullable(arguments);
+            this.arguments = Output.ofNullable(arguments);
             return this;
         }
 
-        public Builder crawlerName(@Nullable Input<String> crawlerName) {
+        public Builder crawlerName(@Nullable Output<String> crawlerName) {
             this.crawlerName = crawlerName;
             return this;
         }
 
         public Builder crawlerName(@Nullable String crawlerName) {
-            this.crawlerName = Input.ofNullable(crawlerName);
+            this.crawlerName = Output.ofNullable(crawlerName);
             return this;
         }
 
-        public Builder jobName(@Nullable Input<String> jobName) {
+        public Builder jobName(@Nullable Output<String> jobName) {
             this.jobName = jobName;
             return this;
         }
 
         public Builder jobName(@Nullable String jobName) {
-            this.jobName = Input.ofNullable(jobName);
+            this.jobName = Output.ofNullable(jobName);
             return this;
         }
 
-        public Builder notificationProperty(@Nullable Input<TriggerActionNotificationPropertyArgs> notificationProperty) {
+        public Builder notificationProperty(@Nullable Output<TriggerActionNotificationPropertyArgs> notificationProperty) {
             this.notificationProperty = notificationProperty;
             return this;
         }
 
         public Builder notificationProperty(@Nullable TriggerActionNotificationPropertyArgs notificationProperty) {
-            this.notificationProperty = Input.ofNullable(notificationProperty);
+            this.notificationProperty = Output.ofNullable(notificationProperty);
             return this;
         }
 
-        public Builder securityConfiguration(@Nullable Input<String> securityConfiguration) {
+        public Builder securityConfiguration(@Nullable Output<String> securityConfiguration) {
             this.securityConfiguration = securityConfiguration;
             return this;
         }
 
         public Builder securityConfiguration(@Nullable String securityConfiguration) {
-            this.securityConfiguration = Input.ofNullable(securityConfiguration);
+            this.securityConfiguration = Output.ofNullable(securityConfiguration);
             return this;
         }
 
-        public Builder timeout(@Nullable Input<Integer> timeout) {
+        public Builder timeout(@Nullable Output<Integer> timeout) {
             this.timeout = timeout;
             return this;
         }
 
         public Builder timeout(@Nullable Integer timeout) {
-            this.timeout = Input.ofNullable(timeout);
+            this.timeout = Output.ofNullable(timeout);
             return this;
         }
         public TriggerActionArgs build() {

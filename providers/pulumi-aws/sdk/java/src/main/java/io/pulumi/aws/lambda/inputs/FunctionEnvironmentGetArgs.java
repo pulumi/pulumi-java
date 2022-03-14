@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.lambda.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -20,18 +20,18 @@ public final class FunctionEnvironmentGetArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="variables")
-      private final @Nullable Input<Map<String,String>> variables;
+      private final @Nullable Output<Map<String,String>> variables;
 
-    public Input<Map<String,String>> getVariables() {
-        return this.variables == null ? Input.empty() : this.variables;
+    public Output<Map<String,String>> getVariables() {
+        return this.variables == null ? Output.empty() : this.variables;
     }
 
-    public FunctionEnvironmentGetArgs(@Nullable Input<Map<String,String>> variables) {
+    public FunctionEnvironmentGetArgs(@Nullable Output<Map<String,String>> variables) {
         this.variables = variables;
     }
 
     private FunctionEnvironmentGetArgs() {
-        this.variables = Input.empty();
+        this.variables = Output.empty();
     }
 
     public static Builder builder() {
@@ -43,7 +43,7 @@ public final class FunctionEnvironmentGetArgs extends io.pulumi.resources.Resour
     }
 
     public static final class Builder {
-        private @Nullable Input<Map<String,String>> variables;
+        private @Nullable Output<Map<String,String>> variables;
 
         public Builder() {
     	      // Empty
@@ -54,13 +54,13 @@ public final class FunctionEnvironmentGetArgs extends io.pulumi.resources.Resour
     	      this.variables = defaults.variables;
         }
 
-        public Builder variables(@Nullable Input<Map<String,String>> variables) {
+        public Builder variables(@Nullable Output<Map<String,String>> variables) {
             this.variables = variables;
             return this;
         }
 
         public Builder variables(@Nullable Map<String,String> variables) {
-            this.variables = Input.ofNullable(variables);
+            this.variables = Output.ofNullable(variables);
             return this;
         }
         public FunctionEnvironmentGetArgs build() {

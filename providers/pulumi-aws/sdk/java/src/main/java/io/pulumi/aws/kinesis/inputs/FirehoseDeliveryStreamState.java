@@ -11,7 +11,7 @@ import io.pulumi.aws.kinesis.inputs.FirehoseDeliveryStreamRedshiftConfigurationG
 import io.pulumi.aws.kinesis.inputs.FirehoseDeliveryStreamS3ConfigurationGetArgs;
 import io.pulumi.aws.kinesis.inputs.FirehoseDeliveryStreamServerSideEncryptionGetArgs;
 import io.pulumi.aws.kinesis.inputs.FirehoseDeliveryStreamSplunkConfigurationGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -28,10 +28,10 @@ public final class FirehoseDeliveryStreamState extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="arn")
-      private final @Nullable Input<String> arn;
+      private final @Nullable Output<String> arn;
 
-    public Input<String> getArn() {
-        return this.arn == null ? Input.empty() : this.arn;
+    public Output<String> getArn() {
+        return this.arn == null ? Output.empty() : this.arn;
     }
 
     /**
@@ -39,17 +39,17 @@ public final class FirehoseDeliveryStreamState extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="destination")
-      private final @Nullable Input<String> destination;
+      private final @Nullable Output<String> destination;
 
-    public Input<String> getDestination() {
-        return this.destination == null ? Input.empty() : this.destination;
+    public Output<String> getDestination() {
+        return this.destination == null ? Output.empty() : this.destination;
     }
 
     @InputImport(name="destinationId")
-      private final @Nullable Input<String> destinationId;
+      private final @Nullable Output<String> destinationId;
 
-    public Input<String> getDestinationId() {
-        return this.destinationId == null ? Input.empty() : this.destinationId;
+    public Output<String> getDestinationId() {
+        return this.destinationId == null ? Output.empty() : this.destinationId;
     }
 
     /**
@@ -57,10 +57,10 @@ public final class FirehoseDeliveryStreamState extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="elasticsearchConfiguration")
-      private final @Nullable Input<FirehoseDeliveryStreamElasticsearchConfigurationGetArgs> elasticsearchConfiguration;
+      private final @Nullable Output<FirehoseDeliveryStreamElasticsearchConfigurationGetArgs> elasticsearchConfiguration;
 
-    public Input<FirehoseDeliveryStreamElasticsearchConfigurationGetArgs> getElasticsearchConfiguration() {
-        return this.elasticsearchConfiguration == null ? Input.empty() : this.elasticsearchConfiguration;
+    public Output<FirehoseDeliveryStreamElasticsearchConfigurationGetArgs> getElasticsearchConfiguration() {
+        return this.elasticsearchConfiguration == null ? Output.empty() : this.elasticsearchConfiguration;
     }
 
     /**
@@ -68,10 +68,10 @@ public final class FirehoseDeliveryStreamState extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="extendedS3Configuration")
-      private final @Nullable Input<FirehoseDeliveryStreamExtendedS3ConfigurationGetArgs> extendedS3Configuration;
+      private final @Nullable Output<FirehoseDeliveryStreamExtendedS3ConfigurationGetArgs> extendedS3Configuration;
 
-    public Input<FirehoseDeliveryStreamExtendedS3ConfigurationGetArgs> getExtendedS3Configuration() {
-        return this.extendedS3Configuration == null ? Input.empty() : this.extendedS3Configuration;
+    public Output<FirehoseDeliveryStreamExtendedS3ConfigurationGetArgs> getExtendedS3Configuration() {
+        return this.extendedS3Configuration == null ? Output.empty() : this.extendedS3Configuration;
     }
 
     /**
@@ -79,10 +79,10 @@ public final class FirehoseDeliveryStreamState extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="httpEndpointConfiguration")
-      private final @Nullable Input<FirehoseDeliveryStreamHttpEndpointConfigurationGetArgs> httpEndpointConfiguration;
+      private final @Nullable Output<FirehoseDeliveryStreamHttpEndpointConfigurationGetArgs> httpEndpointConfiguration;
 
-    public Input<FirehoseDeliveryStreamHttpEndpointConfigurationGetArgs> getHttpEndpointConfiguration() {
-        return this.httpEndpointConfiguration == null ? Input.empty() : this.httpEndpointConfiguration;
+    public Output<FirehoseDeliveryStreamHttpEndpointConfigurationGetArgs> getHttpEndpointConfiguration() {
+        return this.httpEndpointConfiguration == null ? Output.empty() : this.httpEndpointConfiguration;
     }
 
     /**
@@ -90,10 +90,10 @@ public final class FirehoseDeliveryStreamState extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="kinesisSourceConfiguration")
-      private final @Nullable Input<FirehoseDeliveryStreamKinesisSourceConfigurationGetArgs> kinesisSourceConfiguration;
+      private final @Nullable Output<FirehoseDeliveryStreamKinesisSourceConfigurationGetArgs> kinesisSourceConfiguration;
 
-    public Input<FirehoseDeliveryStreamKinesisSourceConfigurationGetArgs> getKinesisSourceConfiguration() {
-        return this.kinesisSourceConfiguration == null ? Input.empty() : this.kinesisSourceConfiguration;
+    public Output<FirehoseDeliveryStreamKinesisSourceConfigurationGetArgs> getKinesisSourceConfiguration() {
+        return this.kinesisSourceConfiguration == null ? Output.empty() : this.kinesisSourceConfiguration;
     }
 
     /**
@@ -102,10 +102,10 @@ public final class FirehoseDeliveryStreamState extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -115,10 +115,10 @@ public final class FirehoseDeliveryStreamState extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="redshiftConfiguration")
-      private final @Nullable Input<FirehoseDeliveryStreamRedshiftConfigurationGetArgs> redshiftConfiguration;
+      private final @Nullable Output<FirehoseDeliveryStreamRedshiftConfigurationGetArgs> redshiftConfiguration;
 
-    public Input<FirehoseDeliveryStreamRedshiftConfigurationGetArgs> getRedshiftConfiguration() {
-        return this.redshiftConfiguration == null ? Input.empty() : this.redshiftConfiguration;
+    public Output<FirehoseDeliveryStreamRedshiftConfigurationGetArgs> getRedshiftConfiguration() {
+        return this.redshiftConfiguration == null ? Output.empty() : this.redshiftConfiguration;
     }
 
     /**
@@ -127,10 +127,10 @@ public final class FirehoseDeliveryStreamState extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="s3Configuration")
-      private final @Nullable Input<FirehoseDeliveryStreamS3ConfigurationGetArgs> s3Configuration;
+      private final @Nullable Output<FirehoseDeliveryStreamS3ConfigurationGetArgs> s3Configuration;
 
-    public Input<FirehoseDeliveryStreamS3ConfigurationGetArgs> getS3Configuration() {
-        return this.s3Configuration == null ? Input.empty() : this.s3Configuration;
+    public Output<FirehoseDeliveryStreamS3ConfigurationGetArgs> getS3Configuration() {
+        return this.s3Configuration == null ? Output.empty() : this.s3Configuration;
     }
 
     /**
@@ -139,10 +139,10 @@ public final class FirehoseDeliveryStreamState extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="serverSideEncryption")
-      private final @Nullable Input<FirehoseDeliveryStreamServerSideEncryptionGetArgs> serverSideEncryption;
+      private final @Nullable Output<FirehoseDeliveryStreamServerSideEncryptionGetArgs> serverSideEncryption;
 
-    public Input<FirehoseDeliveryStreamServerSideEncryptionGetArgs> getServerSideEncryption() {
-        return this.serverSideEncryption == null ? Input.empty() : this.serverSideEncryption;
+    public Output<FirehoseDeliveryStreamServerSideEncryptionGetArgs> getServerSideEncryption() {
+        return this.serverSideEncryption == null ? Output.empty() : this.serverSideEncryption;
     }
 
     /**
@@ -150,10 +150,10 @@ public final class FirehoseDeliveryStreamState extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="splunkConfiguration")
-      private final @Nullable Input<FirehoseDeliveryStreamSplunkConfigurationGetArgs> splunkConfiguration;
+      private final @Nullable Output<FirehoseDeliveryStreamSplunkConfigurationGetArgs> splunkConfiguration;
 
-    public Input<FirehoseDeliveryStreamSplunkConfigurationGetArgs> getSplunkConfiguration() {
-        return this.splunkConfiguration == null ? Input.empty() : this.splunkConfiguration;
+    public Output<FirehoseDeliveryStreamSplunkConfigurationGetArgs> getSplunkConfiguration() {
+        return this.splunkConfiguration == null ? Output.empty() : this.splunkConfiguration;
     }
 
     /**
@@ -161,10 +161,10 @@ public final class FirehoseDeliveryStreamState extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -172,10 +172,10 @@ public final class FirehoseDeliveryStreamState extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="tagsAll")
-      private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Input<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Input.empty() : this.tagsAll;
+    public Output<Map<String,String>> getTagsAll() {
+        return this.tagsAll == null ? Output.empty() : this.tagsAll;
     }
 
     /**
@@ -183,28 +183,28 @@ public final class FirehoseDeliveryStreamState extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="versionId")
-      private final @Nullable Input<String> versionId;
+      private final @Nullable Output<String> versionId;
 
-    public Input<String> getVersionId() {
-        return this.versionId == null ? Input.empty() : this.versionId;
+    public Output<String> getVersionId() {
+        return this.versionId == null ? Output.empty() : this.versionId;
     }
 
     public FirehoseDeliveryStreamState(
-        @Nullable Input<String> arn,
-        @Nullable Input<String> destination,
-        @Nullable Input<String> destinationId,
-        @Nullable Input<FirehoseDeliveryStreamElasticsearchConfigurationGetArgs> elasticsearchConfiguration,
-        @Nullable Input<FirehoseDeliveryStreamExtendedS3ConfigurationGetArgs> extendedS3Configuration,
-        @Nullable Input<FirehoseDeliveryStreamHttpEndpointConfigurationGetArgs> httpEndpointConfiguration,
-        @Nullable Input<FirehoseDeliveryStreamKinesisSourceConfigurationGetArgs> kinesisSourceConfiguration,
-        @Nullable Input<String> name,
-        @Nullable Input<FirehoseDeliveryStreamRedshiftConfigurationGetArgs> redshiftConfiguration,
-        @Nullable Input<FirehoseDeliveryStreamS3ConfigurationGetArgs> s3Configuration,
-        @Nullable Input<FirehoseDeliveryStreamServerSideEncryptionGetArgs> serverSideEncryption,
-        @Nullable Input<FirehoseDeliveryStreamSplunkConfigurationGetArgs> splunkConfiguration,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<Map<String,String>> tagsAll,
-        @Nullable Input<String> versionId) {
+        @Nullable Output<String> arn,
+        @Nullable Output<String> destination,
+        @Nullable Output<String> destinationId,
+        @Nullable Output<FirehoseDeliveryStreamElasticsearchConfigurationGetArgs> elasticsearchConfiguration,
+        @Nullable Output<FirehoseDeliveryStreamExtendedS3ConfigurationGetArgs> extendedS3Configuration,
+        @Nullable Output<FirehoseDeliveryStreamHttpEndpointConfigurationGetArgs> httpEndpointConfiguration,
+        @Nullable Output<FirehoseDeliveryStreamKinesisSourceConfigurationGetArgs> kinesisSourceConfiguration,
+        @Nullable Output<String> name,
+        @Nullable Output<FirehoseDeliveryStreamRedshiftConfigurationGetArgs> redshiftConfiguration,
+        @Nullable Output<FirehoseDeliveryStreamS3ConfigurationGetArgs> s3Configuration,
+        @Nullable Output<FirehoseDeliveryStreamServerSideEncryptionGetArgs> serverSideEncryption,
+        @Nullable Output<FirehoseDeliveryStreamSplunkConfigurationGetArgs> splunkConfiguration,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<Map<String,String>> tagsAll,
+        @Nullable Output<String> versionId) {
         this.arn = arn;
         this.destination = destination;
         this.destinationId = destinationId;
@@ -223,21 +223,21 @@ public final class FirehoseDeliveryStreamState extends io.pulumi.resources.Resou
     }
 
     private FirehoseDeliveryStreamState() {
-        this.arn = Input.empty();
-        this.destination = Input.empty();
-        this.destinationId = Input.empty();
-        this.elasticsearchConfiguration = Input.empty();
-        this.extendedS3Configuration = Input.empty();
-        this.httpEndpointConfiguration = Input.empty();
-        this.kinesisSourceConfiguration = Input.empty();
-        this.name = Input.empty();
-        this.redshiftConfiguration = Input.empty();
-        this.s3Configuration = Input.empty();
-        this.serverSideEncryption = Input.empty();
-        this.splunkConfiguration = Input.empty();
-        this.tags = Input.empty();
-        this.tagsAll = Input.empty();
-        this.versionId = Input.empty();
+        this.arn = Output.empty();
+        this.destination = Output.empty();
+        this.destinationId = Output.empty();
+        this.elasticsearchConfiguration = Output.empty();
+        this.extendedS3Configuration = Output.empty();
+        this.httpEndpointConfiguration = Output.empty();
+        this.kinesisSourceConfiguration = Output.empty();
+        this.name = Output.empty();
+        this.redshiftConfiguration = Output.empty();
+        this.s3Configuration = Output.empty();
+        this.serverSideEncryption = Output.empty();
+        this.splunkConfiguration = Output.empty();
+        this.tags = Output.empty();
+        this.tagsAll = Output.empty();
+        this.versionId = Output.empty();
     }
 
     public static Builder builder() {
@@ -249,21 +249,21 @@ public final class FirehoseDeliveryStreamState extends io.pulumi.resources.Resou
     }
 
     public static final class Builder {
-        private @Nullable Input<String> arn;
-        private @Nullable Input<String> destination;
-        private @Nullable Input<String> destinationId;
-        private @Nullable Input<FirehoseDeliveryStreamElasticsearchConfigurationGetArgs> elasticsearchConfiguration;
-        private @Nullable Input<FirehoseDeliveryStreamExtendedS3ConfigurationGetArgs> extendedS3Configuration;
-        private @Nullable Input<FirehoseDeliveryStreamHttpEndpointConfigurationGetArgs> httpEndpointConfiguration;
-        private @Nullable Input<FirehoseDeliveryStreamKinesisSourceConfigurationGetArgs> kinesisSourceConfiguration;
-        private @Nullable Input<String> name;
-        private @Nullable Input<FirehoseDeliveryStreamRedshiftConfigurationGetArgs> redshiftConfiguration;
-        private @Nullable Input<FirehoseDeliveryStreamS3ConfigurationGetArgs> s3Configuration;
-        private @Nullable Input<FirehoseDeliveryStreamServerSideEncryptionGetArgs> serverSideEncryption;
-        private @Nullable Input<FirehoseDeliveryStreamSplunkConfigurationGetArgs> splunkConfiguration;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<Map<String,String>> tagsAll;
-        private @Nullable Input<String> versionId;
+        private @Nullable Output<String> arn;
+        private @Nullable Output<String> destination;
+        private @Nullable Output<String> destinationId;
+        private @Nullable Output<FirehoseDeliveryStreamElasticsearchConfigurationGetArgs> elasticsearchConfiguration;
+        private @Nullable Output<FirehoseDeliveryStreamExtendedS3ConfigurationGetArgs> extendedS3Configuration;
+        private @Nullable Output<FirehoseDeliveryStreamHttpEndpointConfigurationGetArgs> httpEndpointConfiguration;
+        private @Nullable Output<FirehoseDeliveryStreamKinesisSourceConfigurationGetArgs> kinesisSourceConfiguration;
+        private @Nullable Output<String> name;
+        private @Nullable Output<FirehoseDeliveryStreamRedshiftConfigurationGetArgs> redshiftConfiguration;
+        private @Nullable Output<FirehoseDeliveryStreamS3ConfigurationGetArgs> s3Configuration;
+        private @Nullable Output<FirehoseDeliveryStreamServerSideEncryptionGetArgs> serverSideEncryption;
+        private @Nullable Output<FirehoseDeliveryStreamSplunkConfigurationGetArgs> splunkConfiguration;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<Map<String,String>> tagsAll;
+        private @Nullable Output<String> versionId;
 
         public Builder() {
     	      // Empty
@@ -288,153 +288,153 @@ public final class FirehoseDeliveryStreamState extends io.pulumi.resources.Resou
     	      this.versionId = defaults.versionId;
         }
 
-        public Builder arn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
 
         public Builder arn(@Nullable String arn) {
-            this.arn = Input.ofNullable(arn);
+            this.arn = Output.ofNullable(arn);
             return this;
         }
 
-        public Builder destination(@Nullable Input<String> destination) {
+        public Builder destination(@Nullable Output<String> destination) {
             this.destination = destination;
             return this;
         }
 
         public Builder destination(@Nullable String destination) {
-            this.destination = Input.ofNullable(destination);
+            this.destination = Output.ofNullable(destination);
             return this;
         }
 
-        public Builder destinationId(@Nullable Input<String> destinationId) {
+        public Builder destinationId(@Nullable Output<String> destinationId) {
             this.destinationId = destinationId;
             return this;
         }
 
         public Builder destinationId(@Nullable String destinationId) {
-            this.destinationId = Input.ofNullable(destinationId);
+            this.destinationId = Output.ofNullable(destinationId);
             return this;
         }
 
-        public Builder elasticsearchConfiguration(@Nullable Input<FirehoseDeliveryStreamElasticsearchConfigurationGetArgs> elasticsearchConfiguration) {
+        public Builder elasticsearchConfiguration(@Nullable Output<FirehoseDeliveryStreamElasticsearchConfigurationGetArgs> elasticsearchConfiguration) {
             this.elasticsearchConfiguration = elasticsearchConfiguration;
             return this;
         }
 
         public Builder elasticsearchConfiguration(@Nullable FirehoseDeliveryStreamElasticsearchConfigurationGetArgs elasticsearchConfiguration) {
-            this.elasticsearchConfiguration = Input.ofNullable(elasticsearchConfiguration);
+            this.elasticsearchConfiguration = Output.ofNullable(elasticsearchConfiguration);
             return this;
         }
 
-        public Builder extendedS3Configuration(@Nullable Input<FirehoseDeliveryStreamExtendedS3ConfigurationGetArgs> extendedS3Configuration) {
+        public Builder extendedS3Configuration(@Nullable Output<FirehoseDeliveryStreamExtendedS3ConfigurationGetArgs> extendedS3Configuration) {
             this.extendedS3Configuration = extendedS3Configuration;
             return this;
         }
 
         public Builder extendedS3Configuration(@Nullable FirehoseDeliveryStreamExtendedS3ConfigurationGetArgs extendedS3Configuration) {
-            this.extendedS3Configuration = Input.ofNullable(extendedS3Configuration);
+            this.extendedS3Configuration = Output.ofNullable(extendedS3Configuration);
             return this;
         }
 
-        public Builder httpEndpointConfiguration(@Nullable Input<FirehoseDeliveryStreamHttpEndpointConfigurationGetArgs> httpEndpointConfiguration) {
+        public Builder httpEndpointConfiguration(@Nullable Output<FirehoseDeliveryStreamHttpEndpointConfigurationGetArgs> httpEndpointConfiguration) {
             this.httpEndpointConfiguration = httpEndpointConfiguration;
             return this;
         }
 
         public Builder httpEndpointConfiguration(@Nullable FirehoseDeliveryStreamHttpEndpointConfigurationGetArgs httpEndpointConfiguration) {
-            this.httpEndpointConfiguration = Input.ofNullable(httpEndpointConfiguration);
+            this.httpEndpointConfiguration = Output.ofNullable(httpEndpointConfiguration);
             return this;
         }
 
-        public Builder kinesisSourceConfiguration(@Nullable Input<FirehoseDeliveryStreamKinesisSourceConfigurationGetArgs> kinesisSourceConfiguration) {
+        public Builder kinesisSourceConfiguration(@Nullable Output<FirehoseDeliveryStreamKinesisSourceConfigurationGetArgs> kinesisSourceConfiguration) {
             this.kinesisSourceConfiguration = kinesisSourceConfiguration;
             return this;
         }
 
         public Builder kinesisSourceConfiguration(@Nullable FirehoseDeliveryStreamKinesisSourceConfigurationGetArgs kinesisSourceConfiguration) {
-            this.kinesisSourceConfiguration = Input.ofNullable(kinesisSourceConfiguration);
+            this.kinesisSourceConfiguration = Output.ofNullable(kinesisSourceConfiguration);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder redshiftConfiguration(@Nullable Input<FirehoseDeliveryStreamRedshiftConfigurationGetArgs> redshiftConfiguration) {
+        public Builder redshiftConfiguration(@Nullable Output<FirehoseDeliveryStreamRedshiftConfigurationGetArgs> redshiftConfiguration) {
             this.redshiftConfiguration = redshiftConfiguration;
             return this;
         }
 
         public Builder redshiftConfiguration(@Nullable FirehoseDeliveryStreamRedshiftConfigurationGetArgs redshiftConfiguration) {
-            this.redshiftConfiguration = Input.ofNullable(redshiftConfiguration);
+            this.redshiftConfiguration = Output.ofNullable(redshiftConfiguration);
             return this;
         }
 
-        public Builder s3Configuration(@Nullable Input<FirehoseDeliveryStreamS3ConfigurationGetArgs> s3Configuration) {
+        public Builder s3Configuration(@Nullable Output<FirehoseDeliveryStreamS3ConfigurationGetArgs> s3Configuration) {
             this.s3Configuration = s3Configuration;
             return this;
         }
 
         public Builder s3Configuration(@Nullable FirehoseDeliveryStreamS3ConfigurationGetArgs s3Configuration) {
-            this.s3Configuration = Input.ofNullable(s3Configuration);
+            this.s3Configuration = Output.ofNullable(s3Configuration);
             return this;
         }
 
-        public Builder serverSideEncryption(@Nullable Input<FirehoseDeliveryStreamServerSideEncryptionGetArgs> serverSideEncryption) {
+        public Builder serverSideEncryption(@Nullable Output<FirehoseDeliveryStreamServerSideEncryptionGetArgs> serverSideEncryption) {
             this.serverSideEncryption = serverSideEncryption;
             return this;
         }
 
         public Builder serverSideEncryption(@Nullable FirehoseDeliveryStreamServerSideEncryptionGetArgs serverSideEncryption) {
-            this.serverSideEncryption = Input.ofNullable(serverSideEncryption);
+            this.serverSideEncryption = Output.ofNullable(serverSideEncryption);
             return this;
         }
 
-        public Builder splunkConfiguration(@Nullable Input<FirehoseDeliveryStreamSplunkConfigurationGetArgs> splunkConfiguration) {
+        public Builder splunkConfiguration(@Nullable Output<FirehoseDeliveryStreamSplunkConfigurationGetArgs> splunkConfiguration) {
             this.splunkConfiguration = splunkConfiguration;
             return this;
         }
 
         public Builder splunkConfiguration(@Nullable FirehoseDeliveryStreamSplunkConfigurationGetArgs splunkConfiguration) {
-            this.splunkConfiguration = Input.ofNullable(splunkConfiguration);
+            this.splunkConfiguration = Output.ofNullable(splunkConfiguration);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Input.ofNullable(tagsAll);
+            this.tagsAll = Output.ofNullable(tagsAll);
             return this;
         }
 
-        public Builder versionId(@Nullable Input<String> versionId) {
+        public Builder versionId(@Nullable Output<String> versionId) {
             this.versionId = versionId;
             return this;
         }
 
         public Builder versionId(@Nullable String versionId) {
-            this.versionId = Input.ofNullable(versionId);
+            this.versionId = Output.ofNullable(versionId);
             return this;
         }
         public FirehoseDeliveryStreamState build() {

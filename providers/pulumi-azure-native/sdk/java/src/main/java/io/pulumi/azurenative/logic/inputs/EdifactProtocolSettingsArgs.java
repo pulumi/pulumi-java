@@ -14,7 +14,7 @@ import io.pulumi.azurenative.logic.inputs.EdifactProcessingSettingsArgs;
 import io.pulumi.azurenative.logic.inputs.EdifactSchemaReferenceArgs;
 import io.pulumi.azurenative.logic.inputs.EdifactValidationOverrideArgs;
 import io.pulumi.azurenative.logic.inputs.EdifactValidationSettingsArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
@@ -34,9 +34,9 @@ public final class EdifactProtocolSettingsArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="acknowledgementSettings", required=true)
-      private final Input<EdifactAcknowledgementSettingsArgs> acknowledgementSettings;
+      private final Output<EdifactAcknowledgementSettingsArgs> acknowledgementSettings;
 
-    public Input<EdifactAcknowledgementSettingsArgs> getAcknowledgementSettings() {
+    public Output<EdifactAcknowledgementSettingsArgs> getAcknowledgementSettings() {
         return this.acknowledgementSettings;
     }
 
@@ -45,10 +45,10 @@ public final class EdifactProtocolSettingsArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="edifactDelimiterOverrides")
-      private final @Nullable Input<List<EdifactDelimiterOverrideArgs>> edifactDelimiterOverrides;
+      private final @Nullable Output<List<EdifactDelimiterOverrideArgs>> edifactDelimiterOverrides;
 
-    public Input<List<EdifactDelimiterOverrideArgs>> getEdifactDelimiterOverrides() {
-        return this.edifactDelimiterOverrides == null ? Input.empty() : this.edifactDelimiterOverrides;
+    public Output<List<EdifactDelimiterOverrideArgs>> getEdifactDelimiterOverrides() {
+        return this.edifactDelimiterOverrides == null ? Output.empty() : this.edifactDelimiterOverrides;
     }
 
     /**
@@ -56,10 +56,10 @@ public final class EdifactProtocolSettingsArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="envelopeOverrides")
-      private final @Nullable Input<List<EdifactEnvelopeOverrideArgs>> envelopeOverrides;
+      private final @Nullable Output<List<EdifactEnvelopeOverrideArgs>> envelopeOverrides;
 
-    public Input<List<EdifactEnvelopeOverrideArgs>> getEnvelopeOverrides() {
-        return this.envelopeOverrides == null ? Input.empty() : this.envelopeOverrides;
+    public Output<List<EdifactEnvelopeOverrideArgs>> getEnvelopeOverrides() {
+        return this.envelopeOverrides == null ? Output.empty() : this.envelopeOverrides;
     }
 
     /**
@@ -67,9 +67,9 @@ public final class EdifactProtocolSettingsArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="envelopeSettings", required=true)
-      private final Input<EdifactEnvelopeSettingsArgs> envelopeSettings;
+      private final Output<EdifactEnvelopeSettingsArgs> envelopeSettings;
 
-    public Input<EdifactEnvelopeSettingsArgs> getEnvelopeSettings() {
+    public Output<EdifactEnvelopeSettingsArgs> getEnvelopeSettings() {
         return this.envelopeSettings;
     }
 
@@ -78,9 +78,9 @@ public final class EdifactProtocolSettingsArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="framingSettings", required=true)
-      private final Input<EdifactFramingSettingsArgs> framingSettings;
+      private final Output<EdifactFramingSettingsArgs> framingSettings;
 
-    public Input<EdifactFramingSettingsArgs> getFramingSettings() {
+    public Output<EdifactFramingSettingsArgs> getFramingSettings() {
         return this.framingSettings;
     }
 
@@ -89,9 +89,9 @@ public final class EdifactProtocolSettingsArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="messageFilter", required=true)
-      private final Input<EdifactMessageFilterArgs> messageFilter;
+      private final Output<EdifactMessageFilterArgs> messageFilter;
 
-    public Input<EdifactMessageFilterArgs> getMessageFilter() {
+    public Output<EdifactMessageFilterArgs> getMessageFilter() {
         return this.messageFilter;
     }
 
@@ -100,10 +100,10 @@ public final class EdifactProtocolSettingsArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="messageFilterList")
-      private final @Nullable Input<List<EdifactMessageIdentifierArgs>> messageFilterList;
+      private final @Nullable Output<List<EdifactMessageIdentifierArgs>> messageFilterList;
 
-    public Input<List<EdifactMessageIdentifierArgs>> getMessageFilterList() {
-        return this.messageFilterList == null ? Input.empty() : this.messageFilterList;
+    public Output<List<EdifactMessageIdentifierArgs>> getMessageFilterList() {
+        return this.messageFilterList == null ? Output.empty() : this.messageFilterList;
     }
 
     /**
@@ -111,9 +111,9 @@ public final class EdifactProtocolSettingsArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="processingSettings", required=true)
-      private final Input<EdifactProcessingSettingsArgs> processingSettings;
+      private final Output<EdifactProcessingSettingsArgs> processingSettings;
 
-    public Input<EdifactProcessingSettingsArgs> getProcessingSettings() {
+    public Output<EdifactProcessingSettingsArgs> getProcessingSettings() {
         return this.processingSettings;
     }
 
@@ -122,9 +122,9 @@ public final class EdifactProtocolSettingsArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="schemaReferences", required=true)
-      private final Input<List<EdifactSchemaReferenceArgs>> schemaReferences;
+      private final Output<List<EdifactSchemaReferenceArgs>> schemaReferences;
 
-    public Input<List<EdifactSchemaReferenceArgs>> getSchemaReferences() {
+    public Output<List<EdifactSchemaReferenceArgs>> getSchemaReferences() {
         return this.schemaReferences;
     }
 
@@ -133,10 +133,10 @@ public final class EdifactProtocolSettingsArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="validationOverrides")
-      private final @Nullable Input<List<EdifactValidationOverrideArgs>> validationOverrides;
+      private final @Nullable Output<List<EdifactValidationOverrideArgs>> validationOverrides;
 
-    public Input<List<EdifactValidationOverrideArgs>> getValidationOverrides() {
-        return this.validationOverrides == null ? Input.empty() : this.validationOverrides;
+    public Output<List<EdifactValidationOverrideArgs>> getValidationOverrides() {
+        return this.validationOverrides == null ? Output.empty() : this.validationOverrides;
     }
 
     /**
@@ -144,24 +144,24 @@ public final class EdifactProtocolSettingsArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="validationSettings", required=true)
-      private final Input<EdifactValidationSettingsArgs> validationSettings;
+      private final Output<EdifactValidationSettingsArgs> validationSettings;
 
-    public Input<EdifactValidationSettingsArgs> getValidationSettings() {
+    public Output<EdifactValidationSettingsArgs> getValidationSettings() {
         return this.validationSettings;
     }
 
     public EdifactProtocolSettingsArgs(
-        Input<EdifactAcknowledgementSettingsArgs> acknowledgementSettings,
-        @Nullable Input<List<EdifactDelimiterOverrideArgs>> edifactDelimiterOverrides,
-        @Nullable Input<List<EdifactEnvelopeOverrideArgs>> envelopeOverrides,
-        Input<EdifactEnvelopeSettingsArgs> envelopeSettings,
-        Input<EdifactFramingSettingsArgs> framingSettings,
-        Input<EdifactMessageFilterArgs> messageFilter,
-        @Nullable Input<List<EdifactMessageIdentifierArgs>> messageFilterList,
-        Input<EdifactProcessingSettingsArgs> processingSettings,
-        Input<List<EdifactSchemaReferenceArgs>> schemaReferences,
-        @Nullable Input<List<EdifactValidationOverrideArgs>> validationOverrides,
-        Input<EdifactValidationSettingsArgs> validationSettings) {
+        Output<EdifactAcknowledgementSettingsArgs> acknowledgementSettings,
+        @Nullable Output<List<EdifactDelimiterOverrideArgs>> edifactDelimiterOverrides,
+        @Nullable Output<List<EdifactEnvelopeOverrideArgs>> envelopeOverrides,
+        Output<EdifactEnvelopeSettingsArgs> envelopeSettings,
+        Output<EdifactFramingSettingsArgs> framingSettings,
+        Output<EdifactMessageFilterArgs> messageFilter,
+        @Nullable Output<List<EdifactMessageIdentifierArgs>> messageFilterList,
+        Output<EdifactProcessingSettingsArgs> processingSettings,
+        Output<List<EdifactSchemaReferenceArgs>> schemaReferences,
+        @Nullable Output<List<EdifactValidationOverrideArgs>> validationOverrides,
+        Output<EdifactValidationSettingsArgs> validationSettings) {
         this.acknowledgementSettings = Objects.requireNonNull(acknowledgementSettings, "expected parameter 'acknowledgementSettings' to be non-null");
         this.edifactDelimiterOverrides = edifactDelimiterOverrides;
         this.envelopeOverrides = envelopeOverrides;
@@ -176,17 +176,17 @@ public final class EdifactProtocolSettingsArgs extends io.pulumi.resources.Resou
     }
 
     private EdifactProtocolSettingsArgs() {
-        this.acknowledgementSettings = Input.empty();
-        this.edifactDelimiterOverrides = Input.empty();
-        this.envelopeOverrides = Input.empty();
-        this.envelopeSettings = Input.empty();
-        this.framingSettings = Input.empty();
-        this.messageFilter = Input.empty();
-        this.messageFilterList = Input.empty();
-        this.processingSettings = Input.empty();
-        this.schemaReferences = Input.empty();
-        this.validationOverrides = Input.empty();
-        this.validationSettings = Input.empty();
+        this.acknowledgementSettings = Output.empty();
+        this.edifactDelimiterOverrides = Output.empty();
+        this.envelopeOverrides = Output.empty();
+        this.envelopeSettings = Output.empty();
+        this.framingSettings = Output.empty();
+        this.messageFilter = Output.empty();
+        this.messageFilterList = Output.empty();
+        this.processingSettings = Output.empty();
+        this.schemaReferences = Output.empty();
+        this.validationOverrides = Output.empty();
+        this.validationSettings = Output.empty();
     }
 
     public static Builder builder() {
@@ -198,17 +198,17 @@ public final class EdifactProtocolSettingsArgs extends io.pulumi.resources.Resou
     }
 
     public static final class Builder {
-        private Input<EdifactAcknowledgementSettingsArgs> acknowledgementSettings;
-        private @Nullable Input<List<EdifactDelimiterOverrideArgs>> edifactDelimiterOverrides;
-        private @Nullable Input<List<EdifactEnvelopeOverrideArgs>> envelopeOverrides;
-        private Input<EdifactEnvelopeSettingsArgs> envelopeSettings;
-        private Input<EdifactFramingSettingsArgs> framingSettings;
-        private Input<EdifactMessageFilterArgs> messageFilter;
-        private @Nullable Input<List<EdifactMessageIdentifierArgs>> messageFilterList;
-        private Input<EdifactProcessingSettingsArgs> processingSettings;
-        private Input<List<EdifactSchemaReferenceArgs>> schemaReferences;
-        private @Nullable Input<List<EdifactValidationOverrideArgs>> validationOverrides;
-        private Input<EdifactValidationSettingsArgs> validationSettings;
+        private Output<EdifactAcknowledgementSettingsArgs> acknowledgementSettings;
+        private @Nullable Output<List<EdifactDelimiterOverrideArgs>> edifactDelimiterOverrides;
+        private @Nullable Output<List<EdifactEnvelopeOverrideArgs>> envelopeOverrides;
+        private Output<EdifactEnvelopeSettingsArgs> envelopeSettings;
+        private Output<EdifactFramingSettingsArgs> framingSettings;
+        private Output<EdifactMessageFilterArgs> messageFilter;
+        private @Nullable Output<List<EdifactMessageIdentifierArgs>> messageFilterList;
+        private Output<EdifactProcessingSettingsArgs> processingSettings;
+        private Output<List<EdifactSchemaReferenceArgs>> schemaReferences;
+        private @Nullable Output<List<EdifactValidationOverrideArgs>> validationOverrides;
+        private Output<EdifactValidationSettingsArgs> validationSettings;
 
         public Builder() {
     	      // Empty
@@ -229,113 +229,113 @@ public final class EdifactProtocolSettingsArgs extends io.pulumi.resources.Resou
     	      this.validationSettings = defaults.validationSettings;
         }
 
-        public Builder acknowledgementSettings(Input<EdifactAcknowledgementSettingsArgs> acknowledgementSettings) {
+        public Builder acknowledgementSettings(Output<EdifactAcknowledgementSettingsArgs> acknowledgementSettings) {
             this.acknowledgementSettings = Objects.requireNonNull(acknowledgementSettings);
             return this;
         }
 
         public Builder acknowledgementSettings(EdifactAcknowledgementSettingsArgs acknowledgementSettings) {
-            this.acknowledgementSettings = Input.of(Objects.requireNonNull(acknowledgementSettings));
+            this.acknowledgementSettings = Output.of(Objects.requireNonNull(acknowledgementSettings));
             return this;
         }
 
-        public Builder edifactDelimiterOverrides(@Nullable Input<List<EdifactDelimiterOverrideArgs>> edifactDelimiterOverrides) {
+        public Builder edifactDelimiterOverrides(@Nullable Output<List<EdifactDelimiterOverrideArgs>> edifactDelimiterOverrides) {
             this.edifactDelimiterOverrides = edifactDelimiterOverrides;
             return this;
         }
 
         public Builder edifactDelimiterOverrides(@Nullable List<EdifactDelimiterOverrideArgs> edifactDelimiterOverrides) {
-            this.edifactDelimiterOverrides = Input.ofNullable(edifactDelimiterOverrides);
+            this.edifactDelimiterOverrides = Output.ofNullable(edifactDelimiterOverrides);
             return this;
         }
 
-        public Builder envelopeOverrides(@Nullable Input<List<EdifactEnvelopeOverrideArgs>> envelopeOverrides) {
+        public Builder envelopeOverrides(@Nullable Output<List<EdifactEnvelopeOverrideArgs>> envelopeOverrides) {
             this.envelopeOverrides = envelopeOverrides;
             return this;
         }
 
         public Builder envelopeOverrides(@Nullable List<EdifactEnvelopeOverrideArgs> envelopeOverrides) {
-            this.envelopeOverrides = Input.ofNullable(envelopeOverrides);
+            this.envelopeOverrides = Output.ofNullable(envelopeOverrides);
             return this;
         }
 
-        public Builder envelopeSettings(Input<EdifactEnvelopeSettingsArgs> envelopeSettings) {
+        public Builder envelopeSettings(Output<EdifactEnvelopeSettingsArgs> envelopeSettings) {
             this.envelopeSettings = Objects.requireNonNull(envelopeSettings);
             return this;
         }
 
         public Builder envelopeSettings(EdifactEnvelopeSettingsArgs envelopeSettings) {
-            this.envelopeSettings = Input.of(Objects.requireNonNull(envelopeSettings));
+            this.envelopeSettings = Output.of(Objects.requireNonNull(envelopeSettings));
             return this;
         }
 
-        public Builder framingSettings(Input<EdifactFramingSettingsArgs> framingSettings) {
+        public Builder framingSettings(Output<EdifactFramingSettingsArgs> framingSettings) {
             this.framingSettings = Objects.requireNonNull(framingSettings);
             return this;
         }
 
         public Builder framingSettings(EdifactFramingSettingsArgs framingSettings) {
-            this.framingSettings = Input.of(Objects.requireNonNull(framingSettings));
+            this.framingSettings = Output.of(Objects.requireNonNull(framingSettings));
             return this;
         }
 
-        public Builder messageFilter(Input<EdifactMessageFilterArgs> messageFilter) {
+        public Builder messageFilter(Output<EdifactMessageFilterArgs> messageFilter) {
             this.messageFilter = Objects.requireNonNull(messageFilter);
             return this;
         }
 
         public Builder messageFilter(EdifactMessageFilterArgs messageFilter) {
-            this.messageFilter = Input.of(Objects.requireNonNull(messageFilter));
+            this.messageFilter = Output.of(Objects.requireNonNull(messageFilter));
             return this;
         }
 
-        public Builder messageFilterList(@Nullable Input<List<EdifactMessageIdentifierArgs>> messageFilterList) {
+        public Builder messageFilterList(@Nullable Output<List<EdifactMessageIdentifierArgs>> messageFilterList) {
             this.messageFilterList = messageFilterList;
             return this;
         }
 
         public Builder messageFilterList(@Nullable List<EdifactMessageIdentifierArgs> messageFilterList) {
-            this.messageFilterList = Input.ofNullable(messageFilterList);
+            this.messageFilterList = Output.ofNullable(messageFilterList);
             return this;
         }
 
-        public Builder processingSettings(Input<EdifactProcessingSettingsArgs> processingSettings) {
+        public Builder processingSettings(Output<EdifactProcessingSettingsArgs> processingSettings) {
             this.processingSettings = Objects.requireNonNull(processingSettings);
             return this;
         }
 
         public Builder processingSettings(EdifactProcessingSettingsArgs processingSettings) {
-            this.processingSettings = Input.of(Objects.requireNonNull(processingSettings));
+            this.processingSettings = Output.of(Objects.requireNonNull(processingSettings));
             return this;
         }
 
-        public Builder schemaReferences(Input<List<EdifactSchemaReferenceArgs>> schemaReferences) {
+        public Builder schemaReferences(Output<List<EdifactSchemaReferenceArgs>> schemaReferences) {
             this.schemaReferences = Objects.requireNonNull(schemaReferences);
             return this;
         }
 
         public Builder schemaReferences(List<EdifactSchemaReferenceArgs> schemaReferences) {
-            this.schemaReferences = Input.of(Objects.requireNonNull(schemaReferences));
+            this.schemaReferences = Output.of(Objects.requireNonNull(schemaReferences));
             return this;
         }
 
-        public Builder validationOverrides(@Nullable Input<List<EdifactValidationOverrideArgs>> validationOverrides) {
+        public Builder validationOverrides(@Nullable Output<List<EdifactValidationOverrideArgs>> validationOverrides) {
             this.validationOverrides = validationOverrides;
             return this;
         }
 
         public Builder validationOverrides(@Nullable List<EdifactValidationOverrideArgs> validationOverrides) {
-            this.validationOverrides = Input.ofNullable(validationOverrides);
+            this.validationOverrides = Output.ofNullable(validationOverrides);
             return this;
         }
 
-        public Builder validationSettings(Input<EdifactValidationSettingsArgs> validationSettings) {
+        public Builder validationSettings(Output<EdifactValidationSettingsArgs> validationSettings) {
             this.validationSettings = Objects.requireNonNull(validationSettings);
             return this;
         }
 
         public Builder validationSettings(EdifactValidationSettingsArgs validationSettings) {
-            this.validationSettings = Input.of(Objects.requireNonNull(validationSettings));
+            this.validationSettings = Output.of(Objects.requireNonNull(validationSettings));
             return this;
         }
         public EdifactProtocolSettingsArgs build() {

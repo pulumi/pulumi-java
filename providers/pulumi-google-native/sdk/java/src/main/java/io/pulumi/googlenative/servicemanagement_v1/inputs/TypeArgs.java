@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.servicemanagement_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.servicemanagement_v1.enums.TypeSyntax;
 import io.pulumi.googlenative.servicemanagement_v1.inputs.FieldArgs;
@@ -28,10 +28,10 @@ public final class TypeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="fields")
-      private final @Nullable Input<List<FieldArgs>> fields;
+      private final @Nullable Output<List<FieldArgs>> fields;
 
-    public Input<List<FieldArgs>> getFields() {
-        return this.fields == null ? Input.empty() : this.fields;
+    public Output<List<FieldArgs>> getFields() {
+        return this.fields == null ? Output.empty() : this.fields;
     }
 
     /**
@@ -39,10 +39,10 @@ public final class TypeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -50,10 +50,10 @@ public final class TypeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="oneofs")
-      private final @Nullable Input<List<String>> oneofs;
+      private final @Nullable Output<List<String>> oneofs;
 
-    public Input<List<String>> getOneofs() {
-        return this.oneofs == null ? Input.empty() : this.oneofs;
+    public Output<List<String>> getOneofs() {
+        return this.oneofs == null ? Output.empty() : this.oneofs;
     }
 
     /**
@@ -61,10 +61,10 @@ public final class TypeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="options")
-      private final @Nullable Input<List<OptionArgs>> options;
+      private final @Nullable Output<List<OptionArgs>> options;
 
-    public Input<List<OptionArgs>> getOptions() {
-        return this.options == null ? Input.empty() : this.options;
+    public Output<List<OptionArgs>> getOptions() {
+        return this.options == null ? Output.empty() : this.options;
     }
 
     /**
@@ -72,10 +72,10 @@ public final class TypeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sourceContext")
-      private final @Nullable Input<SourceContextArgs> sourceContext;
+      private final @Nullable Output<SourceContextArgs> sourceContext;
 
-    public Input<SourceContextArgs> getSourceContext() {
-        return this.sourceContext == null ? Input.empty() : this.sourceContext;
+    public Output<SourceContextArgs> getSourceContext() {
+        return this.sourceContext == null ? Output.empty() : this.sourceContext;
     }
 
     /**
@@ -83,19 +83,19 @@ public final class TypeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="syntax")
-      private final @Nullable Input<TypeSyntax> syntax;
+      private final @Nullable Output<TypeSyntax> syntax;
 
-    public Input<TypeSyntax> getSyntax() {
-        return this.syntax == null ? Input.empty() : this.syntax;
+    public Output<TypeSyntax> getSyntax() {
+        return this.syntax == null ? Output.empty() : this.syntax;
     }
 
     public TypeArgs(
-        @Nullable Input<List<FieldArgs>> fields,
-        @Nullable Input<String> name,
-        @Nullable Input<List<String>> oneofs,
-        @Nullable Input<List<OptionArgs>> options,
-        @Nullable Input<SourceContextArgs> sourceContext,
-        @Nullable Input<TypeSyntax> syntax) {
+        @Nullable Output<List<FieldArgs>> fields,
+        @Nullable Output<String> name,
+        @Nullable Output<List<String>> oneofs,
+        @Nullable Output<List<OptionArgs>> options,
+        @Nullable Output<SourceContextArgs> sourceContext,
+        @Nullable Output<TypeSyntax> syntax) {
         this.fields = fields;
         this.name = name;
         this.oneofs = oneofs;
@@ -105,12 +105,12 @@ public final class TypeArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private TypeArgs() {
-        this.fields = Input.empty();
-        this.name = Input.empty();
-        this.oneofs = Input.empty();
-        this.options = Input.empty();
-        this.sourceContext = Input.empty();
-        this.syntax = Input.empty();
+        this.fields = Output.empty();
+        this.name = Output.empty();
+        this.oneofs = Output.empty();
+        this.options = Output.empty();
+        this.sourceContext = Output.empty();
+        this.syntax = Output.empty();
     }
 
     public static Builder builder() {
@@ -122,12 +122,12 @@ public final class TypeArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<List<FieldArgs>> fields;
-        private @Nullable Input<String> name;
-        private @Nullable Input<List<String>> oneofs;
-        private @Nullable Input<List<OptionArgs>> options;
-        private @Nullable Input<SourceContextArgs> sourceContext;
-        private @Nullable Input<TypeSyntax> syntax;
+        private @Nullable Output<List<FieldArgs>> fields;
+        private @Nullable Output<String> name;
+        private @Nullable Output<List<String>> oneofs;
+        private @Nullable Output<List<OptionArgs>> options;
+        private @Nullable Output<SourceContextArgs> sourceContext;
+        private @Nullable Output<TypeSyntax> syntax;
 
         public Builder() {
     	      // Empty
@@ -143,63 +143,63 @@ public final class TypeArgs extends io.pulumi.resources.ResourceArgs {
     	      this.syntax = defaults.syntax;
         }
 
-        public Builder fields(@Nullable Input<List<FieldArgs>> fields) {
+        public Builder fields(@Nullable Output<List<FieldArgs>> fields) {
             this.fields = fields;
             return this;
         }
 
         public Builder fields(@Nullable List<FieldArgs> fields) {
-            this.fields = Input.ofNullable(fields);
+            this.fields = Output.ofNullable(fields);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder oneofs(@Nullable Input<List<String>> oneofs) {
+        public Builder oneofs(@Nullable Output<List<String>> oneofs) {
             this.oneofs = oneofs;
             return this;
         }
 
         public Builder oneofs(@Nullable List<String> oneofs) {
-            this.oneofs = Input.ofNullable(oneofs);
+            this.oneofs = Output.ofNullable(oneofs);
             return this;
         }
 
-        public Builder options(@Nullable Input<List<OptionArgs>> options) {
+        public Builder options(@Nullable Output<List<OptionArgs>> options) {
             this.options = options;
             return this;
         }
 
         public Builder options(@Nullable List<OptionArgs> options) {
-            this.options = Input.ofNullable(options);
+            this.options = Output.ofNullable(options);
             return this;
         }
 
-        public Builder sourceContext(@Nullable Input<SourceContextArgs> sourceContext) {
+        public Builder sourceContext(@Nullable Output<SourceContextArgs> sourceContext) {
             this.sourceContext = sourceContext;
             return this;
         }
 
         public Builder sourceContext(@Nullable SourceContextArgs sourceContext) {
-            this.sourceContext = Input.ofNullable(sourceContext);
+            this.sourceContext = Output.ofNullable(sourceContext);
             return this;
         }
 
-        public Builder syntax(@Nullable Input<TypeSyntax> syntax) {
+        public Builder syntax(@Nullable Output<TypeSyntax> syntax) {
             this.syntax = syntax;
             return this;
         }
 
         public Builder syntax(@Nullable TypeSyntax syntax) {
-            this.syntax = Input.ofNullable(syntax);
+            this.syntax = Output.ofNullable(syntax);
             return this;
         }
         public TypeArgs build() {

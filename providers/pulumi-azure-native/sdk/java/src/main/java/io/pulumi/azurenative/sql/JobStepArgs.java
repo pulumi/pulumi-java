@@ -6,7 +6,7 @@ package io.pulumi.azurenative.sql;
 import io.pulumi.azurenative.sql.inputs.JobStepActionArgs;
 import io.pulumi.azurenative.sql.inputs.JobStepExecutionOptionsArgs;
 import io.pulumi.azurenative.sql.inputs.JobStepOutputArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -23,9 +23,9 @@ public final class JobStepArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="action", required=true)
-      private final Input<JobStepActionArgs> action;
+      private final Output<JobStepActionArgs> action;
 
-    public Input<JobStepActionArgs> getAction() {
+    public Output<JobStepActionArgs> getAction() {
         return this.action;
     }
 
@@ -34,9 +34,9 @@ public final class JobStepArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="credential", required=true)
-      private final Input<String> credential;
+      private final Output<String> credential;
 
-    public Input<String> getCredential() {
+    public Output<String> getCredential() {
         return this.credential;
     }
 
@@ -45,10 +45,10 @@ public final class JobStepArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="executionOptions")
-      private final @Nullable Input<JobStepExecutionOptionsArgs> executionOptions;
+      private final @Nullable Output<JobStepExecutionOptionsArgs> executionOptions;
 
-    public Input<JobStepExecutionOptionsArgs> getExecutionOptions() {
-        return this.executionOptions == null ? Input.empty() : this.executionOptions;
+    public Output<JobStepExecutionOptionsArgs> getExecutionOptions() {
+        return this.executionOptions == null ? Output.empty() : this.executionOptions;
     }
 
     /**
@@ -56,9 +56,9 @@ public final class JobStepArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="jobAgentName", required=true)
-      private final Input<String> jobAgentName;
+      private final Output<String> jobAgentName;
 
-    public Input<String> getJobAgentName() {
+    public Output<String> getJobAgentName() {
         return this.jobAgentName;
     }
 
@@ -67,9 +67,9 @@ public final class JobStepArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="jobName", required=true)
-      private final Input<String> jobName;
+      private final Output<String> jobName;
 
-    public Input<String> getJobName() {
+    public Output<String> getJobName() {
         return this.jobName;
     }
 
@@ -78,10 +78,10 @@ public final class JobStepArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="output")
-      private final @Nullable Input<JobStepOutputArgs> output;
+      private final @Nullable Output<JobStepOutputArgs> output;
 
-    public Input<JobStepOutputArgs> getOutput() {
-        return this.output == null ? Input.empty() : this.output;
+    public Output<JobStepOutputArgs> getOutput() {
+        return this.output == null ? Output.empty() : this.output;
     }
 
     /**
@@ -89,9 +89,9 @@ public final class JobStepArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -100,9 +100,9 @@ public final class JobStepArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serverName", required=true)
-      private final Input<String> serverName;
+      private final Output<String> serverName;
 
-    public Input<String> getServerName() {
+    public Output<String> getServerName() {
         return this.serverName;
     }
 
@@ -111,10 +111,10 @@ public final class JobStepArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="stepId")
-      private final @Nullable Input<Integer> stepId;
+      private final @Nullable Output<Integer> stepId;
 
-    public Input<Integer> getStepId() {
-        return this.stepId == null ? Input.empty() : this.stepId;
+    public Output<Integer> getStepId() {
+        return this.stepId == null ? Output.empty() : this.stepId;
     }
 
     /**
@@ -122,10 +122,10 @@ public final class JobStepArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="stepName")
-      private final @Nullable Input<String> stepName;
+      private final @Nullable Output<String> stepName;
 
-    public Input<String> getStepName() {
-        return this.stepName == null ? Input.empty() : this.stepName;
+    public Output<String> getStepName() {
+        return this.stepName == null ? Output.empty() : this.stepName;
     }
 
     /**
@@ -133,24 +133,24 @@ public final class JobStepArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="targetGroup", required=true)
-      private final Input<String> targetGroup;
+      private final Output<String> targetGroup;
 
-    public Input<String> getTargetGroup() {
+    public Output<String> getTargetGroup() {
         return this.targetGroup;
     }
 
     public JobStepArgs(
-        Input<JobStepActionArgs> action,
-        Input<String> credential,
-        @Nullable Input<JobStepExecutionOptionsArgs> executionOptions,
-        Input<String> jobAgentName,
-        Input<String> jobName,
-        @Nullable Input<JobStepOutputArgs> output,
-        Input<String> resourceGroupName,
-        Input<String> serverName,
-        @Nullable Input<Integer> stepId,
-        @Nullable Input<String> stepName,
-        Input<String> targetGroup) {
+        Output<JobStepActionArgs> action,
+        Output<String> credential,
+        @Nullable Output<JobStepExecutionOptionsArgs> executionOptions,
+        Output<String> jobAgentName,
+        Output<String> jobName,
+        @Nullable Output<JobStepOutputArgs> output,
+        Output<String> resourceGroupName,
+        Output<String> serverName,
+        @Nullable Output<Integer> stepId,
+        @Nullable Output<String> stepName,
+        Output<String> targetGroup) {
         this.action = Objects.requireNonNull(action, "expected parameter 'action' to be non-null");
         this.credential = Objects.requireNonNull(credential, "expected parameter 'credential' to be non-null");
         this.executionOptions = executionOptions;
@@ -165,17 +165,17 @@ public final class JobStepArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private JobStepArgs() {
-        this.action = Input.empty();
-        this.credential = Input.empty();
-        this.executionOptions = Input.empty();
-        this.jobAgentName = Input.empty();
-        this.jobName = Input.empty();
-        this.output = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.serverName = Input.empty();
-        this.stepId = Input.empty();
-        this.stepName = Input.empty();
-        this.targetGroup = Input.empty();
+        this.action = Output.empty();
+        this.credential = Output.empty();
+        this.executionOptions = Output.empty();
+        this.jobAgentName = Output.empty();
+        this.jobName = Output.empty();
+        this.output = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.serverName = Output.empty();
+        this.stepId = Output.empty();
+        this.stepName = Output.empty();
+        this.targetGroup = Output.empty();
     }
 
     public static Builder builder() {
@@ -187,17 +187,17 @@ public final class JobStepArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<JobStepActionArgs> action;
-        private Input<String> credential;
-        private @Nullable Input<JobStepExecutionOptionsArgs> executionOptions;
-        private Input<String> jobAgentName;
-        private Input<String> jobName;
-        private @Nullable Input<JobStepOutputArgs> output;
-        private Input<String> resourceGroupName;
-        private Input<String> serverName;
-        private @Nullable Input<Integer> stepId;
-        private @Nullable Input<String> stepName;
-        private Input<String> targetGroup;
+        private Output<JobStepActionArgs> action;
+        private Output<String> credential;
+        private @Nullable Output<JobStepExecutionOptionsArgs> executionOptions;
+        private Output<String> jobAgentName;
+        private Output<String> jobName;
+        private @Nullable Output<JobStepOutputArgs> output;
+        private Output<String> resourceGroupName;
+        private Output<String> serverName;
+        private @Nullable Output<Integer> stepId;
+        private @Nullable Output<String> stepName;
+        private Output<String> targetGroup;
 
         public Builder() {
     	      // Empty
@@ -218,113 +218,113 @@ public final class JobStepArgs extends io.pulumi.resources.ResourceArgs {
     	      this.targetGroup = defaults.targetGroup;
         }
 
-        public Builder action(Input<JobStepActionArgs> action) {
+        public Builder action(Output<JobStepActionArgs> action) {
             this.action = Objects.requireNonNull(action);
             return this;
         }
 
         public Builder action(JobStepActionArgs action) {
-            this.action = Input.of(Objects.requireNonNull(action));
+            this.action = Output.of(Objects.requireNonNull(action));
             return this;
         }
 
-        public Builder credential(Input<String> credential) {
+        public Builder credential(Output<String> credential) {
             this.credential = Objects.requireNonNull(credential);
             return this;
         }
 
         public Builder credential(String credential) {
-            this.credential = Input.of(Objects.requireNonNull(credential));
+            this.credential = Output.of(Objects.requireNonNull(credential));
             return this;
         }
 
-        public Builder executionOptions(@Nullable Input<JobStepExecutionOptionsArgs> executionOptions) {
+        public Builder executionOptions(@Nullable Output<JobStepExecutionOptionsArgs> executionOptions) {
             this.executionOptions = executionOptions;
             return this;
         }
 
         public Builder executionOptions(@Nullable JobStepExecutionOptionsArgs executionOptions) {
-            this.executionOptions = Input.ofNullable(executionOptions);
+            this.executionOptions = Output.ofNullable(executionOptions);
             return this;
         }
 
-        public Builder jobAgentName(Input<String> jobAgentName) {
+        public Builder jobAgentName(Output<String> jobAgentName) {
             this.jobAgentName = Objects.requireNonNull(jobAgentName);
             return this;
         }
 
         public Builder jobAgentName(String jobAgentName) {
-            this.jobAgentName = Input.of(Objects.requireNonNull(jobAgentName));
+            this.jobAgentName = Output.of(Objects.requireNonNull(jobAgentName));
             return this;
         }
 
-        public Builder jobName(Input<String> jobName) {
+        public Builder jobName(Output<String> jobName) {
             this.jobName = Objects.requireNonNull(jobName);
             return this;
         }
 
         public Builder jobName(String jobName) {
-            this.jobName = Input.of(Objects.requireNonNull(jobName));
+            this.jobName = Output.of(Objects.requireNonNull(jobName));
             return this;
         }
 
-        public Builder output(@Nullable Input<JobStepOutputArgs> output) {
+        public Builder output(@Nullable Output<JobStepOutputArgs> output) {
             this.output = output;
             return this;
         }
 
         public Builder output(@Nullable JobStepOutputArgs output) {
-            this.output = Input.ofNullable(output);
+            this.output = Output.ofNullable(output);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder serverName(Input<String> serverName) {
+        public Builder serverName(Output<String> serverName) {
             this.serverName = Objects.requireNonNull(serverName);
             return this;
         }
 
         public Builder serverName(String serverName) {
-            this.serverName = Input.of(Objects.requireNonNull(serverName));
+            this.serverName = Output.of(Objects.requireNonNull(serverName));
             return this;
         }
 
-        public Builder stepId(@Nullable Input<Integer> stepId) {
+        public Builder stepId(@Nullable Output<Integer> stepId) {
             this.stepId = stepId;
             return this;
         }
 
         public Builder stepId(@Nullable Integer stepId) {
-            this.stepId = Input.ofNullable(stepId);
+            this.stepId = Output.ofNullable(stepId);
             return this;
         }
 
-        public Builder stepName(@Nullable Input<String> stepName) {
+        public Builder stepName(@Nullable Output<String> stepName) {
             this.stepName = stepName;
             return this;
         }
 
         public Builder stepName(@Nullable String stepName) {
-            this.stepName = Input.ofNullable(stepName);
+            this.stepName = Output.ofNullable(stepName);
             return this;
         }
 
-        public Builder targetGroup(Input<String> targetGroup) {
+        public Builder targetGroup(Output<String> targetGroup) {
             this.targetGroup = Objects.requireNonNull(targetGroup);
             return this;
         }
 
         public Builder targetGroup(String targetGroup) {
-            this.targetGroup = Input.of(Objects.requireNonNull(targetGroup));
+            this.targetGroup = Output.of(Objects.requireNonNull(targetGroup));
             return this;
         }
         public JobStepArgs build() {

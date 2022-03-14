@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.iam.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -26,10 +26,10 @@ public final class WorkloadIdentityPoolProviderOidcArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="allowedAudiences")
-      private final @Nullable Input<List<String>> allowedAudiences;
+      private final @Nullable Output<List<String>> allowedAudiences;
 
-    public Input<List<String>> getAllowedAudiences() {
-        return this.allowedAudiences == null ? Input.empty() : this.allowedAudiences;
+    public Output<List<String>> getAllowedAudiences() {
+        return this.allowedAudiences == null ? Output.empty() : this.allowedAudiences;
     }
 
     /**
@@ -37,22 +37,22 @@ public final class WorkloadIdentityPoolProviderOidcArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="issuerUri", required=true)
-      private final Input<String> issuerUri;
+      private final Output<String> issuerUri;
 
-    public Input<String> getIssuerUri() {
+    public Output<String> getIssuerUri() {
         return this.issuerUri;
     }
 
     public WorkloadIdentityPoolProviderOidcArgs(
-        @Nullable Input<List<String>> allowedAudiences,
-        Input<String> issuerUri) {
+        @Nullable Output<List<String>> allowedAudiences,
+        Output<String> issuerUri) {
         this.allowedAudiences = allowedAudiences;
         this.issuerUri = Objects.requireNonNull(issuerUri, "expected parameter 'issuerUri' to be non-null");
     }
 
     private WorkloadIdentityPoolProviderOidcArgs() {
-        this.allowedAudiences = Input.empty();
-        this.issuerUri = Input.empty();
+        this.allowedAudiences = Output.empty();
+        this.issuerUri = Output.empty();
     }
 
     public static Builder builder() {
@@ -64,8 +64,8 @@ public final class WorkloadIdentityPoolProviderOidcArgs extends io.pulumi.resour
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> allowedAudiences;
-        private Input<String> issuerUri;
+        private @Nullable Output<List<String>> allowedAudiences;
+        private Output<String> issuerUri;
 
         public Builder() {
     	      // Empty
@@ -77,23 +77,23 @@ public final class WorkloadIdentityPoolProviderOidcArgs extends io.pulumi.resour
     	      this.issuerUri = defaults.issuerUri;
         }
 
-        public Builder allowedAudiences(@Nullable Input<List<String>> allowedAudiences) {
+        public Builder allowedAudiences(@Nullable Output<List<String>> allowedAudiences) {
             this.allowedAudiences = allowedAudiences;
             return this;
         }
 
         public Builder allowedAudiences(@Nullable List<String> allowedAudiences) {
-            this.allowedAudiences = Input.ofNullable(allowedAudiences);
+            this.allowedAudiences = Output.ofNullable(allowedAudiences);
             return this;
         }
 
-        public Builder issuerUri(Input<String> issuerUri) {
+        public Builder issuerUri(Output<String> issuerUri) {
             this.issuerUri = Objects.requireNonNull(issuerUri);
             return this;
         }
 
         public Builder issuerUri(String issuerUri) {
-            this.issuerUri = Input.of(Objects.requireNonNull(issuerUri));
+            this.issuerUri = Output.of(Objects.requireNonNull(issuerUri));
             return this;
         }
         public WorkloadIdentityPoolProviderOidcArgs build() {

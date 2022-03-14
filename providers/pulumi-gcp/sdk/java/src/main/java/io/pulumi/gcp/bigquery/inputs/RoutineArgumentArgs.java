@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.bigquery.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -21,10 +21,10 @@ public final class RoutineArgumentArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="argumentKind")
-      private final @Nullable Input<String> argumentKind;
+      private final @Nullable Output<String> argumentKind;
 
-    public Input<String> getArgumentKind() {
-        return this.argumentKind == null ? Input.empty() : this.argumentKind;
+    public Output<String> getArgumentKind() {
+        return this.argumentKind == null ? Output.empty() : this.argumentKind;
     }
 
     /**
@@ -38,10 +38,10 @@ public final class RoutineArgumentArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="dataType")
-      private final @Nullable Input<String> dataType;
+      private final @Nullable Output<String> dataType;
 
-    public Input<String> getDataType() {
-        return this.dataType == null ? Input.empty() : this.dataType;
+    public Output<String> getDataType() {
+        return this.dataType == null ? Output.empty() : this.dataType;
     }
 
     /**
@@ -50,10 +50,10 @@ public final class RoutineArgumentArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="mode")
-      private final @Nullable Input<String> mode;
+      private final @Nullable Output<String> mode;
 
-    public Input<String> getMode() {
-        return this.mode == null ? Input.empty() : this.mode;
+    public Output<String> getMode() {
+        return this.mode == null ? Output.empty() : this.mode;
     }
 
     /**
@@ -61,17 +61,17 @@ public final class RoutineArgumentArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     public RoutineArgumentArgs(
-        @Nullable Input<String> argumentKind,
-        @Nullable Input<String> dataType,
-        @Nullable Input<String> mode,
-        @Nullable Input<String> name) {
+        @Nullable Output<String> argumentKind,
+        @Nullable Output<String> dataType,
+        @Nullable Output<String> mode,
+        @Nullable Output<String> name) {
         this.argumentKind = argumentKind;
         this.dataType = dataType;
         this.mode = mode;
@@ -79,10 +79,10 @@ public final class RoutineArgumentArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private RoutineArgumentArgs() {
-        this.argumentKind = Input.empty();
-        this.dataType = Input.empty();
-        this.mode = Input.empty();
-        this.name = Input.empty();
+        this.argumentKind = Output.empty();
+        this.dataType = Output.empty();
+        this.mode = Output.empty();
+        this.name = Output.empty();
     }
 
     public static Builder builder() {
@@ -94,10 +94,10 @@ public final class RoutineArgumentArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private @Nullable Input<String> argumentKind;
-        private @Nullable Input<String> dataType;
-        private @Nullable Input<String> mode;
-        private @Nullable Input<String> name;
+        private @Nullable Output<String> argumentKind;
+        private @Nullable Output<String> dataType;
+        private @Nullable Output<String> mode;
+        private @Nullable Output<String> name;
 
         public Builder() {
     	      // Empty
@@ -111,43 +111,43 @@ public final class RoutineArgumentArgs extends io.pulumi.resources.ResourceArgs 
     	      this.name = defaults.name;
         }
 
-        public Builder argumentKind(@Nullable Input<String> argumentKind) {
+        public Builder argumentKind(@Nullable Output<String> argumentKind) {
             this.argumentKind = argumentKind;
             return this;
         }
 
         public Builder argumentKind(@Nullable String argumentKind) {
-            this.argumentKind = Input.ofNullable(argumentKind);
+            this.argumentKind = Output.ofNullable(argumentKind);
             return this;
         }
 
-        public Builder dataType(@Nullable Input<String> dataType) {
+        public Builder dataType(@Nullable Output<String> dataType) {
             this.dataType = dataType;
             return this;
         }
 
         public Builder dataType(@Nullable String dataType) {
-            this.dataType = Input.ofNullable(dataType);
+            this.dataType = Output.ofNullable(dataType);
             return this;
         }
 
-        public Builder mode(@Nullable Input<String> mode) {
+        public Builder mode(@Nullable Output<String> mode) {
             this.mode = mode;
             return this;
         }
 
         public Builder mode(@Nullable String mode) {
-            this.mode = Input.ofNullable(mode);
+            this.mode = Output.ofNullable(mode);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
         public RoutineArgumentArgs build() {

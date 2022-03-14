@@ -4,7 +4,7 @@
 package io.pulumi.aws.datapipeline.inputs;
 
 import io.pulumi.aws.datapipeline.inputs.PipelineDefinitionPipelineObjectFieldGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -21,10 +21,10 @@ public final class PipelineDefinitionPipelineObjectGetArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="fields")
-      private final @Nullable Input<List<PipelineDefinitionPipelineObjectFieldGetArgs>> fields;
+      private final @Nullable Output<List<PipelineDefinitionPipelineObjectFieldGetArgs>> fields;
 
-    public Input<List<PipelineDefinitionPipelineObjectFieldGetArgs>> getFields() {
-        return this.fields == null ? Input.empty() : this.fields;
+    public Output<List<PipelineDefinitionPipelineObjectFieldGetArgs>> getFields() {
+        return this.fields == null ? Output.empty() : this.fields;
     }
 
     /**
@@ -32,9 +32,9 @@ public final class PipelineDefinitionPipelineObjectGetArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="id", required=true)
-      private final Input<String> id;
+      private final Output<String> id;
 
-    public Input<String> getId() {
+    public Output<String> getId() {
         return this.id;
     }
 
@@ -43,25 +43,25 @@ public final class PipelineDefinitionPipelineObjectGetArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="name", required=true)
-      private final Input<String> name;
+      private final Output<String> name;
 
-    public Input<String> getName() {
+    public Output<String> getName() {
         return this.name;
     }
 
     public PipelineDefinitionPipelineObjectGetArgs(
-        @Nullable Input<List<PipelineDefinitionPipelineObjectFieldGetArgs>> fields,
-        Input<String> id,
-        Input<String> name) {
+        @Nullable Output<List<PipelineDefinitionPipelineObjectFieldGetArgs>> fields,
+        Output<String> id,
+        Output<String> name) {
         this.fields = fields;
         this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
     }
 
     private PipelineDefinitionPipelineObjectGetArgs() {
-        this.fields = Input.empty();
-        this.id = Input.empty();
-        this.name = Input.empty();
+        this.fields = Output.empty();
+        this.id = Output.empty();
+        this.name = Output.empty();
     }
 
     public static Builder builder() {
@@ -73,9 +73,9 @@ public final class PipelineDefinitionPipelineObjectGetArgs extends io.pulumi.res
     }
 
     public static final class Builder {
-        private @Nullable Input<List<PipelineDefinitionPipelineObjectFieldGetArgs>> fields;
-        private Input<String> id;
-        private Input<String> name;
+        private @Nullable Output<List<PipelineDefinitionPipelineObjectFieldGetArgs>> fields;
+        private Output<String> id;
+        private Output<String> name;
 
         public Builder() {
     	      // Empty
@@ -88,33 +88,33 @@ public final class PipelineDefinitionPipelineObjectGetArgs extends io.pulumi.res
     	      this.name = defaults.name;
         }
 
-        public Builder fields(@Nullable Input<List<PipelineDefinitionPipelineObjectFieldGetArgs>> fields) {
+        public Builder fields(@Nullable Output<List<PipelineDefinitionPipelineObjectFieldGetArgs>> fields) {
             this.fields = fields;
             return this;
         }
 
         public Builder fields(@Nullable List<PipelineDefinitionPipelineObjectFieldGetArgs> fields) {
-            this.fields = Input.ofNullable(fields);
+            this.fields = Output.ofNullable(fields);
             return this;
         }
 
-        public Builder id(Input<String> id) {
+        public Builder id(Output<String> id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
         public Builder id(String id) {
-            this.id = Input.of(Objects.requireNonNull(id));
+            this.id = Output.of(Objects.requireNonNull(id));
             return this;
         }
 
-        public Builder name(Input<String> name) {
+        public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(String name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
         public PipelineDefinitionPipelineObjectGetArgs build() {

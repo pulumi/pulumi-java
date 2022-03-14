@@ -4,7 +4,7 @@
 package io.pulumi.aws.eks.inputs;
 
 import io.pulumi.aws.eks.inputs.ClusterIdentityOidcArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
@@ -20,18 +20,18 @@ public final class ClusterIdentityArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="oidcs")
-      private final @Nullable Input<List<ClusterIdentityOidcArgs>> oidcs;
+      private final @Nullable Output<List<ClusterIdentityOidcArgs>> oidcs;
 
-    public Input<List<ClusterIdentityOidcArgs>> getOidcs() {
-        return this.oidcs == null ? Input.empty() : this.oidcs;
+    public Output<List<ClusterIdentityOidcArgs>> getOidcs() {
+        return this.oidcs == null ? Output.empty() : this.oidcs;
     }
 
-    public ClusterIdentityArgs(@Nullable Input<List<ClusterIdentityOidcArgs>> oidcs) {
+    public ClusterIdentityArgs(@Nullable Output<List<ClusterIdentityOidcArgs>> oidcs) {
         this.oidcs = oidcs;
     }
 
     private ClusterIdentityArgs() {
-        this.oidcs = Input.empty();
+        this.oidcs = Output.empty();
     }
 
     public static Builder builder() {
@@ -43,7 +43,7 @@ public final class ClusterIdentityArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private @Nullable Input<List<ClusterIdentityOidcArgs>> oidcs;
+        private @Nullable Output<List<ClusterIdentityOidcArgs>> oidcs;
 
         public Builder() {
     	      // Empty
@@ -54,13 +54,13 @@ public final class ClusterIdentityArgs extends io.pulumi.resources.ResourceArgs 
     	      this.oidcs = defaults.oidcs;
         }
 
-        public Builder oidcs(@Nullable Input<List<ClusterIdentityOidcArgs>> oidcs) {
+        public Builder oidcs(@Nullable Output<List<ClusterIdentityOidcArgs>> oidcs) {
             this.oidcs = oidcs;
             return this;
         }
 
         public Builder oidcs(@Nullable List<ClusterIdentityOidcArgs> oidcs) {
-            this.oidcs = Input.ofNullable(oidcs);
+            this.oidcs = Output.ofNullable(oidcs);
             return this;
         }
         public ClusterIdentityArgs build() {

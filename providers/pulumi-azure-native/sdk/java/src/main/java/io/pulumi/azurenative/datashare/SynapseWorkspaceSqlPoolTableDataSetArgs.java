@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datashare;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,9 +19,9 @@ public final class SynapseWorkspaceSqlPoolTableDataSetArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="accountName", required=true)
-      private final Input<String> accountName;
+      private final Output<String> accountName;
 
-    public Input<String> getAccountName() {
+    public Output<String> getAccountName() {
         return this.accountName;
     }
 
@@ -30,10 +30,10 @@ public final class SynapseWorkspaceSqlPoolTableDataSetArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="dataSetName")
-      private final @Nullable Input<String> dataSetName;
+      private final @Nullable Output<String> dataSetName;
 
-    public Input<String> getDataSetName() {
-        return this.dataSetName == null ? Input.empty() : this.dataSetName;
+    public Output<String> getDataSetName() {
+        return this.dataSetName == null ? Output.empty() : this.dataSetName;
     }
 
     /**
@@ -42,9 +42,9 @@ public final class SynapseWorkspaceSqlPoolTableDataSetArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="kind", required=true)
-      private final Input<String> kind;
+      private final Output<String> kind;
 
-    public Input<String> getKind() {
+    public Output<String> getKind() {
         return this.kind;
     }
 
@@ -53,9 +53,9 @@ public final class SynapseWorkspaceSqlPoolTableDataSetArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -64,9 +64,9 @@ public final class SynapseWorkspaceSqlPoolTableDataSetArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="shareName", required=true)
-      private final Input<String> shareName;
+      private final Output<String> shareName;
 
-    public Input<String> getShareName() {
+    public Output<String> getShareName() {
         return this.shareName;
     }
 
@@ -75,19 +75,19 @@ public final class SynapseWorkspaceSqlPoolTableDataSetArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="synapseWorkspaceSqlPoolTableResourceId", required=true)
-      private final Input<String> synapseWorkspaceSqlPoolTableResourceId;
+      private final Output<String> synapseWorkspaceSqlPoolTableResourceId;
 
-    public Input<String> getSynapseWorkspaceSqlPoolTableResourceId() {
+    public Output<String> getSynapseWorkspaceSqlPoolTableResourceId() {
         return this.synapseWorkspaceSqlPoolTableResourceId;
     }
 
     public SynapseWorkspaceSqlPoolTableDataSetArgs(
-        Input<String> accountName,
-        @Nullable Input<String> dataSetName,
-        Input<String> kind,
-        Input<String> resourceGroupName,
-        Input<String> shareName,
-        Input<String> synapseWorkspaceSqlPoolTableResourceId) {
+        Output<String> accountName,
+        @Nullable Output<String> dataSetName,
+        Output<String> kind,
+        Output<String> resourceGroupName,
+        Output<String> shareName,
+        Output<String> synapseWorkspaceSqlPoolTableResourceId) {
         this.accountName = Objects.requireNonNull(accountName, "expected parameter 'accountName' to be non-null");
         this.dataSetName = dataSetName;
         this.kind = Objects.requireNonNull(kind, "expected parameter 'kind' to be non-null");
@@ -97,12 +97,12 @@ public final class SynapseWorkspaceSqlPoolTableDataSetArgs extends io.pulumi.res
     }
 
     private SynapseWorkspaceSqlPoolTableDataSetArgs() {
-        this.accountName = Input.empty();
-        this.dataSetName = Input.empty();
-        this.kind = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.shareName = Input.empty();
-        this.synapseWorkspaceSqlPoolTableResourceId = Input.empty();
+        this.accountName = Output.empty();
+        this.dataSetName = Output.empty();
+        this.kind = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.shareName = Output.empty();
+        this.synapseWorkspaceSqlPoolTableResourceId = Output.empty();
     }
 
     public static Builder builder() {
@@ -114,12 +114,12 @@ public final class SynapseWorkspaceSqlPoolTableDataSetArgs extends io.pulumi.res
     }
 
     public static final class Builder {
-        private Input<String> accountName;
-        private @Nullable Input<String> dataSetName;
-        private Input<String> kind;
-        private Input<String> resourceGroupName;
-        private Input<String> shareName;
-        private Input<String> synapseWorkspaceSqlPoolTableResourceId;
+        private Output<String> accountName;
+        private @Nullable Output<String> dataSetName;
+        private Output<String> kind;
+        private Output<String> resourceGroupName;
+        private Output<String> shareName;
+        private Output<String> synapseWorkspaceSqlPoolTableResourceId;
 
         public Builder() {
     	      // Empty
@@ -135,63 +135,63 @@ public final class SynapseWorkspaceSqlPoolTableDataSetArgs extends io.pulumi.res
     	      this.synapseWorkspaceSqlPoolTableResourceId = defaults.synapseWorkspaceSqlPoolTableResourceId;
         }
 
-        public Builder accountName(Input<String> accountName) {
+        public Builder accountName(Output<String> accountName) {
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
 
         public Builder accountName(String accountName) {
-            this.accountName = Input.of(Objects.requireNonNull(accountName));
+            this.accountName = Output.of(Objects.requireNonNull(accountName));
             return this;
         }
 
-        public Builder dataSetName(@Nullable Input<String> dataSetName) {
+        public Builder dataSetName(@Nullable Output<String> dataSetName) {
             this.dataSetName = dataSetName;
             return this;
         }
 
         public Builder dataSetName(@Nullable String dataSetName) {
-            this.dataSetName = Input.ofNullable(dataSetName);
+            this.dataSetName = Output.ofNullable(dataSetName);
             return this;
         }
 
-        public Builder kind(Input<String> kind) {
+        public Builder kind(Output<String> kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
         public Builder kind(String kind) {
-            this.kind = Input.of(Objects.requireNonNull(kind));
+            this.kind = Output.of(Objects.requireNonNull(kind));
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder shareName(Input<String> shareName) {
+        public Builder shareName(Output<String> shareName) {
             this.shareName = Objects.requireNonNull(shareName);
             return this;
         }
 
         public Builder shareName(String shareName) {
-            this.shareName = Input.of(Objects.requireNonNull(shareName));
+            this.shareName = Output.of(Objects.requireNonNull(shareName));
             return this;
         }
 
-        public Builder synapseWorkspaceSqlPoolTableResourceId(Input<String> synapseWorkspaceSqlPoolTableResourceId) {
+        public Builder synapseWorkspaceSqlPoolTableResourceId(Output<String> synapseWorkspaceSqlPoolTableResourceId) {
             this.synapseWorkspaceSqlPoolTableResourceId = Objects.requireNonNull(synapseWorkspaceSqlPoolTableResourceId);
             return this;
         }
 
         public Builder synapseWorkspaceSqlPoolTableResourceId(String synapseWorkspaceSqlPoolTableResourceId) {
-            this.synapseWorkspaceSqlPoolTableResourceId = Input.of(Objects.requireNonNull(synapseWorkspaceSqlPoolTableResourceId));
+            this.synapseWorkspaceSqlPoolTableResourceId = Output.of(Objects.requireNonNull(synapseWorkspaceSqlPoolTableResourceId));
             return this;
         }
         public SynapseWorkspaceSqlPoolTableDataSetArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.accesscontextmanager_v1;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.accesscontextmanager_v1.inputs.AuditConfigArgs;
 import io.pulumi.googlenative.accesscontextmanager_v1.inputs.BindingArgs;
@@ -19,9 +19,9 @@ public final class AccessPolicyIamPolicyArgs extends io.pulumi.resources.Resourc
     public static final AccessPolicyIamPolicyArgs Empty = new AccessPolicyIamPolicyArgs();
 
     @InputImport(name="accessPolicyId", required=true)
-      private final Input<String> accessPolicyId;
+      private final Output<String> accessPolicyId;
 
-    public Input<String> getAccessPolicyId() {
+    public Output<String> getAccessPolicyId() {
         return this.accessPolicyId;
     }
 
@@ -30,10 +30,10 @@ public final class AccessPolicyIamPolicyArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="auditConfigs")
-      private final @Nullable Input<List<AuditConfigArgs>> auditConfigs;
+      private final @Nullable Output<List<AuditConfigArgs>> auditConfigs;
 
-    public Input<List<AuditConfigArgs>> getAuditConfigs() {
-        return this.auditConfigs == null ? Input.empty() : this.auditConfigs;
+    public Output<List<AuditConfigArgs>> getAuditConfigs() {
+        return this.auditConfigs == null ? Output.empty() : this.auditConfigs;
     }
 
     /**
@@ -41,10 +41,10 @@ public final class AccessPolicyIamPolicyArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="bindings")
-      private final @Nullable Input<List<BindingArgs>> bindings;
+      private final @Nullable Output<List<BindingArgs>> bindings;
 
-    public Input<List<BindingArgs>> getBindings() {
-        return this.bindings == null ? Input.empty() : this.bindings;
+    public Output<List<BindingArgs>> getBindings() {
+        return this.bindings == null ? Output.empty() : this.bindings;
     }
 
     /**
@@ -52,10 +52,10 @@ public final class AccessPolicyIamPolicyArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="etag")
-      private final @Nullable Input<String> etag;
+      private final @Nullable Output<String> etag;
 
-    public Input<String> getEtag() {
-        return this.etag == null ? Input.empty() : this.etag;
+    public Output<String> getEtag() {
+        return this.etag == null ? Output.empty() : this.etag;
     }
 
     /**
@@ -63,10 +63,10 @@ public final class AccessPolicyIamPolicyArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="updateMask")
-      private final @Nullable Input<String> updateMask;
+      private final @Nullable Output<String> updateMask;
 
-    public Input<String> getUpdateMask() {
-        return this.updateMask == null ? Input.empty() : this.updateMask;
+    public Output<String> getUpdateMask() {
+        return this.updateMask == null ? Output.empty() : this.updateMask;
     }
 
     /**
@@ -74,19 +74,19 @@ public final class AccessPolicyIamPolicyArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="version")
-      private final @Nullable Input<Integer> version;
+      private final @Nullable Output<Integer> version;
 
-    public Input<Integer> getVersion() {
-        return this.version == null ? Input.empty() : this.version;
+    public Output<Integer> getVersion() {
+        return this.version == null ? Output.empty() : this.version;
     }
 
     public AccessPolicyIamPolicyArgs(
-        Input<String> accessPolicyId,
-        @Nullable Input<List<AuditConfigArgs>> auditConfigs,
-        @Nullable Input<List<BindingArgs>> bindings,
-        @Nullable Input<String> etag,
-        @Nullable Input<String> updateMask,
-        @Nullable Input<Integer> version) {
+        Output<String> accessPolicyId,
+        @Nullable Output<List<AuditConfigArgs>> auditConfigs,
+        @Nullable Output<List<BindingArgs>> bindings,
+        @Nullable Output<String> etag,
+        @Nullable Output<String> updateMask,
+        @Nullable Output<Integer> version) {
         this.accessPolicyId = Objects.requireNonNull(accessPolicyId, "expected parameter 'accessPolicyId' to be non-null");
         this.auditConfigs = auditConfigs;
         this.bindings = bindings;
@@ -96,12 +96,12 @@ public final class AccessPolicyIamPolicyArgs extends io.pulumi.resources.Resourc
     }
 
     private AccessPolicyIamPolicyArgs() {
-        this.accessPolicyId = Input.empty();
-        this.auditConfigs = Input.empty();
-        this.bindings = Input.empty();
-        this.etag = Input.empty();
-        this.updateMask = Input.empty();
-        this.version = Input.empty();
+        this.accessPolicyId = Output.empty();
+        this.auditConfigs = Output.empty();
+        this.bindings = Output.empty();
+        this.etag = Output.empty();
+        this.updateMask = Output.empty();
+        this.version = Output.empty();
     }
 
     public static Builder builder() {
@@ -113,12 +113,12 @@ public final class AccessPolicyIamPolicyArgs extends io.pulumi.resources.Resourc
     }
 
     public static final class Builder {
-        private Input<String> accessPolicyId;
-        private @Nullable Input<List<AuditConfigArgs>> auditConfigs;
-        private @Nullable Input<List<BindingArgs>> bindings;
-        private @Nullable Input<String> etag;
-        private @Nullable Input<String> updateMask;
-        private @Nullable Input<Integer> version;
+        private Output<String> accessPolicyId;
+        private @Nullable Output<List<AuditConfigArgs>> auditConfigs;
+        private @Nullable Output<List<BindingArgs>> bindings;
+        private @Nullable Output<String> etag;
+        private @Nullable Output<String> updateMask;
+        private @Nullable Output<Integer> version;
 
         public Builder() {
     	      // Empty
@@ -134,63 +134,63 @@ public final class AccessPolicyIamPolicyArgs extends io.pulumi.resources.Resourc
     	      this.version = defaults.version;
         }
 
-        public Builder accessPolicyId(Input<String> accessPolicyId) {
+        public Builder accessPolicyId(Output<String> accessPolicyId) {
             this.accessPolicyId = Objects.requireNonNull(accessPolicyId);
             return this;
         }
 
         public Builder accessPolicyId(String accessPolicyId) {
-            this.accessPolicyId = Input.of(Objects.requireNonNull(accessPolicyId));
+            this.accessPolicyId = Output.of(Objects.requireNonNull(accessPolicyId));
             return this;
         }
 
-        public Builder auditConfigs(@Nullable Input<List<AuditConfigArgs>> auditConfigs) {
+        public Builder auditConfigs(@Nullable Output<List<AuditConfigArgs>> auditConfigs) {
             this.auditConfigs = auditConfigs;
             return this;
         }
 
         public Builder auditConfigs(@Nullable List<AuditConfigArgs> auditConfigs) {
-            this.auditConfigs = Input.ofNullable(auditConfigs);
+            this.auditConfigs = Output.ofNullable(auditConfigs);
             return this;
         }
 
-        public Builder bindings(@Nullable Input<List<BindingArgs>> bindings) {
+        public Builder bindings(@Nullable Output<List<BindingArgs>> bindings) {
             this.bindings = bindings;
             return this;
         }
 
         public Builder bindings(@Nullable List<BindingArgs> bindings) {
-            this.bindings = Input.ofNullable(bindings);
+            this.bindings = Output.ofNullable(bindings);
             return this;
         }
 
-        public Builder etag(@Nullable Input<String> etag) {
+        public Builder etag(@Nullable Output<String> etag) {
             this.etag = etag;
             return this;
         }
 
         public Builder etag(@Nullable String etag) {
-            this.etag = Input.ofNullable(etag);
+            this.etag = Output.ofNullable(etag);
             return this;
         }
 
-        public Builder updateMask(@Nullable Input<String> updateMask) {
+        public Builder updateMask(@Nullable Output<String> updateMask) {
             this.updateMask = updateMask;
             return this;
         }
 
         public Builder updateMask(@Nullable String updateMask) {
-            this.updateMask = Input.ofNullable(updateMask);
+            this.updateMask = Output.ofNullable(updateMask);
             return this;
         }
 
-        public Builder version(@Nullable Input<Integer> version) {
+        public Builder version(@Nullable Output<Integer> version) {
             this.version = version;
             return this;
         }
 
         public Builder version(@Nullable Integer version) {
-            this.version = Input.ofNullable(version);
+            this.version = Output.ofNullable(version);
             return this;
         }
         public AccessPolicyIamPolicyArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.monitoring.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class MetricDescriptorLabelGetArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -30,9 +30,9 @@ public final class MetricDescriptorLabelGetArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="key", required=true)
-      private final Input<String> key;
+      private final Output<String> key;
 
-    public Input<String> getKey() {
+    public Output<String> getKey() {
         return this.key;
     }
 
@@ -43,25 +43,25 @@ public final class MetricDescriptorLabelGetArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="valueType")
-      private final @Nullable Input<String> valueType;
+      private final @Nullable Output<String> valueType;
 
-    public Input<String> getValueType() {
-        return this.valueType == null ? Input.empty() : this.valueType;
+    public Output<String> getValueType() {
+        return this.valueType == null ? Output.empty() : this.valueType;
     }
 
     public MetricDescriptorLabelGetArgs(
-        @Nullable Input<String> description,
-        Input<String> key,
-        @Nullable Input<String> valueType) {
+        @Nullable Output<String> description,
+        Output<String> key,
+        @Nullable Output<String> valueType) {
         this.description = description;
         this.key = Objects.requireNonNull(key, "expected parameter 'key' to be non-null");
         this.valueType = valueType;
     }
 
     private MetricDescriptorLabelGetArgs() {
-        this.description = Input.empty();
-        this.key = Input.empty();
-        this.valueType = Input.empty();
+        this.description = Output.empty();
+        this.key = Output.empty();
+        this.valueType = Output.empty();
     }
 
     public static Builder builder() {
@@ -73,9 +73,9 @@ public final class MetricDescriptorLabelGetArgs extends io.pulumi.resources.Reso
     }
 
     public static final class Builder {
-        private @Nullable Input<String> description;
-        private Input<String> key;
-        private @Nullable Input<String> valueType;
+        private @Nullable Output<String> description;
+        private Output<String> key;
+        private @Nullable Output<String> valueType;
 
         public Builder() {
     	      // Empty
@@ -88,33 +88,33 @@ public final class MetricDescriptorLabelGetArgs extends io.pulumi.resources.Reso
     	      this.valueType = defaults.valueType;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder key(Input<String> key) {
+        public Builder key(Output<String> key) {
             this.key = Objects.requireNonNull(key);
             return this;
         }
 
         public Builder key(String key) {
-            this.key = Input.of(Objects.requireNonNull(key));
+            this.key = Output.of(Objects.requireNonNull(key));
             return this;
         }
 
-        public Builder valueType(@Nullable Input<String> valueType) {
+        public Builder valueType(@Nullable Output<String> valueType) {
             this.valueType = valueType;
             return this;
         }
 
         public Builder valueType(@Nullable String valueType) {
-            this.valueType = Input.ofNullable(valueType);
+            this.valueType = Output.ofNullable(valueType);
             return this;
         }
         public MetricDescriptorLabelGetArgs build() {

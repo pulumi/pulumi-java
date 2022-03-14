@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.monitoring.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.monitoring.inputs.AlertPolicyConditionConditionThresholdAggregationArgs;
 import io.pulumi.gcp.monitoring.inputs.AlertPolicyConditionConditionThresholdDenominatorAggregationArgs;
@@ -37,10 +37,10 @@ public final class AlertPolicyConditionConditionThresholdArgs extends io.pulumi.
      * 
      */
     @InputImport(name="aggregations")
-      private final @Nullable Input<List<AlertPolicyConditionConditionThresholdAggregationArgs>> aggregations;
+      private final @Nullable Output<List<AlertPolicyConditionConditionThresholdAggregationArgs>> aggregations;
 
-    public Input<List<AlertPolicyConditionConditionThresholdAggregationArgs>> getAggregations() {
-        return this.aggregations == null ? Input.empty() : this.aggregations;
+    public Output<List<AlertPolicyConditionConditionThresholdAggregationArgs>> getAggregations() {
+        return this.aggregations == null ? Output.empty() : this.aggregations;
     }
 
     /**
@@ -56,9 +56,9 @@ public final class AlertPolicyConditionConditionThresholdArgs extends io.pulumi.
      * 
      */
     @InputImport(name="comparison", required=true)
-      private final Input<String> comparison;
+      private final Output<String> comparison;
 
-    public Input<String> getComparison() {
+    public Output<String> getComparison() {
         return this.comparison;
     }
 
@@ -83,10 +83,10 @@ public final class AlertPolicyConditionConditionThresholdArgs extends io.pulumi.
      * 
      */
     @InputImport(name="denominatorAggregations")
-      private final @Nullable Input<List<AlertPolicyConditionConditionThresholdDenominatorAggregationArgs>> denominatorAggregations;
+      private final @Nullable Output<List<AlertPolicyConditionConditionThresholdDenominatorAggregationArgs>> denominatorAggregations;
 
-    public Input<List<AlertPolicyConditionConditionThresholdDenominatorAggregationArgs>> getDenominatorAggregations() {
-        return this.denominatorAggregations == null ? Input.empty() : this.denominatorAggregations;
+    public Output<List<AlertPolicyConditionConditionThresholdDenominatorAggregationArgs>> getDenominatorAggregations() {
+        return this.denominatorAggregations == null ? Output.empty() : this.denominatorAggregations;
     }
 
     /**
@@ -108,10 +108,10 @@ public final class AlertPolicyConditionConditionThresholdArgs extends io.pulumi.
      * 
      */
     @InputImport(name="denominatorFilter")
-      private final @Nullable Input<String> denominatorFilter;
+      private final @Nullable Output<String> denominatorFilter;
 
-    public Input<String> getDenominatorFilter() {
-        return this.denominatorFilter == null ? Input.empty() : this.denominatorFilter;
+    public Output<String> getDenominatorFilter() {
+        return this.denominatorFilter == null ? Output.empty() : this.denominatorFilter;
     }
 
     /**
@@ -133,9 +133,9 @@ public final class AlertPolicyConditionConditionThresholdArgs extends io.pulumi.
      * 
      */
     @InputImport(name="duration", required=true)
-      private final Input<String> duration;
+      private final Output<String> duration;
 
-    public Input<String> getDuration() {
+    public Output<String> getDuration() {
         return this.duration;
     }
 
@@ -144,10 +144,10 @@ public final class AlertPolicyConditionConditionThresholdArgs extends io.pulumi.
      * 
      */
     @InputImport(name="filter")
-      private final @Nullable Input<String> filter;
+      private final @Nullable Output<String> filter;
 
-    public Input<String> getFilter() {
-        return this.filter == null ? Input.empty() : this.filter;
+    public Output<String> getFilter() {
+        return this.filter == null ? Output.empty() : this.filter;
     }
 
     /**
@@ -156,10 +156,10 @@ public final class AlertPolicyConditionConditionThresholdArgs extends io.pulumi.
      * 
      */
     @InputImport(name="thresholdValue")
-      private final @Nullable Input<Double> thresholdValue;
+      private final @Nullable Output<Double> thresholdValue;
 
-    public Input<Double> getThresholdValue() {
-        return this.thresholdValue == null ? Input.empty() : this.thresholdValue;
+    public Output<Double> getThresholdValue() {
+        return this.thresholdValue == null ? Output.empty() : this.thresholdValue;
     }
 
     /**
@@ -175,21 +175,21 @@ public final class AlertPolicyConditionConditionThresholdArgs extends io.pulumi.
      * 
      */
     @InputImport(name="trigger")
-      private final @Nullable Input<AlertPolicyConditionConditionThresholdTriggerArgs> trigger;
+      private final @Nullable Output<AlertPolicyConditionConditionThresholdTriggerArgs> trigger;
 
-    public Input<AlertPolicyConditionConditionThresholdTriggerArgs> getTrigger() {
-        return this.trigger == null ? Input.empty() : this.trigger;
+    public Output<AlertPolicyConditionConditionThresholdTriggerArgs> getTrigger() {
+        return this.trigger == null ? Output.empty() : this.trigger;
     }
 
     public AlertPolicyConditionConditionThresholdArgs(
-        @Nullable Input<List<AlertPolicyConditionConditionThresholdAggregationArgs>> aggregations,
-        Input<String> comparison,
-        @Nullable Input<List<AlertPolicyConditionConditionThresholdDenominatorAggregationArgs>> denominatorAggregations,
-        @Nullable Input<String> denominatorFilter,
-        Input<String> duration,
-        @Nullable Input<String> filter,
-        @Nullable Input<Double> thresholdValue,
-        @Nullable Input<AlertPolicyConditionConditionThresholdTriggerArgs> trigger) {
+        @Nullable Output<List<AlertPolicyConditionConditionThresholdAggregationArgs>> aggregations,
+        Output<String> comparison,
+        @Nullable Output<List<AlertPolicyConditionConditionThresholdDenominatorAggregationArgs>> denominatorAggregations,
+        @Nullable Output<String> denominatorFilter,
+        Output<String> duration,
+        @Nullable Output<String> filter,
+        @Nullable Output<Double> thresholdValue,
+        @Nullable Output<AlertPolicyConditionConditionThresholdTriggerArgs> trigger) {
         this.aggregations = aggregations;
         this.comparison = Objects.requireNonNull(comparison, "expected parameter 'comparison' to be non-null");
         this.denominatorAggregations = denominatorAggregations;
@@ -201,14 +201,14 @@ public final class AlertPolicyConditionConditionThresholdArgs extends io.pulumi.
     }
 
     private AlertPolicyConditionConditionThresholdArgs() {
-        this.aggregations = Input.empty();
-        this.comparison = Input.empty();
-        this.denominatorAggregations = Input.empty();
-        this.denominatorFilter = Input.empty();
-        this.duration = Input.empty();
-        this.filter = Input.empty();
-        this.thresholdValue = Input.empty();
-        this.trigger = Input.empty();
+        this.aggregations = Output.empty();
+        this.comparison = Output.empty();
+        this.denominatorAggregations = Output.empty();
+        this.denominatorFilter = Output.empty();
+        this.duration = Output.empty();
+        this.filter = Output.empty();
+        this.thresholdValue = Output.empty();
+        this.trigger = Output.empty();
     }
 
     public static Builder builder() {
@@ -220,14 +220,14 @@ public final class AlertPolicyConditionConditionThresholdArgs extends io.pulumi.
     }
 
     public static final class Builder {
-        private @Nullable Input<List<AlertPolicyConditionConditionThresholdAggregationArgs>> aggregations;
-        private Input<String> comparison;
-        private @Nullable Input<List<AlertPolicyConditionConditionThresholdDenominatorAggregationArgs>> denominatorAggregations;
-        private @Nullable Input<String> denominatorFilter;
-        private Input<String> duration;
-        private @Nullable Input<String> filter;
-        private @Nullable Input<Double> thresholdValue;
-        private @Nullable Input<AlertPolicyConditionConditionThresholdTriggerArgs> trigger;
+        private @Nullable Output<List<AlertPolicyConditionConditionThresholdAggregationArgs>> aggregations;
+        private Output<String> comparison;
+        private @Nullable Output<List<AlertPolicyConditionConditionThresholdDenominatorAggregationArgs>> denominatorAggregations;
+        private @Nullable Output<String> denominatorFilter;
+        private Output<String> duration;
+        private @Nullable Output<String> filter;
+        private @Nullable Output<Double> thresholdValue;
+        private @Nullable Output<AlertPolicyConditionConditionThresholdTriggerArgs> trigger;
 
         public Builder() {
     	      // Empty
@@ -245,83 +245,83 @@ public final class AlertPolicyConditionConditionThresholdArgs extends io.pulumi.
     	      this.trigger = defaults.trigger;
         }
 
-        public Builder aggregations(@Nullable Input<List<AlertPolicyConditionConditionThresholdAggregationArgs>> aggregations) {
+        public Builder aggregations(@Nullable Output<List<AlertPolicyConditionConditionThresholdAggregationArgs>> aggregations) {
             this.aggregations = aggregations;
             return this;
         }
 
         public Builder aggregations(@Nullable List<AlertPolicyConditionConditionThresholdAggregationArgs> aggregations) {
-            this.aggregations = Input.ofNullable(aggregations);
+            this.aggregations = Output.ofNullable(aggregations);
             return this;
         }
 
-        public Builder comparison(Input<String> comparison) {
+        public Builder comparison(Output<String> comparison) {
             this.comparison = Objects.requireNonNull(comparison);
             return this;
         }
 
         public Builder comparison(String comparison) {
-            this.comparison = Input.of(Objects.requireNonNull(comparison));
+            this.comparison = Output.of(Objects.requireNonNull(comparison));
             return this;
         }
 
-        public Builder denominatorAggregations(@Nullable Input<List<AlertPolicyConditionConditionThresholdDenominatorAggregationArgs>> denominatorAggregations) {
+        public Builder denominatorAggregations(@Nullable Output<List<AlertPolicyConditionConditionThresholdDenominatorAggregationArgs>> denominatorAggregations) {
             this.denominatorAggregations = denominatorAggregations;
             return this;
         }
 
         public Builder denominatorAggregations(@Nullable List<AlertPolicyConditionConditionThresholdDenominatorAggregationArgs> denominatorAggregations) {
-            this.denominatorAggregations = Input.ofNullable(denominatorAggregations);
+            this.denominatorAggregations = Output.ofNullable(denominatorAggregations);
             return this;
         }
 
-        public Builder denominatorFilter(@Nullable Input<String> denominatorFilter) {
+        public Builder denominatorFilter(@Nullable Output<String> denominatorFilter) {
             this.denominatorFilter = denominatorFilter;
             return this;
         }
 
         public Builder denominatorFilter(@Nullable String denominatorFilter) {
-            this.denominatorFilter = Input.ofNullable(denominatorFilter);
+            this.denominatorFilter = Output.ofNullable(denominatorFilter);
             return this;
         }
 
-        public Builder duration(Input<String> duration) {
+        public Builder duration(Output<String> duration) {
             this.duration = Objects.requireNonNull(duration);
             return this;
         }
 
         public Builder duration(String duration) {
-            this.duration = Input.of(Objects.requireNonNull(duration));
+            this.duration = Output.of(Objects.requireNonNull(duration));
             return this;
         }
 
-        public Builder filter(@Nullable Input<String> filter) {
+        public Builder filter(@Nullable Output<String> filter) {
             this.filter = filter;
             return this;
         }
 
         public Builder filter(@Nullable String filter) {
-            this.filter = Input.ofNullable(filter);
+            this.filter = Output.ofNullable(filter);
             return this;
         }
 
-        public Builder thresholdValue(@Nullable Input<Double> thresholdValue) {
+        public Builder thresholdValue(@Nullable Output<Double> thresholdValue) {
             this.thresholdValue = thresholdValue;
             return this;
         }
 
         public Builder thresholdValue(@Nullable Double thresholdValue) {
-            this.thresholdValue = Input.ofNullable(thresholdValue);
+            this.thresholdValue = Output.ofNullable(thresholdValue);
             return this;
         }
 
-        public Builder trigger(@Nullable Input<AlertPolicyConditionConditionThresholdTriggerArgs> trigger) {
+        public Builder trigger(@Nullable Output<AlertPolicyConditionConditionThresholdTriggerArgs> trigger) {
             this.trigger = trigger;
             return this;
         }
 
         public Builder trigger(@Nullable AlertPolicyConditionConditionThresholdTriggerArgs trigger) {
-            this.trigger = Input.ofNullable(trigger);
+            this.trigger = Output.ofNullable(trigger);
             return this;
         }
         public AlertPolicyConditionConditionThresholdArgs build() {

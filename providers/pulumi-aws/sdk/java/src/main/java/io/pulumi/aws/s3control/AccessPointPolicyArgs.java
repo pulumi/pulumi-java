@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.s3control;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -18,9 +18,9 @@ public final class AccessPointPolicyArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="accessPointArn", required=true)
-      private final Input<String> accessPointArn;
+      private final Output<String> accessPointArn;
 
-    public Input<String> getAccessPointArn() {
+    public Output<String> getAccessPointArn() {
         return this.accessPointArn;
     }
 
@@ -29,22 +29,22 @@ public final class AccessPointPolicyArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="policy", required=true)
-      private final Input<String> policy;
+      private final Output<String> policy;
 
-    public Input<String> getPolicy() {
+    public Output<String> getPolicy() {
         return this.policy;
     }
 
     public AccessPointPolicyArgs(
-        Input<String> accessPointArn,
-        Input<String> policy) {
+        Output<String> accessPointArn,
+        Output<String> policy) {
         this.accessPointArn = Objects.requireNonNull(accessPointArn, "expected parameter 'accessPointArn' to be non-null");
         this.policy = Objects.requireNonNull(policy, "expected parameter 'policy' to be non-null");
     }
 
     private AccessPointPolicyArgs() {
-        this.accessPointArn = Input.empty();
-        this.policy = Input.empty();
+        this.accessPointArn = Output.empty();
+        this.policy = Output.empty();
     }
 
     public static Builder builder() {
@@ -56,8 +56,8 @@ public final class AccessPointPolicyArgs extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private Input<String> accessPointArn;
-        private Input<String> policy;
+        private Output<String> accessPointArn;
+        private Output<String> policy;
 
         public Builder() {
     	      // Empty
@@ -69,23 +69,23 @@ public final class AccessPointPolicyArgs extends io.pulumi.resources.ResourceArg
     	      this.policy = defaults.policy;
         }
 
-        public Builder accessPointArn(Input<String> accessPointArn) {
+        public Builder accessPointArn(Output<String> accessPointArn) {
             this.accessPointArn = Objects.requireNonNull(accessPointArn);
             return this;
         }
 
         public Builder accessPointArn(String accessPointArn) {
-            this.accessPointArn = Input.of(Objects.requireNonNull(accessPointArn));
+            this.accessPointArn = Output.of(Objects.requireNonNull(accessPointArn));
             return this;
         }
 
-        public Builder policy(Input<String> policy) {
+        public Builder policy(Output<String> policy) {
             this.policy = Objects.requireNonNull(policy);
             return this;
         }
 
         public Builder policy(String policy) {
-            this.policy = Input.of(Objects.requireNonNull(policy));
+            this.policy = Output.of(Objects.requireNonNull(policy));
             return this;
         }
         public AccessPointPolicyArgs build() {

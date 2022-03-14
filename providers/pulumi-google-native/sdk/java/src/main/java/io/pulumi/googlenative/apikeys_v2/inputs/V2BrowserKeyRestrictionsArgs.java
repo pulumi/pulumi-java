@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.apikeys_v2.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -24,18 +24,18 @@ public final class V2BrowserKeyRestrictionsArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="allowedReferrers")
-      private final @Nullable Input<List<String>> allowedReferrers;
+      private final @Nullable Output<List<String>> allowedReferrers;
 
-    public Input<List<String>> getAllowedReferrers() {
-        return this.allowedReferrers == null ? Input.empty() : this.allowedReferrers;
+    public Output<List<String>> getAllowedReferrers() {
+        return this.allowedReferrers == null ? Output.empty() : this.allowedReferrers;
     }
 
-    public V2BrowserKeyRestrictionsArgs(@Nullable Input<List<String>> allowedReferrers) {
+    public V2BrowserKeyRestrictionsArgs(@Nullable Output<List<String>> allowedReferrers) {
         this.allowedReferrers = allowedReferrers;
     }
 
     private V2BrowserKeyRestrictionsArgs() {
-        this.allowedReferrers = Input.empty();
+        this.allowedReferrers = Output.empty();
     }
 
     public static Builder builder() {
@@ -47,7 +47,7 @@ public final class V2BrowserKeyRestrictionsArgs extends io.pulumi.resources.Reso
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> allowedReferrers;
+        private @Nullable Output<List<String>> allowedReferrers;
 
         public Builder() {
     	      // Empty
@@ -58,13 +58,13 @@ public final class V2BrowserKeyRestrictionsArgs extends io.pulumi.resources.Reso
     	      this.allowedReferrers = defaults.allowedReferrers;
         }
 
-        public Builder allowedReferrers(@Nullable Input<List<String>> allowedReferrers) {
+        public Builder allowedReferrers(@Nullable Output<List<String>> allowedReferrers) {
             this.allowedReferrers = allowedReferrers;
             return this;
         }
 
         public Builder allowedReferrers(@Nullable List<String> allowedReferrers) {
-            this.allowedReferrers = Input.ofNullable(allowedReferrers);
+            this.allowedReferrers = Output.ofNullable(allowedReferrers);
             return this;
         }
         public V2BrowserKeyRestrictionsArgs build() {

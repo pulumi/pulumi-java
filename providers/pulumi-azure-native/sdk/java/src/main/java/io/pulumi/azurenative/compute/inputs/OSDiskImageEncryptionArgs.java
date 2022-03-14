@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.compute.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class OSDiskImageEncryptionArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="diskEncryptionSetId")
-      private final @Nullable Input<String> diskEncryptionSetId;
+      private final @Nullable Output<String> diskEncryptionSetId;
 
-    public Input<String> getDiskEncryptionSetId() {
-        return this.diskEncryptionSetId == null ? Input.empty() : this.diskEncryptionSetId;
+    public Output<String> getDiskEncryptionSetId() {
+        return this.diskEncryptionSetId == null ? Output.empty() : this.diskEncryptionSetId;
     }
 
-    public OSDiskImageEncryptionArgs(@Nullable Input<String> diskEncryptionSetId) {
+    public OSDiskImageEncryptionArgs(@Nullable Output<String> diskEncryptionSetId) {
         this.diskEncryptionSetId = diskEncryptionSetId;
     }
 
     private OSDiskImageEncryptionArgs() {
-        this.diskEncryptionSetId = Input.empty();
+        this.diskEncryptionSetId = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class OSDiskImageEncryptionArgs extends io.pulumi.resources.Resourc
     }
 
     public static final class Builder {
-        private @Nullable Input<String> diskEncryptionSetId;
+        private @Nullable Output<String> diskEncryptionSetId;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class OSDiskImageEncryptionArgs extends io.pulumi.resources.Resourc
     	      this.diskEncryptionSetId = defaults.diskEncryptionSetId;
         }
 
-        public Builder diskEncryptionSetId(@Nullable Input<String> diskEncryptionSetId) {
+        public Builder diskEncryptionSetId(@Nullable Output<String> diskEncryptionSetId) {
             this.diskEncryptionSetId = diskEncryptionSetId;
             return this;
         }
 
         public Builder diskEncryptionSetId(@Nullable String diskEncryptionSetId) {
-            this.diskEncryptionSetId = Input.ofNullable(diskEncryptionSetId);
+            this.diskEncryptionSetId = Output.ofNullable(diskEncryptionSetId);
             return this;
         }
         public OSDiskImageEncryptionArgs build() {

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.logic.inputs;
 
 import io.pulumi.azurenative.logic.inputs.B2BPartnerContentArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,18 +23,18 @@ public final class PartnerContentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="b2b")
-      private final @Nullable Input<B2BPartnerContentArgs> b2b;
+      private final @Nullable Output<B2BPartnerContentArgs> b2b;
 
-    public Input<B2BPartnerContentArgs> getB2b() {
-        return this.b2b == null ? Input.empty() : this.b2b;
+    public Output<B2BPartnerContentArgs> getB2b() {
+        return this.b2b == null ? Output.empty() : this.b2b;
     }
 
-    public PartnerContentArgs(@Nullable Input<B2BPartnerContentArgs> b2b) {
+    public PartnerContentArgs(@Nullable Output<B2BPartnerContentArgs> b2b) {
         this.b2b = b2b;
     }
 
     private PartnerContentArgs() {
-        this.b2b = Input.empty();
+        this.b2b = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class PartnerContentArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<B2BPartnerContentArgs> b2b;
+        private @Nullable Output<B2BPartnerContentArgs> b2b;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class PartnerContentArgs extends io.pulumi.resources.ResourceArgs {
     	      this.b2b = defaults.b2b;
         }
 
-        public Builder b2b(@Nullable Input<B2BPartnerContentArgs> b2b) {
+        public Builder b2b(@Nullable Output<B2BPartnerContentArgs> b2b) {
             this.b2b = b2b;
             return this;
         }
 
         public Builder b2b(@Nullable B2BPartnerContentArgs b2b) {
-            this.b2b = Input.ofNullable(b2b);
+            this.b2b = Output.ofNullable(b2b);
             return this;
         }
         public PartnerContentArgs build() {

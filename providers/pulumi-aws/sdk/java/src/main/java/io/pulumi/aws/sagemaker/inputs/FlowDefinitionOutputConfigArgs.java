@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.sagemaker.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class FlowDefinitionOutputConfigArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="kmsKeyId")
-      private final @Nullable Input<String> kmsKeyId;
+      private final @Nullable Output<String> kmsKeyId;
 
-    public Input<String> getKmsKeyId() {
-        return this.kmsKeyId == null ? Input.empty() : this.kmsKeyId;
+    public Output<String> getKmsKeyId() {
+        return this.kmsKeyId == null ? Output.empty() : this.kmsKeyId;
     }
 
     /**
@@ -30,22 +30,22 @@ public final class FlowDefinitionOutputConfigArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="s3OutputPath", required=true)
-      private final Input<String> s3OutputPath;
+      private final Output<String> s3OutputPath;
 
-    public Input<String> getS3OutputPath() {
+    public Output<String> getS3OutputPath() {
         return this.s3OutputPath;
     }
 
     public FlowDefinitionOutputConfigArgs(
-        @Nullable Input<String> kmsKeyId,
-        Input<String> s3OutputPath) {
+        @Nullable Output<String> kmsKeyId,
+        Output<String> s3OutputPath) {
         this.kmsKeyId = kmsKeyId;
         this.s3OutputPath = Objects.requireNonNull(s3OutputPath, "expected parameter 's3OutputPath' to be non-null");
     }
 
     private FlowDefinitionOutputConfigArgs() {
-        this.kmsKeyId = Input.empty();
-        this.s3OutputPath = Input.empty();
+        this.kmsKeyId = Output.empty();
+        this.s3OutputPath = Output.empty();
     }
 
     public static Builder builder() {
@@ -57,8 +57,8 @@ public final class FlowDefinitionOutputConfigArgs extends io.pulumi.resources.Re
     }
 
     public static final class Builder {
-        private @Nullable Input<String> kmsKeyId;
-        private Input<String> s3OutputPath;
+        private @Nullable Output<String> kmsKeyId;
+        private Output<String> s3OutputPath;
 
         public Builder() {
     	      // Empty
@@ -70,23 +70,23 @@ public final class FlowDefinitionOutputConfigArgs extends io.pulumi.resources.Re
     	      this.s3OutputPath = defaults.s3OutputPath;
         }
 
-        public Builder kmsKeyId(@Nullable Input<String> kmsKeyId) {
+        public Builder kmsKeyId(@Nullable Output<String> kmsKeyId) {
             this.kmsKeyId = kmsKeyId;
             return this;
         }
 
         public Builder kmsKeyId(@Nullable String kmsKeyId) {
-            this.kmsKeyId = Input.ofNullable(kmsKeyId);
+            this.kmsKeyId = Output.ofNullable(kmsKeyId);
             return this;
         }
 
-        public Builder s3OutputPath(Input<String> s3OutputPath) {
+        public Builder s3OutputPath(Output<String> s3OutputPath) {
             this.s3OutputPath = Objects.requireNonNull(s3OutputPath);
             return this;
         }
 
         public Builder s3OutputPath(String s3OutputPath) {
-            this.s3OutputPath = Input.of(Objects.requireNonNull(s3OutputPath));
+            this.s3OutputPath = Output.of(Objects.requireNonNull(s3OutputPath));
             return this;
         }
         public FlowDefinitionOutputConfigArgs build() {

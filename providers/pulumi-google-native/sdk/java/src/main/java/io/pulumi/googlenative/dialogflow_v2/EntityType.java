@@ -3,7 +3,6 @@
 
 package io.pulumi.googlenative.dialogflow_v2;
 
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -145,14 +144,14 @@ public class EntityType extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public EntityType(String name, EntityTypeArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:dialogflow/v2:EntityType", name, args == null ? EntityTypeArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("google-native:dialogflow/v2:EntityType", name, args == null ? EntityTypeArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private EntityType(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private EntityType(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("google-native:dialogflow/v2:EntityType", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -167,7 +166,7 @@ public class EntityType extends io.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static EntityType get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static EntityType get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new EntityType(name, id, options);
     }
 }

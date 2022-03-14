@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.ec2.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -20,10 +20,10 @@ public final class VpcIpv6CidrBlockAssociationState extends io.pulumi.resources.
      * 
      */
     @InputImport(name="ipv6CidrBlock")
-      private final @Nullable Input<String> ipv6CidrBlock;
+      private final @Nullable Output<String> ipv6CidrBlock;
 
-    public Input<String> getIpv6CidrBlock() {
-        return this.ipv6CidrBlock == null ? Input.empty() : this.ipv6CidrBlock;
+    public Output<String> getIpv6CidrBlock() {
+        return this.ipv6CidrBlock == null ? Output.empty() : this.ipv6CidrBlock;
     }
 
     /**
@@ -31,10 +31,10 @@ public final class VpcIpv6CidrBlockAssociationState extends io.pulumi.resources.
      * 
      */
     @InputImport(name="ipv6IpamPoolId")
-      private final @Nullable Input<String> ipv6IpamPoolId;
+      private final @Nullable Output<String> ipv6IpamPoolId;
 
-    public Input<String> getIpv6IpamPoolId() {
-        return this.ipv6IpamPoolId == null ? Input.empty() : this.ipv6IpamPoolId;
+    public Output<String> getIpv6IpamPoolId() {
+        return this.ipv6IpamPoolId == null ? Output.empty() : this.ipv6IpamPoolId;
     }
 
     /**
@@ -42,10 +42,10 @@ public final class VpcIpv6CidrBlockAssociationState extends io.pulumi.resources.
      * 
      */
     @InputImport(name="ipv6NetmaskLength")
-      private final @Nullable Input<Integer> ipv6NetmaskLength;
+      private final @Nullable Output<Integer> ipv6NetmaskLength;
 
-    public Input<Integer> getIpv6NetmaskLength() {
-        return this.ipv6NetmaskLength == null ? Input.empty() : this.ipv6NetmaskLength;
+    public Output<Integer> getIpv6NetmaskLength() {
+        return this.ipv6NetmaskLength == null ? Output.empty() : this.ipv6NetmaskLength;
     }
 
     /**
@@ -53,17 +53,17 @@ public final class VpcIpv6CidrBlockAssociationState extends io.pulumi.resources.
      * 
      */
     @InputImport(name="vpcId")
-      private final @Nullable Input<String> vpcId;
+      private final @Nullable Output<String> vpcId;
 
-    public Input<String> getVpcId() {
-        return this.vpcId == null ? Input.empty() : this.vpcId;
+    public Output<String> getVpcId() {
+        return this.vpcId == null ? Output.empty() : this.vpcId;
     }
 
     public VpcIpv6CidrBlockAssociationState(
-        @Nullable Input<String> ipv6CidrBlock,
-        @Nullable Input<String> ipv6IpamPoolId,
-        @Nullable Input<Integer> ipv6NetmaskLength,
-        @Nullable Input<String> vpcId) {
+        @Nullable Output<String> ipv6CidrBlock,
+        @Nullable Output<String> ipv6IpamPoolId,
+        @Nullable Output<Integer> ipv6NetmaskLength,
+        @Nullable Output<String> vpcId) {
         this.ipv6CidrBlock = ipv6CidrBlock;
         this.ipv6IpamPoolId = ipv6IpamPoolId;
         this.ipv6NetmaskLength = ipv6NetmaskLength;
@@ -71,10 +71,10 @@ public final class VpcIpv6CidrBlockAssociationState extends io.pulumi.resources.
     }
 
     private VpcIpv6CidrBlockAssociationState() {
-        this.ipv6CidrBlock = Input.empty();
-        this.ipv6IpamPoolId = Input.empty();
-        this.ipv6NetmaskLength = Input.empty();
-        this.vpcId = Input.empty();
+        this.ipv6CidrBlock = Output.empty();
+        this.ipv6IpamPoolId = Output.empty();
+        this.ipv6NetmaskLength = Output.empty();
+        this.vpcId = Output.empty();
     }
 
     public static Builder builder() {
@@ -86,10 +86,10 @@ public final class VpcIpv6CidrBlockAssociationState extends io.pulumi.resources.
     }
 
     public static final class Builder {
-        private @Nullable Input<String> ipv6CidrBlock;
-        private @Nullable Input<String> ipv6IpamPoolId;
-        private @Nullable Input<Integer> ipv6NetmaskLength;
-        private @Nullable Input<String> vpcId;
+        private @Nullable Output<String> ipv6CidrBlock;
+        private @Nullable Output<String> ipv6IpamPoolId;
+        private @Nullable Output<Integer> ipv6NetmaskLength;
+        private @Nullable Output<String> vpcId;
 
         public Builder() {
     	      // Empty
@@ -103,43 +103,43 @@ public final class VpcIpv6CidrBlockAssociationState extends io.pulumi.resources.
     	      this.vpcId = defaults.vpcId;
         }
 
-        public Builder ipv6CidrBlock(@Nullable Input<String> ipv6CidrBlock) {
+        public Builder ipv6CidrBlock(@Nullable Output<String> ipv6CidrBlock) {
             this.ipv6CidrBlock = ipv6CidrBlock;
             return this;
         }
 
         public Builder ipv6CidrBlock(@Nullable String ipv6CidrBlock) {
-            this.ipv6CidrBlock = Input.ofNullable(ipv6CidrBlock);
+            this.ipv6CidrBlock = Output.ofNullable(ipv6CidrBlock);
             return this;
         }
 
-        public Builder ipv6IpamPoolId(@Nullable Input<String> ipv6IpamPoolId) {
+        public Builder ipv6IpamPoolId(@Nullable Output<String> ipv6IpamPoolId) {
             this.ipv6IpamPoolId = ipv6IpamPoolId;
             return this;
         }
 
         public Builder ipv6IpamPoolId(@Nullable String ipv6IpamPoolId) {
-            this.ipv6IpamPoolId = Input.ofNullable(ipv6IpamPoolId);
+            this.ipv6IpamPoolId = Output.ofNullable(ipv6IpamPoolId);
             return this;
         }
 
-        public Builder ipv6NetmaskLength(@Nullable Input<Integer> ipv6NetmaskLength) {
+        public Builder ipv6NetmaskLength(@Nullable Output<Integer> ipv6NetmaskLength) {
             this.ipv6NetmaskLength = ipv6NetmaskLength;
             return this;
         }
 
         public Builder ipv6NetmaskLength(@Nullable Integer ipv6NetmaskLength) {
-            this.ipv6NetmaskLength = Input.ofNullable(ipv6NetmaskLength);
+            this.ipv6NetmaskLength = Output.ofNullable(ipv6NetmaskLength);
             return this;
         }
 
-        public Builder vpcId(@Nullable Input<String> vpcId) {
+        public Builder vpcId(@Nullable Output<String> vpcId) {
             this.vpcId = vpcId;
             return this;
         }
 
         public Builder vpcId(@Nullable String vpcId) {
-            this.vpcId = Input.ofNullable(vpcId);
+            this.vpcId = Output.ofNullable(vpcId);
             return this;
         }
         public VpcIpv6CidrBlockAssociationState build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudchannel_v1;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.cloudchannel_v1.inputs.GoogleCloudChannelV1AssociationInfoArgs;
 import io.pulumi.googlenative.cloudchannel_v1.inputs.GoogleCloudChannelV1CommitmentSettingsArgs;
@@ -19,9 +19,9 @@ public final class EntitlementArgs extends io.pulumi.resources.ResourceArgs {
     public static final EntitlementArgs Empty = new EntitlementArgs();
 
     @InputImport(name="accountId", required=true)
-      private final Input<String> accountId;
+      private final Output<String> accountId;
 
-    public Input<String> getAccountId() {
+    public Output<String> getAccountId() {
         return this.accountId;
     }
 
@@ -30,10 +30,10 @@ public final class EntitlementArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="associationInfo")
-      private final @Nullable Input<GoogleCloudChannelV1AssociationInfoArgs> associationInfo;
+      private final @Nullable Output<GoogleCloudChannelV1AssociationInfoArgs> associationInfo;
 
-    public Input<GoogleCloudChannelV1AssociationInfoArgs> getAssociationInfo() {
-        return this.associationInfo == null ? Input.empty() : this.associationInfo;
+    public Output<GoogleCloudChannelV1AssociationInfoArgs> getAssociationInfo() {
+        return this.associationInfo == null ? Output.empty() : this.associationInfo;
     }
 
     /**
@@ -41,16 +41,16 @@ public final class EntitlementArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="commitmentSettings")
-      private final @Nullable Input<GoogleCloudChannelV1CommitmentSettingsArgs> commitmentSettings;
+      private final @Nullable Output<GoogleCloudChannelV1CommitmentSettingsArgs> commitmentSettings;
 
-    public Input<GoogleCloudChannelV1CommitmentSettingsArgs> getCommitmentSettings() {
-        return this.commitmentSettings == null ? Input.empty() : this.commitmentSettings;
+    public Output<GoogleCloudChannelV1CommitmentSettingsArgs> getCommitmentSettings() {
+        return this.commitmentSettings == null ? Output.empty() : this.commitmentSettings;
     }
 
     @InputImport(name="customerId", required=true)
-      private final Input<String> customerId;
+      private final Output<String> customerId;
 
-    public Input<String> getCustomerId() {
+    public Output<String> getCustomerId() {
         return this.customerId;
     }
 
@@ -59,9 +59,9 @@ public final class EntitlementArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="offer", required=true)
-      private final Input<String> offer;
+      private final Output<String> offer;
 
-    public Input<String> getOffer() {
+    public Output<String> getOffer() {
         return this.offer;
     }
 
@@ -70,10 +70,10 @@ public final class EntitlementArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="parameters")
-      private final @Nullable Input<List<GoogleCloudChannelV1ParameterArgs>> parameters;
+      private final @Nullable Output<List<GoogleCloudChannelV1ParameterArgs>> parameters;
 
-    public Input<List<GoogleCloudChannelV1ParameterArgs>> getParameters() {
-        return this.parameters == null ? Input.empty() : this.parameters;
+    public Output<List<GoogleCloudChannelV1ParameterArgs>> getParameters() {
+        return this.parameters == null ? Output.empty() : this.parameters;
     }
 
     /**
@@ -81,10 +81,10 @@ public final class EntitlementArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="purchaseOrderId")
-      private final @Nullable Input<String> purchaseOrderId;
+      private final @Nullable Output<String> purchaseOrderId;
 
-    public Input<String> getPurchaseOrderId() {
-        return this.purchaseOrderId == null ? Input.empty() : this.purchaseOrderId;
+    public Output<String> getPurchaseOrderId() {
+        return this.purchaseOrderId == null ? Output.empty() : this.purchaseOrderId;
     }
 
     /**
@@ -92,21 +92,21 @@ public final class EntitlementArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="requestId")
-      private final @Nullable Input<String> requestId;
+      private final @Nullable Output<String> requestId;
 
-    public Input<String> getRequestId() {
-        return this.requestId == null ? Input.empty() : this.requestId;
+    public Output<String> getRequestId() {
+        return this.requestId == null ? Output.empty() : this.requestId;
     }
 
     public EntitlementArgs(
-        Input<String> accountId,
-        @Nullable Input<GoogleCloudChannelV1AssociationInfoArgs> associationInfo,
-        @Nullable Input<GoogleCloudChannelV1CommitmentSettingsArgs> commitmentSettings,
-        Input<String> customerId,
-        Input<String> offer,
-        @Nullable Input<List<GoogleCloudChannelV1ParameterArgs>> parameters,
-        @Nullable Input<String> purchaseOrderId,
-        @Nullable Input<String> requestId) {
+        Output<String> accountId,
+        @Nullable Output<GoogleCloudChannelV1AssociationInfoArgs> associationInfo,
+        @Nullable Output<GoogleCloudChannelV1CommitmentSettingsArgs> commitmentSettings,
+        Output<String> customerId,
+        Output<String> offer,
+        @Nullable Output<List<GoogleCloudChannelV1ParameterArgs>> parameters,
+        @Nullable Output<String> purchaseOrderId,
+        @Nullable Output<String> requestId) {
         this.accountId = Objects.requireNonNull(accountId, "expected parameter 'accountId' to be non-null");
         this.associationInfo = associationInfo;
         this.commitmentSettings = commitmentSettings;
@@ -118,14 +118,14 @@ public final class EntitlementArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private EntitlementArgs() {
-        this.accountId = Input.empty();
-        this.associationInfo = Input.empty();
-        this.commitmentSettings = Input.empty();
-        this.customerId = Input.empty();
-        this.offer = Input.empty();
-        this.parameters = Input.empty();
-        this.purchaseOrderId = Input.empty();
-        this.requestId = Input.empty();
+        this.accountId = Output.empty();
+        this.associationInfo = Output.empty();
+        this.commitmentSettings = Output.empty();
+        this.customerId = Output.empty();
+        this.offer = Output.empty();
+        this.parameters = Output.empty();
+        this.purchaseOrderId = Output.empty();
+        this.requestId = Output.empty();
     }
 
     public static Builder builder() {
@@ -137,14 +137,14 @@ public final class EntitlementArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> accountId;
-        private @Nullable Input<GoogleCloudChannelV1AssociationInfoArgs> associationInfo;
-        private @Nullable Input<GoogleCloudChannelV1CommitmentSettingsArgs> commitmentSettings;
-        private Input<String> customerId;
-        private Input<String> offer;
-        private @Nullable Input<List<GoogleCloudChannelV1ParameterArgs>> parameters;
-        private @Nullable Input<String> purchaseOrderId;
-        private @Nullable Input<String> requestId;
+        private Output<String> accountId;
+        private @Nullable Output<GoogleCloudChannelV1AssociationInfoArgs> associationInfo;
+        private @Nullable Output<GoogleCloudChannelV1CommitmentSettingsArgs> commitmentSettings;
+        private Output<String> customerId;
+        private Output<String> offer;
+        private @Nullable Output<List<GoogleCloudChannelV1ParameterArgs>> parameters;
+        private @Nullable Output<String> purchaseOrderId;
+        private @Nullable Output<String> requestId;
 
         public Builder() {
     	      // Empty
@@ -162,83 +162,83 @@ public final class EntitlementArgs extends io.pulumi.resources.ResourceArgs {
     	      this.requestId = defaults.requestId;
         }
 
-        public Builder accountId(Input<String> accountId) {
+        public Builder accountId(Output<String> accountId) {
             this.accountId = Objects.requireNonNull(accountId);
             return this;
         }
 
         public Builder accountId(String accountId) {
-            this.accountId = Input.of(Objects.requireNonNull(accountId));
+            this.accountId = Output.of(Objects.requireNonNull(accountId));
             return this;
         }
 
-        public Builder associationInfo(@Nullable Input<GoogleCloudChannelV1AssociationInfoArgs> associationInfo) {
+        public Builder associationInfo(@Nullable Output<GoogleCloudChannelV1AssociationInfoArgs> associationInfo) {
             this.associationInfo = associationInfo;
             return this;
         }
 
         public Builder associationInfo(@Nullable GoogleCloudChannelV1AssociationInfoArgs associationInfo) {
-            this.associationInfo = Input.ofNullable(associationInfo);
+            this.associationInfo = Output.ofNullable(associationInfo);
             return this;
         }
 
-        public Builder commitmentSettings(@Nullable Input<GoogleCloudChannelV1CommitmentSettingsArgs> commitmentSettings) {
+        public Builder commitmentSettings(@Nullable Output<GoogleCloudChannelV1CommitmentSettingsArgs> commitmentSettings) {
             this.commitmentSettings = commitmentSettings;
             return this;
         }
 
         public Builder commitmentSettings(@Nullable GoogleCloudChannelV1CommitmentSettingsArgs commitmentSettings) {
-            this.commitmentSettings = Input.ofNullable(commitmentSettings);
+            this.commitmentSettings = Output.ofNullable(commitmentSettings);
             return this;
         }
 
-        public Builder customerId(Input<String> customerId) {
+        public Builder customerId(Output<String> customerId) {
             this.customerId = Objects.requireNonNull(customerId);
             return this;
         }
 
         public Builder customerId(String customerId) {
-            this.customerId = Input.of(Objects.requireNonNull(customerId));
+            this.customerId = Output.of(Objects.requireNonNull(customerId));
             return this;
         }
 
-        public Builder offer(Input<String> offer) {
+        public Builder offer(Output<String> offer) {
             this.offer = Objects.requireNonNull(offer);
             return this;
         }
 
         public Builder offer(String offer) {
-            this.offer = Input.of(Objects.requireNonNull(offer));
+            this.offer = Output.of(Objects.requireNonNull(offer));
             return this;
         }
 
-        public Builder parameters(@Nullable Input<List<GoogleCloudChannelV1ParameterArgs>> parameters) {
+        public Builder parameters(@Nullable Output<List<GoogleCloudChannelV1ParameterArgs>> parameters) {
             this.parameters = parameters;
             return this;
         }
 
         public Builder parameters(@Nullable List<GoogleCloudChannelV1ParameterArgs> parameters) {
-            this.parameters = Input.ofNullable(parameters);
+            this.parameters = Output.ofNullable(parameters);
             return this;
         }
 
-        public Builder purchaseOrderId(@Nullable Input<String> purchaseOrderId) {
+        public Builder purchaseOrderId(@Nullable Output<String> purchaseOrderId) {
             this.purchaseOrderId = purchaseOrderId;
             return this;
         }
 
         public Builder purchaseOrderId(@Nullable String purchaseOrderId) {
-            this.purchaseOrderId = Input.ofNullable(purchaseOrderId);
+            this.purchaseOrderId = Output.ofNullable(purchaseOrderId);
             return this;
         }
 
-        public Builder requestId(@Nullable Input<String> requestId) {
+        public Builder requestId(@Nullable Output<String> requestId) {
             this.requestId = requestId;
             return this;
         }
 
         public Builder requestId(@Nullable String requestId) {
-            this.requestId = Input.ofNullable(requestId);
+            this.requestId = Output.ofNullable(requestId);
             return this;
         }
         public EntitlementArgs build() {

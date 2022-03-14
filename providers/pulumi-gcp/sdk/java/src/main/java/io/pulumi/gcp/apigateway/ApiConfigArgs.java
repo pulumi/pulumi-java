@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.apigateway;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.apigateway.inputs.ApiConfigGatewayConfigArgs;
 import io.pulumi.gcp.apigateway.inputs.ApiConfigOpenapiDocumentArgs;
@@ -23,9 +23,9 @@ public final class ApiConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="api", required=true)
-      private final Input<String> api;
+      private final Output<String> api;
 
-    public Input<String> getApi() {
+    public Output<String> getApi() {
         return this.api;
     }
 
@@ -34,10 +34,10 @@ public final class ApiConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="apiConfigId")
-      private final @Nullable Input<String> apiConfigId;
+      private final @Nullable Output<String> apiConfigId;
 
-    public Input<String> getApiConfigId() {
-        return this.apiConfigId == null ? Input.empty() : this.apiConfigId;
+    public Output<String> getApiConfigId() {
+        return this.apiConfigId == null ? Output.empty() : this.apiConfigId;
     }
 
     /**
@@ -46,10 +46,10 @@ public final class ApiConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="apiConfigIdPrefix")
-      private final @Nullable Input<String> apiConfigIdPrefix;
+      private final @Nullable Output<String> apiConfigIdPrefix;
 
-    public Input<String> getApiConfigIdPrefix() {
-        return this.apiConfigIdPrefix == null ? Input.empty() : this.apiConfigIdPrefix;
+    public Output<String> getApiConfigIdPrefix() {
+        return this.apiConfigIdPrefix == null ? Output.empty() : this.apiConfigIdPrefix;
     }
 
     /**
@@ -57,10 +57,10 @@ public final class ApiConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName")
-      private final @Nullable Input<String> displayName;
+      private final @Nullable Output<String> displayName;
 
-    public Input<String> getDisplayName() {
-        return this.displayName == null ? Input.empty() : this.displayName;
+    public Output<String> getDisplayName() {
+        return this.displayName == null ? Output.empty() : this.displayName;
     }
 
     /**
@@ -70,10 +70,10 @@ public final class ApiConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="gatewayConfig")
-      private final @Nullable Input<ApiConfigGatewayConfigArgs> gatewayConfig;
+      private final @Nullable Output<ApiConfigGatewayConfigArgs> gatewayConfig;
 
-    public Input<ApiConfigGatewayConfigArgs> getGatewayConfig() {
-        return this.gatewayConfig == null ? Input.empty() : this.gatewayConfig;
+    public Output<ApiConfigGatewayConfigArgs> getGatewayConfig() {
+        return this.gatewayConfig == null ? Output.empty() : this.gatewayConfig;
     }
 
     /**
@@ -81,10 +81,10 @@ public final class ApiConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labels")
-      private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Output<Map<String,String>> labels;
 
-    public Input<Map<String,String>> getLabels() {
-        return this.labels == null ? Input.empty() : this.labels;
+    public Output<Map<String,String>> getLabels() {
+        return this.labels == null ? Output.empty() : this.labels;
     }
 
     /**
@@ -93,9 +93,9 @@ public final class ApiConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="openapiDocuments", required=true)
-      private final Input<List<ApiConfigOpenapiDocumentArgs>> openapiDocuments;
+      private final Output<List<ApiConfigOpenapiDocumentArgs>> openapiDocuments;
 
-    public Input<List<ApiConfigOpenapiDocumentArgs>> getOpenapiDocuments() {
+    public Output<List<ApiConfigOpenapiDocumentArgs>> getOpenapiDocuments() {
         return this.openapiDocuments;
     }
 
@@ -105,21 +105,21 @@ public final class ApiConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     public ApiConfigArgs(
-        Input<String> api,
-        @Nullable Input<String> apiConfigId,
-        @Nullable Input<String> apiConfigIdPrefix,
-        @Nullable Input<String> displayName,
-        @Nullable Input<ApiConfigGatewayConfigArgs> gatewayConfig,
-        @Nullable Input<Map<String,String>> labels,
-        Input<List<ApiConfigOpenapiDocumentArgs>> openapiDocuments,
-        @Nullable Input<String> project) {
+        Output<String> api,
+        @Nullable Output<String> apiConfigId,
+        @Nullable Output<String> apiConfigIdPrefix,
+        @Nullable Output<String> displayName,
+        @Nullable Output<ApiConfigGatewayConfigArgs> gatewayConfig,
+        @Nullable Output<Map<String,String>> labels,
+        Output<List<ApiConfigOpenapiDocumentArgs>> openapiDocuments,
+        @Nullable Output<String> project) {
         this.api = Objects.requireNonNull(api, "expected parameter 'api' to be non-null");
         this.apiConfigId = apiConfigId;
         this.apiConfigIdPrefix = apiConfigIdPrefix;
@@ -131,14 +131,14 @@ public final class ApiConfigArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ApiConfigArgs() {
-        this.api = Input.empty();
-        this.apiConfigId = Input.empty();
-        this.apiConfigIdPrefix = Input.empty();
-        this.displayName = Input.empty();
-        this.gatewayConfig = Input.empty();
-        this.labels = Input.empty();
-        this.openapiDocuments = Input.empty();
-        this.project = Input.empty();
+        this.api = Output.empty();
+        this.apiConfigId = Output.empty();
+        this.apiConfigIdPrefix = Output.empty();
+        this.displayName = Output.empty();
+        this.gatewayConfig = Output.empty();
+        this.labels = Output.empty();
+        this.openapiDocuments = Output.empty();
+        this.project = Output.empty();
     }
 
     public static Builder builder() {
@@ -150,14 +150,14 @@ public final class ApiConfigArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> api;
-        private @Nullable Input<String> apiConfigId;
-        private @Nullable Input<String> apiConfigIdPrefix;
-        private @Nullable Input<String> displayName;
-        private @Nullable Input<ApiConfigGatewayConfigArgs> gatewayConfig;
-        private @Nullable Input<Map<String,String>> labels;
-        private Input<List<ApiConfigOpenapiDocumentArgs>> openapiDocuments;
-        private @Nullable Input<String> project;
+        private Output<String> api;
+        private @Nullable Output<String> apiConfigId;
+        private @Nullable Output<String> apiConfigIdPrefix;
+        private @Nullable Output<String> displayName;
+        private @Nullable Output<ApiConfigGatewayConfigArgs> gatewayConfig;
+        private @Nullable Output<Map<String,String>> labels;
+        private Output<List<ApiConfigOpenapiDocumentArgs>> openapiDocuments;
+        private @Nullable Output<String> project;
 
         public Builder() {
     	      // Empty
@@ -175,83 +175,83 @@ public final class ApiConfigArgs extends io.pulumi.resources.ResourceArgs {
     	      this.project = defaults.project;
         }
 
-        public Builder api(Input<String> api) {
+        public Builder api(Output<String> api) {
             this.api = Objects.requireNonNull(api);
             return this;
         }
 
         public Builder api(String api) {
-            this.api = Input.of(Objects.requireNonNull(api));
+            this.api = Output.of(Objects.requireNonNull(api));
             return this;
         }
 
-        public Builder apiConfigId(@Nullable Input<String> apiConfigId) {
+        public Builder apiConfigId(@Nullable Output<String> apiConfigId) {
             this.apiConfigId = apiConfigId;
             return this;
         }
 
         public Builder apiConfigId(@Nullable String apiConfigId) {
-            this.apiConfigId = Input.ofNullable(apiConfigId);
+            this.apiConfigId = Output.ofNullable(apiConfigId);
             return this;
         }
 
-        public Builder apiConfigIdPrefix(@Nullable Input<String> apiConfigIdPrefix) {
+        public Builder apiConfigIdPrefix(@Nullable Output<String> apiConfigIdPrefix) {
             this.apiConfigIdPrefix = apiConfigIdPrefix;
             return this;
         }
 
         public Builder apiConfigIdPrefix(@Nullable String apiConfigIdPrefix) {
-            this.apiConfigIdPrefix = Input.ofNullable(apiConfigIdPrefix);
+            this.apiConfigIdPrefix = Output.ofNullable(apiConfigIdPrefix);
             return this;
         }
 
-        public Builder displayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Input.ofNullable(displayName);
+            this.displayName = Output.ofNullable(displayName);
             return this;
         }
 
-        public Builder gatewayConfig(@Nullable Input<ApiConfigGatewayConfigArgs> gatewayConfig) {
+        public Builder gatewayConfig(@Nullable Output<ApiConfigGatewayConfigArgs> gatewayConfig) {
             this.gatewayConfig = gatewayConfig;
             return this;
         }
 
         public Builder gatewayConfig(@Nullable ApiConfigGatewayConfigArgs gatewayConfig) {
-            this.gatewayConfig = Input.ofNullable(gatewayConfig);
+            this.gatewayConfig = Output.ofNullable(gatewayConfig);
             return this;
         }
 
-        public Builder labels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
         public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Input.ofNullable(labels);
+            this.labels = Output.ofNullable(labels);
             return this;
         }
 
-        public Builder openapiDocuments(Input<List<ApiConfigOpenapiDocumentArgs>> openapiDocuments) {
+        public Builder openapiDocuments(Output<List<ApiConfigOpenapiDocumentArgs>> openapiDocuments) {
             this.openapiDocuments = Objects.requireNonNull(openapiDocuments);
             return this;
         }
 
         public Builder openapiDocuments(List<ApiConfigOpenapiDocumentArgs> openapiDocuments) {
-            this.openapiDocuments = Input.of(Objects.requireNonNull(openapiDocuments));
+            this.openapiDocuments = Output.of(Objects.requireNonNull(openapiDocuments));
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
         public ApiConfigArgs build() {

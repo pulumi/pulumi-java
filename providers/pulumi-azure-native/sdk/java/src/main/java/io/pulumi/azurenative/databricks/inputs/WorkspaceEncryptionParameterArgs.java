@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.databricks.inputs;
 
 import io.pulumi.azurenative.databricks.inputs.EncryptionArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,18 +23,18 @@ public final class WorkspaceEncryptionParameterArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="value")
-      private final @Nullable Input<EncryptionArgs> value;
+      private final @Nullable Output<EncryptionArgs> value;
 
-    public Input<EncryptionArgs> getValue() {
-        return this.value == null ? Input.empty() : this.value;
+    public Output<EncryptionArgs> getValue() {
+        return this.value == null ? Output.empty() : this.value;
     }
 
-    public WorkspaceEncryptionParameterArgs(@Nullable Input<EncryptionArgs> value) {
+    public WorkspaceEncryptionParameterArgs(@Nullable Output<EncryptionArgs> value) {
         this.value = value;
     }
 
     private WorkspaceEncryptionParameterArgs() {
-        this.value = Input.empty();
+        this.value = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class WorkspaceEncryptionParameterArgs extends io.pulumi.resources.
     }
 
     public static final class Builder {
-        private @Nullable Input<EncryptionArgs> value;
+        private @Nullable Output<EncryptionArgs> value;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class WorkspaceEncryptionParameterArgs extends io.pulumi.resources.
     	      this.value = defaults.value;
         }
 
-        public Builder value(@Nullable Input<EncryptionArgs> value) {
+        public Builder value(@Nullable Output<EncryptionArgs> value) {
             this.value = value;
             return this;
         }
 
         public Builder value(@Nullable EncryptionArgs value) {
-            this.value = Input.ofNullable(value);
+            this.value = Output.ofNullable(value);
             return this;
         }
         public WorkspaceEncryptionParameterArgs build() {

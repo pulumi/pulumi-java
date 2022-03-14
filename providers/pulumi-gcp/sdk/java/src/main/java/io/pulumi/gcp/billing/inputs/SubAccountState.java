@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.billing.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -20,10 +20,10 @@ public final class SubAccountState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="billingAccountId")
-      private final @Nullable Input<String> billingAccountId;
+      private final @Nullable Output<String> billingAccountId;
 
-    public Input<String> getBillingAccountId() {
-        return this.billingAccountId == null ? Input.empty() : this.billingAccountId;
+    public Output<String> getBillingAccountId() {
+        return this.billingAccountId == null ? Output.empty() : this.billingAccountId;
     }
 
     /**
@@ -33,10 +33,10 @@ public final class SubAccountState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="deletionPolicy")
-      private final @Nullable Input<String> deletionPolicy;
+      private final @Nullable Output<String> deletionPolicy;
 
-    public Input<String> getDeletionPolicy() {
-        return this.deletionPolicy == null ? Input.empty() : this.deletionPolicy;
+    public Output<String> getDeletionPolicy() {
+        return this.deletionPolicy == null ? Output.empty() : this.deletionPolicy;
     }
 
     /**
@@ -44,10 +44,10 @@ public final class SubAccountState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName")
-      private final @Nullable Input<String> displayName;
+      private final @Nullable Output<String> displayName;
 
-    public Input<String> getDisplayName() {
-        return this.displayName == null ? Input.empty() : this.displayName;
+    public Output<String> getDisplayName() {
+        return this.displayName == null ? Output.empty() : this.displayName;
     }
 
     /**
@@ -56,10 +56,10 @@ public final class SubAccountState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="masterBillingAccount")
-      private final @Nullable Input<String> masterBillingAccount;
+      private final @Nullable Output<String> masterBillingAccount;
 
-    public Input<String> getMasterBillingAccount() {
-        return this.masterBillingAccount == null ? Input.empty() : this.masterBillingAccount;
+    public Output<String> getMasterBillingAccount() {
+        return this.masterBillingAccount == null ? Output.empty() : this.masterBillingAccount;
     }
 
     /**
@@ -67,10 +67,10 @@ public final class SubAccountState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -78,19 +78,19 @@ public final class SubAccountState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="open")
-      private final @Nullable Input<Boolean> open;
+      private final @Nullable Output<Boolean> open;
 
-    public Input<Boolean> getOpen() {
-        return this.open == null ? Input.empty() : this.open;
+    public Output<Boolean> getOpen() {
+        return this.open == null ? Output.empty() : this.open;
     }
 
     public SubAccountState(
-        @Nullable Input<String> billingAccountId,
-        @Nullable Input<String> deletionPolicy,
-        @Nullable Input<String> displayName,
-        @Nullable Input<String> masterBillingAccount,
-        @Nullable Input<String> name,
-        @Nullable Input<Boolean> open) {
+        @Nullable Output<String> billingAccountId,
+        @Nullable Output<String> deletionPolicy,
+        @Nullable Output<String> displayName,
+        @Nullable Output<String> masterBillingAccount,
+        @Nullable Output<String> name,
+        @Nullable Output<Boolean> open) {
         this.billingAccountId = billingAccountId;
         this.deletionPolicy = deletionPolicy;
         this.displayName = displayName;
@@ -100,12 +100,12 @@ public final class SubAccountState extends io.pulumi.resources.ResourceArgs {
     }
 
     private SubAccountState() {
-        this.billingAccountId = Input.empty();
-        this.deletionPolicy = Input.empty();
-        this.displayName = Input.empty();
-        this.masterBillingAccount = Input.empty();
-        this.name = Input.empty();
-        this.open = Input.empty();
+        this.billingAccountId = Output.empty();
+        this.deletionPolicy = Output.empty();
+        this.displayName = Output.empty();
+        this.masterBillingAccount = Output.empty();
+        this.name = Output.empty();
+        this.open = Output.empty();
     }
 
     public static Builder builder() {
@@ -117,12 +117,12 @@ public final class SubAccountState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> billingAccountId;
-        private @Nullable Input<String> deletionPolicy;
-        private @Nullable Input<String> displayName;
-        private @Nullable Input<String> masterBillingAccount;
-        private @Nullable Input<String> name;
-        private @Nullable Input<Boolean> open;
+        private @Nullable Output<String> billingAccountId;
+        private @Nullable Output<String> deletionPolicy;
+        private @Nullable Output<String> displayName;
+        private @Nullable Output<String> masterBillingAccount;
+        private @Nullable Output<String> name;
+        private @Nullable Output<Boolean> open;
 
         public Builder() {
     	      // Empty
@@ -138,63 +138,63 @@ public final class SubAccountState extends io.pulumi.resources.ResourceArgs {
     	      this.open = defaults.open;
         }
 
-        public Builder billingAccountId(@Nullable Input<String> billingAccountId) {
+        public Builder billingAccountId(@Nullable Output<String> billingAccountId) {
             this.billingAccountId = billingAccountId;
             return this;
         }
 
         public Builder billingAccountId(@Nullable String billingAccountId) {
-            this.billingAccountId = Input.ofNullable(billingAccountId);
+            this.billingAccountId = Output.ofNullable(billingAccountId);
             return this;
         }
 
-        public Builder deletionPolicy(@Nullable Input<String> deletionPolicy) {
+        public Builder deletionPolicy(@Nullable Output<String> deletionPolicy) {
             this.deletionPolicy = deletionPolicy;
             return this;
         }
 
         public Builder deletionPolicy(@Nullable String deletionPolicy) {
-            this.deletionPolicy = Input.ofNullable(deletionPolicy);
+            this.deletionPolicy = Output.ofNullable(deletionPolicy);
             return this;
         }
 
-        public Builder displayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Input.ofNullable(displayName);
+            this.displayName = Output.ofNullable(displayName);
             return this;
         }
 
-        public Builder masterBillingAccount(@Nullable Input<String> masterBillingAccount) {
+        public Builder masterBillingAccount(@Nullable Output<String> masterBillingAccount) {
             this.masterBillingAccount = masterBillingAccount;
             return this;
         }
 
         public Builder masterBillingAccount(@Nullable String masterBillingAccount) {
-            this.masterBillingAccount = Input.ofNullable(masterBillingAccount);
+            this.masterBillingAccount = Output.ofNullable(masterBillingAccount);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder open(@Nullable Input<Boolean> open) {
+        public Builder open(@Nullable Output<Boolean> open) {
             this.open = open;
             return this;
         }
 
         public Builder open(@Nullable Boolean open) {
-            this.open = Input.ofNullable(open);
+            this.open = Output.ofNullable(open);
             return this;
         }
         public SubAccountState build() {

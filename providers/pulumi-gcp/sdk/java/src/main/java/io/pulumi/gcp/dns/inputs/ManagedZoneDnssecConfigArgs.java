@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.dns.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.dns.inputs.ManagedZoneDnssecConfigDefaultKeySpecArgs;
 import java.lang.String;
@@ -25,10 +25,10 @@ public final class ManagedZoneDnssecConfigArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="defaultKeySpecs")
-      private final @Nullable Input<List<ManagedZoneDnssecConfigDefaultKeySpecArgs>> defaultKeySpecs;
+      private final @Nullable Output<List<ManagedZoneDnssecConfigDefaultKeySpecArgs>> defaultKeySpecs;
 
-    public Input<List<ManagedZoneDnssecConfigDefaultKeySpecArgs>> getDefaultKeySpecs() {
-        return this.defaultKeySpecs == null ? Input.empty() : this.defaultKeySpecs;
+    public Output<List<ManagedZoneDnssecConfigDefaultKeySpecArgs>> getDefaultKeySpecs() {
+        return this.defaultKeySpecs == null ? Output.empty() : this.defaultKeySpecs;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class ManagedZoneDnssecConfigArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="kind")
-      private final @Nullable Input<String> kind;
+      private final @Nullable Output<String> kind;
 
-    public Input<String> getKind() {
-        return this.kind == null ? Input.empty() : this.kind;
+    public Output<String> getKind() {
+        return this.kind == null ? Output.empty() : this.kind;
     }
 
     /**
@@ -49,10 +49,10 @@ public final class ManagedZoneDnssecConfigArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="nonExistence")
-      private final @Nullable Input<String> nonExistence;
+      private final @Nullable Output<String> nonExistence;
 
-    public Input<String> getNonExistence() {
-        return this.nonExistence == null ? Input.empty() : this.nonExistence;
+    public Output<String> getNonExistence() {
+        return this.nonExistence == null ? Output.empty() : this.nonExistence;
     }
 
     /**
@@ -61,17 +61,17 @@ public final class ManagedZoneDnssecConfigArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="state")
-      private final @Nullable Input<String> state;
+      private final @Nullable Output<String> state;
 
-    public Input<String> getState() {
-        return this.state == null ? Input.empty() : this.state;
+    public Output<String> getState() {
+        return this.state == null ? Output.empty() : this.state;
     }
 
     public ManagedZoneDnssecConfigArgs(
-        @Nullable Input<List<ManagedZoneDnssecConfigDefaultKeySpecArgs>> defaultKeySpecs,
-        @Nullable Input<String> kind,
-        @Nullable Input<String> nonExistence,
-        @Nullable Input<String> state) {
+        @Nullable Output<List<ManagedZoneDnssecConfigDefaultKeySpecArgs>> defaultKeySpecs,
+        @Nullable Output<String> kind,
+        @Nullable Output<String> nonExistence,
+        @Nullable Output<String> state) {
         this.defaultKeySpecs = defaultKeySpecs;
         this.kind = kind;
         this.nonExistence = nonExistence;
@@ -79,10 +79,10 @@ public final class ManagedZoneDnssecConfigArgs extends io.pulumi.resources.Resou
     }
 
     private ManagedZoneDnssecConfigArgs() {
-        this.defaultKeySpecs = Input.empty();
-        this.kind = Input.empty();
-        this.nonExistence = Input.empty();
-        this.state = Input.empty();
+        this.defaultKeySpecs = Output.empty();
+        this.kind = Output.empty();
+        this.nonExistence = Output.empty();
+        this.state = Output.empty();
     }
 
     public static Builder builder() {
@@ -94,10 +94,10 @@ public final class ManagedZoneDnssecConfigArgs extends io.pulumi.resources.Resou
     }
 
     public static final class Builder {
-        private @Nullable Input<List<ManagedZoneDnssecConfigDefaultKeySpecArgs>> defaultKeySpecs;
-        private @Nullable Input<String> kind;
-        private @Nullable Input<String> nonExistence;
-        private @Nullable Input<String> state;
+        private @Nullable Output<List<ManagedZoneDnssecConfigDefaultKeySpecArgs>> defaultKeySpecs;
+        private @Nullable Output<String> kind;
+        private @Nullable Output<String> nonExistence;
+        private @Nullable Output<String> state;
 
         public Builder() {
     	      // Empty
@@ -111,43 +111,43 @@ public final class ManagedZoneDnssecConfigArgs extends io.pulumi.resources.Resou
     	      this.state = defaults.state;
         }
 
-        public Builder defaultKeySpecs(@Nullable Input<List<ManagedZoneDnssecConfigDefaultKeySpecArgs>> defaultKeySpecs) {
+        public Builder defaultKeySpecs(@Nullable Output<List<ManagedZoneDnssecConfigDefaultKeySpecArgs>> defaultKeySpecs) {
             this.defaultKeySpecs = defaultKeySpecs;
             return this;
         }
 
         public Builder defaultKeySpecs(@Nullable List<ManagedZoneDnssecConfigDefaultKeySpecArgs> defaultKeySpecs) {
-            this.defaultKeySpecs = Input.ofNullable(defaultKeySpecs);
+            this.defaultKeySpecs = Output.ofNullable(defaultKeySpecs);
             return this;
         }
 
-        public Builder kind(@Nullable Input<String> kind) {
+        public Builder kind(@Nullable Output<String> kind) {
             this.kind = kind;
             return this;
         }
 
         public Builder kind(@Nullable String kind) {
-            this.kind = Input.ofNullable(kind);
+            this.kind = Output.ofNullable(kind);
             return this;
         }
 
-        public Builder nonExistence(@Nullable Input<String> nonExistence) {
+        public Builder nonExistence(@Nullable Output<String> nonExistence) {
             this.nonExistence = nonExistence;
             return this;
         }
 
         public Builder nonExistence(@Nullable String nonExistence) {
-            this.nonExistence = Input.ofNullable(nonExistence);
+            this.nonExistence = Output.ofNullable(nonExistence);
             return this;
         }
 
-        public Builder state(@Nullable Input<String> state) {
+        public Builder state(@Nullable Output<String> state) {
             this.state = state;
             return this;
         }
 
         public Builder state(@Nullable String state) {
-            this.state = Input.ofNullable(state);
+            this.state = Output.ofNullable(state);
             return this;
         }
         public ManagedZoneDnssecConfigArgs build() {

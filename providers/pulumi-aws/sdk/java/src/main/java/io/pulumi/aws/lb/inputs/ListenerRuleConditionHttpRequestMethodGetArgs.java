@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.lb.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -19,18 +19,18 @@ public final class ListenerRuleConditionHttpRequestMethodGetArgs extends io.pulu
      * 
      */
     @InputImport(name="values", required=true)
-      private final Input<List<String>> values;
+      private final Output<List<String>> values;
 
-    public Input<List<String>> getValues() {
+    public Output<List<String>> getValues() {
         return this.values;
     }
 
-    public ListenerRuleConditionHttpRequestMethodGetArgs(Input<List<String>> values) {
+    public ListenerRuleConditionHttpRequestMethodGetArgs(Output<List<String>> values) {
         this.values = Objects.requireNonNull(values, "expected parameter 'values' to be non-null");
     }
 
     private ListenerRuleConditionHttpRequestMethodGetArgs() {
-        this.values = Input.empty();
+        this.values = Output.empty();
     }
 
     public static Builder builder() {
@@ -42,7 +42,7 @@ public final class ListenerRuleConditionHttpRequestMethodGetArgs extends io.pulu
     }
 
     public static final class Builder {
-        private Input<List<String>> values;
+        private Output<List<String>> values;
 
         public Builder() {
     	      // Empty
@@ -53,13 +53,13 @@ public final class ListenerRuleConditionHttpRequestMethodGetArgs extends io.pulu
     	      this.values = defaults.values;
         }
 
-        public Builder values(Input<List<String>> values) {
+        public Builder values(Output<List<String>> values) {
             this.values = Objects.requireNonNull(values);
             return this;
         }
 
         public Builder values(List<String> values) {
-            this.values = Input.of(Objects.requireNonNull(values));
+            this.values = Output.of(Objects.requireNonNull(values));
             return this;
         }
         public ListenerRuleConditionHttpRequestMethodGetArgs build() {

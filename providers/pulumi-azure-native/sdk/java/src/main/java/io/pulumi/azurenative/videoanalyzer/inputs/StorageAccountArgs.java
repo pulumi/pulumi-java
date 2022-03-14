@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.videoanalyzer.inputs;
 
 import io.pulumi.azurenative.videoanalyzer.inputs.ResourceIdentityArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -24,10 +24,10 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="id")
-      private final @Nullable Input<String> id;
+      private final @Nullable Output<String> id;
 
-    public Input<String> getId() {
-        return this.id == null ? Input.empty() : this.id;
+    public Output<String> getId() {
+        return this.id == null ? Output.empty() : this.id;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="identity")
-      private final @Nullable Input<ResourceIdentityArgs> identity;
+      private final @Nullable Output<ResourceIdentityArgs> identity;
 
-    public Input<ResourceIdentityArgs> getIdentity() {
-        return this.identity == null ? Input.empty() : this.identity;
+    public Output<ResourceIdentityArgs> getIdentity() {
+        return this.identity == null ? Output.empty() : this.identity;
     }
 
     public StorageAccountArgs(
-        @Nullable Input<String> id,
-        @Nullable Input<ResourceIdentityArgs> identity) {
+        @Nullable Output<String> id,
+        @Nullable Output<ResourceIdentityArgs> identity) {
         this.id = id;
         this.identity = identity;
     }
 
     private StorageAccountArgs() {
-        this.id = Input.empty();
-        this.identity = Input.empty();
+        this.id = Output.empty();
+        this.identity = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> id;
-        private @Nullable Input<ResourceIdentityArgs> identity;
+        private @Nullable Output<String> id;
+        private @Nullable Output<ResourceIdentityArgs> identity;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
     	      this.identity = defaults.identity;
         }
 
-        public Builder id(@Nullable Input<String> id) {
+        public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
 
         public Builder id(@Nullable String id) {
-            this.id = Input.ofNullable(id);
+            this.id = Output.ofNullable(id);
             return this;
         }
 
-        public Builder identity(@Nullable Input<ResourceIdentityArgs> identity) {
+        public Builder identity(@Nullable Output<ResourceIdentityArgs> identity) {
             this.identity = identity;
             return this;
         }
 
         public Builder identity(@Nullable ResourceIdentityArgs identity) {
-            this.identity = Input.ofNullable(identity);
+            this.identity = Output.ofNullable(identity);
             return this;
         }
         public StorageAccountArgs build() {

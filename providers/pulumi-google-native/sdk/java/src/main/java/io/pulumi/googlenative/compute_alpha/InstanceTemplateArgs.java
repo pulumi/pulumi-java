@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.compute_alpha.inputs.InstancePropertiesArgs;
 import io.pulumi.googlenative.compute_alpha.inputs.SourceInstanceParamsArgs;
@@ -21,10 +21,10 @@ public final class InstanceTemplateArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -32,17 +32,17 @@ public final class InstanceTemplateArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -50,17 +50,17 @@ public final class InstanceTemplateArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="properties")
-      private final @Nullable Input<InstancePropertiesArgs> properties;
+      private final @Nullable Output<InstancePropertiesArgs> properties;
 
-    public Input<InstancePropertiesArgs> getProperties() {
-        return this.properties == null ? Input.empty() : this.properties;
+    public Output<InstancePropertiesArgs> getProperties() {
+        return this.properties == null ? Output.empty() : this.properties;
     }
 
     @InputImport(name="requestId")
-      private final @Nullable Input<String> requestId;
+      private final @Nullable Output<String> requestId;
 
-    public Input<String> getRequestId() {
-        return this.requestId == null ? Input.empty() : this.requestId;
+    public Output<String> getRequestId() {
+        return this.requestId == null ? Output.empty() : this.requestId;
     }
 
     /**
@@ -68,10 +68,10 @@ public final class InstanceTemplateArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="sourceInstance")
-      private final @Nullable Input<String> sourceInstance;
+      private final @Nullable Output<String> sourceInstance;
 
-    public Input<String> getSourceInstance() {
-        return this.sourceInstance == null ? Input.empty() : this.sourceInstance;
+    public Output<String> getSourceInstance() {
+        return this.sourceInstance == null ? Output.empty() : this.sourceInstance;
     }
 
     /**
@@ -79,20 +79,20 @@ public final class InstanceTemplateArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="sourceInstanceParams")
-      private final @Nullable Input<SourceInstanceParamsArgs> sourceInstanceParams;
+      private final @Nullable Output<SourceInstanceParamsArgs> sourceInstanceParams;
 
-    public Input<SourceInstanceParamsArgs> getSourceInstanceParams() {
-        return this.sourceInstanceParams == null ? Input.empty() : this.sourceInstanceParams;
+    public Output<SourceInstanceParamsArgs> getSourceInstanceParams() {
+        return this.sourceInstanceParams == null ? Output.empty() : this.sourceInstanceParams;
     }
 
     public InstanceTemplateArgs(
-        @Nullable Input<String> description,
-        @Nullable Input<String> name,
-        @Nullable Input<String> project,
-        @Nullable Input<InstancePropertiesArgs> properties,
-        @Nullable Input<String> requestId,
-        @Nullable Input<String> sourceInstance,
-        @Nullable Input<SourceInstanceParamsArgs> sourceInstanceParams) {
+        @Nullable Output<String> description,
+        @Nullable Output<String> name,
+        @Nullable Output<String> project,
+        @Nullable Output<InstancePropertiesArgs> properties,
+        @Nullable Output<String> requestId,
+        @Nullable Output<String> sourceInstance,
+        @Nullable Output<SourceInstanceParamsArgs> sourceInstanceParams) {
         this.description = description;
         this.name = name;
         this.project = project;
@@ -103,13 +103,13 @@ public final class InstanceTemplateArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private InstanceTemplateArgs() {
-        this.description = Input.empty();
-        this.name = Input.empty();
-        this.project = Input.empty();
-        this.properties = Input.empty();
-        this.requestId = Input.empty();
-        this.sourceInstance = Input.empty();
-        this.sourceInstanceParams = Input.empty();
+        this.description = Output.empty();
+        this.name = Output.empty();
+        this.project = Output.empty();
+        this.properties = Output.empty();
+        this.requestId = Output.empty();
+        this.sourceInstance = Output.empty();
+        this.sourceInstanceParams = Output.empty();
     }
 
     public static Builder builder() {
@@ -121,13 +121,13 @@ public final class InstanceTemplateArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private @Nullable Input<String> description;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> project;
-        private @Nullable Input<InstancePropertiesArgs> properties;
-        private @Nullable Input<String> requestId;
-        private @Nullable Input<String> sourceInstance;
-        private @Nullable Input<SourceInstanceParamsArgs> sourceInstanceParams;
+        private @Nullable Output<String> description;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> project;
+        private @Nullable Output<InstancePropertiesArgs> properties;
+        private @Nullable Output<String> requestId;
+        private @Nullable Output<String> sourceInstance;
+        private @Nullable Output<SourceInstanceParamsArgs> sourceInstanceParams;
 
         public Builder() {
     	      // Empty
@@ -144,73 +144,73 @@ public final class InstanceTemplateArgs extends io.pulumi.resources.ResourceArgs
     	      this.sourceInstanceParams = defaults.sourceInstanceParams;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder properties(@Nullable Input<InstancePropertiesArgs> properties) {
+        public Builder properties(@Nullable Output<InstancePropertiesArgs> properties) {
             this.properties = properties;
             return this;
         }
 
         public Builder properties(@Nullable InstancePropertiesArgs properties) {
-            this.properties = Input.ofNullable(properties);
+            this.properties = Output.ofNullable(properties);
             return this;
         }
 
-        public Builder requestId(@Nullable Input<String> requestId) {
+        public Builder requestId(@Nullable Output<String> requestId) {
             this.requestId = requestId;
             return this;
         }
 
         public Builder requestId(@Nullable String requestId) {
-            this.requestId = Input.ofNullable(requestId);
+            this.requestId = Output.ofNullable(requestId);
             return this;
         }
 
-        public Builder sourceInstance(@Nullable Input<String> sourceInstance) {
+        public Builder sourceInstance(@Nullable Output<String> sourceInstance) {
             this.sourceInstance = sourceInstance;
             return this;
         }
 
         public Builder sourceInstance(@Nullable String sourceInstance) {
-            this.sourceInstance = Input.ofNullable(sourceInstance);
+            this.sourceInstance = Output.ofNullable(sourceInstance);
             return this;
         }
 
-        public Builder sourceInstanceParams(@Nullable Input<SourceInstanceParamsArgs> sourceInstanceParams) {
+        public Builder sourceInstanceParams(@Nullable Output<SourceInstanceParamsArgs> sourceInstanceParams) {
             this.sourceInstanceParams = sourceInstanceParams;
             return this;
         }
 
         public Builder sourceInstanceParams(@Nullable SourceInstanceParamsArgs sourceInstanceParams) {
-            this.sourceInstanceParams = Input.ofNullable(sourceInstanceParams);
+            this.sourceInstanceParams = Output.ofNullable(sourceInstanceParams);
             return this;
         }
         public InstanceTemplateArgs build() {

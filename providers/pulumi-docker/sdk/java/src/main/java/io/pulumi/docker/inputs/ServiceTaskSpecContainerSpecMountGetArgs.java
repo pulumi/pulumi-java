@@ -3,7 +3,7 @@
 
 package io.pulumi.docker.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.docker.inputs.ServiceTaskSpecContainerSpecMountBindOptionsGetArgs;
 import io.pulumi.docker.inputs.ServiceTaskSpecContainerSpecMountTmpfsOptionsGetArgs;
@@ -19,62 +19,62 @@ public final class ServiceTaskSpecContainerSpecMountGetArgs extends io.pulumi.re
     public static final ServiceTaskSpecContainerSpecMountGetArgs Empty = new ServiceTaskSpecContainerSpecMountGetArgs();
 
     @InputImport(name="bindOptions")
-      private final @Nullable Input<ServiceTaskSpecContainerSpecMountBindOptionsGetArgs> bindOptions;
+      private final @Nullable Output<ServiceTaskSpecContainerSpecMountBindOptionsGetArgs> bindOptions;
 
-    public Input<ServiceTaskSpecContainerSpecMountBindOptionsGetArgs> getBindOptions() {
-        return this.bindOptions == null ? Input.empty() : this.bindOptions;
+    public Output<ServiceTaskSpecContainerSpecMountBindOptionsGetArgs> getBindOptions() {
+        return this.bindOptions == null ? Output.empty() : this.bindOptions;
     }
 
     @InputImport(name="readOnly")
-      private final @Nullable Input<Boolean> readOnly;
+      private final @Nullable Output<Boolean> readOnly;
 
-    public Input<Boolean> getReadOnly() {
-        return this.readOnly == null ? Input.empty() : this.readOnly;
+    public Output<Boolean> getReadOnly() {
+        return this.readOnly == null ? Output.empty() : this.readOnly;
     }
 
     @InputImport(name="source")
-      private final @Nullable Input<String> source;
+      private final @Nullable Output<String> source;
 
-    public Input<String> getSource() {
-        return this.source == null ? Input.empty() : this.source;
+    public Output<String> getSource() {
+        return this.source == null ? Output.empty() : this.source;
     }
 
     @InputImport(name="target", required=true)
-      private final Input<String> target;
+      private final Output<String> target;
 
-    public Input<String> getTarget() {
+    public Output<String> getTarget() {
         return this.target;
     }
 
     @InputImport(name="tmpfsOptions")
-      private final @Nullable Input<ServiceTaskSpecContainerSpecMountTmpfsOptionsGetArgs> tmpfsOptions;
+      private final @Nullable Output<ServiceTaskSpecContainerSpecMountTmpfsOptionsGetArgs> tmpfsOptions;
 
-    public Input<ServiceTaskSpecContainerSpecMountTmpfsOptionsGetArgs> getTmpfsOptions() {
-        return this.tmpfsOptions == null ? Input.empty() : this.tmpfsOptions;
+    public Output<ServiceTaskSpecContainerSpecMountTmpfsOptionsGetArgs> getTmpfsOptions() {
+        return this.tmpfsOptions == null ? Output.empty() : this.tmpfsOptions;
     }
 
     @InputImport(name="type", required=true)
-      private final Input<String> type;
+      private final Output<String> type;
 
-    public Input<String> getType() {
+    public Output<String> getType() {
         return this.type;
     }
 
     @InputImport(name="volumeOptions")
-      private final @Nullable Input<ServiceTaskSpecContainerSpecMountVolumeOptionsGetArgs> volumeOptions;
+      private final @Nullable Output<ServiceTaskSpecContainerSpecMountVolumeOptionsGetArgs> volumeOptions;
 
-    public Input<ServiceTaskSpecContainerSpecMountVolumeOptionsGetArgs> getVolumeOptions() {
-        return this.volumeOptions == null ? Input.empty() : this.volumeOptions;
+    public Output<ServiceTaskSpecContainerSpecMountVolumeOptionsGetArgs> getVolumeOptions() {
+        return this.volumeOptions == null ? Output.empty() : this.volumeOptions;
     }
 
     public ServiceTaskSpecContainerSpecMountGetArgs(
-        @Nullable Input<ServiceTaskSpecContainerSpecMountBindOptionsGetArgs> bindOptions,
-        @Nullable Input<Boolean> readOnly,
-        @Nullable Input<String> source,
-        Input<String> target,
-        @Nullable Input<ServiceTaskSpecContainerSpecMountTmpfsOptionsGetArgs> tmpfsOptions,
-        Input<String> type,
-        @Nullable Input<ServiceTaskSpecContainerSpecMountVolumeOptionsGetArgs> volumeOptions) {
+        @Nullable Output<ServiceTaskSpecContainerSpecMountBindOptionsGetArgs> bindOptions,
+        @Nullable Output<Boolean> readOnly,
+        @Nullable Output<String> source,
+        Output<String> target,
+        @Nullable Output<ServiceTaskSpecContainerSpecMountTmpfsOptionsGetArgs> tmpfsOptions,
+        Output<String> type,
+        @Nullable Output<ServiceTaskSpecContainerSpecMountVolumeOptionsGetArgs> volumeOptions) {
         this.bindOptions = bindOptions;
         this.readOnly = readOnly;
         this.source = source;
@@ -85,13 +85,13 @@ public final class ServiceTaskSpecContainerSpecMountGetArgs extends io.pulumi.re
     }
 
     private ServiceTaskSpecContainerSpecMountGetArgs() {
-        this.bindOptions = Input.empty();
-        this.readOnly = Input.empty();
-        this.source = Input.empty();
-        this.target = Input.empty();
-        this.tmpfsOptions = Input.empty();
-        this.type = Input.empty();
-        this.volumeOptions = Input.empty();
+        this.bindOptions = Output.empty();
+        this.readOnly = Output.empty();
+        this.source = Output.empty();
+        this.target = Output.empty();
+        this.tmpfsOptions = Output.empty();
+        this.type = Output.empty();
+        this.volumeOptions = Output.empty();
     }
 
     public static Builder builder() {
@@ -103,13 +103,13 @@ public final class ServiceTaskSpecContainerSpecMountGetArgs extends io.pulumi.re
     }
 
     public static final class Builder {
-        private @Nullable Input<ServiceTaskSpecContainerSpecMountBindOptionsGetArgs> bindOptions;
-        private @Nullable Input<Boolean> readOnly;
-        private @Nullable Input<String> source;
-        private Input<String> target;
-        private @Nullable Input<ServiceTaskSpecContainerSpecMountTmpfsOptionsGetArgs> tmpfsOptions;
-        private Input<String> type;
-        private @Nullable Input<ServiceTaskSpecContainerSpecMountVolumeOptionsGetArgs> volumeOptions;
+        private @Nullable Output<ServiceTaskSpecContainerSpecMountBindOptionsGetArgs> bindOptions;
+        private @Nullable Output<Boolean> readOnly;
+        private @Nullable Output<String> source;
+        private Output<String> target;
+        private @Nullable Output<ServiceTaskSpecContainerSpecMountTmpfsOptionsGetArgs> tmpfsOptions;
+        private Output<String> type;
+        private @Nullable Output<ServiceTaskSpecContainerSpecMountVolumeOptionsGetArgs> volumeOptions;
 
         public Builder() {
     	      // Empty
@@ -126,73 +126,73 @@ public final class ServiceTaskSpecContainerSpecMountGetArgs extends io.pulumi.re
     	      this.volumeOptions = defaults.volumeOptions;
         }
 
-        public Builder bindOptions(@Nullable Input<ServiceTaskSpecContainerSpecMountBindOptionsGetArgs> bindOptions) {
+        public Builder bindOptions(@Nullable Output<ServiceTaskSpecContainerSpecMountBindOptionsGetArgs> bindOptions) {
             this.bindOptions = bindOptions;
             return this;
         }
 
         public Builder bindOptions(@Nullable ServiceTaskSpecContainerSpecMountBindOptionsGetArgs bindOptions) {
-            this.bindOptions = Input.ofNullable(bindOptions);
+            this.bindOptions = Output.ofNullable(bindOptions);
             return this;
         }
 
-        public Builder readOnly(@Nullable Input<Boolean> readOnly) {
+        public Builder readOnly(@Nullable Output<Boolean> readOnly) {
             this.readOnly = readOnly;
             return this;
         }
 
         public Builder readOnly(@Nullable Boolean readOnly) {
-            this.readOnly = Input.ofNullable(readOnly);
+            this.readOnly = Output.ofNullable(readOnly);
             return this;
         }
 
-        public Builder source(@Nullable Input<String> source) {
+        public Builder source(@Nullable Output<String> source) {
             this.source = source;
             return this;
         }
 
         public Builder source(@Nullable String source) {
-            this.source = Input.ofNullable(source);
+            this.source = Output.ofNullable(source);
             return this;
         }
 
-        public Builder target(Input<String> target) {
+        public Builder target(Output<String> target) {
             this.target = Objects.requireNonNull(target);
             return this;
         }
 
         public Builder target(String target) {
-            this.target = Input.of(Objects.requireNonNull(target));
+            this.target = Output.of(Objects.requireNonNull(target));
             return this;
         }
 
-        public Builder tmpfsOptions(@Nullable Input<ServiceTaskSpecContainerSpecMountTmpfsOptionsGetArgs> tmpfsOptions) {
+        public Builder tmpfsOptions(@Nullable Output<ServiceTaskSpecContainerSpecMountTmpfsOptionsGetArgs> tmpfsOptions) {
             this.tmpfsOptions = tmpfsOptions;
             return this;
         }
 
         public Builder tmpfsOptions(@Nullable ServiceTaskSpecContainerSpecMountTmpfsOptionsGetArgs tmpfsOptions) {
-            this.tmpfsOptions = Input.ofNullable(tmpfsOptions);
+            this.tmpfsOptions = Output.ofNullable(tmpfsOptions);
             return this;
         }
 
-        public Builder type(Input<String> type) {
+        public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(String type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
 
-        public Builder volumeOptions(@Nullable Input<ServiceTaskSpecContainerSpecMountVolumeOptionsGetArgs> volumeOptions) {
+        public Builder volumeOptions(@Nullable Output<ServiceTaskSpecContainerSpecMountVolumeOptionsGetArgs> volumeOptions) {
             this.volumeOptions = volumeOptions;
             return this;
         }
 
         public Builder volumeOptions(@Nullable ServiceTaskSpecContainerSpecMountVolumeOptionsGetArgs volumeOptions) {
-            this.volumeOptions = Input.ofNullable(volumeOptions);
+            this.volumeOptions = Output.ofNullable(volumeOptions);
             return this;
         }
         public ServiceTaskSpecContainerSpecMountGetArgs build() {

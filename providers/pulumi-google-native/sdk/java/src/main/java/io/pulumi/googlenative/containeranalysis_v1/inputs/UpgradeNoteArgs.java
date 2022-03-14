@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.containeranalysis_v1.inputs.UpgradeDistributionArgs;
 import io.pulumi.googlenative.containeranalysis_v1.inputs.VersionArgs;
@@ -27,10 +27,10 @@ public final class UpgradeNoteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="distributions")
-      private final @Nullable Input<List<UpgradeDistributionArgs>> distributions;
+      private final @Nullable Output<List<UpgradeDistributionArgs>> distributions;
 
-    public Input<List<UpgradeDistributionArgs>> getDistributions() {
-        return this.distributions == null ? Input.empty() : this.distributions;
+    public Output<List<UpgradeDistributionArgs>> getDistributions() {
+        return this.distributions == null ? Output.empty() : this.distributions;
     }
 
     /**
@@ -38,10 +38,10 @@ public final class UpgradeNoteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="package")
-      private final @Nullable Input<String> $package;
+      private final @Nullable Output<String> $package;
 
-    public Input<String> get$package() {
-        return this.$package == null ? Input.empty() : this.$package;
+    public Output<String> get$package() {
+        return this.$package == null ? Output.empty() : this.$package;
     }
 
     /**
@@ -49,10 +49,10 @@ public final class UpgradeNoteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="version")
-      private final @Nullable Input<VersionArgs> version;
+      private final @Nullable Output<VersionArgs> version;
 
-    public Input<VersionArgs> getVersion() {
-        return this.version == null ? Input.empty() : this.version;
+    public Output<VersionArgs> getVersion() {
+        return this.version == null ? Output.empty() : this.version;
     }
 
     /**
@@ -60,17 +60,17 @@ public final class UpgradeNoteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="windowsUpdate")
-      private final @Nullable Input<WindowsUpdateArgs> windowsUpdate;
+      private final @Nullable Output<WindowsUpdateArgs> windowsUpdate;
 
-    public Input<WindowsUpdateArgs> getWindowsUpdate() {
-        return this.windowsUpdate == null ? Input.empty() : this.windowsUpdate;
+    public Output<WindowsUpdateArgs> getWindowsUpdate() {
+        return this.windowsUpdate == null ? Output.empty() : this.windowsUpdate;
     }
 
     public UpgradeNoteArgs(
-        @Nullable Input<List<UpgradeDistributionArgs>> distributions,
-        @Nullable Input<String> $package,
-        @Nullable Input<VersionArgs> version,
-        @Nullable Input<WindowsUpdateArgs> windowsUpdate) {
+        @Nullable Output<List<UpgradeDistributionArgs>> distributions,
+        @Nullable Output<String> $package,
+        @Nullable Output<VersionArgs> version,
+        @Nullable Output<WindowsUpdateArgs> windowsUpdate) {
         this.distributions = distributions;
         this.$package = $package;
         this.version = version;
@@ -78,10 +78,10 @@ public final class UpgradeNoteArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private UpgradeNoteArgs() {
-        this.distributions = Input.empty();
-        this.$package = Input.empty();
-        this.version = Input.empty();
-        this.windowsUpdate = Input.empty();
+        this.distributions = Output.empty();
+        this.$package = Output.empty();
+        this.version = Output.empty();
+        this.windowsUpdate = Output.empty();
     }
 
     public static Builder builder() {
@@ -93,10 +93,10 @@ public final class UpgradeNoteArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<List<UpgradeDistributionArgs>> distributions;
-        private @Nullable Input<String> $package;
-        private @Nullable Input<VersionArgs> version;
-        private @Nullable Input<WindowsUpdateArgs> windowsUpdate;
+        private @Nullable Output<List<UpgradeDistributionArgs>> distributions;
+        private @Nullable Output<String> $package;
+        private @Nullable Output<VersionArgs> version;
+        private @Nullable Output<WindowsUpdateArgs> windowsUpdate;
 
         public Builder() {
     	      // Empty
@@ -110,43 +110,43 @@ public final class UpgradeNoteArgs extends io.pulumi.resources.ResourceArgs {
     	      this.windowsUpdate = defaults.windowsUpdate;
         }
 
-        public Builder distributions(@Nullable Input<List<UpgradeDistributionArgs>> distributions) {
+        public Builder distributions(@Nullable Output<List<UpgradeDistributionArgs>> distributions) {
             this.distributions = distributions;
             return this;
         }
 
         public Builder distributions(@Nullable List<UpgradeDistributionArgs> distributions) {
-            this.distributions = Input.ofNullable(distributions);
+            this.distributions = Output.ofNullable(distributions);
             return this;
         }
 
-        public Builder $package(@Nullable Input<String> $package) {
+        public Builder $package(@Nullable Output<String> $package) {
             this.$package = $package;
             return this;
         }
 
         public Builder $package(@Nullable String $package) {
-            this.$package = Input.ofNullable($package);
+            this.$package = Output.ofNullable($package);
             return this;
         }
 
-        public Builder version(@Nullable Input<VersionArgs> version) {
+        public Builder version(@Nullable Output<VersionArgs> version) {
             this.version = version;
             return this;
         }
 
         public Builder version(@Nullable VersionArgs version) {
-            this.version = Input.ofNullable(version);
+            this.version = Output.ofNullable(version);
             return this;
         }
 
-        public Builder windowsUpdate(@Nullable Input<WindowsUpdateArgs> windowsUpdate) {
+        public Builder windowsUpdate(@Nullable Output<WindowsUpdateArgs> windowsUpdate) {
             this.windowsUpdate = windowsUpdate;
             return this;
         }
 
         public Builder windowsUpdate(@Nullable WindowsUpdateArgs windowsUpdate) {
-            this.windowsUpdate = Input.ofNullable(windowsUpdate);
+            this.windowsUpdate = Output.ofNullable(windowsUpdate);
             return this;
         }
         public UpgradeNoteArgs build() {

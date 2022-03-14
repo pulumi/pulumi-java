@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.ec2;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class RouteTableAssociationArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="gatewayId")
-      private final @Nullable Input<String> gatewayId;
+      private final @Nullable Output<String> gatewayId;
 
-    public Input<String> getGatewayId() {
-        return this.gatewayId == null ? Input.empty() : this.gatewayId;
+    public Output<String> getGatewayId() {
+        return this.gatewayId == null ? Output.empty() : this.gatewayId;
     }
 
     /**
@@ -30,9 +30,9 @@ public final class RouteTableAssociationArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="routeTableId", required=true)
-      private final Input<String> routeTableId;
+      private final Output<String> routeTableId;
 
-    public Input<String> getRouteTableId() {
+    public Output<String> getRouteTableId() {
         return this.routeTableId;
     }
 
@@ -41,25 +41,25 @@ public final class RouteTableAssociationArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="subnetId")
-      private final @Nullable Input<String> subnetId;
+      private final @Nullable Output<String> subnetId;
 
-    public Input<String> getSubnetId() {
-        return this.subnetId == null ? Input.empty() : this.subnetId;
+    public Output<String> getSubnetId() {
+        return this.subnetId == null ? Output.empty() : this.subnetId;
     }
 
     public RouteTableAssociationArgs(
-        @Nullable Input<String> gatewayId,
-        Input<String> routeTableId,
-        @Nullable Input<String> subnetId) {
+        @Nullable Output<String> gatewayId,
+        Output<String> routeTableId,
+        @Nullable Output<String> subnetId) {
         this.gatewayId = gatewayId;
         this.routeTableId = Objects.requireNonNull(routeTableId, "expected parameter 'routeTableId' to be non-null");
         this.subnetId = subnetId;
     }
 
     private RouteTableAssociationArgs() {
-        this.gatewayId = Input.empty();
-        this.routeTableId = Input.empty();
-        this.subnetId = Input.empty();
+        this.gatewayId = Output.empty();
+        this.routeTableId = Output.empty();
+        this.subnetId = Output.empty();
     }
 
     public static Builder builder() {
@@ -71,9 +71,9 @@ public final class RouteTableAssociationArgs extends io.pulumi.resources.Resourc
     }
 
     public static final class Builder {
-        private @Nullable Input<String> gatewayId;
-        private Input<String> routeTableId;
-        private @Nullable Input<String> subnetId;
+        private @Nullable Output<String> gatewayId;
+        private Output<String> routeTableId;
+        private @Nullable Output<String> subnetId;
 
         public Builder() {
     	      // Empty
@@ -86,33 +86,33 @@ public final class RouteTableAssociationArgs extends io.pulumi.resources.Resourc
     	      this.subnetId = defaults.subnetId;
         }
 
-        public Builder gatewayId(@Nullable Input<String> gatewayId) {
+        public Builder gatewayId(@Nullable Output<String> gatewayId) {
             this.gatewayId = gatewayId;
             return this;
         }
 
         public Builder gatewayId(@Nullable String gatewayId) {
-            this.gatewayId = Input.ofNullable(gatewayId);
+            this.gatewayId = Output.ofNullable(gatewayId);
             return this;
         }
 
-        public Builder routeTableId(Input<String> routeTableId) {
+        public Builder routeTableId(Output<String> routeTableId) {
             this.routeTableId = Objects.requireNonNull(routeTableId);
             return this;
         }
 
         public Builder routeTableId(String routeTableId) {
-            this.routeTableId = Input.of(Objects.requireNonNull(routeTableId));
+            this.routeTableId = Output.of(Objects.requireNonNull(routeTableId));
             return this;
         }
 
-        public Builder subnetId(@Nullable Input<String> subnetId) {
+        public Builder subnetId(@Nullable Output<String> subnetId) {
             this.subnetId = subnetId;
             return this;
         }
 
         public Builder subnetId(@Nullable String subnetId) {
-            this.subnetId = Input.ofNullable(subnetId);
+            this.subnetId = Output.ofNullable(subnetId);
             return this;
         }
         public RouteTableAssociationArgs build() {

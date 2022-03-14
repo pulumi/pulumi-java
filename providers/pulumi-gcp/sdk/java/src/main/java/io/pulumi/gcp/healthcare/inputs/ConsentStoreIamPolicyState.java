@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.healthcare.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class ConsentStoreIamPolicyState extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="consentStoreId")
-      private final @Nullable Input<String> consentStoreId;
+      private final @Nullable Output<String> consentStoreId;
 
-    public Input<String> getConsentStoreId() {
-        return this.consentStoreId == null ? Input.empty() : this.consentStoreId;
+    public Output<String> getConsentStoreId() {
+        return this.consentStoreId == null ? Output.empty() : this.consentStoreId;
     }
 
     /**
@@ -32,10 +32,10 @@ public final class ConsentStoreIamPolicyState extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="dataset")
-      private final @Nullable Input<String> dataset;
+      private final @Nullable Output<String> dataset;
 
-    public Input<String> getDataset() {
-        return this.dataset == null ? Input.empty() : this.dataset;
+    public Output<String> getDataset() {
+        return this.dataset == null ? Output.empty() : this.dataset;
     }
 
     /**
@@ -43,10 +43,10 @@ public final class ConsentStoreIamPolicyState extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="etag")
-      private final @Nullable Input<String> etag;
+      private final @Nullable Output<String> etag;
 
-    public Input<String> getEtag() {
-        return this.etag == null ? Input.empty() : this.etag;
+    public Output<String> getEtag() {
+        return this.etag == null ? Output.empty() : this.etag;
     }
 
     /**
@@ -55,17 +55,17 @@ public final class ConsentStoreIamPolicyState extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="policyData")
-      private final @Nullable Input<String> policyData;
+      private final @Nullable Output<String> policyData;
 
-    public Input<String> getPolicyData() {
-        return this.policyData == null ? Input.empty() : this.policyData;
+    public Output<String> getPolicyData() {
+        return this.policyData == null ? Output.empty() : this.policyData;
     }
 
     public ConsentStoreIamPolicyState(
-        @Nullable Input<String> consentStoreId,
-        @Nullable Input<String> dataset,
-        @Nullable Input<String> etag,
-        @Nullable Input<String> policyData) {
+        @Nullable Output<String> consentStoreId,
+        @Nullable Output<String> dataset,
+        @Nullable Output<String> etag,
+        @Nullable Output<String> policyData) {
         this.consentStoreId = consentStoreId;
         this.dataset = dataset;
         this.etag = etag;
@@ -73,10 +73,10 @@ public final class ConsentStoreIamPolicyState extends io.pulumi.resources.Resour
     }
 
     private ConsentStoreIamPolicyState() {
-        this.consentStoreId = Input.empty();
-        this.dataset = Input.empty();
-        this.etag = Input.empty();
-        this.policyData = Input.empty();
+        this.consentStoreId = Output.empty();
+        this.dataset = Output.empty();
+        this.etag = Output.empty();
+        this.policyData = Output.empty();
     }
 
     public static Builder builder() {
@@ -88,10 +88,10 @@ public final class ConsentStoreIamPolicyState extends io.pulumi.resources.Resour
     }
 
     public static final class Builder {
-        private @Nullable Input<String> consentStoreId;
-        private @Nullable Input<String> dataset;
-        private @Nullable Input<String> etag;
-        private @Nullable Input<String> policyData;
+        private @Nullable Output<String> consentStoreId;
+        private @Nullable Output<String> dataset;
+        private @Nullable Output<String> etag;
+        private @Nullable Output<String> policyData;
 
         public Builder() {
     	      // Empty
@@ -105,43 +105,43 @@ public final class ConsentStoreIamPolicyState extends io.pulumi.resources.Resour
     	      this.policyData = defaults.policyData;
         }
 
-        public Builder consentStoreId(@Nullable Input<String> consentStoreId) {
+        public Builder consentStoreId(@Nullable Output<String> consentStoreId) {
             this.consentStoreId = consentStoreId;
             return this;
         }
 
         public Builder consentStoreId(@Nullable String consentStoreId) {
-            this.consentStoreId = Input.ofNullable(consentStoreId);
+            this.consentStoreId = Output.ofNullable(consentStoreId);
             return this;
         }
 
-        public Builder dataset(@Nullable Input<String> dataset) {
+        public Builder dataset(@Nullable Output<String> dataset) {
             this.dataset = dataset;
             return this;
         }
 
         public Builder dataset(@Nullable String dataset) {
-            this.dataset = Input.ofNullable(dataset);
+            this.dataset = Output.ofNullable(dataset);
             return this;
         }
 
-        public Builder etag(@Nullable Input<String> etag) {
+        public Builder etag(@Nullable Output<String> etag) {
             this.etag = etag;
             return this;
         }
 
         public Builder etag(@Nullable String etag) {
-            this.etag = Input.ofNullable(etag);
+            this.etag = Output.ofNullable(etag);
             return this;
         }
 
-        public Builder policyData(@Nullable Input<String> policyData) {
+        public Builder policyData(@Nullable Output<String> policyData) {
             this.policyData = policyData;
             return this;
         }
 
         public Builder policyData(@Nullable String policyData) {
-            this.policyData = Input.ofNullable(policyData);
+            this.policyData = Output.ofNullable(policyData);
             return this;
         }
         public ConsentStoreIamPolicyState build() {

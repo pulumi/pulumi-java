@@ -7,7 +7,6 @@ import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.network.BastionHostArgs;
 import io.pulumi.azurenative.network.outputs.BastionHostIPConfigurationResponse;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -184,34 +183,34 @@ public class BastionHost extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public BastionHost(String name, BastionHostArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:network:BastionHost", name, args == null ? BastionHostArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("azure-native:network:BastionHost", name, args == null ? BastionHostArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private BastionHost(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private BastionHost(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:network:BastionHost", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:network/v20190401:BastionHost").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20190601:BastionHost").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20190701:BastionHost").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20190801:BastionHost").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20190901:BastionHost").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20191101:BastionHost").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20191201:BastionHost").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20200301:BastionHost").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20200401:BastionHost").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20200501:BastionHost").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20200601:BastionHost").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20200701:BastionHost").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20200801:BastionHost").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20201101:BastionHost").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20210201:BastionHost").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20210301:BastionHost").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20210501:BastionHost").build())
+                Output.of(Alias.builder().setType("azure-native:network/v20190401:BastionHost").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20190601:BastionHost").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20190701:BastionHost").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20190801:BastionHost").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20190901:BastionHost").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20191101:BastionHost").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20191201:BastionHost").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20200301:BastionHost").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20200401:BastionHost").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20200501:BastionHost").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20200601:BastionHost").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20200701:BastionHost").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20200801:BastionHost").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20201101:BastionHost").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20210201:BastionHost").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20210301:BastionHost").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20210501:BastionHost").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -225,7 +224,7 @@ public class BastionHost extends io.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static BastionHost get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static BastionHost get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new BastionHost(name, id, options);
     }
 }

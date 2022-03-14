@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.ecrpublic;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -14,9 +14,9 @@ public final class RepositoryPolicyArgs extends io.pulumi.resources.ResourceArgs
     public static final RepositoryPolicyArgs Empty = new RepositoryPolicyArgs();
 
     @InputImport(name="policy", required=true)
-      private final Input<String> policy;
+      private final Output<String> policy;
 
-    public Input<String> getPolicy() {
+    public Output<String> getPolicy() {
         return this.policy;
     }
 
@@ -25,22 +25,22 @@ public final class RepositoryPolicyArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="repositoryName", required=true)
-      private final Input<String> repositoryName;
+      private final Output<String> repositoryName;
 
-    public Input<String> getRepositoryName() {
+    public Output<String> getRepositoryName() {
         return this.repositoryName;
     }
 
     public RepositoryPolicyArgs(
-        Input<String> policy,
-        Input<String> repositoryName) {
+        Output<String> policy,
+        Output<String> repositoryName) {
         this.policy = Objects.requireNonNull(policy, "expected parameter 'policy' to be non-null");
         this.repositoryName = Objects.requireNonNull(repositoryName, "expected parameter 'repositoryName' to be non-null");
     }
 
     private RepositoryPolicyArgs() {
-        this.policy = Input.empty();
-        this.repositoryName = Input.empty();
+        this.policy = Output.empty();
+        this.repositoryName = Output.empty();
     }
 
     public static Builder builder() {
@@ -52,8 +52,8 @@ public final class RepositoryPolicyArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private Input<String> policy;
-        private Input<String> repositoryName;
+        private Output<String> policy;
+        private Output<String> repositoryName;
 
         public Builder() {
     	      // Empty
@@ -65,23 +65,23 @@ public final class RepositoryPolicyArgs extends io.pulumi.resources.ResourceArgs
     	      this.repositoryName = defaults.repositoryName;
         }
 
-        public Builder policy(Input<String> policy) {
+        public Builder policy(Output<String> policy) {
             this.policy = Objects.requireNonNull(policy);
             return this;
         }
 
         public Builder policy(String policy) {
-            this.policy = Input.of(Objects.requireNonNull(policy));
+            this.policy = Output.of(Objects.requireNonNull(policy));
             return this;
         }
 
-        public Builder repositoryName(Input<String> repositoryName) {
+        public Builder repositoryName(Output<String> repositoryName) {
             this.repositoryName = Objects.requireNonNull(repositoryName);
             return this;
         }
 
         public Builder repositoryName(String repositoryName) {
-            this.repositoryName = Input.of(Objects.requireNonNull(repositoryName));
+            this.repositoryName = Output.of(Objects.requireNonNull(repositoryName));
             return this;
         }
         public RepositoryPolicyArgs build() {

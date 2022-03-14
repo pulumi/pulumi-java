@@ -5,7 +5,7 @@ package io.pulumi.azurenative.azurearcdata;
 
 import io.pulumi.azurenative.azurearcdata.inputs.DataControllerPropertiesArgs;
 import io.pulumi.azurenative.azurearcdata.inputs.ExtendedLocationArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -18,10 +18,10 @@ public final class DataControllerArgs extends io.pulumi.resources.ResourceArgs {
     public static final DataControllerArgs Empty = new DataControllerArgs();
 
     @InputImport(name="dataControllerName")
-      private final @Nullable Input<String> dataControllerName;
+      private final @Nullable Output<String> dataControllerName;
 
-    public Input<String> getDataControllerName() {
-        return this.dataControllerName == null ? Input.empty() : this.dataControllerName;
+    public Output<String> getDataControllerName() {
+        return this.dataControllerName == null ? Output.empty() : this.dataControllerName;
     }
 
     /**
@@ -29,10 +29,10 @@ public final class DataControllerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="extendedLocation")
-      private final @Nullable Input<ExtendedLocationArgs> extendedLocation;
+      private final @Nullable Output<ExtendedLocationArgs> extendedLocation;
 
-    public Input<ExtendedLocationArgs> getExtendedLocation() {
-        return this.extendedLocation == null ? Input.empty() : this.extendedLocation;
+    public Output<ExtendedLocationArgs> getExtendedLocation() {
+        return this.extendedLocation == null ? Output.empty() : this.extendedLocation;
     }
 
     /**
@@ -40,10 +40,10 @@ public final class DataControllerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -51,9 +51,9 @@ public final class DataControllerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="properties", required=true)
-      private final Input<DataControllerPropertiesArgs> properties;
+      private final Output<DataControllerPropertiesArgs> properties;
 
-    public Input<DataControllerPropertiesArgs> getProperties() {
+    public Output<DataControllerPropertiesArgs> getProperties() {
         return this.properties;
     }
 
@@ -62,9 +62,9 @@ public final class DataControllerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -73,19 +73,19 @@ public final class DataControllerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public DataControllerArgs(
-        @Nullable Input<String> dataControllerName,
-        @Nullable Input<ExtendedLocationArgs> extendedLocation,
-        @Nullable Input<String> location,
-        Input<DataControllerPropertiesArgs> properties,
-        Input<String> resourceGroupName,
-        @Nullable Input<Map<String,String>> tags) {
+        @Nullable Output<String> dataControllerName,
+        @Nullable Output<ExtendedLocationArgs> extendedLocation,
+        @Nullable Output<String> location,
+        Output<DataControllerPropertiesArgs> properties,
+        Output<String> resourceGroupName,
+        @Nullable Output<Map<String,String>> tags) {
         this.dataControllerName = dataControllerName;
         this.extendedLocation = extendedLocation;
         this.location = location;
@@ -95,12 +95,12 @@ public final class DataControllerArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DataControllerArgs() {
-        this.dataControllerName = Input.empty();
-        this.extendedLocation = Input.empty();
-        this.location = Input.empty();
-        this.properties = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.tags = Input.empty();
+        this.dataControllerName = Output.empty();
+        this.extendedLocation = Output.empty();
+        this.location = Output.empty();
+        this.properties = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -112,12 +112,12 @@ public final class DataControllerArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> dataControllerName;
-        private @Nullable Input<ExtendedLocationArgs> extendedLocation;
-        private @Nullable Input<String> location;
-        private Input<DataControllerPropertiesArgs> properties;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<Map<String,String>> tags;
+        private @Nullable Output<String> dataControllerName;
+        private @Nullable Output<ExtendedLocationArgs> extendedLocation;
+        private @Nullable Output<String> location;
+        private Output<DataControllerPropertiesArgs> properties;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<Map<String,String>> tags;
 
         public Builder() {
     	      // Empty
@@ -133,63 +133,63 @@ public final class DataControllerArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder dataControllerName(@Nullable Input<String> dataControllerName) {
+        public Builder dataControllerName(@Nullable Output<String> dataControllerName) {
             this.dataControllerName = dataControllerName;
             return this;
         }
 
         public Builder dataControllerName(@Nullable String dataControllerName) {
-            this.dataControllerName = Input.ofNullable(dataControllerName);
+            this.dataControllerName = Output.ofNullable(dataControllerName);
             return this;
         }
 
-        public Builder extendedLocation(@Nullable Input<ExtendedLocationArgs> extendedLocation) {
+        public Builder extendedLocation(@Nullable Output<ExtendedLocationArgs> extendedLocation) {
             this.extendedLocation = extendedLocation;
             return this;
         }
 
         public Builder extendedLocation(@Nullable ExtendedLocationArgs extendedLocation) {
-            this.extendedLocation = Input.ofNullable(extendedLocation);
+            this.extendedLocation = Output.ofNullable(extendedLocation);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder properties(Input<DataControllerPropertiesArgs> properties) {
+        public Builder properties(Output<DataControllerPropertiesArgs> properties) {
             this.properties = Objects.requireNonNull(properties);
             return this;
         }
 
         public Builder properties(DataControllerPropertiesArgs properties) {
-            this.properties = Input.of(Objects.requireNonNull(properties));
+            this.properties = Output.of(Objects.requireNonNull(properties));
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public DataControllerArgs build() {

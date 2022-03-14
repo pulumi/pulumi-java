@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -19,9 +19,9 @@ public final class InstanceTemplateSchedulingNodeAffinityArgs extends io.pulumi.
      * 
      */
     @InputImport(name="key", required=true)
-      private final Input<String> key;
+      private final Output<String> key;
 
-    public Input<String> getKey() {
+    public Output<String> getKey() {
         return this.key;
     }
 
@@ -31,9 +31,9 @@ public final class InstanceTemplateSchedulingNodeAffinityArgs extends io.pulumi.
      * 
      */
     @InputImport(name="operator", required=true)
-      private final Input<String> operator;
+      private final Output<String> operator;
 
-    public Input<String> getOperator() {
+    public Output<String> getOperator() {
         return this.operator;
     }
 
@@ -42,25 +42,25 @@ public final class InstanceTemplateSchedulingNodeAffinityArgs extends io.pulumi.
      * 
      */
     @InputImport(name="values", required=true)
-      private final Input<List<String>> values;
+      private final Output<List<String>> values;
 
-    public Input<List<String>> getValues() {
+    public Output<List<String>> getValues() {
         return this.values;
     }
 
     public InstanceTemplateSchedulingNodeAffinityArgs(
-        Input<String> key,
-        Input<String> operator,
-        Input<List<String>> values) {
+        Output<String> key,
+        Output<String> operator,
+        Output<List<String>> values) {
         this.key = Objects.requireNonNull(key, "expected parameter 'key' to be non-null");
         this.operator = Objects.requireNonNull(operator, "expected parameter 'operator' to be non-null");
         this.values = Objects.requireNonNull(values, "expected parameter 'values' to be non-null");
     }
 
     private InstanceTemplateSchedulingNodeAffinityArgs() {
-        this.key = Input.empty();
-        this.operator = Input.empty();
-        this.values = Input.empty();
+        this.key = Output.empty();
+        this.operator = Output.empty();
+        this.values = Output.empty();
     }
 
     public static Builder builder() {
@@ -72,9 +72,9 @@ public final class InstanceTemplateSchedulingNodeAffinityArgs extends io.pulumi.
     }
 
     public static final class Builder {
-        private Input<String> key;
-        private Input<String> operator;
-        private Input<List<String>> values;
+        private Output<String> key;
+        private Output<String> operator;
+        private Output<List<String>> values;
 
         public Builder() {
     	      // Empty
@@ -87,33 +87,33 @@ public final class InstanceTemplateSchedulingNodeAffinityArgs extends io.pulumi.
     	      this.values = defaults.values;
         }
 
-        public Builder key(Input<String> key) {
+        public Builder key(Output<String> key) {
             this.key = Objects.requireNonNull(key);
             return this;
         }
 
         public Builder key(String key) {
-            this.key = Input.of(Objects.requireNonNull(key));
+            this.key = Output.of(Objects.requireNonNull(key));
             return this;
         }
 
-        public Builder operator(Input<String> operator) {
+        public Builder operator(Output<String> operator) {
             this.operator = Objects.requireNonNull(operator);
             return this;
         }
 
         public Builder operator(String operator) {
-            this.operator = Input.of(Objects.requireNonNull(operator));
+            this.operator = Output.of(Objects.requireNonNull(operator));
             return this;
         }
 
-        public Builder values(Input<List<String>> values) {
+        public Builder values(Output<List<String>> values) {
             this.values = Objects.requireNonNull(values);
             return this;
         }
 
         public Builder values(List<String> values) {
-            this.values = Input.of(Objects.requireNonNull(values));
+            this.values = Output.of(Objects.requireNonNull(values));
             return this;
         }
         public InstanceTemplateSchedulingNodeAffinityArgs build() {

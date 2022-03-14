@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.directconnect.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -22,10 +22,10 @@ public final class PrivateVirtualInterfaceState extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="addressFamily")
-      private final @Nullable Input<String> addressFamily;
+      private final @Nullable Output<String> addressFamily;
 
-    public Input<String> getAddressFamily() {
-        return this.addressFamily == null ? Input.empty() : this.addressFamily;
+    public Output<String> getAddressFamily() {
+        return this.addressFamily == null ? Output.empty() : this.addressFamily;
     }
 
     /**
@@ -33,17 +33,17 @@ public final class PrivateVirtualInterfaceState extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="amazonAddress")
-      private final @Nullable Input<String> amazonAddress;
+      private final @Nullable Output<String> amazonAddress;
 
-    public Input<String> getAmazonAddress() {
-        return this.amazonAddress == null ? Input.empty() : this.amazonAddress;
+    public Output<String> getAmazonAddress() {
+        return this.amazonAddress == null ? Output.empty() : this.amazonAddress;
     }
 
     @InputImport(name="amazonSideAsn")
-      private final @Nullable Input<String> amazonSideAsn;
+      private final @Nullable Output<String> amazonSideAsn;
 
-    public Input<String> getAmazonSideAsn() {
-        return this.amazonSideAsn == null ? Input.empty() : this.amazonSideAsn;
+    public Output<String> getAmazonSideAsn() {
+        return this.amazonSideAsn == null ? Output.empty() : this.amazonSideAsn;
     }
 
     /**
@@ -51,10 +51,10 @@ public final class PrivateVirtualInterfaceState extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="arn")
-      private final @Nullable Input<String> arn;
+      private final @Nullable Output<String> arn;
 
-    public Input<String> getArn() {
-        return this.arn == null ? Input.empty() : this.arn;
+    public Output<String> getArn() {
+        return this.arn == null ? Output.empty() : this.arn;
     }
 
     /**
@@ -62,10 +62,10 @@ public final class PrivateVirtualInterfaceState extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="awsDevice")
-      private final @Nullable Input<String> awsDevice;
+      private final @Nullable Output<String> awsDevice;
 
-    public Input<String> getAwsDevice() {
-        return this.awsDevice == null ? Input.empty() : this.awsDevice;
+    public Output<String> getAwsDevice() {
+        return this.awsDevice == null ? Output.empty() : this.awsDevice;
     }
 
     /**
@@ -73,10 +73,10 @@ public final class PrivateVirtualInterfaceState extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="bgpAsn")
-      private final @Nullable Input<Integer> bgpAsn;
+      private final @Nullable Output<Integer> bgpAsn;
 
-    public Input<Integer> getBgpAsn() {
-        return this.bgpAsn == null ? Input.empty() : this.bgpAsn;
+    public Output<Integer> getBgpAsn() {
+        return this.bgpAsn == null ? Output.empty() : this.bgpAsn;
     }
 
     /**
@@ -84,10 +84,10 @@ public final class PrivateVirtualInterfaceState extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="bgpAuthKey")
-      private final @Nullable Input<String> bgpAuthKey;
+      private final @Nullable Output<String> bgpAuthKey;
 
-    public Input<String> getBgpAuthKey() {
-        return this.bgpAuthKey == null ? Input.empty() : this.bgpAuthKey;
+    public Output<String> getBgpAuthKey() {
+        return this.bgpAuthKey == null ? Output.empty() : this.bgpAuthKey;
     }
 
     /**
@@ -95,10 +95,10 @@ public final class PrivateVirtualInterfaceState extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="connectionId")
-      private final @Nullable Input<String> connectionId;
+      private final @Nullable Output<String> connectionId;
 
-    public Input<String> getConnectionId() {
-        return this.connectionId == null ? Input.empty() : this.connectionId;
+    public Output<String> getConnectionId() {
+        return this.connectionId == null ? Output.empty() : this.connectionId;
     }
 
     /**
@@ -106,10 +106,10 @@ public final class PrivateVirtualInterfaceState extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="customerAddress")
-      private final @Nullable Input<String> customerAddress;
+      private final @Nullable Output<String> customerAddress;
 
-    public Input<String> getCustomerAddress() {
-        return this.customerAddress == null ? Input.empty() : this.customerAddress;
+    public Output<String> getCustomerAddress() {
+        return this.customerAddress == null ? Output.empty() : this.customerAddress;
     }
 
     /**
@@ -117,10 +117,10 @@ public final class PrivateVirtualInterfaceState extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="dxGatewayId")
-      private final @Nullable Input<String> dxGatewayId;
+      private final @Nullable Output<String> dxGatewayId;
 
-    public Input<String> getDxGatewayId() {
-        return this.dxGatewayId == null ? Input.empty() : this.dxGatewayId;
+    public Output<String> getDxGatewayId() {
+        return this.dxGatewayId == null ? Output.empty() : this.dxGatewayId;
     }
 
     /**
@@ -128,10 +128,10 @@ public final class PrivateVirtualInterfaceState extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="jumboFrameCapable")
-      private final @Nullable Input<Boolean> jumboFrameCapable;
+      private final @Nullable Output<Boolean> jumboFrameCapable;
 
-    public Input<Boolean> getJumboFrameCapable() {
-        return this.jumboFrameCapable == null ? Input.empty() : this.jumboFrameCapable;
+    public Output<Boolean> getJumboFrameCapable() {
+        return this.jumboFrameCapable == null ? Output.empty() : this.jumboFrameCapable;
     }
 
     /**
@@ -140,10 +140,10 @@ public final class PrivateVirtualInterfaceState extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="mtu")
-      private final @Nullable Input<Integer> mtu;
+      private final @Nullable Output<Integer> mtu;
 
-    public Input<Integer> getMtu() {
-        return this.mtu == null ? Input.empty() : this.mtu;
+    public Output<Integer> getMtu() {
+        return this.mtu == null ? Output.empty() : this.mtu;
     }
 
     /**
@@ -151,17 +151,17 @@ public final class PrivateVirtualInterfaceState extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     @InputImport(name="sitelinkEnabled")
-      private final @Nullable Input<Boolean> sitelinkEnabled;
+      private final @Nullable Output<Boolean> sitelinkEnabled;
 
-    public Input<Boolean> getSitelinkEnabled() {
-        return this.sitelinkEnabled == null ? Input.empty() : this.sitelinkEnabled;
+    public Output<Boolean> getSitelinkEnabled() {
+        return this.sitelinkEnabled == null ? Output.empty() : this.sitelinkEnabled;
     }
 
     /**
@@ -169,10 +169,10 @@ public final class PrivateVirtualInterfaceState extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -180,10 +180,10 @@ public final class PrivateVirtualInterfaceState extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="tagsAll")
-      private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Input<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Input.empty() : this.tagsAll;
+    public Output<Map<String,String>> getTagsAll() {
+        return this.tagsAll == null ? Output.empty() : this.tagsAll;
     }
 
     /**
@@ -191,10 +191,10 @@ public final class PrivateVirtualInterfaceState extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="vlan")
-      private final @Nullable Input<Integer> vlan;
+      private final @Nullable Output<Integer> vlan;
 
-    public Input<Integer> getVlan() {
-        return this.vlan == null ? Input.empty() : this.vlan;
+    public Output<Integer> getVlan() {
+        return this.vlan == null ? Output.empty() : this.vlan;
     }
 
     /**
@@ -202,31 +202,31 @@ public final class PrivateVirtualInterfaceState extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="vpnGatewayId")
-      private final @Nullable Input<String> vpnGatewayId;
+      private final @Nullable Output<String> vpnGatewayId;
 
-    public Input<String> getVpnGatewayId() {
-        return this.vpnGatewayId == null ? Input.empty() : this.vpnGatewayId;
+    public Output<String> getVpnGatewayId() {
+        return this.vpnGatewayId == null ? Output.empty() : this.vpnGatewayId;
     }
 
     public PrivateVirtualInterfaceState(
-        @Nullable Input<String> addressFamily,
-        @Nullable Input<String> amazonAddress,
-        @Nullable Input<String> amazonSideAsn,
-        @Nullable Input<String> arn,
-        @Nullable Input<String> awsDevice,
-        @Nullable Input<Integer> bgpAsn,
-        @Nullable Input<String> bgpAuthKey,
-        @Nullable Input<String> connectionId,
-        @Nullable Input<String> customerAddress,
-        @Nullable Input<String> dxGatewayId,
-        @Nullable Input<Boolean> jumboFrameCapable,
-        @Nullable Input<Integer> mtu,
-        @Nullable Input<String> name,
-        @Nullable Input<Boolean> sitelinkEnabled,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<Map<String,String>> tagsAll,
-        @Nullable Input<Integer> vlan,
-        @Nullable Input<String> vpnGatewayId) {
+        @Nullable Output<String> addressFamily,
+        @Nullable Output<String> amazonAddress,
+        @Nullable Output<String> amazonSideAsn,
+        @Nullable Output<String> arn,
+        @Nullable Output<String> awsDevice,
+        @Nullable Output<Integer> bgpAsn,
+        @Nullable Output<String> bgpAuthKey,
+        @Nullable Output<String> connectionId,
+        @Nullable Output<String> customerAddress,
+        @Nullable Output<String> dxGatewayId,
+        @Nullable Output<Boolean> jumboFrameCapable,
+        @Nullable Output<Integer> mtu,
+        @Nullable Output<String> name,
+        @Nullable Output<Boolean> sitelinkEnabled,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<Map<String,String>> tagsAll,
+        @Nullable Output<Integer> vlan,
+        @Nullable Output<String> vpnGatewayId) {
         this.addressFamily = addressFamily;
         this.amazonAddress = amazonAddress;
         this.amazonSideAsn = amazonSideAsn;
@@ -248,24 +248,24 @@ public final class PrivateVirtualInterfaceState extends io.pulumi.resources.Reso
     }
 
     private PrivateVirtualInterfaceState() {
-        this.addressFamily = Input.empty();
-        this.amazonAddress = Input.empty();
-        this.amazonSideAsn = Input.empty();
-        this.arn = Input.empty();
-        this.awsDevice = Input.empty();
-        this.bgpAsn = Input.empty();
-        this.bgpAuthKey = Input.empty();
-        this.connectionId = Input.empty();
-        this.customerAddress = Input.empty();
-        this.dxGatewayId = Input.empty();
-        this.jumboFrameCapable = Input.empty();
-        this.mtu = Input.empty();
-        this.name = Input.empty();
-        this.sitelinkEnabled = Input.empty();
-        this.tags = Input.empty();
-        this.tagsAll = Input.empty();
-        this.vlan = Input.empty();
-        this.vpnGatewayId = Input.empty();
+        this.addressFamily = Output.empty();
+        this.amazonAddress = Output.empty();
+        this.amazonSideAsn = Output.empty();
+        this.arn = Output.empty();
+        this.awsDevice = Output.empty();
+        this.bgpAsn = Output.empty();
+        this.bgpAuthKey = Output.empty();
+        this.connectionId = Output.empty();
+        this.customerAddress = Output.empty();
+        this.dxGatewayId = Output.empty();
+        this.jumboFrameCapable = Output.empty();
+        this.mtu = Output.empty();
+        this.name = Output.empty();
+        this.sitelinkEnabled = Output.empty();
+        this.tags = Output.empty();
+        this.tagsAll = Output.empty();
+        this.vlan = Output.empty();
+        this.vpnGatewayId = Output.empty();
     }
 
     public static Builder builder() {
@@ -277,24 +277,24 @@ public final class PrivateVirtualInterfaceState extends io.pulumi.resources.Reso
     }
 
     public static final class Builder {
-        private @Nullable Input<String> addressFamily;
-        private @Nullable Input<String> amazonAddress;
-        private @Nullable Input<String> amazonSideAsn;
-        private @Nullable Input<String> arn;
-        private @Nullable Input<String> awsDevice;
-        private @Nullable Input<Integer> bgpAsn;
-        private @Nullable Input<String> bgpAuthKey;
-        private @Nullable Input<String> connectionId;
-        private @Nullable Input<String> customerAddress;
-        private @Nullable Input<String> dxGatewayId;
-        private @Nullable Input<Boolean> jumboFrameCapable;
-        private @Nullable Input<Integer> mtu;
-        private @Nullable Input<String> name;
-        private @Nullable Input<Boolean> sitelinkEnabled;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<Map<String,String>> tagsAll;
-        private @Nullable Input<Integer> vlan;
-        private @Nullable Input<String> vpnGatewayId;
+        private @Nullable Output<String> addressFamily;
+        private @Nullable Output<String> amazonAddress;
+        private @Nullable Output<String> amazonSideAsn;
+        private @Nullable Output<String> arn;
+        private @Nullable Output<String> awsDevice;
+        private @Nullable Output<Integer> bgpAsn;
+        private @Nullable Output<String> bgpAuthKey;
+        private @Nullable Output<String> connectionId;
+        private @Nullable Output<String> customerAddress;
+        private @Nullable Output<String> dxGatewayId;
+        private @Nullable Output<Boolean> jumboFrameCapable;
+        private @Nullable Output<Integer> mtu;
+        private @Nullable Output<String> name;
+        private @Nullable Output<Boolean> sitelinkEnabled;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<Map<String,String>> tagsAll;
+        private @Nullable Output<Integer> vlan;
+        private @Nullable Output<String> vpnGatewayId;
 
         public Builder() {
     	      // Empty
@@ -322,183 +322,183 @@ public final class PrivateVirtualInterfaceState extends io.pulumi.resources.Reso
     	      this.vpnGatewayId = defaults.vpnGatewayId;
         }
 
-        public Builder addressFamily(@Nullable Input<String> addressFamily) {
+        public Builder addressFamily(@Nullable Output<String> addressFamily) {
             this.addressFamily = addressFamily;
             return this;
         }
 
         public Builder addressFamily(@Nullable String addressFamily) {
-            this.addressFamily = Input.ofNullable(addressFamily);
+            this.addressFamily = Output.ofNullable(addressFamily);
             return this;
         }
 
-        public Builder amazonAddress(@Nullable Input<String> amazonAddress) {
+        public Builder amazonAddress(@Nullable Output<String> amazonAddress) {
             this.amazonAddress = amazonAddress;
             return this;
         }
 
         public Builder amazonAddress(@Nullable String amazonAddress) {
-            this.amazonAddress = Input.ofNullable(amazonAddress);
+            this.amazonAddress = Output.ofNullable(amazonAddress);
             return this;
         }
 
-        public Builder amazonSideAsn(@Nullable Input<String> amazonSideAsn) {
+        public Builder amazonSideAsn(@Nullable Output<String> amazonSideAsn) {
             this.amazonSideAsn = amazonSideAsn;
             return this;
         }
 
         public Builder amazonSideAsn(@Nullable String amazonSideAsn) {
-            this.amazonSideAsn = Input.ofNullable(amazonSideAsn);
+            this.amazonSideAsn = Output.ofNullable(amazonSideAsn);
             return this;
         }
 
-        public Builder arn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
 
         public Builder arn(@Nullable String arn) {
-            this.arn = Input.ofNullable(arn);
+            this.arn = Output.ofNullable(arn);
             return this;
         }
 
-        public Builder awsDevice(@Nullable Input<String> awsDevice) {
+        public Builder awsDevice(@Nullable Output<String> awsDevice) {
             this.awsDevice = awsDevice;
             return this;
         }
 
         public Builder awsDevice(@Nullable String awsDevice) {
-            this.awsDevice = Input.ofNullable(awsDevice);
+            this.awsDevice = Output.ofNullable(awsDevice);
             return this;
         }
 
-        public Builder bgpAsn(@Nullable Input<Integer> bgpAsn) {
+        public Builder bgpAsn(@Nullable Output<Integer> bgpAsn) {
             this.bgpAsn = bgpAsn;
             return this;
         }
 
         public Builder bgpAsn(@Nullable Integer bgpAsn) {
-            this.bgpAsn = Input.ofNullable(bgpAsn);
+            this.bgpAsn = Output.ofNullable(bgpAsn);
             return this;
         }
 
-        public Builder bgpAuthKey(@Nullable Input<String> bgpAuthKey) {
+        public Builder bgpAuthKey(@Nullable Output<String> bgpAuthKey) {
             this.bgpAuthKey = bgpAuthKey;
             return this;
         }
 
         public Builder bgpAuthKey(@Nullable String bgpAuthKey) {
-            this.bgpAuthKey = Input.ofNullable(bgpAuthKey);
+            this.bgpAuthKey = Output.ofNullable(bgpAuthKey);
             return this;
         }
 
-        public Builder connectionId(@Nullable Input<String> connectionId) {
+        public Builder connectionId(@Nullable Output<String> connectionId) {
             this.connectionId = connectionId;
             return this;
         }
 
         public Builder connectionId(@Nullable String connectionId) {
-            this.connectionId = Input.ofNullable(connectionId);
+            this.connectionId = Output.ofNullable(connectionId);
             return this;
         }
 
-        public Builder customerAddress(@Nullable Input<String> customerAddress) {
+        public Builder customerAddress(@Nullable Output<String> customerAddress) {
             this.customerAddress = customerAddress;
             return this;
         }
 
         public Builder customerAddress(@Nullable String customerAddress) {
-            this.customerAddress = Input.ofNullable(customerAddress);
+            this.customerAddress = Output.ofNullable(customerAddress);
             return this;
         }
 
-        public Builder dxGatewayId(@Nullable Input<String> dxGatewayId) {
+        public Builder dxGatewayId(@Nullable Output<String> dxGatewayId) {
             this.dxGatewayId = dxGatewayId;
             return this;
         }
 
         public Builder dxGatewayId(@Nullable String dxGatewayId) {
-            this.dxGatewayId = Input.ofNullable(dxGatewayId);
+            this.dxGatewayId = Output.ofNullable(dxGatewayId);
             return this;
         }
 
-        public Builder jumboFrameCapable(@Nullable Input<Boolean> jumboFrameCapable) {
+        public Builder jumboFrameCapable(@Nullable Output<Boolean> jumboFrameCapable) {
             this.jumboFrameCapable = jumboFrameCapable;
             return this;
         }
 
         public Builder jumboFrameCapable(@Nullable Boolean jumboFrameCapable) {
-            this.jumboFrameCapable = Input.ofNullable(jumboFrameCapable);
+            this.jumboFrameCapable = Output.ofNullable(jumboFrameCapable);
             return this;
         }
 
-        public Builder mtu(@Nullable Input<Integer> mtu) {
+        public Builder mtu(@Nullable Output<Integer> mtu) {
             this.mtu = mtu;
             return this;
         }
 
         public Builder mtu(@Nullable Integer mtu) {
-            this.mtu = Input.ofNullable(mtu);
+            this.mtu = Output.ofNullable(mtu);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder sitelinkEnabled(@Nullable Input<Boolean> sitelinkEnabled) {
+        public Builder sitelinkEnabled(@Nullable Output<Boolean> sitelinkEnabled) {
             this.sitelinkEnabled = sitelinkEnabled;
             return this;
         }
 
         public Builder sitelinkEnabled(@Nullable Boolean sitelinkEnabled) {
-            this.sitelinkEnabled = Input.ofNullable(sitelinkEnabled);
+            this.sitelinkEnabled = Output.ofNullable(sitelinkEnabled);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Input.ofNullable(tagsAll);
+            this.tagsAll = Output.ofNullable(tagsAll);
             return this;
         }
 
-        public Builder vlan(@Nullable Input<Integer> vlan) {
+        public Builder vlan(@Nullable Output<Integer> vlan) {
             this.vlan = vlan;
             return this;
         }
 
         public Builder vlan(@Nullable Integer vlan) {
-            this.vlan = Input.ofNullable(vlan);
+            this.vlan = Output.ofNullable(vlan);
             return this;
         }
 
-        public Builder vpnGatewayId(@Nullable Input<String> vpnGatewayId) {
+        public Builder vpnGatewayId(@Nullable Output<String> vpnGatewayId) {
             this.vpnGatewayId = vpnGatewayId;
             return this;
         }
 
         public Builder vpnGatewayId(@Nullable String vpnGatewayId) {
-            this.vpnGatewayId = Input.ofNullable(vpnGatewayId);
+            this.vpnGatewayId = Output.ofNullable(vpnGatewayId);
             return this;
         }
         public PrivateVirtualInterfaceState build() {

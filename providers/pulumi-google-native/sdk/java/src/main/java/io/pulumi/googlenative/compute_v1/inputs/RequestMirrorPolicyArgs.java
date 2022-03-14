@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class RequestMirrorPolicyArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="backendService")
-      private final @Nullable Input<String> backendService;
+      private final @Nullable Output<String> backendService;
 
-    public Input<String> getBackendService() {
-        return this.backendService == null ? Input.empty() : this.backendService;
+    public Output<String> getBackendService() {
+        return this.backendService == null ? Output.empty() : this.backendService;
     }
 
-    public RequestMirrorPolicyArgs(@Nullable Input<String> backendService) {
+    public RequestMirrorPolicyArgs(@Nullable Output<String> backendService) {
         this.backendService = backendService;
     }
 
     private RequestMirrorPolicyArgs() {
-        this.backendService = Input.empty();
+        this.backendService = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class RequestMirrorPolicyArgs extends io.pulumi.resources.ResourceA
     }
 
     public static final class Builder {
-        private @Nullable Input<String> backendService;
+        private @Nullable Output<String> backendService;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class RequestMirrorPolicyArgs extends io.pulumi.resources.ResourceA
     	      this.backendService = defaults.backendService;
         }
 
-        public Builder backendService(@Nullable Input<String> backendService) {
+        public Builder backendService(@Nullable Output<String> backendService) {
             this.backendService = backendService;
             return this;
         }
 
         public Builder backendService(@Nullable String backendService) {
-            this.backendService = Input.ofNullable(backendService);
+            this.backendService = Output.ofNullable(backendService);
             return this;
         }
         public RequestMirrorPolicyArgs build() {

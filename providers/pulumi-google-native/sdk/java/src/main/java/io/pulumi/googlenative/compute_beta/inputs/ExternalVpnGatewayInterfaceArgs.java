@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_beta.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class ExternalVpnGatewayInterfaceArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="id")
-      private final @Nullable Input<Integer> id;
+      private final @Nullable Output<Integer> id;
 
-    public Input<Integer> getId() {
-        return this.id == null ? Input.empty() : this.id;
+    public Output<Integer> getId() {
+        return this.id == null ? Output.empty() : this.id;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class ExternalVpnGatewayInterfaceArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="ipAddress")
-      private final @Nullable Input<String> ipAddress;
+      private final @Nullable Output<String> ipAddress;
 
-    public Input<String> getIpAddress() {
-        return this.ipAddress == null ? Input.empty() : this.ipAddress;
+    public Output<String> getIpAddress() {
+        return this.ipAddress == null ? Output.empty() : this.ipAddress;
     }
 
     public ExternalVpnGatewayInterfaceArgs(
-        @Nullable Input<Integer> id,
-        @Nullable Input<String> ipAddress) {
+        @Nullable Output<Integer> id,
+        @Nullable Output<String> ipAddress) {
         this.id = id;
         this.ipAddress = ipAddress;
     }
 
     private ExternalVpnGatewayInterfaceArgs() {
-        this.id = Input.empty();
-        this.ipAddress = Input.empty();
+        this.id = Output.empty();
+        this.ipAddress = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class ExternalVpnGatewayInterfaceArgs extends io.pulumi.resources.R
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> id;
-        private @Nullable Input<String> ipAddress;
+        private @Nullable Output<Integer> id;
+        private @Nullable Output<String> ipAddress;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class ExternalVpnGatewayInterfaceArgs extends io.pulumi.resources.R
     	      this.ipAddress = defaults.ipAddress;
         }
 
-        public Builder id(@Nullable Input<Integer> id) {
+        public Builder id(@Nullable Output<Integer> id) {
             this.id = id;
             return this;
         }
 
         public Builder id(@Nullable Integer id) {
-            this.id = Input.ofNullable(id);
+            this.id = Output.ofNullable(id);
             return this;
         }
 
-        public Builder ipAddress(@Nullable Input<String> ipAddress) {
+        public Builder ipAddress(@Nullable Output<String> ipAddress) {
             this.ipAddress = ipAddress;
             return this;
         }
 
         public Builder ipAddress(@Nullable String ipAddress) {
-            this.ipAddress = Input.ofNullable(ipAddress);
+            this.ipAddress = Output.ofNullable(ipAddress);
             return this;
         }
         public ExternalVpnGatewayInterfaceArgs build() {

@@ -7,7 +7,7 @@ import io.pulumi.azurenative.videoanalyzer.inputs.EccTokenKeyArgs;
 import io.pulumi.azurenative.videoanalyzer.inputs.RsaTokenKeyArgs;
 import io.pulumi.azurenative.videoanalyzer.inputs.TokenClaimArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -28,10 +28,10 @@ public final class JwtAuthenticationArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="audiences")
-      private final @Nullable Input<List<String>> audiences;
+      private final @Nullable Output<List<String>> audiences;
 
-    public Input<List<String>> getAudiences() {
-        return this.audiences == null ? Input.empty() : this.audiences;
+    public Output<List<String>> getAudiences() {
+        return this.audiences == null ? Output.empty() : this.audiences;
     }
 
     /**
@@ -39,10 +39,10 @@ public final class JwtAuthenticationArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="claims")
-      private final @Nullable Input<List<TokenClaimArgs>> claims;
+      private final @Nullable Output<List<TokenClaimArgs>> claims;
 
-    public Input<List<TokenClaimArgs>> getClaims() {
-        return this.claims == null ? Input.empty() : this.claims;
+    public Output<List<TokenClaimArgs>> getClaims() {
+        return this.claims == null ? Output.empty() : this.claims;
     }
 
     /**
@@ -50,10 +50,10 @@ public final class JwtAuthenticationArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="issuers")
-      private final @Nullable Input<List<String>> issuers;
+      private final @Nullable Output<List<String>> issuers;
 
-    public Input<List<String>> getIssuers() {
-        return this.issuers == null ? Input.empty() : this.issuers;
+    public Output<List<String>> getIssuers() {
+        return this.issuers == null ? Output.empty() : this.issuers;
     }
 
     /**
@@ -61,10 +61,10 @@ public final class JwtAuthenticationArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="keys")
-      private final @Nullable Input<List<Either<EccTokenKeyArgs,RsaTokenKeyArgs>>> keys;
+      private final @Nullable Output<List<Either<EccTokenKeyArgs,RsaTokenKeyArgs>>> keys;
 
-    public Input<List<Either<EccTokenKeyArgs,RsaTokenKeyArgs>>> getKeys() {
-        return this.keys == null ? Input.empty() : this.keys;
+    public Output<List<Either<EccTokenKeyArgs,RsaTokenKeyArgs>>> getKeys() {
+        return this.keys == null ? Output.empty() : this.keys;
     }
 
     /**
@@ -73,18 +73,18 @@ public final class JwtAuthenticationArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<String> type;
+      private final Output<String> type;
 
-    public Input<String> getType() {
+    public Output<String> getType() {
         return this.type;
     }
 
     public JwtAuthenticationArgs(
-        @Nullable Input<List<String>> audiences,
-        @Nullable Input<List<TokenClaimArgs>> claims,
-        @Nullable Input<List<String>> issuers,
-        @Nullable Input<List<Either<EccTokenKeyArgs,RsaTokenKeyArgs>>> keys,
-        Input<String> type) {
+        @Nullable Output<List<String>> audiences,
+        @Nullable Output<List<TokenClaimArgs>> claims,
+        @Nullable Output<List<String>> issuers,
+        @Nullable Output<List<Either<EccTokenKeyArgs,RsaTokenKeyArgs>>> keys,
+        Output<String> type) {
         this.audiences = audiences;
         this.claims = claims;
         this.issuers = issuers;
@@ -93,11 +93,11 @@ public final class JwtAuthenticationArgs extends io.pulumi.resources.ResourceArg
     }
 
     private JwtAuthenticationArgs() {
-        this.audiences = Input.empty();
-        this.claims = Input.empty();
-        this.issuers = Input.empty();
-        this.keys = Input.empty();
-        this.type = Input.empty();
+        this.audiences = Output.empty();
+        this.claims = Output.empty();
+        this.issuers = Output.empty();
+        this.keys = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -109,11 +109,11 @@ public final class JwtAuthenticationArgs extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> audiences;
-        private @Nullable Input<List<TokenClaimArgs>> claims;
-        private @Nullable Input<List<String>> issuers;
-        private @Nullable Input<List<Either<EccTokenKeyArgs,RsaTokenKeyArgs>>> keys;
-        private Input<String> type;
+        private @Nullable Output<List<String>> audiences;
+        private @Nullable Output<List<TokenClaimArgs>> claims;
+        private @Nullable Output<List<String>> issuers;
+        private @Nullable Output<List<Either<EccTokenKeyArgs,RsaTokenKeyArgs>>> keys;
+        private Output<String> type;
 
         public Builder() {
     	      // Empty
@@ -128,53 +128,53 @@ public final class JwtAuthenticationArgs extends io.pulumi.resources.ResourceArg
     	      this.type = defaults.type;
         }
 
-        public Builder audiences(@Nullable Input<List<String>> audiences) {
+        public Builder audiences(@Nullable Output<List<String>> audiences) {
             this.audiences = audiences;
             return this;
         }
 
         public Builder audiences(@Nullable List<String> audiences) {
-            this.audiences = Input.ofNullable(audiences);
+            this.audiences = Output.ofNullable(audiences);
             return this;
         }
 
-        public Builder claims(@Nullable Input<List<TokenClaimArgs>> claims) {
+        public Builder claims(@Nullable Output<List<TokenClaimArgs>> claims) {
             this.claims = claims;
             return this;
         }
 
         public Builder claims(@Nullable List<TokenClaimArgs> claims) {
-            this.claims = Input.ofNullable(claims);
+            this.claims = Output.ofNullable(claims);
             return this;
         }
 
-        public Builder issuers(@Nullable Input<List<String>> issuers) {
+        public Builder issuers(@Nullable Output<List<String>> issuers) {
             this.issuers = issuers;
             return this;
         }
 
         public Builder issuers(@Nullable List<String> issuers) {
-            this.issuers = Input.ofNullable(issuers);
+            this.issuers = Output.ofNullable(issuers);
             return this;
         }
 
-        public Builder keys(@Nullable Input<List<Either<EccTokenKeyArgs,RsaTokenKeyArgs>>> keys) {
+        public Builder keys(@Nullable Output<List<Either<EccTokenKeyArgs,RsaTokenKeyArgs>>> keys) {
             this.keys = keys;
             return this;
         }
 
         public Builder keys(@Nullable List<Either<EccTokenKeyArgs,RsaTokenKeyArgs>> keys) {
-            this.keys = Input.ofNullable(keys);
+            this.keys = Output.ofNullable(keys);
             return this;
         }
 
-        public Builder type(Input<String> type) {
+        public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(String type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
         public JwtAuthenticationArgs build() {

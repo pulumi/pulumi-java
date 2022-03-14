@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.dataflow.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
@@ -22,10 +22,10 @@ public final class FlexTemplateJobState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="containerSpecGcsPath")
-      private final @Nullable Input<String> containerSpecGcsPath;
+      private final @Nullable Output<String> containerSpecGcsPath;
 
-    public Input<String> getContainerSpecGcsPath() {
-        return this.containerSpecGcsPath == null ? Input.empty() : this.containerSpecGcsPath;
+    public Output<String> getContainerSpecGcsPath() {
+        return this.containerSpecGcsPath == null ? Output.empty() : this.containerSpecGcsPath;
     }
 
     /**
@@ -33,10 +33,10 @@ public final class FlexTemplateJobState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="jobId")
-      private final @Nullable Input<String> jobId;
+      private final @Nullable Output<String> jobId;
 
-    public Input<String> getJobId() {
-        return this.jobId == null ? Input.empty() : this.jobId;
+    public Output<String> getJobId() {
+        return this.jobId == null ? Output.empty() : this.jobId;
     }
 
     /**
@@ -54,11 +54,11 @@ public final class FlexTemplateJobState extends io.pulumi.resources.ResourceArgs
      */
     @Deprecated /* Deprecated until the API supports this field */
     @InputImport(name="labels")
-      private final @Nullable Input<Map<String,Object>> labels;
+      private final @Nullable Output<Map<String,Object>> labels;
 
     @Deprecated /* Deprecated until the API supports this field */
-    public Input<Map<String,Object>> getLabels() {
-        return this.labels == null ? Input.empty() : this.labels;
+    public Output<Map<String,Object>> getLabels() {
+        return this.labels == null ? Output.empty() : this.labels;
     }
 
     /**
@@ -66,10 +66,10 @@ public final class FlexTemplateJobState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -78,10 +78,10 @@ public final class FlexTemplateJobState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="onDelete")
-      private final @Nullable Input<String> onDelete;
+      private final @Nullable Output<String> onDelete;
 
-    public Input<String> getOnDelete() {
-        return this.onDelete == null ? Input.empty() : this.onDelete;
+    public Output<String> getOnDelete() {
+        return this.onDelete == null ? Output.empty() : this.onDelete;
     }
 
     /**
@@ -91,10 +91,10 @@ public final class FlexTemplateJobState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="parameters")
-      private final @Nullable Input<Map<String,Object>> parameters;
+      private final @Nullable Output<Map<String,Object>> parameters;
 
-    public Input<Map<String,Object>> getParameters() {
-        return this.parameters == null ? Input.empty() : this.parameters;
+    public Output<Map<String,Object>> getParameters() {
+        return this.parameters == null ? Output.empty() : this.parameters;
     }
 
     /**
@@ -103,10 +103,10 @@ public final class FlexTemplateJobState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -114,10 +114,10 @@ public final class FlexTemplateJobState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="region")
-      private final @Nullable Input<String> region;
+      private final @Nullable Output<String> region;
 
-    public Input<String> getRegion() {
-        return this.region == null ? Input.empty() : this.region;
+    public Output<String> getRegion() {
+        return this.region == null ? Output.empty() : this.region;
     }
 
     /**
@@ -125,22 +125,22 @@ public final class FlexTemplateJobState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="state")
-      private final @Nullable Input<String> state;
+      private final @Nullable Output<String> state;
 
-    public Input<String> getState() {
-        return this.state == null ? Input.empty() : this.state;
+    public Output<String> getState() {
+        return this.state == null ? Output.empty() : this.state;
     }
 
     public FlexTemplateJobState(
-        @Nullable Input<String> containerSpecGcsPath,
-        @Nullable Input<String> jobId,
-        @Nullable Input<Map<String,Object>> labels,
-        @Nullable Input<String> name,
-        @Nullable Input<String> onDelete,
-        @Nullable Input<Map<String,Object>> parameters,
-        @Nullable Input<String> project,
-        @Nullable Input<String> region,
-        @Nullable Input<String> state) {
+        @Nullable Output<String> containerSpecGcsPath,
+        @Nullable Output<String> jobId,
+        @Nullable Output<Map<String,Object>> labels,
+        @Nullable Output<String> name,
+        @Nullable Output<String> onDelete,
+        @Nullable Output<Map<String,Object>> parameters,
+        @Nullable Output<String> project,
+        @Nullable Output<String> region,
+        @Nullable Output<String> state) {
         this.containerSpecGcsPath = containerSpecGcsPath;
         this.jobId = jobId;
         this.labels = labels;
@@ -153,15 +153,15 @@ public final class FlexTemplateJobState extends io.pulumi.resources.ResourceArgs
     }
 
     private FlexTemplateJobState() {
-        this.containerSpecGcsPath = Input.empty();
-        this.jobId = Input.empty();
-        this.labels = Input.empty();
-        this.name = Input.empty();
-        this.onDelete = Input.empty();
-        this.parameters = Input.empty();
-        this.project = Input.empty();
-        this.region = Input.empty();
-        this.state = Input.empty();
+        this.containerSpecGcsPath = Output.empty();
+        this.jobId = Output.empty();
+        this.labels = Output.empty();
+        this.name = Output.empty();
+        this.onDelete = Output.empty();
+        this.parameters = Output.empty();
+        this.project = Output.empty();
+        this.region = Output.empty();
+        this.state = Output.empty();
     }
 
     public static Builder builder() {
@@ -173,15 +173,15 @@ public final class FlexTemplateJobState extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private @Nullable Input<String> containerSpecGcsPath;
-        private @Nullable Input<String> jobId;
-        private @Nullable Input<Map<String,Object>> labels;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> onDelete;
-        private @Nullable Input<Map<String,Object>> parameters;
-        private @Nullable Input<String> project;
-        private @Nullable Input<String> region;
-        private @Nullable Input<String> state;
+        private @Nullable Output<String> containerSpecGcsPath;
+        private @Nullable Output<String> jobId;
+        private @Nullable Output<Map<String,Object>> labels;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> onDelete;
+        private @Nullable Output<Map<String,Object>> parameters;
+        private @Nullable Output<String> project;
+        private @Nullable Output<String> region;
+        private @Nullable Output<String> state;
 
         public Builder() {
     	      // Empty
@@ -200,93 +200,93 @@ public final class FlexTemplateJobState extends io.pulumi.resources.ResourceArgs
     	      this.state = defaults.state;
         }
 
-        public Builder containerSpecGcsPath(@Nullable Input<String> containerSpecGcsPath) {
+        public Builder containerSpecGcsPath(@Nullable Output<String> containerSpecGcsPath) {
             this.containerSpecGcsPath = containerSpecGcsPath;
             return this;
         }
 
         public Builder containerSpecGcsPath(@Nullable String containerSpecGcsPath) {
-            this.containerSpecGcsPath = Input.ofNullable(containerSpecGcsPath);
+            this.containerSpecGcsPath = Output.ofNullable(containerSpecGcsPath);
             return this;
         }
 
-        public Builder jobId(@Nullable Input<String> jobId) {
+        public Builder jobId(@Nullable Output<String> jobId) {
             this.jobId = jobId;
             return this;
         }
 
         public Builder jobId(@Nullable String jobId) {
-            this.jobId = Input.ofNullable(jobId);
+            this.jobId = Output.ofNullable(jobId);
             return this;
         }
 
-        public Builder labels(@Nullable Input<Map<String,Object>> labels) {
+        public Builder labels(@Nullable Output<Map<String,Object>> labels) {
             this.labels = labels;
             return this;
         }
 
         public Builder labels(@Nullable Map<String,Object> labels) {
-            this.labels = Input.ofNullable(labels);
+            this.labels = Output.ofNullable(labels);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder onDelete(@Nullable Input<String> onDelete) {
+        public Builder onDelete(@Nullable Output<String> onDelete) {
             this.onDelete = onDelete;
             return this;
         }
 
         public Builder onDelete(@Nullable String onDelete) {
-            this.onDelete = Input.ofNullable(onDelete);
+            this.onDelete = Output.ofNullable(onDelete);
             return this;
         }
 
-        public Builder parameters(@Nullable Input<Map<String,Object>> parameters) {
+        public Builder parameters(@Nullable Output<Map<String,Object>> parameters) {
             this.parameters = parameters;
             return this;
         }
 
         public Builder parameters(@Nullable Map<String,Object> parameters) {
-            this.parameters = Input.ofNullable(parameters);
+            this.parameters = Output.ofNullable(parameters);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder region(@Nullable Input<String> region) {
+        public Builder region(@Nullable Output<String> region) {
             this.region = region;
             return this;
         }
 
         public Builder region(@Nullable String region) {
-            this.region = Input.ofNullable(region);
+            this.region = Output.ofNullable(region);
             return this;
         }
 
-        public Builder state(@Nullable Input<String> state) {
+        public Builder state(@Nullable Output<String> state) {
             this.state = state;
             return this;
         }
 
         public Builder state(@Nullable String state) {
-            this.state = Input.ofNullable(state);
+            this.state = Output.ofNullable(state);
             return this;
         }
         public FlexTemplateJobState build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.core_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,9 +23,9 @@ public final class ConfigMapNodeConfigSourceArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="kubeletConfigKey", required=true)
-      private final Input<String> kubeletConfigKey;
+      private final Output<String> kubeletConfigKey;
 
-    public Input<String> getKubeletConfigKey() {
+    public Output<String> getKubeletConfigKey() {
         return this.kubeletConfigKey;
     }
 
@@ -34,9 +34,9 @@ public final class ConfigMapNodeConfigSourceArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="name", required=true)
-      private final Input<String> name;
+      private final Output<String> name;
 
-    public Input<String> getName() {
+    public Output<String> getName() {
         return this.name;
     }
 
@@ -45,9 +45,9 @@ public final class ConfigMapNodeConfigSourceArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="namespace", required=true)
-      private final Input<String> namespace;
+      private final Output<String> namespace;
 
-    public Input<String> getNamespace() {
+    public Output<String> getNamespace() {
         return this.namespace;
     }
 
@@ -56,10 +56,10 @@ public final class ConfigMapNodeConfigSourceArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="resourceVersion")
-      private final @Nullable Input<String> resourceVersion;
+      private final @Nullable Output<String> resourceVersion;
 
-    public Input<String> getResourceVersion() {
-        return this.resourceVersion == null ? Input.empty() : this.resourceVersion;
+    public Output<String> getResourceVersion() {
+        return this.resourceVersion == null ? Output.empty() : this.resourceVersion;
     }
 
     /**
@@ -67,18 +67,18 @@ public final class ConfigMapNodeConfigSourceArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="uid")
-      private final @Nullable Input<String> uid;
+      private final @Nullable Output<String> uid;
 
-    public Input<String> getUid() {
-        return this.uid == null ? Input.empty() : this.uid;
+    public Output<String> getUid() {
+        return this.uid == null ? Output.empty() : this.uid;
     }
 
     public ConfigMapNodeConfigSourceArgs(
-        Input<String> kubeletConfigKey,
-        Input<String> name,
-        Input<String> namespace,
-        @Nullable Input<String> resourceVersion,
-        @Nullable Input<String> uid) {
+        Output<String> kubeletConfigKey,
+        Output<String> name,
+        Output<String> namespace,
+        @Nullable Output<String> resourceVersion,
+        @Nullable Output<String> uid) {
         this.kubeletConfigKey = Objects.requireNonNull(kubeletConfigKey, "expected parameter 'kubeletConfigKey' to be non-null");
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
         this.namespace = Objects.requireNonNull(namespace, "expected parameter 'namespace' to be non-null");
@@ -87,11 +87,11 @@ public final class ConfigMapNodeConfigSourceArgs extends io.pulumi.resources.Res
     }
 
     private ConfigMapNodeConfigSourceArgs() {
-        this.kubeletConfigKey = Input.empty();
-        this.name = Input.empty();
-        this.namespace = Input.empty();
-        this.resourceVersion = Input.empty();
-        this.uid = Input.empty();
+        this.kubeletConfigKey = Output.empty();
+        this.name = Output.empty();
+        this.namespace = Output.empty();
+        this.resourceVersion = Output.empty();
+        this.uid = Output.empty();
     }
 
     public static Builder builder() {
@@ -103,11 +103,11 @@ public final class ConfigMapNodeConfigSourceArgs extends io.pulumi.resources.Res
     }
 
     public static final class Builder {
-        private Input<String> kubeletConfigKey;
-        private Input<String> name;
-        private Input<String> namespace;
-        private @Nullable Input<String> resourceVersion;
-        private @Nullable Input<String> uid;
+        private Output<String> kubeletConfigKey;
+        private Output<String> name;
+        private Output<String> namespace;
+        private @Nullable Output<String> resourceVersion;
+        private @Nullable Output<String> uid;
 
         public Builder() {
     	      // Empty
@@ -122,53 +122,53 @@ public final class ConfigMapNodeConfigSourceArgs extends io.pulumi.resources.Res
     	      this.uid = defaults.uid;
         }
 
-        public Builder kubeletConfigKey(Input<String> kubeletConfigKey) {
+        public Builder kubeletConfigKey(Output<String> kubeletConfigKey) {
             this.kubeletConfigKey = Objects.requireNonNull(kubeletConfigKey);
             return this;
         }
 
         public Builder kubeletConfigKey(String kubeletConfigKey) {
-            this.kubeletConfigKey = Input.of(Objects.requireNonNull(kubeletConfigKey));
+            this.kubeletConfigKey = Output.of(Objects.requireNonNull(kubeletConfigKey));
             return this;
         }
 
-        public Builder name(Input<String> name) {
+        public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(String name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder namespace(Input<String> namespace) {
+        public Builder namespace(Output<String> namespace) {
             this.namespace = Objects.requireNonNull(namespace);
             return this;
         }
 
         public Builder namespace(String namespace) {
-            this.namespace = Input.of(Objects.requireNonNull(namespace));
+            this.namespace = Output.of(Objects.requireNonNull(namespace));
             return this;
         }
 
-        public Builder resourceVersion(@Nullable Input<String> resourceVersion) {
+        public Builder resourceVersion(@Nullable Output<String> resourceVersion) {
             this.resourceVersion = resourceVersion;
             return this;
         }
 
         public Builder resourceVersion(@Nullable String resourceVersion) {
-            this.resourceVersion = Input.ofNullable(resourceVersion);
+            this.resourceVersion = Output.ofNullable(resourceVersion);
             return this;
         }
 
-        public Builder uid(@Nullable Input<String> uid) {
+        public Builder uid(@Nullable Output<String> uid) {
             this.uid = uid;
             return this;
         }
 
         public Builder uid(@Nullable String uid) {
-            this.uid = Input.ofNullable(uid);
+            this.uid = Output.ofNullable(uid);
             return this;
         }
         public ConfigMapNodeConfigSourceArgs build() {

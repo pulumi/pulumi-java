@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.delegatednetwork.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class ControllerDetailsArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="id")
-      private final @Nullable Input<String> id;
+      private final @Nullable Output<String> id;
 
-    public Input<String> getId() {
-        return this.id == null ? Input.empty() : this.id;
+    public Output<String> getId() {
+        return this.id == null ? Output.empty() : this.id;
     }
 
-    public ControllerDetailsArgs(@Nullable Input<String> id) {
+    public ControllerDetailsArgs(@Nullable Output<String> id) {
         this.id = id;
     }
 
     private ControllerDetailsArgs() {
-        this.id = Input.empty();
+        this.id = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class ControllerDetailsArgs extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private @Nullable Input<String> id;
+        private @Nullable Output<String> id;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class ControllerDetailsArgs extends io.pulumi.resources.ResourceArg
     	      this.id = defaults.id;
         }
 
-        public Builder id(@Nullable Input<String> id) {
+        public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
 
         public Builder id(@Nullable String id) {
-            this.id = Input.ofNullable(id);
+            this.id = Output.ofNullable(id);
             return this;
         }
         public ControllerDetailsArgs build() {

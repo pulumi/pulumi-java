@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.lightsail.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -15,29 +15,29 @@ public final class ContainerEnvironmentVariableArgs extends io.pulumi.resources.
     public static final ContainerEnvironmentVariableArgs Empty = new ContainerEnvironmentVariableArgs();
 
     @InputImport(name="value")
-      private final @Nullable Input<String> value;
+      private final @Nullable Output<String> value;
 
-    public Input<String> getValue() {
-        return this.value == null ? Input.empty() : this.value;
+    public Output<String> getValue() {
+        return this.value == null ? Output.empty() : this.value;
     }
 
     @InputImport(name="variable")
-      private final @Nullable Input<String> variable;
+      private final @Nullable Output<String> variable;
 
-    public Input<String> getVariable() {
-        return this.variable == null ? Input.empty() : this.variable;
+    public Output<String> getVariable() {
+        return this.variable == null ? Output.empty() : this.variable;
     }
 
     public ContainerEnvironmentVariableArgs(
-        @Nullable Input<String> value,
-        @Nullable Input<String> variable) {
+        @Nullable Output<String> value,
+        @Nullable Output<String> variable) {
         this.value = value;
         this.variable = variable;
     }
 
     private ContainerEnvironmentVariableArgs() {
-        this.value = Input.empty();
-        this.variable = Input.empty();
+        this.value = Output.empty();
+        this.variable = Output.empty();
     }
 
     public static Builder builder() {
@@ -49,8 +49,8 @@ public final class ContainerEnvironmentVariableArgs extends io.pulumi.resources.
     }
 
     public static final class Builder {
-        private @Nullable Input<String> value;
-        private @Nullable Input<String> variable;
+        private @Nullable Output<String> value;
+        private @Nullable Output<String> variable;
 
         public Builder() {
     	      // Empty
@@ -62,23 +62,23 @@ public final class ContainerEnvironmentVariableArgs extends io.pulumi.resources.
     	      this.variable = defaults.variable;
         }
 
-        public Builder value(@Nullable Input<String> value) {
+        public Builder value(@Nullable Output<String> value) {
             this.value = value;
             return this;
         }
 
         public Builder value(@Nullable String value) {
-            this.value = Input.ofNullable(value);
+            this.value = Output.ofNullable(value);
             return this;
         }
 
-        public Builder variable(@Nullable Input<String> variable) {
+        public Builder variable(@Nullable Output<String> variable) {
             this.variable = variable;
             return this;
         }
 
         public Builder variable(@Nullable String variable) {
-            this.variable = Input.ofNullable(variable);
+            this.variable = Output.ofNullable(variable);
             return this;
         }
         public ContainerEnvironmentVariableArgs build() {

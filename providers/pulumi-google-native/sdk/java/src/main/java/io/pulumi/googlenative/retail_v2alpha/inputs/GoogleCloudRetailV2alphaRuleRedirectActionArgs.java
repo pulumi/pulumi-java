@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.retail_v2alpha.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class GoogleCloudRetailV2alphaRuleRedirectActionArgs extends io.pul
      * 
      */
     @InputImport(name="redirectUri")
-      private final @Nullable Input<String> redirectUri;
+      private final @Nullable Output<String> redirectUri;
 
-    public Input<String> getRedirectUri() {
-        return this.redirectUri == null ? Input.empty() : this.redirectUri;
+    public Output<String> getRedirectUri() {
+        return this.redirectUri == null ? Output.empty() : this.redirectUri;
     }
 
-    public GoogleCloudRetailV2alphaRuleRedirectActionArgs(@Nullable Input<String> redirectUri) {
+    public GoogleCloudRetailV2alphaRuleRedirectActionArgs(@Nullable Output<String> redirectUri) {
         this.redirectUri = redirectUri;
     }
 
     private GoogleCloudRetailV2alphaRuleRedirectActionArgs() {
-        this.redirectUri = Input.empty();
+        this.redirectUri = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class GoogleCloudRetailV2alphaRuleRedirectActionArgs extends io.pul
     }
 
     public static final class Builder {
-        private @Nullable Input<String> redirectUri;
+        private @Nullable Output<String> redirectUri;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class GoogleCloudRetailV2alphaRuleRedirectActionArgs extends io.pul
     	      this.redirectUri = defaults.redirectUri;
         }
 
-        public Builder redirectUri(@Nullable Input<String> redirectUri) {
+        public Builder redirectUri(@Nullable Output<String> redirectUri) {
             this.redirectUri = redirectUri;
             return this;
         }
 
         public Builder redirectUri(@Nullable String redirectUri) {
-            this.redirectUri = Input.ofNullable(redirectUri);
+            this.redirectUri = Output.ofNullable(redirectUri);
             return this;
         }
         public GoogleCloudRetailV2alphaRuleRedirectActionArgs build() {

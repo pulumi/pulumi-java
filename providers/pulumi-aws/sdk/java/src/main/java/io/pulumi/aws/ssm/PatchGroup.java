@@ -6,7 +6,6 @@ package io.pulumi.aws.ssm;
 import io.pulumi.aws.Utilities;
 import io.pulumi.aws.ssm.PatchGroupArgs;
 import io.pulumi.aws.ssm.inputs.PatchGroupState;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -88,14 +87,14 @@ public class PatchGroup extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public PatchGroup(String name, PatchGroupArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:ssm/patchGroup:PatchGroup", name, args == null ? PatchGroupArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws:ssm/patchGroup:PatchGroup", name, args == null ? PatchGroupArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private PatchGroup(String name, Input<String> id, @Nullable PatchGroupState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private PatchGroup(String name, Output<String> id, @Nullable PatchGroupState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws:ssm/patchGroup:PatchGroup", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -111,7 +110,7 @@ public class PatchGroup extends io.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static PatchGroup get(String name, Input<String> id, @Nullable PatchGroupState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static PatchGroup get(String name, Output<String> id, @Nullable PatchGroupState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new PatchGroup(name, id, state, options);
     }
 }

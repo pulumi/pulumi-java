@@ -5,7 +5,7 @@ package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.azurenative.network.inputs.IPConfigurationProfileArgs;
 import io.pulumi.azurenative.network.inputs.SubResourceArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -26,10 +26,10 @@ public final class ContainerNetworkInterfaceConfigurationArgs extends io.pulumi.
      * 
      */
     @InputImport(name="containerNetworkInterfaces")
-      private final @Nullable Input<List<SubResourceArgs>> containerNetworkInterfaces;
+      private final @Nullable Output<List<SubResourceArgs>> containerNetworkInterfaces;
 
-    public Input<List<SubResourceArgs>> getContainerNetworkInterfaces() {
-        return this.containerNetworkInterfaces == null ? Input.empty() : this.containerNetworkInterfaces;
+    public Output<List<SubResourceArgs>> getContainerNetworkInterfaces() {
+        return this.containerNetworkInterfaces == null ? Output.empty() : this.containerNetworkInterfaces;
     }
 
     /**
@@ -37,10 +37,10 @@ public final class ContainerNetworkInterfaceConfigurationArgs extends io.pulumi.
      * 
      */
     @InputImport(name="id")
-      private final @Nullable Input<String> id;
+      private final @Nullable Output<String> id;
 
-    public Input<String> getId() {
-        return this.id == null ? Input.empty() : this.id;
+    public Output<String> getId() {
+        return this.id == null ? Output.empty() : this.id;
     }
 
     /**
@@ -48,10 +48,10 @@ public final class ContainerNetworkInterfaceConfigurationArgs extends io.pulumi.
      * 
      */
     @InputImport(name="ipConfigurations")
-      private final @Nullable Input<List<IPConfigurationProfileArgs>> ipConfigurations;
+      private final @Nullable Output<List<IPConfigurationProfileArgs>> ipConfigurations;
 
-    public Input<List<IPConfigurationProfileArgs>> getIpConfigurations() {
-        return this.ipConfigurations == null ? Input.empty() : this.ipConfigurations;
+    public Output<List<IPConfigurationProfileArgs>> getIpConfigurations() {
+        return this.ipConfigurations == null ? Output.empty() : this.ipConfigurations;
     }
 
     /**
@@ -59,17 +59,17 @@ public final class ContainerNetworkInterfaceConfigurationArgs extends io.pulumi.
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     public ContainerNetworkInterfaceConfigurationArgs(
-        @Nullable Input<List<SubResourceArgs>> containerNetworkInterfaces,
-        @Nullable Input<String> id,
-        @Nullable Input<List<IPConfigurationProfileArgs>> ipConfigurations,
-        @Nullable Input<String> name) {
+        @Nullable Output<List<SubResourceArgs>> containerNetworkInterfaces,
+        @Nullable Output<String> id,
+        @Nullable Output<List<IPConfigurationProfileArgs>> ipConfigurations,
+        @Nullable Output<String> name) {
         this.containerNetworkInterfaces = containerNetworkInterfaces;
         this.id = id;
         this.ipConfigurations = ipConfigurations;
@@ -77,10 +77,10 @@ public final class ContainerNetworkInterfaceConfigurationArgs extends io.pulumi.
     }
 
     private ContainerNetworkInterfaceConfigurationArgs() {
-        this.containerNetworkInterfaces = Input.empty();
-        this.id = Input.empty();
-        this.ipConfigurations = Input.empty();
-        this.name = Input.empty();
+        this.containerNetworkInterfaces = Output.empty();
+        this.id = Output.empty();
+        this.ipConfigurations = Output.empty();
+        this.name = Output.empty();
     }
 
     public static Builder builder() {
@@ -92,10 +92,10 @@ public final class ContainerNetworkInterfaceConfigurationArgs extends io.pulumi.
     }
 
     public static final class Builder {
-        private @Nullable Input<List<SubResourceArgs>> containerNetworkInterfaces;
-        private @Nullable Input<String> id;
-        private @Nullable Input<List<IPConfigurationProfileArgs>> ipConfigurations;
-        private @Nullable Input<String> name;
+        private @Nullable Output<List<SubResourceArgs>> containerNetworkInterfaces;
+        private @Nullable Output<String> id;
+        private @Nullable Output<List<IPConfigurationProfileArgs>> ipConfigurations;
+        private @Nullable Output<String> name;
 
         public Builder() {
     	      // Empty
@@ -109,43 +109,43 @@ public final class ContainerNetworkInterfaceConfigurationArgs extends io.pulumi.
     	      this.name = defaults.name;
         }
 
-        public Builder containerNetworkInterfaces(@Nullable Input<List<SubResourceArgs>> containerNetworkInterfaces) {
+        public Builder containerNetworkInterfaces(@Nullable Output<List<SubResourceArgs>> containerNetworkInterfaces) {
             this.containerNetworkInterfaces = containerNetworkInterfaces;
             return this;
         }
 
         public Builder containerNetworkInterfaces(@Nullable List<SubResourceArgs> containerNetworkInterfaces) {
-            this.containerNetworkInterfaces = Input.ofNullable(containerNetworkInterfaces);
+            this.containerNetworkInterfaces = Output.ofNullable(containerNetworkInterfaces);
             return this;
         }
 
-        public Builder id(@Nullable Input<String> id) {
+        public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
 
         public Builder id(@Nullable String id) {
-            this.id = Input.ofNullable(id);
+            this.id = Output.ofNullable(id);
             return this;
         }
 
-        public Builder ipConfigurations(@Nullable Input<List<IPConfigurationProfileArgs>> ipConfigurations) {
+        public Builder ipConfigurations(@Nullable Output<List<IPConfigurationProfileArgs>> ipConfigurations) {
             this.ipConfigurations = ipConfigurations;
             return this;
         }
 
         public Builder ipConfigurations(@Nullable List<IPConfigurationProfileArgs> ipConfigurations) {
-            this.ipConfigurations = Input.ofNullable(ipConfigurations);
+            this.ipConfigurations = Output.ofNullable(ipConfigurations);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
         public ContainerNetworkInterfaceConfigurationArgs build() {

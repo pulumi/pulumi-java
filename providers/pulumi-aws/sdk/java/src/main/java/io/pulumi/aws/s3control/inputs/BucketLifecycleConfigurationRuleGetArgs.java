@@ -6,7 +6,7 @@ package io.pulumi.aws.s3control.inputs;
 import io.pulumi.aws.s3control.inputs.BucketLifecycleConfigurationRuleAbortIncompleteMultipartUploadGetArgs;
 import io.pulumi.aws.s3control.inputs.BucketLifecycleConfigurationRuleExpirationGetArgs;
 import io.pulumi.aws.s3control.inputs.BucketLifecycleConfigurationRuleFilterGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -22,10 +22,10 @@ public final class BucketLifecycleConfigurationRuleGetArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="abortIncompleteMultipartUpload")
-      private final @Nullable Input<BucketLifecycleConfigurationRuleAbortIncompleteMultipartUploadGetArgs> abortIncompleteMultipartUpload;
+      private final @Nullable Output<BucketLifecycleConfigurationRuleAbortIncompleteMultipartUploadGetArgs> abortIncompleteMultipartUpload;
 
-    public Input<BucketLifecycleConfigurationRuleAbortIncompleteMultipartUploadGetArgs> getAbortIncompleteMultipartUpload() {
-        return this.abortIncompleteMultipartUpload == null ? Input.empty() : this.abortIncompleteMultipartUpload;
+    public Output<BucketLifecycleConfigurationRuleAbortIncompleteMultipartUploadGetArgs> getAbortIncompleteMultipartUpload() {
+        return this.abortIncompleteMultipartUpload == null ? Output.empty() : this.abortIncompleteMultipartUpload;
     }
 
     /**
@@ -33,10 +33,10 @@ public final class BucketLifecycleConfigurationRuleGetArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="expiration")
-      private final @Nullable Input<BucketLifecycleConfigurationRuleExpirationGetArgs> expiration;
+      private final @Nullable Output<BucketLifecycleConfigurationRuleExpirationGetArgs> expiration;
 
-    public Input<BucketLifecycleConfigurationRuleExpirationGetArgs> getExpiration() {
-        return this.expiration == null ? Input.empty() : this.expiration;
+    public Output<BucketLifecycleConfigurationRuleExpirationGetArgs> getExpiration() {
+        return this.expiration == null ? Output.empty() : this.expiration;
     }
 
     /**
@@ -44,10 +44,10 @@ public final class BucketLifecycleConfigurationRuleGetArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="filter")
-      private final @Nullable Input<BucketLifecycleConfigurationRuleFilterGetArgs> filter;
+      private final @Nullable Output<BucketLifecycleConfigurationRuleFilterGetArgs> filter;
 
-    public Input<BucketLifecycleConfigurationRuleFilterGetArgs> getFilter() {
-        return this.filter == null ? Input.empty() : this.filter;
+    public Output<BucketLifecycleConfigurationRuleFilterGetArgs> getFilter() {
+        return this.filter == null ? Output.empty() : this.filter;
     }
 
     /**
@@ -55,9 +55,9 @@ public final class BucketLifecycleConfigurationRuleGetArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="id", required=true)
-      private final Input<String> id;
+      private final Output<String> id;
 
-    public Input<String> getId() {
+    public Output<String> getId() {
         return this.id;
     }
 
@@ -66,18 +66,18 @@ public final class BucketLifecycleConfigurationRuleGetArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="status")
-      private final @Nullable Input<String> status;
+      private final @Nullable Output<String> status;
 
-    public Input<String> getStatus() {
-        return this.status == null ? Input.empty() : this.status;
+    public Output<String> getStatus() {
+        return this.status == null ? Output.empty() : this.status;
     }
 
     public BucketLifecycleConfigurationRuleGetArgs(
-        @Nullable Input<BucketLifecycleConfigurationRuleAbortIncompleteMultipartUploadGetArgs> abortIncompleteMultipartUpload,
-        @Nullable Input<BucketLifecycleConfigurationRuleExpirationGetArgs> expiration,
-        @Nullable Input<BucketLifecycleConfigurationRuleFilterGetArgs> filter,
-        Input<String> id,
-        @Nullable Input<String> status) {
+        @Nullable Output<BucketLifecycleConfigurationRuleAbortIncompleteMultipartUploadGetArgs> abortIncompleteMultipartUpload,
+        @Nullable Output<BucketLifecycleConfigurationRuleExpirationGetArgs> expiration,
+        @Nullable Output<BucketLifecycleConfigurationRuleFilterGetArgs> filter,
+        Output<String> id,
+        @Nullable Output<String> status) {
         this.abortIncompleteMultipartUpload = abortIncompleteMultipartUpload;
         this.expiration = expiration;
         this.filter = filter;
@@ -86,11 +86,11 @@ public final class BucketLifecycleConfigurationRuleGetArgs extends io.pulumi.res
     }
 
     private BucketLifecycleConfigurationRuleGetArgs() {
-        this.abortIncompleteMultipartUpload = Input.empty();
-        this.expiration = Input.empty();
-        this.filter = Input.empty();
-        this.id = Input.empty();
-        this.status = Input.empty();
+        this.abortIncompleteMultipartUpload = Output.empty();
+        this.expiration = Output.empty();
+        this.filter = Output.empty();
+        this.id = Output.empty();
+        this.status = Output.empty();
     }
 
     public static Builder builder() {
@@ -102,11 +102,11 @@ public final class BucketLifecycleConfigurationRuleGetArgs extends io.pulumi.res
     }
 
     public static final class Builder {
-        private @Nullable Input<BucketLifecycleConfigurationRuleAbortIncompleteMultipartUploadGetArgs> abortIncompleteMultipartUpload;
-        private @Nullable Input<BucketLifecycleConfigurationRuleExpirationGetArgs> expiration;
-        private @Nullable Input<BucketLifecycleConfigurationRuleFilterGetArgs> filter;
-        private Input<String> id;
-        private @Nullable Input<String> status;
+        private @Nullable Output<BucketLifecycleConfigurationRuleAbortIncompleteMultipartUploadGetArgs> abortIncompleteMultipartUpload;
+        private @Nullable Output<BucketLifecycleConfigurationRuleExpirationGetArgs> expiration;
+        private @Nullable Output<BucketLifecycleConfigurationRuleFilterGetArgs> filter;
+        private Output<String> id;
+        private @Nullable Output<String> status;
 
         public Builder() {
     	      // Empty
@@ -121,53 +121,53 @@ public final class BucketLifecycleConfigurationRuleGetArgs extends io.pulumi.res
     	      this.status = defaults.status;
         }
 
-        public Builder abortIncompleteMultipartUpload(@Nullable Input<BucketLifecycleConfigurationRuleAbortIncompleteMultipartUploadGetArgs> abortIncompleteMultipartUpload) {
+        public Builder abortIncompleteMultipartUpload(@Nullable Output<BucketLifecycleConfigurationRuleAbortIncompleteMultipartUploadGetArgs> abortIncompleteMultipartUpload) {
             this.abortIncompleteMultipartUpload = abortIncompleteMultipartUpload;
             return this;
         }
 
         public Builder abortIncompleteMultipartUpload(@Nullable BucketLifecycleConfigurationRuleAbortIncompleteMultipartUploadGetArgs abortIncompleteMultipartUpload) {
-            this.abortIncompleteMultipartUpload = Input.ofNullable(abortIncompleteMultipartUpload);
+            this.abortIncompleteMultipartUpload = Output.ofNullable(abortIncompleteMultipartUpload);
             return this;
         }
 
-        public Builder expiration(@Nullable Input<BucketLifecycleConfigurationRuleExpirationGetArgs> expiration) {
+        public Builder expiration(@Nullable Output<BucketLifecycleConfigurationRuleExpirationGetArgs> expiration) {
             this.expiration = expiration;
             return this;
         }
 
         public Builder expiration(@Nullable BucketLifecycleConfigurationRuleExpirationGetArgs expiration) {
-            this.expiration = Input.ofNullable(expiration);
+            this.expiration = Output.ofNullable(expiration);
             return this;
         }
 
-        public Builder filter(@Nullable Input<BucketLifecycleConfigurationRuleFilterGetArgs> filter) {
+        public Builder filter(@Nullable Output<BucketLifecycleConfigurationRuleFilterGetArgs> filter) {
             this.filter = filter;
             return this;
         }
 
         public Builder filter(@Nullable BucketLifecycleConfigurationRuleFilterGetArgs filter) {
-            this.filter = Input.ofNullable(filter);
+            this.filter = Output.ofNullable(filter);
             return this;
         }
 
-        public Builder id(Input<String> id) {
+        public Builder id(Output<String> id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
         public Builder id(String id) {
-            this.id = Input.of(Objects.requireNonNull(id));
+            this.id = Output.of(Objects.requireNonNull(id));
             return this;
         }
 
-        public Builder status(@Nullable Input<String> status) {
+        public Builder status(@Nullable Output<String> status) {
             this.status = status;
             return this;
         }
 
         public Builder status(@Nullable String status) {
-            this.status = Input.ofNullable(status);
+            this.status = Output.ofNullable(status);
             return this;
         }
         public BucketLifecycleConfigurationRuleGetArgs build() {

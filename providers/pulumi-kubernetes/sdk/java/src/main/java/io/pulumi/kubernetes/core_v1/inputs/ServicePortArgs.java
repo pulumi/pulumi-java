@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.core_v1.inputs;
 
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -25,10 +25,10 @@ public final class ServicePortArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="appProtocol")
-      private final @Nullable Input<String> appProtocol;
+      private final @Nullable Output<String> appProtocol;
 
-    public Input<String> getAppProtocol() {
-        return this.appProtocol == null ? Input.empty() : this.appProtocol;
+    public Output<String> getAppProtocol() {
+        return this.appProtocol == null ? Output.empty() : this.appProtocol;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class ServicePortArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -47,10 +47,10 @@ public final class ServicePortArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="nodePort")
-      private final @Nullable Input<Integer> nodePort;
+      private final @Nullable Output<Integer> nodePort;
 
-    public Input<Integer> getNodePort() {
-        return this.nodePort == null ? Input.empty() : this.nodePort;
+    public Output<Integer> getNodePort() {
+        return this.nodePort == null ? Output.empty() : this.nodePort;
     }
 
     /**
@@ -58,9 +58,9 @@ public final class ServicePortArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="port", required=true)
-      private final Input<Integer> port;
+      private final Output<Integer> port;
 
-    public Input<Integer> getPort() {
+    public Output<Integer> getPort() {
         return this.port;
     }
 
@@ -74,10 +74,10 @@ public final class ServicePortArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="protocol")
-      private final @Nullable Input<String> protocol;
+      private final @Nullable Output<String> protocol;
 
-    public Input<String> getProtocol() {
-        return this.protocol == null ? Input.empty() : this.protocol;
+    public Output<String> getProtocol() {
+        return this.protocol == null ? Output.empty() : this.protocol;
     }
 
     /**
@@ -85,19 +85,19 @@ public final class ServicePortArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="targetPort")
-      private final @Nullable Input<Either<Integer,String>> targetPort;
+      private final @Nullable Output<Either<Integer,String>> targetPort;
 
-    public Input<Either<Integer,String>> getTargetPort() {
-        return this.targetPort == null ? Input.empty() : this.targetPort;
+    public Output<Either<Integer,String>> getTargetPort() {
+        return this.targetPort == null ? Output.empty() : this.targetPort;
     }
 
     public ServicePortArgs(
-        @Nullable Input<String> appProtocol,
-        @Nullable Input<String> name,
-        @Nullable Input<Integer> nodePort,
-        Input<Integer> port,
-        @Nullable Input<String> protocol,
-        @Nullable Input<Either<Integer,String>> targetPort) {
+        @Nullable Output<String> appProtocol,
+        @Nullable Output<String> name,
+        @Nullable Output<Integer> nodePort,
+        Output<Integer> port,
+        @Nullable Output<String> protocol,
+        @Nullable Output<Either<Integer,String>> targetPort) {
         this.appProtocol = appProtocol;
         this.name = name;
         this.nodePort = nodePort;
@@ -107,12 +107,12 @@ public final class ServicePortArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ServicePortArgs() {
-        this.appProtocol = Input.empty();
-        this.name = Input.empty();
-        this.nodePort = Input.empty();
-        this.port = Input.empty();
-        this.protocol = Input.empty();
-        this.targetPort = Input.empty();
+        this.appProtocol = Output.empty();
+        this.name = Output.empty();
+        this.nodePort = Output.empty();
+        this.port = Output.empty();
+        this.protocol = Output.empty();
+        this.targetPort = Output.empty();
     }
 
     public static Builder builder() {
@@ -124,12 +124,12 @@ public final class ServicePortArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> appProtocol;
-        private @Nullable Input<String> name;
-        private @Nullable Input<Integer> nodePort;
-        private Input<Integer> port;
-        private @Nullable Input<String> protocol;
-        private @Nullable Input<Either<Integer,String>> targetPort;
+        private @Nullable Output<String> appProtocol;
+        private @Nullable Output<String> name;
+        private @Nullable Output<Integer> nodePort;
+        private Output<Integer> port;
+        private @Nullable Output<String> protocol;
+        private @Nullable Output<Either<Integer,String>> targetPort;
 
         public Builder() {
     	      // Empty
@@ -145,63 +145,63 @@ public final class ServicePortArgs extends io.pulumi.resources.ResourceArgs {
     	      this.targetPort = defaults.targetPort;
         }
 
-        public Builder appProtocol(@Nullable Input<String> appProtocol) {
+        public Builder appProtocol(@Nullable Output<String> appProtocol) {
             this.appProtocol = appProtocol;
             return this;
         }
 
         public Builder appProtocol(@Nullable String appProtocol) {
-            this.appProtocol = Input.ofNullable(appProtocol);
+            this.appProtocol = Output.ofNullable(appProtocol);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder nodePort(@Nullable Input<Integer> nodePort) {
+        public Builder nodePort(@Nullable Output<Integer> nodePort) {
             this.nodePort = nodePort;
             return this;
         }
 
         public Builder nodePort(@Nullable Integer nodePort) {
-            this.nodePort = Input.ofNullable(nodePort);
+            this.nodePort = Output.ofNullable(nodePort);
             return this;
         }
 
-        public Builder port(Input<Integer> port) {
+        public Builder port(Output<Integer> port) {
             this.port = Objects.requireNonNull(port);
             return this;
         }
 
         public Builder port(Integer port) {
-            this.port = Input.of(Objects.requireNonNull(port));
+            this.port = Output.of(Objects.requireNonNull(port));
             return this;
         }
 
-        public Builder protocol(@Nullable Input<String> protocol) {
+        public Builder protocol(@Nullable Output<String> protocol) {
             this.protocol = protocol;
             return this;
         }
 
         public Builder protocol(@Nullable String protocol) {
-            this.protocol = Input.ofNullable(protocol);
+            this.protocol = Output.ofNullable(protocol);
             return this;
         }
 
-        public Builder targetPort(@Nullable Input<Either<Integer,String>> targetPort) {
+        public Builder targetPort(@Nullable Output<Either<Integer,String>> targetPort) {
             this.targetPort = targetPort;
             return this;
         }
 
         public Builder targetPort(@Nullable Either<Integer,String> targetPort) {
-            this.targetPort = Input.ofNullable(targetPort);
+            this.targetPort = Output.ofNullable(targetPort);
             return this;
         }
         public ServicePortArgs build() {

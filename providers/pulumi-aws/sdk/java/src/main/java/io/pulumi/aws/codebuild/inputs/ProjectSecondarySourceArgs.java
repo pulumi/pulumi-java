@@ -6,7 +6,7 @@ package io.pulumi.aws.codebuild.inputs;
 import io.pulumi.aws.codebuild.inputs.ProjectSecondarySourceAuthArgs;
 import io.pulumi.aws.codebuild.inputs.ProjectSecondarySourceBuildStatusConfigArgs;
 import io.pulumi.aws.codebuild.inputs.ProjectSecondarySourceGitSubmodulesConfigArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -28,11 +28,11 @@ public final class ProjectSecondarySourceArgs extends io.pulumi.resources.Resour
      */
     @Deprecated /* Use the aws_codebuild_source_credential resource instead */
     @InputImport(name="auth")
-      private final @Nullable Input<ProjectSecondarySourceAuthArgs> auth;
+      private final @Nullable Output<ProjectSecondarySourceAuthArgs> auth;
 
     @Deprecated /* Use the aws_codebuild_source_credential resource instead */
-    public Input<ProjectSecondarySourceAuthArgs> getAuth() {
-        return this.auth == null ? Input.empty() : this.auth;
+    public Output<ProjectSecondarySourceAuthArgs> getAuth() {
+        return this.auth == null ? Output.empty() : this.auth;
     }
 
     /**
@@ -40,10 +40,10 @@ public final class ProjectSecondarySourceArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="buildStatusConfig")
-      private final @Nullable Input<ProjectSecondarySourceBuildStatusConfigArgs> buildStatusConfig;
+      private final @Nullable Output<ProjectSecondarySourceBuildStatusConfigArgs> buildStatusConfig;
 
-    public Input<ProjectSecondarySourceBuildStatusConfigArgs> getBuildStatusConfig() {
-        return this.buildStatusConfig == null ? Input.empty() : this.buildStatusConfig;
+    public Output<ProjectSecondarySourceBuildStatusConfigArgs> getBuildStatusConfig() {
+        return this.buildStatusConfig == null ? Output.empty() : this.buildStatusConfig;
     }
 
     /**
@@ -51,10 +51,10 @@ public final class ProjectSecondarySourceArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="buildspec")
-      private final @Nullable Input<String> buildspec;
+      private final @Nullable Output<String> buildspec;
 
-    public Input<String> getBuildspec() {
-        return this.buildspec == null ? Input.empty() : this.buildspec;
+    public Output<String> getBuildspec() {
+        return this.buildspec == null ? Output.empty() : this.buildspec;
     }
 
     /**
@@ -62,10 +62,10 @@ public final class ProjectSecondarySourceArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="gitCloneDepth")
-      private final @Nullable Input<Integer> gitCloneDepth;
+      private final @Nullable Output<Integer> gitCloneDepth;
 
-    public Input<Integer> getGitCloneDepth() {
-        return this.gitCloneDepth == null ? Input.empty() : this.gitCloneDepth;
+    public Output<Integer> getGitCloneDepth() {
+        return this.gitCloneDepth == null ? Output.empty() : this.gitCloneDepth;
     }
 
     /**
@@ -73,10 +73,10 @@ public final class ProjectSecondarySourceArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="gitSubmodulesConfig")
-      private final @Nullable Input<ProjectSecondarySourceGitSubmodulesConfigArgs> gitSubmodulesConfig;
+      private final @Nullable Output<ProjectSecondarySourceGitSubmodulesConfigArgs> gitSubmodulesConfig;
 
-    public Input<ProjectSecondarySourceGitSubmodulesConfigArgs> getGitSubmodulesConfig() {
-        return this.gitSubmodulesConfig == null ? Input.empty() : this.gitSubmodulesConfig;
+    public Output<ProjectSecondarySourceGitSubmodulesConfigArgs> getGitSubmodulesConfig() {
+        return this.gitSubmodulesConfig == null ? Output.empty() : this.gitSubmodulesConfig;
     }
 
     /**
@@ -84,10 +84,10 @@ public final class ProjectSecondarySourceArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="insecureSsl")
-      private final @Nullable Input<Boolean> insecureSsl;
+      private final @Nullable Output<Boolean> insecureSsl;
 
-    public Input<Boolean> getInsecureSsl() {
-        return this.insecureSsl == null ? Input.empty() : this.insecureSsl;
+    public Output<Boolean> getInsecureSsl() {
+        return this.insecureSsl == null ? Output.empty() : this.insecureSsl;
     }
 
     /**
@@ -95,10 +95,10 @@ public final class ProjectSecondarySourceArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -106,10 +106,10 @@ public final class ProjectSecondarySourceArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="reportBuildStatus")
-      private final @Nullable Input<Boolean> reportBuildStatus;
+      private final @Nullable Output<Boolean> reportBuildStatus;
 
-    public Input<Boolean> getReportBuildStatus() {
-        return this.reportBuildStatus == null ? Input.empty() : this.reportBuildStatus;
+    public Output<Boolean> getReportBuildStatus() {
+        return this.reportBuildStatus == null ? Output.empty() : this.reportBuildStatus;
     }
 
     /**
@@ -117,9 +117,9 @@ public final class ProjectSecondarySourceArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="sourceIdentifier", required=true)
-      private final Input<String> sourceIdentifier;
+      private final Output<String> sourceIdentifier;
 
-    public Input<String> getSourceIdentifier() {
+    public Output<String> getSourceIdentifier() {
         return this.sourceIdentifier;
     }
 
@@ -128,23 +128,23 @@ public final class ProjectSecondarySourceArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<String> type;
+      private final Output<String> type;
 
-    public Input<String> getType() {
+    public Output<String> getType() {
         return this.type;
     }
 
     public ProjectSecondarySourceArgs(
-        @Nullable Input<ProjectSecondarySourceAuthArgs> auth,
-        @Nullable Input<ProjectSecondarySourceBuildStatusConfigArgs> buildStatusConfig,
-        @Nullable Input<String> buildspec,
-        @Nullable Input<Integer> gitCloneDepth,
-        @Nullable Input<ProjectSecondarySourceGitSubmodulesConfigArgs> gitSubmodulesConfig,
-        @Nullable Input<Boolean> insecureSsl,
-        @Nullable Input<String> location,
-        @Nullable Input<Boolean> reportBuildStatus,
-        Input<String> sourceIdentifier,
-        Input<String> type) {
+        @Nullable Output<ProjectSecondarySourceAuthArgs> auth,
+        @Nullable Output<ProjectSecondarySourceBuildStatusConfigArgs> buildStatusConfig,
+        @Nullable Output<String> buildspec,
+        @Nullable Output<Integer> gitCloneDepth,
+        @Nullable Output<ProjectSecondarySourceGitSubmodulesConfigArgs> gitSubmodulesConfig,
+        @Nullable Output<Boolean> insecureSsl,
+        @Nullable Output<String> location,
+        @Nullable Output<Boolean> reportBuildStatus,
+        Output<String> sourceIdentifier,
+        Output<String> type) {
         this.auth = auth;
         this.buildStatusConfig = buildStatusConfig;
         this.buildspec = buildspec;
@@ -158,16 +158,16 @@ public final class ProjectSecondarySourceArgs extends io.pulumi.resources.Resour
     }
 
     private ProjectSecondarySourceArgs() {
-        this.auth = Input.empty();
-        this.buildStatusConfig = Input.empty();
-        this.buildspec = Input.empty();
-        this.gitCloneDepth = Input.empty();
-        this.gitSubmodulesConfig = Input.empty();
-        this.insecureSsl = Input.empty();
-        this.location = Input.empty();
-        this.reportBuildStatus = Input.empty();
-        this.sourceIdentifier = Input.empty();
-        this.type = Input.empty();
+        this.auth = Output.empty();
+        this.buildStatusConfig = Output.empty();
+        this.buildspec = Output.empty();
+        this.gitCloneDepth = Output.empty();
+        this.gitSubmodulesConfig = Output.empty();
+        this.insecureSsl = Output.empty();
+        this.location = Output.empty();
+        this.reportBuildStatus = Output.empty();
+        this.sourceIdentifier = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -179,16 +179,16 @@ public final class ProjectSecondarySourceArgs extends io.pulumi.resources.Resour
     }
 
     public static final class Builder {
-        private @Nullable Input<ProjectSecondarySourceAuthArgs> auth;
-        private @Nullable Input<ProjectSecondarySourceBuildStatusConfigArgs> buildStatusConfig;
-        private @Nullable Input<String> buildspec;
-        private @Nullable Input<Integer> gitCloneDepth;
-        private @Nullable Input<ProjectSecondarySourceGitSubmodulesConfigArgs> gitSubmodulesConfig;
-        private @Nullable Input<Boolean> insecureSsl;
-        private @Nullable Input<String> location;
-        private @Nullable Input<Boolean> reportBuildStatus;
-        private Input<String> sourceIdentifier;
-        private Input<String> type;
+        private @Nullable Output<ProjectSecondarySourceAuthArgs> auth;
+        private @Nullable Output<ProjectSecondarySourceBuildStatusConfigArgs> buildStatusConfig;
+        private @Nullable Output<String> buildspec;
+        private @Nullable Output<Integer> gitCloneDepth;
+        private @Nullable Output<ProjectSecondarySourceGitSubmodulesConfigArgs> gitSubmodulesConfig;
+        private @Nullable Output<Boolean> insecureSsl;
+        private @Nullable Output<String> location;
+        private @Nullable Output<Boolean> reportBuildStatus;
+        private Output<String> sourceIdentifier;
+        private Output<String> type;
 
         public Builder() {
     	      // Empty
@@ -208,103 +208,103 @@ public final class ProjectSecondarySourceArgs extends io.pulumi.resources.Resour
     	      this.type = defaults.type;
         }
 
-        public Builder auth(@Nullable Input<ProjectSecondarySourceAuthArgs> auth) {
+        public Builder auth(@Nullable Output<ProjectSecondarySourceAuthArgs> auth) {
             this.auth = auth;
             return this;
         }
 
         public Builder auth(@Nullable ProjectSecondarySourceAuthArgs auth) {
-            this.auth = Input.ofNullable(auth);
+            this.auth = Output.ofNullable(auth);
             return this;
         }
 
-        public Builder buildStatusConfig(@Nullable Input<ProjectSecondarySourceBuildStatusConfigArgs> buildStatusConfig) {
+        public Builder buildStatusConfig(@Nullable Output<ProjectSecondarySourceBuildStatusConfigArgs> buildStatusConfig) {
             this.buildStatusConfig = buildStatusConfig;
             return this;
         }
 
         public Builder buildStatusConfig(@Nullable ProjectSecondarySourceBuildStatusConfigArgs buildStatusConfig) {
-            this.buildStatusConfig = Input.ofNullable(buildStatusConfig);
+            this.buildStatusConfig = Output.ofNullable(buildStatusConfig);
             return this;
         }
 
-        public Builder buildspec(@Nullable Input<String> buildspec) {
+        public Builder buildspec(@Nullable Output<String> buildspec) {
             this.buildspec = buildspec;
             return this;
         }
 
         public Builder buildspec(@Nullable String buildspec) {
-            this.buildspec = Input.ofNullable(buildspec);
+            this.buildspec = Output.ofNullable(buildspec);
             return this;
         }
 
-        public Builder gitCloneDepth(@Nullable Input<Integer> gitCloneDepth) {
+        public Builder gitCloneDepth(@Nullable Output<Integer> gitCloneDepth) {
             this.gitCloneDepth = gitCloneDepth;
             return this;
         }
 
         public Builder gitCloneDepth(@Nullable Integer gitCloneDepth) {
-            this.gitCloneDepth = Input.ofNullable(gitCloneDepth);
+            this.gitCloneDepth = Output.ofNullable(gitCloneDepth);
             return this;
         }
 
-        public Builder gitSubmodulesConfig(@Nullable Input<ProjectSecondarySourceGitSubmodulesConfigArgs> gitSubmodulesConfig) {
+        public Builder gitSubmodulesConfig(@Nullable Output<ProjectSecondarySourceGitSubmodulesConfigArgs> gitSubmodulesConfig) {
             this.gitSubmodulesConfig = gitSubmodulesConfig;
             return this;
         }
 
         public Builder gitSubmodulesConfig(@Nullable ProjectSecondarySourceGitSubmodulesConfigArgs gitSubmodulesConfig) {
-            this.gitSubmodulesConfig = Input.ofNullable(gitSubmodulesConfig);
+            this.gitSubmodulesConfig = Output.ofNullable(gitSubmodulesConfig);
             return this;
         }
 
-        public Builder insecureSsl(@Nullable Input<Boolean> insecureSsl) {
+        public Builder insecureSsl(@Nullable Output<Boolean> insecureSsl) {
             this.insecureSsl = insecureSsl;
             return this;
         }
 
         public Builder insecureSsl(@Nullable Boolean insecureSsl) {
-            this.insecureSsl = Input.ofNullable(insecureSsl);
+            this.insecureSsl = Output.ofNullable(insecureSsl);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder reportBuildStatus(@Nullable Input<Boolean> reportBuildStatus) {
+        public Builder reportBuildStatus(@Nullable Output<Boolean> reportBuildStatus) {
             this.reportBuildStatus = reportBuildStatus;
             return this;
         }
 
         public Builder reportBuildStatus(@Nullable Boolean reportBuildStatus) {
-            this.reportBuildStatus = Input.ofNullable(reportBuildStatus);
+            this.reportBuildStatus = Output.ofNullable(reportBuildStatus);
             return this;
         }
 
-        public Builder sourceIdentifier(Input<String> sourceIdentifier) {
+        public Builder sourceIdentifier(Output<String> sourceIdentifier) {
             this.sourceIdentifier = Objects.requireNonNull(sourceIdentifier);
             return this;
         }
 
         public Builder sourceIdentifier(String sourceIdentifier) {
-            this.sourceIdentifier = Input.of(Objects.requireNonNull(sourceIdentifier));
+            this.sourceIdentifier = Output.of(Objects.requireNonNull(sourceIdentifier));
             return this;
         }
 
-        public Builder type(Input<String> type) {
+        public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(String type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
         public ProjectSecondarySourceArgs build() {

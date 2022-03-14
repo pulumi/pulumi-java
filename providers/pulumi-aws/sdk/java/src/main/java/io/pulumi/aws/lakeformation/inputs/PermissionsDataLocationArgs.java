@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.lakeformation.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,9 +19,9 @@ public final class PermissionsDataLocationArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="arn", required=true)
-      private final Input<String> arn;
+      private final Output<String> arn;
 
-    public Input<String> getArn() {
+    public Output<String> getArn() {
         return this.arn;
     }
 
@@ -30,22 +30,22 @@ public final class PermissionsDataLocationArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="catalogId")
-      private final @Nullable Input<String> catalogId;
+      private final @Nullable Output<String> catalogId;
 
-    public Input<String> getCatalogId() {
-        return this.catalogId == null ? Input.empty() : this.catalogId;
+    public Output<String> getCatalogId() {
+        return this.catalogId == null ? Output.empty() : this.catalogId;
     }
 
     public PermissionsDataLocationArgs(
-        Input<String> arn,
-        @Nullable Input<String> catalogId) {
+        Output<String> arn,
+        @Nullable Output<String> catalogId) {
         this.arn = Objects.requireNonNull(arn, "expected parameter 'arn' to be non-null");
         this.catalogId = catalogId;
     }
 
     private PermissionsDataLocationArgs() {
-        this.arn = Input.empty();
-        this.catalogId = Input.empty();
+        this.arn = Output.empty();
+        this.catalogId = Output.empty();
     }
 
     public static Builder builder() {
@@ -57,8 +57,8 @@ public final class PermissionsDataLocationArgs extends io.pulumi.resources.Resou
     }
 
     public static final class Builder {
-        private Input<String> arn;
-        private @Nullable Input<String> catalogId;
+        private Output<String> arn;
+        private @Nullable Output<String> catalogId;
 
         public Builder() {
     	      // Empty
@@ -70,23 +70,23 @@ public final class PermissionsDataLocationArgs extends io.pulumi.resources.Resou
     	      this.catalogId = defaults.catalogId;
         }
 
-        public Builder arn(Input<String> arn) {
+        public Builder arn(Output<String> arn) {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
 
         public Builder arn(String arn) {
-            this.arn = Input.of(Objects.requireNonNull(arn));
+            this.arn = Output.of(Objects.requireNonNull(arn));
             return this;
         }
 
-        public Builder catalogId(@Nullable Input<String> catalogId) {
+        public Builder catalogId(@Nullable Output<String> catalogId) {
             this.catalogId = catalogId;
             return this;
         }
 
         public Builder catalogId(@Nullable String catalogId) {
-            this.catalogId = Input.ofNullable(catalogId);
+            this.catalogId = Output.ofNullable(catalogId);
             return this;
         }
         public PermissionsDataLocationArgs build() {

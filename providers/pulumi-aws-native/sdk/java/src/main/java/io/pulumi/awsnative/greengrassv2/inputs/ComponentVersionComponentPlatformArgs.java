@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.greengrassv2.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
@@ -16,29 +16,29 @@ public final class ComponentVersionComponentPlatformArgs extends io.pulumi.resou
     public static final ComponentVersionComponentPlatformArgs Empty = new ComponentVersionComponentPlatformArgs();
 
     @InputImport(name="attributes")
-      private final @Nullable Input<Object> attributes;
+      private final @Nullable Output<Object> attributes;
 
-    public Input<Object> getAttributes() {
-        return this.attributes == null ? Input.empty() : this.attributes;
+    public Output<Object> getAttributes() {
+        return this.attributes == null ? Output.empty() : this.attributes;
     }
 
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     public ComponentVersionComponentPlatformArgs(
-        @Nullable Input<Object> attributes,
-        @Nullable Input<String> name) {
+        @Nullable Output<Object> attributes,
+        @Nullable Output<String> name) {
         this.attributes = attributes;
         this.name = name;
     }
 
     private ComponentVersionComponentPlatformArgs() {
-        this.attributes = Input.empty();
-        this.name = Input.empty();
+        this.attributes = Output.empty();
+        this.name = Output.empty();
     }
 
     public static Builder builder() {
@@ -50,8 +50,8 @@ public final class ComponentVersionComponentPlatformArgs extends io.pulumi.resou
     }
 
     public static final class Builder {
-        private @Nullable Input<Object> attributes;
-        private @Nullable Input<String> name;
+        private @Nullable Output<Object> attributes;
+        private @Nullable Output<String> name;
 
         public Builder() {
     	      // Empty
@@ -63,23 +63,23 @@ public final class ComponentVersionComponentPlatformArgs extends io.pulumi.resou
     	      this.name = defaults.name;
         }
 
-        public Builder attributes(@Nullable Input<Object> attributes) {
+        public Builder attributes(@Nullable Output<Object> attributes) {
             this.attributes = attributes;
             return this;
         }
 
         public Builder attributes(@Nullable Object attributes) {
-            this.attributes = Input.ofNullable(attributes);
+            this.attributes = Output.ofNullable(attributes);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
         public ComponentVersionComponentPlatformArgs build() {

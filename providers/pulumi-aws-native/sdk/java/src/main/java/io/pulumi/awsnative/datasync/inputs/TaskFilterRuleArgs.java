@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.datasync.inputs;
 
 import io.pulumi.awsnative.datasync.enums.TaskFilterRuleFilterType;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -24,10 +24,10 @@ public final class TaskFilterRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="filterType")
-      private final @Nullable Input<TaskFilterRuleFilterType> filterType;
+      private final @Nullable Output<TaskFilterRuleFilterType> filterType;
 
-    public Input<TaskFilterRuleFilterType> getFilterType() {
-        return this.filterType == null ? Input.empty() : this.filterType;
+    public Output<TaskFilterRuleFilterType> getFilterType() {
+        return this.filterType == null ? Output.empty() : this.filterType;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class TaskFilterRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="value")
-      private final @Nullable Input<String> value;
+      private final @Nullable Output<String> value;
 
-    public Input<String> getValue() {
-        return this.value == null ? Input.empty() : this.value;
+    public Output<String> getValue() {
+        return this.value == null ? Output.empty() : this.value;
     }
 
     public TaskFilterRuleArgs(
-        @Nullable Input<TaskFilterRuleFilterType> filterType,
-        @Nullable Input<String> value) {
+        @Nullable Output<TaskFilterRuleFilterType> filterType,
+        @Nullable Output<String> value) {
         this.filterType = filterType;
         this.value = value;
     }
 
     private TaskFilterRuleArgs() {
-        this.filterType = Input.empty();
-        this.value = Input.empty();
+        this.filterType = Output.empty();
+        this.value = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class TaskFilterRuleArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<TaskFilterRuleFilterType> filterType;
-        private @Nullable Input<String> value;
+        private @Nullable Output<TaskFilterRuleFilterType> filterType;
+        private @Nullable Output<String> value;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class TaskFilterRuleArgs extends io.pulumi.resources.ResourceArgs {
     	      this.value = defaults.value;
         }
 
-        public Builder filterType(@Nullable Input<TaskFilterRuleFilterType> filterType) {
+        public Builder filterType(@Nullable Output<TaskFilterRuleFilterType> filterType) {
             this.filterType = filterType;
             return this;
         }
 
         public Builder filterType(@Nullable TaskFilterRuleFilterType filterType) {
-            this.filterType = Input.ofNullable(filterType);
+            this.filterType = Output.ofNullable(filterType);
             return this;
         }
 
-        public Builder value(@Nullable Input<String> value) {
+        public Builder value(@Nullable Output<String> value) {
             this.value = value;
             return this;
         }
 
         public Builder value(@Nullable String value) {
-            this.value = Input.ofNullable(value);
+            this.value = Output.ofNullable(value);
             return this;
         }
         public TaskFilterRuleArgs build() {

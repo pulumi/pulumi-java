@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.apigateway.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.Integer;
@@ -20,10 +20,10 @@ public final class UsagePlanThrottleSettingsGetArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="burstLimit")
-      private final @Nullable Input<Integer> burstLimit;
+      private final @Nullable Output<Integer> burstLimit;
 
-    public Input<Integer> getBurstLimit() {
-        return this.burstLimit == null ? Input.empty() : this.burstLimit;
+    public Output<Integer> getBurstLimit() {
+        return this.burstLimit == null ? Output.empty() : this.burstLimit;
     }
 
     /**
@@ -31,22 +31,22 @@ public final class UsagePlanThrottleSettingsGetArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="rateLimit")
-      private final @Nullable Input<Double> rateLimit;
+      private final @Nullable Output<Double> rateLimit;
 
-    public Input<Double> getRateLimit() {
-        return this.rateLimit == null ? Input.empty() : this.rateLimit;
+    public Output<Double> getRateLimit() {
+        return this.rateLimit == null ? Output.empty() : this.rateLimit;
     }
 
     public UsagePlanThrottleSettingsGetArgs(
-        @Nullable Input<Integer> burstLimit,
-        @Nullable Input<Double> rateLimit) {
+        @Nullable Output<Integer> burstLimit,
+        @Nullable Output<Double> rateLimit) {
         this.burstLimit = burstLimit;
         this.rateLimit = rateLimit;
     }
 
     private UsagePlanThrottleSettingsGetArgs() {
-        this.burstLimit = Input.empty();
-        this.rateLimit = Input.empty();
+        this.burstLimit = Output.empty();
+        this.rateLimit = Output.empty();
     }
 
     public static Builder builder() {
@@ -58,8 +58,8 @@ public final class UsagePlanThrottleSettingsGetArgs extends io.pulumi.resources.
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> burstLimit;
-        private @Nullable Input<Double> rateLimit;
+        private @Nullable Output<Integer> burstLimit;
+        private @Nullable Output<Double> rateLimit;
 
         public Builder() {
     	      // Empty
@@ -71,23 +71,23 @@ public final class UsagePlanThrottleSettingsGetArgs extends io.pulumi.resources.
     	      this.rateLimit = defaults.rateLimit;
         }
 
-        public Builder burstLimit(@Nullable Input<Integer> burstLimit) {
+        public Builder burstLimit(@Nullable Output<Integer> burstLimit) {
             this.burstLimit = burstLimit;
             return this;
         }
 
         public Builder burstLimit(@Nullable Integer burstLimit) {
-            this.burstLimit = Input.ofNullable(burstLimit);
+            this.burstLimit = Output.ofNullable(burstLimit);
             return this;
         }
 
-        public Builder rateLimit(@Nullable Input<Double> rateLimit) {
+        public Builder rateLimit(@Nullable Output<Double> rateLimit) {
             this.rateLimit = rateLimit;
             return this;
         }
 
         public Builder rateLimit(@Nullable Double rateLimit) {
-            this.rateLimit = Input.ofNullable(rateLimit);
+            this.rateLimit = Output.ofNullable(rateLimit);
             return this;
         }
         public UsagePlanThrottleSettingsGetArgs build() {

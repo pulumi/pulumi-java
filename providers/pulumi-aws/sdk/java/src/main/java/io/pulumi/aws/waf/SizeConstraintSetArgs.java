@@ -4,7 +4,7 @@
 package io.pulumi.aws.waf;
 
 import io.pulumi.aws.waf.inputs.SizeConstraintSetSizeConstraintArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -21,10 +21,10 @@ public final class SizeConstraintSetArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -32,22 +32,22 @@ public final class SizeConstraintSetArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="sizeConstraints")
-      private final @Nullable Input<List<SizeConstraintSetSizeConstraintArgs>> sizeConstraints;
+      private final @Nullable Output<List<SizeConstraintSetSizeConstraintArgs>> sizeConstraints;
 
-    public Input<List<SizeConstraintSetSizeConstraintArgs>> getSizeConstraints() {
-        return this.sizeConstraints == null ? Input.empty() : this.sizeConstraints;
+    public Output<List<SizeConstraintSetSizeConstraintArgs>> getSizeConstraints() {
+        return this.sizeConstraints == null ? Output.empty() : this.sizeConstraints;
     }
 
     public SizeConstraintSetArgs(
-        @Nullable Input<String> name,
-        @Nullable Input<List<SizeConstraintSetSizeConstraintArgs>> sizeConstraints) {
+        @Nullable Output<String> name,
+        @Nullable Output<List<SizeConstraintSetSizeConstraintArgs>> sizeConstraints) {
         this.name = name;
         this.sizeConstraints = sizeConstraints;
     }
 
     private SizeConstraintSetArgs() {
-        this.name = Input.empty();
-        this.sizeConstraints = Input.empty();
+        this.name = Output.empty();
+        this.sizeConstraints = Output.empty();
     }
 
     public static Builder builder() {
@@ -59,8 +59,8 @@ public final class SizeConstraintSetArgs extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private @Nullable Input<String> name;
-        private @Nullable Input<List<SizeConstraintSetSizeConstraintArgs>> sizeConstraints;
+        private @Nullable Output<String> name;
+        private @Nullable Output<List<SizeConstraintSetSizeConstraintArgs>> sizeConstraints;
 
         public Builder() {
     	      // Empty
@@ -72,23 +72,23 @@ public final class SizeConstraintSetArgs extends io.pulumi.resources.ResourceArg
     	      this.sizeConstraints = defaults.sizeConstraints;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder sizeConstraints(@Nullable Input<List<SizeConstraintSetSizeConstraintArgs>> sizeConstraints) {
+        public Builder sizeConstraints(@Nullable Output<List<SizeConstraintSetSizeConstraintArgs>> sizeConstraints) {
             this.sizeConstraints = sizeConstraints;
             return this;
         }
 
         public Builder sizeConstraints(@Nullable List<SizeConstraintSetSizeConstraintArgs> sizeConstraints) {
-            this.sizeConstraints = Input.ofNullable(sizeConstraints);
+            this.sizeConstraints = Output.ofNullable(sizeConstraints);
             return this;
         }
         public SizeConstraintSetArgs build() {

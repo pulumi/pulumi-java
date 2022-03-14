@@ -6,7 +6,7 @@ package io.pulumi.awsnative.kendra.inputs;
 import io.pulumi.awsnative.kendra.enums.IndexDocumentAttributeValueType;
 import io.pulumi.awsnative.kendra.inputs.IndexRelevanceArgs;
 import io.pulumi.awsnative.kendra.inputs.IndexSearchArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -18,38 +18,38 @@ public final class IndexDocumentMetadataConfigurationArgs extends io.pulumi.reso
     public static final IndexDocumentMetadataConfigurationArgs Empty = new IndexDocumentMetadataConfigurationArgs();
 
     @InputImport(name="name", required=true)
-      private final Input<String> name;
+      private final Output<String> name;
 
-    public Input<String> getName() {
+    public Output<String> getName() {
         return this.name;
     }
 
     @InputImport(name="relevance")
-      private final @Nullable Input<IndexRelevanceArgs> relevance;
+      private final @Nullable Output<IndexRelevanceArgs> relevance;
 
-    public Input<IndexRelevanceArgs> getRelevance() {
-        return this.relevance == null ? Input.empty() : this.relevance;
+    public Output<IndexRelevanceArgs> getRelevance() {
+        return this.relevance == null ? Output.empty() : this.relevance;
     }
 
     @InputImport(name="search")
-      private final @Nullable Input<IndexSearchArgs> search;
+      private final @Nullable Output<IndexSearchArgs> search;
 
-    public Input<IndexSearchArgs> getSearch() {
-        return this.search == null ? Input.empty() : this.search;
+    public Output<IndexSearchArgs> getSearch() {
+        return this.search == null ? Output.empty() : this.search;
     }
 
     @InputImport(name="type", required=true)
-      private final Input<IndexDocumentAttributeValueType> type;
+      private final Output<IndexDocumentAttributeValueType> type;
 
-    public Input<IndexDocumentAttributeValueType> getType() {
+    public Output<IndexDocumentAttributeValueType> getType() {
         return this.type;
     }
 
     public IndexDocumentMetadataConfigurationArgs(
-        Input<String> name,
-        @Nullable Input<IndexRelevanceArgs> relevance,
-        @Nullable Input<IndexSearchArgs> search,
-        Input<IndexDocumentAttributeValueType> type) {
+        Output<String> name,
+        @Nullable Output<IndexRelevanceArgs> relevance,
+        @Nullable Output<IndexSearchArgs> search,
+        Output<IndexDocumentAttributeValueType> type) {
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
         this.relevance = relevance;
         this.search = search;
@@ -57,10 +57,10 @@ public final class IndexDocumentMetadataConfigurationArgs extends io.pulumi.reso
     }
 
     private IndexDocumentMetadataConfigurationArgs() {
-        this.name = Input.empty();
-        this.relevance = Input.empty();
-        this.search = Input.empty();
-        this.type = Input.empty();
+        this.name = Output.empty();
+        this.relevance = Output.empty();
+        this.search = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -72,10 +72,10 @@ public final class IndexDocumentMetadataConfigurationArgs extends io.pulumi.reso
     }
 
     public static final class Builder {
-        private Input<String> name;
-        private @Nullable Input<IndexRelevanceArgs> relevance;
-        private @Nullable Input<IndexSearchArgs> search;
-        private Input<IndexDocumentAttributeValueType> type;
+        private Output<String> name;
+        private @Nullable Output<IndexRelevanceArgs> relevance;
+        private @Nullable Output<IndexSearchArgs> search;
+        private Output<IndexDocumentAttributeValueType> type;
 
         public Builder() {
     	      // Empty
@@ -89,43 +89,43 @@ public final class IndexDocumentMetadataConfigurationArgs extends io.pulumi.reso
     	      this.type = defaults.type;
         }
 
-        public Builder name(Input<String> name) {
+        public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(String name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder relevance(@Nullable Input<IndexRelevanceArgs> relevance) {
+        public Builder relevance(@Nullable Output<IndexRelevanceArgs> relevance) {
             this.relevance = relevance;
             return this;
         }
 
         public Builder relevance(@Nullable IndexRelevanceArgs relevance) {
-            this.relevance = Input.ofNullable(relevance);
+            this.relevance = Output.ofNullable(relevance);
             return this;
         }
 
-        public Builder search(@Nullable Input<IndexSearchArgs> search) {
+        public Builder search(@Nullable Output<IndexSearchArgs> search) {
             this.search = search;
             return this;
         }
 
         public Builder search(@Nullable IndexSearchArgs search) {
-            this.search = Input.ofNullable(search);
+            this.search = Output.ofNullable(search);
             return this;
         }
 
-        public Builder type(Input<IndexDocumentAttributeValueType> type) {
+        public Builder type(Output<IndexDocumentAttributeValueType> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(IndexDocumentAttributeValueType type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
         public IndexDocumentMetadataConfigurationArgs build() {

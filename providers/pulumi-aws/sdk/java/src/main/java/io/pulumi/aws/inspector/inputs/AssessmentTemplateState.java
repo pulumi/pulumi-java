@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.inspector.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -22,10 +22,10 @@ public final class AssessmentTemplateState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="arn")
-      private final @Nullable Input<String> arn;
+      private final @Nullable Output<String> arn;
 
-    public Input<String> getArn() {
-        return this.arn == null ? Input.empty() : this.arn;
+    public Output<String> getArn() {
+        return this.arn == null ? Output.empty() : this.arn;
     }
 
     /**
@@ -33,10 +33,10 @@ public final class AssessmentTemplateState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="duration")
-      private final @Nullable Input<Integer> duration;
+      private final @Nullable Output<Integer> duration;
 
-    public Input<Integer> getDuration() {
-        return this.duration == null ? Input.empty() : this.duration;
+    public Output<Integer> getDuration() {
+        return this.duration == null ? Output.empty() : this.duration;
     }
 
     /**
@@ -44,10 +44,10 @@ public final class AssessmentTemplateState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -55,10 +55,10 @@ public final class AssessmentTemplateState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="rulesPackageArns")
-      private final @Nullable Input<List<String>> rulesPackageArns;
+      private final @Nullable Output<List<String>> rulesPackageArns;
 
-    public Input<List<String>> getRulesPackageArns() {
-        return this.rulesPackageArns == null ? Input.empty() : this.rulesPackageArns;
+    public Output<List<String>> getRulesPackageArns() {
+        return this.rulesPackageArns == null ? Output.empty() : this.rulesPackageArns;
     }
 
     /**
@@ -66,10 +66,10 @@ public final class AssessmentTemplateState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -77,10 +77,10 @@ public final class AssessmentTemplateState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="tagsAll")
-      private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Input<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Input.empty() : this.tagsAll;
+    public Output<Map<String,String>> getTagsAll() {
+        return this.tagsAll == null ? Output.empty() : this.tagsAll;
     }
 
     /**
@@ -88,20 +88,20 @@ public final class AssessmentTemplateState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="targetArn")
-      private final @Nullable Input<String> targetArn;
+      private final @Nullable Output<String> targetArn;
 
-    public Input<String> getTargetArn() {
-        return this.targetArn == null ? Input.empty() : this.targetArn;
+    public Output<String> getTargetArn() {
+        return this.targetArn == null ? Output.empty() : this.targetArn;
     }
 
     public AssessmentTemplateState(
-        @Nullable Input<String> arn,
-        @Nullable Input<Integer> duration,
-        @Nullable Input<String> name,
-        @Nullable Input<List<String>> rulesPackageArns,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<Map<String,String>> tagsAll,
-        @Nullable Input<String> targetArn) {
+        @Nullable Output<String> arn,
+        @Nullable Output<Integer> duration,
+        @Nullable Output<String> name,
+        @Nullable Output<List<String>> rulesPackageArns,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<Map<String,String>> tagsAll,
+        @Nullable Output<String> targetArn) {
         this.arn = arn;
         this.duration = duration;
         this.name = name;
@@ -112,13 +112,13 @@ public final class AssessmentTemplateState extends io.pulumi.resources.ResourceA
     }
 
     private AssessmentTemplateState() {
-        this.arn = Input.empty();
-        this.duration = Input.empty();
-        this.name = Input.empty();
-        this.rulesPackageArns = Input.empty();
-        this.tags = Input.empty();
-        this.tagsAll = Input.empty();
-        this.targetArn = Input.empty();
+        this.arn = Output.empty();
+        this.duration = Output.empty();
+        this.name = Output.empty();
+        this.rulesPackageArns = Output.empty();
+        this.tags = Output.empty();
+        this.tagsAll = Output.empty();
+        this.targetArn = Output.empty();
     }
 
     public static Builder builder() {
@@ -130,13 +130,13 @@ public final class AssessmentTemplateState extends io.pulumi.resources.ResourceA
     }
 
     public static final class Builder {
-        private @Nullable Input<String> arn;
-        private @Nullable Input<Integer> duration;
-        private @Nullable Input<String> name;
-        private @Nullable Input<List<String>> rulesPackageArns;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<Map<String,String>> tagsAll;
-        private @Nullable Input<String> targetArn;
+        private @Nullable Output<String> arn;
+        private @Nullable Output<Integer> duration;
+        private @Nullable Output<String> name;
+        private @Nullable Output<List<String>> rulesPackageArns;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<Map<String,String>> tagsAll;
+        private @Nullable Output<String> targetArn;
 
         public Builder() {
     	      // Empty
@@ -153,73 +153,73 @@ public final class AssessmentTemplateState extends io.pulumi.resources.ResourceA
     	      this.targetArn = defaults.targetArn;
         }
 
-        public Builder arn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
 
         public Builder arn(@Nullable String arn) {
-            this.arn = Input.ofNullable(arn);
+            this.arn = Output.ofNullable(arn);
             return this;
         }
 
-        public Builder duration(@Nullable Input<Integer> duration) {
+        public Builder duration(@Nullable Output<Integer> duration) {
             this.duration = duration;
             return this;
         }
 
         public Builder duration(@Nullable Integer duration) {
-            this.duration = Input.ofNullable(duration);
+            this.duration = Output.ofNullable(duration);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder rulesPackageArns(@Nullable Input<List<String>> rulesPackageArns) {
+        public Builder rulesPackageArns(@Nullable Output<List<String>> rulesPackageArns) {
             this.rulesPackageArns = rulesPackageArns;
             return this;
         }
 
         public Builder rulesPackageArns(@Nullable List<String> rulesPackageArns) {
-            this.rulesPackageArns = Input.ofNullable(rulesPackageArns);
+            this.rulesPackageArns = Output.ofNullable(rulesPackageArns);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Input.ofNullable(tagsAll);
+            this.tagsAll = Output.ofNullable(tagsAll);
             return this;
         }
 
-        public Builder targetArn(@Nullable Input<String> targetArn) {
+        public Builder targetArn(@Nullable Output<String> targetArn) {
             this.targetArn = targetArn;
             return this;
         }
 
         public Builder targetArn(@Nullable String targetArn) {
-            this.targetArn = Input.ofNullable(targetArn);
+            this.targetArn = Output.ofNullable(targetArn);
             return this;
         }
         public AssessmentTemplateState build() {

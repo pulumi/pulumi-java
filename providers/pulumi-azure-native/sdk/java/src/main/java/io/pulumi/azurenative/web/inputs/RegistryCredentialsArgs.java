@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.web.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class RegistryCredentialsArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="passwordSecretRef")
-      private final @Nullable Input<String> passwordSecretRef;
+      private final @Nullable Output<String> passwordSecretRef;
 
-    public Input<String> getPasswordSecretRef() {
-        return this.passwordSecretRef == null ? Input.empty() : this.passwordSecretRef;
+    public Output<String> getPasswordSecretRef() {
+        return this.passwordSecretRef == null ? Output.empty() : this.passwordSecretRef;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class RegistryCredentialsArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="server")
-      private final @Nullable Input<String> server;
+      private final @Nullable Output<String> server;
 
-    public Input<String> getServer() {
-        return this.server == null ? Input.empty() : this.server;
+    public Output<String> getServer() {
+        return this.server == null ? Output.empty() : this.server;
     }
 
     /**
@@ -45,25 +45,25 @@ public final class RegistryCredentialsArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="username")
-      private final @Nullable Input<String> username;
+      private final @Nullable Output<String> username;
 
-    public Input<String> getUsername() {
-        return this.username == null ? Input.empty() : this.username;
+    public Output<String> getUsername() {
+        return this.username == null ? Output.empty() : this.username;
     }
 
     public RegistryCredentialsArgs(
-        @Nullable Input<String> passwordSecretRef,
-        @Nullable Input<String> server,
-        @Nullable Input<String> username) {
+        @Nullable Output<String> passwordSecretRef,
+        @Nullable Output<String> server,
+        @Nullable Output<String> username) {
         this.passwordSecretRef = passwordSecretRef;
         this.server = server;
         this.username = username;
     }
 
     private RegistryCredentialsArgs() {
-        this.passwordSecretRef = Input.empty();
-        this.server = Input.empty();
-        this.username = Input.empty();
+        this.passwordSecretRef = Output.empty();
+        this.server = Output.empty();
+        this.username = Output.empty();
     }
 
     public static Builder builder() {
@@ -75,9 +75,9 @@ public final class RegistryCredentialsArgs extends io.pulumi.resources.ResourceA
     }
 
     public static final class Builder {
-        private @Nullable Input<String> passwordSecretRef;
-        private @Nullable Input<String> server;
-        private @Nullable Input<String> username;
+        private @Nullable Output<String> passwordSecretRef;
+        private @Nullable Output<String> server;
+        private @Nullable Output<String> username;
 
         public Builder() {
     	      // Empty
@@ -90,33 +90,33 @@ public final class RegistryCredentialsArgs extends io.pulumi.resources.ResourceA
     	      this.username = defaults.username;
         }
 
-        public Builder passwordSecretRef(@Nullable Input<String> passwordSecretRef) {
+        public Builder passwordSecretRef(@Nullable Output<String> passwordSecretRef) {
             this.passwordSecretRef = passwordSecretRef;
             return this;
         }
 
         public Builder passwordSecretRef(@Nullable String passwordSecretRef) {
-            this.passwordSecretRef = Input.ofNullable(passwordSecretRef);
+            this.passwordSecretRef = Output.ofNullable(passwordSecretRef);
             return this;
         }
 
-        public Builder server(@Nullable Input<String> server) {
+        public Builder server(@Nullable Output<String> server) {
             this.server = server;
             return this;
         }
 
         public Builder server(@Nullable String server) {
-            this.server = Input.ofNullable(server);
+            this.server = Output.ofNullable(server);
             return this;
         }
 
-        public Builder username(@Nullable Input<String> username) {
+        public Builder username(@Nullable Output<String> username) {
             this.username = username;
             return this;
         }
 
         public Builder username(@Nullable String username) {
-            this.username = Input.ofNullable(username);
+            this.username = Output.ofNullable(username);
             return this;
         }
         public RegistryCredentialsArgs build() {

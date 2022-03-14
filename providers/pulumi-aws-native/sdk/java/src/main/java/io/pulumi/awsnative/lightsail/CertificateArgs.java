@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.lightsail;
 
 import io.pulumi.awsnative.lightsail.inputs.CertificateTagArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -21,10 +21,10 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="certificateName")
-      private final @Nullable Input<String> certificateName;
+      private final @Nullable Output<String> certificateName;
 
-    public Input<String> getCertificateName() {
-        return this.certificateName == null ? Input.empty() : this.certificateName;
+    public Output<String> getCertificateName() {
+        return this.certificateName == null ? Output.empty() : this.certificateName;
     }
 
     /**
@@ -32,9 +32,9 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="domainName", required=true)
-      private final Input<String> domainName;
+      private final Output<String> domainName;
 
-    public Input<String> getDomainName() {
+    public Output<String> getDomainName() {
         return this.domainName;
     }
 
@@ -43,10 +43,10 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="subjectAlternativeNames")
-      private final @Nullable Input<List<String>> subjectAlternativeNames;
+      private final @Nullable Output<List<String>> subjectAlternativeNames;
 
-    public Input<List<String>> getSubjectAlternativeNames() {
-        return this.subjectAlternativeNames == null ? Input.empty() : this.subjectAlternativeNames;
+    public Output<List<String>> getSubjectAlternativeNames() {
+        return this.subjectAlternativeNames == null ? Output.empty() : this.subjectAlternativeNames;
     }
 
     /**
@@ -54,17 +54,17 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<List<CertificateTagArgs>> tags;
+      private final @Nullable Output<List<CertificateTagArgs>> tags;
 
-    public Input<List<CertificateTagArgs>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<List<CertificateTagArgs>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public CertificateArgs(
-        @Nullable Input<String> certificateName,
-        Input<String> domainName,
-        @Nullable Input<List<String>> subjectAlternativeNames,
-        @Nullable Input<List<CertificateTagArgs>> tags) {
+        @Nullable Output<String> certificateName,
+        Output<String> domainName,
+        @Nullable Output<List<String>> subjectAlternativeNames,
+        @Nullable Output<List<CertificateTagArgs>> tags) {
         this.certificateName = certificateName;
         this.domainName = Objects.requireNonNull(domainName, "expected parameter 'domainName' to be non-null");
         this.subjectAlternativeNames = subjectAlternativeNames;
@@ -72,10 +72,10 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private CertificateArgs() {
-        this.certificateName = Input.empty();
-        this.domainName = Input.empty();
-        this.subjectAlternativeNames = Input.empty();
-        this.tags = Input.empty();
+        this.certificateName = Output.empty();
+        this.domainName = Output.empty();
+        this.subjectAlternativeNames = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -87,10 +87,10 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> certificateName;
-        private Input<String> domainName;
-        private @Nullable Input<List<String>> subjectAlternativeNames;
-        private @Nullable Input<List<CertificateTagArgs>> tags;
+        private @Nullable Output<String> certificateName;
+        private Output<String> domainName;
+        private @Nullable Output<List<String>> subjectAlternativeNames;
+        private @Nullable Output<List<CertificateTagArgs>> tags;
 
         public Builder() {
     	      // Empty
@@ -104,43 +104,43 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder certificateName(@Nullable Input<String> certificateName) {
+        public Builder certificateName(@Nullable Output<String> certificateName) {
             this.certificateName = certificateName;
             return this;
         }
 
         public Builder certificateName(@Nullable String certificateName) {
-            this.certificateName = Input.ofNullable(certificateName);
+            this.certificateName = Output.ofNullable(certificateName);
             return this;
         }
 
-        public Builder domainName(Input<String> domainName) {
+        public Builder domainName(Output<String> domainName) {
             this.domainName = Objects.requireNonNull(domainName);
             return this;
         }
 
         public Builder domainName(String domainName) {
-            this.domainName = Input.of(Objects.requireNonNull(domainName));
+            this.domainName = Output.of(Objects.requireNonNull(domainName));
             return this;
         }
 
-        public Builder subjectAlternativeNames(@Nullable Input<List<String>> subjectAlternativeNames) {
+        public Builder subjectAlternativeNames(@Nullable Output<List<String>> subjectAlternativeNames) {
             this.subjectAlternativeNames = subjectAlternativeNames;
             return this;
         }
 
         public Builder subjectAlternativeNames(@Nullable List<String> subjectAlternativeNames) {
-            this.subjectAlternativeNames = Input.ofNullable(subjectAlternativeNames);
+            this.subjectAlternativeNames = Output.ofNullable(subjectAlternativeNames);
             return this;
         }
 
-        public Builder tags(@Nullable Input<List<CertificateTagArgs>> tags) {
+        public Builder tags(@Nullable Output<List<CertificateTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable List<CertificateTagArgs> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public CertificateArgs build() {

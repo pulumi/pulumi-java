@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.relay;
 
 import io.pulumi.azurenative.relay.enums.AccessRights;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -21,10 +21,10 @@ public final class HybridConnectionAuthorizationRuleArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="authorizationRuleName")
-      private final @Nullable Input<String> authorizationRuleName;
+      private final @Nullable Output<String> authorizationRuleName;
 
-    public Input<String> getAuthorizationRuleName() {
-        return this.authorizationRuleName == null ? Input.empty() : this.authorizationRuleName;
+    public Output<String> getAuthorizationRuleName() {
+        return this.authorizationRuleName == null ? Output.empty() : this.authorizationRuleName;
     }
 
     /**
@@ -32,9 +32,9 @@ public final class HybridConnectionAuthorizationRuleArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="hybridConnectionName", required=true)
-      private final Input<String> hybridConnectionName;
+      private final Output<String> hybridConnectionName;
 
-    public Input<String> getHybridConnectionName() {
+    public Output<String> getHybridConnectionName() {
         return this.hybridConnectionName;
     }
 
@@ -43,9 +43,9 @@ public final class HybridConnectionAuthorizationRuleArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="namespaceName", required=true)
-      private final Input<String> namespaceName;
+      private final Output<String> namespaceName;
 
-    public Input<String> getNamespaceName() {
+    public Output<String> getNamespaceName() {
         return this.namespaceName;
     }
 
@@ -54,9 +54,9 @@ public final class HybridConnectionAuthorizationRuleArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -65,18 +65,18 @@ public final class HybridConnectionAuthorizationRuleArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="rights", required=true)
-      private final Input<List<AccessRights>> rights;
+      private final Output<List<AccessRights>> rights;
 
-    public Input<List<AccessRights>> getRights() {
+    public Output<List<AccessRights>> getRights() {
         return this.rights;
     }
 
     public HybridConnectionAuthorizationRuleArgs(
-        @Nullable Input<String> authorizationRuleName,
-        Input<String> hybridConnectionName,
-        Input<String> namespaceName,
-        Input<String> resourceGroupName,
-        Input<List<AccessRights>> rights) {
+        @Nullable Output<String> authorizationRuleName,
+        Output<String> hybridConnectionName,
+        Output<String> namespaceName,
+        Output<String> resourceGroupName,
+        Output<List<AccessRights>> rights) {
         this.authorizationRuleName = authorizationRuleName;
         this.hybridConnectionName = Objects.requireNonNull(hybridConnectionName, "expected parameter 'hybridConnectionName' to be non-null");
         this.namespaceName = Objects.requireNonNull(namespaceName, "expected parameter 'namespaceName' to be non-null");
@@ -85,11 +85,11 @@ public final class HybridConnectionAuthorizationRuleArgs extends io.pulumi.resou
     }
 
     private HybridConnectionAuthorizationRuleArgs() {
-        this.authorizationRuleName = Input.empty();
-        this.hybridConnectionName = Input.empty();
-        this.namespaceName = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.rights = Input.empty();
+        this.authorizationRuleName = Output.empty();
+        this.hybridConnectionName = Output.empty();
+        this.namespaceName = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.rights = Output.empty();
     }
 
     public static Builder builder() {
@@ -101,11 +101,11 @@ public final class HybridConnectionAuthorizationRuleArgs extends io.pulumi.resou
     }
 
     public static final class Builder {
-        private @Nullable Input<String> authorizationRuleName;
-        private Input<String> hybridConnectionName;
-        private Input<String> namespaceName;
-        private Input<String> resourceGroupName;
-        private Input<List<AccessRights>> rights;
+        private @Nullable Output<String> authorizationRuleName;
+        private Output<String> hybridConnectionName;
+        private Output<String> namespaceName;
+        private Output<String> resourceGroupName;
+        private Output<List<AccessRights>> rights;
 
         public Builder() {
     	      // Empty
@@ -120,53 +120,53 @@ public final class HybridConnectionAuthorizationRuleArgs extends io.pulumi.resou
     	      this.rights = defaults.rights;
         }
 
-        public Builder authorizationRuleName(@Nullable Input<String> authorizationRuleName) {
+        public Builder authorizationRuleName(@Nullable Output<String> authorizationRuleName) {
             this.authorizationRuleName = authorizationRuleName;
             return this;
         }
 
         public Builder authorizationRuleName(@Nullable String authorizationRuleName) {
-            this.authorizationRuleName = Input.ofNullable(authorizationRuleName);
+            this.authorizationRuleName = Output.ofNullable(authorizationRuleName);
             return this;
         }
 
-        public Builder hybridConnectionName(Input<String> hybridConnectionName) {
+        public Builder hybridConnectionName(Output<String> hybridConnectionName) {
             this.hybridConnectionName = Objects.requireNonNull(hybridConnectionName);
             return this;
         }
 
         public Builder hybridConnectionName(String hybridConnectionName) {
-            this.hybridConnectionName = Input.of(Objects.requireNonNull(hybridConnectionName));
+            this.hybridConnectionName = Output.of(Objects.requireNonNull(hybridConnectionName));
             return this;
         }
 
-        public Builder namespaceName(Input<String> namespaceName) {
+        public Builder namespaceName(Output<String> namespaceName) {
             this.namespaceName = Objects.requireNonNull(namespaceName);
             return this;
         }
 
         public Builder namespaceName(String namespaceName) {
-            this.namespaceName = Input.of(Objects.requireNonNull(namespaceName));
+            this.namespaceName = Output.of(Objects.requireNonNull(namespaceName));
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder rights(Input<List<AccessRights>> rights) {
+        public Builder rights(Output<List<AccessRights>> rights) {
             this.rights = Objects.requireNonNull(rights);
             return this;
         }
 
         public Builder rights(List<AccessRights> rights) {
-            this.rights = Input.of(Objects.requireNonNull(rights));
+            this.rights = Output.of(Objects.requireNonNull(rights));
             return this;
         }
         public HybridConnectionAuthorizationRuleArgs build() {

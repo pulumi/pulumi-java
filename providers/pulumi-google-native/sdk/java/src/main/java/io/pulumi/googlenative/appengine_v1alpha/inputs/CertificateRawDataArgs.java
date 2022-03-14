@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.appengine_v1alpha.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class CertificateRawDataArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="privateKey")
-      private final @Nullable Input<String> privateKey;
+      private final @Nullable Output<String> privateKey;
 
-    public Input<String> getPrivateKey() {
-        return this.privateKey == null ? Input.empty() : this.privateKey;
+    public Output<String> getPrivateKey() {
+        return this.privateKey == null ? Output.empty() : this.privateKey;
     }
 
     /**
@@ -34,22 +34,22 @@ public final class CertificateRawDataArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="publicCertificate")
-      private final @Nullable Input<String> publicCertificate;
+      private final @Nullable Output<String> publicCertificate;
 
-    public Input<String> getPublicCertificate() {
-        return this.publicCertificate == null ? Input.empty() : this.publicCertificate;
+    public Output<String> getPublicCertificate() {
+        return this.publicCertificate == null ? Output.empty() : this.publicCertificate;
     }
 
     public CertificateRawDataArgs(
-        @Nullable Input<String> privateKey,
-        @Nullable Input<String> publicCertificate) {
+        @Nullable Output<String> privateKey,
+        @Nullable Output<String> publicCertificate) {
         this.privateKey = privateKey;
         this.publicCertificate = publicCertificate;
     }
 
     private CertificateRawDataArgs() {
-        this.privateKey = Input.empty();
-        this.publicCertificate = Input.empty();
+        this.privateKey = Output.empty();
+        this.publicCertificate = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class CertificateRawDataArgs extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private @Nullable Input<String> privateKey;
-        private @Nullable Input<String> publicCertificate;
+        private @Nullable Output<String> privateKey;
+        private @Nullable Output<String> publicCertificate;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class CertificateRawDataArgs extends io.pulumi.resources.ResourceAr
     	      this.publicCertificate = defaults.publicCertificate;
         }
 
-        public Builder privateKey(@Nullable Input<String> privateKey) {
+        public Builder privateKey(@Nullable Output<String> privateKey) {
             this.privateKey = privateKey;
             return this;
         }
 
         public Builder privateKey(@Nullable String privateKey) {
-            this.privateKey = Input.ofNullable(privateKey);
+            this.privateKey = Output.ofNullable(privateKey);
             return this;
         }
 
-        public Builder publicCertificate(@Nullable Input<String> publicCertificate) {
+        public Builder publicCertificate(@Nullable Output<String> publicCertificate) {
             this.publicCertificate = publicCertificate;
             return this;
         }
 
         public Builder publicCertificate(@Nullable String publicCertificate) {
-            this.publicCertificate = Input.ofNullable(publicCertificate);
+            this.publicCertificate = Output.ofNullable(publicCertificate);
             return this;
         }
         public CertificateRawDataArgs build() {

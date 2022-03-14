@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.videoanalyzer.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -22,18 +22,18 @@ public final class NodeInputArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="nodeName", required=true)
-      private final Input<String> nodeName;
+      private final Output<String> nodeName;
 
-    public Input<String> getNodeName() {
+    public Output<String> getNodeName() {
         return this.nodeName;
     }
 
-    public NodeInputArgs(Input<String> nodeName) {
+    public NodeInputArgs(Output<String> nodeName) {
         this.nodeName = Objects.requireNonNull(nodeName, "expected parameter 'nodeName' to be non-null");
     }
 
     private NodeInputArgs() {
-        this.nodeName = Input.empty();
+        this.nodeName = Output.empty();
     }
 
     public static Builder builder() {
@@ -45,7 +45,7 @@ public final class NodeInputArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> nodeName;
+        private Output<String> nodeName;
 
         public Builder() {
     	      // Empty
@@ -56,13 +56,13 @@ public final class NodeInputArgs extends io.pulumi.resources.ResourceArgs {
     	      this.nodeName = defaults.nodeName;
         }
 
-        public Builder nodeName(Input<String> nodeName) {
+        public Builder nodeName(Output<String> nodeName) {
             this.nodeName = Objects.requireNonNull(nodeName);
             return this;
         }
 
         public Builder nodeName(String nodeName) {
-            this.nodeName = Input.of(Objects.requireNonNull(nodeName));
+            this.nodeName = Output.of(Objects.requireNonNull(nodeName));
             return this;
         }
         public NodeInputArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.storagecache.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class ClfsTargetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="target")
-      private final @Nullable Input<String> target;
+      private final @Nullable Output<String> target;
 
-    public Input<String> getTarget() {
-        return this.target == null ? Input.empty() : this.target;
+    public Output<String> getTarget() {
+        return this.target == null ? Output.empty() : this.target;
     }
 
-    public ClfsTargetArgs(@Nullable Input<String> target) {
+    public ClfsTargetArgs(@Nullable Output<String> target) {
         this.target = target;
     }
 
     private ClfsTargetArgs() {
-        this.target = Input.empty();
+        this.target = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class ClfsTargetArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> target;
+        private @Nullable Output<String> target;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class ClfsTargetArgs extends io.pulumi.resources.ResourceArgs {
     	      this.target = defaults.target;
         }
 
-        public Builder target(@Nullable Input<String> target) {
+        public Builder target(@Nullable Output<String> target) {
             this.target = target;
             return this;
         }
 
         public Builder target(@Nullable String target) {
-            this.target = Input.ofNullable(target);
+            this.target = Output.ofNullable(target);
             return this;
         }
         public ClfsTargetArgs build() {

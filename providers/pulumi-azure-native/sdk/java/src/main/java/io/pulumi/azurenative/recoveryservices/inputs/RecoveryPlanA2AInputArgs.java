@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.recoveryservices.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -24,10 +24,10 @@ public final class RecoveryPlanA2AInputArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="instanceType")
-      private final @Nullable Input<String> instanceType;
+      private final @Nullable Output<String> instanceType;
 
-    public Input<String> getInstanceType() {
-        return this.instanceType == null ? Input.empty() : this.instanceType;
+    public Output<String> getInstanceType() {
+        return this.instanceType == null ? Output.empty() : this.instanceType;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class RecoveryPlanA2AInputArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="primaryZone")
-      private final @Nullable Input<String> primaryZone;
+      private final @Nullable Output<String> primaryZone;
 
-    public Input<String> getPrimaryZone() {
-        return this.primaryZone == null ? Input.empty() : this.primaryZone;
+    public Output<String> getPrimaryZone() {
+        return this.primaryZone == null ? Output.empty() : this.primaryZone;
     }
 
     /**
@@ -46,25 +46,25 @@ public final class RecoveryPlanA2AInputArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="recoveryZone")
-      private final @Nullable Input<String> recoveryZone;
+      private final @Nullable Output<String> recoveryZone;
 
-    public Input<String> getRecoveryZone() {
-        return this.recoveryZone == null ? Input.empty() : this.recoveryZone;
+    public Output<String> getRecoveryZone() {
+        return this.recoveryZone == null ? Output.empty() : this.recoveryZone;
     }
 
     public RecoveryPlanA2AInputArgs(
-        @Nullable Input<String> instanceType,
-        @Nullable Input<String> primaryZone,
-        @Nullable Input<String> recoveryZone) {
+        @Nullable Output<String> instanceType,
+        @Nullable Output<String> primaryZone,
+        @Nullable Output<String> recoveryZone) {
         this.instanceType = instanceType;
         this.primaryZone = primaryZone;
         this.recoveryZone = recoveryZone;
     }
 
     private RecoveryPlanA2AInputArgs() {
-        this.instanceType = Input.empty();
-        this.primaryZone = Input.empty();
-        this.recoveryZone = Input.empty();
+        this.instanceType = Output.empty();
+        this.primaryZone = Output.empty();
+        this.recoveryZone = Output.empty();
     }
 
     public static Builder builder() {
@@ -76,9 +76,9 @@ public final class RecoveryPlanA2AInputArgs extends io.pulumi.resources.Resource
     }
 
     public static final class Builder {
-        private @Nullable Input<String> instanceType;
-        private @Nullable Input<String> primaryZone;
-        private @Nullable Input<String> recoveryZone;
+        private @Nullable Output<String> instanceType;
+        private @Nullable Output<String> primaryZone;
+        private @Nullable Output<String> recoveryZone;
 
         public Builder() {
     	      // Empty
@@ -91,33 +91,33 @@ public final class RecoveryPlanA2AInputArgs extends io.pulumi.resources.Resource
     	      this.recoveryZone = defaults.recoveryZone;
         }
 
-        public Builder instanceType(@Nullable Input<String> instanceType) {
+        public Builder instanceType(@Nullable Output<String> instanceType) {
             this.instanceType = instanceType;
             return this;
         }
 
         public Builder instanceType(@Nullable String instanceType) {
-            this.instanceType = Input.ofNullable(instanceType);
+            this.instanceType = Output.ofNullable(instanceType);
             return this;
         }
 
-        public Builder primaryZone(@Nullable Input<String> primaryZone) {
+        public Builder primaryZone(@Nullable Output<String> primaryZone) {
             this.primaryZone = primaryZone;
             return this;
         }
 
         public Builder primaryZone(@Nullable String primaryZone) {
-            this.primaryZone = Input.ofNullable(primaryZone);
+            this.primaryZone = Output.ofNullable(primaryZone);
             return this;
         }
 
-        public Builder recoveryZone(@Nullable Input<String> recoveryZone) {
+        public Builder recoveryZone(@Nullable Output<String> recoveryZone) {
             this.recoveryZone = recoveryZone;
             return this;
         }
 
         public Builder recoveryZone(@Nullable String recoveryZone) {
-            this.recoveryZone = Input.ofNullable(recoveryZone);
+            this.recoveryZone = Output.ofNullable(recoveryZone);
             return this;
         }
         public RecoveryPlanA2AInputArgs build() {

@@ -6,7 +6,6 @@ package io.pulumi.aws.ram;
 import io.pulumi.aws.Utilities;
 import io.pulumi.aws.ram.ResourceShareArgs;
 import io.pulumi.aws.ram.inputs.ResourceShareState;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -140,14 +139,14 @@ public class ResourceShare extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ResourceShare(String name, @Nullable ResourceShareArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:ram/resourceShare:ResourceShare", name, args == null ? ResourceShareArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws:ram/resourceShare:ResourceShare", name, args == null ? ResourceShareArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private ResourceShare(String name, Input<String> id, @Nullable ResourceShareState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private ResourceShare(String name, Output<String> id, @Nullable ResourceShareState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws:ram/resourceShare:ResourceShare", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -163,7 +162,7 @@ public class ResourceShare extends io.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static ResourceShare get(String name, Input<String> id, @Nullable ResourceShareState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static ResourceShare get(String name, Output<String> id, @Nullable ResourceShareState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new ResourceShare(name, id, state, options);
     }
 }

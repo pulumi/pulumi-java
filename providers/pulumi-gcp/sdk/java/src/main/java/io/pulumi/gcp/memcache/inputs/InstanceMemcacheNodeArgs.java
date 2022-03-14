@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.memcache.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -16,46 +16,46 @@ public final class InstanceMemcacheNodeArgs extends io.pulumi.resources.Resource
     public static final InstanceMemcacheNodeArgs Empty = new InstanceMemcacheNodeArgs();
 
     @InputImport(name="host")
-      private final @Nullable Input<String> host;
+      private final @Nullable Output<String> host;
 
-    public Input<String> getHost() {
-        return this.host == null ? Input.empty() : this.host;
+    public Output<String> getHost() {
+        return this.host == null ? Output.empty() : this.host;
     }
 
     @InputImport(name="nodeId")
-      private final @Nullable Input<String> nodeId;
+      private final @Nullable Output<String> nodeId;
 
-    public Input<String> getNodeId() {
-        return this.nodeId == null ? Input.empty() : this.nodeId;
+    public Output<String> getNodeId() {
+        return this.nodeId == null ? Output.empty() : this.nodeId;
     }
 
     @InputImport(name="port")
-      private final @Nullable Input<Integer> port;
+      private final @Nullable Output<Integer> port;
 
-    public Input<Integer> getPort() {
-        return this.port == null ? Input.empty() : this.port;
+    public Output<Integer> getPort() {
+        return this.port == null ? Output.empty() : this.port;
     }
 
     @InputImport(name="state")
-      private final @Nullable Input<String> state;
+      private final @Nullable Output<String> state;
 
-    public Input<String> getState() {
-        return this.state == null ? Input.empty() : this.state;
+    public Output<String> getState() {
+        return this.state == null ? Output.empty() : this.state;
     }
 
     @InputImport(name="zone")
-      private final @Nullable Input<String> zone;
+      private final @Nullable Output<String> zone;
 
-    public Input<String> getZone() {
-        return this.zone == null ? Input.empty() : this.zone;
+    public Output<String> getZone() {
+        return this.zone == null ? Output.empty() : this.zone;
     }
 
     public InstanceMemcacheNodeArgs(
-        @Nullable Input<String> host,
-        @Nullable Input<String> nodeId,
-        @Nullable Input<Integer> port,
-        @Nullable Input<String> state,
-        @Nullable Input<String> zone) {
+        @Nullable Output<String> host,
+        @Nullable Output<String> nodeId,
+        @Nullable Output<Integer> port,
+        @Nullable Output<String> state,
+        @Nullable Output<String> zone) {
         this.host = host;
         this.nodeId = nodeId;
         this.port = port;
@@ -64,11 +64,11 @@ public final class InstanceMemcacheNodeArgs extends io.pulumi.resources.Resource
     }
 
     private InstanceMemcacheNodeArgs() {
-        this.host = Input.empty();
-        this.nodeId = Input.empty();
-        this.port = Input.empty();
-        this.state = Input.empty();
-        this.zone = Input.empty();
+        this.host = Output.empty();
+        this.nodeId = Output.empty();
+        this.port = Output.empty();
+        this.state = Output.empty();
+        this.zone = Output.empty();
     }
 
     public static Builder builder() {
@@ -80,11 +80,11 @@ public final class InstanceMemcacheNodeArgs extends io.pulumi.resources.Resource
     }
 
     public static final class Builder {
-        private @Nullable Input<String> host;
-        private @Nullable Input<String> nodeId;
-        private @Nullable Input<Integer> port;
-        private @Nullable Input<String> state;
-        private @Nullable Input<String> zone;
+        private @Nullable Output<String> host;
+        private @Nullable Output<String> nodeId;
+        private @Nullable Output<Integer> port;
+        private @Nullable Output<String> state;
+        private @Nullable Output<String> zone;
 
         public Builder() {
     	      // Empty
@@ -99,53 +99,53 @@ public final class InstanceMemcacheNodeArgs extends io.pulumi.resources.Resource
     	      this.zone = defaults.zone;
         }
 
-        public Builder host(@Nullable Input<String> host) {
+        public Builder host(@Nullable Output<String> host) {
             this.host = host;
             return this;
         }
 
         public Builder host(@Nullable String host) {
-            this.host = Input.ofNullable(host);
+            this.host = Output.ofNullable(host);
             return this;
         }
 
-        public Builder nodeId(@Nullable Input<String> nodeId) {
+        public Builder nodeId(@Nullable Output<String> nodeId) {
             this.nodeId = nodeId;
             return this;
         }
 
         public Builder nodeId(@Nullable String nodeId) {
-            this.nodeId = Input.ofNullable(nodeId);
+            this.nodeId = Output.ofNullable(nodeId);
             return this;
         }
 
-        public Builder port(@Nullable Input<Integer> port) {
+        public Builder port(@Nullable Output<Integer> port) {
             this.port = port;
             return this;
         }
 
         public Builder port(@Nullable Integer port) {
-            this.port = Input.ofNullable(port);
+            this.port = Output.ofNullable(port);
             return this;
         }
 
-        public Builder state(@Nullable Input<String> state) {
+        public Builder state(@Nullable Output<String> state) {
             this.state = state;
             return this;
         }
 
         public Builder state(@Nullable String state) {
-            this.state = Input.ofNullable(state);
+            this.state = Output.ofNullable(state);
             return this;
         }
 
-        public Builder zone(@Nullable Input<String> zone) {
+        public Builder zone(@Nullable Output<String> zone) {
             this.zone = zone;
             return this;
         }
 
         public Builder zone(@Nullable String zone) {
-            this.zone = Input.ofNullable(zone);
+            this.zone = Output.ofNullable(zone);
             return this;
         }
         public InstanceMemcacheNodeArgs build() {

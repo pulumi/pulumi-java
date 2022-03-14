@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.monitoring_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class GaugeViewArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="lowerBound")
-      private final @Nullable Input<Double> lowerBound;
+      private final @Nullable Output<Double> lowerBound;
 
-    public Input<Double> getLowerBound() {
-        return this.lowerBound == null ? Input.empty() : this.lowerBound;
+    public Output<Double> getLowerBound() {
+        return this.lowerBound == null ? Output.empty() : this.lowerBound;
     }
 
     /**
@@ -34,22 +34,22 @@ public final class GaugeViewArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="upperBound")
-      private final @Nullable Input<Double> upperBound;
+      private final @Nullable Output<Double> upperBound;
 
-    public Input<Double> getUpperBound() {
-        return this.upperBound == null ? Input.empty() : this.upperBound;
+    public Output<Double> getUpperBound() {
+        return this.upperBound == null ? Output.empty() : this.upperBound;
     }
 
     public GaugeViewArgs(
-        @Nullable Input<Double> lowerBound,
-        @Nullable Input<Double> upperBound) {
+        @Nullable Output<Double> lowerBound,
+        @Nullable Output<Double> upperBound) {
         this.lowerBound = lowerBound;
         this.upperBound = upperBound;
     }
 
     private GaugeViewArgs() {
-        this.lowerBound = Input.empty();
-        this.upperBound = Input.empty();
+        this.lowerBound = Output.empty();
+        this.upperBound = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class GaugeViewArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Double> lowerBound;
-        private @Nullable Input<Double> upperBound;
+        private @Nullable Output<Double> lowerBound;
+        private @Nullable Output<Double> upperBound;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class GaugeViewArgs extends io.pulumi.resources.ResourceArgs {
     	      this.upperBound = defaults.upperBound;
         }
 
-        public Builder lowerBound(@Nullable Input<Double> lowerBound) {
+        public Builder lowerBound(@Nullable Output<Double> lowerBound) {
             this.lowerBound = lowerBound;
             return this;
         }
 
         public Builder lowerBound(@Nullable Double lowerBound) {
-            this.lowerBound = Input.ofNullable(lowerBound);
+            this.lowerBound = Output.ofNullable(lowerBound);
             return this;
         }
 
-        public Builder upperBound(@Nullable Input<Double> upperBound) {
+        public Builder upperBound(@Nullable Output<Double> upperBound) {
             this.upperBound = upperBound;
             return this;
         }
 
         public Builder upperBound(@Nullable Double upperBound) {
-            this.upperBound = Input.ofNullable(upperBound);
+            this.upperBound = Output.ofNullable(upperBound);
             return this;
         }
         public GaugeViewArgs build() {

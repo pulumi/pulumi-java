@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.firebase;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -20,9 +20,9 @@ public final class ProjectLocationArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="locationId", required=true)
-      private final Input<String> locationId;
+      private final Output<String> locationId;
 
-    public Input<String> getLocationId() {
+    public Output<String> getLocationId() {
         return this.locationId;
     }
 
@@ -32,22 +32,22 @@ public final class ProjectLocationArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     public ProjectLocationArgs(
-        Input<String> locationId,
-        @Nullable Input<String> project) {
+        Output<String> locationId,
+        @Nullable Output<String> project) {
         this.locationId = Objects.requireNonNull(locationId, "expected parameter 'locationId' to be non-null");
         this.project = project;
     }
 
     private ProjectLocationArgs() {
-        this.locationId = Input.empty();
-        this.project = Input.empty();
+        this.locationId = Output.empty();
+        this.project = Output.empty();
     }
 
     public static Builder builder() {
@@ -59,8 +59,8 @@ public final class ProjectLocationArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private Input<String> locationId;
-        private @Nullable Input<String> project;
+        private Output<String> locationId;
+        private @Nullable Output<String> project;
 
         public Builder() {
     	      // Empty
@@ -72,23 +72,23 @@ public final class ProjectLocationArgs extends io.pulumi.resources.ResourceArgs 
     	      this.project = defaults.project;
         }
 
-        public Builder locationId(Input<String> locationId) {
+        public Builder locationId(Output<String> locationId) {
             this.locationId = Objects.requireNonNull(locationId);
             return this;
         }
 
         public Builder locationId(String locationId) {
-            this.locationId = Input.of(Objects.requireNonNull(locationId));
+            this.locationId = Output.of(Objects.requireNonNull(locationId));
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
         public ProjectLocationArgs build() {

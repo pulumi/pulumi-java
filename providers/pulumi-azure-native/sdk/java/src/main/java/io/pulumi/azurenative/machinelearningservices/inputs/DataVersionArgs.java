@@ -5,7 +5,7 @@ package io.pulumi.azurenative.machinelearningservices.inputs;
 
 import io.pulumi.azurenative.machinelearningservices.enums.DatasetType;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -27,10 +27,10 @@ public final class DataVersionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="datasetType")
-      private final @Nullable Input<Either<String,DatasetType>> datasetType;
+      private final @Nullable Output<Either<String,DatasetType>> datasetType;
 
-    public Input<Either<String,DatasetType>> getDatasetType() {
-        return this.datasetType == null ? Input.empty() : this.datasetType;
+    public Output<Either<String,DatasetType>> getDatasetType() {
+        return this.datasetType == null ? Output.empty() : this.datasetType;
     }
 
     /**
@@ -38,10 +38,10 @@ public final class DataVersionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="datastoreId")
-      private final @Nullable Input<String> datastoreId;
+      private final @Nullable Output<String> datastoreId;
 
-    public Input<String> getDatastoreId() {
-        return this.datastoreId == null ? Input.empty() : this.datastoreId;
+    public Output<String> getDatastoreId() {
+        return this.datastoreId == null ? Output.empty() : this.datastoreId;
     }
 
     /**
@@ -49,10 +49,10 @@ public final class DataVersionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -60,10 +60,10 @@ public final class DataVersionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="isAnonymous")
-      private final @Nullable Input<Boolean> isAnonymous;
+      private final @Nullable Output<Boolean> isAnonymous;
 
-    public Input<Boolean> getIsAnonymous() {
-        return this.isAnonymous == null ? Input.empty() : this.isAnonymous;
+    public Output<Boolean> getIsAnonymous() {
+        return this.isAnonymous == null ? Output.empty() : this.isAnonymous;
     }
 
     /**
@@ -71,9 +71,9 @@ public final class DataVersionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="path", required=true)
-      private final Input<String> path;
+      private final Output<String> path;
 
-    public Input<String> getPath() {
+    public Output<String> getPath() {
         return this.path;
     }
 
@@ -82,10 +82,10 @@ public final class DataVersionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="properties")
-      private final @Nullable Input<Map<String,String>> properties;
+      private final @Nullable Output<Map<String,String>> properties;
 
-    public Input<Map<String,String>> getProperties() {
-        return this.properties == null ? Input.empty() : this.properties;
+    public Output<Map<String,String>> getProperties() {
+        return this.properties == null ? Output.empty() : this.properties;
     }
 
     /**
@@ -93,20 +93,20 @@ public final class DataVersionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public DataVersionArgs(
-        @Nullable Input<Either<String,DatasetType>> datasetType,
-        @Nullable Input<String> datastoreId,
-        @Nullable Input<String> description,
-        @Nullable Input<Boolean> isAnonymous,
-        Input<String> path,
-        @Nullable Input<Map<String,String>> properties,
-        @Nullable Input<Map<String,String>> tags) {
+        @Nullable Output<Either<String,DatasetType>> datasetType,
+        @Nullable Output<String> datastoreId,
+        @Nullable Output<String> description,
+        @Nullable Output<Boolean> isAnonymous,
+        Output<String> path,
+        @Nullable Output<Map<String,String>> properties,
+        @Nullable Output<Map<String,String>> tags) {
         this.datasetType = datasetType;
         this.datastoreId = datastoreId;
         this.description = description;
@@ -117,13 +117,13 @@ public final class DataVersionArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DataVersionArgs() {
-        this.datasetType = Input.empty();
-        this.datastoreId = Input.empty();
-        this.description = Input.empty();
-        this.isAnonymous = Input.empty();
-        this.path = Input.empty();
-        this.properties = Input.empty();
-        this.tags = Input.empty();
+        this.datasetType = Output.empty();
+        this.datastoreId = Output.empty();
+        this.description = Output.empty();
+        this.isAnonymous = Output.empty();
+        this.path = Output.empty();
+        this.properties = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -135,13 +135,13 @@ public final class DataVersionArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Either<String,DatasetType>> datasetType;
-        private @Nullable Input<String> datastoreId;
-        private @Nullable Input<String> description;
-        private @Nullable Input<Boolean> isAnonymous;
-        private Input<String> path;
-        private @Nullable Input<Map<String,String>> properties;
-        private @Nullable Input<Map<String,String>> tags;
+        private @Nullable Output<Either<String,DatasetType>> datasetType;
+        private @Nullable Output<String> datastoreId;
+        private @Nullable Output<String> description;
+        private @Nullable Output<Boolean> isAnonymous;
+        private Output<String> path;
+        private @Nullable Output<Map<String,String>> properties;
+        private @Nullable Output<Map<String,String>> tags;
 
         public Builder() {
     	      // Empty
@@ -158,73 +158,73 @@ public final class DataVersionArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder datasetType(@Nullable Input<Either<String,DatasetType>> datasetType) {
+        public Builder datasetType(@Nullable Output<Either<String,DatasetType>> datasetType) {
             this.datasetType = datasetType;
             return this;
         }
 
         public Builder datasetType(@Nullable Either<String,DatasetType> datasetType) {
-            this.datasetType = Input.ofNullable(datasetType);
+            this.datasetType = Output.ofNullable(datasetType);
             return this;
         }
 
-        public Builder datastoreId(@Nullable Input<String> datastoreId) {
+        public Builder datastoreId(@Nullable Output<String> datastoreId) {
             this.datastoreId = datastoreId;
             return this;
         }
 
         public Builder datastoreId(@Nullable String datastoreId) {
-            this.datastoreId = Input.ofNullable(datastoreId);
+            this.datastoreId = Output.ofNullable(datastoreId);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder isAnonymous(@Nullable Input<Boolean> isAnonymous) {
+        public Builder isAnonymous(@Nullable Output<Boolean> isAnonymous) {
             this.isAnonymous = isAnonymous;
             return this;
         }
 
         public Builder isAnonymous(@Nullable Boolean isAnonymous) {
-            this.isAnonymous = Input.ofNullable(isAnonymous);
+            this.isAnonymous = Output.ofNullable(isAnonymous);
             return this;
         }
 
-        public Builder path(Input<String> path) {
+        public Builder path(Output<String> path) {
             this.path = Objects.requireNonNull(path);
             return this;
         }
 
         public Builder path(String path) {
-            this.path = Input.of(Objects.requireNonNull(path));
+            this.path = Output.of(Objects.requireNonNull(path));
             return this;
         }
 
-        public Builder properties(@Nullable Input<Map<String,String>> properties) {
+        public Builder properties(@Nullable Output<Map<String,String>> properties) {
             this.properties = properties;
             return this;
         }
 
         public Builder properties(@Nullable Map<String,String> properties) {
-            this.properties = Input.ofNullable(properties);
+            this.properties = Output.ofNullable(properties);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public DataVersionArgs build() {

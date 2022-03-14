@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1beta1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.containeranalysis_v1beta1.inputs.DerivedArgs;
 import java.util.Objects;
@@ -22,18 +22,18 @@ public final class GrafeasV1beta1ImageDetailsArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="derivedImage", required=true)
-      private final Input<DerivedArgs> derivedImage;
+      private final Output<DerivedArgs> derivedImage;
 
-    public Input<DerivedArgs> getDerivedImage() {
+    public Output<DerivedArgs> getDerivedImage() {
         return this.derivedImage;
     }
 
-    public GrafeasV1beta1ImageDetailsArgs(Input<DerivedArgs> derivedImage) {
+    public GrafeasV1beta1ImageDetailsArgs(Output<DerivedArgs> derivedImage) {
         this.derivedImage = Objects.requireNonNull(derivedImage, "expected parameter 'derivedImage' to be non-null");
     }
 
     private GrafeasV1beta1ImageDetailsArgs() {
-        this.derivedImage = Input.empty();
+        this.derivedImage = Output.empty();
     }
 
     public static Builder builder() {
@@ -45,7 +45,7 @@ public final class GrafeasV1beta1ImageDetailsArgs extends io.pulumi.resources.Re
     }
 
     public static final class Builder {
-        private Input<DerivedArgs> derivedImage;
+        private Output<DerivedArgs> derivedImage;
 
         public Builder() {
     	      // Empty
@@ -56,13 +56,13 @@ public final class GrafeasV1beta1ImageDetailsArgs extends io.pulumi.resources.Re
     	      this.derivedImage = defaults.derivedImage;
         }
 
-        public Builder derivedImage(Input<DerivedArgs> derivedImage) {
+        public Builder derivedImage(Output<DerivedArgs> derivedImage) {
             this.derivedImage = Objects.requireNonNull(derivedImage);
             return this;
         }
 
         public Builder derivedImage(DerivedArgs derivedImage) {
-            this.derivedImage = Input.of(Objects.requireNonNull(derivedImage));
+            this.derivedImage = Output.of(Objects.requireNonNull(derivedImage));
             return this;
         }
         public GrafeasV1beta1ImageDetailsArgs build() {

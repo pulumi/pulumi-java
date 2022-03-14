@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.apprunner.inputs;
 
 import io.pulumi.awsnative.apprunner.enums.ServiceSourceCodeVersionType;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,9 +23,9 @@ public final class ServiceSourceCodeVersionArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<ServiceSourceCodeVersionType> type;
+      private final Output<ServiceSourceCodeVersionType> type;
 
-    public Input<ServiceSourceCodeVersionType> getType() {
+    public Output<ServiceSourceCodeVersionType> getType() {
         return this.type;
     }
 
@@ -34,22 +34,22 @@ public final class ServiceSourceCodeVersionArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="value", required=true)
-      private final Input<String> value;
+      private final Output<String> value;
 
-    public Input<String> getValue() {
+    public Output<String> getValue() {
         return this.value;
     }
 
     public ServiceSourceCodeVersionArgs(
-        Input<ServiceSourceCodeVersionType> type,
-        Input<String> value) {
+        Output<ServiceSourceCodeVersionType> type,
+        Output<String> value) {
         this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
         this.value = Objects.requireNonNull(value, "expected parameter 'value' to be non-null");
     }
 
     private ServiceSourceCodeVersionArgs() {
-        this.type = Input.empty();
-        this.value = Input.empty();
+        this.type = Output.empty();
+        this.value = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class ServiceSourceCodeVersionArgs extends io.pulumi.resources.Reso
     }
 
     public static final class Builder {
-        private Input<ServiceSourceCodeVersionType> type;
-        private Input<String> value;
+        private Output<ServiceSourceCodeVersionType> type;
+        private Output<String> value;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class ServiceSourceCodeVersionArgs extends io.pulumi.resources.Reso
     	      this.value = defaults.value;
         }
 
-        public Builder type(Input<ServiceSourceCodeVersionType> type) {
+        public Builder type(Output<ServiceSourceCodeVersionType> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(ServiceSourceCodeVersionType type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
 
-        public Builder value(Input<String> value) {
+        public Builder value(Output<String> value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }
 
         public Builder value(String value) {
-            this.value = Input.of(Objects.requireNonNull(value));
+            this.value = Output.of(Objects.requireNonNull(value));
             return this;
         }
         public ServiceSourceCodeVersionArgs build() {

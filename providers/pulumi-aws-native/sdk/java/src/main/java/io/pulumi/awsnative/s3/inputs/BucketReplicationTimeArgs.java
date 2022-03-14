@@ -5,7 +5,7 @@ package io.pulumi.awsnative.s3.inputs;
 
 import io.pulumi.awsnative.s3.enums.BucketReplicationTimeStatus;
 import io.pulumi.awsnative.s3.inputs.BucketReplicationTimeValueArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 
@@ -15,29 +15,29 @@ public final class BucketReplicationTimeArgs extends io.pulumi.resources.Resourc
     public static final BucketReplicationTimeArgs Empty = new BucketReplicationTimeArgs();
 
     @InputImport(name="status", required=true)
-      private final Input<BucketReplicationTimeStatus> status;
+      private final Output<BucketReplicationTimeStatus> status;
 
-    public Input<BucketReplicationTimeStatus> getStatus() {
+    public Output<BucketReplicationTimeStatus> getStatus() {
         return this.status;
     }
 
     @InputImport(name="time", required=true)
-      private final Input<BucketReplicationTimeValueArgs> time;
+      private final Output<BucketReplicationTimeValueArgs> time;
 
-    public Input<BucketReplicationTimeValueArgs> getTime() {
+    public Output<BucketReplicationTimeValueArgs> getTime() {
         return this.time;
     }
 
     public BucketReplicationTimeArgs(
-        Input<BucketReplicationTimeStatus> status,
-        Input<BucketReplicationTimeValueArgs> time) {
+        Output<BucketReplicationTimeStatus> status,
+        Output<BucketReplicationTimeValueArgs> time) {
         this.status = Objects.requireNonNull(status, "expected parameter 'status' to be non-null");
         this.time = Objects.requireNonNull(time, "expected parameter 'time' to be non-null");
     }
 
     private BucketReplicationTimeArgs() {
-        this.status = Input.empty();
-        this.time = Input.empty();
+        this.status = Output.empty();
+        this.time = Output.empty();
     }
 
     public static Builder builder() {
@@ -49,8 +49,8 @@ public final class BucketReplicationTimeArgs extends io.pulumi.resources.Resourc
     }
 
     public static final class Builder {
-        private Input<BucketReplicationTimeStatus> status;
-        private Input<BucketReplicationTimeValueArgs> time;
+        private Output<BucketReplicationTimeStatus> status;
+        private Output<BucketReplicationTimeValueArgs> time;
 
         public Builder() {
     	      // Empty
@@ -62,23 +62,23 @@ public final class BucketReplicationTimeArgs extends io.pulumi.resources.Resourc
     	      this.time = defaults.time;
         }
 
-        public Builder status(Input<BucketReplicationTimeStatus> status) {
+        public Builder status(Output<BucketReplicationTimeStatus> status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
 
         public Builder status(BucketReplicationTimeStatus status) {
-            this.status = Input.of(Objects.requireNonNull(status));
+            this.status = Output.of(Objects.requireNonNull(status));
             return this;
         }
 
-        public Builder time(Input<BucketReplicationTimeValueArgs> time) {
+        public Builder time(Output<BucketReplicationTimeValueArgs> time) {
             this.time = Objects.requireNonNull(time);
             return this;
         }
 
         public Builder time(BucketReplicationTimeValueArgs time) {
-            this.time = Input.of(Objects.requireNonNull(time));
+            this.time = Output.of(Objects.requireNonNull(time));
             return this;
         }
         public BucketReplicationTimeArgs build() {

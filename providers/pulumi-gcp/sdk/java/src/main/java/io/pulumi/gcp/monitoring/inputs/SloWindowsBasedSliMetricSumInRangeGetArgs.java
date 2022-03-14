@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.monitoring.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.monitoring.inputs.SloWindowsBasedSliMetricSumInRangeRangeGetArgs;
 import java.lang.String;
@@ -25,9 +25,9 @@ public final class SloWindowsBasedSliMetricSumInRangeGetArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="range", required=true)
-      private final Input<SloWindowsBasedSliMetricSumInRangeRangeGetArgs> range;
+      private final Output<SloWindowsBasedSliMetricSumInRangeRangeGetArgs> range;
 
-    public Input<SloWindowsBasedSliMetricSumInRangeRangeGetArgs> getRange() {
+    public Output<SloWindowsBasedSliMetricSumInRangeRangeGetArgs> getRange() {
         return this.range;
     }
 
@@ -42,22 +42,22 @@ public final class SloWindowsBasedSliMetricSumInRangeGetArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="timeSeries", required=true)
-      private final Input<String> timeSeries;
+      private final Output<String> timeSeries;
 
-    public Input<String> getTimeSeries() {
+    public Output<String> getTimeSeries() {
         return this.timeSeries;
     }
 
     public SloWindowsBasedSliMetricSumInRangeGetArgs(
-        Input<SloWindowsBasedSliMetricSumInRangeRangeGetArgs> range,
-        Input<String> timeSeries) {
+        Output<SloWindowsBasedSliMetricSumInRangeRangeGetArgs> range,
+        Output<String> timeSeries) {
         this.range = Objects.requireNonNull(range, "expected parameter 'range' to be non-null");
         this.timeSeries = Objects.requireNonNull(timeSeries, "expected parameter 'timeSeries' to be non-null");
     }
 
     private SloWindowsBasedSliMetricSumInRangeGetArgs() {
-        this.range = Input.empty();
-        this.timeSeries = Input.empty();
+        this.range = Output.empty();
+        this.timeSeries = Output.empty();
     }
 
     public static Builder builder() {
@@ -69,8 +69,8 @@ public final class SloWindowsBasedSliMetricSumInRangeGetArgs extends io.pulumi.r
     }
 
     public static final class Builder {
-        private Input<SloWindowsBasedSliMetricSumInRangeRangeGetArgs> range;
-        private Input<String> timeSeries;
+        private Output<SloWindowsBasedSliMetricSumInRangeRangeGetArgs> range;
+        private Output<String> timeSeries;
 
         public Builder() {
     	      // Empty
@@ -82,23 +82,23 @@ public final class SloWindowsBasedSliMetricSumInRangeGetArgs extends io.pulumi.r
     	      this.timeSeries = defaults.timeSeries;
         }
 
-        public Builder range(Input<SloWindowsBasedSliMetricSumInRangeRangeGetArgs> range) {
+        public Builder range(Output<SloWindowsBasedSliMetricSumInRangeRangeGetArgs> range) {
             this.range = Objects.requireNonNull(range);
             return this;
         }
 
         public Builder range(SloWindowsBasedSliMetricSumInRangeRangeGetArgs range) {
-            this.range = Input.of(Objects.requireNonNull(range));
+            this.range = Output.of(Objects.requireNonNull(range));
             return this;
         }
 
-        public Builder timeSeries(Input<String> timeSeries) {
+        public Builder timeSeries(Output<String> timeSeries) {
             this.timeSeries = Objects.requireNonNull(timeSeries);
             return this;
         }
 
         public Builder timeSeries(String timeSeries) {
-            this.timeSeries = Input.of(Objects.requireNonNull(timeSeries));
+            this.timeSeries = Output.of(Objects.requireNonNull(timeSeries));
             return this;
         }
         public SloWindowsBasedSliMetricSumInRangeGetArgs build() {

@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.kinesisfirehose.inputs;
 
 import io.pulumi.awsnative.kinesisfirehose.enums.DeliveryStreamEncryptionConfigurationInputKeyType;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -16,29 +16,29 @@ public final class DeliveryStreamEncryptionConfigurationInputArgs extends io.pul
     public static final DeliveryStreamEncryptionConfigurationInputArgs Empty = new DeliveryStreamEncryptionConfigurationInputArgs();
 
     @InputImport(name="keyARN")
-      private final @Nullable Input<String> keyARN;
+      private final @Nullable Output<String> keyARN;
 
-    public Input<String> getKeyARN() {
-        return this.keyARN == null ? Input.empty() : this.keyARN;
+    public Output<String> getKeyARN() {
+        return this.keyARN == null ? Output.empty() : this.keyARN;
     }
 
     @InputImport(name="keyType", required=true)
-      private final Input<DeliveryStreamEncryptionConfigurationInputKeyType> keyType;
+      private final Output<DeliveryStreamEncryptionConfigurationInputKeyType> keyType;
 
-    public Input<DeliveryStreamEncryptionConfigurationInputKeyType> getKeyType() {
+    public Output<DeliveryStreamEncryptionConfigurationInputKeyType> getKeyType() {
         return this.keyType;
     }
 
     public DeliveryStreamEncryptionConfigurationInputArgs(
-        @Nullable Input<String> keyARN,
-        Input<DeliveryStreamEncryptionConfigurationInputKeyType> keyType) {
+        @Nullable Output<String> keyARN,
+        Output<DeliveryStreamEncryptionConfigurationInputKeyType> keyType) {
         this.keyARN = keyARN;
         this.keyType = Objects.requireNonNull(keyType, "expected parameter 'keyType' to be non-null");
     }
 
     private DeliveryStreamEncryptionConfigurationInputArgs() {
-        this.keyARN = Input.empty();
-        this.keyType = Input.empty();
+        this.keyARN = Output.empty();
+        this.keyType = Output.empty();
     }
 
     public static Builder builder() {
@@ -50,8 +50,8 @@ public final class DeliveryStreamEncryptionConfigurationInputArgs extends io.pul
     }
 
     public static final class Builder {
-        private @Nullable Input<String> keyARN;
-        private Input<DeliveryStreamEncryptionConfigurationInputKeyType> keyType;
+        private @Nullable Output<String> keyARN;
+        private Output<DeliveryStreamEncryptionConfigurationInputKeyType> keyType;
 
         public Builder() {
     	      // Empty
@@ -63,23 +63,23 @@ public final class DeliveryStreamEncryptionConfigurationInputArgs extends io.pul
     	      this.keyType = defaults.keyType;
         }
 
-        public Builder keyARN(@Nullable Input<String> keyARN) {
+        public Builder keyARN(@Nullable Output<String> keyARN) {
             this.keyARN = keyARN;
             return this;
         }
 
         public Builder keyARN(@Nullable String keyARN) {
-            this.keyARN = Input.ofNullable(keyARN);
+            this.keyARN = Output.ofNullable(keyARN);
             return this;
         }
 
-        public Builder keyType(Input<DeliveryStreamEncryptionConfigurationInputKeyType> keyType) {
+        public Builder keyType(Output<DeliveryStreamEncryptionConfigurationInputKeyType> keyType) {
             this.keyType = Objects.requireNonNull(keyType);
             return this;
         }
 
         public Builder keyType(DeliveryStreamEncryptionConfigurationInputKeyType keyType) {
-            this.keyType = Input.of(Objects.requireNonNull(keyType));
+            this.keyType = Output.of(Objects.requireNonNull(keyType));
             return this;
         }
         public DeliveryStreamEncryptionConfigurationInputArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.glue.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -18,18 +18,18 @@ public final class ClassifierJsonClassifierGetArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="jsonPath", required=true)
-      private final Input<String> jsonPath;
+      private final Output<String> jsonPath;
 
-    public Input<String> getJsonPath() {
+    public Output<String> getJsonPath() {
         return this.jsonPath;
     }
 
-    public ClassifierJsonClassifierGetArgs(Input<String> jsonPath) {
+    public ClassifierJsonClassifierGetArgs(Output<String> jsonPath) {
         this.jsonPath = Objects.requireNonNull(jsonPath, "expected parameter 'jsonPath' to be non-null");
     }
 
     private ClassifierJsonClassifierGetArgs() {
-        this.jsonPath = Input.empty();
+        this.jsonPath = Output.empty();
     }
 
     public static Builder builder() {
@@ -41,7 +41,7 @@ public final class ClassifierJsonClassifierGetArgs extends io.pulumi.resources.R
     }
 
     public static final class Builder {
-        private Input<String> jsonPath;
+        private Output<String> jsonPath;
 
         public Builder() {
     	      // Empty
@@ -52,13 +52,13 @@ public final class ClassifierJsonClassifierGetArgs extends io.pulumi.resources.R
     	      this.jsonPath = defaults.jsonPath;
         }
 
-        public Builder jsonPath(Input<String> jsonPath) {
+        public Builder jsonPath(Output<String> jsonPath) {
             this.jsonPath = Objects.requireNonNull(jsonPath);
             return this;
         }
 
         public Builder jsonPath(String jsonPath) {
-            this.jsonPath = Input.of(Objects.requireNonNull(jsonPath));
+            this.jsonPath = Output.of(Objects.requireNonNull(jsonPath));
             return this;
         }
         public ClassifierJsonClassifierGetArgs build() {

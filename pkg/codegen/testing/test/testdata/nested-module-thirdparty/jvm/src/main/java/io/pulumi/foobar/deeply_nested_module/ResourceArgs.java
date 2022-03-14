@@ -3,7 +3,7 @@
 
 package io.pulumi.foobar.deeply_nested_module;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -15,18 +15,18 @@ public final class ResourceArgs extends io.pulumi.resources.ResourceArgs {
     public static final ResourceArgs Empty = new ResourceArgs();
 
     @InputImport(name="baz")
-      private final @Nullable Input<String> baz;
+      private final @Nullable Output<String> baz;
 
-    public Input<String> getBaz() {
-        return this.baz == null ? Input.empty() : this.baz;
+    public Output<String> getBaz() {
+        return this.baz == null ? Output.empty() : this.baz;
     }
 
-    public ResourceArgs(@Nullable Input<String> baz) {
+    public ResourceArgs(@Nullable Output<String> baz) {
         this.baz = baz;
     }
 
     private ResourceArgs() {
-        this.baz = Input.empty();
+        this.baz = Output.empty();
     }
 
     public static Builder builder() {
@@ -38,7 +38,7 @@ public final class ResourceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> baz;
+        private @Nullable Output<String> baz;
 
         public Builder() {
     	      // Empty
@@ -49,13 +49,13 @@ public final class ResourceArgs extends io.pulumi.resources.ResourceArgs {
     	      this.baz = defaults.baz;
         }
 
-        public Builder baz(@Nullable Input<String> baz) {
-            this.baz = Input.ofNullable(baz).asSecret();
+        public Builder baz(@Nullable Output<String> baz) {
+            this.baz = Output.ofNullable(baz).asSecret();
             return this;
         }
 
         public Builder baz(@Nullable String baz) {
-            this.baz = Input.ofNullable(baz).asSecret();
+            this.baz = Output.ofNullable(baz).asSecret();
             return this;
         }
         public ResourceArgs build() {

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.scheduler;
 
 import io.pulumi.azurenative.scheduler.inputs.JobPropertiesArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -20,9 +20,9 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="jobCollectionName", required=true)
-      private final Input<String> jobCollectionName;
+      private final Output<String> jobCollectionName;
 
-    public Input<String> getJobCollectionName() {
+    public Output<String> getJobCollectionName() {
         return this.jobCollectionName;
     }
 
@@ -31,10 +31,10 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="jobName")
-      private final @Nullable Input<String> jobName;
+      private final @Nullable Output<String> jobName;
 
-    public Input<String> getJobName() {
-        return this.jobName == null ? Input.empty() : this.jobName;
+    public Output<String> getJobName() {
+        return this.jobName == null ? Output.empty() : this.jobName;
     }
 
     /**
@@ -42,10 +42,10 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="properties")
-      private final @Nullable Input<JobPropertiesArgs> properties;
+      private final @Nullable Output<JobPropertiesArgs> properties;
 
-    public Input<JobPropertiesArgs> getProperties() {
-        return this.properties == null ? Input.empty() : this.properties;
+    public Output<JobPropertiesArgs> getProperties() {
+        return this.properties == null ? Output.empty() : this.properties;
     }
 
     /**
@@ -53,17 +53,17 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
     public JobArgs(
-        Input<String> jobCollectionName,
-        @Nullable Input<String> jobName,
-        @Nullable Input<JobPropertiesArgs> properties,
-        Input<String> resourceGroupName) {
+        Output<String> jobCollectionName,
+        @Nullable Output<String> jobName,
+        @Nullable Output<JobPropertiesArgs> properties,
+        Output<String> resourceGroupName) {
         this.jobCollectionName = Objects.requireNonNull(jobCollectionName, "expected parameter 'jobCollectionName' to be non-null");
         this.jobName = jobName;
         this.properties = properties;
@@ -71,10 +71,10 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private JobArgs() {
-        this.jobCollectionName = Input.empty();
-        this.jobName = Input.empty();
-        this.properties = Input.empty();
-        this.resourceGroupName = Input.empty();
+        this.jobCollectionName = Output.empty();
+        this.jobName = Output.empty();
+        this.properties = Output.empty();
+        this.resourceGroupName = Output.empty();
     }
 
     public static Builder builder() {
@@ -86,10 +86,10 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> jobCollectionName;
-        private @Nullable Input<String> jobName;
-        private @Nullable Input<JobPropertiesArgs> properties;
-        private Input<String> resourceGroupName;
+        private Output<String> jobCollectionName;
+        private @Nullable Output<String> jobName;
+        private @Nullable Output<JobPropertiesArgs> properties;
+        private Output<String> resourceGroupName;
 
         public Builder() {
     	      // Empty
@@ -103,43 +103,43 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
     	      this.resourceGroupName = defaults.resourceGroupName;
         }
 
-        public Builder jobCollectionName(Input<String> jobCollectionName) {
+        public Builder jobCollectionName(Output<String> jobCollectionName) {
             this.jobCollectionName = Objects.requireNonNull(jobCollectionName);
             return this;
         }
 
         public Builder jobCollectionName(String jobCollectionName) {
-            this.jobCollectionName = Input.of(Objects.requireNonNull(jobCollectionName));
+            this.jobCollectionName = Output.of(Objects.requireNonNull(jobCollectionName));
             return this;
         }
 
-        public Builder jobName(@Nullable Input<String> jobName) {
+        public Builder jobName(@Nullable Output<String> jobName) {
             this.jobName = jobName;
             return this;
         }
 
         public Builder jobName(@Nullable String jobName) {
-            this.jobName = Input.ofNullable(jobName);
+            this.jobName = Output.ofNullable(jobName);
             return this;
         }
 
-        public Builder properties(@Nullable Input<JobPropertiesArgs> properties) {
+        public Builder properties(@Nullable Output<JobPropertiesArgs> properties) {
             this.properties = properties;
             return this;
         }
 
         public Builder properties(@Nullable JobPropertiesArgs properties) {
-            this.properties = Input.ofNullable(properties);
+            this.properties = Output.ofNullable(properties);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
         public JobArgs build() {

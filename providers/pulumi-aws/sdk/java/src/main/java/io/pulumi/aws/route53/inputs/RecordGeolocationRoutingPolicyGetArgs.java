@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.route53.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class RecordGeolocationRoutingPolicyGetArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="continent")
-      private final @Nullable Input<String> continent;
+      private final @Nullable Output<String> continent;
 
-    public Input<String> getContinent() {
-        return this.continent == null ? Input.empty() : this.continent;
+    public Output<String> getContinent() {
+        return this.continent == null ? Output.empty() : this.continent;
     }
 
     /**
@@ -30,10 +30,10 @@ public final class RecordGeolocationRoutingPolicyGetArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="country")
-      private final @Nullable Input<String> country;
+      private final @Nullable Output<String> country;
 
-    public Input<String> getCountry() {
-        return this.country == null ? Input.empty() : this.country;
+    public Output<String> getCountry() {
+        return this.country == null ? Output.empty() : this.country;
     }
 
     /**
@@ -41,25 +41,25 @@ public final class RecordGeolocationRoutingPolicyGetArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="subdivision")
-      private final @Nullable Input<String> subdivision;
+      private final @Nullable Output<String> subdivision;
 
-    public Input<String> getSubdivision() {
-        return this.subdivision == null ? Input.empty() : this.subdivision;
+    public Output<String> getSubdivision() {
+        return this.subdivision == null ? Output.empty() : this.subdivision;
     }
 
     public RecordGeolocationRoutingPolicyGetArgs(
-        @Nullable Input<String> continent,
-        @Nullable Input<String> country,
-        @Nullable Input<String> subdivision) {
+        @Nullable Output<String> continent,
+        @Nullable Output<String> country,
+        @Nullable Output<String> subdivision) {
         this.continent = continent;
         this.country = country;
         this.subdivision = subdivision;
     }
 
     private RecordGeolocationRoutingPolicyGetArgs() {
-        this.continent = Input.empty();
-        this.country = Input.empty();
-        this.subdivision = Input.empty();
+        this.continent = Output.empty();
+        this.country = Output.empty();
+        this.subdivision = Output.empty();
     }
 
     public static Builder builder() {
@@ -71,9 +71,9 @@ public final class RecordGeolocationRoutingPolicyGetArgs extends io.pulumi.resou
     }
 
     public static final class Builder {
-        private @Nullable Input<String> continent;
-        private @Nullable Input<String> country;
-        private @Nullable Input<String> subdivision;
+        private @Nullable Output<String> continent;
+        private @Nullable Output<String> country;
+        private @Nullable Output<String> subdivision;
 
         public Builder() {
     	      // Empty
@@ -86,33 +86,33 @@ public final class RecordGeolocationRoutingPolicyGetArgs extends io.pulumi.resou
     	      this.subdivision = defaults.subdivision;
         }
 
-        public Builder continent(@Nullable Input<String> continent) {
+        public Builder continent(@Nullable Output<String> continent) {
             this.continent = continent;
             return this;
         }
 
         public Builder continent(@Nullable String continent) {
-            this.continent = Input.ofNullable(continent);
+            this.continent = Output.ofNullable(continent);
             return this;
         }
 
-        public Builder country(@Nullable Input<String> country) {
+        public Builder country(@Nullable Output<String> country) {
             this.country = country;
             return this;
         }
 
         public Builder country(@Nullable String country) {
-            this.country = Input.ofNullable(country);
+            this.country = Output.ofNullable(country);
             return this;
         }
 
-        public Builder subdivision(@Nullable Input<String> subdivision) {
+        public Builder subdivision(@Nullable Output<String> subdivision) {
             this.subdivision = subdivision;
             return this;
         }
 
         public Builder subdivision(@Nullable String subdivision) {
-            this.subdivision = Input.ofNullable(subdivision);
+            this.subdivision = Output.ofNullable(subdivision);
             return this;
         }
         public RecordGeolocationRoutingPolicyGetArgs build() {

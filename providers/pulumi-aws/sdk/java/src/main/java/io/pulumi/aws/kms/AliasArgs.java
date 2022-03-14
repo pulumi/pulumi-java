@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.kms;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class AliasArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -31,10 +31,10 @@ public final class AliasArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="namePrefix")
-      private final @Nullable Input<String> namePrefix;
+      private final @Nullable Output<String> namePrefix;
 
-    public Input<String> getNamePrefix() {
-        return this.namePrefix == null ? Input.empty() : this.namePrefix;
+    public Output<String> getNamePrefix() {
+        return this.namePrefix == null ? Output.empty() : this.namePrefix;
     }
 
     /**
@@ -42,25 +42,25 @@ public final class AliasArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="targetKeyId", required=true)
-      private final Input<String> targetKeyId;
+      private final Output<String> targetKeyId;
 
-    public Input<String> getTargetKeyId() {
+    public Output<String> getTargetKeyId() {
         return this.targetKeyId;
     }
 
     public AliasArgs(
-        @Nullable Input<String> name,
-        @Nullable Input<String> namePrefix,
-        Input<String> targetKeyId) {
+        @Nullable Output<String> name,
+        @Nullable Output<String> namePrefix,
+        Output<String> targetKeyId) {
         this.name = name;
         this.namePrefix = namePrefix;
         this.targetKeyId = Objects.requireNonNull(targetKeyId, "expected parameter 'targetKeyId' to be non-null");
     }
 
     private AliasArgs() {
-        this.name = Input.empty();
-        this.namePrefix = Input.empty();
-        this.targetKeyId = Input.empty();
+        this.name = Output.empty();
+        this.namePrefix = Output.empty();
+        this.targetKeyId = Output.empty();
     }
 
     public static Builder builder() {
@@ -72,9 +72,9 @@ public final class AliasArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> namePrefix;
-        private Input<String> targetKeyId;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> namePrefix;
+        private Output<String> targetKeyId;
 
         public Builder() {
     	      // Empty
@@ -87,33 +87,33 @@ public final class AliasArgs extends io.pulumi.resources.ResourceArgs {
     	      this.targetKeyId = defaults.targetKeyId;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder namePrefix(@Nullable Input<String> namePrefix) {
+        public Builder namePrefix(@Nullable Output<String> namePrefix) {
             this.namePrefix = namePrefix;
             return this;
         }
 
         public Builder namePrefix(@Nullable String namePrefix) {
-            this.namePrefix = Input.ofNullable(namePrefix);
+            this.namePrefix = Output.ofNullable(namePrefix);
             return this;
         }
 
-        public Builder targetKeyId(Input<String> targetKeyId) {
+        public Builder targetKeyId(Output<String> targetKeyId) {
             this.targetKeyId = Objects.requireNonNull(targetKeyId);
             return this;
         }
 
         public Builder targetKeyId(String targetKeyId) {
-            this.targetKeyId = Input.of(Objects.requireNonNull(targetKeyId));
+            this.targetKeyId = Output.of(Objects.requireNonNull(targetKeyId));
             return this;
         }
         public AliasArgs build() {

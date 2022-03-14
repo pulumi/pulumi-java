@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.compute.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -25,10 +25,10 @@ public final class RollingUpgradePolicyArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="enableCrossZoneUpgrade")
-      private final @Nullable Input<Boolean> enableCrossZoneUpgrade;
+      private final @Nullable Output<Boolean> enableCrossZoneUpgrade;
 
-    public Input<Boolean> getEnableCrossZoneUpgrade() {
-        return this.enableCrossZoneUpgrade == null ? Input.empty() : this.enableCrossZoneUpgrade;
+    public Output<Boolean> getEnableCrossZoneUpgrade() {
+        return this.enableCrossZoneUpgrade == null ? Output.empty() : this.enableCrossZoneUpgrade;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class RollingUpgradePolicyArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="maxBatchInstancePercent")
-      private final @Nullable Input<Integer> maxBatchInstancePercent;
+      private final @Nullable Output<Integer> maxBatchInstancePercent;
 
-    public Input<Integer> getMaxBatchInstancePercent() {
-        return this.maxBatchInstancePercent == null ? Input.empty() : this.maxBatchInstancePercent;
+    public Output<Integer> getMaxBatchInstancePercent() {
+        return this.maxBatchInstancePercent == null ? Output.empty() : this.maxBatchInstancePercent;
     }
 
     /**
@@ -47,10 +47,10 @@ public final class RollingUpgradePolicyArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="maxUnhealthyInstancePercent")
-      private final @Nullable Input<Integer> maxUnhealthyInstancePercent;
+      private final @Nullable Output<Integer> maxUnhealthyInstancePercent;
 
-    public Input<Integer> getMaxUnhealthyInstancePercent() {
-        return this.maxUnhealthyInstancePercent == null ? Input.empty() : this.maxUnhealthyInstancePercent;
+    public Output<Integer> getMaxUnhealthyInstancePercent() {
+        return this.maxUnhealthyInstancePercent == null ? Output.empty() : this.maxUnhealthyInstancePercent;
     }
 
     /**
@@ -58,10 +58,10 @@ public final class RollingUpgradePolicyArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="maxUnhealthyUpgradedInstancePercent")
-      private final @Nullable Input<Integer> maxUnhealthyUpgradedInstancePercent;
+      private final @Nullable Output<Integer> maxUnhealthyUpgradedInstancePercent;
 
-    public Input<Integer> getMaxUnhealthyUpgradedInstancePercent() {
-        return this.maxUnhealthyUpgradedInstancePercent == null ? Input.empty() : this.maxUnhealthyUpgradedInstancePercent;
+    public Output<Integer> getMaxUnhealthyUpgradedInstancePercent() {
+        return this.maxUnhealthyUpgradedInstancePercent == null ? Output.empty() : this.maxUnhealthyUpgradedInstancePercent;
     }
 
     /**
@@ -69,10 +69,10 @@ public final class RollingUpgradePolicyArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="pauseTimeBetweenBatches")
-      private final @Nullable Input<String> pauseTimeBetweenBatches;
+      private final @Nullable Output<String> pauseTimeBetweenBatches;
 
-    public Input<String> getPauseTimeBetweenBatches() {
-        return this.pauseTimeBetweenBatches == null ? Input.empty() : this.pauseTimeBetweenBatches;
+    public Output<String> getPauseTimeBetweenBatches() {
+        return this.pauseTimeBetweenBatches == null ? Output.empty() : this.pauseTimeBetweenBatches;
     }
 
     /**
@@ -80,19 +80,19 @@ public final class RollingUpgradePolicyArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="prioritizeUnhealthyInstances")
-      private final @Nullable Input<Boolean> prioritizeUnhealthyInstances;
+      private final @Nullable Output<Boolean> prioritizeUnhealthyInstances;
 
-    public Input<Boolean> getPrioritizeUnhealthyInstances() {
-        return this.prioritizeUnhealthyInstances == null ? Input.empty() : this.prioritizeUnhealthyInstances;
+    public Output<Boolean> getPrioritizeUnhealthyInstances() {
+        return this.prioritizeUnhealthyInstances == null ? Output.empty() : this.prioritizeUnhealthyInstances;
     }
 
     public RollingUpgradePolicyArgs(
-        @Nullable Input<Boolean> enableCrossZoneUpgrade,
-        @Nullable Input<Integer> maxBatchInstancePercent,
-        @Nullable Input<Integer> maxUnhealthyInstancePercent,
-        @Nullable Input<Integer> maxUnhealthyUpgradedInstancePercent,
-        @Nullable Input<String> pauseTimeBetweenBatches,
-        @Nullable Input<Boolean> prioritizeUnhealthyInstances) {
+        @Nullable Output<Boolean> enableCrossZoneUpgrade,
+        @Nullable Output<Integer> maxBatchInstancePercent,
+        @Nullable Output<Integer> maxUnhealthyInstancePercent,
+        @Nullable Output<Integer> maxUnhealthyUpgradedInstancePercent,
+        @Nullable Output<String> pauseTimeBetweenBatches,
+        @Nullable Output<Boolean> prioritizeUnhealthyInstances) {
         this.enableCrossZoneUpgrade = enableCrossZoneUpgrade;
         this.maxBatchInstancePercent = maxBatchInstancePercent;
         this.maxUnhealthyInstancePercent = maxUnhealthyInstancePercent;
@@ -102,12 +102,12 @@ public final class RollingUpgradePolicyArgs extends io.pulumi.resources.Resource
     }
 
     private RollingUpgradePolicyArgs() {
-        this.enableCrossZoneUpgrade = Input.empty();
-        this.maxBatchInstancePercent = Input.empty();
-        this.maxUnhealthyInstancePercent = Input.empty();
-        this.maxUnhealthyUpgradedInstancePercent = Input.empty();
-        this.pauseTimeBetweenBatches = Input.empty();
-        this.prioritizeUnhealthyInstances = Input.empty();
+        this.enableCrossZoneUpgrade = Output.empty();
+        this.maxBatchInstancePercent = Output.empty();
+        this.maxUnhealthyInstancePercent = Output.empty();
+        this.maxUnhealthyUpgradedInstancePercent = Output.empty();
+        this.pauseTimeBetweenBatches = Output.empty();
+        this.prioritizeUnhealthyInstances = Output.empty();
     }
 
     public static Builder builder() {
@@ -119,12 +119,12 @@ public final class RollingUpgradePolicyArgs extends io.pulumi.resources.Resource
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> enableCrossZoneUpgrade;
-        private @Nullable Input<Integer> maxBatchInstancePercent;
-        private @Nullable Input<Integer> maxUnhealthyInstancePercent;
-        private @Nullable Input<Integer> maxUnhealthyUpgradedInstancePercent;
-        private @Nullable Input<String> pauseTimeBetweenBatches;
-        private @Nullable Input<Boolean> prioritizeUnhealthyInstances;
+        private @Nullable Output<Boolean> enableCrossZoneUpgrade;
+        private @Nullable Output<Integer> maxBatchInstancePercent;
+        private @Nullable Output<Integer> maxUnhealthyInstancePercent;
+        private @Nullable Output<Integer> maxUnhealthyUpgradedInstancePercent;
+        private @Nullable Output<String> pauseTimeBetweenBatches;
+        private @Nullable Output<Boolean> prioritizeUnhealthyInstances;
 
         public Builder() {
     	      // Empty
@@ -140,63 +140,63 @@ public final class RollingUpgradePolicyArgs extends io.pulumi.resources.Resource
     	      this.prioritizeUnhealthyInstances = defaults.prioritizeUnhealthyInstances;
         }
 
-        public Builder enableCrossZoneUpgrade(@Nullable Input<Boolean> enableCrossZoneUpgrade) {
+        public Builder enableCrossZoneUpgrade(@Nullable Output<Boolean> enableCrossZoneUpgrade) {
             this.enableCrossZoneUpgrade = enableCrossZoneUpgrade;
             return this;
         }
 
         public Builder enableCrossZoneUpgrade(@Nullable Boolean enableCrossZoneUpgrade) {
-            this.enableCrossZoneUpgrade = Input.ofNullable(enableCrossZoneUpgrade);
+            this.enableCrossZoneUpgrade = Output.ofNullable(enableCrossZoneUpgrade);
             return this;
         }
 
-        public Builder maxBatchInstancePercent(@Nullable Input<Integer> maxBatchInstancePercent) {
+        public Builder maxBatchInstancePercent(@Nullable Output<Integer> maxBatchInstancePercent) {
             this.maxBatchInstancePercent = maxBatchInstancePercent;
             return this;
         }
 
         public Builder maxBatchInstancePercent(@Nullable Integer maxBatchInstancePercent) {
-            this.maxBatchInstancePercent = Input.ofNullable(maxBatchInstancePercent);
+            this.maxBatchInstancePercent = Output.ofNullable(maxBatchInstancePercent);
             return this;
         }
 
-        public Builder maxUnhealthyInstancePercent(@Nullable Input<Integer> maxUnhealthyInstancePercent) {
+        public Builder maxUnhealthyInstancePercent(@Nullable Output<Integer> maxUnhealthyInstancePercent) {
             this.maxUnhealthyInstancePercent = maxUnhealthyInstancePercent;
             return this;
         }
 
         public Builder maxUnhealthyInstancePercent(@Nullable Integer maxUnhealthyInstancePercent) {
-            this.maxUnhealthyInstancePercent = Input.ofNullable(maxUnhealthyInstancePercent);
+            this.maxUnhealthyInstancePercent = Output.ofNullable(maxUnhealthyInstancePercent);
             return this;
         }
 
-        public Builder maxUnhealthyUpgradedInstancePercent(@Nullable Input<Integer> maxUnhealthyUpgradedInstancePercent) {
+        public Builder maxUnhealthyUpgradedInstancePercent(@Nullable Output<Integer> maxUnhealthyUpgradedInstancePercent) {
             this.maxUnhealthyUpgradedInstancePercent = maxUnhealthyUpgradedInstancePercent;
             return this;
         }
 
         public Builder maxUnhealthyUpgradedInstancePercent(@Nullable Integer maxUnhealthyUpgradedInstancePercent) {
-            this.maxUnhealthyUpgradedInstancePercent = Input.ofNullable(maxUnhealthyUpgradedInstancePercent);
+            this.maxUnhealthyUpgradedInstancePercent = Output.ofNullable(maxUnhealthyUpgradedInstancePercent);
             return this;
         }
 
-        public Builder pauseTimeBetweenBatches(@Nullable Input<String> pauseTimeBetweenBatches) {
+        public Builder pauseTimeBetweenBatches(@Nullable Output<String> pauseTimeBetweenBatches) {
             this.pauseTimeBetweenBatches = pauseTimeBetweenBatches;
             return this;
         }
 
         public Builder pauseTimeBetweenBatches(@Nullable String pauseTimeBetweenBatches) {
-            this.pauseTimeBetweenBatches = Input.ofNullable(pauseTimeBetweenBatches);
+            this.pauseTimeBetweenBatches = Output.ofNullable(pauseTimeBetweenBatches);
             return this;
         }
 
-        public Builder prioritizeUnhealthyInstances(@Nullable Input<Boolean> prioritizeUnhealthyInstances) {
+        public Builder prioritizeUnhealthyInstances(@Nullable Output<Boolean> prioritizeUnhealthyInstances) {
             this.prioritizeUnhealthyInstances = prioritizeUnhealthyInstances;
             return this;
         }
 
         public Builder prioritizeUnhealthyInstances(@Nullable Boolean prioritizeUnhealthyInstances) {
-            this.prioritizeUnhealthyInstances = Input.ofNullable(prioritizeUnhealthyInstances);
+            this.prioritizeUnhealthyInstances = Output.ofNullable(prioritizeUnhealthyInstances);
             return this;
         }
         public RollingUpgradePolicyArgs build() {

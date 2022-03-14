@@ -7,7 +7,6 @@ import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.web.WebAppAzureStorageAccountsSlotArgs;
 import io.pulumi.azurenative.web.outputs.AzureStorageInfoValueResponse;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -125,28 +124,28 @@ public class WebAppAzureStorageAccountsSlot extends io.pulumi.resources.CustomRe
      * @param options A bag of options that control this resource's behavior.
      */
     public WebAppAzureStorageAccountsSlot(String name, WebAppAzureStorageAccountsSlotArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:web:WebAppAzureStorageAccountsSlot", name, args == null ? WebAppAzureStorageAccountsSlotArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("azure-native:web:WebAppAzureStorageAccountsSlot", name, args == null ? WebAppAzureStorageAccountsSlotArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private WebAppAzureStorageAccountsSlot(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private WebAppAzureStorageAccountsSlot(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:web:WebAppAzureStorageAccountsSlot", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:web/v20180201:WebAppAzureStorageAccountsSlot").build()),
-                Input.of(Alias.builder().setType("azure-native:web/v20181101:WebAppAzureStorageAccountsSlot").build()),
-                Input.of(Alias.builder().setType("azure-native:web/v20190801:WebAppAzureStorageAccountsSlot").build()),
-                Input.of(Alias.builder().setType("azure-native:web/v20200601:WebAppAzureStorageAccountsSlot").build()),
-                Input.of(Alias.builder().setType("azure-native:web/v20200901:WebAppAzureStorageAccountsSlot").build()),
-                Input.of(Alias.builder().setType("azure-native:web/v20201001:WebAppAzureStorageAccountsSlot").build()),
-                Input.of(Alias.builder().setType("azure-native:web/v20201201:WebAppAzureStorageAccountsSlot").build()),
-                Input.of(Alias.builder().setType("azure-native:web/v20210101:WebAppAzureStorageAccountsSlot").build()),
-                Input.of(Alias.builder().setType("azure-native:web/v20210115:WebAppAzureStorageAccountsSlot").build()),
-                Input.of(Alias.builder().setType("azure-native:web/v20210201:WebAppAzureStorageAccountsSlot").build()),
-                Input.of(Alias.builder().setType("azure-native:web/v20210301:WebAppAzureStorageAccountsSlot").build())
+                Output.of(Alias.builder().setType("azure-native:web/v20180201:WebAppAzureStorageAccountsSlot").build()),
+                Output.of(Alias.builder().setType("azure-native:web/v20181101:WebAppAzureStorageAccountsSlot").build()),
+                Output.of(Alias.builder().setType("azure-native:web/v20190801:WebAppAzureStorageAccountsSlot").build()),
+                Output.of(Alias.builder().setType("azure-native:web/v20200601:WebAppAzureStorageAccountsSlot").build()),
+                Output.of(Alias.builder().setType("azure-native:web/v20200901:WebAppAzureStorageAccountsSlot").build()),
+                Output.of(Alias.builder().setType("azure-native:web/v20201001:WebAppAzureStorageAccountsSlot").build()),
+                Output.of(Alias.builder().setType("azure-native:web/v20201201:WebAppAzureStorageAccountsSlot").build()),
+                Output.of(Alias.builder().setType("azure-native:web/v20210101:WebAppAzureStorageAccountsSlot").build()),
+                Output.of(Alias.builder().setType("azure-native:web/v20210115:WebAppAzureStorageAccountsSlot").build()),
+                Output.of(Alias.builder().setType("azure-native:web/v20210201:WebAppAzureStorageAccountsSlot").build()),
+                Output.of(Alias.builder().setType("azure-native:web/v20210301:WebAppAzureStorageAccountsSlot").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -160,7 +159,7 @@ public class WebAppAzureStorageAccountsSlot extends io.pulumi.resources.CustomRe
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static WebAppAzureStorageAccountsSlot get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static WebAppAzureStorageAccountsSlot get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new WebAppAzureStorageAccountsSlot(name, id, options);
     }
 }

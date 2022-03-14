@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.logic.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -24,9 +24,9 @@ public final class AS2SecuritySettingsArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="enableNRRForInboundDecodedMessages", required=true)
-      private final Input<Boolean> enableNRRForInboundDecodedMessages;
+      private final Output<Boolean> enableNRRForInboundDecodedMessages;
 
-    public Input<Boolean> getEnableNRRForInboundDecodedMessages() {
+    public Output<Boolean> getEnableNRRForInboundDecodedMessages() {
         return this.enableNRRForInboundDecodedMessages;
     }
 
@@ -35,9 +35,9 @@ public final class AS2SecuritySettingsArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="enableNRRForInboundEncodedMessages", required=true)
-      private final Input<Boolean> enableNRRForInboundEncodedMessages;
+      private final Output<Boolean> enableNRRForInboundEncodedMessages;
 
-    public Input<Boolean> getEnableNRRForInboundEncodedMessages() {
+    public Output<Boolean> getEnableNRRForInboundEncodedMessages() {
         return this.enableNRRForInboundEncodedMessages;
     }
 
@@ -46,9 +46,9 @@ public final class AS2SecuritySettingsArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="enableNRRForInboundMDN", required=true)
-      private final Input<Boolean> enableNRRForInboundMDN;
+      private final Output<Boolean> enableNRRForInboundMDN;
 
-    public Input<Boolean> getEnableNRRForInboundMDN() {
+    public Output<Boolean> getEnableNRRForInboundMDN() {
         return this.enableNRRForInboundMDN;
     }
 
@@ -57,9 +57,9 @@ public final class AS2SecuritySettingsArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="enableNRRForOutboundDecodedMessages", required=true)
-      private final Input<Boolean> enableNRRForOutboundDecodedMessages;
+      private final Output<Boolean> enableNRRForOutboundDecodedMessages;
 
-    public Input<Boolean> getEnableNRRForOutboundDecodedMessages() {
+    public Output<Boolean> getEnableNRRForOutboundDecodedMessages() {
         return this.enableNRRForOutboundDecodedMessages;
     }
 
@@ -68,9 +68,9 @@ public final class AS2SecuritySettingsArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="enableNRRForOutboundEncodedMessages", required=true)
-      private final Input<Boolean> enableNRRForOutboundEncodedMessages;
+      private final Output<Boolean> enableNRRForOutboundEncodedMessages;
 
-    public Input<Boolean> getEnableNRRForOutboundEncodedMessages() {
+    public Output<Boolean> getEnableNRRForOutboundEncodedMessages() {
         return this.enableNRRForOutboundEncodedMessages;
     }
 
@@ -79,9 +79,9 @@ public final class AS2SecuritySettingsArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="enableNRRForOutboundMDN", required=true)
-      private final Input<Boolean> enableNRRForOutboundMDN;
+      private final Output<Boolean> enableNRRForOutboundMDN;
 
-    public Input<Boolean> getEnableNRRForOutboundMDN() {
+    public Output<Boolean> getEnableNRRForOutboundMDN() {
         return this.enableNRRForOutboundMDN;
     }
 
@@ -90,10 +90,10 @@ public final class AS2SecuritySettingsArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="encryptionCertificateName")
-      private final @Nullable Input<String> encryptionCertificateName;
+      private final @Nullable Output<String> encryptionCertificateName;
 
-    public Input<String> getEncryptionCertificateName() {
-        return this.encryptionCertificateName == null ? Input.empty() : this.encryptionCertificateName;
+    public Output<String> getEncryptionCertificateName() {
+        return this.encryptionCertificateName == null ? Output.empty() : this.encryptionCertificateName;
     }
 
     /**
@@ -101,9 +101,9 @@ public final class AS2SecuritySettingsArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="overrideGroupSigningCertificate", required=true)
-      private final Input<Boolean> overrideGroupSigningCertificate;
+      private final Output<Boolean> overrideGroupSigningCertificate;
 
-    public Input<Boolean> getOverrideGroupSigningCertificate() {
+    public Output<Boolean> getOverrideGroupSigningCertificate() {
         return this.overrideGroupSigningCertificate;
     }
 
@@ -112,10 +112,10 @@ public final class AS2SecuritySettingsArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="sha2AlgorithmFormat")
-      private final @Nullable Input<String> sha2AlgorithmFormat;
+      private final @Nullable Output<String> sha2AlgorithmFormat;
 
-    public Input<String> getSha2AlgorithmFormat() {
-        return this.sha2AlgorithmFormat == null ? Input.empty() : this.sha2AlgorithmFormat;
+    public Output<String> getSha2AlgorithmFormat() {
+        return this.sha2AlgorithmFormat == null ? Output.empty() : this.sha2AlgorithmFormat;
     }
 
     /**
@@ -123,23 +123,23 @@ public final class AS2SecuritySettingsArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="signingCertificateName")
-      private final @Nullable Input<String> signingCertificateName;
+      private final @Nullable Output<String> signingCertificateName;
 
-    public Input<String> getSigningCertificateName() {
-        return this.signingCertificateName == null ? Input.empty() : this.signingCertificateName;
+    public Output<String> getSigningCertificateName() {
+        return this.signingCertificateName == null ? Output.empty() : this.signingCertificateName;
     }
 
     public AS2SecuritySettingsArgs(
-        Input<Boolean> enableNRRForInboundDecodedMessages,
-        Input<Boolean> enableNRRForInboundEncodedMessages,
-        Input<Boolean> enableNRRForInboundMDN,
-        Input<Boolean> enableNRRForOutboundDecodedMessages,
-        Input<Boolean> enableNRRForOutboundEncodedMessages,
-        Input<Boolean> enableNRRForOutboundMDN,
-        @Nullable Input<String> encryptionCertificateName,
-        Input<Boolean> overrideGroupSigningCertificate,
-        @Nullable Input<String> sha2AlgorithmFormat,
-        @Nullable Input<String> signingCertificateName) {
+        Output<Boolean> enableNRRForInboundDecodedMessages,
+        Output<Boolean> enableNRRForInboundEncodedMessages,
+        Output<Boolean> enableNRRForInboundMDN,
+        Output<Boolean> enableNRRForOutboundDecodedMessages,
+        Output<Boolean> enableNRRForOutboundEncodedMessages,
+        Output<Boolean> enableNRRForOutboundMDN,
+        @Nullable Output<String> encryptionCertificateName,
+        Output<Boolean> overrideGroupSigningCertificate,
+        @Nullable Output<String> sha2AlgorithmFormat,
+        @Nullable Output<String> signingCertificateName) {
         this.enableNRRForInboundDecodedMessages = Objects.requireNonNull(enableNRRForInboundDecodedMessages, "expected parameter 'enableNRRForInboundDecodedMessages' to be non-null");
         this.enableNRRForInboundEncodedMessages = Objects.requireNonNull(enableNRRForInboundEncodedMessages, "expected parameter 'enableNRRForInboundEncodedMessages' to be non-null");
         this.enableNRRForInboundMDN = Objects.requireNonNull(enableNRRForInboundMDN, "expected parameter 'enableNRRForInboundMDN' to be non-null");
@@ -153,16 +153,16 @@ public final class AS2SecuritySettingsArgs extends io.pulumi.resources.ResourceA
     }
 
     private AS2SecuritySettingsArgs() {
-        this.enableNRRForInboundDecodedMessages = Input.empty();
-        this.enableNRRForInboundEncodedMessages = Input.empty();
-        this.enableNRRForInboundMDN = Input.empty();
-        this.enableNRRForOutboundDecodedMessages = Input.empty();
-        this.enableNRRForOutboundEncodedMessages = Input.empty();
-        this.enableNRRForOutboundMDN = Input.empty();
-        this.encryptionCertificateName = Input.empty();
-        this.overrideGroupSigningCertificate = Input.empty();
-        this.sha2AlgorithmFormat = Input.empty();
-        this.signingCertificateName = Input.empty();
+        this.enableNRRForInboundDecodedMessages = Output.empty();
+        this.enableNRRForInboundEncodedMessages = Output.empty();
+        this.enableNRRForInboundMDN = Output.empty();
+        this.enableNRRForOutboundDecodedMessages = Output.empty();
+        this.enableNRRForOutboundEncodedMessages = Output.empty();
+        this.enableNRRForOutboundMDN = Output.empty();
+        this.encryptionCertificateName = Output.empty();
+        this.overrideGroupSigningCertificate = Output.empty();
+        this.sha2AlgorithmFormat = Output.empty();
+        this.signingCertificateName = Output.empty();
     }
 
     public static Builder builder() {
@@ -174,16 +174,16 @@ public final class AS2SecuritySettingsArgs extends io.pulumi.resources.ResourceA
     }
 
     public static final class Builder {
-        private Input<Boolean> enableNRRForInboundDecodedMessages;
-        private Input<Boolean> enableNRRForInboundEncodedMessages;
-        private Input<Boolean> enableNRRForInboundMDN;
-        private Input<Boolean> enableNRRForOutboundDecodedMessages;
-        private Input<Boolean> enableNRRForOutboundEncodedMessages;
-        private Input<Boolean> enableNRRForOutboundMDN;
-        private @Nullable Input<String> encryptionCertificateName;
-        private Input<Boolean> overrideGroupSigningCertificate;
-        private @Nullable Input<String> sha2AlgorithmFormat;
-        private @Nullable Input<String> signingCertificateName;
+        private Output<Boolean> enableNRRForInboundDecodedMessages;
+        private Output<Boolean> enableNRRForInboundEncodedMessages;
+        private Output<Boolean> enableNRRForInboundMDN;
+        private Output<Boolean> enableNRRForOutboundDecodedMessages;
+        private Output<Boolean> enableNRRForOutboundEncodedMessages;
+        private Output<Boolean> enableNRRForOutboundMDN;
+        private @Nullable Output<String> encryptionCertificateName;
+        private Output<Boolean> overrideGroupSigningCertificate;
+        private @Nullable Output<String> sha2AlgorithmFormat;
+        private @Nullable Output<String> signingCertificateName;
 
         public Builder() {
     	      // Empty
@@ -203,103 +203,103 @@ public final class AS2SecuritySettingsArgs extends io.pulumi.resources.ResourceA
     	      this.signingCertificateName = defaults.signingCertificateName;
         }
 
-        public Builder enableNRRForInboundDecodedMessages(Input<Boolean> enableNRRForInboundDecodedMessages) {
+        public Builder enableNRRForInboundDecodedMessages(Output<Boolean> enableNRRForInboundDecodedMessages) {
             this.enableNRRForInboundDecodedMessages = Objects.requireNonNull(enableNRRForInboundDecodedMessages);
             return this;
         }
 
         public Builder enableNRRForInboundDecodedMessages(Boolean enableNRRForInboundDecodedMessages) {
-            this.enableNRRForInboundDecodedMessages = Input.of(Objects.requireNonNull(enableNRRForInboundDecodedMessages));
+            this.enableNRRForInboundDecodedMessages = Output.of(Objects.requireNonNull(enableNRRForInboundDecodedMessages));
             return this;
         }
 
-        public Builder enableNRRForInboundEncodedMessages(Input<Boolean> enableNRRForInboundEncodedMessages) {
+        public Builder enableNRRForInboundEncodedMessages(Output<Boolean> enableNRRForInboundEncodedMessages) {
             this.enableNRRForInboundEncodedMessages = Objects.requireNonNull(enableNRRForInboundEncodedMessages);
             return this;
         }
 
         public Builder enableNRRForInboundEncodedMessages(Boolean enableNRRForInboundEncodedMessages) {
-            this.enableNRRForInboundEncodedMessages = Input.of(Objects.requireNonNull(enableNRRForInboundEncodedMessages));
+            this.enableNRRForInboundEncodedMessages = Output.of(Objects.requireNonNull(enableNRRForInboundEncodedMessages));
             return this;
         }
 
-        public Builder enableNRRForInboundMDN(Input<Boolean> enableNRRForInboundMDN) {
+        public Builder enableNRRForInboundMDN(Output<Boolean> enableNRRForInboundMDN) {
             this.enableNRRForInboundMDN = Objects.requireNonNull(enableNRRForInboundMDN);
             return this;
         }
 
         public Builder enableNRRForInboundMDN(Boolean enableNRRForInboundMDN) {
-            this.enableNRRForInboundMDN = Input.of(Objects.requireNonNull(enableNRRForInboundMDN));
+            this.enableNRRForInboundMDN = Output.of(Objects.requireNonNull(enableNRRForInboundMDN));
             return this;
         }
 
-        public Builder enableNRRForOutboundDecodedMessages(Input<Boolean> enableNRRForOutboundDecodedMessages) {
+        public Builder enableNRRForOutboundDecodedMessages(Output<Boolean> enableNRRForOutboundDecodedMessages) {
             this.enableNRRForOutboundDecodedMessages = Objects.requireNonNull(enableNRRForOutboundDecodedMessages);
             return this;
         }
 
         public Builder enableNRRForOutboundDecodedMessages(Boolean enableNRRForOutboundDecodedMessages) {
-            this.enableNRRForOutboundDecodedMessages = Input.of(Objects.requireNonNull(enableNRRForOutboundDecodedMessages));
+            this.enableNRRForOutboundDecodedMessages = Output.of(Objects.requireNonNull(enableNRRForOutboundDecodedMessages));
             return this;
         }
 
-        public Builder enableNRRForOutboundEncodedMessages(Input<Boolean> enableNRRForOutboundEncodedMessages) {
+        public Builder enableNRRForOutboundEncodedMessages(Output<Boolean> enableNRRForOutboundEncodedMessages) {
             this.enableNRRForOutboundEncodedMessages = Objects.requireNonNull(enableNRRForOutboundEncodedMessages);
             return this;
         }
 
         public Builder enableNRRForOutboundEncodedMessages(Boolean enableNRRForOutboundEncodedMessages) {
-            this.enableNRRForOutboundEncodedMessages = Input.of(Objects.requireNonNull(enableNRRForOutboundEncodedMessages));
+            this.enableNRRForOutboundEncodedMessages = Output.of(Objects.requireNonNull(enableNRRForOutboundEncodedMessages));
             return this;
         }
 
-        public Builder enableNRRForOutboundMDN(Input<Boolean> enableNRRForOutboundMDN) {
+        public Builder enableNRRForOutboundMDN(Output<Boolean> enableNRRForOutboundMDN) {
             this.enableNRRForOutboundMDN = Objects.requireNonNull(enableNRRForOutboundMDN);
             return this;
         }
 
         public Builder enableNRRForOutboundMDN(Boolean enableNRRForOutboundMDN) {
-            this.enableNRRForOutboundMDN = Input.of(Objects.requireNonNull(enableNRRForOutboundMDN));
+            this.enableNRRForOutboundMDN = Output.of(Objects.requireNonNull(enableNRRForOutboundMDN));
             return this;
         }
 
-        public Builder encryptionCertificateName(@Nullable Input<String> encryptionCertificateName) {
+        public Builder encryptionCertificateName(@Nullable Output<String> encryptionCertificateName) {
             this.encryptionCertificateName = encryptionCertificateName;
             return this;
         }
 
         public Builder encryptionCertificateName(@Nullable String encryptionCertificateName) {
-            this.encryptionCertificateName = Input.ofNullable(encryptionCertificateName);
+            this.encryptionCertificateName = Output.ofNullable(encryptionCertificateName);
             return this;
         }
 
-        public Builder overrideGroupSigningCertificate(Input<Boolean> overrideGroupSigningCertificate) {
+        public Builder overrideGroupSigningCertificate(Output<Boolean> overrideGroupSigningCertificate) {
             this.overrideGroupSigningCertificate = Objects.requireNonNull(overrideGroupSigningCertificate);
             return this;
         }
 
         public Builder overrideGroupSigningCertificate(Boolean overrideGroupSigningCertificate) {
-            this.overrideGroupSigningCertificate = Input.of(Objects.requireNonNull(overrideGroupSigningCertificate));
+            this.overrideGroupSigningCertificate = Output.of(Objects.requireNonNull(overrideGroupSigningCertificate));
             return this;
         }
 
-        public Builder sha2AlgorithmFormat(@Nullable Input<String> sha2AlgorithmFormat) {
+        public Builder sha2AlgorithmFormat(@Nullable Output<String> sha2AlgorithmFormat) {
             this.sha2AlgorithmFormat = sha2AlgorithmFormat;
             return this;
         }
 
         public Builder sha2AlgorithmFormat(@Nullable String sha2AlgorithmFormat) {
-            this.sha2AlgorithmFormat = Input.ofNullable(sha2AlgorithmFormat);
+            this.sha2AlgorithmFormat = Output.ofNullable(sha2AlgorithmFormat);
             return this;
         }
 
-        public Builder signingCertificateName(@Nullable Input<String> signingCertificateName) {
+        public Builder signingCertificateName(@Nullable Output<String> signingCertificateName) {
             this.signingCertificateName = signingCertificateName;
             return this;
         }
 
         public Builder signingCertificateName(@Nullable String signingCertificateName) {
-            this.signingCertificateName = Input.ofNullable(signingCertificateName);
+            this.signingCertificateName = Output.ofNullable(signingCertificateName);
             return this;
         }
         public AS2SecuritySettingsArgs build() {

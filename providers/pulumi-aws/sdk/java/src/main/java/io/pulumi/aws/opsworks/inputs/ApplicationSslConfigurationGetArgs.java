@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.opsworks.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,9 +19,9 @@ public final class ApplicationSslConfigurationGetArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="certificate", required=true)
-      private final Input<String> certificate;
+      private final Output<String> certificate;
 
-    public Input<String> getCertificate() {
+    public Output<String> getCertificate() {
         return this.certificate;
     }
 
@@ -30,10 +30,10 @@ public final class ApplicationSslConfigurationGetArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="chain")
-      private final @Nullable Input<String> chain;
+      private final @Nullable Output<String> chain;
 
-    public Input<String> getChain() {
-        return this.chain == null ? Input.empty() : this.chain;
+    public Output<String> getChain() {
+        return this.chain == null ? Output.empty() : this.chain;
     }
 
     /**
@@ -41,25 +41,25 @@ public final class ApplicationSslConfigurationGetArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="privateKey", required=true)
-      private final Input<String> privateKey;
+      private final Output<String> privateKey;
 
-    public Input<String> getPrivateKey() {
+    public Output<String> getPrivateKey() {
         return this.privateKey;
     }
 
     public ApplicationSslConfigurationGetArgs(
-        Input<String> certificate,
-        @Nullable Input<String> chain,
-        Input<String> privateKey) {
+        Output<String> certificate,
+        @Nullable Output<String> chain,
+        Output<String> privateKey) {
         this.certificate = Objects.requireNonNull(certificate, "expected parameter 'certificate' to be non-null");
         this.chain = chain;
         this.privateKey = Objects.requireNonNull(privateKey, "expected parameter 'privateKey' to be non-null");
     }
 
     private ApplicationSslConfigurationGetArgs() {
-        this.certificate = Input.empty();
-        this.chain = Input.empty();
-        this.privateKey = Input.empty();
+        this.certificate = Output.empty();
+        this.chain = Output.empty();
+        this.privateKey = Output.empty();
     }
 
     public static Builder builder() {
@@ -71,9 +71,9 @@ public final class ApplicationSslConfigurationGetArgs extends io.pulumi.resource
     }
 
     public static final class Builder {
-        private Input<String> certificate;
-        private @Nullable Input<String> chain;
-        private Input<String> privateKey;
+        private Output<String> certificate;
+        private @Nullable Output<String> chain;
+        private Output<String> privateKey;
 
         public Builder() {
     	      // Empty
@@ -86,33 +86,33 @@ public final class ApplicationSslConfigurationGetArgs extends io.pulumi.resource
     	      this.privateKey = defaults.privateKey;
         }
 
-        public Builder certificate(Input<String> certificate) {
+        public Builder certificate(Output<String> certificate) {
             this.certificate = Objects.requireNonNull(certificate);
             return this;
         }
 
         public Builder certificate(String certificate) {
-            this.certificate = Input.of(Objects.requireNonNull(certificate));
+            this.certificate = Output.of(Objects.requireNonNull(certificate));
             return this;
         }
 
-        public Builder chain(@Nullable Input<String> chain) {
+        public Builder chain(@Nullable Output<String> chain) {
             this.chain = chain;
             return this;
         }
 
         public Builder chain(@Nullable String chain) {
-            this.chain = Input.ofNullable(chain);
+            this.chain = Output.ofNullable(chain);
             return this;
         }
 
-        public Builder privateKey(Input<String> privateKey) {
+        public Builder privateKey(Output<String> privateKey) {
             this.privateKey = Objects.requireNonNull(privateKey);
             return this;
         }
 
         public Builder privateKey(String privateKey) {
-            this.privateKey = Input.of(Objects.requireNonNull(privateKey));
+            this.privateKey = Output.of(Objects.requireNonNull(privateKey));
             return this;
         }
         public ApplicationSslConfigurationGetArgs build() {

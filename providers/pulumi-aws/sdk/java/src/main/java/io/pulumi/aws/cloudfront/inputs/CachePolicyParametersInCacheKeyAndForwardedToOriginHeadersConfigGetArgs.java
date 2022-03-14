@@ -4,7 +4,7 @@
 package io.pulumi.aws.cloudfront.inputs;
 
 import io.pulumi.aws.cloudfront.inputs.CachePolicyParametersInCacheKeyAndForwardedToOriginHeadersConfigHeadersGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -20,10 +20,10 @@ public final class CachePolicyParametersInCacheKeyAndForwardedToOriginHeadersCon
      * 
      */
     @InputImport(name="headerBehavior")
-      private final @Nullable Input<String> headerBehavior;
+      private final @Nullable Output<String> headerBehavior;
 
-    public Input<String> getHeaderBehavior() {
-        return this.headerBehavior == null ? Input.empty() : this.headerBehavior;
+    public Output<String> getHeaderBehavior() {
+        return this.headerBehavior == null ? Output.empty() : this.headerBehavior;
     }
 
     /**
@@ -31,22 +31,22 @@ public final class CachePolicyParametersInCacheKeyAndForwardedToOriginHeadersCon
      * 
      */
     @InputImport(name="headers")
-      private final @Nullable Input<CachePolicyParametersInCacheKeyAndForwardedToOriginHeadersConfigHeadersGetArgs> headers;
+      private final @Nullable Output<CachePolicyParametersInCacheKeyAndForwardedToOriginHeadersConfigHeadersGetArgs> headers;
 
-    public Input<CachePolicyParametersInCacheKeyAndForwardedToOriginHeadersConfigHeadersGetArgs> getHeaders() {
-        return this.headers == null ? Input.empty() : this.headers;
+    public Output<CachePolicyParametersInCacheKeyAndForwardedToOriginHeadersConfigHeadersGetArgs> getHeaders() {
+        return this.headers == null ? Output.empty() : this.headers;
     }
 
     public CachePolicyParametersInCacheKeyAndForwardedToOriginHeadersConfigGetArgs(
-        @Nullable Input<String> headerBehavior,
-        @Nullable Input<CachePolicyParametersInCacheKeyAndForwardedToOriginHeadersConfigHeadersGetArgs> headers) {
+        @Nullable Output<String> headerBehavior,
+        @Nullable Output<CachePolicyParametersInCacheKeyAndForwardedToOriginHeadersConfigHeadersGetArgs> headers) {
         this.headerBehavior = headerBehavior;
         this.headers = headers;
     }
 
     private CachePolicyParametersInCacheKeyAndForwardedToOriginHeadersConfigGetArgs() {
-        this.headerBehavior = Input.empty();
-        this.headers = Input.empty();
+        this.headerBehavior = Output.empty();
+        this.headers = Output.empty();
     }
 
     public static Builder builder() {
@@ -58,8 +58,8 @@ public final class CachePolicyParametersInCacheKeyAndForwardedToOriginHeadersCon
     }
 
     public static final class Builder {
-        private @Nullable Input<String> headerBehavior;
-        private @Nullable Input<CachePolicyParametersInCacheKeyAndForwardedToOriginHeadersConfigHeadersGetArgs> headers;
+        private @Nullable Output<String> headerBehavior;
+        private @Nullable Output<CachePolicyParametersInCacheKeyAndForwardedToOriginHeadersConfigHeadersGetArgs> headers;
 
         public Builder() {
     	      // Empty
@@ -71,23 +71,23 @@ public final class CachePolicyParametersInCacheKeyAndForwardedToOriginHeadersCon
     	      this.headers = defaults.headers;
         }
 
-        public Builder headerBehavior(@Nullable Input<String> headerBehavior) {
+        public Builder headerBehavior(@Nullable Output<String> headerBehavior) {
             this.headerBehavior = headerBehavior;
             return this;
         }
 
         public Builder headerBehavior(@Nullable String headerBehavior) {
-            this.headerBehavior = Input.ofNullable(headerBehavior);
+            this.headerBehavior = Output.ofNullable(headerBehavior);
             return this;
         }
 
-        public Builder headers(@Nullable Input<CachePolicyParametersInCacheKeyAndForwardedToOriginHeadersConfigHeadersGetArgs> headers) {
+        public Builder headers(@Nullable Output<CachePolicyParametersInCacheKeyAndForwardedToOriginHeadersConfigHeadersGetArgs> headers) {
             this.headers = headers;
             return this;
         }
 
         public Builder headers(@Nullable CachePolicyParametersInCacheKeyAndForwardedToOriginHeadersConfigHeadersGetArgs headers) {
-            this.headers = Input.ofNullable(headers);
+            this.headers = Output.ofNullable(headers);
             return this;
         }
         public CachePolicyParametersInCacheKeyAndForwardedToOriginHeadersConfigGetArgs build() {

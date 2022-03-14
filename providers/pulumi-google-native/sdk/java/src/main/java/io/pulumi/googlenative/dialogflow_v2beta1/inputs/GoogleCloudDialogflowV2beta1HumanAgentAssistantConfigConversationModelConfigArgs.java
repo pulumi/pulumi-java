@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v2beta1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigConversa
      * 
      */
     @InputImport(name="model")
-      private final @Nullable Input<String> model;
+      private final @Nullable Output<String> model;
 
-    public Input<String> getModel() {
-        return this.model == null ? Input.empty() : this.model;
+    public Output<String> getModel() {
+        return this.model == null ? Output.empty() : this.model;
     }
 
-    public GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigConversationModelConfigArgs(@Nullable Input<String> model) {
+    public GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigConversationModelConfigArgs(@Nullable Output<String> model) {
         this.model = model;
     }
 
     private GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigConversationModelConfigArgs() {
-        this.model = Input.empty();
+        this.model = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigConversa
     }
 
     public static final class Builder {
-        private @Nullable Input<String> model;
+        private @Nullable Output<String> model;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigConversa
     	      this.model = defaults.model;
         }
 
-        public Builder model(@Nullable Input<String> model) {
+        public Builder model(@Nullable Output<String> model) {
             this.model = model;
             return this;
         }
 
         public Builder model(@Nullable String model) {
-            this.model = Input.ofNullable(model);
+            this.model = Output.ofNullable(model);
             return this;
         }
         public GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigConversationModelConfigArgs build() {

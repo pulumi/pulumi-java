@@ -11,7 +11,7 @@ import io.pulumi.azurenative.eventgrid.inputs.ServiceBusQueueEventSubscriptionDe
 import io.pulumi.azurenative.eventgrid.inputs.ServiceBusTopicEventSubscriptionDestinationArgs;
 import io.pulumi.azurenative.eventgrid.inputs.StorageQueueEventSubscriptionDestinationArgs;
 import io.pulumi.azurenative.eventgrid.inputs.WebHookEventSubscriptionDestinationArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.util.Objects;
@@ -32,10 +32,10 @@ public final class DeliveryWithResourceIdentityArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="destination")
-      private final @Nullable Input<Object> destination;
+      private final @Nullable Output<Object> destination;
 
-    public Input<Object> getDestination() {
-        return this.destination == null ? Input.empty() : this.destination;
+    public Output<Object> getDestination() {
+        return this.destination == null ? Output.empty() : this.destination;
     }
 
     /**
@@ -43,22 +43,22 @@ public final class DeliveryWithResourceIdentityArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="identity")
-      private final @Nullable Input<EventSubscriptionIdentityArgs> identity;
+      private final @Nullable Output<EventSubscriptionIdentityArgs> identity;
 
-    public Input<EventSubscriptionIdentityArgs> getIdentity() {
-        return this.identity == null ? Input.empty() : this.identity;
+    public Output<EventSubscriptionIdentityArgs> getIdentity() {
+        return this.identity == null ? Output.empty() : this.identity;
     }
 
     public DeliveryWithResourceIdentityArgs(
-        @Nullable Input<Object> destination,
-        @Nullable Input<EventSubscriptionIdentityArgs> identity) {
+        @Nullable Output<Object> destination,
+        @Nullable Output<EventSubscriptionIdentityArgs> identity) {
         this.destination = destination;
         this.identity = identity;
     }
 
     private DeliveryWithResourceIdentityArgs() {
-        this.destination = Input.empty();
-        this.identity = Input.empty();
+        this.destination = Output.empty();
+        this.identity = Output.empty();
     }
 
     public static Builder builder() {
@@ -70,8 +70,8 @@ public final class DeliveryWithResourceIdentityArgs extends io.pulumi.resources.
     }
 
     public static final class Builder {
-        private @Nullable Input<Object> destination;
-        private @Nullable Input<EventSubscriptionIdentityArgs> identity;
+        private @Nullable Output<Object> destination;
+        private @Nullable Output<EventSubscriptionIdentityArgs> identity;
 
         public Builder() {
     	      // Empty
@@ -83,23 +83,23 @@ public final class DeliveryWithResourceIdentityArgs extends io.pulumi.resources.
     	      this.identity = defaults.identity;
         }
 
-        public Builder destination(@Nullable Input<Object> destination) {
+        public Builder destination(@Nullable Output<Object> destination) {
             this.destination = destination;
             return this;
         }
 
         public Builder destination(@Nullable Object destination) {
-            this.destination = Input.ofNullable(destination);
+            this.destination = Output.ofNullable(destination);
             return this;
         }
 
-        public Builder identity(@Nullable Input<EventSubscriptionIdentityArgs> identity) {
+        public Builder identity(@Nullable Output<EventSubscriptionIdentityArgs> identity) {
             this.identity = identity;
             return this;
         }
 
         public Builder identity(@Nullable EventSubscriptionIdentityArgs identity) {
-            this.identity = Input.ofNullable(identity);
+            this.identity = Output.ofNullable(identity);
             return this;
         }
         public DeliveryWithResourceIdentityArgs build() {

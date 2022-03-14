@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.providerhub.inputs;
 
 import io.pulumi.azurenative.providerhub.inputs.ProviderRegistrationPropertiesArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -15,18 +15,18 @@ public final class DefaultRolloutSpecificationProviderRegistrationArgs extends i
     public static final DefaultRolloutSpecificationProviderRegistrationArgs Empty = new DefaultRolloutSpecificationProviderRegistrationArgs();
 
     @InputImport(name="properties")
-      private final @Nullable Input<ProviderRegistrationPropertiesArgs> properties;
+      private final @Nullable Output<ProviderRegistrationPropertiesArgs> properties;
 
-    public Input<ProviderRegistrationPropertiesArgs> getProperties() {
-        return this.properties == null ? Input.empty() : this.properties;
+    public Output<ProviderRegistrationPropertiesArgs> getProperties() {
+        return this.properties == null ? Output.empty() : this.properties;
     }
 
-    public DefaultRolloutSpecificationProviderRegistrationArgs(@Nullable Input<ProviderRegistrationPropertiesArgs> properties) {
+    public DefaultRolloutSpecificationProviderRegistrationArgs(@Nullable Output<ProviderRegistrationPropertiesArgs> properties) {
         this.properties = properties;
     }
 
     private DefaultRolloutSpecificationProviderRegistrationArgs() {
-        this.properties = Input.empty();
+        this.properties = Output.empty();
     }
 
     public static Builder builder() {
@@ -38,7 +38,7 @@ public final class DefaultRolloutSpecificationProviderRegistrationArgs extends i
     }
 
     public static final class Builder {
-        private @Nullable Input<ProviderRegistrationPropertiesArgs> properties;
+        private @Nullable Output<ProviderRegistrationPropertiesArgs> properties;
 
         public Builder() {
     	      // Empty
@@ -49,13 +49,13 @@ public final class DefaultRolloutSpecificationProviderRegistrationArgs extends i
     	      this.properties = defaults.properties;
         }
 
-        public Builder properties(@Nullable Input<ProviderRegistrationPropertiesArgs> properties) {
+        public Builder properties(@Nullable Output<ProviderRegistrationPropertiesArgs> properties) {
             this.properties = properties;
             return this;
         }
 
         public Builder properties(@Nullable ProviderRegistrationPropertiesArgs properties) {
-            this.properties = Input.ofNullable(properties);
+            this.properties = Output.ofNullable(properties);
             return this;
         }
         public DefaultRolloutSpecificationProviderRegistrationArgs build() {

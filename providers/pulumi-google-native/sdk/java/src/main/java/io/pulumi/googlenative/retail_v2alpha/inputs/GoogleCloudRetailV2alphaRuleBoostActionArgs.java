@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.retail_v2alpha.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class GoogleCloudRetailV2alphaRuleBoostActionArgs extends io.pulumi
      * 
      */
     @InputImport(name="boost")
-      private final @Nullable Input<Double> boost;
+      private final @Nullable Output<Double> boost;
 
-    public Input<Double> getBoost() {
-        return this.boost == null ? Input.empty() : this.boost;
+    public Output<Double> getBoost() {
+        return this.boost == null ? Output.empty() : this.boost;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class GoogleCloudRetailV2alphaRuleBoostActionArgs extends io.pulumi
      * 
      */
     @InputImport(name="productsFilter")
-      private final @Nullable Input<String> productsFilter;
+      private final @Nullable Output<String> productsFilter;
 
-    public Input<String> getProductsFilter() {
-        return this.productsFilter == null ? Input.empty() : this.productsFilter;
+    public Output<String> getProductsFilter() {
+        return this.productsFilter == null ? Output.empty() : this.productsFilter;
     }
 
     public GoogleCloudRetailV2alphaRuleBoostActionArgs(
-        @Nullable Input<Double> boost,
-        @Nullable Input<String> productsFilter) {
+        @Nullable Output<Double> boost,
+        @Nullable Output<String> productsFilter) {
         this.boost = boost;
         this.productsFilter = productsFilter;
     }
 
     private GoogleCloudRetailV2alphaRuleBoostActionArgs() {
-        this.boost = Input.empty();
-        this.productsFilter = Input.empty();
+        this.boost = Output.empty();
+        this.productsFilter = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class GoogleCloudRetailV2alphaRuleBoostActionArgs extends io.pulumi
     }
 
     public static final class Builder {
-        private @Nullable Input<Double> boost;
-        private @Nullable Input<String> productsFilter;
+        private @Nullable Output<Double> boost;
+        private @Nullable Output<String> productsFilter;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class GoogleCloudRetailV2alphaRuleBoostActionArgs extends io.pulumi
     	      this.productsFilter = defaults.productsFilter;
         }
 
-        public Builder boost(@Nullable Input<Double> boost) {
+        public Builder boost(@Nullable Output<Double> boost) {
             this.boost = boost;
             return this;
         }
 
         public Builder boost(@Nullable Double boost) {
-            this.boost = Input.ofNullable(boost);
+            this.boost = Output.ofNullable(boost);
             return this;
         }
 
-        public Builder productsFilter(@Nullable Input<String> productsFilter) {
+        public Builder productsFilter(@Nullable Output<String> productsFilter) {
             this.productsFilter = productsFilter;
             return this;
         }
 
         public Builder productsFilter(@Nullable String productsFilter) {
-            this.productsFilter = Input.ofNullable(productsFilter);
+            this.productsFilter = Output.ofNullable(productsFilter);
             return this;
         }
         public GoogleCloudRetailV2alphaRuleBoostActionArgs build() {

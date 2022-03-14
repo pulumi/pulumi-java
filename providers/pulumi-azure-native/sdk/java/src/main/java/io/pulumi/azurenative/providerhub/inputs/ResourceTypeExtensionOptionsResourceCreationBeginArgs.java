@@ -5,7 +5,7 @@ package io.pulumi.azurenative.providerhub.inputs;
 
 import io.pulumi.azurenative.providerhub.enums.ExtensionOptionType;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -18,29 +18,29 @@ public final class ResourceTypeExtensionOptionsResourceCreationBeginArgs extends
     public static final ResourceTypeExtensionOptionsResourceCreationBeginArgs Empty = new ResourceTypeExtensionOptionsResourceCreationBeginArgs();
 
     @InputImport(name="request")
-      private final @Nullable Input<List<Either<String,ExtensionOptionType>>> request;
+      private final @Nullable Output<List<Either<String,ExtensionOptionType>>> request;
 
-    public Input<List<Either<String,ExtensionOptionType>>> getRequest() {
-        return this.request == null ? Input.empty() : this.request;
+    public Output<List<Either<String,ExtensionOptionType>>> getRequest() {
+        return this.request == null ? Output.empty() : this.request;
     }
 
     @InputImport(name="response")
-      private final @Nullable Input<List<Either<String,ExtensionOptionType>>> response;
+      private final @Nullable Output<List<Either<String,ExtensionOptionType>>> response;
 
-    public Input<List<Either<String,ExtensionOptionType>>> getResponse() {
-        return this.response == null ? Input.empty() : this.response;
+    public Output<List<Either<String,ExtensionOptionType>>> getResponse() {
+        return this.response == null ? Output.empty() : this.response;
     }
 
     public ResourceTypeExtensionOptionsResourceCreationBeginArgs(
-        @Nullable Input<List<Either<String,ExtensionOptionType>>> request,
-        @Nullable Input<List<Either<String,ExtensionOptionType>>> response) {
+        @Nullable Output<List<Either<String,ExtensionOptionType>>> request,
+        @Nullable Output<List<Either<String,ExtensionOptionType>>> response) {
         this.request = request;
         this.response = response;
     }
 
     private ResourceTypeExtensionOptionsResourceCreationBeginArgs() {
-        this.request = Input.empty();
-        this.response = Input.empty();
+        this.request = Output.empty();
+        this.response = Output.empty();
     }
 
     public static Builder builder() {
@@ -52,8 +52,8 @@ public final class ResourceTypeExtensionOptionsResourceCreationBeginArgs extends
     }
 
     public static final class Builder {
-        private @Nullable Input<List<Either<String,ExtensionOptionType>>> request;
-        private @Nullable Input<List<Either<String,ExtensionOptionType>>> response;
+        private @Nullable Output<List<Either<String,ExtensionOptionType>>> request;
+        private @Nullable Output<List<Either<String,ExtensionOptionType>>> response;
 
         public Builder() {
     	      // Empty
@@ -65,23 +65,23 @@ public final class ResourceTypeExtensionOptionsResourceCreationBeginArgs extends
     	      this.response = defaults.response;
         }
 
-        public Builder request(@Nullable Input<List<Either<String,ExtensionOptionType>>> request) {
+        public Builder request(@Nullable Output<List<Either<String,ExtensionOptionType>>> request) {
             this.request = request;
             return this;
         }
 
         public Builder request(@Nullable List<Either<String,ExtensionOptionType>> request) {
-            this.request = Input.ofNullable(request);
+            this.request = Output.ofNullable(request);
             return this;
         }
 
-        public Builder response(@Nullable Input<List<Either<String,ExtensionOptionType>>> response) {
+        public Builder response(@Nullable Output<List<Either<String,ExtensionOptionType>>> response) {
             this.response = response;
             return this;
         }
 
         public Builder response(@Nullable List<Either<String,ExtensionOptionType>> response) {
-            this.response = Input.ofNullable(response);
+            this.response = Output.ofNullable(response);
             return this;
         }
         public ResourceTypeExtensionOptionsResourceCreationBeginArgs build() {

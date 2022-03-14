@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.elasticache.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -24,11 +24,11 @@ public final class GlobalReplicationGroupState extends io.pulumi.resources.Resou
      */
     @Deprecated /* Use engine_version_actual instead */
     @InputImport(name="actualEngineVersion")
-      private final @Nullable Input<String> actualEngineVersion;
+      private final @Nullable Output<String> actualEngineVersion;
 
     @Deprecated /* Use engine_version_actual instead */
-    public Input<String> getActualEngineVersion() {
-        return this.actualEngineVersion == null ? Input.empty() : this.actualEngineVersion;
+    public Output<String> getActualEngineVersion() {
+        return this.actualEngineVersion == null ? Output.empty() : this.actualEngineVersion;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class GlobalReplicationGroupState extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="arn")
-      private final @Nullable Input<String> arn;
+      private final @Nullable Output<String> arn;
 
-    public Input<String> getArn() {
-        return this.arn == null ? Input.empty() : this.arn;
+    public Output<String> getArn() {
+        return this.arn == null ? Output.empty() : this.arn;
     }
 
     /**
@@ -47,10 +47,10 @@ public final class GlobalReplicationGroupState extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="atRestEncryptionEnabled")
-      private final @Nullable Input<Boolean> atRestEncryptionEnabled;
+      private final @Nullable Output<Boolean> atRestEncryptionEnabled;
 
-    public Input<Boolean> getAtRestEncryptionEnabled() {
-        return this.atRestEncryptionEnabled == null ? Input.empty() : this.atRestEncryptionEnabled;
+    public Output<Boolean> getAtRestEncryptionEnabled() {
+        return this.atRestEncryptionEnabled == null ? Output.empty() : this.atRestEncryptionEnabled;
     }
 
     /**
@@ -58,10 +58,10 @@ public final class GlobalReplicationGroupState extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="authTokenEnabled")
-      private final @Nullable Input<Boolean> authTokenEnabled;
+      private final @Nullable Output<Boolean> authTokenEnabled;
 
-    public Input<Boolean> getAuthTokenEnabled() {
-        return this.authTokenEnabled == null ? Input.empty() : this.authTokenEnabled;
+    public Output<Boolean> getAuthTokenEnabled() {
+        return this.authTokenEnabled == null ? Output.empty() : this.authTokenEnabled;
     }
 
     /**
@@ -69,10 +69,10 @@ public final class GlobalReplicationGroupState extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="cacheNodeType")
-      private final @Nullable Input<String> cacheNodeType;
+      private final @Nullable Output<String> cacheNodeType;
 
-    public Input<String> getCacheNodeType() {
-        return this.cacheNodeType == null ? Input.empty() : this.cacheNodeType;
+    public Output<String> getCacheNodeType() {
+        return this.cacheNodeType == null ? Output.empty() : this.cacheNodeType;
     }
 
     /**
@@ -80,10 +80,10 @@ public final class GlobalReplicationGroupState extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="clusterEnabled")
-      private final @Nullable Input<Boolean> clusterEnabled;
+      private final @Nullable Output<Boolean> clusterEnabled;
 
-    public Input<Boolean> getClusterEnabled() {
-        return this.clusterEnabled == null ? Input.empty() : this.clusterEnabled;
+    public Output<Boolean> getClusterEnabled() {
+        return this.clusterEnabled == null ? Output.empty() : this.clusterEnabled;
     }
 
     /**
@@ -91,10 +91,10 @@ public final class GlobalReplicationGroupState extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="engine")
-      private final @Nullable Input<String> engine;
+      private final @Nullable Output<String> engine;
 
-    public Input<String> getEngine() {
-        return this.engine == null ? Input.empty() : this.engine;
+    public Output<String> getEngine() {
+        return this.engine == null ? Output.empty() : this.engine;
     }
 
     /**
@@ -102,10 +102,10 @@ public final class GlobalReplicationGroupState extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="engineVersionActual")
-      private final @Nullable Input<String> engineVersionActual;
+      private final @Nullable Output<String> engineVersionActual;
 
-    public Input<String> getEngineVersionActual() {
-        return this.engineVersionActual == null ? Input.empty() : this.engineVersionActual;
+    public Output<String> getEngineVersionActual() {
+        return this.engineVersionActual == null ? Output.empty() : this.engineVersionActual;
     }
 
     /**
@@ -113,10 +113,10 @@ public final class GlobalReplicationGroupState extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="globalReplicationGroupDescription")
-      private final @Nullable Input<String> globalReplicationGroupDescription;
+      private final @Nullable Output<String> globalReplicationGroupDescription;
 
-    public Input<String> getGlobalReplicationGroupDescription() {
-        return this.globalReplicationGroupDescription == null ? Input.empty() : this.globalReplicationGroupDescription;
+    public Output<String> getGlobalReplicationGroupDescription() {
+        return this.globalReplicationGroupDescription == null ? Output.empty() : this.globalReplicationGroupDescription;
     }
 
     /**
@@ -124,10 +124,10 @@ public final class GlobalReplicationGroupState extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="globalReplicationGroupId")
-      private final @Nullable Input<String> globalReplicationGroupId;
+      private final @Nullable Output<String> globalReplicationGroupId;
 
-    public Input<String> getGlobalReplicationGroupId() {
-        return this.globalReplicationGroupId == null ? Input.empty() : this.globalReplicationGroupId;
+    public Output<String> getGlobalReplicationGroupId() {
+        return this.globalReplicationGroupId == null ? Output.empty() : this.globalReplicationGroupId;
     }
 
     /**
@@ -135,10 +135,10 @@ public final class GlobalReplicationGroupState extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="globalReplicationGroupIdSuffix")
-      private final @Nullable Input<String> globalReplicationGroupIdSuffix;
+      private final @Nullable Output<String> globalReplicationGroupIdSuffix;
 
-    public Input<String> getGlobalReplicationGroupIdSuffix() {
-        return this.globalReplicationGroupIdSuffix == null ? Input.empty() : this.globalReplicationGroupIdSuffix;
+    public Output<String> getGlobalReplicationGroupIdSuffix() {
+        return this.globalReplicationGroupIdSuffix == null ? Output.empty() : this.globalReplicationGroupIdSuffix;
     }
 
     /**
@@ -146,10 +146,10 @@ public final class GlobalReplicationGroupState extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="primaryReplicationGroupId")
-      private final @Nullable Input<String> primaryReplicationGroupId;
+      private final @Nullable Output<String> primaryReplicationGroupId;
 
-    public Input<String> getPrimaryReplicationGroupId() {
-        return this.primaryReplicationGroupId == null ? Input.empty() : this.primaryReplicationGroupId;
+    public Output<String> getPrimaryReplicationGroupId() {
+        return this.primaryReplicationGroupId == null ? Output.empty() : this.primaryReplicationGroupId;
     }
 
     /**
@@ -157,26 +157,26 @@ public final class GlobalReplicationGroupState extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="transitEncryptionEnabled")
-      private final @Nullable Input<Boolean> transitEncryptionEnabled;
+      private final @Nullable Output<Boolean> transitEncryptionEnabled;
 
-    public Input<Boolean> getTransitEncryptionEnabled() {
-        return this.transitEncryptionEnabled == null ? Input.empty() : this.transitEncryptionEnabled;
+    public Output<Boolean> getTransitEncryptionEnabled() {
+        return this.transitEncryptionEnabled == null ? Output.empty() : this.transitEncryptionEnabled;
     }
 
     public GlobalReplicationGroupState(
-        @Nullable Input<String> actualEngineVersion,
-        @Nullable Input<String> arn,
-        @Nullable Input<Boolean> atRestEncryptionEnabled,
-        @Nullable Input<Boolean> authTokenEnabled,
-        @Nullable Input<String> cacheNodeType,
-        @Nullable Input<Boolean> clusterEnabled,
-        @Nullable Input<String> engine,
-        @Nullable Input<String> engineVersionActual,
-        @Nullable Input<String> globalReplicationGroupDescription,
-        @Nullable Input<String> globalReplicationGroupId,
-        @Nullable Input<String> globalReplicationGroupIdSuffix,
-        @Nullable Input<String> primaryReplicationGroupId,
-        @Nullable Input<Boolean> transitEncryptionEnabled) {
+        @Nullable Output<String> actualEngineVersion,
+        @Nullable Output<String> arn,
+        @Nullable Output<Boolean> atRestEncryptionEnabled,
+        @Nullable Output<Boolean> authTokenEnabled,
+        @Nullable Output<String> cacheNodeType,
+        @Nullable Output<Boolean> clusterEnabled,
+        @Nullable Output<String> engine,
+        @Nullable Output<String> engineVersionActual,
+        @Nullable Output<String> globalReplicationGroupDescription,
+        @Nullable Output<String> globalReplicationGroupId,
+        @Nullable Output<String> globalReplicationGroupIdSuffix,
+        @Nullable Output<String> primaryReplicationGroupId,
+        @Nullable Output<Boolean> transitEncryptionEnabled) {
         this.actualEngineVersion = actualEngineVersion;
         this.arn = arn;
         this.atRestEncryptionEnabled = atRestEncryptionEnabled;
@@ -193,19 +193,19 @@ public final class GlobalReplicationGroupState extends io.pulumi.resources.Resou
     }
 
     private GlobalReplicationGroupState() {
-        this.actualEngineVersion = Input.empty();
-        this.arn = Input.empty();
-        this.atRestEncryptionEnabled = Input.empty();
-        this.authTokenEnabled = Input.empty();
-        this.cacheNodeType = Input.empty();
-        this.clusterEnabled = Input.empty();
-        this.engine = Input.empty();
-        this.engineVersionActual = Input.empty();
-        this.globalReplicationGroupDescription = Input.empty();
-        this.globalReplicationGroupId = Input.empty();
-        this.globalReplicationGroupIdSuffix = Input.empty();
-        this.primaryReplicationGroupId = Input.empty();
-        this.transitEncryptionEnabled = Input.empty();
+        this.actualEngineVersion = Output.empty();
+        this.arn = Output.empty();
+        this.atRestEncryptionEnabled = Output.empty();
+        this.authTokenEnabled = Output.empty();
+        this.cacheNodeType = Output.empty();
+        this.clusterEnabled = Output.empty();
+        this.engine = Output.empty();
+        this.engineVersionActual = Output.empty();
+        this.globalReplicationGroupDescription = Output.empty();
+        this.globalReplicationGroupId = Output.empty();
+        this.globalReplicationGroupIdSuffix = Output.empty();
+        this.primaryReplicationGroupId = Output.empty();
+        this.transitEncryptionEnabled = Output.empty();
     }
 
     public static Builder builder() {
@@ -217,19 +217,19 @@ public final class GlobalReplicationGroupState extends io.pulumi.resources.Resou
     }
 
     public static final class Builder {
-        private @Nullable Input<String> actualEngineVersion;
-        private @Nullable Input<String> arn;
-        private @Nullable Input<Boolean> atRestEncryptionEnabled;
-        private @Nullable Input<Boolean> authTokenEnabled;
-        private @Nullable Input<String> cacheNodeType;
-        private @Nullable Input<Boolean> clusterEnabled;
-        private @Nullable Input<String> engine;
-        private @Nullable Input<String> engineVersionActual;
-        private @Nullable Input<String> globalReplicationGroupDescription;
-        private @Nullable Input<String> globalReplicationGroupId;
-        private @Nullable Input<String> globalReplicationGroupIdSuffix;
-        private @Nullable Input<String> primaryReplicationGroupId;
-        private @Nullable Input<Boolean> transitEncryptionEnabled;
+        private @Nullable Output<String> actualEngineVersion;
+        private @Nullable Output<String> arn;
+        private @Nullable Output<Boolean> atRestEncryptionEnabled;
+        private @Nullable Output<Boolean> authTokenEnabled;
+        private @Nullable Output<String> cacheNodeType;
+        private @Nullable Output<Boolean> clusterEnabled;
+        private @Nullable Output<String> engine;
+        private @Nullable Output<String> engineVersionActual;
+        private @Nullable Output<String> globalReplicationGroupDescription;
+        private @Nullable Output<String> globalReplicationGroupId;
+        private @Nullable Output<String> globalReplicationGroupIdSuffix;
+        private @Nullable Output<String> primaryReplicationGroupId;
+        private @Nullable Output<Boolean> transitEncryptionEnabled;
 
         public Builder() {
     	      // Empty
@@ -252,133 +252,133 @@ public final class GlobalReplicationGroupState extends io.pulumi.resources.Resou
     	      this.transitEncryptionEnabled = defaults.transitEncryptionEnabled;
         }
 
-        public Builder actualEngineVersion(@Nullable Input<String> actualEngineVersion) {
+        public Builder actualEngineVersion(@Nullable Output<String> actualEngineVersion) {
             this.actualEngineVersion = actualEngineVersion;
             return this;
         }
 
         public Builder actualEngineVersion(@Nullable String actualEngineVersion) {
-            this.actualEngineVersion = Input.ofNullable(actualEngineVersion);
+            this.actualEngineVersion = Output.ofNullable(actualEngineVersion);
             return this;
         }
 
-        public Builder arn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
 
         public Builder arn(@Nullable String arn) {
-            this.arn = Input.ofNullable(arn);
+            this.arn = Output.ofNullable(arn);
             return this;
         }
 
-        public Builder atRestEncryptionEnabled(@Nullable Input<Boolean> atRestEncryptionEnabled) {
+        public Builder atRestEncryptionEnabled(@Nullable Output<Boolean> atRestEncryptionEnabled) {
             this.atRestEncryptionEnabled = atRestEncryptionEnabled;
             return this;
         }
 
         public Builder atRestEncryptionEnabled(@Nullable Boolean atRestEncryptionEnabled) {
-            this.atRestEncryptionEnabled = Input.ofNullable(atRestEncryptionEnabled);
+            this.atRestEncryptionEnabled = Output.ofNullable(atRestEncryptionEnabled);
             return this;
         }
 
-        public Builder authTokenEnabled(@Nullable Input<Boolean> authTokenEnabled) {
+        public Builder authTokenEnabled(@Nullable Output<Boolean> authTokenEnabled) {
             this.authTokenEnabled = authTokenEnabled;
             return this;
         }
 
         public Builder authTokenEnabled(@Nullable Boolean authTokenEnabled) {
-            this.authTokenEnabled = Input.ofNullable(authTokenEnabled);
+            this.authTokenEnabled = Output.ofNullable(authTokenEnabled);
             return this;
         }
 
-        public Builder cacheNodeType(@Nullable Input<String> cacheNodeType) {
+        public Builder cacheNodeType(@Nullable Output<String> cacheNodeType) {
             this.cacheNodeType = cacheNodeType;
             return this;
         }
 
         public Builder cacheNodeType(@Nullable String cacheNodeType) {
-            this.cacheNodeType = Input.ofNullable(cacheNodeType);
+            this.cacheNodeType = Output.ofNullable(cacheNodeType);
             return this;
         }
 
-        public Builder clusterEnabled(@Nullable Input<Boolean> clusterEnabled) {
+        public Builder clusterEnabled(@Nullable Output<Boolean> clusterEnabled) {
             this.clusterEnabled = clusterEnabled;
             return this;
         }
 
         public Builder clusterEnabled(@Nullable Boolean clusterEnabled) {
-            this.clusterEnabled = Input.ofNullable(clusterEnabled);
+            this.clusterEnabled = Output.ofNullable(clusterEnabled);
             return this;
         }
 
-        public Builder engine(@Nullable Input<String> engine) {
+        public Builder engine(@Nullable Output<String> engine) {
             this.engine = engine;
             return this;
         }
 
         public Builder engine(@Nullable String engine) {
-            this.engine = Input.ofNullable(engine);
+            this.engine = Output.ofNullable(engine);
             return this;
         }
 
-        public Builder engineVersionActual(@Nullable Input<String> engineVersionActual) {
+        public Builder engineVersionActual(@Nullable Output<String> engineVersionActual) {
             this.engineVersionActual = engineVersionActual;
             return this;
         }
 
         public Builder engineVersionActual(@Nullable String engineVersionActual) {
-            this.engineVersionActual = Input.ofNullable(engineVersionActual);
+            this.engineVersionActual = Output.ofNullable(engineVersionActual);
             return this;
         }
 
-        public Builder globalReplicationGroupDescription(@Nullable Input<String> globalReplicationGroupDescription) {
+        public Builder globalReplicationGroupDescription(@Nullable Output<String> globalReplicationGroupDescription) {
             this.globalReplicationGroupDescription = globalReplicationGroupDescription;
             return this;
         }
 
         public Builder globalReplicationGroupDescription(@Nullable String globalReplicationGroupDescription) {
-            this.globalReplicationGroupDescription = Input.ofNullable(globalReplicationGroupDescription);
+            this.globalReplicationGroupDescription = Output.ofNullable(globalReplicationGroupDescription);
             return this;
         }
 
-        public Builder globalReplicationGroupId(@Nullable Input<String> globalReplicationGroupId) {
+        public Builder globalReplicationGroupId(@Nullable Output<String> globalReplicationGroupId) {
             this.globalReplicationGroupId = globalReplicationGroupId;
             return this;
         }
 
         public Builder globalReplicationGroupId(@Nullable String globalReplicationGroupId) {
-            this.globalReplicationGroupId = Input.ofNullable(globalReplicationGroupId);
+            this.globalReplicationGroupId = Output.ofNullable(globalReplicationGroupId);
             return this;
         }
 
-        public Builder globalReplicationGroupIdSuffix(@Nullable Input<String> globalReplicationGroupIdSuffix) {
+        public Builder globalReplicationGroupIdSuffix(@Nullable Output<String> globalReplicationGroupIdSuffix) {
             this.globalReplicationGroupIdSuffix = globalReplicationGroupIdSuffix;
             return this;
         }
 
         public Builder globalReplicationGroupIdSuffix(@Nullable String globalReplicationGroupIdSuffix) {
-            this.globalReplicationGroupIdSuffix = Input.ofNullable(globalReplicationGroupIdSuffix);
+            this.globalReplicationGroupIdSuffix = Output.ofNullable(globalReplicationGroupIdSuffix);
             return this;
         }
 
-        public Builder primaryReplicationGroupId(@Nullable Input<String> primaryReplicationGroupId) {
+        public Builder primaryReplicationGroupId(@Nullable Output<String> primaryReplicationGroupId) {
             this.primaryReplicationGroupId = primaryReplicationGroupId;
             return this;
         }
 
         public Builder primaryReplicationGroupId(@Nullable String primaryReplicationGroupId) {
-            this.primaryReplicationGroupId = Input.ofNullable(primaryReplicationGroupId);
+            this.primaryReplicationGroupId = Output.ofNullable(primaryReplicationGroupId);
             return this;
         }
 
-        public Builder transitEncryptionEnabled(@Nullable Input<Boolean> transitEncryptionEnabled) {
+        public Builder transitEncryptionEnabled(@Nullable Output<Boolean> transitEncryptionEnabled) {
             this.transitEncryptionEnabled = transitEncryptionEnabled;
             return this;
         }
 
         public Builder transitEncryptionEnabled(@Nullable Boolean transitEncryptionEnabled) {
-            this.transitEncryptionEnabled = Input.ofNullable(transitEncryptionEnabled);
+            this.transitEncryptionEnabled = Output.ofNullable(transitEncryptionEnabled);
             return this;
         }
         public GlobalReplicationGroupState build() {

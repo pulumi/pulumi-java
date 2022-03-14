@@ -5,7 +5,7 @@ package io.pulumi.awsnative.transfer.inputs;
 
 import io.pulumi.awsnative.transfer.enums.WorkflowStepCopyStepDetailsPropertiesOverwriteExisting;
 import io.pulumi.awsnative.transfer.inputs.WorkflowInputFileLocationArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -21,10 +21,10 @@ public final class WorkflowStepCopyStepDetailsPropertiesArgs extends io.pulumi.r
     public static final WorkflowStepCopyStepDetailsPropertiesArgs Empty = new WorkflowStepCopyStepDetailsPropertiesArgs();
 
     @InputImport(name="destinationFileLocation")
-      private final @Nullable Input<WorkflowInputFileLocationArgs> destinationFileLocation;
+      private final @Nullable Output<WorkflowInputFileLocationArgs> destinationFileLocation;
 
-    public Input<WorkflowInputFileLocationArgs> getDestinationFileLocation() {
-        return this.destinationFileLocation == null ? Input.empty() : this.destinationFileLocation;
+    public Output<WorkflowInputFileLocationArgs> getDestinationFileLocation() {
+        return this.destinationFileLocation == null ? Output.empty() : this.destinationFileLocation;
     }
 
     /**
@@ -32,10 +32,10 @@ public final class WorkflowStepCopyStepDetailsPropertiesArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -43,25 +43,25 @@ public final class WorkflowStepCopyStepDetailsPropertiesArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="overwriteExisting")
-      private final @Nullable Input<WorkflowStepCopyStepDetailsPropertiesOverwriteExisting> overwriteExisting;
+      private final @Nullable Output<WorkflowStepCopyStepDetailsPropertiesOverwriteExisting> overwriteExisting;
 
-    public Input<WorkflowStepCopyStepDetailsPropertiesOverwriteExisting> getOverwriteExisting() {
-        return this.overwriteExisting == null ? Input.empty() : this.overwriteExisting;
+    public Output<WorkflowStepCopyStepDetailsPropertiesOverwriteExisting> getOverwriteExisting() {
+        return this.overwriteExisting == null ? Output.empty() : this.overwriteExisting;
     }
 
     public WorkflowStepCopyStepDetailsPropertiesArgs(
-        @Nullable Input<WorkflowInputFileLocationArgs> destinationFileLocation,
-        @Nullable Input<String> name,
-        @Nullable Input<WorkflowStepCopyStepDetailsPropertiesOverwriteExisting> overwriteExisting) {
+        @Nullable Output<WorkflowInputFileLocationArgs> destinationFileLocation,
+        @Nullable Output<String> name,
+        @Nullable Output<WorkflowStepCopyStepDetailsPropertiesOverwriteExisting> overwriteExisting) {
         this.destinationFileLocation = destinationFileLocation;
         this.name = name;
         this.overwriteExisting = overwriteExisting;
     }
 
     private WorkflowStepCopyStepDetailsPropertiesArgs() {
-        this.destinationFileLocation = Input.empty();
-        this.name = Input.empty();
-        this.overwriteExisting = Input.empty();
+        this.destinationFileLocation = Output.empty();
+        this.name = Output.empty();
+        this.overwriteExisting = Output.empty();
     }
 
     public static Builder builder() {
@@ -73,9 +73,9 @@ public final class WorkflowStepCopyStepDetailsPropertiesArgs extends io.pulumi.r
     }
 
     public static final class Builder {
-        private @Nullable Input<WorkflowInputFileLocationArgs> destinationFileLocation;
-        private @Nullable Input<String> name;
-        private @Nullable Input<WorkflowStepCopyStepDetailsPropertiesOverwriteExisting> overwriteExisting;
+        private @Nullable Output<WorkflowInputFileLocationArgs> destinationFileLocation;
+        private @Nullable Output<String> name;
+        private @Nullable Output<WorkflowStepCopyStepDetailsPropertiesOverwriteExisting> overwriteExisting;
 
         public Builder() {
     	      // Empty
@@ -88,33 +88,33 @@ public final class WorkflowStepCopyStepDetailsPropertiesArgs extends io.pulumi.r
     	      this.overwriteExisting = defaults.overwriteExisting;
         }
 
-        public Builder destinationFileLocation(@Nullable Input<WorkflowInputFileLocationArgs> destinationFileLocation) {
+        public Builder destinationFileLocation(@Nullable Output<WorkflowInputFileLocationArgs> destinationFileLocation) {
             this.destinationFileLocation = destinationFileLocation;
             return this;
         }
 
         public Builder destinationFileLocation(@Nullable WorkflowInputFileLocationArgs destinationFileLocation) {
-            this.destinationFileLocation = Input.ofNullable(destinationFileLocation);
+            this.destinationFileLocation = Output.ofNullable(destinationFileLocation);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder overwriteExisting(@Nullable Input<WorkflowStepCopyStepDetailsPropertiesOverwriteExisting> overwriteExisting) {
+        public Builder overwriteExisting(@Nullable Output<WorkflowStepCopyStepDetailsPropertiesOverwriteExisting> overwriteExisting) {
             this.overwriteExisting = overwriteExisting;
             return this;
         }
 
         public Builder overwriteExisting(@Nullable WorkflowStepCopyStepDetailsPropertiesOverwriteExisting overwriteExisting) {
-            this.overwriteExisting = Input.ofNullable(overwriteExisting);
+            this.overwriteExisting = Output.ofNullable(overwriteExisting);
             return this;
         }
         public WorkflowStepCopyStepDetailsPropertiesArgs build() {

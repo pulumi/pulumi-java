@@ -6,7 +6,7 @@ package io.pulumi.azurenative.botservice.inputs;
 import io.pulumi.azurenative.botservice.enums.MsaAppType;
 import io.pulumi.azurenative.botservice.enums.PublicNetworkAccess;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -29,10 +29,10 @@ public final class BotPropertiesArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="allSettings")
-      private final @Nullable Input<Map<String,String>> allSettings;
+      private final @Nullable Output<Map<String,String>> allSettings;
 
-    public Input<Map<String,String>> getAllSettings() {
-        return this.allSettings == null ? Input.empty() : this.allSettings;
+    public Output<Map<String,String>> getAllSettings() {
+        return this.allSettings == null ? Output.empty() : this.allSettings;
     }
 
     /**
@@ -40,10 +40,10 @@ public final class BotPropertiesArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="appPasswordHint")
-      private final @Nullable Input<String> appPasswordHint;
+      private final @Nullable Output<String> appPasswordHint;
 
-    public Input<String> getAppPasswordHint() {
-        return this.appPasswordHint == null ? Input.empty() : this.appPasswordHint;
+    public Output<String> getAppPasswordHint() {
+        return this.appPasswordHint == null ? Output.empty() : this.appPasswordHint;
     }
 
     /**
@@ -51,10 +51,10 @@ public final class BotPropertiesArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="cmekKeyVaultUrl")
-      private final @Nullable Input<String> cmekKeyVaultUrl;
+      private final @Nullable Output<String> cmekKeyVaultUrl;
 
-    public Input<String> getCmekKeyVaultUrl() {
-        return this.cmekKeyVaultUrl == null ? Input.empty() : this.cmekKeyVaultUrl;
+    public Output<String> getCmekKeyVaultUrl() {
+        return this.cmekKeyVaultUrl == null ? Output.empty() : this.cmekKeyVaultUrl;
     }
 
     /**
@@ -62,10 +62,10 @@ public final class BotPropertiesArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -73,10 +73,10 @@ public final class BotPropertiesArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="developerAppInsightKey")
-      private final @Nullable Input<String> developerAppInsightKey;
+      private final @Nullable Output<String> developerAppInsightKey;
 
-    public Input<String> getDeveloperAppInsightKey() {
-        return this.developerAppInsightKey == null ? Input.empty() : this.developerAppInsightKey;
+    public Output<String> getDeveloperAppInsightKey() {
+        return this.developerAppInsightKey == null ? Output.empty() : this.developerAppInsightKey;
     }
 
     /**
@@ -84,10 +84,10 @@ public final class BotPropertiesArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="developerAppInsightsApiKey")
-      private final @Nullable Input<String> developerAppInsightsApiKey;
+      private final @Nullable Output<String> developerAppInsightsApiKey;
 
-    public Input<String> getDeveloperAppInsightsApiKey() {
-        return this.developerAppInsightsApiKey == null ? Input.empty() : this.developerAppInsightsApiKey;
+    public Output<String> getDeveloperAppInsightsApiKey() {
+        return this.developerAppInsightsApiKey == null ? Output.empty() : this.developerAppInsightsApiKey;
     }
 
     /**
@@ -95,10 +95,10 @@ public final class BotPropertiesArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="developerAppInsightsApplicationId")
-      private final @Nullable Input<String> developerAppInsightsApplicationId;
+      private final @Nullable Output<String> developerAppInsightsApplicationId;
 
-    public Input<String> getDeveloperAppInsightsApplicationId() {
-        return this.developerAppInsightsApplicationId == null ? Input.empty() : this.developerAppInsightsApplicationId;
+    public Output<String> getDeveloperAppInsightsApplicationId() {
+        return this.developerAppInsightsApplicationId == null ? Output.empty() : this.developerAppInsightsApplicationId;
     }
 
     /**
@@ -106,10 +106,10 @@ public final class BotPropertiesArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="disableLocalAuth")
-      private final @Nullable Input<Boolean> disableLocalAuth;
+      private final @Nullable Output<Boolean> disableLocalAuth;
 
-    public Input<Boolean> getDisableLocalAuth() {
-        return this.disableLocalAuth == null ? Input.empty() : this.disableLocalAuth;
+    public Output<Boolean> getDisableLocalAuth() {
+        return this.disableLocalAuth == null ? Output.empty() : this.disableLocalAuth;
     }
 
     /**
@@ -117,9 +117,9 @@ public final class BotPropertiesArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName", required=true)
-      private final Input<String> displayName;
+      private final Output<String> displayName;
 
-    public Input<String> getDisplayName() {
+    public Output<String> getDisplayName() {
         return this.displayName;
     }
 
@@ -128,9 +128,9 @@ public final class BotPropertiesArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="endpoint", required=true)
-      private final Input<String> endpoint;
+      private final Output<String> endpoint;
 
-    public Input<String> getEndpoint() {
+    public Output<String> getEndpoint() {
         return this.endpoint;
     }
 
@@ -139,10 +139,10 @@ public final class BotPropertiesArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="iconUrl")
-      private final @Nullable Input<String> iconUrl;
+      private final @Nullable Output<String> iconUrl;
 
-    public Input<String> getIconUrl() {
-        return this.iconUrl == null ? Input.empty() : this.iconUrl;
+    public Output<String> getIconUrl() {
+        return this.iconUrl == null ? Output.empty() : this.iconUrl;
     }
 
     /**
@@ -150,10 +150,10 @@ public final class BotPropertiesArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="isCmekEnabled")
-      private final @Nullable Input<Boolean> isCmekEnabled;
+      private final @Nullable Output<Boolean> isCmekEnabled;
 
-    public Input<Boolean> getIsCmekEnabled() {
-        return this.isCmekEnabled == null ? Input.empty() : this.isCmekEnabled;
+    public Output<Boolean> getIsCmekEnabled() {
+        return this.isCmekEnabled == null ? Output.empty() : this.isCmekEnabled;
     }
 
     /**
@@ -161,10 +161,10 @@ public final class BotPropertiesArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="isStreamingSupported")
-      private final @Nullable Input<Boolean> isStreamingSupported;
+      private final @Nullable Output<Boolean> isStreamingSupported;
 
-    public Input<Boolean> getIsStreamingSupported() {
-        return this.isStreamingSupported == null ? Input.empty() : this.isStreamingSupported;
+    public Output<Boolean> getIsStreamingSupported() {
+        return this.isStreamingSupported == null ? Output.empty() : this.isStreamingSupported;
     }
 
     /**
@@ -172,10 +172,10 @@ public final class BotPropertiesArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="luisAppIds")
-      private final @Nullable Input<List<String>> luisAppIds;
+      private final @Nullable Output<List<String>> luisAppIds;
 
-    public Input<List<String>> getLuisAppIds() {
-        return this.luisAppIds == null ? Input.empty() : this.luisAppIds;
+    public Output<List<String>> getLuisAppIds() {
+        return this.luisAppIds == null ? Output.empty() : this.luisAppIds;
     }
 
     /**
@@ -183,10 +183,10 @@ public final class BotPropertiesArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="luisKey")
-      private final @Nullable Input<String> luisKey;
+      private final @Nullable Output<String> luisKey;
 
-    public Input<String> getLuisKey() {
-        return this.luisKey == null ? Input.empty() : this.luisKey;
+    public Output<String> getLuisKey() {
+        return this.luisKey == null ? Output.empty() : this.luisKey;
     }
 
     /**
@@ -194,10 +194,10 @@ public final class BotPropertiesArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="manifestUrl")
-      private final @Nullable Input<String> manifestUrl;
+      private final @Nullable Output<String> manifestUrl;
 
-    public Input<String> getManifestUrl() {
-        return this.manifestUrl == null ? Input.empty() : this.manifestUrl;
+    public Output<String> getManifestUrl() {
+        return this.manifestUrl == null ? Output.empty() : this.manifestUrl;
     }
 
     /**
@@ -205,9 +205,9 @@ public final class BotPropertiesArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="msaAppId", required=true)
-      private final Input<String> msaAppId;
+      private final Output<String> msaAppId;
 
-    public Input<String> getMsaAppId() {
+    public Output<String> getMsaAppId() {
         return this.msaAppId;
     }
 
@@ -216,10 +216,10 @@ public final class BotPropertiesArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="msaAppMSIResourceId")
-      private final @Nullable Input<String> msaAppMSIResourceId;
+      private final @Nullable Output<String> msaAppMSIResourceId;
 
-    public Input<String> getMsaAppMSIResourceId() {
-        return this.msaAppMSIResourceId == null ? Input.empty() : this.msaAppMSIResourceId;
+    public Output<String> getMsaAppMSIResourceId() {
+        return this.msaAppMSIResourceId == null ? Output.empty() : this.msaAppMSIResourceId;
     }
 
     /**
@@ -227,10 +227,10 @@ public final class BotPropertiesArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="msaAppTenantId")
-      private final @Nullable Input<String> msaAppTenantId;
+      private final @Nullable Output<String> msaAppTenantId;
 
-    public Input<String> getMsaAppTenantId() {
-        return this.msaAppTenantId == null ? Input.empty() : this.msaAppTenantId;
+    public Output<String> getMsaAppTenantId() {
+        return this.msaAppTenantId == null ? Output.empty() : this.msaAppTenantId;
     }
 
     /**
@@ -238,10 +238,10 @@ public final class BotPropertiesArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="msaAppType")
-      private final @Nullable Input<Either<String,MsaAppType>> msaAppType;
+      private final @Nullable Output<Either<String,MsaAppType>> msaAppType;
 
-    public Input<Either<String,MsaAppType>> getMsaAppType() {
-        return this.msaAppType == null ? Input.empty() : this.msaAppType;
+    public Output<Either<String,MsaAppType>> getMsaAppType() {
+        return this.msaAppType == null ? Output.empty() : this.msaAppType;
     }
 
     /**
@@ -249,10 +249,10 @@ public final class BotPropertiesArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="openWithHint")
-      private final @Nullable Input<String> openWithHint;
+      private final @Nullable Output<String> openWithHint;
 
-    public Input<String> getOpenWithHint() {
-        return this.openWithHint == null ? Input.empty() : this.openWithHint;
+    public Output<String> getOpenWithHint() {
+        return this.openWithHint == null ? Output.empty() : this.openWithHint;
     }
 
     /**
@@ -260,10 +260,10 @@ public final class BotPropertiesArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="parameters")
-      private final @Nullable Input<Map<String,String>> parameters;
+      private final @Nullable Output<Map<String,String>> parameters;
 
-    public Input<Map<String,String>> getParameters() {
-        return this.parameters == null ? Input.empty() : this.parameters;
+    public Output<Map<String,String>> getParameters() {
+        return this.parameters == null ? Output.empty() : this.parameters;
     }
 
     /**
@@ -271,10 +271,10 @@ public final class BotPropertiesArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="publicNetworkAccess")
-      private final @Nullable Input<Either<String,PublicNetworkAccess>> publicNetworkAccess;
+      private final @Nullable Output<Either<String,PublicNetworkAccess>> publicNetworkAccess;
 
-    public Input<Either<String,PublicNetworkAccess>> getPublicNetworkAccess() {
-        return this.publicNetworkAccess == null ? Input.empty() : this.publicNetworkAccess;
+    public Output<Either<String,PublicNetworkAccess>> getPublicNetworkAccess() {
+        return this.publicNetworkAccess == null ? Output.empty() : this.publicNetworkAccess;
     }
 
     /**
@@ -282,10 +282,10 @@ public final class BotPropertiesArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="publishingCredentials")
-      private final @Nullable Input<String> publishingCredentials;
+      private final @Nullable Output<String> publishingCredentials;
 
-    public Input<String> getPublishingCredentials() {
-        return this.publishingCredentials == null ? Input.empty() : this.publishingCredentials;
+    public Output<String> getPublishingCredentials() {
+        return this.publishingCredentials == null ? Output.empty() : this.publishingCredentials;
     }
 
     /**
@@ -293,10 +293,10 @@ public final class BotPropertiesArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="schemaTransformationVersion")
-      private final @Nullable Input<String> schemaTransformationVersion;
+      private final @Nullable Output<String> schemaTransformationVersion;
 
-    public Input<String> getSchemaTransformationVersion() {
-        return this.schemaTransformationVersion == null ? Input.empty() : this.schemaTransformationVersion;
+    public Output<String> getSchemaTransformationVersion() {
+        return this.schemaTransformationVersion == null ? Output.empty() : this.schemaTransformationVersion;
     }
 
     /**
@@ -304,39 +304,39 @@ public final class BotPropertiesArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="storageResourceId")
-      private final @Nullable Input<String> storageResourceId;
+      private final @Nullable Output<String> storageResourceId;
 
-    public Input<String> getStorageResourceId() {
-        return this.storageResourceId == null ? Input.empty() : this.storageResourceId;
+    public Output<String> getStorageResourceId() {
+        return this.storageResourceId == null ? Output.empty() : this.storageResourceId;
     }
 
     public BotPropertiesArgs(
-        @Nullable Input<Map<String,String>> allSettings,
-        @Nullable Input<String> appPasswordHint,
-        @Nullable Input<String> cmekKeyVaultUrl,
-        @Nullable Input<String> description,
-        @Nullable Input<String> developerAppInsightKey,
-        @Nullable Input<String> developerAppInsightsApiKey,
-        @Nullable Input<String> developerAppInsightsApplicationId,
-        @Nullable Input<Boolean> disableLocalAuth,
-        Input<String> displayName,
-        Input<String> endpoint,
-        @Nullable Input<String> iconUrl,
-        @Nullable Input<Boolean> isCmekEnabled,
-        @Nullable Input<Boolean> isStreamingSupported,
-        @Nullable Input<List<String>> luisAppIds,
-        @Nullable Input<String> luisKey,
-        @Nullable Input<String> manifestUrl,
-        Input<String> msaAppId,
-        @Nullable Input<String> msaAppMSIResourceId,
-        @Nullable Input<String> msaAppTenantId,
-        @Nullable Input<Either<String,MsaAppType>> msaAppType,
-        @Nullable Input<String> openWithHint,
-        @Nullable Input<Map<String,String>> parameters,
-        @Nullable Input<Either<String,PublicNetworkAccess>> publicNetworkAccess,
-        @Nullable Input<String> publishingCredentials,
-        @Nullable Input<String> schemaTransformationVersion,
-        @Nullable Input<String> storageResourceId) {
+        @Nullable Output<Map<String,String>> allSettings,
+        @Nullable Output<String> appPasswordHint,
+        @Nullable Output<String> cmekKeyVaultUrl,
+        @Nullable Output<String> description,
+        @Nullable Output<String> developerAppInsightKey,
+        @Nullable Output<String> developerAppInsightsApiKey,
+        @Nullable Output<String> developerAppInsightsApplicationId,
+        @Nullable Output<Boolean> disableLocalAuth,
+        Output<String> displayName,
+        Output<String> endpoint,
+        @Nullable Output<String> iconUrl,
+        @Nullable Output<Boolean> isCmekEnabled,
+        @Nullable Output<Boolean> isStreamingSupported,
+        @Nullable Output<List<String>> luisAppIds,
+        @Nullable Output<String> luisKey,
+        @Nullable Output<String> manifestUrl,
+        Output<String> msaAppId,
+        @Nullable Output<String> msaAppMSIResourceId,
+        @Nullable Output<String> msaAppTenantId,
+        @Nullable Output<Either<String,MsaAppType>> msaAppType,
+        @Nullable Output<String> openWithHint,
+        @Nullable Output<Map<String,String>> parameters,
+        @Nullable Output<Either<String,PublicNetworkAccess>> publicNetworkAccess,
+        @Nullable Output<String> publishingCredentials,
+        @Nullable Output<String> schemaTransformationVersion,
+        @Nullable Output<String> storageResourceId) {
         this.allSettings = allSettings;
         this.appPasswordHint = appPasswordHint;
         this.cmekKeyVaultUrl = cmekKeyVaultUrl;
@@ -349,7 +349,7 @@ public final class BotPropertiesArgs extends io.pulumi.resources.ResourceArgs {
         this.endpoint = Objects.requireNonNull(endpoint, "expected parameter 'endpoint' to be non-null");
         this.iconUrl = iconUrl;
         this.isCmekEnabled = isCmekEnabled;
-        this.isStreamingSupported = isStreamingSupported == null ? Input.ofNullable(false) : isStreamingSupported;
+        this.isStreamingSupported = isStreamingSupported == null ? Output.ofNullable(false) : isStreamingSupported;
         this.luisAppIds = luisAppIds;
         this.luisKey = luisKey;
         this.manifestUrl = manifestUrl;
@@ -359,39 +359,39 @@ public final class BotPropertiesArgs extends io.pulumi.resources.ResourceArgs {
         this.msaAppType = msaAppType;
         this.openWithHint = openWithHint;
         this.parameters = parameters;
-        this.publicNetworkAccess = publicNetworkAccess == null ? Input.ofLeft("Enabled") : publicNetworkAccess;
+        this.publicNetworkAccess = publicNetworkAccess == null ? Output.ofLeft("Enabled") : publicNetworkAccess;
         this.publishingCredentials = publishingCredentials;
         this.schemaTransformationVersion = schemaTransformationVersion;
         this.storageResourceId = storageResourceId;
     }
 
     private BotPropertiesArgs() {
-        this.allSettings = Input.empty();
-        this.appPasswordHint = Input.empty();
-        this.cmekKeyVaultUrl = Input.empty();
-        this.description = Input.empty();
-        this.developerAppInsightKey = Input.empty();
-        this.developerAppInsightsApiKey = Input.empty();
-        this.developerAppInsightsApplicationId = Input.empty();
-        this.disableLocalAuth = Input.empty();
-        this.displayName = Input.empty();
-        this.endpoint = Input.empty();
-        this.iconUrl = Input.empty();
-        this.isCmekEnabled = Input.empty();
-        this.isStreamingSupported = Input.empty();
-        this.luisAppIds = Input.empty();
-        this.luisKey = Input.empty();
-        this.manifestUrl = Input.empty();
-        this.msaAppId = Input.empty();
-        this.msaAppMSIResourceId = Input.empty();
-        this.msaAppTenantId = Input.empty();
-        this.msaAppType = Input.empty();
-        this.openWithHint = Input.empty();
-        this.parameters = Input.empty();
-        this.publicNetworkAccess = Input.empty();
-        this.publishingCredentials = Input.empty();
-        this.schemaTransformationVersion = Input.empty();
-        this.storageResourceId = Input.empty();
+        this.allSettings = Output.empty();
+        this.appPasswordHint = Output.empty();
+        this.cmekKeyVaultUrl = Output.empty();
+        this.description = Output.empty();
+        this.developerAppInsightKey = Output.empty();
+        this.developerAppInsightsApiKey = Output.empty();
+        this.developerAppInsightsApplicationId = Output.empty();
+        this.disableLocalAuth = Output.empty();
+        this.displayName = Output.empty();
+        this.endpoint = Output.empty();
+        this.iconUrl = Output.empty();
+        this.isCmekEnabled = Output.empty();
+        this.isStreamingSupported = Output.empty();
+        this.luisAppIds = Output.empty();
+        this.luisKey = Output.empty();
+        this.manifestUrl = Output.empty();
+        this.msaAppId = Output.empty();
+        this.msaAppMSIResourceId = Output.empty();
+        this.msaAppTenantId = Output.empty();
+        this.msaAppType = Output.empty();
+        this.openWithHint = Output.empty();
+        this.parameters = Output.empty();
+        this.publicNetworkAccess = Output.empty();
+        this.publishingCredentials = Output.empty();
+        this.schemaTransformationVersion = Output.empty();
+        this.storageResourceId = Output.empty();
     }
 
     public static Builder builder() {
@@ -403,32 +403,32 @@ public final class BotPropertiesArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Map<String,String>> allSettings;
-        private @Nullable Input<String> appPasswordHint;
-        private @Nullable Input<String> cmekKeyVaultUrl;
-        private @Nullable Input<String> description;
-        private @Nullable Input<String> developerAppInsightKey;
-        private @Nullable Input<String> developerAppInsightsApiKey;
-        private @Nullable Input<String> developerAppInsightsApplicationId;
-        private @Nullable Input<Boolean> disableLocalAuth;
-        private Input<String> displayName;
-        private Input<String> endpoint;
-        private @Nullable Input<String> iconUrl;
-        private @Nullable Input<Boolean> isCmekEnabled;
-        private @Nullable Input<Boolean> isStreamingSupported;
-        private @Nullable Input<List<String>> luisAppIds;
-        private @Nullable Input<String> luisKey;
-        private @Nullable Input<String> manifestUrl;
-        private Input<String> msaAppId;
-        private @Nullable Input<String> msaAppMSIResourceId;
-        private @Nullable Input<String> msaAppTenantId;
-        private @Nullable Input<Either<String,MsaAppType>> msaAppType;
-        private @Nullable Input<String> openWithHint;
-        private @Nullable Input<Map<String,String>> parameters;
-        private @Nullable Input<Either<String,PublicNetworkAccess>> publicNetworkAccess;
-        private @Nullable Input<String> publishingCredentials;
-        private @Nullable Input<String> schemaTransformationVersion;
-        private @Nullable Input<String> storageResourceId;
+        private @Nullable Output<Map<String,String>> allSettings;
+        private @Nullable Output<String> appPasswordHint;
+        private @Nullable Output<String> cmekKeyVaultUrl;
+        private @Nullable Output<String> description;
+        private @Nullable Output<String> developerAppInsightKey;
+        private @Nullable Output<String> developerAppInsightsApiKey;
+        private @Nullable Output<String> developerAppInsightsApplicationId;
+        private @Nullable Output<Boolean> disableLocalAuth;
+        private Output<String> displayName;
+        private Output<String> endpoint;
+        private @Nullable Output<String> iconUrl;
+        private @Nullable Output<Boolean> isCmekEnabled;
+        private @Nullable Output<Boolean> isStreamingSupported;
+        private @Nullable Output<List<String>> luisAppIds;
+        private @Nullable Output<String> luisKey;
+        private @Nullable Output<String> manifestUrl;
+        private Output<String> msaAppId;
+        private @Nullable Output<String> msaAppMSIResourceId;
+        private @Nullable Output<String> msaAppTenantId;
+        private @Nullable Output<Either<String,MsaAppType>> msaAppType;
+        private @Nullable Output<String> openWithHint;
+        private @Nullable Output<Map<String,String>> parameters;
+        private @Nullable Output<Either<String,PublicNetworkAccess>> publicNetworkAccess;
+        private @Nullable Output<String> publishingCredentials;
+        private @Nullable Output<String> schemaTransformationVersion;
+        private @Nullable Output<String> storageResourceId;
 
         public Builder() {
     	      // Empty
@@ -464,263 +464,263 @@ public final class BotPropertiesArgs extends io.pulumi.resources.ResourceArgs {
     	      this.storageResourceId = defaults.storageResourceId;
         }
 
-        public Builder allSettings(@Nullable Input<Map<String,String>> allSettings) {
+        public Builder allSettings(@Nullable Output<Map<String,String>> allSettings) {
             this.allSettings = allSettings;
             return this;
         }
 
         public Builder allSettings(@Nullable Map<String,String> allSettings) {
-            this.allSettings = Input.ofNullable(allSettings);
+            this.allSettings = Output.ofNullable(allSettings);
             return this;
         }
 
-        public Builder appPasswordHint(@Nullable Input<String> appPasswordHint) {
+        public Builder appPasswordHint(@Nullable Output<String> appPasswordHint) {
             this.appPasswordHint = appPasswordHint;
             return this;
         }
 
         public Builder appPasswordHint(@Nullable String appPasswordHint) {
-            this.appPasswordHint = Input.ofNullable(appPasswordHint);
+            this.appPasswordHint = Output.ofNullable(appPasswordHint);
             return this;
         }
 
-        public Builder cmekKeyVaultUrl(@Nullable Input<String> cmekKeyVaultUrl) {
+        public Builder cmekKeyVaultUrl(@Nullable Output<String> cmekKeyVaultUrl) {
             this.cmekKeyVaultUrl = cmekKeyVaultUrl;
             return this;
         }
 
         public Builder cmekKeyVaultUrl(@Nullable String cmekKeyVaultUrl) {
-            this.cmekKeyVaultUrl = Input.ofNullable(cmekKeyVaultUrl);
+            this.cmekKeyVaultUrl = Output.ofNullable(cmekKeyVaultUrl);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder developerAppInsightKey(@Nullable Input<String> developerAppInsightKey) {
+        public Builder developerAppInsightKey(@Nullable Output<String> developerAppInsightKey) {
             this.developerAppInsightKey = developerAppInsightKey;
             return this;
         }
 
         public Builder developerAppInsightKey(@Nullable String developerAppInsightKey) {
-            this.developerAppInsightKey = Input.ofNullable(developerAppInsightKey);
+            this.developerAppInsightKey = Output.ofNullable(developerAppInsightKey);
             return this;
         }
 
-        public Builder developerAppInsightsApiKey(@Nullable Input<String> developerAppInsightsApiKey) {
+        public Builder developerAppInsightsApiKey(@Nullable Output<String> developerAppInsightsApiKey) {
             this.developerAppInsightsApiKey = developerAppInsightsApiKey;
             return this;
         }
 
         public Builder developerAppInsightsApiKey(@Nullable String developerAppInsightsApiKey) {
-            this.developerAppInsightsApiKey = Input.ofNullable(developerAppInsightsApiKey);
+            this.developerAppInsightsApiKey = Output.ofNullable(developerAppInsightsApiKey);
             return this;
         }
 
-        public Builder developerAppInsightsApplicationId(@Nullable Input<String> developerAppInsightsApplicationId) {
+        public Builder developerAppInsightsApplicationId(@Nullable Output<String> developerAppInsightsApplicationId) {
             this.developerAppInsightsApplicationId = developerAppInsightsApplicationId;
             return this;
         }
 
         public Builder developerAppInsightsApplicationId(@Nullable String developerAppInsightsApplicationId) {
-            this.developerAppInsightsApplicationId = Input.ofNullable(developerAppInsightsApplicationId);
+            this.developerAppInsightsApplicationId = Output.ofNullable(developerAppInsightsApplicationId);
             return this;
         }
 
-        public Builder disableLocalAuth(@Nullable Input<Boolean> disableLocalAuth) {
+        public Builder disableLocalAuth(@Nullable Output<Boolean> disableLocalAuth) {
             this.disableLocalAuth = disableLocalAuth;
             return this;
         }
 
         public Builder disableLocalAuth(@Nullable Boolean disableLocalAuth) {
-            this.disableLocalAuth = Input.ofNullable(disableLocalAuth);
+            this.disableLocalAuth = Output.ofNullable(disableLocalAuth);
             return this;
         }
 
-        public Builder displayName(Input<String> displayName) {
+        public Builder displayName(Output<String> displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
         public Builder displayName(String displayName) {
-            this.displayName = Input.of(Objects.requireNonNull(displayName));
+            this.displayName = Output.of(Objects.requireNonNull(displayName));
             return this;
         }
 
-        public Builder endpoint(Input<String> endpoint) {
+        public Builder endpoint(Output<String> endpoint) {
             this.endpoint = Objects.requireNonNull(endpoint);
             return this;
         }
 
         public Builder endpoint(String endpoint) {
-            this.endpoint = Input.of(Objects.requireNonNull(endpoint));
+            this.endpoint = Output.of(Objects.requireNonNull(endpoint));
             return this;
         }
 
-        public Builder iconUrl(@Nullable Input<String> iconUrl) {
+        public Builder iconUrl(@Nullable Output<String> iconUrl) {
             this.iconUrl = iconUrl;
             return this;
         }
 
         public Builder iconUrl(@Nullable String iconUrl) {
-            this.iconUrl = Input.ofNullable(iconUrl);
+            this.iconUrl = Output.ofNullable(iconUrl);
             return this;
         }
 
-        public Builder isCmekEnabled(@Nullable Input<Boolean> isCmekEnabled) {
+        public Builder isCmekEnabled(@Nullable Output<Boolean> isCmekEnabled) {
             this.isCmekEnabled = isCmekEnabled;
             return this;
         }
 
         public Builder isCmekEnabled(@Nullable Boolean isCmekEnabled) {
-            this.isCmekEnabled = Input.ofNullable(isCmekEnabled);
+            this.isCmekEnabled = Output.ofNullable(isCmekEnabled);
             return this;
         }
 
-        public Builder isStreamingSupported(@Nullable Input<Boolean> isStreamingSupported) {
+        public Builder isStreamingSupported(@Nullable Output<Boolean> isStreamingSupported) {
             this.isStreamingSupported = isStreamingSupported;
             return this;
         }
 
         public Builder isStreamingSupported(@Nullable Boolean isStreamingSupported) {
-            this.isStreamingSupported = Input.ofNullable(isStreamingSupported);
+            this.isStreamingSupported = Output.ofNullable(isStreamingSupported);
             return this;
         }
 
-        public Builder luisAppIds(@Nullable Input<List<String>> luisAppIds) {
+        public Builder luisAppIds(@Nullable Output<List<String>> luisAppIds) {
             this.luisAppIds = luisAppIds;
             return this;
         }
 
         public Builder luisAppIds(@Nullable List<String> luisAppIds) {
-            this.luisAppIds = Input.ofNullable(luisAppIds);
+            this.luisAppIds = Output.ofNullable(luisAppIds);
             return this;
         }
 
-        public Builder luisKey(@Nullable Input<String> luisKey) {
+        public Builder luisKey(@Nullable Output<String> luisKey) {
             this.luisKey = luisKey;
             return this;
         }
 
         public Builder luisKey(@Nullable String luisKey) {
-            this.luisKey = Input.ofNullable(luisKey);
+            this.luisKey = Output.ofNullable(luisKey);
             return this;
         }
 
-        public Builder manifestUrl(@Nullable Input<String> manifestUrl) {
+        public Builder manifestUrl(@Nullable Output<String> manifestUrl) {
             this.manifestUrl = manifestUrl;
             return this;
         }
 
         public Builder manifestUrl(@Nullable String manifestUrl) {
-            this.manifestUrl = Input.ofNullable(manifestUrl);
+            this.manifestUrl = Output.ofNullable(manifestUrl);
             return this;
         }
 
-        public Builder msaAppId(Input<String> msaAppId) {
+        public Builder msaAppId(Output<String> msaAppId) {
             this.msaAppId = Objects.requireNonNull(msaAppId);
             return this;
         }
 
         public Builder msaAppId(String msaAppId) {
-            this.msaAppId = Input.of(Objects.requireNonNull(msaAppId));
+            this.msaAppId = Output.of(Objects.requireNonNull(msaAppId));
             return this;
         }
 
-        public Builder msaAppMSIResourceId(@Nullable Input<String> msaAppMSIResourceId) {
+        public Builder msaAppMSIResourceId(@Nullable Output<String> msaAppMSIResourceId) {
             this.msaAppMSIResourceId = msaAppMSIResourceId;
             return this;
         }
 
         public Builder msaAppMSIResourceId(@Nullable String msaAppMSIResourceId) {
-            this.msaAppMSIResourceId = Input.ofNullable(msaAppMSIResourceId);
+            this.msaAppMSIResourceId = Output.ofNullable(msaAppMSIResourceId);
             return this;
         }
 
-        public Builder msaAppTenantId(@Nullable Input<String> msaAppTenantId) {
+        public Builder msaAppTenantId(@Nullable Output<String> msaAppTenantId) {
             this.msaAppTenantId = msaAppTenantId;
             return this;
         }
 
         public Builder msaAppTenantId(@Nullable String msaAppTenantId) {
-            this.msaAppTenantId = Input.ofNullable(msaAppTenantId);
+            this.msaAppTenantId = Output.ofNullable(msaAppTenantId);
             return this;
         }
 
-        public Builder msaAppType(@Nullable Input<Either<String,MsaAppType>> msaAppType) {
+        public Builder msaAppType(@Nullable Output<Either<String,MsaAppType>> msaAppType) {
             this.msaAppType = msaAppType;
             return this;
         }
 
         public Builder msaAppType(@Nullable Either<String,MsaAppType> msaAppType) {
-            this.msaAppType = Input.ofNullable(msaAppType);
+            this.msaAppType = Output.ofNullable(msaAppType);
             return this;
         }
 
-        public Builder openWithHint(@Nullable Input<String> openWithHint) {
+        public Builder openWithHint(@Nullable Output<String> openWithHint) {
             this.openWithHint = openWithHint;
             return this;
         }
 
         public Builder openWithHint(@Nullable String openWithHint) {
-            this.openWithHint = Input.ofNullable(openWithHint);
+            this.openWithHint = Output.ofNullable(openWithHint);
             return this;
         }
 
-        public Builder parameters(@Nullable Input<Map<String,String>> parameters) {
+        public Builder parameters(@Nullable Output<Map<String,String>> parameters) {
             this.parameters = parameters;
             return this;
         }
 
         public Builder parameters(@Nullable Map<String,String> parameters) {
-            this.parameters = Input.ofNullable(parameters);
+            this.parameters = Output.ofNullable(parameters);
             return this;
         }
 
-        public Builder publicNetworkAccess(@Nullable Input<Either<String,PublicNetworkAccess>> publicNetworkAccess) {
+        public Builder publicNetworkAccess(@Nullable Output<Either<String,PublicNetworkAccess>> publicNetworkAccess) {
             this.publicNetworkAccess = publicNetworkAccess;
             return this;
         }
 
         public Builder publicNetworkAccess(@Nullable Either<String,PublicNetworkAccess> publicNetworkAccess) {
-            this.publicNetworkAccess = Input.ofNullable(publicNetworkAccess);
+            this.publicNetworkAccess = Output.ofNullable(publicNetworkAccess);
             return this;
         }
 
-        public Builder publishingCredentials(@Nullable Input<String> publishingCredentials) {
+        public Builder publishingCredentials(@Nullable Output<String> publishingCredentials) {
             this.publishingCredentials = publishingCredentials;
             return this;
         }
 
         public Builder publishingCredentials(@Nullable String publishingCredentials) {
-            this.publishingCredentials = Input.ofNullable(publishingCredentials);
+            this.publishingCredentials = Output.ofNullable(publishingCredentials);
             return this;
         }
 
-        public Builder schemaTransformationVersion(@Nullable Input<String> schemaTransformationVersion) {
+        public Builder schemaTransformationVersion(@Nullable Output<String> schemaTransformationVersion) {
             this.schemaTransformationVersion = schemaTransformationVersion;
             return this;
         }
 
         public Builder schemaTransformationVersion(@Nullable String schemaTransformationVersion) {
-            this.schemaTransformationVersion = Input.ofNullable(schemaTransformationVersion);
+            this.schemaTransformationVersion = Output.ofNullable(schemaTransformationVersion);
             return this;
         }
 
-        public Builder storageResourceId(@Nullable Input<String> storageResourceId) {
+        public Builder storageResourceId(@Nullable Output<String> storageResourceId) {
             this.storageResourceId = storageResourceId;
             return this;
         }
 
         public Builder storageResourceId(@Nullable String storageResourceId) {
-            this.storageResourceId = Input.ofNullable(storageResourceId);
+            this.storageResourceId = Output.ofNullable(storageResourceId);
             return this;
         }
         public BotPropertiesArgs build() {

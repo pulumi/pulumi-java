@@ -5,7 +5,6 @@ import com.google.common.base.Suppliers;
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.ImmutableMap;
 import com.google.common.reflect.ClassPath;
-import io.pulumi.core.Input;
 import io.pulumi.core.Tuples;
 import io.pulumi.core.Tuples.Tuple2;
 import io.pulumi.core.annotations.ResourceType;
@@ -83,7 +82,6 @@ public class ResourcePackages {
                                     && !c.getPackageName().startsWith("org.checkerframework.")
                                     && !c.getPackageName().equals("net.bytebuddy")
                                     && !c.getPackageName().startsWith("net.bytebuddy.")
-                                    && !c.getPackageName().startsWith(Input.class.getPackageName())
                                     && !c.getPackageName().startsWith(Resource.class.getPackageName())
                                     && !c.getPackageName().startsWith(EngineGrpc.class.getPackageName())
                     )

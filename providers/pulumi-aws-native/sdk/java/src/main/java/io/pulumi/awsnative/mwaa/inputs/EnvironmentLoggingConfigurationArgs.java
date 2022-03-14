@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.mwaa.inputs;
 
 import io.pulumi.awsnative.mwaa.inputs.EnvironmentModuleLoggingConfigurationArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,46 +19,46 @@ public final class EnvironmentLoggingConfigurationArgs extends io.pulumi.resourc
     public static final EnvironmentLoggingConfigurationArgs Empty = new EnvironmentLoggingConfigurationArgs();
 
     @InputImport(name="dagProcessingLogs")
-      private final @Nullable Input<EnvironmentModuleLoggingConfigurationArgs> dagProcessingLogs;
+      private final @Nullable Output<EnvironmentModuleLoggingConfigurationArgs> dagProcessingLogs;
 
-    public Input<EnvironmentModuleLoggingConfigurationArgs> getDagProcessingLogs() {
-        return this.dagProcessingLogs == null ? Input.empty() : this.dagProcessingLogs;
+    public Output<EnvironmentModuleLoggingConfigurationArgs> getDagProcessingLogs() {
+        return this.dagProcessingLogs == null ? Output.empty() : this.dagProcessingLogs;
     }
 
     @InputImport(name="schedulerLogs")
-      private final @Nullable Input<EnvironmentModuleLoggingConfigurationArgs> schedulerLogs;
+      private final @Nullable Output<EnvironmentModuleLoggingConfigurationArgs> schedulerLogs;
 
-    public Input<EnvironmentModuleLoggingConfigurationArgs> getSchedulerLogs() {
-        return this.schedulerLogs == null ? Input.empty() : this.schedulerLogs;
+    public Output<EnvironmentModuleLoggingConfigurationArgs> getSchedulerLogs() {
+        return this.schedulerLogs == null ? Output.empty() : this.schedulerLogs;
     }
 
     @InputImport(name="taskLogs")
-      private final @Nullable Input<EnvironmentModuleLoggingConfigurationArgs> taskLogs;
+      private final @Nullable Output<EnvironmentModuleLoggingConfigurationArgs> taskLogs;
 
-    public Input<EnvironmentModuleLoggingConfigurationArgs> getTaskLogs() {
-        return this.taskLogs == null ? Input.empty() : this.taskLogs;
+    public Output<EnvironmentModuleLoggingConfigurationArgs> getTaskLogs() {
+        return this.taskLogs == null ? Output.empty() : this.taskLogs;
     }
 
     @InputImport(name="webserverLogs")
-      private final @Nullable Input<EnvironmentModuleLoggingConfigurationArgs> webserverLogs;
+      private final @Nullable Output<EnvironmentModuleLoggingConfigurationArgs> webserverLogs;
 
-    public Input<EnvironmentModuleLoggingConfigurationArgs> getWebserverLogs() {
-        return this.webserverLogs == null ? Input.empty() : this.webserverLogs;
+    public Output<EnvironmentModuleLoggingConfigurationArgs> getWebserverLogs() {
+        return this.webserverLogs == null ? Output.empty() : this.webserverLogs;
     }
 
     @InputImport(name="workerLogs")
-      private final @Nullable Input<EnvironmentModuleLoggingConfigurationArgs> workerLogs;
+      private final @Nullable Output<EnvironmentModuleLoggingConfigurationArgs> workerLogs;
 
-    public Input<EnvironmentModuleLoggingConfigurationArgs> getWorkerLogs() {
-        return this.workerLogs == null ? Input.empty() : this.workerLogs;
+    public Output<EnvironmentModuleLoggingConfigurationArgs> getWorkerLogs() {
+        return this.workerLogs == null ? Output.empty() : this.workerLogs;
     }
 
     public EnvironmentLoggingConfigurationArgs(
-        @Nullable Input<EnvironmentModuleLoggingConfigurationArgs> dagProcessingLogs,
-        @Nullable Input<EnvironmentModuleLoggingConfigurationArgs> schedulerLogs,
-        @Nullable Input<EnvironmentModuleLoggingConfigurationArgs> taskLogs,
-        @Nullable Input<EnvironmentModuleLoggingConfigurationArgs> webserverLogs,
-        @Nullable Input<EnvironmentModuleLoggingConfigurationArgs> workerLogs) {
+        @Nullable Output<EnvironmentModuleLoggingConfigurationArgs> dagProcessingLogs,
+        @Nullable Output<EnvironmentModuleLoggingConfigurationArgs> schedulerLogs,
+        @Nullable Output<EnvironmentModuleLoggingConfigurationArgs> taskLogs,
+        @Nullable Output<EnvironmentModuleLoggingConfigurationArgs> webserverLogs,
+        @Nullable Output<EnvironmentModuleLoggingConfigurationArgs> workerLogs) {
         this.dagProcessingLogs = dagProcessingLogs;
         this.schedulerLogs = schedulerLogs;
         this.taskLogs = taskLogs;
@@ -67,11 +67,11 @@ public final class EnvironmentLoggingConfigurationArgs extends io.pulumi.resourc
     }
 
     private EnvironmentLoggingConfigurationArgs() {
-        this.dagProcessingLogs = Input.empty();
-        this.schedulerLogs = Input.empty();
-        this.taskLogs = Input.empty();
-        this.webserverLogs = Input.empty();
-        this.workerLogs = Input.empty();
+        this.dagProcessingLogs = Output.empty();
+        this.schedulerLogs = Output.empty();
+        this.taskLogs = Output.empty();
+        this.webserverLogs = Output.empty();
+        this.workerLogs = Output.empty();
     }
 
     public static Builder builder() {
@@ -83,11 +83,11 @@ public final class EnvironmentLoggingConfigurationArgs extends io.pulumi.resourc
     }
 
     public static final class Builder {
-        private @Nullable Input<EnvironmentModuleLoggingConfigurationArgs> dagProcessingLogs;
-        private @Nullable Input<EnvironmentModuleLoggingConfigurationArgs> schedulerLogs;
-        private @Nullable Input<EnvironmentModuleLoggingConfigurationArgs> taskLogs;
-        private @Nullable Input<EnvironmentModuleLoggingConfigurationArgs> webserverLogs;
-        private @Nullable Input<EnvironmentModuleLoggingConfigurationArgs> workerLogs;
+        private @Nullable Output<EnvironmentModuleLoggingConfigurationArgs> dagProcessingLogs;
+        private @Nullable Output<EnvironmentModuleLoggingConfigurationArgs> schedulerLogs;
+        private @Nullable Output<EnvironmentModuleLoggingConfigurationArgs> taskLogs;
+        private @Nullable Output<EnvironmentModuleLoggingConfigurationArgs> webserverLogs;
+        private @Nullable Output<EnvironmentModuleLoggingConfigurationArgs> workerLogs;
 
         public Builder() {
     	      // Empty
@@ -102,53 +102,53 @@ public final class EnvironmentLoggingConfigurationArgs extends io.pulumi.resourc
     	      this.workerLogs = defaults.workerLogs;
         }
 
-        public Builder dagProcessingLogs(@Nullable Input<EnvironmentModuleLoggingConfigurationArgs> dagProcessingLogs) {
+        public Builder dagProcessingLogs(@Nullable Output<EnvironmentModuleLoggingConfigurationArgs> dagProcessingLogs) {
             this.dagProcessingLogs = dagProcessingLogs;
             return this;
         }
 
         public Builder dagProcessingLogs(@Nullable EnvironmentModuleLoggingConfigurationArgs dagProcessingLogs) {
-            this.dagProcessingLogs = Input.ofNullable(dagProcessingLogs);
+            this.dagProcessingLogs = Output.ofNullable(dagProcessingLogs);
             return this;
         }
 
-        public Builder schedulerLogs(@Nullable Input<EnvironmentModuleLoggingConfigurationArgs> schedulerLogs) {
+        public Builder schedulerLogs(@Nullable Output<EnvironmentModuleLoggingConfigurationArgs> schedulerLogs) {
             this.schedulerLogs = schedulerLogs;
             return this;
         }
 
         public Builder schedulerLogs(@Nullable EnvironmentModuleLoggingConfigurationArgs schedulerLogs) {
-            this.schedulerLogs = Input.ofNullable(schedulerLogs);
+            this.schedulerLogs = Output.ofNullable(schedulerLogs);
             return this;
         }
 
-        public Builder taskLogs(@Nullable Input<EnvironmentModuleLoggingConfigurationArgs> taskLogs) {
+        public Builder taskLogs(@Nullable Output<EnvironmentModuleLoggingConfigurationArgs> taskLogs) {
             this.taskLogs = taskLogs;
             return this;
         }
 
         public Builder taskLogs(@Nullable EnvironmentModuleLoggingConfigurationArgs taskLogs) {
-            this.taskLogs = Input.ofNullable(taskLogs);
+            this.taskLogs = Output.ofNullable(taskLogs);
             return this;
         }
 
-        public Builder webserverLogs(@Nullable Input<EnvironmentModuleLoggingConfigurationArgs> webserverLogs) {
+        public Builder webserverLogs(@Nullable Output<EnvironmentModuleLoggingConfigurationArgs> webserverLogs) {
             this.webserverLogs = webserverLogs;
             return this;
         }
 
         public Builder webserverLogs(@Nullable EnvironmentModuleLoggingConfigurationArgs webserverLogs) {
-            this.webserverLogs = Input.ofNullable(webserverLogs);
+            this.webserverLogs = Output.ofNullable(webserverLogs);
             return this;
         }
 
-        public Builder workerLogs(@Nullable Input<EnvironmentModuleLoggingConfigurationArgs> workerLogs) {
+        public Builder workerLogs(@Nullable Output<EnvironmentModuleLoggingConfigurationArgs> workerLogs) {
             this.workerLogs = workerLogs;
             return this;
         }
 
         public Builder workerLogs(@Nullable EnvironmentModuleLoggingConfigurationArgs workerLogs) {
-            this.workerLogs = Input.ofNullable(workerLogs);
+            this.workerLogs = Output.ofNullable(workerLogs);
             return this;
         }
         public EnvironmentLoggingConfigurationArgs build() {

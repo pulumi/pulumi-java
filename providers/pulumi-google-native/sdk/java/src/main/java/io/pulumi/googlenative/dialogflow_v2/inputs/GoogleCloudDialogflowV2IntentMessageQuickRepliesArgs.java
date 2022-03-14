@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v2.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -24,10 +24,10 @@ public final class GoogleCloudDialogflowV2IntentMessageQuickRepliesArgs extends 
      * 
      */
     @InputImport(name="quickReplies")
-      private final @Nullable Input<List<String>> quickReplies;
+      private final @Nullable Output<List<String>> quickReplies;
 
-    public Input<List<String>> getQuickReplies() {
-        return this.quickReplies == null ? Input.empty() : this.quickReplies;
+    public Output<List<String>> getQuickReplies() {
+        return this.quickReplies == null ? Output.empty() : this.quickReplies;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class GoogleCloudDialogflowV2IntentMessageQuickRepliesArgs extends 
      * 
      */
     @InputImport(name="title")
-      private final @Nullable Input<String> title;
+      private final @Nullable Output<String> title;
 
-    public Input<String> getTitle() {
-        return this.title == null ? Input.empty() : this.title;
+    public Output<String> getTitle() {
+        return this.title == null ? Output.empty() : this.title;
     }
 
     public GoogleCloudDialogflowV2IntentMessageQuickRepliesArgs(
-        @Nullable Input<List<String>> quickReplies,
-        @Nullable Input<String> title) {
+        @Nullable Output<List<String>> quickReplies,
+        @Nullable Output<String> title) {
         this.quickReplies = quickReplies;
         this.title = title;
     }
 
     private GoogleCloudDialogflowV2IntentMessageQuickRepliesArgs() {
-        this.quickReplies = Input.empty();
-        this.title = Input.empty();
+        this.quickReplies = Output.empty();
+        this.title = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class GoogleCloudDialogflowV2IntentMessageQuickRepliesArgs extends 
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> quickReplies;
-        private @Nullable Input<String> title;
+        private @Nullable Output<List<String>> quickReplies;
+        private @Nullable Output<String> title;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class GoogleCloudDialogflowV2IntentMessageQuickRepliesArgs extends 
     	      this.title = defaults.title;
         }
 
-        public Builder quickReplies(@Nullable Input<List<String>> quickReplies) {
+        public Builder quickReplies(@Nullable Output<List<String>> quickReplies) {
             this.quickReplies = quickReplies;
             return this;
         }
 
         public Builder quickReplies(@Nullable List<String> quickReplies) {
-            this.quickReplies = Input.ofNullable(quickReplies);
+            this.quickReplies = Output.ofNullable(quickReplies);
             return this;
         }
 
-        public Builder title(@Nullable Input<String> title) {
+        public Builder title(@Nullable Output<String> title) {
             this.title = title;
             return this;
         }
 
         public Builder title(@Nullable String title) {
-            this.title = Input.ofNullable(title);
+            this.title = Output.ofNullable(title);
             return this;
         }
         public GoogleCloudDialogflowV2IntentMessageQuickRepliesArgs build() {

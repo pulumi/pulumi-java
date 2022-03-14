@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.servicemanagement_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.servicemanagement_v1.inputs.ContextRuleArgs;
 import java.util.List;
@@ -24,18 +24,18 @@ public final class ContextArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="rules")
-      private final @Nullable Input<List<ContextRuleArgs>> rules;
+      private final @Nullable Output<List<ContextRuleArgs>> rules;
 
-    public Input<List<ContextRuleArgs>> getRules() {
-        return this.rules == null ? Input.empty() : this.rules;
+    public Output<List<ContextRuleArgs>> getRules() {
+        return this.rules == null ? Output.empty() : this.rules;
     }
 
-    public ContextArgs(@Nullable Input<List<ContextRuleArgs>> rules) {
+    public ContextArgs(@Nullable Output<List<ContextRuleArgs>> rules) {
         this.rules = rules;
     }
 
     private ContextArgs() {
-        this.rules = Input.empty();
+        this.rules = Output.empty();
     }
 
     public static Builder builder() {
@@ -47,7 +47,7 @@ public final class ContextArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<List<ContextRuleArgs>> rules;
+        private @Nullable Output<List<ContextRuleArgs>> rules;
 
         public Builder() {
     	      // Empty
@@ -58,13 +58,13 @@ public final class ContextArgs extends io.pulumi.resources.ResourceArgs {
     	      this.rules = defaults.rules;
         }
 
-        public Builder rules(@Nullable Input<List<ContextRuleArgs>> rules) {
+        public Builder rules(@Nullable Output<List<ContextRuleArgs>> rules) {
             this.rules = rules;
             return this;
         }
 
         public Builder rules(@Nullable List<ContextRuleArgs> rules) {
-            this.rules = Input.ofNullable(rules);
+            this.rules = Output.ofNullable(rules);
             return this;
         }
         public ContextArgs build() {

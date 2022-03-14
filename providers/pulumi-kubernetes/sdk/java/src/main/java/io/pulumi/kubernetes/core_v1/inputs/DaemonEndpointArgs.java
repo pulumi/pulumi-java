@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.core_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
@@ -22,18 +22,18 @@ public final class DaemonEndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="Port", required=true)
-      private final Input<Integer> Port;
+      private final Output<Integer> Port;
 
-    public Input<Integer> getPort() {
+    public Output<Integer> getPort() {
         return this.Port;
     }
 
-    public DaemonEndpointArgs(Input<Integer> Port) {
+    public DaemonEndpointArgs(Output<Integer> Port) {
         this.Port = Objects.requireNonNull(Port, "expected parameter 'Port' to be non-null");
     }
 
     private DaemonEndpointArgs() {
-        this.Port = Input.empty();
+        this.Port = Output.empty();
     }
 
     public static Builder builder() {
@@ -45,7 +45,7 @@ public final class DaemonEndpointArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<Integer> Port;
+        private Output<Integer> Port;
 
         public Builder() {
     	      // Empty
@@ -56,13 +56,13 @@ public final class DaemonEndpointArgs extends io.pulumi.resources.ResourceArgs {
     	      this.Port = defaults.Port;
         }
 
-        public Builder port(Input<Integer> Port) {
+        public Builder port(Output<Integer> Port) {
             this.Port = Objects.requireNonNull(Port);
             return this;
         }
 
         public Builder port(Integer Port) {
-            this.Port = Input.of(Objects.requireNonNull(Port));
+            this.Port = Output.of(Objects.requireNonNull(Port));
             return this;
         }
         public DaemonEndpointArgs build() {

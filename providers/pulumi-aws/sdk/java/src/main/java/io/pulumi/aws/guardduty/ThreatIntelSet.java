@@ -6,7 +6,6 @@ package io.pulumi.aws.guardduty;
 import io.pulumi.aws.Utilities;
 import io.pulumi.aws.guardduty.ThreatIntelSetArgs;
 import io.pulumi.aws.guardduty.inputs.ThreatIntelSetState;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -184,14 +183,14 @@ public class ThreatIntelSet extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ThreatIntelSet(String name, ThreatIntelSetArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:guardduty/threatIntelSet:ThreatIntelSet", name, args == null ? ThreatIntelSetArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws:guardduty/threatIntelSet:ThreatIntelSet", name, args == null ? ThreatIntelSetArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private ThreatIntelSet(String name, Input<String> id, @Nullable ThreatIntelSetState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private ThreatIntelSet(String name, Output<String> id, @Nullable ThreatIntelSetState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws:guardduty/threatIntelSet:ThreatIntelSet", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -207,7 +206,7 @@ public class ThreatIntelSet extends io.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static ThreatIntelSet get(String name, Input<String> id, @Nullable ThreatIntelSetState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static ThreatIntelSet get(String name, Output<String> id, @Nullable ThreatIntelSetState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new ThreatIntelSet(name, id, state, options);
     }
 }

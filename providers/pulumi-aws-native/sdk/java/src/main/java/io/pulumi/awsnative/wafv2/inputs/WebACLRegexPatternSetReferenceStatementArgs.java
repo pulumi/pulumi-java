@@ -5,7 +5,7 @@ package io.pulumi.awsnative.wafv2.inputs;
 
 import io.pulumi.awsnative.wafv2.inputs.WebACLFieldToMatchArgs;
 import io.pulumi.awsnative.wafv2.inputs.WebACLTextTransformationArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -17,39 +17,39 @@ public final class WebACLRegexPatternSetReferenceStatementArgs extends io.pulumi
     public static final WebACLRegexPatternSetReferenceStatementArgs Empty = new WebACLRegexPatternSetReferenceStatementArgs();
 
     @InputImport(name="arn", required=true)
-      private final Input<String> arn;
+      private final Output<String> arn;
 
-    public Input<String> getArn() {
+    public Output<String> getArn() {
         return this.arn;
     }
 
     @InputImport(name="fieldToMatch", required=true)
-      private final Input<WebACLFieldToMatchArgs> fieldToMatch;
+      private final Output<WebACLFieldToMatchArgs> fieldToMatch;
 
-    public Input<WebACLFieldToMatchArgs> getFieldToMatch() {
+    public Output<WebACLFieldToMatchArgs> getFieldToMatch() {
         return this.fieldToMatch;
     }
 
     @InputImport(name="textTransformations", required=true)
-      private final Input<List<WebACLTextTransformationArgs>> textTransformations;
+      private final Output<List<WebACLTextTransformationArgs>> textTransformations;
 
-    public Input<List<WebACLTextTransformationArgs>> getTextTransformations() {
+    public Output<List<WebACLTextTransformationArgs>> getTextTransformations() {
         return this.textTransformations;
     }
 
     public WebACLRegexPatternSetReferenceStatementArgs(
-        Input<String> arn,
-        Input<WebACLFieldToMatchArgs> fieldToMatch,
-        Input<List<WebACLTextTransformationArgs>> textTransformations) {
+        Output<String> arn,
+        Output<WebACLFieldToMatchArgs> fieldToMatch,
+        Output<List<WebACLTextTransformationArgs>> textTransformations) {
         this.arn = Objects.requireNonNull(arn, "expected parameter 'arn' to be non-null");
         this.fieldToMatch = Objects.requireNonNull(fieldToMatch, "expected parameter 'fieldToMatch' to be non-null");
         this.textTransformations = Objects.requireNonNull(textTransformations, "expected parameter 'textTransformations' to be non-null");
     }
 
     private WebACLRegexPatternSetReferenceStatementArgs() {
-        this.arn = Input.empty();
-        this.fieldToMatch = Input.empty();
-        this.textTransformations = Input.empty();
+        this.arn = Output.empty();
+        this.fieldToMatch = Output.empty();
+        this.textTransformations = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,9 +61,9 @@ public final class WebACLRegexPatternSetReferenceStatementArgs extends io.pulumi
     }
 
     public static final class Builder {
-        private Input<String> arn;
-        private Input<WebACLFieldToMatchArgs> fieldToMatch;
-        private Input<List<WebACLTextTransformationArgs>> textTransformations;
+        private Output<String> arn;
+        private Output<WebACLFieldToMatchArgs> fieldToMatch;
+        private Output<List<WebACLTextTransformationArgs>> textTransformations;
 
         public Builder() {
     	      // Empty
@@ -76,33 +76,33 @@ public final class WebACLRegexPatternSetReferenceStatementArgs extends io.pulumi
     	      this.textTransformations = defaults.textTransformations;
         }
 
-        public Builder arn(Input<String> arn) {
+        public Builder arn(Output<String> arn) {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
 
         public Builder arn(String arn) {
-            this.arn = Input.of(Objects.requireNonNull(arn));
+            this.arn = Output.of(Objects.requireNonNull(arn));
             return this;
         }
 
-        public Builder fieldToMatch(Input<WebACLFieldToMatchArgs> fieldToMatch) {
+        public Builder fieldToMatch(Output<WebACLFieldToMatchArgs> fieldToMatch) {
             this.fieldToMatch = Objects.requireNonNull(fieldToMatch);
             return this;
         }
 
         public Builder fieldToMatch(WebACLFieldToMatchArgs fieldToMatch) {
-            this.fieldToMatch = Input.of(Objects.requireNonNull(fieldToMatch));
+            this.fieldToMatch = Output.of(Objects.requireNonNull(fieldToMatch));
             return this;
         }
 
-        public Builder textTransformations(Input<List<WebACLTextTransformationArgs>> textTransformations) {
+        public Builder textTransformations(Output<List<WebACLTextTransformationArgs>> textTransformations) {
             this.textTransformations = Objects.requireNonNull(textTransformations);
             return this;
         }
 
         public Builder textTransformations(List<WebACLTextTransformationArgs> textTransformations) {
-            this.textTransformations = Input.of(Objects.requireNonNull(textTransformations));
+            this.textTransformations = Output.of(Objects.requireNonNull(textTransformations));
             return this;
         }
         public WebACLRegexPatternSetReferenceStatementArgs build() {

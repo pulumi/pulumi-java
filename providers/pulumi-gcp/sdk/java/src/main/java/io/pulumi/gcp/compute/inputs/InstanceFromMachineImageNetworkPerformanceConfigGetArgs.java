@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -14,18 +14,18 @@ public final class InstanceFromMachineImageNetworkPerformanceConfigGetArgs exten
     public static final InstanceFromMachineImageNetworkPerformanceConfigGetArgs Empty = new InstanceFromMachineImageNetworkPerformanceConfigGetArgs();
 
     @InputImport(name="totalEgressBandwidthTier", required=true)
-      private final Input<String> totalEgressBandwidthTier;
+      private final Output<String> totalEgressBandwidthTier;
 
-    public Input<String> getTotalEgressBandwidthTier() {
+    public Output<String> getTotalEgressBandwidthTier() {
         return this.totalEgressBandwidthTier;
     }
 
-    public InstanceFromMachineImageNetworkPerformanceConfigGetArgs(Input<String> totalEgressBandwidthTier) {
+    public InstanceFromMachineImageNetworkPerformanceConfigGetArgs(Output<String> totalEgressBandwidthTier) {
         this.totalEgressBandwidthTier = Objects.requireNonNull(totalEgressBandwidthTier, "expected parameter 'totalEgressBandwidthTier' to be non-null");
     }
 
     private InstanceFromMachineImageNetworkPerformanceConfigGetArgs() {
-        this.totalEgressBandwidthTier = Input.empty();
+        this.totalEgressBandwidthTier = Output.empty();
     }
 
     public static Builder builder() {
@@ -37,7 +37,7 @@ public final class InstanceFromMachineImageNetworkPerformanceConfigGetArgs exten
     }
 
     public static final class Builder {
-        private Input<String> totalEgressBandwidthTier;
+        private Output<String> totalEgressBandwidthTier;
 
         public Builder() {
     	      // Empty
@@ -48,13 +48,13 @@ public final class InstanceFromMachineImageNetworkPerformanceConfigGetArgs exten
     	      this.totalEgressBandwidthTier = defaults.totalEgressBandwidthTier;
         }
 
-        public Builder totalEgressBandwidthTier(Input<String> totalEgressBandwidthTier) {
+        public Builder totalEgressBandwidthTier(Output<String> totalEgressBandwidthTier) {
             this.totalEgressBandwidthTier = Objects.requireNonNull(totalEgressBandwidthTier);
             return this;
         }
 
         public Builder totalEgressBandwidthTier(String totalEgressBandwidthTier) {
-            this.totalEgressBandwidthTier = Input.of(Objects.requireNonNull(totalEgressBandwidthTier));
+            this.totalEgressBandwidthTier = Output.of(Objects.requireNonNull(totalEgressBandwidthTier));
             return this;
         }
         public InstanceFromMachineImageNetworkPerformanceConfigGetArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.redhatopenshift.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class APIServerProfileArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="ip")
-      private final @Nullable Input<String> ip;
+      private final @Nullable Output<String> ip;
 
-    public Input<String> getIp() {
-        return this.ip == null ? Input.empty() : this.ip;
+    public Output<String> getIp() {
+        return this.ip == null ? Output.empty() : this.ip;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class APIServerProfileArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="url")
-      private final @Nullable Input<String> url;
+      private final @Nullable Output<String> url;
 
-    public Input<String> getUrl() {
-        return this.url == null ? Input.empty() : this.url;
+    public Output<String> getUrl() {
+        return this.url == null ? Output.empty() : this.url;
     }
 
     /**
@@ -45,25 +45,25 @@ public final class APIServerProfileArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="visibility")
-      private final @Nullable Input<String> visibility;
+      private final @Nullable Output<String> visibility;
 
-    public Input<String> getVisibility() {
-        return this.visibility == null ? Input.empty() : this.visibility;
+    public Output<String> getVisibility() {
+        return this.visibility == null ? Output.empty() : this.visibility;
     }
 
     public APIServerProfileArgs(
-        @Nullable Input<String> ip,
-        @Nullable Input<String> url,
-        @Nullable Input<String> visibility) {
+        @Nullable Output<String> ip,
+        @Nullable Output<String> url,
+        @Nullable Output<String> visibility) {
         this.ip = ip;
         this.url = url;
         this.visibility = visibility;
     }
 
     private APIServerProfileArgs() {
-        this.ip = Input.empty();
-        this.url = Input.empty();
-        this.visibility = Input.empty();
+        this.ip = Output.empty();
+        this.url = Output.empty();
+        this.visibility = Output.empty();
     }
 
     public static Builder builder() {
@@ -75,9 +75,9 @@ public final class APIServerProfileArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private @Nullable Input<String> ip;
-        private @Nullable Input<String> url;
-        private @Nullable Input<String> visibility;
+        private @Nullable Output<String> ip;
+        private @Nullable Output<String> url;
+        private @Nullable Output<String> visibility;
 
         public Builder() {
     	      // Empty
@@ -90,33 +90,33 @@ public final class APIServerProfileArgs extends io.pulumi.resources.ResourceArgs
     	      this.visibility = defaults.visibility;
         }
 
-        public Builder ip(@Nullable Input<String> ip) {
+        public Builder ip(@Nullable Output<String> ip) {
             this.ip = ip;
             return this;
         }
 
         public Builder ip(@Nullable String ip) {
-            this.ip = Input.ofNullable(ip);
+            this.ip = Output.ofNullable(ip);
             return this;
         }
 
-        public Builder url(@Nullable Input<String> url) {
+        public Builder url(@Nullable Output<String> url) {
             this.url = url;
             return this;
         }
 
         public Builder url(@Nullable String url) {
-            this.url = Input.ofNullable(url);
+            this.url = Output.ofNullable(url);
             return this;
         }
 
-        public Builder visibility(@Nullable Input<String> visibility) {
+        public Builder visibility(@Nullable Output<String> visibility) {
             this.visibility = visibility;
             return this;
         }
 
         public Builder visibility(@Nullable String visibility) {
-            this.visibility = Input.ofNullable(visibility);
+            this.visibility = Output.ofNullable(visibility);
             return this;
         }
         public APIServerProfileArgs build() {

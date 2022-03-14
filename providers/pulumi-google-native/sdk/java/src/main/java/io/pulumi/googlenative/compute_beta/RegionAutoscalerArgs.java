@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_beta;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.compute_beta.inputs.AutoscalingPolicyArgs;
 import java.lang.String;
@@ -20,10 +20,10 @@ public final class RegionAutoscalerArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="autoscalingPolicy")
-      private final @Nullable Input<AutoscalingPolicyArgs> autoscalingPolicy;
+      private final @Nullable Output<AutoscalingPolicyArgs> autoscalingPolicy;
 
-    public Input<AutoscalingPolicyArgs> getAutoscalingPolicy() {
-        return this.autoscalingPolicy == null ? Input.empty() : this.autoscalingPolicy;
+    public Output<AutoscalingPolicyArgs> getAutoscalingPolicy() {
+        return this.autoscalingPolicy == null ? Output.empty() : this.autoscalingPolicy;
     }
 
     /**
@@ -31,10 +31,10 @@ public final class RegionAutoscalerArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -42,31 +42,31 @@ public final class RegionAutoscalerArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     @InputImport(name="region", required=true)
-      private final Input<String> region;
+      private final Output<String> region;
 
-    public Input<String> getRegion() {
+    public Output<String> getRegion() {
         return this.region;
     }
 
     @InputImport(name="requestId")
-      private final @Nullable Input<String> requestId;
+      private final @Nullable Output<String> requestId;
 
-    public Input<String> getRequestId() {
-        return this.requestId == null ? Input.empty() : this.requestId;
+    public Output<String> getRequestId() {
+        return this.requestId == null ? Output.empty() : this.requestId;
     }
 
     /**
@@ -74,20 +74,20 @@ public final class RegionAutoscalerArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="target")
-      private final @Nullable Input<String> target;
+      private final @Nullable Output<String> target;
 
-    public Input<String> getTarget() {
-        return this.target == null ? Input.empty() : this.target;
+    public Output<String> getTarget() {
+        return this.target == null ? Output.empty() : this.target;
     }
 
     public RegionAutoscalerArgs(
-        @Nullable Input<AutoscalingPolicyArgs> autoscalingPolicy,
-        @Nullable Input<String> description,
-        @Nullable Input<String> name,
-        @Nullable Input<String> project,
-        Input<String> region,
-        @Nullable Input<String> requestId,
-        @Nullable Input<String> target) {
+        @Nullable Output<AutoscalingPolicyArgs> autoscalingPolicy,
+        @Nullable Output<String> description,
+        @Nullable Output<String> name,
+        @Nullable Output<String> project,
+        Output<String> region,
+        @Nullable Output<String> requestId,
+        @Nullable Output<String> target) {
         this.autoscalingPolicy = autoscalingPolicy;
         this.description = description;
         this.name = name;
@@ -98,13 +98,13 @@ public final class RegionAutoscalerArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private RegionAutoscalerArgs() {
-        this.autoscalingPolicy = Input.empty();
-        this.description = Input.empty();
-        this.name = Input.empty();
-        this.project = Input.empty();
-        this.region = Input.empty();
-        this.requestId = Input.empty();
-        this.target = Input.empty();
+        this.autoscalingPolicy = Output.empty();
+        this.description = Output.empty();
+        this.name = Output.empty();
+        this.project = Output.empty();
+        this.region = Output.empty();
+        this.requestId = Output.empty();
+        this.target = Output.empty();
     }
 
     public static Builder builder() {
@@ -116,13 +116,13 @@ public final class RegionAutoscalerArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private @Nullable Input<AutoscalingPolicyArgs> autoscalingPolicy;
-        private @Nullable Input<String> description;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> project;
-        private Input<String> region;
-        private @Nullable Input<String> requestId;
-        private @Nullable Input<String> target;
+        private @Nullable Output<AutoscalingPolicyArgs> autoscalingPolicy;
+        private @Nullable Output<String> description;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> project;
+        private Output<String> region;
+        private @Nullable Output<String> requestId;
+        private @Nullable Output<String> target;
 
         public Builder() {
     	      // Empty
@@ -139,73 +139,73 @@ public final class RegionAutoscalerArgs extends io.pulumi.resources.ResourceArgs
     	      this.target = defaults.target;
         }
 
-        public Builder autoscalingPolicy(@Nullable Input<AutoscalingPolicyArgs> autoscalingPolicy) {
+        public Builder autoscalingPolicy(@Nullable Output<AutoscalingPolicyArgs> autoscalingPolicy) {
             this.autoscalingPolicy = autoscalingPolicy;
             return this;
         }
 
         public Builder autoscalingPolicy(@Nullable AutoscalingPolicyArgs autoscalingPolicy) {
-            this.autoscalingPolicy = Input.ofNullable(autoscalingPolicy);
+            this.autoscalingPolicy = Output.ofNullable(autoscalingPolicy);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder region(Input<String> region) {
+        public Builder region(Output<String> region) {
             this.region = Objects.requireNonNull(region);
             return this;
         }
 
         public Builder region(String region) {
-            this.region = Input.of(Objects.requireNonNull(region));
+            this.region = Output.of(Objects.requireNonNull(region));
             return this;
         }
 
-        public Builder requestId(@Nullable Input<String> requestId) {
+        public Builder requestId(@Nullable Output<String> requestId) {
             this.requestId = requestId;
             return this;
         }
 
         public Builder requestId(@Nullable String requestId) {
-            this.requestId = Input.ofNullable(requestId);
+            this.requestId = Output.ofNullable(requestId);
             return this;
         }
 
-        public Builder target(@Nullable Input<String> target) {
+        public Builder target(@Nullable Output<String> target) {
             this.target = target;
             return this;
         }
 
         public Builder target(@Nullable String target) {
-            this.target = Input.ofNullable(target);
+            this.target = Output.ofNullable(target);
             return this;
         }
         public RegionAutoscalerArgs build() {

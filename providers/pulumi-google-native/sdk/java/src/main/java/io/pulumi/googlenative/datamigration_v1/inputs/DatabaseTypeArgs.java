@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.datamigration_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.datamigration_v1.enums.DatabaseTypeEngine;
 import io.pulumi.googlenative.datamigration_v1.enums.DatabaseTypeProvider;
@@ -24,10 +24,10 @@ public final class DatabaseTypeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="engine")
-      private final @Nullable Input<DatabaseTypeEngine> engine;
+      private final @Nullable Output<DatabaseTypeEngine> engine;
 
-    public Input<DatabaseTypeEngine> getEngine() {
-        return this.engine == null ? Input.empty() : this.engine;
+    public Output<DatabaseTypeEngine> getEngine() {
+        return this.engine == null ? Output.empty() : this.engine;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class DatabaseTypeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="provider")
-      private final @Nullable Input<DatabaseTypeProvider> provider;
+      private final @Nullable Output<DatabaseTypeProvider> provider;
 
-    public Input<DatabaseTypeProvider> getProvider() {
-        return this.provider == null ? Input.empty() : this.provider;
+    public Output<DatabaseTypeProvider> getProvider() {
+        return this.provider == null ? Output.empty() : this.provider;
     }
 
     public DatabaseTypeArgs(
-        @Nullable Input<DatabaseTypeEngine> engine,
-        @Nullable Input<DatabaseTypeProvider> provider) {
+        @Nullable Output<DatabaseTypeEngine> engine,
+        @Nullable Output<DatabaseTypeProvider> provider) {
         this.engine = engine;
         this.provider = provider;
     }
 
     private DatabaseTypeArgs() {
-        this.engine = Input.empty();
-        this.provider = Input.empty();
+        this.engine = Output.empty();
+        this.provider = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class DatabaseTypeArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<DatabaseTypeEngine> engine;
-        private @Nullable Input<DatabaseTypeProvider> provider;
+        private @Nullable Output<DatabaseTypeEngine> engine;
+        private @Nullable Output<DatabaseTypeProvider> provider;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class DatabaseTypeArgs extends io.pulumi.resources.ResourceArgs {
     	      this.provider = defaults.provider;
         }
 
-        public Builder engine(@Nullable Input<DatabaseTypeEngine> engine) {
+        public Builder engine(@Nullable Output<DatabaseTypeEngine> engine) {
             this.engine = engine;
             return this;
         }
 
         public Builder engine(@Nullable DatabaseTypeEngine engine) {
-            this.engine = Input.ofNullable(engine);
+            this.engine = Output.ofNullable(engine);
             return this;
         }
 
-        public Builder provider(@Nullable Input<DatabaseTypeProvider> provider) {
+        public Builder provider(@Nullable Output<DatabaseTypeProvider> provider) {
             this.provider = provider;
             return this;
         }
 
         public Builder provider(@Nullable DatabaseTypeProvider provider) {
-            this.provider = Input.ofNullable(provider);
+            this.provider = Output.ofNullable(provider);
             return this;
         }
         public DatabaseTypeArgs build() {

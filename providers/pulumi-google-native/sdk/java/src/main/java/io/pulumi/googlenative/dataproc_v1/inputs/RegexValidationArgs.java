@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dataproc_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -23,18 +23,18 @@ public final class RegexValidationArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="regexes", required=true)
-      private final Input<List<String>> regexes;
+      private final Output<List<String>> regexes;
 
-    public Input<List<String>> getRegexes() {
+    public Output<List<String>> getRegexes() {
         return this.regexes;
     }
 
-    public RegexValidationArgs(Input<List<String>> regexes) {
+    public RegexValidationArgs(Output<List<String>> regexes) {
         this.regexes = Objects.requireNonNull(regexes, "expected parameter 'regexes' to be non-null");
     }
 
     private RegexValidationArgs() {
-        this.regexes = Input.empty();
+        this.regexes = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class RegexValidationArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private Input<List<String>> regexes;
+        private Output<List<String>> regexes;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class RegexValidationArgs extends io.pulumi.resources.ResourceArgs 
     	      this.regexes = defaults.regexes;
         }
 
-        public Builder regexes(Input<List<String>> regexes) {
+        public Builder regexes(Output<List<String>> regexes) {
             this.regexes = Objects.requireNonNull(regexes);
             return this;
         }
 
         public Builder regexes(List<String> regexes) {
-            this.regexes = Input.of(Objects.requireNonNull(regexes));
+            this.regexes = Output.of(Objects.requireNonNull(regexes));
             return this;
         }
         public RegexValidationArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.extensions_v1beta1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.kubernetes.extensions_v1beta1.inputs.HTTPIngressRuleValueArgs;
 import java.lang.String;
@@ -29,29 +29,29 @@ public final class IngressRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="host")
-      private final @Nullable Input<String> host;
+      private final @Nullable Output<String> host;
 
-    public Input<String> getHost() {
-        return this.host == null ? Input.empty() : this.host;
+    public Output<String> getHost() {
+        return this.host == null ? Output.empty() : this.host;
     }
 
     @InputImport(name="http")
-      private final @Nullable Input<HTTPIngressRuleValueArgs> http;
+      private final @Nullable Output<HTTPIngressRuleValueArgs> http;
 
-    public Input<HTTPIngressRuleValueArgs> getHttp() {
-        return this.http == null ? Input.empty() : this.http;
+    public Output<HTTPIngressRuleValueArgs> getHttp() {
+        return this.http == null ? Output.empty() : this.http;
     }
 
     public IngressRuleArgs(
-        @Nullable Input<String> host,
-        @Nullable Input<HTTPIngressRuleValueArgs> http) {
+        @Nullable Output<String> host,
+        @Nullable Output<HTTPIngressRuleValueArgs> http) {
         this.host = host;
         this.http = http;
     }
 
     private IngressRuleArgs() {
-        this.host = Input.empty();
-        this.http = Input.empty();
+        this.host = Output.empty();
+        this.http = Output.empty();
     }
 
     public static Builder builder() {
@@ -63,8 +63,8 @@ public final class IngressRuleArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> host;
-        private @Nullable Input<HTTPIngressRuleValueArgs> http;
+        private @Nullable Output<String> host;
+        private @Nullable Output<HTTPIngressRuleValueArgs> http;
 
         public Builder() {
     	      // Empty
@@ -76,23 +76,23 @@ public final class IngressRuleArgs extends io.pulumi.resources.ResourceArgs {
     	      this.http = defaults.http;
         }
 
-        public Builder host(@Nullable Input<String> host) {
+        public Builder host(@Nullable Output<String> host) {
             this.host = host;
             return this;
         }
 
         public Builder host(@Nullable String host) {
-            this.host = Input.ofNullable(host);
+            this.host = Output.ofNullable(host);
             return this;
         }
 
-        public Builder http(@Nullable Input<HTTPIngressRuleValueArgs> http) {
+        public Builder http(@Nullable Output<HTTPIngressRuleValueArgs> http) {
             this.http = http;
             return this;
         }
 
         public Builder http(@Nullable HTTPIngressRuleValueArgs http) {
-            this.http = Input.ofNullable(http);
+            this.http = Output.ofNullable(http);
             return this;
         }
         public IngressRuleArgs build() {

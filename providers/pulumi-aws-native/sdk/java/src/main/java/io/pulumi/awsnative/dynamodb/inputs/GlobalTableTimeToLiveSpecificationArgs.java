@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.dynamodb.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -16,29 +16,29 @@ public final class GlobalTableTimeToLiveSpecificationArgs extends io.pulumi.reso
     public static final GlobalTableTimeToLiveSpecificationArgs Empty = new GlobalTableTimeToLiveSpecificationArgs();
 
     @InputImport(name="attributeName")
-      private final @Nullable Input<String> attributeName;
+      private final @Nullable Output<String> attributeName;
 
-    public Input<String> getAttributeName() {
-        return this.attributeName == null ? Input.empty() : this.attributeName;
+    public Output<String> getAttributeName() {
+        return this.attributeName == null ? Output.empty() : this.attributeName;
     }
 
     @InputImport(name="enabled", required=true)
-      private final Input<Boolean> enabled;
+      private final Output<Boolean> enabled;
 
-    public Input<Boolean> getEnabled() {
+    public Output<Boolean> getEnabled() {
         return this.enabled;
     }
 
     public GlobalTableTimeToLiveSpecificationArgs(
-        @Nullable Input<String> attributeName,
-        Input<Boolean> enabled) {
+        @Nullable Output<String> attributeName,
+        Output<Boolean> enabled) {
         this.attributeName = attributeName;
         this.enabled = Objects.requireNonNull(enabled, "expected parameter 'enabled' to be non-null");
     }
 
     private GlobalTableTimeToLiveSpecificationArgs() {
-        this.attributeName = Input.empty();
-        this.enabled = Input.empty();
+        this.attributeName = Output.empty();
+        this.enabled = Output.empty();
     }
 
     public static Builder builder() {
@@ -50,8 +50,8 @@ public final class GlobalTableTimeToLiveSpecificationArgs extends io.pulumi.reso
     }
 
     public static final class Builder {
-        private @Nullable Input<String> attributeName;
-        private Input<Boolean> enabled;
+        private @Nullable Output<String> attributeName;
+        private Output<Boolean> enabled;
 
         public Builder() {
     	      // Empty
@@ -63,23 +63,23 @@ public final class GlobalTableTimeToLiveSpecificationArgs extends io.pulumi.reso
     	      this.enabled = defaults.enabled;
         }
 
-        public Builder attributeName(@Nullable Input<String> attributeName) {
+        public Builder attributeName(@Nullable Output<String> attributeName) {
             this.attributeName = attributeName;
             return this;
         }
 
         public Builder attributeName(@Nullable String attributeName) {
-            this.attributeName = Input.ofNullable(attributeName);
+            this.attributeName = Output.ofNullable(attributeName);
             return this;
         }
 
-        public Builder enabled(Input<Boolean> enabled) {
+        public Builder enabled(Output<Boolean> enabled) {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
 
         public Builder enabled(Boolean enabled) {
-            this.enabled = Input.of(Objects.requireNonNull(enabled));
+            this.enabled = Output.of(Objects.requireNonNull(enabled));
             return this;
         }
         public GlobalTableTimeToLiveSpecificationArgs build() {

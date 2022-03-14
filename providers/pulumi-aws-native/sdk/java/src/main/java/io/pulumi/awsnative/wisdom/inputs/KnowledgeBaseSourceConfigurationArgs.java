@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.wisdom.inputs;
 
 import io.pulumi.awsnative.wisdom.inputs.KnowledgeBaseAppIntegrationsConfigurationArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -15,18 +15,18 @@ public final class KnowledgeBaseSourceConfigurationArgs extends io.pulumi.resour
     public static final KnowledgeBaseSourceConfigurationArgs Empty = new KnowledgeBaseSourceConfigurationArgs();
 
     @InputImport(name="appIntegrations")
-      private final @Nullable Input<KnowledgeBaseAppIntegrationsConfigurationArgs> appIntegrations;
+      private final @Nullable Output<KnowledgeBaseAppIntegrationsConfigurationArgs> appIntegrations;
 
-    public Input<KnowledgeBaseAppIntegrationsConfigurationArgs> getAppIntegrations() {
-        return this.appIntegrations == null ? Input.empty() : this.appIntegrations;
+    public Output<KnowledgeBaseAppIntegrationsConfigurationArgs> getAppIntegrations() {
+        return this.appIntegrations == null ? Output.empty() : this.appIntegrations;
     }
 
-    public KnowledgeBaseSourceConfigurationArgs(@Nullable Input<KnowledgeBaseAppIntegrationsConfigurationArgs> appIntegrations) {
+    public KnowledgeBaseSourceConfigurationArgs(@Nullable Output<KnowledgeBaseAppIntegrationsConfigurationArgs> appIntegrations) {
         this.appIntegrations = appIntegrations;
     }
 
     private KnowledgeBaseSourceConfigurationArgs() {
-        this.appIntegrations = Input.empty();
+        this.appIntegrations = Output.empty();
     }
 
     public static Builder builder() {
@@ -38,7 +38,7 @@ public final class KnowledgeBaseSourceConfigurationArgs extends io.pulumi.resour
     }
 
     public static final class Builder {
-        private @Nullable Input<KnowledgeBaseAppIntegrationsConfigurationArgs> appIntegrations;
+        private @Nullable Output<KnowledgeBaseAppIntegrationsConfigurationArgs> appIntegrations;
 
         public Builder() {
     	      // Empty
@@ -49,13 +49,13 @@ public final class KnowledgeBaseSourceConfigurationArgs extends io.pulumi.resour
     	      this.appIntegrations = defaults.appIntegrations;
         }
 
-        public Builder appIntegrations(@Nullable Input<KnowledgeBaseAppIntegrationsConfigurationArgs> appIntegrations) {
+        public Builder appIntegrations(@Nullable Output<KnowledgeBaseAppIntegrationsConfigurationArgs> appIntegrations) {
             this.appIntegrations = appIntegrations;
             return this;
         }
 
         public Builder appIntegrations(@Nullable KnowledgeBaseAppIntegrationsConfigurationArgs appIntegrations) {
-            this.appIntegrations = Input.ofNullable(appIntegrations);
+            this.appIntegrations = Output.ofNullable(appIntegrations);
             return this;
         }
         public KnowledgeBaseSourceConfigurationArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.storage_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.storage_v1.inputs.BucketIamConfigurationBucketPolicyOnlyArgs;
 import io.pulumi.googlenative.storage_v1.inputs.BucketIamConfigurationUniformBucketLevelAccessArgs;
@@ -25,10 +25,10 @@ public final class BucketIamConfigurationArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="bucketPolicyOnly")
-      private final @Nullable Input<BucketIamConfigurationBucketPolicyOnlyArgs> bucketPolicyOnly;
+      private final @Nullable Output<BucketIamConfigurationBucketPolicyOnlyArgs> bucketPolicyOnly;
 
-    public Input<BucketIamConfigurationBucketPolicyOnlyArgs> getBucketPolicyOnly() {
-        return this.bucketPolicyOnly == null ? Input.empty() : this.bucketPolicyOnly;
+    public Output<BucketIamConfigurationBucketPolicyOnlyArgs> getBucketPolicyOnly() {
+        return this.bucketPolicyOnly == null ? Output.empty() : this.bucketPolicyOnly;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class BucketIamConfigurationArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="publicAccessPrevention")
-      private final @Nullable Input<String> publicAccessPrevention;
+      private final @Nullable Output<String> publicAccessPrevention;
 
-    public Input<String> getPublicAccessPrevention() {
-        return this.publicAccessPrevention == null ? Input.empty() : this.publicAccessPrevention;
+    public Output<String> getPublicAccessPrevention() {
+        return this.publicAccessPrevention == null ? Output.empty() : this.publicAccessPrevention;
     }
 
     /**
@@ -47,25 +47,25 @@ public final class BucketIamConfigurationArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="uniformBucketLevelAccess")
-      private final @Nullable Input<BucketIamConfigurationUniformBucketLevelAccessArgs> uniformBucketLevelAccess;
+      private final @Nullable Output<BucketIamConfigurationUniformBucketLevelAccessArgs> uniformBucketLevelAccess;
 
-    public Input<BucketIamConfigurationUniformBucketLevelAccessArgs> getUniformBucketLevelAccess() {
-        return this.uniformBucketLevelAccess == null ? Input.empty() : this.uniformBucketLevelAccess;
+    public Output<BucketIamConfigurationUniformBucketLevelAccessArgs> getUniformBucketLevelAccess() {
+        return this.uniformBucketLevelAccess == null ? Output.empty() : this.uniformBucketLevelAccess;
     }
 
     public BucketIamConfigurationArgs(
-        @Nullable Input<BucketIamConfigurationBucketPolicyOnlyArgs> bucketPolicyOnly,
-        @Nullable Input<String> publicAccessPrevention,
-        @Nullable Input<BucketIamConfigurationUniformBucketLevelAccessArgs> uniformBucketLevelAccess) {
+        @Nullable Output<BucketIamConfigurationBucketPolicyOnlyArgs> bucketPolicyOnly,
+        @Nullable Output<String> publicAccessPrevention,
+        @Nullable Output<BucketIamConfigurationUniformBucketLevelAccessArgs> uniformBucketLevelAccess) {
         this.bucketPolicyOnly = bucketPolicyOnly;
         this.publicAccessPrevention = publicAccessPrevention;
         this.uniformBucketLevelAccess = uniformBucketLevelAccess;
     }
 
     private BucketIamConfigurationArgs() {
-        this.bucketPolicyOnly = Input.empty();
-        this.publicAccessPrevention = Input.empty();
-        this.uniformBucketLevelAccess = Input.empty();
+        this.bucketPolicyOnly = Output.empty();
+        this.publicAccessPrevention = Output.empty();
+        this.uniformBucketLevelAccess = Output.empty();
     }
 
     public static Builder builder() {
@@ -77,9 +77,9 @@ public final class BucketIamConfigurationArgs extends io.pulumi.resources.Resour
     }
 
     public static final class Builder {
-        private @Nullable Input<BucketIamConfigurationBucketPolicyOnlyArgs> bucketPolicyOnly;
-        private @Nullable Input<String> publicAccessPrevention;
-        private @Nullable Input<BucketIamConfigurationUniformBucketLevelAccessArgs> uniformBucketLevelAccess;
+        private @Nullable Output<BucketIamConfigurationBucketPolicyOnlyArgs> bucketPolicyOnly;
+        private @Nullable Output<String> publicAccessPrevention;
+        private @Nullable Output<BucketIamConfigurationUniformBucketLevelAccessArgs> uniformBucketLevelAccess;
 
         public Builder() {
     	      // Empty
@@ -92,33 +92,33 @@ public final class BucketIamConfigurationArgs extends io.pulumi.resources.Resour
     	      this.uniformBucketLevelAccess = defaults.uniformBucketLevelAccess;
         }
 
-        public Builder bucketPolicyOnly(@Nullable Input<BucketIamConfigurationBucketPolicyOnlyArgs> bucketPolicyOnly) {
+        public Builder bucketPolicyOnly(@Nullable Output<BucketIamConfigurationBucketPolicyOnlyArgs> bucketPolicyOnly) {
             this.bucketPolicyOnly = bucketPolicyOnly;
             return this;
         }
 
         public Builder bucketPolicyOnly(@Nullable BucketIamConfigurationBucketPolicyOnlyArgs bucketPolicyOnly) {
-            this.bucketPolicyOnly = Input.ofNullable(bucketPolicyOnly);
+            this.bucketPolicyOnly = Output.ofNullable(bucketPolicyOnly);
             return this;
         }
 
-        public Builder publicAccessPrevention(@Nullable Input<String> publicAccessPrevention) {
+        public Builder publicAccessPrevention(@Nullable Output<String> publicAccessPrevention) {
             this.publicAccessPrevention = publicAccessPrevention;
             return this;
         }
 
         public Builder publicAccessPrevention(@Nullable String publicAccessPrevention) {
-            this.publicAccessPrevention = Input.ofNullable(publicAccessPrevention);
+            this.publicAccessPrevention = Output.ofNullable(publicAccessPrevention);
             return this;
         }
 
-        public Builder uniformBucketLevelAccess(@Nullable Input<BucketIamConfigurationUniformBucketLevelAccessArgs> uniformBucketLevelAccess) {
+        public Builder uniformBucketLevelAccess(@Nullable Output<BucketIamConfigurationUniformBucketLevelAccessArgs> uniformBucketLevelAccess) {
             this.uniformBucketLevelAccess = uniformBucketLevelAccess;
             return this;
         }
 
         public Builder uniformBucketLevelAccess(@Nullable BucketIamConfigurationUniformBucketLevelAccessArgs uniformBucketLevelAccess) {
-            this.uniformBucketLevelAccess = Input.ofNullable(uniformBucketLevelAccess);
+            this.uniformBucketLevelAccess = Output.ofNullable(uniformBucketLevelAccess);
             return this;
         }
         public BucketIamConfigurationArgs build() {

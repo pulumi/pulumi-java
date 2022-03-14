@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.dataloss.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.dataloss.inputs.PreventionJobTriggerInspectJobGetArgs;
 import io.pulumi.gcp.dataloss.inputs.PreventionJobTriggerTriggerGetArgs;
@@ -22,10 +22,10 @@ public final class PreventionJobTriggerState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -33,10 +33,10 @@ public final class PreventionJobTriggerState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="displayName")
-      private final @Nullable Input<String> displayName;
+      private final @Nullable Output<String> displayName;
 
-    public Input<String> getDisplayName() {
-        return this.displayName == null ? Input.empty() : this.displayName;
+    public Output<String> getDisplayName() {
+        return this.displayName == null ? Output.empty() : this.displayName;
     }
 
     /**
@@ -45,10 +45,10 @@ public final class PreventionJobTriggerState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="inspectJob")
-      private final @Nullable Input<PreventionJobTriggerInspectJobGetArgs> inspectJob;
+      private final @Nullable Output<PreventionJobTriggerInspectJobGetArgs> inspectJob;
 
-    public Input<PreventionJobTriggerInspectJobGetArgs> getInspectJob() {
-        return this.inspectJob == null ? Input.empty() : this.inspectJob;
+    public Output<PreventionJobTriggerInspectJobGetArgs> getInspectJob() {
+        return this.inspectJob == null ? Output.empty() : this.inspectJob;
     }
 
     /**
@@ -56,10 +56,10 @@ public final class PreventionJobTriggerState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="lastRunTime")
-      private final @Nullable Input<String> lastRunTime;
+      private final @Nullable Output<String> lastRunTime;
 
-    public Input<String> getLastRunTime() {
-        return this.lastRunTime == null ? Input.empty() : this.lastRunTime;
+    public Output<String> getLastRunTime() {
+        return this.lastRunTime == null ? Output.empty() : this.lastRunTime;
     }
 
     /**
@@ -67,10 +67,10 @@ public final class PreventionJobTriggerState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -79,10 +79,10 @@ public final class PreventionJobTriggerState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="parent")
-      private final @Nullable Input<String> parent;
+      private final @Nullable Output<String> parent;
 
-    public Input<String> getParent() {
-        return this.parent == null ? Input.empty() : this.parent;
+    public Output<String> getParent() {
+        return this.parent == null ? Output.empty() : this.parent;
     }
 
     /**
@@ -92,10 +92,10 @@ public final class PreventionJobTriggerState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="status")
-      private final @Nullable Input<String> status;
+      private final @Nullable Output<String> status;
 
-    public Input<String> getStatus() {
-        return this.status == null ? Input.empty() : this.status;
+    public Output<String> getStatus() {
+        return this.status == null ? Output.empty() : this.status;
     }
 
     /**
@@ -104,21 +104,21 @@ public final class PreventionJobTriggerState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="triggers")
-      private final @Nullable Input<List<PreventionJobTriggerTriggerGetArgs>> triggers;
+      private final @Nullable Output<List<PreventionJobTriggerTriggerGetArgs>> triggers;
 
-    public Input<List<PreventionJobTriggerTriggerGetArgs>> getTriggers() {
-        return this.triggers == null ? Input.empty() : this.triggers;
+    public Output<List<PreventionJobTriggerTriggerGetArgs>> getTriggers() {
+        return this.triggers == null ? Output.empty() : this.triggers;
     }
 
     public PreventionJobTriggerState(
-        @Nullable Input<String> description,
-        @Nullable Input<String> displayName,
-        @Nullable Input<PreventionJobTriggerInspectJobGetArgs> inspectJob,
-        @Nullable Input<String> lastRunTime,
-        @Nullable Input<String> name,
-        @Nullable Input<String> parent,
-        @Nullable Input<String> status,
-        @Nullable Input<List<PreventionJobTriggerTriggerGetArgs>> triggers) {
+        @Nullable Output<String> description,
+        @Nullable Output<String> displayName,
+        @Nullable Output<PreventionJobTriggerInspectJobGetArgs> inspectJob,
+        @Nullable Output<String> lastRunTime,
+        @Nullable Output<String> name,
+        @Nullable Output<String> parent,
+        @Nullable Output<String> status,
+        @Nullable Output<List<PreventionJobTriggerTriggerGetArgs>> triggers) {
         this.description = description;
         this.displayName = displayName;
         this.inspectJob = inspectJob;
@@ -130,14 +130,14 @@ public final class PreventionJobTriggerState extends io.pulumi.resources.Resourc
     }
 
     private PreventionJobTriggerState() {
-        this.description = Input.empty();
-        this.displayName = Input.empty();
-        this.inspectJob = Input.empty();
-        this.lastRunTime = Input.empty();
-        this.name = Input.empty();
-        this.parent = Input.empty();
-        this.status = Input.empty();
-        this.triggers = Input.empty();
+        this.description = Output.empty();
+        this.displayName = Output.empty();
+        this.inspectJob = Output.empty();
+        this.lastRunTime = Output.empty();
+        this.name = Output.empty();
+        this.parent = Output.empty();
+        this.status = Output.empty();
+        this.triggers = Output.empty();
     }
 
     public static Builder builder() {
@@ -149,14 +149,14 @@ public final class PreventionJobTriggerState extends io.pulumi.resources.Resourc
     }
 
     public static final class Builder {
-        private @Nullable Input<String> description;
-        private @Nullable Input<String> displayName;
-        private @Nullable Input<PreventionJobTriggerInspectJobGetArgs> inspectJob;
-        private @Nullable Input<String> lastRunTime;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> parent;
-        private @Nullable Input<String> status;
-        private @Nullable Input<List<PreventionJobTriggerTriggerGetArgs>> triggers;
+        private @Nullable Output<String> description;
+        private @Nullable Output<String> displayName;
+        private @Nullable Output<PreventionJobTriggerInspectJobGetArgs> inspectJob;
+        private @Nullable Output<String> lastRunTime;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> parent;
+        private @Nullable Output<String> status;
+        private @Nullable Output<List<PreventionJobTriggerTriggerGetArgs>> triggers;
 
         public Builder() {
     	      // Empty
@@ -174,83 +174,83 @@ public final class PreventionJobTriggerState extends io.pulumi.resources.Resourc
     	      this.triggers = defaults.triggers;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder displayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Input.ofNullable(displayName);
+            this.displayName = Output.ofNullable(displayName);
             return this;
         }
 
-        public Builder inspectJob(@Nullable Input<PreventionJobTriggerInspectJobGetArgs> inspectJob) {
+        public Builder inspectJob(@Nullable Output<PreventionJobTriggerInspectJobGetArgs> inspectJob) {
             this.inspectJob = inspectJob;
             return this;
         }
 
         public Builder inspectJob(@Nullable PreventionJobTriggerInspectJobGetArgs inspectJob) {
-            this.inspectJob = Input.ofNullable(inspectJob);
+            this.inspectJob = Output.ofNullable(inspectJob);
             return this;
         }
 
-        public Builder lastRunTime(@Nullable Input<String> lastRunTime) {
+        public Builder lastRunTime(@Nullable Output<String> lastRunTime) {
             this.lastRunTime = lastRunTime;
             return this;
         }
 
         public Builder lastRunTime(@Nullable String lastRunTime) {
-            this.lastRunTime = Input.ofNullable(lastRunTime);
+            this.lastRunTime = Output.ofNullable(lastRunTime);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder parent(@Nullable Input<String> parent) {
+        public Builder parent(@Nullable Output<String> parent) {
             this.parent = parent;
             return this;
         }
 
         public Builder parent(@Nullable String parent) {
-            this.parent = Input.ofNullable(parent);
+            this.parent = Output.ofNullable(parent);
             return this;
         }
 
-        public Builder status(@Nullable Input<String> status) {
+        public Builder status(@Nullable Output<String> status) {
             this.status = status;
             return this;
         }
 
         public Builder status(@Nullable String status) {
-            this.status = Input.ofNullable(status);
+            this.status = Output.ofNullable(status);
             return this;
         }
 
-        public Builder triggers(@Nullable Input<List<PreventionJobTriggerTriggerGetArgs>> triggers) {
+        public Builder triggers(@Nullable Output<List<PreventionJobTriggerTriggerGetArgs>> triggers) {
             this.triggers = triggers;
             return this;
         }
 
         public Builder triggers(@Nullable List<PreventionJobTriggerTriggerGetArgs> triggers) {
-            this.triggers = Input.ofNullable(triggers);
+            this.triggers = Output.ofNullable(triggers);
             return this;
         }
         public PreventionJobTriggerState build() {

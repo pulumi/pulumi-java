@@ -6,7 +6,7 @@ package io.pulumi.awsnative.networkfirewall.inputs;
 import io.pulumi.awsnative.networkfirewall.inputs.RuleGroupRulesSourceListArgs;
 import io.pulumi.awsnative.networkfirewall.inputs.RuleGroupStatefulRuleArgs;
 import io.pulumi.awsnative.networkfirewall.inputs.RuleGroupStatelessRulesAndCustomActionsArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -19,38 +19,38 @@ public final class RuleGroupRulesSourceArgs extends io.pulumi.resources.Resource
     public static final RuleGroupRulesSourceArgs Empty = new RuleGroupRulesSourceArgs();
 
     @InputImport(name="rulesSourceList")
-      private final @Nullable Input<RuleGroupRulesSourceListArgs> rulesSourceList;
+      private final @Nullable Output<RuleGroupRulesSourceListArgs> rulesSourceList;
 
-    public Input<RuleGroupRulesSourceListArgs> getRulesSourceList() {
-        return this.rulesSourceList == null ? Input.empty() : this.rulesSourceList;
+    public Output<RuleGroupRulesSourceListArgs> getRulesSourceList() {
+        return this.rulesSourceList == null ? Output.empty() : this.rulesSourceList;
     }
 
     @InputImport(name="rulesString")
-      private final @Nullable Input<String> rulesString;
+      private final @Nullable Output<String> rulesString;
 
-    public Input<String> getRulesString() {
-        return this.rulesString == null ? Input.empty() : this.rulesString;
+    public Output<String> getRulesString() {
+        return this.rulesString == null ? Output.empty() : this.rulesString;
     }
 
     @InputImport(name="statefulRules")
-      private final @Nullable Input<List<RuleGroupStatefulRuleArgs>> statefulRules;
+      private final @Nullable Output<List<RuleGroupStatefulRuleArgs>> statefulRules;
 
-    public Input<List<RuleGroupStatefulRuleArgs>> getStatefulRules() {
-        return this.statefulRules == null ? Input.empty() : this.statefulRules;
+    public Output<List<RuleGroupStatefulRuleArgs>> getStatefulRules() {
+        return this.statefulRules == null ? Output.empty() : this.statefulRules;
     }
 
     @InputImport(name="statelessRulesAndCustomActions")
-      private final @Nullable Input<RuleGroupStatelessRulesAndCustomActionsArgs> statelessRulesAndCustomActions;
+      private final @Nullable Output<RuleGroupStatelessRulesAndCustomActionsArgs> statelessRulesAndCustomActions;
 
-    public Input<RuleGroupStatelessRulesAndCustomActionsArgs> getStatelessRulesAndCustomActions() {
-        return this.statelessRulesAndCustomActions == null ? Input.empty() : this.statelessRulesAndCustomActions;
+    public Output<RuleGroupStatelessRulesAndCustomActionsArgs> getStatelessRulesAndCustomActions() {
+        return this.statelessRulesAndCustomActions == null ? Output.empty() : this.statelessRulesAndCustomActions;
     }
 
     public RuleGroupRulesSourceArgs(
-        @Nullable Input<RuleGroupRulesSourceListArgs> rulesSourceList,
-        @Nullable Input<String> rulesString,
-        @Nullable Input<List<RuleGroupStatefulRuleArgs>> statefulRules,
-        @Nullable Input<RuleGroupStatelessRulesAndCustomActionsArgs> statelessRulesAndCustomActions) {
+        @Nullable Output<RuleGroupRulesSourceListArgs> rulesSourceList,
+        @Nullable Output<String> rulesString,
+        @Nullable Output<List<RuleGroupStatefulRuleArgs>> statefulRules,
+        @Nullable Output<RuleGroupStatelessRulesAndCustomActionsArgs> statelessRulesAndCustomActions) {
         this.rulesSourceList = rulesSourceList;
         this.rulesString = rulesString;
         this.statefulRules = statefulRules;
@@ -58,10 +58,10 @@ public final class RuleGroupRulesSourceArgs extends io.pulumi.resources.Resource
     }
 
     private RuleGroupRulesSourceArgs() {
-        this.rulesSourceList = Input.empty();
-        this.rulesString = Input.empty();
-        this.statefulRules = Input.empty();
-        this.statelessRulesAndCustomActions = Input.empty();
+        this.rulesSourceList = Output.empty();
+        this.rulesString = Output.empty();
+        this.statefulRules = Output.empty();
+        this.statelessRulesAndCustomActions = Output.empty();
     }
 
     public static Builder builder() {
@@ -73,10 +73,10 @@ public final class RuleGroupRulesSourceArgs extends io.pulumi.resources.Resource
     }
 
     public static final class Builder {
-        private @Nullable Input<RuleGroupRulesSourceListArgs> rulesSourceList;
-        private @Nullable Input<String> rulesString;
-        private @Nullable Input<List<RuleGroupStatefulRuleArgs>> statefulRules;
-        private @Nullable Input<RuleGroupStatelessRulesAndCustomActionsArgs> statelessRulesAndCustomActions;
+        private @Nullable Output<RuleGroupRulesSourceListArgs> rulesSourceList;
+        private @Nullable Output<String> rulesString;
+        private @Nullable Output<List<RuleGroupStatefulRuleArgs>> statefulRules;
+        private @Nullable Output<RuleGroupStatelessRulesAndCustomActionsArgs> statelessRulesAndCustomActions;
 
         public Builder() {
     	      // Empty
@@ -90,43 +90,43 @@ public final class RuleGroupRulesSourceArgs extends io.pulumi.resources.Resource
     	      this.statelessRulesAndCustomActions = defaults.statelessRulesAndCustomActions;
         }
 
-        public Builder rulesSourceList(@Nullable Input<RuleGroupRulesSourceListArgs> rulesSourceList) {
+        public Builder rulesSourceList(@Nullable Output<RuleGroupRulesSourceListArgs> rulesSourceList) {
             this.rulesSourceList = rulesSourceList;
             return this;
         }
 
         public Builder rulesSourceList(@Nullable RuleGroupRulesSourceListArgs rulesSourceList) {
-            this.rulesSourceList = Input.ofNullable(rulesSourceList);
+            this.rulesSourceList = Output.ofNullable(rulesSourceList);
             return this;
         }
 
-        public Builder rulesString(@Nullable Input<String> rulesString) {
+        public Builder rulesString(@Nullable Output<String> rulesString) {
             this.rulesString = rulesString;
             return this;
         }
 
         public Builder rulesString(@Nullable String rulesString) {
-            this.rulesString = Input.ofNullable(rulesString);
+            this.rulesString = Output.ofNullable(rulesString);
             return this;
         }
 
-        public Builder statefulRules(@Nullable Input<List<RuleGroupStatefulRuleArgs>> statefulRules) {
+        public Builder statefulRules(@Nullable Output<List<RuleGroupStatefulRuleArgs>> statefulRules) {
             this.statefulRules = statefulRules;
             return this;
         }
 
         public Builder statefulRules(@Nullable List<RuleGroupStatefulRuleArgs> statefulRules) {
-            this.statefulRules = Input.ofNullable(statefulRules);
+            this.statefulRules = Output.ofNullable(statefulRules);
             return this;
         }
 
-        public Builder statelessRulesAndCustomActions(@Nullable Input<RuleGroupStatelessRulesAndCustomActionsArgs> statelessRulesAndCustomActions) {
+        public Builder statelessRulesAndCustomActions(@Nullable Output<RuleGroupStatelessRulesAndCustomActionsArgs> statelessRulesAndCustomActions) {
             this.statelessRulesAndCustomActions = statelessRulesAndCustomActions;
             return this;
         }
 
         public Builder statelessRulesAndCustomActions(@Nullable RuleGroupStatelessRulesAndCustomActionsArgs statelessRulesAndCustomActions) {
-            this.statelessRulesAndCustomActions = Input.ofNullable(statelessRulesAndCustomActions);
+            this.statelessRulesAndCustomActions = Output.ofNullable(statelessRulesAndCustomActions);
             return this;
         }
         public RuleGroupRulesSourceArgs build() {

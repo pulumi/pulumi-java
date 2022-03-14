@@ -8,7 +8,7 @@ import io.pulumi.azurenative.appconfiguration.inputs.EncryptionPropertiesArgs;
 import io.pulumi.azurenative.appconfiguration.inputs.ResourceIdentityArgs;
 import io.pulumi.azurenative.appconfiguration.inputs.SkuArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -25,10 +25,10 @@ public final class ConfigurationStoreArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="configStoreName")
-      private final @Nullable Input<String> configStoreName;
+      private final @Nullable Output<String> configStoreName;
 
-    public Input<String> getConfigStoreName() {
-        return this.configStoreName == null ? Input.empty() : this.configStoreName;
+    public Output<String> getConfigStoreName() {
+        return this.configStoreName == null ? Output.empty() : this.configStoreName;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class ConfigurationStoreArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="encryption")
-      private final @Nullable Input<EncryptionPropertiesArgs> encryption;
+      private final @Nullable Output<EncryptionPropertiesArgs> encryption;
 
-    public Input<EncryptionPropertiesArgs> getEncryption() {
-        return this.encryption == null ? Input.empty() : this.encryption;
+    public Output<EncryptionPropertiesArgs> getEncryption() {
+        return this.encryption == null ? Output.empty() : this.encryption;
     }
 
     /**
@@ -47,10 +47,10 @@ public final class ConfigurationStoreArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="identity")
-      private final @Nullable Input<ResourceIdentityArgs> identity;
+      private final @Nullable Output<ResourceIdentityArgs> identity;
 
-    public Input<ResourceIdentityArgs> getIdentity() {
-        return this.identity == null ? Input.empty() : this.identity;
+    public Output<ResourceIdentityArgs> getIdentity() {
+        return this.identity == null ? Output.empty() : this.identity;
     }
 
     /**
@@ -58,10 +58,10 @@ public final class ConfigurationStoreArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -69,10 +69,10 @@ public final class ConfigurationStoreArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="publicNetworkAccess")
-      private final @Nullable Input<Either<String,PublicNetworkAccess>> publicNetworkAccess;
+      private final @Nullable Output<Either<String,PublicNetworkAccess>> publicNetworkAccess;
 
-    public Input<Either<String,PublicNetworkAccess>> getPublicNetworkAccess() {
-        return this.publicNetworkAccess == null ? Input.empty() : this.publicNetworkAccess;
+    public Output<Either<String,PublicNetworkAccess>> getPublicNetworkAccess() {
+        return this.publicNetworkAccess == null ? Output.empty() : this.publicNetworkAccess;
     }
 
     /**
@@ -80,9 +80,9 @@ public final class ConfigurationStoreArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -91,9 +91,9 @@ public final class ConfigurationStoreArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="sku", required=true)
-      private final Input<SkuArgs> sku;
+      private final Output<SkuArgs> sku;
 
-    public Input<SkuArgs> getSku() {
+    public Output<SkuArgs> getSku() {
         return this.sku;
     }
 
@@ -102,21 +102,21 @@ public final class ConfigurationStoreArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public ConfigurationStoreArgs(
-        @Nullable Input<String> configStoreName,
-        @Nullable Input<EncryptionPropertiesArgs> encryption,
-        @Nullable Input<ResourceIdentityArgs> identity,
-        @Nullable Input<String> location,
-        @Nullable Input<Either<String,PublicNetworkAccess>> publicNetworkAccess,
-        Input<String> resourceGroupName,
-        Input<SkuArgs> sku,
-        @Nullable Input<Map<String,String>> tags) {
+        @Nullable Output<String> configStoreName,
+        @Nullable Output<EncryptionPropertiesArgs> encryption,
+        @Nullable Output<ResourceIdentityArgs> identity,
+        @Nullable Output<String> location,
+        @Nullable Output<Either<String,PublicNetworkAccess>> publicNetworkAccess,
+        Output<String> resourceGroupName,
+        Output<SkuArgs> sku,
+        @Nullable Output<Map<String,String>> tags) {
         this.configStoreName = configStoreName;
         this.encryption = encryption;
         this.identity = identity;
@@ -128,14 +128,14 @@ public final class ConfigurationStoreArgs extends io.pulumi.resources.ResourceAr
     }
 
     private ConfigurationStoreArgs() {
-        this.configStoreName = Input.empty();
-        this.encryption = Input.empty();
-        this.identity = Input.empty();
-        this.location = Input.empty();
-        this.publicNetworkAccess = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.sku = Input.empty();
-        this.tags = Input.empty();
+        this.configStoreName = Output.empty();
+        this.encryption = Output.empty();
+        this.identity = Output.empty();
+        this.location = Output.empty();
+        this.publicNetworkAccess = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.sku = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -147,14 +147,14 @@ public final class ConfigurationStoreArgs extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private @Nullable Input<String> configStoreName;
-        private @Nullable Input<EncryptionPropertiesArgs> encryption;
-        private @Nullable Input<ResourceIdentityArgs> identity;
-        private @Nullable Input<String> location;
-        private @Nullable Input<Either<String,PublicNetworkAccess>> publicNetworkAccess;
-        private Input<String> resourceGroupName;
-        private Input<SkuArgs> sku;
-        private @Nullable Input<Map<String,String>> tags;
+        private @Nullable Output<String> configStoreName;
+        private @Nullable Output<EncryptionPropertiesArgs> encryption;
+        private @Nullable Output<ResourceIdentityArgs> identity;
+        private @Nullable Output<String> location;
+        private @Nullable Output<Either<String,PublicNetworkAccess>> publicNetworkAccess;
+        private Output<String> resourceGroupName;
+        private Output<SkuArgs> sku;
+        private @Nullable Output<Map<String,String>> tags;
 
         public Builder() {
     	      // Empty
@@ -172,83 +172,83 @@ public final class ConfigurationStoreArgs extends io.pulumi.resources.ResourceAr
     	      this.tags = defaults.tags;
         }
 
-        public Builder configStoreName(@Nullable Input<String> configStoreName) {
+        public Builder configStoreName(@Nullable Output<String> configStoreName) {
             this.configStoreName = configStoreName;
             return this;
         }
 
         public Builder configStoreName(@Nullable String configStoreName) {
-            this.configStoreName = Input.ofNullable(configStoreName);
+            this.configStoreName = Output.ofNullable(configStoreName);
             return this;
         }
 
-        public Builder encryption(@Nullable Input<EncryptionPropertiesArgs> encryption) {
+        public Builder encryption(@Nullable Output<EncryptionPropertiesArgs> encryption) {
             this.encryption = encryption;
             return this;
         }
 
         public Builder encryption(@Nullable EncryptionPropertiesArgs encryption) {
-            this.encryption = Input.ofNullable(encryption);
+            this.encryption = Output.ofNullable(encryption);
             return this;
         }
 
-        public Builder identity(@Nullable Input<ResourceIdentityArgs> identity) {
+        public Builder identity(@Nullable Output<ResourceIdentityArgs> identity) {
             this.identity = identity;
             return this;
         }
 
         public Builder identity(@Nullable ResourceIdentityArgs identity) {
-            this.identity = Input.ofNullable(identity);
+            this.identity = Output.ofNullable(identity);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder publicNetworkAccess(@Nullable Input<Either<String,PublicNetworkAccess>> publicNetworkAccess) {
+        public Builder publicNetworkAccess(@Nullable Output<Either<String,PublicNetworkAccess>> publicNetworkAccess) {
             this.publicNetworkAccess = publicNetworkAccess;
             return this;
         }
 
         public Builder publicNetworkAccess(@Nullable Either<String,PublicNetworkAccess> publicNetworkAccess) {
-            this.publicNetworkAccess = Input.ofNullable(publicNetworkAccess);
+            this.publicNetworkAccess = Output.ofNullable(publicNetworkAccess);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder sku(Input<SkuArgs> sku) {
+        public Builder sku(Output<SkuArgs> sku) {
             this.sku = Objects.requireNonNull(sku);
             return this;
         }
 
         public Builder sku(SkuArgs sku) {
-            this.sku = Input.of(Objects.requireNonNull(sku));
+            this.sku = Output.of(Objects.requireNonNull(sku));
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public ConfigurationStoreArgs build() {

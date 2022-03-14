@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.apigee_v1;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -20,9 +20,9 @@ public final class EnvgroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="hostnames", required=true)
-      private final Input<List<String>> hostnames;
+      private final Output<List<String>> hostnames;
 
-    public Input<List<String>> getHostnames() {
+    public Output<List<String>> getHostnames() {
         return this.hostnames;
     }
 
@@ -31,32 +31,32 @@ public final class EnvgroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     @InputImport(name="organizationId", required=true)
-      private final Input<String> organizationId;
+      private final Output<String> organizationId;
 
-    public Input<String> getOrganizationId() {
+    public Output<String> getOrganizationId() {
         return this.organizationId;
     }
 
     public EnvgroupArgs(
-        Input<List<String>> hostnames,
-        @Nullable Input<String> name,
-        Input<String> organizationId) {
+        Output<List<String>> hostnames,
+        @Nullable Output<String> name,
+        Output<String> organizationId) {
         this.hostnames = Objects.requireNonNull(hostnames, "expected parameter 'hostnames' to be non-null");
         this.name = name;
         this.organizationId = Objects.requireNonNull(organizationId, "expected parameter 'organizationId' to be non-null");
     }
 
     private EnvgroupArgs() {
-        this.hostnames = Input.empty();
-        this.name = Input.empty();
-        this.organizationId = Input.empty();
+        this.hostnames = Output.empty();
+        this.name = Output.empty();
+        this.organizationId = Output.empty();
     }
 
     public static Builder builder() {
@@ -68,9 +68,9 @@ public final class EnvgroupArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<List<String>> hostnames;
-        private @Nullable Input<String> name;
-        private Input<String> organizationId;
+        private Output<List<String>> hostnames;
+        private @Nullable Output<String> name;
+        private Output<String> organizationId;
 
         public Builder() {
     	      // Empty
@@ -83,33 +83,33 @@ public final class EnvgroupArgs extends io.pulumi.resources.ResourceArgs {
     	      this.organizationId = defaults.organizationId;
         }
 
-        public Builder hostnames(Input<List<String>> hostnames) {
+        public Builder hostnames(Output<List<String>> hostnames) {
             this.hostnames = Objects.requireNonNull(hostnames);
             return this;
         }
 
         public Builder hostnames(List<String> hostnames) {
-            this.hostnames = Input.of(Objects.requireNonNull(hostnames));
+            this.hostnames = Output.of(Objects.requireNonNull(hostnames));
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder organizationId(Input<String> organizationId) {
+        public Builder organizationId(Output<String> organizationId) {
             this.organizationId = Objects.requireNonNull(organizationId);
             return this;
         }
 
         public Builder organizationId(String organizationId) {
-            this.organizationId = Input.of(Objects.requireNonNull(organizationId));
+            this.organizationId = Output.of(Objects.requireNonNull(organizationId));
             return this;
         }
         public EnvgroupArgs build() {

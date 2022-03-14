@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.compute;
 
 import io.pulumi.azurenative.compute.inputs.ApiEntityReferenceArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -21,10 +21,10 @@ public final class RestorePointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="excludeDisks")
-      private final @Nullable Input<List<ApiEntityReferenceArgs>> excludeDisks;
+      private final @Nullable Output<List<ApiEntityReferenceArgs>> excludeDisks;
 
-    public Input<List<ApiEntityReferenceArgs>> getExcludeDisks() {
-        return this.excludeDisks == null ? Input.empty() : this.excludeDisks;
+    public Output<List<ApiEntityReferenceArgs>> getExcludeDisks() {
+        return this.excludeDisks == null ? Output.empty() : this.excludeDisks;
     }
 
     /**
@@ -32,9 +32,9 @@ public final class RestorePointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -43,9 +43,9 @@ public final class RestorePointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="restorePointCollectionName", required=true)
-      private final Input<String> restorePointCollectionName;
+      private final Output<String> restorePointCollectionName;
 
-    public Input<String> getRestorePointCollectionName() {
+    public Output<String> getRestorePointCollectionName() {
         return this.restorePointCollectionName;
     }
 
@@ -54,10 +54,10 @@ public final class RestorePointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="restorePointName")
-      private final @Nullable Input<String> restorePointName;
+      private final @Nullable Output<String> restorePointName;
 
-    public Input<String> getRestorePointName() {
-        return this.restorePointName == null ? Input.empty() : this.restorePointName;
+    public Output<String> getRestorePointName() {
+        return this.restorePointName == null ? Output.empty() : this.restorePointName;
     }
 
     /**
@@ -65,18 +65,18 @@ public final class RestorePointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="timeCreated")
-      private final @Nullable Input<String> timeCreated;
+      private final @Nullable Output<String> timeCreated;
 
-    public Input<String> getTimeCreated() {
-        return this.timeCreated == null ? Input.empty() : this.timeCreated;
+    public Output<String> getTimeCreated() {
+        return this.timeCreated == null ? Output.empty() : this.timeCreated;
     }
 
     public RestorePointArgs(
-        @Nullable Input<List<ApiEntityReferenceArgs>> excludeDisks,
-        Input<String> resourceGroupName,
-        Input<String> restorePointCollectionName,
-        @Nullable Input<String> restorePointName,
-        @Nullable Input<String> timeCreated) {
+        @Nullable Output<List<ApiEntityReferenceArgs>> excludeDisks,
+        Output<String> resourceGroupName,
+        Output<String> restorePointCollectionName,
+        @Nullable Output<String> restorePointName,
+        @Nullable Output<String> timeCreated) {
         this.excludeDisks = excludeDisks;
         this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
         this.restorePointCollectionName = Objects.requireNonNull(restorePointCollectionName, "expected parameter 'restorePointCollectionName' to be non-null");
@@ -85,11 +85,11 @@ public final class RestorePointArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private RestorePointArgs() {
-        this.excludeDisks = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.restorePointCollectionName = Input.empty();
-        this.restorePointName = Input.empty();
-        this.timeCreated = Input.empty();
+        this.excludeDisks = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.restorePointCollectionName = Output.empty();
+        this.restorePointName = Output.empty();
+        this.timeCreated = Output.empty();
     }
 
     public static Builder builder() {
@@ -101,11 +101,11 @@ public final class RestorePointArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<List<ApiEntityReferenceArgs>> excludeDisks;
-        private Input<String> resourceGroupName;
-        private Input<String> restorePointCollectionName;
-        private @Nullable Input<String> restorePointName;
-        private @Nullable Input<String> timeCreated;
+        private @Nullable Output<List<ApiEntityReferenceArgs>> excludeDisks;
+        private Output<String> resourceGroupName;
+        private Output<String> restorePointCollectionName;
+        private @Nullable Output<String> restorePointName;
+        private @Nullable Output<String> timeCreated;
 
         public Builder() {
     	      // Empty
@@ -120,53 +120,53 @@ public final class RestorePointArgs extends io.pulumi.resources.ResourceArgs {
     	      this.timeCreated = defaults.timeCreated;
         }
 
-        public Builder excludeDisks(@Nullable Input<List<ApiEntityReferenceArgs>> excludeDisks) {
+        public Builder excludeDisks(@Nullable Output<List<ApiEntityReferenceArgs>> excludeDisks) {
             this.excludeDisks = excludeDisks;
             return this;
         }
 
         public Builder excludeDisks(@Nullable List<ApiEntityReferenceArgs> excludeDisks) {
-            this.excludeDisks = Input.ofNullable(excludeDisks);
+            this.excludeDisks = Output.ofNullable(excludeDisks);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder restorePointCollectionName(Input<String> restorePointCollectionName) {
+        public Builder restorePointCollectionName(Output<String> restorePointCollectionName) {
             this.restorePointCollectionName = Objects.requireNonNull(restorePointCollectionName);
             return this;
         }
 
         public Builder restorePointCollectionName(String restorePointCollectionName) {
-            this.restorePointCollectionName = Input.of(Objects.requireNonNull(restorePointCollectionName));
+            this.restorePointCollectionName = Output.of(Objects.requireNonNull(restorePointCollectionName));
             return this;
         }
 
-        public Builder restorePointName(@Nullable Input<String> restorePointName) {
+        public Builder restorePointName(@Nullable Output<String> restorePointName) {
             this.restorePointName = restorePointName;
             return this;
         }
 
         public Builder restorePointName(@Nullable String restorePointName) {
-            this.restorePointName = Input.ofNullable(restorePointName);
+            this.restorePointName = Output.ofNullable(restorePointName);
             return this;
         }
 
-        public Builder timeCreated(@Nullable Input<String> timeCreated) {
+        public Builder timeCreated(@Nullable Output<String> timeCreated) {
             this.timeCreated = timeCreated;
             return this;
         }
 
         public Builder timeCreated(@Nullable String timeCreated) {
-            this.timeCreated = Input.ofNullable(timeCreated);
+            this.timeCreated = Output.ofNullable(timeCreated);
             return this;
         }
         public RestorePointArgs build() {

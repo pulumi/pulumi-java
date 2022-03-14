@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.networkfirewall.inputs;
 
 import io.pulumi.awsnative.networkfirewall.inputs.FirewallPolicyPublishMetricActionArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -15,18 +15,18 @@ public final class FirewallPolicyActionDefinitionArgs extends io.pulumi.resource
     public static final FirewallPolicyActionDefinitionArgs Empty = new FirewallPolicyActionDefinitionArgs();
 
     @InputImport(name="publishMetricAction")
-      private final @Nullable Input<FirewallPolicyPublishMetricActionArgs> publishMetricAction;
+      private final @Nullable Output<FirewallPolicyPublishMetricActionArgs> publishMetricAction;
 
-    public Input<FirewallPolicyPublishMetricActionArgs> getPublishMetricAction() {
-        return this.publishMetricAction == null ? Input.empty() : this.publishMetricAction;
+    public Output<FirewallPolicyPublishMetricActionArgs> getPublishMetricAction() {
+        return this.publishMetricAction == null ? Output.empty() : this.publishMetricAction;
     }
 
-    public FirewallPolicyActionDefinitionArgs(@Nullable Input<FirewallPolicyPublishMetricActionArgs> publishMetricAction) {
+    public FirewallPolicyActionDefinitionArgs(@Nullable Output<FirewallPolicyPublishMetricActionArgs> publishMetricAction) {
         this.publishMetricAction = publishMetricAction;
     }
 
     private FirewallPolicyActionDefinitionArgs() {
-        this.publishMetricAction = Input.empty();
+        this.publishMetricAction = Output.empty();
     }
 
     public static Builder builder() {
@@ -38,7 +38,7 @@ public final class FirewallPolicyActionDefinitionArgs extends io.pulumi.resource
     }
 
     public static final class Builder {
-        private @Nullable Input<FirewallPolicyPublishMetricActionArgs> publishMetricAction;
+        private @Nullable Output<FirewallPolicyPublishMetricActionArgs> publishMetricAction;
 
         public Builder() {
     	      // Empty
@@ -49,13 +49,13 @@ public final class FirewallPolicyActionDefinitionArgs extends io.pulumi.resource
     	      this.publishMetricAction = defaults.publishMetricAction;
         }
 
-        public Builder publishMetricAction(@Nullable Input<FirewallPolicyPublishMetricActionArgs> publishMetricAction) {
+        public Builder publishMetricAction(@Nullable Output<FirewallPolicyPublishMetricActionArgs> publishMetricAction) {
             this.publishMetricAction = publishMetricAction;
             return this;
         }
 
         public Builder publishMetricAction(@Nullable FirewallPolicyPublishMetricActionArgs publishMetricAction) {
-            this.publishMetricAction = Input.ofNullable(publishMetricAction);
+            this.publishMetricAction = Output.ofNullable(publishMetricAction);
             return this;
         }
         public FirewallPolicyActionDefinitionArgs build() {

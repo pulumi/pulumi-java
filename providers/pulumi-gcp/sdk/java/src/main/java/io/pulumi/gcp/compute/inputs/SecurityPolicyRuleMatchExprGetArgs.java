@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,18 +19,18 @@ public final class SecurityPolicyRuleMatchExprGetArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="expression", required=true)
-      private final Input<String> expression;
+      private final Output<String> expression;
 
-    public Input<String> getExpression() {
+    public Output<String> getExpression() {
         return this.expression;
     }
 
-    public SecurityPolicyRuleMatchExprGetArgs(Input<String> expression) {
+    public SecurityPolicyRuleMatchExprGetArgs(Output<String> expression) {
         this.expression = Objects.requireNonNull(expression, "expected parameter 'expression' to be non-null");
     }
 
     private SecurityPolicyRuleMatchExprGetArgs() {
-        this.expression = Input.empty();
+        this.expression = Output.empty();
     }
 
     public static Builder builder() {
@@ -42,7 +42,7 @@ public final class SecurityPolicyRuleMatchExprGetArgs extends io.pulumi.resource
     }
 
     public static final class Builder {
-        private Input<String> expression;
+        private Output<String> expression;
 
         public Builder() {
     	      // Empty
@@ -53,13 +53,13 @@ public final class SecurityPolicyRuleMatchExprGetArgs extends io.pulumi.resource
     	      this.expression = defaults.expression;
         }
 
-        public Builder expression(Input<String> expression) {
+        public Builder expression(Output<String> expression) {
             this.expression = Objects.requireNonNull(expression);
             return this;
         }
 
         public Builder expression(String expression) {
-            this.expression = Input.of(Objects.requireNonNull(expression));
+            this.expression = Output.of(Objects.requireNonNull(expression));
             return this;
         }
         public SecurityPolicyRuleMatchExprGetArgs build() {

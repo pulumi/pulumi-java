@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.ec2;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -18,9 +18,9 @@ public final class VpnGatewayAttachmentArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="vpcId", required=true)
-      private final Input<String> vpcId;
+      private final Output<String> vpcId;
 
-    public Input<String> getVpcId() {
+    public Output<String> getVpcId() {
         return this.vpcId;
     }
 
@@ -29,22 +29,22 @@ public final class VpnGatewayAttachmentArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="vpnGatewayId", required=true)
-      private final Input<String> vpnGatewayId;
+      private final Output<String> vpnGatewayId;
 
-    public Input<String> getVpnGatewayId() {
+    public Output<String> getVpnGatewayId() {
         return this.vpnGatewayId;
     }
 
     public VpnGatewayAttachmentArgs(
-        Input<String> vpcId,
-        Input<String> vpnGatewayId) {
+        Output<String> vpcId,
+        Output<String> vpnGatewayId) {
         this.vpcId = Objects.requireNonNull(vpcId, "expected parameter 'vpcId' to be non-null");
         this.vpnGatewayId = Objects.requireNonNull(vpnGatewayId, "expected parameter 'vpnGatewayId' to be non-null");
     }
 
     private VpnGatewayAttachmentArgs() {
-        this.vpcId = Input.empty();
-        this.vpnGatewayId = Input.empty();
+        this.vpcId = Output.empty();
+        this.vpnGatewayId = Output.empty();
     }
 
     public static Builder builder() {
@@ -56,8 +56,8 @@ public final class VpnGatewayAttachmentArgs extends io.pulumi.resources.Resource
     }
 
     public static final class Builder {
-        private Input<String> vpcId;
-        private Input<String> vpnGatewayId;
+        private Output<String> vpcId;
+        private Output<String> vpnGatewayId;
 
         public Builder() {
     	      // Empty
@@ -69,23 +69,23 @@ public final class VpnGatewayAttachmentArgs extends io.pulumi.resources.Resource
     	      this.vpnGatewayId = defaults.vpnGatewayId;
         }
 
-        public Builder vpcId(Input<String> vpcId) {
+        public Builder vpcId(Output<String> vpcId) {
             this.vpcId = Objects.requireNonNull(vpcId);
             return this;
         }
 
         public Builder vpcId(String vpcId) {
-            this.vpcId = Input.of(Objects.requireNonNull(vpcId));
+            this.vpcId = Output.of(Objects.requireNonNull(vpcId));
             return this;
         }
 
-        public Builder vpnGatewayId(Input<String> vpnGatewayId) {
+        public Builder vpnGatewayId(Output<String> vpnGatewayId) {
             this.vpnGatewayId = Objects.requireNonNull(vpnGatewayId);
             return this;
         }
 
         public Builder vpnGatewayId(String vpnGatewayId) {
-            this.vpnGatewayId = Input.of(Objects.requireNonNull(vpnGatewayId));
+            this.vpnGatewayId = Output.of(Objects.requireNonNull(vpnGatewayId));
             return this;
         }
         public VpnGatewayAttachmentArgs build() {

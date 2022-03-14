@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.glue.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -20,17 +20,17 @@ public final class PartitionIndexPartitionIndexArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="indexName")
-      private final @Nullable Input<String> indexName;
+      private final @Nullable Output<String> indexName;
 
-    public Input<String> getIndexName() {
-        return this.indexName == null ? Input.empty() : this.indexName;
+    public Output<String> getIndexName() {
+        return this.indexName == null ? Output.empty() : this.indexName;
     }
 
     @InputImport(name="indexStatus")
-      private final @Nullable Input<String> indexStatus;
+      private final @Nullable Output<String> indexStatus;
 
-    public Input<String> getIndexStatus() {
-        return this.indexStatus == null ? Input.empty() : this.indexStatus;
+    public Output<String> getIndexStatus() {
+        return this.indexStatus == null ? Output.empty() : this.indexStatus;
     }
 
     /**
@@ -38,25 +38,25 @@ public final class PartitionIndexPartitionIndexArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="keys")
-      private final @Nullable Input<List<String>> keys;
+      private final @Nullable Output<List<String>> keys;
 
-    public Input<List<String>> getKeys() {
-        return this.keys == null ? Input.empty() : this.keys;
+    public Output<List<String>> getKeys() {
+        return this.keys == null ? Output.empty() : this.keys;
     }
 
     public PartitionIndexPartitionIndexArgs(
-        @Nullable Input<String> indexName,
-        @Nullable Input<String> indexStatus,
-        @Nullable Input<List<String>> keys) {
+        @Nullable Output<String> indexName,
+        @Nullable Output<String> indexStatus,
+        @Nullable Output<List<String>> keys) {
         this.indexName = indexName;
         this.indexStatus = indexStatus;
         this.keys = keys;
     }
 
     private PartitionIndexPartitionIndexArgs() {
-        this.indexName = Input.empty();
-        this.indexStatus = Input.empty();
-        this.keys = Input.empty();
+        this.indexName = Output.empty();
+        this.indexStatus = Output.empty();
+        this.keys = Output.empty();
     }
 
     public static Builder builder() {
@@ -68,9 +68,9 @@ public final class PartitionIndexPartitionIndexArgs extends io.pulumi.resources.
     }
 
     public static final class Builder {
-        private @Nullable Input<String> indexName;
-        private @Nullable Input<String> indexStatus;
-        private @Nullable Input<List<String>> keys;
+        private @Nullable Output<String> indexName;
+        private @Nullable Output<String> indexStatus;
+        private @Nullable Output<List<String>> keys;
 
         public Builder() {
     	      // Empty
@@ -83,33 +83,33 @@ public final class PartitionIndexPartitionIndexArgs extends io.pulumi.resources.
     	      this.keys = defaults.keys;
         }
 
-        public Builder indexName(@Nullable Input<String> indexName) {
+        public Builder indexName(@Nullable Output<String> indexName) {
             this.indexName = indexName;
             return this;
         }
 
         public Builder indexName(@Nullable String indexName) {
-            this.indexName = Input.ofNullable(indexName);
+            this.indexName = Output.ofNullable(indexName);
             return this;
         }
 
-        public Builder indexStatus(@Nullable Input<String> indexStatus) {
+        public Builder indexStatus(@Nullable Output<String> indexStatus) {
             this.indexStatus = indexStatus;
             return this;
         }
 
         public Builder indexStatus(@Nullable String indexStatus) {
-            this.indexStatus = Input.ofNullable(indexStatus);
+            this.indexStatus = Output.ofNullable(indexStatus);
             return this;
         }
 
-        public Builder keys(@Nullable Input<List<String>> keys) {
+        public Builder keys(@Nullable Output<List<String>> keys) {
             this.keys = keys;
             return this;
         }
 
         public Builder keys(@Nullable List<String> keys) {
-            this.keys = Input.ofNullable(keys);
+            this.keys = Output.ofNullable(keys);
             return this;
         }
         public PartitionIndexPartitionIndexArgs build() {

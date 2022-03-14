@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.gkehub.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.gkehub.inputs.FeatureStateStateArgs;
 import java.util.List;
@@ -16,18 +16,18 @@ public final class FeatureStateArgs extends io.pulumi.resources.ResourceArgs {
     public static final FeatureStateArgs Empty = new FeatureStateArgs();
 
     @InputImport(name="states")
-      private final @Nullable Input<List<FeatureStateStateArgs>> states;
+      private final @Nullable Output<List<FeatureStateStateArgs>> states;
 
-    public Input<List<FeatureStateStateArgs>> getStates() {
-        return this.states == null ? Input.empty() : this.states;
+    public Output<List<FeatureStateStateArgs>> getStates() {
+        return this.states == null ? Output.empty() : this.states;
     }
 
-    public FeatureStateArgs(@Nullable Input<List<FeatureStateStateArgs>> states) {
+    public FeatureStateArgs(@Nullable Output<List<FeatureStateStateArgs>> states) {
         this.states = states;
     }
 
     private FeatureStateArgs() {
-        this.states = Input.empty();
+        this.states = Output.empty();
     }
 
     public static Builder builder() {
@@ -39,7 +39,7 @@ public final class FeatureStateArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<List<FeatureStateStateArgs>> states;
+        private @Nullable Output<List<FeatureStateStateArgs>> states;
 
         public Builder() {
     	      // Empty
@@ -50,13 +50,13 @@ public final class FeatureStateArgs extends io.pulumi.resources.ResourceArgs {
     	      this.states = defaults.states;
         }
 
-        public Builder states(@Nullable Input<List<FeatureStateStateArgs>> states) {
+        public Builder states(@Nullable Output<List<FeatureStateStateArgs>> states) {
             this.states = states;
             return this;
         }
 
         public Builder states(@Nullable List<FeatureStateStateArgs> states) {
-            this.states = Input.ofNullable(states);
+            this.states = Output.ofNullable(states);
             return this;
         }
         public FeatureStateArgs build() {

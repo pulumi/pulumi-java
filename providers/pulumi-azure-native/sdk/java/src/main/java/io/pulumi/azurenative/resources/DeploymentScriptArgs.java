@@ -6,7 +6,7 @@ package io.pulumi.azurenative.resources;
 import io.pulumi.azurenative.resources.enums.ScriptType;
 import io.pulumi.azurenative.resources.inputs.ManagedServiceIdentityArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -23,10 +23,10 @@ public final class DeploymentScriptArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="identity")
-      private final @Nullable Input<ManagedServiceIdentityArgs> identity;
+      private final @Nullable Output<ManagedServiceIdentityArgs> identity;
 
-    public Input<ManagedServiceIdentityArgs> getIdentity() {
-        return this.identity == null ? Input.empty() : this.identity;
+    public Output<ManagedServiceIdentityArgs> getIdentity() {
+        return this.identity == null ? Output.empty() : this.identity;
     }
 
     /**
@@ -34,9 +34,9 @@ public final class DeploymentScriptArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="kind", required=true)
-      private final Input<Either<String,ScriptType>> kind;
+      private final Output<Either<String,ScriptType>> kind;
 
-    public Input<Either<String,ScriptType>> getKind() {
+    public Output<Either<String,ScriptType>> getKind() {
         return this.kind;
     }
 
@@ -45,10 +45,10 @@ public final class DeploymentScriptArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -56,9 +56,9 @@ public final class DeploymentScriptArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -67,10 +67,10 @@ public final class DeploymentScriptArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="scriptName")
-      private final @Nullable Input<String> scriptName;
+      private final @Nullable Output<String> scriptName;
 
-    public Input<String> getScriptName() {
-        return this.scriptName == null ? Input.empty() : this.scriptName;
+    public Output<String> getScriptName() {
+        return this.scriptName == null ? Output.empty() : this.scriptName;
     }
 
     /**
@@ -78,19 +78,19 @@ public final class DeploymentScriptArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public DeploymentScriptArgs(
-        @Nullable Input<ManagedServiceIdentityArgs> identity,
-        Input<Either<String,ScriptType>> kind,
-        @Nullable Input<String> location,
-        Input<String> resourceGroupName,
-        @Nullable Input<String> scriptName,
-        @Nullable Input<Map<String,String>> tags) {
+        @Nullable Output<ManagedServiceIdentityArgs> identity,
+        Output<Either<String,ScriptType>> kind,
+        @Nullable Output<String> location,
+        Output<String> resourceGroupName,
+        @Nullable Output<String> scriptName,
+        @Nullable Output<Map<String,String>> tags) {
         this.identity = identity;
         this.kind = Objects.requireNonNull(kind, "expected parameter 'kind' to be non-null");
         this.location = location;
@@ -100,12 +100,12 @@ public final class DeploymentScriptArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private DeploymentScriptArgs() {
-        this.identity = Input.empty();
-        this.kind = Input.empty();
-        this.location = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.scriptName = Input.empty();
-        this.tags = Input.empty();
+        this.identity = Output.empty();
+        this.kind = Output.empty();
+        this.location = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.scriptName = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -117,12 +117,12 @@ public final class DeploymentScriptArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private @Nullable Input<ManagedServiceIdentityArgs> identity;
-        private Input<Either<String,ScriptType>> kind;
-        private @Nullable Input<String> location;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<String> scriptName;
-        private @Nullable Input<Map<String,String>> tags;
+        private @Nullable Output<ManagedServiceIdentityArgs> identity;
+        private Output<Either<String,ScriptType>> kind;
+        private @Nullable Output<String> location;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<String> scriptName;
+        private @Nullable Output<Map<String,String>> tags;
 
         public Builder() {
     	      // Empty
@@ -138,63 +138,63 @@ public final class DeploymentScriptArgs extends io.pulumi.resources.ResourceArgs
     	      this.tags = defaults.tags;
         }
 
-        public Builder identity(@Nullable Input<ManagedServiceIdentityArgs> identity) {
+        public Builder identity(@Nullable Output<ManagedServiceIdentityArgs> identity) {
             this.identity = identity;
             return this;
         }
 
         public Builder identity(@Nullable ManagedServiceIdentityArgs identity) {
-            this.identity = Input.ofNullable(identity);
+            this.identity = Output.ofNullable(identity);
             return this;
         }
 
-        public Builder kind(Input<Either<String,ScriptType>> kind) {
+        public Builder kind(Output<Either<String,ScriptType>> kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
         public Builder kind(Either<String,ScriptType> kind) {
-            this.kind = Input.of(Objects.requireNonNull(kind));
+            this.kind = Output.of(Objects.requireNonNull(kind));
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder scriptName(@Nullable Input<String> scriptName) {
+        public Builder scriptName(@Nullable Output<String> scriptName) {
             this.scriptName = scriptName;
             return this;
         }
 
         public Builder scriptName(@Nullable String scriptName) {
-            this.scriptName = Input.ofNullable(scriptName);
+            this.scriptName = Output.ofNullable(scriptName);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public DeploymentScriptArgs build() {

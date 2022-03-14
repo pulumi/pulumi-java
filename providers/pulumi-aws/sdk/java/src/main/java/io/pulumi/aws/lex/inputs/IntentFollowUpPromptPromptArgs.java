@@ -4,7 +4,7 @@
 package io.pulumi.aws.lex.inputs;
 
 import io.pulumi.aws.lex.inputs.IntentFollowUpPromptPromptMessageArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -22,9 +22,9 @@ public final class IntentFollowUpPromptPromptArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="maxAttempts", required=true)
-      private final Input<Integer> maxAttempts;
+      private final Output<Integer> maxAttempts;
 
-    public Input<Integer> getMaxAttempts() {
+    public Output<Integer> getMaxAttempts() {
         return this.maxAttempts;
     }
 
@@ -35,9 +35,9 @@ public final class IntentFollowUpPromptPromptArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="messages", required=true)
-      private final Input<List<IntentFollowUpPromptPromptMessageArgs>> messages;
+      private final Output<List<IntentFollowUpPromptPromptMessageArgs>> messages;
 
-    public Input<List<IntentFollowUpPromptPromptMessageArgs>> getMessages() {
+    public Output<List<IntentFollowUpPromptPromptMessageArgs>> getMessages() {
         return this.messages;
     }
 
@@ -48,25 +48,25 @@ public final class IntentFollowUpPromptPromptArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="responseCard")
-      private final @Nullable Input<String> responseCard;
+      private final @Nullable Output<String> responseCard;
 
-    public Input<String> getResponseCard() {
-        return this.responseCard == null ? Input.empty() : this.responseCard;
+    public Output<String> getResponseCard() {
+        return this.responseCard == null ? Output.empty() : this.responseCard;
     }
 
     public IntentFollowUpPromptPromptArgs(
-        Input<Integer> maxAttempts,
-        Input<List<IntentFollowUpPromptPromptMessageArgs>> messages,
-        @Nullable Input<String> responseCard) {
+        Output<Integer> maxAttempts,
+        Output<List<IntentFollowUpPromptPromptMessageArgs>> messages,
+        @Nullable Output<String> responseCard) {
         this.maxAttempts = Objects.requireNonNull(maxAttempts, "expected parameter 'maxAttempts' to be non-null");
         this.messages = Objects.requireNonNull(messages, "expected parameter 'messages' to be non-null");
         this.responseCard = responseCard;
     }
 
     private IntentFollowUpPromptPromptArgs() {
-        this.maxAttempts = Input.empty();
-        this.messages = Input.empty();
-        this.responseCard = Input.empty();
+        this.maxAttempts = Output.empty();
+        this.messages = Output.empty();
+        this.responseCard = Output.empty();
     }
 
     public static Builder builder() {
@@ -78,9 +78,9 @@ public final class IntentFollowUpPromptPromptArgs extends io.pulumi.resources.Re
     }
 
     public static final class Builder {
-        private Input<Integer> maxAttempts;
-        private Input<List<IntentFollowUpPromptPromptMessageArgs>> messages;
-        private @Nullable Input<String> responseCard;
+        private Output<Integer> maxAttempts;
+        private Output<List<IntentFollowUpPromptPromptMessageArgs>> messages;
+        private @Nullable Output<String> responseCard;
 
         public Builder() {
     	      // Empty
@@ -93,33 +93,33 @@ public final class IntentFollowUpPromptPromptArgs extends io.pulumi.resources.Re
     	      this.responseCard = defaults.responseCard;
         }
 
-        public Builder maxAttempts(Input<Integer> maxAttempts) {
+        public Builder maxAttempts(Output<Integer> maxAttempts) {
             this.maxAttempts = Objects.requireNonNull(maxAttempts);
             return this;
         }
 
         public Builder maxAttempts(Integer maxAttempts) {
-            this.maxAttempts = Input.of(Objects.requireNonNull(maxAttempts));
+            this.maxAttempts = Output.of(Objects.requireNonNull(maxAttempts));
             return this;
         }
 
-        public Builder messages(Input<List<IntentFollowUpPromptPromptMessageArgs>> messages) {
+        public Builder messages(Output<List<IntentFollowUpPromptPromptMessageArgs>> messages) {
             this.messages = Objects.requireNonNull(messages);
             return this;
         }
 
         public Builder messages(List<IntentFollowUpPromptPromptMessageArgs> messages) {
-            this.messages = Input.of(Objects.requireNonNull(messages));
+            this.messages = Output.of(Objects.requireNonNull(messages));
             return this;
         }
 
-        public Builder responseCard(@Nullable Input<String> responseCard) {
+        public Builder responseCard(@Nullable Output<String> responseCard) {
             this.responseCard = responseCard;
             return this;
         }
 
         public Builder responseCard(@Nullable String responseCard) {
-            this.responseCard = Input.ofNullable(responseCard);
+            this.responseCard = Output.ofNullable(responseCard);
             return this;
         }
         public IntentFollowUpPromptPromptArgs build() {

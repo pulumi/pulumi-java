@@ -4,7 +4,7 @@
 package io.pulumi.aws.ec2.inputs;
 
 import io.pulumi.aws.ec2.inputs.SpotInstanceRequestCapacityReservationSpecificationCapacityReservationTargetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -20,10 +20,10 @@ public final class SpotInstanceRequestCapacityReservationSpecificationArgs exten
      * 
      */
     @InputImport(name="capacityReservationPreference")
-      private final @Nullable Input<String> capacityReservationPreference;
+      private final @Nullable Output<String> capacityReservationPreference;
 
-    public Input<String> getCapacityReservationPreference() {
-        return this.capacityReservationPreference == null ? Input.empty() : this.capacityReservationPreference;
+    public Output<String> getCapacityReservationPreference() {
+        return this.capacityReservationPreference == null ? Output.empty() : this.capacityReservationPreference;
     }
 
     /**
@@ -31,22 +31,22 @@ public final class SpotInstanceRequestCapacityReservationSpecificationArgs exten
      * 
      */
     @InputImport(name="capacityReservationTarget")
-      private final @Nullable Input<SpotInstanceRequestCapacityReservationSpecificationCapacityReservationTargetArgs> capacityReservationTarget;
+      private final @Nullable Output<SpotInstanceRequestCapacityReservationSpecificationCapacityReservationTargetArgs> capacityReservationTarget;
 
-    public Input<SpotInstanceRequestCapacityReservationSpecificationCapacityReservationTargetArgs> getCapacityReservationTarget() {
-        return this.capacityReservationTarget == null ? Input.empty() : this.capacityReservationTarget;
+    public Output<SpotInstanceRequestCapacityReservationSpecificationCapacityReservationTargetArgs> getCapacityReservationTarget() {
+        return this.capacityReservationTarget == null ? Output.empty() : this.capacityReservationTarget;
     }
 
     public SpotInstanceRequestCapacityReservationSpecificationArgs(
-        @Nullable Input<String> capacityReservationPreference,
-        @Nullable Input<SpotInstanceRequestCapacityReservationSpecificationCapacityReservationTargetArgs> capacityReservationTarget) {
+        @Nullable Output<String> capacityReservationPreference,
+        @Nullable Output<SpotInstanceRequestCapacityReservationSpecificationCapacityReservationTargetArgs> capacityReservationTarget) {
         this.capacityReservationPreference = capacityReservationPreference;
         this.capacityReservationTarget = capacityReservationTarget;
     }
 
     private SpotInstanceRequestCapacityReservationSpecificationArgs() {
-        this.capacityReservationPreference = Input.empty();
-        this.capacityReservationTarget = Input.empty();
+        this.capacityReservationPreference = Output.empty();
+        this.capacityReservationTarget = Output.empty();
     }
 
     public static Builder builder() {
@@ -58,8 +58,8 @@ public final class SpotInstanceRequestCapacityReservationSpecificationArgs exten
     }
 
     public static final class Builder {
-        private @Nullable Input<String> capacityReservationPreference;
-        private @Nullable Input<SpotInstanceRequestCapacityReservationSpecificationCapacityReservationTargetArgs> capacityReservationTarget;
+        private @Nullable Output<String> capacityReservationPreference;
+        private @Nullable Output<SpotInstanceRequestCapacityReservationSpecificationCapacityReservationTargetArgs> capacityReservationTarget;
 
         public Builder() {
     	      // Empty
@@ -71,23 +71,23 @@ public final class SpotInstanceRequestCapacityReservationSpecificationArgs exten
     	      this.capacityReservationTarget = defaults.capacityReservationTarget;
         }
 
-        public Builder capacityReservationPreference(@Nullable Input<String> capacityReservationPreference) {
+        public Builder capacityReservationPreference(@Nullable Output<String> capacityReservationPreference) {
             this.capacityReservationPreference = capacityReservationPreference;
             return this;
         }
 
         public Builder capacityReservationPreference(@Nullable String capacityReservationPreference) {
-            this.capacityReservationPreference = Input.ofNullable(capacityReservationPreference);
+            this.capacityReservationPreference = Output.ofNullable(capacityReservationPreference);
             return this;
         }
 
-        public Builder capacityReservationTarget(@Nullable Input<SpotInstanceRequestCapacityReservationSpecificationCapacityReservationTargetArgs> capacityReservationTarget) {
+        public Builder capacityReservationTarget(@Nullable Output<SpotInstanceRequestCapacityReservationSpecificationCapacityReservationTargetArgs> capacityReservationTarget) {
             this.capacityReservationTarget = capacityReservationTarget;
             return this;
         }
 
         public Builder capacityReservationTarget(@Nullable SpotInstanceRequestCapacityReservationSpecificationCapacityReservationTargetArgs capacityReservationTarget) {
-            this.capacityReservationTarget = Input.ofNullable(capacityReservationTarget);
+            this.capacityReservationTarget = Output.ofNullable(capacityReservationTarget);
             return this;
         }
         public SpotInstanceRequestCapacityReservationSpecificationArgs build() {

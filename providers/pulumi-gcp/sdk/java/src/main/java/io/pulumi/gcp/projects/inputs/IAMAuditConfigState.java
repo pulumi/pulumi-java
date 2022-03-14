@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.projects.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.projects.inputs.IAMAuditConfigAuditLogConfigGetArgs;
 import java.lang.String;
@@ -21,10 +21,10 @@ public final class IAMAuditConfigState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="auditLogConfigs")
-      private final @Nullable Input<List<IAMAuditConfigAuditLogConfigGetArgs>> auditLogConfigs;
+      private final @Nullable Output<List<IAMAuditConfigAuditLogConfigGetArgs>> auditLogConfigs;
 
-    public Input<List<IAMAuditConfigAuditLogConfigGetArgs>> getAuditLogConfigs() {
-        return this.auditLogConfigs == null ? Input.empty() : this.auditLogConfigs;
+    public Output<List<IAMAuditConfigAuditLogConfigGetArgs>> getAuditLogConfigs() {
+        return this.auditLogConfigs == null ? Output.empty() : this.auditLogConfigs;
     }
 
     /**
@@ -32,10 +32,10 @@ public final class IAMAuditConfigState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="etag")
-      private final @Nullable Input<String> etag;
+      private final @Nullable Output<String> etag;
 
-    public Input<String> getEtag() {
-        return this.etag == null ? Input.empty() : this.etag;
+    public Output<String> getEtag() {
+        return this.etag == null ? Output.empty() : this.etag;
     }
 
     /**
@@ -44,10 +44,10 @@ public final class IAMAuditConfigState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -55,17 +55,17 @@ public final class IAMAuditConfigState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="service")
-      private final @Nullable Input<String> service;
+      private final @Nullable Output<String> service;
 
-    public Input<String> getService() {
-        return this.service == null ? Input.empty() : this.service;
+    public Output<String> getService() {
+        return this.service == null ? Output.empty() : this.service;
     }
 
     public IAMAuditConfigState(
-        @Nullable Input<List<IAMAuditConfigAuditLogConfigGetArgs>> auditLogConfigs,
-        @Nullable Input<String> etag,
-        @Nullable Input<String> project,
-        @Nullable Input<String> service) {
+        @Nullable Output<List<IAMAuditConfigAuditLogConfigGetArgs>> auditLogConfigs,
+        @Nullable Output<String> etag,
+        @Nullable Output<String> project,
+        @Nullable Output<String> service) {
         this.auditLogConfigs = auditLogConfigs;
         this.etag = etag;
         this.project = project;
@@ -73,10 +73,10 @@ public final class IAMAuditConfigState extends io.pulumi.resources.ResourceArgs 
     }
 
     private IAMAuditConfigState() {
-        this.auditLogConfigs = Input.empty();
-        this.etag = Input.empty();
-        this.project = Input.empty();
-        this.service = Input.empty();
+        this.auditLogConfigs = Output.empty();
+        this.etag = Output.empty();
+        this.project = Output.empty();
+        this.service = Output.empty();
     }
 
     public static Builder builder() {
@@ -88,10 +88,10 @@ public final class IAMAuditConfigState extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private @Nullable Input<List<IAMAuditConfigAuditLogConfigGetArgs>> auditLogConfigs;
-        private @Nullable Input<String> etag;
-        private @Nullable Input<String> project;
-        private @Nullable Input<String> service;
+        private @Nullable Output<List<IAMAuditConfigAuditLogConfigGetArgs>> auditLogConfigs;
+        private @Nullable Output<String> etag;
+        private @Nullable Output<String> project;
+        private @Nullable Output<String> service;
 
         public Builder() {
     	      // Empty
@@ -105,43 +105,43 @@ public final class IAMAuditConfigState extends io.pulumi.resources.ResourceArgs 
     	      this.service = defaults.service;
         }
 
-        public Builder auditLogConfigs(@Nullable Input<List<IAMAuditConfigAuditLogConfigGetArgs>> auditLogConfigs) {
+        public Builder auditLogConfigs(@Nullable Output<List<IAMAuditConfigAuditLogConfigGetArgs>> auditLogConfigs) {
             this.auditLogConfigs = auditLogConfigs;
             return this;
         }
 
         public Builder auditLogConfigs(@Nullable List<IAMAuditConfigAuditLogConfigGetArgs> auditLogConfigs) {
-            this.auditLogConfigs = Input.ofNullable(auditLogConfigs);
+            this.auditLogConfigs = Output.ofNullable(auditLogConfigs);
             return this;
         }
 
-        public Builder etag(@Nullable Input<String> etag) {
+        public Builder etag(@Nullable Output<String> etag) {
             this.etag = etag;
             return this;
         }
 
         public Builder etag(@Nullable String etag) {
-            this.etag = Input.ofNullable(etag);
+            this.etag = Output.ofNullable(etag);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder service(@Nullable Input<String> service) {
+        public Builder service(@Nullable Output<String> service) {
             this.service = service;
             return this;
         }
 
         public Builder service(@Nullable String service) {
-            this.service = Input.ofNullable(service);
+            this.service = Output.ofNullable(service);
             return this;
         }
         public IAMAuditConfigState build() {

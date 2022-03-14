@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v2beta1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -24,18 +24,18 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageTextArgs extends io.
      * 
      */
     @InputImport(name="text")
-      private final @Nullable Input<List<String>> text;
+      private final @Nullable Output<List<String>> text;
 
-    public Input<List<String>> getText() {
-        return this.text == null ? Input.empty() : this.text;
+    public Output<List<String>> getText() {
+        return this.text == null ? Output.empty() : this.text;
     }
 
-    public GoogleCloudDialogflowV2beta1IntentMessageTextArgs(@Nullable Input<List<String>> text) {
+    public GoogleCloudDialogflowV2beta1IntentMessageTextArgs(@Nullable Output<List<String>> text) {
         this.text = text;
     }
 
     private GoogleCloudDialogflowV2beta1IntentMessageTextArgs() {
-        this.text = Input.empty();
+        this.text = Output.empty();
     }
 
     public static Builder builder() {
@@ -47,7 +47,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageTextArgs extends io.
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> text;
+        private @Nullable Output<List<String>> text;
 
         public Builder() {
     	      // Empty
@@ -58,13 +58,13 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageTextArgs extends io.
     	      this.text = defaults.text;
         }
 
-        public Builder text(@Nullable Input<List<String>> text) {
+        public Builder text(@Nullable Output<List<String>> text) {
             this.text = text;
             return this;
         }
 
         public Builder text(@Nullable List<String> text) {
-            this.text = Input.ofNullable(text);
+            this.text = Output.ofNullable(text);
             return this;
         }
         public GoogleCloudDialogflowV2beta1IntentMessageTextArgs build() {

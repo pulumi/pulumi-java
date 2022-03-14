@@ -8,7 +8,7 @@ import io.pulumi.aws.eks.inputs.NodeGroupRemoteAccessArgs;
 import io.pulumi.aws.eks.inputs.NodeGroupScalingConfigArgs;
 import io.pulumi.aws.eks.inputs.NodeGroupTaintArgs;
 import io.pulumi.aws.eks.inputs.NodeGroupUpdateConfigArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -28,10 +28,10 @@ public final class NodeGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="amiType")
-      private final @Nullable Input<String> amiType;
+      private final @Nullable Output<String> amiType;
 
-    public Input<String> getAmiType() {
-        return this.amiType == null ? Input.empty() : this.amiType;
+    public Output<String> getAmiType() {
+        return this.amiType == null ? Output.empty() : this.amiType;
     }
 
     /**
@@ -39,10 +39,10 @@ public final class NodeGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="capacityType")
-      private final @Nullable Input<String> capacityType;
+      private final @Nullable Output<String> capacityType;
 
-    public Input<String> getCapacityType() {
-        return this.capacityType == null ? Input.empty() : this.capacityType;
+    public Output<String> getCapacityType() {
+        return this.capacityType == null ? Output.empty() : this.capacityType;
     }
 
     /**
@@ -50,9 +50,9 @@ public final class NodeGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="clusterName", required=true)
-      private final Input<String> clusterName;
+      private final Output<String> clusterName;
 
-    public Input<String> getClusterName() {
+    public Output<String> getClusterName() {
         return this.clusterName;
     }
 
@@ -61,10 +61,10 @@ public final class NodeGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="diskSize")
-      private final @Nullable Input<Integer> diskSize;
+      private final @Nullable Output<Integer> diskSize;
 
-    public Input<Integer> getDiskSize() {
-        return this.diskSize == null ? Input.empty() : this.diskSize;
+    public Output<Integer> getDiskSize() {
+        return this.diskSize == null ? Output.empty() : this.diskSize;
     }
 
     /**
@@ -72,10 +72,10 @@ public final class NodeGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="forceUpdateVersion")
-      private final @Nullable Input<Boolean> forceUpdateVersion;
+      private final @Nullable Output<Boolean> forceUpdateVersion;
 
-    public Input<Boolean> getForceUpdateVersion() {
-        return this.forceUpdateVersion == null ? Input.empty() : this.forceUpdateVersion;
+    public Output<Boolean> getForceUpdateVersion() {
+        return this.forceUpdateVersion == null ? Output.empty() : this.forceUpdateVersion;
     }
 
     /**
@@ -83,10 +83,10 @@ public final class NodeGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="instanceTypes")
-      private final @Nullable Input<List<String>> instanceTypes;
+      private final @Nullable Output<List<String>> instanceTypes;
 
-    public Input<List<String>> getInstanceTypes() {
-        return this.instanceTypes == null ? Input.empty() : this.instanceTypes;
+    public Output<List<String>> getInstanceTypes() {
+        return this.instanceTypes == null ? Output.empty() : this.instanceTypes;
     }
 
     /**
@@ -94,10 +94,10 @@ public final class NodeGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labels")
-      private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Output<Map<String,String>> labels;
 
-    public Input<Map<String,String>> getLabels() {
-        return this.labels == null ? Input.empty() : this.labels;
+    public Output<Map<String,String>> getLabels() {
+        return this.labels == null ? Output.empty() : this.labels;
     }
 
     /**
@@ -105,10 +105,10 @@ public final class NodeGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="launchTemplate")
-      private final @Nullable Input<NodeGroupLaunchTemplateArgs> launchTemplate;
+      private final @Nullable Output<NodeGroupLaunchTemplateArgs> launchTemplate;
 
-    public Input<NodeGroupLaunchTemplateArgs> getLaunchTemplate() {
-        return this.launchTemplate == null ? Input.empty() : this.launchTemplate;
+    public Output<NodeGroupLaunchTemplateArgs> getLaunchTemplate() {
+        return this.launchTemplate == null ? Output.empty() : this.launchTemplate;
     }
 
     /**
@@ -116,10 +116,10 @@ public final class NodeGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="nodeGroupName")
-      private final @Nullable Input<String> nodeGroupName;
+      private final @Nullable Output<String> nodeGroupName;
 
-    public Input<String> getNodeGroupName() {
-        return this.nodeGroupName == null ? Input.empty() : this.nodeGroupName;
+    public Output<String> getNodeGroupName() {
+        return this.nodeGroupName == null ? Output.empty() : this.nodeGroupName;
     }
 
     /**
@@ -127,10 +127,10 @@ public final class NodeGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="nodeGroupNamePrefix")
-      private final @Nullable Input<String> nodeGroupNamePrefix;
+      private final @Nullable Output<String> nodeGroupNamePrefix;
 
-    public Input<String> getNodeGroupNamePrefix() {
-        return this.nodeGroupNamePrefix == null ? Input.empty() : this.nodeGroupNamePrefix;
+    public Output<String> getNodeGroupNamePrefix() {
+        return this.nodeGroupNamePrefix == null ? Output.empty() : this.nodeGroupNamePrefix;
     }
 
     /**
@@ -138,9 +138,9 @@ public final class NodeGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="nodeRoleArn", required=true)
-      private final Input<String> nodeRoleArn;
+      private final Output<String> nodeRoleArn;
 
-    public Input<String> getNodeRoleArn() {
+    public Output<String> getNodeRoleArn() {
         return this.nodeRoleArn;
     }
 
@@ -149,10 +149,10 @@ public final class NodeGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="releaseVersion")
-      private final @Nullable Input<String> releaseVersion;
+      private final @Nullable Output<String> releaseVersion;
 
-    public Input<String> getReleaseVersion() {
-        return this.releaseVersion == null ? Input.empty() : this.releaseVersion;
+    public Output<String> getReleaseVersion() {
+        return this.releaseVersion == null ? Output.empty() : this.releaseVersion;
     }
 
     /**
@@ -160,10 +160,10 @@ public final class NodeGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="remoteAccess")
-      private final @Nullable Input<NodeGroupRemoteAccessArgs> remoteAccess;
+      private final @Nullable Output<NodeGroupRemoteAccessArgs> remoteAccess;
 
-    public Input<NodeGroupRemoteAccessArgs> getRemoteAccess() {
-        return this.remoteAccess == null ? Input.empty() : this.remoteAccess;
+    public Output<NodeGroupRemoteAccessArgs> getRemoteAccess() {
+        return this.remoteAccess == null ? Output.empty() : this.remoteAccess;
     }
 
     /**
@@ -171,9 +171,9 @@ public final class NodeGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="scalingConfig", required=true)
-      private final Input<NodeGroupScalingConfigArgs> scalingConfig;
+      private final Output<NodeGroupScalingConfigArgs> scalingConfig;
 
-    public Input<NodeGroupScalingConfigArgs> getScalingConfig() {
+    public Output<NodeGroupScalingConfigArgs> getScalingConfig() {
         return this.scalingConfig;
     }
 
@@ -182,9 +182,9 @@ public final class NodeGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="subnetIds", required=true)
-      private final Input<List<String>> subnetIds;
+      private final Output<List<String>> subnetIds;
 
-    public Input<List<String>> getSubnetIds() {
+    public Output<List<String>> getSubnetIds() {
         return this.subnetIds;
     }
 
@@ -193,10 +193,10 @@ public final class NodeGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -204,17 +204,17 @@ public final class NodeGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="taints")
-      private final @Nullable Input<List<NodeGroupTaintArgs>> taints;
+      private final @Nullable Output<List<NodeGroupTaintArgs>> taints;
 
-    public Input<List<NodeGroupTaintArgs>> getTaints() {
-        return this.taints == null ? Input.empty() : this.taints;
+    public Output<List<NodeGroupTaintArgs>> getTaints() {
+        return this.taints == null ? Output.empty() : this.taints;
     }
 
     @InputImport(name="updateConfig")
-      private final @Nullable Input<NodeGroupUpdateConfigArgs> updateConfig;
+      private final @Nullable Output<NodeGroupUpdateConfigArgs> updateConfig;
 
-    public Input<NodeGroupUpdateConfigArgs> getUpdateConfig() {
-        return this.updateConfig == null ? Input.empty() : this.updateConfig;
+    public Output<NodeGroupUpdateConfigArgs> getUpdateConfig() {
+        return this.updateConfig == null ? Output.empty() : this.updateConfig;
     }
 
     /**
@@ -222,32 +222,32 @@ public final class NodeGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="version")
-      private final @Nullable Input<String> version;
+      private final @Nullable Output<String> version;
 
-    public Input<String> getVersion() {
-        return this.version == null ? Input.empty() : this.version;
+    public Output<String> getVersion() {
+        return this.version == null ? Output.empty() : this.version;
     }
 
     public NodeGroupArgs(
-        @Nullable Input<String> amiType,
-        @Nullable Input<String> capacityType,
-        Input<String> clusterName,
-        @Nullable Input<Integer> diskSize,
-        @Nullable Input<Boolean> forceUpdateVersion,
-        @Nullable Input<List<String>> instanceTypes,
-        @Nullable Input<Map<String,String>> labels,
-        @Nullable Input<NodeGroupLaunchTemplateArgs> launchTemplate,
-        @Nullable Input<String> nodeGroupName,
-        @Nullable Input<String> nodeGroupNamePrefix,
-        Input<String> nodeRoleArn,
-        @Nullable Input<String> releaseVersion,
-        @Nullable Input<NodeGroupRemoteAccessArgs> remoteAccess,
-        Input<NodeGroupScalingConfigArgs> scalingConfig,
-        Input<List<String>> subnetIds,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<List<NodeGroupTaintArgs>> taints,
-        @Nullable Input<NodeGroupUpdateConfigArgs> updateConfig,
-        @Nullable Input<String> version) {
+        @Nullable Output<String> amiType,
+        @Nullable Output<String> capacityType,
+        Output<String> clusterName,
+        @Nullable Output<Integer> diskSize,
+        @Nullable Output<Boolean> forceUpdateVersion,
+        @Nullable Output<List<String>> instanceTypes,
+        @Nullable Output<Map<String,String>> labels,
+        @Nullable Output<NodeGroupLaunchTemplateArgs> launchTemplate,
+        @Nullable Output<String> nodeGroupName,
+        @Nullable Output<String> nodeGroupNamePrefix,
+        Output<String> nodeRoleArn,
+        @Nullable Output<String> releaseVersion,
+        @Nullable Output<NodeGroupRemoteAccessArgs> remoteAccess,
+        Output<NodeGroupScalingConfigArgs> scalingConfig,
+        Output<List<String>> subnetIds,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<List<NodeGroupTaintArgs>> taints,
+        @Nullable Output<NodeGroupUpdateConfigArgs> updateConfig,
+        @Nullable Output<String> version) {
         this.amiType = amiType;
         this.capacityType = capacityType;
         this.clusterName = Objects.requireNonNull(clusterName, "expected parameter 'clusterName' to be non-null");
@@ -270,25 +270,25 @@ public final class NodeGroupArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private NodeGroupArgs() {
-        this.amiType = Input.empty();
-        this.capacityType = Input.empty();
-        this.clusterName = Input.empty();
-        this.diskSize = Input.empty();
-        this.forceUpdateVersion = Input.empty();
-        this.instanceTypes = Input.empty();
-        this.labels = Input.empty();
-        this.launchTemplate = Input.empty();
-        this.nodeGroupName = Input.empty();
-        this.nodeGroupNamePrefix = Input.empty();
-        this.nodeRoleArn = Input.empty();
-        this.releaseVersion = Input.empty();
-        this.remoteAccess = Input.empty();
-        this.scalingConfig = Input.empty();
-        this.subnetIds = Input.empty();
-        this.tags = Input.empty();
-        this.taints = Input.empty();
-        this.updateConfig = Input.empty();
-        this.version = Input.empty();
+        this.amiType = Output.empty();
+        this.capacityType = Output.empty();
+        this.clusterName = Output.empty();
+        this.diskSize = Output.empty();
+        this.forceUpdateVersion = Output.empty();
+        this.instanceTypes = Output.empty();
+        this.labels = Output.empty();
+        this.launchTemplate = Output.empty();
+        this.nodeGroupName = Output.empty();
+        this.nodeGroupNamePrefix = Output.empty();
+        this.nodeRoleArn = Output.empty();
+        this.releaseVersion = Output.empty();
+        this.remoteAccess = Output.empty();
+        this.scalingConfig = Output.empty();
+        this.subnetIds = Output.empty();
+        this.tags = Output.empty();
+        this.taints = Output.empty();
+        this.updateConfig = Output.empty();
+        this.version = Output.empty();
     }
 
     public static Builder builder() {
@@ -300,25 +300,25 @@ public final class NodeGroupArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> amiType;
-        private @Nullable Input<String> capacityType;
-        private Input<String> clusterName;
-        private @Nullable Input<Integer> diskSize;
-        private @Nullable Input<Boolean> forceUpdateVersion;
-        private @Nullable Input<List<String>> instanceTypes;
-        private @Nullable Input<Map<String,String>> labels;
-        private @Nullable Input<NodeGroupLaunchTemplateArgs> launchTemplate;
-        private @Nullable Input<String> nodeGroupName;
-        private @Nullable Input<String> nodeGroupNamePrefix;
-        private Input<String> nodeRoleArn;
-        private @Nullable Input<String> releaseVersion;
-        private @Nullable Input<NodeGroupRemoteAccessArgs> remoteAccess;
-        private Input<NodeGroupScalingConfigArgs> scalingConfig;
-        private Input<List<String>> subnetIds;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<List<NodeGroupTaintArgs>> taints;
-        private @Nullable Input<NodeGroupUpdateConfigArgs> updateConfig;
-        private @Nullable Input<String> version;
+        private @Nullable Output<String> amiType;
+        private @Nullable Output<String> capacityType;
+        private Output<String> clusterName;
+        private @Nullable Output<Integer> diskSize;
+        private @Nullable Output<Boolean> forceUpdateVersion;
+        private @Nullable Output<List<String>> instanceTypes;
+        private @Nullable Output<Map<String,String>> labels;
+        private @Nullable Output<NodeGroupLaunchTemplateArgs> launchTemplate;
+        private @Nullable Output<String> nodeGroupName;
+        private @Nullable Output<String> nodeGroupNamePrefix;
+        private Output<String> nodeRoleArn;
+        private @Nullable Output<String> releaseVersion;
+        private @Nullable Output<NodeGroupRemoteAccessArgs> remoteAccess;
+        private Output<NodeGroupScalingConfigArgs> scalingConfig;
+        private Output<List<String>> subnetIds;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<List<NodeGroupTaintArgs>> taints;
+        private @Nullable Output<NodeGroupUpdateConfigArgs> updateConfig;
+        private @Nullable Output<String> version;
 
         public Builder() {
     	      // Empty
@@ -347,193 +347,193 @@ public final class NodeGroupArgs extends io.pulumi.resources.ResourceArgs {
     	      this.version = defaults.version;
         }
 
-        public Builder amiType(@Nullable Input<String> amiType) {
+        public Builder amiType(@Nullable Output<String> amiType) {
             this.amiType = amiType;
             return this;
         }
 
         public Builder amiType(@Nullable String amiType) {
-            this.amiType = Input.ofNullable(amiType);
+            this.amiType = Output.ofNullable(amiType);
             return this;
         }
 
-        public Builder capacityType(@Nullable Input<String> capacityType) {
+        public Builder capacityType(@Nullable Output<String> capacityType) {
             this.capacityType = capacityType;
             return this;
         }
 
         public Builder capacityType(@Nullable String capacityType) {
-            this.capacityType = Input.ofNullable(capacityType);
+            this.capacityType = Output.ofNullable(capacityType);
             return this;
         }
 
-        public Builder clusterName(Input<String> clusterName) {
+        public Builder clusterName(Output<String> clusterName) {
             this.clusterName = Objects.requireNonNull(clusterName);
             return this;
         }
 
         public Builder clusterName(String clusterName) {
-            this.clusterName = Input.of(Objects.requireNonNull(clusterName));
+            this.clusterName = Output.of(Objects.requireNonNull(clusterName));
             return this;
         }
 
-        public Builder diskSize(@Nullable Input<Integer> diskSize) {
+        public Builder diskSize(@Nullable Output<Integer> diskSize) {
             this.diskSize = diskSize;
             return this;
         }
 
         public Builder diskSize(@Nullable Integer diskSize) {
-            this.diskSize = Input.ofNullable(diskSize);
+            this.diskSize = Output.ofNullable(diskSize);
             return this;
         }
 
-        public Builder forceUpdateVersion(@Nullable Input<Boolean> forceUpdateVersion) {
+        public Builder forceUpdateVersion(@Nullable Output<Boolean> forceUpdateVersion) {
             this.forceUpdateVersion = forceUpdateVersion;
             return this;
         }
 
         public Builder forceUpdateVersion(@Nullable Boolean forceUpdateVersion) {
-            this.forceUpdateVersion = Input.ofNullable(forceUpdateVersion);
+            this.forceUpdateVersion = Output.ofNullable(forceUpdateVersion);
             return this;
         }
 
-        public Builder instanceTypes(@Nullable Input<List<String>> instanceTypes) {
+        public Builder instanceTypes(@Nullable Output<List<String>> instanceTypes) {
             this.instanceTypes = instanceTypes;
             return this;
         }
 
         public Builder instanceTypes(@Nullable List<String> instanceTypes) {
-            this.instanceTypes = Input.ofNullable(instanceTypes);
+            this.instanceTypes = Output.ofNullable(instanceTypes);
             return this;
         }
 
-        public Builder labels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
         public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Input.ofNullable(labels);
+            this.labels = Output.ofNullable(labels);
             return this;
         }
 
-        public Builder launchTemplate(@Nullable Input<NodeGroupLaunchTemplateArgs> launchTemplate) {
+        public Builder launchTemplate(@Nullable Output<NodeGroupLaunchTemplateArgs> launchTemplate) {
             this.launchTemplate = launchTemplate;
             return this;
         }
 
         public Builder launchTemplate(@Nullable NodeGroupLaunchTemplateArgs launchTemplate) {
-            this.launchTemplate = Input.ofNullable(launchTemplate);
+            this.launchTemplate = Output.ofNullable(launchTemplate);
             return this;
         }
 
-        public Builder nodeGroupName(@Nullable Input<String> nodeGroupName) {
+        public Builder nodeGroupName(@Nullable Output<String> nodeGroupName) {
             this.nodeGroupName = nodeGroupName;
             return this;
         }
 
         public Builder nodeGroupName(@Nullable String nodeGroupName) {
-            this.nodeGroupName = Input.ofNullable(nodeGroupName);
+            this.nodeGroupName = Output.ofNullable(nodeGroupName);
             return this;
         }
 
-        public Builder nodeGroupNamePrefix(@Nullable Input<String> nodeGroupNamePrefix) {
+        public Builder nodeGroupNamePrefix(@Nullable Output<String> nodeGroupNamePrefix) {
             this.nodeGroupNamePrefix = nodeGroupNamePrefix;
             return this;
         }
 
         public Builder nodeGroupNamePrefix(@Nullable String nodeGroupNamePrefix) {
-            this.nodeGroupNamePrefix = Input.ofNullable(nodeGroupNamePrefix);
+            this.nodeGroupNamePrefix = Output.ofNullable(nodeGroupNamePrefix);
             return this;
         }
 
-        public Builder nodeRoleArn(Input<String> nodeRoleArn) {
+        public Builder nodeRoleArn(Output<String> nodeRoleArn) {
             this.nodeRoleArn = Objects.requireNonNull(nodeRoleArn);
             return this;
         }
 
         public Builder nodeRoleArn(String nodeRoleArn) {
-            this.nodeRoleArn = Input.of(Objects.requireNonNull(nodeRoleArn));
+            this.nodeRoleArn = Output.of(Objects.requireNonNull(nodeRoleArn));
             return this;
         }
 
-        public Builder releaseVersion(@Nullable Input<String> releaseVersion) {
+        public Builder releaseVersion(@Nullable Output<String> releaseVersion) {
             this.releaseVersion = releaseVersion;
             return this;
         }
 
         public Builder releaseVersion(@Nullable String releaseVersion) {
-            this.releaseVersion = Input.ofNullable(releaseVersion);
+            this.releaseVersion = Output.ofNullable(releaseVersion);
             return this;
         }
 
-        public Builder remoteAccess(@Nullable Input<NodeGroupRemoteAccessArgs> remoteAccess) {
+        public Builder remoteAccess(@Nullable Output<NodeGroupRemoteAccessArgs> remoteAccess) {
             this.remoteAccess = remoteAccess;
             return this;
         }
 
         public Builder remoteAccess(@Nullable NodeGroupRemoteAccessArgs remoteAccess) {
-            this.remoteAccess = Input.ofNullable(remoteAccess);
+            this.remoteAccess = Output.ofNullable(remoteAccess);
             return this;
         }
 
-        public Builder scalingConfig(Input<NodeGroupScalingConfigArgs> scalingConfig) {
+        public Builder scalingConfig(Output<NodeGroupScalingConfigArgs> scalingConfig) {
             this.scalingConfig = Objects.requireNonNull(scalingConfig);
             return this;
         }
 
         public Builder scalingConfig(NodeGroupScalingConfigArgs scalingConfig) {
-            this.scalingConfig = Input.of(Objects.requireNonNull(scalingConfig));
+            this.scalingConfig = Output.of(Objects.requireNonNull(scalingConfig));
             return this;
         }
 
-        public Builder subnetIds(Input<List<String>> subnetIds) {
+        public Builder subnetIds(Output<List<String>> subnetIds) {
             this.subnetIds = Objects.requireNonNull(subnetIds);
             return this;
         }
 
         public Builder subnetIds(List<String> subnetIds) {
-            this.subnetIds = Input.of(Objects.requireNonNull(subnetIds));
+            this.subnetIds = Output.of(Objects.requireNonNull(subnetIds));
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder taints(@Nullable Input<List<NodeGroupTaintArgs>> taints) {
+        public Builder taints(@Nullable Output<List<NodeGroupTaintArgs>> taints) {
             this.taints = taints;
             return this;
         }
 
         public Builder taints(@Nullable List<NodeGroupTaintArgs> taints) {
-            this.taints = Input.ofNullable(taints);
+            this.taints = Output.ofNullable(taints);
             return this;
         }
 
-        public Builder updateConfig(@Nullable Input<NodeGroupUpdateConfigArgs> updateConfig) {
+        public Builder updateConfig(@Nullable Output<NodeGroupUpdateConfigArgs> updateConfig) {
             this.updateConfig = updateConfig;
             return this;
         }
 
         public Builder updateConfig(@Nullable NodeGroupUpdateConfigArgs updateConfig) {
-            this.updateConfig = Input.ofNullable(updateConfig);
+            this.updateConfig = Output.ofNullable(updateConfig);
             return this;
         }
 
-        public Builder version(@Nullable Input<String> version) {
+        public Builder version(@Nullable Output<String> version) {
             this.version = version;
             return this;
         }
 
         public Builder version(@Nullable String version) {
-            this.version = Input.ofNullable(version);
+            this.version = Output.ofNullable(version);
             return this;
         }
         public NodeGroupArgs build() {

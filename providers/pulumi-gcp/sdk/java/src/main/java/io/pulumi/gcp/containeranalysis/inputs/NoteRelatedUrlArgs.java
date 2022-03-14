@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.containeranalysis.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class NoteRelatedUrlArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="label")
-      private final @Nullable Input<String> label;
+      private final @Nullable Output<String> label;
 
-    public Input<String> getLabel() {
-        return this.label == null ? Input.empty() : this.label;
+    public Output<String> getLabel() {
+        return this.label == null ? Output.empty() : this.label;
     }
 
     /**
@@ -30,22 +30,22 @@ public final class NoteRelatedUrlArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="url", required=true)
-      private final Input<String> url;
+      private final Output<String> url;
 
-    public Input<String> getUrl() {
+    public Output<String> getUrl() {
         return this.url;
     }
 
     public NoteRelatedUrlArgs(
-        @Nullable Input<String> label,
-        Input<String> url) {
+        @Nullable Output<String> label,
+        Output<String> url) {
         this.label = label;
         this.url = Objects.requireNonNull(url, "expected parameter 'url' to be non-null");
     }
 
     private NoteRelatedUrlArgs() {
-        this.label = Input.empty();
-        this.url = Input.empty();
+        this.label = Output.empty();
+        this.url = Output.empty();
     }
 
     public static Builder builder() {
@@ -57,8 +57,8 @@ public final class NoteRelatedUrlArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> label;
-        private Input<String> url;
+        private @Nullable Output<String> label;
+        private Output<String> url;
 
         public Builder() {
     	      // Empty
@@ -70,23 +70,23 @@ public final class NoteRelatedUrlArgs extends io.pulumi.resources.ResourceArgs {
     	      this.url = defaults.url;
         }
 
-        public Builder label(@Nullable Input<String> label) {
+        public Builder label(@Nullable Output<String> label) {
             this.label = label;
             return this;
         }
 
         public Builder label(@Nullable String label) {
-            this.label = Input.ofNullable(label);
+            this.label = Output.ofNullable(label);
             return this;
         }
 
-        public Builder url(Input<String> url) {
+        public Builder url(Output<String> url) {
             this.url = Objects.requireNonNull(url);
             return this;
         }
 
         public Builder url(String url) {
-            this.url = Input.of(Objects.requireNonNull(url));
+            this.url = Output.of(Objects.requireNonNull(url));
             return this;
         }
         public NoteRelatedUrlArgs build() {

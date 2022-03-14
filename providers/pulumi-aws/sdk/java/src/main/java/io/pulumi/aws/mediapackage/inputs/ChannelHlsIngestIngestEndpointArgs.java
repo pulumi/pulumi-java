@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.mediapackage.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class ChannelHlsIngestIngestEndpointArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="password")
-      private final @Nullable Input<String> password;
+      private final @Nullable Output<String> password;
 
-    public Input<String> getPassword() {
-        return this.password == null ? Input.empty() : this.password;
+    public Output<String> getPassword() {
+        return this.password == null ? Output.empty() : this.password;
     }
 
     /**
@@ -30,10 +30,10 @@ public final class ChannelHlsIngestIngestEndpointArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="url")
-      private final @Nullable Input<String> url;
+      private final @Nullable Output<String> url;
 
-    public Input<String> getUrl() {
-        return this.url == null ? Input.empty() : this.url;
+    public Output<String> getUrl() {
+        return this.url == null ? Output.empty() : this.url;
     }
 
     /**
@@ -41,25 +41,25 @@ public final class ChannelHlsIngestIngestEndpointArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="username")
-      private final @Nullable Input<String> username;
+      private final @Nullable Output<String> username;
 
-    public Input<String> getUsername() {
-        return this.username == null ? Input.empty() : this.username;
+    public Output<String> getUsername() {
+        return this.username == null ? Output.empty() : this.username;
     }
 
     public ChannelHlsIngestIngestEndpointArgs(
-        @Nullable Input<String> password,
-        @Nullable Input<String> url,
-        @Nullable Input<String> username) {
+        @Nullable Output<String> password,
+        @Nullable Output<String> url,
+        @Nullable Output<String> username) {
         this.password = password;
         this.url = url;
         this.username = username;
     }
 
     private ChannelHlsIngestIngestEndpointArgs() {
-        this.password = Input.empty();
-        this.url = Input.empty();
-        this.username = Input.empty();
+        this.password = Output.empty();
+        this.url = Output.empty();
+        this.username = Output.empty();
     }
 
     public static Builder builder() {
@@ -71,9 +71,9 @@ public final class ChannelHlsIngestIngestEndpointArgs extends io.pulumi.resource
     }
 
     public static final class Builder {
-        private @Nullable Input<String> password;
-        private @Nullable Input<String> url;
-        private @Nullable Input<String> username;
+        private @Nullable Output<String> password;
+        private @Nullable Output<String> url;
+        private @Nullable Output<String> username;
 
         public Builder() {
     	      // Empty
@@ -86,33 +86,33 @@ public final class ChannelHlsIngestIngestEndpointArgs extends io.pulumi.resource
     	      this.username = defaults.username;
         }
 
-        public Builder password(@Nullable Input<String> password) {
+        public Builder password(@Nullable Output<String> password) {
             this.password = password;
             return this;
         }
 
         public Builder password(@Nullable String password) {
-            this.password = Input.ofNullable(password);
+            this.password = Output.ofNullable(password);
             return this;
         }
 
-        public Builder url(@Nullable Input<String> url) {
+        public Builder url(@Nullable Output<String> url) {
             this.url = url;
             return this;
         }
 
         public Builder url(@Nullable String url) {
-            this.url = Input.ofNullable(url);
+            this.url = Output.ofNullable(url);
             return this;
         }
 
-        public Builder username(@Nullable Input<String> username) {
+        public Builder username(@Nullable Output<String> username) {
             this.username = username;
             return this;
         }
 
         public Builder username(@Nullable String username) {
-            this.username = Input.ofNullable(username);
+            this.username = Output.ofNullable(username);
             return this;
         }
         public ChannelHlsIngestIngestEndpointArgs build() {

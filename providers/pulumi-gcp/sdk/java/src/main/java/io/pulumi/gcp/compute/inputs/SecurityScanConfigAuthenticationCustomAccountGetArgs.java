@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -18,9 +18,9 @@ public final class SecurityScanConfigAuthenticationCustomAccountGetArgs extends 
      * 
      */
     @InputImport(name="loginUrl", required=true)
-      private final Input<String> loginUrl;
+      private final Output<String> loginUrl;
 
-    public Input<String> getLoginUrl() {
+    public Output<String> getLoginUrl() {
         return this.loginUrl;
     }
 
@@ -31,9 +31,9 @@ public final class SecurityScanConfigAuthenticationCustomAccountGetArgs extends 
      * 
      */
     @InputImport(name="password", required=true)
-      private final Input<String> password;
+      private final Output<String> password;
 
-    public Input<String> getPassword() {
+    public Output<String> getPassword() {
         return this.password;
     }
 
@@ -42,25 +42,25 @@ public final class SecurityScanConfigAuthenticationCustomAccountGetArgs extends 
      * 
      */
     @InputImport(name="username", required=true)
-      private final Input<String> username;
+      private final Output<String> username;
 
-    public Input<String> getUsername() {
+    public Output<String> getUsername() {
         return this.username;
     }
 
     public SecurityScanConfigAuthenticationCustomAccountGetArgs(
-        Input<String> loginUrl,
-        Input<String> password,
-        Input<String> username) {
+        Output<String> loginUrl,
+        Output<String> password,
+        Output<String> username) {
         this.loginUrl = Objects.requireNonNull(loginUrl, "expected parameter 'loginUrl' to be non-null");
         this.password = Objects.requireNonNull(password, "expected parameter 'password' to be non-null");
         this.username = Objects.requireNonNull(username, "expected parameter 'username' to be non-null");
     }
 
     private SecurityScanConfigAuthenticationCustomAccountGetArgs() {
-        this.loginUrl = Input.empty();
-        this.password = Input.empty();
-        this.username = Input.empty();
+        this.loginUrl = Output.empty();
+        this.password = Output.empty();
+        this.username = Output.empty();
     }
 
     public static Builder builder() {
@@ -72,9 +72,9 @@ public final class SecurityScanConfigAuthenticationCustomAccountGetArgs extends 
     }
 
     public static final class Builder {
-        private Input<String> loginUrl;
-        private Input<String> password;
-        private Input<String> username;
+        private Output<String> loginUrl;
+        private Output<String> password;
+        private Output<String> username;
 
         public Builder() {
     	      // Empty
@@ -87,33 +87,33 @@ public final class SecurityScanConfigAuthenticationCustomAccountGetArgs extends 
     	      this.username = defaults.username;
         }
 
-        public Builder loginUrl(Input<String> loginUrl) {
+        public Builder loginUrl(Output<String> loginUrl) {
             this.loginUrl = Objects.requireNonNull(loginUrl);
             return this;
         }
 
         public Builder loginUrl(String loginUrl) {
-            this.loginUrl = Input.of(Objects.requireNonNull(loginUrl));
+            this.loginUrl = Output.of(Objects.requireNonNull(loginUrl));
             return this;
         }
 
-        public Builder password(Input<String> password) {
+        public Builder password(Output<String> password) {
             this.password = Objects.requireNonNull(password);
             return this;
         }
 
         public Builder password(String password) {
-            this.password = Input.of(Objects.requireNonNull(password));
+            this.password = Output.of(Objects.requireNonNull(password));
             return this;
         }
 
-        public Builder username(Input<String> username) {
+        public Builder username(Output<String> username) {
             this.username = Objects.requireNonNull(username);
             return this;
         }
 
         public Builder username(String username) {
-            this.username = Input.of(Objects.requireNonNull(username));
+            this.username = Output.of(Objects.requireNonNull(username));
             return this;
         }
         public SecurityScanConfigAuthenticationCustomAccountGetArgs build() {

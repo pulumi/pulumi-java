@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.osconfig.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -21,10 +21,10 @@ public final class PatchDeploymentPatchConfigZypperArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="categories")
-      private final @Nullable Input<List<String>> categories;
+      private final @Nullable Output<List<String>> categories;
 
-    public Input<List<String>> getCategories() {
-        return this.categories == null ? Input.empty() : this.categories;
+    public Output<List<String>> getCategories() {
+        return this.categories == null ? Output.empty() : this.categories;
     }
 
     /**
@@ -32,10 +32,10 @@ public final class PatchDeploymentPatchConfigZypperArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="excludes")
-      private final @Nullable Input<List<String>> excludes;
+      private final @Nullable Output<List<String>> excludes;
 
-    public Input<List<String>> getExcludes() {
-        return this.excludes == null ? Input.empty() : this.excludes;
+    public Output<List<String>> getExcludes() {
+        return this.excludes == null ? Output.empty() : this.excludes;
     }
 
     /**
@@ -44,10 +44,10 @@ public final class PatchDeploymentPatchConfigZypperArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="exclusivePatches")
-      private final @Nullable Input<List<String>> exclusivePatches;
+      private final @Nullable Output<List<String>> exclusivePatches;
 
-    public Input<List<String>> getExclusivePatches() {
-        return this.exclusivePatches == null ? Input.empty() : this.exclusivePatches;
+    public Output<List<String>> getExclusivePatches() {
+        return this.exclusivePatches == null ? Output.empty() : this.exclusivePatches;
     }
 
     /**
@@ -55,10 +55,10 @@ public final class PatchDeploymentPatchConfigZypperArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="severities")
-      private final @Nullable Input<List<String>> severities;
+      private final @Nullable Output<List<String>> severities;
 
-    public Input<List<String>> getSeverities() {
-        return this.severities == null ? Input.empty() : this.severities;
+    public Output<List<String>> getSeverities() {
+        return this.severities == null ? Output.empty() : this.severities;
     }
 
     /**
@@ -66,10 +66,10 @@ public final class PatchDeploymentPatchConfigZypperArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="withOptional")
-      private final @Nullable Input<Boolean> withOptional;
+      private final @Nullable Output<Boolean> withOptional;
 
-    public Input<Boolean> getWithOptional() {
-        return this.withOptional == null ? Input.empty() : this.withOptional;
+    public Output<Boolean> getWithOptional() {
+        return this.withOptional == null ? Output.empty() : this.withOptional;
     }
 
     /**
@@ -77,19 +77,19 @@ public final class PatchDeploymentPatchConfigZypperArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="withUpdate")
-      private final @Nullable Input<Boolean> withUpdate;
+      private final @Nullable Output<Boolean> withUpdate;
 
-    public Input<Boolean> getWithUpdate() {
-        return this.withUpdate == null ? Input.empty() : this.withUpdate;
+    public Output<Boolean> getWithUpdate() {
+        return this.withUpdate == null ? Output.empty() : this.withUpdate;
     }
 
     public PatchDeploymentPatchConfigZypperArgs(
-        @Nullable Input<List<String>> categories,
-        @Nullable Input<List<String>> excludes,
-        @Nullable Input<List<String>> exclusivePatches,
-        @Nullable Input<List<String>> severities,
-        @Nullable Input<Boolean> withOptional,
-        @Nullable Input<Boolean> withUpdate) {
+        @Nullable Output<List<String>> categories,
+        @Nullable Output<List<String>> excludes,
+        @Nullable Output<List<String>> exclusivePatches,
+        @Nullable Output<List<String>> severities,
+        @Nullable Output<Boolean> withOptional,
+        @Nullable Output<Boolean> withUpdate) {
         this.categories = categories;
         this.excludes = excludes;
         this.exclusivePatches = exclusivePatches;
@@ -99,12 +99,12 @@ public final class PatchDeploymentPatchConfigZypperArgs extends io.pulumi.resour
     }
 
     private PatchDeploymentPatchConfigZypperArgs() {
-        this.categories = Input.empty();
-        this.excludes = Input.empty();
-        this.exclusivePatches = Input.empty();
-        this.severities = Input.empty();
-        this.withOptional = Input.empty();
-        this.withUpdate = Input.empty();
+        this.categories = Output.empty();
+        this.excludes = Output.empty();
+        this.exclusivePatches = Output.empty();
+        this.severities = Output.empty();
+        this.withOptional = Output.empty();
+        this.withUpdate = Output.empty();
     }
 
     public static Builder builder() {
@@ -116,12 +116,12 @@ public final class PatchDeploymentPatchConfigZypperArgs extends io.pulumi.resour
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> categories;
-        private @Nullable Input<List<String>> excludes;
-        private @Nullable Input<List<String>> exclusivePatches;
-        private @Nullable Input<List<String>> severities;
-        private @Nullable Input<Boolean> withOptional;
-        private @Nullable Input<Boolean> withUpdate;
+        private @Nullable Output<List<String>> categories;
+        private @Nullable Output<List<String>> excludes;
+        private @Nullable Output<List<String>> exclusivePatches;
+        private @Nullable Output<List<String>> severities;
+        private @Nullable Output<Boolean> withOptional;
+        private @Nullable Output<Boolean> withUpdate;
 
         public Builder() {
     	      // Empty
@@ -137,63 +137,63 @@ public final class PatchDeploymentPatchConfigZypperArgs extends io.pulumi.resour
     	      this.withUpdate = defaults.withUpdate;
         }
 
-        public Builder categories(@Nullable Input<List<String>> categories) {
+        public Builder categories(@Nullable Output<List<String>> categories) {
             this.categories = categories;
             return this;
         }
 
         public Builder categories(@Nullable List<String> categories) {
-            this.categories = Input.ofNullable(categories);
+            this.categories = Output.ofNullable(categories);
             return this;
         }
 
-        public Builder excludes(@Nullable Input<List<String>> excludes) {
+        public Builder excludes(@Nullable Output<List<String>> excludes) {
             this.excludes = excludes;
             return this;
         }
 
         public Builder excludes(@Nullable List<String> excludes) {
-            this.excludes = Input.ofNullable(excludes);
+            this.excludes = Output.ofNullable(excludes);
             return this;
         }
 
-        public Builder exclusivePatches(@Nullable Input<List<String>> exclusivePatches) {
+        public Builder exclusivePatches(@Nullable Output<List<String>> exclusivePatches) {
             this.exclusivePatches = exclusivePatches;
             return this;
         }
 
         public Builder exclusivePatches(@Nullable List<String> exclusivePatches) {
-            this.exclusivePatches = Input.ofNullable(exclusivePatches);
+            this.exclusivePatches = Output.ofNullable(exclusivePatches);
             return this;
         }
 
-        public Builder severities(@Nullable Input<List<String>> severities) {
+        public Builder severities(@Nullable Output<List<String>> severities) {
             this.severities = severities;
             return this;
         }
 
         public Builder severities(@Nullable List<String> severities) {
-            this.severities = Input.ofNullable(severities);
+            this.severities = Output.ofNullable(severities);
             return this;
         }
 
-        public Builder withOptional(@Nullable Input<Boolean> withOptional) {
+        public Builder withOptional(@Nullable Output<Boolean> withOptional) {
             this.withOptional = withOptional;
             return this;
         }
 
         public Builder withOptional(@Nullable Boolean withOptional) {
-            this.withOptional = Input.ofNullable(withOptional);
+            this.withOptional = Output.ofNullable(withOptional);
             return this;
         }
 
-        public Builder withUpdate(@Nullable Input<Boolean> withUpdate) {
+        public Builder withUpdate(@Nullable Output<Boolean> withUpdate) {
             this.withUpdate = withUpdate;
             return this;
         }
 
         public Builder withUpdate(@Nullable Boolean withUpdate) {
-            this.withUpdate = Input.ofNullable(withUpdate);
+            this.withUpdate = Output.ofNullable(withUpdate);
             return this;
         }
         public PatchDeploymentPatchConfigZypperArgs build() {

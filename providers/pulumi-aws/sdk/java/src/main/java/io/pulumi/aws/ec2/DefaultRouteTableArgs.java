@@ -4,7 +4,7 @@
 package io.pulumi.aws.ec2;
 
 import io.pulumi.aws.ec2.inputs.DefaultRouteTableRouteArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -22,9 +22,9 @@ public final class DefaultRouteTableArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="defaultRouteTableId", required=true)
-      private final Input<String> defaultRouteTableId;
+      private final Output<String> defaultRouteTableId;
 
-    public Input<String> getDefaultRouteTableId() {
+    public Output<String> getDefaultRouteTableId() {
         return this.defaultRouteTableId;
     }
 
@@ -33,10 +33,10 @@ public final class DefaultRouteTableArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="propagatingVgws")
-      private final @Nullable Input<List<String>> propagatingVgws;
+      private final @Nullable Output<List<String>> propagatingVgws;
 
-    public Input<List<String>> getPropagatingVgws() {
-        return this.propagatingVgws == null ? Input.empty() : this.propagatingVgws;
+    public Output<List<String>> getPropagatingVgws() {
+        return this.propagatingVgws == null ? Output.empty() : this.propagatingVgws;
     }
 
     /**
@@ -44,10 +44,10 @@ public final class DefaultRouteTableArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="routes")
-      private final @Nullable Input<List<DefaultRouteTableRouteArgs>> routes;
+      private final @Nullable Output<List<DefaultRouteTableRouteArgs>> routes;
 
-    public Input<List<DefaultRouteTableRouteArgs>> getRoutes() {
-        return this.routes == null ? Input.empty() : this.routes;
+    public Output<List<DefaultRouteTableRouteArgs>> getRoutes() {
+        return this.routes == null ? Output.empty() : this.routes;
     }
 
     /**
@@ -55,17 +55,17 @@ public final class DefaultRouteTableArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public DefaultRouteTableArgs(
-        Input<String> defaultRouteTableId,
-        @Nullable Input<List<String>> propagatingVgws,
-        @Nullable Input<List<DefaultRouteTableRouteArgs>> routes,
-        @Nullable Input<Map<String,String>> tags) {
+        Output<String> defaultRouteTableId,
+        @Nullable Output<List<String>> propagatingVgws,
+        @Nullable Output<List<DefaultRouteTableRouteArgs>> routes,
+        @Nullable Output<Map<String,String>> tags) {
         this.defaultRouteTableId = Objects.requireNonNull(defaultRouteTableId, "expected parameter 'defaultRouteTableId' to be non-null");
         this.propagatingVgws = propagatingVgws;
         this.routes = routes;
@@ -73,10 +73,10 @@ public final class DefaultRouteTableArgs extends io.pulumi.resources.ResourceArg
     }
 
     private DefaultRouteTableArgs() {
-        this.defaultRouteTableId = Input.empty();
-        this.propagatingVgws = Input.empty();
-        this.routes = Input.empty();
-        this.tags = Input.empty();
+        this.defaultRouteTableId = Output.empty();
+        this.propagatingVgws = Output.empty();
+        this.routes = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -88,10 +88,10 @@ public final class DefaultRouteTableArgs extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private Input<String> defaultRouteTableId;
-        private @Nullable Input<List<String>> propagatingVgws;
-        private @Nullable Input<List<DefaultRouteTableRouteArgs>> routes;
-        private @Nullable Input<Map<String,String>> tags;
+        private Output<String> defaultRouteTableId;
+        private @Nullable Output<List<String>> propagatingVgws;
+        private @Nullable Output<List<DefaultRouteTableRouteArgs>> routes;
+        private @Nullable Output<Map<String,String>> tags;
 
         public Builder() {
     	      // Empty
@@ -105,43 +105,43 @@ public final class DefaultRouteTableArgs extends io.pulumi.resources.ResourceArg
     	      this.tags = defaults.tags;
         }
 
-        public Builder defaultRouteTableId(Input<String> defaultRouteTableId) {
+        public Builder defaultRouteTableId(Output<String> defaultRouteTableId) {
             this.defaultRouteTableId = Objects.requireNonNull(defaultRouteTableId);
             return this;
         }
 
         public Builder defaultRouteTableId(String defaultRouteTableId) {
-            this.defaultRouteTableId = Input.of(Objects.requireNonNull(defaultRouteTableId));
+            this.defaultRouteTableId = Output.of(Objects.requireNonNull(defaultRouteTableId));
             return this;
         }
 
-        public Builder propagatingVgws(@Nullable Input<List<String>> propagatingVgws) {
+        public Builder propagatingVgws(@Nullable Output<List<String>> propagatingVgws) {
             this.propagatingVgws = propagatingVgws;
             return this;
         }
 
         public Builder propagatingVgws(@Nullable List<String> propagatingVgws) {
-            this.propagatingVgws = Input.ofNullable(propagatingVgws);
+            this.propagatingVgws = Output.ofNullable(propagatingVgws);
             return this;
         }
 
-        public Builder routes(@Nullable Input<List<DefaultRouteTableRouteArgs>> routes) {
+        public Builder routes(@Nullable Output<List<DefaultRouteTableRouteArgs>> routes) {
             this.routes = routes;
             return this;
         }
 
         public Builder routes(@Nullable List<DefaultRouteTableRouteArgs> routes) {
-            this.routes = Input.ofNullable(routes);
+            this.routes = Output.ofNullable(routes);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public DefaultRouteTableArgs build() {

@@ -6,7 +6,7 @@ package io.pulumi.azurenative.containerregistry;
 import io.pulumi.azurenative.containerregistry.enums.WebhookAction;
 import io.pulumi.azurenative.containerregistry.enums.WebhookStatus;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -24,9 +24,9 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="actions", required=true)
-      private final Input<List<Either<String,WebhookAction>>> actions;
+      private final Output<List<Either<String,WebhookAction>>> actions;
 
-    public Input<List<Either<String,WebhookAction>>> getActions() {
+    public Output<List<Either<String,WebhookAction>>> getActions() {
         return this.actions;
     }
 
@@ -35,10 +35,10 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="customHeaders")
-      private final @Nullable Input<Map<String,String>> customHeaders;
+      private final @Nullable Output<Map<String,String>> customHeaders;
 
-    public Input<Map<String,String>> getCustomHeaders() {
-        return this.customHeaders == null ? Input.empty() : this.customHeaders;
+    public Output<Map<String,String>> getCustomHeaders() {
+        return this.customHeaders == null ? Output.empty() : this.customHeaders;
     }
 
     /**
@@ -46,10 +46,10 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -57,9 +57,9 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="registryName", required=true)
-      private final Input<String> registryName;
+      private final Output<String> registryName;
 
-    public Input<String> getRegistryName() {
+    public Output<String> getRegistryName() {
         return this.registryName;
     }
 
@@ -68,9 +68,9 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -79,10 +79,10 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="scope")
-      private final @Nullable Input<String> scope;
+      private final @Nullable Output<String> scope;
 
-    public Input<String> getScope() {
-        return this.scope == null ? Input.empty() : this.scope;
+    public Output<String> getScope() {
+        return this.scope == null ? Output.empty() : this.scope;
     }
 
     /**
@@ -90,9 +90,9 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serviceUri", required=true)
-      private final Input<String> serviceUri;
+      private final Output<String> serviceUri;
 
-    public Input<String> getServiceUri() {
+    public Output<String> getServiceUri() {
         return this.serviceUri;
     }
 
@@ -101,10 +101,10 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="status")
-      private final @Nullable Input<Either<String,WebhookStatus>> status;
+      private final @Nullable Output<Either<String,WebhookStatus>> status;
 
-    public Input<Either<String,WebhookStatus>> getStatus() {
-        return this.status == null ? Input.empty() : this.status;
+    public Output<Either<String,WebhookStatus>> getStatus() {
+        return this.status == null ? Output.empty() : this.status;
     }
 
     /**
@@ -112,10 +112,10 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -123,23 +123,23 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="webhookName")
-      private final @Nullable Input<String> webhookName;
+      private final @Nullable Output<String> webhookName;
 
-    public Input<String> getWebhookName() {
-        return this.webhookName == null ? Input.empty() : this.webhookName;
+    public Output<String> getWebhookName() {
+        return this.webhookName == null ? Output.empty() : this.webhookName;
     }
 
     public WebhookArgs(
-        Input<List<Either<String,WebhookAction>>> actions,
-        @Nullable Input<Map<String,String>> customHeaders,
-        @Nullable Input<String> location,
-        Input<String> registryName,
-        Input<String> resourceGroupName,
-        @Nullable Input<String> scope,
-        Input<String> serviceUri,
-        @Nullable Input<Either<String,WebhookStatus>> status,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<String> webhookName) {
+        Output<List<Either<String,WebhookAction>>> actions,
+        @Nullable Output<Map<String,String>> customHeaders,
+        @Nullable Output<String> location,
+        Output<String> registryName,
+        Output<String> resourceGroupName,
+        @Nullable Output<String> scope,
+        Output<String> serviceUri,
+        @Nullable Output<Either<String,WebhookStatus>> status,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<String> webhookName) {
         this.actions = Objects.requireNonNull(actions, "expected parameter 'actions' to be non-null");
         this.customHeaders = customHeaders;
         this.location = location;
@@ -153,16 +153,16 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private WebhookArgs() {
-        this.actions = Input.empty();
-        this.customHeaders = Input.empty();
-        this.location = Input.empty();
-        this.registryName = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.scope = Input.empty();
-        this.serviceUri = Input.empty();
-        this.status = Input.empty();
-        this.tags = Input.empty();
-        this.webhookName = Input.empty();
+        this.actions = Output.empty();
+        this.customHeaders = Output.empty();
+        this.location = Output.empty();
+        this.registryName = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.scope = Output.empty();
+        this.serviceUri = Output.empty();
+        this.status = Output.empty();
+        this.tags = Output.empty();
+        this.webhookName = Output.empty();
     }
 
     public static Builder builder() {
@@ -174,16 +174,16 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<List<Either<String,WebhookAction>>> actions;
-        private @Nullable Input<Map<String,String>> customHeaders;
-        private @Nullable Input<String> location;
-        private Input<String> registryName;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<String> scope;
-        private Input<String> serviceUri;
-        private @Nullable Input<Either<String,WebhookStatus>> status;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<String> webhookName;
+        private Output<List<Either<String,WebhookAction>>> actions;
+        private @Nullable Output<Map<String,String>> customHeaders;
+        private @Nullable Output<String> location;
+        private Output<String> registryName;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<String> scope;
+        private Output<String> serviceUri;
+        private @Nullable Output<Either<String,WebhookStatus>> status;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<String> webhookName;
 
         public Builder() {
     	      // Empty
@@ -203,103 +203,103 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
     	      this.webhookName = defaults.webhookName;
         }
 
-        public Builder actions(Input<List<Either<String,WebhookAction>>> actions) {
+        public Builder actions(Output<List<Either<String,WebhookAction>>> actions) {
             this.actions = Objects.requireNonNull(actions);
             return this;
         }
 
         public Builder actions(List<Either<String,WebhookAction>> actions) {
-            this.actions = Input.of(Objects.requireNonNull(actions));
+            this.actions = Output.of(Objects.requireNonNull(actions));
             return this;
         }
 
-        public Builder customHeaders(@Nullable Input<Map<String,String>> customHeaders) {
+        public Builder customHeaders(@Nullable Output<Map<String,String>> customHeaders) {
             this.customHeaders = customHeaders;
             return this;
         }
 
         public Builder customHeaders(@Nullable Map<String,String> customHeaders) {
-            this.customHeaders = Input.ofNullable(customHeaders);
+            this.customHeaders = Output.ofNullable(customHeaders);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder registryName(Input<String> registryName) {
+        public Builder registryName(Output<String> registryName) {
             this.registryName = Objects.requireNonNull(registryName);
             return this;
         }
 
         public Builder registryName(String registryName) {
-            this.registryName = Input.of(Objects.requireNonNull(registryName));
+            this.registryName = Output.of(Objects.requireNonNull(registryName));
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder scope(@Nullable Input<String> scope) {
+        public Builder scope(@Nullable Output<String> scope) {
             this.scope = scope;
             return this;
         }
 
         public Builder scope(@Nullable String scope) {
-            this.scope = Input.ofNullable(scope);
+            this.scope = Output.ofNullable(scope);
             return this;
         }
 
-        public Builder serviceUri(Input<String> serviceUri) {
+        public Builder serviceUri(Output<String> serviceUri) {
             this.serviceUri = Objects.requireNonNull(serviceUri);
             return this;
         }
 
         public Builder serviceUri(String serviceUri) {
-            this.serviceUri = Input.of(Objects.requireNonNull(serviceUri));
+            this.serviceUri = Output.of(Objects.requireNonNull(serviceUri));
             return this;
         }
 
-        public Builder status(@Nullable Input<Either<String,WebhookStatus>> status) {
+        public Builder status(@Nullable Output<Either<String,WebhookStatus>> status) {
             this.status = status;
             return this;
         }
 
         public Builder status(@Nullable Either<String,WebhookStatus> status) {
-            this.status = Input.ofNullable(status);
+            this.status = Output.ofNullable(status);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder webhookName(@Nullable Input<String> webhookName) {
+        public Builder webhookName(@Nullable Output<String> webhookName) {
             this.webhookName = webhookName;
             return this;
         }
 
         public Builder webhookName(@Nullable String webhookName) {
-            this.webhookName = Input.ofNullable(webhookName);
+            this.webhookName = Output.ofNullable(webhookName);
             return this;
         }
         public WebhookArgs build() {

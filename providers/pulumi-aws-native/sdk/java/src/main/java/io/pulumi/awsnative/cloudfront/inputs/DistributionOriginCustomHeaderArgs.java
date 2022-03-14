@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.cloudfront.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -14,29 +14,29 @@ public final class DistributionOriginCustomHeaderArgs extends io.pulumi.resource
     public static final DistributionOriginCustomHeaderArgs Empty = new DistributionOriginCustomHeaderArgs();
 
     @InputImport(name="headerName", required=true)
-      private final Input<String> headerName;
+      private final Output<String> headerName;
 
-    public Input<String> getHeaderName() {
+    public Output<String> getHeaderName() {
         return this.headerName;
     }
 
     @InputImport(name="headerValue", required=true)
-      private final Input<String> headerValue;
+      private final Output<String> headerValue;
 
-    public Input<String> getHeaderValue() {
+    public Output<String> getHeaderValue() {
         return this.headerValue;
     }
 
     public DistributionOriginCustomHeaderArgs(
-        Input<String> headerName,
-        Input<String> headerValue) {
+        Output<String> headerName,
+        Output<String> headerValue) {
         this.headerName = Objects.requireNonNull(headerName, "expected parameter 'headerName' to be non-null");
         this.headerValue = Objects.requireNonNull(headerValue, "expected parameter 'headerValue' to be non-null");
     }
 
     private DistributionOriginCustomHeaderArgs() {
-        this.headerName = Input.empty();
-        this.headerValue = Input.empty();
+        this.headerName = Output.empty();
+        this.headerValue = Output.empty();
     }
 
     public static Builder builder() {
@@ -48,8 +48,8 @@ public final class DistributionOriginCustomHeaderArgs extends io.pulumi.resource
     }
 
     public static final class Builder {
-        private Input<String> headerName;
-        private Input<String> headerValue;
+        private Output<String> headerName;
+        private Output<String> headerValue;
 
         public Builder() {
     	      // Empty
@@ -61,23 +61,23 @@ public final class DistributionOriginCustomHeaderArgs extends io.pulumi.resource
     	      this.headerValue = defaults.headerValue;
         }
 
-        public Builder headerName(Input<String> headerName) {
+        public Builder headerName(Output<String> headerName) {
             this.headerName = Objects.requireNonNull(headerName);
             return this;
         }
 
         public Builder headerName(String headerName) {
-            this.headerName = Input.of(Objects.requireNonNull(headerName));
+            this.headerName = Output.of(Objects.requireNonNull(headerName));
             return this;
         }
 
-        public Builder headerValue(Input<String> headerValue) {
+        public Builder headerValue(Output<String> headerValue) {
             this.headerValue = Objects.requireNonNull(headerValue);
             return this;
         }
 
         public Builder headerValue(String headerValue) {
-            this.headerValue = Input.of(Objects.requireNonNull(headerValue));
+            this.headerValue = Output.of(Objects.requireNonNull(headerValue));
             return this;
         }
         public DistributionOriginCustomHeaderArgs build() {

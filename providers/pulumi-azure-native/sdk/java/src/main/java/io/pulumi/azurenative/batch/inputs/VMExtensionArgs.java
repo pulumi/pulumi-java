@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.batch.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Object;
@@ -22,16 +22,16 @@ public final class VMExtensionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="autoUpgradeMinorVersion")
-      private final @Nullable Input<Boolean> autoUpgradeMinorVersion;
+      private final @Nullable Output<Boolean> autoUpgradeMinorVersion;
 
-    public Input<Boolean> getAutoUpgradeMinorVersion() {
-        return this.autoUpgradeMinorVersion == null ? Input.empty() : this.autoUpgradeMinorVersion;
+    public Output<Boolean> getAutoUpgradeMinorVersion() {
+        return this.autoUpgradeMinorVersion == null ? Output.empty() : this.autoUpgradeMinorVersion;
     }
 
     @InputImport(name="name", required=true)
-      private final Input<String> name;
+      private final Output<String> name;
 
-    public Input<String> getName() {
+    public Output<String> getName() {
         return this.name;
     }
 
@@ -40,10 +40,10 @@ public final class VMExtensionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="protectedSettings")
-      private final @Nullable Input<Object> protectedSettings;
+      private final @Nullable Output<Object> protectedSettings;
 
-    public Input<Object> getProtectedSettings() {
-        return this.protectedSettings == null ? Input.empty() : this.protectedSettings;
+    public Output<Object> getProtectedSettings() {
+        return this.protectedSettings == null ? Output.empty() : this.protectedSettings;
     }
 
     /**
@@ -51,49 +51,49 @@ public final class VMExtensionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="provisionAfterExtensions")
-      private final @Nullable Input<List<String>> provisionAfterExtensions;
+      private final @Nullable Output<List<String>> provisionAfterExtensions;
 
-    public Input<List<String>> getProvisionAfterExtensions() {
-        return this.provisionAfterExtensions == null ? Input.empty() : this.provisionAfterExtensions;
+    public Output<List<String>> getProvisionAfterExtensions() {
+        return this.provisionAfterExtensions == null ? Output.empty() : this.provisionAfterExtensions;
     }
 
     @InputImport(name="publisher", required=true)
-      private final Input<String> publisher;
+      private final Output<String> publisher;
 
-    public Input<String> getPublisher() {
+    public Output<String> getPublisher() {
         return this.publisher;
     }
 
     @InputImport(name="settings")
-      private final @Nullable Input<Object> settings;
+      private final @Nullable Output<Object> settings;
 
-    public Input<Object> getSettings() {
-        return this.settings == null ? Input.empty() : this.settings;
+    public Output<Object> getSettings() {
+        return this.settings == null ? Output.empty() : this.settings;
     }
 
     @InputImport(name="type", required=true)
-      private final Input<String> type;
+      private final Output<String> type;
 
-    public Input<String> getType() {
+    public Output<String> getType() {
         return this.type;
     }
 
     @InputImport(name="typeHandlerVersion")
-      private final @Nullable Input<String> typeHandlerVersion;
+      private final @Nullable Output<String> typeHandlerVersion;
 
-    public Input<String> getTypeHandlerVersion() {
-        return this.typeHandlerVersion == null ? Input.empty() : this.typeHandlerVersion;
+    public Output<String> getTypeHandlerVersion() {
+        return this.typeHandlerVersion == null ? Output.empty() : this.typeHandlerVersion;
     }
 
     public VMExtensionArgs(
-        @Nullable Input<Boolean> autoUpgradeMinorVersion,
-        Input<String> name,
-        @Nullable Input<Object> protectedSettings,
-        @Nullable Input<List<String>> provisionAfterExtensions,
-        Input<String> publisher,
-        @Nullable Input<Object> settings,
-        Input<String> type,
-        @Nullable Input<String> typeHandlerVersion) {
+        @Nullable Output<Boolean> autoUpgradeMinorVersion,
+        Output<String> name,
+        @Nullable Output<Object> protectedSettings,
+        @Nullable Output<List<String>> provisionAfterExtensions,
+        Output<String> publisher,
+        @Nullable Output<Object> settings,
+        Output<String> type,
+        @Nullable Output<String> typeHandlerVersion) {
         this.autoUpgradeMinorVersion = autoUpgradeMinorVersion;
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
         this.protectedSettings = protectedSettings;
@@ -105,14 +105,14 @@ public final class VMExtensionArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private VMExtensionArgs() {
-        this.autoUpgradeMinorVersion = Input.empty();
-        this.name = Input.empty();
-        this.protectedSettings = Input.empty();
-        this.provisionAfterExtensions = Input.empty();
-        this.publisher = Input.empty();
-        this.settings = Input.empty();
-        this.type = Input.empty();
-        this.typeHandlerVersion = Input.empty();
+        this.autoUpgradeMinorVersion = Output.empty();
+        this.name = Output.empty();
+        this.protectedSettings = Output.empty();
+        this.provisionAfterExtensions = Output.empty();
+        this.publisher = Output.empty();
+        this.settings = Output.empty();
+        this.type = Output.empty();
+        this.typeHandlerVersion = Output.empty();
     }
 
     public static Builder builder() {
@@ -124,14 +124,14 @@ public final class VMExtensionArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> autoUpgradeMinorVersion;
-        private Input<String> name;
-        private @Nullable Input<Object> protectedSettings;
-        private @Nullable Input<List<String>> provisionAfterExtensions;
-        private Input<String> publisher;
-        private @Nullable Input<Object> settings;
-        private Input<String> type;
-        private @Nullable Input<String> typeHandlerVersion;
+        private @Nullable Output<Boolean> autoUpgradeMinorVersion;
+        private Output<String> name;
+        private @Nullable Output<Object> protectedSettings;
+        private @Nullable Output<List<String>> provisionAfterExtensions;
+        private Output<String> publisher;
+        private @Nullable Output<Object> settings;
+        private Output<String> type;
+        private @Nullable Output<String> typeHandlerVersion;
 
         public Builder() {
     	      // Empty
@@ -149,83 +149,83 @@ public final class VMExtensionArgs extends io.pulumi.resources.ResourceArgs {
     	      this.typeHandlerVersion = defaults.typeHandlerVersion;
         }
 
-        public Builder autoUpgradeMinorVersion(@Nullable Input<Boolean> autoUpgradeMinorVersion) {
+        public Builder autoUpgradeMinorVersion(@Nullable Output<Boolean> autoUpgradeMinorVersion) {
             this.autoUpgradeMinorVersion = autoUpgradeMinorVersion;
             return this;
         }
 
         public Builder autoUpgradeMinorVersion(@Nullable Boolean autoUpgradeMinorVersion) {
-            this.autoUpgradeMinorVersion = Input.ofNullable(autoUpgradeMinorVersion);
+            this.autoUpgradeMinorVersion = Output.ofNullable(autoUpgradeMinorVersion);
             return this;
         }
 
-        public Builder name(Input<String> name) {
+        public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(String name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder protectedSettings(@Nullable Input<Object> protectedSettings) {
+        public Builder protectedSettings(@Nullable Output<Object> protectedSettings) {
             this.protectedSettings = protectedSettings;
             return this;
         }
 
         public Builder protectedSettings(@Nullable Object protectedSettings) {
-            this.protectedSettings = Input.ofNullable(protectedSettings);
+            this.protectedSettings = Output.ofNullable(protectedSettings);
             return this;
         }
 
-        public Builder provisionAfterExtensions(@Nullable Input<List<String>> provisionAfterExtensions) {
+        public Builder provisionAfterExtensions(@Nullable Output<List<String>> provisionAfterExtensions) {
             this.provisionAfterExtensions = provisionAfterExtensions;
             return this;
         }
 
         public Builder provisionAfterExtensions(@Nullable List<String> provisionAfterExtensions) {
-            this.provisionAfterExtensions = Input.ofNullable(provisionAfterExtensions);
+            this.provisionAfterExtensions = Output.ofNullable(provisionAfterExtensions);
             return this;
         }
 
-        public Builder publisher(Input<String> publisher) {
+        public Builder publisher(Output<String> publisher) {
             this.publisher = Objects.requireNonNull(publisher);
             return this;
         }
 
         public Builder publisher(String publisher) {
-            this.publisher = Input.of(Objects.requireNonNull(publisher));
+            this.publisher = Output.of(Objects.requireNonNull(publisher));
             return this;
         }
 
-        public Builder settings(@Nullable Input<Object> settings) {
+        public Builder settings(@Nullable Output<Object> settings) {
             this.settings = settings;
             return this;
         }
 
         public Builder settings(@Nullable Object settings) {
-            this.settings = Input.ofNullable(settings);
+            this.settings = Output.ofNullable(settings);
             return this;
         }
 
-        public Builder type(Input<String> type) {
+        public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(String type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
 
-        public Builder typeHandlerVersion(@Nullable Input<String> typeHandlerVersion) {
+        public Builder typeHandlerVersion(@Nullable Output<String> typeHandlerVersion) {
             this.typeHandlerVersion = typeHandlerVersion;
             return this;
         }
 
         public Builder typeHandlerVersion(@Nullable String typeHandlerVersion) {
-            this.typeHandlerVersion = Input.ofNullable(typeHandlerVersion);
+            this.typeHandlerVersion = Output.ofNullable(typeHandlerVersion);
             return this;
         }
         public VMExtensionArgs build() {

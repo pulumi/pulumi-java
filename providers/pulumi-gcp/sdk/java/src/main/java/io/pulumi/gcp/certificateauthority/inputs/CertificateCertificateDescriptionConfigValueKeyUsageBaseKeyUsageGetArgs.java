@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.certificateauthority.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.certificateauthority.inputs.CertificateCertificateDescriptionConfigValueKeyUsageBaseKeyUsageKeyUsageOptionGetArgs;
 import java.util.List;
@@ -16,18 +16,18 @@ public final class CertificateCertificateDescriptionConfigValueKeyUsageBaseKeyUs
     public static final CertificateCertificateDescriptionConfigValueKeyUsageBaseKeyUsageGetArgs Empty = new CertificateCertificateDescriptionConfigValueKeyUsageBaseKeyUsageGetArgs();
 
     @InputImport(name="keyUsageOptions")
-      private final @Nullable Input<List<CertificateCertificateDescriptionConfigValueKeyUsageBaseKeyUsageKeyUsageOptionGetArgs>> keyUsageOptions;
+      private final @Nullable Output<List<CertificateCertificateDescriptionConfigValueKeyUsageBaseKeyUsageKeyUsageOptionGetArgs>> keyUsageOptions;
 
-    public Input<List<CertificateCertificateDescriptionConfigValueKeyUsageBaseKeyUsageKeyUsageOptionGetArgs>> getKeyUsageOptions() {
-        return this.keyUsageOptions == null ? Input.empty() : this.keyUsageOptions;
+    public Output<List<CertificateCertificateDescriptionConfigValueKeyUsageBaseKeyUsageKeyUsageOptionGetArgs>> getKeyUsageOptions() {
+        return this.keyUsageOptions == null ? Output.empty() : this.keyUsageOptions;
     }
 
-    public CertificateCertificateDescriptionConfigValueKeyUsageBaseKeyUsageGetArgs(@Nullable Input<List<CertificateCertificateDescriptionConfigValueKeyUsageBaseKeyUsageKeyUsageOptionGetArgs>> keyUsageOptions) {
+    public CertificateCertificateDescriptionConfigValueKeyUsageBaseKeyUsageGetArgs(@Nullable Output<List<CertificateCertificateDescriptionConfigValueKeyUsageBaseKeyUsageKeyUsageOptionGetArgs>> keyUsageOptions) {
         this.keyUsageOptions = keyUsageOptions;
     }
 
     private CertificateCertificateDescriptionConfigValueKeyUsageBaseKeyUsageGetArgs() {
-        this.keyUsageOptions = Input.empty();
+        this.keyUsageOptions = Output.empty();
     }
 
     public static Builder builder() {
@@ -39,7 +39,7 @@ public final class CertificateCertificateDescriptionConfigValueKeyUsageBaseKeyUs
     }
 
     public static final class Builder {
-        private @Nullable Input<List<CertificateCertificateDescriptionConfigValueKeyUsageBaseKeyUsageKeyUsageOptionGetArgs>> keyUsageOptions;
+        private @Nullable Output<List<CertificateCertificateDescriptionConfigValueKeyUsageBaseKeyUsageKeyUsageOptionGetArgs>> keyUsageOptions;
 
         public Builder() {
     	      // Empty
@@ -50,13 +50,13 @@ public final class CertificateCertificateDescriptionConfigValueKeyUsageBaseKeyUs
     	      this.keyUsageOptions = defaults.keyUsageOptions;
         }
 
-        public Builder keyUsageOptions(@Nullable Input<List<CertificateCertificateDescriptionConfigValueKeyUsageBaseKeyUsageKeyUsageOptionGetArgs>> keyUsageOptions) {
+        public Builder keyUsageOptions(@Nullable Output<List<CertificateCertificateDescriptionConfigValueKeyUsageBaseKeyUsageKeyUsageOptionGetArgs>> keyUsageOptions) {
             this.keyUsageOptions = keyUsageOptions;
             return this;
         }
 
         public Builder keyUsageOptions(@Nullable List<CertificateCertificateDescriptionConfigValueKeyUsageBaseKeyUsageKeyUsageOptionGetArgs> keyUsageOptions) {
-            this.keyUsageOptions = Input.ofNullable(keyUsageOptions);
+            this.keyUsageOptions = Output.ofNullable(keyUsageOptions);
             return this;
         }
         public CertificateCertificateDescriptionConfigValueKeyUsageBaseKeyUsageGetArgs build() {

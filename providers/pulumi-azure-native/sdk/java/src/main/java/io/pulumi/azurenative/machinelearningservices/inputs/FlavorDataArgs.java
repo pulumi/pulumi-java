@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.machinelearningservices.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -20,18 +20,18 @@ public final class FlavorDataArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="data")
-      private final @Nullable Input<Map<String,String>> data;
+      private final @Nullable Output<Map<String,String>> data;
 
-    public Input<Map<String,String>> getData() {
-        return this.data == null ? Input.empty() : this.data;
+    public Output<Map<String,String>> getData() {
+        return this.data == null ? Output.empty() : this.data;
     }
 
-    public FlavorDataArgs(@Nullable Input<Map<String,String>> data) {
+    public FlavorDataArgs(@Nullable Output<Map<String,String>> data) {
         this.data = data;
     }
 
     private FlavorDataArgs() {
-        this.data = Input.empty();
+        this.data = Output.empty();
     }
 
     public static Builder builder() {
@@ -43,7 +43,7 @@ public final class FlavorDataArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Map<String,String>> data;
+        private @Nullable Output<Map<String,String>> data;
 
         public Builder() {
     	      // Empty
@@ -54,13 +54,13 @@ public final class FlavorDataArgs extends io.pulumi.resources.ResourceArgs {
     	      this.data = defaults.data;
         }
 
-        public Builder data(@Nullable Input<Map<String,String>> data) {
+        public Builder data(@Nullable Output<Map<String,String>> data) {
             this.data = data;
             return this;
         }
 
         public Builder data(@Nullable Map<String,String> data) {
-            this.data = Input.ofNullable(data);
+            this.data = Output.ofNullable(data);
             return this;
         }
         public FlavorDataArgs build() {

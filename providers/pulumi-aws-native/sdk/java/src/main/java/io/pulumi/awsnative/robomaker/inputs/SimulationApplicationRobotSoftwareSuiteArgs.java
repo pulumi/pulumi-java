@@ -5,7 +5,7 @@ package io.pulumi.awsnative.robomaker.inputs;
 
 import io.pulumi.awsnative.robomaker.enums.SimulationApplicationRobotSoftwareSuiteName;
 import io.pulumi.awsnative.robomaker.enums.SimulationApplicationRobotSoftwareSuiteVersion;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,9 +24,9 @@ public final class SimulationApplicationRobotSoftwareSuiteArgs extends io.pulumi
      * 
      */
     @InputImport(name="name", required=true)
-      private final Input<SimulationApplicationRobotSoftwareSuiteName> name;
+      private final Output<SimulationApplicationRobotSoftwareSuiteName> name;
 
-    public Input<SimulationApplicationRobotSoftwareSuiteName> getName() {
+    public Output<SimulationApplicationRobotSoftwareSuiteName> getName() {
         return this.name;
     }
 
@@ -35,22 +35,22 @@ public final class SimulationApplicationRobotSoftwareSuiteArgs extends io.pulumi
      * 
      */
     @InputImport(name="version")
-      private final @Nullable Input<SimulationApplicationRobotSoftwareSuiteVersion> version;
+      private final @Nullable Output<SimulationApplicationRobotSoftwareSuiteVersion> version;
 
-    public Input<SimulationApplicationRobotSoftwareSuiteVersion> getVersion() {
-        return this.version == null ? Input.empty() : this.version;
+    public Output<SimulationApplicationRobotSoftwareSuiteVersion> getVersion() {
+        return this.version == null ? Output.empty() : this.version;
     }
 
     public SimulationApplicationRobotSoftwareSuiteArgs(
-        Input<SimulationApplicationRobotSoftwareSuiteName> name,
-        @Nullable Input<SimulationApplicationRobotSoftwareSuiteVersion> version) {
+        Output<SimulationApplicationRobotSoftwareSuiteName> name,
+        @Nullable Output<SimulationApplicationRobotSoftwareSuiteVersion> version) {
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
         this.version = version;
     }
 
     private SimulationApplicationRobotSoftwareSuiteArgs() {
-        this.name = Input.empty();
-        this.version = Input.empty();
+        this.name = Output.empty();
+        this.version = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class SimulationApplicationRobotSoftwareSuiteArgs extends io.pulumi
     }
 
     public static final class Builder {
-        private Input<SimulationApplicationRobotSoftwareSuiteName> name;
-        private @Nullable Input<SimulationApplicationRobotSoftwareSuiteVersion> version;
+        private Output<SimulationApplicationRobotSoftwareSuiteName> name;
+        private @Nullable Output<SimulationApplicationRobotSoftwareSuiteVersion> version;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class SimulationApplicationRobotSoftwareSuiteArgs extends io.pulumi
     	      this.version = defaults.version;
         }
 
-        public Builder name(Input<SimulationApplicationRobotSoftwareSuiteName> name) {
+        public Builder name(Output<SimulationApplicationRobotSoftwareSuiteName> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(SimulationApplicationRobotSoftwareSuiteName name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder version(@Nullable Input<SimulationApplicationRobotSoftwareSuiteVersion> version) {
+        public Builder version(@Nullable Output<SimulationApplicationRobotSoftwareSuiteVersion> version) {
             this.version = version;
             return this;
         }
 
         public Builder version(@Nullable SimulationApplicationRobotSoftwareSuiteVersion version) {
-            this.version = Input.ofNullable(version);
+            this.version = Output.ofNullable(version);
             return this;
         }
         public SimulationApplicationRobotSoftwareSuiteArgs build() {

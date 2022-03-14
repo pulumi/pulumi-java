@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.run_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class ContainerPortArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="containerPort")
-      private final @Nullable Input<Integer> containerPort;
+      private final @Nullable Output<Integer> containerPort;
 
-    public Input<Integer> getContainerPort() {
-        return this.containerPort == null ? Input.empty() : this.containerPort;
+    public Output<Integer> getContainerPort() {
+        return this.containerPort == null ? Output.empty() : this.containerPort;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class ContainerPortArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -46,25 +46,25 @@ public final class ContainerPortArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="protocol")
-      private final @Nullable Input<String> protocol;
+      private final @Nullable Output<String> protocol;
 
-    public Input<String> getProtocol() {
-        return this.protocol == null ? Input.empty() : this.protocol;
+    public Output<String> getProtocol() {
+        return this.protocol == null ? Output.empty() : this.protocol;
     }
 
     public ContainerPortArgs(
-        @Nullable Input<Integer> containerPort,
-        @Nullable Input<String> name,
-        @Nullable Input<String> protocol) {
+        @Nullable Output<Integer> containerPort,
+        @Nullable Output<String> name,
+        @Nullable Output<String> protocol) {
         this.containerPort = containerPort;
         this.name = name;
         this.protocol = protocol;
     }
 
     private ContainerPortArgs() {
-        this.containerPort = Input.empty();
-        this.name = Input.empty();
-        this.protocol = Input.empty();
+        this.containerPort = Output.empty();
+        this.name = Output.empty();
+        this.protocol = Output.empty();
     }
 
     public static Builder builder() {
@@ -76,9 +76,9 @@ public final class ContainerPortArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> containerPort;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> protocol;
+        private @Nullable Output<Integer> containerPort;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> protocol;
 
         public Builder() {
     	      // Empty
@@ -91,33 +91,33 @@ public final class ContainerPortArgs extends io.pulumi.resources.ResourceArgs {
     	      this.protocol = defaults.protocol;
         }
 
-        public Builder containerPort(@Nullable Input<Integer> containerPort) {
+        public Builder containerPort(@Nullable Output<Integer> containerPort) {
             this.containerPort = containerPort;
             return this;
         }
 
         public Builder containerPort(@Nullable Integer containerPort) {
-            this.containerPort = Input.ofNullable(containerPort);
+            this.containerPort = Output.ofNullable(containerPort);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder protocol(@Nullable Input<String> protocol) {
+        public Builder protocol(@Nullable Output<String> protocol) {
             this.protocol = protocol;
             return this;
         }
 
         public Builder protocol(@Nullable String protocol) {
-            this.protocol = Input.ofNullable(protocol);
+            this.protocol = Output.ofNullable(protocol);
             return this;
         }
         public ContainerPortArgs build() {

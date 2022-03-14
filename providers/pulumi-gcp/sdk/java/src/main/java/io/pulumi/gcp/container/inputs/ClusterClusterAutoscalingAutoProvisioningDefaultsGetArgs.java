@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.container.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -21,10 +21,10 @@ public final class ClusterClusterAutoscalingAutoProvisioningDefaultsGetArgs exte
      * 
      */
     @InputImport(name="imageType")
-      private final @Nullable Input<String> imageType;
+      private final @Nullable Output<String> imageType;
 
-    public Input<String> getImageType() {
-        return this.imageType == null ? Input.empty() : this.imageType;
+    public Output<String> getImageType() {
+        return this.imageType == null ? Output.empty() : this.imageType;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class ClusterClusterAutoscalingAutoProvisioningDefaultsGetArgs exte
      * 
      */
     @InputImport(name="minCpuPlatform")
-      private final @Nullable Input<String> minCpuPlatform;
+      private final @Nullable Output<String> minCpuPlatform;
 
-    public Input<String> getMinCpuPlatform() {
-        return this.minCpuPlatform == null ? Input.empty() : this.minCpuPlatform;
+    public Output<String> getMinCpuPlatform() {
+        return this.minCpuPlatform == null ? Output.empty() : this.minCpuPlatform;
     }
 
     /**
@@ -49,10 +49,10 @@ public final class ClusterClusterAutoscalingAutoProvisioningDefaultsGetArgs exte
      * 
      */
     @InputImport(name="oauthScopes")
-      private final @Nullable Input<List<String>> oauthScopes;
+      private final @Nullable Output<List<String>> oauthScopes;
 
-    public Input<List<String>> getOauthScopes() {
-        return this.oauthScopes == null ? Input.empty() : this.oauthScopes;
+    public Output<List<String>> getOauthScopes() {
+        return this.oauthScopes == null ? Output.empty() : this.oauthScopes;
     }
 
     /**
@@ -61,17 +61,17 @@ public final class ClusterClusterAutoscalingAutoProvisioningDefaultsGetArgs exte
      * 
      */
     @InputImport(name="serviceAccount")
-      private final @Nullable Input<String> serviceAccount;
+      private final @Nullable Output<String> serviceAccount;
 
-    public Input<String> getServiceAccount() {
-        return this.serviceAccount == null ? Input.empty() : this.serviceAccount;
+    public Output<String> getServiceAccount() {
+        return this.serviceAccount == null ? Output.empty() : this.serviceAccount;
     }
 
     public ClusterClusterAutoscalingAutoProvisioningDefaultsGetArgs(
-        @Nullable Input<String> imageType,
-        @Nullable Input<String> minCpuPlatform,
-        @Nullable Input<List<String>> oauthScopes,
-        @Nullable Input<String> serviceAccount) {
+        @Nullable Output<String> imageType,
+        @Nullable Output<String> minCpuPlatform,
+        @Nullable Output<List<String>> oauthScopes,
+        @Nullable Output<String> serviceAccount) {
         this.imageType = imageType;
         this.minCpuPlatform = minCpuPlatform;
         this.oauthScopes = oauthScopes;
@@ -79,10 +79,10 @@ public final class ClusterClusterAutoscalingAutoProvisioningDefaultsGetArgs exte
     }
 
     private ClusterClusterAutoscalingAutoProvisioningDefaultsGetArgs() {
-        this.imageType = Input.empty();
-        this.minCpuPlatform = Input.empty();
-        this.oauthScopes = Input.empty();
-        this.serviceAccount = Input.empty();
+        this.imageType = Output.empty();
+        this.minCpuPlatform = Output.empty();
+        this.oauthScopes = Output.empty();
+        this.serviceAccount = Output.empty();
     }
 
     public static Builder builder() {
@@ -94,10 +94,10 @@ public final class ClusterClusterAutoscalingAutoProvisioningDefaultsGetArgs exte
     }
 
     public static final class Builder {
-        private @Nullable Input<String> imageType;
-        private @Nullable Input<String> minCpuPlatform;
-        private @Nullable Input<List<String>> oauthScopes;
-        private @Nullable Input<String> serviceAccount;
+        private @Nullable Output<String> imageType;
+        private @Nullable Output<String> minCpuPlatform;
+        private @Nullable Output<List<String>> oauthScopes;
+        private @Nullable Output<String> serviceAccount;
 
         public Builder() {
     	      // Empty
@@ -111,43 +111,43 @@ public final class ClusterClusterAutoscalingAutoProvisioningDefaultsGetArgs exte
     	      this.serviceAccount = defaults.serviceAccount;
         }
 
-        public Builder imageType(@Nullable Input<String> imageType) {
+        public Builder imageType(@Nullable Output<String> imageType) {
             this.imageType = imageType;
             return this;
         }
 
         public Builder imageType(@Nullable String imageType) {
-            this.imageType = Input.ofNullable(imageType);
+            this.imageType = Output.ofNullable(imageType);
             return this;
         }
 
-        public Builder minCpuPlatform(@Nullable Input<String> minCpuPlatform) {
+        public Builder minCpuPlatform(@Nullable Output<String> minCpuPlatform) {
             this.minCpuPlatform = minCpuPlatform;
             return this;
         }
 
         public Builder minCpuPlatform(@Nullable String minCpuPlatform) {
-            this.minCpuPlatform = Input.ofNullable(minCpuPlatform);
+            this.minCpuPlatform = Output.ofNullable(minCpuPlatform);
             return this;
         }
 
-        public Builder oauthScopes(@Nullable Input<List<String>> oauthScopes) {
+        public Builder oauthScopes(@Nullable Output<List<String>> oauthScopes) {
             this.oauthScopes = oauthScopes;
             return this;
         }
 
         public Builder oauthScopes(@Nullable List<String> oauthScopes) {
-            this.oauthScopes = Input.ofNullable(oauthScopes);
+            this.oauthScopes = Output.ofNullable(oauthScopes);
             return this;
         }
 
-        public Builder serviceAccount(@Nullable Input<String> serviceAccount) {
+        public Builder serviceAccount(@Nullable Output<String> serviceAccount) {
             this.serviceAccount = serviceAccount;
             return this;
         }
 
         public Builder serviceAccount(@Nullable String serviceAccount) {
-            this.serviceAccount = Input.ofNullable(serviceAccount);
+            this.serviceAccount = Output.ofNullable(serviceAccount);
             return this;
         }
         public ClusterClusterAutoscalingAutoProvisioningDefaultsGetArgs build() {

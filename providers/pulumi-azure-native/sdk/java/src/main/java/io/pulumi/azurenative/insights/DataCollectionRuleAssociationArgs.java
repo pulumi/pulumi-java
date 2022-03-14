@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.insights;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class DataCollectionRuleAssociationArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="associationName")
-      private final @Nullable Input<String> associationName;
+      private final @Nullable Output<String> associationName;
 
-    public Input<String> getAssociationName() {
-        return this.associationName == null ? Input.empty() : this.associationName;
+    public Output<String> getAssociationName() {
+        return this.associationName == null ? Output.empty() : this.associationName;
     }
 
     /**
@@ -30,10 +30,10 @@ public final class DataCollectionRuleAssociationArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="dataCollectionRuleId")
-      private final @Nullable Input<String> dataCollectionRuleId;
+      private final @Nullable Output<String> dataCollectionRuleId;
 
-    public Input<String> getDataCollectionRuleId() {
-        return this.dataCollectionRuleId == null ? Input.empty() : this.dataCollectionRuleId;
+    public Output<String> getDataCollectionRuleId() {
+        return this.dataCollectionRuleId == null ? Output.empty() : this.dataCollectionRuleId;
     }
 
     /**
@@ -41,10 +41,10 @@ public final class DataCollectionRuleAssociationArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -52,17 +52,17 @@ public final class DataCollectionRuleAssociationArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="resourceUri", required=true)
-      private final Input<String> resourceUri;
+      private final Output<String> resourceUri;
 
-    public Input<String> getResourceUri() {
+    public Output<String> getResourceUri() {
         return this.resourceUri;
     }
 
     public DataCollectionRuleAssociationArgs(
-        @Nullable Input<String> associationName,
-        @Nullable Input<String> dataCollectionRuleId,
-        @Nullable Input<String> description,
-        Input<String> resourceUri) {
+        @Nullable Output<String> associationName,
+        @Nullable Output<String> dataCollectionRuleId,
+        @Nullable Output<String> description,
+        Output<String> resourceUri) {
         this.associationName = associationName;
         this.dataCollectionRuleId = dataCollectionRuleId;
         this.description = description;
@@ -70,10 +70,10 @@ public final class DataCollectionRuleAssociationArgs extends io.pulumi.resources
     }
 
     private DataCollectionRuleAssociationArgs() {
-        this.associationName = Input.empty();
-        this.dataCollectionRuleId = Input.empty();
-        this.description = Input.empty();
-        this.resourceUri = Input.empty();
+        this.associationName = Output.empty();
+        this.dataCollectionRuleId = Output.empty();
+        this.description = Output.empty();
+        this.resourceUri = Output.empty();
     }
 
     public static Builder builder() {
@@ -85,10 +85,10 @@ public final class DataCollectionRuleAssociationArgs extends io.pulumi.resources
     }
 
     public static final class Builder {
-        private @Nullable Input<String> associationName;
-        private @Nullable Input<String> dataCollectionRuleId;
-        private @Nullable Input<String> description;
-        private Input<String> resourceUri;
+        private @Nullable Output<String> associationName;
+        private @Nullable Output<String> dataCollectionRuleId;
+        private @Nullable Output<String> description;
+        private Output<String> resourceUri;
 
         public Builder() {
     	      // Empty
@@ -102,43 +102,43 @@ public final class DataCollectionRuleAssociationArgs extends io.pulumi.resources
     	      this.resourceUri = defaults.resourceUri;
         }
 
-        public Builder associationName(@Nullable Input<String> associationName) {
+        public Builder associationName(@Nullable Output<String> associationName) {
             this.associationName = associationName;
             return this;
         }
 
         public Builder associationName(@Nullable String associationName) {
-            this.associationName = Input.ofNullable(associationName);
+            this.associationName = Output.ofNullable(associationName);
             return this;
         }
 
-        public Builder dataCollectionRuleId(@Nullable Input<String> dataCollectionRuleId) {
+        public Builder dataCollectionRuleId(@Nullable Output<String> dataCollectionRuleId) {
             this.dataCollectionRuleId = dataCollectionRuleId;
             return this;
         }
 
         public Builder dataCollectionRuleId(@Nullable String dataCollectionRuleId) {
-            this.dataCollectionRuleId = Input.ofNullable(dataCollectionRuleId);
+            this.dataCollectionRuleId = Output.ofNullable(dataCollectionRuleId);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder resourceUri(Input<String> resourceUri) {
+        public Builder resourceUri(Output<String> resourceUri) {
             this.resourceUri = Objects.requireNonNull(resourceUri);
             return this;
         }
 
         public Builder resourceUri(String resourceUri) {
-            this.resourceUri = Input.of(Objects.requireNonNull(resourceUri));
+            this.resourceUri = Output.of(Objects.requireNonNull(resourceUri));
             return this;
         }
         public DataCollectionRuleAssociationArgs build() {

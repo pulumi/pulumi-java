@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.bigquery_v2.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,18 +19,18 @@ public final class EncryptionConfigurationArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="kmsKeyName")
-      private final @Nullable Input<String> kmsKeyName;
+      private final @Nullable Output<String> kmsKeyName;
 
-    public Input<String> getKmsKeyName() {
-        return this.kmsKeyName == null ? Input.empty() : this.kmsKeyName;
+    public Output<String> getKmsKeyName() {
+        return this.kmsKeyName == null ? Output.empty() : this.kmsKeyName;
     }
 
-    public EncryptionConfigurationArgs(@Nullable Input<String> kmsKeyName) {
+    public EncryptionConfigurationArgs(@Nullable Output<String> kmsKeyName) {
         this.kmsKeyName = kmsKeyName;
     }
 
     private EncryptionConfigurationArgs() {
-        this.kmsKeyName = Input.empty();
+        this.kmsKeyName = Output.empty();
     }
 
     public static Builder builder() {
@@ -42,7 +42,7 @@ public final class EncryptionConfigurationArgs extends io.pulumi.resources.Resou
     }
 
     public static final class Builder {
-        private @Nullable Input<String> kmsKeyName;
+        private @Nullable Output<String> kmsKeyName;
 
         public Builder() {
     	      // Empty
@@ -53,13 +53,13 @@ public final class EncryptionConfigurationArgs extends io.pulumi.resources.Resou
     	      this.kmsKeyName = defaults.kmsKeyName;
         }
 
-        public Builder kmsKeyName(@Nullable Input<String> kmsKeyName) {
+        public Builder kmsKeyName(@Nullable Output<String> kmsKeyName) {
             this.kmsKeyName = kmsKeyName;
             return this;
         }
 
         public Builder kmsKeyName(@Nullable String kmsKeyName) {
-            this.kmsKeyName = Input.ofNullable(kmsKeyName);
+            this.kmsKeyName = Output.ofNullable(kmsKeyName);
             return this;
         }
         public EncryptionConfigurationArgs build() {

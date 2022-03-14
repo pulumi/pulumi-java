@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudsearch_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.cloudsearch_v1.inputs.FilterArgs;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class FilterOptionsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="filter")
-      private final @Nullable Input<FilterArgs> filter;
+      private final @Nullable Output<FilterArgs> filter;
 
-    public Input<FilterArgs> getFilter() {
-        return this.filter == null ? Input.empty() : this.filter;
+    public Output<FilterArgs> getFilter() {
+        return this.filter == null ? Output.empty() : this.filter;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class FilterOptionsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="objectType")
-      private final @Nullable Input<String> objectType;
+      private final @Nullable Output<String> objectType;
 
-    public Input<String> getObjectType() {
-        return this.objectType == null ? Input.empty() : this.objectType;
+    public Output<String> getObjectType() {
+        return this.objectType == null ? Output.empty() : this.objectType;
     }
 
     public FilterOptionsArgs(
-        @Nullable Input<FilterArgs> filter,
-        @Nullable Input<String> objectType) {
+        @Nullable Output<FilterArgs> filter,
+        @Nullable Output<String> objectType) {
         this.filter = filter;
         this.objectType = objectType;
     }
 
     private FilterOptionsArgs() {
-        this.filter = Input.empty();
-        this.objectType = Input.empty();
+        this.filter = Output.empty();
+        this.objectType = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class FilterOptionsArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<FilterArgs> filter;
-        private @Nullable Input<String> objectType;
+        private @Nullable Output<FilterArgs> filter;
+        private @Nullable Output<String> objectType;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class FilterOptionsArgs extends io.pulumi.resources.ResourceArgs {
     	      this.objectType = defaults.objectType;
         }
 
-        public Builder filter(@Nullable Input<FilterArgs> filter) {
+        public Builder filter(@Nullable Output<FilterArgs> filter) {
             this.filter = filter;
             return this;
         }
 
         public Builder filter(@Nullable FilterArgs filter) {
-            this.filter = Input.ofNullable(filter);
+            this.filter = Output.ofNullable(filter);
             return this;
         }
 
-        public Builder objectType(@Nullable Input<String> objectType) {
+        public Builder objectType(@Nullable Output<String> objectType) {
             this.objectType = objectType;
             return this;
         }
 
         public Builder objectType(@Nullable String objectType) {
-            this.objectType = Input.ofNullable(objectType);
+            this.objectType = Output.ofNullable(objectType);
             return this;
         }
         public FilterOptionsArgs build() {

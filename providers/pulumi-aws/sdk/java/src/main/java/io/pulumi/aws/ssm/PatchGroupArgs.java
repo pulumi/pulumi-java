@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.ssm;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -18,9 +18,9 @@ public final class PatchGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="baselineId", required=true)
-      private final Input<String> baselineId;
+      private final Output<String> baselineId;
 
-    public Input<String> getBaselineId() {
+    public Output<String> getBaselineId() {
         return this.baselineId;
     }
 
@@ -29,22 +29,22 @@ public final class PatchGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="patchGroup", required=true)
-      private final Input<String> patchGroup;
+      private final Output<String> patchGroup;
 
-    public Input<String> getPatchGroup() {
+    public Output<String> getPatchGroup() {
         return this.patchGroup;
     }
 
     public PatchGroupArgs(
-        Input<String> baselineId,
-        Input<String> patchGroup) {
+        Output<String> baselineId,
+        Output<String> patchGroup) {
         this.baselineId = Objects.requireNonNull(baselineId, "expected parameter 'baselineId' to be non-null");
         this.patchGroup = Objects.requireNonNull(patchGroup, "expected parameter 'patchGroup' to be non-null");
     }
 
     private PatchGroupArgs() {
-        this.baselineId = Input.empty();
-        this.patchGroup = Input.empty();
+        this.baselineId = Output.empty();
+        this.patchGroup = Output.empty();
     }
 
     public static Builder builder() {
@@ -56,8 +56,8 @@ public final class PatchGroupArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> baselineId;
-        private Input<String> patchGroup;
+        private Output<String> baselineId;
+        private Output<String> patchGroup;
 
         public Builder() {
     	      // Empty
@@ -69,23 +69,23 @@ public final class PatchGroupArgs extends io.pulumi.resources.ResourceArgs {
     	      this.patchGroup = defaults.patchGroup;
         }
 
-        public Builder baselineId(Input<String> baselineId) {
+        public Builder baselineId(Output<String> baselineId) {
             this.baselineId = Objects.requireNonNull(baselineId);
             return this;
         }
 
         public Builder baselineId(String baselineId) {
-            this.baselineId = Input.of(Objects.requireNonNull(baselineId));
+            this.baselineId = Output.of(Objects.requireNonNull(baselineId));
             return this;
         }
 
-        public Builder patchGroup(Input<String> patchGroup) {
+        public Builder patchGroup(Output<String> patchGroup) {
             this.patchGroup = Objects.requireNonNull(patchGroup);
             return this;
         }
 
         public Builder patchGroup(String patchGroup) {
-            this.patchGroup = Input.of(Objects.requireNonNull(patchGroup));
+            this.patchGroup = Output.of(Objects.requireNonNull(patchGroup));
             return this;
         }
         public PatchGroupArgs build() {

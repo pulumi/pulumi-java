@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.cloudbuild.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -20,10 +20,10 @@ public final class TriggerGithubPushGetArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="branch")
-      private final @Nullable Input<String> branch;
+      private final @Nullable Output<String> branch;
 
-    public Input<String> getBranch() {
-        return this.branch == null ? Input.empty() : this.branch;
+    public Output<String> getBranch() {
+        return this.branch == null ? Output.empty() : this.branch;
     }
 
     /**
@@ -31,10 +31,10 @@ public final class TriggerGithubPushGetArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="invertRegex")
-      private final @Nullable Input<Boolean> invertRegex;
+      private final @Nullable Output<Boolean> invertRegex;
 
-    public Input<Boolean> getInvertRegex() {
-        return this.invertRegex == null ? Input.empty() : this.invertRegex;
+    public Output<Boolean> getInvertRegex() {
+        return this.invertRegex == null ? Output.empty() : this.invertRegex;
     }
 
     /**
@@ -42,25 +42,25 @@ public final class TriggerGithubPushGetArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="tag")
-      private final @Nullable Input<String> tag;
+      private final @Nullable Output<String> tag;
 
-    public Input<String> getTag() {
-        return this.tag == null ? Input.empty() : this.tag;
+    public Output<String> getTag() {
+        return this.tag == null ? Output.empty() : this.tag;
     }
 
     public TriggerGithubPushGetArgs(
-        @Nullable Input<String> branch,
-        @Nullable Input<Boolean> invertRegex,
-        @Nullable Input<String> tag) {
+        @Nullable Output<String> branch,
+        @Nullable Output<Boolean> invertRegex,
+        @Nullable Output<String> tag) {
         this.branch = branch;
         this.invertRegex = invertRegex;
         this.tag = tag;
     }
 
     private TriggerGithubPushGetArgs() {
-        this.branch = Input.empty();
-        this.invertRegex = Input.empty();
-        this.tag = Input.empty();
+        this.branch = Output.empty();
+        this.invertRegex = Output.empty();
+        this.tag = Output.empty();
     }
 
     public static Builder builder() {
@@ -72,9 +72,9 @@ public final class TriggerGithubPushGetArgs extends io.pulumi.resources.Resource
     }
 
     public static final class Builder {
-        private @Nullable Input<String> branch;
-        private @Nullable Input<Boolean> invertRegex;
-        private @Nullable Input<String> tag;
+        private @Nullable Output<String> branch;
+        private @Nullable Output<Boolean> invertRegex;
+        private @Nullable Output<String> tag;
 
         public Builder() {
     	      // Empty
@@ -87,33 +87,33 @@ public final class TriggerGithubPushGetArgs extends io.pulumi.resources.Resource
     	      this.tag = defaults.tag;
         }
 
-        public Builder branch(@Nullable Input<String> branch) {
+        public Builder branch(@Nullable Output<String> branch) {
             this.branch = branch;
             return this;
         }
 
         public Builder branch(@Nullable String branch) {
-            this.branch = Input.ofNullable(branch);
+            this.branch = Output.ofNullable(branch);
             return this;
         }
 
-        public Builder invertRegex(@Nullable Input<Boolean> invertRegex) {
+        public Builder invertRegex(@Nullable Output<Boolean> invertRegex) {
             this.invertRegex = invertRegex;
             return this;
         }
 
         public Builder invertRegex(@Nullable Boolean invertRegex) {
-            this.invertRegex = Input.ofNullable(invertRegex);
+            this.invertRegex = Output.ofNullable(invertRegex);
             return this;
         }
 
-        public Builder tag(@Nullable Input<String> tag) {
+        public Builder tag(@Nullable Output<String> tag) {
             this.tag = tag;
             return this;
         }
 
         public Builder tag(@Nullable String tag) {
-            this.tag = Input.ofNullable(tag);
+            this.tag = Output.ofNullable(tag);
             return this;
         }
         public TriggerGithubPushGetArgs build() {

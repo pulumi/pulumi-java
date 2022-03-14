@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.ec2;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -18,9 +18,9 @@ public final class VpcEndpointServiceAllowedPrincipleArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="principalArn", required=true)
-      private final Input<String> principalArn;
+      private final Output<String> principalArn;
 
-    public Input<String> getPrincipalArn() {
+    public Output<String> getPrincipalArn() {
         return this.principalArn;
     }
 
@@ -29,22 +29,22 @@ public final class VpcEndpointServiceAllowedPrincipleArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="vpcEndpointServiceId", required=true)
-      private final Input<String> vpcEndpointServiceId;
+      private final Output<String> vpcEndpointServiceId;
 
-    public Input<String> getVpcEndpointServiceId() {
+    public Output<String> getVpcEndpointServiceId() {
         return this.vpcEndpointServiceId;
     }
 
     public VpcEndpointServiceAllowedPrincipleArgs(
-        Input<String> principalArn,
-        Input<String> vpcEndpointServiceId) {
+        Output<String> principalArn,
+        Output<String> vpcEndpointServiceId) {
         this.principalArn = Objects.requireNonNull(principalArn, "expected parameter 'principalArn' to be non-null");
         this.vpcEndpointServiceId = Objects.requireNonNull(vpcEndpointServiceId, "expected parameter 'vpcEndpointServiceId' to be non-null");
     }
 
     private VpcEndpointServiceAllowedPrincipleArgs() {
-        this.principalArn = Input.empty();
-        this.vpcEndpointServiceId = Input.empty();
+        this.principalArn = Output.empty();
+        this.vpcEndpointServiceId = Output.empty();
     }
 
     public static Builder builder() {
@@ -56,8 +56,8 @@ public final class VpcEndpointServiceAllowedPrincipleArgs extends io.pulumi.reso
     }
 
     public static final class Builder {
-        private Input<String> principalArn;
-        private Input<String> vpcEndpointServiceId;
+        private Output<String> principalArn;
+        private Output<String> vpcEndpointServiceId;
 
         public Builder() {
     	      // Empty
@@ -69,23 +69,23 @@ public final class VpcEndpointServiceAllowedPrincipleArgs extends io.pulumi.reso
     	      this.vpcEndpointServiceId = defaults.vpcEndpointServiceId;
         }
 
-        public Builder principalArn(Input<String> principalArn) {
+        public Builder principalArn(Output<String> principalArn) {
             this.principalArn = Objects.requireNonNull(principalArn);
             return this;
         }
 
         public Builder principalArn(String principalArn) {
-            this.principalArn = Input.of(Objects.requireNonNull(principalArn));
+            this.principalArn = Output.of(Objects.requireNonNull(principalArn));
             return this;
         }
 
-        public Builder vpcEndpointServiceId(Input<String> vpcEndpointServiceId) {
+        public Builder vpcEndpointServiceId(Output<String> vpcEndpointServiceId) {
             this.vpcEndpointServiceId = Objects.requireNonNull(vpcEndpointServiceId);
             return this;
         }
 
         public Builder vpcEndpointServiceId(String vpcEndpointServiceId) {
-            this.vpcEndpointServiceId = Input.of(Objects.requireNonNull(vpcEndpointServiceId));
+            this.vpcEndpointServiceId = Output.of(Objects.requireNonNull(vpcEndpointServiceId));
             return this;
         }
         public VpcEndpointServiceAllowedPrincipleArgs build() {

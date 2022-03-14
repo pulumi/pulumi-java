@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.secretmanager_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.secretmanager_v1.inputs.CustomerManagedEncryptionArgs;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class ReplicaArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="customerManagedEncryption")
-      private final @Nullable Input<CustomerManagedEncryptionArgs> customerManagedEncryption;
+      private final @Nullable Output<CustomerManagedEncryptionArgs> customerManagedEncryption;
 
-    public Input<CustomerManagedEncryptionArgs> getCustomerManagedEncryption() {
-        return this.customerManagedEncryption == null ? Input.empty() : this.customerManagedEncryption;
+    public Output<CustomerManagedEncryptionArgs> getCustomerManagedEncryption() {
+        return this.customerManagedEncryption == null ? Output.empty() : this.customerManagedEncryption;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class ReplicaArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     public ReplicaArgs(
-        @Nullable Input<CustomerManagedEncryptionArgs> customerManagedEncryption,
-        @Nullable Input<String> location) {
+        @Nullable Output<CustomerManagedEncryptionArgs> customerManagedEncryption,
+        @Nullable Output<String> location) {
         this.customerManagedEncryption = customerManagedEncryption;
         this.location = location;
     }
 
     private ReplicaArgs() {
-        this.customerManagedEncryption = Input.empty();
-        this.location = Input.empty();
+        this.customerManagedEncryption = Output.empty();
+        this.location = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class ReplicaArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<CustomerManagedEncryptionArgs> customerManagedEncryption;
-        private @Nullable Input<String> location;
+        private @Nullable Output<CustomerManagedEncryptionArgs> customerManagedEncryption;
+        private @Nullable Output<String> location;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class ReplicaArgs extends io.pulumi.resources.ResourceArgs {
     	      this.location = defaults.location;
         }
 
-        public Builder customerManagedEncryption(@Nullable Input<CustomerManagedEncryptionArgs> customerManagedEncryption) {
+        public Builder customerManagedEncryption(@Nullable Output<CustomerManagedEncryptionArgs> customerManagedEncryption) {
             this.customerManagedEncryption = customerManagedEncryption;
             return this;
         }
 
         public Builder customerManagedEncryption(@Nullable CustomerManagedEncryptionArgs customerManagedEncryption) {
-            this.customerManagedEncryption = Input.ofNullable(customerManagedEncryption);
+            this.customerManagedEncryption = Output.ofNullable(customerManagedEncryption);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
         public ReplicaArgs build() {

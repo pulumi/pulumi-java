@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.quicksight.inputs;
 
 import io.pulumi.awsnative.quicksight.inputs.ThemeFontArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
@@ -20,18 +20,18 @@ public final class ThemeTypographyArgs extends io.pulumi.resources.ResourceArgs 
     public static final ThemeTypographyArgs Empty = new ThemeTypographyArgs();
 
     @InputImport(name="fontFamilies")
-      private final @Nullable Input<List<ThemeFontArgs>> fontFamilies;
+      private final @Nullable Output<List<ThemeFontArgs>> fontFamilies;
 
-    public Input<List<ThemeFontArgs>> getFontFamilies() {
-        return this.fontFamilies == null ? Input.empty() : this.fontFamilies;
+    public Output<List<ThemeFontArgs>> getFontFamilies() {
+        return this.fontFamilies == null ? Output.empty() : this.fontFamilies;
     }
 
-    public ThemeTypographyArgs(@Nullable Input<List<ThemeFontArgs>> fontFamilies) {
+    public ThemeTypographyArgs(@Nullable Output<List<ThemeFontArgs>> fontFamilies) {
         this.fontFamilies = fontFamilies;
     }
 
     private ThemeTypographyArgs() {
-        this.fontFamilies = Input.empty();
+        this.fontFamilies = Output.empty();
     }
 
     public static Builder builder() {
@@ -43,7 +43,7 @@ public final class ThemeTypographyArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private @Nullable Input<List<ThemeFontArgs>> fontFamilies;
+        private @Nullable Output<List<ThemeFontArgs>> fontFamilies;
 
         public Builder() {
     	      // Empty
@@ -54,13 +54,13 @@ public final class ThemeTypographyArgs extends io.pulumi.resources.ResourceArgs 
     	      this.fontFamilies = defaults.fontFamilies;
         }
 
-        public Builder fontFamilies(@Nullable Input<List<ThemeFontArgs>> fontFamilies) {
+        public Builder fontFamilies(@Nullable Output<List<ThemeFontArgs>> fontFamilies) {
             this.fontFamilies = fontFamilies;
             return this;
         }
 
         public Builder fontFamilies(@Nullable List<ThemeFontArgs> fontFamilies) {
-            this.fontFamilies = Input.ofNullable(fontFamilies);
+            this.fontFamilies = Output.ofNullable(fontFamilies);
             return this;
         }
         public ThemeTypographyArgs build() {

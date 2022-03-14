@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.containerservice.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -25,10 +25,10 @@ public final class SysctlConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="fsAioMaxNr")
-      private final @Nullable Input<Integer> fsAioMaxNr;
+      private final @Nullable Output<Integer> fsAioMaxNr;
 
-    public Input<Integer> getFsAioMaxNr() {
-        return this.fsAioMaxNr == null ? Input.empty() : this.fsAioMaxNr;
+    public Output<Integer> getFsAioMaxNr() {
+        return this.fsAioMaxNr == null ? Output.empty() : this.fsAioMaxNr;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class SysctlConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="fsFileMax")
-      private final @Nullable Input<Integer> fsFileMax;
+      private final @Nullable Output<Integer> fsFileMax;
 
-    public Input<Integer> getFsFileMax() {
-        return this.fsFileMax == null ? Input.empty() : this.fsFileMax;
+    public Output<Integer> getFsFileMax() {
+        return this.fsFileMax == null ? Output.empty() : this.fsFileMax;
     }
 
     /**
@@ -47,10 +47,10 @@ public final class SysctlConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="fsInotifyMaxUserWatches")
-      private final @Nullable Input<Integer> fsInotifyMaxUserWatches;
+      private final @Nullable Output<Integer> fsInotifyMaxUserWatches;
 
-    public Input<Integer> getFsInotifyMaxUserWatches() {
-        return this.fsInotifyMaxUserWatches == null ? Input.empty() : this.fsInotifyMaxUserWatches;
+    public Output<Integer> getFsInotifyMaxUserWatches() {
+        return this.fsInotifyMaxUserWatches == null ? Output.empty() : this.fsInotifyMaxUserWatches;
     }
 
     /**
@@ -58,10 +58,10 @@ public final class SysctlConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="fsNrOpen")
-      private final @Nullable Input<Integer> fsNrOpen;
+      private final @Nullable Output<Integer> fsNrOpen;
 
-    public Input<Integer> getFsNrOpen() {
-        return this.fsNrOpen == null ? Input.empty() : this.fsNrOpen;
+    public Output<Integer> getFsNrOpen() {
+        return this.fsNrOpen == null ? Output.empty() : this.fsNrOpen;
     }
 
     /**
@@ -69,10 +69,10 @@ public final class SysctlConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kernelThreadsMax")
-      private final @Nullable Input<Integer> kernelThreadsMax;
+      private final @Nullable Output<Integer> kernelThreadsMax;
 
-    public Input<Integer> getKernelThreadsMax() {
-        return this.kernelThreadsMax == null ? Input.empty() : this.kernelThreadsMax;
+    public Output<Integer> getKernelThreadsMax() {
+        return this.kernelThreadsMax == null ? Output.empty() : this.kernelThreadsMax;
     }
 
     /**
@@ -80,10 +80,10 @@ public final class SysctlConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="netCoreNetdevMaxBacklog")
-      private final @Nullable Input<Integer> netCoreNetdevMaxBacklog;
+      private final @Nullable Output<Integer> netCoreNetdevMaxBacklog;
 
-    public Input<Integer> getNetCoreNetdevMaxBacklog() {
-        return this.netCoreNetdevMaxBacklog == null ? Input.empty() : this.netCoreNetdevMaxBacklog;
+    public Output<Integer> getNetCoreNetdevMaxBacklog() {
+        return this.netCoreNetdevMaxBacklog == null ? Output.empty() : this.netCoreNetdevMaxBacklog;
     }
 
     /**
@@ -91,10 +91,10 @@ public final class SysctlConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="netCoreOptmemMax")
-      private final @Nullable Input<Integer> netCoreOptmemMax;
+      private final @Nullable Output<Integer> netCoreOptmemMax;
 
-    public Input<Integer> getNetCoreOptmemMax() {
-        return this.netCoreOptmemMax == null ? Input.empty() : this.netCoreOptmemMax;
+    public Output<Integer> getNetCoreOptmemMax() {
+        return this.netCoreOptmemMax == null ? Output.empty() : this.netCoreOptmemMax;
     }
 
     /**
@@ -102,10 +102,10 @@ public final class SysctlConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="netCoreRmemDefault")
-      private final @Nullable Input<Integer> netCoreRmemDefault;
+      private final @Nullable Output<Integer> netCoreRmemDefault;
 
-    public Input<Integer> getNetCoreRmemDefault() {
-        return this.netCoreRmemDefault == null ? Input.empty() : this.netCoreRmemDefault;
+    public Output<Integer> getNetCoreRmemDefault() {
+        return this.netCoreRmemDefault == null ? Output.empty() : this.netCoreRmemDefault;
     }
 
     /**
@@ -113,10 +113,10 @@ public final class SysctlConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="netCoreRmemMax")
-      private final @Nullable Input<Integer> netCoreRmemMax;
+      private final @Nullable Output<Integer> netCoreRmemMax;
 
-    public Input<Integer> getNetCoreRmemMax() {
-        return this.netCoreRmemMax == null ? Input.empty() : this.netCoreRmemMax;
+    public Output<Integer> getNetCoreRmemMax() {
+        return this.netCoreRmemMax == null ? Output.empty() : this.netCoreRmemMax;
     }
 
     /**
@@ -124,10 +124,10 @@ public final class SysctlConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="netCoreSomaxconn")
-      private final @Nullable Input<Integer> netCoreSomaxconn;
+      private final @Nullable Output<Integer> netCoreSomaxconn;
 
-    public Input<Integer> getNetCoreSomaxconn() {
-        return this.netCoreSomaxconn == null ? Input.empty() : this.netCoreSomaxconn;
+    public Output<Integer> getNetCoreSomaxconn() {
+        return this.netCoreSomaxconn == null ? Output.empty() : this.netCoreSomaxconn;
     }
 
     /**
@@ -135,10 +135,10 @@ public final class SysctlConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="netCoreWmemDefault")
-      private final @Nullable Input<Integer> netCoreWmemDefault;
+      private final @Nullable Output<Integer> netCoreWmemDefault;
 
-    public Input<Integer> getNetCoreWmemDefault() {
-        return this.netCoreWmemDefault == null ? Input.empty() : this.netCoreWmemDefault;
+    public Output<Integer> getNetCoreWmemDefault() {
+        return this.netCoreWmemDefault == null ? Output.empty() : this.netCoreWmemDefault;
     }
 
     /**
@@ -146,10 +146,10 @@ public final class SysctlConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="netCoreWmemMax")
-      private final @Nullable Input<Integer> netCoreWmemMax;
+      private final @Nullable Output<Integer> netCoreWmemMax;
 
-    public Input<Integer> getNetCoreWmemMax() {
-        return this.netCoreWmemMax == null ? Input.empty() : this.netCoreWmemMax;
+    public Output<Integer> getNetCoreWmemMax() {
+        return this.netCoreWmemMax == null ? Output.empty() : this.netCoreWmemMax;
     }
 
     /**
@@ -157,10 +157,10 @@ public final class SysctlConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="netIpv4IpLocalPortRange")
-      private final @Nullable Input<String> netIpv4IpLocalPortRange;
+      private final @Nullable Output<String> netIpv4IpLocalPortRange;
 
-    public Input<String> getNetIpv4IpLocalPortRange() {
-        return this.netIpv4IpLocalPortRange == null ? Input.empty() : this.netIpv4IpLocalPortRange;
+    public Output<String> getNetIpv4IpLocalPortRange() {
+        return this.netIpv4IpLocalPortRange == null ? Output.empty() : this.netIpv4IpLocalPortRange;
     }
 
     /**
@@ -168,10 +168,10 @@ public final class SysctlConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="netIpv4NeighDefaultGcThresh1")
-      private final @Nullable Input<Integer> netIpv4NeighDefaultGcThresh1;
+      private final @Nullable Output<Integer> netIpv4NeighDefaultGcThresh1;
 
-    public Input<Integer> getNetIpv4NeighDefaultGcThresh1() {
-        return this.netIpv4NeighDefaultGcThresh1 == null ? Input.empty() : this.netIpv4NeighDefaultGcThresh1;
+    public Output<Integer> getNetIpv4NeighDefaultGcThresh1() {
+        return this.netIpv4NeighDefaultGcThresh1 == null ? Output.empty() : this.netIpv4NeighDefaultGcThresh1;
     }
 
     /**
@@ -179,10 +179,10 @@ public final class SysctlConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="netIpv4NeighDefaultGcThresh2")
-      private final @Nullable Input<Integer> netIpv4NeighDefaultGcThresh2;
+      private final @Nullable Output<Integer> netIpv4NeighDefaultGcThresh2;
 
-    public Input<Integer> getNetIpv4NeighDefaultGcThresh2() {
-        return this.netIpv4NeighDefaultGcThresh2 == null ? Input.empty() : this.netIpv4NeighDefaultGcThresh2;
+    public Output<Integer> getNetIpv4NeighDefaultGcThresh2() {
+        return this.netIpv4NeighDefaultGcThresh2 == null ? Output.empty() : this.netIpv4NeighDefaultGcThresh2;
     }
 
     /**
@@ -190,10 +190,10 @@ public final class SysctlConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="netIpv4NeighDefaultGcThresh3")
-      private final @Nullable Input<Integer> netIpv4NeighDefaultGcThresh3;
+      private final @Nullable Output<Integer> netIpv4NeighDefaultGcThresh3;
 
-    public Input<Integer> getNetIpv4NeighDefaultGcThresh3() {
-        return this.netIpv4NeighDefaultGcThresh3 == null ? Input.empty() : this.netIpv4NeighDefaultGcThresh3;
+    public Output<Integer> getNetIpv4NeighDefaultGcThresh3() {
+        return this.netIpv4NeighDefaultGcThresh3 == null ? Output.empty() : this.netIpv4NeighDefaultGcThresh3;
     }
 
     /**
@@ -201,10 +201,10 @@ public final class SysctlConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="netIpv4TcpFinTimeout")
-      private final @Nullable Input<Integer> netIpv4TcpFinTimeout;
+      private final @Nullable Output<Integer> netIpv4TcpFinTimeout;
 
-    public Input<Integer> getNetIpv4TcpFinTimeout() {
-        return this.netIpv4TcpFinTimeout == null ? Input.empty() : this.netIpv4TcpFinTimeout;
+    public Output<Integer> getNetIpv4TcpFinTimeout() {
+        return this.netIpv4TcpFinTimeout == null ? Output.empty() : this.netIpv4TcpFinTimeout;
     }
 
     /**
@@ -212,10 +212,10 @@ public final class SysctlConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="netIpv4TcpKeepaliveProbes")
-      private final @Nullable Input<Integer> netIpv4TcpKeepaliveProbes;
+      private final @Nullable Output<Integer> netIpv4TcpKeepaliveProbes;
 
-    public Input<Integer> getNetIpv4TcpKeepaliveProbes() {
-        return this.netIpv4TcpKeepaliveProbes == null ? Input.empty() : this.netIpv4TcpKeepaliveProbes;
+    public Output<Integer> getNetIpv4TcpKeepaliveProbes() {
+        return this.netIpv4TcpKeepaliveProbes == null ? Output.empty() : this.netIpv4TcpKeepaliveProbes;
     }
 
     /**
@@ -223,10 +223,10 @@ public final class SysctlConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="netIpv4TcpKeepaliveTime")
-      private final @Nullable Input<Integer> netIpv4TcpKeepaliveTime;
+      private final @Nullable Output<Integer> netIpv4TcpKeepaliveTime;
 
-    public Input<Integer> getNetIpv4TcpKeepaliveTime() {
-        return this.netIpv4TcpKeepaliveTime == null ? Input.empty() : this.netIpv4TcpKeepaliveTime;
+    public Output<Integer> getNetIpv4TcpKeepaliveTime() {
+        return this.netIpv4TcpKeepaliveTime == null ? Output.empty() : this.netIpv4TcpKeepaliveTime;
     }
 
     /**
@@ -234,10 +234,10 @@ public final class SysctlConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="netIpv4TcpMaxSynBacklog")
-      private final @Nullable Input<Integer> netIpv4TcpMaxSynBacklog;
+      private final @Nullable Output<Integer> netIpv4TcpMaxSynBacklog;
 
-    public Input<Integer> getNetIpv4TcpMaxSynBacklog() {
-        return this.netIpv4TcpMaxSynBacklog == null ? Input.empty() : this.netIpv4TcpMaxSynBacklog;
+    public Output<Integer> getNetIpv4TcpMaxSynBacklog() {
+        return this.netIpv4TcpMaxSynBacklog == null ? Output.empty() : this.netIpv4TcpMaxSynBacklog;
     }
 
     /**
@@ -245,10 +245,10 @@ public final class SysctlConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="netIpv4TcpMaxTwBuckets")
-      private final @Nullable Input<Integer> netIpv4TcpMaxTwBuckets;
+      private final @Nullable Output<Integer> netIpv4TcpMaxTwBuckets;
 
-    public Input<Integer> getNetIpv4TcpMaxTwBuckets() {
-        return this.netIpv4TcpMaxTwBuckets == null ? Input.empty() : this.netIpv4TcpMaxTwBuckets;
+    public Output<Integer> getNetIpv4TcpMaxTwBuckets() {
+        return this.netIpv4TcpMaxTwBuckets == null ? Output.empty() : this.netIpv4TcpMaxTwBuckets;
     }
 
     /**
@@ -256,10 +256,10 @@ public final class SysctlConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="netIpv4TcpTwReuse")
-      private final @Nullable Input<Boolean> netIpv4TcpTwReuse;
+      private final @Nullable Output<Boolean> netIpv4TcpTwReuse;
 
-    public Input<Boolean> getNetIpv4TcpTwReuse() {
-        return this.netIpv4TcpTwReuse == null ? Input.empty() : this.netIpv4TcpTwReuse;
+    public Output<Boolean> getNetIpv4TcpTwReuse() {
+        return this.netIpv4TcpTwReuse == null ? Output.empty() : this.netIpv4TcpTwReuse;
     }
 
     /**
@@ -267,10 +267,10 @@ public final class SysctlConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="netIpv4TcpkeepaliveIntvl")
-      private final @Nullable Input<Integer> netIpv4TcpkeepaliveIntvl;
+      private final @Nullable Output<Integer> netIpv4TcpkeepaliveIntvl;
 
-    public Input<Integer> getNetIpv4TcpkeepaliveIntvl() {
-        return this.netIpv4TcpkeepaliveIntvl == null ? Input.empty() : this.netIpv4TcpkeepaliveIntvl;
+    public Output<Integer> getNetIpv4TcpkeepaliveIntvl() {
+        return this.netIpv4TcpkeepaliveIntvl == null ? Output.empty() : this.netIpv4TcpkeepaliveIntvl;
     }
 
     /**
@@ -278,10 +278,10 @@ public final class SysctlConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="netNetfilterNfConntrackBuckets")
-      private final @Nullable Input<Integer> netNetfilterNfConntrackBuckets;
+      private final @Nullable Output<Integer> netNetfilterNfConntrackBuckets;
 
-    public Input<Integer> getNetNetfilterNfConntrackBuckets() {
-        return this.netNetfilterNfConntrackBuckets == null ? Input.empty() : this.netNetfilterNfConntrackBuckets;
+    public Output<Integer> getNetNetfilterNfConntrackBuckets() {
+        return this.netNetfilterNfConntrackBuckets == null ? Output.empty() : this.netNetfilterNfConntrackBuckets;
     }
 
     /**
@@ -289,10 +289,10 @@ public final class SysctlConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="netNetfilterNfConntrackMax")
-      private final @Nullable Input<Integer> netNetfilterNfConntrackMax;
+      private final @Nullable Output<Integer> netNetfilterNfConntrackMax;
 
-    public Input<Integer> getNetNetfilterNfConntrackMax() {
-        return this.netNetfilterNfConntrackMax == null ? Input.empty() : this.netNetfilterNfConntrackMax;
+    public Output<Integer> getNetNetfilterNfConntrackMax() {
+        return this.netNetfilterNfConntrackMax == null ? Output.empty() : this.netNetfilterNfConntrackMax;
     }
 
     /**
@@ -300,10 +300,10 @@ public final class SysctlConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="vmMaxMapCount")
-      private final @Nullable Input<Integer> vmMaxMapCount;
+      private final @Nullable Output<Integer> vmMaxMapCount;
 
-    public Input<Integer> getVmMaxMapCount() {
-        return this.vmMaxMapCount == null ? Input.empty() : this.vmMaxMapCount;
+    public Output<Integer> getVmMaxMapCount() {
+        return this.vmMaxMapCount == null ? Output.empty() : this.vmMaxMapCount;
     }
 
     /**
@@ -311,10 +311,10 @@ public final class SysctlConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="vmSwappiness")
-      private final @Nullable Input<Integer> vmSwappiness;
+      private final @Nullable Output<Integer> vmSwappiness;
 
-    public Input<Integer> getVmSwappiness() {
-        return this.vmSwappiness == null ? Input.empty() : this.vmSwappiness;
+    public Output<Integer> getVmSwappiness() {
+        return this.vmSwappiness == null ? Output.empty() : this.vmSwappiness;
     }
 
     /**
@@ -322,41 +322,41 @@ public final class SysctlConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="vmVfsCachePressure")
-      private final @Nullable Input<Integer> vmVfsCachePressure;
+      private final @Nullable Output<Integer> vmVfsCachePressure;
 
-    public Input<Integer> getVmVfsCachePressure() {
-        return this.vmVfsCachePressure == null ? Input.empty() : this.vmVfsCachePressure;
+    public Output<Integer> getVmVfsCachePressure() {
+        return this.vmVfsCachePressure == null ? Output.empty() : this.vmVfsCachePressure;
     }
 
     public SysctlConfigArgs(
-        @Nullable Input<Integer> fsAioMaxNr,
-        @Nullable Input<Integer> fsFileMax,
-        @Nullable Input<Integer> fsInotifyMaxUserWatches,
-        @Nullable Input<Integer> fsNrOpen,
-        @Nullable Input<Integer> kernelThreadsMax,
-        @Nullable Input<Integer> netCoreNetdevMaxBacklog,
-        @Nullable Input<Integer> netCoreOptmemMax,
-        @Nullable Input<Integer> netCoreRmemDefault,
-        @Nullable Input<Integer> netCoreRmemMax,
-        @Nullable Input<Integer> netCoreSomaxconn,
-        @Nullable Input<Integer> netCoreWmemDefault,
-        @Nullable Input<Integer> netCoreWmemMax,
-        @Nullable Input<String> netIpv4IpLocalPortRange,
-        @Nullable Input<Integer> netIpv4NeighDefaultGcThresh1,
-        @Nullable Input<Integer> netIpv4NeighDefaultGcThresh2,
-        @Nullable Input<Integer> netIpv4NeighDefaultGcThresh3,
-        @Nullable Input<Integer> netIpv4TcpFinTimeout,
-        @Nullable Input<Integer> netIpv4TcpKeepaliveProbes,
-        @Nullable Input<Integer> netIpv4TcpKeepaliveTime,
-        @Nullable Input<Integer> netIpv4TcpMaxSynBacklog,
-        @Nullable Input<Integer> netIpv4TcpMaxTwBuckets,
-        @Nullable Input<Boolean> netIpv4TcpTwReuse,
-        @Nullable Input<Integer> netIpv4TcpkeepaliveIntvl,
-        @Nullable Input<Integer> netNetfilterNfConntrackBuckets,
-        @Nullable Input<Integer> netNetfilterNfConntrackMax,
-        @Nullable Input<Integer> vmMaxMapCount,
-        @Nullable Input<Integer> vmSwappiness,
-        @Nullable Input<Integer> vmVfsCachePressure) {
+        @Nullable Output<Integer> fsAioMaxNr,
+        @Nullable Output<Integer> fsFileMax,
+        @Nullable Output<Integer> fsInotifyMaxUserWatches,
+        @Nullable Output<Integer> fsNrOpen,
+        @Nullable Output<Integer> kernelThreadsMax,
+        @Nullable Output<Integer> netCoreNetdevMaxBacklog,
+        @Nullable Output<Integer> netCoreOptmemMax,
+        @Nullable Output<Integer> netCoreRmemDefault,
+        @Nullable Output<Integer> netCoreRmemMax,
+        @Nullable Output<Integer> netCoreSomaxconn,
+        @Nullable Output<Integer> netCoreWmemDefault,
+        @Nullable Output<Integer> netCoreWmemMax,
+        @Nullable Output<String> netIpv4IpLocalPortRange,
+        @Nullable Output<Integer> netIpv4NeighDefaultGcThresh1,
+        @Nullable Output<Integer> netIpv4NeighDefaultGcThresh2,
+        @Nullable Output<Integer> netIpv4NeighDefaultGcThresh3,
+        @Nullable Output<Integer> netIpv4TcpFinTimeout,
+        @Nullable Output<Integer> netIpv4TcpKeepaliveProbes,
+        @Nullable Output<Integer> netIpv4TcpKeepaliveTime,
+        @Nullable Output<Integer> netIpv4TcpMaxSynBacklog,
+        @Nullable Output<Integer> netIpv4TcpMaxTwBuckets,
+        @Nullable Output<Boolean> netIpv4TcpTwReuse,
+        @Nullable Output<Integer> netIpv4TcpkeepaliveIntvl,
+        @Nullable Output<Integer> netNetfilterNfConntrackBuckets,
+        @Nullable Output<Integer> netNetfilterNfConntrackMax,
+        @Nullable Output<Integer> vmMaxMapCount,
+        @Nullable Output<Integer> vmSwappiness,
+        @Nullable Output<Integer> vmVfsCachePressure) {
         this.fsAioMaxNr = fsAioMaxNr;
         this.fsFileMax = fsFileMax;
         this.fsInotifyMaxUserWatches = fsInotifyMaxUserWatches;
@@ -388,34 +388,34 @@ public final class SysctlConfigArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private SysctlConfigArgs() {
-        this.fsAioMaxNr = Input.empty();
-        this.fsFileMax = Input.empty();
-        this.fsInotifyMaxUserWatches = Input.empty();
-        this.fsNrOpen = Input.empty();
-        this.kernelThreadsMax = Input.empty();
-        this.netCoreNetdevMaxBacklog = Input.empty();
-        this.netCoreOptmemMax = Input.empty();
-        this.netCoreRmemDefault = Input.empty();
-        this.netCoreRmemMax = Input.empty();
-        this.netCoreSomaxconn = Input.empty();
-        this.netCoreWmemDefault = Input.empty();
-        this.netCoreWmemMax = Input.empty();
-        this.netIpv4IpLocalPortRange = Input.empty();
-        this.netIpv4NeighDefaultGcThresh1 = Input.empty();
-        this.netIpv4NeighDefaultGcThresh2 = Input.empty();
-        this.netIpv4NeighDefaultGcThresh3 = Input.empty();
-        this.netIpv4TcpFinTimeout = Input.empty();
-        this.netIpv4TcpKeepaliveProbes = Input.empty();
-        this.netIpv4TcpKeepaliveTime = Input.empty();
-        this.netIpv4TcpMaxSynBacklog = Input.empty();
-        this.netIpv4TcpMaxTwBuckets = Input.empty();
-        this.netIpv4TcpTwReuse = Input.empty();
-        this.netIpv4TcpkeepaliveIntvl = Input.empty();
-        this.netNetfilterNfConntrackBuckets = Input.empty();
-        this.netNetfilterNfConntrackMax = Input.empty();
-        this.vmMaxMapCount = Input.empty();
-        this.vmSwappiness = Input.empty();
-        this.vmVfsCachePressure = Input.empty();
+        this.fsAioMaxNr = Output.empty();
+        this.fsFileMax = Output.empty();
+        this.fsInotifyMaxUserWatches = Output.empty();
+        this.fsNrOpen = Output.empty();
+        this.kernelThreadsMax = Output.empty();
+        this.netCoreNetdevMaxBacklog = Output.empty();
+        this.netCoreOptmemMax = Output.empty();
+        this.netCoreRmemDefault = Output.empty();
+        this.netCoreRmemMax = Output.empty();
+        this.netCoreSomaxconn = Output.empty();
+        this.netCoreWmemDefault = Output.empty();
+        this.netCoreWmemMax = Output.empty();
+        this.netIpv4IpLocalPortRange = Output.empty();
+        this.netIpv4NeighDefaultGcThresh1 = Output.empty();
+        this.netIpv4NeighDefaultGcThresh2 = Output.empty();
+        this.netIpv4NeighDefaultGcThresh3 = Output.empty();
+        this.netIpv4TcpFinTimeout = Output.empty();
+        this.netIpv4TcpKeepaliveProbes = Output.empty();
+        this.netIpv4TcpKeepaliveTime = Output.empty();
+        this.netIpv4TcpMaxSynBacklog = Output.empty();
+        this.netIpv4TcpMaxTwBuckets = Output.empty();
+        this.netIpv4TcpTwReuse = Output.empty();
+        this.netIpv4TcpkeepaliveIntvl = Output.empty();
+        this.netNetfilterNfConntrackBuckets = Output.empty();
+        this.netNetfilterNfConntrackMax = Output.empty();
+        this.vmMaxMapCount = Output.empty();
+        this.vmSwappiness = Output.empty();
+        this.vmVfsCachePressure = Output.empty();
     }
 
     public static Builder builder() {
@@ -427,34 +427,34 @@ public final class SysctlConfigArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> fsAioMaxNr;
-        private @Nullable Input<Integer> fsFileMax;
-        private @Nullable Input<Integer> fsInotifyMaxUserWatches;
-        private @Nullable Input<Integer> fsNrOpen;
-        private @Nullable Input<Integer> kernelThreadsMax;
-        private @Nullable Input<Integer> netCoreNetdevMaxBacklog;
-        private @Nullable Input<Integer> netCoreOptmemMax;
-        private @Nullable Input<Integer> netCoreRmemDefault;
-        private @Nullable Input<Integer> netCoreRmemMax;
-        private @Nullable Input<Integer> netCoreSomaxconn;
-        private @Nullable Input<Integer> netCoreWmemDefault;
-        private @Nullable Input<Integer> netCoreWmemMax;
-        private @Nullable Input<String> netIpv4IpLocalPortRange;
-        private @Nullable Input<Integer> netIpv4NeighDefaultGcThresh1;
-        private @Nullable Input<Integer> netIpv4NeighDefaultGcThresh2;
-        private @Nullable Input<Integer> netIpv4NeighDefaultGcThresh3;
-        private @Nullable Input<Integer> netIpv4TcpFinTimeout;
-        private @Nullable Input<Integer> netIpv4TcpKeepaliveProbes;
-        private @Nullable Input<Integer> netIpv4TcpKeepaliveTime;
-        private @Nullable Input<Integer> netIpv4TcpMaxSynBacklog;
-        private @Nullable Input<Integer> netIpv4TcpMaxTwBuckets;
-        private @Nullable Input<Boolean> netIpv4TcpTwReuse;
-        private @Nullable Input<Integer> netIpv4TcpkeepaliveIntvl;
-        private @Nullable Input<Integer> netNetfilterNfConntrackBuckets;
-        private @Nullable Input<Integer> netNetfilterNfConntrackMax;
-        private @Nullable Input<Integer> vmMaxMapCount;
-        private @Nullable Input<Integer> vmSwappiness;
-        private @Nullable Input<Integer> vmVfsCachePressure;
+        private @Nullable Output<Integer> fsAioMaxNr;
+        private @Nullable Output<Integer> fsFileMax;
+        private @Nullable Output<Integer> fsInotifyMaxUserWatches;
+        private @Nullable Output<Integer> fsNrOpen;
+        private @Nullable Output<Integer> kernelThreadsMax;
+        private @Nullable Output<Integer> netCoreNetdevMaxBacklog;
+        private @Nullable Output<Integer> netCoreOptmemMax;
+        private @Nullable Output<Integer> netCoreRmemDefault;
+        private @Nullable Output<Integer> netCoreRmemMax;
+        private @Nullable Output<Integer> netCoreSomaxconn;
+        private @Nullable Output<Integer> netCoreWmemDefault;
+        private @Nullable Output<Integer> netCoreWmemMax;
+        private @Nullable Output<String> netIpv4IpLocalPortRange;
+        private @Nullable Output<Integer> netIpv4NeighDefaultGcThresh1;
+        private @Nullable Output<Integer> netIpv4NeighDefaultGcThresh2;
+        private @Nullable Output<Integer> netIpv4NeighDefaultGcThresh3;
+        private @Nullable Output<Integer> netIpv4TcpFinTimeout;
+        private @Nullable Output<Integer> netIpv4TcpKeepaliveProbes;
+        private @Nullable Output<Integer> netIpv4TcpKeepaliveTime;
+        private @Nullable Output<Integer> netIpv4TcpMaxSynBacklog;
+        private @Nullable Output<Integer> netIpv4TcpMaxTwBuckets;
+        private @Nullable Output<Boolean> netIpv4TcpTwReuse;
+        private @Nullable Output<Integer> netIpv4TcpkeepaliveIntvl;
+        private @Nullable Output<Integer> netNetfilterNfConntrackBuckets;
+        private @Nullable Output<Integer> netNetfilterNfConntrackMax;
+        private @Nullable Output<Integer> vmMaxMapCount;
+        private @Nullable Output<Integer> vmSwappiness;
+        private @Nullable Output<Integer> vmVfsCachePressure;
 
         public Builder() {
     	      // Empty
@@ -492,283 +492,283 @@ public final class SysctlConfigArgs extends io.pulumi.resources.ResourceArgs {
     	      this.vmVfsCachePressure = defaults.vmVfsCachePressure;
         }
 
-        public Builder fsAioMaxNr(@Nullable Input<Integer> fsAioMaxNr) {
+        public Builder fsAioMaxNr(@Nullable Output<Integer> fsAioMaxNr) {
             this.fsAioMaxNr = fsAioMaxNr;
             return this;
         }
 
         public Builder fsAioMaxNr(@Nullable Integer fsAioMaxNr) {
-            this.fsAioMaxNr = Input.ofNullable(fsAioMaxNr);
+            this.fsAioMaxNr = Output.ofNullable(fsAioMaxNr);
             return this;
         }
 
-        public Builder fsFileMax(@Nullable Input<Integer> fsFileMax) {
+        public Builder fsFileMax(@Nullable Output<Integer> fsFileMax) {
             this.fsFileMax = fsFileMax;
             return this;
         }
 
         public Builder fsFileMax(@Nullable Integer fsFileMax) {
-            this.fsFileMax = Input.ofNullable(fsFileMax);
+            this.fsFileMax = Output.ofNullable(fsFileMax);
             return this;
         }
 
-        public Builder fsInotifyMaxUserWatches(@Nullable Input<Integer> fsInotifyMaxUserWatches) {
+        public Builder fsInotifyMaxUserWatches(@Nullable Output<Integer> fsInotifyMaxUserWatches) {
             this.fsInotifyMaxUserWatches = fsInotifyMaxUserWatches;
             return this;
         }
 
         public Builder fsInotifyMaxUserWatches(@Nullable Integer fsInotifyMaxUserWatches) {
-            this.fsInotifyMaxUserWatches = Input.ofNullable(fsInotifyMaxUserWatches);
+            this.fsInotifyMaxUserWatches = Output.ofNullable(fsInotifyMaxUserWatches);
             return this;
         }
 
-        public Builder fsNrOpen(@Nullable Input<Integer> fsNrOpen) {
+        public Builder fsNrOpen(@Nullable Output<Integer> fsNrOpen) {
             this.fsNrOpen = fsNrOpen;
             return this;
         }
 
         public Builder fsNrOpen(@Nullable Integer fsNrOpen) {
-            this.fsNrOpen = Input.ofNullable(fsNrOpen);
+            this.fsNrOpen = Output.ofNullable(fsNrOpen);
             return this;
         }
 
-        public Builder kernelThreadsMax(@Nullable Input<Integer> kernelThreadsMax) {
+        public Builder kernelThreadsMax(@Nullable Output<Integer> kernelThreadsMax) {
             this.kernelThreadsMax = kernelThreadsMax;
             return this;
         }
 
         public Builder kernelThreadsMax(@Nullable Integer kernelThreadsMax) {
-            this.kernelThreadsMax = Input.ofNullable(kernelThreadsMax);
+            this.kernelThreadsMax = Output.ofNullable(kernelThreadsMax);
             return this;
         }
 
-        public Builder netCoreNetdevMaxBacklog(@Nullable Input<Integer> netCoreNetdevMaxBacklog) {
+        public Builder netCoreNetdevMaxBacklog(@Nullable Output<Integer> netCoreNetdevMaxBacklog) {
             this.netCoreNetdevMaxBacklog = netCoreNetdevMaxBacklog;
             return this;
         }
 
         public Builder netCoreNetdevMaxBacklog(@Nullable Integer netCoreNetdevMaxBacklog) {
-            this.netCoreNetdevMaxBacklog = Input.ofNullable(netCoreNetdevMaxBacklog);
+            this.netCoreNetdevMaxBacklog = Output.ofNullable(netCoreNetdevMaxBacklog);
             return this;
         }
 
-        public Builder netCoreOptmemMax(@Nullable Input<Integer> netCoreOptmemMax) {
+        public Builder netCoreOptmemMax(@Nullable Output<Integer> netCoreOptmemMax) {
             this.netCoreOptmemMax = netCoreOptmemMax;
             return this;
         }
 
         public Builder netCoreOptmemMax(@Nullable Integer netCoreOptmemMax) {
-            this.netCoreOptmemMax = Input.ofNullable(netCoreOptmemMax);
+            this.netCoreOptmemMax = Output.ofNullable(netCoreOptmemMax);
             return this;
         }
 
-        public Builder netCoreRmemDefault(@Nullable Input<Integer> netCoreRmemDefault) {
+        public Builder netCoreRmemDefault(@Nullable Output<Integer> netCoreRmemDefault) {
             this.netCoreRmemDefault = netCoreRmemDefault;
             return this;
         }
 
         public Builder netCoreRmemDefault(@Nullable Integer netCoreRmemDefault) {
-            this.netCoreRmemDefault = Input.ofNullable(netCoreRmemDefault);
+            this.netCoreRmemDefault = Output.ofNullable(netCoreRmemDefault);
             return this;
         }
 
-        public Builder netCoreRmemMax(@Nullable Input<Integer> netCoreRmemMax) {
+        public Builder netCoreRmemMax(@Nullable Output<Integer> netCoreRmemMax) {
             this.netCoreRmemMax = netCoreRmemMax;
             return this;
         }
 
         public Builder netCoreRmemMax(@Nullable Integer netCoreRmemMax) {
-            this.netCoreRmemMax = Input.ofNullable(netCoreRmemMax);
+            this.netCoreRmemMax = Output.ofNullable(netCoreRmemMax);
             return this;
         }
 
-        public Builder netCoreSomaxconn(@Nullable Input<Integer> netCoreSomaxconn) {
+        public Builder netCoreSomaxconn(@Nullable Output<Integer> netCoreSomaxconn) {
             this.netCoreSomaxconn = netCoreSomaxconn;
             return this;
         }
 
         public Builder netCoreSomaxconn(@Nullable Integer netCoreSomaxconn) {
-            this.netCoreSomaxconn = Input.ofNullable(netCoreSomaxconn);
+            this.netCoreSomaxconn = Output.ofNullable(netCoreSomaxconn);
             return this;
         }
 
-        public Builder netCoreWmemDefault(@Nullable Input<Integer> netCoreWmemDefault) {
+        public Builder netCoreWmemDefault(@Nullable Output<Integer> netCoreWmemDefault) {
             this.netCoreWmemDefault = netCoreWmemDefault;
             return this;
         }
 
         public Builder netCoreWmemDefault(@Nullable Integer netCoreWmemDefault) {
-            this.netCoreWmemDefault = Input.ofNullable(netCoreWmemDefault);
+            this.netCoreWmemDefault = Output.ofNullable(netCoreWmemDefault);
             return this;
         }
 
-        public Builder netCoreWmemMax(@Nullable Input<Integer> netCoreWmemMax) {
+        public Builder netCoreWmemMax(@Nullable Output<Integer> netCoreWmemMax) {
             this.netCoreWmemMax = netCoreWmemMax;
             return this;
         }
 
         public Builder netCoreWmemMax(@Nullable Integer netCoreWmemMax) {
-            this.netCoreWmemMax = Input.ofNullable(netCoreWmemMax);
+            this.netCoreWmemMax = Output.ofNullable(netCoreWmemMax);
             return this;
         }
 
-        public Builder netIpv4IpLocalPortRange(@Nullable Input<String> netIpv4IpLocalPortRange) {
+        public Builder netIpv4IpLocalPortRange(@Nullable Output<String> netIpv4IpLocalPortRange) {
             this.netIpv4IpLocalPortRange = netIpv4IpLocalPortRange;
             return this;
         }
 
         public Builder netIpv4IpLocalPortRange(@Nullable String netIpv4IpLocalPortRange) {
-            this.netIpv4IpLocalPortRange = Input.ofNullable(netIpv4IpLocalPortRange);
+            this.netIpv4IpLocalPortRange = Output.ofNullable(netIpv4IpLocalPortRange);
             return this;
         }
 
-        public Builder netIpv4NeighDefaultGcThresh1(@Nullable Input<Integer> netIpv4NeighDefaultGcThresh1) {
+        public Builder netIpv4NeighDefaultGcThresh1(@Nullable Output<Integer> netIpv4NeighDefaultGcThresh1) {
             this.netIpv4NeighDefaultGcThresh1 = netIpv4NeighDefaultGcThresh1;
             return this;
         }
 
         public Builder netIpv4NeighDefaultGcThresh1(@Nullable Integer netIpv4NeighDefaultGcThresh1) {
-            this.netIpv4NeighDefaultGcThresh1 = Input.ofNullable(netIpv4NeighDefaultGcThresh1);
+            this.netIpv4NeighDefaultGcThresh1 = Output.ofNullable(netIpv4NeighDefaultGcThresh1);
             return this;
         }
 
-        public Builder netIpv4NeighDefaultGcThresh2(@Nullable Input<Integer> netIpv4NeighDefaultGcThresh2) {
+        public Builder netIpv4NeighDefaultGcThresh2(@Nullable Output<Integer> netIpv4NeighDefaultGcThresh2) {
             this.netIpv4NeighDefaultGcThresh2 = netIpv4NeighDefaultGcThresh2;
             return this;
         }
 
         public Builder netIpv4NeighDefaultGcThresh2(@Nullable Integer netIpv4NeighDefaultGcThresh2) {
-            this.netIpv4NeighDefaultGcThresh2 = Input.ofNullable(netIpv4NeighDefaultGcThresh2);
+            this.netIpv4NeighDefaultGcThresh2 = Output.ofNullable(netIpv4NeighDefaultGcThresh2);
             return this;
         }
 
-        public Builder netIpv4NeighDefaultGcThresh3(@Nullable Input<Integer> netIpv4NeighDefaultGcThresh3) {
+        public Builder netIpv4NeighDefaultGcThresh3(@Nullable Output<Integer> netIpv4NeighDefaultGcThresh3) {
             this.netIpv4NeighDefaultGcThresh3 = netIpv4NeighDefaultGcThresh3;
             return this;
         }
 
         public Builder netIpv4NeighDefaultGcThresh3(@Nullable Integer netIpv4NeighDefaultGcThresh3) {
-            this.netIpv4NeighDefaultGcThresh3 = Input.ofNullable(netIpv4NeighDefaultGcThresh3);
+            this.netIpv4NeighDefaultGcThresh3 = Output.ofNullable(netIpv4NeighDefaultGcThresh3);
             return this;
         }
 
-        public Builder netIpv4TcpFinTimeout(@Nullable Input<Integer> netIpv4TcpFinTimeout) {
+        public Builder netIpv4TcpFinTimeout(@Nullable Output<Integer> netIpv4TcpFinTimeout) {
             this.netIpv4TcpFinTimeout = netIpv4TcpFinTimeout;
             return this;
         }
 
         public Builder netIpv4TcpFinTimeout(@Nullable Integer netIpv4TcpFinTimeout) {
-            this.netIpv4TcpFinTimeout = Input.ofNullable(netIpv4TcpFinTimeout);
+            this.netIpv4TcpFinTimeout = Output.ofNullable(netIpv4TcpFinTimeout);
             return this;
         }
 
-        public Builder netIpv4TcpKeepaliveProbes(@Nullable Input<Integer> netIpv4TcpKeepaliveProbes) {
+        public Builder netIpv4TcpKeepaliveProbes(@Nullable Output<Integer> netIpv4TcpKeepaliveProbes) {
             this.netIpv4TcpKeepaliveProbes = netIpv4TcpKeepaliveProbes;
             return this;
         }
 
         public Builder netIpv4TcpKeepaliveProbes(@Nullable Integer netIpv4TcpKeepaliveProbes) {
-            this.netIpv4TcpKeepaliveProbes = Input.ofNullable(netIpv4TcpKeepaliveProbes);
+            this.netIpv4TcpKeepaliveProbes = Output.ofNullable(netIpv4TcpKeepaliveProbes);
             return this;
         }
 
-        public Builder netIpv4TcpKeepaliveTime(@Nullable Input<Integer> netIpv4TcpKeepaliveTime) {
+        public Builder netIpv4TcpKeepaliveTime(@Nullable Output<Integer> netIpv4TcpKeepaliveTime) {
             this.netIpv4TcpKeepaliveTime = netIpv4TcpKeepaliveTime;
             return this;
         }
 
         public Builder netIpv4TcpKeepaliveTime(@Nullable Integer netIpv4TcpKeepaliveTime) {
-            this.netIpv4TcpKeepaliveTime = Input.ofNullable(netIpv4TcpKeepaliveTime);
+            this.netIpv4TcpKeepaliveTime = Output.ofNullable(netIpv4TcpKeepaliveTime);
             return this;
         }
 
-        public Builder netIpv4TcpMaxSynBacklog(@Nullable Input<Integer> netIpv4TcpMaxSynBacklog) {
+        public Builder netIpv4TcpMaxSynBacklog(@Nullable Output<Integer> netIpv4TcpMaxSynBacklog) {
             this.netIpv4TcpMaxSynBacklog = netIpv4TcpMaxSynBacklog;
             return this;
         }
 
         public Builder netIpv4TcpMaxSynBacklog(@Nullable Integer netIpv4TcpMaxSynBacklog) {
-            this.netIpv4TcpMaxSynBacklog = Input.ofNullable(netIpv4TcpMaxSynBacklog);
+            this.netIpv4TcpMaxSynBacklog = Output.ofNullable(netIpv4TcpMaxSynBacklog);
             return this;
         }
 
-        public Builder netIpv4TcpMaxTwBuckets(@Nullable Input<Integer> netIpv4TcpMaxTwBuckets) {
+        public Builder netIpv4TcpMaxTwBuckets(@Nullable Output<Integer> netIpv4TcpMaxTwBuckets) {
             this.netIpv4TcpMaxTwBuckets = netIpv4TcpMaxTwBuckets;
             return this;
         }
 
         public Builder netIpv4TcpMaxTwBuckets(@Nullable Integer netIpv4TcpMaxTwBuckets) {
-            this.netIpv4TcpMaxTwBuckets = Input.ofNullable(netIpv4TcpMaxTwBuckets);
+            this.netIpv4TcpMaxTwBuckets = Output.ofNullable(netIpv4TcpMaxTwBuckets);
             return this;
         }
 
-        public Builder netIpv4TcpTwReuse(@Nullable Input<Boolean> netIpv4TcpTwReuse) {
+        public Builder netIpv4TcpTwReuse(@Nullable Output<Boolean> netIpv4TcpTwReuse) {
             this.netIpv4TcpTwReuse = netIpv4TcpTwReuse;
             return this;
         }
 
         public Builder netIpv4TcpTwReuse(@Nullable Boolean netIpv4TcpTwReuse) {
-            this.netIpv4TcpTwReuse = Input.ofNullable(netIpv4TcpTwReuse);
+            this.netIpv4TcpTwReuse = Output.ofNullable(netIpv4TcpTwReuse);
             return this;
         }
 
-        public Builder netIpv4TcpkeepaliveIntvl(@Nullable Input<Integer> netIpv4TcpkeepaliveIntvl) {
+        public Builder netIpv4TcpkeepaliveIntvl(@Nullable Output<Integer> netIpv4TcpkeepaliveIntvl) {
             this.netIpv4TcpkeepaliveIntvl = netIpv4TcpkeepaliveIntvl;
             return this;
         }
 
         public Builder netIpv4TcpkeepaliveIntvl(@Nullable Integer netIpv4TcpkeepaliveIntvl) {
-            this.netIpv4TcpkeepaliveIntvl = Input.ofNullable(netIpv4TcpkeepaliveIntvl);
+            this.netIpv4TcpkeepaliveIntvl = Output.ofNullable(netIpv4TcpkeepaliveIntvl);
             return this;
         }
 
-        public Builder netNetfilterNfConntrackBuckets(@Nullable Input<Integer> netNetfilterNfConntrackBuckets) {
+        public Builder netNetfilterNfConntrackBuckets(@Nullable Output<Integer> netNetfilterNfConntrackBuckets) {
             this.netNetfilterNfConntrackBuckets = netNetfilterNfConntrackBuckets;
             return this;
         }
 
         public Builder netNetfilterNfConntrackBuckets(@Nullable Integer netNetfilterNfConntrackBuckets) {
-            this.netNetfilterNfConntrackBuckets = Input.ofNullable(netNetfilterNfConntrackBuckets);
+            this.netNetfilterNfConntrackBuckets = Output.ofNullable(netNetfilterNfConntrackBuckets);
             return this;
         }
 
-        public Builder netNetfilterNfConntrackMax(@Nullable Input<Integer> netNetfilterNfConntrackMax) {
+        public Builder netNetfilterNfConntrackMax(@Nullable Output<Integer> netNetfilterNfConntrackMax) {
             this.netNetfilterNfConntrackMax = netNetfilterNfConntrackMax;
             return this;
         }
 
         public Builder netNetfilterNfConntrackMax(@Nullable Integer netNetfilterNfConntrackMax) {
-            this.netNetfilterNfConntrackMax = Input.ofNullable(netNetfilterNfConntrackMax);
+            this.netNetfilterNfConntrackMax = Output.ofNullable(netNetfilterNfConntrackMax);
             return this;
         }
 
-        public Builder vmMaxMapCount(@Nullable Input<Integer> vmMaxMapCount) {
+        public Builder vmMaxMapCount(@Nullable Output<Integer> vmMaxMapCount) {
             this.vmMaxMapCount = vmMaxMapCount;
             return this;
         }
 
         public Builder vmMaxMapCount(@Nullable Integer vmMaxMapCount) {
-            this.vmMaxMapCount = Input.ofNullable(vmMaxMapCount);
+            this.vmMaxMapCount = Output.ofNullable(vmMaxMapCount);
             return this;
         }
 
-        public Builder vmSwappiness(@Nullable Input<Integer> vmSwappiness) {
+        public Builder vmSwappiness(@Nullable Output<Integer> vmSwappiness) {
             this.vmSwappiness = vmSwappiness;
             return this;
         }
 
         public Builder vmSwappiness(@Nullable Integer vmSwappiness) {
-            this.vmSwappiness = Input.ofNullable(vmSwappiness);
+            this.vmSwappiness = Output.ofNullable(vmSwappiness);
             return this;
         }
 
-        public Builder vmVfsCachePressure(@Nullable Input<Integer> vmVfsCachePressure) {
+        public Builder vmVfsCachePressure(@Nullable Output<Integer> vmVfsCachePressure) {
             this.vmVfsCachePressure = vmVfsCachePressure;
             return this;
         }
 
         public Builder vmVfsCachePressure(@Nullable Integer vmVfsCachePressure) {
-            this.vmVfsCachePressure = Input.ofNullable(vmVfsCachePressure);
+            this.vmVfsCachePressure = Output.ofNullable(vmVfsCachePressure);
             return this;
         }
         public SysctlConfigArgs build() {

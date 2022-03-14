@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.documentdb.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class VirtualNetworkRuleArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="id")
-      private final @Nullable Input<String> id;
+      private final @Nullable Output<String> id;
 
-    public Input<String> getId() {
-        return this.id == null ? Input.empty() : this.id;
+    public Output<String> getId() {
+        return this.id == null ? Output.empty() : this.id;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class VirtualNetworkRuleArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="ignoreMissingVNetServiceEndpoint")
-      private final @Nullable Input<Boolean> ignoreMissingVNetServiceEndpoint;
+      private final @Nullable Output<Boolean> ignoreMissingVNetServiceEndpoint;
 
-    public Input<Boolean> getIgnoreMissingVNetServiceEndpoint() {
-        return this.ignoreMissingVNetServiceEndpoint == null ? Input.empty() : this.ignoreMissingVNetServiceEndpoint;
+    public Output<Boolean> getIgnoreMissingVNetServiceEndpoint() {
+        return this.ignoreMissingVNetServiceEndpoint == null ? Output.empty() : this.ignoreMissingVNetServiceEndpoint;
     }
 
     public VirtualNetworkRuleArgs(
-        @Nullable Input<String> id,
-        @Nullable Input<Boolean> ignoreMissingVNetServiceEndpoint) {
+        @Nullable Output<String> id,
+        @Nullable Output<Boolean> ignoreMissingVNetServiceEndpoint) {
         this.id = id;
         this.ignoreMissingVNetServiceEndpoint = ignoreMissingVNetServiceEndpoint;
     }
 
     private VirtualNetworkRuleArgs() {
-        this.id = Input.empty();
-        this.ignoreMissingVNetServiceEndpoint = Input.empty();
+        this.id = Output.empty();
+        this.ignoreMissingVNetServiceEndpoint = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class VirtualNetworkRuleArgs extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private @Nullable Input<String> id;
-        private @Nullable Input<Boolean> ignoreMissingVNetServiceEndpoint;
+        private @Nullable Output<String> id;
+        private @Nullable Output<Boolean> ignoreMissingVNetServiceEndpoint;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class VirtualNetworkRuleArgs extends io.pulumi.resources.ResourceAr
     	      this.ignoreMissingVNetServiceEndpoint = defaults.ignoreMissingVNetServiceEndpoint;
         }
 
-        public Builder id(@Nullable Input<String> id) {
+        public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
 
         public Builder id(@Nullable String id) {
-            this.id = Input.ofNullable(id);
+            this.id = Output.ofNullable(id);
             return this;
         }
 
-        public Builder ignoreMissingVNetServiceEndpoint(@Nullable Input<Boolean> ignoreMissingVNetServiceEndpoint) {
+        public Builder ignoreMissingVNetServiceEndpoint(@Nullable Output<Boolean> ignoreMissingVNetServiceEndpoint) {
             this.ignoreMissingVNetServiceEndpoint = ignoreMissingVNetServiceEndpoint;
             return this;
         }
 
         public Builder ignoreMissingVNetServiceEndpoint(@Nullable Boolean ignoreMissingVNetServiceEndpoint) {
-            this.ignoreMissingVNetServiceEndpoint = Input.ofNullable(ignoreMissingVNetServiceEndpoint);
+            this.ignoreMissingVNetServiceEndpoint = Output.ofNullable(ignoreMissingVNetServiceEndpoint);
             return this;
         }
         public VirtualNetworkRuleArgs build() {

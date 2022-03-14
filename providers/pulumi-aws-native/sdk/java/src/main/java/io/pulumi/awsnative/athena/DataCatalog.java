@@ -7,7 +7,6 @@ import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.athena.DataCatalogArgs;
 import io.pulumi.awsnative.athena.enums.DataCatalogType;
 import io.pulumi.awsnative.athena.outputs.DataCatalogTag;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -133,14 +132,14 @@ public class DataCatalog extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public DataCatalog(String name, DataCatalogArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:athena:DataCatalog", name, args == null ? DataCatalogArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws-native:athena:DataCatalog", name, args == null ? DataCatalogArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private DataCatalog(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private DataCatalog(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws-native:athena:DataCatalog", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -155,7 +154,7 @@ public class DataCatalog extends io.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static DataCatalog get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static DataCatalog get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new DataCatalog(name, id, options);
     }
 }

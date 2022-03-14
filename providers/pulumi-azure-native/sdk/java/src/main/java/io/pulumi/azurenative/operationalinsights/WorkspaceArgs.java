@@ -9,7 +9,7 @@ import io.pulumi.azurenative.operationalinsights.inputs.WorkspaceCappingArgs;
 import io.pulumi.azurenative.operationalinsights.inputs.WorkspaceFeaturesArgs;
 import io.pulumi.azurenative.operationalinsights.inputs.WorkspaceSkuArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -28,10 +28,10 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="eTag")
-      private final @Nullable Input<String> eTag;
+      private final @Nullable Output<String> eTag;
 
-    public Input<String> getETag() {
-        return this.eTag == null ? Input.empty() : this.eTag;
+    public Output<String> getETag() {
+        return this.eTag == null ? Output.empty() : this.eTag;
     }
 
     /**
@@ -39,10 +39,10 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="features")
-      private final @Nullable Input<WorkspaceFeaturesArgs> features;
+      private final @Nullable Output<WorkspaceFeaturesArgs> features;
 
-    public Input<WorkspaceFeaturesArgs> getFeatures() {
-        return this.features == null ? Input.empty() : this.features;
+    public Output<WorkspaceFeaturesArgs> getFeatures() {
+        return this.features == null ? Output.empty() : this.features;
     }
 
     /**
@@ -50,10 +50,10 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="forceCmkForQuery")
-      private final @Nullable Input<Boolean> forceCmkForQuery;
+      private final @Nullable Output<Boolean> forceCmkForQuery;
 
-    public Input<Boolean> getForceCmkForQuery() {
-        return this.forceCmkForQuery == null ? Input.empty() : this.forceCmkForQuery;
+    public Output<Boolean> getForceCmkForQuery() {
+        return this.forceCmkForQuery == null ? Output.empty() : this.forceCmkForQuery;
     }
 
     /**
@@ -61,10 +61,10 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -72,10 +72,10 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="provisioningState")
-      private final @Nullable Input<Either<String,WorkspaceEntityStatus>> provisioningState;
+      private final @Nullable Output<Either<String,WorkspaceEntityStatus>> provisioningState;
 
-    public Input<Either<String,WorkspaceEntityStatus>> getProvisioningState() {
-        return this.provisioningState == null ? Input.empty() : this.provisioningState;
+    public Output<Either<String,WorkspaceEntityStatus>> getProvisioningState() {
+        return this.provisioningState == null ? Output.empty() : this.provisioningState;
     }
 
     /**
@@ -83,10 +83,10 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="publicNetworkAccessForIngestion")
-      private final @Nullable Input<Either<String,PublicNetworkAccessType>> publicNetworkAccessForIngestion;
+      private final @Nullable Output<Either<String,PublicNetworkAccessType>> publicNetworkAccessForIngestion;
 
-    public Input<Either<String,PublicNetworkAccessType>> getPublicNetworkAccessForIngestion() {
-        return this.publicNetworkAccessForIngestion == null ? Input.empty() : this.publicNetworkAccessForIngestion;
+    public Output<Either<String,PublicNetworkAccessType>> getPublicNetworkAccessForIngestion() {
+        return this.publicNetworkAccessForIngestion == null ? Output.empty() : this.publicNetworkAccessForIngestion;
     }
 
     /**
@@ -94,10 +94,10 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="publicNetworkAccessForQuery")
-      private final @Nullable Input<Either<String,PublicNetworkAccessType>> publicNetworkAccessForQuery;
+      private final @Nullable Output<Either<String,PublicNetworkAccessType>> publicNetworkAccessForQuery;
 
-    public Input<Either<String,PublicNetworkAccessType>> getPublicNetworkAccessForQuery() {
-        return this.publicNetworkAccessForQuery == null ? Input.empty() : this.publicNetworkAccessForQuery;
+    public Output<Either<String,PublicNetworkAccessType>> getPublicNetworkAccessForQuery() {
+        return this.publicNetworkAccessForQuery == null ? Output.empty() : this.publicNetworkAccessForQuery;
     }
 
     /**
@@ -105,9 +105,9 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -116,10 +116,10 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="retentionInDays")
-      private final @Nullable Input<Integer> retentionInDays;
+      private final @Nullable Output<Integer> retentionInDays;
 
-    public Input<Integer> getRetentionInDays() {
-        return this.retentionInDays == null ? Input.empty() : this.retentionInDays;
+    public Output<Integer> getRetentionInDays() {
+        return this.retentionInDays == null ? Output.empty() : this.retentionInDays;
     }
 
     /**
@@ -127,10 +127,10 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sku")
-      private final @Nullable Input<WorkspaceSkuArgs> sku;
+      private final @Nullable Output<WorkspaceSkuArgs> sku;
 
-    public Input<WorkspaceSkuArgs> getSku() {
-        return this.sku == null ? Input.empty() : this.sku;
+    public Output<WorkspaceSkuArgs> getSku() {
+        return this.sku == null ? Output.empty() : this.sku;
     }
 
     /**
@@ -138,10 +138,10 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -149,10 +149,10 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="workspaceCapping")
-      private final @Nullable Input<WorkspaceCappingArgs> workspaceCapping;
+      private final @Nullable Output<WorkspaceCappingArgs> workspaceCapping;
 
-    public Input<WorkspaceCappingArgs> getWorkspaceCapping() {
-        return this.workspaceCapping == null ? Input.empty() : this.workspaceCapping;
+    public Output<WorkspaceCappingArgs> getWorkspaceCapping() {
+        return this.workspaceCapping == null ? Output.empty() : this.workspaceCapping;
     }
 
     /**
@@ -160,26 +160,26 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="workspaceName")
-      private final @Nullable Input<String> workspaceName;
+      private final @Nullable Output<String> workspaceName;
 
-    public Input<String> getWorkspaceName() {
-        return this.workspaceName == null ? Input.empty() : this.workspaceName;
+    public Output<String> getWorkspaceName() {
+        return this.workspaceName == null ? Output.empty() : this.workspaceName;
     }
 
     public WorkspaceArgs(
-        @Nullable Input<String> eTag,
-        @Nullable Input<WorkspaceFeaturesArgs> features,
-        @Nullable Input<Boolean> forceCmkForQuery,
-        @Nullable Input<String> location,
-        @Nullable Input<Either<String,WorkspaceEntityStatus>> provisioningState,
-        @Nullable Input<Either<String,PublicNetworkAccessType>> publicNetworkAccessForIngestion,
-        @Nullable Input<Either<String,PublicNetworkAccessType>> publicNetworkAccessForQuery,
-        Input<String> resourceGroupName,
-        @Nullable Input<Integer> retentionInDays,
-        @Nullable Input<WorkspaceSkuArgs> sku,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<WorkspaceCappingArgs> workspaceCapping,
-        @Nullable Input<String> workspaceName) {
+        @Nullable Output<String> eTag,
+        @Nullable Output<WorkspaceFeaturesArgs> features,
+        @Nullable Output<Boolean> forceCmkForQuery,
+        @Nullable Output<String> location,
+        @Nullable Output<Either<String,WorkspaceEntityStatus>> provisioningState,
+        @Nullable Output<Either<String,PublicNetworkAccessType>> publicNetworkAccessForIngestion,
+        @Nullable Output<Either<String,PublicNetworkAccessType>> publicNetworkAccessForQuery,
+        Output<String> resourceGroupName,
+        @Nullable Output<Integer> retentionInDays,
+        @Nullable Output<WorkspaceSkuArgs> sku,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<WorkspaceCappingArgs> workspaceCapping,
+        @Nullable Output<String> workspaceName) {
         this.eTag = eTag;
         this.features = features;
         this.forceCmkForQuery = forceCmkForQuery;
@@ -196,19 +196,19 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private WorkspaceArgs() {
-        this.eTag = Input.empty();
-        this.features = Input.empty();
-        this.forceCmkForQuery = Input.empty();
-        this.location = Input.empty();
-        this.provisioningState = Input.empty();
-        this.publicNetworkAccessForIngestion = Input.empty();
-        this.publicNetworkAccessForQuery = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.retentionInDays = Input.empty();
-        this.sku = Input.empty();
-        this.tags = Input.empty();
-        this.workspaceCapping = Input.empty();
-        this.workspaceName = Input.empty();
+        this.eTag = Output.empty();
+        this.features = Output.empty();
+        this.forceCmkForQuery = Output.empty();
+        this.location = Output.empty();
+        this.provisioningState = Output.empty();
+        this.publicNetworkAccessForIngestion = Output.empty();
+        this.publicNetworkAccessForQuery = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.retentionInDays = Output.empty();
+        this.sku = Output.empty();
+        this.tags = Output.empty();
+        this.workspaceCapping = Output.empty();
+        this.workspaceName = Output.empty();
     }
 
     public static Builder builder() {
@@ -220,19 +220,19 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> eTag;
-        private @Nullable Input<WorkspaceFeaturesArgs> features;
-        private @Nullable Input<Boolean> forceCmkForQuery;
-        private @Nullable Input<String> location;
-        private @Nullable Input<Either<String,WorkspaceEntityStatus>> provisioningState;
-        private @Nullable Input<Either<String,PublicNetworkAccessType>> publicNetworkAccessForIngestion;
-        private @Nullable Input<Either<String,PublicNetworkAccessType>> publicNetworkAccessForQuery;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<Integer> retentionInDays;
-        private @Nullable Input<WorkspaceSkuArgs> sku;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<WorkspaceCappingArgs> workspaceCapping;
-        private @Nullable Input<String> workspaceName;
+        private @Nullable Output<String> eTag;
+        private @Nullable Output<WorkspaceFeaturesArgs> features;
+        private @Nullable Output<Boolean> forceCmkForQuery;
+        private @Nullable Output<String> location;
+        private @Nullable Output<Either<String,WorkspaceEntityStatus>> provisioningState;
+        private @Nullable Output<Either<String,PublicNetworkAccessType>> publicNetworkAccessForIngestion;
+        private @Nullable Output<Either<String,PublicNetworkAccessType>> publicNetworkAccessForQuery;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<Integer> retentionInDays;
+        private @Nullable Output<WorkspaceSkuArgs> sku;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<WorkspaceCappingArgs> workspaceCapping;
+        private @Nullable Output<String> workspaceName;
 
         public Builder() {
     	      // Empty
@@ -255,133 +255,133 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
     	      this.workspaceName = defaults.workspaceName;
         }
 
-        public Builder eTag(@Nullable Input<String> eTag) {
+        public Builder eTag(@Nullable Output<String> eTag) {
             this.eTag = eTag;
             return this;
         }
 
         public Builder eTag(@Nullable String eTag) {
-            this.eTag = Input.ofNullable(eTag);
+            this.eTag = Output.ofNullable(eTag);
             return this;
         }
 
-        public Builder features(@Nullable Input<WorkspaceFeaturesArgs> features) {
+        public Builder features(@Nullable Output<WorkspaceFeaturesArgs> features) {
             this.features = features;
             return this;
         }
 
         public Builder features(@Nullable WorkspaceFeaturesArgs features) {
-            this.features = Input.ofNullable(features);
+            this.features = Output.ofNullable(features);
             return this;
         }
 
-        public Builder forceCmkForQuery(@Nullable Input<Boolean> forceCmkForQuery) {
+        public Builder forceCmkForQuery(@Nullable Output<Boolean> forceCmkForQuery) {
             this.forceCmkForQuery = forceCmkForQuery;
             return this;
         }
 
         public Builder forceCmkForQuery(@Nullable Boolean forceCmkForQuery) {
-            this.forceCmkForQuery = Input.ofNullable(forceCmkForQuery);
+            this.forceCmkForQuery = Output.ofNullable(forceCmkForQuery);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder provisioningState(@Nullable Input<Either<String,WorkspaceEntityStatus>> provisioningState) {
+        public Builder provisioningState(@Nullable Output<Either<String,WorkspaceEntityStatus>> provisioningState) {
             this.provisioningState = provisioningState;
             return this;
         }
 
         public Builder provisioningState(@Nullable Either<String,WorkspaceEntityStatus> provisioningState) {
-            this.provisioningState = Input.ofNullable(provisioningState);
+            this.provisioningState = Output.ofNullable(provisioningState);
             return this;
         }
 
-        public Builder publicNetworkAccessForIngestion(@Nullable Input<Either<String,PublicNetworkAccessType>> publicNetworkAccessForIngestion) {
+        public Builder publicNetworkAccessForIngestion(@Nullable Output<Either<String,PublicNetworkAccessType>> publicNetworkAccessForIngestion) {
             this.publicNetworkAccessForIngestion = publicNetworkAccessForIngestion;
             return this;
         }
 
         public Builder publicNetworkAccessForIngestion(@Nullable Either<String,PublicNetworkAccessType> publicNetworkAccessForIngestion) {
-            this.publicNetworkAccessForIngestion = Input.ofNullable(publicNetworkAccessForIngestion);
+            this.publicNetworkAccessForIngestion = Output.ofNullable(publicNetworkAccessForIngestion);
             return this;
         }
 
-        public Builder publicNetworkAccessForQuery(@Nullable Input<Either<String,PublicNetworkAccessType>> publicNetworkAccessForQuery) {
+        public Builder publicNetworkAccessForQuery(@Nullable Output<Either<String,PublicNetworkAccessType>> publicNetworkAccessForQuery) {
             this.publicNetworkAccessForQuery = publicNetworkAccessForQuery;
             return this;
         }
 
         public Builder publicNetworkAccessForQuery(@Nullable Either<String,PublicNetworkAccessType> publicNetworkAccessForQuery) {
-            this.publicNetworkAccessForQuery = Input.ofNullable(publicNetworkAccessForQuery);
+            this.publicNetworkAccessForQuery = Output.ofNullable(publicNetworkAccessForQuery);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder retentionInDays(@Nullable Input<Integer> retentionInDays) {
+        public Builder retentionInDays(@Nullable Output<Integer> retentionInDays) {
             this.retentionInDays = retentionInDays;
             return this;
         }
 
         public Builder retentionInDays(@Nullable Integer retentionInDays) {
-            this.retentionInDays = Input.ofNullable(retentionInDays);
+            this.retentionInDays = Output.ofNullable(retentionInDays);
             return this;
         }
 
-        public Builder sku(@Nullable Input<WorkspaceSkuArgs> sku) {
+        public Builder sku(@Nullable Output<WorkspaceSkuArgs> sku) {
             this.sku = sku;
             return this;
         }
 
         public Builder sku(@Nullable WorkspaceSkuArgs sku) {
-            this.sku = Input.ofNullable(sku);
+            this.sku = Output.ofNullable(sku);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder workspaceCapping(@Nullable Input<WorkspaceCappingArgs> workspaceCapping) {
+        public Builder workspaceCapping(@Nullable Output<WorkspaceCappingArgs> workspaceCapping) {
             this.workspaceCapping = workspaceCapping;
             return this;
         }
 
         public Builder workspaceCapping(@Nullable WorkspaceCappingArgs workspaceCapping) {
-            this.workspaceCapping = Input.ofNullable(workspaceCapping);
+            this.workspaceCapping = Output.ofNullable(workspaceCapping);
             return this;
         }
 
-        public Builder workspaceName(@Nullable Input<String> workspaceName) {
+        public Builder workspaceName(@Nullable Output<String> workspaceName) {
             this.workspaceName = workspaceName;
             return this;
         }
 
         public Builder workspaceName(@Nullable String workspaceName) {
-            this.workspaceName = Input.ofNullable(workspaceName);
+            this.workspaceName = Output.ofNullable(workspaceName);
             return this;
         }
         public WorkspaceArgs build() {

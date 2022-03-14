@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.compute;
 
 import io.pulumi.azurenative.compute.enums.OperatingSystemTypes;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -21,10 +21,10 @@ public final class GalleryApplicationArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -32,10 +32,10 @@ public final class GalleryApplicationArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="endOfLifeDate")
-      private final @Nullable Input<String> endOfLifeDate;
+      private final @Nullable Output<String> endOfLifeDate;
 
-    public Input<String> getEndOfLifeDate() {
-        return this.endOfLifeDate == null ? Input.empty() : this.endOfLifeDate;
+    public Output<String> getEndOfLifeDate() {
+        return this.endOfLifeDate == null ? Output.empty() : this.endOfLifeDate;
     }
 
     /**
@@ -43,10 +43,10 @@ public final class GalleryApplicationArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="eula")
-      private final @Nullable Input<String> eula;
+      private final @Nullable Output<String> eula;
 
-    public Input<String> getEula() {
-        return this.eula == null ? Input.empty() : this.eula;
+    public Output<String> getEula() {
+        return this.eula == null ? Output.empty() : this.eula;
     }
 
     /**
@@ -54,10 +54,10 @@ public final class GalleryApplicationArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="galleryApplicationName")
-      private final @Nullable Input<String> galleryApplicationName;
+      private final @Nullable Output<String> galleryApplicationName;
 
-    public Input<String> getGalleryApplicationName() {
-        return this.galleryApplicationName == null ? Input.empty() : this.galleryApplicationName;
+    public Output<String> getGalleryApplicationName() {
+        return this.galleryApplicationName == null ? Output.empty() : this.galleryApplicationName;
     }
 
     /**
@@ -65,9 +65,9 @@ public final class GalleryApplicationArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="galleryName", required=true)
-      private final Input<String> galleryName;
+      private final Output<String> galleryName;
 
-    public Input<String> getGalleryName() {
+    public Output<String> getGalleryName() {
         return this.galleryName;
     }
 
@@ -76,10 +76,10 @@ public final class GalleryApplicationArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -87,10 +87,10 @@ public final class GalleryApplicationArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="privacyStatementUri")
-      private final @Nullable Input<String> privacyStatementUri;
+      private final @Nullable Output<String> privacyStatementUri;
 
-    public Input<String> getPrivacyStatementUri() {
-        return this.privacyStatementUri == null ? Input.empty() : this.privacyStatementUri;
+    public Output<String> getPrivacyStatementUri() {
+        return this.privacyStatementUri == null ? Output.empty() : this.privacyStatementUri;
     }
 
     /**
@@ -98,10 +98,10 @@ public final class GalleryApplicationArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="releaseNoteUri")
-      private final @Nullable Input<String> releaseNoteUri;
+      private final @Nullable Output<String> releaseNoteUri;
 
-    public Input<String> getReleaseNoteUri() {
-        return this.releaseNoteUri == null ? Input.empty() : this.releaseNoteUri;
+    public Output<String> getReleaseNoteUri() {
+        return this.releaseNoteUri == null ? Output.empty() : this.releaseNoteUri;
     }
 
     /**
@@ -109,9 +109,9 @@ public final class GalleryApplicationArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -120,9 +120,9 @@ public final class GalleryApplicationArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="supportedOSType", required=true)
-      private final Input<OperatingSystemTypes> supportedOSType;
+      private final Output<OperatingSystemTypes> supportedOSType;
 
-    public Input<OperatingSystemTypes> getSupportedOSType() {
+    public Output<OperatingSystemTypes> getSupportedOSType() {
         return this.supportedOSType;
     }
 
@@ -131,24 +131,24 @@ public final class GalleryApplicationArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public GalleryApplicationArgs(
-        @Nullable Input<String> description,
-        @Nullable Input<String> endOfLifeDate,
-        @Nullable Input<String> eula,
-        @Nullable Input<String> galleryApplicationName,
-        Input<String> galleryName,
-        @Nullable Input<String> location,
-        @Nullable Input<String> privacyStatementUri,
-        @Nullable Input<String> releaseNoteUri,
-        Input<String> resourceGroupName,
-        Input<OperatingSystemTypes> supportedOSType,
-        @Nullable Input<Map<String,String>> tags) {
+        @Nullable Output<String> description,
+        @Nullable Output<String> endOfLifeDate,
+        @Nullable Output<String> eula,
+        @Nullable Output<String> galleryApplicationName,
+        Output<String> galleryName,
+        @Nullable Output<String> location,
+        @Nullable Output<String> privacyStatementUri,
+        @Nullable Output<String> releaseNoteUri,
+        Output<String> resourceGroupName,
+        Output<OperatingSystemTypes> supportedOSType,
+        @Nullable Output<Map<String,String>> tags) {
         this.description = description;
         this.endOfLifeDate = endOfLifeDate;
         this.eula = eula;
@@ -163,17 +163,17 @@ public final class GalleryApplicationArgs extends io.pulumi.resources.ResourceAr
     }
 
     private GalleryApplicationArgs() {
-        this.description = Input.empty();
-        this.endOfLifeDate = Input.empty();
-        this.eula = Input.empty();
-        this.galleryApplicationName = Input.empty();
-        this.galleryName = Input.empty();
-        this.location = Input.empty();
-        this.privacyStatementUri = Input.empty();
-        this.releaseNoteUri = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.supportedOSType = Input.empty();
-        this.tags = Input.empty();
+        this.description = Output.empty();
+        this.endOfLifeDate = Output.empty();
+        this.eula = Output.empty();
+        this.galleryApplicationName = Output.empty();
+        this.galleryName = Output.empty();
+        this.location = Output.empty();
+        this.privacyStatementUri = Output.empty();
+        this.releaseNoteUri = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.supportedOSType = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -185,17 +185,17 @@ public final class GalleryApplicationArgs extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private @Nullable Input<String> description;
-        private @Nullable Input<String> endOfLifeDate;
-        private @Nullable Input<String> eula;
-        private @Nullable Input<String> galleryApplicationName;
-        private Input<String> galleryName;
-        private @Nullable Input<String> location;
-        private @Nullable Input<String> privacyStatementUri;
-        private @Nullable Input<String> releaseNoteUri;
-        private Input<String> resourceGroupName;
-        private Input<OperatingSystemTypes> supportedOSType;
-        private @Nullable Input<Map<String,String>> tags;
+        private @Nullable Output<String> description;
+        private @Nullable Output<String> endOfLifeDate;
+        private @Nullable Output<String> eula;
+        private @Nullable Output<String> galleryApplicationName;
+        private Output<String> galleryName;
+        private @Nullable Output<String> location;
+        private @Nullable Output<String> privacyStatementUri;
+        private @Nullable Output<String> releaseNoteUri;
+        private Output<String> resourceGroupName;
+        private Output<OperatingSystemTypes> supportedOSType;
+        private @Nullable Output<Map<String,String>> tags;
 
         public Builder() {
     	      // Empty
@@ -216,113 +216,113 @@ public final class GalleryApplicationArgs extends io.pulumi.resources.ResourceAr
     	      this.tags = defaults.tags;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder endOfLifeDate(@Nullable Input<String> endOfLifeDate) {
+        public Builder endOfLifeDate(@Nullable Output<String> endOfLifeDate) {
             this.endOfLifeDate = endOfLifeDate;
             return this;
         }
 
         public Builder endOfLifeDate(@Nullable String endOfLifeDate) {
-            this.endOfLifeDate = Input.ofNullable(endOfLifeDate);
+            this.endOfLifeDate = Output.ofNullable(endOfLifeDate);
             return this;
         }
 
-        public Builder eula(@Nullable Input<String> eula) {
+        public Builder eula(@Nullable Output<String> eula) {
             this.eula = eula;
             return this;
         }
 
         public Builder eula(@Nullable String eula) {
-            this.eula = Input.ofNullable(eula);
+            this.eula = Output.ofNullable(eula);
             return this;
         }
 
-        public Builder galleryApplicationName(@Nullable Input<String> galleryApplicationName) {
+        public Builder galleryApplicationName(@Nullable Output<String> galleryApplicationName) {
             this.galleryApplicationName = galleryApplicationName;
             return this;
         }
 
         public Builder galleryApplicationName(@Nullable String galleryApplicationName) {
-            this.galleryApplicationName = Input.ofNullable(galleryApplicationName);
+            this.galleryApplicationName = Output.ofNullable(galleryApplicationName);
             return this;
         }
 
-        public Builder galleryName(Input<String> galleryName) {
+        public Builder galleryName(Output<String> galleryName) {
             this.galleryName = Objects.requireNonNull(galleryName);
             return this;
         }
 
         public Builder galleryName(String galleryName) {
-            this.galleryName = Input.of(Objects.requireNonNull(galleryName));
+            this.galleryName = Output.of(Objects.requireNonNull(galleryName));
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder privacyStatementUri(@Nullable Input<String> privacyStatementUri) {
+        public Builder privacyStatementUri(@Nullable Output<String> privacyStatementUri) {
             this.privacyStatementUri = privacyStatementUri;
             return this;
         }
 
         public Builder privacyStatementUri(@Nullable String privacyStatementUri) {
-            this.privacyStatementUri = Input.ofNullable(privacyStatementUri);
+            this.privacyStatementUri = Output.ofNullable(privacyStatementUri);
             return this;
         }
 
-        public Builder releaseNoteUri(@Nullable Input<String> releaseNoteUri) {
+        public Builder releaseNoteUri(@Nullable Output<String> releaseNoteUri) {
             this.releaseNoteUri = releaseNoteUri;
             return this;
         }
 
         public Builder releaseNoteUri(@Nullable String releaseNoteUri) {
-            this.releaseNoteUri = Input.ofNullable(releaseNoteUri);
+            this.releaseNoteUri = Output.ofNullable(releaseNoteUri);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder supportedOSType(Input<OperatingSystemTypes> supportedOSType) {
+        public Builder supportedOSType(Output<OperatingSystemTypes> supportedOSType) {
             this.supportedOSType = Objects.requireNonNull(supportedOSType);
             return this;
         }
 
         public Builder supportedOSType(OperatingSystemTypes supportedOSType) {
-            this.supportedOSType = Input.of(Objects.requireNonNull(supportedOSType));
+            this.supportedOSType = Output.of(Objects.requireNonNull(supportedOSType));
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public GalleryApplicationArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.ec2.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,18 +19,18 @@ public final class LaunchTemplateCapacityReservationSpecificationCapacityReserva
      * 
      */
     @InputImport(name="capacityReservationId")
-      private final @Nullable Input<String> capacityReservationId;
+      private final @Nullable Output<String> capacityReservationId;
 
-    public Input<String> getCapacityReservationId() {
-        return this.capacityReservationId == null ? Input.empty() : this.capacityReservationId;
+    public Output<String> getCapacityReservationId() {
+        return this.capacityReservationId == null ? Output.empty() : this.capacityReservationId;
     }
 
-    public LaunchTemplateCapacityReservationSpecificationCapacityReservationTargetArgs(@Nullable Input<String> capacityReservationId) {
+    public LaunchTemplateCapacityReservationSpecificationCapacityReservationTargetArgs(@Nullable Output<String> capacityReservationId) {
         this.capacityReservationId = capacityReservationId;
     }
 
     private LaunchTemplateCapacityReservationSpecificationCapacityReservationTargetArgs() {
-        this.capacityReservationId = Input.empty();
+        this.capacityReservationId = Output.empty();
     }
 
     public static Builder builder() {
@@ -42,7 +42,7 @@ public final class LaunchTemplateCapacityReservationSpecificationCapacityReserva
     }
 
     public static final class Builder {
-        private @Nullable Input<String> capacityReservationId;
+        private @Nullable Output<String> capacityReservationId;
 
         public Builder() {
     	      // Empty
@@ -53,13 +53,13 @@ public final class LaunchTemplateCapacityReservationSpecificationCapacityReserva
     	      this.capacityReservationId = defaults.capacityReservationId;
         }
 
-        public Builder capacityReservationId(@Nullable Input<String> capacityReservationId) {
+        public Builder capacityReservationId(@Nullable Output<String> capacityReservationId) {
             this.capacityReservationId = capacityReservationId;
             return this;
         }
 
         public Builder capacityReservationId(@Nullable String capacityReservationId) {
-            this.capacityReservationId = Input.ofNullable(capacityReservationId);
+            this.capacityReservationId = Output.ofNullable(capacityReservationId);
             return this;
         }
         public LaunchTemplateCapacityReservationSpecificationCapacityReservationTargetArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.elasticloadbalancing.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -19,9 +19,9 @@ public final class LoadBalancerHealthCheckGetArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="healthyThreshold", required=true)
-      private final Input<Integer> healthyThreshold;
+      private final Output<Integer> healthyThreshold;
 
-    public Input<Integer> getHealthyThreshold() {
+    public Output<Integer> getHealthyThreshold() {
         return this.healthyThreshold;
     }
 
@@ -30,9 +30,9 @@ public final class LoadBalancerHealthCheckGetArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="interval", required=true)
-      private final Input<Integer> interval;
+      private final Output<Integer> interval;
 
-    public Input<Integer> getInterval() {
+    public Output<Integer> getInterval() {
         return this.interval;
     }
 
@@ -44,9 +44,9 @@ public final class LoadBalancerHealthCheckGetArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="target", required=true)
-      private final Input<String> target;
+      private final Output<String> target;
 
-    public Input<String> getTarget() {
+    public Output<String> getTarget() {
         return this.target;
     }
 
@@ -55,9 +55,9 @@ public final class LoadBalancerHealthCheckGetArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="timeout", required=true)
-      private final Input<Integer> timeout;
+      private final Output<Integer> timeout;
 
-    public Input<Integer> getTimeout() {
+    public Output<Integer> getTimeout() {
         return this.timeout;
     }
 
@@ -66,18 +66,18 @@ public final class LoadBalancerHealthCheckGetArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="unhealthyThreshold", required=true)
-      private final Input<Integer> unhealthyThreshold;
+      private final Output<Integer> unhealthyThreshold;
 
-    public Input<Integer> getUnhealthyThreshold() {
+    public Output<Integer> getUnhealthyThreshold() {
         return this.unhealthyThreshold;
     }
 
     public LoadBalancerHealthCheckGetArgs(
-        Input<Integer> healthyThreshold,
-        Input<Integer> interval,
-        Input<String> target,
-        Input<Integer> timeout,
-        Input<Integer> unhealthyThreshold) {
+        Output<Integer> healthyThreshold,
+        Output<Integer> interval,
+        Output<String> target,
+        Output<Integer> timeout,
+        Output<Integer> unhealthyThreshold) {
         this.healthyThreshold = Objects.requireNonNull(healthyThreshold, "expected parameter 'healthyThreshold' to be non-null");
         this.interval = Objects.requireNonNull(interval, "expected parameter 'interval' to be non-null");
         this.target = Objects.requireNonNull(target, "expected parameter 'target' to be non-null");
@@ -86,11 +86,11 @@ public final class LoadBalancerHealthCheckGetArgs extends io.pulumi.resources.Re
     }
 
     private LoadBalancerHealthCheckGetArgs() {
-        this.healthyThreshold = Input.empty();
-        this.interval = Input.empty();
-        this.target = Input.empty();
-        this.timeout = Input.empty();
-        this.unhealthyThreshold = Input.empty();
+        this.healthyThreshold = Output.empty();
+        this.interval = Output.empty();
+        this.target = Output.empty();
+        this.timeout = Output.empty();
+        this.unhealthyThreshold = Output.empty();
     }
 
     public static Builder builder() {
@@ -102,11 +102,11 @@ public final class LoadBalancerHealthCheckGetArgs extends io.pulumi.resources.Re
     }
 
     public static final class Builder {
-        private Input<Integer> healthyThreshold;
-        private Input<Integer> interval;
-        private Input<String> target;
-        private Input<Integer> timeout;
-        private Input<Integer> unhealthyThreshold;
+        private Output<Integer> healthyThreshold;
+        private Output<Integer> interval;
+        private Output<String> target;
+        private Output<Integer> timeout;
+        private Output<Integer> unhealthyThreshold;
 
         public Builder() {
     	      // Empty
@@ -121,53 +121,53 @@ public final class LoadBalancerHealthCheckGetArgs extends io.pulumi.resources.Re
     	      this.unhealthyThreshold = defaults.unhealthyThreshold;
         }
 
-        public Builder healthyThreshold(Input<Integer> healthyThreshold) {
+        public Builder healthyThreshold(Output<Integer> healthyThreshold) {
             this.healthyThreshold = Objects.requireNonNull(healthyThreshold);
             return this;
         }
 
         public Builder healthyThreshold(Integer healthyThreshold) {
-            this.healthyThreshold = Input.of(Objects.requireNonNull(healthyThreshold));
+            this.healthyThreshold = Output.of(Objects.requireNonNull(healthyThreshold));
             return this;
         }
 
-        public Builder interval(Input<Integer> interval) {
+        public Builder interval(Output<Integer> interval) {
             this.interval = Objects.requireNonNull(interval);
             return this;
         }
 
         public Builder interval(Integer interval) {
-            this.interval = Input.of(Objects.requireNonNull(interval));
+            this.interval = Output.of(Objects.requireNonNull(interval));
             return this;
         }
 
-        public Builder target(Input<String> target) {
+        public Builder target(Output<String> target) {
             this.target = Objects.requireNonNull(target);
             return this;
         }
 
         public Builder target(String target) {
-            this.target = Input.of(Objects.requireNonNull(target));
+            this.target = Output.of(Objects.requireNonNull(target));
             return this;
         }
 
-        public Builder timeout(Input<Integer> timeout) {
+        public Builder timeout(Output<Integer> timeout) {
             this.timeout = Objects.requireNonNull(timeout);
             return this;
         }
 
         public Builder timeout(Integer timeout) {
-            this.timeout = Input.of(Objects.requireNonNull(timeout));
+            this.timeout = Output.of(Objects.requireNonNull(timeout));
             return this;
         }
 
-        public Builder unhealthyThreshold(Input<Integer> unhealthyThreshold) {
+        public Builder unhealthyThreshold(Output<Integer> unhealthyThreshold) {
             this.unhealthyThreshold = Objects.requireNonNull(unhealthyThreshold);
             return this;
         }
 
         public Builder unhealthyThreshold(Integer unhealthyThreshold) {
-            this.unhealthyThreshold = Input.of(Objects.requireNonNull(unhealthyThreshold));
+            this.unhealthyThreshold = Output.of(Objects.requireNonNull(unhealthyThreshold));
             return this;
         }
         public LoadBalancerHealthCheckGetArgs build() {

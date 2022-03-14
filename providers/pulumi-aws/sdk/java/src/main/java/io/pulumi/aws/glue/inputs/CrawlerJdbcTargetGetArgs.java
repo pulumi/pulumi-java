@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.glue.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -20,9 +20,9 @@ public final class CrawlerJdbcTargetGetArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="connectionName", required=true)
-      private final Input<String> connectionName;
+      private final Output<String> connectionName;
 
-    public Input<String> getConnectionName() {
+    public Output<String> getConnectionName() {
         return this.connectionName;
     }
 
@@ -31,10 +31,10 @@ public final class CrawlerJdbcTargetGetArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="exclusions")
-      private final @Nullable Input<List<String>> exclusions;
+      private final @Nullable Output<List<String>> exclusions;
 
-    public Input<List<String>> getExclusions() {
-        return this.exclusions == null ? Input.empty() : this.exclusions;
+    public Output<List<String>> getExclusions() {
+        return this.exclusions == null ? Output.empty() : this.exclusions;
     }
 
     /**
@@ -42,25 +42,25 @@ public final class CrawlerJdbcTargetGetArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="path", required=true)
-      private final Input<String> path;
+      private final Output<String> path;
 
-    public Input<String> getPath() {
+    public Output<String> getPath() {
         return this.path;
     }
 
     public CrawlerJdbcTargetGetArgs(
-        Input<String> connectionName,
-        @Nullable Input<List<String>> exclusions,
-        Input<String> path) {
+        Output<String> connectionName,
+        @Nullable Output<List<String>> exclusions,
+        Output<String> path) {
         this.connectionName = Objects.requireNonNull(connectionName, "expected parameter 'connectionName' to be non-null");
         this.exclusions = exclusions;
         this.path = Objects.requireNonNull(path, "expected parameter 'path' to be non-null");
     }
 
     private CrawlerJdbcTargetGetArgs() {
-        this.connectionName = Input.empty();
-        this.exclusions = Input.empty();
-        this.path = Input.empty();
+        this.connectionName = Output.empty();
+        this.exclusions = Output.empty();
+        this.path = Output.empty();
     }
 
     public static Builder builder() {
@@ -72,9 +72,9 @@ public final class CrawlerJdbcTargetGetArgs extends io.pulumi.resources.Resource
     }
 
     public static final class Builder {
-        private Input<String> connectionName;
-        private @Nullable Input<List<String>> exclusions;
-        private Input<String> path;
+        private Output<String> connectionName;
+        private @Nullable Output<List<String>> exclusions;
+        private Output<String> path;
 
         public Builder() {
     	      // Empty
@@ -87,33 +87,33 @@ public final class CrawlerJdbcTargetGetArgs extends io.pulumi.resources.Resource
     	      this.path = defaults.path;
         }
 
-        public Builder connectionName(Input<String> connectionName) {
+        public Builder connectionName(Output<String> connectionName) {
             this.connectionName = Objects.requireNonNull(connectionName);
             return this;
         }
 
         public Builder connectionName(String connectionName) {
-            this.connectionName = Input.of(Objects.requireNonNull(connectionName));
+            this.connectionName = Output.of(Objects.requireNonNull(connectionName));
             return this;
         }
 
-        public Builder exclusions(@Nullable Input<List<String>> exclusions) {
+        public Builder exclusions(@Nullable Output<List<String>> exclusions) {
             this.exclusions = exclusions;
             return this;
         }
 
         public Builder exclusions(@Nullable List<String> exclusions) {
-            this.exclusions = Input.ofNullable(exclusions);
+            this.exclusions = Output.ofNullable(exclusions);
             return this;
         }
 
-        public Builder path(Input<String> path) {
+        public Builder path(Output<String> path) {
             this.path = Objects.requireNonNull(path);
             return this;
         }
 
         public Builder path(String path) {
-            this.path = Input.of(Objects.requireNonNull(path));
+            this.path = Output.of(Objects.requireNonNull(path));
             return this;
         }
         public CrawlerJdbcTargetGetArgs build() {

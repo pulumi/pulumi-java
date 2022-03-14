@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.rds.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,9 +19,9 @@ public final class ClusterS3ImportGetArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="bucketName", required=true)
-      private final Input<String> bucketName;
+      private final Output<String> bucketName;
 
-    public Input<String> getBucketName() {
+    public Output<String> getBucketName() {
         return this.bucketName;
     }
 
@@ -30,10 +30,10 @@ public final class ClusterS3ImportGetArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="bucketPrefix")
-      private final @Nullable Input<String> bucketPrefix;
+      private final @Nullable Output<String> bucketPrefix;
 
-    public Input<String> getBucketPrefix() {
-        return this.bucketPrefix == null ? Input.empty() : this.bucketPrefix;
+    public Output<String> getBucketPrefix() {
+        return this.bucketPrefix == null ? Output.empty() : this.bucketPrefix;
     }
 
     /**
@@ -41,9 +41,9 @@ public final class ClusterS3ImportGetArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="ingestionRole", required=true)
-      private final Input<String> ingestionRole;
+      private final Output<String> ingestionRole;
 
-    public Input<String> getIngestionRole() {
+    public Output<String> getIngestionRole() {
         return this.ingestionRole;
     }
 
@@ -52,9 +52,9 @@ public final class ClusterS3ImportGetArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="sourceEngine", required=true)
-      private final Input<String> sourceEngine;
+      private final Output<String> sourceEngine;
 
-    public Input<String> getSourceEngine() {
+    public Output<String> getSourceEngine() {
         return this.sourceEngine;
     }
 
@@ -63,18 +63,18 @@ public final class ClusterS3ImportGetArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="sourceEngineVersion", required=true)
-      private final Input<String> sourceEngineVersion;
+      private final Output<String> sourceEngineVersion;
 
-    public Input<String> getSourceEngineVersion() {
+    public Output<String> getSourceEngineVersion() {
         return this.sourceEngineVersion;
     }
 
     public ClusterS3ImportGetArgs(
-        Input<String> bucketName,
-        @Nullable Input<String> bucketPrefix,
-        Input<String> ingestionRole,
-        Input<String> sourceEngine,
-        Input<String> sourceEngineVersion) {
+        Output<String> bucketName,
+        @Nullable Output<String> bucketPrefix,
+        Output<String> ingestionRole,
+        Output<String> sourceEngine,
+        Output<String> sourceEngineVersion) {
         this.bucketName = Objects.requireNonNull(bucketName, "expected parameter 'bucketName' to be non-null");
         this.bucketPrefix = bucketPrefix;
         this.ingestionRole = Objects.requireNonNull(ingestionRole, "expected parameter 'ingestionRole' to be non-null");
@@ -83,11 +83,11 @@ public final class ClusterS3ImportGetArgs extends io.pulumi.resources.ResourceAr
     }
 
     private ClusterS3ImportGetArgs() {
-        this.bucketName = Input.empty();
-        this.bucketPrefix = Input.empty();
-        this.ingestionRole = Input.empty();
-        this.sourceEngine = Input.empty();
-        this.sourceEngineVersion = Input.empty();
+        this.bucketName = Output.empty();
+        this.bucketPrefix = Output.empty();
+        this.ingestionRole = Output.empty();
+        this.sourceEngine = Output.empty();
+        this.sourceEngineVersion = Output.empty();
     }
 
     public static Builder builder() {
@@ -99,11 +99,11 @@ public final class ClusterS3ImportGetArgs extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private Input<String> bucketName;
-        private @Nullable Input<String> bucketPrefix;
-        private Input<String> ingestionRole;
-        private Input<String> sourceEngine;
-        private Input<String> sourceEngineVersion;
+        private Output<String> bucketName;
+        private @Nullable Output<String> bucketPrefix;
+        private Output<String> ingestionRole;
+        private Output<String> sourceEngine;
+        private Output<String> sourceEngineVersion;
 
         public Builder() {
     	      // Empty
@@ -118,53 +118,53 @@ public final class ClusterS3ImportGetArgs extends io.pulumi.resources.ResourceAr
     	      this.sourceEngineVersion = defaults.sourceEngineVersion;
         }
 
-        public Builder bucketName(Input<String> bucketName) {
+        public Builder bucketName(Output<String> bucketName) {
             this.bucketName = Objects.requireNonNull(bucketName);
             return this;
         }
 
         public Builder bucketName(String bucketName) {
-            this.bucketName = Input.of(Objects.requireNonNull(bucketName));
+            this.bucketName = Output.of(Objects.requireNonNull(bucketName));
             return this;
         }
 
-        public Builder bucketPrefix(@Nullable Input<String> bucketPrefix) {
+        public Builder bucketPrefix(@Nullable Output<String> bucketPrefix) {
             this.bucketPrefix = bucketPrefix;
             return this;
         }
 
         public Builder bucketPrefix(@Nullable String bucketPrefix) {
-            this.bucketPrefix = Input.ofNullable(bucketPrefix);
+            this.bucketPrefix = Output.ofNullable(bucketPrefix);
             return this;
         }
 
-        public Builder ingestionRole(Input<String> ingestionRole) {
+        public Builder ingestionRole(Output<String> ingestionRole) {
             this.ingestionRole = Objects.requireNonNull(ingestionRole);
             return this;
         }
 
         public Builder ingestionRole(String ingestionRole) {
-            this.ingestionRole = Input.of(Objects.requireNonNull(ingestionRole));
+            this.ingestionRole = Output.of(Objects.requireNonNull(ingestionRole));
             return this;
         }
 
-        public Builder sourceEngine(Input<String> sourceEngine) {
+        public Builder sourceEngine(Output<String> sourceEngine) {
             this.sourceEngine = Objects.requireNonNull(sourceEngine);
             return this;
         }
 
         public Builder sourceEngine(String sourceEngine) {
-            this.sourceEngine = Input.of(Objects.requireNonNull(sourceEngine));
+            this.sourceEngine = Output.of(Objects.requireNonNull(sourceEngine));
             return this;
         }
 
-        public Builder sourceEngineVersion(Input<String> sourceEngineVersion) {
+        public Builder sourceEngineVersion(Output<String> sourceEngineVersion) {
             this.sourceEngineVersion = Objects.requireNonNull(sourceEngineVersion);
             return this;
         }
 
         public Builder sourceEngineVersion(String sourceEngineVersion) {
-            this.sourceEngineVersion = Input.of(Objects.requireNonNull(sourceEngineVersion));
+            this.sourceEngineVersion = Output.of(Objects.requireNonNull(sourceEngineVersion));
             return this;
         }
         public ClusterS3ImportGetArgs build() {

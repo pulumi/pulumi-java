@@ -6,7 +6,7 @@ package io.pulumi.awsnative.kendra;
 import io.pulumi.awsnative.kendra.enums.DataSourceType;
 import io.pulumi.awsnative.kendra.inputs.DataSourceConfigurationArgs;
 import io.pulumi.awsnative.kendra.inputs.DataSourceTagArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -19,45 +19,45 @@ public final class DataSourceArgs extends io.pulumi.resources.ResourceArgs {
     public static final DataSourceArgs Empty = new DataSourceArgs();
 
     @InputImport(name="dataSourceConfiguration")
-      private final @Nullable Input<DataSourceConfigurationArgs> dataSourceConfiguration;
+      private final @Nullable Output<DataSourceConfigurationArgs> dataSourceConfiguration;
 
-    public Input<DataSourceConfigurationArgs> getDataSourceConfiguration() {
-        return this.dataSourceConfiguration == null ? Input.empty() : this.dataSourceConfiguration;
+    public Output<DataSourceConfigurationArgs> getDataSourceConfiguration() {
+        return this.dataSourceConfiguration == null ? Output.empty() : this.dataSourceConfiguration;
     }
 
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     @InputImport(name="indexId", required=true)
-      private final Input<String> indexId;
+      private final Output<String> indexId;
 
-    public Input<String> getIndexId() {
+    public Output<String> getIndexId() {
         return this.indexId;
     }
 
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     @InputImport(name="roleArn")
-      private final @Nullable Input<String> roleArn;
+      private final @Nullable Output<String> roleArn;
 
-    public Input<String> getRoleArn() {
-        return this.roleArn == null ? Input.empty() : this.roleArn;
+    public Output<String> getRoleArn() {
+        return this.roleArn == null ? Output.empty() : this.roleArn;
     }
 
     @InputImport(name="schedule")
-      private final @Nullable Input<String> schedule;
+      private final @Nullable Output<String> schedule;
 
-    public Input<String> getSchedule() {
-        return this.schedule == null ? Input.empty() : this.schedule;
+    public Output<String> getSchedule() {
+        return this.schedule == null ? Output.empty() : this.schedule;
     }
 
     /**
@@ -65,28 +65,28 @@ public final class DataSourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<List<DataSourceTagArgs>> tags;
+      private final @Nullable Output<List<DataSourceTagArgs>> tags;
 
-    public Input<List<DataSourceTagArgs>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<List<DataSourceTagArgs>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     @InputImport(name="type", required=true)
-      private final Input<DataSourceType> type;
+      private final Output<DataSourceType> type;
 
-    public Input<DataSourceType> getType() {
+    public Output<DataSourceType> getType() {
         return this.type;
     }
 
     public DataSourceArgs(
-        @Nullable Input<DataSourceConfigurationArgs> dataSourceConfiguration,
-        @Nullable Input<String> description,
-        Input<String> indexId,
-        @Nullable Input<String> name,
-        @Nullable Input<String> roleArn,
-        @Nullable Input<String> schedule,
-        @Nullable Input<List<DataSourceTagArgs>> tags,
-        Input<DataSourceType> type) {
+        @Nullable Output<DataSourceConfigurationArgs> dataSourceConfiguration,
+        @Nullable Output<String> description,
+        Output<String> indexId,
+        @Nullable Output<String> name,
+        @Nullable Output<String> roleArn,
+        @Nullable Output<String> schedule,
+        @Nullable Output<List<DataSourceTagArgs>> tags,
+        Output<DataSourceType> type) {
         this.dataSourceConfiguration = dataSourceConfiguration;
         this.description = description;
         this.indexId = Objects.requireNonNull(indexId, "expected parameter 'indexId' to be non-null");
@@ -98,14 +98,14 @@ public final class DataSourceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DataSourceArgs() {
-        this.dataSourceConfiguration = Input.empty();
-        this.description = Input.empty();
-        this.indexId = Input.empty();
-        this.name = Input.empty();
-        this.roleArn = Input.empty();
-        this.schedule = Input.empty();
-        this.tags = Input.empty();
-        this.type = Input.empty();
+        this.dataSourceConfiguration = Output.empty();
+        this.description = Output.empty();
+        this.indexId = Output.empty();
+        this.name = Output.empty();
+        this.roleArn = Output.empty();
+        this.schedule = Output.empty();
+        this.tags = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -117,14 +117,14 @@ public final class DataSourceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<DataSourceConfigurationArgs> dataSourceConfiguration;
-        private @Nullable Input<String> description;
-        private Input<String> indexId;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> roleArn;
-        private @Nullable Input<String> schedule;
-        private @Nullable Input<List<DataSourceTagArgs>> tags;
-        private Input<DataSourceType> type;
+        private @Nullable Output<DataSourceConfigurationArgs> dataSourceConfiguration;
+        private @Nullable Output<String> description;
+        private Output<String> indexId;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> roleArn;
+        private @Nullable Output<String> schedule;
+        private @Nullable Output<List<DataSourceTagArgs>> tags;
+        private Output<DataSourceType> type;
 
         public Builder() {
     	      // Empty
@@ -142,83 +142,83 @@ public final class DataSourceArgs extends io.pulumi.resources.ResourceArgs {
     	      this.type = defaults.type;
         }
 
-        public Builder dataSourceConfiguration(@Nullable Input<DataSourceConfigurationArgs> dataSourceConfiguration) {
+        public Builder dataSourceConfiguration(@Nullable Output<DataSourceConfigurationArgs> dataSourceConfiguration) {
             this.dataSourceConfiguration = dataSourceConfiguration;
             return this;
         }
 
         public Builder dataSourceConfiguration(@Nullable DataSourceConfigurationArgs dataSourceConfiguration) {
-            this.dataSourceConfiguration = Input.ofNullable(dataSourceConfiguration);
+            this.dataSourceConfiguration = Output.ofNullable(dataSourceConfiguration);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder indexId(Input<String> indexId) {
+        public Builder indexId(Output<String> indexId) {
             this.indexId = Objects.requireNonNull(indexId);
             return this;
         }
 
         public Builder indexId(String indexId) {
-            this.indexId = Input.of(Objects.requireNonNull(indexId));
+            this.indexId = Output.of(Objects.requireNonNull(indexId));
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder roleArn(@Nullable Input<String> roleArn) {
+        public Builder roleArn(@Nullable Output<String> roleArn) {
             this.roleArn = roleArn;
             return this;
         }
 
         public Builder roleArn(@Nullable String roleArn) {
-            this.roleArn = Input.ofNullable(roleArn);
+            this.roleArn = Output.ofNullable(roleArn);
             return this;
         }
 
-        public Builder schedule(@Nullable Input<String> schedule) {
+        public Builder schedule(@Nullable Output<String> schedule) {
             this.schedule = schedule;
             return this;
         }
 
         public Builder schedule(@Nullable String schedule) {
-            this.schedule = Input.ofNullable(schedule);
+            this.schedule = Output.ofNullable(schedule);
             return this;
         }
 
-        public Builder tags(@Nullable Input<List<DataSourceTagArgs>> tags) {
+        public Builder tags(@Nullable Output<List<DataSourceTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable List<DataSourceTagArgs> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder type(Input<DataSourceType> type) {
+        public Builder type(Output<DataSourceType> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(DataSourceType type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
         public DataSourceArgs build() {

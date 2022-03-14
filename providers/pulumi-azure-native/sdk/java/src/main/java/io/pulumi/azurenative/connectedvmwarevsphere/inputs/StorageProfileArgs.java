@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.connectedvmwarevsphere.inputs;
 
 import io.pulumi.azurenative.connectedvmwarevsphere.inputs.VirtualDiskArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
@@ -24,18 +24,18 @@ public final class StorageProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="disks")
-      private final @Nullable Input<List<VirtualDiskArgs>> disks;
+      private final @Nullable Output<List<VirtualDiskArgs>> disks;
 
-    public Input<List<VirtualDiskArgs>> getDisks() {
-        return this.disks == null ? Input.empty() : this.disks;
+    public Output<List<VirtualDiskArgs>> getDisks() {
+        return this.disks == null ? Output.empty() : this.disks;
     }
 
-    public StorageProfileArgs(@Nullable Input<List<VirtualDiskArgs>> disks) {
+    public StorageProfileArgs(@Nullable Output<List<VirtualDiskArgs>> disks) {
         this.disks = disks;
     }
 
     private StorageProfileArgs() {
-        this.disks = Input.empty();
+        this.disks = Output.empty();
     }
 
     public static Builder builder() {
@@ -47,7 +47,7 @@ public final class StorageProfileArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<List<VirtualDiskArgs>> disks;
+        private @Nullable Output<List<VirtualDiskArgs>> disks;
 
         public Builder() {
     	      // Empty
@@ -58,13 +58,13 @@ public final class StorageProfileArgs extends io.pulumi.resources.ResourceArgs {
     	      this.disks = defaults.disks;
         }
 
-        public Builder disks(@Nullable Input<List<VirtualDiskArgs>> disks) {
+        public Builder disks(@Nullable Output<List<VirtualDiskArgs>> disks) {
             this.disks = disks;
             return this;
         }
 
         public Builder disks(@Nullable List<VirtualDiskArgs> disks) {
-            this.disks = Input.ofNullable(disks);
+            this.disks = Output.ofNullable(disks);
             return this;
         }
         public StorageProfileArgs build() {

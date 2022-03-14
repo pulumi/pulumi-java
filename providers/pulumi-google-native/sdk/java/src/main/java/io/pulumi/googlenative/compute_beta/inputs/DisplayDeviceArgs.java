@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_beta.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class DisplayDeviceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enableDisplay")
-      private final @Nullable Input<Boolean> enableDisplay;
+      private final @Nullable Output<Boolean> enableDisplay;
 
-    public Input<Boolean> getEnableDisplay() {
-        return this.enableDisplay == null ? Input.empty() : this.enableDisplay;
+    public Output<Boolean> getEnableDisplay() {
+        return this.enableDisplay == null ? Output.empty() : this.enableDisplay;
     }
 
-    public DisplayDeviceArgs(@Nullable Input<Boolean> enableDisplay) {
+    public DisplayDeviceArgs(@Nullable Output<Boolean> enableDisplay) {
         this.enableDisplay = enableDisplay;
     }
 
     private DisplayDeviceArgs() {
-        this.enableDisplay = Input.empty();
+        this.enableDisplay = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class DisplayDeviceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> enableDisplay;
+        private @Nullable Output<Boolean> enableDisplay;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class DisplayDeviceArgs extends io.pulumi.resources.ResourceArgs {
     	      this.enableDisplay = defaults.enableDisplay;
         }
 
-        public Builder enableDisplay(@Nullable Input<Boolean> enableDisplay) {
+        public Builder enableDisplay(@Nullable Output<Boolean> enableDisplay) {
             this.enableDisplay = enableDisplay;
             return this;
         }
 
         public Builder enableDisplay(@Nullable Boolean enableDisplay) {
-            this.enableDisplay = Input.ofNullable(enableDisplay);
+            this.enableDisplay = Output.ofNullable(enableDisplay);
             return this;
         }
         public DisplayDeviceArgs build() {

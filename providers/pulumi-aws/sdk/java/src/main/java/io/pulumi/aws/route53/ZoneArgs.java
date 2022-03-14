@@ -4,7 +4,7 @@
 package io.pulumi.aws.route53;
 
 import io.pulumi.aws.route53.inputs.ZoneVpcArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -23,10 +23,10 @@ public final class ZoneArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="comment")
-      private final @Nullable Input<String> comment;
+      private final @Nullable Output<String> comment;
 
-    public Input<String> getComment() {
-        return this.comment == null ? Input.empty() : this.comment;
+    public Output<String> getComment() {
+        return this.comment == null ? Output.empty() : this.comment;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class ZoneArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="delegationSetId")
-      private final @Nullable Input<String> delegationSetId;
+      private final @Nullable Output<String> delegationSetId;
 
-    public Input<String> getDelegationSetId() {
-        return this.delegationSetId == null ? Input.empty() : this.delegationSetId;
+    public Output<String> getDelegationSetId() {
+        return this.delegationSetId == null ? Output.empty() : this.delegationSetId;
     }
 
     /**
@@ -45,10 +45,10 @@ public final class ZoneArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="forceDestroy")
-      private final @Nullable Input<Boolean> forceDestroy;
+      private final @Nullable Output<Boolean> forceDestroy;
 
-    public Input<Boolean> getForceDestroy() {
-        return this.forceDestroy == null ? Input.empty() : this.forceDestroy;
+    public Output<Boolean> getForceDestroy() {
+        return this.forceDestroy == null ? Output.empty() : this.forceDestroy;
     }
 
     /**
@@ -56,10 +56,10 @@ public final class ZoneArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -67,10 +67,10 @@ public final class ZoneArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -78,20 +78,20 @@ public final class ZoneArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="vpcs")
-      private final @Nullable Input<List<ZoneVpcArgs>> vpcs;
+      private final @Nullable Output<List<ZoneVpcArgs>> vpcs;
 
-    public Input<List<ZoneVpcArgs>> getVpcs() {
-        return this.vpcs == null ? Input.empty() : this.vpcs;
+    public Output<List<ZoneVpcArgs>> getVpcs() {
+        return this.vpcs == null ? Output.empty() : this.vpcs;
     }
 
     public ZoneArgs(
-        @Nullable Input<String> comment,
-        @Nullable Input<String> delegationSetId,
-        @Nullable Input<Boolean> forceDestroy,
-        @Nullable Input<String> name,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<List<ZoneVpcArgs>> vpcs) {
-        this.comment = comment == null ? Input.ofNullable("Managed by Pulumi") : comment;
+        @Nullable Output<String> comment,
+        @Nullable Output<String> delegationSetId,
+        @Nullable Output<Boolean> forceDestroy,
+        @Nullable Output<String> name,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<List<ZoneVpcArgs>> vpcs) {
+        this.comment = comment == null ? Output.ofNullable("Managed by Pulumi") : comment;
         this.delegationSetId = delegationSetId;
         this.forceDestroy = forceDestroy;
         this.name = name;
@@ -100,12 +100,12 @@ public final class ZoneArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ZoneArgs() {
-        this.comment = Input.empty();
-        this.delegationSetId = Input.empty();
-        this.forceDestroy = Input.empty();
-        this.name = Input.empty();
-        this.tags = Input.empty();
-        this.vpcs = Input.empty();
+        this.comment = Output.empty();
+        this.delegationSetId = Output.empty();
+        this.forceDestroy = Output.empty();
+        this.name = Output.empty();
+        this.tags = Output.empty();
+        this.vpcs = Output.empty();
     }
 
     public static Builder builder() {
@@ -117,12 +117,12 @@ public final class ZoneArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> comment;
-        private @Nullable Input<String> delegationSetId;
-        private @Nullable Input<Boolean> forceDestroy;
-        private @Nullable Input<String> name;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<List<ZoneVpcArgs>> vpcs;
+        private @Nullable Output<String> comment;
+        private @Nullable Output<String> delegationSetId;
+        private @Nullable Output<Boolean> forceDestroy;
+        private @Nullable Output<String> name;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<List<ZoneVpcArgs>> vpcs;
 
         public Builder() {
     	      // Empty
@@ -138,63 +138,63 @@ public final class ZoneArgs extends io.pulumi.resources.ResourceArgs {
     	      this.vpcs = defaults.vpcs;
         }
 
-        public Builder comment(@Nullable Input<String> comment) {
+        public Builder comment(@Nullable Output<String> comment) {
             this.comment = comment;
             return this;
         }
 
         public Builder comment(@Nullable String comment) {
-            this.comment = Input.ofNullable(comment);
+            this.comment = Output.ofNullable(comment);
             return this;
         }
 
-        public Builder delegationSetId(@Nullable Input<String> delegationSetId) {
+        public Builder delegationSetId(@Nullable Output<String> delegationSetId) {
             this.delegationSetId = delegationSetId;
             return this;
         }
 
         public Builder delegationSetId(@Nullable String delegationSetId) {
-            this.delegationSetId = Input.ofNullable(delegationSetId);
+            this.delegationSetId = Output.ofNullable(delegationSetId);
             return this;
         }
 
-        public Builder forceDestroy(@Nullable Input<Boolean> forceDestroy) {
+        public Builder forceDestroy(@Nullable Output<Boolean> forceDestroy) {
             this.forceDestroy = forceDestroy;
             return this;
         }
 
         public Builder forceDestroy(@Nullable Boolean forceDestroy) {
-            this.forceDestroy = Input.ofNullable(forceDestroy);
+            this.forceDestroy = Output.ofNullable(forceDestroy);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder vpcs(@Nullable Input<List<ZoneVpcArgs>> vpcs) {
+        public Builder vpcs(@Nullable Output<List<ZoneVpcArgs>> vpcs) {
             this.vpcs = vpcs;
             return this;
         }
 
         public Builder vpcs(@Nullable List<ZoneVpcArgs> vpcs) {
-            this.vpcs = Input.ofNullable(vpcs);
+            this.vpcs = Output.ofNullable(vpcs);
             return this;
         }
         public ZoneArgs build() {

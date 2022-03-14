@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.cognito.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -20,10 +20,10 @@ public final class UserGroupState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -31,10 +31,10 @@ public final class UserGroupState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -42,10 +42,10 @@ public final class UserGroupState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="precedence")
-      private final @Nullable Input<Integer> precedence;
+      private final @Nullable Output<Integer> precedence;
 
-    public Input<Integer> getPrecedence() {
-        return this.precedence == null ? Input.empty() : this.precedence;
+    public Output<Integer> getPrecedence() {
+        return this.precedence == null ? Output.empty() : this.precedence;
     }
 
     /**
@@ -53,10 +53,10 @@ public final class UserGroupState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="roleArn")
-      private final @Nullable Input<String> roleArn;
+      private final @Nullable Output<String> roleArn;
 
-    public Input<String> getRoleArn() {
-        return this.roleArn == null ? Input.empty() : this.roleArn;
+    public Output<String> getRoleArn() {
+        return this.roleArn == null ? Output.empty() : this.roleArn;
     }
 
     /**
@@ -64,18 +64,18 @@ public final class UserGroupState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="userPoolId")
-      private final @Nullable Input<String> userPoolId;
+      private final @Nullable Output<String> userPoolId;
 
-    public Input<String> getUserPoolId() {
-        return this.userPoolId == null ? Input.empty() : this.userPoolId;
+    public Output<String> getUserPoolId() {
+        return this.userPoolId == null ? Output.empty() : this.userPoolId;
     }
 
     public UserGroupState(
-        @Nullable Input<String> description,
-        @Nullable Input<String> name,
-        @Nullable Input<Integer> precedence,
-        @Nullable Input<String> roleArn,
-        @Nullable Input<String> userPoolId) {
+        @Nullable Output<String> description,
+        @Nullable Output<String> name,
+        @Nullable Output<Integer> precedence,
+        @Nullable Output<String> roleArn,
+        @Nullable Output<String> userPoolId) {
         this.description = description;
         this.name = name;
         this.precedence = precedence;
@@ -84,11 +84,11 @@ public final class UserGroupState extends io.pulumi.resources.ResourceArgs {
     }
 
     private UserGroupState() {
-        this.description = Input.empty();
-        this.name = Input.empty();
-        this.precedence = Input.empty();
-        this.roleArn = Input.empty();
-        this.userPoolId = Input.empty();
+        this.description = Output.empty();
+        this.name = Output.empty();
+        this.precedence = Output.empty();
+        this.roleArn = Output.empty();
+        this.userPoolId = Output.empty();
     }
 
     public static Builder builder() {
@@ -100,11 +100,11 @@ public final class UserGroupState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> description;
-        private @Nullable Input<String> name;
-        private @Nullable Input<Integer> precedence;
-        private @Nullable Input<String> roleArn;
-        private @Nullable Input<String> userPoolId;
+        private @Nullable Output<String> description;
+        private @Nullable Output<String> name;
+        private @Nullable Output<Integer> precedence;
+        private @Nullable Output<String> roleArn;
+        private @Nullable Output<String> userPoolId;
 
         public Builder() {
     	      // Empty
@@ -119,53 +119,53 @@ public final class UserGroupState extends io.pulumi.resources.ResourceArgs {
     	      this.userPoolId = defaults.userPoolId;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder precedence(@Nullable Input<Integer> precedence) {
+        public Builder precedence(@Nullable Output<Integer> precedence) {
             this.precedence = precedence;
             return this;
         }
 
         public Builder precedence(@Nullable Integer precedence) {
-            this.precedence = Input.ofNullable(precedence);
+            this.precedence = Output.ofNullable(precedence);
             return this;
         }
 
-        public Builder roleArn(@Nullable Input<String> roleArn) {
+        public Builder roleArn(@Nullable Output<String> roleArn) {
             this.roleArn = roleArn;
             return this;
         }
 
         public Builder roleArn(@Nullable String roleArn) {
-            this.roleArn = Input.ofNullable(roleArn);
+            this.roleArn = Output.ofNullable(roleArn);
             return this;
         }
 
-        public Builder userPoolId(@Nullable Input<String> userPoolId) {
+        public Builder userPoolId(@Nullable Output<String> userPoolId) {
             this.userPoolId = userPoolId;
             return this;
         }
 
         public Builder userPoolId(@Nullable String userPoolId) {
-            this.userPoolId = Input.ofNullable(userPoolId);
+            this.userPoolId = Output.ofNullable(userPoolId);
             return this;
         }
         public UserGroupState build() {

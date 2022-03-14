@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.cloudfront;
 
 import io.pulumi.awsnative.cloudfront.inputs.CloudFrontOriginAccessIdentityConfigArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 
@@ -14,18 +14,18 @@ public final class CloudFrontOriginAccessIdentityArgs extends io.pulumi.resource
     public static final CloudFrontOriginAccessIdentityArgs Empty = new CloudFrontOriginAccessIdentityArgs();
 
     @InputImport(name="cloudFrontOriginAccessIdentityConfig", required=true)
-      private final Input<CloudFrontOriginAccessIdentityConfigArgs> cloudFrontOriginAccessIdentityConfig;
+      private final Output<CloudFrontOriginAccessIdentityConfigArgs> cloudFrontOriginAccessIdentityConfig;
 
-    public Input<CloudFrontOriginAccessIdentityConfigArgs> getCloudFrontOriginAccessIdentityConfig() {
+    public Output<CloudFrontOriginAccessIdentityConfigArgs> getCloudFrontOriginAccessIdentityConfig() {
         return this.cloudFrontOriginAccessIdentityConfig;
     }
 
-    public CloudFrontOriginAccessIdentityArgs(Input<CloudFrontOriginAccessIdentityConfigArgs> cloudFrontOriginAccessIdentityConfig) {
+    public CloudFrontOriginAccessIdentityArgs(Output<CloudFrontOriginAccessIdentityConfigArgs> cloudFrontOriginAccessIdentityConfig) {
         this.cloudFrontOriginAccessIdentityConfig = Objects.requireNonNull(cloudFrontOriginAccessIdentityConfig, "expected parameter 'cloudFrontOriginAccessIdentityConfig' to be non-null");
     }
 
     private CloudFrontOriginAccessIdentityArgs() {
-        this.cloudFrontOriginAccessIdentityConfig = Input.empty();
+        this.cloudFrontOriginAccessIdentityConfig = Output.empty();
     }
 
     public static Builder builder() {
@@ -37,7 +37,7 @@ public final class CloudFrontOriginAccessIdentityArgs extends io.pulumi.resource
     }
 
     public static final class Builder {
-        private Input<CloudFrontOriginAccessIdentityConfigArgs> cloudFrontOriginAccessIdentityConfig;
+        private Output<CloudFrontOriginAccessIdentityConfigArgs> cloudFrontOriginAccessIdentityConfig;
 
         public Builder() {
     	      // Empty
@@ -48,13 +48,13 @@ public final class CloudFrontOriginAccessIdentityArgs extends io.pulumi.resource
     	      this.cloudFrontOriginAccessIdentityConfig = defaults.cloudFrontOriginAccessIdentityConfig;
         }
 
-        public Builder cloudFrontOriginAccessIdentityConfig(Input<CloudFrontOriginAccessIdentityConfigArgs> cloudFrontOriginAccessIdentityConfig) {
+        public Builder cloudFrontOriginAccessIdentityConfig(Output<CloudFrontOriginAccessIdentityConfigArgs> cloudFrontOriginAccessIdentityConfig) {
             this.cloudFrontOriginAccessIdentityConfig = Objects.requireNonNull(cloudFrontOriginAccessIdentityConfig);
             return this;
         }
 
         public Builder cloudFrontOriginAccessIdentityConfig(CloudFrontOriginAccessIdentityConfigArgs cloudFrontOriginAccessIdentityConfig) {
-            this.cloudFrontOriginAccessIdentityConfig = Input.of(Objects.requireNonNull(cloudFrontOriginAccessIdentityConfig));
+            this.cloudFrontOriginAccessIdentityConfig = Output.of(Objects.requireNonNull(cloudFrontOriginAccessIdentityConfig));
             return this;
         }
         public CloudFrontOriginAccessIdentityArgs build() {

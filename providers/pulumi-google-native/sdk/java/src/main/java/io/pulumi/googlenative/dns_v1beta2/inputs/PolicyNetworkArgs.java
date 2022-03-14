@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dns_v1beta2.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -15,10 +15,10 @@ public final class PolicyNetworkArgs extends io.pulumi.resources.ResourceArgs {
     public static final PolicyNetworkArgs Empty = new PolicyNetworkArgs();
 
     @InputImport(name="kind")
-      private final @Nullable Input<String> kind;
+      private final @Nullable Output<String> kind;
 
-    public Input<String> getKind() {
-        return this.kind == null ? Input.empty() : this.kind;
+    public Output<String> getKind() {
+        return this.kind == null ? Output.empty() : this.kind;
     }
 
     /**
@@ -26,22 +26,22 @@ public final class PolicyNetworkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="networkUrl")
-      private final @Nullable Input<String> networkUrl;
+      private final @Nullable Output<String> networkUrl;
 
-    public Input<String> getNetworkUrl() {
-        return this.networkUrl == null ? Input.empty() : this.networkUrl;
+    public Output<String> getNetworkUrl() {
+        return this.networkUrl == null ? Output.empty() : this.networkUrl;
     }
 
     public PolicyNetworkArgs(
-        @Nullable Input<String> kind,
-        @Nullable Input<String> networkUrl) {
+        @Nullable Output<String> kind,
+        @Nullable Output<String> networkUrl) {
         this.kind = kind;
         this.networkUrl = networkUrl;
     }
 
     private PolicyNetworkArgs() {
-        this.kind = Input.empty();
-        this.networkUrl = Input.empty();
+        this.kind = Output.empty();
+        this.networkUrl = Output.empty();
     }
 
     public static Builder builder() {
@@ -53,8 +53,8 @@ public final class PolicyNetworkArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> kind;
-        private @Nullable Input<String> networkUrl;
+        private @Nullable Output<String> kind;
+        private @Nullable Output<String> networkUrl;
 
         public Builder() {
     	      // Empty
@@ -66,23 +66,23 @@ public final class PolicyNetworkArgs extends io.pulumi.resources.ResourceArgs {
     	      this.networkUrl = defaults.networkUrl;
         }
 
-        public Builder kind(@Nullable Input<String> kind) {
+        public Builder kind(@Nullable Output<String> kind) {
             this.kind = kind;
             return this;
         }
 
         public Builder kind(@Nullable String kind) {
-            this.kind = Input.ofNullable(kind);
+            this.kind = Output.ofNullable(kind);
             return this;
         }
 
-        public Builder networkUrl(@Nullable Input<String> networkUrl) {
+        public Builder networkUrl(@Nullable Output<String> networkUrl) {
             this.networkUrl = networkUrl;
             return this;
         }
 
         public Builder networkUrl(@Nullable String networkUrl) {
-            this.networkUrl = Input.ofNullable(networkUrl);
+            this.networkUrl = Output.ofNullable(networkUrl);
             return this;
         }
         public PolicyNetworkArgs build() {

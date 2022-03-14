@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.appstream.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class FleetComputeCapacityGetArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="available")
-      private final @Nullable Input<Integer> available;
+      private final @Nullable Output<Integer> available;
 
-    public Input<Integer> getAvailable() {
-        return this.available == null ? Input.empty() : this.available;
+    public Output<Integer> getAvailable() {
+        return this.available == null ? Output.empty() : this.available;
     }
 
     /**
@@ -30,9 +30,9 @@ public final class FleetComputeCapacityGetArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="desiredInstances", required=true)
-      private final Input<Integer> desiredInstances;
+      private final Output<Integer> desiredInstances;
 
-    public Input<Integer> getDesiredInstances() {
+    public Output<Integer> getDesiredInstances() {
         return this.desiredInstances;
     }
 
@@ -41,10 +41,10 @@ public final class FleetComputeCapacityGetArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="inUse")
-      private final @Nullable Input<Integer> inUse;
+      private final @Nullable Output<Integer> inUse;
 
-    public Input<Integer> getInUse() {
-        return this.inUse == null ? Input.empty() : this.inUse;
+    public Output<Integer> getInUse() {
+        return this.inUse == null ? Output.empty() : this.inUse;
     }
 
     /**
@@ -52,17 +52,17 @@ public final class FleetComputeCapacityGetArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="running")
-      private final @Nullable Input<Integer> running;
+      private final @Nullable Output<Integer> running;
 
-    public Input<Integer> getRunning() {
-        return this.running == null ? Input.empty() : this.running;
+    public Output<Integer> getRunning() {
+        return this.running == null ? Output.empty() : this.running;
     }
 
     public FleetComputeCapacityGetArgs(
-        @Nullable Input<Integer> available,
-        Input<Integer> desiredInstances,
-        @Nullable Input<Integer> inUse,
-        @Nullable Input<Integer> running) {
+        @Nullable Output<Integer> available,
+        Output<Integer> desiredInstances,
+        @Nullable Output<Integer> inUse,
+        @Nullable Output<Integer> running) {
         this.available = available;
         this.desiredInstances = Objects.requireNonNull(desiredInstances, "expected parameter 'desiredInstances' to be non-null");
         this.inUse = inUse;
@@ -70,10 +70,10 @@ public final class FleetComputeCapacityGetArgs extends io.pulumi.resources.Resou
     }
 
     private FleetComputeCapacityGetArgs() {
-        this.available = Input.empty();
-        this.desiredInstances = Input.empty();
-        this.inUse = Input.empty();
-        this.running = Input.empty();
+        this.available = Output.empty();
+        this.desiredInstances = Output.empty();
+        this.inUse = Output.empty();
+        this.running = Output.empty();
     }
 
     public static Builder builder() {
@@ -85,10 +85,10 @@ public final class FleetComputeCapacityGetArgs extends io.pulumi.resources.Resou
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> available;
-        private Input<Integer> desiredInstances;
-        private @Nullable Input<Integer> inUse;
-        private @Nullable Input<Integer> running;
+        private @Nullable Output<Integer> available;
+        private Output<Integer> desiredInstances;
+        private @Nullable Output<Integer> inUse;
+        private @Nullable Output<Integer> running;
 
         public Builder() {
     	      // Empty
@@ -102,43 +102,43 @@ public final class FleetComputeCapacityGetArgs extends io.pulumi.resources.Resou
     	      this.running = defaults.running;
         }
 
-        public Builder available(@Nullable Input<Integer> available) {
+        public Builder available(@Nullable Output<Integer> available) {
             this.available = available;
             return this;
         }
 
         public Builder available(@Nullable Integer available) {
-            this.available = Input.ofNullable(available);
+            this.available = Output.ofNullable(available);
             return this;
         }
 
-        public Builder desiredInstances(Input<Integer> desiredInstances) {
+        public Builder desiredInstances(Output<Integer> desiredInstances) {
             this.desiredInstances = Objects.requireNonNull(desiredInstances);
             return this;
         }
 
         public Builder desiredInstances(Integer desiredInstances) {
-            this.desiredInstances = Input.of(Objects.requireNonNull(desiredInstances));
+            this.desiredInstances = Output.of(Objects.requireNonNull(desiredInstances));
             return this;
         }
 
-        public Builder inUse(@Nullable Input<Integer> inUse) {
+        public Builder inUse(@Nullable Output<Integer> inUse) {
             this.inUse = inUse;
             return this;
         }
 
         public Builder inUse(@Nullable Integer inUse) {
-            this.inUse = Input.ofNullable(inUse);
+            this.inUse = Output.ofNullable(inUse);
             return this;
         }
 
-        public Builder running(@Nullable Input<Integer> running) {
+        public Builder running(@Nullable Output<Integer> running) {
             this.running = running;
             return this;
         }
 
         public Builder running(@Nullable Integer running) {
-            this.running = Input.ofNullable(running);
+            this.running = Output.ofNullable(running);
             return this;
         }
         public FleetComputeCapacityGetArgs build() {

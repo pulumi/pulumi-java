@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -18,18 +18,18 @@ public final class InstanceTemplateDiskDiskEncryptionKeyArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="kmsKeySelfLink", required=true)
-      private final Input<String> kmsKeySelfLink;
+      private final Output<String> kmsKeySelfLink;
 
-    public Input<String> getKmsKeySelfLink() {
+    public Output<String> getKmsKeySelfLink() {
         return this.kmsKeySelfLink;
     }
 
-    public InstanceTemplateDiskDiskEncryptionKeyArgs(Input<String> kmsKeySelfLink) {
+    public InstanceTemplateDiskDiskEncryptionKeyArgs(Output<String> kmsKeySelfLink) {
         this.kmsKeySelfLink = Objects.requireNonNull(kmsKeySelfLink, "expected parameter 'kmsKeySelfLink' to be non-null");
     }
 
     private InstanceTemplateDiskDiskEncryptionKeyArgs() {
-        this.kmsKeySelfLink = Input.empty();
+        this.kmsKeySelfLink = Output.empty();
     }
 
     public static Builder builder() {
@@ -41,7 +41,7 @@ public final class InstanceTemplateDiskDiskEncryptionKeyArgs extends io.pulumi.r
     }
 
     public static final class Builder {
-        private Input<String> kmsKeySelfLink;
+        private Output<String> kmsKeySelfLink;
 
         public Builder() {
     	      // Empty
@@ -52,13 +52,13 @@ public final class InstanceTemplateDiskDiskEncryptionKeyArgs extends io.pulumi.r
     	      this.kmsKeySelfLink = defaults.kmsKeySelfLink;
         }
 
-        public Builder kmsKeySelfLink(Input<String> kmsKeySelfLink) {
+        public Builder kmsKeySelfLink(Output<String> kmsKeySelfLink) {
             this.kmsKeySelfLink = Objects.requireNonNull(kmsKeySelfLink);
             return this;
         }
 
         public Builder kmsKeySelfLink(String kmsKeySelfLink) {
-            this.kmsKeySelfLink = Input.of(Objects.requireNonNull(kmsKeySelfLink));
+            this.kmsKeySelfLink = Output.of(Objects.requireNonNull(kmsKeySelfLink));
             return this;
         }
         public InstanceTemplateDiskDiskEncryptionKeyArgs build() {

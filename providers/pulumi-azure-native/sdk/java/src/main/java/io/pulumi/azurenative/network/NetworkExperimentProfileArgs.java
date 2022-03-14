@@ -5,7 +5,7 @@ package io.pulumi.azurenative.network;
 
 import io.pulumi.azurenative.network.enums.State;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -22,10 +22,10 @@ public final class NetworkExperimentProfileArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="enabledState")
-      private final @Nullable Input<Either<String,State>> enabledState;
+      private final @Nullable Output<Either<String,State>> enabledState;
 
-    public Input<Either<String,State>> getEnabledState() {
-        return this.enabledState == null ? Input.empty() : this.enabledState;
+    public Output<Either<String,State>> getEnabledState() {
+        return this.enabledState == null ? Output.empty() : this.enabledState;
     }
 
     /**
@@ -33,10 +33,10 @@ public final class NetworkExperimentProfileArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -44,10 +44,10 @@ public final class NetworkExperimentProfileArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -55,10 +55,10 @@ public final class NetworkExperimentProfileArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="profileName")
-      private final @Nullable Input<String> profileName;
+      private final @Nullable Output<String> profileName;
 
-    public Input<String> getProfileName() {
-        return this.profileName == null ? Input.empty() : this.profileName;
+    public Output<String> getProfileName() {
+        return this.profileName == null ? Output.empty() : this.profileName;
     }
 
     /**
@@ -66,9 +66,9 @@ public final class NetworkExperimentProfileArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -77,19 +77,19 @@ public final class NetworkExperimentProfileArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public NetworkExperimentProfileArgs(
-        @Nullable Input<Either<String,State>> enabledState,
-        @Nullable Input<String> location,
-        @Nullable Input<String> name,
-        @Nullable Input<String> profileName,
-        Input<String> resourceGroupName,
-        @Nullable Input<Map<String,String>> tags) {
+        @Nullable Output<Either<String,State>> enabledState,
+        @Nullable Output<String> location,
+        @Nullable Output<String> name,
+        @Nullable Output<String> profileName,
+        Output<String> resourceGroupName,
+        @Nullable Output<Map<String,String>> tags) {
         this.enabledState = enabledState;
         this.location = location;
         this.name = name;
@@ -99,12 +99,12 @@ public final class NetworkExperimentProfileArgs extends io.pulumi.resources.Reso
     }
 
     private NetworkExperimentProfileArgs() {
-        this.enabledState = Input.empty();
-        this.location = Input.empty();
-        this.name = Input.empty();
-        this.profileName = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.tags = Input.empty();
+        this.enabledState = Output.empty();
+        this.location = Output.empty();
+        this.name = Output.empty();
+        this.profileName = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -116,12 +116,12 @@ public final class NetworkExperimentProfileArgs extends io.pulumi.resources.Reso
     }
 
     public static final class Builder {
-        private @Nullable Input<Either<String,State>> enabledState;
-        private @Nullable Input<String> location;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> profileName;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<Map<String,String>> tags;
+        private @Nullable Output<Either<String,State>> enabledState;
+        private @Nullable Output<String> location;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> profileName;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<Map<String,String>> tags;
 
         public Builder() {
     	      // Empty
@@ -137,63 +137,63 @@ public final class NetworkExperimentProfileArgs extends io.pulumi.resources.Reso
     	      this.tags = defaults.tags;
         }
 
-        public Builder enabledState(@Nullable Input<Either<String,State>> enabledState) {
+        public Builder enabledState(@Nullable Output<Either<String,State>> enabledState) {
             this.enabledState = enabledState;
             return this;
         }
 
         public Builder enabledState(@Nullable Either<String,State> enabledState) {
-            this.enabledState = Input.ofNullable(enabledState);
+            this.enabledState = Output.ofNullable(enabledState);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder profileName(@Nullable Input<String> profileName) {
+        public Builder profileName(@Nullable Output<String> profileName) {
             this.profileName = profileName;
             return this;
         }
 
         public Builder profileName(@Nullable String profileName) {
-            this.profileName = Input.ofNullable(profileName);
+            this.profileName = Output.ofNullable(profileName);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public NetworkExperimentProfileArgs build() {

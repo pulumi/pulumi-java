@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.toolresults_v1beta3;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.toolresults_v1beta3.enums.ExecutionState;
 import io.pulumi.googlenative.toolresults_v1beta3.inputs.MatrixDimensionDefinitionArgs;
@@ -25,10 +25,10 @@ public final class ExecutionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="completionTime")
-      private final @Nullable Input<TimestampArgs> completionTime;
+      private final @Nullable Output<TimestampArgs> completionTime;
 
-    public Input<TimestampArgs> getCompletionTime() {
-        return this.completionTime == null ? Input.empty() : this.completionTime;
+    public Output<TimestampArgs> getCompletionTime() {
+        return this.completionTime == null ? Output.empty() : this.completionTime;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class ExecutionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="creationTime")
-      private final @Nullable Input<TimestampArgs> creationTime;
+      private final @Nullable Output<TimestampArgs> creationTime;
 
-    public Input<TimestampArgs> getCreationTime() {
-        return this.creationTime == null ? Input.empty() : this.creationTime;
+    public Output<TimestampArgs> getCreationTime() {
+        return this.creationTime == null ? Output.empty() : this.creationTime;
     }
 
     /**
@@ -47,10 +47,10 @@ public final class ExecutionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dimensionDefinitions")
-      private final @Nullable Input<List<MatrixDimensionDefinitionArgs>> dimensionDefinitions;
+      private final @Nullable Output<List<MatrixDimensionDefinitionArgs>> dimensionDefinitions;
 
-    public Input<List<MatrixDimensionDefinitionArgs>> getDimensionDefinitions() {
-        return this.dimensionDefinitions == null ? Input.empty() : this.dimensionDefinitions;
+    public Output<List<MatrixDimensionDefinitionArgs>> getDimensionDefinitions() {
+        return this.dimensionDefinitions == null ? Output.empty() : this.dimensionDefinitions;
     }
 
     /**
@@ -58,16 +58,16 @@ public final class ExecutionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="executionId")
-      private final @Nullable Input<String> executionId;
+      private final @Nullable Output<String> executionId;
 
-    public Input<String> getExecutionId() {
-        return this.executionId == null ? Input.empty() : this.executionId;
+    public Output<String> getExecutionId() {
+        return this.executionId == null ? Output.empty() : this.executionId;
     }
 
     @InputImport(name="historyId", required=true)
-      private final Input<String> historyId;
+      private final Output<String> historyId;
 
-    public Input<String> getHistoryId() {
+    public Output<String> getHistoryId() {
         return this.historyId;
     }
 
@@ -76,24 +76,24 @@ public final class ExecutionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="outcome")
-      private final @Nullable Input<OutcomeArgs> outcome;
+      private final @Nullable Output<OutcomeArgs> outcome;
 
-    public Input<OutcomeArgs> getOutcome() {
-        return this.outcome == null ? Input.empty() : this.outcome;
+    public Output<OutcomeArgs> getOutcome() {
+        return this.outcome == null ? Output.empty() : this.outcome;
     }
 
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     @InputImport(name="requestId")
-      private final @Nullable Input<String> requestId;
+      private final @Nullable Output<String> requestId;
 
-    public Input<String> getRequestId() {
-        return this.requestId == null ? Input.empty() : this.requestId;
+    public Output<String> getRequestId() {
+        return this.requestId == null ? Output.empty() : this.requestId;
     }
 
     /**
@@ -101,10 +101,10 @@ public final class ExecutionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="specification")
-      private final @Nullable Input<SpecificationArgs> specification;
+      private final @Nullable Output<SpecificationArgs> specification;
 
-    public Input<SpecificationArgs> getSpecification() {
-        return this.specification == null ? Input.empty() : this.specification;
+    public Output<SpecificationArgs> getSpecification() {
+        return this.specification == null ? Output.empty() : this.specification;
     }
 
     /**
@@ -112,10 +112,10 @@ public final class ExecutionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="state")
-      private final @Nullable Input<ExecutionState> state;
+      private final @Nullable Output<ExecutionState> state;
 
-    public Input<ExecutionState> getState() {
-        return this.state == null ? Input.empty() : this.state;
+    public Output<ExecutionState> getState() {
+        return this.state == null ? Output.empty() : this.state;
     }
 
     /**
@@ -123,24 +123,24 @@ public final class ExecutionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="testExecutionMatrixId")
-      private final @Nullable Input<String> testExecutionMatrixId;
+      private final @Nullable Output<String> testExecutionMatrixId;
 
-    public Input<String> getTestExecutionMatrixId() {
-        return this.testExecutionMatrixId == null ? Input.empty() : this.testExecutionMatrixId;
+    public Output<String> getTestExecutionMatrixId() {
+        return this.testExecutionMatrixId == null ? Output.empty() : this.testExecutionMatrixId;
     }
 
     public ExecutionArgs(
-        @Nullable Input<TimestampArgs> completionTime,
-        @Nullable Input<TimestampArgs> creationTime,
-        @Nullable Input<List<MatrixDimensionDefinitionArgs>> dimensionDefinitions,
-        @Nullable Input<String> executionId,
-        Input<String> historyId,
-        @Nullable Input<OutcomeArgs> outcome,
-        @Nullable Input<String> project,
-        @Nullable Input<String> requestId,
-        @Nullable Input<SpecificationArgs> specification,
-        @Nullable Input<ExecutionState> state,
-        @Nullable Input<String> testExecutionMatrixId) {
+        @Nullable Output<TimestampArgs> completionTime,
+        @Nullable Output<TimestampArgs> creationTime,
+        @Nullable Output<List<MatrixDimensionDefinitionArgs>> dimensionDefinitions,
+        @Nullable Output<String> executionId,
+        Output<String> historyId,
+        @Nullable Output<OutcomeArgs> outcome,
+        @Nullable Output<String> project,
+        @Nullable Output<String> requestId,
+        @Nullable Output<SpecificationArgs> specification,
+        @Nullable Output<ExecutionState> state,
+        @Nullable Output<String> testExecutionMatrixId) {
         this.completionTime = completionTime;
         this.creationTime = creationTime;
         this.dimensionDefinitions = dimensionDefinitions;
@@ -155,17 +155,17 @@ public final class ExecutionArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ExecutionArgs() {
-        this.completionTime = Input.empty();
-        this.creationTime = Input.empty();
-        this.dimensionDefinitions = Input.empty();
-        this.executionId = Input.empty();
-        this.historyId = Input.empty();
-        this.outcome = Input.empty();
-        this.project = Input.empty();
-        this.requestId = Input.empty();
-        this.specification = Input.empty();
-        this.state = Input.empty();
-        this.testExecutionMatrixId = Input.empty();
+        this.completionTime = Output.empty();
+        this.creationTime = Output.empty();
+        this.dimensionDefinitions = Output.empty();
+        this.executionId = Output.empty();
+        this.historyId = Output.empty();
+        this.outcome = Output.empty();
+        this.project = Output.empty();
+        this.requestId = Output.empty();
+        this.specification = Output.empty();
+        this.state = Output.empty();
+        this.testExecutionMatrixId = Output.empty();
     }
 
     public static Builder builder() {
@@ -177,17 +177,17 @@ public final class ExecutionArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<TimestampArgs> completionTime;
-        private @Nullable Input<TimestampArgs> creationTime;
-        private @Nullable Input<List<MatrixDimensionDefinitionArgs>> dimensionDefinitions;
-        private @Nullable Input<String> executionId;
-        private Input<String> historyId;
-        private @Nullable Input<OutcomeArgs> outcome;
-        private @Nullable Input<String> project;
-        private @Nullable Input<String> requestId;
-        private @Nullable Input<SpecificationArgs> specification;
-        private @Nullable Input<ExecutionState> state;
-        private @Nullable Input<String> testExecutionMatrixId;
+        private @Nullable Output<TimestampArgs> completionTime;
+        private @Nullable Output<TimestampArgs> creationTime;
+        private @Nullable Output<List<MatrixDimensionDefinitionArgs>> dimensionDefinitions;
+        private @Nullable Output<String> executionId;
+        private Output<String> historyId;
+        private @Nullable Output<OutcomeArgs> outcome;
+        private @Nullable Output<String> project;
+        private @Nullable Output<String> requestId;
+        private @Nullable Output<SpecificationArgs> specification;
+        private @Nullable Output<ExecutionState> state;
+        private @Nullable Output<String> testExecutionMatrixId;
 
         public Builder() {
     	      // Empty
@@ -208,113 +208,113 @@ public final class ExecutionArgs extends io.pulumi.resources.ResourceArgs {
     	      this.testExecutionMatrixId = defaults.testExecutionMatrixId;
         }
 
-        public Builder completionTime(@Nullable Input<TimestampArgs> completionTime) {
+        public Builder completionTime(@Nullable Output<TimestampArgs> completionTime) {
             this.completionTime = completionTime;
             return this;
         }
 
         public Builder completionTime(@Nullable TimestampArgs completionTime) {
-            this.completionTime = Input.ofNullable(completionTime);
+            this.completionTime = Output.ofNullable(completionTime);
             return this;
         }
 
-        public Builder creationTime(@Nullable Input<TimestampArgs> creationTime) {
+        public Builder creationTime(@Nullable Output<TimestampArgs> creationTime) {
             this.creationTime = creationTime;
             return this;
         }
 
         public Builder creationTime(@Nullable TimestampArgs creationTime) {
-            this.creationTime = Input.ofNullable(creationTime);
+            this.creationTime = Output.ofNullable(creationTime);
             return this;
         }
 
-        public Builder dimensionDefinitions(@Nullable Input<List<MatrixDimensionDefinitionArgs>> dimensionDefinitions) {
+        public Builder dimensionDefinitions(@Nullable Output<List<MatrixDimensionDefinitionArgs>> dimensionDefinitions) {
             this.dimensionDefinitions = dimensionDefinitions;
             return this;
         }
 
         public Builder dimensionDefinitions(@Nullable List<MatrixDimensionDefinitionArgs> dimensionDefinitions) {
-            this.dimensionDefinitions = Input.ofNullable(dimensionDefinitions);
+            this.dimensionDefinitions = Output.ofNullable(dimensionDefinitions);
             return this;
         }
 
-        public Builder executionId(@Nullable Input<String> executionId) {
+        public Builder executionId(@Nullable Output<String> executionId) {
             this.executionId = executionId;
             return this;
         }
 
         public Builder executionId(@Nullable String executionId) {
-            this.executionId = Input.ofNullable(executionId);
+            this.executionId = Output.ofNullable(executionId);
             return this;
         }
 
-        public Builder historyId(Input<String> historyId) {
+        public Builder historyId(Output<String> historyId) {
             this.historyId = Objects.requireNonNull(historyId);
             return this;
         }
 
         public Builder historyId(String historyId) {
-            this.historyId = Input.of(Objects.requireNonNull(historyId));
+            this.historyId = Output.of(Objects.requireNonNull(historyId));
             return this;
         }
 
-        public Builder outcome(@Nullable Input<OutcomeArgs> outcome) {
+        public Builder outcome(@Nullable Output<OutcomeArgs> outcome) {
             this.outcome = outcome;
             return this;
         }
 
         public Builder outcome(@Nullable OutcomeArgs outcome) {
-            this.outcome = Input.ofNullable(outcome);
+            this.outcome = Output.ofNullable(outcome);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder requestId(@Nullable Input<String> requestId) {
+        public Builder requestId(@Nullable Output<String> requestId) {
             this.requestId = requestId;
             return this;
         }
 
         public Builder requestId(@Nullable String requestId) {
-            this.requestId = Input.ofNullable(requestId);
+            this.requestId = Output.ofNullable(requestId);
             return this;
         }
 
-        public Builder specification(@Nullable Input<SpecificationArgs> specification) {
+        public Builder specification(@Nullable Output<SpecificationArgs> specification) {
             this.specification = specification;
             return this;
         }
 
         public Builder specification(@Nullable SpecificationArgs specification) {
-            this.specification = Input.ofNullable(specification);
+            this.specification = Output.ofNullable(specification);
             return this;
         }
 
-        public Builder state(@Nullable Input<ExecutionState> state) {
+        public Builder state(@Nullable Output<ExecutionState> state) {
             this.state = state;
             return this;
         }
 
         public Builder state(@Nullable ExecutionState state) {
-            this.state = Input.ofNullable(state);
+            this.state = Output.ofNullable(state);
             return this;
         }
 
-        public Builder testExecutionMatrixId(@Nullable Input<String> testExecutionMatrixId) {
+        public Builder testExecutionMatrixId(@Nullable Output<String> testExecutionMatrixId) {
             this.testExecutionMatrixId = testExecutionMatrixId;
             return this;
         }
 
         public Builder testExecutionMatrixId(@Nullable String testExecutionMatrixId) {
-            this.testExecutionMatrixId = Input.ofNullable(testExecutionMatrixId);
+            this.testExecutionMatrixId = Output.ofNullable(testExecutionMatrixId);
             return this;
         }
         public ExecutionArgs build() {

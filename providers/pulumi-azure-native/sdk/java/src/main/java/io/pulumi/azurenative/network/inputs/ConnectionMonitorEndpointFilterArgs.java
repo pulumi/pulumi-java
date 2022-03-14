@@ -6,7 +6,7 @@ package io.pulumi.azurenative.network.inputs;
 import io.pulumi.azurenative.network.enums.ConnectionMonitorEndpointFilterType;
 import io.pulumi.azurenative.network.inputs.ConnectionMonitorEndpointFilterItemArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -27,10 +27,10 @@ public final class ConnectionMonitorEndpointFilterArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="items")
-      private final @Nullable Input<List<ConnectionMonitorEndpointFilterItemArgs>> items;
+      private final @Nullable Output<List<ConnectionMonitorEndpointFilterItemArgs>> items;
 
-    public Input<List<ConnectionMonitorEndpointFilterItemArgs>> getItems() {
-        return this.items == null ? Input.empty() : this.items;
+    public Output<List<ConnectionMonitorEndpointFilterItemArgs>> getItems() {
+        return this.items == null ? Output.empty() : this.items;
     }
 
     /**
@@ -38,22 +38,22 @@ public final class ConnectionMonitorEndpointFilterArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="type")
-      private final @Nullable Input<Either<String,ConnectionMonitorEndpointFilterType>> type;
+      private final @Nullable Output<Either<String,ConnectionMonitorEndpointFilterType>> type;
 
-    public Input<Either<String,ConnectionMonitorEndpointFilterType>> getType() {
-        return this.type == null ? Input.empty() : this.type;
+    public Output<Either<String,ConnectionMonitorEndpointFilterType>> getType() {
+        return this.type == null ? Output.empty() : this.type;
     }
 
     public ConnectionMonitorEndpointFilterArgs(
-        @Nullable Input<List<ConnectionMonitorEndpointFilterItemArgs>> items,
-        @Nullable Input<Either<String,ConnectionMonitorEndpointFilterType>> type) {
+        @Nullable Output<List<ConnectionMonitorEndpointFilterItemArgs>> items,
+        @Nullable Output<Either<String,ConnectionMonitorEndpointFilterType>> type) {
         this.items = items;
         this.type = type;
     }
 
     private ConnectionMonitorEndpointFilterArgs() {
-        this.items = Input.empty();
-        this.type = Input.empty();
+        this.items = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -65,8 +65,8 @@ public final class ConnectionMonitorEndpointFilterArgs extends io.pulumi.resourc
     }
 
     public static final class Builder {
-        private @Nullable Input<List<ConnectionMonitorEndpointFilterItemArgs>> items;
-        private @Nullable Input<Either<String,ConnectionMonitorEndpointFilterType>> type;
+        private @Nullable Output<List<ConnectionMonitorEndpointFilterItemArgs>> items;
+        private @Nullable Output<Either<String,ConnectionMonitorEndpointFilterType>> type;
 
         public Builder() {
     	      // Empty
@@ -78,23 +78,23 @@ public final class ConnectionMonitorEndpointFilterArgs extends io.pulumi.resourc
     	      this.type = defaults.type;
         }
 
-        public Builder items(@Nullable Input<List<ConnectionMonitorEndpointFilterItemArgs>> items) {
+        public Builder items(@Nullable Output<List<ConnectionMonitorEndpointFilterItemArgs>> items) {
             this.items = items;
             return this;
         }
 
         public Builder items(@Nullable List<ConnectionMonitorEndpointFilterItemArgs> items) {
-            this.items = Input.ofNullable(items);
+            this.items = Output.ofNullable(items);
             return this;
         }
 
-        public Builder type(@Nullable Input<Either<String,ConnectionMonitorEndpointFilterType>> type) {
+        public Builder type(@Nullable Output<Either<String,ConnectionMonitorEndpointFilterType>> type) {
             this.type = type;
             return this;
         }
 
         public Builder type(@Nullable Either<String,ConnectionMonitorEndpointFilterType> type) {
-            this.type = Input.ofNullable(type);
+            this.type = Output.ofNullable(type);
             return this;
         }
         public ConnectionMonitorEndpointFilterArgs build() {

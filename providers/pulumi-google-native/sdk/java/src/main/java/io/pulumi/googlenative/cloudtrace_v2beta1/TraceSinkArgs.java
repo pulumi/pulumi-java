@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudtrace_v2beta1;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.cloudtrace_v2beta1.inputs.OutputConfigArgs;
 import java.lang.String;
@@ -20,10 +20,10 @@ public final class TraceSinkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -31,32 +31,32 @@ public final class TraceSinkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="outputConfig", required=true)
-      private final Input<OutputConfigArgs> outputConfig;
+      private final Output<OutputConfigArgs> outputConfig;
 
-    public Input<OutputConfigArgs> getOutputConfig() {
+    public Output<OutputConfigArgs> getOutputConfig() {
         return this.outputConfig;
     }
 
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     public TraceSinkArgs(
-        @Nullable Input<String> name,
-        Input<OutputConfigArgs> outputConfig,
-        @Nullable Input<String> project) {
+        @Nullable Output<String> name,
+        Output<OutputConfigArgs> outputConfig,
+        @Nullable Output<String> project) {
         this.name = name;
         this.outputConfig = Objects.requireNonNull(outputConfig, "expected parameter 'outputConfig' to be non-null");
         this.project = project;
     }
 
     private TraceSinkArgs() {
-        this.name = Input.empty();
-        this.outputConfig = Input.empty();
-        this.project = Input.empty();
+        this.name = Output.empty();
+        this.outputConfig = Output.empty();
+        this.project = Output.empty();
     }
 
     public static Builder builder() {
@@ -68,9 +68,9 @@ public final class TraceSinkArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> name;
-        private Input<OutputConfigArgs> outputConfig;
-        private @Nullable Input<String> project;
+        private @Nullable Output<String> name;
+        private Output<OutputConfigArgs> outputConfig;
+        private @Nullable Output<String> project;
 
         public Builder() {
     	      // Empty
@@ -83,33 +83,33 @@ public final class TraceSinkArgs extends io.pulumi.resources.ResourceArgs {
     	      this.project = defaults.project;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder outputConfig(Input<OutputConfigArgs> outputConfig) {
+        public Builder outputConfig(Output<OutputConfigArgs> outputConfig) {
             this.outputConfig = Objects.requireNonNull(outputConfig);
             return this;
         }
 
         public Builder outputConfig(OutputConfigArgs outputConfig) {
-            this.outputConfig = Input.of(Objects.requireNonNull(outputConfig));
+            this.outputConfig = Output.of(Objects.requireNonNull(outputConfig));
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
         public TraceSinkArgs build() {

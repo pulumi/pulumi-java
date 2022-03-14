@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.container.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
@@ -14,18 +14,18 @@ public final class ClusterMasterAuthClientCertificateConfigGetArgs extends io.pu
     public static final ClusterMasterAuthClientCertificateConfigGetArgs Empty = new ClusterMasterAuthClientCertificateConfigGetArgs();
 
     @InputImport(name="issueClientCertificate", required=true)
-      private final Input<Boolean> issueClientCertificate;
+      private final Output<Boolean> issueClientCertificate;
 
-    public Input<Boolean> getIssueClientCertificate() {
+    public Output<Boolean> getIssueClientCertificate() {
         return this.issueClientCertificate;
     }
 
-    public ClusterMasterAuthClientCertificateConfigGetArgs(Input<Boolean> issueClientCertificate) {
+    public ClusterMasterAuthClientCertificateConfigGetArgs(Output<Boolean> issueClientCertificate) {
         this.issueClientCertificate = Objects.requireNonNull(issueClientCertificate, "expected parameter 'issueClientCertificate' to be non-null");
     }
 
     private ClusterMasterAuthClientCertificateConfigGetArgs() {
-        this.issueClientCertificate = Input.empty();
+        this.issueClientCertificate = Output.empty();
     }
 
     public static Builder builder() {
@@ -37,7 +37,7 @@ public final class ClusterMasterAuthClientCertificateConfigGetArgs extends io.pu
     }
 
     public static final class Builder {
-        private Input<Boolean> issueClientCertificate;
+        private Output<Boolean> issueClientCertificate;
 
         public Builder() {
     	      // Empty
@@ -48,13 +48,13 @@ public final class ClusterMasterAuthClientCertificateConfigGetArgs extends io.pu
     	      this.issueClientCertificate = defaults.issueClientCertificate;
         }
 
-        public Builder issueClientCertificate(Input<Boolean> issueClientCertificate) {
+        public Builder issueClientCertificate(Output<Boolean> issueClientCertificate) {
             this.issueClientCertificate = Objects.requireNonNull(issueClientCertificate);
             return this;
         }
 
         public Builder issueClientCertificate(Boolean issueClientCertificate) {
-            this.issueClientCertificate = Input.of(Objects.requireNonNull(issueClientCertificate));
+            this.issueClientCertificate = Output.of(Objects.requireNonNull(issueClientCertificate));
             return this;
         }
         public ClusterMasterAuthClientCertificateConfigGetArgs build() {

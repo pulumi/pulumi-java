@@ -4,7 +4,7 @@
 package io.pulumi.aws.networkfirewall.inputs;
 
 import io.pulumi.aws.networkfirewall.inputs.RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
@@ -19,9 +19,9 @@ public final class RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsSt
      * 
      */
     @InputImport(name="priority", required=true)
-      private final Input<Integer> priority;
+      private final Output<Integer> priority;
 
-    public Input<Integer> getPriority() {
+    public Output<Integer> getPriority() {
         return this.priority;
     }
 
@@ -30,22 +30,22 @@ public final class RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsSt
      * 
      */
     @InputImport(name="ruleDefinition", required=true)
-      private final Input<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionArgs> ruleDefinition;
+      private final Output<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionArgs> ruleDefinition;
 
-    public Input<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionArgs> getRuleDefinition() {
+    public Output<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionArgs> getRuleDefinition() {
         return this.ruleDefinition;
     }
 
     public RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleArgs(
-        Input<Integer> priority,
-        Input<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionArgs> ruleDefinition) {
+        Output<Integer> priority,
+        Output<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionArgs> ruleDefinition) {
         this.priority = Objects.requireNonNull(priority, "expected parameter 'priority' to be non-null");
         this.ruleDefinition = Objects.requireNonNull(ruleDefinition, "expected parameter 'ruleDefinition' to be non-null");
     }
 
     private RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleArgs() {
-        this.priority = Input.empty();
-        this.ruleDefinition = Input.empty();
+        this.priority = Output.empty();
+        this.ruleDefinition = Output.empty();
     }
 
     public static Builder builder() {
@@ -57,8 +57,8 @@ public final class RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsSt
     }
 
     public static final class Builder {
-        private Input<Integer> priority;
-        private Input<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionArgs> ruleDefinition;
+        private Output<Integer> priority;
+        private Output<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionArgs> ruleDefinition;
 
         public Builder() {
     	      // Empty
@@ -70,23 +70,23 @@ public final class RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsSt
     	      this.ruleDefinition = defaults.ruleDefinition;
         }
 
-        public Builder priority(Input<Integer> priority) {
+        public Builder priority(Output<Integer> priority) {
             this.priority = Objects.requireNonNull(priority);
             return this;
         }
 
         public Builder priority(Integer priority) {
-            this.priority = Input.of(Objects.requireNonNull(priority));
+            this.priority = Output.of(Objects.requireNonNull(priority));
             return this;
         }
 
-        public Builder ruleDefinition(Input<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionArgs> ruleDefinition) {
+        public Builder ruleDefinition(Output<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionArgs> ruleDefinition) {
             this.ruleDefinition = Objects.requireNonNull(ruleDefinition);
             return this;
         }
 
         public Builder ruleDefinition(RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionArgs ruleDefinition) {
-            this.ruleDefinition = Input.of(Objects.requireNonNull(ruleDefinition));
+            this.ruleDefinition = Output.of(Objects.requireNonNull(ruleDefinition));
             return this;
         }
         public RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleArgs build() {

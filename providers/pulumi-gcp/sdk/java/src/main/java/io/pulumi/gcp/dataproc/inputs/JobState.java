@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.dataproc.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.dataproc.inputs.JobHadoopConfigGetArgs;
 import io.pulumi.gcp.dataproc.inputs.JobHiveConfigGetArgs;
@@ -32,10 +32,10 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="driverControlsFilesUri")
-      private final @Nullable Input<String> driverControlsFilesUri;
+      private final @Nullable Output<String> driverControlsFilesUri;
 
-    public Input<String> getDriverControlsFilesUri() {
-        return this.driverControlsFilesUri == null ? Input.empty() : this.driverControlsFilesUri;
+    public Output<String> getDriverControlsFilesUri() {
+        return this.driverControlsFilesUri == null ? Output.empty() : this.driverControlsFilesUri;
     }
 
     /**
@@ -43,10 +43,10 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="driverOutputResourceUri")
-      private final @Nullable Input<String> driverOutputResourceUri;
+      private final @Nullable Output<String> driverOutputResourceUri;
 
-    public Input<String> getDriverOutputResourceUri() {
-        return this.driverOutputResourceUri == null ? Input.empty() : this.driverOutputResourceUri;
+    public Output<String> getDriverOutputResourceUri() {
+        return this.driverOutputResourceUri == null ? Output.empty() : this.driverOutputResourceUri;
     }
 
     /**
@@ -56,10 +56,10 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="forceDelete")
-      private final @Nullable Input<Boolean> forceDelete;
+      private final @Nullable Output<Boolean> forceDelete;
 
-    public Input<Boolean> getForceDelete() {
-        return this.forceDelete == null ? Input.empty() : this.forceDelete;
+    public Output<Boolean> getForceDelete() {
+        return this.forceDelete == null ? Output.empty() : this.forceDelete;
     }
 
     /**
@@ -67,10 +67,10 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="hadoopConfig")
-      private final @Nullable Input<JobHadoopConfigGetArgs> hadoopConfig;
+      private final @Nullable Output<JobHadoopConfigGetArgs> hadoopConfig;
 
-    public Input<JobHadoopConfigGetArgs> getHadoopConfig() {
-        return this.hadoopConfig == null ? Input.empty() : this.hadoopConfig;
+    public Output<JobHadoopConfigGetArgs> getHadoopConfig() {
+        return this.hadoopConfig == null ? Output.empty() : this.hadoopConfig;
     }
 
     /**
@@ -78,10 +78,10 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="hiveConfig")
-      private final @Nullable Input<JobHiveConfigGetArgs> hiveConfig;
+      private final @Nullable Output<JobHiveConfigGetArgs> hiveConfig;
 
-    public Input<JobHiveConfigGetArgs> getHiveConfig() {
-        return this.hiveConfig == null ? Input.empty() : this.hiveConfig;
+    public Output<JobHiveConfigGetArgs> getHiveConfig() {
+        return this.hiveConfig == null ? Output.empty() : this.hiveConfig;
     }
 
     /**
@@ -89,10 +89,10 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labels")
-      private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Output<Map<String,String>> labels;
 
-    public Input<Map<String,String>> getLabels() {
-        return this.labels == null ? Input.empty() : this.labels;
+    public Output<Map<String,String>> getLabels() {
+        return this.labels == null ? Output.empty() : this.labels;
     }
 
     /**
@@ -100,10 +100,10 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="pigConfig")
-      private final @Nullable Input<JobPigConfigGetArgs> pigConfig;
+      private final @Nullable Output<JobPigConfigGetArgs> pigConfig;
 
-    public Input<JobPigConfigGetArgs> getPigConfig() {
-        return this.pigConfig == null ? Input.empty() : this.pigConfig;
+    public Output<JobPigConfigGetArgs> getPigConfig() {
+        return this.pigConfig == null ? Output.empty() : this.pigConfig;
     }
 
     /**
@@ -111,10 +111,10 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="placement")
-      private final @Nullable Input<JobPlacementGetArgs> placement;
+      private final @Nullable Output<JobPlacementGetArgs> placement;
 
-    public Input<JobPlacementGetArgs> getPlacement() {
-        return this.placement == null ? Input.empty() : this.placement;
+    public Output<JobPlacementGetArgs> getPlacement() {
+        return this.placement == null ? Output.empty() : this.placement;
     }
 
     /**
@@ -123,10 +123,10 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -134,10 +134,10 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="pysparkConfig")
-      private final @Nullable Input<JobPysparkConfigGetArgs> pysparkConfig;
+      private final @Nullable Output<JobPysparkConfigGetArgs> pysparkConfig;
 
-    public Input<JobPysparkConfigGetArgs> getPysparkConfig() {
-        return this.pysparkConfig == null ? Input.empty() : this.pysparkConfig;
+    public Output<JobPysparkConfigGetArgs> getPysparkConfig() {
+        return this.pysparkConfig == null ? Output.empty() : this.pysparkConfig;
     }
 
     /**
@@ -145,10 +145,10 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="reference")
-      private final @Nullable Input<JobReferenceGetArgs> reference;
+      private final @Nullable Output<JobReferenceGetArgs> reference;
 
-    public Input<JobReferenceGetArgs> getReference() {
-        return this.reference == null ? Input.empty() : this.reference;
+    public Output<JobReferenceGetArgs> getReference() {
+        return this.reference == null ? Output.empty() : this.reference;
     }
 
     /**
@@ -157,10 +157,10 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="region")
-      private final @Nullable Input<String> region;
+      private final @Nullable Output<String> region;
 
-    public Input<String> getRegion() {
-        return this.region == null ? Input.empty() : this.region;
+    public Output<String> getRegion() {
+        return this.region == null ? Output.empty() : this.region;
     }
 
     /**
@@ -168,10 +168,10 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="scheduling")
-      private final @Nullable Input<JobSchedulingGetArgs> scheduling;
+      private final @Nullable Output<JobSchedulingGetArgs> scheduling;
 
-    public Input<JobSchedulingGetArgs> getScheduling() {
-        return this.scheduling == null ? Input.empty() : this.scheduling;
+    public Output<JobSchedulingGetArgs> getScheduling() {
+        return this.scheduling == null ? Output.empty() : this.scheduling;
     }
 
     /**
@@ -179,10 +179,10 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sparkConfig")
-      private final @Nullable Input<JobSparkConfigGetArgs> sparkConfig;
+      private final @Nullable Output<JobSparkConfigGetArgs> sparkConfig;
 
-    public Input<JobSparkConfigGetArgs> getSparkConfig() {
-        return this.sparkConfig == null ? Input.empty() : this.sparkConfig;
+    public Output<JobSparkConfigGetArgs> getSparkConfig() {
+        return this.sparkConfig == null ? Output.empty() : this.sparkConfig;
     }
 
     /**
@@ -190,10 +190,10 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sparksqlConfig")
-      private final @Nullable Input<JobSparksqlConfigGetArgs> sparksqlConfig;
+      private final @Nullable Output<JobSparksqlConfigGetArgs> sparksqlConfig;
 
-    public Input<JobSparksqlConfigGetArgs> getSparksqlConfig() {
-        return this.sparksqlConfig == null ? Input.empty() : this.sparksqlConfig;
+    public Output<JobSparksqlConfigGetArgs> getSparksqlConfig() {
+        return this.sparksqlConfig == null ? Output.empty() : this.sparksqlConfig;
     }
 
     /**
@@ -201,29 +201,29 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="statuses")
-      private final @Nullable Input<List<JobStatusGetArgs>> statuses;
+      private final @Nullable Output<List<JobStatusGetArgs>> statuses;
 
-    public Input<List<JobStatusGetArgs>> getStatuses() {
-        return this.statuses == null ? Input.empty() : this.statuses;
+    public Output<List<JobStatusGetArgs>> getStatuses() {
+        return this.statuses == null ? Output.empty() : this.statuses;
     }
 
     public JobState(
-        @Nullable Input<String> driverControlsFilesUri,
-        @Nullable Input<String> driverOutputResourceUri,
-        @Nullable Input<Boolean> forceDelete,
-        @Nullable Input<JobHadoopConfigGetArgs> hadoopConfig,
-        @Nullable Input<JobHiveConfigGetArgs> hiveConfig,
-        @Nullable Input<Map<String,String>> labels,
-        @Nullable Input<JobPigConfigGetArgs> pigConfig,
-        @Nullable Input<JobPlacementGetArgs> placement,
-        @Nullable Input<String> project,
-        @Nullable Input<JobPysparkConfigGetArgs> pysparkConfig,
-        @Nullable Input<JobReferenceGetArgs> reference,
-        @Nullable Input<String> region,
-        @Nullable Input<JobSchedulingGetArgs> scheduling,
-        @Nullable Input<JobSparkConfigGetArgs> sparkConfig,
-        @Nullable Input<JobSparksqlConfigGetArgs> sparksqlConfig,
-        @Nullable Input<List<JobStatusGetArgs>> statuses) {
+        @Nullable Output<String> driverControlsFilesUri,
+        @Nullable Output<String> driverOutputResourceUri,
+        @Nullable Output<Boolean> forceDelete,
+        @Nullable Output<JobHadoopConfigGetArgs> hadoopConfig,
+        @Nullable Output<JobHiveConfigGetArgs> hiveConfig,
+        @Nullable Output<Map<String,String>> labels,
+        @Nullable Output<JobPigConfigGetArgs> pigConfig,
+        @Nullable Output<JobPlacementGetArgs> placement,
+        @Nullable Output<String> project,
+        @Nullable Output<JobPysparkConfigGetArgs> pysparkConfig,
+        @Nullable Output<JobReferenceGetArgs> reference,
+        @Nullable Output<String> region,
+        @Nullable Output<JobSchedulingGetArgs> scheduling,
+        @Nullable Output<JobSparkConfigGetArgs> sparkConfig,
+        @Nullable Output<JobSparksqlConfigGetArgs> sparksqlConfig,
+        @Nullable Output<List<JobStatusGetArgs>> statuses) {
         this.driverControlsFilesUri = driverControlsFilesUri;
         this.driverOutputResourceUri = driverOutputResourceUri;
         this.forceDelete = forceDelete;
@@ -243,22 +243,22 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
     }
 
     private JobState() {
-        this.driverControlsFilesUri = Input.empty();
-        this.driverOutputResourceUri = Input.empty();
-        this.forceDelete = Input.empty();
-        this.hadoopConfig = Input.empty();
-        this.hiveConfig = Input.empty();
-        this.labels = Input.empty();
-        this.pigConfig = Input.empty();
-        this.placement = Input.empty();
-        this.project = Input.empty();
-        this.pysparkConfig = Input.empty();
-        this.reference = Input.empty();
-        this.region = Input.empty();
-        this.scheduling = Input.empty();
-        this.sparkConfig = Input.empty();
-        this.sparksqlConfig = Input.empty();
-        this.statuses = Input.empty();
+        this.driverControlsFilesUri = Output.empty();
+        this.driverOutputResourceUri = Output.empty();
+        this.forceDelete = Output.empty();
+        this.hadoopConfig = Output.empty();
+        this.hiveConfig = Output.empty();
+        this.labels = Output.empty();
+        this.pigConfig = Output.empty();
+        this.placement = Output.empty();
+        this.project = Output.empty();
+        this.pysparkConfig = Output.empty();
+        this.reference = Output.empty();
+        this.region = Output.empty();
+        this.scheduling = Output.empty();
+        this.sparkConfig = Output.empty();
+        this.sparksqlConfig = Output.empty();
+        this.statuses = Output.empty();
     }
 
     public static Builder builder() {
@@ -270,22 +270,22 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> driverControlsFilesUri;
-        private @Nullable Input<String> driverOutputResourceUri;
-        private @Nullable Input<Boolean> forceDelete;
-        private @Nullable Input<JobHadoopConfigGetArgs> hadoopConfig;
-        private @Nullable Input<JobHiveConfigGetArgs> hiveConfig;
-        private @Nullable Input<Map<String,String>> labels;
-        private @Nullable Input<JobPigConfigGetArgs> pigConfig;
-        private @Nullable Input<JobPlacementGetArgs> placement;
-        private @Nullable Input<String> project;
-        private @Nullable Input<JobPysparkConfigGetArgs> pysparkConfig;
-        private @Nullable Input<JobReferenceGetArgs> reference;
-        private @Nullable Input<String> region;
-        private @Nullable Input<JobSchedulingGetArgs> scheduling;
-        private @Nullable Input<JobSparkConfigGetArgs> sparkConfig;
-        private @Nullable Input<JobSparksqlConfigGetArgs> sparksqlConfig;
-        private @Nullable Input<List<JobStatusGetArgs>> statuses;
+        private @Nullable Output<String> driverControlsFilesUri;
+        private @Nullable Output<String> driverOutputResourceUri;
+        private @Nullable Output<Boolean> forceDelete;
+        private @Nullable Output<JobHadoopConfigGetArgs> hadoopConfig;
+        private @Nullable Output<JobHiveConfigGetArgs> hiveConfig;
+        private @Nullable Output<Map<String,String>> labels;
+        private @Nullable Output<JobPigConfigGetArgs> pigConfig;
+        private @Nullable Output<JobPlacementGetArgs> placement;
+        private @Nullable Output<String> project;
+        private @Nullable Output<JobPysparkConfigGetArgs> pysparkConfig;
+        private @Nullable Output<JobReferenceGetArgs> reference;
+        private @Nullable Output<String> region;
+        private @Nullable Output<JobSchedulingGetArgs> scheduling;
+        private @Nullable Output<JobSparkConfigGetArgs> sparkConfig;
+        private @Nullable Output<JobSparksqlConfigGetArgs> sparksqlConfig;
+        private @Nullable Output<List<JobStatusGetArgs>> statuses;
 
         public Builder() {
     	      // Empty
@@ -311,163 +311,163 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
     	      this.statuses = defaults.statuses;
         }
 
-        public Builder driverControlsFilesUri(@Nullable Input<String> driverControlsFilesUri) {
+        public Builder driverControlsFilesUri(@Nullable Output<String> driverControlsFilesUri) {
             this.driverControlsFilesUri = driverControlsFilesUri;
             return this;
         }
 
         public Builder driverControlsFilesUri(@Nullable String driverControlsFilesUri) {
-            this.driverControlsFilesUri = Input.ofNullable(driverControlsFilesUri);
+            this.driverControlsFilesUri = Output.ofNullable(driverControlsFilesUri);
             return this;
         }
 
-        public Builder driverOutputResourceUri(@Nullable Input<String> driverOutputResourceUri) {
+        public Builder driverOutputResourceUri(@Nullable Output<String> driverOutputResourceUri) {
             this.driverOutputResourceUri = driverOutputResourceUri;
             return this;
         }
 
         public Builder driverOutputResourceUri(@Nullable String driverOutputResourceUri) {
-            this.driverOutputResourceUri = Input.ofNullable(driverOutputResourceUri);
+            this.driverOutputResourceUri = Output.ofNullable(driverOutputResourceUri);
             return this;
         }
 
-        public Builder forceDelete(@Nullable Input<Boolean> forceDelete) {
+        public Builder forceDelete(@Nullable Output<Boolean> forceDelete) {
             this.forceDelete = forceDelete;
             return this;
         }
 
         public Builder forceDelete(@Nullable Boolean forceDelete) {
-            this.forceDelete = Input.ofNullable(forceDelete);
+            this.forceDelete = Output.ofNullable(forceDelete);
             return this;
         }
 
-        public Builder hadoopConfig(@Nullable Input<JobHadoopConfigGetArgs> hadoopConfig) {
+        public Builder hadoopConfig(@Nullable Output<JobHadoopConfigGetArgs> hadoopConfig) {
             this.hadoopConfig = hadoopConfig;
             return this;
         }
 
         public Builder hadoopConfig(@Nullable JobHadoopConfigGetArgs hadoopConfig) {
-            this.hadoopConfig = Input.ofNullable(hadoopConfig);
+            this.hadoopConfig = Output.ofNullable(hadoopConfig);
             return this;
         }
 
-        public Builder hiveConfig(@Nullable Input<JobHiveConfigGetArgs> hiveConfig) {
+        public Builder hiveConfig(@Nullable Output<JobHiveConfigGetArgs> hiveConfig) {
             this.hiveConfig = hiveConfig;
             return this;
         }
 
         public Builder hiveConfig(@Nullable JobHiveConfigGetArgs hiveConfig) {
-            this.hiveConfig = Input.ofNullable(hiveConfig);
+            this.hiveConfig = Output.ofNullable(hiveConfig);
             return this;
         }
 
-        public Builder labels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
         public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Input.ofNullable(labels);
+            this.labels = Output.ofNullable(labels);
             return this;
         }
 
-        public Builder pigConfig(@Nullable Input<JobPigConfigGetArgs> pigConfig) {
+        public Builder pigConfig(@Nullable Output<JobPigConfigGetArgs> pigConfig) {
             this.pigConfig = pigConfig;
             return this;
         }
 
         public Builder pigConfig(@Nullable JobPigConfigGetArgs pigConfig) {
-            this.pigConfig = Input.ofNullable(pigConfig);
+            this.pigConfig = Output.ofNullable(pigConfig);
             return this;
         }
 
-        public Builder placement(@Nullable Input<JobPlacementGetArgs> placement) {
+        public Builder placement(@Nullable Output<JobPlacementGetArgs> placement) {
             this.placement = placement;
             return this;
         }
 
         public Builder placement(@Nullable JobPlacementGetArgs placement) {
-            this.placement = Input.ofNullable(placement);
+            this.placement = Output.ofNullable(placement);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder pysparkConfig(@Nullable Input<JobPysparkConfigGetArgs> pysparkConfig) {
+        public Builder pysparkConfig(@Nullable Output<JobPysparkConfigGetArgs> pysparkConfig) {
             this.pysparkConfig = pysparkConfig;
             return this;
         }
 
         public Builder pysparkConfig(@Nullable JobPysparkConfigGetArgs pysparkConfig) {
-            this.pysparkConfig = Input.ofNullable(pysparkConfig);
+            this.pysparkConfig = Output.ofNullable(pysparkConfig);
             return this;
         }
 
-        public Builder reference(@Nullable Input<JobReferenceGetArgs> reference) {
+        public Builder reference(@Nullable Output<JobReferenceGetArgs> reference) {
             this.reference = reference;
             return this;
         }
 
         public Builder reference(@Nullable JobReferenceGetArgs reference) {
-            this.reference = Input.ofNullable(reference);
+            this.reference = Output.ofNullable(reference);
             return this;
         }
 
-        public Builder region(@Nullable Input<String> region) {
+        public Builder region(@Nullable Output<String> region) {
             this.region = region;
             return this;
         }
 
         public Builder region(@Nullable String region) {
-            this.region = Input.ofNullable(region);
+            this.region = Output.ofNullable(region);
             return this;
         }
 
-        public Builder scheduling(@Nullable Input<JobSchedulingGetArgs> scheduling) {
+        public Builder scheduling(@Nullable Output<JobSchedulingGetArgs> scheduling) {
             this.scheduling = scheduling;
             return this;
         }
 
         public Builder scheduling(@Nullable JobSchedulingGetArgs scheduling) {
-            this.scheduling = Input.ofNullable(scheduling);
+            this.scheduling = Output.ofNullable(scheduling);
             return this;
         }
 
-        public Builder sparkConfig(@Nullable Input<JobSparkConfigGetArgs> sparkConfig) {
+        public Builder sparkConfig(@Nullable Output<JobSparkConfigGetArgs> sparkConfig) {
             this.sparkConfig = sparkConfig;
             return this;
         }
 
         public Builder sparkConfig(@Nullable JobSparkConfigGetArgs sparkConfig) {
-            this.sparkConfig = Input.ofNullable(sparkConfig);
+            this.sparkConfig = Output.ofNullable(sparkConfig);
             return this;
         }
 
-        public Builder sparksqlConfig(@Nullable Input<JobSparksqlConfigGetArgs> sparksqlConfig) {
+        public Builder sparksqlConfig(@Nullable Output<JobSparksqlConfigGetArgs> sparksqlConfig) {
             this.sparksqlConfig = sparksqlConfig;
             return this;
         }
 
         public Builder sparksqlConfig(@Nullable JobSparksqlConfigGetArgs sparksqlConfig) {
-            this.sparksqlConfig = Input.ofNullable(sparksqlConfig);
+            this.sparksqlConfig = Output.ofNullable(sparksqlConfig);
             return this;
         }
 
-        public Builder statuses(@Nullable Input<List<JobStatusGetArgs>> statuses) {
+        public Builder statuses(@Nullable Output<List<JobStatusGetArgs>> statuses) {
             this.statuses = statuses;
             return this;
         }
 
         public Builder statuses(@Nullable List<JobStatusGetArgs> statuses) {
-            this.statuses = Input.ofNullable(statuses);
+            this.statuses = Output.ofNullable(statuses);
             return this;
         }
         public JobState build() {

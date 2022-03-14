@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.kendra.inputs;
 
 import io.pulumi.awsnative.kendra.inputs.DataSourceToIndexFieldMappingArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -17,62 +17,62 @@ public final class DataSourceGoogleDriveConfigurationArgs extends io.pulumi.reso
     public static final DataSourceGoogleDriveConfigurationArgs Empty = new DataSourceGoogleDriveConfigurationArgs();
 
     @InputImport(name="excludeMimeTypes")
-      private final @Nullable Input<List<String>> excludeMimeTypes;
+      private final @Nullable Output<List<String>> excludeMimeTypes;
 
-    public Input<List<String>> getExcludeMimeTypes() {
-        return this.excludeMimeTypes == null ? Input.empty() : this.excludeMimeTypes;
+    public Output<List<String>> getExcludeMimeTypes() {
+        return this.excludeMimeTypes == null ? Output.empty() : this.excludeMimeTypes;
     }
 
     @InputImport(name="excludeSharedDrives")
-      private final @Nullable Input<List<String>> excludeSharedDrives;
+      private final @Nullable Output<List<String>> excludeSharedDrives;
 
-    public Input<List<String>> getExcludeSharedDrives() {
-        return this.excludeSharedDrives == null ? Input.empty() : this.excludeSharedDrives;
+    public Output<List<String>> getExcludeSharedDrives() {
+        return this.excludeSharedDrives == null ? Output.empty() : this.excludeSharedDrives;
     }
 
     @InputImport(name="excludeUserAccounts")
-      private final @Nullable Input<List<String>> excludeUserAccounts;
+      private final @Nullable Output<List<String>> excludeUserAccounts;
 
-    public Input<List<String>> getExcludeUserAccounts() {
-        return this.excludeUserAccounts == null ? Input.empty() : this.excludeUserAccounts;
+    public Output<List<String>> getExcludeUserAccounts() {
+        return this.excludeUserAccounts == null ? Output.empty() : this.excludeUserAccounts;
     }
 
     @InputImport(name="exclusionPatterns")
-      private final @Nullable Input<List<String>> exclusionPatterns;
+      private final @Nullable Output<List<String>> exclusionPatterns;
 
-    public Input<List<String>> getExclusionPatterns() {
-        return this.exclusionPatterns == null ? Input.empty() : this.exclusionPatterns;
+    public Output<List<String>> getExclusionPatterns() {
+        return this.exclusionPatterns == null ? Output.empty() : this.exclusionPatterns;
     }
 
     @InputImport(name="fieldMappings")
-      private final @Nullable Input<List<DataSourceToIndexFieldMappingArgs>> fieldMappings;
+      private final @Nullable Output<List<DataSourceToIndexFieldMappingArgs>> fieldMappings;
 
-    public Input<List<DataSourceToIndexFieldMappingArgs>> getFieldMappings() {
-        return this.fieldMappings == null ? Input.empty() : this.fieldMappings;
+    public Output<List<DataSourceToIndexFieldMappingArgs>> getFieldMappings() {
+        return this.fieldMappings == null ? Output.empty() : this.fieldMappings;
     }
 
     @InputImport(name="inclusionPatterns")
-      private final @Nullable Input<List<String>> inclusionPatterns;
+      private final @Nullable Output<List<String>> inclusionPatterns;
 
-    public Input<List<String>> getInclusionPatterns() {
-        return this.inclusionPatterns == null ? Input.empty() : this.inclusionPatterns;
+    public Output<List<String>> getInclusionPatterns() {
+        return this.inclusionPatterns == null ? Output.empty() : this.inclusionPatterns;
     }
 
     @InputImport(name="secretArn", required=true)
-      private final Input<String> secretArn;
+      private final Output<String> secretArn;
 
-    public Input<String> getSecretArn() {
+    public Output<String> getSecretArn() {
         return this.secretArn;
     }
 
     public DataSourceGoogleDriveConfigurationArgs(
-        @Nullable Input<List<String>> excludeMimeTypes,
-        @Nullable Input<List<String>> excludeSharedDrives,
-        @Nullable Input<List<String>> excludeUserAccounts,
-        @Nullable Input<List<String>> exclusionPatterns,
-        @Nullable Input<List<DataSourceToIndexFieldMappingArgs>> fieldMappings,
-        @Nullable Input<List<String>> inclusionPatterns,
-        Input<String> secretArn) {
+        @Nullable Output<List<String>> excludeMimeTypes,
+        @Nullable Output<List<String>> excludeSharedDrives,
+        @Nullable Output<List<String>> excludeUserAccounts,
+        @Nullable Output<List<String>> exclusionPatterns,
+        @Nullable Output<List<DataSourceToIndexFieldMappingArgs>> fieldMappings,
+        @Nullable Output<List<String>> inclusionPatterns,
+        Output<String> secretArn) {
         this.excludeMimeTypes = excludeMimeTypes;
         this.excludeSharedDrives = excludeSharedDrives;
         this.excludeUserAccounts = excludeUserAccounts;
@@ -83,13 +83,13 @@ public final class DataSourceGoogleDriveConfigurationArgs extends io.pulumi.reso
     }
 
     private DataSourceGoogleDriveConfigurationArgs() {
-        this.excludeMimeTypes = Input.empty();
-        this.excludeSharedDrives = Input.empty();
-        this.excludeUserAccounts = Input.empty();
-        this.exclusionPatterns = Input.empty();
-        this.fieldMappings = Input.empty();
-        this.inclusionPatterns = Input.empty();
-        this.secretArn = Input.empty();
+        this.excludeMimeTypes = Output.empty();
+        this.excludeSharedDrives = Output.empty();
+        this.excludeUserAccounts = Output.empty();
+        this.exclusionPatterns = Output.empty();
+        this.fieldMappings = Output.empty();
+        this.inclusionPatterns = Output.empty();
+        this.secretArn = Output.empty();
     }
 
     public static Builder builder() {
@@ -101,13 +101,13 @@ public final class DataSourceGoogleDriveConfigurationArgs extends io.pulumi.reso
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> excludeMimeTypes;
-        private @Nullable Input<List<String>> excludeSharedDrives;
-        private @Nullable Input<List<String>> excludeUserAccounts;
-        private @Nullable Input<List<String>> exclusionPatterns;
-        private @Nullable Input<List<DataSourceToIndexFieldMappingArgs>> fieldMappings;
-        private @Nullable Input<List<String>> inclusionPatterns;
-        private Input<String> secretArn;
+        private @Nullable Output<List<String>> excludeMimeTypes;
+        private @Nullable Output<List<String>> excludeSharedDrives;
+        private @Nullable Output<List<String>> excludeUserAccounts;
+        private @Nullable Output<List<String>> exclusionPatterns;
+        private @Nullable Output<List<DataSourceToIndexFieldMappingArgs>> fieldMappings;
+        private @Nullable Output<List<String>> inclusionPatterns;
+        private Output<String> secretArn;
 
         public Builder() {
     	      // Empty
@@ -124,73 +124,73 @@ public final class DataSourceGoogleDriveConfigurationArgs extends io.pulumi.reso
     	      this.secretArn = defaults.secretArn;
         }
 
-        public Builder excludeMimeTypes(@Nullable Input<List<String>> excludeMimeTypes) {
+        public Builder excludeMimeTypes(@Nullable Output<List<String>> excludeMimeTypes) {
             this.excludeMimeTypes = excludeMimeTypes;
             return this;
         }
 
         public Builder excludeMimeTypes(@Nullable List<String> excludeMimeTypes) {
-            this.excludeMimeTypes = Input.ofNullable(excludeMimeTypes);
+            this.excludeMimeTypes = Output.ofNullable(excludeMimeTypes);
             return this;
         }
 
-        public Builder excludeSharedDrives(@Nullable Input<List<String>> excludeSharedDrives) {
+        public Builder excludeSharedDrives(@Nullable Output<List<String>> excludeSharedDrives) {
             this.excludeSharedDrives = excludeSharedDrives;
             return this;
         }
 
         public Builder excludeSharedDrives(@Nullable List<String> excludeSharedDrives) {
-            this.excludeSharedDrives = Input.ofNullable(excludeSharedDrives);
+            this.excludeSharedDrives = Output.ofNullable(excludeSharedDrives);
             return this;
         }
 
-        public Builder excludeUserAccounts(@Nullable Input<List<String>> excludeUserAccounts) {
+        public Builder excludeUserAccounts(@Nullable Output<List<String>> excludeUserAccounts) {
             this.excludeUserAccounts = excludeUserAccounts;
             return this;
         }
 
         public Builder excludeUserAccounts(@Nullable List<String> excludeUserAccounts) {
-            this.excludeUserAccounts = Input.ofNullable(excludeUserAccounts);
+            this.excludeUserAccounts = Output.ofNullable(excludeUserAccounts);
             return this;
         }
 
-        public Builder exclusionPatterns(@Nullable Input<List<String>> exclusionPatterns) {
+        public Builder exclusionPatterns(@Nullable Output<List<String>> exclusionPatterns) {
             this.exclusionPatterns = exclusionPatterns;
             return this;
         }
 
         public Builder exclusionPatterns(@Nullable List<String> exclusionPatterns) {
-            this.exclusionPatterns = Input.ofNullable(exclusionPatterns);
+            this.exclusionPatterns = Output.ofNullable(exclusionPatterns);
             return this;
         }
 
-        public Builder fieldMappings(@Nullable Input<List<DataSourceToIndexFieldMappingArgs>> fieldMappings) {
+        public Builder fieldMappings(@Nullable Output<List<DataSourceToIndexFieldMappingArgs>> fieldMappings) {
             this.fieldMappings = fieldMappings;
             return this;
         }
 
         public Builder fieldMappings(@Nullable List<DataSourceToIndexFieldMappingArgs> fieldMappings) {
-            this.fieldMappings = Input.ofNullable(fieldMappings);
+            this.fieldMappings = Output.ofNullable(fieldMappings);
             return this;
         }
 
-        public Builder inclusionPatterns(@Nullable Input<List<String>> inclusionPatterns) {
+        public Builder inclusionPatterns(@Nullable Output<List<String>> inclusionPatterns) {
             this.inclusionPatterns = inclusionPatterns;
             return this;
         }
 
         public Builder inclusionPatterns(@Nullable List<String> inclusionPatterns) {
-            this.inclusionPatterns = Input.ofNullable(inclusionPatterns);
+            this.inclusionPatterns = Output.ofNullable(inclusionPatterns);
             return this;
         }
 
-        public Builder secretArn(Input<String> secretArn) {
+        public Builder secretArn(Output<String> secretArn) {
             this.secretArn = Objects.requireNonNull(secretArn);
             return this;
         }
 
         public Builder secretArn(String secretArn) {
-            this.secretArn = Input.of(Objects.requireNonNull(secretArn));
+            this.secretArn = Output.of(Objects.requireNonNull(secretArn));
             return this;
         }
         public DataSourceGoogleDriveConfigurationArgs build() {

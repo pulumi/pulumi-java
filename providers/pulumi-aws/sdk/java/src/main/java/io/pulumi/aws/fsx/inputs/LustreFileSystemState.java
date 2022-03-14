@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.fsx.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -23,10 +23,10 @@ public final class LustreFileSystemState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="arn")
-      private final @Nullable Input<String> arn;
+      private final @Nullable Output<String> arn;
 
-    public Input<String> getArn() {
-        return this.arn == null ? Input.empty() : this.arn;
+    public Output<String> getArn() {
+        return this.arn == null ? Output.empty() : this.arn;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class LustreFileSystemState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="autoImportPolicy")
-      private final @Nullable Input<String> autoImportPolicy;
+      private final @Nullable Output<String> autoImportPolicy;
 
-    public Input<String> getAutoImportPolicy() {
-        return this.autoImportPolicy == null ? Input.empty() : this.autoImportPolicy;
+    public Output<String> getAutoImportPolicy() {
+        return this.autoImportPolicy == null ? Output.empty() : this.autoImportPolicy;
     }
 
     /**
@@ -45,10 +45,10 @@ public final class LustreFileSystemState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="automaticBackupRetentionDays")
-      private final @Nullable Input<Integer> automaticBackupRetentionDays;
+      private final @Nullable Output<Integer> automaticBackupRetentionDays;
 
-    public Input<Integer> getAutomaticBackupRetentionDays() {
-        return this.automaticBackupRetentionDays == null ? Input.empty() : this.automaticBackupRetentionDays;
+    public Output<Integer> getAutomaticBackupRetentionDays() {
+        return this.automaticBackupRetentionDays == null ? Output.empty() : this.automaticBackupRetentionDays;
     }
 
     /**
@@ -56,10 +56,10 @@ public final class LustreFileSystemState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="backupId")
-      private final @Nullable Input<String> backupId;
+      private final @Nullable Output<String> backupId;
 
-    public Input<String> getBackupId() {
-        return this.backupId == null ? Input.empty() : this.backupId;
+    public Output<String> getBackupId() {
+        return this.backupId == null ? Output.empty() : this.backupId;
     }
 
     /**
@@ -67,10 +67,10 @@ public final class LustreFileSystemState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="copyTagsToBackups")
-      private final @Nullable Input<Boolean> copyTagsToBackups;
+      private final @Nullable Output<Boolean> copyTagsToBackups;
 
-    public Input<Boolean> getCopyTagsToBackups() {
-        return this.copyTagsToBackups == null ? Input.empty() : this.copyTagsToBackups;
+    public Output<Boolean> getCopyTagsToBackups() {
+        return this.copyTagsToBackups == null ? Output.empty() : this.copyTagsToBackups;
     }
 
     /**
@@ -78,10 +78,10 @@ public final class LustreFileSystemState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="dailyAutomaticBackupStartTime")
-      private final @Nullable Input<String> dailyAutomaticBackupStartTime;
+      private final @Nullable Output<String> dailyAutomaticBackupStartTime;
 
-    public Input<String> getDailyAutomaticBackupStartTime() {
-        return this.dailyAutomaticBackupStartTime == null ? Input.empty() : this.dailyAutomaticBackupStartTime;
+    public Output<String> getDailyAutomaticBackupStartTime() {
+        return this.dailyAutomaticBackupStartTime == null ? Output.empty() : this.dailyAutomaticBackupStartTime;
     }
 
     /**
@@ -89,10 +89,10 @@ public final class LustreFileSystemState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="dataCompressionType")
-      private final @Nullable Input<String> dataCompressionType;
+      private final @Nullable Output<String> dataCompressionType;
 
-    public Input<String> getDataCompressionType() {
-        return this.dataCompressionType == null ? Input.empty() : this.dataCompressionType;
+    public Output<String> getDataCompressionType() {
+        return this.dataCompressionType == null ? Output.empty() : this.dataCompressionType;
     }
 
     /**
@@ -100,10 +100,10 @@ public final class LustreFileSystemState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="deploymentType")
-      private final @Nullable Input<String> deploymentType;
+      private final @Nullable Output<String> deploymentType;
 
-    public Input<String> getDeploymentType() {
-        return this.deploymentType == null ? Input.empty() : this.deploymentType;
+    public Output<String> getDeploymentType() {
+        return this.deploymentType == null ? Output.empty() : this.deploymentType;
     }
 
     /**
@@ -111,10 +111,10 @@ public final class LustreFileSystemState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="dnsName")
-      private final @Nullable Input<String> dnsName;
+      private final @Nullable Output<String> dnsName;
 
-    public Input<String> getDnsName() {
-        return this.dnsName == null ? Input.empty() : this.dnsName;
+    public Output<String> getDnsName() {
+        return this.dnsName == null ? Output.empty() : this.dnsName;
     }
 
     /**
@@ -122,10 +122,10 @@ public final class LustreFileSystemState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="driveCacheType")
-      private final @Nullable Input<String> driveCacheType;
+      private final @Nullable Output<String> driveCacheType;
 
-    public Input<String> getDriveCacheType() {
-        return this.driveCacheType == null ? Input.empty() : this.driveCacheType;
+    public Output<String> getDriveCacheType() {
+        return this.driveCacheType == null ? Output.empty() : this.driveCacheType;
     }
 
     /**
@@ -133,10 +133,10 @@ public final class LustreFileSystemState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="exportPath")
-      private final @Nullable Input<String> exportPath;
+      private final @Nullable Output<String> exportPath;
 
-    public Input<String> getExportPath() {
-        return this.exportPath == null ? Input.empty() : this.exportPath;
+    public Output<String> getExportPath() {
+        return this.exportPath == null ? Output.empty() : this.exportPath;
     }
 
     /**
@@ -144,10 +144,10 @@ public final class LustreFileSystemState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="fileSystemTypeVersion")
-      private final @Nullable Input<String> fileSystemTypeVersion;
+      private final @Nullable Output<String> fileSystemTypeVersion;
 
-    public Input<String> getFileSystemTypeVersion() {
-        return this.fileSystemTypeVersion == null ? Input.empty() : this.fileSystemTypeVersion;
+    public Output<String> getFileSystemTypeVersion() {
+        return this.fileSystemTypeVersion == null ? Output.empty() : this.fileSystemTypeVersion;
     }
 
     /**
@@ -155,10 +155,10 @@ public final class LustreFileSystemState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="importPath")
-      private final @Nullable Input<String> importPath;
+      private final @Nullable Output<String> importPath;
 
-    public Input<String> getImportPath() {
-        return this.importPath == null ? Input.empty() : this.importPath;
+    public Output<String> getImportPath() {
+        return this.importPath == null ? Output.empty() : this.importPath;
     }
 
     /**
@@ -166,10 +166,10 @@ public final class LustreFileSystemState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="importedFileChunkSize")
-      private final @Nullable Input<Integer> importedFileChunkSize;
+      private final @Nullable Output<Integer> importedFileChunkSize;
 
-    public Input<Integer> getImportedFileChunkSize() {
-        return this.importedFileChunkSize == null ? Input.empty() : this.importedFileChunkSize;
+    public Output<Integer> getImportedFileChunkSize() {
+        return this.importedFileChunkSize == null ? Output.empty() : this.importedFileChunkSize;
     }
 
     /**
@@ -177,10 +177,10 @@ public final class LustreFileSystemState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="kmsKeyId")
-      private final @Nullable Input<String> kmsKeyId;
+      private final @Nullable Output<String> kmsKeyId;
 
-    public Input<String> getKmsKeyId() {
-        return this.kmsKeyId == null ? Input.empty() : this.kmsKeyId;
+    public Output<String> getKmsKeyId() {
+        return this.kmsKeyId == null ? Output.empty() : this.kmsKeyId;
     }
 
     /**
@@ -188,10 +188,10 @@ public final class LustreFileSystemState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="mountName")
-      private final @Nullable Input<String> mountName;
+      private final @Nullable Output<String> mountName;
 
-    public Input<String> getMountName() {
-        return this.mountName == null ? Input.empty() : this.mountName;
+    public Output<String> getMountName() {
+        return this.mountName == null ? Output.empty() : this.mountName;
     }
 
     /**
@@ -199,10 +199,10 @@ public final class LustreFileSystemState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="networkInterfaceIds")
-      private final @Nullable Input<List<String>> networkInterfaceIds;
+      private final @Nullable Output<List<String>> networkInterfaceIds;
 
-    public Input<List<String>> getNetworkInterfaceIds() {
-        return this.networkInterfaceIds == null ? Input.empty() : this.networkInterfaceIds;
+    public Output<List<String>> getNetworkInterfaceIds() {
+        return this.networkInterfaceIds == null ? Output.empty() : this.networkInterfaceIds;
     }
 
     /**
@@ -210,10 +210,10 @@ public final class LustreFileSystemState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="ownerId")
-      private final @Nullable Input<String> ownerId;
+      private final @Nullable Output<String> ownerId;
 
-    public Input<String> getOwnerId() {
-        return this.ownerId == null ? Input.empty() : this.ownerId;
+    public Output<String> getOwnerId() {
+        return this.ownerId == null ? Output.empty() : this.ownerId;
     }
 
     /**
@@ -221,10 +221,10 @@ public final class LustreFileSystemState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="perUnitStorageThroughput")
-      private final @Nullable Input<Integer> perUnitStorageThroughput;
+      private final @Nullable Output<Integer> perUnitStorageThroughput;
 
-    public Input<Integer> getPerUnitStorageThroughput() {
-        return this.perUnitStorageThroughput == null ? Input.empty() : this.perUnitStorageThroughput;
+    public Output<Integer> getPerUnitStorageThroughput() {
+        return this.perUnitStorageThroughput == null ? Output.empty() : this.perUnitStorageThroughput;
     }
 
     /**
@@ -232,10 +232,10 @@ public final class LustreFileSystemState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="securityGroupIds")
-      private final @Nullable Input<List<String>> securityGroupIds;
+      private final @Nullable Output<List<String>> securityGroupIds;
 
-    public Input<List<String>> getSecurityGroupIds() {
-        return this.securityGroupIds == null ? Input.empty() : this.securityGroupIds;
+    public Output<List<String>> getSecurityGroupIds() {
+        return this.securityGroupIds == null ? Output.empty() : this.securityGroupIds;
     }
 
     /**
@@ -243,10 +243,10 @@ public final class LustreFileSystemState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="storageCapacity")
-      private final @Nullable Input<Integer> storageCapacity;
+      private final @Nullable Output<Integer> storageCapacity;
 
-    public Input<Integer> getStorageCapacity() {
-        return this.storageCapacity == null ? Input.empty() : this.storageCapacity;
+    public Output<Integer> getStorageCapacity() {
+        return this.storageCapacity == null ? Output.empty() : this.storageCapacity;
     }
 
     /**
@@ -254,10 +254,10 @@ public final class LustreFileSystemState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="storageType")
-      private final @Nullable Input<String> storageType;
+      private final @Nullable Output<String> storageType;
 
-    public Input<String> getStorageType() {
-        return this.storageType == null ? Input.empty() : this.storageType;
+    public Output<String> getStorageType() {
+        return this.storageType == null ? Output.empty() : this.storageType;
     }
 
     /**
@@ -265,10 +265,10 @@ public final class LustreFileSystemState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="subnetIds")
-      private final @Nullable Input<String> subnetIds;
+      private final @Nullable Output<String> subnetIds;
 
-    public Input<String> getSubnetIds() {
-        return this.subnetIds == null ? Input.empty() : this.subnetIds;
+    public Output<String> getSubnetIds() {
+        return this.subnetIds == null ? Output.empty() : this.subnetIds;
     }
 
     /**
@@ -276,10 +276,10 @@ public final class LustreFileSystemState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -287,10 +287,10 @@ public final class LustreFileSystemState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="tagsAll")
-      private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Input<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Input.empty() : this.tagsAll;
+    public Output<Map<String,String>> getTagsAll() {
+        return this.tagsAll == null ? Output.empty() : this.tagsAll;
     }
 
     /**
@@ -298,10 +298,10 @@ public final class LustreFileSystemState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="vpcId")
-      private final @Nullable Input<String> vpcId;
+      private final @Nullable Output<String> vpcId;
 
-    public Input<String> getVpcId() {
-        return this.vpcId == null ? Input.empty() : this.vpcId;
+    public Output<String> getVpcId() {
+        return this.vpcId == null ? Output.empty() : this.vpcId;
     }
 
     /**
@@ -309,40 +309,40 @@ public final class LustreFileSystemState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="weeklyMaintenanceStartTime")
-      private final @Nullable Input<String> weeklyMaintenanceStartTime;
+      private final @Nullable Output<String> weeklyMaintenanceStartTime;
 
-    public Input<String> getWeeklyMaintenanceStartTime() {
-        return this.weeklyMaintenanceStartTime == null ? Input.empty() : this.weeklyMaintenanceStartTime;
+    public Output<String> getWeeklyMaintenanceStartTime() {
+        return this.weeklyMaintenanceStartTime == null ? Output.empty() : this.weeklyMaintenanceStartTime;
     }
 
     public LustreFileSystemState(
-        @Nullable Input<String> arn,
-        @Nullable Input<String> autoImportPolicy,
-        @Nullable Input<Integer> automaticBackupRetentionDays,
-        @Nullable Input<String> backupId,
-        @Nullable Input<Boolean> copyTagsToBackups,
-        @Nullable Input<String> dailyAutomaticBackupStartTime,
-        @Nullable Input<String> dataCompressionType,
-        @Nullable Input<String> deploymentType,
-        @Nullable Input<String> dnsName,
-        @Nullable Input<String> driveCacheType,
-        @Nullable Input<String> exportPath,
-        @Nullable Input<String> fileSystemTypeVersion,
-        @Nullable Input<String> importPath,
-        @Nullable Input<Integer> importedFileChunkSize,
-        @Nullable Input<String> kmsKeyId,
-        @Nullable Input<String> mountName,
-        @Nullable Input<List<String>> networkInterfaceIds,
-        @Nullable Input<String> ownerId,
-        @Nullable Input<Integer> perUnitStorageThroughput,
-        @Nullable Input<List<String>> securityGroupIds,
-        @Nullable Input<Integer> storageCapacity,
-        @Nullable Input<String> storageType,
-        @Nullable Input<String> subnetIds,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<Map<String,String>> tagsAll,
-        @Nullable Input<String> vpcId,
-        @Nullable Input<String> weeklyMaintenanceStartTime) {
+        @Nullable Output<String> arn,
+        @Nullable Output<String> autoImportPolicy,
+        @Nullable Output<Integer> automaticBackupRetentionDays,
+        @Nullable Output<String> backupId,
+        @Nullable Output<Boolean> copyTagsToBackups,
+        @Nullable Output<String> dailyAutomaticBackupStartTime,
+        @Nullable Output<String> dataCompressionType,
+        @Nullable Output<String> deploymentType,
+        @Nullable Output<String> dnsName,
+        @Nullable Output<String> driveCacheType,
+        @Nullable Output<String> exportPath,
+        @Nullable Output<String> fileSystemTypeVersion,
+        @Nullable Output<String> importPath,
+        @Nullable Output<Integer> importedFileChunkSize,
+        @Nullable Output<String> kmsKeyId,
+        @Nullable Output<String> mountName,
+        @Nullable Output<List<String>> networkInterfaceIds,
+        @Nullable Output<String> ownerId,
+        @Nullable Output<Integer> perUnitStorageThroughput,
+        @Nullable Output<List<String>> securityGroupIds,
+        @Nullable Output<Integer> storageCapacity,
+        @Nullable Output<String> storageType,
+        @Nullable Output<String> subnetIds,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<Map<String,String>> tagsAll,
+        @Nullable Output<String> vpcId,
+        @Nullable Output<String> weeklyMaintenanceStartTime) {
         this.arn = arn;
         this.autoImportPolicy = autoImportPolicy;
         this.automaticBackupRetentionDays = automaticBackupRetentionDays;
@@ -373,33 +373,33 @@ public final class LustreFileSystemState extends io.pulumi.resources.ResourceArg
     }
 
     private LustreFileSystemState() {
-        this.arn = Input.empty();
-        this.autoImportPolicy = Input.empty();
-        this.automaticBackupRetentionDays = Input.empty();
-        this.backupId = Input.empty();
-        this.copyTagsToBackups = Input.empty();
-        this.dailyAutomaticBackupStartTime = Input.empty();
-        this.dataCompressionType = Input.empty();
-        this.deploymentType = Input.empty();
-        this.dnsName = Input.empty();
-        this.driveCacheType = Input.empty();
-        this.exportPath = Input.empty();
-        this.fileSystemTypeVersion = Input.empty();
-        this.importPath = Input.empty();
-        this.importedFileChunkSize = Input.empty();
-        this.kmsKeyId = Input.empty();
-        this.mountName = Input.empty();
-        this.networkInterfaceIds = Input.empty();
-        this.ownerId = Input.empty();
-        this.perUnitStorageThroughput = Input.empty();
-        this.securityGroupIds = Input.empty();
-        this.storageCapacity = Input.empty();
-        this.storageType = Input.empty();
-        this.subnetIds = Input.empty();
-        this.tags = Input.empty();
-        this.tagsAll = Input.empty();
-        this.vpcId = Input.empty();
-        this.weeklyMaintenanceStartTime = Input.empty();
+        this.arn = Output.empty();
+        this.autoImportPolicy = Output.empty();
+        this.automaticBackupRetentionDays = Output.empty();
+        this.backupId = Output.empty();
+        this.copyTagsToBackups = Output.empty();
+        this.dailyAutomaticBackupStartTime = Output.empty();
+        this.dataCompressionType = Output.empty();
+        this.deploymentType = Output.empty();
+        this.dnsName = Output.empty();
+        this.driveCacheType = Output.empty();
+        this.exportPath = Output.empty();
+        this.fileSystemTypeVersion = Output.empty();
+        this.importPath = Output.empty();
+        this.importedFileChunkSize = Output.empty();
+        this.kmsKeyId = Output.empty();
+        this.mountName = Output.empty();
+        this.networkInterfaceIds = Output.empty();
+        this.ownerId = Output.empty();
+        this.perUnitStorageThroughput = Output.empty();
+        this.securityGroupIds = Output.empty();
+        this.storageCapacity = Output.empty();
+        this.storageType = Output.empty();
+        this.subnetIds = Output.empty();
+        this.tags = Output.empty();
+        this.tagsAll = Output.empty();
+        this.vpcId = Output.empty();
+        this.weeklyMaintenanceStartTime = Output.empty();
     }
 
     public static Builder builder() {
@@ -411,33 +411,33 @@ public final class LustreFileSystemState extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private @Nullable Input<String> arn;
-        private @Nullable Input<String> autoImportPolicy;
-        private @Nullable Input<Integer> automaticBackupRetentionDays;
-        private @Nullable Input<String> backupId;
-        private @Nullable Input<Boolean> copyTagsToBackups;
-        private @Nullable Input<String> dailyAutomaticBackupStartTime;
-        private @Nullable Input<String> dataCompressionType;
-        private @Nullable Input<String> deploymentType;
-        private @Nullable Input<String> dnsName;
-        private @Nullable Input<String> driveCacheType;
-        private @Nullable Input<String> exportPath;
-        private @Nullable Input<String> fileSystemTypeVersion;
-        private @Nullable Input<String> importPath;
-        private @Nullable Input<Integer> importedFileChunkSize;
-        private @Nullable Input<String> kmsKeyId;
-        private @Nullable Input<String> mountName;
-        private @Nullable Input<List<String>> networkInterfaceIds;
-        private @Nullable Input<String> ownerId;
-        private @Nullable Input<Integer> perUnitStorageThroughput;
-        private @Nullable Input<List<String>> securityGroupIds;
-        private @Nullable Input<Integer> storageCapacity;
-        private @Nullable Input<String> storageType;
-        private @Nullable Input<String> subnetIds;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<Map<String,String>> tagsAll;
-        private @Nullable Input<String> vpcId;
-        private @Nullable Input<String> weeklyMaintenanceStartTime;
+        private @Nullable Output<String> arn;
+        private @Nullable Output<String> autoImportPolicy;
+        private @Nullable Output<Integer> automaticBackupRetentionDays;
+        private @Nullable Output<String> backupId;
+        private @Nullable Output<Boolean> copyTagsToBackups;
+        private @Nullable Output<String> dailyAutomaticBackupStartTime;
+        private @Nullable Output<String> dataCompressionType;
+        private @Nullable Output<String> deploymentType;
+        private @Nullable Output<String> dnsName;
+        private @Nullable Output<String> driveCacheType;
+        private @Nullable Output<String> exportPath;
+        private @Nullable Output<String> fileSystemTypeVersion;
+        private @Nullable Output<String> importPath;
+        private @Nullable Output<Integer> importedFileChunkSize;
+        private @Nullable Output<String> kmsKeyId;
+        private @Nullable Output<String> mountName;
+        private @Nullable Output<List<String>> networkInterfaceIds;
+        private @Nullable Output<String> ownerId;
+        private @Nullable Output<Integer> perUnitStorageThroughput;
+        private @Nullable Output<List<String>> securityGroupIds;
+        private @Nullable Output<Integer> storageCapacity;
+        private @Nullable Output<String> storageType;
+        private @Nullable Output<String> subnetIds;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<Map<String,String>> tagsAll;
+        private @Nullable Output<String> vpcId;
+        private @Nullable Output<String> weeklyMaintenanceStartTime;
 
         public Builder() {
     	      // Empty
@@ -474,273 +474,273 @@ public final class LustreFileSystemState extends io.pulumi.resources.ResourceArg
     	      this.weeklyMaintenanceStartTime = defaults.weeklyMaintenanceStartTime;
         }
 
-        public Builder arn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
 
         public Builder arn(@Nullable String arn) {
-            this.arn = Input.ofNullable(arn);
+            this.arn = Output.ofNullable(arn);
             return this;
         }
 
-        public Builder autoImportPolicy(@Nullable Input<String> autoImportPolicy) {
+        public Builder autoImportPolicy(@Nullable Output<String> autoImportPolicy) {
             this.autoImportPolicy = autoImportPolicy;
             return this;
         }
 
         public Builder autoImportPolicy(@Nullable String autoImportPolicy) {
-            this.autoImportPolicy = Input.ofNullable(autoImportPolicy);
+            this.autoImportPolicy = Output.ofNullable(autoImportPolicy);
             return this;
         }
 
-        public Builder automaticBackupRetentionDays(@Nullable Input<Integer> automaticBackupRetentionDays) {
+        public Builder automaticBackupRetentionDays(@Nullable Output<Integer> automaticBackupRetentionDays) {
             this.automaticBackupRetentionDays = automaticBackupRetentionDays;
             return this;
         }
 
         public Builder automaticBackupRetentionDays(@Nullable Integer automaticBackupRetentionDays) {
-            this.automaticBackupRetentionDays = Input.ofNullable(automaticBackupRetentionDays);
+            this.automaticBackupRetentionDays = Output.ofNullable(automaticBackupRetentionDays);
             return this;
         }
 
-        public Builder backupId(@Nullable Input<String> backupId) {
+        public Builder backupId(@Nullable Output<String> backupId) {
             this.backupId = backupId;
             return this;
         }
 
         public Builder backupId(@Nullable String backupId) {
-            this.backupId = Input.ofNullable(backupId);
+            this.backupId = Output.ofNullable(backupId);
             return this;
         }
 
-        public Builder copyTagsToBackups(@Nullable Input<Boolean> copyTagsToBackups) {
+        public Builder copyTagsToBackups(@Nullable Output<Boolean> copyTagsToBackups) {
             this.copyTagsToBackups = copyTagsToBackups;
             return this;
         }
 
         public Builder copyTagsToBackups(@Nullable Boolean copyTagsToBackups) {
-            this.copyTagsToBackups = Input.ofNullable(copyTagsToBackups);
+            this.copyTagsToBackups = Output.ofNullable(copyTagsToBackups);
             return this;
         }
 
-        public Builder dailyAutomaticBackupStartTime(@Nullable Input<String> dailyAutomaticBackupStartTime) {
+        public Builder dailyAutomaticBackupStartTime(@Nullable Output<String> dailyAutomaticBackupStartTime) {
             this.dailyAutomaticBackupStartTime = dailyAutomaticBackupStartTime;
             return this;
         }
 
         public Builder dailyAutomaticBackupStartTime(@Nullable String dailyAutomaticBackupStartTime) {
-            this.dailyAutomaticBackupStartTime = Input.ofNullable(dailyAutomaticBackupStartTime);
+            this.dailyAutomaticBackupStartTime = Output.ofNullable(dailyAutomaticBackupStartTime);
             return this;
         }
 
-        public Builder dataCompressionType(@Nullable Input<String> dataCompressionType) {
+        public Builder dataCompressionType(@Nullable Output<String> dataCompressionType) {
             this.dataCompressionType = dataCompressionType;
             return this;
         }
 
         public Builder dataCompressionType(@Nullable String dataCompressionType) {
-            this.dataCompressionType = Input.ofNullable(dataCompressionType);
+            this.dataCompressionType = Output.ofNullable(dataCompressionType);
             return this;
         }
 
-        public Builder deploymentType(@Nullable Input<String> deploymentType) {
+        public Builder deploymentType(@Nullable Output<String> deploymentType) {
             this.deploymentType = deploymentType;
             return this;
         }
 
         public Builder deploymentType(@Nullable String deploymentType) {
-            this.deploymentType = Input.ofNullable(deploymentType);
+            this.deploymentType = Output.ofNullable(deploymentType);
             return this;
         }
 
-        public Builder dnsName(@Nullable Input<String> dnsName) {
+        public Builder dnsName(@Nullable Output<String> dnsName) {
             this.dnsName = dnsName;
             return this;
         }
 
         public Builder dnsName(@Nullable String dnsName) {
-            this.dnsName = Input.ofNullable(dnsName);
+            this.dnsName = Output.ofNullable(dnsName);
             return this;
         }
 
-        public Builder driveCacheType(@Nullable Input<String> driveCacheType) {
+        public Builder driveCacheType(@Nullable Output<String> driveCacheType) {
             this.driveCacheType = driveCacheType;
             return this;
         }
 
         public Builder driveCacheType(@Nullable String driveCacheType) {
-            this.driveCacheType = Input.ofNullable(driveCacheType);
+            this.driveCacheType = Output.ofNullable(driveCacheType);
             return this;
         }
 
-        public Builder exportPath(@Nullable Input<String> exportPath) {
+        public Builder exportPath(@Nullable Output<String> exportPath) {
             this.exportPath = exportPath;
             return this;
         }
 
         public Builder exportPath(@Nullable String exportPath) {
-            this.exportPath = Input.ofNullable(exportPath);
+            this.exportPath = Output.ofNullable(exportPath);
             return this;
         }
 
-        public Builder fileSystemTypeVersion(@Nullable Input<String> fileSystemTypeVersion) {
+        public Builder fileSystemTypeVersion(@Nullable Output<String> fileSystemTypeVersion) {
             this.fileSystemTypeVersion = fileSystemTypeVersion;
             return this;
         }
 
         public Builder fileSystemTypeVersion(@Nullable String fileSystemTypeVersion) {
-            this.fileSystemTypeVersion = Input.ofNullable(fileSystemTypeVersion);
+            this.fileSystemTypeVersion = Output.ofNullable(fileSystemTypeVersion);
             return this;
         }
 
-        public Builder importPath(@Nullable Input<String> importPath) {
+        public Builder importPath(@Nullable Output<String> importPath) {
             this.importPath = importPath;
             return this;
         }
 
         public Builder importPath(@Nullable String importPath) {
-            this.importPath = Input.ofNullable(importPath);
+            this.importPath = Output.ofNullable(importPath);
             return this;
         }
 
-        public Builder importedFileChunkSize(@Nullable Input<Integer> importedFileChunkSize) {
+        public Builder importedFileChunkSize(@Nullable Output<Integer> importedFileChunkSize) {
             this.importedFileChunkSize = importedFileChunkSize;
             return this;
         }
 
         public Builder importedFileChunkSize(@Nullable Integer importedFileChunkSize) {
-            this.importedFileChunkSize = Input.ofNullable(importedFileChunkSize);
+            this.importedFileChunkSize = Output.ofNullable(importedFileChunkSize);
             return this;
         }
 
-        public Builder kmsKeyId(@Nullable Input<String> kmsKeyId) {
+        public Builder kmsKeyId(@Nullable Output<String> kmsKeyId) {
             this.kmsKeyId = kmsKeyId;
             return this;
         }
 
         public Builder kmsKeyId(@Nullable String kmsKeyId) {
-            this.kmsKeyId = Input.ofNullable(kmsKeyId);
+            this.kmsKeyId = Output.ofNullable(kmsKeyId);
             return this;
         }
 
-        public Builder mountName(@Nullable Input<String> mountName) {
+        public Builder mountName(@Nullable Output<String> mountName) {
             this.mountName = mountName;
             return this;
         }
 
         public Builder mountName(@Nullable String mountName) {
-            this.mountName = Input.ofNullable(mountName);
+            this.mountName = Output.ofNullable(mountName);
             return this;
         }
 
-        public Builder networkInterfaceIds(@Nullable Input<List<String>> networkInterfaceIds) {
+        public Builder networkInterfaceIds(@Nullable Output<List<String>> networkInterfaceIds) {
             this.networkInterfaceIds = networkInterfaceIds;
             return this;
         }
 
         public Builder networkInterfaceIds(@Nullable List<String> networkInterfaceIds) {
-            this.networkInterfaceIds = Input.ofNullable(networkInterfaceIds);
+            this.networkInterfaceIds = Output.ofNullable(networkInterfaceIds);
             return this;
         }
 
-        public Builder ownerId(@Nullable Input<String> ownerId) {
+        public Builder ownerId(@Nullable Output<String> ownerId) {
             this.ownerId = ownerId;
             return this;
         }
 
         public Builder ownerId(@Nullable String ownerId) {
-            this.ownerId = Input.ofNullable(ownerId);
+            this.ownerId = Output.ofNullable(ownerId);
             return this;
         }
 
-        public Builder perUnitStorageThroughput(@Nullable Input<Integer> perUnitStorageThroughput) {
+        public Builder perUnitStorageThroughput(@Nullable Output<Integer> perUnitStorageThroughput) {
             this.perUnitStorageThroughput = perUnitStorageThroughput;
             return this;
         }
 
         public Builder perUnitStorageThroughput(@Nullable Integer perUnitStorageThroughput) {
-            this.perUnitStorageThroughput = Input.ofNullable(perUnitStorageThroughput);
+            this.perUnitStorageThroughput = Output.ofNullable(perUnitStorageThroughput);
             return this;
         }
 
-        public Builder securityGroupIds(@Nullable Input<List<String>> securityGroupIds) {
+        public Builder securityGroupIds(@Nullable Output<List<String>> securityGroupIds) {
             this.securityGroupIds = securityGroupIds;
             return this;
         }
 
         public Builder securityGroupIds(@Nullable List<String> securityGroupIds) {
-            this.securityGroupIds = Input.ofNullable(securityGroupIds);
+            this.securityGroupIds = Output.ofNullable(securityGroupIds);
             return this;
         }
 
-        public Builder storageCapacity(@Nullable Input<Integer> storageCapacity) {
+        public Builder storageCapacity(@Nullable Output<Integer> storageCapacity) {
             this.storageCapacity = storageCapacity;
             return this;
         }
 
         public Builder storageCapacity(@Nullable Integer storageCapacity) {
-            this.storageCapacity = Input.ofNullable(storageCapacity);
+            this.storageCapacity = Output.ofNullable(storageCapacity);
             return this;
         }
 
-        public Builder storageType(@Nullable Input<String> storageType) {
+        public Builder storageType(@Nullable Output<String> storageType) {
             this.storageType = storageType;
             return this;
         }
 
         public Builder storageType(@Nullable String storageType) {
-            this.storageType = Input.ofNullable(storageType);
+            this.storageType = Output.ofNullable(storageType);
             return this;
         }
 
-        public Builder subnetIds(@Nullable Input<String> subnetIds) {
+        public Builder subnetIds(@Nullable Output<String> subnetIds) {
             this.subnetIds = subnetIds;
             return this;
         }
 
         public Builder subnetIds(@Nullable String subnetIds) {
-            this.subnetIds = Input.ofNullable(subnetIds);
+            this.subnetIds = Output.ofNullable(subnetIds);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Input.ofNullable(tagsAll);
+            this.tagsAll = Output.ofNullable(tagsAll);
             return this;
         }
 
-        public Builder vpcId(@Nullable Input<String> vpcId) {
+        public Builder vpcId(@Nullable Output<String> vpcId) {
             this.vpcId = vpcId;
             return this;
         }
 
         public Builder vpcId(@Nullable String vpcId) {
-            this.vpcId = Input.ofNullable(vpcId);
+            this.vpcId = Output.ofNullable(vpcId);
             return this;
         }
 
-        public Builder weeklyMaintenanceStartTime(@Nullable Input<String> weeklyMaintenanceStartTime) {
+        public Builder weeklyMaintenanceStartTime(@Nullable Output<String> weeklyMaintenanceStartTime) {
             this.weeklyMaintenanceStartTime = weeklyMaintenanceStartTime;
             return this;
         }
 
         public Builder weeklyMaintenanceStartTime(@Nullable String weeklyMaintenanceStartTime) {
-            this.weeklyMaintenanceStartTime = Input.ofNullable(weeklyMaintenanceStartTime);
+            this.weeklyMaintenanceStartTime = Output.ofNullable(weeklyMaintenanceStartTime);
             return this;
         }
         public LustreFileSystemState build() {

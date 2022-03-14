@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.mediapackage.inputs;
 
 import io.pulumi.awsnative.mediapackage.enums.OriginEndpointStreamSelectionStreamOrder;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
@@ -24,10 +24,10 @@ public final class OriginEndpointStreamSelectionArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="maxVideoBitsPerSecond")
-      private final @Nullable Input<Integer> maxVideoBitsPerSecond;
+      private final @Nullable Output<Integer> maxVideoBitsPerSecond;
 
-    public Input<Integer> getMaxVideoBitsPerSecond() {
-        return this.maxVideoBitsPerSecond == null ? Input.empty() : this.maxVideoBitsPerSecond;
+    public Output<Integer> getMaxVideoBitsPerSecond() {
+        return this.maxVideoBitsPerSecond == null ? Output.empty() : this.maxVideoBitsPerSecond;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class OriginEndpointStreamSelectionArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="minVideoBitsPerSecond")
-      private final @Nullable Input<Integer> minVideoBitsPerSecond;
+      private final @Nullable Output<Integer> minVideoBitsPerSecond;
 
-    public Input<Integer> getMinVideoBitsPerSecond() {
-        return this.minVideoBitsPerSecond == null ? Input.empty() : this.minVideoBitsPerSecond;
+    public Output<Integer> getMinVideoBitsPerSecond() {
+        return this.minVideoBitsPerSecond == null ? Output.empty() : this.minVideoBitsPerSecond;
     }
 
     /**
@@ -46,25 +46,25 @@ public final class OriginEndpointStreamSelectionArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="streamOrder")
-      private final @Nullable Input<OriginEndpointStreamSelectionStreamOrder> streamOrder;
+      private final @Nullable Output<OriginEndpointStreamSelectionStreamOrder> streamOrder;
 
-    public Input<OriginEndpointStreamSelectionStreamOrder> getStreamOrder() {
-        return this.streamOrder == null ? Input.empty() : this.streamOrder;
+    public Output<OriginEndpointStreamSelectionStreamOrder> getStreamOrder() {
+        return this.streamOrder == null ? Output.empty() : this.streamOrder;
     }
 
     public OriginEndpointStreamSelectionArgs(
-        @Nullable Input<Integer> maxVideoBitsPerSecond,
-        @Nullable Input<Integer> minVideoBitsPerSecond,
-        @Nullable Input<OriginEndpointStreamSelectionStreamOrder> streamOrder) {
+        @Nullable Output<Integer> maxVideoBitsPerSecond,
+        @Nullable Output<Integer> minVideoBitsPerSecond,
+        @Nullable Output<OriginEndpointStreamSelectionStreamOrder> streamOrder) {
         this.maxVideoBitsPerSecond = maxVideoBitsPerSecond;
         this.minVideoBitsPerSecond = minVideoBitsPerSecond;
         this.streamOrder = streamOrder;
     }
 
     private OriginEndpointStreamSelectionArgs() {
-        this.maxVideoBitsPerSecond = Input.empty();
-        this.minVideoBitsPerSecond = Input.empty();
-        this.streamOrder = Input.empty();
+        this.maxVideoBitsPerSecond = Output.empty();
+        this.minVideoBitsPerSecond = Output.empty();
+        this.streamOrder = Output.empty();
     }
 
     public static Builder builder() {
@@ -76,9 +76,9 @@ public final class OriginEndpointStreamSelectionArgs extends io.pulumi.resources
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> maxVideoBitsPerSecond;
-        private @Nullable Input<Integer> minVideoBitsPerSecond;
-        private @Nullable Input<OriginEndpointStreamSelectionStreamOrder> streamOrder;
+        private @Nullable Output<Integer> maxVideoBitsPerSecond;
+        private @Nullable Output<Integer> minVideoBitsPerSecond;
+        private @Nullable Output<OriginEndpointStreamSelectionStreamOrder> streamOrder;
 
         public Builder() {
     	      // Empty
@@ -91,33 +91,33 @@ public final class OriginEndpointStreamSelectionArgs extends io.pulumi.resources
     	      this.streamOrder = defaults.streamOrder;
         }
 
-        public Builder maxVideoBitsPerSecond(@Nullable Input<Integer> maxVideoBitsPerSecond) {
+        public Builder maxVideoBitsPerSecond(@Nullable Output<Integer> maxVideoBitsPerSecond) {
             this.maxVideoBitsPerSecond = maxVideoBitsPerSecond;
             return this;
         }
 
         public Builder maxVideoBitsPerSecond(@Nullable Integer maxVideoBitsPerSecond) {
-            this.maxVideoBitsPerSecond = Input.ofNullable(maxVideoBitsPerSecond);
+            this.maxVideoBitsPerSecond = Output.ofNullable(maxVideoBitsPerSecond);
             return this;
         }
 
-        public Builder minVideoBitsPerSecond(@Nullable Input<Integer> minVideoBitsPerSecond) {
+        public Builder minVideoBitsPerSecond(@Nullable Output<Integer> minVideoBitsPerSecond) {
             this.minVideoBitsPerSecond = minVideoBitsPerSecond;
             return this;
         }
 
         public Builder minVideoBitsPerSecond(@Nullable Integer minVideoBitsPerSecond) {
-            this.minVideoBitsPerSecond = Input.ofNullable(minVideoBitsPerSecond);
+            this.minVideoBitsPerSecond = Output.ofNullable(minVideoBitsPerSecond);
             return this;
         }
 
-        public Builder streamOrder(@Nullable Input<OriginEndpointStreamSelectionStreamOrder> streamOrder) {
+        public Builder streamOrder(@Nullable Output<OriginEndpointStreamSelectionStreamOrder> streamOrder) {
             this.streamOrder = streamOrder;
             return this;
         }
 
         public Builder streamOrder(@Nullable OriginEndpointStreamSelectionStreamOrder streamOrder) {
-            this.streamOrder = Input.ofNullable(streamOrder);
+            this.streamOrder = Output.ofNullable(streamOrder);
             return this;
         }
         public OriginEndpointStreamSelectionArgs build() {

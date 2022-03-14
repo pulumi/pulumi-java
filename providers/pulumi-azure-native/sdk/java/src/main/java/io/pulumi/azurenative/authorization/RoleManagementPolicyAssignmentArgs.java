@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.authorization;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class RoleManagementPolicyAssignmentArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="policyId")
-      private final @Nullable Input<String> policyId;
+      private final @Nullable Output<String> policyId;
 
-    public Input<String> getPolicyId() {
-        return this.policyId == null ? Input.empty() : this.policyId;
+    public Output<String> getPolicyId() {
+        return this.policyId == null ? Output.empty() : this.policyId;
     }
 
     /**
@@ -30,10 +30,10 @@ public final class RoleManagementPolicyAssignmentArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="roleDefinitionId")
-      private final @Nullable Input<String> roleDefinitionId;
+      private final @Nullable Output<String> roleDefinitionId;
 
-    public Input<String> getRoleDefinitionId() {
-        return this.roleDefinitionId == null ? Input.empty() : this.roleDefinitionId;
+    public Output<String> getRoleDefinitionId() {
+        return this.roleDefinitionId == null ? Output.empty() : this.roleDefinitionId;
     }
 
     /**
@@ -41,10 +41,10 @@ public final class RoleManagementPolicyAssignmentArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="roleManagementPolicyAssignmentName")
-      private final @Nullable Input<String> roleManagementPolicyAssignmentName;
+      private final @Nullable Output<String> roleManagementPolicyAssignmentName;
 
-    public Input<String> getRoleManagementPolicyAssignmentName() {
-        return this.roleManagementPolicyAssignmentName == null ? Input.empty() : this.roleManagementPolicyAssignmentName;
+    public Output<String> getRoleManagementPolicyAssignmentName() {
+        return this.roleManagementPolicyAssignmentName == null ? Output.empty() : this.roleManagementPolicyAssignmentName;
     }
 
     /**
@@ -52,17 +52,17 @@ public final class RoleManagementPolicyAssignmentArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="scope", required=true)
-      private final Input<String> scope;
+      private final Output<String> scope;
 
-    public Input<String> getScope() {
+    public Output<String> getScope() {
         return this.scope;
     }
 
     public RoleManagementPolicyAssignmentArgs(
-        @Nullable Input<String> policyId,
-        @Nullable Input<String> roleDefinitionId,
-        @Nullable Input<String> roleManagementPolicyAssignmentName,
-        Input<String> scope) {
+        @Nullable Output<String> policyId,
+        @Nullable Output<String> roleDefinitionId,
+        @Nullable Output<String> roleManagementPolicyAssignmentName,
+        Output<String> scope) {
         this.policyId = policyId;
         this.roleDefinitionId = roleDefinitionId;
         this.roleManagementPolicyAssignmentName = roleManagementPolicyAssignmentName;
@@ -70,10 +70,10 @@ public final class RoleManagementPolicyAssignmentArgs extends io.pulumi.resource
     }
 
     private RoleManagementPolicyAssignmentArgs() {
-        this.policyId = Input.empty();
-        this.roleDefinitionId = Input.empty();
-        this.roleManagementPolicyAssignmentName = Input.empty();
-        this.scope = Input.empty();
+        this.policyId = Output.empty();
+        this.roleDefinitionId = Output.empty();
+        this.roleManagementPolicyAssignmentName = Output.empty();
+        this.scope = Output.empty();
     }
 
     public static Builder builder() {
@@ -85,10 +85,10 @@ public final class RoleManagementPolicyAssignmentArgs extends io.pulumi.resource
     }
 
     public static final class Builder {
-        private @Nullable Input<String> policyId;
-        private @Nullable Input<String> roleDefinitionId;
-        private @Nullable Input<String> roleManagementPolicyAssignmentName;
-        private Input<String> scope;
+        private @Nullable Output<String> policyId;
+        private @Nullable Output<String> roleDefinitionId;
+        private @Nullable Output<String> roleManagementPolicyAssignmentName;
+        private Output<String> scope;
 
         public Builder() {
     	      // Empty
@@ -102,43 +102,43 @@ public final class RoleManagementPolicyAssignmentArgs extends io.pulumi.resource
     	      this.scope = defaults.scope;
         }
 
-        public Builder policyId(@Nullable Input<String> policyId) {
+        public Builder policyId(@Nullable Output<String> policyId) {
             this.policyId = policyId;
             return this;
         }
 
         public Builder policyId(@Nullable String policyId) {
-            this.policyId = Input.ofNullable(policyId);
+            this.policyId = Output.ofNullable(policyId);
             return this;
         }
 
-        public Builder roleDefinitionId(@Nullable Input<String> roleDefinitionId) {
+        public Builder roleDefinitionId(@Nullable Output<String> roleDefinitionId) {
             this.roleDefinitionId = roleDefinitionId;
             return this;
         }
 
         public Builder roleDefinitionId(@Nullable String roleDefinitionId) {
-            this.roleDefinitionId = Input.ofNullable(roleDefinitionId);
+            this.roleDefinitionId = Output.ofNullable(roleDefinitionId);
             return this;
         }
 
-        public Builder roleManagementPolicyAssignmentName(@Nullable Input<String> roleManagementPolicyAssignmentName) {
+        public Builder roleManagementPolicyAssignmentName(@Nullable Output<String> roleManagementPolicyAssignmentName) {
             this.roleManagementPolicyAssignmentName = roleManagementPolicyAssignmentName;
             return this;
         }
 
         public Builder roleManagementPolicyAssignmentName(@Nullable String roleManagementPolicyAssignmentName) {
-            this.roleManagementPolicyAssignmentName = Input.ofNullable(roleManagementPolicyAssignmentName);
+            this.roleManagementPolicyAssignmentName = Output.ofNullable(roleManagementPolicyAssignmentName);
             return this;
         }
 
-        public Builder scope(Input<String> scope) {
+        public Builder scope(Output<String> scope) {
             this.scope = Objects.requireNonNull(scope);
             return this;
         }
 
         public Builder scope(String scope) {
-            this.scope = Input.of(Objects.requireNonNull(scope));
+            this.scope = Output.of(Objects.requireNonNull(scope));
             return this;
         }
         public RoleManagementPolicyAssignmentArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.autoscaling;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -19,9 +19,9 @@ public final class NotificationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="groupNames", required=true)
-      private final Input<List<String>> groupNames;
+      private final Output<List<String>> groupNames;
 
-    public Input<List<String>> getGroupNames() {
+    public Output<List<String>> getGroupNames() {
         return this.groupNames;
     }
 
@@ -31,9 +31,9 @@ public final class NotificationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="notifications", required=true)
-      private final Input<List<String>> notifications;
+      private final Output<List<String>> notifications;
 
-    public Input<List<String>> getNotifications() {
+    public Output<List<String>> getNotifications() {
         return this.notifications;
     }
 
@@ -42,25 +42,25 @@ public final class NotificationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="topicArn", required=true)
-      private final Input<String> topicArn;
+      private final Output<String> topicArn;
 
-    public Input<String> getTopicArn() {
+    public Output<String> getTopicArn() {
         return this.topicArn;
     }
 
     public NotificationArgs(
-        Input<List<String>> groupNames,
-        Input<List<String>> notifications,
-        Input<String> topicArn) {
+        Output<List<String>> groupNames,
+        Output<List<String>> notifications,
+        Output<String> topicArn) {
         this.groupNames = Objects.requireNonNull(groupNames, "expected parameter 'groupNames' to be non-null");
         this.notifications = Objects.requireNonNull(notifications, "expected parameter 'notifications' to be non-null");
         this.topicArn = Objects.requireNonNull(topicArn, "expected parameter 'topicArn' to be non-null");
     }
 
     private NotificationArgs() {
-        this.groupNames = Input.empty();
-        this.notifications = Input.empty();
-        this.topicArn = Input.empty();
+        this.groupNames = Output.empty();
+        this.notifications = Output.empty();
+        this.topicArn = Output.empty();
     }
 
     public static Builder builder() {
@@ -72,9 +72,9 @@ public final class NotificationArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<List<String>> groupNames;
-        private Input<List<String>> notifications;
-        private Input<String> topicArn;
+        private Output<List<String>> groupNames;
+        private Output<List<String>> notifications;
+        private Output<String> topicArn;
 
         public Builder() {
     	      // Empty
@@ -87,33 +87,33 @@ public final class NotificationArgs extends io.pulumi.resources.ResourceArgs {
     	      this.topicArn = defaults.topicArn;
         }
 
-        public Builder groupNames(Input<List<String>> groupNames) {
+        public Builder groupNames(Output<List<String>> groupNames) {
             this.groupNames = Objects.requireNonNull(groupNames);
             return this;
         }
 
         public Builder groupNames(List<String> groupNames) {
-            this.groupNames = Input.of(Objects.requireNonNull(groupNames));
+            this.groupNames = Output.of(Objects.requireNonNull(groupNames));
             return this;
         }
 
-        public Builder notifications(Input<List<String>> notifications) {
+        public Builder notifications(Output<List<String>> notifications) {
             this.notifications = Objects.requireNonNull(notifications);
             return this;
         }
 
         public Builder notifications(List<String> notifications) {
-            this.notifications = Input.of(Objects.requireNonNull(notifications));
+            this.notifications = Output.of(Objects.requireNonNull(notifications));
             return this;
         }
 
-        public Builder topicArn(Input<String> topicArn) {
+        public Builder topicArn(Output<String> topicArn) {
             this.topicArn = Objects.requireNonNull(topicArn);
             return this;
         }
 
         public Builder topicArn(String topicArn) {
-            this.topicArn = Input.of(Objects.requireNonNull(topicArn));
+            this.topicArn = Output.of(Objects.requireNonNull(topicArn));
             return this;
         }
         public NotificationArgs build() {

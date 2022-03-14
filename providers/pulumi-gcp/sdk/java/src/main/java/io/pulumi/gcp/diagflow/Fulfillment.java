@@ -3,7 +3,6 @@
 
 package io.pulumi.gcp.diagflow;
 
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -170,14 +169,14 @@ public class Fulfillment extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Fulfillment(String name, FulfillmentArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:diagflow/fulfillment:Fulfillment", name, args == null ? FulfillmentArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("gcp:diagflow/fulfillment:Fulfillment", name, args == null ? FulfillmentArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private Fulfillment(String name, Input<String> id, @Nullable FulfillmentState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private Fulfillment(String name, Output<String> id, @Nullable FulfillmentState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("gcp:diagflow/fulfillment:Fulfillment", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -193,7 +192,7 @@ public class Fulfillment extends io.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static Fulfillment get(String name, Input<String> id, @Nullable FulfillmentState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static Fulfillment get(String name, Output<String> id, @Nullable FulfillmentState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Fulfillment(name, id, state, options);
     }
 }

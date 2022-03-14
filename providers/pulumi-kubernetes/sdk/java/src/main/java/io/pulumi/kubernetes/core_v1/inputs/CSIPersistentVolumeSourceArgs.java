@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.core_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.kubernetes.core_v1.inputs.SecretReferenceArgs;
 import java.lang.Boolean;
@@ -26,10 +26,10 @@ public final class CSIPersistentVolumeSourceArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="controllerExpandSecretRef")
-      private final @Nullable Input<SecretReferenceArgs> controllerExpandSecretRef;
+      private final @Nullable Output<SecretReferenceArgs> controllerExpandSecretRef;
 
-    public Input<SecretReferenceArgs> getControllerExpandSecretRef() {
-        return this.controllerExpandSecretRef == null ? Input.empty() : this.controllerExpandSecretRef;
+    public Output<SecretReferenceArgs> getControllerExpandSecretRef() {
+        return this.controllerExpandSecretRef == null ? Output.empty() : this.controllerExpandSecretRef;
     }
 
     /**
@@ -37,10 +37,10 @@ public final class CSIPersistentVolumeSourceArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="controllerPublishSecretRef")
-      private final @Nullable Input<SecretReferenceArgs> controllerPublishSecretRef;
+      private final @Nullable Output<SecretReferenceArgs> controllerPublishSecretRef;
 
-    public Input<SecretReferenceArgs> getControllerPublishSecretRef() {
-        return this.controllerPublishSecretRef == null ? Input.empty() : this.controllerPublishSecretRef;
+    public Output<SecretReferenceArgs> getControllerPublishSecretRef() {
+        return this.controllerPublishSecretRef == null ? Output.empty() : this.controllerPublishSecretRef;
     }
 
     /**
@@ -48,9 +48,9 @@ public final class CSIPersistentVolumeSourceArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="driver", required=true)
-      private final Input<String> driver;
+      private final Output<String> driver;
 
-    public Input<String> getDriver() {
+    public Output<String> getDriver() {
         return this.driver;
     }
 
@@ -59,10 +59,10 @@ public final class CSIPersistentVolumeSourceArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="fsType")
-      private final @Nullable Input<String> fsType;
+      private final @Nullable Output<String> fsType;
 
-    public Input<String> getFsType() {
-        return this.fsType == null ? Input.empty() : this.fsType;
+    public Output<String> getFsType() {
+        return this.fsType == null ? Output.empty() : this.fsType;
     }
 
     /**
@@ -70,10 +70,10 @@ public final class CSIPersistentVolumeSourceArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="nodePublishSecretRef")
-      private final @Nullable Input<SecretReferenceArgs> nodePublishSecretRef;
+      private final @Nullable Output<SecretReferenceArgs> nodePublishSecretRef;
 
-    public Input<SecretReferenceArgs> getNodePublishSecretRef() {
-        return this.nodePublishSecretRef == null ? Input.empty() : this.nodePublishSecretRef;
+    public Output<SecretReferenceArgs> getNodePublishSecretRef() {
+        return this.nodePublishSecretRef == null ? Output.empty() : this.nodePublishSecretRef;
     }
 
     /**
@@ -81,10 +81,10 @@ public final class CSIPersistentVolumeSourceArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="nodeStageSecretRef")
-      private final @Nullable Input<SecretReferenceArgs> nodeStageSecretRef;
+      private final @Nullable Output<SecretReferenceArgs> nodeStageSecretRef;
 
-    public Input<SecretReferenceArgs> getNodeStageSecretRef() {
-        return this.nodeStageSecretRef == null ? Input.empty() : this.nodeStageSecretRef;
+    public Output<SecretReferenceArgs> getNodeStageSecretRef() {
+        return this.nodeStageSecretRef == null ? Output.empty() : this.nodeStageSecretRef;
     }
 
     /**
@@ -92,10 +92,10 @@ public final class CSIPersistentVolumeSourceArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="readOnly")
-      private final @Nullable Input<Boolean> readOnly;
+      private final @Nullable Output<Boolean> readOnly;
 
-    public Input<Boolean> getReadOnly() {
-        return this.readOnly == null ? Input.empty() : this.readOnly;
+    public Output<Boolean> getReadOnly() {
+        return this.readOnly == null ? Output.empty() : this.readOnly;
     }
 
     /**
@@ -103,10 +103,10 @@ public final class CSIPersistentVolumeSourceArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="volumeAttributes")
-      private final @Nullable Input<Map<String,String>> volumeAttributes;
+      private final @Nullable Output<Map<String,String>> volumeAttributes;
 
-    public Input<Map<String,String>> getVolumeAttributes() {
-        return this.volumeAttributes == null ? Input.empty() : this.volumeAttributes;
+    public Output<Map<String,String>> getVolumeAttributes() {
+        return this.volumeAttributes == null ? Output.empty() : this.volumeAttributes;
     }
 
     /**
@@ -114,22 +114,22 @@ public final class CSIPersistentVolumeSourceArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="volumeHandle", required=true)
-      private final Input<String> volumeHandle;
+      private final Output<String> volumeHandle;
 
-    public Input<String> getVolumeHandle() {
+    public Output<String> getVolumeHandle() {
         return this.volumeHandle;
     }
 
     public CSIPersistentVolumeSourceArgs(
-        @Nullable Input<SecretReferenceArgs> controllerExpandSecretRef,
-        @Nullable Input<SecretReferenceArgs> controllerPublishSecretRef,
-        Input<String> driver,
-        @Nullable Input<String> fsType,
-        @Nullable Input<SecretReferenceArgs> nodePublishSecretRef,
-        @Nullable Input<SecretReferenceArgs> nodeStageSecretRef,
-        @Nullable Input<Boolean> readOnly,
-        @Nullable Input<Map<String,String>> volumeAttributes,
-        Input<String> volumeHandle) {
+        @Nullable Output<SecretReferenceArgs> controllerExpandSecretRef,
+        @Nullable Output<SecretReferenceArgs> controllerPublishSecretRef,
+        Output<String> driver,
+        @Nullable Output<String> fsType,
+        @Nullable Output<SecretReferenceArgs> nodePublishSecretRef,
+        @Nullable Output<SecretReferenceArgs> nodeStageSecretRef,
+        @Nullable Output<Boolean> readOnly,
+        @Nullable Output<Map<String,String>> volumeAttributes,
+        Output<String> volumeHandle) {
         this.controllerExpandSecretRef = controllerExpandSecretRef;
         this.controllerPublishSecretRef = controllerPublishSecretRef;
         this.driver = Objects.requireNonNull(driver, "expected parameter 'driver' to be non-null");
@@ -142,15 +142,15 @@ public final class CSIPersistentVolumeSourceArgs extends io.pulumi.resources.Res
     }
 
     private CSIPersistentVolumeSourceArgs() {
-        this.controllerExpandSecretRef = Input.empty();
-        this.controllerPublishSecretRef = Input.empty();
-        this.driver = Input.empty();
-        this.fsType = Input.empty();
-        this.nodePublishSecretRef = Input.empty();
-        this.nodeStageSecretRef = Input.empty();
-        this.readOnly = Input.empty();
-        this.volumeAttributes = Input.empty();
-        this.volumeHandle = Input.empty();
+        this.controllerExpandSecretRef = Output.empty();
+        this.controllerPublishSecretRef = Output.empty();
+        this.driver = Output.empty();
+        this.fsType = Output.empty();
+        this.nodePublishSecretRef = Output.empty();
+        this.nodeStageSecretRef = Output.empty();
+        this.readOnly = Output.empty();
+        this.volumeAttributes = Output.empty();
+        this.volumeHandle = Output.empty();
     }
 
     public static Builder builder() {
@@ -162,15 +162,15 @@ public final class CSIPersistentVolumeSourceArgs extends io.pulumi.resources.Res
     }
 
     public static final class Builder {
-        private @Nullable Input<SecretReferenceArgs> controllerExpandSecretRef;
-        private @Nullable Input<SecretReferenceArgs> controllerPublishSecretRef;
-        private Input<String> driver;
-        private @Nullable Input<String> fsType;
-        private @Nullable Input<SecretReferenceArgs> nodePublishSecretRef;
-        private @Nullable Input<SecretReferenceArgs> nodeStageSecretRef;
-        private @Nullable Input<Boolean> readOnly;
-        private @Nullable Input<Map<String,String>> volumeAttributes;
-        private Input<String> volumeHandle;
+        private @Nullable Output<SecretReferenceArgs> controllerExpandSecretRef;
+        private @Nullable Output<SecretReferenceArgs> controllerPublishSecretRef;
+        private Output<String> driver;
+        private @Nullable Output<String> fsType;
+        private @Nullable Output<SecretReferenceArgs> nodePublishSecretRef;
+        private @Nullable Output<SecretReferenceArgs> nodeStageSecretRef;
+        private @Nullable Output<Boolean> readOnly;
+        private @Nullable Output<Map<String,String>> volumeAttributes;
+        private Output<String> volumeHandle;
 
         public Builder() {
     	      // Empty
@@ -189,93 +189,93 @@ public final class CSIPersistentVolumeSourceArgs extends io.pulumi.resources.Res
     	      this.volumeHandle = defaults.volumeHandle;
         }
 
-        public Builder controllerExpandSecretRef(@Nullable Input<SecretReferenceArgs> controllerExpandSecretRef) {
+        public Builder controllerExpandSecretRef(@Nullable Output<SecretReferenceArgs> controllerExpandSecretRef) {
             this.controllerExpandSecretRef = controllerExpandSecretRef;
             return this;
         }
 
         public Builder controllerExpandSecretRef(@Nullable SecretReferenceArgs controllerExpandSecretRef) {
-            this.controllerExpandSecretRef = Input.ofNullable(controllerExpandSecretRef);
+            this.controllerExpandSecretRef = Output.ofNullable(controllerExpandSecretRef);
             return this;
         }
 
-        public Builder controllerPublishSecretRef(@Nullable Input<SecretReferenceArgs> controllerPublishSecretRef) {
+        public Builder controllerPublishSecretRef(@Nullable Output<SecretReferenceArgs> controllerPublishSecretRef) {
             this.controllerPublishSecretRef = controllerPublishSecretRef;
             return this;
         }
 
         public Builder controllerPublishSecretRef(@Nullable SecretReferenceArgs controllerPublishSecretRef) {
-            this.controllerPublishSecretRef = Input.ofNullable(controllerPublishSecretRef);
+            this.controllerPublishSecretRef = Output.ofNullable(controllerPublishSecretRef);
             return this;
         }
 
-        public Builder driver(Input<String> driver) {
+        public Builder driver(Output<String> driver) {
             this.driver = Objects.requireNonNull(driver);
             return this;
         }
 
         public Builder driver(String driver) {
-            this.driver = Input.of(Objects.requireNonNull(driver));
+            this.driver = Output.of(Objects.requireNonNull(driver));
             return this;
         }
 
-        public Builder fsType(@Nullable Input<String> fsType) {
+        public Builder fsType(@Nullable Output<String> fsType) {
             this.fsType = fsType;
             return this;
         }
 
         public Builder fsType(@Nullable String fsType) {
-            this.fsType = Input.ofNullable(fsType);
+            this.fsType = Output.ofNullable(fsType);
             return this;
         }
 
-        public Builder nodePublishSecretRef(@Nullable Input<SecretReferenceArgs> nodePublishSecretRef) {
+        public Builder nodePublishSecretRef(@Nullable Output<SecretReferenceArgs> nodePublishSecretRef) {
             this.nodePublishSecretRef = nodePublishSecretRef;
             return this;
         }
 
         public Builder nodePublishSecretRef(@Nullable SecretReferenceArgs nodePublishSecretRef) {
-            this.nodePublishSecretRef = Input.ofNullable(nodePublishSecretRef);
+            this.nodePublishSecretRef = Output.ofNullable(nodePublishSecretRef);
             return this;
         }
 
-        public Builder nodeStageSecretRef(@Nullable Input<SecretReferenceArgs> nodeStageSecretRef) {
+        public Builder nodeStageSecretRef(@Nullable Output<SecretReferenceArgs> nodeStageSecretRef) {
             this.nodeStageSecretRef = nodeStageSecretRef;
             return this;
         }
 
         public Builder nodeStageSecretRef(@Nullable SecretReferenceArgs nodeStageSecretRef) {
-            this.nodeStageSecretRef = Input.ofNullable(nodeStageSecretRef);
+            this.nodeStageSecretRef = Output.ofNullable(nodeStageSecretRef);
             return this;
         }
 
-        public Builder readOnly(@Nullable Input<Boolean> readOnly) {
+        public Builder readOnly(@Nullable Output<Boolean> readOnly) {
             this.readOnly = readOnly;
             return this;
         }
 
         public Builder readOnly(@Nullable Boolean readOnly) {
-            this.readOnly = Input.ofNullable(readOnly);
+            this.readOnly = Output.ofNullable(readOnly);
             return this;
         }
 
-        public Builder volumeAttributes(@Nullable Input<Map<String,String>> volumeAttributes) {
+        public Builder volumeAttributes(@Nullable Output<Map<String,String>> volumeAttributes) {
             this.volumeAttributes = volumeAttributes;
             return this;
         }
 
         public Builder volumeAttributes(@Nullable Map<String,String> volumeAttributes) {
-            this.volumeAttributes = Input.ofNullable(volumeAttributes);
+            this.volumeAttributes = Output.ofNullable(volumeAttributes);
             return this;
         }
 
-        public Builder volumeHandle(Input<String> volumeHandle) {
+        public Builder volumeHandle(Output<String> volumeHandle) {
             this.volumeHandle = Objects.requireNonNull(volumeHandle);
             return this;
         }
 
         public Builder volumeHandle(String volumeHandle) {
-            this.volumeHandle = Input.of(Objects.requireNonNull(volumeHandle));
+            this.volumeHandle = Output.of(Objects.requireNonNull(volumeHandle));
             return this;
         }
         public CSIPersistentVolumeSourceArgs build() {

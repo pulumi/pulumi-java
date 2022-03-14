@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.container_v1beta1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.container_v1beta1.enums.FilterEventTypeItem;
 import java.util.List;
@@ -24,18 +24,18 @@ public final class FilterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="eventType")
-      private final @Nullable Input<List<FilterEventTypeItem>> eventType;
+      private final @Nullable Output<List<FilterEventTypeItem>> eventType;
 
-    public Input<List<FilterEventTypeItem>> getEventType() {
-        return this.eventType == null ? Input.empty() : this.eventType;
+    public Output<List<FilterEventTypeItem>> getEventType() {
+        return this.eventType == null ? Output.empty() : this.eventType;
     }
 
-    public FilterArgs(@Nullable Input<List<FilterEventTypeItem>> eventType) {
+    public FilterArgs(@Nullable Output<List<FilterEventTypeItem>> eventType) {
         this.eventType = eventType;
     }
 
     private FilterArgs() {
-        this.eventType = Input.empty();
+        this.eventType = Output.empty();
     }
 
     public static Builder builder() {
@@ -47,7 +47,7 @@ public final class FilterArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<List<FilterEventTypeItem>> eventType;
+        private @Nullable Output<List<FilterEventTypeItem>> eventType;
 
         public Builder() {
     	      // Empty
@@ -58,13 +58,13 @@ public final class FilterArgs extends io.pulumi.resources.ResourceArgs {
     	      this.eventType = defaults.eventType;
         }
 
-        public Builder eventType(@Nullable Input<List<FilterEventTypeItem>> eventType) {
+        public Builder eventType(@Nullable Output<List<FilterEventTypeItem>> eventType) {
             this.eventType = eventType;
             return this;
         }
 
         public Builder eventType(@Nullable List<FilterEventTypeItem> eventType) {
-            this.eventType = Input.ofNullable(eventType);
+            this.eventType = Output.ofNullable(eventType);
             return this;
         }
         public FilterArgs build() {

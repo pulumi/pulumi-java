@@ -6,7 +6,7 @@ package io.pulumi.aws.sagemaker.inputs;
 import io.pulumi.aws.sagemaker.inputs.WorkforceCognitoConfigGetArgs;
 import io.pulumi.aws.sagemaker.inputs.WorkforceOidcConfigGetArgs;
 import io.pulumi.aws.sagemaker.inputs.WorkforceSourceIpConfigGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -22,10 +22,10 @@ public final class WorkforceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arn")
-      private final @Nullable Input<String> arn;
+      private final @Nullable Output<String> arn;
 
-    public Input<String> getArn() {
-        return this.arn == null ? Input.empty() : this.arn;
+    public Output<String> getArn() {
+        return this.arn == null ? Output.empty() : this.arn;
     }
 
     /**
@@ -33,10 +33,10 @@ public final class WorkforceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="cognitoConfig")
-      private final @Nullable Input<WorkforceCognitoConfigGetArgs> cognitoConfig;
+      private final @Nullable Output<WorkforceCognitoConfigGetArgs> cognitoConfig;
 
-    public Input<WorkforceCognitoConfigGetArgs> getCognitoConfig() {
-        return this.cognitoConfig == null ? Input.empty() : this.cognitoConfig;
+    public Output<WorkforceCognitoConfigGetArgs> getCognitoConfig() {
+        return this.cognitoConfig == null ? Output.empty() : this.cognitoConfig;
     }
 
     /**
@@ -44,10 +44,10 @@ public final class WorkforceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="oidcConfig")
-      private final @Nullable Input<WorkforceOidcConfigGetArgs> oidcConfig;
+      private final @Nullable Output<WorkforceOidcConfigGetArgs> oidcConfig;
 
-    public Input<WorkforceOidcConfigGetArgs> getOidcConfig() {
-        return this.oidcConfig == null ? Input.empty() : this.oidcConfig;
+    public Output<WorkforceOidcConfigGetArgs> getOidcConfig() {
+        return this.oidcConfig == null ? Output.empty() : this.oidcConfig;
     }
 
     /**
@@ -55,10 +55,10 @@ public final class WorkforceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sourceIpConfig")
-      private final @Nullable Input<WorkforceSourceIpConfigGetArgs> sourceIpConfig;
+      private final @Nullable Output<WorkforceSourceIpConfigGetArgs> sourceIpConfig;
 
-    public Input<WorkforceSourceIpConfigGetArgs> getSourceIpConfig() {
-        return this.sourceIpConfig == null ? Input.empty() : this.sourceIpConfig;
+    public Output<WorkforceSourceIpConfigGetArgs> getSourceIpConfig() {
+        return this.sourceIpConfig == null ? Output.empty() : this.sourceIpConfig;
     }
 
     /**
@@ -66,10 +66,10 @@ public final class WorkforceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="subdomain")
-      private final @Nullable Input<String> subdomain;
+      private final @Nullable Output<String> subdomain;
 
-    public Input<String> getSubdomain() {
-        return this.subdomain == null ? Input.empty() : this.subdomain;
+    public Output<String> getSubdomain() {
+        return this.subdomain == null ? Output.empty() : this.subdomain;
     }
 
     /**
@@ -77,19 +77,19 @@ public final class WorkforceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="workforceName")
-      private final @Nullable Input<String> workforceName;
+      private final @Nullable Output<String> workforceName;
 
-    public Input<String> getWorkforceName() {
-        return this.workforceName == null ? Input.empty() : this.workforceName;
+    public Output<String> getWorkforceName() {
+        return this.workforceName == null ? Output.empty() : this.workforceName;
     }
 
     public WorkforceState(
-        @Nullable Input<String> arn,
-        @Nullable Input<WorkforceCognitoConfigGetArgs> cognitoConfig,
-        @Nullable Input<WorkforceOidcConfigGetArgs> oidcConfig,
-        @Nullable Input<WorkforceSourceIpConfigGetArgs> sourceIpConfig,
-        @Nullable Input<String> subdomain,
-        @Nullable Input<String> workforceName) {
+        @Nullable Output<String> arn,
+        @Nullable Output<WorkforceCognitoConfigGetArgs> cognitoConfig,
+        @Nullable Output<WorkforceOidcConfigGetArgs> oidcConfig,
+        @Nullable Output<WorkforceSourceIpConfigGetArgs> sourceIpConfig,
+        @Nullable Output<String> subdomain,
+        @Nullable Output<String> workforceName) {
         this.arn = arn;
         this.cognitoConfig = cognitoConfig;
         this.oidcConfig = oidcConfig;
@@ -99,12 +99,12 @@ public final class WorkforceState extends io.pulumi.resources.ResourceArgs {
     }
 
     private WorkforceState() {
-        this.arn = Input.empty();
-        this.cognitoConfig = Input.empty();
-        this.oidcConfig = Input.empty();
-        this.sourceIpConfig = Input.empty();
-        this.subdomain = Input.empty();
-        this.workforceName = Input.empty();
+        this.arn = Output.empty();
+        this.cognitoConfig = Output.empty();
+        this.oidcConfig = Output.empty();
+        this.sourceIpConfig = Output.empty();
+        this.subdomain = Output.empty();
+        this.workforceName = Output.empty();
     }
 
     public static Builder builder() {
@@ -116,12 +116,12 @@ public final class WorkforceState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> arn;
-        private @Nullable Input<WorkforceCognitoConfigGetArgs> cognitoConfig;
-        private @Nullable Input<WorkforceOidcConfigGetArgs> oidcConfig;
-        private @Nullable Input<WorkforceSourceIpConfigGetArgs> sourceIpConfig;
-        private @Nullable Input<String> subdomain;
-        private @Nullable Input<String> workforceName;
+        private @Nullable Output<String> arn;
+        private @Nullable Output<WorkforceCognitoConfigGetArgs> cognitoConfig;
+        private @Nullable Output<WorkforceOidcConfigGetArgs> oidcConfig;
+        private @Nullable Output<WorkforceSourceIpConfigGetArgs> sourceIpConfig;
+        private @Nullable Output<String> subdomain;
+        private @Nullable Output<String> workforceName;
 
         public Builder() {
     	      // Empty
@@ -137,63 +137,63 @@ public final class WorkforceState extends io.pulumi.resources.ResourceArgs {
     	      this.workforceName = defaults.workforceName;
         }
 
-        public Builder arn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
 
         public Builder arn(@Nullable String arn) {
-            this.arn = Input.ofNullable(arn);
+            this.arn = Output.ofNullable(arn);
             return this;
         }
 
-        public Builder cognitoConfig(@Nullable Input<WorkforceCognitoConfigGetArgs> cognitoConfig) {
+        public Builder cognitoConfig(@Nullable Output<WorkforceCognitoConfigGetArgs> cognitoConfig) {
             this.cognitoConfig = cognitoConfig;
             return this;
         }
 
         public Builder cognitoConfig(@Nullable WorkforceCognitoConfigGetArgs cognitoConfig) {
-            this.cognitoConfig = Input.ofNullable(cognitoConfig);
+            this.cognitoConfig = Output.ofNullable(cognitoConfig);
             return this;
         }
 
-        public Builder oidcConfig(@Nullable Input<WorkforceOidcConfigGetArgs> oidcConfig) {
+        public Builder oidcConfig(@Nullable Output<WorkforceOidcConfigGetArgs> oidcConfig) {
             this.oidcConfig = oidcConfig;
             return this;
         }
 
         public Builder oidcConfig(@Nullable WorkforceOidcConfigGetArgs oidcConfig) {
-            this.oidcConfig = Input.ofNullable(oidcConfig);
+            this.oidcConfig = Output.ofNullable(oidcConfig);
             return this;
         }
 
-        public Builder sourceIpConfig(@Nullable Input<WorkforceSourceIpConfigGetArgs> sourceIpConfig) {
+        public Builder sourceIpConfig(@Nullable Output<WorkforceSourceIpConfigGetArgs> sourceIpConfig) {
             this.sourceIpConfig = sourceIpConfig;
             return this;
         }
 
         public Builder sourceIpConfig(@Nullable WorkforceSourceIpConfigGetArgs sourceIpConfig) {
-            this.sourceIpConfig = Input.ofNullable(sourceIpConfig);
+            this.sourceIpConfig = Output.ofNullable(sourceIpConfig);
             return this;
         }
 
-        public Builder subdomain(@Nullable Input<String> subdomain) {
+        public Builder subdomain(@Nullable Output<String> subdomain) {
             this.subdomain = subdomain;
             return this;
         }
 
         public Builder subdomain(@Nullable String subdomain) {
-            this.subdomain = Input.ofNullable(subdomain);
+            this.subdomain = Output.ofNullable(subdomain);
             return this;
         }
 
-        public Builder workforceName(@Nullable Input<String> workforceName) {
+        public Builder workforceName(@Nullable Output<String> workforceName) {
             this.workforceName = workforceName;
             return this;
         }
 
         public Builder workforceName(@Nullable String workforceName) {
-            this.workforceName = Input.ofNullable(workforceName);
+            this.workforceName = Output.ofNullable(workforceName);
             return this;
         }
         public WorkforceState build() {

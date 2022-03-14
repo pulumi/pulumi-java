@@ -3,7 +3,6 @@
 
 package io.pulumi.gcp.folder;
 
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -72,14 +71,14 @@ public class IAMPolicy extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public IAMPolicy(String name, IAMPolicyArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:folder/iAMPolicy:IAMPolicy", name, args == null ? IAMPolicyArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("gcp:folder/iAMPolicy:IAMPolicy", name, args == null ? IAMPolicyArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private IAMPolicy(String name, Input<String> id, @Nullable IAMPolicyState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private IAMPolicy(String name, Output<String> id, @Nullable IAMPolicyState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("gcp:folder/iAMPolicy:IAMPolicy", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -95,7 +94,7 @@ public class IAMPolicy extends io.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static IAMPolicy get(String name, Input<String> id, @Nullable IAMPolicyState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static IAMPolicy get(String name, Output<String> id, @Nullable IAMPolicyState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new IAMPolicy(name, id, state, options);
     }
 }

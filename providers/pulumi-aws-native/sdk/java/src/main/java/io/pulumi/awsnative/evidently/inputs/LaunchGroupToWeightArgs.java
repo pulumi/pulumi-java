@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.evidently.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -15,29 +15,29 @@ public final class LaunchGroupToWeightArgs extends io.pulumi.resources.ResourceA
     public static final LaunchGroupToWeightArgs Empty = new LaunchGroupToWeightArgs();
 
     @InputImport(name="groupName", required=true)
-      private final Input<String> groupName;
+      private final Output<String> groupName;
 
-    public Input<String> getGroupName() {
+    public Output<String> getGroupName() {
         return this.groupName;
     }
 
     @InputImport(name="splitWeight", required=true)
-      private final Input<Integer> splitWeight;
+      private final Output<Integer> splitWeight;
 
-    public Input<Integer> getSplitWeight() {
+    public Output<Integer> getSplitWeight() {
         return this.splitWeight;
     }
 
     public LaunchGroupToWeightArgs(
-        Input<String> groupName,
-        Input<Integer> splitWeight) {
+        Output<String> groupName,
+        Output<Integer> splitWeight) {
         this.groupName = Objects.requireNonNull(groupName, "expected parameter 'groupName' to be non-null");
         this.splitWeight = Objects.requireNonNull(splitWeight, "expected parameter 'splitWeight' to be non-null");
     }
 
     private LaunchGroupToWeightArgs() {
-        this.groupName = Input.empty();
-        this.splitWeight = Input.empty();
+        this.groupName = Output.empty();
+        this.splitWeight = Output.empty();
     }
 
     public static Builder builder() {
@@ -49,8 +49,8 @@ public final class LaunchGroupToWeightArgs extends io.pulumi.resources.ResourceA
     }
 
     public static final class Builder {
-        private Input<String> groupName;
-        private Input<Integer> splitWeight;
+        private Output<String> groupName;
+        private Output<Integer> splitWeight;
 
         public Builder() {
     	      // Empty
@@ -62,23 +62,23 @@ public final class LaunchGroupToWeightArgs extends io.pulumi.resources.ResourceA
     	      this.splitWeight = defaults.splitWeight;
         }
 
-        public Builder groupName(Input<String> groupName) {
+        public Builder groupName(Output<String> groupName) {
             this.groupName = Objects.requireNonNull(groupName);
             return this;
         }
 
         public Builder groupName(String groupName) {
-            this.groupName = Input.of(Objects.requireNonNull(groupName));
+            this.groupName = Output.of(Objects.requireNonNull(groupName));
             return this;
         }
 
-        public Builder splitWeight(Input<Integer> splitWeight) {
+        public Builder splitWeight(Output<Integer> splitWeight) {
             this.splitWeight = Objects.requireNonNull(splitWeight);
             return this;
         }
 
         public Builder splitWeight(Integer splitWeight) {
-            this.splitWeight = Input.of(Objects.requireNonNull(splitWeight));
+            this.splitWeight = Output.of(Objects.requireNonNull(splitWeight));
             return this;
         }
         public LaunchGroupToWeightArgs build() {

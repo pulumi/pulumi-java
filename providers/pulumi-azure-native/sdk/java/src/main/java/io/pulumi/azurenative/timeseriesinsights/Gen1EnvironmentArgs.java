@@ -7,7 +7,7 @@ import io.pulumi.azurenative.timeseriesinsights.enums.StorageLimitExceededBehavi
 import io.pulumi.azurenative.timeseriesinsights.inputs.SkuArgs;
 import io.pulumi.azurenative.timeseriesinsights.inputs.TimeSeriesIdPropertyArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -25,9 +25,9 @@ public final class Gen1EnvironmentArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="dataRetentionTime", required=true)
-      private final Input<String> dataRetentionTime;
+      private final Output<String> dataRetentionTime;
 
-    public Input<String> getDataRetentionTime() {
+    public Output<String> getDataRetentionTime() {
         return this.dataRetentionTime;
     }
 
@@ -36,10 +36,10 @@ public final class Gen1EnvironmentArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="environmentName")
-      private final @Nullable Input<String> environmentName;
+      private final @Nullable Output<String> environmentName;
 
-    public Input<String> getEnvironmentName() {
-        return this.environmentName == null ? Input.empty() : this.environmentName;
+    public Output<String> getEnvironmentName() {
+        return this.environmentName == null ? Output.empty() : this.environmentName;
     }
 
     /**
@@ -48,9 +48,9 @@ public final class Gen1EnvironmentArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="kind", required=true)
-      private final Input<String> kind;
+      private final Output<String> kind;
 
-    public Input<String> getKind() {
+    public Output<String> getKind() {
         return this.kind;
     }
 
@@ -59,10 +59,10 @@ public final class Gen1EnvironmentArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -70,10 +70,10 @@ public final class Gen1EnvironmentArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="partitionKeyProperties")
-      private final @Nullable Input<List<TimeSeriesIdPropertyArgs>> partitionKeyProperties;
+      private final @Nullable Output<List<TimeSeriesIdPropertyArgs>> partitionKeyProperties;
 
-    public Input<List<TimeSeriesIdPropertyArgs>> getPartitionKeyProperties() {
-        return this.partitionKeyProperties == null ? Input.empty() : this.partitionKeyProperties;
+    public Output<List<TimeSeriesIdPropertyArgs>> getPartitionKeyProperties() {
+        return this.partitionKeyProperties == null ? Output.empty() : this.partitionKeyProperties;
     }
 
     /**
@@ -81,9 +81,9 @@ public final class Gen1EnvironmentArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -92,9 +92,9 @@ public final class Gen1EnvironmentArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="sku", required=true)
-      private final Input<SkuArgs> sku;
+      private final Output<SkuArgs> sku;
 
-    public Input<SkuArgs> getSku() {
+    public Output<SkuArgs> getSku() {
         return this.sku;
     }
 
@@ -103,10 +103,10 @@ public final class Gen1EnvironmentArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="storageLimitExceededBehavior")
-      private final @Nullable Input<Either<String,StorageLimitExceededBehavior>> storageLimitExceededBehavior;
+      private final @Nullable Output<Either<String,StorageLimitExceededBehavior>> storageLimitExceededBehavior;
 
-    public Input<Either<String,StorageLimitExceededBehavior>> getStorageLimitExceededBehavior() {
-        return this.storageLimitExceededBehavior == null ? Input.empty() : this.storageLimitExceededBehavior;
+    public Output<Either<String,StorageLimitExceededBehavior>> getStorageLimitExceededBehavior() {
+        return this.storageLimitExceededBehavior == null ? Output.empty() : this.storageLimitExceededBehavior;
     }
 
     /**
@@ -114,22 +114,22 @@ public final class Gen1EnvironmentArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public Gen1EnvironmentArgs(
-        Input<String> dataRetentionTime,
-        @Nullable Input<String> environmentName,
-        Input<String> kind,
-        @Nullable Input<String> location,
-        @Nullable Input<List<TimeSeriesIdPropertyArgs>> partitionKeyProperties,
-        Input<String> resourceGroupName,
-        Input<SkuArgs> sku,
-        @Nullable Input<Either<String,StorageLimitExceededBehavior>> storageLimitExceededBehavior,
-        @Nullable Input<Map<String,String>> tags) {
+        Output<String> dataRetentionTime,
+        @Nullable Output<String> environmentName,
+        Output<String> kind,
+        @Nullable Output<String> location,
+        @Nullable Output<List<TimeSeriesIdPropertyArgs>> partitionKeyProperties,
+        Output<String> resourceGroupName,
+        Output<SkuArgs> sku,
+        @Nullable Output<Either<String,StorageLimitExceededBehavior>> storageLimitExceededBehavior,
+        @Nullable Output<Map<String,String>> tags) {
         this.dataRetentionTime = Objects.requireNonNull(dataRetentionTime, "expected parameter 'dataRetentionTime' to be non-null");
         this.environmentName = environmentName;
         this.kind = Objects.requireNonNull(kind, "expected parameter 'kind' to be non-null");
@@ -142,15 +142,15 @@ public final class Gen1EnvironmentArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private Gen1EnvironmentArgs() {
-        this.dataRetentionTime = Input.empty();
-        this.environmentName = Input.empty();
-        this.kind = Input.empty();
-        this.location = Input.empty();
-        this.partitionKeyProperties = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.sku = Input.empty();
-        this.storageLimitExceededBehavior = Input.empty();
-        this.tags = Input.empty();
+        this.dataRetentionTime = Output.empty();
+        this.environmentName = Output.empty();
+        this.kind = Output.empty();
+        this.location = Output.empty();
+        this.partitionKeyProperties = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.sku = Output.empty();
+        this.storageLimitExceededBehavior = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -162,15 +162,15 @@ public final class Gen1EnvironmentArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private Input<String> dataRetentionTime;
-        private @Nullable Input<String> environmentName;
-        private Input<String> kind;
-        private @Nullable Input<String> location;
-        private @Nullable Input<List<TimeSeriesIdPropertyArgs>> partitionKeyProperties;
-        private Input<String> resourceGroupName;
-        private Input<SkuArgs> sku;
-        private @Nullable Input<Either<String,StorageLimitExceededBehavior>> storageLimitExceededBehavior;
-        private @Nullable Input<Map<String,String>> tags;
+        private Output<String> dataRetentionTime;
+        private @Nullable Output<String> environmentName;
+        private Output<String> kind;
+        private @Nullable Output<String> location;
+        private @Nullable Output<List<TimeSeriesIdPropertyArgs>> partitionKeyProperties;
+        private Output<String> resourceGroupName;
+        private Output<SkuArgs> sku;
+        private @Nullable Output<Either<String,StorageLimitExceededBehavior>> storageLimitExceededBehavior;
+        private @Nullable Output<Map<String,String>> tags;
 
         public Builder() {
     	      // Empty
@@ -189,93 +189,93 @@ public final class Gen1EnvironmentArgs extends io.pulumi.resources.ResourceArgs 
     	      this.tags = defaults.tags;
         }
 
-        public Builder dataRetentionTime(Input<String> dataRetentionTime) {
+        public Builder dataRetentionTime(Output<String> dataRetentionTime) {
             this.dataRetentionTime = Objects.requireNonNull(dataRetentionTime);
             return this;
         }
 
         public Builder dataRetentionTime(String dataRetentionTime) {
-            this.dataRetentionTime = Input.of(Objects.requireNonNull(dataRetentionTime));
+            this.dataRetentionTime = Output.of(Objects.requireNonNull(dataRetentionTime));
             return this;
         }
 
-        public Builder environmentName(@Nullable Input<String> environmentName) {
+        public Builder environmentName(@Nullable Output<String> environmentName) {
             this.environmentName = environmentName;
             return this;
         }
 
         public Builder environmentName(@Nullable String environmentName) {
-            this.environmentName = Input.ofNullable(environmentName);
+            this.environmentName = Output.ofNullable(environmentName);
             return this;
         }
 
-        public Builder kind(Input<String> kind) {
+        public Builder kind(Output<String> kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
         public Builder kind(String kind) {
-            this.kind = Input.of(Objects.requireNonNull(kind));
+            this.kind = Output.of(Objects.requireNonNull(kind));
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder partitionKeyProperties(@Nullable Input<List<TimeSeriesIdPropertyArgs>> partitionKeyProperties) {
+        public Builder partitionKeyProperties(@Nullable Output<List<TimeSeriesIdPropertyArgs>> partitionKeyProperties) {
             this.partitionKeyProperties = partitionKeyProperties;
             return this;
         }
 
         public Builder partitionKeyProperties(@Nullable List<TimeSeriesIdPropertyArgs> partitionKeyProperties) {
-            this.partitionKeyProperties = Input.ofNullable(partitionKeyProperties);
+            this.partitionKeyProperties = Output.ofNullable(partitionKeyProperties);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder sku(Input<SkuArgs> sku) {
+        public Builder sku(Output<SkuArgs> sku) {
             this.sku = Objects.requireNonNull(sku);
             return this;
         }
 
         public Builder sku(SkuArgs sku) {
-            this.sku = Input.of(Objects.requireNonNull(sku));
+            this.sku = Output.of(Objects.requireNonNull(sku));
             return this;
         }
 
-        public Builder storageLimitExceededBehavior(@Nullable Input<Either<String,StorageLimitExceededBehavior>> storageLimitExceededBehavior) {
+        public Builder storageLimitExceededBehavior(@Nullable Output<Either<String,StorageLimitExceededBehavior>> storageLimitExceededBehavior) {
             this.storageLimitExceededBehavior = storageLimitExceededBehavior;
             return this;
         }
 
         public Builder storageLimitExceededBehavior(@Nullable Either<String,StorageLimitExceededBehavior> storageLimitExceededBehavior) {
-            this.storageLimitExceededBehavior = Input.ofNullable(storageLimitExceededBehavior);
+            this.storageLimitExceededBehavior = Output.ofNullable(storageLimitExceededBehavior);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public Gen1EnvironmentArgs build() {

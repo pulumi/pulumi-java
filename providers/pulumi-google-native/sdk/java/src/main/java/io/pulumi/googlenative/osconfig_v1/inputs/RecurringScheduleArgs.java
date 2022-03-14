@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.osconfig_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.osconfig_v1.enums.RecurringScheduleFrequency;
 import io.pulumi.googlenative.osconfig_v1.inputs.MonthlyScheduleArgs;
@@ -28,10 +28,10 @@ public final class RecurringScheduleArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="endTime")
-      private final @Nullable Input<String> endTime;
+      private final @Nullable Output<String> endTime;
 
-    public Input<String> getEndTime() {
-        return this.endTime == null ? Input.empty() : this.endTime;
+    public Output<String> getEndTime() {
+        return this.endTime == null ? Output.empty() : this.endTime;
     }
 
     /**
@@ -39,9 +39,9 @@ public final class RecurringScheduleArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="frequency", required=true)
-      private final Input<RecurringScheduleFrequency> frequency;
+      private final Output<RecurringScheduleFrequency> frequency;
 
-    public Input<RecurringScheduleFrequency> getFrequency() {
+    public Output<RecurringScheduleFrequency> getFrequency() {
         return this.frequency;
     }
 
@@ -50,9 +50,9 @@ public final class RecurringScheduleArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="monthly", required=true)
-      private final Input<MonthlyScheduleArgs> monthly;
+      private final Output<MonthlyScheduleArgs> monthly;
 
-    public Input<MonthlyScheduleArgs> getMonthly() {
+    public Output<MonthlyScheduleArgs> getMonthly() {
         return this.monthly;
     }
 
@@ -61,10 +61,10 @@ public final class RecurringScheduleArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="startTime")
-      private final @Nullable Input<String> startTime;
+      private final @Nullable Output<String> startTime;
 
-    public Input<String> getStartTime() {
-        return this.startTime == null ? Input.empty() : this.startTime;
+    public Output<String> getStartTime() {
+        return this.startTime == null ? Output.empty() : this.startTime;
     }
 
     /**
@@ -72,9 +72,9 @@ public final class RecurringScheduleArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="timeOfDay", required=true)
-      private final Input<TimeOfDayArgs> timeOfDay;
+      private final Output<TimeOfDayArgs> timeOfDay;
 
-    public Input<TimeOfDayArgs> getTimeOfDay() {
+    public Output<TimeOfDayArgs> getTimeOfDay() {
         return this.timeOfDay;
     }
 
@@ -83,9 +83,9 @@ public final class RecurringScheduleArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="timeZone", required=true)
-      private final Input<TimeZoneArgs> timeZone;
+      private final Output<TimeZoneArgs> timeZone;
 
-    public Input<TimeZoneArgs> getTimeZone() {
+    public Output<TimeZoneArgs> getTimeZone() {
         return this.timeZone;
     }
 
@@ -94,20 +94,20 @@ public final class RecurringScheduleArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="weekly", required=true)
-      private final Input<WeeklyScheduleArgs> weekly;
+      private final Output<WeeklyScheduleArgs> weekly;
 
-    public Input<WeeklyScheduleArgs> getWeekly() {
+    public Output<WeeklyScheduleArgs> getWeekly() {
         return this.weekly;
     }
 
     public RecurringScheduleArgs(
-        @Nullable Input<String> endTime,
-        Input<RecurringScheduleFrequency> frequency,
-        Input<MonthlyScheduleArgs> monthly,
-        @Nullable Input<String> startTime,
-        Input<TimeOfDayArgs> timeOfDay,
-        Input<TimeZoneArgs> timeZone,
-        Input<WeeklyScheduleArgs> weekly) {
+        @Nullable Output<String> endTime,
+        Output<RecurringScheduleFrequency> frequency,
+        Output<MonthlyScheduleArgs> monthly,
+        @Nullable Output<String> startTime,
+        Output<TimeOfDayArgs> timeOfDay,
+        Output<TimeZoneArgs> timeZone,
+        Output<WeeklyScheduleArgs> weekly) {
         this.endTime = endTime;
         this.frequency = Objects.requireNonNull(frequency, "expected parameter 'frequency' to be non-null");
         this.monthly = Objects.requireNonNull(monthly, "expected parameter 'monthly' to be non-null");
@@ -118,13 +118,13 @@ public final class RecurringScheduleArgs extends io.pulumi.resources.ResourceArg
     }
 
     private RecurringScheduleArgs() {
-        this.endTime = Input.empty();
-        this.frequency = Input.empty();
-        this.monthly = Input.empty();
-        this.startTime = Input.empty();
-        this.timeOfDay = Input.empty();
-        this.timeZone = Input.empty();
-        this.weekly = Input.empty();
+        this.endTime = Output.empty();
+        this.frequency = Output.empty();
+        this.monthly = Output.empty();
+        this.startTime = Output.empty();
+        this.timeOfDay = Output.empty();
+        this.timeZone = Output.empty();
+        this.weekly = Output.empty();
     }
 
     public static Builder builder() {
@@ -136,13 +136,13 @@ public final class RecurringScheduleArgs extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private @Nullable Input<String> endTime;
-        private Input<RecurringScheduleFrequency> frequency;
-        private Input<MonthlyScheduleArgs> monthly;
-        private @Nullable Input<String> startTime;
-        private Input<TimeOfDayArgs> timeOfDay;
-        private Input<TimeZoneArgs> timeZone;
-        private Input<WeeklyScheduleArgs> weekly;
+        private @Nullable Output<String> endTime;
+        private Output<RecurringScheduleFrequency> frequency;
+        private Output<MonthlyScheduleArgs> monthly;
+        private @Nullable Output<String> startTime;
+        private Output<TimeOfDayArgs> timeOfDay;
+        private Output<TimeZoneArgs> timeZone;
+        private Output<WeeklyScheduleArgs> weekly;
 
         public Builder() {
     	      // Empty
@@ -159,73 +159,73 @@ public final class RecurringScheduleArgs extends io.pulumi.resources.ResourceArg
     	      this.weekly = defaults.weekly;
         }
 
-        public Builder endTime(@Nullable Input<String> endTime) {
+        public Builder endTime(@Nullable Output<String> endTime) {
             this.endTime = endTime;
             return this;
         }
 
         public Builder endTime(@Nullable String endTime) {
-            this.endTime = Input.ofNullable(endTime);
+            this.endTime = Output.ofNullable(endTime);
             return this;
         }
 
-        public Builder frequency(Input<RecurringScheduleFrequency> frequency) {
+        public Builder frequency(Output<RecurringScheduleFrequency> frequency) {
             this.frequency = Objects.requireNonNull(frequency);
             return this;
         }
 
         public Builder frequency(RecurringScheduleFrequency frequency) {
-            this.frequency = Input.of(Objects.requireNonNull(frequency));
+            this.frequency = Output.of(Objects.requireNonNull(frequency));
             return this;
         }
 
-        public Builder monthly(Input<MonthlyScheduleArgs> monthly) {
+        public Builder monthly(Output<MonthlyScheduleArgs> monthly) {
             this.monthly = Objects.requireNonNull(monthly);
             return this;
         }
 
         public Builder monthly(MonthlyScheduleArgs monthly) {
-            this.monthly = Input.of(Objects.requireNonNull(monthly));
+            this.monthly = Output.of(Objects.requireNonNull(monthly));
             return this;
         }
 
-        public Builder startTime(@Nullable Input<String> startTime) {
+        public Builder startTime(@Nullable Output<String> startTime) {
             this.startTime = startTime;
             return this;
         }
 
         public Builder startTime(@Nullable String startTime) {
-            this.startTime = Input.ofNullable(startTime);
+            this.startTime = Output.ofNullable(startTime);
             return this;
         }
 
-        public Builder timeOfDay(Input<TimeOfDayArgs> timeOfDay) {
+        public Builder timeOfDay(Output<TimeOfDayArgs> timeOfDay) {
             this.timeOfDay = Objects.requireNonNull(timeOfDay);
             return this;
         }
 
         public Builder timeOfDay(TimeOfDayArgs timeOfDay) {
-            this.timeOfDay = Input.of(Objects.requireNonNull(timeOfDay));
+            this.timeOfDay = Output.of(Objects.requireNonNull(timeOfDay));
             return this;
         }
 
-        public Builder timeZone(Input<TimeZoneArgs> timeZone) {
+        public Builder timeZone(Output<TimeZoneArgs> timeZone) {
             this.timeZone = Objects.requireNonNull(timeZone);
             return this;
         }
 
         public Builder timeZone(TimeZoneArgs timeZone) {
-            this.timeZone = Input.of(Objects.requireNonNull(timeZone));
+            this.timeZone = Output.of(Objects.requireNonNull(timeZone));
             return this;
         }
 
-        public Builder weekly(Input<WeeklyScheduleArgs> weekly) {
+        public Builder weekly(Output<WeeklyScheduleArgs> weekly) {
             this.weekly = Objects.requireNonNull(weekly);
             return this;
         }
 
         public Builder weekly(WeeklyScheduleArgs weekly) {
-            this.weekly = Input.of(Objects.requireNonNull(weekly));
+            this.weekly = Output.of(Objects.requireNonNull(weekly));
             return this;
         }
         public RecurringScheduleArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.notebooks_v1;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.notebooks_v1.inputs.ExecutionTemplateArgs;
 import java.lang.String;
@@ -20,16 +20,16 @@ public final class ExecutionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     @InputImport(name="executionId", required=true)
-      private final Input<String> executionId;
+      private final Output<String> executionId;
 
-    public Input<String> getExecutionId() {
+    public Output<String> getExecutionId() {
         return this.executionId;
     }
 
@@ -38,17 +38,17 @@ public final class ExecutionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="executionTemplate")
-      private final @Nullable Input<ExecutionTemplateArgs> executionTemplate;
+      private final @Nullable Output<ExecutionTemplateArgs> executionTemplate;
 
-    public Input<ExecutionTemplateArgs> getExecutionTemplate() {
-        return this.executionTemplate == null ? Input.empty() : this.executionTemplate;
+    public Output<ExecutionTemplateArgs> getExecutionTemplate() {
+        return this.executionTemplate == null ? Output.empty() : this.executionTemplate;
     }
 
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -56,26 +56,26 @@ public final class ExecutionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="outputNotebookFile")
-      private final @Nullable Input<String> outputNotebookFile;
+      private final @Nullable Output<String> outputNotebookFile;
 
-    public Input<String> getOutputNotebookFile() {
-        return this.outputNotebookFile == null ? Input.empty() : this.outputNotebookFile;
+    public Output<String> getOutputNotebookFile() {
+        return this.outputNotebookFile == null ? Output.empty() : this.outputNotebookFile;
     }
 
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     public ExecutionArgs(
-        @Nullable Input<String> description,
-        Input<String> executionId,
-        @Nullable Input<ExecutionTemplateArgs> executionTemplate,
-        @Nullable Input<String> location,
-        @Nullable Input<String> outputNotebookFile,
-        @Nullable Input<String> project) {
+        @Nullable Output<String> description,
+        Output<String> executionId,
+        @Nullable Output<ExecutionTemplateArgs> executionTemplate,
+        @Nullable Output<String> location,
+        @Nullable Output<String> outputNotebookFile,
+        @Nullable Output<String> project) {
         this.description = description;
         this.executionId = Objects.requireNonNull(executionId, "expected parameter 'executionId' to be non-null");
         this.executionTemplate = executionTemplate;
@@ -85,12 +85,12 @@ public final class ExecutionArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ExecutionArgs() {
-        this.description = Input.empty();
-        this.executionId = Input.empty();
-        this.executionTemplate = Input.empty();
-        this.location = Input.empty();
-        this.outputNotebookFile = Input.empty();
-        this.project = Input.empty();
+        this.description = Output.empty();
+        this.executionId = Output.empty();
+        this.executionTemplate = Output.empty();
+        this.location = Output.empty();
+        this.outputNotebookFile = Output.empty();
+        this.project = Output.empty();
     }
 
     public static Builder builder() {
@@ -102,12 +102,12 @@ public final class ExecutionArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> description;
-        private Input<String> executionId;
-        private @Nullable Input<ExecutionTemplateArgs> executionTemplate;
-        private @Nullable Input<String> location;
-        private @Nullable Input<String> outputNotebookFile;
-        private @Nullable Input<String> project;
+        private @Nullable Output<String> description;
+        private Output<String> executionId;
+        private @Nullable Output<ExecutionTemplateArgs> executionTemplate;
+        private @Nullable Output<String> location;
+        private @Nullable Output<String> outputNotebookFile;
+        private @Nullable Output<String> project;
 
         public Builder() {
     	      // Empty
@@ -123,63 +123,63 @@ public final class ExecutionArgs extends io.pulumi.resources.ResourceArgs {
     	      this.project = defaults.project;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder executionId(Input<String> executionId) {
+        public Builder executionId(Output<String> executionId) {
             this.executionId = Objects.requireNonNull(executionId);
             return this;
         }
 
         public Builder executionId(String executionId) {
-            this.executionId = Input.of(Objects.requireNonNull(executionId));
+            this.executionId = Output.of(Objects.requireNonNull(executionId));
             return this;
         }
 
-        public Builder executionTemplate(@Nullable Input<ExecutionTemplateArgs> executionTemplate) {
+        public Builder executionTemplate(@Nullable Output<ExecutionTemplateArgs> executionTemplate) {
             this.executionTemplate = executionTemplate;
             return this;
         }
 
         public Builder executionTemplate(@Nullable ExecutionTemplateArgs executionTemplate) {
-            this.executionTemplate = Input.ofNullable(executionTemplate);
+            this.executionTemplate = Output.ofNullable(executionTemplate);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder outputNotebookFile(@Nullable Input<String> outputNotebookFile) {
+        public Builder outputNotebookFile(@Nullable Output<String> outputNotebookFile) {
             this.outputNotebookFile = outputNotebookFile;
             return this;
         }
 
         public Builder outputNotebookFile(@Nullable String outputNotebookFile) {
-            this.outputNotebookFile = Input.ofNullable(outputNotebookFile);
+            this.outputNotebookFile = Output.ofNullable(outputNotebookFile);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
         public ExecutionArgs build() {

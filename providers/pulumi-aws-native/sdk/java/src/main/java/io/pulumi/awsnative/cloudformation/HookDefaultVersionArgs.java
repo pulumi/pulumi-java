@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.cloudformation;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -21,10 +21,10 @@ public final class HookDefaultVersionArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="typeName")
-      private final @Nullable Input<String> typeName;
+      private final @Nullable Output<String> typeName;
 
-    public Input<String> getTypeName() {
-        return this.typeName == null ? Input.empty() : this.typeName;
+    public Output<String> getTypeName() {
+        return this.typeName == null ? Output.empty() : this.typeName;
     }
 
     /**
@@ -32,10 +32,10 @@ public final class HookDefaultVersionArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="typeVersionArn")
-      private final @Nullable Input<String> typeVersionArn;
+      private final @Nullable Output<String> typeVersionArn;
 
-    public Input<String> getTypeVersionArn() {
-        return this.typeVersionArn == null ? Input.empty() : this.typeVersionArn;
+    public Output<String> getTypeVersionArn() {
+        return this.typeVersionArn == null ? Output.empty() : this.typeVersionArn;
     }
 
     /**
@@ -43,25 +43,25 @@ public final class HookDefaultVersionArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="versionId")
-      private final @Nullable Input<String> versionId;
+      private final @Nullable Output<String> versionId;
 
-    public Input<String> getVersionId() {
-        return this.versionId == null ? Input.empty() : this.versionId;
+    public Output<String> getVersionId() {
+        return this.versionId == null ? Output.empty() : this.versionId;
     }
 
     public HookDefaultVersionArgs(
-        @Nullable Input<String> typeName,
-        @Nullable Input<String> typeVersionArn,
-        @Nullable Input<String> versionId) {
+        @Nullable Output<String> typeName,
+        @Nullable Output<String> typeVersionArn,
+        @Nullable Output<String> versionId) {
         this.typeName = typeName;
         this.typeVersionArn = typeVersionArn;
         this.versionId = versionId;
     }
 
     private HookDefaultVersionArgs() {
-        this.typeName = Input.empty();
-        this.typeVersionArn = Input.empty();
-        this.versionId = Input.empty();
+        this.typeName = Output.empty();
+        this.typeVersionArn = Output.empty();
+        this.versionId = Output.empty();
     }
 
     public static Builder builder() {
@@ -73,9 +73,9 @@ public final class HookDefaultVersionArgs extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private @Nullable Input<String> typeName;
-        private @Nullable Input<String> typeVersionArn;
-        private @Nullable Input<String> versionId;
+        private @Nullable Output<String> typeName;
+        private @Nullable Output<String> typeVersionArn;
+        private @Nullable Output<String> versionId;
 
         public Builder() {
     	      // Empty
@@ -88,33 +88,33 @@ public final class HookDefaultVersionArgs extends io.pulumi.resources.ResourceAr
     	      this.versionId = defaults.versionId;
         }
 
-        public Builder typeName(@Nullable Input<String> typeName) {
+        public Builder typeName(@Nullable Output<String> typeName) {
             this.typeName = typeName;
             return this;
         }
 
         public Builder typeName(@Nullable String typeName) {
-            this.typeName = Input.ofNullable(typeName);
+            this.typeName = Output.ofNullable(typeName);
             return this;
         }
 
-        public Builder typeVersionArn(@Nullable Input<String> typeVersionArn) {
+        public Builder typeVersionArn(@Nullable Output<String> typeVersionArn) {
             this.typeVersionArn = typeVersionArn;
             return this;
         }
 
         public Builder typeVersionArn(@Nullable String typeVersionArn) {
-            this.typeVersionArn = Input.ofNullable(typeVersionArn);
+            this.typeVersionArn = Output.ofNullable(typeVersionArn);
             return this;
         }
 
-        public Builder versionId(@Nullable Input<String> versionId) {
+        public Builder versionId(@Nullable Output<String> versionId) {
             this.versionId = versionId;
             return this;
         }
 
         public Builder versionId(@Nullable String versionId) {
-            this.versionId = Input.ofNullable(versionId);
+            this.versionId = Output.ofNullable(versionId);
             return this;
         }
         public HookDefaultVersionArgs build() {

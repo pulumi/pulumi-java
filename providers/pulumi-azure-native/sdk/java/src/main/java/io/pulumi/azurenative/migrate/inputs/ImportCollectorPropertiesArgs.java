@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.migrate.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -15,18 +15,18 @@ public final class ImportCollectorPropertiesArgs extends io.pulumi.resources.Res
     public static final ImportCollectorPropertiesArgs Empty = new ImportCollectorPropertiesArgs();
 
     @InputImport(name="discoverySiteId")
-      private final @Nullable Input<String> discoverySiteId;
+      private final @Nullable Output<String> discoverySiteId;
 
-    public Input<String> getDiscoverySiteId() {
-        return this.discoverySiteId == null ? Input.empty() : this.discoverySiteId;
+    public Output<String> getDiscoverySiteId() {
+        return this.discoverySiteId == null ? Output.empty() : this.discoverySiteId;
     }
 
-    public ImportCollectorPropertiesArgs(@Nullable Input<String> discoverySiteId) {
+    public ImportCollectorPropertiesArgs(@Nullable Output<String> discoverySiteId) {
         this.discoverySiteId = discoverySiteId;
     }
 
     private ImportCollectorPropertiesArgs() {
-        this.discoverySiteId = Input.empty();
+        this.discoverySiteId = Output.empty();
     }
 
     public static Builder builder() {
@@ -38,7 +38,7 @@ public final class ImportCollectorPropertiesArgs extends io.pulumi.resources.Res
     }
 
     public static final class Builder {
-        private @Nullable Input<String> discoverySiteId;
+        private @Nullable Output<String> discoverySiteId;
 
         public Builder() {
     	      // Empty
@@ -49,13 +49,13 @@ public final class ImportCollectorPropertiesArgs extends io.pulumi.resources.Res
     	      this.discoverySiteId = defaults.discoverySiteId;
         }
 
-        public Builder discoverySiteId(@Nullable Input<String> discoverySiteId) {
+        public Builder discoverySiteId(@Nullable Output<String> discoverySiteId) {
             this.discoverySiteId = discoverySiteId;
             return this;
         }
 
         public Builder discoverySiteId(@Nullable String discoverySiteId) {
-            this.discoverySiteId = Input.ofNullable(discoverySiteId);
+            this.discoverySiteId = Output.ofNullable(discoverySiteId);
             return this;
         }
         public ImportCollectorPropertiesArgs build() {

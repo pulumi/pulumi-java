@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.websecurityscanner_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.websecurityscanner_v1.inputs.IapTestServiceAccountInfoArgs;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class IapCredentialArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="iapTestServiceAccountInfo")
-      private final @Nullable Input<IapTestServiceAccountInfoArgs> iapTestServiceAccountInfo;
+      private final @Nullable Output<IapTestServiceAccountInfoArgs> iapTestServiceAccountInfo;
 
-    public Input<IapTestServiceAccountInfoArgs> getIapTestServiceAccountInfo() {
-        return this.iapTestServiceAccountInfo == null ? Input.empty() : this.iapTestServiceAccountInfo;
+    public Output<IapTestServiceAccountInfoArgs> getIapTestServiceAccountInfo() {
+        return this.iapTestServiceAccountInfo == null ? Output.empty() : this.iapTestServiceAccountInfo;
     }
 
-    public IapCredentialArgs(@Nullable Input<IapTestServiceAccountInfoArgs> iapTestServiceAccountInfo) {
+    public IapCredentialArgs(@Nullable Output<IapTestServiceAccountInfoArgs> iapTestServiceAccountInfo) {
         this.iapTestServiceAccountInfo = iapTestServiceAccountInfo;
     }
 
     private IapCredentialArgs() {
-        this.iapTestServiceAccountInfo = Input.empty();
+        this.iapTestServiceAccountInfo = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class IapCredentialArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<IapTestServiceAccountInfoArgs> iapTestServiceAccountInfo;
+        private @Nullable Output<IapTestServiceAccountInfoArgs> iapTestServiceAccountInfo;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class IapCredentialArgs extends io.pulumi.resources.ResourceArgs {
     	      this.iapTestServiceAccountInfo = defaults.iapTestServiceAccountInfo;
         }
 
-        public Builder iapTestServiceAccountInfo(@Nullable Input<IapTestServiceAccountInfoArgs> iapTestServiceAccountInfo) {
+        public Builder iapTestServiceAccountInfo(@Nullable Output<IapTestServiceAccountInfoArgs> iapTestServiceAccountInfo) {
             this.iapTestServiceAccountInfo = iapTestServiceAccountInfo;
             return this;
         }
 
         public Builder iapTestServiceAccountInfo(@Nullable IapTestServiceAccountInfoArgs iapTestServiceAccountInfo) {
-            this.iapTestServiceAccountInfo = Input.ofNullable(iapTestServiceAccountInfo);
+            this.iapTestServiceAccountInfo = Output.ofNullable(iapTestServiceAccountInfo);
             return this;
         }
         public IapCredentialArgs build() {

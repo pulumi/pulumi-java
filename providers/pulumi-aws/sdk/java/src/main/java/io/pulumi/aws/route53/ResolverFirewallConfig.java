@@ -6,7 +6,6 @@ package io.pulumi.aws.route53;
 import io.pulumi.aws.Utilities;
 import io.pulumi.aws.route53.ResolverFirewallConfigArgs;
 import io.pulumi.aws.route53.inputs.ResolverFirewallConfigState;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -110,14 +109,14 @@ public class ResolverFirewallConfig extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ResolverFirewallConfig(String name, ResolverFirewallConfigArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:route53/resolverFirewallConfig:ResolverFirewallConfig", name, args == null ? ResolverFirewallConfigArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws:route53/resolverFirewallConfig:ResolverFirewallConfig", name, args == null ? ResolverFirewallConfigArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private ResolverFirewallConfig(String name, Input<String> id, @Nullable ResolverFirewallConfigState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private ResolverFirewallConfig(String name, Output<String> id, @Nullable ResolverFirewallConfigState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws:route53/resolverFirewallConfig:ResolverFirewallConfig", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -133,7 +132,7 @@ public class ResolverFirewallConfig extends io.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static ResolverFirewallConfig get(String name, Input<String> id, @Nullable ResolverFirewallConfigState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static ResolverFirewallConfig get(String name, Output<String> id, @Nullable ResolverFirewallConfigState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new ResolverFirewallConfig(name, id, state, options);
     }
 }

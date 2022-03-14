@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.guardduty.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class InviteAccepterState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="detectorId")
-      private final @Nullable Input<String> detectorId;
+      private final @Nullable Output<String> detectorId;
 
-    public Input<String> getDetectorId() {
-        return this.detectorId == null ? Input.empty() : this.detectorId;
+    public Output<String> getDetectorId() {
+        return this.detectorId == null ? Output.empty() : this.detectorId;
     }
 
     /**
@@ -30,22 +30,22 @@ public final class InviteAccepterState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="masterAccountId")
-      private final @Nullable Input<String> masterAccountId;
+      private final @Nullable Output<String> masterAccountId;
 
-    public Input<String> getMasterAccountId() {
-        return this.masterAccountId == null ? Input.empty() : this.masterAccountId;
+    public Output<String> getMasterAccountId() {
+        return this.masterAccountId == null ? Output.empty() : this.masterAccountId;
     }
 
     public InviteAccepterState(
-        @Nullable Input<String> detectorId,
-        @Nullable Input<String> masterAccountId) {
+        @Nullable Output<String> detectorId,
+        @Nullable Output<String> masterAccountId) {
         this.detectorId = detectorId;
         this.masterAccountId = masterAccountId;
     }
 
     private InviteAccepterState() {
-        this.detectorId = Input.empty();
-        this.masterAccountId = Input.empty();
+        this.detectorId = Output.empty();
+        this.masterAccountId = Output.empty();
     }
 
     public static Builder builder() {
@@ -57,8 +57,8 @@ public final class InviteAccepterState extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private @Nullable Input<String> detectorId;
-        private @Nullable Input<String> masterAccountId;
+        private @Nullable Output<String> detectorId;
+        private @Nullable Output<String> masterAccountId;
 
         public Builder() {
     	      // Empty
@@ -70,23 +70,23 @@ public final class InviteAccepterState extends io.pulumi.resources.ResourceArgs 
     	      this.masterAccountId = defaults.masterAccountId;
         }
 
-        public Builder detectorId(@Nullable Input<String> detectorId) {
+        public Builder detectorId(@Nullable Output<String> detectorId) {
             this.detectorId = detectorId;
             return this;
         }
 
         public Builder detectorId(@Nullable String detectorId) {
-            this.detectorId = Input.ofNullable(detectorId);
+            this.detectorId = Output.ofNullable(detectorId);
             return this;
         }
 
-        public Builder masterAccountId(@Nullable Input<String> masterAccountId) {
+        public Builder masterAccountId(@Nullable Output<String> masterAccountId) {
             this.masterAccountId = masterAccountId;
             return this;
         }
 
         public Builder masterAccountId(@Nullable String masterAccountId) {
-            this.masterAccountId = Input.ofNullable(masterAccountId);
+            this.masterAccountId = Output.ofNullable(masterAccountId);
             return this;
         }
         public InviteAccepterState build() {

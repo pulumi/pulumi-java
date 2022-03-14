@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,18 +19,18 @@ public final class SecurityPolicyRecaptchaOptionsConfigArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="redirectSiteKey")
-      private final @Nullable Input<String> redirectSiteKey;
+      private final @Nullable Output<String> redirectSiteKey;
 
-    public Input<String> getRedirectSiteKey() {
-        return this.redirectSiteKey == null ? Input.empty() : this.redirectSiteKey;
+    public Output<String> getRedirectSiteKey() {
+        return this.redirectSiteKey == null ? Output.empty() : this.redirectSiteKey;
     }
 
-    public SecurityPolicyRecaptchaOptionsConfigArgs(@Nullable Input<String> redirectSiteKey) {
+    public SecurityPolicyRecaptchaOptionsConfigArgs(@Nullable Output<String> redirectSiteKey) {
         this.redirectSiteKey = redirectSiteKey;
     }
 
     private SecurityPolicyRecaptchaOptionsConfigArgs() {
-        this.redirectSiteKey = Input.empty();
+        this.redirectSiteKey = Output.empty();
     }
 
     public static Builder builder() {
@@ -42,7 +42,7 @@ public final class SecurityPolicyRecaptchaOptionsConfigArgs extends io.pulumi.re
     }
 
     public static final class Builder {
-        private @Nullable Input<String> redirectSiteKey;
+        private @Nullable Output<String> redirectSiteKey;
 
         public Builder() {
     	      // Empty
@@ -53,13 +53,13 @@ public final class SecurityPolicyRecaptchaOptionsConfigArgs extends io.pulumi.re
     	      this.redirectSiteKey = defaults.redirectSiteKey;
         }
 
-        public Builder redirectSiteKey(@Nullable Input<String> redirectSiteKey) {
+        public Builder redirectSiteKey(@Nullable Output<String> redirectSiteKey) {
             this.redirectSiteKey = redirectSiteKey;
             return this;
         }
 
         public Builder redirectSiteKey(@Nullable String redirectSiteKey) {
-            this.redirectSiteKey = Input.ofNullable(redirectSiteKey);
+            this.redirectSiteKey = Output.ofNullable(redirectSiteKey);
             return this;
         }
         public SecurityPolicyRecaptchaOptionsConfigArgs build() {

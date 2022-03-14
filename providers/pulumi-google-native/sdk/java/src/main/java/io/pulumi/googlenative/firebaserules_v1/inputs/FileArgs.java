@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.firebaserules_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,9 +23,9 @@ public final class FileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="content", required=true)
-      private final Input<String> content;
+      private final Output<String> content;
 
-    public Input<String> getContent() {
+    public Output<String> getContent() {
         return this.content;
     }
 
@@ -34,10 +34,10 @@ public final class FileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="fingerprint")
-      private final @Nullable Input<String> fingerprint;
+      private final @Nullable Output<String> fingerprint;
 
-    public Input<String> getFingerprint() {
-        return this.fingerprint == null ? Input.empty() : this.fingerprint;
+    public Output<String> getFingerprint() {
+        return this.fingerprint == null ? Output.empty() : this.fingerprint;
     }
 
     /**
@@ -45,25 +45,25 @@ public final class FileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name", required=true)
-      private final Input<String> name;
+      private final Output<String> name;
 
-    public Input<String> getName() {
+    public Output<String> getName() {
         return this.name;
     }
 
     public FileArgs(
-        Input<String> content,
-        @Nullable Input<String> fingerprint,
-        Input<String> name) {
+        Output<String> content,
+        @Nullable Output<String> fingerprint,
+        Output<String> name) {
         this.content = Objects.requireNonNull(content, "expected parameter 'content' to be non-null");
         this.fingerprint = fingerprint;
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
     }
 
     private FileArgs() {
-        this.content = Input.empty();
-        this.fingerprint = Input.empty();
-        this.name = Input.empty();
+        this.content = Output.empty();
+        this.fingerprint = Output.empty();
+        this.name = Output.empty();
     }
 
     public static Builder builder() {
@@ -75,9 +75,9 @@ public final class FileArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> content;
-        private @Nullable Input<String> fingerprint;
-        private Input<String> name;
+        private Output<String> content;
+        private @Nullable Output<String> fingerprint;
+        private Output<String> name;
 
         public Builder() {
     	      // Empty
@@ -90,33 +90,33 @@ public final class FileArgs extends io.pulumi.resources.ResourceArgs {
     	      this.name = defaults.name;
         }
 
-        public Builder content(Input<String> content) {
+        public Builder content(Output<String> content) {
             this.content = Objects.requireNonNull(content);
             return this;
         }
 
         public Builder content(String content) {
-            this.content = Input.of(Objects.requireNonNull(content));
+            this.content = Output.of(Objects.requireNonNull(content));
             return this;
         }
 
-        public Builder fingerprint(@Nullable Input<String> fingerprint) {
+        public Builder fingerprint(@Nullable Output<String> fingerprint) {
             this.fingerprint = fingerprint;
             return this;
         }
 
         public Builder fingerprint(@Nullable String fingerprint) {
-            this.fingerprint = Input.ofNullable(fingerprint);
+            this.fingerprint = Output.ofNullable(fingerprint);
             return this;
         }
 
-        public Builder name(Input<String> name) {
+        public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(String name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
         public FileArgs build() {

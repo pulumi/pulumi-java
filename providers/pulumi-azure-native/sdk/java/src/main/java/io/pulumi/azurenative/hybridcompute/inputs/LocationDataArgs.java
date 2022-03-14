@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.hybridcompute.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class LocationDataArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="city")
-      private final @Nullable Input<String> city;
+      private final @Nullable Output<String> city;
 
-    public Input<String> getCity() {
-        return this.city == null ? Input.empty() : this.city;
+    public Output<String> getCity() {
+        return this.city == null ? Output.empty() : this.city;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class LocationDataArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="countryOrRegion")
-      private final @Nullable Input<String> countryOrRegion;
+      private final @Nullable Output<String> countryOrRegion;
 
-    public Input<String> getCountryOrRegion() {
-        return this.countryOrRegion == null ? Input.empty() : this.countryOrRegion;
+    public Output<String> getCountryOrRegion() {
+        return this.countryOrRegion == null ? Output.empty() : this.countryOrRegion;
     }
 
     /**
@@ -45,10 +45,10 @@ public final class LocationDataArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="district")
-      private final @Nullable Input<String> district;
+      private final @Nullable Output<String> district;
 
-    public Input<String> getDistrict() {
-        return this.district == null ? Input.empty() : this.district;
+    public Output<String> getDistrict() {
+        return this.district == null ? Output.empty() : this.district;
     }
 
     /**
@@ -56,17 +56,17 @@ public final class LocationDataArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name", required=true)
-      private final Input<String> name;
+      private final Output<String> name;
 
-    public Input<String> getName() {
+    public Output<String> getName() {
         return this.name;
     }
 
     public LocationDataArgs(
-        @Nullable Input<String> city,
-        @Nullable Input<String> countryOrRegion,
-        @Nullable Input<String> district,
-        Input<String> name) {
+        @Nullable Output<String> city,
+        @Nullable Output<String> countryOrRegion,
+        @Nullable Output<String> district,
+        Output<String> name) {
         this.city = city;
         this.countryOrRegion = countryOrRegion;
         this.district = district;
@@ -74,10 +74,10 @@ public final class LocationDataArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private LocationDataArgs() {
-        this.city = Input.empty();
-        this.countryOrRegion = Input.empty();
-        this.district = Input.empty();
-        this.name = Input.empty();
+        this.city = Output.empty();
+        this.countryOrRegion = Output.empty();
+        this.district = Output.empty();
+        this.name = Output.empty();
     }
 
     public static Builder builder() {
@@ -89,10 +89,10 @@ public final class LocationDataArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> city;
-        private @Nullable Input<String> countryOrRegion;
-        private @Nullable Input<String> district;
-        private Input<String> name;
+        private @Nullable Output<String> city;
+        private @Nullable Output<String> countryOrRegion;
+        private @Nullable Output<String> district;
+        private Output<String> name;
 
         public Builder() {
     	      // Empty
@@ -106,43 +106,43 @@ public final class LocationDataArgs extends io.pulumi.resources.ResourceArgs {
     	      this.name = defaults.name;
         }
 
-        public Builder city(@Nullable Input<String> city) {
+        public Builder city(@Nullable Output<String> city) {
             this.city = city;
             return this;
         }
 
         public Builder city(@Nullable String city) {
-            this.city = Input.ofNullable(city);
+            this.city = Output.ofNullable(city);
             return this;
         }
 
-        public Builder countryOrRegion(@Nullable Input<String> countryOrRegion) {
+        public Builder countryOrRegion(@Nullable Output<String> countryOrRegion) {
             this.countryOrRegion = countryOrRegion;
             return this;
         }
 
         public Builder countryOrRegion(@Nullable String countryOrRegion) {
-            this.countryOrRegion = Input.ofNullable(countryOrRegion);
+            this.countryOrRegion = Output.ofNullable(countryOrRegion);
             return this;
         }
 
-        public Builder district(@Nullable Input<String> district) {
+        public Builder district(@Nullable Output<String> district) {
             this.district = district;
             return this;
         }
 
         public Builder district(@Nullable String district) {
-            this.district = Input.ofNullable(district);
+            this.district = Output.ofNullable(district);
             return this;
         }
 
-        public Builder name(Input<String> name) {
+        public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(String name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
         public LocationDataArgs build() {

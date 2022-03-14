@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.apigateway_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class ApigatewayApiConfigFileArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="contents")
-      private final @Nullable Input<String> contents;
+      private final @Nullable Output<String> contents;
 
-    public Input<String> getContents() {
-        return this.contents == null ? Input.empty() : this.contents;
+    public Output<String> getContents() {
+        return this.contents == null ? Output.empty() : this.contents;
     }
 
     /**
@@ -34,22 +34,22 @@ public final class ApigatewayApiConfigFileArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="path")
-      private final @Nullable Input<String> path;
+      private final @Nullable Output<String> path;
 
-    public Input<String> getPath() {
-        return this.path == null ? Input.empty() : this.path;
+    public Output<String> getPath() {
+        return this.path == null ? Output.empty() : this.path;
     }
 
     public ApigatewayApiConfigFileArgs(
-        @Nullable Input<String> contents,
-        @Nullable Input<String> path) {
+        @Nullable Output<String> contents,
+        @Nullable Output<String> path) {
         this.contents = contents;
         this.path = path;
     }
 
     private ApigatewayApiConfigFileArgs() {
-        this.contents = Input.empty();
-        this.path = Input.empty();
+        this.contents = Output.empty();
+        this.path = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class ApigatewayApiConfigFileArgs extends io.pulumi.resources.Resou
     }
 
     public static final class Builder {
-        private @Nullable Input<String> contents;
-        private @Nullable Input<String> path;
+        private @Nullable Output<String> contents;
+        private @Nullable Output<String> path;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class ApigatewayApiConfigFileArgs extends io.pulumi.resources.Resou
     	      this.path = defaults.path;
         }
 
-        public Builder contents(@Nullable Input<String> contents) {
+        public Builder contents(@Nullable Output<String> contents) {
             this.contents = contents;
             return this;
         }
 
         public Builder contents(@Nullable String contents) {
-            this.contents = Input.ofNullable(contents);
+            this.contents = Output.ofNullable(contents);
             return this;
         }
 
-        public Builder path(@Nullable Input<String> path) {
+        public Builder path(@Nullable Output<String> path) {
             this.path = path;
             return this;
         }
 
         public Builder path(@Nullable String path) {
-            this.path = Input.ofNullable(path);
+            this.path = Output.ofNullable(path);
             return this;
         }
         public ApigatewayApiConfigFileArgs build() {

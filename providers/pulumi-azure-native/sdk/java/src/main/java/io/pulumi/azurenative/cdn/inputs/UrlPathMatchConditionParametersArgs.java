@@ -6,7 +6,7 @@ package io.pulumi.azurenative.cdn.inputs;
 import io.pulumi.azurenative.cdn.enums.Transform;
 import io.pulumi.azurenative.cdn.enums.UrlPathOperator;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -28,10 +28,10 @@ public final class UrlPathMatchConditionParametersArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="matchValues")
-      private final @Nullable Input<List<String>> matchValues;
+      private final @Nullable Output<List<String>> matchValues;
 
-    public Input<List<String>> getMatchValues() {
-        return this.matchValues == null ? Input.empty() : this.matchValues;
+    public Output<List<String>> getMatchValues() {
+        return this.matchValues == null ? Output.empty() : this.matchValues;
     }
 
     /**
@@ -39,16 +39,16 @@ public final class UrlPathMatchConditionParametersArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="negateCondition")
-      private final @Nullable Input<Boolean> negateCondition;
+      private final @Nullable Output<Boolean> negateCondition;
 
-    public Input<Boolean> getNegateCondition() {
-        return this.negateCondition == null ? Input.empty() : this.negateCondition;
+    public Output<Boolean> getNegateCondition() {
+        return this.negateCondition == null ? Output.empty() : this.negateCondition;
     }
 
     @InputImport(name="odataType", required=true)
-      private final Input<String> odataType;
+      private final Output<String> odataType;
 
-    public Input<String> getOdataType() {
+    public Output<String> getOdataType() {
         return this.odataType;
     }
 
@@ -57,9 +57,9 @@ public final class UrlPathMatchConditionParametersArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="operator", required=true)
-      private final Input<Either<String,UrlPathOperator>> operator;
+      private final Output<Either<String,UrlPathOperator>> operator;
 
-    public Input<Either<String,UrlPathOperator>> getOperator() {
+    public Output<Either<String,UrlPathOperator>> getOperator() {
         return this.operator;
     }
 
@@ -68,18 +68,18 @@ public final class UrlPathMatchConditionParametersArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="transforms")
-      private final @Nullable Input<List<Either<String,Transform>>> transforms;
+      private final @Nullable Output<List<Either<String,Transform>>> transforms;
 
-    public Input<List<Either<String,Transform>>> getTransforms() {
-        return this.transforms == null ? Input.empty() : this.transforms;
+    public Output<List<Either<String,Transform>>> getTransforms() {
+        return this.transforms == null ? Output.empty() : this.transforms;
     }
 
     public UrlPathMatchConditionParametersArgs(
-        @Nullable Input<List<String>> matchValues,
-        @Nullable Input<Boolean> negateCondition,
-        Input<String> odataType,
-        Input<Either<String,UrlPathOperator>> operator,
-        @Nullable Input<List<Either<String,Transform>>> transforms) {
+        @Nullable Output<List<String>> matchValues,
+        @Nullable Output<Boolean> negateCondition,
+        Output<String> odataType,
+        Output<Either<String,UrlPathOperator>> operator,
+        @Nullable Output<List<Either<String,Transform>>> transforms) {
         this.matchValues = matchValues;
         this.negateCondition = negateCondition;
         this.odataType = Objects.requireNonNull(odataType, "expected parameter 'odataType' to be non-null");
@@ -88,11 +88,11 @@ public final class UrlPathMatchConditionParametersArgs extends io.pulumi.resourc
     }
 
     private UrlPathMatchConditionParametersArgs() {
-        this.matchValues = Input.empty();
-        this.negateCondition = Input.empty();
-        this.odataType = Input.empty();
-        this.operator = Input.empty();
-        this.transforms = Input.empty();
+        this.matchValues = Output.empty();
+        this.negateCondition = Output.empty();
+        this.odataType = Output.empty();
+        this.operator = Output.empty();
+        this.transforms = Output.empty();
     }
 
     public static Builder builder() {
@@ -104,11 +104,11 @@ public final class UrlPathMatchConditionParametersArgs extends io.pulumi.resourc
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> matchValues;
-        private @Nullable Input<Boolean> negateCondition;
-        private Input<String> odataType;
-        private Input<Either<String,UrlPathOperator>> operator;
-        private @Nullable Input<List<Either<String,Transform>>> transforms;
+        private @Nullable Output<List<String>> matchValues;
+        private @Nullable Output<Boolean> negateCondition;
+        private Output<String> odataType;
+        private Output<Either<String,UrlPathOperator>> operator;
+        private @Nullable Output<List<Either<String,Transform>>> transforms;
 
         public Builder() {
     	      // Empty
@@ -123,53 +123,53 @@ public final class UrlPathMatchConditionParametersArgs extends io.pulumi.resourc
     	      this.transforms = defaults.transforms;
         }
 
-        public Builder matchValues(@Nullable Input<List<String>> matchValues) {
+        public Builder matchValues(@Nullable Output<List<String>> matchValues) {
             this.matchValues = matchValues;
             return this;
         }
 
         public Builder matchValues(@Nullable List<String> matchValues) {
-            this.matchValues = Input.ofNullable(matchValues);
+            this.matchValues = Output.ofNullable(matchValues);
             return this;
         }
 
-        public Builder negateCondition(@Nullable Input<Boolean> negateCondition) {
+        public Builder negateCondition(@Nullable Output<Boolean> negateCondition) {
             this.negateCondition = negateCondition;
             return this;
         }
 
         public Builder negateCondition(@Nullable Boolean negateCondition) {
-            this.negateCondition = Input.ofNullable(negateCondition);
+            this.negateCondition = Output.ofNullable(negateCondition);
             return this;
         }
 
-        public Builder odataType(Input<String> odataType) {
+        public Builder odataType(Output<String> odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
 
         public Builder odataType(String odataType) {
-            this.odataType = Input.of(Objects.requireNonNull(odataType));
+            this.odataType = Output.of(Objects.requireNonNull(odataType));
             return this;
         }
 
-        public Builder operator(Input<Either<String,UrlPathOperator>> operator) {
+        public Builder operator(Output<Either<String,UrlPathOperator>> operator) {
             this.operator = Objects.requireNonNull(operator);
             return this;
         }
 
         public Builder operator(Either<String,UrlPathOperator> operator) {
-            this.operator = Input.of(Objects.requireNonNull(operator));
+            this.operator = Output.of(Objects.requireNonNull(operator));
             return this;
         }
 
-        public Builder transforms(@Nullable Input<List<Either<String,Transform>>> transforms) {
+        public Builder transforms(@Nullable Output<List<Either<String,Transform>>> transforms) {
             this.transforms = transforms;
             return this;
         }
 
         public Builder transforms(@Nullable List<Either<String,Transform>> transforms) {
-            this.transforms = Input.ofNullable(transforms);
+            this.transforms = Output.ofNullable(transforms);
             return this;
         }
         public UrlPathMatchConditionParametersArgs build() {

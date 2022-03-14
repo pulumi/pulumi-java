@@ -5,7 +5,7 @@ package io.pulumi.azurenative.media.inputs;
 
 import io.pulumi.azurenative.media.inputs.StreamingPolicyPlayReadyConfigurationArgs;
 import io.pulumi.azurenative.media.inputs.StreamingPolicyWidevineConfigurationArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,10 +24,10 @@ public final class CencDrmConfigurationArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="playReady")
-      private final @Nullable Input<StreamingPolicyPlayReadyConfigurationArgs> playReady;
+      private final @Nullable Output<StreamingPolicyPlayReadyConfigurationArgs> playReady;
 
-    public Input<StreamingPolicyPlayReadyConfigurationArgs> getPlayReady() {
-        return this.playReady == null ? Input.empty() : this.playReady;
+    public Output<StreamingPolicyPlayReadyConfigurationArgs> getPlayReady() {
+        return this.playReady == null ? Output.empty() : this.playReady;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class CencDrmConfigurationArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="widevine")
-      private final @Nullable Input<StreamingPolicyWidevineConfigurationArgs> widevine;
+      private final @Nullable Output<StreamingPolicyWidevineConfigurationArgs> widevine;
 
-    public Input<StreamingPolicyWidevineConfigurationArgs> getWidevine() {
-        return this.widevine == null ? Input.empty() : this.widevine;
+    public Output<StreamingPolicyWidevineConfigurationArgs> getWidevine() {
+        return this.widevine == null ? Output.empty() : this.widevine;
     }
 
     public CencDrmConfigurationArgs(
-        @Nullable Input<StreamingPolicyPlayReadyConfigurationArgs> playReady,
-        @Nullable Input<StreamingPolicyWidevineConfigurationArgs> widevine) {
+        @Nullable Output<StreamingPolicyPlayReadyConfigurationArgs> playReady,
+        @Nullable Output<StreamingPolicyWidevineConfigurationArgs> widevine) {
         this.playReady = playReady;
         this.widevine = widevine;
     }
 
     private CencDrmConfigurationArgs() {
-        this.playReady = Input.empty();
-        this.widevine = Input.empty();
+        this.playReady = Output.empty();
+        this.widevine = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class CencDrmConfigurationArgs extends io.pulumi.resources.Resource
     }
 
     public static final class Builder {
-        private @Nullable Input<StreamingPolicyPlayReadyConfigurationArgs> playReady;
-        private @Nullable Input<StreamingPolicyWidevineConfigurationArgs> widevine;
+        private @Nullable Output<StreamingPolicyPlayReadyConfigurationArgs> playReady;
+        private @Nullable Output<StreamingPolicyWidevineConfigurationArgs> widevine;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class CencDrmConfigurationArgs extends io.pulumi.resources.Resource
     	      this.widevine = defaults.widevine;
         }
 
-        public Builder playReady(@Nullable Input<StreamingPolicyPlayReadyConfigurationArgs> playReady) {
+        public Builder playReady(@Nullable Output<StreamingPolicyPlayReadyConfigurationArgs> playReady) {
             this.playReady = playReady;
             return this;
         }
 
         public Builder playReady(@Nullable StreamingPolicyPlayReadyConfigurationArgs playReady) {
-            this.playReady = Input.ofNullable(playReady);
+            this.playReady = Output.ofNullable(playReady);
             return this;
         }
 
-        public Builder widevine(@Nullable Input<StreamingPolicyWidevineConfigurationArgs> widevine) {
+        public Builder widevine(@Nullable Output<StreamingPolicyWidevineConfigurationArgs> widevine) {
             this.widevine = widevine;
             return this;
         }
 
         public Builder widevine(@Nullable StreamingPolicyWidevineConfigurationArgs widevine) {
-            this.widevine = Input.ofNullable(widevine);
+            this.widevine = Output.ofNullable(widevine);
             return this;
         }
         public CencDrmConfigurationArgs build() {

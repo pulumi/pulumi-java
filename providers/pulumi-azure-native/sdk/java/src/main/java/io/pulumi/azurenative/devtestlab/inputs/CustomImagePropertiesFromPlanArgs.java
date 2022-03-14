@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.devtestlab.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class CustomImagePropertiesFromPlanArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="id")
-      private final @Nullable Input<String> id;
+      private final @Nullable Output<String> id;
 
-    public Input<String> getId() {
-        return this.id == null ? Input.empty() : this.id;
+    public Output<String> getId() {
+        return this.id == null ? Output.empty() : this.id;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class CustomImagePropertiesFromPlanArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="offer")
-      private final @Nullable Input<String> offer;
+      private final @Nullable Output<String> offer;
 
-    public Input<String> getOffer() {
-        return this.offer == null ? Input.empty() : this.offer;
+    public Output<String> getOffer() {
+        return this.offer == null ? Output.empty() : this.offer;
     }
 
     /**
@@ -45,25 +45,25 @@ public final class CustomImagePropertiesFromPlanArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="publisher")
-      private final @Nullable Input<String> publisher;
+      private final @Nullable Output<String> publisher;
 
-    public Input<String> getPublisher() {
-        return this.publisher == null ? Input.empty() : this.publisher;
+    public Output<String> getPublisher() {
+        return this.publisher == null ? Output.empty() : this.publisher;
     }
 
     public CustomImagePropertiesFromPlanArgs(
-        @Nullable Input<String> id,
-        @Nullable Input<String> offer,
-        @Nullable Input<String> publisher) {
+        @Nullable Output<String> id,
+        @Nullable Output<String> offer,
+        @Nullable Output<String> publisher) {
         this.id = id;
         this.offer = offer;
         this.publisher = publisher;
     }
 
     private CustomImagePropertiesFromPlanArgs() {
-        this.id = Input.empty();
-        this.offer = Input.empty();
-        this.publisher = Input.empty();
+        this.id = Output.empty();
+        this.offer = Output.empty();
+        this.publisher = Output.empty();
     }
 
     public static Builder builder() {
@@ -75,9 +75,9 @@ public final class CustomImagePropertiesFromPlanArgs extends io.pulumi.resources
     }
 
     public static final class Builder {
-        private @Nullable Input<String> id;
-        private @Nullable Input<String> offer;
-        private @Nullable Input<String> publisher;
+        private @Nullable Output<String> id;
+        private @Nullable Output<String> offer;
+        private @Nullable Output<String> publisher;
 
         public Builder() {
     	      // Empty
@@ -90,33 +90,33 @@ public final class CustomImagePropertiesFromPlanArgs extends io.pulumi.resources
     	      this.publisher = defaults.publisher;
         }
 
-        public Builder id(@Nullable Input<String> id) {
+        public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
 
         public Builder id(@Nullable String id) {
-            this.id = Input.ofNullable(id);
+            this.id = Output.ofNullable(id);
             return this;
         }
 
-        public Builder offer(@Nullable Input<String> offer) {
+        public Builder offer(@Nullable Output<String> offer) {
             this.offer = offer;
             return this;
         }
 
         public Builder offer(@Nullable String offer) {
-            this.offer = Input.ofNullable(offer);
+            this.offer = Output.ofNullable(offer);
             return this;
         }
 
-        public Builder publisher(@Nullable Input<String> publisher) {
+        public Builder publisher(@Nullable Output<String> publisher) {
             this.publisher = publisher;
             return this;
         }
 
         public Builder publisher(@Nullable String publisher) {
-            this.publisher = Input.ofNullable(publisher);
+            this.publisher = Output.ofNullable(publisher);
             return this;
         }
         public CustomImagePropertiesFromPlanArgs build() {

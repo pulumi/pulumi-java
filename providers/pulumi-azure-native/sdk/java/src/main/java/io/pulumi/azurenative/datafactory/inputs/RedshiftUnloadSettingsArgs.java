@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.datafactory.inputs;
 
 import io.pulumi.azurenative.datafactory.inputs.LinkedServiceReferenceArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.util.Objects;
@@ -23,9 +23,9 @@ public final class RedshiftUnloadSettingsArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="bucketName", required=true)
-      private final Input<Object> bucketName;
+      private final Output<Object> bucketName;
 
-    public Input<Object> getBucketName() {
+    public Output<Object> getBucketName() {
         return this.bucketName;
     }
 
@@ -34,22 +34,22 @@ public final class RedshiftUnloadSettingsArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="s3LinkedServiceName", required=true)
-      private final Input<LinkedServiceReferenceArgs> s3LinkedServiceName;
+      private final Output<LinkedServiceReferenceArgs> s3LinkedServiceName;
 
-    public Input<LinkedServiceReferenceArgs> getS3LinkedServiceName() {
+    public Output<LinkedServiceReferenceArgs> getS3LinkedServiceName() {
         return this.s3LinkedServiceName;
     }
 
     public RedshiftUnloadSettingsArgs(
-        Input<Object> bucketName,
-        Input<LinkedServiceReferenceArgs> s3LinkedServiceName) {
+        Output<Object> bucketName,
+        Output<LinkedServiceReferenceArgs> s3LinkedServiceName) {
         this.bucketName = Objects.requireNonNull(bucketName, "expected parameter 'bucketName' to be non-null");
         this.s3LinkedServiceName = Objects.requireNonNull(s3LinkedServiceName, "expected parameter 's3LinkedServiceName' to be non-null");
     }
 
     private RedshiftUnloadSettingsArgs() {
-        this.bucketName = Input.empty();
-        this.s3LinkedServiceName = Input.empty();
+        this.bucketName = Output.empty();
+        this.s3LinkedServiceName = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class RedshiftUnloadSettingsArgs extends io.pulumi.resources.Resour
     }
 
     public static final class Builder {
-        private Input<Object> bucketName;
-        private Input<LinkedServiceReferenceArgs> s3LinkedServiceName;
+        private Output<Object> bucketName;
+        private Output<LinkedServiceReferenceArgs> s3LinkedServiceName;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class RedshiftUnloadSettingsArgs extends io.pulumi.resources.Resour
     	      this.s3LinkedServiceName = defaults.s3LinkedServiceName;
         }
 
-        public Builder bucketName(Input<Object> bucketName) {
+        public Builder bucketName(Output<Object> bucketName) {
             this.bucketName = Objects.requireNonNull(bucketName);
             return this;
         }
 
         public Builder bucketName(Object bucketName) {
-            this.bucketName = Input.of(Objects.requireNonNull(bucketName));
+            this.bucketName = Output.of(Objects.requireNonNull(bucketName));
             return this;
         }
 
-        public Builder s3LinkedServiceName(Input<LinkedServiceReferenceArgs> s3LinkedServiceName) {
+        public Builder s3LinkedServiceName(Output<LinkedServiceReferenceArgs> s3LinkedServiceName) {
             this.s3LinkedServiceName = Objects.requireNonNull(s3LinkedServiceName);
             return this;
         }
 
         public Builder s3LinkedServiceName(LinkedServiceReferenceArgs s3LinkedServiceName) {
-            this.s3LinkedServiceName = Input.of(Objects.requireNonNull(s3LinkedServiceName));
+            this.s3LinkedServiceName = Output.of(Objects.requireNonNull(s3LinkedServiceName));
             return this;
         }
         public RedshiftUnloadSettingsArgs build() {

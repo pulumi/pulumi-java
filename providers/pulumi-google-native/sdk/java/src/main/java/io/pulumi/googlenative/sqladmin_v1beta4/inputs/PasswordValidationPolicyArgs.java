@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.sqladmin_v1beta4.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.sqladmin_v1beta4.enums.PasswordValidationPolicyComplexity;
 import java.lang.Boolean;
@@ -26,10 +26,10 @@ public final class PasswordValidationPolicyArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="complexity")
-      private final @Nullable Input<PasswordValidationPolicyComplexity> complexity;
+      private final @Nullable Output<PasswordValidationPolicyComplexity> complexity;
 
-    public Input<PasswordValidationPolicyComplexity> getComplexity() {
-        return this.complexity == null ? Input.empty() : this.complexity;
+    public Output<PasswordValidationPolicyComplexity> getComplexity() {
+        return this.complexity == null ? Output.empty() : this.complexity;
     }
 
     /**
@@ -37,10 +37,10 @@ public final class PasswordValidationPolicyArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="disallowUsernameSubstring")
-      private final @Nullable Input<Boolean> disallowUsernameSubstring;
+      private final @Nullable Output<Boolean> disallowUsernameSubstring;
 
-    public Input<Boolean> getDisallowUsernameSubstring() {
-        return this.disallowUsernameSubstring == null ? Input.empty() : this.disallowUsernameSubstring;
+    public Output<Boolean> getDisallowUsernameSubstring() {
+        return this.disallowUsernameSubstring == null ? Output.empty() : this.disallowUsernameSubstring;
     }
 
     /**
@@ -48,10 +48,10 @@ public final class PasswordValidationPolicyArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="minLength")
-      private final @Nullable Input<Integer> minLength;
+      private final @Nullable Output<Integer> minLength;
 
-    public Input<Integer> getMinLength() {
-        return this.minLength == null ? Input.empty() : this.minLength;
+    public Output<Integer> getMinLength() {
+        return this.minLength == null ? Output.empty() : this.minLength;
     }
 
     /**
@@ -59,10 +59,10 @@ public final class PasswordValidationPolicyArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="passwordChangeInterval")
-      private final @Nullable Input<String> passwordChangeInterval;
+      private final @Nullable Output<String> passwordChangeInterval;
 
-    public Input<String> getPasswordChangeInterval() {
-        return this.passwordChangeInterval == null ? Input.empty() : this.passwordChangeInterval;
+    public Output<String> getPasswordChangeInterval() {
+        return this.passwordChangeInterval == null ? Output.empty() : this.passwordChangeInterval;
     }
 
     /**
@@ -70,18 +70,18 @@ public final class PasswordValidationPolicyArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="reuseInterval")
-      private final @Nullable Input<Integer> reuseInterval;
+      private final @Nullable Output<Integer> reuseInterval;
 
-    public Input<Integer> getReuseInterval() {
-        return this.reuseInterval == null ? Input.empty() : this.reuseInterval;
+    public Output<Integer> getReuseInterval() {
+        return this.reuseInterval == null ? Output.empty() : this.reuseInterval;
     }
 
     public PasswordValidationPolicyArgs(
-        @Nullable Input<PasswordValidationPolicyComplexity> complexity,
-        @Nullable Input<Boolean> disallowUsernameSubstring,
-        @Nullable Input<Integer> minLength,
-        @Nullable Input<String> passwordChangeInterval,
-        @Nullable Input<Integer> reuseInterval) {
+        @Nullable Output<PasswordValidationPolicyComplexity> complexity,
+        @Nullable Output<Boolean> disallowUsernameSubstring,
+        @Nullable Output<Integer> minLength,
+        @Nullable Output<String> passwordChangeInterval,
+        @Nullable Output<Integer> reuseInterval) {
         this.complexity = complexity;
         this.disallowUsernameSubstring = disallowUsernameSubstring;
         this.minLength = minLength;
@@ -90,11 +90,11 @@ public final class PasswordValidationPolicyArgs extends io.pulumi.resources.Reso
     }
 
     private PasswordValidationPolicyArgs() {
-        this.complexity = Input.empty();
-        this.disallowUsernameSubstring = Input.empty();
-        this.minLength = Input.empty();
-        this.passwordChangeInterval = Input.empty();
-        this.reuseInterval = Input.empty();
+        this.complexity = Output.empty();
+        this.disallowUsernameSubstring = Output.empty();
+        this.minLength = Output.empty();
+        this.passwordChangeInterval = Output.empty();
+        this.reuseInterval = Output.empty();
     }
 
     public static Builder builder() {
@@ -106,11 +106,11 @@ public final class PasswordValidationPolicyArgs extends io.pulumi.resources.Reso
     }
 
     public static final class Builder {
-        private @Nullable Input<PasswordValidationPolicyComplexity> complexity;
-        private @Nullable Input<Boolean> disallowUsernameSubstring;
-        private @Nullable Input<Integer> minLength;
-        private @Nullable Input<String> passwordChangeInterval;
-        private @Nullable Input<Integer> reuseInterval;
+        private @Nullable Output<PasswordValidationPolicyComplexity> complexity;
+        private @Nullable Output<Boolean> disallowUsernameSubstring;
+        private @Nullable Output<Integer> minLength;
+        private @Nullable Output<String> passwordChangeInterval;
+        private @Nullable Output<Integer> reuseInterval;
 
         public Builder() {
     	      // Empty
@@ -125,53 +125,53 @@ public final class PasswordValidationPolicyArgs extends io.pulumi.resources.Reso
     	      this.reuseInterval = defaults.reuseInterval;
         }
 
-        public Builder complexity(@Nullable Input<PasswordValidationPolicyComplexity> complexity) {
+        public Builder complexity(@Nullable Output<PasswordValidationPolicyComplexity> complexity) {
             this.complexity = complexity;
             return this;
         }
 
         public Builder complexity(@Nullable PasswordValidationPolicyComplexity complexity) {
-            this.complexity = Input.ofNullable(complexity);
+            this.complexity = Output.ofNullable(complexity);
             return this;
         }
 
-        public Builder disallowUsernameSubstring(@Nullable Input<Boolean> disallowUsernameSubstring) {
+        public Builder disallowUsernameSubstring(@Nullable Output<Boolean> disallowUsernameSubstring) {
             this.disallowUsernameSubstring = disallowUsernameSubstring;
             return this;
         }
 
         public Builder disallowUsernameSubstring(@Nullable Boolean disallowUsernameSubstring) {
-            this.disallowUsernameSubstring = Input.ofNullable(disallowUsernameSubstring);
+            this.disallowUsernameSubstring = Output.ofNullable(disallowUsernameSubstring);
             return this;
         }
 
-        public Builder minLength(@Nullable Input<Integer> minLength) {
+        public Builder minLength(@Nullable Output<Integer> minLength) {
             this.minLength = minLength;
             return this;
         }
 
         public Builder minLength(@Nullable Integer minLength) {
-            this.minLength = Input.ofNullable(minLength);
+            this.minLength = Output.ofNullable(minLength);
             return this;
         }
 
-        public Builder passwordChangeInterval(@Nullable Input<String> passwordChangeInterval) {
+        public Builder passwordChangeInterval(@Nullable Output<String> passwordChangeInterval) {
             this.passwordChangeInterval = passwordChangeInterval;
             return this;
         }
 
         public Builder passwordChangeInterval(@Nullable String passwordChangeInterval) {
-            this.passwordChangeInterval = Input.ofNullable(passwordChangeInterval);
+            this.passwordChangeInterval = Output.ofNullable(passwordChangeInterval);
             return this;
         }
 
-        public Builder reuseInterval(@Nullable Input<Integer> reuseInterval) {
+        public Builder reuseInterval(@Nullable Output<Integer> reuseInterval) {
             this.reuseInterval = reuseInterval;
             return this;
         }
 
         public Builder reuseInterval(@Nullable Integer reuseInterval) {
-            this.reuseInterval = Input.ofNullable(reuseInterval);
+            this.reuseInterval = Output.ofNullable(reuseInterval);
             return this;
         }
         public PasswordValidationPolicyArgs build() {

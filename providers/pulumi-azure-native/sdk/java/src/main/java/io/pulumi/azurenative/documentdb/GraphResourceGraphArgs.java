@@ -6,7 +6,7 @@ package io.pulumi.azurenative.documentdb;
 import io.pulumi.azurenative.documentdb.inputs.CreateUpdateOptionsArgs;
 import io.pulumi.azurenative.documentdb.inputs.GraphResourceArgs;
 import io.pulumi.azurenative.documentdb.inputs.ManagedServiceIdentityArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -23,9 +23,9 @@ public final class GraphResourceGraphArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="accountName", required=true)
-      private final Input<String> accountName;
+      private final Output<String> accountName;
 
-    public Input<String> getAccountName() {
+    public Output<String> getAccountName() {
         return this.accountName;
     }
 
@@ -34,10 +34,10 @@ public final class GraphResourceGraphArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="graphName")
-      private final @Nullable Input<String> graphName;
+      private final @Nullable Output<String> graphName;
 
-    public Input<String> getGraphName() {
-        return this.graphName == null ? Input.empty() : this.graphName;
+    public Output<String> getGraphName() {
+        return this.graphName == null ? Output.empty() : this.graphName;
     }
 
     /**
@@ -45,10 +45,10 @@ public final class GraphResourceGraphArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="identity")
-      private final @Nullable Input<ManagedServiceIdentityArgs> identity;
+      private final @Nullable Output<ManagedServiceIdentityArgs> identity;
 
-    public Input<ManagedServiceIdentityArgs> getIdentity() {
-        return this.identity == null ? Input.empty() : this.identity;
+    public Output<ManagedServiceIdentityArgs> getIdentity() {
+        return this.identity == null ? Output.empty() : this.identity;
     }
 
     /**
@@ -56,10 +56,10 @@ public final class GraphResourceGraphArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -67,10 +67,10 @@ public final class GraphResourceGraphArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="options")
-      private final @Nullable Input<CreateUpdateOptionsArgs> options;
+      private final @Nullable Output<CreateUpdateOptionsArgs> options;
 
-    public Input<CreateUpdateOptionsArgs> getOptions() {
-        return this.options == null ? Input.empty() : this.options;
+    public Output<CreateUpdateOptionsArgs> getOptions() {
+        return this.options == null ? Output.empty() : this.options;
     }
 
     /**
@@ -78,9 +78,9 @@ public final class GraphResourceGraphArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="resource", required=true)
-      private final Input<GraphResourceArgs> resource;
+      private final Output<GraphResourceArgs> resource;
 
-    public Input<GraphResourceArgs> getResource() {
+    public Output<GraphResourceArgs> getResource() {
         return this.resource;
     }
 
@@ -89,9 +89,9 @@ public final class GraphResourceGraphArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -100,21 +100,21 @@ public final class GraphResourceGraphArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public GraphResourceGraphArgs(
-        Input<String> accountName,
-        @Nullable Input<String> graphName,
-        @Nullable Input<ManagedServiceIdentityArgs> identity,
-        @Nullable Input<String> location,
-        @Nullable Input<CreateUpdateOptionsArgs> options,
-        Input<GraphResourceArgs> resource,
-        Input<String> resourceGroupName,
-        @Nullable Input<Map<String,String>> tags) {
+        Output<String> accountName,
+        @Nullable Output<String> graphName,
+        @Nullable Output<ManagedServiceIdentityArgs> identity,
+        @Nullable Output<String> location,
+        @Nullable Output<CreateUpdateOptionsArgs> options,
+        Output<GraphResourceArgs> resource,
+        Output<String> resourceGroupName,
+        @Nullable Output<Map<String,String>> tags) {
         this.accountName = Objects.requireNonNull(accountName, "expected parameter 'accountName' to be non-null");
         this.graphName = graphName;
         this.identity = identity;
@@ -126,14 +126,14 @@ public final class GraphResourceGraphArgs extends io.pulumi.resources.ResourceAr
     }
 
     private GraphResourceGraphArgs() {
-        this.accountName = Input.empty();
-        this.graphName = Input.empty();
-        this.identity = Input.empty();
-        this.location = Input.empty();
-        this.options = Input.empty();
-        this.resource = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.tags = Input.empty();
+        this.accountName = Output.empty();
+        this.graphName = Output.empty();
+        this.identity = Output.empty();
+        this.location = Output.empty();
+        this.options = Output.empty();
+        this.resource = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -145,14 +145,14 @@ public final class GraphResourceGraphArgs extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private Input<String> accountName;
-        private @Nullable Input<String> graphName;
-        private @Nullable Input<ManagedServiceIdentityArgs> identity;
-        private @Nullable Input<String> location;
-        private @Nullable Input<CreateUpdateOptionsArgs> options;
-        private Input<GraphResourceArgs> resource;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<Map<String,String>> tags;
+        private Output<String> accountName;
+        private @Nullable Output<String> graphName;
+        private @Nullable Output<ManagedServiceIdentityArgs> identity;
+        private @Nullable Output<String> location;
+        private @Nullable Output<CreateUpdateOptionsArgs> options;
+        private Output<GraphResourceArgs> resource;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<Map<String,String>> tags;
 
         public Builder() {
     	      // Empty
@@ -170,83 +170,83 @@ public final class GraphResourceGraphArgs extends io.pulumi.resources.ResourceAr
     	      this.tags = defaults.tags;
         }
 
-        public Builder accountName(Input<String> accountName) {
+        public Builder accountName(Output<String> accountName) {
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
 
         public Builder accountName(String accountName) {
-            this.accountName = Input.of(Objects.requireNonNull(accountName));
+            this.accountName = Output.of(Objects.requireNonNull(accountName));
             return this;
         }
 
-        public Builder graphName(@Nullable Input<String> graphName) {
+        public Builder graphName(@Nullable Output<String> graphName) {
             this.graphName = graphName;
             return this;
         }
 
         public Builder graphName(@Nullable String graphName) {
-            this.graphName = Input.ofNullable(graphName);
+            this.graphName = Output.ofNullable(graphName);
             return this;
         }
 
-        public Builder identity(@Nullable Input<ManagedServiceIdentityArgs> identity) {
+        public Builder identity(@Nullable Output<ManagedServiceIdentityArgs> identity) {
             this.identity = identity;
             return this;
         }
 
         public Builder identity(@Nullable ManagedServiceIdentityArgs identity) {
-            this.identity = Input.ofNullable(identity);
+            this.identity = Output.ofNullable(identity);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder options(@Nullable Input<CreateUpdateOptionsArgs> options) {
+        public Builder options(@Nullable Output<CreateUpdateOptionsArgs> options) {
             this.options = options;
             return this;
         }
 
         public Builder options(@Nullable CreateUpdateOptionsArgs options) {
-            this.options = Input.ofNullable(options);
+            this.options = Output.ofNullable(options);
             return this;
         }
 
-        public Builder resource(Input<GraphResourceArgs> resource) {
+        public Builder resource(Output<GraphResourceArgs> resource) {
             this.resource = Objects.requireNonNull(resource);
             return this;
         }
 
         public Builder resource(GraphResourceArgs resource) {
-            this.resource = Input.of(Objects.requireNonNull(resource));
+            this.resource = Output.of(Objects.requireNonNull(resource));
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public GraphResourceGraphArgs build() {

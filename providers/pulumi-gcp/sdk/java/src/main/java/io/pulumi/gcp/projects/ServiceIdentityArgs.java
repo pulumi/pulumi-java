@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.projects;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -20,10 +20,10 @@ public final class ServiceIdentityArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -31,22 +31,22 @@ public final class ServiceIdentityArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="service", required=true)
-      private final Input<String> service;
+      private final Output<String> service;
 
-    public Input<String> getService() {
+    public Output<String> getService() {
         return this.service;
     }
 
     public ServiceIdentityArgs(
-        @Nullable Input<String> project,
-        Input<String> service) {
+        @Nullable Output<String> project,
+        Output<String> service) {
         this.project = project;
         this.service = Objects.requireNonNull(service, "expected parameter 'service' to be non-null");
     }
 
     private ServiceIdentityArgs() {
-        this.project = Input.empty();
-        this.service = Input.empty();
+        this.project = Output.empty();
+        this.service = Output.empty();
     }
 
     public static Builder builder() {
@@ -58,8 +58,8 @@ public final class ServiceIdentityArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private @Nullable Input<String> project;
-        private Input<String> service;
+        private @Nullable Output<String> project;
+        private Output<String> service;
 
         public Builder() {
     	      // Empty
@@ -71,23 +71,23 @@ public final class ServiceIdentityArgs extends io.pulumi.resources.ResourceArgs 
     	      this.service = defaults.service;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder service(Input<String> service) {
+        public Builder service(Output<String> service) {
             this.service = Objects.requireNonNull(service);
             return this;
         }
 
         public Builder service(String service) {
-            this.service = Input.of(Objects.requireNonNull(service));
+            this.service = Output.of(Objects.requireNonNull(service));
             return this;
         }
         public ServiceIdentityArgs build() {

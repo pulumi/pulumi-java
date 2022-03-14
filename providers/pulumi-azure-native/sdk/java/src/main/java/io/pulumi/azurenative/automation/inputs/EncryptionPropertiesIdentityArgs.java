@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.automation.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class EncryptionPropertiesIdentityArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="userAssignedIdentity")
-      private final @Nullable Input<Object> userAssignedIdentity;
+      private final @Nullable Output<Object> userAssignedIdentity;
 
-    public Input<Object> getUserAssignedIdentity() {
-        return this.userAssignedIdentity == null ? Input.empty() : this.userAssignedIdentity;
+    public Output<Object> getUserAssignedIdentity() {
+        return this.userAssignedIdentity == null ? Output.empty() : this.userAssignedIdentity;
     }
 
-    public EncryptionPropertiesIdentityArgs(@Nullable Input<Object> userAssignedIdentity) {
+    public EncryptionPropertiesIdentityArgs(@Nullable Output<Object> userAssignedIdentity) {
         this.userAssignedIdentity = userAssignedIdentity;
     }
 
     private EncryptionPropertiesIdentityArgs() {
-        this.userAssignedIdentity = Input.empty();
+        this.userAssignedIdentity = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class EncryptionPropertiesIdentityArgs extends io.pulumi.resources.
     }
 
     public static final class Builder {
-        private @Nullable Input<Object> userAssignedIdentity;
+        private @Nullable Output<Object> userAssignedIdentity;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class EncryptionPropertiesIdentityArgs extends io.pulumi.resources.
     	      this.userAssignedIdentity = defaults.userAssignedIdentity;
         }
 
-        public Builder userAssignedIdentity(@Nullable Input<Object> userAssignedIdentity) {
+        public Builder userAssignedIdentity(@Nullable Output<Object> userAssignedIdentity) {
             this.userAssignedIdentity = userAssignedIdentity;
             return this;
         }
 
         public Builder userAssignedIdentity(@Nullable Object userAssignedIdentity) {
-            this.userAssignedIdentity = Input.ofNullable(userAssignedIdentity);
+            this.userAssignedIdentity = Output.ofNullable(userAssignedIdentity);
             return this;
         }
         public EncryptionPropertiesIdentityArgs build() {

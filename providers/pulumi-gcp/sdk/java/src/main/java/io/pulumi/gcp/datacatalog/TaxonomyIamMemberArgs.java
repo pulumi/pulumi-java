@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.datacatalog;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.datacatalog.inputs.TaxonomyIamMemberConditionArgs;
 import java.lang.String;
@@ -16,16 +16,16 @@ public final class TaxonomyIamMemberArgs extends io.pulumi.resources.ResourceArg
     public static final TaxonomyIamMemberArgs Empty = new TaxonomyIamMemberArgs();
 
     @InputImport(name="condition")
-      private final @Nullable Input<TaxonomyIamMemberConditionArgs> condition;
+      private final @Nullable Output<TaxonomyIamMemberConditionArgs> condition;
 
-    public Input<TaxonomyIamMemberConditionArgs> getCondition() {
-        return this.condition == null ? Input.empty() : this.condition;
+    public Output<TaxonomyIamMemberConditionArgs> getCondition() {
+        return this.condition == null ? Output.empty() : this.condition;
     }
 
     @InputImport(name="member", required=true)
-      private final Input<String> member;
+      private final Output<String> member;
 
-    public Input<String> getMember() {
+    public Output<String> getMember() {
         return this.member;
     }
 
@@ -35,17 +35,17 @@ public final class TaxonomyIamMemberArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     @InputImport(name="region")
-      private final @Nullable Input<String> region;
+      private final @Nullable Output<String> region;
 
-    public Input<String> getRegion() {
-        return this.region == null ? Input.empty() : this.region;
+    public Output<String> getRegion() {
+        return this.region == null ? Output.empty() : this.region;
     }
 
     /**
@@ -55,9 +55,9 @@ public final class TaxonomyIamMemberArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="role", required=true)
-      private final Input<String> role;
+      private final Output<String> role;
 
-    public Input<String> getRole() {
+    public Output<String> getRole() {
         return this.role;
     }
 
@@ -66,19 +66,19 @@ public final class TaxonomyIamMemberArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="taxonomy", required=true)
-      private final Input<String> taxonomy;
+      private final Output<String> taxonomy;
 
-    public Input<String> getTaxonomy() {
+    public Output<String> getTaxonomy() {
         return this.taxonomy;
     }
 
     public TaxonomyIamMemberArgs(
-        @Nullable Input<TaxonomyIamMemberConditionArgs> condition,
-        Input<String> member,
-        @Nullable Input<String> project,
-        @Nullable Input<String> region,
-        Input<String> role,
-        Input<String> taxonomy) {
+        @Nullable Output<TaxonomyIamMemberConditionArgs> condition,
+        Output<String> member,
+        @Nullable Output<String> project,
+        @Nullable Output<String> region,
+        Output<String> role,
+        Output<String> taxonomy) {
         this.condition = condition;
         this.member = Objects.requireNonNull(member, "expected parameter 'member' to be non-null");
         this.project = project;
@@ -88,12 +88,12 @@ public final class TaxonomyIamMemberArgs extends io.pulumi.resources.ResourceArg
     }
 
     private TaxonomyIamMemberArgs() {
-        this.condition = Input.empty();
-        this.member = Input.empty();
-        this.project = Input.empty();
-        this.region = Input.empty();
-        this.role = Input.empty();
-        this.taxonomy = Input.empty();
+        this.condition = Output.empty();
+        this.member = Output.empty();
+        this.project = Output.empty();
+        this.region = Output.empty();
+        this.role = Output.empty();
+        this.taxonomy = Output.empty();
     }
 
     public static Builder builder() {
@@ -105,12 +105,12 @@ public final class TaxonomyIamMemberArgs extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private @Nullable Input<TaxonomyIamMemberConditionArgs> condition;
-        private Input<String> member;
-        private @Nullable Input<String> project;
-        private @Nullable Input<String> region;
-        private Input<String> role;
-        private Input<String> taxonomy;
+        private @Nullable Output<TaxonomyIamMemberConditionArgs> condition;
+        private Output<String> member;
+        private @Nullable Output<String> project;
+        private @Nullable Output<String> region;
+        private Output<String> role;
+        private Output<String> taxonomy;
 
         public Builder() {
     	      // Empty
@@ -126,63 +126,63 @@ public final class TaxonomyIamMemberArgs extends io.pulumi.resources.ResourceArg
     	      this.taxonomy = defaults.taxonomy;
         }
 
-        public Builder condition(@Nullable Input<TaxonomyIamMemberConditionArgs> condition) {
+        public Builder condition(@Nullable Output<TaxonomyIamMemberConditionArgs> condition) {
             this.condition = condition;
             return this;
         }
 
         public Builder condition(@Nullable TaxonomyIamMemberConditionArgs condition) {
-            this.condition = Input.ofNullable(condition);
+            this.condition = Output.ofNullable(condition);
             return this;
         }
 
-        public Builder member(Input<String> member) {
+        public Builder member(Output<String> member) {
             this.member = Objects.requireNonNull(member);
             return this;
         }
 
         public Builder member(String member) {
-            this.member = Input.of(Objects.requireNonNull(member));
+            this.member = Output.of(Objects.requireNonNull(member));
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder region(@Nullable Input<String> region) {
+        public Builder region(@Nullable Output<String> region) {
             this.region = region;
             return this;
         }
 
         public Builder region(@Nullable String region) {
-            this.region = Input.ofNullable(region);
+            this.region = Output.ofNullable(region);
             return this;
         }
 
-        public Builder role(Input<String> role) {
+        public Builder role(Output<String> role) {
             this.role = Objects.requireNonNull(role);
             return this;
         }
 
         public Builder role(String role) {
-            this.role = Input.of(Objects.requireNonNull(role));
+            this.role = Output.of(Objects.requireNonNull(role));
             return this;
         }
 
-        public Builder taxonomy(Input<String> taxonomy) {
+        public Builder taxonomy(Output<String> taxonomy) {
             this.taxonomy = Objects.requireNonNull(taxonomy);
             return this;
         }
 
         public Builder taxonomy(String taxonomy) {
-            this.taxonomy = Input.of(Objects.requireNonNull(taxonomy));
+            this.taxonomy = Output.of(Objects.requireNonNull(taxonomy));
             return this;
         }
         public TaxonomyIamMemberArgs build() {

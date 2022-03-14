@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.organizations.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class DelegatedAdministratorState extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="accountId")
-      private final @Nullable Input<String> accountId;
+      private final @Nullable Output<String> accountId;
 
-    public Input<String> getAccountId() {
-        return this.accountId == null ? Input.empty() : this.accountId;
+    public Output<String> getAccountId() {
+        return this.accountId == null ? Output.empty() : this.accountId;
     }
 
     /**
@@ -30,10 +30,10 @@ public final class DelegatedAdministratorState extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="arn")
-      private final @Nullable Input<String> arn;
+      private final @Nullable Output<String> arn;
 
-    public Input<String> getArn() {
-        return this.arn == null ? Input.empty() : this.arn;
+    public Output<String> getArn() {
+        return this.arn == null ? Output.empty() : this.arn;
     }
 
     /**
@@ -41,10 +41,10 @@ public final class DelegatedAdministratorState extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="delegationEnabledDate")
-      private final @Nullable Input<String> delegationEnabledDate;
+      private final @Nullable Output<String> delegationEnabledDate;
 
-    public Input<String> getDelegationEnabledDate() {
-        return this.delegationEnabledDate == null ? Input.empty() : this.delegationEnabledDate;
+    public Output<String> getDelegationEnabledDate() {
+        return this.delegationEnabledDate == null ? Output.empty() : this.delegationEnabledDate;
     }
 
     /**
@@ -52,10 +52,10 @@ public final class DelegatedAdministratorState extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="email")
-      private final @Nullable Input<String> email;
+      private final @Nullable Output<String> email;
 
-    public Input<String> getEmail() {
-        return this.email == null ? Input.empty() : this.email;
+    public Output<String> getEmail() {
+        return this.email == null ? Output.empty() : this.email;
     }
 
     /**
@@ -63,10 +63,10 @@ public final class DelegatedAdministratorState extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="joinedMethod")
-      private final @Nullable Input<String> joinedMethod;
+      private final @Nullable Output<String> joinedMethod;
 
-    public Input<String> getJoinedMethod() {
-        return this.joinedMethod == null ? Input.empty() : this.joinedMethod;
+    public Output<String> getJoinedMethod() {
+        return this.joinedMethod == null ? Output.empty() : this.joinedMethod;
     }
 
     /**
@@ -74,10 +74,10 @@ public final class DelegatedAdministratorState extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="joinedTimestamp")
-      private final @Nullable Input<String> joinedTimestamp;
+      private final @Nullable Output<String> joinedTimestamp;
 
-    public Input<String> getJoinedTimestamp() {
-        return this.joinedTimestamp == null ? Input.empty() : this.joinedTimestamp;
+    public Output<String> getJoinedTimestamp() {
+        return this.joinedTimestamp == null ? Output.empty() : this.joinedTimestamp;
     }
 
     /**
@@ -85,10 +85,10 @@ public final class DelegatedAdministratorState extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -96,10 +96,10 @@ public final class DelegatedAdministratorState extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="servicePrincipal")
-      private final @Nullable Input<String> servicePrincipal;
+      private final @Nullable Output<String> servicePrincipal;
 
-    public Input<String> getServicePrincipal() {
-        return this.servicePrincipal == null ? Input.empty() : this.servicePrincipal;
+    public Output<String> getServicePrincipal() {
+        return this.servicePrincipal == null ? Output.empty() : this.servicePrincipal;
     }
 
     /**
@@ -107,22 +107,22 @@ public final class DelegatedAdministratorState extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="status")
-      private final @Nullable Input<String> status;
+      private final @Nullable Output<String> status;
 
-    public Input<String> getStatus() {
-        return this.status == null ? Input.empty() : this.status;
+    public Output<String> getStatus() {
+        return this.status == null ? Output.empty() : this.status;
     }
 
     public DelegatedAdministratorState(
-        @Nullable Input<String> accountId,
-        @Nullable Input<String> arn,
-        @Nullable Input<String> delegationEnabledDate,
-        @Nullable Input<String> email,
-        @Nullable Input<String> joinedMethod,
-        @Nullable Input<String> joinedTimestamp,
-        @Nullable Input<String> name,
-        @Nullable Input<String> servicePrincipal,
-        @Nullable Input<String> status) {
+        @Nullable Output<String> accountId,
+        @Nullable Output<String> arn,
+        @Nullable Output<String> delegationEnabledDate,
+        @Nullable Output<String> email,
+        @Nullable Output<String> joinedMethod,
+        @Nullable Output<String> joinedTimestamp,
+        @Nullable Output<String> name,
+        @Nullable Output<String> servicePrincipal,
+        @Nullable Output<String> status) {
         this.accountId = accountId;
         this.arn = arn;
         this.delegationEnabledDate = delegationEnabledDate;
@@ -135,15 +135,15 @@ public final class DelegatedAdministratorState extends io.pulumi.resources.Resou
     }
 
     private DelegatedAdministratorState() {
-        this.accountId = Input.empty();
-        this.arn = Input.empty();
-        this.delegationEnabledDate = Input.empty();
-        this.email = Input.empty();
-        this.joinedMethod = Input.empty();
-        this.joinedTimestamp = Input.empty();
-        this.name = Input.empty();
-        this.servicePrincipal = Input.empty();
-        this.status = Input.empty();
+        this.accountId = Output.empty();
+        this.arn = Output.empty();
+        this.delegationEnabledDate = Output.empty();
+        this.email = Output.empty();
+        this.joinedMethod = Output.empty();
+        this.joinedTimestamp = Output.empty();
+        this.name = Output.empty();
+        this.servicePrincipal = Output.empty();
+        this.status = Output.empty();
     }
 
     public static Builder builder() {
@@ -155,15 +155,15 @@ public final class DelegatedAdministratorState extends io.pulumi.resources.Resou
     }
 
     public static final class Builder {
-        private @Nullable Input<String> accountId;
-        private @Nullable Input<String> arn;
-        private @Nullable Input<String> delegationEnabledDate;
-        private @Nullable Input<String> email;
-        private @Nullable Input<String> joinedMethod;
-        private @Nullable Input<String> joinedTimestamp;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> servicePrincipal;
-        private @Nullable Input<String> status;
+        private @Nullable Output<String> accountId;
+        private @Nullable Output<String> arn;
+        private @Nullable Output<String> delegationEnabledDate;
+        private @Nullable Output<String> email;
+        private @Nullable Output<String> joinedMethod;
+        private @Nullable Output<String> joinedTimestamp;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> servicePrincipal;
+        private @Nullable Output<String> status;
 
         public Builder() {
     	      // Empty
@@ -182,93 +182,93 @@ public final class DelegatedAdministratorState extends io.pulumi.resources.Resou
     	      this.status = defaults.status;
         }
 
-        public Builder accountId(@Nullable Input<String> accountId) {
+        public Builder accountId(@Nullable Output<String> accountId) {
             this.accountId = accountId;
             return this;
         }
 
         public Builder accountId(@Nullable String accountId) {
-            this.accountId = Input.ofNullable(accountId);
+            this.accountId = Output.ofNullable(accountId);
             return this;
         }
 
-        public Builder arn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
 
         public Builder arn(@Nullable String arn) {
-            this.arn = Input.ofNullable(arn);
+            this.arn = Output.ofNullable(arn);
             return this;
         }
 
-        public Builder delegationEnabledDate(@Nullable Input<String> delegationEnabledDate) {
+        public Builder delegationEnabledDate(@Nullable Output<String> delegationEnabledDate) {
             this.delegationEnabledDate = delegationEnabledDate;
             return this;
         }
 
         public Builder delegationEnabledDate(@Nullable String delegationEnabledDate) {
-            this.delegationEnabledDate = Input.ofNullable(delegationEnabledDate);
+            this.delegationEnabledDate = Output.ofNullable(delegationEnabledDate);
             return this;
         }
 
-        public Builder email(@Nullable Input<String> email) {
+        public Builder email(@Nullable Output<String> email) {
             this.email = email;
             return this;
         }
 
         public Builder email(@Nullable String email) {
-            this.email = Input.ofNullable(email);
+            this.email = Output.ofNullable(email);
             return this;
         }
 
-        public Builder joinedMethod(@Nullable Input<String> joinedMethod) {
+        public Builder joinedMethod(@Nullable Output<String> joinedMethod) {
             this.joinedMethod = joinedMethod;
             return this;
         }
 
         public Builder joinedMethod(@Nullable String joinedMethod) {
-            this.joinedMethod = Input.ofNullable(joinedMethod);
+            this.joinedMethod = Output.ofNullable(joinedMethod);
             return this;
         }
 
-        public Builder joinedTimestamp(@Nullable Input<String> joinedTimestamp) {
+        public Builder joinedTimestamp(@Nullable Output<String> joinedTimestamp) {
             this.joinedTimestamp = joinedTimestamp;
             return this;
         }
 
         public Builder joinedTimestamp(@Nullable String joinedTimestamp) {
-            this.joinedTimestamp = Input.ofNullable(joinedTimestamp);
+            this.joinedTimestamp = Output.ofNullable(joinedTimestamp);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder servicePrincipal(@Nullable Input<String> servicePrincipal) {
+        public Builder servicePrincipal(@Nullable Output<String> servicePrincipal) {
             this.servicePrincipal = servicePrincipal;
             return this;
         }
 
         public Builder servicePrincipal(@Nullable String servicePrincipal) {
-            this.servicePrincipal = Input.ofNullable(servicePrincipal);
+            this.servicePrincipal = Output.ofNullable(servicePrincipal);
             return this;
         }
 
-        public Builder status(@Nullable Input<String> status) {
+        public Builder status(@Nullable Output<String> status) {
             this.status = status;
             return this;
         }
 
         public Builder status(@Nullable String status) {
-            this.status = Input.ofNullable(status);
+            this.status = Output.ofNullable(status);
             return this;
         }
         public DelegatedAdministratorState build() {

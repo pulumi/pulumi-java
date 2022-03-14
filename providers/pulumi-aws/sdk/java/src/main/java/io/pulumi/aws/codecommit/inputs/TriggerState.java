@@ -4,7 +4,7 @@
 package io.pulumi.aws.codecommit.inputs;
 
 import io.pulumi.aws.codecommit.inputs.TriggerTriggerGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -21,10 +21,10 @@ public final class TriggerState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="configurationId")
-      private final @Nullable Input<String> configurationId;
+      private final @Nullable Output<String> configurationId;
 
-    public Input<String> getConfigurationId() {
-        return this.configurationId == null ? Input.empty() : this.configurationId;
+    public Output<String> getConfigurationId() {
+        return this.configurationId == null ? Output.empty() : this.configurationId;
     }
 
     /**
@@ -32,32 +32,32 @@ public final class TriggerState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="repositoryName")
-      private final @Nullable Input<String> repositoryName;
+      private final @Nullable Output<String> repositoryName;
 
-    public Input<String> getRepositoryName() {
-        return this.repositoryName == null ? Input.empty() : this.repositoryName;
+    public Output<String> getRepositoryName() {
+        return this.repositoryName == null ? Output.empty() : this.repositoryName;
     }
 
     @InputImport(name="triggers")
-      private final @Nullable Input<List<TriggerTriggerGetArgs>> triggers;
+      private final @Nullable Output<List<TriggerTriggerGetArgs>> triggers;
 
-    public Input<List<TriggerTriggerGetArgs>> getTriggers() {
-        return this.triggers == null ? Input.empty() : this.triggers;
+    public Output<List<TriggerTriggerGetArgs>> getTriggers() {
+        return this.triggers == null ? Output.empty() : this.triggers;
     }
 
     public TriggerState(
-        @Nullable Input<String> configurationId,
-        @Nullable Input<String> repositoryName,
-        @Nullable Input<List<TriggerTriggerGetArgs>> triggers) {
+        @Nullable Output<String> configurationId,
+        @Nullable Output<String> repositoryName,
+        @Nullable Output<List<TriggerTriggerGetArgs>> triggers) {
         this.configurationId = configurationId;
         this.repositoryName = repositoryName;
         this.triggers = triggers;
     }
 
     private TriggerState() {
-        this.configurationId = Input.empty();
-        this.repositoryName = Input.empty();
-        this.triggers = Input.empty();
+        this.configurationId = Output.empty();
+        this.repositoryName = Output.empty();
+        this.triggers = Output.empty();
     }
 
     public static Builder builder() {
@@ -69,9 +69,9 @@ public final class TriggerState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> configurationId;
-        private @Nullable Input<String> repositoryName;
-        private @Nullable Input<List<TriggerTriggerGetArgs>> triggers;
+        private @Nullable Output<String> configurationId;
+        private @Nullable Output<String> repositoryName;
+        private @Nullable Output<List<TriggerTriggerGetArgs>> triggers;
 
         public Builder() {
     	      // Empty
@@ -84,33 +84,33 @@ public final class TriggerState extends io.pulumi.resources.ResourceArgs {
     	      this.triggers = defaults.triggers;
         }
 
-        public Builder configurationId(@Nullable Input<String> configurationId) {
+        public Builder configurationId(@Nullable Output<String> configurationId) {
             this.configurationId = configurationId;
             return this;
         }
 
         public Builder configurationId(@Nullable String configurationId) {
-            this.configurationId = Input.ofNullable(configurationId);
+            this.configurationId = Output.ofNullable(configurationId);
             return this;
         }
 
-        public Builder repositoryName(@Nullable Input<String> repositoryName) {
+        public Builder repositoryName(@Nullable Output<String> repositoryName) {
             this.repositoryName = repositoryName;
             return this;
         }
 
         public Builder repositoryName(@Nullable String repositoryName) {
-            this.repositoryName = Input.ofNullable(repositoryName);
+            this.repositoryName = Output.ofNullable(repositoryName);
             return this;
         }
 
-        public Builder triggers(@Nullable Input<List<TriggerTriggerGetArgs>> triggers) {
+        public Builder triggers(@Nullable Output<List<TriggerTriggerGetArgs>> triggers) {
             this.triggers = triggers;
             return this;
         }
 
         public Builder triggers(@Nullable List<TriggerTriggerGetArgs> triggers) {
-            this.triggers = Input.ofNullable(triggers);
+            this.triggers = Output.ofNullable(triggers);
             return this;
         }
         public TriggerState build() {

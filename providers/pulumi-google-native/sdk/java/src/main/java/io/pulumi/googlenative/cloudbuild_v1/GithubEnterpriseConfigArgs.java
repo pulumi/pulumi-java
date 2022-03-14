@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudbuild_v1;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.cloudbuild_v1.inputs.GitHubEnterpriseSecretsArgs;
 import java.lang.String;
@@ -20,9 +20,9 @@ public final class GithubEnterpriseConfigArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="appId", required=true)
-      private final Input<String> appId;
+      private final Output<String> appId;
 
-    public Input<String> getAppId() {
+    public Output<String> getAppId() {
         return this.appId;
     }
 
@@ -31,17 +31,17 @@ public final class GithubEnterpriseConfigArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="displayName")
-      private final @Nullable Input<String> displayName;
+      private final @Nullable Output<String> displayName;
 
-    public Input<String> getDisplayName() {
-        return this.displayName == null ? Input.empty() : this.displayName;
+    public Output<String> getDisplayName() {
+        return this.displayName == null ? Output.empty() : this.displayName;
     }
 
     @InputImport(name="gheConfigId")
-      private final @Nullable Input<String> gheConfigId;
+      private final @Nullable Output<String> gheConfigId;
 
-    public Input<String> getGheConfigId() {
-        return this.gheConfigId == null ? Input.empty() : this.gheConfigId;
+    public Output<String> getGheConfigId() {
+        return this.gheConfigId == null ? Output.empty() : this.gheConfigId;
     }
 
     /**
@@ -49,17 +49,17 @@ public final class GithubEnterpriseConfigArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="hostUrl")
-      private final @Nullable Input<String> hostUrl;
+      private final @Nullable Output<String> hostUrl;
 
-    public Input<String> getHostUrl() {
-        return this.hostUrl == null ? Input.empty() : this.hostUrl;
+    public Output<String> getHostUrl() {
+        return this.hostUrl == null ? Output.empty() : this.hostUrl;
     }
 
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -67,10 +67,10 @@ public final class GithubEnterpriseConfigArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -78,24 +78,24 @@ public final class GithubEnterpriseConfigArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="peeredNetwork")
-      private final @Nullable Input<String> peeredNetwork;
+      private final @Nullable Output<String> peeredNetwork;
 
-    public Input<String> getPeeredNetwork() {
-        return this.peeredNetwork == null ? Input.empty() : this.peeredNetwork;
+    public Output<String> getPeeredNetwork() {
+        return this.peeredNetwork == null ? Output.empty() : this.peeredNetwork;
     }
 
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     @InputImport(name="projectId")
-      private final @Nullable Input<String> projectId;
+      private final @Nullable Output<String> projectId;
 
-    public Input<String> getProjectId() {
-        return this.projectId == null ? Input.empty() : this.projectId;
+    public Output<String> getProjectId() {
+        return this.projectId == null ? Output.empty() : this.projectId;
     }
 
     /**
@@ -103,10 +103,10 @@ public final class GithubEnterpriseConfigArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="secrets")
-      private final @Nullable Input<GitHubEnterpriseSecretsArgs> secrets;
+      private final @Nullable Output<GitHubEnterpriseSecretsArgs> secrets;
 
-    public Input<GitHubEnterpriseSecretsArgs> getSecrets() {
-        return this.secrets == null ? Input.empty() : this.secrets;
+    public Output<GitHubEnterpriseSecretsArgs> getSecrets() {
+        return this.secrets == null ? Output.empty() : this.secrets;
     }
 
     /**
@@ -114,10 +114,10 @@ public final class GithubEnterpriseConfigArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="sslCa")
-      private final @Nullable Input<String> sslCa;
+      private final @Nullable Output<String> sslCa;
 
-    public Input<String> getSslCa() {
-        return this.sslCa == null ? Input.empty() : this.sslCa;
+    public Output<String> getSslCa() {
+        return this.sslCa == null ? Output.empty() : this.sslCa;
     }
 
     /**
@@ -125,25 +125,25 @@ public final class GithubEnterpriseConfigArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="webhookKey")
-      private final @Nullable Input<String> webhookKey;
+      private final @Nullable Output<String> webhookKey;
 
-    public Input<String> getWebhookKey() {
-        return this.webhookKey == null ? Input.empty() : this.webhookKey;
+    public Output<String> getWebhookKey() {
+        return this.webhookKey == null ? Output.empty() : this.webhookKey;
     }
 
     public GithubEnterpriseConfigArgs(
-        Input<String> appId,
-        @Nullable Input<String> displayName,
-        @Nullable Input<String> gheConfigId,
-        @Nullable Input<String> hostUrl,
-        @Nullable Input<String> location,
-        @Nullable Input<String> name,
-        @Nullable Input<String> peeredNetwork,
-        @Nullable Input<String> project,
-        @Nullable Input<String> projectId,
-        @Nullable Input<GitHubEnterpriseSecretsArgs> secrets,
-        @Nullable Input<String> sslCa,
-        @Nullable Input<String> webhookKey) {
+        Output<String> appId,
+        @Nullable Output<String> displayName,
+        @Nullable Output<String> gheConfigId,
+        @Nullable Output<String> hostUrl,
+        @Nullable Output<String> location,
+        @Nullable Output<String> name,
+        @Nullable Output<String> peeredNetwork,
+        @Nullable Output<String> project,
+        @Nullable Output<String> projectId,
+        @Nullable Output<GitHubEnterpriseSecretsArgs> secrets,
+        @Nullable Output<String> sslCa,
+        @Nullable Output<String> webhookKey) {
         this.appId = Objects.requireNonNull(appId, "expected parameter 'appId' to be non-null");
         this.displayName = displayName;
         this.gheConfigId = gheConfigId;
@@ -159,18 +159,18 @@ public final class GithubEnterpriseConfigArgs extends io.pulumi.resources.Resour
     }
 
     private GithubEnterpriseConfigArgs() {
-        this.appId = Input.empty();
-        this.displayName = Input.empty();
-        this.gheConfigId = Input.empty();
-        this.hostUrl = Input.empty();
-        this.location = Input.empty();
-        this.name = Input.empty();
-        this.peeredNetwork = Input.empty();
-        this.project = Input.empty();
-        this.projectId = Input.empty();
-        this.secrets = Input.empty();
-        this.sslCa = Input.empty();
-        this.webhookKey = Input.empty();
+        this.appId = Output.empty();
+        this.displayName = Output.empty();
+        this.gheConfigId = Output.empty();
+        this.hostUrl = Output.empty();
+        this.location = Output.empty();
+        this.name = Output.empty();
+        this.peeredNetwork = Output.empty();
+        this.project = Output.empty();
+        this.projectId = Output.empty();
+        this.secrets = Output.empty();
+        this.sslCa = Output.empty();
+        this.webhookKey = Output.empty();
     }
 
     public static Builder builder() {
@@ -182,18 +182,18 @@ public final class GithubEnterpriseConfigArgs extends io.pulumi.resources.Resour
     }
 
     public static final class Builder {
-        private Input<String> appId;
-        private @Nullable Input<String> displayName;
-        private @Nullable Input<String> gheConfigId;
-        private @Nullable Input<String> hostUrl;
-        private @Nullable Input<String> location;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> peeredNetwork;
-        private @Nullable Input<String> project;
-        private @Nullable Input<String> projectId;
-        private @Nullable Input<GitHubEnterpriseSecretsArgs> secrets;
-        private @Nullable Input<String> sslCa;
-        private @Nullable Input<String> webhookKey;
+        private Output<String> appId;
+        private @Nullable Output<String> displayName;
+        private @Nullable Output<String> gheConfigId;
+        private @Nullable Output<String> hostUrl;
+        private @Nullable Output<String> location;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> peeredNetwork;
+        private @Nullable Output<String> project;
+        private @Nullable Output<String> projectId;
+        private @Nullable Output<GitHubEnterpriseSecretsArgs> secrets;
+        private @Nullable Output<String> sslCa;
+        private @Nullable Output<String> webhookKey;
 
         public Builder() {
     	      // Empty
@@ -215,123 +215,123 @@ public final class GithubEnterpriseConfigArgs extends io.pulumi.resources.Resour
     	      this.webhookKey = defaults.webhookKey;
         }
 
-        public Builder appId(Input<String> appId) {
+        public Builder appId(Output<String> appId) {
             this.appId = Objects.requireNonNull(appId);
             return this;
         }
 
         public Builder appId(String appId) {
-            this.appId = Input.of(Objects.requireNonNull(appId));
+            this.appId = Output.of(Objects.requireNonNull(appId));
             return this;
         }
 
-        public Builder displayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Input.ofNullable(displayName);
+            this.displayName = Output.ofNullable(displayName);
             return this;
         }
 
-        public Builder gheConfigId(@Nullable Input<String> gheConfigId) {
+        public Builder gheConfigId(@Nullable Output<String> gheConfigId) {
             this.gheConfigId = gheConfigId;
             return this;
         }
 
         public Builder gheConfigId(@Nullable String gheConfigId) {
-            this.gheConfigId = Input.ofNullable(gheConfigId);
+            this.gheConfigId = Output.ofNullable(gheConfigId);
             return this;
         }
 
-        public Builder hostUrl(@Nullable Input<String> hostUrl) {
+        public Builder hostUrl(@Nullable Output<String> hostUrl) {
             this.hostUrl = hostUrl;
             return this;
         }
 
         public Builder hostUrl(@Nullable String hostUrl) {
-            this.hostUrl = Input.ofNullable(hostUrl);
+            this.hostUrl = Output.ofNullable(hostUrl);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder peeredNetwork(@Nullable Input<String> peeredNetwork) {
+        public Builder peeredNetwork(@Nullable Output<String> peeredNetwork) {
             this.peeredNetwork = peeredNetwork;
             return this;
         }
 
         public Builder peeredNetwork(@Nullable String peeredNetwork) {
-            this.peeredNetwork = Input.ofNullable(peeredNetwork);
+            this.peeredNetwork = Output.ofNullable(peeredNetwork);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder projectId(@Nullable Input<String> projectId) {
+        public Builder projectId(@Nullable Output<String> projectId) {
             this.projectId = projectId;
             return this;
         }
 
         public Builder projectId(@Nullable String projectId) {
-            this.projectId = Input.ofNullable(projectId);
+            this.projectId = Output.ofNullable(projectId);
             return this;
         }
 
-        public Builder secrets(@Nullable Input<GitHubEnterpriseSecretsArgs> secrets) {
+        public Builder secrets(@Nullable Output<GitHubEnterpriseSecretsArgs> secrets) {
             this.secrets = secrets;
             return this;
         }
 
         public Builder secrets(@Nullable GitHubEnterpriseSecretsArgs secrets) {
-            this.secrets = Input.ofNullable(secrets);
+            this.secrets = Output.ofNullable(secrets);
             return this;
         }
 
-        public Builder sslCa(@Nullable Input<String> sslCa) {
+        public Builder sslCa(@Nullable Output<String> sslCa) {
             this.sslCa = sslCa;
             return this;
         }
 
         public Builder sslCa(@Nullable String sslCa) {
-            this.sslCa = Input.ofNullable(sslCa);
+            this.sslCa = Output.ofNullable(sslCa);
             return this;
         }
 
-        public Builder webhookKey(@Nullable Input<String> webhookKey) {
+        public Builder webhookKey(@Nullable Output<String> webhookKey) {
             this.webhookKey = webhookKey;
             return this;
         }
 
         public Builder webhookKey(@Nullable String webhookKey) {
-            this.webhookKey = Input.ofNullable(webhookKey);
+            this.webhookKey = Output.ofNullable(webhookKey);
             return this;
         }
         public GithubEnterpriseConfigArgs build() {

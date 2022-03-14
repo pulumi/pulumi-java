@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.resourcegroups.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -16,29 +16,29 @@ public final class GroupTagFilterArgs extends io.pulumi.resources.ResourceArgs {
     public static final GroupTagFilterArgs Empty = new GroupTagFilterArgs();
 
     @InputImport(name="key")
-      private final @Nullable Input<String> key;
+      private final @Nullable Output<String> key;
 
-    public Input<String> getKey() {
-        return this.key == null ? Input.empty() : this.key;
+    public Output<String> getKey() {
+        return this.key == null ? Output.empty() : this.key;
     }
 
     @InputImport(name="values")
-      private final @Nullable Input<List<String>> values;
+      private final @Nullable Output<List<String>> values;
 
-    public Input<List<String>> getValues() {
-        return this.values == null ? Input.empty() : this.values;
+    public Output<List<String>> getValues() {
+        return this.values == null ? Output.empty() : this.values;
     }
 
     public GroupTagFilterArgs(
-        @Nullable Input<String> key,
-        @Nullable Input<List<String>> values) {
+        @Nullable Output<String> key,
+        @Nullable Output<List<String>> values) {
         this.key = key;
         this.values = values;
     }
 
     private GroupTagFilterArgs() {
-        this.key = Input.empty();
-        this.values = Input.empty();
+        this.key = Output.empty();
+        this.values = Output.empty();
     }
 
     public static Builder builder() {
@@ -50,8 +50,8 @@ public final class GroupTagFilterArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> key;
-        private @Nullable Input<List<String>> values;
+        private @Nullable Output<String> key;
+        private @Nullable Output<List<String>> values;
 
         public Builder() {
     	      // Empty
@@ -63,23 +63,23 @@ public final class GroupTagFilterArgs extends io.pulumi.resources.ResourceArgs {
     	      this.values = defaults.values;
         }
 
-        public Builder key(@Nullable Input<String> key) {
+        public Builder key(@Nullable Output<String> key) {
             this.key = key;
             return this;
         }
 
         public Builder key(@Nullable String key) {
-            this.key = Input.ofNullable(key);
+            this.key = Output.ofNullable(key);
             return this;
         }
 
-        public Builder values(@Nullable Input<List<String>> values) {
+        public Builder values(@Nullable Output<List<String>> values) {
             this.values = values;
             return this;
         }
 
         public Builder values(@Nullable List<String> values) {
-            this.values = Input.ofNullable(values);
+            this.values = Output.ofNullable(values);
             return this;
         }
         public GroupTagFilterArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.flowcontrol.apiserver.k8s.io_v1beta1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.kubernetes.flowcontrol.apiserver.k8s.io_v1beta1.inputs.FlowDistinguisherMethodArgs;
 import io.pulumi.kubernetes.flowcontrol.apiserver.k8s.io_v1beta1.inputs.PolicyRulesWithSubjectsArgs;
@@ -27,10 +27,10 @@ public final class FlowSchemaSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="distinguisherMethod")
-      private final @Nullable Input<FlowDistinguisherMethodArgs> distinguisherMethod;
+      private final @Nullable Output<FlowDistinguisherMethodArgs> distinguisherMethod;
 
-    public Input<FlowDistinguisherMethodArgs> getDistinguisherMethod() {
-        return this.distinguisherMethod == null ? Input.empty() : this.distinguisherMethod;
+    public Output<FlowDistinguisherMethodArgs> getDistinguisherMethod() {
+        return this.distinguisherMethod == null ? Output.empty() : this.distinguisherMethod;
     }
 
     /**
@@ -38,10 +38,10 @@ public final class FlowSchemaSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="matchingPrecedence")
-      private final @Nullable Input<Integer> matchingPrecedence;
+      private final @Nullable Output<Integer> matchingPrecedence;
 
-    public Input<Integer> getMatchingPrecedence() {
-        return this.matchingPrecedence == null ? Input.empty() : this.matchingPrecedence;
+    public Output<Integer> getMatchingPrecedence() {
+        return this.matchingPrecedence == null ? Output.empty() : this.matchingPrecedence;
     }
 
     /**
@@ -49,9 +49,9 @@ public final class FlowSchemaSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="priorityLevelConfiguration", required=true)
-      private final Input<PriorityLevelConfigurationReferenceArgs> priorityLevelConfiguration;
+      private final Output<PriorityLevelConfigurationReferenceArgs> priorityLevelConfiguration;
 
-    public Input<PriorityLevelConfigurationReferenceArgs> getPriorityLevelConfiguration() {
+    public Output<PriorityLevelConfigurationReferenceArgs> getPriorityLevelConfiguration() {
         return this.priorityLevelConfiguration;
     }
 
@@ -60,17 +60,17 @@ public final class FlowSchemaSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="rules")
-      private final @Nullable Input<List<PolicyRulesWithSubjectsArgs>> rules;
+      private final @Nullable Output<List<PolicyRulesWithSubjectsArgs>> rules;
 
-    public Input<List<PolicyRulesWithSubjectsArgs>> getRules() {
-        return this.rules == null ? Input.empty() : this.rules;
+    public Output<List<PolicyRulesWithSubjectsArgs>> getRules() {
+        return this.rules == null ? Output.empty() : this.rules;
     }
 
     public FlowSchemaSpecArgs(
-        @Nullable Input<FlowDistinguisherMethodArgs> distinguisherMethod,
-        @Nullable Input<Integer> matchingPrecedence,
-        Input<PriorityLevelConfigurationReferenceArgs> priorityLevelConfiguration,
-        @Nullable Input<List<PolicyRulesWithSubjectsArgs>> rules) {
+        @Nullable Output<FlowDistinguisherMethodArgs> distinguisherMethod,
+        @Nullable Output<Integer> matchingPrecedence,
+        Output<PriorityLevelConfigurationReferenceArgs> priorityLevelConfiguration,
+        @Nullable Output<List<PolicyRulesWithSubjectsArgs>> rules) {
         this.distinguisherMethod = distinguisherMethod;
         this.matchingPrecedence = matchingPrecedence;
         this.priorityLevelConfiguration = Objects.requireNonNull(priorityLevelConfiguration, "expected parameter 'priorityLevelConfiguration' to be non-null");
@@ -78,10 +78,10 @@ public final class FlowSchemaSpecArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private FlowSchemaSpecArgs() {
-        this.distinguisherMethod = Input.empty();
-        this.matchingPrecedence = Input.empty();
-        this.priorityLevelConfiguration = Input.empty();
-        this.rules = Input.empty();
+        this.distinguisherMethod = Output.empty();
+        this.matchingPrecedence = Output.empty();
+        this.priorityLevelConfiguration = Output.empty();
+        this.rules = Output.empty();
     }
 
     public static Builder builder() {
@@ -93,10 +93,10 @@ public final class FlowSchemaSpecArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<FlowDistinguisherMethodArgs> distinguisherMethod;
-        private @Nullable Input<Integer> matchingPrecedence;
-        private Input<PriorityLevelConfigurationReferenceArgs> priorityLevelConfiguration;
-        private @Nullable Input<List<PolicyRulesWithSubjectsArgs>> rules;
+        private @Nullable Output<FlowDistinguisherMethodArgs> distinguisherMethod;
+        private @Nullable Output<Integer> matchingPrecedence;
+        private Output<PriorityLevelConfigurationReferenceArgs> priorityLevelConfiguration;
+        private @Nullable Output<List<PolicyRulesWithSubjectsArgs>> rules;
 
         public Builder() {
     	      // Empty
@@ -110,43 +110,43 @@ public final class FlowSchemaSpecArgs extends io.pulumi.resources.ResourceArgs {
     	      this.rules = defaults.rules;
         }
 
-        public Builder distinguisherMethod(@Nullable Input<FlowDistinguisherMethodArgs> distinguisherMethod) {
+        public Builder distinguisherMethod(@Nullable Output<FlowDistinguisherMethodArgs> distinguisherMethod) {
             this.distinguisherMethod = distinguisherMethod;
             return this;
         }
 
         public Builder distinguisherMethod(@Nullable FlowDistinguisherMethodArgs distinguisherMethod) {
-            this.distinguisherMethod = Input.ofNullable(distinguisherMethod);
+            this.distinguisherMethod = Output.ofNullable(distinguisherMethod);
             return this;
         }
 
-        public Builder matchingPrecedence(@Nullable Input<Integer> matchingPrecedence) {
+        public Builder matchingPrecedence(@Nullable Output<Integer> matchingPrecedence) {
             this.matchingPrecedence = matchingPrecedence;
             return this;
         }
 
         public Builder matchingPrecedence(@Nullable Integer matchingPrecedence) {
-            this.matchingPrecedence = Input.ofNullable(matchingPrecedence);
+            this.matchingPrecedence = Output.ofNullable(matchingPrecedence);
             return this;
         }
 
-        public Builder priorityLevelConfiguration(Input<PriorityLevelConfigurationReferenceArgs> priorityLevelConfiguration) {
+        public Builder priorityLevelConfiguration(Output<PriorityLevelConfigurationReferenceArgs> priorityLevelConfiguration) {
             this.priorityLevelConfiguration = Objects.requireNonNull(priorityLevelConfiguration);
             return this;
         }
 
         public Builder priorityLevelConfiguration(PriorityLevelConfigurationReferenceArgs priorityLevelConfiguration) {
-            this.priorityLevelConfiguration = Input.of(Objects.requireNonNull(priorityLevelConfiguration));
+            this.priorityLevelConfiguration = Output.of(Objects.requireNonNull(priorityLevelConfiguration));
             return this;
         }
 
-        public Builder rules(@Nullable Input<List<PolicyRulesWithSubjectsArgs>> rules) {
+        public Builder rules(@Nullable Output<List<PolicyRulesWithSubjectsArgs>> rules) {
             this.rules = rules;
             return this;
         }
 
         public Builder rules(@Nullable List<PolicyRulesWithSubjectsArgs> rules) {
-            this.rules = Input.ofNullable(rules);
+            this.rules = Output.ofNullable(rules);
             return this;
         }
         public FlowSchemaSpecArgs build() {

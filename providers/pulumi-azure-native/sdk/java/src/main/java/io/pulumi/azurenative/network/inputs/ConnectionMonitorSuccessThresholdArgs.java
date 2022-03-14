@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.Integer;
@@ -24,10 +24,10 @@ public final class ConnectionMonitorSuccessThresholdArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="checksFailedPercent")
-      private final @Nullable Input<Integer> checksFailedPercent;
+      private final @Nullable Output<Integer> checksFailedPercent;
 
-    public Input<Integer> getChecksFailedPercent() {
-        return this.checksFailedPercent == null ? Input.empty() : this.checksFailedPercent;
+    public Output<Integer> getChecksFailedPercent() {
+        return this.checksFailedPercent == null ? Output.empty() : this.checksFailedPercent;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class ConnectionMonitorSuccessThresholdArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="roundTripTimeMs")
-      private final @Nullable Input<Double> roundTripTimeMs;
+      private final @Nullable Output<Double> roundTripTimeMs;
 
-    public Input<Double> getRoundTripTimeMs() {
-        return this.roundTripTimeMs == null ? Input.empty() : this.roundTripTimeMs;
+    public Output<Double> getRoundTripTimeMs() {
+        return this.roundTripTimeMs == null ? Output.empty() : this.roundTripTimeMs;
     }
 
     public ConnectionMonitorSuccessThresholdArgs(
-        @Nullable Input<Integer> checksFailedPercent,
-        @Nullable Input<Double> roundTripTimeMs) {
+        @Nullable Output<Integer> checksFailedPercent,
+        @Nullable Output<Double> roundTripTimeMs) {
         this.checksFailedPercent = checksFailedPercent;
         this.roundTripTimeMs = roundTripTimeMs;
     }
 
     private ConnectionMonitorSuccessThresholdArgs() {
-        this.checksFailedPercent = Input.empty();
-        this.roundTripTimeMs = Input.empty();
+        this.checksFailedPercent = Output.empty();
+        this.roundTripTimeMs = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class ConnectionMonitorSuccessThresholdArgs extends io.pulumi.resou
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> checksFailedPercent;
-        private @Nullable Input<Double> roundTripTimeMs;
+        private @Nullable Output<Integer> checksFailedPercent;
+        private @Nullable Output<Double> roundTripTimeMs;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class ConnectionMonitorSuccessThresholdArgs extends io.pulumi.resou
     	      this.roundTripTimeMs = defaults.roundTripTimeMs;
         }
 
-        public Builder checksFailedPercent(@Nullable Input<Integer> checksFailedPercent) {
+        public Builder checksFailedPercent(@Nullable Output<Integer> checksFailedPercent) {
             this.checksFailedPercent = checksFailedPercent;
             return this;
         }
 
         public Builder checksFailedPercent(@Nullable Integer checksFailedPercent) {
-            this.checksFailedPercent = Input.ofNullable(checksFailedPercent);
+            this.checksFailedPercent = Output.ofNullable(checksFailedPercent);
             return this;
         }
 
-        public Builder roundTripTimeMs(@Nullable Input<Double> roundTripTimeMs) {
+        public Builder roundTripTimeMs(@Nullable Output<Double> roundTripTimeMs) {
             this.roundTripTimeMs = roundTripTimeMs;
             return this;
         }
 
         public Builder roundTripTimeMs(@Nullable Double roundTripTimeMs) {
-            this.roundTripTimeMs = Input.ofNullable(roundTripTimeMs);
+            this.roundTripTimeMs = Output.ofNullable(roundTripTimeMs);
             return this;
         }
         public ConnectionMonitorSuccessThresholdArgs build() {

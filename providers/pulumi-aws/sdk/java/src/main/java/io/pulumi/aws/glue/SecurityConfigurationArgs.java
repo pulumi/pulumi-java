@@ -4,7 +4,7 @@
 package io.pulumi.aws.glue;
 
 import io.pulumi.aws.glue.inputs.SecurityConfigurationEncryptionConfigurationArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -20,9 +20,9 @@ public final class SecurityConfigurationArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="encryptionConfiguration", required=true)
-      private final Input<SecurityConfigurationEncryptionConfigurationArgs> encryptionConfiguration;
+      private final Output<SecurityConfigurationEncryptionConfigurationArgs> encryptionConfiguration;
 
-    public Input<SecurityConfigurationEncryptionConfigurationArgs> getEncryptionConfiguration() {
+    public Output<SecurityConfigurationEncryptionConfigurationArgs> getEncryptionConfiguration() {
         return this.encryptionConfiguration;
     }
 
@@ -31,22 +31,22 @@ public final class SecurityConfigurationArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     public SecurityConfigurationArgs(
-        Input<SecurityConfigurationEncryptionConfigurationArgs> encryptionConfiguration,
-        @Nullable Input<String> name) {
+        Output<SecurityConfigurationEncryptionConfigurationArgs> encryptionConfiguration,
+        @Nullable Output<String> name) {
         this.encryptionConfiguration = Objects.requireNonNull(encryptionConfiguration, "expected parameter 'encryptionConfiguration' to be non-null");
         this.name = name;
     }
 
     private SecurityConfigurationArgs() {
-        this.encryptionConfiguration = Input.empty();
-        this.name = Input.empty();
+        this.encryptionConfiguration = Output.empty();
+        this.name = Output.empty();
     }
 
     public static Builder builder() {
@@ -58,8 +58,8 @@ public final class SecurityConfigurationArgs extends io.pulumi.resources.Resourc
     }
 
     public static final class Builder {
-        private Input<SecurityConfigurationEncryptionConfigurationArgs> encryptionConfiguration;
-        private @Nullable Input<String> name;
+        private Output<SecurityConfigurationEncryptionConfigurationArgs> encryptionConfiguration;
+        private @Nullable Output<String> name;
 
         public Builder() {
     	      // Empty
@@ -71,23 +71,23 @@ public final class SecurityConfigurationArgs extends io.pulumi.resources.Resourc
     	      this.name = defaults.name;
         }
 
-        public Builder encryptionConfiguration(Input<SecurityConfigurationEncryptionConfigurationArgs> encryptionConfiguration) {
+        public Builder encryptionConfiguration(Output<SecurityConfigurationEncryptionConfigurationArgs> encryptionConfiguration) {
             this.encryptionConfiguration = Objects.requireNonNull(encryptionConfiguration);
             return this;
         }
 
         public Builder encryptionConfiguration(SecurityConfigurationEncryptionConfigurationArgs encryptionConfiguration) {
-            this.encryptionConfiguration = Input.of(Objects.requireNonNull(encryptionConfiguration));
+            this.encryptionConfiguration = Output.of(Objects.requireNonNull(encryptionConfiguration));
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
         public SecurityConfigurationArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.core_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -24,9 +24,9 @@ public final class GlusterfsVolumeSourceArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="endpoints", required=true)
-      private final Input<String> endpoints;
+      private final Output<String> endpoints;
 
-    public Input<String> getEndpoints() {
+    public Output<String> getEndpoints() {
         return this.endpoints;
     }
 
@@ -35,9 +35,9 @@ public final class GlusterfsVolumeSourceArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="path", required=true)
-      private final Input<String> path;
+      private final Output<String> path;
 
-    public Input<String> getPath() {
+    public Output<String> getPath() {
         return this.path;
     }
 
@@ -46,25 +46,25 @@ public final class GlusterfsVolumeSourceArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="readOnly")
-      private final @Nullable Input<Boolean> readOnly;
+      private final @Nullable Output<Boolean> readOnly;
 
-    public Input<Boolean> getReadOnly() {
-        return this.readOnly == null ? Input.empty() : this.readOnly;
+    public Output<Boolean> getReadOnly() {
+        return this.readOnly == null ? Output.empty() : this.readOnly;
     }
 
     public GlusterfsVolumeSourceArgs(
-        Input<String> endpoints,
-        Input<String> path,
-        @Nullable Input<Boolean> readOnly) {
+        Output<String> endpoints,
+        Output<String> path,
+        @Nullable Output<Boolean> readOnly) {
         this.endpoints = Objects.requireNonNull(endpoints, "expected parameter 'endpoints' to be non-null");
         this.path = Objects.requireNonNull(path, "expected parameter 'path' to be non-null");
         this.readOnly = readOnly;
     }
 
     private GlusterfsVolumeSourceArgs() {
-        this.endpoints = Input.empty();
-        this.path = Input.empty();
-        this.readOnly = Input.empty();
+        this.endpoints = Output.empty();
+        this.path = Output.empty();
+        this.readOnly = Output.empty();
     }
 
     public static Builder builder() {
@@ -76,9 +76,9 @@ public final class GlusterfsVolumeSourceArgs extends io.pulumi.resources.Resourc
     }
 
     public static final class Builder {
-        private Input<String> endpoints;
-        private Input<String> path;
-        private @Nullable Input<Boolean> readOnly;
+        private Output<String> endpoints;
+        private Output<String> path;
+        private @Nullable Output<Boolean> readOnly;
 
         public Builder() {
     	      // Empty
@@ -91,33 +91,33 @@ public final class GlusterfsVolumeSourceArgs extends io.pulumi.resources.Resourc
     	      this.readOnly = defaults.readOnly;
         }
 
-        public Builder endpoints(Input<String> endpoints) {
+        public Builder endpoints(Output<String> endpoints) {
             this.endpoints = Objects.requireNonNull(endpoints);
             return this;
         }
 
         public Builder endpoints(String endpoints) {
-            this.endpoints = Input.of(Objects.requireNonNull(endpoints));
+            this.endpoints = Output.of(Objects.requireNonNull(endpoints));
             return this;
         }
 
-        public Builder path(Input<String> path) {
+        public Builder path(Output<String> path) {
             this.path = Objects.requireNonNull(path);
             return this;
         }
 
         public Builder path(String path) {
-            this.path = Input.of(Objects.requireNonNull(path));
+            this.path = Output.of(Objects.requireNonNull(path));
             return this;
         }
 
-        public Builder readOnly(@Nullable Input<Boolean> readOnly) {
+        public Builder readOnly(@Nullable Output<Boolean> readOnly) {
             this.readOnly = readOnly;
             return this;
         }
 
         public Builder readOnly(@Nullable Boolean readOnly) {
-            this.readOnly = Input.ofNullable(readOnly);
+            this.readOnly = Output.ofNullable(readOnly);
             return this;
         }
         public GlusterfsVolumeSourceArgs build() {

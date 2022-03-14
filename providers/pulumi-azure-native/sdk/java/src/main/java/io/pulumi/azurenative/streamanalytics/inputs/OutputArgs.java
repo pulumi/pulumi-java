@@ -15,7 +15,7 @@ import io.pulumi.azurenative.streamanalytics.inputs.JsonSerializationArgs;
 import io.pulumi.azurenative.streamanalytics.inputs.PowerBIOutputDataSourceArgs;
 import io.pulumi.azurenative.streamanalytics.inputs.ServiceBusQueueOutputDataSourceArgs;
 import io.pulumi.azurenative.streamanalytics.inputs.ServiceBusTopicOutputDataSourceArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
@@ -36,10 +36,10 @@ public final class OutputArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="datasource")
-      private final @Nullable Input<Object> datasource;
+      private final @Nullable Output<Object> datasource;
 
-    public Input<Object> getDatasource() {
-        return this.datasource == null ? Input.empty() : this.datasource;
+    public Output<Object> getDatasource() {
+        return this.datasource == null ? Output.empty() : this.datasource;
     }
 
     /**
@@ -47,10 +47,10 @@ public final class OutputArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -58,25 +58,25 @@ public final class OutputArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serialization")
-      private final @Nullable Input<Object> serialization;
+      private final @Nullable Output<Object> serialization;
 
-    public Input<Object> getSerialization() {
-        return this.serialization == null ? Input.empty() : this.serialization;
+    public Output<Object> getSerialization() {
+        return this.serialization == null ? Output.empty() : this.serialization;
     }
 
     public OutputArgs(
-        @Nullable Input<Object> datasource,
-        @Nullable Input<String> name,
-        @Nullable Input<Object> serialization) {
+        @Nullable Output<Object> datasource,
+        @Nullable Output<String> name,
+        @Nullable Output<Object> serialization) {
         this.datasource = datasource;
         this.name = name;
         this.serialization = serialization;
     }
 
     private OutputArgs() {
-        this.datasource = Input.empty();
-        this.name = Input.empty();
-        this.serialization = Input.empty();
+        this.datasource = Output.empty();
+        this.name = Output.empty();
+        this.serialization = Output.empty();
     }
 
     public static Builder builder() {
@@ -88,9 +88,9 @@ public final class OutputArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Object> datasource;
-        private @Nullable Input<String> name;
-        private @Nullable Input<Object> serialization;
+        private @Nullable Output<Object> datasource;
+        private @Nullable Output<String> name;
+        private @Nullable Output<Object> serialization;
 
         public Builder() {
     	      // Empty
@@ -103,33 +103,33 @@ public final class OutputArgs extends io.pulumi.resources.ResourceArgs {
     	      this.serialization = defaults.serialization;
         }
 
-        public Builder datasource(@Nullable Input<Object> datasource) {
+        public Builder datasource(@Nullable Output<Object> datasource) {
             this.datasource = datasource;
             return this;
         }
 
         public Builder datasource(@Nullable Object datasource) {
-            this.datasource = Input.ofNullable(datasource);
+            this.datasource = Output.ofNullable(datasource);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder serialization(@Nullable Input<Object> serialization) {
+        public Builder serialization(@Nullable Output<Object> serialization) {
             this.serialization = serialization;
             return this;
         }
 
         public Builder serialization(@Nullable Object serialization) {
-            this.serialization = Input.ofNullable(serialization);
+            this.serialization = Output.ofNullable(serialization);
             return this;
         }
         public OutputArgs build() {

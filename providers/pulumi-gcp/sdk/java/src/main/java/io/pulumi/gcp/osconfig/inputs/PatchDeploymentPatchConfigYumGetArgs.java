@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.osconfig.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -21,10 +21,10 @@ public final class PatchDeploymentPatchConfigYumGetArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="excludes")
-      private final @Nullable Input<List<String>> excludes;
+      private final @Nullable Output<List<String>> excludes;
 
-    public Input<List<String>> getExcludes() {
-        return this.excludes == null ? Input.empty() : this.excludes;
+    public Output<List<String>> getExcludes() {
+        return this.excludes == null ? Output.empty() : this.excludes;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class PatchDeploymentPatchConfigYumGetArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="exclusivePackages")
-      private final @Nullable Input<List<String>> exclusivePackages;
+      private final @Nullable Output<List<String>> exclusivePackages;
 
-    public Input<List<String>> getExclusivePackages() {
-        return this.exclusivePackages == null ? Input.empty() : this.exclusivePackages;
+    public Output<List<String>> getExclusivePackages() {
+        return this.exclusivePackages == null ? Output.empty() : this.exclusivePackages;
     }
 
     /**
@@ -45,10 +45,10 @@ public final class PatchDeploymentPatchConfigYumGetArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="minimal")
-      private final @Nullable Input<Boolean> minimal;
+      private final @Nullable Output<Boolean> minimal;
 
-    public Input<Boolean> getMinimal() {
-        return this.minimal == null ? Input.empty() : this.minimal;
+    public Output<Boolean> getMinimal() {
+        return this.minimal == null ? Output.empty() : this.minimal;
     }
 
     /**
@@ -56,17 +56,17 @@ public final class PatchDeploymentPatchConfigYumGetArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="security")
-      private final @Nullable Input<Boolean> security;
+      private final @Nullable Output<Boolean> security;
 
-    public Input<Boolean> getSecurity() {
-        return this.security == null ? Input.empty() : this.security;
+    public Output<Boolean> getSecurity() {
+        return this.security == null ? Output.empty() : this.security;
     }
 
     public PatchDeploymentPatchConfigYumGetArgs(
-        @Nullable Input<List<String>> excludes,
-        @Nullable Input<List<String>> exclusivePackages,
-        @Nullable Input<Boolean> minimal,
-        @Nullable Input<Boolean> security) {
+        @Nullable Output<List<String>> excludes,
+        @Nullable Output<List<String>> exclusivePackages,
+        @Nullable Output<Boolean> minimal,
+        @Nullable Output<Boolean> security) {
         this.excludes = excludes;
         this.exclusivePackages = exclusivePackages;
         this.minimal = minimal;
@@ -74,10 +74,10 @@ public final class PatchDeploymentPatchConfigYumGetArgs extends io.pulumi.resour
     }
 
     private PatchDeploymentPatchConfigYumGetArgs() {
-        this.excludes = Input.empty();
-        this.exclusivePackages = Input.empty();
-        this.minimal = Input.empty();
-        this.security = Input.empty();
+        this.excludes = Output.empty();
+        this.exclusivePackages = Output.empty();
+        this.minimal = Output.empty();
+        this.security = Output.empty();
     }
 
     public static Builder builder() {
@@ -89,10 +89,10 @@ public final class PatchDeploymentPatchConfigYumGetArgs extends io.pulumi.resour
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> excludes;
-        private @Nullable Input<List<String>> exclusivePackages;
-        private @Nullable Input<Boolean> minimal;
-        private @Nullable Input<Boolean> security;
+        private @Nullable Output<List<String>> excludes;
+        private @Nullable Output<List<String>> exclusivePackages;
+        private @Nullable Output<Boolean> minimal;
+        private @Nullable Output<Boolean> security;
 
         public Builder() {
     	      // Empty
@@ -106,43 +106,43 @@ public final class PatchDeploymentPatchConfigYumGetArgs extends io.pulumi.resour
     	      this.security = defaults.security;
         }
 
-        public Builder excludes(@Nullable Input<List<String>> excludes) {
+        public Builder excludes(@Nullable Output<List<String>> excludes) {
             this.excludes = excludes;
             return this;
         }
 
         public Builder excludes(@Nullable List<String> excludes) {
-            this.excludes = Input.ofNullable(excludes);
+            this.excludes = Output.ofNullable(excludes);
             return this;
         }
 
-        public Builder exclusivePackages(@Nullable Input<List<String>> exclusivePackages) {
+        public Builder exclusivePackages(@Nullable Output<List<String>> exclusivePackages) {
             this.exclusivePackages = exclusivePackages;
             return this;
         }
 
         public Builder exclusivePackages(@Nullable List<String> exclusivePackages) {
-            this.exclusivePackages = Input.ofNullable(exclusivePackages);
+            this.exclusivePackages = Output.ofNullable(exclusivePackages);
             return this;
         }
 
-        public Builder minimal(@Nullable Input<Boolean> minimal) {
+        public Builder minimal(@Nullable Output<Boolean> minimal) {
             this.minimal = minimal;
             return this;
         }
 
         public Builder minimal(@Nullable Boolean minimal) {
-            this.minimal = Input.ofNullable(minimal);
+            this.minimal = Output.ofNullable(minimal);
             return this;
         }
 
-        public Builder security(@Nullable Input<Boolean> security) {
+        public Builder security(@Nullable Output<Boolean> security) {
             this.security = security;
             return this;
         }
 
         public Builder security(@Nullable Boolean security) {
-            this.security = Input.ofNullable(security);
+            this.security = Output.ofNullable(security);
             return this;
         }
         public PatchDeploymentPatchConfigYumGetArgs build() {

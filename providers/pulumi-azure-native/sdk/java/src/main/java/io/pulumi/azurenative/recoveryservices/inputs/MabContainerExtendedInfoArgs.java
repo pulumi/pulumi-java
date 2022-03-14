@@ -5,7 +5,7 @@ package io.pulumi.azurenative.recoveryservices.inputs;
 
 import io.pulumi.azurenative.recoveryservices.enums.BackupItemType;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -26,10 +26,10 @@ public final class MabContainerExtendedInfoArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="backupItemType")
-      private final @Nullable Input<Either<String,BackupItemType>> backupItemType;
+      private final @Nullable Output<Either<String,BackupItemType>> backupItemType;
 
-    public Input<Either<String,BackupItemType>> getBackupItemType() {
-        return this.backupItemType == null ? Input.empty() : this.backupItemType;
+    public Output<Either<String,BackupItemType>> getBackupItemType() {
+        return this.backupItemType == null ? Output.empty() : this.backupItemType;
     }
 
     /**
@@ -37,10 +37,10 @@ public final class MabContainerExtendedInfoArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="backupItems")
-      private final @Nullable Input<List<String>> backupItems;
+      private final @Nullable Output<List<String>> backupItems;
 
-    public Input<List<String>> getBackupItems() {
-        return this.backupItems == null ? Input.empty() : this.backupItems;
+    public Output<List<String>> getBackupItems() {
+        return this.backupItems == null ? Output.empty() : this.backupItems;
     }
 
     /**
@@ -48,10 +48,10 @@ public final class MabContainerExtendedInfoArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="lastBackupStatus")
-      private final @Nullable Input<String> lastBackupStatus;
+      private final @Nullable Output<String> lastBackupStatus;
 
-    public Input<String> getLastBackupStatus() {
-        return this.lastBackupStatus == null ? Input.empty() : this.lastBackupStatus;
+    public Output<String> getLastBackupStatus() {
+        return this.lastBackupStatus == null ? Output.empty() : this.lastBackupStatus;
     }
 
     /**
@@ -59,10 +59,10 @@ public final class MabContainerExtendedInfoArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="lastRefreshedAt")
-      private final @Nullable Input<String> lastRefreshedAt;
+      private final @Nullable Output<String> lastRefreshedAt;
 
-    public Input<String> getLastRefreshedAt() {
-        return this.lastRefreshedAt == null ? Input.empty() : this.lastRefreshedAt;
+    public Output<String> getLastRefreshedAt() {
+        return this.lastRefreshedAt == null ? Output.empty() : this.lastRefreshedAt;
     }
 
     /**
@@ -70,18 +70,18 @@ public final class MabContainerExtendedInfoArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="policyName")
-      private final @Nullable Input<String> policyName;
+      private final @Nullable Output<String> policyName;
 
-    public Input<String> getPolicyName() {
-        return this.policyName == null ? Input.empty() : this.policyName;
+    public Output<String> getPolicyName() {
+        return this.policyName == null ? Output.empty() : this.policyName;
     }
 
     public MabContainerExtendedInfoArgs(
-        @Nullable Input<Either<String,BackupItemType>> backupItemType,
-        @Nullable Input<List<String>> backupItems,
-        @Nullable Input<String> lastBackupStatus,
-        @Nullable Input<String> lastRefreshedAt,
-        @Nullable Input<String> policyName) {
+        @Nullable Output<Either<String,BackupItemType>> backupItemType,
+        @Nullable Output<List<String>> backupItems,
+        @Nullable Output<String> lastBackupStatus,
+        @Nullable Output<String> lastRefreshedAt,
+        @Nullable Output<String> policyName) {
         this.backupItemType = backupItemType;
         this.backupItems = backupItems;
         this.lastBackupStatus = lastBackupStatus;
@@ -90,11 +90,11 @@ public final class MabContainerExtendedInfoArgs extends io.pulumi.resources.Reso
     }
 
     private MabContainerExtendedInfoArgs() {
-        this.backupItemType = Input.empty();
-        this.backupItems = Input.empty();
-        this.lastBackupStatus = Input.empty();
-        this.lastRefreshedAt = Input.empty();
-        this.policyName = Input.empty();
+        this.backupItemType = Output.empty();
+        this.backupItems = Output.empty();
+        this.lastBackupStatus = Output.empty();
+        this.lastRefreshedAt = Output.empty();
+        this.policyName = Output.empty();
     }
 
     public static Builder builder() {
@@ -106,11 +106,11 @@ public final class MabContainerExtendedInfoArgs extends io.pulumi.resources.Reso
     }
 
     public static final class Builder {
-        private @Nullable Input<Either<String,BackupItemType>> backupItemType;
-        private @Nullable Input<List<String>> backupItems;
-        private @Nullable Input<String> lastBackupStatus;
-        private @Nullable Input<String> lastRefreshedAt;
-        private @Nullable Input<String> policyName;
+        private @Nullable Output<Either<String,BackupItemType>> backupItemType;
+        private @Nullable Output<List<String>> backupItems;
+        private @Nullable Output<String> lastBackupStatus;
+        private @Nullable Output<String> lastRefreshedAt;
+        private @Nullable Output<String> policyName;
 
         public Builder() {
     	      // Empty
@@ -125,53 +125,53 @@ public final class MabContainerExtendedInfoArgs extends io.pulumi.resources.Reso
     	      this.policyName = defaults.policyName;
         }
 
-        public Builder backupItemType(@Nullable Input<Either<String,BackupItemType>> backupItemType) {
+        public Builder backupItemType(@Nullable Output<Either<String,BackupItemType>> backupItemType) {
             this.backupItemType = backupItemType;
             return this;
         }
 
         public Builder backupItemType(@Nullable Either<String,BackupItemType> backupItemType) {
-            this.backupItemType = Input.ofNullable(backupItemType);
+            this.backupItemType = Output.ofNullable(backupItemType);
             return this;
         }
 
-        public Builder backupItems(@Nullable Input<List<String>> backupItems) {
+        public Builder backupItems(@Nullable Output<List<String>> backupItems) {
             this.backupItems = backupItems;
             return this;
         }
 
         public Builder backupItems(@Nullable List<String> backupItems) {
-            this.backupItems = Input.ofNullable(backupItems);
+            this.backupItems = Output.ofNullable(backupItems);
             return this;
         }
 
-        public Builder lastBackupStatus(@Nullable Input<String> lastBackupStatus) {
+        public Builder lastBackupStatus(@Nullable Output<String> lastBackupStatus) {
             this.lastBackupStatus = lastBackupStatus;
             return this;
         }
 
         public Builder lastBackupStatus(@Nullable String lastBackupStatus) {
-            this.lastBackupStatus = Input.ofNullable(lastBackupStatus);
+            this.lastBackupStatus = Output.ofNullable(lastBackupStatus);
             return this;
         }
 
-        public Builder lastRefreshedAt(@Nullable Input<String> lastRefreshedAt) {
+        public Builder lastRefreshedAt(@Nullable Output<String> lastRefreshedAt) {
             this.lastRefreshedAt = lastRefreshedAt;
             return this;
         }
 
         public Builder lastRefreshedAt(@Nullable String lastRefreshedAt) {
-            this.lastRefreshedAt = Input.ofNullable(lastRefreshedAt);
+            this.lastRefreshedAt = Output.ofNullable(lastRefreshedAt);
             return this;
         }
 
-        public Builder policyName(@Nullable Input<String> policyName) {
+        public Builder policyName(@Nullable Output<String> policyName) {
             this.policyName = policyName;
             return this;
         }
 
         public Builder policyName(@Nullable String policyName) {
-            this.policyName = Input.ofNullable(policyName);
+            this.policyName = Output.ofNullable(policyName);
             return this;
         }
         public MabContainerExtendedInfoArgs build() {

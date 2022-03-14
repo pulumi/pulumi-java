@@ -5,7 +5,7 @@ package io.pulumi.azurenative.containerregistry.inputs;
 
 import io.pulumi.azurenative.containerregistry.enums.Action;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -25,10 +25,10 @@ public final class VirtualNetworkRuleArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="action")
-      private final @Nullable Input<Either<String,Action>> action;
+      private final @Nullable Output<Either<String,Action>> action;
 
-    public Input<Either<String,Action>> getAction() {
-        return this.action == null ? Input.empty() : this.action;
+    public Output<Either<String,Action>> getAction() {
+        return this.action == null ? Output.empty() : this.action;
     }
 
     /**
@@ -36,22 +36,22 @@ public final class VirtualNetworkRuleArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="virtualNetworkResourceId", required=true)
-      private final Input<String> virtualNetworkResourceId;
+      private final Output<String> virtualNetworkResourceId;
 
-    public Input<String> getVirtualNetworkResourceId() {
+    public Output<String> getVirtualNetworkResourceId() {
         return this.virtualNetworkResourceId;
     }
 
     public VirtualNetworkRuleArgs(
-        @Nullable Input<Either<String,Action>> action,
-        Input<String> virtualNetworkResourceId) {
-        this.action = action == null ? Input.ofLeft("Allow") : action;
+        @Nullable Output<Either<String,Action>> action,
+        Output<String> virtualNetworkResourceId) {
+        this.action = action == null ? Output.ofLeft("Allow") : action;
         this.virtualNetworkResourceId = Objects.requireNonNull(virtualNetworkResourceId, "expected parameter 'virtualNetworkResourceId' to be non-null");
     }
 
     private VirtualNetworkRuleArgs() {
-        this.action = Input.empty();
-        this.virtualNetworkResourceId = Input.empty();
+        this.action = Output.empty();
+        this.virtualNetworkResourceId = Output.empty();
     }
 
     public static Builder builder() {
@@ -63,8 +63,8 @@ public final class VirtualNetworkRuleArgs extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private @Nullable Input<Either<String,Action>> action;
-        private Input<String> virtualNetworkResourceId;
+        private @Nullable Output<Either<String,Action>> action;
+        private Output<String> virtualNetworkResourceId;
 
         public Builder() {
     	      // Empty
@@ -76,23 +76,23 @@ public final class VirtualNetworkRuleArgs extends io.pulumi.resources.ResourceAr
     	      this.virtualNetworkResourceId = defaults.virtualNetworkResourceId;
         }
 
-        public Builder action(@Nullable Input<Either<String,Action>> action) {
+        public Builder action(@Nullable Output<Either<String,Action>> action) {
             this.action = action;
             return this;
         }
 
         public Builder action(@Nullable Either<String,Action> action) {
-            this.action = Input.ofNullable(action);
+            this.action = Output.ofNullable(action);
             return this;
         }
 
-        public Builder virtualNetworkResourceId(Input<String> virtualNetworkResourceId) {
+        public Builder virtualNetworkResourceId(Output<String> virtualNetworkResourceId) {
             this.virtualNetworkResourceId = Objects.requireNonNull(virtualNetworkResourceId);
             return this;
         }
 
         public Builder virtualNetworkResourceId(String virtualNetworkResourceId) {
-            this.virtualNetworkResourceId = Input.of(Objects.requireNonNull(virtualNetworkResourceId));
+            this.virtualNetworkResourceId = Output.of(Objects.requireNonNull(virtualNetworkResourceId));
             return this;
         }
         public VirtualNetworkRuleArgs build() {

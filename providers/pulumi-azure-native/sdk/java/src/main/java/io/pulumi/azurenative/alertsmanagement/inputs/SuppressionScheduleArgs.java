@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.alertsmanagement.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -25,10 +25,10 @@ public final class SuppressionScheduleArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="endDate")
-      private final @Nullable Input<String> endDate;
+      private final @Nullable Output<String> endDate;
 
-    public Input<String> getEndDate() {
-        return this.endDate == null ? Input.empty() : this.endDate;
+    public Output<String> getEndDate() {
+        return this.endDate == null ? Output.empty() : this.endDate;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class SuppressionScheduleArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="endTime")
-      private final @Nullable Input<String> endTime;
+      private final @Nullable Output<String> endTime;
 
-    public Input<String> getEndTime() {
-        return this.endTime == null ? Input.empty() : this.endTime;
+    public Output<String> getEndTime() {
+        return this.endTime == null ? Output.empty() : this.endTime;
     }
 
     /**
@@ -47,10 +47,10 @@ public final class SuppressionScheduleArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="recurrenceValues")
-      private final @Nullable Input<List<Integer>> recurrenceValues;
+      private final @Nullable Output<List<Integer>> recurrenceValues;
 
-    public Input<List<Integer>> getRecurrenceValues() {
-        return this.recurrenceValues == null ? Input.empty() : this.recurrenceValues;
+    public Output<List<Integer>> getRecurrenceValues() {
+        return this.recurrenceValues == null ? Output.empty() : this.recurrenceValues;
     }
 
     /**
@@ -58,10 +58,10 @@ public final class SuppressionScheduleArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="startDate")
-      private final @Nullable Input<String> startDate;
+      private final @Nullable Output<String> startDate;
 
-    public Input<String> getStartDate() {
-        return this.startDate == null ? Input.empty() : this.startDate;
+    public Output<String> getStartDate() {
+        return this.startDate == null ? Output.empty() : this.startDate;
     }
 
     /**
@@ -69,18 +69,18 @@ public final class SuppressionScheduleArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="startTime")
-      private final @Nullable Input<String> startTime;
+      private final @Nullable Output<String> startTime;
 
-    public Input<String> getStartTime() {
-        return this.startTime == null ? Input.empty() : this.startTime;
+    public Output<String> getStartTime() {
+        return this.startTime == null ? Output.empty() : this.startTime;
     }
 
     public SuppressionScheduleArgs(
-        @Nullable Input<String> endDate,
-        @Nullable Input<String> endTime,
-        @Nullable Input<List<Integer>> recurrenceValues,
-        @Nullable Input<String> startDate,
-        @Nullable Input<String> startTime) {
+        @Nullable Output<String> endDate,
+        @Nullable Output<String> endTime,
+        @Nullable Output<List<Integer>> recurrenceValues,
+        @Nullable Output<String> startDate,
+        @Nullable Output<String> startTime) {
         this.endDate = endDate;
         this.endTime = endTime;
         this.recurrenceValues = recurrenceValues;
@@ -89,11 +89,11 @@ public final class SuppressionScheduleArgs extends io.pulumi.resources.ResourceA
     }
 
     private SuppressionScheduleArgs() {
-        this.endDate = Input.empty();
-        this.endTime = Input.empty();
-        this.recurrenceValues = Input.empty();
-        this.startDate = Input.empty();
-        this.startTime = Input.empty();
+        this.endDate = Output.empty();
+        this.endTime = Output.empty();
+        this.recurrenceValues = Output.empty();
+        this.startDate = Output.empty();
+        this.startTime = Output.empty();
     }
 
     public static Builder builder() {
@@ -105,11 +105,11 @@ public final class SuppressionScheduleArgs extends io.pulumi.resources.ResourceA
     }
 
     public static final class Builder {
-        private @Nullable Input<String> endDate;
-        private @Nullable Input<String> endTime;
-        private @Nullable Input<List<Integer>> recurrenceValues;
-        private @Nullable Input<String> startDate;
-        private @Nullable Input<String> startTime;
+        private @Nullable Output<String> endDate;
+        private @Nullable Output<String> endTime;
+        private @Nullable Output<List<Integer>> recurrenceValues;
+        private @Nullable Output<String> startDate;
+        private @Nullable Output<String> startTime;
 
         public Builder() {
     	      // Empty
@@ -124,53 +124,53 @@ public final class SuppressionScheduleArgs extends io.pulumi.resources.ResourceA
     	      this.startTime = defaults.startTime;
         }
 
-        public Builder endDate(@Nullable Input<String> endDate) {
+        public Builder endDate(@Nullable Output<String> endDate) {
             this.endDate = endDate;
             return this;
         }
 
         public Builder endDate(@Nullable String endDate) {
-            this.endDate = Input.ofNullable(endDate);
+            this.endDate = Output.ofNullable(endDate);
             return this;
         }
 
-        public Builder endTime(@Nullable Input<String> endTime) {
+        public Builder endTime(@Nullable Output<String> endTime) {
             this.endTime = endTime;
             return this;
         }
 
         public Builder endTime(@Nullable String endTime) {
-            this.endTime = Input.ofNullable(endTime);
+            this.endTime = Output.ofNullable(endTime);
             return this;
         }
 
-        public Builder recurrenceValues(@Nullable Input<List<Integer>> recurrenceValues) {
+        public Builder recurrenceValues(@Nullable Output<List<Integer>> recurrenceValues) {
             this.recurrenceValues = recurrenceValues;
             return this;
         }
 
         public Builder recurrenceValues(@Nullable List<Integer> recurrenceValues) {
-            this.recurrenceValues = Input.ofNullable(recurrenceValues);
+            this.recurrenceValues = Output.ofNullable(recurrenceValues);
             return this;
         }
 
-        public Builder startDate(@Nullable Input<String> startDate) {
+        public Builder startDate(@Nullable Output<String> startDate) {
             this.startDate = startDate;
             return this;
         }
 
         public Builder startDate(@Nullable String startDate) {
-            this.startDate = Input.ofNullable(startDate);
+            this.startDate = Output.ofNullable(startDate);
             return this;
         }
 
-        public Builder startTime(@Nullable Input<String> startTime) {
+        public Builder startTime(@Nullable Output<String> startTime) {
             this.startTime = startTime;
             return this;
         }
 
         public Builder startTime(@Nullable String startTime) {
-            this.startTime = Input.ofNullable(startTime);
+            this.startTime = Output.ofNullable(startTime);
             return this;
         }
         public SuppressionScheduleArgs build() {

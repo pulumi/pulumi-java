@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.monitoring_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.monitoring_v1.enums.ThresholdColor;
 import io.pulumi.googlenative.monitoring_v1.enums.ThresholdDirection;
@@ -27,10 +27,10 @@ public final class ThresholdArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="color")
-      private final @Nullable Input<ThresholdColor> color;
+      private final @Nullable Output<ThresholdColor> color;
 
-    public Input<ThresholdColor> getColor() {
-        return this.color == null ? Input.empty() : this.color;
+    public Output<ThresholdColor> getColor() {
+        return this.color == null ? Output.empty() : this.color;
     }
 
     /**
@@ -38,10 +38,10 @@ public final class ThresholdArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="direction")
-      private final @Nullable Input<ThresholdDirection> direction;
+      private final @Nullable Output<ThresholdDirection> direction;
 
-    public Input<ThresholdDirection> getDirection() {
-        return this.direction == null ? Input.empty() : this.direction;
+    public Output<ThresholdDirection> getDirection() {
+        return this.direction == null ? Output.empty() : this.direction;
     }
 
     /**
@@ -49,10 +49,10 @@ public final class ThresholdArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="label")
-      private final @Nullable Input<String> label;
+      private final @Nullable Output<String> label;
 
-    public Input<String> getLabel() {
-        return this.label == null ? Input.empty() : this.label;
+    public Output<String> getLabel() {
+        return this.label == null ? Output.empty() : this.label;
     }
 
     /**
@@ -60,10 +60,10 @@ public final class ThresholdArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="targetAxis")
-      private final @Nullable Input<ThresholdTargetAxis> targetAxis;
+      private final @Nullable Output<ThresholdTargetAxis> targetAxis;
 
-    public Input<ThresholdTargetAxis> getTargetAxis() {
-        return this.targetAxis == null ? Input.empty() : this.targetAxis;
+    public Output<ThresholdTargetAxis> getTargetAxis() {
+        return this.targetAxis == null ? Output.empty() : this.targetAxis;
     }
 
     /**
@@ -71,18 +71,18 @@ public final class ThresholdArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="value")
-      private final @Nullable Input<Double> value;
+      private final @Nullable Output<Double> value;
 
-    public Input<Double> getValue() {
-        return this.value == null ? Input.empty() : this.value;
+    public Output<Double> getValue() {
+        return this.value == null ? Output.empty() : this.value;
     }
 
     public ThresholdArgs(
-        @Nullable Input<ThresholdColor> color,
-        @Nullable Input<ThresholdDirection> direction,
-        @Nullable Input<String> label,
-        @Nullable Input<ThresholdTargetAxis> targetAxis,
-        @Nullable Input<Double> value) {
+        @Nullable Output<ThresholdColor> color,
+        @Nullable Output<ThresholdDirection> direction,
+        @Nullable Output<String> label,
+        @Nullable Output<ThresholdTargetAxis> targetAxis,
+        @Nullable Output<Double> value) {
         this.color = color;
         this.direction = direction;
         this.label = label;
@@ -91,11 +91,11 @@ public final class ThresholdArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ThresholdArgs() {
-        this.color = Input.empty();
-        this.direction = Input.empty();
-        this.label = Input.empty();
-        this.targetAxis = Input.empty();
-        this.value = Input.empty();
+        this.color = Output.empty();
+        this.direction = Output.empty();
+        this.label = Output.empty();
+        this.targetAxis = Output.empty();
+        this.value = Output.empty();
     }
 
     public static Builder builder() {
@@ -107,11 +107,11 @@ public final class ThresholdArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<ThresholdColor> color;
-        private @Nullable Input<ThresholdDirection> direction;
-        private @Nullable Input<String> label;
-        private @Nullable Input<ThresholdTargetAxis> targetAxis;
-        private @Nullable Input<Double> value;
+        private @Nullable Output<ThresholdColor> color;
+        private @Nullable Output<ThresholdDirection> direction;
+        private @Nullable Output<String> label;
+        private @Nullable Output<ThresholdTargetAxis> targetAxis;
+        private @Nullable Output<Double> value;
 
         public Builder() {
     	      // Empty
@@ -126,53 +126,53 @@ public final class ThresholdArgs extends io.pulumi.resources.ResourceArgs {
     	      this.value = defaults.value;
         }
 
-        public Builder color(@Nullable Input<ThresholdColor> color) {
+        public Builder color(@Nullable Output<ThresholdColor> color) {
             this.color = color;
             return this;
         }
 
         public Builder color(@Nullable ThresholdColor color) {
-            this.color = Input.ofNullable(color);
+            this.color = Output.ofNullable(color);
             return this;
         }
 
-        public Builder direction(@Nullable Input<ThresholdDirection> direction) {
+        public Builder direction(@Nullable Output<ThresholdDirection> direction) {
             this.direction = direction;
             return this;
         }
 
         public Builder direction(@Nullable ThresholdDirection direction) {
-            this.direction = Input.ofNullable(direction);
+            this.direction = Output.ofNullable(direction);
             return this;
         }
 
-        public Builder label(@Nullable Input<String> label) {
+        public Builder label(@Nullable Output<String> label) {
             this.label = label;
             return this;
         }
 
         public Builder label(@Nullable String label) {
-            this.label = Input.ofNullable(label);
+            this.label = Output.ofNullable(label);
             return this;
         }
 
-        public Builder targetAxis(@Nullable Input<ThresholdTargetAxis> targetAxis) {
+        public Builder targetAxis(@Nullable Output<ThresholdTargetAxis> targetAxis) {
             this.targetAxis = targetAxis;
             return this;
         }
 
         public Builder targetAxis(@Nullable ThresholdTargetAxis targetAxis) {
-            this.targetAxis = Input.ofNullable(targetAxis);
+            this.targetAxis = Output.ofNullable(targetAxis);
             return this;
         }
 
-        public Builder value(@Nullable Input<Double> value) {
+        public Builder value(@Nullable Output<Double> value) {
             this.value = value;
             return this;
         }
 
         public Builder value(@Nullable Double value) {
-            this.value = Input.ofNullable(value);
+            this.value = Output.ofNullable(value);
             return this;
         }
         public ThresholdArgs build() {

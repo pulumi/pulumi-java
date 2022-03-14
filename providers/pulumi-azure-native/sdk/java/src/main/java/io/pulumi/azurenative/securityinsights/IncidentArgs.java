@@ -10,7 +10,7 @@ import io.pulumi.azurenative.securityinsights.enums.IncidentStatus;
 import io.pulumi.azurenative.securityinsights.inputs.IncidentLabelArgs;
 import io.pulumi.azurenative.securityinsights.inputs.IncidentOwnerInfoArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -27,10 +27,10 @@ public final class IncidentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="classification")
-      private final @Nullable Input<Either<String,IncidentClassification>> classification;
+      private final @Nullable Output<Either<String,IncidentClassification>> classification;
 
-    public Input<Either<String,IncidentClassification>> getClassification() {
-        return this.classification == null ? Input.empty() : this.classification;
+    public Output<Either<String,IncidentClassification>> getClassification() {
+        return this.classification == null ? Output.empty() : this.classification;
     }
 
     /**
@@ -38,10 +38,10 @@ public final class IncidentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="classificationComment")
-      private final @Nullable Input<String> classificationComment;
+      private final @Nullable Output<String> classificationComment;
 
-    public Input<String> getClassificationComment() {
-        return this.classificationComment == null ? Input.empty() : this.classificationComment;
+    public Output<String> getClassificationComment() {
+        return this.classificationComment == null ? Output.empty() : this.classificationComment;
     }
 
     /**
@@ -49,10 +49,10 @@ public final class IncidentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="classificationReason")
-      private final @Nullable Input<Either<String,IncidentClassificationReason>> classificationReason;
+      private final @Nullable Output<Either<String,IncidentClassificationReason>> classificationReason;
 
-    public Input<Either<String,IncidentClassificationReason>> getClassificationReason() {
-        return this.classificationReason == null ? Input.empty() : this.classificationReason;
+    public Output<Either<String,IncidentClassificationReason>> getClassificationReason() {
+        return this.classificationReason == null ? Output.empty() : this.classificationReason;
     }
 
     /**
@@ -60,10 +60,10 @@ public final class IncidentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -71,10 +71,10 @@ public final class IncidentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="firstActivityTimeUtc")
-      private final @Nullable Input<String> firstActivityTimeUtc;
+      private final @Nullable Output<String> firstActivityTimeUtc;
 
-    public Input<String> getFirstActivityTimeUtc() {
-        return this.firstActivityTimeUtc == null ? Input.empty() : this.firstActivityTimeUtc;
+    public Output<String> getFirstActivityTimeUtc() {
+        return this.firstActivityTimeUtc == null ? Output.empty() : this.firstActivityTimeUtc;
     }
 
     /**
@@ -82,10 +82,10 @@ public final class IncidentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="incidentId")
-      private final @Nullable Input<String> incidentId;
+      private final @Nullable Output<String> incidentId;
 
-    public Input<String> getIncidentId() {
-        return this.incidentId == null ? Input.empty() : this.incidentId;
+    public Output<String> getIncidentId() {
+        return this.incidentId == null ? Output.empty() : this.incidentId;
     }
 
     /**
@@ -93,10 +93,10 @@ public final class IncidentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labels")
-      private final @Nullable Input<List<IncidentLabelArgs>> labels;
+      private final @Nullable Output<List<IncidentLabelArgs>> labels;
 
-    public Input<List<IncidentLabelArgs>> getLabels() {
-        return this.labels == null ? Input.empty() : this.labels;
+    public Output<List<IncidentLabelArgs>> getLabels() {
+        return this.labels == null ? Output.empty() : this.labels;
     }
 
     /**
@@ -104,10 +104,10 @@ public final class IncidentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="lastActivityTimeUtc")
-      private final @Nullable Input<String> lastActivityTimeUtc;
+      private final @Nullable Output<String> lastActivityTimeUtc;
 
-    public Input<String> getLastActivityTimeUtc() {
-        return this.lastActivityTimeUtc == null ? Input.empty() : this.lastActivityTimeUtc;
+    public Output<String> getLastActivityTimeUtc() {
+        return this.lastActivityTimeUtc == null ? Output.empty() : this.lastActivityTimeUtc;
     }
 
     /**
@@ -115,10 +115,10 @@ public final class IncidentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="owner")
-      private final @Nullable Input<IncidentOwnerInfoArgs> owner;
+      private final @Nullable Output<IncidentOwnerInfoArgs> owner;
 
-    public Input<IncidentOwnerInfoArgs> getOwner() {
-        return this.owner == null ? Input.empty() : this.owner;
+    public Output<IncidentOwnerInfoArgs> getOwner() {
+        return this.owner == null ? Output.empty() : this.owner;
     }
 
     /**
@@ -126,9 +126,9 @@ public final class IncidentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -137,9 +137,9 @@ public final class IncidentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="severity", required=true)
-      private final Input<Either<String,IncidentSeverity>> severity;
+      private final Output<Either<String,IncidentSeverity>> severity;
 
-    public Input<Either<String,IncidentSeverity>> getSeverity() {
+    public Output<Either<String,IncidentSeverity>> getSeverity() {
         return this.severity;
     }
 
@@ -148,9 +148,9 @@ public final class IncidentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="status", required=true)
-      private final Input<Either<String,IncidentStatus>> status;
+      private final Output<Either<String,IncidentStatus>> status;
 
-    public Input<Either<String,IncidentStatus>> getStatus() {
+    public Output<Either<String,IncidentStatus>> getStatus() {
         return this.status;
     }
 
@@ -159,9 +159,9 @@ public final class IncidentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="title", required=true)
-      private final Input<String> title;
+      private final Output<String> title;
 
-    public Input<String> getTitle() {
+    public Output<String> getTitle() {
         return this.title;
     }
 
@@ -170,27 +170,27 @@ public final class IncidentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="workspaceName", required=true)
-      private final Input<String> workspaceName;
+      private final Output<String> workspaceName;
 
-    public Input<String> getWorkspaceName() {
+    public Output<String> getWorkspaceName() {
         return this.workspaceName;
     }
 
     public IncidentArgs(
-        @Nullable Input<Either<String,IncidentClassification>> classification,
-        @Nullable Input<String> classificationComment,
-        @Nullable Input<Either<String,IncidentClassificationReason>> classificationReason,
-        @Nullable Input<String> description,
-        @Nullable Input<String> firstActivityTimeUtc,
-        @Nullable Input<String> incidentId,
-        @Nullable Input<List<IncidentLabelArgs>> labels,
-        @Nullable Input<String> lastActivityTimeUtc,
-        @Nullable Input<IncidentOwnerInfoArgs> owner,
-        Input<String> resourceGroupName,
-        Input<Either<String,IncidentSeverity>> severity,
-        Input<Either<String,IncidentStatus>> status,
-        Input<String> title,
-        Input<String> workspaceName) {
+        @Nullable Output<Either<String,IncidentClassification>> classification,
+        @Nullable Output<String> classificationComment,
+        @Nullable Output<Either<String,IncidentClassificationReason>> classificationReason,
+        @Nullable Output<String> description,
+        @Nullable Output<String> firstActivityTimeUtc,
+        @Nullable Output<String> incidentId,
+        @Nullable Output<List<IncidentLabelArgs>> labels,
+        @Nullable Output<String> lastActivityTimeUtc,
+        @Nullable Output<IncidentOwnerInfoArgs> owner,
+        Output<String> resourceGroupName,
+        Output<Either<String,IncidentSeverity>> severity,
+        Output<Either<String,IncidentStatus>> status,
+        Output<String> title,
+        Output<String> workspaceName) {
         this.classification = classification;
         this.classificationComment = classificationComment;
         this.classificationReason = classificationReason;
@@ -208,20 +208,20 @@ public final class IncidentArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private IncidentArgs() {
-        this.classification = Input.empty();
-        this.classificationComment = Input.empty();
-        this.classificationReason = Input.empty();
-        this.description = Input.empty();
-        this.firstActivityTimeUtc = Input.empty();
-        this.incidentId = Input.empty();
-        this.labels = Input.empty();
-        this.lastActivityTimeUtc = Input.empty();
-        this.owner = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.severity = Input.empty();
-        this.status = Input.empty();
-        this.title = Input.empty();
-        this.workspaceName = Input.empty();
+        this.classification = Output.empty();
+        this.classificationComment = Output.empty();
+        this.classificationReason = Output.empty();
+        this.description = Output.empty();
+        this.firstActivityTimeUtc = Output.empty();
+        this.incidentId = Output.empty();
+        this.labels = Output.empty();
+        this.lastActivityTimeUtc = Output.empty();
+        this.owner = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.severity = Output.empty();
+        this.status = Output.empty();
+        this.title = Output.empty();
+        this.workspaceName = Output.empty();
     }
 
     public static Builder builder() {
@@ -233,20 +233,20 @@ public final class IncidentArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Either<String,IncidentClassification>> classification;
-        private @Nullable Input<String> classificationComment;
-        private @Nullable Input<Either<String,IncidentClassificationReason>> classificationReason;
-        private @Nullable Input<String> description;
-        private @Nullable Input<String> firstActivityTimeUtc;
-        private @Nullable Input<String> incidentId;
-        private @Nullable Input<List<IncidentLabelArgs>> labels;
-        private @Nullable Input<String> lastActivityTimeUtc;
-        private @Nullable Input<IncidentOwnerInfoArgs> owner;
-        private Input<String> resourceGroupName;
-        private Input<Either<String,IncidentSeverity>> severity;
-        private Input<Either<String,IncidentStatus>> status;
-        private Input<String> title;
-        private Input<String> workspaceName;
+        private @Nullable Output<Either<String,IncidentClassification>> classification;
+        private @Nullable Output<String> classificationComment;
+        private @Nullable Output<Either<String,IncidentClassificationReason>> classificationReason;
+        private @Nullable Output<String> description;
+        private @Nullable Output<String> firstActivityTimeUtc;
+        private @Nullable Output<String> incidentId;
+        private @Nullable Output<List<IncidentLabelArgs>> labels;
+        private @Nullable Output<String> lastActivityTimeUtc;
+        private @Nullable Output<IncidentOwnerInfoArgs> owner;
+        private Output<String> resourceGroupName;
+        private Output<Either<String,IncidentSeverity>> severity;
+        private Output<Either<String,IncidentStatus>> status;
+        private Output<String> title;
+        private Output<String> workspaceName;
 
         public Builder() {
     	      // Empty
@@ -270,143 +270,143 @@ public final class IncidentArgs extends io.pulumi.resources.ResourceArgs {
     	      this.workspaceName = defaults.workspaceName;
         }
 
-        public Builder classification(@Nullable Input<Either<String,IncidentClassification>> classification) {
+        public Builder classification(@Nullable Output<Either<String,IncidentClassification>> classification) {
             this.classification = classification;
             return this;
         }
 
         public Builder classification(@Nullable Either<String,IncidentClassification> classification) {
-            this.classification = Input.ofNullable(classification);
+            this.classification = Output.ofNullable(classification);
             return this;
         }
 
-        public Builder classificationComment(@Nullable Input<String> classificationComment) {
+        public Builder classificationComment(@Nullable Output<String> classificationComment) {
             this.classificationComment = classificationComment;
             return this;
         }
 
         public Builder classificationComment(@Nullable String classificationComment) {
-            this.classificationComment = Input.ofNullable(classificationComment);
+            this.classificationComment = Output.ofNullable(classificationComment);
             return this;
         }
 
-        public Builder classificationReason(@Nullable Input<Either<String,IncidentClassificationReason>> classificationReason) {
+        public Builder classificationReason(@Nullable Output<Either<String,IncidentClassificationReason>> classificationReason) {
             this.classificationReason = classificationReason;
             return this;
         }
 
         public Builder classificationReason(@Nullable Either<String,IncidentClassificationReason> classificationReason) {
-            this.classificationReason = Input.ofNullable(classificationReason);
+            this.classificationReason = Output.ofNullable(classificationReason);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder firstActivityTimeUtc(@Nullable Input<String> firstActivityTimeUtc) {
+        public Builder firstActivityTimeUtc(@Nullable Output<String> firstActivityTimeUtc) {
             this.firstActivityTimeUtc = firstActivityTimeUtc;
             return this;
         }
 
         public Builder firstActivityTimeUtc(@Nullable String firstActivityTimeUtc) {
-            this.firstActivityTimeUtc = Input.ofNullable(firstActivityTimeUtc);
+            this.firstActivityTimeUtc = Output.ofNullable(firstActivityTimeUtc);
             return this;
         }
 
-        public Builder incidentId(@Nullable Input<String> incidentId) {
+        public Builder incidentId(@Nullable Output<String> incidentId) {
             this.incidentId = incidentId;
             return this;
         }
 
         public Builder incidentId(@Nullable String incidentId) {
-            this.incidentId = Input.ofNullable(incidentId);
+            this.incidentId = Output.ofNullable(incidentId);
             return this;
         }
 
-        public Builder labels(@Nullable Input<List<IncidentLabelArgs>> labels) {
+        public Builder labels(@Nullable Output<List<IncidentLabelArgs>> labels) {
             this.labels = labels;
             return this;
         }
 
         public Builder labels(@Nullable List<IncidentLabelArgs> labels) {
-            this.labels = Input.ofNullable(labels);
+            this.labels = Output.ofNullable(labels);
             return this;
         }
 
-        public Builder lastActivityTimeUtc(@Nullable Input<String> lastActivityTimeUtc) {
+        public Builder lastActivityTimeUtc(@Nullable Output<String> lastActivityTimeUtc) {
             this.lastActivityTimeUtc = lastActivityTimeUtc;
             return this;
         }
 
         public Builder lastActivityTimeUtc(@Nullable String lastActivityTimeUtc) {
-            this.lastActivityTimeUtc = Input.ofNullable(lastActivityTimeUtc);
+            this.lastActivityTimeUtc = Output.ofNullable(lastActivityTimeUtc);
             return this;
         }
 
-        public Builder owner(@Nullable Input<IncidentOwnerInfoArgs> owner) {
+        public Builder owner(@Nullable Output<IncidentOwnerInfoArgs> owner) {
             this.owner = owner;
             return this;
         }
 
         public Builder owner(@Nullable IncidentOwnerInfoArgs owner) {
-            this.owner = Input.ofNullable(owner);
+            this.owner = Output.ofNullable(owner);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder severity(Input<Either<String,IncidentSeverity>> severity) {
+        public Builder severity(Output<Either<String,IncidentSeverity>> severity) {
             this.severity = Objects.requireNonNull(severity);
             return this;
         }
 
         public Builder severity(Either<String,IncidentSeverity> severity) {
-            this.severity = Input.of(Objects.requireNonNull(severity));
+            this.severity = Output.of(Objects.requireNonNull(severity));
             return this;
         }
 
-        public Builder status(Input<Either<String,IncidentStatus>> status) {
+        public Builder status(Output<Either<String,IncidentStatus>> status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
 
         public Builder status(Either<String,IncidentStatus> status) {
-            this.status = Input.of(Objects.requireNonNull(status));
+            this.status = Output.of(Objects.requireNonNull(status));
             return this;
         }
 
-        public Builder title(Input<String> title) {
+        public Builder title(Output<String> title) {
             this.title = Objects.requireNonNull(title);
             return this;
         }
 
         public Builder title(String title) {
-            this.title = Input.of(Objects.requireNonNull(title));
+            this.title = Output.of(Objects.requireNonNull(title));
             return this;
         }
 
-        public Builder workspaceName(Input<String> workspaceName) {
+        public Builder workspaceName(Output<String> workspaceName) {
             this.workspaceName = Objects.requireNonNull(workspaceName);
             return this;
         }
 
         public Builder workspaceName(String workspaceName) {
-            this.workspaceName = Input.of(Objects.requireNonNull(workspaceName));
+            this.workspaceName = Output.of(Objects.requireNonNull(workspaceName));
             return this;
         }
         public IncidentArgs build() {

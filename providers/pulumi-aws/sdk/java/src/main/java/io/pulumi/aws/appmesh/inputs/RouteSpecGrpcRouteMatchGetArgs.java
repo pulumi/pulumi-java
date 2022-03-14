@@ -4,7 +4,7 @@
 package io.pulumi.aws.appmesh.inputs;
 
 import io.pulumi.aws.appmesh.inputs.RouteSpecGrpcRouteMatchMetadataGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -21,10 +21,10 @@ public final class RouteSpecGrpcRouteMatchGetArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="metadatas")
-      private final @Nullable Input<List<RouteSpecGrpcRouteMatchMetadataGetArgs>> metadatas;
+      private final @Nullable Output<List<RouteSpecGrpcRouteMatchMetadataGetArgs>> metadatas;
 
-    public Input<List<RouteSpecGrpcRouteMatchMetadataGetArgs>> getMetadatas() {
-        return this.metadatas == null ? Input.empty() : this.metadatas;
+    public Output<List<RouteSpecGrpcRouteMatchMetadataGetArgs>> getMetadatas() {
+        return this.metadatas == null ? Output.empty() : this.metadatas;
     }
 
     /**
@@ -32,10 +32,10 @@ public final class RouteSpecGrpcRouteMatchGetArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="methodName")
-      private final @Nullable Input<String> methodName;
+      private final @Nullable Output<String> methodName;
 
-    public Input<String> getMethodName() {
-        return this.methodName == null ? Input.empty() : this.methodName;
+    public Output<String> getMethodName() {
+        return this.methodName == null ? Output.empty() : this.methodName;
     }
 
     /**
@@ -44,10 +44,10 @@ public final class RouteSpecGrpcRouteMatchGetArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="prefix")
-      private final @Nullable Input<String> prefix;
+      private final @Nullable Output<String> prefix;
 
-    public Input<String> getPrefix() {
-        return this.prefix == null ? Input.empty() : this.prefix;
+    public Output<String> getPrefix() {
+        return this.prefix == null ? Output.empty() : this.prefix;
     }
 
     /**
@@ -55,17 +55,17 @@ public final class RouteSpecGrpcRouteMatchGetArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="serviceName")
-      private final @Nullable Input<String> serviceName;
+      private final @Nullable Output<String> serviceName;
 
-    public Input<String> getServiceName() {
-        return this.serviceName == null ? Input.empty() : this.serviceName;
+    public Output<String> getServiceName() {
+        return this.serviceName == null ? Output.empty() : this.serviceName;
     }
 
     public RouteSpecGrpcRouteMatchGetArgs(
-        @Nullable Input<List<RouteSpecGrpcRouteMatchMetadataGetArgs>> metadatas,
-        @Nullable Input<String> methodName,
-        @Nullable Input<String> prefix,
-        @Nullable Input<String> serviceName) {
+        @Nullable Output<List<RouteSpecGrpcRouteMatchMetadataGetArgs>> metadatas,
+        @Nullable Output<String> methodName,
+        @Nullable Output<String> prefix,
+        @Nullable Output<String> serviceName) {
         this.metadatas = metadatas;
         this.methodName = methodName;
         this.prefix = prefix;
@@ -73,10 +73,10 @@ public final class RouteSpecGrpcRouteMatchGetArgs extends io.pulumi.resources.Re
     }
 
     private RouteSpecGrpcRouteMatchGetArgs() {
-        this.metadatas = Input.empty();
-        this.methodName = Input.empty();
-        this.prefix = Input.empty();
-        this.serviceName = Input.empty();
+        this.metadatas = Output.empty();
+        this.methodName = Output.empty();
+        this.prefix = Output.empty();
+        this.serviceName = Output.empty();
     }
 
     public static Builder builder() {
@@ -88,10 +88,10 @@ public final class RouteSpecGrpcRouteMatchGetArgs extends io.pulumi.resources.Re
     }
 
     public static final class Builder {
-        private @Nullable Input<List<RouteSpecGrpcRouteMatchMetadataGetArgs>> metadatas;
-        private @Nullable Input<String> methodName;
-        private @Nullable Input<String> prefix;
-        private @Nullable Input<String> serviceName;
+        private @Nullable Output<List<RouteSpecGrpcRouteMatchMetadataGetArgs>> metadatas;
+        private @Nullable Output<String> methodName;
+        private @Nullable Output<String> prefix;
+        private @Nullable Output<String> serviceName;
 
         public Builder() {
     	      // Empty
@@ -105,43 +105,43 @@ public final class RouteSpecGrpcRouteMatchGetArgs extends io.pulumi.resources.Re
     	      this.serviceName = defaults.serviceName;
         }
 
-        public Builder metadatas(@Nullable Input<List<RouteSpecGrpcRouteMatchMetadataGetArgs>> metadatas) {
+        public Builder metadatas(@Nullable Output<List<RouteSpecGrpcRouteMatchMetadataGetArgs>> metadatas) {
             this.metadatas = metadatas;
             return this;
         }
 
         public Builder metadatas(@Nullable List<RouteSpecGrpcRouteMatchMetadataGetArgs> metadatas) {
-            this.metadatas = Input.ofNullable(metadatas);
+            this.metadatas = Output.ofNullable(metadatas);
             return this;
         }
 
-        public Builder methodName(@Nullable Input<String> methodName) {
+        public Builder methodName(@Nullable Output<String> methodName) {
             this.methodName = methodName;
             return this;
         }
 
         public Builder methodName(@Nullable String methodName) {
-            this.methodName = Input.ofNullable(methodName);
+            this.methodName = Output.ofNullable(methodName);
             return this;
         }
 
-        public Builder prefix(@Nullable Input<String> prefix) {
+        public Builder prefix(@Nullable Output<String> prefix) {
             this.prefix = prefix;
             return this;
         }
 
         public Builder prefix(@Nullable String prefix) {
-            this.prefix = Input.ofNullable(prefix);
+            this.prefix = Output.ofNullable(prefix);
             return this;
         }
 
-        public Builder serviceName(@Nullable Input<String> serviceName) {
+        public Builder serviceName(@Nullable Output<String> serviceName) {
             this.serviceName = serviceName;
             return this;
         }
 
         public Builder serviceName(@Nullable String serviceName) {
-            this.serviceName = Input.ofNullable(serviceName);
+            this.serviceName = Output.ofNullable(serviceName);
             return this;
         }
         public RouteSpecGrpcRouteMatchGetArgs build() {

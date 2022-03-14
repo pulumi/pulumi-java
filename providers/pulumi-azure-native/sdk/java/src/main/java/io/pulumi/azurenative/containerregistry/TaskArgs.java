@@ -13,7 +13,7 @@ import io.pulumi.azurenative.containerregistry.inputs.IdentityPropertiesArgs;
 import io.pulumi.azurenative.containerregistry.inputs.PlatformPropertiesArgs;
 import io.pulumi.azurenative.containerregistry.inputs.TriggerPropertiesArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -33,10 +33,10 @@ public final class TaskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="agentConfiguration")
-      private final @Nullable Input<AgentPropertiesArgs> agentConfiguration;
+      private final @Nullable Output<AgentPropertiesArgs> agentConfiguration;
 
-    public Input<AgentPropertiesArgs> getAgentConfiguration() {
-        return this.agentConfiguration == null ? Input.empty() : this.agentConfiguration;
+    public Output<AgentPropertiesArgs> getAgentConfiguration() {
+        return this.agentConfiguration == null ? Output.empty() : this.agentConfiguration;
     }
 
     /**
@@ -44,10 +44,10 @@ public final class TaskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="agentPoolName")
-      private final @Nullable Input<String> agentPoolName;
+      private final @Nullable Output<String> agentPoolName;
 
-    public Input<String> getAgentPoolName() {
-        return this.agentPoolName == null ? Input.empty() : this.agentPoolName;
+    public Output<String> getAgentPoolName() {
+        return this.agentPoolName == null ? Output.empty() : this.agentPoolName;
     }
 
     /**
@@ -55,10 +55,10 @@ public final class TaskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="credentials")
-      private final @Nullable Input<CredentialsArgs> credentials;
+      private final @Nullable Output<CredentialsArgs> credentials;
 
-    public Input<CredentialsArgs> getCredentials() {
-        return this.credentials == null ? Input.empty() : this.credentials;
+    public Output<CredentialsArgs> getCredentials() {
+        return this.credentials == null ? Output.empty() : this.credentials;
     }
 
     /**
@@ -66,10 +66,10 @@ public final class TaskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="identity")
-      private final @Nullable Input<IdentityPropertiesArgs> identity;
+      private final @Nullable Output<IdentityPropertiesArgs> identity;
 
-    public Input<IdentityPropertiesArgs> getIdentity() {
-        return this.identity == null ? Input.empty() : this.identity;
+    public Output<IdentityPropertiesArgs> getIdentity() {
+        return this.identity == null ? Output.empty() : this.identity;
     }
 
     /**
@@ -77,10 +77,10 @@ public final class TaskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="isSystemTask")
-      private final @Nullable Input<Boolean> isSystemTask;
+      private final @Nullable Output<Boolean> isSystemTask;
 
-    public Input<Boolean> getIsSystemTask() {
-        return this.isSystemTask == null ? Input.empty() : this.isSystemTask;
+    public Output<Boolean> getIsSystemTask() {
+        return this.isSystemTask == null ? Output.empty() : this.isSystemTask;
     }
 
     /**
@@ -88,10 +88,10 @@ public final class TaskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -99,10 +99,10 @@ public final class TaskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="logTemplate")
-      private final @Nullable Input<String> logTemplate;
+      private final @Nullable Output<String> logTemplate;
 
-    public Input<String> getLogTemplate() {
-        return this.logTemplate == null ? Input.empty() : this.logTemplate;
+    public Output<String> getLogTemplate() {
+        return this.logTemplate == null ? Output.empty() : this.logTemplate;
     }
 
     /**
@@ -110,10 +110,10 @@ public final class TaskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="platform")
-      private final @Nullable Input<PlatformPropertiesArgs> platform;
+      private final @Nullable Output<PlatformPropertiesArgs> platform;
 
-    public Input<PlatformPropertiesArgs> getPlatform() {
-        return this.platform == null ? Input.empty() : this.platform;
+    public Output<PlatformPropertiesArgs> getPlatform() {
+        return this.platform == null ? Output.empty() : this.platform;
     }
 
     /**
@@ -121,9 +121,9 @@ public final class TaskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="registryName", required=true)
-      private final Input<String> registryName;
+      private final Output<String> registryName;
 
-    public Input<String> getRegistryName() {
+    public Output<String> getRegistryName() {
         return this.registryName;
     }
 
@@ -132,9 +132,9 @@ public final class TaskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -143,10 +143,10 @@ public final class TaskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="status")
-      private final @Nullable Input<Either<String,TaskStatus>> status;
+      private final @Nullable Output<Either<String,TaskStatus>> status;
 
-    public Input<Either<String,TaskStatus>> getStatus() {
-        return this.status == null ? Input.empty() : this.status;
+    public Output<Either<String,TaskStatus>> getStatus() {
+        return this.status == null ? Output.empty() : this.status;
     }
 
     /**
@@ -154,10 +154,10 @@ public final class TaskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="step")
-      private final @Nullable Input<Object> step;
+      private final @Nullable Output<Object> step;
 
-    public Input<Object> getStep() {
-        return this.step == null ? Input.empty() : this.step;
+    public Output<Object> getStep() {
+        return this.step == null ? Output.empty() : this.step;
     }
 
     /**
@@ -165,10 +165,10 @@ public final class TaskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -176,10 +176,10 @@ public final class TaskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="taskName")
-      private final @Nullable Input<String> taskName;
+      private final @Nullable Output<String> taskName;
 
-    public Input<String> getTaskName() {
-        return this.taskName == null ? Input.empty() : this.taskName;
+    public Output<String> getTaskName() {
+        return this.taskName == null ? Output.empty() : this.taskName;
     }
 
     /**
@@ -187,10 +187,10 @@ public final class TaskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="timeout")
-      private final @Nullable Input<Integer> timeout;
+      private final @Nullable Output<Integer> timeout;
 
-    public Input<Integer> getTimeout() {
-        return this.timeout == null ? Input.empty() : this.timeout;
+    public Output<Integer> getTimeout() {
+        return this.timeout == null ? Output.empty() : this.timeout;
     }
 
     /**
@@ -198,34 +198,34 @@ public final class TaskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="trigger")
-      private final @Nullable Input<TriggerPropertiesArgs> trigger;
+      private final @Nullable Output<TriggerPropertiesArgs> trigger;
 
-    public Input<TriggerPropertiesArgs> getTrigger() {
-        return this.trigger == null ? Input.empty() : this.trigger;
+    public Output<TriggerPropertiesArgs> getTrigger() {
+        return this.trigger == null ? Output.empty() : this.trigger;
     }
 
     public TaskArgs(
-        @Nullable Input<AgentPropertiesArgs> agentConfiguration,
-        @Nullable Input<String> agentPoolName,
-        @Nullable Input<CredentialsArgs> credentials,
-        @Nullable Input<IdentityPropertiesArgs> identity,
-        @Nullable Input<Boolean> isSystemTask,
-        @Nullable Input<String> location,
-        @Nullable Input<String> logTemplate,
-        @Nullable Input<PlatformPropertiesArgs> platform,
-        Input<String> registryName,
-        Input<String> resourceGroupName,
-        @Nullable Input<Either<String,TaskStatus>> status,
-        @Nullable Input<Object> step,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<String> taskName,
-        @Nullable Input<Integer> timeout,
-        @Nullable Input<TriggerPropertiesArgs> trigger) {
+        @Nullable Output<AgentPropertiesArgs> agentConfiguration,
+        @Nullable Output<String> agentPoolName,
+        @Nullable Output<CredentialsArgs> credentials,
+        @Nullable Output<IdentityPropertiesArgs> identity,
+        @Nullable Output<Boolean> isSystemTask,
+        @Nullable Output<String> location,
+        @Nullable Output<String> logTemplate,
+        @Nullable Output<PlatformPropertiesArgs> platform,
+        Output<String> registryName,
+        Output<String> resourceGroupName,
+        @Nullable Output<Either<String,TaskStatus>> status,
+        @Nullable Output<Object> step,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<String> taskName,
+        @Nullable Output<Integer> timeout,
+        @Nullable Output<TriggerPropertiesArgs> trigger) {
         this.agentConfiguration = agentConfiguration;
         this.agentPoolName = agentPoolName;
         this.credentials = credentials;
         this.identity = identity;
-        this.isSystemTask = isSystemTask == null ? Input.ofNullable(false) : isSystemTask;
+        this.isSystemTask = isSystemTask == null ? Output.ofNullable(false) : isSystemTask;
         this.location = location;
         this.logTemplate = logTemplate;
         this.platform = platform;
@@ -235,27 +235,27 @@ public final class TaskArgs extends io.pulumi.resources.ResourceArgs {
         this.step = step;
         this.tags = tags;
         this.taskName = taskName;
-        this.timeout = timeout == null ? Input.ofNullable(3600) : timeout;
+        this.timeout = timeout == null ? Output.ofNullable(3600) : timeout;
         this.trigger = trigger;
     }
 
     private TaskArgs() {
-        this.agentConfiguration = Input.empty();
-        this.agentPoolName = Input.empty();
-        this.credentials = Input.empty();
-        this.identity = Input.empty();
-        this.isSystemTask = Input.empty();
-        this.location = Input.empty();
-        this.logTemplate = Input.empty();
-        this.platform = Input.empty();
-        this.registryName = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.status = Input.empty();
-        this.step = Input.empty();
-        this.tags = Input.empty();
-        this.taskName = Input.empty();
-        this.timeout = Input.empty();
-        this.trigger = Input.empty();
+        this.agentConfiguration = Output.empty();
+        this.agentPoolName = Output.empty();
+        this.credentials = Output.empty();
+        this.identity = Output.empty();
+        this.isSystemTask = Output.empty();
+        this.location = Output.empty();
+        this.logTemplate = Output.empty();
+        this.platform = Output.empty();
+        this.registryName = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.status = Output.empty();
+        this.step = Output.empty();
+        this.tags = Output.empty();
+        this.taskName = Output.empty();
+        this.timeout = Output.empty();
+        this.trigger = Output.empty();
     }
 
     public static Builder builder() {
@@ -267,22 +267,22 @@ public final class TaskArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<AgentPropertiesArgs> agentConfiguration;
-        private @Nullable Input<String> agentPoolName;
-        private @Nullable Input<CredentialsArgs> credentials;
-        private @Nullable Input<IdentityPropertiesArgs> identity;
-        private @Nullable Input<Boolean> isSystemTask;
-        private @Nullable Input<String> location;
-        private @Nullable Input<String> logTemplate;
-        private @Nullable Input<PlatformPropertiesArgs> platform;
-        private Input<String> registryName;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<Either<String,TaskStatus>> status;
-        private @Nullable Input<Object> step;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<String> taskName;
-        private @Nullable Input<Integer> timeout;
-        private @Nullable Input<TriggerPropertiesArgs> trigger;
+        private @Nullable Output<AgentPropertiesArgs> agentConfiguration;
+        private @Nullable Output<String> agentPoolName;
+        private @Nullable Output<CredentialsArgs> credentials;
+        private @Nullable Output<IdentityPropertiesArgs> identity;
+        private @Nullable Output<Boolean> isSystemTask;
+        private @Nullable Output<String> location;
+        private @Nullable Output<String> logTemplate;
+        private @Nullable Output<PlatformPropertiesArgs> platform;
+        private Output<String> registryName;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<Either<String,TaskStatus>> status;
+        private @Nullable Output<Object> step;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<String> taskName;
+        private @Nullable Output<Integer> timeout;
+        private @Nullable Output<TriggerPropertiesArgs> trigger;
 
         public Builder() {
     	      // Empty
@@ -308,163 +308,163 @@ public final class TaskArgs extends io.pulumi.resources.ResourceArgs {
     	      this.trigger = defaults.trigger;
         }
 
-        public Builder agentConfiguration(@Nullable Input<AgentPropertiesArgs> agentConfiguration) {
+        public Builder agentConfiguration(@Nullable Output<AgentPropertiesArgs> agentConfiguration) {
             this.agentConfiguration = agentConfiguration;
             return this;
         }
 
         public Builder agentConfiguration(@Nullable AgentPropertiesArgs agentConfiguration) {
-            this.agentConfiguration = Input.ofNullable(agentConfiguration);
+            this.agentConfiguration = Output.ofNullable(agentConfiguration);
             return this;
         }
 
-        public Builder agentPoolName(@Nullable Input<String> agentPoolName) {
+        public Builder agentPoolName(@Nullable Output<String> agentPoolName) {
             this.agentPoolName = agentPoolName;
             return this;
         }
 
         public Builder agentPoolName(@Nullable String agentPoolName) {
-            this.agentPoolName = Input.ofNullable(agentPoolName);
+            this.agentPoolName = Output.ofNullable(agentPoolName);
             return this;
         }
 
-        public Builder credentials(@Nullable Input<CredentialsArgs> credentials) {
+        public Builder credentials(@Nullable Output<CredentialsArgs> credentials) {
             this.credentials = credentials;
             return this;
         }
 
         public Builder credentials(@Nullable CredentialsArgs credentials) {
-            this.credentials = Input.ofNullable(credentials);
+            this.credentials = Output.ofNullable(credentials);
             return this;
         }
 
-        public Builder identity(@Nullable Input<IdentityPropertiesArgs> identity) {
+        public Builder identity(@Nullable Output<IdentityPropertiesArgs> identity) {
             this.identity = identity;
             return this;
         }
 
         public Builder identity(@Nullable IdentityPropertiesArgs identity) {
-            this.identity = Input.ofNullable(identity);
+            this.identity = Output.ofNullable(identity);
             return this;
         }
 
-        public Builder isSystemTask(@Nullable Input<Boolean> isSystemTask) {
+        public Builder isSystemTask(@Nullable Output<Boolean> isSystemTask) {
             this.isSystemTask = isSystemTask;
             return this;
         }
 
         public Builder isSystemTask(@Nullable Boolean isSystemTask) {
-            this.isSystemTask = Input.ofNullable(isSystemTask);
+            this.isSystemTask = Output.ofNullable(isSystemTask);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder logTemplate(@Nullable Input<String> logTemplate) {
+        public Builder logTemplate(@Nullable Output<String> logTemplate) {
             this.logTemplate = logTemplate;
             return this;
         }
 
         public Builder logTemplate(@Nullable String logTemplate) {
-            this.logTemplate = Input.ofNullable(logTemplate);
+            this.logTemplate = Output.ofNullable(logTemplate);
             return this;
         }
 
-        public Builder platform(@Nullable Input<PlatformPropertiesArgs> platform) {
+        public Builder platform(@Nullable Output<PlatformPropertiesArgs> platform) {
             this.platform = platform;
             return this;
         }
 
         public Builder platform(@Nullable PlatformPropertiesArgs platform) {
-            this.platform = Input.ofNullable(platform);
+            this.platform = Output.ofNullable(platform);
             return this;
         }
 
-        public Builder registryName(Input<String> registryName) {
+        public Builder registryName(Output<String> registryName) {
             this.registryName = Objects.requireNonNull(registryName);
             return this;
         }
 
         public Builder registryName(String registryName) {
-            this.registryName = Input.of(Objects.requireNonNull(registryName));
+            this.registryName = Output.of(Objects.requireNonNull(registryName));
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder status(@Nullable Input<Either<String,TaskStatus>> status) {
+        public Builder status(@Nullable Output<Either<String,TaskStatus>> status) {
             this.status = status;
             return this;
         }
 
         public Builder status(@Nullable Either<String,TaskStatus> status) {
-            this.status = Input.ofNullable(status);
+            this.status = Output.ofNullable(status);
             return this;
         }
 
-        public Builder step(@Nullable Input<Object> step) {
+        public Builder step(@Nullable Output<Object> step) {
             this.step = step;
             return this;
         }
 
         public Builder step(@Nullable Object step) {
-            this.step = Input.ofNullable(step);
+            this.step = Output.ofNullable(step);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder taskName(@Nullable Input<String> taskName) {
+        public Builder taskName(@Nullable Output<String> taskName) {
             this.taskName = taskName;
             return this;
         }
 
         public Builder taskName(@Nullable String taskName) {
-            this.taskName = Input.ofNullable(taskName);
+            this.taskName = Output.ofNullable(taskName);
             return this;
         }
 
-        public Builder timeout(@Nullable Input<Integer> timeout) {
+        public Builder timeout(@Nullable Output<Integer> timeout) {
             this.timeout = timeout;
             return this;
         }
 
         public Builder timeout(@Nullable Integer timeout) {
-            this.timeout = Input.ofNullable(timeout);
+            this.timeout = Output.ofNullable(timeout);
             return this;
         }
 
-        public Builder trigger(@Nullable Input<TriggerPropertiesArgs> trigger) {
+        public Builder trigger(@Nullable Output<TriggerPropertiesArgs> trigger) {
             this.trigger = trigger;
             return this;
         }
 
         public Builder trigger(@Nullable TriggerPropertiesArgs trigger) {
-            this.trigger = Input.ofNullable(trigger);
+            this.trigger = Output.ofNullable(trigger);
             return this;
         }
         public TaskArgs build() {

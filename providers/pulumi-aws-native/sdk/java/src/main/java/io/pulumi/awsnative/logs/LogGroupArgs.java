@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.logs;
 
 import io.pulumi.awsnative.logs.inputs.LogGroupTagArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -22,10 +22,10 @@ public final class LogGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kmsKeyId")
-      private final @Nullable Input<String> kmsKeyId;
+      private final @Nullable Output<String> kmsKeyId;
 
-    public Input<String> getKmsKeyId() {
-        return this.kmsKeyId == null ? Input.empty() : this.kmsKeyId;
+    public Output<String> getKmsKeyId() {
+        return this.kmsKeyId == null ? Output.empty() : this.kmsKeyId;
     }
 
     /**
@@ -33,10 +33,10 @@ public final class LogGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="logGroupName")
-      private final @Nullable Input<String> logGroupName;
+      private final @Nullable Output<String> logGroupName;
 
-    public Input<String> getLogGroupName() {
-        return this.logGroupName == null ? Input.empty() : this.logGroupName;
+    public Output<String> getLogGroupName() {
+        return this.logGroupName == null ? Output.empty() : this.logGroupName;
     }
 
     /**
@@ -44,10 +44,10 @@ public final class LogGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="retentionInDays")
-      private final @Nullable Input<Integer> retentionInDays;
+      private final @Nullable Output<Integer> retentionInDays;
 
-    public Input<Integer> getRetentionInDays() {
-        return this.retentionInDays == null ? Input.empty() : this.retentionInDays;
+    public Output<Integer> getRetentionInDays() {
+        return this.retentionInDays == null ? Output.empty() : this.retentionInDays;
     }
 
     /**
@@ -55,17 +55,17 @@ public final class LogGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<List<LogGroupTagArgs>> tags;
+      private final @Nullable Output<List<LogGroupTagArgs>> tags;
 
-    public Input<List<LogGroupTagArgs>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<List<LogGroupTagArgs>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public LogGroupArgs(
-        @Nullable Input<String> kmsKeyId,
-        @Nullable Input<String> logGroupName,
-        @Nullable Input<Integer> retentionInDays,
-        @Nullable Input<List<LogGroupTagArgs>> tags) {
+        @Nullable Output<String> kmsKeyId,
+        @Nullable Output<String> logGroupName,
+        @Nullable Output<Integer> retentionInDays,
+        @Nullable Output<List<LogGroupTagArgs>> tags) {
         this.kmsKeyId = kmsKeyId;
         this.logGroupName = logGroupName;
         this.retentionInDays = retentionInDays;
@@ -73,10 +73,10 @@ public final class LogGroupArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private LogGroupArgs() {
-        this.kmsKeyId = Input.empty();
-        this.logGroupName = Input.empty();
-        this.retentionInDays = Input.empty();
-        this.tags = Input.empty();
+        this.kmsKeyId = Output.empty();
+        this.logGroupName = Output.empty();
+        this.retentionInDays = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -88,10 +88,10 @@ public final class LogGroupArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> kmsKeyId;
-        private @Nullable Input<String> logGroupName;
-        private @Nullable Input<Integer> retentionInDays;
-        private @Nullable Input<List<LogGroupTagArgs>> tags;
+        private @Nullable Output<String> kmsKeyId;
+        private @Nullable Output<String> logGroupName;
+        private @Nullable Output<Integer> retentionInDays;
+        private @Nullable Output<List<LogGroupTagArgs>> tags;
 
         public Builder() {
     	      // Empty
@@ -105,43 +105,43 @@ public final class LogGroupArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder kmsKeyId(@Nullable Input<String> kmsKeyId) {
+        public Builder kmsKeyId(@Nullable Output<String> kmsKeyId) {
             this.kmsKeyId = kmsKeyId;
             return this;
         }
 
         public Builder kmsKeyId(@Nullable String kmsKeyId) {
-            this.kmsKeyId = Input.ofNullable(kmsKeyId);
+            this.kmsKeyId = Output.ofNullable(kmsKeyId);
             return this;
         }
 
-        public Builder logGroupName(@Nullable Input<String> logGroupName) {
+        public Builder logGroupName(@Nullable Output<String> logGroupName) {
             this.logGroupName = logGroupName;
             return this;
         }
 
         public Builder logGroupName(@Nullable String logGroupName) {
-            this.logGroupName = Input.ofNullable(logGroupName);
+            this.logGroupName = Output.ofNullable(logGroupName);
             return this;
         }
 
-        public Builder retentionInDays(@Nullable Input<Integer> retentionInDays) {
+        public Builder retentionInDays(@Nullable Output<Integer> retentionInDays) {
             this.retentionInDays = retentionInDays;
             return this;
         }
 
         public Builder retentionInDays(@Nullable Integer retentionInDays) {
-            this.retentionInDays = Input.ofNullable(retentionInDays);
+            this.retentionInDays = Output.ofNullable(retentionInDays);
             return this;
         }
 
-        public Builder tags(@Nullable Input<List<LogGroupTagArgs>> tags) {
+        public Builder tags(@Nullable Output<List<LogGroupTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable List<LogGroupTagArgs> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public LogGroupArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datamigration.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -24,10 +24,10 @@ public final class MigrateSqlServerSqlDbSyncDatabaseInputArgs extends io.pulumi.
      * 
      */
     @InputImport(name="id")
-      private final @Nullable Input<String> id;
+      private final @Nullable Output<String> id;
 
-    public Input<String> getId() {
-        return this.id == null ? Input.empty() : this.id;
+    public Output<String> getId() {
+        return this.id == null ? Output.empty() : this.id;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class MigrateSqlServerSqlDbSyncDatabaseInputArgs extends io.pulumi.
      * 
      */
     @InputImport(name="migrationSetting")
-      private final @Nullable Input<Map<String,String>> migrationSetting;
+      private final @Nullable Output<Map<String,String>> migrationSetting;
 
-    public Input<Map<String,String>> getMigrationSetting() {
-        return this.migrationSetting == null ? Input.empty() : this.migrationSetting;
+    public Output<Map<String,String>> getMigrationSetting() {
+        return this.migrationSetting == null ? Output.empty() : this.migrationSetting;
     }
 
     /**
@@ -46,10 +46,10 @@ public final class MigrateSqlServerSqlDbSyncDatabaseInputArgs extends io.pulumi.
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -57,10 +57,10 @@ public final class MigrateSqlServerSqlDbSyncDatabaseInputArgs extends io.pulumi.
      * 
      */
     @InputImport(name="schemaName")
-      private final @Nullable Input<String> schemaName;
+      private final @Nullable Output<String> schemaName;
 
-    public Input<String> getSchemaName() {
-        return this.schemaName == null ? Input.empty() : this.schemaName;
+    public Output<String> getSchemaName() {
+        return this.schemaName == null ? Output.empty() : this.schemaName;
     }
 
     /**
@@ -68,10 +68,10 @@ public final class MigrateSqlServerSqlDbSyncDatabaseInputArgs extends io.pulumi.
      * 
      */
     @InputImport(name="sourceSetting")
-      private final @Nullable Input<Map<String,String>> sourceSetting;
+      private final @Nullable Output<Map<String,String>> sourceSetting;
 
-    public Input<Map<String,String>> getSourceSetting() {
-        return this.sourceSetting == null ? Input.empty() : this.sourceSetting;
+    public Output<Map<String,String>> getSourceSetting() {
+        return this.sourceSetting == null ? Output.empty() : this.sourceSetting;
     }
 
     /**
@@ -79,10 +79,10 @@ public final class MigrateSqlServerSqlDbSyncDatabaseInputArgs extends io.pulumi.
      * 
      */
     @InputImport(name="tableMap")
-      private final @Nullable Input<Map<String,String>> tableMap;
+      private final @Nullable Output<Map<String,String>> tableMap;
 
-    public Input<Map<String,String>> getTableMap() {
-        return this.tableMap == null ? Input.empty() : this.tableMap;
+    public Output<Map<String,String>> getTableMap() {
+        return this.tableMap == null ? Output.empty() : this.tableMap;
     }
 
     /**
@@ -90,10 +90,10 @@ public final class MigrateSqlServerSqlDbSyncDatabaseInputArgs extends io.pulumi.
      * 
      */
     @InputImport(name="targetDatabaseName")
-      private final @Nullable Input<String> targetDatabaseName;
+      private final @Nullable Output<String> targetDatabaseName;
 
-    public Input<String> getTargetDatabaseName() {
-        return this.targetDatabaseName == null ? Input.empty() : this.targetDatabaseName;
+    public Output<String> getTargetDatabaseName() {
+        return this.targetDatabaseName == null ? Output.empty() : this.targetDatabaseName;
     }
 
     /**
@@ -101,21 +101,21 @@ public final class MigrateSqlServerSqlDbSyncDatabaseInputArgs extends io.pulumi.
      * 
      */
     @InputImport(name="targetSetting")
-      private final @Nullable Input<Map<String,String>> targetSetting;
+      private final @Nullable Output<Map<String,String>> targetSetting;
 
-    public Input<Map<String,String>> getTargetSetting() {
-        return this.targetSetting == null ? Input.empty() : this.targetSetting;
+    public Output<Map<String,String>> getTargetSetting() {
+        return this.targetSetting == null ? Output.empty() : this.targetSetting;
     }
 
     public MigrateSqlServerSqlDbSyncDatabaseInputArgs(
-        @Nullable Input<String> id,
-        @Nullable Input<Map<String,String>> migrationSetting,
-        @Nullable Input<String> name,
-        @Nullable Input<String> schemaName,
-        @Nullable Input<Map<String,String>> sourceSetting,
-        @Nullable Input<Map<String,String>> tableMap,
-        @Nullable Input<String> targetDatabaseName,
-        @Nullable Input<Map<String,String>> targetSetting) {
+        @Nullable Output<String> id,
+        @Nullable Output<Map<String,String>> migrationSetting,
+        @Nullable Output<String> name,
+        @Nullable Output<String> schemaName,
+        @Nullable Output<Map<String,String>> sourceSetting,
+        @Nullable Output<Map<String,String>> tableMap,
+        @Nullable Output<String> targetDatabaseName,
+        @Nullable Output<Map<String,String>> targetSetting) {
         this.id = id;
         this.migrationSetting = migrationSetting;
         this.name = name;
@@ -127,14 +127,14 @@ public final class MigrateSqlServerSqlDbSyncDatabaseInputArgs extends io.pulumi.
     }
 
     private MigrateSqlServerSqlDbSyncDatabaseInputArgs() {
-        this.id = Input.empty();
-        this.migrationSetting = Input.empty();
-        this.name = Input.empty();
-        this.schemaName = Input.empty();
-        this.sourceSetting = Input.empty();
-        this.tableMap = Input.empty();
-        this.targetDatabaseName = Input.empty();
-        this.targetSetting = Input.empty();
+        this.id = Output.empty();
+        this.migrationSetting = Output.empty();
+        this.name = Output.empty();
+        this.schemaName = Output.empty();
+        this.sourceSetting = Output.empty();
+        this.tableMap = Output.empty();
+        this.targetDatabaseName = Output.empty();
+        this.targetSetting = Output.empty();
     }
 
     public static Builder builder() {
@@ -146,14 +146,14 @@ public final class MigrateSqlServerSqlDbSyncDatabaseInputArgs extends io.pulumi.
     }
 
     public static final class Builder {
-        private @Nullable Input<String> id;
-        private @Nullable Input<Map<String,String>> migrationSetting;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> schemaName;
-        private @Nullable Input<Map<String,String>> sourceSetting;
-        private @Nullable Input<Map<String,String>> tableMap;
-        private @Nullable Input<String> targetDatabaseName;
-        private @Nullable Input<Map<String,String>> targetSetting;
+        private @Nullable Output<String> id;
+        private @Nullable Output<Map<String,String>> migrationSetting;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> schemaName;
+        private @Nullable Output<Map<String,String>> sourceSetting;
+        private @Nullable Output<Map<String,String>> tableMap;
+        private @Nullable Output<String> targetDatabaseName;
+        private @Nullable Output<Map<String,String>> targetSetting;
 
         public Builder() {
     	      // Empty
@@ -171,83 +171,83 @@ public final class MigrateSqlServerSqlDbSyncDatabaseInputArgs extends io.pulumi.
     	      this.targetSetting = defaults.targetSetting;
         }
 
-        public Builder id(@Nullable Input<String> id) {
+        public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
 
         public Builder id(@Nullable String id) {
-            this.id = Input.ofNullable(id);
+            this.id = Output.ofNullable(id);
             return this;
         }
 
-        public Builder migrationSetting(@Nullable Input<Map<String,String>> migrationSetting) {
+        public Builder migrationSetting(@Nullable Output<Map<String,String>> migrationSetting) {
             this.migrationSetting = migrationSetting;
             return this;
         }
 
         public Builder migrationSetting(@Nullable Map<String,String> migrationSetting) {
-            this.migrationSetting = Input.ofNullable(migrationSetting);
+            this.migrationSetting = Output.ofNullable(migrationSetting);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder schemaName(@Nullable Input<String> schemaName) {
+        public Builder schemaName(@Nullable Output<String> schemaName) {
             this.schemaName = schemaName;
             return this;
         }
 
         public Builder schemaName(@Nullable String schemaName) {
-            this.schemaName = Input.ofNullable(schemaName);
+            this.schemaName = Output.ofNullable(schemaName);
             return this;
         }
 
-        public Builder sourceSetting(@Nullable Input<Map<String,String>> sourceSetting) {
+        public Builder sourceSetting(@Nullable Output<Map<String,String>> sourceSetting) {
             this.sourceSetting = sourceSetting;
             return this;
         }
 
         public Builder sourceSetting(@Nullable Map<String,String> sourceSetting) {
-            this.sourceSetting = Input.ofNullable(sourceSetting);
+            this.sourceSetting = Output.ofNullable(sourceSetting);
             return this;
         }
 
-        public Builder tableMap(@Nullable Input<Map<String,String>> tableMap) {
+        public Builder tableMap(@Nullable Output<Map<String,String>> tableMap) {
             this.tableMap = tableMap;
             return this;
         }
 
         public Builder tableMap(@Nullable Map<String,String> tableMap) {
-            this.tableMap = Input.ofNullable(tableMap);
+            this.tableMap = Output.ofNullable(tableMap);
             return this;
         }
 
-        public Builder targetDatabaseName(@Nullable Input<String> targetDatabaseName) {
+        public Builder targetDatabaseName(@Nullable Output<String> targetDatabaseName) {
             this.targetDatabaseName = targetDatabaseName;
             return this;
         }
 
         public Builder targetDatabaseName(@Nullable String targetDatabaseName) {
-            this.targetDatabaseName = Input.ofNullable(targetDatabaseName);
+            this.targetDatabaseName = Output.ofNullable(targetDatabaseName);
             return this;
         }
 
-        public Builder targetSetting(@Nullable Input<Map<String,String>> targetSetting) {
+        public Builder targetSetting(@Nullable Output<Map<String,String>> targetSetting) {
             this.targetSetting = targetSetting;
             return this;
         }
 
         public Builder targetSetting(@Nullable Map<String,String> targetSetting) {
-            this.targetSetting = Input.ofNullable(targetSetting);
+            this.targetSetting = Output.ofNullable(targetSetting);
             return this;
         }
         public MigrateSqlServerSqlDbSyncDatabaseInputArgs build() {

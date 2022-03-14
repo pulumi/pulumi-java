@@ -4,7 +4,7 @@
 package io.pulumi.aws.sagemaker.inputs;
 
 import io.pulumi.aws.sagemaker.inputs.UserProfileUserSettingsJupyterServerAppSettingsDefaultResourceSpecGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -21,9 +21,9 @@ public final class UserProfileUserSettingsJupyterServerAppSettingsGetArgs extend
      * 
      */
     @InputImport(name="defaultResourceSpec", required=true)
-      private final Input<UserProfileUserSettingsJupyterServerAppSettingsDefaultResourceSpecGetArgs> defaultResourceSpec;
+      private final Output<UserProfileUserSettingsJupyterServerAppSettingsDefaultResourceSpecGetArgs> defaultResourceSpec;
 
-    public Input<UserProfileUserSettingsJupyterServerAppSettingsDefaultResourceSpecGetArgs> getDefaultResourceSpec() {
+    public Output<UserProfileUserSettingsJupyterServerAppSettingsDefaultResourceSpecGetArgs> getDefaultResourceSpec() {
         return this.defaultResourceSpec;
     }
 
@@ -32,22 +32,22 @@ public final class UserProfileUserSettingsJupyterServerAppSettingsGetArgs extend
      * 
      */
     @InputImport(name="lifecycleConfigArns")
-      private final @Nullable Input<List<String>> lifecycleConfigArns;
+      private final @Nullable Output<List<String>> lifecycleConfigArns;
 
-    public Input<List<String>> getLifecycleConfigArns() {
-        return this.lifecycleConfigArns == null ? Input.empty() : this.lifecycleConfigArns;
+    public Output<List<String>> getLifecycleConfigArns() {
+        return this.lifecycleConfigArns == null ? Output.empty() : this.lifecycleConfigArns;
     }
 
     public UserProfileUserSettingsJupyterServerAppSettingsGetArgs(
-        Input<UserProfileUserSettingsJupyterServerAppSettingsDefaultResourceSpecGetArgs> defaultResourceSpec,
-        @Nullable Input<List<String>> lifecycleConfigArns) {
+        Output<UserProfileUserSettingsJupyterServerAppSettingsDefaultResourceSpecGetArgs> defaultResourceSpec,
+        @Nullable Output<List<String>> lifecycleConfigArns) {
         this.defaultResourceSpec = Objects.requireNonNull(defaultResourceSpec, "expected parameter 'defaultResourceSpec' to be non-null");
         this.lifecycleConfigArns = lifecycleConfigArns;
     }
 
     private UserProfileUserSettingsJupyterServerAppSettingsGetArgs() {
-        this.defaultResourceSpec = Input.empty();
-        this.lifecycleConfigArns = Input.empty();
+        this.defaultResourceSpec = Output.empty();
+        this.lifecycleConfigArns = Output.empty();
     }
 
     public static Builder builder() {
@@ -59,8 +59,8 @@ public final class UserProfileUserSettingsJupyterServerAppSettingsGetArgs extend
     }
 
     public static final class Builder {
-        private Input<UserProfileUserSettingsJupyterServerAppSettingsDefaultResourceSpecGetArgs> defaultResourceSpec;
-        private @Nullable Input<List<String>> lifecycleConfigArns;
+        private Output<UserProfileUserSettingsJupyterServerAppSettingsDefaultResourceSpecGetArgs> defaultResourceSpec;
+        private @Nullable Output<List<String>> lifecycleConfigArns;
 
         public Builder() {
     	      // Empty
@@ -72,23 +72,23 @@ public final class UserProfileUserSettingsJupyterServerAppSettingsGetArgs extend
     	      this.lifecycleConfigArns = defaults.lifecycleConfigArns;
         }
 
-        public Builder defaultResourceSpec(Input<UserProfileUserSettingsJupyterServerAppSettingsDefaultResourceSpecGetArgs> defaultResourceSpec) {
+        public Builder defaultResourceSpec(Output<UserProfileUserSettingsJupyterServerAppSettingsDefaultResourceSpecGetArgs> defaultResourceSpec) {
             this.defaultResourceSpec = Objects.requireNonNull(defaultResourceSpec);
             return this;
         }
 
         public Builder defaultResourceSpec(UserProfileUserSettingsJupyterServerAppSettingsDefaultResourceSpecGetArgs defaultResourceSpec) {
-            this.defaultResourceSpec = Input.of(Objects.requireNonNull(defaultResourceSpec));
+            this.defaultResourceSpec = Output.of(Objects.requireNonNull(defaultResourceSpec));
             return this;
         }
 
-        public Builder lifecycleConfigArns(@Nullable Input<List<String>> lifecycleConfigArns) {
+        public Builder lifecycleConfigArns(@Nullable Output<List<String>> lifecycleConfigArns) {
             this.lifecycleConfigArns = lifecycleConfigArns;
             return this;
         }
 
         public Builder lifecycleConfigArns(@Nullable List<String> lifecycleConfigArns) {
-            this.lifecycleConfigArns = Input.ofNullable(lifecycleConfigArns);
+            this.lifecycleConfigArns = Output.ofNullable(lifecycleConfigArns);
             return this;
         }
         public UserProfileUserSettingsJupyterServerAppSettingsGetArgs build() {

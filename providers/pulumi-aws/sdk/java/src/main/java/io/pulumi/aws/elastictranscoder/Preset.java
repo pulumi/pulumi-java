@@ -11,7 +11,6 @@ import io.pulumi.aws.elastictranscoder.outputs.PresetAudioCodecOptions;
 import io.pulumi.aws.elastictranscoder.outputs.PresetThumbnails;
 import io.pulumi.aws.elastictranscoder.outputs.PresetVideo;
 import io.pulumi.aws.elastictranscoder.outputs.PresetVideoWatermark;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -221,14 +220,14 @@ public class Preset extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Preset(String name, PresetArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:elastictranscoder/preset:Preset", name, args == null ? PresetArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws:elastictranscoder/preset:Preset", name, args == null ? PresetArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private Preset(String name, Input<String> id, @Nullable PresetState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private Preset(String name, Output<String> id, @Nullable PresetState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws:elastictranscoder/preset:Preset", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -244,7 +243,7 @@ public class Preset extends io.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static Preset get(String name, Input<String> id, @Nullable PresetState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static Preset get(String name, Output<String> id, @Nullable PresetState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Preset(name, id, state, options);
     }
 }

@@ -5,7 +5,7 @@ package io.pulumi.aws.fsx.inputs;
 
 import io.pulumi.aws.fsx.inputs.OntapStorageVirtualMachineActiveDirectoryConfigurationGetArgs;
 import io.pulumi.aws.fsx.inputs.OntapStorageVirtualMachineEndpointGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -23,10 +23,10 @@ public final class OntapStorageVirtualMachineState extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="activeDirectoryConfiguration")
-      private final @Nullable Input<OntapStorageVirtualMachineActiveDirectoryConfigurationGetArgs> activeDirectoryConfiguration;
+      private final @Nullable Output<OntapStorageVirtualMachineActiveDirectoryConfigurationGetArgs> activeDirectoryConfiguration;
 
-    public Input<OntapStorageVirtualMachineActiveDirectoryConfigurationGetArgs> getActiveDirectoryConfiguration() {
-        return this.activeDirectoryConfiguration == null ? Input.empty() : this.activeDirectoryConfiguration;
+    public Output<OntapStorageVirtualMachineActiveDirectoryConfigurationGetArgs> getActiveDirectoryConfiguration() {
+        return this.activeDirectoryConfiguration == null ? Output.empty() : this.activeDirectoryConfiguration;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class OntapStorageVirtualMachineState extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="arn")
-      private final @Nullable Input<String> arn;
+      private final @Nullable Output<String> arn;
 
-    public Input<String> getArn() {
-        return this.arn == null ? Input.empty() : this.arn;
+    public Output<String> getArn() {
+        return this.arn == null ? Output.empty() : this.arn;
     }
 
     /**
@@ -45,10 +45,10 @@ public final class OntapStorageVirtualMachineState extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="endpoints")
-      private final @Nullable Input<List<OntapStorageVirtualMachineEndpointGetArgs>> endpoints;
+      private final @Nullable Output<List<OntapStorageVirtualMachineEndpointGetArgs>> endpoints;
 
-    public Input<List<OntapStorageVirtualMachineEndpointGetArgs>> getEndpoints() {
-        return this.endpoints == null ? Input.empty() : this.endpoints;
+    public Output<List<OntapStorageVirtualMachineEndpointGetArgs>> getEndpoints() {
+        return this.endpoints == null ? Output.empty() : this.endpoints;
     }
 
     /**
@@ -56,10 +56,10 @@ public final class OntapStorageVirtualMachineState extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="fileSystemId")
-      private final @Nullable Input<String> fileSystemId;
+      private final @Nullable Output<String> fileSystemId;
 
-    public Input<String> getFileSystemId() {
-        return this.fileSystemId == null ? Input.empty() : this.fileSystemId;
+    public Output<String> getFileSystemId() {
+        return this.fileSystemId == null ? Output.empty() : this.fileSystemId;
     }
 
     /**
@@ -67,10 +67,10 @@ public final class OntapStorageVirtualMachineState extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -78,10 +78,10 @@ public final class OntapStorageVirtualMachineState extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="rootVolumeSecurityStyle")
-      private final @Nullable Input<String> rootVolumeSecurityStyle;
+      private final @Nullable Output<String> rootVolumeSecurityStyle;
 
-    public Input<String> getRootVolumeSecurityStyle() {
-        return this.rootVolumeSecurityStyle == null ? Input.empty() : this.rootVolumeSecurityStyle;
+    public Output<String> getRootVolumeSecurityStyle() {
+        return this.rootVolumeSecurityStyle == null ? Output.empty() : this.rootVolumeSecurityStyle;
     }
 
     /**
@@ -89,17 +89,17 @@ public final class OntapStorageVirtualMachineState extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="subtype")
-      private final @Nullable Input<String> subtype;
+      private final @Nullable Output<String> subtype;
 
-    public Input<String> getSubtype() {
-        return this.subtype == null ? Input.empty() : this.subtype;
+    public Output<String> getSubtype() {
+        return this.subtype == null ? Output.empty() : this.subtype;
     }
 
     @InputImport(name="svmAdminPassword")
-      private final @Nullable Input<String> svmAdminPassword;
+      private final @Nullable Output<String> svmAdminPassword;
 
-    public Input<String> getSvmAdminPassword() {
-        return this.svmAdminPassword == null ? Input.empty() : this.svmAdminPassword;
+    public Output<String> getSvmAdminPassword() {
+        return this.svmAdminPassword == null ? Output.empty() : this.svmAdminPassword;
     }
 
     /**
@@ -107,10 +107,10 @@ public final class OntapStorageVirtualMachineState extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -118,10 +118,10 @@ public final class OntapStorageVirtualMachineState extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="tagsAll")
-      private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Input<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Input.empty() : this.tagsAll;
+    public Output<Map<String,String>> getTagsAll() {
+        return this.tagsAll == null ? Output.empty() : this.tagsAll;
     }
 
     /**
@@ -129,24 +129,24 @@ public final class OntapStorageVirtualMachineState extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="uuid")
-      private final @Nullable Input<String> uuid;
+      private final @Nullable Output<String> uuid;
 
-    public Input<String> getUuid() {
-        return this.uuid == null ? Input.empty() : this.uuid;
+    public Output<String> getUuid() {
+        return this.uuid == null ? Output.empty() : this.uuid;
     }
 
     public OntapStorageVirtualMachineState(
-        @Nullable Input<OntapStorageVirtualMachineActiveDirectoryConfigurationGetArgs> activeDirectoryConfiguration,
-        @Nullable Input<String> arn,
-        @Nullable Input<List<OntapStorageVirtualMachineEndpointGetArgs>> endpoints,
-        @Nullable Input<String> fileSystemId,
-        @Nullable Input<String> name,
-        @Nullable Input<String> rootVolumeSecurityStyle,
-        @Nullable Input<String> subtype,
-        @Nullable Input<String> svmAdminPassword,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<Map<String,String>> tagsAll,
-        @Nullable Input<String> uuid) {
+        @Nullable Output<OntapStorageVirtualMachineActiveDirectoryConfigurationGetArgs> activeDirectoryConfiguration,
+        @Nullable Output<String> arn,
+        @Nullable Output<List<OntapStorageVirtualMachineEndpointGetArgs>> endpoints,
+        @Nullable Output<String> fileSystemId,
+        @Nullable Output<String> name,
+        @Nullable Output<String> rootVolumeSecurityStyle,
+        @Nullable Output<String> subtype,
+        @Nullable Output<String> svmAdminPassword,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<Map<String,String>> tagsAll,
+        @Nullable Output<String> uuid) {
         this.activeDirectoryConfiguration = activeDirectoryConfiguration;
         this.arn = arn;
         this.endpoints = endpoints;
@@ -161,17 +161,17 @@ public final class OntapStorageVirtualMachineState extends io.pulumi.resources.R
     }
 
     private OntapStorageVirtualMachineState() {
-        this.activeDirectoryConfiguration = Input.empty();
-        this.arn = Input.empty();
-        this.endpoints = Input.empty();
-        this.fileSystemId = Input.empty();
-        this.name = Input.empty();
-        this.rootVolumeSecurityStyle = Input.empty();
-        this.subtype = Input.empty();
-        this.svmAdminPassword = Input.empty();
-        this.tags = Input.empty();
-        this.tagsAll = Input.empty();
-        this.uuid = Input.empty();
+        this.activeDirectoryConfiguration = Output.empty();
+        this.arn = Output.empty();
+        this.endpoints = Output.empty();
+        this.fileSystemId = Output.empty();
+        this.name = Output.empty();
+        this.rootVolumeSecurityStyle = Output.empty();
+        this.subtype = Output.empty();
+        this.svmAdminPassword = Output.empty();
+        this.tags = Output.empty();
+        this.tagsAll = Output.empty();
+        this.uuid = Output.empty();
     }
 
     public static Builder builder() {
@@ -183,17 +183,17 @@ public final class OntapStorageVirtualMachineState extends io.pulumi.resources.R
     }
 
     public static final class Builder {
-        private @Nullable Input<OntapStorageVirtualMachineActiveDirectoryConfigurationGetArgs> activeDirectoryConfiguration;
-        private @Nullable Input<String> arn;
-        private @Nullable Input<List<OntapStorageVirtualMachineEndpointGetArgs>> endpoints;
-        private @Nullable Input<String> fileSystemId;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> rootVolumeSecurityStyle;
-        private @Nullable Input<String> subtype;
-        private @Nullable Input<String> svmAdminPassword;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<Map<String,String>> tagsAll;
-        private @Nullable Input<String> uuid;
+        private @Nullable Output<OntapStorageVirtualMachineActiveDirectoryConfigurationGetArgs> activeDirectoryConfiguration;
+        private @Nullable Output<String> arn;
+        private @Nullable Output<List<OntapStorageVirtualMachineEndpointGetArgs>> endpoints;
+        private @Nullable Output<String> fileSystemId;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> rootVolumeSecurityStyle;
+        private @Nullable Output<String> subtype;
+        private @Nullable Output<String> svmAdminPassword;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<Map<String,String>> tagsAll;
+        private @Nullable Output<String> uuid;
 
         public Builder() {
     	      // Empty
@@ -214,113 +214,113 @@ public final class OntapStorageVirtualMachineState extends io.pulumi.resources.R
     	      this.uuid = defaults.uuid;
         }
 
-        public Builder activeDirectoryConfiguration(@Nullable Input<OntapStorageVirtualMachineActiveDirectoryConfigurationGetArgs> activeDirectoryConfiguration) {
+        public Builder activeDirectoryConfiguration(@Nullable Output<OntapStorageVirtualMachineActiveDirectoryConfigurationGetArgs> activeDirectoryConfiguration) {
             this.activeDirectoryConfiguration = activeDirectoryConfiguration;
             return this;
         }
 
         public Builder activeDirectoryConfiguration(@Nullable OntapStorageVirtualMachineActiveDirectoryConfigurationGetArgs activeDirectoryConfiguration) {
-            this.activeDirectoryConfiguration = Input.ofNullable(activeDirectoryConfiguration);
+            this.activeDirectoryConfiguration = Output.ofNullable(activeDirectoryConfiguration);
             return this;
         }
 
-        public Builder arn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
 
         public Builder arn(@Nullable String arn) {
-            this.arn = Input.ofNullable(arn);
+            this.arn = Output.ofNullable(arn);
             return this;
         }
 
-        public Builder endpoints(@Nullable Input<List<OntapStorageVirtualMachineEndpointGetArgs>> endpoints) {
+        public Builder endpoints(@Nullable Output<List<OntapStorageVirtualMachineEndpointGetArgs>> endpoints) {
             this.endpoints = endpoints;
             return this;
         }
 
         public Builder endpoints(@Nullable List<OntapStorageVirtualMachineEndpointGetArgs> endpoints) {
-            this.endpoints = Input.ofNullable(endpoints);
+            this.endpoints = Output.ofNullable(endpoints);
             return this;
         }
 
-        public Builder fileSystemId(@Nullable Input<String> fileSystemId) {
+        public Builder fileSystemId(@Nullable Output<String> fileSystemId) {
             this.fileSystemId = fileSystemId;
             return this;
         }
 
         public Builder fileSystemId(@Nullable String fileSystemId) {
-            this.fileSystemId = Input.ofNullable(fileSystemId);
+            this.fileSystemId = Output.ofNullable(fileSystemId);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder rootVolumeSecurityStyle(@Nullable Input<String> rootVolumeSecurityStyle) {
+        public Builder rootVolumeSecurityStyle(@Nullable Output<String> rootVolumeSecurityStyle) {
             this.rootVolumeSecurityStyle = rootVolumeSecurityStyle;
             return this;
         }
 
         public Builder rootVolumeSecurityStyle(@Nullable String rootVolumeSecurityStyle) {
-            this.rootVolumeSecurityStyle = Input.ofNullable(rootVolumeSecurityStyle);
+            this.rootVolumeSecurityStyle = Output.ofNullable(rootVolumeSecurityStyle);
             return this;
         }
 
-        public Builder subtype(@Nullable Input<String> subtype) {
+        public Builder subtype(@Nullable Output<String> subtype) {
             this.subtype = subtype;
             return this;
         }
 
         public Builder subtype(@Nullable String subtype) {
-            this.subtype = Input.ofNullable(subtype);
+            this.subtype = Output.ofNullable(subtype);
             return this;
         }
 
-        public Builder svmAdminPassword(@Nullable Input<String> svmAdminPassword) {
+        public Builder svmAdminPassword(@Nullable Output<String> svmAdminPassword) {
             this.svmAdminPassword = svmAdminPassword;
             return this;
         }
 
         public Builder svmAdminPassword(@Nullable String svmAdminPassword) {
-            this.svmAdminPassword = Input.ofNullable(svmAdminPassword);
+            this.svmAdminPassword = Output.ofNullable(svmAdminPassword);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Input.ofNullable(tagsAll);
+            this.tagsAll = Output.ofNullable(tagsAll);
             return this;
         }
 
-        public Builder uuid(@Nullable Input<String> uuid) {
+        public Builder uuid(@Nullable Output<String> uuid) {
             this.uuid = uuid;
             return this;
         }
 
         public Builder uuid(@Nullable String uuid) {
-            this.uuid = Input.ofNullable(uuid);
+            this.uuid = Output.ofNullable(uuid);
             return this;
         }
         public OntapStorageVirtualMachineState build() {

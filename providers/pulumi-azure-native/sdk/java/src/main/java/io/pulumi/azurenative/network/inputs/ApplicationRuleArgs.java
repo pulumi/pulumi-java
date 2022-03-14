@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.azurenative.network.inputs.FirewallPolicyRuleApplicationProtocolArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -26,10 +26,10 @@ public final class ApplicationRuleArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -37,10 +37,10 @@ public final class ApplicationRuleArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="destinationAddresses")
-      private final @Nullable Input<List<String>> destinationAddresses;
+      private final @Nullable Output<List<String>> destinationAddresses;
 
-    public Input<List<String>> getDestinationAddresses() {
-        return this.destinationAddresses == null ? Input.empty() : this.destinationAddresses;
+    public Output<List<String>> getDestinationAddresses() {
+        return this.destinationAddresses == null ? Output.empty() : this.destinationAddresses;
     }
 
     /**
@@ -48,10 +48,10 @@ public final class ApplicationRuleArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="fqdnTags")
-      private final @Nullable Input<List<String>> fqdnTags;
+      private final @Nullable Output<List<String>> fqdnTags;
 
-    public Input<List<String>> getFqdnTags() {
-        return this.fqdnTags == null ? Input.empty() : this.fqdnTags;
+    public Output<List<String>> getFqdnTags() {
+        return this.fqdnTags == null ? Output.empty() : this.fqdnTags;
     }
 
     /**
@@ -59,10 +59,10 @@ public final class ApplicationRuleArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -70,10 +70,10 @@ public final class ApplicationRuleArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="protocols")
-      private final @Nullable Input<List<FirewallPolicyRuleApplicationProtocolArgs>> protocols;
+      private final @Nullable Output<List<FirewallPolicyRuleApplicationProtocolArgs>> protocols;
 
-    public Input<List<FirewallPolicyRuleApplicationProtocolArgs>> getProtocols() {
-        return this.protocols == null ? Input.empty() : this.protocols;
+    public Output<List<FirewallPolicyRuleApplicationProtocolArgs>> getProtocols() {
+        return this.protocols == null ? Output.empty() : this.protocols;
     }
 
     /**
@@ -82,9 +82,9 @@ public final class ApplicationRuleArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="ruleType", required=true)
-      private final Input<String> ruleType;
+      private final Output<String> ruleType;
 
-    public Input<String> getRuleType() {
+    public Output<String> getRuleType() {
         return this.ruleType;
     }
 
@@ -93,10 +93,10 @@ public final class ApplicationRuleArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="sourceAddresses")
-      private final @Nullable Input<List<String>> sourceAddresses;
+      private final @Nullable Output<List<String>> sourceAddresses;
 
-    public Input<List<String>> getSourceAddresses() {
-        return this.sourceAddresses == null ? Input.empty() : this.sourceAddresses;
+    public Output<List<String>> getSourceAddresses() {
+        return this.sourceAddresses == null ? Output.empty() : this.sourceAddresses;
     }
 
     /**
@@ -104,10 +104,10 @@ public final class ApplicationRuleArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="sourceIpGroups")
-      private final @Nullable Input<List<String>> sourceIpGroups;
+      private final @Nullable Output<List<String>> sourceIpGroups;
 
-    public Input<List<String>> getSourceIpGroups() {
-        return this.sourceIpGroups == null ? Input.empty() : this.sourceIpGroups;
+    public Output<List<String>> getSourceIpGroups() {
+        return this.sourceIpGroups == null ? Output.empty() : this.sourceIpGroups;
     }
 
     /**
@@ -115,10 +115,10 @@ public final class ApplicationRuleArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="targetFqdns")
-      private final @Nullable Input<List<String>> targetFqdns;
+      private final @Nullable Output<List<String>> targetFqdns;
 
-    public Input<List<String>> getTargetFqdns() {
-        return this.targetFqdns == null ? Input.empty() : this.targetFqdns;
+    public Output<List<String>> getTargetFqdns() {
+        return this.targetFqdns == null ? Output.empty() : this.targetFqdns;
     }
 
     /**
@@ -126,10 +126,10 @@ public final class ApplicationRuleArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="targetUrls")
-      private final @Nullable Input<List<String>> targetUrls;
+      private final @Nullable Output<List<String>> targetUrls;
 
-    public Input<List<String>> getTargetUrls() {
-        return this.targetUrls == null ? Input.empty() : this.targetUrls;
+    public Output<List<String>> getTargetUrls() {
+        return this.targetUrls == null ? Output.empty() : this.targetUrls;
     }
 
     /**
@@ -137,10 +137,10 @@ public final class ApplicationRuleArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="terminateTLS")
-      private final @Nullable Input<Boolean> terminateTLS;
+      private final @Nullable Output<Boolean> terminateTLS;
 
-    public Input<Boolean> getTerminateTLS() {
-        return this.terminateTLS == null ? Input.empty() : this.terminateTLS;
+    public Output<Boolean> getTerminateTLS() {
+        return this.terminateTLS == null ? Output.empty() : this.terminateTLS;
     }
 
     /**
@@ -148,25 +148,25 @@ public final class ApplicationRuleArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="webCategories")
-      private final @Nullable Input<List<String>> webCategories;
+      private final @Nullable Output<List<String>> webCategories;
 
-    public Input<List<String>> getWebCategories() {
-        return this.webCategories == null ? Input.empty() : this.webCategories;
+    public Output<List<String>> getWebCategories() {
+        return this.webCategories == null ? Output.empty() : this.webCategories;
     }
 
     public ApplicationRuleArgs(
-        @Nullable Input<String> description,
-        @Nullable Input<List<String>> destinationAddresses,
-        @Nullable Input<List<String>> fqdnTags,
-        @Nullable Input<String> name,
-        @Nullable Input<List<FirewallPolicyRuleApplicationProtocolArgs>> protocols,
-        Input<String> ruleType,
-        @Nullable Input<List<String>> sourceAddresses,
-        @Nullable Input<List<String>> sourceIpGroups,
-        @Nullable Input<List<String>> targetFqdns,
-        @Nullable Input<List<String>> targetUrls,
-        @Nullable Input<Boolean> terminateTLS,
-        @Nullable Input<List<String>> webCategories) {
+        @Nullable Output<String> description,
+        @Nullable Output<List<String>> destinationAddresses,
+        @Nullable Output<List<String>> fqdnTags,
+        @Nullable Output<String> name,
+        @Nullable Output<List<FirewallPolicyRuleApplicationProtocolArgs>> protocols,
+        Output<String> ruleType,
+        @Nullable Output<List<String>> sourceAddresses,
+        @Nullable Output<List<String>> sourceIpGroups,
+        @Nullable Output<List<String>> targetFqdns,
+        @Nullable Output<List<String>> targetUrls,
+        @Nullable Output<Boolean> terminateTLS,
+        @Nullable Output<List<String>> webCategories) {
         this.description = description;
         this.destinationAddresses = destinationAddresses;
         this.fqdnTags = fqdnTags;
@@ -182,18 +182,18 @@ public final class ApplicationRuleArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private ApplicationRuleArgs() {
-        this.description = Input.empty();
-        this.destinationAddresses = Input.empty();
-        this.fqdnTags = Input.empty();
-        this.name = Input.empty();
-        this.protocols = Input.empty();
-        this.ruleType = Input.empty();
-        this.sourceAddresses = Input.empty();
-        this.sourceIpGroups = Input.empty();
-        this.targetFqdns = Input.empty();
-        this.targetUrls = Input.empty();
-        this.terminateTLS = Input.empty();
-        this.webCategories = Input.empty();
+        this.description = Output.empty();
+        this.destinationAddresses = Output.empty();
+        this.fqdnTags = Output.empty();
+        this.name = Output.empty();
+        this.protocols = Output.empty();
+        this.ruleType = Output.empty();
+        this.sourceAddresses = Output.empty();
+        this.sourceIpGroups = Output.empty();
+        this.targetFqdns = Output.empty();
+        this.targetUrls = Output.empty();
+        this.terminateTLS = Output.empty();
+        this.webCategories = Output.empty();
     }
 
     public static Builder builder() {
@@ -205,18 +205,18 @@ public final class ApplicationRuleArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private @Nullable Input<String> description;
-        private @Nullable Input<List<String>> destinationAddresses;
-        private @Nullable Input<List<String>> fqdnTags;
-        private @Nullable Input<String> name;
-        private @Nullable Input<List<FirewallPolicyRuleApplicationProtocolArgs>> protocols;
-        private Input<String> ruleType;
-        private @Nullable Input<List<String>> sourceAddresses;
-        private @Nullable Input<List<String>> sourceIpGroups;
-        private @Nullable Input<List<String>> targetFqdns;
-        private @Nullable Input<List<String>> targetUrls;
-        private @Nullable Input<Boolean> terminateTLS;
-        private @Nullable Input<List<String>> webCategories;
+        private @Nullable Output<String> description;
+        private @Nullable Output<List<String>> destinationAddresses;
+        private @Nullable Output<List<String>> fqdnTags;
+        private @Nullable Output<String> name;
+        private @Nullable Output<List<FirewallPolicyRuleApplicationProtocolArgs>> protocols;
+        private Output<String> ruleType;
+        private @Nullable Output<List<String>> sourceAddresses;
+        private @Nullable Output<List<String>> sourceIpGroups;
+        private @Nullable Output<List<String>> targetFqdns;
+        private @Nullable Output<List<String>> targetUrls;
+        private @Nullable Output<Boolean> terminateTLS;
+        private @Nullable Output<List<String>> webCategories;
 
         public Builder() {
     	      // Empty
@@ -238,123 +238,123 @@ public final class ApplicationRuleArgs extends io.pulumi.resources.ResourceArgs 
     	      this.webCategories = defaults.webCategories;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder destinationAddresses(@Nullable Input<List<String>> destinationAddresses) {
+        public Builder destinationAddresses(@Nullable Output<List<String>> destinationAddresses) {
             this.destinationAddresses = destinationAddresses;
             return this;
         }
 
         public Builder destinationAddresses(@Nullable List<String> destinationAddresses) {
-            this.destinationAddresses = Input.ofNullable(destinationAddresses);
+            this.destinationAddresses = Output.ofNullable(destinationAddresses);
             return this;
         }
 
-        public Builder fqdnTags(@Nullable Input<List<String>> fqdnTags) {
+        public Builder fqdnTags(@Nullable Output<List<String>> fqdnTags) {
             this.fqdnTags = fqdnTags;
             return this;
         }
 
         public Builder fqdnTags(@Nullable List<String> fqdnTags) {
-            this.fqdnTags = Input.ofNullable(fqdnTags);
+            this.fqdnTags = Output.ofNullable(fqdnTags);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder protocols(@Nullable Input<List<FirewallPolicyRuleApplicationProtocolArgs>> protocols) {
+        public Builder protocols(@Nullable Output<List<FirewallPolicyRuleApplicationProtocolArgs>> protocols) {
             this.protocols = protocols;
             return this;
         }
 
         public Builder protocols(@Nullable List<FirewallPolicyRuleApplicationProtocolArgs> protocols) {
-            this.protocols = Input.ofNullable(protocols);
+            this.protocols = Output.ofNullable(protocols);
             return this;
         }
 
-        public Builder ruleType(Input<String> ruleType) {
+        public Builder ruleType(Output<String> ruleType) {
             this.ruleType = Objects.requireNonNull(ruleType);
             return this;
         }
 
         public Builder ruleType(String ruleType) {
-            this.ruleType = Input.of(Objects.requireNonNull(ruleType));
+            this.ruleType = Output.of(Objects.requireNonNull(ruleType));
             return this;
         }
 
-        public Builder sourceAddresses(@Nullable Input<List<String>> sourceAddresses) {
+        public Builder sourceAddresses(@Nullable Output<List<String>> sourceAddresses) {
             this.sourceAddresses = sourceAddresses;
             return this;
         }
 
         public Builder sourceAddresses(@Nullable List<String> sourceAddresses) {
-            this.sourceAddresses = Input.ofNullable(sourceAddresses);
+            this.sourceAddresses = Output.ofNullable(sourceAddresses);
             return this;
         }
 
-        public Builder sourceIpGroups(@Nullable Input<List<String>> sourceIpGroups) {
+        public Builder sourceIpGroups(@Nullable Output<List<String>> sourceIpGroups) {
             this.sourceIpGroups = sourceIpGroups;
             return this;
         }
 
         public Builder sourceIpGroups(@Nullable List<String> sourceIpGroups) {
-            this.sourceIpGroups = Input.ofNullable(sourceIpGroups);
+            this.sourceIpGroups = Output.ofNullable(sourceIpGroups);
             return this;
         }
 
-        public Builder targetFqdns(@Nullable Input<List<String>> targetFqdns) {
+        public Builder targetFqdns(@Nullable Output<List<String>> targetFqdns) {
             this.targetFqdns = targetFqdns;
             return this;
         }
 
         public Builder targetFqdns(@Nullable List<String> targetFqdns) {
-            this.targetFqdns = Input.ofNullable(targetFqdns);
+            this.targetFqdns = Output.ofNullable(targetFqdns);
             return this;
         }
 
-        public Builder targetUrls(@Nullable Input<List<String>> targetUrls) {
+        public Builder targetUrls(@Nullable Output<List<String>> targetUrls) {
             this.targetUrls = targetUrls;
             return this;
         }
 
         public Builder targetUrls(@Nullable List<String> targetUrls) {
-            this.targetUrls = Input.ofNullable(targetUrls);
+            this.targetUrls = Output.ofNullable(targetUrls);
             return this;
         }
 
-        public Builder terminateTLS(@Nullable Input<Boolean> terminateTLS) {
+        public Builder terminateTLS(@Nullable Output<Boolean> terminateTLS) {
             this.terminateTLS = terminateTLS;
             return this;
         }
 
         public Builder terminateTLS(@Nullable Boolean terminateTLS) {
-            this.terminateTLS = Input.ofNullable(terminateTLS);
+            this.terminateTLS = Output.ofNullable(terminateTLS);
             return this;
         }
 
-        public Builder webCategories(@Nullable Input<List<String>> webCategories) {
+        public Builder webCategories(@Nullable Output<List<String>> webCategories) {
             this.webCategories = webCategories;
             return this;
         }
 
         public Builder webCategories(@Nullable List<String> webCategories) {
-            this.webCategories = Input.ofNullable(webCategories);
+            this.webCategories = Output.ofNullable(webCategories);
             return this;
         }
         public ApplicationRuleArgs build() {

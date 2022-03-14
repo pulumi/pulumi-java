@@ -5,7 +5,7 @@ package io.pulumi.awsnative.devicefarm;
 
 import io.pulumi.awsnative.devicefarm.inputs.TestGridProjectTagArgs;
 import io.pulumi.awsnative.devicefarm.inputs.TestGridProjectVpcConfigArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -18,38 +18,38 @@ public final class TestGridProjectArgs extends io.pulumi.resources.ResourceArgs 
     public static final TestGridProjectArgs Empty = new TestGridProjectArgs();
 
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     @InputImport(name="tags")
-      private final @Nullable Input<List<TestGridProjectTagArgs>> tags;
+      private final @Nullable Output<List<TestGridProjectTagArgs>> tags;
 
-    public Input<List<TestGridProjectTagArgs>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<List<TestGridProjectTagArgs>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     @InputImport(name="vpcConfig")
-      private final @Nullable Input<TestGridProjectVpcConfigArgs> vpcConfig;
+      private final @Nullable Output<TestGridProjectVpcConfigArgs> vpcConfig;
 
-    public Input<TestGridProjectVpcConfigArgs> getVpcConfig() {
-        return this.vpcConfig == null ? Input.empty() : this.vpcConfig;
+    public Output<TestGridProjectVpcConfigArgs> getVpcConfig() {
+        return this.vpcConfig == null ? Output.empty() : this.vpcConfig;
     }
 
     public TestGridProjectArgs(
-        @Nullable Input<String> description,
-        @Nullable Input<String> name,
-        @Nullable Input<List<TestGridProjectTagArgs>> tags,
-        @Nullable Input<TestGridProjectVpcConfigArgs> vpcConfig) {
+        @Nullable Output<String> description,
+        @Nullable Output<String> name,
+        @Nullable Output<List<TestGridProjectTagArgs>> tags,
+        @Nullable Output<TestGridProjectVpcConfigArgs> vpcConfig) {
         this.description = description;
         this.name = name;
         this.tags = tags;
@@ -57,10 +57,10 @@ public final class TestGridProjectArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private TestGridProjectArgs() {
-        this.description = Input.empty();
-        this.name = Input.empty();
-        this.tags = Input.empty();
-        this.vpcConfig = Input.empty();
+        this.description = Output.empty();
+        this.name = Output.empty();
+        this.tags = Output.empty();
+        this.vpcConfig = Output.empty();
     }
 
     public static Builder builder() {
@@ -72,10 +72,10 @@ public final class TestGridProjectArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private @Nullable Input<String> description;
-        private @Nullable Input<String> name;
-        private @Nullable Input<List<TestGridProjectTagArgs>> tags;
-        private @Nullable Input<TestGridProjectVpcConfigArgs> vpcConfig;
+        private @Nullable Output<String> description;
+        private @Nullable Output<String> name;
+        private @Nullable Output<List<TestGridProjectTagArgs>> tags;
+        private @Nullable Output<TestGridProjectVpcConfigArgs> vpcConfig;
 
         public Builder() {
     	      // Empty
@@ -89,43 +89,43 @@ public final class TestGridProjectArgs extends io.pulumi.resources.ResourceArgs 
     	      this.vpcConfig = defaults.vpcConfig;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder tags(@Nullable Input<List<TestGridProjectTagArgs>> tags) {
+        public Builder tags(@Nullable Output<List<TestGridProjectTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable List<TestGridProjectTagArgs> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder vpcConfig(@Nullable Input<TestGridProjectVpcConfigArgs> vpcConfig) {
+        public Builder vpcConfig(@Nullable Output<TestGridProjectVpcConfigArgs> vpcConfig) {
             this.vpcConfig = vpcConfig;
             return this;
         }
 
         public Builder vpcConfig(@Nullable TestGridProjectVpcConfigArgs vpcConfig) {
-            this.vpcConfig = Input.ofNullable(vpcConfig);
+            this.vpcConfig = Output.ofNullable(vpcConfig);
             return this;
         }
         public TestGridProjectArgs build() {

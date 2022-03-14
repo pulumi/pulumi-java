@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.ec2clientvpn.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -20,10 +20,10 @@ public final class NetworkAssociationState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="associationId")
-      private final @Nullable Input<String> associationId;
+      private final @Nullable Output<String> associationId;
 
-    public Input<String> getAssociationId() {
-        return this.associationId == null ? Input.empty() : this.associationId;
+    public Output<String> getAssociationId() {
+        return this.associationId == null ? Output.empty() : this.associationId;
     }
 
     /**
@@ -31,10 +31,10 @@ public final class NetworkAssociationState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="clientVpnEndpointId")
-      private final @Nullable Input<String> clientVpnEndpointId;
+      private final @Nullable Output<String> clientVpnEndpointId;
 
-    public Input<String> getClientVpnEndpointId() {
-        return this.clientVpnEndpointId == null ? Input.empty() : this.clientVpnEndpointId;
+    public Output<String> getClientVpnEndpointId() {
+        return this.clientVpnEndpointId == null ? Output.empty() : this.clientVpnEndpointId;
     }
 
     /**
@@ -42,10 +42,10 @@ public final class NetworkAssociationState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="securityGroups")
-      private final @Nullable Input<List<String>> securityGroups;
+      private final @Nullable Output<List<String>> securityGroups;
 
-    public Input<List<String>> getSecurityGroups() {
-        return this.securityGroups == null ? Input.empty() : this.securityGroups;
+    public Output<List<String>> getSecurityGroups() {
+        return this.securityGroups == null ? Output.empty() : this.securityGroups;
     }
 
     /**
@@ -53,10 +53,10 @@ public final class NetworkAssociationState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="status")
-      private final @Nullable Input<String> status;
+      private final @Nullable Output<String> status;
 
-    public Input<String> getStatus() {
-        return this.status == null ? Input.empty() : this.status;
+    public Output<String> getStatus() {
+        return this.status == null ? Output.empty() : this.status;
     }
 
     /**
@@ -64,10 +64,10 @@ public final class NetworkAssociationState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="subnetId")
-      private final @Nullable Input<String> subnetId;
+      private final @Nullable Output<String> subnetId;
 
-    public Input<String> getSubnetId() {
-        return this.subnetId == null ? Input.empty() : this.subnetId;
+    public Output<String> getSubnetId() {
+        return this.subnetId == null ? Output.empty() : this.subnetId;
     }
 
     /**
@@ -75,19 +75,19 @@ public final class NetworkAssociationState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="vpcId")
-      private final @Nullable Input<String> vpcId;
+      private final @Nullable Output<String> vpcId;
 
-    public Input<String> getVpcId() {
-        return this.vpcId == null ? Input.empty() : this.vpcId;
+    public Output<String> getVpcId() {
+        return this.vpcId == null ? Output.empty() : this.vpcId;
     }
 
     public NetworkAssociationState(
-        @Nullable Input<String> associationId,
-        @Nullable Input<String> clientVpnEndpointId,
-        @Nullable Input<List<String>> securityGroups,
-        @Nullable Input<String> status,
-        @Nullable Input<String> subnetId,
-        @Nullable Input<String> vpcId) {
+        @Nullable Output<String> associationId,
+        @Nullable Output<String> clientVpnEndpointId,
+        @Nullable Output<List<String>> securityGroups,
+        @Nullable Output<String> status,
+        @Nullable Output<String> subnetId,
+        @Nullable Output<String> vpcId) {
         this.associationId = associationId;
         this.clientVpnEndpointId = clientVpnEndpointId;
         this.securityGroups = securityGroups;
@@ -97,12 +97,12 @@ public final class NetworkAssociationState extends io.pulumi.resources.ResourceA
     }
 
     private NetworkAssociationState() {
-        this.associationId = Input.empty();
-        this.clientVpnEndpointId = Input.empty();
-        this.securityGroups = Input.empty();
-        this.status = Input.empty();
-        this.subnetId = Input.empty();
-        this.vpcId = Input.empty();
+        this.associationId = Output.empty();
+        this.clientVpnEndpointId = Output.empty();
+        this.securityGroups = Output.empty();
+        this.status = Output.empty();
+        this.subnetId = Output.empty();
+        this.vpcId = Output.empty();
     }
 
     public static Builder builder() {
@@ -114,12 +114,12 @@ public final class NetworkAssociationState extends io.pulumi.resources.ResourceA
     }
 
     public static final class Builder {
-        private @Nullable Input<String> associationId;
-        private @Nullable Input<String> clientVpnEndpointId;
-        private @Nullable Input<List<String>> securityGroups;
-        private @Nullable Input<String> status;
-        private @Nullable Input<String> subnetId;
-        private @Nullable Input<String> vpcId;
+        private @Nullable Output<String> associationId;
+        private @Nullable Output<String> clientVpnEndpointId;
+        private @Nullable Output<List<String>> securityGroups;
+        private @Nullable Output<String> status;
+        private @Nullable Output<String> subnetId;
+        private @Nullable Output<String> vpcId;
 
         public Builder() {
     	      // Empty
@@ -135,63 +135,63 @@ public final class NetworkAssociationState extends io.pulumi.resources.ResourceA
     	      this.vpcId = defaults.vpcId;
         }
 
-        public Builder associationId(@Nullable Input<String> associationId) {
+        public Builder associationId(@Nullable Output<String> associationId) {
             this.associationId = associationId;
             return this;
         }
 
         public Builder associationId(@Nullable String associationId) {
-            this.associationId = Input.ofNullable(associationId);
+            this.associationId = Output.ofNullable(associationId);
             return this;
         }
 
-        public Builder clientVpnEndpointId(@Nullable Input<String> clientVpnEndpointId) {
+        public Builder clientVpnEndpointId(@Nullable Output<String> clientVpnEndpointId) {
             this.clientVpnEndpointId = clientVpnEndpointId;
             return this;
         }
 
         public Builder clientVpnEndpointId(@Nullable String clientVpnEndpointId) {
-            this.clientVpnEndpointId = Input.ofNullable(clientVpnEndpointId);
+            this.clientVpnEndpointId = Output.ofNullable(clientVpnEndpointId);
             return this;
         }
 
-        public Builder securityGroups(@Nullable Input<List<String>> securityGroups) {
+        public Builder securityGroups(@Nullable Output<List<String>> securityGroups) {
             this.securityGroups = securityGroups;
             return this;
         }
 
         public Builder securityGroups(@Nullable List<String> securityGroups) {
-            this.securityGroups = Input.ofNullable(securityGroups);
+            this.securityGroups = Output.ofNullable(securityGroups);
             return this;
         }
 
-        public Builder status(@Nullable Input<String> status) {
+        public Builder status(@Nullable Output<String> status) {
             this.status = status;
             return this;
         }
 
         public Builder status(@Nullable String status) {
-            this.status = Input.ofNullable(status);
+            this.status = Output.ofNullable(status);
             return this;
         }
 
-        public Builder subnetId(@Nullable Input<String> subnetId) {
+        public Builder subnetId(@Nullable Output<String> subnetId) {
             this.subnetId = subnetId;
             return this;
         }
 
         public Builder subnetId(@Nullable String subnetId) {
-            this.subnetId = Input.ofNullable(subnetId);
+            this.subnetId = Output.ofNullable(subnetId);
             return this;
         }
 
-        public Builder vpcId(@Nullable Input<String> vpcId) {
+        public Builder vpcId(@Nullable Output<String> vpcId) {
             this.vpcId = vpcId;
             return this;
         }
 
         public Builder vpcId(@Nullable String vpcId) {
-            this.vpcId = Input.ofNullable(vpcId);
+            this.vpcId = Output.ofNullable(vpcId);
             return this;
         }
         public NetworkAssociationState build() {

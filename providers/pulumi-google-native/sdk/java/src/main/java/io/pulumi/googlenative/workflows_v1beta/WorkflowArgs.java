@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.workflows_v1beta;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -20,10 +20,10 @@ public final class WorkflowArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -31,17 +31,17 @@ public final class WorkflowArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labels")
-      private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Output<Map<String,String>> labels;
 
-    public Input<Map<String,String>> getLabels() {
-        return this.labels == null ? Input.empty() : this.labels;
+    public Output<Map<String,String>> getLabels() {
+        return this.labels == null ? Output.empty() : this.labels;
     }
 
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -49,17 +49,17 @@ public final class WorkflowArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -67,10 +67,10 @@ public final class WorkflowArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serviceAccount")
-      private final @Nullable Input<String> serviceAccount;
+      private final @Nullable Output<String> serviceAccount;
 
-    public Input<String> getServiceAccount() {
-        return this.serviceAccount == null ? Input.empty() : this.serviceAccount;
+    public Output<String> getServiceAccount() {
+        return this.serviceAccount == null ? Output.empty() : this.serviceAccount;
     }
 
     /**
@@ -78,28 +78,28 @@ public final class WorkflowArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sourceContents")
-      private final @Nullable Input<String> sourceContents;
+      private final @Nullable Output<String> sourceContents;
 
-    public Input<String> getSourceContents() {
-        return this.sourceContents == null ? Input.empty() : this.sourceContents;
+    public Output<String> getSourceContents() {
+        return this.sourceContents == null ? Output.empty() : this.sourceContents;
     }
 
     @InputImport(name="workflowId", required=true)
-      private final Input<String> workflowId;
+      private final Output<String> workflowId;
 
-    public Input<String> getWorkflowId() {
+    public Output<String> getWorkflowId() {
         return this.workflowId;
     }
 
     public WorkflowArgs(
-        @Nullable Input<String> description,
-        @Nullable Input<Map<String,String>> labels,
-        @Nullable Input<String> location,
-        @Nullable Input<String> name,
-        @Nullable Input<String> project,
-        @Nullable Input<String> serviceAccount,
-        @Nullable Input<String> sourceContents,
-        Input<String> workflowId) {
+        @Nullable Output<String> description,
+        @Nullable Output<Map<String,String>> labels,
+        @Nullable Output<String> location,
+        @Nullable Output<String> name,
+        @Nullable Output<String> project,
+        @Nullable Output<String> serviceAccount,
+        @Nullable Output<String> sourceContents,
+        Output<String> workflowId) {
         this.description = description;
         this.labels = labels;
         this.location = location;
@@ -111,14 +111,14 @@ public final class WorkflowArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private WorkflowArgs() {
-        this.description = Input.empty();
-        this.labels = Input.empty();
-        this.location = Input.empty();
-        this.name = Input.empty();
-        this.project = Input.empty();
-        this.serviceAccount = Input.empty();
-        this.sourceContents = Input.empty();
-        this.workflowId = Input.empty();
+        this.description = Output.empty();
+        this.labels = Output.empty();
+        this.location = Output.empty();
+        this.name = Output.empty();
+        this.project = Output.empty();
+        this.serviceAccount = Output.empty();
+        this.sourceContents = Output.empty();
+        this.workflowId = Output.empty();
     }
 
     public static Builder builder() {
@@ -130,14 +130,14 @@ public final class WorkflowArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> description;
-        private @Nullable Input<Map<String,String>> labels;
-        private @Nullable Input<String> location;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> project;
-        private @Nullable Input<String> serviceAccount;
-        private @Nullable Input<String> sourceContents;
-        private Input<String> workflowId;
+        private @Nullable Output<String> description;
+        private @Nullable Output<Map<String,String>> labels;
+        private @Nullable Output<String> location;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> project;
+        private @Nullable Output<String> serviceAccount;
+        private @Nullable Output<String> sourceContents;
+        private Output<String> workflowId;
 
         public Builder() {
     	      // Empty
@@ -155,83 +155,83 @@ public final class WorkflowArgs extends io.pulumi.resources.ResourceArgs {
     	      this.workflowId = defaults.workflowId;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder labels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
         public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Input.ofNullable(labels);
+            this.labels = Output.ofNullable(labels);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder serviceAccount(@Nullable Input<String> serviceAccount) {
+        public Builder serviceAccount(@Nullable Output<String> serviceAccount) {
             this.serviceAccount = serviceAccount;
             return this;
         }
 
         public Builder serviceAccount(@Nullable String serviceAccount) {
-            this.serviceAccount = Input.ofNullable(serviceAccount);
+            this.serviceAccount = Output.ofNullable(serviceAccount);
             return this;
         }
 
-        public Builder sourceContents(@Nullable Input<String> sourceContents) {
+        public Builder sourceContents(@Nullable Output<String> sourceContents) {
             this.sourceContents = sourceContents;
             return this;
         }
 
         public Builder sourceContents(@Nullable String sourceContents) {
-            this.sourceContents = Input.ofNullable(sourceContents);
+            this.sourceContents = Output.ofNullable(sourceContents);
             return this;
         }
 
-        public Builder workflowId(Input<String> workflowId) {
+        public Builder workflowId(Output<String> workflowId) {
             this.workflowId = Objects.requireNonNull(workflowId);
             return this;
         }
 
         public Builder workflowId(String workflowId) {
-            this.workflowId = Input.of(Objects.requireNonNull(workflowId));
+            this.workflowId = Output.of(Objects.requireNonNull(workflowId));
             return this;
         }
         public WorkflowArgs build() {

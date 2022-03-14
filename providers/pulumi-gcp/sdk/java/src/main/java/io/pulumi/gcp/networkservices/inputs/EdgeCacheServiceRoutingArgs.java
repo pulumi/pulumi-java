@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.networkservices.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.networkservices.inputs.EdgeCacheServiceRoutingHostRuleArgs;
 import io.pulumi.gcp.networkservices.inputs.EdgeCacheServiceRoutingPathMatcherArgs;
@@ -21,9 +21,9 @@ public final class EdgeCacheServiceRoutingArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="hostRules", required=true)
-      private final Input<List<EdgeCacheServiceRoutingHostRuleArgs>> hostRules;
+      private final Output<List<EdgeCacheServiceRoutingHostRuleArgs>> hostRules;
 
-    public Input<List<EdgeCacheServiceRoutingHostRuleArgs>> getHostRules() {
+    public Output<List<EdgeCacheServiceRoutingHostRuleArgs>> getHostRules() {
         return this.hostRules;
     }
 
@@ -32,22 +32,22 @@ public final class EdgeCacheServiceRoutingArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="pathMatchers", required=true)
-      private final Input<List<EdgeCacheServiceRoutingPathMatcherArgs>> pathMatchers;
+      private final Output<List<EdgeCacheServiceRoutingPathMatcherArgs>> pathMatchers;
 
-    public Input<List<EdgeCacheServiceRoutingPathMatcherArgs>> getPathMatchers() {
+    public Output<List<EdgeCacheServiceRoutingPathMatcherArgs>> getPathMatchers() {
         return this.pathMatchers;
     }
 
     public EdgeCacheServiceRoutingArgs(
-        Input<List<EdgeCacheServiceRoutingHostRuleArgs>> hostRules,
-        Input<List<EdgeCacheServiceRoutingPathMatcherArgs>> pathMatchers) {
+        Output<List<EdgeCacheServiceRoutingHostRuleArgs>> hostRules,
+        Output<List<EdgeCacheServiceRoutingPathMatcherArgs>> pathMatchers) {
         this.hostRules = Objects.requireNonNull(hostRules, "expected parameter 'hostRules' to be non-null");
         this.pathMatchers = Objects.requireNonNull(pathMatchers, "expected parameter 'pathMatchers' to be non-null");
     }
 
     private EdgeCacheServiceRoutingArgs() {
-        this.hostRules = Input.empty();
-        this.pathMatchers = Input.empty();
+        this.hostRules = Output.empty();
+        this.pathMatchers = Output.empty();
     }
 
     public static Builder builder() {
@@ -59,8 +59,8 @@ public final class EdgeCacheServiceRoutingArgs extends io.pulumi.resources.Resou
     }
 
     public static final class Builder {
-        private Input<List<EdgeCacheServiceRoutingHostRuleArgs>> hostRules;
-        private Input<List<EdgeCacheServiceRoutingPathMatcherArgs>> pathMatchers;
+        private Output<List<EdgeCacheServiceRoutingHostRuleArgs>> hostRules;
+        private Output<List<EdgeCacheServiceRoutingPathMatcherArgs>> pathMatchers;
 
         public Builder() {
     	      // Empty
@@ -72,23 +72,23 @@ public final class EdgeCacheServiceRoutingArgs extends io.pulumi.resources.Resou
     	      this.pathMatchers = defaults.pathMatchers;
         }
 
-        public Builder hostRules(Input<List<EdgeCacheServiceRoutingHostRuleArgs>> hostRules) {
+        public Builder hostRules(Output<List<EdgeCacheServiceRoutingHostRuleArgs>> hostRules) {
             this.hostRules = Objects.requireNonNull(hostRules);
             return this;
         }
 
         public Builder hostRules(List<EdgeCacheServiceRoutingHostRuleArgs> hostRules) {
-            this.hostRules = Input.of(Objects.requireNonNull(hostRules));
+            this.hostRules = Output.of(Objects.requireNonNull(hostRules));
             return this;
         }
 
-        public Builder pathMatchers(Input<List<EdgeCacheServiceRoutingPathMatcherArgs>> pathMatchers) {
+        public Builder pathMatchers(Output<List<EdgeCacheServiceRoutingPathMatcherArgs>> pathMatchers) {
             this.pathMatchers = Objects.requireNonNull(pathMatchers);
             return this;
         }
 
         public Builder pathMatchers(List<EdgeCacheServiceRoutingPathMatcherArgs> pathMatchers) {
-            this.pathMatchers = Input.of(Objects.requireNonNull(pathMatchers));
+            this.pathMatchers = Output.of(Objects.requireNonNull(pathMatchers));
             return this;
         }
         public EdgeCacheServiceRoutingArgs build() {

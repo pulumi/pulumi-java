@@ -5,7 +5,7 @@ package io.pulumi.azurenative.digitaltwins.inputs;
 
 import io.pulumi.azurenative.digitaltwins.enums.AuthenticationType;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -25,9 +25,9 @@ public final class EventGridArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="accessKey1", required=true)
-      private final Input<String> accessKey1;
+      private final Output<String> accessKey1;
 
-    public Input<String> getAccessKey1() {
+    public Output<String> getAccessKey1() {
         return this.accessKey1;
     }
 
@@ -36,10 +36,10 @@ public final class EventGridArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="accessKey2")
-      private final @Nullable Input<String> accessKey2;
+      private final @Nullable Output<String> accessKey2;
 
-    public Input<String> getAccessKey2() {
-        return this.accessKey2 == null ? Input.empty() : this.accessKey2;
+    public Output<String> getAccessKey2() {
+        return this.accessKey2 == null ? Output.empty() : this.accessKey2;
     }
 
     /**
@@ -47,10 +47,10 @@ public final class EventGridArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="authenticationType")
-      private final @Nullable Input<Either<String,AuthenticationType>> authenticationType;
+      private final @Nullable Output<Either<String,AuthenticationType>> authenticationType;
 
-    public Input<Either<String,AuthenticationType>> getAuthenticationType() {
-        return this.authenticationType == null ? Input.empty() : this.authenticationType;
+    public Output<Either<String,AuthenticationType>> getAuthenticationType() {
+        return this.authenticationType == null ? Output.empty() : this.authenticationType;
     }
 
     /**
@@ -58,10 +58,10 @@ public final class EventGridArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="deadLetterSecret")
-      private final @Nullable Input<String> deadLetterSecret;
+      private final @Nullable Output<String> deadLetterSecret;
 
-    public Input<String> getDeadLetterSecret() {
-        return this.deadLetterSecret == null ? Input.empty() : this.deadLetterSecret;
+    public Output<String> getDeadLetterSecret() {
+        return this.deadLetterSecret == null ? Output.empty() : this.deadLetterSecret;
     }
 
     /**
@@ -69,10 +69,10 @@ public final class EventGridArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="deadLetterUri")
-      private final @Nullable Input<String> deadLetterUri;
+      private final @Nullable Output<String> deadLetterUri;
 
-    public Input<String> getDeadLetterUri() {
-        return this.deadLetterUri == null ? Input.empty() : this.deadLetterUri;
+    public Output<String> getDeadLetterUri() {
+        return this.deadLetterUri == null ? Output.empty() : this.deadLetterUri;
     }
 
     /**
@@ -81,9 +81,9 @@ public final class EventGridArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="endpointType", required=true)
-      private final Input<String> endpointType;
+      private final Output<String> endpointType;
 
-    public Input<String> getEndpointType() {
+    public Output<String> getEndpointType() {
         return this.endpointType;
     }
 
@@ -92,20 +92,20 @@ public final class EventGridArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="topicEndpoint", required=true)
-      private final Input<String> topicEndpoint;
+      private final Output<String> topicEndpoint;
 
-    public Input<String> getTopicEndpoint() {
+    public Output<String> getTopicEndpoint() {
         return this.topicEndpoint;
     }
 
     public EventGridArgs(
-        Input<String> accessKey1,
-        @Nullable Input<String> accessKey2,
-        @Nullable Input<Either<String,AuthenticationType>> authenticationType,
-        @Nullable Input<String> deadLetterSecret,
-        @Nullable Input<String> deadLetterUri,
-        Input<String> endpointType,
-        Input<String> topicEndpoint) {
+        Output<String> accessKey1,
+        @Nullable Output<String> accessKey2,
+        @Nullable Output<Either<String,AuthenticationType>> authenticationType,
+        @Nullable Output<String> deadLetterSecret,
+        @Nullable Output<String> deadLetterUri,
+        Output<String> endpointType,
+        Output<String> topicEndpoint) {
         this.accessKey1 = Objects.requireNonNull(accessKey1, "expected parameter 'accessKey1' to be non-null");
         this.accessKey2 = accessKey2;
         this.authenticationType = authenticationType;
@@ -116,13 +116,13 @@ public final class EventGridArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private EventGridArgs() {
-        this.accessKey1 = Input.empty();
-        this.accessKey2 = Input.empty();
-        this.authenticationType = Input.empty();
-        this.deadLetterSecret = Input.empty();
-        this.deadLetterUri = Input.empty();
-        this.endpointType = Input.empty();
-        this.topicEndpoint = Input.empty();
+        this.accessKey1 = Output.empty();
+        this.accessKey2 = Output.empty();
+        this.authenticationType = Output.empty();
+        this.deadLetterSecret = Output.empty();
+        this.deadLetterUri = Output.empty();
+        this.endpointType = Output.empty();
+        this.topicEndpoint = Output.empty();
     }
 
     public static Builder builder() {
@@ -134,13 +134,13 @@ public final class EventGridArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> accessKey1;
-        private @Nullable Input<String> accessKey2;
-        private @Nullable Input<Either<String,AuthenticationType>> authenticationType;
-        private @Nullable Input<String> deadLetterSecret;
-        private @Nullable Input<String> deadLetterUri;
-        private Input<String> endpointType;
-        private Input<String> topicEndpoint;
+        private Output<String> accessKey1;
+        private @Nullable Output<String> accessKey2;
+        private @Nullable Output<Either<String,AuthenticationType>> authenticationType;
+        private @Nullable Output<String> deadLetterSecret;
+        private @Nullable Output<String> deadLetterUri;
+        private Output<String> endpointType;
+        private Output<String> topicEndpoint;
 
         public Builder() {
     	      // Empty
@@ -157,73 +157,73 @@ public final class EventGridArgs extends io.pulumi.resources.ResourceArgs {
     	      this.topicEndpoint = defaults.topicEndpoint;
         }
 
-        public Builder accessKey1(Input<String> accessKey1) {
+        public Builder accessKey1(Output<String> accessKey1) {
             this.accessKey1 = Objects.requireNonNull(accessKey1);
             return this;
         }
 
         public Builder accessKey1(String accessKey1) {
-            this.accessKey1 = Input.of(Objects.requireNonNull(accessKey1));
+            this.accessKey1 = Output.of(Objects.requireNonNull(accessKey1));
             return this;
         }
 
-        public Builder accessKey2(@Nullable Input<String> accessKey2) {
+        public Builder accessKey2(@Nullable Output<String> accessKey2) {
             this.accessKey2 = accessKey2;
             return this;
         }
 
         public Builder accessKey2(@Nullable String accessKey2) {
-            this.accessKey2 = Input.ofNullable(accessKey2);
+            this.accessKey2 = Output.ofNullable(accessKey2);
             return this;
         }
 
-        public Builder authenticationType(@Nullable Input<Either<String,AuthenticationType>> authenticationType) {
+        public Builder authenticationType(@Nullable Output<Either<String,AuthenticationType>> authenticationType) {
             this.authenticationType = authenticationType;
             return this;
         }
 
         public Builder authenticationType(@Nullable Either<String,AuthenticationType> authenticationType) {
-            this.authenticationType = Input.ofNullable(authenticationType);
+            this.authenticationType = Output.ofNullable(authenticationType);
             return this;
         }
 
-        public Builder deadLetterSecret(@Nullable Input<String> deadLetterSecret) {
+        public Builder deadLetterSecret(@Nullable Output<String> deadLetterSecret) {
             this.deadLetterSecret = deadLetterSecret;
             return this;
         }
 
         public Builder deadLetterSecret(@Nullable String deadLetterSecret) {
-            this.deadLetterSecret = Input.ofNullable(deadLetterSecret);
+            this.deadLetterSecret = Output.ofNullable(deadLetterSecret);
             return this;
         }
 
-        public Builder deadLetterUri(@Nullable Input<String> deadLetterUri) {
+        public Builder deadLetterUri(@Nullable Output<String> deadLetterUri) {
             this.deadLetterUri = deadLetterUri;
             return this;
         }
 
         public Builder deadLetterUri(@Nullable String deadLetterUri) {
-            this.deadLetterUri = Input.ofNullable(deadLetterUri);
+            this.deadLetterUri = Output.ofNullable(deadLetterUri);
             return this;
         }
 
-        public Builder endpointType(Input<String> endpointType) {
+        public Builder endpointType(Output<String> endpointType) {
             this.endpointType = Objects.requireNonNull(endpointType);
             return this;
         }
 
         public Builder endpointType(String endpointType) {
-            this.endpointType = Input.of(Objects.requireNonNull(endpointType));
+            this.endpointType = Output.of(Objects.requireNonNull(endpointType));
             return this;
         }
 
-        public Builder topicEndpoint(Input<String> topicEndpoint) {
+        public Builder topicEndpoint(Output<String> topicEndpoint) {
             this.topicEndpoint = Objects.requireNonNull(topicEndpoint);
             return this;
         }
 
         public Builder topicEndpoint(String topicEndpoint) {
-            this.topicEndpoint = Input.of(Objects.requireNonNull(topicEndpoint));
+            this.topicEndpoint = Output.of(Objects.requireNonNull(topicEndpoint));
             return this;
         }
         public EventGridArgs build() {

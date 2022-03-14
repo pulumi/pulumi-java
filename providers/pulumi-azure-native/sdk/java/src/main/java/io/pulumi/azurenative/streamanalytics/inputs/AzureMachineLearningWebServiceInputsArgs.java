@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.streamanalytics.inputs;
 
 import io.pulumi.azurenative.streamanalytics.inputs.AzureMachineLearningWebServiceInputColumnArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -25,10 +25,10 @@ public final class AzureMachineLearningWebServiceInputsArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="columnNames")
-      private final @Nullable Input<List<AzureMachineLearningWebServiceInputColumnArgs>> columnNames;
+      private final @Nullable Output<List<AzureMachineLearningWebServiceInputColumnArgs>> columnNames;
 
-    public Input<List<AzureMachineLearningWebServiceInputColumnArgs>> getColumnNames() {
-        return this.columnNames == null ? Input.empty() : this.columnNames;
+    public Output<List<AzureMachineLearningWebServiceInputColumnArgs>> getColumnNames() {
+        return this.columnNames == null ? Output.empty() : this.columnNames;
     }
 
     /**
@@ -36,22 +36,22 @@ public final class AzureMachineLearningWebServiceInputsArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     public AzureMachineLearningWebServiceInputsArgs(
-        @Nullable Input<List<AzureMachineLearningWebServiceInputColumnArgs>> columnNames,
-        @Nullable Input<String> name) {
+        @Nullable Output<List<AzureMachineLearningWebServiceInputColumnArgs>> columnNames,
+        @Nullable Output<String> name) {
         this.columnNames = columnNames;
         this.name = name;
     }
 
     private AzureMachineLearningWebServiceInputsArgs() {
-        this.columnNames = Input.empty();
-        this.name = Input.empty();
+        this.columnNames = Output.empty();
+        this.name = Output.empty();
     }
 
     public static Builder builder() {
@@ -63,8 +63,8 @@ public final class AzureMachineLearningWebServiceInputsArgs extends io.pulumi.re
     }
 
     public static final class Builder {
-        private @Nullable Input<List<AzureMachineLearningWebServiceInputColumnArgs>> columnNames;
-        private @Nullable Input<String> name;
+        private @Nullable Output<List<AzureMachineLearningWebServiceInputColumnArgs>> columnNames;
+        private @Nullable Output<String> name;
 
         public Builder() {
     	      // Empty
@@ -76,23 +76,23 @@ public final class AzureMachineLearningWebServiceInputsArgs extends io.pulumi.re
     	      this.name = defaults.name;
         }
 
-        public Builder columnNames(@Nullable Input<List<AzureMachineLearningWebServiceInputColumnArgs>> columnNames) {
+        public Builder columnNames(@Nullable Output<List<AzureMachineLearningWebServiceInputColumnArgs>> columnNames) {
             this.columnNames = columnNames;
             return this;
         }
 
         public Builder columnNames(@Nullable List<AzureMachineLearningWebServiceInputColumnArgs> columnNames) {
-            this.columnNames = Input.ofNullable(columnNames);
+            this.columnNames = Output.ofNullable(columnNames);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
         public AzureMachineLearningWebServiceInputsArgs build() {

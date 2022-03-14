@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.core_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.kubernetes.core_v1.inputs.LifecycleHandlerArgs;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class LifecycleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="postStart")
-      private final @Nullable Input<LifecycleHandlerArgs> postStart;
+      private final @Nullable Output<LifecycleHandlerArgs> postStart;
 
-    public Input<LifecycleHandlerArgs> getPostStart() {
-        return this.postStart == null ? Input.empty() : this.postStart;
+    public Output<LifecycleHandlerArgs> getPostStart() {
+        return this.postStart == null ? Output.empty() : this.postStart;
     }
 
     /**
@@ -34,22 +34,22 @@ public final class LifecycleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="preStop")
-      private final @Nullable Input<LifecycleHandlerArgs> preStop;
+      private final @Nullable Output<LifecycleHandlerArgs> preStop;
 
-    public Input<LifecycleHandlerArgs> getPreStop() {
-        return this.preStop == null ? Input.empty() : this.preStop;
+    public Output<LifecycleHandlerArgs> getPreStop() {
+        return this.preStop == null ? Output.empty() : this.preStop;
     }
 
     public LifecycleArgs(
-        @Nullable Input<LifecycleHandlerArgs> postStart,
-        @Nullable Input<LifecycleHandlerArgs> preStop) {
+        @Nullable Output<LifecycleHandlerArgs> postStart,
+        @Nullable Output<LifecycleHandlerArgs> preStop) {
         this.postStart = postStart;
         this.preStop = preStop;
     }
 
     private LifecycleArgs() {
-        this.postStart = Input.empty();
-        this.preStop = Input.empty();
+        this.postStart = Output.empty();
+        this.preStop = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class LifecycleArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<LifecycleHandlerArgs> postStart;
-        private @Nullable Input<LifecycleHandlerArgs> preStop;
+        private @Nullable Output<LifecycleHandlerArgs> postStart;
+        private @Nullable Output<LifecycleHandlerArgs> preStop;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class LifecycleArgs extends io.pulumi.resources.ResourceArgs {
     	      this.preStop = defaults.preStop;
         }
 
-        public Builder postStart(@Nullable Input<LifecycleHandlerArgs> postStart) {
+        public Builder postStart(@Nullable Output<LifecycleHandlerArgs> postStart) {
             this.postStart = postStart;
             return this;
         }
 
         public Builder postStart(@Nullable LifecycleHandlerArgs postStart) {
-            this.postStart = Input.ofNullable(postStart);
+            this.postStart = Output.ofNullable(postStart);
             return this;
         }
 
-        public Builder preStop(@Nullable Input<LifecycleHandlerArgs> preStop) {
+        public Builder preStop(@Nullable Output<LifecycleHandlerArgs> preStop) {
             this.preStop = preStop;
             return this;
         }
 
         public Builder preStop(@Nullable LifecycleHandlerArgs preStop) {
-            this.preStop = Input.ofNullable(preStop);
+            this.preStop = Output.ofNullable(preStop);
             return this;
         }
         public LifecycleArgs build() {

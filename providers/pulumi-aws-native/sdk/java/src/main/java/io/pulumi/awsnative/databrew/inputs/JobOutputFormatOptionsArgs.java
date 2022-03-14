@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.databrew.inputs;
 
 import io.pulumi.awsnative.databrew.inputs.JobCsvOutputOptionsArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,18 +19,18 @@ public final class JobOutputFormatOptionsArgs extends io.pulumi.resources.Resour
     public static final JobOutputFormatOptionsArgs Empty = new JobOutputFormatOptionsArgs();
 
     @InputImport(name="csv")
-      private final @Nullable Input<JobCsvOutputOptionsArgs> csv;
+      private final @Nullable Output<JobCsvOutputOptionsArgs> csv;
 
-    public Input<JobCsvOutputOptionsArgs> getCsv() {
-        return this.csv == null ? Input.empty() : this.csv;
+    public Output<JobCsvOutputOptionsArgs> getCsv() {
+        return this.csv == null ? Output.empty() : this.csv;
     }
 
-    public JobOutputFormatOptionsArgs(@Nullable Input<JobCsvOutputOptionsArgs> csv) {
+    public JobOutputFormatOptionsArgs(@Nullable Output<JobCsvOutputOptionsArgs> csv) {
         this.csv = csv;
     }
 
     private JobOutputFormatOptionsArgs() {
-        this.csv = Input.empty();
+        this.csv = Output.empty();
     }
 
     public static Builder builder() {
@@ -42,7 +42,7 @@ public final class JobOutputFormatOptionsArgs extends io.pulumi.resources.Resour
     }
 
     public static final class Builder {
-        private @Nullable Input<JobCsvOutputOptionsArgs> csv;
+        private @Nullable Output<JobCsvOutputOptionsArgs> csv;
 
         public Builder() {
     	      // Empty
@@ -53,13 +53,13 @@ public final class JobOutputFormatOptionsArgs extends io.pulumi.resources.Resour
     	      this.csv = defaults.csv;
         }
 
-        public Builder csv(@Nullable Input<JobCsvOutputOptionsArgs> csv) {
+        public Builder csv(@Nullable Output<JobCsvOutputOptionsArgs> csv) {
             this.csv = csv;
             return this;
         }
 
         public Builder csv(@Nullable JobCsvOutputOptionsArgs csv) {
-            this.csv = Input.ofNullable(csv);
+            this.csv = Output.ofNullable(csv);
             return this;
         }
         public JobOutputFormatOptionsArgs build() {

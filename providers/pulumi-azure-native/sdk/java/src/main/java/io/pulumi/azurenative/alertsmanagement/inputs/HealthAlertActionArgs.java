@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.alertsmanagement.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -24,10 +24,10 @@ public final class HealthAlertActionArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="actionGroupId")
-      private final @Nullable Input<String> actionGroupId;
+      private final @Nullable Output<String> actionGroupId;
 
-    public Input<String> getActionGroupId() {
-        return this.actionGroupId == null ? Input.empty() : this.actionGroupId;
+    public Output<String> getActionGroupId() {
+        return this.actionGroupId == null ? Output.empty() : this.actionGroupId;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class HealthAlertActionArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="webHookProperties")
-      private final @Nullable Input<Map<String,String>> webHookProperties;
+      private final @Nullable Output<Map<String,String>> webHookProperties;
 
-    public Input<Map<String,String>> getWebHookProperties() {
-        return this.webHookProperties == null ? Input.empty() : this.webHookProperties;
+    public Output<Map<String,String>> getWebHookProperties() {
+        return this.webHookProperties == null ? Output.empty() : this.webHookProperties;
     }
 
     public HealthAlertActionArgs(
-        @Nullable Input<String> actionGroupId,
-        @Nullable Input<Map<String,String>> webHookProperties) {
+        @Nullable Output<String> actionGroupId,
+        @Nullable Output<Map<String,String>> webHookProperties) {
         this.actionGroupId = actionGroupId;
         this.webHookProperties = webHookProperties;
     }
 
     private HealthAlertActionArgs() {
-        this.actionGroupId = Input.empty();
-        this.webHookProperties = Input.empty();
+        this.actionGroupId = Output.empty();
+        this.webHookProperties = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class HealthAlertActionArgs extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private @Nullable Input<String> actionGroupId;
-        private @Nullable Input<Map<String,String>> webHookProperties;
+        private @Nullable Output<String> actionGroupId;
+        private @Nullable Output<Map<String,String>> webHookProperties;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class HealthAlertActionArgs extends io.pulumi.resources.ResourceArg
     	      this.webHookProperties = defaults.webHookProperties;
         }
 
-        public Builder actionGroupId(@Nullable Input<String> actionGroupId) {
+        public Builder actionGroupId(@Nullable Output<String> actionGroupId) {
             this.actionGroupId = actionGroupId;
             return this;
         }
 
         public Builder actionGroupId(@Nullable String actionGroupId) {
-            this.actionGroupId = Input.ofNullable(actionGroupId);
+            this.actionGroupId = Output.ofNullable(actionGroupId);
             return this;
         }
 
-        public Builder webHookProperties(@Nullable Input<Map<String,String>> webHookProperties) {
+        public Builder webHookProperties(@Nullable Output<Map<String,String>> webHookProperties) {
             this.webHookProperties = webHookProperties;
             return this;
         }
 
         public Builder webHookProperties(@Nullable Map<String,String> webHookProperties) {
-            this.webHookProperties = Input.ofNullable(webHookProperties);
+            this.webHookProperties = Output.ofNullable(webHookProperties);
             return this;
         }
         public HealthAlertActionArgs build() {

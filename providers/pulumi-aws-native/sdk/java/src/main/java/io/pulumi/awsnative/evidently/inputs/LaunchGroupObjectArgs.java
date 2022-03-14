@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.evidently.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -15,38 +15,38 @@ public final class LaunchGroupObjectArgs extends io.pulumi.resources.ResourceArg
     public static final LaunchGroupObjectArgs Empty = new LaunchGroupObjectArgs();
 
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     @InputImport(name="feature", required=true)
-      private final Input<String> feature;
+      private final Output<String> feature;
 
-    public Input<String> getFeature() {
+    public Output<String> getFeature() {
         return this.feature;
     }
 
     @InputImport(name="groupName", required=true)
-      private final Input<String> groupName;
+      private final Output<String> groupName;
 
-    public Input<String> getGroupName() {
+    public Output<String> getGroupName() {
         return this.groupName;
     }
 
     @InputImport(name="variation", required=true)
-      private final Input<String> variation;
+      private final Output<String> variation;
 
-    public Input<String> getVariation() {
+    public Output<String> getVariation() {
         return this.variation;
     }
 
     public LaunchGroupObjectArgs(
-        @Nullable Input<String> description,
-        Input<String> feature,
-        Input<String> groupName,
-        Input<String> variation) {
+        @Nullable Output<String> description,
+        Output<String> feature,
+        Output<String> groupName,
+        Output<String> variation) {
         this.description = description;
         this.feature = Objects.requireNonNull(feature, "expected parameter 'feature' to be non-null");
         this.groupName = Objects.requireNonNull(groupName, "expected parameter 'groupName' to be non-null");
@@ -54,10 +54,10 @@ public final class LaunchGroupObjectArgs extends io.pulumi.resources.ResourceArg
     }
 
     private LaunchGroupObjectArgs() {
-        this.description = Input.empty();
-        this.feature = Input.empty();
-        this.groupName = Input.empty();
-        this.variation = Input.empty();
+        this.description = Output.empty();
+        this.feature = Output.empty();
+        this.groupName = Output.empty();
+        this.variation = Output.empty();
     }
 
     public static Builder builder() {
@@ -69,10 +69,10 @@ public final class LaunchGroupObjectArgs extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private @Nullable Input<String> description;
-        private Input<String> feature;
-        private Input<String> groupName;
-        private Input<String> variation;
+        private @Nullable Output<String> description;
+        private Output<String> feature;
+        private Output<String> groupName;
+        private Output<String> variation;
 
         public Builder() {
     	      // Empty
@@ -86,43 +86,43 @@ public final class LaunchGroupObjectArgs extends io.pulumi.resources.ResourceArg
     	      this.variation = defaults.variation;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder feature(Input<String> feature) {
+        public Builder feature(Output<String> feature) {
             this.feature = Objects.requireNonNull(feature);
             return this;
         }
 
         public Builder feature(String feature) {
-            this.feature = Input.of(Objects.requireNonNull(feature));
+            this.feature = Output.of(Objects.requireNonNull(feature));
             return this;
         }
 
-        public Builder groupName(Input<String> groupName) {
+        public Builder groupName(Output<String> groupName) {
             this.groupName = Objects.requireNonNull(groupName);
             return this;
         }
 
         public Builder groupName(String groupName) {
-            this.groupName = Input.of(Objects.requireNonNull(groupName));
+            this.groupName = Output.of(Objects.requireNonNull(groupName));
             return this;
         }
 
-        public Builder variation(Input<String> variation) {
+        public Builder variation(Output<String> variation) {
             this.variation = Objects.requireNonNull(variation);
             return this;
         }
 
         public Builder variation(String variation) {
-            this.variation = Input.of(Objects.requireNonNull(variation));
+            this.variation = Output.of(Objects.requireNonNull(variation));
             return this;
         }
         public LaunchGroupObjectArgs build() {

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.costmanagement.inputs;
 
 import io.pulumi.azurenative.costmanagement.inputs.ReportConfigComparisonExpressionArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
@@ -24,10 +24,10 @@ public final class ReportConfigFilterArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="and")
-      private final @Nullable Input<List<ReportConfigFilterArgs>> and;
+      private final @Nullable Output<List<ReportConfigFilterArgs>> and;
 
-    public Input<List<ReportConfigFilterArgs>> getAnd() {
-        return this.and == null ? Input.empty() : this.and;
+    public Output<List<ReportConfigFilterArgs>> getAnd() {
+        return this.and == null ? Output.empty() : this.and;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class ReportConfigFilterArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="dimensions")
-      private final @Nullable Input<ReportConfigComparisonExpressionArgs> dimensions;
+      private final @Nullable Output<ReportConfigComparisonExpressionArgs> dimensions;
 
-    public Input<ReportConfigComparisonExpressionArgs> getDimensions() {
-        return this.dimensions == null ? Input.empty() : this.dimensions;
+    public Output<ReportConfigComparisonExpressionArgs> getDimensions() {
+        return this.dimensions == null ? Output.empty() : this.dimensions;
     }
 
     /**
@@ -46,10 +46,10 @@ public final class ReportConfigFilterArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="or")
-      private final @Nullable Input<List<ReportConfigFilterArgs>> or;
+      private final @Nullable Output<List<ReportConfigFilterArgs>> or;
 
-    public Input<List<ReportConfigFilterArgs>> getOr() {
-        return this.or == null ? Input.empty() : this.or;
+    public Output<List<ReportConfigFilterArgs>> getOr() {
+        return this.or == null ? Output.empty() : this.or;
     }
 
     /**
@@ -57,10 +57,10 @@ public final class ReportConfigFilterArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="tagKey")
-      private final @Nullable Input<ReportConfigComparisonExpressionArgs> tagKey;
+      private final @Nullable Output<ReportConfigComparisonExpressionArgs> tagKey;
 
-    public Input<ReportConfigComparisonExpressionArgs> getTagKey() {
-        return this.tagKey == null ? Input.empty() : this.tagKey;
+    public Output<ReportConfigComparisonExpressionArgs> getTagKey() {
+        return this.tagKey == null ? Output.empty() : this.tagKey;
     }
 
     /**
@@ -68,10 +68,10 @@ public final class ReportConfigFilterArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="tagValue")
-      private final @Nullable Input<ReportConfigComparisonExpressionArgs> tagValue;
+      private final @Nullable Output<ReportConfigComparisonExpressionArgs> tagValue;
 
-    public Input<ReportConfigComparisonExpressionArgs> getTagValue() {
-        return this.tagValue == null ? Input.empty() : this.tagValue;
+    public Output<ReportConfigComparisonExpressionArgs> getTagValue() {
+        return this.tagValue == null ? Output.empty() : this.tagValue;
     }
 
     /**
@@ -79,19 +79,19 @@ public final class ReportConfigFilterArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<ReportConfigComparisonExpressionArgs> tags;
+      private final @Nullable Output<ReportConfigComparisonExpressionArgs> tags;
 
-    public Input<ReportConfigComparisonExpressionArgs> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<ReportConfigComparisonExpressionArgs> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public ReportConfigFilterArgs(
-        @Nullable Input<List<ReportConfigFilterArgs>> and,
-        @Nullable Input<ReportConfigComparisonExpressionArgs> dimensions,
-        @Nullable Input<List<ReportConfigFilterArgs>> or,
-        @Nullable Input<ReportConfigComparisonExpressionArgs> tagKey,
-        @Nullable Input<ReportConfigComparisonExpressionArgs> tagValue,
-        @Nullable Input<ReportConfigComparisonExpressionArgs> tags) {
+        @Nullable Output<List<ReportConfigFilterArgs>> and,
+        @Nullable Output<ReportConfigComparisonExpressionArgs> dimensions,
+        @Nullable Output<List<ReportConfigFilterArgs>> or,
+        @Nullable Output<ReportConfigComparisonExpressionArgs> tagKey,
+        @Nullable Output<ReportConfigComparisonExpressionArgs> tagValue,
+        @Nullable Output<ReportConfigComparisonExpressionArgs> tags) {
         this.and = and;
         this.dimensions = dimensions;
         this.or = or;
@@ -101,12 +101,12 @@ public final class ReportConfigFilterArgs extends io.pulumi.resources.ResourceAr
     }
 
     private ReportConfigFilterArgs() {
-        this.and = Input.empty();
-        this.dimensions = Input.empty();
-        this.or = Input.empty();
-        this.tagKey = Input.empty();
-        this.tagValue = Input.empty();
-        this.tags = Input.empty();
+        this.and = Output.empty();
+        this.dimensions = Output.empty();
+        this.or = Output.empty();
+        this.tagKey = Output.empty();
+        this.tagValue = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -118,12 +118,12 @@ public final class ReportConfigFilterArgs extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private @Nullable Input<List<ReportConfigFilterArgs>> and;
-        private @Nullable Input<ReportConfigComparisonExpressionArgs> dimensions;
-        private @Nullable Input<List<ReportConfigFilterArgs>> or;
-        private @Nullable Input<ReportConfigComparisonExpressionArgs> tagKey;
-        private @Nullable Input<ReportConfigComparisonExpressionArgs> tagValue;
-        private @Nullable Input<ReportConfigComparisonExpressionArgs> tags;
+        private @Nullable Output<List<ReportConfigFilterArgs>> and;
+        private @Nullable Output<ReportConfigComparisonExpressionArgs> dimensions;
+        private @Nullable Output<List<ReportConfigFilterArgs>> or;
+        private @Nullable Output<ReportConfigComparisonExpressionArgs> tagKey;
+        private @Nullable Output<ReportConfigComparisonExpressionArgs> tagValue;
+        private @Nullable Output<ReportConfigComparisonExpressionArgs> tags;
 
         public Builder() {
     	      // Empty
@@ -139,63 +139,63 @@ public final class ReportConfigFilterArgs extends io.pulumi.resources.ResourceAr
     	      this.tags = defaults.tags;
         }
 
-        public Builder and(@Nullable Input<List<ReportConfigFilterArgs>> and) {
+        public Builder and(@Nullable Output<List<ReportConfigFilterArgs>> and) {
             this.and = and;
             return this;
         }
 
         public Builder and(@Nullable List<ReportConfigFilterArgs> and) {
-            this.and = Input.ofNullable(and);
+            this.and = Output.ofNullable(and);
             return this;
         }
 
-        public Builder dimensions(@Nullable Input<ReportConfigComparisonExpressionArgs> dimensions) {
+        public Builder dimensions(@Nullable Output<ReportConfigComparisonExpressionArgs> dimensions) {
             this.dimensions = dimensions;
             return this;
         }
 
         public Builder dimensions(@Nullable ReportConfigComparisonExpressionArgs dimensions) {
-            this.dimensions = Input.ofNullable(dimensions);
+            this.dimensions = Output.ofNullable(dimensions);
             return this;
         }
 
-        public Builder or(@Nullable Input<List<ReportConfigFilterArgs>> or) {
+        public Builder or(@Nullable Output<List<ReportConfigFilterArgs>> or) {
             this.or = or;
             return this;
         }
 
         public Builder or(@Nullable List<ReportConfigFilterArgs> or) {
-            this.or = Input.ofNullable(or);
+            this.or = Output.ofNullable(or);
             return this;
         }
 
-        public Builder tagKey(@Nullable Input<ReportConfigComparisonExpressionArgs> tagKey) {
+        public Builder tagKey(@Nullable Output<ReportConfigComparisonExpressionArgs> tagKey) {
             this.tagKey = tagKey;
             return this;
         }
 
         public Builder tagKey(@Nullable ReportConfigComparisonExpressionArgs tagKey) {
-            this.tagKey = Input.ofNullable(tagKey);
+            this.tagKey = Output.ofNullable(tagKey);
             return this;
         }
 
-        public Builder tagValue(@Nullable Input<ReportConfigComparisonExpressionArgs> tagValue) {
+        public Builder tagValue(@Nullable Output<ReportConfigComparisonExpressionArgs> tagValue) {
             this.tagValue = tagValue;
             return this;
         }
 
         public Builder tagValue(@Nullable ReportConfigComparisonExpressionArgs tagValue) {
-            this.tagValue = Input.ofNullable(tagValue);
+            this.tagValue = Output.ofNullable(tagValue);
             return this;
         }
 
-        public Builder tags(@Nullable Input<ReportConfigComparisonExpressionArgs> tags) {
+        public Builder tags(@Nullable Output<ReportConfigComparisonExpressionArgs> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable ReportConfigComparisonExpressionArgs tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public ReportConfigFilterArgs build() {

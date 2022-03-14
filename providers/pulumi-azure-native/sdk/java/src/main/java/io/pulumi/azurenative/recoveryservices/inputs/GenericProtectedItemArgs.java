@@ -8,7 +8,7 @@ import io.pulumi.azurenative.recoveryservices.enums.CreateMode;
 import io.pulumi.azurenative.recoveryservices.enums.DataSourceType;
 import io.pulumi.azurenative.recoveryservices.enums.ProtectionState;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Double;
@@ -31,10 +31,10 @@ public final class GenericProtectedItemArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="backupManagementType")
-      private final @Nullable Input<Either<String,BackupManagementType>> backupManagementType;
+      private final @Nullable Output<Either<String,BackupManagementType>> backupManagementType;
 
-    public Input<Either<String,BackupManagementType>> getBackupManagementType() {
-        return this.backupManagementType == null ? Input.empty() : this.backupManagementType;
+    public Output<Either<String,BackupManagementType>> getBackupManagementType() {
+        return this.backupManagementType == null ? Output.empty() : this.backupManagementType;
     }
 
     /**
@@ -42,10 +42,10 @@ public final class GenericProtectedItemArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="backupSetName")
-      private final @Nullable Input<String> backupSetName;
+      private final @Nullable Output<String> backupSetName;
 
-    public Input<String> getBackupSetName() {
-        return this.backupSetName == null ? Input.empty() : this.backupSetName;
+    public Output<String> getBackupSetName() {
+        return this.backupSetName == null ? Output.empty() : this.backupSetName;
     }
 
     /**
@@ -53,10 +53,10 @@ public final class GenericProtectedItemArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="containerName")
-      private final @Nullable Input<String> containerName;
+      private final @Nullable Output<String> containerName;
 
-    public Input<String> getContainerName() {
-        return this.containerName == null ? Input.empty() : this.containerName;
+    public Output<String> getContainerName() {
+        return this.containerName == null ? Output.empty() : this.containerName;
     }
 
     /**
@@ -64,10 +64,10 @@ public final class GenericProtectedItemArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="createMode")
-      private final @Nullable Input<Either<String,CreateMode>> createMode;
+      private final @Nullable Output<Either<String,CreateMode>> createMode;
 
-    public Input<Either<String,CreateMode>> getCreateMode() {
-        return this.createMode == null ? Input.empty() : this.createMode;
+    public Output<Either<String,CreateMode>> getCreateMode() {
+        return this.createMode == null ? Output.empty() : this.createMode;
     }
 
     /**
@@ -75,10 +75,10 @@ public final class GenericProtectedItemArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="deferredDeleteTimeInUTC")
-      private final @Nullable Input<String> deferredDeleteTimeInUTC;
+      private final @Nullable Output<String> deferredDeleteTimeInUTC;
 
-    public Input<String> getDeferredDeleteTimeInUTC() {
-        return this.deferredDeleteTimeInUTC == null ? Input.empty() : this.deferredDeleteTimeInUTC;
+    public Output<String> getDeferredDeleteTimeInUTC() {
+        return this.deferredDeleteTimeInUTC == null ? Output.empty() : this.deferredDeleteTimeInUTC;
     }
 
     /**
@@ -86,10 +86,10 @@ public final class GenericProtectedItemArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="deferredDeleteTimeRemaining")
-      private final @Nullable Input<String> deferredDeleteTimeRemaining;
+      private final @Nullable Output<String> deferredDeleteTimeRemaining;
 
-    public Input<String> getDeferredDeleteTimeRemaining() {
-        return this.deferredDeleteTimeRemaining == null ? Input.empty() : this.deferredDeleteTimeRemaining;
+    public Output<String> getDeferredDeleteTimeRemaining() {
+        return this.deferredDeleteTimeRemaining == null ? Output.empty() : this.deferredDeleteTimeRemaining;
     }
 
     /**
@@ -97,10 +97,10 @@ public final class GenericProtectedItemArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="fabricName")
-      private final @Nullable Input<String> fabricName;
+      private final @Nullable Output<String> fabricName;
 
-    public Input<String> getFabricName() {
-        return this.fabricName == null ? Input.empty() : this.fabricName;
+    public Output<String> getFabricName() {
+        return this.fabricName == null ? Output.empty() : this.fabricName;
     }
 
     /**
@@ -108,10 +108,10 @@ public final class GenericProtectedItemArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="friendlyName")
-      private final @Nullable Input<String> friendlyName;
+      private final @Nullable Output<String> friendlyName;
 
-    public Input<String> getFriendlyName() {
-        return this.friendlyName == null ? Input.empty() : this.friendlyName;
+    public Output<String> getFriendlyName() {
+        return this.friendlyName == null ? Output.empty() : this.friendlyName;
     }
 
     /**
@@ -119,10 +119,10 @@ public final class GenericProtectedItemArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="isDeferredDeleteScheduleUpcoming")
-      private final @Nullable Input<Boolean> isDeferredDeleteScheduleUpcoming;
+      private final @Nullable Output<Boolean> isDeferredDeleteScheduleUpcoming;
 
-    public Input<Boolean> getIsDeferredDeleteScheduleUpcoming() {
-        return this.isDeferredDeleteScheduleUpcoming == null ? Input.empty() : this.isDeferredDeleteScheduleUpcoming;
+    public Output<Boolean> getIsDeferredDeleteScheduleUpcoming() {
+        return this.isDeferredDeleteScheduleUpcoming == null ? Output.empty() : this.isDeferredDeleteScheduleUpcoming;
     }
 
     /**
@@ -130,10 +130,10 @@ public final class GenericProtectedItemArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="isRehydrate")
-      private final @Nullable Input<Boolean> isRehydrate;
+      private final @Nullable Output<Boolean> isRehydrate;
 
-    public Input<Boolean> getIsRehydrate() {
-        return this.isRehydrate == null ? Input.empty() : this.isRehydrate;
+    public Output<Boolean> getIsRehydrate() {
+        return this.isRehydrate == null ? Output.empty() : this.isRehydrate;
     }
 
     /**
@@ -141,10 +141,10 @@ public final class GenericProtectedItemArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="isScheduledForDeferredDelete")
-      private final @Nullable Input<Boolean> isScheduledForDeferredDelete;
+      private final @Nullable Output<Boolean> isScheduledForDeferredDelete;
 
-    public Input<Boolean> getIsScheduledForDeferredDelete() {
-        return this.isScheduledForDeferredDelete == null ? Input.empty() : this.isScheduledForDeferredDelete;
+    public Output<Boolean> getIsScheduledForDeferredDelete() {
+        return this.isScheduledForDeferredDelete == null ? Output.empty() : this.isScheduledForDeferredDelete;
     }
 
     /**
@@ -152,10 +152,10 @@ public final class GenericProtectedItemArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="lastRecoveryPoint")
-      private final @Nullable Input<String> lastRecoveryPoint;
+      private final @Nullable Output<String> lastRecoveryPoint;
 
-    public Input<String> getLastRecoveryPoint() {
-        return this.lastRecoveryPoint == null ? Input.empty() : this.lastRecoveryPoint;
+    public Output<String> getLastRecoveryPoint() {
+        return this.lastRecoveryPoint == null ? Output.empty() : this.lastRecoveryPoint;
     }
 
     /**
@@ -163,10 +163,10 @@ public final class GenericProtectedItemArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="policyId")
-      private final @Nullable Input<String> policyId;
+      private final @Nullable Output<String> policyId;
 
-    public Input<String> getPolicyId() {
-        return this.policyId == null ? Input.empty() : this.policyId;
+    public Output<String> getPolicyId() {
+        return this.policyId == null ? Output.empty() : this.policyId;
     }
 
     /**
@@ -174,10 +174,10 @@ public final class GenericProtectedItemArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="policyState")
-      private final @Nullable Input<String> policyState;
+      private final @Nullable Output<String> policyState;
 
-    public Input<String> getPolicyState() {
-        return this.policyState == null ? Input.empty() : this.policyState;
+    public Output<String> getPolicyState() {
+        return this.policyState == null ? Output.empty() : this.policyState;
     }
 
     /**
@@ -185,10 +185,10 @@ public final class GenericProtectedItemArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="protectedItemId")
-      private final @Nullable Input<Double> protectedItemId;
+      private final @Nullable Output<Double> protectedItemId;
 
-    public Input<Double> getProtectedItemId() {
-        return this.protectedItemId == null ? Input.empty() : this.protectedItemId;
+    public Output<Double> getProtectedItemId() {
+        return this.protectedItemId == null ? Output.empty() : this.protectedItemId;
     }
 
     /**
@@ -197,9 +197,9 @@ public final class GenericProtectedItemArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="protectedItemType", required=true)
-      private final Input<String> protectedItemType;
+      private final Output<String> protectedItemType;
 
-    public Input<String> getProtectedItemType() {
+    public Output<String> getProtectedItemType() {
         return this.protectedItemType;
     }
 
@@ -208,10 +208,10 @@ public final class GenericProtectedItemArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="protectionState")
-      private final @Nullable Input<Either<String,ProtectionState>> protectionState;
+      private final @Nullable Output<Either<String,ProtectionState>> protectionState;
 
-    public Input<Either<String,ProtectionState>> getProtectionState() {
-        return this.protectionState == null ? Input.empty() : this.protectionState;
+    public Output<Either<String,ProtectionState>> getProtectionState() {
+        return this.protectionState == null ? Output.empty() : this.protectionState;
     }
 
     /**
@@ -219,10 +219,10 @@ public final class GenericProtectedItemArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="sourceAssociations")
-      private final @Nullable Input<Map<String,String>> sourceAssociations;
+      private final @Nullable Output<Map<String,String>> sourceAssociations;
 
-    public Input<Map<String,String>> getSourceAssociations() {
-        return this.sourceAssociations == null ? Input.empty() : this.sourceAssociations;
+    public Output<Map<String,String>> getSourceAssociations() {
+        return this.sourceAssociations == null ? Output.empty() : this.sourceAssociations;
     }
 
     /**
@@ -230,10 +230,10 @@ public final class GenericProtectedItemArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="sourceResourceId")
-      private final @Nullable Input<String> sourceResourceId;
+      private final @Nullable Output<String> sourceResourceId;
 
-    public Input<String> getSourceResourceId() {
-        return this.sourceResourceId == null ? Input.empty() : this.sourceResourceId;
+    public Output<String> getSourceResourceId() {
+        return this.sourceResourceId == null ? Output.empty() : this.sourceResourceId;
     }
 
     /**
@@ -241,33 +241,33 @@ public final class GenericProtectedItemArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="workloadType")
-      private final @Nullable Input<Either<String,DataSourceType>> workloadType;
+      private final @Nullable Output<Either<String,DataSourceType>> workloadType;
 
-    public Input<Either<String,DataSourceType>> getWorkloadType() {
-        return this.workloadType == null ? Input.empty() : this.workloadType;
+    public Output<Either<String,DataSourceType>> getWorkloadType() {
+        return this.workloadType == null ? Output.empty() : this.workloadType;
     }
 
     public GenericProtectedItemArgs(
-        @Nullable Input<Either<String,BackupManagementType>> backupManagementType,
-        @Nullable Input<String> backupSetName,
-        @Nullable Input<String> containerName,
-        @Nullable Input<Either<String,CreateMode>> createMode,
-        @Nullable Input<String> deferredDeleteTimeInUTC,
-        @Nullable Input<String> deferredDeleteTimeRemaining,
-        @Nullable Input<String> fabricName,
-        @Nullable Input<String> friendlyName,
-        @Nullable Input<Boolean> isDeferredDeleteScheduleUpcoming,
-        @Nullable Input<Boolean> isRehydrate,
-        @Nullable Input<Boolean> isScheduledForDeferredDelete,
-        @Nullable Input<String> lastRecoveryPoint,
-        @Nullable Input<String> policyId,
-        @Nullable Input<String> policyState,
-        @Nullable Input<Double> protectedItemId,
-        Input<String> protectedItemType,
-        @Nullable Input<Either<String,ProtectionState>> protectionState,
-        @Nullable Input<Map<String,String>> sourceAssociations,
-        @Nullable Input<String> sourceResourceId,
-        @Nullable Input<Either<String,DataSourceType>> workloadType) {
+        @Nullable Output<Either<String,BackupManagementType>> backupManagementType,
+        @Nullable Output<String> backupSetName,
+        @Nullable Output<String> containerName,
+        @Nullable Output<Either<String,CreateMode>> createMode,
+        @Nullable Output<String> deferredDeleteTimeInUTC,
+        @Nullable Output<String> deferredDeleteTimeRemaining,
+        @Nullable Output<String> fabricName,
+        @Nullable Output<String> friendlyName,
+        @Nullable Output<Boolean> isDeferredDeleteScheduleUpcoming,
+        @Nullable Output<Boolean> isRehydrate,
+        @Nullable Output<Boolean> isScheduledForDeferredDelete,
+        @Nullable Output<String> lastRecoveryPoint,
+        @Nullable Output<String> policyId,
+        @Nullable Output<String> policyState,
+        @Nullable Output<Double> protectedItemId,
+        Output<String> protectedItemType,
+        @Nullable Output<Either<String,ProtectionState>> protectionState,
+        @Nullable Output<Map<String,String>> sourceAssociations,
+        @Nullable Output<String> sourceResourceId,
+        @Nullable Output<Either<String,DataSourceType>> workloadType) {
         this.backupManagementType = backupManagementType;
         this.backupSetName = backupSetName;
         this.containerName = containerName;
@@ -291,26 +291,26 @@ public final class GenericProtectedItemArgs extends io.pulumi.resources.Resource
     }
 
     private GenericProtectedItemArgs() {
-        this.backupManagementType = Input.empty();
-        this.backupSetName = Input.empty();
-        this.containerName = Input.empty();
-        this.createMode = Input.empty();
-        this.deferredDeleteTimeInUTC = Input.empty();
-        this.deferredDeleteTimeRemaining = Input.empty();
-        this.fabricName = Input.empty();
-        this.friendlyName = Input.empty();
-        this.isDeferredDeleteScheduleUpcoming = Input.empty();
-        this.isRehydrate = Input.empty();
-        this.isScheduledForDeferredDelete = Input.empty();
-        this.lastRecoveryPoint = Input.empty();
-        this.policyId = Input.empty();
-        this.policyState = Input.empty();
-        this.protectedItemId = Input.empty();
-        this.protectedItemType = Input.empty();
-        this.protectionState = Input.empty();
-        this.sourceAssociations = Input.empty();
-        this.sourceResourceId = Input.empty();
-        this.workloadType = Input.empty();
+        this.backupManagementType = Output.empty();
+        this.backupSetName = Output.empty();
+        this.containerName = Output.empty();
+        this.createMode = Output.empty();
+        this.deferredDeleteTimeInUTC = Output.empty();
+        this.deferredDeleteTimeRemaining = Output.empty();
+        this.fabricName = Output.empty();
+        this.friendlyName = Output.empty();
+        this.isDeferredDeleteScheduleUpcoming = Output.empty();
+        this.isRehydrate = Output.empty();
+        this.isScheduledForDeferredDelete = Output.empty();
+        this.lastRecoveryPoint = Output.empty();
+        this.policyId = Output.empty();
+        this.policyState = Output.empty();
+        this.protectedItemId = Output.empty();
+        this.protectedItemType = Output.empty();
+        this.protectionState = Output.empty();
+        this.sourceAssociations = Output.empty();
+        this.sourceResourceId = Output.empty();
+        this.workloadType = Output.empty();
     }
 
     public static Builder builder() {
@@ -322,26 +322,26 @@ public final class GenericProtectedItemArgs extends io.pulumi.resources.Resource
     }
 
     public static final class Builder {
-        private @Nullable Input<Either<String,BackupManagementType>> backupManagementType;
-        private @Nullable Input<String> backupSetName;
-        private @Nullable Input<String> containerName;
-        private @Nullable Input<Either<String,CreateMode>> createMode;
-        private @Nullable Input<String> deferredDeleteTimeInUTC;
-        private @Nullable Input<String> deferredDeleteTimeRemaining;
-        private @Nullable Input<String> fabricName;
-        private @Nullable Input<String> friendlyName;
-        private @Nullable Input<Boolean> isDeferredDeleteScheduleUpcoming;
-        private @Nullable Input<Boolean> isRehydrate;
-        private @Nullable Input<Boolean> isScheduledForDeferredDelete;
-        private @Nullable Input<String> lastRecoveryPoint;
-        private @Nullable Input<String> policyId;
-        private @Nullable Input<String> policyState;
-        private @Nullable Input<Double> protectedItemId;
-        private Input<String> protectedItemType;
-        private @Nullable Input<Either<String,ProtectionState>> protectionState;
-        private @Nullable Input<Map<String,String>> sourceAssociations;
-        private @Nullable Input<String> sourceResourceId;
-        private @Nullable Input<Either<String,DataSourceType>> workloadType;
+        private @Nullable Output<Either<String,BackupManagementType>> backupManagementType;
+        private @Nullable Output<String> backupSetName;
+        private @Nullable Output<String> containerName;
+        private @Nullable Output<Either<String,CreateMode>> createMode;
+        private @Nullable Output<String> deferredDeleteTimeInUTC;
+        private @Nullable Output<String> deferredDeleteTimeRemaining;
+        private @Nullable Output<String> fabricName;
+        private @Nullable Output<String> friendlyName;
+        private @Nullable Output<Boolean> isDeferredDeleteScheduleUpcoming;
+        private @Nullable Output<Boolean> isRehydrate;
+        private @Nullable Output<Boolean> isScheduledForDeferredDelete;
+        private @Nullable Output<String> lastRecoveryPoint;
+        private @Nullable Output<String> policyId;
+        private @Nullable Output<String> policyState;
+        private @Nullable Output<Double> protectedItemId;
+        private Output<String> protectedItemType;
+        private @Nullable Output<Either<String,ProtectionState>> protectionState;
+        private @Nullable Output<Map<String,String>> sourceAssociations;
+        private @Nullable Output<String> sourceResourceId;
+        private @Nullable Output<Either<String,DataSourceType>> workloadType;
 
         public Builder() {
     	      // Empty
@@ -371,203 +371,203 @@ public final class GenericProtectedItemArgs extends io.pulumi.resources.Resource
     	      this.workloadType = defaults.workloadType;
         }
 
-        public Builder backupManagementType(@Nullable Input<Either<String,BackupManagementType>> backupManagementType) {
+        public Builder backupManagementType(@Nullable Output<Either<String,BackupManagementType>> backupManagementType) {
             this.backupManagementType = backupManagementType;
             return this;
         }
 
         public Builder backupManagementType(@Nullable Either<String,BackupManagementType> backupManagementType) {
-            this.backupManagementType = Input.ofNullable(backupManagementType);
+            this.backupManagementType = Output.ofNullable(backupManagementType);
             return this;
         }
 
-        public Builder backupSetName(@Nullable Input<String> backupSetName) {
+        public Builder backupSetName(@Nullable Output<String> backupSetName) {
             this.backupSetName = backupSetName;
             return this;
         }
 
         public Builder backupSetName(@Nullable String backupSetName) {
-            this.backupSetName = Input.ofNullable(backupSetName);
+            this.backupSetName = Output.ofNullable(backupSetName);
             return this;
         }
 
-        public Builder containerName(@Nullable Input<String> containerName) {
+        public Builder containerName(@Nullable Output<String> containerName) {
             this.containerName = containerName;
             return this;
         }
 
         public Builder containerName(@Nullable String containerName) {
-            this.containerName = Input.ofNullable(containerName);
+            this.containerName = Output.ofNullable(containerName);
             return this;
         }
 
-        public Builder createMode(@Nullable Input<Either<String,CreateMode>> createMode) {
+        public Builder createMode(@Nullable Output<Either<String,CreateMode>> createMode) {
             this.createMode = createMode;
             return this;
         }
 
         public Builder createMode(@Nullable Either<String,CreateMode> createMode) {
-            this.createMode = Input.ofNullable(createMode);
+            this.createMode = Output.ofNullable(createMode);
             return this;
         }
 
-        public Builder deferredDeleteTimeInUTC(@Nullable Input<String> deferredDeleteTimeInUTC) {
+        public Builder deferredDeleteTimeInUTC(@Nullable Output<String> deferredDeleteTimeInUTC) {
             this.deferredDeleteTimeInUTC = deferredDeleteTimeInUTC;
             return this;
         }
 
         public Builder deferredDeleteTimeInUTC(@Nullable String deferredDeleteTimeInUTC) {
-            this.deferredDeleteTimeInUTC = Input.ofNullable(deferredDeleteTimeInUTC);
+            this.deferredDeleteTimeInUTC = Output.ofNullable(deferredDeleteTimeInUTC);
             return this;
         }
 
-        public Builder deferredDeleteTimeRemaining(@Nullable Input<String> deferredDeleteTimeRemaining) {
+        public Builder deferredDeleteTimeRemaining(@Nullable Output<String> deferredDeleteTimeRemaining) {
             this.deferredDeleteTimeRemaining = deferredDeleteTimeRemaining;
             return this;
         }
 
         public Builder deferredDeleteTimeRemaining(@Nullable String deferredDeleteTimeRemaining) {
-            this.deferredDeleteTimeRemaining = Input.ofNullable(deferredDeleteTimeRemaining);
+            this.deferredDeleteTimeRemaining = Output.ofNullable(deferredDeleteTimeRemaining);
             return this;
         }
 
-        public Builder fabricName(@Nullable Input<String> fabricName) {
+        public Builder fabricName(@Nullable Output<String> fabricName) {
             this.fabricName = fabricName;
             return this;
         }
 
         public Builder fabricName(@Nullable String fabricName) {
-            this.fabricName = Input.ofNullable(fabricName);
+            this.fabricName = Output.ofNullable(fabricName);
             return this;
         }
 
-        public Builder friendlyName(@Nullable Input<String> friendlyName) {
+        public Builder friendlyName(@Nullable Output<String> friendlyName) {
             this.friendlyName = friendlyName;
             return this;
         }
 
         public Builder friendlyName(@Nullable String friendlyName) {
-            this.friendlyName = Input.ofNullable(friendlyName);
+            this.friendlyName = Output.ofNullable(friendlyName);
             return this;
         }
 
-        public Builder isDeferredDeleteScheduleUpcoming(@Nullable Input<Boolean> isDeferredDeleteScheduleUpcoming) {
+        public Builder isDeferredDeleteScheduleUpcoming(@Nullable Output<Boolean> isDeferredDeleteScheduleUpcoming) {
             this.isDeferredDeleteScheduleUpcoming = isDeferredDeleteScheduleUpcoming;
             return this;
         }
 
         public Builder isDeferredDeleteScheduleUpcoming(@Nullable Boolean isDeferredDeleteScheduleUpcoming) {
-            this.isDeferredDeleteScheduleUpcoming = Input.ofNullable(isDeferredDeleteScheduleUpcoming);
+            this.isDeferredDeleteScheduleUpcoming = Output.ofNullable(isDeferredDeleteScheduleUpcoming);
             return this;
         }
 
-        public Builder isRehydrate(@Nullable Input<Boolean> isRehydrate) {
+        public Builder isRehydrate(@Nullable Output<Boolean> isRehydrate) {
             this.isRehydrate = isRehydrate;
             return this;
         }
 
         public Builder isRehydrate(@Nullable Boolean isRehydrate) {
-            this.isRehydrate = Input.ofNullable(isRehydrate);
+            this.isRehydrate = Output.ofNullable(isRehydrate);
             return this;
         }
 
-        public Builder isScheduledForDeferredDelete(@Nullable Input<Boolean> isScheduledForDeferredDelete) {
+        public Builder isScheduledForDeferredDelete(@Nullable Output<Boolean> isScheduledForDeferredDelete) {
             this.isScheduledForDeferredDelete = isScheduledForDeferredDelete;
             return this;
         }
 
         public Builder isScheduledForDeferredDelete(@Nullable Boolean isScheduledForDeferredDelete) {
-            this.isScheduledForDeferredDelete = Input.ofNullable(isScheduledForDeferredDelete);
+            this.isScheduledForDeferredDelete = Output.ofNullable(isScheduledForDeferredDelete);
             return this;
         }
 
-        public Builder lastRecoveryPoint(@Nullable Input<String> lastRecoveryPoint) {
+        public Builder lastRecoveryPoint(@Nullable Output<String> lastRecoveryPoint) {
             this.lastRecoveryPoint = lastRecoveryPoint;
             return this;
         }
 
         public Builder lastRecoveryPoint(@Nullable String lastRecoveryPoint) {
-            this.lastRecoveryPoint = Input.ofNullable(lastRecoveryPoint);
+            this.lastRecoveryPoint = Output.ofNullable(lastRecoveryPoint);
             return this;
         }
 
-        public Builder policyId(@Nullable Input<String> policyId) {
+        public Builder policyId(@Nullable Output<String> policyId) {
             this.policyId = policyId;
             return this;
         }
 
         public Builder policyId(@Nullable String policyId) {
-            this.policyId = Input.ofNullable(policyId);
+            this.policyId = Output.ofNullable(policyId);
             return this;
         }
 
-        public Builder policyState(@Nullable Input<String> policyState) {
+        public Builder policyState(@Nullable Output<String> policyState) {
             this.policyState = policyState;
             return this;
         }
 
         public Builder policyState(@Nullable String policyState) {
-            this.policyState = Input.ofNullable(policyState);
+            this.policyState = Output.ofNullable(policyState);
             return this;
         }
 
-        public Builder protectedItemId(@Nullable Input<Double> protectedItemId) {
+        public Builder protectedItemId(@Nullable Output<Double> protectedItemId) {
             this.protectedItemId = protectedItemId;
             return this;
         }
 
         public Builder protectedItemId(@Nullable Double protectedItemId) {
-            this.protectedItemId = Input.ofNullable(protectedItemId);
+            this.protectedItemId = Output.ofNullable(protectedItemId);
             return this;
         }
 
-        public Builder protectedItemType(Input<String> protectedItemType) {
+        public Builder protectedItemType(Output<String> protectedItemType) {
             this.protectedItemType = Objects.requireNonNull(protectedItemType);
             return this;
         }
 
         public Builder protectedItemType(String protectedItemType) {
-            this.protectedItemType = Input.of(Objects.requireNonNull(protectedItemType));
+            this.protectedItemType = Output.of(Objects.requireNonNull(protectedItemType));
             return this;
         }
 
-        public Builder protectionState(@Nullable Input<Either<String,ProtectionState>> protectionState) {
+        public Builder protectionState(@Nullable Output<Either<String,ProtectionState>> protectionState) {
             this.protectionState = protectionState;
             return this;
         }
 
         public Builder protectionState(@Nullable Either<String,ProtectionState> protectionState) {
-            this.protectionState = Input.ofNullable(protectionState);
+            this.protectionState = Output.ofNullable(protectionState);
             return this;
         }
 
-        public Builder sourceAssociations(@Nullable Input<Map<String,String>> sourceAssociations) {
+        public Builder sourceAssociations(@Nullable Output<Map<String,String>> sourceAssociations) {
             this.sourceAssociations = sourceAssociations;
             return this;
         }
 
         public Builder sourceAssociations(@Nullable Map<String,String> sourceAssociations) {
-            this.sourceAssociations = Input.ofNullable(sourceAssociations);
+            this.sourceAssociations = Output.ofNullable(sourceAssociations);
             return this;
         }
 
-        public Builder sourceResourceId(@Nullable Input<String> sourceResourceId) {
+        public Builder sourceResourceId(@Nullable Output<String> sourceResourceId) {
             this.sourceResourceId = sourceResourceId;
             return this;
         }
 
         public Builder sourceResourceId(@Nullable String sourceResourceId) {
-            this.sourceResourceId = Input.ofNullable(sourceResourceId);
+            this.sourceResourceId = Output.ofNullable(sourceResourceId);
             return this;
         }
 
-        public Builder workloadType(@Nullable Input<Either<String,DataSourceType>> workloadType) {
+        public Builder workloadType(@Nullable Output<Either<String,DataSourceType>> workloadType) {
             this.workloadType = workloadType;
             return this;
         }
 
         public Builder workloadType(@Nullable Either<String,DataSourceType> workloadType) {
-            this.workloadType = Input.ofNullable(workloadType);
+            this.workloadType = Output.ofNullable(workloadType);
             return this;
         }
         public GenericProtectedItemArgs build() {

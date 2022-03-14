@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.ml_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class GoogleCloudMlV1__DiskConfigArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="bootDiskSizeGb")
-      private final @Nullable Input<Integer> bootDiskSizeGb;
+      private final @Nullable Output<Integer> bootDiskSizeGb;
 
-    public Input<Integer> getBootDiskSizeGb() {
-        return this.bootDiskSizeGb == null ? Input.empty() : this.bootDiskSizeGb;
+    public Output<Integer> getBootDiskSizeGb() {
+        return this.bootDiskSizeGb == null ? Output.empty() : this.bootDiskSizeGb;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class GoogleCloudMlV1__DiskConfigArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="bootDiskType")
-      private final @Nullable Input<String> bootDiskType;
+      private final @Nullable Output<String> bootDiskType;
 
-    public Input<String> getBootDiskType() {
-        return this.bootDiskType == null ? Input.empty() : this.bootDiskType;
+    public Output<String> getBootDiskType() {
+        return this.bootDiskType == null ? Output.empty() : this.bootDiskType;
     }
 
     public GoogleCloudMlV1__DiskConfigArgs(
-        @Nullable Input<Integer> bootDiskSizeGb,
-        @Nullable Input<String> bootDiskType) {
+        @Nullable Output<Integer> bootDiskSizeGb,
+        @Nullable Output<String> bootDiskType) {
         this.bootDiskSizeGb = bootDiskSizeGb;
         this.bootDiskType = bootDiskType;
     }
 
     private GoogleCloudMlV1__DiskConfigArgs() {
-        this.bootDiskSizeGb = Input.empty();
-        this.bootDiskType = Input.empty();
+        this.bootDiskSizeGb = Output.empty();
+        this.bootDiskType = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class GoogleCloudMlV1__DiskConfigArgs extends io.pulumi.resources.R
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> bootDiskSizeGb;
-        private @Nullable Input<String> bootDiskType;
+        private @Nullable Output<Integer> bootDiskSizeGb;
+        private @Nullable Output<String> bootDiskType;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class GoogleCloudMlV1__DiskConfigArgs extends io.pulumi.resources.R
     	      this.bootDiskType = defaults.bootDiskType;
         }
 
-        public Builder bootDiskSizeGb(@Nullable Input<Integer> bootDiskSizeGb) {
+        public Builder bootDiskSizeGb(@Nullable Output<Integer> bootDiskSizeGb) {
             this.bootDiskSizeGb = bootDiskSizeGb;
             return this;
         }
 
         public Builder bootDiskSizeGb(@Nullable Integer bootDiskSizeGb) {
-            this.bootDiskSizeGb = Input.ofNullable(bootDiskSizeGb);
+            this.bootDiskSizeGb = Output.ofNullable(bootDiskSizeGb);
             return this;
         }
 
-        public Builder bootDiskType(@Nullable Input<String> bootDiskType) {
+        public Builder bootDiskType(@Nullable Output<String> bootDiskType) {
             this.bootDiskType = bootDiskType;
             return this;
         }
 
         public Builder bootDiskType(@Nullable String bootDiskType) {
-            this.bootDiskType = Input.ofNullable(bootDiskType);
+            this.bootDiskType = Output.ofNullable(bootDiskType);
             return this;
         }
         public GoogleCloudMlV1__DiskConfigArgs build() {

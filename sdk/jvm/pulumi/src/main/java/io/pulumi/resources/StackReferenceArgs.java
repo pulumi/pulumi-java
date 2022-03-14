@@ -1,6 +1,6 @@
 package io.pulumi.resources;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 
 import javax.annotation.Nullable;
@@ -16,13 +16,13 @@ public class StackReferenceArgs extends ResourceArgs {
      */
     @InputImport(name = "name", required = true)
     @Nullable
-    public final Input<String> name;
+    public final Output<String> name;
 
-    public StackReferenceArgs(@Nullable Input<String> name) {
+    public StackReferenceArgs(@Nullable Output<String> name) {
         this.name = name;
     }
 
-    public Optional<Input<String>> getName() {
+    public Optional<Output<String>> getName() {
         return Optional.ofNullable(name);
     }
 }

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.storage.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class BucketLifecycleRuleActionGetArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="storageClass")
-      private final @Nullable Input<String> storageClass;
+      private final @Nullable Output<String> storageClass;
 
-    public Input<String> getStorageClass() {
-        return this.storageClass == null ? Input.empty() : this.storageClass;
+    public Output<String> getStorageClass() {
+        return this.storageClass == null ? Output.empty() : this.storageClass;
     }
 
     /**
@@ -30,22 +30,22 @@ public final class BucketLifecycleRuleActionGetArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<String> type;
+      private final Output<String> type;
 
-    public Input<String> getType() {
+    public Output<String> getType() {
         return this.type;
     }
 
     public BucketLifecycleRuleActionGetArgs(
-        @Nullable Input<String> storageClass,
-        Input<String> type) {
+        @Nullable Output<String> storageClass,
+        Output<String> type) {
         this.storageClass = storageClass;
         this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
     }
 
     private BucketLifecycleRuleActionGetArgs() {
-        this.storageClass = Input.empty();
-        this.type = Input.empty();
+        this.storageClass = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -57,8 +57,8 @@ public final class BucketLifecycleRuleActionGetArgs extends io.pulumi.resources.
     }
 
     public static final class Builder {
-        private @Nullable Input<String> storageClass;
-        private Input<String> type;
+        private @Nullable Output<String> storageClass;
+        private Output<String> type;
 
         public Builder() {
     	      // Empty
@@ -70,23 +70,23 @@ public final class BucketLifecycleRuleActionGetArgs extends io.pulumi.resources.
     	      this.type = defaults.type;
         }
 
-        public Builder storageClass(@Nullable Input<String> storageClass) {
+        public Builder storageClass(@Nullable Output<String> storageClass) {
             this.storageClass = storageClass;
             return this;
         }
 
         public Builder storageClass(@Nullable String storageClass) {
-            this.storageClass = Input.ofNullable(storageClass);
+            this.storageClass = Output.ofNullable(storageClass);
             return this;
         }
 
-        public Builder type(Input<String> type) {
+        public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(String type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
         public BucketLifecycleRuleActionGetArgs build() {

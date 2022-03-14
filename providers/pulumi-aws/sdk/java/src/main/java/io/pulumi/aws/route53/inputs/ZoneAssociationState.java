@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.route53.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class ZoneAssociationState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="owningAccount")
-      private final @Nullable Input<String> owningAccount;
+      private final @Nullable Output<String> owningAccount;
 
-    public Input<String> getOwningAccount() {
-        return this.owningAccount == null ? Input.empty() : this.owningAccount;
+    public Output<String> getOwningAccount() {
+        return this.owningAccount == null ? Output.empty() : this.owningAccount;
     }
 
     /**
@@ -30,10 +30,10 @@ public final class ZoneAssociationState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="vpcId")
-      private final @Nullable Input<String> vpcId;
+      private final @Nullable Output<String> vpcId;
 
-    public Input<String> getVpcId() {
-        return this.vpcId == null ? Input.empty() : this.vpcId;
+    public Output<String> getVpcId() {
+        return this.vpcId == null ? Output.empty() : this.vpcId;
     }
 
     /**
@@ -41,10 +41,10 @@ public final class ZoneAssociationState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="vpcRegion")
-      private final @Nullable Input<String> vpcRegion;
+      private final @Nullable Output<String> vpcRegion;
 
-    public Input<String> getVpcRegion() {
-        return this.vpcRegion == null ? Input.empty() : this.vpcRegion;
+    public Output<String> getVpcRegion() {
+        return this.vpcRegion == null ? Output.empty() : this.vpcRegion;
     }
 
     /**
@@ -52,17 +52,17 @@ public final class ZoneAssociationState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="zoneId")
-      private final @Nullable Input<String> zoneId;
+      private final @Nullable Output<String> zoneId;
 
-    public Input<String> getZoneId() {
-        return this.zoneId == null ? Input.empty() : this.zoneId;
+    public Output<String> getZoneId() {
+        return this.zoneId == null ? Output.empty() : this.zoneId;
     }
 
     public ZoneAssociationState(
-        @Nullable Input<String> owningAccount,
-        @Nullable Input<String> vpcId,
-        @Nullable Input<String> vpcRegion,
-        @Nullable Input<String> zoneId) {
+        @Nullable Output<String> owningAccount,
+        @Nullable Output<String> vpcId,
+        @Nullable Output<String> vpcRegion,
+        @Nullable Output<String> zoneId) {
         this.owningAccount = owningAccount;
         this.vpcId = vpcId;
         this.vpcRegion = vpcRegion;
@@ -70,10 +70,10 @@ public final class ZoneAssociationState extends io.pulumi.resources.ResourceArgs
     }
 
     private ZoneAssociationState() {
-        this.owningAccount = Input.empty();
-        this.vpcId = Input.empty();
-        this.vpcRegion = Input.empty();
-        this.zoneId = Input.empty();
+        this.owningAccount = Output.empty();
+        this.vpcId = Output.empty();
+        this.vpcRegion = Output.empty();
+        this.zoneId = Output.empty();
     }
 
     public static Builder builder() {
@@ -85,10 +85,10 @@ public final class ZoneAssociationState extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private @Nullable Input<String> owningAccount;
-        private @Nullable Input<String> vpcId;
-        private @Nullable Input<String> vpcRegion;
-        private @Nullable Input<String> zoneId;
+        private @Nullable Output<String> owningAccount;
+        private @Nullable Output<String> vpcId;
+        private @Nullable Output<String> vpcRegion;
+        private @Nullable Output<String> zoneId;
 
         public Builder() {
     	      // Empty
@@ -102,43 +102,43 @@ public final class ZoneAssociationState extends io.pulumi.resources.ResourceArgs
     	      this.zoneId = defaults.zoneId;
         }
 
-        public Builder owningAccount(@Nullable Input<String> owningAccount) {
+        public Builder owningAccount(@Nullable Output<String> owningAccount) {
             this.owningAccount = owningAccount;
             return this;
         }
 
         public Builder owningAccount(@Nullable String owningAccount) {
-            this.owningAccount = Input.ofNullable(owningAccount);
+            this.owningAccount = Output.ofNullable(owningAccount);
             return this;
         }
 
-        public Builder vpcId(@Nullable Input<String> vpcId) {
+        public Builder vpcId(@Nullable Output<String> vpcId) {
             this.vpcId = vpcId;
             return this;
         }
 
         public Builder vpcId(@Nullable String vpcId) {
-            this.vpcId = Input.ofNullable(vpcId);
+            this.vpcId = Output.ofNullable(vpcId);
             return this;
         }
 
-        public Builder vpcRegion(@Nullable Input<String> vpcRegion) {
+        public Builder vpcRegion(@Nullable Output<String> vpcRegion) {
             this.vpcRegion = vpcRegion;
             return this;
         }
 
         public Builder vpcRegion(@Nullable String vpcRegion) {
-            this.vpcRegion = Input.ofNullable(vpcRegion);
+            this.vpcRegion = Output.ofNullable(vpcRegion);
             return this;
         }
 
-        public Builder zoneId(@Nullable Input<String> zoneId) {
+        public Builder zoneId(@Nullable Output<String> zoneId) {
             this.zoneId = zoneId;
             return this;
         }
 
         public Builder zoneId(@Nullable String zoneId) {
-            this.zoneId = Input.ofNullable(zoneId);
+            this.zoneId = Output.ofNullable(zoneId);
             return this;
         }
         public ZoneAssociationState build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.container.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.container.inputs.ClusterAddonsConfigGetArgs;
 import io.pulumi.gcp.container.inputs.ClusterAuthenticatorGroupsConfigGetArgs;
@@ -49,10 +49,10 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="addonsConfig")
-      private final @Nullable Input<ClusterAddonsConfigGetArgs> addonsConfig;
+      private final @Nullable Output<ClusterAddonsConfigGetArgs> addonsConfig;
 
-    public Input<ClusterAddonsConfigGetArgs> getAddonsConfig() {
-        return this.addonsConfig == null ? Input.empty() : this.addonsConfig;
+    public Output<ClusterAddonsConfigGetArgs> getAddonsConfig() {
+        return this.addonsConfig == null ? Output.empty() : this.addonsConfig;
     }
 
     /**
@@ -62,10 +62,10 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="authenticatorGroupsConfig")
-      private final @Nullable Input<ClusterAuthenticatorGroupsConfigGetArgs> authenticatorGroupsConfig;
+      private final @Nullable Output<ClusterAuthenticatorGroupsConfigGetArgs> authenticatorGroupsConfig;
 
-    public Input<ClusterAuthenticatorGroupsConfigGetArgs> getAuthenticatorGroupsConfig() {
-        return this.authenticatorGroupsConfig == null ? Input.empty() : this.authenticatorGroupsConfig;
+    public Output<ClusterAuthenticatorGroupsConfigGetArgs> getAuthenticatorGroupsConfig() {
+        return this.authenticatorGroupsConfig == null ? Output.empty() : this.authenticatorGroupsConfig;
     }
 
     /**
@@ -77,10 +77,10 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="clusterAutoscaling")
-      private final @Nullable Input<ClusterClusterAutoscalingGetArgs> clusterAutoscaling;
+      private final @Nullable Output<ClusterClusterAutoscalingGetArgs> clusterAutoscaling;
 
-    public Input<ClusterClusterAutoscalingGetArgs> getClusterAutoscaling() {
-        return this.clusterAutoscaling == null ? Input.empty() : this.clusterAutoscaling;
+    public Output<ClusterClusterAutoscalingGetArgs> getClusterAutoscaling() {
+        return this.clusterAutoscaling == null ? Output.empty() : this.clusterAutoscaling;
     }
 
     /**
@@ -91,10 +91,10 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="clusterIpv4Cidr")
-      private final @Nullable Input<String> clusterIpv4Cidr;
+      private final @Nullable Output<String> clusterIpv4Cidr;
 
-    public Input<String> getClusterIpv4Cidr() {
-        return this.clusterIpv4Cidr == null ? Input.empty() : this.clusterIpv4Cidr;
+    public Output<String> getClusterIpv4Cidr() {
+        return this.clusterIpv4Cidr == null ? Output.empty() : this.clusterIpv4Cidr;
     }
 
     /**
@@ -104,10 +104,10 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="clusterTelemetry")
-      private final @Nullable Input<ClusterClusterTelemetryGetArgs> clusterTelemetry;
+      private final @Nullable Output<ClusterClusterTelemetryGetArgs> clusterTelemetry;
 
-    public Input<ClusterClusterTelemetryGetArgs> getClusterTelemetry() {
-        return this.clusterTelemetry == null ? Input.empty() : this.clusterTelemetry;
+    public Output<ClusterClusterTelemetryGetArgs> getClusterTelemetry() {
+        return this.clusterTelemetry == null ? Output.empty() : this.clusterTelemetry;
     }
 
     /**
@@ -115,10 +115,10 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="confidentialNodes")
-      private final @Nullable Input<ClusterConfidentialNodesGetArgs> confidentialNodes;
+      private final @Nullable Output<ClusterConfidentialNodesGetArgs> confidentialNodes;
 
-    public Input<ClusterConfidentialNodesGetArgs> getConfidentialNodes() {
-        return this.confidentialNodes == null ? Input.empty() : this.confidentialNodes;
+    public Output<ClusterConfidentialNodesGetArgs> getConfidentialNodes() {
+        return this.confidentialNodes == null ? Output.empty() : this.confidentialNodes;
     }
 
     /**
@@ -126,10 +126,10 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="databaseEncryption")
-      private final @Nullable Input<ClusterDatabaseEncryptionGetArgs> databaseEncryption;
+      private final @Nullable Output<ClusterDatabaseEncryptionGetArgs> databaseEncryption;
 
-    public Input<ClusterDatabaseEncryptionGetArgs> getDatabaseEncryption() {
-        return this.databaseEncryption == null ? Input.empty() : this.databaseEncryption;
+    public Output<ClusterDatabaseEncryptionGetArgs> getDatabaseEncryption() {
+        return this.databaseEncryption == null ? Output.empty() : this.databaseEncryption;
     }
 
     /**
@@ -137,10 +137,10 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="datapathProvider")
-      private final @Nullable Input<String> datapathProvider;
+      private final @Nullable Output<String> datapathProvider;
 
-    public Input<String> getDatapathProvider() {
-        return this.datapathProvider == null ? Input.empty() : this.datapathProvider;
+    public Output<String> getDatapathProvider() {
+        return this.datapathProvider == null ? Output.empty() : this.datapathProvider;
     }
 
     /**
@@ -151,10 +151,10 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="defaultMaxPodsPerNode")
-      private final @Nullable Input<Integer> defaultMaxPodsPerNode;
+      private final @Nullable Output<Integer> defaultMaxPodsPerNode;
 
-    public Input<Integer> getDefaultMaxPodsPerNode() {
-        return this.defaultMaxPodsPerNode == null ? Input.empty() : this.defaultMaxPodsPerNode;
+    public Output<Integer> getDefaultMaxPodsPerNode() {
+        return this.defaultMaxPodsPerNode == null ? Output.empty() : this.defaultMaxPodsPerNode;
     }
 
     /**
@@ -162,10 +162,10 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="defaultSnatStatus")
-      private final @Nullable Input<ClusterDefaultSnatStatusGetArgs> defaultSnatStatus;
+      private final @Nullable Output<ClusterDefaultSnatStatusGetArgs> defaultSnatStatus;
 
-    public Input<ClusterDefaultSnatStatusGetArgs> getDefaultSnatStatus() {
-        return this.defaultSnatStatus == null ? Input.empty() : this.defaultSnatStatus;
+    public Output<ClusterDefaultSnatStatusGetArgs> getDefaultSnatStatus() {
+        return this.defaultSnatStatus == null ? Output.empty() : this.defaultSnatStatus;
     }
 
     /**
@@ -173,10 +173,10 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -184,10 +184,10 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dnsConfig")
-      private final @Nullable Input<ClusterDnsConfigGetArgs> dnsConfig;
+      private final @Nullable Output<ClusterDnsConfigGetArgs> dnsConfig;
 
-    public Input<ClusterDnsConfigGetArgs> getDnsConfig() {
-        return this.dnsConfig == null ? Input.empty() : this.dnsConfig;
+    public Output<ClusterDnsConfigGetArgs> getDnsConfig() {
+        return this.dnsConfig == null ? Output.empty() : this.dnsConfig;
     }
 
     /**
@@ -198,10 +198,10 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enableAutopilot")
-      private final @Nullable Input<Boolean> enableAutopilot;
+      private final @Nullable Output<Boolean> enableAutopilot;
 
-    public Input<Boolean> getEnableAutopilot() {
-        return this.enableAutopilot == null ? Input.empty() : this.enableAutopilot;
+    public Output<Boolean> getEnableAutopilot() {
+        return this.enableAutopilot == null ? Output.empty() : this.enableAutopilot;
     }
 
     /**
@@ -210,10 +210,10 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enableBinaryAuthorization")
-      private final @Nullable Input<Boolean> enableBinaryAuthorization;
+      private final @Nullable Output<Boolean> enableBinaryAuthorization;
 
-    public Input<Boolean> getEnableBinaryAuthorization() {
-        return this.enableBinaryAuthorization == null ? Input.empty() : this.enableBinaryAuthorization;
+    public Output<Boolean> getEnableBinaryAuthorization() {
+        return this.enableBinaryAuthorization == null ? Output.empty() : this.enableBinaryAuthorization;
     }
 
     /**
@@ -221,10 +221,10 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enableIntranodeVisibility")
-      private final @Nullable Input<Boolean> enableIntranodeVisibility;
+      private final @Nullable Output<Boolean> enableIntranodeVisibility;
 
-    public Input<Boolean> getEnableIntranodeVisibility() {
-        return this.enableIntranodeVisibility == null ? Input.empty() : this.enableIntranodeVisibility;
+    public Output<Boolean> getEnableIntranodeVisibility() {
+        return this.enableIntranodeVisibility == null ? Output.empty() : this.enableIntranodeVisibility;
     }
 
     /**
@@ -234,10 +234,10 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enableKubernetesAlpha")
-      private final @Nullable Input<Boolean> enableKubernetesAlpha;
+      private final @Nullable Output<Boolean> enableKubernetesAlpha;
 
-    public Input<Boolean> getEnableKubernetesAlpha() {
-        return this.enableKubernetesAlpha == null ? Input.empty() : this.enableKubernetesAlpha;
+    public Output<Boolean> getEnableKubernetesAlpha() {
+        return this.enableKubernetesAlpha == null ? Output.empty() : this.enableKubernetesAlpha;
     }
 
     /**
@@ -245,10 +245,10 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enableL4IlbSubsetting")
-      private final @Nullable Input<Boolean> enableL4IlbSubsetting;
+      private final @Nullable Output<Boolean> enableL4IlbSubsetting;
 
-    public Input<Boolean> getEnableL4IlbSubsetting() {
-        return this.enableL4IlbSubsetting == null ? Input.empty() : this.enableL4IlbSubsetting;
+    public Output<Boolean> getEnableL4IlbSubsetting() {
+        return this.enableL4IlbSubsetting == null ? Output.empty() : this.enableL4IlbSubsetting;
     }
 
     /**
@@ -259,10 +259,10 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enableLegacyAbac")
-      private final @Nullable Input<Boolean> enableLegacyAbac;
+      private final @Nullable Output<Boolean> enableLegacyAbac;
 
-    public Input<Boolean> getEnableLegacyAbac() {
-        return this.enableLegacyAbac == null ? Input.empty() : this.enableLegacyAbac;
+    public Output<Boolean> getEnableLegacyAbac() {
+        return this.enableLegacyAbac == null ? Output.empty() : this.enableLegacyAbac;
     }
 
     /**
@@ -270,10 +270,10 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enableShieldedNodes")
-      private final @Nullable Input<Boolean> enableShieldedNodes;
+      private final @Nullable Output<Boolean> enableShieldedNodes;
 
-    public Input<Boolean> getEnableShieldedNodes() {
-        return this.enableShieldedNodes == null ? Input.empty() : this.enableShieldedNodes;
+    public Output<Boolean> getEnableShieldedNodes() {
+        return this.enableShieldedNodes == null ? Output.empty() : this.enableShieldedNodes;
     }
 
     /**
@@ -282,10 +282,10 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enableTpu")
-      private final @Nullable Input<Boolean> enableTpu;
+      private final @Nullable Output<Boolean> enableTpu;
 
-    public Input<Boolean> getEnableTpu() {
-        return this.enableTpu == null ? Input.empty() : this.enableTpu;
+    public Output<Boolean> getEnableTpu() {
+        return this.enableTpu == null ? Output.empty() : this.enableTpu;
     }
 
     /**
@@ -293,10 +293,10 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="endpoint")
-      private final @Nullable Input<String> endpoint;
+      private final @Nullable Output<String> endpoint;
 
-    public Input<String> getEndpoint() {
-        return this.endpoint == null ? Input.empty() : this.endpoint;
+    public Output<String> getEndpoint() {
+        return this.endpoint == null ? Output.empty() : this.endpoint;
     }
 
     /**
@@ -304,10 +304,10 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="identityServiceConfig")
-      private final @Nullable Input<ClusterIdentityServiceConfigGetArgs> identityServiceConfig;
+      private final @Nullable Output<ClusterIdentityServiceConfigGetArgs> identityServiceConfig;
 
-    public Input<ClusterIdentityServiceConfigGetArgs> getIdentityServiceConfig() {
-        return this.identityServiceConfig == null ? Input.empty() : this.identityServiceConfig;
+    public Output<ClusterIdentityServiceConfigGetArgs> getIdentityServiceConfig() {
+        return this.identityServiceConfig == null ? Output.empty() : this.identityServiceConfig;
     }
 
     /**
@@ -320,10 +320,10 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="initialNodeCount")
-      private final @Nullable Input<Integer> initialNodeCount;
+      private final @Nullable Output<Integer> initialNodeCount;
 
-    public Input<Integer> getInitialNodeCount() {
-        return this.initialNodeCount == null ? Input.empty() : this.initialNodeCount;
+    public Output<Integer> getInitialNodeCount() {
+        return this.initialNodeCount == null ? Output.empty() : this.initialNodeCount;
     }
 
     /**
@@ -334,10 +334,10 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ipAllocationPolicy")
-      private final @Nullable Input<ClusterIpAllocationPolicyGetArgs> ipAllocationPolicy;
+      private final @Nullable Output<ClusterIpAllocationPolicyGetArgs> ipAllocationPolicy;
 
-    public Input<ClusterIpAllocationPolicyGetArgs> getIpAllocationPolicy() {
-        return this.ipAllocationPolicy == null ? Input.empty() : this.ipAllocationPolicy;
+    public Output<ClusterIpAllocationPolicyGetArgs> getIpAllocationPolicy() {
+        return this.ipAllocationPolicy == null ? Output.empty() : this.ipAllocationPolicy;
     }
 
     /**
@@ -345,10 +345,10 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labelFingerprint")
-      private final @Nullable Input<String> labelFingerprint;
+      private final @Nullable Output<String> labelFingerprint;
 
-    public Input<String> getLabelFingerprint() {
-        return this.labelFingerprint == null ? Input.empty() : this.labelFingerprint;
+    public Output<String> getLabelFingerprint() {
+        return this.labelFingerprint == null ? Output.empty() : this.labelFingerprint;
     }
 
     /**
@@ -361,10 +361,10 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -373,10 +373,10 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="loggingConfig")
-      private final @Nullable Input<ClusterLoggingConfigGetArgs> loggingConfig;
+      private final @Nullable Output<ClusterLoggingConfigGetArgs> loggingConfig;
 
-    public Input<ClusterLoggingConfigGetArgs> getLoggingConfig() {
-        return this.loggingConfig == null ? Input.empty() : this.loggingConfig;
+    public Output<ClusterLoggingConfigGetArgs> getLoggingConfig() {
+        return this.loggingConfig == null ? Output.empty() : this.loggingConfig;
     }
 
     /**
@@ -386,10 +386,10 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="loggingService")
-      private final @Nullable Input<String> loggingService;
+      private final @Nullable Output<String> loggingService;
 
-    public Input<String> getLoggingService() {
-        return this.loggingService == null ? Input.empty() : this.loggingService;
+    public Output<String> getLoggingService() {
+        return this.loggingService == null ? Output.empty() : this.loggingService;
     }
 
     /**
@@ -398,10 +398,10 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="maintenancePolicy")
-      private final @Nullable Input<ClusterMaintenancePolicyGetArgs> maintenancePolicy;
+      private final @Nullable Output<ClusterMaintenancePolicyGetArgs> maintenancePolicy;
 
-    public Input<ClusterMaintenancePolicyGetArgs> getMaintenancePolicy() {
-        return this.maintenancePolicy == null ? Input.empty() : this.maintenancePolicy;
+    public Output<ClusterMaintenancePolicyGetArgs> getMaintenancePolicy() {
+        return this.maintenancePolicy == null ? Output.empty() : this.maintenancePolicy;
     }
 
     /**
@@ -414,10 +414,10 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="masterAuth")
-      private final @Nullable Input<ClusterMasterAuthGetArgs> masterAuth;
+      private final @Nullable Output<ClusterMasterAuthGetArgs> masterAuth;
 
-    public Input<ClusterMasterAuthGetArgs> getMasterAuth() {
-        return this.masterAuth == null ? Input.empty() : this.masterAuth;
+    public Output<ClusterMasterAuthGetArgs> getMasterAuth() {
+        return this.masterAuth == null ? Output.empty() : this.masterAuth;
     }
 
     /**
@@ -429,10 +429,10 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="masterAuthorizedNetworksConfig")
-      private final @Nullable Input<ClusterMasterAuthorizedNetworksConfigGetArgs> masterAuthorizedNetworksConfig;
+      private final @Nullable Output<ClusterMasterAuthorizedNetworksConfigGetArgs> masterAuthorizedNetworksConfig;
 
-    public Input<ClusterMasterAuthorizedNetworksConfigGetArgs> getMasterAuthorizedNetworksConfig() {
-        return this.masterAuthorizedNetworksConfig == null ? Input.empty() : this.masterAuthorizedNetworksConfig;
+    public Output<ClusterMasterAuthorizedNetworksConfigGetArgs> getMasterAuthorizedNetworksConfig() {
+        return this.masterAuthorizedNetworksConfig == null ? Output.empty() : this.masterAuthorizedNetworksConfig;
     }
 
     /**
@@ -442,10 +442,10 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="masterVersion")
-      private final @Nullable Input<String> masterVersion;
+      private final @Nullable Output<String> masterVersion;
 
-    public Input<String> getMasterVersion() {
-        return this.masterVersion == null ? Input.empty() : this.masterVersion;
+    public Output<String> getMasterVersion() {
+        return this.masterVersion == null ? Output.empty() : this.masterVersion;
     }
 
     /**
@@ -461,10 +461,10 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="minMasterVersion")
-      private final @Nullable Input<String> minMasterVersion;
+      private final @Nullable Output<String> minMasterVersion;
 
-    public Input<String> getMinMasterVersion() {
-        return this.minMasterVersion == null ? Input.empty() : this.minMasterVersion;
+    public Output<String> getMinMasterVersion() {
+        return this.minMasterVersion == null ? Output.empty() : this.minMasterVersion;
     }
 
     /**
@@ -473,10 +473,10 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="monitoringConfig")
-      private final @Nullable Input<ClusterMonitoringConfigGetArgs> monitoringConfig;
+      private final @Nullable Output<ClusterMonitoringConfigGetArgs> monitoringConfig;
 
-    public Input<ClusterMonitoringConfigGetArgs> getMonitoringConfig() {
-        return this.monitoringConfig == null ? Input.empty() : this.monitoringConfig;
+    public Output<ClusterMonitoringConfigGetArgs> getMonitoringConfig() {
+        return this.monitoringConfig == null ? Output.empty() : this.monitoringConfig;
     }
 
     /**
@@ -490,10 +490,10 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="monitoringService")
-      private final @Nullable Input<String> monitoringService;
+      private final @Nullable Output<String> monitoringService;
 
-    public Input<String> getMonitoringService() {
-        return this.monitoringService == null ? Input.empty() : this.monitoringService;
+    public Output<String> getMonitoringService() {
+        return this.monitoringService == null ? Output.empty() : this.monitoringService;
     }
 
     /**
@@ -502,10 +502,10 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -515,10 +515,10 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="network")
-      private final @Nullable Input<String> network;
+      private final @Nullable Output<String> network;
 
-    public Input<String> getNetwork() {
-        return this.network == null ? Input.empty() : this.network;
+    public Output<String> getNetwork() {
+        return this.network == null ? Output.empty() : this.network;
     }
 
     /**
@@ -528,10 +528,10 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="networkPolicy")
-      private final @Nullable Input<ClusterNetworkPolicyGetArgs> networkPolicy;
+      private final @Nullable Output<ClusterNetworkPolicyGetArgs> networkPolicy;
 
-    public Input<ClusterNetworkPolicyGetArgs> getNetworkPolicy() {
-        return this.networkPolicy == null ? Input.empty() : this.networkPolicy;
+    public Output<ClusterNetworkPolicyGetArgs> getNetworkPolicy() {
+        return this.networkPolicy == null ? Output.empty() : this.networkPolicy;
     }
 
     /**
@@ -541,10 +541,10 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="networkingMode")
-      private final @Nullable Input<String> networkingMode;
+      private final @Nullable Output<String> networkingMode;
 
-    public Input<String> getNetworkingMode() {
-        return this.networkingMode == null ? Input.empty() : this.networkingMode;
+    public Output<String> getNetworkingMode() {
+        return this.networkingMode == null ? Output.empty() : this.networkingMode;
     }
 
     /**
@@ -556,10 +556,10 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="nodeConfig")
-      private final @Nullable Input<ClusterNodeConfigGetArgs> nodeConfig;
+      private final @Nullable Output<ClusterNodeConfigGetArgs> nodeConfig;
 
-    public Input<ClusterNodeConfigGetArgs> getNodeConfig() {
-        return this.nodeConfig == null ? Input.empty() : this.nodeConfig;
+    public Output<ClusterNodeConfigGetArgs> getNodeConfig() {
+        return this.nodeConfig == null ? Output.empty() : this.nodeConfig;
     }
 
     /**
@@ -570,10 +570,10 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="nodeLocations")
-      private final @Nullable Input<List<String>> nodeLocations;
+      private final @Nullable Output<List<String>> nodeLocations;
 
-    public Input<List<String>> getNodeLocations() {
-        return this.nodeLocations == null ? Input.empty() : this.nodeLocations;
+    public Output<List<String>> getNodeLocations() {
+        return this.nodeLocations == null ? Output.empty() : this.nodeLocations;
     }
 
     /**
@@ -586,10 +586,10 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="nodePools")
-      private final @Nullable Input<List<ClusterNodePoolGetArgs>> nodePools;
+      private final @Nullable Output<List<ClusterNodePoolGetArgs>> nodePools;
 
-    public Input<List<ClusterNodePoolGetArgs>> getNodePools() {
-        return this.nodePools == null ? Input.empty() : this.nodePools;
+    public Output<List<ClusterNodePoolGetArgs>> getNodePools() {
+        return this.nodePools == null ? Output.empty() : this.nodePools;
     }
 
     /**
@@ -604,10 +604,10 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="nodeVersion")
-      private final @Nullable Input<String> nodeVersion;
+      private final @Nullable Output<String> nodeVersion;
 
-    public Input<String> getNodeVersion() {
-        return this.nodeVersion == null ? Input.empty() : this.nodeVersion;
+    public Output<String> getNodeVersion() {
+        return this.nodeVersion == null ? Output.empty() : this.nodeVersion;
     }
 
     /**
@@ -615,17 +615,17 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="notificationConfig")
-      private final @Nullable Input<ClusterNotificationConfigGetArgs> notificationConfig;
+      private final @Nullable Output<ClusterNotificationConfigGetArgs> notificationConfig;
 
-    public Input<ClusterNotificationConfigGetArgs> getNotificationConfig() {
-        return this.notificationConfig == null ? Input.empty() : this.notificationConfig;
+    public Output<ClusterNotificationConfigGetArgs> getNotificationConfig() {
+        return this.notificationConfig == null ? Output.empty() : this.notificationConfig;
     }
 
     @InputImport(name="operation")
-      private final @Nullable Input<String> operation;
+      private final @Nullable Output<String> operation;
 
-    public Input<String> getOperation() {
-        return this.operation == null ? Input.empty() : this.operation;
+    public Output<String> getOperation() {
+        return this.operation == null ? Output.empty() : this.operation;
     }
 
     /**
@@ -635,10 +635,10 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="podSecurityPolicyConfig")
-      private final @Nullable Input<ClusterPodSecurityPolicyConfigGetArgs> podSecurityPolicyConfig;
+      private final @Nullable Output<ClusterPodSecurityPolicyConfigGetArgs> podSecurityPolicyConfig;
 
-    public Input<ClusterPodSecurityPolicyConfigGetArgs> getPodSecurityPolicyConfig() {
-        return this.podSecurityPolicyConfig == null ? Input.empty() : this.podSecurityPolicyConfig;
+    public Output<ClusterPodSecurityPolicyConfigGetArgs> getPodSecurityPolicyConfig() {
+        return this.podSecurityPolicyConfig == null ? Output.empty() : this.podSecurityPolicyConfig;
     }
 
     /**
@@ -647,10 +647,10 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="privateClusterConfig")
-      private final @Nullable Input<ClusterPrivateClusterConfigGetArgs> privateClusterConfig;
+      private final @Nullable Output<ClusterPrivateClusterConfigGetArgs> privateClusterConfig;
 
-    public Input<ClusterPrivateClusterConfigGetArgs> getPrivateClusterConfig() {
-        return this.privateClusterConfig == null ? Input.empty() : this.privateClusterConfig;
+    public Output<ClusterPrivateClusterConfigGetArgs> getPrivateClusterConfig() {
+        return this.privateClusterConfig == null ? Output.empty() : this.privateClusterConfig;
     }
 
     /**
@@ -658,10 +658,10 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="privateIpv6GoogleAccess")
-      private final @Nullable Input<String> privateIpv6GoogleAccess;
+      private final @Nullable Output<String> privateIpv6GoogleAccess;
 
-    public Input<String> getPrivateIpv6GoogleAccess() {
-        return this.privateIpv6GoogleAccess == null ? Input.empty() : this.privateIpv6GoogleAccess;
+    public Output<String> getPrivateIpv6GoogleAccess() {
+        return this.privateIpv6GoogleAccess == null ? Output.empty() : this.privateIpv6GoogleAccess;
     }
 
     /**
@@ -670,10 +670,10 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -689,10 +689,10 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="releaseChannel")
-      private final @Nullable Input<ClusterReleaseChannelGetArgs> releaseChannel;
+      private final @Nullable Output<ClusterReleaseChannelGetArgs> releaseChannel;
 
-    public Input<ClusterReleaseChannelGetArgs> getReleaseChannel() {
-        return this.releaseChannel == null ? Input.empty() : this.releaseChannel;
+    public Output<ClusterReleaseChannelGetArgs> getReleaseChannel() {
+        return this.releaseChannel == null ? Output.empty() : this.releaseChannel;
     }
 
     /**
@@ -703,10 +703,10 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="removeDefaultNodePool")
-      private final @Nullable Input<Boolean> removeDefaultNodePool;
+      private final @Nullable Output<Boolean> removeDefaultNodePool;
 
-    public Input<Boolean> getRemoveDefaultNodePool() {
-        return this.removeDefaultNodePool == null ? Input.empty() : this.removeDefaultNodePool;
+    public Output<Boolean> getRemoveDefaultNodePool() {
+        return this.removeDefaultNodePool == null ? Output.empty() : this.removeDefaultNodePool;
     }
 
     /**
@@ -714,10 +714,10 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceLabels")
-      private final @Nullable Input<Map<String,String>> resourceLabels;
+      private final @Nullable Output<Map<String,String>> resourceLabels;
 
-    public Input<Map<String,String>> getResourceLabels() {
-        return this.resourceLabels == null ? Input.empty() : this.resourceLabels;
+    public Output<Map<String,String>> getResourceLabels() {
+        return this.resourceLabels == null ? Output.empty() : this.resourceLabels;
     }
 
     /**
@@ -727,10 +727,10 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceUsageExportConfig")
-      private final @Nullable Input<ClusterResourceUsageExportConfigGetArgs> resourceUsageExportConfig;
+      private final @Nullable Output<ClusterResourceUsageExportConfigGetArgs> resourceUsageExportConfig;
 
-    public Input<ClusterResourceUsageExportConfigGetArgs> getResourceUsageExportConfig() {
-        return this.resourceUsageExportConfig == null ? Input.empty() : this.resourceUsageExportConfig;
+    public Output<ClusterResourceUsageExportConfigGetArgs> getResourceUsageExportConfig() {
+        return this.resourceUsageExportConfig == null ? Output.empty() : this.resourceUsageExportConfig;
     }
 
     /**
@@ -738,10 +738,10 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="selfLink")
-      private final @Nullable Input<String> selfLink;
+      private final @Nullable Output<String> selfLink;
 
-    public Input<String> getSelfLink() {
-        return this.selfLink == null ? Input.empty() : this.selfLink;
+    public Output<String> getSelfLink() {
+        return this.selfLink == null ? Output.empty() : this.selfLink;
     }
 
     /**
@@ -752,10 +752,10 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="servicesIpv4Cidr")
-      private final @Nullable Input<String> servicesIpv4Cidr;
+      private final @Nullable Output<String> servicesIpv4Cidr;
 
-    public Input<String> getServicesIpv4Cidr() {
-        return this.servicesIpv4Cidr == null ? Input.empty() : this.servicesIpv4Cidr;
+    public Output<String> getServicesIpv4Cidr() {
+        return this.servicesIpv4Cidr == null ? Output.empty() : this.servicesIpv4Cidr;
     }
 
     /**
@@ -764,10 +764,10 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="subnetwork")
-      private final @Nullable Input<String> subnetwork;
+      private final @Nullable Output<String> subnetwork;
 
-    public Input<String> getSubnetwork() {
-        return this.subnetwork == null ? Input.empty() : this.subnetwork;
+    public Output<String> getSubnetwork() {
+        return this.subnetwork == null ? Output.empty() : this.subnetwork;
     }
 
     /**
@@ -777,10 +777,10 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tpuIpv4CidrBlock")
-      private final @Nullable Input<String> tpuIpv4CidrBlock;
+      private final @Nullable Output<String> tpuIpv4CidrBlock;
 
-    public Input<String> getTpuIpv4CidrBlock() {
-        return this.tpuIpv4CidrBlock == null ? Input.empty() : this.tpuIpv4CidrBlock;
+    public Output<String> getTpuIpv4CidrBlock() {
+        return this.tpuIpv4CidrBlock == null ? Output.empty() : this.tpuIpv4CidrBlock;
     }
 
     /**
@@ -789,10 +789,10 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="verticalPodAutoscaling")
-      private final @Nullable Input<ClusterVerticalPodAutoscalingGetArgs> verticalPodAutoscaling;
+      private final @Nullable Output<ClusterVerticalPodAutoscalingGetArgs> verticalPodAutoscaling;
 
-    public Input<ClusterVerticalPodAutoscalingGetArgs> getVerticalPodAutoscaling() {
-        return this.verticalPodAutoscaling == null ? Input.empty() : this.verticalPodAutoscaling;
+    public Output<ClusterVerticalPodAutoscalingGetArgs> getVerticalPodAutoscaling() {
+        return this.verticalPodAutoscaling == null ? Output.empty() : this.verticalPodAutoscaling;
     }
 
     /**
@@ -802,72 +802,72 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="workloadIdentityConfig")
-      private final @Nullable Input<ClusterWorkloadIdentityConfigGetArgs> workloadIdentityConfig;
+      private final @Nullable Output<ClusterWorkloadIdentityConfigGetArgs> workloadIdentityConfig;
 
-    public Input<ClusterWorkloadIdentityConfigGetArgs> getWorkloadIdentityConfig() {
-        return this.workloadIdentityConfig == null ? Input.empty() : this.workloadIdentityConfig;
+    public Output<ClusterWorkloadIdentityConfigGetArgs> getWorkloadIdentityConfig() {
+        return this.workloadIdentityConfig == null ? Output.empty() : this.workloadIdentityConfig;
     }
 
     public ClusterState(
-        @Nullable Input<ClusterAddonsConfigGetArgs> addonsConfig,
-        @Nullable Input<ClusterAuthenticatorGroupsConfigGetArgs> authenticatorGroupsConfig,
-        @Nullable Input<ClusterClusterAutoscalingGetArgs> clusterAutoscaling,
-        @Nullable Input<String> clusterIpv4Cidr,
-        @Nullable Input<ClusterClusterTelemetryGetArgs> clusterTelemetry,
-        @Nullable Input<ClusterConfidentialNodesGetArgs> confidentialNodes,
-        @Nullable Input<ClusterDatabaseEncryptionGetArgs> databaseEncryption,
-        @Nullable Input<String> datapathProvider,
-        @Nullable Input<Integer> defaultMaxPodsPerNode,
-        @Nullable Input<ClusterDefaultSnatStatusGetArgs> defaultSnatStatus,
-        @Nullable Input<String> description,
-        @Nullable Input<ClusterDnsConfigGetArgs> dnsConfig,
-        @Nullable Input<Boolean> enableAutopilot,
-        @Nullable Input<Boolean> enableBinaryAuthorization,
-        @Nullable Input<Boolean> enableIntranodeVisibility,
-        @Nullable Input<Boolean> enableKubernetesAlpha,
-        @Nullable Input<Boolean> enableL4IlbSubsetting,
-        @Nullable Input<Boolean> enableLegacyAbac,
-        @Nullable Input<Boolean> enableShieldedNodes,
-        @Nullable Input<Boolean> enableTpu,
-        @Nullable Input<String> endpoint,
-        @Nullable Input<ClusterIdentityServiceConfigGetArgs> identityServiceConfig,
-        @Nullable Input<Integer> initialNodeCount,
-        @Nullable Input<ClusterIpAllocationPolicyGetArgs> ipAllocationPolicy,
-        @Nullable Input<String> labelFingerprint,
-        @Nullable Input<String> location,
-        @Nullable Input<ClusterLoggingConfigGetArgs> loggingConfig,
-        @Nullable Input<String> loggingService,
-        @Nullable Input<ClusterMaintenancePolicyGetArgs> maintenancePolicy,
-        @Nullable Input<ClusterMasterAuthGetArgs> masterAuth,
-        @Nullable Input<ClusterMasterAuthorizedNetworksConfigGetArgs> masterAuthorizedNetworksConfig,
-        @Nullable Input<String> masterVersion,
-        @Nullable Input<String> minMasterVersion,
-        @Nullable Input<ClusterMonitoringConfigGetArgs> monitoringConfig,
-        @Nullable Input<String> monitoringService,
-        @Nullable Input<String> name,
-        @Nullable Input<String> network,
-        @Nullable Input<ClusterNetworkPolicyGetArgs> networkPolicy,
-        @Nullable Input<String> networkingMode,
-        @Nullable Input<ClusterNodeConfigGetArgs> nodeConfig,
-        @Nullable Input<List<String>> nodeLocations,
-        @Nullable Input<List<ClusterNodePoolGetArgs>> nodePools,
-        @Nullable Input<String> nodeVersion,
-        @Nullable Input<ClusterNotificationConfigGetArgs> notificationConfig,
-        @Nullable Input<String> operation,
-        @Nullable Input<ClusterPodSecurityPolicyConfigGetArgs> podSecurityPolicyConfig,
-        @Nullable Input<ClusterPrivateClusterConfigGetArgs> privateClusterConfig,
-        @Nullable Input<String> privateIpv6GoogleAccess,
-        @Nullable Input<String> project,
-        @Nullable Input<ClusterReleaseChannelGetArgs> releaseChannel,
-        @Nullable Input<Boolean> removeDefaultNodePool,
-        @Nullable Input<Map<String,String>> resourceLabels,
-        @Nullable Input<ClusterResourceUsageExportConfigGetArgs> resourceUsageExportConfig,
-        @Nullable Input<String> selfLink,
-        @Nullable Input<String> servicesIpv4Cidr,
-        @Nullable Input<String> subnetwork,
-        @Nullable Input<String> tpuIpv4CidrBlock,
-        @Nullable Input<ClusterVerticalPodAutoscalingGetArgs> verticalPodAutoscaling,
-        @Nullable Input<ClusterWorkloadIdentityConfigGetArgs> workloadIdentityConfig) {
+        @Nullable Output<ClusterAddonsConfigGetArgs> addonsConfig,
+        @Nullable Output<ClusterAuthenticatorGroupsConfigGetArgs> authenticatorGroupsConfig,
+        @Nullable Output<ClusterClusterAutoscalingGetArgs> clusterAutoscaling,
+        @Nullable Output<String> clusterIpv4Cidr,
+        @Nullable Output<ClusterClusterTelemetryGetArgs> clusterTelemetry,
+        @Nullable Output<ClusterConfidentialNodesGetArgs> confidentialNodes,
+        @Nullable Output<ClusterDatabaseEncryptionGetArgs> databaseEncryption,
+        @Nullable Output<String> datapathProvider,
+        @Nullable Output<Integer> defaultMaxPodsPerNode,
+        @Nullable Output<ClusterDefaultSnatStatusGetArgs> defaultSnatStatus,
+        @Nullable Output<String> description,
+        @Nullable Output<ClusterDnsConfigGetArgs> dnsConfig,
+        @Nullable Output<Boolean> enableAutopilot,
+        @Nullable Output<Boolean> enableBinaryAuthorization,
+        @Nullable Output<Boolean> enableIntranodeVisibility,
+        @Nullable Output<Boolean> enableKubernetesAlpha,
+        @Nullable Output<Boolean> enableL4IlbSubsetting,
+        @Nullable Output<Boolean> enableLegacyAbac,
+        @Nullable Output<Boolean> enableShieldedNodes,
+        @Nullable Output<Boolean> enableTpu,
+        @Nullable Output<String> endpoint,
+        @Nullable Output<ClusterIdentityServiceConfigGetArgs> identityServiceConfig,
+        @Nullable Output<Integer> initialNodeCount,
+        @Nullable Output<ClusterIpAllocationPolicyGetArgs> ipAllocationPolicy,
+        @Nullable Output<String> labelFingerprint,
+        @Nullable Output<String> location,
+        @Nullable Output<ClusterLoggingConfigGetArgs> loggingConfig,
+        @Nullable Output<String> loggingService,
+        @Nullable Output<ClusterMaintenancePolicyGetArgs> maintenancePolicy,
+        @Nullable Output<ClusterMasterAuthGetArgs> masterAuth,
+        @Nullable Output<ClusterMasterAuthorizedNetworksConfigGetArgs> masterAuthorizedNetworksConfig,
+        @Nullable Output<String> masterVersion,
+        @Nullable Output<String> minMasterVersion,
+        @Nullable Output<ClusterMonitoringConfigGetArgs> monitoringConfig,
+        @Nullable Output<String> monitoringService,
+        @Nullable Output<String> name,
+        @Nullable Output<String> network,
+        @Nullable Output<ClusterNetworkPolicyGetArgs> networkPolicy,
+        @Nullable Output<String> networkingMode,
+        @Nullable Output<ClusterNodeConfigGetArgs> nodeConfig,
+        @Nullable Output<List<String>> nodeLocations,
+        @Nullable Output<List<ClusterNodePoolGetArgs>> nodePools,
+        @Nullable Output<String> nodeVersion,
+        @Nullable Output<ClusterNotificationConfigGetArgs> notificationConfig,
+        @Nullable Output<String> operation,
+        @Nullable Output<ClusterPodSecurityPolicyConfigGetArgs> podSecurityPolicyConfig,
+        @Nullable Output<ClusterPrivateClusterConfigGetArgs> privateClusterConfig,
+        @Nullable Output<String> privateIpv6GoogleAccess,
+        @Nullable Output<String> project,
+        @Nullable Output<ClusterReleaseChannelGetArgs> releaseChannel,
+        @Nullable Output<Boolean> removeDefaultNodePool,
+        @Nullable Output<Map<String,String>> resourceLabels,
+        @Nullable Output<ClusterResourceUsageExportConfigGetArgs> resourceUsageExportConfig,
+        @Nullable Output<String> selfLink,
+        @Nullable Output<String> servicesIpv4Cidr,
+        @Nullable Output<String> subnetwork,
+        @Nullable Output<String> tpuIpv4CidrBlock,
+        @Nullable Output<ClusterVerticalPodAutoscalingGetArgs> verticalPodAutoscaling,
+        @Nullable Output<ClusterWorkloadIdentityConfigGetArgs> workloadIdentityConfig) {
         this.addonsConfig = addonsConfig;
         this.authenticatorGroupsConfig = authenticatorGroupsConfig;
         this.clusterAutoscaling = clusterAutoscaling;
@@ -930,65 +930,65 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
     }
 
     private ClusterState() {
-        this.addonsConfig = Input.empty();
-        this.authenticatorGroupsConfig = Input.empty();
-        this.clusterAutoscaling = Input.empty();
-        this.clusterIpv4Cidr = Input.empty();
-        this.clusterTelemetry = Input.empty();
-        this.confidentialNodes = Input.empty();
-        this.databaseEncryption = Input.empty();
-        this.datapathProvider = Input.empty();
-        this.defaultMaxPodsPerNode = Input.empty();
-        this.defaultSnatStatus = Input.empty();
-        this.description = Input.empty();
-        this.dnsConfig = Input.empty();
-        this.enableAutopilot = Input.empty();
-        this.enableBinaryAuthorization = Input.empty();
-        this.enableIntranodeVisibility = Input.empty();
-        this.enableKubernetesAlpha = Input.empty();
-        this.enableL4IlbSubsetting = Input.empty();
-        this.enableLegacyAbac = Input.empty();
-        this.enableShieldedNodes = Input.empty();
-        this.enableTpu = Input.empty();
-        this.endpoint = Input.empty();
-        this.identityServiceConfig = Input.empty();
-        this.initialNodeCount = Input.empty();
-        this.ipAllocationPolicy = Input.empty();
-        this.labelFingerprint = Input.empty();
-        this.location = Input.empty();
-        this.loggingConfig = Input.empty();
-        this.loggingService = Input.empty();
-        this.maintenancePolicy = Input.empty();
-        this.masterAuth = Input.empty();
-        this.masterAuthorizedNetworksConfig = Input.empty();
-        this.masterVersion = Input.empty();
-        this.minMasterVersion = Input.empty();
-        this.monitoringConfig = Input.empty();
-        this.monitoringService = Input.empty();
-        this.name = Input.empty();
-        this.network = Input.empty();
-        this.networkPolicy = Input.empty();
-        this.networkingMode = Input.empty();
-        this.nodeConfig = Input.empty();
-        this.nodeLocations = Input.empty();
-        this.nodePools = Input.empty();
-        this.nodeVersion = Input.empty();
-        this.notificationConfig = Input.empty();
-        this.operation = Input.empty();
-        this.podSecurityPolicyConfig = Input.empty();
-        this.privateClusterConfig = Input.empty();
-        this.privateIpv6GoogleAccess = Input.empty();
-        this.project = Input.empty();
-        this.releaseChannel = Input.empty();
-        this.removeDefaultNodePool = Input.empty();
-        this.resourceLabels = Input.empty();
-        this.resourceUsageExportConfig = Input.empty();
-        this.selfLink = Input.empty();
-        this.servicesIpv4Cidr = Input.empty();
-        this.subnetwork = Input.empty();
-        this.tpuIpv4CidrBlock = Input.empty();
-        this.verticalPodAutoscaling = Input.empty();
-        this.workloadIdentityConfig = Input.empty();
+        this.addonsConfig = Output.empty();
+        this.authenticatorGroupsConfig = Output.empty();
+        this.clusterAutoscaling = Output.empty();
+        this.clusterIpv4Cidr = Output.empty();
+        this.clusterTelemetry = Output.empty();
+        this.confidentialNodes = Output.empty();
+        this.databaseEncryption = Output.empty();
+        this.datapathProvider = Output.empty();
+        this.defaultMaxPodsPerNode = Output.empty();
+        this.defaultSnatStatus = Output.empty();
+        this.description = Output.empty();
+        this.dnsConfig = Output.empty();
+        this.enableAutopilot = Output.empty();
+        this.enableBinaryAuthorization = Output.empty();
+        this.enableIntranodeVisibility = Output.empty();
+        this.enableKubernetesAlpha = Output.empty();
+        this.enableL4IlbSubsetting = Output.empty();
+        this.enableLegacyAbac = Output.empty();
+        this.enableShieldedNodes = Output.empty();
+        this.enableTpu = Output.empty();
+        this.endpoint = Output.empty();
+        this.identityServiceConfig = Output.empty();
+        this.initialNodeCount = Output.empty();
+        this.ipAllocationPolicy = Output.empty();
+        this.labelFingerprint = Output.empty();
+        this.location = Output.empty();
+        this.loggingConfig = Output.empty();
+        this.loggingService = Output.empty();
+        this.maintenancePolicy = Output.empty();
+        this.masterAuth = Output.empty();
+        this.masterAuthorizedNetworksConfig = Output.empty();
+        this.masterVersion = Output.empty();
+        this.minMasterVersion = Output.empty();
+        this.monitoringConfig = Output.empty();
+        this.monitoringService = Output.empty();
+        this.name = Output.empty();
+        this.network = Output.empty();
+        this.networkPolicy = Output.empty();
+        this.networkingMode = Output.empty();
+        this.nodeConfig = Output.empty();
+        this.nodeLocations = Output.empty();
+        this.nodePools = Output.empty();
+        this.nodeVersion = Output.empty();
+        this.notificationConfig = Output.empty();
+        this.operation = Output.empty();
+        this.podSecurityPolicyConfig = Output.empty();
+        this.privateClusterConfig = Output.empty();
+        this.privateIpv6GoogleAccess = Output.empty();
+        this.project = Output.empty();
+        this.releaseChannel = Output.empty();
+        this.removeDefaultNodePool = Output.empty();
+        this.resourceLabels = Output.empty();
+        this.resourceUsageExportConfig = Output.empty();
+        this.selfLink = Output.empty();
+        this.servicesIpv4Cidr = Output.empty();
+        this.subnetwork = Output.empty();
+        this.tpuIpv4CidrBlock = Output.empty();
+        this.verticalPodAutoscaling = Output.empty();
+        this.workloadIdentityConfig = Output.empty();
     }
 
     public static Builder builder() {
@@ -1000,65 +1000,65 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<ClusterAddonsConfigGetArgs> addonsConfig;
-        private @Nullable Input<ClusterAuthenticatorGroupsConfigGetArgs> authenticatorGroupsConfig;
-        private @Nullable Input<ClusterClusterAutoscalingGetArgs> clusterAutoscaling;
-        private @Nullable Input<String> clusterIpv4Cidr;
-        private @Nullable Input<ClusterClusterTelemetryGetArgs> clusterTelemetry;
-        private @Nullable Input<ClusterConfidentialNodesGetArgs> confidentialNodes;
-        private @Nullable Input<ClusterDatabaseEncryptionGetArgs> databaseEncryption;
-        private @Nullable Input<String> datapathProvider;
-        private @Nullable Input<Integer> defaultMaxPodsPerNode;
-        private @Nullable Input<ClusterDefaultSnatStatusGetArgs> defaultSnatStatus;
-        private @Nullable Input<String> description;
-        private @Nullable Input<ClusterDnsConfigGetArgs> dnsConfig;
-        private @Nullable Input<Boolean> enableAutopilot;
-        private @Nullable Input<Boolean> enableBinaryAuthorization;
-        private @Nullable Input<Boolean> enableIntranodeVisibility;
-        private @Nullable Input<Boolean> enableKubernetesAlpha;
-        private @Nullable Input<Boolean> enableL4IlbSubsetting;
-        private @Nullable Input<Boolean> enableLegacyAbac;
-        private @Nullable Input<Boolean> enableShieldedNodes;
-        private @Nullable Input<Boolean> enableTpu;
-        private @Nullable Input<String> endpoint;
-        private @Nullable Input<ClusterIdentityServiceConfigGetArgs> identityServiceConfig;
-        private @Nullable Input<Integer> initialNodeCount;
-        private @Nullable Input<ClusterIpAllocationPolicyGetArgs> ipAllocationPolicy;
-        private @Nullable Input<String> labelFingerprint;
-        private @Nullable Input<String> location;
-        private @Nullable Input<ClusterLoggingConfigGetArgs> loggingConfig;
-        private @Nullable Input<String> loggingService;
-        private @Nullable Input<ClusterMaintenancePolicyGetArgs> maintenancePolicy;
-        private @Nullable Input<ClusterMasterAuthGetArgs> masterAuth;
-        private @Nullable Input<ClusterMasterAuthorizedNetworksConfigGetArgs> masterAuthorizedNetworksConfig;
-        private @Nullable Input<String> masterVersion;
-        private @Nullable Input<String> minMasterVersion;
-        private @Nullable Input<ClusterMonitoringConfigGetArgs> monitoringConfig;
-        private @Nullable Input<String> monitoringService;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> network;
-        private @Nullable Input<ClusterNetworkPolicyGetArgs> networkPolicy;
-        private @Nullable Input<String> networkingMode;
-        private @Nullable Input<ClusterNodeConfigGetArgs> nodeConfig;
-        private @Nullable Input<List<String>> nodeLocations;
-        private @Nullable Input<List<ClusterNodePoolGetArgs>> nodePools;
-        private @Nullable Input<String> nodeVersion;
-        private @Nullable Input<ClusterNotificationConfigGetArgs> notificationConfig;
-        private @Nullable Input<String> operation;
-        private @Nullable Input<ClusterPodSecurityPolicyConfigGetArgs> podSecurityPolicyConfig;
-        private @Nullable Input<ClusterPrivateClusterConfigGetArgs> privateClusterConfig;
-        private @Nullable Input<String> privateIpv6GoogleAccess;
-        private @Nullable Input<String> project;
-        private @Nullable Input<ClusterReleaseChannelGetArgs> releaseChannel;
-        private @Nullable Input<Boolean> removeDefaultNodePool;
-        private @Nullable Input<Map<String,String>> resourceLabels;
-        private @Nullable Input<ClusterResourceUsageExportConfigGetArgs> resourceUsageExportConfig;
-        private @Nullable Input<String> selfLink;
-        private @Nullable Input<String> servicesIpv4Cidr;
-        private @Nullable Input<String> subnetwork;
-        private @Nullable Input<String> tpuIpv4CidrBlock;
-        private @Nullable Input<ClusterVerticalPodAutoscalingGetArgs> verticalPodAutoscaling;
-        private @Nullable Input<ClusterWorkloadIdentityConfigGetArgs> workloadIdentityConfig;
+        private @Nullable Output<ClusterAddonsConfigGetArgs> addonsConfig;
+        private @Nullable Output<ClusterAuthenticatorGroupsConfigGetArgs> authenticatorGroupsConfig;
+        private @Nullable Output<ClusterClusterAutoscalingGetArgs> clusterAutoscaling;
+        private @Nullable Output<String> clusterIpv4Cidr;
+        private @Nullable Output<ClusterClusterTelemetryGetArgs> clusterTelemetry;
+        private @Nullable Output<ClusterConfidentialNodesGetArgs> confidentialNodes;
+        private @Nullable Output<ClusterDatabaseEncryptionGetArgs> databaseEncryption;
+        private @Nullable Output<String> datapathProvider;
+        private @Nullable Output<Integer> defaultMaxPodsPerNode;
+        private @Nullable Output<ClusterDefaultSnatStatusGetArgs> defaultSnatStatus;
+        private @Nullable Output<String> description;
+        private @Nullable Output<ClusterDnsConfigGetArgs> dnsConfig;
+        private @Nullable Output<Boolean> enableAutopilot;
+        private @Nullable Output<Boolean> enableBinaryAuthorization;
+        private @Nullable Output<Boolean> enableIntranodeVisibility;
+        private @Nullable Output<Boolean> enableKubernetesAlpha;
+        private @Nullable Output<Boolean> enableL4IlbSubsetting;
+        private @Nullable Output<Boolean> enableLegacyAbac;
+        private @Nullable Output<Boolean> enableShieldedNodes;
+        private @Nullable Output<Boolean> enableTpu;
+        private @Nullable Output<String> endpoint;
+        private @Nullable Output<ClusterIdentityServiceConfigGetArgs> identityServiceConfig;
+        private @Nullable Output<Integer> initialNodeCount;
+        private @Nullable Output<ClusterIpAllocationPolicyGetArgs> ipAllocationPolicy;
+        private @Nullable Output<String> labelFingerprint;
+        private @Nullable Output<String> location;
+        private @Nullable Output<ClusterLoggingConfigGetArgs> loggingConfig;
+        private @Nullable Output<String> loggingService;
+        private @Nullable Output<ClusterMaintenancePolicyGetArgs> maintenancePolicy;
+        private @Nullable Output<ClusterMasterAuthGetArgs> masterAuth;
+        private @Nullable Output<ClusterMasterAuthorizedNetworksConfigGetArgs> masterAuthorizedNetworksConfig;
+        private @Nullable Output<String> masterVersion;
+        private @Nullable Output<String> minMasterVersion;
+        private @Nullable Output<ClusterMonitoringConfigGetArgs> monitoringConfig;
+        private @Nullable Output<String> monitoringService;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> network;
+        private @Nullable Output<ClusterNetworkPolicyGetArgs> networkPolicy;
+        private @Nullable Output<String> networkingMode;
+        private @Nullable Output<ClusterNodeConfigGetArgs> nodeConfig;
+        private @Nullable Output<List<String>> nodeLocations;
+        private @Nullable Output<List<ClusterNodePoolGetArgs>> nodePools;
+        private @Nullable Output<String> nodeVersion;
+        private @Nullable Output<ClusterNotificationConfigGetArgs> notificationConfig;
+        private @Nullable Output<String> operation;
+        private @Nullable Output<ClusterPodSecurityPolicyConfigGetArgs> podSecurityPolicyConfig;
+        private @Nullable Output<ClusterPrivateClusterConfigGetArgs> privateClusterConfig;
+        private @Nullable Output<String> privateIpv6GoogleAccess;
+        private @Nullable Output<String> project;
+        private @Nullable Output<ClusterReleaseChannelGetArgs> releaseChannel;
+        private @Nullable Output<Boolean> removeDefaultNodePool;
+        private @Nullable Output<Map<String,String>> resourceLabels;
+        private @Nullable Output<ClusterResourceUsageExportConfigGetArgs> resourceUsageExportConfig;
+        private @Nullable Output<String> selfLink;
+        private @Nullable Output<String> servicesIpv4Cidr;
+        private @Nullable Output<String> subnetwork;
+        private @Nullable Output<String> tpuIpv4CidrBlock;
+        private @Nullable Output<ClusterVerticalPodAutoscalingGetArgs> verticalPodAutoscaling;
+        private @Nullable Output<ClusterWorkloadIdentityConfigGetArgs> workloadIdentityConfig;
 
         public Builder() {
     	      // Empty
@@ -1127,593 +1127,593 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
     	      this.workloadIdentityConfig = defaults.workloadIdentityConfig;
         }
 
-        public Builder addonsConfig(@Nullable Input<ClusterAddonsConfigGetArgs> addonsConfig) {
+        public Builder addonsConfig(@Nullable Output<ClusterAddonsConfigGetArgs> addonsConfig) {
             this.addonsConfig = addonsConfig;
             return this;
         }
 
         public Builder addonsConfig(@Nullable ClusterAddonsConfigGetArgs addonsConfig) {
-            this.addonsConfig = Input.ofNullable(addonsConfig);
+            this.addonsConfig = Output.ofNullable(addonsConfig);
             return this;
         }
 
-        public Builder authenticatorGroupsConfig(@Nullable Input<ClusterAuthenticatorGroupsConfigGetArgs> authenticatorGroupsConfig) {
+        public Builder authenticatorGroupsConfig(@Nullable Output<ClusterAuthenticatorGroupsConfigGetArgs> authenticatorGroupsConfig) {
             this.authenticatorGroupsConfig = authenticatorGroupsConfig;
             return this;
         }
 
         public Builder authenticatorGroupsConfig(@Nullable ClusterAuthenticatorGroupsConfigGetArgs authenticatorGroupsConfig) {
-            this.authenticatorGroupsConfig = Input.ofNullable(authenticatorGroupsConfig);
+            this.authenticatorGroupsConfig = Output.ofNullable(authenticatorGroupsConfig);
             return this;
         }
 
-        public Builder clusterAutoscaling(@Nullable Input<ClusterClusterAutoscalingGetArgs> clusterAutoscaling) {
+        public Builder clusterAutoscaling(@Nullable Output<ClusterClusterAutoscalingGetArgs> clusterAutoscaling) {
             this.clusterAutoscaling = clusterAutoscaling;
             return this;
         }
 
         public Builder clusterAutoscaling(@Nullable ClusterClusterAutoscalingGetArgs clusterAutoscaling) {
-            this.clusterAutoscaling = Input.ofNullable(clusterAutoscaling);
+            this.clusterAutoscaling = Output.ofNullable(clusterAutoscaling);
             return this;
         }
 
-        public Builder clusterIpv4Cidr(@Nullable Input<String> clusterIpv4Cidr) {
+        public Builder clusterIpv4Cidr(@Nullable Output<String> clusterIpv4Cidr) {
             this.clusterIpv4Cidr = clusterIpv4Cidr;
             return this;
         }
 
         public Builder clusterIpv4Cidr(@Nullable String clusterIpv4Cidr) {
-            this.clusterIpv4Cidr = Input.ofNullable(clusterIpv4Cidr);
+            this.clusterIpv4Cidr = Output.ofNullable(clusterIpv4Cidr);
             return this;
         }
 
-        public Builder clusterTelemetry(@Nullable Input<ClusterClusterTelemetryGetArgs> clusterTelemetry) {
+        public Builder clusterTelemetry(@Nullable Output<ClusterClusterTelemetryGetArgs> clusterTelemetry) {
             this.clusterTelemetry = clusterTelemetry;
             return this;
         }
 
         public Builder clusterTelemetry(@Nullable ClusterClusterTelemetryGetArgs clusterTelemetry) {
-            this.clusterTelemetry = Input.ofNullable(clusterTelemetry);
+            this.clusterTelemetry = Output.ofNullable(clusterTelemetry);
             return this;
         }
 
-        public Builder confidentialNodes(@Nullable Input<ClusterConfidentialNodesGetArgs> confidentialNodes) {
+        public Builder confidentialNodes(@Nullable Output<ClusterConfidentialNodesGetArgs> confidentialNodes) {
             this.confidentialNodes = confidentialNodes;
             return this;
         }
 
         public Builder confidentialNodes(@Nullable ClusterConfidentialNodesGetArgs confidentialNodes) {
-            this.confidentialNodes = Input.ofNullable(confidentialNodes);
+            this.confidentialNodes = Output.ofNullable(confidentialNodes);
             return this;
         }
 
-        public Builder databaseEncryption(@Nullable Input<ClusterDatabaseEncryptionGetArgs> databaseEncryption) {
+        public Builder databaseEncryption(@Nullable Output<ClusterDatabaseEncryptionGetArgs> databaseEncryption) {
             this.databaseEncryption = databaseEncryption;
             return this;
         }
 
         public Builder databaseEncryption(@Nullable ClusterDatabaseEncryptionGetArgs databaseEncryption) {
-            this.databaseEncryption = Input.ofNullable(databaseEncryption);
+            this.databaseEncryption = Output.ofNullable(databaseEncryption);
             return this;
         }
 
-        public Builder datapathProvider(@Nullable Input<String> datapathProvider) {
+        public Builder datapathProvider(@Nullable Output<String> datapathProvider) {
             this.datapathProvider = datapathProvider;
             return this;
         }
 
         public Builder datapathProvider(@Nullable String datapathProvider) {
-            this.datapathProvider = Input.ofNullable(datapathProvider);
+            this.datapathProvider = Output.ofNullable(datapathProvider);
             return this;
         }
 
-        public Builder defaultMaxPodsPerNode(@Nullable Input<Integer> defaultMaxPodsPerNode) {
+        public Builder defaultMaxPodsPerNode(@Nullable Output<Integer> defaultMaxPodsPerNode) {
             this.defaultMaxPodsPerNode = defaultMaxPodsPerNode;
             return this;
         }
 
         public Builder defaultMaxPodsPerNode(@Nullable Integer defaultMaxPodsPerNode) {
-            this.defaultMaxPodsPerNode = Input.ofNullable(defaultMaxPodsPerNode);
+            this.defaultMaxPodsPerNode = Output.ofNullable(defaultMaxPodsPerNode);
             return this;
         }
 
-        public Builder defaultSnatStatus(@Nullable Input<ClusterDefaultSnatStatusGetArgs> defaultSnatStatus) {
+        public Builder defaultSnatStatus(@Nullable Output<ClusterDefaultSnatStatusGetArgs> defaultSnatStatus) {
             this.defaultSnatStatus = defaultSnatStatus;
             return this;
         }
 
         public Builder defaultSnatStatus(@Nullable ClusterDefaultSnatStatusGetArgs defaultSnatStatus) {
-            this.defaultSnatStatus = Input.ofNullable(defaultSnatStatus);
+            this.defaultSnatStatus = Output.ofNullable(defaultSnatStatus);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder dnsConfig(@Nullable Input<ClusterDnsConfigGetArgs> dnsConfig) {
+        public Builder dnsConfig(@Nullable Output<ClusterDnsConfigGetArgs> dnsConfig) {
             this.dnsConfig = dnsConfig;
             return this;
         }
 
         public Builder dnsConfig(@Nullable ClusterDnsConfigGetArgs dnsConfig) {
-            this.dnsConfig = Input.ofNullable(dnsConfig);
+            this.dnsConfig = Output.ofNullable(dnsConfig);
             return this;
         }
 
-        public Builder enableAutopilot(@Nullable Input<Boolean> enableAutopilot) {
+        public Builder enableAutopilot(@Nullable Output<Boolean> enableAutopilot) {
             this.enableAutopilot = enableAutopilot;
             return this;
         }
 
         public Builder enableAutopilot(@Nullable Boolean enableAutopilot) {
-            this.enableAutopilot = Input.ofNullable(enableAutopilot);
+            this.enableAutopilot = Output.ofNullable(enableAutopilot);
             return this;
         }
 
-        public Builder enableBinaryAuthorization(@Nullable Input<Boolean> enableBinaryAuthorization) {
+        public Builder enableBinaryAuthorization(@Nullable Output<Boolean> enableBinaryAuthorization) {
             this.enableBinaryAuthorization = enableBinaryAuthorization;
             return this;
         }
 
         public Builder enableBinaryAuthorization(@Nullable Boolean enableBinaryAuthorization) {
-            this.enableBinaryAuthorization = Input.ofNullable(enableBinaryAuthorization);
+            this.enableBinaryAuthorization = Output.ofNullable(enableBinaryAuthorization);
             return this;
         }
 
-        public Builder enableIntranodeVisibility(@Nullable Input<Boolean> enableIntranodeVisibility) {
+        public Builder enableIntranodeVisibility(@Nullable Output<Boolean> enableIntranodeVisibility) {
             this.enableIntranodeVisibility = enableIntranodeVisibility;
             return this;
         }
 
         public Builder enableIntranodeVisibility(@Nullable Boolean enableIntranodeVisibility) {
-            this.enableIntranodeVisibility = Input.ofNullable(enableIntranodeVisibility);
+            this.enableIntranodeVisibility = Output.ofNullable(enableIntranodeVisibility);
             return this;
         }
 
-        public Builder enableKubernetesAlpha(@Nullable Input<Boolean> enableKubernetesAlpha) {
+        public Builder enableKubernetesAlpha(@Nullable Output<Boolean> enableKubernetesAlpha) {
             this.enableKubernetesAlpha = enableKubernetesAlpha;
             return this;
         }
 
         public Builder enableKubernetesAlpha(@Nullable Boolean enableKubernetesAlpha) {
-            this.enableKubernetesAlpha = Input.ofNullable(enableKubernetesAlpha);
+            this.enableKubernetesAlpha = Output.ofNullable(enableKubernetesAlpha);
             return this;
         }
 
-        public Builder enableL4IlbSubsetting(@Nullable Input<Boolean> enableL4IlbSubsetting) {
+        public Builder enableL4IlbSubsetting(@Nullable Output<Boolean> enableL4IlbSubsetting) {
             this.enableL4IlbSubsetting = enableL4IlbSubsetting;
             return this;
         }
 
         public Builder enableL4IlbSubsetting(@Nullable Boolean enableL4IlbSubsetting) {
-            this.enableL4IlbSubsetting = Input.ofNullable(enableL4IlbSubsetting);
+            this.enableL4IlbSubsetting = Output.ofNullable(enableL4IlbSubsetting);
             return this;
         }
 
-        public Builder enableLegacyAbac(@Nullable Input<Boolean> enableLegacyAbac) {
+        public Builder enableLegacyAbac(@Nullable Output<Boolean> enableLegacyAbac) {
             this.enableLegacyAbac = enableLegacyAbac;
             return this;
         }
 
         public Builder enableLegacyAbac(@Nullable Boolean enableLegacyAbac) {
-            this.enableLegacyAbac = Input.ofNullable(enableLegacyAbac);
+            this.enableLegacyAbac = Output.ofNullable(enableLegacyAbac);
             return this;
         }
 
-        public Builder enableShieldedNodes(@Nullable Input<Boolean> enableShieldedNodes) {
+        public Builder enableShieldedNodes(@Nullable Output<Boolean> enableShieldedNodes) {
             this.enableShieldedNodes = enableShieldedNodes;
             return this;
         }
 
         public Builder enableShieldedNodes(@Nullable Boolean enableShieldedNodes) {
-            this.enableShieldedNodes = Input.ofNullable(enableShieldedNodes);
+            this.enableShieldedNodes = Output.ofNullable(enableShieldedNodes);
             return this;
         }
 
-        public Builder enableTpu(@Nullable Input<Boolean> enableTpu) {
+        public Builder enableTpu(@Nullable Output<Boolean> enableTpu) {
             this.enableTpu = enableTpu;
             return this;
         }
 
         public Builder enableTpu(@Nullable Boolean enableTpu) {
-            this.enableTpu = Input.ofNullable(enableTpu);
+            this.enableTpu = Output.ofNullable(enableTpu);
             return this;
         }
 
-        public Builder endpoint(@Nullable Input<String> endpoint) {
+        public Builder endpoint(@Nullable Output<String> endpoint) {
             this.endpoint = endpoint;
             return this;
         }
 
         public Builder endpoint(@Nullable String endpoint) {
-            this.endpoint = Input.ofNullable(endpoint);
+            this.endpoint = Output.ofNullable(endpoint);
             return this;
         }
 
-        public Builder identityServiceConfig(@Nullable Input<ClusterIdentityServiceConfigGetArgs> identityServiceConfig) {
+        public Builder identityServiceConfig(@Nullable Output<ClusterIdentityServiceConfigGetArgs> identityServiceConfig) {
             this.identityServiceConfig = identityServiceConfig;
             return this;
         }
 
         public Builder identityServiceConfig(@Nullable ClusterIdentityServiceConfigGetArgs identityServiceConfig) {
-            this.identityServiceConfig = Input.ofNullable(identityServiceConfig);
+            this.identityServiceConfig = Output.ofNullable(identityServiceConfig);
             return this;
         }
 
-        public Builder initialNodeCount(@Nullable Input<Integer> initialNodeCount) {
+        public Builder initialNodeCount(@Nullable Output<Integer> initialNodeCount) {
             this.initialNodeCount = initialNodeCount;
             return this;
         }
 
         public Builder initialNodeCount(@Nullable Integer initialNodeCount) {
-            this.initialNodeCount = Input.ofNullable(initialNodeCount);
+            this.initialNodeCount = Output.ofNullable(initialNodeCount);
             return this;
         }
 
-        public Builder ipAllocationPolicy(@Nullable Input<ClusterIpAllocationPolicyGetArgs> ipAllocationPolicy) {
+        public Builder ipAllocationPolicy(@Nullable Output<ClusterIpAllocationPolicyGetArgs> ipAllocationPolicy) {
             this.ipAllocationPolicy = ipAllocationPolicy;
             return this;
         }
 
         public Builder ipAllocationPolicy(@Nullable ClusterIpAllocationPolicyGetArgs ipAllocationPolicy) {
-            this.ipAllocationPolicy = Input.ofNullable(ipAllocationPolicy);
+            this.ipAllocationPolicy = Output.ofNullable(ipAllocationPolicy);
             return this;
         }
 
-        public Builder labelFingerprint(@Nullable Input<String> labelFingerprint) {
+        public Builder labelFingerprint(@Nullable Output<String> labelFingerprint) {
             this.labelFingerprint = labelFingerprint;
             return this;
         }
 
         public Builder labelFingerprint(@Nullable String labelFingerprint) {
-            this.labelFingerprint = Input.ofNullable(labelFingerprint);
+            this.labelFingerprint = Output.ofNullable(labelFingerprint);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder loggingConfig(@Nullable Input<ClusterLoggingConfigGetArgs> loggingConfig) {
+        public Builder loggingConfig(@Nullable Output<ClusterLoggingConfigGetArgs> loggingConfig) {
             this.loggingConfig = loggingConfig;
             return this;
         }
 
         public Builder loggingConfig(@Nullable ClusterLoggingConfigGetArgs loggingConfig) {
-            this.loggingConfig = Input.ofNullable(loggingConfig);
+            this.loggingConfig = Output.ofNullable(loggingConfig);
             return this;
         }
 
-        public Builder loggingService(@Nullable Input<String> loggingService) {
+        public Builder loggingService(@Nullable Output<String> loggingService) {
             this.loggingService = loggingService;
             return this;
         }
 
         public Builder loggingService(@Nullable String loggingService) {
-            this.loggingService = Input.ofNullable(loggingService);
+            this.loggingService = Output.ofNullable(loggingService);
             return this;
         }
 
-        public Builder maintenancePolicy(@Nullable Input<ClusterMaintenancePolicyGetArgs> maintenancePolicy) {
+        public Builder maintenancePolicy(@Nullable Output<ClusterMaintenancePolicyGetArgs> maintenancePolicy) {
             this.maintenancePolicy = maintenancePolicy;
             return this;
         }
 
         public Builder maintenancePolicy(@Nullable ClusterMaintenancePolicyGetArgs maintenancePolicy) {
-            this.maintenancePolicy = Input.ofNullable(maintenancePolicy);
+            this.maintenancePolicy = Output.ofNullable(maintenancePolicy);
             return this;
         }
 
-        public Builder masterAuth(@Nullable Input<ClusterMasterAuthGetArgs> masterAuth) {
+        public Builder masterAuth(@Nullable Output<ClusterMasterAuthGetArgs> masterAuth) {
             this.masterAuth = masterAuth;
             return this;
         }
 
         public Builder masterAuth(@Nullable ClusterMasterAuthGetArgs masterAuth) {
-            this.masterAuth = Input.ofNullable(masterAuth);
+            this.masterAuth = Output.ofNullable(masterAuth);
             return this;
         }
 
-        public Builder masterAuthorizedNetworksConfig(@Nullable Input<ClusterMasterAuthorizedNetworksConfigGetArgs> masterAuthorizedNetworksConfig) {
+        public Builder masterAuthorizedNetworksConfig(@Nullable Output<ClusterMasterAuthorizedNetworksConfigGetArgs> masterAuthorizedNetworksConfig) {
             this.masterAuthorizedNetworksConfig = masterAuthorizedNetworksConfig;
             return this;
         }
 
         public Builder masterAuthorizedNetworksConfig(@Nullable ClusterMasterAuthorizedNetworksConfigGetArgs masterAuthorizedNetworksConfig) {
-            this.masterAuthorizedNetworksConfig = Input.ofNullable(masterAuthorizedNetworksConfig);
+            this.masterAuthorizedNetworksConfig = Output.ofNullable(masterAuthorizedNetworksConfig);
             return this;
         }
 
-        public Builder masterVersion(@Nullable Input<String> masterVersion) {
+        public Builder masterVersion(@Nullable Output<String> masterVersion) {
             this.masterVersion = masterVersion;
             return this;
         }
 
         public Builder masterVersion(@Nullable String masterVersion) {
-            this.masterVersion = Input.ofNullable(masterVersion);
+            this.masterVersion = Output.ofNullable(masterVersion);
             return this;
         }
 
-        public Builder minMasterVersion(@Nullable Input<String> minMasterVersion) {
+        public Builder minMasterVersion(@Nullable Output<String> minMasterVersion) {
             this.minMasterVersion = minMasterVersion;
             return this;
         }
 
         public Builder minMasterVersion(@Nullable String minMasterVersion) {
-            this.minMasterVersion = Input.ofNullable(minMasterVersion);
+            this.minMasterVersion = Output.ofNullable(minMasterVersion);
             return this;
         }
 
-        public Builder monitoringConfig(@Nullable Input<ClusterMonitoringConfigGetArgs> monitoringConfig) {
+        public Builder monitoringConfig(@Nullable Output<ClusterMonitoringConfigGetArgs> monitoringConfig) {
             this.monitoringConfig = monitoringConfig;
             return this;
         }
 
         public Builder monitoringConfig(@Nullable ClusterMonitoringConfigGetArgs monitoringConfig) {
-            this.monitoringConfig = Input.ofNullable(monitoringConfig);
+            this.monitoringConfig = Output.ofNullable(monitoringConfig);
             return this;
         }
 
-        public Builder monitoringService(@Nullable Input<String> monitoringService) {
+        public Builder monitoringService(@Nullable Output<String> monitoringService) {
             this.monitoringService = monitoringService;
             return this;
         }
 
         public Builder monitoringService(@Nullable String monitoringService) {
-            this.monitoringService = Input.ofNullable(monitoringService);
+            this.monitoringService = Output.ofNullable(monitoringService);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder network(@Nullable Input<String> network) {
+        public Builder network(@Nullable Output<String> network) {
             this.network = network;
             return this;
         }
 
         public Builder network(@Nullable String network) {
-            this.network = Input.ofNullable(network);
+            this.network = Output.ofNullable(network);
             return this;
         }
 
-        public Builder networkPolicy(@Nullable Input<ClusterNetworkPolicyGetArgs> networkPolicy) {
+        public Builder networkPolicy(@Nullable Output<ClusterNetworkPolicyGetArgs> networkPolicy) {
             this.networkPolicy = networkPolicy;
             return this;
         }
 
         public Builder networkPolicy(@Nullable ClusterNetworkPolicyGetArgs networkPolicy) {
-            this.networkPolicy = Input.ofNullable(networkPolicy);
+            this.networkPolicy = Output.ofNullable(networkPolicy);
             return this;
         }
 
-        public Builder networkingMode(@Nullable Input<String> networkingMode) {
+        public Builder networkingMode(@Nullable Output<String> networkingMode) {
             this.networkingMode = networkingMode;
             return this;
         }
 
         public Builder networkingMode(@Nullable String networkingMode) {
-            this.networkingMode = Input.ofNullable(networkingMode);
+            this.networkingMode = Output.ofNullable(networkingMode);
             return this;
         }
 
-        public Builder nodeConfig(@Nullable Input<ClusterNodeConfigGetArgs> nodeConfig) {
+        public Builder nodeConfig(@Nullable Output<ClusterNodeConfigGetArgs> nodeConfig) {
             this.nodeConfig = nodeConfig;
             return this;
         }
 
         public Builder nodeConfig(@Nullable ClusterNodeConfigGetArgs nodeConfig) {
-            this.nodeConfig = Input.ofNullable(nodeConfig);
+            this.nodeConfig = Output.ofNullable(nodeConfig);
             return this;
         }
 
-        public Builder nodeLocations(@Nullable Input<List<String>> nodeLocations) {
+        public Builder nodeLocations(@Nullable Output<List<String>> nodeLocations) {
             this.nodeLocations = nodeLocations;
             return this;
         }
 
         public Builder nodeLocations(@Nullable List<String> nodeLocations) {
-            this.nodeLocations = Input.ofNullable(nodeLocations);
+            this.nodeLocations = Output.ofNullable(nodeLocations);
             return this;
         }
 
-        public Builder nodePools(@Nullable Input<List<ClusterNodePoolGetArgs>> nodePools) {
+        public Builder nodePools(@Nullable Output<List<ClusterNodePoolGetArgs>> nodePools) {
             this.nodePools = nodePools;
             return this;
         }
 
         public Builder nodePools(@Nullable List<ClusterNodePoolGetArgs> nodePools) {
-            this.nodePools = Input.ofNullable(nodePools);
+            this.nodePools = Output.ofNullable(nodePools);
             return this;
         }
 
-        public Builder nodeVersion(@Nullable Input<String> nodeVersion) {
+        public Builder nodeVersion(@Nullable Output<String> nodeVersion) {
             this.nodeVersion = nodeVersion;
             return this;
         }
 
         public Builder nodeVersion(@Nullable String nodeVersion) {
-            this.nodeVersion = Input.ofNullable(nodeVersion);
+            this.nodeVersion = Output.ofNullable(nodeVersion);
             return this;
         }
 
-        public Builder notificationConfig(@Nullable Input<ClusterNotificationConfigGetArgs> notificationConfig) {
+        public Builder notificationConfig(@Nullable Output<ClusterNotificationConfigGetArgs> notificationConfig) {
             this.notificationConfig = notificationConfig;
             return this;
         }
 
         public Builder notificationConfig(@Nullable ClusterNotificationConfigGetArgs notificationConfig) {
-            this.notificationConfig = Input.ofNullable(notificationConfig);
+            this.notificationConfig = Output.ofNullable(notificationConfig);
             return this;
         }
 
-        public Builder operation(@Nullable Input<String> operation) {
+        public Builder operation(@Nullable Output<String> operation) {
             this.operation = operation;
             return this;
         }
 
         public Builder operation(@Nullable String operation) {
-            this.operation = Input.ofNullable(operation);
+            this.operation = Output.ofNullable(operation);
             return this;
         }
 
-        public Builder podSecurityPolicyConfig(@Nullable Input<ClusterPodSecurityPolicyConfigGetArgs> podSecurityPolicyConfig) {
+        public Builder podSecurityPolicyConfig(@Nullable Output<ClusterPodSecurityPolicyConfigGetArgs> podSecurityPolicyConfig) {
             this.podSecurityPolicyConfig = podSecurityPolicyConfig;
             return this;
         }
 
         public Builder podSecurityPolicyConfig(@Nullable ClusterPodSecurityPolicyConfigGetArgs podSecurityPolicyConfig) {
-            this.podSecurityPolicyConfig = Input.ofNullable(podSecurityPolicyConfig);
+            this.podSecurityPolicyConfig = Output.ofNullable(podSecurityPolicyConfig);
             return this;
         }
 
-        public Builder privateClusterConfig(@Nullable Input<ClusterPrivateClusterConfigGetArgs> privateClusterConfig) {
+        public Builder privateClusterConfig(@Nullable Output<ClusterPrivateClusterConfigGetArgs> privateClusterConfig) {
             this.privateClusterConfig = privateClusterConfig;
             return this;
         }
 
         public Builder privateClusterConfig(@Nullable ClusterPrivateClusterConfigGetArgs privateClusterConfig) {
-            this.privateClusterConfig = Input.ofNullable(privateClusterConfig);
+            this.privateClusterConfig = Output.ofNullable(privateClusterConfig);
             return this;
         }
 
-        public Builder privateIpv6GoogleAccess(@Nullable Input<String> privateIpv6GoogleAccess) {
+        public Builder privateIpv6GoogleAccess(@Nullable Output<String> privateIpv6GoogleAccess) {
             this.privateIpv6GoogleAccess = privateIpv6GoogleAccess;
             return this;
         }
 
         public Builder privateIpv6GoogleAccess(@Nullable String privateIpv6GoogleAccess) {
-            this.privateIpv6GoogleAccess = Input.ofNullable(privateIpv6GoogleAccess);
+            this.privateIpv6GoogleAccess = Output.ofNullable(privateIpv6GoogleAccess);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder releaseChannel(@Nullable Input<ClusterReleaseChannelGetArgs> releaseChannel) {
+        public Builder releaseChannel(@Nullable Output<ClusterReleaseChannelGetArgs> releaseChannel) {
             this.releaseChannel = releaseChannel;
             return this;
         }
 
         public Builder releaseChannel(@Nullable ClusterReleaseChannelGetArgs releaseChannel) {
-            this.releaseChannel = Input.ofNullable(releaseChannel);
+            this.releaseChannel = Output.ofNullable(releaseChannel);
             return this;
         }
 
-        public Builder removeDefaultNodePool(@Nullable Input<Boolean> removeDefaultNodePool) {
+        public Builder removeDefaultNodePool(@Nullable Output<Boolean> removeDefaultNodePool) {
             this.removeDefaultNodePool = removeDefaultNodePool;
             return this;
         }
 
         public Builder removeDefaultNodePool(@Nullable Boolean removeDefaultNodePool) {
-            this.removeDefaultNodePool = Input.ofNullable(removeDefaultNodePool);
+            this.removeDefaultNodePool = Output.ofNullable(removeDefaultNodePool);
             return this;
         }
 
-        public Builder resourceLabels(@Nullable Input<Map<String,String>> resourceLabels) {
+        public Builder resourceLabels(@Nullable Output<Map<String,String>> resourceLabels) {
             this.resourceLabels = resourceLabels;
             return this;
         }
 
         public Builder resourceLabels(@Nullable Map<String,String> resourceLabels) {
-            this.resourceLabels = Input.ofNullable(resourceLabels);
+            this.resourceLabels = Output.ofNullable(resourceLabels);
             return this;
         }
 
-        public Builder resourceUsageExportConfig(@Nullable Input<ClusterResourceUsageExportConfigGetArgs> resourceUsageExportConfig) {
+        public Builder resourceUsageExportConfig(@Nullable Output<ClusterResourceUsageExportConfigGetArgs> resourceUsageExportConfig) {
             this.resourceUsageExportConfig = resourceUsageExportConfig;
             return this;
         }
 
         public Builder resourceUsageExportConfig(@Nullable ClusterResourceUsageExportConfigGetArgs resourceUsageExportConfig) {
-            this.resourceUsageExportConfig = Input.ofNullable(resourceUsageExportConfig);
+            this.resourceUsageExportConfig = Output.ofNullable(resourceUsageExportConfig);
             return this;
         }
 
-        public Builder selfLink(@Nullable Input<String> selfLink) {
+        public Builder selfLink(@Nullable Output<String> selfLink) {
             this.selfLink = selfLink;
             return this;
         }
 
         public Builder selfLink(@Nullable String selfLink) {
-            this.selfLink = Input.ofNullable(selfLink);
+            this.selfLink = Output.ofNullable(selfLink);
             return this;
         }
 
-        public Builder servicesIpv4Cidr(@Nullable Input<String> servicesIpv4Cidr) {
+        public Builder servicesIpv4Cidr(@Nullable Output<String> servicesIpv4Cidr) {
             this.servicesIpv4Cidr = servicesIpv4Cidr;
             return this;
         }
 
         public Builder servicesIpv4Cidr(@Nullable String servicesIpv4Cidr) {
-            this.servicesIpv4Cidr = Input.ofNullable(servicesIpv4Cidr);
+            this.servicesIpv4Cidr = Output.ofNullable(servicesIpv4Cidr);
             return this;
         }
 
-        public Builder subnetwork(@Nullable Input<String> subnetwork) {
+        public Builder subnetwork(@Nullable Output<String> subnetwork) {
             this.subnetwork = subnetwork;
             return this;
         }
 
         public Builder subnetwork(@Nullable String subnetwork) {
-            this.subnetwork = Input.ofNullable(subnetwork);
+            this.subnetwork = Output.ofNullable(subnetwork);
             return this;
         }
 
-        public Builder tpuIpv4CidrBlock(@Nullable Input<String> tpuIpv4CidrBlock) {
+        public Builder tpuIpv4CidrBlock(@Nullable Output<String> tpuIpv4CidrBlock) {
             this.tpuIpv4CidrBlock = tpuIpv4CidrBlock;
             return this;
         }
 
         public Builder tpuIpv4CidrBlock(@Nullable String tpuIpv4CidrBlock) {
-            this.tpuIpv4CidrBlock = Input.ofNullable(tpuIpv4CidrBlock);
+            this.tpuIpv4CidrBlock = Output.ofNullable(tpuIpv4CidrBlock);
             return this;
         }
 
-        public Builder verticalPodAutoscaling(@Nullable Input<ClusterVerticalPodAutoscalingGetArgs> verticalPodAutoscaling) {
+        public Builder verticalPodAutoscaling(@Nullable Output<ClusterVerticalPodAutoscalingGetArgs> verticalPodAutoscaling) {
             this.verticalPodAutoscaling = verticalPodAutoscaling;
             return this;
         }
 
         public Builder verticalPodAutoscaling(@Nullable ClusterVerticalPodAutoscalingGetArgs verticalPodAutoscaling) {
-            this.verticalPodAutoscaling = Input.ofNullable(verticalPodAutoscaling);
+            this.verticalPodAutoscaling = Output.ofNullable(verticalPodAutoscaling);
             return this;
         }
 
-        public Builder workloadIdentityConfig(@Nullable Input<ClusterWorkloadIdentityConfigGetArgs> workloadIdentityConfig) {
+        public Builder workloadIdentityConfig(@Nullable Output<ClusterWorkloadIdentityConfigGetArgs> workloadIdentityConfig) {
             this.workloadIdentityConfig = workloadIdentityConfig;
             return this;
         }
 
         public Builder workloadIdentityConfig(@Nullable ClusterWorkloadIdentityConfigGetArgs workloadIdentityConfig) {
-            this.workloadIdentityConfig = Input.ofNullable(workloadIdentityConfig);
+            this.workloadIdentityConfig = Output.ofNullable(workloadIdentityConfig);
             return this;
         }
         public ClusterState build() {

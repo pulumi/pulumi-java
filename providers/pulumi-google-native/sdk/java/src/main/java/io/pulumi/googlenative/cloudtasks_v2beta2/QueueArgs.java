@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudtasks_v2beta2;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.cloudtasks_v2beta2.inputs.AppEngineHttpTargetArgs;
 import io.pulumi.googlenative.cloudtasks_v2beta2.inputs.PullTargetArgs;
@@ -23,17 +23,17 @@ public final class QueueArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="appEngineHttpTarget")
-      private final @Nullable Input<AppEngineHttpTargetArgs> appEngineHttpTarget;
+      private final @Nullable Output<AppEngineHttpTargetArgs> appEngineHttpTarget;
 
-    public Input<AppEngineHttpTargetArgs> getAppEngineHttpTarget() {
-        return this.appEngineHttpTarget == null ? Input.empty() : this.appEngineHttpTarget;
+    public Output<AppEngineHttpTargetArgs> getAppEngineHttpTarget() {
+        return this.appEngineHttpTarget == null ? Output.empty() : this.appEngineHttpTarget;
     }
 
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -41,17 +41,17 @@ public final class QueueArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -59,10 +59,10 @@ public final class QueueArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="pullTarget")
-      private final @Nullable Input<PullTargetArgs> pullTarget;
+      private final @Nullable Output<PullTargetArgs> pullTarget;
 
-    public Input<PullTargetArgs> getPullTarget() {
-        return this.pullTarget == null ? Input.empty() : this.pullTarget;
+    public Output<PullTargetArgs> getPullTarget() {
+        return this.pullTarget == null ? Output.empty() : this.pullTarget;
     }
 
     /**
@@ -70,10 +70,10 @@ public final class QueueArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="rateLimits")
-      private final @Nullable Input<RateLimitsArgs> rateLimits;
+      private final @Nullable Output<RateLimitsArgs> rateLimits;
 
-    public Input<RateLimitsArgs> getRateLimits() {
-        return this.rateLimits == null ? Input.empty() : this.rateLimits;
+    public Output<RateLimitsArgs> getRateLimits() {
+        return this.rateLimits == null ? Output.empty() : this.rateLimits;
     }
 
     /**
@@ -81,10 +81,10 @@ public final class QueueArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="retryConfig")
-      private final @Nullable Input<RetryConfigArgs> retryConfig;
+      private final @Nullable Output<RetryConfigArgs> retryConfig;
 
-    public Input<RetryConfigArgs> getRetryConfig() {
-        return this.retryConfig == null ? Input.empty() : this.retryConfig;
+    public Output<RetryConfigArgs> getRetryConfig() {
+        return this.retryConfig == null ? Output.empty() : this.retryConfig;
     }
 
     /**
@@ -92,10 +92,10 @@ public final class QueueArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="taskTtl")
-      private final @Nullable Input<String> taskTtl;
+      private final @Nullable Output<String> taskTtl;
 
-    public Input<String> getTaskTtl() {
-        return this.taskTtl == null ? Input.empty() : this.taskTtl;
+    public Output<String> getTaskTtl() {
+        return this.taskTtl == null ? Output.empty() : this.taskTtl;
     }
 
     /**
@@ -103,22 +103,22 @@ public final class QueueArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tombstoneTtl")
-      private final @Nullable Input<String> tombstoneTtl;
+      private final @Nullable Output<String> tombstoneTtl;
 
-    public Input<String> getTombstoneTtl() {
-        return this.tombstoneTtl == null ? Input.empty() : this.tombstoneTtl;
+    public Output<String> getTombstoneTtl() {
+        return this.tombstoneTtl == null ? Output.empty() : this.tombstoneTtl;
     }
 
     public QueueArgs(
-        @Nullable Input<AppEngineHttpTargetArgs> appEngineHttpTarget,
-        @Nullable Input<String> location,
-        @Nullable Input<String> name,
-        @Nullable Input<String> project,
-        @Nullable Input<PullTargetArgs> pullTarget,
-        @Nullable Input<RateLimitsArgs> rateLimits,
-        @Nullable Input<RetryConfigArgs> retryConfig,
-        @Nullable Input<String> taskTtl,
-        @Nullable Input<String> tombstoneTtl) {
+        @Nullable Output<AppEngineHttpTargetArgs> appEngineHttpTarget,
+        @Nullable Output<String> location,
+        @Nullable Output<String> name,
+        @Nullable Output<String> project,
+        @Nullable Output<PullTargetArgs> pullTarget,
+        @Nullable Output<RateLimitsArgs> rateLimits,
+        @Nullable Output<RetryConfigArgs> retryConfig,
+        @Nullable Output<String> taskTtl,
+        @Nullable Output<String> tombstoneTtl) {
         this.appEngineHttpTarget = appEngineHttpTarget;
         this.location = location;
         this.name = name;
@@ -131,15 +131,15 @@ public final class QueueArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private QueueArgs() {
-        this.appEngineHttpTarget = Input.empty();
-        this.location = Input.empty();
-        this.name = Input.empty();
-        this.project = Input.empty();
-        this.pullTarget = Input.empty();
-        this.rateLimits = Input.empty();
-        this.retryConfig = Input.empty();
-        this.taskTtl = Input.empty();
-        this.tombstoneTtl = Input.empty();
+        this.appEngineHttpTarget = Output.empty();
+        this.location = Output.empty();
+        this.name = Output.empty();
+        this.project = Output.empty();
+        this.pullTarget = Output.empty();
+        this.rateLimits = Output.empty();
+        this.retryConfig = Output.empty();
+        this.taskTtl = Output.empty();
+        this.tombstoneTtl = Output.empty();
     }
 
     public static Builder builder() {
@@ -151,15 +151,15 @@ public final class QueueArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<AppEngineHttpTargetArgs> appEngineHttpTarget;
-        private @Nullable Input<String> location;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> project;
-        private @Nullable Input<PullTargetArgs> pullTarget;
-        private @Nullable Input<RateLimitsArgs> rateLimits;
-        private @Nullable Input<RetryConfigArgs> retryConfig;
-        private @Nullable Input<String> taskTtl;
-        private @Nullable Input<String> tombstoneTtl;
+        private @Nullable Output<AppEngineHttpTargetArgs> appEngineHttpTarget;
+        private @Nullable Output<String> location;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> project;
+        private @Nullable Output<PullTargetArgs> pullTarget;
+        private @Nullable Output<RateLimitsArgs> rateLimits;
+        private @Nullable Output<RetryConfigArgs> retryConfig;
+        private @Nullable Output<String> taskTtl;
+        private @Nullable Output<String> tombstoneTtl;
 
         public Builder() {
     	      // Empty
@@ -178,93 +178,93 @@ public final class QueueArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tombstoneTtl = defaults.tombstoneTtl;
         }
 
-        public Builder appEngineHttpTarget(@Nullable Input<AppEngineHttpTargetArgs> appEngineHttpTarget) {
+        public Builder appEngineHttpTarget(@Nullable Output<AppEngineHttpTargetArgs> appEngineHttpTarget) {
             this.appEngineHttpTarget = appEngineHttpTarget;
             return this;
         }
 
         public Builder appEngineHttpTarget(@Nullable AppEngineHttpTargetArgs appEngineHttpTarget) {
-            this.appEngineHttpTarget = Input.ofNullable(appEngineHttpTarget);
+            this.appEngineHttpTarget = Output.ofNullable(appEngineHttpTarget);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder pullTarget(@Nullable Input<PullTargetArgs> pullTarget) {
+        public Builder pullTarget(@Nullable Output<PullTargetArgs> pullTarget) {
             this.pullTarget = pullTarget;
             return this;
         }
 
         public Builder pullTarget(@Nullable PullTargetArgs pullTarget) {
-            this.pullTarget = Input.ofNullable(pullTarget);
+            this.pullTarget = Output.ofNullable(pullTarget);
             return this;
         }
 
-        public Builder rateLimits(@Nullable Input<RateLimitsArgs> rateLimits) {
+        public Builder rateLimits(@Nullable Output<RateLimitsArgs> rateLimits) {
             this.rateLimits = rateLimits;
             return this;
         }
 
         public Builder rateLimits(@Nullable RateLimitsArgs rateLimits) {
-            this.rateLimits = Input.ofNullable(rateLimits);
+            this.rateLimits = Output.ofNullable(rateLimits);
             return this;
         }
 
-        public Builder retryConfig(@Nullable Input<RetryConfigArgs> retryConfig) {
+        public Builder retryConfig(@Nullable Output<RetryConfigArgs> retryConfig) {
             this.retryConfig = retryConfig;
             return this;
         }
 
         public Builder retryConfig(@Nullable RetryConfigArgs retryConfig) {
-            this.retryConfig = Input.ofNullable(retryConfig);
+            this.retryConfig = Output.ofNullable(retryConfig);
             return this;
         }
 
-        public Builder taskTtl(@Nullable Input<String> taskTtl) {
+        public Builder taskTtl(@Nullable Output<String> taskTtl) {
             this.taskTtl = taskTtl;
             return this;
         }
 
         public Builder taskTtl(@Nullable String taskTtl) {
-            this.taskTtl = Input.ofNullable(taskTtl);
+            this.taskTtl = Output.ofNullable(taskTtl);
             return this;
         }
 
-        public Builder tombstoneTtl(@Nullable Input<String> tombstoneTtl) {
+        public Builder tombstoneTtl(@Nullable Output<String> tombstoneTtl) {
             this.tombstoneTtl = tombstoneTtl;
             return this;
         }
 
         public Builder tombstoneTtl(@Nullable String tombstoneTtl) {
-            this.tombstoneTtl = Input.ofNullable(tombstoneTtl);
+            this.tombstoneTtl = Output.ofNullable(tombstoneTtl);
             return this;
         }
         public QueueArgs build() {

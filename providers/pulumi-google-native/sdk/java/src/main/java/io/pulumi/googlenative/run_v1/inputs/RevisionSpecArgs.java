@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.run_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.run_v1.inputs.ContainerArgs;
 import io.pulumi.googlenative.run_v1.inputs.LocalObjectReferenceArgs;
@@ -29,10 +29,10 @@ public final class RevisionSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="containerConcurrency")
-      private final @Nullable Input<Integer> containerConcurrency;
+      private final @Nullable Output<Integer> containerConcurrency;
 
-    public Input<Integer> getContainerConcurrency() {
-        return this.containerConcurrency == null ? Input.empty() : this.containerConcurrency;
+    public Output<Integer> getContainerConcurrency() {
+        return this.containerConcurrency == null ? Output.empty() : this.containerConcurrency;
     }
 
     /**
@@ -40,10 +40,10 @@ public final class RevisionSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="containers")
-      private final @Nullable Input<List<ContainerArgs>> containers;
+      private final @Nullable Output<List<ContainerArgs>> containers;
 
-    public Input<List<ContainerArgs>> getContainers() {
-        return this.containers == null ? Input.empty() : this.containers;
+    public Output<List<ContainerArgs>> getContainers() {
+        return this.containers == null ? Output.empty() : this.containers;
     }
 
     /**
@@ -51,10 +51,10 @@ public final class RevisionSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enableServiceLinks")
-      private final @Nullable Input<Boolean> enableServiceLinks;
+      private final @Nullable Output<Boolean> enableServiceLinks;
 
-    public Input<Boolean> getEnableServiceLinks() {
-        return this.enableServiceLinks == null ? Input.empty() : this.enableServiceLinks;
+    public Output<Boolean> getEnableServiceLinks() {
+        return this.enableServiceLinks == null ? Output.empty() : this.enableServiceLinks;
     }
 
     /**
@@ -62,10 +62,10 @@ public final class RevisionSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="imagePullSecrets")
-      private final @Nullable Input<List<LocalObjectReferenceArgs>> imagePullSecrets;
+      private final @Nullable Output<List<LocalObjectReferenceArgs>> imagePullSecrets;
 
-    public Input<List<LocalObjectReferenceArgs>> getImagePullSecrets() {
-        return this.imagePullSecrets == null ? Input.empty() : this.imagePullSecrets;
+    public Output<List<LocalObjectReferenceArgs>> getImagePullSecrets() {
+        return this.imagePullSecrets == null ? Output.empty() : this.imagePullSecrets;
     }
 
     /**
@@ -73,10 +73,10 @@ public final class RevisionSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serviceAccountName")
-      private final @Nullable Input<String> serviceAccountName;
+      private final @Nullable Output<String> serviceAccountName;
 
-    public Input<String> getServiceAccountName() {
-        return this.serviceAccountName == null ? Input.empty() : this.serviceAccountName;
+    public Output<String> getServiceAccountName() {
+        return this.serviceAccountName == null ? Output.empty() : this.serviceAccountName;
     }
 
     /**
@@ -84,27 +84,27 @@ public final class RevisionSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="timeoutSeconds")
-      private final @Nullable Input<Integer> timeoutSeconds;
+      private final @Nullable Output<Integer> timeoutSeconds;
 
-    public Input<Integer> getTimeoutSeconds() {
-        return this.timeoutSeconds == null ? Input.empty() : this.timeoutSeconds;
+    public Output<Integer> getTimeoutSeconds() {
+        return this.timeoutSeconds == null ? Output.empty() : this.timeoutSeconds;
     }
 
     @InputImport(name="volumes")
-      private final @Nullable Input<List<VolumeArgs>> volumes;
+      private final @Nullable Output<List<VolumeArgs>> volumes;
 
-    public Input<List<VolumeArgs>> getVolumes() {
-        return this.volumes == null ? Input.empty() : this.volumes;
+    public Output<List<VolumeArgs>> getVolumes() {
+        return this.volumes == null ? Output.empty() : this.volumes;
     }
 
     public RevisionSpecArgs(
-        @Nullable Input<Integer> containerConcurrency,
-        @Nullable Input<List<ContainerArgs>> containers,
-        @Nullable Input<Boolean> enableServiceLinks,
-        @Nullable Input<List<LocalObjectReferenceArgs>> imagePullSecrets,
-        @Nullable Input<String> serviceAccountName,
-        @Nullable Input<Integer> timeoutSeconds,
-        @Nullable Input<List<VolumeArgs>> volumes) {
+        @Nullable Output<Integer> containerConcurrency,
+        @Nullable Output<List<ContainerArgs>> containers,
+        @Nullable Output<Boolean> enableServiceLinks,
+        @Nullable Output<List<LocalObjectReferenceArgs>> imagePullSecrets,
+        @Nullable Output<String> serviceAccountName,
+        @Nullable Output<Integer> timeoutSeconds,
+        @Nullable Output<List<VolumeArgs>> volumes) {
         this.containerConcurrency = containerConcurrency;
         this.containers = containers;
         this.enableServiceLinks = enableServiceLinks;
@@ -115,13 +115,13 @@ public final class RevisionSpecArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private RevisionSpecArgs() {
-        this.containerConcurrency = Input.empty();
-        this.containers = Input.empty();
-        this.enableServiceLinks = Input.empty();
-        this.imagePullSecrets = Input.empty();
-        this.serviceAccountName = Input.empty();
-        this.timeoutSeconds = Input.empty();
-        this.volumes = Input.empty();
+        this.containerConcurrency = Output.empty();
+        this.containers = Output.empty();
+        this.enableServiceLinks = Output.empty();
+        this.imagePullSecrets = Output.empty();
+        this.serviceAccountName = Output.empty();
+        this.timeoutSeconds = Output.empty();
+        this.volumes = Output.empty();
     }
 
     public static Builder builder() {
@@ -133,13 +133,13 @@ public final class RevisionSpecArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> containerConcurrency;
-        private @Nullable Input<List<ContainerArgs>> containers;
-        private @Nullable Input<Boolean> enableServiceLinks;
-        private @Nullable Input<List<LocalObjectReferenceArgs>> imagePullSecrets;
-        private @Nullable Input<String> serviceAccountName;
-        private @Nullable Input<Integer> timeoutSeconds;
-        private @Nullable Input<List<VolumeArgs>> volumes;
+        private @Nullable Output<Integer> containerConcurrency;
+        private @Nullable Output<List<ContainerArgs>> containers;
+        private @Nullable Output<Boolean> enableServiceLinks;
+        private @Nullable Output<List<LocalObjectReferenceArgs>> imagePullSecrets;
+        private @Nullable Output<String> serviceAccountName;
+        private @Nullable Output<Integer> timeoutSeconds;
+        private @Nullable Output<List<VolumeArgs>> volumes;
 
         public Builder() {
     	      // Empty
@@ -156,73 +156,73 @@ public final class RevisionSpecArgs extends io.pulumi.resources.ResourceArgs {
     	      this.volumes = defaults.volumes;
         }
 
-        public Builder containerConcurrency(@Nullable Input<Integer> containerConcurrency) {
+        public Builder containerConcurrency(@Nullable Output<Integer> containerConcurrency) {
             this.containerConcurrency = containerConcurrency;
             return this;
         }
 
         public Builder containerConcurrency(@Nullable Integer containerConcurrency) {
-            this.containerConcurrency = Input.ofNullable(containerConcurrency);
+            this.containerConcurrency = Output.ofNullable(containerConcurrency);
             return this;
         }
 
-        public Builder containers(@Nullable Input<List<ContainerArgs>> containers) {
+        public Builder containers(@Nullable Output<List<ContainerArgs>> containers) {
             this.containers = containers;
             return this;
         }
 
         public Builder containers(@Nullable List<ContainerArgs> containers) {
-            this.containers = Input.ofNullable(containers);
+            this.containers = Output.ofNullable(containers);
             return this;
         }
 
-        public Builder enableServiceLinks(@Nullable Input<Boolean> enableServiceLinks) {
+        public Builder enableServiceLinks(@Nullable Output<Boolean> enableServiceLinks) {
             this.enableServiceLinks = enableServiceLinks;
             return this;
         }
 
         public Builder enableServiceLinks(@Nullable Boolean enableServiceLinks) {
-            this.enableServiceLinks = Input.ofNullable(enableServiceLinks);
+            this.enableServiceLinks = Output.ofNullable(enableServiceLinks);
             return this;
         }
 
-        public Builder imagePullSecrets(@Nullable Input<List<LocalObjectReferenceArgs>> imagePullSecrets) {
+        public Builder imagePullSecrets(@Nullable Output<List<LocalObjectReferenceArgs>> imagePullSecrets) {
             this.imagePullSecrets = imagePullSecrets;
             return this;
         }
 
         public Builder imagePullSecrets(@Nullable List<LocalObjectReferenceArgs> imagePullSecrets) {
-            this.imagePullSecrets = Input.ofNullable(imagePullSecrets);
+            this.imagePullSecrets = Output.ofNullable(imagePullSecrets);
             return this;
         }
 
-        public Builder serviceAccountName(@Nullable Input<String> serviceAccountName) {
+        public Builder serviceAccountName(@Nullable Output<String> serviceAccountName) {
             this.serviceAccountName = serviceAccountName;
             return this;
         }
 
         public Builder serviceAccountName(@Nullable String serviceAccountName) {
-            this.serviceAccountName = Input.ofNullable(serviceAccountName);
+            this.serviceAccountName = Output.ofNullable(serviceAccountName);
             return this;
         }
 
-        public Builder timeoutSeconds(@Nullable Input<Integer> timeoutSeconds) {
+        public Builder timeoutSeconds(@Nullable Output<Integer> timeoutSeconds) {
             this.timeoutSeconds = timeoutSeconds;
             return this;
         }
 
         public Builder timeoutSeconds(@Nullable Integer timeoutSeconds) {
-            this.timeoutSeconds = Input.ofNullable(timeoutSeconds);
+            this.timeoutSeconds = Output.ofNullable(timeoutSeconds);
             return this;
         }
 
-        public Builder volumes(@Nullable Input<List<VolumeArgs>> volumes) {
+        public Builder volumes(@Nullable Output<List<VolumeArgs>> volumes) {
             this.volumes = volumes;
             return this;
         }
 
         public Builder volumes(@Nullable List<VolumeArgs> volumes) {
-            this.volumes = Input.ofNullable(volumes);
+            this.volumes = Output.ofNullable(volumes);
             return this;
         }
         public RevisionSpecArgs build() {

@@ -7,7 +7,7 @@ import io.pulumi.awsnative.databrew.inputs.JobColumnSelectorArgs;
 import io.pulumi.awsnative.databrew.inputs.JobColumnStatisticsConfigurationArgs;
 import io.pulumi.awsnative.databrew.inputs.JobEntityDetectorConfigurationArgs;
 import io.pulumi.awsnative.databrew.inputs.JobStatisticsConfigurationArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
@@ -19,38 +19,38 @@ public final class JobProfileConfigurationArgs extends io.pulumi.resources.Resou
     public static final JobProfileConfigurationArgs Empty = new JobProfileConfigurationArgs();
 
     @InputImport(name="columnStatisticsConfigurations")
-      private final @Nullable Input<List<JobColumnStatisticsConfigurationArgs>> columnStatisticsConfigurations;
+      private final @Nullable Output<List<JobColumnStatisticsConfigurationArgs>> columnStatisticsConfigurations;
 
-    public Input<List<JobColumnStatisticsConfigurationArgs>> getColumnStatisticsConfigurations() {
-        return this.columnStatisticsConfigurations == null ? Input.empty() : this.columnStatisticsConfigurations;
+    public Output<List<JobColumnStatisticsConfigurationArgs>> getColumnStatisticsConfigurations() {
+        return this.columnStatisticsConfigurations == null ? Output.empty() : this.columnStatisticsConfigurations;
     }
 
     @InputImport(name="datasetStatisticsConfiguration")
-      private final @Nullable Input<JobStatisticsConfigurationArgs> datasetStatisticsConfiguration;
+      private final @Nullable Output<JobStatisticsConfigurationArgs> datasetStatisticsConfiguration;
 
-    public Input<JobStatisticsConfigurationArgs> getDatasetStatisticsConfiguration() {
-        return this.datasetStatisticsConfiguration == null ? Input.empty() : this.datasetStatisticsConfiguration;
+    public Output<JobStatisticsConfigurationArgs> getDatasetStatisticsConfiguration() {
+        return this.datasetStatisticsConfiguration == null ? Output.empty() : this.datasetStatisticsConfiguration;
     }
 
     @InputImport(name="entityDetectorConfiguration")
-      private final @Nullable Input<JobEntityDetectorConfigurationArgs> entityDetectorConfiguration;
+      private final @Nullable Output<JobEntityDetectorConfigurationArgs> entityDetectorConfiguration;
 
-    public Input<JobEntityDetectorConfigurationArgs> getEntityDetectorConfiguration() {
-        return this.entityDetectorConfiguration == null ? Input.empty() : this.entityDetectorConfiguration;
+    public Output<JobEntityDetectorConfigurationArgs> getEntityDetectorConfiguration() {
+        return this.entityDetectorConfiguration == null ? Output.empty() : this.entityDetectorConfiguration;
     }
 
     @InputImport(name="profileColumns")
-      private final @Nullable Input<List<JobColumnSelectorArgs>> profileColumns;
+      private final @Nullable Output<List<JobColumnSelectorArgs>> profileColumns;
 
-    public Input<List<JobColumnSelectorArgs>> getProfileColumns() {
-        return this.profileColumns == null ? Input.empty() : this.profileColumns;
+    public Output<List<JobColumnSelectorArgs>> getProfileColumns() {
+        return this.profileColumns == null ? Output.empty() : this.profileColumns;
     }
 
     public JobProfileConfigurationArgs(
-        @Nullable Input<List<JobColumnStatisticsConfigurationArgs>> columnStatisticsConfigurations,
-        @Nullable Input<JobStatisticsConfigurationArgs> datasetStatisticsConfiguration,
-        @Nullable Input<JobEntityDetectorConfigurationArgs> entityDetectorConfiguration,
-        @Nullable Input<List<JobColumnSelectorArgs>> profileColumns) {
+        @Nullable Output<List<JobColumnStatisticsConfigurationArgs>> columnStatisticsConfigurations,
+        @Nullable Output<JobStatisticsConfigurationArgs> datasetStatisticsConfiguration,
+        @Nullable Output<JobEntityDetectorConfigurationArgs> entityDetectorConfiguration,
+        @Nullable Output<List<JobColumnSelectorArgs>> profileColumns) {
         this.columnStatisticsConfigurations = columnStatisticsConfigurations;
         this.datasetStatisticsConfiguration = datasetStatisticsConfiguration;
         this.entityDetectorConfiguration = entityDetectorConfiguration;
@@ -58,10 +58,10 @@ public final class JobProfileConfigurationArgs extends io.pulumi.resources.Resou
     }
 
     private JobProfileConfigurationArgs() {
-        this.columnStatisticsConfigurations = Input.empty();
-        this.datasetStatisticsConfiguration = Input.empty();
-        this.entityDetectorConfiguration = Input.empty();
-        this.profileColumns = Input.empty();
+        this.columnStatisticsConfigurations = Output.empty();
+        this.datasetStatisticsConfiguration = Output.empty();
+        this.entityDetectorConfiguration = Output.empty();
+        this.profileColumns = Output.empty();
     }
 
     public static Builder builder() {
@@ -73,10 +73,10 @@ public final class JobProfileConfigurationArgs extends io.pulumi.resources.Resou
     }
 
     public static final class Builder {
-        private @Nullable Input<List<JobColumnStatisticsConfigurationArgs>> columnStatisticsConfigurations;
-        private @Nullable Input<JobStatisticsConfigurationArgs> datasetStatisticsConfiguration;
-        private @Nullable Input<JobEntityDetectorConfigurationArgs> entityDetectorConfiguration;
-        private @Nullable Input<List<JobColumnSelectorArgs>> profileColumns;
+        private @Nullable Output<List<JobColumnStatisticsConfigurationArgs>> columnStatisticsConfigurations;
+        private @Nullable Output<JobStatisticsConfigurationArgs> datasetStatisticsConfiguration;
+        private @Nullable Output<JobEntityDetectorConfigurationArgs> entityDetectorConfiguration;
+        private @Nullable Output<List<JobColumnSelectorArgs>> profileColumns;
 
         public Builder() {
     	      // Empty
@@ -90,43 +90,43 @@ public final class JobProfileConfigurationArgs extends io.pulumi.resources.Resou
     	      this.profileColumns = defaults.profileColumns;
         }
 
-        public Builder columnStatisticsConfigurations(@Nullable Input<List<JobColumnStatisticsConfigurationArgs>> columnStatisticsConfigurations) {
+        public Builder columnStatisticsConfigurations(@Nullable Output<List<JobColumnStatisticsConfigurationArgs>> columnStatisticsConfigurations) {
             this.columnStatisticsConfigurations = columnStatisticsConfigurations;
             return this;
         }
 
         public Builder columnStatisticsConfigurations(@Nullable List<JobColumnStatisticsConfigurationArgs> columnStatisticsConfigurations) {
-            this.columnStatisticsConfigurations = Input.ofNullable(columnStatisticsConfigurations);
+            this.columnStatisticsConfigurations = Output.ofNullable(columnStatisticsConfigurations);
             return this;
         }
 
-        public Builder datasetStatisticsConfiguration(@Nullable Input<JobStatisticsConfigurationArgs> datasetStatisticsConfiguration) {
+        public Builder datasetStatisticsConfiguration(@Nullable Output<JobStatisticsConfigurationArgs> datasetStatisticsConfiguration) {
             this.datasetStatisticsConfiguration = datasetStatisticsConfiguration;
             return this;
         }
 
         public Builder datasetStatisticsConfiguration(@Nullable JobStatisticsConfigurationArgs datasetStatisticsConfiguration) {
-            this.datasetStatisticsConfiguration = Input.ofNullable(datasetStatisticsConfiguration);
+            this.datasetStatisticsConfiguration = Output.ofNullable(datasetStatisticsConfiguration);
             return this;
         }
 
-        public Builder entityDetectorConfiguration(@Nullable Input<JobEntityDetectorConfigurationArgs> entityDetectorConfiguration) {
+        public Builder entityDetectorConfiguration(@Nullable Output<JobEntityDetectorConfigurationArgs> entityDetectorConfiguration) {
             this.entityDetectorConfiguration = entityDetectorConfiguration;
             return this;
         }
 
         public Builder entityDetectorConfiguration(@Nullable JobEntityDetectorConfigurationArgs entityDetectorConfiguration) {
-            this.entityDetectorConfiguration = Input.ofNullable(entityDetectorConfiguration);
+            this.entityDetectorConfiguration = Output.ofNullable(entityDetectorConfiguration);
             return this;
         }
 
-        public Builder profileColumns(@Nullable Input<List<JobColumnSelectorArgs>> profileColumns) {
+        public Builder profileColumns(@Nullable Output<List<JobColumnSelectorArgs>> profileColumns) {
             this.profileColumns = profileColumns;
             return this;
         }
 
         public Builder profileColumns(@Nullable List<JobColumnSelectorArgs> profileColumns) {
-            this.profileColumns = Input.ofNullable(profileColumns);
+            this.profileColumns = Output.ofNullable(profileColumns);
             return this;
         }
         public JobProfileConfigurationArgs build() {

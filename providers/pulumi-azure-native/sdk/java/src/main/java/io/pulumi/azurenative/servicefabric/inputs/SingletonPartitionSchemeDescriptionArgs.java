@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.servicefabric.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class SingletonPartitionSchemeDescriptionArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="partitionScheme", required=true)
-      private final Input<String> partitionScheme;
+      private final Output<String> partitionScheme;
 
-    public Input<String> getPartitionScheme() {
+    public Output<String> getPartitionScheme() {
         return this.partitionScheme;
     }
 
-    public SingletonPartitionSchemeDescriptionArgs(Input<String> partitionScheme) {
+    public SingletonPartitionSchemeDescriptionArgs(Output<String> partitionScheme) {
         this.partitionScheme = Objects.requireNonNull(partitionScheme, "expected parameter 'partitionScheme' to be non-null");
     }
 
     private SingletonPartitionSchemeDescriptionArgs() {
-        this.partitionScheme = Input.empty();
+        this.partitionScheme = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class SingletonPartitionSchemeDescriptionArgs extends io.pulumi.res
     }
 
     public static final class Builder {
-        private Input<String> partitionScheme;
+        private Output<String> partitionScheme;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class SingletonPartitionSchemeDescriptionArgs extends io.pulumi.res
     	      this.partitionScheme = defaults.partitionScheme;
         }
 
-        public Builder partitionScheme(Input<String> partitionScheme) {
+        public Builder partitionScheme(Output<String> partitionScheme) {
             this.partitionScheme = Objects.requireNonNull(partitionScheme);
             return this;
         }
 
         public Builder partitionScheme(String partitionScheme) {
-            this.partitionScheme = Input.of(Objects.requireNonNull(partitionScheme));
+            this.partitionScheme = Output.of(Objects.requireNonNull(partitionScheme));
             return this;
         }
         public SingletonPartitionSchemeDescriptionArgs build() {

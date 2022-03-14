@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.documentdb.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class RoleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="db")
-      private final @Nullable Input<String> db;
+      private final @Nullable Output<String> db;
 
-    public Input<String> getDb() {
-        return this.db == null ? Input.empty() : this.db;
+    public Output<String> getDb() {
+        return this.db == null ? Output.empty() : this.db;
     }
 
     /**
@@ -34,22 +34,22 @@ public final class RoleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="role")
-      private final @Nullable Input<String> role;
+      private final @Nullable Output<String> role;
 
-    public Input<String> getRole() {
-        return this.role == null ? Input.empty() : this.role;
+    public Output<String> getRole() {
+        return this.role == null ? Output.empty() : this.role;
     }
 
     public RoleArgs(
-        @Nullable Input<String> db,
-        @Nullable Input<String> role) {
+        @Nullable Output<String> db,
+        @Nullable Output<String> role) {
         this.db = db;
         this.role = role;
     }
 
     private RoleArgs() {
-        this.db = Input.empty();
-        this.role = Input.empty();
+        this.db = Output.empty();
+        this.role = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class RoleArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> db;
-        private @Nullable Input<String> role;
+        private @Nullable Output<String> db;
+        private @Nullable Output<String> role;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class RoleArgs extends io.pulumi.resources.ResourceArgs {
     	      this.role = defaults.role;
         }
 
-        public Builder db(@Nullable Input<String> db) {
+        public Builder db(@Nullable Output<String> db) {
             this.db = db;
             return this;
         }
 
         public Builder db(@Nullable String db) {
-            this.db = Input.ofNullable(db);
+            this.db = Output.ofNullable(db);
             return this;
         }
 
-        public Builder role(@Nullable Input<String> role) {
+        public Builder role(@Nullable Output<String> role) {
             this.role = role;
             return this;
         }
 
         public Builder role(@Nullable String role) {
-            this.role = Input.ofNullable(role);
+            this.role = Output.ofNullable(role);
             return this;
         }
         public RoleArgs build() {

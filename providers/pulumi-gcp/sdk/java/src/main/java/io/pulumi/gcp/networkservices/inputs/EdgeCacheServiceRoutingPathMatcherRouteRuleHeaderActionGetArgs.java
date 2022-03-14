@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.networkservices.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.networkservices.inputs.EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionRequestHeaderToAddGetArgs;
 import io.pulumi.gcp.networkservices.inputs.EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionRequestHeaderToRemoveGetArgs;
@@ -24,10 +24,10 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionGetArg
      * 
      */
     @InputImport(name="requestHeaderToAdds")
-      private final @Nullable Input<List<EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionRequestHeaderToAddGetArgs>> requestHeaderToAdds;
+      private final @Nullable Output<List<EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionRequestHeaderToAddGetArgs>> requestHeaderToAdds;
 
-    public Input<List<EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionRequestHeaderToAddGetArgs>> getRequestHeaderToAdds() {
-        return this.requestHeaderToAdds == null ? Input.empty() : this.requestHeaderToAdds;
+    public Output<List<EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionRequestHeaderToAddGetArgs>> getRequestHeaderToAdds() {
+        return this.requestHeaderToAdds == null ? Output.empty() : this.requestHeaderToAdds;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionGetArg
      * 
      */
     @InputImport(name="requestHeaderToRemoves")
-      private final @Nullable Input<List<EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionRequestHeaderToRemoveGetArgs>> requestHeaderToRemoves;
+      private final @Nullable Output<List<EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionRequestHeaderToRemoveGetArgs>> requestHeaderToRemoves;
 
-    public Input<List<EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionRequestHeaderToRemoveGetArgs>> getRequestHeaderToRemoves() {
-        return this.requestHeaderToRemoves == null ? Input.empty() : this.requestHeaderToRemoves;
+    public Output<List<EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionRequestHeaderToRemoveGetArgs>> getRequestHeaderToRemoves() {
+        return this.requestHeaderToRemoves == null ? Output.empty() : this.requestHeaderToRemoves;
     }
 
     /**
@@ -49,10 +49,10 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionGetArg
      * 
      */
     @InputImport(name="responseHeaderToAdds")
-      private final @Nullable Input<List<EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionResponseHeaderToAddGetArgs>> responseHeaderToAdds;
+      private final @Nullable Output<List<EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionResponseHeaderToAddGetArgs>> responseHeaderToAdds;
 
-    public Input<List<EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionResponseHeaderToAddGetArgs>> getResponseHeaderToAdds() {
-        return this.responseHeaderToAdds == null ? Input.empty() : this.responseHeaderToAdds;
+    public Output<List<EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionResponseHeaderToAddGetArgs>> getResponseHeaderToAdds() {
+        return this.responseHeaderToAdds == null ? Output.empty() : this.responseHeaderToAdds;
     }
 
     /**
@@ -61,17 +61,17 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionGetArg
      * 
      */
     @InputImport(name="responseHeaderToRemoves")
-      private final @Nullable Input<List<EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionResponseHeaderToRemoveGetArgs>> responseHeaderToRemoves;
+      private final @Nullable Output<List<EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionResponseHeaderToRemoveGetArgs>> responseHeaderToRemoves;
 
-    public Input<List<EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionResponseHeaderToRemoveGetArgs>> getResponseHeaderToRemoves() {
-        return this.responseHeaderToRemoves == null ? Input.empty() : this.responseHeaderToRemoves;
+    public Output<List<EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionResponseHeaderToRemoveGetArgs>> getResponseHeaderToRemoves() {
+        return this.responseHeaderToRemoves == null ? Output.empty() : this.responseHeaderToRemoves;
     }
 
     public EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionGetArgs(
-        @Nullable Input<List<EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionRequestHeaderToAddGetArgs>> requestHeaderToAdds,
-        @Nullable Input<List<EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionRequestHeaderToRemoveGetArgs>> requestHeaderToRemoves,
-        @Nullable Input<List<EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionResponseHeaderToAddGetArgs>> responseHeaderToAdds,
-        @Nullable Input<List<EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionResponseHeaderToRemoveGetArgs>> responseHeaderToRemoves) {
+        @Nullable Output<List<EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionRequestHeaderToAddGetArgs>> requestHeaderToAdds,
+        @Nullable Output<List<EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionRequestHeaderToRemoveGetArgs>> requestHeaderToRemoves,
+        @Nullable Output<List<EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionResponseHeaderToAddGetArgs>> responseHeaderToAdds,
+        @Nullable Output<List<EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionResponseHeaderToRemoveGetArgs>> responseHeaderToRemoves) {
         this.requestHeaderToAdds = requestHeaderToAdds;
         this.requestHeaderToRemoves = requestHeaderToRemoves;
         this.responseHeaderToAdds = responseHeaderToAdds;
@@ -79,10 +79,10 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionGetArg
     }
 
     private EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionGetArgs() {
-        this.requestHeaderToAdds = Input.empty();
-        this.requestHeaderToRemoves = Input.empty();
-        this.responseHeaderToAdds = Input.empty();
-        this.responseHeaderToRemoves = Input.empty();
+        this.requestHeaderToAdds = Output.empty();
+        this.requestHeaderToRemoves = Output.empty();
+        this.responseHeaderToAdds = Output.empty();
+        this.responseHeaderToRemoves = Output.empty();
     }
 
     public static Builder builder() {
@@ -94,10 +94,10 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionGetArg
     }
 
     public static final class Builder {
-        private @Nullable Input<List<EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionRequestHeaderToAddGetArgs>> requestHeaderToAdds;
-        private @Nullable Input<List<EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionRequestHeaderToRemoveGetArgs>> requestHeaderToRemoves;
-        private @Nullable Input<List<EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionResponseHeaderToAddGetArgs>> responseHeaderToAdds;
-        private @Nullable Input<List<EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionResponseHeaderToRemoveGetArgs>> responseHeaderToRemoves;
+        private @Nullable Output<List<EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionRequestHeaderToAddGetArgs>> requestHeaderToAdds;
+        private @Nullable Output<List<EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionRequestHeaderToRemoveGetArgs>> requestHeaderToRemoves;
+        private @Nullable Output<List<EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionResponseHeaderToAddGetArgs>> responseHeaderToAdds;
+        private @Nullable Output<List<EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionResponseHeaderToRemoveGetArgs>> responseHeaderToRemoves;
 
         public Builder() {
     	      // Empty
@@ -111,43 +111,43 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionGetArg
     	      this.responseHeaderToRemoves = defaults.responseHeaderToRemoves;
         }
 
-        public Builder requestHeaderToAdds(@Nullable Input<List<EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionRequestHeaderToAddGetArgs>> requestHeaderToAdds) {
+        public Builder requestHeaderToAdds(@Nullable Output<List<EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionRequestHeaderToAddGetArgs>> requestHeaderToAdds) {
             this.requestHeaderToAdds = requestHeaderToAdds;
             return this;
         }
 
         public Builder requestHeaderToAdds(@Nullable List<EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionRequestHeaderToAddGetArgs> requestHeaderToAdds) {
-            this.requestHeaderToAdds = Input.ofNullable(requestHeaderToAdds);
+            this.requestHeaderToAdds = Output.ofNullable(requestHeaderToAdds);
             return this;
         }
 
-        public Builder requestHeaderToRemoves(@Nullable Input<List<EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionRequestHeaderToRemoveGetArgs>> requestHeaderToRemoves) {
+        public Builder requestHeaderToRemoves(@Nullable Output<List<EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionRequestHeaderToRemoveGetArgs>> requestHeaderToRemoves) {
             this.requestHeaderToRemoves = requestHeaderToRemoves;
             return this;
         }
 
         public Builder requestHeaderToRemoves(@Nullable List<EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionRequestHeaderToRemoveGetArgs> requestHeaderToRemoves) {
-            this.requestHeaderToRemoves = Input.ofNullable(requestHeaderToRemoves);
+            this.requestHeaderToRemoves = Output.ofNullable(requestHeaderToRemoves);
             return this;
         }
 
-        public Builder responseHeaderToAdds(@Nullable Input<List<EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionResponseHeaderToAddGetArgs>> responseHeaderToAdds) {
+        public Builder responseHeaderToAdds(@Nullable Output<List<EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionResponseHeaderToAddGetArgs>> responseHeaderToAdds) {
             this.responseHeaderToAdds = responseHeaderToAdds;
             return this;
         }
 
         public Builder responseHeaderToAdds(@Nullable List<EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionResponseHeaderToAddGetArgs> responseHeaderToAdds) {
-            this.responseHeaderToAdds = Input.ofNullable(responseHeaderToAdds);
+            this.responseHeaderToAdds = Output.ofNullable(responseHeaderToAdds);
             return this;
         }
 
-        public Builder responseHeaderToRemoves(@Nullable Input<List<EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionResponseHeaderToRemoveGetArgs>> responseHeaderToRemoves) {
+        public Builder responseHeaderToRemoves(@Nullable Output<List<EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionResponseHeaderToRemoveGetArgs>> responseHeaderToRemoves) {
             this.responseHeaderToRemoves = responseHeaderToRemoves;
             return this;
         }
 
         public Builder responseHeaderToRemoves(@Nullable List<EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionResponseHeaderToRemoveGetArgs> responseHeaderToRemoves) {
-            this.responseHeaderToRemoves = Input.ofNullable(responseHeaderToRemoves);
+            this.responseHeaderToRemoves = Output.ofNullable(responseHeaderToRemoves);
             return this;
         }
         public EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionGetArgs build() {

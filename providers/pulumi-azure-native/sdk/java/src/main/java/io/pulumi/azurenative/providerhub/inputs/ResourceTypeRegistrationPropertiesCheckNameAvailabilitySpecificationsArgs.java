@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.providerhub.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -17,29 +17,29 @@ public final class ResourceTypeRegistrationPropertiesCheckNameAvailabilitySpecif
     public static final ResourceTypeRegistrationPropertiesCheckNameAvailabilitySpecificationsArgs Empty = new ResourceTypeRegistrationPropertiesCheckNameAvailabilitySpecificationsArgs();
 
     @InputImport(name="enableDefaultValidation")
-      private final @Nullable Input<Boolean> enableDefaultValidation;
+      private final @Nullable Output<Boolean> enableDefaultValidation;
 
-    public Input<Boolean> getEnableDefaultValidation() {
-        return this.enableDefaultValidation == null ? Input.empty() : this.enableDefaultValidation;
+    public Output<Boolean> getEnableDefaultValidation() {
+        return this.enableDefaultValidation == null ? Output.empty() : this.enableDefaultValidation;
     }
 
     @InputImport(name="resourceTypesWithCustomValidation")
-      private final @Nullable Input<List<String>> resourceTypesWithCustomValidation;
+      private final @Nullable Output<List<String>> resourceTypesWithCustomValidation;
 
-    public Input<List<String>> getResourceTypesWithCustomValidation() {
-        return this.resourceTypesWithCustomValidation == null ? Input.empty() : this.resourceTypesWithCustomValidation;
+    public Output<List<String>> getResourceTypesWithCustomValidation() {
+        return this.resourceTypesWithCustomValidation == null ? Output.empty() : this.resourceTypesWithCustomValidation;
     }
 
     public ResourceTypeRegistrationPropertiesCheckNameAvailabilitySpecificationsArgs(
-        @Nullable Input<Boolean> enableDefaultValidation,
-        @Nullable Input<List<String>> resourceTypesWithCustomValidation) {
+        @Nullable Output<Boolean> enableDefaultValidation,
+        @Nullable Output<List<String>> resourceTypesWithCustomValidation) {
         this.enableDefaultValidation = enableDefaultValidation;
         this.resourceTypesWithCustomValidation = resourceTypesWithCustomValidation;
     }
 
     private ResourceTypeRegistrationPropertiesCheckNameAvailabilitySpecificationsArgs() {
-        this.enableDefaultValidation = Input.empty();
-        this.resourceTypesWithCustomValidation = Input.empty();
+        this.enableDefaultValidation = Output.empty();
+        this.resourceTypesWithCustomValidation = Output.empty();
     }
 
     public static Builder builder() {
@@ -51,8 +51,8 @@ public final class ResourceTypeRegistrationPropertiesCheckNameAvailabilitySpecif
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> enableDefaultValidation;
-        private @Nullable Input<List<String>> resourceTypesWithCustomValidation;
+        private @Nullable Output<Boolean> enableDefaultValidation;
+        private @Nullable Output<List<String>> resourceTypesWithCustomValidation;
 
         public Builder() {
     	      // Empty
@@ -64,23 +64,23 @@ public final class ResourceTypeRegistrationPropertiesCheckNameAvailabilitySpecif
     	      this.resourceTypesWithCustomValidation = defaults.resourceTypesWithCustomValidation;
         }
 
-        public Builder enableDefaultValidation(@Nullable Input<Boolean> enableDefaultValidation) {
+        public Builder enableDefaultValidation(@Nullable Output<Boolean> enableDefaultValidation) {
             this.enableDefaultValidation = enableDefaultValidation;
             return this;
         }
 
         public Builder enableDefaultValidation(@Nullable Boolean enableDefaultValidation) {
-            this.enableDefaultValidation = Input.ofNullable(enableDefaultValidation);
+            this.enableDefaultValidation = Output.ofNullable(enableDefaultValidation);
             return this;
         }
 
-        public Builder resourceTypesWithCustomValidation(@Nullable Input<List<String>> resourceTypesWithCustomValidation) {
+        public Builder resourceTypesWithCustomValidation(@Nullable Output<List<String>> resourceTypesWithCustomValidation) {
             this.resourceTypesWithCustomValidation = resourceTypesWithCustomValidation;
             return this;
         }
 
         public Builder resourceTypesWithCustomValidation(@Nullable List<String> resourceTypesWithCustomValidation) {
-            this.resourceTypesWithCustomValidation = Input.ofNullable(resourceTypesWithCustomValidation);
+            this.resourceTypesWithCustomValidation = Output.ofNullable(resourceTypesWithCustomValidation);
             return this;
         }
         public ResourceTypeRegistrationPropertiesCheckNameAvailabilitySpecificationsArgs build() {

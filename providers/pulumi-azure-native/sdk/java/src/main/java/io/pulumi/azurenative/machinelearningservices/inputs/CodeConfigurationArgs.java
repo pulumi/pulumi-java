@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.machinelearningservices.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class CodeConfigurationArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="codeId")
-      private final @Nullable Input<String> codeId;
+      private final @Nullable Output<String> codeId;
 
-    public Input<String> getCodeId() {
-        return this.codeId == null ? Input.empty() : this.codeId;
+    public Output<String> getCodeId() {
+        return this.codeId == null ? Output.empty() : this.codeId;
     }
 
     /**
@@ -34,22 +34,22 @@ public final class CodeConfigurationArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="scoringScript", required=true)
-      private final Input<String> scoringScript;
+      private final Output<String> scoringScript;
 
-    public Input<String> getScoringScript() {
+    public Output<String> getScoringScript() {
         return this.scoringScript;
     }
 
     public CodeConfigurationArgs(
-        @Nullable Input<String> codeId,
-        Input<String> scoringScript) {
+        @Nullable Output<String> codeId,
+        Output<String> scoringScript) {
         this.codeId = codeId;
         this.scoringScript = Objects.requireNonNull(scoringScript, "expected parameter 'scoringScript' to be non-null");
     }
 
     private CodeConfigurationArgs() {
-        this.codeId = Input.empty();
-        this.scoringScript = Input.empty();
+        this.codeId = Output.empty();
+        this.scoringScript = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class CodeConfigurationArgs extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private @Nullable Input<String> codeId;
-        private Input<String> scoringScript;
+        private @Nullable Output<String> codeId;
+        private Output<String> scoringScript;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class CodeConfigurationArgs extends io.pulumi.resources.ResourceArg
     	      this.scoringScript = defaults.scoringScript;
         }
 
-        public Builder codeId(@Nullable Input<String> codeId) {
+        public Builder codeId(@Nullable Output<String> codeId) {
             this.codeId = codeId;
             return this;
         }
 
         public Builder codeId(@Nullable String codeId) {
-            this.codeId = Input.ofNullable(codeId);
+            this.codeId = Output.ofNullable(codeId);
             return this;
         }
 
-        public Builder scoringScript(Input<String> scoringScript) {
+        public Builder scoringScript(Output<String> scoringScript) {
             this.scoringScript = Objects.requireNonNull(scoringScript);
             return this;
         }
 
         public Builder scoringScript(String scoringScript) {
-            this.scoringScript = Input.of(Objects.requireNonNull(scoringScript));
+            this.scoringScript = Output.of(Objects.requireNonNull(scoringScript));
             return this;
         }
         public CodeConfigurationArgs build() {

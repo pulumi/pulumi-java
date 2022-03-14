@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.quicksight.inputs;
 
 import io.pulumi.awsnative.quicksight.inputs.DataSetGeoSpatialColumnGroupArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,18 +21,18 @@ public final class DataSetColumnGroupArgs extends io.pulumi.resources.ResourceAr
     public static final DataSetColumnGroupArgs Empty = new DataSetColumnGroupArgs();
 
     @InputImport(name="geoSpatialColumnGroup")
-      private final @Nullable Input<DataSetGeoSpatialColumnGroupArgs> geoSpatialColumnGroup;
+      private final @Nullable Output<DataSetGeoSpatialColumnGroupArgs> geoSpatialColumnGroup;
 
-    public Input<DataSetGeoSpatialColumnGroupArgs> getGeoSpatialColumnGroup() {
-        return this.geoSpatialColumnGroup == null ? Input.empty() : this.geoSpatialColumnGroup;
+    public Output<DataSetGeoSpatialColumnGroupArgs> getGeoSpatialColumnGroup() {
+        return this.geoSpatialColumnGroup == null ? Output.empty() : this.geoSpatialColumnGroup;
     }
 
-    public DataSetColumnGroupArgs(@Nullable Input<DataSetGeoSpatialColumnGroupArgs> geoSpatialColumnGroup) {
+    public DataSetColumnGroupArgs(@Nullable Output<DataSetGeoSpatialColumnGroupArgs> geoSpatialColumnGroup) {
         this.geoSpatialColumnGroup = geoSpatialColumnGroup;
     }
 
     private DataSetColumnGroupArgs() {
-        this.geoSpatialColumnGroup = Input.empty();
+        this.geoSpatialColumnGroup = Output.empty();
     }
 
     public static Builder builder() {
@@ -44,7 +44,7 @@ public final class DataSetColumnGroupArgs extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private @Nullable Input<DataSetGeoSpatialColumnGroupArgs> geoSpatialColumnGroup;
+        private @Nullable Output<DataSetGeoSpatialColumnGroupArgs> geoSpatialColumnGroup;
 
         public Builder() {
     	      // Empty
@@ -55,13 +55,13 @@ public final class DataSetColumnGroupArgs extends io.pulumi.resources.ResourceAr
     	      this.geoSpatialColumnGroup = defaults.geoSpatialColumnGroup;
         }
 
-        public Builder geoSpatialColumnGroup(@Nullable Input<DataSetGeoSpatialColumnGroupArgs> geoSpatialColumnGroup) {
+        public Builder geoSpatialColumnGroup(@Nullable Output<DataSetGeoSpatialColumnGroupArgs> geoSpatialColumnGroup) {
             this.geoSpatialColumnGroup = geoSpatialColumnGroup;
             return this;
         }
 
         public Builder geoSpatialColumnGroup(@Nullable DataSetGeoSpatialColumnGroupArgs geoSpatialColumnGroup) {
-            this.geoSpatialColumnGroup = Input.ofNullable(geoSpatialColumnGroup);
+            this.geoSpatialColumnGroup = Output.ofNullable(geoSpatialColumnGroup);
             return this;
         }
         public DataSetColumnGroupArgs build() {

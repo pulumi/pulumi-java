@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.ecs.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -16,39 +16,39 @@ public final class TaskDefinitionPortMappingArgs extends io.pulumi.resources.Res
     public static final TaskDefinitionPortMappingArgs Empty = new TaskDefinitionPortMappingArgs();
 
     @InputImport(name="containerPort")
-      private final @Nullable Input<Integer> containerPort;
+      private final @Nullable Output<Integer> containerPort;
 
-    public Input<Integer> getContainerPort() {
-        return this.containerPort == null ? Input.empty() : this.containerPort;
+    public Output<Integer> getContainerPort() {
+        return this.containerPort == null ? Output.empty() : this.containerPort;
     }
 
     @InputImport(name="hostPort")
-      private final @Nullable Input<Integer> hostPort;
+      private final @Nullable Output<Integer> hostPort;
 
-    public Input<Integer> getHostPort() {
-        return this.hostPort == null ? Input.empty() : this.hostPort;
+    public Output<Integer> getHostPort() {
+        return this.hostPort == null ? Output.empty() : this.hostPort;
     }
 
     @InputImport(name="protocol")
-      private final @Nullable Input<String> protocol;
+      private final @Nullable Output<String> protocol;
 
-    public Input<String> getProtocol() {
-        return this.protocol == null ? Input.empty() : this.protocol;
+    public Output<String> getProtocol() {
+        return this.protocol == null ? Output.empty() : this.protocol;
     }
 
     public TaskDefinitionPortMappingArgs(
-        @Nullable Input<Integer> containerPort,
-        @Nullable Input<Integer> hostPort,
-        @Nullable Input<String> protocol) {
+        @Nullable Output<Integer> containerPort,
+        @Nullable Output<Integer> hostPort,
+        @Nullable Output<String> protocol) {
         this.containerPort = containerPort;
         this.hostPort = hostPort;
         this.protocol = protocol;
     }
 
     private TaskDefinitionPortMappingArgs() {
-        this.containerPort = Input.empty();
-        this.hostPort = Input.empty();
-        this.protocol = Input.empty();
+        this.containerPort = Output.empty();
+        this.hostPort = Output.empty();
+        this.protocol = Output.empty();
     }
 
     public static Builder builder() {
@@ -60,9 +60,9 @@ public final class TaskDefinitionPortMappingArgs extends io.pulumi.resources.Res
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> containerPort;
-        private @Nullable Input<Integer> hostPort;
-        private @Nullable Input<String> protocol;
+        private @Nullable Output<Integer> containerPort;
+        private @Nullable Output<Integer> hostPort;
+        private @Nullable Output<String> protocol;
 
         public Builder() {
     	      // Empty
@@ -75,33 +75,33 @@ public final class TaskDefinitionPortMappingArgs extends io.pulumi.resources.Res
     	      this.protocol = defaults.protocol;
         }
 
-        public Builder containerPort(@Nullable Input<Integer> containerPort) {
+        public Builder containerPort(@Nullable Output<Integer> containerPort) {
             this.containerPort = containerPort;
             return this;
         }
 
         public Builder containerPort(@Nullable Integer containerPort) {
-            this.containerPort = Input.ofNullable(containerPort);
+            this.containerPort = Output.ofNullable(containerPort);
             return this;
         }
 
-        public Builder hostPort(@Nullable Input<Integer> hostPort) {
+        public Builder hostPort(@Nullable Output<Integer> hostPort) {
             this.hostPort = hostPort;
             return this;
         }
 
         public Builder hostPort(@Nullable Integer hostPort) {
-            this.hostPort = Input.ofNullable(hostPort);
+            this.hostPort = Output.ofNullable(hostPort);
             return this;
         }
 
-        public Builder protocol(@Nullable Input<String> protocol) {
+        public Builder protocol(@Nullable Output<String> protocol) {
             this.protocol = protocol;
             return this;
         }
 
         public Builder protocol(@Nullable String protocol) {
-            this.protocol = Input.ofNullable(protocol);
+            this.protocol = Output.ofNullable(protocol);
             return this;
         }
         public TaskDefinitionPortMappingArgs build() {

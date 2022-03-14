@@ -5,7 +5,7 @@ package io.pulumi.awsnative.apprunner.inputs;
 
 import io.pulumi.awsnative.apprunner.enums.ServiceCodeConfigurationConfigurationSource;
 import io.pulumi.awsnative.apprunner.inputs.ServiceCodeConfigurationValuesArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,10 +20,10 @@ public final class ServiceCodeConfigurationArgs extends io.pulumi.resources.Reso
     public static final ServiceCodeConfigurationArgs Empty = new ServiceCodeConfigurationArgs();
 
     @InputImport(name="codeConfigurationValues")
-      private final @Nullable Input<ServiceCodeConfigurationValuesArgs> codeConfigurationValues;
+      private final @Nullable Output<ServiceCodeConfigurationValuesArgs> codeConfigurationValues;
 
-    public Input<ServiceCodeConfigurationValuesArgs> getCodeConfigurationValues() {
-        return this.codeConfigurationValues == null ? Input.empty() : this.codeConfigurationValues;
+    public Output<ServiceCodeConfigurationValuesArgs> getCodeConfigurationValues() {
+        return this.codeConfigurationValues == null ? Output.empty() : this.codeConfigurationValues;
     }
 
     /**
@@ -31,22 +31,22 @@ public final class ServiceCodeConfigurationArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="configurationSource", required=true)
-      private final Input<ServiceCodeConfigurationConfigurationSource> configurationSource;
+      private final Output<ServiceCodeConfigurationConfigurationSource> configurationSource;
 
-    public Input<ServiceCodeConfigurationConfigurationSource> getConfigurationSource() {
+    public Output<ServiceCodeConfigurationConfigurationSource> getConfigurationSource() {
         return this.configurationSource;
     }
 
     public ServiceCodeConfigurationArgs(
-        @Nullable Input<ServiceCodeConfigurationValuesArgs> codeConfigurationValues,
-        Input<ServiceCodeConfigurationConfigurationSource> configurationSource) {
+        @Nullable Output<ServiceCodeConfigurationValuesArgs> codeConfigurationValues,
+        Output<ServiceCodeConfigurationConfigurationSource> configurationSource) {
         this.codeConfigurationValues = codeConfigurationValues;
         this.configurationSource = Objects.requireNonNull(configurationSource, "expected parameter 'configurationSource' to be non-null");
     }
 
     private ServiceCodeConfigurationArgs() {
-        this.codeConfigurationValues = Input.empty();
-        this.configurationSource = Input.empty();
+        this.codeConfigurationValues = Output.empty();
+        this.configurationSource = Output.empty();
     }
 
     public static Builder builder() {
@@ -58,8 +58,8 @@ public final class ServiceCodeConfigurationArgs extends io.pulumi.resources.Reso
     }
 
     public static final class Builder {
-        private @Nullable Input<ServiceCodeConfigurationValuesArgs> codeConfigurationValues;
-        private Input<ServiceCodeConfigurationConfigurationSource> configurationSource;
+        private @Nullable Output<ServiceCodeConfigurationValuesArgs> codeConfigurationValues;
+        private Output<ServiceCodeConfigurationConfigurationSource> configurationSource;
 
         public Builder() {
     	      // Empty
@@ -71,23 +71,23 @@ public final class ServiceCodeConfigurationArgs extends io.pulumi.resources.Reso
     	      this.configurationSource = defaults.configurationSource;
         }
 
-        public Builder codeConfigurationValues(@Nullable Input<ServiceCodeConfigurationValuesArgs> codeConfigurationValues) {
+        public Builder codeConfigurationValues(@Nullable Output<ServiceCodeConfigurationValuesArgs> codeConfigurationValues) {
             this.codeConfigurationValues = codeConfigurationValues;
             return this;
         }
 
         public Builder codeConfigurationValues(@Nullable ServiceCodeConfigurationValuesArgs codeConfigurationValues) {
-            this.codeConfigurationValues = Input.ofNullable(codeConfigurationValues);
+            this.codeConfigurationValues = Output.ofNullable(codeConfigurationValues);
             return this;
         }
 
-        public Builder configurationSource(Input<ServiceCodeConfigurationConfigurationSource> configurationSource) {
+        public Builder configurationSource(Output<ServiceCodeConfigurationConfigurationSource> configurationSource) {
             this.configurationSource = Objects.requireNonNull(configurationSource);
             return this;
         }
 
         public Builder configurationSource(ServiceCodeConfigurationConfigurationSource configurationSource) {
-            this.configurationSource = Input.of(Objects.requireNonNull(configurationSource));
+            this.configurationSource = Output.of(Objects.requireNonNull(configurationSource));
             return this;
         }
         public ServiceCodeConfigurationArgs build() {

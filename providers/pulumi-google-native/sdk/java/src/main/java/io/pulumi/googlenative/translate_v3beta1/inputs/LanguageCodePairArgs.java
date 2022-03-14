@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.translate_v3beta1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -22,9 +22,9 @@ public final class LanguageCodePairArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="sourceLanguageCode", required=true)
-      private final Input<String> sourceLanguageCode;
+      private final Output<String> sourceLanguageCode;
 
-    public Input<String> getSourceLanguageCode() {
+    public Output<String> getSourceLanguageCode() {
         return this.sourceLanguageCode;
     }
 
@@ -33,22 +33,22 @@ public final class LanguageCodePairArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="targetLanguageCode", required=true)
-      private final Input<String> targetLanguageCode;
+      private final Output<String> targetLanguageCode;
 
-    public Input<String> getTargetLanguageCode() {
+    public Output<String> getTargetLanguageCode() {
         return this.targetLanguageCode;
     }
 
     public LanguageCodePairArgs(
-        Input<String> sourceLanguageCode,
-        Input<String> targetLanguageCode) {
+        Output<String> sourceLanguageCode,
+        Output<String> targetLanguageCode) {
         this.sourceLanguageCode = Objects.requireNonNull(sourceLanguageCode, "expected parameter 'sourceLanguageCode' to be non-null");
         this.targetLanguageCode = Objects.requireNonNull(targetLanguageCode, "expected parameter 'targetLanguageCode' to be non-null");
     }
 
     private LanguageCodePairArgs() {
-        this.sourceLanguageCode = Input.empty();
-        this.targetLanguageCode = Input.empty();
+        this.sourceLanguageCode = Output.empty();
+        this.targetLanguageCode = Output.empty();
     }
 
     public static Builder builder() {
@@ -60,8 +60,8 @@ public final class LanguageCodePairArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private Input<String> sourceLanguageCode;
-        private Input<String> targetLanguageCode;
+        private Output<String> sourceLanguageCode;
+        private Output<String> targetLanguageCode;
 
         public Builder() {
     	      // Empty
@@ -73,23 +73,23 @@ public final class LanguageCodePairArgs extends io.pulumi.resources.ResourceArgs
     	      this.targetLanguageCode = defaults.targetLanguageCode;
         }
 
-        public Builder sourceLanguageCode(Input<String> sourceLanguageCode) {
+        public Builder sourceLanguageCode(Output<String> sourceLanguageCode) {
             this.sourceLanguageCode = Objects.requireNonNull(sourceLanguageCode);
             return this;
         }
 
         public Builder sourceLanguageCode(String sourceLanguageCode) {
-            this.sourceLanguageCode = Input.of(Objects.requireNonNull(sourceLanguageCode));
+            this.sourceLanguageCode = Output.of(Objects.requireNonNull(sourceLanguageCode));
             return this;
         }
 
-        public Builder targetLanguageCode(Input<String> targetLanguageCode) {
+        public Builder targetLanguageCode(Output<String> targetLanguageCode) {
             this.targetLanguageCode = Objects.requireNonNull(targetLanguageCode);
             return this;
         }
 
         public Builder targetLanguageCode(String targetLanguageCode) {
-            this.targetLanguageCode = Input.of(Objects.requireNonNull(targetLanguageCode));
+            this.targetLanguageCode = Output.of(Objects.requireNonNull(targetLanguageCode));
             return this;
         }
         public LanguageCodePairArgs build() {

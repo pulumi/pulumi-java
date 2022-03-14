@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.ecr.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
@@ -18,18 +18,18 @@ public final class RepositoryImageScanningConfigurationGetArgs extends io.pulumi
      * 
      */
     @InputImport(name="scanOnPush", required=true)
-      private final Input<Boolean> scanOnPush;
+      private final Output<Boolean> scanOnPush;
 
-    public Input<Boolean> getScanOnPush() {
+    public Output<Boolean> getScanOnPush() {
         return this.scanOnPush;
     }
 
-    public RepositoryImageScanningConfigurationGetArgs(Input<Boolean> scanOnPush) {
+    public RepositoryImageScanningConfigurationGetArgs(Output<Boolean> scanOnPush) {
         this.scanOnPush = Objects.requireNonNull(scanOnPush, "expected parameter 'scanOnPush' to be non-null");
     }
 
     private RepositoryImageScanningConfigurationGetArgs() {
-        this.scanOnPush = Input.empty();
+        this.scanOnPush = Output.empty();
     }
 
     public static Builder builder() {
@@ -41,7 +41,7 @@ public final class RepositoryImageScanningConfigurationGetArgs extends io.pulumi
     }
 
     public static final class Builder {
-        private Input<Boolean> scanOnPush;
+        private Output<Boolean> scanOnPush;
 
         public Builder() {
     	      // Empty
@@ -52,13 +52,13 @@ public final class RepositoryImageScanningConfigurationGetArgs extends io.pulumi
     	      this.scanOnPush = defaults.scanOnPush;
         }
 
-        public Builder scanOnPush(Input<Boolean> scanOnPush) {
+        public Builder scanOnPush(Output<Boolean> scanOnPush) {
             this.scanOnPush = Objects.requireNonNull(scanOnPush);
             return this;
         }
 
         public Builder scanOnPush(Boolean scanOnPush) {
-            this.scanOnPush = Input.of(Objects.requireNonNull(scanOnPush));
+            this.scanOnPush = Output.of(Objects.requireNonNull(scanOnPush));
             return this;
         }
         public RepositoryImageScanningConfigurationGetArgs build() {

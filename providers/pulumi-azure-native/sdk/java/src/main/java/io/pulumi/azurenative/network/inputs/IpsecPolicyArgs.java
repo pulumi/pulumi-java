@@ -10,7 +10,7 @@ import io.pulumi.azurenative.network.enums.IpsecEncryption;
 import io.pulumi.azurenative.network.enums.IpsecIntegrity;
 import io.pulumi.azurenative.network.enums.PfsGroup;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -30,9 +30,9 @@ public final class IpsecPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dhGroup", required=true)
-      private final Input<Either<String,DhGroup>> dhGroup;
+      private final Output<Either<String,DhGroup>> dhGroup;
 
-    public Input<Either<String,DhGroup>> getDhGroup() {
+    public Output<Either<String,DhGroup>> getDhGroup() {
         return this.dhGroup;
     }
 
@@ -41,9 +41,9 @@ public final class IpsecPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ikeEncryption", required=true)
-      private final Input<Either<String,IkeEncryption>> ikeEncryption;
+      private final Output<Either<String,IkeEncryption>> ikeEncryption;
 
-    public Input<Either<String,IkeEncryption>> getIkeEncryption() {
+    public Output<Either<String,IkeEncryption>> getIkeEncryption() {
         return this.ikeEncryption;
     }
 
@@ -52,9 +52,9 @@ public final class IpsecPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ikeIntegrity", required=true)
-      private final Input<Either<String,IkeIntegrity>> ikeIntegrity;
+      private final Output<Either<String,IkeIntegrity>> ikeIntegrity;
 
-    public Input<Either<String,IkeIntegrity>> getIkeIntegrity() {
+    public Output<Either<String,IkeIntegrity>> getIkeIntegrity() {
         return this.ikeIntegrity;
     }
 
@@ -63,9 +63,9 @@ public final class IpsecPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ipsecEncryption", required=true)
-      private final Input<Either<String,IpsecEncryption>> ipsecEncryption;
+      private final Output<Either<String,IpsecEncryption>> ipsecEncryption;
 
-    public Input<Either<String,IpsecEncryption>> getIpsecEncryption() {
+    public Output<Either<String,IpsecEncryption>> getIpsecEncryption() {
         return this.ipsecEncryption;
     }
 
@@ -74,9 +74,9 @@ public final class IpsecPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ipsecIntegrity", required=true)
-      private final Input<Either<String,IpsecIntegrity>> ipsecIntegrity;
+      private final Output<Either<String,IpsecIntegrity>> ipsecIntegrity;
 
-    public Input<Either<String,IpsecIntegrity>> getIpsecIntegrity() {
+    public Output<Either<String,IpsecIntegrity>> getIpsecIntegrity() {
         return this.ipsecIntegrity;
     }
 
@@ -85,9 +85,9 @@ public final class IpsecPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="pfsGroup", required=true)
-      private final Input<Either<String,PfsGroup>> pfsGroup;
+      private final Output<Either<String,PfsGroup>> pfsGroup;
 
-    public Input<Either<String,PfsGroup>> getPfsGroup() {
+    public Output<Either<String,PfsGroup>> getPfsGroup() {
         return this.pfsGroup;
     }
 
@@ -96,9 +96,9 @@ public final class IpsecPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="saDataSizeKilobytes", required=true)
-      private final Input<Integer> saDataSizeKilobytes;
+      private final Output<Integer> saDataSizeKilobytes;
 
-    public Input<Integer> getSaDataSizeKilobytes() {
+    public Output<Integer> getSaDataSizeKilobytes() {
         return this.saDataSizeKilobytes;
     }
 
@@ -107,21 +107,21 @@ public final class IpsecPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="saLifeTimeSeconds", required=true)
-      private final Input<Integer> saLifeTimeSeconds;
+      private final Output<Integer> saLifeTimeSeconds;
 
-    public Input<Integer> getSaLifeTimeSeconds() {
+    public Output<Integer> getSaLifeTimeSeconds() {
         return this.saLifeTimeSeconds;
     }
 
     public IpsecPolicyArgs(
-        Input<Either<String,DhGroup>> dhGroup,
-        Input<Either<String,IkeEncryption>> ikeEncryption,
-        Input<Either<String,IkeIntegrity>> ikeIntegrity,
-        Input<Either<String,IpsecEncryption>> ipsecEncryption,
-        Input<Either<String,IpsecIntegrity>> ipsecIntegrity,
-        Input<Either<String,PfsGroup>> pfsGroup,
-        Input<Integer> saDataSizeKilobytes,
-        Input<Integer> saLifeTimeSeconds) {
+        Output<Either<String,DhGroup>> dhGroup,
+        Output<Either<String,IkeEncryption>> ikeEncryption,
+        Output<Either<String,IkeIntegrity>> ikeIntegrity,
+        Output<Either<String,IpsecEncryption>> ipsecEncryption,
+        Output<Either<String,IpsecIntegrity>> ipsecIntegrity,
+        Output<Either<String,PfsGroup>> pfsGroup,
+        Output<Integer> saDataSizeKilobytes,
+        Output<Integer> saLifeTimeSeconds) {
         this.dhGroup = Objects.requireNonNull(dhGroup, "expected parameter 'dhGroup' to be non-null");
         this.ikeEncryption = Objects.requireNonNull(ikeEncryption, "expected parameter 'ikeEncryption' to be non-null");
         this.ikeIntegrity = Objects.requireNonNull(ikeIntegrity, "expected parameter 'ikeIntegrity' to be non-null");
@@ -133,14 +133,14 @@ public final class IpsecPolicyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private IpsecPolicyArgs() {
-        this.dhGroup = Input.empty();
-        this.ikeEncryption = Input.empty();
-        this.ikeIntegrity = Input.empty();
-        this.ipsecEncryption = Input.empty();
-        this.ipsecIntegrity = Input.empty();
-        this.pfsGroup = Input.empty();
-        this.saDataSizeKilobytes = Input.empty();
-        this.saLifeTimeSeconds = Input.empty();
+        this.dhGroup = Output.empty();
+        this.ikeEncryption = Output.empty();
+        this.ikeIntegrity = Output.empty();
+        this.ipsecEncryption = Output.empty();
+        this.ipsecIntegrity = Output.empty();
+        this.pfsGroup = Output.empty();
+        this.saDataSizeKilobytes = Output.empty();
+        this.saLifeTimeSeconds = Output.empty();
     }
 
     public static Builder builder() {
@@ -152,14 +152,14 @@ public final class IpsecPolicyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<Either<String,DhGroup>> dhGroup;
-        private Input<Either<String,IkeEncryption>> ikeEncryption;
-        private Input<Either<String,IkeIntegrity>> ikeIntegrity;
-        private Input<Either<String,IpsecEncryption>> ipsecEncryption;
-        private Input<Either<String,IpsecIntegrity>> ipsecIntegrity;
-        private Input<Either<String,PfsGroup>> pfsGroup;
-        private Input<Integer> saDataSizeKilobytes;
-        private Input<Integer> saLifeTimeSeconds;
+        private Output<Either<String,DhGroup>> dhGroup;
+        private Output<Either<String,IkeEncryption>> ikeEncryption;
+        private Output<Either<String,IkeIntegrity>> ikeIntegrity;
+        private Output<Either<String,IpsecEncryption>> ipsecEncryption;
+        private Output<Either<String,IpsecIntegrity>> ipsecIntegrity;
+        private Output<Either<String,PfsGroup>> pfsGroup;
+        private Output<Integer> saDataSizeKilobytes;
+        private Output<Integer> saLifeTimeSeconds;
 
         public Builder() {
     	      // Empty
@@ -177,83 +177,83 @@ public final class IpsecPolicyArgs extends io.pulumi.resources.ResourceArgs {
     	      this.saLifeTimeSeconds = defaults.saLifeTimeSeconds;
         }
 
-        public Builder dhGroup(Input<Either<String,DhGroup>> dhGroup) {
+        public Builder dhGroup(Output<Either<String,DhGroup>> dhGroup) {
             this.dhGroup = Objects.requireNonNull(dhGroup);
             return this;
         }
 
         public Builder dhGroup(Either<String,DhGroup> dhGroup) {
-            this.dhGroup = Input.of(Objects.requireNonNull(dhGroup));
+            this.dhGroup = Output.of(Objects.requireNonNull(dhGroup));
             return this;
         }
 
-        public Builder ikeEncryption(Input<Either<String,IkeEncryption>> ikeEncryption) {
+        public Builder ikeEncryption(Output<Either<String,IkeEncryption>> ikeEncryption) {
             this.ikeEncryption = Objects.requireNonNull(ikeEncryption);
             return this;
         }
 
         public Builder ikeEncryption(Either<String,IkeEncryption> ikeEncryption) {
-            this.ikeEncryption = Input.of(Objects.requireNonNull(ikeEncryption));
+            this.ikeEncryption = Output.of(Objects.requireNonNull(ikeEncryption));
             return this;
         }
 
-        public Builder ikeIntegrity(Input<Either<String,IkeIntegrity>> ikeIntegrity) {
+        public Builder ikeIntegrity(Output<Either<String,IkeIntegrity>> ikeIntegrity) {
             this.ikeIntegrity = Objects.requireNonNull(ikeIntegrity);
             return this;
         }
 
         public Builder ikeIntegrity(Either<String,IkeIntegrity> ikeIntegrity) {
-            this.ikeIntegrity = Input.of(Objects.requireNonNull(ikeIntegrity));
+            this.ikeIntegrity = Output.of(Objects.requireNonNull(ikeIntegrity));
             return this;
         }
 
-        public Builder ipsecEncryption(Input<Either<String,IpsecEncryption>> ipsecEncryption) {
+        public Builder ipsecEncryption(Output<Either<String,IpsecEncryption>> ipsecEncryption) {
             this.ipsecEncryption = Objects.requireNonNull(ipsecEncryption);
             return this;
         }
 
         public Builder ipsecEncryption(Either<String,IpsecEncryption> ipsecEncryption) {
-            this.ipsecEncryption = Input.of(Objects.requireNonNull(ipsecEncryption));
+            this.ipsecEncryption = Output.of(Objects.requireNonNull(ipsecEncryption));
             return this;
         }
 
-        public Builder ipsecIntegrity(Input<Either<String,IpsecIntegrity>> ipsecIntegrity) {
+        public Builder ipsecIntegrity(Output<Either<String,IpsecIntegrity>> ipsecIntegrity) {
             this.ipsecIntegrity = Objects.requireNonNull(ipsecIntegrity);
             return this;
         }
 
         public Builder ipsecIntegrity(Either<String,IpsecIntegrity> ipsecIntegrity) {
-            this.ipsecIntegrity = Input.of(Objects.requireNonNull(ipsecIntegrity));
+            this.ipsecIntegrity = Output.of(Objects.requireNonNull(ipsecIntegrity));
             return this;
         }
 
-        public Builder pfsGroup(Input<Either<String,PfsGroup>> pfsGroup) {
+        public Builder pfsGroup(Output<Either<String,PfsGroup>> pfsGroup) {
             this.pfsGroup = Objects.requireNonNull(pfsGroup);
             return this;
         }
 
         public Builder pfsGroup(Either<String,PfsGroup> pfsGroup) {
-            this.pfsGroup = Input.of(Objects.requireNonNull(pfsGroup));
+            this.pfsGroup = Output.of(Objects.requireNonNull(pfsGroup));
             return this;
         }
 
-        public Builder saDataSizeKilobytes(Input<Integer> saDataSizeKilobytes) {
+        public Builder saDataSizeKilobytes(Output<Integer> saDataSizeKilobytes) {
             this.saDataSizeKilobytes = Objects.requireNonNull(saDataSizeKilobytes);
             return this;
         }
 
         public Builder saDataSizeKilobytes(Integer saDataSizeKilobytes) {
-            this.saDataSizeKilobytes = Input.of(Objects.requireNonNull(saDataSizeKilobytes));
+            this.saDataSizeKilobytes = Output.of(Objects.requireNonNull(saDataSizeKilobytes));
             return this;
         }
 
-        public Builder saLifeTimeSeconds(Input<Integer> saLifeTimeSeconds) {
+        public Builder saLifeTimeSeconds(Output<Integer> saLifeTimeSeconds) {
             this.saLifeTimeSeconds = Objects.requireNonNull(saLifeTimeSeconds);
             return this;
         }
 
         public Builder saLifeTimeSeconds(Integer saLifeTimeSeconds) {
-            this.saLifeTimeSeconds = Input.of(Objects.requireNonNull(saLifeTimeSeconds));
+            this.saLifeTimeSeconds = Output.of(Objects.requireNonNull(saLifeTimeSeconds));
             return this;
         }
         public IpsecPolicyArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.appengine_v1beta.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class FeatureSettingsArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="splitHealthChecks")
-      private final @Nullable Input<Boolean> splitHealthChecks;
+      private final @Nullable Output<Boolean> splitHealthChecks;
 
-    public Input<Boolean> getSplitHealthChecks() {
-        return this.splitHealthChecks == null ? Input.empty() : this.splitHealthChecks;
+    public Output<Boolean> getSplitHealthChecks() {
+        return this.splitHealthChecks == null ? Output.empty() : this.splitHealthChecks;
     }
 
     /**
@@ -34,22 +34,22 @@ public final class FeatureSettingsArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="useContainerOptimizedOs")
-      private final @Nullable Input<Boolean> useContainerOptimizedOs;
+      private final @Nullable Output<Boolean> useContainerOptimizedOs;
 
-    public Input<Boolean> getUseContainerOptimizedOs() {
-        return this.useContainerOptimizedOs == null ? Input.empty() : this.useContainerOptimizedOs;
+    public Output<Boolean> getUseContainerOptimizedOs() {
+        return this.useContainerOptimizedOs == null ? Output.empty() : this.useContainerOptimizedOs;
     }
 
     public FeatureSettingsArgs(
-        @Nullable Input<Boolean> splitHealthChecks,
-        @Nullable Input<Boolean> useContainerOptimizedOs) {
+        @Nullable Output<Boolean> splitHealthChecks,
+        @Nullable Output<Boolean> useContainerOptimizedOs) {
         this.splitHealthChecks = splitHealthChecks;
         this.useContainerOptimizedOs = useContainerOptimizedOs;
     }
 
     private FeatureSettingsArgs() {
-        this.splitHealthChecks = Input.empty();
-        this.useContainerOptimizedOs = Input.empty();
+        this.splitHealthChecks = Output.empty();
+        this.useContainerOptimizedOs = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class FeatureSettingsArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> splitHealthChecks;
-        private @Nullable Input<Boolean> useContainerOptimizedOs;
+        private @Nullable Output<Boolean> splitHealthChecks;
+        private @Nullable Output<Boolean> useContainerOptimizedOs;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class FeatureSettingsArgs extends io.pulumi.resources.ResourceArgs 
     	      this.useContainerOptimizedOs = defaults.useContainerOptimizedOs;
         }
 
-        public Builder splitHealthChecks(@Nullable Input<Boolean> splitHealthChecks) {
+        public Builder splitHealthChecks(@Nullable Output<Boolean> splitHealthChecks) {
             this.splitHealthChecks = splitHealthChecks;
             return this;
         }
 
         public Builder splitHealthChecks(@Nullable Boolean splitHealthChecks) {
-            this.splitHealthChecks = Input.ofNullable(splitHealthChecks);
+            this.splitHealthChecks = Output.ofNullable(splitHealthChecks);
             return this;
         }
 
-        public Builder useContainerOptimizedOs(@Nullable Input<Boolean> useContainerOptimizedOs) {
+        public Builder useContainerOptimizedOs(@Nullable Output<Boolean> useContainerOptimizedOs) {
             this.useContainerOptimizedOs = useContainerOptimizedOs;
             return this;
         }
 
         public Builder useContainerOptimizedOs(@Nullable Boolean useContainerOptimizedOs) {
-            this.useContainerOptimizedOs = Input.ofNullable(useContainerOptimizedOs);
+            this.useContainerOptimizedOs = Output.ofNullable(useContainerOptimizedOs);
             return this;
         }
         public FeatureSettingsArgs build() {

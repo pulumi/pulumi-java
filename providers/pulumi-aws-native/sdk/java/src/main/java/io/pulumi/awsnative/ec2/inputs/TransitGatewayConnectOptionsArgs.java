@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.ec2.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,18 +19,18 @@ public final class TransitGatewayConnectOptionsArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="protocol")
-      private final @Nullable Input<String> protocol;
+      private final @Nullable Output<String> protocol;
 
-    public Input<String> getProtocol() {
-        return this.protocol == null ? Input.empty() : this.protocol;
+    public Output<String> getProtocol() {
+        return this.protocol == null ? Output.empty() : this.protocol;
     }
 
-    public TransitGatewayConnectOptionsArgs(@Nullable Input<String> protocol) {
+    public TransitGatewayConnectOptionsArgs(@Nullable Output<String> protocol) {
         this.protocol = protocol;
     }
 
     private TransitGatewayConnectOptionsArgs() {
-        this.protocol = Input.empty();
+        this.protocol = Output.empty();
     }
 
     public static Builder builder() {
@@ -42,7 +42,7 @@ public final class TransitGatewayConnectOptionsArgs extends io.pulumi.resources.
     }
 
     public static final class Builder {
-        private @Nullable Input<String> protocol;
+        private @Nullable Output<String> protocol;
 
         public Builder() {
     	      // Empty
@@ -53,13 +53,13 @@ public final class TransitGatewayConnectOptionsArgs extends io.pulumi.resources.
     	      this.protocol = defaults.protocol;
         }
 
-        public Builder protocol(@Nullable Input<String> protocol) {
+        public Builder protocol(@Nullable Output<String> protocol) {
             this.protocol = protocol;
             return this;
         }
 
         public Builder protocol(@Nullable String protocol) {
-            this.protocol = Input.ofNullable(protocol);
+            this.protocol = Output.ofNullable(protocol);
             return this;
         }
         public TransitGatewayConnectOptionsArgs build() {

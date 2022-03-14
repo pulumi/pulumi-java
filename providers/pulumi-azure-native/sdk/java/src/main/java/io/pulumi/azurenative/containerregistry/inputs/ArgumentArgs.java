@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.containerregistry.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class ArgumentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="isSecret")
-      private final @Nullable Input<Boolean> isSecret;
+      private final @Nullable Output<Boolean> isSecret;
 
-    public Input<Boolean> getIsSecret() {
-        return this.isSecret == null ? Input.empty() : this.isSecret;
+    public Output<Boolean> getIsSecret() {
+        return this.isSecret == null ? Output.empty() : this.isSecret;
     }
 
     /**
@@ -35,9 +35,9 @@ public final class ArgumentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name", required=true)
-      private final Input<String> name;
+      private final Output<String> name;
 
-    public Input<String> getName() {
+    public Output<String> getName() {
         return this.name;
     }
 
@@ -46,25 +46,25 @@ public final class ArgumentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="value", required=true)
-      private final Input<String> value;
+      private final Output<String> value;
 
-    public Input<String> getValue() {
+    public Output<String> getValue() {
         return this.value;
     }
 
     public ArgumentArgs(
-        @Nullable Input<Boolean> isSecret,
-        Input<String> name,
-        Input<String> value) {
-        this.isSecret = isSecret == null ? Input.ofNullable(false) : isSecret;
+        @Nullable Output<Boolean> isSecret,
+        Output<String> name,
+        Output<String> value) {
+        this.isSecret = isSecret == null ? Output.ofNullable(false) : isSecret;
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
         this.value = Objects.requireNonNull(value, "expected parameter 'value' to be non-null");
     }
 
     private ArgumentArgs() {
-        this.isSecret = Input.empty();
-        this.name = Input.empty();
-        this.value = Input.empty();
+        this.isSecret = Output.empty();
+        this.name = Output.empty();
+        this.value = Output.empty();
     }
 
     public static Builder builder() {
@@ -76,9 +76,9 @@ public final class ArgumentArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> isSecret;
-        private Input<String> name;
-        private Input<String> value;
+        private @Nullable Output<Boolean> isSecret;
+        private Output<String> name;
+        private Output<String> value;
 
         public Builder() {
     	      // Empty
@@ -91,33 +91,33 @@ public final class ArgumentArgs extends io.pulumi.resources.ResourceArgs {
     	      this.value = defaults.value;
         }
 
-        public Builder isSecret(@Nullable Input<Boolean> isSecret) {
+        public Builder isSecret(@Nullable Output<Boolean> isSecret) {
             this.isSecret = isSecret;
             return this;
         }
 
         public Builder isSecret(@Nullable Boolean isSecret) {
-            this.isSecret = Input.ofNullable(isSecret);
+            this.isSecret = Output.ofNullable(isSecret);
             return this;
         }
 
-        public Builder name(Input<String> name) {
+        public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(String name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder value(Input<String> value) {
+        public Builder value(Output<String> value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }
 
         public Builder value(String value) {
-            this.value = Input.of(Objects.requireNonNull(value));
+            this.value = Output.of(Objects.requireNonNull(value));
             return this;
         }
         public ArgumentArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.athena;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,9 +19,9 @@ public final class NamedQueryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="database", required=true)
-      private final Input<String> database;
+      private final Output<String> database;
 
-    public Input<String> getDatabase() {
+    public Output<String> getDatabase() {
         return this.database;
     }
 
@@ -30,10 +30,10 @@ public final class NamedQueryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -41,10 +41,10 @@ public final class NamedQueryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -52,9 +52,9 @@ public final class NamedQueryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="queryString", required=true)
-      private final Input<String> queryString;
+      private final Output<String> queryString;
 
-    public Input<String> getQueryString() {
+    public Output<String> getQueryString() {
         return this.queryString;
     }
 
@@ -63,18 +63,18 @@ public final class NamedQueryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="workGroup")
-      private final @Nullable Input<String> workGroup;
+      private final @Nullable Output<String> workGroup;
 
-    public Input<String> getWorkGroup() {
-        return this.workGroup == null ? Input.empty() : this.workGroup;
+    public Output<String> getWorkGroup() {
+        return this.workGroup == null ? Output.empty() : this.workGroup;
     }
 
     public NamedQueryArgs(
-        Input<String> database,
-        @Nullable Input<String> description,
-        @Nullable Input<String> name,
-        Input<String> queryString,
-        @Nullable Input<String> workGroup) {
+        Output<String> database,
+        @Nullable Output<String> description,
+        @Nullable Output<String> name,
+        Output<String> queryString,
+        @Nullable Output<String> workGroup) {
         this.database = Objects.requireNonNull(database, "expected parameter 'database' to be non-null");
         this.description = description;
         this.name = name;
@@ -83,11 +83,11 @@ public final class NamedQueryArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private NamedQueryArgs() {
-        this.database = Input.empty();
-        this.description = Input.empty();
-        this.name = Input.empty();
-        this.queryString = Input.empty();
-        this.workGroup = Input.empty();
+        this.database = Output.empty();
+        this.description = Output.empty();
+        this.name = Output.empty();
+        this.queryString = Output.empty();
+        this.workGroup = Output.empty();
     }
 
     public static Builder builder() {
@@ -99,11 +99,11 @@ public final class NamedQueryArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> database;
-        private @Nullable Input<String> description;
-        private @Nullable Input<String> name;
-        private Input<String> queryString;
-        private @Nullable Input<String> workGroup;
+        private Output<String> database;
+        private @Nullable Output<String> description;
+        private @Nullable Output<String> name;
+        private Output<String> queryString;
+        private @Nullable Output<String> workGroup;
 
         public Builder() {
     	      // Empty
@@ -118,53 +118,53 @@ public final class NamedQueryArgs extends io.pulumi.resources.ResourceArgs {
     	      this.workGroup = defaults.workGroup;
         }
 
-        public Builder database(Input<String> database) {
+        public Builder database(Output<String> database) {
             this.database = Objects.requireNonNull(database);
             return this;
         }
 
         public Builder database(String database) {
-            this.database = Input.of(Objects.requireNonNull(database));
+            this.database = Output.of(Objects.requireNonNull(database));
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder queryString(Input<String> queryString) {
+        public Builder queryString(Output<String> queryString) {
             this.queryString = Objects.requireNonNull(queryString);
             return this;
         }
 
         public Builder queryString(String queryString) {
-            this.queryString = Input.of(Objects.requireNonNull(queryString));
+            this.queryString = Output.of(Objects.requireNonNull(queryString));
             return this;
         }
 
-        public Builder workGroup(@Nullable Input<String> workGroup) {
+        public Builder workGroup(@Nullable Output<String> workGroup) {
             this.workGroup = workGroup;
             return this;
         }
 
         public Builder workGroup(@Nullable String workGroup) {
-            this.workGroup = Input.ofNullable(workGroup);
+            this.workGroup = Output.ofNullable(workGroup);
             return this;
         }
         public NamedQueryArgs build() {

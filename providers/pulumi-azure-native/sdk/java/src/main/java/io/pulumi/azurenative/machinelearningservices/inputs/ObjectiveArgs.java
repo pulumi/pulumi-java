@@ -5,7 +5,7 @@ package io.pulumi.azurenative.machinelearningservices.inputs;
 
 import io.pulumi.azurenative.machinelearningservices.enums.Goal;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -24,9 +24,9 @@ public final class ObjectiveArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="goal", required=true)
-      private final Input<Either<String,Goal>> goal;
+      private final Output<Either<String,Goal>> goal;
 
-    public Input<Either<String,Goal>> getGoal() {
+    public Output<Either<String,Goal>> getGoal() {
         return this.goal;
     }
 
@@ -35,22 +35,22 @@ public final class ObjectiveArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="primaryMetric", required=true)
-      private final Input<String> primaryMetric;
+      private final Output<String> primaryMetric;
 
-    public Input<String> getPrimaryMetric() {
+    public Output<String> getPrimaryMetric() {
         return this.primaryMetric;
     }
 
     public ObjectiveArgs(
-        Input<Either<String,Goal>> goal,
-        Input<String> primaryMetric) {
+        Output<Either<String,Goal>> goal,
+        Output<String> primaryMetric) {
         this.goal = Objects.requireNonNull(goal, "expected parameter 'goal' to be non-null");
         this.primaryMetric = Objects.requireNonNull(primaryMetric, "expected parameter 'primaryMetric' to be non-null");
     }
 
     private ObjectiveArgs() {
-        this.goal = Input.empty();
-        this.primaryMetric = Input.empty();
+        this.goal = Output.empty();
+        this.primaryMetric = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class ObjectiveArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<Either<String,Goal>> goal;
-        private Input<String> primaryMetric;
+        private Output<Either<String,Goal>> goal;
+        private Output<String> primaryMetric;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class ObjectiveArgs extends io.pulumi.resources.ResourceArgs {
     	      this.primaryMetric = defaults.primaryMetric;
         }
 
-        public Builder goal(Input<Either<String,Goal>> goal) {
+        public Builder goal(Output<Either<String,Goal>> goal) {
             this.goal = Objects.requireNonNull(goal);
             return this;
         }
 
         public Builder goal(Either<String,Goal> goal) {
-            this.goal = Input.of(Objects.requireNonNull(goal));
+            this.goal = Output.of(Objects.requireNonNull(goal));
             return this;
         }
 
-        public Builder primaryMetric(Input<String> primaryMetric) {
+        public Builder primaryMetric(Output<String> primaryMetric) {
             this.primaryMetric = Objects.requireNonNull(primaryMetric);
             return this;
         }
 
         public Builder primaryMetric(String primaryMetric) {
-            this.primaryMetric = Input.of(Objects.requireNonNull(primaryMetric));
+            this.primaryMetric = Output.of(Objects.requireNonNull(primaryMetric));
             return this;
         }
         public ObjectiveArgs build() {

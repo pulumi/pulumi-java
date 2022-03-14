@@ -7,7 +7,6 @@ import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.logic.IntegrationAccountCertificateArgs;
 import io.pulumi.azurenative.logic.outputs.KeyVaultKeyReferenceResponse;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -199,21 +198,21 @@ public class IntegrationAccountCertificate extends io.pulumi.resources.CustomRes
      * @param options A bag of options that control this resource's behavior.
      */
     public IntegrationAccountCertificate(String name, IntegrationAccountCertificateArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:logic:IntegrationAccountCertificate", name, args == null ? IntegrationAccountCertificateArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("azure-native:logic:IntegrationAccountCertificate", name, args == null ? IntegrationAccountCertificateArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private IntegrationAccountCertificate(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private IntegrationAccountCertificate(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:logic:IntegrationAccountCertificate", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:logic/v20150801preview:IntegrationAccountCertificate").build()),
-                Input.of(Alias.builder().setType("azure-native:logic/v20160601:IntegrationAccountCertificate").build()),
-                Input.of(Alias.builder().setType("azure-native:logic/v20180701preview:IntegrationAccountCertificate").build()),
-                Input.of(Alias.builder().setType("azure-native:logic/v20190501:IntegrationAccountCertificate").build())
+                Output.of(Alias.builder().setType("azure-native:logic/v20150801preview:IntegrationAccountCertificate").build()),
+                Output.of(Alias.builder().setType("azure-native:logic/v20160601:IntegrationAccountCertificate").build()),
+                Output.of(Alias.builder().setType("azure-native:logic/v20180701preview:IntegrationAccountCertificate").build()),
+                Output.of(Alias.builder().setType("azure-native:logic/v20190501:IntegrationAccountCertificate").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -227,7 +226,7 @@ public class IntegrationAccountCertificate extends io.pulumi.resources.CustomRes
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static IntegrationAccountCertificate get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static IntegrationAccountCertificate get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new IntegrationAccountCertificate(name, id, options);
     }
 }

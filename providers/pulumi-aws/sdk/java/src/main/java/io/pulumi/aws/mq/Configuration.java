@@ -6,7 +6,6 @@ package io.pulumi.aws.mq;
 import io.pulumi.aws.Utilities;
 import io.pulumi.aws.mq.ConfigurationArgs;
 import io.pulumi.aws.mq.inputs.ConfigurationState;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -212,14 +211,14 @@ public class Configuration extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Configuration(String name, ConfigurationArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:mq/configuration:Configuration", name, args == null ? ConfigurationArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws:mq/configuration:Configuration", name, args == null ? ConfigurationArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private Configuration(String name, Input<String> id, @Nullable ConfigurationState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private Configuration(String name, Output<String> id, @Nullable ConfigurationState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws:mq/configuration:Configuration", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -235,7 +234,7 @@ public class Configuration extends io.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static Configuration get(String name, Input<String> id, @Nullable ConfigurationState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static Configuration get(String name, Output<String> id, @Nullable ConfigurationState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Configuration(name, id, state, options);
     }
 }

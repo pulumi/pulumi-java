@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.web.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -26,10 +26,10 @@ public final class AzureActiveDirectoryRegistrationArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="clientId")
-      private final @Nullable Input<String> clientId;
+      private final @Nullable Output<String> clientId;
 
-    public Input<String> getClientId() {
-        return this.clientId == null ? Input.empty() : this.clientId;
+    public Output<String> getClientId() {
+        return this.clientId == null ? Output.empty() : this.clientId;
     }
 
     /**
@@ -38,10 +38,10 @@ public final class AzureActiveDirectoryRegistrationArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="clientSecretCertificateIssuer")
-      private final @Nullable Input<String> clientSecretCertificateIssuer;
+      private final @Nullable Output<String> clientSecretCertificateIssuer;
 
-    public Input<String> getClientSecretCertificateIssuer() {
-        return this.clientSecretCertificateIssuer == null ? Input.empty() : this.clientSecretCertificateIssuer;
+    public Output<String> getClientSecretCertificateIssuer() {
+        return this.clientSecretCertificateIssuer == null ? Output.empty() : this.clientSecretCertificateIssuer;
     }
 
     /**
@@ -50,10 +50,10 @@ public final class AzureActiveDirectoryRegistrationArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="clientSecretCertificateSubjectAlternativeName")
-      private final @Nullable Input<String> clientSecretCertificateSubjectAlternativeName;
+      private final @Nullable Output<String> clientSecretCertificateSubjectAlternativeName;
 
-    public Input<String> getClientSecretCertificateSubjectAlternativeName() {
-        return this.clientSecretCertificateSubjectAlternativeName == null ? Input.empty() : this.clientSecretCertificateSubjectAlternativeName;
+    public Output<String> getClientSecretCertificateSubjectAlternativeName() {
+        return this.clientSecretCertificateSubjectAlternativeName == null ? Output.empty() : this.clientSecretCertificateSubjectAlternativeName;
     }
 
     /**
@@ -62,10 +62,10 @@ public final class AzureActiveDirectoryRegistrationArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="clientSecretCertificateThumbprint")
-      private final @Nullable Input<String> clientSecretCertificateThumbprint;
+      private final @Nullable Output<String> clientSecretCertificateThumbprint;
 
-    public Input<String> getClientSecretCertificateThumbprint() {
-        return this.clientSecretCertificateThumbprint == null ? Input.empty() : this.clientSecretCertificateThumbprint;
+    public Output<String> getClientSecretCertificateThumbprint() {
+        return this.clientSecretCertificateThumbprint == null ? Output.empty() : this.clientSecretCertificateThumbprint;
     }
 
     /**
@@ -73,10 +73,10 @@ public final class AzureActiveDirectoryRegistrationArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="clientSecretSettingName")
-      private final @Nullable Input<String> clientSecretSettingName;
+      private final @Nullable Output<String> clientSecretSettingName;
 
-    public Input<String> getClientSecretSettingName() {
-        return this.clientSecretSettingName == null ? Input.empty() : this.clientSecretSettingName;
+    public Output<String> getClientSecretSettingName() {
+        return this.clientSecretSettingName == null ? Output.empty() : this.clientSecretSettingName;
     }
 
     /**
@@ -87,19 +87,19 @@ public final class AzureActiveDirectoryRegistrationArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="openIdIssuer")
-      private final @Nullable Input<String> openIdIssuer;
+      private final @Nullable Output<String> openIdIssuer;
 
-    public Input<String> getOpenIdIssuer() {
-        return this.openIdIssuer == null ? Input.empty() : this.openIdIssuer;
+    public Output<String> getOpenIdIssuer() {
+        return this.openIdIssuer == null ? Output.empty() : this.openIdIssuer;
     }
 
     public AzureActiveDirectoryRegistrationArgs(
-        @Nullable Input<String> clientId,
-        @Nullable Input<String> clientSecretCertificateIssuer,
-        @Nullable Input<String> clientSecretCertificateSubjectAlternativeName,
-        @Nullable Input<String> clientSecretCertificateThumbprint,
-        @Nullable Input<String> clientSecretSettingName,
-        @Nullable Input<String> openIdIssuer) {
+        @Nullable Output<String> clientId,
+        @Nullable Output<String> clientSecretCertificateIssuer,
+        @Nullable Output<String> clientSecretCertificateSubjectAlternativeName,
+        @Nullable Output<String> clientSecretCertificateThumbprint,
+        @Nullable Output<String> clientSecretSettingName,
+        @Nullable Output<String> openIdIssuer) {
         this.clientId = clientId;
         this.clientSecretCertificateIssuer = clientSecretCertificateIssuer;
         this.clientSecretCertificateSubjectAlternativeName = clientSecretCertificateSubjectAlternativeName;
@@ -109,12 +109,12 @@ public final class AzureActiveDirectoryRegistrationArgs extends io.pulumi.resour
     }
 
     private AzureActiveDirectoryRegistrationArgs() {
-        this.clientId = Input.empty();
-        this.clientSecretCertificateIssuer = Input.empty();
-        this.clientSecretCertificateSubjectAlternativeName = Input.empty();
-        this.clientSecretCertificateThumbprint = Input.empty();
-        this.clientSecretSettingName = Input.empty();
-        this.openIdIssuer = Input.empty();
+        this.clientId = Output.empty();
+        this.clientSecretCertificateIssuer = Output.empty();
+        this.clientSecretCertificateSubjectAlternativeName = Output.empty();
+        this.clientSecretCertificateThumbprint = Output.empty();
+        this.clientSecretSettingName = Output.empty();
+        this.openIdIssuer = Output.empty();
     }
 
     public static Builder builder() {
@@ -126,12 +126,12 @@ public final class AzureActiveDirectoryRegistrationArgs extends io.pulumi.resour
     }
 
     public static final class Builder {
-        private @Nullable Input<String> clientId;
-        private @Nullable Input<String> clientSecretCertificateIssuer;
-        private @Nullable Input<String> clientSecretCertificateSubjectAlternativeName;
-        private @Nullable Input<String> clientSecretCertificateThumbprint;
-        private @Nullable Input<String> clientSecretSettingName;
-        private @Nullable Input<String> openIdIssuer;
+        private @Nullable Output<String> clientId;
+        private @Nullable Output<String> clientSecretCertificateIssuer;
+        private @Nullable Output<String> clientSecretCertificateSubjectAlternativeName;
+        private @Nullable Output<String> clientSecretCertificateThumbprint;
+        private @Nullable Output<String> clientSecretSettingName;
+        private @Nullable Output<String> openIdIssuer;
 
         public Builder() {
     	      // Empty
@@ -147,63 +147,63 @@ public final class AzureActiveDirectoryRegistrationArgs extends io.pulumi.resour
     	      this.openIdIssuer = defaults.openIdIssuer;
         }
 
-        public Builder clientId(@Nullable Input<String> clientId) {
+        public Builder clientId(@Nullable Output<String> clientId) {
             this.clientId = clientId;
             return this;
         }
 
         public Builder clientId(@Nullable String clientId) {
-            this.clientId = Input.ofNullable(clientId);
+            this.clientId = Output.ofNullable(clientId);
             return this;
         }
 
-        public Builder clientSecretCertificateIssuer(@Nullable Input<String> clientSecretCertificateIssuer) {
+        public Builder clientSecretCertificateIssuer(@Nullable Output<String> clientSecretCertificateIssuer) {
             this.clientSecretCertificateIssuer = clientSecretCertificateIssuer;
             return this;
         }
 
         public Builder clientSecretCertificateIssuer(@Nullable String clientSecretCertificateIssuer) {
-            this.clientSecretCertificateIssuer = Input.ofNullable(clientSecretCertificateIssuer);
+            this.clientSecretCertificateIssuer = Output.ofNullable(clientSecretCertificateIssuer);
             return this;
         }
 
-        public Builder clientSecretCertificateSubjectAlternativeName(@Nullable Input<String> clientSecretCertificateSubjectAlternativeName) {
+        public Builder clientSecretCertificateSubjectAlternativeName(@Nullable Output<String> clientSecretCertificateSubjectAlternativeName) {
             this.clientSecretCertificateSubjectAlternativeName = clientSecretCertificateSubjectAlternativeName;
             return this;
         }
 
         public Builder clientSecretCertificateSubjectAlternativeName(@Nullable String clientSecretCertificateSubjectAlternativeName) {
-            this.clientSecretCertificateSubjectAlternativeName = Input.ofNullable(clientSecretCertificateSubjectAlternativeName);
+            this.clientSecretCertificateSubjectAlternativeName = Output.ofNullable(clientSecretCertificateSubjectAlternativeName);
             return this;
         }
 
-        public Builder clientSecretCertificateThumbprint(@Nullable Input<String> clientSecretCertificateThumbprint) {
+        public Builder clientSecretCertificateThumbprint(@Nullable Output<String> clientSecretCertificateThumbprint) {
             this.clientSecretCertificateThumbprint = clientSecretCertificateThumbprint;
             return this;
         }
 
         public Builder clientSecretCertificateThumbprint(@Nullable String clientSecretCertificateThumbprint) {
-            this.clientSecretCertificateThumbprint = Input.ofNullable(clientSecretCertificateThumbprint);
+            this.clientSecretCertificateThumbprint = Output.ofNullable(clientSecretCertificateThumbprint);
             return this;
         }
 
-        public Builder clientSecretSettingName(@Nullable Input<String> clientSecretSettingName) {
+        public Builder clientSecretSettingName(@Nullable Output<String> clientSecretSettingName) {
             this.clientSecretSettingName = clientSecretSettingName;
             return this;
         }
 
         public Builder clientSecretSettingName(@Nullable String clientSecretSettingName) {
-            this.clientSecretSettingName = Input.ofNullable(clientSecretSettingName);
+            this.clientSecretSettingName = Output.ofNullable(clientSecretSettingName);
             return this;
         }
 
-        public Builder openIdIssuer(@Nullable Input<String> openIdIssuer) {
+        public Builder openIdIssuer(@Nullable Output<String> openIdIssuer) {
             this.openIdIssuer = openIdIssuer;
             return this;
         }
 
         public Builder openIdIssuer(@Nullable String openIdIssuer) {
-            this.openIdIssuer = Input.ofNullable(openIdIssuer);
+            this.openIdIssuer = Output.ofNullable(openIdIssuer);
             return this;
         }
         public AzureActiveDirectoryRegistrationArgs build() {

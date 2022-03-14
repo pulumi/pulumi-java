@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.dataloss.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.dataloss.inputs.PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleDictionaryArgs;
 import io.pulumi.gcp.dataloss.inputs.PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleExcludeInfoTypesArgs;
@@ -23,10 +23,10 @@ public final class PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRul
      * 
      */
     @InputImport(name="dictionary")
-      private final @Nullable Input<PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleDictionaryArgs> dictionary;
+      private final @Nullable Output<PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleDictionaryArgs> dictionary;
 
-    public Input<PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleDictionaryArgs> getDictionary() {
-        return this.dictionary == null ? Input.empty() : this.dictionary;
+    public Output<PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleDictionaryArgs> getDictionary() {
+        return this.dictionary == null ? Output.empty() : this.dictionary;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRul
      * 
      */
     @InputImport(name="excludeInfoTypes")
-      private final @Nullable Input<PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleExcludeInfoTypesArgs> excludeInfoTypes;
+      private final @Nullable Output<PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleExcludeInfoTypesArgs> excludeInfoTypes;
 
-    public Input<PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleExcludeInfoTypesArgs> getExcludeInfoTypes() {
-        return this.excludeInfoTypes == null ? Input.empty() : this.excludeInfoTypes;
+    public Output<PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleExcludeInfoTypesArgs> getExcludeInfoTypes() {
+        return this.excludeInfoTypes == null ? Output.empty() : this.excludeInfoTypes;
     }
 
     /**
@@ -47,9 +47,9 @@ public final class PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRul
      * 
      */
     @InputImport(name="matchingType", required=true)
-      private final Input<String> matchingType;
+      private final Output<String> matchingType;
 
-    public Input<String> getMatchingType() {
+    public Output<String> getMatchingType() {
         return this.matchingType;
     }
 
@@ -59,17 +59,17 @@ public final class PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRul
      * 
      */
     @InputImport(name="regex")
-      private final @Nullable Input<PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleRegexArgs> regex;
+      private final @Nullable Output<PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleRegexArgs> regex;
 
-    public Input<PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleRegexArgs> getRegex() {
-        return this.regex == null ? Input.empty() : this.regex;
+    public Output<PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleRegexArgs> getRegex() {
+        return this.regex == null ? Output.empty() : this.regex;
     }
 
     public PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleArgs(
-        @Nullable Input<PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleDictionaryArgs> dictionary,
-        @Nullable Input<PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleExcludeInfoTypesArgs> excludeInfoTypes,
-        Input<String> matchingType,
-        @Nullable Input<PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleRegexArgs> regex) {
+        @Nullable Output<PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleDictionaryArgs> dictionary,
+        @Nullable Output<PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleExcludeInfoTypesArgs> excludeInfoTypes,
+        Output<String> matchingType,
+        @Nullable Output<PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleRegexArgs> regex) {
         this.dictionary = dictionary;
         this.excludeInfoTypes = excludeInfoTypes;
         this.matchingType = Objects.requireNonNull(matchingType, "expected parameter 'matchingType' to be non-null");
@@ -77,10 +77,10 @@ public final class PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRul
     }
 
     private PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleArgs() {
-        this.dictionary = Input.empty();
-        this.excludeInfoTypes = Input.empty();
-        this.matchingType = Input.empty();
-        this.regex = Input.empty();
+        this.dictionary = Output.empty();
+        this.excludeInfoTypes = Output.empty();
+        this.matchingType = Output.empty();
+        this.regex = Output.empty();
     }
 
     public static Builder builder() {
@@ -92,10 +92,10 @@ public final class PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRul
     }
 
     public static final class Builder {
-        private @Nullable Input<PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleDictionaryArgs> dictionary;
-        private @Nullable Input<PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleExcludeInfoTypesArgs> excludeInfoTypes;
-        private Input<String> matchingType;
-        private @Nullable Input<PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleRegexArgs> regex;
+        private @Nullable Output<PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleDictionaryArgs> dictionary;
+        private @Nullable Output<PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleExcludeInfoTypesArgs> excludeInfoTypes;
+        private Output<String> matchingType;
+        private @Nullable Output<PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleRegexArgs> regex;
 
         public Builder() {
     	      // Empty
@@ -109,43 +109,43 @@ public final class PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRul
     	      this.regex = defaults.regex;
         }
 
-        public Builder dictionary(@Nullable Input<PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleDictionaryArgs> dictionary) {
+        public Builder dictionary(@Nullable Output<PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleDictionaryArgs> dictionary) {
             this.dictionary = dictionary;
             return this;
         }
 
         public Builder dictionary(@Nullable PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleDictionaryArgs dictionary) {
-            this.dictionary = Input.ofNullable(dictionary);
+            this.dictionary = Output.ofNullable(dictionary);
             return this;
         }
 
-        public Builder excludeInfoTypes(@Nullable Input<PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleExcludeInfoTypesArgs> excludeInfoTypes) {
+        public Builder excludeInfoTypes(@Nullable Output<PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleExcludeInfoTypesArgs> excludeInfoTypes) {
             this.excludeInfoTypes = excludeInfoTypes;
             return this;
         }
 
         public Builder excludeInfoTypes(@Nullable PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleExcludeInfoTypesArgs excludeInfoTypes) {
-            this.excludeInfoTypes = Input.ofNullable(excludeInfoTypes);
+            this.excludeInfoTypes = Output.ofNullable(excludeInfoTypes);
             return this;
         }
 
-        public Builder matchingType(Input<String> matchingType) {
+        public Builder matchingType(Output<String> matchingType) {
             this.matchingType = Objects.requireNonNull(matchingType);
             return this;
         }
 
         public Builder matchingType(String matchingType) {
-            this.matchingType = Input.of(Objects.requireNonNull(matchingType));
+            this.matchingType = Output.of(Objects.requireNonNull(matchingType));
             return this;
         }
 
-        public Builder regex(@Nullable Input<PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleRegexArgs> regex) {
+        public Builder regex(@Nullable Output<PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleRegexArgs> regex) {
             this.regex = regex;
             return this;
         }
 
         public Builder regex(@Nullable PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleRegexArgs regex) {
-            this.regex = Input.ofNullable(regex);
+            this.regex = Output.ofNullable(regex);
             return this;
         }
         public PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleArgs build() {

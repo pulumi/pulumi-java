@@ -13,7 +13,7 @@ import io.pulumi.azurenative.compute.inputs.ExtendedLocationArgs;
 import io.pulumi.azurenative.compute.inputs.PurchasePlanArgs;
 import io.pulumi.azurenative.compute.inputs.SnapshotSkuArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -32,9 +32,9 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="creationData", required=true)
-      private final Input<CreationDataArgs> creationData;
+      private final Output<CreationDataArgs> creationData;
 
-    public Input<CreationDataArgs> getCreationData() {
+    public Output<CreationDataArgs> getCreationData() {
         return this.creationData;
     }
 
@@ -43,10 +43,10 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="diskAccessId")
-      private final @Nullable Input<String> diskAccessId;
+      private final @Nullable Output<String> diskAccessId;
 
-    public Input<String> getDiskAccessId() {
-        return this.diskAccessId == null ? Input.empty() : this.diskAccessId;
+    public Output<String> getDiskAccessId() {
+        return this.diskAccessId == null ? Output.empty() : this.diskAccessId;
     }
 
     /**
@@ -54,10 +54,10 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="diskSizeGB")
-      private final @Nullable Input<Integer> diskSizeGB;
+      private final @Nullable Output<Integer> diskSizeGB;
 
-    public Input<Integer> getDiskSizeGB() {
-        return this.diskSizeGB == null ? Input.empty() : this.diskSizeGB;
+    public Output<Integer> getDiskSizeGB() {
+        return this.diskSizeGB == null ? Output.empty() : this.diskSizeGB;
     }
 
     /**
@@ -65,10 +65,10 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="encryption")
-      private final @Nullable Input<EncryptionArgs> encryption;
+      private final @Nullable Output<EncryptionArgs> encryption;
 
-    public Input<EncryptionArgs> getEncryption() {
-        return this.encryption == null ? Input.empty() : this.encryption;
+    public Output<EncryptionArgs> getEncryption() {
+        return this.encryption == null ? Output.empty() : this.encryption;
     }
 
     /**
@@ -76,10 +76,10 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="encryptionSettingsCollection")
-      private final @Nullable Input<EncryptionSettingsCollectionArgs> encryptionSettingsCollection;
+      private final @Nullable Output<EncryptionSettingsCollectionArgs> encryptionSettingsCollection;
 
-    public Input<EncryptionSettingsCollectionArgs> getEncryptionSettingsCollection() {
-        return this.encryptionSettingsCollection == null ? Input.empty() : this.encryptionSettingsCollection;
+    public Output<EncryptionSettingsCollectionArgs> getEncryptionSettingsCollection() {
+        return this.encryptionSettingsCollection == null ? Output.empty() : this.encryptionSettingsCollection;
     }
 
     /**
@@ -87,10 +87,10 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="extendedLocation")
-      private final @Nullable Input<ExtendedLocationArgs> extendedLocation;
+      private final @Nullable Output<ExtendedLocationArgs> extendedLocation;
 
-    public Input<ExtendedLocationArgs> getExtendedLocation() {
-        return this.extendedLocation == null ? Input.empty() : this.extendedLocation;
+    public Output<ExtendedLocationArgs> getExtendedLocation() {
+        return this.extendedLocation == null ? Output.empty() : this.extendedLocation;
     }
 
     /**
@@ -98,10 +98,10 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="hyperVGeneration")
-      private final @Nullable Input<Either<String,HyperVGeneration>> hyperVGeneration;
+      private final @Nullable Output<Either<String,HyperVGeneration>> hyperVGeneration;
 
-    public Input<Either<String,HyperVGeneration>> getHyperVGeneration() {
-        return this.hyperVGeneration == null ? Input.empty() : this.hyperVGeneration;
+    public Output<Either<String,HyperVGeneration>> getHyperVGeneration() {
+        return this.hyperVGeneration == null ? Output.empty() : this.hyperVGeneration;
     }
 
     /**
@@ -109,10 +109,10 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="incremental")
-      private final @Nullable Input<Boolean> incremental;
+      private final @Nullable Output<Boolean> incremental;
 
-    public Input<Boolean> getIncremental() {
-        return this.incremental == null ? Input.empty() : this.incremental;
+    public Output<Boolean> getIncremental() {
+        return this.incremental == null ? Output.empty() : this.incremental;
     }
 
     /**
@@ -120,10 +120,10 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -131,10 +131,10 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="networkAccessPolicy")
-      private final @Nullable Input<Either<String,NetworkAccessPolicy>> networkAccessPolicy;
+      private final @Nullable Output<Either<String,NetworkAccessPolicy>> networkAccessPolicy;
 
-    public Input<Either<String,NetworkAccessPolicy>> getNetworkAccessPolicy() {
-        return this.networkAccessPolicy == null ? Input.empty() : this.networkAccessPolicy;
+    public Output<Either<String,NetworkAccessPolicy>> getNetworkAccessPolicy() {
+        return this.networkAccessPolicy == null ? Output.empty() : this.networkAccessPolicy;
     }
 
     /**
@@ -142,10 +142,10 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="osType")
-      private final @Nullable Input<OperatingSystemTypes> osType;
+      private final @Nullable Output<OperatingSystemTypes> osType;
 
-    public Input<OperatingSystemTypes> getOsType() {
-        return this.osType == null ? Input.empty() : this.osType;
+    public Output<OperatingSystemTypes> getOsType() {
+        return this.osType == null ? Output.empty() : this.osType;
     }
 
     /**
@@ -153,10 +153,10 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="purchasePlan")
-      private final @Nullable Input<PurchasePlanArgs> purchasePlan;
+      private final @Nullable Output<PurchasePlanArgs> purchasePlan;
 
-    public Input<PurchasePlanArgs> getPurchasePlan() {
-        return this.purchasePlan == null ? Input.empty() : this.purchasePlan;
+    public Output<PurchasePlanArgs> getPurchasePlan() {
+        return this.purchasePlan == null ? Output.empty() : this.purchasePlan;
     }
 
     /**
@@ -164,9 +164,9 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -175,10 +175,10 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sku")
-      private final @Nullable Input<SnapshotSkuArgs> sku;
+      private final @Nullable Output<SnapshotSkuArgs> sku;
 
-    public Input<SnapshotSkuArgs> getSku() {
-        return this.sku == null ? Input.empty() : this.sku;
+    public Output<SnapshotSkuArgs> getSku() {
+        return this.sku == null ? Output.empty() : this.sku;
     }
 
     /**
@@ -186,10 +186,10 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="snapshotName")
-      private final @Nullable Input<String> snapshotName;
+      private final @Nullable Output<String> snapshotName;
 
-    public Input<String> getSnapshotName() {
-        return this.snapshotName == null ? Input.empty() : this.snapshotName;
+    public Output<String> getSnapshotName() {
+        return this.snapshotName == null ? Output.empty() : this.snapshotName;
     }
 
     /**
@@ -197,10 +197,10 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="supportsHibernation")
-      private final @Nullable Input<Boolean> supportsHibernation;
+      private final @Nullable Output<Boolean> supportsHibernation;
 
-    public Input<Boolean> getSupportsHibernation() {
-        return this.supportsHibernation == null ? Input.empty() : this.supportsHibernation;
+    public Output<Boolean> getSupportsHibernation() {
+        return this.supportsHibernation == null ? Output.empty() : this.supportsHibernation;
     }
 
     /**
@@ -208,30 +208,30 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public SnapshotArgs(
-        Input<CreationDataArgs> creationData,
-        @Nullable Input<String> diskAccessId,
-        @Nullable Input<Integer> diskSizeGB,
-        @Nullable Input<EncryptionArgs> encryption,
-        @Nullable Input<EncryptionSettingsCollectionArgs> encryptionSettingsCollection,
-        @Nullable Input<ExtendedLocationArgs> extendedLocation,
-        @Nullable Input<Either<String,HyperVGeneration>> hyperVGeneration,
-        @Nullable Input<Boolean> incremental,
-        @Nullable Input<String> location,
-        @Nullable Input<Either<String,NetworkAccessPolicy>> networkAccessPolicy,
-        @Nullable Input<OperatingSystemTypes> osType,
-        @Nullable Input<PurchasePlanArgs> purchasePlan,
-        Input<String> resourceGroupName,
-        @Nullable Input<SnapshotSkuArgs> sku,
-        @Nullable Input<String> snapshotName,
-        @Nullable Input<Boolean> supportsHibernation,
-        @Nullable Input<Map<String,String>> tags) {
+        Output<CreationDataArgs> creationData,
+        @Nullable Output<String> diskAccessId,
+        @Nullable Output<Integer> diskSizeGB,
+        @Nullable Output<EncryptionArgs> encryption,
+        @Nullable Output<EncryptionSettingsCollectionArgs> encryptionSettingsCollection,
+        @Nullable Output<ExtendedLocationArgs> extendedLocation,
+        @Nullable Output<Either<String,HyperVGeneration>> hyperVGeneration,
+        @Nullable Output<Boolean> incremental,
+        @Nullable Output<String> location,
+        @Nullable Output<Either<String,NetworkAccessPolicy>> networkAccessPolicy,
+        @Nullable Output<OperatingSystemTypes> osType,
+        @Nullable Output<PurchasePlanArgs> purchasePlan,
+        Output<String> resourceGroupName,
+        @Nullable Output<SnapshotSkuArgs> sku,
+        @Nullable Output<String> snapshotName,
+        @Nullable Output<Boolean> supportsHibernation,
+        @Nullable Output<Map<String,String>> tags) {
         this.creationData = Objects.requireNonNull(creationData, "expected parameter 'creationData' to be non-null");
         this.diskAccessId = diskAccessId;
         this.diskSizeGB = diskSizeGB;
@@ -252,23 +252,23 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private SnapshotArgs() {
-        this.creationData = Input.empty();
-        this.diskAccessId = Input.empty();
-        this.diskSizeGB = Input.empty();
-        this.encryption = Input.empty();
-        this.encryptionSettingsCollection = Input.empty();
-        this.extendedLocation = Input.empty();
-        this.hyperVGeneration = Input.empty();
-        this.incremental = Input.empty();
-        this.location = Input.empty();
-        this.networkAccessPolicy = Input.empty();
-        this.osType = Input.empty();
-        this.purchasePlan = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.sku = Input.empty();
-        this.snapshotName = Input.empty();
-        this.supportsHibernation = Input.empty();
-        this.tags = Input.empty();
+        this.creationData = Output.empty();
+        this.diskAccessId = Output.empty();
+        this.diskSizeGB = Output.empty();
+        this.encryption = Output.empty();
+        this.encryptionSettingsCollection = Output.empty();
+        this.extendedLocation = Output.empty();
+        this.hyperVGeneration = Output.empty();
+        this.incremental = Output.empty();
+        this.location = Output.empty();
+        this.networkAccessPolicy = Output.empty();
+        this.osType = Output.empty();
+        this.purchasePlan = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.sku = Output.empty();
+        this.snapshotName = Output.empty();
+        this.supportsHibernation = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -280,23 +280,23 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<CreationDataArgs> creationData;
-        private @Nullable Input<String> diskAccessId;
-        private @Nullable Input<Integer> diskSizeGB;
-        private @Nullable Input<EncryptionArgs> encryption;
-        private @Nullable Input<EncryptionSettingsCollectionArgs> encryptionSettingsCollection;
-        private @Nullable Input<ExtendedLocationArgs> extendedLocation;
-        private @Nullable Input<Either<String,HyperVGeneration>> hyperVGeneration;
-        private @Nullable Input<Boolean> incremental;
-        private @Nullable Input<String> location;
-        private @Nullable Input<Either<String,NetworkAccessPolicy>> networkAccessPolicy;
-        private @Nullable Input<OperatingSystemTypes> osType;
-        private @Nullable Input<PurchasePlanArgs> purchasePlan;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<SnapshotSkuArgs> sku;
-        private @Nullable Input<String> snapshotName;
-        private @Nullable Input<Boolean> supportsHibernation;
-        private @Nullable Input<Map<String,String>> tags;
+        private Output<CreationDataArgs> creationData;
+        private @Nullable Output<String> diskAccessId;
+        private @Nullable Output<Integer> diskSizeGB;
+        private @Nullable Output<EncryptionArgs> encryption;
+        private @Nullable Output<EncryptionSettingsCollectionArgs> encryptionSettingsCollection;
+        private @Nullable Output<ExtendedLocationArgs> extendedLocation;
+        private @Nullable Output<Either<String,HyperVGeneration>> hyperVGeneration;
+        private @Nullable Output<Boolean> incremental;
+        private @Nullable Output<String> location;
+        private @Nullable Output<Either<String,NetworkAccessPolicy>> networkAccessPolicy;
+        private @Nullable Output<OperatingSystemTypes> osType;
+        private @Nullable Output<PurchasePlanArgs> purchasePlan;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<SnapshotSkuArgs> sku;
+        private @Nullable Output<String> snapshotName;
+        private @Nullable Output<Boolean> supportsHibernation;
+        private @Nullable Output<Map<String,String>> tags;
 
         public Builder() {
     	      // Empty
@@ -323,173 +323,173 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder creationData(Input<CreationDataArgs> creationData) {
+        public Builder creationData(Output<CreationDataArgs> creationData) {
             this.creationData = Objects.requireNonNull(creationData);
             return this;
         }
 
         public Builder creationData(CreationDataArgs creationData) {
-            this.creationData = Input.of(Objects.requireNonNull(creationData));
+            this.creationData = Output.of(Objects.requireNonNull(creationData));
             return this;
         }
 
-        public Builder diskAccessId(@Nullable Input<String> diskAccessId) {
+        public Builder diskAccessId(@Nullable Output<String> diskAccessId) {
             this.diskAccessId = diskAccessId;
             return this;
         }
 
         public Builder diskAccessId(@Nullable String diskAccessId) {
-            this.diskAccessId = Input.ofNullable(diskAccessId);
+            this.diskAccessId = Output.ofNullable(diskAccessId);
             return this;
         }
 
-        public Builder diskSizeGB(@Nullable Input<Integer> diskSizeGB) {
+        public Builder diskSizeGB(@Nullable Output<Integer> diskSizeGB) {
             this.diskSizeGB = diskSizeGB;
             return this;
         }
 
         public Builder diskSizeGB(@Nullable Integer diskSizeGB) {
-            this.diskSizeGB = Input.ofNullable(diskSizeGB);
+            this.diskSizeGB = Output.ofNullable(diskSizeGB);
             return this;
         }
 
-        public Builder encryption(@Nullable Input<EncryptionArgs> encryption) {
+        public Builder encryption(@Nullable Output<EncryptionArgs> encryption) {
             this.encryption = encryption;
             return this;
         }
 
         public Builder encryption(@Nullable EncryptionArgs encryption) {
-            this.encryption = Input.ofNullable(encryption);
+            this.encryption = Output.ofNullable(encryption);
             return this;
         }
 
-        public Builder encryptionSettingsCollection(@Nullable Input<EncryptionSettingsCollectionArgs> encryptionSettingsCollection) {
+        public Builder encryptionSettingsCollection(@Nullable Output<EncryptionSettingsCollectionArgs> encryptionSettingsCollection) {
             this.encryptionSettingsCollection = encryptionSettingsCollection;
             return this;
         }
 
         public Builder encryptionSettingsCollection(@Nullable EncryptionSettingsCollectionArgs encryptionSettingsCollection) {
-            this.encryptionSettingsCollection = Input.ofNullable(encryptionSettingsCollection);
+            this.encryptionSettingsCollection = Output.ofNullable(encryptionSettingsCollection);
             return this;
         }
 
-        public Builder extendedLocation(@Nullable Input<ExtendedLocationArgs> extendedLocation) {
+        public Builder extendedLocation(@Nullable Output<ExtendedLocationArgs> extendedLocation) {
             this.extendedLocation = extendedLocation;
             return this;
         }
 
         public Builder extendedLocation(@Nullable ExtendedLocationArgs extendedLocation) {
-            this.extendedLocation = Input.ofNullable(extendedLocation);
+            this.extendedLocation = Output.ofNullable(extendedLocation);
             return this;
         }
 
-        public Builder hyperVGeneration(@Nullable Input<Either<String,HyperVGeneration>> hyperVGeneration) {
+        public Builder hyperVGeneration(@Nullable Output<Either<String,HyperVGeneration>> hyperVGeneration) {
             this.hyperVGeneration = hyperVGeneration;
             return this;
         }
 
         public Builder hyperVGeneration(@Nullable Either<String,HyperVGeneration> hyperVGeneration) {
-            this.hyperVGeneration = Input.ofNullable(hyperVGeneration);
+            this.hyperVGeneration = Output.ofNullable(hyperVGeneration);
             return this;
         }
 
-        public Builder incremental(@Nullable Input<Boolean> incremental) {
+        public Builder incremental(@Nullable Output<Boolean> incremental) {
             this.incremental = incremental;
             return this;
         }
 
         public Builder incremental(@Nullable Boolean incremental) {
-            this.incremental = Input.ofNullable(incremental);
+            this.incremental = Output.ofNullable(incremental);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder networkAccessPolicy(@Nullable Input<Either<String,NetworkAccessPolicy>> networkAccessPolicy) {
+        public Builder networkAccessPolicy(@Nullable Output<Either<String,NetworkAccessPolicy>> networkAccessPolicy) {
             this.networkAccessPolicy = networkAccessPolicy;
             return this;
         }
 
         public Builder networkAccessPolicy(@Nullable Either<String,NetworkAccessPolicy> networkAccessPolicy) {
-            this.networkAccessPolicy = Input.ofNullable(networkAccessPolicy);
+            this.networkAccessPolicy = Output.ofNullable(networkAccessPolicy);
             return this;
         }
 
-        public Builder osType(@Nullable Input<OperatingSystemTypes> osType) {
+        public Builder osType(@Nullable Output<OperatingSystemTypes> osType) {
             this.osType = osType;
             return this;
         }
 
         public Builder osType(@Nullable OperatingSystemTypes osType) {
-            this.osType = Input.ofNullable(osType);
+            this.osType = Output.ofNullable(osType);
             return this;
         }
 
-        public Builder purchasePlan(@Nullable Input<PurchasePlanArgs> purchasePlan) {
+        public Builder purchasePlan(@Nullable Output<PurchasePlanArgs> purchasePlan) {
             this.purchasePlan = purchasePlan;
             return this;
         }
 
         public Builder purchasePlan(@Nullable PurchasePlanArgs purchasePlan) {
-            this.purchasePlan = Input.ofNullable(purchasePlan);
+            this.purchasePlan = Output.ofNullable(purchasePlan);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder sku(@Nullable Input<SnapshotSkuArgs> sku) {
+        public Builder sku(@Nullable Output<SnapshotSkuArgs> sku) {
             this.sku = sku;
             return this;
         }
 
         public Builder sku(@Nullable SnapshotSkuArgs sku) {
-            this.sku = Input.ofNullable(sku);
+            this.sku = Output.ofNullable(sku);
             return this;
         }
 
-        public Builder snapshotName(@Nullable Input<String> snapshotName) {
+        public Builder snapshotName(@Nullable Output<String> snapshotName) {
             this.snapshotName = snapshotName;
             return this;
         }
 
         public Builder snapshotName(@Nullable String snapshotName) {
-            this.snapshotName = Input.ofNullable(snapshotName);
+            this.snapshotName = Output.ofNullable(snapshotName);
             return this;
         }
 
-        public Builder supportsHibernation(@Nullable Input<Boolean> supportsHibernation) {
+        public Builder supportsHibernation(@Nullable Output<Boolean> supportsHibernation) {
             this.supportsHibernation = supportsHibernation;
             return this;
         }
 
         public Builder supportsHibernation(@Nullable Boolean supportsHibernation) {
-            this.supportsHibernation = Input.ofNullable(supportsHibernation);
+            this.supportsHibernation = Output.ofNullable(supportsHibernation);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public SnapshotArgs build() {

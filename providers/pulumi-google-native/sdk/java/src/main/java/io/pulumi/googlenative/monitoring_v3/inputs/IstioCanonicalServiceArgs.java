@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.monitoring_v3.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class IstioCanonicalServiceArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="canonicalService")
-      private final @Nullable Input<String> canonicalService;
+      private final @Nullable Output<String> canonicalService;
 
-    public Input<String> getCanonicalService() {
-        return this.canonicalService == null ? Input.empty() : this.canonicalService;
+    public Output<String> getCanonicalService() {
+        return this.canonicalService == null ? Output.empty() : this.canonicalService;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class IstioCanonicalServiceArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="canonicalServiceNamespace")
-      private final @Nullable Input<String> canonicalServiceNamespace;
+      private final @Nullable Output<String> canonicalServiceNamespace;
 
-    public Input<String> getCanonicalServiceNamespace() {
-        return this.canonicalServiceNamespace == null ? Input.empty() : this.canonicalServiceNamespace;
+    public Output<String> getCanonicalServiceNamespace() {
+        return this.canonicalServiceNamespace == null ? Output.empty() : this.canonicalServiceNamespace;
     }
 
     /**
@@ -45,25 +45,25 @@ public final class IstioCanonicalServiceArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="meshUid")
-      private final @Nullable Input<String> meshUid;
+      private final @Nullable Output<String> meshUid;
 
-    public Input<String> getMeshUid() {
-        return this.meshUid == null ? Input.empty() : this.meshUid;
+    public Output<String> getMeshUid() {
+        return this.meshUid == null ? Output.empty() : this.meshUid;
     }
 
     public IstioCanonicalServiceArgs(
-        @Nullable Input<String> canonicalService,
-        @Nullable Input<String> canonicalServiceNamespace,
-        @Nullable Input<String> meshUid) {
+        @Nullable Output<String> canonicalService,
+        @Nullable Output<String> canonicalServiceNamespace,
+        @Nullable Output<String> meshUid) {
         this.canonicalService = canonicalService;
         this.canonicalServiceNamespace = canonicalServiceNamespace;
         this.meshUid = meshUid;
     }
 
     private IstioCanonicalServiceArgs() {
-        this.canonicalService = Input.empty();
-        this.canonicalServiceNamespace = Input.empty();
-        this.meshUid = Input.empty();
+        this.canonicalService = Output.empty();
+        this.canonicalServiceNamespace = Output.empty();
+        this.meshUid = Output.empty();
     }
 
     public static Builder builder() {
@@ -75,9 +75,9 @@ public final class IstioCanonicalServiceArgs extends io.pulumi.resources.Resourc
     }
 
     public static final class Builder {
-        private @Nullable Input<String> canonicalService;
-        private @Nullable Input<String> canonicalServiceNamespace;
-        private @Nullable Input<String> meshUid;
+        private @Nullable Output<String> canonicalService;
+        private @Nullable Output<String> canonicalServiceNamespace;
+        private @Nullable Output<String> meshUid;
 
         public Builder() {
     	      // Empty
@@ -90,33 +90,33 @@ public final class IstioCanonicalServiceArgs extends io.pulumi.resources.Resourc
     	      this.meshUid = defaults.meshUid;
         }
 
-        public Builder canonicalService(@Nullable Input<String> canonicalService) {
+        public Builder canonicalService(@Nullable Output<String> canonicalService) {
             this.canonicalService = canonicalService;
             return this;
         }
 
         public Builder canonicalService(@Nullable String canonicalService) {
-            this.canonicalService = Input.ofNullable(canonicalService);
+            this.canonicalService = Output.ofNullable(canonicalService);
             return this;
         }
 
-        public Builder canonicalServiceNamespace(@Nullable Input<String> canonicalServiceNamespace) {
+        public Builder canonicalServiceNamespace(@Nullable Output<String> canonicalServiceNamespace) {
             this.canonicalServiceNamespace = canonicalServiceNamespace;
             return this;
         }
 
         public Builder canonicalServiceNamespace(@Nullable String canonicalServiceNamespace) {
-            this.canonicalServiceNamespace = Input.ofNullable(canonicalServiceNamespace);
+            this.canonicalServiceNamespace = Output.ofNullable(canonicalServiceNamespace);
             return this;
         }
 
-        public Builder meshUid(@Nullable Input<String> meshUid) {
+        public Builder meshUid(@Nullable Output<String> meshUid) {
             this.meshUid = meshUid;
             return this;
         }
 
         public Builder meshUid(@Nullable String meshUid) {
-            this.meshUid = Input.ofNullable(meshUid);
+            this.meshUid = Output.ofNullable(meshUid);
             return this;
         }
         public IstioCanonicalServiceArgs build() {

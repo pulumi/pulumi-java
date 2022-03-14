@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.compute.inputs;
 
 import io.pulumi.azurenative.compute.inputs.CloudServiceExtensionPropertiesArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -24,10 +24,10 @@ public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="properties")
-      private final @Nullable Input<CloudServiceExtensionPropertiesArgs> properties;
+      private final @Nullable Output<CloudServiceExtensionPropertiesArgs> properties;
 
-    public Input<CloudServiceExtensionPropertiesArgs> getProperties() {
-        return this.properties == null ? Input.empty() : this.properties;
+    public Output<CloudServiceExtensionPropertiesArgs> getProperties() {
+        return this.properties == null ? Output.empty() : this.properties;
     }
 
     public ExtensionArgs(
-        @Nullable Input<String> name,
-        @Nullable Input<CloudServiceExtensionPropertiesArgs> properties) {
+        @Nullable Output<String> name,
+        @Nullable Output<CloudServiceExtensionPropertiesArgs> properties) {
         this.name = name;
         this.properties = properties;
     }
 
     private ExtensionArgs() {
-        this.name = Input.empty();
-        this.properties = Input.empty();
+        this.name = Output.empty();
+        this.properties = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> name;
-        private @Nullable Input<CloudServiceExtensionPropertiesArgs> properties;
+        private @Nullable Output<String> name;
+        private @Nullable Output<CloudServiceExtensionPropertiesArgs> properties;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
     	      this.properties = defaults.properties;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder properties(@Nullable Input<CloudServiceExtensionPropertiesArgs> properties) {
+        public Builder properties(@Nullable Output<CloudServiceExtensionPropertiesArgs> properties) {
             this.properties = properties;
             return this;
         }
 
         public Builder properties(@Nullable CloudServiceExtensionPropertiesArgs properties) {
-            this.properties = Input.ofNullable(properties);
+            this.properties = Output.ofNullable(properties);
             return this;
         }
         public ExtensionArgs build() {

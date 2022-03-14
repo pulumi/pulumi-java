@@ -4,7 +4,7 @@
 package io.pulumi.aws.sagemaker.inputs;
 
 import io.pulumi.aws.sagemaker.inputs.ModelContainerImageConfigGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -21,10 +21,10 @@ public final class ModelContainerGetArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="containerHostname")
-      private final @Nullable Input<String> containerHostname;
+      private final @Nullable Output<String> containerHostname;
 
-    public Input<String> getContainerHostname() {
-        return this.containerHostname == null ? Input.empty() : this.containerHostname;
+    public Output<String> getContainerHostname() {
+        return this.containerHostname == null ? Output.empty() : this.containerHostname;
     }
 
     /**
@@ -33,10 +33,10 @@ public final class ModelContainerGetArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="environment")
-      private final @Nullable Input<Map<String,String>> environment;
+      private final @Nullable Output<Map<String,String>> environment;
 
-    public Input<Map<String,String>> getEnvironment() {
-        return this.environment == null ? Input.empty() : this.environment;
+    public Output<Map<String,String>> getEnvironment() {
+        return this.environment == null ? Output.empty() : this.environment;
     }
 
     /**
@@ -44,9 +44,9 @@ public final class ModelContainerGetArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="image", required=true)
-      private final Input<String> image;
+      private final Output<String> image;
 
-    public Input<String> getImage() {
+    public Output<String> getImage() {
         return this.image;
     }
 
@@ -55,10 +55,10 @@ public final class ModelContainerGetArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="imageConfig")
-      private final @Nullable Input<ModelContainerImageConfigGetArgs> imageConfig;
+      private final @Nullable Output<ModelContainerImageConfigGetArgs> imageConfig;
 
-    public Input<ModelContainerImageConfigGetArgs> getImageConfig() {
-        return this.imageConfig == null ? Input.empty() : this.imageConfig;
+    public Output<ModelContainerImageConfigGetArgs> getImageConfig() {
+        return this.imageConfig == null ? Output.empty() : this.imageConfig;
     }
 
     /**
@@ -66,10 +66,10 @@ public final class ModelContainerGetArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="mode")
-      private final @Nullable Input<String> mode;
+      private final @Nullable Output<String> mode;
 
-    public Input<String> getMode() {
-        return this.mode == null ? Input.empty() : this.mode;
+    public Output<String> getMode() {
+        return this.mode == null ? Output.empty() : this.mode;
     }
 
     /**
@@ -77,19 +77,19 @@ public final class ModelContainerGetArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="modelDataUrl")
-      private final @Nullable Input<String> modelDataUrl;
+      private final @Nullable Output<String> modelDataUrl;
 
-    public Input<String> getModelDataUrl() {
-        return this.modelDataUrl == null ? Input.empty() : this.modelDataUrl;
+    public Output<String> getModelDataUrl() {
+        return this.modelDataUrl == null ? Output.empty() : this.modelDataUrl;
     }
 
     public ModelContainerGetArgs(
-        @Nullable Input<String> containerHostname,
-        @Nullable Input<Map<String,String>> environment,
-        Input<String> image,
-        @Nullable Input<ModelContainerImageConfigGetArgs> imageConfig,
-        @Nullable Input<String> mode,
-        @Nullable Input<String> modelDataUrl) {
+        @Nullable Output<String> containerHostname,
+        @Nullable Output<Map<String,String>> environment,
+        Output<String> image,
+        @Nullable Output<ModelContainerImageConfigGetArgs> imageConfig,
+        @Nullable Output<String> mode,
+        @Nullable Output<String> modelDataUrl) {
         this.containerHostname = containerHostname;
         this.environment = environment;
         this.image = Objects.requireNonNull(image, "expected parameter 'image' to be non-null");
@@ -99,12 +99,12 @@ public final class ModelContainerGetArgs extends io.pulumi.resources.ResourceArg
     }
 
     private ModelContainerGetArgs() {
-        this.containerHostname = Input.empty();
-        this.environment = Input.empty();
-        this.image = Input.empty();
-        this.imageConfig = Input.empty();
-        this.mode = Input.empty();
-        this.modelDataUrl = Input.empty();
+        this.containerHostname = Output.empty();
+        this.environment = Output.empty();
+        this.image = Output.empty();
+        this.imageConfig = Output.empty();
+        this.mode = Output.empty();
+        this.modelDataUrl = Output.empty();
     }
 
     public static Builder builder() {
@@ -116,12 +116,12 @@ public final class ModelContainerGetArgs extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private @Nullable Input<String> containerHostname;
-        private @Nullable Input<Map<String,String>> environment;
-        private Input<String> image;
-        private @Nullable Input<ModelContainerImageConfigGetArgs> imageConfig;
-        private @Nullable Input<String> mode;
-        private @Nullable Input<String> modelDataUrl;
+        private @Nullable Output<String> containerHostname;
+        private @Nullable Output<Map<String,String>> environment;
+        private Output<String> image;
+        private @Nullable Output<ModelContainerImageConfigGetArgs> imageConfig;
+        private @Nullable Output<String> mode;
+        private @Nullable Output<String> modelDataUrl;
 
         public Builder() {
     	      // Empty
@@ -137,63 +137,63 @@ public final class ModelContainerGetArgs extends io.pulumi.resources.ResourceArg
     	      this.modelDataUrl = defaults.modelDataUrl;
         }
 
-        public Builder containerHostname(@Nullable Input<String> containerHostname) {
+        public Builder containerHostname(@Nullable Output<String> containerHostname) {
             this.containerHostname = containerHostname;
             return this;
         }
 
         public Builder containerHostname(@Nullable String containerHostname) {
-            this.containerHostname = Input.ofNullable(containerHostname);
+            this.containerHostname = Output.ofNullable(containerHostname);
             return this;
         }
 
-        public Builder environment(@Nullable Input<Map<String,String>> environment) {
+        public Builder environment(@Nullable Output<Map<String,String>> environment) {
             this.environment = environment;
             return this;
         }
 
         public Builder environment(@Nullable Map<String,String> environment) {
-            this.environment = Input.ofNullable(environment);
+            this.environment = Output.ofNullable(environment);
             return this;
         }
 
-        public Builder image(Input<String> image) {
+        public Builder image(Output<String> image) {
             this.image = Objects.requireNonNull(image);
             return this;
         }
 
         public Builder image(String image) {
-            this.image = Input.of(Objects.requireNonNull(image));
+            this.image = Output.of(Objects.requireNonNull(image));
             return this;
         }
 
-        public Builder imageConfig(@Nullable Input<ModelContainerImageConfigGetArgs> imageConfig) {
+        public Builder imageConfig(@Nullable Output<ModelContainerImageConfigGetArgs> imageConfig) {
             this.imageConfig = imageConfig;
             return this;
         }
 
         public Builder imageConfig(@Nullable ModelContainerImageConfigGetArgs imageConfig) {
-            this.imageConfig = Input.ofNullable(imageConfig);
+            this.imageConfig = Output.ofNullable(imageConfig);
             return this;
         }
 
-        public Builder mode(@Nullable Input<String> mode) {
+        public Builder mode(@Nullable Output<String> mode) {
             this.mode = mode;
             return this;
         }
 
         public Builder mode(@Nullable String mode) {
-            this.mode = Input.ofNullable(mode);
+            this.mode = Output.ofNullable(mode);
             return this;
         }
 
-        public Builder modelDataUrl(@Nullable Input<String> modelDataUrl) {
+        public Builder modelDataUrl(@Nullable Output<String> modelDataUrl) {
             this.modelDataUrl = modelDataUrl;
             return this;
         }
 
         public Builder modelDataUrl(@Nullable String modelDataUrl) {
-            this.modelDataUrl = Input.ofNullable(modelDataUrl);
+            this.modelDataUrl = Output.ofNullable(modelDataUrl);
             return this;
         }
         public ModelContainerGetArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.privateca_v1beta1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.privateca_v1beta1.inputs.ReusableConfigValuesArgs;
 import java.lang.String;
@@ -23,9 +23,9 @@ public final class ReusableConfigWrapperArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="reusableConfig", required=true)
-      private final Input<String> reusableConfig;
+      private final Output<String> reusableConfig;
 
-    public Input<String> getReusableConfig() {
+    public Output<String> getReusableConfig() {
         return this.reusableConfig;
     }
 
@@ -34,22 +34,22 @@ public final class ReusableConfigWrapperArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="reusableConfigValues", required=true)
-      private final Input<ReusableConfigValuesArgs> reusableConfigValues;
+      private final Output<ReusableConfigValuesArgs> reusableConfigValues;
 
-    public Input<ReusableConfigValuesArgs> getReusableConfigValues() {
+    public Output<ReusableConfigValuesArgs> getReusableConfigValues() {
         return this.reusableConfigValues;
     }
 
     public ReusableConfigWrapperArgs(
-        Input<String> reusableConfig,
-        Input<ReusableConfigValuesArgs> reusableConfigValues) {
+        Output<String> reusableConfig,
+        Output<ReusableConfigValuesArgs> reusableConfigValues) {
         this.reusableConfig = Objects.requireNonNull(reusableConfig, "expected parameter 'reusableConfig' to be non-null");
         this.reusableConfigValues = Objects.requireNonNull(reusableConfigValues, "expected parameter 'reusableConfigValues' to be non-null");
     }
 
     private ReusableConfigWrapperArgs() {
-        this.reusableConfig = Input.empty();
-        this.reusableConfigValues = Input.empty();
+        this.reusableConfig = Output.empty();
+        this.reusableConfigValues = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class ReusableConfigWrapperArgs extends io.pulumi.resources.Resourc
     }
 
     public static final class Builder {
-        private Input<String> reusableConfig;
-        private Input<ReusableConfigValuesArgs> reusableConfigValues;
+        private Output<String> reusableConfig;
+        private Output<ReusableConfigValuesArgs> reusableConfigValues;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class ReusableConfigWrapperArgs extends io.pulumi.resources.Resourc
     	      this.reusableConfigValues = defaults.reusableConfigValues;
         }
 
-        public Builder reusableConfig(Input<String> reusableConfig) {
+        public Builder reusableConfig(Output<String> reusableConfig) {
             this.reusableConfig = Objects.requireNonNull(reusableConfig);
             return this;
         }
 
         public Builder reusableConfig(String reusableConfig) {
-            this.reusableConfig = Input.of(Objects.requireNonNull(reusableConfig));
+            this.reusableConfig = Output.of(Objects.requireNonNull(reusableConfig));
             return this;
         }
 
-        public Builder reusableConfigValues(Input<ReusableConfigValuesArgs> reusableConfigValues) {
+        public Builder reusableConfigValues(Output<ReusableConfigValuesArgs> reusableConfigValues) {
             this.reusableConfigValues = Objects.requireNonNull(reusableConfigValues);
             return this;
         }
 
         public Builder reusableConfigValues(ReusableConfigValuesArgs reusableConfigValues) {
-            this.reusableConfigValues = Input.of(Objects.requireNonNull(reusableConfigValues));
+            this.reusableConfigValues = Output.of(Objects.requireNonNull(reusableConfigValues));
             return this;
         }
         public ReusableConfigWrapperArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.container.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -14,18 +14,18 @@ public final class ClusterResourceUsageExportConfigBigqueryDestinationArgs exten
     public static final ClusterResourceUsageExportConfigBigqueryDestinationArgs Empty = new ClusterResourceUsageExportConfigBigqueryDestinationArgs();
 
     @InputImport(name="datasetId", required=true)
-      private final Input<String> datasetId;
+      private final Output<String> datasetId;
 
-    public Input<String> getDatasetId() {
+    public Output<String> getDatasetId() {
         return this.datasetId;
     }
 
-    public ClusterResourceUsageExportConfigBigqueryDestinationArgs(Input<String> datasetId) {
+    public ClusterResourceUsageExportConfigBigqueryDestinationArgs(Output<String> datasetId) {
         this.datasetId = Objects.requireNonNull(datasetId, "expected parameter 'datasetId' to be non-null");
     }
 
     private ClusterResourceUsageExportConfigBigqueryDestinationArgs() {
-        this.datasetId = Input.empty();
+        this.datasetId = Output.empty();
     }
 
     public static Builder builder() {
@@ -37,7 +37,7 @@ public final class ClusterResourceUsageExportConfigBigqueryDestinationArgs exten
     }
 
     public static final class Builder {
-        private Input<String> datasetId;
+        private Output<String> datasetId;
 
         public Builder() {
     	      // Empty
@@ -48,13 +48,13 @@ public final class ClusterResourceUsageExportConfigBigqueryDestinationArgs exten
     	      this.datasetId = defaults.datasetId;
         }
 
-        public Builder datasetId(Input<String> datasetId) {
+        public Builder datasetId(Output<String> datasetId) {
             this.datasetId = Objects.requireNonNull(datasetId);
             return this;
         }
 
         public Builder datasetId(String datasetId) {
-            this.datasetId = Input.of(Objects.requireNonNull(datasetId));
+            this.datasetId = Output.of(Objects.requireNonNull(datasetId));
             return this;
         }
         public ClusterResourceUsageExportConfigBigqueryDestinationArgs build() {

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.automation.inputs;
 
 import io.pulumi.azurenative.automation.inputs.ContentHashArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -24,10 +24,10 @@ public final class ContentLinkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="contentHash")
-      private final @Nullable Input<ContentHashArgs> contentHash;
+      private final @Nullable Output<ContentHashArgs> contentHash;
 
-    public Input<ContentHashArgs> getContentHash() {
-        return this.contentHash == null ? Input.empty() : this.contentHash;
+    public Output<ContentHashArgs> getContentHash() {
+        return this.contentHash == null ? Output.empty() : this.contentHash;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class ContentLinkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="uri")
-      private final @Nullable Input<String> uri;
+      private final @Nullable Output<String> uri;
 
-    public Input<String> getUri() {
-        return this.uri == null ? Input.empty() : this.uri;
+    public Output<String> getUri() {
+        return this.uri == null ? Output.empty() : this.uri;
     }
 
     /**
@@ -46,25 +46,25 @@ public final class ContentLinkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="version")
-      private final @Nullable Input<String> version;
+      private final @Nullable Output<String> version;
 
-    public Input<String> getVersion() {
-        return this.version == null ? Input.empty() : this.version;
+    public Output<String> getVersion() {
+        return this.version == null ? Output.empty() : this.version;
     }
 
     public ContentLinkArgs(
-        @Nullable Input<ContentHashArgs> contentHash,
-        @Nullable Input<String> uri,
-        @Nullable Input<String> version) {
+        @Nullable Output<ContentHashArgs> contentHash,
+        @Nullable Output<String> uri,
+        @Nullable Output<String> version) {
         this.contentHash = contentHash;
         this.uri = uri;
         this.version = version;
     }
 
     private ContentLinkArgs() {
-        this.contentHash = Input.empty();
-        this.uri = Input.empty();
-        this.version = Input.empty();
+        this.contentHash = Output.empty();
+        this.uri = Output.empty();
+        this.version = Output.empty();
     }
 
     public static Builder builder() {
@@ -76,9 +76,9 @@ public final class ContentLinkArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<ContentHashArgs> contentHash;
-        private @Nullable Input<String> uri;
-        private @Nullable Input<String> version;
+        private @Nullable Output<ContentHashArgs> contentHash;
+        private @Nullable Output<String> uri;
+        private @Nullable Output<String> version;
 
         public Builder() {
     	      // Empty
@@ -91,33 +91,33 @@ public final class ContentLinkArgs extends io.pulumi.resources.ResourceArgs {
     	      this.version = defaults.version;
         }
 
-        public Builder contentHash(@Nullable Input<ContentHashArgs> contentHash) {
+        public Builder contentHash(@Nullable Output<ContentHashArgs> contentHash) {
             this.contentHash = contentHash;
             return this;
         }
 
         public Builder contentHash(@Nullable ContentHashArgs contentHash) {
-            this.contentHash = Input.ofNullable(contentHash);
+            this.contentHash = Output.ofNullable(contentHash);
             return this;
         }
 
-        public Builder uri(@Nullable Input<String> uri) {
+        public Builder uri(@Nullable Output<String> uri) {
             this.uri = uri;
             return this;
         }
 
         public Builder uri(@Nullable String uri) {
-            this.uri = Input.ofNullable(uri);
+            this.uri = Output.ofNullable(uri);
             return this;
         }
 
-        public Builder version(@Nullable Input<String> version) {
+        public Builder version(@Nullable Output<String> version) {
             this.version = version;
             return this;
         }
 
         public Builder version(@Nullable String version) {
-            this.version = Input.ofNullable(version);
+            this.version = Output.ofNullable(version);
             return this;
         }
         public ContentLinkArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.gkehub_v1beta;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.gkehub_v1beta.inputs.CommonFeatureSpecArgs;
 import java.lang.String;
@@ -17,10 +17,10 @@ public final class FeatureArgs extends io.pulumi.resources.ResourceArgs {
     public static final FeatureArgs Empty = new FeatureArgs();
 
     @InputImport(name="featureId")
-      private final @Nullable Input<String> featureId;
+      private final @Nullable Output<String> featureId;
 
-    public Input<String> getFeatureId() {
-        return this.featureId == null ? Input.empty() : this.featureId;
+    public Output<String> getFeatureId() {
+        return this.featureId == null ? Output.empty() : this.featureId;
     }
 
     /**
@@ -28,17 +28,17 @@ public final class FeatureArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labels")
-      private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Output<Map<String,String>> labels;
 
-    public Input<Map<String,String>> getLabels() {
-        return this.labels == null ? Input.empty() : this.labels;
+    public Output<Map<String,String>> getLabels() {
+        return this.labels == null ? Output.empty() : this.labels;
     }
 
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -46,24 +46,24 @@ public final class FeatureArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="membershipSpecs")
-      private final @Nullable Input<Map<String,String>> membershipSpecs;
+      private final @Nullable Output<Map<String,String>> membershipSpecs;
 
-    public Input<Map<String,String>> getMembershipSpecs() {
-        return this.membershipSpecs == null ? Input.empty() : this.membershipSpecs;
+    public Output<Map<String,String>> getMembershipSpecs() {
+        return this.membershipSpecs == null ? Output.empty() : this.membershipSpecs;
     }
 
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     @InputImport(name="requestId")
-      private final @Nullable Input<String> requestId;
+      private final @Nullable Output<String> requestId;
 
-    public Input<String> getRequestId() {
-        return this.requestId == null ? Input.empty() : this.requestId;
+    public Output<String> getRequestId() {
+        return this.requestId == null ? Output.empty() : this.requestId;
     }
 
     /**
@@ -71,20 +71,20 @@ public final class FeatureArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="spec")
-      private final @Nullable Input<CommonFeatureSpecArgs> spec;
+      private final @Nullable Output<CommonFeatureSpecArgs> spec;
 
-    public Input<CommonFeatureSpecArgs> getSpec() {
-        return this.spec == null ? Input.empty() : this.spec;
+    public Output<CommonFeatureSpecArgs> getSpec() {
+        return this.spec == null ? Output.empty() : this.spec;
     }
 
     public FeatureArgs(
-        @Nullable Input<String> featureId,
-        @Nullable Input<Map<String,String>> labels,
-        @Nullable Input<String> location,
-        @Nullable Input<Map<String,String>> membershipSpecs,
-        @Nullable Input<String> project,
-        @Nullable Input<String> requestId,
-        @Nullable Input<CommonFeatureSpecArgs> spec) {
+        @Nullable Output<String> featureId,
+        @Nullable Output<Map<String,String>> labels,
+        @Nullable Output<String> location,
+        @Nullable Output<Map<String,String>> membershipSpecs,
+        @Nullable Output<String> project,
+        @Nullable Output<String> requestId,
+        @Nullable Output<CommonFeatureSpecArgs> spec) {
         this.featureId = featureId;
         this.labels = labels;
         this.location = location;
@@ -95,13 +95,13 @@ public final class FeatureArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private FeatureArgs() {
-        this.featureId = Input.empty();
-        this.labels = Input.empty();
-        this.location = Input.empty();
-        this.membershipSpecs = Input.empty();
-        this.project = Input.empty();
-        this.requestId = Input.empty();
-        this.spec = Input.empty();
+        this.featureId = Output.empty();
+        this.labels = Output.empty();
+        this.location = Output.empty();
+        this.membershipSpecs = Output.empty();
+        this.project = Output.empty();
+        this.requestId = Output.empty();
+        this.spec = Output.empty();
     }
 
     public static Builder builder() {
@@ -113,13 +113,13 @@ public final class FeatureArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> featureId;
-        private @Nullable Input<Map<String,String>> labels;
-        private @Nullable Input<String> location;
-        private @Nullable Input<Map<String,String>> membershipSpecs;
-        private @Nullable Input<String> project;
-        private @Nullable Input<String> requestId;
-        private @Nullable Input<CommonFeatureSpecArgs> spec;
+        private @Nullable Output<String> featureId;
+        private @Nullable Output<Map<String,String>> labels;
+        private @Nullable Output<String> location;
+        private @Nullable Output<Map<String,String>> membershipSpecs;
+        private @Nullable Output<String> project;
+        private @Nullable Output<String> requestId;
+        private @Nullable Output<CommonFeatureSpecArgs> spec;
 
         public Builder() {
     	      // Empty
@@ -136,73 +136,73 @@ public final class FeatureArgs extends io.pulumi.resources.ResourceArgs {
     	      this.spec = defaults.spec;
         }
 
-        public Builder featureId(@Nullable Input<String> featureId) {
+        public Builder featureId(@Nullable Output<String> featureId) {
             this.featureId = featureId;
             return this;
         }
 
         public Builder featureId(@Nullable String featureId) {
-            this.featureId = Input.ofNullable(featureId);
+            this.featureId = Output.ofNullable(featureId);
             return this;
         }
 
-        public Builder labels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
         public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Input.ofNullable(labels);
+            this.labels = Output.ofNullable(labels);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder membershipSpecs(@Nullable Input<Map<String,String>> membershipSpecs) {
+        public Builder membershipSpecs(@Nullable Output<Map<String,String>> membershipSpecs) {
             this.membershipSpecs = membershipSpecs;
             return this;
         }
 
         public Builder membershipSpecs(@Nullable Map<String,String> membershipSpecs) {
-            this.membershipSpecs = Input.ofNullable(membershipSpecs);
+            this.membershipSpecs = Output.ofNullable(membershipSpecs);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder requestId(@Nullable Input<String> requestId) {
+        public Builder requestId(@Nullable Output<String> requestId) {
             this.requestId = requestId;
             return this;
         }
 
         public Builder requestId(@Nullable String requestId) {
-            this.requestId = Input.ofNullable(requestId);
+            this.requestId = Output.ofNullable(requestId);
             return this;
         }
 
-        public Builder spec(@Nullable Input<CommonFeatureSpecArgs> spec) {
+        public Builder spec(@Nullable Output<CommonFeatureSpecArgs> spec) {
             this.spec = spec;
             return this;
         }
 
         public Builder spec(@Nullable CommonFeatureSpecArgs spec) {
-            this.spec = Input.ofNullable(spec);
+            this.spec = Output.ofNullable(spec);
             return this;
         }
         public FeatureArgs build() {

@@ -5,7 +5,7 @@ package io.pulumi.awsnative.forecast;
 
 import io.pulumi.awsnative.forecast.enums.DatasetGroupDomain;
 import io.pulumi.awsnative.forecast.inputs.DatasetGroupTagArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -22,10 +22,10 @@ public final class DatasetGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="datasetArns")
-      private final @Nullable Input<List<String>> datasetArns;
+      private final @Nullable Output<List<String>> datasetArns;
 
-    public Input<List<String>> getDatasetArns() {
-        return this.datasetArns == null ? Input.empty() : this.datasetArns;
+    public Output<List<String>> getDatasetArns() {
+        return this.datasetArns == null ? Output.empty() : this.datasetArns;
     }
 
     /**
@@ -33,10 +33,10 @@ public final class DatasetGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="datasetGroupName")
-      private final @Nullable Input<String> datasetGroupName;
+      private final @Nullable Output<String> datasetGroupName;
 
-    public Input<String> getDatasetGroupName() {
-        return this.datasetGroupName == null ? Input.empty() : this.datasetGroupName;
+    public Output<String> getDatasetGroupName() {
+        return this.datasetGroupName == null ? Output.empty() : this.datasetGroupName;
     }
 
     /**
@@ -44,9 +44,9 @@ public final class DatasetGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="domain", required=true)
-      private final Input<DatasetGroupDomain> domain;
+      private final Output<DatasetGroupDomain> domain;
 
-    public Input<DatasetGroupDomain> getDomain() {
+    public Output<DatasetGroupDomain> getDomain() {
         return this.domain;
     }
 
@@ -55,17 +55,17 @@ public final class DatasetGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<List<DatasetGroupTagArgs>> tags;
+      private final @Nullable Output<List<DatasetGroupTagArgs>> tags;
 
-    public Input<List<DatasetGroupTagArgs>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<List<DatasetGroupTagArgs>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public DatasetGroupArgs(
-        @Nullable Input<List<String>> datasetArns,
-        @Nullable Input<String> datasetGroupName,
-        Input<DatasetGroupDomain> domain,
-        @Nullable Input<List<DatasetGroupTagArgs>> tags) {
+        @Nullable Output<List<String>> datasetArns,
+        @Nullable Output<String> datasetGroupName,
+        Output<DatasetGroupDomain> domain,
+        @Nullable Output<List<DatasetGroupTagArgs>> tags) {
         this.datasetArns = datasetArns;
         this.datasetGroupName = datasetGroupName;
         this.domain = Objects.requireNonNull(domain, "expected parameter 'domain' to be non-null");
@@ -73,10 +73,10 @@ public final class DatasetGroupArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DatasetGroupArgs() {
-        this.datasetArns = Input.empty();
-        this.datasetGroupName = Input.empty();
-        this.domain = Input.empty();
-        this.tags = Input.empty();
+        this.datasetArns = Output.empty();
+        this.datasetGroupName = Output.empty();
+        this.domain = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -88,10 +88,10 @@ public final class DatasetGroupArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> datasetArns;
-        private @Nullable Input<String> datasetGroupName;
-        private Input<DatasetGroupDomain> domain;
-        private @Nullable Input<List<DatasetGroupTagArgs>> tags;
+        private @Nullable Output<List<String>> datasetArns;
+        private @Nullable Output<String> datasetGroupName;
+        private Output<DatasetGroupDomain> domain;
+        private @Nullable Output<List<DatasetGroupTagArgs>> tags;
 
         public Builder() {
     	      // Empty
@@ -105,43 +105,43 @@ public final class DatasetGroupArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder datasetArns(@Nullable Input<List<String>> datasetArns) {
+        public Builder datasetArns(@Nullable Output<List<String>> datasetArns) {
             this.datasetArns = datasetArns;
             return this;
         }
 
         public Builder datasetArns(@Nullable List<String> datasetArns) {
-            this.datasetArns = Input.ofNullable(datasetArns);
+            this.datasetArns = Output.ofNullable(datasetArns);
             return this;
         }
 
-        public Builder datasetGroupName(@Nullable Input<String> datasetGroupName) {
+        public Builder datasetGroupName(@Nullable Output<String> datasetGroupName) {
             this.datasetGroupName = datasetGroupName;
             return this;
         }
 
         public Builder datasetGroupName(@Nullable String datasetGroupName) {
-            this.datasetGroupName = Input.ofNullable(datasetGroupName);
+            this.datasetGroupName = Output.ofNullable(datasetGroupName);
             return this;
         }
 
-        public Builder domain(Input<DatasetGroupDomain> domain) {
+        public Builder domain(Output<DatasetGroupDomain> domain) {
             this.domain = Objects.requireNonNull(domain);
             return this;
         }
 
         public Builder domain(DatasetGroupDomain domain) {
-            this.domain = Input.of(Objects.requireNonNull(domain));
+            this.domain = Output.of(Objects.requireNonNull(domain));
             return this;
         }
 
-        public Builder tags(@Nullable Input<List<DatasetGroupTagArgs>> tags) {
+        public Builder tags(@Nullable Output<List<DatasetGroupTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable List<DatasetGroupTagArgs> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public DatasetGroupArgs build() {

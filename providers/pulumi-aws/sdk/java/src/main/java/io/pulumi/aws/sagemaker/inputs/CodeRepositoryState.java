@@ -4,7 +4,7 @@
 package io.pulumi.aws.sagemaker.inputs;
 
 import io.pulumi.aws.sagemaker.inputs.CodeRepositoryGitConfigGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -21,10 +21,10 @@ public final class CodeRepositoryState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="arn")
-      private final @Nullable Input<String> arn;
+      private final @Nullable Output<String> arn;
 
-    public Input<String> getArn() {
-        return this.arn == null ? Input.empty() : this.arn;
+    public Output<String> getArn() {
+        return this.arn == null ? Output.empty() : this.arn;
     }
 
     /**
@@ -32,10 +32,10 @@ public final class CodeRepositoryState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="codeRepositoryName")
-      private final @Nullable Input<String> codeRepositoryName;
+      private final @Nullable Output<String> codeRepositoryName;
 
-    public Input<String> getCodeRepositoryName() {
-        return this.codeRepositoryName == null ? Input.empty() : this.codeRepositoryName;
+    public Output<String> getCodeRepositoryName() {
+        return this.codeRepositoryName == null ? Output.empty() : this.codeRepositoryName;
     }
 
     /**
@@ -43,10 +43,10 @@ public final class CodeRepositoryState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="gitConfig")
-      private final @Nullable Input<CodeRepositoryGitConfigGetArgs> gitConfig;
+      private final @Nullable Output<CodeRepositoryGitConfigGetArgs> gitConfig;
 
-    public Input<CodeRepositoryGitConfigGetArgs> getGitConfig() {
-        return this.gitConfig == null ? Input.empty() : this.gitConfig;
+    public Output<CodeRepositoryGitConfigGetArgs> getGitConfig() {
+        return this.gitConfig == null ? Output.empty() : this.gitConfig;
     }
 
     /**
@@ -54,10 +54,10 @@ public final class CodeRepositoryState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -65,18 +65,18 @@ public final class CodeRepositoryState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="tagsAll")
-      private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Input<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Input.empty() : this.tagsAll;
+    public Output<Map<String,String>> getTagsAll() {
+        return this.tagsAll == null ? Output.empty() : this.tagsAll;
     }
 
     public CodeRepositoryState(
-        @Nullable Input<String> arn,
-        @Nullable Input<String> codeRepositoryName,
-        @Nullable Input<CodeRepositoryGitConfigGetArgs> gitConfig,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<Map<String,String>> tagsAll) {
+        @Nullable Output<String> arn,
+        @Nullable Output<String> codeRepositoryName,
+        @Nullable Output<CodeRepositoryGitConfigGetArgs> gitConfig,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<Map<String,String>> tagsAll) {
         this.arn = arn;
         this.codeRepositoryName = codeRepositoryName;
         this.gitConfig = gitConfig;
@@ -85,11 +85,11 @@ public final class CodeRepositoryState extends io.pulumi.resources.ResourceArgs 
     }
 
     private CodeRepositoryState() {
-        this.arn = Input.empty();
-        this.codeRepositoryName = Input.empty();
-        this.gitConfig = Input.empty();
-        this.tags = Input.empty();
-        this.tagsAll = Input.empty();
+        this.arn = Output.empty();
+        this.codeRepositoryName = Output.empty();
+        this.gitConfig = Output.empty();
+        this.tags = Output.empty();
+        this.tagsAll = Output.empty();
     }
 
     public static Builder builder() {
@@ -101,11 +101,11 @@ public final class CodeRepositoryState extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private @Nullable Input<String> arn;
-        private @Nullable Input<String> codeRepositoryName;
-        private @Nullable Input<CodeRepositoryGitConfigGetArgs> gitConfig;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<Map<String,String>> tagsAll;
+        private @Nullable Output<String> arn;
+        private @Nullable Output<String> codeRepositoryName;
+        private @Nullable Output<CodeRepositoryGitConfigGetArgs> gitConfig;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<Map<String,String>> tagsAll;
 
         public Builder() {
     	      // Empty
@@ -120,53 +120,53 @@ public final class CodeRepositoryState extends io.pulumi.resources.ResourceArgs 
     	      this.tagsAll = defaults.tagsAll;
         }
 
-        public Builder arn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
 
         public Builder arn(@Nullable String arn) {
-            this.arn = Input.ofNullable(arn);
+            this.arn = Output.ofNullable(arn);
             return this;
         }
 
-        public Builder codeRepositoryName(@Nullable Input<String> codeRepositoryName) {
+        public Builder codeRepositoryName(@Nullable Output<String> codeRepositoryName) {
             this.codeRepositoryName = codeRepositoryName;
             return this;
         }
 
         public Builder codeRepositoryName(@Nullable String codeRepositoryName) {
-            this.codeRepositoryName = Input.ofNullable(codeRepositoryName);
+            this.codeRepositoryName = Output.ofNullable(codeRepositoryName);
             return this;
         }
 
-        public Builder gitConfig(@Nullable Input<CodeRepositoryGitConfigGetArgs> gitConfig) {
+        public Builder gitConfig(@Nullable Output<CodeRepositoryGitConfigGetArgs> gitConfig) {
             this.gitConfig = gitConfig;
             return this;
         }
 
         public Builder gitConfig(@Nullable CodeRepositoryGitConfigGetArgs gitConfig) {
-            this.gitConfig = Input.ofNullable(gitConfig);
+            this.gitConfig = Output.ofNullable(gitConfig);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Input.ofNullable(tagsAll);
+            this.tagsAll = Output.ofNullable(tagsAll);
             return this;
         }
         public CodeRepositoryState build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1beta1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.containeranalysis_v1beta1.inputs.BuildProvenanceArgs;
 import java.lang.String;
@@ -24,9 +24,9 @@ public final class GrafeasV1beta1BuildDetailsArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="provenance", required=true)
-      private final Input<BuildProvenanceArgs> provenance;
+      private final Output<BuildProvenanceArgs> provenance;
 
-    public Input<BuildProvenanceArgs> getProvenance() {
+    public Output<BuildProvenanceArgs> getProvenance() {
         return this.provenance;
     }
 
@@ -35,22 +35,22 @@ public final class GrafeasV1beta1BuildDetailsArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="provenanceBytes")
-      private final @Nullable Input<String> provenanceBytes;
+      private final @Nullable Output<String> provenanceBytes;
 
-    public Input<String> getProvenanceBytes() {
-        return this.provenanceBytes == null ? Input.empty() : this.provenanceBytes;
+    public Output<String> getProvenanceBytes() {
+        return this.provenanceBytes == null ? Output.empty() : this.provenanceBytes;
     }
 
     public GrafeasV1beta1BuildDetailsArgs(
-        Input<BuildProvenanceArgs> provenance,
-        @Nullable Input<String> provenanceBytes) {
+        Output<BuildProvenanceArgs> provenance,
+        @Nullable Output<String> provenanceBytes) {
         this.provenance = Objects.requireNonNull(provenance, "expected parameter 'provenance' to be non-null");
         this.provenanceBytes = provenanceBytes;
     }
 
     private GrafeasV1beta1BuildDetailsArgs() {
-        this.provenance = Input.empty();
-        this.provenanceBytes = Input.empty();
+        this.provenance = Output.empty();
+        this.provenanceBytes = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class GrafeasV1beta1BuildDetailsArgs extends io.pulumi.resources.Re
     }
 
     public static final class Builder {
-        private Input<BuildProvenanceArgs> provenance;
-        private @Nullable Input<String> provenanceBytes;
+        private Output<BuildProvenanceArgs> provenance;
+        private @Nullable Output<String> provenanceBytes;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class GrafeasV1beta1BuildDetailsArgs extends io.pulumi.resources.Re
     	      this.provenanceBytes = defaults.provenanceBytes;
         }
 
-        public Builder provenance(Input<BuildProvenanceArgs> provenance) {
+        public Builder provenance(Output<BuildProvenanceArgs> provenance) {
             this.provenance = Objects.requireNonNull(provenance);
             return this;
         }
 
         public Builder provenance(BuildProvenanceArgs provenance) {
-            this.provenance = Input.of(Objects.requireNonNull(provenance));
+            this.provenance = Output.of(Objects.requireNonNull(provenance));
             return this;
         }
 
-        public Builder provenanceBytes(@Nullable Input<String> provenanceBytes) {
+        public Builder provenanceBytes(@Nullable Output<String> provenanceBytes) {
             this.provenanceBytes = provenanceBytes;
             return this;
         }
 
         public Builder provenanceBytes(@Nullable String provenanceBytes) {
-            this.provenanceBytes = Input.ofNullable(provenanceBytes);
+            this.provenanceBytes = Output.ofNullable(provenanceBytes);
             return this;
         }
         public GrafeasV1beta1BuildDetailsArgs build() {

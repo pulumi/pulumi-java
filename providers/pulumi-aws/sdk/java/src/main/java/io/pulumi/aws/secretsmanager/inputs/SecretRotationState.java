@@ -4,7 +4,7 @@
 package io.pulumi.aws.secretsmanager.inputs;
 
 import io.pulumi.aws.secretsmanager.inputs.SecretRotationRotationRulesGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -22,10 +22,10 @@ public final class SecretRotationState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="rotationEnabled")
-      private final @Nullable Input<Boolean> rotationEnabled;
+      private final @Nullable Output<Boolean> rotationEnabled;
 
-    public Input<Boolean> getRotationEnabled() {
-        return this.rotationEnabled == null ? Input.empty() : this.rotationEnabled;
+    public Output<Boolean> getRotationEnabled() {
+        return this.rotationEnabled == null ? Output.empty() : this.rotationEnabled;
     }
 
     /**
@@ -33,10 +33,10 @@ public final class SecretRotationState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="rotationLambdaArn")
-      private final @Nullable Input<String> rotationLambdaArn;
+      private final @Nullable Output<String> rotationLambdaArn;
 
-    public Input<String> getRotationLambdaArn() {
-        return this.rotationLambdaArn == null ? Input.empty() : this.rotationLambdaArn;
+    public Output<String> getRotationLambdaArn() {
+        return this.rotationLambdaArn == null ? Output.empty() : this.rotationLambdaArn;
     }
 
     /**
@@ -44,10 +44,10 @@ public final class SecretRotationState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="rotationRules")
-      private final @Nullable Input<SecretRotationRotationRulesGetArgs> rotationRules;
+      private final @Nullable Output<SecretRotationRotationRulesGetArgs> rotationRules;
 
-    public Input<SecretRotationRotationRulesGetArgs> getRotationRules() {
-        return this.rotationRules == null ? Input.empty() : this.rotationRules;
+    public Output<SecretRotationRotationRulesGetArgs> getRotationRules() {
+        return this.rotationRules == null ? Output.empty() : this.rotationRules;
     }
 
     /**
@@ -55,25 +55,25 @@ public final class SecretRotationState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="secretId")
-      private final @Nullable Input<String> secretId;
+      private final @Nullable Output<String> secretId;
 
-    public Input<String> getSecretId() {
-        return this.secretId == null ? Input.empty() : this.secretId;
+    public Output<String> getSecretId() {
+        return this.secretId == null ? Output.empty() : this.secretId;
     }
 
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public SecretRotationState(
-        @Nullable Input<Boolean> rotationEnabled,
-        @Nullable Input<String> rotationLambdaArn,
-        @Nullable Input<SecretRotationRotationRulesGetArgs> rotationRules,
-        @Nullable Input<String> secretId,
-        @Nullable Input<Map<String,String>> tags) {
+        @Nullable Output<Boolean> rotationEnabled,
+        @Nullable Output<String> rotationLambdaArn,
+        @Nullable Output<SecretRotationRotationRulesGetArgs> rotationRules,
+        @Nullable Output<String> secretId,
+        @Nullable Output<Map<String,String>> tags) {
         this.rotationEnabled = rotationEnabled;
         this.rotationLambdaArn = rotationLambdaArn;
         this.rotationRules = rotationRules;
@@ -82,11 +82,11 @@ public final class SecretRotationState extends io.pulumi.resources.ResourceArgs 
     }
 
     private SecretRotationState() {
-        this.rotationEnabled = Input.empty();
-        this.rotationLambdaArn = Input.empty();
-        this.rotationRules = Input.empty();
-        this.secretId = Input.empty();
-        this.tags = Input.empty();
+        this.rotationEnabled = Output.empty();
+        this.rotationLambdaArn = Output.empty();
+        this.rotationRules = Output.empty();
+        this.secretId = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -98,11 +98,11 @@ public final class SecretRotationState extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> rotationEnabled;
-        private @Nullable Input<String> rotationLambdaArn;
-        private @Nullable Input<SecretRotationRotationRulesGetArgs> rotationRules;
-        private @Nullable Input<String> secretId;
-        private @Nullable Input<Map<String,String>> tags;
+        private @Nullable Output<Boolean> rotationEnabled;
+        private @Nullable Output<String> rotationLambdaArn;
+        private @Nullable Output<SecretRotationRotationRulesGetArgs> rotationRules;
+        private @Nullable Output<String> secretId;
+        private @Nullable Output<Map<String,String>> tags;
 
         public Builder() {
     	      // Empty
@@ -117,53 +117,53 @@ public final class SecretRotationState extends io.pulumi.resources.ResourceArgs 
     	      this.tags = defaults.tags;
         }
 
-        public Builder rotationEnabled(@Nullable Input<Boolean> rotationEnabled) {
+        public Builder rotationEnabled(@Nullable Output<Boolean> rotationEnabled) {
             this.rotationEnabled = rotationEnabled;
             return this;
         }
 
         public Builder rotationEnabled(@Nullable Boolean rotationEnabled) {
-            this.rotationEnabled = Input.ofNullable(rotationEnabled);
+            this.rotationEnabled = Output.ofNullable(rotationEnabled);
             return this;
         }
 
-        public Builder rotationLambdaArn(@Nullable Input<String> rotationLambdaArn) {
+        public Builder rotationLambdaArn(@Nullable Output<String> rotationLambdaArn) {
             this.rotationLambdaArn = rotationLambdaArn;
             return this;
         }
 
         public Builder rotationLambdaArn(@Nullable String rotationLambdaArn) {
-            this.rotationLambdaArn = Input.ofNullable(rotationLambdaArn);
+            this.rotationLambdaArn = Output.ofNullable(rotationLambdaArn);
             return this;
         }
 
-        public Builder rotationRules(@Nullable Input<SecretRotationRotationRulesGetArgs> rotationRules) {
+        public Builder rotationRules(@Nullable Output<SecretRotationRotationRulesGetArgs> rotationRules) {
             this.rotationRules = rotationRules;
             return this;
         }
 
         public Builder rotationRules(@Nullable SecretRotationRotationRulesGetArgs rotationRules) {
-            this.rotationRules = Input.ofNullable(rotationRules);
+            this.rotationRules = Output.ofNullable(rotationRules);
             return this;
         }
 
-        public Builder secretId(@Nullable Input<String> secretId) {
+        public Builder secretId(@Nullable Output<String> secretId) {
             this.secretId = secretId;
             return this;
         }
 
         public Builder secretId(@Nullable String secretId) {
-            this.secretId = Input.ofNullable(secretId);
+            this.secretId = Output.ofNullable(secretId);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public SecretRotationState build() {

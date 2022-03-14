@@ -6,7 +6,6 @@ package io.pulumi.azurenative.web;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.web.WebAppApplicationSettingsSlotArgs;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -124,30 +123,30 @@ public class WebAppApplicationSettingsSlot extends io.pulumi.resources.CustomRes
      * @param options A bag of options that control this resource's behavior.
      */
     public WebAppApplicationSettingsSlot(String name, WebAppApplicationSettingsSlotArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:web:WebAppApplicationSettingsSlot", name, args == null ? WebAppApplicationSettingsSlotArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("azure-native:web:WebAppApplicationSettingsSlot", name, args == null ? WebAppApplicationSettingsSlotArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private WebAppApplicationSettingsSlot(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private WebAppApplicationSettingsSlot(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:web:WebAppApplicationSettingsSlot", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:web/v20150801:WebAppApplicationSettingsSlot").build()),
-                Input.of(Alias.builder().setType("azure-native:web/v20160801:WebAppApplicationSettingsSlot").build()),
-                Input.of(Alias.builder().setType("azure-native:web/v20180201:WebAppApplicationSettingsSlot").build()),
-                Input.of(Alias.builder().setType("azure-native:web/v20181101:WebAppApplicationSettingsSlot").build()),
-                Input.of(Alias.builder().setType("azure-native:web/v20190801:WebAppApplicationSettingsSlot").build()),
-                Input.of(Alias.builder().setType("azure-native:web/v20200601:WebAppApplicationSettingsSlot").build()),
-                Input.of(Alias.builder().setType("azure-native:web/v20200901:WebAppApplicationSettingsSlot").build()),
-                Input.of(Alias.builder().setType("azure-native:web/v20201001:WebAppApplicationSettingsSlot").build()),
-                Input.of(Alias.builder().setType("azure-native:web/v20201201:WebAppApplicationSettingsSlot").build()),
-                Input.of(Alias.builder().setType("azure-native:web/v20210101:WebAppApplicationSettingsSlot").build()),
-                Input.of(Alias.builder().setType("azure-native:web/v20210115:WebAppApplicationSettingsSlot").build()),
-                Input.of(Alias.builder().setType("azure-native:web/v20210201:WebAppApplicationSettingsSlot").build()),
-                Input.of(Alias.builder().setType("azure-native:web/v20210301:WebAppApplicationSettingsSlot").build())
+                Output.of(Alias.builder().setType("azure-native:web/v20150801:WebAppApplicationSettingsSlot").build()),
+                Output.of(Alias.builder().setType("azure-native:web/v20160801:WebAppApplicationSettingsSlot").build()),
+                Output.of(Alias.builder().setType("azure-native:web/v20180201:WebAppApplicationSettingsSlot").build()),
+                Output.of(Alias.builder().setType("azure-native:web/v20181101:WebAppApplicationSettingsSlot").build()),
+                Output.of(Alias.builder().setType("azure-native:web/v20190801:WebAppApplicationSettingsSlot").build()),
+                Output.of(Alias.builder().setType("azure-native:web/v20200601:WebAppApplicationSettingsSlot").build()),
+                Output.of(Alias.builder().setType("azure-native:web/v20200901:WebAppApplicationSettingsSlot").build()),
+                Output.of(Alias.builder().setType("azure-native:web/v20201001:WebAppApplicationSettingsSlot").build()),
+                Output.of(Alias.builder().setType("azure-native:web/v20201201:WebAppApplicationSettingsSlot").build()),
+                Output.of(Alias.builder().setType("azure-native:web/v20210101:WebAppApplicationSettingsSlot").build()),
+                Output.of(Alias.builder().setType("azure-native:web/v20210115:WebAppApplicationSettingsSlot").build()),
+                Output.of(Alias.builder().setType("azure-native:web/v20210201:WebAppApplicationSettingsSlot").build()),
+                Output.of(Alias.builder().setType("azure-native:web/v20210301:WebAppApplicationSettingsSlot").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -161,7 +160,7 @@ public class WebAppApplicationSettingsSlot extends io.pulumi.resources.CustomRes
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static WebAppApplicationSettingsSlot get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static WebAppApplicationSettingsSlot get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new WebAppApplicationSettingsSlot(name, id, options);
     }
 }

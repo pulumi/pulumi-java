@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.logic.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class EdifactEnvelopeOverrideArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="applicationPassword")
-      private final @Nullable Input<String> applicationPassword;
+      private final @Nullable Output<String> applicationPassword;
 
-    public Input<String> getApplicationPassword() {
-        return this.applicationPassword == null ? Input.empty() : this.applicationPassword;
+    public Output<String> getApplicationPassword() {
+        return this.applicationPassword == null ? Output.empty() : this.applicationPassword;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class EdifactEnvelopeOverrideArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="associationAssignedCode")
-      private final @Nullable Input<String> associationAssignedCode;
+      private final @Nullable Output<String> associationAssignedCode;
 
-    public Input<String> getAssociationAssignedCode() {
-        return this.associationAssignedCode == null ? Input.empty() : this.associationAssignedCode;
+    public Output<String> getAssociationAssignedCode() {
+        return this.associationAssignedCode == null ? Output.empty() : this.associationAssignedCode;
     }
 
     /**
@@ -45,10 +45,10 @@ public final class EdifactEnvelopeOverrideArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="controllingAgencyCode")
-      private final @Nullable Input<String> controllingAgencyCode;
+      private final @Nullable Output<String> controllingAgencyCode;
 
-    public Input<String> getControllingAgencyCode() {
-        return this.controllingAgencyCode == null ? Input.empty() : this.controllingAgencyCode;
+    public Output<String> getControllingAgencyCode() {
+        return this.controllingAgencyCode == null ? Output.empty() : this.controllingAgencyCode;
     }
 
     /**
@@ -56,10 +56,10 @@ public final class EdifactEnvelopeOverrideArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="functionalGroupId")
-      private final @Nullable Input<String> functionalGroupId;
+      private final @Nullable Output<String> functionalGroupId;
 
-    public Input<String> getFunctionalGroupId() {
-        return this.functionalGroupId == null ? Input.empty() : this.functionalGroupId;
+    public Output<String> getFunctionalGroupId() {
+        return this.functionalGroupId == null ? Output.empty() : this.functionalGroupId;
     }
 
     /**
@@ -67,10 +67,10 @@ public final class EdifactEnvelopeOverrideArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="groupHeaderMessageRelease")
-      private final @Nullable Input<String> groupHeaderMessageRelease;
+      private final @Nullable Output<String> groupHeaderMessageRelease;
 
-    public Input<String> getGroupHeaderMessageRelease() {
-        return this.groupHeaderMessageRelease == null ? Input.empty() : this.groupHeaderMessageRelease;
+    public Output<String> getGroupHeaderMessageRelease() {
+        return this.groupHeaderMessageRelease == null ? Output.empty() : this.groupHeaderMessageRelease;
     }
 
     /**
@@ -78,10 +78,10 @@ public final class EdifactEnvelopeOverrideArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="groupHeaderMessageVersion")
-      private final @Nullable Input<String> groupHeaderMessageVersion;
+      private final @Nullable Output<String> groupHeaderMessageVersion;
 
-    public Input<String> getGroupHeaderMessageVersion() {
-        return this.groupHeaderMessageVersion == null ? Input.empty() : this.groupHeaderMessageVersion;
+    public Output<String> getGroupHeaderMessageVersion() {
+        return this.groupHeaderMessageVersion == null ? Output.empty() : this.groupHeaderMessageVersion;
     }
 
     /**
@@ -89,10 +89,10 @@ public final class EdifactEnvelopeOverrideArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="messageAssociationAssignedCode")
-      private final @Nullable Input<String> messageAssociationAssignedCode;
+      private final @Nullable Output<String> messageAssociationAssignedCode;
 
-    public Input<String> getMessageAssociationAssignedCode() {
-        return this.messageAssociationAssignedCode == null ? Input.empty() : this.messageAssociationAssignedCode;
+    public Output<String> getMessageAssociationAssignedCode() {
+        return this.messageAssociationAssignedCode == null ? Output.empty() : this.messageAssociationAssignedCode;
     }
 
     /**
@@ -100,10 +100,10 @@ public final class EdifactEnvelopeOverrideArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="messageId")
-      private final @Nullable Input<String> messageId;
+      private final @Nullable Output<String> messageId;
 
-    public Input<String> getMessageId() {
-        return this.messageId == null ? Input.empty() : this.messageId;
+    public Output<String> getMessageId() {
+        return this.messageId == null ? Output.empty() : this.messageId;
     }
 
     /**
@@ -111,10 +111,10 @@ public final class EdifactEnvelopeOverrideArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="messageRelease")
-      private final @Nullable Input<String> messageRelease;
+      private final @Nullable Output<String> messageRelease;
 
-    public Input<String> getMessageRelease() {
-        return this.messageRelease == null ? Input.empty() : this.messageRelease;
+    public Output<String> getMessageRelease() {
+        return this.messageRelease == null ? Output.empty() : this.messageRelease;
     }
 
     /**
@@ -122,10 +122,10 @@ public final class EdifactEnvelopeOverrideArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="messageVersion")
-      private final @Nullable Input<String> messageVersion;
+      private final @Nullable Output<String> messageVersion;
 
-    public Input<String> getMessageVersion() {
-        return this.messageVersion == null ? Input.empty() : this.messageVersion;
+    public Output<String> getMessageVersion() {
+        return this.messageVersion == null ? Output.empty() : this.messageVersion;
     }
 
     /**
@@ -133,10 +133,10 @@ public final class EdifactEnvelopeOverrideArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="receiverApplicationId")
-      private final @Nullable Input<String> receiverApplicationId;
+      private final @Nullable Output<String> receiverApplicationId;
 
-    public Input<String> getReceiverApplicationId() {
-        return this.receiverApplicationId == null ? Input.empty() : this.receiverApplicationId;
+    public Output<String> getReceiverApplicationId() {
+        return this.receiverApplicationId == null ? Output.empty() : this.receiverApplicationId;
     }
 
     /**
@@ -144,10 +144,10 @@ public final class EdifactEnvelopeOverrideArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="receiverApplicationQualifier")
-      private final @Nullable Input<String> receiverApplicationQualifier;
+      private final @Nullable Output<String> receiverApplicationQualifier;
 
-    public Input<String> getReceiverApplicationQualifier() {
-        return this.receiverApplicationQualifier == null ? Input.empty() : this.receiverApplicationQualifier;
+    public Output<String> getReceiverApplicationQualifier() {
+        return this.receiverApplicationQualifier == null ? Output.empty() : this.receiverApplicationQualifier;
     }
 
     /**
@@ -155,10 +155,10 @@ public final class EdifactEnvelopeOverrideArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="senderApplicationId")
-      private final @Nullable Input<String> senderApplicationId;
+      private final @Nullable Output<String> senderApplicationId;
 
-    public Input<String> getSenderApplicationId() {
-        return this.senderApplicationId == null ? Input.empty() : this.senderApplicationId;
+    public Output<String> getSenderApplicationId() {
+        return this.senderApplicationId == null ? Output.empty() : this.senderApplicationId;
     }
 
     /**
@@ -166,10 +166,10 @@ public final class EdifactEnvelopeOverrideArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="senderApplicationQualifier")
-      private final @Nullable Input<String> senderApplicationQualifier;
+      private final @Nullable Output<String> senderApplicationQualifier;
 
-    public Input<String> getSenderApplicationQualifier() {
-        return this.senderApplicationQualifier == null ? Input.empty() : this.senderApplicationQualifier;
+    public Output<String> getSenderApplicationQualifier() {
+        return this.senderApplicationQualifier == null ? Output.empty() : this.senderApplicationQualifier;
     }
 
     /**
@@ -177,28 +177,28 @@ public final class EdifactEnvelopeOverrideArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="targetNamespace")
-      private final @Nullable Input<String> targetNamespace;
+      private final @Nullable Output<String> targetNamespace;
 
-    public Input<String> getTargetNamespace() {
-        return this.targetNamespace == null ? Input.empty() : this.targetNamespace;
+    public Output<String> getTargetNamespace() {
+        return this.targetNamespace == null ? Output.empty() : this.targetNamespace;
     }
 
     public EdifactEnvelopeOverrideArgs(
-        @Nullable Input<String> applicationPassword,
-        @Nullable Input<String> associationAssignedCode,
-        @Nullable Input<String> controllingAgencyCode,
-        @Nullable Input<String> functionalGroupId,
-        @Nullable Input<String> groupHeaderMessageRelease,
-        @Nullable Input<String> groupHeaderMessageVersion,
-        @Nullable Input<String> messageAssociationAssignedCode,
-        @Nullable Input<String> messageId,
-        @Nullable Input<String> messageRelease,
-        @Nullable Input<String> messageVersion,
-        @Nullable Input<String> receiverApplicationId,
-        @Nullable Input<String> receiverApplicationQualifier,
-        @Nullable Input<String> senderApplicationId,
-        @Nullable Input<String> senderApplicationQualifier,
-        @Nullable Input<String> targetNamespace) {
+        @Nullable Output<String> applicationPassword,
+        @Nullable Output<String> associationAssignedCode,
+        @Nullable Output<String> controllingAgencyCode,
+        @Nullable Output<String> functionalGroupId,
+        @Nullable Output<String> groupHeaderMessageRelease,
+        @Nullable Output<String> groupHeaderMessageVersion,
+        @Nullable Output<String> messageAssociationAssignedCode,
+        @Nullable Output<String> messageId,
+        @Nullable Output<String> messageRelease,
+        @Nullable Output<String> messageVersion,
+        @Nullable Output<String> receiverApplicationId,
+        @Nullable Output<String> receiverApplicationQualifier,
+        @Nullable Output<String> senderApplicationId,
+        @Nullable Output<String> senderApplicationQualifier,
+        @Nullable Output<String> targetNamespace) {
         this.applicationPassword = applicationPassword;
         this.associationAssignedCode = associationAssignedCode;
         this.controllingAgencyCode = controllingAgencyCode;
@@ -217,21 +217,21 @@ public final class EdifactEnvelopeOverrideArgs extends io.pulumi.resources.Resou
     }
 
     private EdifactEnvelopeOverrideArgs() {
-        this.applicationPassword = Input.empty();
-        this.associationAssignedCode = Input.empty();
-        this.controllingAgencyCode = Input.empty();
-        this.functionalGroupId = Input.empty();
-        this.groupHeaderMessageRelease = Input.empty();
-        this.groupHeaderMessageVersion = Input.empty();
-        this.messageAssociationAssignedCode = Input.empty();
-        this.messageId = Input.empty();
-        this.messageRelease = Input.empty();
-        this.messageVersion = Input.empty();
-        this.receiverApplicationId = Input.empty();
-        this.receiverApplicationQualifier = Input.empty();
-        this.senderApplicationId = Input.empty();
-        this.senderApplicationQualifier = Input.empty();
-        this.targetNamespace = Input.empty();
+        this.applicationPassword = Output.empty();
+        this.associationAssignedCode = Output.empty();
+        this.controllingAgencyCode = Output.empty();
+        this.functionalGroupId = Output.empty();
+        this.groupHeaderMessageRelease = Output.empty();
+        this.groupHeaderMessageVersion = Output.empty();
+        this.messageAssociationAssignedCode = Output.empty();
+        this.messageId = Output.empty();
+        this.messageRelease = Output.empty();
+        this.messageVersion = Output.empty();
+        this.receiverApplicationId = Output.empty();
+        this.receiverApplicationQualifier = Output.empty();
+        this.senderApplicationId = Output.empty();
+        this.senderApplicationQualifier = Output.empty();
+        this.targetNamespace = Output.empty();
     }
 
     public static Builder builder() {
@@ -243,21 +243,21 @@ public final class EdifactEnvelopeOverrideArgs extends io.pulumi.resources.Resou
     }
 
     public static final class Builder {
-        private @Nullable Input<String> applicationPassword;
-        private @Nullable Input<String> associationAssignedCode;
-        private @Nullable Input<String> controllingAgencyCode;
-        private @Nullable Input<String> functionalGroupId;
-        private @Nullable Input<String> groupHeaderMessageRelease;
-        private @Nullable Input<String> groupHeaderMessageVersion;
-        private @Nullable Input<String> messageAssociationAssignedCode;
-        private @Nullable Input<String> messageId;
-        private @Nullable Input<String> messageRelease;
-        private @Nullable Input<String> messageVersion;
-        private @Nullable Input<String> receiverApplicationId;
-        private @Nullable Input<String> receiverApplicationQualifier;
-        private @Nullable Input<String> senderApplicationId;
-        private @Nullable Input<String> senderApplicationQualifier;
-        private @Nullable Input<String> targetNamespace;
+        private @Nullable Output<String> applicationPassword;
+        private @Nullable Output<String> associationAssignedCode;
+        private @Nullable Output<String> controllingAgencyCode;
+        private @Nullable Output<String> functionalGroupId;
+        private @Nullable Output<String> groupHeaderMessageRelease;
+        private @Nullable Output<String> groupHeaderMessageVersion;
+        private @Nullable Output<String> messageAssociationAssignedCode;
+        private @Nullable Output<String> messageId;
+        private @Nullable Output<String> messageRelease;
+        private @Nullable Output<String> messageVersion;
+        private @Nullable Output<String> receiverApplicationId;
+        private @Nullable Output<String> receiverApplicationQualifier;
+        private @Nullable Output<String> senderApplicationId;
+        private @Nullable Output<String> senderApplicationQualifier;
+        private @Nullable Output<String> targetNamespace;
 
         public Builder() {
     	      // Empty
@@ -282,153 +282,153 @@ public final class EdifactEnvelopeOverrideArgs extends io.pulumi.resources.Resou
     	      this.targetNamespace = defaults.targetNamespace;
         }
 
-        public Builder applicationPassword(@Nullable Input<String> applicationPassword) {
+        public Builder applicationPassword(@Nullable Output<String> applicationPassword) {
             this.applicationPassword = applicationPassword;
             return this;
         }
 
         public Builder applicationPassword(@Nullable String applicationPassword) {
-            this.applicationPassword = Input.ofNullable(applicationPassword);
+            this.applicationPassword = Output.ofNullable(applicationPassword);
             return this;
         }
 
-        public Builder associationAssignedCode(@Nullable Input<String> associationAssignedCode) {
+        public Builder associationAssignedCode(@Nullable Output<String> associationAssignedCode) {
             this.associationAssignedCode = associationAssignedCode;
             return this;
         }
 
         public Builder associationAssignedCode(@Nullable String associationAssignedCode) {
-            this.associationAssignedCode = Input.ofNullable(associationAssignedCode);
+            this.associationAssignedCode = Output.ofNullable(associationAssignedCode);
             return this;
         }
 
-        public Builder controllingAgencyCode(@Nullable Input<String> controllingAgencyCode) {
+        public Builder controllingAgencyCode(@Nullable Output<String> controllingAgencyCode) {
             this.controllingAgencyCode = controllingAgencyCode;
             return this;
         }
 
         public Builder controllingAgencyCode(@Nullable String controllingAgencyCode) {
-            this.controllingAgencyCode = Input.ofNullable(controllingAgencyCode);
+            this.controllingAgencyCode = Output.ofNullable(controllingAgencyCode);
             return this;
         }
 
-        public Builder functionalGroupId(@Nullable Input<String> functionalGroupId) {
+        public Builder functionalGroupId(@Nullable Output<String> functionalGroupId) {
             this.functionalGroupId = functionalGroupId;
             return this;
         }
 
         public Builder functionalGroupId(@Nullable String functionalGroupId) {
-            this.functionalGroupId = Input.ofNullable(functionalGroupId);
+            this.functionalGroupId = Output.ofNullable(functionalGroupId);
             return this;
         }
 
-        public Builder groupHeaderMessageRelease(@Nullable Input<String> groupHeaderMessageRelease) {
+        public Builder groupHeaderMessageRelease(@Nullable Output<String> groupHeaderMessageRelease) {
             this.groupHeaderMessageRelease = groupHeaderMessageRelease;
             return this;
         }
 
         public Builder groupHeaderMessageRelease(@Nullable String groupHeaderMessageRelease) {
-            this.groupHeaderMessageRelease = Input.ofNullable(groupHeaderMessageRelease);
+            this.groupHeaderMessageRelease = Output.ofNullable(groupHeaderMessageRelease);
             return this;
         }
 
-        public Builder groupHeaderMessageVersion(@Nullable Input<String> groupHeaderMessageVersion) {
+        public Builder groupHeaderMessageVersion(@Nullable Output<String> groupHeaderMessageVersion) {
             this.groupHeaderMessageVersion = groupHeaderMessageVersion;
             return this;
         }
 
         public Builder groupHeaderMessageVersion(@Nullable String groupHeaderMessageVersion) {
-            this.groupHeaderMessageVersion = Input.ofNullable(groupHeaderMessageVersion);
+            this.groupHeaderMessageVersion = Output.ofNullable(groupHeaderMessageVersion);
             return this;
         }
 
-        public Builder messageAssociationAssignedCode(@Nullable Input<String> messageAssociationAssignedCode) {
+        public Builder messageAssociationAssignedCode(@Nullable Output<String> messageAssociationAssignedCode) {
             this.messageAssociationAssignedCode = messageAssociationAssignedCode;
             return this;
         }
 
         public Builder messageAssociationAssignedCode(@Nullable String messageAssociationAssignedCode) {
-            this.messageAssociationAssignedCode = Input.ofNullable(messageAssociationAssignedCode);
+            this.messageAssociationAssignedCode = Output.ofNullable(messageAssociationAssignedCode);
             return this;
         }
 
-        public Builder messageId(@Nullable Input<String> messageId) {
+        public Builder messageId(@Nullable Output<String> messageId) {
             this.messageId = messageId;
             return this;
         }
 
         public Builder messageId(@Nullable String messageId) {
-            this.messageId = Input.ofNullable(messageId);
+            this.messageId = Output.ofNullable(messageId);
             return this;
         }
 
-        public Builder messageRelease(@Nullable Input<String> messageRelease) {
+        public Builder messageRelease(@Nullable Output<String> messageRelease) {
             this.messageRelease = messageRelease;
             return this;
         }
 
         public Builder messageRelease(@Nullable String messageRelease) {
-            this.messageRelease = Input.ofNullable(messageRelease);
+            this.messageRelease = Output.ofNullable(messageRelease);
             return this;
         }
 
-        public Builder messageVersion(@Nullable Input<String> messageVersion) {
+        public Builder messageVersion(@Nullable Output<String> messageVersion) {
             this.messageVersion = messageVersion;
             return this;
         }
 
         public Builder messageVersion(@Nullable String messageVersion) {
-            this.messageVersion = Input.ofNullable(messageVersion);
+            this.messageVersion = Output.ofNullable(messageVersion);
             return this;
         }
 
-        public Builder receiverApplicationId(@Nullable Input<String> receiverApplicationId) {
+        public Builder receiverApplicationId(@Nullable Output<String> receiverApplicationId) {
             this.receiverApplicationId = receiverApplicationId;
             return this;
         }
 
         public Builder receiverApplicationId(@Nullable String receiverApplicationId) {
-            this.receiverApplicationId = Input.ofNullable(receiverApplicationId);
+            this.receiverApplicationId = Output.ofNullable(receiverApplicationId);
             return this;
         }
 
-        public Builder receiverApplicationQualifier(@Nullable Input<String> receiverApplicationQualifier) {
+        public Builder receiverApplicationQualifier(@Nullable Output<String> receiverApplicationQualifier) {
             this.receiverApplicationQualifier = receiverApplicationQualifier;
             return this;
         }
 
         public Builder receiverApplicationQualifier(@Nullable String receiverApplicationQualifier) {
-            this.receiverApplicationQualifier = Input.ofNullable(receiverApplicationQualifier);
+            this.receiverApplicationQualifier = Output.ofNullable(receiverApplicationQualifier);
             return this;
         }
 
-        public Builder senderApplicationId(@Nullable Input<String> senderApplicationId) {
+        public Builder senderApplicationId(@Nullable Output<String> senderApplicationId) {
             this.senderApplicationId = senderApplicationId;
             return this;
         }
 
         public Builder senderApplicationId(@Nullable String senderApplicationId) {
-            this.senderApplicationId = Input.ofNullable(senderApplicationId);
+            this.senderApplicationId = Output.ofNullable(senderApplicationId);
             return this;
         }
 
-        public Builder senderApplicationQualifier(@Nullable Input<String> senderApplicationQualifier) {
+        public Builder senderApplicationQualifier(@Nullable Output<String> senderApplicationQualifier) {
             this.senderApplicationQualifier = senderApplicationQualifier;
             return this;
         }
 
         public Builder senderApplicationQualifier(@Nullable String senderApplicationQualifier) {
-            this.senderApplicationQualifier = Input.ofNullable(senderApplicationQualifier);
+            this.senderApplicationQualifier = Output.ofNullable(senderApplicationQualifier);
             return this;
         }
 
-        public Builder targetNamespace(@Nullable Input<String> targetNamespace) {
+        public Builder targetNamespace(@Nullable Output<String> targetNamespace) {
             this.targetNamespace = targetNamespace;
             return this;
         }
 
         public Builder targetNamespace(@Nullable String targetNamespace) {
-            this.targetNamespace = Input.ofNullable(targetNamespace);
+            this.targetNamespace = Output.ofNullable(targetNamespace);
             return this;
         }
         public EdifactEnvelopeOverrideArgs build() {

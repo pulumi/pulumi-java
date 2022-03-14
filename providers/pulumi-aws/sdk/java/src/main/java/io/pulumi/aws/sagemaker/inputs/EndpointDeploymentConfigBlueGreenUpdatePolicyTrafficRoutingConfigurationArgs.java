@@ -5,7 +5,7 @@ package io.pulumi.aws.sagemaker.inputs;
 
 import io.pulumi.aws.sagemaker.inputs.EndpointDeploymentConfigBlueGreenUpdatePolicyTrafficRoutingConfigurationCanarySizeArgs;
 import io.pulumi.aws.sagemaker.inputs.EndpointDeploymentConfigBlueGreenUpdatePolicyTrafficRoutingConfigurationLinearStepSizeArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -22,10 +22,10 @@ public final class EndpointDeploymentConfigBlueGreenUpdatePolicyTrafficRoutingCo
      * 
      */
     @InputImport(name="canarySize")
-      private final @Nullable Input<EndpointDeploymentConfigBlueGreenUpdatePolicyTrafficRoutingConfigurationCanarySizeArgs> canarySize;
+      private final @Nullable Output<EndpointDeploymentConfigBlueGreenUpdatePolicyTrafficRoutingConfigurationCanarySizeArgs> canarySize;
 
-    public Input<EndpointDeploymentConfigBlueGreenUpdatePolicyTrafficRoutingConfigurationCanarySizeArgs> getCanarySize() {
-        return this.canarySize == null ? Input.empty() : this.canarySize;
+    public Output<EndpointDeploymentConfigBlueGreenUpdatePolicyTrafficRoutingConfigurationCanarySizeArgs> getCanarySize() {
+        return this.canarySize == null ? Output.empty() : this.canarySize;
     }
 
     /**
@@ -33,10 +33,10 @@ public final class EndpointDeploymentConfigBlueGreenUpdatePolicyTrafficRoutingCo
      * 
      */
     @InputImport(name="linearStepSize")
-      private final @Nullable Input<EndpointDeploymentConfigBlueGreenUpdatePolicyTrafficRoutingConfigurationLinearStepSizeArgs> linearStepSize;
+      private final @Nullable Output<EndpointDeploymentConfigBlueGreenUpdatePolicyTrafficRoutingConfigurationLinearStepSizeArgs> linearStepSize;
 
-    public Input<EndpointDeploymentConfigBlueGreenUpdatePolicyTrafficRoutingConfigurationLinearStepSizeArgs> getLinearStepSize() {
-        return this.linearStepSize == null ? Input.empty() : this.linearStepSize;
+    public Output<EndpointDeploymentConfigBlueGreenUpdatePolicyTrafficRoutingConfigurationLinearStepSizeArgs> getLinearStepSize() {
+        return this.linearStepSize == null ? Output.empty() : this.linearStepSize;
     }
 
     /**
@@ -44,9 +44,9 @@ public final class EndpointDeploymentConfigBlueGreenUpdatePolicyTrafficRoutingCo
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<String> type;
+      private final Output<String> type;
 
-    public Input<String> getType() {
+    public Output<String> getType() {
         return this.type;
     }
 
@@ -55,17 +55,17 @@ public final class EndpointDeploymentConfigBlueGreenUpdatePolicyTrafficRoutingCo
      * 
      */
     @InputImport(name="waitIntervalInSeconds", required=true)
-      private final Input<Integer> waitIntervalInSeconds;
+      private final Output<Integer> waitIntervalInSeconds;
 
-    public Input<Integer> getWaitIntervalInSeconds() {
+    public Output<Integer> getWaitIntervalInSeconds() {
         return this.waitIntervalInSeconds;
     }
 
     public EndpointDeploymentConfigBlueGreenUpdatePolicyTrafficRoutingConfigurationArgs(
-        @Nullable Input<EndpointDeploymentConfigBlueGreenUpdatePolicyTrafficRoutingConfigurationCanarySizeArgs> canarySize,
-        @Nullable Input<EndpointDeploymentConfigBlueGreenUpdatePolicyTrafficRoutingConfigurationLinearStepSizeArgs> linearStepSize,
-        Input<String> type,
-        Input<Integer> waitIntervalInSeconds) {
+        @Nullable Output<EndpointDeploymentConfigBlueGreenUpdatePolicyTrafficRoutingConfigurationCanarySizeArgs> canarySize,
+        @Nullable Output<EndpointDeploymentConfigBlueGreenUpdatePolicyTrafficRoutingConfigurationLinearStepSizeArgs> linearStepSize,
+        Output<String> type,
+        Output<Integer> waitIntervalInSeconds) {
         this.canarySize = canarySize;
         this.linearStepSize = linearStepSize;
         this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
@@ -73,10 +73,10 @@ public final class EndpointDeploymentConfigBlueGreenUpdatePolicyTrafficRoutingCo
     }
 
     private EndpointDeploymentConfigBlueGreenUpdatePolicyTrafficRoutingConfigurationArgs() {
-        this.canarySize = Input.empty();
-        this.linearStepSize = Input.empty();
-        this.type = Input.empty();
-        this.waitIntervalInSeconds = Input.empty();
+        this.canarySize = Output.empty();
+        this.linearStepSize = Output.empty();
+        this.type = Output.empty();
+        this.waitIntervalInSeconds = Output.empty();
     }
 
     public static Builder builder() {
@@ -88,10 +88,10 @@ public final class EndpointDeploymentConfigBlueGreenUpdatePolicyTrafficRoutingCo
     }
 
     public static final class Builder {
-        private @Nullable Input<EndpointDeploymentConfigBlueGreenUpdatePolicyTrafficRoutingConfigurationCanarySizeArgs> canarySize;
-        private @Nullable Input<EndpointDeploymentConfigBlueGreenUpdatePolicyTrafficRoutingConfigurationLinearStepSizeArgs> linearStepSize;
-        private Input<String> type;
-        private Input<Integer> waitIntervalInSeconds;
+        private @Nullable Output<EndpointDeploymentConfigBlueGreenUpdatePolicyTrafficRoutingConfigurationCanarySizeArgs> canarySize;
+        private @Nullable Output<EndpointDeploymentConfigBlueGreenUpdatePolicyTrafficRoutingConfigurationLinearStepSizeArgs> linearStepSize;
+        private Output<String> type;
+        private Output<Integer> waitIntervalInSeconds;
 
         public Builder() {
     	      // Empty
@@ -105,43 +105,43 @@ public final class EndpointDeploymentConfigBlueGreenUpdatePolicyTrafficRoutingCo
     	      this.waitIntervalInSeconds = defaults.waitIntervalInSeconds;
         }
 
-        public Builder canarySize(@Nullable Input<EndpointDeploymentConfigBlueGreenUpdatePolicyTrafficRoutingConfigurationCanarySizeArgs> canarySize) {
+        public Builder canarySize(@Nullable Output<EndpointDeploymentConfigBlueGreenUpdatePolicyTrafficRoutingConfigurationCanarySizeArgs> canarySize) {
             this.canarySize = canarySize;
             return this;
         }
 
         public Builder canarySize(@Nullable EndpointDeploymentConfigBlueGreenUpdatePolicyTrafficRoutingConfigurationCanarySizeArgs canarySize) {
-            this.canarySize = Input.ofNullable(canarySize);
+            this.canarySize = Output.ofNullable(canarySize);
             return this;
         }
 
-        public Builder linearStepSize(@Nullable Input<EndpointDeploymentConfigBlueGreenUpdatePolicyTrafficRoutingConfigurationLinearStepSizeArgs> linearStepSize) {
+        public Builder linearStepSize(@Nullable Output<EndpointDeploymentConfigBlueGreenUpdatePolicyTrafficRoutingConfigurationLinearStepSizeArgs> linearStepSize) {
             this.linearStepSize = linearStepSize;
             return this;
         }
 
         public Builder linearStepSize(@Nullable EndpointDeploymentConfigBlueGreenUpdatePolicyTrafficRoutingConfigurationLinearStepSizeArgs linearStepSize) {
-            this.linearStepSize = Input.ofNullable(linearStepSize);
+            this.linearStepSize = Output.ofNullable(linearStepSize);
             return this;
         }
 
-        public Builder type(Input<String> type) {
+        public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(String type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
 
-        public Builder waitIntervalInSeconds(Input<Integer> waitIntervalInSeconds) {
+        public Builder waitIntervalInSeconds(Output<Integer> waitIntervalInSeconds) {
             this.waitIntervalInSeconds = Objects.requireNonNull(waitIntervalInSeconds);
             return this;
         }
 
         public Builder waitIntervalInSeconds(Integer waitIntervalInSeconds) {
-            this.waitIntervalInSeconds = Input.of(Objects.requireNonNull(waitIntervalInSeconds));
+            this.waitIntervalInSeconds = Output.of(Objects.requireNonNull(waitIntervalInSeconds));
             return this;
         }
         public EndpointDeploymentConfigBlueGreenUpdatePolicyTrafficRoutingConfigurationArgs build() {

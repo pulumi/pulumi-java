@@ -6,7 +6,7 @@ package io.pulumi.aws.servicediscovery.inputs;
 import io.pulumi.aws.servicediscovery.inputs.ServiceDnsConfigGetArgs;
 import io.pulumi.aws.servicediscovery.inputs.ServiceHealthCheckConfigGetArgs;
 import io.pulumi.aws.servicediscovery.inputs.ServiceHealthCheckCustomConfigGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class ServiceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arn")
-      private final @Nullable Input<String> arn;
+      private final @Nullable Output<String> arn;
 
-    public Input<String> getArn() {
-        return this.arn == null ? Input.empty() : this.arn;
+    public Output<String> getArn() {
+        return this.arn == null ? Output.empty() : this.arn;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class ServiceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -46,10 +46,10 @@ public final class ServiceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dnsConfig")
-      private final @Nullable Input<ServiceDnsConfigGetArgs> dnsConfig;
+      private final @Nullable Output<ServiceDnsConfigGetArgs> dnsConfig;
 
-    public Input<ServiceDnsConfigGetArgs> getDnsConfig() {
-        return this.dnsConfig == null ? Input.empty() : this.dnsConfig;
+    public Output<ServiceDnsConfigGetArgs> getDnsConfig() {
+        return this.dnsConfig == null ? Output.empty() : this.dnsConfig;
     }
 
     /**
@@ -57,10 +57,10 @@ public final class ServiceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="forceDestroy")
-      private final @Nullable Input<Boolean> forceDestroy;
+      private final @Nullable Output<Boolean> forceDestroy;
 
-    public Input<Boolean> getForceDestroy() {
-        return this.forceDestroy == null ? Input.empty() : this.forceDestroy;
+    public Output<Boolean> getForceDestroy() {
+        return this.forceDestroy == null ? Output.empty() : this.forceDestroy;
     }
 
     /**
@@ -68,10 +68,10 @@ public final class ServiceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="healthCheckConfig")
-      private final @Nullable Input<ServiceHealthCheckConfigGetArgs> healthCheckConfig;
+      private final @Nullable Output<ServiceHealthCheckConfigGetArgs> healthCheckConfig;
 
-    public Input<ServiceHealthCheckConfigGetArgs> getHealthCheckConfig() {
-        return this.healthCheckConfig == null ? Input.empty() : this.healthCheckConfig;
+    public Output<ServiceHealthCheckConfigGetArgs> getHealthCheckConfig() {
+        return this.healthCheckConfig == null ? Output.empty() : this.healthCheckConfig;
     }
 
     /**
@@ -79,10 +79,10 @@ public final class ServiceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="healthCheckCustomConfig")
-      private final @Nullable Input<ServiceHealthCheckCustomConfigGetArgs> healthCheckCustomConfig;
+      private final @Nullable Output<ServiceHealthCheckCustomConfigGetArgs> healthCheckCustomConfig;
 
-    public Input<ServiceHealthCheckCustomConfigGetArgs> getHealthCheckCustomConfig() {
-        return this.healthCheckCustomConfig == null ? Input.empty() : this.healthCheckCustomConfig;
+    public Output<ServiceHealthCheckCustomConfigGetArgs> getHealthCheckCustomConfig() {
+        return this.healthCheckCustomConfig == null ? Output.empty() : this.healthCheckCustomConfig;
     }
 
     /**
@@ -90,10 +90,10 @@ public final class ServiceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -101,10 +101,10 @@ public final class ServiceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="namespaceId")
-      private final @Nullable Input<String> namespaceId;
+      private final @Nullable Output<String> namespaceId;
 
-    public Input<String> getNamespaceId() {
-        return this.namespaceId == null ? Input.empty() : this.namespaceId;
+    public Output<String> getNamespaceId() {
+        return this.namespaceId == null ? Output.empty() : this.namespaceId;
     }
 
     /**
@@ -112,10 +112,10 @@ public final class ServiceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -123,23 +123,23 @@ public final class ServiceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tagsAll")
-      private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Input<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Input.empty() : this.tagsAll;
+    public Output<Map<String,String>> getTagsAll() {
+        return this.tagsAll == null ? Output.empty() : this.tagsAll;
     }
 
     public ServiceState(
-        @Nullable Input<String> arn,
-        @Nullable Input<String> description,
-        @Nullable Input<ServiceDnsConfigGetArgs> dnsConfig,
-        @Nullable Input<Boolean> forceDestroy,
-        @Nullable Input<ServiceHealthCheckConfigGetArgs> healthCheckConfig,
-        @Nullable Input<ServiceHealthCheckCustomConfigGetArgs> healthCheckCustomConfig,
-        @Nullable Input<String> name,
-        @Nullable Input<String> namespaceId,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<Map<String,String>> tagsAll) {
+        @Nullable Output<String> arn,
+        @Nullable Output<String> description,
+        @Nullable Output<ServiceDnsConfigGetArgs> dnsConfig,
+        @Nullable Output<Boolean> forceDestroy,
+        @Nullable Output<ServiceHealthCheckConfigGetArgs> healthCheckConfig,
+        @Nullable Output<ServiceHealthCheckCustomConfigGetArgs> healthCheckCustomConfig,
+        @Nullable Output<String> name,
+        @Nullable Output<String> namespaceId,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<Map<String,String>> tagsAll) {
         this.arn = arn;
         this.description = description;
         this.dnsConfig = dnsConfig;
@@ -153,16 +153,16 @@ public final class ServiceState extends io.pulumi.resources.ResourceArgs {
     }
 
     private ServiceState() {
-        this.arn = Input.empty();
-        this.description = Input.empty();
-        this.dnsConfig = Input.empty();
-        this.forceDestroy = Input.empty();
-        this.healthCheckConfig = Input.empty();
-        this.healthCheckCustomConfig = Input.empty();
-        this.name = Input.empty();
-        this.namespaceId = Input.empty();
-        this.tags = Input.empty();
-        this.tagsAll = Input.empty();
+        this.arn = Output.empty();
+        this.description = Output.empty();
+        this.dnsConfig = Output.empty();
+        this.forceDestroy = Output.empty();
+        this.healthCheckConfig = Output.empty();
+        this.healthCheckCustomConfig = Output.empty();
+        this.name = Output.empty();
+        this.namespaceId = Output.empty();
+        this.tags = Output.empty();
+        this.tagsAll = Output.empty();
     }
 
     public static Builder builder() {
@@ -174,16 +174,16 @@ public final class ServiceState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> arn;
-        private @Nullable Input<String> description;
-        private @Nullable Input<ServiceDnsConfigGetArgs> dnsConfig;
-        private @Nullable Input<Boolean> forceDestroy;
-        private @Nullable Input<ServiceHealthCheckConfigGetArgs> healthCheckConfig;
-        private @Nullable Input<ServiceHealthCheckCustomConfigGetArgs> healthCheckCustomConfig;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> namespaceId;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<Map<String,String>> tagsAll;
+        private @Nullable Output<String> arn;
+        private @Nullable Output<String> description;
+        private @Nullable Output<ServiceDnsConfigGetArgs> dnsConfig;
+        private @Nullable Output<Boolean> forceDestroy;
+        private @Nullable Output<ServiceHealthCheckConfigGetArgs> healthCheckConfig;
+        private @Nullable Output<ServiceHealthCheckCustomConfigGetArgs> healthCheckCustomConfig;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> namespaceId;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<Map<String,String>> tagsAll;
 
         public Builder() {
     	      // Empty
@@ -203,103 +203,103 @@ public final class ServiceState extends io.pulumi.resources.ResourceArgs {
     	      this.tagsAll = defaults.tagsAll;
         }
 
-        public Builder arn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
 
         public Builder arn(@Nullable String arn) {
-            this.arn = Input.ofNullable(arn);
+            this.arn = Output.ofNullable(arn);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder dnsConfig(@Nullable Input<ServiceDnsConfigGetArgs> dnsConfig) {
+        public Builder dnsConfig(@Nullable Output<ServiceDnsConfigGetArgs> dnsConfig) {
             this.dnsConfig = dnsConfig;
             return this;
         }
 
         public Builder dnsConfig(@Nullable ServiceDnsConfigGetArgs dnsConfig) {
-            this.dnsConfig = Input.ofNullable(dnsConfig);
+            this.dnsConfig = Output.ofNullable(dnsConfig);
             return this;
         }
 
-        public Builder forceDestroy(@Nullable Input<Boolean> forceDestroy) {
+        public Builder forceDestroy(@Nullable Output<Boolean> forceDestroy) {
             this.forceDestroy = forceDestroy;
             return this;
         }
 
         public Builder forceDestroy(@Nullable Boolean forceDestroy) {
-            this.forceDestroy = Input.ofNullable(forceDestroy);
+            this.forceDestroy = Output.ofNullable(forceDestroy);
             return this;
         }
 
-        public Builder healthCheckConfig(@Nullable Input<ServiceHealthCheckConfigGetArgs> healthCheckConfig) {
+        public Builder healthCheckConfig(@Nullable Output<ServiceHealthCheckConfigGetArgs> healthCheckConfig) {
             this.healthCheckConfig = healthCheckConfig;
             return this;
         }
 
         public Builder healthCheckConfig(@Nullable ServiceHealthCheckConfigGetArgs healthCheckConfig) {
-            this.healthCheckConfig = Input.ofNullable(healthCheckConfig);
+            this.healthCheckConfig = Output.ofNullable(healthCheckConfig);
             return this;
         }
 
-        public Builder healthCheckCustomConfig(@Nullable Input<ServiceHealthCheckCustomConfigGetArgs> healthCheckCustomConfig) {
+        public Builder healthCheckCustomConfig(@Nullable Output<ServiceHealthCheckCustomConfigGetArgs> healthCheckCustomConfig) {
             this.healthCheckCustomConfig = healthCheckCustomConfig;
             return this;
         }
 
         public Builder healthCheckCustomConfig(@Nullable ServiceHealthCheckCustomConfigGetArgs healthCheckCustomConfig) {
-            this.healthCheckCustomConfig = Input.ofNullable(healthCheckCustomConfig);
+            this.healthCheckCustomConfig = Output.ofNullable(healthCheckCustomConfig);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder namespaceId(@Nullable Input<String> namespaceId) {
+        public Builder namespaceId(@Nullable Output<String> namespaceId) {
             this.namespaceId = namespaceId;
             return this;
         }
 
         public Builder namespaceId(@Nullable String namespaceId) {
-            this.namespaceId = Input.ofNullable(namespaceId);
+            this.namespaceId = Output.ofNullable(namespaceId);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Input.ofNullable(tagsAll);
+            this.tagsAll = Output.ofNullable(tagsAll);
             return this;
         }
         public ServiceState build() {

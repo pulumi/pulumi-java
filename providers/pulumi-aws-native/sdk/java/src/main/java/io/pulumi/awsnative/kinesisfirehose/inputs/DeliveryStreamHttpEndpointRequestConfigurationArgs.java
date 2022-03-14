@@ -5,7 +5,7 @@ package io.pulumi.awsnative.kinesisfirehose.inputs;
 
 import io.pulumi.awsnative.kinesisfirehose.enums.DeliveryStreamHttpEndpointRequestConfigurationContentEncoding;
 import io.pulumi.awsnative.kinesisfirehose.inputs.DeliveryStreamHttpEndpointCommonAttributeArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
@@ -17,29 +17,29 @@ public final class DeliveryStreamHttpEndpointRequestConfigurationArgs extends io
     public static final DeliveryStreamHttpEndpointRequestConfigurationArgs Empty = new DeliveryStreamHttpEndpointRequestConfigurationArgs();
 
     @InputImport(name="commonAttributes")
-      private final @Nullable Input<List<DeliveryStreamHttpEndpointCommonAttributeArgs>> commonAttributes;
+      private final @Nullable Output<List<DeliveryStreamHttpEndpointCommonAttributeArgs>> commonAttributes;
 
-    public Input<List<DeliveryStreamHttpEndpointCommonAttributeArgs>> getCommonAttributes() {
-        return this.commonAttributes == null ? Input.empty() : this.commonAttributes;
+    public Output<List<DeliveryStreamHttpEndpointCommonAttributeArgs>> getCommonAttributes() {
+        return this.commonAttributes == null ? Output.empty() : this.commonAttributes;
     }
 
     @InputImport(name="contentEncoding")
-      private final @Nullable Input<DeliveryStreamHttpEndpointRequestConfigurationContentEncoding> contentEncoding;
+      private final @Nullable Output<DeliveryStreamHttpEndpointRequestConfigurationContentEncoding> contentEncoding;
 
-    public Input<DeliveryStreamHttpEndpointRequestConfigurationContentEncoding> getContentEncoding() {
-        return this.contentEncoding == null ? Input.empty() : this.contentEncoding;
+    public Output<DeliveryStreamHttpEndpointRequestConfigurationContentEncoding> getContentEncoding() {
+        return this.contentEncoding == null ? Output.empty() : this.contentEncoding;
     }
 
     public DeliveryStreamHttpEndpointRequestConfigurationArgs(
-        @Nullable Input<List<DeliveryStreamHttpEndpointCommonAttributeArgs>> commonAttributes,
-        @Nullable Input<DeliveryStreamHttpEndpointRequestConfigurationContentEncoding> contentEncoding) {
+        @Nullable Output<List<DeliveryStreamHttpEndpointCommonAttributeArgs>> commonAttributes,
+        @Nullable Output<DeliveryStreamHttpEndpointRequestConfigurationContentEncoding> contentEncoding) {
         this.commonAttributes = commonAttributes;
         this.contentEncoding = contentEncoding;
     }
 
     private DeliveryStreamHttpEndpointRequestConfigurationArgs() {
-        this.commonAttributes = Input.empty();
-        this.contentEncoding = Input.empty();
+        this.commonAttributes = Output.empty();
+        this.contentEncoding = Output.empty();
     }
 
     public static Builder builder() {
@@ -51,8 +51,8 @@ public final class DeliveryStreamHttpEndpointRequestConfigurationArgs extends io
     }
 
     public static final class Builder {
-        private @Nullable Input<List<DeliveryStreamHttpEndpointCommonAttributeArgs>> commonAttributes;
-        private @Nullable Input<DeliveryStreamHttpEndpointRequestConfigurationContentEncoding> contentEncoding;
+        private @Nullable Output<List<DeliveryStreamHttpEndpointCommonAttributeArgs>> commonAttributes;
+        private @Nullable Output<DeliveryStreamHttpEndpointRequestConfigurationContentEncoding> contentEncoding;
 
         public Builder() {
     	      // Empty
@@ -64,23 +64,23 @@ public final class DeliveryStreamHttpEndpointRequestConfigurationArgs extends io
     	      this.contentEncoding = defaults.contentEncoding;
         }
 
-        public Builder commonAttributes(@Nullable Input<List<DeliveryStreamHttpEndpointCommonAttributeArgs>> commonAttributes) {
+        public Builder commonAttributes(@Nullable Output<List<DeliveryStreamHttpEndpointCommonAttributeArgs>> commonAttributes) {
             this.commonAttributes = commonAttributes;
             return this;
         }
 
         public Builder commonAttributes(@Nullable List<DeliveryStreamHttpEndpointCommonAttributeArgs> commonAttributes) {
-            this.commonAttributes = Input.ofNullable(commonAttributes);
+            this.commonAttributes = Output.ofNullable(commonAttributes);
             return this;
         }
 
-        public Builder contentEncoding(@Nullable Input<DeliveryStreamHttpEndpointRequestConfigurationContentEncoding> contentEncoding) {
+        public Builder contentEncoding(@Nullable Output<DeliveryStreamHttpEndpointRequestConfigurationContentEncoding> contentEncoding) {
             this.contentEncoding = contentEncoding;
             return this;
         }
 
         public Builder contentEncoding(@Nullable DeliveryStreamHttpEndpointRequestConfigurationContentEncoding contentEncoding) {
-            this.contentEncoding = Input.ofNullable(contentEncoding);
+            this.contentEncoding = Output.ofNullable(contentEncoding);
             return this;
         }
         public DeliveryStreamHttpEndpointRequestConfigurationArgs build() {

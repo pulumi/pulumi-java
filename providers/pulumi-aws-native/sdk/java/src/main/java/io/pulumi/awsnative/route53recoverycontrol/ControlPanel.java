@@ -7,7 +7,6 @@ import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.route53recoverycontrol.ControlPanelArgs;
 import io.pulumi.awsnative.route53recoverycontrol.enums.ControlPanelStatus;
 import io.pulumi.awsnative.route53recoverycontrol.outputs.ControlPanelTag;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -160,14 +159,14 @@ public class ControlPanel extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ControlPanel(String name, @Nullable ControlPanelArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:route53recoverycontrol:ControlPanel", name, args == null ? ControlPanelArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws-native:route53recoverycontrol:ControlPanel", name, args == null ? ControlPanelArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private ControlPanel(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private ControlPanel(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws-native:route53recoverycontrol:ControlPanel", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -182,7 +181,7 @@ public class ControlPanel extends io.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static ControlPanel get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static ControlPanel get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new ControlPanel(name, id, options);
     }
 }

@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.kafkaconnect.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -24,9 +24,9 @@ public final class ConnectorCloudWatchLogsLogDeliveryArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="enabled", required=true)
-      private final Input<Boolean> enabled;
+      private final Output<Boolean> enabled;
 
-    public Input<Boolean> getEnabled() {
+    public Output<Boolean> getEnabled() {
         return this.enabled;
     }
 
@@ -35,22 +35,22 @@ public final class ConnectorCloudWatchLogsLogDeliveryArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="logGroup")
-      private final @Nullable Input<String> logGroup;
+      private final @Nullable Output<String> logGroup;
 
-    public Input<String> getLogGroup() {
-        return this.logGroup == null ? Input.empty() : this.logGroup;
+    public Output<String> getLogGroup() {
+        return this.logGroup == null ? Output.empty() : this.logGroup;
     }
 
     public ConnectorCloudWatchLogsLogDeliveryArgs(
-        Input<Boolean> enabled,
-        @Nullable Input<String> logGroup) {
+        Output<Boolean> enabled,
+        @Nullable Output<String> logGroup) {
         this.enabled = Objects.requireNonNull(enabled, "expected parameter 'enabled' to be non-null");
         this.logGroup = logGroup;
     }
 
     private ConnectorCloudWatchLogsLogDeliveryArgs() {
-        this.enabled = Input.empty();
-        this.logGroup = Input.empty();
+        this.enabled = Output.empty();
+        this.logGroup = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class ConnectorCloudWatchLogsLogDeliveryArgs extends io.pulumi.reso
     }
 
     public static final class Builder {
-        private Input<Boolean> enabled;
-        private @Nullable Input<String> logGroup;
+        private Output<Boolean> enabled;
+        private @Nullable Output<String> logGroup;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class ConnectorCloudWatchLogsLogDeliveryArgs extends io.pulumi.reso
     	      this.logGroup = defaults.logGroup;
         }
 
-        public Builder enabled(Input<Boolean> enabled) {
+        public Builder enabled(Output<Boolean> enabled) {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
 
         public Builder enabled(Boolean enabled) {
-            this.enabled = Input.of(Objects.requireNonNull(enabled));
+            this.enabled = Output.of(Objects.requireNonNull(enabled));
             return this;
         }
 
-        public Builder logGroup(@Nullable Input<String> logGroup) {
+        public Builder logGroup(@Nullable Output<String> logGroup) {
             this.logGroup = logGroup;
             return this;
         }
 
         public Builder logGroup(@Nullable String logGroup) {
-            this.logGroup = Input.ofNullable(logGroup);
+            this.logGroup = Output.ofNullable(logGroup);
             return this;
         }
         public ConnectorCloudWatchLogsLogDeliveryArgs build() {

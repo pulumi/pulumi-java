@@ -5,7 +5,7 @@ package io.pulumi.aws.appmesh.inputs;
 
 import io.pulumi.aws.appmesh.inputs.RouteSpecHttp2RouteTimeoutIdleGetArgs;
 import io.pulumi.aws.appmesh.inputs.RouteSpecHttp2RouteTimeoutPerRequestGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,10 +20,10 @@ public final class RouteSpecHttp2RouteTimeoutGetArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="idle")
-      private final @Nullable Input<RouteSpecHttp2RouteTimeoutIdleGetArgs> idle;
+      private final @Nullable Output<RouteSpecHttp2RouteTimeoutIdleGetArgs> idle;
 
-    public Input<RouteSpecHttp2RouteTimeoutIdleGetArgs> getIdle() {
-        return this.idle == null ? Input.empty() : this.idle;
+    public Output<RouteSpecHttp2RouteTimeoutIdleGetArgs> getIdle() {
+        return this.idle == null ? Output.empty() : this.idle;
     }
 
     /**
@@ -31,22 +31,22 @@ public final class RouteSpecHttp2RouteTimeoutGetArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="perRequest")
-      private final @Nullable Input<RouteSpecHttp2RouteTimeoutPerRequestGetArgs> perRequest;
+      private final @Nullable Output<RouteSpecHttp2RouteTimeoutPerRequestGetArgs> perRequest;
 
-    public Input<RouteSpecHttp2RouteTimeoutPerRequestGetArgs> getPerRequest() {
-        return this.perRequest == null ? Input.empty() : this.perRequest;
+    public Output<RouteSpecHttp2RouteTimeoutPerRequestGetArgs> getPerRequest() {
+        return this.perRequest == null ? Output.empty() : this.perRequest;
     }
 
     public RouteSpecHttp2RouteTimeoutGetArgs(
-        @Nullable Input<RouteSpecHttp2RouteTimeoutIdleGetArgs> idle,
-        @Nullable Input<RouteSpecHttp2RouteTimeoutPerRequestGetArgs> perRequest) {
+        @Nullable Output<RouteSpecHttp2RouteTimeoutIdleGetArgs> idle,
+        @Nullable Output<RouteSpecHttp2RouteTimeoutPerRequestGetArgs> perRequest) {
         this.idle = idle;
         this.perRequest = perRequest;
     }
 
     private RouteSpecHttp2RouteTimeoutGetArgs() {
-        this.idle = Input.empty();
-        this.perRequest = Input.empty();
+        this.idle = Output.empty();
+        this.perRequest = Output.empty();
     }
 
     public static Builder builder() {
@@ -58,8 +58,8 @@ public final class RouteSpecHttp2RouteTimeoutGetArgs extends io.pulumi.resources
     }
 
     public static final class Builder {
-        private @Nullable Input<RouteSpecHttp2RouteTimeoutIdleGetArgs> idle;
-        private @Nullable Input<RouteSpecHttp2RouteTimeoutPerRequestGetArgs> perRequest;
+        private @Nullable Output<RouteSpecHttp2RouteTimeoutIdleGetArgs> idle;
+        private @Nullable Output<RouteSpecHttp2RouteTimeoutPerRequestGetArgs> perRequest;
 
         public Builder() {
     	      // Empty
@@ -71,23 +71,23 @@ public final class RouteSpecHttp2RouteTimeoutGetArgs extends io.pulumi.resources
     	      this.perRequest = defaults.perRequest;
         }
 
-        public Builder idle(@Nullable Input<RouteSpecHttp2RouteTimeoutIdleGetArgs> idle) {
+        public Builder idle(@Nullable Output<RouteSpecHttp2RouteTimeoutIdleGetArgs> idle) {
             this.idle = idle;
             return this;
         }
 
         public Builder idle(@Nullable RouteSpecHttp2RouteTimeoutIdleGetArgs idle) {
-            this.idle = Input.ofNullable(idle);
+            this.idle = Output.ofNullable(idle);
             return this;
         }
 
-        public Builder perRequest(@Nullable Input<RouteSpecHttp2RouteTimeoutPerRequestGetArgs> perRequest) {
+        public Builder perRequest(@Nullable Output<RouteSpecHttp2RouteTimeoutPerRequestGetArgs> perRequest) {
             this.perRequest = perRequest;
             return this;
         }
 
         public Builder perRequest(@Nullable RouteSpecHttp2RouteTimeoutPerRequestGetArgs perRequest) {
-            this.perRequest = Input.ofNullable(perRequest);
+            this.perRequest = Output.ofNullable(perRequest);
             return this;
         }
         public RouteSpecHttp2RouteTimeoutGetArgs build() {

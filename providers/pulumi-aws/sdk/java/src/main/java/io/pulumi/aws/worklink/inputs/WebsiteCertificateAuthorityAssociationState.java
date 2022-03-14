@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.worklink.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class WebsiteCertificateAuthorityAssociationState extends io.pulumi
      * 
      */
     @InputImport(name="certificate")
-      private final @Nullable Input<String> certificate;
+      private final @Nullable Output<String> certificate;
 
-    public Input<String> getCertificate() {
-        return this.certificate == null ? Input.empty() : this.certificate;
+    public Output<String> getCertificate() {
+        return this.certificate == null ? Output.empty() : this.certificate;
     }
 
     /**
@@ -30,10 +30,10 @@ public final class WebsiteCertificateAuthorityAssociationState extends io.pulumi
      * 
      */
     @InputImport(name="displayName")
-      private final @Nullable Input<String> displayName;
+      private final @Nullable Output<String> displayName;
 
-    public Input<String> getDisplayName() {
-        return this.displayName == null ? Input.empty() : this.displayName;
+    public Output<String> getDisplayName() {
+        return this.displayName == null ? Output.empty() : this.displayName;
     }
 
     /**
@@ -41,10 +41,10 @@ public final class WebsiteCertificateAuthorityAssociationState extends io.pulumi
      * 
      */
     @InputImport(name="fleetArn")
-      private final @Nullable Input<String> fleetArn;
+      private final @Nullable Output<String> fleetArn;
 
-    public Input<String> getFleetArn() {
-        return this.fleetArn == null ? Input.empty() : this.fleetArn;
+    public Output<String> getFleetArn() {
+        return this.fleetArn == null ? Output.empty() : this.fleetArn;
     }
 
     /**
@@ -52,17 +52,17 @@ public final class WebsiteCertificateAuthorityAssociationState extends io.pulumi
      * 
      */
     @InputImport(name="websiteCaId")
-      private final @Nullable Input<String> websiteCaId;
+      private final @Nullable Output<String> websiteCaId;
 
-    public Input<String> getWebsiteCaId() {
-        return this.websiteCaId == null ? Input.empty() : this.websiteCaId;
+    public Output<String> getWebsiteCaId() {
+        return this.websiteCaId == null ? Output.empty() : this.websiteCaId;
     }
 
     public WebsiteCertificateAuthorityAssociationState(
-        @Nullable Input<String> certificate,
-        @Nullable Input<String> displayName,
-        @Nullable Input<String> fleetArn,
-        @Nullable Input<String> websiteCaId) {
+        @Nullable Output<String> certificate,
+        @Nullable Output<String> displayName,
+        @Nullable Output<String> fleetArn,
+        @Nullable Output<String> websiteCaId) {
         this.certificate = certificate;
         this.displayName = displayName;
         this.fleetArn = fleetArn;
@@ -70,10 +70,10 @@ public final class WebsiteCertificateAuthorityAssociationState extends io.pulumi
     }
 
     private WebsiteCertificateAuthorityAssociationState() {
-        this.certificate = Input.empty();
-        this.displayName = Input.empty();
-        this.fleetArn = Input.empty();
-        this.websiteCaId = Input.empty();
+        this.certificate = Output.empty();
+        this.displayName = Output.empty();
+        this.fleetArn = Output.empty();
+        this.websiteCaId = Output.empty();
     }
 
     public static Builder builder() {
@@ -85,10 +85,10 @@ public final class WebsiteCertificateAuthorityAssociationState extends io.pulumi
     }
 
     public static final class Builder {
-        private @Nullable Input<String> certificate;
-        private @Nullable Input<String> displayName;
-        private @Nullable Input<String> fleetArn;
-        private @Nullable Input<String> websiteCaId;
+        private @Nullable Output<String> certificate;
+        private @Nullable Output<String> displayName;
+        private @Nullable Output<String> fleetArn;
+        private @Nullable Output<String> websiteCaId;
 
         public Builder() {
     	      // Empty
@@ -102,43 +102,43 @@ public final class WebsiteCertificateAuthorityAssociationState extends io.pulumi
     	      this.websiteCaId = defaults.websiteCaId;
         }
 
-        public Builder certificate(@Nullable Input<String> certificate) {
+        public Builder certificate(@Nullable Output<String> certificate) {
             this.certificate = certificate;
             return this;
         }
 
         public Builder certificate(@Nullable String certificate) {
-            this.certificate = Input.ofNullable(certificate);
+            this.certificate = Output.ofNullable(certificate);
             return this;
         }
 
-        public Builder displayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Input.ofNullable(displayName);
+            this.displayName = Output.ofNullable(displayName);
             return this;
         }
 
-        public Builder fleetArn(@Nullable Input<String> fleetArn) {
+        public Builder fleetArn(@Nullable Output<String> fleetArn) {
             this.fleetArn = fleetArn;
             return this;
         }
 
         public Builder fleetArn(@Nullable String fleetArn) {
-            this.fleetArn = Input.ofNullable(fleetArn);
+            this.fleetArn = Output.ofNullable(fleetArn);
             return this;
         }
 
-        public Builder websiteCaId(@Nullable Input<String> websiteCaId) {
+        public Builder websiteCaId(@Nullable Output<String> websiteCaId) {
             this.websiteCaId = websiteCaId;
             return this;
         }
 
         public Builder websiteCaId(@Nullable String websiteCaId) {
-            this.websiteCaId = Input.ofNullable(websiteCaId);
+            this.websiteCaId = Output.ofNullable(websiteCaId);
             return this;
         }
         public WebsiteCertificateAuthorityAssociationState build() {

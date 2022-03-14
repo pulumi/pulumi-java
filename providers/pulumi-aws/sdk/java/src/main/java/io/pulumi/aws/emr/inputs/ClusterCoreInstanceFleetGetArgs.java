@@ -5,7 +5,7 @@ package io.pulumi.aws.emr.inputs;
 
 import io.pulumi.aws.emr.inputs.ClusterCoreInstanceFleetInstanceTypeConfigGetArgs;
 import io.pulumi.aws.emr.inputs.ClusterCoreInstanceFleetLaunchSpecificationsGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -23,10 +23,10 @@ public final class ClusterCoreInstanceFleetGetArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="id")
-      private final @Nullable Input<String> id;
+      private final @Nullable Output<String> id;
 
-    public Input<String> getId() {
-        return this.id == null ? Input.empty() : this.id;
+    public Output<String> getId() {
+        return this.id == null ? Output.empty() : this.id;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class ClusterCoreInstanceFleetGetArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="instanceTypeConfigs")
-      private final @Nullable Input<List<ClusterCoreInstanceFleetInstanceTypeConfigGetArgs>> instanceTypeConfigs;
+      private final @Nullable Output<List<ClusterCoreInstanceFleetInstanceTypeConfigGetArgs>> instanceTypeConfigs;
 
-    public Input<List<ClusterCoreInstanceFleetInstanceTypeConfigGetArgs>> getInstanceTypeConfigs() {
-        return this.instanceTypeConfigs == null ? Input.empty() : this.instanceTypeConfigs;
+    public Output<List<ClusterCoreInstanceFleetInstanceTypeConfigGetArgs>> getInstanceTypeConfigs() {
+        return this.instanceTypeConfigs == null ? Output.empty() : this.instanceTypeConfigs;
     }
 
     /**
@@ -45,10 +45,10 @@ public final class ClusterCoreInstanceFleetGetArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="launchSpecifications")
-      private final @Nullable Input<ClusterCoreInstanceFleetLaunchSpecificationsGetArgs> launchSpecifications;
+      private final @Nullable Output<ClusterCoreInstanceFleetLaunchSpecificationsGetArgs> launchSpecifications;
 
-    public Input<ClusterCoreInstanceFleetLaunchSpecificationsGetArgs> getLaunchSpecifications() {
-        return this.launchSpecifications == null ? Input.empty() : this.launchSpecifications;
+    public Output<ClusterCoreInstanceFleetLaunchSpecificationsGetArgs> getLaunchSpecifications() {
+        return this.launchSpecifications == null ? Output.empty() : this.launchSpecifications;
     }
 
     /**
@@ -56,24 +56,24 @@ public final class ClusterCoreInstanceFleetGetArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     @InputImport(name="provisionedOnDemandCapacity")
-      private final @Nullable Input<Integer> provisionedOnDemandCapacity;
+      private final @Nullable Output<Integer> provisionedOnDemandCapacity;
 
-    public Input<Integer> getProvisionedOnDemandCapacity() {
-        return this.provisionedOnDemandCapacity == null ? Input.empty() : this.provisionedOnDemandCapacity;
+    public Output<Integer> getProvisionedOnDemandCapacity() {
+        return this.provisionedOnDemandCapacity == null ? Output.empty() : this.provisionedOnDemandCapacity;
     }
 
     @InputImport(name="provisionedSpotCapacity")
-      private final @Nullable Input<Integer> provisionedSpotCapacity;
+      private final @Nullable Output<Integer> provisionedSpotCapacity;
 
-    public Input<Integer> getProvisionedSpotCapacity() {
-        return this.provisionedSpotCapacity == null ? Input.empty() : this.provisionedSpotCapacity;
+    public Output<Integer> getProvisionedSpotCapacity() {
+        return this.provisionedSpotCapacity == null ? Output.empty() : this.provisionedSpotCapacity;
     }
 
     /**
@@ -81,10 +81,10 @@ public final class ClusterCoreInstanceFleetGetArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="targetOnDemandCapacity")
-      private final @Nullable Input<Integer> targetOnDemandCapacity;
+      private final @Nullable Output<Integer> targetOnDemandCapacity;
 
-    public Input<Integer> getTargetOnDemandCapacity() {
-        return this.targetOnDemandCapacity == null ? Input.empty() : this.targetOnDemandCapacity;
+    public Output<Integer> getTargetOnDemandCapacity() {
+        return this.targetOnDemandCapacity == null ? Output.empty() : this.targetOnDemandCapacity;
     }
 
     /**
@@ -92,21 +92,21 @@ public final class ClusterCoreInstanceFleetGetArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="targetSpotCapacity")
-      private final @Nullable Input<Integer> targetSpotCapacity;
+      private final @Nullable Output<Integer> targetSpotCapacity;
 
-    public Input<Integer> getTargetSpotCapacity() {
-        return this.targetSpotCapacity == null ? Input.empty() : this.targetSpotCapacity;
+    public Output<Integer> getTargetSpotCapacity() {
+        return this.targetSpotCapacity == null ? Output.empty() : this.targetSpotCapacity;
     }
 
     public ClusterCoreInstanceFleetGetArgs(
-        @Nullable Input<String> id,
-        @Nullable Input<List<ClusterCoreInstanceFleetInstanceTypeConfigGetArgs>> instanceTypeConfigs,
-        @Nullable Input<ClusterCoreInstanceFleetLaunchSpecificationsGetArgs> launchSpecifications,
-        @Nullable Input<String> name,
-        @Nullable Input<Integer> provisionedOnDemandCapacity,
-        @Nullable Input<Integer> provisionedSpotCapacity,
-        @Nullable Input<Integer> targetOnDemandCapacity,
-        @Nullable Input<Integer> targetSpotCapacity) {
+        @Nullable Output<String> id,
+        @Nullable Output<List<ClusterCoreInstanceFleetInstanceTypeConfigGetArgs>> instanceTypeConfigs,
+        @Nullable Output<ClusterCoreInstanceFleetLaunchSpecificationsGetArgs> launchSpecifications,
+        @Nullable Output<String> name,
+        @Nullable Output<Integer> provisionedOnDemandCapacity,
+        @Nullable Output<Integer> provisionedSpotCapacity,
+        @Nullable Output<Integer> targetOnDemandCapacity,
+        @Nullable Output<Integer> targetSpotCapacity) {
         this.id = id;
         this.instanceTypeConfigs = instanceTypeConfigs;
         this.launchSpecifications = launchSpecifications;
@@ -118,14 +118,14 @@ public final class ClusterCoreInstanceFleetGetArgs extends io.pulumi.resources.R
     }
 
     private ClusterCoreInstanceFleetGetArgs() {
-        this.id = Input.empty();
-        this.instanceTypeConfigs = Input.empty();
-        this.launchSpecifications = Input.empty();
-        this.name = Input.empty();
-        this.provisionedOnDemandCapacity = Input.empty();
-        this.provisionedSpotCapacity = Input.empty();
-        this.targetOnDemandCapacity = Input.empty();
-        this.targetSpotCapacity = Input.empty();
+        this.id = Output.empty();
+        this.instanceTypeConfigs = Output.empty();
+        this.launchSpecifications = Output.empty();
+        this.name = Output.empty();
+        this.provisionedOnDemandCapacity = Output.empty();
+        this.provisionedSpotCapacity = Output.empty();
+        this.targetOnDemandCapacity = Output.empty();
+        this.targetSpotCapacity = Output.empty();
     }
 
     public static Builder builder() {
@@ -137,14 +137,14 @@ public final class ClusterCoreInstanceFleetGetArgs extends io.pulumi.resources.R
     }
 
     public static final class Builder {
-        private @Nullable Input<String> id;
-        private @Nullable Input<List<ClusterCoreInstanceFleetInstanceTypeConfigGetArgs>> instanceTypeConfigs;
-        private @Nullable Input<ClusterCoreInstanceFleetLaunchSpecificationsGetArgs> launchSpecifications;
-        private @Nullable Input<String> name;
-        private @Nullable Input<Integer> provisionedOnDemandCapacity;
-        private @Nullable Input<Integer> provisionedSpotCapacity;
-        private @Nullable Input<Integer> targetOnDemandCapacity;
-        private @Nullable Input<Integer> targetSpotCapacity;
+        private @Nullable Output<String> id;
+        private @Nullable Output<List<ClusterCoreInstanceFleetInstanceTypeConfigGetArgs>> instanceTypeConfigs;
+        private @Nullable Output<ClusterCoreInstanceFleetLaunchSpecificationsGetArgs> launchSpecifications;
+        private @Nullable Output<String> name;
+        private @Nullable Output<Integer> provisionedOnDemandCapacity;
+        private @Nullable Output<Integer> provisionedSpotCapacity;
+        private @Nullable Output<Integer> targetOnDemandCapacity;
+        private @Nullable Output<Integer> targetSpotCapacity;
 
         public Builder() {
     	      // Empty
@@ -162,83 +162,83 @@ public final class ClusterCoreInstanceFleetGetArgs extends io.pulumi.resources.R
     	      this.targetSpotCapacity = defaults.targetSpotCapacity;
         }
 
-        public Builder id(@Nullable Input<String> id) {
+        public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
 
         public Builder id(@Nullable String id) {
-            this.id = Input.ofNullable(id);
+            this.id = Output.ofNullable(id);
             return this;
         }
 
-        public Builder instanceTypeConfigs(@Nullable Input<List<ClusterCoreInstanceFleetInstanceTypeConfigGetArgs>> instanceTypeConfigs) {
+        public Builder instanceTypeConfigs(@Nullable Output<List<ClusterCoreInstanceFleetInstanceTypeConfigGetArgs>> instanceTypeConfigs) {
             this.instanceTypeConfigs = instanceTypeConfigs;
             return this;
         }
 
         public Builder instanceTypeConfigs(@Nullable List<ClusterCoreInstanceFleetInstanceTypeConfigGetArgs> instanceTypeConfigs) {
-            this.instanceTypeConfigs = Input.ofNullable(instanceTypeConfigs);
+            this.instanceTypeConfigs = Output.ofNullable(instanceTypeConfigs);
             return this;
         }
 
-        public Builder launchSpecifications(@Nullable Input<ClusterCoreInstanceFleetLaunchSpecificationsGetArgs> launchSpecifications) {
+        public Builder launchSpecifications(@Nullable Output<ClusterCoreInstanceFleetLaunchSpecificationsGetArgs> launchSpecifications) {
             this.launchSpecifications = launchSpecifications;
             return this;
         }
 
         public Builder launchSpecifications(@Nullable ClusterCoreInstanceFleetLaunchSpecificationsGetArgs launchSpecifications) {
-            this.launchSpecifications = Input.ofNullable(launchSpecifications);
+            this.launchSpecifications = Output.ofNullable(launchSpecifications);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder provisionedOnDemandCapacity(@Nullable Input<Integer> provisionedOnDemandCapacity) {
+        public Builder provisionedOnDemandCapacity(@Nullable Output<Integer> provisionedOnDemandCapacity) {
             this.provisionedOnDemandCapacity = provisionedOnDemandCapacity;
             return this;
         }
 
         public Builder provisionedOnDemandCapacity(@Nullable Integer provisionedOnDemandCapacity) {
-            this.provisionedOnDemandCapacity = Input.ofNullable(provisionedOnDemandCapacity);
+            this.provisionedOnDemandCapacity = Output.ofNullable(provisionedOnDemandCapacity);
             return this;
         }
 
-        public Builder provisionedSpotCapacity(@Nullable Input<Integer> provisionedSpotCapacity) {
+        public Builder provisionedSpotCapacity(@Nullable Output<Integer> provisionedSpotCapacity) {
             this.provisionedSpotCapacity = provisionedSpotCapacity;
             return this;
         }
 
         public Builder provisionedSpotCapacity(@Nullable Integer provisionedSpotCapacity) {
-            this.provisionedSpotCapacity = Input.ofNullable(provisionedSpotCapacity);
+            this.provisionedSpotCapacity = Output.ofNullable(provisionedSpotCapacity);
             return this;
         }
 
-        public Builder targetOnDemandCapacity(@Nullable Input<Integer> targetOnDemandCapacity) {
+        public Builder targetOnDemandCapacity(@Nullable Output<Integer> targetOnDemandCapacity) {
             this.targetOnDemandCapacity = targetOnDemandCapacity;
             return this;
         }
 
         public Builder targetOnDemandCapacity(@Nullable Integer targetOnDemandCapacity) {
-            this.targetOnDemandCapacity = Input.ofNullable(targetOnDemandCapacity);
+            this.targetOnDemandCapacity = Output.ofNullable(targetOnDemandCapacity);
             return this;
         }
 
-        public Builder targetSpotCapacity(@Nullable Input<Integer> targetSpotCapacity) {
+        public Builder targetSpotCapacity(@Nullable Output<Integer> targetSpotCapacity) {
             this.targetSpotCapacity = targetSpotCapacity;
             return this;
         }
 
         public Builder targetSpotCapacity(@Nullable Integer targetSpotCapacity) {
-            this.targetSpotCapacity = Input.ofNullable(targetSpotCapacity);
+            this.targetSpotCapacity = Output.ofNullable(targetSpotCapacity);
             return this;
         }
         public ClusterCoreInstanceFleetGetArgs build() {

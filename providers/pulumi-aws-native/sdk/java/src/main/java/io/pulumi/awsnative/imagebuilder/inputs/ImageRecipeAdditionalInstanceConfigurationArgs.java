@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.imagebuilder.inputs;
 
 import io.pulumi.awsnative.imagebuilder.inputs.ImageRecipeSystemsManagerAgentArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -24,10 +24,10 @@ public final class ImageRecipeAdditionalInstanceConfigurationArgs extends io.pul
      * 
      */
     @InputImport(name="systemsManagerAgent")
-      private final @Nullable Input<ImageRecipeSystemsManagerAgentArgs> systemsManagerAgent;
+      private final @Nullable Output<ImageRecipeSystemsManagerAgentArgs> systemsManagerAgent;
 
-    public Input<ImageRecipeSystemsManagerAgentArgs> getSystemsManagerAgent() {
-        return this.systemsManagerAgent == null ? Input.empty() : this.systemsManagerAgent;
+    public Output<ImageRecipeSystemsManagerAgentArgs> getSystemsManagerAgent() {
+        return this.systemsManagerAgent == null ? Output.empty() : this.systemsManagerAgent;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class ImageRecipeAdditionalInstanceConfigurationArgs extends io.pul
      * 
      */
     @InputImport(name="userDataOverride")
-      private final @Nullable Input<String> userDataOverride;
+      private final @Nullable Output<String> userDataOverride;
 
-    public Input<String> getUserDataOverride() {
-        return this.userDataOverride == null ? Input.empty() : this.userDataOverride;
+    public Output<String> getUserDataOverride() {
+        return this.userDataOverride == null ? Output.empty() : this.userDataOverride;
     }
 
     public ImageRecipeAdditionalInstanceConfigurationArgs(
-        @Nullable Input<ImageRecipeSystemsManagerAgentArgs> systemsManagerAgent,
-        @Nullable Input<String> userDataOverride) {
+        @Nullable Output<ImageRecipeSystemsManagerAgentArgs> systemsManagerAgent,
+        @Nullable Output<String> userDataOverride) {
         this.systemsManagerAgent = systemsManagerAgent;
         this.userDataOverride = userDataOverride;
     }
 
     private ImageRecipeAdditionalInstanceConfigurationArgs() {
-        this.systemsManagerAgent = Input.empty();
-        this.userDataOverride = Input.empty();
+        this.systemsManagerAgent = Output.empty();
+        this.userDataOverride = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class ImageRecipeAdditionalInstanceConfigurationArgs extends io.pul
     }
 
     public static final class Builder {
-        private @Nullable Input<ImageRecipeSystemsManagerAgentArgs> systemsManagerAgent;
-        private @Nullable Input<String> userDataOverride;
+        private @Nullable Output<ImageRecipeSystemsManagerAgentArgs> systemsManagerAgent;
+        private @Nullable Output<String> userDataOverride;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class ImageRecipeAdditionalInstanceConfigurationArgs extends io.pul
     	      this.userDataOverride = defaults.userDataOverride;
         }
 
-        public Builder systemsManagerAgent(@Nullable Input<ImageRecipeSystemsManagerAgentArgs> systemsManagerAgent) {
+        public Builder systemsManagerAgent(@Nullable Output<ImageRecipeSystemsManagerAgentArgs> systemsManagerAgent) {
             this.systemsManagerAgent = systemsManagerAgent;
             return this;
         }
 
         public Builder systemsManagerAgent(@Nullable ImageRecipeSystemsManagerAgentArgs systemsManagerAgent) {
-            this.systemsManagerAgent = Input.ofNullable(systemsManagerAgent);
+            this.systemsManagerAgent = Output.ofNullable(systemsManagerAgent);
             return this;
         }
 
-        public Builder userDataOverride(@Nullable Input<String> userDataOverride) {
+        public Builder userDataOverride(@Nullable Output<String> userDataOverride) {
             this.userDataOverride = userDataOverride;
             return this;
         }
 
         public Builder userDataOverride(@Nullable String userDataOverride) {
-            this.userDataOverride = Input.ofNullable(userDataOverride);
+            this.userDataOverride = Output.ofNullable(userDataOverride);
             return this;
         }
         public ImageRecipeAdditionalInstanceConfigurationArgs build() {

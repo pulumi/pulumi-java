@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.batch.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,9 +19,9 @@ public final class JobDefinitionRetryStrategyEvaluateOnExitArgs extends io.pulum
      * 
      */
     @InputImport(name="action", required=true)
-      private final Input<String> action;
+      private final Output<String> action;
 
-    public Input<String> getAction() {
+    public Output<String> getAction() {
         return this.action;
     }
 
@@ -30,10 +30,10 @@ public final class JobDefinitionRetryStrategyEvaluateOnExitArgs extends io.pulum
      * 
      */
     @InputImport(name="onExitCode")
-      private final @Nullable Input<String> onExitCode;
+      private final @Nullable Output<String> onExitCode;
 
-    public Input<String> getOnExitCode() {
-        return this.onExitCode == null ? Input.empty() : this.onExitCode;
+    public Output<String> getOnExitCode() {
+        return this.onExitCode == null ? Output.empty() : this.onExitCode;
     }
 
     /**
@@ -41,10 +41,10 @@ public final class JobDefinitionRetryStrategyEvaluateOnExitArgs extends io.pulum
      * 
      */
     @InputImport(name="onReason")
-      private final @Nullable Input<String> onReason;
+      private final @Nullable Output<String> onReason;
 
-    public Input<String> getOnReason() {
-        return this.onReason == null ? Input.empty() : this.onReason;
+    public Output<String> getOnReason() {
+        return this.onReason == null ? Output.empty() : this.onReason;
     }
 
     /**
@@ -52,17 +52,17 @@ public final class JobDefinitionRetryStrategyEvaluateOnExitArgs extends io.pulum
      * 
      */
     @InputImport(name="onStatusReason")
-      private final @Nullable Input<String> onStatusReason;
+      private final @Nullable Output<String> onStatusReason;
 
-    public Input<String> getOnStatusReason() {
-        return this.onStatusReason == null ? Input.empty() : this.onStatusReason;
+    public Output<String> getOnStatusReason() {
+        return this.onStatusReason == null ? Output.empty() : this.onStatusReason;
     }
 
     public JobDefinitionRetryStrategyEvaluateOnExitArgs(
-        Input<String> action,
-        @Nullable Input<String> onExitCode,
-        @Nullable Input<String> onReason,
-        @Nullable Input<String> onStatusReason) {
+        Output<String> action,
+        @Nullable Output<String> onExitCode,
+        @Nullable Output<String> onReason,
+        @Nullable Output<String> onStatusReason) {
         this.action = Objects.requireNonNull(action, "expected parameter 'action' to be non-null");
         this.onExitCode = onExitCode;
         this.onReason = onReason;
@@ -70,10 +70,10 @@ public final class JobDefinitionRetryStrategyEvaluateOnExitArgs extends io.pulum
     }
 
     private JobDefinitionRetryStrategyEvaluateOnExitArgs() {
-        this.action = Input.empty();
-        this.onExitCode = Input.empty();
-        this.onReason = Input.empty();
-        this.onStatusReason = Input.empty();
+        this.action = Output.empty();
+        this.onExitCode = Output.empty();
+        this.onReason = Output.empty();
+        this.onStatusReason = Output.empty();
     }
 
     public static Builder builder() {
@@ -85,10 +85,10 @@ public final class JobDefinitionRetryStrategyEvaluateOnExitArgs extends io.pulum
     }
 
     public static final class Builder {
-        private Input<String> action;
-        private @Nullable Input<String> onExitCode;
-        private @Nullable Input<String> onReason;
-        private @Nullable Input<String> onStatusReason;
+        private Output<String> action;
+        private @Nullable Output<String> onExitCode;
+        private @Nullable Output<String> onReason;
+        private @Nullable Output<String> onStatusReason;
 
         public Builder() {
     	      // Empty
@@ -102,43 +102,43 @@ public final class JobDefinitionRetryStrategyEvaluateOnExitArgs extends io.pulum
     	      this.onStatusReason = defaults.onStatusReason;
         }
 
-        public Builder action(Input<String> action) {
+        public Builder action(Output<String> action) {
             this.action = Objects.requireNonNull(action);
             return this;
         }
 
         public Builder action(String action) {
-            this.action = Input.of(Objects.requireNonNull(action));
+            this.action = Output.of(Objects.requireNonNull(action));
             return this;
         }
 
-        public Builder onExitCode(@Nullable Input<String> onExitCode) {
+        public Builder onExitCode(@Nullable Output<String> onExitCode) {
             this.onExitCode = onExitCode;
             return this;
         }
 
         public Builder onExitCode(@Nullable String onExitCode) {
-            this.onExitCode = Input.ofNullable(onExitCode);
+            this.onExitCode = Output.ofNullable(onExitCode);
             return this;
         }
 
-        public Builder onReason(@Nullable Input<String> onReason) {
+        public Builder onReason(@Nullable Output<String> onReason) {
             this.onReason = onReason;
             return this;
         }
 
         public Builder onReason(@Nullable String onReason) {
-            this.onReason = Input.ofNullable(onReason);
+            this.onReason = Output.ofNullable(onReason);
             return this;
         }
 
-        public Builder onStatusReason(@Nullable Input<String> onStatusReason) {
+        public Builder onStatusReason(@Nullable Output<String> onStatusReason) {
             this.onStatusReason = onStatusReason;
             return this;
         }
 
         public Builder onStatusReason(@Nullable String onStatusReason) {
-            this.onStatusReason = Input.ofNullable(onStatusReason);
+            this.onStatusReason = Output.ofNullable(onStatusReason);
             return this;
         }
         public JobDefinitionRetryStrategyEvaluateOnExitArgs build() {

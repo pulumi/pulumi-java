@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.sqladmin_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class SqlActiveDirectoryConfigArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="domain")
-      private final @Nullable Input<String> domain;
+      private final @Nullable Output<String> domain;
 
-    public Input<String> getDomain() {
-        return this.domain == null ? Input.empty() : this.domain;
+    public Output<String> getDomain() {
+        return this.domain == null ? Output.empty() : this.domain;
     }
 
     /**
@@ -34,22 +34,22 @@ public final class SqlActiveDirectoryConfigArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="kind")
-      private final @Nullable Input<String> kind;
+      private final @Nullable Output<String> kind;
 
-    public Input<String> getKind() {
-        return this.kind == null ? Input.empty() : this.kind;
+    public Output<String> getKind() {
+        return this.kind == null ? Output.empty() : this.kind;
     }
 
     public SqlActiveDirectoryConfigArgs(
-        @Nullable Input<String> domain,
-        @Nullable Input<String> kind) {
+        @Nullable Output<String> domain,
+        @Nullable Output<String> kind) {
         this.domain = domain;
         this.kind = kind;
     }
 
     private SqlActiveDirectoryConfigArgs() {
-        this.domain = Input.empty();
-        this.kind = Input.empty();
+        this.domain = Output.empty();
+        this.kind = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class SqlActiveDirectoryConfigArgs extends io.pulumi.resources.Reso
     }
 
     public static final class Builder {
-        private @Nullable Input<String> domain;
-        private @Nullable Input<String> kind;
+        private @Nullable Output<String> domain;
+        private @Nullable Output<String> kind;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class SqlActiveDirectoryConfigArgs extends io.pulumi.resources.Reso
     	      this.kind = defaults.kind;
         }
 
-        public Builder domain(@Nullable Input<String> domain) {
+        public Builder domain(@Nullable Output<String> domain) {
             this.domain = domain;
             return this;
         }
 
         public Builder domain(@Nullable String domain) {
-            this.domain = Input.ofNullable(domain);
+            this.domain = Output.ofNullable(domain);
             return this;
         }
 
-        public Builder kind(@Nullable Input<String> kind) {
+        public Builder kind(@Nullable Output<String> kind) {
             this.kind = kind;
             return this;
         }
 
         public Builder kind(@Nullable String kind) {
-            this.kind = Input.ofNullable(kind);
+            this.kind = Output.ofNullable(kind);
             return this;
         }
         public SqlActiveDirectoryConfigArgs build() {

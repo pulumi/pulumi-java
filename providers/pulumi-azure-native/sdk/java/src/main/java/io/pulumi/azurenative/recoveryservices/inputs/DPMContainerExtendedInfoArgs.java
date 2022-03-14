@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.recoveryservices.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class DPMContainerExtendedInfoArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="lastRefreshedAt")
-      private final @Nullable Input<String> lastRefreshedAt;
+      private final @Nullable Output<String> lastRefreshedAt;
 
-    public Input<String> getLastRefreshedAt() {
-        return this.lastRefreshedAt == null ? Input.empty() : this.lastRefreshedAt;
+    public Output<String> getLastRefreshedAt() {
+        return this.lastRefreshedAt == null ? Output.empty() : this.lastRefreshedAt;
     }
 
-    public DPMContainerExtendedInfoArgs(@Nullable Input<String> lastRefreshedAt) {
+    public DPMContainerExtendedInfoArgs(@Nullable Output<String> lastRefreshedAt) {
         this.lastRefreshedAt = lastRefreshedAt;
     }
 
     private DPMContainerExtendedInfoArgs() {
-        this.lastRefreshedAt = Input.empty();
+        this.lastRefreshedAt = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class DPMContainerExtendedInfoArgs extends io.pulumi.resources.Reso
     }
 
     public static final class Builder {
-        private @Nullable Input<String> lastRefreshedAt;
+        private @Nullable Output<String> lastRefreshedAt;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class DPMContainerExtendedInfoArgs extends io.pulumi.resources.Reso
     	      this.lastRefreshedAt = defaults.lastRefreshedAt;
         }
 
-        public Builder lastRefreshedAt(@Nullable Input<String> lastRefreshedAt) {
+        public Builder lastRefreshedAt(@Nullable Output<String> lastRefreshedAt) {
             this.lastRefreshedAt = lastRefreshedAt;
             return this;
         }
 
         public Builder lastRefreshedAt(@Nullable String lastRefreshedAt) {
-            this.lastRefreshedAt = Input.ofNullable(lastRefreshedAt);
+            this.lastRefreshedAt = Output.ofNullable(lastRefreshedAt);
             return this;
         }
         public DPMContainerExtendedInfoArgs build() {

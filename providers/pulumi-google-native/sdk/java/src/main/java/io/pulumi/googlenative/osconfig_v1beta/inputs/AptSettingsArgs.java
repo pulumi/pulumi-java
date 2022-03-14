@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.osconfig_v1beta.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.osconfig_v1beta.enums.AptSettingsType;
 import java.lang.String;
@@ -25,10 +25,10 @@ public final class AptSettingsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="excludes")
-      private final @Nullable Input<List<String>> excludes;
+      private final @Nullable Output<List<String>> excludes;
 
-    public Input<List<String>> getExcludes() {
-        return this.excludes == null ? Input.empty() : this.excludes;
+    public Output<List<String>> getExcludes() {
+        return this.excludes == null ? Output.empty() : this.excludes;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class AptSettingsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="exclusivePackages")
-      private final @Nullable Input<List<String>> exclusivePackages;
+      private final @Nullable Output<List<String>> exclusivePackages;
 
-    public Input<List<String>> getExclusivePackages() {
-        return this.exclusivePackages == null ? Input.empty() : this.exclusivePackages;
+    public Output<List<String>> getExclusivePackages() {
+        return this.exclusivePackages == null ? Output.empty() : this.exclusivePackages;
     }
 
     /**
@@ -47,25 +47,25 @@ public final class AptSettingsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type")
-      private final @Nullable Input<AptSettingsType> type;
+      private final @Nullable Output<AptSettingsType> type;
 
-    public Input<AptSettingsType> getType() {
-        return this.type == null ? Input.empty() : this.type;
+    public Output<AptSettingsType> getType() {
+        return this.type == null ? Output.empty() : this.type;
     }
 
     public AptSettingsArgs(
-        @Nullable Input<List<String>> excludes,
-        @Nullable Input<List<String>> exclusivePackages,
-        @Nullable Input<AptSettingsType> type) {
+        @Nullable Output<List<String>> excludes,
+        @Nullable Output<List<String>> exclusivePackages,
+        @Nullable Output<AptSettingsType> type) {
         this.excludes = excludes;
         this.exclusivePackages = exclusivePackages;
         this.type = type;
     }
 
     private AptSettingsArgs() {
-        this.excludes = Input.empty();
-        this.exclusivePackages = Input.empty();
-        this.type = Input.empty();
+        this.excludes = Output.empty();
+        this.exclusivePackages = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -77,9 +77,9 @@ public final class AptSettingsArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> excludes;
-        private @Nullable Input<List<String>> exclusivePackages;
-        private @Nullable Input<AptSettingsType> type;
+        private @Nullable Output<List<String>> excludes;
+        private @Nullable Output<List<String>> exclusivePackages;
+        private @Nullable Output<AptSettingsType> type;
 
         public Builder() {
     	      // Empty
@@ -92,33 +92,33 @@ public final class AptSettingsArgs extends io.pulumi.resources.ResourceArgs {
     	      this.type = defaults.type;
         }
 
-        public Builder excludes(@Nullable Input<List<String>> excludes) {
+        public Builder excludes(@Nullable Output<List<String>> excludes) {
             this.excludes = excludes;
             return this;
         }
 
         public Builder excludes(@Nullable List<String> excludes) {
-            this.excludes = Input.ofNullable(excludes);
+            this.excludes = Output.ofNullable(excludes);
             return this;
         }
 
-        public Builder exclusivePackages(@Nullable Input<List<String>> exclusivePackages) {
+        public Builder exclusivePackages(@Nullable Output<List<String>> exclusivePackages) {
             this.exclusivePackages = exclusivePackages;
             return this;
         }
 
         public Builder exclusivePackages(@Nullable List<String> exclusivePackages) {
-            this.exclusivePackages = Input.ofNullable(exclusivePackages);
+            this.exclusivePackages = Output.ofNullable(exclusivePackages);
             return this;
         }
 
-        public Builder type(@Nullable Input<AptSettingsType> type) {
+        public Builder type(@Nullable Output<AptSettingsType> type) {
             this.type = type;
             return this;
         }
 
         public Builder type(@Nullable AptSettingsType type) {
-            this.type = Input.ofNullable(type);
+            this.type = Output.ofNullable(type);
             return this;
         }
         public AptSettingsArgs build() {

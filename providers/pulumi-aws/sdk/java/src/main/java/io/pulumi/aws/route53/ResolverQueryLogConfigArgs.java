@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.route53;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -21,9 +21,9 @@ public final class ResolverQueryLogConfigArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="destinationArn", required=true)
-      private final Input<String> destinationArn;
+      private final Output<String> destinationArn;
 
-    public Input<String> getDestinationArn() {
+    public Output<String> getDestinationArn() {
         return this.destinationArn;
     }
 
@@ -32,10 +32,10 @@ public final class ResolverQueryLogConfigArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -43,25 +43,25 @@ public final class ResolverQueryLogConfigArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public ResolverQueryLogConfigArgs(
-        Input<String> destinationArn,
-        @Nullable Input<String> name,
-        @Nullable Input<Map<String,String>> tags) {
+        Output<String> destinationArn,
+        @Nullable Output<String> name,
+        @Nullable Output<Map<String,String>> tags) {
         this.destinationArn = Objects.requireNonNull(destinationArn, "expected parameter 'destinationArn' to be non-null");
         this.name = name;
         this.tags = tags;
     }
 
     private ResolverQueryLogConfigArgs() {
-        this.destinationArn = Input.empty();
-        this.name = Input.empty();
-        this.tags = Input.empty();
+        this.destinationArn = Output.empty();
+        this.name = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -73,9 +73,9 @@ public final class ResolverQueryLogConfigArgs extends io.pulumi.resources.Resour
     }
 
     public static final class Builder {
-        private Input<String> destinationArn;
-        private @Nullable Input<String> name;
-        private @Nullable Input<Map<String,String>> tags;
+        private Output<String> destinationArn;
+        private @Nullable Output<String> name;
+        private @Nullable Output<Map<String,String>> tags;
 
         public Builder() {
     	      // Empty
@@ -88,33 +88,33 @@ public final class ResolverQueryLogConfigArgs extends io.pulumi.resources.Resour
     	      this.tags = defaults.tags;
         }
 
-        public Builder destinationArn(Input<String> destinationArn) {
+        public Builder destinationArn(Output<String> destinationArn) {
             this.destinationArn = Objects.requireNonNull(destinationArn);
             return this;
         }
 
         public Builder destinationArn(String destinationArn) {
-            this.destinationArn = Input.of(Objects.requireNonNull(destinationArn));
+            this.destinationArn = Output.of(Objects.requireNonNull(destinationArn));
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public ResolverQueryLogConfigArgs build() {

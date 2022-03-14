@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.datafactory.inputs;
 
 import io.pulumi.azurenative.datafactory.inputs.CMKIdentityDefinitionArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -24,10 +24,10 @@ public final class EncryptionConfigurationArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="identity")
-      private final @Nullable Input<CMKIdentityDefinitionArgs> identity;
+      private final @Nullable Output<CMKIdentityDefinitionArgs> identity;
 
-    public Input<CMKIdentityDefinitionArgs> getIdentity() {
-        return this.identity == null ? Input.empty() : this.identity;
+    public Output<CMKIdentityDefinitionArgs> getIdentity() {
+        return this.identity == null ? Output.empty() : this.identity;
     }
 
     /**
@@ -35,9 +35,9 @@ public final class EncryptionConfigurationArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="keyName", required=true)
-      private final Input<String> keyName;
+      private final Output<String> keyName;
 
-    public Input<String> getKeyName() {
+    public Output<String> getKeyName() {
         return this.keyName;
     }
 
@@ -46,10 +46,10 @@ public final class EncryptionConfigurationArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="keyVersion")
-      private final @Nullable Input<String> keyVersion;
+      private final @Nullable Output<String> keyVersion;
 
-    public Input<String> getKeyVersion() {
-        return this.keyVersion == null ? Input.empty() : this.keyVersion;
+    public Output<String> getKeyVersion() {
+        return this.keyVersion == null ? Output.empty() : this.keyVersion;
     }
 
     /**
@@ -57,17 +57,17 @@ public final class EncryptionConfigurationArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="vaultBaseUrl", required=true)
-      private final Input<String> vaultBaseUrl;
+      private final Output<String> vaultBaseUrl;
 
-    public Input<String> getVaultBaseUrl() {
+    public Output<String> getVaultBaseUrl() {
         return this.vaultBaseUrl;
     }
 
     public EncryptionConfigurationArgs(
-        @Nullable Input<CMKIdentityDefinitionArgs> identity,
-        Input<String> keyName,
-        @Nullable Input<String> keyVersion,
-        Input<String> vaultBaseUrl) {
+        @Nullable Output<CMKIdentityDefinitionArgs> identity,
+        Output<String> keyName,
+        @Nullable Output<String> keyVersion,
+        Output<String> vaultBaseUrl) {
         this.identity = identity;
         this.keyName = Objects.requireNonNull(keyName, "expected parameter 'keyName' to be non-null");
         this.keyVersion = keyVersion;
@@ -75,10 +75,10 @@ public final class EncryptionConfigurationArgs extends io.pulumi.resources.Resou
     }
 
     private EncryptionConfigurationArgs() {
-        this.identity = Input.empty();
-        this.keyName = Input.empty();
-        this.keyVersion = Input.empty();
-        this.vaultBaseUrl = Input.empty();
+        this.identity = Output.empty();
+        this.keyName = Output.empty();
+        this.keyVersion = Output.empty();
+        this.vaultBaseUrl = Output.empty();
     }
 
     public static Builder builder() {
@@ -90,10 +90,10 @@ public final class EncryptionConfigurationArgs extends io.pulumi.resources.Resou
     }
 
     public static final class Builder {
-        private @Nullable Input<CMKIdentityDefinitionArgs> identity;
-        private Input<String> keyName;
-        private @Nullable Input<String> keyVersion;
-        private Input<String> vaultBaseUrl;
+        private @Nullable Output<CMKIdentityDefinitionArgs> identity;
+        private Output<String> keyName;
+        private @Nullable Output<String> keyVersion;
+        private Output<String> vaultBaseUrl;
 
         public Builder() {
     	      // Empty
@@ -107,43 +107,43 @@ public final class EncryptionConfigurationArgs extends io.pulumi.resources.Resou
     	      this.vaultBaseUrl = defaults.vaultBaseUrl;
         }
 
-        public Builder identity(@Nullable Input<CMKIdentityDefinitionArgs> identity) {
+        public Builder identity(@Nullable Output<CMKIdentityDefinitionArgs> identity) {
             this.identity = identity;
             return this;
         }
 
         public Builder identity(@Nullable CMKIdentityDefinitionArgs identity) {
-            this.identity = Input.ofNullable(identity);
+            this.identity = Output.ofNullable(identity);
             return this;
         }
 
-        public Builder keyName(Input<String> keyName) {
+        public Builder keyName(Output<String> keyName) {
             this.keyName = Objects.requireNonNull(keyName);
             return this;
         }
 
         public Builder keyName(String keyName) {
-            this.keyName = Input.of(Objects.requireNonNull(keyName));
+            this.keyName = Output.of(Objects.requireNonNull(keyName));
             return this;
         }
 
-        public Builder keyVersion(@Nullable Input<String> keyVersion) {
+        public Builder keyVersion(@Nullable Output<String> keyVersion) {
             this.keyVersion = keyVersion;
             return this;
         }
 
         public Builder keyVersion(@Nullable String keyVersion) {
-            this.keyVersion = Input.ofNullable(keyVersion);
+            this.keyVersion = Output.ofNullable(keyVersion);
             return this;
         }
 
-        public Builder vaultBaseUrl(Input<String> vaultBaseUrl) {
+        public Builder vaultBaseUrl(Output<String> vaultBaseUrl) {
             this.vaultBaseUrl = Objects.requireNonNull(vaultBaseUrl);
             return this;
         }
 
         public Builder vaultBaseUrl(String vaultBaseUrl) {
-            this.vaultBaseUrl = Input.of(Objects.requireNonNull(vaultBaseUrl));
+            this.vaultBaseUrl = Output.of(Objects.requireNonNull(vaultBaseUrl));
             return this;
         }
         public EncryptionConfigurationArgs build() {

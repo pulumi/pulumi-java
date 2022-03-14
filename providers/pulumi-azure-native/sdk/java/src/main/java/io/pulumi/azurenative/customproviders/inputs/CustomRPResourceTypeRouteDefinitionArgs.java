@@ -5,7 +5,7 @@ package io.pulumi.azurenative.customproviders.inputs;
 
 import io.pulumi.azurenative.customproviders.enums.ResourceTypeRouting;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -25,9 +25,9 @@ public final class CustomRPResourceTypeRouteDefinitionArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="endpoint", required=true)
-      private final Input<String> endpoint;
+      private final Output<String> endpoint;
 
-    public Input<String> getEndpoint() {
+    public Output<String> getEndpoint() {
         return this.endpoint;
     }
 
@@ -36,9 +36,9 @@ public final class CustomRPResourceTypeRouteDefinitionArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="name", required=true)
-      private final Input<String> name;
+      private final Output<String> name;
 
-    public Input<String> getName() {
+    public Output<String> getName() {
         return this.name;
     }
 
@@ -47,25 +47,25 @@ public final class CustomRPResourceTypeRouteDefinitionArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="routingType")
-      private final @Nullable Input<Either<String,ResourceTypeRouting>> routingType;
+      private final @Nullable Output<Either<String,ResourceTypeRouting>> routingType;
 
-    public Input<Either<String,ResourceTypeRouting>> getRoutingType() {
-        return this.routingType == null ? Input.empty() : this.routingType;
+    public Output<Either<String,ResourceTypeRouting>> getRoutingType() {
+        return this.routingType == null ? Output.empty() : this.routingType;
     }
 
     public CustomRPResourceTypeRouteDefinitionArgs(
-        Input<String> endpoint,
-        Input<String> name,
-        @Nullable Input<Either<String,ResourceTypeRouting>> routingType) {
+        Output<String> endpoint,
+        Output<String> name,
+        @Nullable Output<Either<String,ResourceTypeRouting>> routingType) {
         this.endpoint = Objects.requireNonNull(endpoint, "expected parameter 'endpoint' to be non-null");
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
         this.routingType = routingType;
     }
 
     private CustomRPResourceTypeRouteDefinitionArgs() {
-        this.endpoint = Input.empty();
-        this.name = Input.empty();
-        this.routingType = Input.empty();
+        this.endpoint = Output.empty();
+        this.name = Output.empty();
+        this.routingType = Output.empty();
     }
 
     public static Builder builder() {
@@ -77,9 +77,9 @@ public final class CustomRPResourceTypeRouteDefinitionArgs extends io.pulumi.res
     }
 
     public static final class Builder {
-        private Input<String> endpoint;
-        private Input<String> name;
-        private @Nullable Input<Either<String,ResourceTypeRouting>> routingType;
+        private Output<String> endpoint;
+        private Output<String> name;
+        private @Nullable Output<Either<String,ResourceTypeRouting>> routingType;
 
         public Builder() {
     	      // Empty
@@ -92,33 +92,33 @@ public final class CustomRPResourceTypeRouteDefinitionArgs extends io.pulumi.res
     	      this.routingType = defaults.routingType;
         }
 
-        public Builder endpoint(Input<String> endpoint) {
+        public Builder endpoint(Output<String> endpoint) {
             this.endpoint = Objects.requireNonNull(endpoint);
             return this;
         }
 
         public Builder endpoint(String endpoint) {
-            this.endpoint = Input.of(Objects.requireNonNull(endpoint));
+            this.endpoint = Output.of(Objects.requireNonNull(endpoint));
             return this;
         }
 
-        public Builder name(Input<String> name) {
+        public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(String name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder routingType(@Nullable Input<Either<String,ResourceTypeRouting>> routingType) {
+        public Builder routingType(@Nullable Output<Either<String,ResourceTypeRouting>> routingType) {
             this.routingType = routingType;
             return this;
         }
 
         public Builder routingType(@Nullable Either<String,ResourceTypeRouting> routingType) {
-            this.routingType = Input.ofNullable(routingType);
+            this.routingType = Output.ofNullable(routingType);
             return this;
         }
         public CustomRPResourceTypeRouteDefinitionArgs build() {

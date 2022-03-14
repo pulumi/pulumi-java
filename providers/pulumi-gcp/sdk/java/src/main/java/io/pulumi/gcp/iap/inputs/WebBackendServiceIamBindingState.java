@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.iap.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.iap.inputs.WebBackendServiceIamBindingConditionGetArgs;
 import java.lang.String;
@@ -22,10 +22,10 @@ public final class WebBackendServiceIamBindingState extends io.pulumi.resources.
      * 
      */
     @InputImport(name="condition")
-      private final @Nullable Input<WebBackendServiceIamBindingConditionGetArgs> condition;
+      private final @Nullable Output<WebBackendServiceIamBindingConditionGetArgs> condition;
 
-    public Input<WebBackendServiceIamBindingConditionGetArgs> getCondition() {
-        return this.condition == null ? Input.empty() : this.condition;
+    public Output<WebBackendServiceIamBindingConditionGetArgs> getCondition() {
+        return this.condition == null ? Output.empty() : this.condition;
     }
 
     /**
@@ -33,17 +33,17 @@ public final class WebBackendServiceIamBindingState extends io.pulumi.resources.
      * 
      */
     @InputImport(name="etag")
-      private final @Nullable Input<String> etag;
+      private final @Nullable Output<String> etag;
 
-    public Input<String> getEtag() {
-        return this.etag == null ? Input.empty() : this.etag;
+    public Output<String> getEtag() {
+        return this.etag == null ? Output.empty() : this.etag;
     }
 
     @InputImport(name="members")
-      private final @Nullable Input<List<String>> members;
+      private final @Nullable Output<List<String>> members;
 
-    public Input<List<String>> getMembers() {
-        return this.members == null ? Input.empty() : this.members;
+    public Output<List<String>> getMembers() {
+        return this.members == null ? Output.empty() : this.members;
     }
 
     /**
@@ -52,10 +52,10 @@ public final class WebBackendServiceIamBindingState extends io.pulumi.resources.
      * 
      */
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -65,10 +65,10 @@ public final class WebBackendServiceIamBindingState extends io.pulumi.resources.
      * 
      */
     @InputImport(name="role")
-      private final @Nullable Input<String> role;
+      private final @Nullable Output<String> role;
 
-    public Input<String> getRole() {
-        return this.role == null ? Input.empty() : this.role;
+    public Output<String> getRole() {
+        return this.role == null ? Output.empty() : this.role;
     }
 
     /**
@@ -76,19 +76,19 @@ public final class WebBackendServiceIamBindingState extends io.pulumi.resources.
      * 
      */
     @InputImport(name="webBackendService")
-      private final @Nullable Input<String> webBackendService;
+      private final @Nullable Output<String> webBackendService;
 
-    public Input<String> getWebBackendService() {
-        return this.webBackendService == null ? Input.empty() : this.webBackendService;
+    public Output<String> getWebBackendService() {
+        return this.webBackendService == null ? Output.empty() : this.webBackendService;
     }
 
     public WebBackendServiceIamBindingState(
-        @Nullable Input<WebBackendServiceIamBindingConditionGetArgs> condition,
-        @Nullable Input<String> etag,
-        @Nullable Input<List<String>> members,
-        @Nullable Input<String> project,
-        @Nullable Input<String> role,
-        @Nullable Input<String> webBackendService) {
+        @Nullable Output<WebBackendServiceIamBindingConditionGetArgs> condition,
+        @Nullable Output<String> etag,
+        @Nullable Output<List<String>> members,
+        @Nullable Output<String> project,
+        @Nullable Output<String> role,
+        @Nullable Output<String> webBackendService) {
         this.condition = condition;
         this.etag = etag;
         this.members = members;
@@ -98,12 +98,12 @@ public final class WebBackendServiceIamBindingState extends io.pulumi.resources.
     }
 
     private WebBackendServiceIamBindingState() {
-        this.condition = Input.empty();
-        this.etag = Input.empty();
-        this.members = Input.empty();
-        this.project = Input.empty();
-        this.role = Input.empty();
-        this.webBackendService = Input.empty();
+        this.condition = Output.empty();
+        this.etag = Output.empty();
+        this.members = Output.empty();
+        this.project = Output.empty();
+        this.role = Output.empty();
+        this.webBackendService = Output.empty();
     }
 
     public static Builder builder() {
@@ -115,12 +115,12 @@ public final class WebBackendServiceIamBindingState extends io.pulumi.resources.
     }
 
     public static final class Builder {
-        private @Nullable Input<WebBackendServiceIamBindingConditionGetArgs> condition;
-        private @Nullable Input<String> etag;
-        private @Nullable Input<List<String>> members;
-        private @Nullable Input<String> project;
-        private @Nullable Input<String> role;
-        private @Nullable Input<String> webBackendService;
+        private @Nullable Output<WebBackendServiceIamBindingConditionGetArgs> condition;
+        private @Nullable Output<String> etag;
+        private @Nullable Output<List<String>> members;
+        private @Nullable Output<String> project;
+        private @Nullable Output<String> role;
+        private @Nullable Output<String> webBackendService;
 
         public Builder() {
     	      // Empty
@@ -136,63 +136,63 @@ public final class WebBackendServiceIamBindingState extends io.pulumi.resources.
     	      this.webBackendService = defaults.webBackendService;
         }
 
-        public Builder condition(@Nullable Input<WebBackendServiceIamBindingConditionGetArgs> condition) {
+        public Builder condition(@Nullable Output<WebBackendServiceIamBindingConditionGetArgs> condition) {
             this.condition = condition;
             return this;
         }
 
         public Builder condition(@Nullable WebBackendServiceIamBindingConditionGetArgs condition) {
-            this.condition = Input.ofNullable(condition);
+            this.condition = Output.ofNullable(condition);
             return this;
         }
 
-        public Builder etag(@Nullable Input<String> etag) {
+        public Builder etag(@Nullable Output<String> etag) {
             this.etag = etag;
             return this;
         }
 
         public Builder etag(@Nullable String etag) {
-            this.etag = Input.ofNullable(etag);
+            this.etag = Output.ofNullable(etag);
             return this;
         }
 
-        public Builder members(@Nullable Input<List<String>> members) {
+        public Builder members(@Nullable Output<List<String>> members) {
             this.members = members;
             return this;
         }
 
         public Builder members(@Nullable List<String> members) {
-            this.members = Input.ofNullable(members);
+            this.members = Output.ofNullable(members);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder role(@Nullable Input<String> role) {
+        public Builder role(@Nullable Output<String> role) {
             this.role = role;
             return this;
         }
 
         public Builder role(@Nullable String role) {
-            this.role = Input.ofNullable(role);
+            this.role = Output.ofNullable(role);
             return this;
         }
 
-        public Builder webBackendService(@Nullable Input<String> webBackendService) {
+        public Builder webBackendService(@Nullable Output<String> webBackendService) {
             this.webBackendService = webBackendService;
             return this;
         }
 
         public Builder webBackendService(@Nullable String webBackendService) {
-            this.webBackendService = Input.ofNullable(webBackendService);
+            this.webBackendService = Output.ofNullable(webBackendService);
             return this;
         }
         public WebBackendServiceIamBindingState build() {

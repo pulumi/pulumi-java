@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.pubsub_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class DeadLetterPolicyArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="deadLetterTopic")
-      private final @Nullable Input<String> deadLetterTopic;
+      private final @Nullable Output<String> deadLetterTopic;
 
-    public Input<String> getDeadLetterTopic() {
-        return this.deadLetterTopic == null ? Input.empty() : this.deadLetterTopic;
+    public Output<String> getDeadLetterTopic() {
+        return this.deadLetterTopic == null ? Output.empty() : this.deadLetterTopic;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class DeadLetterPolicyArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="maxDeliveryAttempts")
-      private final @Nullable Input<Integer> maxDeliveryAttempts;
+      private final @Nullable Output<Integer> maxDeliveryAttempts;
 
-    public Input<Integer> getMaxDeliveryAttempts() {
-        return this.maxDeliveryAttempts == null ? Input.empty() : this.maxDeliveryAttempts;
+    public Output<Integer> getMaxDeliveryAttempts() {
+        return this.maxDeliveryAttempts == null ? Output.empty() : this.maxDeliveryAttempts;
     }
 
     public DeadLetterPolicyArgs(
-        @Nullable Input<String> deadLetterTopic,
-        @Nullable Input<Integer> maxDeliveryAttempts) {
+        @Nullable Output<String> deadLetterTopic,
+        @Nullable Output<Integer> maxDeliveryAttempts) {
         this.deadLetterTopic = deadLetterTopic;
         this.maxDeliveryAttempts = maxDeliveryAttempts;
     }
 
     private DeadLetterPolicyArgs() {
-        this.deadLetterTopic = Input.empty();
-        this.maxDeliveryAttempts = Input.empty();
+        this.deadLetterTopic = Output.empty();
+        this.maxDeliveryAttempts = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class DeadLetterPolicyArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private @Nullable Input<String> deadLetterTopic;
-        private @Nullable Input<Integer> maxDeliveryAttempts;
+        private @Nullable Output<String> deadLetterTopic;
+        private @Nullable Output<Integer> maxDeliveryAttempts;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class DeadLetterPolicyArgs extends io.pulumi.resources.ResourceArgs
     	      this.maxDeliveryAttempts = defaults.maxDeliveryAttempts;
         }
 
-        public Builder deadLetterTopic(@Nullable Input<String> deadLetterTopic) {
+        public Builder deadLetterTopic(@Nullable Output<String> deadLetterTopic) {
             this.deadLetterTopic = deadLetterTopic;
             return this;
         }
 
         public Builder deadLetterTopic(@Nullable String deadLetterTopic) {
-            this.deadLetterTopic = Input.ofNullable(deadLetterTopic);
+            this.deadLetterTopic = Output.ofNullable(deadLetterTopic);
             return this;
         }
 
-        public Builder maxDeliveryAttempts(@Nullable Input<Integer> maxDeliveryAttempts) {
+        public Builder maxDeliveryAttempts(@Nullable Output<Integer> maxDeliveryAttempts) {
             this.maxDeliveryAttempts = maxDeliveryAttempts;
             return this;
         }
 
         public Builder maxDeliveryAttempts(@Nullable Integer maxDeliveryAttempts) {
-            this.maxDeliveryAttempts = Input.ofNullable(maxDeliveryAttempts);
+            this.maxDeliveryAttempts = Output.ofNullable(maxDeliveryAttempts);
             return this;
         }
         public DeadLetterPolicyArgs build() {

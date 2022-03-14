@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.autoscaling_v2beta2.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class MetricTargetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="averageUtilization")
-      private final @Nullable Input<Integer> averageUtilization;
+      private final @Nullable Output<Integer> averageUtilization;
 
-    public Input<Integer> getAverageUtilization() {
-        return this.averageUtilization == null ? Input.empty() : this.averageUtilization;
+    public Output<Integer> getAverageUtilization() {
+        return this.averageUtilization == null ? Output.empty() : this.averageUtilization;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class MetricTargetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="averageValue")
-      private final @Nullable Input<String> averageValue;
+      private final @Nullable Output<String> averageValue;
 
-    public Input<String> getAverageValue() {
-        return this.averageValue == null ? Input.empty() : this.averageValue;
+    public Output<String> getAverageValue() {
+        return this.averageValue == null ? Output.empty() : this.averageValue;
     }
 
     /**
@@ -46,9 +46,9 @@ public final class MetricTargetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<String> type;
+      private final Output<String> type;
 
-    public Input<String> getType() {
+    public Output<String> getType() {
         return this.type;
     }
 
@@ -57,17 +57,17 @@ public final class MetricTargetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="value")
-      private final @Nullable Input<String> value;
+      private final @Nullable Output<String> value;
 
-    public Input<String> getValue() {
-        return this.value == null ? Input.empty() : this.value;
+    public Output<String> getValue() {
+        return this.value == null ? Output.empty() : this.value;
     }
 
     public MetricTargetArgs(
-        @Nullable Input<Integer> averageUtilization,
-        @Nullable Input<String> averageValue,
-        Input<String> type,
-        @Nullable Input<String> value) {
+        @Nullable Output<Integer> averageUtilization,
+        @Nullable Output<String> averageValue,
+        Output<String> type,
+        @Nullable Output<String> value) {
         this.averageUtilization = averageUtilization;
         this.averageValue = averageValue;
         this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
@@ -75,10 +75,10 @@ public final class MetricTargetArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private MetricTargetArgs() {
-        this.averageUtilization = Input.empty();
-        this.averageValue = Input.empty();
-        this.type = Input.empty();
-        this.value = Input.empty();
+        this.averageUtilization = Output.empty();
+        this.averageValue = Output.empty();
+        this.type = Output.empty();
+        this.value = Output.empty();
     }
 
     public static Builder builder() {
@@ -90,10 +90,10 @@ public final class MetricTargetArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> averageUtilization;
-        private @Nullable Input<String> averageValue;
-        private Input<String> type;
-        private @Nullable Input<String> value;
+        private @Nullable Output<Integer> averageUtilization;
+        private @Nullable Output<String> averageValue;
+        private Output<String> type;
+        private @Nullable Output<String> value;
 
         public Builder() {
     	      // Empty
@@ -107,43 +107,43 @@ public final class MetricTargetArgs extends io.pulumi.resources.ResourceArgs {
     	      this.value = defaults.value;
         }
 
-        public Builder averageUtilization(@Nullable Input<Integer> averageUtilization) {
+        public Builder averageUtilization(@Nullable Output<Integer> averageUtilization) {
             this.averageUtilization = averageUtilization;
             return this;
         }
 
         public Builder averageUtilization(@Nullable Integer averageUtilization) {
-            this.averageUtilization = Input.ofNullable(averageUtilization);
+            this.averageUtilization = Output.ofNullable(averageUtilization);
             return this;
         }
 
-        public Builder averageValue(@Nullable Input<String> averageValue) {
+        public Builder averageValue(@Nullable Output<String> averageValue) {
             this.averageValue = averageValue;
             return this;
         }
 
         public Builder averageValue(@Nullable String averageValue) {
-            this.averageValue = Input.ofNullable(averageValue);
+            this.averageValue = Output.ofNullable(averageValue);
             return this;
         }
 
-        public Builder type(Input<String> type) {
+        public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(String type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
 
-        public Builder value(@Nullable Input<String> value) {
+        public Builder value(@Nullable Output<String> value) {
             this.value = value;
             return this;
         }
 
         public Builder value(@Nullable String value) {
-            this.value = Input.ofNullable(value);
+            this.value = Output.ofNullable(value);
             return this;
         }
         public MetricTargetArgs build() {

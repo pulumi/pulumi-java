@@ -5,7 +5,7 @@ package io.pulumi.awsnative.rds.inputs;
 
 import io.pulumi.awsnative.rds.enums.DBProxyAuthFormatAuthScheme;
 import io.pulumi.awsnative.rds.enums.DBProxyAuthFormatIAMAuth;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -21,10 +21,10 @@ public final class DBProxyAuthFormatArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="authScheme")
-      private final @Nullable Input<DBProxyAuthFormatAuthScheme> authScheme;
+      private final @Nullable Output<DBProxyAuthFormatAuthScheme> authScheme;
 
-    public Input<DBProxyAuthFormatAuthScheme> getAuthScheme() {
-        return this.authScheme == null ? Input.empty() : this.authScheme;
+    public Output<DBProxyAuthFormatAuthScheme> getAuthScheme() {
+        return this.authScheme == null ? Output.empty() : this.authScheme;
     }
 
     /**
@@ -32,10 +32,10 @@ public final class DBProxyAuthFormatArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -43,10 +43,10 @@ public final class DBProxyAuthFormatArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="iAMAuth")
-      private final @Nullable Input<DBProxyAuthFormatIAMAuth> iAMAuth;
+      private final @Nullable Output<DBProxyAuthFormatIAMAuth> iAMAuth;
 
-    public Input<DBProxyAuthFormatIAMAuth> getIAMAuth() {
-        return this.iAMAuth == null ? Input.empty() : this.iAMAuth;
+    public Output<DBProxyAuthFormatIAMAuth> getIAMAuth() {
+        return this.iAMAuth == null ? Output.empty() : this.iAMAuth;
     }
 
     /**
@@ -54,10 +54,10 @@ public final class DBProxyAuthFormatArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="secretArn")
-      private final @Nullable Input<String> secretArn;
+      private final @Nullable Output<String> secretArn;
 
-    public Input<String> getSecretArn() {
-        return this.secretArn == null ? Input.empty() : this.secretArn;
+    public Output<String> getSecretArn() {
+        return this.secretArn == null ? Output.empty() : this.secretArn;
     }
 
     /**
@@ -65,18 +65,18 @@ public final class DBProxyAuthFormatArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="userName")
-      private final @Nullable Input<String> userName;
+      private final @Nullable Output<String> userName;
 
-    public Input<String> getUserName() {
-        return this.userName == null ? Input.empty() : this.userName;
+    public Output<String> getUserName() {
+        return this.userName == null ? Output.empty() : this.userName;
     }
 
     public DBProxyAuthFormatArgs(
-        @Nullable Input<DBProxyAuthFormatAuthScheme> authScheme,
-        @Nullable Input<String> description,
-        @Nullable Input<DBProxyAuthFormatIAMAuth> iAMAuth,
-        @Nullable Input<String> secretArn,
-        @Nullable Input<String> userName) {
+        @Nullable Output<DBProxyAuthFormatAuthScheme> authScheme,
+        @Nullable Output<String> description,
+        @Nullable Output<DBProxyAuthFormatIAMAuth> iAMAuth,
+        @Nullable Output<String> secretArn,
+        @Nullable Output<String> userName) {
         this.authScheme = authScheme;
         this.description = description;
         this.iAMAuth = iAMAuth;
@@ -85,11 +85,11 @@ public final class DBProxyAuthFormatArgs extends io.pulumi.resources.ResourceArg
     }
 
     private DBProxyAuthFormatArgs() {
-        this.authScheme = Input.empty();
-        this.description = Input.empty();
-        this.iAMAuth = Input.empty();
-        this.secretArn = Input.empty();
-        this.userName = Input.empty();
+        this.authScheme = Output.empty();
+        this.description = Output.empty();
+        this.iAMAuth = Output.empty();
+        this.secretArn = Output.empty();
+        this.userName = Output.empty();
     }
 
     public static Builder builder() {
@@ -101,11 +101,11 @@ public final class DBProxyAuthFormatArgs extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private @Nullable Input<DBProxyAuthFormatAuthScheme> authScheme;
-        private @Nullable Input<String> description;
-        private @Nullable Input<DBProxyAuthFormatIAMAuth> iAMAuth;
-        private @Nullable Input<String> secretArn;
-        private @Nullable Input<String> userName;
+        private @Nullable Output<DBProxyAuthFormatAuthScheme> authScheme;
+        private @Nullable Output<String> description;
+        private @Nullable Output<DBProxyAuthFormatIAMAuth> iAMAuth;
+        private @Nullable Output<String> secretArn;
+        private @Nullable Output<String> userName;
 
         public Builder() {
     	      // Empty
@@ -120,53 +120,53 @@ public final class DBProxyAuthFormatArgs extends io.pulumi.resources.ResourceArg
     	      this.userName = defaults.userName;
         }
 
-        public Builder authScheme(@Nullable Input<DBProxyAuthFormatAuthScheme> authScheme) {
+        public Builder authScheme(@Nullable Output<DBProxyAuthFormatAuthScheme> authScheme) {
             this.authScheme = authScheme;
             return this;
         }
 
         public Builder authScheme(@Nullable DBProxyAuthFormatAuthScheme authScheme) {
-            this.authScheme = Input.ofNullable(authScheme);
+            this.authScheme = Output.ofNullable(authScheme);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder iAMAuth(@Nullable Input<DBProxyAuthFormatIAMAuth> iAMAuth) {
+        public Builder iAMAuth(@Nullable Output<DBProxyAuthFormatIAMAuth> iAMAuth) {
             this.iAMAuth = iAMAuth;
             return this;
         }
 
         public Builder iAMAuth(@Nullable DBProxyAuthFormatIAMAuth iAMAuth) {
-            this.iAMAuth = Input.ofNullable(iAMAuth);
+            this.iAMAuth = Output.ofNullable(iAMAuth);
             return this;
         }
 
-        public Builder secretArn(@Nullable Input<String> secretArn) {
+        public Builder secretArn(@Nullable Output<String> secretArn) {
             this.secretArn = secretArn;
             return this;
         }
 
         public Builder secretArn(@Nullable String secretArn) {
-            this.secretArn = Input.ofNullable(secretArn);
+            this.secretArn = Output.ofNullable(secretArn);
             return this;
         }
 
-        public Builder userName(@Nullable Input<String> userName) {
+        public Builder userName(@Nullable Output<String> userName) {
             this.userName = userName;
             return this;
         }
 
         public Builder userName(@Nullable String userName) {
-            this.userName = Input.ofNullable(userName);
+            this.userName = Output.ofNullable(userName);
             return this;
         }
         public DBProxyAuthFormatArgs build() {

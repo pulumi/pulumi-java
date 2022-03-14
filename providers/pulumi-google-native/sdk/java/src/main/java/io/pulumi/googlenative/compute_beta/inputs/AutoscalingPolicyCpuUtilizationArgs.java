@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_beta.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.compute_beta.enums.AutoscalingPolicyCpuUtilizationPredictiveMethod;
 import java.lang.Double;
@@ -24,10 +24,10 @@ public final class AutoscalingPolicyCpuUtilizationArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="predictiveMethod")
-      private final @Nullable Input<AutoscalingPolicyCpuUtilizationPredictiveMethod> predictiveMethod;
+      private final @Nullable Output<AutoscalingPolicyCpuUtilizationPredictiveMethod> predictiveMethod;
 
-    public Input<AutoscalingPolicyCpuUtilizationPredictiveMethod> getPredictiveMethod() {
-        return this.predictiveMethod == null ? Input.empty() : this.predictiveMethod;
+    public Output<AutoscalingPolicyCpuUtilizationPredictiveMethod> getPredictiveMethod() {
+        return this.predictiveMethod == null ? Output.empty() : this.predictiveMethod;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class AutoscalingPolicyCpuUtilizationArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="utilizationTarget")
-      private final @Nullable Input<Double> utilizationTarget;
+      private final @Nullable Output<Double> utilizationTarget;
 
-    public Input<Double> getUtilizationTarget() {
-        return this.utilizationTarget == null ? Input.empty() : this.utilizationTarget;
+    public Output<Double> getUtilizationTarget() {
+        return this.utilizationTarget == null ? Output.empty() : this.utilizationTarget;
     }
 
     public AutoscalingPolicyCpuUtilizationArgs(
-        @Nullable Input<AutoscalingPolicyCpuUtilizationPredictiveMethod> predictiveMethod,
-        @Nullable Input<Double> utilizationTarget) {
+        @Nullable Output<AutoscalingPolicyCpuUtilizationPredictiveMethod> predictiveMethod,
+        @Nullable Output<Double> utilizationTarget) {
         this.predictiveMethod = predictiveMethod;
         this.utilizationTarget = utilizationTarget;
     }
 
     private AutoscalingPolicyCpuUtilizationArgs() {
-        this.predictiveMethod = Input.empty();
-        this.utilizationTarget = Input.empty();
+        this.predictiveMethod = Output.empty();
+        this.utilizationTarget = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class AutoscalingPolicyCpuUtilizationArgs extends io.pulumi.resourc
     }
 
     public static final class Builder {
-        private @Nullable Input<AutoscalingPolicyCpuUtilizationPredictiveMethod> predictiveMethod;
-        private @Nullable Input<Double> utilizationTarget;
+        private @Nullable Output<AutoscalingPolicyCpuUtilizationPredictiveMethod> predictiveMethod;
+        private @Nullable Output<Double> utilizationTarget;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class AutoscalingPolicyCpuUtilizationArgs extends io.pulumi.resourc
     	      this.utilizationTarget = defaults.utilizationTarget;
         }
 
-        public Builder predictiveMethod(@Nullable Input<AutoscalingPolicyCpuUtilizationPredictiveMethod> predictiveMethod) {
+        public Builder predictiveMethod(@Nullable Output<AutoscalingPolicyCpuUtilizationPredictiveMethod> predictiveMethod) {
             this.predictiveMethod = predictiveMethod;
             return this;
         }
 
         public Builder predictiveMethod(@Nullable AutoscalingPolicyCpuUtilizationPredictiveMethod predictiveMethod) {
-            this.predictiveMethod = Input.ofNullable(predictiveMethod);
+            this.predictiveMethod = Output.ofNullable(predictiveMethod);
             return this;
         }
 
-        public Builder utilizationTarget(@Nullable Input<Double> utilizationTarget) {
+        public Builder utilizationTarget(@Nullable Output<Double> utilizationTarget) {
             this.utilizationTarget = utilizationTarget;
             return this;
         }
 
         public Builder utilizationTarget(@Nullable Double utilizationTarget) {
-            this.utilizationTarget = Input.ofNullable(utilizationTarget);
+            this.utilizationTarget = Output.ofNullable(utilizationTarget);
             return this;
         }
         public AutoscalingPolicyCpuUtilizationArgs build() {

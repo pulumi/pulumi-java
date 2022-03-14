@@ -5,7 +5,7 @@ package io.pulumi.azurenative.videoanalyzer.inputs;
 
 import io.pulumi.azurenative.videoanalyzer.enums.EncoderSystemPresetType;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -24,9 +24,9 @@ public final class EncoderSystemPresetArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="name", required=true)
-      private final Input<Either<String,EncoderSystemPresetType>> name;
+      private final Output<Either<String,EncoderSystemPresetType>> name;
 
-    public Input<Either<String,EncoderSystemPresetType>> getName() {
+    public Output<Either<String,EncoderSystemPresetType>> getName() {
         return this.name;
     }
 
@@ -36,22 +36,22 @@ public final class EncoderSystemPresetArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<String> type;
+      private final Output<String> type;
 
-    public Input<String> getType() {
+    public Output<String> getType() {
         return this.type;
     }
 
     public EncoderSystemPresetArgs(
-        Input<Either<String,EncoderSystemPresetType>> name,
-        Input<String> type) {
+        Output<Either<String,EncoderSystemPresetType>> name,
+        Output<String> type) {
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
         this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
     }
 
     private EncoderSystemPresetArgs() {
-        this.name = Input.empty();
-        this.type = Input.empty();
+        this.name = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -63,8 +63,8 @@ public final class EncoderSystemPresetArgs extends io.pulumi.resources.ResourceA
     }
 
     public static final class Builder {
-        private Input<Either<String,EncoderSystemPresetType>> name;
-        private Input<String> type;
+        private Output<Either<String,EncoderSystemPresetType>> name;
+        private Output<String> type;
 
         public Builder() {
     	      // Empty
@@ -76,23 +76,23 @@ public final class EncoderSystemPresetArgs extends io.pulumi.resources.ResourceA
     	      this.type = defaults.type;
         }
 
-        public Builder name(Input<Either<String,EncoderSystemPresetType>> name) {
+        public Builder name(Output<Either<String,EncoderSystemPresetType>> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(Either<String,EncoderSystemPresetType> name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder type(Input<String> type) {
+        public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(String type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
         public EncoderSystemPresetArgs build() {

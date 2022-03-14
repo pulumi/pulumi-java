@@ -7,7 +7,7 @@ import io.pulumi.azurenative.machinelearningservices.enums.EncryptionStatus;
 import io.pulumi.azurenative.machinelearningservices.inputs.IdentityForCmkArgs;
 import io.pulumi.azurenative.machinelearningservices.inputs.KeyVaultPropertiesArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class EncryptionPropertyArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="identity")
-      private final @Nullable Input<IdentityForCmkArgs> identity;
+      private final @Nullable Output<IdentityForCmkArgs> identity;
 
-    public Input<IdentityForCmkArgs> getIdentity() {
-        return this.identity == null ? Input.empty() : this.identity;
+    public Output<IdentityForCmkArgs> getIdentity() {
+        return this.identity == null ? Output.empty() : this.identity;
     }
 
     /**
@@ -34,9 +34,9 @@ public final class EncryptionPropertyArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="keyVaultProperties", required=true)
-      private final Input<KeyVaultPropertiesArgs> keyVaultProperties;
+      private final Output<KeyVaultPropertiesArgs> keyVaultProperties;
 
-    public Input<KeyVaultPropertiesArgs> getKeyVaultProperties() {
+    public Output<KeyVaultPropertiesArgs> getKeyVaultProperties() {
         return this.keyVaultProperties;
     }
 
@@ -45,25 +45,25 @@ public final class EncryptionPropertyArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="status", required=true)
-      private final Input<Either<String,EncryptionStatus>> status;
+      private final Output<Either<String,EncryptionStatus>> status;
 
-    public Input<Either<String,EncryptionStatus>> getStatus() {
+    public Output<Either<String,EncryptionStatus>> getStatus() {
         return this.status;
     }
 
     public EncryptionPropertyArgs(
-        @Nullable Input<IdentityForCmkArgs> identity,
-        Input<KeyVaultPropertiesArgs> keyVaultProperties,
-        Input<Either<String,EncryptionStatus>> status) {
+        @Nullable Output<IdentityForCmkArgs> identity,
+        Output<KeyVaultPropertiesArgs> keyVaultProperties,
+        Output<Either<String,EncryptionStatus>> status) {
         this.identity = identity;
         this.keyVaultProperties = Objects.requireNonNull(keyVaultProperties, "expected parameter 'keyVaultProperties' to be non-null");
         this.status = Objects.requireNonNull(status, "expected parameter 'status' to be non-null");
     }
 
     private EncryptionPropertyArgs() {
-        this.identity = Input.empty();
-        this.keyVaultProperties = Input.empty();
-        this.status = Input.empty();
+        this.identity = Output.empty();
+        this.keyVaultProperties = Output.empty();
+        this.status = Output.empty();
     }
 
     public static Builder builder() {
@@ -75,9 +75,9 @@ public final class EncryptionPropertyArgs extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private @Nullable Input<IdentityForCmkArgs> identity;
-        private Input<KeyVaultPropertiesArgs> keyVaultProperties;
-        private Input<Either<String,EncryptionStatus>> status;
+        private @Nullable Output<IdentityForCmkArgs> identity;
+        private Output<KeyVaultPropertiesArgs> keyVaultProperties;
+        private Output<Either<String,EncryptionStatus>> status;
 
         public Builder() {
     	      // Empty
@@ -90,33 +90,33 @@ public final class EncryptionPropertyArgs extends io.pulumi.resources.ResourceAr
     	      this.status = defaults.status;
         }
 
-        public Builder identity(@Nullable Input<IdentityForCmkArgs> identity) {
+        public Builder identity(@Nullable Output<IdentityForCmkArgs> identity) {
             this.identity = identity;
             return this;
         }
 
         public Builder identity(@Nullable IdentityForCmkArgs identity) {
-            this.identity = Input.ofNullable(identity);
+            this.identity = Output.ofNullable(identity);
             return this;
         }
 
-        public Builder keyVaultProperties(Input<KeyVaultPropertiesArgs> keyVaultProperties) {
+        public Builder keyVaultProperties(Output<KeyVaultPropertiesArgs> keyVaultProperties) {
             this.keyVaultProperties = Objects.requireNonNull(keyVaultProperties);
             return this;
         }
 
         public Builder keyVaultProperties(KeyVaultPropertiesArgs keyVaultProperties) {
-            this.keyVaultProperties = Input.of(Objects.requireNonNull(keyVaultProperties));
+            this.keyVaultProperties = Output.of(Objects.requireNonNull(keyVaultProperties));
             return this;
         }
 
-        public Builder status(Input<Either<String,EncryptionStatus>> status) {
+        public Builder status(Output<Either<String,EncryptionStatus>> status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
 
         public Builder status(Either<String,EncryptionStatus> status) {
-            this.status = Input.of(Objects.requireNonNull(status));
+            this.status = Output.of(Objects.requireNonNull(status));
             return this;
         }
         public EncryptionPropertyArgs build() {

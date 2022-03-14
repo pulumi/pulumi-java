@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dataflow_v1b3.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Double;
@@ -25,10 +25,10 @@ public final class DisplayDataArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="boolValue")
-      private final @Nullable Input<Boolean> boolValue;
+      private final @Nullable Output<Boolean> boolValue;
 
-    public Input<Boolean> getBoolValue() {
-        return this.boolValue == null ? Input.empty() : this.boolValue;
+    public Output<Boolean> getBoolValue() {
+        return this.boolValue == null ? Output.empty() : this.boolValue;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class DisplayDataArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="durationValue")
-      private final @Nullable Input<String> durationValue;
+      private final @Nullable Output<String> durationValue;
 
-    public Input<String> getDurationValue() {
-        return this.durationValue == null ? Input.empty() : this.durationValue;
+    public Output<String> getDurationValue() {
+        return this.durationValue == null ? Output.empty() : this.durationValue;
     }
 
     /**
@@ -47,10 +47,10 @@ public final class DisplayDataArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="floatValue")
-      private final @Nullable Input<Double> floatValue;
+      private final @Nullable Output<Double> floatValue;
 
-    public Input<Double> getFloatValue() {
-        return this.floatValue == null ? Input.empty() : this.floatValue;
+    public Output<Double> getFloatValue() {
+        return this.floatValue == null ? Output.empty() : this.floatValue;
     }
 
     /**
@@ -58,10 +58,10 @@ public final class DisplayDataArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="int64Value")
-      private final @Nullable Input<String> int64Value;
+      private final @Nullable Output<String> int64Value;
 
-    public Input<String> getInt64Value() {
-        return this.int64Value == null ? Input.empty() : this.int64Value;
+    public Output<String> getInt64Value() {
+        return this.int64Value == null ? Output.empty() : this.int64Value;
     }
 
     /**
@@ -69,10 +69,10 @@ public final class DisplayDataArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="javaClassValue")
-      private final @Nullable Input<String> javaClassValue;
+      private final @Nullable Output<String> javaClassValue;
 
-    public Input<String> getJavaClassValue() {
-        return this.javaClassValue == null ? Input.empty() : this.javaClassValue;
+    public Output<String> getJavaClassValue() {
+        return this.javaClassValue == null ? Output.empty() : this.javaClassValue;
     }
 
     /**
@@ -80,10 +80,10 @@ public final class DisplayDataArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="key")
-      private final @Nullable Input<String> key;
+      private final @Nullable Output<String> key;
 
-    public Input<String> getKey() {
-        return this.key == null ? Input.empty() : this.key;
+    public Output<String> getKey() {
+        return this.key == null ? Output.empty() : this.key;
     }
 
     /**
@@ -91,10 +91,10 @@ public final class DisplayDataArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="label")
-      private final @Nullable Input<String> label;
+      private final @Nullable Output<String> label;
 
-    public Input<String> getLabel() {
-        return this.label == null ? Input.empty() : this.label;
+    public Output<String> getLabel() {
+        return this.label == null ? Output.empty() : this.label;
     }
 
     /**
@@ -102,10 +102,10 @@ public final class DisplayDataArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="namespace")
-      private final @Nullable Input<String> namespace;
+      private final @Nullable Output<String> namespace;
 
-    public Input<String> getNamespace() {
-        return this.namespace == null ? Input.empty() : this.namespace;
+    public Output<String> getNamespace() {
+        return this.namespace == null ? Output.empty() : this.namespace;
     }
 
     /**
@@ -113,10 +113,10 @@ public final class DisplayDataArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="shortStrValue")
-      private final @Nullable Input<String> shortStrValue;
+      private final @Nullable Output<String> shortStrValue;
 
-    public Input<String> getShortStrValue() {
-        return this.shortStrValue == null ? Input.empty() : this.shortStrValue;
+    public Output<String> getShortStrValue() {
+        return this.shortStrValue == null ? Output.empty() : this.shortStrValue;
     }
 
     /**
@@ -124,10 +124,10 @@ public final class DisplayDataArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="strValue")
-      private final @Nullable Input<String> strValue;
+      private final @Nullable Output<String> strValue;
 
-    public Input<String> getStrValue() {
-        return this.strValue == null ? Input.empty() : this.strValue;
+    public Output<String> getStrValue() {
+        return this.strValue == null ? Output.empty() : this.strValue;
     }
 
     /**
@@ -135,10 +135,10 @@ public final class DisplayDataArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="timestampValue")
-      private final @Nullable Input<String> timestampValue;
+      private final @Nullable Output<String> timestampValue;
 
-    public Input<String> getTimestampValue() {
-        return this.timestampValue == null ? Input.empty() : this.timestampValue;
+    public Output<String> getTimestampValue() {
+        return this.timestampValue == null ? Output.empty() : this.timestampValue;
     }
 
     /**
@@ -146,25 +146,25 @@ public final class DisplayDataArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="url")
-      private final @Nullable Input<String> url;
+      private final @Nullable Output<String> url;
 
-    public Input<String> getUrl() {
-        return this.url == null ? Input.empty() : this.url;
+    public Output<String> getUrl() {
+        return this.url == null ? Output.empty() : this.url;
     }
 
     public DisplayDataArgs(
-        @Nullable Input<Boolean> boolValue,
-        @Nullable Input<String> durationValue,
-        @Nullable Input<Double> floatValue,
-        @Nullable Input<String> int64Value,
-        @Nullable Input<String> javaClassValue,
-        @Nullable Input<String> key,
-        @Nullable Input<String> label,
-        @Nullable Input<String> namespace,
-        @Nullable Input<String> shortStrValue,
-        @Nullable Input<String> strValue,
-        @Nullable Input<String> timestampValue,
-        @Nullable Input<String> url) {
+        @Nullable Output<Boolean> boolValue,
+        @Nullable Output<String> durationValue,
+        @Nullable Output<Double> floatValue,
+        @Nullable Output<String> int64Value,
+        @Nullable Output<String> javaClassValue,
+        @Nullable Output<String> key,
+        @Nullable Output<String> label,
+        @Nullable Output<String> namespace,
+        @Nullable Output<String> shortStrValue,
+        @Nullable Output<String> strValue,
+        @Nullable Output<String> timestampValue,
+        @Nullable Output<String> url) {
         this.boolValue = boolValue;
         this.durationValue = durationValue;
         this.floatValue = floatValue;
@@ -180,18 +180,18 @@ public final class DisplayDataArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DisplayDataArgs() {
-        this.boolValue = Input.empty();
-        this.durationValue = Input.empty();
-        this.floatValue = Input.empty();
-        this.int64Value = Input.empty();
-        this.javaClassValue = Input.empty();
-        this.key = Input.empty();
-        this.label = Input.empty();
-        this.namespace = Input.empty();
-        this.shortStrValue = Input.empty();
-        this.strValue = Input.empty();
-        this.timestampValue = Input.empty();
-        this.url = Input.empty();
+        this.boolValue = Output.empty();
+        this.durationValue = Output.empty();
+        this.floatValue = Output.empty();
+        this.int64Value = Output.empty();
+        this.javaClassValue = Output.empty();
+        this.key = Output.empty();
+        this.label = Output.empty();
+        this.namespace = Output.empty();
+        this.shortStrValue = Output.empty();
+        this.strValue = Output.empty();
+        this.timestampValue = Output.empty();
+        this.url = Output.empty();
     }
 
     public static Builder builder() {
@@ -203,18 +203,18 @@ public final class DisplayDataArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> boolValue;
-        private @Nullable Input<String> durationValue;
-        private @Nullable Input<Double> floatValue;
-        private @Nullable Input<String> int64Value;
-        private @Nullable Input<String> javaClassValue;
-        private @Nullable Input<String> key;
-        private @Nullable Input<String> label;
-        private @Nullable Input<String> namespace;
-        private @Nullable Input<String> shortStrValue;
-        private @Nullable Input<String> strValue;
-        private @Nullable Input<String> timestampValue;
-        private @Nullable Input<String> url;
+        private @Nullable Output<Boolean> boolValue;
+        private @Nullable Output<String> durationValue;
+        private @Nullable Output<Double> floatValue;
+        private @Nullable Output<String> int64Value;
+        private @Nullable Output<String> javaClassValue;
+        private @Nullable Output<String> key;
+        private @Nullable Output<String> label;
+        private @Nullable Output<String> namespace;
+        private @Nullable Output<String> shortStrValue;
+        private @Nullable Output<String> strValue;
+        private @Nullable Output<String> timestampValue;
+        private @Nullable Output<String> url;
 
         public Builder() {
     	      // Empty
@@ -236,123 +236,123 @@ public final class DisplayDataArgs extends io.pulumi.resources.ResourceArgs {
     	      this.url = defaults.url;
         }
 
-        public Builder boolValue(@Nullable Input<Boolean> boolValue) {
+        public Builder boolValue(@Nullable Output<Boolean> boolValue) {
             this.boolValue = boolValue;
             return this;
         }
 
         public Builder boolValue(@Nullable Boolean boolValue) {
-            this.boolValue = Input.ofNullable(boolValue);
+            this.boolValue = Output.ofNullable(boolValue);
             return this;
         }
 
-        public Builder durationValue(@Nullable Input<String> durationValue) {
+        public Builder durationValue(@Nullable Output<String> durationValue) {
             this.durationValue = durationValue;
             return this;
         }
 
         public Builder durationValue(@Nullable String durationValue) {
-            this.durationValue = Input.ofNullable(durationValue);
+            this.durationValue = Output.ofNullable(durationValue);
             return this;
         }
 
-        public Builder floatValue(@Nullable Input<Double> floatValue) {
+        public Builder floatValue(@Nullable Output<Double> floatValue) {
             this.floatValue = floatValue;
             return this;
         }
 
         public Builder floatValue(@Nullable Double floatValue) {
-            this.floatValue = Input.ofNullable(floatValue);
+            this.floatValue = Output.ofNullable(floatValue);
             return this;
         }
 
-        public Builder int64Value(@Nullable Input<String> int64Value) {
+        public Builder int64Value(@Nullable Output<String> int64Value) {
             this.int64Value = int64Value;
             return this;
         }
 
         public Builder int64Value(@Nullable String int64Value) {
-            this.int64Value = Input.ofNullable(int64Value);
+            this.int64Value = Output.ofNullable(int64Value);
             return this;
         }
 
-        public Builder javaClassValue(@Nullable Input<String> javaClassValue) {
+        public Builder javaClassValue(@Nullable Output<String> javaClassValue) {
             this.javaClassValue = javaClassValue;
             return this;
         }
 
         public Builder javaClassValue(@Nullable String javaClassValue) {
-            this.javaClassValue = Input.ofNullable(javaClassValue);
+            this.javaClassValue = Output.ofNullable(javaClassValue);
             return this;
         }
 
-        public Builder key(@Nullable Input<String> key) {
+        public Builder key(@Nullable Output<String> key) {
             this.key = key;
             return this;
         }
 
         public Builder key(@Nullable String key) {
-            this.key = Input.ofNullable(key);
+            this.key = Output.ofNullable(key);
             return this;
         }
 
-        public Builder label(@Nullable Input<String> label) {
+        public Builder label(@Nullable Output<String> label) {
             this.label = label;
             return this;
         }
 
         public Builder label(@Nullable String label) {
-            this.label = Input.ofNullable(label);
+            this.label = Output.ofNullable(label);
             return this;
         }
 
-        public Builder namespace(@Nullable Input<String> namespace) {
+        public Builder namespace(@Nullable Output<String> namespace) {
             this.namespace = namespace;
             return this;
         }
 
         public Builder namespace(@Nullable String namespace) {
-            this.namespace = Input.ofNullable(namespace);
+            this.namespace = Output.ofNullable(namespace);
             return this;
         }
 
-        public Builder shortStrValue(@Nullable Input<String> shortStrValue) {
+        public Builder shortStrValue(@Nullable Output<String> shortStrValue) {
             this.shortStrValue = shortStrValue;
             return this;
         }
 
         public Builder shortStrValue(@Nullable String shortStrValue) {
-            this.shortStrValue = Input.ofNullable(shortStrValue);
+            this.shortStrValue = Output.ofNullable(shortStrValue);
             return this;
         }
 
-        public Builder strValue(@Nullable Input<String> strValue) {
+        public Builder strValue(@Nullable Output<String> strValue) {
             this.strValue = strValue;
             return this;
         }
 
         public Builder strValue(@Nullable String strValue) {
-            this.strValue = Input.ofNullable(strValue);
+            this.strValue = Output.ofNullable(strValue);
             return this;
         }
 
-        public Builder timestampValue(@Nullable Input<String> timestampValue) {
+        public Builder timestampValue(@Nullable Output<String> timestampValue) {
             this.timestampValue = timestampValue;
             return this;
         }
 
         public Builder timestampValue(@Nullable String timestampValue) {
-            this.timestampValue = Input.ofNullable(timestampValue);
+            this.timestampValue = Output.ofNullable(timestampValue);
             return this;
         }
 
-        public Builder url(@Nullable Input<String> url) {
+        public Builder url(@Nullable Output<String> url) {
             this.url = url;
             return this;
         }
 
         public Builder url(@Nullable String url) {
-            this.url = Input.ofNullable(url);
+            this.url = Output.ofNullable(url);
             return this;
         }
         public DisplayDataArgs build() {

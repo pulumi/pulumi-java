@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.composer.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -14,18 +14,18 @@ public final class EnvironmentConfigWebServerConfigGetArgs extends io.pulumi.res
     public static final EnvironmentConfigWebServerConfigGetArgs Empty = new EnvironmentConfigWebServerConfigGetArgs();
 
     @InputImport(name="machineType", required=true)
-      private final Input<String> machineType;
+      private final Output<String> machineType;
 
-    public Input<String> getMachineType() {
+    public Output<String> getMachineType() {
         return this.machineType;
     }
 
-    public EnvironmentConfigWebServerConfigGetArgs(Input<String> machineType) {
+    public EnvironmentConfigWebServerConfigGetArgs(Output<String> machineType) {
         this.machineType = Objects.requireNonNull(machineType, "expected parameter 'machineType' to be non-null");
     }
 
     private EnvironmentConfigWebServerConfigGetArgs() {
-        this.machineType = Input.empty();
+        this.machineType = Output.empty();
     }
 
     public static Builder builder() {
@@ -37,7 +37,7 @@ public final class EnvironmentConfigWebServerConfigGetArgs extends io.pulumi.res
     }
 
     public static final class Builder {
-        private Input<String> machineType;
+        private Output<String> machineType;
 
         public Builder() {
     	      // Empty
@@ -48,13 +48,13 @@ public final class EnvironmentConfigWebServerConfigGetArgs extends io.pulumi.res
     	      this.machineType = defaults.machineType;
         }
 
-        public Builder machineType(Input<String> machineType) {
+        public Builder machineType(Output<String> machineType) {
             this.machineType = Objects.requireNonNull(machineType);
             return this;
         }
 
         public Builder machineType(String machineType) {
-            this.machineType = Input.of(Objects.requireNonNull(machineType));
+            this.machineType = Output.of(Objects.requireNonNull(machineType));
             return this;
         }
         public EnvironmentConfigWebServerConfigGetArgs build() {

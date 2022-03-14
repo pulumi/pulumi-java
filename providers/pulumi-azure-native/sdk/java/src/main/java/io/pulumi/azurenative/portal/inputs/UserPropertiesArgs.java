@@ -8,7 +8,7 @@ import io.pulumi.azurenative.portal.enums.ShellType;
 import io.pulumi.azurenative.portal.inputs.StorageProfileArgs;
 import io.pulumi.azurenative.portal.inputs.TerminalSettingsArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -27,9 +27,9 @@ public final class UserPropertiesArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="preferredLocation", required=true)
-      private final Input<String> preferredLocation;
+      private final Output<String> preferredLocation;
 
-    public Input<String> getPreferredLocation() {
+    public Output<String> getPreferredLocation() {
         return this.preferredLocation;
     }
 
@@ -38,9 +38,9 @@ public final class UserPropertiesArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="preferredOsType", required=true)
-      private final Input<Either<String,OsType>> preferredOsType;
+      private final Output<Either<String,OsType>> preferredOsType;
 
-    public Input<Either<String,OsType>> getPreferredOsType() {
+    public Output<Either<String,OsType>> getPreferredOsType() {
         return this.preferredOsType;
     }
 
@@ -49,9 +49,9 @@ public final class UserPropertiesArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="preferredShellType", required=true)
-      private final Input<Either<String,ShellType>> preferredShellType;
+      private final Output<Either<String,ShellType>> preferredShellType;
 
-    public Input<Either<String,ShellType>> getPreferredShellType() {
+    public Output<Either<String,ShellType>> getPreferredShellType() {
         return this.preferredShellType;
     }
 
@@ -60,9 +60,9 @@ public final class UserPropertiesArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="storageProfile", required=true)
-      private final Input<StorageProfileArgs> storageProfile;
+      private final Output<StorageProfileArgs> storageProfile;
 
-    public Input<StorageProfileArgs> getStorageProfile() {
+    public Output<StorageProfileArgs> getStorageProfile() {
         return this.storageProfile;
     }
 
@@ -71,18 +71,18 @@ public final class UserPropertiesArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="terminalSettings", required=true)
-      private final Input<TerminalSettingsArgs> terminalSettings;
+      private final Output<TerminalSettingsArgs> terminalSettings;
 
-    public Input<TerminalSettingsArgs> getTerminalSettings() {
+    public Output<TerminalSettingsArgs> getTerminalSettings() {
         return this.terminalSettings;
     }
 
     public UserPropertiesArgs(
-        Input<String> preferredLocation,
-        Input<Either<String,OsType>> preferredOsType,
-        Input<Either<String,ShellType>> preferredShellType,
-        Input<StorageProfileArgs> storageProfile,
-        Input<TerminalSettingsArgs> terminalSettings) {
+        Output<String> preferredLocation,
+        Output<Either<String,OsType>> preferredOsType,
+        Output<Either<String,ShellType>> preferredShellType,
+        Output<StorageProfileArgs> storageProfile,
+        Output<TerminalSettingsArgs> terminalSettings) {
         this.preferredLocation = Objects.requireNonNull(preferredLocation, "expected parameter 'preferredLocation' to be non-null");
         this.preferredOsType = Objects.requireNonNull(preferredOsType, "expected parameter 'preferredOsType' to be non-null");
         this.preferredShellType = Objects.requireNonNull(preferredShellType, "expected parameter 'preferredShellType' to be non-null");
@@ -91,11 +91,11 @@ public final class UserPropertiesArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private UserPropertiesArgs() {
-        this.preferredLocation = Input.empty();
-        this.preferredOsType = Input.empty();
-        this.preferredShellType = Input.empty();
-        this.storageProfile = Input.empty();
-        this.terminalSettings = Input.empty();
+        this.preferredLocation = Output.empty();
+        this.preferredOsType = Output.empty();
+        this.preferredShellType = Output.empty();
+        this.storageProfile = Output.empty();
+        this.terminalSettings = Output.empty();
     }
 
     public static Builder builder() {
@@ -107,11 +107,11 @@ public final class UserPropertiesArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> preferredLocation;
-        private Input<Either<String,OsType>> preferredOsType;
-        private Input<Either<String,ShellType>> preferredShellType;
-        private Input<StorageProfileArgs> storageProfile;
-        private Input<TerminalSettingsArgs> terminalSettings;
+        private Output<String> preferredLocation;
+        private Output<Either<String,OsType>> preferredOsType;
+        private Output<Either<String,ShellType>> preferredShellType;
+        private Output<StorageProfileArgs> storageProfile;
+        private Output<TerminalSettingsArgs> terminalSettings;
 
         public Builder() {
     	      // Empty
@@ -126,53 +126,53 @@ public final class UserPropertiesArgs extends io.pulumi.resources.ResourceArgs {
     	      this.terminalSettings = defaults.terminalSettings;
         }
 
-        public Builder preferredLocation(Input<String> preferredLocation) {
+        public Builder preferredLocation(Output<String> preferredLocation) {
             this.preferredLocation = Objects.requireNonNull(preferredLocation);
             return this;
         }
 
         public Builder preferredLocation(String preferredLocation) {
-            this.preferredLocation = Input.of(Objects.requireNonNull(preferredLocation));
+            this.preferredLocation = Output.of(Objects.requireNonNull(preferredLocation));
             return this;
         }
 
-        public Builder preferredOsType(Input<Either<String,OsType>> preferredOsType) {
+        public Builder preferredOsType(Output<Either<String,OsType>> preferredOsType) {
             this.preferredOsType = Objects.requireNonNull(preferredOsType);
             return this;
         }
 
         public Builder preferredOsType(Either<String,OsType> preferredOsType) {
-            this.preferredOsType = Input.of(Objects.requireNonNull(preferredOsType));
+            this.preferredOsType = Output.of(Objects.requireNonNull(preferredOsType));
             return this;
         }
 
-        public Builder preferredShellType(Input<Either<String,ShellType>> preferredShellType) {
+        public Builder preferredShellType(Output<Either<String,ShellType>> preferredShellType) {
             this.preferredShellType = Objects.requireNonNull(preferredShellType);
             return this;
         }
 
         public Builder preferredShellType(Either<String,ShellType> preferredShellType) {
-            this.preferredShellType = Input.of(Objects.requireNonNull(preferredShellType));
+            this.preferredShellType = Output.of(Objects.requireNonNull(preferredShellType));
             return this;
         }
 
-        public Builder storageProfile(Input<StorageProfileArgs> storageProfile) {
+        public Builder storageProfile(Output<StorageProfileArgs> storageProfile) {
             this.storageProfile = Objects.requireNonNull(storageProfile);
             return this;
         }
 
         public Builder storageProfile(StorageProfileArgs storageProfile) {
-            this.storageProfile = Input.of(Objects.requireNonNull(storageProfile));
+            this.storageProfile = Output.of(Objects.requireNonNull(storageProfile));
             return this;
         }
 
-        public Builder terminalSettings(Input<TerminalSettingsArgs> terminalSettings) {
+        public Builder terminalSettings(Output<TerminalSettingsArgs> terminalSettings) {
             this.terminalSettings = Objects.requireNonNull(terminalSettings);
             return this;
         }
 
         public Builder terminalSettings(TerminalSettingsArgs terminalSettings) {
-            this.terminalSettings = Input.of(Objects.requireNonNull(terminalSettings));
+            this.terminalSettings = Output.of(Objects.requireNonNull(terminalSettings));
             return this;
         }
         public UserPropertiesArgs build() {

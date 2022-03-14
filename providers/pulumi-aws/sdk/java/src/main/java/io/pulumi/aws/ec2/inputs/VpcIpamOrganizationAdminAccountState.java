@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.ec2.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,17 +19,17 @@ public final class VpcIpamOrganizationAdminAccountState extends io.pulumi.resour
      * 
      */
     @InputImport(name="arn")
-      private final @Nullable Input<String> arn;
+      private final @Nullable Output<String> arn;
 
-    public Input<String> getArn() {
-        return this.arn == null ? Input.empty() : this.arn;
+    public Output<String> getArn() {
+        return this.arn == null ? Output.empty() : this.arn;
     }
 
     @InputImport(name="delegatedAdminAccountId")
-      private final @Nullable Input<String> delegatedAdminAccountId;
+      private final @Nullable Output<String> delegatedAdminAccountId;
 
-    public Input<String> getDelegatedAdminAccountId() {
-        return this.delegatedAdminAccountId == null ? Input.empty() : this.delegatedAdminAccountId;
+    public Output<String> getDelegatedAdminAccountId() {
+        return this.delegatedAdminAccountId == null ? Output.empty() : this.delegatedAdminAccountId;
     }
 
     /**
@@ -37,10 +37,10 @@ public final class VpcIpamOrganizationAdminAccountState extends io.pulumi.resour
      * 
      */
     @InputImport(name="email")
-      private final @Nullable Input<String> email;
+      private final @Nullable Output<String> email;
 
-    public Input<String> getEmail() {
-        return this.email == null ? Input.empty() : this.email;
+    public Output<String> getEmail() {
+        return this.email == null ? Output.empty() : this.email;
     }
 
     /**
@@ -48,10 +48,10 @@ public final class VpcIpamOrganizationAdminAccountState extends io.pulumi.resour
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -59,18 +59,18 @@ public final class VpcIpamOrganizationAdminAccountState extends io.pulumi.resour
      * 
      */
     @InputImport(name="servicePrincipal")
-      private final @Nullable Input<String> servicePrincipal;
+      private final @Nullable Output<String> servicePrincipal;
 
-    public Input<String> getServicePrincipal() {
-        return this.servicePrincipal == null ? Input.empty() : this.servicePrincipal;
+    public Output<String> getServicePrincipal() {
+        return this.servicePrincipal == null ? Output.empty() : this.servicePrincipal;
     }
 
     public VpcIpamOrganizationAdminAccountState(
-        @Nullable Input<String> arn,
-        @Nullable Input<String> delegatedAdminAccountId,
-        @Nullable Input<String> email,
-        @Nullable Input<String> name,
-        @Nullable Input<String> servicePrincipal) {
+        @Nullable Output<String> arn,
+        @Nullable Output<String> delegatedAdminAccountId,
+        @Nullable Output<String> email,
+        @Nullable Output<String> name,
+        @Nullable Output<String> servicePrincipal) {
         this.arn = arn;
         this.delegatedAdminAccountId = delegatedAdminAccountId;
         this.email = email;
@@ -79,11 +79,11 @@ public final class VpcIpamOrganizationAdminAccountState extends io.pulumi.resour
     }
 
     private VpcIpamOrganizationAdminAccountState() {
-        this.arn = Input.empty();
-        this.delegatedAdminAccountId = Input.empty();
-        this.email = Input.empty();
-        this.name = Input.empty();
-        this.servicePrincipal = Input.empty();
+        this.arn = Output.empty();
+        this.delegatedAdminAccountId = Output.empty();
+        this.email = Output.empty();
+        this.name = Output.empty();
+        this.servicePrincipal = Output.empty();
     }
 
     public static Builder builder() {
@@ -95,11 +95,11 @@ public final class VpcIpamOrganizationAdminAccountState extends io.pulumi.resour
     }
 
     public static final class Builder {
-        private @Nullable Input<String> arn;
-        private @Nullable Input<String> delegatedAdminAccountId;
-        private @Nullable Input<String> email;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> servicePrincipal;
+        private @Nullable Output<String> arn;
+        private @Nullable Output<String> delegatedAdminAccountId;
+        private @Nullable Output<String> email;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> servicePrincipal;
 
         public Builder() {
     	      // Empty
@@ -114,53 +114,53 @@ public final class VpcIpamOrganizationAdminAccountState extends io.pulumi.resour
     	      this.servicePrincipal = defaults.servicePrincipal;
         }
 
-        public Builder arn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
 
         public Builder arn(@Nullable String arn) {
-            this.arn = Input.ofNullable(arn);
+            this.arn = Output.ofNullable(arn);
             return this;
         }
 
-        public Builder delegatedAdminAccountId(@Nullable Input<String> delegatedAdminAccountId) {
+        public Builder delegatedAdminAccountId(@Nullable Output<String> delegatedAdminAccountId) {
             this.delegatedAdminAccountId = delegatedAdminAccountId;
             return this;
         }
 
         public Builder delegatedAdminAccountId(@Nullable String delegatedAdminAccountId) {
-            this.delegatedAdminAccountId = Input.ofNullable(delegatedAdminAccountId);
+            this.delegatedAdminAccountId = Output.ofNullable(delegatedAdminAccountId);
             return this;
         }
 
-        public Builder email(@Nullable Input<String> email) {
+        public Builder email(@Nullable Output<String> email) {
             this.email = email;
             return this;
         }
 
         public Builder email(@Nullable String email) {
-            this.email = Input.ofNullable(email);
+            this.email = Output.ofNullable(email);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder servicePrincipal(@Nullable Input<String> servicePrincipal) {
+        public Builder servicePrincipal(@Nullable Output<String> servicePrincipal) {
             this.servicePrincipal = servicePrincipal;
             return this;
         }
 
         public Builder servicePrincipal(@Nullable String servicePrincipal) {
-            this.servicePrincipal = Input.ofNullable(servicePrincipal);
+            this.servicePrincipal = Output.ofNullable(servicePrincipal);
             return this;
         }
         public VpcIpamOrganizationAdminAccountState build() {

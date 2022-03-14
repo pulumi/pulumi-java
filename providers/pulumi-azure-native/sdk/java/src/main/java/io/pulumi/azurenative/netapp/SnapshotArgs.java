@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.netapp;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,9 +19,9 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="accountName", required=true)
-      private final Input<String> accountName;
+      private final Output<String> accountName;
 
-    public Input<String> getAccountName() {
+    public Output<String> getAccountName() {
         return this.accountName;
     }
 
@@ -30,10 +30,10 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -41,9 +41,9 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="poolName", required=true)
-      private final Input<String> poolName;
+      private final Output<String> poolName;
 
-    public Input<String> getPoolName() {
+    public Output<String> getPoolName() {
         return this.poolName;
     }
 
@@ -52,9 +52,9 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -63,10 +63,10 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="snapshotName")
-      private final @Nullable Input<String> snapshotName;
+      private final @Nullable Output<String> snapshotName;
 
-    public Input<String> getSnapshotName() {
-        return this.snapshotName == null ? Input.empty() : this.snapshotName;
+    public Output<String> getSnapshotName() {
+        return this.snapshotName == null ? Output.empty() : this.snapshotName;
     }
 
     /**
@@ -74,19 +74,19 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="volumeName", required=true)
-      private final Input<String> volumeName;
+      private final Output<String> volumeName;
 
-    public Input<String> getVolumeName() {
+    public Output<String> getVolumeName() {
         return this.volumeName;
     }
 
     public SnapshotArgs(
-        Input<String> accountName,
-        @Nullable Input<String> location,
-        Input<String> poolName,
-        Input<String> resourceGroupName,
-        @Nullable Input<String> snapshotName,
-        Input<String> volumeName) {
+        Output<String> accountName,
+        @Nullable Output<String> location,
+        Output<String> poolName,
+        Output<String> resourceGroupName,
+        @Nullable Output<String> snapshotName,
+        Output<String> volumeName) {
         this.accountName = Objects.requireNonNull(accountName, "expected parameter 'accountName' to be non-null");
         this.location = location;
         this.poolName = Objects.requireNonNull(poolName, "expected parameter 'poolName' to be non-null");
@@ -96,12 +96,12 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private SnapshotArgs() {
-        this.accountName = Input.empty();
-        this.location = Input.empty();
-        this.poolName = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.snapshotName = Input.empty();
-        this.volumeName = Input.empty();
+        this.accountName = Output.empty();
+        this.location = Output.empty();
+        this.poolName = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.snapshotName = Output.empty();
+        this.volumeName = Output.empty();
     }
 
     public static Builder builder() {
@@ -113,12 +113,12 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> accountName;
-        private @Nullable Input<String> location;
-        private Input<String> poolName;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<String> snapshotName;
-        private Input<String> volumeName;
+        private Output<String> accountName;
+        private @Nullable Output<String> location;
+        private Output<String> poolName;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<String> snapshotName;
+        private Output<String> volumeName;
 
         public Builder() {
     	      // Empty
@@ -134,63 +134,63 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
     	      this.volumeName = defaults.volumeName;
         }
 
-        public Builder accountName(Input<String> accountName) {
+        public Builder accountName(Output<String> accountName) {
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
 
         public Builder accountName(String accountName) {
-            this.accountName = Input.of(Objects.requireNonNull(accountName));
+            this.accountName = Output.of(Objects.requireNonNull(accountName));
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder poolName(Input<String> poolName) {
+        public Builder poolName(Output<String> poolName) {
             this.poolName = Objects.requireNonNull(poolName);
             return this;
         }
 
         public Builder poolName(String poolName) {
-            this.poolName = Input.of(Objects.requireNonNull(poolName));
+            this.poolName = Output.of(Objects.requireNonNull(poolName));
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder snapshotName(@Nullable Input<String> snapshotName) {
+        public Builder snapshotName(@Nullable Output<String> snapshotName) {
             this.snapshotName = snapshotName;
             return this;
         }
 
         public Builder snapshotName(@Nullable String snapshotName) {
-            this.snapshotName = Input.ofNullable(snapshotName);
+            this.snapshotName = Output.ofNullable(snapshotName);
             return this;
         }
 
-        public Builder volumeName(Input<String> volumeName) {
+        public Builder volumeName(Output<String> volumeName) {
             this.volumeName = Objects.requireNonNull(volumeName);
             return this;
         }
 
         public Builder volumeName(String volumeName) {
-            this.volumeName = Input.of(Objects.requireNonNull(volumeName));
+            this.volumeName = Output.of(Objects.requireNonNull(volumeName));
             return this;
         }
         public SnapshotArgs build() {

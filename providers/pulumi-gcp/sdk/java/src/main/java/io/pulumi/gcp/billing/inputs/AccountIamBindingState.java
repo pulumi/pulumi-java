@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.billing.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.billing.inputs.AccountIamBindingConditionGetArgs;
 import java.lang.String;
@@ -17,46 +17,46 @@ public final class AccountIamBindingState extends io.pulumi.resources.ResourceAr
     public static final AccountIamBindingState Empty = new AccountIamBindingState();
 
     @InputImport(name="billingAccountId")
-      private final @Nullable Input<String> billingAccountId;
+      private final @Nullable Output<String> billingAccountId;
 
-    public Input<String> getBillingAccountId() {
-        return this.billingAccountId == null ? Input.empty() : this.billingAccountId;
+    public Output<String> getBillingAccountId() {
+        return this.billingAccountId == null ? Output.empty() : this.billingAccountId;
     }
 
     @InputImport(name="condition")
-      private final @Nullable Input<AccountIamBindingConditionGetArgs> condition;
+      private final @Nullable Output<AccountIamBindingConditionGetArgs> condition;
 
-    public Input<AccountIamBindingConditionGetArgs> getCondition() {
-        return this.condition == null ? Input.empty() : this.condition;
+    public Output<AccountIamBindingConditionGetArgs> getCondition() {
+        return this.condition == null ? Output.empty() : this.condition;
     }
 
     @InputImport(name="etag")
-      private final @Nullable Input<String> etag;
+      private final @Nullable Output<String> etag;
 
-    public Input<String> getEtag() {
-        return this.etag == null ? Input.empty() : this.etag;
+    public Output<String> getEtag() {
+        return this.etag == null ? Output.empty() : this.etag;
     }
 
     @InputImport(name="members")
-      private final @Nullable Input<List<String>> members;
+      private final @Nullable Output<List<String>> members;
 
-    public Input<List<String>> getMembers() {
-        return this.members == null ? Input.empty() : this.members;
+    public Output<List<String>> getMembers() {
+        return this.members == null ? Output.empty() : this.members;
     }
 
     @InputImport(name="role")
-      private final @Nullable Input<String> role;
+      private final @Nullable Output<String> role;
 
-    public Input<String> getRole() {
-        return this.role == null ? Input.empty() : this.role;
+    public Output<String> getRole() {
+        return this.role == null ? Output.empty() : this.role;
     }
 
     public AccountIamBindingState(
-        @Nullable Input<String> billingAccountId,
-        @Nullable Input<AccountIamBindingConditionGetArgs> condition,
-        @Nullable Input<String> etag,
-        @Nullable Input<List<String>> members,
-        @Nullable Input<String> role) {
+        @Nullable Output<String> billingAccountId,
+        @Nullable Output<AccountIamBindingConditionGetArgs> condition,
+        @Nullable Output<String> etag,
+        @Nullable Output<List<String>> members,
+        @Nullable Output<String> role) {
         this.billingAccountId = billingAccountId;
         this.condition = condition;
         this.etag = etag;
@@ -65,11 +65,11 @@ public final class AccountIamBindingState extends io.pulumi.resources.ResourceAr
     }
 
     private AccountIamBindingState() {
-        this.billingAccountId = Input.empty();
-        this.condition = Input.empty();
-        this.etag = Input.empty();
-        this.members = Input.empty();
-        this.role = Input.empty();
+        this.billingAccountId = Output.empty();
+        this.condition = Output.empty();
+        this.etag = Output.empty();
+        this.members = Output.empty();
+        this.role = Output.empty();
     }
 
     public static Builder builder() {
@@ -81,11 +81,11 @@ public final class AccountIamBindingState extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private @Nullable Input<String> billingAccountId;
-        private @Nullable Input<AccountIamBindingConditionGetArgs> condition;
-        private @Nullable Input<String> etag;
-        private @Nullable Input<List<String>> members;
-        private @Nullable Input<String> role;
+        private @Nullable Output<String> billingAccountId;
+        private @Nullable Output<AccountIamBindingConditionGetArgs> condition;
+        private @Nullable Output<String> etag;
+        private @Nullable Output<List<String>> members;
+        private @Nullable Output<String> role;
 
         public Builder() {
     	      // Empty
@@ -100,53 +100,53 @@ public final class AccountIamBindingState extends io.pulumi.resources.ResourceAr
     	      this.role = defaults.role;
         }
 
-        public Builder billingAccountId(@Nullable Input<String> billingAccountId) {
+        public Builder billingAccountId(@Nullable Output<String> billingAccountId) {
             this.billingAccountId = billingAccountId;
             return this;
         }
 
         public Builder billingAccountId(@Nullable String billingAccountId) {
-            this.billingAccountId = Input.ofNullable(billingAccountId);
+            this.billingAccountId = Output.ofNullable(billingAccountId);
             return this;
         }
 
-        public Builder condition(@Nullable Input<AccountIamBindingConditionGetArgs> condition) {
+        public Builder condition(@Nullable Output<AccountIamBindingConditionGetArgs> condition) {
             this.condition = condition;
             return this;
         }
 
         public Builder condition(@Nullable AccountIamBindingConditionGetArgs condition) {
-            this.condition = Input.ofNullable(condition);
+            this.condition = Output.ofNullable(condition);
             return this;
         }
 
-        public Builder etag(@Nullable Input<String> etag) {
+        public Builder etag(@Nullable Output<String> etag) {
             this.etag = etag;
             return this;
         }
 
         public Builder etag(@Nullable String etag) {
-            this.etag = Input.ofNullable(etag);
+            this.etag = Output.ofNullable(etag);
             return this;
         }
 
-        public Builder members(@Nullable Input<List<String>> members) {
+        public Builder members(@Nullable Output<List<String>> members) {
             this.members = members;
             return this;
         }
 
         public Builder members(@Nullable List<String> members) {
-            this.members = Input.ofNullable(members);
+            this.members = Output.ofNullable(members);
             return this;
         }
 
-        public Builder role(@Nullable Input<String> role) {
+        public Builder role(@Nullable Output<String> role) {
             this.role = role;
             return this;
         }
 
         public Builder role(@Nullable String role) {
-            this.role = Input.ofNullable(role);
+            this.role = Output.ofNullable(role);
             return this;
         }
         public AccountIamBindingState build() {

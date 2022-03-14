@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.cognito;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class UserPoolDomainArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="certificateArn")
-      private final @Nullable Input<String> certificateArn;
+      private final @Nullable Output<String> certificateArn;
 
-    public Input<String> getCertificateArn() {
-        return this.certificateArn == null ? Input.empty() : this.certificateArn;
+    public Output<String> getCertificateArn() {
+        return this.certificateArn == null ? Output.empty() : this.certificateArn;
     }
 
     /**
@@ -30,9 +30,9 @@ public final class UserPoolDomainArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="domain", required=true)
-      private final Input<String> domain;
+      private final Output<String> domain;
 
-    public Input<String> getDomain() {
+    public Output<String> getDomain() {
         return this.domain;
     }
 
@@ -41,25 +41,25 @@ public final class UserPoolDomainArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="userPoolId", required=true)
-      private final Input<String> userPoolId;
+      private final Output<String> userPoolId;
 
-    public Input<String> getUserPoolId() {
+    public Output<String> getUserPoolId() {
         return this.userPoolId;
     }
 
     public UserPoolDomainArgs(
-        @Nullable Input<String> certificateArn,
-        Input<String> domain,
-        Input<String> userPoolId) {
+        @Nullable Output<String> certificateArn,
+        Output<String> domain,
+        Output<String> userPoolId) {
         this.certificateArn = certificateArn;
         this.domain = Objects.requireNonNull(domain, "expected parameter 'domain' to be non-null");
         this.userPoolId = Objects.requireNonNull(userPoolId, "expected parameter 'userPoolId' to be non-null");
     }
 
     private UserPoolDomainArgs() {
-        this.certificateArn = Input.empty();
-        this.domain = Input.empty();
-        this.userPoolId = Input.empty();
+        this.certificateArn = Output.empty();
+        this.domain = Output.empty();
+        this.userPoolId = Output.empty();
     }
 
     public static Builder builder() {
@@ -71,9 +71,9 @@ public final class UserPoolDomainArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> certificateArn;
-        private Input<String> domain;
-        private Input<String> userPoolId;
+        private @Nullable Output<String> certificateArn;
+        private Output<String> domain;
+        private Output<String> userPoolId;
 
         public Builder() {
     	      // Empty
@@ -86,33 +86,33 @@ public final class UserPoolDomainArgs extends io.pulumi.resources.ResourceArgs {
     	      this.userPoolId = defaults.userPoolId;
         }
 
-        public Builder certificateArn(@Nullable Input<String> certificateArn) {
+        public Builder certificateArn(@Nullable Output<String> certificateArn) {
             this.certificateArn = certificateArn;
             return this;
         }
 
         public Builder certificateArn(@Nullable String certificateArn) {
-            this.certificateArn = Input.ofNullable(certificateArn);
+            this.certificateArn = Output.ofNullable(certificateArn);
             return this;
         }
 
-        public Builder domain(Input<String> domain) {
+        public Builder domain(Output<String> domain) {
             this.domain = Objects.requireNonNull(domain);
             return this;
         }
 
         public Builder domain(String domain) {
-            this.domain = Input.of(Objects.requireNonNull(domain));
+            this.domain = Output.of(Objects.requireNonNull(domain));
             return this;
         }
 
-        public Builder userPoolId(Input<String> userPoolId) {
+        public Builder userPoolId(Output<String> userPoolId) {
             this.userPoolId = Objects.requireNonNull(userPoolId);
             return this;
         }
 
         public Builder userPoolId(String userPoolId) {
-            this.userPoolId = Input.of(Objects.requireNonNull(userPoolId));
+            this.userPoolId = Output.of(Objects.requireNonNull(userPoolId));
             return this;
         }
         public UserPoolDomainArgs build() {

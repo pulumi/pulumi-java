@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.healthcare;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.healthcare.inputs.FhirStoreIamMemberConditionArgs;
 import java.lang.String;
@@ -16,10 +16,10 @@ public final class FhirStoreIamMemberArgs extends io.pulumi.resources.ResourceAr
     public static final FhirStoreIamMemberArgs Empty = new FhirStoreIamMemberArgs();
 
     @InputImport(name="condition")
-      private final @Nullable Input<FhirStoreIamMemberConditionArgs> condition;
+      private final @Nullable Output<FhirStoreIamMemberConditionArgs> condition;
 
-    public Input<FhirStoreIamMemberConditionArgs> getCondition() {
-        return this.condition == null ? Input.empty() : this.condition;
+    public Output<FhirStoreIamMemberConditionArgs> getCondition() {
+        return this.condition == null ? Output.empty() : this.condition;
     }
 
     /**
@@ -30,16 +30,16 @@ public final class FhirStoreIamMemberArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="fhirStoreId", required=true)
-      private final Input<String> fhirStoreId;
+      private final Output<String> fhirStoreId;
 
-    public Input<String> getFhirStoreId() {
+    public Output<String> getFhirStoreId() {
         return this.fhirStoreId;
     }
 
     @InputImport(name="member", required=true)
-      private final Input<String> member;
+      private final Output<String> member;
 
-    public Input<String> getMember() {
+    public Output<String> getMember() {
         return this.member;
     }
 
@@ -50,17 +50,17 @@ public final class FhirStoreIamMemberArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="role", required=true)
-      private final Input<String> role;
+      private final Output<String> role;
 
-    public Input<String> getRole() {
+    public Output<String> getRole() {
         return this.role;
     }
 
     public FhirStoreIamMemberArgs(
-        @Nullable Input<FhirStoreIamMemberConditionArgs> condition,
-        Input<String> fhirStoreId,
-        Input<String> member,
-        Input<String> role) {
+        @Nullable Output<FhirStoreIamMemberConditionArgs> condition,
+        Output<String> fhirStoreId,
+        Output<String> member,
+        Output<String> role) {
         this.condition = condition;
         this.fhirStoreId = Objects.requireNonNull(fhirStoreId, "expected parameter 'fhirStoreId' to be non-null");
         this.member = Objects.requireNonNull(member, "expected parameter 'member' to be non-null");
@@ -68,10 +68,10 @@ public final class FhirStoreIamMemberArgs extends io.pulumi.resources.ResourceAr
     }
 
     private FhirStoreIamMemberArgs() {
-        this.condition = Input.empty();
-        this.fhirStoreId = Input.empty();
-        this.member = Input.empty();
-        this.role = Input.empty();
+        this.condition = Output.empty();
+        this.fhirStoreId = Output.empty();
+        this.member = Output.empty();
+        this.role = Output.empty();
     }
 
     public static Builder builder() {
@@ -83,10 +83,10 @@ public final class FhirStoreIamMemberArgs extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private @Nullable Input<FhirStoreIamMemberConditionArgs> condition;
-        private Input<String> fhirStoreId;
-        private Input<String> member;
-        private Input<String> role;
+        private @Nullable Output<FhirStoreIamMemberConditionArgs> condition;
+        private Output<String> fhirStoreId;
+        private Output<String> member;
+        private Output<String> role;
 
         public Builder() {
     	      // Empty
@@ -100,43 +100,43 @@ public final class FhirStoreIamMemberArgs extends io.pulumi.resources.ResourceAr
     	      this.role = defaults.role;
         }
 
-        public Builder condition(@Nullable Input<FhirStoreIamMemberConditionArgs> condition) {
+        public Builder condition(@Nullable Output<FhirStoreIamMemberConditionArgs> condition) {
             this.condition = condition;
             return this;
         }
 
         public Builder condition(@Nullable FhirStoreIamMemberConditionArgs condition) {
-            this.condition = Input.ofNullable(condition);
+            this.condition = Output.ofNullable(condition);
             return this;
         }
 
-        public Builder fhirStoreId(Input<String> fhirStoreId) {
+        public Builder fhirStoreId(Output<String> fhirStoreId) {
             this.fhirStoreId = Objects.requireNonNull(fhirStoreId);
             return this;
         }
 
         public Builder fhirStoreId(String fhirStoreId) {
-            this.fhirStoreId = Input.of(Objects.requireNonNull(fhirStoreId));
+            this.fhirStoreId = Output.of(Objects.requireNonNull(fhirStoreId));
             return this;
         }
 
-        public Builder member(Input<String> member) {
+        public Builder member(Output<String> member) {
             this.member = Objects.requireNonNull(member);
             return this;
         }
 
         public Builder member(String member) {
-            this.member = Input.of(Objects.requireNonNull(member));
+            this.member = Output.of(Objects.requireNonNull(member));
             return this;
         }
 
-        public Builder role(Input<String> role) {
+        public Builder role(Output<String> role) {
             this.role = Objects.requireNonNull(role);
             return this;
         }
 
         public Builder role(String role) {
-            this.role = Input.of(Objects.requireNonNull(role));
+            this.role = Output.of(Objects.requireNonNull(role));
             return this;
         }
         public FhirStoreIamMemberArgs build() {

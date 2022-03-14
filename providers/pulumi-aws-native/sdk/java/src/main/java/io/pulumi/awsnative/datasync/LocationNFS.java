@@ -8,7 +8,6 @@ import io.pulumi.awsnative.datasync.LocationNFSArgs;
 import io.pulumi.awsnative.datasync.outputs.LocationNFSMountOptions;
 import io.pulumi.awsnative.datasync.outputs.LocationNFSOnPremConfig;
 import io.pulumi.awsnative.datasync.outputs.LocationNFSTag;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -145,14 +144,14 @@ public class LocationNFS extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public LocationNFS(String name, LocationNFSArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:datasync:LocationNFS", name, args == null ? LocationNFSArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws-native:datasync:LocationNFS", name, args == null ? LocationNFSArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private LocationNFS(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private LocationNFS(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws-native:datasync:LocationNFS", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -167,7 +166,7 @@ public class LocationNFS extends io.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static LocationNFS get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static LocationNFS get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new LocationNFS(name, id, options);
     }
 }

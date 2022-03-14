@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.iam.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.iam.inputs.WorkloadIdentityPoolProviderAwsGetArgs;
 import io.pulumi.gcp.iam.inputs.WorkloadIdentityPoolProviderOidcGetArgs;
@@ -34,10 +34,10 @@ public final class WorkloadIdentityPoolProviderState extends io.pulumi.resources
      * 
      */
     @InputImport(name="attributeCondition")
-      private final @Nullable Input<String> attributeCondition;
+      private final @Nullable Output<String> attributeCondition;
 
-    public Input<String> getAttributeCondition() {
-        return this.attributeCondition == null ? Input.empty() : this.attributeCondition;
+    public Output<String> getAttributeCondition() {
+        return this.attributeCondition == null ? Output.empty() : this.attributeCondition;
     }
 
     /**
@@ -81,10 +81,10 @@ public final class WorkloadIdentityPoolProviderState extends io.pulumi.resources
      * 
      */
     @InputImport(name="attributeMapping")
-      private final @Nullable Input<Map<String,String>> attributeMapping;
+      private final @Nullable Output<Map<String,String>> attributeMapping;
 
-    public Input<Map<String,String>> getAttributeMapping() {
-        return this.attributeMapping == null ? Input.empty() : this.attributeMapping;
+    public Output<Map<String,String>> getAttributeMapping() {
+        return this.attributeMapping == null ? Output.empty() : this.attributeMapping;
     }
 
     /**
@@ -93,10 +93,10 @@ public final class WorkloadIdentityPoolProviderState extends io.pulumi.resources
      * 
      */
     @InputImport(name="aws")
-      private final @Nullable Input<WorkloadIdentityPoolProviderAwsGetArgs> aws;
+      private final @Nullable Output<WorkloadIdentityPoolProviderAwsGetArgs> aws;
 
-    public Input<WorkloadIdentityPoolProviderAwsGetArgs> getAws() {
-        return this.aws == null ? Input.empty() : this.aws;
+    public Output<WorkloadIdentityPoolProviderAwsGetArgs> getAws() {
+        return this.aws == null ? Output.empty() : this.aws;
     }
 
     /**
@@ -104,10 +104,10 @@ public final class WorkloadIdentityPoolProviderState extends io.pulumi.resources
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -116,10 +116,10 @@ public final class WorkloadIdentityPoolProviderState extends io.pulumi.resources
      * 
      */
     @InputImport(name="disabled")
-      private final @Nullable Input<Boolean> disabled;
+      private final @Nullable Output<Boolean> disabled;
 
-    public Input<Boolean> getDisabled() {
-        return this.disabled == null ? Input.empty() : this.disabled;
+    public Output<Boolean> getDisabled() {
+        return this.disabled == null ? Output.empty() : this.disabled;
     }
 
     /**
@@ -127,10 +127,10 @@ public final class WorkloadIdentityPoolProviderState extends io.pulumi.resources
      * 
      */
     @InputImport(name="displayName")
-      private final @Nullable Input<String> displayName;
+      private final @Nullable Output<String> displayName;
 
-    public Input<String> getDisplayName() {
-        return this.displayName == null ? Input.empty() : this.displayName;
+    public Output<String> getDisplayName() {
+        return this.displayName == null ? Output.empty() : this.displayName;
     }
 
     /**
@@ -139,10 +139,10 @@ public final class WorkloadIdentityPoolProviderState extends io.pulumi.resources
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -151,10 +151,10 @@ public final class WorkloadIdentityPoolProviderState extends io.pulumi.resources
      * 
      */
     @InputImport(name="oidc")
-      private final @Nullable Input<WorkloadIdentityPoolProviderOidcGetArgs> oidc;
+      private final @Nullable Output<WorkloadIdentityPoolProviderOidcGetArgs> oidc;
 
-    public Input<WorkloadIdentityPoolProviderOidcGetArgs> getOidc() {
-        return this.oidc == null ? Input.empty() : this.oidc;
+    public Output<WorkloadIdentityPoolProviderOidcGetArgs> getOidc() {
+        return this.oidc == null ? Output.empty() : this.oidc;
     }
 
     /**
@@ -163,10 +163,10 @@ public final class WorkloadIdentityPoolProviderState extends io.pulumi.resources
      * 
      */
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -177,10 +177,10 @@ public final class WorkloadIdentityPoolProviderState extends io.pulumi.resources
      * 
      */
     @InputImport(name="state")
-      private final @Nullable Input<String> state;
+      private final @Nullable Output<String> state;
 
-    public Input<String> getState() {
-        return this.state == null ? Input.empty() : this.state;
+    public Output<String> getState() {
+        return this.state == null ? Output.empty() : this.state;
     }
 
     /**
@@ -190,10 +190,10 @@ public final class WorkloadIdentityPoolProviderState extends io.pulumi.resources
      * 
      */
     @InputImport(name="workloadIdentityPoolId")
-      private final @Nullable Input<String> workloadIdentityPoolId;
+      private final @Nullable Output<String> workloadIdentityPoolId;
 
-    public Input<String> getWorkloadIdentityPoolId() {
-        return this.workloadIdentityPoolId == null ? Input.empty() : this.workloadIdentityPoolId;
+    public Output<String> getWorkloadIdentityPoolId() {
+        return this.workloadIdentityPoolId == null ? Output.empty() : this.workloadIdentityPoolId;
     }
 
     /**
@@ -203,25 +203,25 @@ public final class WorkloadIdentityPoolProviderState extends io.pulumi.resources
      * 
      */
     @InputImport(name="workloadIdentityPoolProviderId")
-      private final @Nullable Input<String> workloadIdentityPoolProviderId;
+      private final @Nullable Output<String> workloadIdentityPoolProviderId;
 
-    public Input<String> getWorkloadIdentityPoolProviderId() {
-        return this.workloadIdentityPoolProviderId == null ? Input.empty() : this.workloadIdentityPoolProviderId;
+    public Output<String> getWorkloadIdentityPoolProviderId() {
+        return this.workloadIdentityPoolProviderId == null ? Output.empty() : this.workloadIdentityPoolProviderId;
     }
 
     public WorkloadIdentityPoolProviderState(
-        @Nullable Input<String> attributeCondition,
-        @Nullable Input<Map<String,String>> attributeMapping,
-        @Nullable Input<WorkloadIdentityPoolProviderAwsGetArgs> aws,
-        @Nullable Input<String> description,
-        @Nullable Input<Boolean> disabled,
-        @Nullable Input<String> displayName,
-        @Nullable Input<String> name,
-        @Nullable Input<WorkloadIdentityPoolProviderOidcGetArgs> oidc,
-        @Nullable Input<String> project,
-        @Nullable Input<String> state,
-        @Nullable Input<String> workloadIdentityPoolId,
-        @Nullable Input<String> workloadIdentityPoolProviderId) {
+        @Nullable Output<String> attributeCondition,
+        @Nullable Output<Map<String,String>> attributeMapping,
+        @Nullable Output<WorkloadIdentityPoolProviderAwsGetArgs> aws,
+        @Nullable Output<String> description,
+        @Nullable Output<Boolean> disabled,
+        @Nullable Output<String> displayName,
+        @Nullable Output<String> name,
+        @Nullable Output<WorkloadIdentityPoolProviderOidcGetArgs> oidc,
+        @Nullable Output<String> project,
+        @Nullable Output<String> state,
+        @Nullable Output<String> workloadIdentityPoolId,
+        @Nullable Output<String> workloadIdentityPoolProviderId) {
         this.attributeCondition = attributeCondition;
         this.attributeMapping = attributeMapping;
         this.aws = aws;
@@ -237,18 +237,18 @@ public final class WorkloadIdentityPoolProviderState extends io.pulumi.resources
     }
 
     private WorkloadIdentityPoolProviderState() {
-        this.attributeCondition = Input.empty();
-        this.attributeMapping = Input.empty();
-        this.aws = Input.empty();
-        this.description = Input.empty();
-        this.disabled = Input.empty();
-        this.displayName = Input.empty();
-        this.name = Input.empty();
-        this.oidc = Input.empty();
-        this.project = Input.empty();
-        this.state = Input.empty();
-        this.workloadIdentityPoolId = Input.empty();
-        this.workloadIdentityPoolProviderId = Input.empty();
+        this.attributeCondition = Output.empty();
+        this.attributeMapping = Output.empty();
+        this.aws = Output.empty();
+        this.description = Output.empty();
+        this.disabled = Output.empty();
+        this.displayName = Output.empty();
+        this.name = Output.empty();
+        this.oidc = Output.empty();
+        this.project = Output.empty();
+        this.state = Output.empty();
+        this.workloadIdentityPoolId = Output.empty();
+        this.workloadIdentityPoolProviderId = Output.empty();
     }
 
     public static Builder builder() {
@@ -260,18 +260,18 @@ public final class WorkloadIdentityPoolProviderState extends io.pulumi.resources
     }
 
     public static final class Builder {
-        private @Nullable Input<String> attributeCondition;
-        private @Nullable Input<Map<String,String>> attributeMapping;
-        private @Nullable Input<WorkloadIdentityPoolProviderAwsGetArgs> aws;
-        private @Nullable Input<String> description;
-        private @Nullable Input<Boolean> disabled;
-        private @Nullable Input<String> displayName;
-        private @Nullable Input<String> name;
-        private @Nullable Input<WorkloadIdentityPoolProviderOidcGetArgs> oidc;
-        private @Nullable Input<String> project;
-        private @Nullable Input<String> state;
-        private @Nullable Input<String> workloadIdentityPoolId;
-        private @Nullable Input<String> workloadIdentityPoolProviderId;
+        private @Nullable Output<String> attributeCondition;
+        private @Nullable Output<Map<String,String>> attributeMapping;
+        private @Nullable Output<WorkloadIdentityPoolProviderAwsGetArgs> aws;
+        private @Nullable Output<String> description;
+        private @Nullable Output<Boolean> disabled;
+        private @Nullable Output<String> displayName;
+        private @Nullable Output<String> name;
+        private @Nullable Output<WorkloadIdentityPoolProviderOidcGetArgs> oidc;
+        private @Nullable Output<String> project;
+        private @Nullable Output<String> state;
+        private @Nullable Output<String> workloadIdentityPoolId;
+        private @Nullable Output<String> workloadIdentityPoolProviderId;
 
         public Builder() {
     	      // Empty
@@ -293,123 +293,123 @@ public final class WorkloadIdentityPoolProviderState extends io.pulumi.resources
     	      this.workloadIdentityPoolProviderId = defaults.workloadIdentityPoolProviderId;
         }
 
-        public Builder attributeCondition(@Nullable Input<String> attributeCondition) {
+        public Builder attributeCondition(@Nullable Output<String> attributeCondition) {
             this.attributeCondition = attributeCondition;
             return this;
         }
 
         public Builder attributeCondition(@Nullable String attributeCondition) {
-            this.attributeCondition = Input.ofNullable(attributeCondition);
+            this.attributeCondition = Output.ofNullable(attributeCondition);
             return this;
         }
 
-        public Builder attributeMapping(@Nullable Input<Map<String,String>> attributeMapping) {
+        public Builder attributeMapping(@Nullable Output<Map<String,String>> attributeMapping) {
             this.attributeMapping = attributeMapping;
             return this;
         }
 
         public Builder attributeMapping(@Nullable Map<String,String> attributeMapping) {
-            this.attributeMapping = Input.ofNullable(attributeMapping);
+            this.attributeMapping = Output.ofNullable(attributeMapping);
             return this;
         }
 
-        public Builder aws(@Nullable Input<WorkloadIdentityPoolProviderAwsGetArgs> aws) {
+        public Builder aws(@Nullable Output<WorkloadIdentityPoolProviderAwsGetArgs> aws) {
             this.aws = aws;
             return this;
         }
 
         public Builder aws(@Nullable WorkloadIdentityPoolProviderAwsGetArgs aws) {
-            this.aws = Input.ofNullable(aws);
+            this.aws = Output.ofNullable(aws);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder disabled(@Nullable Input<Boolean> disabled) {
+        public Builder disabled(@Nullable Output<Boolean> disabled) {
             this.disabled = disabled;
             return this;
         }
 
         public Builder disabled(@Nullable Boolean disabled) {
-            this.disabled = Input.ofNullable(disabled);
+            this.disabled = Output.ofNullable(disabled);
             return this;
         }
 
-        public Builder displayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Input.ofNullable(displayName);
+            this.displayName = Output.ofNullable(displayName);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder oidc(@Nullable Input<WorkloadIdentityPoolProviderOidcGetArgs> oidc) {
+        public Builder oidc(@Nullable Output<WorkloadIdentityPoolProviderOidcGetArgs> oidc) {
             this.oidc = oidc;
             return this;
         }
 
         public Builder oidc(@Nullable WorkloadIdentityPoolProviderOidcGetArgs oidc) {
-            this.oidc = Input.ofNullable(oidc);
+            this.oidc = Output.ofNullable(oidc);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder state(@Nullable Input<String> state) {
+        public Builder state(@Nullable Output<String> state) {
             this.state = state;
             return this;
         }
 
         public Builder state(@Nullable String state) {
-            this.state = Input.ofNullable(state);
+            this.state = Output.ofNullable(state);
             return this;
         }
 
-        public Builder workloadIdentityPoolId(@Nullable Input<String> workloadIdentityPoolId) {
+        public Builder workloadIdentityPoolId(@Nullable Output<String> workloadIdentityPoolId) {
             this.workloadIdentityPoolId = workloadIdentityPoolId;
             return this;
         }
 
         public Builder workloadIdentityPoolId(@Nullable String workloadIdentityPoolId) {
-            this.workloadIdentityPoolId = Input.ofNullable(workloadIdentityPoolId);
+            this.workloadIdentityPoolId = Output.ofNullable(workloadIdentityPoolId);
             return this;
         }
 
-        public Builder workloadIdentityPoolProviderId(@Nullable Input<String> workloadIdentityPoolProviderId) {
+        public Builder workloadIdentityPoolProviderId(@Nullable Output<String> workloadIdentityPoolProviderId) {
             this.workloadIdentityPoolProviderId = workloadIdentityPoolProviderId;
             return this;
         }
 
         public Builder workloadIdentityPoolProviderId(@Nullable String workloadIdentityPoolProviderId) {
-            this.workloadIdentityPoolProviderId = Input.ofNullable(workloadIdentityPoolProviderId);
+            this.workloadIdentityPoolProviderId = Output.ofNullable(workloadIdentityPoolProviderId);
             return this;
         }
         public WorkloadIdentityPoolProviderState build() {

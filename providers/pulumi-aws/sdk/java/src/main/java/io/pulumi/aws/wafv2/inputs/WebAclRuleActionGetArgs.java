@@ -6,7 +6,7 @@ package io.pulumi.aws.wafv2.inputs;
 import io.pulumi.aws.wafv2.inputs.WebAclRuleActionAllowGetArgs;
 import io.pulumi.aws.wafv2.inputs.WebAclRuleActionBlockGetArgs;
 import io.pulumi.aws.wafv2.inputs.WebAclRuleActionCountGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,10 +21,10 @@ public final class WebAclRuleActionGetArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="allow")
-      private final @Nullable Input<WebAclRuleActionAllowGetArgs> allow;
+      private final @Nullable Output<WebAclRuleActionAllowGetArgs> allow;
 
-    public Input<WebAclRuleActionAllowGetArgs> getAllow() {
-        return this.allow == null ? Input.empty() : this.allow;
+    public Output<WebAclRuleActionAllowGetArgs> getAllow() {
+        return this.allow == null ? Output.empty() : this.allow;
     }
 
     /**
@@ -32,10 +32,10 @@ public final class WebAclRuleActionGetArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="block")
-      private final @Nullable Input<WebAclRuleActionBlockGetArgs> block;
+      private final @Nullable Output<WebAclRuleActionBlockGetArgs> block;
 
-    public Input<WebAclRuleActionBlockGetArgs> getBlock() {
-        return this.block == null ? Input.empty() : this.block;
+    public Output<WebAclRuleActionBlockGetArgs> getBlock() {
+        return this.block == null ? Output.empty() : this.block;
     }
 
     /**
@@ -43,25 +43,25 @@ public final class WebAclRuleActionGetArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="count")
-      private final @Nullable Input<WebAclRuleActionCountGetArgs> count;
+      private final @Nullable Output<WebAclRuleActionCountGetArgs> count;
 
-    public Input<WebAclRuleActionCountGetArgs> getCount() {
-        return this.count == null ? Input.empty() : this.count;
+    public Output<WebAclRuleActionCountGetArgs> getCount() {
+        return this.count == null ? Output.empty() : this.count;
     }
 
     public WebAclRuleActionGetArgs(
-        @Nullable Input<WebAclRuleActionAllowGetArgs> allow,
-        @Nullable Input<WebAclRuleActionBlockGetArgs> block,
-        @Nullable Input<WebAclRuleActionCountGetArgs> count) {
+        @Nullable Output<WebAclRuleActionAllowGetArgs> allow,
+        @Nullable Output<WebAclRuleActionBlockGetArgs> block,
+        @Nullable Output<WebAclRuleActionCountGetArgs> count) {
         this.allow = allow;
         this.block = block;
         this.count = count;
     }
 
     private WebAclRuleActionGetArgs() {
-        this.allow = Input.empty();
-        this.block = Input.empty();
-        this.count = Input.empty();
+        this.allow = Output.empty();
+        this.block = Output.empty();
+        this.count = Output.empty();
     }
 
     public static Builder builder() {
@@ -73,9 +73,9 @@ public final class WebAclRuleActionGetArgs extends io.pulumi.resources.ResourceA
     }
 
     public static final class Builder {
-        private @Nullable Input<WebAclRuleActionAllowGetArgs> allow;
-        private @Nullable Input<WebAclRuleActionBlockGetArgs> block;
-        private @Nullable Input<WebAclRuleActionCountGetArgs> count;
+        private @Nullable Output<WebAclRuleActionAllowGetArgs> allow;
+        private @Nullable Output<WebAclRuleActionBlockGetArgs> block;
+        private @Nullable Output<WebAclRuleActionCountGetArgs> count;
 
         public Builder() {
     	      // Empty
@@ -88,33 +88,33 @@ public final class WebAclRuleActionGetArgs extends io.pulumi.resources.ResourceA
     	      this.count = defaults.count;
         }
 
-        public Builder allow(@Nullable Input<WebAclRuleActionAllowGetArgs> allow) {
+        public Builder allow(@Nullable Output<WebAclRuleActionAllowGetArgs> allow) {
             this.allow = allow;
             return this;
         }
 
         public Builder allow(@Nullable WebAclRuleActionAllowGetArgs allow) {
-            this.allow = Input.ofNullable(allow);
+            this.allow = Output.ofNullable(allow);
             return this;
         }
 
-        public Builder block(@Nullable Input<WebAclRuleActionBlockGetArgs> block) {
+        public Builder block(@Nullable Output<WebAclRuleActionBlockGetArgs> block) {
             this.block = block;
             return this;
         }
 
         public Builder block(@Nullable WebAclRuleActionBlockGetArgs block) {
-            this.block = Input.ofNullable(block);
+            this.block = Output.ofNullable(block);
             return this;
         }
 
-        public Builder count(@Nullable Input<WebAclRuleActionCountGetArgs> count) {
+        public Builder count(@Nullable Output<WebAclRuleActionCountGetArgs> count) {
             this.count = count;
             return this;
         }
 
         public Builder count(@Nullable WebAclRuleActionCountGetArgs count) {
-            this.count = Input.ofNullable(count);
+            this.count = Output.ofNullable(count);
             return this;
         }
         public WebAclRuleActionGetArgs build() {

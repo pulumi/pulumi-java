@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.kms.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class AliasState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arn")
-      private final @Nullable Input<String> arn;
+      private final @Nullable Output<String> arn;
 
-    public Input<String> getArn() {
-        return this.arn == null ? Input.empty() : this.arn;
+    public Output<String> getArn() {
+        return this.arn == null ? Output.empty() : this.arn;
     }
 
     /**
@@ -30,10 +30,10 @@ public final class AliasState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -42,10 +42,10 @@ public final class AliasState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="namePrefix")
-      private final @Nullable Input<String> namePrefix;
+      private final @Nullable Output<String> namePrefix;
 
-    public Input<String> getNamePrefix() {
-        return this.namePrefix == null ? Input.empty() : this.namePrefix;
+    public Output<String> getNamePrefix() {
+        return this.namePrefix == null ? Output.empty() : this.namePrefix;
     }
 
     /**
@@ -53,10 +53,10 @@ public final class AliasState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="targetKeyArn")
-      private final @Nullable Input<String> targetKeyArn;
+      private final @Nullable Output<String> targetKeyArn;
 
-    public Input<String> getTargetKeyArn() {
-        return this.targetKeyArn == null ? Input.empty() : this.targetKeyArn;
+    public Output<String> getTargetKeyArn() {
+        return this.targetKeyArn == null ? Output.empty() : this.targetKeyArn;
     }
 
     /**
@@ -64,18 +64,18 @@ public final class AliasState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="targetKeyId")
-      private final @Nullable Input<String> targetKeyId;
+      private final @Nullable Output<String> targetKeyId;
 
-    public Input<String> getTargetKeyId() {
-        return this.targetKeyId == null ? Input.empty() : this.targetKeyId;
+    public Output<String> getTargetKeyId() {
+        return this.targetKeyId == null ? Output.empty() : this.targetKeyId;
     }
 
     public AliasState(
-        @Nullable Input<String> arn,
-        @Nullable Input<String> name,
-        @Nullable Input<String> namePrefix,
-        @Nullable Input<String> targetKeyArn,
-        @Nullable Input<String> targetKeyId) {
+        @Nullable Output<String> arn,
+        @Nullable Output<String> name,
+        @Nullable Output<String> namePrefix,
+        @Nullable Output<String> targetKeyArn,
+        @Nullable Output<String> targetKeyId) {
         this.arn = arn;
         this.name = name;
         this.namePrefix = namePrefix;
@@ -84,11 +84,11 @@ public final class AliasState extends io.pulumi.resources.ResourceArgs {
     }
 
     private AliasState() {
-        this.arn = Input.empty();
-        this.name = Input.empty();
-        this.namePrefix = Input.empty();
-        this.targetKeyArn = Input.empty();
-        this.targetKeyId = Input.empty();
+        this.arn = Output.empty();
+        this.name = Output.empty();
+        this.namePrefix = Output.empty();
+        this.targetKeyArn = Output.empty();
+        this.targetKeyId = Output.empty();
     }
 
     public static Builder builder() {
@@ -100,11 +100,11 @@ public final class AliasState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> arn;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> namePrefix;
-        private @Nullable Input<String> targetKeyArn;
-        private @Nullable Input<String> targetKeyId;
+        private @Nullable Output<String> arn;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> namePrefix;
+        private @Nullable Output<String> targetKeyArn;
+        private @Nullable Output<String> targetKeyId;
 
         public Builder() {
     	      // Empty
@@ -119,53 +119,53 @@ public final class AliasState extends io.pulumi.resources.ResourceArgs {
     	      this.targetKeyId = defaults.targetKeyId;
         }
 
-        public Builder arn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
 
         public Builder arn(@Nullable String arn) {
-            this.arn = Input.ofNullable(arn);
+            this.arn = Output.ofNullable(arn);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder namePrefix(@Nullable Input<String> namePrefix) {
+        public Builder namePrefix(@Nullable Output<String> namePrefix) {
             this.namePrefix = namePrefix;
             return this;
         }
 
         public Builder namePrefix(@Nullable String namePrefix) {
-            this.namePrefix = Input.ofNullable(namePrefix);
+            this.namePrefix = Output.ofNullable(namePrefix);
             return this;
         }
 
-        public Builder targetKeyArn(@Nullable Input<String> targetKeyArn) {
+        public Builder targetKeyArn(@Nullable Output<String> targetKeyArn) {
             this.targetKeyArn = targetKeyArn;
             return this;
         }
 
         public Builder targetKeyArn(@Nullable String targetKeyArn) {
-            this.targetKeyArn = Input.ofNullable(targetKeyArn);
+            this.targetKeyArn = Output.ofNullable(targetKeyArn);
             return this;
         }
 
-        public Builder targetKeyId(@Nullable Input<String> targetKeyId) {
+        public Builder targetKeyId(@Nullable Output<String> targetKeyId) {
             this.targetKeyId = targetKeyId;
             return this;
         }
 
         public Builder targetKeyId(@Nullable String targetKeyId) {
-            this.targetKeyId = Input.ofNullable(targetKeyId);
+            this.targetKeyId = Output.ofNullable(targetKeyId);
             return this;
         }
         public AliasState build() {

@@ -6,7 +6,7 @@ package io.pulumi.awsnative.backup;
 import io.pulumi.awsnative.backup.inputs.ReportDeliveryChannelPropertiesArgs;
 import io.pulumi.awsnative.backup.inputs.ReportPlanTagArgs;
 import io.pulumi.awsnative.backup.inputs.ReportSettingPropertiesArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -23,9 +23,9 @@ public final class ReportPlanArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="reportDeliveryChannel", required=true)
-      private final Input<ReportDeliveryChannelPropertiesArgs> reportDeliveryChannel;
+      private final Output<ReportDeliveryChannelPropertiesArgs> reportDeliveryChannel;
 
-    public Input<ReportDeliveryChannelPropertiesArgs> getReportDeliveryChannel() {
+    public Output<ReportDeliveryChannelPropertiesArgs> getReportDeliveryChannel() {
         return this.reportDeliveryChannel;
     }
 
@@ -34,10 +34,10 @@ public final class ReportPlanArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="reportPlanDescription")
-      private final @Nullable Input<String> reportPlanDescription;
+      private final @Nullable Output<String> reportPlanDescription;
 
-    public Input<String> getReportPlanDescription() {
-        return this.reportPlanDescription == null ? Input.empty() : this.reportPlanDescription;
+    public Output<String> getReportPlanDescription() {
+        return this.reportPlanDescription == null ? Output.empty() : this.reportPlanDescription;
     }
 
     /**
@@ -45,10 +45,10 @@ public final class ReportPlanArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="reportPlanName")
-      private final @Nullable Input<String> reportPlanName;
+      private final @Nullable Output<String> reportPlanName;
 
-    public Input<String> getReportPlanName() {
-        return this.reportPlanName == null ? Input.empty() : this.reportPlanName;
+    public Output<String> getReportPlanName() {
+        return this.reportPlanName == null ? Output.empty() : this.reportPlanName;
     }
 
     /**
@@ -56,10 +56,10 @@ public final class ReportPlanArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="reportPlanTags")
-      private final @Nullable Input<List<ReportPlanTagArgs>> reportPlanTags;
+      private final @Nullable Output<List<ReportPlanTagArgs>> reportPlanTags;
 
-    public Input<List<ReportPlanTagArgs>> getReportPlanTags() {
-        return this.reportPlanTags == null ? Input.empty() : this.reportPlanTags;
+    public Output<List<ReportPlanTagArgs>> getReportPlanTags() {
+        return this.reportPlanTags == null ? Output.empty() : this.reportPlanTags;
     }
 
     /**
@@ -67,18 +67,18 @@ public final class ReportPlanArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="reportSetting", required=true)
-      private final Input<ReportSettingPropertiesArgs> reportSetting;
+      private final Output<ReportSettingPropertiesArgs> reportSetting;
 
-    public Input<ReportSettingPropertiesArgs> getReportSetting() {
+    public Output<ReportSettingPropertiesArgs> getReportSetting() {
         return this.reportSetting;
     }
 
     public ReportPlanArgs(
-        Input<ReportDeliveryChannelPropertiesArgs> reportDeliveryChannel,
-        @Nullable Input<String> reportPlanDescription,
-        @Nullable Input<String> reportPlanName,
-        @Nullable Input<List<ReportPlanTagArgs>> reportPlanTags,
-        Input<ReportSettingPropertiesArgs> reportSetting) {
+        Output<ReportDeliveryChannelPropertiesArgs> reportDeliveryChannel,
+        @Nullable Output<String> reportPlanDescription,
+        @Nullable Output<String> reportPlanName,
+        @Nullable Output<List<ReportPlanTagArgs>> reportPlanTags,
+        Output<ReportSettingPropertiesArgs> reportSetting) {
         this.reportDeliveryChannel = Objects.requireNonNull(reportDeliveryChannel, "expected parameter 'reportDeliveryChannel' to be non-null");
         this.reportPlanDescription = reportPlanDescription;
         this.reportPlanName = reportPlanName;
@@ -87,11 +87,11 @@ public final class ReportPlanArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ReportPlanArgs() {
-        this.reportDeliveryChannel = Input.empty();
-        this.reportPlanDescription = Input.empty();
-        this.reportPlanName = Input.empty();
-        this.reportPlanTags = Input.empty();
-        this.reportSetting = Input.empty();
+        this.reportDeliveryChannel = Output.empty();
+        this.reportPlanDescription = Output.empty();
+        this.reportPlanName = Output.empty();
+        this.reportPlanTags = Output.empty();
+        this.reportSetting = Output.empty();
     }
 
     public static Builder builder() {
@@ -103,11 +103,11 @@ public final class ReportPlanArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<ReportDeliveryChannelPropertiesArgs> reportDeliveryChannel;
-        private @Nullable Input<String> reportPlanDescription;
-        private @Nullable Input<String> reportPlanName;
-        private @Nullable Input<List<ReportPlanTagArgs>> reportPlanTags;
-        private Input<ReportSettingPropertiesArgs> reportSetting;
+        private Output<ReportDeliveryChannelPropertiesArgs> reportDeliveryChannel;
+        private @Nullable Output<String> reportPlanDescription;
+        private @Nullable Output<String> reportPlanName;
+        private @Nullable Output<List<ReportPlanTagArgs>> reportPlanTags;
+        private Output<ReportSettingPropertiesArgs> reportSetting;
 
         public Builder() {
     	      // Empty
@@ -122,53 +122,53 @@ public final class ReportPlanArgs extends io.pulumi.resources.ResourceArgs {
     	      this.reportSetting = defaults.reportSetting;
         }
 
-        public Builder reportDeliveryChannel(Input<ReportDeliveryChannelPropertiesArgs> reportDeliveryChannel) {
+        public Builder reportDeliveryChannel(Output<ReportDeliveryChannelPropertiesArgs> reportDeliveryChannel) {
             this.reportDeliveryChannel = Objects.requireNonNull(reportDeliveryChannel);
             return this;
         }
 
         public Builder reportDeliveryChannel(ReportDeliveryChannelPropertiesArgs reportDeliveryChannel) {
-            this.reportDeliveryChannel = Input.of(Objects.requireNonNull(reportDeliveryChannel));
+            this.reportDeliveryChannel = Output.of(Objects.requireNonNull(reportDeliveryChannel));
             return this;
         }
 
-        public Builder reportPlanDescription(@Nullable Input<String> reportPlanDescription) {
+        public Builder reportPlanDescription(@Nullable Output<String> reportPlanDescription) {
             this.reportPlanDescription = reportPlanDescription;
             return this;
         }
 
         public Builder reportPlanDescription(@Nullable String reportPlanDescription) {
-            this.reportPlanDescription = Input.ofNullable(reportPlanDescription);
+            this.reportPlanDescription = Output.ofNullable(reportPlanDescription);
             return this;
         }
 
-        public Builder reportPlanName(@Nullable Input<String> reportPlanName) {
+        public Builder reportPlanName(@Nullable Output<String> reportPlanName) {
             this.reportPlanName = reportPlanName;
             return this;
         }
 
         public Builder reportPlanName(@Nullable String reportPlanName) {
-            this.reportPlanName = Input.ofNullable(reportPlanName);
+            this.reportPlanName = Output.ofNullable(reportPlanName);
             return this;
         }
 
-        public Builder reportPlanTags(@Nullable Input<List<ReportPlanTagArgs>> reportPlanTags) {
+        public Builder reportPlanTags(@Nullable Output<List<ReportPlanTagArgs>> reportPlanTags) {
             this.reportPlanTags = reportPlanTags;
             return this;
         }
 
         public Builder reportPlanTags(@Nullable List<ReportPlanTagArgs> reportPlanTags) {
-            this.reportPlanTags = Input.ofNullable(reportPlanTags);
+            this.reportPlanTags = Output.ofNullable(reportPlanTags);
             return this;
         }
 
-        public Builder reportSetting(Input<ReportSettingPropertiesArgs> reportSetting) {
+        public Builder reportSetting(Output<ReportSettingPropertiesArgs> reportSetting) {
             this.reportSetting = Objects.requireNonNull(reportSetting);
             return this;
         }
 
         public Builder reportSetting(ReportSettingPropertiesArgs reportSetting) {
-            this.reportSetting = Input.of(Objects.requireNonNull(reportSetting));
+            this.reportSetting = Output.of(Objects.requireNonNull(reportSetting));
             return this;
         }
         public ReportPlanArgs build() {

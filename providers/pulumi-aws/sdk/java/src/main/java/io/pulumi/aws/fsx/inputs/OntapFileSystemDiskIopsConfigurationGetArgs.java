@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.fsx.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -20,10 +20,10 @@ public final class OntapFileSystemDiskIopsConfigurationGetArgs extends io.pulumi
      * 
      */
     @InputImport(name="iops")
-      private final @Nullable Input<Integer> iops;
+      private final @Nullable Output<Integer> iops;
 
-    public Input<Integer> getIops() {
-        return this.iops == null ? Input.empty() : this.iops;
+    public Output<Integer> getIops() {
+        return this.iops == null ? Output.empty() : this.iops;
     }
 
     /**
@@ -31,22 +31,22 @@ public final class OntapFileSystemDiskIopsConfigurationGetArgs extends io.pulumi
      * 
      */
     @InputImport(name="mode")
-      private final @Nullable Input<String> mode;
+      private final @Nullable Output<String> mode;
 
-    public Input<String> getMode() {
-        return this.mode == null ? Input.empty() : this.mode;
+    public Output<String> getMode() {
+        return this.mode == null ? Output.empty() : this.mode;
     }
 
     public OntapFileSystemDiskIopsConfigurationGetArgs(
-        @Nullable Input<Integer> iops,
-        @Nullable Input<String> mode) {
+        @Nullable Output<Integer> iops,
+        @Nullable Output<String> mode) {
         this.iops = iops;
         this.mode = mode;
     }
 
     private OntapFileSystemDiskIopsConfigurationGetArgs() {
-        this.iops = Input.empty();
-        this.mode = Input.empty();
+        this.iops = Output.empty();
+        this.mode = Output.empty();
     }
 
     public static Builder builder() {
@@ -58,8 +58,8 @@ public final class OntapFileSystemDiskIopsConfigurationGetArgs extends io.pulumi
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> iops;
-        private @Nullable Input<String> mode;
+        private @Nullable Output<Integer> iops;
+        private @Nullable Output<String> mode;
 
         public Builder() {
     	      // Empty
@@ -71,23 +71,23 @@ public final class OntapFileSystemDiskIopsConfigurationGetArgs extends io.pulumi
     	      this.mode = defaults.mode;
         }
 
-        public Builder iops(@Nullable Input<Integer> iops) {
+        public Builder iops(@Nullable Output<Integer> iops) {
             this.iops = iops;
             return this;
         }
 
         public Builder iops(@Nullable Integer iops) {
-            this.iops = Input.ofNullable(iops);
+            this.iops = Output.ofNullable(iops);
             return this;
         }
 
-        public Builder mode(@Nullable Input<String> mode) {
+        public Builder mode(@Nullable Output<String> mode) {
             this.mode = mode;
             return this;
         }
 
         public Builder mode(@Nullable String mode) {
-            this.mode = Input.ofNullable(mode);
+            this.mode = Output.ofNullable(mode);
             return this;
         }
         public OntapFileSystemDiskIopsConfigurationGetArgs build() {

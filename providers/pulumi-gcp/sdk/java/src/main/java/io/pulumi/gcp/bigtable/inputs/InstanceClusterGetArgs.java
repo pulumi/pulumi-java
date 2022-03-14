@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.bigtable.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -20,9 +20,9 @@ public final class InstanceClusterGetArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="clusterId", required=true)
-      private final Input<String> clusterId;
+      private final Output<String> clusterId;
 
-    public Input<String> getClusterId() {
+    public Output<String> getClusterId() {
         return this.clusterId;
     }
 
@@ -31,10 +31,10 @@ public final class InstanceClusterGetArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="kmsKeyName")
-      private final @Nullable Input<String> kmsKeyName;
+      private final @Nullable Output<String> kmsKeyName;
 
-    public Input<String> getKmsKeyName() {
-        return this.kmsKeyName == null ? Input.empty() : this.kmsKeyName;
+    public Output<String> getKmsKeyName() {
+        return this.kmsKeyName == null ? Output.empty() : this.kmsKeyName;
     }
 
     /**
@@ -44,10 +44,10 @@ public final class InstanceClusterGetArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="numNodes")
-      private final @Nullable Input<Integer> numNodes;
+      private final @Nullable Output<Integer> numNodes;
 
-    public Input<Integer> getNumNodes() {
-        return this.numNodes == null ? Input.empty() : this.numNodes;
+    public Output<Integer> getNumNodes() {
+        return this.numNodes == null ? Output.empty() : this.numNodes;
     }
 
     /**
@@ -56,10 +56,10 @@ public final class InstanceClusterGetArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="storageType")
-      private final @Nullable Input<String> storageType;
+      private final @Nullable Output<String> storageType;
 
-    public Input<String> getStorageType() {
-        return this.storageType == null ? Input.empty() : this.storageType;
+    public Output<String> getStorageType() {
+        return this.storageType == null ? Output.empty() : this.storageType;
     }
 
     /**
@@ -69,18 +69,18 @@ public final class InstanceClusterGetArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="zone")
-      private final @Nullable Input<String> zone;
+      private final @Nullable Output<String> zone;
 
-    public Input<String> getZone() {
-        return this.zone == null ? Input.empty() : this.zone;
+    public Output<String> getZone() {
+        return this.zone == null ? Output.empty() : this.zone;
     }
 
     public InstanceClusterGetArgs(
-        Input<String> clusterId,
-        @Nullable Input<String> kmsKeyName,
-        @Nullable Input<Integer> numNodes,
-        @Nullable Input<String> storageType,
-        @Nullable Input<String> zone) {
+        Output<String> clusterId,
+        @Nullable Output<String> kmsKeyName,
+        @Nullable Output<Integer> numNodes,
+        @Nullable Output<String> storageType,
+        @Nullable Output<String> zone) {
         this.clusterId = Objects.requireNonNull(clusterId, "expected parameter 'clusterId' to be non-null");
         this.kmsKeyName = kmsKeyName;
         this.numNodes = numNodes;
@@ -89,11 +89,11 @@ public final class InstanceClusterGetArgs extends io.pulumi.resources.ResourceAr
     }
 
     private InstanceClusterGetArgs() {
-        this.clusterId = Input.empty();
-        this.kmsKeyName = Input.empty();
-        this.numNodes = Input.empty();
-        this.storageType = Input.empty();
-        this.zone = Input.empty();
+        this.clusterId = Output.empty();
+        this.kmsKeyName = Output.empty();
+        this.numNodes = Output.empty();
+        this.storageType = Output.empty();
+        this.zone = Output.empty();
     }
 
     public static Builder builder() {
@@ -105,11 +105,11 @@ public final class InstanceClusterGetArgs extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private Input<String> clusterId;
-        private @Nullable Input<String> kmsKeyName;
-        private @Nullable Input<Integer> numNodes;
-        private @Nullable Input<String> storageType;
-        private @Nullable Input<String> zone;
+        private Output<String> clusterId;
+        private @Nullable Output<String> kmsKeyName;
+        private @Nullable Output<Integer> numNodes;
+        private @Nullable Output<String> storageType;
+        private @Nullable Output<String> zone;
 
         public Builder() {
     	      // Empty
@@ -124,53 +124,53 @@ public final class InstanceClusterGetArgs extends io.pulumi.resources.ResourceAr
     	      this.zone = defaults.zone;
         }
 
-        public Builder clusterId(Input<String> clusterId) {
+        public Builder clusterId(Output<String> clusterId) {
             this.clusterId = Objects.requireNonNull(clusterId);
             return this;
         }
 
         public Builder clusterId(String clusterId) {
-            this.clusterId = Input.of(Objects.requireNonNull(clusterId));
+            this.clusterId = Output.of(Objects.requireNonNull(clusterId));
             return this;
         }
 
-        public Builder kmsKeyName(@Nullable Input<String> kmsKeyName) {
+        public Builder kmsKeyName(@Nullable Output<String> kmsKeyName) {
             this.kmsKeyName = kmsKeyName;
             return this;
         }
 
         public Builder kmsKeyName(@Nullable String kmsKeyName) {
-            this.kmsKeyName = Input.ofNullable(kmsKeyName);
+            this.kmsKeyName = Output.ofNullable(kmsKeyName);
             return this;
         }
 
-        public Builder numNodes(@Nullable Input<Integer> numNodes) {
+        public Builder numNodes(@Nullable Output<Integer> numNodes) {
             this.numNodes = numNodes;
             return this;
         }
 
         public Builder numNodes(@Nullable Integer numNodes) {
-            this.numNodes = Input.ofNullable(numNodes);
+            this.numNodes = Output.ofNullable(numNodes);
             return this;
         }
 
-        public Builder storageType(@Nullable Input<String> storageType) {
+        public Builder storageType(@Nullable Output<String> storageType) {
             this.storageType = storageType;
             return this;
         }
 
         public Builder storageType(@Nullable String storageType) {
-            this.storageType = Input.ofNullable(storageType);
+            this.storageType = Output.ofNullable(storageType);
             return this;
         }
 
-        public Builder zone(@Nullable Input<String> zone) {
+        public Builder zone(@Nullable Output<String> zone) {
             this.zone = zone;
             return this;
         }
 
         public Builder zone(@Nullable String zone) {
-            this.zone = Input.ofNullable(zone);
+            this.zone = Output.ofNullable(zone);
             return this;
         }
         public InstanceClusterGetArgs build() {

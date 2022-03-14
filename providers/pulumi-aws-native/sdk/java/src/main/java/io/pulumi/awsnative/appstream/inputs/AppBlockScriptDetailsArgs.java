@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.appstream.inputs;
 
 import io.pulumi.awsnative.appstream.inputs.AppBlockS3LocationArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -17,38 +17,38 @@ public final class AppBlockScriptDetailsArgs extends io.pulumi.resources.Resourc
     public static final AppBlockScriptDetailsArgs Empty = new AppBlockScriptDetailsArgs();
 
     @InputImport(name="executableParameters")
-      private final @Nullable Input<String> executableParameters;
+      private final @Nullable Output<String> executableParameters;
 
-    public Input<String> getExecutableParameters() {
-        return this.executableParameters == null ? Input.empty() : this.executableParameters;
+    public Output<String> getExecutableParameters() {
+        return this.executableParameters == null ? Output.empty() : this.executableParameters;
     }
 
     @InputImport(name="executablePath", required=true)
-      private final Input<String> executablePath;
+      private final Output<String> executablePath;
 
-    public Input<String> getExecutablePath() {
+    public Output<String> getExecutablePath() {
         return this.executablePath;
     }
 
     @InputImport(name="scriptS3Location", required=true)
-      private final Input<AppBlockS3LocationArgs> scriptS3Location;
+      private final Output<AppBlockS3LocationArgs> scriptS3Location;
 
-    public Input<AppBlockS3LocationArgs> getScriptS3Location() {
+    public Output<AppBlockS3LocationArgs> getScriptS3Location() {
         return this.scriptS3Location;
     }
 
     @InputImport(name="timeoutInSeconds", required=true)
-      private final Input<Integer> timeoutInSeconds;
+      private final Output<Integer> timeoutInSeconds;
 
-    public Input<Integer> getTimeoutInSeconds() {
+    public Output<Integer> getTimeoutInSeconds() {
         return this.timeoutInSeconds;
     }
 
     public AppBlockScriptDetailsArgs(
-        @Nullable Input<String> executableParameters,
-        Input<String> executablePath,
-        Input<AppBlockS3LocationArgs> scriptS3Location,
-        Input<Integer> timeoutInSeconds) {
+        @Nullable Output<String> executableParameters,
+        Output<String> executablePath,
+        Output<AppBlockS3LocationArgs> scriptS3Location,
+        Output<Integer> timeoutInSeconds) {
         this.executableParameters = executableParameters;
         this.executablePath = Objects.requireNonNull(executablePath, "expected parameter 'executablePath' to be non-null");
         this.scriptS3Location = Objects.requireNonNull(scriptS3Location, "expected parameter 'scriptS3Location' to be non-null");
@@ -56,10 +56,10 @@ public final class AppBlockScriptDetailsArgs extends io.pulumi.resources.Resourc
     }
 
     private AppBlockScriptDetailsArgs() {
-        this.executableParameters = Input.empty();
-        this.executablePath = Input.empty();
-        this.scriptS3Location = Input.empty();
-        this.timeoutInSeconds = Input.empty();
+        this.executableParameters = Output.empty();
+        this.executablePath = Output.empty();
+        this.scriptS3Location = Output.empty();
+        this.timeoutInSeconds = Output.empty();
     }
 
     public static Builder builder() {
@@ -71,10 +71,10 @@ public final class AppBlockScriptDetailsArgs extends io.pulumi.resources.Resourc
     }
 
     public static final class Builder {
-        private @Nullable Input<String> executableParameters;
-        private Input<String> executablePath;
-        private Input<AppBlockS3LocationArgs> scriptS3Location;
-        private Input<Integer> timeoutInSeconds;
+        private @Nullable Output<String> executableParameters;
+        private Output<String> executablePath;
+        private Output<AppBlockS3LocationArgs> scriptS3Location;
+        private Output<Integer> timeoutInSeconds;
 
         public Builder() {
     	      // Empty
@@ -88,43 +88,43 @@ public final class AppBlockScriptDetailsArgs extends io.pulumi.resources.Resourc
     	      this.timeoutInSeconds = defaults.timeoutInSeconds;
         }
 
-        public Builder executableParameters(@Nullable Input<String> executableParameters) {
+        public Builder executableParameters(@Nullable Output<String> executableParameters) {
             this.executableParameters = executableParameters;
             return this;
         }
 
         public Builder executableParameters(@Nullable String executableParameters) {
-            this.executableParameters = Input.ofNullable(executableParameters);
+            this.executableParameters = Output.ofNullable(executableParameters);
             return this;
         }
 
-        public Builder executablePath(Input<String> executablePath) {
+        public Builder executablePath(Output<String> executablePath) {
             this.executablePath = Objects.requireNonNull(executablePath);
             return this;
         }
 
         public Builder executablePath(String executablePath) {
-            this.executablePath = Input.of(Objects.requireNonNull(executablePath));
+            this.executablePath = Output.of(Objects.requireNonNull(executablePath));
             return this;
         }
 
-        public Builder scriptS3Location(Input<AppBlockS3LocationArgs> scriptS3Location) {
+        public Builder scriptS3Location(Output<AppBlockS3LocationArgs> scriptS3Location) {
             this.scriptS3Location = Objects.requireNonNull(scriptS3Location);
             return this;
         }
 
         public Builder scriptS3Location(AppBlockS3LocationArgs scriptS3Location) {
-            this.scriptS3Location = Input.of(Objects.requireNonNull(scriptS3Location));
+            this.scriptS3Location = Output.of(Objects.requireNonNull(scriptS3Location));
             return this;
         }
 
-        public Builder timeoutInSeconds(Input<Integer> timeoutInSeconds) {
+        public Builder timeoutInSeconds(Output<Integer> timeoutInSeconds) {
             this.timeoutInSeconds = Objects.requireNonNull(timeoutInSeconds);
             return this;
         }
 
         public Builder timeoutInSeconds(Integer timeoutInSeconds) {
-            this.timeoutInSeconds = Input.of(Objects.requireNonNull(timeoutInSeconds));
+            this.timeoutInSeconds = Output.of(Objects.requireNonNull(timeoutInSeconds));
             return this;
         }
         public AppBlockScriptDetailsArgs build() {

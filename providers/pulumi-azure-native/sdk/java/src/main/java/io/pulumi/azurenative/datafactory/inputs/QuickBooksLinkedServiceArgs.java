@@ -8,7 +8,7 @@ import io.pulumi.azurenative.datafactory.inputs.IntegrationRuntimeReferenceArgs;
 import io.pulumi.azurenative.datafactory.inputs.ParameterSpecificationArgs;
 import io.pulumi.azurenative.datafactory.inputs.SecureStringArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
@@ -31,10 +31,10 @@ public final class QuickBooksLinkedServiceArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="accessToken")
-      private final @Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> accessToken;
+      private final @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> accessToken;
 
-    public Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> getAccessToken() {
-        return this.accessToken == null ? Input.empty() : this.accessToken;
+    public Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> getAccessToken() {
+        return this.accessToken == null ? Output.empty() : this.accessToken;
     }
 
     /**
@@ -42,10 +42,10 @@ public final class QuickBooksLinkedServiceArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="accessTokenSecret")
-      private final @Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> accessTokenSecret;
+      private final @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> accessTokenSecret;
 
-    public Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> getAccessTokenSecret() {
-        return this.accessTokenSecret == null ? Input.empty() : this.accessTokenSecret;
+    public Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> getAccessTokenSecret() {
+        return this.accessTokenSecret == null ? Output.empty() : this.accessTokenSecret;
     }
 
     /**
@@ -53,10 +53,10 @@ public final class QuickBooksLinkedServiceArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="annotations")
-      private final @Nullable Input<List<Object>> annotations;
+      private final @Nullable Output<List<Object>> annotations;
 
-    public Input<List<Object>> getAnnotations() {
-        return this.annotations == null ? Input.empty() : this.annotations;
+    public Output<List<Object>> getAnnotations() {
+        return this.annotations == null ? Output.empty() : this.annotations;
     }
 
     /**
@@ -64,10 +64,10 @@ public final class QuickBooksLinkedServiceArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="companyId")
-      private final @Nullable Input<Object> companyId;
+      private final @Nullable Output<Object> companyId;
 
-    public Input<Object> getCompanyId() {
-        return this.companyId == null ? Input.empty() : this.companyId;
+    public Output<Object> getCompanyId() {
+        return this.companyId == null ? Output.empty() : this.companyId;
     }
 
     /**
@@ -75,10 +75,10 @@ public final class QuickBooksLinkedServiceArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="connectVia")
-      private final @Nullable Input<IntegrationRuntimeReferenceArgs> connectVia;
+      private final @Nullable Output<IntegrationRuntimeReferenceArgs> connectVia;
 
-    public Input<IntegrationRuntimeReferenceArgs> getConnectVia() {
-        return this.connectVia == null ? Input.empty() : this.connectVia;
+    public Output<IntegrationRuntimeReferenceArgs> getConnectVia() {
+        return this.connectVia == null ? Output.empty() : this.connectVia;
     }
 
     /**
@@ -86,10 +86,10 @@ public final class QuickBooksLinkedServiceArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="connectionProperties")
-      private final @Nullable Input<Object> connectionProperties;
+      private final @Nullable Output<Object> connectionProperties;
 
-    public Input<Object> getConnectionProperties() {
-        return this.connectionProperties == null ? Input.empty() : this.connectionProperties;
+    public Output<Object> getConnectionProperties() {
+        return this.connectionProperties == null ? Output.empty() : this.connectionProperties;
     }
 
     /**
@@ -97,10 +97,10 @@ public final class QuickBooksLinkedServiceArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="consumerKey")
-      private final @Nullable Input<Object> consumerKey;
+      private final @Nullable Output<Object> consumerKey;
 
-    public Input<Object> getConsumerKey() {
-        return this.consumerKey == null ? Input.empty() : this.consumerKey;
+    public Output<Object> getConsumerKey() {
+        return this.consumerKey == null ? Output.empty() : this.consumerKey;
     }
 
     /**
@@ -108,10 +108,10 @@ public final class QuickBooksLinkedServiceArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="consumerSecret")
-      private final @Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> consumerSecret;
+      private final @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> consumerSecret;
 
-    public Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> getConsumerSecret() {
-        return this.consumerSecret == null ? Input.empty() : this.consumerSecret;
+    public Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> getConsumerSecret() {
+        return this.consumerSecret == null ? Output.empty() : this.consumerSecret;
     }
 
     /**
@@ -119,10 +119,10 @@ public final class QuickBooksLinkedServiceArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -130,10 +130,10 @@ public final class QuickBooksLinkedServiceArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="encryptedCredential")
-      private final @Nullable Input<Object> encryptedCredential;
+      private final @Nullable Output<Object> encryptedCredential;
 
-    public Input<Object> getEncryptedCredential() {
-        return this.encryptedCredential == null ? Input.empty() : this.encryptedCredential;
+    public Output<Object> getEncryptedCredential() {
+        return this.encryptedCredential == null ? Output.empty() : this.encryptedCredential;
     }
 
     /**
@@ -141,10 +141,10 @@ public final class QuickBooksLinkedServiceArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="endpoint")
-      private final @Nullable Input<Object> endpoint;
+      private final @Nullable Output<Object> endpoint;
 
-    public Input<Object> getEndpoint() {
-        return this.endpoint == null ? Input.empty() : this.endpoint;
+    public Output<Object> getEndpoint() {
+        return this.endpoint == null ? Output.empty() : this.endpoint;
     }
 
     /**
@@ -152,10 +152,10 @@ public final class QuickBooksLinkedServiceArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="parameters")
-      private final @Nullable Input<Map<String,ParameterSpecificationArgs>> parameters;
+      private final @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters;
 
-    public Input<Map<String,ParameterSpecificationArgs>> getParameters() {
-        return this.parameters == null ? Input.empty() : this.parameters;
+    public Output<Map<String,ParameterSpecificationArgs>> getParameters() {
+        return this.parameters == null ? Output.empty() : this.parameters;
     }
 
     /**
@@ -164,9 +164,9 @@ public final class QuickBooksLinkedServiceArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<String> type;
+      private final Output<String> type;
 
-    public Input<String> getType() {
+    public Output<String> getType() {
         return this.type;
     }
 
@@ -175,27 +175,27 @@ public final class QuickBooksLinkedServiceArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="useEncryptedEndpoints")
-      private final @Nullable Input<Object> useEncryptedEndpoints;
+      private final @Nullable Output<Object> useEncryptedEndpoints;
 
-    public Input<Object> getUseEncryptedEndpoints() {
-        return this.useEncryptedEndpoints == null ? Input.empty() : this.useEncryptedEndpoints;
+    public Output<Object> getUseEncryptedEndpoints() {
+        return this.useEncryptedEndpoints == null ? Output.empty() : this.useEncryptedEndpoints;
     }
 
     public QuickBooksLinkedServiceArgs(
-        @Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> accessToken,
-        @Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> accessTokenSecret,
-        @Nullable Input<List<Object>> annotations,
-        @Nullable Input<Object> companyId,
-        @Nullable Input<IntegrationRuntimeReferenceArgs> connectVia,
-        @Nullable Input<Object> connectionProperties,
-        @Nullable Input<Object> consumerKey,
-        @Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> consumerSecret,
-        @Nullable Input<String> description,
-        @Nullable Input<Object> encryptedCredential,
-        @Nullable Input<Object> endpoint,
-        @Nullable Input<Map<String,ParameterSpecificationArgs>> parameters,
-        Input<String> type,
-        @Nullable Input<Object> useEncryptedEndpoints) {
+        @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> accessToken,
+        @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> accessTokenSecret,
+        @Nullable Output<List<Object>> annotations,
+        @Nullable Output<Object> companyId,
+        @Nullable Output<IntegrationRuntimeReferenceArgs> connectVia,
+        @Nullable Output<Object> connectionProperties,
+        @Nullable Output<Object> consumerKey,
+        @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> consumerSecret,
+        @Nullable Output<String> description,
+        @Nullable Output<Object> encryptedCredential,
+        @Nullable Output<Object> endpoint,
+        @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters,
+        Output<String> type,
+        @Nullable Output<Object> useEncryptedEndpoints) {
         this.accessToken = accessToken;
         this.accessTokenSecret = accessTokenSecret;
         this.annotations = annotations;
@@ -213,20 +213,20 @@ public final class QuickBooksLinkedServiceArgs extends io.pulumi.resources.Resou
     }
 
     private QuickBooksLinkedServiceArgs() {
-        this.accessToken = Input.empty();
-        this.accessTokenSecret = Input.empty();
-        this.annotations = Input.empty();
-        this.companyId = Input.empty();
-        this.connectVia = Input.empty();
-        this.connectionProperties = Input.empty();
-        this.consumerKey = Input.empty();
-        this.consumerSecret = Input.empty();
-        this.description = Input.empty();
-        this.encryptedCredential = Input.empty();
-        this.endpoint = Input.empty();
-        this.parameters = Input.empty();
-        this.type = Input.empty();
-        this.useEncryptedEndpoints = Input.empty();
+        this.accessToken = Output.empty();
+        this.accessTokenSecret = Output.empty();
+        this.annotations = Output.empty();
+        this.companyId = Output.empty();
+        this.connectVia = Output.empty();
+        this.connectionProperties = Output.empty();
+        this.consumerKey = Output.empty();
+        this.consumerSecret = Output.empty();
+        this.description = Output.empty();
+        this.encryptedCredential = Output.empty();
+        this.endpoint = Output.empty();
+        this.parameters = Output.empty();
+        this.type = Output.empty();
+        this.useEncryptedEndpoints = Output.empty();
     }
 
     public static Builder builder() {
@@ -238,20 +238,20 @@ public final class QuickBooksLinkedServiceArgs extends io.pulumi.resources.Resou
     }
 
     public static final class Builder {
-        private @Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> accessToken;
-        private @Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> accessTokenSecret;
-        private @Nullable Input<List<Object>> annotations;
-        private @Nullable Input<Object> companyId;
-        private @Nullable Input<IntegrationRuntimeReferenceArgs> connectVia;
-        private @Nullable Input<Object> connectionProperties;
-        private @Nullable Input<Object> consumerKey;
-        private @Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> consumerSecret;
-        private @Nullable Input<String> description;
-        private @Nullable Input<Object> encryptedCredential;
-        private @Nullable Input<Object> endpoint;
-        private @Nullable Input<Map<String,ParameterSpecificationArgs>> parameters;
-        private Input<String> type;
-        private @Nullable Input<Object> useEncryptedEndpoints;
+        private @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> accessToken;
+        private @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> accessTokenSecret;
+        private @Nullable Output<List<Object>> annotations;
+        private @Nullable Output<Object> companyId;
+        private @Nullable Output<IntegrationRuntimeReferenceArgs> connectVia;
+        private @Nullable Output<Object> connectionProperties;
+        private @Nullable Output<Object> consumerKey;
+        private @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> consumerSecret;
+        private @Nullable Output<String> description;
+        private @Nullable Output<Object> encryptedCredential;
+        private @Nullable Output<Object> endpoint;
+        private @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters;
+        private Output<String> type;
+        private @Nullable Output<Object> useEncryptedEndpoints;
 
         public Builder() {
     	      // Empty
@@ -275,143 +275,143 @@ public final class QuickBooksLinkedServiceArgs extends io.pulumi.resources.Resou
     	      this.useEncryptedEndpoints = defaults.useEncryptedEndpoints;
         }
 
-        public Builder accessToken(@Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> accessToken) {
+        public Builder accessToken(@Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> accessToken) {
             this.accessToken = accessToken;
             return this;
         }
 
         public Builder accessToken(@Nullable Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs> accessToken) {
-            this.accessToken = Input.ofNullable(accessToken);
+            this.accessToken = Output.ofNullable(accessToken);
             return this;
         }
 
-        public Builder accessTokenSecret(@Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> accessTokenSecret) {
+        public Builder accessTokenSecret(@Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> accessTokenSecret) {
             this.accessTokenSecret = accessTokenSecret;
             return this;
         }
 
         public Builder accessTokenSecret(@Nullable Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs> accessTokenSecret) {
-            this.accessTokenSecret = Input.ofNullable(accessTokenSecret);
+            this.accessTokenSecret = Output.ofNullable(accessTokenSecret);
             return this;
         }
 
-        public Builder annotations(@Nullable Input<List<Object>> annotations) {
+        public Builder annotations(@Nullable Output<List<Object>> annotations) {
             this.annotations = annotations;
             return this;
         }
 
         public Builder annotations(@Nullable List<Object> annotations) {
-            this.annotations = Input.ofNullable(annotations);
+            this.annotations = Output.ofNullable(annotations);
             return this;
         }
 
-        public Builder companyId(@Nullable Input<Object> companyId) {
+        public Builder companyId(@Nullable Output<Object> companyId) {
             this.companyId = companyId;
             return this;
         }
 
         public Builder companyId(@Nullable Object companyId) {
-            this.companyId = Input.ofNullable(companyId);
+            this.companyId = Output.ofNullable(companyId);
             return this;
         }
 
-        public Builder connectVia(@Nullable Input<IntegrationRuntimeReferenceArgs> connectVia) {
+        public Builder connectVia(@Nullable Output<IntegrationRuntimeReferenceArgs> connectVia) {
             this.connectVia = connectVia;
             return this;
         }
 
         public Builder connectVia(@Nullable IntegrationRuntimeReferenceArgs connectVia) {
-            this.connectVia = Input.ofNullable(connectVia);
+            this.connectVia = Output.ofNullable(connectVia);
             return this;
         }
 
-        public Builder connectionProperties(@Nullable Input<Object> connectionProperties) {
+        public Builder connectionProperties(@Nullable Output<Object> connectionProperties) {
             this.connectionProperties = connectionProperties;
             return this;
         }
 
         public Builder connectionProperties(@Nullable Object connectionProperties) {
-            this.connectionProperties = Input.ofNullable(connectionProperties);
+            this.connectionProperties = Output.ofNullable(connectionProperties);
             return this;
         }
 
-        public Builder consumerKey(@Nullable Input<Object> consumerKey) {
+        public Builder consumerKey(@Nullable Output<Object> consumerKey) {
             this.consumerKey = consumerKey;
             return this;
         }
 
         public Builder consumerKey(@Nullable Object consumerKey) {
-            this.consumerKey = Input.ofNullable(consumerKey);
+            this.consumerKey = Output.ofNullable(consumerKey);
             return this;
         }
 
-        public Builder consumerSecret(@Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> consumerSecret) {
+        public Builder consumerSecret(@Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> consumerSecret) {
             this.consumerSecret = consumerSecret;
             return this;
         }
 
         public Builder consumerSecret(@Nullable Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs> consumerSecret) {
-            this.consumerSecret = Input.ofNullable(consumerSecret);
+            this.consumerSecret = Output.ofNullable(consumerSecret);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder encryptedCredential(@Nullable Input<Object> encryptedCredential) {
+        public Builder encryptedCredential(@Nullable Output<Object> encryptedCredential) {
             this.encryptedCredential = encryptedCredential;
             return this;
         }
 
         public Builder encryptedCredential(@Nullable Object encryptedCredential) {
-            this.encryptedCredential = Input.ofNullable(encryptedCredential);
+            this.encryptedCredential = Output.ofNullable(encryptedCredential);
             return this;
         }
 
-        public Builder endpoint(@Nullable Input<Object> endpoint) {
+        public Builder endpoint(@Nullable Output<Object> endpoint) {
             this.endpoint = endpoint;
             return this;
         }
 
         public Builder endpoint(@Nullable Object endpoint) {
-            this.endpoint = Input.ofNullable(endpoint);
+            this.endpoint = Output.ofNullable(endpoint);
             return this;
         }
 
-        public Builder parameters(@Nullable Input<Map<String,ParameterSpecificationArgs>> parameters) {
+        public Builder parameters(@Nullable Output<Map<String,ParameterSpecificationArgs>> parameters) {
             this.parameters = parameters;
             return this;
         }
 
         public Builder parameters(@Nullable Map<String,ParameterSpecificationArgs> parameters) {
-            this.parameters = Input.ofNullable(parameters);
+            this.parameters = Output.ofNullable(parameters);
             return this;
         }
 
-        public Builder type(Input<String> type) {
+        public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(String type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
 
-        public Builder useEncryptedEndpoints(@Nullable Input<Object> useEncryptedEndpoints) {
+        public Builder useEncryptedEndpoints(@Nullable Output<Object> useEncryptedEndpoints) {
             this.useEncryptedEndpoints = useEncryptedEndpoints;
             return this;
         }
 
         public Builder useEncryptedEndpoints(@Nullable Object useEncryptedEndpoints) {
-            this.useEncryptedEndpoints = Input.ofNullable(useEncryptedEndpoints);
+            this.useEncryptedEndpoints = Output.ofNullable(useEncryptedEndpoints);
             return this;
         }
         public QuickBooksLinkedServiceArgs build() {

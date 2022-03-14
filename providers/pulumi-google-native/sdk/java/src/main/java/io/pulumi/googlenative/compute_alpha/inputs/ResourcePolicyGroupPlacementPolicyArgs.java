@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.compute_alpha.enums.ResourcePolicyGroupPlacementPolicyCollocation;
 import io.pulumi.googlenative.compute_alpha.enums.ResourcePolicyGroupPlacementPolicyLocality;
@@ -27,10 +27,10 @@ public final class ResourcePolicyGroupPlacementPolicyArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="availabilityDomainCount")
-      private final @Nullable Input<Integer> availabilityDomainCount;
+      private final @Nullable Output<Integer> availabilityDomainCount;
 
-    public Input<Integer> getAvailabilityDomainCount() {
-        return this.availabilityDomainCount == null ? Input.empty() : this.availabilityDomainCount;
+    public Output<Integer> getAvailabilityDomainCount() {
+        return this.availabilityDomainCount == null ? Output.empty() : this.availabilityDomainCount;
     }
 
     /**
@@ -38,10 +38,10 @@ public final class ResourcePolicyGroupPlacementPolicyArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="collocation")
-      private final @Nullable Input<ResourcePolicyGroupPlacementPolicyCollocation> collocation;
+      private final @Nullable Output<ResourcePolicyGroupPlacementPolicyCollocation> collocation;
 
-    public Input<ResourcePolicyGroupPlacementPolicyCollocation> getCollocation() {
-        return this.collocation == null ? Input.empty() : this.collocation;
+    public Output<ResourcePolicyGroupPlacementPolicyCollocation> getCollocation() {
+        return this.collocation == null ? Output.empty() : this.collocation;
     }
 
     /**
@@ -49,10 +49,10 @@ public final class ResourcePolicyGroupPlacementPolicyArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="locality")
-      private final @Nullable Input<ResourcePolicyGroupPlacementPolicyLocality> locality;
+      private final @Nullable Output<ResourcePolicyGroupPlacementPolicyLocality> locality;
 
-    public Input<ResourcePolicyGroupPlacementPolicyLocality> getLocality() {
-        return this.locality == null ? Input.empty() : this.locality;
+    public Output<ResourcePolicyGroupPlacementPolicyLocality> getLocality() {
+        return this.locality == null ? Output.empty() : this.locality;
     }
 
     /**
@@ -60,10 +60,10 @@ public final class ResourcePolicyGroupPlacementPolicyArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="scope")
-      private final @Nullable Input<ResourcePolicyGroupPlacementPolicyScope> scope;
+      private final @Nullable Output<ResourcePolicyGroupPlacementPolicyScope> scope;
 
-    public Input<ResourcePolicyGroupPlacementPolicyScope> getScope() {
-        return this.scope == null ? Input.empty() : this.scope;
+    public Output<ResourcePolicyGroupPlacementPolicyScope> getScope() {
+        return this.scope == null ? Output.empty() : this.scope;
     }
 
     /**
@@ -71,10 +71,10 @@ public final class ResourcePolicyGroupPlacementPolicyArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="style")
-      private final @Nullable Input<ResourcePolicyGroupPlacementPolicyStyle> style;
+      private final @Nullable Output<ResourcePolicyGroupPlacementPolicyStyle> style;
 
-    public Input<ResourcePolicyGroupPlacementPolicyStyle> getStyle() {
-        return this.style == null ? Input.empty() : this.style;
+    public Output<ResourcePolicyGroupPlacementPolicyStyle> getStyle() {
+        return this.style == null ? Output.empty() : this.style;
     }
 
     /**
@@ -82,19 +82,19 @@ public final class ResourcePolicyGroupPlacementPolicyArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="vmCount")
-      private final @Nullable Input<Integer> vmCount;
+      private final @Nullable Output<Integer> vmCount;
 
-    public Input<Integer> getVmCount() {
-        return this.vmCount == null ? Input.empty() : this.vmCount;
+    public Output<Integer> getVmCount() {
+        return this.vmCount == null ? Output.empty() : this.vmCount;
     }
 
     public ResourcePolicyGroupPlacementPolicyArgs(
-        @Nullable Input<Integer> availabilityDomainCount,
-        @Nullable Input<ResourcePolicyGroupPlacementPolicyCollocation> collocation,
-        @Nullable Input<ResourcePolicyGroupPlacementPolicyLocality> locality,
-        @Nullable Input<ResourcePolicyGroupPlacementPolicyScope> scope,
-        @Nullable Input<ResourcePolicyGroupPlacementPolicyStyle> style,
-        @Nullable Input<Integer> vmCount) {
+        @Nullable Output<Integer> availabilityDomainCount,
+        @Nullable Output<ResourcePolicyGroupPlacementPolicyCollocation> collocation,
+        @Nullable Output<ResourcePolicyGroupPlacementPolicyLocality> locality,
+        @Nullable Output<ResourcePolicyGroupPlacementPolicyScope> scope,
+        @Nullable Output<ResourcePolicyGroupPlacementPolicyStyle> style,
+        @Nullable Output<Integer> vmCount) {
         this.availabilityDomainCount = availabilityDomainCount;
         this.collocation = collocation;
         this.locality = locality;
@@ -104,12 +104,12 @@ public final class ResourcePolicyGroupPlacementPolicyArgs extends io.pulumi.reso
     }
 
     private ResourcePolicyGroupPlacementPolicyArgs() {
-        this.availabilityDomainCount = Input.empty();
-        this.collocation = Input.empty();
-        this.locality = Input.empty();
-        this.scope = Input.empty();
-        this.style = Input.empty();
-        this.vmCount = Input.empty();
+        this.availabilityDomainCount = Output.empty();
+        this.collocation = Output.empty();
+        this.locality = Output.empty();
+        this.scope = Output.empty();
+        this.style = Output.empty();
+        this.vmCount = Output.empty();
     }
 
     public static Builder builder() {
@@ -121,12 +121,12 @@ public final class ResourcePolicyGroupPlacementPolicyArgs extends io.pulumi.reso
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> availabilityDomainCount;
-        private @Nullable Input<ResourcePolicyGroupPlacementPolicyCollocation> collocation;
-        private @Nullable Input<ResourcePolicyGroupPlacementPolicyLocality> locality;
-        private @Nullable Input<ResourcePolicyGroupPlacementPolicyScope> scope;
-        private @Nullable Input<ResourcePolicyGroupPlacementPolicyStyle> style;
-        private @Nullable Input<Integer> vmCount;
+        private @Nullable Output<Integer> availabilityDomainCount;
+        private @Nullable Output<ResourcePolicyGroupPlacementPolicyCollocation> collocation;
+        private @Nullable Output<ResourcePolicyGroupPlacementPolicyLocality> locality;
+        private @Nullable Output<ResourcePolicyGroupPlacementPolicyScope> scope;
+        private @Nullable Output<ResourcePolicyGroupPlacementPolicyStyle> style;
+        private @Nullable Output<Integer> vmCount;
 
         public Builder() {
     	      // Empty
@@ -142,63 +142,63 @@ public final class ResourcePolicyGroupPlacementPolicyArgs extends io.pulumi.reso
     	      this.vmCount = defaults.vmCount;
         }
 
-        public Builder availabilityDomainCount(@Nullable Input<Integer> availabilityDomainCount) {
+        public Builder availabilityDomainCount(@Nullable Output<Integer> availabilityDomainCount) {
             this.availabilityDomainCount = availabilityDomainCount;
             return this;
         }
 
         public Builder availabilityDomainCount(@Nullable Integer availabilityDomainCount) {
-            this.availabilityDomainCount = Input.ofNullable(availabilityDomainCount);
+            this.availabilityDomainCount = Output.ofNullable(availabilityDomainCount);
             return this;
         }
 
-        public Builder collocation(@Nullable Input<ResourcePolicyGroupPlacementPolicyCollocation> collocation) {
+        public Builder collocation(@Nullable Output<ResourcePolicyGroupPlacementPolicyCollocation> collocation) {
             this.collocation = collocation;
             return this;
         }
 
         public Builder collocation(@Nullable ResourcePolicyGroupPlacementPolicyCollocation collocation) {
-            this.collocation = Input.ofNullable(collocation);
+            this.collocation = Output.ofNullable(collocation);
             return this;
         }
 
-        public Builder locality(@Nullable Input<ResourcePolicyGroupPlacementPolicyLocality> locality) {
+        public Builder locality(@Nullable Output<ResourcePolicyGroupPlacementPolicyLocality> locality) {
             this.locality = locality;
             return this;
         }
 
         public Builder locality(@Nullable ResourcePolicyGroupPlacementPolicyLocality locality) {
-            this.locality = Input.ofNullable(locality);
+            this.locality = Output.ofNullable(locality);
             return this;
         }
 
-        public Builder scope(@Nullable Input<ResourcePolicyGroupPlacementPolicyScope> scope) {
+        public Builder scope(@Nullable Output<ResourcePolicyGroupPlacementPolicyScope> scope) {
             this.scope = scope;
             return this;
         }
 
         public Builder scope(@Nullable ResourcePolicyGroupPlacementPolicyScope scope) {
-            this.scope = Input.ofNullable(scope);
+            this.scope = Output.ofNullable(scope);
             return this;
         }
 
-        public Builder style(@Nullable Input<ResourcePolicyGroupPlacementPolicyStyle> style) {
+        public Builder style(@Nullable Output<ResourcePolicyGroupPlacementPolicyStyle> style) {
             this.style = style;
             return this;
         }
 
         public Builder style(@Nullable ResourcePolicyGroupPlacementPolicyStyle style) {
-            this.style = Input.ofNullable(style);
+            this.style = Output.ofNullable(style);
             return this;
         }
 
-        public Builder vmCount(@Nullable Input<Integer> vmCount) {
+        public Builder vmCount(@Nullable Output<Integer> vmCount) {
             this.vmCount = vmCount;
             return this;
         }
 
         public Builder vmCount(@Nullable Integer vmCount) {
-            this.vmCount = Input.ofNullable(vmCount);
+            this.vmCount = Output.ofNullable(vmCount);
             return this;
         }
         public ResourcePolicyGroupPlacementPolicyArgs build() {

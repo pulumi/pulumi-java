@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.osconfig_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -22,9 +22,9 @@ public final class OSPolicyResourceRepositoryResourceGooRepositoryArgs extends i
      * 
      */
     @InputImport(name="name", required=true)
-      private final Input<String> name;
+      private final Output<String> name;
 
-    public Input<String> getName() {
+    public Output<String> getName() {
         return this.name;
     }
 
@@ -33,22 +33,22 @@ public final class OSPolicyResourceRepositoryResourceGooRepositoryArgs extends i
      * 
      */
     @InputImport(name="url", required=true)
-      private final Input<String> url;
+      private final Output<String> url;
 
-    public Input<String> getUrl() {
+    public Output<String> getUrl() {
         return this.url;
     }
 
     public OSPolicyResourceRepositoryResourceGooRepositoryArgs(
-        Input<String> name,
-        Input<String> url) {
+        Output<String> name,
+        Output<String> url) {
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
         this.url = Objects.requireNonNull(url, "expected parameter 'url' to be non-null");
     }
 
     private OSPolicyResourceRepositoryResourceGooRepositoryArgs() {
-        this.name = Input.empty();
-        this.url = Input.empty();
+        this.name = Output.empty();
+        this.url = Output.empty();
     }
 
     public static Builder builder() {
@@ -60,8 +60,8 @@ public final class OSPolicyResourceRepositoryResourceGooRepositoryArgs extends i
     }
 
     public static final class Builder {
-        private Input<String> name;
-        private Input<String> url;
+        private Output<String> name;
+        private Output<String> url;
 
         public Builder() {
     	      // Empty
@@ -73,23 +73,23 @@ public final class OSPolicyResourceRepositoryResourceGooRepositoryArgs extends i
     	      this.url = defaults.url;
         }
 
-        public Builder name(Input<String> name) {
+        public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(String name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder url(Input<String> url) {
+        public Builder url(Output<String> url) {
             this.url = Objects.requireNonNull(url);
             return this;
         }
 
         public Builder url(String url) {
-            this.url = Input.of(Objects.requireNonNull(url));
+            this.url = Output.of(Objects.requireNonNull(url));
             return this;
         }
         public OSPolicyResourceRepositoryResourceGooRepositoryArgs build() {

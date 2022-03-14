@@ -8,7 +8,6 @@ import io.pulumi.awsnative.efs.FileSystemArgs;
 import io.pulumi.awsnative.efs.outputs.FileSystemBackupPolicy;
 import io.pulumi.awsnative.efs.outputs.FileSystemElasticFileSystemTag;
 import io.pulumi.awsnative.efs.outputs.FileSystemLifecyclePolicy;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -150,14 +149,14 @@ public class FileSystem extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public FileSystem(String name, @Nullable FileSystemArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:efs:FileSystem", name, args == null ? FileSystemArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws-native:efs:FileSystem", name, args == null ? FileSystemArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private FileSystem(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private FileSystem(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws-native:efs:FileSystem", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -172,7 +171,7 @@ public class FileSystem extends io.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static FileSystem get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static FileSystem get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new FileSystem(name, id, options);
     }
 }

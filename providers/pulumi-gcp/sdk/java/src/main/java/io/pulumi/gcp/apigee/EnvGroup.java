@@ -3,7 +3,6 @@
 
 package io.pulumi.gcp.apigee;
 
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -123,14 +122,14 @@ public class EnvGroup extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public EnvGroup(String name, EnvGroupArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:apigee/envGroup:EnvGroup", name, args == null ? EnvGroupArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("gcp:apigee/envGroup:EnvGroup", name, args == null ? EnvGroupArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private EnvGroup(String name, Input<String> id, @Nullable EnvGroupState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private EnvGroup(String name, Output<String> id, @Nullable EnvGroupState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("gcp:apigee/envGroup:EnvGroup", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -146,7 +145,7 @@ public class EnvGroup extends io.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static EnvGroup get(String name, Input<String> id, @Nullable EnvGroupState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static EnvGroup get(String name, Output<String> id, @Nullable EnvGroupState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new EnvGroup(name, id, state, options);
     }
 }

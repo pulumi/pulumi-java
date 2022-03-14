@@ -5,7 +5,7 @@ package io.pulumi.awsnative.lightsail.inputs;
 
 import io.pulumi.awsnative.lightsail.inputs.ContainerArgs;
 import io.pulumi.awsnative.lightsail.inputs.ContainerPublicEndpointArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
@@ -25,10 +25,10 @@ public final class ContainerServiceDeploymentArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="containers")
-      private final @Nullable Input<List<ContainerArgs>> containers;
+      private final @Nullable Output<List<ContainerArgs>> containers;
 
-    public Input<List<ContainerArgs>> getContainers() {
-        return this.containers == null ? Input.empty() : this.containers;
+    public Output<List<ContainerArgs>> getContainers() {
+        return this.containers == null ? Output.empty() : this.containers;
     }
 
     /**
@@ -36,22 +36,22 @@ public final class ContainerServiceDeploymentArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="publicEndpoint")
-      private final @Nullable Input<ContainerPublicEndpointArgs> publicEndpoint;
+      private final @Nullable Output<ContainerPublicEndpointArgs> publicEndpoint;
 
-    public Input<ContainerPublicEndpointArgs> getPublicEndpoint() {
-        return this.publicEndpoint == null ? Input.empty() : this.publicEndpoint;
+    public Output<ContainerPublicEndpointArgs> getPublicEndpoint() {
+        return this.publicEndpoint == null ? Output.empty() : this.publicEndpoint;
     }
 
     public ContainerServiceDeploymentArgs(
-        @Nullable Input<List<ContainerArgs>> containers,
-        @Nullable Input<ContainerPublicEndpointArgs> publicEndpoint) {
+        @Nullable Output<List<ContainerArgs>> containers,
+        @Nullable Output<ContainerPublicEndpointArgs> publicEndpoint) {
         this.containers = containers;
         this.publicEndpoint = publicEndpoint;
     }
 
     private ContainerServiceDeploymentArgs() {
-        this.containers = Input.empty();
-        this.publicEndpoint = Input.empty();
+        this.containers = Output.empty();
+        this.publicEndpoint = Output.empty();
     }
 
     public static Builder builder() {
@@ -63,8 +63,8 @@ public final class ContainerServiceDeploymentArgs extends io.pulumi.resources.Re
     }
 
     public static final class Builder {
-        private @Nullable Input<List<ContainerArgs>> containers;
-        private @Nullable Input<ContainerPublicEndpointArgs> publicEndpoint;
+        private @Nullable Output<List<ContainerArgs>> containers;
+        private @Nullable Output<ContainerPublicEndpointArgs> publicEndpoint;
 
         public Builder() {
     	      // Empty
@@ -76,23 +76,23 @@ public final class ContainerServiceDeploymentArgs extends io.pulumi.resources.Re
     	      this.publicEndpoint = defaults.publicEndpoint;
         }
 
-        public Builder containers(@Nullable Input<List<ContainerArgs>> containers) {
+        public Builder containers(@Nullable Output<List<ContainerArgs>> containers) {
             this.containers = containers;
             return this;
         }
 
         public Builder containers(@Nullable List<ContainerArgs> containers) {
-            this.containers = Input.ofNullable(containers);
+            this.containers = Output.ofNullable(containers);
             return this;
         }
 
-        public Builder publicEndpoint(@Nullable Input<ContainerPublicEndpointArgs> publicEndpoint) {
+        public Builder publicEndpoint(@Nullable Output<ContainerPublicEndpointArgs> publicEndpoint) {
             this.publicEndpoint = publicEndpoint;
             return this;
         }
 
         public Builder publicEndpoint(@Nullable ContainerPublicEndpointArgs publicEndpoint) {
-            this.publicEndpoint = Input.ofNullable(publicEndpoint);
+            this.publicEndpoint = Output.ofNullable(publicEndpoint);
             return this;
         }
         public ContainerServiceDeploymentArgs build() {

@@ -6,7 +6,6 @@ package io.pulumi.aws.docdb;
 import io.pulumi.aws.Utilities;
 import io.pulumi.aws.docdb.SubnetGroupArgs;
 import io.pulumi.aws.docdb.inputs.SubnetGroupState;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -168,14 +167,14 @@ public class SubnetGroup extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public SubnetGroup(String name, SubnetGroupArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:docdb/subnetGroup:SubnetGroup", name, args == null ? SubnetGroupArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws:docdb/subnetGroup:SubnetGroup", name, args == null ? SubnetGroupArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private SubnetGroup(String name, Input<String> id, @Nullable SubnetGroupState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private SubnetGroup(String name, Output<String> id, @Nullable SubnetGroupState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws:docdb/subnetGroup:SubnetGroup", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -191,7 +190,7 @@ public class SubnetGroup extends io.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static SubnetGroup get(String name, Input<String> id, @Nullable SubnetGroupState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static SubnetGroup get(String name, Output<String> id, @Nullable SubnetGroupState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new SubnetGroup(name, id, state, options);
     }
 }

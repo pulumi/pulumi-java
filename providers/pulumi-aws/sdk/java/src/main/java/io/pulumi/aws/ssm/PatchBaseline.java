@@ -9,7 +9,6 @@ import io.pulumi.aws.ssm.inputs.PatchBaselineState;
 import io.pulumi.aws.ssm.outputs.PatchBaselineApprovalRule;
 import io.pulumi.aws.ssm.outputs.PatchBaselineGlobalFilter;
 import io.pulumi.aws.ssm.outputs.PatchBaselineSource;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -274,14 +273,14 @@ public class PatchBaseline extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public PatchBaseline(String name, @Nullable PatchBaselineArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:ssm/patchBaseline:PatchBaseline", name, args == null ? PatchBaselineArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws:ssm/patchBaseline:PatchBaseline", name, args == null ? PatchBaselineArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private PatchBaseline(String name, Input<String> id, @Nullable PatchBaselineState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private PatchBaseline(String name, Output<String> id, @Nullable PatchBaselineState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws:ssm/patchBaseline:PatchBaseline", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -297,7 +296,7 @@ public class PatchBaseline extends io.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static PatchBaseline get(String name, Input<String> id, @Nullable PatchBaselineState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static PatchBaseline get(String name, Output<String> id, @Nullable PatchBaselineState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new PatchBaseline(name, id, state, options);
     }
 }

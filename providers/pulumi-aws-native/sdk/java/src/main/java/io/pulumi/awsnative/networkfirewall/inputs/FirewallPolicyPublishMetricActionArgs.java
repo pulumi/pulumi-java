@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.networkfirewall.inputs;
 
 import io.pulumi.awsnative.networkfirewall.inputs.FirewallPolicyDimensionArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
@@ -15,18 +15,18 @@ public final class FirewallPolicyPublishMetricActionArgs extends io.pulumi.resou
     public static final FirewallPolicyPublishMetricActionArgs Empty = new FirewallPolicyPublishMetricActionArgs();
 
     @InputImport(name="dimensions", required=true)
-      private final Input<List<FirewallPolicyDimensionArgs>> dimensions;
+      private final Output<List<FirewallPolicyDimensionArgs>> dimensions;
 
-    public Input<List<FirewallPolicyDimensionArgs>> getDimensions() {
+    public Output<List<FirewallPolicyDimensionArgs>> getDimensions() {
         return this.dimensions;
     }
 
-    public FirewallPolicyPublishMetricActionArgs(Input<List<FirewallPolicyDimensionArgs>> dimensions) {
+    public FirewallPolicyPublishMetricActionArgs(Output<List<FirewallPolicyDimensionArgs>> dimensions) {
         this.dimensions = Objects.requireNonNull(dimensions, "expected parameter 'dimensions' to be non-null");
     }
 
     private FirewallPolicyPublishMetricActionArgs() {
-        this.dimensions = Input.empty();
+        this.dimensions = Output.empty();
     }
 
     public static Builder builder() {
@@ -38,7 +38,7 @@ public final class FirewallPolicyPublishMetricActionArgs extends io.pulumi.resou
     }
 
     public static final class Builder {
-        private Input<List<FirewallPolicyDimensionArgs>> dimensions;
+        private Output<List<FirewallPolicyDimensionArgs>> dimensions;
 
         public Builder() {
     	      // Empty
@@ -49,13 +49,13 @@ public final class FirewallPolicyPublishMetricActionArgs extends io.pulumi.resou
     	      this.dimensions = defaults.dimensions;
         }
 
-        public Builder dimensions(Input<List<FirewallPolicyDimensionArgs>> dimensions) {
+        public Builder dimensions(Output<List<FirewallPolicyDimensionArgs>> dimensions) {
             this.dimensions = Objects.requireNonNull(dimensions);
             return this;
         }
 
         public Builder dimensions(List<FirewallPolicyDimensionArgs> dimensions) {
-            this.dimensions = Input.of(Objects.requireNonNull(dimensions));
+            this.dimensions = Output.of(Objects.requireNonNull(dimensions));
             return this;
         }
         public FirewallPolicyPublishMetricActionArgs build() {

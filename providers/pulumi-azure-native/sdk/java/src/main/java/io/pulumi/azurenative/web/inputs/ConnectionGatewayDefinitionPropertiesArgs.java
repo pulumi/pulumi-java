@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.web.inputs;
 
 import io.pulumi.azurenative.web.inputs.ConnectionGatewayReferenceArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
@@ -22,10 +22,10 @@ public final class ConnectionGatewayDefinitionPropertiesArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="backendUri")
-      private final @Nullable Input<String> backendUri;
+      private final @Nullable Output<String> backendUri;
 
-    public Input<String> getBackendUri() {
-        return this.backendUri == null ? Input.empty() : this.backendUri;
+    public Output<String> getBackendUri() {
+        return this.backendUri == null ? Output.empty() : this.backendUri;
     }
 
     /**
@@ -33,10 +33,10 @@ public final class ConnectionGatewayDefinitionPropertiesArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="connectionGatewayInstallation")
-      private final @Nullable Input<ConnectionGatewayReferenceArgs> connectionGatewayInstallation;
+      private final @Nullable Output<ConnectionGatewayReferenceArgs> connectionGatewayInstallation;
 
-    public Input<ConnectionGatewayReferenceArgs> getConnectionGatewayInstallation() {
-        return this.connectionGatewayInstallation == null ? Input.empty() : this.connectionGatewayInstallation;
+    public Output<ConnectionGatewayReferenceArgs> getConnectionGatewayInstallation() {
+        return this.connectionGatewayInstallation == null ? Output.empty() : this.connectionGatewayInstallation;
     }
 
     /**
@@ -44,10 +44,10 @@ public final class ConnectionGatewayDefinitionPropertiesArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="contactInformation")
-      private final @Nullable Input<List<String>> contactInformation;
+      private final @Nullable Output<List<String>> contactInformation;
 
-    public Input<List<String>> getContactInformation() {
-        return this.contactInformation == null ? Input.empty() : this.contactInformation;
+    public Output<List<String>> getContactInformation() {
+        return this.contactInformation == null ? Output.empty() : this.contactInformation;
     }
 
     /**
@@ -55,10 +55,10 @@ public final class ConnectionGatewayDefinitionPropertiesArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -66,10 +66,10 @@ public final class ConnectionGatewayDefinitionPropertiesArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="displayName")
-      private final @Nullable Input<String> displayName;
+      private final @Nullable Output<String> displayName;
 
-    public Input<String> getDisplayName() {
-        return this.displayName == null ? Input.empty() : this.displayName;
+    public Output<String> getDisplayName() {
+        return this.displayName == null ? Output.empty() : this.displayName;
     }
 
     /**
@@ -77,10 +77,10 @@ public final class ConnectionGatewayDefinitionPropertiesArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="machineName")
-      private final @Nullable Input<String> machineName;
+      private final @Nullable Output<String> machineName;
 
-    public Input<String> getMachineName() {
-        return this.machineName == null ? Input.empty() : this.machineName;
+    public Output<String> getMachineName() {
+        return this.machineName == null ? Output.empty() : this.machineName;
     }
 
     /**
@@ -88,20 +88,20 @@ public final class ConnectionGatewayDefinitionPropertiesArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="status")
-      private final @Nullable Input<Object> status;
+      private final @Nullable Output<Object> status;
 
-    public Input<Object> getStatus() {
-        return this.status == null ? Input.empty() : this.status;
+    public Output<Object> getStatus() {
+        return this.status == null ? Output.empty() : this.status;
     }
 
     public ConnectionGatewayDefinitionPropertiesArgs(
-        @Nullable Input<String> backendUri,
-        @Nullable Input<ConnectionGatewayReferenceArgs> connectionGatewayInstallation,
-        @Nullable Input<List<String>> contactInformation,
-        @Nullable Input<String> description,
-        @Nullable Input<String> displayName,
-        @Nullable Input<String> machineName,
-        @Nullable Input<Object> status) {
+        @Nullable Output<String> backendUri,
+        @Nullable Output<ConnectionGatewayReferenceArgs> connectionGatewayInstallation,
+        @Nullable Output<List<String>> contactInformation,
+        @Nullable Output<String> description,
+        @Nullable Output<String> displayName,
+        @Nullable Output<String> machineName,
+        @Nullable Output<Object> status) {
         this.backendUri = backendUri;
         this.connectionGatewayInstallation = connectionGatewayInstallation;
         this.contactInformation = contactInformation;
@@ -112,13 +112,13 @@ public final class ConnectionGatewayDefinitionPropertiesArgs extends io.pulumi.r
     }
 
     private ConnectionGatewayDefinitionPropertiesArgs() {
-        this.backendUri = Input.empty();
-        this.connectionGatewayInstallation = Input.empty();
-        this.contactInformation = Input.empty();
-        this.description = Input.empty();
-        this.displayName = Input.empty();
-        this.machineName = Input.empty();
-        this.status = Input.empty();
+        this.backendUri = Output.empty();
+        this.connectionGatewayInstallation = Output.empty();
+        this.contactInformation = Output.empty();
+        this.description = Output.empty();
+        this.displayName = Output.empty();
+        this.machineName = Output.empty();
+        this.status = Output.empty();
     }
 
     public static Builder builder() {
@@ -130,13 +130,13 @@ public final class ConnectionGatewayDefinitionPropertiesArgs extends io.pulumi.r
     }
 
     public static final class Builder {
-        private @Nullable Input<String> backendUri;
-        private @Nullable Input<ConnectionGatewayReferenceArgs> connectionGatewayInstallation;
-        private @Nullable Input<List<String>> contactInformation;
-        private @Nullable Input<String> description;
-        private @Nullable Input<String> displayName;
-        private @Nullable Input<String> machineName;
-        private @Nullable Input<Object> status;
+        private @Nullable Output<String> backendUri;
+        private @Nullable Output<ConnectionGatewayReferenceArgs> connectionGatewayInstallation;
+        private @Nullable Output<List<String>> contactInformation;
+        private @Nullable Output<String> description;
+        private @Nullable Output<String> displayName;
+        private @Nullable Output<String> machineName;
+        private @Nullable Output<Object> status;
 
         public Builder() {
     	      // Empty
@@ -153,73 +153,73 @@ public final class ConnectionGatewayDefinitionPropertiesArgs extends io.pulumi.r
     	      this.status = defaults.status;
         }
 
-        public Builder backendUri(@Nullable Input<String> backendUri) {
+        public Builder backendUri(@Nullable Output<String> backendUri) {
             this.backendUri = backendUri;
             return this;
         }
 
         public Builder backendUri(@Nullable String backendUri) {
-            this.backendUri = Input.ofNullable(backendUri);
+            this.backendUri = Output.ofNullable(backendUri);
             return this;
         }
 
-        public Builder connectionGatewayInstallation(@Nullable Input<ConnectionGatewayReferenceArgs> connectionGatewayInstallation) {
+        public Builder connectionGatewayInstallation(@Nullable Output<ConnectionGatewayReferenceArgs> connectionGatewayInstallation) {
             this.connectionGatewayInstallation = connectionGatewayInstallation;
             return this;
         }
 
         public Builder connectionGatewayInstallation(@Nullable ConnectionGatewayReferenceArgs connectionGatewayInstallation) {
-            this.connectionGatewayInstallation = Input.ofNullable(connectionGatewayInstallation);
+            this.connectionGatewayInstallation = Output.ofNullable(connectionGatewayInstallation);
             return this;
         }
 
-        public Builder contactInformation(@Nullable Input<List<String>> contactInformation) {
+        public Builder contactInformation(@Nullable Output<List<String>> contactInformation) {
             this.contactInformation = contactInformation;
             return this;
         }
 
         public Builder contactInformation(@Nullable List<String> contactInformation) {
-            this.contactInformation = Input.ofNullable(contactInformation);
+            this.contactInformation = Output.ofNullable(contactInformation);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder displayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Input.ofNullable(displayName);
+            this.displayName = Output.ofNullable(displayName);
             return this;
         }
 
-        public Builder machineName(@Nullable Input<String> machineName) {
+        public Builder machineName(@Nullable Output<String> machineName) {
             this.machineName = machineName;
             return this;
         }
 
         public Builder machineName(@Nullable String machineName) {
-            this.machineName = Input.ofNullable(machineName);
+            this.machineName = Output.ofNullable(machineName);
             return this;
         }
 
-        public Builder status(@Nullable Input<Object> status) {
+        public Builder status(@Nullable Output<Object> status) {
             this.status = status;
             return this;
         }
 
         public Builder status(@Nullable Object status) {
-            this.status = Input.ofNullable(status);
+            this.status = Output.ofNullable(status);
             return this;
         }
         public ConnectionGatewayDefinitionPropertiesArgs build() {

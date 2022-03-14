@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.ec2;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -20,10 +20,10 @@ public final class VpnGatewayArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="amazonSideAsn")
-      private final @Nullable Input<String> amazonSideAsn;
+      private final @Nullable Output<String> amazonSideAsn;
 
-    public Input<String> getAmazonSideAsn() {
-        return this.amazonSideAsn == null ? Input.empty() : this.amazonSideAsn;
+    public Output<String> getAmazonSideAsn() {
+        return this.amazonSideAsn == null ? Output.empty() : this.amazonSideAsn;
     }
 
     /**
@@ -31,10 +31,10 @@ public final class VpnGatewayArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="availabilityZone")
-      private final @Nullable Input<String> availabilityZone;
+      private final @Nullable Output<String> availabilityZone;
 
-    public Input<String> getAvailabilityZone() {
-        return this.availabilityZone == null ? Input.empty() : this.availabilityZone;
+    public Output<String> getAvailabilityZone() {
+        return this.availabilityZone == null ? Output.empty() : this.availabilityZone;
     }
 
     /**
@@ -42,10 +42,10 @@ public final class VpnGatewayArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -53,17 +53,17 @@ public final class VpnGatewayArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="vpcId")
-      private final @Nullable Input<String> vpcId;
+      private final @Nullable Output<String> vpcId;
 
-    public Input<String> getVpcId() {
-        return this.vpcId == null ? Input.empty() : this.vpcId;
+    public Output<String> getVpcId() {
+        return this.vpcId == null ? Output.empty() : this.vpcId;
     }
 
     public VpnGatewayArgs(
-        @Nullable Input<String> amazonSideAsn,
-        @Nullable Input<String> availabilityZone,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<String> vpcId) {
+        @Nullable Output<String> amazonSideAsn,
+        @Nullable Output<String> availabilityZone,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<String> vpcId) {
         this.amazonSideAsn = amazonSideAsn;
         this.availabilityZone = availabilityZone;
         this.tags = tags;
@@ -71,10 +71,10 @@ public final class VpnGatewayArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private VpnGatewayArgs() {
-        this.amazonSideAsn = Input.empty();
-        this.availabilityZone = Input.empty();
-        this.tags = Input.empty();
-        this.vpcId = Input.empty();
+        this.amazonSideAsn = Output.empty();
+        this.availabilityZone = Output.empty();
+        this.tags = Output.empty();
+        this.vpcId = Output.empty();
     }
 
     public static Builder builder() {
@@ -86,10 +86,10 @@ public final class VpnGatewayArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> amazonSideAsn;
-        private @Nullable Input<String> availabilityZone;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<String> vpcId;
+        private @Nullable Output<String> amazonSideAsn;
+        private @Nullable Output<String> availabilityZone;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<String> vpcId;
 
         public Builder() {
     	      // Empty
@@ -103,43 +103,43 @@ public final class VpnGatewayArgs extends io.pulumi.resources.ResourceArgs {
     	      this.vpcId = defaults.vpcId;
         }
 
-        public Builder amazonSideAsn(@Nullable Input<String> amazonSideAsn) {
+        public Builder amazonSideAsn(@Nullable Output<String> amazonSideAsn) {
             this.amazonSideAsn = amazonSideAsn;
             return this;
         }
 
         public Builder amazonSideAsn(@Nullable String amazonSideAsn) {
-            this.amazonSideAsn = Input.ofNullable(amazonSideAsn);
+            this.amazonSideAsn = Output.ofNullable(amazonSideAsn);
             return this;
         }
 
-        public Builder availabilityZone(@Nullable Input<String> availabilityZone) {
+        public Builder availabilityZone(@Nullable Output<String> availabilityZone) {
             this.availabilityZone = availabilityZone;
             return this;
         }
 
         public Builder availabilityZone(@Nullable String availabilityZone) {
-            this.availabilityZone = Input.ofNullable(availabilityZone);
+            this.availabilityZone = Output.ofNullable(availabilityZone);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder vpcId(@Nullable Input<String> vpcId) {
+        public Builder vpcId(@Nullable Output<String> vpcId) {
             this.vpcId = vpcId;
             return this;
         }
 
         public Builder vpcId(@Nullable String vpcId) {
-            this.vpcId = Input.ofNullable(vpcId);
+            this.vpcId = Output.ofNullable(vpcId);
             return this;
         }
         public VpnGatewayArgs build() {

@@ -10,7 +10,7 @@ import io.pulumi.aws.dynamodb.inputs.TablePointInTimeRecoveryGetArgs;
 import io.pulumi.aws.dynamodb.inputs.TableReplicaGetArgs;
 import io.pulumi.aws.dynamodb.inputs.TableServerSideEncryptionGetArgs;
 import io.pulumi.aws.dynamodb.inputs.TableTtlGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -30,10 +30,10 @@ public final class TableState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arn")
-      private final @Nullable Input<String> arn;
+      private final @Nullable Output<String> arn;
 
-    public Input<String> getArn() {
-        return this.arn == null ? Input.empty() : this.arn;
+    public Output<String> getArn() {
+        return this.arn == null ? Output.empty() : this.arn;
     }
 
     /**
@@ -41,10 +41,10 @@ public final class TableState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="attributes")
-      private final @Nullable Input<List<TableAttributeGetArgs>> attributes;
+      private final @Nullable Output<List<TableAttributeGetArgs>> attributes;
 
-    public Input<List<TableAttributeGetArgs>> getAttributes() {
-        return this.attributes == null ? Input.empty() : this.attributes;
+    public Output<List<TableAttributeGetArgs>> getAttributes() {
+        return this.attributes == null ? Output.empty() : this.attributes;
     }
 
     /**
@@ -52,10 +52,10 @@ public final class TableState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="billingMode")
-      private final @Nullable Input<String> billingMode;
+      private final @Nullable Output<String> billingMode;
 
-    public Input<String> getBillingMode() {
-        return this.billingMode == null ? Input.empty() : this.billingMode;
+    public Output<String> getBillingMode() {
+        return this.billingMode == null ? Output.empty() : this.billingMode;
     }
 
     /**
@@ -65,10 +65,10 @@ public final class TableState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="globalSecondaryIndexes")
-      private final @Nullable Input<List<TableGlobalSecondaryIndexGetArgs>> globalSecondaryIndexes;
+      private final @Nullable Output<List<TableGlobalSecondaryIndexGetArgs>> globalSecondaryIndexes;
 
-    public Input<List<TableGlobalSecondaryIndexGetArgs>> getGlobalSecondaryIndexes() {
-        return this.globalSecondaryIndexes == null ? Input.empty() : this.globalSecondaryIndexes;
+    public Output<List<TableGlobalSecondaryIndexGetArgs>> getGlobalSecondaryIndexes() {
+        return this.globalSecondaryIndexes == null ? Output.empty() : this.globalSecondaryIndexes;
     }
 
     /**
@@ -77,10 +77,10 @@ public final class TableState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="hashKey")
-      private final @Nullable Input<String> hashKey;
+      private final @Nullable Output<String> hashKey;
 
-    public Input<String> getHashKey() {
-        return this.hashKey == null ? Input.empty() : this.hashKey;
+    public Output<String> getHashKey() {
+        return this.hashKey == null ? Output.empty() : this.hashKey;
     }
 
     /**
@@ -90,10 +90,10 @@ public final class TableState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="localSecondaryIndexes")
-      private final @Nullable Input<List<TableLocalSecondaryIndexGetArgs>> localSecondaryIndexes;
+      private final @Nullable Output<List<TableLocalSecondaryIndexGetArgs>> localSecondaryIndexes;
 
-    public Input<List<TableLocalSecondaryIndexGetArgs>> getLocalSecondaryIndexes() {
-        return this.localSecondaryIndexes == null ? Input.empty() : this.localSecondaryIndexes;
+    public Output<List<TableLocalSecondaryIndexGetArgs>> getLocalSecondaryIndexes() {
+        return this.localSecondaryIndexes == null ? Output.empty() : this.localSecondaryIndexes;
     }
 
     /**
@@ -101,10 +101,10 @@ public final class TableState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -112,10 +112,10 @@ public final class TableState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="pointInTimeRecovery")
-      private final @Nullable Input<TablePointInTimeRecoveryGetArgs> pointInTimeRecovery;
+      private final @Nullable Output<TablePointInTimeRecoveryGetArgs> pointInTimeRecovery;
 
-    public Input<TablePointInTimeRecoveryGetArgs> getPointInTimeRecovery() {
-        return this.pointInTimeRecovery == null ? Input.empty() : this.pointInTimeRecovery;
+    public Output<TablePointInTimeRecoveryGetArgs> getPointInTimeRecovery() {
+        return this.pointInTimeRecovery == null ? Output.empty() : this.pointInTimeRecovery;
     }
 
     /**
@@ -123,10 +123,10 @@ public final class TableState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="rangeKey")
-      private final @Nullable Input<String> rangeKey;
+      private final @Nullable Output<String> rangeKey;
 
-    public Input<String> getRangeKey() {
-        return this.rangeKey == null ? Input.empty() : this.rangeKey;
+    public Output<String> getRangeKey() {
+        return this.rangeKey == null ? Output.empty() : this.rangeKey;
     }
 
     /**
@@ -134,10 +134,10 @@ public final class TableState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="readCapacity")
-      private final @Nullable Input<Integer> readCapacity;
+      private final @Nullable Output<Integer> readCapacity;
 
-    public Input<Integer> getReadCapacity() {
-        return this.readCapacity == null ? Input.empty() : this.readCapacity;
+    public Output<Integer> getReadCapacity() {
+        return this.readCapacity == null ? Output.empty() : this.readCapacity;
     }
 
     /**
@@ -145,10 +145,10 @@ public final class TableState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="replicas")
-      private final @Nullable Input<List<TableReplicaGetArgs>> replicas;
+      private final @Nullable Output<List<TableReplicaGetArgs>> replicas;
 
-    public Input<List<TableReplicaGetArgs>> getReplicas() {
-        return this.replicas == null ? Input.empty() : this.replicas;
+    public Output<List<TableReplicaGetArgs>> getReplicas() {
+        return this.replicas == null ? Output.empty() : this.replicas;
     }
 
     /**
@@ -156,10 +156,10 @@ public final class TableState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="restoreDateTime")
-      private final @Nullable Input<String> restoreDateTime;
+      private final @Nullable Output<String> restoreDateTime;
 
-    public Input<String> getRestoreDateTime() {
-        return this.restoreDateTime == null ? Input.empty() : this.restoreDateTime;
+    public Output<String> getRestoreDateTime() {
+        return this.restoreDateTime == null ? Output.empty() : this.restoreDateTime;
     }
 
     /**
@@ -167,10 +167,10 @@ public final class TableState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="restoreSourceName")
-      private final @Nullable Input<String> restoreSourceName;
+      private final @Nullable Output<String> restoreSourceName;
 
-    public Input<String> getRestoreSourceName() {
-        return this.restoreSourceName == null ? Input.empty() : this.restoreSourceName;
+    public Output<String> getRestoreSourceName() {
+        return this.restoreSourceName == null ? Output.empty() : this.restoreSourceName;
     }
 
     /**
@@ -178,10 +178,10 @@ public final class TableState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="restoreToLatestTime")
-      private final @Nullable Input<Boolean> restoreToLatestTime;
+      private final @Nullable Output<Boolean> restoreToLatestTime;
 
-    public Input<Boolean> getRestoreToLatestTime() {
-        return this.restoreToLatestTime == null ? Input.empty() : this.restoreToLatestTime;
+    public Output<Boolean> getRestoreToLatestTime() {
+        return this.restoreToLatestTime == null ? Output.empty() : this.restoreToLatestTime;
     }
 
     /**
@@ -189,10 +189,10 @@ public final class TableState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serverSideEncryption")
-      private final @Nullable Input<TableServerSideEncryptionGetArgs> serverSideEncryption;
+      private final @Nullable Output<TableServerSideEncryptionGetArgs> serverSideEncryption;
 
-    public Input<TableServerSideEncryptionGetArgs> getServerSideEncryption() {
-        return this.serverSideEncryption == null ? Input.empty() : this.serverSideEncryption;
+    public Output<TableServerSideEncryptionGetArgs> getServerSideEncryption() {
+        return this.serverSideEncryption == null ? Output.empty() : this.serverSideEncryption;
     }
 
     /**
@@ -200,10 +200,10 @@ public final class TableState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="streamArn")
-      private final @Nullable Input<String> streamArn;
+      private final @Nullable Output<String> streamArn;
 
-    public Input<String> getStreamArn() {
-        return this.streamArn == null ? Input.empty() : this.streamArn;
+    public Output<String> getStreamArn() {
+        return this.streamArn == null ? Output.empty() : this.streamArn;
     }
 
     /**
@@ -211,10 +211,10 @@ public final class TableState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="streamEnabled")
-      private final @Nullable Input<Boolean> streamEnabled;
+      private final @Nullable Output<Boolean> streamEnabled;
 
-    public Input<Boolean> getStreamEnabled() {
-        return this.streamEnabled == null ? Input.empty() : this.streamEnabled;
+    public Output<Boolean> getStreamEnabled() {
+        return this.streamEnabled == null ? Output.empty() : this.streamEnabled;
     }
 
     /**
@@ -225,10 +225,10 @@ public final class TableState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="streamLabel")
-      private final @Nullable Input<String> streamLabel;
+      private final @Nullable Output<String> streamLabel;
 
-    public Input<String> getStreamLabel() {
-        return this.streamLabel == null ? Input.empty() : this.streamLabel;
+    public Output<String> getStreamLabel() {
+        return this.streamLabel == null ? Output.empty() : this.streamLabel;
     }
 
     /**
@@ -236,10 +236,10 @@ public final class TableState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="streamViewType")
-      private final @Nullable Input<String> streamViewType;
+      private final @Nullable Output<String> streamViewType;
 
-    public Input<String> getStreamViewType() {
-        return this.streamViewType == null ? Input.empty() : this.streamViewType;
+    public Output<String> getStreamViewType() {
+        return this.streamViewType == null ? Output.empty() : this.streamViewType;
     }
 
     /**
@@ -247,10 +247,10 @@ public final class TableState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tableClass")
-      private final @Nullable Input<String> tableClass;
+      private final @Nullable Output<String> tableClass;
 
-    public Input<String> getTableClass() {
-        return this.tableClass == null ? Input.empty() : this.tableClass;
+    public Output<String> getTableClass() {
+        return this.tableClass == null ? Output.empty() : this.tableClass;
     }
 
     /**
@@ -258,10 +258,10 @@ public final class TableState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -269,10 +269,10 @@ public final class TableState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tagsAll")
-      private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Input<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Input.empty() : this.tagsAll;
+    public Output<Map<String,String>> getTagsAll() {
+        return this.tagsAll == null ? Output.empty() : this.tagsAll;
     }
 
     /**
@@ -280,10 +280,10 @@ public final class TableState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ttl")
-      private final @Nullable Input<TableTtlGetArgs> ttl;
+      private final @Nullable Output<TableTtlGetArgs> ttl;
 
-    public Input<TableTtlGetArgs> getTtl() {
-        return this.ttl == null ? Input.empty() : this.ttl;
+    public Output<TableTtlGetArgs> getTtl() {
+        return this.ttl == null ? Output.empty() : this.ttl;
     }
 
     /**
@@ -291,37 +291,37 @@ public final class TableState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="writeCapacity")
-      private final @Nullable Input<Integer> writeCapacity;
+      private final @Nullable Output<Integer> writeCapacity;
 
-    public Input<Integer> getWriteCapacity() {
-        return this.writeCapacity == null ? Input.empty() : this.writeCapacity;
+    public Output<Integer> getWriteCapacity() {
+        return this.writeCapacity == null ? Output.empty() : this.writeCapacity;
     }
 
     public TableState(
-        @Nullable Input<String> arn,
-        @Nullable Input<List<TableAttributeGetArgs>> attributes,
-        @Nullable Input<String> billingMode,
-        @Nullable Input<List<TableGlobalSecondaryIndexGetArgs>> globalSecondaryIndexes,
-        @Nullable Input<String> hashKey,
-        @Nullable Input<List<TableLocalSecondaryIndexGetArgs>> localSecondaryIndexes,
-        @Nullable Input<String> name,
-        @Nullable Input<TablePointInTimeRecoveryGetArgs> pointInTimeRecovery,
-        @Nullable Input<String> rangeKey,
-        @Nullable Input<Integer> readCapacity,
-        @Nullable Input<List<TableReplicaGetArgs>> replicas,
-        @Nullable Input<String> restoreDateTime,
-        @Nullable Input<String> restoreSourceName,
-        @Nullable Input<Boolean> restoreToLatestTime,
-        @Nullable Input<TableServerSideEncryptionGetArgs> serverSideEncryption,
-        @Nullable Input<String> streamArn,
-        @Nullable Input<Boolean> streamEnabled,
-        @Nullable Input<String> streamLabel,
-        @Nullable Input<String> streamViewType,
-        @Nullable Input<String> tableClass,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<Map<String,String>> tagsAll,
-        @Nullable Input<TableTtlGetArgs> ttl,
-        @Nullable Input<Integer> writeCapacity) {
+        @Nullable Output<String> arn,
+        @Nullable Output<List<TableAttributeGetArgs>> attributes,
+        @Nullable Output<String> billingMode,
+        @Nullable Output<List<TableGlobalSecondaryIndexGetArgs>> globalSecondaryIndexes,
+        @Nullable Output<String> hashKey,
+        @Nullable Output<List<TableLocalSecondaryIndexGetArgs>> localSecondaryIndexes,
+        @Nullable Output<String> name,
+        @Nullable Output<TablePointInTimeRecoveryGetArgs> pointInTimeRecovery,
+        @Nullable Output<String> rangeKey,
+        @Nullable Output<Integer> readCapacity,
+        @Nullable Output<List<TableReplicaGetArgs>> replicas,
+        @Nullable Output<String> restoreDateTime,
+        @Nullable Output<String> restoreSourceName,
+        @Nullable Output<Boolean> restoreToLatestTime,
+        @Nullable Output<TableServerSideEncryptionGetArgs> serverSideEncryption,
+        @Nullable Output<String> streamArn,
+        @Nullable Output<Boolean> streamEnabled,
+        @Nullable Output<String> streamLabel,
+        @Nullable Output<String> streamViewType,
+        @Nullable Output<String> tableClass,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<Map<String,String>> tagsAll,
+        @Nullable Output<TableTtlGetArgs> ttl,
+        @Nullable Output<Integer> writeCapacity) {
         this.arn = arn;
         this.attributes = attributes;
         this.billingMode = billingMode;
@@ -349,30 +349,30 @@ public final class TableState extends io.pulumi.resources.ResourceArgs {
     }
 
     private TableState() {
-        this.arn = Input.empty();
-        this.attributes = Input.empty();
-        this.billingMode = Input.empty();
-        this.globalSecondaryIndexes = Input.empty();
-        this.hashKey = Input.empty();
-        this.localSecondaryIndexes = Input.empty();
-        this.name = Input.empty();
-        this.pointInTimeRecovery = Input.empty();
-        this.rangeKey = Input.empty();
-        this.readCapacity = Input.empty();
-        this.replicas = Input.empty();
-        this.restoreDateTime = Input.empty();
-        this.restoreSourceName = Input.empty();
-        this.restoreToLatestTime = Input.empty();
-        this.serverSideEncryption = Input.empty();
-        this.streamArn = Input.empty();
-        this.streamEnabled = Input.empty();
-        this.streamLabel = Input.empty();
-        this.streamViewType = Input.empty();
-        this.tableClass = Input.empty();
-        this.tags = Input.empty();
-        this.tagsAll = Input.empty();
-        this.ttl = Input.empty();
-        this.writeCapacity = Input.empty();
+        this.arn = Output.empty();
+        this.attributes = Output.empty();
+        this.billingMode = Output.empty();
+        this.globalSecondaryIndexes = Output.empty();
+        this.hashKey = Output.empty();
+        this.localSecondaryIndexes = Output.empty();
+        this.name = Output.empty();
+        this.pointInTimeRecovery = Output.empty();
+        this.rangeKey = Output.empty();
+        this.readCapacity = Output.empty();
+        this.replicas = Output.empty();
+        this.restoreDateTime = Output.empty();
+        this.restoreSourceName = Output.empty();
+        this.restoreToLatestTime = Output.empty();
+        this.serverSideEncryption = Output.empty();
+        this.streamArn = Output.empty();
+        this.streamEnabled = Output.empty();
+        this.streamLabel = Output.empty();
+        this.streamViewType = Output.empty();
+        this.tableClass = Output.empty();
+        this.tags = Output.empty();
+        this.tagsAll = Output.empty();
+        this.ttl = Output.empty();
+        this.writeCapacity = Output.empty();
     }
 
     public static Builder builder() {
@@ -384,30 +384,30 @@ public final class TableState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> arn;
-        private @Nullable Input<List<TableAttributeGetArgs>> attributes;
-        private @Nullable Input<String> billingMode;
-        private @Nullable Input<List<TableGlobalSecondaryIndexGetArgs>> globalSecondaryIndexes;
-        private @Nullable Input<String> hashKey;
-        private @Nullable Input<List<TableLocalSecondaryIndexGetArgs>> localSecondaryIndexes;
-        private @Nullable Input<String> name;
-        private @Nullable Input<TablePointInTimeRecoveryGetArgs> pointInTimeRecovery;
-        private @Nullable Input<String> rangeKey;
-        private @Nullable Input<Integer> readCapacity;
-        private @Nullable Input<List<TableReplicaGetArgs>> replicas;
-        private @Nullable Input<String> restoreDateTime;
-        private @Nullable Input<String> restoreSourceName;
-        private @Nullable Input<Boolean> restoreToLatestTime;
-        private @Nullable Input<TableServerSideEncryptionGetArgs> serverSideEncryption;
-        private @Nullable Input<String> streamArn;
-        private @Nullable Input<Boolean> streamEnabled;
-        private @Nullable Input<String> streamLabel;
-        private @Nullable Input<String> streamViewType;
-        private @Nullable Input<String> tableClass;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<Map<String,String>> tagsAll;
-        private @Nullable Input<TableTtlGetArgs> ttl;
-        private @Nullable Input<Integer> writeCapacity;
+        private @Nullable Output<String> arn;
+        private @Nullable Output<List<TableAttributeGetArgs>> attributes;
+        private @Nullable Output<String> billingMode;
+        private @Nullable Output<List<TableGlobalSecondaryIndexGetArgs>> globalSecondaryIndexes;
+        private @Nullable Output<String> hashKey;
+        private @Nullable Output<List<TableLocalSecondaryIndexGetArgs>> localSecondaryIndexes;
+        private @Nullable Output<String> name;
+        private @Nullable Output<TablePointInTimeRecoveryGetArgs> pointInTimeRecovery;
+        private @Nullable Output<String> rangeKey;
+        private @Nullable Output<Integer> readCapacity;
+        private @Nullable Output<List<TableReplicaGetArgs>> replicas;
+        private @Nullable Output<String> restoreDateTime;
+        private @Nullable Output<String> restoreSourceName;
+        private @Nullable Output<Boolean> restoreToLatestTime;
+        private @Nullable Output<TableServerSideEncryptionGetArgs> serverSideEncryption;
+        private @Nullable Output<String> streamArn;
+        private @Nullable Output<Boolean> streamEnabled;
+        private @Nullable Output<String> streamLabel;
+        private @Nullable Output<String> streamViewType;
+        private @Nullable Output<String> tableClass;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<Map<String,String>> tagsAll;
+        private @Nullable Output<TableTtlGetArgs> ttl;
+        private @Nullable Output<Integer> writeCapacity;
 
         public Builder() {
     	      // Empty
@@ -441,243 +441,243 @@ public final class TableState extends io.pulumi.resources.ResourceArgs {
     	      this.writeCapacity = defaults.writeCapacity;
         }
 
-        public Builder arn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
 
         public Builder arn(@Nullable String arn) {
-            this.arn = Input.ofNullable(arn);
+            this.arn = Output.ofNullable(arn);
             return this;
         }
 
-        public Builder attributes(@Nullable Input<List<TableAttributeGetArgs>> attributes) {
+        public Builder attributes(@Nullable Output<List<TableAttributeGetArgs>> attributes) {
             this.attributes = attributes;
             return this;
         }
 
         public Builder attributes(@Nullable List<TableAttributeGetArgs> attributes) {
-            this.attributes = Input.ofNullable(attributes);
+            this.attributes = Output.ofNullable(attributes);
             return this;
         }
 
-        public Builder billingMode(@Nullable Input<String> billingMode) {
+        public Builder billingMode(@Nullable Output<String> billingMode) {
             this.billingMode = billingMode;
             return this;
         }
 
         public Builder billingMode(@Nullable String billingMode) {
-            this.billingMode = Input.ofNullable(billingMode);
+            this.billingMode = Output.ofNullable(billingMode);
             return this;
         }
 
-        public Builder globalSecondaryIndexes(@Nullable Input<List<TableGlobalSecondaryIndexGetArgs>> globalSecondaryIndexes) {
+        public Builder globalSecondaryIndexes(@Nullable Output<List<TableGlobalSecondaryIndexGetArgs>> globalSecondaryIndexes) {
             this.globalSecondaryIndexes = globalSecondaryIndexes;
             return this;
         }
 
         public Builder globalSecondaryIndexes(@Nullable List<TableGlobalSecondaryIndexGetArgs> globalSecondaryIndexes) {
-            this.globalSecondaryIndexes = Input.ofNullable(globalSecondaryIndexes);
+            this.globalSecondaryIndexes = Output.ofNullable(globalSecondaryIndexes);
             return this;
         }
 
-        public Builder hashKey(@Nullable Input<String> hashKey) {
+        public Builder hashKey(@Nullable Output<String> hashKey) {
             this.hashKey = hashKey;
             return this;
         }
 
         public Builder hashKey(@Nullable String hashKey) {
-            this.hashKey = Input.ofNullable(hashKey);
+            this.hashKey = Output.ofNullable(hashKey);
             return this;
         }
 
-        public Builder localSecondaryIndexes(@Nullable Input<List<TableLocalSecondaryIndexGetArgs>> localSecondaryIndexes) {
+        public Builder localSecondaryIndexes(@Nullable Output<List<TableLocalSecondaryIndexGetArgs>> localSecondaryIndexes) {
             this.localSecondaryIndexes = localSecondaryIndexes;
             return this;
         }
 
         public Builder localSecondaryIndexes(@Nullable List<TableLocalSecondaryIndexGetArgs> localSecondaryIndexes) {
-            this.localSecondaryIndexes = Input.ofNullable(localSecondaryIndexes);
+            this.localSecondaryIndexes = Output.ofNullable(localSecondaryIndexes);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder pointInTimeRecovery(@Nullable Input<TablePointInTimeRecoveryGetArgs> pointInTimeRecovery) {
+        public Builder pointInTimeRecovery(@Nullable Output<TablePointInTimeRecoveryGetArgs> pointInTimeRecovery) {
             this.pointInTimeRecovery = pointInTimeRecovery;
             return this;
         }
 
         public Builder pointInTimeRecovery(@Nullable TablePointInTimeRecoveryGetArgs pointInTimeRecovery) {
-            this.pointInTimeRecovery = Input.ofNullable(pointInTimeRecovery);
+            this.pointInTimeRecovery = Output.ofNullable(pointInTimeRecovery);
             return this;
         }
 
-        public Builder rangeKey(@Nullable Input<String> rangeKey) {
+        public Builder rangeKey(@Nullable Output<String> rangeKey) {
             this.rangeKey = rangeKey;
             return this;
         }
 
         public Builder rangeKey(@Nullable String rangeKey) {
-            this.rangeKey = Input.ofNullable(rangeKey);
+            this.rangeKey = Output.ofNullable(rangeKey);
             return this;
         }
 
-        public Builder readCapacity(@Nullable Input<Integer> readCapacity) {
+        public Builder readCapacity(@Nullable Output<Integer> readCapacity) {
             this.readCapacity = readCapacity;
             return this;
         }
 
         public Builder readCapacity(@Nullable Integer readCapacity) {
-            this.readCapacity = Input.ofNullable(readCapacity);
+            this.readCapacity = Output.ofNullable(readCapacity);
             return this;
         }
 
-        public Builder replicas(@Nullable Input<List<TableReplicaGetArgs>> replicas) {
+        public Builder replicas(@Nullable Output<List<TableReplicaGetArgs>> replicas) {
             this.replicas = replicas;
             return this;
         }
 
         public Builder replicas(@Nullable List<TableReplicaGetArgs> replicas) {
-            this.replicas = Input.ofNullable(replicas);
+            this.replicas = Output.ofNullable(replicas);
             return this;
         }
 
-        public Builder restoreDateTime(@Nullable Input<String> restoreDateTime) {
+        public Builder restoreDateTime(@Nullable Output<String> restoreDateTime) {
             this.restoreDateTime = restoreDateTime;
             return this;
         }
 
         public Builder restoreDateTime(@Nullable String restoreDateTime) {
-            this.restoreDateTime = Input.ofNullable(restoreDateTime);
+            this.restoreDateTime = Output.ofNullable(restoreDateTime);
             return this;
         }
 
-        public Builder restoreSourceName(@Nullable Input<String> restoreSourceName) {
+        public Builder restoreSourceName(@Nullable Output<String> restoreSourceName) {
             this.restoreSourceName = restoreSourceName;
             return this;
         }
 
         public Builder restoreSourceName(@Nullable String restoreSourceName) {
-            this.restoreSourceName = Input.ofNullable(restoreSourceName);
+            this.restoreSourceName = Output.ofNullable(restoreSourceName);
             return this;
         }
 
-        public Builder restoreToLatestTime(@Nullable Input<Boolean> restoreToLatestTime) {
+        public Builder restoreToLatestTime(@Nullable Output<Boolean> restoreToLatestTime) {
             this.restoreToLatestTime = restoreToLatestTime;
             return this;
         }
 
         public Builder restoreToLatestTime(@Nullable Boolean restoreToLatestTime) {
-            this.restoreToLatestTime = Input.ofNullable(restoreToLatestTime);
+            this.restoreToLatestTime = Output.ofNullable(restoreToLatestTime);
             return this;
         }
 
-        public Builder serverSideEncryption(@Nullable Input<TableServerSideEncryptionGetArgs> serverSideEncryption) {
+        public Builder serverSideEncryption(@Nullable Output<TableServerSideEncryptionGetArgs> serverSideEncryption) {
             this.serverSideEncryption = serverSideEncryption;
             return this;
         }
 
         public Builder serverSideEncryption(@Nullable TableServerSideEncryptionGetArgs serverSideEncryption) {
-            this.serverSideEncryption = Input.ofNullable(serverSideEncryption);
+            this.serverSideEncryption = Output.ofNullable(serverSideEncryption);
             return this;
         }
 
-        public Builder streamArn(@Nullable Input<String> streamArn) {
+        public Builder streamArn(@Nullable Output<String> streamArn) {
             this.streamArn = streamArn;
             return this;
         }
 
         public Builder streamArn(@Nullable String streamArn) {
-            this.streamArn = Input.ofNullable(streamArn);
+            this.streamArn = Output.ofNullable(streamArn);
             return this;
         }
 
-        public Builder streamEnabled(@Nullable Input<Boolean> streamEnabled) {
+        public Builder streamEnabled(@Nullable Output<Boolean> streamEnabled) {
             this.streamEnabled = streamEnabled;
             return this;
         }
 
         public Builder streamEnabled(@Nullable Boolean streamEnabled) {
-            this.streamEnabled = Input.ofNullable(streamEnabled);
+            this.streamEnabled = Output.ofNullable(streamEnabled);
             return this;
         }
 
-        public Builder streamLabel(@Nullable Input<String> streamLabel) {
+        public Builder streamLabel(@Nullable Output<String> streamLabel) {
             this.streamLabel = streamLabel;
             return this;
         }
 
         public Builder streamLabel(@Nullable String streamLabel) {
-            this.streamLabel = Input.ofNullable(streamLabel);
+            this.streamLabel = Output.ofNullable(streamLabel);
             return this;
         }
 
-        public Builder streamViewType(@Nullable Input<String> streamViewType) {
+        public Builder streamViewType(@Nullable Output<String> streamViewType) {
             this.streamViewType = streamViewType;
             return this;
         }
 
         public Builder streamViewType(@Nullable String streamViewType) {
-            this.streamViewType = Input.ofNullable(streamViewType);
+            this.streamViewType = Output.ofNullable(streamViewType);
             return this;
         }
 
-        public Builder tableClass(@Nullable Input<String> tableClass) {
+        public Builder tableClass(@Nullable Output<String> tableClass) {
             this.tableClass = tableClass;
             return this;
         }
 
         public Builder tableClass(@Nullable String tableClass) {
-            this.tableClass = Input.ofNullable(tableClass);
+            this.tableClass = Output.ofNullable(tableClass);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Input.ofNullable(tagsAll);
+            this.tagsAll = Output.ofNullable(tagsAll);
             return this;
         }
 
-        public Builder ttl(@Nullable Input<TableTtlGetArgs> ttl) {
+        public Builder ttl(@Nullable Output<TableTtlGetArgs> ttl) {
             this.ttl = ttl;
             return this;
         }
 
         public Builder ttl(@Nullable TableTtlGetArgs ttl) {
-            this.ttl = Input.ofNullable(ttl);
+            this.ttl = Output.ofNullable(ttl);
             return this;
         }
 
-        public Builder writeCapacity(@Nullable Input<Integer> writeCapacity) {
+        public Builder writeCapacity(@Nullable Output<Integer> writeCapacity) {
             this.writeCapacity = writeCapacity;
             return this;
         }
 
         public Builder writeCapacity(@Nullable Integer writeCapacity) {
-            this.writeCapacity = Input.ofNullable(writeCapacity);
+            this.writeCapacity = Output.ofNullable(writeCapacity);
             return this;
         }
         public TableState build() {

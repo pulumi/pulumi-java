@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class NodeTemplateNodeTypeFlexibilityArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="cpus")
-      private final @Nullable Input<String> cpus;
+      private final @Nullable Output<String> cpus;
 
-    public Input<String> getCpus() {
-        return this.cpus == null ? Input.empty() : this.cpus;
+    public Output<String> getCpus() {
+        return this.cpus == null ? Output.empty() : this.cpus;
     }
 
     /**
@@ -31,10 +31,10 @@ public final class NodeTemplateNodeTypeFlexibilityArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="localSsd")
-      private final @Nullable Input<String> localSsd;
+      private final @Nullable Output<String> localSsd;
 
-    public Input<String> getLocalSsd() {
-        return this.localSsd == null ? Input.empty() : this.localSsd;
+    public Output<String> getLocalSsd() {
+        return this.localSsd == null ? Output.empty() : this.localSsd;
     }
 
     /**
@@ -42,25 +42,25 @@ public final class NodeTemplateNodeTypeFlexibilityArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="memory")
-      private final @Nullable Input<String> memory;
+      private final @Nullable Output<String> memory;
 
-    public Input<String> getMemory() {
-        return this.memory == null ? Input.empty() : this.memory;
+    public Output<String> getMemory() {
+        return this.memory == null ? Output.empty() : this.memory;
     }
 
     public NodeTemplateNodeTypeFlexibilityArgs(
-        @Nullable Input<String> cpus,
-        @Nullable Input<String> localSsd,
-        @Nullable Input<String> memory) {
+        @Nullable Output<String> cpus,
+        @Nullable Output<String> localSsd,
+        @Nullable Output<String> memory) {
         this.cpus = cpus;
         this.localSsd = localSsd;
         this.memory = memory;
     }
 
     private NodeTemplateNodeTypeFlexibilityArgs() {
-        this.cpus = Input.empty();
-        this.localSsd = Input.empty();
-        this.memory = Input.empty();
+        this.cpus = Output.empty();
+        this.localSsd = Output.empty();
+        this.memory = Output.empty();
     }
 
     public static Builder builder() {
@@ -72,9 +72,9 @@ public final class NodeTemplateNodeTypeFlexibilityArgs extends io.pulumi.resourc
     }
 
     public static final class Builder {
-        private @Nullable Input<String> cpus;
-        private @Nullable Input<String> localSsd;
-        private @Nullable Input<String> memory;
+        private @Nullable Output<String> cpus;
+        private @Nullable Output<String> localSsd;
+        private @Nullable Output<String> memory;
 
         public Builder() {
     	      // Empty
@@ -87,33 +87,33 @@ public final class NodeTemplateNodeTypeFlexibilityArgs extends io.pulumi.resourc
     	      this.memory = defaults.memory;
         }
 
-        public Builder cpus(@Nullable Input<String> cpus) {
+        public Builder cpus(@Nullable Output<String> cpus) {
             this.cpus = cpus;
             return this;
         }
 
         public Builder cpus(@Nullable String cpus) {
-            this.cpus = Input.ofNullable(cpus);
+            this.cpus = Output.ofNullable(cpus);
             return this;
         }
 
-        public Builder localSsd(@Nullable Input<String> localSsd) {
+        public Builder localSsd(@Nullable Output<String> localSsd) {
             this.localSsd = localSsd;
             return this;
         }
 
         public Builder localSsd(@Nullable String localSsd) {
-            this.localSsd = Input.ofNullable(localSsd);
+            this.localSsd = Output.ofNullable(localSsd);
             return this;
         }
 
-        public Builder memory(@Nullable Input<String> memory) {
+        public Builder memory(@Nullable Output<String> memory) {
             this.memory = memory;
             return this;
         }
 
         public Builder memory(@Nullable String memory) {
-            this.memory = Input.ofNullable(memory);
+            this.memory = Output.ofNullable(memory);
             return this;
         }
         public NodeTemplateNodeTypeFlexibilityArgs build() {

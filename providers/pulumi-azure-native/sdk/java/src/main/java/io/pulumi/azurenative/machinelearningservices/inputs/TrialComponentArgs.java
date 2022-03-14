@@ -8,7 +8,7 @@ import io.pulumi.azurenative.machinelearningservices.inputs.MpiArgs;
 import io.pulumi.azurenative.machinelearningservices.inputs.OutputDataBindingArgs;
 import io.pulumi.azurenative.machinelearningservices.inputs.PyTorchArgs;
 import io.pulumi.azurenative.machinelearningservices.inputs.TensorFlowArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
@@ -30,10 +30,10 @@ public final class TrialComponentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="codeId")
-      private final @Nullable Input<String> codeId;
+      private final @Nullable Output<String> codeId;
 
-    public Input<String> getCodeId() {
-        return this.codeId == null ? Input.empty() : this.codeId;
+    public Output<String> getCodeId() {
+        return this.codeId == null ? Output.empty() : this.codeId;
     }
 
     /**
@@ -41,9 +41,9 @@ public final class TrialComponentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="command", required=true)
-      private final Input<String> command;
+      private final Output<String> command;
 
-    public Input<String> getCommand() {
+    public Output<String> getCommand() {
         return this.command;
     }
 
@@ -52,10 +52,10 @@ public final class TrialComponentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="distribution")
-      private final @Nullable Input<Object> distribution;
+      private final @Nullable Output<Object> distribution;
 
-    public Input<Object> getDistribution() {
-        return this.distribution == null ? Input.empty() : this.distribution;
+    public Output<Object> getDistribution() {
+        return this.distribution == null ? Output.empty() : this.distribution;
     }
 
     /**
@@ -63,10 +63,10 @@ public final class TrialComponentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="environmentId")
-      private final @Nullable Input<String> environmentId;
+      private final @Nullable Output<String> environmentId;
 
-    public Input<String> getEnvironmentId() {
-        return this.environmentId == null ? Input.empty() : this.environmentId;
+    public Output<String> getEnvironmentId() {
+        return this.environmentId == null ? Output.empty() : this.environmentId;
     }
 
     /**
@@ -74,10 +74,10 @@ public final class TrialComponentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="environmentVariables")
-      private final @Nullable Input<Map<String,String>> environmentVariables;
+      private final @Nullable Output<Map<String,String>> environmentVariables;
 
-    public Input<Map<String,String>> getEnvironmentVariables() {
-        return this.environmentVariables == null ? Input.empty() : this.environmentVariables;
+    public Output<Map<String,String>> getEnvironmentVariables() {
+        return this.environmentVariables == null ? Output.empty() : this.environmentVariables;
     }
 
     /**
@@ -85,10 +85,10 @@ public final class TrialComponentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="inputDataBindings")
-      private final @Nullable Input<Map<String,InputDataBindingArgs>> inputDataBindings;
+      private final @Nullable Output<Map<String,InputDataBindingArgs>> inputDataBindings;
 
-    public Input<Map<String,InputDataBindingArgs>> getInputDataBindings() {
-        return this.inputDataBindings == null ? Input.empty() : this.inputDataBindings;
+    public Output<Map<String,InputDataBindingArgs>> getInputDataBindings() {
+        return this.inputDataBindings == null ? Output.empty() : this.inputDataBindings;
     }
 
     /**
@@ -96,10 +96,10 @@ public final class TrialComponentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="outputDataBindings")
-      private final @Nullable Input<Map<String,OutputDataBindingArgs>> outputDataBindings;
+      private final @Nullable Output<Map<String,OutputDataBindingArgs>> outputDataBindings;
 
-    public Input<Map<String,OutputDataBindingArgs>> getOutputDataBindings() {
-        return this.outputDataBindings == null ? Input.empty() : this.outputDataBindings;
+    public Output<Map<String,OutputDataBindingArgs>> getOutputDataBindings() {
+        return this.outputDataBindings == null ? Output.empty() : this.outputDataBindings;
     }
 
     /**
@@ -108,21 +108,21 @@ public final class TrialComponentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="timeout")
-      private final @Nullable Input<String> timeout;
+      private final @Nullable Output<String> timeout;
 
-    public Input<String> getTimeout() {
-        return this.timeout == null ? Input.empty() : this.timeout;
+    public Output<String> getTimeout() {
+        return this.timeout == null ? Output.empty() : this.timeout;
     }
 
     public TrialComponentArgs(
-        @Nullable Input<String> codeId,
-        Input<String> command,
-        @Nullable Input<Object> distribution,
-        @Nullable Input<String> environmentId,
-        @Nullable Input<Map<String,String>> environmentVariables,
-        @Nullable Input<Map<String,InputDataBindingArgs>> inputDataBindings,
-        @Nullable Input<Map<String,OutputDataBindingArgs>> outputDataBindings,
-        @Nullable Input<String> timeout) {
+        @Nullable Output<String> codeId,
+        Output<String> command,
+        @Nullable Output<Object> distribution,
+        @Nullable Output<String> environmentId,
+        @Nullable Output<Map<String,String>> environmentVariables,
+        @Nullable Output<Map<String,InputDataBindingArgs>> inputDataBindings,
+        @Nullable Output<Map<String,OutputDataBindingArgs>> outputDataBindings,
+        @Nullable Output<String> timeout) {
         this.codeId = codeId;
         this.command = Objects.requireNonNull(command, "expected parameter 'command' to be non-null");
         this.distribution = distribution;
@@ -134,14 +134,14 @@ public final class TrialComponentArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private TrialComponentArgs() {
-        this.codeId = Input.empty();
-        this.command = Input.empty();
-        this.distribution = Input.empty();
-        this.environmentId = Input.empty();
-        this.environmentVariables = Input.empty();
-        this.inputDataBindings = Input.empty();
-        this.outputDataBindings = Input.empty();
-        this.timeout = Input.empty();
+        this.codeId = Output.empty();
+        this.command = Output.empty();
+        this.distribution = Output.empty();
+        this.environmentId = Output.empty();
+        this.environmentVariables = Output.empty();
+        this.inputDataBindings = Output.empty();
+        this.outputDataBindings = Output.empty();
+        this.timeout = Output.empty();
     }
 
     public static Builder builder() {
@@ -153,14 +153,14 @@ public final class TrialComponentArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> codeId;
-        private Input<String> command;
-        private @Nullable Input<Object> distribution;
-        private @Nullable Input<String> environmentId;
-        private @Nullable Input<Map<String,String>> environmentVariables;
-        private @Nullable Input<Map<String,InputDataBindingArgs>> inputDataBindings;
-        private @Nullable Input<Map<String,OutputDataBindingArgs>> outputDataBindings;
-        private @Nullable Input<String> timeout;
+        private @Nullable Output<String> codeId;
+        private Output<String> command;
+        private @Nullable Output<Object> distribution;
+        private @Nullable Output<String> environmentId;
+        private @Nullable Output<Map<String,String>> environmentVariables;
+        private @Nullable Output<Map<String,InputDataBindingArgs>> inputDataBindings;
+        private @Nullable Output<Map<String,OutputDataBindingArgs>> outputDataBindings;
+        private @Nullable Output<String> timeout;
 
         public Builder() {
     	      // Empty
@@ -178,83 +178,83 @@ public final class TrialComponentArgs extends io.pulumi.resources.ResourceArgs {
     	      this.timeout = defaults.timeout;
         }
 
-        public Builder codeId(@Nullable Input<String> codeId) {
+        public Builder codeId(@Nullable Output<String> codeId) {
             this.codeId = codeId;
             return this;
         }
 
         public Builder codeId(@Nullable String codeId) {
-            this.codeId = Input.ofNullable(codeId);
+            this.codeId = Output.ofNullable(codeId);
             return this;
         }
 
-        public Builder command(Input<String> command) {
+        public Builder command(Output<String> command) {
             this.command = Objects.requireNonNull(command);
             return this;
         }
 
         public Builder command(String command) {
-            this.command = Input.of(Objects.requireNonNull(command));
+            this.command = Output.of(Objects.requireNonNull(command));
             return this;
         }
 
-        public Builder distribution(@Nullable Input<Object> distribution) {
+        public Builder distribution(@Nullable Output<Object> distribution) {
             this.distribution = distribution;
             return this;
         }
 
         public Builder distribution(@Nullable Object distribution) {
-            this.distribution = Input.ofNullable(distribution);
+            this.distribution = Output.ofNullable(distribution);
             return this;
         }
 
-        public Builder environmentId(@Nullable Input<String> environmentId) {
+        public Builder environmentId(@Nullable Output<String> environmentId) {
             this.environmentId = environmentId;
             return this;
         }
 
         public Builder environmentId(@Nullable String environmentId) {
-            this.environmentId = Input.ofNullable(environmentId);
+            this.environmentId = Output.ofNullable(environmentId);
             return this;
         }
 
-        public Builder environmentVariables(@Nullable Input<Map<String,String>> environmentVariables) {
+        public Builder environmentVariables(@Nullable Output<Map<String,String>> environmentVariables) {
             this.environmentVariables = environmentVariables;
             return this;
         }
 
         public Builder environmentVariables(@Nullable Map<String,String> environmentVariables) {
-            this.environmentVariables = Input.ofNullable(environmentVariables);
+            this.environmentVariables = Output.ofNullable(environmentVariables);
             return this;
         }
 
-        public Builder inputDataBindings(@Nullable Input<Map<String,InputDataBindingArgs>> inputDataBindings) {
+        public Builder inputDataBindings(@Nullable Output<Map<String,InputDataBindingArgs>> inputDataBindings) {
             this.inputDataBindings = inputDataBindings;
             return this;
         }
 
         public Builder inputDataBindings(@Nullable Map<String,InputDataBindingArgs> inputDataBindings) {
-            this.inputDataBindings = Input.ofNullable(inputDataBindings);
+            this.inputDataBindings = Output.ofNullable(inputDataBindings);
             return this;
         }
 
-        public Builder outputDataBindings(@Nullable Input<Map<String,OutputDataBindingArgs>> outputDataBindings) {
+        public Builder outputDataBindings(@Nullable Output<Map<String,OutputDataBindingArgs>> outputDataBindings) {
             this.outputDataBindings = outputDataBindings;
             return this;
         }
 
         public Builder outputDataBindings(@Nullable Map<String,OutputDataBindingArgs> outputDataBindings) {
-            this.outputDataBindings = Input.ofNullable(outputDataBindings);
+            this.outputDataBindings = Output.ofNullable(outputDataBindings);
             return this;
         }
 
-        public Builder timeout(@Nullable Input<String> timeout) {
+        public Builder timeout(@Nullable Output<String> timeout) {
             this.timeout = timeout;
             return this;
         }
 
         public Builder timeout(@Nullable String timeout) {
-            this.timeout = Input.ofNullable(timeout);
+            this.timeout = Output.ofNullable(timeout);
             return this;
         }
         public TrialComponentArgs build() {

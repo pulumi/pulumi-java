@@ -20,7 +20,7 @@ import io.pulumi.azurenative.containerservice.inputs.ManagedClusterSKUArgs;
 import io.pulumi.azurenative.containerservice.inputs.ManagedClusterServicePrincipalProfileArgs;
 import io.pulumi.azurenative.containerservice.inputs.ManagedClusterWindowsProfileArgs;
 import io.pulumi.azurenative.containerservice.inputs.PrivateLinkResourceArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -39,10 +39,10 @@ public final class ManagedClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="aadProfile")
-      private final @Nullable Input<ManagedClusterAADProfileArgs> aadProfile;
+      private final @Nullable Output<ManagedClusterAADProfileArgs> aadProfile;
 
-    public Input<ManagedClusterAADProfileArgs> getAadProfile() {
-        return this.aadProfile == null ? Input.empty() : this.aadProfile;
+    public Output<ManagedClusterAADProfileArgs> getAadProfile() {
+        return this.aadProfile == null ? Output.empty() : this.aadProfile;
     }
 
     /**
@@ -50,10 +50,10 @@ public final class ManagedClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="addonProfiles")
-      private final @Nullable Input<Map<String,ManagedClusterAddonProfileArgs>> addonProfiles;
+      private final @Nullable Output<Map<String,ManagedClusterAddonProfileArgs>> addonProfiles;
 
-    public Input<Map<String,ManagedClusterAddonProfileArgs>> getAddonProfiles() {
-        return this.addonProfiles == null ? Input.empty() : this.addonProfiles;
+    public Output<Map<String,ManagedClusterAddonProfileArgs>> getAddonProfiles() {
+        return this.addonProfiles == null ? Output.empty() : this.addonProfiles;
     }
 
     /**
@@ -61,10 +61,10 @@ public final class ManagedClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="agentPoolProfiles")
-      private final @Nullable Input<List<ManagedClusterAgentPoolProfileArgs>> agentPoolProfiles;
+      private final @Nullable Output<List<ManagedClusterAgentPoolProfileArgs>> agentPoolProfiles;
 
-    public Input<List<ManagedClusterAgentPoolProfileArgs>> getAgentPoolProfiles() {
-        return this.agentPoolProfiles == null ? Input.empty() : this.agentPoolProfiles;
+    public Output<List<ManagedClusterAgentPoolProfileArgs>> getAgentPoolProfiles() {
+        return this.agentPoolProfiles == null ? Output.empty() : this.agentPoolProfiles;
     }
 
     /**
@@ -72,10 +72,10 @@ public final class ManagedClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="apiServerAccessProfile")
-      private final @Nullable Input<ManagedClusterAPIServerAccessProfileArgs> apiServerAccessProfile;
+      private final @Nullable Output<ManagedClusterAPIServerAccessProfileArgs> apiServerAccessProfile;
 
-    public Input<ManagedClusterAPIServerAccessProfileArgs> getApiServerAccessProfile() {
-        return this.apiServerAccessProfile == null ? Input.empty() : this.apiServerAccessProfile;
+    public Output<ManagedClusterAPIServerAccessProfileArgs> getApiServerAccessProfile() {
+        return this.apiServerAccessProfile == null ? Output.empty() : this.apiServerAccessProfile;
     }
 
     /**
@@ -83,10 +83,10 @@ public final class ManagedClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="autoScalerProfile")
-      private final @Nullable Input<ManagedClusterPropertiesAutoScalerProfileArgs> autoScalerProfile;
+      private final @Nullable Output<ManagedClusterPropertiesAutoScalerProfileArgs> autoScalerProfile;
 
-    public Input<ManagedClusterPropertiesAutoScalerProfileArgs> getAutoScalerProfile() {
-        return this.autoScalerProfile == null ? Input.empty() : this.autoScalerProfile;
+    public Output<ManagedClusterPropertiesAutoScalerProfileArgs> getAutoScalerProfile() {
+        return this.autoScalerProfile == null ? Output.empty() : this.autoScalerProfile;
     }
 
     /**
@@ -94,10 +94,10 @@ public final class ManagedClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="autoUpgradeProfile")
-      private final @Nullable Input<ManagedClusterAutoUpgradeProfileArgs> autoUpgradeProfile;
+      private final @Nullable Output<ManagedClusterAutoUpgradeProfileArgs> autoUpgradeProfile;
 
-    public Input<ManagedClusterAutoUpgradeProfileArgs> getAutoUpgradeProfile() {
-        return this.autoUpgradeProfile == null ? Input.empty() : this.autoUpgradeProfile;
+    public Output<ManagedClusterAutoUpgradeProfileArgs> getAutoUpgradeProfile() {
+        return this.autoUpgradeProfile == null ? Output.empty() : this.autoUpgradeProfile;
     }
 
     /**
@@ -105,10 +105,10 @@ public final class ManagedClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="disableLocalAccounts")
-      private final @Nullable Input<Boolean> disableLocalAccounts;
+      private final @Nullable Output<Boolean> disableLocalAccounts;
 
-    public Input<Boolean> getDisableLocalAccounts() {
-        return this.disableLocalAccounts == null ? Input.empty() : this.disableLocalAccounts;
+    public Output<Boolean> getDisableLocalAccounts() {
+        return this.disableLocalAccounts == null ? Output.empty() : this.disableLocalAccounts;
     }
 
     /**
@@ -116,10 +116,10 @@ public final class ManagedClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="diskEncryptionSetID")
-      private final @Nullable Input<String> diskEncryptionSetID;
+      private final @Nullable Output<String> diskEncryptionSetID;
 
-    public Input<String> getDiskEncryptionSetID() {
-        return this.diskEncryptionSetID == null ? Input.empty() : this.diskEncryptionSetID;
+    public Output<String> getDiskEncryptionSetID() {
+        return this.diskEncryptionSetID == null ? Output.empty() : this.diskEncryptionSetID;
     }
 
     /**
@@ -127,10 +127,10 @@ public final class ManagedClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dnsPrefix")
-      private final @Nullable Input<String> dnsPrefix;
+      private final @Nullable Output<String> dnsPrefix;
 
-    public Input<String> getDnsPrefix() {
-        return this.dnsPrefix == null ? Input.empty() : this.dnsPrefix;
+    public Output<String> getDnsPrefix() {
+        return this.dnsPrefix == null ? Output.empty() : this.dnsPrefix;
     }
 
     /**
@@ -138,10 +138,10 @@ public final class ManagedClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enablePodSecurityPolicy")
-      private final @Nullable Input<Boolean> enablePodSecurityPolicy;
+      private final @Nullable Output<Boolean> enablePodSecurityPolicy;
 
-    public Input<Boolean> getEnablePodSecurityPolicy() {
-        return this.enablePodSecurityPolicy == null ? Input.empty() : this.enablePodSecurityPolicy;
+    public Output<Boolean> getEnablePodSecurityPolicy() {
+        return this.enablePodSecurityPolicy == null ? Output.empty() : this.enablePodSecurityPolicy;
     }
 
     /**
@@ -149,10 +149,10 @@ public final class ManagedClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enableRBAC")
-      private final @Nullable Input<Boolean> enableRBAC;
+      private final @Nullable Output<Boolean> enableRBAC;
 
-    public Input<Boolean> getEnableRBAC() {
-        return this.enableRBAC == null ? Input.empty() : this.enableRBAC;
+    public Output<Boolean> getEnableRBAC() {
+        return this.enableRBAC == null ? Output.empty() : this.enableRBAC;
     }
 
     /**
@@ -160,10 +160,10 @@ public final class ManagedClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="extendedLocation")
-      private final @Nullable Input<ExtendedLocationArgs> extendedLocation;
+      private final @Nullable Output<ExtendedLocationArgs> extendedLocation;
 
-    public Input<ExtendedLocationArgs> getExtendedLocation() {
-        return this.extendedLocation == null ? Input.empty() : this.extendedLocation;
+    public Output<ExtendedLocationArgs> getExtendedLocation() {
+        return this.extendedLocation == null ? Output.empty() : this.extendedLocation;
     }
 
     /**
@@ -171,10 +171,10 @@ public final class ManagedClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="fqdnSubdomain")
-      private final @Nullable Input<String> fqdnSubdomain;
+      private final @Nullable Output<String> fqdnSubdomain;
 
-    public Input<String> getFqdnSubdomain() {
-        return this.fqdnSubdomain == null ? Input.empty() : this.fqdnSubdomain;
+    public Output<String> getFqdnSubdomain() {
+        return this.fqdnSubdomain == null ? Output.empty() : this.fqdnSubdomain;
     }
 
     /**
@@ -182,10 +182,10 @@ public final class ManagedClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="httpProxyConfig")
-      private final @Nullable Input<ManagedClusterHTTPProxyConfigArgs> httpProxyConfig;
+      private final @Nullable Output<ManagedClusterHTTPProxyConfigArgs> httpProxyConfig;
 
-    public Input<ManagedClusterHTTPProxyConfigArgs> getHttpProxyConfig() {
-        return this.httpProxyConfig == null ? Input.empty() : this.httpProxyConfig;
+    public Output<ManagedClusterHTTPProxyConfigArgs> getHttpProxyConfig() {
+        return this.httpProxyConfig == null ? Output.empty() : this.httpProxyConfig;
     }
 
     /**
@@ -193,10 +193,10 @@ public final class ManagedClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="identity")
-      private final @Nullable Input<ManagedClusterIdentityArgs> identity;
+      private final @Nullable Output<ManagedClusterIdentityArgs> identity;
 
-    public Input<ManagedClusterIdentityArgs> getIdentity() {
-        return this.identity == null ? Input.empty() : this.identity;
+    public Output<ManagedClusterIdentityArgs> getIdentity() {
+        return this.identity == null ? Output.empty() : this.identity;
     }
 
     /**
@@ -204,10 +204,10 @@ public final class ManagedClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="identityProfile")
-      private final @Nullable Input<Map<String,ManagedClusterPropertiesIdentityProfileArgs>> identityProfile;
+      private final @Nullable Output<Map<String,ManagedClusterPropertiesIdentityProfileArgs>> identityProfile;
 
-    public Input<Map<String,ManagedClusterPropertiesIdentityProfileArgs>> getIdentityProfile() {
-        return this.identityProfile == null ? Input.empty() : this.identityProfile;
+    public Output<Map<String,ManagedClusterPropertiesIdentityProfileArgs>> getIdentityProfile() {
+        return this.identityProfile == null ? Output.empty() : this.identityProfile;
     }
 
     /**
@@ -215,10 +215,10 @@ public final class ManagedClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kubernetesVersion")
-      private final @Nullable Input<String> kubernetesVersion;
+      private final @Nullable Output<String> kubernetesVersion;
 
-    public Input<String> getKubernetesVersion() {
-        return this.kubernetesVersion == null ? Input.empty() : this.kubernetesVersion;
+    public Output<String> getKubernetesVersion() {
+        return this.kubernetesVersion == null ? Output.empty() : this.kubernetesVersion;
     }
 
     /**
@@ -226,10 +226,10 @@ public final class ManagedClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="linuxProfile")
-      private final @Nullable Input<ContainerServiceLinuxProfileArgs> linuxProfile;
+      private final @Nullable Output<ContainerServiceLinuxProfileArgs> linuxProfile;
 
-    public Input<ContainerServiceLinuxProfileArgs> getLinuxProfile() {
-        return this.linuxProfile == null ? Input.empty() : this.linuxProfile;
+    public Output<ContainerServiceLinuxProfileArgs> getLinuxProfile() {
+        return this.linuxProfile == null ? Output.empty() : this.linuxProfile;
     }
 
     /**
@@ -237,10 +237,10 @@ public final class ManagedClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -248,10 +248,10 @@ public final class ManagedClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="networkProfile")
-      private final @Nullable Input<ContainerServiceNetworkProfileArgs> networkProfile;
+      private final @Nullable Output<ContainerServiceNetworkProfileArgs> networkProfile;
 
-    public Input<ContainerServiceNetworkProfileArgs> getNetworkProfile() {
-        return this.networkProfile == null ? Input.empty() : this.networkProfile;
+    public Output<ContainerServiceNetworkProfileArgs> getNetworkProfile() {
+        return this.networkProfile == null ? Output.empty() : this.networkProfile;
     }
 
     /**
@@ -259,10 +259,10 @@ public final class ManagedClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="nodeResourceGroup")
-      private final @Nullable Input<String> nodeResourceGroup;
+      private final @Nullable Output<String> nodeResourceGroup;
 
-    public Input<String> getNodeResourceGroup() {
-        return this.nodeResourceGroup == null ? Input.empty() : this.nodeResourceGroup;
+    public Output<String> getNodeResourceGroup() {
+        return this.nodeResourceGroup == null ? Output.empty() : this.nodeResourceGroup;
     }
 
     /**
@@ -270,10 +270,10 @@ public final class ManagedClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="podIdentityProfile")
-      private final @Nullable Input<ManagedClusterPodIdentityProfileArgs> podIdentityProfile;
+      private final @Nullable Output<ManagedClusterPodIdentityProfileArgs> podIdentityProfile;
 
-    public Input<ManagedClusterPodIdentityProfileArgs> getPodIdentityProfile() {
-        return this.podIdentityProfile == null ? Input.empty() : this.podIdentityProfile;
+    public Output<ManagedClusterPodIdentityProfileArgs> getPodIdentityProfile() {
+        return this.podIdentityProfile == null ? Output.empty() : this.podIdentityProfile;
     }
 
     /**
@@ -281,10 +281,10 @@ public final class ManagedClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="privateLinkResources")
-      private final @Nullable Input<List<PrivateLinkResourceArgs>> privateLinkResources;
+      private final @Nullable Output<List<PrivateLinkResourceArgs>> privateLinkResources;
 
-    public Input<List<PrivateLinkResourceArgs>> getPrivateLinkResources() {
-        return this.privateLinkResources == null ? Input.empty() : this.privateLinkResources;
+    public Output<List<PrivateLinkResourceArgs>> getPrivateLinkResources() {
+        return this.privateLinkResources == null ? Output.empty() : this.privateLinkResources;
     }
 
     /**
@@ -292,9 +292,9 @@ public final class ManagedClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -303,10 +303,10 @@ public final class ManagedClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceName")
-      private final @Nullable Input<String> resourceName;
+      private final @Nullable Output<String> resourceName;
 
-    public Input<String> getPropResourceName() {
-        return this.resourceName == null ? Input.empty() : this.resourceName;
+    public Output<String> getPropResourceName() {
+        return this.resourceName == null ? Output.empty() : this.resourceName;
     }
 
     /**
@@ -314,10 +314,10 @@ public final class ManagedClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="servicePrincipalProfile")
-      private final @Nullable Input<ManagedClusterServicePrincipalProfileArgs> servicePrincipalProfile;
+      private final @Nullable Output<ManagedClusterServicePrincipalProfileArgs> servicePrincipalProfile;
 
-    public Input<ManagedClusterServicePrincipalProfileArgs> getServicePrincipalProfile() {
-        return this.servicePrincipalProfile == null ? Input.empty() : this.servicePrincipalProfile;
+    public Output<ManagedClusterServicePrincipalProfileArgs> getServicePrincipalProfile() {
+        return this.servicePrincipalProfile == null ? Output.empty() : this.servicePrincipalProfile;
     }
 
     /**
@@ -325,10 +325,10 @@ public final class ManagedClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sku")
-      private final @Nullable Input<ManagedClusterSKUArgs> sku;
+      private final @Nullable Output<ManagedClusterSKUArgs> sku;
 
-    public Input<ManagedClusterSKUArgs> getSku() {
-        return this.sku == null ? Input.empty() : this.sku;
+    public Output<ManagedClusterSKUArgs> getSku() {
+        return this.sku == null ? Output.empty() : this.sku;
     }
 
     /**
@@ -336,10 +336,10 @@ public final class ManagedClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -347,42 +347,42 @@ public final class ManagedClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="windowsProfile")
-      private final @Nullable Input<ManagedClusterWindowsProfileArgs> windowsProfile;
+      private final @Nullable Output<ManagedClusterWindowsProfileArgs> windowsProfile;
 
-    public Input<ManagedClusterWindowsProfileArgs> getWindowsProfile() {
-        return this.windowsProfile == null ? Input.empty() : this.windowsProfile;
+    public Output<ManagedClusterWindowsProfileArgs> getWindowsProfile() {
+        return this.windowsProfile == null ? Output.empty() : this.windowsProfile;
     }
 
     public ManagedClusterArgs(
-        @Nullable Input<ManagedClusterAADProfileArgs> aadProfile,
-        @Nullable Input<Map<String,ManagedClusterAddonProfileArgs>> addonProfiles,
-        @Nullable Input<List<ManagedClusterAgentPoolProfileArgs>> agentPoolProfiles,
-        @Nullable Input<ManagedClusterAPIServerAccessProfileArgs> apiServerAccessProfile,
-        @Nullable Input<ManagedClusterPropertiesAutoScalerProfileArgs> autoScalerProfile,
-        @Nullable Input<ManagedClusterAutoUpgradeProfileArgs> autoUpgradeProfile,
-        @Nullable Input<Boolean> disableLocalAccounts,
-        @Nullable Input<String> diskEncryptionSetID,
-        @Nullable Input<String> dnsPrefix,
-        @Nullable Input<Boolean> enablePodSecurityPolicy,
-        @Nullable Input<Boolean> enableRBAC,
-        @Nullable Input<ExtendedLocationArgs> extendedLocation,
-        @Nullable Input<String> fqdnSubdomain,
-        @Nullable Input<ManagedClusterHTTPProxyConfigArgs> httpProxyConfig,
-        @Nullable Input<ManagedClusterIdentityArgs> identity,
-        @Nullable Input<Map<String,ManagedClusterPropertiesIdentityProfileArgs>> identityProfile,
-        @Nullable Input<String> kubernetesVersion,
-        @Nullable Input<ContainerServiceLinuxProfileArgs> linuxProfile,
-        @Nullable Input<String> location,
-        @Nullable Input<ContainerServiceNetworkProfileArgs> networkProfile,
-        @Nullable Input<String> nodeResourceGroup,
-        @Nullable Input<ManagedClusterPodIdentityProfileArgs> podIdentityProfile,
-        @Nullable Input<List<PrivateLinkResourceArgs>> privateLinkResources,
-        Input<String> resourceGroupName,
-        @Nullable Input<String> resourceName,
-        @Nullable Input<ManagedClusterServicePrincipalProfileArgs> servicePrincipalProfile,
-        @Nullable Input<ManagedClusterSKUArgs> sku,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<ManagedClusterWindowsProfileArgs> windowsProfile) {
+        @Nullable Output<ManagedClusterAADProfileArgs> aadProfile,
+        @Nullable Output<Map<String,ManagedClusterAddonProfileArgs>> addonProfiles,
+        @Nullable Output<List<ManagedClusterAgentPoolProfileArgs>> agentPoolProfiles,
+        @Nullable Output<ManagedClusterAPIServerAccessProfileArgs> apiServerAccessProfile,
+        @Nullable Output<ManagedClusterPropertiesAutoScalerProfileArgs> autoScalerProfile,
+        @Nullable Output<ManagedClusterAutoUpgradeProfileArgs> autoUpgradeProfile,
+        @Nullable Output<Boolean> disableLocalAccounts,
+        @Nullable Output<String> diskEncryptionSetID,
+        @Nullable Output<String> dnsPrefix,
+        @Nullable Output<Boolean> enablePodSecurityPolicy,
+        @Nullable Output<Boolean> enableRBAC,
+        @Nullable Output<ExtendedLocationArgs> extendedLocation,
+        @Nullable Output<String> fqdnSubdomain,
+        @Nullable Output<ManagedClusterHTTPProxyConfigArgs> httpProxyConfig,
+        @Nullable Output<ManagedClusterIdentityArgs> identity,
+        @Nullable Output<Map<String,ManagedClusterPropertiesIdentityProfileArgs>> identityProfile,
+        @Nullable Output<String> kubernetesVersion,
+        @Nullable Output<ContainerServiceLinuxProfileArgs> linuxProfile,
+        @Nullable Output<String> location,
+        @Nullable Output<ContainerServiceNetworkProfileArgs> networkProfile,
+        @Nullable Output<String> nodeResourceGroup,
+        @Nullable Output<ManagedClusterPodIdentityProfileArgs> podIdentityProfile,
+        @Nullable Output<List<PrivateLinkResourceArgs>> privateLinkResources,
+        Output<String> resourceGroupName,
+        @Nullable Output<String> resourceName,
+        @Nullable Output<ManagedClusterServicePrincipalProfileArgs> servicePrincipalProfile,
+        @Nullable Output<ManagedClusterSKUArgs> sku,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<ManagedClusterWindowsProfileArgs> windowsProfile) {
         this.aadProfile = aadProfile;
         this.addonProfiles = addonProfiles;
         this.agentPoolProfiles = agentPoolProfiles;
@@ -415,35 +415,35 @@ public final class ManagedClusterArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ManagedClusterArgs() {
-        this.aadProfile = Input.empty();
-        this.addonProfiles = Input.empty();
-        this.agentPoolProfiles = Input.empty();
-        this.apiServerAccessProfile = Input.empty();
-        this.autoScalerProfile = Input.empty();
-        this.autoUpgradeProfile = Input.empty();
-        this.disableLocalAccounts = Input.empty();
-        this.diskEncryptionSetID = Input.empty();
-        this.dnsPrefix = Input.empty();
-        this.enablePodSecurityPolicy = Input.empty();
-        this.enableRBAC = Input.empty();
-        this.extendedLocation = Input.empty();
-        this.fqdnSubdomain = Input.empty();
-        this.httpProxyConfig = Input.empty();
-        this.identity = Input.empty();
-        this.identityProfile = Input.empty();
-        this.kubernetesVersion = Input.empty();
-        this.linuxProfile = Input.empty();
-        this.location = Input.empty();
-        this.networkProfile = Input.empty();
-        this.nodeResourceGroup = Input.empty();
-        this.podIdentityProfile = Input.empty();
-        this.privateLinkResources = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.resourceName = Input.empty();
-        this.servicePrincipalProfile = Input.empty();
-        this.sku = Input.empty();
-        this.tags = Input.empty();
-        this.windowsProfile = Input.empty();
+        this.aadProfile = Output.empty();
+        this.addonProfiles = Output.empty();
+        this.agentPoolProfiles = Output.empty();
+        this.apiServerAccessProfile = Output.empty();
+        this.autoScalerProfile = Output.empty();
+        this.autoUpgradeProfile = Output.empty();
+        this.disableLocalAccounts = Output.empty();
+        this.diskEncryptionSetID = Output.empty();
+        this.dnsPrefix = Output.empty();
+        this.enablePodSecurityPolicy = Output.empty();
+        this.enableRBAC = Output.empty();
+        this.extendedLocation = Output.empty();
+        this.fqdnSubdomain = Output.empty();
+        this.httpProxyConfig = Output.empty();
+        this.identity = Output.empty();
+        this.identityProfile = Output.empty();
+        this.kubernetesVersion = Output.empty();
+        this.linuxProfile = Output.empty();
+        this.location = Output.empty();
+        this.networkProfile = Output.empty();
+        this.nodeResourceGroup = Output.empty();
+        this.podIdentityProfile = Output.empty();
+        this.privateLinkResources = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.resourceName = Output.empty();
+        this.servicePrincipalProfile = Output.empty();
+        this.sku = Output.empty();
+        this.tags = Output.empty();
+        this.windowsProfile = Output.empty();
     }
 
     public static Builder builder() {
@@ -455,35 +455,35 @@ public final class ManagedClusterArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<ManagedClusterAADProfileArgs> aadProfile;
-        private @Nullable Input<Map<String,ManagedClusterAddonProfileArgs>> addonProfiles;
-        private @Nullable Input<List<ManagedClusterAgentPoolProfileArgs>> agentPoolProfiles;
-        private @Nullable Input<ManagedClusterAPIServerAccessProfileArgs> apiServerAccessProfile;
-        private @Nullable Input<ManagedClusterPropertiesAutoScalerProfileArgs> autoScalerProfile;
-        private @Nullable Input<ManagedClusterAutoUpgradeProfileArgs> autoUpgradeProfile;
-        private @Nullable Input<Boolean> disableLocalAccounts;
-        private @Nullable Input<String> diskEncryptionSetID;
-        private @Nullable Input<String> dnsPrefix;
-        private @Nullable Input<Boolean> enablePodSecurityPolicy;
-        private @Nullable Input<Boolean> enableRBAC;
-        private @Nullable Input<ExtendedLocationArgs> extendedLocation;
-        private @Nullable Input<String> fqdnSubdomain;
-        private @Nullable Input<ManagedClusterHTTPProxyConfigArgs> httpProxyConfig;
-        private @Nullable Input<ManagedClusterIdentityArgs> identity;
-        private @Nullable Input<Map<String,ManagedClusterPropertiesIdentityProfileArgs>> identityProfile;
-        private @Nullable Input<String> kubernetesVersion;
-        private @Nullable Input<ContainerServiceLinuxProfileArgs> linuxProfile;
-        private @Nullable Input<String> location;
-        private @Nullable Input<ContainerServiceNetworkProfileArgs> networkProfile;
-        private @Nullable Input<String> nodeResourceGroup;
-        private @Nullable Input<ManagedClusterPodIdentityProfileArgs> podIdentityProfile;
-        private @Nullable Input<List<PrivateLinkResourceArgs>> privateLinkResources;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<String> resourceName;
-        private @Nullable Input<ManagedClusterServicePrincipalProfileArgs> servicePrincipalProfile;
-        private @Nullable Input<ManagedClusterSKUArgs> sku;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<ManagedClusterWindowsProfileArgs> windowsProfile;
+        private @Nullable Output<ManagedClusterAADProfileArgs> aadProfile;
+        private @Nullable Output<Map<String,ManagedClusterAddonProfileArgs>> addonProfiles;
+        private @Nullable Output<List<ManagedClusterAgentPoolProfileArgs>> agentPoolProfiles;
+        private @Nullable Output<ManagedClusterAPIServerAccessProfileArgs> apiServerAccessProfile;
+        private @Nullable Output<ManagedClusterPropertiesAutoScalerProfileArgs> autoScalerProfile;
+        private @Nullable Output<ManagedClusterAutoUpgradeProfileArgs> autoUpgradeProfile;
+        private @Nullable Output<Boolean> disableLocalAccounts;
+        private @Nullable Output<String> diskEncryptionSetID;
+        private @Nullable Output<String> dnsPrefix;
+        private @Nullable Output<Boolean> enablePodSecurityPolicy;
+        private @Nullable Output<Boolean> enableRBAC;
+        private @Nullable Output<ExtendedLocationArgs> extendedLocation;
+        private @Nullable Output<String> fqdnSubdomain;
+        private @Nullable Output<ManagedClusterHTTPProxyConfigArgs> httpProxyConfig;
+        private @Nullable Output<ManagedClusterIdentityArgs> identity;
+        private @Nullable Output<Map<String,ManagedClusterPropertiesIdentityProfileArgs>> identityProfile;
+        private @Nullable Output<String> kubernetesVersion;
+        private @Nullable Output<ContainerServiceLinuxProfileArgs> linuxProfile;
+        private @Nullable Output<String> location;
+        private @Nullable Output<ContainerServiceNetworkProfileArgs> networkProfile;
+        private @Nullable Output<String> nodeResourceGroup;
+        private @Nullable Output<ManagedClusterPodIdentityProfileArgs> podIdentityProfile;
+        private @Nullable Output<List<PrivateLinkResourceArgs>> privateLinkResources;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<String> resourceName;
+        private @Nullable Output<ManagedClusterServicePrincipalProfileArgs> servicePrincipalProfile;
+        private @Nullable Output<ManagedClusterSKUArgs> sku;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<ManagedClusterWindowsProfileArgs> windowsProfile;
 
         public Builder() {
     	      // Empty
@@ -522,293 +522,293 @@ public final class ManagedClusterArgs extends io.pulumi.resources.ResourceArgs {
     	      this.windowsProfile = defaults.windowsProfile;
         }
 
-        public Builder aadProfile(@Nullable Input<ManagedClusterAADProfileArgs> aadProfile) {
+        public Builder aadProfile(@Nullable Output<ManagedClusterAADProfileArgs> aadProfile) {
             this.aadProfile = aadProfile;
             return this;
         }
 
         public Builder aadProfile(@Nullable ManagedClusterAADProfileArgs aadProfile) {
-            this.aadProfile = Input.ofNullable(aadProfile);
+            this.aadProfile = Output.ofNullable(aadProfile);
             return this;
         }
 
-        public Builder addonProfiles(@Nullable Input<Map<String,ManagedClusterAddonProfileArgs>> addonProfiles) {
+        public Builder addonProfiles(@Nullable Output<Map<String,ManagedClusterAddonProfileArgs>> addonProfiles) {
             this.addonProfiles = addonProfiles;
             return this;
         }
 
         public Builder addonProfiles(@Nullable Map<String,ManagedClusterAddonProfileArgs> addonProfiles) {
-            this.addonProfiles = Input.ofNullable(addonProfiles);
+            this.addonProfiles = Output.ofNullable(addonProfiles);
             return this;
         }
 
-        public Builder agentPoolProfiles(@Nullable Input<List<ManagedClusterAgentPoolProfileArgs>> agentPoolProfiles) {
+        public Builder agentPoolProfiles(@Nullable Output<List<ManagedClusterAgentPoolProfileArgs>> agentPoolProfiles) {
             this.agentPoolProfiles = agentPoolProfiles;
             return this;
         }
 
         public Builder agentPoolProfiles(@Nullable List<ManagedClusterAgentPoolProfileArgs> agentPoolProfiles) {
-            this.agentPoolProfiles = Input.ofNullable(agentPoolProfiles);
+            this.agentPoolProfiles = Output.ofNullable(agentPoolProfiles);
             return this;
         }
 
-        public Builder apiServerAccessProfile(@Nullable Input<ManagedClusterAPIServerAccessProfileArgs> apiServerAccessProfile) {
+        public Builder apiServerAccessProfile(@Nullable Output<ManagedClusterAPIServerAccessProfileArgs> apiServerAccessProfile) {
             this.apiServerAccessProfile = apiServerAccessProfile;
             return this;
         }
 
         public Builder apiServerAccessProfile(@Nullable ManagedClusterAPIServerAccessProfileArgs apiServerAccessProfile) {
-            this.apiServerAccessProfile = Input.ofNullable(apiServerAccessProfile);
+            this.apiServerAccessProfile = Output.ofNullable(apiServerAccessProfile);
             return this;
         }
 
-        public Builder autoScalerProfile(@Nullable Input<ManagedClusterPropertiesAutoScalerProfileArgs> autoScalerProfile) {
+        public Builder autoScalerProfile(@Nullable Output<ManagedClusterPropertiesAutoScalerProfileArgs> autoScalerProfile) {
             this.autoScalerProfile = autoScalerProfile;
             return this;
         }
 
         public Builder autoScalerProfile(@Nullable ManagedClusterPropertiesAutoScalerProfileArgs autoScalerProfile) {
-            this.autoScalerProfile = Input.ofNullable(autoScalerProfile);
+            this.autoScalerProfile = Output.ofNullable(autoScalerProfile);
             return this;
         }
 
-        public Builder autoUpgradeProfile(@Nullable Input<ManagedClusterAutoUpgradeProfileArgs> autoUpgradeProfile) {
+        public Builder autoUpgradeProfile(@Nullable Output<ManagedClusterAutoUpgradeProfileArgs> autoUpgradeProfile) {
             this.autoUpgradeProfile = autoUpgradeProfile;
             return this;
         }
 
         public Builder autoUpgradeProfile(@Nullable ManagedClusterAutoUpgradeProfileArgs autoUpgradeProfile) {
-            this.autoUpgradeProfile = Input.ofNullable(autoUpgradeProfile);
+            this.autoUpgradeProfile = Output.ofNullable(autoUpgradeProfile);
             return this;
         }
 
-        public Builder disableLocalAccounts(@Nullable Input<Boolean> disableLocalAccounts) {
+        public Builder disableLocalAccounts(@Nullable Output<Boolean> disableLocalAccounts) {
             this.disableLocalAccounts = disableLocalAccounts;
             return this;
         }
 
         public Builder disableLocalAccounts(@Nullable Boolean disableLocalAccounts) {
-            this.disableLocalAccounts = Input.ofNullable(disableLocalAccounts);
+            this.disableLocalAccounts = Output.ofNullable(disableLocalAccounts);
             return this;
         }
 
-        public Builder diskEncryptionSetID(@Nullable Input<String> diskEncryptionSetID) {
+        public Builder diskEncryptionSetID(@Nullable Output<String> diskEncryptionSetID) {
             this.diskEncryptionSetID = diskEncryptionSetID;
             return this;
         }
 
         public Builder diskEncryptionSetID(@Nullable String diskEncryptionSetID) {
-            this.diskEncryptionSetID = Input.ofNullable(diskEncryptionSetID);
+            this.diskEncryptionSetID = Output.ofNullable(diskEncryptionSetID);
             return this;
         }
 
-        public Builder dnsPrefix(@Nullable Input<String> dnsPrefix) {
+        public Builder dnsPrefix(@Nullable Output<String> dnsPrefix) {
             this.dnsPrefix = dnsPrefix;
             return this;
         }
 
         public Builder dnsPrefix(@Nullable String dnsPrefix) {
-            this.dnsPrefix = Input.ofNullable(dnsPrefix);
+            this.dnsPrefix = Output.ofNullable(dnsPrefix);
             return this;
         }
 
-        public Builder enablePodSecurityPolicy(@Nullable Input<Boolean> enablePodSecurityPolicy) {
+        public Builder enablePodSecurityPolicy(@Nullable Output<Boolean> enablePodSecurityPolicy) {
             this.enablePodSecurityPolicy = enablePodSecurityPolicy;
             return this;
         }
 
         public Builder enablePodSecurityPolicy(@Nullable Boolean enablePodSecurityPolicy) {
-            this.enablePodSecurityPolicy = Input.ofNullable(enablePodSecurityPolicy);
+            this.enablePodSecurityPolicy = Output.ofNullable(enablePodSecurityPolicy);
             return this;
         }
 
-        public Builder enableRBAC(@Nullable Input<Boolean> enableRBAC) {
+        public Builder enableRBAC(@Nullable Output<Boolean> enableRBAC) {
             this.enableRBAC = enableRBAC;
             return this;
         }
 
         public Builder enableRBAC(@Nullable Boolean enableRBAC) {
-            this.enableRBAC = Input.ofNullable(enableRBAC);
+            this.enableRBAC = Output.ofNullable(enableRBAC);
             return this;
         }
 
-        public Builder extendedLocation(@Nullable Input<ExtendedLocationArgs> extendedLocation) {
+        public Builder extendedLocation(@Nullable Output<ExtendedLocationArgs> extendedLocation) {
             this.extendedLocation = extendedLocation;
             return this;
         }
 
         public Builder extendedLocation(@Nullable ExtendedLocationArgs extendedLocation) {
-            this.extendedLocation = Input.ofNullable(extendedLocation);
+            this.extendedLocation = Output.ofNullable(extendedLocation);
             return this;
         }
 
-        public Builder fqdnSubdomain(@Nullable Input<String> fqdnSubdomain) {
+        public Builder fqdnSubdomain(@Nullable Output<String> fqdnSubdomain) {
             this.fqdnSubdomain = fqdnSubdomain;
             return this;
         }
 
         public Builder fqdnSubdomain(@Nullable String fqdnSubdomain) {
-            this.fqdnSubdomain = Input.ofNullable(fqdnSubdomain);
+            this.fqdnSubdomain = Output.ofNullable(fqdnSubdomain);
             return this;
         }
 
-        public Builder httpProxyConfig(@Nullable Input<ManagedClusterHTTPProxyConfigArgs> httpProxyConfig) {
+        public Builder httpProxyConfig(@Nullable Output<ManagedClusterHTTPProxyConfigArgs> httpProxyConfig) {
             this.httpProxyConfig = httpProxyConfig;
             return this;
         }
 
         public Builder httpProxyConfig(@Nullable ManagedClusterHTTPProxyConfigArgs httpProxyConfig) {
-            this.httpProxyConfig = Input.ofNullable(httpProxyConfig);
+            this.httpProxyConfig = Output.ofNullable(httpProxyConfig);
             return this;
         }
 
-        public Builder identity(@Nullable Input<ManagedClusterIdentityArgs> identity) {
+        public Builder identity(@Nullable Output<ManagedClusterIdentityArgs> identity) {
             this.identity = identity;
             return this;
         }
 
         public Builder identity(@Nullable ManagedClusterIdentityArgs identity) {
-            this.identity = Input.ofNullable(identity);
+            this.identity = Output.ofNullable(identity);
             return this;
         }
 
-        public Builder identityProfile(@Nullable Input<Map<String,ManagedClusterPropertiesIdentityProfileArgs>> identityProfile) {
+        public Builder identityProfile(@Nullable Output<Map<String,ManagedClusterPropertiesIdentityProfileArgs>> identityProfile) {
             this.identityProfile = identityProfile;
             return this;
         }
 
         public Builder identityProfile(@Nullable Map<String,ManagedClusterPropertiesIdentityProfileArgs> identityProfile) {
-            this.identityProfile = Input.ofNullable(identityProfile);
+            this.identityProfile = Output.ofNullable(identityProfile);
             return this;
         }
 
-        public Builder kubernetesVersion(@Nullable Input<String> kubernetesVersion) {
+        public Builder kubernetesVersion(@Nullable Output<String> kubernetesVersion) {
             this.kubernetesVersion = kubernetesVersion;
             return this;
         }
 
         public Builder kubernetesVersion(@Nullable String kubernetesVersion) {
-            this.kubernetesVersion = Input.ofNullable(kubernetesVersion);
+            this.kubernetesVersion = Output.ofNullable(kubernetesVersion);
             return this;
         }
 
-        public Builder linuxProfile(@Nullable Input<ContainerServiceLinuxProfileArgs> linuxProfile) {
+        public Builder linuxProfile(@Nullable Output<ContainerServiceLinuxProfileArgs> linuxProfile) {
             this.linuxProfile = linuxProfile;
             return this;
         }
 
         public Builder linuxProfile(@Nullable ContainerServiceLinuxProfileArgs linuxProfile) {
-            this.linuxProfile = Input.ofNullable(linuxProfile);
+            this.linuxProfile = Output.ofNullable(linuxProfile);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder networkProfile(@Nullable Input<ContainerServiceNetworkProfileArgs> networkProfile) {
+        public Builder networkProfile(@Nullable Output<ContainerServiceNetworkProfileArgs> networkProfile) {
             this.networkProfile = networkProfile;
             return this;
         }
 
         public Builder networkProfile(@Nullable ContainerServiceNetworkProfileArgs networkProfile) {
-            this.networkProfile = Input.ofNullable(networkProfile);
+            this.networkProfile = Output.ofNullable(networkProfile);
             return this;
         }
 
-        public Builder nodeResourceGroup(@Nullable Input<String> nodeResourceGroup) {
+        public Builder nodeResourceGroup(@Nullable Output<String> nodeResourceGroup) {
             this.nodeResourceGroup = nodeResourceGroup;
             return this;
         }
 
         public Builder nodeResourceGroup(@Nullable String nodeResourceGroup) {
-            this.nodeResourceGroup = Input.ofNullable(nodeResourceGroup);
+            this.nodeResourceGroup = Output.ofNullable(nodeResourceGroup);
             return this;
         }
 
-        public Builder podIdentityProfile(@Nullable Input<ManagedClusterPodIdentityProfileArgs> podIdentityProfile) {
+        public Builder podIdentityProfile(@Nullable Output<ManagedClusterPodIdentityProfileArgs> podIdentityProfile) {
             this.podIdentityProfile = podIdentityProfile;
             return this;
         }
 
         public Builder podIdentityProfile(@Nullable ManagedClusterPodIdentityProfileArgs podIdentityProfile) {
-            this.podIdentityProfile = Input.ofNullable(podIdentityProfile);
+            this.podIdentityProfile = Output.ofNullable(podIdentityProfile);
             return this;
         }
 
-        public Builder privateLinkResources(@Nullable Input<List<PrivateLinkResourceArgs>> privateLinkResources) {
+        public Builder privateLinkResources(@Nullable Output<List<PrivateLinkResourceArgs>> privateLinkResources) {
             this.privateLinkResources = privateLinkResources;
             return this;
         }
 
         public Builder privateLinkResources(@Nullable List<PrivateLinkResourceArgs> privateLinkResources) {
-            this.privateLinkResources = Input.ofNullable(privateLinkResources);
+            this.privateLinkResources = Output.ofNullable(privateLinkResources);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder resourceName(@Nullable Input<String> resourceName) {
+        public Builder resourceName(@Nullable Output<String> resourceName) {
             this.resourceName = resourceName;
             return this;
         }
 
         public Builder resourceName(@Nullable String resourceName) {
-            this.resourceName = Input.ofNullable(resourceName);
+            this.resourceName = Output.ofNullable(resourceName);
             return this;
         }
 
-        public Builder servicePrincipalProfile(@Nullable Input<ManagedClusterServicePrincipalProfileArgs> servicePrincipalProfile) {
+        public Builder servicePrincipalProfile(@Nullable Output<ManagedClusterServicePrincipalProfileArgs> servicePrincipalProfile) {
             this.servicePrincipalProfile = servicePrincipalProfile;
             return this;
         }
 
         public Builder servicePrincipalProfile(@Nullable ManagedClusterServicePrincipalProfileArgs servicePrincipalProfile) {
-            this.servicePrincipalProfile = Input.ofNullable(servicePrincipalProfile);
+            this.servicePrincipalProfile = Output.ofNullable(servicePrincipalProfile);
             return this;
         }
 
-        public Builder sku(@Nullable Input<ManagedClusterSKUArgs> sku) {
+        public Builder sku(@Nullable Output<ManagedClusterSKUArgs> sku) {
             this.sku = sku;
             return this;
         }
 
         public Builder sku(@Nullable ManagedClusterSKUArgs sku) {
-            this.sku = Input.ofNullable(sku);
+            this.sku = Output.ofNullable(sku);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder windowsProfile(@Nullable Input<ManagedClusterWindowsProfileArgs> windowsProfile) {
+        public Builder windowsProfile(@Nullable Output<ManagedClusterWindowsProfileArgs> windowsProfile) {
             this.windowsProfile = windowsProfile;
             return this;
         }
 
         public Builder windowsProfile(@Nullable ManagedClusterWindowsProfileArgs windowsProfile) {
-            this.windowsProfile = Input.ofNullable(windowsProfile);
+            this.windowsProfile = Output.ofNullable(windowsProfile);
             return this;
         }
         public ManagedClusterArgs build() {

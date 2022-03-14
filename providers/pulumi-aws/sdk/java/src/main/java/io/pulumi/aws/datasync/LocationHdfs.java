@@ -8,7 +8,6 @@ import io.pulumi.aws.datasync.LocationHdfsArgs;
 import io.pulumi.aws.datasync.inputs.LocationHdfsState;
 import io.pulumi.aws.datasync.outputs.LocationHdfsNameNode;
 import io.pulumi.aws.datasync.outputs.LocationHdfsQopConfiguration;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -291,14 +290,14 @@ public class LocationHdfs extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public LocationHdfs(String name, LocationHdfsArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:datasync/locationHdfs:LocationHdfs", name, args == null ? LocationHdfsArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws:datasync/locationHdfs:LocationHdfs", name, args == null ? LocationHdfsArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private LocationHdfs(String name, Input<String> id, @Nullable LocationHdfsState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private LocationHdfs(String name, Output<String> id, @Nullable LocationHdfsState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws:datasync/locationHdfs:LocationHdfs", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -314,7 +313,7 @@ public class LocationHdfs extends io.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static LocationHdfs get(String name, Input<String> id, @Nullable LocationHdfsState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static LocationHdfs get(String name, Output<String> id, @Nullable LocationHdfsState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new LocationHdfs(name, id, state, options);
     }
 }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.compute_v1.enums.SecurityPolicyRuleRedirectOptionsType;
 import java.lang.String;
@@ -20,10 +20,10 @@ public final class SecurityPolicyRuleRedirectOptionsArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="target")
-      private final @Nullable Input<String> target;
+      private final @Nullable Output<String> target;
 
-    public Input<String> getTarget() {
-        return this.target == null ? Input.empty() : this.target;
+    public Output<String> getTarget() {
+        return this.target == null ? Output.empty() : this.target;
     }
 
     /**
@@ -31,22 +31,22 @@ public final class SecurityPolicyRuleRedirectOptionsArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="type")
-      private final @Nullable Input<SecurityPolicyRuleRedirectOptionsType> type;
+      private final @Nullable Output<SecurityPolicyRuleRedirectOptionsType> type;
 
-    public Input<SecurityPolicyRuleRedirectOptionsType> getType() {
-        return this.type == null ? Input.empty() : this.type;
+    public Output<SecurityPolicyRuleRedirectOptionsType> getType() {
+        return this.type == null ? Output.empty() : this.type;
     }
 
     public SecurityPolicyRuleRedirectOptionsArgs(
-        @Nullable Input<String> target,
-        @Nullable Input<SecurityPolicyRuleRedirectOptionsType> type) {
+        @Nullable Output<String> target,
+        @Nullable Output<SecurityPolicyRuleRedirectOptionsType> type) {
         this.target = target;
         this.type = type;
     }
 
     private SecurityPolicyRuleRedirectOptionsArgs() {
-        this.target = Input.empty();
-        this.type = Input.empty();
+        this.target = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -58,8 +58,8 @@ public final class SecurityPolicyRuleRedirectOptionsArgs extends io.pulumi.resou
     }
 
     public static final class Builder {
-        private @Nullable Input<String> target;
-        private @Nullable Input<SecurityPolicyRuleRedirectOptionsType> type;
+        private @Nullable Output<String> target;
+        private @Nullable Output<SecurityPolicyRuleRedirectOptionsType> type;
 
         public Builder() {
     	      // Empty
@@ -71,23 +71,23 @@ public final class SecurityPolicyRuleRedirectOptionsArgs extends io.pulumi.resou
     	      this.type = defaults.type;
         }
 
-        public Builder target(@Nullable Input<String> target) {
+        public Builder target(@Nullable Output<String> target) {
             this.target = target;
             return this;
         }
 
         public Builder target(@Nullable String target) {
-            this.target = Input.ofNullable(target);
+            this.target = Output.ofNullable(target);
             return this;
         }
 
-        public Builder type(@Nullable Input<SecurityPolicyRuleRedirectOptionsType> type) {
+        public Builder type(@Nullable Output<SecurityPolicyRuleRedirectOptionsType> type) {
             this.type = type;
             return this;
         }
 
         public Builder type(@Nullable SecurityPolicyRuleRedirectOptionsType type) {
-            this.type = Input.ofNullable(type);
+            this.type = Output.ofNullable(type);
             return this;
         }
         public SecurityPolicyRuleRedirectOptionsArgs build() {

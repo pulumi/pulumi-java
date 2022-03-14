@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.dataloss.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.dataloss.inputs.PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoReplaceFfxFpeConfigContextGetArgs;
 import io.pulumi.gcp.dataloss.inputs.PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyGetArgs;
@@ -24,10 +24,10 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
      * 
      */
     @InputImport(name="commonAlphabet")
-      private final @Nullable Input<String> commonAlphabet;
+      private final @Nullable Output<String> commonAlphabet;
 
-    public Input<String> getCommonAlphabet() {
-        return this.commonAlphabet == null ? Input.empty() : this.commonAlphabet;
+    public Output<String> getCommonAlphabet() {
+        return this.commonAlphabet == null ? Output.empty() : this.commonAlphabet;
     }
 
     /**
@@ -44,10 +44,10 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
      * 
      */
     @InputImport(name="context")
-      private final @Nullable Input<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoReplaceFfxFpeConfigContextGetArgs> context;
+      private final @Nullable Output<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoReplaceFfxFpeConfigContextGetArgs> context;
 
-    public Input<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoReplaceFfxFpeConfigContextGetArgs> getContext() {
-        return this.context == null ? Input.empty() : this.context;
+    public Output<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoReplaceFfxFpeConfigContextGetArgs> getContext() {
+        return this.context == null ? Output.empty() : this.context;
     }
 
     /**
@@ -56,10 +56,10 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
      * 
      */
     @InputImport(name="cryptoKey")
-      private final @Nullable Input<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyGetArgs> cryptoKey;
+      private final @Nullable Output<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyGetArgs> cryptoKey;
 
-    public Input<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyGetArgs> getCryptoKey() {
-        return this.cryptoKey == null ? Input.empty() : this.cryptoKey;
+    public Output<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyGetArgs> getCryptoKey() {
+        return this.cryptoKey == null ? Output.empty() : this.cryptoKey;
     }
 
     /**
@@ -68,10 +68,10 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
      * 
      */
     @InputImport(name="customAlphabet")
-      private final @Nullable Input<String> customAlphabet;
+      private final @Nullable Output<String> customAlphabet;
 
-    public Input<String> getCustomAlphabet() {
-        return this.customAlphabet == null ? Input.empty() : this.customAlphabet;
+    public Output<String> getCustomAlphabet() {
+        return this.customAlphabet == null ? Output.empty() : this.customAlphabet;
     }
 
     /**
@@ -79,10 +79,10 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
      * 
      */
     @InputImport(name="radix")
-      private final @Nullable Input<Integer> radix;
+      private final @Nullable Output<Integer> radix;
 
-    public Input<Integer> getRadix() {
-        return this.radix == null ? Input.empty() : this.radix;
+    public Output<Integer> getRadix() {
+        return this.radix == null ? Output.empty() : this.radix;
     }
 
     /**
@@ -94,19 +94,19 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
      * 
      */
     @InputImport(name="surrogateInfoType")
-      private final @Nullable Input<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoReplaceFfxFpeConfigSurrogateInfoTypeGetArgs> surrogateInfoType;
+      private final @Nullable Output<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoReplaceFfxFpeConfigSurrogateInfoTypeGetArgs> surrogateInfoType;
 
-    public Input<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoReplaceFfxFpeConfigSurrogateInfoTypeGetArgs> getSurrogateInfoType() {
-        return this.surrogateInfoType == null ? Input.empty() : this.surrogateInfoType;
+    public Output<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoReplaceFfxFpeConfigSurrogateInfoTypeGetArgs> getSurrogateInfoType() {
+        return this.surrogateInfoType == null ? Output.empty() : this.surrogateInfoType;
     }
 
     public PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoReplaceFfxFpeConfigGetArgs(
-        @Nullable Input<String> commonAlphabet,
-        @Nullable Input<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoReplaceFfxFpeConfigContextGetArgs> context,
-        @Nullable Input<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyGetArgs> cryptoKey,
-        @Nullable Input<String> customAlphabet,
-        @Nullable Input<Integer> radix,
-        @Nullable Input<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoReplaceFfxFpeConfigSurrogateInfoTypeGetArgs> surrogateInfoType) {
+        @Nullable Output<String> commonAlphabet,
+        @Nullable Output<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoReplaceFfxFpeConfigContextGetArgs> context,
+        @Nullable Output<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyGetArgs> cryptoKey,
+        @Nullable Output<String> customAlphabet,
+        @Nullable Output<Integer> radix,
+        @Nullable Output<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoReplaceFfxFpeConfigSurrogateInfoTypeGetArgs> surrogateInfoType) {
         this.commonAlphabet = commonAlphabet;
         this.context = context;
         this.cryptoKey = cryptoKey;
@@ -116,12 +116,12 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
     }
 
     private PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoReplaceFfxFpeConfigGetArgs() {
-        this.commonAlphabet = Input.empty();
-        this.context = Input.empty();
-        this.cryptoKey = Input.empty();
-        this.customAlphabet = Input.empty();
-        this.radix = Input.empty();
-        this.surrogateInfoType = Input.empty();
+        this.commonAlphabet = Output.empty();
+        this.context = Output.empty();
+        this.cryptoKey = Output.empty();
+        this.customAlphabet = Output.empty();
+        this.radix = Output.empty();
+        this.surrogateInfoType = Output.empty();
     }
 
     public static Builder builder() {
@@ -133,12 +133,12 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
     }
 
     public static final class Builder {
-        private @Nullable Input<String> commonAlphabet;
-        private @Nullable Input<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoReplaceFfxFpeConfigContextGetArgs> context;
-        private @Nullable Input<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyGetArgs> cryptoKey;
-        private @Nullable Input<String> customAlphabet;
-        private @Nullable Input<Integer> radix;
-        private @Nullable Input<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoReplaceFfxFpeConfigSurrogateInfoTypeGetArgs> surrogateInfoType;
+        private @Nullable Output<String> commonAlphabet;
+        private @Nullable Output<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoReplaceFfxFpeConfigContextGetArgs> context;
+        private @Nullable Output<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyGetArgs> cryptoKey;
+        private @Nullable Output<String> customAlphabet;
+        private @Nullable Output<Integer> radix;
+        private @Nullable Output<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoReplaceFfxFpeConfigSurrogateInfoTypeGetArgs> surrogateInfoType;
 
         public Builder() {
     	      // Empty
@@ -154,63 +154,63 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
     	      this.surrogateInfoType = defaults.surrogateInfoType;
         }
 
-        public Builder commonAlphabet(@Nullable Input<String> commonAlphabet) {
+        public Builder commonAlphabet(@Nullable Output<String> commonAlphabet) {
             this.commonAlphabet = commonAlphabet;
             return this;
         }
 
         public Builder commonAlphabet(@Nullable String commonAlphabet) {
-            this.commonAlphabet = Input.ofNullable(commonAlphabet);
+            this.commonAlphabet = Output.ofNullable(commonAlphabet);
             return this;
         }
 
-        public Builder context(@Nullable Input<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoReplaceFfxFpeConfigContextGetArgs> context) {
+        public Builder context(@Nullable Output<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoReplaceFfxFpeConfigContextGetArgs> context) {
             this.context = context;
             return this;
         }
 
         public Builder context(@Nullable PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoReplaceFfxFpeConfigContextGetArgs context) {
-            this.context = Input.ofNullable(context);
+            this.context = Output.ofNullable(context);
             return this;
         }
 
-        public Builder cryptoKey(@Nullable Input<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyGetArgs> cryptoKey) {
+        public Builder cryptoKey(@Nullable Output<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyGetArgs> cryptoKey) {
             this.cryptoKey = cryptoKey;
             return this;
         }
 
         public Builder cryptoKey(@Nullable PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyGetArgs cryptoKey) {
-            this.cryptoKey = Input.ofNullable(cryptoKey);
+            this.cryptoKey = Output.ofNullable(cryptoKey);
             return this;
         }
 
-        public Builder customAlphabet(@Nullable Input<String> customAlphabet) {
+        public Builder customAlphabet(@Nullable Output<String> customAlphabet) {
             this.customAlphabet = customAlphabet;
             return this;
         }
 
         public Builder customAlphabet(@Nullable String customAlphabet) {
-            this.customAlphabet = Input.ofNullable(customAlphabet);
+            this.customAlphabet = Output.ofNullable(customAlphabet);
             return this;
         }
 
-        public Builder radix(@Nullable Input<Integer> radix) {
+        public Builder radix(@Nullable Output<Integer> radix) {
             this.radix = radix;
             return this;
         }
 
         public Builder radix(@Nullable Integer radix) {
-            this.radix = Input.ofNullable(radix);
+            this.radix = Output.ofNullable(radix);
             return this;
         }
 
-        public Builder surrogateInfoType(@Nullable Input<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoReplaceFfxFpeConfigSurrogateInfoTypeGetArgs> surrogateInfoType) {
+        public Builder surrogateInfoType(@Nullable Output<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoReplaceFfxFpeConfigSurrogateInfoTypeGetArgs> surrogateInfoType) {
             this.surrogateInfoType = surrogateInfoType;
             return this;
         }
 
         public Builder surrogateInfoType(@Nullable PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoReplaceFfxFpeConfigSurrogateInfoTypeGetArgs surrogateInfoType) {
-            this.surrogateInfoType = Input.ofNullable(surrogateInfoType);
+            this.surrogateInfoType = Output.ofNullable(surrogateInfoType);
             return this;
         }
         public PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoReplaceFfxFpeConfigGetArgs build() {

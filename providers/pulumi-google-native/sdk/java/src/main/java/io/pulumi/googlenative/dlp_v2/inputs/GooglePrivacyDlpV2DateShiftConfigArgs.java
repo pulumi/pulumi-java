@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dlp_v2.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2CryptoKeyArgs;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2FieldIdArgs;
@@ -25,10 +25,10 @@ public final class GooglePrivacyDlpV2DateShiftConfigArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="context")
-      private final @Nullable Input<GooglePrivacyDlpV2FieldIdArgs> context;
+      private final @Nullable Output<GooglePrivacyDlpV2FieldIdArgs> context;
 
-    public Input<GooglePrivacyDlpV2FieldIdArgs> getContext() {
-        return this.context == null ? Input.empty() : this.context;
+    public Output<GooglePrivacyDlpV2FieldIdArgs> getContext() {
+        return this.context == null ? Output.empty() : this.context;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class GooglePrivacyDlpV2DateShiftConfigArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="cryptoKey")
-      private final @Nullable Input<GooglePrivacyDlpV2CryptoKeyArgs> cryptoKey;
+      private final @Nullable Output<GooglePrivacyDlpV2CryptoKeyArgs> cryptoKey;
 
-    public Input<GooglePrivacyDlpV2CryptoKeyArgs> getCryptoKey() {
-        return this.cryptoKey == null ? Input.empty() : this.cryptoKey;
+    public Output<GooglePrivacyDlpV2CryptoKeyArgs> getCryptoKey() {
+        return this.cryptoKey == null ? Output.empty() : this.cryptoKey;
     }
 
     /**
@@ -47,9 +47,9 @@ public final class GooglePrivacyDlpV2DateShiftConfigArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="lowerBoundDays", required=true)
-      private final Input<Integer> lowerBoundDays;
+      private final Output<Integer> lowerBoundDays;
 
-    public Input<Integer> getLowerBoundDays() {
+    public Output<Integer> getLowerBoundDays() {
         return this.lowerBoundDays;
     }
 
@@ -58,17 +58,17 @@ public final class GooglePrivacyDlpV2DateShiftConfigArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="upperBoundDays", required=true)
-      private final Input<Integer> upperBoundDays;
+      private final Output<Integer> upperBoundDays;
 
-    public Input<Integer> getUpperBoundDays() {
+    public Output<Integer> getUpperBoundDays() {
         return this.upperBoundDays;
     }
 
     public GooglePrivacyDlpV2DateShiftConfigArgs(
-        @Nullable Input<GooglePrivacyDlpV2FieldIdArgs> context,
-        @Nullable Input<GooglePrivacyDlpV2CryptoKeyArgs> cryptoKey,
-        Input<Integer> lowerBoundDays,
-        Input<Integer> upperBoundDays) {
+        @Nullable Output<GooglePrivacyDlpV2FieldIdArgs> context,
+        @Nullable Output<GooglePrivacyDlpV2CryptoKeyArgs> cryptoKey,
+        Output<Integer> lowerBoundDays,
+        Output<Integer> upperBoundDays) {
         this.context = context;
         this.cryptoKey = cryptoKey;
         this.lowerBoundDays = Objects.requireNonNull(lowerBoundDays, "expected parameter 'lowerBoundDays' to be non-null");
@@ -76,10 +76,10 @@ public final class GooglePrivacyDlpV2DateShiftConfigArgs extends io.pulumi.resou
     }
 
     private GooglePrivacyDlpV2DateShiftConfigArgs() {
-        this.context = Input.empty();
-        this.cryptoKey = Input.empty();
-        this.lowerBoundDays = Input.empty();
-        this.upperBoundDays = Input.empty();
+        this.context = Output.empty();
+        this.cryptoKey = Output.empty();
+        this.lowerBoundDays = Output.empty();
+        this.upperBoundDays = Output.empty();
     }
 
     public static Builder builder() {
@@ -91,10 +91,10 @@ public final class GooglePrivacyDlpV2DateShiftConfigArgs extends io.pulumi.resou
     }
 
     public static final class Builder {
-        private @Nullable Input<GooglePrivacyDlpV2FieldIdArgs> context;
-        private @Nullable Input<GooglePrivacyDlpV2CryptoKeyArgs> cryptoKey;
-        private Input<Integer> lowerBoundDays;
-        private Input<Integer> upperBoundDays;
+        private @Nullable Output<GooglePrivacyDlpV2FieldIdArgs> context;
+        private @Nullable Output<GooglePrivacyDlpV2CryptoKeyArgs> cryptoKey;
+        private Output<Integer> lowerBoundDays;
+        private Output<Integer> upperBoundDays;
 
         public Builder() {
     	      // Empty
@@ -108,43 +108,43 @@ public final class GooglePrivacyDlpV2DateShiftConfigArgs extends io.pulumi.resou
     	      this.upperBoundDays = defaults.upperBoundDays;
         }
 
-        public Builder context(@Nullable Input<GooglePrivacyDlpV2FieldIdArgs> context) {
+        public Builder context(@Nullable Output<GooglePrivacyDlpV2FieldIdArgs> context) {
             this.context = context;
             return this;
         }
 
         public Builder context(@Nullable GooglePrivacyDlpV2FieldIdArgs context) {
-            this.context = Input.ofNullable(context);
+            this.context = Output.ofNullable(context);
             return this;
         }
 
-        public Builder cryptoKey(@Nullable Input<GooglePrivacyDlpV2CryptoKeyArgs> cryptoKey) {
+        public Builder cryptoKey(@Nullable Output<GooglePrivacyDlpV2CryptoKeyArgs> cryptoKey) {
             this.cryptoKey = cryptoKey;
             return this;
         }
 
         public Builder cryptoKey(@Nullable GooglePrivacyDlpV2CryptoKeyArgs cryptoKey) {
-            this.cryptoKey = Input.ofNullable(cryptoKey);
+            this.cryptoKey = Output.ofNullable(cryptoKey);
             return this;
         }
 
-        public Builder lowerBoundDays(Input<Integer> lowerBoundDays) {
+        public Builder lowerBoundDays(Output<Integer> lowerBoundDays) {
             this.lowerBoundDays = Objects.requireNonNull(lowerBoundDays);
             return this;
         }
 
         public Builder lowerBoundDays(Integer lowerBoundDays) {
-            this.lowerBoundDays = Input.of(Objects.requireNonNull(lowerBoundDays));
+            this.lowerBoundDays = Output.of(Objects.requireNonNull(lowerBoundDays));
             return this;
         }
 
-        public Builder upperBoundDays(Input<Integer> upperBoundDays) {
+        public Builder upperBoundDays(Output<Integer> upperBoundDays) {
             this.upperBoundDays = Objects.requireNonNull(upperBoundDays);
             return this;
         }
 
         public Builder upperBoundDays(Integer upperBoundDays) {
-            this.upperBoundDays = Input.of(Objects.requireNonNull(upperBoundDays));
+            this.upperBoundDays = Output.of(Objects.requireNonNull(upperBoundDays));
             return this;
         }
         public GooglePrivacyDlpV2DateShiftConfigArgs build() {

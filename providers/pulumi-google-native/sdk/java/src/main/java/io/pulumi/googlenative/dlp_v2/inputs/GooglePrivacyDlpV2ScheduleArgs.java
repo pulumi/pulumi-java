@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dlp_v2.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class GooglePrivacyDlpV2ScheduleArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="recurrencePeriodDuration")
-      private final @Nullable Input<String> recurrencePeriodDuration;
+      private final @Nullable Output<String> recurrencePeriodDuration;
 
-    public Input<String> getRecurrencePeriodDuration() {
-        return this.recurrencePeriodDuration == null ? Input.empty() : this.recurrencePeriodDuration;
+    public Output<String> getRecurrencePeriodDuration() {
+        return this.recurrencePeriodDuration == null ? Output.empty() : this.recurrencePeriodDuration;
     }
 
-    public GooglePrivacyDlpV2ScheduleArgs(@Nullable Input<String> recurrencePeriodDuration) {
+    public GooglePrivacyDlpV2ScheduleArgs(@Nullable Output<String> recurrencePeriodDuration) {
         this.recurrencePeriodDuration = recurrencePeriodDuration;
     }
 
     private GooglePrivacyDlpV2ScheduleArgs() {
-        this.recurrencePeriodDuration = Input.empty();
+        this.recurrencePeriodDuration = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class GooglePrivacyDlpV2ScheduleArgs extends io.pulumi.resources.Re
     }
 
     public static final class Builder {
-        private @Nullable Input<String> recurrencePeriodDuration;
+        private @Nullable Output<String> recurrencePeriodDuration;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class GooglePrivacyDlpV2ScheduleArgs extends io.pulumi.resources.Re
     	      this.recurrencePeriodDuration = defaults.recurrencePeriodDuration;
         }
 
-        public Builder recurrencePeriodDuration(@Nullable Input<String> recurrencePeriodDuration) {
+        public Builder recurrencePeriodDuration(@Nullable Output<String> recurrencePeriodDuration) {
             this.recurrencePeriodDuration = recurrencePeriodDuration;
             return this;
         }
 
         public Builder recurrencePeriodDuration(@Nullable String recurrencePeriodDuration) {
-            this.recurrencePeriodDuration = Input.ofNullable(recurrencePeriodDuration);
+            this.recurrencePeriodDuration = Output.ofNullable(recurrencePeriodDuration);
             return this;
         }
         public GooglePrivacyDlpV2ScheduleArgs build() {

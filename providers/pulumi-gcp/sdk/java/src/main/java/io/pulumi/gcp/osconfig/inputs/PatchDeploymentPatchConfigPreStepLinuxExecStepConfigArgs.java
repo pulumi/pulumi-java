@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.osconfig.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.osconfig.inputs.PatchDeploymentPatchConfigPreStepLinuxExecStepConfigGcsObjectArgs;
 import java.lang.Integer;
@@ -22,10 +22,10 @@ public final class PatchDeploymentPatchConfigPreStepLinuxExecStepConfigArgs exte
      * 
      */
     @InputImport(name="allowedSuccessCodes")
-      private final @Nullable Input<List<Integer>> allowedSuccessCodes;
+      private final @Nullable Output<List<Integer>> allowedSuccessCodes;
 
-    public Input<List<Integer>> getAllowedSuccessCodes() {
-        return this.allowedSuccessCodes == null ? Input.empty() : this.allowedSuccessCodes;
+    public Output<List<Integer>> getAllowedSuccessCodes() {
+        return this.allowedSuccessCodes == null ? Output.empty() : this.allowedSuccessCodes;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class PatchDeploymentPatchConfigPreStepLinuxExecStepConfigArgs exte
      * 
      */
     @InputImport(name="gcsObject")
-      private final @Nullable Input<PatchDeploymentPatchConfigPreStepLinuxExecStepConfigGcsObjectArgs> gcsObject;
+      private final @Nullable Output<PatchDeploymentPatchConfigPreStepLinuxExecStepConfigGcsObjectArgs> gcsObject;
 
-    public Input<PatchDeploymentPatchConfigPreStepLinuxExecStepConfigGcsObjectArgs> getGcsObject() {
-        return this.gcsObject == null ? Input.empty() : this.gcsObject;
+    public Output<PatchDeploymentPatchConfigPreStepLinuxExecStepConfigGcsObjectArgs> getGcsObject() {
+        return this.gcsObject == null ? Output.empty() : this.gcsObject;
     }
 
     /**
@@ -47,10 +47,10 @@ public final class PatchDeploymentPatchConfigPreStepLinuxExecStepConfigArgs exte
      * 
      */
     @InputImport(name="interpreter")
-      private final @Nullable Input<String> interpreter;
+      private final @Nullable Output<String> interpreter;
 
-    public Input<String> getInterpreter() {
-        return this.interpreter == null ? Input.empty() : this.interpreter;
+    public Output<String> getInterpreter() {
+        return this.interpreter == null ? Output.empty() : this.interpreter;
     }
 
     /**
@@ -58,17 +58,17 @@ public final class PatchDeploymentPatchConfigPreStepLinuxExecStepConfigArgs exte
      * 
      */
     @InputImport(name="localPath")
-      private final @Nullable Input<String> localPath;
+      private final @Nullable Output<String> localPath;
 
-    public Input<String> getLocalPath() {
-        return this.localPath == null ? Input.empty() : this.localPath;
+    public Output<String> getLocalPath() {
+        return this.localPath == null ? Output.empty() : this.localPath;
     }
 
     public PatchDeploymentPatchConfigPreStepLinuxExecStepConfigArgs(
-        @Nullable Input<List<Integer>> allowedSuccessCodes,
-        @Nullable Input<PatchDeploymentPatchConfigPreStepLinuxExecStepConfigGcsObjectArgs> gcsObject,
-        @Nullable Input<String> interpreter,
-        @Nullable Input<String> localPath) {
+        @Nullable Output<List<Integer>> allowedSuccessCodes,
+        @Nullable Output<PatchDeploymentPatchConfigPreStepLinuxExecStepConfigGcsObjectArgs> gcsObject,
+        @Nullable Output<String> interpreter,
+        @Nullable Output<String> localPath) {
         this.allowedSuccessCodes = allowedSuccessCodes;
         this.gcsObject = gcsObject;
         this.interpreter = interpreter;
@@ -76,10 +76,10 @@ public final class PatchDeploymentPatchConfigPreStepLinuxExecStepConfigArgs exte
     }
 
     private PatchDeploymentPatchConfigPreStepLinuxExecStepConfigArgs() {
-        this.allowedSuccessCodes = Input.empty();
-        this.gcsObject = Input.empty();
-        this.interpreter = Input.empty();
-        this.localPath = Input.empty();
+        this.allowedSuccessCodes = Output.empty();
+        this.gcsObject = Output.empty();
+        this.interpreter = Output.empty();
+        this.localPath = Output.empty();
     }
 
     public static Builder builder() {
@@ -91,10 +91,10 @@ public final class PatchDeploymentPatchConfigPreStepLinuxExecStepConfigArgs exte
     }
 
     public static final class Builder {
-        private @Nullable Input<List<Integer>> allowedSuccessCodes;
-        private @Nullable Input<PatchDeploymentPatchConfigPreStepLinuxExecStepConfigGcsObjectArgs> gcsObject;
-        private @Nullable Input<String> interpreter;
-        private @Nullable Input<String> localPath;
+        private @Nullable Output<List<Integer>> allowedSuccessCodes;
+        private @Nullable Output<PatchDeploymentPatchConfigPreStepLinuxExecStepConfigGcsObjectArgs> gcsObject;
+        private @Nullable Output<String> interpreter;
+        private @Nullable Output<String> localPath;
 
         public Builder() {
     	      // Empty
@@ -108,43 +108,43 @@ public final class PatchDeploymentPatchConfigPreStepLinuxExecStepConfigArgs exte
     	      this.localPath = defaults.localPath;
         }
 
-        public Builder allowedSuccessCodes(@Nullable Input<List<Integer>> allowedSuccessCodes) {
+        public Builder allowedSuccessCodes(@Nullable Output<List<Integer>> allowedSuccessCodes) {
             this.allowedSuccessCodes = allowedSuccessCodes;
             return this;
         }
 
         public Builder allowedSuccessCodes(@Nullable List<Integer> allowedSuccessCodes) {
-            this.allowedSuccessCodes = Input.ofNullable(allowedSuccessCodes);
+            this.allowedSuccessCodes = Output.ofNullable(allowedSuccessCodes);
             return this;
         }
 
-        public Builder gcsObject(@Nullable Input<PatchDeploymentPatchConfigPreStepLinuxExecStepConfigGcsObjectArgs> gcsObject) {
+        public Builder gcsObject(@Nullable Output<PatchDeploymentPatchConfigPreStepLinuxExecStepConfigGcsObjectArgs> gcsObject) {
             this.gcsObject = gcsObject;
             return this;
         }
 
         public Builder gcsObject(@Nullable PatchDeploymentPatchConfigPreStepLinuxExecStepConfigGcsObjectArgs gcsObject) {
-            this.gcsObject = Input.ofNullable(gcsObject);
+            this.gcsObject = Output.ofNullable(gcsObject);
             return this;
         }
 
-        public Builder interpreter(@Nullable Input<String> interpreter) {
+        public Builder interpreter(@Nullable Output<String> interpreter) {
             this.interpreter = interpreter;
             return this;
         }
 
         public Builder interpreter(@Nullable String interpreter) {
-            this.interpreter = Input.ofNullable(interpreter);
+            this.interpreter = Output.ofNullable(interpreter);
             return this;
         }
 
-        public Builder localPath(@Nullable Input<String> localPath) {
+        public Builder localPath(@Nullable Output<String> localPath) {
             this.localPath = localPath;
             return this;
         }
 
         public Builder localPath(@Nullable String localPath) {
-            this.localPath = Input.ofNullable(localPath);
+            this.localPath = Output.ofNullable(localPath);
             return this;
         }
         public PatchDeploymentPatchConfigPreStepLinuxExecStepConfigArgs build() {

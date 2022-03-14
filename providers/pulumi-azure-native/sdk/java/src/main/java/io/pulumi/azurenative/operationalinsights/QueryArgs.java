@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.operationalinsights;
 
 import io.pulumi.azurenative.operationalinsights.inputs.LogAnalyticsQueryPackQueryPropertiesRelatedArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
@@ -23,9 +23,9 @@ public final class QueryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="body", required=true)
-      private final Input<String> body;
+      private final Output<String> body;
 
-    public Input<String> getBody() {
+    public Output<String> getBody() {
         return this.body;
     }
 
@@ -34,10 +34,10 @@ public final class QueryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -45,9 +45,9 @@ public final class QueryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName", required=true)
-      private final Input<String> displayName;
+      private final Output<String> displayName;
 
-    public Input<String> getDisplayName() {
+    public Output<String> getDisplayName() {
         return this.displayName;
     }
 
@@ -56,10 +56,10 @@ public final class QueryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="id")
-      private final @Nullable Input<String> id;
+      private final @Nullable Output<String> id;
 
-    public Input<String> getId() {
-        return this.id == null ? Input.empty() : this.id;
+    public Output<String> getId() {
+        return this.id == null ? Output.empty() : this.id;
     }
 
     /**
@@ -67,10 +67,10 @@ public final class QueryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="properties")
-      private final @Nullable Input<Object> properties;
+      private final @Nullable Output<Object> properties;
 
-    public Input<Object> getProperties() {
-        return this.properties == null ? Input.empty() : this.properties;
+    public Output<Object> getProperties() {
+        return this.properties == null ? Output.empty() : this.properties;
     }
 
     /**
@@ -78,9 +78,9 @@ public final class QueryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="queryPackName", required=true)
-      private final Input<String> queryPackName;
+      private final Output<String> queryPackName;
 
-    public Input<String> getQueryPackName() {
+    public Output<String> getQueryPackName() {
         return this.queryPackName;
     }
 
@@ -89,10 +89,10 @@ public final class QueryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="related")
-      private final @Nullable Input<LogAnalyticsQueryPackQueryPropertiesRelatedArgs> related;
+      private final @Nullable Output<LogAnalyticsQueryPackQueryPropertiesRelatedArgs> related;
 
-    public Input<LogAnalyticsQueryPackQueryPropertiesRelatedArgs> getRelated() {
-        return this.related == null ? Input.empty() : this.related;
+    public Output<LogAnalyticsQueryPackQueryPropertiesRelatedArgs> getRelated() {
+        return this.related == null ? Output.empty() : this.related;
     }
 
     /**
@@ -100,9 +100,9 @@ public final class QueryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -111,22 +111,22 @@ public final class QueryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,List<String>>> tags;
+      private final @Nullable Output<Map<String,List<String>>> tags;
 
-    public Input<Map<String,List<String>>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,List<String>>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public QueryArgs(
-        Input<String> body,
-        @Nullable Input<String> description,
-        Input<String> displayName,
-        @Nullable Input<String> id,
-        @Nullable Input<Object> properties,
-        Input<String> queryPackName,
-        @Nullable Input<LogAnalyticsQueryPackQueryPropertiesRelatedArgs> related,
-        Input<String> resourceGroupName,
-        @Nullable Input<Map<String,List<String>>> tags) {
+        Output<String> body,
+        @Nullable Output<String> description,
+        Output<String> displayName,
+        @Nullable Output<String> id,
+        @Nullable Output<Object> properties,
+        Output<String> queryPackName,
+        @Nullable Output<LogAnalyticsQueryPackQueryPropertiesRelatedArgs> related,
+        Output<String> resourceGroupName,
+        @Nullable Output<Map<String,List<String>>> tags) {
         this.body = Objects.requireNonNull(body, "expected parameter 'body' to be non-null");
         this.description = description;
         this.displayName = Objects.requireNonNull(displayName, "expected parameter 'displayName' to be non-null");
@@ -139,15 +139,15 @@ public final class QueryArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private QueryArgs() {
-        this.body = Input.empty();
-        this.description = Input.empty();
-        this.displayName = Input.empty();
-        this.id = Input.empty();
-        this.properties = Input.empty();
-        this.queryPackName = Input.empty();
-        this.related = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.tags = Input.empty();
+        this.body = Output.empty();
+        this.description = Output.empty();
+        this.displayName = Output.empty();
+        this.id = Output.empty();
+        this.properties = Output.empty();
+        this.queryPackName = Output.empty();
+        this.related = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -159,15 +159,15 @@ public final class QueryArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> body;
-        private @Nullable Input<String> description;
-        private Input<String> displayName;
-        private @Nullable Input<String> id;
-        private @Nullable Input<Object> properties;
-        private Input<String> queryPackName;
-        private @Nullable Input<LogAnalyticsQueryPackQueryPropertiesRelatedArgs> related;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<Map<String,List<String>>> tags;
+        private Output<String> body;
+        private @Nullable Output<String> description;
+        private Output<String> displayName;
+        private @Nullable Output<String> id;
+        private @Nullable Output<Object> properties;
+        private Output<String> queryPackName;
+        private @Nullable Output<LogAnalyticsQueryPackQueryPropertiesRelatedArgs> related;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<Map<String,List<String>>> tags;
 
         public Builder() {
     	      // Empty
@@ -186,93 +186,93 @@ public final class QueryArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder body(Input<String> body) {
+        public Builder body(Output<String> body) {
             this.body = Objects.requireNonNull(body);
             return this;
         }
 
         public Builder body(String body) {
-            this.body = Input.of(Objects.requireNonNull(body));
+            this.body = Output.of(Objects.requireNonNull(body));
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder displayName(Input<String> displayName) {
+        public Builder displayName(Output<String> displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
         public Builder displayName(String displayName) {
-            this.displayName = Input.of(Objects.requireNonNull(displayName));
+            this.displayName = Output.of(Objects.requireNonNull(displayName));
             return this;
         }
 
-        public Builder id(@Nullable Input<String> id) {
+        public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
 
         public Builder id(@Nullable String id) {
-            this.id = Input.ofNullable(id);
+            this.id = Output.ofNullable(id);
             return this;
         }
 
-        public Builder properties(@Nullable Input<Object> properties) {
+        public Builder properties(@Nullable Output<Object> properties) {
             this.properties = properties;
             return this;
         }
 
         public Builder properties(@Nullable Object properties) {
-            this.properties = Input.ofNullable(properties);
+            this.properties = Output.ofNullable(properties);
             return this;
         }
 
-        public Builder queryPackName(Input<String> queryPackName) {
+        public Builder queryPackName(Output<String> queryPackName) {
             this.queryPackName = Objects.requireNonNull(queryPackName);
             return this;
         }
 
         public Builder queryPackName(String queryPackName) {
-            this.queryPackName = Input.of(Objects.requireNonNull(queryPackName));
+            this.queryPackName = Output.of(Objects.requireNonNull(queryPackName));
             return this;
         }
 
-        public Builder related(@Nullable Input<LogAnalyticsQueryPackQueryPropertiesRelatedArgs> related) {
+        public Builder related(@Nullable Output<LogAnalyticsQueryPackQueryPropertiesRelatedArgs> related) {
             this.related = related;
             return this;
         }
 
         public Builder related(@Nullable LogAnalyticsQueryPackQueryPropertiesRelatedArgs related) {
-            this.related = Input.ofNullable(related);
+            this.related = Output.ofNullable(related);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,List<String>>> tags) {
+        public Builder tags(@Nullable Output<Map<String,List<String>>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,List<String>> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public QueryArgs build() {

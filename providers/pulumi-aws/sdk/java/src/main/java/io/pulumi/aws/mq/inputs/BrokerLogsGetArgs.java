@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.mq.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class BrokerLogsGetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="audit")
-      private final @Nullable Input<Boolean> audit;
+      private final @Nullable Output<Boolean> audit;
 
-    public Input<Boolean> getAudit() {
-        return this.audit == null ? Input.empty() : this.audit;
+    public Output<Boolean> getAudit() {
+        return this.audit == null ? Output.empty() : this.audit;
     }
 
     /**
@@ -30,22 +30,22 @@ public final class BrokerLogsGetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="general")
-      private final @Nullable Input<Boolean> general;
+      private final @Nullable Output<Boolean> general;
 
-    public Input<Boolean> getGeneral() {
-        return this.general == null ? Input.empty() : this.general;
+    public Output<Boolean> getGeneral() {
+        return this.general == null ? Output.empty() : this.general;
     }
 
     public BrokerLogsGetArgs(
-        @Nullable Input<Boolean> audit,
-        @Nullable Input<Boolean> general) {
+        @Nullable Output<Boolean> audit,
+        @Nullable Output<Boolean> general) {
         this.audit = audit;
         this.general = general;
     }
 
     private BrokerLogsGetArgs() {
-        this.audit = Input.empty();
-        this.general = Input.empty();
+        this.audit = Output.empty();
+        this.general = Output.empty();
     }
 
     public static Builder builder() {
@@ -57,8 +57,8 @@ public final class BrokerLogsGetArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> audit;
-        private @Nullable Input<Boolean> general;
+        private @Nullable Output<Boolean> audit;
+        private @Nullable Output<Boolean> general;
 
         public Builder() {
     	      // Empty
@@ -70,23 +70,23 @@ public final class BrokerLogsGetArgs extends io.pulumi.resources.ResourceArgs {
     	      this.general = defaults.general;
         }
 
-        public Builder audit(@Nullable Input<Boolean> audit) {
+        public Builder audit(@Nullable Output<Boolean> audit) {
             this.audit = audit;
             return this;
         }
 
         public Builder audit(@Nullable Boolean audit) {
-            this.audit = Input.ofNullable(audit);
+            this.audit = Output.ofNullable(audit);
             return this;
         }
 
-        public Builder general(@Nullable Input<Boolean> general) {
+        public Builder general(@Nullable Output<Boolean> general) {
             this.general = general;
             return this;
         }
 
         public Builder general(@Nullable Boolean general) {
-            this.general = Input.ofNullable(general);
+            this.general = Output.ofNullable(general);
             return this;
         }
         public BrokerLogsGetArgs build() {

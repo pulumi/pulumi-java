@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.healthcare;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.healthcare.inputs.Hl7StoreIamMemberConditionArgs;
 import java.lang.String;
@@ -16,10 +16,10 @@ public final class Hl7StoreIamMemberArgs extends io.pulumi.resources.ResourceArg
     public static final Hl7StoreIamMemberArgs Empty = new Hl7StoreIamMemberArgs();
 
     @InputImport(name="condition")
-      private final @Nullable Input<Hl7StoreIamMemberConditionArgs> condition;
+      private final @Nullable Output<Hl7StoreIamMemberConditionArgs> condition;
 
-    public Input<Hl7StoreIamMemberConditionArgs> getCondition() {
-        return this.condition == null ? Input.empty() : this.condition;
+    public Output<Hl7StoreIamMemberConditionArgs> getCondition() {
+        return this.condition == null ? Output.empty() : this.condition;
     }
 
     /**
@@ -30,16 +30,16 @@ public final class Hl7StoreIamMemberArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="hl7V2StoreId", required=true)
-      private final Input<String> hl7V2StoreId;
+      private final Output<String> hl7V2StoreId;
 
-    public Input<String> getHl7V2StoreId() {
+    public Output<String> getHl7V2StoreId() {
         return this.hl7V2StoreId;
     }
 
     @InputImport(name="member", required=true)
-      private final Input<String> member;
+      private final Output<String> member;
 
-    public Input<String> getMember() {
+    public Output<String> getMember() {
         return this.member;
     }
 
@@ -50,17 +50,17 @@ public final class Hl7StoreIamMemberArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="role", required=true)
-      private final Input<String> role;
+      private final Output<String> role;
 
-    public Input<String> getRole() {
+    public Output<String> getRole() {
         return this.role;
     }
 
     public Hl7StoreIamMemberArgs(
-        @Nullable Input<Hl7StoreIamMemberConditionArgs> condition,
-        Input<String> hl7V2StoreId,
-        Input<String> member,
-        Input<String> role) {
+        @Nullable Output<Hl7StoreIamMemberConditionArgs> condition,
+        Output<String> hl7V2StoreId,
+        Output<String> member,
+        Output<String> role) {
         this.condition = condition;
         this.hl7V2StoreId = Objects.requireNonNull(hl7V2StoreId, "expected parameter 'hl7V2StoreId' to be non-null");
         this.member = Objects.requireNonNull(member, "expected parameter 'member' to be non-null");
@@ -68,10 +68,10 @@ public final class Hl7StoreIamMemberArgs extends io.pulumi.resources.ResourceArg
     }
 
     private Hl7StoreIamMemberArgs() {
-        this.condition = Input.empty();
-        this.hl7V2StoreId = Input.empty();
-        this.member = Input.empty();
-        this.role = Input.empty();
+        this.condition = Output.empty();
+        this.hl7V2StoreId = Output.empty();
+        this.member = Output.empty();
+        this.role = Output.empty();
     }
 
     public static Builder builder() {
@@ -83,10 +83,10 @@ public final class Hl7StoreIamMemberArgs extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private @Nullable Input<Hl7StoreIamMemberConditionArgs> condition;
-        private Input<String> hl7V2StoreId;
-        private Input<String> member;
-        private Input<String> role;
+        private @Nullable Output<Hl7StoreIamMemberConditionArgs> condition;
+        private Output<String> hl7V2StoreId;
+        private Output<String> member;
+        private Output<String> role;
 
         public Builder() {
     	      // Empty
@@ -100,43 +100,43 @@ public final class Hl7StoreIamMemberArgs extends io.pulumi.resources.ResourceArg
     	      this.role = defaults.role;
         }
 
-        public Builder condition(@Nullable Input<Hl7StoreIamMemberConditionArgs> condition) {
+        public Builder condition(@Nullable Output<Hl7StoreIamMemberConditionArgs> condition) {
             this.condition = condition;
             return this;
         }
 
         public Builder condition(@Nullable Hl7StoreIamMemberConditionArgs condition) {
-            this.condition = Input.ofNullable(condition);
+            this.condition = Output.ofNullable(condition);
             return this;
         }
 
-        public Builder hl7V2StoreId(Input<String> hl7V2StoreId) {
+        public Builder hl7V2StoreId(Output<String> hl7V2StoreId) {
             this.hl7V2StoreId = Objects.requireNonNull(hl7V2StoreId);
             return this;
         }
 
         public Builder hl7V2StoreId(String hl7V2StoreId) {
-            this.hl7V2StoreId = Input.of(Objects.requireNonNull(hl7V2StoreId));
+            this.hl7V2StoreId = Output.of(Objects.requireNonNull(hl7V2StoreId));
             return this;
         }
 
-        public Builder member(Input<String> member) {
+        public Builder member(Output<String> member) {
             this.member = Objects.requireNonNull(member);
             return this;
         }
 
         public Builder member(String member) {
-            this.member = Input.of(Objects.requireNonNull(member));
+            this.member = Output.of(Objects.requireNonNull(member));
             return this;
         }
 
-        public Builder role(Input<String> role) {
+        public Builder role(Output<String> role) {
             this.role = Objects.requireNonNull(role);
             return this;
         }
 
         public Builder role(String role) {
-            this.role = Input.of(Objects.requireNonNull(role));
+            this.role = Output.of(Objects.requireNonNull(role));
             return this;
         }
         public Hl7StoreIamMemberArgs build() {

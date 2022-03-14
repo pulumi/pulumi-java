@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.appmesh.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -20,9 +20,9 @@ public final class VirtualNodeSpecListenerHealthCheckGetArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="healthyThreshold", required=true)
-      private final Input<Integer> healthyThreshold;
+      private final Output<Integer> healthyThreshold;
 
-    public Input<Integer> getHealthyThreshold() {
+    public Output<Integer> getHealthyThreshold() {
         return this.healthyThreshold;
     }
 
@@ -31,9 +31,9 @@ public final class VirtualNodeSpecListenerHealthCheckGetArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="intervalMillis", required=true)
-      private final Input<Integer> intervalMillis;
+      private final Output<Integer> intervalMillis;
 
-    public Input<Integer> getIntervalMillis() {
+    public Output<Integer> getIntervalMillis() {
         return this.intervalMillis;
     }
 
@@ -42,10 +42,10 @@ public final class VirtualNodeSpecListenerHealthCheckGetArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="path")
-      private final @Nullable Input<String> path;
+      private final @Nullable Output<String> path;
 
-    public Input<String> getPath() {
-        return this.path == null ? Input.empty() : this.path;
+    public Output<String> getPath() {
+        return this.path == null ? Output.empty() : this.path;
     }
 
     /**
@@ -53,10 +53,10 @@ public final class VirtualNodeSpecListenerHealthCheckGetArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="port")
-      private final @Nullable Input<Integer> port;
+      private final @Nullable Output<Integer> port;
 
-    public Input<Integer> getPort() {
-        return this.port == null ? Input.empty() : this.port;
+    public Output<Integer> getPort() {
+        return this.port == null ? Output.empty() : this.port;
     }
 
     /**
@@ -64,9 +64,9 @@ public final class VirtualNodeSpecListenerHealthCheckGetArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="protocol", required=true)
-      private final Input<String> protocol;
+      private final Output<String> protocol;
 
-    public Input<String> getProtocol() {
+    public Output<String> getProtocol() {
         return this.protocol;
     }
 
@@ -75,9 +75,9 @@ public final class VirtualNodeSpecListenerHealthCheckGetArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="timeoutMillis", required=true)
-      private final Input<Integer> timeoutMillis;
+      private final Output<Integer> timeoutMillis;
 
-    public Input<Integer> getTimeoutMillis() {
+    public Output<Integer> getTimeoutMillis() {
         return this.timeoutMillis;
     }
 
@@ -86,20 +86,20 @@ public final class VirtualNodeSpecListenerHealthCheckGetArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="unhealthyThreshold", required=true)
-      private final Input<Integer> unhealthyThreshold;
+      private final Output<Integer> unhealthyThreshold;
 
-    public Input<Integer> getUnhealthyThreshold() {
+    public Output<Integer> getUnhealthyThreshold() {
         return this.unhealthyThreshold;
     }
 
     public VirtualNodeSpecListenerHealthCheckGetArgs(
-        Input<Integer> healthyThreshold,
-        Input<Integer> intervalMillis,
-        @Nullable Input<String> path,
-        @Nullable Input<Integer> port,
-        Input<String> protocol,
-        Input<Integer> timeoutMillis,
-        Input<Integer> unhealthyThreshold) {
+        Output<Integer> healthyThreshold,
+        Output<Integer> intervalMillis,
+        @Nullable Output<String> path,
+        @Nullable Output<Integer> port,
+        Output<String> protocol,
+        Output<Integer> timeoutMillis,
+        Output<Integer> unhealthyThreshold) {
         this.healthyThreshold = Objects.requireNonNull(healthyThreshold, "expected parameter 'healthyThreshold' to be non-null");
         this.intervalMillis = Objects.requireNonNull(intervalMillis, "expected parameter 'intervalMillis' to be non-null");
         this.path = path;
@@ -110,13 +110,13 @@ public final class VirtualNodeSpecListenerHealthCheckGetArgs extends io.pulumi.r
     }
 
     private VirtualNodeSpecListenerHealthCheckGetArgs() {
-        this.healthyThreshold = Input.empty();
-        this.intervalMillis = Input.empty();
-        this.path = Input.empty();
-        this.port = Input.empty();
-        this.protocol = Input.empty();
-        this.timeoutMillis = Input.empty();
-        this.unhealthyThreshold = Input.empty();
+        this.healthyThreshold = Output.empty();
+        this.intervalMillis = Output.empty();
+        this.path = Output.empty();
+        this.port = Output.empty();
+        this.protocol = Output.empty();
+        this.timeoutMillis = Output.empty();
+        this.unhealthyThreshold = Output.empty();
     }
 
     public static Builder builder() {
@@ -128,13 +128,13 @@ public final class VirtualNodeSpecListenerHealthCheckGetArgs extends io.pulumi.r
     }
 
     public static final class Builder {
-        private Input<Integer> healthyThreshold;
-        private Input<Integer> intervalMillis;
-        private @Nullable Input<String> path;
-        private @Nullable Input<Integer> port;
-        private Input<String> protocol;
-        private Input<Integer> timeoutMillis;
-        private Input<Integer> unhealthyThreshold;
+        private Output<Integer> healthyThreshold;
+        private Output<Integer> intervalMillis;
+        private @Nullable Output<String> path;
+        private @Nullable Output<Integer> port;
+        private Output<String> protocol;
+        private Output<Integer> timeoutMillis;
+        private Output<Integer> unhealthyThreshold;
 
         public Builder() {
     	      // Empty
@@ -151,73 +151,73 @@ public final class VirtualNodeSpecListenerHealthCheckGetArgs extends io.pulumi.r
     	      this.unhealthyThreshold = defaults.unhealthyThreshold;
         }
 
-        public Builder healthyThreshold(Input<Integer> healthyThreshold) {
+        public Builder healthyThreshold(Output<Integer> healthyThreshold) {
             this.healthyThreshold = Objects.requireNonNull(healthyThreshold);
             return this;
         }
 
         public Builder healthyThreshold(Integer healthyThreshold) {
-            this.healthyThreshold = Input.of(Objects.requireNonNull(healthyThreshold));
+            this.healthyThreshold = Output.of(Objects.requireNonNull(healthyThreshold));
             return this;
         }
 
-        public Builder intervalMillis(Input<Integer> intervalMillis) {
+        public Builder intervalMillis(Output<Integer> intervalMillis) {
             this.intervalMillis = Objects.requireNonNull(intervalMillis);
             return this;
         }
 
         public Builder intervalMillis(Integer intervalMillis) {
-            this.intervalMillis = Input.of(Objects.requireNonNull(intervalMillis));
+            this.intervalMillis = Output.of(Objects.requireNonNull(intervalMillis));
             return this;
         }
 
-        public Builder path(@Nullable Input<String> path) {
+        public Builder path(@Nullable Output<String> path) {
             this.path = path;
             return this;
         }
 
         public Builder path(@Nullable String path) {
-            this.path = Input.ofNullable(path);
+            this.path = Output.ofNullable(path);
             return this;
         }
 
-        public Builder port(@Nullable Input<Integer> port) {
+        public Builder port(@Nullable Output<Integer> port) {
             this.port = port;
             return this;
         }
 
         public Builder port(@Nullable Integer port) {
-            this.port = Input.ofNullable(port);
+            this.port = Output.ofNullable(port);
             return this;
         }
 
-        public Builder protocol(Input<String> protocol) {
+        public Builder protocol(Output<String> protocol) {
             this.protocol = Objects.requireNonNull(protocol);
             return this;
         }
 
         public Builder protocol(String protocol) {
-            this.protocol = Input.of(Objects.requireNonNull(protocol));
+            this.protocol = Output.of(Objects.requireNonNull(protocol));
             return this;
         }
 
-        public Builder timeoutMillis(Input<Integer> timeoutMillis) {
+        public Builder timeoutMillis(Output<Integer> timeoutMillis) {
             this.timeoutMillis = Objects.requireNonNull(timeoutMillis);
             return this;
         }
 
         public Builder timeoutMillis(Integer timeoutMillis) {
-            this.timeoutMillis = Input.of(Objects.requireNonNull(timeoutMillis));
+            this.timeoutMillis = Output.of(Objects.requireNonNull(timeoutMillis));
             return this;
         }
 
-        public Builder unhealthyThreshold(Input<Integer> unhealthyThreshold) {
+        public Builder unhealthyThreshold(Output<Integer> unhealthyThreshold) {
             this.unhealthyThreshold = Objects.requireNonNull(unhealthyThreshold);
             return this;
         }
 
         public Builder unhealthyThreshold(Integer unhealthyThreshold) {
-            this.unhealthyThreshold = Input.of(Objects.requireNonNull(unhealthyThreshold));
+            this.unhealthyThreshold = Output.of(Objects.requireNonNull(unhealthyThreshold));
             return this;
         }
         public VirtualNodeSpecListenerHealthCheckGetArgs build() {

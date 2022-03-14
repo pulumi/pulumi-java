@@ -14,7 +14,7 @@ import io.pulumi.azurenative.network.inputs.FirewallPolicyTransportSecurityArgs;
 import io.pulumi.azurenative.network.inputs.ManagedServiceIdentityArgs;
 import io.pulumi.azurenative.network.inputs.SubResourceArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -31,10 +31,10 @@ public final class FirewallPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="basePolicy")
-      private final @Nullable Input<SubResourceArgs> basePolicy;
+      private final @Nullable Output<SubResourceArgs> basePolicy;
 
-    public Input<SubResourceArgs> getBasePolicy() {
-        return this.basePolicy == null ? Input.empty() : this.basePolicy;
+    public Output<SubResourceArgs> getBasePolicy() {
+        return this.basePolicy == null ? Output.empty() : this.basePolicy;
     }
 
     /**
@@ -42,10 +42,10 @@ public final class FirewallPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dnsSettings")
-      private final @Nullable Input<DnsSettingsArgs> dnsSettings;
+      private final @Nullable Output<DnsSettingsArgs> dnsSettings;
 
-    public Input<DnsSettingsArgs> getDnsSettings() {
-        return this.dnsSettings == null ? Input.empty() : this.dnsSettings;
+    public Output<DnsSettingsArgs> getDnsSettings() {
+        return this.dnsSettings == null ? Output.empty() : this.dnsSettings;
     }
 
     /**
@@ -53,10 +53,10 @@ public final class FirewallPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="firewallPolicyName")
-      private final @Nullable Input<String> firewallPolicyName;
+      private final @Nullable Output<String> firewallPolicyName;
 
-    public Input<String> getFirewallPolicyName() {
-        return this.firewallPolicyName == null ? Input.empty() : this.firewallPolicyName;
+    public Output<String> getFirewallPolicyName() {
+        return this.firewallPolicyName == null ? Output.empty() : this.firewallPolicyName;
     }
 
     /**
@@ -64,10 +64,10 @@ public final class FirewallPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="id")
-      private final @Nullable Input<String> id;
+      private final @Nullable Output<String> id;
 
-    public Input<String> getId() {
-        return this.id == null ? Input.empty() : this.id;
+    public Output<String> getId() {
+        return this.id == null ? Output.empty() : this.id;
     }
 
     /**
@@ -75,10 +75,10 @@ public final class FirewallPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="identity")
-      private final @Nullable Input<ManagedServiceIdentityArgs> identity;
+      private final @Nullable Output<ManagedServiceIdentityArgs> identity;
 
-    public Input<ManagedServiceIdentityArgs> getIdentity() {
-        return this.identity == null ? Input.empty() : this.identity;
+    public Output<ManagedServiceIdentityArgs> getIdentity() {
+        return this.identity == null ? Output.empty() : this.identity;
     }
 
     /**
@@ -86,10 +86,10 @@ public final class FirewallPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="insights")
-      private final @Nullable Input<FirewallPolicyInsightsArgs> insights;
+      private final @Nullable Output<FirewallPolicyInsightsArgs> insights;
 
-    public Input<FirewallPolicyInsightsArgs> getInsights() {
-        return this.insights == null ? Input.empty() : this.insights;
+    public Output<FirewallPolicyInsightsArgs> getInsights() {
+        return this.insights == null ? Output.empty() : this.insights;
     }
 
     /**
@@ -97,10 +97,10 @@ public final class FirewallPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="intrusionDetection")
-      private final @Nullable Input<FirewallPolicyIntrusionDetectionArgs> intrusionDetection;
+      private final @Nullable Output<FirewallPolicyIntrusionDetectionArgs> intrusionDetection;
 
-    public Input<FirewallPolicyIntrusionDetectionArgs> getIntrusionDetection() {
-        return this.intrusionDetection == null ? Input.empty() : this.intrusionDetection;
+    public Output<FirewallPolicyIntrusionDetectionArgs> getIntrusionDetection() {
+        return this.intrusionDetection == null ? Output.empty() : this.intrusionDetection;
     }
 
     /**
@@ -108,10 +108,10 @@ public final class FirewallPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -119,9 +119,9 @@ public final class FirewallPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -130,10 +130,10 @@ public final class FirewallPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sku")
-      private final @Nullable Input<FirewallPolicySkuArgs> sku;
+      private final @Nullable Output<FirewallPolicySkuArgs> sku;
 
-    public Input<FirewallPolicySkuArgs> getSku() {
-        return this.sku == null ? Input.empty() : this.sku;
+    public Output<FirewallPolicySkuArgs> getSku() {
+        return this.sku == null ? Output.empty() : this.sku;
     }
 
     /**
@@ -141,10 +141,10 @@ public final class FirewallPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="snat")
-      private final @Nullable Input<FirewallPolicySNATArgs> snat;
+      private final @Nullable Output<FirewallPolicySNATArgs> snat;
 
-    public Input<FirewallPolicySNATArgs> getSnat() {
-        return this.snat == null ? Input.empty() : this.snat;
+    public Output<FirewallPolicySNATArgs> getSnat() {
+        return this.snat == null ? Output.empty() : this.snat;
     }
 
     /**
@@ -152,10 +152,10 @@ public final class FirewallPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -163,10 +163,10 @@ public final class FirewallPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="threatIntelMode")
-      private final @Nullable Input<Either<String,AzureFirewallThreatIntelMode>> threatIntelMode;
+      private final @Nullable Output<Either<String,AzureFirewallThreatIntelMode>> threatIntelMode;
 
-    public Input<Either<String,AzureFirewallThreatIntelMode>> getThreatIntelMode() {
-        return this.threatIntelMode == null ? Input.empty() : this.threatIntelMode;
+    public Output<Either<String,AzureFirewallThreatIntelMode>> getThreatIntelMode() {
+        return this.threatIntelMode == null ? Output.empty() : this.threatIntelMode;
     }
 
     /**
@@ -174,10 +174,10 @@ public final class FirewallPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="threatIntelWhitelist")
-      private final @Nullable Input<FirewallPolicyThreatIntelWhitelistArgs> threatIntelWhitelist;
+      private final @Nullable Output<FirewallPolicyThreatIntelWhitelistArgs> threatIntelWhitelist;
 
-    public Input<FirewallPolicyThreatIntelWhitelistArgs> getThreatIntelWhitelist() {
-        return this.threatIntelWhitelist == null ? Input.empty() : this.threatIntelWhitelist;
+    public Output<FirewallPolicyThreatIntelWhitelistArgs> getThreatIntelWhitelist() {
+        return this.threatIntelWhitelist == null ? Output.empty() : this.threatIntelWhitelist;
     }
 
     /**
@@ -185,28 +185,28 @@ public final class FirewallPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="transportSecurity")
-      private final @Nullable Input<FirewallPolicyTransportSecurityArgs> transportSecurity;
+      private final @Nullable Output<FirewallPolicyTransportSecurityArgs> transportSecurity;
 
-    public Input<FirewallPolicyTransportSecurityArgs> getTransportSecurity() {
-        return this.transportSecurity == null ? Input.empty() : this.transportSecurity;
+    public Output<FirewallPolicyTransportSecurityArgs> getTransportSecurity() {
+        return this.transportSecurity == null ? Output.empty() : this.transportSecurity;
     }
 
     public FirewallPolicyArgs(
-        @Nullable Input<SubResourceArgs> basePolicy,
-        @Nullable Input<DnsSettingsArgs> dnsSettings,
-        @Nullable Input<String> firewallPolicyName,
-        @Nullable Input<String> id,
-        @Nullable Input<ManagedServiceIdentityArgs> identity,
-        @Nullable Input<FirewallPolicyInsightsArgs> insights,
-        @Nullable Input<FirewallPolicyIntrusionDetectionArgs> intrusionDetection,
-        @Nullable Input<String> location,
-        Input<String> resourceGroupName,
-        @Nullable Input<FirewallPolicySkuArgs> sku,
-        @Nullable Input<FirewallPolicySNATArgs> snat,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<Either<String,AzureFirewallThreatIntelMode>> threatIntelMode,
-        @Nullable Input<FirewallPolicyThreatIntelWhitelistArgs> threatIntelWhitelist,
-        @Nullable Input<FirewallPolicyTransportSecurityArgs> transportSecurity) {
+        @Nullable Output<SubResourceArgs> basePolicy,
+        @Nullable Output<DnsSettingsArgs> dnsSettings,
+        @Nullable Output<String> firewallPolicyName,
+        @Nullable Output<String> id,
+        @Nullable Output<ManagedServiceIdentityArgs> identity,
+        @Nullable Output<FirewallPolicyInsightsArgs> insights,
+        @Nullable Output<FirewallPolicyIntrusionDetectionArgs> intrusionDetection,
+        @Nullable Output<String> location,
+        Output<String> resourceGroupName,
+        @Nullable Output<FirewallPolicySkuArgs> sku,
+        @Nullable Output<FirewallPolicySNATArgs> snat,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<Either<String,AzureFirewallThreatIntelMode>> threatIntelMode,
+        @Nullable Output<FirewallPolicyThreatIntelWhitelistArgs> threatIntelWhitelist,
+        @Nullable Output<FirewallPolicyTransportSecurityArgs> transportSecurity) {
         this.basePolicy = basePolicy;
         this.dnsSettings = dnsSettings;
         this.firewallPolicyName = firewallPolicyName;
@@ -225,21 +225,21 @@ public final class FirewallPolicyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private FirewallPolicyArgs() {
-        this.basePolicy = Input.empty();
-        this.dnsSettings = Input.empty();
-        this.firewallPolicyName = Input.empty();
-        this.id = Input.empty();
-        this.identity = Input.empty();
-        this.insights = Input.empty();
-        this.intrusionDetection = Input.empty();
-        this.location = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.sku = Input.empty();
-        this.snat = Input.empty();
-        this.tags = Input.empty();
-        this.threatIntelMode = Input.empty();
-        this.threatIntelWhitelist = Input.empty();
-        this.transportSecurity = Input.empty();
+        this.basePolicy = Output.empty();
+        this.dnsSettings = Output.empty();
+        this.firewallPolicyName = Output.empty();
+        this.id = Output.empty();
+        this.identity = Output.empty();
+        this.insights = Output.empty();
+        this.intrusionDetection = Output.empty();
+        this.location = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.sku = Output.empty();
+        this.snat = Output.empty();
+        this.tags = Output.empty();
+        this.threatIntelMode = Output.empty();
+        this.threatIntelWhitelist = Output.empty();
+        this.transportSecurity = Output.empty();
     }
 
     public static Builder builder() {
@@ -251,21 +251,21 @@ public final class FirewallPolicyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<SubResourceArgs> basePolicy;
-        private @Nullable Input<DnsSettingsArgs> dnsSettings;
-        private @Nullable Input<String> firewallPolicyName;
-        private @Nullable Input<String> id;
-        private @Nullable Input<ManagedServiceIdentityArgs> identity;
-        private @Nullable Input<FirewallPolicyInsightsArgs> insights;
-        private @Nullable Input<FirewallPolicyIntrusionDetectionArgs> intrusionDetection;
-        private @Nullable Input<String> location;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<FirewallPolicySkuArgs> sku;
-        private @Nullable Input<FirewallPolicySNATArgs> snat;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<Either<String,AzureFirewallThreatIntelMode>> threatIntelMode;
-        private @Nullable Input<FirewallPolicyThreatIntelWhitelistArgs> threatIntelWhitelist;
-        private @Nullable Input<FirewallPolicyTransportSecurityArgs> transportSecurity;
+        private @Nullable Output<SubResourceArgs> basePolicy;
+        private @Nullable Output<DnsSettingsArgs> dnsSettings;
+        private @Nullable Output<String> firewallPolicyName;
+        private @Nullable Output<String> id;
+        private @Nullable Output<ManagedServiceIdentityArgs> identity;
+        private @Nullable Output<FirewallPolicyInsightsArgs> insights;
+        private @Nullable Output<FirewallPolicyIntrusionDetectionArgs> intrusionDetection;
+        private @Nullable Output<String> location;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<FirewallPolicySkuArgs> sku;
+        private @Nullable Output<FirewallPolicySNATArgs> snat;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<Either<String,AzureFirewallThreatIntelMode>> threatIntelMode;
+        private @Nullable Output<FirewallPolicyThreatIntelWhitelistArgs> threatIntelWhitelist;
+        private @Nullable Output<FirewallPolicyTransportSecurityArgs> transportSecurity;
 
         public Builder() {
     	      // Empty
@@ -290,153 +290,153 @@ public final class FirewallPolicyArgs extends io.pulumi.resources.ResourceArgs {
     	      this.transportSecurity = defaults.transportSecurity;
         }
 
-        public Builder basePolicy(@Nullable Input<SubResourceArgs> basePolicy) {
+        public Builder basePolicy(@Nullable Output<SubResourceArgs> basePolicy) {
             this.basePolicy = basePolicy;
             return this;
         }
 
         public Builder basePolicy(@Nullable SubResourceArgs basePolicy) {
-            this.basePolicy = Input.ofNullable(basePolicy);
+            this.basePolicy = Output.ofNullable(basePolicy);
             return this;
         }
 
-        public Builder dnsSettings(@Nullable Input<DnsSettingsArgs> dnsSettings) {
+        public Builder dnsSettings(@Nullable Output<DnsSettingsArgs> dnsSettings) {
             this.dnsSettings = dnsSettings;
             return this;
         }
 
         public Builder dnsSettings(@Nullable DnsSettingsArgs dnsSettings) {
-            this.dnsSettings = Input.ofNullable(dnsSettings);
+            this.dnsSettings = Output.ofNullable(dnsSettings);
             return this;
         }
 
-        public Builder firewallPolicyName(@Nullable Input<String> firewallPolicyName) {
+        public Builder firewallPolicyName(@Nullable Output<String> firewallPolicyName) {
             this.firewallPolicyName = firewallPolicyName;
             return this;
         }
 
         public Builder firewallPolicyName(@Nullable String firewallPolicyName) {
-            this.firewallPolicyName = Input.ofNullable(firewallPolicyName);
+            this.firewallPolicyName = Output.ofNullable(firewallPolicyName);
             return this;
         }
 
-        public Builder id(@Nullable Input<String> id) {
+        public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
 
         public Builder id(@Nullable String id) {
-            this.id = Input.ofNullable(id);
+            this.id = Output.ofNullable(id);
             return this;
         }
 
-        public Builder identity(@Nullable Input<ManagedServiceIdentityArgs> identity) {
+        public Builder identity(@Nullable Output<ManagedServiceIdentityArgs> identity) {
             this.identity = identity;
             return this;
         }
 
         public Builder identity(@Nullable ManagedServiceIdentityArgs identity) {
-            this.identity = Input.ofNullable(identity);
+            this.identity = Output.ofNullable(identity);
             return this;
         }
 
-        public Builder insights(@Nullable Input<FirewallPolicyInsightsArgs> insights) {
+        public Builder insights(@Nullable Output<FirewallPolicyInsightsArgs> insights) {
             this.insights = insights;
             return this;
         }
 
         public Builder insights(@Nullable FirewallPolicyInsightsArgs insights) {
-            this.insights = Input.ofNullable(insights);
+            this.insights = Output.ofNullable(insights);
             return this;
         }
 
-        public Builder intrusionDetection(@Nullable Input<FirewallPolicyIntrusionDetectionArgs> intrusionDetection) {
+        public Builder intrusionDetection(@Nullable Output<FirewallPolicyIntrusionDetectionArgs> intrusionDetection) {
             this.intrusionDetection = intrusionDetection;
             return this;
         }
 
         public Builder intrusionDetection(@Nullable FirewallPolicyIntrusionDetectionArgs intrusionDetection) {
-            this.intrusionDetection = Input.ofNullable(intrusionDetection);
+            this.intrusionDetection = Output.ofNullable(intrusionDetection);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder sku(@Nullable Input<FirewallPolicySkuArgs> sku) {
+        public Builder sku(@Nullable Output<FirewallPolicySkuArgs> sku) {
             this.sku = sku;
             return this;
         }
 
         public Builder sku(@Nullable FirewallPolicySkuArgs sku) {
-            this.sku = Input.ofNullable(sku);
+            this.sku = Output.ofNullable(sku);
             return this;
         }
 
-        public Builder snat(@Nullable Input<FirewallPolicySNATArgs> snat) {
+        public Builder snat(@Nullable Output<FirewallPolicySNATArgs> snat) {
             this.snat = snat;
             return this;
         }
 
         public Builder snat(@Nullable FirewallPolicySNATArgs snat) {
-            this.snat = Input.ofNullable(snat);
+            this.snat = Output.ofNullable(snat);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder threatIntelMode(@Nullable Input<Either<String,AzureFirewallThreatIntelMode>> threatIntelMode) {
+        public Builder threatIntelMode(@Nullable Output<Either<String,AzureFirewallThreatIntelMode>> threatIntelMode) {
             this.threatIntelMode = threatIntelMode;
             return this;
         }
 
         public Builder threatIntelMode(@Nullable Either<String,AzureFirewallThreatIntelMode> threatIntelMode) {
-            this.threatIntelMode = Input.ofNullable(threatIntelMode);
+            this.threatIntelMode = Output.ofNullable(threatIntelMode);
             return this;
         }
 
-        public Builder threatIntelWhitelist(@Nullable Input<FirewallPolicyThreatIntelWhitelistArgs> threatIntelWhitelist) {
+        public Builder threatIntelWhitelist(@Nullable Output<FirewallPolicyThreatIntelWhitelistArgs> threatIntelWhitelist) {
             this.threatIntelWhitelist = threatIntelWhitelist;
             return this;
         }
 
         public Builder threatIntelWhitelist(@Nullable FirewallPolicyThreatIntelWhitelistArgs threatIntelWhitelist) {
-            this.threatIntelWhitelist = Input.ofNullable(threatIntelWhitelist);
+            this.threatIntelWhitelist = Output.ofNullable(threatIntelWhitelist);
             return this;
         }
 
-        public Builder transportSecurity(@Nullable Input<FirewallPolicyTransportSecurityArgs> transportSecurity) {
+        public Builder transportSecurity(@Nullable Output<FirewallPolicyTransportSecurityArgs> transportSecurity) {
             this.transportSecurity = transportSecurity;
             return this;
         }
 
         public Builder transportSecurity(@Nullable FirewallPolicyTransportSecurityArgs transportSecurity) {
-            this.transportSecurity = Input.ofNullable(transportSecurity);
+            this.transportSecurity = Output.ofNullable(transportSecurity);
             return this;
         }
         public FirewallPolicyArgs build() {

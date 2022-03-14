@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.ec2;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -14,29 +14,29 @@ public final class SubnetRouteTableAssociationArgs extends io.pulumi.resources.R
     public static final SubnetRouteTableAssociationArgs Empty = new SubnetRouteTableAssociationArgs();
 
     @InputImport(name="routeTableId", required=true)
-      private final Input<String> routeTableId;
+      private final Output<String> routeTableId;
 
-    public Input<String> getRouteTableId() {
+    public Output<String> getRouteTableId() {
         return this.routeTableId;
     }
 
     @InputImport(name="subnetId", required=true)
-      private final Input<String> subnetId;
+      private final Output<String> subnetId;
 
-    public Input<String> getSubnetId() {
+    public Output<String> getSubnetId() {
         return this.subnetId;
     }
 
     public SubnetRouteTableAssociationArgs(
-        Input<String> routeTableId,
-        Input<String> subnetId) {
+        Output<String> routeTableId,
+        Output<String> subnetId) {
         this.routeTableId = Objects.requireNonNull(routeTableId, "expected parameter 'routeTableId' to be non-null");
         this.subnetId = Objects.requireNonNull(subnetId, "expected parameter 'subnetId' to be non-null");
     }
 
     private SubnetRouteTableAssociationArgs() {
-        this.routeTableId = Input.empty();
-        this.subnetId = Input.empty();
+        this.routeTableId = Output.empty();
+        this.subnetId = Output.empty();
     }
 
     public static Builder builder() {
@@ -48,8 +48,8 @@ public final class SubnetRouteTableAssociationArgs extends io.pulumi.resources.R
     }
 
     public static final class Builder {
-        private Input<String> routeTableId;
-        private Input<String> subnetId;
+        private Output<String> routeTableId;
+        private Output<String> subnetId;
 
         public Builder() {
     	      // Empty
@@ -61,23 +61,23 @@ public final class SubnetRouteTableAssociationArgs extends io.pulumi.resources.R
     	      this.subnetId = defaults.subnetId;
         }
 
-        public Builder routeTableId(Input<String> routeTableId) {
+        public Builder routeTableId(Output<String> routeTableId) {
             this.routeTableId = Objects.requireNonNull(routeTableId);
             return this;
         }
 
         public Builder routeTableId(String routeTableId) {
-            this.routeTableId = Input.of(Objects.requireNonNull(routeTableId));
+            this.routeTableId = Output.of(Objects.requireNonNull(routeTableId));
             return this;
         }
 
-        public Builder subnetId(Input<String> subnetId) {
+        public Builder subnetId(Output<String> subnetId) {
             this.subnetId = Objects.requireNonNull(subnetId);
             return this;
         }
 
         public Builder subnetId(String subnetId) {
-            this.subnetId = Input.of(Objects.requireNonNull(subnetId));
+            this.subnetId = Output.of(Objects.requireNonNull(subnetId));
             return this;
         }
         public SubnetRouteTableAssociationArgs build() {

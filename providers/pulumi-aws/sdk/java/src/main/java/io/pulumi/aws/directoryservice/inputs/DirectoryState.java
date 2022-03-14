@@ -5,7 +5,7 @@ package io.pulumi.aws.directoryservice.inputs;
 
 import io.pulumi.aws.directoryservice.inputs.DirectoryConnectSettingsGetArgs;
 import io.pulumi.aws.directoryservice.inputs.DirectoryVpcSettingsGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class DirectoryState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="accessUrl")
-      private final @Nullable Input<String> accessUrl;
+      private final @Nullable Output<String> accessUrl;
 
-    public Input<String> getAccessUrl() {
-        return this.accessUrl == null ? Input.empty() : this.accessUrl;
+    public Output<String> getAccessUrl() {
+        return this.accessUrl == null ? Output.empty() : this.accessUrl;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class DirectoryState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="alias")
-      private final @Nullable Input<String> alias;
+      private final @Nullable Output<String> alias;
 
-    public Input<String> getAlias() {
-        return this.alias == null ? Input.empty() : this.alias;
+    public Output<String> getAlias() {
+        return this.alias == null ? Output.empty() : this.alias;
     }
 
     /**
@@ -46,10 +46,10 @@ public final class DirectoryState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="connectSettings")
-      private final @Nullable Input<DirectoryConnectSettingsGetArgs> connectSettings;
+      private final @Nullable Output<DirectoryConnectSettingsGetArgs> connectSettings;
 
-    public Input<DirectoryConnectSettingsGetArgs> getConnectSettings() {
-        return this.connectSettings == null ? Input.empty() : this.connectSettings;
+    public Output<DirectoryConnectSettingsGetArgs> getConnectSettings() {
+        return this.connectSettings == null ? Output.empty() : this.connectSettings;
     }
 
     /**
@@ -57,10 +57,10 @@ public final class DirectoryState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -68,10 +68,10 @@ public final class DirectoryState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dnsIpAddresses")
-      private final @Nullable Input<List<String>> dnsIpAddresses;
+      private final @Nullable Output<List<String>> dnsIpAddresses;
 
-    public Input<List<String>> getDnsIpAddresses() {
-        return this.dnsIpAddresses == null ? Input.empty() : this.dnsIpAddresses;
+    public Output<List<String>> getDnsIpAddresses() {
+        return this.dnsIpAddresses == null ? Output.empty() : this.dnsIpAddresses;
     }
 
     /**
@@ -79,10 +79,10 @@ public final class DirectoryState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="edition")
-      private final @Nullable Input<String> edition;
+      private final @Nullable Output<String> edition;
 
-    public Input<String> getEdition() {
-        return this.edition == null ? Input.empty() : this.edition;
+    public Output<String> getEdition() {
+        return this.edition == null ? Output.empty() : this.edition;
     }
 
     /**
@@ -90,10 +90,10 @@ public final class DirectoryState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enableSso")
-      private final @Nullable Input<Boolean> enableSso;
+      private final @Nullable Output<Boolean> enableSso;
 
-    public Input<Boolean> getEnableSso() {
-        return this.enableSso == null ? Input.empty() : this.enableSso;
+    public Output<Boolean> getEnableSso() {
+        return this.enableSso == null ? Output.empty() : this.enableSso;
     }
 
     /**
@@ -101,10 +101,10 @@ public final class DirectoryState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -112,10 +112,10 @@ public final class DirectoryState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="password")
-      private final @Nullable Input<String> password;
+      private final @Nullable Output<String> password;
 
-    public Input<String> getPassword() {
-        return this.password == null ? Input.empty() : this.password;
+    public Output<String> getPassword() {
+        return this.password == null ? Output.empty() : this.password;
     }
 
     /**
@@ -123,10 +123,10 @@ public final class DirectoryState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="securityGroupId")
-      private final @Nullable Input<String> securityGroupId;
+      private final @Nullable Output<String> securityGroupId;
 
-    public Input<String> getSecurityGroupId() {
-        return this.securityGroupId == null ? Input.empty() : this.securityGroupId;
+    public Output<String> getSecurityGroupId() {
+        return this.securityGroupId == null ? Output.empty() : this.securityGroupId;
     }
 
     /**
@@ -134,10 +134,10 @@ public final class DirectoryState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="shortName")
-      private final @Nullable Input<String> shortName;
+      private final @Nullable Output<String> shortName;
 
-    public Input<String> getShortName() {
-        return this.shortName == null ? Input.empty() : this.shortName;
+    public Output<String> getShortName() {
+        return this.shortName == null ? Output.empty() : this.shortName;
     }
 
     /**
@@ -145,10 +145,10 @@ public final class DirectoryState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="size")
-      private final @Nullable Input<String> size;
+      private final @Nullable Output<String> size;
 
-    public Input<String> getSize() {
-        return this.size == null ? Input.empty() : this.size;
+    public Output<String> getSize() {
+        return this.size == null ? Output.empty() : this.size;
     }
 
     /**
@@ -156,10 +156,10 @@ public final class DirectoryState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -167,10 +167,10 @@ public final class DirectoryState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tagsAll")
-      private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Input<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Input.empty() : this.tagsAll;
+    public Output<Map<String,String>> getTagsAll() {
+        return this.tagsAll == null ? Output.empty() : this.tagsAll;
     }
 
     /**
@@ -178,10 +178,10 @@ public final class DirectoryState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type")
-      private final @Nullable Input<String> type;
+      private final @Nullable Output<String> type;
 
-    public Input<String> getType() {
-        return this.type == null ? Input.empty() : this.type;
+    public Output<String> getType() {
+        return this.type == null ? Output.empty() : this.type;
     }
 
     /**
@@ -189,29 +189,29 @@ public final class DirectoryState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="vpcSettings")
-      private final @Nullable Input<DirectoryVpcSettingsGetArgs> vpcSettings;
+      private final @Nullable Output<DirectoryVpcSettingsGetArgs> vpcSettings;
 
-    public Input<DirectoryVpcSettingsGetArgs> getVpcSettings() {
-        return this.vpcSettings == null ? Input.empty() : this.vpcSettings;
+    public Output<DirectoryVpcSettingsGetArgs> getVpcSettings() {
+        return this.vpcSettings == null ? Output.empty() : this.vpcSettings;
     }
 
     public DirectoryState(
-        @Nullable Input<String> accessUrl,
-        @Nullable Input<String> alias,
-        @Nullable Input<DirectoryConnectSettingsGetArgs> connectSettings,
-        @Nullable Input<String> description,
-        @Nullable Input<List<String>> dnsIpAddresses,
-        @Nullable Input<String> edition,
-        @Nullable Input<Boolean> enableSso,
-        @Nullable Input<String> name,
-        @Nullable Input<String> password,
-        @Nullable Input<String> securityGroupId,
-        @Nullable Input<String> shortName,
-        @Nullable Input<String> size,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<Map<String,String>> tagsAll,
-        @Nullable Input<String> type,
-        @Nullable Input<DirectoryVpcSettingsGetArgs> vpcSettings) {
+        @Nullable Output<String> accessUrl,
+        @Nullable Output<String> alias,
+        @Nullable Output<DirectoryConnectSettingsGetArgs> connectSettings,
+        @Nullable Output<String> description,
+        @Nullable Output<List<String>> dnsIpAddresses,
+        @Nullable Output<String> edition,
+        @Nullable Output<Boolean> enableSso,
+        @Nullable Output<String> name,
+        @Nullable Output<String> password,
+        @Nullable Output<String> securityGroupId,
+        @Nullable Output<String> shortName,
+        @Nullable Output<String> size,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<Map<String,String>> tagsAll,
+        @Nullable Output<String> type,
+        @Nullable Output<DirectoryVpcSettingsGetArgs> vpcSettings) {
         this.accessUrl = accessUrl;
         this.alias = alias;
         this.connectSettings = connectSettings;
@@ -231,22 +231,22 @@ public final class DirectoryState extends io.pulumi.resources.ResourceArgs {
     }
 
     private DirectoryState() {
-        this.accessUrl = Input.empty();
-        this.alias = Input.empty();
-        this.connectSettings = Input.empty();
-        this.description = Input.empty();
-        this.dnsIpAddresses = Input.empty();
-        this.edition = Input.empty();
-        this.enableSso = Input.empty();
-        this.name = Input.empty();
-        this.password = Input.empty();
-        this.securityGroupId = Input.empty();
-        this.shortName = Input.empty();
-        this.size = Input.empty();
-        this.tags = Input.empty();
-        this.tagsAll = Input.empty();
-        this.type = Input.empty();
-        this.vpcSettings = Input.empty();
+        this.accessUrl = Output.empty();
+        this.alias = Output.empty();
+        this.connectSettings = Output.empty();
+        this.description = Output.empty();
+        this.dnsIpAddresses = Output.empty();
+        this.edition = Output.empty();
+        this.enableSso = Output.empty();
+        this.name = Output.empty();
+        this.password = Output.empty();
+        this.securityGroupId = Output.empty();
+        this.shortName = Output.empty();
+        this.size = Output.empty();
+        this.tags = Output.empty();
+        this.tagsAll = Output.empty();
+        this.type = Output.empty();
+        this.vpcSettings = Output.empty();
     }
 
     public static Builder builder() {
@@ -258,22 +258,22 @@ public final class DirectoryState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> accessUrl;
-        private @Nullable Input<String> alias;
-        private @Nullable Input<DirectoryConnectSettingsGetArgs> connectSettings;
-        private @Nullable Input<String> description;
-        private @Nullable Input<List<String>> dnsIpAddresses;
-        private @Nullable Input<String> edition;
-        private @Nullable Input<Boolean> enableSso;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> password;
-        private @Nullable Input<String> securityGroupId;
-        private @Nullable Input<String> shortName;
-        private @Nullable Input<String> size;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<Map<String,String>> tagsAll;
-        private @Nullable Input<String> type;
-        private @Nullable Input<DirectoryVpcSettingsGetArgs> vpcSettings;
+        private @Nullable Output<String> accessUrl;
+        private @Nullable Output<String> alias;
+        private @Nullable Output<DirectoryConnectSettingsGetArgs> connectSettings;
+        private @Nullable Output<String> description;
+        private @Nullable Output<List<String>> dnsIpAddresses;
+        private @Nullable Output<String> edition;
+        private @Nullable Output<Boolean> enableSso;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> password;
+        private @Nullable Output<String> securityGroupId;
+        private @Nullable Output<String> shortName;
+        private @Nullable Output<String> size;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<Map<String,String>> tagsAll;
+        private @Nullable Output<String> type;
+        private @Nullable Output<DirectoryVpcSettingsGetArgs> vpcSettings;
 
         public Builder() {
     	      // Empty
@@ -299,163 +299,163 @@ public final class DirectoryState extends io.pulumi.resources.ResourceArgs {
     	      this.vpcSettings = defaults.vpcSettings;
         }
 
-        public Builder accessUrl(@Nullable Input<String> accessUrl) {
+        public Builder accessUrl(@Nullable Output<String> accessUrl) {
             this.accessUrl = accessUrl;
             return this;
         }
 
         public Builder accessUrl(@Nullable String accessUrl) {
-            this.accessUrl = Input.ofNullable(accessUrl);
+            this.accessUrl = Output.ofNullable(accessUrl);
             return this;
         }
 
-        public Builder alias(@Nullable Input<String> alias) {
+        public Builder alias(@Nullable Output<String> alias) {
             this.alias = alias;
             return this;
         }
 
         public Builder alias(@Nullable String alias) {
-            this.alias = Input.ofNullable(alias);
+            this.alias = Output.ofNullable(alias);
             return this;
         }
 
-        public Builder connectSettings(@Nullable Input<DirectoryConnectSettingsGetArgs> connectSettings) {
+        public Builder connectSettings(@Nullable Output<DirectoryConnectSettingsGetArgs> connectSettings) {
             this.connectSettings = connectSettings;
             return this;
         }
 
         public Builder connectSettings(@Nullable DirectoryConnectSettingsGetArgs connectSettings) {
-            this.connectSettings = Input.ofNullable(connectSettings);
+            this.connectSettings = Output.ofNullable(connectSettings);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder dnsIpAddresses(@Nullable Input<List<String>> dnsIpAddresses) {
+        public Builder dnsIpAddresses(@Nullable Output<List<String>> dnsIpAddresses) {
             this.dnsIpAddresses = dnsIpAddresses;
             return this;
         }
 
         public Builder dnsIpAddresses(@Nullable List<String> dnsIpAddresses) {
-            this.dnsIpAddresses = Input.ofNullable(dnsIpAddresses);
+            this.dnsIpAddresses = Output.ofNullable(dnsIpAddresses);
             return this;
         }
 
-        public Builder edition(@Nullable Input<String> edition) {
+        public Builder edition(@Nullable Output<String> edition) {
             this.edition = edition;
             return this;
         }
 
         public Builder edition(@Nullable String edition) {
-            this.edition = Input.ofNullable(edition);
+            this.edition = Output.ofNullable(edition);
             return this;
         }
 
-        public Builder enableSso(@Nullable Input<Boolean> enableSso) {
+        public Builder enableSso(@Nullable Output<Boolean> enableSso) {
             this.enableSso = enableSso;
             return this;
         }
 
         public Builder enableSso(@Nullable Boolean enableSso) {
-            this.enableSso = Input.ofNullable(enableSso);
+            this.enableSso = Output.ofNullable(enableSso);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder password(@Nullable Input<String> password) {
+        public Builder password(@Nullable Output<String> password) {
             this.password = password;
             return this;
         }
 
         public Builder password(@Nullable String password) {
-            this.password = Input.ofNullable(password);
+            this.password = Output.ofNullable(password);
             return this;
         }
 
-        public Builder securityGroupId(@Nullable Input<String> securityGroupId) {
+        public Builder securityGroupId(@Nullable Output<String> securityGroupId) {
             this.securityGroupId = securityGroupId;
             return this;
         }
 
         public Builder securityGroupId(@Nullable String securityGroupId) {
-            this.securityGroupId = Input.ofNullable(securityGroupId);
+            this.securityGroupId = Output.ofNullable(securityGroupId);
             return this;
         }
 
-        public Builder shortName(@Nullable Input<String> shortName) {
+        public Builder shortName(@Nullable Output<String> shortName) {
             this.shortName = shortName;
             return this;
         }
 
         public Builder shortName(@Nullable String shortName) {
-            this.shortName = Input.ofNullable(shortName);
+            this.shortName = Output.ofNullable(shortName);
             return this;
         }
 
-        public Builder size(@Nullable Input<String> size) {
+        public Builder size(@Nullable Output<String> size) {
             this.size = size;
             return this;
         }
 
         public Builder size(@Nullable String size) {
-            this.size = Input.ofNullable(size);
+            this.size = Output.ofNullable(size);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Input.ofNullable(tagsAll);
+            this.tagsAll = Output.ofNullable(tagsAll);
             return this;
         }
 
-        public Builder type(@Nullable Input<String> type) {
+        public Builder type(@Nullable Output<String> type) {
             this.type = type;
             return this;
         }
 
         public Builder type(@Nullable String type) {
-            this.type = Input.ofNullable(type);
+            this.type = Output.ofNullable(type);
             return this;
         }
 
-        public Builder vpcSettings(@Nullable Input<DirectoryVpcSettingsGetArgs> vpcSettings) {
+        public Builder vpcSettings(@Nullable Output<DirectoryVpcSettingsGetArgs> vpcSettings) {
             this.vpcSettings = vpcSettings;
             return this;
         }
 
         public Builder vpcSettings(@Nullable DirectoryVpcSettingsGetArgs vpcSettings) {
-            this.vpcSettings = Input.ofNullable(vpcSettings);
+            this.vpcSettings = Output.ofNullable(vpcSettings);
             return this;
         }
         public DirectoryState build() {

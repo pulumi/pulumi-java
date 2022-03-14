@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.ecs.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -15,18 +15,18 @@ public final class TaskDefinitionHostVolumePropertiesArgs extends io.pulumi.reso
     public static final TaskDefinitionHostVolumePropertiesArgs Empty = new TaskDefinitionHostVolumePropertiesArgs();
 
     @InputImport(name="sourcePath")
-      private final @Nullable Input<String> sourcePath;
+      private final @Nullable Output<String> sourcePath;
 
-    public Input<String> getSourcePath() {
-        return this.sourcePath == null ? Input.empty() : this.sourcePath;
+    public Output<String> getSourcePath() {
+        return this.sourcePath == null ? Output.empty() : this.sourcePath;
     }
 
-    public TaskDefinitionHostVolumePropertiesArgs(@Nullable Input<String> sourcePath) {
+    public TaskDefinitionHostVolumePropertiesArgs(@Nullable Output<String> sourcePath) {
         this.sourcePath = sourcePath;
     }
 
     private TaskDefinitionHostVolumePropertiesArgs() {
-        this.sourcePath = Input.empty();
+        this.sourcePath = Output.empty();
     }
 
     public static Builder builder() {
@@ -38,7 +38,7 @@ public final class TaskDefinitionHostVolumePropertiesArgs extends io.pulumi.reso
     }
 
     public static final class Builder {
-        private @Nullable Input<String> sourcePath;
+        private @Nullable Output<String> sourcePath;
 
         public Builder() {
     	      // Empty
@@ -49,13 +49,13 @@ public final class TaskDefinitionHostVolumePropertiesArgs extends io.pulumi.reso
     	      this.sourcePath = defaults.sourcePath;
         }
 
-        public Builder sourcePath(@Nullable Input<String> sourcePath) {
+        public Builder sourcePath(@Nullable Output<String> sourcePath) {
             this.sourcePath = sourcePath;
             return this;
         }
 
         public Builder sourcePath(@Nullable String sourcePath) {
-            this.sourcePath = Input.ofNullable(sourcePath);
+            this.sourcePath = Output.ofNullable(sourcePath);
             return this;
         }
         public TaskDefinitionHostVolumePropertiesArgs build() {

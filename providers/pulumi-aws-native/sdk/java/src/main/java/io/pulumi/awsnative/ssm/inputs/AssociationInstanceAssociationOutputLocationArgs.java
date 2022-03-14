@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.ssm.inputs;
 
 import io.pulumi.awsnative.ssm.inputs.AssociationS3OutputLocationArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -15,18 +15,18 @@ public final class AssociationInstanceAssociationOutputLocationArgs extends io.p
     public static final AssociationInstanceAssociationOutputLocationArgs Empty = new AssociationInstanceAssociationOutputLocationArgs();
 
     @InputImport(name="s3Location")
-      private final @Nullable Input<AssociationS3OutputLocationArgs> s3Location;
+      private final @Nullable Output<AssociationS3OutputLocationArgs> s3Location;
 
-    public Input<AssociationS3OutputLocationArgs> getS3Location() {
-        return this.s3Location == null ? Input.empty() : this.s3Location;
+    public Output<AssociationS3OutputLocationArgs> getS3Location() {
+        return this.s3Location == null ? Output.empty() : this.s3Location;
     }
 
-    public AssociationInstanceAssociationOutputLocationArgs(@Nullable Input<AssociationS3OutputLocationArgs> s3Location) {
+    public AssociationInstanceAssociationOutputLocationArgs(@Nullable Output<AssociationS3OutputLocationArgs> s3Location) {
         this.s3Location = s3Location;
     }
 
     private AssociationInstanceAssociationOutputLocationArgs() {
-        this.s3Location = Input.empty();
+        this.s3Location = Output.empty();
     }
 
     public static Builder builder() {
@@ -38,7 +38,7 @@ public final class AssociationInstanceAssociationOutputLocationArgs extends io.p
     }
 
     public static final class Builder {
-        private @Nullable Input<AssociationS3OutputLocationArgs> s3Location;
+        private @Nullable Output<AssociationS3OutputLocationArgs> s3Location;
 
         public Builder() {
     	      // Empty
@@ -49,13 +49,13 @@ public final class AssociationInstanceAssociationOutputLocationArgs extends io.p
     	      this.s3Location = defaults.s3Location;
         }
 
-        public Builder s3Location(@Nullable Input<AssociationS3OutputLocationArgs> s3Location) {
+        public Builder s3Location(@Nullable Output<AssociationS3OutputLocationArgs> s3Location) {
             this.s3Location = s3Location;
             return this;
         }
 
         public Builder s3Location(@Nullable AssociationS3OutputLocationArgs s3Location) {
-            this.s3Location = Input.ofNullable(s3Location);
+            this.s3Location = Output.ofNullable(s3Location);
             return this;
         }
         public AssociationInstanceAssociationOutputLocationArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.ecs.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
@@ -14,29 +14,29 @@ public final class ServiceDeploymentCircuitBreakerArgs extends io.pulumi.resourc
     public static final ServiceDeploymentCircuitBreakerArgs Empty = new ServiceDeploymentCircuitBreakerArgs();
 
     @InputImport(name="enable", required=true)
-      private final Input<Boolean> enable;
+      private final Output<Boolean> enable;
 
-    public Input<Boolean> getEnable() {
+    public Output<Boolean> getEnable() {
         return this.enable;
     }
 
     @InputImport(name="rollback", required=true)
-      private final Input<Boolean> rollback;
+      private final Output<Boolean> rollback;
 
-    public Input<Boolean> getRollback() {
+    public Output<Boolean> getRollback() {
         return this.rollback;
     }
 
     public ServiceDeploymentCircuitBreakerArgs(
-        Input<Boolean> enable,
-        Input<Boolean> rollback) {
+        Output<Boolean> enable,
+        Output<Boolean> rollback) {
         this.enable = Objects.requireNonNull(enable, "expected parameter 'enable' to be non-null");
         this.rollback = Objects.requireNonNull(rollback, "expected parameter 'rollback' to be non-null");
     }
 
     private ServiceDeploymentCircuitBreakerArgs() {
-        this.enable = Input.empty();
-        this.rollback = Input.empty();
+        this.enable = Output.empty();
+        this.rollback = Output.empty();
     }
 
     public static Builder builder() {
@@ -48,8 +48,8 @@ public final class ServiceDeploymentCircuitBreakerArgs extends io.pulumi.resourc
     }
 
     public static final class Builder {
-        private Input<Boolean> enable;
-        private Input<Boolean> rollback;
+        private Output<Boolean> enable;
+        private Output<Boolean> rollback;
 
         public Builder() {
     	      // Empty
@@ -61,23 +61,23 @@ public final class ServiceDeploymentCircuitBreakerArgs extends io.pulumi.resourc
     	      this.rollback = defaults.rollback;
         }
 
-        public Builder enable(Input<Boolean> enable) {
+        public Builder enable(Output<Boolean> enable) {
             this.enable = Objects.requireNonNull(enable);
             return this;
         }
 
         public Builder enable(Boolean enable) {
-            this.enable = Input.of(Objects.requireNonNull(enable));
+            this.enable = Output.of(Objects.requireNonNull(enable));
             return this;
         }
 
-        public Builder rollback(Input<Boolean> rollback) {
+        public Builder rollback(Output<Boolean> rollback) {
             this.rollback = Objects.requireNonNull(rollback);
             return this;
         }
 
         public Builder rollback(Boolean rollback) {
-            this.rollback = Input.of(Objects.requireNonNull(rollback));
+            this.rollback = Output.of(Objects.requireNonNull(rollback));
             return this;
         }
         public ServiceDeploymentCircuitBreakerArgs build() {

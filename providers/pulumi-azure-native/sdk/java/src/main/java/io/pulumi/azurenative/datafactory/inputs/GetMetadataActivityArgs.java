@@ -25,7 +25,7 @@ import io.pulumi.azurenative.datafactory.inputs.OracleCloudStorageReadSettingsAr
 import io.pulumi.azurenative.datafactory.inputs.SftpReadSettingsArgs;
 import io.pulumi.azurenative.datafactory.inputs.UserPropertyArgs;
 import io.pulumi.azurenative.datafactory.inputs.XmlReadSettingsArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
@@ -47,9 +47,9 @@ public final class GetMetadataActivityArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="dataset", required=true)
-      private final Input<DatasetReferenceArgs> dataset;
+      private final Output<DatasetReferenceArgs> dataset;
 
-    public Input<DatasetReferenceArgs> getDataset() {
+    public Output<DatasetReferenceArgs> getDataset() {
         return this.dataset;
     }
 
@@ -58,10 +58,10 @@ public final class GetMetadataActivityArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="dependsOn")
-      private final @Nullable Input<List<ActivityDependencyArgs>> dependsOn;
+      private final @Nullable Output<List<ActivityDependencyArgs>> dependsOn;
 
-    public Input<List<ActivityDependencyArgs>> getDependsOn() {
-        return this.dependsOn == null ? Input.empty() : this.dependsOn;
+    public Output<List<ActivityDependencyArgs>> getDependsOn() {
+        return this.dependsOn == null ? Output.empty() : this.dependsOn;
     }
 
     /**
@@ -69,10 +69,10 @@ public final class GetMetadataActivityArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -80,10 +80,10 @@ public final class GetMetadataActivityArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="fieldList")
-      private final @Nullable Input<List<Object>> fieldList;
+      private final @Nullable Output<List<Object>> fieldList;
 
-    public Input<List<Object>> getFieldList() {
-        return this.fieldList == null ? Input.empty() : this.fieldList;
+    public Output<List<Object>> getFieldList() {
+        return this.fieldList == null ? Output.empty() : this.fieldList;
     }
 
     /**
@@ -91,10 +91,10 @@ public final class GetMetadataActivityArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="formatSettings")
-      private final @Nullable Input<Object> formatSettings;
+      private final @Nullable Output<Object> formatSettings;
 
-    public Input<Object> getFormatSettings() {
-        return this.formatSettings == null ? Input.empty() : this.formatSettings;
+    public Output<Object> getFormatSettings() {
+        return this.formatSettings == null ? Output.empty() : this.formatSettings;
     }
 
     /**
@@ -102,10 +102,10 @@ public final class GetMetadataActivityArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="linkedServiceName")
-      private final @Nullable Input<LinkedServiceReferenceArgs> linkedServiceName;
+      private final @Nullable Output<LinkedServiceReferenceArgs> linkedServiceName;
 
-    public Input<LinkedServiceReferenceArgs> getLinkedServiceName() {
-        return this.linkedServiceName == null ? Input.empty() : this.linkedServiceName;
+    public Output<LinkedServiceReferenceArgs> getLinkedServiceName() {
+        return this.linkedServiceName == null ? Output.empty() : this.linkedServiceName;
     }
 
     /**
@@ -113,9 +113,9 @@ public final class GetMetadataActivityArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="name", required=true)
-      private final Input<String> name;
+      private final Output<String> name;
 
-    public Input<String> getName() {
+    public Output<String> getName() {
         return this.name;
     }
 
@@ -124,10 +124,10 @@ public final class GetMetadataActivityArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="policy")
-      private final @Nullable Input<ActivityPolicyArgs> policy;
+      private final @Nullable Output<ActivityPolicyArgs> policy;
 
-    public Input<ActivityPolicyArgs> getPolicy() {
-        return this.policy == null ? Input.empty() : this.policy;
+    public Output<ActivityPolicyArgs> getPolicy() {
+        return this.policy == null ? Output.empty() : this.policy;
     }
 
     /**
@@ -135,10 +135,10 @@ public final class GetMetadataActivityArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="storeSettings")
-      private final @Nullable Input<Object> storeSettings;
+      private final @Nullable Output<Object> storeSettings;
 
-    public Input<Object> getStoreSettings() {
-        return this.storeSettings == null ? Input.empty() : this.storeSettings;
+    public Output<Object> getStoreSettings() {
+        return this.storeSettings == null ? Output.empty() : this.storeSettings;
     }
 
     /**
@@ -147,9 +147,9 @@ public final class GetMetadataActivityArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<String> type;
+      private final Output<String> type;
 
-    public Input<String> getType() {
+    public Output<String> getType() {
         return this.type;
     }
 
@@ -158,24 +158,24 @@ public final class GetMetadataActivityArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="userProperties")
-      private final @Nullable Input<List<UserPropertyArgs>> userProperties;
+      private final @Nullable Output<List<UserPropertyArgs>> userProperties;
 
-    public Input<List<UserPropertyArgs>> getUserProperties() {
-        return this.userProperties == null ? Input.empty() : this.userProperties;
+    public Output<List<UserPropertyArgs>> getUserProperties() {
+        return this.userProperties == null ? Output.empty() : this.userProperties;
     }
 
     public GetMetadataActivityArgs(
-        Input<DatasetReferenceArgs> dataset,
-        @Nullable Input<List<ActivityDependencyArgs>> dependsOn,
-        @Nullable Input<String> description,
-        @Nullable Input<List<Object>> fieldList,
-        @Nullable Input<Object> formatSettings,
-        @Nullable Input<LinkedServiceReferenceArgs> linkedServiceName,
-        Input<String> name,
-        @Nullable Input<ActivityPolicyArgs> policy,
-        @Nullable Input<Object> storeSettings,
-        Input<String> type,
-        @Nullable Input<List<UserPropertyArgs>> userProperties) {
+        Output<DatasetReferenceArgs> dataset,
+        @Nullable Output<List<ActivityDependencyArgs>> dependsOn,
+        @Nullable Output<String> description,
+        @Nullable Output<List<Object>> fieldList,
+        @Nullable Output<Object> formatSettings,
+        @Nullable Output<LinkedServiceReferenceArgs> linkedServiceName,
+        Output<String> name,
+        @Nullable Output<ActivityPolicyArgs> policy,
+        @Nullable Output<Object> storeSettings,
+        Output<String> type,
+        @Nullable Output<List<UserPropertyArgs>> userProperties) {
         this.dataset = Objects.requireNonNull(dataset, "expected parameter 'dataset' to be non-null");
         this.dependsOn = dependsOn;
         this.description = description;
@@ -190,17 +190,17 @@ public final class GetMetadataActivityArgs extends io.pulumi.resources.ResourceA
     }
 
     private GetMetadataActivityArgs() {
-        this.dataset = Input.empty();
-        this.dependsOn = Input.empty();
-        this.description = Input.empty();
-        this.fieldList = Input.empty();
-        this.formatSettings = Input.empty();
-        this.linkedServiceName = Input.empty();
-        this.name = Input.empty();
-        this.policy = Input.empty();
-        this.storeSettings = Input.empty();
-        this.type = Input.empty();
-        this.userProperties = Input.empty();
+        this.dataset = Output.empty();
+        this.dependsOn = Output.empty();
+        this.description = Output.empty();
+        this.fieldList = Output.empty();
+        this.formatSettings = Output.empty();
+        this.linkedServiceName = Output.empty();
+        this.name = Output.empty();
+        this.policy = Output.empty();
+        this.storeSettings = Output.empty();
+        this.type = Output.empty();
+        this.userProperties = Output.empty();
     }
 
     public static Builder builder() {
@@ -212,17 +212,17 @@ public final class GetMetadataActivityArgs extends io.pulumi.resources.ResourceA
     }
 
     public static final class Builder {
-        private Input<DatasetReferenceArgs> dataset;
-        private @Nullable Input<List<ActivityDependencyArgs>> dependsOn;
-        private @Nullable Input<String> description;
-        private @Nullable Input<List<Object>> fieldList;
-        private @Nullable Input<Object> formatSettings;
-        private @Nullable Input<LinkedServiceReferenceArgs> linkedServiceName;
-        private Input<String> name;
-        private @Nullable Input<ActivityPolicyArgs> policy;
-        private @Nullable Input<Object> storeSettings;
-        private Input<String> type;
-        private @Nullable Input<List<UserPropertyArgs>> userProperties;
+        private Output<DatasetReferenceArgs> dataset;
+        private @Nullable Output<List<ActivityDependencyArgs>> dependsOn;
+        private @Nullable Output<String> description;
+        private @Nullable Output<List<Object>> fieldList;
+        private @Nullable Output<Object> formatSettings;
+        private @Nullable Output<LinkedServiceReferenceArgs> linkedServiceName;
+        private Output<String> name;
+        private @Nullable Output<ActivityPolicyArgs> policy;
+        private @Nullable Output<Object> storeSettings;
+        private Output<String> type;
+        private @Nullable Output<List<UserPropertyArgs>> userProperties;
 
         public Builder() {
     	      // Empty
@@ -243,113 +243,113 @@ public final class GetMetadataActivityArgs extends io.pulumi.resources.ResourceA
     	      this.userProperties = defaults.userProperties;
         }
 
-        public Builder dataset(Input<DatasetReferenceArgs> dataset) {
+        public Builder dataset(Output<DatasetReferenceArgs> dataset) {
             this.dataset = Objects.requireNonNull(dataset);
             return this;
         }
 
         public Builder dataset(DatasetReferenceArgs dataset) {
-            this.dataset = Input.of(Objects.requireNonNull(dataset));
+            this.dataset = Output.of(Objects.requireNonNull(dataset));
             return this;
         }
 
-        public Builder dependsOn(@Nullable Input<List<ActivityDependencyArgs>> dependsOn) {
+        public Builder dependsOn(@Nullable Output<List<ActivityDependencyArgs>> dependsOn) {
             this.dependsOn = dependsOn;
             return this;
         }
 
         public Builder dependsOn(@Nullable List<ActivityDependencyArgs> dependsOn) {
-            this.dependsOn = Input.ofNullable(dependsOn);
+            this.dependsOn = Output.ofNullable(dependsOn);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder fieldList(@Nullable Input<List<Object>> fieldList) {
+        public Builder fieldList(@Nullable Output<List<Object>> fieldList) {
             this.fieldList = fieldList;
             return this;
         }
 
         public Builder fieldList(@Nullable List<Object> fieldList) {
-            this.fieldList = Input.ofNullable(fieldList);
+            this.fieldList = Output.ofNullable(fieldList);
             return this;
         }
 
-        public Builder formatSettings(@Nullable Input<Object> formatSettings) {
+        public Builder formatSettings(@Nullable Output<Object> formatSettings) {
             this.formatSettings = formatSettings;
             return this;
         }
 
         public Builder formatSettings(@Nullable Object formatSettings) {
-            this.formatSettings = Input.ofNullable(formatSettings);
+            this.formatSettings = Output.ofNullable(formatSettings);
             return this;
         }
 
-        public Builder linkedServiceName(@Nullable Input<LinkedServiceReferenceArgs> linkedServiceName) {
+        public Builder linkedServiceName(@Nullable Output<LinkedServiceReferenceArgs> linkedServiceName) {
             this.linkedServiceName = linkedServiceName;
             return this;
         }
 
         public Builder linkedServiceName(@Nullable LinkedServiceReferenceArgs linkedServiceName) {
-            this.linkedServiceName = Input.ofNullable(linkedServiceName);
+            this.linkedServiceName = Output.ofNullable(linkedServiceName);
             return this;
         }
 
-        public Builder name(Input<String> name) {
+        public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(String name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder policy(@Nullable Input<ActivityPolicyArgs> policy) {
+        public Builder policy(@Nullable Output<ActivityPolicyArgs> policy) {
             this.policy = policy;
             return this;
         }
 
         public Builder policy(@Nullable ActivityPolicyArgs policy) {
-            this.policy = Input.ofNullable(policy);
+            this.policy = Output.ofNullable(policy);
             return this;
         }
 
-        public Builder storeSettings(@Nullable Input<Object> storeSettings) {
+        public Builder storeSettings(@Nullable Output<Object> storeSettings) {
             this.storeSettings = storeSettings;
             return this;
         }
 
         public Builder storeSettings(@Nullable Object storeSettings) {
-            this.storeSettings = Input.ofNullable(storeSettings);
+            this.storeSettings = Output.ofNullable(storeSettings);
             return this;
         }
 
-        public Builder type(Input<String> type) {
+        public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(String type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
 
-        public Builder userProperties(@Nullable Input<List<UserPropertyArgs>> userProperties) {
+        public Builder userProperties(@Nullable Output<List<UserPropertyArgs>> userProperties) {
             this.userProperties = userProperties;
             return this;
         }
 
         public Builder userProperties(@Nullable List<UserPropertyArgs> userProperties) {
-            this.userProperties = Input.ofNullable(userProperties);
+            this.userProperties = Output.ofNullable(userProperties);
             return this;
         }
         public GetMetadataActivityArgs build() {

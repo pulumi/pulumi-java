@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.diagflow.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.diagflow.inputs.CxEnvironmentVersionConfigGetArgs;
 import java.lang.String;
@@ -21,10 +21,10 @@ public final class CxEnvironmentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -32,10 +32,10 @@ public final class CxEnvironmentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName")
-      private final @Nullable Input<String> displayName;
+      private final @Nullable Output<String> displayName;
 
-    public Input<String> getDisplayName() {
-        return this.displayName == null ? Input.empty() : this.displayName;
+    public Output<String> getDisplayName() {
+        return this.displayName == null ? Output.empty() : this.displayName;
     }
 
     /**
@@ -43,10 +43,10 @@ public final class CxEnvironmentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -55,10 +55,10 @@ public final class CxEnvironmentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="parent")
-      private final @Nullable Input<String> parent;
+      private final @Nullable Output<String> parent;
 
-    public Input<String> getParent() {
-        return this.parent == null ? Input.empty() : this.parent;
+    public Output<String> getParent() {
+        return this.parent == null ? Output.empty() : this.parent;
     }
 
     /**
@@ -67,10 +67,10 @@ public final class CxEnvironmentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="updateTime")
-      private final @Nullable Input<String> updateTime;
+      private final @Nullable Output<String> updateTime;
 
-    public Input<String> getUpdateTime() {
-        return this.updateTime == null ? Input.empty() : this.updateTime;
+    public Output<String> getUpdateTime() {
+        return this.updateTime == null ? Output.empty() : this.updateTime;
     }
 
     /**
@@ -79,19 +79,19 @@ public final class CxEnvironmentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="versionConfigs")
-      private final @Nullable Input<List<CxEnvironmentVersionConfigGetArgs>> versionConfigs;
+      private final @Nullable Output<List<CxEnvironmentVersionConfigGetArgs>> versionConfigs;
 
-    public Input<List<CxEnvironmentVersionConfigGetArgs>> getVersionConfigs() {
-        return this.versionConfigs == null ? Input.empty() : this.versionConfigs;
+    public Output<List<CxEnvironmentVersionConfigGetArgs>> getVersionConfigs() {
+        return this.versionConfigs == null ? Output.empty() : this.versionConfigs;
     }
 
     public CxEnvironmentState(
-        @Nullable Input<String> description,
-        @Nullable Input<String> displayName,
-        @Nullable Input<String> name,
-        @Nullable Input<String> parent,
-        @Nullable Input<String> updateTime,
-        @Nullable Input<List<CxEnvironmentVersionConfigGetArgs>> versionConfigs) {
+        @Nullable Output<String> description,
+        @Nullable Output<String> displayName,
+        @Nullable Output<String> name,
+        @Nullable Output<String> parent,
+        @Nullable Output<String> updateTime,
+        @Nullable Output<List<CxEnvironmentVersionConfigGetArgs>> versionConfigs) {
         this.description = description;
         this.displayName = displayName;
         this.name = name;
@@ -101,12 +101,12 @@ public final class CxEnvironmentState extends io.pulumi.resources.ResourceArgs {
     }
 
     private CxEnvironmentState() {
-        this.description = Input.empty();
-        this.displayName = Input.empty();
-        this.name = Input.empty();
-        this.parent = Input.empty();
-        this.updateTime = Input.empty();
-        this.versionConfigs = Input.empty();
+        this.description = Output.empty();
+        this.displayName = Output.empty();
+        this.name = Output.empty();
+        this.parent = Output.empty();
+        this.updateTime = Output.empty();
+        this.versionConfigs = Output.empty();
     }
 
     public static Builder builder() {
@@ -118,12 +118,12 @@ public final class CxEnvironmentState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> description;
-        private @Nullable Input<String> displayName;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> parent;
-        private @Nullable Input<String> updateTime;
-        private @Nullable Input<List<CxEnvironmentVersionConfigGetArgs>> versionConfigs;
+        private @Nullable Output<String> description;
+        private @Nullable Output<String> displayName;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> parent;
+        private @Nullable Output<String> updateTime;
+        private @Nullable Output<List<CxEnvironmentVersionConfigGetArgs>> versionConfigs;
 
         public Builder() {
     	      // Empty
@@ -139,63 +139,63 @@ public final class CxEnvironmentState extends io.pulumi.resources.ResourceArgs {
     	      this.versionConfigs = defaults.versionConfigs;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder displayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Input.ofNullable(displayName);
+            this.displayName = Output.ofNullable(displayName);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder parent(@Nullable Input<String> parent) {
+        public Builder parent(@Nullable Output<String> parent) {
             this.parent = parent;
             return this;
         }
 
         public Builder parent(@Nullable String parent) {
-            this.parent = Input.ofNullable(parent);
+            this.parent = Output.ofNullable(parent);
             return this;
         }
 
-        public Builder updateTime(@Nullable Input<String> updateTime) {
+        public Builder updateTime(@Nullable Output<String> updateTime) {
             this.updateTime = updateTime;
             return this;
         }
 
         public Builder updateTime(@Nullable String updateTime) {
-            this.updateTime = Input.ofNullable(updateTime);
+            this.updateTime = Output.ofNullable(updateTime);
             return this;
         }
 
-        public Builder versionConfigs(@Nullable Input<List<CxEnvironmentVersionConfigGetArgs>> versionConfigs) {
+        public Builder versionConfigs(@Nullable Output<List<CxEnvironmentVersionConfigGetArgs>> versionConfigs) {
             this.versionConfigs = versionConfigs;
             return this;
         }
 
         public Builder versionConfigs(@Nullable List<CxEnvironmentVersionConfigGetArgs> versionConfigs) {
-            this.versionConfigs = Input.ofNullable(versionConfigs);
+            this.versionConfigs = Output.ofNullable(versionConfigs);
             return this;
         }
         public CxEnvironmentState build() {

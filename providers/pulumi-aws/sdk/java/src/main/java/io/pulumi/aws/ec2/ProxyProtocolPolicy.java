@@ -6,7 +6,6 @@ package io.pulumi.aws.ec2;
 import io.pulumi.aws.Utilities;
 import io.pulumi.aws.ec2.ProxyProtocolPolicyArgs;
 import io.pulumi.aws.ec2.inputs.ProxyProtocolPolicyState;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -93,14 +92,14 @@ public class ProxyProtocolPolicy extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ProxyProtocolPolicy(String name, ProxyProtocolPolicyArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:ec2/proxyProtocolPolicy:ProxyProtocolPolicy", name, args == null ? ProxyProtocolPolicyArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws:ec2/proxyProtocolPolicy:ProxyProtocolPolicy", name, args == null ? ProxyProtocolPolicyArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private ProxyProtocolPolicy(String name, Input<String> id, @Nullable ProxyProtocolPolicyState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private ProxyProtocolPolicy(String name, Output<String> id, @Nullable ProxyProtocolPolicyState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws:ec2/proxyProtocolPolicy:ProxyProtocolPolicy", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -116,7 +115,7 @@ public class ProxyProtocolPolicy extends io.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static ProxyProtocolPolicy get(String name, Input<String> id, @Nullable ProxyProtocolPolicyState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static ProxyProtocolPolicy get(String name, Output<String> id, @Nullable ProxyProtocolPolicyState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new ProxyProtocolPolicy(name, id, state, options);
     }
 }

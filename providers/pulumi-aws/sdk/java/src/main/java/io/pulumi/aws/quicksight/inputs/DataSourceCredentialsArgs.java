@@ -4,7 +4,7 @@
 package io.pulumi.aws.quicksight.inputs;
 
 import io.pulumi.aws.quicksight.inputs.DataSourceCredentialsCredentialPairArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -21,10 +21,10 @@ public final class DataSourceCredentialsArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="copySourceArn")
-      private final @Nullable Input<String> copySourceArn;
+      private final @Nullable Output<String> copySourceArn;
 
-    public Input<String> getCopySourceArn() {
-        return this.copySourceArn == null ? Input.empty() : this.copySourceArn;
+    public Output<String> getCopySourceArn() {
+        return this.copySourceArn == null ? Output.empty() : this.copySourceArn;
     }
 
     /**
@@ -32,22 +32,22 @@ public final class DataSourceCredentialsArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="credentialPair")
-      private final @Nullable Input<DataSourceCredentialsCredentialPairArgs> credentialPair;
+      private final @Nullable Output<DataSourceCredentialsCredentialPairArgs> credentialPair;
 
-    public Input<DataSourceCredentialsCredentialPairArgs> getCredentialPair() {
-        return this.credentialPair == null ? Input.empty() : this.credentialPair;
+    public Output<DataSourceCredentialsCredentialPairArgs> getCredentialPair() {
+        return this.credentialPair == null ? Output.empty() : this.credentialPair;
     }
 
     public DataSourceCredentialsArgs(
-        @Nullable Input<String> copySourceArn,
-        @Nullable Input<DataSourceCredentialsCredentialPairArgs> credentialPair) {
+        @Nullable Output<String> copySourceArn,
+        @Nullable Output<DataSourceCredentialsCredentialPairArgs> credentialPair) {
         this.copySourceArn = copySourceArn;
         this.credentialPair = credentialPair;
     }
 
     private DataSourceCredentialsArgs() {
-        this.copySourceArn = Input.empty();
-        this.credentialPair = Input.empty();
+        this.copySourceArn = Output.empty();
+        this.credentialPair = Output.empty();
     }
 
     public static Builder builder() {
@@ -59,8 +59,8 @@ public final class DataSourceCredentialsArgs extends io.pulumi.resources.Resourc
     }
 
     public static final class Builder {
-        private @Nullable Input<String> copySourceArn;
-        private @Nullable Input<DataSourceCredentialsCredentialPairArgs> credentialPair;
+        private @Nullable Output<String> copySourceArn;
+        private @Nullable Output<DataSourceCredentialsCredentialPairArgs> credentialPair;
 
         public Builder() {
     	      // Empty
@@ -72,23 +72,23 @@ public final class DataSourceCredentialsArgs extends io.pulumi.resources.Resourc
     	      this.credentialPair = defaults.credentialPair;
         }
 
-        public Builder copySourceArn(@Nullable Input<String> copySourceArn) {
+        public Builder copySourceArn(@Nullable Output<String> copySourceArn) {
             this.copySourceArn = copySourceArn;
             return this;
         }
 
         public Builder copySourceArn(@Nullable String copySourceArn) {
-            this.copySourceArn = Input.ofNullable(copySourceArn);
+            this.copySourceArn = Output.ofNullable(copySourceArn);
             return this;
         }
 
-        public Builder credentialPair(@Nullable Input<DataSourceCredentialsCredentialPairArgs> credentialPair) {
+        public Builder credentialPair(@Nullable Output<DataSourceCredentialsCredentialPairArgs> credentialPair) {
             this.credentialPair = credentialPair;
             return this;
         }
 
         public Builder credentialPair(@Nullable DataSourceCredentialsCredentialPairArgs credentialPair) {
-            this.credentialPair = Input.ofNullable(credentialPair);
+            this.credentialPair = Output.ofNullable(credentialPair);
             return this;
         }
         public DataSourceCredentialsArgs build() {

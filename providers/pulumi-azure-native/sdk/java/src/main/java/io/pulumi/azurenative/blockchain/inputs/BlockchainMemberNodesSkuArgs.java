@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.blockchain.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class BlockchainMemberNodesSkuArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="capacity")
-      private final @Nullable Input<Integer> capacity;
+      private final @Nullable Output<Integer> capacity;
 
-    public Input<Integer> getCapacity() {
-        return this.capacity == null ? Input.empty() : this.capacity;
+    public Output<Integer> getCapacity() {
+        return this.capacity == null ? Output.empty() : this.capacity;
     }
 
-    public BlockchainMemberNodesSkuArgs(@Nullable Input<Integer> capacity) {
+    public BlockchainMemberNodesSkuArgs(@Nullable Output<Integer> capacity) {
         this.capacity = capacity;
     }
 
     private BlockchainMemberNodesSkuArgs() {
-        this.capacity = Input.empty();
+        this.capacity = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class BlockchainMemberNodesSkuArgs extends io.pulumi.resources.Reso
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> capacity;
+        private @Nullable Output<Integer> capacity;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class BlockchainMemberNodesSkuArgs extends io.pulumi.resources.Reso
     	      this.capacity = defaults.capacity;
         }
 
-        public Builder capacity(@Nullable Input<Integer> capacity) {
+        public Builder capacity(@Nullable Output<Integer> capacity) {
             this.capacity = capacity;
             return this;
         }
 
         public Builder capacity(@Nullable Integer capacity) {
-            this.capacity = Input.ofNullable(capacity);
+            this.capacity = Output.ofNullable(capacity);
             return this;
         }
         public BlockchainMemberNodesSkuArgs build() {

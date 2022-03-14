@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.glue.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -21,10 +21,10 @@ public final class SchemaState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arn")
-      private final @Nullable Input<String> arn;
+      private final @Nullable Output<String> arn;
 
-    public Input<String> getArn() {
-        return this.arn == null ? Input.empty() : this.arn;
+    public Output<String> getArn() {
+        return this.arn == null ? Output.empty() : this.arn;
     }
 
     /**
@@ -32,10 +32,10 @@ public final class SchemaState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="compatibility")
-      private final @Nullable Input<String> compatibility;
+      private final @Nullable Output<String> compatibility;
 
-    public Input<String> getCompatibility() {
-        return this.compatibility == null ? Input.empty() : this.compatibility;
+    public Output<String> getCompatibility() {
+        return this.compatibility == null ? Output.empty() : this.compatibility;
     }
 
     /**
@@ -43,10 +43,10 @@ public final class SchemaState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dataFormat")
-      private final @Nullable Input<String> dataFormat;
+      private final @Nullable Output<String> dataFormat;
 
-    public Input<String> getDataFormat() {
-        return this.dataFormat == null ? Input.empty() : this.dataFormat;
+    public Output<String> getDataFormat() {
+        return this.dataFormat == null ? Output.empty() : this.dataFormat;
     }
 
     /**
@@ -54,10 +54,10 @@ public final class SchemaState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -65,10 +65,10 @@ public final class SchemaState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="latestSchemaVersion")
-      private final @Nullable Input<Integer> latestSchemaVersion;
+      private final @Nullable Output<Integer> latestSchemaVersion;
 
-    public Input<Integer> getLatestSchemaVersion() {
-        return this.latestSchemaVersion == null ? Input.empty() : this.latestSchemaVersion;
+    public Output<Integer> getLatestSchemaVersion() {
+        return this.latestSchemaVersion == null ? Output.empty() : this.latestSchemaVersion;
     }
 
     /**
@@ -76,10 +76,10 @@ public final class SchemaState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="nextSchemaVersion")
-      private final @Nullable Input<Integer> nextSchemaVersion;
+      private final @Nullable Output<Integer> nextSchemaVersion;
 
-    public Input<Integer> getNextSchemaVersion() {
-        return this.nextSchemaVersion == null ? Input.empty() : this.nextSchemaVersion;
+    public Output<Integer> getNextSchemaVersion() {
+        return this.nextSchemaVersion == null ? Output.empty() : this.nextSchemaVersion;
     }
 
     /**
@@ -87,10 +87,10 @@ public final class SchemaState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="registryArn")
-      private final @Nullable Input<String> registryArn;
+      private final @Nullable Output<String> registryArn;
 
-    public Input<String> getRegistryArn() {
-        return this.registryArn == null ? Input.empty() : this.registryArn;
+    public Output<String> getRegistryArn() {
+        return this.registryArn == null ? Output.empty() : this.registryArn;
     }
 
     /**
@@ -98,10 +98,10 @@ public final class SchemaState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="registryName")
-      private final @Nullable Input<String> registryName;
+      private final @Nullable Output<String> registryName;
 
-    public Input<String> getRegistryName() {
-        return this.registryName == null ? Input.empty() : this.registryName;
+    public Output<String> getRegistryName() {
+        return this.registryName == null ? Output.empty() : this.registryName;
     }
 
     /**
@@ -109,10 +109,10 @@ public final class SchemaState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="schemaCheckpoint")
-      private final @Nullable Input<Integer> schemaCheckpoint;
+      private final @Nullable Output<Integer> schemaCheckpoint;
 
-    public Input<Integer> getSchemaCheckpoint() {
-        return this.schemaCheckpoint == null ? Input.empty() : this.schemaCheckpoint;
+    public Output<Integer> getSchemaCheckpoint() {
+        return this.schemaCheckpoint == null ? Output.empty() : this.schemaCheckpoint;
     }
 
     /**
@@ -120,10 +120,10 @@ public final class SchemaState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="schemaDefinition")
-      private final @Nullable Input<String> schemaDefinition;
+      private final @Nullable Output<String> schemaDefinition;
 
-    public Input<String> getSchemaDefinition() {
-        return this.schemaDefinition == null ? Input.empty() : this.schemaDefinition;
+    public Output<String> getSchemaDefinition() {
+        return this.schemaDefinition == null ? Output.empty() : this.schemaDefinition;
     }
 
     /**
@@ -131,10 +131,10 @@ public final class SchemaState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="schemaName")
-      private final @Nullable Input<String> schemaName;
+      private final @Nullable Output<String> schemaName;
 
-    public Input<String> getSchemaName() {
-        return this.schemaName == null ? Input.empty() : this.schemaName;
+    public Output<String> getSchemaName() {
+        return this.schemaName == null ? Output.empty() : this.schemaName;
     }
 
     /**
@@ -142,10 +142,10 @@ public final class SchemaState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -153,26 +153,26 @@ public final class SchemaState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tagsAll")
-      private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Input<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Input.empty() : this.tagsAll;
+    public Output<Map<String,String>> getTagsAll() {
+        return this.tagsAll == null ? Output.empty() : this.tagsAll;
     }
 
     public SchemaState(
-        @Nullable Input<String> arn,
-        @Nullable Input<String> compatibility,
-        @Nullable Input<String> dataFormat,
-        @Nullable Input<String> description,
-        @Nullable Input<Integer> latestSchemaVersion,
-        @Nullable Input<Integer> nextSchemaVersion,
-        @Nullable Input<String> registryArn,
-        @Nullable Input<String> registryName,
-        @Nullable Input<Integer> schemaCheckpoint,
-        @Nullable Input<String> schemaDefinition,
-        @Nullable Input<String> schemaName,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<Map<String,String>> tagsAll) {
+        @Nullable Output<String> arn,
+        @Nullable Output<String> compatibility,
+        @Nullable Output<String> dataFormat,
+        @Nullable Output<String> description,
+        @Nullable Output<Integer> latestSchemaVersion,
+        @Nullable Output<Integer> nextSchemaVersion,
+        @Nullable Output<String> registryArn,
+        @Nullable Output<String> registryName,
+        @Nullable Output<Integer> schemaCheckpoint,
+        @Nullable Output<String> schemaDefinition,
+        @Nullable Output<String> schemaName,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<Map<String,String>> tagsAll) {
         this.arn = arn;
         this.compatibility = compatibility;
         this.dataFormat = dataFormat;
@@ -189,19 +189,19 @@ public final class SchemaState extends io.pulumi.resources.ResourceArgs {
     }
 
     private SchemaState() {
-        this.arn = Input.empty();
-        this.compatibility = Input.empty();
-        this.dataFormat = Input.empty();
-        this.description = Input.empty();
-        this.latestSchemaVersion = Input.empty();
-        this.nextSchemaVersion = Input.empty();
-        this.registryArn = Input.empty();
-        this.registryName = Input.empty();
-        this.schemaCheckpoint = Input.empty();
-        this.schemaDefinition = Input.empty();
-        this.schemaName = Input.empty();
-        this.tags = Input.empty();
-        this.tagsAll = Input.empty();
+        this.arn = Output.empty();
+        this.compatibility = Output.empty();
+        this.dataFormat = Output.empty();
+        this.description = Output.empty();
+        this.latestSchemaVersion = Output.empty();
+        this.nextSchemaVersion = Output.empty();
+        this.registryArn = Output.empty();
+        this.registryName = Output.empty();
+        this.schemaCheckpoint = Output.empty();
+        this.schemaDefinition = Output.empty();
+        this.schemaName = Output.empty();
+        this.tags = Output.empty();
+        this.tagsAll = Output.empty();
     }
 
     public static Builder builder() {
@@ -213,19 +213,19 @@ public final class SchemaState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> arn;
-        private @Nullable Input<String> compatibility;
-        private @Nullable Input<String> dataFormat;
-        private @Nullable Input<String> description;
-        private @Nullable Input<Integer> latestSchemaVersion;
-        private @Nullable Input<Integer> nextSchemaVersion;
-        private @Nullable Input<String> registryArn;
-        private @Nullable Input<String> registryName;
-        private @Nullable Input<Integer> schemaCheckpoint;
-        private @Nullable Input<String> schemaDefinition;
-        private @Nullable Input<String> schemaName;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<Map<String,String>> tagsAll;
+        private @Nullable Output<String> arn;
+        private @Nullable Output<String> compatibility;
+        private @Nullable Output<String> dataFormat;
+        private @Nullable Output<String> description;
+        private @Nullable Output<Integer> latestSchemaVersion;
+        private @Nullable Output<Integer> nextSchemaVersion;
+        private @Nullable Output<String> registryArn;
+        private @Nullable Output<String> registryName;
+        private @Nullable Output<Integer> schemaCheckpoint;
+        private @Nullable Output<String> schemaDefinition;
+        private @Nullable Output<String> schemaName;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<Map<String,String>> tagsAll;
 
         public Builder() {
     	      // Empty
@@ -248,133 +248,133 @@ public final class SchemaState extends io.pulumi.resources.ResourceArgs {
     	      this.tagsAll = defaults.tagsAll;
         }
 
-        public Builder arn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
 
         public Builder arn(@Nullable String arn) {
-            this.arn = Input.ofNullable(arn);
+            this.arn = Output.ofNullable(arn);
             return this;
         }
 
-        public Builder compatibility(@Nullable Input<String> compatibility) {
+        public Builder compatibility(@Nullable Output<String> compatibility) {
             this.compatibility = compatibility;
             return this;
         }
 
         public Builder compatibility(@Nullable String compatibility) {
-            this.compatibility = Input.ofNullable(compatibility);
+            this.compatibility = Output.ofNullable(compatibility);
             return this;
         }
 
-        public Builder dataFormat(@Nullable Input<String> dataFormat) {
+        public Builder dataFormat(@Nullable Output<String> dataFormat) {
             this.dataFormat = dataFormat;
             return this;
         }
 
         public Builder dataFormat(@Nullable String dataFormat) {
-            this.dataFormat = Input.ofNullable(dataFormat);
+            this.dataFormat = Output.ofNullable(dataFormat);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder latestSchemaVersion(@Nullable Input<Integer> latestSchemaVersion) {
+        public Builder latestSchemaVersion(@Nullable Output<Integer> latestSchemaVersion) {
             this.latestSchemaVersion = latestSchemaVersion;
             return this;
         }
 
         public Builder latestSchemaVersion(@Nullable Integer latestSchemaVersion) {
-            this.latestSchemaVersion = Input.ofNullable(latestSchemaVersion);
+            this.latestSchemaVersion = Output.ofNullable(latestSchemaVersion);
             return this;
         }
 
-        public Builder nextSchemaVersion(@Nullable Input<Integer> nextSchemaVersion) {
+        public Builder nextSchemaVersion(@Nullable Output<Integer> nextSchemaVersion) {
             this.nextSchemaVersion = nextSchemaVersion;
             return this;
         }
 
         public Builder nextSchemaVersion(@Nullable Integer nextSchemaVersion) {
-            this.nextSchemaVersion = Input.ofNullable(nextSchemaVersion);
+            this.nextSchemaVersion = Output.ofNullable(nextSchemaVersion);
             return this;
         }
 
-        public Builder registryArn(@Nullable Input<String> registryArn) {
+        public Builder registryArn(@Nullable Output<String> registryArn) {
             this.registryArn = registryArn;
             return this;
         }
 
         public Builder registryArn(@Nullable String registryArn) {
-            this.registryArn = Input.ofNullable(registryArn);
+            this.registryArn = Output.ofNullable(registryArn);
             return this;
         }
 
-        public Builder registryName(@Nullable Input<String> registryName) {
+        public Builder registryName(@Nullable Output<String> registryName) {
             this.registryName = registryName;
             return this;
         }
 
         public Builder registryName(@Nullable String registryName) {
-            this.registryName = Input.ofNullable(registryName);
+            this.registryName = Output.ofNullable(registryName);
             return this;
         }
 
-        public Builder schemaCheckpoint(@Nullable Input<Integer> schemaCheckpoint) {
+        public Builder schemaCheckpoint(@Nullable Output<Integer> schemaCheckpoint) {
             this.schemaCheckpoint = schemaCheckpoint;
             return this;
         }
 
         public Builder schemaCheckpoint(@Nullable Integer schemaCheckpoint) {
-            this.schemaCheckpoint = Input.ofNullable(schemaCheckpoint);
+            this.schemaCheckpoint = Output.ofNullable(schemaCheckpoint);
             return this;
         }
 
-        public Builder schemaDefinition(@Nullable Input<String> schemaDefinition) {
+        public Builder schemaDefinition(@Nullable Output<String> schemaDefinition) {
             this.schemaDefinition = schemaDefinition;
             return this;
         }
 
         public Builder schemaDefinition(@Nullable String schemaDefinition) {
-            this.schemaDefinition = Input.ofNullable(schemaDefinition);
+            this.schemaDefinition = Output.ofNullable(schemaDefinition);
             return this;
         }
 
-        public Builder schemaName(@Nullable Input<String> schemaName) {
+        public Builder schemaName(@Nullable Output<String> schemaName) {
             this.schemaName = schemaName;
             return this;
         }
 
         public Builder schemaName(@Nullable String schemaName) {
-            this.schemaName = Input.ofNullable(schemaName);
+            this.schemaName = Output.ofNullable(schemaName);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Input.ofNullable(tagsAll);
+            this.tagsAll = Output.ofNullable(tagsAll);
             return this;
         }
         public SchemaState build() {

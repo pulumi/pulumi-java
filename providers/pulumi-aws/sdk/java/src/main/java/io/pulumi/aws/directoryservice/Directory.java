@@ -8,7 +8,6 @@ import io.pulumi.aws.directoryservice.DirectoryArgs;
 import io.pulumi.aws.directoryservice.inputs.DirectoryState;
 import io.pulumi.aws.directoryservice.outputs.DirectoryConnectSettings;
 import io.pulumi.aws.directoryservice.outputs.DirectoryVpcSettings;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -297,14 +296,14 @@ public class Directory extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Directory(String name, DirectoryArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:directoryservice/directory:Directory", name, args == null ? DirectoryArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws:directoryservice/directory:Directory", name, args == null ? DirectoryArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private Directory(String name, Input<String> id, @Nullable DirectoryState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private Directory(String name, Output<String> id, @Nullable DirectoryState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws:directoryservice/directory:Directory", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -320,7 +319,7 @@ public class Directory extends io.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static Directory get(String name, Input<String> id, @Nullable DirectoryState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static Directory get(String name, Output<String> id, @Nullable DirectoryState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Directory(name, id, state, options);
     }
 }

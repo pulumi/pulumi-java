@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.machinelearningcompute.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -22,9 +22,9 @@ public final class ServiceAuthConfigurationArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="primaryAuthKeyHash", required=true)
-      private final Input<String> primaryAuthKeyHash;
+      private final Output<String> primaryAuthKeyHash;
 
-    public Input<String> getPrimaryAuthKeyHash() {
+    public Output<String> getPrimaryAuthKeyHash() {
         return this.primaryAuthKeyHash;
     }
 
@@ -33,22 +33,22 @@ public final class ServiceAuthConfigurationArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="secondaryAuthKeyHash", required=true)
-      private final Input<String> secondaryAuthKeyHash;
+      private final Output<String> secondaryAuthKeyHash;
 
-    public Input<String> getSecondaryAuthKeyHash() {
+    public Output<String> getSecondaryAuthKeyHash() {
         return this.secondaryAuthKeyHash;
     }
 
     public ServiceAuthConfigurationArgs(
-        Input<String> primaryAuthKeyHash,
-        Input<String> secondaryAuthKeyHash) {
+        Output<String> primaryAuthKeyHash,
+        Output<String> secondaryAuthKeyHash) {
         this.primaryAuthKeyHash = Objects.requireNonNull(primaryAuthKeyHash, "expected parameter 'primaryAuthKeyHash' to be non-null");
         this.secondaryAuthKeyHash = Objects.requireNonNull(secondaryAuthKeyHash, "expected parameter 'secondaryAuthKeyHash' to be non-null");
     }
 
     private ServiceAuthConfigurationArgs() {
-        this.primaryAuthKeyHash = Input.empty();
-        this.secondaryAuthKeyHash = Input.empty();
+        this.primaryAuthKeyHash = Output.empty();
+        this.secondaryAuthKeyHash = Output.empty();
     }
 
     public static Builder builder() {
@@ -60,8 +60,8 @@ public final class ServiceAuthConfigurationArgs extends io.pulumi.resources.Reso
     }
 
     public static final class Builder {
-        private Input<String> primaryAuthKeyHash;
-        private Input<String> secondaryAuthKeyHash;
+        private Output<String> primaryAuthKeyHash;
+        private Output<String> secondaryAuthKeyHash;
 
         public Builder() {
     	      // Empty
@@ -73,23 +73,23 @@ public final class ServiceAuthConfigurationArgs extends io.pulumi.resources.Reso
     	      this.secondaryAuthKeyHash = defaults.secondaryAuthKeyHash;
         }
 
-        public Builder primaryAuthKeyHash(Input<String> primaryAuthKeyHash) {
+        public Builder primaryAuthKeyHash(Output<String> primaryAuthKeyHash) {
             this.primaryAuthKeyHash = Objects.requireNonNull(primaryAuthKeyHash);
             return this;
         }
 
         public Builder primaryAuthKeyHash(String primaryAuthKeyHash) {
-            this.primaryAuthKeyHash = Input.of(Objects.requireNonNull(primaryAuthKeyHash));
+            this.primaryAuthKeyHash = Output.of(Objects.requireNonNull(primaryAuthKeyHash));
             return this;
         }
 
-        public Builder secondaryAuthKeyHash(Input<String> secondaryAuthKeyHash) {
+        public Builder secondaryAuthKeyHash(Output<String> secondaryAuthKeyHash) {
             this.secondaryAuthKeyHash = Objects.requireNonNull(secondaryAuthKeyHash);
             return this;
         }
 
         public Builder secondaryAuthKeyHash(String secondaryAuthKeyHash) {
-            this.secondaryAuthKeyHash = Input.of(Objects.requireNonNull(secondaryAuthKeyHash));
+            this.secondaryAuthKeyHash = Output.of(Objects.requireNonNull(secondaryAuthKeyHash));
             return this;
         }
         public ServiceAuthConfigurationArgs build() {

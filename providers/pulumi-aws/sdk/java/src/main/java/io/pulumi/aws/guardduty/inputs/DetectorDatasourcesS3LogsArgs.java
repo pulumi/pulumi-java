@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.guardduty.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
@@ -18,18 +18,18 @@ public final class DetectorDatasourcesS3LogsArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="enable", required=true)
-      private final Input<Boolean> enable;
+      private final Output<Boolean> enable;
 
-    public Input<Boolean> getEnable() {
+    public Output<Boolean> getEnable() {
         return this.enable;
     }
 
-    public DetectorDatasourcesS3LogsArgs(Input<Boolean> enable) {
+    public DetectorDatasourcesS3LogsArgs(Output<Boolean> enable) {
         this.enable = Objects.requireNonNull(enable, "expected parameter 'enable' to be non-null");
     }
 
     private DetectorDatasourcesS3LogsArgs() {
-        this.enable = Input.empty();
+        this.enable = Output.empty();
     }
 
     public static Builder builder() {
@@ -41,7 +41,7 @@ public final class DetectorDatasourcesS3LogsArgs extends io.pulumi.resources.Res
     }
 
     public static final class Builder {
-        private Input<Boolean> enable;
+        private Output<Boolean> enable;
 
         public Builder() {
     	      // Empty
@@ -52,13 +52,13 @@ public final class DetectorDatasourcesS3LogsArgs extends io.pulumi.resources.Res
     	      this.enable = defaults.enable;
         }
 
-        public Builder enable(Input<Boolean> enable) {
+        public Builder enable(Output<Boolean> enable) {
             this.enable = Objects.requireNonNull(enable);
             return this;
         }
 
         public Builder enable(Boolean enable) {
-            this.enable = Input.of(Objects.requireNonNull(enable));
+            this.enable = Output.of(Objects.requireNonNull(enable));
             return this;
         }
         public DetectorDatasourcesS3LogsArgs build() {

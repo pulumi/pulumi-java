@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datafactory.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -22,9 +22,9 @@ public final class ManagedVirtualNetworkReferenceArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="referenceName", required=true)
-      private final Input<String> referenceName;
+      private final Output<String> referenceName;
 
-    public Input<String> getReferenceName() {
+    public Output<String> getReferenceName() {
         return this.referenceName;
     }
 
@@ -33,22 +33,22 @@ public final class ManagedVirtualNetworkReferenceArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<String> type;
+      private final Output<String> type;
 
-    public Input<String> getType() {
+    public Output<String> getType() {
         return this.type;
     }
 
     public ManagedVirtualNetworkReferenceArgs(
-        Input<String> referenceName,
-        Input<String> type) {
+        Output<String> referenceName,
+        Output<String> type) {
         this.referenceName = Objects.requireNonNull(referenceName, "expected parameter 'referenceName' to be non-null");
         this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
     }
 
     private ManagedVirtualNetworkReferenceArgs() {
-        this.referenceName = Input.empty();
-        this.type = Input.empty();
+        this.referenceName = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -60,8 +60,8 @@ public final class ManagedVirtualNetworkReferenceArgs extends io.pulumi.resource
     }
 
     public static final class Builder {
-        private Input<String> referenceName;
-        private Input<String> type;
+        private Output<String> referenceName;
+        private Output<String> type;
 
         public Builder() {
     	      // Empty
@@ -73,23 +73,23 @@ public final class ManagedVirtualNetworkReferenceArgs extends io.pulumi.resource
     	      this.type = defaults.type;
         }
 
-        public Builder referenceName(Input<String> referenceName) {
+        public Builder referenceName(Output<String> referenceName) {
             this.referenceName = Objects.requireNonNull(referenceName);
             return this;
         }
 
         public Builder referenceName(String referenceName) {
-            this.referenceName = Input.of(Objects.requireNonNull(referenceName));
+            this.referenceName = Output.of(Objects.requireNonNull(referenceName));
             return this;
         }
 
-        public Builder type(Input<String> type) {
+        public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(String type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
         public ManagedVirtualNetworkReferenceArgs build() {

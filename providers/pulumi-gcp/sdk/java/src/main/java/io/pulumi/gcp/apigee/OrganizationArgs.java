@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.apigee;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class OrganizationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="analyticsRegion")
-      private final @Nullable Input<String> analyticsRegion;
+      private final @Nullable Output<String> analyticsRegion;
 
-    public Input<String> getAnalyticsRegion() {
-        return this.analyticsRegion == null ? Input.empty() : this.analyticsRegion;
+    public Output<String> getAnalyticsRegion() {
+        return this.analyticsRegion == null ? Output.empty() : this.analyticsRegion;
     }
 
     /**
@@ -32,10 +32,10 @@ public final class OrganizationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="authorizedNetwork")
-      private final @Nullable Input<String> authorizedNetwork;
+      private final @Nullable Output<String> authorizedNetwork;
 
-    public Input<String> getAuthorizedNetwork() {
-        return this.authorizedNetwork == null ? Input.empty() : this.authorizedNetwork;
+    public Output<String> getAuthorizedNetwork() {
+        return this.authorizedNetwork == null ? Output.empty() : this.authorizedNetwork;
     }
 
     /**
@@ -43,10 +43,10 @@ public final class OrganizationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -54,10 +54,10 @@ public final class OrganizationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName")
-      private final @Nullable Input<String> displayName;
+      private final @Nullable Output<String> displayName;
 
-    public Input<String> getDisplayName() {
-        return this.displayName == null ? Input.empty() : this.displayName;
+    public Output<String> getDisplayName() {
+        return this.displayName == null ? Output.empty() : this.displayName;
     }
 
     /**
@@ -65,9 +65,9 @@ public final class OrganizationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="projectId", required=true)
-      private final Input<String> projectId;
+      private final Output<String> projectId;
 
-    public Input<String> getProjectId() {
+    public Output<String> getProjectId() {
         return this.projectId;
     }
 
@@ -79,10 +79,10 @@ public final class OrganizationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="runtimeDatabaseEncryptionKeyName")
-      private final @Nullable Input<String> runtimeDatabaseEncryptionKeyName;
+      private final @Nullable Output<String> runtimeDatabaseEncryptionKeyName;
 
-    public Input<String> getRuntimeDatabaseEncryptionKeyName() {
-        return this.runtimeDatabaseEncryptionKeyName == null ? Input.empty() : this.runtimeDatabaseEncryptionKeyName;
+    public Output<String> getRuntimeDatabaseEncryptionKeyName() {
+        return this.runtimeDatabaseEncryptionKeyName == null ? Output.empty() : this.runtimeDatabaseEncryptionKeyName;
     }
 
     /**
@@ -92,20 +92,20 @@ public final class OrganizationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="runtimeType")
-      private final @Nullable Input<String> runtimeType;
+      private final @Nullable Output<String> runtimeType;
 
-    public Input<String> getRuntimeType() {
-        return this.runtimeType == null ? Input.empty() : this.runtimeType;
+    public Output<String> getRuntimeType() {
+        return this.runtimeType == null ? Output.empty() : this.runtimeType;
     }
 
     public OrganizationArgs(
-        @Nullable Input<String> analyticsRegion,
-        @Nullable Input<String> authorizedNetwork,
-        @Nullable Input<String> description,
-        @Nullable Input<String> displayName,
-        Input<String> projectId,
-        @Nullable Input<String> runtimeDatabaseEncryptionKeyName,
-        @Nullable Input<String> runtimeType) {
+        @Nullable Output<String> analyticsRegion,
+        @Nullable Output<String> authorizedNetwork,
+        @Nullable Output<String> description,
+        @Nullable Output<String> displayName,
+        Output<String> projectId,
+        @Nullable Output<String> runtimeDatabaseEncryptionKeyName,
+        @Nullable Output<String> runtimeType) {
         this.analyticsRegion = analyticsRegion;
         this.authorizedNetwork = authorizedNetwork;
         this.description = description;
@@ -116,13 +116,13 @@ public final class OrganizationArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private OrganizationArgs() {
-        this.analyticsRegion = Input.empty();
-        this.authorizedNetwork = Input.empty();
-        this.description = Input.empty();
-        this.displayName = Input.empty();
-        this.projectId = Input.empty();
-        this.runtimeDatabaseEncryptionKeyName = Input.empty();
-        this.runtimeType = Input.empty();
+        this.analyticsRegion = Output.empty();
+        this.authorizedNetwork = Output.empty();
+        this.description = Output.empty();
+        this.displayName = Output.empty();
+        this.projectId = Output.empty();
+        this.runtimeDatabaseEncryptionKeyName = Output.empty();
+        this.runtimeType = Output.empty();
     }
 
     public static Builder builder() {
@@ -134,13 +134,13 @@ public final class OrganizationArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> analyticsRegion;
-        private @Nullable Input<String> authorizedNetwork;
-        private @Nullable Input<String> description;
-        private @Nullable Input<String> displayName;
-        private Input<String> projectId;
-        private @Nullable Input<String> runtimeDatabaseEncryptionKeyName;
-        private @Nullable Input<String> runtimeType;
+        private @Nullable Output<String> analyticsRegion;
+        private @Nullable Output<String> authorizedNetwork;
+        private @Nullable Output<String> description;
+        private @Nullable Output<String> displayName;
+        private Output<String> projectId;
+        private @Nullable Output<String> runtimeDatabaseEncryptionKeyName;
+        private @Nullable Output<String> runtimeType;
 
         public Builder() {
     	      // Empty
@@ -157,73 +157,73 @@ public final class OrganizationArgs extends io.pulumi.resources.ResourceArgs {
     	      this.runtimeType = defaults.runtimeType;
         }
 
-        public Builder analyticsRegion(@Nullable Input<String> analyticsRegion) {
+        public Builder analyticsRegion(@Nullable Output<String> analyticsRegion) {
             this.analyticsRegion = analyticsRegion;
             return this;
         }
 
         public Builder analyticsRegion(@Nullable String analyticsRegion) {
-            this.analyticsRegion = Input.ofNullable(analyticsRegion);
+            this.analyticsRegion = Output.ofNullable(analyticsRegion);
             return this;
         }
 
-        public Builder authorizedNetwork(@Nullable Input<String> authorizedNetwork) {
+        public Builder authorizedNetwork(@Nullable Output<String> authorizedNetwork) {
             this.authorizedNetwork = authorizedNetwork;
             return this;
         }
 
         public Builder authorizedNetwork(@Nullable String authorizedNetwork) {
-            this.authorizedNetwork = Input.ofNullable(authorizedNetwork);
+            this.authorizedNetwork = Output.ofNullable(authorizedNetwork);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder displayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Input.ofNullable(displayName);
+            this.displayName = Output.ofNullable(displayName);
             return this;
         }
 
-        public Builder projectId(Input<String> projectId) {
+        public Builder projectId(Output<String> projectId) {
             this.projectId = Objects.requireNonNull(projectId);
             return this;
         }
 
         public Builder projectId(String projectId) {
-            this.projectId = Input.of(Objects.requireNonNull(projectId));
+            this.projectId = Output.of(Objects.requireNonNull(projectId));
             return this;
         }
 
-        public Builder runtimeDatabaseEncryptionKeyName(@Nullable Input<String> runtimeDatabaseEncryptionKeyName) {
+        public Builder runtimeDatabaseEncryptionKeyName(@Nullable Output<String> runtimeDatabaseEncryptionKeyName) {
             this.runtimeDatabaseEncryptionKeyName = runtimeDatabaseEncryptionKeyName;
             return this;
         }
 
         public Builder runtimeDatabaseEncryptionKeyName(@Nullable String runtimeDatabaseEncryptionKeyName) {
-            this.runtimeDatabaseEncryptionKeyName = Input.ofNullable(runtimeDatabaseEncryptionKeyName);
+            this.runtimeDatabaseEncryptionKeyName = Output.ofNullable(runtimeDatabaseEncryptionKeyName);
             return this;
         }
 
-        public Builder runtimeType(@Nullable Input<String> runtimeType) {
+        public Builder runtimeType(@Nullable Output<String> runtimeType) {
             this.runtimeType = runtimeType;
             return this;
         }
 
         public Builder runtimeType(@Nullable String runtimeType) {
-            this.runtimeType = Input.ofNullable(runtimeType);
+            this.runtimeType = Output.ofNullable(runtimeType);
             return this;
         }
         public OrganizationArgs build() {

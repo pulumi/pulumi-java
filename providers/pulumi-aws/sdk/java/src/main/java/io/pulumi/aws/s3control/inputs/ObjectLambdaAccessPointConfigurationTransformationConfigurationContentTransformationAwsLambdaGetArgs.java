@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.s3control.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,9 +19,9 @@ public final class ObjectLambdaAccessPointConfigurationTransformationConfigurati
      * 
      */
     @InputImport(name="functionArn", required=true)
-      private final Input<String> functionArn;
+      private final Output<String> functionArn;
 
-    public Input<String> getFunctionArn() {
+    public Output<String> getFunctionArn() {
         return this.functionArn;
     }
 
@@ -30,22 +30,22 @@ public final class ObjectLambdaAccessPointConfigurationTransformationConfigurati
      * 
      */
     @InputImport(name="functionPayload")
-      private final @Nullable Input<String> functionPayload;
+      private final @Nullable Output<String> functionPayload;
 
-    public Input<String> getFunctionPayload() {
-        return this.functionPayload == null ? Input.empty() : this.functionPayload;
+    public Output<String> getFunctionPayload() {
+        return this.functionPayload == null ? Output.empty() : this.functionPayload;
     }
 
     public ObjectLambdaAccessPointConfigurationTransformationConfigurationContentTransformationAwsLambdaGetArgs(
-        Input<String> functionArn,
-        @Nullable Input<String> functionPayload) {
+        Output<String> functionArn,
+        @Nullable Output<String> functionPayload) {
         this.functionArn = Objects.requireNonNull(functionArn, "expected parameter 'functionArn' to be non-null");
         this.functionPayload = functionPayload;
     }
 
     private ObjectLambdaAccessPointConfigurationTransformationConfigurationContentTransformationAwsLambdaGetArgs() {
-        this.functionArn = Input.empty();
-        this.functionPayload = Input.empty();
+        this.functionArn = Output.empty();
+        this.functionPayload = Output.empty();
     }
 
     public static Builder builder() {
@@ -57,8 +57,8 @@ public final class ObjectLambdaAccessPointConfigurationTransformationConfigurati
     }
 
     public static final class Builder {
-        private Input<String> functionArn;
-        private @Nullable Input<String> functionPayload;
+        private Output<String> functionArn;
+        private @Nullable Output<String> functionPayload;
 
         public Builder() {
     	      // Empty
@@ -70,23 +70,23 @@ public final class ObjectLambdaAccessPointConfigurationTransformationConfigurati
     	      this.functionPayload = defaults.functionPayload;
         }
 
-        public Builder functionArn(Input<String> functionArn) {
+        public Builder functionArn(Output<String> functionArn) {
             this.functionArn = Objects.requireNonNull(functionArn);
             return this;
         }
 
         public Builder functionArn(String functionArn) {
-            this.functionArn = Input.of(Objects.requireNonNull(functionArn));
+            this.functionArn = Output.of(Objects.requireNonNull(functionArn));
             return this;
         }
 
-        public Builder functionPayload(@Nullable Input<String> functionPayload) {
+        public Builder functionPayload(@Nullable Output<String> functionPayload) {
             this.functionPayload = functionPayload;
             return this;
         }
 
         public Builder functionPayload(@Nullable String functionPayload) {
-            this.functionPayload = Input.ofNullable(functionPayload);
+            this.functionPayload = Output.ofNullable(functionPayload);
             return this;
         }
         public ObjectLambdaAccessPointConfigurationTransformationConfigurationContentTransformationAwsLambdaGetArgs build() {

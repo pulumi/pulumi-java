@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.qldb;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -21,10 +21,10 @@ public final class LedgerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="deletionProtection")
-      private final @Nullable Input<Boolean> deletionProtection;
+      private final @Nullable Output<Boolean> deletionProtection;
 
-    public Input<Boolean> getDeletionProtection() {
-        return this.deletionProtection == null ? Input.empty() : this.deletionProtection;
+    public Output<Boolean> getDeletionProtection() {
+        return this.deletionProtection == null ? Output.empty() : this.deletionProtection;
     }
 
     /**
@@ -32,10 +32,10 @@ public final class LedgerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -43,9 +43,9 @@ public final class LedgerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="permissionsMode", required=true)
-      private final Input<String> permissionsMode;
+      private final Output<String> permissionsMode;
 
-    public Input<String> getPermissionsMode() {
+    public Output<String> getPermissionsMode() {
         return this.permissionsMode;
     }
 
@@ -54,17 +54,17 @@ public final class LedgerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public LedgerArgs(
-        @Nullable Input<Boolean> deletionProtection,
-        @Nullable Input<String> name,
-        Input<String> permissionsMode,
-        @Nullable Input<Map<String,String>> tags) {
+        @Nullable Output<Boolean> deletionProtection,
+        @Nullable Output<String> name,
+        Output<String> permissionsMode,
+        @Nullable Output<Map<String,String>> tags) {
         this.deletionProtection = deletionProtection;
         this.name = name;
         this.permissionsMode = Objects.requireNonNull(permissionsMode, "expected parameter 'permissionsMode' to be non-null");
@@ -72,10 +72,10 @@ public final class LedgerArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private LedgerArgs() {
-        this.deletionProtection = Input.empty();
-        this.name = Input.empty();
-        this.permissionsMode = Input.empty();
-        this.tags = Input.empty();
+        this.deletionProtection = Output.empty();
+        this.name = Output.empty();
+        this.permissionsMode = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -87,10 +87,10 @@ public final class LedgerArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> deletionProtection;
-        private @Nullable Input<String> name;
-        private Input<String> permissionsMode;
-        private @Nullable Input<Map<String,String>> tags;
+        private @Nullable Output<Boolean> deletionProtection;
+        private @Nullable Output<String> name;
+        private Output<String> permissionsMode;
+        private @Nullable Output<Map<String,String>> tags;
 
         public Builder() {
     	      // Empty
@@ -104,43 +104,43 @@ public final class LedgerArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder deletionProtection(@Nullable Input<Boolean> deletionProtection) {
+        public Builder deletionProtection(@Nullable Output<Boolean> deletionProtection) {
             this.deletionProtection = deletionProtection;
             return this;
         }
 
         public Builder deletionProtection(@Nullable Boolean deletionProtection) {
-            this.deletionProtection = Input.ofNullable(deletionProtection);
+            this.deletionProtection = Output.ofNullable(deletionProtection);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder permissionsMode(Input<String> permissionsMode) {
+        public Builder permissionsMode(Output<String> permissionsMode) {
             this.permissionsMode = Objects.requireNonNull(permissionsMode);
             return this;
         }
 
         public Builder permissionsMode(String permissionsMode) {
-            this.permissionsMode = Input.of(Objects.requireNonNull(permissionsMode));
+            this.permissionsMode = Output.of(Objects.requireNonNull(permissionsMode));
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public LedgerArgs build() {

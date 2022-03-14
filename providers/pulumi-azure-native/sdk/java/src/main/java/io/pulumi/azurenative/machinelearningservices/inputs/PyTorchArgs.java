@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.machinelearningservices.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -25,9 +25,9 @@ public final class PyTorchArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="distributionType", required=true)
-      private final Input<String> distributionType;
+      private final Output<String> distributionType;
 
-    public Input<String> getDistributionType() {
+    public Output<String> getDistributionType() {
         return this.distributionType;
     }
 
@@ -36,22 +36,22 @@ public final class PyTorchArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="processCount")
-      private final @Nullable Input<Integer> processCount;
+      private final @Nullable Output<Integer> processCount;
 
-    public Input<Integer> getProcessCount() {
-        return this.processCount == null ? Input.empty() : this.processCount;
+    public Output<Integer> getProcessCount() {
+        return this.processCount == null ? Output.empty() : this.processCount;
     }
 
     public PyTorchArgs(
-        Input<String> distributionType,
-        @Nullable Input<Integer> processCount) {
+        Output<String> distributionType,
+        @Nullable Output<Integer> processCount) {
         this.distributionType = Objects.requireNonNull(distributionType, "expected parameter 'distributionType' to be non-null");
         this.processCount = processCount;
     }
 
     private PyTorchArgs() {
-        this.distributionType = Input.empty();
-        this.processCount = Input.empty();
+        this.distributionType = Output.empty();
+        this.processCount = Output.empty();
     }
 
     public static Builder builder() {
@@ -63,8 +63,8 @@ public final class PyTorchArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> distributionType;
-        private @Nullable Input<Integer> processCount;
+        private Output<String> distributionType;
+        private @Nullable Output<Integer> processCount;
 
         public Builder() {
     	      // Empty
@@ -76,23 +76,23 @@ public final class PyTorchArgs extends io.pulumi.resources.ResourceArgs {
     	      this.processCount = defaults.processCount;
         }
 
-        public Builder distributionType(Input<String> distributionType) {
+        public Builder distributionType(Output<String> distributionType) {
             this.distributionType = Objects.requireNonNull(distributionType);
             return this;
         }
 
         public Builder distributionType(String distributionType) {
-            this.distributionType = Input.of(Objects.requireNonNull(distributionType));
+            this.distributionType = Output.of(Objects.requireNonNull(distributionType));
             return this;
         }
 
-        public Builder processCount(@Nullable Input<Integer> processCount) {
+        public Builder processCount(@Nullable Output<Integer> processCount) {
             this.processCount = processCount;
             return this;
         }
 
         public Builder processCount(@Nullable Integer processCount) {
-            this.processCount = Input.ofNullable(processCount);
+            this.processCount = Output.ofNullable(processCount);
             return this;
         }
         public PyTorchArgs build() {

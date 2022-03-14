@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.recommendationengine_v1beta1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.util.Objects;
@@ -22,9 +22,9 @@ public final class GoogleCloudRecommendationengineV1beta1ProductCatalogItemPrice
      * 
      */
     @InputImport(name="max", required=true)
-      private final Input<Double> max;
+      private final Output<Double> max;
 
-    public Input<Double> getMax() {
+    public Output<Double> getMax() {
         return this.max;
     }
 
@@ -33,22 +33,22 @@ public final class GoogleCloudRecommendationengineV1beta1ProductCatalogItemPrice
      * 
      */
     @InputImport(name="min", required=true)
-      private final Input<Double> min;
+      private final Output<Double> min;
 
-    public Input<Double> getMin() {
+    public Output<Double> getMin() {
         return this.min;
     }
 
     public GoogleCloudRecommendationengineV1beta1ProductCatalogItemPriceRangeArgs(
-        Input<Double> max,
-        Input<Double> min) {
+        Output<Double> max,
+        Output<Double> min) {
         this.max = Objects.requireNonNull(max, "expected parameter 'max' to be non-null");
         this.min = Objects.requireNonNull(min, "expected parameter 'min' to be non-null");
     }
 
     private GoogleCloudRecommendationengineV1beta1ProductCatalogItemPriceRangeArgs() {
-        this.max = Input.empty();
-        this.min = Input.empty();
+        this.max = Output.empty();
+        this.min = Output.empty();
     }
 
     public static Builder builder() {
@@ -60,8 +60,8 @@ public final class GoogleCloudRecommendationengineV1beta1ProductCatalogItemPrice
     }
 
     public static final class Builder {
-        private Input<Double> max;
-        private Input<Double> min;
+        private Output<Double> max;
+        private Output<Double> min;
 
         public Builder() {
     	      // Empty
@@ -73,23 +73,23 @@ public final class GoogleCloudRecommendationengineV1beta1ProductCatalogItemPrice
     	      this.min = defaults.min;
         }
 
-        public Builder max(Input<Double> max) {
+        public Builder max(Output<Double> max) {
             this.max = Objects.requireNonNull(max);
             return this;
         }
 
         public Builder max(Double max) {
-            this.max = Input.of(Objects.requireNonNull(max));
+            this.max = Output.of(Objects.requireNonNull(max));
             return this;
         }
 
-        public Builder min(Input<Double> min) {
+        public Builder min(Output<Double> min) {
             this.min = Objects.requireNonNull(min);
             return this;
         }
 
         public Builder min(Double min) {
-            this.min = Input.of(Objects.requireNonNull(min));
+            this.min = Output.of(Objects.requireNonNull(min));
             return this;
         }
         public GoogleCloudRecommendationengineV1beta1ProductCatalogItemPriceRangeArgs build() {

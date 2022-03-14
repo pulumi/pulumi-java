@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.ses.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -25,10 +25,10 @@ public final class DomainDkimState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dkimTokens")
-      private final @Nullable Input<List<String>> dkimTokens;
+      private final @Nullable Output<List<String>> dkimTokens;
 
-    public Input<List<String>> getDkimTokens() {
-        return this.dkimTokens == null ? Input.empty() : this.dkimTokens;
+    public Output<List<String>> getDkimTokens() {
+        return this.dkimTokens == null ? Output.empty() : this.dkimTokens;
     }
 
     /**
@@ -36,22 +36,22 @@ public final class DomainDkimState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="domain")
-      private final @Nullable Input<String> domain;
+      private final @Nullable Output<String> domain;
 
-    public Input<String> getDomain() {
-        return this.domain == null ? Input.empty() : this.domain;
+    public Output<String> getDomain() {
+        return this.domain == null ? Output.empty() : this.domain;
     }
 
     public DomainDkimState(
-        @Nullable Input<List<String>> dkimTokens,
-        @Nullable Input<String> domain) {
+        @Nullable Output<List<String>> dkimTokens,
+        @Nullable Output<String> domain) {
         this.dkimTokens = dkimTokens;
         this.domain = domain;
     }
 
     private DomainDkimState() {
-        this.dkimTokens = Input.empty();
-        this.domain = Input.empty();
+        this.dkimTokens = Output.empty();
+        this.domain = Output.empty();
     }
 
     public static Builder builder() {
@@ -63,8 +63,8 @@ public final class DomainDkimState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> dkimTokens;
-        private @Nullable Input<String> domain;
+        private @Nullable Output<List<String>> dkimTokens;
+        private @Nullable Output<String> domain;
 
         public Builder() {
     	      // Empty
@@ -76,23 +76,23 @@ public final class DomainDkimState extends io.pulumi.resources.ResourceArgs {
     	      this.domain = defaults.domain;
         }
 
-        public Builder dkimTokens(@Nullable Input<List<String>> dkimTokens) {
+        public Builder dkimTokens(@Nullable Output<List<String>> dkimTokens) {
             this.dkimTokens = dkimTokens;
             return this;
         }
 
         public Builder dkimTokens(@Nullable List<String> dkimTokens) {
-            this.dkimTokens = Input.ofNullable(dkimTokens);
+            this.dkimTokens = Output.ofNullable(dkimTokens);
             return this;
         }
 
-        public Builder domain(@Nullable Input<String> domain) {
+        public Builder domain(@Nullable Output<String> domain) {
             this.domain = domain;
             return this;
         }
 
         public Builder domain(@Nullable String domain) {
-            this.domain = Input.ofNullable(domain);
+            this.domain = Output.ofNullable(domain);
             return this;
         }
         public DomainDkimState build() {

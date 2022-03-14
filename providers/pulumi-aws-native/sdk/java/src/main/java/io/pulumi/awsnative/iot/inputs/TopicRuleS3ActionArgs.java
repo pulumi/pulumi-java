@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.iot.inputs;
 
 import io.pulumi.awsnative.iot.enums.TopicRuleCannedAccessControlList;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -16,38 +16,38 @@ public final class TopicRuleS3ActionArgs extends io.pulumi.resources.ResourceArg
     public static final TopicRuleS3ActionArgs Empty = new TopicRuleS3ActionArgs();
 
     @InputImport(name="bucketName", required=true)
-      private final Input<String> bucketName;
+      private final Output<String> bucketName;
 
-    public Input<String> getBucketName() {
+    public Output<String> getBucketName() {
         return this.bucketName;
     }
 
     @InputImport(name="cannedAcl")
-      private final @Nullable Input<TopicRuleCannedAccessControlList> cannedAcl;
+      private final @Nullable Output<TopicRuleCannedAccessControlList> cannedAcl;
 
-    public Input<TopicRuleCannedAccessControlList> getCannedAcl() {
-        return this.cannedAcl == null ? Input.empty() : this.cannedAcl;
+    public Output<TopicRuleCannedAccessControlList> getCannedAcl() {
+        return this.cannedAcl == null ? Output.empty() : this.cannedAcl;
     }
 
     @InputImport(name="key", required=true)
-      private final Input<String> key;
+      private final Output<String> key;
 
-    public Input<String> getKey() {
+    public Output<String> getKey() {
         return this.key;
     }
 
     @InputImport(name="roleArn", required=true)
-      private final Input<String> roleArn;
+      private final Output<String> roleArn;
 
-    public Input<String> getRoleArn() {
+    public Output<String> getRoleArn() {
         return this.roleArn;
     }
 
     public TopicRuleS3ActionArgs(
-        Input<String> bucketName,
-        @Nullable Input<TopicRuleCannedAccessControlList> cannedAcl,
-        Input<String> key,
-        Input<String> roleArn) {
+        Output<String> bucketName,
+        @Nullable Output<TopicRuleCannedAccessControlList> cannedAcl,
+        Output<String> key,
+        Output<String> roleArn) {
         this.bucketName = Objects.requireNonNull(bucketName, "expected parameter 'bucketName' to be non-null");
         this.cannedAcl = cannedAcl;
         this.key = Objects.requireNonNull(key, "expected parameter 'key' to be non-null");
@@ -55,10 +55,10 @@ public final class TopicRuleS3ActionArgs extends io.pulumi.resources.ResourceArg
     }
 
     private TopicRuleS3ActionArgs() {
-        this.bucketName = Input.empty();
-        this.cannedAcl = Input.empty();
-        this.key = Input.empty();
-        this.roleArn = Input.empty();
+        this.bucketName = Output.empty();
+        this.cannedAcl = Output.empty();
+        this.key = Output.empty();
+        this.roleArn = Output.empty();
     }
 
     public static Builder builder() {
@@ -70,10 +70,10 @@ public final class TopicRuleS3ActionArgs extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private Input<String> bucketName;
-        private @Nullable Input<TopicRuleCannedAccessControlList> cannedAcl;
-        private Input<String> key;
-        private Input<String> roleArn;
+        private Output<String> bucketName;
+        private @Nullable Output<TopicRuleCannedAccessControlList> cannedAcl;
+        private Output<String> key;
+        private Output<String> roleArn;
 
         public Builder() {
     	      // Empty
@@ -87,43 +87,43 @@ public final class TopicRuleS3ActionArgs extends io.pulumi.resources.ResourceArg
     	      this.roleArn = defaults.roleArn;
         }
 
-        public Builder bucketName(Input<String> bucketName) {
+        public Builder bucketName(Output<String> bucketName) {
             this.bucketName = Objects.requireNonNull(bucketName);
             return this;
         }
 
         public Builder bucketName(String bucketName) {
-            this.bucketName = Input.of(Objects.requireNonNull(bucketName));
+            this.bucketName = Output.of(Objects.requireNonNull(bucketName));
             return this;
         }
 
-        public Builder cannedAcl(@Nullable Input<TopicRuleCannedAccessControlList> cannedAcl) {
+        public Builder cannedAcl(@Nullable Output<TopicRuleCannedAccessControlList> cannedAcl) {
             this.cannedAcl = cannedAcl;
             return this;
         }
 
         public Builder cannedAcl(@Nullable TopicRuleCannedAccessControlList cannedAcl) {
-            this.cannedAcl = Input.ofNullable(cannedAcl);
+            this.cannedAcl = Output.ofNullable(cannedAcl);
             return this;
         }
 
-        public Builder key(Input<String> key) {
+        public Builder key(Output<String> key) {
             this.key = Objects.requireNonNull(key);
             return this;
         }
 
         public Builder key(String key) {
-            this.key = Input.of(Objects.requireNonNull(key));
+            this.key = Output.of(Objects.requireNonNull(key));
             return this;
         }
 
-        public Builder roleArn(Input<String> roleArn) {
+        public Builder roleArn(Output<String> roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
 
         public Builder roleArn(String roleArn) {
-            this.roleArn = Input.of(Objects.requireNonNull(roleArn));
+            this.roleArn = Output.of(Objects.requireNonNull(roleArn));
             return this;
         }
         public TopicRuleS3ActionArgs build() {

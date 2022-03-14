@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.healthcare_v1beta1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -24,10 +24,10 @@ public final class AttributeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="attributeDefinitionId")
-      private final @Nullable Input<String> attributeDefinitionId;
+      private final @Nullable Output<String> attributeDefinitionId;
 
-    public Input<String> getAttributeDefinitionId() {
-        return this.attributeDefinitionId == null ? Input.empty() : this.attributeDefinitionId;
+    public Output<String> getAttributeDefinitionId() {
+        return this.attributeDefinitionId == null ? Output.empty() : this.attributeDefinitionId;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class AttributeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="values")
-      private final @Nullable Input<List<String>> values;
+      private final @Nullable Output<List<String>> values;
 
-    public Input<List<String>> getValues() {
-        return this.values == null ? Input.empty() : this.values;
+    public Output<List<String>> getValues() {
+        return this.values == null ? Output.empty() : this.values;
     }
 
     public AttributeArgs(
-        @Nullable Input<String> attributeDefinitionId,
-        @Nullable Input<List<String>> values) {
+        @Nullable Output<String> attributeDefinitionId,
+        @Nullable Output<List<String>> values) {
         this.attributeDefinitionId = attributeDefinitionId;
         this.values = values;
     }
 
     private AttributeArgs() {
-        this.attributeDefinitionId = Input.empty();
-        this.values = Input.empty();
+        this.attributeDefinitionId = Output.empty();
+        this.values = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class AttributeArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> attributeDefinitionId;
-        private @Nullable Input<List<String>> values;
+        private @Nullable Output<String> attributeDefinitionId;
+        private @Nullable Output<List<String>> values;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class AttributeArgs extends io.pulumi.resources.ResourceArgs {
     	      this.values = defaults.values;
         }
 
-        public Builder attributeDefinitionId(@Nullable Input<String> attributeDefinitionId) {
+        public Builder attributeDefinitionId(@Nullable Output<String> attributeDefinitionId) {
             this.attributeDefinitionId = attributeDefinitionId;
             return this;
         }
 
         public Builder attributeDefinitionId(@Nullable String attributeDefinitionId) {
-            this.attributeDefinitionId = Input.ofNullable(attributeDefinitionId);
+            this.attributeDefinitionId = Output.ofNullable(attributeDefinitionId);
             return this;
         }
 
-        public Builder values(@Nullable Input<List<String>> values) {
+        public Builder values(@Nullable Output<List<String>> values) {
             this.values = values;
             return this;
         }
 
         public Builder values(@Nullable List<String> values) {
-            this.values = Input.ofNullable(values);
+            this.values = Output.ofNullable(values);
             return this;
         }
         public AttributeArgs build() {

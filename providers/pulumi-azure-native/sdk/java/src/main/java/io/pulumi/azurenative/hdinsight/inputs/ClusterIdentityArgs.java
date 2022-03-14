@@ -5,7 +5,7 @@ package io.pulumi.azurenative.hdinsight.inputs;
 
 import io.pulumi.azurenative.hdinsight.enums.ResourceIdentityType;
 import io.pulumi.azurenative.hdinsight.inputs.ClusterIdentityUserAssignedIdentitiesArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -26,10 +26,10 @@ public final class ClusterIdentityArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="type")
-      private final @Nullable Input<ResourceIdentityType> type;
+      private final @Nullable Output<ResourceIdentityType> type;
 
-    public Input<ResourceIdentityType> getType() {
-        return this.type == null ? Input.empty() : this.type;
+    public Output<ResourceIdentityType> getType() {
+        return this.type == null ? Output.empty() : this.type;
     }
 
     /**
@@ -37,22 +37,22 @@ public final class ClusterIdentityArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="userAssignedIdentities")
-      private final @Nullable Input<Map<String,ClusterIdentityUserAssignedIdentitiesArgs>> userAssignedIdentities;
+      private final @Nullable Output<Map<String,ClusterIdentityUserAssignedIdentitiesArgs>> userAssignedIdentities;
 
-    public Input<Map<String,ClusterIdentityUserAssignedIdentitiesArgs>> getUserAssignedIdentities() {
-        return this.userAssignedIdentities == null ? Input.empty() : this.userAssignedIdentities;
+    public Output<Map<String,ClusterIdentityUserAssignedIdentitiesArgs>> getUserAssignedIdentities() {
+        return this.userAssignedIdentities == null ? Output.empty() : this.userAssignedIdentities;
     }
 
     public ClusterIdentityArgs(
-        @Nullable Input<ResourceIdentityType> type,
-        @Nullable Input<Map<String,ClusterIdentityUserAssignedIdentitiesArgs>> userAssignedIdentities) {
+        @Nullable Output<ResourceIdentityType> type,
+        @Nullable Output<Map<String,ClusterIdentityUserAssignedIdentitiesArgs>> userAssignedIdentities) {
         this.type = type;
         this.userAssignedIdentities = userAssignedIdentities;
     }
 
     private ClusterIdentityArgs() {
-        this.type = Input.empty();
-        this.userAssignedIdentities = Input.empty();
+        this.type = Output.empty();
+        this.userAssignedIdentities = Output.empty();
     }
 
     public static Builder builder() {
@@ -64,8 +64,8 @@ public final class ClusterIdentityArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private @Nullable Input<ResourceIdentityType> type;
-        private @Nullable Input<Map<String,ClusterIdentityUserAssignedIdentitiesArgs>> userAssignedIdentities;
+        private @Nullable Output<ResourceIdentityType> type;
+        private @Nullable Output<Map<String,ClusterIdentityUserAssignedIdentitiesArgs>> userAssignedIdentities;
 
         public Builder() {
     	      // Empty
@@ -77,23 +77,23 @@ public final class ClusterIdentityArgs extends io.pulumi.resources.ResourceArgs 
     	      this.userAssignedIdentities = defaults.userAssignedIdentities;
         }
 
-        public Builder type(@Nullable Input<ResourceIdentityType> type) {
+        public Builder type(@Nullable Output<ResourceIdentityType> type) {
             this.type = type;
             return this;
         }
 
         public Builder type(@Nullable ResourceIdentityType type) {
-            this.type = Input.ofNullable(type);
+            this.type = Output.ofNullable(type);
             return this;
         }
 
-        public Builder userAssignedIdentities(@Nullable Input<Map<String,ClusterIdentityUserAssignedIdentitiesArgs>> userAssignedIdentities) {
+        public Builder userAssignedIdentities(@Nullable Output<Map<String,ClusterIdentityUserAssignedIdentitiesArgs>> userAssignedIdentities) {
             this.userAssignedIdentities = userAssignedIdentities;
             return this;
         }
 
         public Builder userAssignedIdentities(@Nullable Map<String,ClusterIdentityUserAssignedIdentitiesArgs> userAssignedIdentities) {
-            this.userAssignedIdentities = Input.ofNullable(userAssignedIdentities);
+            this.userAssignedIdentities = Output.ofNullable(userAssignedIdentities);
             return this;
         }
         public ClusterIdentityArgs build() {

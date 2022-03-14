@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.apigee;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -18,16 +18,16 @@ public final class EnvironmentIamPolicyArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="envId", required=true)
-      private final Input<String> envId;
+      private final Output<String> envId;
 
-    public Input<String> getEnvId() {
+    public Output<String> getEnvId() {
         return this.envId;
     }
 
     @InputImport(name="orgId", required=true)
-      private final Input<String> orgId;
+      private final Output<String> orgId;
 
-    public Input<String> getOrgId() {
+    public Output<String> getOrgId() {
         return this.orgId;
     }
 
@@ -37,25 +37,25 @@ public final class EnvironmentIamPolicyArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="policyData", required=true)
-      private final Input<String> policyData;
+      private final Output<String> policyData;
 
-    public Input<String> getPolicyData() {
+    public Output<String> getPolicyData() {
         return this.policyData;
     }
 
     public EnvironmentIamPolicyArgs(
-        Input<String> envId,
-        Input<String> orgId,
-        Input<String> policyData) {
+        Output<String> envId,
+        Output<String> orgId,
+        Output<String> policyData) {
         this.envId = Objects.requireNonNull(envId, "expected parameter 'envId' to be non-null");
         this.orgId = Objects.requireNonNull(orgId, "expected parameter 'orgId' to be non-null");
         this.policyData = Objects.requireNonNull(policyData, "expected parameter 'policyData' to be non-null");
     }
 
     private EnvironmentIamPolicyArgs() {
-        this.envId = Input.empty();
-        this.orgId = Input.empty();
-        this.policyData = Input.empty();
+        this.envId = Output.empty();
+        this.orgId = Output.empty();
+        this.policyData = Output.empty();
     }
 
     public static Builder builder() {
@@ -67,9 +67,9 @@ public final class EnvironmentIamPolicyArgs extends io.pulumi.resources.Resource
     }
 
     public static final class Builder {
-        private Input<String> envId;
-        private Input<String> orgId;
-        private Input<String> policyData;
+        private Output<String> envId;
+        private Output<String> orgId;
+        private Output<String> policyData;
 
         public Builder() {
     	      // Empty
@@ -82,33 +82,33 @@ public final class EnvironmentIamPolicyArgs extends io.pulumi.resources.Resource
     	      this.policyData = defaults.policyData;
         }
 
-        public Builder envId(Input<String> envId) {
+        public Builder envId(Output<String> envId) {
             this.envId = Objects.requireNonNull(envId);
             return this;
         }
 
         public Builder envId(String envId) {
-            this.envId = Input.of(Objects.requireNonNull(envId));
+            this.envId = Output.of(Objects.requireNonNull(envId));
             return this;
         }
 
-        public Builder orgId(Input<String> orgId) {
+        public Builder orgId(Output<String> orgId) {
             this.orgId = Objects.requireNonNull(orgId);
             return this;
         }
 
         public Builder orgId(String orgId) {
-            this.orgId = Input.of(Objects.requireNonNull(orgId));
+            this.orgId = Output.of(Objects.requireNonNull(orgId));
             return this;
         }
 
-        public Builder policyData(Input<String> policyData) {
+        public Builder policyData(Output<String> policyData) {
             this.policyData = Objects.requireNonNull(policyData);
             return this;
         }
 
         public Builder policyData(String policyData) {
-            this.policyData = Input.of(Objects.requireNonNull(policyData));
+            this.policyData = Output.of(Objects.requireNonNull(policyData));
             return this;
         }
         public EnvironmentIamPolicyArgs build() {

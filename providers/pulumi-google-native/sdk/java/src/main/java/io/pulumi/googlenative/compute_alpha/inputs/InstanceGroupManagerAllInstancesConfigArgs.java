@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.compute_alpha.inputs.InstancePropertiesPatchArgs;
 import java.util.Objects;
@@ -19,18 +19,18 @@ public final class InstanceGroupManagerAllInstancesConfigArgs extends io.pulumi.
      * 
      */
     @InputImport(name="properties")
-      private final @Nullable Input<InstancePropertiesPatchArgs> properties;
+      private final @Nullable Output<InstancePropertiesPatchArgs> properties;
 
-    public Input<InstancePropertiesPatchArgs> getProperties() {
-        return this.properties == null ? Input.empty() : this.properties;
+    public Output<InstancePropertiesPatchArgs> getProperties() {
+        return this.properties == null ? Output.empty() : this.properties;
     }
 
-    public InstanceGroupManagerAllInstancesConfigArgs(@Nullable Input<InstancePropertiesPatchArgs> properties) {
+    public InstanceGroupManagerAllInstancesConfigArgs(@Nullable Output<InstancePropertiesPatchArgs> properties) {
         this.properties = properties;
     }
 
     private InstanceGroupManagerAllInstancesConfigArgs() {
-        this.properties = Input.empty();
+        this.properties = Output.empty();
     }
 
     public static Builder builder() {
@@ -42,7 +42,7 @@ public final class InstanceGroupManagerAllInstancesConfigArgs extends io.pulumi.
     }
 
     public static final class Builder {
-        private @Nullable Input<InstancePropertiesPatchArgs> properties;
+        private @Nullable Output<InstancePropertiesPatchArgs> properties;
 
         public Builder() {
     	      // Empty
@@ -53,13 +53,13 @@ public final class InstanceGroupManagerAllInstancesConfigArgs extends io.pulumi.
     	      this.properties = defaults.properties;
         }
 
-        public Builder properties(@Nullable Input<InstancePropertiesPatchArgs> properties) {
+        public Builder properties(@Nullable Output<InstancePropertiesPatchArgs> properties) {
             this.properties = properties;
             return this;
         }
 
         public Builder properties(@Nullable InstancePropertiesPatchArgs properties) {
-            this.properties = Input.ofNullable(properties);
+            this.properties = Output.ofNullable(properties);
             return this;
         }
         public InstanceGroupManagerAllInstancesConfigArgs build() {

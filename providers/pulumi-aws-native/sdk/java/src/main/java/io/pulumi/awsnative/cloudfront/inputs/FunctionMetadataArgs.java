@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.cloudfront.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -15,18 +15,18 @@ public final class FunctionMetadataArgs extends io.pulumi.resources.ResourceArgs
     public static final FunctionMetadataArgs Empty = new FunctionMetadataArgs();
 
     @InputImport(name="functionARN")
-      private final @Nullable Input<String> functionARN;
+      private final @Nullable Output<String> functionARN;
 
-    public Input<String> getFunctionARN() {
-        return this.functionARN == null ? Input.empty() : this.functionARN;
+    public Output<String> getFunctionARN() {
+        return this.functionARN == null ? Output.empty() : this.functionARN;
     }
 
-    public FunctionMetadataArgs(@Nullable Input<String> functionARN) {
+    public FunctionMetadataArgs(@Nullable Output<String> functionARN) {
         this.functionARN = functionARN;
     }
 
     private FunctionMetadataArgs() {
-        this.functionARN = Input.empty();
+        this.functionARN = Output.empty();
     }
 
     public static Builder builder() {
@@ -38,7 +38,7 @@ public final class FunctionMetadataArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private @Nullable Input<String> functionARN;
+        private @Nullable Output<String> functionARN;
 
         public Builder() {
     	      // Empty
@@ -49,13 +49,13 @@ public final class FunctionMetadataArgs extends io.pulumi.resources.ResourceArgs
     	      this.functionARN = defaults.functionARN;
         }
 
-        public Builder functionARN(@Nullable Input<String> functionARN) {
+        public Builder functionARN(@Nullable Output<String> functionARN) {
             this.functionARN = functionARN;
             return this;
         }
 
         public Builder functionARN(@Nullable String functionARN) {
-            this.functionARN = Input.ofNullable(functionARN);
+            this.functionARN = Output.ofNullable(functionARN);
             return this;
         }
         public FunctionMetadataArgs build() {

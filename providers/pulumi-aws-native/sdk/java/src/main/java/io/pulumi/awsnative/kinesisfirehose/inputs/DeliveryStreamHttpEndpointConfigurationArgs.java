@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.kinesisfirehose.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -15,39 +15,39 @@ public final class DeliveryStreamHttpEndpointConfigurationArgs extends io.pulumi
     public static final DeliveryStreamHttpEndpointConfigurationArgs Empty = new DeliveryStreamHttpEndpointConfigurationArgs();
 
     @InputImport(name="accessKey")
-      private final @Nullable Input<String> accessKey;
+      private final @Nullable Output<String> accessKey;
 
-    public Input<String> getAccessKey() {
-        return this.accessKey == null ? Input.empty() : this.accessKey;
+    public Output<String> getAccessKey() {
+        return this.accessKey == null ? Output.empty() : this.accessKey;
     }
 
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     @InputImport(name="url", required=true)
-      private final Input<String> url;
+      private final Output<String> url;
 
-    public Input<String> getUrl() {
+    public Output<String> getUrl() {
         return this.url;
     }
 
     public DeliveryStreamHttpEndpointConfigurationArgs(
-        @Nullable Input<String> accessKey,
-        @Nullable Input<String> name,
-        Input<String> url) {
+        @Nullable Output<String> accessKey,
+        @Nullable Output<String> name,
+        Output<String> url) {
         this.accessKey = accessKey;
         this.name = name;
         this.url = Objects.requireNonNull(url, "expected parameter 'url' to be non-null");
     }
 
     private DeliveryStreamHttpEndpointConfigurationArgs() {
-        this.accessKey = Input.empty();
-        this.name = Input.empty();
-        this.url = Input.empty();
+        this.accessKey = Output.empty();
+        this.name = Output.empty();
+        this.url = Output.empty();
     }
 
     public static Builder builder() {
@@ -59,9 +59,9 @@ public final class DeliveryStreamHttpEndpointConfigurationArgs extends io.pulumi
     }
 
     public static final class Builder {
-        private @Nullable Input<String> accessKey;
-        private @Nullable Input<String> name;
-        private Input<String> url;
+        private @Nullable Output<String> accessKey;
+        private @Nullable Output<String> name;
+        private Output<String> url;
 
         public Builder() {
     	      // Empty
@@ -74,33 +74,33 @@ public final class DeliveryStreamHttpEndpointConfigurationArgs extends io.pulumi
     	      this.url = defaults.url;
         }
 
-        public Builder accessKey(@Nullable Input<String> accessKey) {
+        public Builder accessKey(@Nullable Output<String> accessKey) {
             this.accessKey = accessKey;
             return this;
         }
 
         public Builder accessKey(@Nullable String accessKey) {
-            this.accessKey = Input.ofNullable(accessKey);
+            this.accessKey = Output.ofNullable(accessKey);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder url(Input<String> url) {
+        public Builder url(Output<String> url) {
             this.url = Objects.requireNonNull(url);
             return this;
         }
 
         public Builder url(String url) {
-            this.url = Input.of(Objects.requireNonNull(url));
+            this.url = Output.of(Objects.requireNonNull(url));
             return this;
         }
         public DeliveryStreamHttpEndpointConfigurationArgs build() {

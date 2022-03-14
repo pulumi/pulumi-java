@@ -7,7 +7,7 @@ import io.pulumi.aws.backup.inputs.SelectionConditionStringEqualArgs;
 import io.pulumi.aws.backup.inputs.SelectionConditionStringLikeArgs;
 import io.pulumi.aws.backup.inputs.SelectionConditionStringNotEqualArgs;
 import io.pulumi.aws.backup.inputs.SelectionConditionStringNotLikeArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
@@ -19,38 +19,38 @@ public final class SelectionConditionArgs extends io.pulumi.resources.ResourceAr
     public static final SelectionConditionArgs Empty = new SelectionConditionArgs();
 
     @InputImport(name="stringEquals")
-      private final @Nullable Input<List<SelectionConditionStringEqualArgs>> stringEquals;
+      private final @Nullable Output<List<SelectionConditionStringEqualArgs>> stringEquals;
 
-    public Input<List<SelectionConditionStringEqualArgs>> getStringEquals() {
-        return this.stringEquals == null ? Input.empty() : this.stringEquals;
+    public Output<List<SelectionConditionStringEqualArgs>> getStringEquals() {
+        return this.stringEquals == null ? Output.empty() : this.stringEquals;
     }
 
     @InputImport(name="stringLikes")
-      private final @Nullable Input<List<SelectionConditionStringLikeArgs>> stringLikes;
+      private final @Nullable Output<List<SelectionConditionStringLikeArgs>> stringLikes;
 
-    public Input<List<SelectionConditionStringLikeArgs>> getStringLikes() {
-        return this.stringLikes == null ? Input.empty() : this.stringLikes;
+    public Output<List<SelectionConditionStringLikeArgs>> getStringLikes() {
+        return this.stringLikes == null ? Output.empty() : this.stringLikes;
     }
 
     @InputImport(name="stringNotEquals")
-      private final @Nullable Input<List<SelectionConditionStringNotEqualArgs>> stringNotEquals;
+      private final @Nullable Output<List<SelectionConditionStringNotEqualArgs>> stringNotEquals;
 
-    public Input<List<SelectionConditionStringNotEqualArgs>> getStringNotEquals() {
-        return this.stringNotEquals == null ? Input.empty() : this.stringNotEquals;
+    public Output<List<SelectionConditionStringNotEqualArgs>> getStringNotEquals() {
+        return this.stringNotEquals == null ? Output.empty() : this.stringNotEquals;
     }
 
     @InputImport(name="stringNotLikes")
-      private final @Nullable Input<List<SelectionConditionStringNotLikeArgs>> stringNotLikes;
+      private final @Nullable Output<List<SelectionConditionStringNotLikeArgs>> stringNotLikes;
 
-    public Input<List<SelectionConditionStringNotLikeArgs>> getStringNotLikes() {
-        return this.stringNotLikes == null ? Input.empty() : this.stringNotLikes;
+    public Output<List<SelectionConditionStringNotLikeArgs>> getStringNotLikes() {
+        return this.stringNotLikes == null ? Output.empty() : this.stringNotLikes;
     }
 
     public SelectionConditionArgs(
-        @Nullable Input<List<SelectionConditionStringEqualArgs>> stringEquals,
-        @Nullable Input<List<SelectionConditionStringLikeArgs>> stringLikes,
-        @Nullable Input<List<SelectionConditionStringNotEqualArgs>> stringNotEquals,
-        @Nullable Input<List<SelectionConditionStringNotLikeArgs>> stringNotLikes) {
+        @Nullable Output<List<SelectionConditionStringEqualArgs>> stringEquals,
+        @Nullable Output<List<SelectionConditionStringLikeArgs>> stringLikes,
+        @Nullable Output<List<SelectionConditionStringNotEqualArgs>> stringNotEquals,
+        @Nullable Output<List<SelectionConditionStringNotLikeArgs>> stringNotLikes) {
         this.stringEquals = stringEquals;
         this.stringLikes = stringLikes;
         this.stringNotEquals = stringNotEquals;
@@ -58,10 +58,10 @@ public final class SelectionConditionArgs extends io.pulumi.resources.ResourceAr
     }
 
     private SelectionConditionArgs() {
-        this.stringEquals = Input.empty();
-        this.stringLikes = Input.empty();
-        this.stringNotEquals = Input.empty();
-        this.stringNotLikes = Input.empty();
+        this.stringEquals = Output.empty();
+        this.stringLikes = Output.empty();
+        this.stringNotEquals = Output.empty();
+        this.stringNotLikes = Output.empty();
     }
 
     public static Builder builder() {
@@ -73,10 +73,10 @@ public final class SelectionConditionArgs extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private @Nullable Input<List<SelectionConditionStringEqualArgs>> stringEquals;
-        private @Nullable Input<List<SelectionConditionStringLikeArgs>> stringLikes;
-        private @Nullable Input<List<SelectionConditionStringNotEqualArgs>> stringNotEquals;
-        private @Nullable Input<List<SelectionConditionStringNotLikeArgs>> stringNotLikes;
+        private @Nullable Output<List<SelectionConditionStringEqualArgs>> stringEquals;
+        private @Nullable Output<List<SelectionConditionStringLikeArgs>> stringLikes;
+        private @Nullable Output<List<SelectionConditionStringNotEqualArgs>> stringNotEquals;
+        private @Nullable Output<List<SelectionConditionStringNotLikeArgs>> stringNotLikes;
 
         public Builder() {
     	      // Empty
@@ -90,43 +90,43 @@ public final class SelectionConditionArgs extends io.pulumi.resources.ResourceAr
     	      this.stringNotLikes = defaults.stringNotLikes;
         }
 
-        public Builder stringEquals(@Nullable Input<List<SelectionConditionStringEqualArgs>> stringEquals) {
+        public Builder stringEquals(@Nullable Output<List<SelectionConditionStringEqualArgs>> stringEquals) {
             this.stringEquals = stringEquals;
             return this;
         }
 
         public Builder stringEquals(@Nullable List<SelectionConditionStringEqualArgs> stringEquals) {
-            this.stringEquals = Input.ofNullable(stringEquals);
+            this.stringEquals = Output.ofNullable(stringEquals);
             return this;
         }
 
-        public Builder stringLikes(@Nullable Input<List<SelectionConditionStringLikeArgs>> stringLikes) {
+        public Builder stringLikes(@Nullable Output<List<SelectionConditionStringLikeArgs>> stringLikes) {
             this.stringLikes = stringLikes;
             return this;
         }
 
         public Builder stringLikes(@Nullable List<SelectionConditionStringLikeArgs> stringLikes) {
-            this.stringLikes = Input.ofNullable(stringLikes);
+            this.stringLikes = Output.ofNullable(stringLikes);
             return this;
         }
 
-        public Builder stringNotEquals(@Nullable Input<List<SelectionConditionStringNotEqualArgs>> stringNotEquals) {
+        public Builder stringNotEquals(@Nullable Output<List<SelectionConditionStringNotEqualArgs>> stringNotEquals) {
             this.stringNotEquals = stringNotEquals;
             return this;
         }
 
         public Builder stringNotEquals(@Nullable List<SelectionConditionStringNotEqualArgs> stringNotEquals) {
-            this.stringNotEquals = Input.ofNullable(stringNotEquals);
+            this.stringNotEquals = Output.ofNullable(stringNotEquals);
             return this;
         }
 
-        public Builder stringNotLikes(@Nullable Input<List<SelectionConditionStringNotLikeArgs>> stringNotLikes) {
+        public Builder stringNotLikes(@Nullable Output<List<SelectionConditionStringNotLikeArgs>> stringNotLikes) {
             this.stringNotLikes = stringNotLikes;
             return this;
         }
 
         public Builder stringNotLikes(@Nullable List<SelectionConditionStringNotLikeArgs> stringNotLikes) {
-            this.stringNotLikes = Input.ofNullable(stringNotLikes);
+            this.stringNotLikes = Output.ofNullable(stringNotLikes);
             return this;
         }
         public SelectionConditionArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.kubernetesconfiguration.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class ScopeNamespaceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="targetNamespace")
-      private final @Nullable Input<String> targetNamespace;
+      private final @Nullable Output<String> targetNamespace;
 
-    public Input<String> getTargetNamespace() {
-        return this.targetNamespace == null ? Input.empty() : this.targetNamespace;
+    public Output<String> getTargetNamespace() {
+        return this.targetNamespace == null ? Output.empty() : this.targetNamespace;
     }
 
-    public ScopeNamespaceArgs(@Nullable Input<String> targetNamespace) {
+    public ScopeNamespaceArgs(@Nullable Output<String> targetNamespace) {
         this.targetNamespace = targetNamespace;
     }
 
     private ScopeNamespaceArgs() {
-        this.targetNamespace = Input.empty();
+        this.targetNamespace = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class ScopeNamespaceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> targetNamespace;
+        private @Nullable Output<String> targetNamespace;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class ScopeNamespaceArgs extends io.pulumi.resources.ResourceArgs {
     	      this.targetNamespace = defaults.targetNamespace;
         }
 
-        public Builder targetNamespace(@Nullable Input<String> targetNamespace) {
+        public Builder targetNamespace(@Nullable Output<String> targetNamespace) {
             this.targetNamespace = targetNamespace;
             return this;
         }
 
         public Builder targetNamespace(@Nullable String targetNamespace) {
-            this.targetNamespace = Input.ofNullable(targetNamespace);
+            this.targetNamespace = Output.ofNullable(targetNamespace);
             return this;
         }
         public ScopeNamespaceArgs build() {

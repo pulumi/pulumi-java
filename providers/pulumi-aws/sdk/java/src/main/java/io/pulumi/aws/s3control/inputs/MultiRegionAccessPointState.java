@@ -4,7 +4,7 @@
 package io.pulumi.aws.s3control.inputs;
 
 import io.pulumi.aws.s3control.inputs.MultiRegionAccessPointDetailsGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -20,10 +20,10 @@ public final class MultiRegionAccessPointState extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="accountId")
-      private final @Nullable Input<String> accountId;
+      private final @Nullable Output<String> accountId;
 
-    public Input<String> getAccountId() {
-        return this.accountId == null ? Input.empty() : this.accountId;
+    public Output<String> getAccountId() {
+        return this.accountId == null ? Output.empty() : this.accountId;
     }
 
     /**
@@ -31,10 +31,10 @@ public final class MultiRegionAccessPointState extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="alias")
-      private final @Nullable Input<String> alias;
+      private final @Nullable Output<String> alias;
 
-    public Input<String> getAlias() {
-        return this.alias == null ? Input.empty() : this.alias;
+    public Output<String> getAlias() {
+        return this.alias == null ? Output.empty() : this.alias;
     }
 
     /**
@@ -42,10 +42,10 @@ public final class MultiRegionAccessPointState extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="arn")
-      private final @Nullable Input<String> arn;
+      private final @Nullable Output<String> arn;
 
-    public Input<String> getArn() {
-        return this.arn == null ? Input.empty() : this.arn;
+    public Output<String> getArn() {
+        return this.arn == null ? Output.empty() : this.arn;
     }
 
     /**
@@ -53,10 +53,10 @@ public final class MultiRegionAccessPointState extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="details")
-      private final @Nullable Input<MultiRegionAccessPointDetailsGetArgs> details;
+      private final @Nullable Output<MultiRegionAccessPointDetailsGetArgs> details;
 
-    public Input<MultiRegionAccessPointDetailsGetArgs> getDetails() {
-        return this.details == null ? Input.empty() : this.details;
+    public Output<MultiRegionAccessPointDetailsGetArgs> getDetails() {
+        return this.details == null ? Output.empty() : this.details;
     }
 
     /**
@@ -64,10 +64,10 @@ public final class MultiRegionAccessPointState extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="domainName")
-      private final @Nullable Input<String> domainName;
+      private final @Nullable Output<String> domainName;
 
-    public Input<String> getDomainName() {
-        return this.domainName == null ? Input.empty() : this.domainName;
+    public Output<String> getDomainName() {
+        return this.domainName == null ? Output.empty() : this.domainName;
     }
 
     /**
@@ -75,19 +75,19 @@ public final class MultiRegionAccessPointState extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="status")
-      private final @Nullable Input<String> status;
+      private final @Nullable Output<String> status;
 
-    public Input<String> getStatus() {
-        return this.status == null ? Input.empty() : this.status;
+    public Output<String> getStatus() {
+        return this.status == null ? Output.empty() : this.status;
     }
 
     public MultiRegionAccessPointState(
-        @Nullable Input<String> accountId,
-        @Nullable Input<String> alias,
-        @Nullable Input<String> arn,
-        @Nullable Input<MultiRegionAccessPointDetailsGetArgs> details,
-        @Nullable Input<String> domainName,
-        @Nullable Input<String> status) {
+        @Nullable Output<String> accountId,
+        @Nullable Output<String> alias,
+        @Nullable Output<String> arn,
+        @Nullable Output<MultiRegionAccessPointDetailsGetArgs> details,
+        @Nullable Output<String> domainName,
+        @Nullable Output<String> status) {
         this.accountId = accountId;
         this.alias = alias;
         this.arn = arn;
@@ -97,12 +97,12 @@ public final class MultiRegionAccessPointState extends io.pulumi.resources.Resou
     }
 
     private MultiRegionAccessPointState() {
-        this.accountId = Input.empty();
-        this.alias = Input.empty();
-        this.arn = Input.empty();
-        this.details = Input.empty();
-        this.domainName = Input.empty();
-        this.status = Input.empty();
+        this.accountId = Output.empty();
+        this.alias = Output.empty();
+        this.arn = Output.empty();
+        this.details = Output.empty();
+        this.domainName = Output.empty();
+        this.status = Output.empty();
     }
 
     public static Builder builder() {
@@ -114,12 +114,12 @@ public final class MultiRegionAccessPointState extends io.pulumi.resources.Resou
     }
 
     public static final class Builder {
-        private @Nullable Input<String> accountId;
-        private @Nullable Input<String> alias;
-        private @Nullable Input<String> arn;
-        private @Nullable Input<MultiRegionAccessPointDetailsGetArgs> details;
-        private @Nullable Input<String> domainName;
-        private @Nullable Input<String> status;
+        private @Nullable Output<String> accountId;
+        private @Nullable Output<String> alias;
+        private @Nullable Output<String> arn;
+        private @Nullable Output<MultiRegionAccessPointDetailsGetArgs> details;
+        private @Nullable Output<String> domainName;
+        private @Nullable Output<String> status;
 
         public Builder() {
     	      // Empty
@@ -135,63 +135,63 @@ public final class MultiRegionAccessPointState extends io.pulumi.resources.Resou
     	      this.status = defaults.status;
         }
 
-        public Builder accountId(@Nullable Input<String> accountId) {
+        public Builder accountId(@Nullable Output<String> accountId) {
             this.accountId = accountId;
             return this;
         }
 
         public Builder accountId(@Nullable String accountId) {
-            this.accountId = Input.ofNullable(accountId);
+            this.accountId = Output.ofNullable(accountId);
             return this;
         }
 
-        public Builder alias(@Nullable Input<String> alias) {
+        public Builder alias(@Nullable Output<String> alias) {
             this.alias = alias;
             return this;
         }
 
         public Builder alias(@Nullable String alias) {
-            this.alias = Input.ofNullable(alias);
+            this.alias = Output.ofNullable(alias);
             return this;
         }
 
-        public Builder arn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
 
         public Builder arn(@Nullable String arn) {
-            this.arn = Input.ofNullable(arn);
+            this.arn = Output.ofNullable(arn);
             return this;
         }
 
-        public Builder details(@Nullable Input<MultiRegionAccessPointDetailsGetArgs> details) {
+        public Builder details(@Nullable Output<MultiRegionAccessPointDetailsGetArgs> details) {
             this.details = details;
             return this;
         }
 
         public Builder details(@Nullable MultiRegionAccessPointDetailsGetArgs details) {
-            this.details = Input.ofNullable(details);
+            this.details = Output.ofNullable(details);
             return this;
         }
 
-        public Builder domainName(@Nullable Input<String> domainName) {
+        public Builder domainName(@Nullable Output<String> domainName) {
             this.domainName = domainName;
             return this;
         }
 
         public Builder domainName(@Nullable String domainName) {
-            this.domainName = Input.ofNullable(domainName);
+            this.domainName = Output.ofNullable(domainName);
             return this;
         }
 
-        public Builder status(@Nullable Input<String> status) {
+        public Builder status(@Nullable Output<String> status) {
             this.status = status;
             return this;
         }
 
         public Builder status(@Nullable String status) {
-            this.status = Input.ofNullable(status);
+            this.status = Output.ofNullable(status);
             return this;
         }
         public MultiRegionAccessPointState build() {

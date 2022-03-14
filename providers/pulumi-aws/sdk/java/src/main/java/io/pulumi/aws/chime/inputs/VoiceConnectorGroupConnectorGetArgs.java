@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.chime.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -19,9 +19,9 @@ public final class VoiceConnectorGroupConnectorGetArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="priority", required=true)
-      private final Input<Integer> priority;
+      private final Output<Integer> priority;
 
-    public Input<Integer> getPriority() {
+    public Output<Integer> getPriority() {
         return this.priority;
     }
 
@@ -30,22 +30,22 @@ public final class VoiceConnectorGroupConnectorGetArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="voiceConnectorId", required=true)
-      private final Input<String> voiceConnectorId;
+      private final Output<String> voiceConnectorId;
 
-    public Input<String> getVoiceConnectorId() {
+    public Output<String> getVoiceConnectorId() {
         return this.voiceConnectorId;
     }
 
     public VoiceConnectorGroupConnectorGetArgs(
-        Input<Integer> priority,
-        Input<String> voiceConnectorId) {
+        Output<Integer> priority,
+        Output<String> voiceConnectorId) {
         this.priority = Objects.requireNonNull(priority, "expected parameter 'priority' to be non-null");
         this.voiceConnectorId = Objects.requireNonNull(voiceConnectorId, "expected parameter 'voiceConnectorId' to be non-null");
     }
 
     private VoiceConnectorGroupConnectorGetArgs() {
-        this.priority = Input.empty();
-        this.voiceConnectorId = Input.empty();
+        this.priority = Output.empty();
+        this.voiceConnectorId = Output.empty();
     }
 
     public static Builder builder() {
@@ -57,8 +57,8 @@ public final class VoiceConnectorGroupConnectorGetArgs extends io.pulumi.resourc
     }
 
     public static final class Builder {
-        private Input<Integer> priority;
-        private Input<String> voiceConnectorId;
+        private Output<Integer> priority;
+        private Output<String> voiceConnectorId;
 
         public Builder() {
     	      // Empty
@@ -70,23 +70,23 @@ public final class VoiceConnectorGroupConnectorGetArgs extends io.pulumi.resourc
     	      this.voiceConnectorId = defaults.voiceConnectorId;
         }
 
-        public Builder priority(Input<Integer> priority) {
+        public Builder priority(Output<Integer> priority) {
             this.priority = Objects.requireNonNull(priority);
             return this;
         }
 
         public Builder priority(Integer priority) {
-            this.priority = Input.of(Objects.requireNonNull(priority));
+            this.priority = Output.of(Objects.requireNonNull(priority));
             return this;
         }
 
-        public Builder voiceConnectorId(Input<String> voiceConnectorId) {
+        public Builder voiceConnectorId(Output<String> voiceConnectorId) {
             this.voiceConnectorId = Objects.requireNonNull(voiceConnectorId);
             return this;
         }
 
         public Builder voiceConnectorId(String voiceConnectorId) {
-            this.voiceConnectorId = Input.of(Objects.requireNonNull(voiceConnectorId));
+            this.voiceConnectorId = Output.of(Objects.requireNonNull(voiceConnectorId));
             return this;
         }
         public VoiceConnectorGroupConnectorGetArgs build() {

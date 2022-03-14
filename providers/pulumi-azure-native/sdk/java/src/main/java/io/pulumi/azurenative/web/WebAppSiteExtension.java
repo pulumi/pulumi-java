@@ -6,7 +6,6 @@ package io.pulumi.azurenative.web;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.web.WebAppSiteExtensionArgs;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -383,29 +382,29 @@ public class WebAppSiteExtension extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public WebAppSiteExtension(String name, WebAppSiteExtensionArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:web:WebAppSiteExtension", name, args == null ? WebAppSiteExtensionArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("azure-native:web:WebAppSiteExtension", name, args == null ? WebAppSiteExtensionArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private WebAppSiteExtension(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private WebAppSiteExtension(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:web:WebAppSiteExtension", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:web/v20160801:WebAppSiteExtension").build()),
-                Input.of(Alias.builder().setType("azure-native:web/v20180201:WebAppSiteExtension").build()),
-                Input.of(Alias.builder().setType("azure-native:web/v20181101:WebAppSiteExtension").build()),
-                Input.of(Alias.builder().setType("azure-native:web/v20190801:WebAppSiteExtension").build()),
-                Input.of(Alias.builder().setType("azure-native:web/v20200601:WebAppSiteExtension").build()),
-                Input.of(Alias.builder().setType("azure-native:web/v20200901:WebAppSiteExtension").build()),
-                Input.of(Alias.builder().setType("azure-native:web/v20201001:WebAppSiteExtension").build()),
-                Input.of(Alias.builder().setType("azure-native:web/v20201201:WebAppSiteExtension").build()),
-                Input.of(Alias.builder().setType("azure-native:web/v20210101:WebAppSiteExtension").build()),
-                Input.of(Alias.builder().setType("azure-native:web/v20210115:WebAppSiteExtension").build()),
-                Input.of(Alias.builder().setType("azure-native:web/v20210201:WebAppSiteExtension").build()),
-                Input.of(Alias.builder().setType("azure-native:web/v20210301:WebAppSiteExtension").build())
+                Output.of(Alias.builder().setType("azure-native:web/v20160801:WebAppSiteExtension").build()),
+                Output.of(Alias.builder().setType("azure-native:web/v20180201:WebAppSiteExtension").build()),
+                Output.of(Alias.builder().setType("azure-native:web/v20181101:WebAppSiteExtension").build()),
+                Output.of(Alias.builder().setType("azure-native:web/v20190801:WebAppSiteExtension").build()),
+                Output.of(Alias.builder().setType("azure-native:web/v20200601:WebAppSiteExtension").build()),
+                Output.of(Alias.builder().setType("azure-native:web/v20200901:WebAppSiteExtension").build()),
+                Output.of(Alias.builder().setType("azure-native:web/v20201001:WebAppSiteExtension").build()),
+                Output.of(Alias.builder().setType("azure-native:web/v20201201:WebAppSiteExtension").build()),
+                Output.of(Alias.builder().setType("azure-native:web/v20210101:WebAppSiteExtension").build()),
+                Output.of(Alias.builder().setType("azure-native:web/v20210115:WebAppSiteExtension").build()),
+                Output.of(Alias.builder().setType("azure-native:web/v20210201:WebAppSiteExtension").build()),
+                Output.of(Alias.builder().setType("azure-native:web/v20210301:WebAppSiteExtension").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -419,7 +418,7 @@ public class WebAppSiteExtension extends io.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static WebAppSiteExtension get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static WebAppSiteExtension get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new WebAppSiteExtension(name, id, options);
     }
 }

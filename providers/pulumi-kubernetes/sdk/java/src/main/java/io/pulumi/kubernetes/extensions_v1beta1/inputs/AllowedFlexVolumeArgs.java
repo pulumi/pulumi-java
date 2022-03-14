@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.extensions_v1beta1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -22,18 +22,18 @@ public final class AllowedFlexVolumeArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="driver", required=true)
-      private final Input<String> driver;
+      private final Output<String> driver;
 
-    public Input<String> getDriver() {
+    public Output<String> getDriver() {
         return this.driver;
     }
 
-    public AllowedFlexVolumeArgs(Input<String> driver) {
+    public AllowedFlexVolumeArgs(Output<String> driver) {
         this.driver = Objects.requireNonNull(driver, "expected parameter 'driver' to be non-null");
     }
 
     private AllowedFlexVolumeArgs() {
-        this.driver = Input.empty();
+        this.driver = Output.empty();
     }
 
     public static Builder builder() {
@@ -45,7 +45,7 @@ public final class AllowedFlexVolumeArgs extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private Input<String> driver;
+        private Output<String> driver;
 
         public Builder() {
     	      // Empty
@@ -56,13 +56,13 @@ public final class AllowedFlexVolumeArgs extends io.pulumi.resources.ResourceArg
     	      this.driver = defaults.driver;
         }
 
-        public Builder driver(Input<String> driver) {
+        public Builder driver(Output<String> driver) {
             this.driver = Objects.requireNonNull(driver);
             return this;
         }
 
         public Builder driver(String driver) {
-            this.driver = Input.of(Objects.requireNonNull(driver));
+            this.driver = Output.of(Objects.requireNonNull(driver));
             return this;
         }
         public AllowedFlexVolumeArgs build() {

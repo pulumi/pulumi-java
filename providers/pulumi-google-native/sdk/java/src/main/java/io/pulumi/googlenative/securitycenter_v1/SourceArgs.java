@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.securitycenter_v1;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class SourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="canonicalName")
-      private final @Nullable Input<String> canonicalName;
+      private final @Nullable Output<String> canonicalName;
 
-    public Input<String> getCanonicalName() {
-        return this.canonicalName == null ? Input.empty() : this.canonicalName;
+    public Output<String> getCanonicalName() {
+        return this.canonicalName == null ? Output.empty() : this.canonicalName;
     }
 
     /**
@@ -30,10 +30,10 @@ public final class SourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -41,10 +41,10 @@ public final class SourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName")
-      private final @Nullable Input<String> displayName;
+      private final @Nullable Output<String> displayName;
 
-    public Input<String> getDisplayName() {
-        return this.displayName == null ? Input.empty() : this.displayName;
+    public Output<String> getDisplayName() {
+        return this.displayName == null ? Output.empty() : this.displayName;
     }
 
     /**
@@ -52,25 +52,25 @@ public final class SourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     @InputImport(name="organizationId", required=true)
-      private final Input<String> organizationId;
+      private final Output<String> organizationId;
 
-    public Input<String> getOrganizationId() {
+    public Output<String> getOrganizationId() {
         return this.organizationId;
     }
 
     public SourceArgs(
-        @Nullable Input<String> canonicalName,
-        @Nullable Input<String> description,
-        @Nullable Input<String> displayName,
-        @Nullable Input<String> name,
-        Input<String> organizationId) {
+        @Nullable Output<String> canonicalName,
+        @Nullable Output<String> description,
+        @Nullable Output<String> displayName,
+        @Nullable Output<String> name,
+        Output<String> organizationId) {
         this.canonicalName = canonicalName;
         this.description = description;
         this.displayName = displayName;
@@ -79,11 +79,11 @@ public final class SourceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private SourceArgs() {
-        this.canonicalName = Input.empty();
-        this.description = Input.empty();
-        this.displayName = Input.empty();
-        this.name = Input.empty();
-        this.organizationId = Input.empty();
+        this.canonicalName = Output.empty();
+        this.description = Output.empty();
+        this.displayName = Output.empty();
+        this.name = Output.empty();
+        this.organizationId = Output.empty();
     }
 
     public static Builder builder() {
@@ -95,11 +95,11 @@ public final class SourceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> canonicalName;
-        private @Nullable Input<String> description;
-        private @Nullable Input<String> displayName;
-        private @Nullable Input<String> name;
-        private Input<String> organizationId;
+        private @Nullable Output<String> canonicalName;
+        private @Nullable Output<String> description;
+        private @Nullable Output<String> displayName;
+        private @Nullable Output<String> name;
+        private Output<String> organizationId;
 
         public Builder() {
     	      // Empty
@@ -114,53 +114,53 @@ public final class SourceArgs extends io.pulumi.resources.ResourceArgs {
     	      this.organizationId = defaults.organizationId;
         }
 
-        public Builder canonicalName(@Nullable Input<String> canonicalName) {
+        public Builder canonicalName(@Nullable Output<String> canonicalName) {
             this.canonicalName = canonicalName;
             return this;
         }
 
         public Builder canonicalName(@Nullable String canonicalName) {
-            this.canonicalName = Input.ofNullable(canonicalName);
+            this.canonicalName = Output.ofNullable(canonicalName);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder displayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Input.ofNullable(displayName);
+            this.displayName = Output.ofNullable(displayName);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder organizationId(Input<String> organizationId) {
+        public Builder organizationId(Output<String> organizationId) {
             this.organizationId = Objects.requireNonNull(organizationId);
             return this;
         }
 
         public Builder organizationId(String organizationId) {
-            this.organizationId = Input.of(Objects.requireNonNull(organizationId));
+            this.organizationId = Output.of(Objects.requireNonNull(organizationId));
             return this;
         }
         public SourceArgs build() {

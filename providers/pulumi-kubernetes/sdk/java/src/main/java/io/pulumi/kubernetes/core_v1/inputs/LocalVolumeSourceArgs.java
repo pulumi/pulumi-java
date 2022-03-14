@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.core_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class LocalVolumeSourceArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="fsType")
-      private final @Nullable Input<String> fsType;
+      private final @Nullable Output<String> fsType;
 
-    public Input<String> getFsType() {
-        return this.fsType == null ? Input.empty() : this.fsType;
+    public Output<String> getFsType() {
+        return this.fsType == null ? Output.empty() : this.fsType;
     }
 
     /**
@@ -34,22 +34,22 @@ public final class LocalVolumeSourceArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="path", required=true)
-      private final Input<String> path;
+      private final Output<String> path;
 
-    public Input<String> getPath() {
+    public Output<String> getPath() {
         return this.path;
     }
 
     public LocalVolumeSourceArgs(
-        @Nullable Input<String> fsType,
-        Input<String> path) {
+        @Nullable Output<String> fsType,
+        Output<String> path) {
         this.fsType = fsType;
         this.path = Objects.requireNonNull(path, "expected parameter 'path' to be non-null");
     }
 
     private LocalVolumeSourceArgs() {
-        this.fsType = Input.empty();
-        this.path = Input.empty();
+        this.fsType = Output.empty();
+        this.path = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class LocalVolumeSourceArgs extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private @Nullable Input<String> fsType;
-        private Input<String> path;
+        private @Nullable Output<String> fsType;
+        private Output<String> path;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class LocalVolumeSourceArgs extends io.pulumi.resources.ResourceArg
     	      this.path = defaults.path;
         }
 
-        public Builder fsType(@Nullable Input<String> fsType) {
+        public Builder fsType(@Nullable Output<String> fsType) {
             this.fsType = fsType;
             return this;
         }
 
         public Builder fsType(@Nullable String fsType) {
-            this.fsType = Input.ofNullable(fsType);
+            this.fsType = Output.ofNullable(fsType);
             return this;
         }
 
-        public Builder path(Input<String> path) {
+        public Builder path(Output<String> path) {
             this.path = Objects.requireNonNull(path);
             return this;
         }
 
         public Builder path(String path) {
-            this.path = Input.of(Objects.requireNonNull(path));
+            this.path = Output.of(Objects.requireNonNull(path));
             return this;
         }
         public LocalVolumeSourceArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class ApplicationGatewayRewriteRuleConditionArgs extends io.pulumi.
      * 
      */
     @InputImport(name="ignoreCase")
-      private final @Nullable Input<Boolean> ignoreCase;
+      private final @Nullable Output<Boolean> ignoreCase;
 
-    public Input<Boolean> getIgnoreCase() {
-        return this.ignoreCase == null ? Input.empty() : this.ignoreCase;
+    public Output<Boolean> getIgnoreCase() {
+        return this.ignoreCase == null ? Output.empty() : this.ignoreCase;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class ApplicationGatewayRewriteRuleConditionArgs extends io.pulumi.
      * 
      */
     @InputImport(name="negate")
-      private final @Nullable Input<Boolean> negate;
+      private final @Nullable Output<Boolean> negate;
 
-    public Input<Boolean> getNegate() {
-        return this.negate == null ? Input.empty() : this.negate;
+    public Output<Boolean> getNegate() {
+        return this.negate == null ? Output.empty() : this.negate;
     }
 
     /**
@@ -46,10 +46,10 @@ public final class ApplicationGatewayRewriteRuleConditionArgs extends io.pulumi.
      * 
      */
     @InputImport(name="pattern")
-      private final @Nullable Input<String> pattern;
+      private final @Nullable Output<String> pattern;
 
-    public Input<String> getPattern() {
-        return this.pattern == null ? Input.empty() : this.pattern;
+    public Output<String> getPattern() {
+        return this.pattern == null ? Output.empty() : this.pattern;
     }
 
     /**
@@ -57,17 +57,17 @@ public final class ApplicationGatewayRewriteRuleConditionArgs extends io.pulumi.
      * 
      */
     @InputImport(name="variable")
-      private final @Nullable Input<String> variable;
+      private final @Nullable Output<String> variable;
 
-    public Input<String> getVariable() {
-        return this.variable == null ? Input.empty() : this.variable;
+    public Output<String> getVariable() {
+        return this.variable == null ? Output.empty() : this.variable;
     }
 
     public ApplicationGatewayRewriteRuleConditionArgs(
-        @Nullable Input<Boolean> ignoreCase,
-        @Nullable Input<Boolean> negate,
-        @Nullable Input<String> pattern,
-        @Nullable Input<String> variable) {
+        @Nullable Output<Boolean> ignoreCase,
+        @Nullable Output<Boolean> negate,
+        @Nullable Output<String> pattern,
+        @Nullable Output<String> variable) {
         this.ignoreCase = ignoreCase;
         this.negate = negate;
         this.pattern = pattern;
@@ -75,10 +75,10 @@ public final class ApplicationGatewayRewriteRuleConditionArgs extends io.pulumi.
     }
 
     private ApplicationGatewayRewriteRuleConditionArgs() {
-        this.ignoreCase = Input.empty();
-        this.negate = Input.empty();
-        this.pattern = Input.empty();
-        this.variable = Input.empty();
+        this.ignoreCase = Output.empty();
+        this.negate = Output.empty();
+        this.pattern = Output.empty();
+        this.variable = Output.empty();
     }
 
     public static Builder builder() {
@@ -90,10 +90,10 @@ public final class ApplicationGatewayRewriteRuleConditionArgs extends io.pulumi.
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> ignoreCase;
-        private @Nullable Input<Boolean> negate;
-        private @Nullable Input<String> pattern;
-        private @Nullable Input<String> variable;
+        private @Nullable Output<Boolean> ignoreCase;
+        private @Nullable Output<Boolean> negate;
+        private @Nullable Output<String> pattern;
+        private @Nullable Output<String> variable;
 
         public Builder() {
     	      // Empty
@@ -107,43 +107,43 @@ public final class ApplicationGatewayRewriteRuleConditionArgs extends io.pulumi.
     	      this.variable = defaults.variable;
         }
 
-        public Builder ignoreCase(@Nullable Input<Boolean> ignoreCase) {
+        public Builder ignoreCase(@Nullable Output<Boolean> ignoreCase) {
             this.ignoreCase = ignoreCase;
             return this;
         }
 
         public Builder ignoreCase(@Nullable Boolean ignoreCase) {
-            this.ignoreCase = Input.ofNullable(ignoreCase);
+            this.ignoreCase = Output.ofNullable(ignoreCase);
             return this;
         }
 
-        public Builder negate(@Nullable Input<Boolean> negate) {
+        public Builder negate(@Nullable Output<Boolean> negate) {
             this.negate = negate;
             return this;
         }
 
         public Builder negate(@Nullable Boolean negate) {
-            this.negate = Input.ofNullable(negate);
+            this.negate = Output.ofNullable(negate);
             return this;
         }
 
-        public Builder pattern(@Nullable Input<String> pattern) {
+        public Builder pattern(@Nullable Output<String> pattern) {
             this.pattern = pattern;
             return this;
         }
 
         public Builder pattern(@Nullable String pattern) {
-            this.pattern = Input.ofNullable(pattern);
+            this.pattern = Output.ofNullable(pattern);
             return this;
         }
 
-        public Builder variable(@Nullable Input<String> variable) {
+        public Builder variable(@Nullable Output<String> variable) {
             this.variable = variable;
             return this;
         }
 
         public Builder variable(@Nullable String variable) {
-            this.variable = Input.ofNullable(variable);
+            this.variable = Output.ofNullable(variable);
             return this;
         }
         public ApplicationGatewayRewriteRuleConditionArgs build() {

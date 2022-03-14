@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudasset_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.cloudasset_v1.inputs.AccessSelectorArgs;
 import io.pulumi.googlenative.cloudasset_v1.inputs.ConditionContextArgs;
@@ -28,10 +28,10 @@ public final class IamPolicyAnalysisQueryArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="accessSelector")
-      private final @Nullable Input<AccessSelectorArgs> accessSelector;
+      private final @Nullable Output<AccessSelectorArgs> accessSelector;
 
-    public Input<AccessSelectorArgs> getAccessSelector() {
-        return this.accessSelector == null ? Input.empty() : this.accessSelector;
+    public Output<AccessSelectorArgs> getAccessSelector() {
+        return this.accessSelector == null ? Output.empty() : this.accessSelector;
     }
 
     /**
@@ -39,10 +39,10 @@ public final class IamPolicyAnalysisQueryArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="conditionContext")
-      private final @Nullable Input<ConditionContextArgs> conditionContext;
+      private final @Nullable Output<ConditionContextArgs> conditionContext;
 
-    public Input<ConditionContextArgs> getConditionContext() {
-        return this.conditionContext == null ? Input.empty() : this.conditionContext;
+    public Output<ConditionContextArgs> getConditionContext() {
+        return this.conditionContext == null ? Output.empty() : this.conditionContext;
     }
 
     /**
@@ -50,10 +50,10 @@ public final class IamPolicyAnalysisQueryArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="identitySelector")
-      private final @Nullable Input<IdentitySelectorArgs> identitySelector;
+      private final @Nullable Output<IdentitySelectorArgs> identitySelector;
 
-    public Input<IdentitySelectorArgs> getIdentitySelector() {
-        return this.identitySelector == null ? Input.empty() : this.identitySelector;
+    public Output<IdentitySelectorArgs> getIdentitySelector() {
+        return this.identitySelector == null ? Output.empty() : this.identitySelector;
     }
 
     /**
@@ -61,10 +61,10 @@ public final class IamPolicyAnalysisQueryArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="options")
-      private final @Nullable Input<OptionsArgs> options;
+      private final @Nullable Output<OptionsArgs> options;
 
-    public Input<OptionsArgs> getOptions() {
-        return this.options == null ? Input.empty() : this.options;
+    public Output<OptionsArgs> getOptions() {
+        return this.options == null ? Output.empty() : this.options;
     }
 
     /**
@@ -72,10 +72,10 @@ public final class IamPolicyAnalysisQueryArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="resourceSelector")
-      private final @Nullable Input<ResourceSelectorArgs> resourceSelector;
+      private final @Nullable Output<ResourceSelectorArgs> resourceSelector;
 
-    public Input<ResourceSelectorArgs> getResourceSelector() {
-        return this.resourceSelector == null ? Input.empty() : this.resourceSelector;
+    public Output<ResourceSelectorArgs> getResourceSelector() {
+        return this.resourceSelector == null ? Output.empty() : this.resourceSelector;
     }
 
     /**
@@ -83,19 +83,19 @@ public final class IamPolicyAnalysisQueryArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="scope", required=true)
-      private final Input<String> scope;
+      private final Output<String> scope;
 
-    public Input<String> getScope() {
+    public Output<String> getScope() {
         return this.scope;
     }
 
     public IamPolicyAnalysisQueryArgs(
-        @Nullable Input<AccessSelectorArgs> accessSelector,
-        @Nullable Input<ConditionContextArgs> conditionContext,
-        @Nullable Input<IdentitySelectorArgs> identitySelector,
-        @Nullable Input<OptionsArgs> options,
-        @Nullable Input<ResourceSelectorArgs> resourceSelector,
-        Input<String> scope) {
+        @Nullable Output<AccessSelectorArgs> accessSelector,
+        @Nullable Output<ConditionContextArgs> conditionContext,
+        @Nullable Output<IdentitySelectorArgs> identitySelector,
+        @Nullable Output<OptionsArgs> options,
+        @Nullable Output<ResourceSelectorArgs> resourceSelector,
+        Output<String> scope) {
         this.accessSelector = accessSelector;
         this.conditionContext = conditionContext;
         this.identitySelector = identitySelector;
@@ -105,12 +105,12 @@ public final class IamPolicyAnalysisQueryArgs extends io.pulumi.resources.Resour
     }
 
     private IamPolicyAnalysisQueryArgs() {
-        this.accessSelector = Input.empty();
-        this.conditionContext = Input.empty();
-        this.identitySelector = Input.empty();
-        this.options = Input.empty();
-        this.resourceSelector = Input.empty();
-        this.scope = Input.empty();
+        this.accessSelector = Output.empty();
+        this.conditionContext = Output.empty();
+        this.identitySelector = Output.empty();
+        this.options = Output.empty();
+        this.resourceSelector = Output.empty();
+        this.scope = Output.empty();
     }
 
     public static Builder builder() {
@@ -122,12 +122,12 @@ public final class IamPolicyAnalysisQueryArgs extends io.pulumi.resources.Resour
     }
 
     public static final class Builder {
-        private @Nullable Input<AccessSelectorArgs> accessSelector;
-        private @Nullable Input<ConditionContextArgs> conditionContext;
-        private @Nullable Input<IdentitySelectorArgs> identitySelector;
-        private @Nullable Input<OptionsArgs> options;
-        private @Nullable Input<ResourceSelectorArgs> resourceSelector;
-        private Input<String> scope;
+        private @Nullable Output<AccessSelectorArgs> accessSelector;
+        private @Nullable Output<ConditionContextArgs> conditionContext;
+        private @Nullable Output<IdentitySelectorArgs> identitySelector;
+        private @Nullable Output<OptionsArgs> options;
+        private @Nullable Output<ResourceSelectorArgs> resourceSelector;
+        private Output<String> scope;
 
         public Builder() {
     	      // Empty
@@ -143,63 +143,63 @@ public final class IamPolicyAnalysisQueryArgs extends io.pulumi.resources.Resour
     	      this.scope = defaults.scope;
         }
 
-        public Builder accessSelector(@Nullable Input<AccessSelectorArgs> accessSelector) {
+        public Builder accessSelector(@Nullable Output<AccessSelectorArgs> accessSelector) {
             this.accessSelector = accessSelector;
             return this;
         }
 
         public Builder accessSelector(@Nullable AccessSelectorArgs accessSelector) {
-            this.accessSelector = Input.ofNullable(accessSelector);
+            this.accessSelector = Output.ofNullable(accessSelector);
             return this;
         }
 
-        public Builder conditionContext(@Nullable Input<ConditionContextArgs> conditionContext) {
+        public Builder conditionContext(@Nullable Output<ConditionContextArgs> conditionContext) {
             this.conditionContext = conditionContext;
             return this;
         }
 
         public Builder conditionContext(@Nullable ConditionContextArgs conditionContext) {
-            this.conditionContext = Input.ofNullable(conditionContext);
+            this.conditionContext = Output.ofNullable(conditionContext);
             return this;
         }
 
-        public Builder identitySelector(@Nullable Input<IdentitySelectorArgs> identitySelector) {
+        public Builder identitySelector(@Nullable Output<IdentitySelectorArgs> identitySelector) {
             this.identitySelector = identitySelector;
             return this;
         }
 
         public Builder identitySelector(@Nullable IdentitySelectorArgs identitySelector) {
-            this.identitySelector = Input.ofNullable(identitySelector);
+            this.identitySelector = Output.ofNullable(identitySelector);
             return this;
         }
 
-        public Builder options(@Nullable Input<OptionsArgs> options) {
+        public Builder options(@Nullable Output<OptionsArgs> options) {
             this.options = options;
             return this;
         }
 
         public Builder options(@Nullable OptionsArgs options) {
-            this.options = Input.ofNullable(options);
+            this.options = Output.ofNullable(options);
             return this;
         }
 
-        public Builder resourceSelector(@Nullable Input<ResourceSelectorArgs> resourceSelector) {
+        public Builder resourceSelector(@Nullable Output<ResourceSelectorArgs> resourceSelector) {
             this.resourceSelector = resourceSelector;
             return this;
         }
 
         public Builder resourceSelector(@Nullable ResourceSelectorArgs resourceSelector) {
-            this.resourceSelector = Input.ofNullable(resourceSelector);
+            this.resourceSelector = Output.ofNullable(resourceSelector);
             return this;
         }
 
-        public Builder scope(Input<String> scope) {
+        public Builder scope(Output<String> scope) {
             this.scope = Objects.requireNonNull(scope);
             return this;
         }
 
         public Builder scope(String scope) {
-            this.scope = Input.of(Objects.requireNonNull(scope));
+            this.scope = Output.of(Objects.requireNonNull(scope));
             return this;
         }
         public IamPolicyAnalysisQueryArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.ec2;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -18,9 +18,9 @@ public final class LocalGatewayRouteArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="destinationCidrBlock", required=true)
-      private final Input<String> destinationCidrBlock;
+      private final Output<String> destinationCidrBlock;
 
-    public Input<String> getDestinationCidrBlock() {
+    public Output<String> getDestinationCidrBlock() {
         return this.destinationCidrBlock;
     }
 
@@ -29,9 +29,9 @@ public final class LocalGatewayRouteArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="localGatewayRouteTableId", required=true)
-      private final Input<String> localGatewayRouteTableId;
+      private final Output<String> localGatewayRouteTableId;
 
-    public Input<String> getLocalGatewayRouteTableId() {
+    public Output<String> getLocalGatewayRouteTableId() {
         return this.localGatewayRouteTableId;
     }
 
@@ -40,25 +40,25 @@ public final class LocalGatewayRouteArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="localGatewayVirtualInterfaceGroupId", required=true)
-      private final Input<String> localGatewayVirtualInterfaceGroupId;
+      private final Output<String> localGatewayVirtualInterfaceGroupId;
 
-    public Input<String> getLocalGatewayVirtualInterfaceGroupId() {
+    public Output<String> getLocalGatewayVirtualInterfaceGroupId() {
         return this.localGatewayVirtualInterfaceGroupId;
     }
 
     public LocalGatewayRouteArgs(
-        Input<String> destinationCidrBlock,
-        Input<String> localGatewayRouteTableId,
-        Input<String> localGatewayVirtualInterfaceGroupId) {
+        Output<String> destinationCidrBlock,
+        Output<String> localGatewayRouteTableId,
+        Output<String> localGatewayVirtualInterfaceGroupId) {
         this.destinationCidrBlock = Objects.requireNonNull(destinationCidrBlock, "expected parameter 'destinationCidrBlock' to be non-null");
         this.localGatewayRouteTableId = Objects.requireNonNull(localGatewayRouteTableId, "expected parameter 'localGatewayRouteTableId' to be non-null");
         this.localGatewayVirtualInterfaceGroupId = Objects.requireNonNull(localGatewayVirtualInterfaceGroupId, "expected parameter 'localGatewayVirtualInterfaceGroupId' to be non-null");
     }
 
     private LocalGatewayRouteArgs() {
-        this.destinationCidrBlock = Input.empty();
-        this.localGatewayRouteTableId = Input.empty();
-        this.localGatewayVirtualInterfaceGroupId = Input.empty();
+        this.destinationCidrBlock = Output.empty();
+        this.localGatewayRouteTableId = Output.empty();
+        this.localGatewayVirtualInterfaceGroupId = Output.empty();
     }
 
     public static Builder builder() {
@@ -70,9 +70,9 @@ public final class LocalGatewayRouteArgs extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private Input<String> destinationCidrBlock;
-        private Input<String> localGatewayRouteTableId;
-        private Input<String> localGatewayVirtualInterfaceGroupId;
+        private Output<String> destinationCidrBlock;
+        private Output<String> localGatewayRouteTableId;
+        private Output<String> localGatewayVirtualInterfaceGroupId;
 
         public Builder() {
     	      // Empty
@@ -85,33 +85,33 @@ public final class LocalGatewayRouteArgs extends io.pulumi.resources.ResourceArg
     	      this.localGatewayVirtualInterfaceGroupId = defaults.localGatewayVirtualInterfaceGroupId;
         }
 
-        public Builder destinationCidrBlock(Input<String> destinationCidrBlock) {
+        public Builder destinationCidrBlock(Output<String> destinationCidrBlock) {
             this.destinationCidrBlock = Objects.requireNonNull(destinationCidrBlock);
             return this;
         }
 
         public Builder destinationCidrBlock(String destinationCidrBlock) {
-            this.destinationCidrBlock = Input.of(Objects.requireNonNull(destinationCidrBlock));
+            this.destinationCidrBlock = Output.of(Objects.requireNonNull(destinationCidrBlock));
             return this;
         }
 
-        public Builder localGatewayRouteTableId(Input<String> localGatewayRouteTableId) {
+        public Builder localGatewayRouteTableId(Output<String> localGatewayRouteTableId) {
             this.localGatewayRouteTableId = Objects.requireNonNull(localGatewayRouteTableId);
             return this;
         }
 
         public Builder localGatewayRouteTableId(String localGatewayRouteTableId) {
-            this.localGatewayRouteTableId = Input.of(Objects.requireNonNull(localGatewayRouteTableId));
+            this.localGatewayRouteTableId = Output.of(Objects.requireNonNull(localGatewayRouteTableId));
             return this;
         }
 
-        public Builder localGatewayVirtualInterfaceGroupId(Input<String> localGatewayVirtualInterfaceGroupId) {
+        public Builder localGatewayVirtualInterfaceGroupId(Output<String> localGatewayVirtualInterfaceGroupId) {
             this.localGatewayVirtualInterfaceGroupId = Objects.requireNonNull(localGatewayVirtualInterfaceGroupId);
             return this;
         }
 
         public Builder localGatewayVirtualInterfaceGroupId(String localGatewayVirtualInterfaceGroupId) {
-            this.localGatewayVirtualInterfaceGroupId = Input.of(Objects.requireNonNull(localGatewayVirtualInterfaceGroupId));
+            this.localGatewayVirtualInterfaceGroupId = Output.of(Objects.requireNonNull(localGatewayVirtualInterfaceGroupId));
             return this;
         }
         public LocalGatewayRouteArgs build() {

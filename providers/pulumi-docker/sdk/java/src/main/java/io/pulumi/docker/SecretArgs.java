@@ -3,7 +3,7 @@
 
 package io.pulumi.docker;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.docker.inputs.SecretLabelArgs;
 import java.lang.String;
@@ -21,9 +21,9 @@ public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="data", required=true)
-      private final Input<String> data;
+      private final Output<String> data;
 
-    public Input<String> getData() {
+    public Output<String> getData() {
         return this.data;
     }
 
@@ -32,10 +32,10 @@ public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labels")
-      private final @Nullable Input<List<SecretLabelArgs>> labels;
+      private final @Nullable Output<List<SecretLabelArgs>> labels;
 
-    public Input<List<SecretLabelArgs>> getLabels() {
-        return this.labels == null ? Input.empty() : this.labels;
+    public Output<List<SecretLabelArgs>> getLabels() {
+        return this.labels == null ? Output.empty() : this.labels;
     }
 
     /**
@@ -43,25 +43,25 @@ public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     public SecretArgs(
-        Input<String> data,
-        @Nullable Input<List<SecretLabelArgs>> labels,
-        @Nullable Input<String> name) {
+        Output<String> data,
+        @Nullable Output<List<SecretLabelArgs>> labels,
+        @Nullable Output<String> name) {
         this.data = Objects.requireNonNull(data, "expected parameter 'data' to be non-null");
         this.labels = labels;
         this.name = name;
     }
 
     private SecretArgs() {
-        this.data = Input.empty();
-        this.labels = Input.empty();
-        this.name = Input.empty();
+        this.data = Output.empty();
+        this.labels = Output.empty();
+        this.name = Output.empty();
     }
 
     public static Builder builder() {
@@ -73,9 +73,9 @@ public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> data;
-        private @Nullable Input<List<SecretLabelArgs>> labels;
-        private @Nullable Input<String> name;
+        private Output<String> data;
+        private @Nullable Output<List<SecretLabelArgs>> labels;
+        private @Nullable Output<String> name;
 
         public Builder() {
     	      // Empty
@@ -88,33 +88,33 @@ public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
     	      this.name = defaults.name;
         }
 
-        public Builder data(Input<String> data) {
+        public Builder data(Output<String> data) {
             this.data = Objects.requireNonNull(data);
             return this;
         }
 
         public Builder data(String data) {
-            this.data = Input.of(Objects.requireNonNull(data));
+            this.data = Output.of(Objects.requireNonNull(data));
             return this;
         }
 
-        public Builder labels(@Nullable Input<List<SecretLabelArgs>> labels) {
+        public Builder labels(@Nullable Output<List<SecretLabelArgs>> labels) {
             this.labels = labels;
             return this;
         }
 
         public Builder labels(@Nullable List<SecretLabelArgs> labels) {
-            this.labels = Input.ofNullable(labels);
+            this.labels = Output.ofNullable(labels);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
         public SecretArgs build() {

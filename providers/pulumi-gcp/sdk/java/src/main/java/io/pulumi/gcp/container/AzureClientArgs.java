@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.container;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,9 +19,9 @@ public final class AzureClientArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="applicationId", required=true)
-      private final Input<String> applicationId;
+      private final Output<String> applicationId;
 
-    public Input<String> getApplicationId() {
+    public Output<String> getApplicationId() {
         return this.applicationId;
     }
 
@@ -30,9 +30,9 @@ public final class AzureClientArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location", required=true)
-      private final Input<String> location;
+      private final Output<String> location;
 
-    public Input<String> getLocation() {
+    public Output<String> getLocation() {
         return this.location;
     }
 
@@ -41,10 +41,10 @@ public final class AzureClientArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -52,10 +52,10 @@ public final class AzureClientArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -63,18 +63,18 @@ public final class AzureClientArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tenantId", required=true)
-      private final Input<String> tenantId;
+      private final Output<String> tenantId;
 
-    public Input<String> getTenantId() {
+    public Output<String> getTenantId() {
         return this.tenantId;
     }
 
     public AzureClientArgs(
-        Input<String> applicationId,
-        Input<String> location,
-        @Nullable Input<String> name,
-        @Nullable Input<String> project,
-        Input<String> tenantId) {
+        Output<String> applicationId,
+        Output<String> location,
+        @Nullable Output<String> name,
+        @Nullable Output<String> project,
+        Output<String> tenantId) {
         this.applicationId = Objects.requireNonNull(applicationId, "expected parameter 'applicationId' to be non-null");
         this.location = Objects.requireNonNull(location, "expected parameter 'location' to be non-null");
         this.name = name;
@@ -83,11 +83,11 @@ public final class AzureClientArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private AzureClientArgs() {
-        this.applicationId = Input.empty();
-        this.location = Input.empty();
-        this.name = Input.empty();
-        this.project = Input.empty();
-        this.tenantId = Input.empty();
+        this.applicationId = Output.empty();
+        this.location = Output.empty();
+        this.name = Output.empty();
+        this.project = Output.empty();
+        this.tenantId = Output.empty();
     }
 
     public static Builder builder() {
@@ -99,11 +99,11 @@ public final class AzureClientArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> applicationId;
-        private Input<String> location;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> project;
-        private Input<String> tenantId;
+        private Output<String> applicationId;
+        private Output<String> location;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> project;
+        private Output<String> tenantId;
 
         public Builder() {
     	      // Empty
@@ -118,53 +118,53 @@ public final class AzureClientArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tenantId = defaults.tenantId;
         }
 
-        public Builder applicationId(Input<String> applicationId) {
+        public Builder applicationId(Output<String> applicationId) {
             this.applicationId = Objects.requireNonNull(applicationId);
             return this;
         }
 
         public Builder applicationId(String applicationId) {
-            this.applicationId = Input.of(Objects.requireNonNull(applicationId));
+            this.applicationId = Output.of(Objects.requireNonNull(applicationId));
             return this;
         }
 
-        public Builder location(Input<String> location) {
+        public Builder location(Output<String> location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
         public Builder location(String location) {
-            this.location = Input.of(Objects.requireNonNull(location));
+            this.location = Output.of(Objects.requireNonNull(location));
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder tenantId(Input<String> tenantId) {
+        public Builder tenantId(Output<String> tenantId) {
             this.tenantId = Objects.requireNonNull(tenantId);
             return this;
         }
 
         public Builder tenantId(String tenantId) {
-            this.tenantId = Input.of(Objects.requireNonNull(tenantId));
+            this.tenantId = Output.of(Objects.requireNonNull(tenantId));
             return this;
         }
         public AzureClientArgs build() {

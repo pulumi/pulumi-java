@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.servicecatalog.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class PrincipalPortfolioAssociationState extends io.pulumi.resource
      * 
      */
     @InputImport(name="acceptLanguage")
-      private final @Nullable Input<String> acceptLanguage;
+      private final @Nullable Output<String> acceptLanguage;
 
-    public Input<String> getAcceptLanguage() {
-        return this.acceptLanguage == null ? Input.empty() : this.acceptLanguage;
+    public Output<String> getAcceptLanguage() {
+        return this.acceptLanguage == null ? Output.empty() : this.acceptLanguage;
     }
 
     /**
@@ -30,10 +30,10 @@ public final class PrincipalPortfolioAssociationState extends io.pulumi.resource
      * 
      */
     @InputImport(name="portfolioId")
-      private final @Nullable Input<String> portfolioId;
+      private final @Nullable Output<String> portfolioId;
 
-    public Input<String> getPortfolioId() {
-        return this.portfolioId == null ? Input.empty() : this.portfolioId;
+    public Output<String> getPortfolioId() {
+        return this.portfolioId == null ? Output.empty() : this.portfolioId;
     }
 
     /**
@@ -41,10 +41,10 @@ public final class PrincipalPortfolioAssociationState extends io.pulumi.resource
      * 
      */
     @InputImport(name="principalArn")
-      private final @Nullable Input<String> principalArn;
+      private final @Nullable Output<String> principalArn;
 
-    public Input<String> getPrincipalArn() {
-        return this.principalArn == null ? Input.empty() : this.principalArn;
+    public Output<String> getPrincipalArn() {
+        return this.principalArn == null ? Output.empty() : this.principalArn;
     }
 
     /**
@@ -52,17 +52,17 @@ public final class PrincipalPortfolioAssociationState extends io.pulumi.resource
      * 
      */
     @InputImport(name="principalType")
-      private final @Nullable Input<String> principalType;
+      private final @Nullable Output<String> principalType;
 
-    public Input<String> getPrincipalType() {
-        return this.principalType == null ? Input.empty() : this.principalType;
+    public Output<String> getPrincipalType() {
+        return this.principalType == null ? Output.empty() : this.principalType;
     }
 
     public PrincipalPortfolioAssociationState(
-        @Nullable Input<String> acceptLanguage,
-        @Nullable Input<String> portfolioId,
-        @Nullable Input<String> principalArn,
-        @Nullable Input<String> principalType) {
+        @Nullable Output<String> acceptLanguage,
+        @Nullable Output<String> portfolioId,
+        @Nullable Output<String> principalArn,
+        @Nullable Output<String> principalType) {
         this.acceptLanguage = acceptLanguage;
         this.portfolioId = portfolioId;
         this.principalArn = principalArn;
@@ -70,10 +70,10 @@ public final class PrincipalPortfolioAssociationState extends io.pulumi.resource
     }
 
     private PrincipalPortfolioAssociationState() {
-        this.acceptLanguage = Input.empty();
-        this.portfolioId = Input.empty();
-        this.principalArn = Input.empty();
-        this.principalType = Input.empty();
+        this.acceptLanguage = Output.empty();
+        this.portfolioId = Output.empty();
+        this.principalArn = Output.empty();
+        this.principalType = Output.empty();
     }
 
     public static Builder builder() {
@@ -85,10 +85,10 @@ public final class PrincipalPortfolioAssociationState extends io.pulumi.resource
     }
 
     public static final class Builder {
-        private @Nullable Input<String> acceptLanguage;
-        private @Nullable Input<String> portfolioId;
-        private @Nullable Input<String> principalArn;
-        private @Nullable Input<String> principalType;
+        private @Nullable Output<String> acceptLanguage;
+        private @Nullable Output<String> portfolioId;
+        private @Nullable Output<String> principalArn;
+        private @Nullable Output<String> principalType;
 
         public Builder() {
     	      // Empty
@@ -102,43 +102,43 @@ public final class PrincipalPortfolioAssociationState extends io.pulumi.resource
     	      this.principalType = defaults.principalType;
         }
 
-        public Builder acceptLanguage(@Nullable Input<String> acceptLanguage) {
+        public Builder acceptLanguage(@Nullable Output<String> acceptLanguage) {
             this.acceptLanguage = acceptLanguage;
             return this;
         }
 
         public Builder acceptLanguage(@Nullable String acceptLanguage) {
-            this.acceptLanguage = Input.ofNullable(acceptLanguage);
+            this.acceptLanguage = Output.ofNullable(acceptLanguage);
             return this;
         }
 
-        public Builder portfolioId(@Nullable Input<String> portfolioId) {
+        public Builder portfolioId(@Nullable Output<String> portfolioId) {
             this.portfolioId = portfolioId;
             return this;
         }
 
         public Builder portfolioId(@Nullable String portfolioId) {
-            this.portfolioId = Input.ofNullable(portfolioId);
+            this.portfolioId = Output.ofNullable(portfolioId);
             return this;
         }
 
-        public Builder principalArn(@Nullable Input<String> principalArn) {
+        public Builder principalArn(@Nullable Output<String> principalArn) {
             this.principalArn = principalArn;
             return this;
         }
 
         public Builder principalArn(@Nullable String principalArn) {
-            this.principalArn = Input.ofNullable(principalArn);
+            this.principalArn = Output.ofNullable(principalArn);
             return this;
         }
 
-        public Builder principalType(@Nullable Input<String> principalType) {
+        public Builder principalType(@Nullable Output<String> principalType) {
             this.principalType = principalType;
             return this;
         }
 
         public Builder principalType(@Nullable String principalType) {
-            this.principalType = Input.ofNullable(principalType);
+            this.principalType = Output.ofNullable(principalType);
             return this;
         }
         public PrincipalPortfolioAssociationState build() {

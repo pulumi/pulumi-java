@@ -3,7 +3,7 @@
 
 package io.pulumi.plant.tree_v1;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.plant.tree_v1.enums.RubberTreeVariety;
 import io.pulumi.plant.tree_v1.enums.TreeSize;
@@ -23,10 +23,10 @@ public final class NurseryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sizes")
-      private final @Nullable Input<Map<String,TreeSize>> sizes;
+      private final @Nullable Output<Map<String,TreeSize>> sizes;
 
-    public Input<Map<String,TreeSize>> getSizes() {
-        return this.sizes == null ? Input.empty() : this.sizes;
+    public Output<Map<String,TreeSize>> getSizes() {
+        return this.sizes == null ? Output.empty() : this.sizes;
     }
 
     /**
@@ -34,22 +34,22 @@ public final class NurseryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="varieties", required=true)
-      private final Input<List<RubberTreeVariety>> varieties;
+      private final Output<List<RubberTreeVariety>> varieties;
 
-    public Input<List<RubberTreeVariety>> getVarieties() {
+    public Output<List<RubberTreeVariety>> getVarieties() {
         return this.varieties;
     }
 
     public NurseryArgs(
-        @Nullable Input<Map<String,TreeSize>> sizes,
-        Input<List<RubberTreeVariety>> varieties) {
+        @Nullable Output<Map<String,TreeSize>> sizes,
+        Output<List<RubberTreeVariety>> varieties) {
         this.sizes = sizes;
         this.varieties = Objects.requireNonNull(varieties, "expected parameter 'varieties' to be non-null");
     }
 
     private NurseryArgs() {
-        this.sizes = Input.empty();
-        this.varieties = Input.empty();
+        this.sizes = Output.empty();
+        this.varieties = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class NurseryArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Map<String,TreeSize>> sizes;
-        private Input<List<RubberTreeVariety>> varieties;
+        private @Nullable Output<Map<String,TreeSize>> sizes;
+        private Output<List<RubberTreeVariety>> varieties;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class NurseryArgs extends io.pulumi.resources.ResourceArgs {
     	      this.varieties = defaults.varieties;
         }
 
-        public Builder sizes(@Nullable Input<Map<String,TreeSize>> sizes) {
+        public Builder sizes(@Nullable Output<Map<String,TreeSize>> sizes) {
             this.sizes = sizes;
             return this;
         }
 
         public Builder sizes(@Nullable Map<String,TreeSize> sizes) {
-            this.sizes = Input.ofNullable(sizes);
+            this.sizes = Output.ofNullable(sizes);
             return this;
         }
 
-        public Builder varieties(Input<List<RubberTreeVariety>> varieties) {
+        public Builder varieties(Output<List<RubberTreeVariety>> varieties) {
             this.varieties = Objects.requireNonNull(varieties);
             return this;
         }
 
         public Builder varieties(List<RubberTreeVariety> varieties) {
-            this.varieties = Input.of(Objects.requireNonNull(varieties));
+            this.varieties = Output.of(Objects.requireNonNull(varieties));
             return this;
         }
         public NurseryArgs build() {

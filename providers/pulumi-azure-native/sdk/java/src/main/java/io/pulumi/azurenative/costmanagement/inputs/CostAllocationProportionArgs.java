@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.costmanagement.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.String;
@@ -23,9 +23,9 @@ public final class CostAllocationProportionArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="name", required=true)
-      private final Input<String> name;
+      private final Output<String> name;
 
-    public Input<String> getName() {
+    public Output<String> getName() {
         return this.name;
     }
 
@@ -34,22 +34,22 @@ public final class CostAllocationProportionArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="percentage", required=true)
-      private final Input<Double> percentage;
+      private final Output<Double> percentage;
 
-    public Input<Double> getPercentage() {
+    public Output<Double> getPercentage() {
         return this.percentage;
     }
 
     public CostAllocationProportionArgs(
-        Input<String> name,
-        Input<Double> percentage) {
+        Output<String> name,
+        Output<Double> percentage) {
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
         this.percentage = Objects.requireNonNull(percentage, "expected parameter 'percentage' to be non-null");
     }
 
     private CostAllocationProportionArgs() {
-        this.name = Input.empty();
-        this.percentage = Input.empty();
+        this.name = Output.empty();
+        this.percentage = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class CostAllocationProportionArgs extends io.pulumi.resources.Reso
     }
 
     public static final class Builder {
-        private Input<String> name;
-        private Input<Double> percentage;
+        private Output<String> name;
+        private Output<Double> percentage;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class CostAllocationProportionArgs extends io.pulumi.resources.Reso
     	      this.percentage = defaults.percentage;
         }
 
-        public Builder name(Input<String> name) {
+        public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(String name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder percentage(Input<Double> percentage) {
+        public Builder percentage(Output<Double> percentage) {
             this.percentage = Objects.requireNonNull(percentage);
             return this;
         }
 
         public Builder percentage(Double percentage) {
-            this.percentage = Input.of(Objects.requireNonNull(percentage));
+            this.percentage = Output.of(Objects.requireNonNull(percentage));
             return this;
         }
         public CostAllocationProportionArgs build() {

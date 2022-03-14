@@ -4,7 +4,7 @@
 package io.pulumi.aws.appmesh.inputs;
 
 import io.pulumi.aws.appmesh.inputs.GatewayRouteSpecHttpRouteActionTargetGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 
@@ -18,18 +18,18 @@ public final class GatewayRouteSpecHttpRouteActionGetArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="target", required=true)
-      private final Input<GatewayRouteSpecHttpRouteActionTargetGetArgs> target;
+      private final Output<GatewayRouteSpecHttpRouteActionTargetGetArgs> target;
 
-    public Input<GatewayRouteSpecHttpRouteActionTargetGetArgs> getTarget() {
+    public Output<GatewayRouteSpecHttpRouteActionTargetGetArgs> getTarget() {
         return this.target;
     }
 
-    public GatewayRouteSpecHttpRouteActionGetArgs(Input<GatewayRouteSpecHttpRouteActionTargetGetArgs> target) {
+    public GatewayRouteSpecHttpRouteActionGetArgs(Output<GatewayRouteSpecHttpRouteActionTargetGetArgs> target) {
         this.target = Objects.requireNonNull(target, "expected parameter 'target' to be non-null");
     }
 
     private GatewayRouteSpecHttpRouteActionGetArgs() {
-        this.target = Input.empty();
+        this.target = Output.empty();
     }
 
     public static Builder builder() {
@@ -41,7 +41,7 @@ public final class GatewayRouteSpecHttpRouteActionGetArgs extends io.pulumi.reso
     }
 
     public static final class Builder {
-        private Input<GatewayRouteSpecHttpRouteActionTargetGetArgs> target;
+        private Output<GatewayRouteSpecHttpRouteActionTargetGetArgs> target;
 
         public Builder() {
     	      // Empty
@@ -52,13 +52,13 @@ public final class GatewayRouteSpecHttpRouteActionGetArgs extends io.pulumi.reso
     	      this.target = defaults.target;
         }
 
-        public Builder target(Input<GatewayRouteSpecHttpRouteActionTargetGetArgs> target) {
+        public Builder target(Output<GatewayRouteSpecHttpRouteActionTargetGetArgs> target) {
             this.target = Objects.requireNonNull(target);
             return this;
         }
 
         public Builder target(GatewayRouteSpecHttpRouteActionTargetGetArgs target) {
-            this.target = Input.of(Objects.requireNonNull(target));
+            this.target = Output.of(Objects.requireNonNull(target));
             return this;
         }
         public GatewayRouteSpecHttpRouteActionGetArgs build() {

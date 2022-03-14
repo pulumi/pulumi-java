@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.compute.inputs;
 
 import io.pulumi.azurenative.compute.inputs.CloudServiceRoleProfilePropertiesArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
@@ -24,18 +24,18 @@ public final class CloudServiceRoleProfileArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="roles")
-      private final @Nullable Input<List<CloudServiceRoleProfilePropertiesArgs>> roles;
+      private final @Nullable Output<List<CloudServiceRoleProfilePropertiesArgs>> roles;
 
-    public Input<List<CloudServiceRoleProfilePropertiesArgs>> getRoles() {
-        return this.roles == null ? Input.empty() : this.roles;
+    public Output<List<CloudServiceRoleProfilePropertiesArgs>> getRoles() {
+        return this.roles == null ? Output.empty() : this.roles;
     }
 
-    public CloudServiceRoleProfileArgs(@Nullable Input<List<CloudServiceRoleProfilePropertiesArgs>> roles) {
+    public CloudServiceRoleProfileArgs(@Nullable Output<List<CloudServiceRoleProfilePropertiesArgs>> roles) {
         this.roles = roles;
     }
 
     private CloudServiceRoleProfileArgs() {
-        this.roles = Input.empty();
+        this.roles = Output.empty();
     }
 
     public static Builder builder() {
@@ -47,7 +47,7 @@ public final class CloudServiceRoleProfileArgs extends io.pulumi.resources.Resou
     }
 
     public static final class Builder {
-        private @Nullable Input<List<CloudServiceRoleProfilePropertiesArgs>> roles;
+        private @Nullable Output<List<CloudServiceRoleProfilePropertiesArgs>> roles;
 
         public Builder() {
     	      // Empty
@@ -58,13 +58,13 @@ public final class CloudServiceRoleProfileArgs extends io.pulumi.resources.Resou
     	      this.roles = defaults.roles;
         }
 
-        public Builder roles(@Nullable Input<List<CloudServiceRoleProfilePropertiesArgs>> roles) {
+        public Builder roles(@Nullable Output<List<CloudServiceRoleProfilePropertiesArgs>> roles) {
             this.roles = roles;
             return this;
         }
 
         public Builder roles(@Nullable List<CloudServiceRoleProfilePropertiesArgs> roles) {
-            this.roles = Input.ofNullable(roles);
+            this.roles = Output.ofNullable(roles);
             return this;
         }
         public CloudServiceRoleProfileArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.compute_alpha.enums.AttachedDiskInterface;
 import io.pulumi.googlenative.compute_alpha.enums.AttachedDiskMode;
@@ -32,10 +32,10 @@ public final class AttachedDiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="autoDelete")
-      private final @Nullable Input<Boolean> autoDelete;
+      private final @Nullable Output<Boolean> autoDelete;
 
-    public Input<Boolean> getAutoDelete() {
-        return this.autoDelete == null ? Input.empty() : this.autoDelete;
+    public Output<Boolean> getAutoDelete() {
+        return this.autoDelete == null ? Output.empty() : this.autoDelete;
     }
 
     /**
@@ -43,10 +43,10 @@ public final class AttachedDiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="boot")
-      private final @Nullable Input<Boolean> boot;
+      private final @Nullable Output<Boolean> boot;
 
-    public Input<Boolean> getBoot() {
-        return this.boot == null ? Input.empty() : this.boot;
+    public Output<Boolean> getBoot() {
+        return this.boot == null ? Output.empty() : this.boot;
     }
 
     /**
@@ -54,10 +54,10 @@ public final class AttachedDiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="deviceName")
-      private final @Nullable Input<String> deviceName;
+      private final @Nullable Output<String> deviceName;
 
-    public Input<String> getDeviceName() {
-        return this.deviceName == null ? Input.empty() : this.deviceName;
+    public Output<String> getDeviceName() {
+        return this.deviceName == null ? Output.empty() : this.deviceName;
     }
 
     /**
@@ -65,10 +65,10 @@ public final class AttachedDiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="diskEncryptionKey")
-      private final @Nullable Input<CustomerEncryptionKeyArgs> diskEncryptionKey;
+      private final @Nullable Output<CustomerEncryptionKeyArgs> diskEncryptionKey;
 
-    public Input<CustomerEncryptionKeyArgs> getDiskEncryptionKey() {
-        return this.diskEncryptionKey == null ? Input.empty() : this.diskEncryptionKey;
+    public Output<CustomerEncryptionKeyArgs> getDiskEncryptionKey() {
+        return this.diskEncryptionKey == null ? Output.empty() : this.diskEncryptionKey;
     }
 
     /**
@@ -76,10 +76,10 @@ public final class AttachedDiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="diskSizeGb")
-      private final @Nullable Input<String> diskSizeGb;
+      private final @Nullable Output<String> diskSizeGb;
 
-    public Input<String> getDiskSizeGb() {
-        return this.diskSizeGb == null ? Input.empty() : this.diskSizeGb;
+    public Output<String> getDiskSizeGb() {
+        return this.diskSizeGb == null ? Output.empty() : this.diskSizeGb;
     }
 
     /**
@@ -87,10 +87,10 @@ public final class AttachedDiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="forceAttach")
-      private final @Nullable Input<Boolean> forceAttach;
+      private final @Nullable Output<Boolean> forceAttach;
 
-    public Input<Boolean> getForceAttach() {
-        return this.forceAttach == null ? Input.empty() : this.forceAttach;
+    public Output<Boolean> getForceAttach() {
+        return this.forceAttach == null ? Output.empty() : this.forceAttach;
     }
 
     /**
@@ -98,10 +98,10 @@ public final class AttachedDiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="guestOsFeatures")
-      private final @Nullable Input<List<GuestOsFeatureArgs>> guestOsFeatures;
+      private final @Nullable Output<List<GuestOsFeatureArgs>> guestOsFeatures;
 
-    public Input<List<GuestOsFeatureArgs>> getGuestOsFeatures() {
-        return this.guestOsFeatures == null ? Input.empty() : this.guestOsFeatures;
+    public Output<List<GuestOsFeatureArgs>> getGuestOsFeatures() {
+        return this.guestOsFeatures == null ? Output.empty() : this.guestOsFeatures;
     }
 
     /**
@@ -109,10 +109,10 @@ public final class AttachedDiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="initializeParams")
-      private final @Nullable Input<AttachedDiskInitializeParamsArgs> initializeParams;
+      private final @Nullable Output<AttachedDiskInitializeParamsArgs> initializeParams;
 
-    public Input<AttachedDiskInitializeParamsArgs> getInitializeParams() {
-        return this.initializeParams == null ? Input.empty() : this.initializeParams;
+    public Output<AttachedDiskInitializeParamsArgs> getInitializeParams() {
+        return this.initializeParams == null ? Output.empty() : this.initializeParams;
     }
 
     /**
@@ -120,10 +120,10 @@ public final class AttachedDiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="interface")
-      private final @Nullable Input<AttachedDiskInterface> $interface;
+      private final @Nullable Output<AttachedDiskInterface> $interface;
 
-    public Input<AttachedDiskInterface> get$interface() {
-        return this.$interface == null ? Input.empty() : this.$interface;
+    public Output<AttachedDiskInterface> get$interface() {
+        return this.$interface == null ? Output.empty() : this.$interface;
     }
 
     /**
@@ -131,10 +131,10 @@ public final class AttachedDiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="mode")
-      private final @Nullable Input<AttachedDiskMode> mode;
+      private final @Nullable Output<AttachedDiskMode> mode;
 
-    public Input<AttachedDiskMode> getMode() {
-        return this.mode == null ? Input.empty() : this.mode;
+    public Output<AttachedDiskMode> getMode() {
+        return this.mode == null ? Output.empty() : this.mode;
     }
 
     /**
@@ -142,10 +142,10 @@ public final class AttachedDiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="savedState")
-      private final @Nullable Input<AttachedDiskSavedState> savedState;
+      private final @Nullable Output<AttachedDiskSavedState> savedState;
 
-    public Input<AttachedDiskSavedState> getSavedState() {
-        return this.savedState == null ? Input.empty() : this.savedState;
+    public Output<AttachedDiskSavedState> getSavedState() {
+        return this.savedState == null ? Output.empty() : this.savedState;
     }
 
     /**
@@ -153,10 +153,10 @@ public final class AttachedDiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="source")
-      private final @Nullable Input<String> source;
+      private final @Nullable Output<String> source;
 
-    public Input<String> getSource() {
-        return this.source == null ? Input.empty() : this.source;
+    public Output<String> getSource() {
+        return this.source == null ? Output.empty() : this.source;
     }
 
     /**
@@ -164,26 +164,26 @@ public final class AttachedDiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type")
-      private final @Nullable Input<AttachedDiskType> type;
+      private final @Nullable Output<AttachedDiskType> type;
 
-    public Input<AttachedDiskType> getType() {
-        return this.type == null ? Input.empty() : this.type;
+    public Output<AttachedDiskType> getType() {
+        return this.type == null ? Output.empty() : this.type;
     }
 
     public AttachedDiskArgs(
-        @Nullable Input<Boolean> autoDelete,
-        @Nullable Input<Boolean> boot,
-        @Nullable Input<String> deviceName,
-        @Nullable Input<CustomerEncryptionKeyArgs> diskEncryptionKey,
-        @Nullable Input<String> diskSizeGb,
-        @Nullable Input<Boolean> forceAttach,
-        @Nullable Input<List<GuestOsFeatureArgs>> guestOsFeatures,
-        @Nullable Input<AttachedDiskInitializeParamsArgs> initializeParams,
-        @Nullable Input<AttachedDiskInterface> $interface,
-        @Nullable Input<AttachedDiskMode> mode,
-        @Nullable Input<AttachedDiskSavedState> savedState,
-        @Nullable Input<String> source,
-        @Nullable Input<AttachedDiskType> type) {
+        @Nullable Output<Boolean> autoDelete,
+        @Nullable Output<Boolean> boot,
+        @Nullable Output<String> deviceName,
+        @Nullable Output<CustomerEncryptionKeyArgs> diskEncryptionKey,
+        @Nullable Output<String> diskSizeGb,
+        @Nullable Output<Boolean> forceAttach,
+        @Nullable Output<List<GuestOsFeatureArgs>> guestOsFeatures,
+        @Nullable Output<AttachedDiskInitializeParamsArgs> initializeParams,
+        @Nullable Output<AttachedDiskInterface> $interface,
+        @Nullable Output<AttachedDiskMode> mode,
+        @Nullable Output<AttachedDiskSavedState> savedState,
+        @Nullable Output<String> source,
+        @Nullable Output<AttachedDiskType> type) {
         this.autoDelete = autoDelete;
         this.boot = boot;
         this.deviceName = deviceName;
@@ -200,19 +200,19 @@ public final class AttachedDiskArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private AttachedDiskArgs() {
-        this.autoDelete = Input.empty();
-        this.boot = Input.empty();
-        this.deviceName = Input.empty();
-        this.diskEncryptionKey = Input.empty();
-        this.diskSizeGb = Input.empty();
-        this.forceAttach = Input.empty();
-        this.guestOsFeatures = Input.empty();
-        this.initializeParams = Input.empty();
-        this.$interface = Input.empty();
-        this.mode = Input.empty();
-        this.savedState = Input.empty();
-        this.source = Input.empty();
-        this.type = Input.empty();
+        this.autoDelete = Output.empty();
+        this.boot = Output.empty();
+        this.deviceName = Output.empty();
+        this.diskEncryptionKey = Output.empty();
+        this.diskSizeGb = Output.empty();
+        this.forceAttach = Output.empty();
+        this.guestOsFeatures = Output.empty();
+        this.initializeParams = Output.empty();
+        this.$interface = Output.empty();
+        this.mode = Output.empty();
+        this.savedState = Output.empty();
+        this.source = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -224,19 +224,19 @@ public final class AttachedDiskArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> autoDelete;
-        private @Nullable Input<Boolean> boot;
-        private @Nullable Input<String> deviceName;
-        private @Nullable Input<CustomerEncryptionKeyArgs> diskEncryptionKey;
-        private @Nullable Input<String> diskSizeGb;
-        private @Nullable Input<Boolean> forceAttach;
-        private @Nullable Input<List<GuestOsFeatureArgs>> guestOsFeatures;
-        private @Nullable Input<AttachedDiskInitializeParamsArgs> initializeParams;
-        private @Nullable Input<AttachedDiskInterface> $interface;
-        private @Nullable Input<AttachedDiskMode> mode;
-        private @Nullable Input<AttachedDiskSavedState> savedState;
-        private @Nullable Input<String> source;
-        private @Nullable Input<AttachedDiskType> type;
+        private @Nullable Output<Boolean> autoDelete;
+        private @Nullable Output<Boolean> boot;
+        private @Nullable Output<String> deviceName;
+        private @Nullable Output<CustomerEncryptionKeyArgs> diskEncryptionKey;
+        private @Nullable Output<String> diskSizeGb;
+        private @Nullable Output<Boolean> forceAttach;
+        private @Nullable Output<List<GuestOsFeatureArgs>> guestOsFeatures;
+        private @Nullable Output<AttachedDiskInitializeParamsArgs> initializeParams;
+        private @Nullable Output<AttachedDiskInterface> $interface;
+        private @Nullable Output<AttachedDiskMode> mode;
+        private @Nullable Output<AttachedDiskSavedState> savedState;
+        private @Nullable Output<String> source;
+        private @Nullable Output<AttachedDiskType> type;
 
         public Builder() {
     	      // Empty
@@ -259,133 +259,133 @@ public final class AttachedDiskArgs extends io.pulumi.resources.ResourceArgs {
     	      this.type = defaults.type;
         }
 
-        public Builder autoDelete(@Nullable Input<Boolean> autoDelete) {
+        public Builder autoDelete(@Nullable Output<Boolean> autoDelete) {
             this.autoDelete = autoDelete;
             return this;
         }
 
         public Builder autoDelete(@Nullable Boolean autoDelete) {
-            this.autoDelete = Input.ofNullable(autoDelete);
+            this.autoDelete = Output.ofNullable(autoDelete);
             return this;
         }
 
-        public Builder boot(@Nullable Input<Boolean> boot) {
+        public Builder boot(@Nullable Output<Boolean> boot) {
             this.boot = boot;
             return this;
         }
 
         public Builder boot(@Nullable Boolean boot) {
-            this.boot = Input.ofNullable(boot);
+            this.boot = Output.ofNullable(boot);
             return this;
         }
 
-        public Builder deviceName(@Nullable Input<String> deviceName) {
+        public Builder deviceName(@Nullable Output<String> deviceName) {
             this.deviceName = deviceName;
             return this;
         }
 
         public Builder deviceName(@Nullable String deviceName) {
-            this.deviceName = Input.ofNullable(deviceName);
+            this.deviceName = Output.ofNullable(deviceName);
             return this;
         }
 
-        public Builder diskEncryptionKey(@Nullable Input<CustomerEncryptionKeyArgs> diskEncryptionKey) {
+        public Builder diskEncryptionKey(@Nullable Output<CustomerEncryptionKeyArgs> diskEncryptionKey) {
             this.diskEncryptionKey = diskEncryptionKey;
             return this;
         }
 
         public Builder diskEncryptionKey(@Nullable CustomerEncryptionKeyArgs diskEncryptionKey) {
-            this.diskEncryptionKey = Input.ofNullable(diskEncryptionKey);
+            this.diskEncryptionKey = Output.ofNullable(diskEncryptionKey);
             return this;
         }
 
-        public Builder diskSizeGb(@Nullable Input<String> diskSizeGb) {
+        public Builder diskSizeGb(@Nullable Output<String> diskSizeGb) {
             this.diskSizeGb = diskSizeGb;
             return this;
         }
 
         public Builder diskSizeGb(@Nullable String diskSizeGb) {
-            this.diskSizeGb = Input.ofNullable(diskSizeGb);
+            this.diskSizeGb = Output.ofNullable(diskSizeGb);
             return this;
         }
 
-        public Builder forceAttach(@Nullable Input<Boolean> forceAttach) {
+        public Builder forceAttach(@Nullable Output<Boolean> forceAttach) {
             this.forceAttach = forceAttach;
             return this;
         }
 
         public Builder forceAttach(@Nullable Boolean forceAttach) {
-            this.forceAttach = Input.ofNullable(forceAttach);
+            this.forceAttach = Output.ofNullable(forceAttach);
             return this;
         }
 
-        public Builder guestOsFeatures(@Nullable Input<List<GuestOsFeatureArgs>> guestOsFeatures) {
+        public Builder guestOsFeatures(@Nullable Output<List<GuestOsFeatureArgs>> guestOsFeatures) {
             this.guestOsFeatures = guestOsFeatures;
             return this;
         }
 
         public Builder guestOsFeatures(@Nullable List<GuestOsFeatureArgs> guestOsFeatures) {
-            this.guestOsFeatures = Input.ofNullable(guestOsFeatures);
+            this.guestOsFeatures = Output.ofNullable(guestOsFeatures);
             return this;
         }
 
-        public Builder initializeParams(@Nullable Input<AttachedDiskInitializeParamsArgs> initializeParams) {
+        public Builder initializeParams(@Nullable Output<AttachedDiskInitializeParamsArgs> initializeParams) {
             this.initializeParams = initializeParams;
             return this;
         }
 
         public Builder initializeParams(@Nullable AttachedDiskInitializeParamsArgs initializeParams) {
-            this.initializeParams = Input.ofNullable(initializeParams);
+            this.initializeParams = Output.ofNullable(initializeParams);
             return this;
         }
 
-        public Builder $interface(@Nullable Input<AttachedDiskInterface> $interface) {
+        public Builder $interface(@Nullable Output<AttachedDiskInterface> $interface) {
             this.$interface = $interface;
             return this;
         }
 
         public Builder $interface(@Nullable AttachedDiskInterface $interface) {
-            this.$interface = Input.ofNullable($interface);
+            this.$interface = Output.ofNullable($interface);
             return this;
         }
 
-        public Builder mode(@Nullable Input<AttachedDiskMode> mode) {
+        public Builder mode(@Nullable Output<AttachedDiskMode> mode) {
             this.mode = mode;
             return this;
         }
 
         public Builder mode(@Nullable AttachedDiskMode mode) {
-            this.mode = Input.ofNullable(mode);
+            this.mode = Output.ofNullable(mode);
             return this;
         }
 
-        public Builder savedState(@Nullable Input<AttachedDiskSavedState> savedState) {
+        public Builder savedState(@Nullable Output<AttachedDiskSavedState> savedState) {
             this.savedState = savedState;
             return this;
         }
 
         public Builder savedState(@Nullable AttachedDiskSavedState savedState) {
-            this.savedState = Input.ofNullable(savedState);
+            this.savedState = Output.ofNullable(savedState);
             return this;
         }
 
-        public Builder source(@Nullable Input<String> source) {
+        public Builder source(@Nullable Output<String> source) {
             this.source = source;
             return this;
         }
 
         public Builder source(@Nullable String source) {
-            this.source = Input.ofNullable(source);
+            this.source = Output.ofNullable(source);
             return this;
         }
 
-        public Builder type(@Nullable Input<AttachedDiskType> type) {
+        public Builder type(@Nullable Output<AttachedDiskType> type) {
             this.type = type;
             return this;
         }
 
         public Builder type(@Nullable AttachedDiskType type) {
-            this.type = Input.ofNullable(type);
+            this.type = Output.ofNullable(type);
             return this;
         }
         public AttachedDiskArgs build() {

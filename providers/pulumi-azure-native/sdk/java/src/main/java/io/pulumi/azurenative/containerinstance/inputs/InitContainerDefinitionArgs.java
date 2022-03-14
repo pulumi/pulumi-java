@@ -5,7 +5,7 @@ package io.pulumi.azurenative.containerinstance.inputs;
 
 import io.pulumi.azurenative.containerinstance.inputs.EnvironmentVariableArgs;
 import io.pulumi.azurenative.containerinstance.inputs.VolumeMountArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -26,10 +26,10 @@ public final class InitContainerDefinitionArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="command")
-      private final @Nullable Input<List<String>> command;
+      private final @Nullable Output<List<String>> command;
 
-    public Input<List<String>> getCommand() {
-        return this.command == null ? Input.empty() : this.command;
+    public Output<List<String>> getCommand() {
+        return this.command == null ? Output.empty() : this.command;
     }
 
     /**
@@ -37,10 +37,10 @@ public final class InitContainerDefinitionArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="environmentVariables")
-      private final @Nullable Input<List<EnvironmentVariableArgs>> environmentVariables;
+      private final @Nullable Output<List<EnvironmentVariableArgs>> environmentVariables;
 
-    public Input<List<EnvironmentVariableArgs>> getEnvironmentVariables() {
-        return this.environmentVariables == null ? Input.empty() : this.environmentVariables;
+    public Output<List<EnvironmentVariableArgs>> getEnvironmentVariables() {
+        return this.environmentVariables == null ? Output.empty() : this.environmentVariables;
     }
 
     /**
@@ -48,10 +48,10 @@ public final class InitContainerDefinitionArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="image")
-      private final @Nullable Input<String> image;
+      private final @Nullable Output<String> image;
 
-    public Input<String> getImage() {
-        return this.image == null ? Input.empty() : this.image;
+    public Output<String> getImage() {
+        return this.image == null ? Output.empty() : this.image;
     }
 
     /**
@@ -59,9 +59,9 @@ public final class InitContainerDefinitionArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="name", required=true)
-      private final Input<String> name;
+      private final Output<String> name;
 
-    public Input<String> getName() {
+    public Output<String> getName() {
         return this.name;
     }
 
@@ -70,18 +70,18 @@ public final class InitContainerDefinitionArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="volumeMounts")
-      private final @Nullable Input<List<VolumeMountArgs>> volumeMounts;
+      private final @Nullable Output<List<VolumeMountArgs>> volumeMounts;
 
-    public Input<List<VolumeMountArgs>> getVolumeMounts() {
-        return this.volumeMounts == null ? Input.empty() : this.volumeMounts;
+    public Output<List<VolumeMountArgs>> getVolumeMounts() {
+        return this.volumeMounts == null ? Output.empty() : this.volumeMounts;
     }
 
     public InitContainerDefinitionArgs(
-        @Nullable Input<List<String>> command,
-        @Nullable Input<List<EnvironmentVariableArgs>> environmentVariables,
-        @Nullable Input<String> image,
-        Input<String> name,
-        @Nullable Input<List<VolumeMountArgs>> volumeMounts) {
+        @Nullable Output<List<String>> command,
+        @Nullable Output<List<EnvironmentVariableArgs>> environmentVariables,
+        @Nullable Output<String> image,
+        Output<String> name,
+        @Nullable Output<List<VolumeMountArgs>> volumeMounts) {
         this.command = command;
         this.environmentVariables = environmentVariables;
         this.image = image;
@@ -90,11 +90,11 @@ public final class InitContainerDefinitionArgs extends io.pulumi.resources.Resou
     }
 
     private InitContainerDefinitionArgs() {
-        this.command = Input.empty();
-        this.environmentVariables = Input.empty();
-        this.image = Input.empty();
-        this.name = Input.empty();
-        this.volumeMounts = Input.empty();
+        this.command = Output.empty();
+        this.environmentVariables = Output.empty();
+        this.image = Output.empty();
+        this.name = Output.empty();
+        this.volumeMounts = Output.empty();
     }
 
     public static Builder builder() {
@@ -106,11 +106,11 @@ public final class InitContainerDefinitionArgs extends io.pulumi.resources.Resou
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> command;
-        private @Nullable Input<List<EnvironmentVariableArgs>> environmentVariables;
-        private @Nullable Input<String> image;
-        private Input<String> name;
-        private @Nullable Input<List<VolumeMountArgs>> volumeMounts;
+        private @Nullable Output<List<String>> command;
+        private @Nullable Output<List<EnvironmentVariableArgs>> environmentVariables;
+        private @Nullable Output<String> image;
+        private Output<String> name;
+        private @Nullable Output<List<VolumeMountArgs>> volumeMounts;
 
         public Builder() {
     	      // Empty
@@ -125,53 +125,53 @@ public final class InitContainerDefinitionArgs extends io.pulumi.resources.Resou
     	      this.volumeMounts = defaults.volumeMounts;
         }
 
-        public Builder command(@Nullable Input<List<String>> command) {
+        public Builder command(@Nullable Output<List<String>> command) {
             this.command = command;
             return this;
         }
 
         public Builder command(@Nullable List<String> command) {
-            this.command = Input.ofNullable(command);
+            this.command = Output.ofNullable(command);
             return this;
         }
 
-        public Builder environmentVariables(@Nullable Input<List<EnvironmentVariableArgs>> environmentVariables) {
+        public Builder environmentVariables(@Nullable Output<List<EnvironmentVariableArgs>> environmentVariables) {
             this.environmentVariables = environmentVariables;
             return this;
         }
 
         public Builder environmentVariables(@Nullable List<EnvironmentVariableArgs> environmentVariables) {
-            this.environmentVariables = Input.ofNullable(environmentVariables);
+            this.environmentVariables = Output.ofNullable(environmentVariables);
             return this;
         }
 
-        public Builder image(@Nullable Input<String> image) {
+        public Builder image(@Nullable Output<String> image) {
             this.image = image;
             return this;
         }
 
         public Builder image(@Nullable String image) {
-            this.image = Input.ofNullable(image);
+            this.image = Output.ofNullable(image);
             return this;
         }
 
-        public Builder name(Input<String> name) {
+        public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(String name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder volumeMounts(@Nullable Input<List<VolumeMountArgs>> volumeMounts) {
+        public Builder volumeMounts(@Nullable Output<List<VolumeMountArgs>> volumeMounts) {
             this.volumeMounts = volumeMounts;
             return this;
         }
 
         public Builder volumeMounts(@Nullable List<VolumeMountArgs> volumeMounts) {
-            this.volumeMounts = Input.ofNullable(volumeMounts);
+            this.volumeMounts = Output.ofNullable(volumeMounts);
             return this;
         }
         public InitContainerDefinitionArgs build() {

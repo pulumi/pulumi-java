@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.ec2.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -15,39 +15,39 @@ public final class SpotFleetFleetLaunchTemplateSpecificationArgs extends io.pulu
     public static final SpotFleetFleetLaunchTemplateSpecificationArgs Empty = new SpotFleetFleetLaunchTemplateSpecificationArgs();
 
     @InputImport(name="launchTemplateId")
-      private final @Nullable Input<String> launchTemplateId;
+      private final @Nullable Output<String> launchTemplateId;
 
-    public Input<String> getLaunchTemplateId() {
-        return this.launchTemplateId == null ? Input.empty() : this.launchTemplateId;
+    public Output<String> getLaunchTemplateId() {
+        return this.launchTemplateId == null ? Output.empty() : this.launchTemplateId;
     }
 
     @InputImport(name="launchTemplateName")
-      private final @Nullable Input<String> launchTemplateName;
+      private final @Nullable Output<String> launchTemplateName;
 
-    public Input<String> getLaunchTemplateName() {
-        return this.launchTemplateName == null ? Input.empty() : this.launchTemplateName;
+    public Output<String> getLaunchTemplateName() {
+        return this.launchTemplateName == null ? Output.empty() : this.launchTemplateName;
     }
 
     @InputImport(name="version", required=true)
-      private final Input<String> version;
+      private final Output<String> version;
 
-    public Input<String> getVersion() {
+    public Output<String> getVersion() {
         return this.version;
     }
 
     public SpotFleetFleetLaunchTemplateSpecificationArgs(
-        @Nullable Input<String> launchTemplateId,
-        @Nullable Input<String> launchTemplateName,
-        Input<String> version) {
+        @Nullable Output<String> launchTemplateId,
+        @Nullable Output<String> launchTemplateName,
+        Output<String> version) {
         this.launchTemplateId = launchTemplateId;
         this.launchTemplateName = launchTemplateName;
         this.version = Objects.requireNonNull(version, "expected parameter 'version' to be non-null");
     }
 
     private SpotFleetFleetLaunchTemplateSpecificationArgs() {
-        this.launchTemplateId = Input.empty();
-        this.launchTemplateName = Input.empty();
-        this.version = Input.empty();
+        this.launchTemplateId = Output.empty();
+        this.launchTemplateName = Output.empty();
+        this.version = Output.empty();
     }
 
     public static Builder builder() {
@@ -59,9 +59,9 @@ public final class SpotFleetFleetLaunchTemplateSpecificationArgs extends io.pulu
     }
 
     public static final class Builder {
-        private @Nullable Input<String> launchTemplateId;
-        private @Nullable Input<String> launchTemplateName;
-        private Input<String> version;
+        private @Nullable Output<String> launchTemplateId;
+        private @Nullable Output<String> launchTemplateName;
+        private Output<String> version;
 
         public Builder() {
     	      // Empty
@@ -74,33 +74,33 @@ public final class SpotFleetFleetLaunchTemplateSpecificationArgs extends io.pulu
     	      this.version = defaults.version;
         }
 
-        public Builder launchTemplateId(@Nullable Input<String> launchTemplateId) {
+        public Builder launchTemplateId(@Nullable Output<String> launchTemplateId) {
             this.launchTemplateId = launchTemplateId;
             return this;
         }
 
         public Builder launchTemplateId(@Nullable String launchTemplateId) {
-            this.launchTemplateId = Input.ofNullable(launchTemplateId);
+            this.launchTemplateId = Output.ofNullable(launchTemplateId);
             return this;
         }
 
-        public Builder launchTemplateName(@Nullable Input<String> launchTemplateName) {
+        public Builder launchTemplateName(@Nullable Output<String> launchTemplateName) {
             this.launchTemplateName = launchTemplateName;
             return this;
         }
 
         public Builder launchTemplateName(@Nullable String launchTemplateName) {
-            this.launchTemplateName = Input.ofNullable(launchTemplateName);
+            this.launchTemplateName = Output.ofNullable(launchTemplateName);
             return this;
         }
 
-        public Builder version(Input<String> version) {
+        public Builder version(Output<String> version) {
             this.version = Objects.requireNonNull(version);
             return this;
         }
 
         public Builder version(String version) {
-            this.version = Input.of(Objects.requireNonNull(version));
+            this.version = Output.of(Objects.requireNonNull(version));
             return this;
         }
         public SpotFleetFleetLaunchTemplateSpecificationArgs build() {

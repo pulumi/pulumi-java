@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1beta1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.containeranalysis_v1beta1.inputs.VersionArgs;
 import io.pulumi.googlenative.containeranalysis_v1beta1.inputs.VulnerabilityLocationArgs;
@@ -26,9 +26,9 @@ public final class DetailArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="cpeUri", required=true)
-      private final Input<String> cpeUri;
+      private final Output<String> cpeUri;
 
-    public Input<String> getCpeUri() {
+    public Output<String> getCpeUri() {
         return this.cpeUri;
     }
 
@@ -37,10 +37,10 @@ public final class DetailArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -48,10 +48,10 @@ public final class DetailArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="fixedLocation")
-      private final @Nullable Input<VulnerabilityLocationArgs> fixedLocation;
+      private final @Nullable Output<VulnerabilityLocationArgs> fixedLocation;
 
-    public Input<VulnerabilityLocationArgs> getFixedLocation() {
-        return this.fixedLocation == null ? Input.empty() : this.fixedLocation;
+    public Output<VulnerabilityLocationArgs> getFixedLocation() {
+        return this.fixedLocation == null ? Output.empty() : this.fixedLocation;
     }
 
     /**
@@ -59,10 +59,10 @@ public final class DetailArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="isObsolete")
-      private final @Nullable Input<Boolean> isObsolete;
+      private final @Nullable Output<Boolean> isObsolete;
 
-    public Input<Boolean> getIsObsolete() {
-        return this.isObsolete == null ? Input.empty() : this.isObsolete;
+    public Output<Boolean> getIsObsolete() {
+        return this.isObsolete == null ? Output.empty() : this.isObsolete;
     }
 
     /**
@@ -70,10 +70,10 @@ public final class DetailArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="maxAffectedVersion")
-      private final @Nullable Input<VersionArgs> maxAffectedVersion;
+      private final @Nullable Output<VersionArgs> maxAffectedVersion;
 
-    public Input<VersionArgs> getMaxAffectedVersion() {
-        return this.maxAffectedVersion == null ? Input.empty() : this.maxAffectedVersion;
+    public Output<VersionArgs> getMaxAffectedVersion() {
+        return this.maxAffectedVersion == null ? Output.empty() : this.maxAffectedVersion;
     }
 
     /**
@@ -81,10 +81,10 @@ public final class DetailArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="minAffectedVersion")
-      private final @Nullable Input<VersionArgs> minAffectedVersion;
+      private final @Nullable Output<VersionArgs> minAffectedVersion;
 
-    public Input<VersionArgs> getMinAffectedVersion() {
-        return this.minAffectedVersion == null ? Input.empty() : this.minAffectedVersion;
+    public Output<VersionArgs> getMinAffectedVersion() {
+        return this.minAffectedVersion == null ? Output.empty() : this.minAffectedVersion;
     }
 
     /**
@@ -92,9 +92,9 @@ public final class DetailArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="package", required=true)
-      private final Input<String> $package;
+      private final Output<String> $package;
 
-    public Input<String> get$package() {
+    public Output<String> get$package() {
         return this.$package;
     }
 
@@ -103,10 +103,10 @@ public final class DetailArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="packageType")
-      private final @Nullable Input<String> packageType;
+      private final @Nullable Output<String> packageType;
 
-    public Input<String> getPackageType() {
-        return this.packageType == null ? Input.empty() : this.packageType;
+    public Output<String> getPackageType() {
+        return this.packageType == null ? Output.empty() : this.packageType;
     }
 
     /**
@@ -114,10 +114,10 @@ public final class DetailArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="severityName")
-      private final @Nullable Input<String> severityName;
+      private final @Nullable Output<String> severityName;
 
-    public Input<String> getSeverityName() {
-        return this.severityName == null ? Input.empty() : this.severityName;
+    public Output<String> getSeverityName() {
+        return this.severityName == null ? Output.empty() : this.severityName;
     }
 
     /**
@@ -125,10 +125,10 @@ public final class DetailArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="source")
-      private final @Nullable Input<String> source;
+      private final @Nullable Output<String> source;
 
-    public Input<String> getSource() {
-        return this.source == null ? Input.empty() : this.source;
+    public Output<String> getSource() {
+        return this.source == null ? Output.empty() : this.source;
     }
 
     /**
@@ -136,10 +136,10 @@ public final class DetailArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sourceUpdateTime")
-      private final @Nullable Input<String> sourceUpdateTime;
+      private final @Nullable Output<String> sourceUpdateTime;
 
-    public Input<String> getSourceUpdateTime() {
-        return this.sourceUpdateTime == null ? Input.empty() : this.sourceUpdateTime;
+    public Output<String> getSourceUpdateTime() {
+        return this.sourceUpdateTime == null ? Output.empty() : this.sourceUpdateTime;
     }
 
     /**
@@ -147,25 +147,25 @@ public final class DetailArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="vendor")
-      private final @Nullable Input<String> vendor;
+      private final @Nullable Output<String> vendor;
 
-    public Input<String> getVendor() {
-        return this.vendor == null ? Input.empty() : this.vendor;
+    public Output<String> getVendor() {
+        return this.vendor == null ? Output.empty() : this.vendor;
     }
 
     public DetailArgs(
-        Input<String> cpeUri,
-        @Nullable Input<String> description,
-        @Nullable Input<VulnerabilityLocationArgs> fixedLocation,
-        @Nullable Input<Boolean> isObsolete,
-        @Nullable Input<VersionArgs> maxAffectedVersion,
-        @Nullable Input<VersionArgs> minAffectedVersion,
-        Input<String> $package,
-        @Nullable Input<String> packageType,
-        @Nullable Input<String> severityName,
-        @Nullable Input<String> source,
-        @Nullable Input<String> sourceUpdateTime,
-        @Nullable Input<String> vendor) {
+        Output<String> cpeUri,
+        @Nullable Output<String> description,
+        @Nullable Output<VulnerabilityLocationArgs> fixedLocation,
+        @Nullable Output<Boolean> isObsolete,
+        @Nullable Output<VersionArgs> maxAffectedVersion,
+        @Nullable Output<VersionArgs> minAffectedVersion,
+        Output<String> $package,
+        @Nullable Output<String> packageType,
+        @Nullable Output<String> severityName,
+        @Nullable Output<String> source,
+        @Nullable Output<String> sourceUpdateTime,
+        @Nullable Output<String> vendor) {
         this.cpeUri = Objects.requireNonNull(cpeUri, "expected parameter 'cpeUri' to be non-null");
         this.description = description;
         this.fixedLocation = fixedLocation;
@@ -181,18 +181,18 @@ public final class DetailArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DetailArgs() {
-        this.cpeUri = Input.empty();
-        this.description = Input.empty();
-        this.fixedLocation = Input.empty();
-        this.isObsolete = Input.empty();
-        this.maxAffectedVersion = Input.empty();
-        this.minAffectedVersion = Input.empty();
-        this.$package = Input.empty();
-        this.packageType = Input.empty();
-        this.severityName = Input.empty();
-        this.source = Input.empty();
-        this.sourceUpdateTime = Input.empty();
-        this.vendor = Input.empty();
+        this.cpeUri = Output.empty();
+        this.description = Output.empty();
+        this.fixedLocation = Output.empty();
+        this.isObsolete = Output.empty();
+        this.maxAffectedVersion = Output.empty();
+        this.minAffectedVersion = Output.empty();
+        this.$package = Output.empty();
+        this.packageType = Output.empty();
+        this.severityName = Output.empty();
+        this.source = Output.empty();
+        this.sourceUpdateTime = Output.empty();
+        this.vendor = Output.empty();
     }
 
     public static Builder builder() {
@@ -204,18 +204,18 @@ public final class DetailArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> cpeUri;
-        private @Nullable Input<String> description;
-        private @Nullable Input<VulnerabilityLocationArgs> fixedLocation;
-        private @Nullable Input<Boolean> isObsolete;
-        private @Nullable Input<VersionArgs> maxAffectedVersion;
-        private @Nullable Input<VersionArgs> minAffectedVersion;
-        private Input<String> $package;
-        private @Nullable Input<String> packageType;
-        private @Nullable Input<String> severityName;
-        private @Nullable Input<String> source;
-        private @Nullable Input<String> sourceUpdateTime;
-        private @Nullable Input<String> vendor;
+        private Output<String> cpeUri;
+        private @Nullable Output<String> description;
+        private @Nullable Output<VulnerabilityLocationArgs> fixedLocation;
+        private @Nullable Output<Boolean> isObsolete;
+        private @Nullable Output<VersionArgs> maxAffectedVersion;
+        private @Nullable Output<VersionArgs> minAffectedVersion;
+        private Output<String> $package;
+        private @Nullable Output<String> packageType;
+        private @Nullable Output<String> severityName;
+        private @Nullable Output<String> source;
+        private @Nullable Output<String> sourceUpdateTime;
+        private @Nullable Output<String> vendor;
 
         public Builder() {
     	      // Empty
@@ -237,123 +237,123 @@ public final class DetailArgs extends io.pulumi.resources.ResourceArgs {
     	      this.vendor = defaults.vendor;
         }
 
-        public Builder cpeUri(Input<String> cpeUri) {
+        public Builder cpeUri(Output<String> cpeUri) {
             this.cpeUri = Objects.requireNonNull(cpeUri);
             return this;
         }
 
         public Builder cpeUri(String cpeUri) {
-            this.cpeUri = Input.of(Objects.requireNonNull(cpeUri));
+            this.cpeUri = Output.of(Objects.requireNonNull(cpeUri));
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder fixedLocation(@Nullable Input<VulnerabilityLocationArgs> fixedLocation) {
+        public Builder fixedLocation(@Nullable Output<VulnerabilityLocationArgs> fixedLocation) {
             this.fixedLocation = fixedLocation;
             return this;
         }
 
         public Builder fixedLocation(@Nullable VulnerabilityLocationArgs fixedLocation) {
-            this.fixedLocation = Input.ofNullable(fixedLocation);
+            this.fixedLocation = Output.ofNullable(fixedLocation);
             return this;
         }
 
-        public Builder isObsolete(@Nullable Input<Boolean> isObsolete) {
+        public Builder isObsolete(@Nullable Output<Boolean> isObsolete) {
             this.isObsolete = isObsolete;
             return this;
         }
 
         public Builder isObsolete(@Nullable Boolean isObsolete) {
-            this.isObsolete = Input.ofNullable(isObsolete);
+            this.isObsolete = Output.ofNullable(isObsolete);
             return this;
         }
 
-        public Builder maxAffectedVersion(@Nullable Input<VersionArgs> maxAffectedVersion) {
+        public Builder maxAffectedVersion(@Nullable Output<VersionArgs> maxAffectedVersion) {
             this.maxAffectedVersion = maxAffectedVersion;
             return this;
         }
 
         public Builder maxAffectedVersion(@Nullable VersionArgs maxAffectedVersion) {
-            this.maxAffectedVersion = Input.ofNullable(maxAffectedVersion);
+            this.maxAffectedVersion = Output.ofNullable(maxAffectedVersion);
             return this;
         }
 
-        public Builder minAffectedVersion(@Nullable Input<VersionArgs> minAffectedVersion) {
+        public Builder minAffectedVersion(@Nullable Output<VersionArgs> minAffectedVersion) {
             this.minAffectedVersion = minAffectedVersion;
             return this;
         }
 
         public Builder minAffectedVersion(@Nullable VersionArgs minAffectedVersion) {
-            this.minAffectedVersion = Input.ofNullable(minAffectedVersion);
+            this.minAffectedVersion = Output.ofNullable(minAffectedVersion);
             return this;
         }
 
-        public Builder $package(Input<String> $package) {
+        public Builder $package(Output<String> $package) {
             this.$package = Objects.requireNonNull($package);
             return this;
         }
 
         public Builder $package(String $package) {
-            this.$package = Input.of(Objects.requireNonNull($package));
+            this.$package = Output.of(Objects.requireNonNull($package));
             return this;
         }
 
-        public Builder packageType(@Nullable Input<String> packageType) {
+        public Builder packageType(@Nullable Output<String> packageType) {
             this.packageType = packageType;
             return this;
         }
 
         public Builder packageType(@Nullable String packageType) {
-            this.packageType = Input.ofNullable(packageType);
+            this.packageType = Output.ofNullable(packageType);
             return this;
         }
 
-        public Builder severityName(@Nullable Input<String> severityName) {
+        public Builder severityName(@Nullable Output<String> severityName) {
             this.severityName = severityName;
             return this;
         }
 
         public Builder severityName(@Nullable String severityName) {
-            this.severityName = Input.ofNullable(severityName);
+            this.severityName = Output.ofNullable(severityName);
             return this;
         }
 
-        public Builder source(@Nullable Input<String> source) {
+        public Builder source(@Nullable Output<String> source) {
             this.source = source;
             return this;
         }
 
         public Builder source(@Nullable String source) {
-            this.source = Input.ofNullable(source);
+            this.source = Output.ofNullable(source);
             return this;
         }
 
-        public Builder sourceUpdateTime(@Nullable Input<String> sourceUpdateTime) {
+        public Builder sourceUpdateTime(@Nullable Output<String> sourceUpdateTime) {
             this.sourceUpdateTime = sourceUpdateTime;
             return this;
         }
 
         public Builder sourceUpdateTime(@Nullable String sourceUpdateTime) {
-            this.sourceUpdateTime = Input.ofNullable(sourceUpdateTime);
+            this.sourceUpdateTime = Output.ofNullable(sourceUpdateTime);
             return this;
         }
 
-        public Builder vendor(@Nullable Input<String> vendor) {
+        public Builder vendor(@Nullable Output<String> vendor) {
             this.vendor = vendor;
             return this;
         }
 
         public Builder vendor(@Nullable String vendor) {
-            this.vendor = Input.ofNullable(vendor);
+            this.vendor = Output.ofNullable(vendor);
             return this;
         }
         public DetailArgs build() {

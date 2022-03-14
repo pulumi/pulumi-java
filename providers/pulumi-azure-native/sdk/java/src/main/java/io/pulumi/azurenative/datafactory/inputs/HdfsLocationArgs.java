@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datafactory.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class HdfsLocationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="fileName")
-      private final @Nullable Input<Object> fileName;
+      private final @Nullable Output<Object> fileName;
 
-    public Input<Object> getFileName() {
-        return this.fileName == null ? Input.empty() : this.fileName;
+    public Output<Object> getFileName() {
+        return this.fileName == null ? Output.empty() : this.fileName;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class HdfsLocationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="folderPath")
-      private final @Nullable Input<Object> folderPath;
+      private final @Nullable Output<Object> folderPath;
 
-    public Input<Object> getFolderPath() {
-        return this.folderPath == null ? Input.empty() : this.folderPath;
+    public Output<Object> getFolderPath() {
+        return this.folderPath == null ? Output.empty() : this.folderPath;
     }
 
     /**
@@ -47,25 +47,25 @@ public final class HdfsLocationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<String> type;
+      private final Output<String> type;
 
-    public Input<String> getType() {
+    public Output<String> getType() {
         return this.type;
     }
 
     public HdfsLocationArgs(
-        @Nullable Input<Object> fileName,
-        @Nullable Input<Object> folderPath,
-        Input<String> type) {
+        @Nullable Output<Object> fileName,
+        @Nullable Output<Object> folderPath,
+        Output<String> type) {
         this.fileName = fileName;
         this.folderPath = folderPath;
         this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
     }
 
     private HdfsLocationArgs() {
-        this.fileName = Input.empty();
-        this.folderPath = Input.empty();
-        this.type = Input.empty();
+        this.fileName = Output.empty();
+        this.folderPath = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -77,9 +77,9 @@ public final class HdfsLocationArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Object> fileName;
-        private @Nullable Input<Object> folderPath;
-        private Input<String> type;
+        private @Nullable Output<Object> fileName;
+        private @Nullable Output<Object> folderPath;
+        private Output<String> type;
 
         public Builder() {
     	      // Empty
@@ -92,33 +92,33 @@ public final class HdfsLocationArgs extends io.pulumi.resources.ResourceArgs {
     	      this.type = defaults.type;
         }
 
-        public Builder fileName(@Nullable Input<Object> fileName) {
+        public Builder fileName(@Nullable Output<Object> fileName) {
             this.fileName = fileName;
             return this;
         }
 
         public Builder fileName(@Nullable Object fileName) {
-            this.fileName = Input.ofNullable(fileName);
+            this.fileName = Output.ofNullable(fileName);
             return this;
         }
 
-        public Builder folderPath(@Nullable Input<Object> folderPath) {
+        public Builder folderPath(@Nullable Output<Object> folderPath) {
             this.folderPath = folderPath;
             return this;
         }
 
         public Builder folderPath(@Nullable Object folderPath) {
-            this.folderPath = Input.ofNullable(folderPath);
+            this.folderPath = Output.ofNullable(folderPath);
             return this;
         }
 
-        public Builder type(Input<String> type) {
+        public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(String type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
         public HdfsLocationArgs build() {

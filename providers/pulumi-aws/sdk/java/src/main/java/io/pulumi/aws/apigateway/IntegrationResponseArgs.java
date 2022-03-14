@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.apigateway;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -20,10 +20,10 @@ public final class IntegrationResponseArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="contentHandling")
-      private final @Nullable Input<String> contentHandling;
+      private final @Nullable Output<String> contentHandling;
 
-    public Input<String> getContentHandling() {
-        return this.contentHandling == null ? Input.empty() : this.contentHandling;
+    public Output<String> getContentHandling() {
+        return this.contentHandling == null ? Output.empty() : this.contentHandling;
     }
 
     /**
@@ -31,9 +31,9 @@ public final class IntegrationResponseArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="httpMethod", required=true)
-      private final Input<String> httpMethod;
+      private final Output<String> httpMethod;
 
-    public Input<String> getHttpMethod() {
+    public Output<String> getHttpMethod() {
         return this.httpMethod;
     }
 
@@ -42,9 +42,9 @@ public final class IntegrationResponseArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="resourceId", required=true)
-      private final Input<String> resourceId;
+      private final Output<String> resourceId;
 
-    public Input<String> getResourceId() {
+    public Output<String> getResourceId() {
         return this.resourceId;
     }
 
@@ -54,10 +54,10 @@ public final class IntegrationResponseArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="responseParameters")
-      private final @Nullable Input<Map<String,String>> responseParameters;
+      private final @Nullable Output<Map<String,String>> responseParameters;
 
-    public Input<Map<String,String>> getResponseParameters() {
-        return this.responseParameters == null ? Input.empty() : this.responseParameters;
+    public Output<Map<String,String>> getResponseParameters() {
+        return this.responseParameters == null ? Output.empty() : this.responseParameters;
     }
 
     /**
@@ -65,10 +65,10 @@ public final class IntegrationResponseArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="responseTemplates")
-      private final @Nullable Input<Map<String,String>> responseTemplates;
+      private final @Nullable Output<Map<String,String>> responseTemplates;
 
-    public Input<Map<String,String>> getResponseTemplates() {
-        return this.responseTemplates == null ? Input.empty() : this.responseTemplates;
+    public Output<Map<String,String>> getResponseTemplates() {
+        return this.responseTemplates == null ? Output.empty() : this.responseTemplates;
     }
 
     /**
@@ -76,9 +76,9 @@ public final class IntegrationResponseArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="restApi", required=true)
-      private final Input<String> restApi;
+      private final Output<String> restApi;
 
-    public Input<String> getRestApi() {
+    public Output<String> getRestApi() {
         return this.restApi;
     }
 
@@ -90,10 +90,10 @@ public final class IntegrationResponseArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="selectionPattern")
-      private final @Nullable Input<String> selectionPattern;
+      private final @Nullable Output<String> selectionPattern;
 
-    public Input<String> getSelectionPattern() {
-        return this.selectionPattern == null ? Input.empty() : this.selectionPattern;
+    public Output<String> getSelectionPattern() {
+        return this.selectionPattern == null ? Output.empty() : this.selectionPattern;
     }
 
     /**
@@ -101,21 +101,21 @@ public final class IntegrationResponseArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="statusCode", required=true)
-      private final Input<String> statusCode;
+      private final Output<String> statusCode;
 
-    public Input<String> getStatusCode() {
+    public Output<String> getStatusCode() {
         return this.statusCode;
     }
 
     public IntegrationResponseArgs(
-        @Nullable Input<String> contentHandling,
-        Input<String> httpMethod,
-        Input<String> resourceId,
-        @Nullable Input<Map<String,String>> responseParameters,
-        @Nullable Input<Map<String,String>> responseTemplates,
-        Input<String> restApi,
-        @Nullable Input<String> selectionPattern,
-        Input<String> statusCode) {
+        @Nullable Output<String> contentHandling,
+        Output<String> httpMethod,
+        Output<String> resourceId,
+        @Nullable Output<Map<String,String>> responseParameters,
+        @Nullable Output<Map<String,String>> responseTemplates,
+        Output<String> restApi,
+        @Nullable Output<String> selectionPattern,
+        Output<String> statusCode) {
         this.contentHandling = contentHandling;
         this.httpMethod = Objects.requireNonNull(httpMethod, "expected parameter 'httpMethod' to be non-null");
         this.resourceId = Objects.requireNonNull(resourceId, "expected parameter 'resourceId' to be non-null");
@@ -127,14 +127,14 @@ public final class IntegrationResponseArgs extends io.pulumi.resources.ResourceA
     }
 
     private IntegrationResponseArgs() {
-        this.contentHandling = Input.empty();
-        this.httpMethod = Input.empty();
-        this.resourceId = Input.empty();
-        this.responseParameters = Input.empty();
-        this.responseTemplates = Input.empty();
-        this.restApi = Input.empty();
-        this.selectionPattern = Input.empty();
-        this.statusCode = Input.empty();
+        this.contentHandling = Output.empty();
+        this.httpMethod = Output.empty();
+        this.resourceId = Output.empty();
+        this.responseParameters = Output.empty();
+        this.responseTemplates = Output.empty();
+        this.restApi = Output.empty();
+        this.selectionPattern = Output.empty();
+        this.statusCode = Output.empty();
     }
 
     public static Builder builder() {
@@ -146,14 +146,14 @@ public final class IntegrationResponseArgs extends io.pulumi.resources.ResourceA
     }
 
     public static final class Builder {
-        private @Nullable Input<String> contentHandling;
-        private Input<String> httpMethod;
-        private Input<String> resourceId;
-        private @Nullable Input<Map<String,String>> responseParameters;
-        private @Nullable Input<Map<String,String>> responseTemplates;
-        private Input<String> restApi;
-        private @Nullable Input<String> selectionPattern;
-        private Input<String> statusCode;
+        private @Nullable Output<String> contentHandling;
+        private Output<String> httpMethod;
+        private Output<String> resourceId;
+        private @Nullable Output<Map<String,String>> responseParameters;
+        private @Nullable Output<Map<String,String>> responseTemplates;
+        private Output<String> restApi;
+        private @Nullable Output<String> selectionPattern;
+        private Output<String> statusCode;
 
         public Builder() {
     	      // Empty
@@ -171,78 +171,78 @@ public final class IntegrationResponseArgs extends io.pulumi.resources.ResourceA
     	      this.statusCode = defaults.statusCode;
         }
 
-        public Builder contentHandling(@Nullable Input<String> contentHandling) {
+        public Builder contentHandling(@Nullable Output<String> contentHandling) {
             this.contentHandling = contentHandling;
             return this;
         }
 
         public Builder contentHandling(@Nullable String contentHandling) {
-            this.contentHandling = Input.ofNullable(contentHandling);
+            this.contentHandling = Output.ofNullable(contentHandling);
             return this;
         }
 
-        public Builder httpMethod(Input<String> httpMethod) {
+        public Builder httpMethod(Output<String> httpMethod) {
             this.httpMethod = Objects.requireNonNull(httpMethod);
             return this;
         }
 
         public Builder httpMethod(String httpMethod) {
-            this.httpMethod = Input.of(Objects.requireNonNull(httpMethod));
+            this.httpMethod = Output.of(Objects.requireNonNull(httpMethod));
             return this;
         }
 
-        public Builder resourceId(Input<String> resourceId) {
+        public Builder resourceId(Output<String> resourceId) {
             this.resourceId = Objects.requireNonNull(resourceId);
             return this;
         }
 
         public Builder resourceId(String resourceId) {
-            this.resourceId = Input.of(Objects.requireNonNull(resourceId));
+            this.resourceId = Output.of(Objects.requireNonNull(resourceId));
             return this;
         }
 
-        public Builder responseParameters(@Nullable Input<Map<String,String>> responseParameters) {
+        public Builder responseParameters(@Nullable Output<Map<String,String>> responseParameters) {
             this.responseParameters = responseParameters;
             return this;
         }
 
         public Builder responseParameters(@Nullable Map<String,String> responseParameters) {
-            this.responseParameters = Input.ofNullable(responseParameters);
+            this.responseParameters = Output.ofNullable(responseParameters);
             return this;
         }
 
-        public Builder responseTemplates(@Nullable Input<Map<String,String>> responseTemplates) {
+        public Builder responseTemplates(@Nullable Output<Map<String,String>> responseTemplates) {
             this.responseTemplates = responseTemplates;
             return this;
         }
 
         public Builder responseTemplates(@Nullable Map<String,String> responseTemplates) {
-            this.responseTemplates = Input.ofNullable(responseTemplates);
+            this.responseTemplates = Output.ofNullable(responseTemplates);
             return this;
         }
 
-        public Builder restApi(Input<String> restApi) {
+        public Builder restApi(Output<String> restApi) {
             this.restApi = Objects.requireNonNull(restApi);
             return this;
         }
 
-        public Builder selectionPattern(@Nullable Input<String> selectionPattern) {
+        public Builder selectionPattern(@Nullable Output<String> selectionPattern) {
             this.selectionPattern = selectionPattern;
             return this;
         }
 
         public Builder selectionPattern(@Nullable String selectionPattern) {
-            this.selectionPattern = Input.ofNullable(selectionPattern);
+            this.selectionPattern = Output.ofNullable(selectionPattern);
             return this;
         }
 
-        public Builder statusCode(Input<String> statusCode) {
+        public Builder statusCode(Output<String> statusCode) {
             this.statusCode = Objects.requireNonNull(statusCode);
             return this;
         }
 
         public Builder statusCode(String statusCode) {
-            this.statusCode = Input.of(Objects.requireNonNull(statusCode));
+            this.statusCode = Output.of(Objects.requireNonNull(statusCode));
             return this;
         }
         public IntegrationResponseArgs build() {

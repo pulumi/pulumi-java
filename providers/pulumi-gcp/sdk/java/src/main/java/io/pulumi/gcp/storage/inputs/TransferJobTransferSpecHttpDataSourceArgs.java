@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.storage.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -18,18 +18,18 @@ public final class TransferJobTransferSpecHttpDataSourceArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="listUrl", required=true)
-      private final Input<String> listUrl;
+      private final Output<String> listUrl;
 
-    public Input<String> getListUrl() {
+    public Output<String> getListUrl() {
         return this.listUrl;
     }
 
-    public TransferJobTransferSpecHttpDataSourceArgs(Input<String> listUrl) {
+    public TransferJobTransferSpecHttpDataSourceArgs(Output<String> listUrl) {
         this.listUrl = Objects.requireNonNull(listUrl, "expected parameter 'listUrl' to be non-null");
     }
 
     private TransferJobTransferSpecHttpDataSourceArgs() {
-        this.listUrl = Input.empty();
+        this.listUrl = Output.empty();
     }
 
     public static Builder builder() {
@@ -41,7 +41,7 @@ public final class TransferJobTransferSpecHttpDataSourceArgs extends io.pulumi.r
     }
 
     public static final class Builder {
-        private Input<String> listUrl;
+        private Output<String> listUrl;
 
         public Builder() {
     	      // Empty
@@ -52,13 +52,13 @@ public final class TransferJobTransferSpecHttpDataSourceArgs extends io.pulumi.r
     	      this.listUrl = defaults.listUrl;
         }
 
-        public Builder listUrl(Input<String> listUrl) {
+        public Builder listUrl(Output<String> listUrl) {
             this.listUrl = Objects.requireNonNull(listUrl);
             return this;
         }
 
         public Builder listUrl(String listUrl) {
-            this.listUrl = Input.of(Objects.requireNonNull(listUrl));
+            this.listUrl = Output.of(Objects.requireNonNull(listUrl));
             return this;
         }
         public TransferJobTransferSpecHttpDataSourceArgs build() {

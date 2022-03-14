@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.portal;
 
 import io.pulumi.azurenative.portal.inputs.ConsoleCreatePropertiesArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -20,10 +20,10 @@ public final class ConsoleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="consoleName")
-      private final @Nullable Input<String> consoleName;
+      private final @Nullable Output<String> consoleName;
 
-    public Input<String> getConsoleName() {
-        return this.consoleName == null ? Input.empty() : this.consoleName;
+    public Output<String> getConsoleName() {
+        return this.consoleName == null ? Output.empty() : this.consoleName;
     }
 
     /**
@@ -31,22 +31,22 @@ public final class ConsoleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="properties", required=true)
-      private final Input<ConsoleCreatePropertiesArgs> properties;
+      private final Output<ConsoleCreatePropertiesArgs> properties;
 
-    public Input<ConsoleCreatePropertiesArgs> getProperties() {
+    public Output<ConsoleCreatePropertiesArgs> getProperties() {
         return this.properties;
     }
 
     public ConsoleArgs(
-        @Nullable Input<String> consoleName,
-        Input<ConsoleCreatePropertiesArgs> properties) {
+        @Nullable Output<String> consoleName,
+        Output<ConsoleCreatePropertiesArgs> properties) {
         this.consoleName = consoleName;
         this.properties = Objects.requireNonNull(properties, "expected parameter 'properties' to be non-null");
     }
 
     private ConsoleArgs() {
-        this.consoleName = Input.empty();
-        this.properties = Input.empty();
+        this.consoleName = Output.empty();
+        this.properties = Output.empty();
     }
 
     public static Builder builder() {
@@ -58,8 +58,8 @@ public final class ConsoleArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> consoleName;
-        private Input<ConsoleCreatePropertiesArgs> properties;
+        private @Nullable Output<String> consoleName;
+        private Output<ConsoleCreatePropertiesArgs> properties;
 
         public Builder() {
     	      // Empty
@@ -71,23 +71,23 @@ public final class ConsoleArgs extends io.pulumi.resources.ResourceArgs {
     	      this.properties = defaults.properties;
         }
 
-        public Builder consoleName(@Nullable Input<String> consoleName) {
+        public Builder consoleName(@Nullable Output<String> consoleName) {
             this.consoleName = consoleName;
             return this;
         }
 
         public Builder consoleName(@Nullable String consoleName) {
-            this.consoleName = Input.ofNullable(consoleName);
+            this.consoleName = Output.ofNullable(consoleName);
             return this;
         }
 
-        public Builder properties(Input<ConsoleCreatePropertiesArgs> properties) {
+        public Builder properties(Output<ConsoleCreatePropertiesArgs> properties) {
             this.properties = Objects.requireNonNull(properties);
             return this;
         }
 
         public Builder properties(ConsoleCreatePropertiesArgs properties) {
-            this.properties = Input.of(Objects.requireNonNull(properties));
+            this.properties = Output.of(Objects.requireNonNull(properties));
             return this;
         }
         public ConsoleArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.migrate.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class CollectorBodyAgentSpnPropertiesArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="applicationId")
-      private final @Nullable Input<String> applicationId;
+      private final @Nullable Output<String> applicationId;
 
-    public Input<String> getApplicationId() {
-        return this.applicationId == null ? Input.empty() : this.applicationId;
+    public Output<String> getApplicationId() {
+        return this.applicationId == null ? Output.empty() : this.applicationId;
     }
 
     /**
@@ -30,10 +30,10 @@ public final class CollectorBodyAgentSpnPropertiesArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="audience")
-      private final @Nullable Input<String> audience;
+      private final @Nullable Output<String> audience;
 
-    public Input<String> getAudience() {
-        return this.audience == null ? Input.empty() : this.audience;
+    public Output<String> getAudience() {
+        return this.audience == null ? Output.empty() : this.audience;
     }
 
     /**
@@ -41,10 +41,10 @@ public final class CollectorBodyAgentSpnPropertiesArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="authority")
-      private final @Nullable Input<String> authority;
+      private final @Nullable Output<String> authority;
 
-    public Input<String> getAuthority() {
-        return this.authority == null ? Input.empty() : this.authority;
+    public Output<String> getAuthority() {
+        return this.authority == null ? Output.empty() : this.authority;
     }
 
     /**
@@ -52,10 +52,10 @@ public final class CollectorBodyAgentSpnPropertiesArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="objectId")
-      private final @Nullable Input<String> objectId;
+      private final @Nullable Output<String> objectId;
 
-    public Input<String> getObjectId() {
-        return this.objectId == null ? Input.empty() : this.objectId;
+    public Output<String> getObjectId() {
+        return this.objectId == null ? Output.empty() : this.objectId;
     }
 
     /**
@@ -63,18 +63,18 @@ public final class CollectorBodyAgentSpnPropertiesArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="tenantId")
-      private final @Nullable Input<String> tenantId;
+      private final @Nullable Output<String> tenantId;
 
-    public Input<String> getTenantId() {
-        return this.tenantId == null ? Input.empty() : this.tenantId;
+    public Output<String> getTenantId() {
+        return this.tenantId == null ? Output.empty() : this.tenantId;
     }
 
     public CollectorBodyAgentSpnPropertiesArgs(
-        @Nullable Input<String> applicationId,
-        @Nullable Input<String> audience,
-        @Nullable Input<String> authority,
-        @Nullable Input<String> objectId,
-        @Nullable Input<String> tenantId) {
+        @Nullable Output<String> applicationId,
+        @Nullable Output<String> audience,
+        @Nullable Output<String> authority,
+        @Nullable Output<String> objectId,
+        @Nullable Output<String> tenantId) {
         this.applicationId = applicationId;
         this.audience = audience;
         this.authority = authority;
@@ -83,11 +83,11 @@ public final class CollectorBodyAgentSpnPropertiesArgs extends io.pulumi.resourc
     }
 
     private CollectorBodyAgentSpnPropertiesArgs() {
-        this.applicationId = Input.empty();
-        this.audience = Input.empty();
-        this.authority = Input.empty();
-        this.objectId = Input.empty();
-        this.tenantId = Input.empty();
+        this.applicationId = Output.empty();
+        this.audience = Output.empty();
+        this.authority = Output.empty();
+        this.objectId = Output.empty();
+        this.tenantId = Output.empty();
     }
 
     public static Builder builder() {
@@ -99,11 +99,11 @@ public final class CollectorBodyAgentSpnPropertiesArgs extends io.pulumi.resourc
     }
 
     public static final class Builder {
-        private @Nullable Input<String> applicationId;
-        private @Nullable Input<String> audience;
-        private @Nullable Input<String> authority;
-        private @Nullable Input<String> objectId;
-        private @Nullable Input<String> tenantId;
+        private @Nullable Output<String> applicationId;
+        private @Nullable Output<String> audience;
+        private @Nullable Output<String> authority;
+        private @Nullable Output<String> objectId;
+        private @Nullable Output<String> tenantId;
 
         public Builder() {
     	      // Empty
@@ -118,53 +118,53 @@ public final class CollectorBodyAgentSpnPropertiesArgs extends io.pulumi.resourc
     	      this.tenantId = defaults.tenantId;
         }
 
-        public Builder applicationId(@Nullable Input<String> applicationId) {
+        public Builder applicationId(@Nullable Output<String> applicationId) {
             this.applicationId = applicationId;
             return this;
         }
 
         public Builder applicationId(@Nullable String applicationId) {
-            this.applicationId = Input.ofNullable(applicationId);
+            this.applicationId = Output.ofNullable(applicationId);
             return this;
         }
 
-        public Builder audience(@Nullable Input<String> audience) {
+        public Builder audience(@Nullable Output<String> audience) {
             this.audience = audience;
             return this;
         }
 
         public Builder audience(@Nullable String audience) {
-            this.audience = Input.ofNullable(audience);
+            this.audience = Output.ofNullable(audience);
             return this;
         }
 
-        public Builder authority(@Nullable Input<String> authority) {
+        public Builder authority(@Nullable Output<String> authority) {
             this.authority = authority;
             return this;
         }
 
         public Builder authority(@Nullable String authority) {
-            this.authority = Input.ofNullable(authority);
+            this.authority = Output.ofNullable(authority);
             return this;
         }
 
-        public Builder objectId(@Nullable Input<String> objectId) {
+        public Builder objectId(@Nullable Output<String> objectId) {
             this.objectId = objectId;
             return this;
         }
 
         public Builder objectId(@Nullable String objectId) {
-            this.objectId = Input.ofNullable(objectId);
+            this.objectId = Output.ofNullable(objectId);
             return this;
         }
 
-        public Builder tenantId(@Nullable Input<String> tenantId) {
+        public Builder tenantId(@Nullable Output<String> tenantId) {
             this.tenantId = tenantId;
             return this;
         }
 
         public Builder tenantId(@Nullable String tenantId) {
-            this.tenantId = Input.ofNullable(tenantId);
+            this.tenantId = Output.ofNullable(tenantId);
             return this;
         }
         public CollectorBodyAgentSpnPropertiesArgs build() {

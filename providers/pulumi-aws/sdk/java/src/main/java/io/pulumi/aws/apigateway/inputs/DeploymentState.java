@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.apigateway.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -20,10 +20,10 @@ public final class DeploymentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="createdDate")
-      private final @Nullable Input<String> createdDate;
+      private final @Nullable Output<String> createdDate;
 
-    public Input<String> getCreatedDate() {
-        return this.createdDate == null ? Input.empty() : this.createdDate;
+    public Output<String> getCreatedDate() {
+        return this.createdDate == null ? Output.empty() : this.createdDate;
     }
 
     /**
@@ -31,10 +31,10 @@ public final class DeploymentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -44,10 +44,10 @@ public final class DeploymentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="executionArn")
-      private final @Nullable Input<String> executionArn;
+      private final @Nullable Output<String> executionArn;
 
-    public Input<String> getExecutionArn() {
-        return this.executionArn == null ? Input.empty() : this.executionArn;
+    public Output<String> getExecutionArn() {
+        return this.executionArn == null ? Output.empty() : this.executionArn;
     }
 
     /**
@@ -56,10 +56,10 @@ public final class DeploymentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="invokeUrl")
-      private final @Nullable Input<String> invokeUrl;
+      private final @Nullable Output<String> invokeUrl;
 
-    public Input<String> getInvokeUrl() {
-        return this.invokeUrl == null ? Input.empty() : this.invokeUrl;
+    public Output<String> getInvokeUrl() {
+        return this.invokeUrl == null ? Output.empty() : this.invokeUrl;
     }
 
     /**
@@ -67,10 +67,10 @@ public final class DeploymentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="restApi")
-      private final @Nullable Input<String> restApi;
+      private final @Nullable Output<String> restApi;
 
-    public Input<String> getRestApi() {
-        return this.restApi == null ? Input.empty() : this.restApi;
+    public Output<String> getRestApi() {
+        return this.restApi == null ? Output.empty() : this.restApi;
     }
 
     /**
@@ -78,10 +78,10 @@ public final class DeploymentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="stageDescription")
-      private final @Nullable Input<String> stageDescription;
+      private final @Nullable Output<String> stageDescription;
 
-    public Input<String> getStageDescription() {
-        return this.stageDescription == null ? Input.empty() : this.stageDescription;
+    public Output<String> getStageDescription() {
+        return this.stageDescription == null ? Output.empty() : this.stageDescription;
     }
 
     /**
@@ -89,10 +89,10 @@ public final class DeploymentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="stageName")
-      private final @Nullable Input<String> stageName;
+      private final @Nullable Output<String> stageName;
 
-    public Input<String> getStageName() {
-        return this.stageName == null ? Input.empty() : this.stageName;
+    public Output<String> getStageName() {
+        return this.stageName == null ? Output.empty() : this.stageName;
     }
 
     /**
@@ -100,10 +100,10 @@ public final class DeploymentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="triggers")
-      private final @Nullable Input<Map<String,String>> triggers;
+      private final @Nullable Output<Map<String,String>> triggers;
 
-    public Input<Map<String,String>> getTriggers() {
-        return this.triggers == null ? Input.empty() : this.triggers;
+    public Output<Map<String,String>> getTriggers() {
+        return this.triggers == null ? Output.empty() : this.triggers;
     }
 
     /**
@@ -111,22 +111,22 @@ public final class DeploymentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="variables")
-      private final @Nullable Input<Map<String,String>> variables;
+      private final @Nullable Output<Map<String,String>> variables;
 
-    public Input<Map<String,String>> getVariables() {
-        return this.variables == null ? Input.empty() : this.variables;
+    public Output<Map<String,String>> getVariables() {
+        return this.variables == null ? Output.empty() : this.variables;
     }
 
     public DeploymentState(
-        @Nullable Input<String> createdDate,
-        @Nullable Input<String> description,
-        @Nullable Input<String> executionArn,
-        @Nullable Input<String> invokeUrl,
-        @Nullable Input<String> restApi,
-        @Nullable Input<String> stageDescription,
-        @Nullable Input<String> stageName,
-        @Nullable Input<Map<String,String>> triggers,
-        @Nullable Input<Map<String,String>> variables) {
+        @Nullable Output<String> createdDate,
+        @Nullable Output<String> description,
+        @Nullable Output<String> executionArn,
+        @Nullable Output<String> invokeUrl,
+        @Nullable Output<String> restApi,
+        @Nullable Output<String> stageDescription,
+        @Nullable Output<String> stageName,
+        @Nullable Output<Map<String,String>> triggers,
+        @Nullable Output<Map<String,String>> variables) {
         this.createdDate = createdDate;
         this.description = description;
         this.executionArn = executionArn;
@@ -139,15 +139,15 @@ public final class DeploymentState extends io.pulumi.resources.ResourceArgs {
     }
 
     private DeploymentState() {
-        this.createdDate = Input.empty();
-        this.description = Input.empty();
-        this.executionArn = Input.empty();
-        this.invokeUrl = Input.empty();
-        this.restApi = Input.empty();
-        this.stageDescription = Input.empty();
-        this.stageName = Input.empty();
-        this.triggers = Input.empty();
-        this.variables = Input.empty();
+        this.createdDate = Output.empty();
+        this.description = Output.empty();
+        this.executionArn = Output.empty();
+        this.invokeUrl = Output.empty();
+        this.restApi = Output.empty();
+        this.stageDescription = Output.empty();
+        this.stageName = Output.empty();
+        this.triggers = Output.empty();
+        this.variables = Output.empty();
     }
 
     public static Builder builder() {
@@ -159,15 +159,15 @@ public final class DeploymentState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> createdDate;
-        private @Nullable Input<String> description;
-        private @Nullable Input<String> executionArn;
-        private @Nullable Input<String> invokeUrl;
-        private @Nullable Input<String> restApi;
-        private @Nullable Input<String> stageDescription;
-        private @Nullable Input<String> stageName;
-        private @Nullable Input<Map<String,String>> triggers;
-        private @Nullable Input<Map<String,String>> variables;
+        private @Nullable Output<String> createdDate;
+        private @Nullable Output<String> description;
+        private @Nullable Output<String> executionArn;
+        private @Nullable Output<String> invokeUrl;
+        private @Nullable Output<String> restApi;
+        private @Nullable Output<String> stageDescription;
+        private @Nullable Output<String> stageName;
+        private @Nullable Output<Map<String,String>> triggers;
+        private @Nullable Output<Map<String,String>> variables;
 
         public Builder() {
     	      // Empty
@@ -186,88 +186,88 @@ public final class DeploymentState extends io.pulumi.resources.ResourceArgs {
     	      this.variables = defaults.variables;
         }
 
-        public Builder createdDate(@Nullable Input<String> createdDate) {
+        public Builder createdDate(@Nullable Output<String> createdDate) {
             this.createdDate = createdDate;
             return this;
         }
 
         public Builder createdDate(@Nullable String createdDate) {
-            this.createdDate = Input.ofNullable(createdDate);
+            this.createdDate = Output.ofNullable(createdDate);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder executionArn(@Nullable Input<String> executionArn) {
+        public Builder executionArn(@Nullable Output<String> executionArn) {
             this.executionArn = executionArn;
             return this;
         }
 
         public Builder executionArn(@Nullable String executionArn) {
-            this.executionArn = Input.ofNullable(executionArn);
+            this.executionArn = Output.ofNullable(executionArn);
             return this;
         }
 
-        public Builder invokeUrl(@Nullable Input<String> invokeUrl) {
+        public Builder invokeUrl(@Nullable Output<String> invokeUrl) {
             this.invokeUrl = invokeUrl;
             return this;
         }
 
         public Builder invokeUrl(@Nullable String invokeUrl) {
-            this.invokeUrl = Input.ofNullable(invokeUrl);
+            this.invokeUrl = Output.ofNullable(invokeUrl);
             return this;
         }
 
-        public Builder restApi(@Nullable Input<String> restApi) {
+        public Builder restApi(@Nullable Output<String> restApi) {
             this.restApi = restApi;
             return this;
         }
 
-        public Builder stageDescription(@Nullable Input<String> stageDescription) {
+        public Builder stageDescription(@Nullable Output<String> stageDescription) {
             this.stageDescription = stageDescription;
             return this;
         }
 
         public Builder stageDescription(@Nullable String stageDescription) {
-            this.stageDescription = Input.ofNullable(stageDescription);
+            this.stageDescription = Output.ofNullable(stageDescription);
             return this;
         }
 
-        public Builder stageName(@Nullable Input<String> stageName) {
+        public Builder stageName(@Nullable Output<String> stageName) {
             this.stageName = stageName;
             return this;
         }
 
         public Builder stageName(@Nullable String stageName) {
-            this.stageName = Input.ofNullable(stageName);
+            this.stageName = Output.ofNullable(stageName);
             return this;
         }
 
-        public Builder triggers(@Nullable Input<Map<String,String>> triggers) {
+        public Builder triggers(@Nullable Output<Map<String,String>> triggers) {
             this.triggers = triggers;
             return this;
         }
 
         public Builder triggers(@Nullable Map<String,String> triggers) {
-            this.triggers = Input.ofNullable(triggers);
+            this.triggers = Output.ofNullable(triggers);
             return this;
         }
 
-        public Builder variables(@Nullable Input<Map<String,String>> variables) {
+        public Builder variables(@Nullable Output<Map<String,String>> variables) {
             this.variables = variables;
             return this;
         }
 
         public Builder variables(@Nullable Map<String,String> variables) {
-            this.variables = Input.ofNullable(variables);
+            this.variables = Output.ofNullable(variables);
             return this;
         }
         public DeploymentState build() {

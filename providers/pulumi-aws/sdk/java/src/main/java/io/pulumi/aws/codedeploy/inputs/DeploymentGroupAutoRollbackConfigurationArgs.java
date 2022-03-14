@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.codedeploy.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -21,10 +21,10 @@ public final class DeploymentGroupAutoRollbackConfigurationArgs extends io.pulum
      * 
      */
     @InputImport(name="enabled")
-      private final @Nullable Input<Boolean> enabled;
+      private final @Nullable Output<Boolean> enabled;
 
-    public Input<Boolean> getEnabled() {
-        return this.enabled == null ? Input.empty() : this.enabled;
+    public Output<Boolean> getEnabled() {
+        return this.enabled == null ? Output.empty() : this.enabled;
     }
 
     /**
@@ -32,22 +32,22 @@ public final class DeploymentGroupAutoRollbackConfigurationArgs extends io.pulum
      * 
      */
     @InputImport(name="events")
-      private final @Nullable Input<List<String>> events;
+      private final @Nullable Output<List<String>> events;
 
-    public Input<List<String>> getEvents() {
-        return this.events == null ? Input.empty() : this.events;
+    public Output<List<String>> getEvents() {
+        return this.events == null ? Output.empty() : this.events;
     }
 
     public DeploymentGroupAutoRollbackConfigurationArgs(
-        @Nullable Input<Boolean> enabled,
-        @Nullable Input<List<String>> events) {
+        @Nullable Output<Boolean> enabled,
+        @Nullable Output<List<String>> events) {
         this.enabled = enabled;
         this.events = events;
     }
 
     private DeploymentGroupAutoRollbackConfigurationArgs() {
-        this.enabled = Input.empty();
-        this.events = Input.empty();
+        this.enabled = Output.empty();
+        this.events = Output.empty();
     }
 
     public static Builder builder() {
@@ -59,8 +59,8 @@ public final class DeploymentGroupAutoRollbackConfigurationArgs extends io.pulum
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> enabled;
-        private @Nullable Input<List<String>> events;
+        private @Nullable Output<Boolean> enabled;
+        private @Nullable Output<List<String>> events;
 
         public Builder() {
     	      // Empty
@@ -72,23 +72,23 @@ public final class DeploymentGroupAutoRollbackConfigurationArgs extends io.pulum
     	      this.events = defaults.events;
         }
 
-        public Builder enabled(@Nullable Input<Boolean> enabled) {
+        public Builder enabled(@Nullable Output<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
 
         public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Input.ofNullable(enabled);
+            this.enabled = Output.ofNullable(enabled);
             return this;
         }
 
-        public Builder events(@Nullable Input<List<String>> events) {
+        public Builder events(@Nullable Output<List<String>> events) {
             this.events = events;
             return this;
         }
 
         public Builder events(@Nullable List<String> events) {
-            this.events = Input.ofNullable(events);
+            this.events = Output.ofNullable(events);
             return this;
         }
         public DeploymentGroupAutoRollbackConfigurationArgs build() {

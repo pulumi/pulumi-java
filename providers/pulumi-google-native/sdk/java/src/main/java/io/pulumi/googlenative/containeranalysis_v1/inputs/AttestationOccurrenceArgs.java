@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.containeranalysis_v1.inputs.JwtArgs;
 import io.pulumi.googlenative.containeranalysis_v1.inputs.SignatureArgs;
@@ -26,10 +26,10 @@ public final class AttestationOccurrenceArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="jwts")
-      private final @Nullable Input<List<JwtArgs>> jwts;
+      private final @Nullable Output<List<JwtArgs>> jwts;
 
-    public Input<List<JwtArgs>> getJwts() {
-        return this.jwts == null ? Input.empty() : this.jwts;
+    public Output<List<JwtArgs>> getJwts() {
+        return this.jwts == null ? Output.empty() : this.jwts;
     }
 
     /**
@@ -37,9 +37,9 @@ public final class AttestationOccurrenceArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="serializedPayload", required=true)
-      private final Input<String> serializedPayload;
+      private final Output<String> serializedPayload;
 
-    public Input<String> getSerializedPayload() {
+    public Output<String> getSerializedPayload() {
         return this.serializedPayload;
     }
 
@@ -48,25 +48,25 @@ public final class AttestationOccurrenceArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="signatures")
-      private final @Nullable Input<List<SignatureArgs>> signatures;
+      private final @Nullable Output<List<SignatureArgs>> signatures;
 
-    public Input<List<SignatureArgs>> getSignatures() {
-        return this.signatures == null ? Input.empty() : this.signatures;
+    public Output<List<SignatureArgs>> getSignatures() {
+        return this.signatures == null ? Output.empty() : this.signatures;
     }
 
     public AttestationOccurrenceArgs(
-        @Nullable Input<List<JwtArgs>> jwts,
-        Input<String> serializedPayload,
-        @Nullable Input<List<SignatureArgs>> signatures) {
+        @Nullable Output<List<JwtArgs>> jwts,
+        Output<String> serializedPayload,
+        @Nullable Output<List<SignatureArgs>> signatures) {
         this.jwts = jwts;
         this.serializedPayload = Objects.requireNonNull(serializedPayload, "expected parameter 'serializedPayload' to be non-null");
         this.signatures = signatures;
     }
 
     private AttestationOccurrenceArgs() {
-        this.jwts = Input.empty();
-        this.serializedPayload = Input.empty();
-        this.signatures = Input.empty();
+        this.jwts = Output.empty();
+        this.serializedPayload = Output.empty();
+        this.signatures = Output.empty();
     }
 
     public static Builder builder() {
@@ -78,9 +78,9 @@ public final class AttestationOccurrenceArgs extends io.pulumi.resources.Resourc
     }
 
     public static final class Builder {
-        private @Nullable Input<List<JwtArgs>> jwts;
-        private Input<String> serializedPayload;
-        private @Nullable Input<List<SignatureArgs>> signatures;
+        private @Nullable Output<List<JwtArgs>> jwts;
+        private Output<String> serializedPayload;
+        private @Nullable Output<List<SignatureArgs>> signatures;
 
         public Builder() {
     	      // Empty
@@ -93,33 +93,33 @@ public final class AttestationOccurrenceArgs extends io.pulumi.resources.Resourc
     	      this.signatures = defaults.signatures;
         }
 
-        public Builder jwts(@Nullable Input<List<JwtArgs>> jwts) {
+        public Builder jwts(@Nullable Output<List<JwtArgs>> jwts) {
             this.jwts = jwts;
             return this;
         }
 
         public Builder jwts(@Nullable List<JwtArgs> jwts) {
-            this.jwts = Input.ofNullable(jwts);
+            this.jwts = Output.ofNullable(jwts);
             return this;
         }
 
-        public Builder serializedPayload(Input<String> serializedPayload) {
+        public Builder serializedPayload(Output<String> serializedPayload) {
             this.serializedPayload = Objects.requireNonNull(serializedPayload);
             return this;
         }
 
         public Builder serializedPayload(String serializedPayload) {
-            this.serializedPayload = Input.of(Objects.requireNonNull(serializedPayload));
+            this.serializedPayload = Output.of(Objects.requireNonNull(serializedPayload));
             return this;
         }
 
-        public Builder signatures(@Nullable Input<List<SignatureArgs>> signatures) {
+        public Builder signatures(@Nullable Output<List<SignatureArgs>> signatures) {
             this.signatures = signatures;
             return this;
         }
 
         public Builder signatures(@Nullable List<SignatureArgs> signatures) {
-            this.signatures = Input.ofNullable(signatures);
+            this.signatures = Output.ofNullable(signatures);
             return this;
         }
         public AttestationOccurrenceArgs build() {

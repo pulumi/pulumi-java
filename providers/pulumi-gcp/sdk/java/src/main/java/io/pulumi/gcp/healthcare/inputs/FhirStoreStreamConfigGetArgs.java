@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.healthcare.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.healthcare.inputs.FhirStoreStreamConfigBigqueryDestinationGetArgs;
 import java.lang.String;
@@ -26,9 +26,9 @@ public final class FhirStoreStreamConfigGetArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="bigqueryDestination", required=true)
-      private final Input<FhirStoreStreamConfigBigqueryDestinationGetArgs> bigqueryDestination;
+      private final Output<FhirStoreStreamConfigBigqueryDestinationGetArgs> bigqueryDestination;
 
-    public Input<FhirStoreStreamConfigBigqueryDestinationGetArgs> getBigqueryDestination() {
+    public Output<FhirStoreStreamConfigBigqueryDestinationGetArgs> getBigqueryDestination() {
         return this.bigqueryDestination;
     }
 
@@ -39,22 +39,22 @@ public final class FhirStoreStreamConfigGetArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="resourceTypes")
-      private final @Nullable Input<List<String>> resourceTypes;
+      private final @Nullable Output<List<String>> resourceTypes;
 
-    public Input<List<String>> getResourceTypes() {
-        return this.resourceTypes == null ? Input.empty() : this.resourceTypes;
+    public Output<List<String>> getResourceTypes() {
+        return this.resourceTypes == null ? Output.empty() : this.resourceTypes;
     }
 
     public FhirStoreStreamConfigGetArgs(
-        Input<FhirStoreStreamConfigBigqueryDestinationGetArgs> bigqueryDestination,
-        @Nullable Input<List<String>> resourceTypes) {
+        Output<FhirStoreStreamConfigBigqueryDestinationGetArgs> bigqueryDestination,
+        @Nullable Output<List<String>> resourceTypes) {
         this.bigqueryDestination = Objects.requireNonNull(bigqueryDestination, "expected parameter 'bigqueryDestination' to be non-null");
         this.resourceTypes = resourceTypes;
     }
 
     private FhirStoreStreamConfigGetArgs() {
-        this.bigqueryDestination = Input.empty();
-        this.resourceTypes = Input.empty();
+        this.bigqueryDestination = Output.empty();
+        this.resourceTypes = Output.empty();
     }
 
     public static Builder builder() {
@@ -66,8 +66,8 @@ public final class FhirStoreStreamConfigGetArgs extends io.pulumi.resources.Reso
     }
 
     public static final class Builder {
-        private Input<FhirStoreStreamConfigBigqueryDestinationGetArgs> bigqueryDestination;
-        private @Nullable Input<List<String>> resourceTypes;
+        private Output<FhirStoreStreamConfigBigqueryDestinationGetArgs> bigqueryDestination;
+        private @Nullable Output<List<String>> resourceTypes;
 
         public Builder() {
     	      // Empty
@@ -79,23 +79,23 @@ public final class FhirStoreStreamConfigGetArgs extends io.pulumi.resources.Reso
     	      this.resourceTypes = defaults.resourceTypes;
         }
 
-        public Builder bigqueryDestination(Input<FhirStoreStreamConfigBigqueryDestinationGetArgs> bigqueryDestination) {
+        public Builder bigqueryDestination(Output<FhirStoreStreamConfigBigqueryDestinationGetArgs> bigqueryDestination) {
             this.bigqueryDestination = Objects.requireNonNull(bigqueryDestination);
             return this;
         }
 
         public Builder bigqueryDestination(FhirStoreStreamConfigBigqueryDestinationGetArgs bigqueryDestination) {
-            this.bigqueryDestination = Input.of(Objects.requireNonNull(bigqueryDestination));
+            this.bigqueryDestination = Output.of(Objects.requireNonNull(bigqueryDestination));
             return this;
         }
 
-        public Builder resourceTypes(@Nullable Input<List<String>> resourceTypes) {
+        public Builder resourceTypes(@Nullable Output<List<String>> resourceTypes) {
             this.resourceTypes = resourceTypes;
             return this;
         }
 
         public Builder resourceTypes(@Nullable List<String> resourceTypes) {
-            this.resourceTypes = Input.ofNullable(resourceTypes);
+            this.resourceTypes = Output.ofNullable(resourceTypes);
             return this;
         }
         public FhirStoreStreamConfigGetArgs build() {

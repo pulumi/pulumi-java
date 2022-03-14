@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.autoscaling_v2beta2.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.kubernetes.autoscaling_v2beta2.inputs.MetricIdentifierArgs;
 import io.pulumi.kubernetes.autoscaling_v2beta2.inputs.MetricValueStatusArgs;
@@ -23,9 +23,9 @@ public final class PodsMetricStatusArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="current", required=true)
-      private final Input<MetricValueStatusArgs> current;
+      private final Output<MetricValueStatusArgs> current;
 
-    public Input<MetricValueStatusArgs> getCurrent() {
+    public Output<MetricValueStatusArgs> getCurrent() {
         return this.current;
     }
 
@@ -34,22 +34,22 @@ public final class PodsMetricStatusArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="metric", required=true)
-      private final Input<MetricIdentifierArgs> metric;
+      private final Output<MetricIdentifierArgs> metric;
 
-    public Input<MetricIdentifierArgs> getMetric() {
+    public Output<MetricIdentifierArgs> getMetric() {
         return this.metric;
     }
 
     public PodsMetricStatusArgs(
-        Input<MetricValueStatusArgs> current,
-        Input<MetricIdentifierArgs> metric) {
+        Output<MetricValueStatusArgs> current,
+        Output<MetricIdentifierArgs> metric) {
         this.current = Objects.requireNonNull(current, "expected parameter 'current' to be non-null");
         this.metric = Objects.requireNonNull(metric, "expected parameter 'metric' to be non-null");
     }
 
     private PodsMetricStatusArgs() {
-        this.current = Input.empty();
-        this.metric = Input.empty();
+        this.current = Output.empty();
+        this.metric = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class PodsMetricStatusArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private Input<MetricValueStatusArgs> current;
-        private Input<MetricIdentifierArgs> metric;
+        private Output<MetricValueStatusArgs> current;
+        private Output<MetricIdentifierArgs> metric;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class PodsMetricStatusArgs extends io.pulumi.resources.ResourceArgs
     	      this.metric = defaults.metric;
         }
 
-        public Builder current(Input<MetricValueStatusArgs> current) {
+        public Builder current(Output<MetricValueStatusArgs> current) {
             this.current = Objects.requireNonNull(current);
             return this;
         }
 
         public Builder current(MetricValueStatusArgs current) {
-            this.current = Input.of(Objects.requireNonNull(current));
+            this.current = Output.of(Objects.requireNonNull(current));
             return this;
         }
 
-        public Builder metric(Input<MetricIdentifierArgs> metric) {
+        public Builder metric(Output<MetricIdentifierArgs> metric) {
             this.metric = Objects.requireNonNull(metric);
             return this;
         }
 
         public Builder metric(MetricIdentifierArgs metric) {
-            this.metric = Input.of(Objects.requireNonNull(metric));
+            this.metric = Output.of(Objects.requireNonNull(metric));
             return this;
         }
         public PodsMetricStatusArgs build() {

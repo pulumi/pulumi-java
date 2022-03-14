@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.dataproc.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.dataproc.inputs.WorkflowTemplateJobPysparkJobLoggingConfigGetArgs;
 import java.lang.String;
@@ -22,10 +22,10 @@ public final class WorkflowTemplateJobPysparkJobGetArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="archiveUris")
-      private final @Nullable Input<List<String>> archiveUris;
+      private final @Nullable Output<List<String>> archiveUris;
 
-    public Input<List<String>> getArchiveUris() {
-        return this.archiveUris == null ? Input.empty() : this.archiveUris;
+    public Output<List<String>> getArchiveUris() {
+        return this.archiveUris == null ? Output.empty() : this.archiveUris;
     }
 
     /**
@@ -33,10 +33,10 @@ public final class WorkflowTemplateJobPysparkJobGetArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="args")
-      private final @Nullable Input<List<String>> args;
+      private final @Nullable Output<List<String>> args;
 
-    public Input<List<String>> getArgs() {
-        return this.args == null ? Input.empty() : this.args;
+    public Output<List<String>> getArgs() {
+        return this.args == null ? Output.empty() : this.args;
     }
 
     /**
@@ -44,10 +44,10 @@ public final class WorkflowTemplateJobPysparkJobGetArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="fileUris")
-      private final @Nullable Input<List<String>> fileUris;
+      private final @Nullable Output<List<String>> fileUris;
 
-    public Input<List<String>> getFileUris() {
-        return this.fileUris == null ? Input.empty() : this.fileUris;
+    public Output<List<String>> getFileUris() {
+        return this.fileUris == null ? Output.empty() : this.fileUris;
     }
 
     /**
@@ -55,10 +55,10 @@ public final class WorkflowTemplateJobPysparkJobGetArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="jarFileUris")
-      private final @Nullable Input<List<String>> jarFileUris;
+      private final @Nullable Output<List<String>> jarFileUris;
 
-    public Input<List<String>> getJarFileUris() {
-        return this.jarFileUris == null ? Input.empty() : this.jarFileUris;
+    public Output<List<String>> getJarFileUris() {
+        return this.jarFileUris == null ? Output.empty() : this.jarFileUris;
     }
 
     /**
@@ -66,10 +66,10 @@ public final class WorkflowTemplateJobPysparkJobGetArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="loggingConfig")
-      private final @Nullable Input<WorkflowTemplateJobPysparkJobLoggingConfigGetArgs> loggingConfig;
+      private final @Nullable Output<WorkflowTemplateJobPysparkJobLoggingConfigGetArgs> loggingConfig;
 
-    public Input<WorkflowTemplateJobPysparkJobLoggingConfigGetArgs> getLoggingConfig() {
-        return this.loggingConfig == null ? Input.empty() : this.loggingConfig;
+    public Output<WorkflowTemplateJobPysparkJobLoggingConfigGetArgs> getLoggingConfig() {
+        return this.loggingConfig == null ? Output.empty() : this.loggingConfig;
     }
 
     /**
@@ -77,9 +77,9 @@ public final class WorkflowTemplateJobPysparkJobGetArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="mainPythonFileUri", required=true)
-      private final Input<String> mainPythonFileUri;
+      private final Output<String> mainPythonFileUri;
 
-    public Input<String> getMainPythonFileUri() {
+    public Output<String> getMainPythonFileUri() {
         return this.mainPythonFileUri;
     }
 
@@ -88,10 +88,10 @@ public final class WorkflowTemplateJobPysparkJobGetArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="properties")
-      private final @Nullable Input<Map<String,String>> properties;
+      private final @Nullable Output<Map<String,String>> properties;
 
-    public Input<Map<String,String>> getProperties() {
-        return this.properties == null ? Input.empty() : this.properties;
+    public Output<Map<String,String>> getProperties() {
+        return this.properties == null ? Output.empty() : this.properties;
     }
 
     /**
@@ -99,21 +99,21 @@ public final class WorkflowTemplateJobPysparkJobGetArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="pythonFileUris")
-      private final @Nullable Input<List<String>> pythonFileUris;
+      private final @Nullable Output<List<String>> pythonFileUris;
 
-    public Input<List<String>> getPythonFileUris() {
-        return this.pythonFileUris == null ? Input.empty() : this.pythonFileUris;
+    public Output<List<String>> getPythonFileUris() {
+        return this.pythonFileUris == null ? Output.empty() : this.pythonFileUris;
     }
 
     public WorkflowTemplateJobPysparkJobGetArgs(
-        @Nullable Input<List<String>> archiveUris,
-        @Nullable Input<List<String>> args,
-        @Nullable Input<List<String>> fileUris,
-        @Nullable Input<List<String>> jarFileUris,
-        @Nullable Input<WorkflowTemplateJobPysparkJobLoggingConfigGetArgs> loggingConfig,
-        Input<String> mainPythonFileUri,
-        @Nullable Input<Map<String,String>> properties,
-        @Nullable Input<List<String>> pythonFileUris) {
+        @Nullable Output<List<String>> archiveUris,
+        @Nullable Output<List<String>> args,
+        @Nullable Output<List<String>> fileUris,
+        @Nullable Output<List<String>> jarFileUris,
+        @Nullable Output<WorkflowTemplateJobPysparkJobLoggingConfigGetArgs> loggingConfig,
+        Output<String> mainPythonFileUri,
+        @Nullable Output<Map<String,String>> properties,
+        @Nullable Output<List<String>> pythonFileUris) {
         this.archiveUris = archiveUris;
         this.args = args;
         this.fileUris = fileUris;
@@ -125,14 +125,14 @@ public final class WorkflowTemplateJobPysparkJobGetArgs extends io.pulumi.resour
     }
 
     private WorkflowTemplateJobPysparkJobGetArgs() {
-        this.archiveUris = Input.empty();
-        this.args = Input.empty();
-        this.fileUris = Input.empty();
-        this.jarFileUris = Input.empty();
-        this.loggingConfig = Input.empty();
-        this.mainPythonFileUri = Input.empty();
-        this.properties = Input.empty();
-        this.pythonFileUris = Input.empty();
+        this.archiveUris = Output.empty();
+        this.args = Output.empty();
+        this.fileUris = Output.empty();
+        this.jarFileUris = Output.empty();
+        this.loggingConfig = Output.empty();
+        this.mainPythonFileUri = Output.empty();
+        this.properties = Output.empty();
+        this.pythonFileUris = Output.empty();
     }
 
     public static Builder builder() {
@@ -144,14 +144,14 @@ public final class WorkflowTemplateJobPysparkJobGetArgs extends io.pulumi.resour
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> archiveUris;
-        private @Nullable Input<List<String>> args;
-        private @Nullable Input<List<String>> fileUris;
-        private @Nullable Input<List<String>> jarFileUris;
-        private @Nullable Input<WorkflowTemplateJobPysparkJobLoggingConfigGetArgs> loggingConfig;
-        private Input<String> mainPythonFileUri;
-        private @Nullable Input<Map<String,String>> properties;
-        private @Nullable Input<List<String>> pythonFileUris;
+        private @Nullable Output<List<String>> archiveUris;
+        private @Nullable Output<List<String>> args;
+        private @Nullable Output<List<String>> fileUris;
+        private @Nullable Output<List<String>> jarFileUris;
+        private @Nullable Output<WorkflowTemplateJobPysparkJobLoggingConfigGetArgs> loggingConfig;
+        private Output<String> mainPythonFileUri;
+        private @Nullable Output<Map<String,String>> properties;
+        private @Nullable Output<List<String>> pythonFileUris;
 
         public Builder() {
     	      // Empty
@@ -169,83 +169,83 @@ public final class WorkflowTemplateJobPysparkJobGetArgs extends io.pulumi.resour
     	      this.pythonFileUris = defaults.pythonFileUris;
         }
 
-        public Builder archiveUris(@Nullable Input<List<String>> archiveUris) {
+        public Builder archiveUris(@Nullable Output<List<String>> archiveUris) {
             this.archiveUris = archiveUris;
             return this;
         }
 
         public Builder archiveUris(@Nullable List<String> archiveUris) {
-            this.archiveUris = Input.ofNullable(archiveUris);
+            this.archiveUris = Output.ofNullable(archiveUris);
             return this;
         }
 
-        public Builder args(@Nullable Input<List<String>> args) {
+        public Builder args(@Nullable Output<List<String>> args) {
             this.args = args;
             return this;
         }
 
         public Builder args(@Nullable List<String> args) {
-            this.args = Input.ofNullable(args);
+            this.args = Output.ofNullable(args);
             return this;
         }
 
-        public Builder fileUris(@Nullable Input<List<String>> fileUris) {
+        public Builder fileUris(@Nullable Output<List<String>> fileUris) {
             this.fileUris = fileUris;
             return this;
         }
 
         public Builder fileUris(@Nullable List<String> fileUris) {
-            this.fileUris = Input.ofNullable(fileUris);
+            this.fileUris = Output.ofNullable(fileUris);
             return this;
         }
 
-        public Builder jarFileUris(@Nullable Input<List<String>> jarFileUris) {
+        public Builder jarFileUris(@Nullable Output<List<String>> jarFileUris) {
             this.jarFileUris = jarFileUris;
             return this;
         }
 
         public Builder jarFileUris(@Nullable List<String> jarFileUris) {
-            this.jarFileUris = Input.ofNullable(jarFileUris);
+            this.jarFileUris = Output.ofNullable(jarFileUris);
             return this;
         }
 
-        public Builder loggingConfig(@Nullable Input<WorkflowTemplateJobPysparkJobLoggingConfigGetArgs> loggingConfig) {
+        public Builder loggingConfig(@Nullable Output<WorkflowTemplateJobPysparkJobLoggingConfigGetArgs> loggingConfig) {
             this.loggingConfig = loggingConfig;
             return this;
         }
 
         public Builder loggingConfig(@Nullable WorkflowTemplateJobPysparkJobLoggingConfigGetArgs loggingConfig) {
-            this.loggingConfig = Input.ofNullable(loggingConfig);
+            this.loggingConfig = Output.ofNullable(loggingConfig);
             return this;
         }
 
-        public Builder mainPythonFileUri(Input<String> mainPythonFileUri) {
+        public Builder mainPythonFileUri(Output<String> mainPythonFileUri) {
             this.mainPythonFileUri = Objects.requireNonNull(mainPythonFileUri);
             return this;
         }
 
         public Builder mainPythonFileUri(String mainPythonFileUri) {
-            this.mainPythonFileUri = Input.of(Objects.requireNonNull(mainPythonFileUri));
+            this.mainPythonFileUri = Output.of(Objects.requireNonNull(mainPythonFileUri));
             return this;
         }
 
-        public Builder properties(@Nullable Input<Map<String,String>> properties) {
+        public Builder properties(@Nullable Output<Map<String,String>> properties) {
             this.properties = properties;
             return this;
         }
 
         public Builder properties(@Nullable Map<String,String> properties) {
-            this.properties = Input.ofNullable(properties);
+            this.properties = Output.ofNullable(properties);
             return this;
         }
 
-        public Builder pythonFileUris(@Nullable Input<List<String>> pythonFileUris) {
+        public Builder pythonFileUris(@Nullable Output<List<String>> pythonFileUris) {
             this.pythonFileUris = pythonFileUris;
             return this;
         }
 
         public Builder pythonFileUris(@Nullable List<String> pythonFileUris) {
-            this.pythonFileUris = Input.ofNullable(pythonFileUris);
+            this.pythonFileUris = Output.ofNullable(pythonFileUris);
             return this;
         }
         public WorkflowTemplateJobPysparkJobGetArgs build() {

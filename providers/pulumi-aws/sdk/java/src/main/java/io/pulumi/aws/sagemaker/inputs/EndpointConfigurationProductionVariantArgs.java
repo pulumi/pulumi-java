@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.sagemaker.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.Integer;
@@ -21,10 +21,10 @@ public final class EndpointConfigurationProductionVariantArgs extends io.pulumi.
      * 
      */
     @InputImport(name="acceleratorType")
-      private final @Nullable Input<String> acceleratorType;
+      private final @Nullable Output<String> acceleratorType;
 
-    public Input<String> getAcceleratorType() {
-        return this.acceleratorType == null ? Input.empty() : this.acceleratorType;
+    public Output<String> getAcceleratorType() {
+        return this.acceleratorType == null ? Output.empty() : this.acceleratorType;
     }
 
     /**
@@ -32,9 +32,9 @@ public final class EndpointConfigurationProductionVariantArgs extends io.pulumi.
      * 
      */
     @InputImport(name="initialInstanceCount", required=true)
-      private final Input<Integer> initialInstanceCount;
+      private final Output<Integer> initialInstanceCount;
 
-    public Input<Integer> getInitialInstanceCount() {
+    public Output<Integer> getInitialInstanceCount() {
         return this.initialInstanceCount;
     }
 
@@ -43,10 +43,10 @@ public final class EndpointConfigurationProductionVariantArgs extends io.pulumi.
      * 
      */
     @InputImport(name="initialVariantWeight")
-      private final @Nullable Input<Double> initialVariantWeight;
+      private final @Nullable Output<Double> initialVariantWeight;
 
-    public Input<Double> getInitialVariantWeight() {
-        return this.initialVariantWeight == null ? Input.empty() : this.initialVariantWeight;
+    public Output<Double> getInitialVariantWeight() {
+        return this.initialVariantWeight == null ? Output.empty() : this.initialVariantWeight;
     }
 
     /**
@@ -54,9 +54,9 @@ public final class EndpointConfigurationProductionVariantArgs extends io.pulumi.
      * 
      */
     @InputImport(name="instanceType", required=true)
-      private final Input<String> instanceType;
+      private final Output<String> instanceType;
 
-    public Input<String> getInstanceType() {
+    public Output<String> getInstanceType() {
         return this.instanceType;
     }
 
@@ -65,9 +65,9 @@ public final class EndpointConfigurationProductionVariantArgs extends io.pulumi.
      * 
      */
     @InputImport(name="modelName", required=true)
-      private final Input<String> modelName;
+      private final Output<String> modelName;
 
-    public Input<String> getModelName() {
+    public Output<String> getModelName() {
         return this.modelName;
     }
 
@@ -76,19 +76,19 @@ public final class EndpointConfigurationProductionVariantArgs extends io.pulumi.
      * 
      */
     @InputImport(name="variantName")
-      private final @Nullable Input<String> variantName;
+      private final @Nullable Output<String> variantName;
 
-    public Input<String> getVariantName() {
-        return this.variantName == null ? Input.empty() : this.variantName;
+    public Output<String> getVariantName() {
+        return this.variantName == null ? Output.empty() : this.variantName;
     }
 
     public EndpointConfigurationProductionVariantArgs(
-        @Nullable Input<String> acceleratorType,
-        Input<Integer> initialInstanceCount,
-        @Nullable Input<Double> initialVariantWeight,
-        Input<String> instanceType,
-        Input<String> modelName,
-        @Nullable Input<String> variantName) {
+        @Nullable Output<String> acceleratorType,
+        Output<Integer> initialInstanceCount,
+        @Nullable Output<Double> initialVariantWeight,
+        Output<String> instanceType,
+        Output<String> modelName,
+        @Nullable Output<String> variantName) {
         this.acceleratorType = acceleratorType;
         this.initialInstanceCount = Objects.requireNonNull(initialInstanceCount, "expected parameter 'initialInstanceCount' to be non-null");
         this.initialVariantWeight = initialVariantWeight;
@@ -98,12 +98,12 @@ public final class EndpointConfigurationProductionVariantArgs extends io.pulumi.
     }
 
     private EndpointConfigurationProductionVariantArgs() {
-        this.acceleratorType = Input.empty();
-        this.initialInstanceCount = Input.empty();
-        this.initialVariantWeight = Input.empty();
-        this.instanceType = Input.empty();
-        this.modelName = Input.empty();
-        this.variantName = Input.empty();
+        this.acceleratorType = Output.empty();
+        this.initialInstanceCount = Output.empty();
+        this.initialVariantWeight = Output.empty();
+        this.instanceType = Output.empty();
+        this.modelName = Output.empty();
+        this.variantName = Output.empty();
     }
 
     public static Builder builder() {
@@ -115,12 +115,12 @@ public final class EndpointConfigurationProductionVariantArgs extends io.pulumi.
     }
 
     public static final class Builder {
-        private @Nullable Input<String> acceleratorType;
-        private Input<Integer> initialInstanceCount;
-        private @Nullable Input<Double> initialVariantWeight;
-        private Input<String> instanceType;
-        private Input<String> modelName;
-        private @Nullable Input<String> variantName;
+        private @Nullable Output<String> acceleratorType;
+        private Output<Integer> initialInstanceCount;
+        private @Nullable Output<Double> initialVariantWeight;
+        private Output<String> instanceType;
+        private Output<String> modelName;
+        private @Nullable Output<String> variantName;
 
         public Builder() {
     	      // Empty
@@ -136,63 +136,63 @@ public final class EndpointConfigurationProductionVariantArgs extends io.pulumi.
     	      this.variantName = defaults.variantName;
         }
 
-        public Builder acceleratorType(@Nullable Input<String> acceleratorType) {
+        public Builder acceleratorType(@Nullable Output<String> acceleratorType) {
             this.acceleratorType = acceleratorType;
             return this;
         }
 
         public Builder acceleratorType(@Nullable String acceleratorType) {
-            this.acceleratorType = Input.ofNullable(acceleratorType);
+            this.acceleratorType = Output.ofNullable(acceleratorType);
             return this;
         }
 
-        public Builder initialInstanceCount(Input<Integer> initialInstanceCount) {
+        public Builder initialInstanceCount(Output<Integer> initialInstanceCount) {
             this.initialInstanceCount = Objects.requireNonNull(initialInstanceCount);
             return this;
         }
 
         public Builder initialInstanceCount(Integer initialInstanceCount) {
-            this.initialInstanceCount = Input.of(Objects.requireNonNull(initialInstanceCount));
+            this.initialInstanceCount = Output.of(Objects.requireNonNull(initialInstanceCount));
             return this;
         }
 
-        public Builder initialVariantWeight(@Nullable Input<Double> initialVariantWeight) {
+        public Builder initialVariantWeight(@Nullable Output<Double> initialVariantWeight) {
             this.initialVariantWeight = initialVariantWeight;
             return this;
         }
 
         public Builder initialVariantWeight(@Nullable Double initialVariantWeight) {
-            this.initialVariantWeight = Input.ofNullable(initialVariantWeight);
+            this.initialVariantWeight = Output.ofNullable(initialVariantWeight);
             return this;
         }
 
-        public Builder instanceType(Input<String> instanceType) {
+        public Builder instanceType(Output<String> instanceType) {
             this.instanceType = Objects.requireNonNull(instanceType);
             return this;
         }
 
         public Builder instanceType(String instanceType) {
-            this.instanceType = Input.of(Objects.requireNonNull(instanceType));
+            this.instanceType = Output.of(Objects.requireNonNull(instanceType));
             return this;
         }
 
-        public Builder modelName(Input<String> modelName) {
+        public Builder modelName(Output<String> modelName) {
             this.modelName = Objects.requireNonNull(modelName);
             return this;
         }
 
         public Builder modelName(String modelName) {
-            this.modelName = Input.of(Objects.requireNonNull(modelName));
+            this.modelName = Output.of(Objects.requireNonNull(modelName));
             return this;
         }
 
-        public Builder variantName(@Nullable Input<String> variantName) {
+        public Builder variantName(@Nullable Output<String> variantName) {
             this.variantName = variantName;
             return this;
         }
 
         public Builder variantName(@Nullable String variantName) {
-            this.variantName = Input.ofNullable(variantName);
+            this.variantName = Output.ofNullable(variantName);
             return this;
         }
         public EndpointConfigurationProductionVariantArgs build() {

@@ -3,7 +3,6 @@
 
 package io.pulumi.gcp.compute;
 
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -105,14 +104,14 @@ public class ProjectDefaultNetworkTier extends io.pulumi.resources.CustomResourc
      * @param options A bag of options that control this resource's behavior.
      */
     public ProjectDefaultNetworkTier(String name, ProjectDefaultNetworkTierArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:compute/projectDefaultNetworkTier:ProjectDefaultNetworkTier", name, args == null ? ProjectDefaultNetworkTierArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("gcp:compute/projectDefaultNetworkTier:ProjectDefaultNetworkTier", name, args == null ? ProjectDefaultNetworkTierArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private ProjectDefaultNetworkTier(String name, Input<String> id, @Nullable ProjectDefaultNetworkTierState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private ProjectDefaultNetworkTier(String name, Output<String> id, @Nullable ProjectDefaultNetworkTierState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("gcp:compute/projectDefaultNetworkTier:ProjectDefaultNetworkTier", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -128,7 +127,7 @@ public class ProjectDefaultNetworkTier extends io.pulumi.resources.CustomResourc
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static ProjectDefaultNetworkTier get(String name, Input<String> id, @Nullable ProjectDefaultNetworkTierState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static ProjectDefaultNetworkTier get(String name, Output<String> id, @Nullable ProjectDefaultNetworkTierState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new ProjectDefaultNetworkTier(name, id, state, options);
     }
 }

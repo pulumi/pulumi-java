@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.operationalinsights.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class SearchResultsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class SearchResultsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="endSearchTime")
-      private final @Nullable Input<String> endSearchTime;
+      private final @Nullable Output<String> endSearchTime;
 
-    public Input<String> getEndSearchTime() {
-        return this.endSearchTime == null ? Input.empty() : this.endSearchTime;
+    public Output<String> getEndSearchTime() {
+        return this.endSearchTime == null ? Output.empty() : this.endSearchTime;
     }
 
     /**
@@ -46,10 +46,10 @@ public final class SearchResultsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="limit")
-      private final @Nullable Input<Integer> limit;
+      private final @Nullable Output<Integer> limit;
 
-    public Input<Integer> getLimit() {
-        return this.limit == null ? Input.empty() : this.limit;
+    public Output<Integer> getLimit() {
+        return this.limit == null ? Output.empty() : this.limit;
     }
 
     /**
@@ -57,10 +57,10 @@ public final class SearchResultsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="query")
-      private final @Nullable Input<String> query;
+      private final @Nullable Output<String> query;
 
-    public Input<String> getQuery() {
-        return this.query == null ? Input.empty() : this.query;
+    public Output<String> getQuery() {
+        return this.query == null ? Output.empty() : this.query;
     }
 
     /**
@@ -68,18 +68,18 @@ public final class SearchResultsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="startSearchTime")
-      private final @Nullable Input<String> startSearchTime;
+      private final @Nullable Output<String> startSearchTime;
 
-    public Input<String> getStartSearchTime() {
-        return this.startSearchTime == null ? Input.empty() : this.startSearchTime;
+    public Output<String> getStartSearchTime() {
+        return this.startSearchTime == null ? Output.empty() : this.startSearchTime;
     }
 
     public SearchResultsArgs(
-        @Nullable Input<String> description,
-        @Nullable Input<String> endSearchTime,
-        @Nullable Input<Integer> limit,
-        @Nullable Input<String> query,
-        @Nullable Input<String> startSearchTime) {
+        @Nullable Output<String> description,
+        @Nullable Output<String> endSearchTime,
+        @Nullable Output<Integer> limit,
+        @Nullable Output<String> query,
+        @Nullable Output<String> startSearchTime) {
         this.description = description;
         this.endSearchTime = endSearchTime;
         this.limit = limit;
@@ -88,11 +88,11 @@ public final class SearchResultsArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private SearchResultsArgs() {
-        this.description = Input.empty();
-        this.endSearchTime = Input.empty();
-        this.limit = Input.empty();
-        this.query = Input.empty();
-        this.startSearchTime = Input.empty();
+        this.description = Output.empty();
+        this.endSearchTime = Output.empty();
+        this.limit = Output.empty();
+        this.query = Output.empty();
+        this.startSearchTime = Output.empty();
     }
 
     public static Builder builder() {
@@ -104,11 +104,11 @@ public final class SearchResultsArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> description;
-        private @Nullable Input<String> endSearchTime;
-        private @Nullable Input<Integer> limit;
-        private @Nullable Input<String> query;
-        private @Nullable Input<String> startSearchTime;
+        private @Nullable Output<String> description;
+        private @Nullable Output<String> endSearchTime;
+        private @Nullable Output<Integer> limit;
+        private @Nullable Output<String> query;
+        private @Nullable Output<String> startSearchTime;
 
         public Builder() {
     	      // Empty
@@ -123,53 +123,53 @@ public final class SearchResultsArgs extends io.pulumi.resources.ResourceArgs {
     	      this.startSearchTime = defaults.startSearchTime;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder endSearchTime(@Nullable Input<String> endSearchTime) {
+        public Builder endSearchTime(@Nullable Output<String> endSearchTime) {
             this.endSearchTime = endSearchTime;
             return this;
         }
 
         public Builder endSearchTime(@Nullable String endSearchTime) {
-            this.endSearchTime = Input.ofNullable(endSearchTime);
+            this.endSearchTime = Output.ofNullable(endSearchTime);
             return this;
         }
 
-        public Builder limit(@Nullable Input<Integer> limit) {
+        public Builder limit(@Nullable Output<Integer> limit) {
             this.limit = limit;
             return this;
         }
 
         public Builder limit(@Nullable Integer limit) {
-            this.limit = Input.ofNullable(limit);
+            this.limit = Output.ofNullable(limit);
             return this;
         }
 
-        public Builder query(@Nullable Input<String> query) {
+        public Builder query(@Nullable Output<String> query) {
             this.query = query;
             return this;
         }
 
         public Builder query(@Nullable String query) {
-            this.query = Input.ofNullable(query);
+            this.query = Output.ofNullable(query);
             return this;
         }
 
-        public Builder startSearchTime(@Nullable Input<String> startSearchTime) {
+        public Builder startSearchTime(@Nullable Output<String> startSearchTime) {
             this.startSearchTime = startSearchTime;
             return this;
         }
 
         public Builder startSearchTime(@Nullable String startSearchTime) {
-            this.startSearchTime = Input.ofNullable(startSearchTime);
+            this.startSearchTime = Output.ofNullable(startSearchTime);
             return this;
         }
         public SearchResultsArgs build() {

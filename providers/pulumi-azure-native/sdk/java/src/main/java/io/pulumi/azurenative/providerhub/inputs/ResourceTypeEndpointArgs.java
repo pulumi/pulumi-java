@@ -5,7 +5,7 @@ package io.pulumi.azurenative.providerhub.inputs;
 
 import io.pulumi.azurenative.providerhub.inputs.ResourceTypeEndpointFeaturesRuleArgs;
 import io.pulumi.azurenative.providerhub.inputs.ResourceTypeExtensionArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -19,62 +19,62 @@ public final class ResourceTypeEndpointArgs extends io.pulumi.resources.Resource
     public static final ResourceTypeEndpointArgs Empty = new ResourceTypeEndpointArgs();
 
     @InputImport(name="apiVersions")
-      private final @Nullable Input<List<String>> apiVersions;
+      private final @Nullable Output<List<String>> apiVersions;
 
-    public Input<List<String>> getApiVersions() {
-        return this.apiVersions == null ? Input.empty() : this.apiVersions;
+    public Output<List<String>> getApiVersions() {
+        return this.apiVersions == null ? Output.empty() : this.apiVersions;
     }
 
     @InputImport(name="enabled")
-      private final @Nullable Input<Boolean> enabled;
+      private final @Nullable Output<Boolean> enabled;
 
-    public Input<Boolean> getEnabled() {
-        return this.enabled == null ? Input.empty() : this.enabled;
+    public Output<Boolean> getEnabled() {
+        return this.enabled == null ? Output.empty() : this.enabled;
     }
 
     @InputImport(name="extensions")
-      private final @Nullable Input<List<ResourceTypeExtensionArgs>> extensions;
+      private final @Nullable Output<List<ResourceTypeExtensionArgs>> extensions;
 
-    public Input<List<ResourceTypeExtensionArgs>> getExtensions() {
-        return this.extensions == null ? Input.empty() : this.extensions;
+    public Output<List<ResourceTypeExtensionArgs>> getExtensions() {
+        return this.extensions == null ? Output.empty() : this.extensions;
     }
 
     @InputImport(name="featuresRule")
-      private final @Nullable Input<ResourceTypeEndpointFeaturesRuleArgs> featuresRule;
+      private final @Nullable Output<ResourceTypeEndpointFeaturesRuleArgs> featuresRule;
 
-    public Input<ResourceTypeEndpointFeaturesRuleArgs> getFeaturesRule() {
-        return this.featuresRule == null ? Input.empty() : this.featuresRule;
+    public Output<ResourceTypeEndpointFeaturesRuleArgs> getFeaturesRule() {
+        return this.featuresRule == null ? Output.empty() : this.featuresRule;
     }
 
     @InputImport(name="locations")
-      private final @Nullable Input<List<String>> locations;
+      private final @Nullable Output<List<String>> locations;
 
-    public Input<List<String>> getLocations() {
-        return this.locations == null ? Input.empty() : this.locations;
+    public Output<List<String>> getLocations() {
+        return this.locations == null ? Output.empty() : this.locations;
     }
 
     @InputImport(name="requiredFeatures")
-      private final @Nullable Input<List<String>> requiredFeatures;
+      private final @Nullable Output<List<String>> requiredFeatures;
 
-    public Input<List<String>> getRequiredFeatures() {
-        return this.requiredFeatures == null ? Input.empty() : this.requiredFeatures;
+    public Output<List<String>> getRequiredFeatures() {
+        return this.requiredFeatures == null ? Output.empty() : this.requiredFeatures;
     }
 
     @InputImport(name="timeout")
-      private final @Nullable Input<String> timeout;
+      private final @Nullable Output<String> timeout;
 
-    public Input<String> getTimeout() {
-        return this.timeout == null ? Input.empty() : this.timeout;
+    public Output<String> getTimeout() {
+        return this.timeout == null ? Output.empty() : this.timeout;
     }
 
     public ResourceTypeEndpointArgs(
-        @Nullable Input<List<String>> apiVersions,
-        @Nullable Input<Boolean> enabled,
-        @Nullable Input<List<ResourceTypeExtensionArgs>> extensions,
-        @Nullable Input<ResourceTypeEndpointFeaturesRuleArgs> featuresRule,
-        @Nullable Input<List<String>> locations,
-        @Nullable Input<List<String>> requiredFeatures,
-        @Nullable Input<String> timeout) {
+        @Nullable Output<List<String>> apiVersions,
+        @Nullable Output<Boolean> enabled,
+        @Nullable Output<List<ResourceTypeExtensionArgs>> extensions,
+        @Nullable Output<ResourceTypeEndpointFeaturesRuleArgs> featuresRule,
+        @Nullable Output<List<String>> locations,
+        @Nullable Output<List<String>> requiredFeatures,
+        @Nullable Output<String> timeout) {
         this.apiVersions = apiVersions;
         this.enabled = enabled;
         this.extensions = extensions;
@@ -85,13 +85,13 @@ public final class ResourceTypeEndpointArgs extends io.pulumi.resources.Resource
     }
 
     private ResourceTypeEndpointArgs() {
-        this.apiVersions = Input.empty();
-        this.enabled = Input.empty();
-        this.extensions = Input.empty();
-        this.featuresRule = Input.empty();
-        this.locations = Input.empty();
-        this.requiredFeatures = Input.empty();
-        this.timeout = Input.empty();
+        this.apiVersions = Output.empty();
+        this.enabled = Output.empty();
+        this.extensions = Output.empty();
+        this.featuresRule = Output.empty();
+        this.locations = Output.empty();
+        this.requiredFeatures = Output.empty();
+        this.timeout = Output.empty();
     }
 
     public static Builder builder() {
@@ -103,13 +103,13 @@ public final class ResourceTypeEndpointArgs extends io.pulumi.resources.Resource
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> apiVersions;
-        private @Nullable Input<Boolean> enabled;
-        private @Nullable Input<List<ResourceTypeExtensionArgs>> extensions;
-        private @Nullable Input<ResourceTypeEndpointFeaturesRuleArgs> featuresRule;
-        private @Nullable Input<List<String>> locations;
-        private @Nullable Input<List<String>> requiredFeatures;
-        private @Nullable Input<String> timeout;
+        private @Nullable Output<List<String>> apiVersions;
+        private @Nullable Output<Boolean> enabled;
+        private @Nullable Output<List<ResourceTypeExtensionArgs>> extensions;
+        private @Nullable Output<ResourceTypeEndpointFeaturesRuleArgs> featuresRule;
+        private @Nullable Output<List<String>> locations;
+        private @Nullable Output<List<String>> requiredFeatures;
+        private @Nullable Output<String> timeout;
 
         public Builder() {
     	      // Empty
@@ -126,73 +126,73 @@ public final class ResourceTypeEndpointArgs extends io.pulumi.resources.Resource
     	      this.timeout = defaults.timeout;
         }
 
-        public Builder apiVersions(@Nullable Input<List<String>> apiVersions) {
+        public Builder apiVersions(@Nullable Output<List<String>> apiVersions) {
             this.apiVersions = apiVersions;
             return this;
         }
 
         public Builder apiVersions(@Nullable List<String> apiVersions) {
-            this.apiVersions = Input.ofNullable(apiVersions);
+            this.apiVersions = Output.ofNullable(apiVersions);
             return this;
         }
 
-        public Builder enabled(@Nullable Input<Boolean> enabled) {
+        public Builder enabled(@Nullable Output<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
 
         public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Input.ofNullable(enabled);
+            this.enabled = Output.ofNullable(enabled);
             return this;
         }
 
-        public Builder extensions(@Nullable Input<List<ResourceTypeExtensionArgs>> extensions) {
+        public Builder extensions(@Nullable Output<List<ResourceTypeExtensionArgs>> extensions) {
             this.extensions = extensions;
             return this;
         }
 
         public Builder extensions(@Nullable List<ResourceTypeExtensionArgs> extensions) {
-            this.extensions = Input.ofNullable(extensions);
+            this.extensions = Output.ofNullable(extensions);
             return this;
         }
 
-        public Builder featuresRule(@Nullable Input<ResourceTypeEndpointFeaturesRuleArgs> featuresRule) {
+        public Builder featuresRule(@Nullable Output<ResourceTypeEndpointFeaturesRuleArgs> featuresRule) {
             this.featuresRule = featuresRule;
             return this;
         }
 
         public Builder featuresRule(@Nullable ResourceTypeEndpointFeaturesRuleArgs featuresRule) {
-            this.featuresRule = Input.ofNullable(featuresRule);
+            this.featuresRule = Output.ofNullable(featuresRule);
             return this;
         }
 
-        public Builder locations(@Nullable Input<List<String>> locations) {
+        public Builder locations(@Nullable Output<List<String>> locations) {
             this.locations = locations;
             return this;
         }
 
         public Builder locations(@Nullable List<String> locations) {
-            this.locations = Input.ofNullable(locations);
+            this.locations = Output.ofNullable(locations);
             return this;
         }
 
-        public Builder requiredFeatures(@Nullable Input<List<String>> requiredFeatures) {
+        public Builder requiredFeatures(@Nullable Output<List<String>> requiredFeatures) {
             this.requiredFeatures = requiredFeatures;
             return this;
         }
 
         public Builder requiredFeatures(@Nullable List<String> requiredFeatures) {
-            this.requiredFeatures = Input.ofNullable(requiredFeatures);
+            this.requiredFeatures = Output.ofNullable(requiredFeatures);
             return this;
         }
 
-        public Builder timeout(@Nullable Input<String> timeout) {
+        public Builder timeout(@Nullable Output<String> timeout) {
             this.timeout = timeout;
             return this;
         }
 
         public Builder timeout(@Nullable String timeout) {
-            this.timeout = Input.ofNullable(timeout);
+            this.timeout = Output.ofNullable(timeout);
             return this;
         }
         public ResourceTypeEndpointArgs build() {

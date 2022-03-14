@@ -5,7 +5,7 @@ package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.azurenative.network.enums.HeaderActionType;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -25,9 +25,9 @@ public final class HeaderActionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="headerActionType", required=true)
-      private final Input<Either<String,HeaderActionType>> headerActionType;
+      private final Output<Either<String,HeaderActionType>> headerActionType;
 
-    public Input<Either<String,HeaderActionType>> getHeaderActionType() {
+    public Output<Either<String,HeaderActionType>> getHeaderActionType() {
         return this.headerActionType;
     }
 
@@ -36,9 +36,9 @@ public final class HeaderActionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="headerName", required=true)
-      private final Input<String> headerName;
+      private final Output<String> headerName;
 
-    public Input<String> getHeaderName() {
+    public Output<String> getHeaderName() {
         return this.headerName;
     }
 
@@ -47,25 +47,25 @@ public final class HeaderActionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="value")
-      private final @Nullable Input<String> value;
+      private final @Nullable Output<String> value;
 
-    public Input<String> getValue() {
-        return this.value == null ? Input.empty() : this.value;
+    public Output<String> getValue() {
+        return this.value == null ? Output.empty() : this.value;
     }
 
     public HeaderActionArgs(
-        Input<Either<String,HeaderActionType>> headerActionType,
-        Input<String> headerName,
-        @Nullable Input<String> value) {
+        Output<Either<String,HeaderActionType>> headerActionType,
+        Output<String> headerName,
+        @Nullable Output<String> value) {
         this.headerActionType = Objects.requireNonNull(headerActionType, "expected parameter 'headerActionType' to be non-null");
         this.headerName = Objects.requireNonNull(headerName, "expected parameter 'headerName' to be non-null");
         this.value = value;
     }
 
     private HeaderActionArgs() {
-        this.headerActionType = Input.empty();
-        this.headerName = Input.empty();
-        this.value = Input.empty();
+        this.headerActionType = Output.empty();
+        this.headerName = Output.empty();
+        this.value = Output.empty();
     }
 
     public static Builder builder() {
@@ -77,9 +77,9 @@ public final class HeaderActionArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<Either<String,HeaderActionType>> headerActionType;
-        private Input<String> headerName;
-        private @Nullable Input<String> value;
+        private Output<Either<String,HeaderActionType>> headerActionType;
+        private Output<String> headerName;
+        private @Nullable Output<String> value;
 
         public Builder() {
     	      // Empty
@@ -92,33 +92,33 @@ public final class HeaderActionArgs extends io.pulumi.resources.ResourceArgs {
     	      this.value = defaults.value;
         }
 
-        public Builder headerActionType(Input<Either<String,HeaderActionType>> headerActionType) {
+        public Builder headerActionType(Output<Either<String,HeaderActionType>> headerActionType) {
             this.headerActionType = Objects.requireNonNull(headerActionType);
             return this;
         }
 
         public Builder headerActionType(Either<String,HeaderActionType> headerActionType) {
-            this.headerActionType = Input.of(Objects.requireNonNull(headerActionType));
+            this.headerActionType = Output.of(Objects.requireNonNull(headerActionType));
             return this;
         }
 
-        public Builder headerName(Input<String> headerName) {
+        public Builder headerName(Output<String> headerName) {
             this.headerName = Objects.requireNonNull(headerName);
             return this;
         }
 
         public Builder headerName(String headerName) {
-            this.headerName = Input.of(Objects.requireNonNull(headerName));
+            this.headerName = Output.of(Objects.requireNonNull(headerName));
             return this;
         }
 
-        public Builder value(@Nullable Input<String> value) {
+        public Builder value(@Nullable Output<String> value) {
             this.value = value;
             return this;
         }
 
         public Builder value(@Nullable String value) {
-            this.value = Input.ofNullable(value);
+            this.value = Output.ofNullable(value);
             return this;
         }
         public HeaderActionArgs build() {

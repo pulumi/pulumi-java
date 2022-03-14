@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datafactory.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class DatasetCompressionArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="level")
-      private final @Nullable Input<Object> level;
+      private final @Nullable Output<Object> level;
 
-    public Input<Object> getLevel() {
-        return this.level == null ? Input.empty() : this.level;
+    public Output<Object> getLevel() {
+        return this.level == null ? Output.empty() : this.level;
     }
 
     /**
@@ -34,22 +34,22 @@ public final class DatasetCompressionArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<Object> type;
+      private final Output<Object> type;
 
-    public Input<Object> getType() {
+    public Output<Object> getType() {
         return this.type;
     }
 
     public DatasetCompressionArgs(
-        @Nullable Input<Object> level,
-        Input<Object> type) {
+        @Nullable Output<Object> level,
+        Output<Object> type) {
         this.level = level;
         this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
     }
 
     private DatasetCompressionArgs() {
-        this.level = Input.empty();
-        this.type = Input.empty();
+        this.level = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class DatasetCompressionArgs extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private @Nullable Input<Object> level;
-        private Input<Object> type;
+        private @Nullable Output<Object> level;
+        private Output<Object> type;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class DatasetCompressionArgs extends io.pulumi.resources.ResourceAr
     	      this.type = defaults.type;
         }
 
-        public Builder level(@Nullable Input<Object> level) {
+        public Builder level(@Nullable Output<Object> level) {
             this.level = level;
             return this;
         }
 
         public Builder level(@Nullable Object level) {
-            this.level = Input.ofNullable(level);
+            this.level = Output.ofNullable(level);
             return this;
         }
 
-        public Builder type(Input<Object> type) {
+        public Builder type(Output<Object> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(Object type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
         public DatasetCompressionArgs build() {

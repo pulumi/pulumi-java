@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.enterpriseknowledgegraph.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class EnterpriseKnowledgeGraphPropertiesArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class EnterpriseKnowledgeGraphPropertiesArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="metadata")
-      private final @Nullable Input<Object> metadata;
+      private final @Nullable Output<Object> metadata;
 
-    public Input<Object> getMetadata() {
-        return this.metadata == null ? Input.empty() : this.metadata;
+    public Output<Object> getMetadata() {
+        return this.metadata == null ? Output.empty() : this.metadata;
     }
 
     /**
@@ -46,25 +46,25 @@ public final class EnterpriseKnowledgeGraphPropertiesArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="provisioningState")
-      private final @Nullable Input<String> provisioningState;
+      private final @Nullable Output<String> provisioningState;
 
-    public Input<String> getProvisioningState() {
-        return this.provisioningState == null ? Input.empty() : this.provisioningState;
+    public Output<String> getProvisioningState() {
+        return this.provisioningState == null ? Output.empty() : this.provisioningState;
     }
 
     public EnterpriseKnowledgeGraphPropertiesArgs(
-        @Nullable Input<String> description,
-        @Nullable Input<Object> metadata,
-        @Nullable Input<String> provisioningState) {
+        @Nullable Output<String> description,
+        @Nullable Output<Object> metadata,
+        @Nullable Output<String> provisioningState) {
         this.description = description;
         this.metadata = metadata;
         this.provisioningState = provisioningState;
     }
 
     private EnterpriseKnowledgeGraphPropertiesArgs() {
-        this.description = Input.empty();
-        this.metadata = Input.empty();
-        this.provisioningState = Input.empty();
+        this.description = Output.empty();
+        this.metadata = Output.empty();
+        this.provisioningState = Output.empty();
     }
 
     public static Builder builder() {
@@ -76,9 +76,9 @@ public final class EnterpriseKnowledgeGraphPropertiesArgs extends io.pulumi.reso
     }
 
     public static final class Builder {
-        private @Nullable Input<String> description;
-        private @Nullable Input<Object> metadata;
-        private @Nullable Input<String> provisioningState;
+        private @Nullable Output<String> description;
+        private @Nullable Output<Object> metadata;
+        private @Nullable Output<String> provisioningState;
 
         public Builder() {
     	      // Empty
@@ -91,33 +91,33 @@ public final class EnterpriseKnowledgeGraphPropertiesArgs extends io.pulumi.reso
     	      this.provisioningState = defaults.provisioningState;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder metadata(@Nullable Input<Object> metadata) {
+        public Builder metadata(@Nullable Output<Object> metadata) {
             this.metadata = metadata;
             return this;
         }
 
         public Builder metadata(@Nullable Object metadata) {
-            this.metadata = Input.ofNullable(metadata);
+            this.metadata = Output.ofNullable(metadata);
             return this;
         }
 
-        public Builder provisioningState(@Nullable Input<String> provisioningState) {
+        public Builder provisioningState(@Nullable Output<String> provisioningState) {
             this.provisioningState = provisioningState;
             return this;
         }
 
         public Builder provisioningState(@Nullable String provisioningState) {
-            this.provisioningState = Input.ofNullable(provisioningState);
+            this.provisioningState = Output.ofNullable(provisioningState);
             return this;
         }
         public EnterpriseKnowledgeGraphPropertiesArgs build() {

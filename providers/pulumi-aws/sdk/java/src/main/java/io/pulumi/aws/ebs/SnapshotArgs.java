@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.ebs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -22,10 +22,10 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -33,10 +33,10 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="outpostArn")
-      private final @Nullable Input<String> outpostArn;
+      private final @Nullable Output<String> outpostArn;
 
-    public Input<String> getOutpostArn() {
-        return this.outpostArn == null ? Input.empty() : this.outpostArn;
+    public Output<String> getOutpostArn() {
+        return this.outpostArn == null ? Output.empty() : this.outpostArn;
     }
 
     /**
@@ -44,10 +44,10 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="permanentRestore")
-      private final @Nullable Input<Boolean> permanentRestore;
+      private final @Nullable Output<Boolean> permanentRestore;
 
-    public Input<Boolean> getPermanentRestore() {
-        return this.permanentRestore == null ? Input.empty() : this.permanentRestore;
+    public Output<Boolean> getPermanentRestore() {
+        return this.permanentRestore == null ? Output.empty() : this.permanentRestore;
     }
 
     /**
@@ -55,10 +55,10 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="storageTier")
-      private final @Nullable Input<String> storageTier;
+      private final @Nullable Output<String> storageTier;
 
-    public Input<String> getStorageTier() {
-        return this.storageTier == null ? Input.empty() : this.storageTier;
+    public Output<String> getStorageTier() {
+        return this.storageTier == null ? Output.empty() : this.storageTier;
     }
 
     /**
@@ -66,10 +66,10 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -77,10 +77,10 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="temporaryRestoreDays")
-      private final @Nullable Input<Integer> temporaryRestoreDays;
+      private final @Nullable Output<Integer> temporaryRestoreDays;
 
-    public Input<Integer> getTemporaryRestoreDays() {
-        return this.temporaryRestoreDays == null ? Input.empty() : this.temporaryRestoreDays;
+    public Output<Integer> getTemporaryRestoreDays() {
+        return this.temporaryRestoreDays == null ? Output.empty() : this.temporaryRestoreDays;
     }
 
     /**
@@ -88,20 +88,20 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="volumeId", required=true)
-      private final Input<String> volumeId;
+      private final Output<String> volumeId;
 
-    public Input<String> getVolumeId() {
+    public Output<String> getVolumeId() {
         return this.volumeId;
     }
 
     public SnapshotArgs(
-        @Nullable Input<String> description,
-        @Nullable Input<String> outpostArn,
-        @Nullable Input<Boolean> permanentRestore,
-        @Nullable Input<String> storageTier,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<Integer> temporaryRestoreDays,
-        Input<String> volumeId) {
+        @Nullable Output<String> description,
+        @Nullable Output<String> outpostArn,
+        @Nullable Output<Boolean> permanentRestore,
+        @Nullable Output<String> storageTier,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<Integer> temporaryRestoreDays,
+        Output<String> volumeId) {
         this.description = description;
         this.outpostArn = outpostArn;
         this.permanentRestore = permanentRestore;
@@ -112,13 +112,13 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private SnapshotArgs() {
-        this.description = Input.empty();
-        this.outpostArn = Input.empty();
-        this.permanentRestore = Input.empty();
-        this.storageTier = Input.empty();
-        this.tags = Input.empty();
-        this.temporaryRestoreDays = Input.empty();
-        this.volumeId = Input.empty();
+        this.description = Output.empty();
+        this.outpostArn = Output.empty();
+        this.permanentRestore = Output.empty();
+        this.storageTier = Output.empty();
+        this.tags = Output.empty();
+        this.temporaryRestoreDays = Output.empty();
+        this.volumeId = Output.empty();
     }
 
     public static Builder builder() {
@@ -130,13 +130,13 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> description;
-        private @Nullable Input<String> outpostArn;
-        private @Nullable Input<Boolean> permanentRestore;
-        private @Nullable Input<String> storageTier;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<Integer> temporaryRestoreDays;
-        private Input<String> volumeId;
+        private @Nullable Output<String> description;
+        private @Nullable Output<String> outpostArn;
+        private @Nullable Output<Boolean> permanentRestore;
+        private @Nullable Output<String> storageTier;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<Integer> temporaryRestoreDays;
+        private Output<String> volumeId;
 
         public Builder() {
     	      // Empty
@@ -153,73 +153,73 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
     	      this.volumeId = defaults.volumeId;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder outpostArn(@Nullable Input<String> outpostArn) {
+        public Builder outpostArn(@Nullable Output<String> outpostArn) {
             this.outpostArn = outpostArn;
             return this;
         }
 
         public Builder outpostArn(@Nullable String outpostArn) {
-            this.outpostArn = Input.ofNullable(outpostArn);
+            this.outpostArn = Output.ofNullable(outpostArn);
             return this;
         }
 
-        public Builder permanentRestore(@Nullable Input<Boolean> permanentRestore) {
+        public Builder permanentRestore(@Nullable Output<Boolean> permanentRestore) {
             this.permanentRestore = permanentRestore;
             return this;
         }
 
         public Builder permanentRestore(@Nullable Boolean permanentRestore) {
-            this.permanentRestore = Input.ofNullable(permanentRestore);
+            this.permanentRestore = Output.ofNullable(permanentRestore);
             return this;
         }
 
-        public Builder storageTier(@Nullable Input<String> storageTier) {
+        public Builder storageTier(@Nullable Output<String> storageTier) {
             this.storageTier = storageTier;
             return this;
         }
 
         public Builder storageTier(@Nullable String storageTier) {
-            this.storageTier = Input.ofNullable(storageTier);
+            this.storageTier = Output.ofNullable(storageTier);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder temporaryRestoreDays(@Nullable Input<Integer> temporaryRestoreDays) {
+        public Builder temporaryRestoreDays(@Nullable Output<Integer> temporaryRestoreDays) {
             this.temporaryRestoreDays = temporaryRestoreDays;
             return this;
         }
 
         public Builder temporaryRestoreDays(@Nullable Integer temporaryRestoreDays) {
-            this.temporaryRestoreDays = Input.ofNullable(temporaryRestoreDays);
+            this.temporaryRestoreDays = Output.ofNullable(temporaryRestoreDays);
             return this;
         }
 
-        public Builder volumeId(Input<String> volumeId) {
+        public Builder volumeId(Output<String> volumeId) {
             this.volumeId = Objects.requireNonNull(volumeId);
             return this;
         }
 
         public Builder volumeId(String volumeId) {
-            this.volumeId = Input.of(Objects.requireNonNull(volumeId));
+            this.volumeId = Output.of(Objects.requireNonNull(volumeId));
             return this;
         }
         public SnapshotArgs build() {

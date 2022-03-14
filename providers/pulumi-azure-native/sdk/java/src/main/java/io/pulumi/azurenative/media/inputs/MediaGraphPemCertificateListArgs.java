@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.media.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -23,9 +23,9 @@ public final class MediaGraphPemCertificateListArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="certificates", required=true)
-      private final Input<List<String>> certificates;
+      private final Output<List<String>> certificates;
 
-    public Input<List<String>> getCertificates() {
+    public Output<List<String>> getCertificates() {
         return this.certificates;
     }
 
@@ -35,22 +35,22 @@ public final class MediaGraphPemCertificateListArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="odataType", required=true)
-      private final Input<String> odataType;
+      private final Output<String> odataType;
 
-    public Input<String> getOdataType() {
+    public Output<String> getOdataType() {
         return this.odataType;
     }
 
     public MediaGraphPemCertificateListArgs(
-        Input<List<String>> certificates,
-        Input<String> odataType) {
+        Output<List<String>> certificates,
+        Output<String> odataType) {
         this.certificates = Objects.requireNonNull(certificates, "expected parameter 'certificates' to be non-null");
         this.odataType = Objects.requireNonNull(odataType, "expected parameter 'odataType' to be non-null");
     }
 
     private MediaGraphPemCertificateListArgs() {
-        this.certificates = Input.empty();
-        this.odataType = Input.empty();
+        this.certificates = Output.empty();
+        this.odataType = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class MediaGraphPemCertificateListArgs extends io.pulumi.resources.
     }
 
     public static final class Builder {
-        private Input<List<String>> certificates;
-        private Input<String> odataType;
+        private Output<List<String>> certificates;
+        private Output<String> odataType;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class MediaGraphPemCertificateListArgs extends io.pulumi.resources.
     	      this.odataType = defaults.odataType;
         }
 
-        public Builder certificates(Input<List<String>> certificates) {
+        public Builder certificates(Output<List<String>> certificates) {
             this.certificates = Objects.requireNonNull(certificates);
             return this;
         }
 
         public Builder certificates(List<String> certificates) {
-            this.certificates = Input.of(Objects.requireNonNull(certificates));
+            this.certificates = Output.of(Objects.requireNonNull(certificates));
             return this;
         }
 
-        public Builder odataType(Input<String> odataType) {
+        public Builder odataType(Output<String> odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
 
         public Builder odataType(String odataType) {
-            this.odataType = Input.of(Objects.requireNonNull(odataType));
+            this.odataType = Output.of(Objects.requireNonNull(odataType));
             return this;
         }
         public MediaGraphPemCertificateListArgs build() {

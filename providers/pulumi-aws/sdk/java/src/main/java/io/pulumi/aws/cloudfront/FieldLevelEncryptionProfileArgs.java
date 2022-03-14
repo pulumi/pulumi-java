@@ -4,7 +4,7 @@
 package io.pulumi.aws.cloudfront;
 
 import io.pulumi.aws.cloudfront.inputs.FieldLevelEncryptionProfileEncryptionEntitiesArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -20,10 +20,10 @@ public final class FieldLevelEncryptionProfileArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="comment")
-      private final @Nullable Input<String> comment;
+      private final @Nullable Output<String> comment;
 
-    public Input<String> getComment() {
-        return this.comment == null ? Input.empty() : this.comment;
+    public Output<String> getComment() {
+        return this.comment == null ? Output.empty() : this.comment;
     }
 
     /**
@@ -31,9 +31,9 @@ public final class FieldLevelEncryptionProfileArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="encryptionEntities", required=true)
-      private final Input<FieldLevelEncryptionProfileEncryptionEntitiesArgs> encryptionEntities;
+      private final Output<FieldLevelEncryptionProfileEncryptionEntitiesArgs> encryptionEntities;
 
-    public Input<FieldLevelEncryptionProfileEncryptionEntitiesArgs> getEncryptionEntities() {
+    public Output<FieldLevelEncryptionProfileEncryptionEntitiesArgs> getEncryptionEntities() {
         return this.encryptionEntities;
     }
 
@@ -42,25 +42,25 @@ public final class FieldLevelEncryptionProfileArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     public FieldLevelEncryptionProfileArgs(
-        @Nullable Input<String> comment,
-        Input<FieldLevelEncryptionProfileEncryptionEntitiesArgs> encryptionEntities,
-        @Nullable Input<String> name) {
+        @Nullable Output<String> comment,
+        Output<FieldLevelEncryptionProfileEncryptionEntitiesArgs> encryptionEntities,
+        @Nullable Output<String> name) {
         this.comment = comment;
         this.encryptionEntities = Objects.requireNonNull(encryptionEntities, "expected parameter 'encryptionEntities' to be non-null");
         this.name = name;
     }
 
     private FieldLevelEncryptionProfileArgs() {
-        this.comment = Input.empty();
-        this.encryptionEntities = Input.empty();
-        this.name = Input.empty();
+        this.comment = Output.empty();
+        this.encryptionEntities = Output.empty();
+        this.name = Output.empty();
     }
 
     public static Builder builder() {
@@ -72,9 +72,9 @@ public final class FieldLevelEncryptionProfileArgs extends io.pulumi.resources.R
     }
 
     public static final class Builder {
-        private @Nullable Input<String> comment;
-        private Input<FieldLevelEncryptionProfileEncryptionEntitiesArgs> encryptionEntities;
-        private @Nullable Input<String> name;
+        private @Nullable Output<String> comment;
+        private Output<FieldLevelEncryptionProfileEncryptionEntitiesArgs> encryptionEntities;
+        private @Nullable Output<String> name;
 
         public Builder() {
     	      // Empty
@@ -87,33 +87,33 @@ public final class FieldLevelEncryptionProfileArgs extends io.pulumi.resources.R
     	      this.name = defaults.name;
         }
 
-        public Builder comment(@Nullable Input<String> comment) {
+        public Builder comment(@Nullable Output<String> comment) {
             this.comment = comment;
             return this;
         }
 
         public Builder comment(@Nullable String comment) {
-            this.comment = Input.ofNullable(comment);
+            this.comment = Output.ofNullable(comment);
             return this;
         }
 
-        public Builder encryptionEntities(Input<FieldLevelEncryptionProfileEncryptionEntitiesArgs> encryptionEntities) {
+        public Builder encryptionEntities(Output<FieldLevelEncryptionProfileEncryptionEntitiesArgs> encryptionEntities) {
             this.encryptionEntities = Objects.requireNonNull(encryptionEntities);
             return this;
         }
 
         public Builder encryptionEntities(FieldLevelEncryptionProfileEncryptionEntitiesArgs encryptionEntities) {
-            this.encryptionEntities = Input.of(Objects.requireNonNull(encryptionEntities));
+            this.encryptionEntities = Output.of(Objects.requireNonNull(encryptionEntities));
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
         public FieldLevelEncryptionProfileArgs build() {

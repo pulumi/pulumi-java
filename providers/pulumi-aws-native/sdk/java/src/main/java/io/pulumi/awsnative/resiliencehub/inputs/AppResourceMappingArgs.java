@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.resiliencehub.inputs;
 
 import io.pulumi.awsnative.resiliencehub.inputs.AppPhysicalResourceIdArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -20,38 +20,38 @@ public final class AppResourceMappingArgs extends io.pulumi.resources.ResourceAr
     public static final AppResourceMappingArgs Empty = new AppResourceMappingArgs();
 
     @InputImport(name="logicalStackName")
-      private final @Nullable Input<String> logicalStackName;
+      private final @Nullable Output<String> logicalStackName;
 
-    public Input<String> getLogicalStackName() {
-        return this.logicalStackName == null ? Input.empty() : this.logicalStackName;
+    public Output<String> getLogicalStackName() {
+        return this.logicalStackName == null ? Output.empty() : this.logicalStackName;
     }
 
     @InputImport(name="mappingType", required=true)
-      private final Input<String> mappingType;
+      private final Output<String> mappingType;
 
-    public Input<String> getMappingType() {
+    public Output<String> getMappingType() {
         return this.mappingType;
     }
 
     @InputImport(name="physicalResourceId", required=true)
-      private final Input<AppPhysicalResourceIdArgs> physicalResourceId;
+      private final Output<AppPhysicalResourceIdArgs> physicalResourceId;
 
-    public Input<AppPhysicalResourceIdArgs> getPhysicalResourceId() {
+    public Output<AppPhysicalResourceIdArgs> getPhysicalResourceId() {
         return this.physicalResourceId;
     }
 
     @InputImport(name="resourceName")
-      private final @Nullable Input<String> resourceName;
+      private final @Nullable Output<String> resourceName;
 
-    public Input<String> getPropResourceName() {
-        return this.resourceName == null ? Input.empty() : this.resourceName;
+    public Output<String> getPropResourceName() {
+        return this.resourceName == null ? Output.empty() : this.resourceName;
     }
 
     public AppResourceMappingArgs(
-        @Nullable Input<String> logicalStackName,
-        Input<String> mappingType,
-        Input<AppPhysicalResourceIdArgs> physicalResourceId,
-        @Nullable Input<String> resourceName) {
+        @Nullable Output<String> logicalStackName,
+        Output<String> mappingType,
+        Output<AppPhysicalResourceIdArgs> physicalResourceId,
+        @Nullable Output<String> resourceName) {
         this.logicalStackName = logicalStackName;
         this.mappingType = Objects.requireNonNull(mappingType, "expected parameter 'mappingType' to be non-null");
         this.physicalResourceId = Objects.requireNonNull(physicalResourceId, "expected parameter 'physicalResourceId' to be non-null");
@@ -59,10 +59,10 @@ public final class AppResourceMappingArgs extends io.pulumi.resources.ResourceAr
     }
 
     private AppResourceMappingArgs() {
-        this.logicalStackName = Input.empty();
-        this.mappingType = Input.empty();
-        this.physicalResourceId = Input.empty();
-        this.resourceName = Input.empty();
+        this.logicalStackName = Output.empty();
+        this.mappingType = Output.empty();
+        this.physicalResourceId = Output.empty();
+        this.resourceName = Output.empty();
     }
 
     public static Builder builder() {
@@ -74,10 +74,10 @@ public final class AppResourceMappingArgs extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private @Nullable Input<String> logicalStackName;
-        private Input<String> mappingType;
-        private Input<AppPhysicalResourceIdArgs> physicalResourceId;
-        private @Nullable Input<String> resourceName;
+        private @Nullable Output<String> logicalStackName;
+        private Output<String> mappingType;
+        private Output<AppPhysicalResourceIdArgs> physicalResourceId;
+        private @Nullable Output<String> resourceName;
 
         public Builder() {
     	      // Empty
@@ -91,43 +91,43 @@ public final class AppResourceMappingArgs extends io.pulumi.resources.ResourceAr
     	      this.resourceName = defaults.resourceName;
         }
 
-        public Builder logicalStackName(@Nullable Input<String> logicalStackName) {
+        public Builder logicalStackName(@Nullable Output<String> logicalStackName) {
             this.logicalStackName = logicalStackName;
             return this;
         }
 
         public Builder logicalStackName(@Nullable String logicalStackName) {
-            this.logicalStackName = Input.ofNullable(logicalStackName);
+            this.logicalStackName = Output.ofNullable(logicalStackName);
             return this;
         }
 
-        public Builder mappingType(Input<String> mappingType) {
+        public Builder mappingType(Output<String> mappingType) {
             this.mappingType = Objects.requireNonNull(mappingType);
             return this;
         }
 
         public Builder mappingType(String mappingType) {
-            this.mappingType = Input.of(Objects.requireNonNull(mappingType));
+            this.mappingType = Output.of(Objects.requireNonNull(mappingType));
             return this;
         }
 
-        public Builder physicalResourceId(Input<AppPhysicalResourceIdArgs> physicalResourceId) {
+        public Builder physicalResourceId(Output<AppPhysicalResourceIdArgs> physicalResourceId) {
             this.physicalResourceId = Objects.requireNonNull(physicalResourceId);
             return this;
         }
 
         public Builder physicalResourceId(AppPhysicalResourceIdArgs physicalResourceId) {
-            this.physicalResourceId = Input.of(Objects.requireNonNull(physicalResourceId));
+            this.physicalResourceId = Output.of(Objects.requireNonNull(physicalResourceId));
             return this;
         }
 
-        public Builder resourceName(@Nullable Input<String> resourceName) {
+        public Builder resourceName(@Nullable Output<String> resourceName) {
             this.resourceName = resourceName;
             return this;
         }
 
         public Builder resourceName(@Nullable String resourceName) {
-            this.resourceName = Input.ofNullable(resourceName);
+            this.resourceName = Output.ofNullable(resourceName);
             return this;
         }
         public AppResourceMappingArgs build() {

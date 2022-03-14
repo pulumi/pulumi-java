@@ -7,7 +7,7 @@ import io.pulumi.awsnative.evidently.inputs.LaunchGroupObjectArgs;
 import io.pulumi.awsnative.evidently.inputs.LaunchMetricDefinitionObjectArgs;
 import io.pulumi.awsnative.evidently.inputs.LaunchStepConfigArgs;
 import io.pulumi.awsnative.evidently.inputs.LaunchTagArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -20,51 +20,51 @@ public final class LaunchArgs extends io.pulumi.resources.ResourceArgs {
     public static final LaunchArgs Empty = new LaunchArgs();
 
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     @InputImport(name="groups", required=true)
-      private final Input<List<LaunchGroupObjectArgs>> groups;
+      private final Output<List<LaunchGroupObjectArgs>> groups;
 
-    public Input<List<LaunchGroupObjectArgs>> getGroups() {
+    public Output<List<LaunchGroupObjectArgs>> getGroups() {
         return this.groups;
     }
 
     @InputImport(name="metricMonitors")
-      private final @Nullable Input<List<LaunchMetricDefinitionObjectArgs>> metricMonitors;
+      private final @Nullable Output<List<LaunchMetricDefinitionObjectArgs>> metricMonitors;
 
-    public Input<List<LaunchMetricDefinitionObjectArgs>> getMetricMonitors() {
-        return this.metricMonitors == null ? Input.empty() : this.metricMonitors;
+    public Output<List<LaunchMetricDefinitionObjectArgs>> getMetricMonitors() {
+        return this.metricMonitors == null ? Output.empty() : this.metricMonitors;
     }
 
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     @InputImport(name="project", required=true)
-      private final Input<String> project;
+      private final Output<String> project;
 
-    public Input<String> getProject() {
+    public Output<String> getProject() {
         return this.project;
     }
 
     @InputImport(name="randomizationSalt")
-      private final @Nullable Input<String> randomizationSalt;
+      private final @Nullable Output<String> randomizationSalt;
 
-    public Input<String> getRandomizationSalt() {
-        return this.randomizationSalt == null ? Input.empty() : this.randomizationSalt;
+    public Output<String> getRandomizationSalt() {
+        return this.randomizationSalt == null ? Output.empty() : this.randomizationSalt;
     }
 
     @InputImport(name="scheduledSplitsConfig", required=true)
-      private final Input<List<LaunchStepConfigArgs>> scheduledSplitsConfig;
+      private final Output<List<LaunchStepConfigArgs>> scheduledSplitsConfig;
 
-    public Input<List<LaunchStepConfigArgs>> getScheduledSplitsConfig() {
+    public Output<List<LaunchStepConfigArgs>> getScheduledSplitsConfig() {
         return this.scheduledSplitsConfig;
     }
 
@@ -73,21 +73,21 @@ public final class LaunchArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<List<LaunchTagArgs>> tags;
+      private final @Nullable Output<List<LaunchTagArgs>> tags;
 
-    public Input<List<LaunchTagArgs>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<List<LaunchTagArgs>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public LaunchArgs(
-        @Nullable Input<String> description,
-        Input<List<LaunchGroupObjectArgs>> groups,
-        @Nullable Input<List<LaunchMetricDefinitionObjectArgs>> metricMonitors,
-        @Nullable Input<String> name,
-        Input<String> project,
-        @Nullable Input<String> randomizationSalt,
-        Input<List<LaunchStepConfigArgs>> scheduledSplitsConfig,
-        @Nullable Input<List<LaunchTagArgs>> tags) {
+        @Nullable Output<String> description,
+        Output<List<LaunchGroupObjectArgs>> groups,
+        @Nullable Output<List<LaunchMetricDefinitionObjectArgs>> metricMonitors,
+        @Nullable Output<String> name,
+        Output<String> project,
+        @Nullable Output<String> randomizationSalt,
+        Output<List<LaunchStepConfigArgs>> scheduledSplitsConfig,
+        @Nullable Output<List<LaunchTagArgs>> tags) {
         this.description = description;
         this.groups = Objects.requireNonNull(groups, "expected parameter 'groups' to be non-null");
         this.metricMonitors = metricMonitors;
@@ -99,14 +99,14 @@ public final class LaunchArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private LaunchArgs() {
-        this.description = Input.empty();
-        this.groups = Input.empty();
-        this.metricMonitors = Input.empty();
-        this.name = Input.empty();
-        this.project = Input.empty();
-        this.randomizationSalt = Input.empty();
-        this.scheduledSplitsConfig = Input.empty();
-        this.tags = Input.empty();
+        this.description = Output.empty();
+        this.groups = Output.empty();
+        this.metricMonitors = Output.empty();
+        this.name = Output.empty();
+        this.project = Output.empty();
+        this.randomizationSalt = Output.empty();
+        this.scheduledSplitsConfig = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -118,14 +118,14 @@ public final class LaunchArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> description;
-        private Input<List<LaunchGroupObjectArgs>> groups;
-        private @Nullable Input<List<LaunchMetricDefinitionObjectArgs>> metricMonitors;
-        private @Nullable Input<String> name;
-        private Input<String> project;
-        private @Nullable Input<String> randomizationSalt;
-        private Input<List<LaunchStepConfigArgs>> scheduledSplitsConfig;
-        private @Nullable Input<List<LaunchTagArgs>> tags;
+        private @Nullable Output<String> description;
+        private Output<List<LaunchGroupObjectArgs>> groups;
+        private @Nullable Output<List<LaunchMetricDefinitionObjectArgs>> metricMonitors;
+        private @Nullable Output<String> name;
+        private Output<String> project;
+        private @Nullable Output<String> randomizationSalt;
+        private Output<List<LaunchStepConfigArgs>> scheduledSplitsConfig;
+        private @Nullable Output<List<LaunchTagArgs>> tags;
 
         public Builder() {
     	      // Empty
@@ -143,83 +143,83 @@ public final class LaunchArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder groups(Input<List<LaunchGroupObjectArgs>> groups) {
+        public Builder groups(Output<List<LaunchGroupObjectArgs>> groups) {
             this.groups = Objects.requireNonNull(groups);
             return this;
         }
 
         public Builder groups(List<LaunchGroupObjectArgs> groups) {
-            this.groups = Input.of(Objects.requireNonNull(groups));
+            this.groups = Output.of(Objects.requireNonNull(groups));
             return this;
         }
 
-        public Builder metricMonitors(@Nullable Input<List<LaunchMetricDefinitionObjectArgs>> metricMonitors) {
+        public Builder metricMonitors(@Nullable Output<List<LaunchMetricDefinitionObjectArgs>> metricMonitors) {
             this.metricMonitors = metricMonitors;
             return this;
         }
 
         public Builder metricMonitors(@Nullable List<LaunchMetricDefinitionObjectArgs> metricMonitors) {
-            this.metricMonitors = Input.ofNullable(metricMonitors);
+            this.metricMonitors = Output.ofNullable(metricMonitors);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder project(Input<String> project) {
+        public Builder project(Output<String> project) {
             this.project = Objects.requireNonNull(project);
             return this;
         }
 
         public Builder project(String project) {
-            this.project = Input.of(Objects.requireNonNull(project));
+            this.project = Output.of(Objects.requireNonNull(project));
             return this;
         }
 
-        public Builder randomizationSalt(@Nullable Input<String> randomizationSalt) {
+        public Builder randomizationSalt(@Nullable Output<String> randomizationSalt) {
             this.randomizationSalt = randomizationSalt;
             return this;
         }
 
         public Builder randomizationSalt(@Nullable String randomizationSalt) {
-            this.randomizationSalt = Input.ofNullable(randomizationSalt);
+            this.randomizationSalt = Output.ofNullable(randomizationSalt);
             return this;
         }
 
-        public Builder scheduledSplitsConfig(Input<List<LaunchStepConfigArgs>> scheduledSplitsConfig) {
+        public Builder scheduledSplitsConfig(Output<List<LaunchStepConfigArgs>> scheduledSplitsConfig) {
             this.scheduledSplitsConfig = Objects.requireNonNull(scheduledSplitsConfig);
             return this;
         }
 
         public Builder scheduledSplitsConfig(List<LaunchStepConfigArgs> scheduledSplitsConfig) {
-            this.scheduledSplitsConfig = Input.of(Objects.requireNonNull(scheduledSplitsConfig));
+            this.scheduledSplitsConfig = Output.of(Objects.requireNonNull(scheduledSplitsConfig));
             return this;
         }
 
-        public Builder tags(@Nullable Input<List<LaunchTagArgs>> tags) {
+        public Builder tags(@Nullable Output<List<LaunchTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable List<LaunchTagArgs> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public LaunchArgs build() {

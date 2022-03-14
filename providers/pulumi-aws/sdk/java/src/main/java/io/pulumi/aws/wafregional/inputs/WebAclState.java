@@ -6,7 +6,7 @@ package io.pulumi.aws.wafregional.inputs;
 import io.pulumi.aws.wafregional.inputs.WebAclDefaultActionGetArgs;
 import io.pulumi.aws.wafregional.inputs.WebAclLoggingConfigurationGetArgs;
 import io.pulumi.aws.wafregional.inputs.WebAclRuleGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -24,10 +24,10 @@ public final class WebAclState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arn")
-      private final @Nullable Input<String> arn;
+      private final @Nullable Output<String> arn;
 
-    public Input<String> getArn() {
-        return this.arn == null ? Input.empty() : this.arn;
+    public Output<String> getArn() {
+        return this.arn == null ? Output.empty() : this.arn;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class WebAclState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="defaultAction")
-      private final @Nullable Input<WebAclDefaultActionGetArgs> defaultAction;
+      private final @Nullable Output<WebAclDefaultActionGetArgs> defaultAction;
 
-    public Input<WebAclDefaultActionGetArgs> getDefaultAction() {
-        return this.defaultAction == null ? Input.empty() : this.defaultAction;
+    public Output<WebAclDefaultActionGetArgs> getDefaultAction() {
+        return this.defaultAction == null ? Output.empty() : this.defaultAction;
     }
 
     /**
@@ -46,10 +46,10 @@ public final class WebAclState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="loggingConfiguration")
-      private final @Nullable Input<WebAclLoggingConfigurationGetArgs> loggingConfiguration;
+      private final @Nullable Output<WebAclLoggingConfigurationGetArgs> loggingConfiguration;
 
-    public Input<WebAclLoggingConfigurationGetArgs> getLoggingConfiguration() {
-        return this.loggingConfiguration == null ? Input.empty() : this.loggingConfiguration;
+    public Output<WebAclLoggingConfigurationGetArgs> getLoggingConfiguration() {
+        return this.loggingConfiguration == null ? Output.empty() : this.loggingConfiguration;
     }
 
     /**
@@ -57,10 +57,10 @@ public final class WebAclState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="metricName")
-      private final @Nullable Input<String> metricName;
+      private final @Nullable Output<String> metricName;
 
-    public Input<String> getMetricName() {
-        return this.metricName == null ? Input.empty() : this.metricName;
+    public Output<String> getMetricName() {
+        return this.metricName == null ? Output.empty() : this.metricName;
     }
 
     /**
@@ -68,10 +68,10 @@ public final class WebAclState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -79,10 +79,10 @@ public final class WebAclState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="rules")
-      private final @Nullable Input<List<WebAclRuleGetArgs>> rules;
+      private final @Nullable Output<List<WebAclRuleGetArgs>> rules;
 
-    public Input<List<WebAclRuleGetArgs>> getRules() {
-        return this.rules == null ? Input.empty() : this.rules;
+    public Output<List<WebAclRuleGetArgs>> getRules() {
+        return this.rules == null ? Output.empty() : this.rules;
     }
 
     /**
@@ -90,10 +90,10 @@ public final class WebAclState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -101,21 +101,21 @@ public final class WebAclState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tagsAll")
-      private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Input<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Input.empty() : this.tagsAll;
+    public Output<Map<String,String>> getTagsAll() {
+        return this.tagsAll == null ? Output.empty() : this.tagsAll;
     }
 
     public WebAclState(
-        @Nullable Input<String> arn,
-        @Nullable Input<WebAclDefaultActionGetArgs> defaultAction,
-        @Nullable Input<WebAclLoggingConfigurationGetArgs> loggingConfiguration,
-        @Nullable Input<String> metricName,
-        @Nullable Input<String> name,
-        @Nullable Input<List<WebAclRuleGetArgs>> rules,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<Map<String,String>> tagsAll) {
+        @Nullable Output<String> arn,
+        @Nullable Output<WebAclDefaultActionGetArgs> defaultAction,
+        @Nullable Output<WebAclLoggingConfigurationGetArgs> loggingConfiguration,
+        @Nullable Output<String> metricName,
+        @Nullable Output<String> name,
+        @Nullable Output<List<WebAclRuleGetArgs>> rules,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<Map<String,String>> tagsAll) {
         this.arn = arn;
         this.defaultAction = defaultAction;
         this.loggingConfiguration = loggingConfiguration;
@@ -127,14 +127,14 @@ public final class WebAclState extends io.pulumi.resources.ResourceArgs {
     }
 
     private WebAclState() {
-        this.arn = Input.empty();
-        this.defaultAction = Input.empty();
-        this.loggingConfiguration = Input.empty();
-        this.metricName = Input.empty();
-        this.name = Input.empty();
-        this.rules = Input.empty();
-        this.tags = Input.empty();
-        this.tagsAll = Input.empty();
+        this.arn = Output.empty();
+        this.defaultAction = Output.empty();
+        this.loggingConfiguration = Output.empty();
+        this.metricName = Output.empty();
+        this.name = Output.empty();
+        this.rules = Output.empty();
+        this.tags = Output.empty();
+        this.tagsAll = Output.empty();
     }
 
     public static Builder builder() {
@@ -146,14 +146,14 @@ public final class WebAclState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> arn;
-        private @Nullable Input<WebAclDefaultActionGetArgs> defaultAction;
-        private @Nullable Input<WebAclLoggingConfigurationGetArgs> loggingConfiguration;
-        private @Nullable Input<String> metricName;
-        private @Nullable Input<String> name;
-        private @Nullable Input<List<WebAclRuleGetArgs>> rules;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<Map<String,String>> tagsAll;
+        private @Nullable Output<String> arn;
+        private @Nullable Output<WebAclDefaultActionGetArgs> defaultAction;
+        private @Nullable Output<WebAclLoggingConfigurationGetArgs> loggingConfiguration;
+        private @Nullable Output<String> metricName;
+        private @Nullable Output<String> name;
+        private @Nullable Output<List<WebAclRuleGetArgs>> rules;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<Map<String,String>> tagsAll;
 
         public Builder() {
     	      // Empty
@@ -171,83 +171,83 @@ public final class WebAclState extends io.pulumi.resources.ResourceArgs {
     	      this.tagsAll = defaults.tagsAll;
         }
 
-        public Builder arn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
 
         public Builder arn(@Nullable String arn) {
-            this.arn = Input.ofNullable(arn);
+            this.arn = Output.ofNullable(arn);
             return this;
         }
 
-        public Builder defaultAction(@Nullable Input<WebAclDefaultActionGetArgs> defaultAction) {
+        public Builder defaultAction(@Nullable Output<WebAclDefaultActionGetArgs> defaultAction) {
             this.defaultAction = defaultAction;
             return this;
         }
 
         public Builder defaultAction(@Nullable WebAclDefaultActionGetArgs defaultAction) {
-            this.defaultAction = Input.ofNullable(defaultAction);
+            this.defaultAction = Output.ofNullable(defaultAction);
             return this;
         }
 
-        public Builder loggingConfiguration(@Nullable Input<WebAclLoggingConfigurationGetArgs> loggingConfiguration) {
+        public Builder loggingConfiguration(@Nullable Output<WebAclLoggingConfigurationGetArgs> loggingConfiguration) {
             this.loggingConfiguration = loggingConfiguration;
             return this;
         }
 
         public Builder loggingConfiguration(@Nullable WebAclLoggingConfigurationGetArgs loggingConfiguration) {
-            this.loggingConfiguration = Input.ofNullable(loggingConfiguration);
+            this.loggingConfiguration = Output.ofNullable(loggingConfiguration);
             return this;
         }
 
-        public Builder metricName(@Nullable Input<String> metricName) {
+        public Builder metricName(@Nullable Output<String> metricName) {
             this.metricName = metricName;
             return this;
         }
 
         public Builder metricName(@Nullable String metricName) {
-            this.metricName = Input.ofNullable(metricName);
+            this.metricName = Output.ofNullable(metricName);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder rules(@Nullable Input<List<WebAclRuleGetArgs>> rules) {
+        public Builder rules(@Nullable Output<List<WebAclRuleGetArgs>> rules) {
             this.rules = rules;
             return this;
         }
 
         public Builder rules(@Nullable List<WebAclRuleGetArgs> rules) {
-            this.rules = Input.ofNullable(rules);
+            this.rules = Output.ofNullable(rules);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Input.ofNullable(tagsAll);
+            this.tagsAll = Output.ofNullable(tagsAll);
             return this;
         }
         public WebAclState build() {

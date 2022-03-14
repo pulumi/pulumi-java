@@ -6,7 +6,7 @@ package io.pulumi.awsnative.ec2;
 import io.pulumi.awsnative.ec2.inputs.NetworkInterfaceInstanceIpv6AddressArgs;
 import io.pulumi.awsnative.ec2.inputs.NetworkInterfacePrivateIpAddressSpecificationArgs;
 import io.pulumi.awsnative.ec2.inputs.NetworkInterfaceTagArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -25,10 +25,10 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="groupSet")
-      private final @Nullable Input<List<String>> groupSet;
+      private final @Nullable Output<List<String>> groupSet;
 
-    public Input<List<String>> getGroupSet() {
-        return this.groupSet == null ? Input.empty() : this.groupSet;
+    public Output<List<String>> getGroupSet() {
+        return this.groupSet == null ? Output.empty() : this.groupSet;
     }
 
     /**
@@ -47,10 +47,10 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="interfaceType")
-      private final @Nullable Input<String> interfaceType;
+      private final @Nullable Output<String> interfaceType;
 
-    public Input<String> getInterfaceType() {
-        return this.interfaceType == null ? Input.empty() : this.interfaceType;
+    public Output<String> getInterfaceType() {
+        return this.interfaceType == null ? Output.empty() : this.interfaceType;
     }
 
     /**
@@ -58,10 +58,10 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="ipv6AddressCount")
-      private final @Nullable Input<Integer> ipv6AddressCount;
+      private final @Nullable Output<Integer> ipv6AddressCount;
 
-    public Input<Integer> getIpv6AddressCount() {
-        return this.ipv6AddressCount == null ? Input.empty() : this.ipv6AddressCount;
+    public Output<Integer> getIpv6AddressCount() {
+        return this.ipv6AddressCount == null ? Output.empty() : this.ipv6AddressCount;
     }
 
     /**
@@ -69,10 +69,10 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="ipv6Addresses")
-      private final @Nullable Input<List<NetworkInterfaceInstanceIpv6AddressArgs>> ipv6Addresses;
+      private final @Nullable Output<List<NetworkInterfaceInstanceIpv6AddressArgs>> ipv6Addresses;
 
-    public Input<List<NetworkInterfaceInstanceIpv6AddressArgs>> getIpv6Addresses() {
-        return this.ipv6Addresses == null ? Input.empty() : this.ipv6Addresses;
+    public Output<List<NetworkInterfaceInstanceIpv6AddressArgs>> getIpv6Addresses() {
+        return this.ipv6Addresses == null ? Output.empty() : this.ipv6Addresses;
     }
 
     /**
@@ -80,10 +80,10 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="privateIpAddress")
-      private final @Nullable Input<String> privateIpAddress;
+      private final @Nullable Output<String> privateIpAddress;
 
-    public Input<String> getPrivateIpAddress() {
-        return this.privateIpAddress == null ? Input.empty() : this.privateIpAddress;
+    public Output<String> getPrivateIpAddress() {
+        return this.privateIpAddress == null ? Output.empty() : this.privateIpAddress;
     }
 
     /**
@@ -91,10 +91,10 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="privateIpAddresses")
-      private final @Nullable Input<List<NetworkInterfacePrivateIpAddressSpecificationArgs>> privateIpAddresses;
+      private final @Nullable Output<List<NetworkInterfacePrivateIpAddressSpecificationArgs>> privateIpAddresses;
 
-    public Input<List<NetworkInterfacePrivateIpAddressSpecificationArgs>> getPrivateIpAddresses() {
-        return this.privateIpAddresses == null ? Input.empty() : this.privateIpAddresses;
+    public Output<List<NetworkInterfacePrivateIpAddressSpecificationArgs>> getPrivateIpAddresses() {
+        return this.privateIpAddresses == null ? Output.empty() : this.privateIpAddresses;
     }
 
     /**
@@ -102,10 +102,10 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="secondaryPrivateIpAddressCount")
-      private final @Nullable Input<Integer> secondaryPrivateIpAddressCount;
+      private final @Nullable Output<Integer> secondaryPrivateIpAddressCount;
 
-    public Input<Integer> getSecondaryPrivateIpAddressCount() {
-        return this.secondaryPrivateIpAddressCount == null ? Input.empty() : this.secondaryPrivateIpAddressCount;
+    public Output<Integer> getSecondaryPrivateIpAddressCount() {
+        return this.secondaryPrivateIpAddressCount == null ? Output.empty() : this.secondaryPrivateIpAddressCount;
     }
 
     /**
@@ -113,10 +113,10 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="sourceDestCheck")
-      private final @Nullable Input<Boolean> sourceDestCheck;
+      private final @Nullable Output<Boolean> sourceDestCheck;
 
-    public Input<Boolean> getSourceDestCheck() {
-        return this.sourceDestCheck == null ? Input.empty() : this.sourceDestCheck;
+    public Output<Boolean> getSourceDestCheck() {
+        return this.sourceDestCheck == null ? Output.empty() : this.sourceDestCheck;
     }
 
     /**
@@ -124,9 +124,9 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="subnetId", required=true)
-      private final Input<String> subnetId;
+      private final Output<String> subnetId;
 
-    public Input<String> getSubnetId() {
+    public Output<String> getSubnetId() {
         return this.subnetId;
     }
 
@@ -135,24 +135,24 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<List<NetworkInterfaceTagArgs>> tags;
+      private final @Nullable Output<List<NetworkInterfaceTagArgs>> tags;
 
-    public Input<List<NetworkInterfaceTagArgs>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<List<NetworkInterfaceTagArgs>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public NetworkInterfaceArgs(
-        @Nullable Input<String> description,
-        @Nullable Input<List<String>> groupSet,
-        @Nullable Input<String> interfaceType,
-        @Nullable Input<Integer> ipv6AddressCount,
-        @Nullable Input<List<NetworkInterfaceInstanceIpv6AddressArgs>> ipv6Addresses,
-        @Nullable Input<String> privateIpAddress,
-        @Nullable Input<List<NetworkInterfacePrivateIpAddressSpecificationArgs>> privateIpAddresses,
-        @Nullable Input<Integer> secondaryPrivateIpAddressCount,
-        @Nullable Input<Boolean> sourceDestCheck,
-        Input<String> subnetId,
-        @Nullable Input<List<NetworkInterfaceTagArgs>> tags) {
+        @Nullable Output<String> description,
+        @Nullable Output<List<String>> groupSet,
+        @Nullable Output<String> interfaceType,
+        @Nullable Output<Integer> ipv6AddressCount,
+        @Nullable Output<List<NetworkInterfaceInstanceIpv6AddressArgs>> ipv6Addresses,
+        @Nullable Output<String> privateIpAddress,
+        @Nullable Output<List<NetworkInterfacePrivateIpAddressSpecificationArgs>> privateIpAddresses,
+        @Nullable Output<Integer> secondaryPrivateIpAddressCount,
+        @Nullable Output<Boolean> sourceDestCheck,
+        Output<String> subnetId,
+        @Nullable Output<List<NetworkInterfaceTagArgs>> tags) {
         this.description = description;
         this.groupSet = groupSet;
         this.interfaceType = interfaceType;
@@ -167,17 +167,17 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private NetworkInterfaceArgs() {
-        this.description = Input.empty();
-        this.groupSet = Input.empty();
-        this.interfaceType = Input.empty();
-        this.ipv6AddressCount = Input.empty();
-        this.ipv6Addresses = Input.empty();
-        this.privateIpAddress = Input.empty();
-        this.privateIpAddresses = Input.empty();
-        this.secondaryPrivateIpAddressCount = Input.empty();
-        this.sourceDestCheck = Input.empty();
-        this.subnetId = Input.empty();
-        this.tags = Input.empty();
+        this.description = Output.empty();
+        this.groupSet = Output.empty();
+        this.interfaceType = Output.empty();
+        this.ipv6AddressCount = Output.empty();
+        this.ipv6Addresses = Output.empty();
+        this.privateIpAddress = Output.empty();
+        this.privateIpAddresses = Output.empty();
+        this.secondaryPrivateIpAddressCount = Output.empty();
+        this.sourceDestCheck = Output.empty();
+        this.subnetId = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -189,17 +189,17 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private @Nullable Input<String> description;
-        private @Nullable Input<List<String>> groupSet;
-        private @Nullable Input<String> interfaceType;
-        private @Nullable Input<Integer> ipv6AddressCount;
-        private @Nullable Input<List<NetworkInterfaceInstanceIpv6AddressArgs>> ipv6Addresses;
-        private @Nullable Input<String> privateIpAddress;
-        private @Nullable Input<List<NetworkInterfacePrivateIpAddressSpecificationArgs>> privateIpAddresses;
-        private @Nullable Input<Integer> secondaryPrivateIpAddressCount;
-        private @Nullable Input<Boolean> sourceDestCheck;
-        private Input<String> subnetId;
-        private @Nullable Input<List<NetworkInterfaceTagArgs>> tags;
+        private @Nullable Output<String> description;
+        private @Nullable Output<List<String>> groupSet;
+        private @Nullable Output<String> interfaceType;
+        private @Nullable Output<Integer> ipv6AddressCount;
+        private @Nullable Output<List<NetworkInterfaceInstanceIpv6AddressArgs>> ipv6Addresses;
+        private @Nullable Output<String> privateIpAddress;
+        private @Nullable Output<List<NetworkInterfacePrivateIpAddressSpecificationArgs>> privateIpAddresses;
+        private @Nullable Output<Integer> secondaryPrivateIpAddressCount;
+        private @Nullable Output<Boolean> sourceDestCheck;
+        private Output<String> subnetId;
+        private @Nullable Output<List<NetworkInterfaceTagArgs>> tags;
 
         public Builder() {
     	      // Empty
@@ -220,113 +220,113 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
     	      this.tags = defaults.tags;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder groupSet(@Nullable Input<List<String>> groupSet) {
+        public Builder groupSet(@Nullable Output<List<String>> groupSet) {
             this.groupSet = groupSet;
             return this;
         }
 
         public Builder groupSet(@Nullable List<String> groupSet) {
-            this.groupSet = Input.ofNullable(groupSet);
+            this.groupSet = Output.ofNullable(groupSet);
             return this;
         }
 
-        public Builder interfaceType(@Nullable Input<String> interfaceType) {
+        public Builder interfaceType(@Nullable Output<String> interfaceType) {
             this.interfaceType = interfaceType;
             return this;
         }
 
         public Builder interfaceType(@Nullable String interfaceType) {
-            this.interfaceType = Input.ofNullable(interfaceType);
+            this.interfaceType = Output.ofNullable(interfaceType);
             return this;
         }
 
-        public Builder ipv6AddressCount(@Nullable Input<Integer> ipv6AddressCount) {
+        public Builder ipv6AddressCount(@Nullable Output<Integer> ipv6AddressCount) {
             this.ipv6AddressCount = ipv6AddressCount;
             return this;
         }
 
         public Builder ipv6AddressCount(@Nullable Integer ipv6AddressCount) {
-            this.ipv6AddressCount = Input.ofNullable(ipv6AddressCount);
+            this.ipv6AddressCount = Output.ofNullable(ipv6AddressCount);
             return this;
         }
 
-        public Builder ipv6Addresses(@Nullable Input<List<NetworkInterfaceInstanceIpv6AddressArgs>> ipv6Addresses) {
+        public Builder ipv6Addresses(@Nullable Output<List<NetworkInterfaceInstanceIpv6AddressArgs>> ipv6Addresses) {
             this.ipv6Addresses = ipv6Addresses;
             return this;
         }
 
         public Builder ipv6Addresses(@Nullable List<NetworkInterfaceInstanceIpv6AddressArgs> ipv6Addresses) {
-            this.ipv6Addresses = Input.ofNullable(ipv6Addresses);
+            this.ipv6Addresses = Output.ofNullable(ipv6Addresses);
             return this;
         }
 
-        public Builder privateIpAddress(@Nullable Input<String> privateIpAddress) {
+        public Builder privateIpAddress(@Nullable Output<String> privateIpAddress) {
             this.privateIpAddress = privateIpAddress;
             return this;
         }
 
         public Builder privateIpAddress(@Nullable String privateIpAddress) {
-            this.privateIpAddress = Input.ofNullable(privateIpAddress);
+            this.privateIpAddress = Output.ofNullable(privateIpAddress);
             return this;
         }
 
-        public Builder privateIpAddresses(@Nullable Input<List<NetworkInterfacePrivateIpAddressSpecificationArgs>> privateIpAddresses) {
+        public Builder privateIpAddresses(@Nullable Output<List<NetworkInterfacePrivateIpAddressSpecificationArgs>> privateIpAddresses) {
             this.privateIpAddresses = privateIpAddresses;
             return this;
         }
 
         public Builder privateIpAddresses(@Nullable List<NetworkInterfacePrivateIpAddressSpecificationArgs> privateIpAddresses) {
-            this.privateIpAddresses = Input.ofNullable(privateIpAddresses);
+            this.privateIpAddresses = Output.ofNullable(privateIpAddresses);
             return this;
         }
 
-        public Builder secondaryPrivateIpAddressCount(@Nullable Input<Integer> secondaryPrivateIpAddressCount) {
+        public Builder secondaryPrivateIpAddressCount(@Nullable Output<Integer> secondaryPrivateIpAddressCount) {
             this.secondaryPrivateIpAddressCount = secondaryPrivateIpAddressCount;
             return this;
         }
 
         public Builder secondaryPrivateIpAddressCount(@Nullable Integer secondaryPrivateIpAddressCount) {
-            this.secondaryPrivateIpAddressCount = Input.ofNullable(secondaryPrivateIpAddressCount);
+            this.secondaryPrivateIpAddressCount = Output.ofNullable(secondaryPrivateIpAddressCount);
             return this;
         }
 
-        public Builder sourceDestCheck(@Nullable Input<Boolean> sourceDestCheck) {
+        public Builder sourceDestCheck(@Nullable Output<Boolean> sourceDestCheck) {
             this.sourceDestCheck = sourceDestCheck;
             return this;
         }
 
         public Builder sourceDestCheck(@Nullable Boolean sourceDestCheck) {
-            this.sourceDestCheck = Input.ofNullable(sourceDestCheck);
+            this.sourceDestCheck = Output.ofNullable(sourceDestCheck);
             return this;
         }
 
-        public Builder subnetId(Input<String> subnetId) {
+        public Builder subnetId(Output<String> subnetId) {
             this.subnetId = Objects.requireNonNull(subnetId);
             return this;
         }
 
         public Builder subnetId(String subnetId) {
-            this.subnetId = Input.of(Objects.requireNonNull(subnetId));
+            this.subnetId = Output.of(Objects.requireNonNull(subnetId));
             return this;
         }
 
-        public Builder tags(@Nullable Input<List<NetworkInterfaceTagArgs>> tags) {
+        public Builder tags(@Nullable Output<List<NetworkInterfaceTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable List<NetworkInterfaceTagArgs> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public NetworkInterfaceArgs build() {

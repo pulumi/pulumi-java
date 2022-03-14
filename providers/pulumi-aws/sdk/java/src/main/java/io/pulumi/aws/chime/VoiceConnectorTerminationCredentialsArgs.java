@@ -4,7 +4,7 @@
 package io.pulumi.aws.chime;
 
 import io.pulumi.aws.chime.inputs.VoiceConnectorTerminationCredentialsCredentialArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -20,9 +20,9 @@ public final class VoiceConnectorTerminationCredentialsArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="credentials", required=true)
-      private final Input<List<VoiceConnectorTerminationCredentialsCredentialArgs>> credentials;
+      private final Output<List<VoiceConnectorTerminationCredentialsCredentialArgs>> credentials;
 
-    public Input<List<VoiceConnectorTerminationCredentialsCredentialArgs>> getCredentials() {
+    public Output<List<VoiceConnectorTerminationCredentialsCredentialArgs>> getCredentials() {
         return this.credentials;
     }
 
@@ -31,22 +31,22 @@ public final class VoiceConnectorTerminationCredentialsArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="voiceConnectorId", required=true)
-      private final Input<String> voiceConnectorId;
+      private final Output<String> voiceConnectorId;
 
-    public Input<String> getVoiceConnectorId() {
+    public Output<String> getVoiceConnectorId() {
         return this.voiceConnectorId;
     }
 
     public VoiceConnectorTerminationCredentialsArgs(
-        Input<List<VoiceConnectorTerminationCredentialsCredentialArgs>> credentials,
-        Input<String> voiceConnectorId) {
+        Output<List<VoiceConnectorTerminationCredentialsCredentialArgs>> credentials,
+        Output<String> voiceConnectorId) {
         this.credentials = Objects.requireNonNull(credentials, "expected parameter 'credentials' to be non-null");
         this.voiceConnectorId = Objects.requireNonNull(voiceConnectorId, "expected parameter 'voiceConnectorId' to be non-null");
     }
 
     private VoiceConnectorTerminationCredentialsArgs() {
-        this.credentials = Input.empty();
-        this.voiceConnectorId = Input.empty();
+        this.credentials = Output.empty();
+        this.voiceConnectorId = Output.empty();
     }
 
     public static Builder builder() {
@@ -58,8 +58,8 @@ public final class VoiceConnectorTerminationCredentialsArgs extends io.pulumi.re
     }
 
     public static final class Builder {
-        private Input<List<VoiceConnectorTerminationCredentialsCredentialArgs>> credentials;
-        private Input<String> voiceConnectorId;
+        private Output<List<VoiceConnectorTerminationCredentialsCredentialArgs>> credentials;
+        private Output<String> voiceConnectorId;
 
         public Builder() {
     	      // Empty
@@ -71,23 +71,23 @@ public final class VoiceConnectorTerminationCredentialsArgs extends io.pulumi.re
     	      this.voiceConnectorId = defaults.voiceConnectorId;
         }
 
-        public Builder credentials(Input<List<VoiceConnectorTerminationCredentialsCredentialArgs>> credentials) {
+        public Builder credentials(Output<List<VoiceConnectorTerminationCredentialsCredentialArgs>> credentials) {
             this.credentials = Objects.requireNonNull(credentials);
             return this;
         }
 
         public Builder credentials(List<VoiceConnectorTerminationCredentialsCredentialArgs> credentials) {
-            this.credentials = Input.of(Objects.requireNonNull(credentials));
+            this.credentials = Output.of(Objects.requireNonNull(credentials));
             return this;
         }
 
-        public Builder voiceConnectorId(Input<String> voiceConnectorId) {
+        public Builder voiceConnectorId(Output<String> voiceConnectorId) {
             this.voiceConnectorId = Objects.requireNonNull(voiceConnectorId);
             return this;
         }
 
         public Builder voiceConnectorId(String voiceConnectorId) {
-            this.voiceConnectorId = Input.of(Objects.requireNonNull(voiceConnectorId));
+            this.voiceConnectorId = Output.of(Objects.requireNonNull(voiceConnectorId));
             return this;
         }
         public VoiceConnectorTerminationCredentialsArgs build() {

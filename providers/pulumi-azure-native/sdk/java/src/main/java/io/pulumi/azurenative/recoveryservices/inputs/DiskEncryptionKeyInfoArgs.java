@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.recoveryservices.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class DiskEncryptionKeyInfoArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="keyVaultResourceArmId")
-      private final @Nullable Input<String> keyVaultResourceArmId;
+      private final @Nullable Output<String> keyVaultResourceArmId;
 
-    public Input<String> getKeyVaultResourceArmId() {
-        return this.keyVaultResourceArmId == null ? Input.empty() : this.keyVaultResourceArmId;
+    public Output<String> getKeyVaultResourceArmId() {
+        return this.keyVaultResourceArmId == null ? Output.empty() : this.keyVaultResourceArmId;
     }
 
     /**
@@ -34,22 +34,22 @@ public final class DiskEncryptionKeyInfoArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="secretIdentifier")
-      private final @Nullable Input<String> secretIdentifier;
+      private final @Nullable Output<String> secretIdentifier;
 
-    public Input<String> getSecretIdentifier() {
-        return this.secretIdentifier == null ? Input.empty() : this.secretIdentifier;
+    public Output<String> getSecretIdentifier() {
+        return this.secretIdentifier == null ? Output.empty() : this.secretIdentifier;
     }
 
     public DiskEncryptionKeyInfoArgs(
-        @Nullable Input<String> keyVaultResourceArmId,
-        @Nullable Input<String> secretIdentifier) {
+        @Nullable Output<String> keyVaultResourceArmId,
+        @Nullable Output<String> secretIdentifier) {
         this.keyVaultResourceArmId = keyVaultResourceArmId;
         this.secretIdentifier = secretIdentifier;
     }
 
     private DiskEncryptionKeyInfoArgs() {
-        this.keyVaultResourceArmId = Input.empty();
-        this.secretIdentifier = Input.empty();
+        this.keyVaultResourceArmId = Output.empty();
+        this.secretIdentifier = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class DiskEncryptionKeyInfoArgs extends io.pulumi.resources.Resourc
     }
 
     public static final class Builder {
-        private @Nullable Input<String> keyVaultResourceArmId;
-        private @Nullable Input<String> secretIdentifier;
+        private @Nullable Output<String> keyVaultResourceArmId;
+        private @Nullable Output<String> secretIdentifier;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class DiskEncryptionKeyInfoArgs extends io.pulumi.resources.Resourc
     	      this.secretIdentifier = defaults.secretIdentifier;
         }
 
-        public Builder keyVaultResourceArmId(@Nullable Input<String> keyVaultResourceArmId) {
+        public Builder keyVaultResourceArmId(@Nullable Output<String> keyVaultResourceArmId) {
             this.keyVaultResourceArmId = keyVaultResourceArmId;
             return this;
         }
 
         public Builder keyVaultResourceArmId(@Nullable String keyVaultResourceArmId) {
-            this.keyVaultResourceArmId = Input.ofNullable(keyVaultResourceArmId);
+            this.keyVaultResourceArmId = Output.ofNullable(keyVaultResourceArmId);
             return this;
         }
 
-        public Builder secretIdentifier(@Nullable Input<String> secretIdentifier) {
+        public Builder secretIdentifier(@Nullable Output<String> secretIdentifier) {
             this.secretIdentifier = secretIdentifier;
             return this;
         }
 
         public Builder secretIdentifier(@Nullable String secretIdentifier) {
-            this.secretIdentifier = Input.ofNullable(secretIdentifier);
+            this.secretIdentifier = Output.ofNullable(secretIdentifier);
             return this;
         }
         public DiskEncryptionKeyInfoArgs build() {

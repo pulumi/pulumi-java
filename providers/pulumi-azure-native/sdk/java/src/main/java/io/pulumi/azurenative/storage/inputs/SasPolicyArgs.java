@@ -5,7 +5,7 @@ package io.pulumi.azurenative.storage.inputs;
 
 import io.pulumi.azurenative.storage.enums.ExpirationAction;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -24,9 +24,9 @@ public final class SasPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="expirationAction", required=true)
-      private final Input<Either<String,ExpirationAction>> expirationAction;
+      private final Output<Either<String,ExpirationAction>> expirationAction;
 
-    public Input<Either<String,ExpirationAction>> getExpirationAction() {
+    public Output<Either<String,ExpirationAction>> getExpirationAction() {
         return this.expirationAction;
     }
 
@@ -35,22 +35,22 @@ public final class SasPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sasExpirationPeriod", required=true)
-      private final Input<String> sasExpirationPeriod;
+      private final Output<String> sasExpirationPeriod;
 
-    public Input<String> getSasExpirationPeriod() {
+    public Output<String> getSasExpirationPeriod() {
         return this.sasExpirationPeriod;
     }
 
     public SasPolicyArgs(
-        Input<Either<String,ExpirationAction>> expirationAction,
-        Input<String> sasExpirationPeriod) {
-        this.expirationAction = expirationAction == null ? Input.ofLeft("Log") : Objects.requireNonNull(expirationAction, "expected parameter 'expirationAction' to be non-null");
+        Output<Either<String,ExpirationAction>> expirationAction,
+        Output<String> sasExpirationPeriod) {
+        this.expirationAction = expirationAction == null ? Output.ofLeft("Log") : Objects.requireNonNull(expirationAction, "expected parameter 'expirationAction' to be non-null");
         this.sasExpirationPeriod = Objects.requireNonNull(sasExpirationPeriod, "expected parameter 'sasExpirationPeriod' to be non-null");
     }
 
     private SasPolicyArgs() {
-        this.expirationAction = Input.empty();
-        this.sasExpirationPeriod = Input.empty();
+        this.expirationAction = Output.empty();
+        this.sasExpirationPeriod = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class SasPolicyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<Either<String,ExpirationAction>> expirationAction;
-        private Input<String> sasExpirationPeriod;
+        private Output<Either<String,ExpirationAction>> expirationAction;
+        private Output<String> sasExpirationPeriod;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class SasPolicyArgs extends io.pulumi.resources.ResourceArgs {
     	      this.sasExpirationPeriod = defaults.sasExpirationPeriod;
         }
 
-        public Builder expirationAction(Input<Either<String,ExpirationAction>> expirationAction) {
+        public Builder expirationAction(Output<Either<String,ExpirationAction>> expirationAction) {
             this.expirationAction = Objects.requireNonNull(expirationAction);
             return this;
         }
 
         public Builder expirationAction(Either<String,ExpirationAction> expirationAction) {
-            this.expirationAction = Input.of(Objects.requireNonNull(expirationAction));
+            this.expirationAction = Output.of(Objects.requireNonNull(expirationAction));
             return this;
         }
 
-        public Builder sasExpirationPeriod(Input<String> sasExpirationPeriod) {
+        public Builder sasExpirationPeriod(Output<String> sasExpirationPeriod) {
             this.sasExpirationPeriod = Objects.requireNonNull(sasExpirationPeriod);
             return this;
         }
 
         public Builder sasExpirationPeriod(String sasExpirationPeriod) {
-            this.sasExpirationPeriod = Input.of(Objects.requireNonNull(sasExpirationPeriod));
+            this.sasExpirationPeriod = Output.of(Objects.requireNonNull(sasExpirationPeriod));
             return this;
         }
         public SasPolicyArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.gkehub.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.gkehub.inputs.FeatureResourceStateGetArgs;
 import io.pulumi.gcp.gkehub.inputs.FeatureSpecGetArgs;
@@ -24,10 +24,10 @@ public final class FeatureState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="createTime")
-      private final @Nullable Input<String> createTime;
+      private final @Nullable Output<String> createTime;
 
-    public Input<String> getCreateTime() {
-        return this.createTime == null ? Input.empty() : this.createTime;
+    public Output<String> getCreateTime() {
+        return this.createTime == null ? Output.empty() : this.createTime;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class FeatureState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="deleteTime")
-      private final @Nullable Input<String> deleteTime;
+      private final @Nullable Output<String> deleteTime;
 
-    public Input<String> getDeleteTime() {
-        return this.deleteTime == null ? Input.empty() : this.deleteTime;
+    public Output<String> getDeleteTime() {
+        return this.deleteTime == null ? Output.empty() : this.deleteTime;
     }
 
     /**
@@ -46,10 +46,10 @@ public final class FeatureState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labels")
-      private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Output<Map<String,String>> labels;
 
-    public Input<Map<String,String>> getLabels() {
-        return this.labels == null ? Input.empty() : this.labels;
+    public Output<Map<String,String>> getLabels() {
+        return this.labels == null ? Output.empty() : this.labels;
     }
 
     /**
@@ -57,10 +57,10 @@ public final class FeatureState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -68,10 +68,10 @@ public final class FeatureState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -79,10 +79,10 @@ public final class FeatureState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -90,10 +90,10 @@ public final class FeatureState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceStates")
-      private final @Nullable Input<List<FeatureResourceStateGetArgs>> resourceStates;
+      private final @Nullable Output<List<FeatureResourceStateGetArgs>> resourceStates;
 
-    public Input<List<FeatureResourceStateGetArgs>> getResourceStates() {
-        return this.resourceStates == null ? Input.empty() : this.resourceStates;
+    public Output<List<FeatureResourceStateGetArgs>> getResourceStates() {
+        return this.resourceStates == null ? Output.empty() : this.resourceStates;
     }
 
     /**
@@ -101,10 +101,10 @@ public final class FeatureState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="spec")
-      private final @Nullable Input<FeatureSpecGetArgs> spec;
+      private final @Nullable Output<FeatureSpecGetArgs> spec;
 
-    public Input<FeatureSpecGetArgs> getSpec() {
-        return this.spec == null ? Input.empty() : this.spec;
+    public Output<FeatureSpecGetArgs> getSpec() {
+        return this.spec == null ? Output.empty() : this.spec;
     }
 
     /**
@@ -112,10 +112,10 @@ public final class FeatureState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="states")
-      private final @Nullable Input<List<FeatureStateGetArgs>> states;
+      private final @Nullable Output<List<FeatureStateGetArgs>> states;
 
-    public Input<List<FeatureStateGetArgs>> getStates() {
-        return this.states == null ? Input.empty() : this.states;
+    public Output<List<FeatureStateGetArgs>> getStates() {
+        return this.states == null ? Output.empty() : this.states;
     }
 
     /**
@@ -123,23 +123,23 @@ public final class FeatureState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="updateTime")
-      private final @Nullable Input<String> updateTime;
+      private final @Nullable Output<String> updateTime;
 
-    public Input<String> getUpdateTime() {
-        return this.updateTime == null ? Input.empty() : this.updateTime;
+    public Output<String> getUpdateTime() {
+        return this.updateTime == null ? Output.empty() : this.updateTime;
     }
 
     public FeatureState(
-        @Nullable Input<String> createTime,
-        @Nullable Input<String> deleteTime,
-        @Nullable Input<Map<String,String>> labels,
-        @Nullable Input<String> location,
-        @Nullable Input<String> name,
-        @Nullable Input<String> project,
-        @Nullable Input<List<FeatureResourceStateGetArgs>> resourceStates,
-        @Nullable Input<FeatureSpecGetArgs> spec,
-        @Nullable Input<List<FeatureStateGetArgs>> states,
-        @Nullable Input<String> updateTime) {
+        @Nullable Output<String> createTime,
+        @Nullable Output<String> deleteTime,
+        @Nullable Output<Map<String,String>> labels,
+        @Nullable Output<String> location,
+        @Nullable Output<String> name,
+        @Nullable Output<String> project,
+        @Nullable Output<List<FeatureResourceStateGetArgs>> resourceStates,
+        @Nullable Output<FeatureSpecGetArgs> spec,
+        @Nullable Output<List<FeatureStateGetArgs>> states,
+        @Nullable Output<String> updateTime) {
         this.createTime = createTime;
         this.deleteTime = deleteTime;
         this.labels = labels;
@@ -153,16 +153,16 @@ public final class FeatureState extends io.pulumi.resources.ResourceArgs {
     }
 
     private FeatureState() {
-        this.createTime = Input.empty();
-        this.deleteTime = Input.empty();
-        this.labels = Input.empty();
-        this.location = Input.empty();
-        this.name = Input.empty();
-        this.project = Input.empty();
-        this.resourceStates = Input.empty();
-        this.spec = Input.empty();
-        this.states = Input.empty();
-        this.updateTime = Input.empty();
+        this.createTime = Output.empty();
+        this.deleteTime = Output.empty();
+        this.labels = Output.empty();
+        this.location = Output.empty();
+        this.name = Output.empty();
+        this.project = Output.empty();
+        this.resourceStates = Output.empty();
+        this.spec = Output.empty();
+        this.states = Output.empty();
+        this.updateTime = Output.empty();
     }
 
     public static Builder builder() {
@@ -174,16 +174,16 @@ public final class FeatureState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> createTime;
-        private @Nullable Input<String> deleteTime;
-        private @Nullable Input<Map<String,String>> labels;
-        private @Nullable Input<String> location;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> project;
-        private @Nullable Input<List<FeatureResourceStateGetArgs>> resourceStates;
-        private @Nullable Input<FeatureSpecGetArgs> spec;
-        private @Nullable Input<List<FeatureStateGetArgs>> states;
-        private @Nullable Input<String> updateTime;
+        private @Nullable Output<String> createTime;
+        private @Nullable Output<String> deleteTime;
+        private @Nullable Output<Map<String,String>> labels;
+        private @Nullable Output<String> location;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> project;
+        private @Nullable Output<List<FeatureResourceStateGetArgs>> resourceStates;
+        private @Nullable Output<FeatureSpecGetArgs> spec;
+        private @Nullable Output<List<FeatureStateGetArgs>> states;
+        private @Nullable Output<String> updateTime;
 
         public Builder() {
     	      // Empty
@@ -203,103 +203,103 @@ public final class FeatureState extends io.pulumi.resources.ResourceArgs {
     	      this.updateTime = defaults.updateTime;
         }
 
-        public Builder createTime(@Nullable Input<String> createTime) {
+        public Builder createTime(@Nullable Output<String> createTime) {
             this.createTime = createTime;
             return this;
         }
 
         public Builder createTime(@Nullable String createTime) {
-            this.createTime = Input.ofNullable(createTime);
+            this.createTime = Output.ofNullable(createTime);
             return this;
         }
 
-        public Builder deleteTime(@Nullable Input<String> deleteTime) {
+        public Builder deleteTime(@Nullable Output<String> deleteTime) {
             this.deleteTime = deleteTime;
             return this;
         }
 
         public Builder deleteTime(@Nullable String deleteTime) {
-            this.deleteTime = Input.ofNullable(deleteTime);
+            this.deleteTime = Output.ofNullable(deleteTime);
             return this;
         }
 
-        public Builder labels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
         public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Input.ofNullable(labels);
+            this.labels = Output.ofNullable(labels);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder resourceStates(@Nullable Input<List<FeatureResourceStateGetArgs>> resourceStates) {
+        public Builder resourceStates(@Nullable Output<List<FeatureResourceStateGetArgs>> resourceStates) {
             this.resourceStates = resourceStates;
             return this;
         }
 
         public Builder resourceStates(@Nullable List<FeatureResourceStateGetArgs> resourceStates) {
-            this.resourceStates = Input.ofNullable(resourceStates);
+            this.resourceStates = Output.ofNullable(resourceStates);
             return this;
         }
 
-        public Builder spec(@Nullable Input<FeatureSpecGetArgs> spec) {
+        public Builder spec(@Nullable Output<FeatureSpecGetArgs> spec) {
             this.spec = spec;
             return this;
         }
 
         public Builder spec(@Nullable FeatureSpecGetArgs spec) {
-            this.spec = Input.ofNullable(spec);
+            this.spec = Output.ofNullable(spec);
             return this;
         }
 
-        public Builder states(@Nullable Input<List<FeatureStateGetArgs>> states) {
+        public Builder states(@Nullable Output<List<FeatureStateGetArgs>> states) {
             this.states = states;
             return this;
         }
 
         public Builder states(@Nullable List<FeatureStateGetArgs> states) {
-            this.states = Input.ofNullable(states);
+            this.states = Output.ofNullable(states);
             return this;
         }
 
-        public Builder updateTime(@Nullable Input<String> updateTime) {
+        public Builder updateTime(@Nullable Output<String> updateTime) {
             this.updateTime = updateTime;
             return this;
         }
 
         public Builder updateTime(@Nullable String updateTime) {
-            this.updateTime = Input.ofNullable(updateTime);
+            this.updateTime = Output.ofNullable(updateTime);
             return this;
         }
         public FeatureState build() {

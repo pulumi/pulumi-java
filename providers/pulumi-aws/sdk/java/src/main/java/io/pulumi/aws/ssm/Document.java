@@ -8,7 +8,6 @@ import io.pulumi.aws.ssm.DocumentArgs;
 import io.pulumi.aws.ssm.inputs.DocumentState;
 import io.pulumi.aws.ssm.outputs.DocumentAttachmentsSource;
 import io.pulumi.aws.ssm.outputs.DocumentParameter;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -425,14 +424,14 @@ public class Document extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Document(String name, DocumentArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:ssm/document:Document", name, args == null ? DocumentArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws:ssm/document:Document", name, args == null ? DocumentArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private Document(String name, Input<String> id, @Nullable DocumentState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private Document(String name, Output<String> id, @Nullable DocumentState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws:ssm/document:Document", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -448,7 +447,7 @@ public class Document extends io.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static Document get(String name, Input<String> id, @Nullable DocumentState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static Document get(String name, Output<String> id, @Nullable DocumentState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Document(name, id, state, options);
     }
 }

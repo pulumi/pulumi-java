@@ -6,7 +6,7 @@ package io.pulumi.awsnative.sagemaker.inputs;
 import io.pulumi.awsnative.sagemaker.enums.MonitoringScheduleMonitoringType;
 import io.pulumi.awsnative.sagemaker.inputs.MonitoringScheduleMonitoringJobDefinitionArgs;
 import io.pulumi.awsnative.sagemaker.inputs.MonitoringScheduleScheduleConfigArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -22,10 +22,10 @@ public final class MonitoringScheduleConfigArgs extends io.pulumi.resources.Reso
     public static final MonitoringScheduleConfigArgs Empty = new MonitoringScheduleConfigArgs();
 
     @InputImport(name="monitoringJobDefinition")
-      private final @Nullable Input<MonitoringScheduleMonitoringJobDefinitionArgs> monitoringJobDefinition;
+      private final @Nullable Output<MonitoringScheduleMonitoringJobDefinitionArgs> monitoringJobDefinition;
 
-    public Input<MonitoringScheduleMonitoringJobDefinitionArgs> getMonitoringJobDefinition() {
-        return this.monitoringJobDefinition == null ? Input.empty() : this.monitoringJobDefinition;
+    public Output<MonitoringScheduleMonitoringJobDefinitionArgs> getMonitoringJobDefinition() {
+        return this.monitoringJobDefinition == null ? Output.empty() : this.monitoringJobDefinition;
     }
 
     /**
@@ -33,31 +33,31 @@ public final class MonitoringScheduleConfigArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="monitoringJobDefinitionName")
-      private final @Nullable Input<String> monitoringJobDefinitionName;
+      private final @Nullable Output<String> monitoringJobDefinitionName;
 
-    public Input<String> getMonitoringJobDefinitionName() {
-        return this.monitoringJobDefinitionName == null ? Input.empty() : this.monitoringJobDefinitionName;
+    public Output<String> getMonitoringJobDefinitionName() {
+        return this.monitoringJobDefinitionName == null ? Output.empty() : this.monitoringJobDefinitionName;
     }
 
     @InputImport(name="monitoringType")
-      private final @Nullable Input<MonitoringScheduleMonitoringType> monitoringType;
+      private final @Nullable Output<MonitoringScheduleMonitoringType> monitoringType;
 
-    public Input<MonitoringScheduleMonitoringType> getMonitoringType() {
-        return this.monitoringType == null ? Input.empty() : this.monitoringType;
+    public Output<MonitoringScheduleMonitoringType> getMonitoringType() {
+        return this.monitoringType == null ? Output.empty() : this.monitoringType;
     }
 
     @InputImport(name="scheduleConfig")
-      private final @Nullable Input<MonitoringScheduleScheduleConfigArgs> scheduleConfig;
+      private final @Nullable Output<MonitoringScheduleScheduleConfigArgs> scheduleConfig;
 
-    public Input<MonitoringScheduleScheduleConfigArgs> getScheduleConfig() {
-        return this.scheduleConfig == null ? Input.empty() : this.scheduleConfig;
+    public Output<MonitoringScheduleScheduleConfigArgs> getScheduleConfig() {
+        return this.scheduleConfig == null ? Output.empty() : this.scheduleConfig;
     }
 
     public MonitoringScheduleConfigArgs(
-        @Nullable Input<MonitoringScheduleMonitoringJobDefinitionArgs> monitoringJobDefinition,
-        @Nullable Input<String> monitoringJobDefinitionName,
-        @Nullable Input<MonitoringScheduleMonitoringType> monitoringType,
-        @Nullable Input<MonitoringScheduleScheduleConfigArgs> scheduleConfig) {
+        @Nullable Output<MonitoringScheduleMonitoringJobDefinitionArgs> monitoringJobDefinition,
+        @Nullable Output<String> monitoringJobDefinitionName,
+        @Nullable Output<MonitoringScheduleMonitoringType> monitoringType,
+        @Nullable Output<MonitoringScheduleScheduleConfigArgs> scheduleConfig) {
         this.monitoringJobDefinition = monitoringJobDefinition;
         this.monitoringJobDefinitionName = monitoringJobDefinitionName;
         this.monitoringType = monitoringType;
@@ -65,10 +65,10 @@ public final class MonitoringScheduleConfigArgs extends io.pulumi.resources.Reso
     }
 
     private MonitoringScheduleConfigArgs() {
-        this.monitoringJobDefinition = Input.empty();
-        this.monitoringJobDefinitionName = Input.empty();
-        this.monitoringType = Input.empty();
-        this.scheduleConfig = Input.empty();
+        this.monitoringJobDefinition = Output.empty();
+        this.monitoringJobDefinitionName = Output.empty();
+        this.monitoringType = Output.empty();
+        this.scheduleConfig = Output.empty();
     }
 
     public static Builder builder() {
@@ -80,10 +80,10 @@ public final class MonitoringScheduleConfigArgs extends io.pulumi.resources.Reso
     }
 
     public static final class Builder {
-        private @Nullable Input<MonitoringScheduleMonitoringJobDefinitionArgs> monitoringJobDefinition;
-        private @Nullable Input<String> monitoringJobDefinitionName;
-        private @Nullable Input<MonitoringScheduleMonitoringType> monitoringType;
-        private @Nullable Input<MonitoringScheduleScheduleConfigArgs> scheduleConfig;
+        private @Nullable Output<MonitoringScheduleMonitoringJobDefinitionArgs> monitoringJobDefinition;
+        private @Nullable Output<String> monitoringJobDefinitionName;
+        private @Nullable Output<MonitoringScheduleMonitoringType> monitoringType;
+        private @Nullable Output<MonitoringScheduleScheduleConfigArgs> scheduleConfig;
 
         public Builder() {
     	      // Empty
@@ -97,43 +97,43 @@ public final class MonitoringScheduleConfigArgs extends io.pulumi.resources.Reso
     	      this.scheduleConfig = defaults.scheduleConfig;
         }
 
-        public Builder monitoringJobDefinition(@Nullable Input<MonitoringScheduleMonitoringJobDefinitionArgs> monitoringJobDefinition) {
+        public Builder monitoringJobDefinition(@Nullable Output<MonitoringScheduleMonitoringJobDefinitionArgs> monitoringJobDefinition) {
             this.monitoringJobDefinition = monitoringJobDefinition;
             return this;
         }
 
         public Builder monitoringJobDefinition(@Nullable MonitoringScheduleMonitoringJobDefinitionArgs monitoringJobDefinition) {
-            this.monitoringJobDefinition = Input.ofNullable(monitoringJobDefinition);
+            this.monitoringJobDefinition = Output.ofNullable(monitoringJobDefinition);
             return this;
         }
 
-        public Builder monitoringJobDefinitionName(@Nullable Input<String> monitoringJobDefinitionName) {
+        public Builder monitoringJobDefinitionName(@Nullable Output<String> monitoringJobDefinitionName) {
             this.monitoringJobDefinitionName = monitoringJobDefinitionName;
             return this;
         }
 
         public Builder monitoringJobDefinitionName(@Nullable String monitoringJobDefinitionName) {
-            this.monitoringJobDefinitionName = Input.ofNullable(monitoringJobDefinitionName);
+            this.monitoringJobDefinitionName = Output.ofNullable(monitoringJobDefinitionName);
             return this;
         }
 
-        public Builder monitoringType(@Nullable Input<MonitoringScheduleMonitoringType> monitoringType) {
+        public Builder monitoringType(@Nullable Output<MonitoringScheduleMonitoringType> monitoringType) {
             this.monitoringType = monitoringType;
             return this;
         }
 
         public Builder monitoringType(@Nullable MonitoringScheduleMonitoringType monitoringType) {
-            this.monitoringType = Input.ofNullable(monitoringType);
+            this.monitoringType = Output.ofNullable(monitoringType);
             return this;
         }
 
-        public Builder scheduleConfig(@Nullable Input<MonitoringScheduleScheduleConfigArgs> scheduleConfig) {
+        public Builder scheduleConfig(@Nullable Output<MonitoringScheduleScheduleConfigArgs> scheduleConfig) {
             this.scheduleConfig = scheduleConfig;
             return this;
         }
 
         public Builder scheduleConfig(@Nullable MonitoringScheduleScheduleConfigArgs scheduleConfig) {
-            this.scheduleConfig = Input.ofNullable(scheduleConfig);
+            this.scheduleConfig = Output.ofNullable(scheduleConfig);
             return this;
         }
         public MonitoringScheduleConfigArgs build() {

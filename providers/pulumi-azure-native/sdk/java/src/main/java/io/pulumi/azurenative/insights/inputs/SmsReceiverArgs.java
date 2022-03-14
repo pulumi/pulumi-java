@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.insights.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -22,9 +22,9 @@ public final class SmsReceiverArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="countryCode", required=true)
-      private final Input<String> countryCode;
+      private final Output<String> countryCode;
 
-    public Input<String> getCountryCode() {
+    public Output<String> getCountryCode() {
         return this.countryCode;
     }
 
@@ -33,9 +33,9 @@ public final class SmsReceiverArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name", required=true)
-      private final Input<String> name;
+      private final Output<String> name;
 
-    public Input<String> getName() {
+    public Output<String> getName() {
         return this.name;
     }
 
@@ -44,25 +44,25 @@ public final class SmsReceiverArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="phoneNumber", required=true)
-      private final Input<String> phoneNumber;
+      private final Output<String> phoneNumber;
 
-    public Input<String> getPhoneNumber() {
+    public Output<String> getPhoneNumber() {
         return this.phoneNumber;
     }
 
     public SmsReceiverArgs(
-        Input<String> countryCode,
-        Input<String> name,
-        Input<String> phoneNumber) {
+        Output<String> countryCode,
+        Output<String> name,
+        Output<String> phoneNumber) {
         this.countryCode = Objects.requireNonNull(countryCode, "expected parameter 'countryCode' to be non-null");
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
         this.phoneNumber = Objects.requireNonNull(phoneNumber, "expected parameter 'phoneNumber' to be non-null");
     }
 
     private SmsReceiverArgs() {
-        this.countryCode = Input.empty();
-        this.name = Input.empty();
-        this.phoneNumber = Input.empty();
+        this.countryCode = Output.empty();
+        this.name = Output.empty();
+        this.phoneNumber = Output.empty();
     }
 
     public static Builder builder() {
@@ -74,9 +74,9 @@ public final class SmsReceiverArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> countryCode;
-        private Input<String> name;
-        private Input<String> phoneNumber;
+        private Output<String> countryCode;
+        private Output<String> name;
+        private Output<String> phoneNumber;
 
         public Builder() {
     	      // Empty
@@ -89,33 +89,33 @@ public final class SmsReceiverArgs extends io.pulumi.resources.ResourceArgs {
     	      this.phoneNumber = defaults.phoneNumber;
         }
 
-        public Builder countryCode(Input<String> countryCode) {
+        public Builder countryCode(Output<String> countryCode) {
             this.countryCode = Objects.requireNonNull(countryCode);
             return this;
         }
 
         public Builder countryCode(String countryCode) {
-            this.countryCode = Input.of(Objects.requireNonNull(countryCode));
+            this.countryCode = Output.of(Objects.requireNonNull(countryCode));
             return this;
         }
 
-        public Builder name(Input<String> name) {
+        public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(String name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder phoneNumber(Input<String> phoneNumber) {
+        public Builder phoneNumber(Output<String> phoneNumber) {
             this.phoneNumber = Objects.requireNonNull(phoneNumber);
             return this;
         }
 
         public Builder phoneNumber(String phoneNumber) {
-            this.phoneNumber = Input.of(Objects.requireNonNull(phoneNumber));
+            this.phoneNumber = Output.of(Objects.requireNonNull(phoneNumber));
             return this;
         }
         public SmsReceiverArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.cloudfront.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.List;
@@ -15,29 +15,29 @@ public final class DistributionStatusCodesArgs extends io.pulumi.resources.Resou
     public static final DistributionStatusCodesArgs Empty = new DistributionStatusCodesArgs();
 
     @InputImport(name="items", required=true)
-      private final Input<List<Integer>> items;
+      private final Output<List<Integer>> items;
 
-    public Input<List<Integer>> getItems() {
+    public Output<List<Integer>> getItems() {
         return this.items;
     }
 
     @InputImport(name="quantity", required=true)
-      private final Input<Integer> quantity;
+      private final Output<Integer> quantity;
 
-    public Input<Integer> getQuantity() {
+    public Output<Integer> getQuantity() {
         return this.quantity;
     }
 
     public DistributionStatusCodesArgs(
-        Input<List<Integer>> items,
-        Input<Integer> quantity) {
+        Output<List<Integer>> items,
+        Output<Integer> quantity) {
         this.items = Objects.requireNonNull(items, "expected parameter 'items' to be non-null");
         this.quantity = Objects.requireNonNull(quantity, "expected parameter 'quantity' to be non-null");
     }
 
     private DistributionStatusCodesArgs() {
-        this.items = Input.empty();
-        this.quantity = Input.empty();
+        this.items = Output.empty();
+        this.quantity = Output.empty();
     }
 
     public static Builder builder() {
@@ -49,8 +49,8 @@ public final class DistributionStatusCodesArgs extends io.pulumi.resources.Resou
     }
 
     public static final class Builder {
-        private Input<List<Integer>> items;
-        private Input<Integer> quantity;
+        private Output<List<Integer>> items;
+        private Output<Integer> quantity;
 
         public Builder() {
     	      // Empty
@@ -62,23 +62,23 @@ public final class DistributionStatusCodesArgs extends io.pulumi.resources.Resou
     	      this.quantity = defaults.quantity;
         }
 
-        public Builder items(Input<List<Integer>> items) {
+        public Builder items(Output<List<Integer>> items) {
             this.items = Objects.requireNonNull(items);
             return this;
         }
 
         public Builder items(List<Integer> items) {
-            this.items = Input.of(Objects.requireNonNull(items));
+            this.items = Output.of(Objects.requireNonNull(items));
             return this;
         }
 
-        public Builder quantity(Input<Integer> quantity) {
+        public Builder quantity(Output<Integer> quantity) {
             this.quantity = Objects.requireNonNull(quantity);
             return this;
         }
 
         public Builder quantity(Integer quantity) {
-            this.quantity = Input.of(Objects.requireNonNull(quantity));
+            this.quantity = Output.of(Objects.requireNonNull(quantity));
             return this;
         }
         public DistributionStatusCodesArgs build() {

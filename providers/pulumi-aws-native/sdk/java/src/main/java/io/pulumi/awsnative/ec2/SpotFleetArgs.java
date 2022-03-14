@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.ec2;
 
 import io.pulumi.awsnative.ec2.inputs.SpotFleetRequestConfigDataArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 
@@ -14,18 +14,18 @@ public final class SpotFleetArgs extends io.pulumi.resources.ResourceArgs {
     public static final SpotFleetArgs Empty = new SpotFleetArgs();
 
     @InputImport(name="spotFleetRequestConfigData", required=true)
-      private final Input<SpotFleetRequestConfigDataArgs> spotFleetRequestConfigData;
+      private final Output<SpotFleetRequestConfigDataArgs> spotFleetRequestConfigData;
 
-    public Input<SpotFleetRequestConfigDataArgs> getSpotFleetRequestConfigData() {
+    public Output<SpotFleetRequestConfigDataArgs> getSpotFleetRequestConfigData() {
         return this.spotFleetRequestConfigData;
     }
 
-    public SpotFleetArgs(Input<SpotFleetRequestConfigDataArgs> spotFleetRequestConfigData) {
+    public SpotFleetArgs(Output<SpotFleetRequestConfigDataArgs> spotFleetRequestConfigData) {
         this.spotFleetRequestConfigData = Objects.requireNonNull(spotFleetRequestConfigData, "expected parameter 'spotFleetRequestConfigData' to be non-null");
     }
 
     private SpotFleetArgs() {
-        this.spotFleetRequestConfigData = Input.empty();
+        this.spotFleetRequestConfigData = Output.empty();
     }
 
     public static Builder builder() {
@@ -37,7 +37,7 @@ public final class SpotFleetArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<SpotFleetRequestConfigDataArgs> spotFleetRequestConfigData;
+        private Output<SpotFleetRequestConfigDataArgs> spotFleetRequestConfigData;
 
         public Builder() {
     	      // Empty
@@ -48,13 +48,13 @@ public final class SpotFleetArgs extends io.pulumi.resources.ResourceArgs {
     	      this.spotFleetRequestConfigData = defaults.spotFleetRequestConfigData;
         }
 
-        public Builder spotFleetRequestConfigData(Input<SpotFleetRequestConfigDataArgs> spotFleetRequestConfigData) {
+        public Builder spotFleetRequestConfigData(Output<SpotFleetRequestConfigDataArgs> spotFleetRequestConfigData) {
             this.spotFleetRequestConfigData = Objects.requireNonNull(spotFleetRequestConfigData);
             return this;
         }
 
         public Builder spotFleetRequestConfigData(SpotFleetRequestConfigDataArgs spotFleetRequestConfigData) {
-            this.spotFleetRequestConfigData = Input.of(Objects.requireNonNull(spotFleetRequestConfigData));
+            this.spotFleetRequestConfigData = Output.of(Objects.requireNonNull(spotFleetRequestConfigData));
             return this;
         }
         public SpotFleetArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.logic.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -25,9 +25,9 @@ public final class X12AcknowledgementSettingsArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="acknowledgementControlNumberLowerBound", required=true)
-      private final Input<Integer> acknowledgementControlNumberLowerBound;
+      private final Output<Integer> acknowledgementControlNumberLowerBound;
 
-    public Input<Integer> getAcknowledgementControlNumberLowerBound() {
+    public Output<Integer> getAcknowledgementControlNumberLowerBound() {
         return this.acknowledgementControlNumberLowerBound;
     }
 
@@ -36,10 +36,10 @@ public final class X12AcknowledgementSettingsArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="acknowledgementControlNumberPrefix")
-      private final @Nullable Input<String> acknowledgementControlNumberPrefix;
+      private final @Nullable Output<String> acknowledgementControlNumberPrefix;
 
-    public Input<String> getAcknowledgementControlNumberPrefix() {
-        return this.acknowledgementControlNumberPrefix == null ? Input.empty() : this.acknowledgementControlNumberPrefix;
+    public Output<String> getAcknowledgementControlNumberPrefix() {
+        return this.acknowledgementControlNumberPrefix == null ? Output.empty() : this.acknowledgementControlNumberPrefix;
     }
 
     /**
@@ -47,10 +47,10 @@ public final class X12AcknowledgementSettingsArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="acknowledgementControlNumberSuffix")
-      private final @Nullable Input<String> acknowledgementControlNumberSuffix;
+      private final @Nullable Output<String> acknowledgementControlNumberSuffix;
 
-    public Input<String> getAcknowledgementControlNumberSuffix() {
-        return this.acknowledgementControlNumberSuffix == null ? Input.empty() : this.acknowledgementControlNumberSuffix;
+    public Output<String> getAcknowledgementControlNumberSuffix() {
+        return this.acknowledgementControlNumberSuffix == null ? Output.empty() : this.acknowledgementControlNumberSuffix;
     }
 
     /**
@@ -58,9 +58,9 @@ public final class X12AcknowledgementSettingsArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="acknowledgementControlNumberUpperBound", required=true)
-      private final Input<Integer> acknowledgementControlNumberUpperBound;
+      private final Output<Integer> acknowledgementControlNumberUpperBound;
 
-    public Input<Integer> getAcknowledgementControlNumberUpperBound() {
+    public Output<Integer> getAcknowledgementControlNumberUpperBound() {
         return this.acknowledgementControlNumberUpperBound;
     }
 
@@ -69,9 +69,9 @@ public final class X12AcknowledgementSettingsArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="batchFunctionalAcknowledgements", required=true)
-      private final Input<Boolean> batchFunctionalAcknowledgements;
+      private final Output<Boolean> batchFunctionalAcknowledgements;
 
-    public Input<Boolean> getBatchFunctionalAcknowledgements() {
+    public Output<Boolean> getBatchFunctionalAcknowledgements() {
         return this.batchFunctionalAcknowledgements;
     }
 
@@ -80,9 +80,9 @@ public final class X12AcknowledgementSettingsArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="batchImplementationAcknowledgements", required=true)
-      private final Input<Boolean> batchImplementationAcknowledgements;
+      private final Output<Boolean> batchImplementationAcknowledgements;
 
-    public Input<Boolean> getBatchImplementationAcknowledgements() {
+    public Output<Boolean> getBatchImplementationAcknowledgements() {
         return this.batchImplementationAcknowledgements;
     }
 
@@ -91,9 +91,9 @@ public final class X12AcknowledgementSettingsArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="batchTechnicalAcknowledgements", required=true)
-      private final Input<Boolean> batchTechnicalAcknowledgements;
+      private final Output<Boolean> batchTechnicalAcknowledgements;
 
-    public Input<Boolean> getBatchTechnicalAcknowledgements() {
+    public Output<Boolean> getBatchTechnicalAcknowledgements() {
         return this.batchTechnicalAcknowledgements;
     }
 
@@ -102,10 +102,10 @@ public final class X12AcknowledgementSettingsArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="functionalAcknowledgementVersion")
-      private final @Nullable Input<String> functionalAcknowledgementVersion;
+      private final @Nullable Output<String> functionalAcknowledgementVersion;
 
-    public Input<String> getFunctionalAcknowledgementVersion() {
-        return this.functionalAcknowledgementVersion == null ? Input.empty() : this.functionalAcknowledgementVersion;
+    public Output<String> getFunctionalAcknowledgementVersion() {
+        return this.functionalAcknowledgementVersion == null ? Output.empty() : this.functionalAcknowledgementVersion;
     }
 
     /**
@@ -113,10 +113,10 @@ public final class X12AcknowledgementSettingsArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="implementationAcknowledgementVersion")
-      private final @Nullable Input<String> implementationAcknowledgementVersion;
+      private final @Nullable Output<String> implementationAcknowledgementVersion;
 
-    public Input<String> getImplementationAcknowledgementVersion() {
-        return this.implementationAcknowledgementVersion == null ? Input.empty() : this.implementationAcknowledgementVersion;
+    public Output<String> getImplementationAcknowledgementVersion() {
+        return this.implementationAcknowledgementVersion == null ? Output.empty() : this.implementationAcknowledgementVersion;
     }
 
     /**
@@ -124,9 +124,9 @@ public final class X12AcknowledgementSettingsArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="needFunctionalAcknowledgement", required=true)
-      private final Input<Boolean> needFunctionalAcknowledgement;
+      private final Output<Boolean> needFunctionalAcknowledgement;
 
-    public Input<Boolean> getNeedFunctionalAcknowledgement() {
+    public Output<Boolean> getNeedFunctionalAcknowledgement() {
         return this.needFunctionalAcknowledgement;
     }
 
@@ -135,9 +135,9 @@ public final class X12AcknowledgementSettingsArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="needImplementationAcknowledgement", required=true)
-      private final Input<Boolean> needImplementationAcknowledgement;
+      private final Output<Boolean> needImplementationAcknowledgement;
 
-    public Input<Boolean> getNeedImplementationAcknowledgement() {
+    public Output<Boolean> getNeedImplementationAcknowledgement() {
         return this.needImplementationAcknowledgement;
     }
 
@@ -146,9 +146,9 @@ public final class X12AcknowledgementSettingsArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="needLoopForValidMessages", required=true)
-      private final Input<Boolean> needLoopForValidMessages;
+      private final Output<Boolean> needLoopForValidMessages;
 
-    public Input<Boolean> getNeedLoopForValidMessages() {
+    public Output<Boolean> getNeedLoopForValidMessages() {
         return this.needLoopForValidMessages;
     }
 
@@ -157,9 +157,9 @@ public final class X12AcknowledgementSettingsArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="needTechnicalAcknowledgement", required=true)
-      private final Input<Boolean> needTechnicalAcknowledgement;
+      private final Output<Boolean> needTechnicalAcknowledgement;
 
-    public Input<Boolean> getNeedTechnicalAcknowledgement() {
+    public Output<Boolean> getNeedTechnicalAcknowledgement() {
         return this.needTechnicalAcknowledgement;
     }
 
@@ -168,9 +168,9 @@ public final class X12AcknowledgementSettingsArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="rolloverAcknowledgementControlNumber", required=true)
-      private final Input<Boolean> rolloverAcknowledgementControlNumber;
+      private final Output<Boolean> rolloverAcknowledgementControlNumber;
 
-    public Input<Boolean> getRolloverAcknowledgementControlNumber() {
+    public Output<Boolean> getRolloverAcknowledgementControlNumber() {
         return this.rolloverAcknowledgementControlNumber;
     }
 
@@ -179,28 +179,28 @@ public final class X12AcknowledgementSettingsArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="sendSynchronousAcknowledgement", required=true)
-      private final Input<Boolean> sendSynchronousAcknowledgement;
+      private final Output<Boolean> sendSynchronousAcknowledgement;
 
-    public Input<Boolean> getSendSynchronousAcknowledgement() {
+    public Output<Boolean> getSendSynchronousAcknowledgement() {
         return this.sendSynchronousAcknowledgement;
     }
 
     public X12AcknowledgementSettingsArgs(
-        Input<Integer> acknowledgementControlNumberLowerBound,
-        @Nullable Input<String> acknowledgementControlNumberPrefix,
-        @Nullable Input<String> acknowledgementControlNumberSuffix,
-        Input<Integer> acknowledgementControlNumberUpperBound,
-        Input<Boolean> batchFunctionalAcknowledgements,
-        Input<Boolean> batchImplementationAcknowledgements,
-        Input<Boolean> batchTechnicalAcknowledgements,
-        @Nullable Input<String> functionalAcknowledgementVersion,
-        @Nullable Input<String> implementationAcknowledgementVersion,
-        Input<Boolean> needFunctionalAcknowledgement,
-        Input<Boolean> needImplementationAcknowledgement,
-        Input<Boolean> needLoopForValidMessages,
-        Input<Boolean> needTechnicalAcknowledgement,
-        Input<Boolean> rolloverAcknowledgementControlNumber,
-        Input<Boolean> sendSynchronousAcknowledgement) {
+        Output<Integer> acknowledgementControlNumberLowerBound,
+        @Nullable Output<String> acknowledgementControlNumberPrefix,
+        @Nullable Output<String> acknowledgementControlNumberSuffix,
+        Output<Integer> acknowledgementControlNumberUpperBound,
+        Output<Boolean> batchFunctionalAcknowledgements,
+        Output<Boolean> batchImplementationAcknowledgements,
+        Output<Boolean> batchTechnicalAcknowledgements,
+        @Nullable Output<String> functionalAcknowledgementVersion,
+        @Nullable Output<String> implementationAcknowledgementVersion,
+        Output<Boolean> needFunctionalAcknowledgement,
+        Output<Boolean> needImplementationAcknowledgement,
+        Output<Boolean> needLoopForValidMessages,
+        Output<Boolean> needTechnicalAcknowledgement,
+        Output<Boolean> rolloverAcknowledgementControlNumber,
+        Output<Boolean> sendSynchronousAcknowledgement) {
         this.acknowledgementControlNumberLowerBound = Objects.requireNonNull(acknowledgementControlNumberLowerBound, "expected parameter 'acknowledgementControlNumberLowerBound' to be non-null");
         this.acknowledgementControlNumberPrefix = acknowledgementControlNumberPrefix;
         this.acknowledgementControlNumberSuffix = acknowledgementControlNumberSuffix;
@@ -219,21 +219,21 @@ public final class X12AcknowledgementSettingsArgs extends io.pulumi.resources.Re
     }
 
     private X12AcknowledgementSettingsArgs() {
-        this.acknowledgementControlNumberLowerBound = Input.empty();
-        this.acknowledgementControlNumberPrefix = Input.empty();
-        this.acknowledgementControlNumberSuffix = Input.empty();
-        this.acknowledgementControlNumberUpperBound = Input.empty();
-        this.batchFunctionalAcknowledgements = Input.empty();
-        this.batchImplementationAcknowledgements = Input.empty();
-        this.batchTechnicalAcknowledgements = Input.empty();
-        this.functionalAcknowledgementVersion = Input.empty();
-        this.implementationAcknowledgementVersion = Input.empty();
-        this.needFunctionalAcknowledgement = Input.empty();
-        this.needImplementationAcknowledgement = Input.empty();
-        this.needLoopForValidMessages = Input.empty();
-        this.needTechnicalAcknowledgement = Input.empty();
-        this.rolloverAcknowledgementControlNumber = Input.empty();
-        this.sendSynchronousAcknowledgement = Input.empty();
+        this.acknowledgementControlNumberLowerBound = Output.empty();
+        this.acknowledgementControlNumberPrefix = Output.empty();
+        this.acknowledgementControlNumberSuffix = Output.empty();
+        this.acknowledgementControlNumberUpperBound = Output.empty();
+        this.batchFunctionalAcknowledgements = Output.empty();
+        this.batchImplementationAcknowledgements = Output.empty();
+        this.batchTechnicalAcknowledgements = Output.empty();
+        this.functionalAcknowledgementVersion = Output.empty();
+        this.implementationAcknowledgementVersion = Output.empty();
+        this.needFunctionalAcknowledgement = Output.empty();
+        this.needImplementationAcknowledgement = Output.empty();
+        this.needLoopForValidMessages = Output.empty();
+        this.needTechnicalAcknowledgement = Output.empty();
+        this.rolloverAcknowledgementControlNumber = Output.empty();
+        this.sendSynchronousAcknowledgement = Output.empty();
     }
 
     public static Builder builder() {
@@ -245,21 +245,21 @@ public final class X12AcknowledgementSettingsArgs extends io.pulumi.resources.Re
     }
 
     public static final class Builder {
-        private Input<Integer> acknowledgementControlNumberLowerBound;
-        private @Nullable Input<String> acknowledgementControlNumberPrefix;
-        private @Nullable Input<String> acknowledgementControlNumberSuffix;
-        private Input<Integer> acknowledgementControlNumberUpperBound;
-        private Input<Boolean> batchFunctionalAcknowledgements;
-        private Input<Boolean> batchImplementationAcknowledgements;
-        private Input<Boolean> batchTechnicalAcknowledgements;
-        private @Nullable Input<String> functionalAcknowledgementVersion;
-        private @Nullable Input<String> implementationAcknowledgementVersion;
-        private Input<Boolean> needFunctionalAcknowledgement;
-        private Input<Boolean> needImplementationAcknowledgement;
-        private Input<Boolean> needLoopForValidMessages;
-        private Input<Boolean> needTechnicalAcknowledgement;
-        private Input<Boolean> rolloverAcknowledgementControlNumber;
-        private Input<Boolean> sendSynchronousAcknowledgement;
+        private Output<Integer> acknowledgementControlNumberLowerBound;
+        private @Nullable Output<String> acknowledgementControlNumberPrefix;
+        private @Nullable Output<String> acknowledgementControlNumberSuffix;
+        private Output<Integer> acknowledgementControlNumberUpperBound;
+        private Output<Boolean> batchFunctionalAcknowledgements;
+        private Output<Boolean> batchImplementationAcknowledgements;
+        private Output<Boolean> batchTechnicalAcknowledgements;
+        private @Nullable Output<String> functionalAcknowledgementVersion;
+        private @Nullable Output<String> implementationAcknowledgementVersion;
+        private Output<Boolean> needFunctionalAcknowledgement;
+        private Output<Boolean> needImplementationAcknowledgement;
+        private Output<Boolean> needLoopForValidMessages;
+        private Output<Boolean> needTechnicalAcknowledgement;
+        private Output<Boolean> rolloverAcknowledgementControlNumber;
+        private Output<Boolean> sendSynchronousAcknowledgement;
 
         public Builder() {
     	      // Empty
@@ -284,153 +284,153 @@ public final class X12AcknowledgementSettingsArgs extends io.pulumi.resources.Re
     	      this.sendSynchronousAcknowledgement = defaults.sendSynchronousAcknowledgement;
         }
 
-        public Builder acknowledgementControlNumberLowerBound(Input<Integer> acknowledgementControlNumberLowerBound) {
+        public Builder acknowledgementControlNumberLowerBound(Output<Integer> acknowledgementControlNumberLowerBound) {
             this.acknowledgementControlNumberLowerBound = Objects.requireNonNull(acknowledgementControlNumberLowerBound);
             return this;
         }
 
         public Builder acknowledgementControlNumberLowerBound(Integer acknowledgementControlNumberLowerBound) {
-            this.acknowledgementControlNumberLowerBound = Input.of(Objects.requireNonNull(acknowledgementControlNumberLowerBound));
+            this.acknowledgementControlNumberLowerBound = Output.of(Objects.requireNonNull(acknowledgementControlNumberLowerBound));
             return this;
         }
 
-        public Builder acknowledgementControlNumberPrefix(@Nullable Input<String> acknowledgementControlNumberPrefix) {
+        public Builder acknowledgementControlNumberPrefix(@Nullable Output<String> acknowledgementControlNumberPrefix) {
             this.acknowledgementControlNumberPrefix = acknowledgementControlNumberPrefix;
             return this;
         }
 
         public Builder acknowledgementControlNumberPrefix(@Nullable String acknowledgementControlNumberPrefix) {
-            this.acknowledgementControlNumberPrefix = Input.ofNullable(acknowledgementControlNumberPrefix);
+            this.acknowledgementControlNumberPrefix = Output.ofNullable(acknowledgementControlNumberPrefix);
             return this;
         }
 
-        public Builder acknowledgementControlNumberSuffix(@Nullable Input<String> acknowledgementControlNumberSuffix) {
+        public Builder acknowledgementControlNumberSuffix(@Nullable Output<String> acknowledgementControlNumberSuffix) {
             this.acknowledgementControlNumberSuffix = acknowledgementControlNumberSuffix;
             return this;
         }
 
         public Builder acknowledgementControlNumberSuffix(@Nullable String acknowledgementControlNumberSuffix) {
-            this.acknowledgementControlNumberSuffix = Input.ofNullable(acknowledgementControlNumberSuffix);
+            this.acknowledgementControlNumberSuffix = Output.ofNullable(acknowledgementControlNumberSuffix);
             return this;
         }
 
-        public Builder acknowledgementControlNumberUpperBound(Input<Integer> acknowledgementControlNumberUpperBound) {
+        public Builder acknowledgementControlNumberUpperBound(Output<Integer> acknowledgementControlNumberUpperBound) {
             this.acknowledgementControlNumberUpperBound = Objects.requireNonNull(acknowledgementControlNumberUpperBound);
             return this;
         }
 
         public Builder acknowledgementControlNumberUpperBound(Integer acknowledgementControlNumberUpperBound) {
-            this.acknowledgementControlNumberUpperBound = Input.of(Objects.requireNonNull(acknowledgementControlNumberUpperBound));
+            this.acknowledgementControlNumberUpperBound = Output.of(Objects.requireNonNull(acknowledgementControlNumberUpperBound));
             return this;
         }
 
-        public Builder batchFunctionalAcknowledgements(Input<Boolean> batchFunctionalAcknowledgements) {
+        public Builder batchFunctionalAcknowledgements(Output<Boolean> batchFunctionalAcknowledgements) {
             this.batchFunctionalAcknowledgements = Objects.requireNonNull(batchFunctionalAcknowledgements);
             return this;
         }
 
         public Builder batchFunctionalAcknowledgements(Boolean batchFunctionalAcknowledgements) {
-            this.batchFunctionalAcknowledgements = Input.of(Objects.requireNonNull(batchFunctionalAcknowledgements));
+            this.batchFunctionalAcknowledgements = Output.of(Objects.requireNonNull(batchFunctionalAcknowledgements));
             return this;
         }
 
-        public Builder batchImplementationAcknowledgements(Input<Boolean> batchImplementationAcknowledgements) {
+        public Builder batchImplementationAcknowledgements(Output<Boolean> batchImplementationAcknowledgements) {
             this.batchImplementationAcknowledgements = Objects.requireNonNull(batchImplementationAcknowledgements);
             return this;
         }
 
         public Builder batchImplementationAcknowledgements(Boolean batchImplementationAcknowledgements) {
-            this.batchImplementationAcknowledgements = Input.of(Objects.requireNonNull(batchImplementationAcknowledgements));
+            this.batchImplementationAcknowledgements = Output.of(Objects.requireNonNull(batchImplementationAcknowledgements));
             return this;
         }
 
-        public Builder batchTechnicalAcknowledgements(Input<Boolean> batchTechnicalAcknowledgements) {
+        public Builder batchTechnicalAcknowledgements(Output<Boolean> batchTechnicalAcknowledgements) {
             this.batchTechnicalAcknowledgements = Objects.requireNonNull(batchTechnicalAcknowledgements);
             return this;
         }
 
         public Builder batchTechnicalAcknowledgements(Boolean batchTechnicalAcknowledgements) {
-            this.batchTechnicalAcknowledgements = Input.of(Objects.requireNonNull(batchTechnicalAcknowledgements));
+            this.batchTechnicalAcknowledgements = Output.of(Objects.requireNonNull(batchTechnicalAcknowledgements));
             return this;
         }
 
-        public Builder functionalAcknowledgementVersion(@Nullable Input<String> functionalAcknowledgementVersion) {
+        public Builder functionalAcknowledgementVersion(@Nullable Output<String> functionalAcknowledgementVersion) {
             this.functionalAcknowledgementVersion = functionalAcknowledgementVersion;
             return this;
         }
 
         public Builder functionalAcknowledgementVersion(@Nullable String functionalAcknowledgementVersion) {
-            this.functionalAcknowledgementVersion = Input.ofNullable(functionalAcknowledgementVersion);
+            this.functionalAcknowledgementVersion = Output.ofNullable(functionalAcknowledgementVersion);
             return this;
         }
 
-        public Builder implementationAcknowledgementVersion(@Nullable Input<String> implementationAcknowledgementVersion) {
+        public Builder implementationAcknowledgementVersion(@Nullable Output<String> implementationAcknowledgementVersion) {
             this.implementationAcknowledgementVersion = implementationAcknowledgementVersion;
             return this;
         }
 
         public Builder implementationAcknowledgementVersion(@Nullable String implementationAcknowledgementVersion) {
-            this.implementationAcknowledgementVersion = Input.ofNullable(implementationAcknowledgementVersion);
+            this.implementationAcknowledgementVersion = Output.ofNullable(implementationAcknowledgementVersion);
             return this;
         }
 
-        public Builder needFunctionalAcknowledgement(Input<Boolean> needFunctionalAcknowledgement) {
+        public Builder needFunctionalAcknowledgement(Output<Boolean> needFunctionalAcknowledgement) {
             this.needFunctionalAcknowledgement = Objects.requireNonNull(needFunctionalAcknowledgement);
             return this;
         }
 
         public Builder needFunctionalAcknowledgement(Boolean needFunctionalAcknowledgement) {
-            this.needFunctionalAcknowledgement = Input.of(Objects.requireNonNull(needFunctionalAcknowledgement));
+            this.needFunctionalAcknowledgement = Output.of(Objects.requireNonNull(needFunctionalAcknowledgement));
             return this;
         }
 
-        public Builder needImplementationAcknowledgement(Input<Boolean> needImplementationAcknowledgement) {
+        public Builder needImplementationAcknowledgement(Output<Boolean> needImplementationAcknowledgement) {
             this.needImplementationAcknowledgement = Objects.requireNonNull(needImplementationAcknowledgement);
             return this;
         }
 
         public Builder needImplementationAcknowledgement(Boolean needImplementationAcknowledgement) {
-            this.needImplementationAcknowledgement = Input.of(Objects.requireNonNull(needImplementationAcknowledgement));
+            this.needImplementationAcknowledgement = Output.of(Objects.requireNonNull(needImplementationAcknowledgement));
             return this;
         }
 
-        public Builder needLoopForValidMessages(Input<Boolean> needLoopForValidMessages) {
+        public Builder needLoopForValidMessages(Output<Boolean> needLoopForValidMessages) {
             this.needLoopForValidMessages = Objects.requireNonNull(needLoopForValidMessages);
             return this;
         }
 
         public Builder needLoopForValidMessages(Boolean needLoopForValidMessages) {
-            this.needLoopForValidMessages = Input.of(Objects.requireNonNull(needLoopForValidMessages));
+            this.needLoopForValidMessages = Output.of(Objects.requireNonNull(needLoopForValidMessages));
             return this;
         }
 
-        public Builder needTechnicalAcknowledgement(Input<Boolean> needTechnicalAcknowledgement) {
+        public Builder needTechnicalAcknowledgement(Output<Boolean> needTechnicalAcknowledgement) {
             this.needTechnicalAcknowledgement = Objects.requireNonNull(needTechnicalAcknowledgement);
             return this;
         }
 
         public Builder needTechnicalAcknowledgement(Boolean needTechnicalAcknowledgement) {
-            this.needTechnicalAcknowledgement = Input.of(Objects.requireNonNull(needTechnicalAcknowledgement));
+            this.needTechnicalAcknowledgement = Output.of(Objects.requireNonNull(needTechnicalAcknowledgement));
             return this;
         }
 
-        public Builder rolloverAcknowledgementControlNumber(Input<Boolean> rolloverAcknowledgementControlNumber) {
+        public Builder rolloverAcknowledgementControlNumber(Output<Boolean> rolloverAcknowledgementControlNumber) {
             this.rolloverAcknowledgementControlNumber = Objects.requireNonNull(rolloverAcknowledgementControlNumber);
             return this;
         }
 
         public Builder rolloverAcknowledgementControlNumber(Boolean rolloverAcknowledgementControlNumber) {
-            this.rolloverAcknowledgementControlNumber = Input.of(Objects.requireNonNull(rolloverAcknowledgementControlNumber));
+            this.rolloverAcknowledgementControlNumber = Output.of(Objects.requireNonNull(rolloverAcknowledgementControlNumber));
             return this;
         }
 
-        public Builder sendSynchronousAcknowledgement(Input<Boolean> sendSynchronousAcknowledgement) {
+        public Builder sendSynchronousAcknowledgement(Output<Boolean> sendSynchronousAcknowledgement) {
             this.sendSynchronousAcknowledgement = Objects.requireNonNull(sendSynchronousAcknowledgement);
             return this;
         }
 
         public Builder sendSynchronousAcknowledgement(Boolean sendSynchronousAcknowledgement) {
-            this.sendSynchronousAcknowledgement = Input.of(Objects.requireNonNull(sendSynchronousAcknowledgement));
+            this.sendSynchronousAcknowledgement = Output.of(Objects.requireNonNull(sendSynchronousAcknowledgement));
             return this;
         }
         public X12AcknowledgementSettingsArgs build() {

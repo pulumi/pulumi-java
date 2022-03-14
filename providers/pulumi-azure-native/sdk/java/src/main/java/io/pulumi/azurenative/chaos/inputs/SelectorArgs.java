@@ -5,7 +5,7 @@ package io.pulumi.azurenative.chaos.inputs;
 
 import io.pulumi.azurenative.chaos.enums.SelectorType;
 import io.pulumi.azurenative.chaos.inputs.TargetReferenceArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -25,9 +25,9 @@ public final class SelectorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="id", required=true)
-      private final Input<String> id;
+      private final Output<String> id;
 
-    public Input<String> getId() {
+    public Output<String> getId() {
         return this.id;
     }
 
@@ -36,9 +36,9 @@ public final class SelectorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="targets", required=true)
-      private final Input<List<TargetReferenceArgs>> targets;
+      private final Output<List<TargetReferenceArgs>> targets;
 
-    public Input<List<TargetReferenceArgs>> getTargets() {
+    public Output<List<TargetReferenceArgs>> getTargets() {
         return this.targets;
     }
 
@@ -47,25 +47,25 @@ public final class SelectorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<SelectorType> type;
+      private final Output<SelectorType> type;
 
-    public Input<SelectorType> getType() {
+    public Output<SelectorType> getType() {
         return this.type;
     }
 
     public SelectorArgs(
-        Input<String> id,
-        Input<List<TargetReferenceArgs>> targets,
-        Input<SelectorType> type) {
+        Output<String> id,
+        Output<List<TargetReferenceArgs>> targets,
+        Output<SelectorType> type) {
         this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
         this.targets = Objects.requireNonNull(targets, "expected parameter 'targets' to be non-null");
         this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
     }
 
     private SelectorArgs() {
-        this.id = Input.empty();
-        this.targets = Input.empty();
-        this.type = Input.empty();
+        this.id = Output.empty();
+        this.targets = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -77,9 +77,9 @@ public final class SelectorArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> id;
-        private Input<List<TargetReferenceArgs>> targets;
-        private Input<SelectorType> type;
+        private Output<String> id;
+        private Output<List<TargetReferenceArgs>> targets;
+        private Output<SelectorType> type;
 
         public Builder() {
     	      // Empty
@@ -92,33 +92,33 @@ public final class SelectorArgs extends io.pulumi.resources.ResourceArgs {
     	      this.type = defaults.type;
         }
 
-        public Builder id(Input<String> id) {
+        public Builder id(Output<String> id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
         public Builder id(String id) {
-            this.id = Input.of(Objects.requireNonNull(id));
+            this.id = Output.of(Objects.requireNonNull(id));
             return this;
         }
 
-        public Builder targets(Input<List<TargetReferenceArgs>> targets) {
+        public Builder targets(Output<List<TargetReferenceArgs>> targets) {
             this.targets = Objects.requireNonNull(targets);
             return this;
         }
 
         public Builder targets(List<TargetReferenceArgs> targets) {
-            this.targets = Input.of(Objects.requireNonNull(targets));
+            this.targets = Output.of(Objects.requireNonNull(targets));
             return this;
         }
 
-        public Builder type(Input<SelectorType> type) {
+        public Builder type(Output<SelectorType> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(SelectorType type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
         public SelectorArgs build() {

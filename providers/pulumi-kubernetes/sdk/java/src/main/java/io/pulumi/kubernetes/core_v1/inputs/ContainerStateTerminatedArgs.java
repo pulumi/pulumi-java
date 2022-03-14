@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.core_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class ContainerStateTerminatedArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="containerID")
-      private final @Nullable Input<String> containerID;
+      private final @Nullable Output<String> containerID;
 
-    public Input<String> getContainerID() {
-        return this.containerID == null ? Input.empty() : this.containerID;
+    public Output<String> getContainerID() {
+        return this.containerID == null ? Output.empty() : this.containerID;
     }
 
     /**
@@ -35,9 +35,9 @@ public final class ContainerStateTerminatedArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="exitCode", required=true)
-      private final Input<Integer> exitCode;
+      private final Output<Integer> exitCode;
 
-    public Input<Integer> getExitCode() {
+    public Output<Integer> getExitCode() {
         return this.exitCode;
     }
 
@@ -46,10 +46,10 @@ public final class ContainerStateTerminatedArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="finishedAt")
-      private final @Nullable Input<String> finishedAt;
+      private final @Nullable Output<String> finishedAt;
 
-    public Input<String> getFinishedAt() {
-        return this.finishedAt == null ? Input.empty() : this.finishedAt;
+    public Output<String> getFinishedAt() {
+        return this.finishedAt == null ? Output.empty() : this.finishedAt;
     }
 
     /**
@@ -57,10 +57,10 @@ public final class ContainerStateTerminatedArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="message")
-      private final @Nullable Input<String> message;
+      private final @Nullable Output<String> message;
 
-    public Input<String> getMessage() {
-        return this.message == null ? Input.empty() : this.message;
+    public Output<String> getMessage() {
+        return this.message == null ? Output.empty() : this.message;
     }
 
     /**
@@ -68,10 +68,10 @@ public final class ContainerStateTerminatedArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="reason")
-      private final @Nullable Input<String> reason;
+      private final @Nullable Output<String> reason;
 
-    public Input<String> getReason() {
-        return this.reason == null ? Input.empty() : this.reason;
+    public Output<String> getReason() {
+        return this.reason == null ? Output.empty() : this.reason;
     }
 
     /**
@@ -79,10 +79,10 @@ public final class ContainerStateTerminatedArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="signal")
-      private final @Nullable Input<Integer> signal;
+      private final @Nullable Output<Integer> signal;
 
-    public Input<Integer> getSignal() {
-        return this.signal == null ? Input.empty() : this.signal;
+    public Output<Integer> getSignal() {
+        return this.signal == null ? Output.empty() : this.signal;
     }
 
     /**
@@ -90,20 +90,20 @@ public final class ContainerStateTerminatedArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="startedAt")
-      private final @Nullable Input<String> startedAt;
+      private final @Nullable Output<String> startedAt;
 
-    public Input<String> getStartedAt() {
-        return this.startedAt == null ? Input.empty() : this.startedAt;
+    public Output<String> getStartedAt() {
+        return this.startedAt == null ? Output.empty() : this.startedAt;
     }
 
     public ContainerStateTerminatedArgs(
-        @Nullable Input<String> containerID,
-        Input<Integer> exitCode,
-        @Nullable Input<String> finishedAt,
-        @Nullable Input<String> message,
-        @Nullable Input<String> reason,
-        @Nullable Input<Integer> signal,
-        @Nullable Input<String> startedAt) {
+        @Nullable Output<String> containerID,
+        Output<Integer> exitCode,
+        @Nullable Output<String> finishedAt,
+        @Nullable Output<String> message,
+        @Nullable Output<String> reason,
+        @Nullable Output<Integer> signal,
+        @Nullable Output<String> startedAt) {
         this.containerID = containerID;
         this.exitCode = Objects.requireNonNull(exitCode, "expected parameter 'exitCode' to be non-null");
         this.finishedAt = finishedAt;
@@ -114,13 +114,13 @@ public final class ContainerStateTerminatedArgs extends io.pulumi.resources.Reso
     }
 
     private ContainerStateTerminatedArgs() {
-        this.containerID = Input.empty();
-        this.exitCode = Input.empty();
-        this.finishedAt = Input.empty();
-        this.message = Input.empty();
-        this.reason = Input.empty();
-        this.signal = Input.empty();
-        this.startedAt = Input.empty();
+        this.containerID = Output.empty();
+        this.exitCode = Output.empty();
+        this.finishedAt = Output.empty();
+        this.message = Output.empty();
+        this.reason = Output.empty();
+        this.signal = Output.empty();
+        this.startedAt = Output.empty();
     }
 
     public static Builder builder() {
@@ -132,13 +132,13 @@ public final class ContainerStateTerminatedArgs extends io.pulumi.resources.Reso
     }
 
     public static final class Builder {
-        private @Nullable Input<String> containerID;
-        private Input<Integer> exitCode;
-        private @Nullable Input<String> finishedAt;
-        private @Nullable Input<String> message;
-        private @Nullable Input<String> reason;
-        private @Nullable Input<Integer> signal;
-        private @Nullable Input<String> startedAt;
+        private @Nullable Output<String> containerID;
+        private Output<Integer> exitCode;
+        private @Nullable Output<String> finishedAt;
+        private @Nullable Output<String> message;
+        private @Nullable Output<String> reason;
+        private @Nullable Output<Integer> signal;
+        private @Nullable Output<String> startedAt;
 
         public Builder() {
     	      // Empty
@@ -155,73 +155,73 @@ public final class ContainerStateTerminatedArgs extends io.pulumi.resources.Reso
     	      this.startedAt = defaults.startedAt;
         }
 
-        public Builder containerID(@Nullable Input<String> containerID) {
+        public Builder containerID(@Nullable Output<String> containerID) {
             this.containerID = containerID;
             return this;
         }
 
         public Builder containerID(@Nullable String containerID) {
-            this.containerID = Input.ofNullable(containerID);
+            this.containerID = Output.ofNullable(containerID);
             return this;
         }
 
-        public Builder exitCode(Input<Integer> exitCode) {
+        public Builder exitCode(Output<Integer> exitCode) {
             this.exitCode = Objects.requireNonNull(exitCode);
             return this;
         }
 
         public Builder exitCode(Integer exitCode) {
-            this.exitCode = Input.of(Objects.requireNonNull(exitCode));
+            this.exitCode = Output.of(Objects.requireNonNull(exitCode));
             return this;
         }
 
-        public Builder finishedAt(@Nullable Input<String> finishedAt) {
+        public Builder finishedAt(@Nullable Output<String> finishedAt) {
             this.finishedAt = finishedAt;
             return this;
         }
 
         public Builder finishedAt(@Nullable String finishedAt) {
-            this.finishedAt = Input.ofNullable(finishedAt);
+            this.finishedAt = Output.ofNullable(finishedAt);
             return this;
         }
 
-        public Builder message(@Nullable Input<String> message) {
+        public Builder message(@Nullable Output<String> message) {
             this.message = message;
             return this;
         }
 
         public Builder message(@Nullable String message) {
-            this.message = Input.ofNullable(message);
+            this.message = Output.ofNullable(message);
             return this;
         }
 
-        public Builder reason(@Nullable Input<String> reason) {
+        public Builder reason(@Nullable Output<String> reason) {
             this.reason = reason;
             return this;
         }
 
         public Builder reason(@Nullable String reason) {
-            this.reason = Input.ofNullable(reason);
+            this.reason = Output.ofNullable(reason);
             return this;
         }
 
-        public Builder signal(@Nullable Input<Integer> signal) {
+        public Builder signal(@Nullable Output<Integer> signal) {
             this.signal = signal;
             return this;
         }
 
         public Builder signal(@Nullable Integer signal) {
-            this.signal = Input.ofNullable(signal);
+            this.signal = Output.ofNullable(signal);
             return this;
         }
 
-        public Builder startedAt(@Nullable Input<String> startedAt) {
+        public Builder startedAt(@Nullable Output<String> startedAt) {
             this.startedAt = startedAt;
             return this;
         }
 
         public Builder startedAt(@Nullable String startedAt) {
-            this.startedAt = Input.ofNullable(startedAt);
+            this.startedAt = Output.ofNullable(startedAt);
             return this;
         }
         public ContainerStateTerminatedArgs build() {

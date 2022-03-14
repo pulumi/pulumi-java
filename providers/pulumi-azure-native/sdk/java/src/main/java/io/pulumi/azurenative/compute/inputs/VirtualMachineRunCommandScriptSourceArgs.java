@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.compute.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class VirtualMachineRunCommandScriptSourceArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="commandId")
-      private final @Nullable Input<String> commandId;
+      private final @Nullable Output<String> commandId;
 
-    public Input<String> getCommandId() {
-        return this.commandId == null ? Input.empty() : this.commandId;
+    public Output<String> getCommandId() {
+        return this.commandId == null ? Output.empty() : this.commandId;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class VirtualMachineRunCommandScriptSourceArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="script")
-      private final @Nullable Input<String> script;
+      private final @Nullable Output<String> script;
 
-    public Input<String> getScript() {
-        return this.script == null ? Input.empty() : this.script;
+    public Output<String> getScript() {
+        return this.script == null ? Output.empty() : this.script;
     }
 
     /**
@@ -45,25 +45,25 @@ public final class VirtualMachineRunCommandScriptSourceArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="scriptUri")
-      private final @Nullable Input<String> scriptUri;
+      private final @Nullable Output<String> scriptUri;
 
-    public Input<String> getScriptUri() {
-        return this.scriptUri == null ? Input.empty() : this.scriptUri;
+    public Output<String> getScriptUri() {
+        return this.scriptUri == null ? Output.empty() : this.scriptUri;
     }
 
     public VirtualMachineRunCommandScriptSourceArgs(
-        @Nullable Input<String> commandId,
-        @Nullable Input<String> script,
-        @Nullable Input<String> scriptUri) {
+        @Nullable Output<String> commandId,
+        @Nullable Output<String> script,
+        @Nullable Output<String> scriptUri) {
         this.commandId = commandId;
         this.script = script;
         this.scriptUri = scriptUri;
     }
 
     private VirtualMachineRunCommandScriptSourceArgs() {
-        this.commandId = Input.empty();
-        this.script = Input.empty();
-        this.scriptUri = Input.empty();
+        this.commandId = Output.empty();
+        this.script = Output.empty();
+        this.scriptUri = Output.empty();
     }
 
     public static Builder builder() {
@@ -75,9 +75,9 @@ public final class VirtualMachineRunCommandScriptSourceArgs extends io.pulumi.re
     }
 
     public static final class Builder {
-        private @Nullable Input<String> commandId;
-        private @Nullable Input<String> script;
-        private @Nullable Input<String> scriptUri;
+        private @Nullable Output<String> commandId;
+        private @Nullable Output<String> script;
+        private @Nullable Output<String> scriptUri;
 
         public Builder() {
     	      // Empty
@@ -90,33 +90,33 @@ public final class VirtualMachineRunCommandScriptSourceArgs extends io.pulumi.re
     	      this.scriptUri = defaults.scriptUri;
         }
 
-        public Builder commandId(@Nullable Input<String> commandId) {
+        public Builder commandId(@Nullable Output<String> commandId) {
             this.commandId = commandId;
             return this;
         }
 
         public Builder commandId(@Nullable String commandId) {
-            this.commandId = Input.ofNullable(commandId);
+            this.commandId = Output.ofNullable(commandId);
             return this;
         }
 
-        public Builder script(@Nullable Input<String> script) {
+        public Builder script(@Nullable Output<String> script) {
             this.script = script;
             return this;
         }
 
         public Builder script(@Nullable String script) {
-            this.script = Input.ofNullable(script);
+            this.script = Output.ofNullable(script);
             return this;
         }
 
-        public Builder scriptUri(@Nullable Input<String> scriptUri) {
+        public Builder scriptUri(@Nullable Output<String> scriptUri) {
             this.scriptUri = scriptUri;
             return this;
         }
 
         public Builder scriptUri(@Nullable String scriptUri) {
-            this.scriptUri = Input.ofNullable(scriptUri);
+            this.scriptUri = Output.ofNullable(scriptUri);
             return this;
         }
         public VirtualMachineRunCommandScriptSourceArgs build() {

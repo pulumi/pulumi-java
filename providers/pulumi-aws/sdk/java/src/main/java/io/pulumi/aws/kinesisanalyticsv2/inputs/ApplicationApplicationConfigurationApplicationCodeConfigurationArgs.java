@@ -4,7 +4,7 @@
 package io.pulumi.aws.kinesisanalyticsv2.inputs;
 
 import io.pulumi.aws.kinesisanalyticsv2.inputs.ApplicationApplicationConfigurationApplicationCodeConfigurationCodeContentArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -20,10 +20,10 @@ public final class ApplicationApplicationConfigurationApplicationCodeConfigurati
      * 
      */
     @InputImport(name="codeContent")
-      private final @Nullable Input<ApplicationApplicationConfigurationApplicationCodeConfigurationCodeContentArgs> codeContent;
+      private final @Nullable Output<ApplicationApplicationConfigurationApplicationCodeConfigurationCodeContentArgs> codeContent;
 
-    public Input<ApplicationApplicationConfigurationApplicationCodeConfigurationCodeContentArgs> getCodeContent() {
-        return this.codeContent == null ? Input.empty() : this.codeContent;
+    public Output<ApplicationApplicationConfigurationApplicationCodeConfigurationCodeContentArgs> getCodeContent() {
+        return this.codeContent == null ? Output.empty() : this.codeContent;
     }
 
     /**
@@ -31,22 +31,22 @@ public final class ApplicationApplicationConfigurationApplicationCodeConfigurati
      * 
      */
     @InputImport(name="codeContentType", required=true)
-      private final Input<String> codeContentType;
+      private final Output<String> codeContentType;
 
-    public Input<String> getCodeContentType() {
+    public Output<String> getCodeContentType() {
         return this.codeContentType;
     }
 
     public ApplicationApplicationConfigurationApplicationCodeConfigurationArgs(
-        @Nullable Input<ApplicationApplicationConfigurationApplicationCodeConfigurationCodeContentArgs> codeContent,
-        Input<String> codeContentType) {
+        @Nullable Output<ApplicationApplicationConfigurationApplicationCodeConfigurationCodeContentArgs> codeContent,
+        Output<String> codeContentType) {
         this.codeContent = codeContent;
         this.codeContentType = Objects.requireNonNull(codeContentType, "expected parameter 'codeContentType' to be non-null");
     }
 
     private ApplicationApplicationConfigurationApplicationCodeConfigurationArgs() {
-        this.codeContent = Input.empty();
-        this.codeContentType = Input.empty();
+        this.codeContent = Output.empty();
+        this.codeContentType = Output.empty();
     }
 
     public static Builder builder() {
@@ -58,8 +58,8 @@ public final class ApplicationApplicationConfigurationApplicationCodeConfigurati
     }
 
     public static final class Builder {
-        private @Nullable Input<ApplicationApplicationConfigurationApplicationCodeConfigurationCodeContentArgs> codeContent;
-        private Input<String> codeContentType;
+        private @Nullable Output<ApplicationApplicationConfigurationApplicationCodeConfigurationCodeContentArgs> codeContent;
+        private Output<String> codeContentType;
 
         public Builder() {
     	      // Empty
@@ -71,23 +71,23 @@ public final class ApplicationApplicationConfigurationApplicationCodeConfigurati
     	      this.codeContentType = defaults.codeContentType;
         }
 
-        public Builder codeContent(@Nullable Input<ApplicationApplicationConfigurationApplicationCodeConfigurationCodeContentArgs> codeContent) {
+        public Builder codeContent(@Nullable Output<ApplicationApplicationConfigurationApplicationCodeConfigurationCodeContentArgs> codeContent) {
             this.codeContent = codeContent;
             return this;
         }
 
         public Builder codeContent(@Nullable ApplicationApplicationConfigurationApplicationCodeConfigurationCodeContentArgs codeContent) {
-            this.codeContent = Input.ofNullable(codeContent);
+            this.codeContent = Output.ofNullable(codeContent);
             return this;
         }
 
-        public Builder codeContentType(Input<String> codeContentType) {
+        public Builder codeContentType(Output<String> codeContentType) {
             this.codeContentType = Objects.requireNonNull(codeContentType);
             return this;
         }
 
         public Builder codeContentType(String codeContentType) {
-            this.codeContentType = Input.of(Objects.requireNonNull(codeContentType));
+            this.codeContentType = Output.of(Objects.requireNonNull(codeContentType));
             return this;
         }
         public ApplicationApplicationConfigurationApplicationCodeConfigurationArgs build() {

@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.budgets.inputs;
 
 import io.pulumi.awsnative.budgets.enums.BudgetsActionSubscriberType;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -15,29 +15,29 @@ public final class BudgetsActionSubscriberArgs extends io.pulumi.resources.Resou
     public static final BudgetsActionSubscriberArgs Empty = new BudgetsActionSubscriberArgs();
 
     @InputImport(name="address", required=true)
-      private final Input<String> address;
+      private final Output<String> address;
 
-    public Input<String> getAddress() {
+    public Output<String> getAddress() {
         return this.address;
     }
 
     @InputImport(name="type", required=true)
-      private final Input<BudgetsActionSubscriberType> type;
+      private final Output<BudgetsActionSubscriberType> type;
 
-    public Input<BudgetsActionSubscriberType> getType() {
+    public Output<BudgetsActionSubscriberType> getType() {
         return this.type;
     }
 
     public BudgetsActionSubscriberArgs(
-        Input<String> address,
-        Input<BudgetsActionSubscriberType> type) {
+        Output<String> address,
+        Output<BudgetsActionSubscriberType> type) {
         this.address = Objects.requireNonNull(address, "expected parameter 'address' to be non-null");
         this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
     }
 
     private BudgetsActionSubscriberArgs() {
-        this.address = Input.empty();
-        this.type = Input.empty();
+        this.address = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -49,8 +49,8 @@ public final class BudgetsActionSubscriberArgs extends io.pulumi.resources.Resou
     }
 
     public static final class Builder {
-        private Input<String> address;
-        private Input<BudgetsActionSubscriberType> type;
+        private Output<String> address;
+        private Output<BudgetsActionSubscriberType> type;
 
         public Builder() {
     	      // Empty
@@ -62,23 +62,23 @@ public final class BudgetsActionSubscriberArgs extends io.pulumi.resources.Resou
     	      this.type = defaults.type;
         }
 
-        public Builder address(Input<String> address) {
+        public Builder address(Output<String> address) {
             this.address = Objects.requireNonNull(address);
             return this;
         }
 
         public Builder address(String address) {
-            this.address = Input.of(Objects.requireNonNull(address));
+            this.address = Output.of(Objects.requireNonNull(address));
             return this;
         }
 
-        public Builder type(Input<BudgetsActionSubscriberType> type) {
+        public Builder type(Output<BudgetsActionSubscriberType> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(BudgetsActionSubscriberType type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
         public BudgetsActionSubscriberArgs build() {

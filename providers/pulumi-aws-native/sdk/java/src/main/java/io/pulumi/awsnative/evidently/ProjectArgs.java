@@ -5,7 +5,7 @@ package io.pulumi.awsnative.evidently;
 
 import io.pulumi.awsnative.evidently.inputs.ProjectDataDeliveryObjectArgs;
 import io.pulumi.awsnative.evidently.inputs.ProjectTagArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -18,24 +18,24 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
     public static final ProjectArgs Empty = new ProjectArgs();
 
     @InputImport(name="dataDelivery")
-      private final @Nullable Input<ProjectDataDeliveryObjectArgs> dataDelivery;
+      private final @Nullable Output<ProjectDataDeliveryObjectArgs> dataDelivery;
 
-    public Input<ProjectDataDeliveryObjectArgs> getDataDelivery() {
-        return this.dataDelivery == null ? Input.empty() : this.dataDelivery;
+    public Output<ProjectDataDeliveryObjectArgs> getDataDelivery() {
+        return this.dataDelivery == null ? Output.empty() : this.dataDelivery;
     }
 
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -43,17 +43,17 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<List<ProjectTagArgs>> tags;
+      private final @Nullable Output<List<ProjectTagArgs>> tags;
 
-    public Input<List<ProjectTagArgs>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<List<ProjectTagArgs>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public ProjectArgs(
-        @Nullable Input<ProjectDataDeliveryObjectArgs> dataDelivery,
-        @Nullable Input<String> description,
-        @Nullable Input<String> name,
-        @Nullable Input<List<ProjectTagArgs>> tags) {
+        @Nullable Output<ProjectDataDeliveryObjectArgs> dataDelivery,
+        @Nullable Output<String> description,
+        @Nullable Output<String> name,
+        @Nullable Output<List<ProjectTagArgs>> tags) {
         this.dataDelivery = dataDelivery;
         this.description = description;
         this.name = name;
@@ -61,10 +61,10 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ProjectArgs() {
-        this.dataDelivery = Input.empty();
-        this.description = Input.empty();
-        this.name = Input.empty();
-        this.tags = Input.empty();
+        this.dataDelivery = Output.empty();
+        this.description = Output.empty();
+        this.name = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -76,10 +76,10 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<ProjectDataDeliveryObjectArgs> dataDelivery;
-        private @Nullable Input<String> description;
-        private @Nullable Input<String> name;
-        private @Nullable Input<List<ProjectTagArgs>> tags;
+        private @Nullable Output<ProjectDataDeliveryObjectArgs> dataDelivery;
+        private @Nullable Output<String> description;
+        private @Nullable Output<String> name;
+        private @Nullable Output<List<ProjectTagArgs>> tags;
 
         public Builder() {
     	      // Empty
@@ -93,43 +93,43 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder dataDelivery(@Nullable Input<ProjectDataDeliveryObjectArgs> dataDelivery) {
+        public Builder dataDelivery(@Nullable Output<ProjectDataDeliveryObjectArgs> dataDelivery) {
             this.dataDelivery = dataDelivery;
             return this;
         }
 
         public Builder dataDelivery(@Nullable ProjectDataDeliveryObjectArgs dataDelivery) {
-            this.dataDelivery = Input.ofNullable(dataDelivery);
+            this.dataDelivery = Output.ofNullable(dataDelivery);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder tags(@Nullable Input<List<ProjectTagArgs>> tags) {
+        public Builder tags(@Nullable Output<List<ProjectTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable List<ProjectTagArgs> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public ProjectArgs build() {

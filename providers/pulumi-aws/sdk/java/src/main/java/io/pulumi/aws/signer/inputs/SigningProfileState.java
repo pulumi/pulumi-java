@@ -5,7 +5,7 @@ package io.pulumi.aws.signer.inputs;
 
 import io.pulumi.aws.signer.inputs.SigningProfileRevocationRecordGetArgs;
 import io.pulumi.aws.signer.inputs.SigningProfileSignatureValidityPeriodGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -23,10 +23,10 @@ public final class SigningProfileState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="arn")
-      private final @Nullable Input<String> arn;
+      private final @Nullable Output<String> arn;
 
-    public Input<String> getArn() {
-        return this.arn == null ? Input.empty() : this.arn;
+    public Output<String> getArn() {
+        return this.arn == null ? Output.empty() : this.arn;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class SigningProfileState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -45,10 +45,10 @@ public final class SigningProfileState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="namePrefix")
-      private final @Nullable Input<String> namePrefix;
+      private final @Nullable Output<String> namePrefix;
 
-    public Input<String> getNamePrefix() {
-        return this.namePrefix == null ? Input.empty() : this.namePrefix;
+    public Output<String> getNamePrefix() {
+        return this.namePrefix == null ? Output.empty() : this.namePrefix;
     }
 
     /**
@@ -56,10 +56,10 @@ public final class SigningProfileState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="platformDisplayName")
-      private final @Nullable Input<String> platformDisplayName;
+      private final @Nullable Output<String> platformDisplayName;
 
-    public Input<String> getPlatformDisplayName() {
-        return this.platformDisplayName == null ? Input.empty() : this.platformDisplayName;
+    public Output<String> getPlatformDisplayName() {
+        return this.platformDisplayName == null ? Output.empty() : this.platformDisplayName;
     }
 
     /**
@@ -67,10 +67,10 @@ public final class SigningProfileState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="platformId")
-      private final @Nullable Input<String> platformId;
+      private final @Nullable Output<String> platformId;
 
-    public Input<String> getPlatformId() {
-        return this.platformId == null ? Input.empty() : this.platformId;
+    public Output<String> getPlatformId() {
+        return this.platformId == null ? Output.empty() : this.platformId;
     }
 
     /**
@@ -78,10 +78,10 @@ public final class SigningProfileState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="revocationRecords")
-      private final @Nullable Input<List<SigningProfileRevocationRecordGetArgs>> revocationRecords;
+      private final @Nullable Output<List<SigningProfileRevocationRecordGetArgs>> revocationRecords;
 
-    public Input<List<SigningProfileRevocationRecordGetArgs>> getRevocationRecords() {
-        return this.revocationRecords == null ? Input.empty() : this.revocationRecords;
+    public Output<List<SigningProfileRevocationRecordGetArgs>> getRevocationRecords() {
+        return this.revocationRecords == null ? Output.empty() : this.revocationRecords;
     }
 
     /**
@@ -89,10 +89,10 @@ public final class SigningProfileState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="signatureValidityPeriod")
-      private final @Nullable Input<SigningProfileSignatureValidityPeriodGetArgs> signatureValidityPeriod;
+      private final @Nullable Output<SigningProfileSignatureValidityPeriodGetArgs> signatureValidityPeriod;
 
-    public Input<SigningProfileSignatureValidityPeriodGetArgs> getSignatureValidityPeriod() {
-        return this.signatureValidityPeriod == null ? Input.empty() : this.signatureValidityPeriod;
+    public Output<SigningProfileSignatureValidityPeriodGetArgs> getSignatureValidityPeriod() {
+        return this.signatureValidityPeriod == null ? Output.empty() : this.signatureValidityPeriod;
     }
 
     /**
@@ -100,10 +100,10 @@ public final class SigningProfileState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="status")
-      private final @Nullable Input<String> status;
+      private final @Nullable Output<String> status;
 
-    public Input<String> getStatus() {
-        return this.status == null ? Input.empty() : this.status;
+    public Output<String> getStatus() {
+        return this.status == null ? Output.empty() : this.status;
     }
 
     /**
@@ -111,10 +111,10 @@ public final class SigningProfileState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -122,10 +122,10 @@ public final class SigningProfileState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="tagsAll")
-      private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Input<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Input.empty() : this.tagsAll;
+    public Output<Map<String,String>> getTagsAll() {
+        return this.tagsAll == null ? Output.empty() : this.tagsAll;
     }
 
     /**
@@ -133,10 +133,10 @@ public final class SigningProfileState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="version")
-      private final @Nullable Input<String> version;
+      private final @Nullable Output<String> version;
 
-    public Input<String> getVersion() {
-        return this.version == null ? Input.empty() : this.version;
+    public Output<String> getVersion() {
+        return this.version == null ? Output.empty() : this.version;
     }
 
     /**
@@ -144,25 +144,25 @@ public final class SigningProfileState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="versionArn")
-      private final @Nullable Input<String> versionArn;
+      private final @Nullable Output<String> versionArn;
 
-    public Input<String> getVersionArn() {
-        return this.versionArn == null ? Input.empty() : this.versionArn;
+    public Output<String> getVersionArn() {
+        return this.versionArn == null ? Output.empty() : this.versionArn;
     }
 
     public SigningProfileState(
-        @Nullable Input<String> arn,
-        @Nullable Input<String> name,
-        @Nullable Input<String> namePrefix,
-        @Nullable Input<String> platformDisplayName,
-        @Nullable Input<String> platformId,
-        @Nullable Input<List<SigningProfileRevocationRecordGetArgs>> revocationRecords,
-        @Nullable Input<SigningProfileSignatureValidityPeriodGetArgs> signatureValidityPeriod,
-        @Nullable Input<String> status,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<Map<String,String>> tagsAll,
-        @Nullable Input<String> version,
-        @Nullable Input<String> versionArn) {
+        @Nullable Output<String> arn,
+        @Nullable Output<String> name,
+        @Nullable Output<String> namePrefix,
+        @Nullable Output<String> platformDisplayName,
+        @Nullable Output<String> platformId,
+        @Nullable Output<List<SigningProfileRevocationRecordGetArgs>> revocationRecords,
+        @Nullable Output<SigningProfileSignatureValidityPeriodGetArgs> signatureValidityPeriod,
+        @Nullable Output<String> status,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<Map<String,String>> tagsAll,
+        @Nullable Output<String> version,
+        @Nullable Output<String> versionArn) {
         this.arn = arn;
         this.name = name;
         this.namePrefix = namePrefix;
@@ -178,18 +178,18 @@ public final class SigningProfileState extends io.pulumi.resources.ResourceArgs 
     }
 
     private SigningProfileState() {
-        this.arn = Input.empty();
-        this.name = Input.empty();
-        this.namePrefix = Input.empty();
-        this.platformDisplayName = Input.empty();
-        this.platformId = Input.empty();
-        this.revocationRecords = Input.empty();
-        this.signatureValidityPeriod = Input.empty();
-        this.status = Input.empty();
-        this.tags = Input.empty();
-        this.tagsAll = Input.empty();
-        this.version = Input.empty();
-        this.versionArn = Input.empty();
+        this.arn = Output.empty();
+        this.name = Output.empty();
+        this.namePrefix = Output.empty();
+        this.platformDisplayName = Output.empty();
+        this.platformId = Output.empty();
+        this.revocationRecords = Output.empty();
+        this.signatureValidityPeriod = Output.empty();
+        this.status = Output.empty();
+        this.tags = Output.empty();
+        this.tagsAll = Output.empty();
+        this.version = Output.empty();
+        this.versionArn = Output.empty();
     }
 
     public static Builder builder() {
@@ -201,18 +201,18 @@ public final class SigningProfileState extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private @Nullable Input<String> arn;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> namePrefix;
-        private @Nullable Input<String> platformDisplayName;
-        private @Nullable Input<String> platformId;
-        private @Nullable Input<List<SigningProfileRevocationRecordGetArgs>> revocationRecords;
-        private @Nullable Input<SigningProfileSignatureValidityPeriodGetArgs> signatureValidityPeriod;
-        private @Nullable Input<String> status;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<Map<String,String>> tagsAll;
-        private @Nullable Input<String> version;
-        private @Nullable Input<String> versionArn;
+        private @Nullable Output<String> arn;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> namePrefix;
+        private @Nullable Output<String> platformDisplayName;
+        private @Nullable Output<String> platformId;
+        private @Nullable Output<List<SigningProfileRevocationRecordGetArgs>> revocationRecords;
+        private @Nullable Output<SigningProfileSignatureValidityPeriodGetArgs> signatureValidityPeriod;
+        private @Nullable Output<String> status;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<Map<String,String>> tagsAll;
+        private @Nullable Output<String> version;
+        private @Nullable Output<String> versionArn;
 
         public Builder() {
     	      // Empty
@@ -234,123 +234,123 @@ public final class SigningProfileState extends io.pulumi.resources.ResourceArgs 
     	      this.versionArn = defaults.versionArn;
         }
 
-        public Builder arn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
 
         public Builder arn(@Nullable String arn) {
-            this.arn = Input.ofNullable(arn);
+            this.arn = Output.ofNullable(arn);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder namePrefix(@Nullable Input<String> namePrefix) {
+        public Builder namePrefix(@Nullable Output<String> namePrefix) {
             this.namePrefix = namePrefix;
             return this;
         }
 
         public Builder namePrefix(@Nullable String namePrefix) {
-            this.namePrefix = Input.ofNullable(namePrefix);
+            this.namePrefix = Output.ofNullable(namePrefix);
             return this;
         }
 
-        public Builder platformDisplayName(@Nullable Input<String> platformDisplayName) {
+        public Builder platformDisplayName(@Nullable Output<String> platformDisplayName) {
             this.platformDisplayName = platformDisplayName;
             return this;
         }
 
         public Builder platformDisplayName(@Nullable String platformDisplayName) {
-            this.platformDisplayName = Input.ofNullable(platformDisplayName);
+            this.platformDisplayName = Output.ofNullable(platformDisplayName);
             return this;
         }
 
-        public Builder platformId(@Nullable Input<String> platformId) {
+        public Builder platformId(@Nullable Output<String> platformId) {
             this.platformId = platformId;
             return this;
         }
 
         public Builder platformId(@Nullable String platformId) {
-            this.platformId = Input.ofNullable(platformId);
+            this.platformId = Output.ofNullable(platformId);
             return this;
         }
 
-        public Builder revocationRecords(@Nullable Input<List<SigningProfileRevocationRecordGetArgs>> revocationRecords) {
+        public Builder revocationRecords(@Nullable Output<List<SigningProfileRevocationRecordGetArgs>> revocationRecords) {
             this.revocationRecords = revocationRecords;
             return this;
         }
 
         public Builder revocationRecords(@Nullable List<SigningProfileRevocationRecordGetArgs> revocationRecords) {
-            this.revocationRecords = Input.ofNullable(revocationRecords);
+            this.revocationRecords = Output.ofNullable(revocationRecords);
             return this;
         }
 
-        public Builder signatureValidityPeriod(@Nullable Input<SigningProfileSignatureValidityPeriodGetArgs> signatureValidityPeriod) {
+        public Builder signatureValidityPeriod(@Nullable Output<SigningProfileSignatureValidityPeriodGetArgs> signatureValidityPeriod) {
             this.signatureValidityPeriod = signatureValidityPeriod;
             return this;
         }
 
         public Builder signatureValidityPeriod(@Nullable SigningProfileSignatureValidityPeriodGetArgs signatureValidityPeriod) {
-            this.signatureValidityPeriod = Input.ofNullable(signatureValidityPeriod);
+            this.signatureValidityPeriod = Output.ofNullable(signatureValidityPeriod);
             return this;
         }
 
-        public Builder status(@Nullable Input<String> status) {
+        public Builder status(@Nullable Output<String> status) {
             this.status = status;
             return this;
         }
 
         public Builder status(@Nullable String status) {
-            this.status = Input.ofNullable(status);
+            this.status = Output.ofNullable(status);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Input.ofNullable(tagsAll);
+            this.tagsAll = Output.ofNullable(tagsAll);
             return this;
         }
 
-        public Builder version(@Nullable Input<String> version) {
+        public Builder version(@Nullable Output<String> version) {
             this.version = version;
             return this;
         }
 
         public Builder version(@Nullable String version) {
-            this.version = Input.ofNullable(version);
+            this.version = Output.ofNullable(version);
             return this;
         }
 
-        public Builder versionArn(@Nullable Input<String> versionArn) {
+        public Builder versionArn(@Nullable Output<String> versionArn) {
             this.versionArn = versionArn;
             return this;
         }
 
         public Builder versionArn(@Nullable String versionArn) {
-            this.versionArn = Input.ofNullable(versionArn);
+            this.versionArn = Output.ofNullable(versionArn);
             return this;
         }
         public SigningProfileState build() {

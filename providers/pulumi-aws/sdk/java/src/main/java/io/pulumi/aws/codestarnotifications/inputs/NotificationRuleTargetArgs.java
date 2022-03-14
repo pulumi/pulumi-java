@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.codestarnotifications.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,9 +19,9 @@ public final class NotificationRuleTargetArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="address", required=true)
-      private final Input<String> address;
+      private final Output<String> address;
 
-    public Input<String> getAddress() {
+    public Output<String> getAddress() {
         return this.address;
     }
 
@@ -30,10 +30,10 @@ public final class NotificationRuleTargetArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="status")
-      private final @Nullable Input<String> status;
+      private final @Nullable Output<String> status;
 
-    public Input<String> getStatus() {
-        return this.status == null ? Input.empty() : this.status;
+    public Output<String> getStatus() {
+        return this.status == null ? Output.empty() : this.status;
     }
 
     /**
@@ -41,25 +41,25 @@ public final class NotificationRuleTargetArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="type")
-      private final @Nullable Input<String> type;
+      private final @Nullable Output<String> type;
 
-    public Input<String> getType() {
-        return this.type == null ? Input.empty() : this.type;
+    public Output<String> getType() {
+        return this.type == null ? Output.empty() : this.type;
     }
 
     public NotificationRuleTargetArgs(
-        Input<String> address,
-        @Nullable Input<String> status,
-        @Nullable Input<String> type) {
+        Output<String> address,
+        @Nullable Output<String> status,
+        @Nullable Output<String> type) {
         this.address = Objects.requireNonNull(address, "expected parameter 'address' to be non-null");
         this.status = status;
         this.type = type;
     }
 
     private NotificationRuleTargetArgs() {
-        this.address = Input.empty();
-        this.status = Input.empty();
-        this.type = Input.empty();
+        this.address = Output.empty();
+        this.status = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -71,9 +71,9 @@ public final class NotificationRuleTargetArgs extends io.pulumi.resources.Resour
     }
 
     public static final class Builder {
-        private Input<String> address;
-        private @Nullable Input<String> status;
-        private @Nullable Input<String> type;
+        private Output<String> address;
+        private @Nullable Output<String> status;
+        private @Nullable Output<String> type;
 
         public Builder() {
     	      // Empty
@@ -86,33 +86,33 @@ public final class NotificationRuleTargetArgs extends io.pulumi.resources.Resour
     	      this.type = defaults.type;
         }
 
-        public Builder address(Input<String> address) {
+        public Builder address(Output<String> address) {
             this.address = Objects.requireNonNull(address);
             return this;
         }
 
         public Builder address(String address) {
-            this.address = Input.of(Objects.requireNonNull(address));
+            this.address = Output.of(Objects.requireNonNull(address));
             return this;
         }
 
-        public Builder status(@Nullable Input<String> status) {
+        public Builder status(@Nullable Output<String> status) {
             this.status = status;
             return this;
         }
 
         public Builder status(@Nullable String status) {
-            this.status = Input.ofNullable(status);
+            this.status = Output.ofNullable(status);
             return this;
         }
 
-        public Builder type(@Nullable Input<String> type) {
+        public Builder type(@Nullable Output<String> type) {
             this.type = type;
             return this;
         }
 
         public Builder type(@Nullable String type) {
-            this.type = Input.ofNullable(type);
+            this.type = Output.ofNullable(type);
             return this;
         }
         public NotificationRuleTargetArgs build() {

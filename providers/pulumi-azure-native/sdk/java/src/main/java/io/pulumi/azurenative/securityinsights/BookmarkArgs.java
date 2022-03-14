@@ -5,7 +5,7 @@ package io.pulumi.azurenative.securityinsights;
 
 import io.pulumi.azurenative.securityinsights.inputs.IncidentInfoArgs;
 import io.pulumi.azurenative.securityinsights.inputs.UserInfoArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -22,10 +22,10 @@ public final class BookmarkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="bookmarkId")
-      private final @Nullable Input<String> bookmarkId;
+      private final @Nullable Output<String> bookmarkId;
 
-    public Input<String> getBookmarkId() {
-        return this.bookmarkId == null ? Input.empty() : this.bookmarkId;
+    public Output<String> getBookmarkId() {
+        return this.bookmarkId == null ? Output.empty() : this.bookmarkId;
     }
 
     /**
@@ -33,10 +33,10 @@ public final class BookmarkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="created")
-      private final @Nullable Input<String> created;
+      private final @Nullable Output<String> created;
 
-    public Input<String> getCreated() {
-        return this.created == null ? Input.empty() : this.created;
+    public Output<String> getCreated() {
+        return this.created == null ? Output.empty() : this.created;
     }
 
     /**
@@ -44,10 +44,10 @@ public final class BookmarkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="createdBy")
-      private final @Nullable Input<UserInfoArgs> createdBy;
+      private final @Nullable Output<UserInfoArgs> createdBy;
 
-    public Input<UserInfoArgs> getCreatedBy() {
-        return this.createdBy == null ? Input.empty() : this.createdBy;
+    public Output<UserInfoArgs> getCreatedBy() {
+        return this.createdBy == null ? Output.empty() : this.createdBy;
     }
 
     /**
@@ -55,9 +55,9 @@ public final class BookmarkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName", required=true)
-      private final Input<String> displayName;
+      private final Output<String> displayName;
 
-    public Input<String> getDisplayName() {
+    public Output<String> getDisplayName() {
         return this.displayName;
     }
 
@@ -66,10 +66,10 @@ public final class BookmarkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="eventTime")
-      private final @Nullable Input<String> eventTime;
+      private final @Nullable Output<String> eventTime;
 
-    public Input<String> getEventTime() {
-        return this.eventTime == null ? Input.empty() : this.eventTime;
+    public Output<String> getEventTime() {
+        return this.eventTime == null ? Output.empty() : this.eventTime;
     }
 
     /**
@@ -77,10 +77,10 @@ public final class BookmarkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="incidentInfo")
-      private final @Nullable Input<IncidentInfoArgs> incidentInfo;
+      private final @Nullable Output<IncidentInfoArgs> incidentInfo;
 
-    public Input<IncidentInfoArgs> getIncidentInfo() {
-        return this.incidentInfo == null ? Input.empty() : this.incidentInfo;
+    public Output<IncidentInfoArgs> getIncidentInfo() {
+        return this.incidentInfo == null ? Output.empty() : this.incidentInfo;
     }
 
     /**
@@ -88,10 +88,10 @@ public final class BookmarkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labels")
-      private final @Nullable Input<List<String>> labels;
+      private final @Nullable Output<List<String>> labels;
 
-    public Input<List<String>> getLabels() {
-        return this.labels == null ? Input.empty() : this.labels;
+    public Output<List<String>> getLabels() {
+        return this.labels == null ? Output.empty() : this.labels;
     }
 
     /**
@@ -99,10 +99,10 @@ public final class BookmarkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="notes")
-      private final @Nullable Input<String> notes;
+      private final @Nullable Output<String> notes;
 
-    public Input<String> getNotes() {
-        return this.notes == null ? Input.empty() : this.notes;
+    public Output<String> getNotes() {
+        return this.notes == null ? Output.empty() : this.notes;
     }
 
     /**
@@ -110,9 +110,9 @@ public final class BookmarkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="query", required=true)
-      private final Input<String> query;
+      private final Output<String> query;
 
-    public Input<String> getQuery() {
+    public Output<String> getQuery() {
         return this.query;
     }
 
@@ -121,10 +121,10 @@ public final class BookmarkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="queryEndTime")
-      private final @Nullable Input<String> queryEndTime;
+      private final @Nullable Output<String> queryEndTime;
 
-    public Input<String> getQueryEndTime() {
-        return this.queryEndTime == null ? Input.empty() : this.queryEndTime;
+    public Output<String> getQueryEndTime() {
+        return this.queryEndTime == null ? Output.empty() : this.queryEndTime;
     }
 
     /**
@@ -132,10 +132,10 @@ public final class BookmarkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="queryResult")
-      private final @Nullable Input<String> queryResult;
+      private final @Nullable Output<String> queryResult;
 
-    public Input<String> getQueryResult() {
-        return this.queryResult == null ? Input.empty() : this.queryResult;
+    public Output<String> getQueryResult() {
+        return this.queryResult == null ? Output.empty() : this.queryResult;
     }
 
     /**
@@ -143,10 +143,10 @@ public final class BookmarkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="queryStartTime")
-      private final @Nullable Input<String> queryStartTime;
+      private final @Nullable Output<String> queryStartTime;
 
-    public Input<String> getQueryStartTime() {
-        return this.queryStartTime == null ? Input.empty() : this.queryStartTime;
+    public Output<String> getQueryStartTime() {
+        return this.queryStartTime == null ? Output.empty() : this.queryStartTime;
     }
 
     /**
@@ -154,9 +154,9 @@ public final class BookmarkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -165,10 +165,10 @@ public final class BookmarkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="updated")
-      private final @Nullable Input<String> updated;
+      private final @Nullable Output<String> updated;
 
-    public Input<String> getUpdated() {
-        return this.updated == null ? Input.empty() : this.updated;
+    public Output<String> getUpdated() {
+        return this.updated == null ? Output.empty() : this.updated;
     }
 
     /**
@@ -176,10 +176,10 @@ public final class BookmarkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="updatedBy")
-      private final @Nullable Input<UserInfoArgs> updatedBy;
+      private final @Nullable Output<UserInfoArgs> updatedBy;
 
-    public Input<UserInfoArgs> getUpdatedBy() {
-        return this.updatedBy == null ? Input.empty() : this.updatedBy;
+    public Output<UserInfoArgs> getUpdatedBy() {
+        return this.updatedBy == null ? Output.empty() : this.updatedBy;
     }
 
     /**
@@ -187,29 +187,29 @@ public final class BookmarkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="workspaceName", required=true)
-      private final Input<String> workspaceName;
+      private final Output<String> workspaceName;
 
-    public Input<String> getWorkspaceName() {
+    public Output<String> getWorkspaceName() {
         return this.workspaceName;
     }
 
     public BookmarkArgs(
-        @Nullable Input<String> bookmarkId,
-        @Nullable Input<String> created,
-        @Nullable Input<UserInfoArgs> createdBy,
-        Input<String> displayName,
-        @Nullable Input<String> eventTime,
-        @Nullable Input<IncidentInfoArgs> incidentInfo,
-        @Nullable Input<List<String>> labels,
-        @Nullable Input<String> notes,
-        Input<String> query,
-        @Nullable Input<String> queryEndTime,
-        @Nullable Input<String> queryResult,
-        @Nullable Input<String> queryStartTime,
-        Input<String> resourceGroupName,
-        @Nullable Input<String> updated,
-        @Nullable Input<UserInfoArgs> updatedBy,
-        Input<String> workspaceName) {
+        @Nullable Output<String> bookmarkId,
+        @Nullable Output<String> created,
+        @Nullable Output<UserInfoArgs> createdBy,
+        Output<String> displayName,
+        @Nullable Output<String> eventTime,
+        @Nullable Output<IncidentInfoArgs> incidentInfo,
+        @Nullable Output<List<String>> labels,
+        @Nullable Output<String> notes,
+        Output<String> query,
+        @Nullable Output<String> queryEndTime,
+        @Nullable Output<String> queryResult,
+        @Nullable Output<String> queryStartTime,
+        Output<String> resourceGroupName,
+        @Nullable Output<String> updated,
+        @Nullable Output<UserInfoArgs> updatedBy,
+        Output<String> workspaceName) {
         this.bookmarkId = bookmarkId;
         this.created = created;
         this.createdBy = createdBy;
@@ -229,22 +229,22 @@ public final class BookmarkArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private BookmarkArgs() {
-        this.bookmarkId = Input.empty();
-        this.created = Input.empty();
-        this.createdBy = Input.empty();
-        this.displayName = Input.empty();
-        this.eventTime = Input.empty();
-        this.incidentInfo = Input.empty();
-        this.labels = Input.empty();
-        this.notes = Input.empty();
-        this.query = Input.empty();
-        this.queryEndTime = Input.empty();
-        this.queryResult = Input.empty();
-        this.queryStartTime = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.updated = Input.empty();
-        this.updatedBy = Input.empty();
-        this.workspaceName = Input.empty();
+        this.bookmarkId = Output.empty();
+        this.created = Output.empty();
+        this.createdBy = Output.empty();
+        this.displayName = Output.empty();
+        this.eventTime = Output.empty();
+        this.incidentInfo = Output.empty();
+        this.labels = Output.empty();
+        this.notes = Output.empty();
+        this.query = Output.empty();
+        this.queryEndTime = Output.empty();
+        this.queryResult = Output.empty();
+        this.queryStartTime = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.updated = Output.empty();
+        this.updatedBy = Output.empty();
+        this.workspaceName = Output.empty();
     }
 
     public static Builder builder() {
@@ -256,22 +256,22 @@ public final class BookmarkArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> bookmarkId;
-        private @Nullable Input<String> created;
-        private @Nullable Input<UserInfoArgs> createdBy;
-        private Input<String> displayName;
-        private @Nullable Input<String> eventTime;
-        private @Nullable Input<IncidentInfoArgs> incidentInfo;
-        private @Nullable Input<List<String>> labels;
-        private @Nullable Input<String> notes;
-        private Input<String> query;
-        private @Nullable Input<String> queryEndTime;
-        private @Nullable Input<String> queryResult;
-        private @Nullable Input<String> queryStartTime;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<String> updated;
-        private @Nullable Input<UserInfoArgs> updatedBy;
-        private Input<String> workspaceName;
+        private @Nullable Output<String> bookmarkId;
+        private @Nullable Output<String> created;
+        private @Nullable Output<UserInfoArgs> createdBy;
+        private Output<String> displayName;
+        private @Nullable Output<String> eventTime;
+        private @Nullable Output<IncidentInfoArgs> incidentInfo;
+        private @Nullable Output<List<String>> labels;
+        private @Nullable Output<String> notes;
+        private Output<String> query;
+        private @Nullable Output<String> queryEndTime;
+        private @Nullable Output<String> queryResult;
+        private @Nullable Output<String> queryStartTime;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<String> updated;
+        private @Nullable Output<UserInfoArgs> updatedBy;
+        private Output<String> workspaceName;
 
         public Builder() {
     	      // Empty
@@ -297,163 +297,163 @@ public final class BookmarkArgs extends io.pulumi.resources.ResourceArgs {
     	      this.workspaceName = defaults.workspaceName;
         }
 
-        public Builder bookmarkId(@Nullable Input<String> bookmarkId) {
+        public Builder bookmarkId(@Nullable Output<String> bookmarkId) {
             this.bookmarkId = bookmarkId;
             return this;
         }
 
         public Builder bookmarkId(@Nullable String bookmarkId) {
-            this.bookmarkId = Input.ofNullable(bookmarkId);
+            this.bookmarkId = Output.ofNullable(bookmarkId);
             return this;
         }
 
-        public Builder created(@Nullable Input<String> created) {
+        public Builder created(@Nullable Output<String> created) {
             this.created = created;
             return this;
         }
 
         public Builder created(@Nullable String created) {
-            this.created = Input.ofNullable(created);
+            this.created = Output.ofNullable(created);
             return this;
         }
 
-        public Builder createdBy(@Nullable Input<UserInfoArgs> createdBy) {
+        public Builder createdBy(@Nullable Output<UserInfoArgs> createdBy) {
             this.createdBy = createdBy;
             return this;
         }
 
         public Builder createdBy(@Nullable UserInfoArgs createdBy) {
-            this.createdBy = Input.ofNullable(createdBy);
+            this.createdBy = Output.ofNullable(createdBy);
             return this;
         }
 
-        public Builder displayName(Input<String> displayName) {
+        public Builder displayName(Output<String> displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
         public Builder displayName(String displayName) {
-            this.displayName = Input.of(Objects.requireNonNull(displayName));
+            this.displayName = Output.of(Objects.requireNonNull(displayName));
             return this;
         }
 
-        public Builder eventTime(@Nullable Input<String> eventTime) {
+        public Builder eventTime(@Nullable Output<String> eventTime) {
             this.eventTime = eventTime;
             return this;
         }
 
         public Builder eventTime(@Nullable String eventTime) {
-            this.eventTime = Input.ofNullable(eventTime);
+            this.eventTime = Output.ofNullable(eventTime);
             return this;
         }
 
-        public Builder incidentInfo(@Nullable Input<IncidentInfoArgs> incidentInfo) {
+        public Builder incidentInfo(@Nullable Output<IncidentInfoArgs> incidentInfo) {
             this.incidentInfo = incidentInfo;
             return this;
         }
 
         public Builder incidentInfo(@Nullable IncidentInfoArgs incidentInfo) {
-            this.incidentInfo = Input.ofNullable(incidentInfo);
+            this.incidentInfo = Output.ofNullable(incidentInfo);
             return this;
         }
 
-        public Builder labels(@Nullable Input<List<String>> labels) {
+        public Builder labels(@Nullable Output<List<String>> labels) {
             this.labels = labels;
             return this;
         }
 
         public Builder labels(@Nullable List<String> labels) {
-            this.labels = Input.ofNullable(labels);
+            this.labels = Output.ofNullable(labels);
             return this;
         }
 
-        public Builder notes(@Nullable Input<String> notes) {
+        public Builder notes(@Nullable Output<String> notes) {
             this.notes = notes;
             return this;
         }
 
         public Builder notes(@Nullable String notes) {
-            this.notes = Input.ofNullable(notes);
+            this.notes = Output.ofNullable(notes);
             return this;
         }
 
-        public Builder query(Input<String> query) {
+        public Builder query(Output<String> query) {
             this.query = Objects.requireNonNull(query);
             return this;
         }
 
         public Builder query(String query) {
-            this.query = Input.of(Objects.requireNonNull(query));
+            this.query = Output.of(Objects.requireNonNull(query));
             return this;
         }
 
-        public Builder queryEndTime(@Nullable Input<String> queryEndTime) {
+        public Builder queryEndTime(@Nullable Output<String> queryEndTime) {
             this.queryEndTime = queryEndTime;
             return this;
         }
 
         public Builder queryEndTime(@Nullable String queryEndTime) {
-            this.queryEndTime = Input.ofNullable(queryEndTime);
+            this.queryEndTime = Output.ofNullable(queryEndTime);
             return this;
         }
 
-        public Builder queryResult(@Nullable Input<String> queryResult) {
+        public Builder queryResult(@Nullable Output<String> queryResult) {
             this.queryResult = queryResult;
             return this;
         }
 
         public Builder queryResult(@Nullable String queryResult) {
-            this.queryResult = Input.ofNullable(queryResult);
+            this.queryResult = Output.ofNullable(queryResult);
             return this;
         }
 
-        public Builder queryStartTime(@Nullable Input<String> queryStartTime) {
+        public Builder queryStartTime(@Nullable Output<String> queryStartTime) {
             this.queryStartTime = queryStartTime;
             return this;
         }
 
         public Builder queryStartTime(@Nullable String queryStartTime) {
-            this.queryStartTime = Input.ofNullable(queryStartTime);
+            this.queryStartTime = Output.ofNullable(queryStartTime);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder updated(@Nullable Input<String> updated) {
+        public Builder updated(@Nullable Output<String> updated) {
             this.updated = updated;
             return this;
         }
 
         public Builder updated(@Nullable String updated) {
-            this.updated = Input.ofNullable(updated);
+            this.updated = Output.ofNullable(updated);
             return this;
         }
 
-        public Builder updatedBy(@Nullable Input<UserInfoArgs> updatedBy) {
+        public Builder updatedBy(@Nullable Output<UserInfoArgs> updatedBy) {
             this.updatedBy = updatedBy;
             return this;
         }
 
         public Builder updatedBy(@Nullable UserInfoArgs updatedBy) {
-            this.updatedBy = Input.ofNullable(updatedBy);
+            this.updatedBy = Output.ofNullable(updatedBy);
             return this;
         }
 
-        public Builder workspaceName(Input<String> workspaceName) {
+        public Builder workspaceName(Output<String> workspaceName) {
             this.workspaceName = Objects.requireNonNull(workspaceName);
             return this;
         }
 
         public Builder workspaceName(String workspaceName) {
-            this.workspaceName = Input.of(Objects.requireNonNull(workspaceName));
+            this.workspaceName = Output.of(Objects.requireNonNull(workspaceName));
             return this;
         }
         public BookmarkArgs build() {

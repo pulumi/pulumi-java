@@ -1,31 +1,31 @@
 package io.pulumi.core;
 
+import com.google.common.collect.ImmutableList;
+import com.google.common.collect.ImmutableMap;
 import com.google.common.collect.Lists;
 import com.google.errorprone.annotations.CanIgnoreReturnValue;
+import com.google.gson.Gson;
+import com.google.gson.JsonElement;
+import com.google.gson.JsonNull;
+import io.pulumi.core.internal.CompletableFutures;
+import io.pulumi.core.internal.Copyable;
 import io.pulumi.core.internal.InputOutputData;
 import io.pulumi.core.internal.Internal;
 
 import javax.annotation.Nullable;
-import java.util.List;
-import java.util.Objects;
-import java.util.Optional;
+import java.util.*;
 import java.util.concurrent.CompletableFuture;
 import java.util.function.Consumer;
 import java.util.function.Function;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
+import static com.google.common.collect.ImmutableList.toImmutableList;
+import static com.google.common.collect.ImmutableMap.toImmutableMap;
 import static io.pulumi.core.internal.InputOutputData.allHelperAsync;
-import static io.pulumi.core.internal.InputOutputInternal.TupleZeroIn;
 import static io.pulumi.core.internal.InputOutputInternal.TupleZeroOut;
 
 public interface Output<T> extends InputOutput<T, Output<T>> {
-
-    /**
-     * Convert @see {@link Output<T>} to @see {@link Input<T>}
-     *
-     * @return an {@link Input<T>} , converted from {@link Output<T>}
-     */
-    Input<T> toInput();
 
     /**
      * Transforms the data of this @see {@link Output<T>} with the provided {@code func}.
@@ -49,8 +49,8 @@ public interface Output<T> extends InputOutput<T, Output<T>> {
      * as d1.
      * <p/>
      * If you need have multiple @see {@link Output<T>}s and a single @see {@link Output<T>}
-     * is needed that combines both set of resources, then @see {@link Output#allInputs(Input[])}
-     * or {@link Output#tuple(Input, Input, Input)} should be used instead.
+     * is needed that combines both set of resources, then @see {@link Output#all(Output[])}
+     * or {@link Output#tuple(Output, Output, Output)} should be used instead.
      * <p/>
      * This function will only be called during execution of a <code>pulumi up</code> request.
      * It will not run during <code>pulumi preview</code>
@@ -69,7 +69,7 @@ public interface Output<T> extends InputOutput<T, Output<T>> {
      * @see Output#apply(Function) for more details.
      */
     default <U> Output<U> applyOptional(Function<T, Optional<U>> func) {
-        return apply(t -> Output.ofOptional(func.apply(t))); // TODO: a candidate to move to Input.ofOptional
+        return apply(t -> Output.ofOptional(func.apply(t))); // TODO: a candidate to move to Output.ofOptional
     }
 
     /**
@@ -77,13 +77,6 @@ public interface Output<T> extends InputOutput<T, Output<T>> {
      */
     default <U> Output<U> applyFuture(Function<T, CompletableFuture<U>> func) {
         return apply(t -> Output.of(func.apply(t)));
-    }
-
-    /**
-     * @see Output#apply(Function) for more details.
-     */
-    default <U> Output<U> applyInput(Function<T, Input<U>> func) {
-        return apply(t -> func.apply(t).toOutput());
     }
 
     @CanIgnoreReturnValue
@@ -95,6 +88,10 @@ public interface Output<T> extends InputOutput<T, Output<T>> {
     }
 
     // Static section -----
+
+    static <T> Output<T> of() {
+        return Output.empty();
+    }
 
     static <T> Output<T> of(T value) {
         return new OutputDefault<>(value);
@@ -136,22 +133,16 @@ public interface Output<T> extends InputOutput<T, Output<T>> {
     }
 
     /**
-     * Combines all the @see {@link io.pulumi.core.Input<T>} values in {@code inputs} into a single @see {@link Output}
-     * with an @see {@link java.util.List<T>} containing all their underlying values.
-     * <p>
-     * If any of the {@link io.pulumi.core.Input<T>}s are not known, the final result will be not known.
-     * Similarly, if any of the {@link io.pulumi.core.Input<T>}s are secrets, then the final result will be a secret.
+     * Combines all the @see {@link Output<T>} values in {@code outputs}
+     * into a single @see {@link Output<T>} with an @see {@link java.util.List<T>}
+     * containing all their underlying values.
+     * <p/>
+     * If any of the @see {@link Output<T>}s are not known, the final result will be not known.
+     * Similarly, if any of the @see {@link Output<T>}s are secrets, then the final result will be a secret.
      */
     @SafeVarargs // safe because we only call List.of, that is also @SafeVarargs
-    static <T> Output<List<T>> allInputs(Input<T>... inputs) {
-        return allInputs(List.of(inputs));
-    }
-
-    /**
-     * @see Output#allInputs(Input[]) for more details.
-     */
-    static <T> Output<List<T>> allInputs(Iterable<Input<T>> inputs) {
-        return allInputs(Lists.newArrayList(inputs));
+    static <T> Output<List<T>> all(Output<T>... outputs) {
+        return all(List.of(outputs));
     }
 
     /**
@@ -162,28 +153,28 @@ public interface Output<T> extends InputOutput<T, Output<T>> {
      * If any of the @see {@link Output<T>}s are not known, the final result will be not known.
      * Similarly, if any of the @see {@link Output<T>}s are secrets, then the final result will be a secret.
      */
+    @Deprecated
     @SafeVarargs // safe because we only call List.of, that is also @SafeVarargs
     static <T> Output<List<T>> allOutputs(Output<T>... outputs) {
-        return allOutputs(List.of(outputs));
+        return all(List.of(outputs));
     }
 
     /**
      * @see Output#allOutputs(Output[])  for more details.
      */
+    static <T> Output<List<T>> all(Iterable<Output<T>> outputs) {
+        return all(Lists.newArrayList(outputs));
+    }
+
+    /**
+     * @see Output#allOutputs(Output[])  for more details.
+     */
+    @Deprecated
     static <T> Output<List<T>> allOutputs(Iterable<Output<T>> outputs) {
-        return allOutputs(Lists.newArrayList(outputs));
+        return all(Lists.newArrayList(outputs));
     }
 
-    private static <T> Output<List<T>> allInputs(List<Input<T>> inputs) {
-        return new OutputDefault<>(
-                allHelperAsync(inputs
-                        .stream()
-                        .map(input -> Internal.of(input).getDataAsync())
-                        .collect(Collectors.toList()))
-        );
-    }
-
-    private static <T> Output<List<T>> allOutputs(List<Output<T>> outputs) {
+    private static <T> Output<List<T>> all(List<Output<T>> outputs) {
         return new OutputDefault<>(
                 allHelperAsync(outputs
                         .stream()
@@ -191,80 +182,543 @@ public interface Output<T> extends InputOutput<T, Output<T>> {
                         .collect(Collectors.toList()))
         );
     }
-    // Tuple Overloads that take different numbers of inputs or outputs.
 
     /**
-     * @see Output#tuple(Input, Input, Input, Input, Input, Input, Input, Input)
+     * Takes in a "formattableString" with potential @see {@link Output}
+     * in the 'placeholder holes'. Conceptually, this method unwraps all the underlying values in the holes,
+     * combines them appropriately with the "formattableString", and produces an @see {@link Output}
+     * containing the final result.
+     * <p>
+     * If any of the {@link Output}s are not known, the
+     * final result will be not known.
+     * <p>
+     * Similarly, if any of the @see {@link Output}s are secrets,
+     * then the final result will be a secret.
      */
-    static <T1, T2> Output<Tuples.Tuple2<T1, T2>> tuple(Input<T1> item1, Input<T2> item2) {
-        return tuple(item1, item2, TupleZeroIn, TupleZeroIn, TupleZeroIn, TupleZeroIn, TupleZeroIn, TupleZeroIn)
-                .applyValue(v -> Tuples.of(v.t1, v.t2));
+    static Output<String> format(String formattableString, @SuppressWarnings("rawtypes") InputOutput... arguments) {
+        var data = Lists.newArrayList(arguments)
+                .stream()
+                .map(InputOutputData::copyInputOutputData)
+                .collect(Collectors.toList());
+
+        return new OutputDefault<>(
+                allHelperAsync(data)
+                        .thenApply(objs -> objs.apply(
+                                v -> v == null ? null : String.format(formattableString, v.toArray())))
+        );
+    }
+
+    // Convenience methods for Either (a.k.a. Union)
+
+    // TODO: maybe we can move this complexity to the codegen, since this is not very useful for an end user anyway
+
+    /**
+     * Represents an @see {@link Output} value that can be one of two different types.
+     * For example, it might potentially be an "Integer" some of the time
+     * or a "String" in other cases.
+     */
+    static <L, R> Output<Either<L, R>> ofLeft(L value) {
+        return Output.of(Either.ofLeft(value));
     }
 
     /**
-     * @see Output#tuple(Input, Input, Input, Input, Input, Input, Input, Input)
+     * @see #ofLeft(Object)
      */
-    static <T1, T2, T3> Output<Tuples.Tuple3<T1, T2, T3>> tuple(
-            Input<T1> item1, Input<T2> item2, Input<T3> item3
-    ) {
-        return tuple(item1, item2, item3, TupleZeroIn, TupleZeroIn, TupleZeroIn, TupleZeroIn, TupleZeroIn)
-                .applyValue(v -> Tuples.of(v.t1, v.t2, v.t3));
+    static <L, R> Output<Either<L, R>> ofRight(R value) {
+        return Output.of(Either.ofRight(value));
     }
 
     /**
-     * @see Output#tuple(Input, Input, Input, Input, Input, Input, Input, Input)
+     * @see #ofLeft(Object)
      */
-    static <T1, T2, T3, T4> Output<Tuples.Tuple4<T1, T2, T3, T4>> tuple(
-            Input<T1> item1, Input<T2> item2, Input<T3> item3, Input<T4> item4
-    ) {
-        return tuple(item1, item2, item3, item4, TupleZeroIn, TupleZeroIn, TupleZeroIn, TupleZeroIn)
-                .applyValue(v -> Tuples.of(v.t1, v.t2, v.t3, v.t4));
+    static <L, R> Output<Either<L, R>> ofLeft(Output<L> value) {
+        return new OutputDefault<>(Internal.of(value).getDataAsync()
+                .thenApply(ioData -> ioData.apply(Either::<L, R>ofLeft)));
     }
 
     /**
-     * @see Output#tuple(Input, Input, Input, Input, Input, Input, Input, Input)
+     * @see #ofLeft(Object)
      */
-    static <T1, T2, T3, T4, T5> Output<Tuples.Tuple5<T1, T2, T3, T4, T5>> tuple(
-            Input<T1> item1, Input<T2> item2, Input<T3> item3, Input<T4> item4, Input<T5> item5
-    ) {
-        return tuple(item1, item2, item3, item4, item5, TupleZeroIn, TupleZeroIn, TupleZeroIn)
-                .applyValue(v -> Tuples.of(v.t1, v.t2, v.t3, v.t4, v.t5));
+    static <L, R> Output<Either<L, R>> ofRight(Output<R> value) {
+        return new OutputDefault<>(Internal.of(value).getDataAsync()
+                .thenApply(ioData -> ioData.apply(Either::ofRight)));
+    }
+
+    // Convenience methods for JSON
+
+    /**
+     * @see #ofJson(JsonElement)
+     */
+    static Output<JsonElement> ofJson() {
+        return ofJson(JsonNull.INSTANCE);
     }
 
     /**
-     * @see Output#tuple(Input, Input, Input, Input, Input, Input, Input, Input)
+     * Represents an @see {@link Output} value that wraps a @see {@link JsonElement}
      */
-    static <T1, T2, T3, T4, T5, T6> Output<Tuples.Tuple6<T1, T2, T3, T4, T5, T6>> tuple(
-            Input<T1> item1, Input<T2> item2, Input<T3> item3, Input<T4> item4,
-            Input<T5> item5, Input<T6> item6
-    ) {
-        return tuple(item1, item2, item3, item4, item5, item6, TupleZeroIn, TupleZeroIn)
-                .applyValue(v -> Tuples.of(v.t1, v.t2, v.t3, v.t4, v.t5, v.t6));
+    static Output<JsonElement> ofJson(JsonElement json) {
+        return Output.of(json);
     }
 
     /**
-     * @see Output#tuple(Input, Input, Input, Input, Input, Input, Input, Input)
+     * @see #ofJson(JsonElement)
      */
-    static <T1, T2, T3, T4, T5, T6, T7> Output<Tuples.Tuple7<T1, T2, T3, T4, T5, T6, T7>> tuple(
-            Input<T1> item1, Input<T2> item2, Input<T3> item3, Input<T4> item4,
-            Input<T5> item5, Input<T6> item6, Input<T7> item7
-    ) {
-        return tuple(item1, item2, item3, item4, item5, item6, item7, TupleZeroIn)
-                .applyValue(v -> Tuples.of(v.t1, v.t2, v.t3, v.t4, v.t5, v.t6, v.t7));
+    static Output<JsonElement> ofJson(Output<JsonElement> json) {
+        return new OutputDefault<>(Internal.of(json).getDataAsync());
     }
 
     /**
-     * Combines all the @see {@link Input} values in the provided parameters and combines
-     * them all into a single tuple containing each of their underlying values.
-     * If any of the @see {@link Input}s are not known, the final result will be not known.  Similarly,
-     * if any of the @see {@link Input}s are secrets, then the final result will be a secret.
+     * @see #ofJson(JsonElement)
      */
-    static <T1, T2, T3, T4, T5, T6, T7, T8> Output<Tuples.Tuple8<T1, T2, T3, T4, T5, T6, T7, T8>> tuple(
-            Input<T1> item1, Input<T2> item2, Input<T3> item3, Input<T4> item4,
-            Input<T5> item5, Input<T6> item6, Input<T7> item7, Input<T8> item8
-    ) {
-        return new OutputDefault<>(InputOutputData.tuple(item1, item2, item3, item4, item5, item6, item7, item8));
+    static Output<JsonElement> parseJson(String json) {
+        var gson = new Gson();
+        return ofJson(gson.fromJson(json, JsonElement.class));
     }
+
+    /**
+     * @see #ofJson(JsonElement)
+     */
+    static Output<JsonElement> parseJson(Output<String> json) {
+        var gson = new Gson();
+        return ofJson(json.applyValue((String j) -> gson.fromJson(j, JsonElement.class)));
+    }
+
+    // Convenience methods for List
+
+    /**
+     * Returns a shallow copy of the @see {@link List} wrapped in an @see {@link Output}
+     */
+    static <E> Output<List<E>> copyOfList(List<E> values) {
+        return Output.of(ImmutableList.copyOf(values));
+    }
+
+    /**
+     * Concatenates two lists of @see {@link Output}, can take a {@code @Nullable}, returns {@code non-null}.
+     */
+    static <E> Output<List<E>> concatList(@Nullable Output</* @Nullable */ List<E>> left, @Nullable Output</* @Nullable */List<E>> right) {
+        if (left == null && right == null) {
+            return Output.empty();
+        }
+        if (left == null) {
+            left = Output.empty();
+        }
+        if (right == null) {
+            right = Output.empty();
+        }
+
+        return concatListInternal(left, right);
+    }
+
+    private static <E> Output<List<E>> concatListInternal(Output</* @Nullable */ List<E>> left, Output</* @Nullable */List<E>> right) {
+        return Output.of(Internal.of(left).isEmpty().thenCompose(
+                leftIsEmpty -> Internal.of(right).isEmpty().thenCompose(
+                        rightIsEmpty -> Internal.of(left).getValueNullable().thenCompose(
+                                l -> Internal.of(right).getValueNullable().thenApply(
+                                        r -> {
+                                            if (leftIsEmpty && rightIsEmpty) {
+                                                return null;
+                                            }
+                                            return Stream
+                                                    .concat(
+                                                            (l == null ? ImmutableList.<E>of() : l).stream(),
+                                                            (r == null ? ImmutableList.<E>of() : r).stream()
+                                                    )
+                                                    .collect(toImmutableList());
+                                        }
+                                )
+                        )
+                )
+        ));
+    }
+
+
+    /**
+     * @see #ofList(Object)
+     */
+    static <E> Output<List<E>> ofList() {
+        return Output.of(ImmutableList.of());
+    }
+
+    /**
+     * Returns an @see {@link Output} value that wraps a @see {@link List}.
+     * Also @see #listBuilder()
+     */
+    static <E> Output<List<E>> ofList(E e1) {
+        return Output.of(ImmutableList.of(e1));
+    }
+
+    /**
+     * @see #ofList(Object)
+     */
+    static <E> Output<List<E>> ofList(E e1, E e2) {
+        return Output.of(ImmutableList.of(e1, e2));
+    }
+
+    /**
+     * @see #ofList(Object)
+     */
+    static <E> Output<List<E>> ofList(E e1, E e2, E e3) {
+        return Output.of(ImmutableList.of(e1, e2, e3));
+    }
+
+
+    /**
+     * @see #ofList(Object)
+     */
+    static <E> Output<List<E>> ofList(E e1, E e2, E e3, E e4) {
+        return Output.of(ImmutableList.of(e1, e2, e3, e4));
+    }
+
+    /**
+     * @see #ofList(Object)
+     */
+    static <E> Output<List<E>> ofList(E e1, E e2, E e3, E e4, E e5) {
+        return Output.of(ImmutableList.of(e1, e2, e3, e4, e5));
+    }
+
+    /**
+     * @see #ofList(Object)
+     */
+    static <E> Output<List<E>> ofList(E e1, E e2, E e3, E e4, E e5, E e6) {
+        return Output.of(ImmutableList.of(e1, e2, e3, e4, e5, e6));
+    }
+
+    /**
+     * @see #ofList(Object)
+     */
+    static <E> Output<List<E>> ofList(E e1, E e2, E e3, E e4, E e5, E e6, E e7) {
+        return Output.of(ImmutableList.of(e1, e2, e3, e4, e5, e6, e7));
+    }
+
+    /**
+     * @see #ofList(Object)
+     */
+    static <E> Output<List<E>> ofList(E e1, E e2, E e3, E e4, E e5, E e6, E e7, E e8) {
+        return Output.of(ImmutableList.of(e1, e2, e3, e4, e5, e6, e7, e8));
+    }
+
+    /**
+     * @see #ofList(Object)
+     */
+    static <E> Output<List<E>> ofList(E e1, E e2, E e3, E e4, E e5, E e6, E e7, E e8, E e9) {
+        return Output.of(ImmutableList.of(e1, e2, e3, e4, e5, e6, e7, e8, e9));
+    }
+
+    /**
+     * @see #ofList(Object)
+     */
+    static <E> Output<List<E>> ofList(E e1, E e2, E e3, E e4, E e5, E e6, E e7, E e8, E e9, E e10) {
+        return Output.of(ImmutableList.of(e1, e2, e3, e4, e5, e6, e7, e8, e9, e10));
+    }
+
+    /**
+     * @see #ofList(Object)
+     */
+    static <E> Output<List<E>> ofList(E e1, E e2, E e3, E e4, E e5, E e6, E e7, E e8, E e9, E e10, E e11) {
+        return Output.of(ImmutableList.of(e1, e2, e3, e4, e5, e6, e7, e8, e9, e10, e11));
+    }
+
+    /**
+     * @see #ofList(Object)
+     */
+    static <E> Output<List<E>> ofList(E e1, E e2, E e3, E e4, E e5, E e6, E e7, E e8, E e9, E e10, E e11, E e12) {
+        return Output.of(ImmutableList.of(e1, e2, e3, e4, e5, e6, e7, e8, e9, e10, e11, e12));
+    }
+
+    /**
+     * @see #ofList(Object)
+     */
+    @SafeVarargs
+    static <E> Output<List<E>> ofList(
+            E e1, E e2, E e3, E e4, E e5, E e6, E e7, E e8, E e9, E e10, E e11, E e12, E... others) {
+        return Output.of(ImmutableList.of(e1, e2, e3, e4, e5, e6, e7, e8, e9, e10, e11, e12, others));
+    }
+
+    /**
+     * Builds an @see {@link Output} value that wraps a @see {@link List}.
+     * Also @see #ofList(Object)
+     */
+    static <E> Output.ListBuilder<E> listBuilder() {
+        return new Output.ListBuilder<>();
+    }
+
+    final class ListBuilder<E> {
+        private final CompletableFutures.Builder<InputOutputData.Builder<ImmutableList.Builder<E>>> builder;
+
+        public ListBuilder() {
+            builder = CompletableFutures.builder(
+                    CompletableFuture.completedFuture(InputOutputData.builder(ImmutableList.builder()))
+            );
+        }
+
+        @CanIgnoreReturnValue
+        public <IO extends InputOutput<E, IO> & Copyable<IO>> Output.ListBuilder<E> add(InputOutput<E, IO> value) {
+            this.builder.accumulate(
+                    Internal.of(value).getDataAsync(),
+                    (dataBuilder, data) -> dataBuilder.accumulate(data, ImmutableList.Builder::add)
+            );
+            return this;
+        }
+
+        @CanIgnoreReturnValue
+        public Output.ListBuilder<E> add(E value) {
+            this.builder.accumulate(
+                    CompletableFuture.completedFuture(InputOutputData.of(value)),
+                    (dataBuilder, data) -> dataBuilder.accumulate(data, ImmutableList.Builder::add)
+            );
+            return this;
+        }
+
+
+        @SafeVarargs
+        @CanIgnoreReturnValue
+        public final Output.ListBuilder<E> add(E... elements) {
+            return addAll(List.of(elements));
+        }
+
+        @CanIgnoreReturnValue
+        public Output.ListBuilder<E> addAll(Iterable<? extends E> elements) {
+            this.builder.accumulate(
+                    CompletableFuture.completedFuture(InputOutputData.of(elements)),
+                    (dataBuilder, data) -> dataBuilder.accumulate(data, ImmutableList.Builder::addAll)
+            );
+            return this;
+        }
+
+        @CanIgnoreReturnValue
+        public Output.ListBuilder<E> addAll(Iterator<? extends E> elements) {
+            this.builder.accumulate(
+                    CompletableFuture.completedFuture(InputOutputData.of(elements)),
+                    (dataBuilder, data) -> dataBuilder.accumulate(data, ImmutableList.Builder::addAll)
+            );
+            return this;
+        }
+
+        public Output<List<E>> build() {
+            return new OutputDefault<>(builder.build(dataBuilder -> dataBuilder.build(ImmutableList.Builder::build)));
+        }
+    }
+
+    // Convenience methods for Map
+
+    /**
+     * Returns a shallow copy of the @see {@link Map} wrapped in an @see {@link Output}
+     */
+    static <V> Output<Map<String, V>> copyOfMap(Map<String, V> values) {
+        return Output.of(ImmutableMap.copyOf(values));
+    }
+
+    /**
+     * Concatenates two @see {@link Map} wrapped in an @see {@link Output}.
+     * Returns a new instance without modifying any of the arguments.
+     * <p/>
+     * If both maps contain the same key, the value from the second map takes over.
+     *
+     * @param left  The first @see {@code Output<Map<V>>}
+     * @param right The second @see {@code Output<Map<V>>}, it has higher priority in case of key clash.
+     * @return A new instance of {@code Output<Map<V>>} that contains the items from both input maps.
+     */
+    static <V> Output<Map<String, V>> concatMap(@Nullable Output<Map<String, V>> left, @Nullable Output<Map<String, V>> right) {
+        if (left == null && right == null) {
+            return Output.empty();
+        }
+        if (left == null) {
+            left = Output.empty();
+        }
+        if (right == null) {
+            right = Output.empty();
+        }
+
+        return concatMapInternal(left, right);
+    }
+
+    private static <V> Output<Map<String, V>> concatMapInternal(Output<Map<String, V>> left, Output<Map<String, V>> right) {
+        return Output.of(Internal.of(left).isEmpty().thenCompose(
+                leftIsEmpty -> Internal.of(right).isEmpty().thenCompose(
+                        rightIsEmpty -> Internal.of(left).getValueNullable().thenCompose(
+                                l -> Internal.of(right).getValueNullable().thenApply(
+                                        r -> {
+                                            if (leftIsEmpty && rightIsEmpty) {
+                                                return null;
+                                            }
+                                            return Stream
+                                                    .concat(
+                                                            (l == null ? ImmutableMap.<String, V>of() : l).entrySet().stream(),
+                                                            (r == null ? ImmutableMap.<String, V>of() : r).entrySet().stream()
+                                                    )
+                                                    .collect(toImmutableMap(
+                                                            Map.Entry::getKey,
+                                                            Map.Entry::getValue,
+                                                            (v1, v2) -> v2 // in case of duplicate, ignore the v1
+                                                    ));
+                                        }
+                                )
+                        )
+                )
+        ));
+    }
+
+    /**
+     * @see #ofMap(String, Object)
+     */
+    static <V> Output<Map<String, V>> ofMap() {
+        return Output.of(ImmutableMap.of());
+    }
+
+    /**
+     * Returns an @see {@link Output} value that wraps a @see {@link Map}.
+     * </p>
+     * A mapping of {@code String}s to values that can be passed in as the arguments to
+     * a @see {@link io.pulumi.resources.Resource}.
+     * The individual values are themselves @see {@link Output<V>}s.
+     * <p/>
+     * <p>
+     * {@code Output<Map<String,V>>} differs from a normal @see {@link Map} in that it is
+     * wrapped in an @see {@link Output<V>}. For example, a @see {@link io.pulumi.resources.Resource}
+     * that accepts an {@code Output<Map<String,V>>} may accept not just a map but an @see {@link Output}
+     * of a map as well.
+     * This is important for cases where the @see {@link Output}
+     * map from some {@link io.pulumi.resources.Resource} needs to be passed
+     * into another {@link io.pulumi.resources.Resource}.
+     * Or for cases where creating the map invariably produces an {@link Output} because
+     * its resultant value is dependent on other {@link Output}s.
+     * <p/>
+     * This benefit of {@code Output<Map<String,V>>} is also a limitation. Because it represents
+     * a list of values that may eventually be created, there is no way to simply iterate over,
+     * or access the elements of the map synchronously.
+     * <p/>
+     * {@code Output<Map<String,V>>} is designed to be easily used in object and collection initializers.
+     * For example, a resource that accepts a map of values can be written easily in this form:
+     * <p/>
+     * <code>
+     * new SomeResource("name", new SomeResourceArgs(
+     * Output.ofMap(
+     * key1, value1,
+     * key2, value2,
+     * key3, value3,
+     * )
+     * ));
+     * </code>
+     * </p>
+     * Also @see #mapBuilder()
+     */
+    static <V> Output<Map<String, V>> ofMap(String key1, V value1) {
+        return Output.of(ImmutableMap.of(key1, value1));
+    }
+
+    /**
+     * @see #ofMap(String, Object)
+     */
+    static <V> Output<Map<String, V>> ofMap(String key1, V value1,
+                                            String key2, V value2) {
+        return Output.of(ImmutableMap.of(key1, value1, key2, value2));
+    }
+
+    /**
+     * @see #ofMap(String, Object)
+     */
+    static <V> Output<Map<String, V>> ofMap(String key1, V value1,
+                                            String key2, V value2,
+                                            String key3, V value3) {
+        return Output.of(ImmutableMap.of(key1, value1, key2, value2, key3, value3));
+    }
+
+    /**
+     * @see #ofMap(String, Object)
+     */
+    static <V> Output<Map<String, V>> ofMap(String key1, V value1,
+                                            String key2, V value2,
+                                            String key3, V value3,
+                                            String key4, V value4) {
+        return Output.of(
+                ImmutableMap.of(key1, value1, key2, value2,
+                        key3, value3, key4, value4));
+    }
+
+    /**
+     * @see #ofMap(String, Object)
+     */
+    static <V> Output<Map<String, V>> ofMap(String key1, V value1,
+                                            String key2, V value2,
+                                            String key3, V value3,
+                                            String key4, V value4,
+                                            String key5, V value5) {
+        return Output.of(
+                ImmutableMap.of(key1, value1, key2, value2,
+                        key3, value3, key4, value4, key5, value5));
+    }
+
+    /**
+     * Builds an @see {@link Output} value that wraps a @see {@link Map}.
+     * Also @see #ofMap(Object)
+     */
+    static <E> Output.MapBuilder<E> mapBuilder() {
+        return new Output.MapBuilder<>();
+    }
+
+    final class MapBuilder<V> {
+        private final CompletableFutures.Builder<InputOutputData.Builder<ImmutableMap.Builder<String, V>>> builder;
+
+        public MapBuilder() {
+            builder = CompletableFutures.builder(
+                    CompletableFuture.completedFuture(InputOutputData.builder(ImmutableMap.builder()))
+            );
+        }
+
+        @CanIgnoreReturnValue
+        public <IO extends InputOutput<V, IO> & Copyable<IO>> Output.MapBuilder<V> put(String key, InputOutput<V, IO> value) {
+            this.builder.accumulate(
+                    Internal.of(value).getDataAsync(),
+                    (dataBuilder, data) -> dataBuilder.accumulate(data,
+                            (mapBuilder, v) -> mapBuilder.put(key, v))
+            );
+            return this;
+        }
+
+        @CanIgnoreReturnValue
+        public Output.MapBuilder<V> put(String key, V value) {
+            this.builder.accumulate(
+                    CompletableFuture.completedFuture(InputOutputData.of(value)),
+                    (dataBuilder, data) -> dataBuilder.accumulate(data,
+                            (mapBuilder, v) -> mapBuilder.put(key, v))
+            );
+            return this;
+        }
+
+        @CanIgnoreReturnValue
+        public Output.MapBuilder<V> put(Map.Entry<? extends String, ? extends V> entry) {
+            this.builder.accumulate(
+                    CompletableFuture.completedFuture(InputOutputData.of(entry)),
+                    (dataBuilder, data) -> dataBuilder.accumulate(data, ImmutableMap.Builder::put)
+            );
+            return this;
+        }
+
+        @CanIgnoreReturnValue
+        public Output.MapBuilder<V> putAll(Map<? extends String, ? extends V> map) {
+            this.builder.accumulate(
+                    CompletableFuture.completedFuture(InputOutputData.of(map)),
+                    (dataBuilder, data) -> dataBuilder.accumulate(data, ImmutableMap.Builder::putAll)
+            );
+            return this;
+        }
+
+        @SuppressWarnings("UnstableApiUsage")
+        @CanIgnoreReturnValue
+        public Output.MapBuilder<V> putAll(Iterable<? extends Map.Entry<? extends String, ? extends V>> entries) {
+            this.builder.accumulate(
+                    CompletableFuture.completedFuture(InputOutputData.of(entries)),
+                    (dataBuilder, data) -> dataBuilder.accumulate(data, ImmutableMap.Builder::putAll)
+            );
+            return this;
+        }
+
+        public Output<Map<String, V>> build() {
+            return new OutputDefault<>(builder.build(dataBuilder -> dataBuilder.build(ImmutableMap.Builder::build)));
+        }
+    }
+
+    // Tuple Overloads that take various number of outputs.
 
     /**
      * @see Output#tuple(Output, Output, Output, Output, Output, Output, Output, Output)
@@ -338,30 +792,5 @@ public interface Output<T> extends InputOutput<T, Output<T>> {
             Output<T5> item5, Output<T6> item6, Output<T7> item7, Output<T8> item8
     ) {
         return new OutputDefault<>(InputOutputData.tuple(item1, item2, item3, item4, item5, item6, item7, item8));
-    }
-
-    /**
-     * Takes in a "formattableString" with potential @see {@link Input}s or @see {@link Output}
-     * in the 'placeholder holes'. Conceptually, this method unwraps all the underlying values in the holes,
-     * combines them appropriately with the "formattableString", and produces an @see {@link Output}
-     * containing the final result.
-     * <p>
-     * If any of the @see {@link Input}s or {@link Output}s are not known, the
-     * final result will be not known.
-     * <p>
-     * Similarly, if any of the @see {@link Input}s or @see {@link Input}s are secrets,
-     * then the final result will be a secret.
-     */
-    static Output<String> format(String formattableString, @SuppressWarnings("rawtypes") InputOutput... arguments) {
-        var data = Lists.newArrayList(arguments)
-                .stream()
-                .map(InputOutputData::copyInputOutputData)
-                .collect(Collectors.toList());
-
-        return new OutputDefault<>(
-                allHelperAsync(data)
-                        .thenApply(objs -> objs.apply(
-                                v -> v == null ? null : String.format(formattableString, v.toArray())))
-        );
     }
 }

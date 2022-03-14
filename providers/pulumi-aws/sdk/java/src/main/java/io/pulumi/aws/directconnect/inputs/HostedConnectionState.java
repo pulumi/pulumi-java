@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.directconnect.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -21,10 +21,10 @@ public final class HostedConnectionState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="awsDevice")
-      private final @Nullable Input<String> awsDevice;
+      private final @Nullable Output<String> awsDevice;
 
-    public Input<String> getAwsDevice() {
-        return this.awsDevice == null ? Input.empty() : this.awsDevice;
+    public Output<String> getAwsDevice() {
+        return this.awsDevice == null ? Output.empty() : this.awsDevice;
     }
 
     /**
@@ -32,10 +32,10 @@ public final class HostedConnectionState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="bandwidth")
-      private final @Nullable Input<String> bandwidth;
+      private final @Nullable Output<String> bandwidth;
 
-    public Input<String> getBandwidth() {
-        return this.bandwidth == null ? Input.empty() : this.bandwidth;
+    public Output<String> getBandwidth() {
+        return this.bandwidth == null ? Output.empty() : this.bandwidth;
     }
 
     /**
@@ -43,10 +43,10 @@ public final class HostedConnectionState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="connectionId")
-      private final @Nullable Input<String> connectionId;
+      private final @Nullable Output<String> connectionId;
 
-    public Input<String> getConnectionId() {
-        return this.connectionId == null ? Input.empty() : this.connectionId;
+    public Output<String> getConnectionId() {
+        return this.connectionId == null ? Output.empty() : this.connectionId;
     }
 
     /**
@@ -54,10 +54,10 @@ public final class HostedConnectionState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="hasLogicalRedundancy")
-      private final @Nullable Input<String> hasLogicalRedundancy;
+      private final @Nullable Output<String> hasLogicalRedundancy;
 
-    public Input<String> getHasLogicalRedundancy() {
-        return this.hasLogicalRedundancy == null ? Input.empty() : this.hasLogicalRedundancy;
+    public Output<String> getHasLogicalRedundancy() {
+        return this.hasLogicalRedundancy == null ? Output.empty() : this.hasLogicalRedundancy;
     }
 
     /**
@@ -65,10 +65,10 @@ public final class HostedConnectionState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="jumboFrameCapable")
-      private final @Nullable Input<Boolean> jumboFrameCapable;
+      private final @Nullable Output<Boolean> jumboFrameCapable;
 
-    public Input<Boolean> getJumboFrameCapable() {
-        return this.jumboFrameCapable == null ? Input.empty() : this.jumboFrameCapable;
+    public Output<Boolean> getJumboFrameCapable() {
+        return this.jumboFrameCapable == null ? Output.empty() : this.jumboFrameCapable;
     }
 
     /**
@@ -76,10 +76,10 @@ public final class HostedConnectionState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="lagId")
-      private final @Nullable Input<String> lagId;
+      private final @Nullable Output<String> lagId;
 
-    public Input<String> getLagId() {
-        return this.lagId == null ? Input.empty() : this.lagId;
+    public Output<String> getLagId() {
+        return this.lagId == null ? Output.empty() : this.lagId;
     }
 
     /**
@@ -87,10 +87,10 @@ public final class HostedConnectionState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="loaIssueTime")
-      private final @Nullable Input<String> loaIssueTime;
+      private final @Nullable Output<String> loaIssueTime;
 
-    public Input<String> getLoaIssueTime() {
-        return this.loaIssueTime == null ? Input.empty() : this.loaIssueTime;
+    public Output<String> getLoaIssueTime() {
+        return this.loaIssueTime == null ? Output.empty() : this.loaIssueTime;
     }
 
     /**
@@ -98,10 +98,10 @@ public final class HostedConnectionState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -109,10 +109,10 @@ public final class HostedConnectionState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -120,10 +120,10 @@ public final class HostedConnectionState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="ownerAccountId")
-      private final @Nullable Input<String> ownerAccountId;
+      private final @Nullable Output<String> ownerAccountId;
 
-    public Input<String> getOwnerAccountId() {
-        return this.ownerAccountId == null ? Input.empty() : this.ownerAccountId;
+    public Output<String> getOwnerAccountId() {
+        return this.ownerAccountId == null ? Output.empty() : this.ownerAccountId;
     }
 
     /**
@@ -131,10 +131,10 @@ public final class HostedConnectionState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="partnerName")
-      private final @Nullable Input<String> partnerName;
+      private final @Nullable Output<String> partnerName;
 
-    public Input<String> getPartnerName() {
-        return this.partnerName == null ? Input.empty() : this.partnerName;
+    public Output<String> getPartnerName() {
+        return this.partnerName == null ? Output.empty() : this.partnerName;
     }
 
     /**
@@ -142,10 +142,10 @@ public final class HostedConnectionState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="providerName")
-      private final @Nullable Input<String> providerName;
+      private final @Nullable Output<String> providerName;
 
-    public Input<String> getProviderName() {
-        return this.providerName == null ? Input.empty() : this.providerName;
+    public Output<String> getProviderName() {
+        return this.providerName == null ? Output.empty() : this.providerName;
     }
 
     /**
@@ -153,10 +153,10 @@ public final class HostedConnectionState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="region")
-      private final @Nullable Input<String> region;
+      private final @Nullable Output<String> region;
 
-    public Input<String> getRegion() {
-        return this.region == null ? Input.empty() : this.region;
+    public Output<String> getRegion() {
+        return this.region == null ? Output.empty() : this.region;
     }
 
     /**
@@ -164,10 +164,10 @@ public final class HostedConnectionState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="state")
-      private final @Nullable Input<String> state;
+      private final @Nullable Output<String> state;
 
-    public Input<String> getState() {
-        return this.state == null ? Input.empty() : this.state;
+    public Output<String> getState() {
+        return this.state == null ? Output.empty() : this.state;
     }
 
     /**
@@ -175,28 +175,28 @@ public final class HostedConnectionState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="vlan")
-      private final @Nullable Input<Integer> vlan;
+      private final @Nullable Output<Integer> vlan;
 
-    public Input<Integer> getVlan() {
-        return this.vlan == null ? Input.empty() : this.vlan;
+    public Output<Integer> getVlan() {
+        return this.vlan == null ? Output.empty() : this.vlan;
     }
 
     public HostedConnectionState(
-        @Nullable Input<String> awsDevice,
-        @Nullable Input<String> bandwidth,
-        @Nullable Input<String> connectionId,
-        @Nullable Input<String> hasLogicalRedundancy,
-        @Nullable Input<Boolean> jumboFrameCapable,
-        @Nullable Input<String> lagId,
-        @Nullable Input<String> loaIssueTime,
-        @Nullable Input<String> location,
-        @Nullable Input<String> name,
-        @Nullable Input<String> ownerAccountId,
-        @Nullable Input<String> partnerName,
-        @Nullable Input<String> providerName,
-        @Nullable Input<String> region,
-        @Nullable Input<String> state,
-        @Nullable Input<Integer> vlan) {
+        @Nullable Output<String> awsDevice,
+        @Nullable Output<String> bandwidth,
+        @Nullable Output<String> connectionId,
+        @Nullable Output<String> hasLogicalRedundancy,
+        @Nullable Output<Boolean> jumboFrameCapable,
+        @Nullable Output<String> lagId,
+        @Nullable Output<String> loaIssueTime,
+        @Nullable Output<String> location,
+        @Nullable Output<String> name,
+        @Nullable Output<String> ownerAccountId,
+        @Nullable Output<String> partnerName,
+        @Nullable Output<String> providerName,
+        @Nullable Output<String> region,
+        @Nullable Output<String> state,
+        @Nullable Output<Integer> vlan) {
         this.awsDevice = awsDevice;
         this.bandwidth = bandwidth;
         this.connectionId = connectionId;
@@ -215,21 +215,21 @@ public final class HostedConnectionState extends io.pulumi.resources.ResourceArg
     }
 
     private HostedConnectionState() {
-        this.awsDevice = Input.empty();
-        this.bandwidth = Input.empty();
-        this.connectionId = Input.empty();
-        this.hasLogicalRedundancy = Input.empty();
-        this.jumboFrameCapable = Input.empty();
-        this.lagId = Input.empty();
-        this.loaIssueTime = Input.empty();
-        this.location = Input.empty();
-        this.name = Input.empty();
-        this.ownerAccountId = Input.empty();
-        this.partnerName = Input.empty();
-        this.providerName = Input.empty();
-        this.region = Input.empty();
-        this.state = Input.empty();
-        this.vlan = Input.empty();
+        this.awsDevice = Output.empty();
+        this.bandwidth = Output.empty();
+        this.connectionId = Output.empty();
+        this.hasLogicalRedundancy = Output.empty();
+        this.jumboFrameCapable = Output.empty();
+        this.lagId = Output.empty();
+        this.loaIssueTime = Output.empty();
+        this.location = Output.empty();
+        this.name = Output.empty();
+        this.ownerAccountId = Output.empty();
+        this.partnerName = Output.empty();
+        this.providerName = Output.empty();
+        this.region = Output.empty();
+        this.state = Output.empty();
+        this.vlan = Output.empty();
     }
 
     public static Builder builder() {
@@ -241,21 +241,21 @@ public final class HostedConnectionState extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private @Nullable Input<String> awsDevice;
-        private @Nullable Input<String> bandwidth;
-        private @Nullable Input<String> connectionId;
-        private @Nullable Input<String> hasLogicalRedundancy;
-        private @Nullable Input<Boolean> jumboFrameCapable;
-        private @Nullable Input<String> lagId;
-        private @Nullable Input<String> loaIssueTime;
-        private @Nullable Input<String> location;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> ownerAccountId;
-        private @Nullable Input<String> partnerName;
-        private @Nullable Input<String> providerName;
-        private @Nullable Input<String> region;
-        private @Nullable Input<String> state;
-        private @Nullable Input<Integer> vlan;
+        private @Nullable Output<String> awsDevice;
+        private @Nullable Output<String> bandwidth;
+        private @Nullable Output<String> connectionId;
+        private @Nullable Output<String> hasLogicalRedundancy;
+        private @Nullable Output<Boolean> jumboFrameCapable;
+        private @Nullable Output<String> lagId;
+        private @Nullable Output<String> loaIssueTime;
+        private @Nullable Output<String> location;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> ownerAccountId;
+        private @Nullable Output<String> partnerName;
+        private @Nullable Output<String> providerName;
+        private @Nullable Output<String> region;
+        private @Nullable Output<String> state;
+        private @Nullable Output<Integer> vlan;
 
         public Builder() {
     	      // Empty
@@ -280,153 +280,153 @@ public final class HostedConnectionState extends io.pulumi.resources.ResourceArg
     	      this.vlan = defaults.vlan;
         }
 
-        public Builder awsDevice(@Nullable Input<String> awsDevice) {
+        public Builder awsDevice(@Nullable Output<String> awsDevice) {
             this.awsDevice = awsDevice;
             return this;
         }
 
         public Builder awsDevice(@Nullable String awsDevice) {
-            this.awsDevice = Input.ofNullable(awsDevice);
+            this.awsDevice = Output.ofNullable(awsDevice);
             return this;
         }
 
-        public Builder bandwidth(@Nullable Input<String> bandwidth) {
+        public Builder bandwidth(@Nullable Output<String> bandwidth) {
             this.bandwidth = bandwidth;
             return this;
         }
 
         public Builder bandwidth(@Nullable String bandwidth) {
-            this.bandwidth = Input.ofNullable(bandwidth);
+            this.bandwidth = Output.ofNullable(bandwidth);
             return this;
         }
 
-        public Builder connectionId(@Nullable Input<String> connectionId) {
+        public Builder connectionId(@Nullable Output<String> connectionId) {
             this.connectionId = connectionId;
             return this;
         }
 
         public Builder connectionId(@Nullable String connectionId) {
-            this.connectionId = Input.ofNullable(connectionId);
+            this.connectionId = Output.ofNullable(connectionId);
             return this;
         }
 
-        public Builder hasLogicalRedundancy(@Nullable Input<String> hasLogicalRedundancy) {
+        public Builder hasLogicalRedundancy(@Nullable Output<String> hasLogicalRedundancy) {
             this.hasLogicalRedundancy = hasLogicalRedundancy;
             return this;
         }
 
         public Builder hasLogicalRedundancy(@Nullable String hasLogicalRedundancy) {
-            this.hasLogicalRedundancy = Input.ofNullable(hasLogicalRedundancy);
+            this.hasLogicalRedundancy = Output.ofNullable(hasLogicalRedundancy);
             return this;
         }
 
-        public Builder jumboFrameCapable(@Nullable Input<Boolean> jumboFrameCapable) {
+        public Builder jumboFrameCapable(@Nullable Output<Boolean> jumboFrameCapable) {
             this.jumboFrameCapable = jumboFrameCapable;
             return this;
         }
 
         public Builder jumboFrameCapable(@Nullable Boolean jumboFrameCapable) {
-            this.jumboFrameCapable = Input.ofNullable(jumboFrameCapable);
+            this.jumboFrameCapable = Output.ofNullable(jumboFrameCapable);
             return this;
         }
 
-        public Builder lagId(@Nullable Input<String> lagId) {
+        public Builder lagId(@Nullable Output<String> lagId) {
             this.lagId = lagId;
             return this;
         }
 
         public Builder lagId(@Nullable String lagId) {
-            this.lagId = Input.ofNullable(lagId);
+            this.lagId = Output.ofNullable(lagId);
             return this;
         }
 
-        public Builder loaIssueTime(@Nullable Input<String> loaIssueTime) {
+        public Builder loaIssueTime(@Nullable Output<String> loaIssueTime) {
             this.loaIssueTime = loaIssueTime;
             return this;
         }
 
         public Builder loaIssueTime(@Nullable String loaIssueTime) {
-            this.loaIssueTime = Input.ofNullable(loaIssueTime);
+            this.loaIssueTime = Output.ofNullable(loaIssueTime);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder ownerAccountId(@Nullable Input<String> ownerAccountId) {
+        public Builder ownerAccountId(@Nullable Output<String> ownerAccountId) {
             this.ownerAccountId = ownerAccountId;
             return this;
         }
 
         public Builder ownerAccountId(@Nullable String ownerAccountId) {
-            this.ownerAccountId = Input.ofNullable(ownerAccountId);
+            this.ownerAccountId = Output.ofNullable(ownerAccountId);
             return this;
         }
 
-        public Builder partnerName(@Nullable Input<String> partnerName) {
+        public Builder partnerName(@Nullable Output<String> partnerName) {
             this.partnerName = partnerName;
             return this;
         }
 
         public Builder partnerName(@Nullable String partnerName) {
-            this.partnerName = Input.ofNullable(partnerName);
+            this.partnerName = Output.ofNullable(partnerName);
             return this;
         }
 
-        public Builder providerName(@Nullable Input<String> providerName) {
+        public Builder providerName(@Nullable Output<String> providerName) {
             this.providerName = providerName;
             return this;
         }
 
         public Builder providerName(@Nullable String providerName) {
-            this.providerName = Input.ofNullable(providerName);
+            this.providerName = Output.ofNullable(providerName);
             return this;
         }
 
-        public Builder region(@Nullable Input<String> region) {
+        public Builder region(@Nullable Output<String> region) {
             this.region = region;
             return this;
         }
 
         public Builder region(@Nullable String region) {
-            this.region = Input.ofNullable(region);
+            this.region = Output.ofNullable(region);
             return this;
         }
 
-        public Builder state(@Nullable Input<String> state) {
+        public Builder state(@Nullable Output<String> state) {
             this.state = state;
             return this;
         }
 
         public Builder state(@Nullable String state) {
-            this.state = Input.ofNullable(state);
+            this.state = Output.ofNullable(state);
             return this;
         }
 
-        public Builder vlan(@Nullable Input<Integer> vlan) {
+        public Builder vlan(@Nullable Output<Integer> vlan) {
             this.vlan = vlan;
             return this;
         }
 
         public Builder vlan(@Nullable Integer vlan) {
-            this.vlan = Input.ofNullable(vlan);
+            this.vlan = Output.ofNullable(vlan);
             return this;
         }
         public HostedConnectionState build() {

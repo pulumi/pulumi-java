@@ -3,7 +3,7 @@
 
 package io.pulumi.docker;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.docker.inputs.RemoteImageBuildArgs;
 import java.lang.Boolean;
@@ -23,10 +23,10 @@ public final class RemoteImageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="build")
-      private final @Nullable Input<RemoteImageBuildArgs> build;
+      private final @Nullable Output<RemoteImageBuildArgs> build;
 
-    public Input<RemoteImageBuildArgs> getBuild() {
-        return this.build == null ? Input.empty() : this.build;
+    public Output<RemoteImageBuildArgs> getBuild() {
+        return this.build == null ? Output.empty() : this.build;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class RemoteImageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="forceRemove")
-      private final @Nullable Input<Boolean> forceRemove;
+      private final @Nullable Output<Boolean> forceRemove;
 
-    public Input<Boolean> getForceRemove() {
-        return this.forceRemove == null ? Input.empty() : this.forceRemove;
+    public Output<Boolean> getForceRemove() {
+        return this.forceRemove == null ? Output.empty() : this.forceRemove;
     }
 
     /**
@@ -46,10 +46,10 @@ public final class RemoteImageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="keepLocally")
-      private final @Nullable Input<Boolean> keepLocally;
+      private final @Nullable Output<Boolean> keepLocally;
 
-    public Input<Boolean> getKeepLocally() {
-        return this.keepLocally == null ? Input.empty() : this.keepLocally;
+    public Output<Boolean> getKeepLocally() {
+        return this.keepLocally == null ? Output.empty() : this.keepLocally;
     }
 
     /**
@@ -57,9 +57,9 @@ public final class RemoteImageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name", required=true)
-      private final Input<String> name;
+      private final Output<String> name;
 
-    public Input<String> getName() {
+    public Output<String> getName() {
         return this.name;
     }
 
@@ -72,11 +72,11 @@ public final class RemoteImageArgs extends io.pulumi.resources.ResourceArgs {
      */
     @Deprecated /* Use field pull_triggers instead */
     @InputImport(name="pullTrigger")
-      private final @Nullable Input<String> pullTrigger;
+      private final @Nullable Output<String> pullTrigger;
 
     @Deprecated /* Use field pull_triggers instead */
-    public Input<String> getPullTrigger() {
-        return this.pullTrigger == null ? Input.empty() : this.pullTrigger;
+    public Output<String> getPullTrigger() {
+        return this.pullTrigger == null ? Output.empty() : this.pullTrigger;
     }
 
     /**
@@ -85,19 +85,19 @@ public final class RemoteImageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="pullTriggers")
-      private final @Nullable Input<List<String>> pullTriggers;
+      private final @Nullable Output<List<String>> pullTriggers;
 
-    public Input<List<String>> getPullTriggers() {
-        return this.pullTriggers == null ? Input.empty() : this.pullTriggers;
+    public Output<List<String>> getPullTriggers() {
+        return this.pullTriggers == null ? Output.empty() : this.pullTriggers;
     }
 
     public RemoteImageArgs(
-        @Nullable Input<RemoteImageBuildArgs> build,
-        @Nullable Input<Boolean> forceRemove,
-        @Nullable Input<Boolean> keepLocally,
-        Input<String> name,
-        @Nullable Input<String> pullTrigger,
-        @Nullable Input<List<String>> pullTriggers) {
+        @Nullable Output<RemoteImageBuildArgs> build,
+        @Nullable Output<Boolean> forceRemove,
+        @Nullable Output<Boolean> keepLocally,
+        Output<String> name,
+        @Nullable Output<String> pullTrigger,
+        @Nullable Output<List<String>> pullTriggers) {
         this.build = build;
         this.forceRemove = forceRemove;
         this.keepLocally = keepLocally;
@@ -107,12 +107,12 @@ public final class RemoteImageArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private RemoteImageArgs() {
-        this.build = Input.empty();
-        this.forceRemove = Input.empty();
-        this.keepLocally = Input.empty();
-        this.name = Input.empty();
-        this.pullTrigger = Input.empty();
-        this.pullTriggers = Input.empty();
+        this.build = Output.empty();
+        this.forceRemove = Output.empty();
+        this.keepLocally = Output.empty();
+        this.name = Output.empty();
+        this.pullTrigger = Output.empty();
+        this.pullTriggers = Output.empty();
     }
 
     public static Builder builder() {
@@ -124,12 +124,12 @@ public final class RemoteImageArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<RemoteImageBuildArgs> build;
-        private @Nullable Input<Boolean> forceRemove;
-        private @Nullable Input<Boolean> keepLocally;
-        private Input<String> name;
-        private @Nullable Input<String> pullTrigger;
-        private @Nullable Input<List<String>> pullTriggers;
+        private @Nullable Output<RemoteImageBuildArgs> build;
+        private @Nullable Output<Boolean> forceRemove;
+        private @Nullable Output<Boolean> keepLocally;
+        private Output<String> name;
+        private @Nullable Output<String> pullTrigger;
+        private @Nullable Output<List<String>> pullTriggers;
 
         public Builder() {
     	      // Empty
@@ -145,63 +145,63 @@ public final class RemoteImageArgs extends io.pulumi.resources.ResourceArgs {
     	      this.pullTriggers = defaults.pullTriggers;
         }
 
-        public Builder build(@Nullable Input<RemoteImageBuildArgs> build) {
+        public Builder build(@Nullable Output<RemoteImageBuildArgs> build) {
             this.build = build;
             return this;
         }
 
         public Builder build(@Nullable RemoteImageBuildArgs build) {
-            this.build = Input.ofNullable(build);
+            this.build = Output.ofNullable(build);
             return this;
         }
 
-        public Builder forceRemove(@Nullable Input<Boolean> forceRemove) {
+        public Builder forceRemove(@Nullable Output<Boolean> forceRemove) {
             this.forceRemove = forceRemove;
             return this;
         }
 
         public Builder forceRemove(@Nullable Boolean forceRemove) {
-            this.forceRemove = Input.ofNullable(forceRemove);
+            this.forceRemove = Output.ofNullable(forceRemove);
             return this;
         }
 
-        public Builder keepLocally(@Nullable Input<Boolean> keepLocally) {
+        public Builder keepLocally(@Nullable Output<Boolean> keepLocally) {
             this.keepLocally = keepLocally;
             return this;
         }
 
         public Builder keepLocally(@Nullable Boolean keepLocally) {
-            this.keepLocally = Input.ofNullable(keepLocally);
+            this.keepLocally = Output.ofNullable(keepLocally);
             return this;
         }
 
-        public Builder name(Input<String> name) {
+        public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(String name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder pullTrigger(@Nullable Input<String> pullTrigger) {
+        public Builder pullTrigger(@Nullable Output<String> pullTrigger) {
             this.pullTrigger = pullTrigger;
             return this;
         }
 
         public Builder pullTrigger(@Nullable String pullTrigger) {
-            this.pullTrigger = Input.ofNullable(pullTrigger);
+            this.pullTrigger = Output.ofNullable(pullTrigger);
             return this;
         }
 
-        public Builder pullTriggers(@Nullable Input<List<String>> pullTriggers) {
+        public Builder pullTriggers(@Nullable Output<List<String>> pullTriggers) {
             this.pullTriggers = pullTriggers;
             return this;
         }
 
         public Builder pullTriggers(@Nullable List<String> pullTriggers) {
-            this.pullTriggers = Input.ofNullable(pullTriggers);
+            this.pullTriggers = Output.ofNullable(pullTriggers);
             return this;
         }
         public RemoteImageArgs build() {

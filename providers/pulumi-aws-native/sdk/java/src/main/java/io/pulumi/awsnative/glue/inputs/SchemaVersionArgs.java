@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.glue.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -24,10 +24,10 @@ public final class SchemaVersionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="isLatest")
-      private final @Nullable Input<Boolean> isLatest;
+      private final @Nullable Output<Boolean> isLatest;
 
-    public Input<Boolean> getIsLatest() {
-        return this.isLatest == null ? Input.empty() : this.isLatest;
+    public Output<Boolean> getIsLatest() {
+        return this.isLatest == null ? Output.empty() : this.isLatest;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class SchemaVersionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="versionNumber")
-      private final @Nullable Input<Integer> versionNumber;
+      private final @Nullable Output<Integer> versionNumber;
 
-    public Input<Integer> getVersionNumber() {
-        return this.versionNumber == null ? Input.empty() : this.versionNumber;
+    public Output<Integer> getVersionNumber() {
+        return this.versionNumber == null ? Output.empty() : this.versionNumber;
     }
 
     public SchemaVersionArgs(
-        @Nullable Input<Boolean> isLatest,
-        @Nullable Input<Integer> versionNumber) {
+        @Nullable Output<Boolean> isLatest,
+        @Nullable Output<Integer> versionNumber) {
         this.isLatest = isLatest;
         this.versionNumber = versionNumber;
     }
 
     private SchemaVersionArgs() {
-        this.isLatest = Input.empty();
-        this.versionNumber = Input.empty();
+        this.isLatest = Output.empty();
+        this.versionNumber = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class SchemaVersionArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> isLatest;
-        private @Nullable Input<Integer> versionNumber;
+        private @Nullable Output<Boolean> isLatest;
+        private @Nullable Output<Integer> versionNumber;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class SchemaVersionArgs extends io.pulumi.resources.ResourceArgs {
     	      this.versionNumber = defaults.versionNumber;
         }
 
-        public Builder isLatest(@Nullable Input<Boolean> isLatest) {
+        public Builder isLatest(@Nullable Output<Boolean> isLatest) {
             this.isLatest = isLatest;
             return this;
         }
 
         public Builder isLatest(@Nullable Boolean isLatest) {
-            this.isLatest = Input.ofNullable(isLatest);
+            this.isLatest = Output.ofNullable(isLatest);
             return this;
         }
 
-        public Builder versionNumber(@Nullable Input<Integer> versionNumber) {
+        public Builder versionNumber(@Nullable Output<Integer> versionNumber) {
             this.versionNumber = versionNumber;
             return this;
         }
 
         public Builder versionNumber(@Nullable Integer versionNumber) {
-            this.versionNumber = Input.ofNullable(versionNumber);
+            this.versionNumber = Output.ofNullable(versionNumber);
             return this;
         }
         public SchemaVersionArgs build() {

@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.ecs.inputs;
 
 import io.pulumi.awsnative.ecs.inputs.ClusterExecuteCommandLogConfigurationArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -20,39 +20,39 @@ public final class ClusterExecuteCommandConfigurationArgs extends io.pulumi.reso
     public static final ClusterExecuteCommandConfigurationArgs Empty = new ClusterExecuteCommandConfigurationArgs();
 
     @InputImport(name="kmsKeyId")
-      private final @Nullable Input<String> kmsKeyId;
+      private final @Nullable Output<String> kmsKeyId;
 
-    public Input<String> getKmsKeyId() {
-        return this.kmsKeyId == null ? Input.empty() : this.kmsKeyId;
+    public Output<String> getKmsKeyId() {
+        return this.kmsKeyId == null ? Output.empty() : this.kmsKeyId;
     }
 
     @InputImport(name="logConfiguration")
-      private final @Nullable Input<ClusterExecuteCommandLogConfigurationArgs> logConfiguration;
+      private final @Nullable Output<ClusterExecuteCommandLogConfigurationArgs> logConfiguration;
 
-    public Input<ClusterExecuteCommandLogConfigurationArgs> getLogConfiguration() {
-        return this.logConfiguration == null ? Input.empty() : this.logConfiguration;
+    public Output<ClusterExecuteCommandLogConfigurationArgs> getLogConfiguration() {
+        return this.logConfiguration == null ? Output.empty() : this.logConfiguration;
     }
 
     @InputImport(name="logging")
-      private final @Nullable Input<String> logging;
+      private final @Nullable Output<String> logging;
 
-    public Input<String> getLogging() {
-        return this.logging == null ? Input.empty() : this.logging;
+    public Output<String> getLogging() {
+        return this.logging == null ? Output.empty() : this.logging;
     }
 
     public ClusterExecuteCommandConfigurationArgs(
-        @Nullable Input<String> kmsKeyId,
-        @Nullable Input<ClusterExecuteCommandLogConfigurationArgs> logConfiguration,
-        @Nullable Input<String> logging) {
+        @Nullable Output<String> kmsKeyId,
+        @Nullable Output<ClusterExecuteCommandLogConfigurationArgs> logConfiguration,
+        @Nullable Output<String> logging) {
         this.kmsKeyId = kmsKeyId;
         this.logConfiguration = logConfiguration;
         this.logging = logging;
     }
 
     private ClusterExecuteCommandConfigurationArgs() {
-        this.kmsKeyId = Input.empty();
-        this.logConfiguration = Input.empty();
-        this.logging = Input.empty();
+        this.kmsKeyId = Output.empty();
+        this.logConfiguration = Output.empty();
+        this.logging = Output.empty();
     }
 
     public static Builder builder() {
@@ -64,9 +64,9 @@ public final class ClusterExecuteCommandConfigurationArgs extends io.pulumi.reso
     }
 
     public static final class Builder {
-        private @Nullable Input<String> kmsKeyId;
-        private @Nullable Input<ClusterExecuteCommandLogConfigurationArgs> logConfiguration;
-        private @Nullable Input<String> logging;
+        private @Nullable Output<String> kmsKeyId;
+        private @Nullable Output<ClusterExecuteCommandLogConfigurationArgs> logConfiguration;
+        private @Nullable Output<String> logging;
 
         public Builder() {
     	      // Empty
@@ -79,33 +79,33 @@ public final class ClusterExecuteCommandConfigurationArgs extends io.pulumi.reso
     	      this.logging = defaults.logging;
         }
 
-        public Builder kmsKeyId(@Nullable Input<String> kmsKeyId) {
+        public Builder kmsKeyId(@Nullable Output<String> kmsKeyId) {
             this.kmsKeyId = kmsKeyId;
             return this;
         }
 
         public Builder kmsKeyId(@Nullable String kmsKeyId) {
-            this.kmsKeyId = Input.ofNullable(kmsKeyId);
+            this.kmsKeyId = Output.ofNullable(kmsKeyId);
             return this;
         }
 
-        public Builder logConfiguration(@Nullable Input<ClusterExecuteCommandLogConfigurationArgs> logConfiguration) {
+        public Builder logConfiguration(@Nullable Output<ClusterExecuteCommandLogConfigurationArgs> logConfiguration) {
             this.logConfiguration = logConfiguration;
             return this;
         }
 
         public Builder logConfiguration(@Nullable ClusterExecuteCommandLogConfigurationArgs logConfiguration) {
-            this.logConfiguration = Input.ofNullable(logConfiguration);
+            this.logConfiguration = Output.ofNullable(logConfiguration);
             return this;
         }
 
-        public Builder logging(@Nullable Input<String> logging) {
+        public Builder logging(@Nullable Output<String> logging) {
             this.logging = logging;
             return this;
         }
 
         public Builder logging(@Nullable String logging) {
-            this.logging = Input.ofNullable(logging);
+            this.logging = Output.ofNullable(logging);
             return this;
         }
         public ClusterExecuteCommandConfigurationArgs build() {

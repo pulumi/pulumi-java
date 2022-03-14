@@ -3,7 +3,7 @@
 
 package io.pulumi.docker.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -16,46 +16,46 @@ public final class ContainerVolumeGetArgs extends io.pulumi.resources.ResourceAr
     public static final ContainerVolumeGetArgs Empty = new ContainerVolumeGetArgs();
 
     @InputImport(name="containerPath")
-      private final @Nullable Input<String> containerPath;
+      private final @Nullable Output<String> containerPath;
 
-    public Input<String> getContainerPath() {
-        return this.containerPath == null ? Input.empty() : this.containerPath;
+    public Output<String> getContainerPath() {
+        return this.containerPath == null ? Output.empty() : this.containerPath;
     }
 
     @InputImport(name="fromContainer")
-      private final @Nullable Input<String> fromContainer;
+      private final @Nullable Output<String> fromContainer;
 
-    public Input<String> getFromContainer() {
-        return this.fromContainer == null ? Input.empty() : this.fromContainer;
+    public Output<String> getFromContainer() {
+        return this.fromContainer == null ? Output.empty() : this.fromContainer;
     }
 
     @InputImport(name="hostPath")
-      private final @Nullable Input<String> hostPath;
+      private final @Nullable Output<String> hostPath;
 
-    public Input<String> getHostPath() {
-        return this.hostPath == null ? Input.empty() : this.hostPath;
+    public Output<String> getHostPath() {
+        return this.hostPath == null ? Output.empty() : this.hostPath;
     }
 
     @InputImport(name="readOnly")
-      private final @Nullable Input<Boolean> readOnly;
+      private final @Nullable Output<Boolean> readOnly;
 
-    public Input<Boolean> getReadOnly() {
-        return this.readOnly == null ? Input.empty() : this.readOnly;
+    public Output<Boolean> getReadOnly() {
+        return this.readOnly == null ? Output.empty() : this.readOnly;
     }
 
     @InputImport(name="volumeName")
-      private final @Nullable Input<String> volumeName;
+      private final @Nullable Output<String> volumeName;
 
-    public Input<String> getVolumeName() {
-        return this.volumeName == null ? Input.empty() : this.volumeName;
+    public Output<String> getVolumeName() {
+        return this.volumeName == null ? Output.empty() : this.volumeName;
     }
 
     public ContainerVolumeGetArgs(
-        @Nullable Input<String> containerPath,
-        @Nullable Input<String> fromContainer,
-        @Nullable Input<String> hostPath,
-        @Nullable Input<Boolean> readOnly,
-        @Nullable Input<String> volumeName) {
+        @Nullable Output<String> containerPath,
+        @Nullable Output<String> fromContainer,
+        @Nullable Output<String> hostPath,
+        @Nullable Output<Boolean> readOnly,
+        @Nullable Output<String> volumeName) {
         this.containerPath = containerPath;
         this.fromContainer = fromContainer;
         this.hostPath = hostPath;
@@ -64,11 +64,11 @@ public final class ContainerVolumeGetArgs extends io.pulumi.resources.ResourceAr
     }
 
     private ContainerVolumeGetArgs() {
-        this.containerPath = Input.empty();
-        this.fromContainer = Input.empty();
-        this.hostPath = Input.empty();
-        this.readOnly = Input.empty();
-        this.volumeName = Input.empty();
+        this.containerPath = Output.empty();
+        this.fromContainer = Output.empty();
+        this.hostPath = Output.empty();
+        this.readOnly = Output.empty();
+        this.volumeName = Output.empty();
     }
 
     public static Builder builder() {
@@ -80,11 +80,11 @@ public final class ContainerVolumeGetArgs extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private @Nullable Input<String> containerPath;
-        private @Nullable Input<String> fromContainer;
-        private @Nullable Input<String> hostPath;
-        private @Nullable Input<Boolean> readOnly;
-        private @Nullable Input<String> volumeName;
+        private @Nullable Output<String> containerPath;
+        private @Nullable Output<String> fromContainer;
+        private @Nullable Output<String> hostPath;
+        private @Nullable Output<Boolean> readOnly;
+        private @Nullable Output<String> volumeName;
 
         public Builder() {
     	      // Empty
@@ -99,53 +99,53 @@ public final class ContainerVolumeGetArgs extends io.pulumi.resources.ResourceAr
     	      this.volumeName = defaults.volumeName;
         }
 
-        public Builder containerPath(@Nullable Input<String> containerPath) {
+        public Builder containerPath(@Nullable Output<String> containerPath) {
             this.containerPath = containerPath;
             return this;
         }
 
         public Builder containerPath(@Nullable String containerPath) {
-            this.containerPath = Input.ofNullable(containerPath);
+            this.containerPath = Output.ofNullable(containerPath);
             return this;
         }
 
-        public Builder fromContainer(@Nullable Input<String> fromContainer) {
+        public Builder fromContainer(@Nullable Output<String> fromContainer) {
             this.fromContainer = fromContainer;
             return this;
         }
 
         public Builder fromContainer(@Nullable String fromContainer) {
-            this.fromContainer = Input.ofNullable(fromContainer);
+            this.fromContainer = Output.ofNullable(fromContainer);
             return this;
         }
 
-        public Builder hostPath(@Nullable Input<String> hostPath) {
+        public Builder hostPath(@Nullable Output<String> hostPath) {
             this.hostPath = hostPath;
             return this;
         }
 
         public Builder hostPath(@Nullable String hostPath) {
-            this.hostPath = Input.ofNullable(hostPath);
+            this.hostPath = Output.ofNullable(hostPath);
             return this;
         }
 
-        public Builder readOnly(@Nullable Input<Boolean> readOnly) {
+        public Builder readOnly(@Nullable Output<Boolean> readOnly) {
             this.readOnly = readOnly;
             return this;
         }
 
         public Builder readOnly(@Nullable Boolean readOnly) {
-            this.readOnly = Input.ofNullable(readOnly);
+            this.readOnly = Output.ofNullable(readOnly);
             return this;
         }
 
-        public Builder volumeName(@Nullable Input<String> volumeName) {
+        public Builder volumeName(@Nullable Output<String> volumeName) {
             this.volumeName = volumeName;
             return this;
         }
 
         public Builder volumeName(@Nullable String volumeName) {
-            this.volumeName = Input.ofNullable(volumeName);
+            this.volumeName = Output.ofNullable(volumeName);
             return this;
         }
         public ContainerVolumeGetArgs build() {

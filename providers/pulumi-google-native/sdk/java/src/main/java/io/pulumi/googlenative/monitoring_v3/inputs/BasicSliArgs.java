@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.monitoring_v3.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.monitoring_v3.inputs.AvailabilityCriteriaArgs;
 import io.pulumi.googlenative.monitoring_v3.inputs.LatencyCriteriaArgs;
@@ -26,10 +26,10 @@ public final class BasicSliArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="availability")
-      private final @Nullable Input<AvailabilityCriteriaArgs> availability;
+      private final @Nullable Output<AvailabilityCriteriaArgs> availability;
 
-    public Input<AvailabilityCriteriaArgs> getAvailability() {
-        return this.availability == null ? Input.empty() : this.availability;
+    public Output<AvailabilityCriteriaArgs> getAvailability() {
+        return this.availability == null ? Output.empty() : this.availability;
     }
 
     /**
@@ -37,10 +37,10 @@ public final class BasicSliArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="latency")
-      private final @Nullable Input<LatencyCriteriaArgs> latency;
+      private final @Nullable Output<LatencyCriteriaArgs> latency;
 
-    public Input<LatencyCriteriaArgs> getLatency() {
-        return this.latency == null ? Input.empty() : this.latency;
+    public Output<LatencyCriteriaArgs> getLatency() {
+        return this.latency == null ? Output.empty() : this.latency;
     }
 
     /**
@@ -48,10 +48,10 @@ public final class BasicSliArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<List<String>> location;
+      private final @Nullable Output<List<String>> location;
 
-    public Input<List<String>> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<List<String>> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -59,10 +59,10 @@ public final class BasicSliArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="method")
-      private final @Nullable Input<List<String>> method;
+      private final @Nullable Output<List<String>> method;
 
-    public Input<List<String>> getMethod() {
-        return this.method == null ? Input.empty() : this.method;
+    public Output<List<String>> getMethod() {
+        return this.method == null ? Output.empty() : this.method;
     }
 
     /**
@@ -70,18 +70,18 @@ public final class BasicSliArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="version")
-      private final @Nullable Input<List<String>> version;
+      private final @Nullable Output<List<String>> version;
 
-    public Input<List<String>> getVersion() {
-        return this.version == null ? Input.empty() : this.version;
+    public Output<List<String>> getVersion() {
+        return this.version == null ? Output.empty() : this.version;
     }
 
     public BasicSliArgs(
-        @Nullable Input<AvailabilityCriteriaArgs> availability,
-        @Nullable Input<LatencyCriteriaArgs> latency,
-        @Nullable Input<List<String>> location,
-        @Nullable Input<List<String>> method,
-        @Nullable Input<List<String>> version) {
+        @Nullable Output<AvailabilityCriteriaArgs> availability,
+        @Nullable Output<LatencyCriteriaArgs> latency,
+        @Nullable Output<List<String>> location,
+        @Nullable Output<List<String>> method,
+        @Nullable Output<List<String>> version) {
         this.availability = availability;
         this.latency = latency;
         this.location = location;
@@ -90,11 +90,11 @@ public final class BasicSliArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private BasicSliArgs() {
-        this.availability = Input.empty();
-        this.latency = Input.empty();
-        this.location = Input.empty();
-        this.method = Input.empty();
-        this.version = Input.empty();
+        this.availability = Output.empty();
+        this.latency = Output.empty();
+        this.location = Output.empty();
+        this.method = Output.empty();
+        this.version = Output.empty();
     }
 
     public static Builder builder() {
@@ -106,11 +106,11 @@ public final class BasicSliArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<AvailabilityCriteriaArgs> availability;
-        private @Nullable Input<LatencyCriteriaArgs> latency;
-        private @Nullable Input<List<String>> location;
-        private @Nullable Input<List<String>> method;
-        private @Nullable Input<List<String>> version;
+        private @Nullable Output<AvailabilityCriteriaArgs> availability;
+        private @Nullable Output<LatencyCriteriaArgs> latency;
+        private @Nullable Output<List<String>> location;
+        private @Nullable Output<List<String>> method;
+        private @Nullable Output<List<String>> version;
 
         public Builder() {
     	      // Empty
@@ -125,53 +125,53 @@ public final class BasicSliArgs extends io.pulumi.resources.ResourceArgs {
     	      this.version = defaults.version;
         }
 
-        public Builder availability(@Nullable Input<AvailabilityCriteriaArgs> availability) {
+        public Builder availability(@Nullable Output<AvailabilityCriteriaArgs> availability) {
             this.availability = availability;
             return this;
         }
 
         public Builder availability(@Nullable AvailabilityCriteriaArgs availability) {
-            this.availability = Input.ofNullable(availability);
+            this.availability = Output.ofNullable(availability);
             return this;
         }
 
-        public Builder latency(@Nullable Input<LatencyCriteriaArgs> latency) {
+        public Builder latency(@Nullable Output<LatencyCriteriaArgs> latency) {
             this.latency = latency;
             return this;
         }
 
         public Builder latency(@Nullable LatencyCriteriaArgs latency) {
-            this.latency = Input.ofNullable(latency);
+            this.latency = Output.ofNullable(latency);
             return this;
         }
 
-        public Builder location(@Nullable Input<List<String>> location) {
+        public Builder location(@Nullable Output<List<String>> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable List<String> location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder method(@Nullable Input<List<String>> method) {
+        public Builder method(@Nullable Output<List<String>> method) {
             this.method = method;
             return this;
         }
 
         public Builder method(@Nullable List<String> method) {
-            this.method = Input.ofNullable(method);
+            this.method = Output.ofNullable(method);
             return this;
         }
 
-        public Builder version(@Nullable Input<List<String>> version) {
+        public Builder version(@Nullable Output<List<String>> version) {
             this.version = version;
             return this;
         }
 
         public Builder version(@Nullable List<String> version) {
-            this.version = Input.ofNullable(version);
+            this.version = Output.ofNullable(version);
             return this;
         }
         public BasicSliArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.storage.k8s.io_v1beta1;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.kubernetes.meta_v1.inputs.ObjectMetaArgs;
 import io.pulumi.kubernetes.storage.k8s.io_v1beta1.inputs.VolumeAttachmentSpecArgs;
@@ -21,10 +21,10 @@ public final class VolumeAttachmentArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="apiVersion")
-      private final @Nullable Input<String> apiVersion;
+      private final @Nullable Output<String> apiVersion;
 
-    public Input<String> getApiVersion() {
-        return this.apiVersion == null ? Input.empty() : this.apiVersion;
+    public Output<String> getApiVersion() {
+        return this.apiVersion == null ? Output.empty() : this.apiVersion;
     }
 
     /**
@@ -32,10 +32,10 @@ public final class VolumeAttachmentArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="kind")
-      private final @Nullable Input<String> kind;
+      private final @Nullable Output<String> kind;
 
-    public Input<String> getKind() {
-        return this.kind == null ? Input.empty() : this.kind;
+    public Output<String> getKind() {
+        return this.kind == null ? Output.empty() : this.kind;
     }
 
     /**
@@ -43,10 +43,10 @@ public final class VolumeAttachmentArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="metadata")
-      private final @Nullable Input<ObjectMetaArgs> metadata;
+      private final @Nullable Output<ObjectMetaArgs> metadata;
 
-    public Input<ObjectMetaArgs> getMetadata() {
-        return this.metadata == null ? Input.empty() : this.metadata;
+    public Output<ObjectMetaArgs> getMetadata() {
+        return this.metadata == null ? Output.empty() : this.metadata;
     }
 
     /**
@@ -54,17 +54,17 @@ public final class VolumeAttachmentArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="spec", required=true)
-      private final Input<VolumeAttachmentSpecArgs> spec;
+      private final Output<VolumeAttachmentSpecArgs> spec;
 
-    public Input<VolumeAttachmentSpecArgs> getSpec() {
+    public Output<VolumeAttachmentSpecArgs> getSpec() {
         return this.spec;
     }
 
     public VolumeAttachmentArgs(
-        @Nullable Input<String> apiVersion,
-        @Nullable Input<String> kind,
-        @Nullable Input<ObjectMetaArgs> metadata,
-        Input<VolumeAttachmentSpecArgs> spec) {
+        @Nullable Output<String> apiVersion,
+        @Nullable Output<String> kind,
+        @Nullable Output<ObjectMetaArgs> metadata,
+        Output<VolumeAttachmentSpecArgs> spec) {
         this.apiVersion = apiVersion;
         this.kind = kind;
         this.metadata = metadata;
@@ -72,10 +72,10 @@ public final class VolumeAttachmentArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private VolumeAttachmentArgs() {
-        this.apiVersion = Input.empty();
-        this.kind = Input.empty();
-        this.metadata = Input.empty();
-        this.spec = Input.empty();
+        this.apiVersion = Output.empty();
+        this.kind = Output.empty();
+        this.metadata = Output.empty();
+        this.spec = Output.empty();
     }
 
     public static Builder builder() {
@@ -87,10 +87,10 @@ public final class VolumeAttachmentArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private @Nullable Input<String> apiVersion;
-        private @Nullable Input<String> kind;
-        private @Nullable Input<ObjectMetaArgs> metadata;
-        private Input<VolumeAttachmentSpecArgs> spec;
+        private @Nullable Output<String> apiVersion;
+        private @Nullable Output<String> kind;
+        private @Nullable Output<ObjectMetaArgs> metadata;
+        private Output<VolumeAttachmentSpecArgs> spec;
 
         public Builder() {
     	      // Empty
@@ -104,43 +104,43 @@ public final class VolumeAttachmentArgs extends io.pulumi.resources.ResourceArgs
     	      this.spec = defaults.spec;
         }
 
-        public Builder apiVersion(@Nullable Input<String> apiVersion) {
+        public Builder apiVersion(@Nullable Output<String> apiVersion) {
             this.apiVersion = apiVersion;
             return this;
         }
 
         public Builder apiVersion(@Nullable String apiVersion) {
-            this.apiVersion = Input.ofNullable(apiVersion);
+            this.apiVersion = Output.ofNullable(apiVersion);
             return this;
         }
 
-        public Builder kind(@Nullable Input<String> kind) {
+        public Builder kind(@Nullable Output<String> kind) {
             this.kind = kind;
             return this;
         }
 
         public Builder kind(@Nullable String kind) {
-            this.kind = Input.ofNullable(kind);
+            this.kind = Output.ofNullable(kind);
             return this;
         }
 
-        public Builder metadata(@Nullable Input<ObjectMetaArgs> metadata) {
+        public Builder metadata(@Nullable Output<ObjectMetaArgs> metadata) {
             this.metadata = metadata;
             return this;
         }
 
         public Builder metadata(@Nullable ObjectMetaArgs metadata) {
-            this.metadata = Input.ofNullable(metadata);
+            this.metadata = Output.ofNullable(metadata);
             return this;
         }
 
-        public Builder spec(Input<VolumeAttachmentSpecArgs> spec) {
+        public Builder spec(Output<VolumeAttachmentSpecArgs> spec) {
             this.spec = Objects.requireNonNull(spec);
             return this;
         }
 
         public Builder spec(VolumeAttachmentSpecArgs spec) {
-            this.spec = Input.of(Objects.requireNonNull(spec));
+            this.spec = Output.of(Objects.requireNonNull(spec));
             return this;
         }
         public VolumeAttachmentArgs build() {

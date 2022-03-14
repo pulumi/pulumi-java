@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.admissionregistration.k8s.io_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.kubernetes.admissionregistration.k8s.io_v1.inputs.ServiceReferenceArgs;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class WebhookClientConfigArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="caBundle")
-      private final @Nullable Input<String> caBundle;
+      private final @Nullable Output<String> caBundle;
 
-    public Input<String> getCaBundle() {
-        return this.caBundle == null ? Input.empty() : this.caBundle;
+    public Output<String> getCaBundle() {
+        return this.caBundle == null ? Output.empty() : this.caBundle;
     }
 
     /**
@@ -37,10 +37,10 @@ public final class WebhookClientConfigArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="service")
-      private final @Nullable Input<ServiceReferenceArgs> service;
+      private final @Nullable Output<ServiceReferenceArgs> service;
 
-    public Input<ServiceReferenceArgs> getService() {
-        return this.service == null ? Input.empty() : this.service;
+    public Output<ServiceReferenceArgs> getService() {
+        return this.service == null ? Output.empty() : this.service;
     }
 
     /**
@@ -58,25 +58,25 @@ public final class WebhookClientConfigArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="url")
-      private final @Nullable Input<String> url;
+      private final @Nullable Output<String> url;
 
-    public Input<String> getUrl() {
-        return this.url == null ? Input.empty() : this.url;
+    public Output<String> getUrl() {
+        return this.url == null ? Output.empty() : this.url;
     }
 
     public WebhookClientConfigArgs(
-        @Nullable Input<String> caBundle,
-        @Nullable Input<ServiceReferenceArgs> service,
-        @Nullable Input<String> url) {
+        @Nullable Output<String> caBundle,
+        @Nullable Output<ServiceReferenceArgs> service,
+        @Nullable Output<String> url) {
         this.caBundle = caBundle;
         this.service = service;
         this.url = url;
     }
 
     private WebhookClientConfigArgs() {
-        this.caBundle = Input.empty();
-        this.service = Input.empty();
-        this.url = Input.empty();
+        this.caBundle = Output.empty();
+        this.service = Output.empty();
+        this.url = Output.empty();
     }
 
     public static Builder builder() {
@@ -88,9 +88,9 @@ public final class WebhookClientConfigArgs extends io.pulumi.resources.ResourceA
     }
 
     public static final class Builder {
-        private @Nullable Input<String> caBundle;
-        private @Nullable Input<ServiceReferenceArgs> service;
-        private @Nullable Input<String> url;
+        private @Nullable Output<String> caBundle;
+        private @Nullable Output<ServiceReferenceArgs> service;
+        private @Nullable Output<String> url;
 
         public Builder() {
     	      // Empty
@@ -103,33 +103,33 @@ public final class WebhookClientConfigArgs extends io.pulumi.resources.ResourceA
     	      this.url = defaults.url;
         }
 
-        public Builder caBundle(@Nullable Input<String> caBundle) {
+        public Builder caBundle(@Nullable Output<String> caBundle) {
             this.caBundle = caBundle;
             return this;
         }
 
         public Builder caBundle(@Nullable String caBundle) {
-            this.caBundle = Input.ofNullable(caBundle);
+            this.caBundle = Output.ofNullable(caBundle);
             return this;
         }
 
-        public Builder service(@Nullable Input<ServiceReferenceArgs> service) {
+        public Builder service(@Nullable Output<ServiceReferenceArgs> service) {
             this.service = service;
             return this;
         }
 
         public Builder service(@Nullable ServiceReferenceArgs service) {
-            this.service = Input.ofNullable(service);
+            this.service = Output.ofNullable(service);
             return this;
         }
 
-        public Builder url(@Nullable Input<String> url) {
+        public Builder url(@Nullable Output<String> url) {
             this.url = url;
             return this;
         }
 
         public Builder url(@Nullable String url) {
-            this.url = Input.ofNullable(url);
+            this.url = Output.ofNullable(url);
             return this;
         }
         public WebhookClientConfigArgs build() {

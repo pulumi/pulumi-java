@@ -5,7 +5,7 @@ package io.pulumi.awsnative.iotevents;
 
 import io.pulumi.awsnative.iotevents.inputs.InputDefinitionArgs;
 import io.pulumi.awsnative.iotevents.inputs.InputTagArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -18,9 +18,9 @@ public final class InputArgs extends io.pulumi.resources.ResourceArgs {
     public static final InputArgs Empty = new InputArgs();
 
     @InputImport(name="inputDefinition", required=true)
-      private final Input<InputDefinitionArgs> inputDefinition;
+      private final Output<InputDefinitionArgs> inputDefinition;
 
-    public Input<InputDefinitionArgs> getInputDefinition() {
+    public Output<InputDefinitionArgs> getInputDefinition() {
         return this.inputDefinition;
     }
 
@@ -29,10 +29,10 @@ public final class InputArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="inputDescription")
-      private final @Nullable Input<String> inputDescription;
+      private final @Nullable Output<String> inputDescription;
 
-    public Input<String> getInputDescription() {
-        return this.inputDescription == null ? Input.empty() : this.inputDescription;
+    public Output<String> getInputDescription() {
+        return this.inputDescription == null ? Output.empty() : this.inputDescription;
     }
 
     /**
@@ -40,10 +40,10 @@ public final class InputArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="inputName")
-      private final @Nullable Input<String> inputName;
+      private final @Nullable Output<String> inputName;
 
-    public Input<String> getInputName() {
-        return this.inputName == null ? Input.empty() : this.inputName;
+    public Output<String> getInputName() {
+        return this.inputName == null ? Output.empty() : this.inputName;
     }
 
     /**
@@ -53,17 +53,17 @@ public final class InputArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<List<InputTagArgs>> tags;
+      private final @Nullable Output<List<InputTagArgs>> tags;
 
-    public Input<List<InputTagArgs>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<List<InputTagArgs>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public InputArgs(
-        Input<InputDefinitionArgs> inputDefinition,
-        @Nullable Input<String> inputDescription,
-        @Nullable Input<String> inputName,
-        @Nullable Input<List<InputTagArgs>> tags) {
+        Output<InputDefinitionArgs> inputDefinition,
+        @Nullable Output<String> inputDescription,
+        @Nullable Output<String> inputName,
+        @Nullable Output<List<InputTagArgs>> tags) {
         this.inputDefinition = Objects.requireNonNull(inputDefinition, "expected parameter 'inputDefinition' to be non-null");
         this.inputDescription = inputDescription;
         this.inputName = inputName;
@@ -71,10 +71,10 @@ public final class InputArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private InputArgs() {
-        this.inputDefinition = Input.empty();
-        this.inputDescription = Input.empty();
-        this.inputName = Input.empty();
-        this.tags = Input.empty();
+        this.inputDefinition = Output.empty();
+        this.inputDescription = Output.empty();
+        this.inputName = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -86,10 +86,10 @@ public final class InputArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<InputDefinitionArgs> inputDefinition;
-        private @Nullable Input<String> inputDescription;
-        private @Nullable Input<String> inputName;
-        private @Nullable Input<List<InputTagArgs>> tags;
+        private Output<InputDefinitionArgs> inputDefinition;
+        private @Nullable Output<String> inputDescription;
+        private @Nullable Output<String> inputName;
+        private @Nullable Output<List<InputTagArgs>> tags;
 
         public Builder() {
     	      // Empty
@@ -103,43 +103,43 @@ public final class InputArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder inputDefinition(Input<InputDefinitionArgs> inputDefinition) {
+        public Builder inputDefinition(Output<InputDefinitionArgs> inputDefinition) {
             this.inputDefinition = Objects.requireNonNull(inputDefinition);
             return this;
         }
 
         public Builder inputDefinition(InputDefinitionArgs inputDefinition) {
-            this.inputDefinition = Input.of(Objects.requireNonNull(inputDefinition));
+            this.inputDefinition = Output.of(Objects.requireNonNull(inputDefinition));
             return this;
         }
 
-        public Builder inputDescription(@Nullable Input<String> inputDescription) {
+        public Builder inputDescription(@Nullable Output<String> inputDescription) {
             this.inputDescription = inputDescription;
             return this;
         }
 
         public Builder inputDescription(@Nullable String inputDescription) {
-            this.inputDescription = Input.ofNullable(inputDescription);
+            this.inputDescription = Output.ofNullable(inputDescription);
             return this;
         }
 
-        public Builder inputName(@Nullable Input<String> inputName) {
+        public Builder inputName(@Nullable Output<String> inputName) {
             this.inputName = inputName;
             return this;
         }
 
         public Builder inputName(@Nullable String inputName) {
-            this.inputName = Input.ofNullable(inputName);
+            this.inputName = Output.ofNullable(inputName);
             return this;
         }
 
-        public Builder tags(@Nullable Input<List<InputTagArgs>> tags) {
+        public Builder tags(@Nullable Output<List<InputTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable List<InputTagArgs> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public InputArgs build() {

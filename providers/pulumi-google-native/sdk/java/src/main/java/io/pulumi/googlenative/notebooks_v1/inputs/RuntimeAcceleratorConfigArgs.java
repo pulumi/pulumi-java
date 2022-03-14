@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.notebooks_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.notebooks_v1.enums.RuntimeAcceleratorConfigType;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class RuntimeAcceleratorConfigArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="coreCount")
-      private final @Nullable Input<String> coreCount;
+      private final @Nullable Output<String> coreCount;
 
-    public Input<String> getCoreCount() {
-        return this.coreCount == null ? Input.empty() : this.coreCount;
+    public Output<String> getCoreCount() {
+        return this.coreCount == null ? Output.empty() : this.coreCount;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class RuntimeAcceleratorConfigArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="type")
-      private final @Nullable Input<RuntimeAcceleratorConfigType> type;
+      private final @Nullable Output<RuntimeAcceleratorConfigType> type;
 
-    public Input<RuntimeAcceleratorConfigType> getType() {
-        return this.type == null ? Input.empty() : this.type;
+    public Output<RuntimeAcceleratorConfigType> getType() {
+        return this.type == null ? Output.empty() : this.type;
     }
 
     public RuntimeAcceleratorConfigArgs(
-        @Nullable Input<String> coreCount,
-        @Nullable Input<RuntimeAcceleratorConfigType> type) {
+        @Nullable Output<String> coreCount,
+        @Nullable Output<RuntimeAcceleratorConfigType> type) {
         this.coreCount = coreCount;
         this.type = type;
     }
 
     private RuntimeAcceleratorConfigArgs() {
-        this.coreCount = Input.empty();
-        this.type = Input.empty();
+        this.coreCount = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class RuntimeAcceleratorConfigArgs extends io.pulumi.resources.Reso
     }
 
     public static final class Builder {
-        private @Nullable Input<String> coreCount;
-        private @Nullable Input<RuntimeAcceleratorConfigType> type;
+        private @Nullable Output<String> coreCount;
+        private @Nullable Output<RuntimeAcceleratorConfigType> type;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class RuntimeAcceleratorConfigArgs extends io.pulumi.resources.Reso
     	      this.type = defaults.type;
         }
 
-        public Builder coreCount(@Nullable Input<String> coreCount) {
+        public Builder coreCount(@Nullable Output<String> coreCount) {
             this.coreCount = coreCount;
             return this;
         }
 
         public Builder coreCount(@Nullable String coreCount) {
-            this.coreCount = Input.ofNullable(coreCount);
+            this.coreCount = Output.ofNullable(coreCount);
             return this;
         }
 
-        public Builder type(@Nullable Input<RuntimeAcceleratorConfigType> type) {
+        public Builder type(@Nullable Output<RuntimeAcceleratorConfigType> type) {
             this.type = type;
             return this;
         }
 
         public Builder type(@Nullable RuntimeAcceleratorConfigType type) {
-            this.type = Input.ofNullable(type);
+            this.type = Output.ofNullable(type);
             return this;
         }
         public RuntimeAcceleratorConfigArgs build() {

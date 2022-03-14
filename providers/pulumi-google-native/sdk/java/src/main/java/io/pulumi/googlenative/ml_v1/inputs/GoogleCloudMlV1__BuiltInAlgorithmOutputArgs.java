@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.ml_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class GoogleCloudMlV1__BuiltInAlgorithmOutputArgs extends io.pulumi
      * 
      */
     @InputImport(name="framework")
-      private final @Nullable Input<String> framework;
+      private final @Nullable Output<String> framework;
 
-    public Input<String> getFramework() {
-        return this.framework == null ? Input.empty() : this.framework;
+    public Output<String> getFramework() {
+        return this.framework == null ? Output.empty() : this.framework;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class GoogleCloudMlV1__BuiltInAlgorithmOutputArgs extends io.pulumi
      * 
      */
     @InputImport(name="modelPath")
-      private final @Nullable Input<String> modelPath;
+      private final @Nullable Output<String> modelPath;
 
-    public Input<String> getModelPath() {
-        return this.modelPath == null ? Input.empty() : this.modelPath;
+    public Output<String> getModelPath() {
+        return this.modelPath == null ? Output.empty() : this.modelPath;
     }
 
     /**
@@ -45,10 +45,10 @@ public final class GoogleCloudMlV1__BuiltInAlgorithmOutputArgs extends io.pulumi
      * 
      */
     @InputImport(name="pythonVersion")
-      private final @Nullable Input<String> pythonVersion;
+      private final @Nullable Output<String> pythonVersion;
 
-    public Input<String> getPythonVersion() {
-        return this.pythonVersion == null ? Input.empty() : this.pythonVersion;
+    public Output<String> getPythonVersion() {
+        return this.pythonVersion == null ? Output.empty() : this.pythonVersion;
     }
 
     /**
@@ -56,17 +56,17 @@ public final class GoogleCloudMlV1__BuiltInAlgorithmOutputArgs extends io.pulumi
      * 
      */
     @InputImport(name="runtimeVersion")
-      private final @Nullable Input<String> runtimeVersion;
+      private final @Nullable Output<String> runtimeVersion;
 
-    public Input<String> getRuntimeVersion() {
-        return this.runtimeVersion == null ? Input.empty() : this.runtimeVersion;
+    public Output<String> getRuntimeVersion() {
+        return this.runtimeVersion == null ? Output.empty() : this.runtimeVersion;
     }
 
     public GoogleCloudMlV1__BuiltInAlgorithmOutputArgs(
-        @Nullable Input<String> framework,
-        @Nullable Input<String> modelPath,
-        @Nullable Input<String> pythonVersion,
-        @Nullable Input<String> runtimeVersion) {
+        @Nullable Output<String> framework,
+        @Nullable Output<String> modelPath,
+        @Nullable Output<String> pythonVersion,
+        @Nullable Output<String> runtimeVersion) {
         this.framework = framework;
         this.modelPath = modelPath;
         this.pythonVersion = pythonVersion;
@@ -74,10 +74,10 @@ public final class GoogleCloudMlV1__BuiltInAlgorithmOutputArgs extends io.pulumi
     }
 
     private GoogleCloudMlV1__BuiltInAlgorithmOutputArgs() {
-        this.framework = Input.empty();
-        this.modelPath = Input.empty();
-        this.pythonVersion = Input.empty();
-        this.runtimeVersion = Input.empty();
+        this.framework = Output.empty();
+        this.modelPath = Output.empty();
+        this.pythonVersion = Output.empty();
+        this.runtimeVersion = Output.empty();
     }
 
     public static Builder builder() {
@@ -89,10 +89,10 @@ public final class GoogleCloudMlV1__BuiltInAlgorithmOutputArgs extends io.pulumi
     }
 
     public static final class Builder {
-        private @Nullable Input<String> framework;
-        private @Nullable Input<String> modelPath;
-        private @Nullable Input<String> pythonVersion;
-        private @Nullable Input<String> runtimeVersion;
+        private @Nullable Output<String> framework;
+        private @Nullable Output<String> modelPath;
+        private @Nullable Output<String> pythonVersion;
+        private @Nullable Output<String> runtimeVersion;
 
         public Builder() {
     	      // Empty
@@ -106,43 +106,43 @@ public final class GoogleCloudMlV1__BuiltInAlgorithmOutputArgs extends io.pulumi
     	      this.runtimeVersion = defaults.runtimeVersion;
         }
 
-        public Builder framework(@Nullable Input<String> framework) {
+        public Builder framework(@Nullable Output<String> framework) {
             this.framework = framework;
             return this;
         }
 
         public Builder framework(@Nullable String framework) {
-            this.framework = Input.ofNullable(framework);
+            this.framework = Output.ofNullable(framework);
             return this;
         }
 
-        public Builder modelPath(@Nullable Input<String> modelPath) {
+        public Builder modelPath(@Nullable Output<String> modelPath) {
             this.modelPath = modelPath;
             return this;
         }
 
         public Builder modelPath(@Nullable String modelPath) {
-            this.modelPath = Input.ofNullable(modelPath);
+            this.modelPath = Output.ofNullable(modelPath);
             return this;
         }
 
-        public Builder pythonVersion(@Nullable Input<String> pythonVersion) {
+        public Builder pythonVersion(@Nullable Output<String> pythonVersion) {
             this.pythonVersion = pythonVersion;
             return this;
         }
 
         public Builder pythonVersion(@Nullable String pythonVersion) {
-            this.pythonVersion = Input.ofNullable(pythonVersion);
+            this.pythonVersion = Output.ofNullable(pythonVersion);
             return this;
         }
 
-        public Builder runtimeVersion(@Nullable Input<String> runtimeVersion) {
+        public Builder runtimeVersion(@Nullable Output<String> runtimeVersion) {
             this.runtimeVersion = runtimeVersion;
             return this;
         }
 
         public Builder runtimeVersion(@Nullable String runtimeVersion) {
-            this.runtimeVersion = Input.ofNullable(runtimeVersion);
+            this.runtimeVersion = Output.ofNullable(runtimeVersion);
             return this;
         }
         public GoogleCloudMlV1__BuiltInAlgorithmOutputArgs build() {

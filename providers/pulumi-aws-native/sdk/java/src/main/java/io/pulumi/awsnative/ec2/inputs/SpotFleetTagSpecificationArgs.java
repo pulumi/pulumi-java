@@ -5,7 +5,7 @@ package io.pulumi.awsnative.ec2.inputs;
 
 import io.pulumi.awsnative.ec2.enums.SpotFleetTagSpecificationResourceType;
 import io.pulumi.awsnative.ec2.inputs.SpotFleetTagArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
@@ -17,29 +17,29 @@ public final class SpotFleetTagSpecificationArgs extends io.pulumi.resources.Res
     public static final SpotFleetTagSpecificationArgs Empty = new SpotFleetTagSpecificationArgs();
 
     @InputImport(name="resourceType")
-      private final @Nullable Input<SpotFleetTagSpecificationResourceType> resourceType;
+      private final @Nullable Output<SpotFleetTagSpecificationResourceType> resourceType;
 
-    public Input<SpotFleetTagSpecificationResourceType> getPropResourceType() {
-        return this.resourceType == null ? Input.empty() : this.resourceType;
+    public Output<SpotFleetTagSpecificationResourceType> getPropResourceType() {
+        return this.resourceType == null ? Output.empty() : this.resourceType;
     }
 
     @InputImport(name="tags")
-      private final @Nullable Input<List<SpotFleetTagArgs>> tags;
+      private final @Nullable Output<List<SpotFleetTagArgs>> tags;
 
-    public Input<List<SpotFleetTagArgs>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<List<SpotFleetTagArgs>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public SpotFleetTagSpecificationArgs(
-        @Nullable Input<SpotFleetTagSpecificationResourceType> resourceType,
-        @Nullable Input<List<SpotFleetTagArgs>> tags) {
+        @Nullable Output<SpotFleetTagSpecificationResourceType> resourceType,
+        @Nullable Output<List<SpotFleetTagArgs>> tags) {
         this.resourceType = resourceType;
         this.tags = tags;
     }
 
     private SpotFleetTagSpecificationArgs() {
-        this.resourceType = Input.empty();
-        this.tags = Input.empty();
+        this.resourceType = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -51,8 +51,8 @@ public final class SpotFleetTagSpecificationArgs extends io.pulumi.resources.Res
     }
 
     public static final class Builder {
-        private @Nullable Input<SpotFleetTagSpecificationResourceType> resourceType;
-        private @Nullable Input<List<SpotFleetTagArgs>> tags;
+        private @Nullable Output<SpotFleetTagSpecificationResourceType> resourceType;
+        private @Nullable Output<List<SpotFleetTagArgs>> tags;
 
         public Builder() {
     	      // Empty
@@ -64,23 +64,23 @@ public final class SpotFleetTagSpecificationArgs extends io.pulumi.resources.Res
     	      this.tags = defaults.tags;
         }
 
-        public Builder resourceType(@Nullable Input<SpotFleetTagSpecificationResourceType> resourceType) {
+        public Builder resourceType(@Nullable Output<SpotFleetTagSpecificationResourceType> resourceType) {
             this.resourceType = resourceType;
             return this;
         }
 
         public Builder resourceType(@Nullable SpotFleetTagSpecificationResourceType resourceType) {
-            this.resourceType = Input.ofNullable(resourceType);
+            this.resourceType = Output.ofNullable(resourceType);
             return this;
         }
 
-        public Builder tags(@Nullable Input<List<SpotFleetTagArgs>> tags) {
+        public Builder tags(@Nullable Output<List<SpotFleetTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable List<SpotFleetTagArgs> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public SpotFleetTagSpecificationArgs build() {

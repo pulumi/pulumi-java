@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.redshift.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class ClusterClusterNodeGetArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="nodeRole")
-      private final @Nullable Input<String> nodeRole;
+      private final @Nullable Output<String> nodeRole;
 
-    public Input<String> getNodeRole() {
-        return this.nodeRole == null ? Input.empty() : this.nodeRole;
+    public Output<String> getNodeRole() {
+        return this.nodeRole == null ? Output.empty() : this.nodeRole;
     }
 
     /**
@@ -30,10 +30,10 @@ public final class ClusterClusterNodeGetArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="privateIpAddress")
-      private final @Nullable Input<String> privateIpAddress;
+      private final @Nullable Output<String> privateIpAddress;
 
-    public Input<String> getPrivateIpAddress() {
-        return this.privateIpAddress == null ? Input.empty() : this.privateIpAddress;
+    public Output<String> getPrivateIpAddress() {
+        return this.privateIpAddress == null ? Output.empty() : this.privateIpAddress;
     }
 
     /**
@@ -41,25 +41,25 @@ public final class ClusterClusterNodeGetArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="publicIpAddress")
-      private final @Nullable Input<String> publicIpAddress;
+      private final @Nullable Output<String> publicIpAddress;
 
-    public Input<String> getPublicIpAddress() {
-        return this.publicIpAddress == null ? Input.empty() : this.publicIpAddress;
+    public Output<String> getPublicIpAddress() {
+        return this.publicIpAddress == null ? Output.empty() : this.publicIpAddress;
     }
 
     public ClusterClusterNodeGetArgs(
-        @Nullable Input<String> nodeRole,
-        @Nullable Input<String> privateIpAddress,
-        @Nullable Input<String> publicIpAddress) {
+        @Nullable Output<String> nodeRole,
+        @Nullable Output<String> privateIpAddress,
+        @Nullable Output<String> publicIpAddress) {
         this.nodeRole = nodeRole;
         this.privateIpAddress = privateIpAddress;
         this.publicIpAddress = publicIpAddress;
     }
 
     private ClusterClusterNodeGetArgs() {
-        this.nodeRole = Input.empty();
-        this.privateIpAddress = Input.empty();
-        this.publicIpAddress = Input.empty();
+        this.nodeRole = Output.empty();
+        this.privateIpAddress = Output.empty();
+        this.publicIpAddress = Output.empty();
     }
 
     public static Builder builder() {
@@ -71,9 +71,9 @@ public final class ClusterClusterNodeGetArgs extends io.pulumi.resources.Resourc
     }
 
     public static final class Builder {
-        private @Nullable Input<String> nodeRole;
-        private @Nullable Input<String> privateIpAddress;
-        private @Nullable Input<String> publicIpAddress;
+        private @Nullable Output<String> nodeRole;
+        private @Nullable Output<String> privateIpAddress;
+        private @Nullable Output<String> publicIpAddress;
 
         public Builder() {
     	      // Empty
@@ -86,33 +86,33 @@ public final class ClusterClusterNodeGetArgs extends io.pulumi.resources.Resourc
     	      this.publicIpAddress = defaults.publicIpAddress;
         }
 
-        public Builder nodeRole(@Nullable Input<String> nodeRole) {
+        public Builder nodeRole(@Nullable Output<String> nodeRole) {
             this.nodeRole = nodeRole;
             return this;
         }
 
         public Builder nodeRole(@Nullable String nodeRole) {
-            this.nodeRole = Input.ofNullable(nodeRole);
+            this.nodeRole = Output.ofNullable(nodeRole);
             return this;
         }
 
-        public Builder privateIpAddress(@Nullable Input<String> privateIpAddress) {
+        public Builder privateIpAddress(@Nullable Output<String> privateIpAddress) {
             this.privateIpAddress = privateIpAddress;
             return this;
         }
 
         public Builder privateIpAddress(@Nullable String privateIpAddress) {
-            this.privateIpAddress = Input.ofNullable(privateIpAddress);
+            this.privateIpAddress = Output.ofNullable(privateIpAddress);
             return this;
         }
 
-        public Builder publicIpAddress(@Nullable Input<String> publicIpAddress) {
+        public Builder publicIpAddress(@Nullable Output<String> publicIpAddress) {
             this.publicIpAddress = publicIpAddress;
             return this;
         }
 
         public Builder publicIpAddress(@Nullable String publicIpAddress) {
-            this.publicIpAddress = Input.ofNullable(publicIpAddress);
+            this.publicIpAddress = Output.ofNullable(publicIpAddress);
             return this;
         }
         public ClusterClusterNodeGetArgs build() {

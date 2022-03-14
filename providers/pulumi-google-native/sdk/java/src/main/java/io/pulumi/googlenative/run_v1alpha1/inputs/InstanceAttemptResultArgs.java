@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.run_v1alpha1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.run_v1alpha1.inputs.GoogleRpcStatusArgs;
 import java.lang.Integer;
@@ -24,10 +24,10 @@ public final class InstanceAttemptResultArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="exitCode")
-      private final @Nullable Input<Integer> exitCode;
+      private final @Nullable Output<Integer> exitCode;
 
-    public Input<Integer> getExitCode() {
-        return this.exitCode == null ? Input.empty() : this.exitCode;
+    public Output<Integer> getExitCode() {
+        return this.exitCode == null ? Output.empty() : this.exitCode;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class InstanceAttemptResultArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="status")
-      private final @Nullable Input<GoogleRpcStatusArgs> status;
+      private final @Nullable Output<GoogleRpcStatusArgs> status;
 
-    public Input<GoogleRpcStatusArgs> getStatus() {
-        return this.status == null ? Input.empty() : this.status;
+    public Output<GoogleRpcStatusArgs> getStatus() {
+        return this.status == null ? Output.empty() : this.status;
     }
 
     public InstanceAttemptResultArgs(
-        @Nullable Input<Integer> exitCode,
-        @Nullable Input<GoogleRpcStatusArgs> status) {
+        @Nullable Output<Integer> exitCode,
+        @Nullable Output<GoogleRpcStatusArgs> status) {
         this.exitCode = exitCode;
         this.status = status;
     }
 
     private InstanceAttemptResultArgs() {
-        this.exitCode = Input.empty();
-        this.status = Input.empty();
+        this.exitCode = Output.empty();
+        this.status = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class InstanceAttemptResultArgs extends io.pulumi.resources.Resourc
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> exitCode;
-        private @Nullable Input<GoogleRpcStatusArgs> status;
+        private @Nullable Output<Integer> exitCode;
+        private @Nullable Output<GoogleRpcStatusArgs> status;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class InstanceAttemptResultArgs extends io.pulumi.resources.Resourc
     	      this.status = defaults.status;
         }
 
-        public Builder exitCode(@Nullable Input<Integer> exitCode) {
+        public Builder exitCode(@Nullable Output<Integer> exitCode) {
             this.exitCode = exitCode;
             return this;
         }
 
         public Builder exitCode(@Nullable Integer exitCode) {
-            this.exitCode = Input.ofNullable(exitCode);
+            this.exitCode = Output.ofNullable(exitCode);
             return this;
         }
 
-        public Builder status(@Nullable Input<GoogleRpcStatusArgs> status) {
+        public Builder status(@Nullable Output<GoogleRpcStatusArgs> status) {
             this.status = status;
             return this;
         }
 
         public Builder status(@Nullable GoogleRpcStatusArgs status) {
-            this.status = Input.ofNullable(status);
+            this.status = Output.ofNullable(status);
             return this;
         }
         public InstanceAttemptResultArgs build() {

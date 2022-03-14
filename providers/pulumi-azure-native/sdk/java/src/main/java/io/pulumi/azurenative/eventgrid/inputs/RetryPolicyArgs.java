@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.eventgrid.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class RetryPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="eventTimeToLiveInMinutes")
-      private final @Nullable Input<Integer> eventTimeToLiveInMinutes;
+      private final @Nullable Output<Integer> eventTimeToLiveInMinutes;
 
-    public Input<Integer> getEventTimeToLiveInMinutes() {
-        return this.eventTimeToLiveInMinutes == null ? Input.empty() : this.eventTimeToLiveInMinutes;
+    public Output<Integer> getEventTimeToLiveInMinutes() {
+        return this.eventTimeToLiveInMinutes == null ? Output.empty() : this.eventTimeToLiveInMinutes;
     }
 
     /**
@@ -34,22 +34,22 @@ public final class RetryPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="maxDeliveryAttempts")
-      private final @Nullable Input<Integer> maxDeliveryAttempts;
+      private final @Nullable Output<Integer> maxDeliveryAttempts;
 
-    public Input<Integer> getMaxDeliveryAttempts() {
-        return this.maxDeliveryAttempts == null ? Input.empty() : this.maxDeliveryAttempts;
+    public Output<Integer> getMaxDeliveryAttempts() {
+        return this.maxDeliveryAttempts == null ? Output.empty() : this.maxDeliveryAttempts;
     }
 
     public RetryPolicyArgs(
-        @Nullable Input<Integer> eventTimeToLiveInMinutes,
-        @Nullable Input<Integer> maxDeliveryAttempts) {
+        @Nullable Output<Integer> eventTimeToLiveInMinutes,
+        @Nullable Output<Integer> maxDeliveryAttempts) {
         this.eventTimeToLiveInMinutes = eventTimeToLiveInMinutes;
         this.maxDeliveryAttempts = maxDeliveryAttempts;
     }
 
     private RetryPolicyArgs() {
-        this.eventTimeToLiveInMinutes = Input.empty();
-        this.maxDeliveryAttempts = Input.empty();
+        this.eventTimeToLiveInMinutes = Output.empty();
+        this.maxDeliveryAttempts = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class RetryPolicyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> eventTimeToLiveInMinutes;
-        private @Nullable Input<Integer> maxDeliveryAttempts;
+        private @Nullable Output<Integer> eventTimeToLiveInMinutes;
+        private @Nullable Output<Integer> maxDeliveryAttempts;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class RetryPolicyArgs extends io.pulumi.resources.ResourceArgs {
     	      this.maxDeliveryAttempts = defaults.maxDeliveryAttempts;
         }
 
-        public Builder eventTimeToLiveInMinutes(@Nullable Input<Integer> eventTimeToLiveInMinutes) {
+        public Builder eventTimeToLiveInMinutes(@Nullable Output<Integer> eventTimeToLiveInMinutes) {
             this.eventTimeToLiveInMinutes = eventTimeToLiveInMinutes;
             return this;
         }
 
         public Builder eventTimeToLiveInMinutes(@Nullable Integer eventTimeToLiveInMinutes) {
-            this.eventTimeToLiveInMinutes = Input.ofNullable(eventTimeToLiveInMinutes);
+            this.eventTimeToLiveInMinutes = Output.ofNullable(eventTimeToLiveInMinutes);
             return this;
         }
 
-        public Builder maxDeliveryAttempts(@Nullable Input<Integer> maxDeliveryAttempts) {
+        public Builder maxDeliveryAttempts(@Nullable Output<Integer> maxDeliveryAttempts) {
             this.maxDeliveryAttempts = maxDeliveryAttempts;
             return this;
         }
 
         public Builder maxDeliveryAttempts(@Nullable Integer maxDeliveryAttempts) {
-            this.maxDeliveryAttempts = Input.ofNullable(maxDeliveryAttempts);
+            this.maxDeliveryAttempts = Output.ofNullable(maxDeliveryAttempts);
             return this;
         }
         public RetryPolicyArgs build() {

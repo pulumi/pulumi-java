@@ -7,7 +7,6 @@ import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.web.WebAppSwiftVirtualNetworkConnectionSlotArgs;
 import io.pulumi.azurenative.web.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -153,26 +152,26 @@ public class WebAppSwiftVirtualNetworkConnectionSlot extends io.pulumi.resources
      * @param options A bag of options that control this resource's behavior.
      */
     public WebAppSwiftVirtualNetworkConnectionSlot(String name, WebAppSwiftVirtualNetworkConnectionSlotArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:web:WebAppSwiftVirtualNetworkConnectionSlot", name, args == null ? WebAppSwiftVirtualNetworkConnectionSlotArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("azure-native:web:WebAppSwiftVirtualNetworkConnectionSlot", name, args == null ? WebAppSwiftVirtualNetworkConnectionSlotArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private WebAppSwiftVirtualNetworkConnectionSlot(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private WebAppSwiftVirtualNetworkConnectionSlot(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:web:WebAppSwiftVirtualNetworkConnectionSlot", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:web/v20180201:WebAppSwiftVirtualNetworkConnectionSlot").build()),
-                Input.of(Alias.builder().setType("azure-native:web/v20181101:WebAppSwiftVirtualNetworkConnectionSlot").build()),
-                Input.of(Alias.builder().setType("azure-native:web/v20190801:WebAppSwiftVirtualNetworkConnectionSlot").build()),
-                Input.of(Alias.builder().setType("azure-native:web/v20200601:WebAppSwiftVirtualNetworkConnectionSlot").build()),
-                Input.of(Alias.builder().setType("azure-native:web/v20200901:WebAppSwiftVirtualNetworkConnectionSlot").build()),
-                Input.of(Alias.builder().setType("azure-native:web/v20201001:WebAppSwiftVirtualNetworkConnectionSlot").build()),
-                Input.of(Alias.builder().setType("azure-native:web/v20210115:WebAppSwiftVirtualNetworkConnectionSlot").build()),
-                Input.of(Alias.builder().setType("azure-native:web/v20210201:WebAppSwiftVirtualNetworkConnectionSlot").build()),
-                Input.of(Alias.builder().setType("azure-native:web/v20210301:WebAppSwiftVirtualNetworkConnectionSlot").build())
+                Output.of(Alias.builder().setType("azure-native:web/v20180201:WebAppSwiftVirtualNetworkConnectionSlot").build()),
+                Output.of(Alias.builder().setType("azure-native:web/v20181101:WebAppSwiftVirtualNetworkConnectionSlot").build()),
+                Output.of(Alias.builder().setType("azure-native:web/v20190801:WebAppSwiftVirtualNetworkConnectionSlot").build()),
+                Output.of(Alias.builder().setType("azure-native:web/v20200601:WebAppSwiftVirtualNetworkConnectionSlot").build()),
+                Output.of(Alias.builder().setType("azure-native:web/v20200901:WebAppSwiftVirtualNetworkConnectionSlot").build()),
+                Output.of(Alias.builder().setType("azure-native:web/v20201001:WebAppSwiftVirtualNetworkConnectionSlot").build()),
+                Output.of(Alias.builder().setType("azure-native:web/v20210115:WebAppSwiftVirtualNetworkConnectionSlot").build()),
+                Output.of(Alias.builder().setType("azure-native:web/v20210201:WebAppSwiftVirtualNetworkConnectionSlot").build()),
+                Output.of(Alias.builder().setType("azure-native:web/v20210301:WebAppSwiftVirtualNetworkConnectionSlot").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -186,7 +185,7 @@ public class WebAppSwiftVirtualNetworkConnectionSlot extends io.pulumi.resources
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static WebAppSwiftVirtualNetworkConnectionSlot get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static WebAppSwiftVirtualNetworkConnectionSlot get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new WebAppSwiftVirtualNetworkConnectionSlot(name, id, options);
     }
 }

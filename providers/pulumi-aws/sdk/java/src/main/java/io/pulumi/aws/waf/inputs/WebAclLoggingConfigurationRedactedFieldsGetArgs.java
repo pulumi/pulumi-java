@@ -4,7 +4,7 @@
 package io.pulumi.aws.waf.inputs;
 
 import io.pulumi.aws.waf.inputs.WebAclLoggingConfigurationRedactedFieldsFieldToMatchGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
@@ -19,18 +19,18 @@ public final class WebAclLoggingConfigurationRedactedFieldsGetArgs extends io.pu
      * 
      */
     @InputImport(name="fieldToMatches", required=true)
-      private final Input<List<WebAclLoggingConfigurationRedactedFieldsFieldToMatchGetArgs>> fieldToMatches;
+      private final Output<List<WebAclLoggingConfigurationRedactedFieldsFieldToMatchGetArgs>> fieldToMatches;
 
-    public Input<List<WebAclLoggingConfigurationRedactedFieldsFieldToMatchGetArgs>> getFieldToMatches() {
+    public Output<List<WebAclLoggingConfigurationRedactedFieldsFieldToMatchGetArgs>> getFieldToMatches() {
         return this.fieldToMatches;
     }
 
-    public WebAclLoggingConfigurationRedactedFieldsGetArgs(Input<List<WebAclLoggingConfigurationRedactedFieldsFieldToMatchGetArgs>> fieldToMatches) {
+    public WebAclLoggingConfigurationRedactedFieldsGetArgs(Output<List<WebAclLoggingConfigurationRedactedFieldsFieldToMatchGetArgs>> fieldToMatches) {
         this.fieldToMatches = Objects.requireNonNull(fieldToMatches, "expected parameter 'fieldToMatches' to be non-null");
     }
 
     private WebAclLoggingConfigurationRedactedFieldsGetArgs() {
-        this.fieldToMatches = Input.empty();
+        this.fieldToMatches = Output.empty();
     }
 
     public static Builder builder() {
@@ -42,7 +42,7 @@ public final class WebAclLoggingConfigurationRedactedFieldsGetArgs extends io.pu
     }
 
     public static final class Builder {
-        private Input<List<WebAclLoggingConfigurationRedactedFieldsFieldToMatchGetArgs>> fieldToMatches;
+        private Output<List<WebAclLoggingConfigurationRedactedFieldsFieldToMatchGetArgs>> fieldToMatches;
 
         public Builder() {
     	      // Empty
@@ -53,13 +53,13 @@ public final class WebAclLoggingConfigurationRedactedFieldsGetArgs extends io.pu
     	      this.fieldToMatches = defaults.fieldToMatches;
         }
 
-        public Builder fieldToMatches(Input<List<WebAclLoggingConfigurationRedactedFieldsFieldToMatchGetArgs>> fieldToMatches) {
+        public Builder fieldToMatches(Output<List<WebAclLoggingConfigurationRedactedFieldsFieldToMatchGetArgs>> fieldToMatches) {
             this.fieldToMatches = Objects.requireNonNull(fieldToMatches);
             return this;
         }
 
         public Builder fieldToMatches(List<WebAclLoggingConfigurationRedactedFieldsFieldToMatchGetArgs> fieldToMatches) {
-            this.fieldToMatches = Input.of(Objects.requireNonNull(fieldToMatches));
+            this.fieldToMatches = Output.of(Objects.requireNonNull(fieldToMatches));
             return this;
         }
         public WebAclLoggingConfigurationRedactedFieldsGetArgs build() {

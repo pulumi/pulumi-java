@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.migrate.inputs;
 
 import io.pulumi.azurenative.migrate.inputs.NsgSecurityRuleArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -26,9 +26,9 @@ public final class NetworkSecurityGroupResourceSettingsArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="resourceType", required=true)
-      private final Input<String> resourceType;
+      private final Output<String> resourceType;
 
-    public Input<String> getPropResourceType() {
+    public Output<String> getPropResourceType() {
         return this.resourceType;
     }
 
@@ -37,10 +37,10 @@ public final class NetworkSecurityGroupResourceSettingsArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="securityRules")
-      private final @Nullable Input<List<NsgSecurityRuleArgs>> securityRules;
+      private final @Nullable Output<List<NsgSecurityRuleArgs>> securityRules;
 
-    public Input<List<NsgSecurityRuleArgs>> getSecurityRules() {
-        return this.securityRules == null ? Input.empty() : this.securityRules;
+    public Output<List<NsgSecurityRuleArgs>> getSecurityRules() {
+        return this.securityRules == null ? Output.empty() : this.securityRules;
     }
 
     /**
@@ -48,25 +48,25 @@ public final class NetworkSecurityGroupResourceSettingsArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="targetResourceName", required=true)
-      private final Input<String> targetResourceName;
+      private final Output<String> targetResourceName;
 
-    public Input<String> getTargetResourceName() {
+    public Output<String> getTargetResourceName() {
         return this.targetResourceName;
     }
 
     public NetworkSecurityGroupResourceSettingsArgs(
-        Input<String> resourceType,
-        @Nullable Input<List<NsgSecurityRuleArgs>> securityRules,
-        Input<String> targetResourceName) {
+        Output<String> resourceType,
+        @Nullable Output<List<NsgSecurityRuleArgs>> securityRules,
+        Output<String> targetResourceName) {
         this.resourceType = Objects.requireNonNull(resourceType, "expected parameter 'resourceType' to be non-null");
         this.securityRules = securityRules;
         this.targetResourceName = Objects.requireNonNull(targetResourceName, "expected parameter 'targetResourceName' to be non-null");
     }
 
     private NetworkSecurityGroupResourceSettingsArgs() {
-        this.resourceType = Input.empty();
-        this.securityRules = Input.empty();
-        this.targetResourceName = Input.empty();
+        this.resourceType = Output.empty();
+        this.securityRules = Output.empty();
+        this.targetResourceName = Output.empty();
     }
 
     public static Builder builder() {
@@ -78,9 +78,9 @@ public final class NetworkSecurityGroupResourceSettingsArgs extends io.pulumi.re
     }
 
     public static final class Builder {
-        private Input<String> resourceType;
-        private @Nullable Input<List<NsgSecurityRuleArgs>> securityRules;
-        private Input<String> targetResourceName;
+        private Output<String> resourceType;
+        private @Nullable Output<List<NsgSecurityRuleArgs>> securityRules;
+        private Output<String> targetResourceName;
 
         public Builder() {
     	      // Empty
@@ -93,33 +93,33 @@ public final class NetworkSecurityGroupResourceSettingsArgs extends io.pulumi.re
     	      this.targetResourceName = defaults.targetResourceName;
         }
 
-        public Builder resourceType(Input<String> resourceType) {
+        public Builder resourceType(Output<String> resourceType) {
             this.resourceType = Objects.requireNonNull(resourceType);
             return this;
         }
 
         public Builder resourceType(String resourceType) {
-            this.resourceType = Input.of(Objects.requireNonNull(resourceType));
+            this.resourceType = Output.of(Objects.requireNonNull(resourceType));
             return this;
         }
 
-        public Builder securityRules(@Nullable Input<List<NsgSecurityRuleArgs>> securityRules) {
+        public Builder securityRules(@Nullable Output<List<NsgSecurityRuleArgs>> securityRules) {
             this.securityRules = securityRules;
             return this;
         }
 
         public Builder securityRules(@Nullable List<NsgSecurityRuleArgs> securityRules) {
-            this.securityRules = Input.ofNullable(securityRules);
+            this.securityRules = Output.ofNullable(securityRules);
             return this;
         }
 
-        public Builder targetResourceName(Input<String> targetResourceName) {
+        public Builder targetResourceName(Output<String> targetResourceName) {
             this.targetResourceName = Objects.requireNonNull(targetResourceName);
             return this;
         }
 
         public Builder targetResourceName(String targetResourceName) {
-            this.targetResourceName = Input.of(Objects.requireNonNull(targetResourceName));
+            this.targetResourceName = Output.of(Objects.requireNonNull(targetResourceName));
             return this;
         }
         public NetworkSecurityGroupResourceSettingsArgs build() {

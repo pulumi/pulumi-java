@@ -3,7 +3,7 @@
 
 package io.pulumi.docker.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -16,29 +16,29 @@ public final class ServiceTaskSpecResourcesReservationGenericResourcesGetArgs ex
     public static final ServiceTaskSpecResourcesReservationGenericResourcesGetArgs Empty = new ServiceTaskSpecResourcesReservationGenericResourcesGetArgs();
 
     @InputImport(name="discreteResourcesSpecs")
-      private final @Nullable Input<List<String>> discreteResourcesSpecs;
+      private final @Nullable Output<List<String>> discreteResourcesSpecs;
 
-    public Input<List<String>> getDiscreteResourcesSpecs() {
-        return this.discreteResourcesSpecs == null ? Input.empty() : this.discreteResourcesSpecs;
+    public Output<List<String>> getDiscreteResourcesSpecs() {
+        return this.discreteResourcesSpecs == null ? Output.empty() : this.discreteResourcesSpecs;
     }
 
     @InputImport(name="namedResourcesSpecs")
-      private final @Nullable Input<List<String>> namedResourcesSpecs;
+      private final @Nullable Output<List<String>> namedResourcesSpecs;
 
-    public Input<List<String>> getNamedResourcesSpecs() {
-        return this.namedResourcesSpecs == null ? Input.empty() : this.namedResourcesSpecs;
+    public Output<List<String>> getNamedResourcesSpecs() {
+        return this.namedResourcesSpecs == null ? Output.empty() : this.namedResourcesSpecs;
     }
 
     public ServiceTaskSpecResourcesReservationGenericResourcesGetArgs(
-        @Nullable Input<List<String>> discreteResourcesSpecs,
-        @Nullable Input<List<String>> namedResourcesSpecs) {
+        @Nullable Output<List<String>> discreteResourcesSpecs,
+        @Nullable Output<List<String>> namedResourcesSpecs) {
         this.discreteResourcesSpecs = discreteResourcesSpecs;
         this.namedResourcesSpecs = namedResourcesSpecs;
     }
 
     private ServiceTaskSpecResourcesReservationGenericResourcesGetArgs() {
-        this.discreteResourcesSpecs = Input.empty();
-        this.namedResourcesSpecs = Input.empty();
+        this.discreteResourcesSpecs = Output.empty();
+        this.namedResourcesSpecs = Output.empty();
     }
 
     public static Builder builder() {
@@ -50,8 +50,8 @@ public final class ServiceTaskSpecResourcesReservationGenericResourcesGetArgs ex
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> discreteResourcesSpecs;
-        private @Nullable Input<List<String>> namedResourcesSpecs;
+        private @Nullable Output<List<String>> discreteResourcesSpecs;
+        private @Nullable Output<List<String>> namedResourcesSpecs;
 
         public Builder() {
     	      // Empty
@@ -63,23 +63,23 @@ public final class ServiceTaskSpecResourcesReservationGenericResourcesGetArgs ex
     	      this.namedResourcesSpecs = defaults.namedResourcesSpecs;
         }
 
-        public Builder discreteResourcesSpecs(@Nullable Input<List<String>> discreteResourcesSpecs) {
+        public Builder discreteResourcesSpecs(@Nullable Output<List<String>> discreteResourcesSpecs) {
             this.discreteResourcesSpecs = discreteResourcesSpecs;
             return this;
         }
 
         public Builder discreteResourcesSpecs(@Nullable List<String> discreteResourcesSpecs) {
-            this.discreteResourcesSpecs = Input.ofNullable(discreteResourcesSpecs);
+            this.discreteResourcesSpecs = Output.ofNullable(discreteResourcesSpecs);
             return this;
         }
 
-        public Builder namedResourcesSpecs(@Nullable Input<List<String>> namedResourcesSpecs) {
+        public Builder namedResourcesSpecs(@Nullable Output<List<String>> namedResourcesSpecs) {
             this.namedResourcesSpecs = namedResourcesSpecs;
             return this;
         }
 
         public Builder namedResourcesSpecs(@Nullable List<String> namedResourcesSpecs) {
-            this.namedResourcesSpecs = Input.ofNullable(namedResourcesSpecs);
+            this.namedResourcesSpecs = Output.ofNullable(namedResourcesSpecs);
             return this;
         }
         public ServiceTaskSpecResourcesReservationGenericResourcesGetArgs build() {

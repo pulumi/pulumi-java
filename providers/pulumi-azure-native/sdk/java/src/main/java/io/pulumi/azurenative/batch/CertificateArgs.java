@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.batch;
 
 import io.pulumi.azurenative.batch.enums.CertificateFormat;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -20,9 +20,9 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="accountName", required=true)
-      private final Input<String> accountName;
+      private final Output<String> accountName;
 
-    public Input<String> getAccountName() {
+    public Output<String> getAccountName() {
         return this.accountName;
     }
 
@@ -31,10 +31,10 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="certificateName")
-      private final @Nullable Input<String> certificateName;
+      private final @Nullable Output<String> certificateName;
 
-    public Input<String> getCertificateName() {
-        return this.certificateName == null ? Input.empty() : this.certificateName;
+    public Output<String> getCertificateName() {
+        return this.certificateName == null ? Output.empty() : this.certificateName;
     }
 
     /**
@@ -42,9 +42,9 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="data", required=true)
-      private final Input<String> data;
+      private final Output<String> data;
 
-    public Input<String> getData() {
+    public Output<String> getData() {
         return this.data;
     }
 
@@ -53,10 +53,10 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="format")
-      private final @Nullable Input<CertificateFormat> format;
+      private final @Nullable Output<CertificateFormat> format;
 
-    public Input<CertificateFormat> getFormat() {
-        return this.format == null ? Input.empty() : this.format;
+    public Output<CertificateFormat> getFormat() {
+        return this.format == null ? Output.empty() : this.format;
     }
 
     /**
@@ -64,10 +64,10 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="password")
-      private final @Nullable Input<String> password;
+      private final @Nullable Output<String> password;
 
-    public Input<String> getPassword() {
-        return this.password == null ? Input.empty() : this.password;
+    public Output<String> getPassword() {
+        return this.password == null ? Output.empty() : this.password;
     }
 
     /**
@@ -75,9 +75,9 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -86,10 +86,10 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="thumbprint")
-      private final @Nullable Input<String> thumbprint;
+      private final @Nullable Output<String> thumbprint;
 
-    public Input<String> getThumbprint() {
-        return this.thumbprint == null ? Input.empty() : this.thumbprint;
+    public Output<String> getThumbprint() {
+        return this.thumbprint == null ? Output.empty() : this.thumbprint;
     }
 
     /**
@@ -97,21 +97,21 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="thumbprintAlgorithm")
-      private final @Nullable Input<String> thumbprintAlgorithm;
+      private final @Nullable Output<String> thumbprintAlgorithm;
 
-    public Input<String> getThumbprintAlgorithm() {
-        return this.thumbprintAlgorithm == null ? Input.empty() : this.thumbprintAlgorithm;
+    public Output<String> getThumbprintAlgorithm() {
+        return this.thumbprintAlgorithm == null ? Output.empty() : this.thumbprintAlgorithm;
     }
 
     public CertificateArgs(
-        Input<String> accountName,
-        @Nullable Input<String> certificateName,
-        Input<String> data,
-        @Nullable Input<CertificateFormat> format,
-        @Nullable Input<String> password,
-        Input<String> resourceGroupName,
-        @Nullable Input<String> thumbprint,
-        @Nullable Input<String> thumbprintAlgorithm) {
+        Output<String> accountName,
+        @Nullable Output<String> certificateName,
+        Output<String> data,
+        @Nullable Output<CertificateFormat> format,
+        @Nullable Output<String> password,
+        Output<String> resourceGroupName,
+        @Nullable Output<String> thumbprint,
+        @Nullable Output<String> thumbprintAlgorithm) {
         this.accountName = Objects.requireNonNull(accountName, "expected parameter 'accountName' to be non-null");
         this.certificateName = certificateName;
         this.data = Objects.requireNonNull(data, "expected parameter 'data' to be non-null");
@@ -123,14 +123,14 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private CertificateArgs() {
-        this.accountName = Input.empty();
-        this.certificateName = Input.empty();
-        this.data = Input.empty();
-        this.format = Input.empty();
-        this.password = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.thumbprint = Input.empty();
-        this.thumbprintAlgorithm = Input.empty();
+        this.accountName = Output.empty();
+        this.certificateName = Output.empty();
+        this.data = Output.empty();
+        this.format = Output.empty();
+        this.password = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.thumbprint = Output.empty();
+        this.thumbprintAlgorithm = Output.empty();
     }
 
     public static Builder builder() {
@@ -142,14 +142,14 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> accountName;
-        private @Nullable Input<String> certificateName;
-        private Input<String> data;
-        private @Nullable Input<CertificateFormat> format;
-        private @Nullable Input<String> password;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<String> thumbprint;
-        private @Nullable Input<String> thumbprintAlgorithm;
+        private Output<String> accountName;
+        private @Nullable Output<String> certificateName;
+        private Output<String> data;
+        private @Nullable Output<CertificateFormat> format;
+        private @Nullable Output<String> password;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<String> thumbprint;
+        private @Nullable Output<String> thumbprintAlgorithm;
 
         public Builder() {
     	      // Empty
@@ -167,83 +167,83 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
     	      this.thumbprintAlgorithm = defaults.thumbprintAlgorithm;
         }
 
-        public Builder accountName(Input<String> accountName) {
+        public Builder accountName(Output<String> accountName) {
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
 
         public Builder accountName(String accountName) {
-            this.accountName = Input.of(Objects.requireNonNull(accountName));
+            this.accountName = Output.of(Objects.requireNonNull(accountName));
             return this;
         }
 
-        public Builder certificateName(@Nullable Input<String> certificateName) {
+        public Builder certificateName(@Nullable Output<String> certificateName) {
             this.certificateName = certificateName;
             return this;
         }
 
         public Builder certificateName(@Nullable String certificateName) {
-            this.certificateName = Input.ofNullable(certificateName);
+            this.certificateName = Output.ofNullable(certificateName);
             return this;
         }
 
-        public Builder data(Input<String> data) {
+        public Builder data(Output<String> data) {
             this.data = Objects.requireNonNull(data);
             return this;
         }
 
         public Builder data(String data) {
-            this.data = Input.of(Objects.requireNonNull(data));
+            this.data = Output.of(Objects.requireNonNull(data));
             return this;
         }
 
-        public Builder format(@Nullable Input<CertificateFormat> format) {
+        public Builder format(@Nullable Output<CertificateFormat> format) {
             this.format = format;
             return this;
         }
 
         public Builder format(@Nullable CertificateFormat format) {
-            this.format = Input.ofNullable(format);
+            this.format = Output.ofNullable(format);
             return this;
         }
 
-        public Builder password(@Nullable Input<String> password) {
+        public Builder password(@Nullable Output<String> password) {
             this.password = password;
             return this;
         }
 
         public Builder password(@Nullable String password) {
-            this.password = Input.ofNullable(password);
+            this.password = Output.ofNullable(password);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder thumbprint(@Nullable Input<String> thumbprint) {
+        public Builder thumbprint(@Nullable Output<String> thumbprint) {
             this.thumbprint = thumbprint;
             return this;
         }
 
         public Builder thumbprint(@Nullable String thumbprint) {
-            this.thumbprint = Input.ofNullable(thumbprint);
+            this.thumbprint = Output.ofNullable(thumbprint);
             return this;
         }
 
-        public Builder thumbprintAlgorithm(@Nullable Input<String> thumbprintAlgorithm) {
+        public Builder thumbprintAlgorithm(@Nullable Output<String> thumbprintAlgorithm) {
             this.thumbprintAlgorithm = thumbprintAlgorithm;
             return this;
         }
 
         public Builder thumbprintAlgorithm(@Nullable String thumbprintAlgorithm) {
-            this.thumbprintAlgorithm = Input.ofNullable(thumbprintAlgorithm);
+            this.thumbprintAlgorithm = Output.ofNullable(thumbprintAlgorithm);
             return this;
         }
         public CertificateArgs build() {

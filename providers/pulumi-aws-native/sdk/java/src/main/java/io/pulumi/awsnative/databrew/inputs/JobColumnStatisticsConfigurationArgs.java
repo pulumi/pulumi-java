@@ -5,7 +5,7 @@ package io.pulumi.awsnative.databrew.inputs;
 
 import io.pulumi.awsnative.databrew.inputs.JobColumnSelectorArgs;
 import io.pulumi.awsnative.databrew.inputs.JobStatisticsConfigurationArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
@@ -17,29 +17,29 @@ public final class JobColumnStatisticsConfigurationArgs extends io.pulumi.resour
     public static final JobColumnStatisticsConfigurationArgs Empty = new JobColumnStatisticsConfigurationArgs();
 
     @InputImport(name="selectors")
-      private final @Nullable Input<List<JobColumnSelectorArgs>> selectors;
+      private final @Nullable Output<List<JobColumnSelectorArgs>> selectors;
 
-    public Input<List<JobColumnSelectorArgs>> getSelectors() {
-        return this.selectors == null ? Input.empty() : this.selectors;
+    public Output<List<JobColumnSelectorArgs>> getSelectors() {
+        return this.selectors == null ? Output.empty() : this.selectors;
     }
 
     @InputImport(name="statistics", required=true)
-      private final Input<JobStatisticsConfigurationArgs> statistics;
+      private final Output<JobStatisticsConfigurationArgs> statistics;
 
-    public Input<JobStatisticsConfigurationArgs> getStatistics() {
+    public Output<JobStatisticsConfigurationArgs> getStatistics() {
         return this.statistics;
     }
 
     public JobColumnStatisticsConfigurationArgs(
-        @Nullable Input<List<JobColumnSelectorArgs>> selectors,
-        Input<JobStatisticsConfigurationArgs> statistics) {
+        @Nullable Output<List<JobColumnSelectorArgs>> selectors,
+        Output<JobStatisticsConfigurationArgs> statistics) {
         this.selectors = selectors;
         this.statistics = Objects.requireNonNull(statistics, "expected parameter 'statistics' to be non-null");
     }
 
     private JobColumnStatisticsConfigurationArgs() {
-        this.selectors = Input.empty();
-        this.statistics = Input.empty();
+        this.selectors = Output.empty();
+        this.statistics = Output.empty();
     }
 
     public static Builder builder() {
@@ -51,8 +51,8 @@ public final class JobColumnStatisticsConfigurationArgs extends io.pulumi.resour
     }
 
     public static final class Builder {
-        private @Nullable Input<List<JobColumnSelectorArgs>> selectors;
-        private Input<JobStatisticsConfigurationArgs> statistics;
+        private @Nullable Output<List<JobColumnSelectorArgs>> selectors;
+        private Output<JobStatisticsConfigurationArgs> statistics;
 
         public Builder() {
     	      // Empty
@@ -64,23 +64,23 @@ public final class JobColumnStatisticsConfigurationArgs extends io.pulumi.resour
     	      this.statistics = defaults.statistics;
         }
 
-        public Builder selectors(@Nullable Input<List<JobColumnSelectorArgs>> selectors) {
+        public Builder selectors(@Nullable Output<List<JobColumnSelectorArgs>> selectors) {
             this.selectors = selectors;
             return this;
         }
 
         public Builder selectors(@Nullable List<JobColumnSelectorArgs> selectors) {
-            this.selectors = Input.ofNullable(selectors);
+            this.selectors = Output.ofNullable(selectors);
             return this;
         }
 
-        public Builder statistics(Input<JobStatisticsConfigurationArgs> statistics) {
+        public Builder statistics(Output<JobStatisticsConfigurationArgs> statistics) {
             this.statistics = Objects.requireNonNull(statistics);
             return this;
         }
 
         public Builder statistics(JobStatisticsConfigurationArgs statistics) {
-            this.statistics = Input.of(Objects.requireNonNull(statistics));
+            this.statistics = Output.of(Objects.requireNonNull(statistics));
             return this;
         }
         public JobColumnStatisticsConfigurationArgs build() {

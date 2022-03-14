@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class VpnLinkBgpSettingsArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="asn")
-      private final @Nullable Input<Double> asn;
+      private final @Nullable Output<Double> asn;
 
-    public Input<Double> getAsn() {
-        return this.asn == null ? Input.empty() : this.asn;
+    public Output<Double> getAsn() {
+        return this.asn == null ? Output.empty() : this.asn;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class VpnLinkBgpSettingsArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="bgpPeeringAddress")
-      private final @Nullable Input<String> bgpPeeringAddress;
+      private final @Nullable Output<String> bgpPeeringAddress;
 
-    public Input<String> getBgpPeeringAddress() {
-        return this.bgpPeeringAddress == null ? Input.empty() : this.bgpPeeringAddress;
+    public Output<String> getBgpPeeringAddress() {
+        return this.bgpPeeringAddress == null ? Output.empty() : this.bgpPeeringAddress;
     }
 
     public VpnLinkBgpSettingsArgs(
-        @Nullable Input<Double> asn,
-        @Nullable Input<String> bgpPeeringAddress) {
+        @Nullable Output<Double> asn,
+        @Nullable Output<String> bgpPeeringAddress) {
         this.asn = asn;
         this.bgpPeeringAddress = bgpPeeringAddress;
     }
 
     private VpnLinkBgpSettingsArgs() {
-        this.asn = Input.empty();
-        this.bgpPeeringAddress = Input.empty();
+        this.asn = Output.empty();
+        this.bgpPeeringAddress = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class VpnLinkBgpSettingsArgs extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private @Nullable Input<Double> asn;
-        private @Nullable Input<String> bgpPeeringAddress;
+        private @Nullable Output<Double> asn;
+        private @Nullable Output<String> bgpPeeringAddress;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class VpnLinkBgpSettingsArgs extends io.pulumi.resources.ResourceAr
     	      this.bgpPeeringAddress = defaults.bgpPeeringAddress;
         }
 
-        public Builder asn(@Nullable Input<Double> asn) {
+        public Builder asn(@Nullable Output<Double> asn) {
             this.asn = asn;
             return this;
         }
 
         public Builder asn(@Nullable Double asn) {
-            this.asn = Input.ofNullable(asn);
+            this.asn = Output.ofNullable(asn);
             return this;
         }
 
-        public Builder bgpPeeringAddress(@Nullable Input<String> bgpPeeringAddress) {
+        public Builder bgpPeeringAddress(@Nullable Output<String> bgpPeeringAddress) {
             this.bgpPeeringAddress = bgpPeeringAddress;
             return this;
         }
 
         public Builder bgpPeeringAddress(@Nullable String bgpPeeringAddress) {
-            this.bgpPeeringAddress = Input.ofNullable(bgpPeeringAddress);
+            this.bgpPeeringAddress = Output.ofNullable(bgpPeeringAddress);
             return this;
         }
         public VpnLinkBgpSettingsArgs build() {

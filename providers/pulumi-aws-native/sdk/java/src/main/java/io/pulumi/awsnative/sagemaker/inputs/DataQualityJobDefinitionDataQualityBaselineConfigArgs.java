@@ -5,7 +5,7 @@ package io.pulumi.awsnative.sagemaker.inputs;
 
 import io.pulumi.awsnative.sagemaker.inputs.DataQualityJobDefinitionConstraintsResourceArgs;
 import io.pulumi.awsnative.sagemaker.inputs.DataQualityJobDefinitionStatisticsResourceArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -21,39 +21,39 @@ public final class DataQualityJobDefinitionDataQualityBaselineConfigArgs extends
     public static final DataQualityJobDefinitionDataQualityBaselineConfigArgs Empty = new DataQualityJobDefinitionDataQualityBaselineConfigArgs();
 
     @InputImport(name="baseliningJobName")
-      private final @Nullable Input<String> baseliningJobName;
+      private final @Nullable Output<String> baseliningJobName;
 
-    public Input<String> getBaseliningJobName() {
-        return this.baseliningJobName == null ? Input.empty() : this.baseliningJobName;
+    public Output<String> getBaseliningJobName() {
+        return this.baseliningJobName == null ? Output.empty() : this.baseliningJobName;
     }
 
     @InputImport(name="constraintsResource")
-      private final @Nullable Input<DataQualityJobDefinitionConstraintsResourceArgs> constraintsResource;
+      private final @Nullable Output<DataQualityJobDefinitionConstraintsResourceArgs> constraintsResource;
 
-    public Input<DataQualityJobDefinitionConstraintsResourceArgs> getConstraintsResource() {
-        return this.constraintsResource == null ? Input.empty() : this.constraintsResource;
+    public Output<DataQualityJobDefinitionConstraintsResourceArgs> getConstraintsResource() {
+        return this.constraintsResource == null ? Output.empty() : this.constraintsResource;
     }
 
     @InputImport(name="statisticsResource")
-      private final @Nullable Input<DataQualityJobDefinitionStatisticsResourceArgs> statisticsResource;
+      private final @Nullable Output<DataQualityJobDefinitionStatisticsResourceArgs> statisticsResource;
 
-    public Input<DataQualityJobDefinitionStatisticsResourceArgs> getStatisticsResource() {
-        return this.statisticsResource == null ? Input.empty() : this.statisticsResource;
+    public Output<DataQualityJobDefinitionStatisticsResourceArgs> getStatisticsResource() {
+        return this.statisticsResource == null ? Output.empty() : this.statisticsResource;
     }
 
     public DataQualityJobDefinitionDataQualityBaselineConfigArgs(
-        @Nullable Input<String> baseliningJobName,
-        @Nullable Input<DataQualityJobDefinitionConstraintsResourceArgs> constraintsResource,
-        @Nullable Input<DataQualityJobDefinitionStatisticsResourceArgs> statisticsResource) {
+        @Nullable Output<String> baseliningJobName,
+        @Nullable Output<DataQualityJobDefinitionConstraintsResourceArgs> constraintsResource,
+        @Nullable Output<DataQualityJobDefinitionStatisticsResourceArgs> statisticsResource) {
         this.baseliningJobName = baseliningJobName;
         this.constraintsResource = constraintsResource;
         this.statisticsResource = statisticsResource;
     }
 
     private DataQualityJobDefinitionDataQualityBaselineConfigArgs() {
-        this.baseliningJobName = Input.empty();
-        this.constraintsResource = Input.empty();
-        this.statisticsResource = Input.empty();
+        this.baseliningJobName = Output.empty();
+        this.constraintsResource = Output.empty();
+        this.statisticsResource = Output.empty();
     }
 
     public static Builder builder() {
@@ -65,9 +65,9 @@ public final class DataQualityJobDefinitionDataQualityBaselineConfigArgs extends
     }
 
     public static final class Builder {
-        private @Nullable Input<String> baseliningJobName;
-        private @Nullable Input<DataQualityJobDefinitionConstraintsResourceArgs> constraintsResource;
-        private @Nullable Input<DataQualityJobDefinitionStatisticsResourceArgs> statisticsResource;
+        private @Nullable Output<String> baseliningJobName;
+        private @Nullable Output<DataQualityJobDefinitionConstraintsResourceArgs> constraintsResource;
+        private @Nullable Output<DataQualityJobDefinitionStatisticsResourceArgs> statisticsResource;
 
         public Builder() {
     	      // Empty
@@ -80,33 +80,33 @@ public final class DataQualityJobDefinitionDataQualityBaselineConfigArgs extends
     	      this.statisticsResource = defaults.statisticsResource;
         }
 
-        public Builder baseliningJobName(@Nullable Input<String> baseliningJobName) {
+        public Builder baseliningJobName(@Nullable Output<String> baseliningJobName) {
             this.baseliningJobName = baseliningJobName;
             return this;
         }
 
         public Builder baseliningJobName(@Nullable String baseliningJobName) {
-            this.baseliningJobName = Input.ofNullable(baseliningJobName);
+            this.baseliningJobName = Output.ofNullable(baseliningJobName);
             return this;
         }
 
-        public Builder constraintsResource(@Nullable Input<DataQualityJobDefinitionConstraintsResourceArgs> constraintsResource) {
+        public Builder constraintsResource(@Nullable Output<DataQualityJobDefinitionConstraintsResourceArgs> constraintsResource) {
             this.constraintsResource = constraintsResource;
             return this;
         }
 
         public Builder constraintsResource(@Nullable DataQualityJobDefinitionConstraintsResourceArgs constraintsResource) {
-            this.constraintsResource = Input.ofNullable(constraintsResource);
+            this.constraintsResource = Output.ofNullable(constraintsResource);
             return this;
         }
 
-        public Builder statisticsResource(@Nullable Input<DataQualityJobDefinitionStatisticsResourceArgs> statisticsResource) {
+        public Builder statisticsResource(@Nullable Output<DataQualityJobDefinitionStatisticsResourceArgs> statisticsResource) {
             this.statisticsResource = statisticsResource;
             return this;
         }
 
         public Builder statisticsResource(@Nullable DataQualityJobDefinitionStatisticsResourceArgs statisticsResource) {
-            this.statisticsResource = Input.ofNullable(statisticsResource);
+            this.statisticsResource = Output.ofNullable(statisticsResource);
             return this;
         }
         public DataQualityJobDefinitionDataQualityBaselineConfigArgs build() {

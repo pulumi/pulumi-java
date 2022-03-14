@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.s3.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -20,10 +20,10 @@ public final class BucketReplicationConfigRuleFilterAndArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="prefix")
-      private final @Nullable Input<String> prefix;
+      private final @Nullable Output<String> prefix;
 
-    public Input<String> getPrefix() {
-        return this.prefix == null ? Input.empty() : this.prefix;
+    public Output<String> getPrefix() {
+        return this.prefix == null ? Output.empty() : this.prefix;
     }
 
     /**
@@ -31,22 +31,22 @@ public final class BucketReplicationConfigRuleFilterAndArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public BucketReplicationConfigRuleFilterAndArgs(
-        @Nullable Input<String> prefix,
-        @Nullable Input<Map<String,String>> tags) {
+        @Nullable Output<String> prefix,
+        @Nullable Output<Map<String,String>> tags) {
         this.prefix = prefix;
         this.tags = tags;
     }
 
     private BucketReplicationConfigRuleFilterAndArgs() {
-        this.prefix = Input.empty();
-        this.tags = Input.empty();
+        this.prefix = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -58,8 +58,8 @@ public final class BucketReplicationConfigRuleFilterAndArgs extends io.pulumi.re
     }
 
     public static final class Builder {
-        private @Nullable Input<String> prefix;
-        private @Nullable Input<Map<String,String>> tags;
+        private @Nullable Output<String> prefix;
+        private @Nullable Output<Map<String,String>> tags;
 
         public Builder() {
     	      // Empty
@@ -71,23 +71,23 @@ public final class BucketReplicationConfigRuleFilterAndArgs extends io.pulumi.re
     	      this.tags = defaults.tags;
         }
 
-        public Builder prefix(@Nullable Input<String> prefix) {
+        public Builder prefix(@Nullable Output<String> prefix) {
             this.prefix = prefix;
             return this;
         }
 
         public Builder prefix(@Nullable String prefix) {
-            this.prefix = Input.ofNullable(prefix);
+            this.prefix = Output.ofNullable(prefix);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public BucketReplicationConfigRuleFilterAndArgs build() {

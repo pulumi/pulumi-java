@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.portal;
 
 import io.pulumi.azurenative.portal.inputs.UserPropertiesArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -20,9 +20,9 @@ public final class UserSettingsWithLocationArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="location", required=true)
-      private final Input<String> location;
+      private final Output<String> location;
 
-    public Input<String> getLocation() {
+    public Output<String> getLocation() {
         return this.location;
     }
 
@@ -31,9 +31,9 @@ public final class UserSettingsWithLocationArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="properties", required=true)
-      private final Input<UserPropertiesArgs> properties;
+      private final Output<UserPropertiesArgs> properties;
 
-    public Input<UserPropertiesArgs> getProperties() {
+    public Output<UserPropertiesArgs> getProperties() {
         return this.properties;
     }
 
@@ -42,25 +42,25 @@ public final class UserSettingsWithLocationArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="userSettingsName")
-      private final @Nullable Input<String> userSettingsName;
+      private final @Nullable Output<String> userSettingsName;
 
-    public Input<String> getUserSettingsName() {
-        return this.userSettingsName == null ? Input.empty() : this.userSettingsName;
+    public Output<String> getUserSettingsName() {
+        return this.userSettingsName == null ? Output.empty() : this.userSettingsName;
     }
 
     public UserSettingsWithLocationArgs(
-        Input<String> location,
-        Input<UserPropertiesArgs> properties,
-        @Nullable Input<String> userSettingsName) {
+        Output<String> location,
+        Output<UserPropertiesArgs> properties,
+        @Nullable Output<String> userSettingsName) {
         this.location = Objects.requireNonNull(location, "expected parameter 'location' to be non-null");
         this.properties = Objects.requireNonNull(properties, "expected parameter 'properties' to be non-null");
         this.userSettingsName = userSettingsName;
     }
 
     private UserSettingsWithLocationArgs() {
-        this.location = Input.empty();
-        this.properties = Input.empty();
-        this.userSettingsName = Input.empty();
+        this.location = Output.empty();
+        this.properties = Output.empty();
+        this.userSettingsName = Output.empty();
     }
 
     public static Builder builder() {
@@ -72,9 +72,9 @@ public final class UserSettingsWithLocationArgs extends io.pulumi.resources.Reso
     }
 
     public static final class Builder {
-        private Input<String> location;
-        private Input<UserPropertiesArgs> properties;
-        private @Nullable Input<String> userSettingsName;
+        private Output<String> location;
+        private Output<UserPropertiesArgs> properties;
+        private @Nullable Output<String> userSettingsName;
 
         public Builder() {
     	      // Empty
@@ -87,33 +87,33 @@ public final class UserSettingsWithLocationArgs extends io.pulumi.resources.Reso
     	      this.userSettingsName = defaults.userSettingsName;
         }
 
-        public Builder location(Input<String> location) {
+        public Builder location(Output<String> location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
         public Builder location(String location) {
-            this.location = Input.of(Objects.requireNonNull(location));
+            this.location = Output.of(Objects.requireNonNull(location));
             return this;
         }
 
-        public Builder properties(Input<UserPropertiesArgs> properties) {
+        public Builder properties(Output<UserPropertiesArgs> properties) {
             this.properties = Objects.requireNonNull(properties);
             return this;
         }
 
         public Builder properties(UserPropertiesArgs properties) {
-            this.properties = Input.of(Objects.requireNonNull(properties));
+            this.properties = Output.of(Objects.requireNonNull(properties));
             return this;
         }
 
-        public Builder userSettingsName(@Nullable Input<String> userSettingsName) {
+        public Builder userSettingsName(@Nullable Output<String> userSettingsName) {
             this.userSettingsName = userSettingsName;
             return this;
         }
 
         public Builder userSettingsName(@Nullable String userSettingsName) {
-            this.userSettingsName = Input.ofNullable(userSettingsName);
+            this.userSettingsName = Output.ofNullable(userSettingsName);
             return this;
         }
         public UserSettingsWithLocationArgs build() {

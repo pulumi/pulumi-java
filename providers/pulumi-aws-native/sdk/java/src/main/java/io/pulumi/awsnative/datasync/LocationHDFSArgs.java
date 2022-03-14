@@ -7,7 +7,7 @@ import io.pulumi.awsnative.datasync.enums.LocationHDFSAuthenticationType;
 import io.pulumi.awsnative.datasync.inputs.LocationHDFSNameNodeArgs;
 import io.pulumi.awsnative.datasync.inputs.LocationHDFSQopConfigurationArgs;
 import io.pulumi.awsnative.datasync.inputs.LocationHDFSTagArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -25,9 +25,9 @@ public final class LocationHDFSArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="agentArns", required=true)
-      private final Input<List<String>> agentArns;
+      private final Output<List<String>> agentArns;
 
-    public Input<List<String>> getAgentArns() {
+    public Output<List<String>> getAgentArns() {
         return this.agentArns;
     }
 
@@ -36,9 +36,9 @@ public final class LocationHDFSArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="authenticationType", required=true)
-      private final Input<LocationHDFSAuthenticationType> authenticationType;
+      private final Output<LocationHDFSAuthenticationType> authenticationType;
 
-    public Input<LocationHDFSAuthenticationType> getAuthenticationType() {
+    public Output<LocationHDFSAuthenticationType> getAuthenticationType() {
         return this.authenticationType;
     }
 
@@ -47,10 +47,10 @@ public final class LocationHDFSArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="blockSize")
-      private final @Nullable Input<Integer> blockSize;
+      private final @Nullable Output<Integer> blockSize;
 
-    public Input<Integer> getBlockSize() {
-        return this.blockSize == null ? Input.empty() : this.blockSize;
+    public Output<Integer> getBlockSize() {
+        return this.blockSize == null ? Output.empty() : this.blockSize;
     }
 
     /**
@@ -58,10 +58,10 @@ public final class LocationHDFSArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kerberosKeytab")
-      private final @Nullable Input<String> kerberosKeytab;
+      private final @Nullable Output<String> kerberosKeytab;
 
-    public Input<String> getKerberosKeytab() {
-        return this.kerberosKeytab == null ? Input.empty() : this.kerberosKeytab;
+    public Output<String> getKerberosKeytab() {
+        return this.kerberosKeytab == null ? Output.empty() : this.kerberosKeytab;
     }
 
     /**
@@ -69,10 +69,10 @@ public final class LocationHDFSArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kerberosKrb5Conf")
-      private final @Nullable Input<String> kerberosKrb5Conf;
+      private final @Nullable Output<String> kerberosKrb5Conf;
 
-    public Input<String> getKerberosKrb5Conf() {
-        return this.kerberosKrb5Conf == null ? Input.empty() : this.kerberosKrb5Conf;
+    public Output<String> getKerberosKrb5Conf() {
+        return this.kerberosKrb5Conf == null ? Output.empty() : this.kerberosKrb5Conf;
     }
 
     /**
@@ -80,10 +80,10 @@ public final class LocationHDFSArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kerberosPrincipal")
-      private final @Nullable Input<String> kerberosPrincipal;
+      private final @Nullable Output<String> kerberosPrincipal;
 
-    public Input<String> getKerberosPrincipal() {
-        return this.kerberosPrincipal == null ? Input.empty() : this.kerberosPrincipal;
+    public Output<String> getKerberosPrincipal() {
+        return this.kerberosPrincipal == null ? Output.empty() : this.kerberosPrincipal;
     }
 
     /**
@@ -91,10 +91,10 @@ public final class LocationHDFSArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kmsKeyProviderUri")
-      private final @Nullable Input<String> kmsKeyProviderUri;
+      private final @Nullable Output<String> kmsKeyProviderUri;
 
-    public Input<String> getKmsKeyProviderUri() {
-        return this.kmsKeyProviderUri == null ? Input.empty() : this.kmsKeyProviderUri;
+    public Output<String> getKmsKeyProviderUri() {
+        return this.kmsKeyProviderUri == null ? Output.empty() : this.kmsKeyProviderUri;
     }
 
     /**
@@ -102,17 +102,17 @@ public final class LocationHDFSArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="nameNodes", required=true)
-      private final Input<List<LocationHDFSNameNodeArgs>> nameNodes;
+      private final Output<List<LocationHDFSNameNodeArgs>> nameNodes;
 
-    public Input<List<LocationHDFSNameNodeArgs>> getNameNodes() {
+    public Output<List<LocationHDFSNameNodeArgs>> getNameNodes() {
         return this.nameNodes;
     }
 
     @InputImport(name="qopConfiguration")
-      private final @Nullable Input<LocationHDFSQopConfigurationArgs> qopConfiguration;
+      private final @Nullable Output<LocationHDFSQopConfigurationArgs> qopConfiguration;
 
-    public Input<LocationHDFSQopConfigurationArgs> getQopConfiguration() {
-        return this.qopConfiguration == null ? Input.empty() : this.qopConfiguration;
+    public Output<LocationHDFSQopConfigurationArgs> getQopConfiguration() {
+        return this.qopConfiguration == null ? Output.empty() : this.qopConfiguration;
     }
 
     /**
@@ -120,10 +120,10 @@ public final class LocationHDFSArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="replicationFactor")
-      private final @Nullable Input<Integer> replicationFactor;
+      private final @Nullable Output<Integer> replicationFactor;
 
-    public Input<Integer> getReplicationFactor() {
-        return this.replicationFactor == null ? Input.empty() : this.replicationFactor;
+    public Output<Integer> getReplicationFactor() {
+        return this.replicationFactor == null ? Output.empty() : this.replicationFactor;
     }
 
     /**
@@ -131,10 +131,10 @@ public final class LocationHDFSArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="simpleUser")
-      private final @Nullable Input<String> simpleUser;
+      private final @Nullable Output<String> simpleUser;
 
-    public Input<String> getSimpleUser() {
-        return this.simpleUser == null ? Input.empty() : this.simpleUser;
+    public Output<String> getSimpleUser() {
+        return this.simpleUser == null ? Output.empty() : this.simpleUser;
     }
 
     /**
@@ -142,10 +142,10 @@ public final class LocationHDFSArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="subdirectory")
-      private final @Nullable Input<String> subdirectory;
+      private final @Nullable Output<String> subdirectory;
 
-    public Input<String> getSubdirectory() {
-        return this.subdirectory == null ? Input.empty() : this.subdirectory;
+    public Output<String> getSubdirectory() {
+        return this.subdirectory == null ? Output.empty() : this.subdirectory;
     }
 
     /**
@@ -153,26 +153,26 @@ public final class LocationHDFSArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<List<LocationHDFSTagArgs>> tags;
+      private final @Nullable Output<List<LocationHDFSTagArgs>> tags;
 
-    public Input<List<LocationHDFSTagArgs>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<List<LocationHDFSTagArgs>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public LocationHDFSArgs(
-        Input<List<String>> agentArns,
-        Input<LocationHDFSAuthenticationType> authenticationType,
-        @Nullable Input<Integer> blockSize,
-        @Nullable Input<String> kerberosKeytab,
-        @Nullable Input<String> kerberosKrb5Conf,
-        @Nullable Input<String> kerberosPrincipal,
-        @Nullable Input<String> kmsKeyProviderUri,
-        Input<List<LocationHDFSNameNodeArgs>> nameNodes,
-        @Nullable Input<LocationHDFSQopConfigurationArgs> qopConfiguration,
-        @Nullable Input<Integer> replicationFactor,
-        @Nullable Input<String> simpleUser,
-        @Nullable Input<String> subdirectory,
-        @Nullable Input<List<LocationHDFSTagArgs>> tags) {
+        Output<List<String>> agentArns,
+        Output<LocationHDFSAuthenticationType> authenticationType,
+        @Nullable Output<Integer> blockSize,
+        @Nullable Output<String> kerberosKeytab,
+        @Nullable Output<String> kerberosKrb5Conf,
+        @Nullable Output<String> kerberosPrincipal,
+        @Nullable Output<String> kmsKeyProviderUri,
+        Output<List<LocationHDFSNameNodeArgs>> nameNodes,
+        @Nullable Output<LocationHDFSQopConfigurationArgs> qopConfiguration,
+        @Nullable Output<Integer> replicationFactor,
+        @Nullable Output<String> simpleUser,
+        @Nullable Output<String> subdirectory,
+        @Nullable Output<List<LocationHDFSTagArgs>> tags) {
         this.agentArns = Objects.requireNonNull(agentArns, "expected parameter 'agentArns' to be non-null");
         this.authenticationType = Objects.requireNonNull(authenticationType, "expected parameter 'authenticationType' to be non-null");
         this.blockSize = blockSize;
@@ -189,19 +189,19 @@ public final class LocationHDFSArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private LocationHDFSArgs() {
-        this.agentArns = Input.empty();
-        this.authenticationType = Input.empty();
-        this.blockSize = Input.empty();
-        this.kerberosKeytab = Input.empty();
-        this.kerberosKrb5Conf = Input.empty();
-        this.kerberosPrincipal = Input.empty();
-        this.kmsKeyProviderUri = Input.empty();
-        this.nameNodes = Input.empty();
-        this.qopConfiguration = Input.empty();
-        this.replicationFactor = Input.empty();
-        this.simpleUser = Input.empty();
-        this.subdirectory = Input.empty();
-        this.tags = Input.empty();
+        this.agentArns = Output.empty();
+        this.authenticationType = Output.empty();
+        this.blockSize = Output.empty();
+        this.kerberosKeytab = Output.empty();
+        this.kerberosKrb5Conf = Output.empty();
+        this.kerberosPrincipal = Output.empty();
+        this.kmsKeyProviderUri = Output.empty();
+        this.nameNodes = Output.empty();
+        this.qopConfiguration = Output.empty();
+        this.replicationFactor = Output.empty();
+        this.simpleUser = Output.empty();
+        this.subdirectory = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -213,19 +213,19 @@ public final class LocationHDFSArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<List<String>> agentArns;
-        private Input<LocationHDFSAuthenticationType> authenticationType;
-        private @Nullable Input<Integer> blockSize;
-        private @Nullable Input<String> kerberosKeytab;
-        private @Nullable Input<String> kerberosKrb5Conf;
-        private @Nullable Input<String> kerberosPrincipal;
-        private @Nullable Input<String> kmsKeyProviderUri;
-        private Input<List<LocationHDFSNameNodeArgs>> nameNodes;
-        private @Nullable Input<LocationHDFSQopConfigurationArgs> qopConfiguration;
-        private @Nullable Input<Integer> replicationFactor;
-        private @Nullable Input<String> simpleUser;
-        private @Nullable Input<String> subdirectory;
-        private @Nullable Input<List<LocationHDFSTagArgs>> tags;
+        private Output<List<String>> agentArns;
+        private Output<LocationHDFSAuthenticationType> authenticationType;
+        private @Nullable Output<Integer> blockSize;
+        private @Nullable Output<String> kerberosKeytab;
+        private @Nullable Output<String> kerberosKrb5Conf;
+        private @Nullable Output<String> kerberosPrincipal;
+        private @Nullable Output<String> kmsKeyProviderUri;
+        private Output<List<LocationHDFSNameNodeArgs>> nameNodes;
+        private @Nullable Output<LocationHDFSQopConfigurationArgs> qopConfiguration;
+        private @Nullable Output<Integer> replicationFactor;
+        private @Nullable Output<String> simpleUser;
+        private @Nullable Output<String> subdirectory;
+        private @Nullable Output<List<LocationHDFSTagArgs>> tags;
 
         public Builder() {
     	      // Empty
@@ -248,133 +248,133 @@ public final class LocationHDFSArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder agentArns(Input<List<String>> agentArns) {
+        public Builder agentArns(Output<List<String>> agentArns) {
             this.agentArns = Objects.requireNonNull(agentArns);
             return this;
         }
 
         public Builder agentArns(List<String> agentArns) {
-            this.agentArns = Input.of(Objects.requireNonNull(agentArns));
+            this.agentArns = Output.of(Objects.requireNonNull(agentArns));
             return this;
         }
 
-        public Builder authenticationType(Input<LocationHDFSAuthenticationType> authenticationType) {
+        public Builder authenticationType(Output<LocationHDFSAuthenticationType> authenticationType) {
             this.authenticationType = Objects.requireNonNull(authenticationType);
             return this;
         }
 
         public Builder authenticationType(LocationHDFSAuthenticationType authenticationType) {
-            this.authenticationType = Input.of(Objects.requireNonNull(authenticationType));
+            this.authenticationType = Output.of(Objects.requireNonNull(authenticationType));
             return this;
         }
 
-        public Builder blockSize(@Nullable Input<Integer> blockSize) {
+        public Builder blockSize(@Nullable Output<Integer> blockSize) {
             this.blockSize = blockSize;
             return this;
         }
 
         public Builder blockSize(@Nullable Integer blockSize) {
-            this.blockSize = Input.ofNullable(blockSize);
+            this.blockSize = Output.ofNullable(blockSize);
             return this;
         }
 
-        public Builder kerberosKeytab(@Nullable Input<String> kerberosKeytab) {
+        public Builder kerberosKeytab(@Nullable Output<String> kerberosKeytab) {
             this.kerberosKeytab = kerberosKeytab;
             return this;
         }
 
         public Builder kerberosKeytab(@Nullable String kerberosKeytab) {
-            this.kerberosKeytab = Input.ofNullable(kerberosKeytab);
+            this.kerberosKeytab = Output.ofNullable(kerberosKeytab);
             return this;
         }
 
-        public Builder kerberosKrb5Conf(@Nullable Input<String> kerberosKrb5Conf) {
+        public Builder kerberosKrb5Conf(@Nullable Output<String> kerberosKrb5Conf) {
             this.kerberosKrb5Conf = kerberosKrb5Conf;
             return this;
         }
 
         public Builder kerberosKrb5Conf(@Nullable String kerberosKrb5Conf) {
-            this.kerberosKrb5Conf = Input.ofNullable(kerberosKrb5Conf);
+            this.kerberosKrb5Conf = Output.ofNullable(kerberosKrb5Conf);
             return this;
         }
 
-        public Builder kerberosPrincipal(@Nullable Input<String> kerberosPrincipal) {
+        public Builder kerberosPrincipal(@Nullable Output<String> kerberosPrincipal) {
             this.kerberosPrincipal = kerberosPrincipal;
             return this;
         }
 
         public Builder kerberosPrincipal(@Nullable String kerberosPrincipal) {
-            this.kerberosPrincipal = Input.ofNullable(kerberosPrincipal);
+            this.kerberosPrincipal = Output.ofNullable(kerberosPrincipal);
             return this;
         }
 
-        public Builder kmsKeyProviderUri(@Nullable Input<String> kmsKeyProviderUri) {
+        public Builder kmsKeyProviderUri(@Nullable Output<String> kmsKeyProviderUri) {
             this.kmsKeyProviderUri = kmsKeyProviderUri;
             return this;
         }
 
         public Builder kmsKeyProviderUri(@Nullable String kmsKeyProviderUri) {
-            this.kmsKeyProviderUri = Input.ofNullable(kmsKeyProviderUri);
+            this.kmsKeyProviderUri = Output.ofNullable(kmsKeyProviderUri);
             return this;
         }
 
-        public Builder nameNodes(Input<List<LocationHDFSNameNodeArgs>> nameNodes) {
+        public Builder nameNodes(Output<List<LocationHDFSNameNodeArgs>> nameNodes) {
             this.nameNodes = Objects.requireNonNull(nameNodes);
             return this;
         }
 
         public Builder nameNodes(List<LocationHDFSNameNodeArgs> nameNodes) {
-            this.nameNodes = Input.of(Objects.requireNonNull(nameNodes));
+            this.nameNodes = Output.of(Objects.requireNonNull(nameNodes));
             return this;
         }
 
-        public Builder qopConfiguration(@Nullable Input<LocationHDFSQopConfigurationArgs> qopConfiguration) {
+        public Builder qopConfiguration(@Nullable Output<LocationHDFSQopConfigurationArgs> qopConfiguration) {
             this.qopConfiguration = qopConfiguration;
             return this;
         }
 
         public Builder qopConfiguration(@Nullable LocationHDFSQopConfigurationArgs qopConfiguration) {
-            this.qopConfiguration = Input.ofNullable(qopConfiguration);
+            this.qopConfiguration = Output.ofNullable(qopConfiguration);
             return this;
         }
 
-        public Builder replicationFactor(@Nullable Input<Integer> replicationFactor) {
+        public Builder replicationFactor(@Nullable Output<Integer> replicationFactor) {
             this.replicationFactor = replicationFactor;
             return this;
         }
 
         public Builder replicationFactor(@Nullable Integer replicationFactor) {
-            this.replicationFactor = Input.ofNullable(replicationFactor);
+            this.replicationFactor = Output.ofNullable(replicationFactor);
             return this;
         }
 
-        public Builder simpleUser(@Nullable Input<String> simpleUser) {
+        public Builder simpleUser(@Nullable Output<String> simpleUser) {
             this.simpleUser = simpleUser;
             return this;
         }
 
         public Builder simpleUser(@Nullable String simpleUser) {
-            this.simpleUser = Input.ofNullable(simpleUser);
+            this.simpleUser = Output.ofNullable(simpleUser);
             return this;
         }
 
-        public Builder subdirectory(@Nullable Input<String> subdirectory) {
+        public Builder subdirectory(@Nullable Output<String> subdirectory) {
             this.subdirectory = subdirectory;
             return this;
         }
 
         public Builder subdirectory(@Nullable String subdirectory) {
-            this.subdirectory = Input.ofNullable(subdirectory);
+            this.subdirectory = Output.ofNullable(subdirectory);
             return this;
         }
 
-        public Builder tags(@Nullable Input<List<LocationHDFSTagArgs>> tags) {
+        public Builder tags(@Nullable Output<List<LocationHDFSTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable List<LocationHDFSTagArgs> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public LocationHDFSArgs build() {

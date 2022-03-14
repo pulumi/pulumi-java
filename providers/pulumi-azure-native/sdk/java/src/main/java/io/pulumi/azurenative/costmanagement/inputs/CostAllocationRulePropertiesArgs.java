@@ -6,7 +6,7 @@ package io.pulumi.azurenative.costmanagement.inputs;
 import io.pulumi.azurenative.costmanagement.enums.RuleStatus;
 import io.pulumi.azurenative.costmanagement.inputs.CostAllocationRuleDetailsArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -26,10 +26,10 @@ public final class CostAllocationRulePropertiesArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -37,9 +37,9 @@ public final class CostAllocationRulePropertiesArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="details", required=true)
-      private final Input<CostAllocationRuleDetailsArgs> details;
+      private final Output<CostAllocationRuleDetailsArgs> details;
 
-    public Input<CostAllocationRuleDetailsArgs> getDetails() {
+    public Output<CostAllocationRuleDetailsArgs> getDetails() {
         return this.details;
     }
 
@@ -48,25 +48,25 @@ public final class CostAllocationRulePropertiesArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="status", required=true)
-      private final Input<Either<String,RuleStatus>> status;
+      private final Output<Either<String,RuleStatus>> status;
 
-    public Input<Either<String,RuleStatus>> getStatus() {
+    public Output<Either<String,RuleStatus>> getStatus() {
         return this.status;
     }
 
     public CostAllocationRulePropertiesArgs(
-        @Nullable Input<String> description,
-        Input<CostAllocationRuleDetailsArgs> details,
-        Input<Either<String,RuleStatus>> status) {
+        @Nullable Output<String> description,
+        Output<CostAllocationRuleDetailsArgs> details,
+        Output<Either<String,RuleStatus>> status) {
         this.description = description;
         this.details = Objects.requireNonNull(details, "expected parameter 'details' to be non-null");
         this.status = Objects.requireNonNull(status, "expected parameter 'status' to be non-null");
     }
 
     private CostAllocationRulePropertiesArgs() {
-        this.description = Input.empty();
-        this.details = Input.empty();
-        this.status = Input.empty();
+        this.description = Output.empty();
+        this.details = Output.empty();
+        this.status = Output.empty();
     }
 
     public static Builder builder() {
@@ -78,9 +78,9 @@ public final class CostAllocationRulePropertiesArgs extends io.pulumi.resources.
     }
 
     public static final class Builder {
-        private @Nullable Input<String> description;
-        private Input<CostAllocationRuleDetailsArgs> details;
-        private Input<Either<String,RuleStatus>> status;
+        private @Nullable Output<String> description;
+        private Output<CostAllocationRuleDetailsArgs> details;
+        private Output<Either<String,RuleStatus>> status;
 
         public Builder() {
     	      // Empty
@@ -93,33 +93,33 @@ public final class CostAllocationRulePropertiesArgs extends io.pulumi.resources.
     	      this.status = defaults.status;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder details(Input<CostAllocationRuleDetailsArgs> details) {
+        public Builder details(Output<CostAllocationRuleDetailsArgs> details) {
             this.details = Objects.requireNonNull(details);
             return this;
         }
 
         public Builder details(CostAllocationRuleDetailsArgs details) {
-            this.details = Input.of(Objects.requireNonNull(details));
+            this.details = Output.of(Objects.requireNonNull(details));
             return this;
         }
 
-        public Builder status(Input<Either<String,RuleStatus>> status) {
+        public Builder status(Output<Either<String,RuleStatus>> status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
 
         public Builder status(Either<String,RuleStatus> status) {
-            this.status = Input.of(Objects.requireNonNull(status));
+            this.status = Output.of(Objects.requireNonNull(status));
             return this;
         }
         public CostAllocationRulePropertiesArgs build() {

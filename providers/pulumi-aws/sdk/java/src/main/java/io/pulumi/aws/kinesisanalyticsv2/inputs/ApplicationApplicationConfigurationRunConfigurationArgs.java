@@ -5,7 +5,7 @@ package io.pulumi.aws.kinesisanalyticsv2.inputs;
 
 import io.pulumi.aws.kinesisanalyticsv2.inputs.ApplicationApplicationConfigurationRunConfigurationApplicationRestoreConfigurationArgs;
 import io.pulumi.aws.kinesisanalyticsv2.inputs.ApplicationApplicationConfigurationRunConfigurationFlinkRunConfigurationArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,10 +20,10 @@ public final class ApplicationApplicationConfigurationRunConfigurationArgs exten
      * 
      */
     @InputImport(name="applicationRestoreConfiguration")
-      private final @Nullable Input<ApplicationApplicationConfigurationRunConfigurationApplicationRestoreConfigurationArgs> applicationRestoreConfiguration;
+      private final @Nullable Output<ApplicationApplicationConfigurationRunConfigurationApplicationRestoreConfigurationArgs> applicationRestoreConfiguration;
 
-    public Input<ApplicationApplicationConfigurationRunConfigurationApplicationRestoreConfigurationArgs> getApplicationRestoreConfiguration() {
-        return this.applicationRestoreConfiguration == null ? Input.empty() : this.applicationRestoreConfiguration;
+    public Output<ApplicationApplicationConfigurationRunConfigurationApplicationRestoreConfigurationArgs> getApplicationRestoreConfiguration() {
+        return this.applicationRestoreConfiguration == null ? Output.empty() : this.applicationRestoreConfiguration;
     }
 
     /**
@@ -31,22 +31,22 @@ public final class ApplicationApplicationConfigurationRunConfigurationArgs exten
      * 
      */
     @InputImport(name="flinkRunConfiguration")
-      private final @Nullable Input<ApplicationApplicationConfigurationRunConfigurationFlinkRunConfigurationArgs> flinkRunConfiguration;
+      private final @Nullable Output<ApplicationApplicationConfigurationRunConfigurationFlinkRunConfigurationArgs> flinkRunConfiguration;
 
-    public Input<ApplicationApplicationConfigurationRunConfigurationFlinkRunConfigurationArgs> getFlinkRunConfiguration() {
-        return this.flinkRunConfiguration == null ? Input.empty() : this.flinkRunConfiguration;
+    public Output<ApplicationApplicationConfigurationRunConfigurationFlinkRunConfigurationArgs> getFlinkRunConfiguration() {
+        return this.flinkRunConfiguration == null ? Output.empty() : this.flinkRunConfiguration;
     }
 
     public ApplicationApplicationConfigurationRunConfigurationArgs(
-        @Nullable Input<ApplicationApplicationConfigurationRunConfigurationApplicationRestoreConfigurationArgs> applicationRestoreConfiguration,
-        @Nullable Input<ApplicationApplicationConfigurationRunConfigurationFlinkRunConfigurationArgs> flinkRunConfiguration) {
+        @Nullable Output<ApplicationApplicationConfigurationRunConfigurationApplicationRestoreConfigurationArgs> applicationRestoreConfiguration,
+        @Nullable Output<ApplicationApplicationConfigurationRunConfigurationFlinkRunConfigurationArgs> flinkRunConfiguration) {
         this.applicationRestoreConfiguration = applicationRestoreConfiguration;
         this.flinkRunConfiguration = flinkRunConfiguration;
     }
 
     private ApplicationApplicationConfigurationRunConfigurationArgs() {
-        this.applicationRestoreConfiguration = Input.empty();
-        this.flinkRunConfiguration = Input.empty();
+        this.applicationRestoreConfiguration = Output.empty();
+        this.flinkRunConfiguration = Output.empty();
     }
 
     public static Builder builder() {
@@ -58,8 +58,8 @@ public final class ApplicationApplicationConfigurationRunConfigurationArgs exten
     }
 
     public static final class Builder {
-        private @Nullable Input<ApplicationApplicationConfigurationRunConfigurationApplicationRestoreConfigurationArgs> applicationRestoreConfiguration;
-        private @Nullable Input<ApplicationApplicationConfigurationRunConfigurationFlinkRunConfigurationArgs> flinkRunConfiguration;
+        private @Nullable Output<ApplicationApplicationConfigurationRunConfigurationApplicationRestoreConfigurationArgs> applicationRestoreConfiguration;
+        private @Nullable Output<ApplicationApplicationConfigurationRunConfigurationFlinkRunConfigurationArgs> flinkRunConfiguration;
 
         public Builder() {
     	      // Empty
@@ -71,23 +71,23 @@ public final class ApplicationApplicationConfigurationRunConfigurationArgs exten
     	      this.flinkRunConfiguration = defaults.flinkRunConfiguration;
         }
 
-        public Builder applicationRestoreConfiguration(@Nullable Input<ApplicationApplicationConfigurationRunConfigurationApplicationRestoreConfigurationArgs> applicationRestoreConfiguration) {
+        public Builder applicationRestoreConfiguration(@Nullable Output<ApplicationApplicationConfigurationRunConfigurationApplicationRestoreConfigurationArgs> applicationRestoreConfiguration) {
             this.applicationRestoreConfiguration = applicationRestoreConfiguration;
             return this;
         }
 
         public Builder applicationRestoreConfiguration(@Nullable ApplicationApplicationConfigurationRunConfigurationApplicationRestoreConfigurationArgs applicationRestoreConfiguration) {
-            this.applicationRestoreConfiguration = Input.ofNullable(applicationRestoreConfiguration);
+            this.applicationRestoreConfiguration = Output.ofNullable(applicationRestoreConfiguration);
             return this;
         }
 
-        public Builder flinkRunConfiguration(@Nullable Input<ApplicationApplicationConfigurationRunConfigurationFlinkRunConfigurationArgs> flinkRunConfiguration) {
+        public Builder flinkRunConfiguration(@Nullable Output<ApplicationApplicationConfigurationRunConfigurationFlinkRunConfigurationArgs> flinkRunConfiguration) {
             this.flinkRunConfiguration = flinkRunConfiguration;
             return this;
         }
 
         public Builder flinkRunConfiguration(@Nullable ApplicationApplicationConfigurationRunConfigurationFlinkRunConfigurationArgs flinkRunConfiguration) {
-            this.flinkRunConfiguration = Input.ofNullable(flinkRunConfiguration);
+            this.flinkRunConfiguration = Output.ofNullable(flinkRunConfiguration);
             return this;
         }
         public ApplicationApplicationConfigurationRunConfigurationArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.healthcareapis.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class ServiceCosmosDbConfigurationInfoArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="keyVaultKeyUri")
-      private final @Nullable Input<String> keyVaultKeyUri;
+      private final @Nullable Output<String> keyVaultKeyUri;
 
-    public Input<String> getKeyVaultKeyUri() {
-        return this.keyVaultKeyUri == null ? Input.empty() : this.keyVaultKeyUri;
+    public Output<String> getKeyVaultKeyUri() {
+        return this.keyVaultKeyUri == null ? Output.empty() : this.keyVaultKeyUri;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class ServiceCosmosDbConfigurationInfoArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="offerThroughput")
-      private final @Nullable Input<Integer> offerThroughput;
+      private final @Nullable Output<Integer> offerThroughput;
 
-    public Input<Integer> getOfferThroughput() {
-        return this.offerThroughput == null ? Input.empty() : this.offerThroughput;
+    public Output<Integer> getOfferThroughput() {
+        return this.offerThroughput == null ? Output.empty() : this.offerThroughput;
     }
 
     public ServiceCosmosDbConfigurationInfoArgs(
-        @Nullable Input<String> keyVaultKeyUri,
-        @Nullable Input<Integer> offerThroughput) {
+        @Nullable Output<String> keyVaultKeyUri,
+        @Nullable Output<Integer> offerThroughput) {
         this.keyVaultKeyUri = keyVaultKeyUri;
         this.offerThroughput = offerThroughput;
     }
 
     private ServiceCosmosDbConfigurationInfoArgs() {
-        this.keyVaultKeyUri = Input.empty();
-        this.offerThroughput = Input.empty();
+        this.keyVaultKeyUri = Output.empty();
+        this.offerThroughput = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class ServiceCosmosDbConfigurationInfoArgs extends io.pulumi.resour
     }
 
     public static final class Builder {
-        private @Nullable Input<String> keyVaultKeyUri;
-        private @Nullable Input<Integer> offerThroughput;
+        private @Nullable Output<String> keyVaultKeyUri;
+        private @Nullable Output<Integer> offerThroughput;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class ServiceCosmosDbConfigurationInfoArgs extends io.pulumi.resour
     	      this.offerThroughput = defaults.offerThroughput;
         }
 
-        public Builder keyVaultKeyUri(@Nullable Input<String> keyVaultKeyUri) {
+        public Builder keyVaultKeyUri(@Nullable Output<String> keyVaultKeyUri) {
             this.keyVaultKeyUri = keyVaultKeyUri;
             return this;
         }
 
         public Builder keyVaultKeyUri(@Nullable String keyVaultKeyUri) {
-            this.keyVaultKeyUri = Input.ofNullable(keyVaultKeyUri);
+            this.keyVaultKeyUri = Output.ofNullable(keyVaultKeyUri);
             return this;
         }
 
-        public Builder offerThroughput(@Nullable Input<Integer> offerThroughput) {
+        public Builder offerThroughput(@Nullable Output<Integer> offerThroughput) {
             this.offerThroughput = offerThroughput;
             return this;
         }
 
         public Builder offerThroughput(@Nullable Integer offerThroughput) {
-            this.offerThroughput = Input.ofNullable(offerThroughput);
+            this.offerThroughput = Output.ofNullable(offerThroughput);
             return this;
         }
         public ServiceCosmosDbConfigurationInfoArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.monitoring_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.monitoring_v1.inputs.TileArgs;
 import java.lang.Integer;
@@ -25,10 +25,10 @@ public final class MosaicLayoutArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="columns")
-      private final @Nullable Input<Integer> columns;
+      private final @Nullable Output<Integer> columns;
 
-    public Input<Integer> getColumns() {
-        return this.columns == null ? Input.empty() : this.columns;
+    public Output<Integer> getColumns() {
+        return this.columns == null ? Output.empty() : this.columns;
     }
 
     /**
@@ -36,22 +36,22 @@ public final class MosaicLayoutArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tiles")
-      private final @Nullable Input<List<TileArgs>> tiles;
+      private final @Nullable Output<List<TileArgs>> tiles;
 
-    public Input<List<TileArgs>> getTiles() {
-        return this.tiles == null ? Input.empty() : this.tiles;
+    public Output<List<TileArgs>> getTiles() {
+        return this.tiles == null ? Output.empty() : this.tiles;
     }
 
     public MosaicLayoutArgs(
-        @Nullable Input<Integer> columns,
-        @Nullable Input<List<TileArgs>> tiles) {
+        @Nullable Output<Integer> columns,
+        @Nullable Output<List<TileArgs>> tiles) {
         this.columns = columns;
         this.tiles = tiles;
     }
 
     private MosaicLayoutArgs() {
-        this.columns = Input.empty();
-        this.tiles = Input.empty();
+        this.columns = Output.empty();
+        this.tiles = Output.empty();
     }
 
     public static Builder builder() {
@@ -63,8 +63,8 @@ public final class MosaicLayoutArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> columns;
-        private @Nullable Input<List<TileArgs>> tiles;
+        private @Nullable Output<Integer> columns;
+        private @Nullable Output<List<TileArgs>> tiles;
 
         public Builder() {
     	      // Empty
@@ -76,23 +76,23 @@ public final class MosaicLayoutArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tiles = defaults.tiles;
         }
 
-        public Builder columns(@Nullable Input<Integer> columns) {
+        public Builder columns(@Nullable Output<Integer> columns) {
             this.columns = columns;
             return this;
         }
 
         public Builder columns(@Nullable Integer columns) {
-            this.columns = Input.ofNullable(columns);
+            this.columns = Output.ofNullable(columns);
             return this;
         }
 
-        public Builder tiles(@Nullable Input<List<TileArgs>> tiles) {
+        public Builder tiles(@Nullable Output<List<TileArgs>> tiles) {
             this.tiles = tiles;
             return this;
         }
 
         public Builder tiles(@Nullable List<TileArgs> tiles) {
-            this.tiles = Input.ofNullable(tiles);
+            this.tiles = Output.ofNullable(tiles);
             return this;
         }
         public MosaicLayoutArgs build() {

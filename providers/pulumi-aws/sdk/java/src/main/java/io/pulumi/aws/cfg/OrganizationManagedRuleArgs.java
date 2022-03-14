@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.cfg;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -20,10 +20,10 @@ public final class OrganizationManagedRuleArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -31,10 +31,10 @@ public final class OrganizationManagedRuleArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="excludedAccounts")
-      private final @Nullable Input<List<String>> excludedAccounts;
+      private final @Nullable Output<List<String>> excludedAccounts;
 
-    public Input<List<String>> getExcludedAccounts() {
-        return this.excludedAccounts == null ? Input.empty() : this.excludedAccounts;
+    public Output<List<String>> getExcludedAccounts() {
+        return this.excludedAccounts == null ? Output.empty() : this.excludedAccounts;
     }
 
     /**
@@ -42,10 +42,10 @@ public final class OrganizationManagedRuleArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="inputParameters")
-      private final @Nullable Input<String> inputParameters;
+      private final @Nullable Output<String> inputParameters;
 
-    public Input<String> getInputParameters() {
-        return this.inputParameters == null ? Input.empty() : this.inputParameters;
+    public Output<String> getInputParameters() {
+        return this.inputParameters == null ? Output.empty() : this.inputParameters;
     }
 
     /**
@@ -53,10 +53,10 @@ public final class OrganizationManagedRuleArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="maximumExecutionFrequency")
-      private final @Nullable Input<String> maximumExecutionFrequency;
+      private final @Nullable Output<String> maximumExecutionFrequency;
 
-    public Input<String> getMaximumExecutionFrequency() {
-        return this.maximumExecutionFrequency == null ? Input.empty() : this.maximumExecutionFrequency;
+    public Output<String> getMaximumExecutionFrequency() {
+        return this.maximumExecutionFrequency == null ? Output.empty() : this.maximumExecutionFrequency;
     }
 
     /**
@@ -64,10 +64,10 @@ public final class OrganizationManagedRuleArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -75,10 +75,10 @@ public final class OrganizationManagedRuleArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="resourceIdScope")
-      private final @Nullable Input<String> resourceIdScope;
+      private final @Nullable Output<String> resourceIdScope;
 
-    public Input<String> getResourceIdScope() {
-        return this.resourceIdScope == null ? Input.empty() : this.resourceIdScope;
+    public Output<String> getResourceIdScope() {
+        return this.resourceIdScope == null ? Output.empty() : this.resourceIdScope;
     }
 
     /**
@@ -86,10 +86,10 @@ public final class OrganizationManagedRuleArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="resourceTypesScopes")
-      private final @Nullable Input<List<String>> resourceTypesScopes;
+      private final @Nullable Output<List<String>> resourceTypesScopes;
 
-    public Input<List<String>> getResourceTypesScopes() {
-        return this.resourceTypesScopes == null ? Input.empty() : this.resourceTypesScopes;
+    public Output<List<String>> getResourceTypesScopes() {
+        return this.resourceTypesScopes == null ? Output.empty() : this.resourceTypesScopes;
     }
 
     /**
@@ -97,9 +97,9 @@ public final class OrganizationManagedRuleArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="ruleIdentifier", required=true)
-      private final Input<String> ruleIdentifier;
+      private final Output<String> ruleIdentifier;
 
-    public Input<String> getRuleIdentifier() {
+    public Output<String> getRuleIdentifier() {
         return this.ruleIdentifier;
     }
 
@@ -108,10 +108,10 @@ public final class OrganizationManagedRuleArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="tagKeyScope")
-      private final @Nullable Input<String> tagKeyScope;
+      private final @Nullable Output<String> tagKeyScope;
 
-    public Input<String> getTagKeyScope() {
-        return this.tagKeyScope == null ? Input.empty() : this.tagKeyScope;
+    public Output<String> getTagKeyScope() {
+        return this.tagKeyScope == null ? Output.empty() : this.tagKeyScope;
     }
 
     /**
@@ -119,23 +119,23 @@ public final class OrganizationManagedRuleArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="tagValueScope")
-      private final @Nullable Input<String> tagValueScope;
+      private final @Nullable Output<String> tagValueScope;
 
-    public Input<String> getTagValueScope() {
-        return this.tagValueScope == null ? Input.empty() : this.tagValueScope;
+    public Output<String> getTagValueScope() {
+        return this.tagValueScope == null ? Output.empty() : this.tagValueScope;
     }
 
     public OrganizationManagedRuleArgs(
-        @Nullable Input<String> description,
-        @Nullable Input<List<String>> excludedAccounts,
-        @Nullable Input<String> inputParameters,
-        @Nullable Input<String> maximumExecutionFrequency,
-        @Nullable Input<String> name,
-        @Nullable Input<String> resourceIdScope,
-        @Nullable Input<List<String>> resourceTypesScopes,
-        Input<String> ruleIdentifier,
-        @Nullable Input<String> tagKeyScope,
-        @Nullable Input<String> tagValueScope) {
+        @Nullable Output<String> description,
+        @Nullable Output<List<String>> excludedAccounts,
+        @Nullable Output<String> inputParameters,
+        @Nullable Output<String> maximumExecutionFrequency,
+        @Nullable Output<String> name,
+        @Nullable Output<String> resourceIdScope,
+        @Nullable Output<List<String>> resourceTypesScopes,
+        Output<String> ruleIdentifier,
+        @Nullable Output<String> tagKeyScope,
+        @Nullable Output<String> tagValueScope) {
         this.description = description;
         this.excludedAccounts = excludedAccounts;
         this.inputParameters = inputParameters;
@@ -149,16 +149,16 @@ public final class OrganizationManagedRuleArgs extends io.pulumi.resources.Resou
     }
 
     private OrganizationManagedRuleArgs() {
-        this.description = Input.empty();
-        this.excludedAccounts = Input.empty();
-        this.inputParameters = Input.empty();
-        this.maximumExecutionFrequency = Input.empty();
-        this.name = Input.empty();
-        this.resourceIdScope = Input.empty();
-        this.resourceTypesScopes = Input.empty();
-        this.ruleIdentifier = Input.empty();
-        this.tagKeyScope = Input.empty();
-        this.tagValueScope = Input.empty();
+        this.description = Output.empty();
+        this.excludedAccounts = Output.empty();
+        this.inputParameters = Output.empty();
+        this.maximumExecutionFrequency = Output.empty();
+        this.name = Output.empty();
+        this.resourceIdScope = Output.empty();
+        this.resourceTypesScopes = Output.empty();
+        this.ruleIdentifier = Output.empty();
+        this.tagKeyScope = Output.empty();
+        this.tagValueScope = Output.empty();
     }
 
     public static Builder builder() {
@@ -170,16 +170,16 @@ public final class OrganizationManagedRuleArgs extends io.pulumi.resources.Resou
     }
 
     public static final class Builder {
-        private @Nullable Input<String> description;
-        private @Nullable Input<List<String>> excludedAccounts;
-        private @Nullable Input<String> inputParameters;
-        private @Nullable Input<String> maximumExecutionFrequency;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> resourceIdScope;
-        private @Nullable Input<List<String>> resourceTypesScopes;
-        private Input<String> ruleIdentifier;
-        private @Nullable Input<String> tagKeyScope;
-        private @Nullable Input<String> tagValueScope;
+        private @Nullable Output<String> description;
+        private @Nullable Output<List<String>> excludedAccounts;
+        private @Nullable Output<String> inputParameters;
+        private @Nullable Output<String> maximumExecutionFrequency;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> resourceIdScope;
+        private @Nullable Output<List<String>> resourceTypesScopes;
+        private Output<String> ruleIdentifier;
+        private @Nullable Output<String> tagKeyScope;
+        private @Nullable Output<String> tagValueScope;
 
         public Builder() {
     	      // Empty
@@ -199,103 +199,103 @@ public final class OrganizationManagedRuleArgs extends io.pulumi.resources.Resou
     	      this.tagValueScope = defaults.tagValueScope;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder excludedAccounts(@Nullable Input<List<String>> excludedAccounts) {
+        public Builder excludedAccounts(@Nullable Output<List<String>> excludedAccounts) {
             this.excludedAccounts = excludedAccounts;
             return this;
         }
 
         public Builder excludedAccounts(@Nullable List<String> excludedAccounts) {
-            this.excludedAccounts = Input.ofNullable(excludedAccounts);
+            this.excludedAccounts = Output.ofNullable(excludedAccounts);
             return this;
         }
 
-        public Builder inputParameters(@Nullable Input<String> inputParameters) {
+        public Builder inputParameters(@Nullable Output<String> inputParameters) {
             this.inputParameters = inputParameters;
             return this;
         }
 
         public Builder inputParameters(@Nullable String inputParameters) {
-            this.inputParameters = Input.ofNullable(inputParameters);
+            this.inputParameters = Output.ofNullable(inputParameters);
             return this;
         }
 
-        public Builder maximumExecutionFrequency(@Nullable Input<String> maximumExecutionFrequency) {
+        public Builder maximumExecutionFrequency(@Nullable Output<String> maximumExecutionFrequency) {
             this.maximumExecutionFrequency = maximumExecutionFrequency;
             return this;
         }
 
         public Builder maximumExecutionFrequency(@Nullable String maximumExecutionFrequency) {
-            this.maximumExecutionFrequency = Input.ofNullable(maximumExecutionFrequency);
+            this.maximumExecutionFrequency = Output.ofNullable(maximumExecutionFrequency);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder resourceIdScope(@Nullable Input<String> resourceIdScope) {
+        public Builder resourceIdScope(@Nullable Output<String> resourceIdScope) {
             this.resourceIdScope = resourceIdScope;
             return this;
         }
 
         public Builder resourceIdScope(@Nullable String resourceIdScope) {
-            this.resourceIdScope = Input.ofNullable(resourceIdScope);
+            this.resourceIdScope = Output.ofNullable(resourceIdScope);
             return this;
         }
 
-        public Builder resourceTypesScopes(@Nullable Input<List<String>> resourceTypesScopes) {
+        public Builder resourceTypesScopes(@Nullable Output<List<String>> resourceTypesScopes) {
             this.resourceTypesScopes = resourceTypesScopes;
             return this;
         }
 
         public Builder resourceTypesScopes(@Nullable List<String> resourceTypesScopes) {
-            this.resourceTypesScopes = Input.ofNullable(resourceTypesScopes);
+            this.resourceTypesScopes = Output.ofNullable(resourceTypesScopes);
             return this;
         }
 
-        public Builder ruleIdentifier(Input<String> ruleIdentifier) {
+        public Builder ruleIdentifier(Output<String> ruleIdentifier) {
             this.ruleIdentifier = Objects.requireNonNull(ruleIdentifier);
             return this;
         }
 
         public Builder ruleIdentifier(String ruleIdentifier) {
-            this.ruleIdentifier = Input.of(Objects.requireNonNull(ruleIdentifier));
+            this.ruleIdentifier = Output.of(Objects.requireNonNull(ruleIdentifier));
             return this;
         }
 
-        public Builder tagKeyScope(@Nullable Input<String> tagKeyScope) {
+        public Builder tagKeyScope(@Nullable Output<String> tagKeyScope) {
             this.tagKeyScope = tagKeyScope;
             return this;
         }
 
         public Builder tagKeyScope(@Nullable String tagKeyScope) {
-            this.tagKeyScope = Input.ofNullable(tagKeyScope);
+            this.tagKeyScope = Output.ofNullable(tagKeyScope);
             return this;
         }
 
-        public Builder tagValueScope(@Nullable Input<String> tagValueScope) {
+        public Builder tagValueScope(@Nullable Output<String> tagValueScope) {
             this.tagValueScope = tagValueScope;
             return this;
         }
 
         public Builder tagValueScope(@Nullable String tagValueScope) {
-            this.tagValueScope = Input.ofNullable(tagValueScope);
+            this.tagValueScope = Output.ofNullable(tagValueScope);
             return this;
         }
         public OrganizationManagedRuleArgs build() {

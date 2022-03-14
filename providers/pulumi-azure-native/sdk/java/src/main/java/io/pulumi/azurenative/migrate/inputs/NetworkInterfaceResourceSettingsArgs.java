@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.migrate.inputs;
 
 import io.pulumi.azurenative.migrate.inputs.NicIpConfigurationResourceSettingsArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -26,10 +26,10 @@ public final class NetworkInterfaceResourceSettingsArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="enableAcceleratedNetworking")
-      private final @Nullable Input<Boolean> enableAcceleratedNetworking;
+      private final @Nullable Output<Boolean> enableAcceleratedNetworking;
 
-    public Input<Boolean> getEnableAcceleratedNetworking() {
-        return this.enableAcceleratedNetworking == null ? Input.empty() : this.enableAcceleratedNetworking;
+    public Output<Boolean> getEnableAcceleratedNetworking() {
+        return this.enableAcceleratedNetworking == null ? Output.empty() : this.enableAcceleratedNetworking;
     }
 
     /**
@@ -37,10 +37,10 @@ public final class NetworkInterfaceResourceSettingsArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="ipConfigurations")
-      private final @Nullable Input<List<NicIpConfigurationResourceSettingsArgs>> ipConfigurations;
+      private final @Nullable Output<List<NicIpConfigurationResourceSettingsArgs>> ipConfigurations;
 
-    public Input<List<NicIpConfigurationResourceSettingsArgs>> getIpConfigurations() {
-        return this.ipConfigurations == null ? Input.empty() : this.ipConfigurations;
+    public Output<List<NicIpConfigurationResourceSettingsArgs>> getIpConfigurations() {
+        return this.ipConfigurations == null ? Output.empty() : this.ipConfigurations;
     }
 
     /**
@@ -49,9 +49,9 @@ public final class NetworkInterfaceResourceSettingsArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="resourceType", required=true)
-      private final Input<String> resourceType;
+      private final Output<String> resourceType;
 
-    public Input<String> getPropResourceType() {
+    public Output<String> getPropResourceType() {
         return this.resourceType;
     }
 
@@ -60,17 +60,17 @@ public final class NetworkInterfaceResourceSettingsArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="targetResourceName", required=true)
-      private final Input<String> targetResourceName;
+      private final Output<String> targetResourceName;
 
-    public Input<String> getTargetResourceName() {
+    public Output<String> getTargetResourceName() {
         return this.targetResourceName;
     }
 
     public NetworkInterfaceResourceSettingsArgs(
-        @Nullable Input<Boolean> enableAcceleratedNetworking,
-        @Nullable Input<List<NicIpConfigurationResourceSettingsArgs>> ipConfigurations,
-        Input<String> resourceType,
-        Input<String> targetResourceName) {
+        @Nullable Output<Boolean> enableAcceleratedNetworking,
+        @Nullable Output<List<NicIpConfigurationResourceSettingsArgs>> ipConfigurations,
+        Output<String> resourceType,
+        Output<String> targetResourceName) {
         this.enableAcceleratedNetworking = enableAcceleratedNetworking;
         this.ipConfigurations = ipConfigurations;
         this.resourceType = Objects.requireNonNull(resourceType, "expected parameter 'resourceType' to be non-null");
@@ -78,10 +78,10 @@ public final class NetworkInterfaceResourceSettingsArgs extends io.pulumi.resour
     }
 
     private NetworkInterfaceResourceSettingsArgs() {
-        this.enableAcceleratedNetworking = Input.empty();
-        this.ipConfigurations = Input.empty();
-        this.resourceType = Input.empty();
-        this.targetResourceName = Input.empty();
+        this.enableAcceleratedNetworking = Output.empty();
+        this.ipConfigurations = Output.empty();
+        this.resourceType = Output.empty();
+        this.targetResourceName = Output.empty();
     }
 
     public static Builder builder() {
@@ -93,10 +93,10 @@ public final class NetworkInterfaceResourceSettingsArgs extends io.pulumi.resour
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> enableAcceleratedNetworking;
-        private @Nullable Input<List<NicIpConfigurationResourceSettingsArgs>> ipConfigurations;
-        private Input<String> resourceType;
-        private Input<String> targetResourceName;
+        private @Nullable Output<Boolean> enableAcceleratedNetworking;
+        private @Nullable Output<List<NicIpConfigurationResourceSettingsArgs>> ipConfigurations;
+        private Output<String> resourceType;
+        private Output<String> targetResourceName;
 
         public Builder() {
     	      // Empty
@@ -110,43 +110,43 @@ public final class NetworkInterfaceResourceSettingsArgs extends io.pulumi.resour
     	      this.targetResourceName = defaults.targetResourceName;
         }
 
-        public Builder enableAcceleratedNetworking(@Nullable Input<Boolean> enableAcceleratedNetworking) {
+        public Builder enableAcceleratedNetworking(@Nullable Output<Boolean> enableAcceleratedNetworking) {
             this.enableAcceleratedNetworking = enableAcceleratedNetworking;
             return this;
         }
 
         public Builder enableAcceleratedNetworking(@Nullable Boolean enableAcceleratedNetworking) {
-            this.enableAcceleratedNetworking = Input.ofNullable(enableAcceleratedNetworking);
+            this.enableAcceleratedNetworking = Output.ofNullable(enableAcceleratedNetworking);
             return this;
         }
 
-        public Builder ipConfigurations(@Nullable Input<List<NicIpConfigurationResourceSettingsArgs>> ipConfigurations) {
+        public Builder ipConfigurations(@Nullable Output<List<NicIpConfigurationResourceSettingsArgs>> ipConfigurations) {
             this.ipConfigurations = ipConfigurations;
             return this;
         }
 
         public Builder ipConfigurations(@Nullable List<NicIpConfigurationResourceSettingsArgs> ipConfigurations) {
-            this.ipConfigurations = Input.ofNullable(ipConfigurations);
+            this.ipConfigurations = Output.ofNullable(ipConfigurations);
             return this;
         }
 
-        public Builder resourceType(Input<String> resourceType) {
+        public Builder resourceType(Output<String> resourceType) {
             this.resourceType = Objects.requireNonNull(resourceType);
             return this;
         }
 
         public Builder resourceType(String resourceType) {
-            this.resourceType = Input.of(Objects.requireNonNull(resourceType));
+            this.resourceType = Output.of(Objects.requireNonNull(resourceType));
             return this;
         }
 
-        public Builder targetResourceName(Input<String> targetResourceName) {
+        public Builder targetResourceName(Output<String> targetResourceName) {
             this.targetResourceName = Objects.requireNonNull(targetResourceName);
             return this;
         }
 
         public Builder targetResourceName(String targetResourceName) {
-            this.targetResourceName = Input.of(Objects.requireNonNull(targetResourceName));
+            this.targetResourceName = Output.of(Objects.requireNonNull(targetResourceName));
             return this;
         }
         public NetworkInterfaceResourceSettingsArgs build() {

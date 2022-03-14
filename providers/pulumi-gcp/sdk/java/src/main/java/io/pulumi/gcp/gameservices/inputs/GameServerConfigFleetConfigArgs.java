@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.gameservices.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -25,9 +25,9 @@ public final class GameServerConfigFleetConfigArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="fleetSpec", required=true)
-      private final Input<String> fleetSpec;
+      private final Output<String> fleetSpec;
 
-    public Input<String> getFleetSpec() {
+    public Output<String> getFleetSpec() {
         return this.fleetSpec;
     }
 
@@ -36,22 +36,22 @@ public final class GameServerConfigFleetConfigArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     public GameServerConfigFleetConfigArgs(
-        Input<String> fleetSpec,
-        @Nullable Input<String> name) {
+        Output<String> fleetSpec,
+        @Nullable Output<String> name) {
         this.fleetSpec = Objects.requireNonNull(fleetSpec, "expected parameter 'fleetSpec' to be non-null");
         this.name = name;
     }
 
     private GameServerConfigFleetConfigArgs() {
-        this.fleetSpec = Input.empty();
-        this.name = Input.empty();
+        this.fleetSpec = Output.empty();
+        this.name = Output.empty();
     }
 
     public static Builder builder() {
@@ -63,8 +63,8 @@ public final class GameServerConfigFleetConfigArgs extends io.pulumi.resources.R
     }
 
     public static final class Builder {
-        private Input<String> fleetSpec;
-        private @Nullable Input<String> name;
+        private Output<String> fleetSpec;
+        private @Nullable Output<String> name;
 
         public Builder() {
     	      // Empty
@@ -76,23 +76,23 @@ public final class GameServerConfigFleetConfigArgs extends io.pulumi.resources.R
     	      this.name = defaults.name;
         }
 
-        public Builder fleetSpec(Input<String> fleetSpec) {
+        public Builder fleetSpec(Output<String> fleetSpec) {
             this.fleetSpec = Objects.requireNonNull(fleetSpec);
             return this;
         }
 
         public Builder fleetSpec(String fleetSpec) {
-            this.fleetSpec = Input.of(Objects.requireNonNull(fleetSpec));
+            this.fleetSpec = Output.of(Objects.requireNonNull(fleetSpec));
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
         public GameServerConfigFleetConfigArgs build() {

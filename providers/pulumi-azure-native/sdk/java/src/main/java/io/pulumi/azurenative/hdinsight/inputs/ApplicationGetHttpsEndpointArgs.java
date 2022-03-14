@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.hdinsight.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -26,10 +26,10 @@ public final class ApplicationGetHttpsEndpointArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="accessModes")
-      private final @Nullable Input<List<String>> accessModes;
+      private final @Nullable Output<List<String>> accessModes;
 
-    public Input<List<String>> getAccessModes() {
-        return this.accessModes == null ? Input.empty() : this.accessModes;
+    public Output<List<String>> getAccessModes() {
+        return this.accessModes == null ? Output.empty() : this.accessModes;
     }
 
     /**
@@ -37,10 +37,10 @@ public final class ApplicationGetHttpsEndpointArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="destinationPort")
-      private final @Nullable Input<Integer> destinationPort;
+      private final @Nullable Output<Integer> destinationPort;
 
-    public Input<Integer> getDestinationPort() {
-        return this.destinationPort == null ? Input.empty() : this.destinationPort;
+    public Output<Integer> getDestinationPort() {
+        return this.destinationPort == null ? Output.empty() : this.destinationPort;
     }
 
     /**
@@ -48,10 +48,10 @@ public final class ApplicationGetHttpsEndpointArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="disableGatewayAuth")
-      private final @Nullable Input<Boolean> disableGatewayAuth;
+      private final @Nullable Output<Boolean> disableGatewayAuth;
 
-    public Input<Boolean> getDisableGatewayAuth() {
-        return this.disableGatewayAuth == null ? Input.empty() : this.disableGatewayAuth;
+    public Output<Boolean> getDisableGatewayAuth() {
+        return this.disableGatewayAuth == null ? Output.empty() : this.disableGatewayAuth;
     }
 
     /**
@@ -59,10 +59,10 @@ public final class ApplicationGetHttpsEndpointArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="privateIPAddress")
-      private final @Nullable Input<String> privateIPAddress;
+      private final @Nullable Output<String> privateIPAddress;
 
-    public Input<String> getPrivateIPAddress() {
-        return this.privateIPAddress == null ? Input.empty() : this.privateIPAddress;
+    public Output<String> getPrivateIPAddress() {
+        return this.privateIPAddress == null ? Output.empty() : this.privateIPAddress;
     }
 
     /**
@@ -70,18 +70,18 @@ public final class ApplicationGetHttpsEndpointArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="subDomainSuffix")
-      private final @Nullable Input<String> subDomainSuffix;
+      private final @Nullable Output<String> subDomainSuffix;
 
-    public Input<String> getSubDomainSuffix() {
-        return this.subDomainSuffix == null ? Input.empty() : this.subDomainSuffix;
+    public Output<String> getSubDomainSuffix() {
+        return this.subDomainSuffix == null ? Output.empty() : this.subDomainSuffix;
     }
 
     public ApplicationGetHttpsEndpointArgs(
-        @Nullable Input<List<String>> accessModes,
-        @Nullable Input<Integer> destinationPort,
-        @Nullable Input<Boolean> disableGatewayAuth,
-        @Nullable Input<String> privateIPAddress,
-        @Nullable Input<String> subDomainSuffix) {
+        @Nullable Output<List<String>> accessModes,
+        @Nullable Output<Integer> destinationPort,
+        @Nullable Output<Boolean> disableGatewayAuth,
+        @Nullable Output<String> privateIPAddress,
+        @Nullable Output<String> subDomainSuffix) {
         this.accessModes = accessModes;
         this.destinationPort = destinationPort;
         this.disableGatewayAuth = disableGatewayAuth;
@@ -90,11 +90,11 @@ public final class ApplicationGetHttpsEndpointArgs extends io.pulumi.resources.R
     }
 
     private ApplicationGetHttpsEndpointArgs() {
-        this.accessModes = Input.empty();
-        this.destinationPort = Input.empty();
-        this.disableGatewayAuth = Input.empty();
-        this.privateIPAddress = Input.empty();
-        this.subDomainSuffix = Input.empty();
+        this.accessModes = Output.empty();
+        this.destinationPort = Output.empty();
+        this.disableGatewayAuth = Output.empty();
+        this.privateIPAddress = Output.empty();
+        this.subDomainSuffix = Output.empty();
     }
 
     public static Builder builder() {
@@ -106,11 +106,11 @@ public final class ApplicationGetHttpsEndpointArgs extends io.pulumi.resources.R
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> accessModes;
-        private @Nullable Input<Integer> destinationPort;
-        private @Nullable Input<Boolean> disableGatewayAuth;
-        private @Nullable Input<String> privateIPAddress;
-        private @Nullable Input<String> subDomainSuffix;
+        private @Nullable Output<List<String>> accessModes;
+        private @Nullable Output<Integer> destinationPort;
+        private @Nullable Output<Boolean> disableGatewayAuth;
+        private @Nullable Output<String> privateIPAddress;
+        private @Nullable Output<String> subDomainSuffix;
 
         public Builder() {
     	      // Empty
@@ -125,53 +125,53 @@ public final class ApplicationGetHttpsEndpointArgs extends io.pulumi.resources.R
     	      this.subDomainSuffix = defaults.subDomainSuffix;
         }
 
-        public Builder accessModes(@Nullable Input<List<String>> accessModes) {
+        public Builder accessModes(@Nullable Output<List<String>> accessModes) {
             this.accessModes = accessModes;
             return this;
         }
 
         public Builder accessModes(@Nullable List<String> accessModes) {
-            this.accessModes = Input.ofNullable(accessModes);
+            this.accessModes = Output.ofNullable(accessModes);
             return this;
         }
 
-        public Builder destinationPort(@Nullable Input<Integer> destinationPort) {
+        public Builder destinationPort(@Nullable Output<Integer> destinationPort) {
             this.destinationPort = destinationPort;
             return this;
         }
 
         public Builder destinationPort(@Nullable Integer destinationPort) {
-            this.destinationPort = Input.ofNullable(destinationPort);
+            this.destinationPort = Output.ofNullable(destinationPort);
             return this;
         }
 
-        public Builder disableGatewayAuth(@Nullable Input<Boolean> disableGatewayAuth) {
+        public Builder disableGatewayAuth(@Nullable Output<Boolean> disableGatewayAuth) {
             this.disableGatewayAuth = disableGatewayAuth;
             return this;
         }
 
         public Builder disableGatewayAuth(@Nullable Boolean disableGatewayAuth) {
-            this.disableGatewayAuth = Input.ofNullable(disableGatewayAuth);
+            this.disableGatewayAuth = Output.ofNullable(disableGatewayAuth);
             return this;
         }
 
-        public Builder privateIPAddress(@Nullable Input<String> privateIPAddress) {
+        public Builder privateIPAddress(@Nullable Output<String> privateIPAddress) {
             this.privateIPAddress = privateIPAddress;
             return this;
         }
 
         public Builder privateIPAddress(@Nullable String privateIPAddress) {
-            this.privateIPAddress = Input.ofNullable(privateIPAddress);
+            this.privateIPAddress = Output.ofNullable(privateIPAddress);
             return this;
         }
 
-        public Builder subDomainSuffix(@Nullable Input<String> subDomainSuffix) {
+        public Builder subDomainSuffix(@Nullable Output<String> subDomainSuffix) {
             this.subDomainSuffix = subDomainSuffix;
             return this;
         }
 
         public Builder subDomainSuffix(@Nullable String subDomainSuffix) {
-            this.subDomainSuffix = Input.ofNullable(subDomainSuffix);
+            this.subDomainSuffix = Output.ofNullable(subDomainSuffix);
             return this;
         }
         public ApplicationGetHttpsEndpointArgs build() {

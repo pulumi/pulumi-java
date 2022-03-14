@@ -6,7 +6,7 @@ package io.pulumi.azurenative.databoxedge;
 import io.pulumi.azurenative.databoxedge.enums.UserType;
 import io.pulumi.azurenative.databoxedge.inputs.AsymmetricEncryptedSecretArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -22,9 +22,9 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="deviceName", required=true)
-      private final Input<String> deviceName;
+      private final Output<String> deviceName;
 
-    public Input<String> getDeviceName() {
+    public Output<String> getDeviceName() {
         return this.deviceName;
     }
 
@@ -33,10 +33,10 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="encryptedPassword")
-      private final @Nullable Input<AsymmetricEncryptedSecretArgs> encryptedPassword;
+      private final @Nullable Output<AsymmetricEncryptedSecretArgs> encryptedPassword;
 
-    public Input<AsymmetricEncryptedSecretArgs> getEncryptedPassword() {
-        return this.encryptedPassword == null ? Input.empty() : this.encryptedPassword;
+    public Output<AsymmetricEncryptedSecretArgs> getEncryptedPassword() {
+        return this.encryptedPassword == null ? Output.empty() : this.encryptedPassword;
     }
 
     /**
@@ -44,10 +44,10 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -55,9 +55,9 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -66,18 +66,18 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="userType", required=true)
-      private final Input<Either<String,UserType>> userType;
+      private final Output<Either<String,UserType>> userType;
 
-    public Input<Either<String,UserType>> getUserType() {
+    public Output<Either<String,UserType>> getUserType() {
         return this.userType;
     }
 
     public UserArgs(
-        Input<String> deviceName,
-        @Nullable Input<AsymmetricEncryptedSecretArgs> encryptedPassword,
-        @Nullable Input<String> name,
-        Input<String> resourceGroupName,
-        Input<Either<String,UserType>> userType) {
+        Output<String> deviceName,
+        @Nullable Output<AsymmetricEncryptedSecretArgs> encryptedPassword,
+        @Nullable Output<String> name,
+        Output<String> resourceGroupName,
+        Output<Either<String,UserType>> userType) {
         this.deviceName = Objects.requireNonNull(deviceName, "expected parameter 'deviceName' to be non-null");
         this.encryptedPassword = encryptedPassword;
         this.name = name;
@@ -86,11 +86,11 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private UserArgs() {
-        this.deviceName = Input.empty();
-        this.encryptedPassword = Input.empty();
-        this.name = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.userType = Input.empty();
+        this.deviceName = Output.empty();
+        this.encryptedPassword = Output.empty();
+        this.name = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.userType = Output.empty();
     }
 
     public static Builder builder() {
@@ -102,11 +102,11 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> deviceName;
-        private @Nullable Input<AsymmetricEncryptedSecretArgs> encryptedPassword;
-        private @Nullable Input<String> name;
-        private Input<String> resourceGroupName;
-        private Input<Either<String,UserType>> userType;
+        private Output<String> deviceName;
+        private @Nullable Output<AsymmetricEncryptedSecretArgs> encryptedPassword;
+        private @Nullable Output<String> name;
+        private Output<String> resourceGroupName;
+        private Output<Either<String,UserType>> userType;
 
         public Builder() {
     	      // Empty
@@ -121,53 +121,53 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
     	      this.userType = defaults.userType;
         }
 
-        public Builder deviceName(Input<String> deviceName) {
+        public Builder deviceName(Output<String> deviceName) {
             this.deviceName = Objects.requireNonNull(deviceName);
             return this;
         }
 
         public Builder deviceName(String deviceName) {
-            this.deviceName = Input.of(Objects.requireNonNull(deviceName));
+            this.deviceName = Output.of(Objects.requireNonNull(deviceName));
             return this;
         }
 
-        public Builder encryptedPassword(@Nullable Input<AsymmetricEncryptedSecretArgs> encryptedPassword) {
+        public Builder encryptedPassword(@Nullable Output<AsymmetricEncryptedSecretArgs> encryptedPassword) {
             this.encryptedPassword = encryptedPassword;
             return this;
         }
 
         public Builder encryptedPassword(@Nullable AsymmetricEncryptedSecretArgs encryptedPassword) {
-            this.encryptedPassword = Input.ofNullable(encryptedPassword);
+            this.encryptedPassword = Output.ofNullable(encryptedPassword);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder userType(Input<Either<String,UserType>> userType) {
+        public Builder userType(Output<Either<String,UserType>> userType) {
             this.userType = Objects.requireNonNull(userType);
             return this;
         }
 
         public Builder userType(Either<String,UserType> userType) {
-            this.userType = Input.of(Objects.requireNonNull(userType));
+            this.userType = Output.of(Objects.requireNonNull(userType));
             return this;
         }
         public UserArgs build() {

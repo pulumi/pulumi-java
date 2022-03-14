@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.databoxedge.inputs;
 
 import io.pulumi.azurenative.databoxedge.inputs.ImageRepositoryCredentialArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -24,9 +24,9 @@ public final class IoTEdgeAgentInfoArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="imageName", required=true)
-      private final Input<String> imageName;
+      private final Output<String> imageName;
 
-    public Input<String> getImageName() {
+    public Output<String> getImageName() {
         return this.imageName;
     }
 
@@ -35,10 +35,10 @@ public final class IoTEdgeAgentInfoArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="imageRepository")
-      private final @Nullable Input<ImageRepositoryCredentialArgs> imageRepository;
+      private final @Nullable Output<ImageRepositoryCredentialArgs> imageRepository;
 
-    public Input<ImageRepositoryCredentialArgs> getImageRepository() {
-        return this.imageRepository == null ? Input.empty() : this.imageRepository;
+    public Output<ImageRepositoryCredentialArgs> getImageRepository() {
+        return this.imageRepository == null ? Output.empty() : this.imageRepository;
     }
 
     /**
@@ -46,25 +46,25 @@ public final class IoTEdgeAgentInfoArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="tag", required=true)
-      private final Input<String> tag;
+      private final Output<String> tag;
 
-    public Input<String> getTag() {
+    public Output<String> getTag() {
         return this.tag;
     }
 
     public IoTEdgeAgentInfoArgs(
-        Input<String> imageName,
-        @Nullable Input<ImageRepositoryCredentialArgs> imageRepository,
-        Input<String> tag) {
+        Output<String> imageName,
+        @Nullable Output<ImageRepositoryCredentialArgs> imageRepository,
+        Output<String> tag) {
         this.imageName = Objects.requireNonNull(imageName, "expected parameter 'imageName' to be non-null");
         this.imageRepository = imageRepository;
         this.tag = Objects.requireNonNull(tag, "expected parameter 'tag' to be non-null");
     }
 
     private IoTEdgeAgentInfoArgs() {
-        this.imageName = Input.empty();
-        this.imageRepository = Input.empty();
-        this.tag = Input.empty();
+        this.imageName = Output.empty();
+        this.imageRepository = Output.empty();
+        this.tag = Output.empty();
     }
 
     public static Builder builder() {
@@ -76,9 +76,9 @@ public final class IoTEdgeAgentInfoArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private Input<String> imageName;
-        private @Nullable Input<ImageRepositoryCredentialArgs> imageRepository;
-        private Input<String> tag;
+        private Output<String> imageName;
+        private @Nullable Output<ImageRepositoryCredentialArgs> imageRepository;
+        private Output<String> tag;
 
         public Builder() {
     	      // Empty
@@ -91,33 +91,33 @@ public final class IoTEdgeAgentInfoArgs extends io.pulumi.resources.ResourceArgs
     	      this.tag = defaults.tag;
         }
 
-        public Builder imageName(Input<String> imageName) {
+        public Builder imageName(Output<String> imageName) {
             this.imageName = Objects.requireNonNull(imageName);
             return this;
         }
 
         public Builder imageName(String imageName) {
-            this.imageName = Input.of(Objects.requireNonNull(imageName));
+            this.imageName = Output.of(Objects.requireNonNull(imageName));
             return this;
         }
 
-        public Builder imageRepository(@Nullable Input<ImageRepositoryCredentialArgs> imageRepository) {
+        public Builder imageRepository(@Nullable Output<ImageRepositoryCredentialArgs> imageRepository) {
             this.imageRepository = imageRepository;
             return this;
         }
 
         public Builder imageRepository(@Nullable ImageRepositoryCredentialArgs imageRepository) {
-            this.imageRepository = Input.ofNullable(imageRepository);
+            this.imageRepository = Output.ofNullable(imageRepository);
             return this;
         }
 
-        public Builder tag(Input<String> tag) {
+        public Builder tag(Output<String> tag) {
             this.tag = Objects.requireNonNull(tag);
             return this;
         }
 
         public Builder tag(String tag) {
-            this.tag = Input.of(Objects.requireNonNull(tag));
+            this.tag = Output.of(Objects.requireNonNull(tag));
             return this;
         }
         public IoTEdgeAgentInfoArgs build() {

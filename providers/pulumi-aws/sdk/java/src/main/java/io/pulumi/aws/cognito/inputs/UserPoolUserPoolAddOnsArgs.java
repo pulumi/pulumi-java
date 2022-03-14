@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.cognito.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -18,18 +18,18 @@ public final class UserPoolUserPoolAddOnsArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="advancedSecurityMode", required=true)
-      private final Input<String> advancedSecurityMode;
+      private final Output<String> advancedSecurityMode;
 
-    public Input<String> getAdvancedSecurityMode() {
+    public Output<String> getAdvancedSecurityMode() {
         return this.advancedSecurityMode;
     }
 
-    public UserPoolUserPoolAddOnsArgs(Input<String> advancedSecurityMode) {
+    public UserPoolUserPoolAddOnsArgs(Output<String> advancedSecurityMode) {
         this.advancedSecurityMode = Objects.requireNonNull(advancedSecurityMode, "expected parameter 'advancedSecurityMode' to be non-null");
     }
 
     private UserPoolUserPoolAddOnsArgs() {
-        this.advancedSecurityMode = Input.empty();
+        this.advancedSecurityMode = Output.empty();
     }
 
     public static Builder builder() {
@@ -41,7 +41,7 @@ public final class UserPoolUserPoolAddOnsArgs extends io.pulumi.resources.Resour
     }
 
     public static final class Builder {
-        private Input<String> advancedSecurityMode;
+        private Output<String> advancedSecurityMode;
 
         public Builder() {
     	      // Empty
@@ -52,13 +52,13 @@ public final class UserPoolUserPoolAddOnsArgs extends io.pulumi.resources.Resour
     	      this.advancedSecurityMode = defaults.advancedSecurityMode;
         }
 
-        public Builder advancedSecurityMode(Input<String> advancedSecurityMode) {
+        public Builder advancedSecurityMode(Output<String> advancedSecurityMode) {
             this.advancedSecurityMode = Objects.requireNonNull(advancedSecurityMode);
             return this;
         }
 
         public Builder advancedSecurityMode(String advancedSecurityMode) {
-            this.advancedSecurityMode = Input.of(Objects.requireNonNull(advancedSecurityMode));
+            this.advancedSecurityMode = Output.of(Objects.requireNonNull(advancedSecurityMode));
             return this;
         }
         public UserPoolUserPoolAddOnsArgs build() {

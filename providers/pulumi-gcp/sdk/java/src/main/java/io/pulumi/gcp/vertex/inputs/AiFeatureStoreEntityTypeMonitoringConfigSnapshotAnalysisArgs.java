@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.vertex.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -20,10 +20,10 @@ public final class AiFeatureStoreEntityTypeMonitoringConfigSnapshotAnalysisArgs 
      * 
      */
     @InputImport(name="disabled")
-      private final @Nullable Input<Boolean> disabled;
+      private final @Nullable Output<Boolean> disabled;
 
-    public Input<Boolean> getDisabled() {
-        return this.disabled == null ? Input.empty() : this.disabled;
+    public Output<Boolean> getDisabled() {
+        return this.disabled == null ? Output.empty() : this.disabled;
     }
 
     /**
@@ -32,22 +32,22 @@ public final class AiFeatureStoreEntityTypeMonitoringConfigSnapshotAnalysisArgs 
      * 
      */
     @InputImport(name="monitoringInterval")
-      private final @Nullable Input<String> monitoringInterval;
+      private final @Nullable Output<String> monitoringInterval;
 
-    public Input<String> getMonitoringInterval() {
-        return this.monitoringInterval == null ? Input.empty() : this.monitoringInterval;
+    public Output<String> getMonitoringInterval() {
+        return this.monitoringInterval == null ? Output.empty() : this.monitoringInterval;
     }
 
     public AiFeatureStoreEntityTypeMonitoringConfigSnapshotAnalysisArgs(
-        @Nullable Input<Boolean> disabled,
-        @Nullable Input<String> monitoringInterval) {
+        @Nullable Output<Boolean> disabled,
+        @Nullable Output<String> monitoringInterval) {
         this.disabled = disabled;
         this.monitoringInterval = monitoringInterval;
     }
 
     private AiFeatureStoreEntityTypeMonitoringConfigSnapshotAnalysisArgs() {
-        this.disabled = Input.empty();
-        this.monitoringInterval = Input.empty();
+        this.disabled = Output.empty();
+        this.monitoringInterval = Output.empty();
     }
 
     public static Builder builder() {
@@ -59,8 +59,8 @@ public final class AiFeatureStoreEntityTypeMonitoringConfigSnapshotAnalysisArgs 
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> disabled;
-        private @Nullable Input<String> monitoringInterval;
+        private @Nullable Output<Boolean> disabled;
+        private @Nullable Output<String> monitoringInterval;
 
         public Builder() {
     	      // Empty
@@ -72,23 +72,23 @@ public final class AiFeatureStoreEntityTypeMonitoringConfigSnapshotAnalysisArgs 
     	      this.monitoringInterval = defaults.monitoringInterval;
         }
 
-        public Builder disabled(@Nullable Input<Boolean> disabled) {
+        public Builder disabled(@Nullable Output<Boolean> disabled) {
             this.disabled = disabled;
             return this;
         }
 
         public Builder disabled(@Nullable Boolean disabled) {
-            this.disabled = Input.ofNullable(disabled);
+            this.disabled = Output.ofNullable(disabled);
             return this;
         }
 
-        public Builder monitoringInterval(@Nullable Input<String> monitoringInterval) {
+        public Builder monitoringInterval(@Nullable Output<String> monitoringInterval) {
             this.monitoringInterval = monitoringInterval;
             return this;
         }
 
         public Builder monitoringInterval(@Nullable String monitoringInterval) {
-            this.monitoringInterval = Input.ofNullable(monitoringInterval);
+            this.monitoringInterval = Output.ofNullable(monitoringInterval);
             return this;
         }
         public AiFeatureStoreEntityTypeMonitoringConfigSnapshotAnalysisArgs build() {

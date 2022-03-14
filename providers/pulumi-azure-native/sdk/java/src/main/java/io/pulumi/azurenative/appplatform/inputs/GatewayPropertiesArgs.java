@@ -7,7 +7,7 @@ import io.pulumi.azurenative.appplatform.inputs.GatewayApiMetadataPropertiesArgs
 import io.pulumi.azurenative.appplatform.inputs.GatewayCorsPropertiesArgs;
 import io.pulumi.azurenative.appplatform.inputs.GatewayResourceRequestsArgs;
 import io.pulumi.azurenative.appplatform.inputs.SsoPropertiesArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
@@ -27,10 +27,10 @@ public final class GatewayPropertiesArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="apiMetadataProperties")
-      private final @Nullable Input<GatewayApiMetadataPropertiesArgs> apiMetadataProperties;
+      private final @Nullable Output<GatewayApiMetadataPropertiesArgs> apiMetadataProperties;
 
-    public Input<GatewayApiMetadataPropertiesArgs> getApiMetadataProperties() {
-        return this.apiMetadataProperties == null ? Input.empty() : this.apiMetadataProperties;
+    public Output<GatewayApiMetadataPropertiesArgs> getApiMetadataProperties() {
+        return this.apiMetadataProperties == null ? Output.empty() : this.apiMetadataProperties;
     }
 
     /**
@@ -38,10 +38,10 @@ public final class GatewayPropertiesArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="corsProperties")
-      private final @Nullable Input<GatewayCorsPropertiesArgs> corsProperties;
+      private final @Nullable Output<GatewayCorsPropertiesArgs> corsProperties;
 
-    public Input<GatewayCorsPropertiesArgs> getCorsProperties() {
-        return this.corsProperties == null ? Input.empty() : this.corsProperties;
+    public Output<GatewayCorsPropertiesArgs> getCorsProperties() {
+        return this.corsProperties == null ? Output.empty() : this.corsProperties;
     }
 
     /**
@@ -49,10 +49,10 @@ public final class GatewayPropertiesArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="httpsOnly")
-      private final @Nullable Input<Boolean> httpsOnly;
+      private final @Nullable Output<Boolean> httpsOnly;
 
-    public Input<Boolean> getHttpsOnly() {
-        return this.httpsOnly == null ? Input.empty() : this.httpsOnly;
+    public Output<Boolean> getHttpsOnly() {
+        return this.httpsOnly == null ? Output.empty() : this.httpsOnly;
     }
 
     /**
@@ -60,10 +60,10 @@ public final class GatewayPropertiesArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="public")
-      private final @Nullable Input<Boolean> $public;
+      private final @Nullable Output<Boolean> $public;
 
-    public Input<Boolean> get$public() {
-        return this.$public == null ? Input.empty() : this.$public;
+    public Output<Boolean> get$public() {
+        return this.$public == null ? Output.empty() : this.$public;
     }
 
     /**
@@ -71,10 +71,10 @@ public final class GatewayPropertiesArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="resourceRequests")
-      private final @Nullable Input<GatewayResourceRequestsArgs> resourceRequests;
+      private final @Nullable Output<GatewayResourceRequestsArgs> resourceRequests;
 
-    public Input<GatewayResourceRequestsArgs> getResourceRequests() {
-        return this.resourceRequests == null ? Input.empty() : this.resourceRequests;
+    public Output<GatewayResourceRequestsArgs> getResourceRequests() {
+        return this.resourceRequests == null ? Output.empty() : this.resourceRequests;
     }
 
     /**
@@ -82,19 +82,19 @@ public final class GatewayPropertiesArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="ssoProperties")
-      private final @Nullable Input<SsoPropertiesArgs> ssoProperties;
+      private final @Nullable Output<SsoPropertiesArgs> ssoProperties;
 
-    public Input<SsoPropertiesArgs> getSsoProperties() {
-        return this.ssoProperties == null ? Input.empty() : this.ssoProperties;
+    public Output<SsoPropertiesArgs> getSsoProperties() {
+        return this.ssoProperties == null ? Output.empty() : this.ssoProperties;
     }
 
     public GatewayPropertiesArgs(
-        @Nullable Input<GatewayApiMetadataPropertiesArgs> apiMetadataProperties,
-        @Nullable Input<GatewayCorsPropertiesArgs> corsProperties,
-        @Nullable Input<Boolean> httpsOnly,
-        @Nullable Input<Boolean> $public,
-        @Nullable Input<GatewayResourceRequestsArgs> resourceRequests,
-        @Nullable Input<SsoPropertiesArgs> ssoProperties) {
+        @Nullable Output<GatewayApiMetadataPropertiesArgs> apiMetadataProperties,
+        @Nullable Output<GatewayCorsPropertiesArgs> corsProperties,
+        @Nullable Output<Boolean> httpsOnly,
+        @Nullable Output<Boolean> $public,
+        @Nullable Output<GatewayResourceRequestsArgs> resourceRequests,
+        @Nullable Output<SsoPropertiesArgs> ssoProperties) {
         this.apiMetadataProperties = apiMetadataProperties;
         this.corsProperties = corsProperties;
         this.httpsOnly = httpsOnly;
@@ -104,12 +104,12 @@ public final class GatewayPropertiesArgs extends io.pulumi.resources.ResourceArg
     }
 
     private GatewayPropertiesArgs() {
-        this.apiMetadataProperties = Input.empty();
-        this.corsProperties = Input.empty();
-        this.httpsOnly = Input.empty();
-        this.$public = Input.empty();
-        this.resourceRequests = Input.empty();
-        this.ssoProperties = Input.empty();
+        this.apiMetadataProperties = Output.empty();
+        this.corsProperties = Output.empty();
+        this.httpsOnly = Output.empty();
+        this.$public = Output.empty();
+        this.resourceRequests = Output.empty();
+        this.ssoProperties = Output.empty();
     }
 
     public static Builder builder() {
@@ -121,12 +121,12 @@ public final class GatewayPropertiesArgs extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private @Nullable Input<GatewayApiMetadataPropertiesArgs> apiMetadataProperties;
-        private @Nullable Input<GatewayCorsPropertiesArgs> corsProperties;
-        private @Nullable Input<Boolean> httpsOnly;
-        private @Nullable Input<Boolean> $public;
-        private @Nullable Input<GatewayResourceRequestsArgs> resourceRequests;
-        private @Nullable Input<SsoPropertiesArgs> ssoProperties;
+        private @Nullable Output<GatewayApiMetadataPropertiesArgs> apiMetadataProperties;
+        private @Nullable Output<GatewayCorsPropertiesArgs> corsProperties;
+        private @Nullable Output<Boolean> httpsOnly;
+        private @Nullable Output<Boolean> $public;
+        private @Nullable Output<GatewayResourceRequestsArgs> resourceRequests;
+        private @Nullable Output<SsoPropertiesArgs> ssoProperties;
 
         public Builder() {
     	      // Empty
@@ -142,63 +142,63 @@ public final class GatewayPropertiesArgs extends io.pulumi.resources.ResourceArg
     	      this.ssoProperties = defaults.ssoProperties;
         }
 
-        public Builder apiMetadataProperties(@Nullable Input<GatewayApiMetadataPropertiesArgs> apiMetadataProperties) {
+        public Builder apiMetadataProperties(@Nullable Output<GatewayApiMetadataPropertiesArgs> apiMetadataProperties) {
             this.apiMetadataProperties = apiMetadataProperties;
             return this;
         }
 
         public Builder apiMetadataProperties(@Nullable GatewayApiMetadataPropertiesArgs apiMetadataProperties) {
-            this.apiMetadataProperties = Input.ofNullable(apiMetadataProperties);
+            this.apiMetadataProperties = Output.ofNullable(apiMetadataProperties);
             return this;
         }
 
-        public Builder corsProperties(@Nullable Input<GatewayCorsPropertiesArgs> corsProperties) {
+        public Builder corsProperties(@Nullable Output<GatewayCorsPropertiesArgs> corsProperties) {
             this.corsProperties = corsProperties;
             return this;
         }
 
         public Builder corsProperties(@Nullable GatewayCorsPropertiesArgs corsProperties) {
-            this.corsProperties = Input.ofNullable(corsProperties);
+            this.corsProperties = Output.ofNullable(corsProperties);
             return this;
         }
 
-        public Builder httpsOnly(@Nullable Input<Boolean> httpsOnly) {
+        public Builder httpsOnly(@Nullable Output<Boolean> httpsOnly) {
             this.httpsOnly = httpsOnly;
             return this;
         }
 
         public Builder httpsOnly(@Nullable Boolean httpsOnly) {
-            this.httpsOnly = Input.ofNullable(httpsOnly);
+            this.httpsOnly = Output.ofNullable(httpsOnly);
             return this;
         }
 
-        public Builder $public(@Nullable Input<Boolean> $public) {
+        public Builder $public(@Nullable Output<Boolean> $public) {
             this.$public = $public;
             return this;
         }
 
         public Builder $public(@Nullable Boolean $public) {
-            this.$public = Input.ofNullable($public);
+            this.$public = Output.ofNullable($public);
             return this;
         }
 
-        public Builder resourceRequests(@Nullable Input<GatewayResourceRequestsArgs> resourceRequests) {
+        public Builder resourceRequests(@Nullable Output<GatewayResourceRequestsArgs> resourceRequests) {
             this.resourceRequests = resourceRequests;
             return this;
         }
 
         public Builder resourceRequests(@Nullable GatewayResourceRequestsArgs resourceRequests) {
-            this.resourceRequests = Input.ofNullable(resourceRequests);
+            this.resourceRequests = Output.ofNullable(resourceRequests);
             return this;
         }
 
-        public Builder ssoProperties(@Nullable Input<SsoPropertiesArgs> ssoProperties) {
+        public Builder ssoProperties(@Nullable Output<SsoPropertiesArgs> ssoProperties) {
             this.ssoProperties = ssoProperties;
             return this;
         }
 
         public Builder ssoProperties(@Nullable SsoPropertiesArgs ssoProperties) {
-            this.ssoProperties = Input.ofNullable(ssoProperties);
+            this.ssoProperties = Output.ofNullable(ssoProperties);
             return this;
         }
         public GatewayPropertiesArgs build() {

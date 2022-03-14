@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -15,29 +15,29 @@ public final class ServiceAttachmentConnectedEndpointArgs extends io.pulumi.reso
     public static final ServiceAttachmentConnectedEndpointArgs Empty = new ServiceAttachmentConnectedEndpointArgs();
 
     @InputImport(name="endpoint")
-      private final @Nullable Input<String> endpoint;
+      private final @Nullable Output<String> endpoint;
 
-    public Input<String> getEndpoint() {
-        return this.endpoint == null ? Input.empty() : this.endpoint;
+    public Output<String> getEndpoint() {
+        return this.endpoint == null ? Output.empty() : this.endpoint;
     }
 
     @InputImport(name="status")
-      private final @Nullable Input<String> status;
+      private final @Nullable Output<String> status;
 
-    public Input<String> getStatus() {
-        return this.status == null ? Input.empty() : this.status;
+    public Output<String> getStatus() {
+        return this.status == null ? Output.empty() : this.status;
     }
 
     public ServiceAttachmentConnectedEndpointArgs(
-        @Nullable Input<String> endpoint,
-        @Nullable Input<String> status) {
+        @Nullable Output<String> endpoint,
+        @Nullable Output<String> status) {
         this.endpoint = endpoint;
         this.status = status;
     }
 
     private ServiceAttachmentConnectedEndpointArgs() {
-        this.endpoint = Input.empty();
-        this.status = Input.empty();
+        this.endpoint = Output.empty();
+        this.status = Output.empty();
     }
 
     public static Builder builder() {
@@ -49,8 +49,8 @@ public final class ServiceAttachmentConnectedEndpointArgs extends io.pulumi.reso
     }
 
     public static final class Builder {
-        private @Nullable Input<String> endpoint;
-        private @Nullable Input<String> status;
+        private @Nullable Output<String> endpoint;
+        private @Nullable Output<String> status;
 
         public Builder() {
     	      // Empty
@@ -62,23 +62,23 @@ public final class ServiceAttachmentConnectedEndpointArgs extends io.pulumi.reso
     	      this.status = defaults.status;
         }
 
-        public Builder endpoint(@Nullable Input<String> endpoint) {
+        public Builder endpoint(@Nullable Output<String> endpoint) {
             this.endpoint = endpoint;
             return this;
         }
 
         public Builder endpoint(@Nullable String endpoint) {
-            this.endpoint = Input.ofNullable(endpoint);
+            this.endpoint = Output.ofNullable(endpoint);
             return this;
         }
 
-        public Builder status(@Nullable Input<String> status) {
+        public Builder status(@Nullable Output<String> status) {
             this.status = status;
             return this;
         }
 
         public Builder status(@Nullable String status) {
-            this.status = Input.ofNullable(status);
+            this.status = Output.ofNullable(status);
             return this;
         }
         public ServiceAttachmentConnectedEndpointArgs build() {

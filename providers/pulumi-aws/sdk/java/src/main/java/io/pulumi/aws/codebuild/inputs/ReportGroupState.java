@@ -4,7 +4,7 @@
 package io.pulumi.aws.codebuild.inputs;
 
 import io.pulumi.aws.codebuild.inputs.ReportGroupExportConfigGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -22,10 +22,10 @@ public final class ReportGroupState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arn")
-      private final @Nullable Input<String> arn;
+      private final @Nullable Output<String> arn;
 
-    public Input<String> getArn() {
-        return this.arn == null ? Input.empty() : this.arn;
+    public Output<String> getArn() {
+        return this.arn == null ? Output.empty() : this.arn;
     }
 
     /**
@@ -33,10 +33,10 @@ public final class ReportGroupState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="created")
-      private final @Nullable Input<String> created;
+      private final @Nullable Output<String> created;
 
-    public Input<String> getCreated() {
-        return this.created == null ? Input.empty() : this.created;
+    public Output<String> getCreated() {
+        return this.created == null ? Output.empty() : this.created;
     }
 
     /**
@@ -44,10 +44,10 @@ public final class ReportGroupState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="deleteReports")
-      private final @Nullable Input<Boolean> deleteReports;
+      private final @Nullable Output<Boolean> deleteReports;
 
-    public Input<Boolean> getDeleteReports() {
-        return this.deleteReports == null ? Input.empty() : this.deleteReports;
+    public Output<Boolean> getDeleteReports() {
+        return this.deleteReports == null ? Output.empty() : this.deleteReports;
     }
 
     /**
@@ -55,10 +55,10 @@ public final class ReportGroupState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="exportConfig")
-      private final @Nullable Input<ReportGroupExportConfigGetArgs> exportConfig;
+      private final @Nullable Output<ReportGroupExportConfigGetArgs> exportConfig;
 
-    public Input<ReportGroupExportConfigGetArgs> getExportConfig() {
-        return this.exportConfig == null ? Input.empty() : this.exportConfig;
+    public Output<ReportGroupExportConfigGetArgs> getExportConfig() {
+        return this.exportConfig == null ? Output.empty() : this.exportConfig;
     }
 
     /**
@@ -66,10 +66,10 @@ public final class ReportGroupState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -77,10 +77,10 @@ public final class ReportGroupState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -88,10 +88,10 @@ public final class ReportGroupState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tagsAll")
-      private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Input<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Input.empty() : this.tagsAll;
+    public Output<Map<String,String>> getTagsAll() {
+        return this.tagsAll == null ? Output.empty() : this.tagsAll;
     }
 
     /**
@@ -99,21 +99,21 @@ public final class ReportGroupState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type")
-      private final @Nullable Input<String> type;
+      private final @Nullable Output<String> type;
 
-    public Input<String> getType() {
-        return this.type == null ? Input.empty() : this.type;
+    public Output<String> getType() {
+        return this.type == null ? Output.empty() : this.type;
     }
 
     public ReportGroupState(
-        @Nullable Input<String> arn,
-        @Nullable Input<String> created,
-        @Nullable Input<Boolean> deleteReports,
-        @Nullable Input<ReportGroupExportConfigGetArgs> exportConfig,
-        @Nullable Input<String> name,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<Map<String,String>> tagsAll,
-        @Nullable Input<String> type) {
+        @Nullable Output<String> arn,
+        @Nullable Output<String> created,
+        @Nullable Output<Boolean> deleteReports,
+        @Nullable Output<ReportGroupExportConfigGetArgs> exportConfig,
+        @Nullable Output<String> name,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<Map<String,String>> tagsAll,
+        @Nullable Output<String> type) {
         this.arn = arn;
         this.created = created;
         this.deleteReports = deleteReports;
@@ -125,14 +125,14 @@ public final class ReportGroupState extends io.pulumi.resources.ResourceArgs {
     }
 
     private ReportGroupState() {
-        this.arn = Input.empty();
-        this.created = Input.empty();
-        this.deleteReports = Input.empty();
-        this.exportConfig = Input.empty();
-        this.name = Input.empty();
-        this.tags = Input.empty();
-        this.tagsAll = Input.empty();
-        this.type = Input.empty();
+        this.arn = Output.empty();
+        this.created = Output.empty();
+        this.deleteReports = Output.empty();
+        this.exportConfig = Output.empty();
+        this.name = Output.empty();
+        this.tags = Output.empty();
+        this.tagsAll = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -144,14 +144,14 @@ public final class ReportGroupState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> arn;
-        private @Nullable Input<String> created;
-        private @Nullable Input<Boolean> deleteReports;
-        private @Nullable Input<ReportGroupExportConfigGetArgs> exportConfig;
-        private @Nullable Input<String> name;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<Map<String,String>> tagsAll;
-        private @Nullable Input<String> type;
+        private @Nullable Output<String> arn;
+        private @Nullable Output<String> created;
+        private @Nullable Output<Boolean> deleteReports;
+        private @Nullable Output<ReportGroupExportConfigGetArgs> exportConfig;
+        private @Nullable Output<String> name;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<Map<String,String>> tagsAll;
+        private @Nullable Output<String> type;
 
         public Builder() {
     	      // Empty
@@ -169,83 +169,83 @@ public final class ReportGroupState extends io.pulumi.resources.ResourceArgs {
     	      this.type = defaults.type;
         }
 
-        public Builder arn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
 
         public Builder arn(@Nullable String arn) {
-            this.arn = Input.ofNullable(arn);
+            this.arn = Output.ofNullable(arn);
             return this;
         }
 
-        public Builder created(@Nullable Input<String> created) {
+        public Builder created(@Nullable Output<String> created) {
             this.created = created;
             return this;
         }
 
         public Builder created(@Nullable String created) {
-            this.created = Input.ofNullable(created);
+            this.created = Output.ofNullable(created);
             return this;
         }
 
-        public Builder deleteReports(@Nullable Input<Boolean> deleteReports) {
+        public Builder deleteReports(@Nullable Output<Boolean> deleteReports) {
             this.deleteReports = deleteReports;
             return this;
         }
 
         public Builder deleteReports(@Nullable Boolean deleteReports) {
-            this.deleteReports = Input.ofNullable(deleteReports);
+            this.deleteReports = Output.ofNullable(deleteReports);
             return this;
         }
 
-        public Builder exportConfig(@Nullable Input<ReportGroupExportConfigGetArgs> exportConfig) {
+        public Builder exportConfig(@Nullable Output<ReportGroupExportConfigGetArgs> exportConfig) {
             this.exportConfig = exportConfig;
             return this;
         }
 
         public Builder exportConfig(@Nullable ReportGroupExportConfigGetArgs exportConfig) {
-            this.exportConfig = Input.ofNullable(exportConfig);
+            this.exportConfig = Output.ofNullable(exportConfig);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Input.ofNullable(tagsAll);
+            this.tagsAll = Output.ofNullable(tagsAll);
             return this;
         }
 
-        public Builder type(@Nullable Input<String> type) {
+        public Builder type(@Nullable Output<String> type) {
             this.type = type;
             return this;
         }
 
         public Builder type(@Nullable String type) {
-            this.type = Input.ofNullable(type);
+            this.type = Output.ofNullable(type);
             return this;
         }
         public ReportGroupState build() {

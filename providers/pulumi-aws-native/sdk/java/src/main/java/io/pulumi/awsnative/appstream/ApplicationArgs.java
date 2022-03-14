@@ -5,7 +5,7 @@ package io.pulumi.awsnative.appstream;
 
 import io.pulumi.awsnative.appstream.inputs.ApplicationS3LocationArgs;
 import io.pulumi.awsnative.appstream.inputs.ApplicationTagArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -18,102 +18,102 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
     public static final ApplicationArgs Empty = new ApplicationArgs();
 
     @InputImport(name="appBlockArn", required=true)
-      private final Input<String> appBlockArn;
+      private final Output<String> appBlockArn;
 
-    public Input<String> getAppBlockArn() {
+    public Output<String> getAppBlockArn() {
         return this.appBlockArn;
     }
 
     @InputImport(name="attributesToDelete")
-      private final @Nullable Input<List<String>> attributesToDelete;
+      private final @Nullable Output<List<String>> attributesToDelete;
 
-    public Input<List<String>> getAttributesToDelete() {
-        return this.attributesToDelete == null ? Input.empty() : this.attributesToDelete;
+    public Output<List<String>> getAttributesToDelete() {
+        return this.attributesToDelete == null ? Output.empty() : this.attributesToDelete;
     }
 
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     @InputImport(name="displayName")
-      private final @Nullable Input<String> displayName;
+      private final @Nullable Output<String> displayName;
 
-    public Input<String> getDisplayName() {
-        return this.displayName == null ? Input.empty() : this.displayName;
+    public Output<String> getDisplayName() {
+        return this.displayName == null ? Output.empty() : this.displayName;
     }
 
     @InputImport(name="iconS3Location", required=true)
-      private final Input<ApplicationS3LocationArgs> iconS3Location;
+      private final Output<ApplicationS3LocationArgs> iconS3Location;
 
-    public Input<ApplicationS3LocationArgs> getIconS3Location() {
+    public Output<ApplicationS3LocationArgs> getIconS3Location() {
         return this.iconS3Location;
     }
 
     @InputImport(name="instanceFamilies", required=true)
-      private final Input<List<String>> instanceFamilies;
+      private final Output<List<String>> instanceFamilies;
 
-    public Input<List<String>> getInstanceFamilies() {
+    public Output<List<String>> getInstanceFamilies() {
         return this.instanceFamilies;
     }
 
     @InputImport(name="launchParameters")
-      private final @Nullable Input<String> launchParameters;
+      private final @Nullable Output<String> launchParameters;
 
-    public Input<String> getLaunchParameters() {
-        return this.launchParameters == null ? Input.empty() : this.launchParameters;
+    public Output<String> getLaunchParameters() {
+        return this.launchParameters == null ? Output.empty() : this.launchParameters;
     }
 
     @InputImport(name="launchPath", required=true)
-      private final Input<String> launchPath;
+      private final Output<String> launchPath;
 
-    public Input<String> getLaunchPath() {
+    public Output<String> getLaunchPath() {
         return this.launchPath;
     }
 
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     @InputImport(name="platforms", required=true)
-      private final Input<List<String>> platforms;
+      private final Output<List<String>> platforms;
 
-    public Input<List<String>> getPlatforms() {
+    public Output<List<String>> getPlatforms() {
         return this.platforms;
     }
 
     @InputImport(name="tags")
-      private final @Nullable Input<List<ApplicationTagArgs>> tags;
+      private final @Nullable Output<List<ApplicationTagArgs>> tags;
 
-    public Input<List<ApplicationTagArgs>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<List<ApplicationTagArgs>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     @InputImport(name="workingDirectory")
-      private final @Nullable Input<String> workingDirectory;
+      private final @Nullable Output<String> workingDirectory;
 
-    public Input<String> getWorkingDirectory() {
-        return this.workingDirectory == null ? Input.empty() : this.workingDirectory;
+    public Output<String> getWorkingDirectory() {
+        return this.workingDirectory == null ? Output.empty() : this.workingDirectory;
     }
 
     public ApplicationArgs(
-        Input<String> appBlockArn,
-        @Nullable Input<List<String>> attributesToDelete,
-        @Nullable Input<String> description,
-        @Nullable Input<String> displayName,
-        Input<ApplicationS3LocationArgs> iconS3Location,
-        Input<List<String>> instanceFamilies,
-        @Nullable Input<String> launchParameters,
-        Input<String> launchPath,
-        @Nullable Input<String> name,
-        Input<List<String>> platforms,
-        @Nullable Input<List<ApplicationTagArgs>> tags,
-        @Nullable Input<String> workingDirectory) {
+        Output<String> appBlockArn,
+        @Nullable Output<List<String>> attributesToDelete,
+        @Nullable Output<String> description,
+        @Nullable Output<String> displayName,
+        Output<ApplicationS3LocationArgs> iconS3Location,
+        Output<List<String>> instanceFamilies,
+        @Nullable Output<String> launchParameters,
+        Output<String> launchPath,
+        @Nullable Output<String> name,
+        Output<List<String>> platforms,
+        @Nullable Output<List<ApplicationTagArgs>> tags,
+        @Nullable Output<String> workingDirectory) {
         this.appBlockArn = Objects.requireNonNull(appBlockArn, "expected parameter 'appBlockArn' to be non-null");
         this.attributesToDelete = attributesToDelete;
         this.description = description;
@@ -129,18 +129,18 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ApplicationArgs() {
-        this.appBlockArn = Input.empty();
-        this.attributesToDelete = Input.empty();
-        this.description = Input.empty();
-        this.displayName = Input.empty();
-        this.iconS3Location = Input.empty();
-        this.instanceFamilies = Input.empty();
-        this.launchParameters = Input.empty();
-        this.launchPath = Input.empty();
-        this.name = Input.empty();
-        this.platforms = Input.empty();
-        this.tags = Input.empty();
-        this.workingDirectory = Input.empty();
+        this.appBlockArn = Output.empty();
+        this.attributesToDelete = Output.empty();
+        this.description = Output.empty();
+        this.displayName = Output.empty();
+        this.iconS3Location = Output.empty();
+        this.instanceFamilies = Output.empty();
+        this.launchParameters = Output.empty();
+        this.launchPath = Output.empty();
+        this.name = Output.empty();
+        this.platforms = Output.empty();
+        this.tags = Output.empty();
+        this.workingDirectory = Output.empty();
     }
 
     public static Builder builder() {
@@ -152,18 +152,18 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> appBlockArn;
-        private @Nullable Input<List<String>> attributesToDelete;
-        private @Nullable Input<String> description;
-        private @Nullable Input<String> displayName;
-        private Input<ApplicationS3LocationArgs> iconS3Location;
-        private Input<List<String>> instanceFamilies;
-        private @Nullable Input<String> launchParameters;
-        private Input<String> launchPath;
-        private @Nullable Input<String> name;
-        private Input<List<String>> platforms;
-        private @Nullable Input<List<ApplicationTagArgs>> tags;
-        private @Nullable Input<String> workingDirectory;
+        private Output<String> appBlockArn;
+        private @Nullable Output<List<String>> attributesToDelete;
+        private @Nullable Output<String> description;
+        private @Nullable Output<String> displayName;
+        private Output<ApplicationS3LocationArgs> iconS3Location;
+        private Output<List<String>> instanceFamilies;
+        private @Nullable Output<String> launchParameters;
+        private Output<String> launchPath;
+        private @Nullable Output<String> name;
+        private Output<List<String>> platforms;
+        private @Nullable Output<List<ApplicationTagArgs>> tags;
+        private @Nullable Output<String> workingDirectory;
 
         public Builder() {
     	      // Empty
@@ -185,123 +185,123 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
     	      this.workingDirectory = defaults.workingDirectory;
         }
 
-        public Builder appBlockArn(Input<String> appBlockArn) {
+        public Builder appBlockArn(Output<String> appBlockArn) {
             this.appBlockArn = Objects.requireNonNull(appBlockArn);
             return this;
         }
 
         public Builder appBlockArn(String appBlockArn) {
-            this.appBlockArn = Input.of(Objects.requireNonNull(appBlockArn));
+            this.appBlockArn = Output.of(Objects.requireNonNull(appBlockArn));
             return this;
         }
 
-        public Builder attributesToDelete(@Nullable Input<List<String>> attributesToDelete) {
+        public Builder attributesToDelete(@Nullable Output<List<String>> attributesToDelete) {
             this.attributesToDelete = attributesToDelete;
             return this;
         }
 
         public Builder attributesToDelete(@Nullable List<String> attributesToDelete) {
-            this.attributesToDelete = Input.ofNullable(attributesToDelete);
+            this.attributesToDelete = Output.ofNullable(attributesToDelete);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder displayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Input.ofNullable(displayName);
+            this.displayName = Output.ofNullable(displayName);
             return this;
         }
 
-        public Builder iconS3Location(Input<ApplicationS3LocationArgs> iconS3Location) {
+        public Builder iconS3Location(Output<ApplicationS3LocationArgs> iconS3Location) {
             this.iconS3Location = Objects.requireNonNull(iconS3Location);
             return this;
         }
 
         public Builder iconS3Location(ApplicationS3LocationArgs iconS3Location) {
-            this.iconS3Location = Input.of(Objects.requireNonNull(iconS3Location));
+            this.iconS3Location = Output.of(Objects.requireNonNull(iconS3Location));
             return this;
         }
 
-        public Builder instanceFamilies(Input<List<String>> instanceFamilies) {
+        public Builder instanceFamilies(Output<List<String>> instanceFamilies) {
             this.instanceFamilies = Objects.requireNonNull(instanceFamilies);
             return this;
         }
 
         public Builder instanceFamilies(List<String> instanceFamilies) {
-            this.instanceFamilies = Input.of(Objects.requireNonNull(instanceFamilies));
+            this.instanceFamilies = Output.of(Objects.requireNonNull(instanceFamilies));
             return this;
         }
 
-        public Builder launchParameters(@Nullable Input<String> launchParameters) {
+        public Builder launchParameters(@Nullable Output<String> launchParameters) {
             this.launchParameters = launchParameters;
             return this;
         }
 
         public Builder launchParameters(@Nullable String launchParameters) {
-            this.launchParameters = Input.ofNullable(launchParameters);
+            this.launchParameters = Output.ofNullable(launchParameters);
             return this;
         }
 
-        public Builder launchPath(Input<String> launchPath) {
+        public Builder launchPath(Output<String> launchPath) {
             this.launchPath = Objects.requireNonNull(launchPath);
             return this;
         }
 
         public Builder launchPath(String launchPath) {
-            this.launchPath = Input.of(Objects.requireNonNull(launchPath));
+            this.launchPath = Output.of(Objects.requireNonNull(launchPath));
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder platforms(Input<List<String>> platforms) {
+        public Builder platforms(Output<List<String>> platforms) {
             this.platforms = Objects.requireNonNull(platforms);
             return this;
         }
 
         public Builder platforms(List<String> platforms) {
-            this.platforms = Input.of(Objects.requireNonNull(platforms));
+            this.platforms = Output.of(Objects.requireNonNull(platforms));
             return this;
         }
 
-        public Builder tags(@Nullable Input<List<ApplicationTagArgs>> tags) {
+        public Builder tags(@Nullable Output<List<ApplicationTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable List<ApplicationTagArgs> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder workingDirectory(@Nullable Input<String> workingDirectory) {
+        public Builder workingDirectory(@Nullable Output<String> workingDirectory) {
             this.workingDirectory = workingDirectory;
             return this;
         }
 
         public Builder workingDirectory(@Nullable String workingDirectory) {
-            this.workingDirectory = Input.ofNullable(workingDirectory);
+            this.workingDirectory = Output.ofNullable(workingDirectory);
             return this;
         }
         public ApplicationArgs build() {

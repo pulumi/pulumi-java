@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.storage.k8s.io_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.kubernetes.core_v1.inputs.PersistentVolumeSpecArgs;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class VolumeAttachmentSourceArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="inlineVolumeSpec")
-      private final @Nullable Input<PersistentVolumeSpecArgs> inlineVolumeSpec;
+      private final @Nullable Output<PersistentVolumeSpecArgs> inlineVolumeSpec;
 
-    public Input<PersistentVolumeSpecArgs> getInlineVolumeSpec() {
-        return this.inlineVolumeSpec == null ? Input.empty() : this.inlineVolumeSpec;
+    public Output<PersistentVolumeSpecArgs> getInlineVolumeSpec() {
+        return this.inlineVolumeSpec == null ? Output.empty() : this.inlineVolumeSpec;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class VolumeAttachmentSourceArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="persistentVolumeName")
-      private final @Nullable Input<String> persistentVolumeName;
+      private final @Nullable Output<String> persistentVolumeName;
 
-    public Input<String> getPersistentVolumeName() {
-        return this.persistentVolumeName == null ? Input.empty() : this.persistentVolumeName;
+    public Output<String> getPersistentVolumeName() {
+        return this.persistentVolumeName == null ? Output.empty() : this.persistentVolumeName;
     }
 
     public VolumeAttachmentSourceArgs(
-        @Nullable Input<PersistentVolumeSpecArgs> inlineVolumeSpec,
-        @Nullable Input<String> persistentVolumeName) {
+        @Nullable Output<PersistentVolumeSpecArgs> inlineVolumeSpec,
+        @Nullable Output<String> persistentVolumeName) {
         this.inlineVolumeSpec = inlineVolumeSpec;
         this.persistentVolumeName = persistentVolumeName;
     }
 
     private VolumeAttachmentSourceArgs() {
-        this.inlineVolumeSpec = Input.empty();
-        this.persistentVolumeName = Input.empty();
+        this.inlineVolumeSpec = Output.empty();
+        this.persistentVolumeName = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class VolumeAttachmentSourceArgs extends io.pulumi.resources.Resour
     }
 
     public static final class Builder {
-        private @Nullable Input<PersistentVolumeSpecArgs> inlineVolumeSpec;
-        private @Nullable Input<String> persistentVolumeName;
+        private @Nullable Output<PersistentVolumeSpecArgs> inlineVolumeSpec;
+        private @Nullable Output<String> persistentVolumeName;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class VolumeAttachmentSourceArgs extends io.pulumi.resources.Resour
     	      this.persistentVolumeName = defaults.persistentVolumeName;
         }
 
-        public Builder inlineVolumeSpec(@Nullable Input<PersistentVolumeSpecArgs> inlineVolumeSpec) {
+        public Builder inlineVolumeSpec(@Nullable Output<PersistentVolumeSpecArgs> inlineVolumeSpec) {
             this.inlineVolumeSpec = inlineVolumeSpec;
             return this;
         }
 
         public Builder inlineVolumeSpec(@Nullable PersistentVolumeSpecArgs inlineVolumeSpec) {
-            this.inlineVolumeSpec = Input.ofNullable(inlineVolumeSpec);
+            this.inlineVolumeSpec = Output.ofNullable(inlineVolumeSpec);
             return this;
         }
 
-        public Builder persistentVolumeName(@Nullable Input<String> persistentVolumeName) {
+        public Builder persistentVolumeName(@Nullable Output<String> persistentVolumeName) {
             this.persistentVolumeName = persistentVolumeName;
             return this;
         }
 
         public Builder persistentVolumeName(@Nullable String persistentVolumeName) {
-            this.persistentVolumeName = Input.ofNullable(persistentVolumeName);
+            this.persistentVolumeName = Output.ofNullable(persistentVolumeName);
             return this;
         }
         public VolumeAttachmentSourceArgs build() {

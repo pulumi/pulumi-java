@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.operationalinsights.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class RestoredLogsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="endRestoreTime")
-      private final @Nullable Input<String> endRestoreTime;
+      private final @Nullable Output<String> endRestoreTime;
 
-    public Input<String> getEndRestoreTime() {
-        return this.endRestoreTime == null ? Input.empty() : this.endRestoreTime;
+    public Output<String> getEndRestoreTime() {
+        return this.endRestoreTime == null ? Output.empty() : this.endRestoreTime;
     }
 
     /**
@@ -34,22 +34,22 @@ public final class RestoredLogsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="startRestoreTime")
-      private final @Nullable Input<String> startRestoreTime;
+      private final @Nullable Output<String> startRestoreTime;
 
-    public Input<String> getStartRestoreTime() {
-        return this.startRestoreTime == null ? Input.empty() : this.startRestoreTime;
+    public Output<String> getStartRestoreTime() {
+        return this.startRestoreTime == null ? Output.empty() : this.startRestoreTime;
     }
 
     public RestoredLogsArgs(
-        @Nullable Input<String> endRestoreTime,
-        @Nullable Input<String> startRestoreTime) {
+        @Nullable Output<String> endRestoreTime,
+        @Nullable Output<String> startRestoreTime) {
         this.endRestoreTime = endRestoreTime;
         this.startRestoreTime = startRestoreTime;
     }
 
     private RestoredLogsArgs() {
-        this.endRestoreTime = Input.empty();
-        this.startRestoreTime = Input.empty();
+        this.endRestoreTime = Output.empty();
+        this.startRestoreTime = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class RestoredLogsArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> endRestoreTime;
-        private @Nullable Input<String> startRestoreTime;
+        private @Nullable Output<String> endRestoreTime;
+        private @Nullable Output<String> startRestoreTime;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class RestoredLogsArgs extends io.pulumi.resources.ResourceArgs {
     	      this.startRestoreTime = defaults.startRestoreTime;
         }
 
-        public Builder endRestoreTime(@Nullable Input<String> endRestoreTime) {
+        public Builder endRestoreTime(@Nullable Output<String> endRestoreTime) {
             this.endRestoreTime = endRestoreTime;
             return this;
         }
 
         public Builder endRestoreTime(@Nullable String endRestoreTime) {
-            this.endRestoreTime = Input.ofNullable(endRestoreTime);
+            this.endRestoreTime = Output.ofNullable(endRestoreTime);
             return this;
         }
 
-        public Builder startRestoreTime(@Nullable Input<String> startRestoreTime) {
+        public Builder startRestoreTime(@Nullable Output<String> startRestoreTime) {
             this.startRestoreTime = startRestoreTime;
             return this;
         }
 
         public Builder startRestoreTime(@Nullable String startRestoreTime) {
-            this.startRestoreTime = Input.ofNullable(startRestoreTime);
+            this.startRestoreTime = Output.ofNullable(startRestoreTime);
             return this;
         }
         public RestoredLogsArgs build() {

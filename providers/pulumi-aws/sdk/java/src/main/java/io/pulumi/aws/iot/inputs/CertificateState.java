@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.iot.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -20,10 +20,10 @@ public final class CertificateState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="active")
-      private final @Nullable Input<Boolean> active;
+      private final @Nullable Output<Boolean> active;
 
-    public Input<Boolean> getActive() {
-        return this.active == null ? Input.empty() : this.active;
+    public Output<Boolean> getActive() {
+        return this.active == null ? Output.empty() : this.active;
     }
 
     /**
@@ -31,10 +31,10 @@ public final class CertificateState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arn")
-      private final @Nullable Input<String> arn;
+      private final @Nullable Output<String> arn;
 
-    public Input<String> getArn() {
-        return this.arn == null ? Input.empty() : this.arn;
+    public Output<String> getArn() {
+        return this.arn == null ? Output.empty() : this.arn;
     }
 
     /**
@@ -42,10 +42,10 @@ public final class CertificateState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="certificatePem")
-      private final @Nullable Input<String> certificatePem;
+      private final @Nullable Output<String> certificatePem;
 
-    public Input<String> getCertificatePem() {
-        return this.certificatePem == null ? Input.empty() : this.certificatePem;
+    public Output<String> getCertificatePem() {
+        return this.certificatePem == null ? Output.empty() : this.certificatePem;
     }
 
     /**
@@ -57,10 +57,10 @@ public final class CertificateState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="csr")
-      private final @Nullable Input<String> csr;
+      private final @Nullable Output<String> csr;
 
-    public Input<String> getCsr() {
-        return this.csr == null ? Input.empty() : this.csr;
+    public Output<String> getCsr() {
+        return this.csr == null ? Output.empty() : this.csr;
     }
 
     /**
@@ -68,10 +68,10 @@ public final class CertificateState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="privateKey")
-      private final @Nullable Input<String> privateKey;
+      private final @Nullable Output<String> privateKey;
 
-    public Input<String> getPrivateKey() {
-        return this.privateKey == null ? Input.empty() : this.privateKey;
+    public Output<String> getPrivateKey() {
+        return this.privateKey == null ? Output.empty() : this.privateKey;
     }
 
     /**
@@ -79,19 +79,19 @@ public final class CertificateState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="publicKey")
-      private final @Nullable Input<String> publicKey;
+      private final @Nullable Output<String> publicKey;
 
-    public Input<String> getPublicKey() {
-        return this.publicKey == null ? Input.empty() : this.publicKey;
+    public Output<String> getPublicKey() {
+        return this.publicKey == null ? Output.empty() : this.publicKey;
     }
 
     public CertificateState(
-        @Nullable Input<Boolean> active,
-        @Nullable Input<String> arn,
-        @Nullable Input<String> certificatePem,
-        @Nullable Input<String> csr,
-        @Nullable Input<String> privateKey,
-        @Nullable Input<String> publicKey) {
+        @Nullable Output<Boolean> active,
+        @Nullable Output<String> arn,
+        @Nullable Output<String> certificatePem,
+        @Nullable Output<String> csr,
+        @Nullable Output<String> privateKey,
+        @Nullable Output<String> publicKey) {
         this.active = active;
         this.arn = arn;
         this.certificatePem = certificatePem;
@@ -101,12 +101,12 @@ public final class CertificateState extends io.pulumi.resources.ResourceArgs {
     }
 
     private CertificateState() {
-        this.active = Input.empty();
-        this.arn = Input.empty();
-        this.certificatePem = Input.empty();
-        this.csr = Input.empty();
-        this.privateKey = Input.empty();
-        this.publicKey = Input.empty();
+        this.active = Output.empty();
+        this.arn = Output.empty();
+        this.certificatePem = Output.empty();
+        this.csr = Output.empty();
+        this.privateKey = Output.empty();
+        this.publicKey = Output.empty();
     }
 
     public static Builder builder() {
@@ -118,12 +118,12 @@ public final class CertificateState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> active;
-        private @Nullable Input<String> arn;
-        private @Nullable Input<String> certificatePem;
-        private @Nullable Input<String> csr;
-        private @Nullable Input<String> privateKey;
-        private @Nullable Input<String> publicKey;
+        private @Nullable Output<Boolean> active;
+        private @Nullable Output<String> arn;
+        private @Nullable Output<String> certificatePem;
+        private @Nullable Output<String> csr;
+        private @Nullable Output<String> privateKey;
+        private @Nullable Output<String> publicKey;
 
         public Builder() {
     	      // Empty
@@ -139,63 +139,63 @@ public final class CertificateState extends io.pulumi.resources.ResourceArgs {
     	      this.publicKey = defaults.publicKey;
         }
 
-        public Builder active(@Nullable Input<Boolean> active) {
+        public Builder active(@Nullable Output<Boolean> active) {
             this.active = active;
             return this;
         }
 
         public Builder active(@Nullable Boolean active) {
-            this.active = Input.ofNullable(active);
+            this.active = Output.ofNullable(active);
             return this;
         }
 
-        public Builder arn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
 
         public Builder arn(@Nullable String arn) {
-            this.arn = Input.ofNullable(arn);
+            this.arn = Output.ofNullable(arn);
             return this;
         }
 
-        public Builder certificatePem(@Nullable Input<String> certificatePem) {
+        public Builder certificatePem(@Nullable Output<String> certificatePem) {
             this.certificatePem = certificatePem;
             return this;
         }
 
         public Builder certificatePem(@Nullable String certificatePem) {
-            this.certificatePem = Input.ofNullable(certificatePem);
+            this.certificatePem = Output.ofNullable(certificatePem);
             return this;
         }
 
-        public Builder csr(@Nullable Input<String> csr) {
+        public Builder csr(@Nullable Output<String> csr) {
             this.csr = csr;
             return this;
         }
 
         public Builder csr(@Nullable String csr) {
-            this.csr = Input.ofNullable(csr);
+            this.csr = Output.ofNullable(csr);
             return this;
         }
 
-        public Builder privateKey(@Nullable Input<String> privateKey) {
+        public Builder privateKey(@Nullable Output<String> privateKey) {
             this.privateKey = privateKey;
             return this;
         }
 
         public Builder privateKey(@Nullable String privateKey) {
-            this.privateKey = Input.ofNullable(privateKey);
+            this.privateKey = Output.ofNullable(privateKey);
             return this;
         }
 
-        public Builder publicKey(@Nullable Input<String> publicKey) {
+        public Builder publicKey(@Nullable Output<String> publicKey) {
             this.publicKey = publicKey;
             return this;
         }
 
         public Builder publicKey(@Nullable String publicKey) {
-            this.publicKey = Input.ofNullable(publicKey);
+            this.publicKey = Output.ofNullable(publicKey);
             return this;
         }
         public CertificateState build() {

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.domainregistration.inputs;
 
 import io.pulumi.azurenative.domainregistration.inputs.AddressArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -25,10 +25,10 @@ public final class ContactArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="addressMailing")
-      private final @Nullable Input<AddressArgs> addressMailing;
+      private final @Nullable Output<AddressArgs> addressMailing;
 
-    public Input<AddressArgs> getAddressMailing() {
-        return this.addressMailing == null ? Input.empty() : this.addressMailing;
+    public Output<AddressArgs> getAddressMailing() {
+        return this.addressMailing == null ? Output.empty() : this.addressMailing;
     }
 
     /**
@@ -36,9 +36,9 @@ public final class ContactArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="email", required=true)
-      private final Input<String> email;
+      private final Output<String> email;
 
-    public Input<String> getEmail() {
+    public Output<String> getEmail() {
         return this.email;
     }
 
@@ -47,10 +47,10 @@ public final class ContactArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="fax")
-      private final @Nullable Input<String> fax;
+      private final @Nullable Output<String> fax;
 
-    public Input<String> getFax() {
-        return this.fax == null ? Input.empty() : this.fax;
+    public Output<String> getFax() {
+        return this.fax == null ? Output.empty() : this.fax;
     }
 
     /**
@@ -58,10 +58,10 @@ public final class ContactArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="jobTitle")
-      private final @Nullable Input<String> jobTitle;
+      private final @Nullable Output<String> jobTitle;
 
-    public Input<String> getJobTitle() {
-        return this.jobTitle == null ? Input.empty() : this.jobTitle;
+    public Output<String> getJobTitle() {
+        return this.jobTitle == null ? Output.empty() : this.jobTitle;
     }
 
     /**
@@ -69,9 +69,9 @@ public final class ContactArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="nameFirst", required=true)
-      private final Input<String> nameFirst;
+      private final Output<String> nameFirst;
 
-    public Input<String> getNameFirst() {
+    public Output<String> getNameFirst() {
         return this.nameFirst;
     }
 
@@ -80,9 +80,9 @@ public final class ContactArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="nameLast", required=true)
-      private final Input<String> nameLast;
+      private final Output<String> nameLast;
 
-    public Input<String> getNameLast() {
+    public Output<String> getNameLast() {
         return this.nameLast;
     }
 
@@ -91,10 +91,10 @@ public final class ContactArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="nameMiddle")
-      private final @Nullable Input<String> nameMiddle;
+      private final @Nullable Output<String> nameMiddle;
 
-    public Input<String> getNameMiddle() {
-        return this.nameMiddle == null ? Input.empty() : this.nameMiddle;
+    public Output<String> getNameMiddle() {
+        return this.nameMiddle == null ? Output.empty() : this.nameMiddle;
     }
 
     /**
@@ -102,10 +102,10 @@ public final class ContactArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="organization")
-      private final @Nullable Input<String> organization;
+      private final @Nullable Output<String> organization;
 
-    public Input<String> getOrganization() {
-        return this.organization == null ? Input.empty() : this.organization;
+    public Output<String> getOrganization() {
+        return this.organization == null ? Output.empty() : this.organization;
     }
 
     /**
@@ -113,22 +113,22 @@ public final class ContactArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="phone", required=true)
-      private final Input<String> phone;
+      private final Output<String> phone;
 
-    public Input<String> getPhone() {
+    public Output<String> getPhone() {
         return this.phone;
     }
 
     public ContactArgs(
-        @Nullable Input<AddressArgs> addressMailing,
-        Input<String> email,
-        @Nullable Input<String> fax,
-        @Nullable Input<String> jobTitle,
-        Input<String> nameFirst,
-        Input<String> nameLast,
-        @Nullable Input<String> nameMiddle,
-        @Nullable Input<String> organization,
-        Input<String> phone) {
+        @Nullable Output<AddressArgs> addressMailing,
+        Output<String> email,
+        @Nullable Output<String> fax,
+        @Nullable Output<String> jobTitle,
+        Output<String> nameFirst,
+        Output<String> nameLast,
+        @Nullable Output<String> nameMiddle,
+        @Nullable Output<String> organization,
+        Output<String> phone) {
         this.addressMailing = addressMailing;
         this.email = Objects.requireNonNull(email, "expected parameter 'email' to be non-null");
         this.fax = fax;
@@ -141,15 +141,15 @@ public final class ContactArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ContactArgs() {
-        this.addressMailing = Input.empty();
-        this.email = Input.empty();
-        this.fax = Input.empty();
-        this.jobTitle = Input.empty();
-        this.nameFirst = Input.empty();
-        this.nameLast = Input.empty();
-        this.nameMiddle = Input.empty();
-        this.organization = Input.empty();
-        this.phone = Input.empty();
+        this.addressMailing = Output.empty();
+        this.email = Output.empty();
+        this.fax = Output.empty();
+        this.jobTitle = Output.empty();
+        this.nameFirst = Output.empty();
+        this.nameLast = Output.empty();
+        this.nameMiddle = Output.empty();
+        this.organization = Output.empty();
+        this.phone = Output.empty();
     }
 
     public static Builder builder() {
@@ -161,15 +161,15 @@ public final class ContactArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<AddressArgs> addressMailing;
-        private Input<String> email;
-        private @Nullable Input<String> fax;
-        private @Nullable Input<String> jobTitle;
-        private Input<String> nameFirst;
-        private Input<String> nameLast;
-        private @Nullable Input<String> nameMiddle;
-        private @Nullable Input<String> organization;
-        private Input<String> phone;
+        private @Nullable Output<AddressArgs> addressMailing;
+        private Output<String> email;
+        private @Nullable Output<String> fax;
+        private @Nullable Output<String> jobTitle;
+        private Output<String> nameFirst;
+        private Output<String> nameLast;
+        private @Nullable Output<String> nameMiddle;
+        private @Nullable Output<String> organization;
+        private Output<String> phone;
 
         public Builder() {
     	      // Empty
@@ -188,93 +188,93 @@ public final class ContactArgs extends io.pulumi.resources.ResourceArgs {
     	      this.phone = defaults.phone;
         }
 
-        public Builder addressMailing(@Nullable Input<AddressArgs> addressMailing) {
+        public Builder addressMailing(@Nullable Output<AddressArgs> addressMailing) {
             this.addressMailing = addressMailing;
             return this;
         }
 
         public Builder addressMailing(@Nullable AddressArgs addressMailing) {
-            this.addressMailing = Input.ofNullable(addressMailing);
+            this.addressMailing = Output.ofNullable(addressMailing);
             return this;
         }
 
-        public Builder email(Input<String> email) {
+        public Builder email(Output<String> email) {
             this.email = Objects.requireNonNull(email);
             return this;
         }
 
         public Builder email(String email) {
-            this.email = Input.of(Objects.requireNonNull(email));
+            this.email = Output.of(Objects.requireNonNull(email));
             return this;
         }
 
-        public Builder fax(@Nullable Input<String> fax) {
+        public Builder fax(@Nullable Output<String> fax) {
             this.fax = fax;
             return this;
         }
 
         public Builder fax(@Nullable String fax) {
-            this.fax = Input.ofNullable(fax);
+            this.fax = Output.ofNullable(fax);
             return this;
         }
 
-        public Builder jobTitle(@Nullable Input<String> jobTitle) {
+        public Builder jobTitle(@Nullable Output<String> jobTitle) {
             this.jobTitle = jobTitle;
             return this;
         }
 
         public Builder jobTitle(@Nullable String jobTitle) {
-            this.jobTitle = Input.ofNullable(jobTitle);
+            this.jobTitle = Output.ofNullable(jobTitle);
             return this;
         }
 
-        public Builder nameFirst(Input<String> nameFirst) {
+        public Builder nameFirst(Output<String> nameFirst) {
             this.nameFirst = Objects.requireNonNull(nameFirst);
             return this;
         }
 
         public Builder nameFirst(String nameFirst) {
-            this.nameFirst = Input.of(Objects.requireNonNull(nameFirst));
+            this.nameFirst = Output.of(Objects.requireNonNull(nameFirst));
             return this;
         }
 
-        public Builder nameLast(Input<String> nameLast) {
+        public Builder nameLast(Output<String> nameLast) {
             this.nameLast = Objects.requireNonNull(nameLast);
             return this;
         }
 
         public Builder nameLast(String nameLast) {
-            this.nameLast = Input.of(Objects.requireNonNull(nameLast));
+            this.nameLast = Output.of(Objects.requireNonNull(nameLast));
             return this;
         }
 
-        public Builder nameMiddle(@Nullable Input<String> nameMiddle) {
+        public Builder nameMiddle(@Nullable Output<String> nameMiddle) {
             this.nameMiddle = nameMiddle;
             return this;
         }
 
         public Builder nameMiddle(@Nullable String nameMiddle) {
-            this.nameMiddle = Input.ofNullable(nameMiddle);
+            this.nameMiddle = Output.ofNullable(nameMiddle);
             return this;
         }
 
-        public Builder organization(@Nullable Input<String> organization) {
+        public Builder organization(@Nullable Output<String> organization) {
             this.organization = organization;
             return this;
         }
 
         public Builder organization(@Nullable String organization) {
-            this.organization = Input.ofNullable(organization);
+            this.organization = Output.ofNullable(organization);
             return this;
         }
 
-        public Builder phone(Input<String> phone) {
+        public Builder phone(Output<String> phone) {
             this.phone = Objects.requireNonNull(phone);
             return this;
         }
 
         public Builder phone(String phone) {
-            this.phone = Input.of(Objects.requireNonNull(phone));
+            this.phone = Output.of(Objects.requireNonNull(phone));
             return this;
         }
         public ContactArgs build() {

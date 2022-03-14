@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.ec2.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -16,10 +16,10 @@ public final class LocalGatewayRouteTableVpcAssociationState extends io.pulumi.r
     public static final LocalGatewayRouteTableVpcAssociationState Empty = new LocalGatewayRouteTableVpcAssociationState();
 
     @InputImport(name="localGatewayId")
-      private final @Nullable Input<String> localGatewayId;
+      private final @Nullable Output<String> localGatewayId;
 
-    public Input<String> getLocalGatewayId() {
-        return this.localGatewayId == null ? Input.empty() : this.localGatewayId;
+    public Output<String> getLocalGatewayId() {
+        return this.localGatewayId == null ? Output.empty() : this.localGatewayId;
     }
 
     /**
@@ -27,10 +27,10 @@ public final class LocalGatewayRouteTableVpcAssociationState extends io.pulumi.r
      * 
      */
     @InputImport(name="localGatewayRouteTableId")
-      private final @Nullable Input<String> localGatewayRouteTableId;
+      private final @Nullable Output<String> localGatewayRouteTableId;
 
-    public Input<String> getLocalGatewayRouteTableId() {
-        return this.localGatewayRouteTableId == null ? Input.empty() : this.localGatewayRouteTableId;
+    public Output<String> getLocalGatewayRouteTableId() {
+        return this.localGatewayRouteTableId == null ? Output.empty() : this.localGatewayRouteTableId;
     }
 
     /**
@@ -38,10 +38,10 @@ public final class LocalGatewayRouteTableVpcAssociationState extends io.pulumi.r
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -49,10 +49,10 @@ public final class LocalGatewayRouteTableVpcAssociationState extends io.pulumi.r
      * 
      */
     @InputImport(name="tagsAll")
-      private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Input<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Input.empty() : this.tagsAll;
+    public Output<Map<String,String>> getTagsAll() {
+        return this.tagsAll == null ? Output.empty() : this.tagsAll;
     }
 
     /**
@@ -60,18 +60,18 @@ public final class LocalGatewayRouteTableVpcAssociationState extends io.pulumi.r
      * 
      */
     @InputImport(name="vpcId")
-      private final @Nullable Input<String> vpcId;
+      private final @Nullable Output<String> vpcId;
 
-    public Input<String> getVpcId() {
-        return this.vpcId == null ? Input.empty() : this.vpcId;
+    public Output<String> getVpcId() {
+        return this.vpcId == null ? Output.empty() : this.vpcId;
     }
 
     public LocalGatewayRouteTableVpcAssociationState(
-        @Nullable Input<String> localGatewayId,
-        @Nullable Input<String> localGatewayRouteTableId,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<Map<String,String>> tagsAll,
-        @Nullable Input<String> vpcId) {
+        @Nullable Output<String> localGatewayId,
+        @Nullable Output<String> localGatewayRouteTableId,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<Map<String,String>> tagsAll,
+        @Nullable Output<String> vpcId) {
         this.localGatewayId = localGatewayId;
         this.localGatewayRouteTableId = localGatewayRouteTableId;
         this.tags = tags;
@@ -80,11 +80,11 @@ public final class LocalGatewayRouteTableVpcAssociationState extends io.pulumi.r
     }
 
     private LocalGatewayRouteTableVpcAssociationState() {
-        this.localGatewayId = Input.empty();
-        this.localGatewayRouteTableId = Input.empty();
-        this.tags = Input.empty();
-        this.tagsAll = Input.empty();
-        this.vpcId = Input.empty();
+        this.localGatewayId = Output.empty();
+        this.localGatewayRouteTableId = Output.empty();
+        this.tags = Output.empty();
+        this.tagsAll = Output.empty();
+        this.vpcId = Output.empty();
     }
 
     public static Builder builder() {
@@ -96,11 +96,11 @@ public final class LocalGatewayRouteTableVpcAssociationState extends io.pulumi.r
     }
 
     public static final class Builder {
-        private @Nullable Input<String> localGatewayId;
-        private @Nullable Input<String> localGatewayRouteTableId;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<Map<String,String>> tagsAll;
-        private @Nullable Input<String> vpcId;
+        private @Nullable Output<String> localGatewayId;
+        private @Nullable Output<String> localGatewayRouteTableId;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<Map<String,String>> tagsAll;
+        private @Nullable Output<String> vpcId;
 
         public Builder() {
     	      // Empty
@@ -115,53 +115,53 @@ public final class LocalGatewayRouteTableVpcAssociationState extends io.pulumi.r
     	      this.vpcId = defaults.vpcId;
         }
 
-        public Builder localGatewayId(@Nullable Input<String> localGatewayId) {
+        public Builder localGatewayId(@Nullable Output<String> localGatewayId) {
             this.localGatewayId = localGatewayId;
             return this;
         }
 
         public Builder localGatewayId(@Nullable String localGatewayId) {
-            this.localGatewayId = Input.ofNullable(localGatewayId);
+            this.localGatewayId = Output.ofNullable(localGatewayId);
             return this;
         }
 
-        public Builder localGatewayRouteTableId(@Nullable Input<String> localGatewayRouteTableId) {
+        public Builder localGatewayRouteTableId(@Nullable Output<String> localGatewayRouteTableId) {
             this.localGatewayRouteTableId = localGatewayRouteTableId;
             return this;
         }
 
         public Builder localGatewayRouteTableId(@Nullable String localGatewayRouteTableId) {
-            this.localGatewayRouteTableId = Input.ofNullable(localGatewayRouteTableId);
+            this.localGatewayRouteTableId = Output.ofNullable(localGatewayRouteTableId);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Input.ofNullable(tagsAll);
+            this.tagsAll = Output.ofNullable(tagsAll);
             return this;
         }
 
-        public Builder vpcId(@Nullable Input<String> vpcId) {
+        public Builder vpcId(@Nullable Output<String> vpcId) {
             this.vpcId = vpcId;
             return this;
         }
 
         public Builder vpcId(@Nullable String vpcId) {
-            this.vpcId = Input.ofNullable(vpcId);
+            this.vpcId = Output.ofNullable(vpcId);
             return this;
         }
         public LocalGatewayRouteTableVpcAssociationState build() {

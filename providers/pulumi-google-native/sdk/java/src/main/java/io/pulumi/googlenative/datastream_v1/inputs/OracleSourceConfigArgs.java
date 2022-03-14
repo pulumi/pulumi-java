@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.datastream_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.datastream_v1.inputs.OracleRdbmsArgs;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class OracleSourceConfigArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="excludeObjects")
-      private final @Nullable Input<OracleRdbmsArgs> excludeObjects;
+      private final @Nullable Output<OracleRdbmsArgs> excludeObjects;
 
-    public Input<OracleRdbmsArgs> getExcludeObjects() {
-        return this.excludeObjects == null ? Input.empty() : this.excludeObjects;
+    public Output<OracleRdbmsArgs> getExcludeObjects() {
+        return this.excludeObjects == null ? Output.empty() : this.excludeObjects;
     }
 
     /**
@@ -34,22 +34,22 @@ public final class OracleSourceConfigArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="includeObjects")
-      private final @Nullable Input<OracleRdbmsArgs> includeObjects;
+      private final @Nullable Output<OracleRdbmsArgs> includeObjects;
 
-    public Input<OracleRdbmsArgs> getIncludeObjects() {
-        return this.includeObjects == null ? Input.empty() : this.includeObjects;
+    public Output<OracleRdbmsArgs> getIncludeObjects() {
+        return this.includeObjects == null ? Output.empty() : this.includeObjects;
     }
 
     public OracleSourceConfigArgs(
-        @Nullable Input<OracleRdbmsArgs> excludeObjects,
-        @Nullable Input<OracleRdbmsArgs> includeObjects) {
+        @Nullable Output<OracleRdbmsArgs> excludeObjects,
+        @Nullable Output<OracleRdbmsArgs> includeObjects) {
         this.excludeObjects = excludeObjects;
         this.includeObjects = includeObjects;
     }
 
     private OracleSourceConfigArgs() {
-        this.excludeObjects = Input.empty();
-        this.includeObjects = Input.empty();
+        this.excludeObjects = Output.empty();
+        this.includeObjects = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class OracleSourceConfigArgs extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private @Nullable Input<OracleRdbmsArgs> excludeObjects;
-        private @Nullable Input<OracleRdbmsArgs> includeObjects;
+        private @Nullable Output<OracleRdbmsArgs> excludeObjects;
+        private @Nullable Output<OracleRdbmsArgs> includeObjects;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class OracleSourceConfigArgs extends io.pulumi.resources.ResourceAr
     	      this.includeObjects = defaults.includeObjects;
         }
 
-        public Builder excludeObjects(@Nullable Input<OracleRdbmsArgs> excludeObjects) {
+        public Builder excludeObjects(@Nullable Output<OracleRdbmsArgs> excludeObjects) {
             this.excludeObjects = excludeObjects;
             return this;
         }
 
         public Builder excludeObjects(@Nullable OracleRdbmsArgs excludeObjects) {
-            this.excludeObjects = Input.ofNullable(excludeObjects);
+            this.excludeObjects = Output.ofNullable(excludeObjects);
             return this;
         }
 
-        public Builder includeObjects(@Nullable Input<OracleRdbmsArgs> includeObjects) {
+        public Builder includeObjects(@Nullable Output<OracleRdbmsArgs> includeObjects) {
             this.includeObjects = includeObjects;
             return this;
         }
 
         public Builder includeObjects(@Nullable OracleRdbmsArgs includeObjects) {
-            this.includeObjects = Input.ofNullable(includeObjects);
+            this.includeObjects = Output.ofNullable(includeObjects);
             return this;
         }
         public OracleSourceConfigArgs build() {

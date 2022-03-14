@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.alertsmanagement.inputs;
 
 import io.pulumi.azurenative.alertsmanagement.inputs.HealthStateArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -25,9 +25,9 @@ public final class VmGuestHealthAlertCriterionArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="healthStates", required=true)
-      private final Input<List<HealthStateArgs>> healthStates;
+      private final Output<List<HealthStateArgs>> healthStates;
 
-    public Input<List<HealthStateArgs>> getHealthStates() {
+    public Output<List<HealthStateArgs>> getHealthStates() {
         return this.healthStates;
     }
 
@@ -36,10 +36,10 @@ public final class VmGuestHealthAlertCriterionArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="monitorNames")
-      private final @Nullable Input<List<String>> monitorNames;
+      private final @Nullable Output<List<String>> monitorNames;
 
-    public Input<List<String>> getMonitorNames() {
-        return this.monitorNames == null ? Input.empty() : this.monitorNames;
+    public Output<List<String>> getMonitorNames() {
+        return this.monitorNames == null ? Output.empty() : this.monitorNames;
     }
 
     /**
@@ -47,10 +47,10 @@ public final class VmGuestHealthAlertCriterionArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="monitorTypes")
-      private final @Nullable Input<List<String>> monitorTypes;
+      private final @Nullable Output<List<String>> monitorTypes;
 
-    public Input<List<String>> getMonitorTypes() {
-        return this.monitorTypes == null ? Input.empty() : this.monitorTypes;
+    public Output<List<String>> getMonitorTypes() {
+        return this.monitorTypes == null ? Output.empty() : this.monitorTypes;
     }
 
     /**
@@ -59,17 +59,17 @@ public final class VmGuestHealthAlertCriterionArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="namespace", required=true)
-      private final Input<String> namespace;
+      private final Output<String> namespace;
 
-    public Input<String> getNamespace() {
+    public Output<String> getNamespace() {
         return this.namespace;
     }
 
     public VmGuestHealthAlertCriterionArgs(
-        Input<List<HealthStateArgs>> healthStates,
-        @Nullable Input<List<String>> monitorNames,
-        @Nullable Input<List<String>> monitorTypes,
-        Input<String> namespace) {
+        Output<List<HealthStateArgs>> healthStates,
+        @Nullable Output<List<String>> monitorNames,
+        @Nullable Output<List<String>> monitorTypes,
+        Output<String> namespace) {
         this.healthStates = Objects.requireNonNull(healthStates, "expected parameter 'healthStates' to be non-null");
         this.monitorNames = monitorNames;
         this.monitorTypes = monitorTypes;
@@ -77,10 +77,10 @@ public final class VmGuestHealthAlertCriterionArgs extends io.pulumi.resources.R
     }
 
     private VmGuestHealthAlertCriterionArgs() {
-        this.healthStates = Input.empty();
-        this.monitorNames = Input.empty();
-        this.monitorTypes = Input.empty();
-        this.namespace = Input.empty();
+        this.healthStates = Output.empty();
+        this.monitorNames = Output.empty();
+        this.monitorTypes = Output.empty();
+        this.namespace = Output.empty();
     }
 
     public static Builder builder() {
@@ -92,10 +92,10 @@ public final class VmGuestHealthAlertCriterionArgs extends io.pulumi.resources.R
     }
 
     public static final class Builder {
-        private Input<List<HealthStateArgs>> healthStates;
-        private @Nullable Input<List<String>> monitorNames;
-        private @Nullable Input<List<String>> monitorTypes;
-        private Input<String> namespace;
+        private Output<List<HealthStateArgs>> healthStates;
+        private @Nullable Output<List<String>> monitorNames;
+        private @Nullable Output<List<String>> monitorTypes;
+        private Output<String> namespace;
 
         public Builder() {
     	      // Empty
@@ -109,43 +109,43 @@ public final class VmGuestHealthAlertCriterionArgs extends io.pulumi.resources.R
     	      this.namespace = defaults.namespace;
         }
 
-        public Builder healthStates(Input<List<HealthStateArgs>> healthStates) {
+        public Builder healthStates(Output<List<HealthStateArgs>> healthStates) {
             this.healthStates = Objects.requireNonNull(healthStates);
             return this;
         }
 
         public Builder healthStates(List<HealthStateArgs> healthStates) {
-            this.healthStates = Input.of(Objects.requireNonNull(healthStates));
+            this.healthStates = Output.of(Objects.requireNonNull(healthStates));
             return this;
         }
 
-        public Builder monitorNames(@Nullable Input<List<String>> monitorNames) {
+        public Builder monitorNames(@Nullable Output<List<String>> monitorNames) {
             this.monitorNames = monitorNames;
             return this;
         }
 
         public Builder monitorNames(@Nullable List<String> monitorNames) {
-            this.monitorNames = Input.ofNullable(monitorNames);
+            this.monitorNames = Output.ofNullable(monitorNames);
             return this;
         }
 
-        public Builder monitorTypes(@Nullable Input<List<String>> monitorTypes) {
+        public Builder monitorTypes(@Nullable Output<List<String>> monitorTypes) {
             this.monitorTypes = monitorTypes;
             return this;
         }
 
         public Builder monitorTypes(@Nullable List<String> monitorTypes) {
-            this.monitorTypes = Input.ofNullable(monitorTypes);
+            this.monitorTypes = Output.ofNullable(monitorTypes);
             return this;
         }
 
-        public Builder namespace(Input<String> namespace) {
+        public Builder namespace(Output<String> namespace) {
             this.namespace = Objects.requireNonNull(namespace);
             return this;
         }
 
         public Builder namespace(String namespace) {
-            this.namespace = Input.of(Objects.requireNonNull(namespace));
+            this.namespace = Output.of(Objects.requireNonNull(namespace));
             return this;
         }
         public VmGuestHealthAlertCriterionArgs build() {

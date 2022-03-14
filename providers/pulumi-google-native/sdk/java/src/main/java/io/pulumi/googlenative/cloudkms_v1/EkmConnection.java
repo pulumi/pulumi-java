@@ -3,7 +3,6 @@
 
 package io.pulumi.googlenative.cloudkms_v1;
 
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -118,14 +117,14 @@ public class EkmConnection extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public EkmConnection(String name, EkmConnectionArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:cloudkms/v1:EkmConnection", name, args == null ? EkmConnectionArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("google-native:cloudkms/v1:EkmConnection", name, args == null ? EkmConnectionArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private EkmConnection(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private EkmConnection(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("google-native:cloudkms/v1:EkmConnection", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -140,7 +139,7 @@ public class EkmConnection extends io.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static EkmConnection get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static EkmConnection get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new EkmConnection(name, id, options);
     }
 }

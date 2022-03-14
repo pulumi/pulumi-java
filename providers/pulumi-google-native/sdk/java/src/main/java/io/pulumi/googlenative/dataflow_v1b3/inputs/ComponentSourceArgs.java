@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dataflow_v1b3.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class ComponentSourceArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class ComponentSourceArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="originalTransformOrCollection")
-      private final @Nullable Input<String> originalTransformOrCollection;
+      private final @Nullable Output<String> originalTransformOrCollection;
 
-    public Input<String> getOriginalTransformOrCollection() {
-        return this.originalTransformOrCollection == null ? Input.empty() : this.originalTransformOrCollection;
+    public Output<String> getOriginalTransformOrCollection() {
+        return this.originalTransformOrCollection == null ? Output.empty() : this.originalTransformOrCollection;
     }
 
     /**
@@ -45,25 +45,25 @@ public final class ComponentSourceArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="userName")
-      private final @Nullable Input<String> userName;
+      private final @Nullable Output<String> userName;
 
-    public Input<String> getUserName() {
-        return this.userName == null ? Input.empty() : this.userName;
+    public Output<String> getUserName() {
+        return this.userName == null ? Output.empty() : this.userName;
     }
 
     public ComponentSourceArgs(
-        @Nullable Input<String> name,
-        @Nullable Input<String> originalTransformOrCollection,
-        @Nullable Input<String> userName) {
+        @Nullable Output<String> name,
+        @Nullable Output<String> originalTransformOrCollection,
+        @Nullable Output<String> userName) {
         this.name = name;
         this.originalTransformOrCollection = originalTransformOrCollection;
         this.userName = userName;
     }
 
     private ComponentSourceArgs() {
-        this.name = Input.empty();
-        this.originalTransformOrCollection = Input.empty();
-        this.userName = Input.empty();
+        this.name = Output.empty();
+        this.originalTransformOrCollection = Output.empty();
+        this.userName = Output.empty();
     }
 
     public static Builder builder() {
@@ -75,9 +75,9 @@ public final class ComponentSourceArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> originalTransformOrCollection;
-        private @Nullable Input<String> userName;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> originalTransformOrCollection;
+        private @Nullable Output<String> userName;
 
         public Builder() {
     	      // Empty
@@ -90,33 +90,33 @@ public final class ComponentSourceArgs extends io.pulumi.resources.ResourceArgs 
     	      this.userName = defaults.userName;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder originalTransformOrCollection(@Nullable Input<String> originalTransformOrCollection) {
+        public Builder originalTransformOrCollection(@Nullable Output<String> originalTransformOrCollection) {
             this.originalTransformOrCollection = originalTransformOrCollection;
             return this;
         }
 
         public Builder originalTransformOrCollection(@Nullable String originalTransformOrCollection) {
-            this.originalTransformOrCollection = Input.ofNullable(originalTransformOrCollection);
+            this.originalTransformOrCollection = Output.ofNullable(originalTransformOrCollection);
             return this;
         }
 
-        public Builder userName(@Nullable Input<String> userName) {
+        public Builder userName(@Nullable Output<String> userName) {
             this.userName = userName;
             return this;
         }
 
         public Builder userName(@Nullable String userName) {
-            this.userName = Input.ofNullable(userName);
+            this.userName = Output.ofNullable(userName);
             return this;
         }
         public ComponentSourceArgs build() {

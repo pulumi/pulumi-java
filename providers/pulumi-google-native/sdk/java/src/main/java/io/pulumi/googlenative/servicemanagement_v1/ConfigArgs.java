@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.servicemanagement_v1;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.servicemanagement_v1.inputs.ApiArgs;
 import io.pulumi.googlenative.servicemanagement_v1.inputs.AuthenticationArgs;
@@ -41,10 +41,10 @@ public final class ConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="apis")
-      private final @Nullable Input<List<ApiArgs>> apis;
+      private final @Nullable Output<List<ApiArgs>> apis;
 
-    public Input<List<ApiArgs>> getApis() {
-        return this.apis == null ? Input.empty() : this.apis;
+    public Output<List<ApiArgs>> getApis() {
+        return this.apis == null ? Output.empty() : this.apis;
     }
 
     /**
@@ -52,10 +52,10 @@ public final class ConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="authentication")
-      private final @Nullable Input<AuthenticationArgs> authentication;
+      private final @Nullable Output<AuthenticationArgs> authentication;
 
-    public Input<AuthenticationArgs> getAuthentication() {
-        return this.authentication == null ? Input.empty() : this.authentication;
+    public Output<AuthenticationArgs> getAuthentication() {
+        return this.authentication == null ? Output.empty() : this.authentication;
     }
 
     /**
@@ -63,10 +63,10 @@ public final class ConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="backend")
-      private final @Nullable Input<BackendArgs> backend;
+      private final @Nullable Output<BackendArgs> backend;
 
-    public Input<BackendArgs> getBackend() {
-        return this.backend == null ? Input.empty() : this.backend;
+    public Output<BackendArgs> getBackend() {
+        return this.backend == null ? Output.empty() : this.backend;
     }
 
     /**
@@ -74,10 +74,10 @@ public final class ConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="billing")
-      private final @Nullable Input<BillingArgs> billing;
+      private final @Nullable Output<BillingArgs> billing;
 
-    public Input<BillingArgs> getBilling() {
-        return this.billing == null ? Input.empty() : this.billing;
+    public Output<BillingArgs> getBilling() {
+        return this.billing == null ? Output.empty() : this.billing;
     }
 
     /**
@@ -85,10 +85,10 @@ public final class ConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="configVersion")
-      private final @Nullable Input<Integer> configVersion;
+      private final @Nullable Output<Integer> configVersion;
 
-    public Input<Integer> getConfigVersion() {
-        return this.configVersion == null ? Input.empty() : this.configVersion;
+    public Output<Integer> getConfigVersion() {
+        return this.configVersion == null ? Output.empty() : this.configVersion;
     }
 
     /**
@@ -96,10 +96,10 @@ public final class ConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="context")
-      private final @Nullable Input<ContextArgs> context;
+      private final @Nullable Output<ContextArgs> context;
 
-    public Input<ContextArgs> getContext() {
-        return this.context == null ? Input.empty() : this.context;
+    public Output<ContextArgs> getContext() {
+        return this.context == null ? Output.empty() : this.context;
     }
 
     /**
@@ -107,10 +107,10 @@ public final class ConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="control")
-      private final @Nullable Input<ControlArgs> control;
+      private final @Nullable Output<ControlArgs> control;
 
-    public Input<ControlArgs> getControl() {
-        return this.control == null ? Input.empty() : this.control;
+    public Output<ControlArgs> getControl() {
+        return this.control == null ? Output.empty() : this.control;
     }
 
     /**
@@ -118,10 +118,10 @@ public final class ConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="customError")
-      private final @Nullable Input<CustomErrorArgs> customError;
+      private final @Nullable Output<CustomErrorArgs> customError;
 
-    public Input<CustomErrorArgs> getCustomError() {
-        return this.customError == null ? Input.empty() : this.customError;
+    public Output<CustomErrorArgs> getCustomError() {
+        return this.customError == null ? Output.empty() : this.customError;
     }
 
     /**
@@ -129,10 +129,10 @@ public final class ConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="documentation")
-      private final @Nullable Input<DocumentationArgs> documentation;
+      private final @Nullable Output<DocumentationArgs> documentation;
 
-    public Input<DocumentationArgs> getDocumentation() {
-        return this.documentation == null ? Input.empty() : this.documentation;
+    public Output<DocumentationArgs> getDocumentation() {
+        return this.documentation == null ? Output.empty() : this.documentation;
     }
 
     /**
@@ -140,10 +140,10 @@ public final class ConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="endpoints")
-      private final @Nullable Input<List<EndpointArgs>> endpoints;
+      private final @Nullable Output<List<EndpointArgs>> endpoints;
 
-    public Input<List<EndpointArgs>> getEndpoints() {
-        return this.endpoints == null ? Input.empty() : this.endpoints;
+    public Output<List<EndpointArgs>> getEndpoints() {
+        return this.endpoints == null ? Output.empty() : this.endpoints;
     }
 
     /**
@@ -151,10 +151,10 @@ public final class ConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enums")
-      private final @Nullable Input<List<EnumArgs>> enums;
+      private final @Nullable Output<List<EnumArgs>> enums;
 
-    public Input<List<EnumArgs>> getEnums() {
-        return this.enums == null ? Input.empty() : this.enums;
+    public Output<List<EnumArgs>> getEnums() {
+        return this.enums == null ? Output.empty() : this.enums;
     }
 
     /**
@@ -162,10 +162,10 @@ public final class ConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="http")
-      private final @Nullable Input<HttpArgs> http;
+      private final @Nullable Output<HttpArgs> http;
 
-    public Input<HttpArgs> getHttp() {
-        return this.http == null ? Input.empty() : this.http;
+    public Output<HttpArgs> getHttp() {
+        return this.http == null ? Output.empty() : this.http;
     }
 
     /**
@@ -173,10 +173,10 @@ public final class ConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="id")
-      private final @Nullable Input<String> id;
+      private final @Nullable Output<String> id;
 
-    public Input<String> getId() {
-        return this.id == null ? Input.empty() : this.id;
+    public Output<String> getId() {
+        return this.id == null ? Output.empty() : this.id;
     }
 
     /**
@@ -184,10 +184,10 @@ public final class ConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="logging")
-      private final @Nullable Input<LoggingArgs> logging;
+      private final @Nullable Output<LoggingArgs> logging;
 
-    public Input<LoggingArgs> getLogging() {
-        return this.logging == null ? Input.empty() : this.logging;
+    public Output<LoggingArgs> getLogging() {
+        return this.logging == null ? Output.empty() : this.logging;
     }
 
     /**
@@ -195,10 +195,10 @@ public final class ConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="logs")
-      private final @Nullable Input<List<LogDescriptorArgs>> logs;
+      private final @Nullable Output<List<LogDescriptorArgs>> logs;
 
-    public Input<List<LogDescriptorArgs>> getLogs() {
-        return this.logs == null ? Input.empty() : this.logs;
+    public Output<List<LogDescriptorArgs>> getLogs() {
+        return this.logs == null ? Output.empty() : this.logs;
     }
 
     /**
@@ -206,10 +206,10 @@ public final class ConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="metrics")
-      private final @Nullable Input<List<MetricDescriptorArgs>> metrics;
+      private final @Nullable Output<List<MetricDescriptorArgs>> metrics;
 
-    public Input<List<MetricDescriptorArgs>> getMetrics() {
-        return this.metrics == null ? Input.empty() : this.metrics;
+    public Output<List<MetricDescriptorArgs>> getMetrics() {
+        return this.metrics == null ? Output.empty() : this.metrics;
     }
 
     /**
@@ -217,10 +217,10 @@ public final class ConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="monitoredResources")
-      private final @Nullable Input<List<MonitoredResourceDescriptorArgs>> monitoredResources;
+      private final @Nullable Output<List<MonitoredResourceDescriptorArgs>> monitoredResources;
 
-    public Input<List<MonitoredResourceDescriptorArgs>> getMonitoredResources() {
-        return this.monitoredResources == null ? Input.empty() : this.monitoredResources;
+    public Output<List<MonitoredResourceDescriptorArgs>> getMonitoredResources() {
+        return this.monitoredResources == null ? Output.empty() : this.monitoredResources;
     }
 
     /**
@@ -228,10 +228,10 @@ public final class ConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="monitoring")
-      private final @Nullable Input<MonitoringArgs> monitoring;
+      private final @Nullable Output<MonitoringArgs> monitoring;
 
-    public Input<MonitoringArgs> getMonitoring() {
-        return this.monitoring == null ? Input.empty() : this.monitoring;
+    public Output<MonitoringArgs> getMonitoring() {
+        return this.monitoring == null ? Output.empty() : this.monitoring;
     }
 
     /**
@@ -239,10 +239,10 @@ public final class ConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -250,10 +250,10 @@ public final class ConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="producerProjectId")
-      private final @Nullable Input<String> producerProjectId;
+      private final @Nullable Output<String> producerProjectId;
 
-    public Input<String> getProducerProjectId() {
-        return this.producerProjectId == null ? Input.empty() : this.producerProjectId;
+    public Output<String> getProducerProjectId() {
+        return this.producerProjectId == null ? Output.empty() : this.producerProjectId;
     }
 
     /**
@@ -261,16 +261,16 @@ public final class ConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="quota")
-      private final @Nullable Input<QuotaArgs> quota;
+      private final @Nullable Output<QuotaArgs> quota;
 
-    public Input<QuotaArgs> getQuota() {
-        return this.quota == null ? Input.empty() : this.quota;
+    public Output<QuotaArgs> getQuota() {
+        return this.quota == null ? Output.empty() : this.quota;
     }
 
     @InputImport(name="serviceName", required=true)
-      private final Input<String> serviceName;
+      private final Output<String> serviceName;
 
-    public Input<String> getServiceName() {
+    public Output<String> getServiceName() {
         return this.serviceName;
     }
 
@@ -279,10 +279,10 @@ public final class ConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="systemParameters")
-      private final @Nullable Input<SystemParametersArgs> systemParameters;
+      private final @Nullable Output<SystemParametersArgs> systemParameters;
 
-    public Input<SystemParametersArgs> getSystemParameters() {
-        return this.systemParameters == null ? Input.empty() : this.systemParameters;
+    public Output<SystemParametersArgs> getSystemParameters() {
+        return this.systemParameters == null ? Output.empty() : this.systemParameters;
     }
 
     /**
@@ -290,10 +290,10 @@ public final class ConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="systemTypes")
-      private final @Nullable Input<List<TypeArgs>> systemTypes;
+      private final @Nullable Output<List<TypeArgs>> systemTypes;
 
-    public Input<List<TypeArgs>> getSystemTypes() {
-        return this.systemTypes == null ? Input.empty() : this.systemTypes;
+    public Output<List<TypeArgs>> getSystemTypes() {
+        return this.systemTypes == null ? Output.empty() : this.systemTypes;
     }
 
     /**
@@ -301,10 +301,10 @@ public final class ConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="title")
-      private final @Nullable Input<String> title;
+      private final @Nullable Output<String> title;
 
-    public Input<String> getTitle() {
-        return this.title == null ? Input.empty() : this.title;
+    public Output<String> getTitle() {
+        return this.title == null ? Output.empty() : this.title;
     }
 
     /**
@@ -312,10 +312,10 @@ public final class ConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="types")
-      private final @Nullable Input<List<TypeArgs>> types;
+      private final @Nullable Output<List<TypeArgs>> types;
 
-    public Input<List<TypeArgs>> getTypes() {
-        return this.types == null ? Input.empty() : this.types;
+    public Output<List<TypeArgs>> getTypes() {
+        return this.types == null ? Output.empty() : this.types;
     }
 
     /**
@@ -323,40 +323,40 @@ public final class ConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="usage")
-      private final @Nullable Input<UsageArgs> usage;
+      private final @Nullable Output<UsageArgs> usage;
 
-    public Input<UsageArgs> getUsage() {
-        return this.usage == null ? Input.empty() : this.usage;
+    public Output<UsageArgs> getUsage() {
+        return this.usage == null ? Output.empty() : this.usage;
     }
 
     public ConfigArgs(
-        @Nullable Input<List<ApiArgs>> apis,
-        @Nullable Input<AuthenticationArgs> authentication,
-        @Nullable Input<BackendArgs> backend,
-        @Nullable Input<BillingArgs> billing,
-        @Nullable Input<Integer> configVersion,
-        @Nullable Input<ContextArgs> context,
-        @Nullable Input<ControlArgs> control,
-        @Nullable Input<CustomErrorArgs> customError,
-        @Nullable Input<DocumentationArgs> documentation,
-        @Nullable Input<List<EndpointArgs>> endpoints,
-        @Nullable Input<List<EnumArgs>> enums,
-        @Nullable Input<HttpArgs> http,
-        @Nullable Input<String> id,
-        @Nullable Input<LoggingArgs> logging,
-        @Nullable Input<List<LogDescriptorArgs>> logs,
-        @Nullable Input<List<MetricDescriptorArgs>> metrics,
-        @Nullable Input<List<MonitoredResourceDescriptorArgs>> monitoredResources,
-        @Nullable Input<MonitoringArgs> monitoring,
-        @Nullable Input<String> name,
-        @Nullable Input<String> producerProjectId,
-        @Nullable Input<QuotaArgs> quota,
-        Input<String> serviceName,
-        @Nullable Input<SystemParametersArgs> systemParameters,
-        @Nullable Input<List<TypeArgs>> systemTypes,
-        @Nullable Input<String> title,
-        @Nullable Input<List<TypeArgs>> types,
-        @Nullable Input<UsageArgs> usage) {
+        @Nullable Output<List<ApiArgs>> apis,
+        @Nullable Output<AuthenticationArgs> authentication,
+        @Nullable Output<BackendArgs> backend,
+        @Nullable Output<BillingArgs> billing,
+        @Nullable Output<Integer> configVersion,
+        @Nullable Output<ContextArgs> context,
+        @Nullable Output<ControlArgs> control,
+        @Nullable Output<CustomErrorArgs> customError,
+        @Nullable Output<DocumentationArgs> documentation,
+        @Nullable Output<List<EndpointArgs>> endpoints,
+        @Nullable Output<List<EnumArgs>> enums,
+        @Nullable Output<HttpArgs> http,
+        @Nullable Output<String> id,
+        @Nullable Output<LoggingArgs> logging,
+        @Nullable Output<List<LogDescriptorArgs>> logs,
+        @Nullable Output<List<MetricDescriptorArgs>> metrics,
+        @Nullable Output<List<MonitoredResourceDescriptorArgs>> monitoredResources,
+        @Nullable Output<MonitoringArgs> monitoring,
+        @Nullable Output<String> name,
+        @Nullable Output<String> producerProjectId,
+        @Nullable Output<QuotaArgs> quota,
+        Output<String> serviceName,
+        @Nullable Output<SystemParametersArgs> systemParameters,
+        @Nullable Output<List<TypeArgs>> systemTypes,
+        @Nullable Output<String> title,
+        @Nullable Output<List<TypeArgs>> types,
+        @Nullable Output<UsageArgs> usage) {
         this.apis = apis;
         this.authentication = authentication;
         this.backend = backend;
@@ -387,33 +387,33 @@ public final class ConfigArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ConfigArgs() {
-        this.apis = Input.empty();
-        this.authentication = Input.empty();
-        this.backend = Input.empty();
-        this.billing = Input.empty();
-        this.configVersion = Input.empty();
-        this.context = Input.empty();
-        this.control = Input.empty();
-        this.customError = Input.empty();
-        this.documentation = Input.empty();
-        this.endpoints = Input.empty();
-        this.enums = Input.empty();
-        this.http = Input.empty();
-        this.id = Input.empty();
-        this.logging = Input.empty();
-        this.logs = Input.empty();
-        this.metrics = Input.empty();
-        this.monitoredResources = Input.empty();
-        this.monitoring = Input.empty();
-        this.name = Input.empty();
-        this.producerProjectId = Input.empty();
-        this.quota = Input.empty();
-        this.serviceName = Input.empty();
-        this.systemParameters = Input.empty();
-        this.systemTypes = Input.empty();
-        this.title = Input.empty();
-        this.types = Input.empty();
-        this.usage = Input.empty();
+        this.apis = Output.empty();
+        this.authentication = Output.empty();
+        this.backend = Output.empty();
+        this.billing = Output.empty();
+        this.configVersion = Output.empty();
+        this.context = Output.empty();
+        this.control = Output.empty();
+        this.customError = Output.empty();
+        this.documentation = Output.empty();
+        this.endpoints = Output.empty();
+        this.enums = Output.empty();
+        this.http = Output.empty();
+        this.id = Output.empty();
+        this.logging = Output.empty();
+        this.logs = Output.empty();
+        this.metrics = Output.empty();
+        this.monitoredResources = Output.empty();
+        this.monitoring = Output.empty();
+        this.name = Output.empty();
+        this.producerProjectId = Output.empty();
+        this.quota = Output.empty();
+        this.serviceName = Output.empty();
+        this.systemParameters = Output.empty();
+        this.systemTypes = Output.empty();
+        this.title = Output.empty();
+        this.types = Output.empty();
+        this.usage = Output.empty();
     }
 
     public static Builder builder() {
@@ -425,33 +425,33 @@ public final class ConfigArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<List<ApiArgs>> apis;
-        private @Nullable Input<AuthenticationArgs> authentication;
-        private @Nullable Input<BackendArgs> backend;
-        private @Nullable Input<BillingArgs> billing;
-        private @Nullable Input<Integer> configVersion;
-        private @Nullable Input<ContextArgs> context;
-        private @Nullable Input<ControlArgs> control;
-        private @Nullable Input<CustomErrorArgs> customError;
-        private @Nullable Input<DocumentationArgs> documentation;
-        private @Nullable Input<List<EndpointArgs>> endpoints;
-        private @Nullable Input<List<EnumArgs>> enums;
-        private @Nullable Input<HttpArgs> http;
-        private @Nullable Input<String> id;
-        private @Nullable Input<LoggingArgs> logging;
-        private @Nullable Input<List<LogDescriptorArgs>> logs;
-        private @Nullable Input<List<MetricDescriptorArgs>> metrics;
-        private @Nullable Input<List<MonitoredResourceDescriptorArgs>> monitoredResources;
-        private @Nullable Input<MonitoringArgs> monitoring;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> producerProjectId;
-        private @Nullable Input<QuotaArgs> quota;
-        private Input<String> serviceName;
-        private @Nullable Input<SystemParametersArgs> systemParameters;
-        private @Nullable Input<List<TypeArgs>> systemTypes;
-        private @Nullable Input<String> title;
-        private @Nullable Input<List<TypeArgs>> types;
-        private @Nullable Input<UsageArgs> usage;
+        private @Nullable Output<List<ApiArgs>> apis;
+        private @Nullable Output<AuthenticationArgs> authentication;
+        private @Nullable Output<BackendArgs> backend;
+        private @Nullable Output<BillingArgs> billing;
+        private @Nullable Output<Integer> configVersion;
+        private @Nullable Output<ContextArgs> context;
+        private @Nullable Output<ControlArgs> control;
+        private @Nullable Output<CustomErrorArgs> customError;
+        private @Nullable Output<DocumentationArgs> documentation;
+        private @Nullable Output<List<EndpointArgs>> endpoints;
+        private @Nullable Output<List<EnumArgs>> enums;
+        private @Nullable Output<HttpArgs> http;
+        private @Nullable Output<String> id;
+        private @Nullable Output<LoggingArgs> logging;
+        private @Nullable Output<List<LogDescriptorArgs>> logs;
+        private @Nullable Output<List<MetricDescriptorArgs>> metrics;
+        private @Nullable Output<List<MonitoredResourceDescriptorArgs>> monitoredResources;
+        private @Nullable Output<MonitoringArgs> monitoring;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> producerProjectId;
+        private @Nullable Output<QuotaArgs> quota;
+        private Output<String> serviceName;
+        private @Nullable Output<SystemParametersArgs> systemParameters;
+        private @Nullable Output<List<TypeArgs>> systemTypes;
+        private @Nullable Output<String> title;
+        private @Nullable Output<List<TypeArgs>> types;
+        private @Nullable Output<UsageArgs> usage;
 
         public Builder() {
     	      // Empty
@@ -488,273 +488,273 @@ public final class ConfigArgs extends io.pulumi.resources.ResourceArgs {
     	      this.usage = defaults.usage;
         }
 
-        public Builder apis(@Nullable Input<List<ApiArgs>> apis) {
+        public Builder apis(@Nullable Output<List<ApiArgs>> apis) {
             this.apis = apis;
             return this;
         }
 
         public Builder apis(@Nullable List<ApiArgs> apis) {
-            this.apis = Input.ofNullable(apis);
+            this.apis = Output.ofNullable(apis);
             return this;
         }
 
-        public Builder authentication(@Nullable Input<AuthenticationArgs> authentication) {
+        public Builder authentication(@Nullable Output<AuthenticationArgs> authentication) {
             this.authentication = authentication;
             return this;
         }
 
         public Builder authentication(@Nullable AuthenticationArgs authentication) {
-            this.authentication = Input.ofNullable(authentication);
+            this.authentication = Output.ofNullable(authentication);
             return this;
         }
 
-        public Builder backend(@Nullable Input<BackendArgs> backend) {
+        public Builder backend(@Nullable Output<BackendArgs> backend) {
             this.backend = backend;
             return this;
         }
 
         public Builder backend(@Nullable BackendArgs backend) {
-            this.backend = Input.ofNullable(backend);
+            this.backend = Output.ofNullable(backend);
             return this;
         }
 
-        public Builder billing(@Nullable Input<BillingArgs> billing) {
+        public Builder billing(@Nullable Output<BillingArgs> billing) {
             this.billing = billing;
             return this;
         }
 
         public Builder billing(@Nullable BillingArgs billing) {
-            this.billing = Input.ofNullable(billing);
+            this.billing = Output.ofNullable(billing);
             return this;
         }
 
-        public Builder configVersion(@Nullable Input<Integer> configVersion) {
+        public Builder configVersion(@Nullable Output<Integer> configVersion) {
             this.configVersion = configVersion;
             return this;
         }
 
         public Builder configVersion(@Nullable Integer configVersion) {
-            this.configVersion = Input.ofNullable(configVersion);
+            this.configVersion = Output.ofNullable(configVersion);
             return this;
         }
 
-        public Builder context(@Nullable Input<ContextArgs> context) {
+        public Builder context(@Nullable Output<ContextArgs> context) {
             this.context = context;
             return this;
         }
 
         public Builder context(@Nullable ContextArgs context) {
-            this.context = Input.ofNullable(context);
+            this.context = Output.ofNullable(context);
             return this;
         }
 
-        public Builder control(@Nullable Input<ControlArgs> control) {
+        public Builder control(@Nullable Output<ControlArgs> control) {
             this.control = control;
             return this;
         }
 
         public Builder control(@Nullable ControlArgs control) {
-            this.control = Input.ofNullable(control);
+            this.control = Output.ofNullable(control);
             return this;
         }
 
-        public Builder customError(@Nullable Input<CustomErrorArgs> customError) {
+        public Builder customError(@Nullable Output<CustomErrorArgs> customError) {
             this.customError = customError;
             return this;
         }
 
         public Builder customError(@Nullable CustomErrorArgs customError) {
-            this.customError = Input.ofNullable(customError);
+            this.customError = Output.ofNullable(customError);
             return this;
         }
 
-        public Builder documentation(@Nullable Input<DocumentationArgs> documentation) {
+        public Builder documentation(@Nullable Output<DocumentationArgs> documentation) {
             this.documentation = documentation;
             return this;
         }
 
         public Builder documentation(@Nullable DocumentationArgs documentation) {
-            this.documentation = Input.ofNullable(documentation);
+            this.documentation = Output.ofNullable(documentation);
             return this;
         }
 
-        public Builder endpoints(@Nullable Input<List<EndpointArgs>> endpoints) {
+        public Builder endpoints(@Nullable Output<List<EndpointArgs>> endpoints) {
             this.endpoints = endpoints;
             return this;
         }
 
         public Builder endpoints(@Nullable List<EndpointArgs> endpoints) {
-            this.endpoints = Input.ofNullable(endpoints);
+            this.endpoints = Output.ofNullable(endpoints);
             return this;
         }
 
-        public Builder enums(@Nullable Input<List<EnumArgs>> enums) {
+        public Builder enums(@Nullable Output<List<EnumArgs>> enums) {
             this.enums = enums;
             return this;
         }
 
         public Builder enums(@Nullable List<EnumArgs> enums) {
-            this.enums = Input.ofNullable(enums);
+            this.enums = Output.ofNullable(enums);
             return this;
         }
 
-        public Builder http(@Nullable Input<HttpArgs> http) {
+        public Builder http(@Nullable Output<HttpArgs> http) {
             this.http = http;
             return this;
         }
 
         public Builder http(@Nullable HttpArgs http) {
-            this.http = Input.ofNullable(http);
+            this.http = Output.ofNullable(http);
             return this;
         }
 
-        public Builder id(@Nullable Input<String> id) {
+        public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
 
         public Builder id(@Nullable String id) {
-            this.id = Input.ofNullable(id);
+            this.id = Output.ofNullable(id);
             return this;
         }
 
-        public Builder logging(@Nullable Input<LoggingArgs> logging) {
+        public Builder logging(@Nullable Output<LoggingArgs> logging) {
             this.logging = logging;
             return this;
         }
 
         public Builder logging(@Nullable LoggingArgs logging) {
-            this.logging = Input.ofNullable(logging);
+            this.logging = Output.ofNullable(logging);
             return this;
         }
 
-        public Builder logs(@Nullable Input<List<LogDescriptorArgs>> logs) {
+        public Builder logs(@Nullable Output<List<LogDescriptorArgs>> logs) {
             this.logs = logs;
             return this;
         }
 
         public Builder logs(@Nullable List<LogDescriptorArgs> logs) {
-            this.logs = Input.ofNullable(logs);
+            this.logs = Output.ofNullable(logs);
             return this;
         }
 
-        public Builder metrics(@Nullable Input<List<MetricDescriptorArgs>> metrics) {
+        public Builder metrics(@Nullable Output<List<MetricDescriptorArgs>> metrics) {
             this.metrics = metrics;
             return this;
         }
 
         public Builder metrics(@Nullable List<MetricDescriptorArgs> metrics) {
-            this.metrics = Input.ofNullable(metrics);
+            this.metrics = Output.ofNullable(metrics);
             return this;
         }
 
-        public Builder monitoredResources(@Nullable Input<List<MonitoredResourceDescriptorArgs>> monitoredResources) {
+        public Builder monitoredResources(@Nullable Output<List<MonitoredResourceDescriptorArgs>> monitoredResources) {
             this.monitoredResources = monitoredResources;
             return this;
         }
 
         public Builder monitoredResources(@Nullable List<MonitoredResourceDescriptorArgs> monitoredResources) {
-            this.monitoredResources = Input.ofNullable(monitoredResources);
+            this.monitoredResources = Output.ofNullable(monitoredResources);
             return this;
         }
 
-        public Builder monitoring(@Nullable Input<MonitoringArgs> monitoring) {
+        public Builder monitoring(@Nullable Output<MonitoringArgs> monitoring) {
             this.monitoring = monitoring;
             return this;
         }
 
         public Builder monitoring(@Nullable MonitoringArgs monitoring) {
-            this.monitoring = Input.ofNullable(monitoring);
+            this.monitoring = Output.ofNullable(monitoring);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder producerProjectId(@Nullable Input<String> producerProjectId) {
+        public Builder producerProjectId(@Nullable Output<String> producerProjectId) {
             this.producerProjectId = producerProjectId;
             return this;
         }
 
         public Builder producerProjectId(@Nullable String producerProjectId) {
-            this.producerProjectId = Input.ofNullable(producerProjectId);
+            this.producerProjectId = Output.ofNullable(producerProjectId);
             return this;
         }
 
-        public Builder quota(@Nullable Input<QuotaArgs> quota) {
+        public Builder quota(@Nullable Output<QuotaArgs> quota) {
             this.quota = quota;
             return this;
         }
 
         public Builder quota(@Nullable QuotaArgs quota) {
-            this.quota = Input.ofNullable(quota);
+            this.quota = Output.ofNullable(quota);
             return this;
         }
 
-        public Builder serviceName(Input<String> serviceName) {
+        public Builder serviceName(Output<String> serviceName) {
             this.serviceName = Objects.requireNonNull(serviceName);
             return this;
         }
 
         public Builder serviceName(String serviceName) {
-            this.serviceName = Input.of(Objects.requireNonNull(serviceName));
+            this.serviceName = Output.of(Objects.requireNonNull(serviceName));
             return this;
         }
 
-        public Builder systemParameters(@Nullable Input<SystemParametersArgs> systemParameters) {
+        public Builder systemParameters(@Nullable Output<SystemParametersArgs> systemParameters) {
             this.systemParameters = systemParameters;
             return this;
         }
 
         public Builder systemParameters(@Nullable SystemParametersArgs systemParameters) {
-            this.systemParameters = Input.ofNullable(systemParameters);
+            this.systemParameters = Output.ofNullable(systemParameters);
             return this;
         }
 
-        public Builder systemTypes(@Nullable Input<List<TypeArgs>> systemTypes) {
+        public Builder systemTypes(@Nullable Output<List<TypeArgs>> systemTypes) {
             this.systemTypes = systemTypes;
             return this;
         }
 
         public Builder systemTypes(@Nullable List<TypeArgs> systemTypes) {
-            this.systemTypes = Input.ofNullable(systemTypes);
+            this.systemTypes = Output.ofNullable(systemTypes);
             return this;
         }
 
-        public Builder title(@Nullable Input<String> title) {
+        public Builder title(@Nullable Output<String> title) {
             this.title = title;
             return this;
         }
 
         public Builder title(@Nullable String title) {
-            this.title = Input.ofNullable(title);
+            this.title = Output.ofNullable(title);
             return this;
         }
 
-        public Builder types(@Nullable Input<List<TypeArgs>> types) {
+        public Builder types(@Nullable Output<List<TypeArgs>> types) {
             this.types = types;
             return this;
         }
 
         public Builder types(@Nullable List<TypeArgs> types) {
-            this.types = Input.ofNullable(types);
+            this.types = Output.ofNullable(types);
             return this;
         }
 
-        public Builder usage(@Nullable Input<UsageArgs> usage) {
+        public Builder usage(@Nullable Output<UsageArgs> usage) {
             this.usage = usage;
             return this;
         }
 
         public Builder usage(@Nullable UsageArgs usage) {
-            this.usage = Input.ofNullable(usage);
+            this.usage = Output.ofNullable(usage);
             return this;
         }
         public ConfigArgs build() {

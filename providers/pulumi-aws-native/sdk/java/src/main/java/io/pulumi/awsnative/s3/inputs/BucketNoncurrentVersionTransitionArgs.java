@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.s3.inputs;
 
 import io.pulumi.awsnative.s3.enums.BucketNoncurrentVersionTransitionStorageClass;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
@@ -24,10 +24,10 @@ public final class BucketNoncurrentVersionTransitionArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="newerNoncurrentVersions")
-      private final @Nullable Input<Integer> newerNoncurrentVersions;
+      private final @Nullable Output<Integer> newerNoncurrentVersions;
 
-    public Input<Integer> getNewerNoncurrentVersions() {
-        return this.newerNoncurrentVersions == null ? Input.empty() : this.newerNoncurrentVersions;
+    public Output<Integer> getNewerNoncurrentVersions() {
+        return this.newerNoncurrentVersions == null ? Output.empty() : this.newerNoncurrentVersions;
     }
 
     /**
@@ -35,9 +35,9 @@ public final class BucketNoncurrentVersionTransitionArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="storageClass", required=true)
-      private final Input<BucketNoncurrentVersionTransitionStorageClass> storageClass;
+      private final Output<BucketNoncurrentVersionTransitionStorageClass> storageClass;
 
-    public Input<BucketNoncurrentVersionTransitionStorageClass> getStorageClass() {
+    public Output<BucketNoncurrentVersionTransitionStorageClass> getStorageClass() {
         return this.storageClass;
     }
 
@@ -46,25 +46,25 @@ public final class BucketNoncurrentVersionTransitionArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="transitionInDays", required=true)
-      private final Input<Integer> transitionInDays;
+      private final Output<Integer> transitionInDays;
 
-    public Input<Integer> getTransitionInDays() {
+    public Output<Integer> getTransitionInDays() {
         return this.transitionInDays;
     }
 
     public BucketNoncurrentVersionTransitionArgs(
-        @Nullable Input<Integer> newerNoncurrentVersions,
-        Input<BucketNoncurrentVersionTransitionStorageClass> storageClass,
-        Input<Integer> transitionInDays) {
+        @Nullable Output<Integer> newerNoncurrentVersions,
+        Output<BucketNoncurrentVersionTransitionStorageClass> storageClass,
+        Output<Integer> transitionInDays) {
         this.newerNoncurrentVersions = newerNoncurrentVersions;
         this.storageClass = Objects.requireNonNull(storageClass, "expected parameter 'storageClass' to be non-null");
         this.transitionInDays = Objects.requireNonNull(transitionInDays, "expected parameter 'transitionInDays' to be non-null");
     }
 
     private BucketNoncurrentVersionTransitionArgs() {
-        this.newerNoncurrentVersions = Input.empty();
-        this.storageClass = Input.empty();
-        this.transitionInDays = Input.empty();
+        this.newerNoncurrentVersions = Output.empty();
+        this.storageClass = Output.empty();
+        this.transitionInDays = Output.empty();
     }
 
     public static Builder builder() {
@@ -76,9 +76,9 @@ public final class BucketNoncurrentVersionTransitionArgs extends io.pulumi.resou
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> newerNoncurrentVersions;
-        private Input<BucketNoncurrentVersionTransitionStorageClass> storageClass;
-        private Input<Integer> transitionInDays;
+        private @Nullable Output<Integer> newerNoncurrentVersions;
+        private Output<BucketNoncurrentVersionTransitionStorageClass> storageClass;
+        private Output<Integer> transitionInDays;
 
         public Builder() {
     	      // Empty
@@ -91,33 +91,33 @@ public final class BucketNoncurrentVersionTransitionArgs extends io.pulumi.resou
     	      this.transitionInDays = defaults.transitionInDays;
         }
 
-        public Builder newerNoncurrentVersions(@Nullable Input<Integer> newerNoncurrentVersions) {
+        public Builder newerNoncurrentVersions(@Nullable Output<Integer> newerNoncurrentVersions) {
             this.newerNoncurrentVersions = newerNoncurrentVersions;
             return this;
         }
 
         public Builder newerNoncurrentVersions(@Nullable Integer newerNoncurrentVersions) {
-            this.newerNoncurrentVersions = Input.ofNullable(newerNoncurrentVersions);
+            this.newerNoncurrentVersions = Output.ofNullable(newerNoncurrentVersions);
             return this;
         }
 
-        public Builder storageClass(Input<BucketNoncurrentVersionTransitionStorageClass> storageClass) {
+        public Builder storageClass(Output<BucketNoncurrentVersionTransitionStorageClass> storageClass) {
             this.storageClass = Objects.requireNonNull(storageClass);
             return this;
         }
 
         public Builder storageClass(BucketNoncurrentVersionTransitionStorageClass storageClass) {
-            this.storageClass = Input.of(Objects.requireNonNull(storageClass));
+            this.storageClass = Output.of(Objects.requireNonNull(storageClass));
             return this;
         }
 
-        public Builder transitionInDays(Input<Integer> transitionInDays) {
+        public Builder transitionInDays(Output<Integer> transitionInDays) {
             this.transitionInDays = Objects.requireNonNull(transitionInDays);
             return this;
         }
 
         public Builder transitionInDays(Integer transitionInDays) {
-            this.transitionInDays = Input.of(Objects.requireNonNull(transitionInDays));
+            this.transitionInDays = Output.of(Objects.requireNonNull(transitionInDays));
             return this;
         }
         public BucketNoncurrentVersionTransitionArgs build() {

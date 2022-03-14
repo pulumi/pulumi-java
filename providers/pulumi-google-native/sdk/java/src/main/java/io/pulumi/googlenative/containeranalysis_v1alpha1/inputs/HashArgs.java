@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1alpha1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.containeranalysis_v1alpha1.enums.HashType;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class HashArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type")
-      private final @Nullable Input<HashType> type;
+      private final @Nullable Output<HashType> type;
 
-    public Input<HashType> getType() {
-        return this.type == null ? Input.empty() : this.type;
+    public Output<HashType> getType() {
+        return this.type == null ? Output.empty() : this.type;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class HashArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="value")
-      private final @Nullable Input<String> value;
+      private final @Nullable Output<String> value;
 
-    public Input<String> getValue() {
-        return this.value == null ? Input.empty() : this.value;
+    public Output<String> getValue() {
+        return this.value == null ? Output.empty() : this.value;
     }
 
     public HashArgs(
-        @Nullable Input<HashType> type,
-        @Nullable Input<String> value) {
+        @Nullable Output<HashType> type,
+        @Nullable Output<String> value) {
         this.type = type;
         this.value = value;
     }
 
     private HashArgs() {
-        this.type = Input.empty();
-        this.value = Input.empty();
+        this.type = Output.empty();
+        this.value = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class HashArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<HashType> type;
-        private @Nullable Input<String> value;
+        private @Nullable Output<HashType> type;
+        private @Nullable Output<String> value;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class HashArgs extends io.pulumi.resources.ResourceArgs {
     	      this.value = defaults.value;
         }
 
-        public Builder type(@Nullable Input<HashType> type) {
+        public Builder type(@Nullable Output<HashType> type) {
             this.type = type;
             return this;
         }
 
         public Builder type(@Nullable HashType type) {
-            this.type = Input.ofNullable(type);
+            this.type = Output.ofNullable(type);
             return this;
         }
 
-        public Builder value(@Nullable Input<String> value) {
+        public Builder value(@Nullable Output<String> value) {
             this.value = value;
             return this;
         }
 
         public Builder value(@Nullable String value) {
-            this.value = Input.ofNullable(value);
+            this.value = Output.ofNullable(value);
             return this;
         }
         public HashArgs build() {

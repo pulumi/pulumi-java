@@ -5,7 +5,7 @@ package io.pulumi.aws.worklink;
 
 import io.pulumi.aws.worklink.inputs.FleetIdentityProviderArgs;
 import io.pulumi.aws.worklink.inputs.FleetNetworkArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -22,10 +22,10 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="auditStreamArn")
-      private final @Nullable Input<String> auditStreamArn;
+      private final @Nullable Output<String> auditStreamArn;
 
-    public Input<String> getAuditStreamArn() {
-        return this.auditStreamArn == null ? Input.empty() : this.auditStreamArn;
+    public Output<String> getAuditStreamArn() {
+        return this.auditStreamArn == null ? Output.empty() : this.auditStreamArn;
     }
 
     /**
@@ -33,10 +33,10 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="deviceCaCertificate")
-      private final @Nullable Input<String> deviceCaCertificate;
+      private final @Nullable Output<String> deviceCaCertificate;
 
-    public Input<String> getDeviceCaCertificate() {
-        return this.deviceCaCertificate == null ? Input.empty() : this.deviceCaCertificate;
+    public Output<String> getDeviceCaCertificate() {
+        return this.deviceCaCertificate == null ? Output.empty() : this.deviceCaCertificate;
     }
 
     /**
@@ -44,10 +44,10 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName")
-      private final @Nullable Input<String> displayName;
+      private final @Nullable Output<String> displayName;
 
-    public Input<String> getDisplayName() {
-        return this.displayName == null ? Input.empty() : this.displayName;
+    public Output<String> getDisplayName() {
+        return this.displayName == null ? Output.empty() : this.displayName;
     }
 
     /**
@@ -55,10 +55,10 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="identityProvider")
-      private final @Nullable Input<FleetIdentityProviderArgs> identityProvider;
+      private final @Nullable Output<FleetIdentityProviderArgs> identityProvider;
 
-    public Input<FleetIdentityProviderArgs> getIdentityProvider() {
-        return this.identityProvider == null ? Input.empty() : this.identityProvider;
+    public Output<FleetIdentityProviderArgs> getIdentityProvider() {
+        return this.identityProvider == null ? Output.empty() : this.identityProvider;
     }
 
     /**
@@ -66,10 +66,10 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -77,10 +77,10 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="network")
-      private final @Nullable Input<FleetNetworkArgs> network;
+      private final @Nullable Output<FleetNetworkArgs> network;
 
-    public Input<FleetNetworkArgs> getNetwork() {
-        return this.network == null ? Input.empty() : this.network;
+    public Output<FleetNetworkArgs> getNetwork() {
+        return this.network == null ? Output.empty() : this.network;
     }
 
     /**
@@ -88,20 +88,20 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="optimizeForEndUserLocation")
-      private final @Nullable Input<Boolean> optimizeForEndUserLocation;
+      private final @Nullable Output<Boolean> optimizeForEndUserLocation;
 
-    public Input<Boolean> getOptimizeForEndUserLocation() {
-        return this.optimizeForEndUserLocation == null ? Input.empty() : this.optimizeForEndUserLocation;
+    public Output<Boolean> getOptimizeForEndUserLocation() {
+        return this.optimizeForEndUserLocation == null ? Output.empty() : this.optimizeForEndUserLocation;
     }
 
     public FleetArgs(
-        @Nullable Input<String> auditStreamArn,
-        @Nullable Input<String> deviceCaCertificate,
-        @Nullable Input<String> displayName,
-        @Nullable Input<FleetIdentityProviderArgs> identityProvider,
-        @Nullable Input<String> name,
-        @Nullable Input<FleetNetworkArgs> network,
-        @Nullable Input<Boolean> optimizeForEndUserLocation) {
+        @Nullable Output<String> auditStreamArn,
+        @Nullable Output<String> deviceCaCertificate,
+        @Nullable Output<String> displayName,
+        @Nullable Output<FleetIdentityProviderArgs> identityProvider,
+        @Nullable Output<String> name,
+        @Nullable Output<FleetNetworkArgs> network,
+        @Nullable Output<Boolean> optimizeForEndUserLocation) {
         this.auditStreamArn = auditStreamArn;
         this.deviceCaCertificate = deviceCaCertificate;
         this.displayName = displayName;
@@ -112,13 +112,13 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private FleetArgs() {
-        this.auditStreamArn = Input.empty();
-        this.deviceCaCertificate = Input.empty();
-        this.displayName = Input.empty();
-        this.identityProvider = Input.empty();
-        this.name = Input.empty();
-        this.network = Input.empty();
-        this.optimizeForEndUserLocation = Input.empty();
+        this.auditStreamArn = Output.empty();
+        this.deviceCaCertificate = Output.empty();
+        this.displayName = Output.empty();
+        this.identityProvider = Output.empty();
+        this.name = Output.empty();
+        this.network = Output.empty();
+        this.optimizeForEndUserLocation = Output.empty();
     }
 
     public static Builder builder() {
@@ -130,13 +130,13 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> auditStreamArn;
-        private @Nullable Input<String> deviceCaCertificate;
-        private @Nullable Input<String> displayName;
-        private @Nullable Input<FleetIdentityProviderArgs> identityProvider;
-        private @Nullable Input<String> name;
-        private @Nullable Input<FleetNetworkArgs> network;
-        private @Nullable Input<Boolean> optimizeForEndUserLocation;
+        private @Nullable Output<String> auditStreamArn;
+        private @Nullable Output<String> deviceCaCertificate;
+        private @Nullable Output<String> displayName;
+        private @Nullable Output<FleetIdentityProviderArgs> identityProvider;
+        private @Nullable Output<String> name;
+        private @Nullable Output<FleetNetworkArgs> network;
+        private @Nullable Output<Boolean> optimizeForEndUserLocation;
 
         public Builder() {
     	      // Empty
@@ -153,73 +153,73 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
     	      this.optimizeForEndUserLocation = defaults.optimizeForEndUserLocation;
         }
 
-        public Builder auditStreamArn(@Nullable Input<String> auditStreamArn) {
+        public Builder auditStreamArn(@Nullable Output<String> auditStreamArn) {
             this.auditStreamArn = auditStreamArn;
             return this;
         }
 
         public Builder auditStreamArn(@Nullable String auditStreamArn) {
-            this.auditStreamArn = Input.ofNullable(auditStreamArn);
+            this.auditStreamArn = Output.ofNullable(auditStreamArn);
             return this;
         }
 
-        public Builder deviceCaCertificate(@Nullable Input<String> deviceCaCertificate) {
+        public Builder deviceCaCertificate(@Nullable Output<String> deviceCaCertificate) {
             this.deviceCaCertificate = deviceCaCertificate;
             return this;
         }
 
         public Builder deviceCaCertificate(@Nullable String deviceCaCertificate) {
-            this.deviceCaCertificate = Input.ofNullable(deviceCaCertificate);
+            this.deviceCaCertificate = Output.ofNullable(deviceCaCertificate);
             return this;
         }
 
-        public Builder displayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Input.ofNullable(displayName);
+            this.displayName = Output.ofNullable(displayName);
             return this;
         }
 
-        public Builder identityProvider(@Nullable Input<FleetIdentityProviderArgs> identityProvider) {
+        public Builder identityProvider(@Nullable Output<FleetIdentityProviderArgs> identityProvider) {
             this.identityProvider = identityProvider;
             return this;
         }
 
         public Builder identityProvider(@Nullable FleetIdentityProviderArgs identityProvider) {
-            this.identityProvider = Input.ofNullable(identityProvider);
+            this.identityProvider = Output.ofNullable(identityProvider);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder network(@Nullable Input<FleetNetworkArgs> network) {
+        public Builder network(@Nullable Output<FleetNetworkArgs> network) {
             this.network = network;
             return this;
         }
 
         public Builder network(@Nullable FleetNetworkArgs network) {
-            this.network = Input.ofNullable(network);
+            this.network = Output.ofNullable(network);
             return this;
         }
 
-        public Builder optimizeForEndUserLocation(@Nullable Input<Boolean> optimizeForEndUserLocation) {
+        public Builder optimizeForEndUserLocation(@Nullable Output<Boolean> optimizeForEndUserLocation) {
             this.optimizeForEndUserLocation = optimizeForEndUserLocation;
             return this;
         }
 
         public Builder optimizeForEndUserLocation(@Nullable Boolean optimizeForEndUserLocation) {
-            this.optimizeForEndUserLocation = Input.ofNullable(optimizeForEndUserLocation);
+            this.optimizeForEndUserLocation = Output.ofNullable(optimizeForEndUserLocation);
             return this;
         }
         public FleetArgs build() {

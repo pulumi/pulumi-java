@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.iotwireless.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -14,29 +14,29 @@ public final class WirelessGatewayLoRaWANGatewayArgs extends io.pulumi.resources
     public static final WirelessGatewayLoRaWANGatewayArgs Empty = new WirelessGatewayLoRaWANGatewayArgs();
 
     @InputImport(name="gatewayEui", required=true)
-      private final Input<String> gatewayEui;
+      private final Output<String> gatewayEui;
 
-    public Input<String> getGatewayEui() {
+    public Output<String> getGatewayEui() {
         return this.gatewayEui;
     }
 
     @InputImport(name="rfRegion", required=true)
-      private final Input<String> rfRegion;
+      private final Output<String> rfRegion;
 
-    public Input<String> getRfRegion() {
+    public Output<String> getRfRegion() {
         return this.rfRegion;
     }
 
     public WirelessGatewayLoRaWANGatewayArgs(
-        Input<String> gatewayEui,
-        Input<String> rfRegion) {
+        Output<String> gatewayEui,
+        Output<String> rfRegion) {
         this.gatewayEui = Objects.requireNonNull(gatewayEui, "expected parameter 'gatewayEui' to be non-null");
         this.rfRegion = Objects.requireNonNull(rfRegion, "expected parameter 'rfRegion' to be non-null");
     }
 
     private WirelessGatewayLoRaWANGatewayArgs() {
-        this.gatewayEui = Input.empty();
-        this.rfRegion = Input.empty();
+        this.gatewayEui = Output.empty();
+        this.rfRegion = Output.empty();
     }
 
     public static Builder builder() {
@@ -48,8 +48,8 @@ public final class WirelessGatewayLoRaWANGatewayArgs extends io.pulumi.resources
     }
 
     public static final class Builder {
-        private Input<String> gatewayEui;
-        private Input<String> rfRegion;
+        private Output<String> gatewayEui;
+        private Output<String> rfRegion;
 
         public Builder() {
     	      // Empty
@@ -61,23 +61,23 @@ public final class WirelessGatewayLoRaWANGatewayArgs extends io.pulumi.resources
     	      this.rfRegion = defaults.rfRegion;
         }
 
-        public Builder gatewayEui(Input<String> gatewayEui) {
+        public Builder gatewayEui(Output<String> gatewayEui) {
             this.gatewayEui = Objects.requireNonNull(gatewayEui);
             return this;
         }
 
         public Builder gatewayEui(String gatewayEui) {
-            this.gatewayEui = Input.of(Objects.requireNonNull(gatewayEui));
+            this.gatewayEui = Output.of(Objects.requireNonNull(gatewayEui));
             return this;
         }
 
-        public Builder rfRegion(Input<String> rfRegion) {
+        public Builder rfRegion(Output<String> rfRegion) {
             this.rfRegion = Objects.requireNonNull(rfRegion);
             return this;
         }
 
         public Builder rfRegion(String rfRegion) {
-            this.rfRegion = Input.of(Objects.requireNonNull(rfRegion));
+            this.rfRegion = Output.of(Objects.requireNonNull(rfRegion));
             return this;
         }
         public WirelessGatewayLoRaWANGatewayArgs build() {

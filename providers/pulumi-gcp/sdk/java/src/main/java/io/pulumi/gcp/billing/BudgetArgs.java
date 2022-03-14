@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.billing;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.billing.inputs.BudgetAllUpdatesRuleArgs;
 import io.pulumi.gcp.billing.inputs.BudgetAmountArgs;
@@ -27,10 +27,10 @@ public final class BudgetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="allUpdatesRule")
-      private final @Nullable Input<BudgetAllUpdatesRuleArgs> allUpdatesRule;
+      private final @Nullable Output<BudgetAllUpdatesRuleArgs> allUpdatesRule;
 
-    public Input<BudgetAllUpdatesRuleArgs> getAllUpdatesRule() {
-        return this.allUpdatesRule == null ? Input.empty() : this.allUpdatesRule;
+    public Output<BudgetAllUpdatesRuleArgs> getAllUpdatesRule() {
+        return this.allUpdatesRule == null ? Output.empty() : this.allUpdatesRule;
     }
 
     /**
@@ -39,9 +39,9 @@ public final class BudgetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="amount", required=true)
-      private final Input<BudgetAmountArgs> amount;
+      private final Output<BudgetAmountArgs> amount;
 
-    public Input<BudgetAmountArgs> getAmount() {
+    public Output<BudgetAmountArgs> getAmount() {
         return this.amount;
     }
 
@@ -50,9 +50,9 @@ public final class BudgetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="billingAccount", required=true)
-      private final Input<String> billingAccount;
+      private final Output<String> billingAccount;
 
-    public Input<String> getBillingAccount() {
+    public Output<String> getBillingAccount() {
         return this.billingAccount;
     }
 
@@ -63,10 +63,10 @@ public final class BudgetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="budgetFilter")
-      private final @Nullable Input<BudgetBudgetFilterArgs> budgetFilter;
+      private final @Nullable Output<BudgetBudgetFilterArgs> budgetFilter;
 
-    public Input<BudgetBudgetFilterArgs> getBudgetFilter() {
-        return this.budgetFilter == null ? Input.empty() : this.budgetFilter;
+    public Output<BudgetBudgetFilterArgs> getBudgetFilter() {
+        return this.budgetFilter == null ? Output.empty() : this.budgetFilter;
     }
 
     /**
@@ -74,10 +74,10 @@ public final class BudgetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName")
-      private final @Nullable Input<String> displayName;
+      private final @Nullable Output<String> displayName;
 
-    public Input<String> getDisplayName() {
-        return this.displayName == null ? Input.empty() : this.displayName;
+    public Output<String> getDisplayName() {
+        return this.displayName == null ? Output.empty() : this.displayName;
     }
 
     /**
@@ -88,19 +88,19 @@ public final class BudgetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="thresholdRules", required=true)
-      private final Input<List<BudgetThresholdRuleArgs>> thresholdRules;
+      private final Output<List<BudgetThresholdRuleArgs>> thresholdRules;
 
-    public Input<List<BudgetThresholdRuleArgs>> getThresholdRules() {
+    public Output<List<BudgetThresholdRuleArgs>> getThresholdRules() {
         return this.thresholdRules;
     }
 
     public BudgetArgs(
-        @Nullable Input<BudgetAllUpdatesRuleArgs> allUpdatesRule,
-        Input<BudgetAmountArgs> amount,
-        Input<String> billingAccount,
-        @Nullable Input<BudgetBudgetFilterArgs> budgetFilter,
-        @Nullable Input<String> displayName,
-        Input<List<BudgetThresholdRuleArgs>> thresholdRules) {
+        @Nullable Output<BudgetAllUpdatesRuleArgs> allUpdatesRule,
+        Output<BudgetAmountArgs> amount,
+        Output<String> billingAccount,
+        @Nullable Output<BudgetBudgetFilterArgs> budgetFilter,
+        @Nullable Output<String> displayName,
+        Output<List<BudgetThresholdRuleArgs>> thresholdRules) {
         this.allUpdatesRule = allUpdatesRule;
         this.amount = Objects.requireNonNull(amount, "expected parameter 'amount' to be non-null");
         this.billingAccount = Objects.requireNonNull(billingAccount, "expected parameter 'billingAccount' to be non-null");
@@ -110,12 +110,12 @@ public final class BudgetArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private BudgetArgs() {
-        this.allUpdatesRule = Input.empty();
-        this.amount = Input.empty();
-        this.billingAccount = Input.empty();
-        this.budgetFilter = Input.empty();
-        this.displayName = Input.empty();
-        this.thresholdRules = Input.empty();
+        this.allUpdatesRule = Output.empty();
+        this.amount = Output.empty();
+        this.billingAccount = Output.empty();
+        this.budgetFilter = Output.empty();
+        this.displayName = Output.empty();
+        this.thresholdRules = Output.empty();
     }
 
     public static Builder builder() {
@@ -127,12 +127,12 @@ public final class BudgetArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<BudgetAllUpdatesRuleArgs> allUpdatesRule;
-        private Input<BudgetAmountArgs> amount;
-        private Input<String> billingAccount;
-        private @Nullable Input<BudgetBudgetFilterArgs> budgetFilter;
-        private @Nullable Input<String> displayName;
-        private Input<List<BudgetThresholdRuleArgs>> thresholdRules;
+        private @Nullable Output<BudgetAllUpdatesRuleArgs> allUpdatesRule;
+        private Output<BudgetAmountArgs> amount;
+        private Output<String> billingAccount;
+        private @Nullable Output<BudgetBudgetFilterArgs> budgetFilter;
+        private @Nullable Output<String> displayName;
+        private Output<List<BudgetThresholdRuleArgs>> thresholdRules;
 
         public Builder() {
     	      // Empty
@@ -148,63 +148,63 @@ public final class BudgetArgs extends io.pulumi.resources.ResourceArgs {
     	      this.thresholdRules = defaults.thresholdRules;
         }
 
-        public Builder allUpdatesRule(@Nullable Input<BudgetAllUpdatesRuleArgs> allUpdatesRule) {
+        public Builder allUpdatesRule(@Nullable Output<BudgetAllUpdatesRuleArgs> allUpdatesRule) {
             this.allUpdatesRule = allUpdatesRule;
             return this;
         }
 
         public Builder allUpdatesRule(@Nullable BudgetAllUpdatesRuleArgs allUpdatesRule) {
-            this.allUpdatesRule = Input.ofNullable(allUpdatesRule);
+            this.allUpdatesRule = Output.ofNullable(allUpdatesRule);
             return this;
         }
 
-        public Builder amount(Input<BudgetAmountArgs> amount) {
+        public Builder amount(Output<BudgetAmountArgs> amount) {
             this.amount = Objects.requireNonNull(amount);
             return this;
         }
 
         public Builder amount(BudgetAmountArgs amount) {
-            this.amount = Input.of(Objects.requireNonNull(amount));
+            this.amount = Output.of(Objects.requireNonNull(amount));
             return this;
         }
 
-        public Builder billingAccount(Input<String> billingAccount) {
+        public Builder billingAccount(Output<String> billingAccount) {
             this.billingAccount = Objects.requireNonNull(billingAccount);
             return this;
         }
 
         public Builder billingAccount(String billingAccount) {
-            this.billingAccount = Input.of(Objects.requireNonNull(billingAccount));
+            this.billingAccount = Output.of(Objects.requireNonNull(billingAccount));
             return this;
         }
 
-        public Builder budgetFilter(@Nullable Input<BudgetBudgetFilterArgs> budgetFilter) {
+        public Builder budgetFilter(@Nullable Output<BudgetBudgetFilterArgs> budgetFilter) {
             this.budgetFilter = budgetFilter;
             return this;
         }
 
         public Builder budgetFilter(@Nullable BudgetBudgetFilterArgs budgetFilter) {
-            this.budgetFilter = Input.ofNullable(budgetFilter);
+            this.budgetFilter = Output.ofNullable(budgetFilter);
             return this;
         }
 
-        public Builder displayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Input.ofNullable(displayName);
+            this.displayName = Output.ofNullable(displayName);
             return this;
         }
 
-        public Builder thresholdRules(Input<List<BudgetThresholdRuleArgs>> thresholdRules) {
+        public Builder thresholdRules(Output<List<BudgetThresholdRuleArgs>> thresholdRules) {
             this.thresholdRules = Objects.requireNonNull(thresholdRules);
             return this;
         }
 
         public Builder thresholdRules(List<BudgetThresholdRuleArgs> thresholdRules) {
-            this.thresholdRules = Input.of(Objects.requireNonNull(thresholdRules));
+            this.thresholdRules = Output.of(Objects.requireNonNull(thresholdRules));
             return this;
         }
         public BudgetArgs build() {

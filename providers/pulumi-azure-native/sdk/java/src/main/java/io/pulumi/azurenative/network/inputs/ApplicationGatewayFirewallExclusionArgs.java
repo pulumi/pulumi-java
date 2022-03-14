@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -22,9 +22,9 @@ public final class ApplicationGatewayFirewallExclusionArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="matchVariable", required=true)
-      private final Input<String> matchVariable;
+      private final Output<String> matchVariable;
 
-    public Input<String> getMatchVariable() {
+    public Output<String> getMatchVariable() {
         return this.matchVariable;
     }
 
@@ -33,9 +33,9 @@ public final class ApplicationGatewayFirewallExclusionArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="selector", required=true)
-      private final Input<String> selector;
+      private final Output<String> selector;
 
-    public Input<String> getSelector() {
+    public Output<String> getSelector() {
         return this.selector;
     }
 
@@ -44,25 +44,25 @@ public final class ApplicationGatewayFirewallExclusionArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="selectorMatchOperator", required=true)
-      private final Input<String> selectorMatchOperator;
+      private final Output<String> selectorMatchOperator;
 
-    public Input<String> getSelectorMatchOperator() {
+    public Output<String> getSelectorMatchOperator() {
         return this.selectorMatchOperator;
     }
 
     public ApplicationGatewayFirewallExclusionArgs(
-        Input<String> matchVariable,
-        Input<String> selector,
-        Input<String> selectorMatchOperator) {
+        Output<String> matchVariable,
+        Output<String> selector,
+        Output<String> selectorMatchOperator) {
         this.matchVariable = Objects.requireNonNull(matchVariable, "expected parameter 'matchVariable' to be non-null");
         this.selector = Objects.requireNonNull(selector, "expected parameter 'selector' to be non-null");
         this.selectorMatchOperator = Objects.requireNonNull(selectorMatchOperator, "expected parameter 'selectorMatchOperator' to be non-null");
     }
 
     private ApplicationGatewayFirewallExclusionArgs() {
-        this.matchVariable = Input.empty();
-        this.selector = Input.empty();
-        this.selectorMatchOperator = Input.empty();
+        this.matchVariable = Output.empty();
+        this.selector = Output.empty();
+        this.selectorMatchOperator = Output.empty();
     }
 
     public static Builder builder() {
@@ -74,9 +74,9 @@ public final class ApplicationGatewayFirewallExclusionArgs extends io.pulumi.res
     }
 
     public static final class Builder {
-        private Input<String> matchVariable;
-        private Input<String> selector;
-        private Input<String> selectorMatchOperator;
+        private Output<String> matchVariable;
+        private Output<String> selector;
+        private Output<String> selectorMatchOperator;
 
         public Builder() {
     	      // Empty
@@ -89,33 +89,33 @@ public final class ApplicationGatewayFirewallExclusionArgs extends io.pulumi.res
     	      this.selectorMatchOperator = defaults.selectorMatchOperator;
         }
 
-        public Builder matchVariable(Input<String> matchVariable) {
+        public Builder matchVariable(Output<String> matchVariable) {
             this.matchVariable = Objects.requireNonNull(matchVariable);
             return this;
         }
 
         public Builder matchVariable(String matchVariable) {
-            this.matchVariable = Input.of(Objects.requireNonNull(matchVariable));
+            this.matchVariable = Output.of(Objects.requireNonNull(matchVariable));
             return this;
         }
 
-        public Builder selector(Input<String> selector) {
+        public Builder selector(Output<String> selector) {
             this.selector = Objects.requireNonNull(selector);
             return this;
         }
 
         public Builder selector(String selector) {
-            this.selector = Input.of(Objects.requireNonNull(selector));
+            this.selector = Output.of(Objects.requireNonNull(selector));
             return this;
         }
 
-        public Builder selectorMatchOperator(Input<String> selectorMatchOperator) {
+        public Builder selectorMatchOperator(Output<String> selectorMatchOperator) {
             this.selectorMatchOperator = Objects.requireNonNull(selectorMatchOperator);
             return this;
         }
 
         public Builder selectorMatchOperator(String selectorMatchOperator) {
-            this.selectorMatchOperator = Input.of(Objects.requireNonNull(selectorMatchOperator));
+            this.selectorMatchOperator = Output.of(Objects.requireNonNull(selectorMatchOperator));
             return this;
         }
         public ApplicationGatewayFirewallExclusionArgs build() {

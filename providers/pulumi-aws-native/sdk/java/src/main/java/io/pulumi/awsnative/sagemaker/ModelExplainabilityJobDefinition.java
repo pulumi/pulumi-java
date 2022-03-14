@@ -13,7 +13,6 @@ import io.pulumi.awsnative.sagemaker.outputs.ModelExplainabilityJobDefinitionMon
 import io.pulumi.awsnative.sagemaker.outputs.ModelExplainabilityJobDefinitionNetworkConfig;
 import io.pulumi.awsnative.sagemaker.outputs.ModelExplainabilityJobDefinitionStoppingCondition;
 import io.pulumi.awsnative.sagemaker.outputs.ModelExplainabilityJobDefinitionTag;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -170,14 +169,14 @@ public class ModelExplainabilityJobDefinition extends io.pulumi.resources.Custom
      * @param options A bag of options that control this resource's behavior.
      */
     public ModelExplainabilityJobDefinition(String name, ModelExplainabilityJobDefinitionArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:sagemaker:ModelExplainabilityJobDefinition", name, args == null ? ModelExplainabilityJobDefinitionArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws-native:sagemaker:ModelExplainabilityJobDefinition", name, args == null ? ModelExplainabilityJobDefinitionArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private ModelExplainabilityJobDefinition(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private ModelExplainabilityJobDefinition(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws-native:sagemaker:ModelExplainabilityJobDefinition", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -192,7 +191,7 @@ public class ModelExplainabilityJobDefinition extends io.pulumi.resources.Custom
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static ModelExplainabilityJobDefinition get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static ModelExplainabilityJobDefinition get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new ModelExplainabilityJobDefinition(name, id, options);
     }
 }

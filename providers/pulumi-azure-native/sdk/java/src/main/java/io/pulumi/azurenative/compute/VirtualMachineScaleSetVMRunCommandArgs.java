@@ -5,7 +5,7 @@ package io.pulumi.azurenative.compute;
 
 import io.pulumi.azurenative.compute.inputs.RunCommandInputParameterArgs;
 import io.pulumi.azurenative.compute.inputs.VirtualMachineRunCommandScriptSourceArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -25,10 +25,10 @@ public final class VirtualMachineScaleSetVMRunCommandArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="asyncExecution")
-      private final @Nullable Input<Boolean> asyncExecution;
+      private final @Nullable Output<Boolean> asyncExecution;
 
-    public Input<Boolean> getAsyncExecution() {
-        return this.asyncExecution == null ? Input.empty() : this.asyncExecution;
+    public Output<Boolean> getAsyncExecution() {
+        return this.asyncExecution == null ? Output.empty() : this.asyncExecution;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class VirtualMachineScaleSetVMRunCommandArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="errorBlobUri")
-      private final @Nullable Input<String> errorBlobUri;
+      private final @Nullable Output<String> errorBlobUri;
 
-    public Input<String> getErrorBlobUri() {
-        return this.errorBlobUri == null ? Input.empty() : this.errorBlobUri;
+    public Output<String> getErrorBlobUri() {
+        return this.errorBlobUri == null ? Output.empty() : this.errorBlobUri;
     }
 
     /**
@@ -47,9 +47,9 @@ public final class VirtualMachineScaleSetVMRunCommandArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="instanceId", required=true)
-      private final Input<String> instanceId;
+      private final Output<String> instanceId;
 
-    public Input<String> getInstanceId() {
+    public Output<String> getInstanceId() {
         return this.instanceId;
     }
 
@@ -58,10 +58,10 @@ public final class VirtualMachineScaleSetVMRunCommandArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -69,10 +69,10 @@ public final class VirtualMachineScaleSetVMRunCommandArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="outputBlobUri")
-      private final @Nullable Input<String> outputBlobUri;
+      private final @Nullable Output<String> outputBlobUri;
 
-    public Input<String> getOutputBlobUri() {
-        return this.outputBlobUri == null ? Input.empty() : this.outputBlobUri;
+    public Output<String> getOutputBlobUri() {
+        return this.outputBlobUri == null ? Output.empty() : this.outputBlobUri;
     }
 
     /**
@@ -80,10 +80,10 @@ public final class VirtualMachineScaleSetVMRunCommandArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="parameters")
-      private final @Nullable Input<List<RunCommandInputParameterArgs>> parameters;
+      private final @Nullable Output<List<RunCommandInputParameterArgs>> parameters;
 
-    public Input<List<RunCommandInputParameterArgs>> getParameters() {
-        return this.parameters == null ? Input.empty() : this.parameters;
+    public Output<List<RunCommandInputParameterArgs>> getParameters() {
+        return this.parameters == null ? Output.empty() : this.parameters;
     }
 
     /**
@@ -91,10 +91,10 @@ public final class VirtualMachineScaleSetVMRunCommandArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="protectedParameters")
-      private final @Nullable Input<List<RunCommandInputParameterArgs>> protectedParameters;
+      private final @Nullable Output<List<RunCommandInputParameterArgs>> protectedParameters;
 
-    public Input<List<RunCommandInputParameterArgs>> getProtectedParameters() {
-        return this.protectedParameters == null ? Input.empty() : this.protectedParameters;
+    public Output<List<RunCommandInputParameterArgs>> getProtectedParameters() {
+        return this.protectedParameters == null ? Output.empty() : this.protectedParameters;
     }
 
     /**
@@ -102,9 +102,9 @@ public final class VirtualMachineScaleSetVMRunCommandArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -113,10 +113,10 @@ public final class VirtualMachineScaleSetVMRunCommandArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="runAsPassword")
-      private final @Nullable Input<String> runAsPassword;
+      private final @Nullable Output<String> runAsPassword;
 
-    public Input<String> getRunAsPassword() {
-        return this.runAsPassword == null ? Input.empty() : this.runAsPassword;
+    public Output<String> getRunAsPassword() {
+        return this.runAsPassword == null ? Output.empty() : this.runAsPassword;
     }
 
     /**
@@ -124,10 +124,10 @@ public final class VirtualMachineScaleSetVMRunCommandArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="runAsUser")
-      private final @Nullable Input<String> runAsUser;
+      private final @Nullable Output<String> runAsUser;
 
-    public Input<String> getRunAsUser() {
-        return this.runAsUser == null ? Input.empty() : this.runAsUser;
+    public Output<String> getRunAsUser() {
+        return this.runAsUser == null ? Output.empty() : this.runAsUser;
     }
 
     /**
@@ -135,10 +135,10 @@ public final class VirtualMachineScaleSetVMRunCommandArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="runCommandName")
-      private final @Nullable Input<String> runCommandName;
+      private final @Nullable Output<String> runCommandName;
 
-    public Input<String> getRunCommandName() {
-        return this.runCommandName == null ? Input.empty() : this.runCommandName;
+    public Output<String> getRunCommandName() {
+        return this.runCommandName == null ? Output.empty() : this.runCommandName;
     }
 
     /**
@@ -146,10 +146,10 @@ public final class VirtualMachineScaleSetVMRunCommandArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="source")
-      private final @Nullable Input<VirtualMachineRunCommandScriptSourceArgs> source;
+      private final @Nullable Output<VirtualMachineRunCommandScriptSourceArgs> source;
 
-    public Input<VirtualMachineRunCommandScriptSourceArgs> getSource() {
-        return this.source == null ? Input.empty() : this.source;
+    public Output<VirtualMachineRunCommandScriptSourceArgs> getSource() {
+        return this.source == null ? Output.empty() : this.source;
     }
 
     /**
@@ -157,10 +157,10 @@ public final class VirtualMachineScaleSetVMRunCommandArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -168,10 +168,10 @@ public final class VirtualMachineScaleSetVMRunCommandArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="timeoutInSeconds")
-      private final @Nullable Input<Integer> timeoutInSeconds;
+      private final @Nullable Output<Integer> timeoutInSeconds;
 
-    public Input<Integer> getTimeoutInSeconds() {
-        return this.timeoutInSeconds == null ? Input.empty() : this.timeoutInSeconds;
+    public Output<Integer> getTimeoutInSeconds() {
+        return this.timeoutInSeconds == null ? Output.empty() : this.timeoutInSeconds;
     }
 
     /**
@@ -179,29 +179,29 @@ public final class VirtualMachineScaleSetVMRunCommandArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="vmScaleSetName", required=true)
-      private final Input<String> vmScaleSetName;
+      private final Output<String> vmScaleSetName;
 
-    public Input<String> getVmScaleSetName() {
+    public Output<String> getVmScaleSetName() {
         return this.vmScaleSetName;
     }
 
     public VirtualMachineScaleSetVMRunCommandArgs(
-        @Nullable Input<Boolean> asyncExecution,
-        @Nullable Input<String> errorBlobUri,
-        Input<String> instanceId,
-        @Nullable Input<String> location,
-        @Nullable Input<String> outputBlobUri,
-        @Nullable Input<List<RunCommandInputParameterArgs>> parameters,
-        @Nullable Input<List<RunCommandInputParameterArgs>> protectedParameters,
-        Input<String> resourceGroupName,
-        @Nullable Input<String> runAsPassword,
-        @Nullable Input<String> runAsUser,
-        @Nullable Input<String> runCommandName,
-        @Nullable Input<VirtualMachineRunCommandScriptSourceArgs> source,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<Integer> timeoutInSeconds,
-        Input<String> vmScaleSetName) {
-        this.asyncExecution = asyncExecution == null ? Input.ofNullable(false) : asyncExecution;
+        @Nullable Output<Boolean> asyncExecution,
+        @Nullable Output<String> errorBlobUri,
+        Output<String> instanceId,
+        @Nullable Output<String> location,
+        @Nullable Output<String> outputBlobUri,
+        @Nullable Output<List<RunCommandInputParameterArgs>> parameters,
+        @Nullable Output<List<RunCommandInputParameterArgs>> protectedParameters,
+        Output<String> resourceGroupName,
+        @Nullable Output<String> runAsPassword,
+        @Nullable Output<String> runAsUser,
+        @Nullable Output<String> runCommandName,
+        @Nullable Output<VirtualMachineRunCommandScriptSourceArgs> source,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<Integer> timeoutInSeconds,
+        Output<String> vmScaleSetName) {
+        this.asyncExecution = asyncExecution == null ? Output.ofNullable(false) : asyncExecution;
         this.errorBlobUri = errorBlobUri;
         this.instanceId = Objects.requireNonNull(instanceId, "expected parameter 'instanceId' to be non-null");
         this.location = location;
@@ -219,21 +219,21 @@ public final class VirtualMachineScaleSetVMRunCommandArgs extends io.pulumi.reso
     }
 
     private VirtualMachineScaleSetVMRunCommandArgs() {
-        this.asyncExecution = Input.empty();
-        this.errorBlobUri = Input.empty();
-        this.instanceId = Input.empty();
-        this.location = Input.empty();
-        this.outputBlobUri = Input.empty();
-        this.parameters = Input.empty();
-        this.protectedParameters = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.runAsPassword = Input.empty();
-        this.runAsUser = Input.empty();
-        this.runCommandName = Input.empty();
-        this.source = Input.empty();
-        this.tags = Input.empty();
-        this.timeoutInSeconds = Input.empty();
-        this.vmScaleSetName = Input.empty();
+        this.asyncExecution = Output.empty();
+        this.errorBlobUri = Output.empty();
+        this.instanceId = Output.empty();
+        this.location = Output.empty();
+        this.outputBlobUri = Output.empty();
+        this.parameters = Output.empty();
+        this.protectedParameters = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.runAsPassword = Output.empty();
+        this.runAsUser = Output.empty();
+        this.runCommandName = Output.empty();
+        this.source = Output.empty();
+        this.tags = Output.empty();
+        this.timeoutInSeconds = Output.empty();
+        this.vmScaleSetName = Output.empty();
     }
 
     public static Builder builder() {
@@ -245,21 +245,21 @@ public final class VirtualMachineScaleSetVMRunCommandArgs extends io.pulumi.reso
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> asyncExecution;
-        private @Nullable Input<String> errorBlobUri;
-        private Input<String> instanceId;
-        private @Nullable Input<String> location;
-        private @Nullable Input<String> outputBlobUri;
-        private @Nullable Input<List<RunCommandInputParameterArgs>> parameters;
-        private @Nullable Input<List<RunCommandInputParameterArgs>> protectedParameters;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<String> runAsPassword;
-        private @Nullable Input<String> runAsUser;
-        private @Nullable Input<String> runCommandName;
-        private @Nullable Input<VirtualMachineRunCommandScriptSourceArgs> source;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<Integer> timeoutInSeconds;
-        private Input<String> vmScaleSetName;
+        private @Nullable Output<Boolean> asyncExecution;
+        private @Nullable Output<String> errorBlobUri;
+        private Output<String> instanceId;
+        private @Nullable Output<String> location;
+        private @Nullable Output<String> outputBlobUri;
+        private @Nullable Output<List<RunCommandInputParameterArgs>> parameters;
+        private @Nullable Output<List<RunCommandInputParameterArgs>> protectedParameters;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<String> runAsPassword;
+        private @Nullable Output<String> runAsUser;
+        private @Nullable Output<String> runCommandName;
+        private @Nullable Output<VirtualMachineRunCommandScriptSourceArgs> source;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<Integer> timeoutInSeconds;
+        private Output<String> vmScaleSetName;
 
         public Builder() {
     	      // Empty
@@ -284,153 +284,153 @@ public final class VirtualMachineScaleSetVMRunCommandArgs extends io.pulumi.reso
     	      this.vmScaleSetName = defaults.vmScaleSetName;
         }
 
-        public Builder asyncExecution(@Nullable Input<Boolean> asyncExecution) {
+        public Builder asyncExecution(@Nullable Output<Boolean> asyncExecution) {
             this.asyncExecution = asyncExecution;
             return this;
         }
 
         public Builder asyncExecution(@Nullable Boolean asyncExecution) {
-            this.asyncExecution = Input.ofNullable(asyncExecution);
+            this.asyncExecution = Output.ofNullable(asyncExecution);
             return this;
         }
 
-        public Builder errorBlobUri(@Nullable Input<String> errorBlobUri) {
+        public Builder errorBlobUri(@Nullable Output<String> errorBlobUri) {
             this.errorBlobUri = errorBlobUri;
             return this;
         }
 
         public Builder errorBlobUri(@Nullable String errorBlobUri) {
-            this.errorBlobUri = Input.ofNullable(errorBlobUri);
+            this.errorBlobUri = Output.ofNullable(errorBlobUri);
             return this;
         }
 
-        public Builder instanceId(Input<String> instanceId) {
+        public Builder instanceId(Output<String> instanceId) {
             this.instanceId = Objects.requireNonNull(instanceId);
             return this;
         }
 
         public Builder instanceId(String instanceId) {
-            this.instanceId = Input.of(Objects.requireNonNull(instanceId));
+            this.instanceId = Output.of(Objects.requireNonNull(instanceId));
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder outputBlobUri(@Nullable Input<String> outputBlobUri) {
+        public Builder outputBlobUri(@Nullable Output<String> outputBlobUri) {
             this.outputBlobUri = outputBlobUri;
             return this;
         }
 
         public Builder outputBlobUri(@Nullable String outputBlobUri) {
-            this.outputBlobUri = Input.ofNullable(outputBlobUri);
+            this.outputBlobUri = Output.ofNullable(outputBlobUri);
             return this;
         }
 
-        public Builder parameters(@Nullable Input<List<RunCommandInputParameterArgs>> parameters) {
+        public Builder parameters(@Nullable Output<List<RunCommandInputParameterArgs>> parameters) {
             this.parameters = parameters;
             return this;
         }
 
         public Builder parameters(@Nullable List<RunCommandInputParameterArgs> parameters) {
-            this.parameters = Input.ofNullable(parameters);
+            this.parameters = Output.ofNullable(parameters);
             return this;
         }
 
-        public Builder protectedParameters(@Nullable Input<List<RunCommandInputParameterArgs>> protectedParameters) {
+        public Builder protectedParameters(@Nullable Output<List<RunCommandInputParameterArgs>> protectedParameters) {
             this.protectedParameters = protectedParameters;
             return this;
         }
 
         public Builder protectedParameters(@Nullable List<RunCommandInputParameterArgs> protectedParameters) {
-            this.protectedParameters = Input.ofNullable(protectedParameters);
+            this.protectedParameters = Output.ofNullable(protectedParameters);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder runAsPassword(@Nullable Input<String> runAsPassword) {
+        public Builder runAsPassword(@Nullable Output<String> runAsPassword) {
             this.runAsPassword = runAsPassword;
             return this;
         }
 
         public Builder runAsPassword(@Nullable String runAsPassword) {
-            this.runAsPassword = Input.ofNullable(runAsPassword);
+            this.runAsPassword = Output.ofNullable(runAsPassword);
             return this;
         }
 
-        public Builder runAsUser(@Nullable Input<String> runAsUser) {
+        public Builder runAsUser(@Nullable Output<String> runAsUser) {
             this.runAsUser = runAsUser;
             return this;
         }
 
         public Builder runAsUser(@Nullable String runAsUser) {
-            this.runAsUser = Input.ofNullable(runAsUser);
+            this.runAsUser = Output.ofNullable(runAsUser);
             return this;
         }
 
-        public Builder runCommandName(@Nullable Input<String> runCommandName) {
+        public Builder runCommandName(@Nullable Output<String> runCommandName) {
             this.runCommandName = runCommandName;
             return this;
         }
 
         public Builder runCommandName(@Nullable String runCommandName) {
-            this.runCommandName = Input.ofNullable(runCommandName);
+            this.runCommandName = Output.ofNullable(runCommandName);
             return this;
         }
 
-        public Builder source(@Nullable Input<VirtualMachineRunCommandScriptSourceArgs> source) {
+        public Builder source(@Nullable Output<VirtualMachineRunCommandScriptSourceArgs> source) {
             this.source = source;
             return this;
         }
 
         public Builder source(@Nullable VirtualMachineRunCommandScriptSourceArgs source) {
-            this.source = Input.ofNullable(source);
+            this.source = Output.ofNullable(source);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder timeoutInSeconds(@Nullable Input<Integer> timeoutInSeconds) {
+        public Builder timeoutInSeconds(@Nullable Output<Integer> timeoutInSeconds) {
             this.timeoutInSeconds = timeoutInSeconds;
             return this;
         }
 
         public Builder timeoutInSeconds(@Nullable Integer timeoutInSeconds) {
-            this.timeoutInSeconds = Input.ofNullable(timeoutInSeconds);
+            this.timeoutInSeconds = Output.ofNullable(timeoutInSeconds);
             return this;
         }
 
-        public Builder vmScaleSetName(Input<String> vmScaleSetName) {
+        public Builder vmScaleSetName(Output<String> vmScaleSetName) {
             this.vmScaleSetName = Objects.requireNonNull(vmScaleSetName);
             return this;
         }
 
         public Builder vmScaleSetName(String vmScaleSetName) {
-            this.vmScaleSetName = Input.of(Objects.requireNonNull(vmScaleSetName));
+            this.vmScaleSetName = Output.of(Objects.requireNonNull(vmScaleSetName));
             return this;
         }
         public VirtualMachineScaleSetVMRunCommandArgs build() {

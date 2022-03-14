@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.botservice.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class MsTeamsChannelPropertiesArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="acceptedTerms")
-      private final @Nullable Input<Boolean> acceptedTerms;
+      private final @Nullable Output<Boolean> acceptedTerms;
 
-    public Input<Boolean> getAcceptedTerms() {
-        return this.acceptedTerms == null ? Input.empty() : this.acceptedTerms;
+    public Output<Boolean> getAcceptedTerms() {
+        return this.acceptedTerms == null ? Output.empty() : this.acceptedTerms;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class MsTeamsChannelPropertiesArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="callingWebHook")
-      private final @Nullable Input<String> callingWebHook;
+      private final @Nullable Output<String> callingWebHook;
 
-    public Input<String> getCallingWebHook() {
-        return this.callingWebHook == null ? Input.empty() : this.callingWebHook;
+    public Output<String> getCallingWebHook() {
+        return this.callingWebHook == null ? Output.empty() : this.callingWebHook;
     }
 
     /**
@@ -46,10 +46,10 @@ public final class MsTeamsChannelPropertiesArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="deploymentEnvironment")
-      private final @Nullable Input<String> deploymentEnvironment;
+      private final @Nullable Output<String> deploymentEnvironment;
 
-    public Input<String> getDeploymentEnvironment() {
-        return this.deploymentEnvironment == null ? Input.empty() : this.deploymentEnvironment;
+    public Output<String> getDeploymentEnvironment() {
+        return this.deploymentEnvironment == null ? Output.empty() : this.deploymentEnvironment;
     }
 
     /**
@@ -57,10 +57,10 @@ public final class MsTeamsChannelPropertiesArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="enableCalling")
-      private final @Nullable Input<Boolean> enableCalling;
+      private final @Nullable Output<Boolean> enableCalling;
 
-    public Input<Boolean> getEnableCalling() {
-        return this.enableCalling == null ? Input.empty() : this.enableCalling;
+    public Output<Boolean> getEnableCalling() {
+        return this.enableCalling == null ? Output.empty() : this.enableCalling;
     }
 
     /**
@@ -68,10 +68,10 @@ public final class MsTeamsChannelPropertiesArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="incomingCallRoute")
-      private final @Nullable Input<String> incomingCallRoute;
+      private final @Nullable Output<String> incomingCallRoute;
 
-    public Input<String> getIncomingCallRoute() {
-        return this.incomingCallRoute == null ? Input.empty() : this.incomingCallRoute;
+    public Output<String> getIncomingCallRoute() {
+        return this.incomingCallRoute == null ? Output.empty() : this.incomingCallRoute;
     }
 
     /**
@@ -79,20 +79,20 @@ public final class MsTeamsChannelPropertiesArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="isEnabled", required=true)
-      private final Input<Boolean> isEnabled;
+      private final Output<Boolean> isEnabled;
 
-    public Input<Boolean> getIsEnabled() {
+    public Output<Boolean> getIsEnabled() {
         return this.isEnabled;
     }
 
     public MsTeamsChannelPropertiesArgs(
-        @Nullable Input<Boolean> acceptedTerms,
-        @Nullable Input<String> callingWebHook,
-        @Nullable Input<String> deploymentEnvironment,
-        @Nullable Input<Boolean> enableCalling,
-        @Nullable Input<String> incomingCallRoute,
-        Input<Boolean> isEnabled) {
-        this.acceptedTerms = acceptedTerms == null ? Input.ofNullable(true) : acceptedTerms;
+        @Nullable Output<Boolean> acceptedTerms,
+        @Nullable Output<String> callingWebHook,
+        @Nullable Output<String> deploymentEnvironment,
+        @Nullable Output<Boolean> enableCalling,
+        @Nullable Output<String> incomingCallRoute,
+        Output<Boolean> isEnabled) {
+        this.acceptedTerms = acceptedTerms == null ? Output.ofNullable(true) : acceptedTerms;
         this.callingWebHook = callingWebHook;
         this.deploymentEnvironment = deploymentEnvironment;
         this.enableCalling = enableCalling;
@@ -101,12 +101,12 @@ public final class MsTeamsChannelPropertiesArgs extends io.pulumi.resources.Reso
     }
 
     private MsTeamsChannelPropertiesArgs() {
-        this.acceptedTerms = Input.empty();
-        this.callingWebHook = Input.empty();
-        this.deploymentEnvironment = Input.empty();
-        this.enableCalling = Input.empty();
-        this.incomingCallRoute = Input.empty();
-        this.isEnabled = Input.empty();
+        this.acceptedTerms = Output.empty();
+        this.callingWebHook = Output.empty();
+        this.deploymentEnvironment = Output.empty();
+        this.enableCalling = Output.empty();
+        this.incomingCallRoute = Output.empty();
+        this.isEnabled = Output.empty();
     }
 
     public static Builder builder() {
@@ -118,12 +118,12 @@ public final class MsTeamsChannelPropertiesArgs extends io.pulumi.resources.Reso
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> acceptedTerms;
-        private @Nullable Input<String> callingWebHook;
-        private @Nullable Input<String> deploymentEnvironment;
-        private @Nullable Input<Boolean> enableCalling;
-        private @Nullable Input<String> incomingCallRoute;
-        private Input<Boolean> isEnabled;
+        private @Nullable Output<Boolean> acceptedTerms;
+        private @Nullable Output<String> callingWebHook;
+        private @Nullable Output<String> deploymentEnvironment;
+        private @Nullable Output<Boolean> enableCalling;
+        private @Nullable Output<String> incomingCallRoute;
+        private Output<Boolean> isEnabled;
 
         public Builder() {
     	      // Empty
@@ -139,63 +139,63 @@ public final class MsTeamsChannelPropertiesArgs extends io.pulumi.resources.Reso
     	      this.isEnabled = defaults.isEnabled;
         }
 
-        public Builder acceptedTerms(@Nullable Input<Boolean> acceptedTerms) {
+        public Builder acceptedTerms(@Nullable Output<Boolean> acceptedTerms) {
             this.acceptedTerms = acceptedTerms;
             return this;
         }
 
         public Builder acceptedTerms(@Nullable Boolean acceptedTerms) {
-            this.acceptedTerms = Input.ofNullable(acceptedTerms);
+            this.acceptedTerms = Output.ofNullable(acceptedTerms);
             return this;
         }
 
-        public Builder callingWebHook(@Nullable Input<String> callingWebHook) {
+        public Builder callingWebHook(@Nullable Output<String> callingWebHook) {
             this.callingWebHook = callingWebHook;
             return this;
         }
 
         public Builder callingWebHook(@Nullable String callingWebHook) {
-            this.callingWebHook = Input.ofNullable(callingWebHook);
+            this.callingWebHook = Output.ofNullable(callingWebHook);
             return this;
         }
 
-        public Builder deploymentEnvironment(@Nullable Input<String> deploymentEnvironment) {
+        public Builder deploymentEnvironment(@Nullable Output<String> deploymentEnvironment) {
             this.deploymentEnvironment = deploymentEnvironment;
             return this;
         }
 
         public Builder deploymentEnvironment(@Nullable String deploymentEnvironment) {
-            this.deploymentEnvironment = Input.ofNullable(deploymentEnvironment);
+            this.deploymentEnvironment = Output.ofNullable(deploymentEnvironment);
             return this;
         }
 
-        public Builder enableCalling(@Nullable Input<Boolean> enableCalling) {
+        public Builder enableCalling(@Nullable Output<Boolean> enableCalling) {
             this.enableCalling = enableCalling;
             return this;
         }
 
         public Builder enableCalling(@Nullable Boolean enableCalling) {
-            this.enableCalling = Input.ofNullable(enableCalling);
+            this.enableCalling = Output.ofNullable(enableCalling);
             return this;
         }
 
-        public Builder incomingCallRoute(@Nullable Input<String> incomingCallRoute) {
+        public Builder incomingCallRoute(@Nullable Output<String> incomingCallRoute) {
             this.incomingCallRoute = incomingCallRoute;
             return this;
         }
 
         public Builder incomingCallRoute(@Nullable String incomingCallRoute) {
-            this.incomingCallRoute = Input.ofNullable(incomingCallRoute);
+            this.incomingCallRoute = Output.ofNullable(incomingCallRoute);
             return this;
         }
 
-        public Builder isEnabled(Input<Boolean> isEnabled) {
+        public Builder isEnabled(Output<Boolean> isEnabled) {
             this.isEnabled = Objects.requireNonNull(isEnabled);
             return this;
         }
 
         public Builder isEnabled(Boolean isEnabled) {
-            this.isEnabled = Input.of(Objects.requireNonNull(isEnabled));
+            this.isEnabled = Output.of(Objects.requireNonNull(isEnabled));
             return this;
         }
         public MsTeamsChannelPropertiesArgs build() {

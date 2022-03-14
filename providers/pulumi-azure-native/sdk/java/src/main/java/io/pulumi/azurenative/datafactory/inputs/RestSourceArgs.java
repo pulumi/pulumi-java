@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datafactory.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class RestSourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="additionalColumns")
-      private final @Nullable Input<Object> additionalColumns;
+      private final @Nullable Output<Object> additionalColumns;
 
-    public Input<Object> getAdditionalColumns() {
-        return this.additionalColumns == null ? Input.empty() : this.additionalColumns;
+    public Output<Object> getAdditionalColumns() {
+        return this.additionalColumns == null ? Output.empty() : this.additionalColumns;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class RestSourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="additionalHeaders")
-      private final @Nullable Input<Object> additionalHeaders;
+      private final @Nullable Output<Object> additionalHeaders;
 
-    public Input<Object> getAdditionalHeaders() {
-        return this.additionalHeaders == null ? Input.empty() : this.additionalHeaders;
+    public Output<Object> getAdditionalHeaders() {
+        return this.additionalHeaders == null ? Output.empty() : this.additionalHeaders;
     }
 
     /**
@@ -46,10 +46,10 @@ public final class RestSourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="disableMetricsCollection")
-      private final @Nullable Input<Object> disableMetricsCollection;
+      private final @Nullable Output<Object> disableMetricsCollection;
 
-    public Input<Object> getDisableMetricsCollection() {
-        return this.disableMetricsCollection == null ? Input.empty() : this.disableMetricsCollection;
+    public Output<Object> getDisableMetricsCollection() {
+        return this.disableMetricsCollection == null ? Output.empty() : this.disableMetricsCollection;
     }
 
     /**
@@ -57,10 +57,10 @@ public final class RestSourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="httpRequestTimeout")
-      private final @Nullable Input<Object> httpRequestTimeout;
+      private final @Nullable Output<Object> httpRequestTimeout;
 
-    public Input<Object> getHttpRequestTimeout() {
-        return this.httpRequestTimeout == null ? Input.empty() : this.httpRequestTimeout;
+    public Output<Object> getHttpRequestTimeout() {
+        return this.httpRequestTimeout == null ? Output.empty() : this.httpRequestTimeout;
     }
 
     /**
@@ -68,10 +68,10 @@ public final class RestSourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="maxConcurrentConnections")
-      private final @Nullable Input<Object> maxConcurrentConnections;
+      private final @Nullable Output<Object> maxConcurrentConnections;
 
-    public Input<Object> getMaxConcurrentConnections() {
-        return this.maxConcurrentConnections == null ? Input.empty() : this.maxConcurrentConnections;
+    public Output<Object> getMaxConcurrentConnections() {
+        return this.maxConcurrentConnections == null ? Output.empty() : this.maxConcurrentConnections;
     }
 
     /**
@@ -79,10 +79,10 @@ public final class RestSourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="paginationRules")
-      private final @Nullable Input<Object> paginationRules;
+      private final @Nullable Output<Object> paginationRules;
 
-    public Input<Object> getPaginationRules() {
-        return this.paginationRules == null ? Input.empty() : this.paginationRules;
+    public Output<Object> getPaginationRules() {
+        return this.paginationRules == null ? Output.empty() : this.paginationRules;
     }
 
     /**
@@ -90,10 +90,10 @@ public final class RestSourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="requestBody")
-      private final @Nullable Input<Object> requestBody;
+      private final @Nullable Output<Object> requestBody;
 
-    public Input<Object> getRequestBody() {
-        return this.requestBody == null ? Input.empty() : this.requestBody;
+    public Output<Object> getRequestBody() {
+        return this.requestBody == null ? Output.empty() : this.requestBody;
     }
 
     /**
@@ -101,10 +101,10 @@ public final class RestSourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="requestInterval")
-      private final @Nullable Input<Object> requestInterval;
+      private final @Nullable Output<Object> requestInterval;
 
-    public Input<Object> getRequestInterval() {
-        return this.requestInterval == null ? Input.empty() : this.requestInterval;
+    public Output<Object> getRequestInterval() {
+        return this.requestInterval == null ? Output.empty() : this.requestInterval;
     }
 
     /**
@@ -112,10 +112,10 @@ public final class RestSourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="requestMethod")
-      private final @Nullable Input<Object> requestMethod;
+      private final @Nullable Output<Object> requestMethod;
 
-    public Input<Object> getRequestMethod() {
-        return this.requestMethod == null ? Input.empty() : this.requestMethod;
+    public Output<Object> getRequestMethod() {
+        return this.requestMethod == null ? Output.empty() : this.requestMethod;
     }
 
     /**
@@ -123,10 +123,10 @@ public final class RestSourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sourceRetryCount")
-      private final @Nullable Input<Object> sourceRetryCount;
+      private final @Nullable Output<Object> sourceRetryCount;
 
-    public Input<Object> getSourceRetryCount() {
-        return this.sourceRetryCount == null ? Input.empty() : this.sourceRetryCount;
+    public Output<Object> getSourceRetryCount() {
+        return this.sourceRetryCount == null ? Output.empty() : this.sourceRetryCount;
     }
 
     /**
@@ -134,10 +134,10 @@ public final class RestSourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sourceRetryWait")
-      private final @Nullable Input<Object> sourceRetryWait;
+      private final @Nullable Output<Object> sourceRetryWait;
 
-    public Input<Object> getSourceRetryWait() {
-        return this.sourceRetryWait == null ? Input.empty() : this.sourceRetryWait;
+    public Output<Object> getSourceRetryWait() {
+        return this.sourceRetryWait == null ? Output.empty() : this.sourceRetryWait;
     }
 
     /**
@@ -146,25 +146,25 @@ public final class RestSourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<String> type;
+      private final Output<String> type;
 
-    public Input<String> getType() {
+    public Output<String> getType() {
         return this.type;
     }
 
     public RestSourceArgs(
-        @Nullable Input<Object> additionalColumns,
-        @Nullable Input<Object> additionalHeaders,
-        @Nullable Input<Object> disableMetricsCollection,
-        @Nullable Input<Object> httpRequestTimeout,
-        @Nullable Input<Object> maxConcurrentConnections,
-        @Nullable Input<Object> paginationRules,
-        @Nullable Input<Object> requestBody,
-        @Nullable Input<Object> requestInterval,
-        @Nullable Input<Object> requestMethod,
-        @Nullable Input<Object> sourceRetryCount,
-        @Nullable Input<Object> sourceRetryWait,
-        Input<String> type) {
+        @Nullable Output<Object> additionalColumns,
+        @Nullable Output<Object> additionalHeaders,
+        @Nullable Output<Object> disableMetricsCollection,
+        @Nullable Output<Object> httpRequestTimeout,
+        @Nullable Output<Object> maxConcurrentConnections,
+        @Nullable Output<Object> paginationRules,
+        @Nullable Output<Object> requestBody,
+        @Nullable Output<Object> requestInterval,
+        @Nullable Output<Object> requestMethod,
+        @Nullable Output<Object> sourceRetryCount,
+        @Nullable Output<Object> sourceRetryWait,
+        Output<String> type) {
         this.additionalColumns = additionalColumns;
         this.additionalHeaders = additionalHeaders;
         this.disableMetricsCollection = disableMetricsCollection;
@@ -180,18 +180,18 @@ public final class RestSourceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private RestSourceArgs() {
-        this.additionalColumns = Input.empty();
-        this.additionalHeaders = Input.empty();
-        this.disableMetricsCollection = Input.empty();
-        this.httpRequestTimeout = Input.empty();
-        this.maxConcurrentConnections = Input.empty();
-        this.paginationRules = Input.empty();
-        this.requestBody = Input.empty();
-        this.requestInterval = Input.empty();
-        this.requestMethod = Input.empty();
-        this.sourceRetryCount = Input.empty();
-        this.sourceRetryWait = Input.empty();
-        this.type = Input.empty();
+        this.additionalColumns = Output.empty();
+        this.additionalHeaders = Output.empty();
+        this.disableMetricsCollection = Output.empty();
+        this.httpRequestTimeout = Output.empty();
+        this.maxConcurrentConnections = Output.empty();
+        this.paginationRules = Output.empty();
+        this.requestBody = Output.empty();
+        this.requestInterval = Output.empty();
+        this.requestMethod = Output.empty();
+        this.sourceRetryCount = Output.empty();
+        this.sourceRetryWait = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -203,18 +203,18 @@ public final class RestSourceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Object> additionalColumns;
-        private @Nullable Input<Object> additionalHeaders;
-        private @Nullable Input<Object> disableMetricsCollection;
-        private @Nullable Input<Object> httpRequestTimeout;
-        private @Nullable Input<Object> maxConcurrentConnections;
-        private @Nullable Input<Object> paginationRules;
-        private @Nullable Input<Object> requestBody;
-        private @Nullable Input<Object> requestInterval;
-        private @Nullable Input<Object> requestMethod;
-        private @Nullable Input<Object> sourceRetryCount;
-        private @Nullable Input<Object> sourceRetryWait;
-        private Input<String> type;
+        private @Nullable Output<Object> additionalColumns;
+        private @Nullable Output<Object> additionalHeaders;
+        private @Nullable Output<Object> disableMetricsCollection;
+        private @Nullable Output<Object> httpRequestTimeout;
+        private @Nullable Output<Object> maxConcurrentConnections;
+        private @Nullable Output<Object> paginationRules;
+        private @Nullable Output<Object> requestBody;
+        private @Nullable Output<Object> requestInterval;
+        private @Nullable Output<Object> requestMethod;
+        private @Nullable Output<Object> sourceRetryCount;
+        private @Nullable Output<Object> sourceRetryWait;
+        private Output<String> type;
 
         public Builder() {
     	      // Empty
@@ -236,123 +236,123 @@ public final class RestSourceArgs extends io.pulumi.resources.ResourceArgs {
     	      this.type = defaults.type;
         }
 
-        public Builder additionalColumns(@Nullable Input<Object> additionalColumns) {
+        public Builder additionalColumns(@Nullable Output<Object> additionalColumns) {
             this.additionalColumns = additionalColumns;
             return this;
         }
 
         public Builder additionalColumns(@Nullable Object additionalColumns) {
-            this.additionalColumns = Input.ofNullable(additionalColumns);
+            this.additionalColumns = Output.ofNullable(additionalColumns);
             return this;
         }
 
-        public Builder additionalHeaders(@Nullable Input<Object> additionalHeaders) {
+        public Builder additionalHeaders(@Nullable Output<Object> additionalHeaders) {
             this.additionalHeaders = additionalHeaders;
             return this;
         }
 
         public Builder additionalHeaders(@Nullable Object additionalHeaders) {
-            this.additionalHeaders = Input.ofNullable(additionalHeaders);
+            this.additionalHeaders = Output.ofNullable(additionalHeaders);
             return this;
         }
 
-        public Builder disableMetricsCollection(@Nullable Input<Object> disableMetricsCollection) {
+        public Builder disableMetricsCollection(@Nullable Output<Object> disableMetricsCollection) {
             this.disableMetricsCollection = disableMetricsCollection;
             return this;
         }
 
         public Builder disableMetricsCollection(@Nullable Object disableMetricsCollection) {
-            this.disableMetricsCollection = Input.ofNullable(disableMetricsCollection);
+            this.disableMetricsCollection = Output.ofNullable(disableMetricsCollection);
             return this;
         }
 
-        public Builder httpRequestTimeout(@Nullable Input<Object> httpRequestTimeout) {
+        public Builder httpRequestTimeout(@Nullable Output<Object> httpRequestTimeout) {
             this.httpRequestTimeout = httpRequestTimeout;
             return this;
         }
 
         public Builder httpRequestTimeout(@Nullable Object httpRequestTimeout) {
-            this.httpRequestTimeout = Input.ofNullable(httpRequestTimeout);
+            this.httpRequestTimeout = Output.ofNullable(httpRequestTimeout);
             return this;
         }
 
-        public Builder maxConcurrentConnections(@Nullable Input<Object> maxConcurrentConnections) {
+        public Builder maxConcurrentConnections(@Nullable Output<Object> maxConcurrentConnections) {
             this.maxConcurrentConnections = maxConcurrentConnections;
             return this;
         }
 
         public Builder maxConcurrentConnections(@Nullable Object maxConcurrentConnections) {
-            this.maxConcurrentConnections = Input.ofNullable(maxConcurrentConnections);
+            this.maxConcurrentConnections = Output.ofNullable(maxConcurrentConnections);
             return this;
         }
 
-        public Builder paginationRules(@Nullable Input<Object> paginationRules) {
+        public Builder paginationRules(@Nullable Output<Object> paginationRules) {
             this.paginationRules = paginationRules;
             return this;
         }
 
         public Builder paginationRules(@Nullable Object paginationRules) {
-            this.paginationRules = Input.ofNullable(paginationRules);
+            this.paginationRules = Output.ofNullable(paginationRules);
             return this;
         }
 
-        public Builder requestBody(@Nullable Input<Object> requestBody) {
+        public Builder requestBody(@Nullable Output<Object> requestBody) {
             this.requestBody = requestBody;
             return this;
         }
 
         public Builder requestBody(@Nullable Object requestBody) {
-            this.requestBody = Input.ofNullable(requestBody);
+            this.requestBody = Output.ofNullable(requestBody);
             return this;
         }
 
-        public Builder requestInterval(@Nullable Input<Object> requestInterval) {
+        public Builder requestInterval(@Nullable Output<Object> requestInterval) {
             this.requestInterval = requestInterval;
             return this;
         }
 
         public Builder requestInterval(@Nullable Object requestInterval) {
-            this.requestInterval = Input.ofNullable(requestInterval);
+            this.requestInterval = Output.ofNullable(requestInterval);
             return this;
         }
 
-        public Builder requestMethod(@Nullable Input<Object> requestMethod) {
+        public Builder requestMethod(@Nullable Output<Object> requestMethod) {
             this.requestMethod = requestMethod;
             return this;
         }
 
         public Builder requestMethod(@Nullable Object requestMethod) {
-            this.requestMethod = Input.ofNullable(requestMethod);
+            this.requestMethod = Output.ofNullable(requestMethod);
             return this;
         }
 
-        public Builder sourceRetryCount(@Nullable Input<Object> sourceRetryCount) {
+        public Builder sourceRetryCount(@Nullable Output<Object> sourceRetryCount) {
             this.sourceRetryCount = sourceRetryCount;
             return this;
         }
 
         public Builder sourceRetryCount(@Nullable Object sourceRetryCount) {
-            this.sourceRetryCount = Input.ofNullable(sourceRetryCount);
+            this.sourceRetryCount = Output.ofNullable(sourceRetryCount);
             return this;
         }
 
-        public Builder sourceRetryWait(@Nullable Input<Object> sourceRetryWait) {
+        public Builder sourceRetryWait(@Nullable Output<Object> sourceRetryWait) {
             this.sourceRetryWait = sourceRetryWait;
             return this;
         }
 
         public Builder sourceRetryWait(@Nullable Object sourceRetryWait) {
-            this.sourceRetryWait = Input.ofNullable(sourceRetryWait);
+            this.sourceRetryWait = Output.ofNullable(sourceRetryWait);
             return this;
         }
 
-        public Builder type(Input<String> type) {
+        public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(String type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
         public RestSourceArgs build() {

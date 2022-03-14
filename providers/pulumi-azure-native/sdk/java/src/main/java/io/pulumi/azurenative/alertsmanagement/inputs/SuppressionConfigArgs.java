@@ -6,7 +6,7 @@ package io.pulumi.azurenative.alertsmanagement.inputs;
 import io.pulumi.azurenative.alertsmanagement.enums.SuppressionType;
 import io.pulumi.azurenative.alertsmanagement.inputs.SuppressionScheduleArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -26,9 +26,9 @@ public final class SuppressionConfigArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="recurrenceType", required=true)
-      private final Input<Either<String,SuppressionType>> recurrenceType;
+      private final Output<Either<String,SuppressionType>> recurrenceType;
 
-    public Input<Either<String,SuppressionType>> getRecurrenceType() {
+    public Output<Either<String,SuppressionType>> getRecurrenceType() {
         return this.recurrenceType;
     }
 
@@ -37,22 +37,22 @@ public final class SuppressionConfigArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="schedule")
-      private final @Nullable Input<SuppressionScheduleArgs> schedule;
+      private final @Nullable Output<SuppressionScheduleArgs> schedule;
 
-    public Input<SuppressionScheduleArgs> getSchedule() {
-        return this.schedule == null ? Input.empty() : this.schedule;
+    public Output<SuppressionScheduleArgs> getSchedule() {
+        return this.schedule == null ? Output.empty() : this.schedule;
     }
 
     public SuppressionConfigArgs(
-        Input<Either<String,SuppressionType>> recurrenceType,
-        @Nullable Input<SuppressionScheduleArgs> schedule) {
+        Output<Either<String,SuppressionType>> recurrenceType,
+        @Nullable Output<SuppressionScheduleArgs> schedule) {
         this.recurrenceType = Objects.requireNonNull(recurrenceType, "expected parameter 'recurrenceType' to be non-null");
         this.schedule = schedule;
     }
 
     private SuppressionConfigArgs() {
-        this.recurrenceType = Input.empty();
-        this.schedule = Input.empty();
+        this.recurrenceType = Output.empty();
+        this.schedule = Output.empty();
     }
 
     public static Builder builder() {
@@ -64,8 +64,8 @@ public final class SuppressionConfigArgs extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private Input<Either<String,SuppressionType>> recurrenceType;
-        private @Nullable Input<SuppressionScheduleArgs> schedule;
+        private Output<Either<String,SuppressionType>> recurrenceType;
+        private @Nullable Output<SuppressionScheduleArgs> schedule;
 
         public Builder() {
     	      // Empty
@@ -77,23 +77,23 @@ public final class SuppressionConfigArgs extends io.pulumi.resources.ResourceArg
     	      this.schedule = defaults.schedule;
         }
 
-        public Builder recurrenceType(Input<Either<String,SuppressionType>> recurrenceType) {
+        public Builder recurrenceType(Output<Either<String,SuppressionType>> recurrenceType) {
             this.recurrenceType = Objects.requireNonNull(recurrenceType);
             return this;
         }
 
         public Builder recurrenceType(Either<String,SuppressionType> recurrenceType) {
-            this.recurrenceType = Input.of(Objects.requireNonNull(recurrenceType));
+            this.recurrenceType = Output.of(Objects.requireNonNull(recurrenceType));
             return this;
         }
 
-        public Builder schedule(@Nullable Input<SuppressionScheduleArgs> schedule) {
+        public Builder schedule(@Nullable Output<SuppressionScheduleArgs> schedule) {
             this.schedule = schedule;
             return this;
         }
 
         public Builder schedule(@Nullable SuppressionScheduleArgs schedule) {
-            this.schedule = Input.ofNullable(schedule);
+            this.schedule = Output.ofNullable(schedule);
             return this;
         }
         public SuppressionConfigArgs build() {

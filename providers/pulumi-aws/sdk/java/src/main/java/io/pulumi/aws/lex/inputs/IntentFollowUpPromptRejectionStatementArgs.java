@@ -4,7 +4,7 @@
 package io.pulumi.aws.lex.inputs;
 
 import io.pulumi.aws.lex.inputs.IntentFollowUpPromptRejectionStatementMessageArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -23,9 +23,9 @@ public final class IntentFollowUpPromptRejectionStatementArgs extends io.pulumi.
      * 
      */
     @InputImport(name="messages", required=true)
-      private final Input<List<IntentFollowUpPromptRejectionStatementMessageArgs>> messages;
+      private final Output<List<IntentFollowUpPromptRejectionStatementMessageArgs>> messages;
 
-    public Input<List<IntentFollowUpPromptRejectionStatementMessageArgs>> getMessages() {
+    public Output<List<IntentFollowUpPromptRejectionStatementMessageArgs>> getMessages() {
         return this.messages;
     }
 
@@ -36,22 +36,22 @@ public final class IntentFollowUpPromptRejectionStatementArgs extends io.pulumi.
      * 
      */
     @InputImport(name="responseCard")
-      private final @Nullable Input<String> responseCard;
+      private final @Nullable Output<String> responseCard;
 
-    public Input<String> getResponseCard() {
-        return this.responseCard == null ? Input.empty() : this.responseCard;
+    public Output<String> getResponseCard() {
+        return this.responseCard == null ? Output.empty() : this.responseCard;
     }
 
     public IntentFollowUpPromptRejectionStatementArgs(
-        Input<List<IntentFollowUpPromptRejectionStatementMessageArgs>> messages,
-        @Nullable Input<String> responseCard) {
+        Output<List<IntentFollowUpPromptRejectionStatementMessageArgs>> messages,
+        @Nullable Output<String> responseCard) {
         this.messages = Objects.requireNonNull(messages, "expected parameter 'messages' to be non-null");
         this.responseCard = responseCard;
     }
 
     private IntentFollowUpPromptRejectionStatementArgs() {
-        this.messages = Input.empty();
-        this.responseCard = Input.empty();
+        this.messages = Output.empty();
+        this.responseCard = Output.empty();
     }
 
     public static Builder builder() {
@@ -63,8 +63,8 @@ public final class IntentFollowUpPromptRejectionStatementArgs extends io.pulumi.
     }
 
     public static final class Builder {
-        private Input<List<IntentFollowUpPromptRejectionStatementMessageArgs>> messages;
-        private @Nullable Input<String> responseCard;
+        private Output<List<IntentFollowUpPromptRejectionStatementMessageArgs>> messages;
+        private @Nullable Output<String> responseCard;
 
         public Builder() {
     	      // Empty
@@ -76,23 +76,23 @@ public final class IntentFollowUpPromptRejectionStatementArgs extends io.pulumi.
     	      this.responseCard = defaults.responseCard;
         }
 
-        public Builder messages(Input<List<IntentFollowUpPromptRejectionStatementMessageArgs>> messages) {
+        public Builder messages(Output<List<IntentFollowUpPromptRejectionStatementMessageArgs>> messages) {
             this.messages = Objects.requireNonNull(messages);
             return this;
         }
 
         public Builder messages(List<IntentFollowUpPromptRejectionStatementMessageArgs> messages) {
-            this.messages = Input.of(Objects.requireNonNull(messages));
+            this.messages = Output.of(Objects.requireNonNull(messages));
             return this;
         }
 
-        public Builder responseCard(@Nullable Input<String> responseCard) {
+        public Builder responseCard(@Nullable Output<String> responseCard) {
             this.responseCard = responseCard;
             return this;
         }
 
         public Builder responseCard(@Nullable String responseCard) {
-            this.responseCard = Input.ofNullable(responseCard);
+            this.responseCard = Output.ofNullable(responseCard);
             return this;
         }
         public IntentFollowUpPromptRejectionStatementArgs build() {

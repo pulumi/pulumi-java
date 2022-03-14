@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.iotfleethub;
 
 import io.pulumi.awsnative.iotfleethub.inputs.ApplicationTagArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -21,10 +21,10 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="applicationDescription")
-      private final @Nullable Input<String> applicationDescription;
+      private final @Nullable Output<String> applicationDescription;
 
-    public Input<String> getApplicationDescription() {
-        return this.applicationDescription == null ? Input.empty() : this.applicationDescription;
+    public Output<String> getApplicationDescription() {
+        return this.applicationDescription == null ? Output.empty() : this.applicationDescription;
     }
 
     /**
@@ -32,10 +32,10 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="applicationName")
-      private final @Nullable Input<String> applicationName;
+      private final @Nullable Output<String> applicationName;
 
-    public Input<String> getApplicationName() {
-        return this.applicationName == null ? Input.empty() : this.applicationName;
+    public Output<String> getApplicationName() {
+        return this.applicationName == null ? Output.empty() : this.applicationName;
     }
 
     /**
@@ -43,9 +43,9 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="roleArn", required=true)
-      private final Input<String> roleArn;
+      private final Output<String> roleArn;
 
-    public Input<String> getRoleArn() {
+    public Output<String> getRoleArn() {
         return this.roleArn;
     }
 
@@ -54,17 +54,17 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<List<ApplicationTagArgs>> tags;
+      private final @Nullable Output<List<ApplicationTagArgs>> tags;
 
-    public Input<List<ApplicationTagArgs>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<List<ApplicationTagArgs>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public ApplicationArgs(
-        @Nullable Input<String> applicationDescription,
-        @Nullable Input<String> applicationName,
-        Input<String> roleArn,
-        @Nullable Input<List<ApplicationTagArgs>> tags) {
+        @Nullable Output<String> applicationDescription,
+        @Nullable Output<String> applicationName,
+        Output<String> roleArn,
+        @Nullable Output<List<ApplicationTagArgs>> tags) {
         this.applicationDescription = applicationDescription;
         this.applicationName = applicationName;
         this.roleArn = Objects.requireNonNull(roleArn, "expected parameter 'roleArn' to be non-null");
@@ -72,10 +72,10 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ApplicationArgs() {
-        this.applicationDescription = Input.empty();
-        this.applicationName = Input.empty();
-        this.roleArn = Input.empty();
-        this.tags = Input.empty();
+        this.applicationDescription = Output.empty();
+        this.applicationName = Output.empty();
+        this.roleArn = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -87,10 +87,10 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> applicationDescription;
-        private @Nullable Input<String> applicationName;
-        private Input<String> roleArn;
-        private @Nullable Input<List<ApplicationTagArgs>> tags;
+        private @Nullable Output<String> applicationDescription;
+        private @Nullable Output<String> applicationName;
+        private Output<String> roleArn;
+        private @Nullable Output<List<ApplicationTagArgs>> tags;
 
         public Builder() {
     	      // Empty
@@ -104,43 +104,43 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder applicationDescription(@Nullable Input<String> applicationDescription) {
+        public Builder applicationDescription(@Nullable Output<String> applicationDescription) {
             this.applicationDescription = applicationDescription;
             return this;
         }
 
         public Builder applicationDescription(@Nullable String applicationDescription) {
-            this.applicationDescription = Input.ofNullable(applicationDescription);
+            this.applicationDescription = Output.ofNullable(applicationDescription);
             return this;
         }
 
-        public Builder applicationName(@Nullable Input<String> applicationName) {
+        public Builder applicationName(@Nullable Output<String> applicationName) {
             this.applicationName = applicationName;
             return this;
         }
 
         public Builder applicationName(@Nullable String applicationName) {
-            this.applicationName = Input.ofNullable(applicationName);
+            this.applicationName = Output.ofNullable(applicationName);
             return this;
         }
 
-        public Builder roleArn(Input<String> roleArn) {
+        public Builder roleArn(Output<String> roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
 
         public Builder roleArn(String roleArn) {
-            this.roleArn = Input.of(Objects.requireNonNull(roleArn));
+            this.roleArn = Output.of(Objects.requireNonNull(roleArn));
             return this;
         }
 
-        public Builder tags(@Nullable Input<List<ApplicationTagArgs>> tags) {
+        public Builder tags(@Nullable Output<List<ApplicationTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable List<ApplicationTagArgs> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public ApplicationArgs build() {

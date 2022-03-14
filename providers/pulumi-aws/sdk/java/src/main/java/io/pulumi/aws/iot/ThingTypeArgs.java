@@ -4,7 +4,7 @@
 package io.pulumi.aws.iot;
 
 import io.pulumi.aws.iot.inputs.ThingTypePropertiesArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -22,10 +22,10 @@ public final class ThingTypeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="deprecated")
-      private final @Nullable Input<Boolean> deprecated;
+      private final @Nullable Output<Boolean> deprecated;
 
-    public Input<Boolean> getDeprecated() {
-        return this.deprecated == null ? Input.empty() : this.deprecated;
+    public Output<Boolean> getDeprecated() {
+        return this.deprecated == null ? Output.empty() : this.deprecated;
     }
 
     /**
@@ -33,10 +33,10 @@ public final class ThingTypeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -44,10 +44,10 @@ public final class ThingTypeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="properties")
-      private final @Nullable Input<ThingTypePropertiesArgs> properties;
+      private final @Nullable Output<ThingTypePropertiesArgs> properties;
 
-    public Input<ThingTypePropertiesArgs> getProperties() {
-        return this.properties == null ? Input.empty() : this.properties;
+    public Output<ThingTypePropertiesArgs> getProperties() {
+        return this.properties == null ? Output.empty() : this.properties;
     }
 
     /**
@@ -55,17 +55,17 @@ public final class ThingTypeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public ThingTypeArgs(
-        @Nullable Input<Boolean> deprecated,
-        @Nullable Input<String> name,
-        @Nullable Input<ThingTypePropertiesArgs> properties,
-        @Nullable Input<Map<String,String>> tags) {
+        @Nullable Output<Boolean> deprecated,
+        @Nullable Output<String> name,
+        @Nullable Output<ThingTypePropertiesArgs> properties,
+        @Nullable Output<Map<String,String>> tags) {
         this.deprecated = deprecated;
         this.name = name;
         this.properties = properties;
@@ -73,10 +73,10 @@ public final class ThingTypeArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ThingTypeArgs() {
-        this.deprecated = Input.empty();
-        this.name = Input.empty();
-        this.properties = Input.empty();
-        this.tags = Input.empty();
+        this.deprecated = Output.empty();
+        this.name = Output.empty();
+        this.properties = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -88,10 +88,10 @@ public final class ThingTypeArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> deprecated;
-        private @Nullable Input<String> name;
-        private @Nullable Input<ThingTypePropertiesArgs> properties;
-        private @Nullable Input<Map<String,String>> tags;
+        private @Nullable Output<Boolean> deprecated;
+        private @Nullable Output<String> name;
+        private @Nullable Output<ThingTypePropertiesArgs> properties;
+        private @Nullable Output<Map<String,String>> tags;
 
         public Builder() {
     	      // Empty
@@ -105,43 +105,43 @@ public final class ThingTypeArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder deprecated(@Nullable Input<Boolean> deprecated) {
+        public Builder deprecated(@Nullable Output<Boolean> deprecated) {
             this.deprecated = deprecated;
             return this;
         }
 
         public Builder deprecated(@Nullable Boolean deprecated) {
-            this.deprecated = Input.ofNullable(deprecated);
+            this.deprecated = Output.ofNullable(deprecated);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder properties(@Nullable Input<ThingTypePropertiesArgs> properties) {
+        public Builder properties(@Nullable Output<ThingTypePropertiesArgs> properties) {
             this.properties = properties;
             return this;
         }
 
         public Builder properties(@Nullable ThingTypePropertiesArgs properties) {
-            this.properties = Input.ofNullable(properties);
+            this.properties = Output.ofNullable(properties);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public ThingTypeArgs build() {

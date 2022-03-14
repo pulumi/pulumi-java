@@ -5,7 +5,7 @@ package io.pulumi.azurenative.subscription.inputs;
 
 import io.pulumi.azurenative.subscription.enums.Workload;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -25,10 +25,10 @@ public final class PutAliasRequestPropertiesArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="billingScope")
-      private final @Nullable Input<String> billingScope;
+      private final @Nullable Output<String> billingScope;
 
-    public Input<String> getBillingScope() {
-        return this.billingScope == null ? Input.empty() : this.billingScope;
+    public Output<String> getBillingScope() {
+        return this.billingScope == null ? Output.empty() : this.billingScope;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class PutAliasRequestPropertiesArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="displayName")
-      private final @Nullable Input<String> displayName;
+      private final @Nullable Output<String> displayName;
 
-    public Input<String> getDisplayName() {
-        return this.displayName == null ? Input.empty() : this.displayName;
+    public Output<String> getDisplayName() {
+        return this.displayName == null ? Output.empty() : this.displayName;
     }
 
     /**
@@ -47,10 +47,10 @@ public final class PutAliasRequestPropertiesArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="resellerId")
-      private final @Nullable Input<String> resellerId;
+      private final @Nullable Output<String> resellerId;
 
-    public Input<String> getResellerId() {
-        return this.resellerId == null ? Input.empty() : this.resellerId;
+    public Output<String> getResellerId() {
+        return this.resellerId == null ? Output.empty() : this.resellerId;
     }
 
     /**
@@ -58,10 +58,10 @@ public final class PutAliasRequestPropertiesArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="subscriptionId")
-      private final @Nullable Input<String> subscriptionId;
+      private final @Nullable Output<String> subscriptionId;
 
-    public Input<String> getSubscriptionId() {
-        return this.subscriptionId == null ? Input.empty() : this.subscriptionId;
+    public Output<String> getSubscriptionId() {
+        return this.subscriptionId == null ? Output.empty() : this.subscriptionId;
     }
 
     /**
@@ -69,18 +69,18 @@ public final class PutAliasRequestPropertiesArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="workload")
-      private final @Nullable Input<Either<String,Workload>> workload;
+      private final @Nullable Output<Either<String,Workload>> workload;
 
-    public Input<Either<String,Workload>> getWorkload() {
-        return this.workload == null ? Input.empty() : this.workload;
+    public Output<Either<String,Workload>> getWorkload() {
+        return this.workload == null ? Output.empty() : this.workload;
     }
 
     public PutAliasRequestPropertiesArgs(
-        @Nullable Input<String> billingScope,
-        @Nullable Input<String> displayName,
-        @Nullable Input<String> resellerId,
-        @Nullable Input<String> subscriptionId,
-        @Nullable Input<Either<String,Workload>> workload) {
+        @Nullable Output<String> billingScope,
+        @Nullable Output<String> displayName,
+        @Nullable Output<String> resellerId,
+        @Nullable Output<String> subscriptionId,
+        @Nullable Output<Either<String,Workload>> workload) {
         this.billingScope = billingScope;
         this.displayName = displayName;
         this.resellerId = resellerId;
@@ -89,11 +89,11 @@ public final class PutAliasRequestPropertiesArgs extends io.pulumi.resources.Res
     }
 
     private PutAliasRequestPropertiesArgs() {
-        this.billingScope = Input.empty();
-        this.displayName = Input.empty();
-        this.resellerId = Input.empty();
-        this.subscriptionId = Input.empty();
-        this.workload = Input.empty();
+        this.billingScope = Output.empty();
+        this.displayName = Output.empty();
+        this.resellerId = Output.empty();
+        this.subscriptionId = Output.empty();
+        this.workload = Output.empty();
     }
 
     public static Builder builder() {
@@ -105,11 +105,11 @@ public final class PutAliasRequestPropertiesArgs extends io.pulumi.resources.Res
     }
 
     public static final class Builder {
-        private @Nullable Input<String> billingScope;
-        private @Nullable Input<String> displayName;
-        private @Nullable Input<String> resellerId;
-        private @Nullable Input<String> subscriptionId;
-        private @Nullable Input<Either<String,Workload>> workload;
+        private @Nullable Output<String> billingScope;
+        private @Nullable Output<String> displayName;
+        private @Nullable Output<String> resellerId;
+        private @Nullable Output<String> subscriptionId;
+        private @Nullable Output<Either<String,Workload>> workload;
 
         public Builder() {
     	      // Empty
@@ -124,53 +124,53 @@ public final class PutAliasRequestPropertiesArgs extends io.pulumi.resources.Res
     	      this.workload = defaults.workload;
         }
 
-        public Builder billingScope(@Nullable Input<String> billingScope) {
+        public Builder billingScope(@Nullable Output<String> billingScope) {
             this.billingScope = billingScope;
             return this;
         }
 
         public Builder billingScope(@Nullable String billingScope) {
-            this.billingScope = Input.ofNullable(billingScope);
+            this.billingScope = Output.ofNullable(billingScope);
             return this;
         }
 
-        public Builder displayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Input.ofNullable(displayName);
+            this.displayName = Output.ofNullable(displayName);
             return this;
         }
 
-        public Builder resellerId(@Nullable Input<String> resellerId) {
+        public Builder resellerId(@Nullable Output<String> resellerId) {
             this.resellerId = resellerId;
             return this;
         }
 
         public Builder resellerId(@Nullable String resellerId) {
-            this.resellerId = Input.ofNullable(resellerId);
+            this.resellerId = Output.ofNullable(resellerId);
             return this;
         }
 
-        public Builder subscriptionId(@Nullable Input<String> subscriptionId) {
+        public Builder subscriptionId(@Nullable Output<String> subscriptionId) {
             this.subscriptionId = subscriptionId;
             return this;
         }
 
         public Builder subscriptionId(@Nullable String subscriptionId) {
-            this.subscriptionId = Input.ofNullable(subscriptionId);
+            this.subscriptionId = Output.ofNullable(subscriptionId);
             return this;
         }
 
-        public Builder workload(@Nullable Input<Either<String,Workload>> workload) {
+        public Builder workload(@Nullable Output<Either<String,Workload>> workload) {
             this.workload = workload;
             return this;
         }
 
         public Builder workload(@Nullable Either<String,Workload> workload) {
-            this.workload = Input.ofNullable(workload);
+            this.workload = Output.ofNullable(workload);
             return this;
         }
         public PutAliasRequestPropertiesArgs build() {

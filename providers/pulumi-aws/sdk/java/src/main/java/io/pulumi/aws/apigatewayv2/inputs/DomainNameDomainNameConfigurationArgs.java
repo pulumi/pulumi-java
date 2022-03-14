@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.apigatewayv2.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -20,9 +20,9 @@ public final class DomainNameDomainNameConfigurationArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="certificateArn", required=true)
-      private final Input<String> certificateArn;
+      private final Output<String> certificateArn;
 
-    public Input<String> getCertificateArn() {
+    public Output<String> getCertificateArn() {
         return this.certificateArn;
     }
 
@@ -31,9 +31,9 @@ public final class DomainNameDomainNameConfigurationArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="endpointType", required=true)
-      private final Input<String> endpointType;
+      private final Output<String> endpointType;
 
-    public Input<String> getEndpointType() {
+    public Output<String> getEndpointType() {
         return this.endpointType;
     }
 
@@ -42,10 +42,10 @@ public final class DomainNameDomainNameConfigurationArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="hostedZoneId")
-      private final @Nullable Input<String> hostedZoneId;
+      private final @Nullable Output<String> hostedZoneId;
 
-    public Input<String> getHostedZoneId() {
-        return this.hostedZoneId == null ? Input.empty() : this.hostedZoneId;
+    public Output<String> getHostedZoneId() {
+        return this.hostedZoneId == null ? Output.empty() : this.hostedZoneId;
     }
 
     /**
@@ -53,9 +53,9 @@ public final class DomainNameDomainNameConfigurationArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="securityPolicy", required=true)
-      private final Input<String> securityPolicy;
+      private final Output<String> securityPolicy;
 
-    public Input<String> getSecurityPolicy() {
+    public Output<String> getSecurityPolicy() {
         return this.securityPolicy;
     }
 
@@ -64,18 +64,18 @@ public final class DomainNameDomainNameConfigurationArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="targetDomainName")
-      private final @Nullable Input<String> targetDomainName;
+      private final @Nullable Output<String> targetDomainName;
 
-    public Input<String> getTargetDomainName() {
-        return this.targetDomainName == null ? Input.empty() : this.targetDomainName;
+    public Output<String> getTargetDomainName() {
+        return this.targetDomainName == null ? Output.empty() : this.targetDomainName;
     }
 
     public DomainNameDomainNameConfigurationArgs(
-        Input<String> certificateArn,
-        Input<String> endpointType,
-        @Nullable Input<String> hostedZoneId,
-        Input<String> securityPolicy,
-        @Nullable Input<String> targetDomainName) {
+        Output<String> certificateArn,
+        Output<String> endpointType,
+        @Nullable Output<String> hostedZoneId,
+        Output<String> securityPolicy,
+        @Nullable Output<String> targetDomainName) {
         this.certificateArn = Objects.requireNonNull(certificateArn, "expected parameter 'certificateArn' to be non-null");
         this.endpointType = Objects.requireNonNull(endpointType, "expected parameter 'endpointType' to be non-null");
         this.hostedZoneId = hostedZoneId;
@@ -84,11 +84,11 @@ public final class DomainNameDomainNameConfigurationArgs extends io.pulumi.resou
     }
 
     private DomainNameDomainNameConfigurationArgs() {
-        this.certificateArn = Input.empty();
-        this.endpointType = Input.empty();
-        this.hostedZoneId = Input.empty();
-        this.securityPolicy = Input.empty();
-        this.targetDomainName = Input.empty();
+        this.certificateArn = Output.empty();
+        this.endpointType = Output.empty();
+        this.hostedZoneId = Output.empty();
+        this.securityPolicy = Output.empty();
+        this.targetDomainName = Output.empty();
     }
 
     public static Builder builder() {
@@ -100,11 +100,11 @@ public final class DomainNameDomainNameConfigurationArgs extends io.pulumi.resou
     }
 
     public static final class Builder {
-        private Input<String> certificateArn;
-        private Input<String> endpointType;
-        private @Nullable Input<String> hostedZoneId;
-        private Input<String> securityPolicy;
-        private @Nullable Input<String> targetDomainName;
+        private Output<String> certificateArn;
+        private Output<String> endpointType;
+        private @Nullable Output<String> hostedZoneId;
+        private Output<String> securityPolicy;
+        private @Nullable Output<String> targetDomainName;
 
         public Builder() {
     	      // Empty
@@ -119,53 +119,53 @@ public final class DomainNameDomainNameConfigurationArgs extends io.pulumi.resou
     	      this.targetDomainName = defaults.targetDomainName;
         }
 
-        public Builder certificateArn(Input<String> certificateArn) {
+        public Builder certificateArn(Output<String> certificateArn) {
             this.certificateArn = Objects.requireNonNull(certificateArn);
             return this;
         }
 
         public Builder certificateArn(String certificateArn) {
-            this.certificateArn = Input.of(Objects.requireNonNull(certificateArn));
+            this.certificateArn = Output.of(Objects.requireNonNull(certificateArn));
             return this;
         }
 
-        public Builder endpointType(Input<String> endpointType) {
+        public Builder endpointType(Output<String> endpointType) {
             this.endpointType = Objects.requireNonNull(endpointType);
             return this;
         }
 
         public Builder endpointType(String endpointType) {
-            this.endpointType = Input.of(Objects.requireNonNull(endpointType));
+            this.endpointType = Output.of(Objects.requireNonNull(endpointType));
             return this;
         }
 
-        public Builder hostedZoneId(@Nullable Input<String> hostedZoneId) {
+        public Builder hostedZoneId(@Nullable Output<String> hostedZoneId) {
             this.hostedZoneId = hostedZoneId;
             return this;
         }
 
         public Builder hostedZoneId(@Nullable String hostedZoneId) {
-            this.hostedZoneId = Input.ofNullable(hostedZoneId);
+            this.hostedZoneId = Output.ofNullable(hostedZoneId);
             return this;
         }
 
-        public Builder securityPolicy(Input<String> securityPolicy) {
+        public Builder securityPolicy(Output<String> securityPolicy) {
             this.securityPolicy = Objects.requireNonNull(securityPolicy);
             return this;
         }
 
         public Builder securityPolicy(String securityPolicy) {
-            this.securityPolicy = Input.of(Objects.requireNonNull(securityPolicy));
+            this.securityPolicy = Output.of(Objects.requireNonNull(securityPolicy));
             return this;
         }
 
-        public Builder targetDomainName(@Nullable Input<String> targetDomainName) {
+        public Builder targetDomainName(@Nullable Output<String> targetDomainName) {
             this.targetDomainName = targetDomainName;
             return this;
         }
 
         public Builder targetDomainName(@Nullable String targetDomainName) {
-            this.targetDomainName = Input.ofNullable(targetDomainName);
+            this.targetDomainName = Output.ofNullable(targetDomainName);
             return this;
         }
         public DomainNameDomainNameConfigurationArgs build() {

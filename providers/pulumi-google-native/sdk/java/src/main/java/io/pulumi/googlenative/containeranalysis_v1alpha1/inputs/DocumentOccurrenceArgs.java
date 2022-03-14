@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1alpha1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -24,10 +24,10 @@ public final class DocumentOccurrenceArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="createTime")
-      private final @Nullable Input<String> createTime;
+      private final @Nullable Output<String> createTime;
 
-    public Input<String> getCreateTime() {
-        return this.createTime == null ? Input.empty() : this.createTime;
+    public Output<String> getCreateTime() {
+        return this.createTime == null ? Output.empty() : this.createTime;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class DocumentOccurrenceArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="creatorComment")
-      private final @Nullable Input<String> creatorComment;
+      private final @Nullable Output<String> creatorComment;
 
-    public Input<String> getCreatorComment() {
-        return this.creatorComment == null ? Input.empty() : this.creatorComment;
+    public Output<String> getCreatorComment() {
+        return this.creatorComment == null ? Output.empty() : this.creatorComment;
     }
 
     /**
@@ -46,10 +46,10 @@ public final class DocumentOccurrenceArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="creators")
-      private final @Nullable Input<List<String>> creators;
+      private final @Nullable Output<List<String>> creators;
 
-    public Input<List<String>> getCreators() {
-        return this.creators == null ? Input.empty() : this.creators;
+    public Output<List<String>> getCreators() {
+        return this.creators == null ? Output.empty() : this.creators;
     }
 
     /**
@@ -57,10 +57,10 @@ public final class DocumentOccurrenceArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="documentComment")
-      private final @Nullable Input<String> documentComment;
+      private final @Nullable Output<String> documentComment;
 
-    public Input<String> getDocumentComment() {
-        return this.documentComment == null ? Input.empty() : this.documentComment;
+    public Output<String> getDocumentComment() {
+        return this.documentComment == null ? Output.empty() : this.documentComment;
     }
 
     /**
@@ -68,10 +68,10 @@ public final class DocumentOccurrenceArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="externalDocumentRefs")
-      private final @Nullable Input<List<String>> externalDocumentRefs;
+      private final @Nullable Output<List<String>> externalDocumentRefs;
 
-    public Input<List<String>> getExternalDocumentRefs() {
-        return this.externalDocumentRefs == null ? Input.empty() : this.externalDocumentRefs;
+    public Output<List<String>> getExternalDocumentRefs() {
+        return this.externalDocumentRefs == null ? Output.empty() : this.externalDocumentRefs;
     }
 
     /**
@@ -79,10 +79,10 @@ public final class DocumentOccurrenceArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="id")
-      private final @Nullable Input<String> id;
+      private final @Nullable Output<String> id;
 
-    public Input<String> getId() {
-        return this.id == null ? Input.empty() : this.id;
+    public Output<String> getId() {
+        return this.id == null ? Output.empty() : this.id;
     }
 
     /**
@@ -90,10 +90,10 @@ public final class DocumentOccurrenceArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="licenseListVersion")
-      private final @Nullable Input<String> licenseListVersion;
+      private final @Nullable Output<String> licenseListVersion;
 
-    public Input<String> getLicenseListVersion() {
-        return this.licenseListVersion == null ? Input.empty() : this.licenseListVersion;
+    public Output<String> getLicenseListVersion() {
+        return this.licenseListVersion == null ? Output.empty() : this.licenseListVersion;
     }
 
     /**
@@ -101,10 +101,10 @@ public final class DocumentOccurrenceArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="namespace")
-      private final @Nullable Input<String> namespace;
+      private final @Nullable Output<String> namespace;
 
-    public Input<String> getNamespace() {
-        return this.namespace == null ? Input.empty() : this.namespace;
+    public Output<String> getNamespace() {
+        return this.namespace == null ? Output.empty() : this.namespace;
     }
 
     /**
@@ -112,22 +112,22 @@ public final class DocumentOccurrenceArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="title")
-      private final @Nullable Input<String> title;
+      private final @Nullable Output<String> title;
 
-    public Input<String> getTitle() {
-        return this.title == null ? Input.empty() : this.title;
+    public Output<String> getTitle() {
+        return this.title == null ? Output.empty() : this.title;
     }
 
     public DocumentOccurrenceArgs(
-        @Nullable Input<String> createTime,
-        @Nullable Input<String> creatorComment,
-        @Nullable Input<List<String>> creators,
-        @Nullable Input<String> documentComment,
-        @Nullable Input<List<String>> externalDocumentRefs,
-        @Nullable Input<String> id,
-        @Nullable Input<String> licenseListVersion,
-        @Nullable Input<String> namespace,
-        @Nullable Input<String> title) {
+        @Nullable Output<String> createTime,
+        @Nullable Output<String> creatorComment,
+        @Nullable Output<List<String>> creators,
+        @Nullable Output<String> documentComment,
+        @Nullable Output<List<String>> externalDocumentRefs,
+        @Nullable Output<String> id,
+        @Nullable Output<String> licenseListVersion,
+        @Nullable Output<String> namespace,
+        @Nullable Output<String> title) {
         this.createTime = createTime;
         this.creatorComment = creatorComment;
         this.creators = creators;
@@ -140,15 +140,15 @@ public final class DocumentOccurrenceArgs extends io.pulumi.resources.ResourceAr
     }
 
     private DocumentOccurrenceArgs() {
-        this.createTime = Input.empty();
-        this.creatorComment = Input.empty();
-        this.creators = Input.empty();
-        this.documentComment = Input.empty();
-        this.externalDocumentRefs = Input.empty();
-        this.id = Input.empty();
-        this.licenseListVersion = Input.empty();
-        this.namespace = Input.empty();
-        this.title = Input.empty();
+        this.createTime = Output.empty();
+        this.creatorComment = Output.empty();
+        this.creators = Output.empty();
+        this.documentComment = Output.empty();
+        this.externalDocumentRefs = Output.empty();
+        this.id = Output.empty();
+        this.licenseListVersion = Output.empty();
+        this.namespace = Output.empty();
+        this.title = Output.empty();
     }
 
     public static Builder builder() {
@@ -160,15 +160,15 @@ public final class DocumentOccurrenceArgs extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private @Nullable Input<String> createTime;
-        private @Nullable Input<String> creatorComment;
-        private @Nullable Input<List<String>> creators;
-        private @Nullable Input<String> documentComment;
-        private @Nullable Input<List<String>> externalDocumentRefs;
-        private @Nullable Input<String> id;
-        private @Nullable Input<String> licenseListVersion;
-        private @Nullable Input<String> namespace;
-        private @Nullable Input<String> title;
+        private @Nullable Output<String> createTime;
+        private @Nullable Output<String> creatorComment;
+        private @Nullable Output<List<String>> creators;
+        private @Nullable Output<String> documentComment;
+        private @Nullable Output<List<String>> externalDocumentRefs;
+        private @Nullable Output<String> id;
+        private @Nullable Output<String> licenseListVersion;
+        private @Nullable Output<String> namespace;
+        private @Nullable Output<String> title;
 
         public Builder() {
     	      // Empty
@@ -187,93 +187,93 @@ public final class DocumentOccurrenceArgs extends io.pulumi.resources.ResourceAr
     	      this.title = defaults.title;
         }
 
-        public Builder createTime(@Nullable Input<String> createTime) {
+        public Builder createTime(@Nullable Output<String> createTime) {
             this.createTime = createTime;
             return this;
         }
 
         public Builder createTime(@Nullable String createTime) {
-            this.createTime = Input.ofNullable(createTime);
+            this.createTime = Output.ofNullable(createTime);
             return this;
         }
 
-        public Builder creatorComment(@Nullable Input<String> creatorComment) {
+        public Builder creatorComment(@Nullable Output<String> creatorComment) {
             this.creatorComment = creatorComment;
             return this;
         }
 
         public Builder creatorComment(@Nullable String creatorComment) {
-            this.creatorComment = Input.ofNullable(creatorComment);
+            this.creatorComment = Output.ofNullable(creatorComment);
             return this;
         }
 
-        public Builder creators(@Nullable Input<List<String>> creators) {
+        public Builder creators(@Nullable Output<List<String>> creators) {
             this.creators = creators;
             return this;
         }
 
         public Builder creators(@Nullable List<String> creators) {
-            this.creators = Input.ofNullable(creators);
+            this.creators = Output.ofNullable(creators);
             return this;
         }
 
-        public Builder documentComment(@Nullable Input<String> documentComment) {
+        public Builder documentComment(@Nullable Output<String> documentComment) {
             this.documentComment = documentComment;
             return this;
         }
 
         public Builder documentComment(@Nullable String documentComment) {
-            this.documentComment = Input.ofNullable(documentComment);
+            this.documentComment = Output.ofNullable(documentComment);
             return this;
         }
 
-        public Builder externalDocumentRefs(@Nullable Input<List<String>> externalDocumentRefs) {
+        public Builder externalDocumentRefs(@Nullable Output<List<String>> externalDocumentRefs) {
             this.externalDocumentRefs = externalDocumentRefs;
             return this;
         }
 
         public Builder externalDocumentRefs(@Nullable List<String> externalDocumentRefs) {
-            this.externalDocumentRefs = Input.ofNullable(externalDocumentRefs);
+            this.externalDocumentRefs = Output.ofNullable(externalDocumentRefs);
             return this;
         }
 
-        public Builder id(@Nullable Input<String> id) {
+        public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
 
         public Builder id(@Nullable String id) {
-            this.id = Input.ofNullable(id);
+            this.id = Output.ofNullable(id);
             return this;
         }
 
-        public Builder licenseListVersion(@Nullable Input<String> licenseListVersion) {
+        public Builder licenseListVersion(@Nullable Output<String> licenseListVersion) {
             this.licenseListVersion = licenseListVersion;
             return this;
         }
 
         public Builder licenseListVersion(@Nullable String licenseListVersion) {
-            this.licenseListVersion = Input.ofNullable(licenseListVersion);
+            this.licenseListVersion = Output.ofNullable(licenseListVersion);
             return this;
         }
 
-        public Builder namespace(@Nullable Input<String> namespace) {
+        public Builder namespace(@Nullable Output<String> namespace) {
             this.namespace = namespace;
             return this;
         }
 
         public Builder namespace(@Nullable String namespace) {
-            this.namespace = Input.ofNullable(namespace);
+            this.namespace = Output.ofNullable(namespace);
             return this;
         }
 
-        public Builder title(@Nullable Input<String> title) {
+        public Builder title(@Nullable Output<String> title) {
             this.title = title;
             return this;
         }
 
         public Builder title(@Nullable String title) {
-            this.title = Input.ofNullable(title);
+            this.title = Output.ofNullable(title);
             return this;
         }
         public DocumentOccurrenceArgs build() {

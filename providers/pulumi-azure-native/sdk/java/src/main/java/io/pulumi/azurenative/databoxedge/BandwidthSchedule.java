@@ -7,7 +7,6 @@ import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.databoxedge.BandwidthScheduleArgs;
 import io.pulumi.azurenative.databoxedge.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -170,28 +169,28 @@ public class BandwidthSchedule extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public BandwidthSchedule(String name, BandwidthScheduleArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:databoxedge:BandwidthSchedule", name, args == null ? BandwidthScheduleArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("azure-native:databoxedge:BandwidthSchedule", name, args == null ? BandwidthScheduleArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private BandwidthSchedule(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private BandwidthSchedule(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:databoxedge:BandwidthSchedule", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:databoxedge/v20190301:BandwidthSchedule").build()),
-                Input.of(Alias.builder().setType("azure-native:databoxedge/v20190701:BandwidthSchedule").build()),
-                Input.of(Alias.builder().setType("azure-native:databoxedge/v20190801:BandwidthSchedule").build()),
-                Input.of(Alias.builder().setType("azure-native:databoxedge/v20200501preview:BandwidthSchedule").build()),
-                Input.of(Alias.builder().setType("azure-native:databoxedge/v20200901:BandwidthSchedule").build()),
-                Input.of(Alias.builder().setType("azure-native:databoxedge/v20200901preview:BandwidthSchedule").build()),
-                Input.of(Alias.builder().setType("azure-native:databoxedge/v20201201:BandwidthSchedule").build()),
-                Input.of(Alias.builder().setType("azure-native:databoxedge/v20210201:BandwidthSchedule").build()),
-                Input.of(Alias.builder().setType("azure-native:databoxedge/v20210201preview:BandwidthSchedule").build()),
-                Input.of(Alias.builder().setType("azure-native:databoxedge/v20210601:BandwidthSchedule").build()),
-                Input.of(Alias.builder().setType("azure-native:databoxedge/v20210601preview:BandwidthSchedule").build())
+                Output.of(Alias.builder().setType("azure-native:databoxedge/v20190301:BandwidthSchedule").build()),
+                Output.of(Alias.builder().setType("azure-native:databoxedge/v20190701:BandwidthSchedule").build()),
+                Output.of(Alias.builder().setType("azure-native:databoxedge/v20190801:BandwidthSchedule").build()),
+                Output.of(Alias.builder().setType("azure-native:databoxedge/v20200501preview:BandwidthSchedule").build()),
+                Output.of(Alias.builder().setType("azure-native:databoxedge/v20200901:BandwidthSchedule").build()),
+                Output.of(Alias.builder().setType("azure-native:databoxedge/v20200901preview:BandwidthSchedule").build()),
+                Output.of(Alias.builder().setType("azure-native:databoxedge/v20201201:BandwidthSchedule").build()),
+                Output.of(Alias.builder().setType("azure-native:databoxedge/v20210201:BandwidthSchedule").build()),
+                Output.of(Alias.builder().setType("azure-native:databoxedge/v20210201preview:BandwidthSchedule").build()),
+                Output.of(Alias.builder().setType("azure-native:databoxedge/v20210601:BandwidthSchedule").build()),
+                Output.of(Alias.builder().setType("azure-native:databoxedge/v20210601preview:BandwidthSchedule").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -205,7 +204,7 @@ public class BandwidthSchedule extends io.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static BandwidthSchedule get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static BandwidthSchedule get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new BandwidthSchedule(name, id, options);
     }
 }

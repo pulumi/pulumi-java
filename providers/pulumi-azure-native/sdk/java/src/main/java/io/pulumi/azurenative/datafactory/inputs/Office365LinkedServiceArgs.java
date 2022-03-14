@@ -8,7 +8,7 @@ import io.pulumi.azurenative.datafactory.inputs.IntegrationRuntimeReferenceArgs;
 import io.pulumi.azurenative.datafactory.inputs.ParameterSpecificationArgs;
 import io.pulumi.azurenative.datafactory.inputs.SecureStringArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
@@ -31,10 +31,10 @@ public final class Office365LinkedServiceArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="annotations")
-      private final @Nullable Input<List<Object>> annotations;
+      private final @Nullable Output<List<Object>> annotations;
 
-    public Input<List<Object>> getAnnotations() {
-        return this.annotations == null ? Input.empty() : this.annotations;
+    public Output<List<Object>> getAnnotations() {
+        return this.annotations == null ? Output.empty() : this.annotations;
     }
 
     /**
@@ -42,10 +42,10 @@ public final class Office365LinkedServiceArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="connectVia")
-      private final @Nullable Input<IntegrationRuntimeReferenceArgs> connectVia;
+      private final @Nullable Output<IntegrationRuntimeReferenceArgs> connectVia;
 
-    public Input<IntegrationRuntimeReferenceArgs> getConnectVia() {
-        return this.connectVia == null ? Input.empty() : this.connectVia;
+    public Output<IntegrationRuntimeReferenceArgs> getConnectVia() {
+        return this.connectVia == null ? Output.empty() : this.connectVia;
     }
 
     /**
@@ -53,10 +53,10 @@ public final class Office365LinkedServiceArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -64,10 +64,10 @@ public final class Office365LinkedServiceArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="encryptedCredential")
-      private final @Nullable Input<Object> encryptedCredential;
+      private final @Nullable Output<Object> encryptedCredential;
 
-    public Input<Object> getEncryptedCredential() {
-        return this.encryptedCredential == null ? Input.empty() : this.encryptedCredential;
+    public Output<Object> getEncryptedCredential() {
+        return this.encryptedCredential == null ? Output.empty() : this.encryptedCredential;
     }
 
     /**
@@ -75,9 +75,9 @@ public final class Office365LinkedServiceArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="office365TenantId", required=true)
-      private final Input<Object> office365TenantId;
+      private final Output<Object> office365TenantId;
 
-    public Input<Object> getOffice365TenantId() {
+    public Output<Object> getOffice365TenantId() {
         return this.office365TenantId;
     }
 
@@ -86,10 +86,10 @@ public final class Office365LinkedServiceArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="parameters")
-      private final @Nullable Input<Map<String,ParameterSpecificationArgs>> parameters;
+      private final @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters;
 
-    public Input<Map<String,ParameterSpecificationArgs>> getParameters() {
-        return this.parameters == null ? Input.empty() : this.parameters;
+    public Output<Map<String,ParameterSpecificationArgs>> getParameters() {
+        return this.parameters == null ? Output.empty() : this.parameters;
     }
 
     /**
@@ -97,9 +97,9 @@ public final class Office365LinkedServiceArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="servicePrincipalId", required=true)
-      private final Input<Object> servicePrincipalId;
+      private final Output<Object> servicePrincipalId;
 
-    public Input<Object> getServicePrincipalId() {
+    public Output<Object> getServicePrincipalId() {
         return this.servicePrincipalId;
     }
 
@@ -108,9 +108,9 @@ public final class Office365LinkedServiceArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="servicePrincipalKey", required=true)
-      private final Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> servicePrincipalKey;
+      private final Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> servicePrincipalKey;
 
-    public Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> getServicePrincipalKey() {
+    public Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> getServicePrincipalKey() {
         return this.servicePrincipalKey;
     }
 
@@ -119,9 +119,9 @@ public final class Office365LinkedServiceArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="servicePrincipalTenantId", required=true)
-      private final Input<Object> servicePrincipalTenantId;
+      private final Output<Object> servicePrincipalTenantId;
 
-    public Input<Object> getServicePrincipalTenantId() {
+    public Output<Object> getServicePrincipalTenantId() {
         return this.servicePrincipalTenantId;
     }
 
@@ -131,23 +131,23 @@ public final class Office365LinkedServiceArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<String> type;
+      private final Output<String> type;
 
-    public Input<String> getType() {
+    public Output<String> getType() {
         return this.type;
     }
 
     public Office365LinkedServiceArgs(
-        @Nullable Input<List<Object>> annotations,
-        @Nullable Input<IntegrationRuntimeReferenceArgs> connectVia,
-        @Nullable Input<String> description,
-        @Nullable Input<Object> encryptedCredential,
-        Input<Object> office365TenantId,
-        @Nullable Input<Map<String,ParameterSpecificationArgs>> parameters,
-        Input<Object> servicePrincipalId,
-        Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> servicePrincipalKey,
-        Input<Object> servicePrincipalTenantId,
-        Input<String> type) {
+        @Nullable Output<List<Object>> annotations,
+        @Nullable Output<IntegrationRuntimeReferenceArgs> connectVia,
+        @Nullable Output<String> description,
+        @Nullable Output<Object> encryptedCredential,
+        Output<Object> office365TenantId,
+        @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters,
+        Output<Object> servicePrincipalId,
+        Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> servicePrincipalKey,
+        Output<Object> servicePrincipalTenantId,
+        Output<String> type) {
         this.annotations = annotations;
         this.connectVia = connectVia;
         this.description = description;
@@ -161,16 +161,16 @@ public final class Office365LinkedServiceArgs extends io.pulumi.resources.Resour
     }
 
     private Office365LinkedServiceArgs() {
-        this.annotations = Input.empty();
-        this.connectVia = Input.empty();
-        this.description = Input.empty();
-        this.encryptedCredential = Input.empty();
-        this.office365TenantId = Input.empty();
-        this.parameters = Input.empty();
-        this.servicePrincipalId = Input.empty();
-        this.servicePrincipalKey = Input.empty();
-        this.servicePrincipalTenantId = Input.empty();
-        this.type = Input.empty();
+        this.annotations = Output.empty();
+        this.connectVia = Output.empty();
+        this.description = Output.empty();
+        this.encryptedCredential = Output.empty();
+        this.office365TenantId = Output.empty();
+        this.parameters = Output.empty();
+        this.servicePrincipalId = Output.empty();
+        this.servicePrincipalKey = Output.empty();
+        this.servicePrincipalTenantId = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -182,16 +182,16 @@ public final class Office365LinkedServiceArgs extends io.pulumi.resources.Resour
     }
 
     public static final class Builder {
-        private @Nullable Input<List<Object>> annotations;
-        private @Nullable Input<IntegrationRuntimeReferenceArgs> connectVia;
-        private @Nullable Input<String> description;
-        private @Nullable Input<Object> encryptedCredential;
-        private Input<Object> office365TenantId;
-        private @Nullable Input<Map<String,ParameterSpecificationArgs>> parameters;
-        private Input<Object> servicePrincipalId;
-        private Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> servicePrincipalKey;
-        private Input<Object> servicePrincipalTenantId;
-        private Input<String> type;
+        private @Nullable Output<List<Object>> annotations;
+        private @Nullable Output<IntegrationRuntimeReferenceArgs> connectVia;
+        private @Nullable Output<String> description;
+        private @Nullable Output<Object> encryptedCredential;
+        private Output<Object> office365TenantId;
+        private @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters;
+        private Output<Object> servicePrincipalId;
+        private Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> servicePrincipalKey;
+        private Output<Object> servicePrincipalTenantId;
+        private Output<String> type;
 
         public Builder() {
     	      // Empty
@@ -211,103 +211,103 @@ public final class Office365LinkedServiceArgs extends io.pulumi.resources.Resour
     	      this.type = defaults.type;
         }
 
-        public Builder annotations(@Nullable Input<List<Object>> annotations) {
+        public Builder annotations(@Nullable Output<List<Object>> annotations) {
             this.annotations = annotations;
             return this;
         }
 
         public Builder annotations(@Nullable List<Object> annotations) {
-            this.annotations = Input.ofNullable(annotations);
+            this.annotations = Output.ofNullable(annotations);
             return this;
         }
 
-        public Builder connectVia(@Nullable Input<IntegrationRuntimeReferenceArgs> connectVia) {
+        public Builder connectVia(@Nullable Output<IntegrationRuntimeReferenceArgs> connectVia) {
             this.connectVia = connectVia;
             return this;
         }
 
         public Builder connectVia(@Nullable IntegrationRuntimeReferenceArgs connectVia) {
-            this.connectVia = Input.ofNullable(connectVia);
+            this.connectVia = Output.ofNullable(connectVia);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder encryptedCredential(@Nullable Input<Object> encryptedCredential) {
+        public Builder encryptedCredential(@Nullable Output<Object> encryptedCredential) {
             this.encryptedCredential = encryptedCredential;
             return this;
         }
 
         public Builder encryptedCredential(@Nullable Object encryptedCredential) {
-            this.encryptedCredential = Input.ofNullable(encryptedCredential);
+            this.encryptedCredential = Output.ofNullable(encryptedCredential);
             return this;
         }
 
-        public Builder office365TenantId(Input<Object> office365TenantId) {
+        public Builder office365TenantId(Output<Object> office365TenantId) {
             this.office365TenantId = Objects.requireNonNull(office365TenantId);
             return this;
         }
 
         public Builder office365TenantId(Object office365TenantId) {
-            this.office365TenantId = Input.of(Objects.requireNonNull(office365TenantId));
+            this.office365TenantId = Output.of(Objects.requireNonNull(office365TenantId));
             return this;
         }
 
-        public Builder parameters(@Nullable Input<Map<String,ParameterSpecificationArgs>> parameters) {
+        public Builder parameters(@Nullable Output<Map<String,ParameterSpecificationArgs>> parameters) {
             this.parameters = parameters;
             return this;
         }
 
         public Builder parameters(@Nullable Map<String,ParameterSpecificationArgs> parameters) {
-            this.parameters = Input.ofNullable(parameters);
+            this.parameters = Output.ofNullable(parameters);
             return this;
         }
 
-        public Builder servicePrincipalId(Input<Object> servicePrincipalId) {
+        public Builder servicePrincipalId(Output<Object> servicePrincipalId) {
             this.servicePrincipalId = Objects.requireNonNull(servicePrincipalId);
             return this;
         }
 
         public Builder servicePrincipalId(Object servicePrincipalId) {
-            this.servicePrincipalId = Input.of(Objects.requireNonNull(servicePrincipalId));
+            this.servicePrincipalId = Output.of(Objects.requireNonNull(servicePrincipalId));
             return this;
         }
 
-        public Builder servicePrincipalKey(Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> servicePrincipalKey) {
+        public Builder servicePrincipalKey(Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> servicePrincipalKey) {
             this.servicePrincipalKey = Objects.requireNonNull(servicePrincipalKey);
             return this;
         }
 
         public Builder servicePrincipalKey(Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs> servicePrincipalKey) {
-            this.servicePrincipalKey = Input.of(Objects.requireNonNull(servicePrincipalKey));
+            this.servicePrincipalKey = Output.of(Objects.requireNonNull(servicePrincipalKey));
             return this;
         }
 
-        public Builder servicePrincipalTenantId(Input<Object> servicePrincipalTenantId) {
+        public Builder servicePrincipalTenantId(Output<Object> servicePrincipalTenantId) {
             this.servicePrincipalTenantId = Objects.requireNonNull(servicePrincipalTenantId);
             return this;
         }
 
         public Builder servicePrincipalTenantId(Object servicePrincipalTenantId) {
-            this.servicePrincipalTenantId = Input.of(Objects.requireNonNull(servicePrincipalTenantId));
+            this.servicePrincipalTenantId = Output.of(Objects.requireNonNull(servicePrincipalTenantId));
             return this;
         }
 
-        public Builder type(Input<String> type) {
+        public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(String type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
         public Office365LinkedServiceArgs build() {

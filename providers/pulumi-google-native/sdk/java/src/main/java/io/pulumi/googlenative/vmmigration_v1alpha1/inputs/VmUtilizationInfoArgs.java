@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.vmmigration_v1alpha1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.vmmigration_v1alpha1.inputs.VmUtilizationMetricsArgs;
 import io.pulumi.googlenative.vmmigration_v1alpha1.inputs.VmwareVmDetailsArgs;
@@ -25,10 +25,10 @@ public final class VmUtilizationInfoArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="utilization")
-      private final @Nullable Input<VmUtilizationMetricsArgs> utilization;
+      private final @Nullable Output<VmUtilizationMetricsArgs> utilization;
 
-    public Input<VmUtilizationMetricsArgs> getUtilization() {
-        return this.utilization == null ? Input.empty() : this.utilization;
+    public Output<VmUtilizationMetricsArgs> getUtilization() {
+        return this.utilization == null ? Output.empty() : this.utilization;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class VmUtilizationInfoArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="vmId")
-      private final @Nullable Input<String> vmId;
+      private final @Nullable Output<String> vmId;
 
-    public Input<String> getVmId() {
-        return this.vmId == null ? Input.empty() : this.vmId;
+    public Output<String> getVmId() {
+        return this.vmId == null ? Output.empty() : this.vmId;
     }
 
     /**
@@ -47,25 +47,25 @@ public final class VmUtilizationInfoArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="vmwareVmDetails")
-      private final @Nullable Input<VmwareVmDetailsArgs> vmwareVmDetails;
+      private final @Nullable Output<VmwareVmDetailsArgs> vmwareVmDetails;
 
-    public Input<VmwareVmDetailsArgs> getVmwareVmDetails() {
-        return this.vmwareVmDetails == null ? Input.empty() : this.vmwareVmDetails;
+    public Output<VmwareVmDetailsArgs> getVmwareVmDetails() {
+        return this.vmwareVmDetails == null ? Output.empty() : this.vmwareVmDetails;
     }
 
     public VmUtilizationInfoArgs(
-        @Nullable Input<VmUtilizationMetricsArgs> utilization,
-        @Nullable Input<String> vmId,
-        @Nullable Input<VmwareVmDetailsArgs> vmwareVmDetails) {
+        @Nullable Output<VmUtilizationMetricsArgs> utilization,
+        @Nullable Output<String> vmId,
+        @Nullable Output<VmwareVmDetailsArgs> vmwareVmDetails) {
         this.utilization = utilization;
         this.vmId = vmId;
         this.vmwareVmDetails = vmwareVmDetails;
     }
 
     private VmUtilizationInfoArgs() {
-        this.utilization = Input.empty();
-        this.vmId = Input.empty();
-        this.vmwareVmDetails = Input.empty();
+        this.utilization = Output.empty();
+        this.vmId = Output.empty();
+        this.vmwareVmDetails = Output.empty();
     }
 
     public static Builder builder() {
@@ -77,9 +77,9 @@ public final class VmUtilizationInfoArgs extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private @Nullable Input<VmUtilizationMetricsArgs> utilization;
-        private @Nullable Input<String> vmId;
-        private @Nullable Input<VmwareVmDetailsArgs> vmwareVmDetails;
+        private @Nullable Output<VmUtilizationMetricsArgs> utilization;
+        private @Nullable Output<String> vmId;
+        private @Nullable Output<VmwareVmDetailsArgs> vmwareVmDetails;
 
         public Builder() {
     	      // Empty
@@ -92,33 +92,33 @@ public final class VmUtilizationInfoArgs extends io.pulumi.resources.ResourceArg
     	      this.vmwareVmDetails = defaults.vmwareVmDetails;
         }
 
-        public Builder utilization(@Nullable Input<VmUtilizationMetricsArgs> utilization) {
+        public Builder utilization(@Nullable Output<VmUtilizationMetricsArgs> utilization) {
             this.utilization = utilization;
             return this;
         }
 
         public Builder utilization(@Nullable VmUtilizationMetricsArgs utilization) {
-            this.utilization = Input.ofNullable(utilization);
+            this.utilization = Output.ofNullable(utilization);
             return this;
         }
 
-        public Builder vmId(@Nullable Input<String> vmId) {
+        public Builder vmId(@Nullable Output<String> vmId) {
             this.vmId = vmId;
             return this;
         }
 
         public Builder vmId(@Nullable String vmId) {
-            this.vmId = Input.ofNullable(vmId);
+            this.vmId = Output.ofNullable(vmId);
             return this;
         }
 
-        public Builder vmwareVmDetails(@Nullable Input<VmwareVmDetailsArgs> vmwareVmDetails) {
+        public Builder vmwareVmDetails(@Nullable Output<VmwareVmDetailsArgs> vmwareVmDetails) {
             this.vmwareVmDetails = vmwareVmDetails;
             return this;
         }
 
         public Builder vmwareVmDetails(@Nullable VmwareVmDetailsArgs vmwareVmDetails) {
-            this.vmwareVmDetails = Input.ofNullable(vmwareVmDetails);
+            this.vmwareVmDetails = Output.ofNullable(vmwareVmDetails);
             return this;
         }
         public VmUtilizationInfoArgs build() {

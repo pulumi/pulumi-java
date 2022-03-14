@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.bigtableadmin_v2.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class AutoscalingTargetsArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="cpuUtilizationPercent")
-      private final @Nullable Input<Integer> cpuUtilizationPercent;
+      private final @Nullable Output<Integer> cpuUtilizationPercent;
 
-    public Input<Integer> getCpuUtilizationPercent() {
-        return this.cpuUtilizationPercent == null ? Input.empty() : this.cpuUtilizationPercent;
+    public Output<Integer> getCpuUtilizationPercent() {
+        return this.cpuUtilizationPercent == null ? Output.empty() : this.cpuUtilizationPercent;
     }
 
-    public AutoscalingTargetsArgs(@Nullable Input<Integer> cpuUtilizationPercent) {
+    public AutoscalingTargetsArgs(@Nullable Output<Integer> cpuUtilizationPercent) {
         this.cpuUtilizationPercent = cpuUtilizationPercent;
     }
 
     private AutoscalingTargetsArgs() {
-        this.cpuUtilizationPercent = Input.empty();
+        this.cpuUtilizationPercent = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class AutoscalingTargetsArgs extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> cpuUtilizationPercent;
+        private @Nullable Output<Integer> cpuUtilizationPercent;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class AutoscalingTargetsArgs extends io.pulumi.resources.ResourceAr
     	      this.cpuUtilizationPercent = defaults.cpuUtilizationPercent;
         }
 
-        public Builder cpuUtilizationPercent(@Nullable Input<Integer> cpuUtilizationPercent) {
+        public Builder cpuUtilizationPercent(@Nullable Output<Integer> cpuUtilizationPercent) {
             this.cpuUtilizationPercent = cpuUtilizationPercent;
             return this;
         }
 
         public Builder cpuUtilizationPercent(@Nullable Integer cpuUtilizationPercent) {
-            this.cpuUtilizationPercent = Input.ofNullable(cpuUtilizationPercent);
+            this.cpuUtilizationPercent = Output.ofNullable(cpuUtilizationPercent);
             return this;
         }
         public AutoscalingTargetsArgs build() {

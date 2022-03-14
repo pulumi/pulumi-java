@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
@@ -19,18 +19,18 @@ public final class ResourcePolicyVmMaintenancePolicyConcurrencyControlArgs exten
     public static final ResourcePolicyVmMaintenancePolicyConcurrencyControlArgs Empty = new ResourcePolicyVmMaintenancePolicyConcurrencyControlArgs();
 
     @InputImport(name="concurrencyLimit")
-      private final @Nullable Input<Integer> concurrencyLimit;
+      private final @Nullable Output<Integer> concurrencyLimit;
 
-    public Input<Integer> getConcurrencyLimit() {
-        return this.concurrencyLimit == null ? Input.empty() : this.concurrencyLimit;
+    public Output<Integer> getConcurrencyLimit() {
+        return this.concurrencyLimit == null ? Output.empty() : this.concurrencyLimit;
     }
 
-    public ResourcePolicyVmMaintenancePolicyConcurrencyControlArgs(@Nullable Input<Integer> concurrencyLimit) {
+    public ResourcePolicyVmMaintenancePolicyConcurrencyControlArgs(@Nullable Output<Integer> concurrencyLimit) {
         this.concurrencyLimit = concurrencyLimit;
     }
 
     private ResourcePolicyVmMaintenancePolicyConcurrencyControlArgs() {
-        this.concurrencyLimit = Input.empty();
+        this.concurrencyLimit = Output.empty();
     }
 
     public static Builder builder() {
@@ -42,7 +42,7 @@ public final class ResourcePolicyVmMaintenancePolicyConcurrencyControlArgs exten
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> concurrencyLimit;
+        private @Nullable Output<Integer> concurrencyLimit;
 
         public Builder() {
     	      // Empty
@@ -53,13 +53,13 @@ public final class ResourcePolicyVmMaintenancePolicyConcurrencyControlArgs exten
     	      this.concurrencyLimit = defaults.concurrencyLimit;
         }
 
-        public Builder concurrencyLimit(@Nullable Input<Integer> concurrencyLimit) {
+        public Builder concurrencyLimit(@Nullable Output<Integer> concurrencyLimit) {
             this.concurrencyLimit = concurrencyLimit;
             return this;
         }
 
         public Builder concurrencyLimit(@Nullable Integer concurrencyLimit) {
-            this.concurrencyLimit = Input.ofNullable(concurrencyLimit);
+            this.concurrencyLimit = Output.ofNullable(concurrencyLimit);
             return this;
         }
         public ResourcePolicyVmMaintenancePolicyConcurrencyControlArgs build() {

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.managedservices;
 
 import io.pulumi.azurenative.managedservices.inputs.RegistrationAssignmentPropertiesArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -20,10 +20,10 @@ public final class RegistrationAssignmentArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="properties")
-      private final @Nullable Input<RegistrationAssignmentPropertiesArgs> properties;
+      private final @Nullable Output<RegistrationAssignmentPropertiesArgs> properties;
 
-    public Input<RegistrationAssignmentPropertiesArgs> getProperties() {
-        return this.properties == null ? Input.empty() : this.properties;
+    public Output<RegistrationAssignmentPropertiesArgs> getProperties() {
+        return this.properties == null ? Output.empty() : this.properties;
     }
 
     /**
@@ -31,10 +31,10 @@ public final class RegistrationAssignmentArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="registrationAssignmentId")
-      private final @Nullable Input<String> registrationAssignmentId;
+      private final @Nullable Output<String> registrationAssignmentId;
 
-    public Input<String> getRegistrationAssignmentId() {
-        return this.registrationAssignmentId == null ? Input.empty() : this.registrationAssignmentId;
+    public Output<String> getRegistrationAssignmentId() {
+        return this.registrationAssignmentId == null ? Output.empty() : this.registrationAssignmentId;
     }
 
     /**
@@ -42,25 +42,25 @@ public final class RegistrationAssignmentArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="scope", required=true)
-      private final Input<String> scope;
+      private final Output<String> scope;
 
-    public Input<String> getScope() {
+    public Output<String> getScope() {
         return this.scope;
     }
 
     public RegistrationAssignmentArgs(
-        @Nullable Input<RegistrationAssignmentPropertiesArgs> properties,
-        @Nullable Input<String> registrationAssignmentId,
-        Input<String> scope) {
+        @Nullable Output<RegistrationAssignmentPropertiesArgs> properties,
+        @Nullable Output<String> registrationAssignmentId,
+        Output<String> scope) {
         this.properties = properties;
         this.registrationAssignmentId = registrationAssignmentId;
         this.scope = Objects.requireNonNull(scope, "expected parameter 'scope' to be non-null");
     }
 
     private RegistrationAssignmentArgs() {
-        this.properties = Input.empty();
-        this.registrationAssignmentId = Input.empty();
-        this.scope = Input.empty();
+        this.properties = Output.empty();
+        this.registrationAssignmentId = Output.empty();
+        this.scope = Output.empty();
     }
 
     public static Builder builder() {
@@ -72,9 +72,9 @@ public final class RegistrationAssignmentArgs extends io.pulumi.resources.Resour
     }
 
     public static final class Builder {
-        private @Nullable Input<RegistrationAssignmentPropertiesArgs> properties;
-        private @Nullable Input<String> registrationAssignmentId;
-        private Input<String> scope;
+        private @Nullable Output<RegistrationAssignmentPropertiesArgs> properties;
+        private @Nullable Output<String> registrationAssignmentId;
+        private Output<String> scope;
 
         public Builder() {
     	      // Empty
@@ -87,33 +87,33 @@ public final class RegistrationAssignmentArgs extends io.pulumi.resources.Resour
     	      this.scope = defaults.scope;
         }
 
-        public Builder properties(@Nullable Input<RegistrationAssignmentPropertiesArgs> properties) {
+        public Builder properties(@Nullable Output<RegistrationAssignmentPropertiesArgs> properties) {
             this.properties = properties;
             return this;
         }
 
         public Builder properties(@Nullable RegistrationAssignmentPropertiesArgs properties) {
-            this.properties = Input.ofNullable(properties);
+            this.properties = Output.ofNullable(properties);
             return this;
         }
 
-        public Builder registrationAssignmentId(@Nullable Input<String> registrationAssignmentId) {
+        public Builder registrationAssignmentId(@Nullable Output<String> registrationAssignmentId) {
             this.registrationAssignmentId = registrationAssignmentId;
             return this;
         }
 
         public Builder registrationAssignmentId(@Nullable String registrationAssignmentId) {
-            this.registrationAssignmentId = Input.ofNullable(registrationAssignmentId);
+            this.registrationAssignmentId = Output.ofNullable(registrationAssignmentId);
             return this;
         }
 
-        public Builder scope(Input<String> scope) {
+        public Builder scope(Output<String> scope) {
             this.scope = Objects.requireNonNull(scope);
             return this;
         }
 
         public Builder scope(String scope) {
-            this.scope = Input.of(Objects.requireNonNull(scope));
+            this.scope = Output.of(Objects.requireNonNull(scope));
             return this;
         }
         public RegistrationAssignmentArgs build() {

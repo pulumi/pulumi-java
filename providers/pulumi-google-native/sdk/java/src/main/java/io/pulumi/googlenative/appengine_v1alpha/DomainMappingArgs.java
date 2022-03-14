@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.appengine_v1alpha;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.appengine_v1alpha.inputs.SslSettingsArgs;
 import java.lang.String;
@@ -16,9 +16,9 @@ public final class DomainMappingArgs extends io.pulumi.resources.ResourceArgs {
     public static final DomainMappingArgs Empty = new DomainMappingArgs();
 
     @InputImport(name="appId", required=true)
-      private final Input<String> appId;
+      private final Output<String> appId;
 
-    public Input<String> getAppId() {
+    public Output<String> getAppId() {
         return this.appId;
     }
 
@@ -27,24 +27,24 @@ public final class DomainMappingArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="id")
-      private final @Nullable Input<String> id;
+      private final @Nullable Output<String> id;
 
-    public Input<String> getId() {
-        return this.id == null ? Input.empty() : this.id;
+    public Output<String> getId() {
+        return this.id == null ? Output.empty() : this.id;
     }
 
     @InputImport(name="noManagedCertificate")
-      private final @Nullable Input<String> noManagedCertificate;
+      private final @Nullable Output<String> noManagedCertificate;
 
-    public Input<String> getNoManagedCertificate() {
-        return this.noManagedCertificate == null ? Input.empty() : this.noManagedCertificate;
+    public Output<String> getNoManagedCertificate() {
+        return this.noManagedCertificate == null ? Output.empty() : this.noManagedCertificate;
     }
 
     @InputImport(name="overrideStrategy")
-      private final @Nullable Input<String> overrideStrategy;
+      private final @Nullable Output<String> overrideStrategy;
 
-    public Input<String> getOverrideStrategy() {
-        return this.overrideStrategy == null ? Input.empty() : this.overrideStrategy;
+    public Output<String> getOverrideStrategy() {
+        return this.overrideStrategy == null ? Output.empty() : this.overrideStrategy;
     }
 
     /**
@@ -52,18 +52,18 @@ public final class DomainMappingArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sslSettings")
-      private final @Nullable Input<SslSettingsArgs> sslSettings;
+      private final @Nullable Output<SslSettingsArgs> sslSettings;
 
-    public Input<SslSettingsArgs> getSslSettings() {
-        return this.sslSettings == null ? Input.empty() : this.sslSettings;
+    public Output<SslSettingsArgs> getSslSettings() {
+        return this.sslSettings == null ? Output.empty() : this.sslSettings;
     }
 
     public DomainMappingArgs(
-        Input<String> appId,
-        @Nullable Input<String> id,
-        @Nullable Input<String> noManagedCertificate,
-        @Nullable Input<String> overrideStrategy,
-        @Nullable Input<SslSettingsArgs> sslSettings) {
+        Output<String> appId,
+        @Nullable Output<String> id,
+        @Nullable Output<String> noManagedCertificate,
+        @Nullable Output<String> overrideStrategy,
+        @Nullable Output<SslSettingsArgs> sslSettings) {
         this.appId = Objects.requireNonNull(appId, "expected parameter 'appId' to be non-null");
         this.id = id;
         this.noManagedCertificate = noManagedCertificate;
@@ -72,11 +72,11 @@ public final class DomainMappingArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DomainMappingArgs() {
-        this.appId = Input.empty();
-        this.id = Input.empty();
-        this.noManagedCertificate = Input.empty();
-        this.overrideStrategy = Input.empty();
-        this.sslSettings = Input.empty();
+        this.appId = Output.empty();
+        this.id = Output.empty();
+        this.noManagedCertificate = Output.empty();
+        this.overrideStrategy = Output.empty();
+        this.sslSettings = Output.empty();
     }
 
     public static Builder builder() {
@@ -88,11 +88,11 @@ public final class DomainMappingArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> appId;
-        private @Nullable Input<String> id;
-        private @Nullable Input<String> noManagedCertificate;
-        private @Nullable Input<String> overrideStrategy;
-        private @Nullable Input<SslSettingsArgs> sslSettings;
+        private Output<String> appId;
+        private @Nullable Output<String> id;
+        private @Nullable Output<String> noManagedCertificate;
+        private @Nullable Output<String> overrideStrategy;
+        private @Nullable Output<SslSettingsArgs> sslSettings;
 
         public Builder() {
     	      // Empty
@@ -107,53 +107,53 @@ public final class DomainMappingArgs extends io.pulumi.resources.ResourceArgs {
     	      this.sslSettings = defaults.sslSettings;
         }
 
-        public Builder appId(Input<String> appId) {
+        public Builder appId(Output<String> appId) {
             this.appId = Objects.requireNonNull(appId);
             return this;
         }
 
         public Builder appId(String appId) {
-            this.appId = Input.of(Objects.requireNonNull(appId));
+            this.appId = Output.of(Objects.requireNonNull(appId));
             return this;
         }
 
-        public Builder id(@Nullable Input<String> id) {
+        public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
 
         public Builder id(@Nullable String id) {
-            this.id = Input.ofNullable(id);
+            this.id = Output.ofNullable(id);
             return this;
         }
 
-        public Builder noManagedCertificate(@Nullable Input<String> noManagedCertificate) {
+        public Builder noManagedCertificate(@Nullable Output<String> noManagedCertificate) {
             this.noManagedCertificate = noManagedCertificate;
             return this;
         }
 
         public Builder noManagedCertificate(@Nullable String noManagedCertificate) {
-            this.noManagedCertificate = Input.ofNullable(noManagedCertificate);
+            this.noManagedCertificate = Output.ofNullable(noManagedCertificate);
             return this;
         }
 
-        public Builder overrideStrategy(@Nullable Input<String> overrideStrategy) {
+        public Builder overrideStrategy(@Nullable Output<String> overrideStrategy) {
             this.overrideStrategy = overrideStrategy;
             return this;
         }
 
         public Builder overrideStrategy(@Nullable String overrideStrategy) {
-            this.overrideStrategy = Input.ofNullable(overrideStrategy);
+            this.overrideStrategy = Output.ofNullable(overrideStrategy);
             return this;
         }
 
-        public Builder sslSettings(@Nullable Input<SslSettingsArgs> sslSettings) {
+        public Builder sslSettings(@Nullable Output<SslSettingsArgs> sslSettings) {
             this.sslSettings = sslSettings;
             return this;
         }
 
         public Builder sslSettings(@Nullable SslSettingsArgs sslSettings) {
-            this.sslSettings = Input.ofNullable(sslSettings);
+            this.sslSettings = Output.ofNullable(sslSettings);
             return this;
         }
         public DomainMappingArgs build() {

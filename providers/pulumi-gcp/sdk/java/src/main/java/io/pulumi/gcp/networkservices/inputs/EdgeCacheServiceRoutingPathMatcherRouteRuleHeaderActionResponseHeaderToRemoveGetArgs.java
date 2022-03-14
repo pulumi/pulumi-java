@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.networkservices.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,18 +19,18 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionRespon
      * 
      */
     @InputImport(name="headerName", required=true)
-      private final Input<String> headerName;
+      private final Output<String> headerName;
 
-    public Input<String> getHeaderName() {
+    public Output<String> getHeaderName() {
         return this.headerName;
     }
 
-    public EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionResponseHeaderToRemoveGetArgs(Input<String> headerName) {
+    public EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionResponseHeaderToRemoveGetArgs(Output<String> headerName) {
         this.headerName = Objects.requireNonNull(headerName, "expected parameter 'headerName' to be non-null");
     }
 
     private EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionResponseHeaderToRemoveGetArgs() {
-        this.headerName = Input.empty();
+        this.headerName = Output.empty();
     }
 
     public static Builder builder() {
@@ -42,7 +42,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionRespon
     }
 
     public static final class Builder {
-        private Input<String> headerName;
+        private Output<String> headerName;
 
         public Builder() {
     	      // Empty
@@ -53,13 +53,13 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionRespon
     	      this.headerName = defaults.headerName;
         }
 
-        public Builder headerName(Input<String> headerName) {
+        public Builder headerName(Output<String> headerName) {
             this.headerName = Objects.requireNonNull(headerName);
             return this;
         }
 
         public Builder headerName(String headerName) {
-            this.headerName = Input.of(Objects.requireNonNull(headerName));
+            this.headerName = Output.of(Objects.requireNonNull(headerName));
             return this;
         }
         public EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionResponseHeaderToRemoveGetArgs build() {

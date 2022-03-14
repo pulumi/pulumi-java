@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.apiextensions.k8s.io_v1beta1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.kubernetes.apiextensions.k8s.io_v1beta1.inputs.WebhookClientConfigArgs;
 import java.lang.String;
@@ -25,10 +25,10 @@ public final class CustomResourceConversionArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="conversionReviewVersions")
-      private final @Nullable Input<List<String>> conversionReviewVersions;
+      private final @Nullable Output<List<String>> conversionReviewVersions;
 
-    public Input<List<String>> getConversionReviewVersions() {
-        return this.conversionReviewVersions == null ? Input.empty() : this.conversionReviewVersions;
+    public Output<List<String>> getConversionReviewVersions() {
+        return this.conversionReviewVersions == null ? Output.empty() : this.conversionReviewVersions;
     }
 
     /**
@@ -37,9 +37,9 @@ public final class CustomResourceConversionArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="strategy", required=true)
-      private final Input<String> strategy;
+      private final Output<String> strategy;
 
-    public Input<String> getStrategy() {
+    public Output<String> getStrategy() {
         return this.strategy;
     }
 
@@ -48,25 +48,25 @@ public final class CustomResourceConversionArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="webhookClientConfig")
-      private final @Nullable Input<WebhookClientConfigArgs> webhookClientConfig;
+      private final @Nullable Output<WebhookClientConfigArgs> webhookClientConfig;
 
-    public Input<WebhookClientConfigArgs> getWebhookClientConfig() {
-        return this.webhookClientConfig == null ? Input.empty() : this.webhookClientConfig;
+    public Output<WebhookClientConfigArgs> getWebhookClientConfig() {
+        return this.webhookClientConfig == null ? Output.empty() : this.webhookClientConfig;
     }
 
     public CustomResourceConversionArgs(
-        @Nullable Input<List<String>> conversionReviewVersions,
-        Input<String> strategy,
-        @Nullable Input<WebhookClientConfigArgs> webhookClientConfig) {
+        @Nullable Output<List<String>> conversionReviewVersions,
+        Output<String> strategy,
+        @Nullable Output<WebhookClientConfigArgs> webhookClientConfig) {
         this.conversionReviewVersions = conversionReviewVersions;
         this.strategy = Objects.requireNonNull(strategy, "expected parameter 'strategy' to be non-null");
         this.webhookClientConfig = webhookClientConfig;
     }
 
     private CustomResourceConversionArgs() {
-        this.conversionReviewVersions = Input.empty();
-        this.strategy = Input.empty();
-        this.webhookClientConfig = Input.empty();
+        this.conversionReviewVersions = Output.empty();
+        this.strategy = Output.empty();
+        this.webhookClientConfig = Output.empty();
     }
 
     public static Builder builder() {
@@ -78,9 +78,9 @@ public final class CustomResourceConversionArgs extends io.pulumi.resources.Reso
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> conversionReviewVersions;
-        private Input<String> strategy;
-        private @Nullable Input<WebhookClientConfigArgs> webhookClientConfig;
+        private @Nullable Output<List<String>> conversionReviewVersions;
+        private Output<String> strategy;
+        private @Nullable Output<WebhookClientConfigArgs> webhookClientConfig;
 
         public Builder() {
     	      // Empty
@@ -93,33 +93,33 @@ public final class CustomResourceConversionArgs extends io.pulumi.resources.Reso
     	      this.webhookClientConfig = defaults.webhookClientConfig;
         }
 
-        public Builder conversionReviewVersions(@Nullable Input<List<String>> conversionReviewVersions) {
+        public Builder conversionReviewVersions(@Nullable Output<List<String>> conversionReviewVersions) {
             this.conversionReviewVersions = conversionReviewVersions;
             return this;
         }
 
         public Builder conversionReviewVersions(@Nullable List<String> conversionReviewVersions) {
-            this.conversionReviewVersions = Input.ofNullable(conversionReviewVersions);
+            this.conversionReviewVersions = Output.ofNullable(conversionReviewVersions);
             return this;
         }
 
-        public Builder strategy(Input<String> strategy) {
+        public Builder strategy(Output<String> strategy) {
             this.strategy = Objects.requireNonNull(strategy);
             return this;
         }
 
         public Builder strategy(String strategy) {
-            this.strategy = Input.of(Objects.requireNonNull(strategy));
+            this.strategy = Output.of(Objects.requireNonNull(strategy));
             return this;
         }
 
-        public Builder webhookClientConfig(@Nullable Input<WebhookClientConfigArgs> webhookClientConfig) {
+        public Builder webhookClientConfig(@Nullable Output<WebhookClientConfigArgs> webhookClientConfig) {
             this.webhookClientConfig = webhookClientConfig;
             return this;
         }
 
         public Builder webhookClientConfig(@Nullable WebhookClientConfigArgs webhookClientConfig) {
-            this.webhookClientConfig = Input.ofNullable(webhookClientConfig);
+            this.webhookClientConfig = Output.ofNullable(webhookClientConfig);
             return this;
         }
         public CustomResourceConversionArgs build() {

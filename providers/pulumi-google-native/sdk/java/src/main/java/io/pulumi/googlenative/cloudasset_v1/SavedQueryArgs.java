@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudasset_v1;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.cloudasset_v1.inputs.QueryContentArgs;
 import java.lang.String;
@@ -21,10 +21,10 @@ public final class SavedQueryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="content")
-      private final @Nullable Input<QueryContentArgs> content;
+      private final @Nullable Output<QueryContentArgs> content;
 
-    public Input<QueryContentArgs> getContent() {
-        return this.content == null ? Input.empty() : this.content;
+    public Output<QueryContentArgs> getContent() {
+        return this.content == null ? Output.empty() : this.content;
     }
 
     /**
@@ -32,10 +32,10 @@ public final class SavedQueryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -43,10 +43,10 @@ public final class SavedQueryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labels")
-      private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Output<Map<String,String>> labels;
 
-    public Input<Map<String,String>> getLabels() {
-        return this.labels == null ? Input.empty() : this.labels;
+    public Output<Map<String,String>> getLabels() {
+        return this.labels == null ? Output.empty() : this.labels;
     }
 
     /**
@@ -54,41 +54,41 @@ public final class SavedQueryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     @InputImport(name="savedQueryId", required=true)
-      private final Input<String> savedQueryId;
+      private final Output<String> savedQueryId;
 
-    public Input<String> getSavedQueryId() {
+    public Output<String> getSavedQueryId() {
         return this.savedQueryId;
     }
 
     @InputImport(name="v1Id", required=true)
-      private final Input<String> v1Id;
+      private final Output<String> v1Id;
 
-    public Input<String> getV1Id() {
+    public Output<String> getV1Id() {
         return this.v1Id;
     }
 
     @InputImport(name="v1Id1", required=true)
-      private final Input<String> v1Id1;
+      private final Output<String> v1Id1;
 
-    public Input<String> getV1Id1() {
+    public Output<String> getV1Id1() {
         return this.v1Id1;
     }
 
     public SavedQueryArgs(
-        @Nullable Input<QueryContentArgs> content,
-        @Nullable Input<String> description,
-        @Nullable Input<Map<String,String>> labels,
-        @Nullable Input<String> name,
-        Input<String> savedQueryId,
-        Input<String> v1Id,
-        Input<String> v1Id1) {
+        @Nullable Output<QueryContentArgs> content,
+        @Nullable Output<String> description,
+        @Nullable Output<Map<String,String>> labels,
+        @Nullable Output<String> name,
+        Output<String> savedQueryId,
+        Output<String> v1Id,
+        Output<String> v1Id1) {
         this.content = content;
         this.description = description;
         this.labels = labels;
@@ -99,13 +99,13 @@ public final class SavedQueryArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private SavedQueryArgs() {
-        this.content = Input.empty();
-        this.description = Input.empty();
-        this.labels = Input.empty();
-        this.name = Input.empty();
-        this.savedQueryId = Input.empty();
-        this.v1Id = Input.empty();
-        this.v1Id1 = Input.empty();
+        this.content = Output.empty();
+        this.description = Output.empty();
+        this.labels = Output.empty();
+        this.name = Output.empty();
+        this.savedQueryId = Output.empty();
+        this.v1Id = Output.empty();
+        this.v1Id1 = Output.empty();
     }
 
     public static Builder builder() {
@@ -117,13 +117,13 @@ public final class SavedQueryArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<QueryContentArgs> content;
-        private @Nullable Input<String> description;
-        private @Nullable Input<Map<String,String>> labels;
-        private @Nullable Input<String> name;
-        private Input<String> savedQueryId;
-        private Input<String> v1Id;
-        private Input<String> v1Id1;
+        private @Nullable Output<QueryContentArgs> content;
+        private @Nullable Output<String> description;
+        private @Nullable Output<Map<String,String>> labels;
+        private @Nullable Output<String> name;
+        private Output<String> savedQueryId;
+        private Output<String> v1Id;
+        private Output<String> v1Id1;
 
         public Builder() {
     	      // Empty
@@ -140,73 +140,73 @@ public final class SavedQueryArgs extends io.pulumi.resources.ResourceArgs {
     	      this.v1Id1 = defaults.v1Id1;
         }
 
-        public Builder content(@Nullable Input<QueryContentArgs> content) {
+        public Builder content(@Nullable Output<QueryContentArgs> content) {
             this.content = content;
             return this;
         }
 
         public Builder content(@Nullable QueryContentArgs content) {
-            this.content = Input.ofNullable(content);
+            this.content = Output.ofNullable(content);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder labels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
         public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Input.ofNullable(labels);
+            this.labels = Output.ofNullable(labels);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder savedQueryId(Input<String> savedQueryId) {
+        public Builder savedQueryId(Output<String> savedQueryId) {
             this.savedQueryId = Objects.requireNonNull(savedQueryId);
             return this;
         }
 
         public Builder savedQueryId(String savedQueryId) {
-            this.savedQueryId = Input.of(Objects.requireNonNull(savedQueryId));
+            this.savedQueryId = Output.of(Objects.requireNonNull(savedQueryId));
             return this;
         }
 
-        public Builder v1Id(Input<String> v1Id) {
+        public Builder v1Id(Output<String> v1Id) {
             this.v1Id = Objects.requireNonNull(v1Id);
             return this;
         }
 
         public Builder v1Id(String v1Id) {
-            this.v1Id = Input.of(Objects.requireNonNull(v1Id));
+            this.v1Id = Output.of(Objects.requireNonNull(v1Id));
             return this;
         }
 
-        public Builder v1Id1(Input<String> v1Id1) {
+        public Builder v1Id1(Output<String> v1Id1) {
             this.v1Id1 = Objects.requireNonNull(v1Id1);
             return this;
         }
 
         public Builder v1Id1(String v1Id1) {
-            this.v1Id1 = Input.of(Objects.requireNonNull(v1Id1));
+            this.v1Id1 = Output.of(Objects.requireNonNull(v1Id1));
             return this;
         }
         public SavedQueryArgs build() {

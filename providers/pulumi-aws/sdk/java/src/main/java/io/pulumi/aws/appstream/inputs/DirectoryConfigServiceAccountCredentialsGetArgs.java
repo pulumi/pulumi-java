@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.appstream.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -18,9 +18,9 @@ public final class DirectoryConfigServiceAccountCredentialsGetArgs extends io.pu
      * 
      */
     @InputImport(name="accountName", required=true)
-      private final Input<String> accountName;
+      private final Output<String> accountName;
 
-    public Input<String> getAccountName() {
+    public Output<String> getAccountName() {
         return this.accountName;
     }
 
@@ -29,22 +29,22 @@ public final class DirectoryConfigServiceAccountCredentialsGetArgs extends io.pu
      * 
      */
     @InputImport(name="accountPassword", required=true)
-      private final Input<String> accountPassword;
+      private final Output<String> accountPassword;
 
-    public Input<String> getAccountPassword() {
+    public Output<String> getAccountPassword() {
         return this.accountPassword;
     }
 
     public DirectoryConfigServiceAccountCredentialsGetArgs(
-        Input<String> accountName,
-        Input<String> accountPassword) {
+        Output<String> accountName,
+        Output<String> accountPassword) {
         this.accountName = Objects.requireNonNull(accountName, "expected parameter 'accountName' to be non-null");
         this.accountPassword = Objects.requireNonNull(accountPassword, "expected parameter 'accountPassword' to be non-null");
     }
 
     private DirectoryConfigServiceAccountCredentialsGetArgs() {
-        this.accountName = Input.empty();
-        this.accountPassword = Input.empty();
+        this.accountName = Output.empty();
+        this.accountPassword = Output.empty();
     }
 
     public static Builder builder() {
@@ -56,8 +56,8 @@ public final class DirectoryConfigServiceAccountCredentialsGetArgs extends io.pu
     }
 
     public static final class Builder {
-        private Input<String> accountName;
-        private Input<String> accountPassword;
+        private Output<String> accountName;
+        private Output<String> accountPassword;
 
         public Builder() {
     	      // Empty
@@ -69,23 +69,23 @@ public final class DirectoryConfigServiceAccountCredentialsGetArgs extends io.pu
     	      this.accountPassword = defaults.accountPassword;
         }
 
-        public Builder accountName(Input<String> accountName) {
+        public Builder accountName(Output<String> accountName) {
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
 
         public Builder accountName(String accountName) {
-            this.accountName = Input.of(Objects.requireNonNull(accountName));
+            this.accountName = Output.of(Objects.requireNonNull(accountName));
             return this;
         }
 
-        public Builder accountPassword(Input<String> accountPassword) {
+        public Builder accountPassword(Output<String> accountPassword) {
             this.accountPassword = Objects.requireNonNull(accountPassword);
             return this;
         }
 
         public Builder accountPassword(String accountPassword) {
-            this.accountPassword = Input.of(Objects.requireNonNull(accountPassword));
+            this.accountPassword = Output.of(Objects.requireNonNull(accountPassword));
             return this;
         }
         public DirectoryConfigServiceAccountCredentialsGetArgs build() {

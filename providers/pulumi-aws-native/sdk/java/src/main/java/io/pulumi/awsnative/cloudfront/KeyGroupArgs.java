@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.cloudfront;
 
 import io.pulumi.awsnative.cloudfront.inputs.KeyGroupConfigArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 
@@ -14,18 +14,18 @@ public final class KeyGroupArgs extends io.pulumi.resources.ResourceArgs {
     public static final KeyGroupArgs Empty = new KeyGroupArgs();
 
     @InputImport(name="keyGroupConfig", required=true)
-      private final Input<KeyGroupConfigArgs> keyGroupConfig;
+      private final Output<KeyGroupConfigArgs> keyGroupConfig;
 
-    public Input<KeyGroupConfigArgs> getKeyGroupConfig() {
+    public Output<KeyGroupConfigArgs> getKeyGroupConfig() {
         return this.keyGroupConfig;
     }
 
-    public KeyGroupArgs(Input<KeyGroupConfigArgs> keyGroupConfig) {
+    public KeyGroupArgs(Output<KeyGroupConfigArgs> keyGroupConfig) {
         this.keyGroupConfig = Objects.requireNonNull(keyGroupConfig, "expected parameter 'keyGroupConfig' to be non-null");
     }
 
     private KeyGroupArgs() {
-        this.keyGroupConfig = Input.empty();
+        this.keyGroupConfig = Output.empty();
     }
 
     public static Builder builder() {
@@ -37,7 +37,7 @@ public final class KeyGroupArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<KeyGroupConfigArgs> keyGroupConfig;
+        private Output<KeyGroupConfigArgs> keyGroupConfig;
 
         public Builder() {
     	      // Empty
@@ -48,13 +48,13 @@ public final class KeyGroupArgs extends io.pulumi.resources.ResourceArgs {
     	      this.keyGroupConfig = defaults.keyGroupConfig;
         }
 
-        public Builder keyGroupConfig(Input<KeyGroupConfigArgs> keyGroupConfig) {
+        public Builder keyGroupConfig(Output<KeyGroupConfigArgs> keyGroupConfig) {
             this.keyGroupConfig = Objects.requireNonNull(keyGroupConfig);
             return this;
         }
 
         public Builder keyGroupConfig(KeyGroupConfigArgs keyGroupConfig) {
-            this.keyGroupConfig = Input.of(Objects.requireNonNull(keyGroupConfig));
+            this.keyGroupConfig = Output.of(Objects.requireNonNull(keyGroupConfig));
             return this;
         }
         public KeyGroupArgs build() {

@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.rekognition;
 
 import io.pulumi.awsnative.rekognition.inputs.CollectionTagArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -17,9 +17,9 @@ public final class CollectionArgs extends io.pulumi.resources.ResourceArgs {
     public static final CollectionArgs Empty = new CollectionArgs();
 
     @InputImport(name="collectionId", required=true)
-      private final Input<String> collectionId;
+      private final Output<String> collectionId;
 
-    public Input<String> getCollectionId() {
+    public Output<String> getCollectionId() {
         return this.collectionId;
     }
 
@@ -28,22 +28,22 @@ public final class CollectionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<List<CollectionTagArgs>> tags;
+      private final @Nullable Output<List<CollectionTagArgs>> tags;
 
-    public Input<List<CollectionTagArgs>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<List<CollectionTagArgs>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public CollectionArgs(
-        Input<String> collectionId,
-        @Nullable Input<List<CollectionTagArgs>> tags) {
+        Output<String> collectionId,
+        @Nullable Output<List<CollectionTagArgs>> tags) {
         this.collectionId = Objects.requireNonNull(collectionId, "expected parameter 'collectionId' to be non-null");
         this.tags = tags;
     }
 
     private CollectionArgs() {
-        this.collectionId = Input.empty();
-        this.tags = Input.empty();
+        this.collectionId = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -55,8 +55,8 @@ public final class CollectionArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> collectionId;
-        private @Nullable Input<List<CollectionTagArgs>> tags;
+        private Output<String> collectionId;
+        private @Nullable Output<List<CollectionTagArgs>> tags;
 
         public Builder() {
     	      // Empty
@@ -68,23 +68,23 @@ public final class CollectionArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder collectionId(Input<String> collectionId) {
+        public Builder collectionId(Output<String> collectionId) {
             this.collectionId = Objects.requireNonNull(collectionId);
             return this;
         }
 
         public Builder collectionId(String collectionId) {
-            this.collectionId = Input.of(Objects.requireNonNull(collectionId));
+            this.collectionId = Output.of(Objects.requireNonNull(collectionId));
             return this;
         }
 
-        public Builder tags(@Nullable Input<List<CollectionTagArgs>> tags) {
+        public Builder tags(@Nullable Output<List<CollectionTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable List<CollectionTagArgs> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public CollectionArgs build() {

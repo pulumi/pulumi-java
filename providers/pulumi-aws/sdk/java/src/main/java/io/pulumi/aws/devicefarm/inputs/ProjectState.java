@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.devicefarm.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -21,10 +21,10 @@ public final class ProjectState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arn")
-      private final @Nullable Input<String> arn;
+      private final @Nullable Output<String> arn;
 
-    public Input<String> getArn() {
-        return this.arn == null ? Input.empty() : this.arn;
+    public Output<String> getArn() {
+        return this.arn == null ? Output.empty() : this.arn;
     }
 
     /**
@@ -32,10 +32,10 @@ public final class ProjectState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="defaultJobTimeoutMinutes")
-      private final @Nullable Input<Integer> defaultJobTimeoutMinutes;
+      private final @Nullable Output<Integer> defaultJobTimeoutMinutes;
 
-    public Input<Integer> getDefaultJobTimeoutMinutes() {
-        return this.defaultJobTimeoutMinutes == null ? Input.empty() : this.defaultJobTimeoutMinutes;
+    public Output<Integer> getDefaultJobTimeoutMinutes() {
+        return this.defaultJobTimeoutMinutes == null ? Output.empty() : this.defaultJobTimeoutMinutes;
     }
 
     /**
@@ -43,10 +43,10 @@ public final class ProjectState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -54,10 +54,10 @@ public final class ProjectState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -65,18 +65,18 @@ public final class ProjectState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tagsAll")
-      private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Input<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Input.empty() : this.tagsAll;
+    public Output<Map<String,String>> getTagsAll() {
+        return this.tagsAll == null ? Output.empty() : this.tagsAll;
     }
 
     public ProjectState(
-        @Nullable Input<String> arn,
-        @Nullable Input<Integer> defaultJobTimeoutMinutes,
-        @Nullable Input<String> name,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<Map<String,String>> tagsAll) {
+        @Nullable Output<String> arn,
+        @Nullable Output<Integer> defaultJobTimeoutMinutes,
+        @Nullable Output<String> name,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<Map<String,String>> tagsAll) {
         this.arn = arn;
         this.defaultJobTimeoutMinutes = defaultJobTimeoutMinutes;
         this.name = name;
@@ -85,11 +85,11 @@ public final class ProjectState extends io.pulumi.resources.ResourceArgs {
     }
 
     private ProjectState() {
-        this.arn = Input.empty();
-        this.defaultJobTimeoutMinutes = Input.empty();
-        this.name = Input.empty();
-        this.tags = Input.empty();
-        this.tagsAll = Input.empty();
+        this.arn = Output.empty();
+        this.defaultJobTimeoutMinutes = Output.empty();
+        this.name = Output.empty();
+        this.tags = Output.empty();
+        this.tagsAll = Output.empty();
     }
 
     public static Builder builder() {
@@ -101,11 +101,11 @@ public final class ProjectState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> arn;
-        private @Nullable Input<Integer> defaultJobTimeoutMinutes;
-        private @Nullable Input<String> name;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<Map<String,String>> tagsAll;
+        private @Nullable Output<String> arn;
+        private @Nullable Output<Integer> defaultJobTimeoutMinutes;
+        private @Nullable Output<String> name;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<Map<String,String>> tagsAll;
 
         public Builder() {
     	      // Empty
@@ -120,53 +120,53 @@ public final class ProjectState extends io.pulumi.resources.ResourceArgs {
     	      this.tagsAll = defaults.tagsAll;
         }
 
-        public Builder arn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
 
         public Builder arn(@Nullable String arn) {
-            this.arn = Input.ofNullable(arn);
+            this.arn = Output.ofNullable(arn);
             return this;
         }
 
-        public Builder defaultJobTimeoutMinutes(@Nullable Input<Integer> defaultJobTimeoutMinutes) {
+        public Builder defaultJobTimeoutMinutes(@Nullable Output<Integer> defaultJobTimeoutMinutes) {
             this.defaultJobTimeoutMinutes = defaultJobTimeoutMinutes;
             return this;
         }
 
         public Builder defaultJobTimeoutMinutes(@Nullable Integer defaultJobTimeoutMinutes) {
-            this.defaultJobTimeoutMinutes = Input.ofNullable(defaultJobTimeoutMinutes);
+            this.defaultJobTimeoutMinutes = Output.ofNullable(defaultJobTimeoutMinutes);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Input.ofNullable(tagsAll);
+            this.tagsAll = Output.ofNullable(tagsAll);
             return this;
         }
         public ProjectState build() {

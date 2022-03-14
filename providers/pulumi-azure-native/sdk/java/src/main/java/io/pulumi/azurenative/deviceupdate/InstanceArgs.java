@@ -5,7 +5,7 @@ package io.pulumi.azurenative.deviceupdate;
 
 import io.pulumi.azurenative.deviceupdate.inputs.DiagnosticStoragePropertiesArgs;
 import io.pulumi.azurenative.deviceupdate.inputs.IotHubSettingsArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -24,9 +24,9 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="accountName", required=true)
-      private final Input<String> accountName;
+      private final Output<String> accountName;
 
-    public Input<String> getAccountName() {
+    public Output<String> getAccountName() {
         return this.accountName;
     }
 
@@ -35,10 +35,10 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="diagnosticStorageProperties")
-      private final @Nullable Input<DiagnosticStoragePropertiesArgs> diagnosticStorageProperties;
+      private final @Nullable Output<DiagnosticStoragePropertiesArgs> diagnosticStorageProperties;
 
-    public Input<DiagnosticStoragePropertiesArgs> getDiagnosticStorageProperties() {
-        return this.diagnosticStorageProperties == null ? Input.empty() : this.diagnosticStorageProperties;
+    public Output<DiagnosticStoragePropertiesArgs> getDiagnosticStorageProperties() {
+        return this.diagnosticStorageProperties == null ? Output.empty() : this.diagnosticStorageProperties;
     }
 
     /**
@@ -46,10 +46,10 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enableDiagnostics")
-      private final @Nullable Input<Boolean> enableDiagnostics;
+      private final @Nullable Output<Boolean> enableDiagnostics;
 
-    public Input<Boolean> getEnableDiagnostics() {
-        return this.enableDiagnostics == null ? Input.empty() : this.enableDiagnostics;
+    public Output<Boolean> getEnableDiagnostics() {
+        return this.enableDiagnostics == null ? Output.empty() : this.enableDiagnostics;
     }
 
     /**
@@ -57,10 +57,10 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="instanceName")
-      private final @Nullable Input<String> instanceName;
+      private final @Nullable Output<String> instanceName;
 
-    public Input<String> getInstanceName() {
-        return this.instanceName == null ? Input.empty() : this.instanceName;
+    public Output<String> getInstanceName() {
+        return this.instanceName == null ? Output.empty() : this.instanceName;
     }
 
     /**
@@ -68,10 +68,10 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="iotHubs")
-      private final @Nullable Input<List<IotHubSettingsArgs>> iotHubs;
+      private final @Nullable Output<List<IotHubSettingsArgs>> iotHubs;
 
-    public Input<List<IotHubSettingsArgs>> getIotHubs() {
-        return this.iotHubs == null ? Input.empty() : this.iotHubs;
+    public Output<List<IotHubSettingsArgs>> getIotHubs() {
+        return this.iotHubs == null ? Output.empty() : this.iotHubs;
     }
 
     /**
@@ -79,10 +79,10 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -90,9 +90,9 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -101,21 +101,21 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public InstanceArgs(
-        Input<String> accountName,
-        @Nullable Input<DiagnosticStoragePropertiesArgs> diagnosticStorageProperties,
-        @Nullable Input<Boolean> enableDiagnostics,
-        @Nullable Input<String> instanceName,
-        @Nullable Input<List<IotHubSettingsArgs>> iotHubs,
-        @Nullable Input<String> location,
-        Input<String> resourceGroupName,
-        @Nullable Input<Map<String,String>> tags) {
+        Output<String> accountName,
+        @Nullable Output<DiagnosticStoragePropertiesArgs> diagnosticStorageProperties,
+        @Nullable Output<Boolean> enableDiagnostics,
+        @Nullable Output<String> instanceName,
+        @Nullable Output<List<IotHubSettingsArgs>> iotHubs,
+        @Nullable Output<String> location,
+        Output<String> resourceGroupName,
+        @Nullable Output<Map<String,String>> tags) {
         this.accountName = Objects.requireNonNull(accountName, "expected parameter 'accountName' to be non-null");
         this.diagnosticStorageProperties = diagnosticStorageProperties;
         this.enableDiagnostics = enableDiagnostics;
@@ -127,14 +127,14 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private InstanceArgs() {
-        this.accountName = Input.empty();
-        this.diagnosticStorageProperties = Input.empty();
-        this.enableDiagnostics = Input.empty();
-        this.instanceName = Input.empty();
-        this.iotHubs = Input.empty();
-        this.location = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.tags = Input.empty();
+        this.accountName = Output.empty();
+        this.diagnosticStorageProperties = Output.empty();
+        this.enableDiagnostics = Output.empty();
+        this.instanceName = Output.empty();
+        this.iotHubs = Output.empty();
+        this.location = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -146,14 +146,14 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> accountName;
-        private @Nullable Input<DiagnosticStoragePropertiesArgs> diagnosticStorageProperties;
-        private @Nullable Input<Boolean> enableDiagnostics;
-        private @Nullable Input<String> instanceName;
-        private @Nullable Input<List<IotHubSettingsArgs>> iotHubs;
-        private @Nullable Input<String> location;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<Map<String,String>> tags;
+        private Output<String> accountName;
+        private @Nullable Output<DiagnosticStoragePropertiesArgs> diagnosticStorageProperties;
+        private @Nullable Output<Boolean> enableDiagnostics;
+        private @Nullable Output<String> instanceName;
+        private @Nullable Output<List<IotHubSettingsArgs>> iotHubs;
+        private @Nullable Output<String> location;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<Map<String,String>> tags;
 
         public Builder() {
     	      // Empty
@@ -171,83 +171,83 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder accountName(Input<String> accountName) {
+        public Builder accountName(Output<String> accountName) {
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
 
         public Builder accountName(String accountName) {
-            this.accountName = Input.of(Objects.requireNonNull(accountName));
+            this.accountName = Output.of(Objects.requireNonNull(accountName));
             return this;
         }
 
-        public Builder diagnosticStorageProperties(@Nullable Input<DiagnosticStoragePropertiesArgs> diagnosticStorageProperties) {
+        public Builder diagnosticStorageProperties(@Nullable Output<DiagnosticStoragePropertiesArgs> diagnosticStorageProperties) {
             this.diagnosticStorageProperties = diagnosticStorageProperties;
             return this;
         }
 
         public Builder diagnosticStorageProperties(@Nullable DiagnosticStoragePropertiesArgs diagnosticStorageProperties) {
-            this.diagnosticStorageProperties = Input.ofNullable(diagnosticStorageProperties);
+            this.diagnosticStorageProperties = Output.ofNullable(diagnosticStorageProperties);
             return this;
         }
 
-        public Builder enableDiagnostics(@Nullable Input<Boolean> enableDiagnostics) {
+        public Builder enableDiagnostics(@Nullable Output<Boolean> enableDiagnostics) {
             this.enableDiagnostics = enableDiagnostics;
             return this;
         }
 
         public Builder enableDiagnostics(@Nullable Boolean enableDiagnostics) {
-            this.enableDiagnostics = Input.ofNullable(enableDiagnostics);
+            this.enableDiagnostics = Output.ofNullable(enableDiagnostics);
             return this;
         }
 
-        public Builder instanceName(@Nullable Input<String> instanceName) {
+        public Builder instanceName(@Nullable Output<String> instanceName) {
             this.instanceName = instanceName;
             return this;
         }
 
         public Builder instanceName(@Nullable String instanceName) {
-            this.instanceName = Input.ofNullable(instanceName);
+            this.instanceName = Output.ofNullable(instanceName);
             return this;
         }
 
-        public Builder iotHubs(@Nullable Input<List<IotHubSettingsArgs>> iotHubs) {
+        public Builder iotHubs(@Nullable Output<List<IotHubSettingsArgs>> iotHubs) {
             this.iotHubs = iotHubs;
             return this;
         }
 
         public Builder iotHubs(@Nullable List<IotHubSettingsArgs> iotHubs) {
-            this.iotHubs = Input.ofNullable(iotHubs);
+            this.iotHubs = Output.ofNullable(iotHubs);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public InstanceArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.run_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class TCPSocketActionArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="host")
-      private final @Nullable Input<String> host;
+      private final @Nullable Output<String> host;
 
-    public Input<String> getHost() {
-        return this.host == null ? Input.empty() : this.host;
+    public Output<String> getHost() {
+        return this.host == null ? Output.empty() : this.host;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class TCPSocketActionArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="port")
-      private final @Nullable Input<Integer> port;
+      private final @Nullable Output<Integer> port;
 
-    public Input<Integer> getPort() {
-        return this.port == null ? Input.empty() : this.port;
+    public Output<Integer> getPort() {
+        return this.port == null ? Output.empty() : this.port;
     }
 
     public TCPSocketActionArgs(
-        @Nullable Input<String> host,
-        @Nullable Input<Integer> port) {
+        @Nullable Output<String> host,
+        @Nullable Output<Integer> port) {
         this.host = host;
         this.port = port;
     }
 
     private TCPSocketActionArgs() {
-        this.host = Input.empty();
-        this.port = Input.empty();
+        this.host = Output.empty();
+        this.port = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class TCPSocketActionArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private @Nullable Input<String> host;
-        private @Nullable Input<Integer> port;
+        private @Nullable Output<String> host;
+        private @Nullable Output<Integer> port;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class TCPSocketActionArgs extends io.pulumi.resources.ResourceArgs 
     	      this.port = defaults.port;
         }
 
-        public Builder host(@Nullable Input<String> host) {
+        public Builder host(@Nullable Output<String> host) {
             this.host = host;
             return this;
         }
 
         public Builder host(@Nullable String host) {
-            this.host = Input.ofNullable(host);
+            this.host = Output.ofNullable(host);
             return this;
         }
 
-        public Builder port(@Nullable Input<Integer> port) {
+        public Builder port(@Nullable Output<Integer> port) {
             this.port = port;
             return this;
         }
 
         public Builder port(@Nullable Integer port) {
-            this.port = Input.ofNullable(port);
+            this.port = Output.ofNullable(port);
             return this;
         }
         public TCPSocketActionArgs build() {

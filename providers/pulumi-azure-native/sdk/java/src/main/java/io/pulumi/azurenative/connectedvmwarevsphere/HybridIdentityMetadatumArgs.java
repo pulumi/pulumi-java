@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.connectedvmwarevsphere;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class HybridIdentityMetadatumArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="metadataName")
-      private final @Nullable Input<String> metadataName;
+      private final @Nullable Output<String> metadataName;
 
-    public Input<String> getMetadataName() {
-        return this.metadataName == null ? Input.empty() : this.metadataName;
+    public Output<String> getMetadataName() {
+        return this.metadataName == null ? Output.empty() : this.metadataName;
     }
 
     /**
@@ -30,10 +30,10 @@ public final class HybridIdentityMetadatumArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="publicKey")
-      private final @Nullable Input<String> publicKey;
+      private final @Nullable Output<String> publicKey;
 
-    public Input<String> getPublicKey() {
-        return this.publicKey == null ? Input.empty() : this.publicKey;
+    public Output<String> getPublicKey() {
+        return this.publicKey == null ? Output.empty() : this.publicKey;
     }
 
     /**
@@ -41,9 +41,9 @@ public final class HybridIdentityMetadatumArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -52,9 +52,9 @@ public final class HybridIdentityMetadatumArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="virtualMachineName", required=true)
-      private final Input<String> virtualMachineName;
+      private final Output<String> virtualMachineName;
 
-    public Input<String> getVirtualMachineName() {
+    public Output<String> getVirtualMachineName() {
         return this.virtualMachineName;
     }
 
@@ -63,18 +63,18 @@ public final class HybridIdentityMetadatumArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="vmId")
-      private final @Nullable Input<String> vmId;
+      private final @Nullable Output<String> vmId;
 
-    public Input<String> getVmId() {
-        return this.vmId == null ? Input.empty() : this.vmId;
+    public Output<String> getVmId() {
+        return this.vmId == null ? Output.empty() : this.vmId;
     }
 
     public HybridIdentityMetadatumArgs(
-        @Nullable Input<String> metadataName,
-        @Nullable Input<String> publicKey,
-        Input<String> resourceGroupName,
-        Input<String> virtualMachineName,
-        @Nullable Input<String> vmId) {
+        @Nullable Output<String> metadataName,
+        @Nullable Output<String> publicKey,
+        Output<String> resourceGroupName,
+        Output<String> virtualMachineName,
+        @Nullable Output<String> vmId) {
         this.metadataName = metadataName;
         this.publicKey = publicKey;
         this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
@@ -83,11 +83,11 @@ public final class HybridIdentityMetadatumArgs extends io.pulumi.resources.Resou
     }
 
     private HybridIdentityMetadatumArgs() {
-        this.metadataName = Input.empty();
-        this.publicKey = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.virtualMachineName = Input.empty();
-        this.vmId = Input.empty();
+        this.metadataName = Output.empty();
+        this.publicKey = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.virtualMachineName = Output.empty();
+        this.vmId = Output.empty();
     }
 
     public static Builder builder() {
@@ -99,11 +99,11 @@ public final class HybridIdentityMetadatumArgs extends io.pulumi.resources.Resou
     }
 
     public static final class Builder {
-        private @Nullable Input<String> metadataName;
-        private @Nullable Input<String> publicKey;
-        private Input<String> resourceGroupName;
-        private Input<String> virtualMachineName;
-        private @Nullable Input<String> vmId;
+        private @Nullable Output<String> metadataName;
+        private @Nullable Output<String> publicKey;
+        private Output<String> resourceGroupName;
+        private Output<String> virtualMachineName;
+        private @Nullable Output<String> vmId;
 
         public Builder() {
     	      // Empty
@@ -118,53 +118,53 @@ public final class HybridIdentityMetadatumArgs extends io.pulumi.resources.Resou
     	      this.vmId = defaults.vmId;
         }
 
-        public Builder metadataName(@Nullable Input<String> metadataName) {
+        public Builder metadataName(@Nullable Output<String> metadataName) {
             this.metadataName = metadataName;
             return this;
         }
 
         public Builder metadataName(@Nullable String metadataName) {
-            this.metadataName = Input.ofNullable(metadataName);
+            this.metadataName = Output.ofNullable(metadataName);
             return this;
         }
 
-        public Builder publicKey(@Nullable Input<String> publicKey) {
+        public Builder publicKey(@Nullable Output<String> publicKey) {
             this.publicKey = publicKey;
             return this;
         }
 
         public Builder publicKey(@Nullable String publicKey) {
-            this.publicKey = Input.ofNullable(publicKey);
+            this.publicKey = Output.ofNullable(publicKey);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder virtualMachineName(Input<String> virtualMachineName) {
+        public Builder virtualMachineName(Output<String> virtualMachineName) {
             this.virtualMachineName = Objects.requireNonNull(virtualMachineName);
             return this;
         }
 
         public Builder virtualMachineName(String virtualMachineName) {
-            this.virtualMachineName = Input.of(Objects.requireNonNull(virtualMachineName));
+            this.virtualMachineName = Output.of(Objects.requireNonNull(virtualMachineName));
             return this;
         }
 
-        public Builder vmId(@Nullable Input<String> vmId) {
+        public Builder vmId(@Nullable Output<String> vmId) {
             this.vmId = vmId;
             return this;
         }
 
         public Builder vmId(@Nullable String vmId) {
-            this.vmId = Input.ofNullable(vmId);
+            this.vmId = Output.ofNullable(vmId);
             return this;
         }
         public HybridIdentityMetadatumArgs build() {

@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.applicationinsights.inputs;
 
 import io.pulumi.awsnative.applicationinsights.inputs.ApplicationLogPatternArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -24,9 +24,9 @@ public final class ApplicationLogPatternSetArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="logPatterns", required=true)
-      private final Input<List<ApplicationLogPatternArgs>> logPatterns;
+      private final Output<List<ApplicationLogPatternArgs>> logPatterns;
 
-    public Input<List<ApplicationLogPatternArgs>> getLogPatterns() {
+    public Output<List<ApplicationLogPatternArgs>> getLogPatterns() {
         return this.logPatterns;
     }
 
@@ -35,22 +35,22 @@ public final class ApplicationLogPatternSetArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="patternSetName", required=true)
-      private final Input<String> patternSetName;
+      private final Output<String> patternSetName;
 
-    public Input<String> getPatternSetName() {
+    public Output<String> getPatternSetName() {
         return this.patternSetName;
     }
 
     public ApplicationLogPatternSetArgs(
-        Input<List<ApplicationLogPatternArgs>> logPatterns,
-        Input<String> patternSetName) {
+        Output<List<ApplicationLogPatternArgs>> logPatterns,
+        Output<String> patternSetName) {
         this.logPatterns = Objects.requireNonNull(logPatterns, "expected parameter 'logPatterns' to be non-null");
         this.patternSetName = Objects.requireNonNull(patternSetName, "expected parameter 'patternSetName' to be non-null");
     }
 
     private ApplicationLogPatternSetArgs() {
-        this.logPatterns = Input.empty();
-        this.patternSetName = Input.empty();
+        this.logPatterns = Output.empty();
+        this.patternSetName = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class ApplicationLogPatternSetArgs extends io.pulumi.resources.Reso
     }
 
     public static final class Builder {
-        private Input<List<ApplicationLogPatternArgs>> logPatterns;
-        private Input<String> patternSetName;
+        private Output<List<ApplicationLogPatternArgs>> logPatterns;
+        private Output<String> patternSetName;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class ApplicationLogPatternSetArgs extends io.pulumi.resources.Reso
     	      this.patternSetName = defaults.patternSetName;
         }
 
-        public Builder logPatterns(Input<List<ApplicationLogPatternArgs>> logPatterns) {
+        public Builder logPatterns(Output<List<ApplicationLogPatternArgs>> logPatterns) {
             this.logPatterns = Objects.requireNonNull(logPatterns);
             return this;
         }
 
         public Builder logPatterns(List<ApplicationLogPatternArgs> logPatterns) {
-            this.logPatterns = Input.of(Objects.requireNonNull(logPatterns));
+            this.logPatterns = Output.of(Objects.requireNonNull(logPatterns));
             return this;
         }
 
-        public Builder patternSetName(Input<String> patternSetName) {
+        public Builder patternSetName(Output<String> patternSetName) {
             this.patternSetName = Objects.requireNonNull(patternSetName);
             return this;
         }
 
         public Builder patternSetName(String patternSetName) {
-            this.patternSetName = Input.of(Objects.requireNonNull(patternSetName));
+            this.patternSetName = Output.of(Objects.requireNonNull(patternSetName));
             return this;
         }
         public ApplicationLogPatternSetArgs build() {

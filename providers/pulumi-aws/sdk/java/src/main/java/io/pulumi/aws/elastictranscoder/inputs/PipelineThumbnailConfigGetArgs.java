@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.elastictranscoder.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class PipelineThumbnailConfigGetArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="bucket")
-      private final @Nullable Input<String> bucket;
+      private final @Nullable Output<String> bucket;
 
-    public Input<String> getBucket() {
-        return this.bucket == null ? Input.empty() : this.bucket;
+    public Output<String> getBucket() {
+        return this.bucket == null ? Output.empty() : this.bucket;
     }
 
     /**
@@ -30,22 +30,22 @@ public final class PipelineThumbnailConfigGetArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="storageClass")
-      private final @Nullable Input<String> storageClass;
+      private final @Nullable Output<String> storageClass;
 
-    public Input<String> getStorageClass() {
-        return this.storageClass == null ? Input.empty() : this.storageClass;
+    public Output<String> getStorageClass() {
+        return this.storageClass == null ? Output.empty() : this.storageClass;
     }
 
     public PipelineThumbnailConfigGetArgs(
-        @Nullable Input<String> bucket,
-        @Nullable Input<String> storageClass) {
+        @Nullable Output<String> bucket,
+        @Nullable Output<String> storageClass) {
         this.bucket = bucket;
         this.storageClass = storageClass;
     }
 
     private PipelineThumbnailConfigGetArgs() {
-        this.bucket = Input.empty();
-        this.storageClass = Input.empty();
+        this.bucket = Output.empty();
+        this.storageClass = Output.empty();
     }
 
     public static Builder builder() {
@@ -57,8 +57,8 @@ public final class PipelineThumbnailConfigGetArgs extends io.pulumi.resources.Re
     }
 
     public static final class Builder {
-        private @Nullable Input<String> bucket;
-        private @Nullable Input<String> storageClass;
+        private @Nullable Output<String> bucket;
+        private @Nullable Output<String> storageClass;
 
         public Builder() {
     	      // Empty
@@ -70,23 +70,23 @@ public final class PipelineThumbnailConfigGetArgs extends io.pulumi.resources.Re
     	      this.storageClass = defaults.storageClass;
         }
 
-        public Builder bucket(@Nullable Input<String> bucket) {
+        public Builder bucket(@Nullable Output<String> bucket) {
             this.bucket = bucket;
             return this;
         }
 
         public Builder bucket(@Nullable String bucket) {
-            this.bucket = Input.ofNullable(bucket);
+            this.bucket = Output.ofNullable(bucket);
             return this;
         }
 
-        public Builder storageClass(@Nullable Input<String> storageClass) {
+        public Builder storageClass(@Nullable Output<String> storageClass) {
             this.storageClass = storageClass;
             return this;
         }
 
         public Builder storageClass(@Nullable String storageClass) {
-            this.storageClass = Input.ofNullable(storageClass);
+            this.storageClass = Output.ofNullable(storageClass);
             return this;
         }
         public PipelineThumbnailConfigGetArgs build() {

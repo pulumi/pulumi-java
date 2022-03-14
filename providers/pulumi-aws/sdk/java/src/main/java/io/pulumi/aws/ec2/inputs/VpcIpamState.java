@@ -4,7 +4,7 @@
 package io.pulumi.aws.ec2.inputs;
 
 import io.pulumi.aws.ec2.inputs.VpcIpamOperatingRegionGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -23,10 +23,10 @@ public final class VpcIpamState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arn")
-      private final @Nullable Input<String> arn;
+      private final @Nullable Output<String> arn;
 
-    public Input<String> getArn() {
-        return this.arn == null ? Input.empty() : this.arn;
+    public Output<String> getArn() {
+        return this.arn == null ? Output.empty() : this.arn;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class VpcIpamState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -45,10 +45,10 @@ public final class VpcIpamState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="operatingRegions")
-      private final @Nullable Input<List<VpcIpamOperatingRegionGetArgs>> operatingRegions;
+      private final @Nullable Output<List<VpcIpamOperatingRegionGetArgs>> operatingRegions;
 
-    public Input<List<VpcIpamOperatingRegionGetArgs>> getOperatingRegions() {
-        return this.operatingRegions == null ? Input.empty() : this.operatingRegions;
+    public Output<List<VpcIpamOperatingRegionGetArgs>> getOperatingRegions() {
+        return this.operatingRegions == null ? Output.empty() : this.operatingRegions;
     }
 
     /**
@@ -56,10 +56,10 @@ public final class VpcIpamState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="privateDefaultScopeId")
-      private final @Nullable Input<String> privateDefaultScopeId;
+      private final @Nullable Output<String> privateDefaultScopeId;
 
-    public Input<String> getPrivateDefaultScopeId() {
-        return this.privateDefaultScopeId == null ? Input.empty() : this.privateDefaultScopeId;
+    public Output<String> getPrivateDefaultScopeId() {
+        return this.privateDefaultScopeId == null ? Output.empty() : this.privateDefaultScopeId;
     }
 
     /**
@@ -68,10 +68,10 @@ public final class VpcIpamState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="publicDefaultScopeId")
-      private final @Nullable Input<String> publicDefaultScopeId;
+      private final @Nullable Output<String> publicDefaultScopeId;
 
-    public Input<String> getPublicDefaultScopeId() {
-        return this.publicDefaultScopeId == null ? Input.empty() : this.publicDefaultScopeId;
+    public Output<String> getPublicDefaultScopeId() {
+        return this.publicDefaultScopeId == null ? Output.empty() : this.publicDefaultScopeId;
     }
 
     /**
@@ -79,10 +79,10 @@ public final class VpcIpamState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="scopeCount")
-      private final @Nullable Input<Integer> scopeCount;
+      private final @Nullable Output<Integer> scopeCount;
 
-    public Input<Integer> getScopeCount() {
-        return this.scopeCount == null ? Input.empty() : this.scopeCount;
+    public Output<Integer> getScopeCount() {
+        return this.scopeCount == null ? Output.empty() : this.scopeCount;
     }
 
     /**
@@ -90,10 +90,10 @@ public final class VpcIpamState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -101,21 +101,21 @@ public final class VpcIpamState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tagsAll")
-      private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Input<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Input.empty() : this.tagsAll;
+    public Output<Map<String,String>> getTagsAll() {
+        return this.tagsAll == null ? Output.empty() : this.tagsAll;
     }
 
     public VpcIpamState(
-        @Nullable Input<String> arn,
-        @Nullable Input<String> description,
-        @Nullable Input<List<VpcIpamOperatingRegionGetArgs>> operatingRegions,
-        @Nullable Input<String> privateDefaultScopeId,
-        @Nullable Input<String> publicDefaultScopeId,
-        @Nullable Input<Integer> scopeCount,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<Map<String,String>> tagsAll) {
+        @Nullable Output<String> arn,
+        @Nullable Output<String> description,
+        @Nullable Output<List<VpcIpamOperatingRegionGetArgs>> operatingRegions,
+        @Nullable Output<String> privateDefaultScopeId,
+        @Nullable Output<String> publicDefaultScopeId,
+        @Nullable Output<Integer> scopeCount,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<Map<String,String>> tagsAll) {
         this.arn = arn;
         this.description = description;
         this.operatingRegions = operatingRegions;
@@ -127,14 +127,14 @@ public final class VpcIpamState extends io.pulumi.resources.ResourceArgs {
     }
 
     private VpcIpamState() {
-        this.arn = Input.empty();
-        this.description = Input.empty();
-        this.operatingRegions = Input.empty();
-        this.privateDefaultScopeId = Input.empty();
-        this.publicDefaultScopeId = Input.empty();
-        this.scopeCount = Input.empty();
-        this.tags = Input.empty();
-        this.tagsAll = Input.empty();
+        this.arn = Output.empty();
+        this.description = Output.empty();
+        this.operatingRegions = Output.empty();
+        this.privateDefaultScopeId = Output.empty();
+        this.publicDefaultScopeId = Output.empty();
+        this.scopeCount = Output.empty();
+        this.tags = Output.empty();
+        this.tagsAll = Output.empty();
     }
 
     public static Builder builder() {
@@ -146,14 +146,14 @@ public final class VpcIpamState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> arn;
-        private @Nullable Input<String> description;
-        private @Nullable Input<List<VpcIpamOperatingRegionGetArgs>> operatingRegions;
-        private @Nullable Input<String> privateDefaultScopeId;
-        private @Nullable Input<String> publicDefaultScopeId;
-        private @Nullable Input<Integer> scopeCount;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<Map<String,String>> tagsAll;
+        private @Nullable Output<String> arn;
+        private @Nullable Output<String> description;
+        private @Nullable Output<List<VpcIpamOperatingRegionGetArgs>> operatingRegions;
+        private @Nullable Output<String> privateDefaultScopeId;
+        private @Nullable Output<String> publicDefaultScopeId;
+        private @Nullable Output<Integer> scopeCount;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<Map<String,String>> tagsAll;
 
         public Builder() {
     	      // Empty
@@ -171,83 +171,83 @@ public final class VpcIpamState extends io.pulumi.resources.ResourceArgs {
     	      this.tagsAll = defaults.tagsAll;
         }
 
-        public Builder arn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
 
         public Builder arn(@Nullable String arn) {
-            this.arn = Input.ofNullable(arn);
+            this.arn = Output.ofNullable(arn);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder operatingRegions(@Nullable Input<List<VpcIpamOperatingRegionGetArgs>> operatingRegions) {
+        public Builder operatingRegions(@Nullable Output<List<VpcIpamOperatingRegionGetArgs>> operatingRegions) {
             this.operatingRegions = operatingRegions;
             return this;
         }
 
         public Builder operatingRegions(@Nullable List<VpcIpamOperatingRegionGetArgs> operatingRegions) {
-            this.operatingRegions = Input.ofNullable(operatingRegions);
+            this.operatingRegions = Output.ofNullable(operatingRegions);
             return this;
         }
 
-        public Builder privateDefaultScopeId(@Nullable Input<String> privateDefaultScopeId) {
+        public Builder privateDefaultScopeId(@Nullable Output<String> privateDefaultScopeId) {
             this.privateDefaultScopeId = privateDefaultScopeId;
             return this;
         }
 
         public Builder privateDefaultScopeId(@Nullable String privateDefaultScopeId) {
-            this.privateDefaultScopeId = Input.ofNullable(privateDefaultScopeId);
+            this.privateDefaultScopeId = Output.ofNullable(privateDefaultScopeId);
             return this;
         }
 
-        public Builder publicDefaultScopeId(@Nullable Input<String> publicDefaultScopeId) {
+        public Builder publicDefaultScopeId(@Nullable Output<String> publicDefaultScopeId) {
             this.publicDefaultScopeId = publicDefaultScopeId;
             return this;
         }
 
         public Builder publicDefaultScopeId(@Nullable String publicDefaultScopeId) {
-            this.publicDefaultScopeId = Input.ofNullable(publicDefaultScopeId);
+            this.publicDefaultScopeId = Output.ofNullable(publicDefaultScopeId);
             return this;
         }
 
-        public Builder scopeCount(@Nullable Input<Integer> scopeCount) {
+        public Builder scopeCount(@Nullable Output<Integer> scopeCount) {
             this.scopeCount = scopeCount;
             return this;
         }
 
         public Builder scopeCount(@Nullable Integer scopeCount) {
-            this.scopeCount = Input.ofNullable(scopeCount);
+            this.scopeCount = Output.ofNullable(scopeCount);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Input.ofNullable(tagsAll);
+            this.tagsAll = Output.ofNullable(tagsAll);
             return this;
         }
         public VpcIpamState build() {

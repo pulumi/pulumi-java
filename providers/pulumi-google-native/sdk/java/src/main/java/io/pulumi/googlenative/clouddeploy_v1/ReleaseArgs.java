@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.clouddeploy_v1;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.clouddeploy_v1.inputs.BuildArtifactArgs;
 import java.lang.String;
@@ -22,10 +22,10 @@ public final class ReleaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="annotations")
-      private final @Nullable Input<Map<String,String>> annotations;
+      private final @Nullable Output<Map<String,String>> annotations;
 
-    public Input<Map<String,String>> getAnnotations() {
-        return this.annotations == null ? Input.empty() : this.annotations;
+    public Output<Map<String,String>> getAnnotations() {
+        return this.annotations == null ? Output.empty() : this.annotations;
     }
 
     /**
@@ -33,16 +33,16 @@ public final class ReleaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="buildArtifacts")
-      private final @Nullable Input<List<BuildArtifactArgs>> buildArtifacts;
+      private final @Nullable Output<List<BuildArtifactArgs>> buildArtifacts;
 
-    public Input<List<BuildArtifactArgs>> getBuildArtifacts() {
-        return this.buildArtifacts == null ? Input.empty() : this.buildArtifacts;
+    public Output<List<BuildArtifactArgs>> getBuildArtifacts() {
+        return this.buildArtifacts == null ? Output.empty() : this.buildArtifacts;
     }
 
     @InputImport(name="deliveryPipelineId", required=true)
-      private final Input<String> deliveryPipelineId;
+      private final Output<String> deliveryPipelineId;
 
-    public Input<String> getDeliveryPipelineId() {
+    public Output<String> getDeliveryPipelineId() {
         return this.deliveryPipelineId;
     }
 
@@ -51,10 +51,10 @@ public final class ReleaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -62,10 +62,10 @@ public final class ReleaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="etag")
-      private final @Nullable Input<String> etag;
+      private final @Nullable Output<String> etag;
 
-    public Input<String> getEtag() {
-        return this.etag == null ? Input.empty() : this.etag;
+    public Output<String> getEtag() {
+        return this.etag == null ? Output.empty() : this.etag;
     }
 
     /**
@@ -73,17 +73,17 @@ public final class ReleaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labels")
-      private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Output<Map<String,String>> labels;
 
-    public Input<Map<String,String>> getLabels() {
-        return this.labels == null ? Input.empty() : this.labels;
+    public Output<Map<String,String>> getLabels() {
+        return this.labels == null ? Output.empty() : this.labels;
     }
 
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -91,31 +91,31 @@ public final class ReleaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     @InputImport(name="releaseId", required=true)
-      private final Input<String> releaseId;
+      private final Output<String> releaseId;
 
-    public Input<String> getReleaseId() {
+    public Output<String> getReleaseId() {
         return this.releaseId;
     }
 
     @InputImport(name="requestId")
-      private final @Nullable Input<String> requestId;
+      private final @Nullable Output<String> requestId;
 
-    public Input<String> getRequestId() {
-        return this.requestId == null ? Input.empty() : this.requestId;
+    public Output<String> getRequestId() {
+        return this.requestId == null ? Output.empty() : this.requestId;
     }
 
     /**
@@ -123,10 +123,10 @@ public final class ReleaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="skaffoldConfigPath")
-      private final @Nullable Input<String> skaffoldConfigPath;
+      private final @Nullable Output<String> skaffoldConfigPath;
 
-    public Input<String> getSkaffoldConfigPath() {
-        return this.skaffoldConfigPath == null ? Input.empty() : this.skaffoldConfigPath;
+    public Output<String> getSkaffoldConfigPath() {
+        return this.skaffoldConfigPath == null ? Output.empty() : this.skaffoldConfigPath;
     }
 
     /**
@@ -134,10 +134,10 @@ public final class ReleaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="skaffoldConfigUri")
-      private final @Nullable Input<String> skaffoldConfigUri;
+      private final @Nullable Output<String> skaffoldConfigUri;
 
-    public Input<String> getSkaffoldConfigUri() {
-        return this.skaffoldConfigUri == null ? Input.empty() : this.skaffoldConfigUri;
+    public Output<String> getSkaffoldConfigUri() {
+        return this.skaffoldConfigUri == null ? Output.empty() : this.skaffoldConfigUri;
     }
 
     /**
@@ -145,35 +145,35 @@ public final class ReleaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="skaffoldVersion")
-      private final @Nullable Input<String> skaffoldVersion;
+      private final @Nullable Output<String> skaffoldVersion;
 
-    public Input<String> getSkaffoldVersion() {
-        return this.skaffoldVersion == null ? Input.empty() : this.skaffoldVersion;
+    public Output<String> getSkaffoldVersion() {
+        return this.skaffoldVersion == null ? Output.empty() : this.skaffoldVersion;
     }
 
     @InputImport(name="validateOnly")
-      private final @Nullable Input<String> validateOnly;
+      private final @Nullable Output<String> validateOnly;
 
-    public Input<String> getValidateOnly() {
-        return this.validateOnly == null ? Input.empty() : this.validateOnly;
+    public Output<String> getValidateOnly() {
+        return this.validateOnly == null ? Output.empty() : this.validateOnly;
     }
 
     public ReleaseArgs(
-        @Nullable Input<Map<String,String>> annotations,
-        @Nullable Input<List<BuildArtifactArgs>> buildArtifacts,
-        Input<String> deliveryPipelineId,
-        @Nullable Input<String> description,
-        @Nullable Input<String> etag,
-        @Nullable Input<Map<String,String>> labels,
-        @Nullable Input<String> location,
-        @Nullable Input<String> name,
-        @Nullable Input<String> project,
-        Input<String> releaseId,
-        @Nullable Input<String> requestId,
-        @Nullable Input<String> skaffoldConfigPath,
-        @Nullable Input<String> skaffoldConfigUri,
-        @Nullable Input<String> skaffoldVersion,
-        @Nullable Input<String> validateOnly) {
+        @Nullable Output<Map<String,String>> annotations,
+        @Nullable Output<List<BuildArtifactArgs>> buildArtifacts,
+        Output<String> deliveryPipelineId,
+        @Nullable Output<String> description,
+        @Nullable Output<String> etag,
+        @Nullable Output<Map<String,String>> labels,
+        @Nullable Output<String> location,
+        @Nullable Output<String> name,
+        @Nullable Output<String> project,
+        Output<String> releaseId,
+        @Nullable Output<String> requestId,
+        @Nullable Output<String> skaffoldConfigPath,
+        @Nullable Output<String> skaffoldConfigUri,
+        @Nullable Output<String> skaffoldVersion,
+        @Nullable Output<String> validateOnly) {
         this.annotations = annotations;
         this.buildArtifacts = buildArtifacts;
         this.deliveryPipelineId = Objects.requireNonNull(deliveryPipelineId, "expected parameter 'deliveryPipelineId' to be non-null");
@@ -192,21 +192,21 @@ public final class ReleaseArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ReleaseArgs() {
-        this.annotations = Input.empty();
-        this.buildArtifacts = Input.empty();
-        this.deliveryPipelineId = Input.empty();
-        this.description = Input.empty();
-        this.etag = Input.empty();
-        this.labels = Input.empty();
-        this.location = Input.empty();
-        this.name = Input.empty();
-        this.project = Input.empty();
-        this.releaseId = Input.empty();
-        this.requestId = Input.empty();
-        this.skaffoldConfigPath = Input.empty();
-        this.skaffoldConfigUri = Input.empty();
-        this.skaffoldVersion = Input.empty();
-        this.validateOnly = Input.empty();
+        this.annotations = Output.empty();
+        this.buildArtifacts = Output.empty();
+        this.deliveryPipelineId = Output.empty();
+        this.description = Output.empty();
+        this.etag = Output.empty();
+        this.labels = Output.empty();
+        this.location = Output.empty();
+        this.name = Output.empty();
+        this.project = Output.empty();
+        this.releaseId = Output.empty();
+        this.requestId = Output.empty();
+        this.skaffoldConfigPath = Output.empty();
+        this.skaffoldConfigUri = Output.empty();
+        this.skaffoldVersion = Output.empty();
+        this.validateOnly = Output.empty();
     }
 
     public static Builder builder() {
@@ -218,21 +218,21 @@ public final class ReleaseArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Map<String,String>> annotations;
-        private @Nullable Input<List<BuildArtifactArgs>> buildArtifacts;
-        private Input<String> deliveryPipelineId;
-        private @Nullable Input<String> description;
-        private @Nullable Input<String> etag;
-        private @Nullable Input<Map<String,String>> labels;
-        private @Nullable Input<String> location;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> project;
-        private Input<String> releaseId;
-        private @Nullable Input<String> requestId;
-        private @Nullable Input<String> skaffoldConfigPath;
-        private @Nullable Input<String> skaffoldConfigUri;
-        private @Nullable Input<String> skaffoldVersion;
-        private @Nullable Input<String> validateOnly;
+        private @Nullable Output<Map<String,String>> annotations;
+        private @Nullable Output<List<BuildArtifactArgs>> buildArtifacts;
+        private Output<String> deliveryPipelineId;
+        private @Nullable Output<String> description;
+        private @Nullable Output<String> etag;
+        private @Nullable Output<Map<String,String>> labels;
+        private @Nullable Output<String> location;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> project;
+        private Output<String> releaseId;
+        private @Nullable Output<String> requestId;
+        private @Nullable Output<String> skaffoldConfigPath;
+        private @Nullable Output<String> skaffoldConfigUri;
+        private @Nullable Output<String> skaffoldVersion;
+        private @Nullable Output<String> validateOnly;
 
         public Builder() {
     	      // Empty
@@ -257,153 +257,153 @@ public final class ReleaseArgs extends io.pulumi.resources.ResourceArgs {
     	      this.validateOnly = defaults.validateOnly;
         }
 
-        public Builder annotations(@Nullable Input<Map<String,String>> annotations) {
+        public Builder annotations(@Nullable Output<Map<String,String>> annotations) {
             this.annotations = annotations;
             return this;
         }
 
         public Builder annotations(@Nullable Map<String,String> annotations) {
-            this.annotations = Input.ofNullable(annotations);
+            this.annotations = Output.ofNullable(annotations);
             return this;
         }
 
-        public Builder buildArtifacts(@Nullable Input<List<BuildArtifactArgs>> buildArtifacts) {
+        public Builder buildArtifacts(@Nullable Output<List<BuildArtifactArgs>> buildArtifacts) {
             this.buildArtifacts = buildArtifacts;
             return this;
         }
 
         public Builder buildArtifacts(@Nullable List<BuildArtifactArgs> buildArtifacts) {
-            this.buildArtifacts = Input.ofNullable(buildArtifacts);
+            this.buildArtifacts = Output.ofNullable(buildArtifacts);
             return this;
         }
 
-        public Builder deliveryPipelineId(Input<String> deliveryPipelineId) {
+        public Builder deliveryPipelineId(Output<String> deliveryPipelineId) {
             this.deliveryPipelineId = Objects.requireNonNull(deliveryPipelineId);
             return this;
         }
 
         public Builder deliveryPipelineId(String deliveryPipelineId) {
-            this.deliveryPipelineId = Input.of(Objects.requireNonNull(deliveryPipelineId));
+            this.deliveryPipelineId = Output.of(Objects.requireNonNull(deliveryPipelineId));
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder etag(@Nullable Input<String> etag) {
+        public Builder etag(@Nullable Output<String> etag) {
             this.etag = etag;
             return this;
         }
 
         public Builder etag(@Nullable String etag) {
-            this.etag = Input.ofNullable(etag);
+            this.etag = Output.ofNullable(etag);
             return this;
         }
 
-        public Builder labels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
         public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Input.ofNullable(labels);
+            this.labels = Output.ofNullable(labels);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder releaseId(Input<String> releaseId) {
+        public Builder releaseId(Output<String> releaseId) {
             this.releaseId = Objects.requireNonNull(releaseId);
             return this;
         }
 
         public Builder releaseId(String releaseId) {
-            this.releaseId = Input.of(Objects.requireNonNull(releaseId));
+            this.releaseId = Output.of(Objects.requireNonNull(releaseId));
             return this;
         }
 
-        public Builder requestId(@Nullable Input<String> requestId) {
+        public Builder requestId(@Nullable Output<String> requestId) {
             this.requestId = requestId;
             return this;
         }
 
         public Builder requestId(@Nullable String requestId) {
-            this.requestId = Input.ofNullable(requestId);
+            this.requestId = Output.ofNullable(requestId);
             return this;
         }
 
-        public Builder skaffoldConfigPath(@Nullable Input<String> skaffoldConfigPath) {
+        public Builder skaffoldConfigPath(@Nullable Output<String> skaffoldConfigPath) {
             this.skaffoldConfigPath = skaffoldConfigPath;
             return this;
         }
 
         public Builder skaffoldConfigPath(@Nullable String skaffoldConfigPath) {
-            this.skaffoldConfigPath = Input.ofNullable(skaffoldConfigPath);
+            this.skaffoldConfigPath = Output.ofNullable(skaffoldConfigPath);
             return this;
         }
 
-        public Builder skaffoldConfigUri(@Nullable Input<String> skaffoldConfigUri) {
+        public Builder skaffoldConfigUri(@Nullable Output<String> skaffoldConfigUri) {
             this.skaffoldConfigUri = skaffoldConfigUri;
             return this;
         }
 
         public Builder skaffoldConfigUri(@Nullable String skaffoldConfigUri) {
-            this.skaffoldConfigUri = Input.ofNullable(skaffoldConfigUri);
+            this.skaffoldConfigUri = Output.ofNullable(skaffoldConfigUri);
             return this;
         }
 
-        public Builder skaffoldVersion(@Nullable Input<String> skaffoldVersion) {
+        public Builder skaffoldVersion(@Nullable Output<String> skaffoldVersion) {
             this.skaffoldVersion = skaffoldVersion;
             return this;
         }
 
         public Builder skaffoldVersion(@Nullable String skaffoldVersion) {
-            this.skaffoldVersion = Input.ofNullable(skaffoldVersion);
+            this.skaffoldVersion = Output.ofNullable(skaffoldVersion);
             return this;
         }
 
-        public Builder validateOnly(@Nullable Input<String> validateOnly) {
+        public Builder validateOnly(@Nullable Output<String> validateOnly) {
             this.validateOnly = validateOnly;
             return this;
         }
 
         public Builder validateOnly(@Nullable String validateOnly) {
-            this.validateOnly = Input.ofNullable(validateOnly);
+            this.validateOnly = Output.ofNullable(validateOnly);
             return this;
         }
         public ReleaseArgs build() {

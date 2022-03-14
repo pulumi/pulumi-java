@@ -4,7 +4,7 @@
 package io.pulumi.aws.servicediscovery.inputs;
 
 import io.pulumi.aws.servicediscovery.inputs.ServiceDnsConfigDnsRecordArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -21,9 +21,9 @@ public final class ServiceDnsConfigArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="dnsRecords", required=true)
-      private final Input<List<ServiceDnsConfigDnsRecordArgs>> dnsRecords;
+      private final Output<List<ServiceDnsConfigDnsRecordArgs>> dnsRecords;
 
-    public Input<List<ServiceDnsConfigDnsRecordArgs>> getDnsRecords() {
+    public Output<List<ServiceDnsConfigDnsRecordArgs>> getDnsRecords() {
         return this.dnsRecords;
     }
 
@@ -32,9 +32,9 @@ public final class ServiceDnsConfigArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="namespaceId", required=true)
-      private final Input<String> namespaceId;
+      private final Output<String> namespaceId;
 
-    public Input<String> getNamespaceId() {
+    public Output<String> getNamespaceId() {
         return this.namespaceId;
     }
 
@@ -43,25 +43,25 @@ public final class ServiceDnsConfigArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="routingPolicy")
-      private final @Nullable Input<String> routingPolicy;
+      private final @Nullable Output<String> routingPolicy;
 
-    public Input<String> getRoutingPolicy() {
-        return this.routingPolicy == null ? Input.empty() : this.routingPolicy;
+    public Output<String> getRoutingPolicy() {
+        return this.routingPolicy == null ? Output.empty() : this.routingPolicy;
     }
 
     public ServiceDnsConfigArgs(
-        Input<List<ServiceDnsConfigDnsRecordArgs>> dnsRecords,
-        Input<String> namespaceId,
-        @Nullable Input<String> routingPolicy) {
+        Output<List<ServiceDnsConfigDnsRecordArgs>> dnsRecords,
+        Output<String> namespaceId,
+        @Nullable Output<String> routingPolicy) {
         this.dnsRecords = Objects.requireNonNull(dnsRecords, "expected parameter 'dnsRecords' to be non-null");
         this.namespaceId = Objects.requireNonNull(namespaceId, "expected parameter 'namespaceId' to be non-null");
         this.routingPolicy = routingPolicy;
     }
 
     private ServiceDnsConfigArgs() {
-        this.dnsRecords = Input.empty();
-        this.namespaceId = Input.empty();
-        this.routingPolicy = Input.empty();
+        this.dnsRecords = Output.empty();
+        this.namespaceId = Output.empty();
+        this.routingPolicy = Output.empty();
     }
 
     public static Builder builder() {
@@ -73,9 +73,9 @@ public final class ServiceDnsConfigArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private Input<List<ServiceDnsConfigDnsRecordArgs>> dnsRecords;
-        private Input<String> namespaceId;
-        private @Nullable Input<String> routingPolicy;
+        private Output<List<ServiceDnsConfigDnsRecordArgs>> dnsRecords;
+        private Output<String> namespaceId;
+        private @Nullable Output<String> routingPolicy;
 
         public Builder() {
     	      // Empty
@@ -88,33 +88,33 @@ public final class ServiceDnsConfigArgs extends io.pulumi.resources.ResourceArgs
     	      this.routingPolicy = defaults.routingPolicy;
         }
 
-        public Builder dnsRecords(Input<List<ServiceDnsConfigDnsRecordArgs>> dnsRecords) {
+        public Builder dnsRecords(Output<List<ServiceDnsConfigDnsRecordArgs>> dnsRecords) {
             this.dnsRecords = Objects.requireNonNull(dnsRecords);
             return this;
         }
 
         public Builder dnsRecords(List<ServiceDnsConfigDnsRecordArgs> dnsRecords) {
-            this.dnsRecords = Input.of(Objects.requireNonNull(dnsRecords));
+            this.dnsRecords = Output.of(Objects.requireNonNull(dnsRecords));
             return this;
         }
 
-        public Builder namespaceId(Input<String> namespaceId) {
+        public Builder namespaceId(Output<String> namespaceId) {
             this.namespaceId = Objects.requireNonNull(namespaceId);
             return this;
         }
 
         public Builder namespaceId(String namespaceId) {
-            this.namespaceId = Input.of(Objects.requireNonNull(namespaceId));
+            this.namespaceId = Output.of(Objects.requireNonNull(namespaceId));
             return this;
         }
 
-        public Builder routingPolicy(@Nullable Input<String> routingPolicy) {
+        public Builder routingPolicy(@Nullable Output<String> routingPolicy) {
             this.routingPolicy = routingPolicy;
             return this;
         }
 
         public Builder routingPolicy(@Nullable String routingPolicy) {
-            this.routingPolicy = Input.ofNullable(routingPolicy);
+            this.routingPolicy = Output.ofNullable(routingPolicy);
             return this;
         }
         public ServiceDnsConfigArgs build() {

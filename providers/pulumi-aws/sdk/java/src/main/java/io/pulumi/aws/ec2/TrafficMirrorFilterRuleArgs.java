@@ -5,7 +5,7 @@ package io.pulumi.aws.ec2;
 
 import io.pulumi.aws.ec2.inputs.TrafficMirrorFilterRuleDestinationPortRangeArgs;
 import io.pulumi.aws.ec2.inputs.TrafficMirrorFilterRuleSourcePortRangeArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -22,10 +22,10 @@ public final class TrafficMirrorFilterRuleArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -33,9 +33,9 @@ public final class TrafficMirrorFilterRuleArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="destinationCidrBlock", required=true)
-      private final Input<String> destinationCidrBlock;
+      private final Output<String> destinationCidrBlock;
 
-    public Input<String> getDestinationCidrBlock() {
+    public Output<String> getDestinationCidrBlock() {
         return this.destinationCidrBlock;
     }
 
@@ -44,10 +44,10 @@ public final class TrafficMirrorFilterRuleArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="destinationPortRange")
-      private final @Nullable Input<TrafficMirrorFilterRuleDestinationPortRangeArgs> destinationPortRange;
+      private final @Nullable Output<TrafficMirrorFilterRuleDestinationPortRangeArgs> destinationPortRange;
 
-    public Input<TrafficMirrorFilterRuleDestinationPortRangeArgs> getDestinationPortRange() {
-        return this.destinationPortRange == null ? Input.empty() : this.destinationPortRange;
+    public Output<TrafficMirrorFilterRuleDestinationPortRangeArgs> getDestinationPortRange() {
+        return this.destinationPortRange == null ? Output.empty() : this.destinationPortRange;
     }
 
     /**
@@ -55,10 +55,10 @@ public final class TrafficMirrorFilterRuleArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="protocol")
-      private final @Nullable Input<Integer> protocol;
+      private final @Nullable Output<Integer> protocol;
 
-    public Input<Integer> getProtocol() {
-        return this.protocol == null ? Input.empty() : this.protocol;
+    public Output<Integer> getProtocol() {
+        return this.protocol == null ? Output.empty() : this.protocol;
     }
 
     /**
@@ -66,9 +66,9 @@ public final class TrafficMirrorFilterRuleArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="ruleAction", required=true)
-      private final Input<String> ruleAction;
+      private final Output<String> ruleAction;
 
-    public Input<String> getRuleAction() {
+    public Output<String> getRuleAction() {
         return this.ruleAction;
     }
 
@@ -77,9 +77,9 @@ public final class TrafficMirrorFilterRuleArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="ruleNumber", required=true)
-      private final Input<Integer> ruleNumber;
+      private final Output<Integer> ruleNumber;
 
-    public Input<Integer> getRuleNumber() {
+    public Output<Integer> getRuleNumber() {
         return this.ruleNumber;
     }
 
@@ -88,9 +88,9 @@ public final class TrafficMirrorFilterRuleArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="sourceCidrBlock", required=true)
-      private final Input<String> sourceCidrBlock;
+      private final Output<String> sourceCidrBlock;
 
-    public Input<String> getSourceCidrBlock() {
+    public Output<String> getSourceCidrBlock() {
         return this.sourceCidrBlock;
     }
 
@@ -99,10 +99,10 @@ public final class TrafficMirrorFilterRuleArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="sourcePortRange")
-      private final @Nullable Input<TrafficMirrorFilterRuleSourcePortRangeArgs> sourcePortRange;
+      private final @Nullable Output<TrafficMirrorFilterRuleSourcePortRangeArgs> sourcePortRange;
 
-    public Input<TrafficMirrorFilterRuleSourcePortRangeArgs> getSourcePortRange() {
-        return this.sourcePortRange == null ? Input.empty() : this.sourcePortRange;
+    public Output<TrafficMirrorFilterRuleSourcePortRangeArgs> getSourcePortRange() {
+        return this.sourcePortRange == null ? Output.empty() : this.sourcePortRange;
     }
 
     /**
@@ -110,9 +110,9 @@ public final class TrafficMirrorFilterRuleArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="trafficDirection", required=true)
-      private final Input<String> trafficDirection;
+      private final Output<String> trafficDirection;
 
-    public Input<String> getTrafficDirection() {
+    public Output<String> getTrafficDirection() {
         return this.trafficDirection;
     }
 
@@ -121,23 +121,23 @@ public final class TrafficMirrorFilterRuleArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="trafficMirrorFilterId", required=true)
-      private final Input<String> trafficMirrorFilterId;
+      private final Output<String> trafficMirrorFilterId;
 
-    public Input<String> getTrafficMirrorFilterId() {
+    public Output<String> getTrafficMirrorFilterId() {
         return this.trafficMirrorFilterId;
     }
 
     public TrafficMirrorFilterRuleArgs(
-        @Nullable Input<String> description,
-        Input<String> destinationCidrBlock,
-        @Nullable Input<TrafficMirrorFilterRuleDestinationPortRangeArgs> destinationPortRange,
-        @Nullable Input<Integer> protocol,
-        Input<String> ruleAction,
-        Input<Integer> ruleNumber,
-        Input<String> sourceCidrBlock,
-        @Nullable Input<TrafficMirrorFilterRuleSourcePortRangeArgs> sourcePortRange,
-        Input<String> trafficDirection,
-        Input<String> trafficMirrorFilterId) {
+        @Nullable Output<String> description,
+        Output<String> destinationCidrBlock,
+        @Nullable Output<TrafficMirrorFilterRuleDestinationPortRangeArgs> destinationPortRange,
+        @Nullable Output<Integer> protocol,
+        Output<String> ruleAction,
+        Output<Integer> ruleNumber,
+        Output<String> sourceCidrBlock,
+        @Nullable Output<TrafficMirrorFilterRuleSourcePortRangeArgs> sourcePortRange,
+        Output<String> trafficDirection,
+        Output<String> trafficMirrorFilterId) {
         this.description = description;
         this.destinationCidrBlock = Objects.requireNonNull(destinationCidrBlock, "expected parameter 'destinationCidrBlock' to be non-null");
         this.destinationPortRange = destinationPortRange;
@@ -151,16 +151,16 @@ public final class TrafficMirrorFilterRuleArgs extends io.pulumi.resources.Resou
     }
 
     private TrafficMirrorFilterRuleArgs() {
-        this.description = Input.empty();
-        this.destinationCidrBlock = Input.empty();
-        this.destinationPortRange = Input.empty();
-        this.protocol = Input.empty();
-        this.ruleAction = Input.empty();
-        this.ruleNumber = Input.empty();
-        this.sourceCidrBlock = Input.empty();
-        this.sourcePortRange = Input.empty();
-        this.trafficDirection = Input.empty();
-        this.trafficMirrorFilterId = Input.empty();
+        this.description = Output.empty();
+        this.destinationCidrBlock = Output.empty();
+        this.destinationPortRange = Output.empty();
+        this.protocol = Output.empty();
+        this.ruleAction = Output.empty();
+        this.ruleNumber = Output.empty();
+        this.sourceCidrBlock = Output.empty();
+        this.sourcePortRange = Output.empty();
+        this.trafficDirection = Output.empty();
+        this.trafficMirrorFilterId = Output.empty();
     }
 
     public static Builder builder() {
@@ -172,16 +172,16 @@ public final class TrafficMirrorFilterRuleArgs extends io.pulumi.resources.Resou
     }
 
     public static final class Builder {
-        private @Nullable Input<String> description;
-        private Input<String> destinationCidrBlock;
-        private @Nullable Input<TrafficMirrorFilterRuleDestinationPortRangeArgs> destinationPortRange;
-        private @Nullable Input<Integer> protocol;
-        private Input<String> ruleAction;
-        private Input<Integer> ruleNumber;
-        private Input<String> sourceCidrBlock;
-        private @Nullable Input<TrafficMirrorFilterRuleSourcePortRangeArgs> sourcePortRange;
-        private Input<String> trafficDirection;
-        private Input<String> trafficMirrorFilterId;
+        private @Nullable Output<String> description;
+        private Output<String> destinationCidrBlock;
+        private @Nullable Output<TrafficMirrorFilterRuleDestinationPortRangeArgs> destinationPortRange;
+        private @Nullable Output<Integer> protocol;
+        private Output<String> ruleAction;
+        private Output<Integer> ruleNumber;
+        private Output<String> sourceCidrBlock;
+        private @Nullable Output<TrafficMirrorFilterRuleSourcePortRangeArgs> sourcePortRange;
+        private Output<String> trafficDirection;
+        private Output<String> trafficMirrorFilterId;
 
         public Builder() {
     	      // Empty
@@ -201,103 +201,103 @@ public final class TrafficMirrorFilterRuleArgs extends io.pulumi.resources.Resou
     	      this.trafficMirrorFilterId = defaults.trafficMirrorFilterId;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder destinationCidrBlock(Input<String> destinationCidrBlock) {
+        public Builder destinationCidrBlock(Output<String> destinationCidrBlock) {
             this.destinationCidrBlock = Objects.requireNonNull(destinationCidrBlock);
             return this;
         }
 
         public Builder destinationCidrBlock(String destinationCidrBlock) {
-            this.destinationCidrBlock = Input.of(Objects.requireNonNull(destinationCidrBlock));
+            this.destinationCidrBlock = Output.of(Objects.requireNonNull(destinationCidrBlock));
             return this;
         }
 
-        public Builder destinationPortRange(@Nullable Input<TrafficMirrorFilterRuleDestinationPortRangeArgs> destinationPortRange) {
+        public Builder destinationPortRange(@Nullable Output<TrafficMirrorFilterRuleDestinationPortRangeArgs> destinationPortRange) {
             this.destinationPortRange = destinationPortRange;
             return this;
         }
 
         public Builder destinationPortRange(@Nullable TrafficMirrorFilterRuleDestinationPortRangeArgs destinationPortRange) {
-            this.destinationPortRange = Input.ofNullable(destinationPortRange);
+            this.destinationPortRange = Output.ofNullable(destinationPortRange);
             return this;
         }
 
-        public Builder protocol(@Nullable Input<Integer> protocol) {
+        public Builder protocol(@Nullable Output<Integer> protocol) {
             this.protocol = protocol;
             return this;
         }
 
         public Builder protocol(@Nullable Integer protocol) {
-            this.protocol = Input.ofNullable(protocol);
+            this.protocol = Output.ofNullable(protocol);
             return this;
         }
 
-        public Builder ruleAction(Input<String> ruleAction) {
+        public Builder ruleAction(Output<String> ruleAction) {
             this.ruleAction = Objects.requireNonNull(ruleAction);
             return this;
         }
 
         public Builder ruleAction(String ruleAction) {
-            this.ruleAction = Input.of(Objects.requireNonNull(ruleAction));
+            this.ruleAction = Output.of(Objects.requireNonNull(ruleAction));
             return this;
         }
 
-        public Builder ruleNumber(Input<Integer> ruleNumber) {
+        public Builder ruleNumber(Output<Integer> ruleNumber) {
             this.ruleNumber = Objects.requireNonNull(ruleNumber);
             return this;
         }
 
         public Builder ruleNumber(Integer ruleNumber) {
-            this.ruleNumber = Input.of(Objects.requireNonNull(ruleNumber));
+            this.ruleNumber = Output.of(Objects.requireNonNull(ruleNumber));
             return this;
         }
 
-        public Builder sourceCidrBlock(Input<String> sourceCidrBlock) {
+        public Builder sourceCidrBlock(Output<String> sourceCidrBlock) {
             this.sourceCidrBlock = Objects.requireNonNull(sourceCidrBlock);
             return this;
         }
 
         public Builder sourceCidrBlock(String sourceCidrBlock) {
-            this.sourceCidrBlock = Input.of(Objects.requireNonNull(sourceCidrBlock));
+            this.sourceCidrBlock = Output.of(Objects.requireNonNull(sourceCidrBlock));
             return this;
         }
 
-        public Builder sourcePortRange(@Nullable Input<TrafficMirrorFilterRuleSourcePortRangeArgs> sourcePortRange) {
+        public Builder sourcePortRange(@Nullable Output<TrafficMirrorFilterRuleSourcePortRangeArgs> sourcePortRange) {
             this.sourcePortRange = sourcePortRange;
             return this;
         }
 
         public Builder sourcePortRange(@Nullable TrafficMirrorFilterRuleSourcePortRangeArgs sourcePortRange) {
-            this.sourcePortRange = Input.ofNullable(sourcePortRange);
+            this.sourcePortRange = Output.ofNullable(sourcePortRange);
             return this;
         }
 
-        public Builder trafficDirection(Input<String> trafficDirection) {
+        public Builder trafficDirection(Output<String> trafficDirection) {
             this.trafficDirection = Objects.requireNonNull(trafficDirection);
             return this;
         }
 
         public Builder trafficDirection(String trafficDirection) {
-            this.trafficDirection = Input.of(Objects.requireNonNull(trafficDirection));
+            this.trafficDirection = Output.of(Objects.requireNonNull(trafficDirection));
             return this;
         }
 
-        public Builder trafficMirrorFilterId(Input<String> trafficMirrorFilterId) {
+        public Builder trafficMirrorFilterId(Output<String> trafficMirrorFilterId) {
             this.trafficMirrorFilterId = Objects.requireNonNull(trafficMirrorFilterId);
             return this;
         }
 
         public Builder trafficMirrorFilterId(String trafficMirrorFilterId) {
-            this.trafficMirrorFilterId = Input.of(Objects.requireNonNull(trafficMirrorFilterId));
+            this.trafficMirrorFilterId = Output.of(Objects.requireNonNull(trafficMirrorFilterId));
             return this;
         }
         public TrafficMirrorFilterRuleArgs build() {

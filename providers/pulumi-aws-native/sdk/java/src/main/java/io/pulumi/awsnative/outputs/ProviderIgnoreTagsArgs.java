@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.outputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
@@ -16,17 +16,17 @@ public final class ProviderIgnoreTagsArgs {
      * List of exact resource tag keys to ignore across all resources handled by this provider. This configuration prevents Pulumi from returning the tag in any `tags` attributes and displaying any configuration difference for the tag value. If any resource configuration still has this tag key configured in the `tags` argument, it will display a perpetual difference until the tag is removed from the argument or `ignoreChanges` is also used.
      * 
      */
-    private final @Nullable Input<List<String>> keyPrefixes;
+    private final @Nullable Output<List<String>> keyPrefixes;
     /**
      * List of resource tag key prefixes to ignore across all resources handled by this provider. This configuration prevents Pulumi from returning any tag key matching the prefixes in any `tags` attributes and displaying any configuration difference for those tag values. If any resource configuration still has a tag matching one of the prefixes configured in the `tags` argument, it will display a perpetual difference until the tag is removed from the argument or `ignoreChanges` is also used.
      * 
      */
-    private final @Nullable Input<List<String>> keys;
+    private final @Nullable Output<List<String>> keys;
 
     @OutputCustomType.Constructor
     private ProviderIgnoreTagsArgs(
-        @OutputCustomType.Parameter("keyPrefixes") @Nullable Input<List<String>> keyPrefixes,
-        @OutputCustomType.Parameter("keys") @Nullable Input<List<String>> keys) {
+        @OutputCustomType.Parameter("keyPrefixes") @Nullable Output<List<String>> keyPrefixes,
+        @OutputCustomType.Parameter("keys") @Nullable Output<List<String>> keys) {
         this.keyPrefixes = keyPrefixes;
         this.keys = keys;
     }
@@ -35,14 +35,14 @@ public final class ProviderIgnoreTagsArgs {
      * List of exact resource tag keys to ignore across all resources handled by this provider. This configuration prevents Pulumi from returning the tag in any `tags` attributes and displaying any configuration difference for the tag value. If any resource configuration still has this tag key configured in the `tags` argument, it will display a perpetual difference until the tag is removed from the argument or `ignoreChanges` is also used.
      * 
     */
-    public @Nullable Input<List<String>> getKeyPrefixes() {
+    public @Nullable Output<List<String>> getKeyPrefixes() {
         return this.keyPrefixes;
     }
     /**
      * List of resource tag key prefixes to ignore across all resources handled by this provider. This configuration prevents Pulumi from returning any tag key matching the prefixes in any `tags` attributes and displaying any configuration difference for those tag values. If any resource configuration still has a tag matching one of the prefixes configured in the `tags` argument, it will display a perpetual difference until the tag is removed from the argument or `ignoreChanges` is also used.
      * 
     */
-    public @Nullable Input<List<String>> getKeys() {
+    public @Nullable Output<List<String>> getKeys() {
         return this.keys;
     }
 
@@ -55,8 +55,8 @@ public final class ProviderIgnoreTagsArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> keyPrefixes;
-        private @Nullable Input<List<String>> keys;
+        private @Nullable Output<List<String>> keyPrefixes;
+        private @Nullable Output<List<String>> keys;
 
         public Builder() {
     	      // Empty
@@ -68,12 +68,12 @@ public final class ProviderIgnoreTagsArgs {
     	      this.keys = defaults.keys;
         }
 
-        public Builder keyPrefixes(@Nullable Input<List<String>> keyPrefixes) {
+        public Builder keyPrefixes(@Nullable Output<List<String>> keyPrefixes) {
             this.keyPrefixes = keyPrefixes;
             return this;
         }
 
-        public Builder keys(@Nullable Input<List<String>> keys) {
+        public Builder keys(@Nullable Output<List<String>> keys) {
             this.keys = keys;
             return this;
         }

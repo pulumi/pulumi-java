@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.chime.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -20,10 +20,10 @@ public final class VoiceConnectorState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="awsRegion")
-      private final @Nullable Input<String> awsRegion;
+      private final @Nullable Output<String> awsRegion;
 
-    public Input<String> getAwsRegion() {
-        return this.awsRegion == null ? Input.empty() : this.awsRegion;
+    public Output<String> getAwsRegion() {
+        return this.awsRegion == null ? Output.empty() : this.awsRegion;
     }
 
     /**
@@ -31,10 +31,10 @@ public final class VoiceConnectorState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -42,10 +42,10 @@ public final class VoiceConnectorState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="outboundHostName")
-      private final @Nullable Input<String> outboundHostName;
+      private final @Nullable Output<String> outboundHostName;
 
-    public Input<String> getOutboundHostName() {
-        return this.outboundHostName == null ? Input.empty() : this.outboundHostName;
+    public Output<String> getOutboundHostName() {
+        return this.outboundHostName == null ? Output.empty() : this.outboundHostName;
     }
 
     /**
@@ -53,17 +53,17 @@ public final class VoiceConnectorState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="requireEncryption")
-      private final @Nullable Input<Boolean> requireEncryption;
+      private final @Nullable Output<Boolean> requireEncryption;
 
-    public Input<Boolean> getRequireEncryption() {
-        return this.requireEncryption == null ? Input.empty() : this.requireEncryption;
+    public Output<Boolean> getRequireEncryption() {
+        return this.requireEncryption == null ? Output.empty() : this.requireEncryption;
     }
 
     public VoiceConnectorState(
-        @Nullable Input<String> awsRegion,
-        @Nullable Input<String> name,
-        @Nullable Input<String> outboundHostName,
-        @Nullable Input<Boolean> requireEncryption) {
+        @Nullable Output<String> awsRegion,
+        @Nullable Output<String> name,
+        @Nullable Output<String> outboundHostName,
+        @Nullable Output<Boolean> requireEncryption) {
         this.awsRegion = awsRegion;
         this.name = name;
         this.outboundHostName = outboundHostName;
@@ -71,10 +71,10 @@ public final class VoiceConnectorState extends io.pulumi.resources.ResourceArgs 
     }
 
     private VoiceConnectorState() {
-        this.awsRegion = Input.empty();
-        this.name = Input.empty();
-        this.outboundHostName = Input.empty();
-        this.requireEncryption = Input.empty();
+        this.awsRegion = Output.empty();
+        this.name = Output.empty();
+        this.outboundHostName = Output.empty();
+        this.requireEncryption = Output.empty();
     }
 
     public static Builder builder() {
@@ -86,10 +86,10 @@ public final class VoiceConnectorState extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private @Nullable Input<String> awsRegion;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> outboundHostName;
-        private @Nullable Input<Boolean> requireEncryption;
+        private @Nullable Output<String> awsRegion;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> outboundHostName;
+        private @Nullable Output<Boolean> requireEncryption;
 
         public Builder() {
     	      // Empty
@@ -103,43 +103,43 @@ public final class VoiceConnectorState extends io.pulumi.resources.ResourceArgs 
     	      this.requireEncryption = defaults.requireEncryption;
         }
 
-        public Builder awsRegion(@Nullable Input<String> awsRegion) {
+        public Builder awsRegion(@Nullable Output<String> awsRegion) {
             this.awsRegion = awsRegion;
             return this;
         }
 
         public Builder awsRegion(@Nullable String awsRegion) {
-            this.awsRegion = Input.ofNullable(awsRegion);
+            this.awsRegion = Output.ofNullable(awsRegion);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder outboundHostName(@Nullable Input<String> outboundHostName) {
+        public Builder outboundHostName(@Nullable Output<String> outboundHostName) {
             this.outboundHostName = outboundHostName;
             return this;
         }
 
         public Builder outboundHostName(@Nullable String outboundHostName) {
-            this.outboundHostName = Input.ofNullable(outboundHostName);
+            this.outboundHostName = Output.ofNullable(outboundHostName);
             return this;
         }
 
-        public Builder requireEncryption(@Nullable Input<Boolean> requireEncryption) {
+        public Builder requireEncryption(@Nullable Output<Boolean> requireEncryption) {
             this.requireEncryption = requireEncryption;
             return this;
         }
 
         public Builder requireEncryption(@Nullable Boolean requireEncryption) {
-            this.requireEncryption = Input.ofNullable(requireEncryption);
+            this.requireEncryption = Output.ofNullable(requireEncryption);
             return this;
         }
         public VoiceConnectorState build() {

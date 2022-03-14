@@ -5,7 +5,7 @@ package io.pulumi.azurenative.logz.inputs;
 
 import io.pulumi.azurenative.logz.enums.ManagedIdentityTypes;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -17,18 +17,18 @@ public final class IdentityPropertiesArgs extends io.pulumi.resources.ResourceAr
     public static final IdentityPropertiesArgs Empty = new IdentityPropertiesArgs();
 
     @InputImport(name="type")
-      private final @Nullable Input<Either<String,ManagedIdentityTypes>> type;
+      private final @Nullable Output<Either<String,ManagedIdentityTypes>> type;
 
-    public Input<Either<String,ManagedIdentityTypes>> getType() {
-        return this.type == null ? Input.empty() : this.type;
+    public Output<Either<String,ManagedIdentityTypes>> getType() {
+        return this.type == null ? Output.empty() : this.type;
     }
 
-    public IdentityPropertiesArgs(@Nullable Input<Either<String,ManagedIdentityTypes>> type) {
+    public IdentityPropertiesArgs(@Nullable Output<Either<String,ManagedIdentityTypes>> type) {
         this.type = type;
     }
 
     private IdentityPropertiesArgs() {
-        this.type = Input.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -40,7 +40,7 @@ public final class IdentityPropertiesArgs extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private @Nullable Input<Either<String,ManagedIdentityTypes>> type;
+        private @Nullable Output<Either<String,ManagedIdentityTypes>> type;
 
         public Builder() {
     	      // Empty
@@ -51,13 +51,13 @@ public final class IdentityPropertiesArgs extends io.pulumi.resources.ResourceAr
     	      this.type = defaults.type;
         }
 
-        public Builder type(@Nullable Input<Either<String,ManagedIdentityTypes>> type) {
+        public Builder type(@Nullable Output<Either<String,ManagedIdentityTypes>> type) {
             this.type = type;
             return this;
         }
 
         public Builder type(@Nullable Either<String,ManagedIdentityTypes> type) {
-            this.type = Input.ofNullable(type);
+            this.type = Output.ofNullable(type);
             return this;
         }
         public IdentityPropertiesArgs build() {

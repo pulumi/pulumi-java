@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.storage;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.storage.inputs.BucketIAMBindingConditionArgs;
 import java.lang.String;
@@ -21,9 +21,9 @@ public final class BucketIAMBindingArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="bucket", required=true)
-      private final Input<String> bucket;
+      private final Output<String> bucket;
 
-    public Input<String> getBucket() {
+    public Output<String> getBucket() {
         return this.bucket;
     }
 
@@ -33,10 +33,10 @@ public final class BucketIAMBindingArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="condition")
-      private final @Nullable Input<BucketIAMBindingConditionArgs> condition;
+      private final @Nullable Output<BucketIAMBindingConditionArgs> condition;
 
-    public Input<BucketIAMBindingConditionArgs> getCondition() {
-        return this.condition == null ? Input.empty() : this.condition;
+    public Output<BucketIAMBindingConditionArgs> getCondition() {
+        return this.condition == null ? Output.empty() : this.condition;
     }
 
     /**
@@ -54,9 +54,9 @@ public final class BucketIAMBindingArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="members", required=true)
-      private final Input<List<String>> members;
+      private final Output<List<String>> members;
 
-    public Input<List<String>> getMembers() {
+    public Output<List<String>> getMembers() {
         return this.members;
     }
 
@@ -67,17 +67,17 @@ public final class BucketIAMBindingArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="role", required=true)
-      private final Input<String> role;
+      private final Output<String> role;
 
-    public Input<String> getRole() {
+    public Output<String> getRole() {
         return this.role;
     }
 
     public BucketIAMBindingArgs(
-        Input<String> bucket,
-        @Nullable Input<BucketIAMBindingConditionArgs> condition,
-        Input<List<String>> members,
-        Input<String> role) {
+        Output<String> bucket,
+        @Nullable Output<BucketIAMBindingConditionArgs> condition,
+        Output<List<String>> members,
+        Output<String> role) {
         this.bucket = Objects.requireNonNull(bucket, "expected parameter 'bucket' to be non-null");
         this.condition = condition;
         this.members = Objects.requireNonNull(members, "expected parameter 'members' to be non-null");
@@ -85,10 +85,10 @@ public final class BucketIAMBindingArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private BucketIAMBindingArgs() {
-        this.bucket = Input.empty();
-        this.condition = Input.empty();
-        this.members = Input.empty();
-        this.role = Input.empty();
+        this.bucket = Output.empty();
+        this.condition = Output.empty();
+        this.members = Output.empty();
+        this.role = Output.empty();
     }
 
     public static Builder builder() {
@@ -100,10 +100,10 @@ public final class BucketIAMBindingArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private Input<String> bucket;
-        private @Nullable Input<BucketIAMBindingConditionArgs> condition;
-        private Input<List<String>> members;
-        private Input<String> role;
+        private Output<String> bucket;
+        private @Nullable Output<BucketIAMBindingConditionArgs> condition;
+        private Output<List<String>> members;
+        private Output<String> role;
 
         public Builder() {
     	      // Empty
@@ -117,43 +117,43 @@ public final class BucketIAMBindingArgs extends io.pulumi.resources.ResourceArgs
     	      this.role = defaults.role;
         }
 
-        public Builder bucket(Input<String> bucket) {
+        public Builder bucket(Output<String> bucket) {
             this.bucket = Objects.requireNonNull(bucket);
             return this;
         }
 
         public Builder bucket(String bucket) {
-            this.bucket = Input.of(Objects.requireNonNull(bucket));
+            this.bucket = Output.of(Objects.requireNonNull(bucket));
             return this;
         }
 
-        public Builder condition(@Nullable Input<BucketIAMBindingConditionArgs> condition) {
+        public Builder condition(@Nullable Output<BucketIAMBindingConditionArgs> condition) {
             this.condition = condition;
             return this;
         }
 
         public Builder condition(@Nullable BucketIAMBindingConditionArgs condition) {
-            this.condition = Input.ofNullable(condition);
+            this.condition = Output.ofNullable(condition);
             return this;
         }
 
-        public Builder members(Input<List<String>> members) {
+        public Builder members(Output<List<String>> members) {
             this.members = Objects.requireNonNull(members);
             return this;
         }
 
         public Builder members(List<String> members) {
-            this.members = Input.of(Objects.requireNonNull(members));
+            this.members = Output.of(Objects.requireNonNull(members));
             return this;
         }
 
-        public Builder role(Input<String> role) {
+        public Builder role(Output<String> role) {
             this.role = Objects.requireNonNull(role);
             return this;
         }
 
         public Builder role(String role) {
-            this.role = Input.of(Objects.requireNonNull(role));
+            this.role = Output.of(Objects.requireNonNull(role));
             return this;
         }
         public BucketIAMBindingArgs build() {

@@ -5,7 +5,7 @@ package io.pulumi.azurenative.alertsmanagement.inputs;
 
 import io.pulumi.azurenative.alertsmanagement.enums.ScopeType;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -26,10 +26,10 @@ public final class ScopeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="scopeType")
-      private final @Nullable Input<Either<String,ScopeType>> scopeType;
+      private final @Nullable Output<Either<String,ScopeType>> scopeType;
 
-    public Input<Either<String,ScopeType>> getScopeType() {
-        return this.scopeType == null ? Input.empty() : this.scopeType;
+    public Output<Either<String,ScopeType>> getScopeType() {
+        return this.scopeType == null ? Output.empty() : this.scopeType;
     }
 
     /**
@@ -37,22 +37,22 @@ public final class ScopeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="values")
-      private final @Nullable Input<List<String>> values;
+      private final @Nullable Output<List<String>> values;
 
-    public Input<List<String>> getValues() {
-        return this.values == null ? Input.empty() : this.values;
+    public Output<List<String>> getValues() {
+        return this.values == null ? Output.empty() : this.values;
     }
 
     public ScopeArgs(
-        @Nullable Input<Either<String,ScopeType>> scopeType,
-        @Nullable Input<List<String>> values) {
+        @Nullable Output<Either<String,ScopeType>> scopeType,
+        @Nullable Output<List<String>> values) {
         this.scopeType = scopeType;
         this.values = values;
     }
 
     private ScopeArgs() {
-        this.scopeType = Input.empty();
-        this.values = Input.empty();
+        this.scopeType = Output.empty();
+        this.values = Output.empty();
     }
 
     public static Builder builder() {
@@ -64,8 +64,8 @@ public final class ScopeArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Either<String,ScopeType>> scopeType;
-        private @Nullable Input<List<String>> values;
+        private @Nullable Output<Either<String,ScopeType>> scopeType;
+        private @Nullable Output<List<String>> values;
 
         public Builder() {
     	      // Empty
@@ -77,23 +77,23 @@ public final class ScopeArgs extends io.pulumi.resources.ResourceArgs {
     	      this.values = defaults.values;
         }
 
-        public Builder scopeType(@Nullable Input<Either<String,ScopeType>> scopeType) {
+        public Builder scopeType(@Nullable Output<Either<String,ScopeType>> scopeType) {
             this.scopeType = scopeType;
             return this;
         }
 
         public Builder scopeType(@Nullable Either<String,ScopeType> scopeType) {
-            this.scopeType = Input.ofNullable(scopeType);
+            this.scopeType = Output.ofNullable(scopeType);
             return this;
         }
 
-        public Builder values(@Nullable Input<List<String>> values) {
+        public Builder values(@Nullable Output<List<String>> values) {
             this.values = values;
             return this;
         }
 
         public Builder values(@Nullable List<String> values) {
-            this.values = Input.ofNullable(values);
+            this.values = Output.ofNullable(values);
             return this;
         }
         public ScopeArgs build() {

@@ -8,7 +8,6 @@ import io.pulumi.azurenative.openenergyplatform.EnergyServiceArgs;
 import io.pulumi.azurenative.openenergyplatform.outputs.EnergyServicePropertiesResponse;
 import io.pulumi.azurenative.openenergyplatform.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -148,18 +147,18 @@ public class EnergyService extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public EnergyService(String name, EnergyServiceArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:openenergyplatform:EnergyService", name, args == null ? EnergyServiceArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("azure-native:openenergyplatform:EnergyService", name, args == null ? EnergyServiceArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private EnergyService(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private EnergyService(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:openenergyplatform:EnergyService", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:openenergyplatform/v20210601preview:EnergyService").build())
+                Output.of(Alias.builder().setType("azure-native:openenergyplatform/v20210601preview:EnergyService").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -173,7 +172,7 @@ public class EnergyService extends io.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static EnergyService get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static EnergyService get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new EnergyService(name, id, options);
     }
 }

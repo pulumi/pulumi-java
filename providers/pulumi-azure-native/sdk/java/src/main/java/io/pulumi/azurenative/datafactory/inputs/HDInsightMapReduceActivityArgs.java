@@ -9,7 +9,7 @@ import io.pulumi.azurenative.datafactory.inputs.ActivityPolicyArgs;
 import io.pulumi.azurenative.datafactory.inputs.LinkedServiceReferenceArgs;
 import io.pulumi.azurenative.datafactory.inputs.UserPropertyArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
@@ -32,10 +32,10 @@ public final class HDInsightMapReduceActivityArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="arguments")
-      private final @Nullable Input<List<Object>> arguments;
+      private final @Nullable Output<List<Object>> arguments;
 
-    public Input<List<Object>> getArguments() {
-        return this.arguments == null ? Input.empty() : this.arguments;
+    public Output<List<Object>> getArguments() {
+        return this.arguments == null ? Output.empty() : this.arguments;
     }
 
     /**
@@ -43,9 +43,9 @@ public final class HDInsightMapReduceActivityArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="className", required=true)
-      private final Input<Object> className;
+      private final Output<Object> className;
 
-    public Input<Object> getClassName() {
+    public Output<Object> getClassName() {
         return this.className;
     }
 
@@ -54,10 +54,10 @@ public final class HDInsightMapReduceActivityArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="defines")
-      private final @Nullable Input<Map<String,Object>> defines;
+      private final @Nullable Output<Map<String,Object>> defines;
 
-    public Input<Map<String,Object>> getDefines() {
-        return this.defines == null ? Input.empty() : this.defines;
+    public Output<Map<String,Object>> getDefines() {
+        return this.defines == null ? Output.empty() : this.defines;
     }
 
     /**
@@ -65,10 +65,10 @@ public final class HDInsightMapReduceActivityArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="dependsOn")
-      private final @Nullable Input<List<ActivityDependencyArgs>> dependsOn;
+      private final @Nullable Output<List<ActivityDependencyArgs>> dependsOn;
 
-    public Input<List<ActivityDependencyArgs>> getDependsOn() {
-        return this.dependsOn == null ? Input.empty() : this.dependsOn;
+    public Output<List<ActivityDependencyArgs>> getDependsOn() {
+        return this.dependsOn == null ? Output.empty() : this.dependsOn;
     }
 
     /**
@@ -76,10 +76,10 @@ public final class HDInsightMapReduceActivityArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -87,10 +87,10 @@ public final class HDInsightMapReduceActivityArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="getDebugInfo")
-      private final @Nullable Input<Either<String,HDInsightActivityDebugInfoOption>> getDebugInfo;
+      private final @Nullable Output<Either<String,HDInsightActivityDebugInfoOption>> getDebugInfo;
 
-    public Input<Either<String,HDInsightActivityDebugInfoOption>> getGetDebugInfo() {
-        return this.getDebugInfo == null ? Input.empty() : this.getDebugInfo;
+    public Output<Either<String,HDInsightActivityDebugInfoOption>> getGetDebugInfo() {
+        return this.getDebugInfo == null ? Output.empty() : this.getDebugInfo;
     }
 
     /**
@@ -98,9 +98,9 @@ public final class HDInsightMapReduceActivityArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="jarFilePath", required=true)
-      private final Input<Object> jarFilePath;
+      private final Output<Object> jarFilePath;
 
-    public Input<Object> getJarFilePath() {
+    public Output<Object> getJarFilePath() {
         return this.jarFilePath;
     }
 
@@ -109,10 +109,10 @@ public final class HDInsightMapReduceActivityArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="jarLibs")
-      private final @Nullable Input<List<Object>> jarLibs;
+      private final @Nullable Output<List<Object>> jarLibs;
 
-    public Input<List<Object>> getJarLibs() {
-        return this.jarLibs == null ? Input.empty() : this.jarLibs;
+    public Output<List<Object>> getJarLibs() {
+        return this.jarLibs == null ? Output.empty() : this.jarLibs;
     }
 
     /**
@@ -120,10 +120,10 @@ public final class HDInsightMapReduceActivityArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="jarLinkedService")
-      private final @Nullable Input<LinkedServiceReferenceArgs> jarLinkedService;
+      private final @Nullable Output<LinkedServiceReferenceArgs> jarLinkedService;
 
-    public Input<LinkedServiceReferenceArgs> getJarLinkedService() {
-        return this.jarLinkedService == null ? Input.empty() : this.jarLinkedService;
+    public Output<LinkedServiceReferenceArgs> getJarLinkedService() {
+        return this.jarLinkedService == null ? Output.empty() : this.jarLinkedService;
     }
 
     /**
@@ -131,10 +131,10 @@ public final class HDInsightMapReduceActivityArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="linkedServiceName")
-      private final @Nullable Input<LinkedServiceReferenceArgs> linkedServiceName;
+      private final @Nullable Output<LinkedServiceReferenceArgs> linkedServiceName;
 
-    public Input<LinkedServiceReferenceArgs> getLinkedServiceName() {
-        return this.linkedServiceName == null ? Input.empty() : this.linkedServiceName;
+    public Output<LinkedServiceReferenceArgs> getLinkedServiceName() {
+        return this.linkedServiceName == null ? Output.empty() : this.linkedServiceName;
     }
 
     /**
@@ -142,9 +142,9 @@ public final class HDInsightMapReduceActivityArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="name", required=true)
-      private final Input<String> name;
+      private final Output<String> name;
 
-    public Input<String> getName() {
+    public Output<String> getName() {
         return this.name;
     }
 
@@ -153,10 +153,10 @@ public final class HDInsightMapReduceActivityArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="policy")
-      private final @Nullable Input<ActivityPolicyArgs> policy;
+      private final @Nullable Output<ActivityPolicyArgs> policy;
 
-    public Input<ActivityPolicyArgs> getPolicy() {
-        return this.policy == null ? Input.empty() : this.policy;
+    public Output<ActivityPolicyArgs> getPolicy() {
+        return this.policy == null ? Output.empty() : this.policy;
     }
 
     /**
@@ -164,10 +164,10 @@ public final class HDInsightMapReduceActivityArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="storageLinkedServices")
-      private final @Nullable Input<List<LinkedServiceReferenceArgs>> storageLinkedServices;
+      private final @Nullable Output<List<LinkedServiceReferenceArgs>> storageLinkedServices;
 
-    public Input<List<LinkedServiceReferenceArgs>> getStorageLinkedServices() {
-        return this.storageLinkedServices == null ? Input.empty() : this.storageLinkedServices;
+    public Output<List<LinkedServiceReferenceArgs>> getStorageLinkedServices() {
+        return this.storageLinkedServices == null ? Output.empty() : this.storageLinkedServices;
     }
 
     /**
@@ -176,9 +176,9 @@ public final class HDInsightMapReduceActivityArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<String> type;
+      private final Output<String> type;
 
-    public Input<String> getType() {
+    public Output<String> getType() {
         return this.type;
     }
 
@@ -187,28 +187,28 @@ public final class HDInsightMapReduceActivityArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="userProperties")
-      private final @Nullable Input<List<UserPropertyArgs>> userProperties;
+      private final @Nullable Output<List<UserPropertyArgs>> userProperties;
 
-    public Input<List<UserPropertyArgs>> getUserProperties() {
-        return this.userProperties == null ? Input.empty() : this.userProperties;
+    public Output<List<UserPropertyArgs>> getUserProperties() {
+        return this.userProperties == null ? Output.empty() : this.userProperties;
     }
 
     public HDInsightMapReduceActivityArgs(
-        @Nullable Input<List<Object>> arguments,
-        Input<Object> className,
-        @Nullable Input<Map<String,Object>> defines,
-        @Nullable Input<List<ActivityDependencyArgs>> dependsOn,
-        @Nullable Input<String> description,
-        @Nullable Input<Either<String,HDInsightActivityDebugInfoOption>> getDebugInfo,
-        Input<Object> jarFilePath,
-        @Nullable Input<List<Object>> jarLibs,
-        @Nullable Input<LinkedServiceReferenceArgs> jarLinkedService,
-        @Nullable Input<LinkedServiceReferenceArgs> linkedServiceName,
-        Input<String> name,
-        @Nullable Input<ActivityPolicyArgs> policy,
-        @Nullable Input<List<LinkedServiceReferenceArgs>> storageLinkedServices,
-        Input<String> type,
-        @Nullable Input<List<UserPropertyArgs>> userProperties) {
+        @Nullable Output<List<Object>> arguments,
+        Output<Object> className,
+        @Nullable Output<Map<String,Object>> defines,
+        @Nullable Output<List<ActivityDependencyArgs>> dependsOn,
+        @Nullable Output<String> description,
+        @Nullable Output<Either<String,HDInsightActivityDebugInfoOption>> getDebugInfo,
+        Output<Object> jarFilePath,
+        @Nullable Output<List<Object>> jarLibs,
+        @Nullable Output<LinkedServiceReferenceArgs> jarLinkedService,
+        @Nullable Output<LinkedServiceReferenceArgs> linkedServiceName,
+        Output<String> name,
+        @Nullable Output<ActivityPolicyArgs> policy,
+        @Nullable Output<List<LinkedServiceReferenceArgs>> storageLinkedServices,
+        Output<String> type,
+        @Nullable Output<List<UserPropertyArgs>> userProperties) {
         this.arguments = arguments;
         this.className = Objects.requireNonNull(className, "expected parameter 'className' to be non-null");
         this.defines = defines;
@@ -227,21 +227,21 @@ public final class HDInsightMapReduceActivityArgs extends io.pulumi.resources.Re
     }
 
     private HDInsightMapReduceActivityArgs() {
-        this.arguments = Input.empty();
-        this.className = Input.empty();
-        this.defines = Input.empty();
-        this.dependsOn = Input.empty();
-        this.description = Input.empty();
-        this.getDebugInfo = Input.empty();
-        this.jarFilePath = Input.empty();
-        this.jarLibs = Input.empty();
-        this.jarLinkedService = Input.empty();
-        this.linkedServiceName = Input.empty();
-        this.name = Input.empty();
-        this.policy = Input.empty();
-        this.storageLinkedServices = Input.empty();
-        this.type = Input.empty();
-        this.userProperties = Input.empty();
+        this.arguments = Output.empty();
+        this.className = Output.empty();
+        this.defines = Output.empty();
+        this.dependsOn = Output.empty();
+        this.description = Output.empty();
+        this.getDebugInfo = Output.empty();
+        this.jarFilePath = Output.empty();
+        this.jarLibs = Output.empty();
+        this.jarLinkedService = Output.empty();
+        this.linkedServiceName = Output.empty();
+        this.name = Output.empty();
+        this.policy = Output.empty();
+        this.storageLinkedServices = Output.empty();
+        this.type = Output.empty();
+        this.userProperties = Output.empty();
     }
 
     public static Builder builder() {
@@ -253,21 +253,21 @@ public final class HDInsightMapReduceActivityArgs extends io.pulumi.resources.Re
     }
 
     public static final class Builder {
-        private @Nullable Input<List<Object>> arguments;
-        private Input<Object> className;
-        private @Nullable Input<Map<String,Object>> defines;
-        private @Nullable Input<List<ActivityDependencyArgs>> dependsOn;
-        private @Nullable Input<String> description;
-        private @Nullable Input<Either<String,HDInsightActivityDebugInfoOption>> getDebugInfo;
-        private Input<Object> jarFilePath;
-        private @Nullable Input<List<Object>> jarLibs;
-        private @Nullable Input<LinkedServiceReferenceArgs> jarLinkedService;
-        private @Nullable Input<LinkedServiceReferenceArgs> linkedServiceName;
-        private Input<String> name;
-        private @Nullable Input<ActivityPolicyArgs> policy;
-        private @Nullable Input<List<LinkedServiceReferenceArgs>> storageLinkedServices;
-        private Input<String> type;
-        private @Nullable Input<List<UserPropertyArgs>> userProperties;
+        private @Nullable Output<List<Object>> arguments;
+        private Output<Object> className;
+        private @Nullable Output<Map<String,Object>> defines;
+        private @Nullable Output<List<ActivityDependencyArgs>> dependsOn;
+        private @Nullable Output<String> description;
+        private @Nullable Output<Either<String,HDInsightActivityDebugInfoOption>> getDebugInfo;
+        private Output<Object> jarFilePath;
+        private @Nullable Output<List<Object>> jarLibs;
+        private @Nullable Output<LinkedServiceReferenceArgs> jarLinkedService;
+        private @Nullable Output<LinkedServiceReferenceArgs> linkedServiceName;
+        private Output<String> name;
+        private @Nullable Output<ActivityPolicyArgs> policy;
+        private @Nullable Output<List<LinkedServiceReferenceArgs>> storageLinkedServices;
+        private Output<String> type;
+        private @Nullable Output<List<UserPropertyArgs>> userProperties;
 
         public Builder() {
     	      // Empty
@@ -292,153 +292,153 @@ public final class HDInsightMapReduceActivityArgs extends io.pulumi.resources.Re
     	      this.userProperties = defaults.userProperties;
         }
 
-        public Builder arguments(@Nullable Input<List<Object>> arguments) {
+        public Builder arguments(@Nullable Output<List<Object>> arguments) {
             this.arguments = arguments;
             return this;
         }
 
         public Builder arguments(@Nullable List<Object> arguments) {
-            this.arguments = Input.ofNullable(arguments);
+            this.arguments = Output.ofNullable(arguments);
             return this;
         }
 
-        public Builder className(Input<Object> className) {
+        public Builder className(Output<Object> className) {
             this.className = Objects.requireNonNull(className);
             return this;
         }
 
         public Builder className(Object className) {
-            this.className = Input.of(Objects.requireNonNull(className));
+            this.className = Output.of(Objects.requireNonNull(className));
             return this;
         }
 
-        public Builder defines(@Nullable Input<Map<String,Object>> defines) {
+        public Builder defines(@Nullable Output<Map<String,Object>> defines) {
             this.defines = defines;
             return this;
         }
 
         public Builder defines(@Nullable Map<String,Object> defines) {
-            this.defines = Input.ofNullable(defines);
+            this.defines = Output.ofNullable(defines);
             return this;
         }
 
-        public Builder dependsOn(@Nullable Input<List<ActivityDependencyArgs>> dependsOn) {
+        public Builder dependsOn(@Nullable Output<List<ActivityDependencyArgs>> dependsOn) {
             this.dependsOn = dependsOn;
             return this;
         }
 
         public Builder dependsOn(@Nullable List<ActivityDependencyArgs> dependsOn) {
-            this.dependsOn = Input.ofNullable(dependsOn);
+            this.dependsOn = Output.ofNullable(dependsOn);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder getDebugInfo(@Nullable Input<Either<String,HDInsightActivityDebugInfoOption>> getDebugInfo) {
+        public Builder getDebugInfo(@Nullable Output<Either<String,HDInsightActivityDebugInfoOption>> getDebugInfo) {
             this.getDebugInfo = getDebugInfo;
             return this;
         }
 
         public Builder getDebugInfo(@Nullable Either<String,HDInsightActivityDebugInfoOption> getDebugInfo) {
-            this.getDebugInfo = Input.ofNullable(getDebugInfo);
+            this.getDebugInfo = Output.ofNullable(getDebugInfo);
             return this;
         }
 
-        public Builder jarFilePath(Input<Object> jarFilePath) {
+        public Builder jarFilePath(Output<Object> jarFilePath) {
             this.jarFilePath = Objects.requireNonNull(jarFilePath);
             return this;
         }
 
         public Builder jarFilePath(Object jarFilePath) {
-            this.jarFilePath = Input.of(Objects.requireNonNull(jarFilePath));
+            this.jarFilePath = Output.of(Objects.requireNonNull(jarFilePath));
             return this;
         }
 
-        public Builder jarLibs(@Nullable Input<List<Object>> jarLibs) {
+        public Builder jarLibs(@Nullable Output<List<Object>> jarLibs) {
             this.jarLibs = jarLibs;
             return this;
         }
 
         public Builder jarLibs(@Nullable List<Object> jarLibs) {
-            this.jarLibs = Input.ofNullable(jarLibs);
+            this.jarLibs = Output.ofNullable(jarLibs);
             return this;
         }
 
-        public Builder jarLinkedService(@Nullable Input<LinkedServiceReferenceArgs> jarLinkedService) {
+        public Builder jarLinkedService(@Nullable Output<LinkedServiceReferenceArgs> jarLinkedService) {
             this.jarLinkedService = jarLinkedService;
             return this;
         }
 
         public Builder jarLinkedService(@Nullable LinkedServiceReferenceArgs jarLinkedService) {
-            this.jarLinkedService = Input.ofNullable(jarLinkedService);
+            this.jarLinkedService = Output.ofNullable(jarLinkedService);
             return this;
         }
 
-        public Builder linkedServiceName(@Nullable Input<LinkedServiceReferenceArgs> linkedServiceName) {
+        public Builder linkedServiceName(@Nullable Output<LinkedServiceReferenceArgs> linkedServiceName) {
             this.linkedServiceName = linkedServiceName;
             return this;
         }
 
         public Builder linkedServiceName(@Nullable LinkedServiceReferenceArgs linkedServiceName) {
-            this.linkedServiceName = Input.ofNullable(linkedServiceName);
+            this.linkedServiceName = Output.ofNullable(linkedServiceName);
             return this;
         }
 
-        public Builder name(Input<String> name) {
+        public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(String name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder policy(@Nullable Input<ActivityPolicyArgs> policy) {
+        public Builder policy(@Nullable Output<ActivityPolicyArgs> policy) {
             this.policy = policy;
             return this;
         }
 
         public Builder policy(@Nullable ActivityPolicyArgs policy) {
-            this.policy = Input.ofNullable(policy);
+            this.policy = Output.ofNullable(policy);
             return this;
         }
 
-        public Builder storageLinkedServices(@Nullable Input<List<LinkedServiceReferenceArgs>> storageLinkedServices) {
+        public Builder storageLinkedServices(@Nullable Output<List<LinkedServiceReferenceArgs>> storageLinkedServices) {
             this.storageLinkedServices = storageLinkedServices;
             return this;
         }
 
         public Builder storageLinkedServices(@Nullable List<LinkedServiceReferenceArgs> storageLinkedServices) {
-            this.storageLinkedServices = Input.ofNullable(storageLinkedServices);
+            this.storageLinkedServices = Output.ofNullable(storageLinkedServices);
             return this;
         }
 
-        public Builder type(Input<String> type) {
+        public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(String type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
 
-        public Builder userProperties(@Nullable Input<List<UserPropertyArgs>> userProperties) {
+        public Builder userProperties(@Nullable Output<List<UserPropertyArgs>> userProperties) {
             this.userProperties = userProperties;
             return this;
         }
 
         public Builder userProperties(@Nullable List<UserPropertyArgs> userProperties) {
-            this.userProperties = Input.ofNullable(userProperties);
+            this.userProperties = Output.ofNullable(userProperties);
             return this;
         }
         public HDInsightMapReduceActivityArgs build() {

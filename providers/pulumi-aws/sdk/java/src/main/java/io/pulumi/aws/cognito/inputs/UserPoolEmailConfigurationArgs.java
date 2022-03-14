@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.cognito.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class UserPoolEmailConfigurationArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="configurationSet")
-      private final @Nullable Input<String> configurationSet;
+      private final @Nullable Output<String> configurationSet;
 
-    public Input<String> getConfigurationSet() {
-        return this.configurationSet == null ? Input.empty() : this.configurationSet;
+    public Output<String> getConfigurationSet() {
+        return this.configurationSet == null ? Output.empty() : this.configurationSet;
     }
 
     /**
@@ -30,10 +30,10 @@ public final class UserPoolEmailConfigurationArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="emailSendingAccount")
-      private final @Nullable Input<String> emailSendingAccount;
+      private final @Nullable Output<String> emailSendingAccount;
 
-    public Input<String> getEmailSendingAccount() {
-        return this.emailSendingAccount == null ? Input.empty() : this.emailSendingAccount;
+    public Output<String> getEmailSendingAccount() {
+        return this.emailSendingAccount == null ? Output.empty() : this.emailSendingAccount;
     }
 
     /**
@@ -41,10 +41,10 @@ public final class UserPoolEmailConfigurationArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="fromEmailAddress")
-      private final @Nullable Input<String> fromEmailAddress;
+      private final @Nullable Output<String> fromEmailAddress;
 
-    public Input<String> getFromEmailAddress() {
-        return this.fromEmailAddress == null ? Input.empty() : this.fromEmailAddress;
+    public Output<String> getFromEmailAddress() {
+        return this.fromEmailAddress == null ? Output.empty() : this.fromEmailAddress;
     }
 
     /**
@@ -52,10 +52,10 @@ public final class UserPoolEmailConfigurationArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="replyToEmailAddress")
-      private final @Nullable Input<String> replyToEmailAddress;
+      private final @Nullable Output<String> replyToEmailAddress;
 
-    public Input<String> getReplyToEmailAddress() {
-        return this.replyToEmailAddress == null ? Input.empty() : this.replyToEmailAddress;
+    public Output<String> getReplyToEmailAddress() {
+        return this.replyToEmailAddress == null ? Output.empty() : this.replyToEmailAddress;
     }
 
     /**
@@ -63,18 +63,18 @@ public final class UserPoolEmailConfigurationArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="sourceArn")
-      private final @Nullable Input<String> sourceArn;
+      private final @Nullable Output<String> sourceArn;
 
-    public Input<String> getSourceArn() {
-        return this.sourceArn == null ? Input.empty() : this.sourceArn;
+    public Output<String> getSourceArn() {
+        return this.sourceArn == null ? Output.empty() : this.sourceArn;
     }
 
     public UserPoolEmailConfigurationArgs(
-        @Nullable Input<String> configurationSet,
-        @Nullable Input<String> emailSendingAccount,
-        @Nullable Input<String> fromEmailAddress,
-        @Nullable Input<String> replyToEmailAddress,
-        @Nullable Input<String> sourceArn) {
+        @Nullable Output<String> configurationSet,
+        @Nullable Output<String> emailSendingAccount,
+        @Nullable Output<String> fromEmailAddress,
+        @Nullable Output<String> replyToEmailAddress,
+        @Nullable Output<String> sourceArn) {
         this.configurationSet = configurationSet;
         this.emailSendingAccount = emailSendingAccount;
         this.fromEmailAddress = fromEmailAddress;
@@ -83,11 +83,11 @@ public final class UserPoolEmailConfigurationArgs extends io.pulumi.resources.Re
     }
 
     private UserPoolEmailConfigurationArgs() {
-        this.configurationSet = Input.empty();
-        this.emailSendingAccount = Input.empty();
-        this.fromEmailAddress = Input.empty();
-        this.replyToEmailAddress = Input.empty();
-        this.sourceArn = Input.empty();
+        this.configurationSet = Output.empty();
+        this.emailSendingAccount = Output.empty();
+        this.fromEmailAddress = Output.empty();
+        this.replyToEmailAddress = Output.empty();
+        this.sourceArn = Output.empty();
     }
 
     public static Builder builder() {
@@ -99,11 +99,11 @@ public final class UserPoolEmailConfigurationArgs extends io.pulumi.resources.Re
     }
 
     public static final class Builder {
-        private @Nullable Input<String> configurationSet;
-        private @Nullable Input<String> emailSendingAccount;
-        private @Nullable Input<String> fromEmailAddress;
-        private @Nullable Input<String> replyToEmailAddress;
-        private @Nullable Input<String> sourceArn;
+        private @Nullable Output<String> configurationSet;
+        private @Nullable Output<String> emailSendingAccount;
+        private @Nullable Output<String> fromEmailAddress;
+        private @Nullable Output<String> replyToEmailAddress;
+        private @Nullable Output<String> sourceArn;
 
         public Builder() {
     	      // Empty
@@ -118,53 +118,53 @@ public final class UserPoolEmailConfigurationArgs extends io.pulumi.resources.Re
     	      this.sourceArn = defaults.sourceArn;
         }
 
-        public Builder configurationSet(@Nullable Input<String> configurationSet) {
+        public Builder configurationSet(@Nullable Output<String> configurationSet) {
             this.configurationSet = configurationSet;
             return this;
         }
 
         public Builder configurationSet(@Nullable String configurationSet) {
-            this.configurationSet = Input.ofNullable(configurationSet);
+            this.configurationSet = Output.ofNullable(configurationSet);
             return this;
         }
 
-        public Builder emailSendingAccount(@Nullable Input<String> emailSendingAccount) {
+        public Builder emailSendingAccount(@Nullable Output<String> emailSendingAccount) {
             this.emailSendingAccount = emailSendingAccount;
             return this;
         }
 
         public Builder emailSendingAccount(@Nullable String emailSendingAccount) {
-            this.emailSendingAccount = Input.ofNullable(emailSendingAccount);
+            this.emailSendingAccount = Output.ofNullable(emailSendingAccount);
             return this;
         }
 
-        public Builder fromEmailAddress(@Nullable Input<String> fromEmailAddress) {
+        public Builder fromEmailAddress(@Nullable Output<String> fromEmailAddress) {
             this.fromEmailAddress = fromEmailAddress;
             return this;
         }
 
         public Builder fromEmailAddress(@Nullable String fromEmailAddress) {
-            this.fromEmailAddress = Input.ofNullable(fromEmailAddress);
+            this.fromEmailAddress = Output.ofNullable(fromEmailAddress);
             return this;
         }
 
-        public Builder replyToEmailAddress(@Nullable Input<String> replyToEmailAddress) {
+        public Builder replyToEmailAddress(@Nullable Output<String> replyToEmailAddress) {
             this.replyToEmailAddress = replyToEmailAddress;
             return this;
         }
 
         public Builder replyToEmailAddress(@Nullable String replyToEmailAddress) {
-            this.replyToEmailAddress = Input.ofNullable(replyToEmailAddress);
+            this.replyToEmailAddress = Output.ofNullable(replyToEmailAddress);
             return this;
         }
 
-        public Builder sourceArn(@Nullable Input<String> sourceArn) {
+        public Builder sourceArn(@Nullable Output<String> sourceArn) {
             this.sourceArn = sourceArn;
             return this;
         }
 
         public Builder sourceArn(@Nullable String sourceArn) {
-            this.sourceArn = Input.ofNullable(sourceArn);
+            this.sourceArn = Output.ofNullable(sourceArn);
             return this;
         }
         public UserPoolEmailConfigurationArgs build() {

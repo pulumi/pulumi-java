@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.container_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.container_v1.inputs.DailyMaintenanceWindowArgs;
 import io.pulumi.googlenative.container_v1.inputs.RecurringTimeWindowArgs;
@@ -26,10 +26,10 @@ public final class MaintenanceWindowArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="dailyMaintenanceWindow")
-      private final @Nullable Input<DailyMaintenanceWindowArgs> dailyMaintenanceWindow;
+      private final @Nullable Output<DailyMaintenanceWindowArgs> dailyMaintenanceWindow;
 
-    public Input<DailyMaintenanceWindowArgs> getDailyMaintenanceWindow() {
-        return this.dailyMaintenanceWindow == null ? Input.empty() : this.dailyMaintenanceWindow;
+    public Output<DailyMaintenanceWindowArgs> getDailyMaintenanceWindow() {
+        return this.dailyMaintenanceWindow == null ? Output.empty() : this.dailyMaintenanceWindow;
     }
 
     /**
@@ -37,10 +37,10 @@ public final class MaintenanceWindowArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="maintenanceExclusions")
-      private final @Nullable Input<Map<String,String>> maintenanceExclusions;
+      private final @Nullable Output<Map<String,String>> maintenanceExclusions;
 
-    public Input<Map<String,String>> getMaintenanceExclusions() {
-        return this.maintenanceExclusions == null ? Input.empty() : this.maintenanceExclusions;
+    public Output<Map<String,String>> getMaintenanceExclusions() {
+        return this.maintenanceExclusions == null ? Output.empty() : this.maintenanceExclusions;
     }
 
     /**
@@ -48,25 +48,25 @@ public final class MaintenanceWindowArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="recurringWindow")
-      private final @Nullable Input<RecurringTimeWindowArgs> recurringWindow;
+      private final @Nullable Output<RecurringTimeWindowArgs> recurringWindow;
 
-    public Input<RecurringTimeWindowArgs> getRecurringWindow() {
-        return this.recurringWindow == null ? Input.empty() : this.recurringWindow;
+    public Output<RecurringTimeWindowArgs> getRecurringWindow() {
+        return this.recurringWindow == null ? Output.empty() : this.recurringWindow;
     }
 
     public MaintenanceWindowArgs(
-        @Nullable Input<DailyMaintenanceWindowArgs> dailyMaintenanceWindow,
-        @Nullable Input<Map<String,String>> maintenanceExclusions,
-        @Nullable Input<RecurringTimeWindowArgs> recurringWindow) {
+        @Nullable Output<DailyMaintenanceWindowArgs> dailyMaintenanceWindow,
+        @Nullable Output<Map<String,String>> maintenanceExclusions,
+        @Nullable Output<RecurringTimeWindowArgs> recurringWindow) {
         this.dailyMaintenanceWindow = dailyMaintenanceWindow;
         this.maintenanceExclusions = maintenanceExclusions;
         this.recurringWindow = recurringWindow;
     }
 
     private MaintenanceWindowArgs() {
-        this.dailyMaintenanceWindow = Input.empty();
-        this.maintenanceExclusions = Input.empty();
-        this.recurringWindow = Input.empty();
+        this.dailyMaintenanceWindow = Output.empty();
+        this.maintenanceExclusions = Output.empty();
+        this.recurringWindow = Output.empty();
     }
 
     public static Builder builder() {
@@ -78,9 +78,9 @@ public final class MaintenanceWindowArgs extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private @Nullable Input<DailyMaintenanceWindowArgs> dailyMaintenanceWindow;
-        private @Nullable Input<Map<String,String>> maintenanceExclusions;
-        private @Nullable Input<RecurringTimeWindowArgs> recurringWindow;
+        private @Nullable Output<DailyMaintenanceWindowArgs> dailyMaintenanceWindow;
+        private @Nullable Output<Map<String,String>> maintenanceExclusions;
+        private @Nullable Output<RecurringTimeWindowArgs> recurringWindow;
 
         public Builder() {
     	      // Empty
@@ -93,33 +93,33 @@ public final class MaintenanceWindowArgs extends io.pulumi.resources.ResourceArg
     	      this.recurringWindow = defaults.recurringWindow;
         }
 
-        public Builder dailyMaintenanceWindow(@Nullable Input<DailyMaintenanceWindowArgs> dailyMaintenanceWindow) {
+        public Builder dailyMaintenanceWindow(@Nullable Output<DailyMaintenanceWindowArgs> dailyMaintenanceWindow) {
             this.dailyMaintenanceWindow = dailyMaintenanceWindow;
             return this;
         }
 
         public Builder dailyMaintenanceWindow(@Nullable DailyMaintenanceWindowArgs dailyMaintenanceWindow) {
-            this.dailyMaintenanceWindow = Input.ofNullable(dailyMaintenanceWindow);
+            this.dailyMaintenanceWindow = Output.ofNullable(dailyMaintenanceWindow);
             return this;
         }
 
-        public Builder maintenanceExclusions(@Nullable Input<Map<String,String>> maintenanceExclusions) {
+        public Builder maintenanceExclusions(@Nullable Output<Map<String,String>> maintenanceExclusions) {
             this.maintenanceExclusions = maintenanceExclusions;
             return this;
         }
 
         public Builder maintenanceExclusions(@Nullable Map<String,String> maintenanceExclusions) {
-            this.maintenanceExclusions = Input.ofNullable(maintenanceExclusions);
+            this.maintenanceExclusions = Output.ofNullable(maintenanceExclusions);
             return this;
         }
 
-        public Builder recurringWindow(@Nullable Input<RecurringTimeWindowArgs> recurringWindow) {
+        public Builder recurringWindow(@Nullable Output<RecurringTimeWindowArgs> recurringWindow) {
             this.recurringWindow = recurringWindow;
             return this;
         }
 
         public Builder recurringWindow(@Nullable RecurringTimeWindowArgs recurringWindow) {
-            this.recurringWindow = Input.ofNullable(recurringWindow);
+            this.recurringWindow = Output.ofNullable(recurringWindow);
             return this;
         }
         public MaintenanceWindowArgs build() {

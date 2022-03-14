@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.billingbudgets_v1beta1;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.billingbudgets_v1beta1.inputs.GoogleCloudBillingBudgetsV1beta1AllUpdatesRuleArgs;
 import io.pulumi.googlenative.billingbudgets_v1beta1.inputs.GoogleCloudBillingBudgetsV1beta1BudgetAmountArgs;
@@ -24,10 +24,10 @@ public final class BudgetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="allUpdatesRule")
-      private final @Nullable Input<GoogleCloudBillingBudgetsV1beta1AllUpdatesRuleArgs> allUpdatesRule;
+      private final @Nullable Output<GoogleCloudBillingBudgetsV1beta1AllUpdatesRuleArgs> allUpdatesRule;
 
-    public Input<GoogleCloudBillingBudgetsV1beta1AllUpdatesRuleArgs> getAllUpdatesRule() {
-        return this.allUpdatesRule == null ? Input.empty() : this.allUpdatesRule;
+    public Output<GoogleCloudBillingBudgetsV1beta1AllUpdatesRuleArgs> getAllUpdatesRule() {
+        return this.allUpdatesRule == null ? Output.empty() : this.allUpdatesRule;
     }
 
     /**
@@ -35,16 +35,16 @@ public final class BudgetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="amount", required=true)
-      private final Input<GoogleCloudBillingBudgetsV1beta1BudgetAmountArgs> amount;
+      private final Output<GoogleCloudBillingBudgetsV1beta1BudgetAmountArgs> amount;
 
-    public Input<GoogleCloudBillingBudgetsV1beta1BudgetAmountArgs> getAmount() {
+    public Output<GoogleCloudBillingBudgetsV1beta1BudgetAmountArgs> getAmount() {
         return this.amount;
     }
 
     @InputImport(name="billingAccountId", required=true)
-      private final Input<String> billingAccountId;
+      private final Output<String> billingAccountId;
 
-    public Input<String> getBillingAccountId() {
+    public Output<String> getBillingAccountId() {
         return this.billingAccountId;
     }
 
@@ -53,10 +53,10 @@ public final class BudgetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="budgetFilter")
-      private final @Nullable Input<GoogleCloudBillingBudgetsV1beta1FilterArgs> budgetFilter;
+      private final @Nullable Output<GoogleCloudBillingBudgetsV1beta1FilterArgs> budgetFilter;
 
-    public Input<GoogleCloudBillingBudgetsV1beta1FilterArgs> getBudgetFilter() {
-        return this.budgetFilter == null ? Input.empty() : this.budgetFilter;
+    public Output<GoogleCloudBillingBudgetsV1beta1FilterArgs> getBudgetFilter() {
+        return this.budgetFilter == null ? Output.empty() : this.budgetFilter;
     }
 
     /**
@@ -64,10 +64,10 @@ public final class BudgetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName")
-      private final @Nullable Input<String> displayName;
+      private final @Nullable Output<String> displayName;
 
-    public Input<String> getDisplayName() {
-        return this.displayName == null ? Input.empty() : this.displayName;
+    public Output<String> getDisplayName() {
+        return this.displayName == null ? Output.empty() : this.displayName;
     }
 
     /**
@@ -75,10 +75,10 @@ public final class BudgetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="etag")
-      private final @Nullable Input<String> etag;
+      private final @Nullable Output<String> etag;
 
-    public Input<String> getEtag() {
-        return this.etag == null ? Input.empty() : this.etag;
+    public Output<String> getEtag() {
+        return this.etag == null ? Output.empty() : this.etag;
     }
 
     /**
@@ -86,20 +86,20 @@ public final class BudgetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="thresholdRules")
-      private final @Nullable Input<List<GoogleCloudBillingBudgetsV1beta1ThresholdRuleArgs>> thresholdRules;
+      private final @Nullable Output<List<GoogleCloudBillingBudgetsV1beta1ThresholdRuleArgs>> thresholdRules;
 
-    public Input<List<GoogleCloudBillingBudgetsV1beta1ThresholdRuleArgs>> getThresholdRules() {
-        return this.thresholdRules == null ? Input.empty() : this.thresholdRules;
+    public Output<List<GoogleCloudBillingBudgetsV1beta1ThresholdRuleArgs>> getThresholdRules() {
+        return this.thresholdRules == null ? Output.empty() : this.thresholdRules;
     }
 
     public BudgetArgs(
-        @Nullable Input<GoogleCloudBillingBudgetsV1beta1AllUpdatesRuleArgs> allUpdatesRule,
-        Input<GoogleCloudBillingBudgetsV1beta1BudgetAmountArgs> amount,
-        Input<String> billingAccountId,
-        @Nullable Input<GoogleCloudBillingBudgetsV1beta1FilterArgs> budgetFilter,
-        @Nullable Input<String> displayName,
-        @Nullable Input<String> etag,
-        @Nullable Input<List<GoogleCloudBillingBudgetsV1beta1ThresholdRuleArgs>> thresholdRules) {
+        @Nullable Output<GoogleCloudBillingBudgetsV1beta1AllUpdatesRuleArgs> allUpdatesRule,
+        Output<GoogleCloudBillingBudgetsV1beta1BudgetAmountArgs> amount,
+        Output<String> billingAccountId,
+        @Nullable Output<GoogleCloudBillingBudgetsV1beta1FilterArgs> budgetFilter,
+        @Nullable Output<String> displayName,
+        @Nullable Output<String> etag,
+        @Nullable Output<List<GoogleCloudBillingBudgetsV1beta1ThresholdRuleArgs>> thresholdRules) {
         this.allUpdatesRule = allUpdatesRule;
         this.amount = Objects.requireNonNull(amount, "expected parameter 'amount' to be non-null");
         this.billingAccountId = Objects.requireNonNull(billingAccountId, "expected parameter 'billingAccountId' to be non-null");
@@ -110,13 +110,13 @@ public final class BudgetArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private BudgetArgs() {
-        this.allUpdatesRule = Input.empty();
-        this.amount = Input.empty();
-        this.billingAccountId = Input.empty();
-        this.budgetFilter = Input.empty();
-        this.displayName = Input.empty();
-        this.etag = Input.empty();
-        this.thresholdRules = Input.empty();
+        this.allUpdatesRule = Output.empty();
+        this.amount = Output.empty();
+        this.billingAccountId = Output.empty();
+        this.budgetFilter = Output.empty();
+        this.displayName = Output.empty();
+        this.etag = Output.empty();
+        this.thresholdRules = Output.empty();
     }
 
     public static Builder builder() {
@@ -128,13 +128,13 @@ public final class BudgetArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<GoogleCloudBillingBudgetsV1beta1AllUpdatesRuleArgs> allUpdatesRule;
-        private Input<GoogleCloudBillingBudgetsV1beta1BudgetAmountArgs> amount;
-        private Input<String> billingAccountId;
-        private @Nullable Input<GoogleCloudBillingBudgetsV1beta1FilterArgs> budgetFilter;
-        private @Nullable Input<String> displayName;
-        private @Nullable Input<String> etag;
-        private @Nullable Input<List<GoogleCloudBillingBudgetsV1beta1ThresholdRuleArgs>> thresholdRules;
+        private @Nullable Output<GoogleCloudBillingBudgetsV1beta1AllUpdatesRuleArgs> allUpdatesRule;
+        private Output<GoogleCloudBillingBudgetsV1beta1BudgetAmountArgs> amount;
+        private Output<String> billingAccountId;
+        private @Nullable Output<GoogleCloudBillingBudgetsV1beta1FilterArgs> budgetFilter;
+        private @Nullable Output<String> displayName;
+        private @Nullable Output<String> etag;
+        private @Nullable Output<List<GoogleCloudBillingBudgetsV1beta1ThresholdRuleArgs>> thresholdRules;
 
         public Builder() {
     	      // Empty
@@ -151,73 +151,73 @@ public final class BudgetArgs extends io.pulumi.resources.ResourceArgs {
     	      this.thresholdRules = defaults.thresholdRules;
         }
 
-        public Builder allUpdatesRule(@Nullable Input<GoogleCloudBillingBudgetsV1beta1AllUpdatesRuleArgs> allUpdatesRule) {
+        public Builder allUpdatesRule(@Nullable Output<GoogleCloudBillingBudgetsV1beta1AllUpdatesRuleArgs> allUpdatesRule) {
             this.allUpdatesRule = allUpdatesRule;
             return this;
         }
 
         public Builder allUpdatesRule(@Nullable GoogleCloudBillingBudgetsV1beta1AllUpdatesRuleArgs allUpdatesRule) {
-            this.allUpdatesRule = Input.ofNullable(allUpdatesRule);
+            this.allUpdatesRule = Output.ofNullable(allUpdatesRule);
             return this;
         }
 
-        public Builder amount(Input<GoogleCloudBillingBudgetsV1beta1BudgetAmountArgs> amount) {
+        public Builder amount(Output<GoogleCloudBillingBudgetsV1beta1BudgetAmountArgs> amount) {
             this.amount = Objects.requireNonNull(amount);
             return this;
         }
 
         public Builder amount(GoogleCloudBillingBudgetsV1beta1BudgetAmountArgs amount) {
-            this.amount = Input.of(Objects.requireNonNull(amount));
+            this.amount = Output.of(Objects.requireNonNull(amount));
             return this;
         }
 
-        public Builder billingAccountId(Input<String> billingAccountId) {
+        public Builder billingAccountId(Output<String> billingAccountId) {
             this.billingAccountId = Objects.requireNonNull(billingAccountId);
             return this;
         }
 
         public Builder billingAccountId(String billingAccountId) {
-            this.billingAccountId = Input.of(Objects.requireNonNull(billingAccountId));
+            this.billingAccountId = Output.of(Objects.requireNonNull(billingAccountId));
             return this;
         }
 
-        public Builder budgetFilter(@Nullable Input<GoogleCloudBillingBudgetsV1beta1FilterArgs> budgetFilter) {
+        public Builder budgetFilter(@Nullable Output<GoogleCloudBillingBudgetsV1beta1FilterArgs> budgetFilter) {
             this.budgetFilter = budgetFilter;
             return this;
         }
 
         public Builder budgetFilter(@Nullable GoogleCloudBillingBudgetsV1beta1FilterArgs budgetFilter) {
-            this.budgetFilter = Input.ofNullable(budgetFilter);
+            this.budgetFilter = Output.ofNullable(budgetFilter);
             return this;
         }
 
-        public Builder displayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Input.ofNullable(displayName);
+            this.displayName = Output.ofNullable(displayName);
             return this;
         }
 
-        public Builder etag(@Nullable Input<String> etag) {
+        public Builder etag(@Nullable Output<String> etag) {
             this.etag = etag;
             return this;
         }
 
         public Builder etag(@Nullable String etag) {
-            this.etag = Input.ofNullable(etag);
+            this.etag = Output.ofNullable(etag);
             return this;
         }
 
-        public Builder thresholdRules(@Nullable Input<List<GoogleCloudBillingBudgetsV1beta1ThresholdRuleArgs>> thresholdRules) {
+        public Builder thresholdRules(@Nullable Output<List<GoogleCloudBillingBudgetsV1beta1ThresholdRuleArgs>> thresholdRules) {
             this.thresholdRules = thresholdRules;
             return this;
         }
 
         public Builder thresholdRules(@Nullable List<GoogleCloudBillingBudgetsV1beta1ThresholdRuleArgs> thresholdRules) {
-            this.thresholdRules = Input.ofNullable(thresholdRules);
+            this.thresholdRules = Output.ofNullable(thresholdRules);
             return this;
         }
         public BudgetArgs build() {

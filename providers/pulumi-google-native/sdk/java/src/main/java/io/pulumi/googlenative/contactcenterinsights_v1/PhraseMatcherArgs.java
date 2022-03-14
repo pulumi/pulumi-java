@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.contactcenterinsights_v1;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.contactcenterinsights_v1.enums.PhraseMatcherRoleMatch;
 import io.pulumi.googlenative.contactcenterinsights_v1.enums.PhraseMatcherType;
@@ -24,10 +24,10 @@ public final class PhraseMatcherArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="active")
-      private final @Nullable Input<Boolean> active;
+      private final @Nullable Output<Boolean> active;
 
-    public Input<Boolean> getActive() {
-        return this.active == null ? Input.empty() : this.active;
+    public Output<Boolean> getActive() {
+        return this.active == null ? Output.empty() : this.active;
     }
 
     /**
@@ -35,17 +35,17 @@ public final class PhraseMatcherArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName")
-      private final @Nullable Input<String> displayName;
+      private final @Nullable Output<String> displayName;
 
-    public Input<String> getDisplayName() {
-        return this.displayName == null ? Input.empty() : this.displayName;
+    public Output<String> getDisplayName() {
+        return this.displayName == null ? Output.empty() : this.displayName;
     }
 
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -53,10 +53,10 @@ public final class PhraseMatcherArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -64,17 +64,17 @@ public final class PhraseMatcherArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="phraseMatchRuleGroups")
-      private final @Nullable Input<List<GoogleCloudContactcenterinsightsV1PhraseMatchRuleGroupArgs>> phraseMatchRuleGroups;
+      private final @Nullable Output<List<GoogleCloudContactcenterinsightsV1PhraseMatchRuleGroupArgs>> phraseMatchRuleGroups;
 
-    public Input<List<GoogleCloudContactcenterinsightsV1PhraseMatchRuleGroupArgs>> getPhraseMatchRuleGroups() {
-        return this.phraseMatchRuleGroups == null ? Input.empty() : this.phraseMatchRuleGroups;
+    public Output<List<GoogleCloudContactcenterinsightsV1PhraseMatchRuleGroupArgs>> getPhraseMatchRuleGroups() {
+        return this.phraseMatchRuleGroups == null ? Output.empty() : this.phraseMatchRuleGroups;
     }
 
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -82,10 +82,10 @@ public final class PhraseMatcherArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="roleMatch")
-      private final @Nullable Input<PhraseMatcherRoleMatch> roleMatch;
+      private final @Nullable Output<PhraseMatcherRoleMatch> roleMatch;
 
-    public Input<PhraseMatcherRoleMatch> getRoleMatch() {
-        return this.roleMatch == null ? Input.empty() : this.roleMatch;
+    public Output<PhraseMatcherRoleMatch> getRoleMatch() {
+        return this.roleMatch == null ? Output.empty() : this.roleMatch;
     }
 
     /**
@@ -93,9 +93,9 @@ public final class PhraseMatcherArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<PhraseMatcherType> type;
+      private final Output<PhraseMatcherType> type;
 
-    public Input<PhraseMatcherType> getType() {
+    public Output<PhraseMatcherType> getType() {
         return this.type;
     }
 
@@ -104,22 +104,22 @@ public final class PhraseMatcherArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="versionTag")
-      private final @Nullable Input<String> versionTag;
+      private final @Nullable Output<String> versionTag;
 
-    public Input<String> getVersionTag() {
-        return this.versionTag == null ? Input.empty() : this.versionTag;
+    public Output<String> getVersionTag() {
+        return this.versionTag == null ? Output.empty() : this.versionTag;
     }
 
     public PhraseMatcherArgs(
-        @Nullable Input<Boolean> active,
-        @Nullable Input<String> displayName,
-        @Nullable Input<String> location,
-        @Nullable Input<String> name,
-        @Nullable Input<List<GoogleCloudContactcenterinsightsV1PhraseMatchRuleGroupArgs>> phraseMatchRuleGroups,
-        @Nullable Input<String> project,
-        @Nullable Input<PhraseMatcherRoleMatch> roleMatch,
-        Input<PhraseMatcherType> type,
-        @Nullable Input<String> versionTag) {
+        @Nullable Output<Boolean> active,
+        @Nullable Output<String> displayName,
+        @Nullable Output<String> location,
+        @Nullable Output<String> name,
+        @Nullable Output<List<GoogleCloudContactcenterinsightsV1PhraseMatchRuleGroupArgs>> phraseMatchRuleGroups,
+        @Nullable Output<String> project,
+        @Nullable Output<PhraseMatcherRoleMatch> roleMatch,
+        Output<PhraseMatcherType> type,
+        @Nullable Output<String> versionTag) {
         this.active = active;
         this.displayName = displayName;
         this.location = location;
@@ -132,15 +132,15 @@ public final class PhraseMatcherArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private PhraseMatcherArgs() {
-        this.active = Input.empty();
-        this.displayName = Input.empty();
-        this.location = Input.empty();
-        this.name = Input.empty();
-        this.phraseMatchRuleGroups = Input.empty();
-        this.project = Input.empty();
-        this.roleMatch = Input.empty();
-        this.type = Input.empty();
-        this.versionTag = Input.empty();
+        this.active = Output.empty();
+        this.displayName = Output.empty();
+        this.location = Output.empty();
+        this.name = Output.empty();
+        this.phraseMatchRuleGroups = Output.empty();
+        this.project = Output.empty();
+        this.roleMatch = Output.empty();
+        this.type = Output.empty();
+        this.versionTag = Output.empty();
     }
 
     public static Builder builder() {
@@ -152,15 +152,15 @@ public final class PhraseMatcherArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> active;
-        private @Nullable Input<String> displayName;
-        private @Nullable Input<String> location;
-        private @Nullable Input<String> name;
-        private @Nullable Input<List<GoogleCloudContactcenterinsightsV1PhraseMatchRuleGroupArgs>> phraseMatchRuleGroups;
-        private @Nullable Input<String> project;
-        private @Nullable Input<PhraseMatcherRoleMatch> roleMatch;
-        private Input<PhraseMatcherType> type;
-        private @Nullable Input<String> versionTag;
+        private @Nullable Output<Boolean> active;
+        private @Nullable Output<String> displayName;
+        private @Nullable Output<String> location;
+        private @Nullable Output<String> name;
+        private @Nullable Output<List<GoogleCloudContactcenterinsightsV1PhraseMatchRuleGroupArgs>> phraseMatchRuleGroups;
+        private @Nullable Output<String> project;
+        private @Nullable Output<PhraseMatcherRoleMatch> roleMatch;
+        private Output<PhraseMatcherType> type;
+        private @Nullable Output<String> versionTag;
 
         public Builder() {
     	      // Empty
@@ -179,93 +179,93 @@ public final class PhraseMatcherArgs extends io.pulumi.resources.ResourceArgs {
     	      this.versionTag = defaults.versionTag;
         }
 
-        public Builder active(@Nullable Input<Boolean> active) {
+        public Builder active(@Nullable Output<Boolean> active) {
             this.active = active;
             return this;
         }
 
         public Builder active(@Nullable Boolean active) {
-            this.active = Input.ofNullable(active);
+            this.active = Output.ofNullable(active);
             return this;
         }
 
-        public Builder displayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Input.ofNullable(displayName);
+            this.displayName = Output.ofNullable(displayName);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder phraseMatchRuleGroups(@Nullable Input<List<GoogleCloudContactcenterinsightsV1PhraseMatchRuleGroupArgs>> phraseMatchRuleGroups) {
+        public Builder phraseMatchRuleGroups(@Nullable Output<List<GoogleCloudContactcenterinsightsV1PhraseMatchRuleGroupArgs>> phraseMatchRuleGroups) {
             this.phraseMatchRuleGroups = phraseMatchRuleGroups;
             return this;
         }
 
         public Builder phraseMatchRuleGroups(@Nullable List<GoogleCloudContactcenterinsightsV1PhraseMatchRuleGroupArgs> phraseMatchRuleGroups) {
-            this.phraseMatchRuleGroups = Input.ofNullable(phraseMatchRuleGroups);
+            this.phraseMatchRuleGroups = Output.ofNullable(phraseMatchRuleGroups);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder roleMatch(@Nullable Input<PhraseMatcherRoleMatch> roleMatch) {
+        public Builder roleMatch(@Nullable Output<PhraseMatcherRoleMatch> roleMatch) {
             this.roleMatch = roleMatch;
             return this;
         }
 
         public Builder roleMatch(@Nullable PhraseMatcherRoleMatch roleMatch) {
-            this.roleMatch = Input.ofNullable(roleMatch);
+            this.roleMatch = Output.ofNullable(roleMatch);
             return this;
         }
 
-        public Builder type(Input<PhraseMatcherType> type) {
+        public Builder type(Output<PhraseMatcherType> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(PhraseMatcherType type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
 
-        public Builder versionTag(@Nullable Input<String> versionTag) {
+        public Builder versionTag(@Nullable Output<String> versionTag) {
             this.versionTag = versionTag;
             return this;
         }
 
         public Builder versionTag(@Nullable String versionTag) {
-            this.versionTag = Input.ofNullable(versionTag);
+            this.versionTag = Output.ofNullable(versionTag);
             return this;
         }
         public PhraseMatcherArgs build() {

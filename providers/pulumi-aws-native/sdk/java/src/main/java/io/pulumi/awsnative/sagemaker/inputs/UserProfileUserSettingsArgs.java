@@ -6,7 +6,7 @@ package io.pulumi.awsnative.sagemaker.inputs;
 import io.pulumi.awsnative.sagemaker.inputs.UserProfileJupyterServerAppSettingsArgs;
 import io.pulumi.awsnative.sagemaker.inputs.UserProfileKernelGatewayAppSettingsArgs;
 import io.pulumi.awsnative.sagemaker.inputs.UserProfileSharingSettingsArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -27,10 +27,10 @@ public final class UserProfileUserSettingsArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="executionRole")
-      private final @Nullable Input<String> executionRole;
+      private final @Nullable Output<String> executionRole;
 
-    public Input<String> getExecutionRole() {
-        return this.executionRole == null ? Input.empty() : this.executionRole;
+    public Output<String> getExecutionRole() {
+        return this.executionRole == null ? Output.empty() : this.executionRole;
     }
 
     /**
@@ -38,10 +38,10 @@ public final class UserProfileUserSettingsArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="jupyterServerAppSettings")
-      private final @Nullable Input<UserProfileJupyterServerAppSettingsArgs> jupyterServerAppSettings;
+      private final @Nullable Output<UserProfileJupyterServerAppSettingsArgs> jupyterServerAppSettings;
 
-    public Input<UserProfileJupyterServerAppSettingsArgs> getJupyterServerAppSettings() {
-        return this.jupyterServerAppSettings == null ? Input.empty() : this.jupyterServerAppSettings;
+    public Output<UserProfileJupyterServerAppSettingsArgs> getJupyterServerAppSettings() {
+        return this.jupyterServerAppSettings == null ? Output.empty() : this.jupyterServerAppSettings;
     }
 
     /**
@@ -49,10 +49,10 @@ public final class UserProfileUserSettingsArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="kernelGatewayAppSettings")
-      private final @Nullable Input<UserProfileKernelGatewayAppSettingsArgs> kernelGatewayAppSettings;
+      private final @Nullable Output<UserProfileKernelGatewayAppSettingsArgs> kernelGatewayAppSettings;
 
-    public Input<UserProfileKernelGatewayAppSettingsArgs> getKernelGatewayAppSettings() {
-        return this.kernelGatewayAppSettings == null ? Input.empty() : this.kernelGatewayAppSettings;
+    public Output<UserProfileKernelGatewayAppSettingsArgs> getKernelGatewayAppSettings() {
+        return this.kernelGatewayAppSettings == null ? Output.empty() : this.kernelGatewayAppSettings;
     }
 
     /**
@@ -60,10 +60,10 @@ public final class UserProfileUserSettingsArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="securityGroups")
-      private final @Nullable Input<List<String>> securityGroups;
+      private final @Nullable Output<List<String>> securityGroups;
 
-    public Input<List<String>> getSecurityGroups() {
-        return this.securityGroups == null ? Input.empty() : this.securityGroups;
+    public Output<List<String>> getSecurityGroups() {
+        return this.securityGroups == null ? Output.empty() : this.securityGroups;
     }
 
     /**
@@ -71,18 +71,18 @@ public final class UserProfileUserSettingsArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="sharingSettings")
-      private final @Nullable Input<UserProfileSharingSettingsArgs> sharingSettings;
+      private final @Nullable Output<UserProfileSharingSettingsArgs> sharingSettings;
 
-    public Input<UserProfileSharingSettingsArgs> getSharingSettings() {
-        return this.sharingSettings == null ? Input.empty() : this.sharingSettings;
+    public Output<UserProfileSharingSettingsArgs> getSharingSettings() {
+        return this.sharingSettings == null ? Output.empty() : this.sharingSettings;
     }
 
     public UserProfileUserSettingsArgs(
-        @Nullable Input<String> executionRole,
-        @Nullable Input<UserProfileJupyterServerAppSettingsArgs> jupyterServerAppSettings,
-        @Nullable Input<UserProfileKernelGatewayAppSettingsArgs> kernelGatewayAppSettings,
-        @Nullable Input<List<String>> securityGroups,
-        @Nullable Input<UserProfileSharingSettingsArgs> sharingSettings) {
+        @Nullable Output<String> executionRole,
+        @Nullable Output<UserProfileJupyterServerAppSettingsArgs> jupyterServerAppSettings,
+        @Nullable Output<UserProfileKernelGatewayAppSettingsArgs> kernelGatewayAppSettings,
+        @Nullable Output<List<String>> securityGroups,
+        @Nullable Output<UserProfileSharingSettingsArgs> sharingSettings) {
         this.executionRole = executionRole;
         this.jupyterServerAppSettings = jupyterServerAppSettings;
         this.kernelGatewayAppSettings = kernelGatewayAppSettings;
@@ -91,11 +91,11 @@ public final class UserProfileUserSettingsArgs extends io.pulumi.resources.Resou
     }
 
     private UserProfileUserSettingsArgs() {
-        this.executionRole = Input.empty();
-        this.jupyterServerAppSettings = Input.empty();
-        this.kernelGatewayAppSettings = Input.empty();
-        this.securityGroups = Input.empty();
-        this.sharingSettings = Input.empty();
+        this.executionRole = Output.empty();
+        this.jupyterServerAppSettings = Output.empty();
+        this.kernelGatewayAppSettings = Output.empty();
+        this.securityGroups = Output.empty();
+        this.sharingSettings = Output.empty();
     }
 
     public static Builder builder() {
@@ -107,11 +107,11 @@ public final class UserProfileUserSettingsArgs extends io.pulumi.resources.Resou
     }
 
     public static final class Builder {
-        private @Nullable Input<String> executionRole;
-        private @Nullable Input<UserProfileJupyterServerAppSettingsArgs> jupyterServerAppSettings;
-        private @Nullable Input<UserProfileKernelGatewayAppSettingsArgs> kernelGatewayAppSettings;
-        private @Nullable Input<List<String>> securityGroups;
-        private @Nullable Input<UserProfileSharingSettingsArgs> sharingSettings;
+        private @Nullable Output<String> executionRole;
+        private @Nullable Output<UserProfileJupyterServerAppSettingsArgs> jupyterServerAppSettings;
+        private @Nullable Output<UserProfileKernelGatewayAppSettingsArgs> kernelGatewayAppSettings;
+        private @Nullable Output<List<String>> securityGroups;
+        private @Nullable Output<UserProfileSharingSettingsArgs> sharingSettings;
 
         public Builder() {
     	      // Empty
@@ -126,53 +126,53 @@ public final class UserProfileUserSettingsArgs extends io.pulumi.resources.Resou
     	      this.sharingSettings = defaults.sharingSettings;
         }
 
-        public Builder executionRole(@Nullable Input<String> executionRole) {
+        public Builder executionRole(@Nullable Output<String> executionRole) {
             this.executionRole = executionRole;
             return this;
         }
 
         public Builder executionRole(@Nullable String executionRole) {
-            this.executionRole = Input.ofNullable(executionRole);
+            this.executionRole = Output.ofNullable(executionRole);
             return this;
         }
 
-        public Builder jupyterServerAppSettings(@Nullable Input<UserProfileJupyterServerAppSettingsArgs> jupyterServerAppSettings) {
+        public Builder jupyterServerAppSettings(@Nullable Output<UserProfileJupyterServerAppSettingsArgs> jupyterServerAppSettings) {
             this.jupyterServerAppSettings = jupyterServerAppSettings;
             return this;
         }
 
         public Builder jupyterServerAppSettings(@Nullable UserProfileJupyterServerAppSettingsArgs jupyterServerAppSettings) {
-            this.jupyterServerAppSettings = Input.ofNullable(jupyterServerAppSettings);
+            this.jupyterServerAppSettings = Output.ofNullable(jupyterServerAppSettings);
             return this;
         }
 
-        public Builder kernelGatewayAppSettings(@Nullable Input<UserProfileKernelGatewayAppSettingsArgs> kernelGatewayAppSettings) {
+        public Builder kernelGatewayAppSettings(@Nullable Output<UserProfileKernelGatewayAppSettingsArgs> kernelGatewayAppSettings) {
             this.kernelGatewayAppSettings = kernelGatewayAppSettings;
             return this;
         }
 
         public Builder kernelGatewayAppSettings(@Nullable UserProfileKernelGatewayAppSettingsArgs kernelGatewayAppSettings) {
-            this.kernelGatewayAppSettings = Input.ofNullable(kernelGatewayAppSettings);
+            this.kernelGatewayAppSettings = Output.ofNullable(kernelGatewayAppSettings);
             return this;
         }
 
-        public Builder securityGroups(@Nullable Input<List<String>> securityGroups) {
+        public Builder securityGroups(@Nullable Output<List<String>> securityGroups) {
             this.securityGroups = securityGroups;
             return this;
         }
 
         public Builder securityGroups(@Nullable List<String> securityGroups) {
-            this.securityGroups = Input.ofNullable(securityGroups);
+            this.securityGroups = Output.ofNullable(securityGroups);
             return this;
         }
 
-        public Builder sharingSettings(@Nullable Input<UserProfileSharingSettingsArgs> sharingSettings) {
+        public Builder sharingSettings(@Nullable Output<UserProfileSharingSettingsArgs> sharingSettings) {
             this.sharingSettings = sharingSettings;
             return this;
         }
 
         public Builder sharingSettings(@Nullable UserProfileSharingSettingsArgs sharingSettings) {
-            this.sharingSettings = Input.ofNullable(sharingSettings);
+            this.sharingSettings = Output.ofNullable(sharingSettings);
             return this;
         }
         public UserProfileUserSettingsArgs build() {

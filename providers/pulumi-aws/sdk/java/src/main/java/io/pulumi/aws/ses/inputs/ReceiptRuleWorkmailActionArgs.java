@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.ses.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -20,9 +20,9 @@ public final class ReceiptRuleWorkmailActionArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="organizationArn", required=true)
-      private final Input<String> organizationArn;
+      private final Output<String> organizationArn;
 
-    public Input<String> getOrganizationArn() {
+    public Output<String> getOrganizationArn() {
         return this.organizationArn;
     }
 
@@ -31,9 +31,9 @@ public final class ReceiptRuleWorkmailActionArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="position", required=true)
-      private final Input<Integer> position;
+      private final Output<Integer> position;
 
-    public Input<Integer> getPosition() {
+    public Output<Integer> getPosition() {
         return this.position;
     }
 
@@ -42,25 +42,25 @@ public final class ReceiptRuleWorkmailActionArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="topicArn")
-      private final @Nullable Input<String> topicArn;
+      private final @Nullable Output<String> topicArn;
 
-    public Input<String> getTopicArn() {
-        return this.topicArn == null ? Input.empty() : this.topicArn;
+    public Output<String> getTopicArn() {
+        return this.topicArn == null ? Output.empty() : this.topicArn;
     }
 
     public ReceiptRuleWorkmailActionArgs(
-        Input<String> organizationArn,
-        Input<Integer> position,
-        @Nullable Input<String> topicArn) {
+        Output<String> organizationArn,
+        Output<Integer> position,
+        @Nullable Output<String> topicArn) {
         this.organizationArn = Objects.requireNonNull(organizationArn, "expected parameter 'organizationArn' to be non-null");
         this.position = Objects.requireNonNull(position, "expected parameter 'position' to be non-null");
         this.topicArn = topicArn;
     }
 
     private ReceiptRuleWorkmailActionArgs() {
-        this.organizationArn = Input.empty();
-        this.position = Input.empty();
-        this.topicArn = Input.empty();
+        this.organizationArn = Output.empty();
+        this.position = Output.empty();
+        this.topicArn = Output.empty();
     }
 
     public static Builder builder() {
@@ -72,9 +72,9 @@ public final class ReceiptRuleWorkmailActionArgs extends io.pulumi.resources.Res
     }
 
     public static final class Builder {
-        private Input<String> organizationArn;
-        private Input<Integer> position;
-        private @Nullable Input<String> topicArn;
+        private Output<String> organizationArn;
+        private Output<Integer> position;
+        private @Nullable Output<String> topicArn;
 
         public Builder() {
     	      // Empty
@@ -87,33 +87,33 @@ public final class ReceiptRuleWorkmailActionArgs extends io.pulumi.resources.Res
     	      this.topicArn = defaults.topicArn;
         }
 
-        public Builder organizationArn(Input<String> organizationArn) {
+        public Builder organizationArn(Output<String> organizationArn) {
             this.organizationArn = Objects.requireNonNull(organizationArn);
             return this;
         }
 
         public Builder organizationArn(String organizationArn) {
-            this.organizationArn = Input.of(Objects.requireNonNull(organizationArn));
+            this.organizationArn = Output.of(Objects.requireNonNull(organizationArn));
             return this;
         }
 
-        public Builder position(Input<Integer> position) {
+        public Builder position(Output<Integer> position) {
             this.position = Objects.requireNonNull(position);
             return this;
         }
 
         public Builder position(Integer position) {
-            this.position = Input.of(Objects.requireNonNull(position));
+            this.position = Output.of(Objects.requireNonNull(position));
             return this;
         }
 
-        public Builder topicArn(@Nullable Input<String> topicArn) {
+        public Builder topicArn(@Nullable Output<String> topicArn) {
             this.topicArn = topicArn;
             return this;
         }
 
         public Builder topicArn(@Nullable String topicArn) {
-            this.topicArn = Input.ofNullable(topicArn);
+            this.topicArn = Output.ofNullable(topicArn);
             return this;
         }
         public ReceiptRuleWorkmailActionArgs build() {

@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.networkfirewall.inputs;
 
 import io.pulumi.awsnative.networkfirewall.enums.RuleGroupTCPFlag;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
@@ -16,29 +16,29 @@ public final class RuleGroupTCPFlagFieldArgs extends io.pulumi.resources.Resourc
     public static final RuleGroupTCPFlagFieldArgs Empty = new RuleGroupTCPFlagFieldArgs();
 
     @InputImport(name="flags", required=true)
-      private final Input<List<RuleGroupTCPFlag>> flags;
+      private final Output<List<RuleGroupTCPFlag>> flags;
 
-    public Input<List<RuleGroupTCPFlag>> getFlags() {
+    public Output<List<RuleGroupTCPFlag>> getFlags() {
         return this.flags;
     }
 
     @InputImport(name="masks")
-      private final @Nullable Input<List<RuleGroupTCPFlag>> masks;
+      private final @Nullable Output<List<RuleGroupTCPFlag>> masks;
 
-    public Input<List<RuleGroupTCPFlag>> getMasks() {
-        return this.masks == null ? Input.empty() : this.masks;
+    public Output<List<RuleGroupTCPFlag>> getMasks() {
+        return this.masks == null ? Output.empty() : this.masks;
     }
 
     public RuleGroupTCPFlagFieldArgs(
-        Input<List<RuleGroupTCPFlag>> flags,
-        @Nullable Input<List<RuleGroupTCPFlag>> masks) {
+        Output<List<RuleGroupTCPFlag>> flags,
+        @Nullable Output<List<RuleGroupTCPFlag>> masks) {
         this.flags = Objects.requireNonNull(flags, "expected parameter 'flags' to be non-null");
         this.masks = masks;
     }
 
     private RuleGroupTCPFlagFieldArgs() {
-        this.flags = Input.empty();
-        this.masks = Input.empty();
+        this.flags = Output.empty();
+        this.masks = Output.empty();
     }
 
     public static Builder builder() {
@@ -50,8 +50,8 @@ public final class RuleGroupTCPFlagFieldArgs extends io.pulumi.resources.Resourc
     }
 
     public static final class Builder {
-        private Input<List<RuleGroupTCPFlag>> flags;
-        private @Nullable Input<List<RuleGroupTCPFlag>> masks;
+        private Output<List<RuleGroupTCPFlag>> flags;
+        private @Nullable Output<List<RuleGroupTCPFlag>> masks;
 
         public Builder() {
     	      // Empty
@@ -63,23 +63,23 @@ public final class RuleGroupTCPFlagFieldArgs extends io.pulumi.resources.Resourc
     	      this.masks = defaults.masks;
         }
 
-        public Builder flags(Input<List<RuleGroupTCPFlag>> flags) {
+        public Builder flags(Output<List<RuleGroupTCPFlag>> flags) {
             this.flags = Objects.requireNonNull(flags);
             return this;
         }
 
         public Builder flags(List<RuleGroupTCPFlag> flags) {
-            this.flags = Input.of(Objects.requireNonNull(flags));
+            this.flags = Output.of(Objects.requireNonNull(flags));
             return this;
         }
 
-        public Builder masks(@Nullable Input<List<RuleGroupTCPFlag>> masks) {
+        public Builder masks(@Nullable Output<List<RuleGroupTCPFlag>> masks) {
             this.masks = masks;
             return this;
         }
 
         public Builder masks(@Nullable List<RuleGroupTCPFlag> masks) {
-            this.masks = Input.ofNullable(masks);
+            this.masks = Output.ofNullable(masks);
             return this;
         }
         public RuleGroupTCPFlagFieldArgs build() {

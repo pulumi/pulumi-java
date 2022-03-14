@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.apimanagement.inputs;
 
 import io.pulumi.azurenative.apimanagement.inputs.DataMaskingEntityArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
@@ -20,10 +20,10 @@ public final class DataMaskingArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="headers")
-      private final @Nullable Input<List<DataMaskingEntityArgs>> headers;
+      private final @Nullable Output<List<DataMaskingEntityArgs>> headers;
 
-    public Input<List<DataMaskingEntityArgs>> getHeaders() {
-        return this.headers == null ? Input.empty() : this.headers;
+    public Output<List<DataMaskingEntityArgs>> getHeaders() {
+        return this.headers == null ? Output.empty() : this.headers;
     }
 
     /**
@@ -31,22 +31,22 @@ public final class DataMaskingArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="queryParams")
-      private final @Nullable Input<List<DataMaskingEntityArgs>> queryParams;
+      private final @Nullable Output<List<DataMaskingEntityArgs>> queryParams;
 
-    public Input<List<DataMaskingEntityArgs>> getQueryParams() {
-        return this.queryParams == null ? Input.empty() : this.queryParams;
+    public Output<List<DataMaskingEntityArgs>> getQueryParams() {
+        return this.queryParams == null ? Output.empty() : this.queryParams;
     }
 
     public DataMaskingArgs(
-        @Nullable Input<List<DataMaskingEntityArgs>> headers,
-        @Nullable Input<List<DataMaskingEntityArgs>> queryParams) {
+        @Nullable Output<List<DataMaskingEntityArgs>> headers,
+        @Nullable Output<List<DataMaskingEntityArgs>> queryParams) {
         this.headers = headers;
         this.queryParams = queryParams;
     }
 
     private DataMaskingArgs() {
-        this.headers = Input.empty();
-        this.queryParams = Input.empty();
+        this.headers = Output.empty();
+        this.queryParams = Output.empty();
     }
 
     public static Builder builder() {
@@ -58,8 +58,8 @@ public final class DataMaskingArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<List<DataMaskingEntityArgs>> headers;
-        private @Nullable Input<List<DataMaskingEntityArgs>> queryParams;
+        private @Nullable Output<List<DataMaskingEntityArgs>> headers;
+        private @Nullable Output<List<DataMaskingEntityArgs>> queryParams;
 
         public Builder() {
     	      // Empty
@@ -71,23 +71,23 @@ public final class DataMaskingArgs extends io.pulumi.resources.ResourceArgs {
     	      this.queryParams = defaults.queryParams;
         }
 
-        public Builder headers(@Nullable Input<List<DataMaskingEntityArgs>> headers) {
+        public Builder headers(@Nullable Output<List<DataMaskingEntityArgs>> headers) {
             this.headers = headers;
             return this;
         }
 
         public Builder headers(@Nullable List<DataMaskingEntityArgs> headers) {
-            this.headers = Input.ofNullable(headers);
+            this.headers = Output.ofNullable(headers);
             return this;
         }
 
-        public Builder queryParams(@Nullable Input<List<DataMaskingEntityArgs>> queryParams) {
+        public Builder queryParams(@Nullable Output<List<DataMaskingEntityArgs>> queryParams) {
             this.queryParams = queryParams;
             return this;
         }
 
         public Builder queryParams(@Nullable List<DataMaskingEntityArgs> queryParams) {
-            this.queryParams = Input.ofNullable(queryParams);
+            this.queryParams = Output.ofNullable(queryParams);
             return this;
         }
         public DataMaskingArgs build() {

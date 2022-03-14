@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.networkfirewall.inputs;
 
 import io.pulumi.awsnative.networkfirewall.inputs.LoggingConfigurationLogDestinationConfigArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
@@ -15,18 +15,18 @@ public final class LoggingConfigurationArgs extends io.pulumi.resources.Resource
     public static final LoggingConfigurationArgs Empty = new LoggingConfigurationArgs();
 
     @InputImport(name="logDestinationConfigs", required=true)
-      private final Input<List<LoggingConfigurationLogDestinationConfigArgs>> logDestinationConfigs;
+      private final Output<List<LoggingConfigurationLogDestinationConfigArgs>> logDestinationConfigs;
 
-    public Input<List<LoggingConfigurationLogDestinationConfigArgs>> getLogDestinationConfigs() {
+    public Output<List<LoggingConfigurationLogDestinationConfigArgs>> getLogDestinationConfigs() {
         return this.logDestinationConfigs;
     }
 
-    public LoggingConfigurationArgs(Input<List<LoggingConfigurationLogDestinationConfigArgs>> logDestinationConfigs) {
+    public LoggingConfigurationArgs(Output<List<LoggingConfigurationLogDestinationConfigArgs>> logDestinationConfigs) {
         this.logDestinationConfigs = Objects.requireNonNull(logDestinationConfigs, "expected parameter 'logDestinationConfigs' to be non-null");
     }
 
     private LoggingConfigurationArgs() {
-        this.logDestinationConfigs = Input.empty();
+        this.logDestinationConfigs = Output.empty();
     }
 
     public static Builder builder() {
@@ -38,7 +38,7 @@ public final class LoggingConfigurationArgs extends io.pulumi.resources.Resource
     }
 
     public static final class Builder {
-        private Input<List<LoggingConfigurationLogDestinationConfigArgs>> logDestinationConfigs;
+        private Output<List<LoggingConfigurationLogDestinationConfigArgs>> logDestinationConfigs;
 
         public Builder() {
     	      // Empty
@@ -49,13 +49,13 @@ public final class LoggingConfigurationArgs extends io.pulumi.resources.Resource
     	      this.logDestinationConfigs = defaults.logDestinationConfigs;
         }
 
-        public Builder logDestinationConfigs(Input<List<LoggingConfigurationLogDestinationConfigArgs>> logDestinationConfigs) {
+        public Builder logDestinationConfigs(Output<List<LoggingConfigurationLogDestinationConfigArgs>> logDestinationConfigs) {
             this.logDestinationConfigs = Objects.requireNonNull(logDestinationConfigs);
             return this;
         }
 
         public Builder logDestinationConfigs(List<LoggingConfigurationLogDestinationConfigArgs> logDestinationConfigs) {
-            this.logDestinationConfigs = Input.of(Objects.requireNonNull(logDestinationConfigs));
+            this.logDestinationConfigs = Output.of(Objects.requireNonNull(logDestinationConfigs));
             return this;
         }
         public LoggingConfigurationArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.databrew.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,29 +19,29 @@ public final class DatasetS3LocationArgs extends io.pulumi.resources.ResourceArg
     public static final DatasetS3LocationArgs Empty = new DatasetS3LocationArgs();
 
     @InputImport(name="bucket", required=true)
-      private final Input<String> bucket;
+      private final Output<String> bucket;
 
-    public Input<String> getBucket() {
+    public Output<String> getBucket() {
         return this.bucket;
     }
 
     @InputImport(name="key")
-      private final @Nullable Input<String> key;
+      private final @Nullable Output<String> key;
 
-    public Input<String> getKey() {
-        return this.key == null ? Input.empty() : this.key;
+    public Output<String> getKey() {
+        return this.key == null ? Output.empty() : this.key;
     }
 
     public DatasetS3LocationArgs(
-        Input<String> bucket,
-        @Nullable Input<String> key) {
+        Output<String> bucket,
+        @Nullable Output<String> key) {
         this.bucket = Objects.requireNonNull(bucket, "expected parameter 'bucket' to be non-null");
         this.key = key;
     }
 
     private DatasetS3LocationArgs() {
-        this.bucket = Input.empty();
-        this.key = Input.empty();
+        this.bucket = Output.empty();
+        this.key = Output.empty();
     }
 
     public static Builder builder() {
@@ -53,8 +53,8 @@ public final class DatasetS3LocationArgs extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private Input<String> bucket;
-        private @Nullable Input<String> key;
+        private Output<String> bucket;
+        private @Nullable Output<String> key;
 
         public Builder() {
     	      // Empty
@@ -66,23 +66,23 @@ public final class DatasetS3LocationArgs extends io.pulumi.resources.ResourceArg
     	      this.key = defaults.key;
         }
 
-        public Builder bucket(Input<String> bucket) {
+        public Builder bucket(Output<String> bucket) {
             this.bucket = Objects.requireNonNull(bucket);
             return this;
         }
 
         public Builder bucket(String bucket) {
-            this.bucket = Input.of(Objects.requireNonNull(bucket));
+            this.bucket = Output.of(Objects.requireNonNull(bucket));
             return this;
         }
 
-        public Builder key(@Nullable Input<String> key) {
+        public Builder key(@Nullable Output<String> key) {
             this.key = key;
             return this;
         }
 
         public Builder key(@Nullable String key) {
-            this.key = Input.ofNullable(key);
+            this.key = Output.ofNullable(key);
             return this;
         }
         public DatasetS3LocationArgs build() {

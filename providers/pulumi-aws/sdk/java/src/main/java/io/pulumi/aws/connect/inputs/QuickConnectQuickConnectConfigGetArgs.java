@@ -6,7 +6,7 @@ package io.pulumi.aws.connect.inputs;
 import io.pulumi.aws.connect.inputs.QuickConnectQuickConnectConfigPhoneConfigGetArgs;
 import io.pulumi.aws.connect.inputs.QuickConnectQuickConnectConfigQueueConfigGetArgs;
 import io.pulumi.aws.connect.inputs.QuickConnectQuickConnectConfigUserConfigGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -23,10 +23,10 @@ public final class QuickConnectQuickConnectConfigGetArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="phoneConfigs")
-      private final @Nullable Input<List<QuickConnectQuickConnectConfigPhoneConfigGetArgs>> phoneConfigs;
+      private final @Nullable Output<List<QuickConnectQuickConnectConfigPhoneConfigGetArgs>> phoneConfigs;
 
-    public Input<List<QuickConnectQuickConnectConfigPhoneConfigGetArgs>> getPhoneConfigs() {
-        return this.phoneConfigs == null ? Input.empty() : this.phoneConfigs;
+    public Output<List<QuickConnectQuickConnectConfigPhoneConfigGetArgs>> getPhoneConfigs() {
+        return this.phoneConfigs == null ? Output.empty() : this.phoneConfigs;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class QuickConnectQuickConnectConfigGetArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="queueConfigs")
-      private final @Nullable Input<List<QuickConnectQuickConnectConfigQueueConfigGetArgs>> queueConfigs;
+      private final @Nullable Output<List<QuickConnectQuickConnectConfigQueueConfigGetArgs>> queueConfigs;
 
-    public Input<List<QuickConnectQuickConnectConfigQueueConfigGetArgs>> getQueueConfigs() {
-        return this.queueConfigs == null ? Input.empty() : this.queueConfigs;
+    public Output<List<QuickConnectQuickConnectConfigQueueConfigGetArgs>> getQueueConfigs() {
+        return this.queueConfigs == null ? Output.empty() : this.queueConfigs;
     }
 
     /**
@@ -45,9 +45,9 @@ public final class QuickConnectQuickConnectConfigGetArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="quickConnectType", required=true)
-      private final Input<String> quickConnectType;
+      private final Output<String> quickConnectType;
 
-    public Input<String> getQuickConnectType() {
+    public Output<String> getQuickConnectType() {
         return this.quickConnectType;
     }
 
@@ -56,17 +56,17 @@ public final class QuickConnectQuickConnectConfigGetArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="userConfigs")
-      private final @Nullable Input<List<QuickConnectQuickConnectConfigUserConfigGetArgs>> userConfigs;
+      private final @Nullable Output<List<QuickConnectQuickConnectConfigUserConfigGetArgs>> userConfigs;
 
-    public Input<List<QuickConnectQuickConnectConfigUserConfigGetArgs>> getUserConfigs() {
-        return this.userConfigs == null ? Input.empty() : this.userConfigs;
+    public Output<List<QuickConnectQuickConnectConfigUserConfigGetArgs>> getUserConfigs() {
+        return this.userConfigs == null ? Output.empty() : this.userConfigs;
     }
 
     public QuickConnectQuickConnectConfigGetArgs(
-        @Nullable Input<List<QuickConnectQuickConnectConfigPhoneConfigGetArgs>> phoneConfigs,
-        @Nullable Input<List<QuickConnectQuickConnectConfigQueueConfigGetArgs>> queueConfigs,
-        Input<String> quickConnectType,
-        @Nullable Input<List<QuickConnectQuickConnectConfigUserConfigGetArgs>> userConfigs) {
+        @Nullable Output<List<QuickConnectQuickConnectConfigPhoneConfigGetArgs>> phoneConfigs,
+        @Nullable Output<List<QuickConnectQuickConnectConfigQueueConfigGetArgs>> queueConfigs,
+        Output<String> quickConnectType,
+        @Nullable Output<List<QuickConnectQuickConnectConfigUserConfigGetArgs>> userConfigs) {
         this.phoneConfigs = phoneConfigs;
         this.queueConfigs = queueConfigs;
         this.quickConnectType = Objects.requireNonNull(quickConnectType, "expected parameter 'quickConnectType' to be non-null");
@@ -74,10 +74,10 @@ public final class QuickConnectQuickConnectConfigGetArgs extends io.pulumi.resou
     }
 
     private QuickConnectQuickConnectConfigGetArgs() {
-        this.phoneConfigs = Input.empty();
-        this.queueConfigs = Input.empty();
-        this.quickConnectType = Input.empty();
-        this.userConfigs = Input.empty();
+        this.phoneConfigs = Output.empty();
+        this.queueConfigs = Output.empty();
+        this.quickConnectType = Output.empty();
+        this.userConfigs = Output.empty();
     }
 
     public static Builder builder() {
@@ -89,10 +89,10 @@ public final class QuickConnectQuickConnectConfigGetArgs extends io.pulumi.resou
     }
 
     public static final class Builder {
-        private @Nullable Input<List<QuickConnectQuickConnectConfigPhoneConfigGetArgs>> phoneConfigs;
-        private @Nullable Input<List<QuickConnectQuickConnectConfigQueueConfigGetArgs>> queueConfigs;
-        private Input<String> quickConnectType;
-        private @Nullable Input<List<QuickConnectQuickConnectConfigUserConfigGetArgs>> userConfigs;
+        private @Nullable Output<List<QuickConnectQuickConnectConfigPhoneConfigGetArgs>> phoneConfigs;
+        private @Nullable Output<List<QuickConnectQuickConnectConfigQueueConfigGetArgs>> queueConfigs;
+        private Output<String> quickConnectType;
+        private @Nullable Output<List<QuickConnectQuickConnectConfigUserConfigGetArgs>> userConfigs;
 
         public Builder() {
     	      // Empty
@@ -106,43 +106,43 @@ public final class QuickConnectQuickConnectConfigGetArgs extends io.pulumi.resou
     	      this.userConfigs = defaults.userConfigs;
         }
 
-        public Builder phoneConfigs(@Nullable Input<List<QuickConnectQuickConnectConfigPhoneConfigGetArgs>> phoneConfigs) {
+        public Builder phoneConfigs(@Nullable Output<List<QuickConnectQuickConnectConfigPhoneConfigGetArgs>> phoneConfigs) {
             this.phoneConfigs = phoneConfigs;
             return this;
         }
 
         public Builder phoneConfigs(@Nullable List<QuickConnectQuickConnectConfigPhoneConfigGetArgs> phoneConfigs) {
-            this.phoneConfigs = Input.ofNullable(phoneConfigs);
+            this.phoneConfigs = Output.ofNullable(phoneConfigs);
             return this;
         }
 
-        public Builder queueConfigs(@Nullable Input<List<QuickConnectQuickConnectConfigQueueConfigGetArgs>> queueConfigs) {
+        public Builder queueConfigs(@Nullable Output<List<QuickConnectQuickConnectConfigQueueConfigGetArgs>> queueConfigs) {
             this.queueConfigs = queueConfigs;
             return this;
         }
 
         public Builder queueConfigs(@Nullable List<QuickConnectQuickConnectConfigQueueConfigGetArgs> queueConfigs) {
-            this.queueConfigs = Input.ofNullable(queueConfigs);
+            this.queueConfigs = Output.ofNullable(queueConfigs);
             return this;
         }
 
-        public Builder quickConnectType(Input<String> quickConnectType) {
+        public Builder quickConnectType(Output<String> quickConnectType) {
             this.quickConnectType = Objects.requireNonNull(quickConnectType);
             return this;
         }
 
         public Builder quickConnectType(String quickConnectType) {
-            this.quickConnectType = Input.of(Objects.requireNonNull(quickConnectType));
+            this.quickConnectType = Output.of(Objects.requireNonNull(quickConnectType));
             return this;
         }
 
-        public Builder userConfigs(@Nullable Input<List<QuickConnectQuickConnectConfigUserConfigGetArgs>> userConfigs) {
+        public Builder userConfigs(@Nullable Output<List<QuickConnectQuickConnectConfigUserConfigGetArgs>> userConfigs) {
             this.userConfigs = userConfigs;
             return this;
         }
 
         public Builder userConfigs(@Nullable List<QuickConnectQuickConnectConfigUserConfigGetArgs> userConfigs) {
-            this.userConfigs = Input.ofNullable(userConfigs);
+            this.userConfigs = Output.ofNullable(userConfigs);
             return this;
         }
         public QuickConnectQuickConnectConfigGetArgs build() {

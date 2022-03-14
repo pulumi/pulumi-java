@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.mskconnect;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class WorkerConfigurationArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -30,10 +30,10 @@ public final class WorkerConfigurationArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -41,25 +41,25 @@ public final class WorkerConfigurationArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="propertiesFileContent", required=true)
-      private final Input<String> propertiesFileContent;
+      private final Output<String> propertiesFileContent;
 
-    public Input<String> getPropertiesFileContent() {
+    public Output<String> getPropertiesFileContent() {
         return this.propertiesFileContent;
     }
 
     public WorkerConfigurationArgs(
-        @Nullable Input<String> description,
-        @Nullable Input<String> name,
-        Input<String> propertiesFileContent) {
+        @Nullable Output<String> description,
+        @Nullable Output<String> name,
+        Output<String> propertiesFileContent) {
         this.description = description;
         this.name = name;
         this.propertiesFileContent = Objects.requireNonNull(propertiesFileContent, "expected parameter 'propertiesFileContent' to be non-null");
     }
 
     private WorkerConfigurationArgs() {
-        this.description = Input.empty();
-        this.name = Input.empty();
-        this.propertiesFileContent = Input.empty();
+        this.description = Output.empty();
+        this.name = Output.empty();
+        this.propertiesFileContent = Output.empty();
     }
 
     public static Builder builder() {
@@ -71,9 +71,9 @@ public final class WorkerConfigurationArgs extends io.pulumi.resources.ResourceA
     }
 
     public static final class Builder {
-        private @Nullable Input<String> description;
-        private @Nullable Input<String> name;
-        private Input<String> propertiesFileContent;
+        private @Nullable Output<String> description;
+        private @Nullable Output<String> name;
+        private Output<String> propertiesFileContent;
 
         public Builder() {
     	      // Empty
@@ -86,33 +86,33 @@ public final class WorkerConfigurationArgs extends io.pulumi.resources.ResourceA
     	      this.propertiesFileContent = defaults.propertiesFileContent;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder propertiesFileContent(Input<String> propertiesFileContent) {
+        public Builder propertiesFileContent(Output<String> propertiesFileContent) {
             this.propertiesFileContent = Objects.requireNonNull(propertiesFileContent);
             return this;
         }
 
         public Builder propertiesFileContent(String propertiesFileContent) {
-            this.propertiesFileContent = Input.of(Objects.requireNonNull(propertiesFileContent));
+            this.propertiesFileContent = Output.of(Objects.requireNonNull(propertiesFileContent));
             return this;
         }
         public WorkerConfigurationArgs build() {

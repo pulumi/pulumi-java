@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.compute_v1.inputs.SecurityPolicyRuleHttpHeaderActionArgs;
 import io.pulumi.googlenative.compute_v1.inputs.SecurityPolicyRuleMatcherArgs;
@@ -29,10 +29,10 @@ public final class SecurityPolicyRuleArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="action")
-      private final @Nullable Input<String> action;
+      private final @Nullable Output<String> action;
 
-    public Input<String> getAction() {
-        return this.action == null ? Input.empty() : this.action;
+    public Output<String> getAction() {
+        return this.action == null ? Output.empty() : this.action;
     }
 
     /**
@@ -40,10 +40,10 @@ public final class SecurityPolicyRuleArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -51,10 +51,10 @@ public final class SecurityPolicyRuleArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="headerAction")
-      private final @Nullable Input<SecurityPolicyRuleHttpHeaderActionArgs> headerAction;
+      private final @Nullable Output<SecurityPolicyRuleHttpHeaderActionArgs> headerAction;
 
-    public Input<SecurityPolicyRuleHttpHeaderActionArgs> getHeaderAction() {
-        return this.headerAction == null ? Input.empty() : this.headerAction;
+    public Output<SecurityPolicyRuleHttpHeaderActionArgs> getHeaderAction() {
+        return this.headerAction == null ? Output.empty() : this.headerAction;
     }
 
     /**
@@ -62,10 +62,10 @@ public final class SecurityPolicyRuleArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="match")
-      private final @Nullable Input<SecurityPolicyRuleMatcherArgs> match;
+      private final @Nullable Output<SecurityPolicyRuleMatcherArgs> match;
 
-    public Input<SecurityPolicyRuleMatcherArgs> getMatch() {
-        return this.match == null ? Input.empty() : this.match;
+    public Output<SecurityPolicyRuleMatcherArgs> getMatch() {
+        return this.match == null ? Output.empty() : this.match;
     }
 
     /**
@@ -73,10 +73,10 @@ public final class SecurityPolicyRuleArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="preview")
-      private final @Nullable Input<Boolean> preview;
+      private final @Nullable Output<Boolean> preview;
 
-    public Input<Boolean> getPreview() {
-        return this.preview == null ? Input.empty() : this.preview;
+    public Output<Boolean> getPreview() {
+        return this.preview == null ? Output.empty() : this.preview;
     }
 
     /**
@@ -84,10 +84,10 @@ public final class SecurityPolicyRuleArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="priority")
-      private final @Nullable Input<Integer> priority;
+      private final @Nullable Output<Integer> priority;
 
-    public Input<Integer> getPriority() {
-        return this.priority == null ? Input.empty() : this.priority;
+    public Output<Integer> getPriority() {
+        return this.priority == null ? Output.empty() : this.priority;
     }
 
     /**
@@ -95,10 +95,10 @@ public final class SecurityPolicyRuleArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="rateLimitOptions")
-      private final @Nullable Input<SecurityPolicyRuleRateLimitOptionsArgs> rateLimitOptions;
+      private final @Nullable Output<SecurityPolicyRuleRateLimitOptionsArgs> rateLimitOptions;
 
-    public Input<SecurityPolicyRuleRateLimitOptionsArgs> getRateLimitOptions() {
-        return this.rateLimitOptions == null ? Input.empty() : this.rateLimitOptions;
+    public Output<SecurityPolicyRuleRateLimitOptionsArgs> getRateLimitOptions() {
+        return this.rateLimitOptions == null ? Output.empty() : this.rateLimitOptions;
     }
 
     /**
@@ -106,21 +106,21 @@ public final class SecurityPolicyRuleArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="redirectOptions")
-      private final @Nullable Input<SecurityPolicyRuleRedirectOptionsArgs> redirectOptions;
+      private final @Nullable Output<SecurityPolicyRuleRedirectOptionsArgs> redirectOptions;
 
-    public Input<SecurityPolicyRuleRedirectOptionsArgs> getRedirectOptions() {
-        return this.redirectOptions == null ? Input.empty() : this.redirectOptions;
+    public Output<SecurityPolicyRuleRedirectOptionsArgs> getRedirectOptions() {
+        return this.redirectOptions == null ? Output.empty() : this.redirectOptions;
     }
 
     public SecurityPolicyRuleArgs(
-        @Nullable Input<String> action,
-        @Nullable Input<String> description,
-        @Nullable Input<SecurityPolicyRuleHttpHeaderActionArgs> headerAction,
-        @Nullable Input<SecurityPolicyRuleMatcherArgs> match,
-        @Nullable Input<Boolean> preview,
-        @Nullable Input<Integer> priority,
-        @Nullable Input<SecurityPolicyRuleRateLimitOptionsArgs> rateLimitOptions,
-        @Nullable Input<SecurityPolicyRuleRedirectOptionsArgs> redirectOptions) {
+        @Nullable Output<String> action,
+        @Nullable Output<String> description,
+        @Nullable Output<SecurityPolicyRuleHttpHeaderActionArgs> headerAction,
+        @Nullable Output<SecurityPolicyRuleMatcherArgs> match,
+        @Nullable Output<Boolean> preview,
+        @Nullable Output<Integer> priority,
+        @Nullable Output<SecurityPolicyRuleRateLimitOptionsArgs> rateLimitOptions,
+        @Nullable Output<SecurityPolicyRuleRedirectOptionsArgs> redirectOptions) {
         this.action = action;
         this.description = description;
         this.headerAction = headerAction;
@@ -132,14 +132,14 @@ public final class SecurityPolicyRuleArgs extends io.pulumi.resources.ResourceAr
     }
 
     private SecurityPolicyRuleArgs() {
-        this.action = Input.empty();
-        this.description = Input.empty();
-        this.headerAction = Input.empty();
-        this.match = Input.empty();
-        this.preview = Input.empty();
-        this.priority = Input.empty();
-        this.rateLimitOptions = Input.empty();
-        this.redirectOptions = Input.empty();
+        this.action = Output.empty();
+        this.description = Output.empty();
+        this.headerAction = Output.empty();
+        this.match = Output.empty();
+        this.preview = Output.empty();
+        this.priority = Output.empty();
+        this.rateLimitOptions = Output.empty();
+        this.redirectOptions = Output.empty();
     }
 
     public static Builder builder() {
@@ -151,14 +151,14 @@ public final class SecurityPolicyRuleArgs extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private @Nullable Input<String> action;
-        private @Nullable Input<String> description;
-        private @Nullable Input<SecurityPolicyRuleHttpHeaderActionArgs> headerAction;
-        private @Nullable Input<SecurityPolicyRuleMatcherArgs> match;
-        private @Nullable Input<Boolean> preview;
-        private @Nullable Input<Integer> priority;
-        private @Nullable Input<SecurityPolicyRuleRateLimitOptionsArgs> rateLimitOptions;
-        private @Nullable Input<SecurityPolicyRuleRedirectOptionsArgs> redirectOptions;
+        private @Nullable Output<String> action;
+        private @Nullable Output<String> description;
+        private @Nullable Output<SecurityPolicyRuleHttpHeaderActionArgs> headerAction;
+        private @Nullable Output<SecurityPolicyRuleMatcherArgs> match;
+        private @Nullable Output<Boolean> preview;
+        private @Nullable Output<Integer> priority;
+        private @Nullable Output<SecurityPolicyRuleRateLimitOptionsArgs> rateLimitOptions;
+        private @Nullable Output<SecurityPolicyRuleRedirectOptionsArgs> redirectOptions;
 
         public Builder() {
     	      // Empty
@@ -176,83 +176,83 @@ public final class SecurityPolicyRuleArgs extends io.pulumi.resources.ResourceAr
     	      this.redirectOptions = defaults.redirectOptions;
         }
 
-        public Builder action(@Nullable Input<String> action) {
+        public Builder action(@Nullable Output<String> action) {
             this.action = action;
             return this;
         }
 
         public Builder action(@Nullable String action) {
-            this.action = Input.ofNullable(action);
+            this.action = Output.ofNullable(action);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder headerAction(@Nullable Input<SecurityPolicyRuleHttpHeaderActionArgs> headerAction) {
+        public Builder headerAction(@Nullable Output<SecurityPolicyRuleHttpHeaderActionArgs> headerAction) {
             this.headerAction = headerAction;
             return this;
         }
 
         public Builder headerAction(@Nullable SecurityPolicyRuleHttpHeaderActionArgs headerAction) {
-            this.headerAction = Input.ofNullable(headerAction);
+            this.headerAction = Output.ofNullable(headerAction);
             return this;
         }
 
-        public Builder match(@Nullable Input<SecurityPolicyRuleMatcherArgs> match) {
+        public Builder match(@Nullable Output<SecurityPolicyRuleMatcherArgs> match) {
             this.match = match;
             return this;
         }
 
         public Builder match(@Nullable SecurityPolicyRuleMatcherArgs match) {
-            this.match = Input.ofNullable(match);
+            this.match = Output.ofNullable(match);
             return this;
         }
 
-        public Builder preview(@Nullable Input<Boolean> preview) {
+        public Builder preview(@Nullable Output<Boolean> preview) {
             this.preview = preview;
             return this;
         }
 
         public Builder preview(@Nullable Boolean preview) {
-            this.preview = Input.ofNullable(preview);
+            this.preview = Output.ofNullable(preview);
             return this;
         }
 
-        public Builder priority(@Nullable Input<Integer> priority) {
+        public Builder priority(@Nullable Output<Integer> priority) {
             this.priority = priority;
             return this;
         }
 
         public Builder priority(@Nullable Integer priority) {
-            this.priority = Input.ofNullable(priority);
+            this.priority = Output.ofNullable(priority);
             return this;
         }
 
-        public Builder rateLimitOptions(@Nullable Input<SecurityPolicyRuleRateLimitOptionsArgs> rateLimitOptions) {
+        public Builder rateLimitOptions(@Nullable Output<SecurityPolicyRuleRateLimitOptionsArgs> rateLimitOptions) {
             this.rateLimitOptions = rateLimitOptions;
             return this;
         }
 
         public Builder rateLimitOptions(@Nullable SecurityPolicyRuleRateLimitOptionsArgs rateLimitOptions) {
-            this.rateLimitOptions = Input.ofNullable(rateLimitOptions);
+            this.rateLimitOptions = Output.ofNullable(rateLimitOptions);
             return this;
         }
 
-        public Builder redirectOptions(@Nullable Input<SecurityPolicyRuleRedirectOptionsArgs> redirectOptions) {
+        public Builder redirectOptions(@Nullable Output<SecurityPolicyRuleRedirectOptionsArgs> redirectOptions) {
             this.redirectOptions = redirectOptions;
             return this;
         }
 
         public Builder redirectOptions(@Nullable SecurityPolicyRuleRedirectOptionsArgs redirectOptions) {
-            this.redirectOptions = Input.ofNullable(redirectOptions);
+            this.redirectOptions = Output.ofNullable(redirectOptions);
             return this;
         }
         public SecurityPolicyRuleArgs build() {

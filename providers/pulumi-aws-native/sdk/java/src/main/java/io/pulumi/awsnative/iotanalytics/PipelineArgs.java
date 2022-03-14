@@ -5,7 +5,7 @@ package io.pulumi.awsnative.iotanalytics;
 
 import io.pulumi.awsnative.iotanalytics.inputs.PipelineActivityArgs;
 import io.pulumi.awsnative.iotanalytics.inputs.PipelineTagArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -18,39 +18,39 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
     public static final PipelineArgs Empty = new PipelineArgs();
 
     @InputImport(name="pipelineActivities", required=true)
-      private final Input<List<PipelineActivityArgs>> pipelineActivities;
+      private final Output<List<PipelineActivityArgs>> pipelineActivities;
 
-    public Input<List<PipelineActivityArgs>> getPipelineActivities() {
+    public Output<List<PipelineActivityArgs>> getPipelineActivities() {
         return this.pipelineActivities;
     }
 
     @InputImport(name="pipelineName")
-      private final @Nullable Input<String> pipelineName;
+      private final @Nullable Output<String> pipelineName;
 
-    public Input<String> getPipelineName() {
-        return this.pipelineName == null ? Input.empty() : this.pipelineName;
+    public Output<String> getPipelineName() {
+        return this.pipelineName == null ? Output.empty() : this.pipelineName;
     }
 
     @InputImport(name="tags")
-      private final @Nullable Input<List<PipelineTagArgs>> tags;
+      private final @Nullable Output<List<PipelineTagArgs>> tags;
 
-    public Input<List<PipelineTagArgs>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<List<PipelineTagArgs>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public PipelineArgs(
-        Input<List<PipelineActivityArgs>> pipelineActivities,
-        @Nullable Input<String> pipelineName,
-        @Nullable Input<List<PipelineTagArgs>> tags) {
+        Output<List<PipelineActivityArgs>> pipelineActivities,
+        @Nullable Output<String> pipelineName,
+        @Nullable Output<List<PipelineTagArgs>> tags) {
         this.pipelineActivities = Objects.requireNonNull(pipelineActivities, "expected parameter 'pipelineActivities' to be non-null");
         this.pipelineName = pipelineName;
         this.tags = tags;
     }
 
     private PipelineArgs() {
-        this.pipelineActivities = Input.empty();
-        this.pipelineName = Input.empty();
-        this.tags = Input.empty();
+        this.pipelineActivities = Output.empty();
+        this.pipelineName = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,9 +62,9 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<List<PipelineActivityArgs>> pipelineActivities;
-        private @Nullable Input<String> pipelineName;
-        private @Nullable Input<List<PipelineTagArgs>> tags;
+        private Output<List<PipelineActivityArgs>> pipelineActivities;
+        private @Nullable Output<String> pipelineName;
+        private @Nullable Output<List<PipelineTagArgs>> tags;
 
         public Builder() {
     	      // Empty
@@ -77,33 +77,33 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder pipelineActivities(Input<List<PipelineActivityArgs>> pipelineActivities) {
+        public Builder pipelineActivities(Output<List<PipelineActivityArgs>> pipelineActivities) {
             this.pipelineActivities = Objects.requireNonNull(pipelineActivities);
             return this;
         }
 
         public Builder pipelineActivities(List<PipelineActivityArgs> pipelineActivities) {
-            this.pipelineActivities = Input.of(Objects.requireNonNull(pipelineActivities));
+            this.pipelineActivities = Output.of(Objects.requireNonNull(pipelineActivities));
             return this;
         }
 
-        public Builder pipelineName(@Nullable Input<String> pipelineName) {
+        public Builder pipelineName(@Nullable Output<String> pipelineName) {
             this.pipelineName = pipelineName;
             return this;
         }
 
         public Builder pipelineName(@Nullable String pipelineName) {
-            this.pipelineName = Input.ofNullable(pipelineName);
+            this.pipelineName = Output.ofNullable(pipelineName);
             return this;
         }
 
-        public Builder tags(@Nullable Input<List<PipelineTagArgs>> tags) {
+        public Builder tags(@Nullable Output<List<PipelineTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable List<PipelineTagArgs> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public PipelineArgs build() {

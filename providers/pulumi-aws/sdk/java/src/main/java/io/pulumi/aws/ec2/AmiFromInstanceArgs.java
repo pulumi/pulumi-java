@@ -5,7 +5,7 @@ package io.pulumi.aws.ec2;
 
 import io.pulumi.aws.ec2.inputs.AmiFromInstanceEbsBlockDeviceArgs;
 import io.pulumi.aws.ec2.inputs.AmiFromInstanceEphemeralBlockDeviceArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class AmiFromInstanceArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class AmiFromInstanceArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="ebsBlockDevices")
-      private final @Nullable Input<List<AmiFromInstanceEbsBlockDeviceArgs>> ebsBlockDevices;
+      private final @Nullable Output<List<AmiFromInstanceEbsBlockDeviceArgs>> ebsBlockDevices;
 
-    public Input<List<AmiFromInstanceEbsBlockDeviceArgs>> getEbsBlockDevices() {
-        return this.ebsBlockDevices == null ? Input.empty() : this.ebsBlockDevices;
+    public Output<List<AmiFromInstanceEbsBlockDeviceArgs>> getEbsBlockDevices() {
+        return this.ebsBlockDevices == null ? Output.empty() : this.ebsBlockDevices;
     }
 
     /**
@@ -48,10 +48,10 @@ public final class AmiFromInstanceArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="ephemeralBlockDevices")
-      private final @Nullable Input<List<AmiFromInstanceEphemeralBlockDeviceArgs>> ephemeralBlockDevices;
+      private final @Nullable Output<List<AmiFromInstanceEphemeralBlockDeviceArgs>> ephemeralBlockDevices;
 
-    public Input<List<AmiFromInstanceEphemeralBlockDeviceArgs>> getEphemeralBlockDevices() {
-        return this.ephemeralBlockDevices == null ? Input.empty() : this.ephemeralBlockDevices;
+    public Output<List<AmiFromInstanceEphemeralBlockDeviceArgs>> getEphemeralBlockDevices() {
+        return this.ephemeralBlockDevices == null ? Output.empty() : this.ephemeralBlockDevices;
     }
 
     /**
@@ -59,10 +59,10 @@ public final class AmiFromInstanceArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -73,10 +73,10 @@ public final class AmiFromInstanceArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="snapshotWithoutReboot")
-      private final @Nullable Input<Boolean> snapshotWithoutReboot;
+      private final @Nullable Output<Boolean> snapshotWithoutReboot;
 
-    public Input<Boolean> getSnapshotWithoutReboot() {
-        return this.snapshotWithoutReboot == null ? Input.empty() : this.snapshotWithoutReboot;
+    public Output<Boolean> getSnapshotWithoutReboot() {
+        return this.snapshotWithoutReboot == null ? Output.empty() : this.snapshotWithoutReboot;
     }
 
     /**
@@ -84,9 +84,9 @@ public final class AmiFromInstanceArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="sourceInstanceId", required=true)
-      private final Input<String> sourceInstanceId;
+      private final Output<String> sourceInstanceId;
 
-    public Input<String> getSourceInstanceId() {
+    public Output<String> getSourceInstanceId() {
         return this.sourceInstanceId;
     }
 
@@ -95,20 +95,20 @@ public final class AmiFromInstanceArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public AmiFromInstanceArgs(
-        @Nullable Input<String> description,
-        @Nullable Input<List<AmiFromInstanceEbsBlockDeviceArgs>> ebsBlockDevices,
-        @Nullable Input<List<AmiFromInstanceEphemeralBlockDeviceArgs>> ephemeralBlockDevices,
-        @Nullable Input<String> name,
-        @Nullable Input<Boolean> snapshotWithoutReboot,
-        Input<String> sourceInstanceId,
-        @Nullable Input<Map<String,String>> tags) {
+        @Nullable Output<String> description,
+        @Nullable Output<List<AmiFromInstanceEbsBlockDeviceArgs>> ebsBlockDevices,
+        @Nullable Output<List<AmiFromInstanceEphemeralBlockDeviceArgs>> ephemeralBlockDevices,
+        @Nullable Output<String> name,
+        @Nullable Output<Boolean> snapshotWithoutReboot,
+        Output<String> sourceInstanceId,
+        @Nullable Output<Map<String,String>> tags) {
         this.description = description;
         this.ebsBlockDevices = ebsBlockDevices;
         this.ephemeralBlockDevices = ephemeralBlockDevices;
@@ -119,13 +119,13 @@ public final class AmiFromInstanceArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private AmiFromInstanceArgs() {
-        this.description = Input.empty();
-        this.ebsBlockDevices = Input.empty();
-        this.ephemeralBlockDevices = Input.empty();
-        this.name = Input.empty();
-        this.snapshotWithoutReboot = Input.empty();
-        this.sourceInstanceId = Input.empty();
-        this.tags = Input.empty();
+        this.description = Output.empty();
+        this.ebsBlockDevices = Output.empty();
+        this.ephemeralBlockDevices = Output.empty();
+        this.name = Output.empty();
+        this.snapshotWithoutReboot = Output.empty();
+        this.sourceInstanceId = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -137,13 +137,13 @@ public final class AmiFromInstanceArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private @Nullable Input<String> description;
-        private @Nullable Input<List<AmiFromInstanceEbsBlockDeviceArgs>> ebsBlockDevices;
-        private @Nullable Input<List<AmiFromInstanceEphemeralBlockDeviceArgs>> ephemeralBlockDevices;
-        private @Nullable Input<String> name;
-        private @Nullable Input<Boolean> snapshotWithoutReboot;
-        private Input<String> sourceInstanceId;
-        private @Nullable Input<Map<String,String>> tags;
+        private @Nullable Output<String> description;
+        private @Nullable Output<List<AmiFromInstanceEbsBlockDeviceArgs>> ebsBlockDevices;
+        private @Nullable Output<List<AmiFromInstanceEphemeralBlockDeviceArgs>> ephemeralBlockDevices;
+        private @Nullable Output<String> name;
+        private @Nullable Output<Boolean> snapshotWithoutReboot;
+        private Output<String> sourceInstanceId;
+        private @Nullable Output<Map<String,String>> tags;
 
         public Builder() {
     	      // Empty
@@ -160,73 +160,73 @@ public final class AmiFromInstanceArgs extends io.pulumi.resources.ResourceArgs 
     	      this.tags = defaults.tags;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder ebsBlockDevices(@Nullable Input<List<AmiFromInstanceEbsBlockDeviceArgs>> ebsBlockDevices) {
+        public Builder ebsBlockDevices(@Nullable Output<List<AmiFromInstanceEbsBlockDeviceArgs>> ebsBlockDevices) {
             this.ebsBlockDevices = ebsBlockDevices;
             return this;
         }
 
         public Builder ebsBlockDevices(@Nullable List<AmiFromInstanceEbsBlockDeviceArgs> ebsBlockDevices) {
-            this.ebsBlockDevices = Input.ofNullable(ebsBlockDevices);
+            this.ebsBlockDevices = Output.ofNullable(ebsBlockDevices);
             return this;
         }
 
-        public Builder ephemeralBlockDevices(@Nullable Input<List<AmiFromInstanceEphemeralBlockDeviceArgs>> ephemeralBlockDevices) {
+        public Builder ephemeralBlockDevices(@Nullable Output<List<AmiFromInstanceEphemeralBlockDeviceArgs>> ephemeralBlockDevices) {
             this.ephemeralBlockDevices = ephemeralBlockDevices;
             return this;
         }
 
         public Builder ephemeralBlockDevices(@Nullable List<AmiFromInstanceEphemeralBlockDeviceArgs> ephemeralBlockDevices) {
-            this.ephemeralBlockDevices = Input.ofNullable(ephemeralBlockDevices);
+            this.ephemeralBlockDevices = Output.ofNullable(ephemeralBlockDevices);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder snapshotWithoutReboot(@Nullable Input<Boolean> snapshotWithoutReboot) {
+        public Builder snapshotWithoutReboot(@Nullable Output<Boolean> snapshotWithoutReboot) {
             this.snapshotWithoutReboot = snapshotWithoutReboot;
             return this;
         }
 
         public Builder snapshotWithoutReboot(@Nullable Boolean snapshotWithoutReboot) {
-            this.snapshotWithoutReboot = Input.ofNullable(snapshotWithoutReboot);
+            this.snapshotWithoutReboot = Output.ofNullable(snapshotWithoutReboot);
             return this;
         }
 
-        public Builder sourceInstanceId(Input<String> sourceInstanceId) {
+        public Builder sourceInstanceId(Output<String> sourceInstanceId) {
             this.sourceInstanceId = Objects.requireNonNull(sourceInstanceId);
             return this;
         }
 
         public Builder sourceInstanceId(String sourceInstanceId) {
-            this.sourceInstanceId = Input.of(Objects.requireNonNull(sourceInstanceId));
+            this.sourceInstanceId = Output.of(Objects.requireNonNull(sourceInstanceId));
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public AmiFromInstanceArgs build() {

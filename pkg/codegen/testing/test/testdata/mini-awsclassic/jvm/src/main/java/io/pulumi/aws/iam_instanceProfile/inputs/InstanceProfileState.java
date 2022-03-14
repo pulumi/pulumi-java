@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.iam_instanceProfile.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,18 +19,18 @@ public final class InstanceProfileState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="role")
-      private final @Nullable Input<String> role;
+      private final @Nullable Output<String> role;
 
-    public Input<String> getRole() {
-        return this.role == null ? Input.empty() : this.role;
+    public Output<String> getRole() {
+        return this.role == null ? Output.empty() : this.role;
     }
 
-    public InstanceProfileState(@Nullable Input<String> role) {
+    public InstanceProfileState(@Nullable Output<String> role) {
         this.role = role;
     }
 
     private InstanceProfileState() {
-        this.role = Input.empty();
+        this.role = Output.empty();
     }
 
     public static Builder builder() {
@@ -42,7 +42,7 @@ public final class InstanceProfileState extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private @Nullable Input<String> role;
+        private @Nullable Output<String> role;
 
         public Builder() {
     	      // Empty
@@ -53,7 +53,7 @@ public final class InstanceProfileState extends io.pulumi.resources.ResourceArgs
     	      this.role = defaults.role;
         }
 
-        public Builder role(@Nullable Input<String> role) {
+        public Builder role(@Nullable Output<String> role) {
             this.role = role;
             return this;
         }

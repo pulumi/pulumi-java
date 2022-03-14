@@ -5,7 +5,7 @@ package io.pulumi.azurenative.apimanagement;
 
 import io.pulumi.azurenative.apimanagement.enums.SchemaType;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -21,10 +21,10 @@ public final class SchemaArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -32,9 +32,9 @@ public final class SchemaArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -43,10 +43,10 @@ public final class SchemaArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="schemaId")
-      private final @Nullable Input<String> schemaId;
+      private final @Nullable Output<String> schemaId;
 
-    public Input<String> getSchemaId() {
-        return this.schemaId == null ? Input.empty() : this.schemaId;
+    public Output<String> getSchemaId() {
+        return this.schemaId == null ? Output.empty() : this.schemaId;
     }
 
     /**
@@ -54,9 +54,9 @@ public final class SchemaArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="schemaType", required=true)
-      private final Input<Either<String,SchemaType>> schemaType;
+      private final Output<Either<String,SchemaType>> schemaType;
 
-    public Input<Either<String,SchemaType>> getSchemaType() {
+    public Output<Either<String,SchemaType>> getSchemaType() {
         return this.schemaType;
     }
 
@@ -65,9 +65,9 @@ public final class SchemaArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serviceName", required=true)
-      private final Input<String> serviceName;
+      private final Output<String> serviceName;
 
-    public Input<String> getServiceName() {
+    public Output<String> getServiceName() {
         return this.serviceName;
     }
 
@@ -76,19 +76,19 @@ public final class SchemaArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="value")
-      private final @Nullable Input<String> value;
+      private final @Nullable Output<String> value;
 
-    public Input<String> getValue() {
-        return this.value == null ? Input.empty() : this.value;
+    public Output<String> getValue() {
+        return this.value == null ? Output.empty() : this.value;
     }
 
     public SchemaArgs(
-        @Nullable Input<String> description,
-        Input<String> resourceGroupName,
-        @Nullable Input<String> schemaId,
-        Input<Either<String,SchemaType>> schemaType,
-        Input<String> serviceName,
-        @Nullable Input<String> value) {
+        @Nullable Output<String> description,
+        Output<String> resourceGroupName,
+        @Nullable Output<String> schemaId,
+        Output<Either<String,SchemaType>> schemaType,
+        Output<String> serviceName,
+        @Nullable Output<String> value) {
         this.description = description;
         this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
         this.schemaId = schemaId;
@@ -98,12 +98,12 @@ public final class SchemaArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private SchemaArgs() {
-        this.description = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.schemaId = Input.empty();
-        this.schemaType = Input.empty();
-        this.serviceName = Input.empty();
-        this.value = Input.empty();
+        this.description = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.schemaId = Output.empty();
+        this.schemaType = Output.empty();
+        this.serviceName = Output.empty();
+        this.value = Output.empty();
     }
 
     public static Builder builder() {
@@ -115,12 +115,12 @@ public final class SchemaArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> description;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<String> schemaId;
-        private Input<Either<String,SchemaType>> schemaType;
-        private Input<String> serviceName;
-        private @Nullable Input<String> value;
+        private @Nullable Output<String> description;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<String> schemaId;
+        private Output<Either<String,SchemaType>> schemaType;
+        private Output<String> serviceName;
+        private @Nullable Output<String> value;
 
         public Builder() {
     	      // Empty
@@ -136,63 +136,63 @@ public final class SchemaArgs extends io.pulumi.resources.ResourceArgs {
     	      this.value = defaults.value;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder schemaId(@Nullable Input<String> schemaId) {
+        public Builder schemaId(@Nullable Output<String> schemaId) {
             this.schemaId = schemaId;
             return this;
         }
 
         public Builder schemaId(@Nullable String schemaId) {
-            this.schemaId = Input.ofNullable(schemaId);
+            this.schemaId = Output.ofNullable(schemaId);
             return this;
         }
 
-        public Builder schemaType(Input<Either<String,SchemaType>> schemaType) {
+        public Builder schemaType(Output<Either<String,SchemaType>> schemaType) {
             this.schemaType = Objects.requireNonNull(schemaType);
             return this;
         }
 
         public Builder schemaType(Either<String,SchemaType> schemaType) {
-            this.schemaType = Input.of(Objects.requireNonNull(schemaType));
+            this.schemaType = Output.of(Objects.requireNonNull(schemaType));
             return this;
         }
 
-        public Builder serviceName(Input<String> serviceName) {
+        public Builder serviceName(Output<String> serviceName) {
             this.serviceName = Objects.requireNonNull(serviceName);
             return this;
         }
 
         public Builder serviceName(String serviceName) {
-            this.serviceName = Input.of(Objects.requireNonNull(serviceName));
+            this.serviceName = Output.of(Objects.requireNonNull(serviceName));
             return this;
         }
 
-        public Builder value(@Nullable Input<String> value) {
+        public Builder value(@Nullable Output<String> value) {
             this.value = value;
             return this;
         }
 
         public Builder value(@Nullable String value) {
-            this.value = Input.ofNullable(value);
+            this.value = Output.ofNullable(value);
             return this;
         }
         public SchemaArgs build() {

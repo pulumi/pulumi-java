@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.apiextensions.k8s.io_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class CustomResourceSubresourceScaleArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="labelSelectorPath")
-      private final @Nullable Input<String> labelSelectorPath;
+      private final @Nullable Output<String> labelSelectorPath;
 
-    public Input<String> getLabelSelectorPath() {
-        return this.labelSelectorPath == null ? Input.empty() : this.labelSelectorPath;
+    public Output<String> getLabelSelectorPath() {
+        return this.labelSelectorPath == null ? Output.empty() : this.labelSelectorPath;
     }
 
     /**
@@ -34,9 +34,9 @@ public final class CustomResourceSubresourceScaleArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="specReplicasPath", required=true)
-      private final Input<String> specReplicasPath;
+      private final Output<String> specReplicasPath;
 
-    public Input<String> getSpecReplicasPath() {
+    public Output<String> getSpecReplicasPath() {
         return this.specReplicasPath;
     }
 
@@ -45,25 +45,25 @@ public final class CustomResourceSubresourceScaleArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="statusReplicasPath", required=true)
-      private final Input<String> statusReplicasPath;
+      private final Output<String> statusReplicasPath;
 
-    public Input<String> getStatusReplicasPath() {
+    public Output<String> getStatusReplicasPath() {
         return this.statusReplicasPath;
     }
 
     public CustomResourceSubresourceScaleArgs(
-        @Nullable Input<String> labelSelectorPath,
-        Input<String> specReplicasPath,
-        Input<String> statusReplicasPath) {
+        @Nullable Output<String> labelSelectorPath,
+        Output<String> specReplicasPath,
+        Output<String> statusReplicasPath) {
         this.labelSelectorPath = labelSelectorPath;
         this.specReplicasPath = Objects.requireNonNull(specReplicasPath, "expected parameter 'specReplicasPath' to be non-null");
         this.statusReplicasPath = Objects.requireNonNull(statusReplicasPath, "expected parameter 'statusReplicasPath' to be non-null");
     }
 
     private CustomResourceSubresourceScaleArgs() {
-        this.labelSelectorPath = Input.empty();
-        this.specReplicasPath = Input.empty();
-        this.statusReplicasPath = Input.empty();
+        this.labelSelectorPath = Output.empty();
+        this.specReplicasPath = Output.empty();
+        this.statusReplicasPath = Output.empty();
     }
 
     public static Builder builder() {
@@ -75,9 +75,9 @@ public final class CustomResourceSubresourceScaleArgs extends io.pulumi.resource
     }
 
     public static final class Builder {
-        private @Nullable Input<String> labelSelectorPath;
-        private Input<String> specReplicasPath;
-        private Input<String> statusReplicasPath;
+        private @Nullable Output<String> labelSelectorPath;
+        private Output<String> specReplicasPath;
+        private Output<String> statusReplicasPath;
 
         public Builder() {
     	      // Empty
@@ -90,33 +90,33 @@ public final class CustomResourceSubresourceScaleArgs extends io.pulumi.resource
     	      this.statusReplicasPath = defaults.statusReplicasPath;
         }
 
-        public Builder labelSelectorPath(@Nullable Input<String> labelSelectorPath) {
+        public Builder labelSelectorPath(@Nullable Output<String> labelSelectorPath) {
             this.labelSelectorPath = labelSelectorPath;
             return this;
         }
 
         public Builder labelSelectorPath(@Nullable String labelSelectorPath) {
-            this.labelSelectorPath = Input.ofNullable(labelSelectorPath);
+            this.labelSelectorPath = Output.ofNullable(labelSelectorPath);
             return this;
         }
 
-        public Builder specReplicasPath(Input<String> specReplicasPath) {
+        public Builder specReplicasPath(Output<String> specReplicasPath) {
             this.specReplicasPath = Objects.requireNonNull(specReplicasPath);
             return this;
         }
 
         public Builder specReplicasPath(String specReplicasPath) {
-            this.specReplicasPath = Input.of(Objects.requireNonNull(specReplicasPath));
+            this.specReplicasPath = Output.of(Objects.requireNonNull(specReplicasPath));
             return this;
         }
 
-        public Builder statusReplicasPath(Input<String> statusReplicasPath) {
+        public Builder statusReplicasPath(Output<String> statusReplicasPath) {
             this.statusReplicasPath = Objects.requireNonNull(statusReplicasPath);
             return this;
         }
 
         public Builder statusReplicasPath(String statusReplicasPath) {
-            this.statusReplicasPath = Input.of(Objects.requireNonNull(statusReplicasPath));
+            this.statusReplicasPath = Output.of(Objects.requireNonNull(statusReplicasPath));
             return this;
         }
         public CustomResourceSubresourceScaleArgs build() {

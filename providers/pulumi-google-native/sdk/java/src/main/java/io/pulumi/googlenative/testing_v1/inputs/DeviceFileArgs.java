@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.testing_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.testing_v1.inputs.ObbFileArgs;
 import io.pulumi.googlenative.testing_v1.inputs.RegularFileArgs;
@@ -24,10 +24,10 @@ public final class DeviceFileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="obbFile")
-      private final @Nullable Input<ObbFileArgs> obbFile;
+      private final @Nullable Output<ObbFileArgs> obbFile;
 
-    public Input<ObbFileArgs> getObbFile() {
-        return this.obbFile == null ? Input.empty() : this.obbFile;
+    public Output<ObbFileArgs> getObbFile() {
+        return this.obbFile == null ? Output.empty() : this.obbFile;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class DeviceFileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="regularFile")
-      private final @Nullable Input<RegularFileArgs> regularFile;
+      private final @Nullable Output<RegularFileArgs> regularFile;
 
-    public Input<RegularFileArgs> getRegularFile() {
-        return this.regularFile == null ? Input.empty() : this.regularFile;
+    public Output<RegularFileArgs> getRegularFile() {
+        return this.regularFile == null ? Output.empty() : this.regularFile;
     }
 
     public DeviceFileArgs(
-        @Nullable Input<ObbFileArgs> obbFile,
-        @Nullable Input<RegularFileArgs> regularFile) {
+        @Nullable Output<ObbFileArgs> obbFile,
+        @Nullable Output<RegularFileArgs> regularFile) {
         this.obbFile = obbFile;
         this.regularFile = regularFile;
     }
 
     private DeviceFileArgs() {
-        this.obbFile = Input.empty();
-        this.regularFile = Input.empty();
+        this.obbFile = Output.empty();
+        this.regularFile = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class DeviceFileArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<ObbFileArgs> obbFile;
-        private @Nullable Input<RegularFileArgs> regularFile;
+        private @Nullable Output<ObbFileArgs> obbFile;
+        private @Nullable Output<RegularFileArgs> regularFile;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class DeviceFileArgs extends io.pulumi.resources.ResourceArgs {
     	      this.regularFile = defaults.regularFile;
         }
 
-        public Builder obbFile(@Nullable Input<ObbFileArgs> obbFile) {
+        public Builder obbFile(@Nullable Output<ObbFileArgs> obbFile) {
             this.obbFile = obbFile;
             return this;
         }
 
         public Builder obbFile(@Nullable ObbFileArgs obbFile) {
-            this.obbFile = Input.ofNullable(obbFile);
+            this.obbFile = Output.ofNullable(obbFile);
             return this;
         }
 
-        public Builder regularFile(@Nullable Input<RegularFileArgs> regularFile) {
+        public Builder regularFile(@Nullable Output<RegularFileArgs> regularFile) {
             this.regularFile = regularFile;
             return this;
         }
 
         public Builder regularFile(@Nullable RegularFileArgs regularFile) {
-            this.regularFile = Input.ofNullable(regularFile);
+            this.regularFile = Output.ofNullable(regularFile);
             return this;
         }
         public DeviceFileArgs build() {

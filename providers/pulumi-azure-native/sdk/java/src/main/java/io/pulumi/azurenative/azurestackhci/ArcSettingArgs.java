@@ -5,7 +5,7 @@ package io.pulumi.azurenative.azurestackhci;
 
 import io.pulumi.azurenative.azurestackhci.enums.CreatedByType;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -21,10 +21,10 @@ public final class ArcSettingArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arcSettingName")
-      private final @Nullable Input<String> arcSettingName;
+      private final @Nullable Output<String> arcSettingName;
 
-    public Input<String> getArcSettingName() {
-        return this.arcSettingName == null ? Input.empty() : this.arcSettingName;
+    public Output<String> getArcSettingName() {
+        return this.arcSettingName == null ? Output.empty() : this.arcSettingName;
     }
 
     /**
@@ -32,9 +32,9 @@ public final class ArcSettingArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="clusterName", required=true)
-      private final Input<String> clusterName;
+      private final Output<String> clusterName;
 
-    public Input<String> getClusterName() {
+    public Output<String> getClusterName() {
         return this.clusterName;
     }
 
@@ -43,10 +43,10 @@ public final class ArcSettingArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="createdAt")
-      private final @Nullable Input<String> createdAt;
+      private final @Nullable Output<String> createdAt;
 
-    public Input<String> getCreatedAt() {
-        return this.createdAt == null ? Input.empty() : this.createdAt;
+    public Output<String> getCreatedAt() {
+        return this.createdAt == null ? Output.empty() : this.createdAt;
     }
 
     /**
@@ -54,10 +54,10 @@ public final class ArcSettingArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="createdBy")
-      private final @Nullable Input<String> createdBy;
+      private final @Nullable Output<String> createdBy;
 
-    public Input<String> getCreatedBy() {
-        return this.createdBy == null ? Input.empty() : this.createdBy;
+    public Output<String> getCreatedBy() {
+        return this.createdBy == null ? Output.empty() : this.createdBy;
     }
 
     /**
@@ -65,10 +65,10 @@ public final class ArcSettingArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="createdByType")
-      private final @Nullable Input<Either<String,CreatedByType>> createdByType;
+      private final @Nullable Output<Either<String,CreatedByType>> createdByType;
 
-    public Input<Either<String,CreatedByType>> getCreatedByType() {
-        return this.createdByType == null ? Input.empty() : this.createdByType;
+    public Output<Either<String,CreatedByType>> getCreatedByType() {
+        return this.createdByType == null ? Output.empty() : this.createdByType;
     }
 
     /**
@@ -76,10 +76,10 @@ public final class ArcSettingArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="lastModifiedAt")
-      private final @Nullable Input<String> lastModifiedAt;
+      private final @Nullable Output<String> lastModifiedAt;
 
-    public Input<String> getLastModifiedAt() {
-        return this.lastModifiedAt == null ? Input.empty() : this.lastModifiedAt;
+    public Output<String> getLastModifiedAt() {
+        return this.lastModifiedAt == null ? Output.empty() : this.lastModifiedAt;
     }
 
     /**
@@ -87,10 +87,10 @@ public final class ArcSettingArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="lastModifiedBy")
-      private final @Nullable Input<String> lastModifiedBy;
+      private final @Nullable Output<String> lastModifiedBy;
 
-    public Input<String> getLastModifiedBy() {
-        return this.lastModifiedBy == null ? Input.empty() : this.lastModifiedBy;
+    public Output<String> getLastModifiedBy() {
+        return this.lastModifiedBy == null ? Output.empty() : this.lastModifiedBy;
     }
 
     /**
@@ -98,10 +98,10 @@ public final class ArcSettingArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="lastModifiedByType")
-      private final @Nullable Input<Either<String,CreatedByType>> lastModifiedByType;
+      private final @Nullable Output<Either<String,CreatedByType>> lastModifiedByType;
 
-    public Input<Either<String,CreatedByType>> getLastModifiedByType() {
-        return this.lastModifiedByType == null ? Input.empty() : this.lastModifiedByType;
+    public Output<Either<String,CreatedByType>> getLastModifiedByType() {
+        return this.lastModifiedByType == null ? Output.empty() : this.lastModifiedByType;
     }
 
     /**
@@ -109,22 +109,22 @@ public final class ArcSettingArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
     public ArcSettingArgs(
-        @Nullable Input<String> arcSettingName,
-        Input<String> clusterName,
-        @Nullable Input<String> createdAt,
-        @Nullable Input<String> createdBy,
-        @Nullable Input<Either<String,CreatedByType>> createdByType,
-        @Nullable Input<String> lastModifiedAt,
-        @Nullable Input<String> lastModifiedBy,
-        @Nullable Input<Either<String,CreatedByType>> lastModifiedByType,
-        Input<String> resourceGroupName) {
+        @Nullable Output<String> arcSettingName,
+        Output<String> clusterName,
+        @Nullable Output<String> createdAt,
+        @Nullable Output<String> createdBy,
+        @Nullable Output<Either<String,CreatedByType>> createdByType,
+        @Nullable Output<String> lastModifiedAt,
+        @Nullable Output<String> lastModifiedBy,
+        @Nullable Output<Either<String,CreatedByType>> lastModifiedByType,
+        Output<String> resourceGroupName) {
         this.arcSettingName = arcSettingName;
         this.clusterName = Objects.requireNonNull(clusterName, "expected parameter 'clusterName' to be non-null");
         this.createdAt = createdAt;
@@ -137,15 +137,15 @@ public final class ArcSettingArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ArcSettingArgs() {
-        this.arcSettingName = Input.empty();
-        this.clusterName = Input.empty();
-        this.createdAt = Input.empty();
-        this.createdBy = Input.empty();
-        this.createdByType = Input.empty();
-        this.lastModifiedAt = Input.empty();
-        this.lastModifiedBy = Input.empty();
-        this.lastModifiedByType = Input.empty();
-        this.resourceGroupName = Input.empty();
+        this.arcSettingName = Output.empty();
+        this.clusterName = Output.empty();
+        this.createdAt = Output.empty();
+        this.createdBy = Output.empty();
+        this.createdByType = Output.empty();
+        this.lastModifiedAt = Output.empty();
+        this.lastModifiedBy = Output.empty();
+        this.lastModifiedByType = Output.empty();
+        this.resourceGroupName = Output.empty();
     }
 
     public static Builder builder() {
@@ -157,15 +157,15 @@ public final class ArcSettingArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> arcSettingName;
-        private Input<String> clusterName;
-        private @Nullable Input<String> createdAt;
-        private @Nullable Input<String> createdBy;
-        private @Nullable Input<Either<String,CreatedByType>> createdByType;
-        private @Nullable Input<String> lastModifiedAt;
-        private @Nullable Input<String> lastModifiedBy;
-        private @Nullable Input<Either<String,CreatedByType>> lastModifiedByType;
-        private Input<String> resourceGroupName;
+        private @Nullable Output<String> arcSettingName;
+        private Output<String> clusterName;
+        private @Nullable Output<String> createdAt;
+        private @Nullable Output<String> createdBy;
+        private @Nullable Output<Either<String,CreatedByType>> createdByType;
+        private @Nullable Output<String> lastModifiedAt;
+        private @Nullable Output<String> lastModifiedBy;
+        private @Nullable Output<Either<String,CreatedByType>> lastModifiedByType;
+        private Output<String> resourceGroupName;
 
         public Builder() {
     	      // Empty
@@ -184,93 +184,93 @@ public final class ArcSettingArgs extends io.pulumi.resources.ResourceArgs {
     	      this.resourceGroupName = defaults.resourceGroupName;
         }
 
-        public Builder arcSettingName(@Nullable Input<String> arcSettingName) {
+        public Builder arcSettingName(@Nullable Output<String> arcSettingName) {
             this.arcSettingName = arcSettingName;
             return this;
         }
 
         public Builder arcSettingName(@Nullable String arcSettingName) {
-            this.arcSettingName = Input.ofNullable(arcSettingName);
+            this.arcSettingName = Output.ofNullable(arcSettingName);
             return this;
         }
 
-        public Builder clusterName(Input<String> clusterName) {
+        public Builder clusterName(Output<String> clusterName) {
             this.clusterName = Objects.requireNonNull(clusterName);
             return this;
         }
 
         public Builder clusterName(String clusterName) {
-            this.clusterName = Input.of(Objects.requireNonNull(clusterName));
+            this.clusterName = Output.of(Objects.requireNonNull(clusterName));
             return this;
         }
 
-        public Builder createdAt(@Nullable Input<String> createdAt) {
+        public Builder createdAt(@Nullable Output<String> createdAt) {
             this.createdAt = createdAt;
             return this;
         }
 
         public Builder createdAt(@Nullable String createdAt) {
-            this.createdAt = Input.ofNullable(createdAt);
+            this.createdAt = Output.ofNullable(createdAt);
             return this;
         }
 
-        public Builder createdBy(@Nullable Input<String> createdBy) {
+        public Builder createdBy(@Nullable Output<String> createdBy) {
             this.createdBy = createdBy;
             return this;
         }
 
         public Builder createdBy(@Nullable String createdBy) {
-            this.createdBy = Input.ofNullable(createdBy);
+            this.createdBy = Output.ofNullable(createdBy);
             return this;
         }
 
-        public Builder createdByType(@Nullable Input<Either<String,CreatedByType>> createdByType) {
+        public Builder createdByType(@Nullable Output<Either<String,CreatedByType>> createdByType) {
             this.createdByType = createdByType;
             return this;
         }
 
         public Builder createdByType(@Nullable Either<String,CreatedByType> createdByType) {
-            this.createdByType = Input.ofNullable(createdByType);
+            this.createdByType = Output.ofNullable(createdByType);
             return this;
         }
 
-        public Builder lastModifiedAt(@Nullable Input<String> lastModifiedAt) {
+        public Builder lastModifiedAt(@Nullable Output<String> lastModifiedAt) {
             this.lastModifiedAt = lastModifiedAt;
             return this;
         }
 
         public Builder lastModifiedAt(@Nullable String lastModifiedAt) {
-            this.lastModifiedAt = Input.ofNullable(lastModifiedAt);
+            this.lastModifiedAt = Output.ofNullable(lastModifiedAt);
             return this;
         }
 
-        public Builder lastModifiedBy(@Nullable Input<String> lastModifiedBy) {
+        public Builder lastModifiedBy(@Nullable Output<String> lastModifiedBy) {
             this.lastModifiedBy = lastModifiedBy;
             return this;
         }
 
         public Builder lastModifiedBy(@Nullable String lastModifiedBy) {
-            this.lastModifiedBy = Input.ofNullable(lastModifiedBy);
+            this.lastModifiedBy = Output.ofNullable(lastModifiedBy);
             return this;
         }
 
-        public Builder lastModifiedByType(@Nullable Input<Either<String,CreatedByType>> lastModifiedByType) {
+        public Builder lastModifiedByType(@Nullable Output<Either<String,CreatedByType>> lastModifiedByType) {
             this.lastModifiedByType = lastModifiedByType;
             return this;
         }
 
         public Builder lastModifiedByType(@Nullable Either<String,CreatedByType> lastModifiedByType) {
-            this.lastModifiedByType = Input.ofNullable(lastModifiedByType);
+            this.lastModifiedByType = Output.ofNullable(lastModifiedByType);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
         public ArcSettingArgs build() {

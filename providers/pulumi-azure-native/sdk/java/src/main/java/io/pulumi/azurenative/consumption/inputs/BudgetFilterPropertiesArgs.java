@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.consumption.inputs;
 
 import io.pulumi.azurenative.consumption.inputs.BudgetComparisonExpressionArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,10 +23,10 @@ public final class BudgetFilterPropertiesArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="dimensions")
-      private final @Nullable Input<BudgetComparisonExpressionArgs> dimensions;
+      private final @Nullable Output<BudgetComparisonExpressionArgs> dimensions;
 
-    public Input<BudgetComparisonExpressionArgs> getDimensions() {
-        return this.dimensions == null ? Input.empty() : this.dimensions;
+    public Output<BudgetComparisonExpressionArgs> getDimensions() {
+        return this.dimensions == null ? Output.empty() : this.dimensions;
     }
 
     /**
@@ -34,22 +34,22 @@ public final class BudgetFilterPropertiesArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<BudgetComparisonExpressionArgs> tags;
+      private final @Nullable Output<BudgetComparisonExpressionArgs> tags;
 
-    public Input<BudgetComparisonExpressionArgs> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<BudgetComparisonExpressionArgs> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public BudgetFilterPropertiesArgs(
-        @Nullable Input<BudgetComparisonExpressionArgs> dimensions,
-        @Nullable Input<BudgetComparisonExpressionArgs> tags) {
+        @Nullable Output<BudgetComparisonExpressionArgs> dimensions,
+        @Nullable Output<BudgetComparisonExpressionArgs> tags) {
         this.dimensions = dimensions;
         this.tags = tags;
     }
 
     private BudgetFilterPropertiesArgs() {
-        this.dimensions = Input.empty();
-        this.tags = Input.empty();
+        this.dimensions = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class BudgetFilterPropertiesArgs extends io.pulumi.resources.Resour
     }
 
     public static final class Builder {
-        private @Nullable Input<BudgetComparisonExpressionArgs> dimensions;
-        private @Nullable Input<BudgetComparisonExpressionArgs> tags;
+        private @Nullable Output<BudgetComparisonExpressionArgs> dimensions;
+        private @Nullable Output<BudgetComparisonExpressionArgs> tags;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class BudgetFilterPropertiesArgs extends io.pulumi.resources.Resour
     	      this.tags = defaults.tags;
         }
 
-        public Builder dimensions(@Nullable Input<BudgetComparisonExpressionArgs> dimensions) {
+        public Builder dimensions(@Nullable Output<BudgetComparisonExpressionArgs> dimensions) {
             this.dimensions = dimensions;
             return this;
         }
 
         public Builder dimensions(@Nullable BudgetComparisonExpressionArgs dimensions) {
-            this.dimensions = Input.ofNullable(dimensions);
+            this.dimensions = Output.ofNullable(dimensions);
             return this;
         }
 
-        public Builder tags(@Nullable Input<BudgetComparisonExpressionArgs> tags) {
+        public Builder tags(@Nullable Output<BudgetComparisonExpressionArgs> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable BudgetComparisonExpressionArgs tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public BudgetFilterPropertiesArgs build() {

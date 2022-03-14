@@ -4,7 +4,7 @@
 package io.pulumi.aws.appmesh.inputs;
 
 import io.pulumi.aws.appmesh.inputs.RouteSpecGrpcRouteMatchMetadataMatchGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -21,10 +21,10 @@ public final class RouteSpecGrpcRouteMatchMetadataGetArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="invert")
-      private final @Nullable Input<Boolean> invert;
+      private final @Nullable Output<Boolean> invert;
 
-    public Input<Boolean> getInvert() {
-        return this.invert == null ? Input.empty() : this.invert;
+    public Output<Boolean> getInvert() {
+        return this.invert == null ? Output.empty() : this.invert;
     }
 
     /**
@@ -32,10 +32,10 @@ public final class RouteSpecGrpcRouteMatchMetadataGetArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="match")
-      private final @Nullable Input<RouteSpecGrpcRouteMatchMetadataMatchGetArgs> match;
+      private final @Nullable Output<RouteSpecGrpcRouteMatchMetadataMatchGetArgs> match;
 
-    public Input<RouteSpecGrpcRouteMatchMetadataMatchGetArgs> getMatch() {
-        return this.match == null ? Input.empty() : this.match;
+    public Output<RouteSpecGrpcRouteMatchMetadataMatchGetArgs> getMatch() {
+        return this.match == null ? Output.empty() : this.match;
     }
 
     /**
@@ -43,25 +43,25 @@ public final class RouteSpecGrpcRouteMatchMetadataGetArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="name", required=true)
-      private final Input<String> name;
+      private final Output<String> name;
 
-    public Input<String> getName() {
+    public Output<String> getName() {
         return this.name;
     }
 
     public RouteSpecGrpcRouteMatchMetadataGetArgs(
-        @Nullable Input<Boolean> invert,
-        @Nullable Input<RouteSpecGrpcRouteMatchMetadataMatchGetArgs> match,
-        Input<String> name) {
+        @Nullable Output<Boolean> invert,
+        @Nullable Output<RouteSpecGrpcRouteMatchMetadataMatchGetArgs> match,
+        Output<String> name) {
         this.invert = invert;
         this.match = match;
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
     }
 
     private RouteSpecGrpcRouteMatchMetadataGetArgs() {
-        this.invert = Input.empty();
-        this.match = Input.empty();
-        this.name = Input.empty();
+        this.invert = Output.empty();
+        this.match = Output.empty();
+        this.name = Output.empty();
     }
 
     public static Builder builder() {
@@ -73,9 +73,9 @@ public final class RouteSpecGrpcRouteMatchMetadataGetArgs extends io.pulumi.reso
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> invert;
-        private @Nullable Input<RouteSpecGrpcRouteMatchMetadataMatchGetArgs> match;
-        private Input<String> name;
+        private @Nullable Output<Boolean> invert;
+        private @Nullable Output<RouteSpecGrpcRouteMatchMetadataMatchGetArgs> match;
+        private Output<String> name;
 
         public Builder() {
     	      // Empty
@@ -88,33 +88,33 @@ public final class RouteSpecGrpcRouteMatchMetadataGetArgs extends io.pulumi.reso
     	      this.name = defaults.name;
         }
 
-        public Builder invert(@Nullable Input<Boolean> invert) {
+        public Builder invert(@Nullable Output<Boolean> invert) {
             this.invert = invert;
             return this;
         }
 
         public Builder invert(@Nullable Boolean invert) {
-            this.invert = Input.ofNullable(invert);
+            this.invert = Output.ofNullable(invert);
             return this;
         }
 
-        public Builder match(@Nullable Input<RouteSpecGrpcRouteMatchMetadataMatchGetArgs> match) {
+        public Builder match(@Nullable Output<RouteSpecGrpcRouteMatchMetadataMatchGetArgs> match) {
             this.match = match;
             return this;
         }
 
         public Builder match(@Nullable RouteSpecGrpcRouteMatchMetadataMatchGetArgs match) {
-            this.match = Input.ofNullable(match);
+            this.match = Output.ofNullable(match);
             return this;
         }
 
-        public Builder name(Input<String> name) {
+        public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(String name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
         public RouteSpecGrpcRouteMatchMetadataGetArgs build() {

@@ -3,7 +3,6 @@
 
 package io.pulumi.gcp.apigateway;
 
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -164,14 +163,14 @@ public class ApiIamBinding extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ApiIamBinding(String name, ApiIamBindingArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:apigateway/apiIamBinding:ApiIamBinding", name, args == null ? ApiIamBindingArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("gcp:apigateway/apiIamBinding:ApiIamBinding", name, args == null ? ApiIamBindingArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private ApiIamBinding(String name, Input<String> id, @Nullable ApiIamBindingState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private ApiIamBinding(String name, Output<String> id, @Nullable ApiIamBindingState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("gcp:apigateway/apiIamBinding:ApiIamBinding", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -187,7 +186,7 @@ public class ApiIamBinding extends io.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static ApiIamBinding get(String name, Input<String> id, @Nullable ApiIamBindingState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static ApiIamBinding get(String name, Output<String> id, @Nullable ApiIamBindingState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new ApiIamBinding(name, id, state, options);
     }
 }

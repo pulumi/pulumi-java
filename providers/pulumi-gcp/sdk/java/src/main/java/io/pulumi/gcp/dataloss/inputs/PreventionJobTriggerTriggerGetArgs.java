@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.dataloss.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.dataloss.inputs.PreventionJobTriggerTriggerScheduleGetArgs;
 import java.util.Objects;
@@ -20,18 +20,18 @@ public final class PreventionJobTriggerTriggerGetArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="schedule")
-      private final @Nullable Input<PreventionJobTriggerTriggerScheduleGetArgs> schedule;
+      private final @Nullable Output<PreventionJobTriggerTriggerScheduleGetArgs> schedule;
 
-    public Input<PreventionJobTriggerTriggerScheduleGetArgs> getSchedule() {
-        return this.schedule == null ? Input.empty() : this.schedule;
+    public Output<PreventionJobTriggerTriggerScheduleGetArgs> getSchedule() {
+        return this.schedule == null ? Output.empty() : this.schedule;
     }
 
-    public PreventionJobTriggerTriggerGetArgs(@Nullable Input<PreventionJobTriggerTriggerScheduleGetArgs> schedule) {
+    public PreventionJobTriggerTriggerGetArgs(@Nullable Output<PreventionJobTriggerTriggerScheduleGetArgs> schedule) {
         this.schedule = schedule;
     }
 
     private PreventionJobTriggerTriggerGetArgs() {
-        this.schedule = Input.empty();
+        this.schedule = Output.empty();
     }
 
     public static Builder builder() {
@@ -43,7 +43,7 @@ public final class PreventionJobTriggerTriggerGetArgs extends io.pulumi.resource
     }
 
     public static final class Builder {
-        private @Nullable Input<PreventionJobTriggerTriggerScheduleGetArgs> schedule;
+        private @Nullable Output<PreventionJobTriggerTriggerScheduleGetArgs> schedule;
 
         public Builder() {
     	      // Empty
@@ -54,13 +54,13 @@ public final class PreventionJobTriggerTriggerGetArgs extends io.pulumi.resource
     	      this.schedule = defaults.schedule;
         }
 
-        public Builder schedule(@Nullable Input<PreventionJobTriggerTriggerScheduleGetArgs> schedule) {
+        public Builder schedule(@Nullable Output<PreventionJobTriggerTriggerScheduleGetArgs> schedule) {
             this.schedule = schedule;
             return this;
         }
 
         public Builder schedule(@Nullable PreventionJobTriggerTriggerScheduleGetArgs schedule) {
-            this.schedule = Input.ofNullable(schedule);
+            this.schedule = Output.ofNullable(schedule);
             return this;
         }
         public PreventionJobTriggerTriggerGetArgs build() {

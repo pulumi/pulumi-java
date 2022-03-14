@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.eventgrid.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -26,10 +26,10 @@ public final class JsonFieldWithDefaultArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="defaultValue")
-      private final @Nullable Input<String> defaultValue;
+      private final @Nullable Output<String> defaultValue;
 
-    public Input<String> getDefaultValue() {
-        return this.defaultValue == null ? Input.empty() : this.defaultValue;
+    public Output<String> getDefaultValue() {
+        return this.defaultValue == null ? Output.empty() : this.defaultValue;
     }
 
     /**
@@ -37,22 +37,22 @@ public final class JsonFieldWithDefaultArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="sourceField")
-      private final @Nullable Input<String> sourceField;
+      private final @Nullable Output<String> sourceField;
 
-    public Input<String> getSourceField() {
-        return this.sourceField == null ? Input.empty() : this.sourceField;
+    public Output<String> getSourceField() {
+        return this.sourceField == null ? Output.empty() : this.sourceField;
     }
 
     public JsonFieldWithDefaultArgs(
-        @Nullable Input<String> defaultValue,
-        @Nullable Input<String> sourceField) {
+        @Nullable Output<String> defaultValue,
+        @Nullable Output<String> sourceField) {
         this.defaultValue = defaultValue;
         this.sourceField = sourceField;
     }
 
     private JsonFieldWithDefaultArgs() {
-        this.defaultValue = Input.empty();
-        this.sourceField = Input.empty();
+        this.defaultValue = Output.empty();
+        this.sourceField = Output.empty();
     }
 
     public static Builder builder() {
@@ -64,8 +64,8 @@ public final class JsonFieldWithDefaultArgs extends io.pulumi.resources.Resource
     }
 
     public static final class Builder {
-        private @Nullable Input<String> defaultValue;
-        private @Nullable Input<String> sourceField;
+        private @Nullable Output<String> defaultValue;
+        private @Nullable Output<String> sourceField;
 
         public Builder() {
     	      // Empty
@@ -77,23 +77,23 @@ public final class JsonFieldWithDefaultArgs extends io.pulumi.resources.Resource
     	      this.sourceField = defaults.sourceField;
         }
 
-        public Builder defaultValue(@Nullable Input<String> defaultValue) {
+        public Builder defaultValue(@Nullable Output<String> defaultValue) {
             this.defaultValue = defaultValue;
             return this;
         }
 
         public Builder defaultValue(@Nullable String defaultValue) {
-            this.defaultValue = Input.ofNullable(defaultValue);
+            this.defaultValue = Output.ofNullable(defaultValue);
             return this;
         }
 
-        public Builder sourceField(@Nullable Input<String> sourceField) {
+        public Builder sourceField(@Nullable Output<String> sourceField) {
             this.sourceField = sourceField;
             return this;
         }
 
         public Builder sourceField(@Nullable String sourceField) {
-            this.sourceField = Input.ofNullable(sourceField);
+            this.sourceField = Output.ofNullable(sourceField);
             return this;
         }
         public JsonFieldWithDefaultArgs build() {

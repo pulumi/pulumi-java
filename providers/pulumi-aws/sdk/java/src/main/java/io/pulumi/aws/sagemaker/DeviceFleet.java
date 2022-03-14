@@ -7,7 +7,6 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.sagemaker.DeviceFleetArgs;
 import io.pulumi.aws.sagemaker.inputs.DeviceFleetState;
 import io.pulumi.aws.sagemaker.outputs.DeviceFleetOutputConfig;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -189,14 +188,14 @@ public class DeviceFleet extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public DeviceFleet(String name, DeviceFleetArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:sagemaker/deviceFleet:DeviceFleet", name, args == null ? DeviceFleetArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws:sagemaker/deviceFleet:DeviceFleet", name, args == null ? DeviceFleetArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private DeviceFleet(String name, Input<String> id, @Nullable DeviceFleetState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private DeviceFleet(String name, Output<String> id, @Nullable DeviceFleetState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws:sagemaker/deviceFleet:DeviceFleet", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -212,7 +211,7 @@ public class DeviceFleet extends io.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static DeviceFleet get(String name, Input<String> id, @Nullable DeviceFleetState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static DeviceFleet get(String name, Output<String> id, @Nullable DeviceFleetState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new DeviceFleet(name, id, state, options);
     }
 }

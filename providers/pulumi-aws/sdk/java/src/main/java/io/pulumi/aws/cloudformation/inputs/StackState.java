@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.cloudformation.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -24,10 +24,10 @@ public final class StackState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="capabilities")
-      private final @Nullable Input<List<String>> capabilities;
+      private final @Nullable Output<List<String>> capabilities;
 
-    public Input<List<String>> getCapabilities() {
-        return this.capabilities == null ? Input.empty() : this.capabilities;
+    public Output<List<String>> getCapabilities() {
+        return this.capabilities == null ? Output.empty() : this.capabilities;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class StackState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="disableRollback")
-      private final @Nullable Input<Boolean> disableRollback;
+      private final @Nullable Output<Boolean> disableRollback;
 
-    public Input<Boolean> getDisableRollback() {
-        return this.disableRollback == null ? Input.empty() : this.disableRollback;
+    public Output<Boolean> getDisableRollback() {
+        return this.disableRollback == null ? Output.empty() : this.disableRollback;
     }
 
     /**
@@ -47,10 +47,10 @@ public final class StackState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="iamRoleArn")
-      private final @Nullable Input<String> iamRoleArn;
+      private final @Nullable Output<String> iamRoleArn;
 
-    public Input<String> getIamRoleArn() {
-        return this.iamRoleArn == null ? Input.empty() : this.iamRoleArn;
+    public Output<String> getIamRoleArn() {
+        return this.iamRoleArn == null ? Output.empty() : this.iamRoleArn;
     }
 
     /**
@@ -58,10 +58,10 @@ public final class StackState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -69,10 +69,10 @@ public final class StackState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="notificationArns")
-      private final @Nullable Input<List<String>> notificationArns;
+      private final @Nullable Output<List<String>> notificationArns;
 
-    public Input<List<String>> getNotificationArns() {
-        return this.notificationArns == null ? Input.empty() : this.notificationArns;
+    public Output<List<String>> getNotificationArns() {
+        return this.notificationArns == null ? Output.empty() : this.notificationArns;
     }
 
     /**
@@ -81,10 +81,10 @@ public final class StackState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="onFailure")
-      private final @Nullable Input<String> onFailure;
+      private final @Nullable Output<String> onFailure;
 
-    public Input<String> getOnFailure() {
-        return this.onFailure == null ? Input.empty() : this.onFailure;
+    public Output<String> getOnFailure() {
+        return this.onFailure == null ? Output.empty() : this.onFailure;
     }
 
     /**
@@ -92,10 +92,10 @@ public final class StackState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="outputs")
-      private final @Nullable Input<Map<String,String>> outputs;
+      private final @Nullable Output<Map<String,String>> outputs;
 
-    public Input<Map<String,String>> getOutputs() {
-        return this.outputs == null ? Input.empty() : this.outputs;
+    public Output<Map<String,String>> getOutputs() {
+        return this.outputs == null ? Output.empty() : this.outputs;
     }
 
     /**
@@ -103,10 +103,10 @@ public final class StackState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="parameters")
-      private final @Nullable Input<Map<String,String>> parameters;
+      private final @Nullable Output<Map<String,String>> parameters;
 
-    public Input<Map<String,String>> getParameters() {
-        return this.parameters == null ? Input.empty() : this.parameters;
+    public Output<Map<String,String>> getParameters() {
+        return this.parameters == null ? Output.empty() : this.parameters;
     }
 
     /**
@@ -115,10 +115,10 @@ public final class StackState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="policyBody")
-      private final @Nullable Input<String> policyBody;
+      private final @Nullable Output<String> policyBody;
 
-    public Input<String> getPolicyBody() {
-        return this.policyBody == null ? Input.empty() : this.policyBody;
+    public Output<String> getPolicyBody() {
+        return this.policyBody == null ? Output.empty() : this.policyBody;
     }
 
     /**
@@ -127,10 +127,10 @@ public final class StackState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="policyUrl")
-      private final @Nullable Input<String> policyUrl;
+      private final @Nullable Output<String> policyUrl;
 
-    public Input<String> getPolicyUrl() {
-        return this.policyUrl == null ? Input.empty() : this.policyUrl;
+    public Output<String> getPolicyUrl() {
+        return this.policyUrl == null ? Output.empty() : this.policyUrl;
     }
 
     /**
@@ -138,10 +138,10 @@ public final class StackState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -149,10 +149,10 @@ public final class StackState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tagsAll")
-      private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Input<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Input.empty() : this.tagsAll;
+    public Output<Map<String,String>> getTagsAll() {
+        return this.tagsAll == null ? Output.empty() : this.tagsAll;
     }
 
     /**
@@ -160,10 +160,10 @@ public final class StackState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="templateBody")
-      private final @Nullable Input<String> templateBody;
+      private final @Nullable Output<String> templateBody;
 
-    public Input<String> getTemplateBody() {
-        return this.templateBody == null ? Input.empty() : this.templateBody;
+    public Output<String> getTemplateBody() {
+        return this.templateBody == null ? Output.empty() : this.templateBody;
     }
 
     /**
@@ -171,10 +171,10 @@ public final class StackState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="templateUrl")
-      private final @Nullable Input<String> templateUrl;
+      private final @Nullable Output<String> templateUrl;
 
-    public Input<String> getTemplateUrl() {
-        return this.templateUrl == null ? Input.empty() : this.templateUrl;
+    public Output<String> getTemplateUrl() {
+        return this.templateUrl == null ? Output.empty() : this.templateUrl;
     }
 
     /**
@@ -182,28 +182,28 @@ public final class StackState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="timeoutInMinutes")
-      private final @Nullable Input<Integer> timeoutInMinutes;
+      private final @Nullable Output<Integer> timeoutInMinutes;
 
-    public Input<Integer> getTimeoutInMinutes() {
-        return this.timeoutInMinutes == null ? Input.empty() : this.timeoutInMinutes;
+    public Output<Integer> getTimeoutInMinutes() {
+        return this.timeoutInMinutes == null ? Output.empty() : this.timeoutInMinutes;
     }
 
     public StackState(
-        @Nullable Input<List<String>> capabilities,
-        @Nullable Input<Boolean> disableRollback,
-        @Nullable Input<String> iamRoleArn,
-        @Nullable Input<String> name,
-        @Nullable Input<List<String>> notificationArns,
-        @Nullable Input<String> onFailure,
-        @Nullable Input<Map<String,String>> outputs,
-        @Nullable Input<Map<String,String>> parameters,
-        @Nullable Input<String> policyBody,
-        @Nullable Input<String> policyUrl,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<Map<String,String>> tagsAll,
-        @Nullable Input<String> templateBody,
-        @Nullable Input<String> templateUrl,
-        @Nullable Input<Integer> timeoutInMinutes) {
+        @Nullable Output<List<String>> capabilities,
+        @Nullable Output<Boolean> disableRollback,
+        @Nullable Output<String> iamRoleArn,
+        @Nullable Output<String> name,
+        @Nullable Output<List<String>> notificationArns,
+        @Nullable Output<String> onFailure,
+        @Nullable Output<Map<String,String>> outputs,
+        @Nullable Output<Map<String,String>> parameters,
+        @Nullable Output<String> policyBody,
+        @Nullable Output<String> policyUrl,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<Map<String,String>> tagsAll,
+        @Nullable Output<String> templateBody,
+        @Nullable Output<String> templateUrl,
+        @Nullable Output<Integer> timeoutInMinutes) {
         this.capabilities = capabilities;
         this.disableRollback = disableRollback;
         this.iamRoleArn = iamRoleArn;
@@ -222,21 +222,21 @@ public final class StackState extends io.pulumi.resources.ResourceArgs {
     }
 
     private StackState() {
-        this.capabilities = Input.empty();
-        this.disableRollback = Input.empty();
-        this.iamRoleArn = Input.empty();
-        this.name = Input.empty();
-        this.notificationArns = Input.empty();
-        this.onFailure = Input.empty();
-        this.outputs = Input.empty();
-        this.parameters = Input.empty();
-        this.policyBody = Input.empty();
-        this.policyUrl = Input.empty();
-        this.tags = Input.empty();
-        this.tagsAll = Input.empty();
-        this.templateBody = Input.empty();
-        this.templateUrl = Input.empty();
-        this.timeoutInMinutes = Input.empty();
+        this.capabilities = Output.empty();
+        this.disableRollback = Output.empty();
+        this.iamRoleArn = Output.empty();
+        this.name = Output.empty();
+        this.notificationArns = Output.empty();
+        this.onFailure = Output.empty();
+        this.outputs = Output.empty();
+        this.parameters = Output.empty();
+        this.policyBody = Output.empty();
+        this.policyUrl = Output.empty();
+        this.tags = Output.empty();
+        this.tagsAll = Output.empty();
+        this.templateBody = Output.empty();
+        this.templateUrl = Output.empty();
+        this.timeoutInMinutes = Output.empty();
     }
 
     public static Builder builder() {
@@ -248,21 +248,21 @@ public final class StackState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> capabilities;
-        private @Nullable Input<Boolean> disableRollback;
-        private @Nullable Input<String> iamRoleArn;
-        private @Nullable Input<String> name;
-        private @Nullable Input<List<String>> notificationArns;
-        private @Nullable Input<String> onFailure;
-        private @Nullable Input<Map<String,String>> outputs;
-        private @Nullable Input<Map<String,String>> parameters;
-        private @Nullable Input<String> policyBody;
-        private @Nullable Input<String> policyUrl;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<Map<String,String>> tagsAll;
-        private @Nullable Input<String> templateBody;
-        private @Nullable Input<String> templateUrl;
-        private @Nullable Input<Integer> timeoutInMinutes;
+        private @Nullable Output<List<String>> capabilities;
+        private @Nullable Output<Boolean> disableRollback;
+        private @Nullable Output<String> iamRoleArn;
+        private @Nullable Output<String> name;
+        private @Nullable Output<List<String>> notificationArns;
+        private @Nullable Output<String> onFailure;
+        private @Nullable Output<Map<String,String>> outputs;
+        private @Nullable Output<Map<String,String>> parameters;
+        private @Nullable Output<String> policyBody;
+        private @Nullable Output<String> policyUrl;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<Map<String,String>> tagsAll;
+        private @Nullable Output<String> templateBody;
+        private @Nullable Output<String> templateUrl;
+        private @Nullable Output<Integer> timeoutInMinutes;
 
         public Builder() {
     	      // Empty
@@ -287,153 +287,153 @@ public final class StackState extends io.pulumi.resources.ResourceArgs {
     	      this.timeoutInMinutes = defaults.timeoutInMinutes;
         }
 
-        public Builder capabilities(@Nullable Input<List<String>> capabilities) {
+        public Builder capabilities(@Nullable Output<List<String>> capabilities) {
             this.capabilities = capabilities;
             return this;
         }
 
         public Builder capabilities(@Nullable List<String> capabilities) {
-            this.capabilities = Input.ofNullable(capabilities);
+            this.capabilities = Output.ofNullable(capabilities);
             return this;
         }
 
-        public Builder disableRollback(@Nullable Input<Boolean> disableRollback) {
+        public Builder disableRollback(@Nullable Output<Boolean> disableRollback) {
             this.disableRollback = disableRollback;
             return this;
         }
 
         public Builder disableRollback(@Nullable Boolean disableRollback) {
-            this.disableRollback = Input.ofNullable(disableRollback);
+            this.disableRollback = Output.ofNullable(disableRollback);
             return this;
         }
 
-        public Builder iamRoleArn(@Nullable Input<String> iamRoleArn) {
+        public Builder iamRoleArn(@Nullable Output<String> iamRoleArn) {
             this.iamRoleArn = iamRoleArn;
             return this;
         }
 
         public Builder iamRoleArn(@Nullable String iamRoleArn) {
-            this.iamRoleArn = Input.ofNullable(iamRoleArn);
+            this.iamRoleArn = Output.ofNullable(iamRoleArn);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder notificationArns(@Nullable Input<List<String>> notificationArns) {
+        public Builder notificationArns(@Nullable Output<List<String>> notificationArns) {
             this.notificationArns = notificationArns;
             return this;
         }
 
         public Builder notificationArns(@Nullable List<String> notificationArns) {
-            this.notificationArns = Input.ofNullable(notificationArns);
+            this.notificationArns = Output.ofNullable(notificationArns);
             return this;
         }
 
-        public Builder onFailure(@Nullable Input<String> onFailure) {
+        public Builder onFailure(@Nullable Output<String> onFailure) {
             this.onFailure = onFailure;
             return this;
         }
 
         public Builder onFailure(@Nullable String onFailure) {
-            this.onFailure = Input.ofNullable(onFailure);
+            this.onFailure = Output.ofNullable(onFailure);
             return this;
         }
 
-        public Builder outputs(@Nullable Input<Map<String,String>> outputs) {
+        public Builder outputs(@Nullable Output<Map<String,String>> outputs) {
             this.outputs = outputs;
             return this;
         }
 
         public Builder outputs(@Nullable Map<String,String> outputs) {
-            this.outputs = Input.ofNullable(outputs);
+            this.outputs = Output.ofNullable(outputs);
             return this;
         }
 
-        public Builder parameters(@Nullable Input<Map<String,String>> parameters) {
+        public Builder parameters(@Nullable Output<Map<String,String>> parameters) {
             this.parameters = parameters;
             return this;
         }
 
         public Builder parameters(@Nullable Map<String,String> parameters) {
-            this.parameters = Input.ofNullable(parameters);
+            this.parameters = Output.ofNullable(parameters);
             return this;
         }
 
-        public Builder policyBody(@Nullable Input<String> policyBody) {
+        public Builder policyBody(@Nullable Output<String> policyBody) {
             this.policyBody = policyBody;
             return this;
         }
 
         public Builder policyBody(@Nullable String policyBody) {
-            this.policyBody = Input.ofNullable(policyBody);
+            this.policyBody = Output.ofNullable(policyBody);
             return this;
         }
 
-        public Builder policyUrl(@Nullable Input<String> policyUrl) {
+        public Builder policyUrl(@Nullable Output<String> policyUrl) {
             this.policyUrl = policyUrl;
             return this;
         }
 
         public Builder policyUrl(@Nullable String policyUrl) {
-            this.policyUrl = Input.ofNullable(policyUrl);
+            this.policyUrl = Output.ofNullable(policyUrl);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Input.ofNullable(tagsAll);
+            this.tagsAll = Output.ofNullable(tagsAll);
             return this;
         }
 
-        public Builder templateBody(@Nullable Input<String> templateBody) {
+        public Builder templateBody(@Nullable Output<String> templateBody) {
             this.templateBody = templateBody;
             return this;
         }
 
         public Builder templateBody(@Nullable String templateBody) {
-            this.templateBody = Input.ofNullable(templateBody);
+            this.templateBody = Output.ofNullable(templateBody);
             return this;
         }
 
-        public Builder templateUrl(@Nullable Input<String> templateUrl) {
+        public Builder templateUrl(@Nullable Output<String> templateUrl) {
             this.templateUrl = templateUrl;
             return this;
         }
 
         public Builder templateUrl(@Nullable String templateUrl) {
-            this.templateUrl = Input.ofNullable(templateUrl);
+            this.templateUrl = Output.ofNullable(templateUrl);
             return this;
         }
 
-        public Builder timeoutInMinutes(@Nullable Input<Integer> timeoutInMinutes) {
+        public Builder timeoutInMinutes(@Nullable Output<Integer> timeoutInMinutes) {
             this.timeoutInMinutes = timeoutInMinutes;
             return this;
         }
 
         public Builder timeoutInMinutes(@Nullable Integer timeoutInMinutes) {
-            this.timeoutInMinutes = Input.ofNullable(timeoutInMinutes);
+            this.timeoutInMinutes = Output.ofNullable(timeoutInMinutes);
             return this;
         }
         public StackState build() {

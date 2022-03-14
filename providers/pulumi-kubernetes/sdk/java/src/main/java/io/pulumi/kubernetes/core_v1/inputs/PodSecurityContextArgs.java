@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.core_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.kubernetes.core_v1.inputs.SELinuxOptionsArgs;
 import io.pulumi.kubernetes.core_v1.inputs.SeccompProfileArgs;
@@ -34,10 +34,10 @@ public final class PodSecurityContextArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="fsGroup")
-      private final @Nullable Input<Integer> fsGroup;
+      private final @Nullable Output<Integer> fsGroup;
 
-    public Input<Integer> getFsGroup() {
-        return this.fsGroup == null ? Input.empty() : this.fsGroup;
+    public Output<Integer> getFsGroup() {
+        return this.fsGroup == null ? Output.empty() : this.fsGroup;
     }
 
     /**
@@ -45,10 +45,10 @@ public final class PodSecurityContextArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="fsGroupChangePolicy")
-      private final @Nullable Input<String> fsGroupChangePolicy;
+      private final @Nullable Output<String> fsGroupChangePolicy;
 
-    public Input<String> getFsGroupChangePolicy() {
-        return this.fsGroupChangePolicy == null ? Input.empty() : this.fsGroupChangePolicy;
+    public Output<String> getFsGroupChangePolicy() {
+        return this.fsGroupChangePolicy == null ? Output.empty() : this.fsGroupChangePolicy;
     }
 
     /**
@@ -56,10 +56,10 @@ public final class PodSecurityContextArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="runAsGroup")
-      private final @Nullable Input<Integer> runAsGroup;
+      private final @Nullable Output<Integer> runAsGroup;
 
-    public Input<Integer> getRunAsGroup() {
-        return this.runAsGroup == null ? Input.empty() : this.runAsGroup;
+    public Output<Integer> getRunAsGroup() {
+        return this.runAsGroup == null ? Output.empty() : this.runAsGroup;
     }
 
     /**
@@ -67,10 +67,10 @@ public final class PodSecurityContextArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="runAsNonRoot")
-      private final @Nullable Input<Boolean> runAsNonRoot;
+      private final @Nullable Output<Boolean> runAsNonRoot;
 
-    public Input<Boolean> getRunAsNonRoot() {
-        return this.runAsNonRoot == null ? Input.empty() : this.runAsNonRoot;
+    public Output<Boolean> getRunAsNonRoot() {
+        return this.runAsNonRoot == null ? Output.empty() : this.runAsNonRoot;
     }
 
     /**
@@ -78,10 +78,10 @@ public final class PodSecurityContextArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="runAsUser")
-      private final @Nullable Input<Integer> runAsUser;
+      private final @Nullable Output<Integer> runAsUser;
 
-    public Input<Integer> getRunAsUser() {
-        return this.runAsUser == null ? Input.empty() : this.runAsUser;
+    public Output<Integer> getRunAsUser() {
+        return this.runAsUser == null ? Output.empty() : this.runAsUser;
     }
 
     /**
@@ -89,10 +89,10 @@ public final class PodSecurityContextArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="seLinuxOptions")
-      private final @Nullable Input<SELinuxOptionsArgs> seLinuxOptions;
+      private final @Nullable Output<SELinuxOptionsArgs> seLinuxOptions;
 
-    public Input<SELinuxOptionsArgs> getSeLinuxOptions() {
-        return this.seLinuxOptions == null ? Input.empty() : this.seLinuxOptions;
+    public Output<SELinuxOptionsArgs> getSeLinuxOptions() {
+        return this.seLinuxOptions == null ? Output.empty() : this.seLinuxOptions;
     }
 
     /**
@@ -100,10 +100,10 @@ public final class PodSecurityContextArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="seccompProfile")
-      private final @Nullable Input<SeccompProfileArgs> seccompProfile;
+      private final @Nullable Output<SeccompProfileArgs> seccompProfile;
 
-    public Input<SeccompProfileArgs> getSeccompProfile() {
-        return this.seccompProfile == null ? Input.empty() : this.seccompProfile;
+    public Output<SeccompProfileArgs> getSeccompProfile() {
+        return this.seccompProfile == null ? Output.empty() : this.seccompProfile;
     }
 
     /**
@@ -111,10 +111,10 @@ public final class PodSecurityContextArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="supplementalGroups")
-      private final @Nullable Input<List<Integer>> supplementalGroups;
+      private final @Nullable Output<List<Integer>> supplementalGroups;
 
-    public Input<List<Integer>> getSupplementalGroups() {
-        return this.supplementalGroups == null ? Input.empty() : this.supplementalGroups;
+    public Output<List<Integer>> getSupplementalGroups() {
+        return this.supplementalGroups == null ? Output.empty() : this.supplementalGroups;
     }
 
     /**
@@ -122,10 +122,10 @@ public final class PodSecurityContextArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="sysctls")
-      private final @Nullable Input<List<SysctlArgs>> sysctls;
+      private final @Nullable Output<List<SysctlArgs>> sysctls;
 
-    public Input<List<SysctlArgs>> getSysctls() {
-        return this.sysctls == null ? Input.empty() : this.sysctls;
+    public Output<List<SysctlArgs>> getSysctls() {
+        return this.sysctls == null ? Output.empty() : this.sysctls;
     }
 
     /**
@@ -133,23 +133,23 @@ public final class PodSecurityContextArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="windowsOptions")
-      private final @Nullable Input<WindowsSecurityContextOptionsArgs> windowsOptions;
+      private final @Nullable Output<WindowsSecurityContextOptionsArgs> windowsOptions;
 
-    public Input<WindowsSecurityContextOptionsArgs> getWindowsOptions() {
-        return this.windowsOptions == null ? Input.empty() : this.windowsOptions;
+    public Output<WindowsSecurityContextOptionsArgs> getWindowsOptions() {
+        return this.windowsOptions == null ? Output.empty() : this.windowsOptions;
     }
 
     public PodSecurityContextArgs(
-        @Nullable Input<Integer> fsGroup,
-        @Nullable Input<String> fsGroupChangePolicy,
-        @Nullable Input<Integer> runAsGroup,
-        @Nullable Input<Boolean> runAsNonRoot,
-        @Nullable Input<Integer> runAsUser,
-        @Nullable Input<SELinuxOptionsArgs> seLinuxOptions,
-        @Nullable Input<SeccompProfileArgs> seccompProfile,
-        @Nullable Input<List<Integer>> supplementalGroups,
-        @Nullable Input<List<SysctlArgs>> sysctls,
-        @Nullable Input<WindowsSecurityContextOptionsArgs> windowsOptions) {
+        @Nullable Output<Integer> fsGroup,
+        @Nullable Output<String> fsGroupChangePolicy,
+        @Nullable Output<Integer> runAsGroup,
+        @Nullable Output<Boolean> runAsNonRoot,
+        @Nullable Output<Integer> runAsUser,
+        @Nullable Output<SELinuxOptionsArgs> seLinuxOptions,
+        @Nullable Output<SeccompProfileArgs> seccompProfile,
+        @Nullable Output<List<Integer>> supplementalGroups,
+        @Nullable Output<List<SysctlArgs>> sysctls,
+        @Nullable Output<WindowsSecurityContextOptionsArgs> windowsOptions) {
         this.fsGroup = fsGroup;
         this.fsGroupChangePolicy = fsGroupChangePolicy;
         this.runAsGroup = runAsGroup;
@@ -163,16 +163,16 @@ public final class PodSecurityContextArgs extends io.pulumi.resources.ResourceAr
     }
 
     private PodSecurityContextArgs() {
-        this.fsGroup = Input.empty();
-        this.fsGroupChangePolicy = Input.empty();
-        this.runAsGroup = Input.empty();
-        this.runAsNonRoot = Input.empty();
-        this.runAsUser = Input.empty();
-        this.seLinuxOptions = Input.empty();
-        this.seccompProfile = Input.empty();
-        this.supplementalGroups = Input.empty();
-        this.sysctls = Input.empty();
-        this.windowsOptions = Input.empty();
+        this.fsGroup = Output.empty();
+        this.fsGroupChangePolicy = Output.empty();
+        this.runAsGroup = Output.empty();
+        this.runAsNonRoot = Output.empty();
+        this.runAsUser = Output.empty();
+        this.seLinuxOptions = Output.empty();
+        this.seccompProfile = Output.empty();
+        this.supplementalGroups = Output.empty();
+        this.sysctls = Output.empty();
+        this.windowsOptions = Output.empty();
     }
 
     public static Builder builder() {
@@ -184,16 +184,16 @@ public final class PodSecurityContextArgs extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> fsGroup;
-        private @Nullable Input<String> fsGroupChangePolicy;
-        private @Nullable Input<Integer> runAsGroup;
-        private @Nullable Input<Boolean> runAsNonRoot;
-        private @Nullable Input<Integer> runAsUser;
-        private @Nullable Input<SELinuxOptionsArgs> seLinuxOptions;
-        private @Nullable Input<SeccompProfileArgs> seccompProfile;
-        private @Nullable Input<List<Integer>> supplementalGroups;
-        private @Nullable Input<List<SysctlArgs>> sysctls;
-        private @Nullable Input<WindowsSecurityContextOptionsArgs> windowsOptions;
+        private @Nullable Output<Integer> fsGroup;
+        private @Nullable Output<String> fsGroupChangePolicy;
+        private @Nullable Output<Integer> runAsGroup;
+        private @Nullable Output<Boolean> runAsNonRoot;
+        private @Nullable Output<Integer> runAsUser;
+        private @Nullable Output<SELinuxOptionsArgs> seLinuxOptions;
+        private @Nullable Output<SeccompProfileArgs> seccompProfile;
+        private @Nullable Output<List<Integer>> supplementalGroups;
+        private @Nullable Output<List<SysctlArgs>> sysctls;
+        private @Nullable Output<WindowsSecurityContextOptionsArgs> windowsOptions;
 
         public Builder() {
     	      // Empty
@@ -213,103 +213,103 @@ public final class PodSecurityContextArgs extends io.pulumi.resources.ResourceAr
     	      this.windowsOptions = defaults.windowsOptions;
         }
 
-        public Builder fsGroup(@Nullable Input<Integer> fsGroup) {
+        public Builder fsGroup(@Nullable Output<Integer> fsGroup) {
             this.fsGroup = fsGroup;
             return this;
         }
 
         public Builder fsGroup(@Nullable Integer fsGroup) {
-            this.fsGroup = Input.ofNullable(fsGroup);
+            this.fsGroup = Output.ofNullable(fsGroup);
             return this;
         }
 
-        public Builder fsGroupChangePolicy(@Nullable Input<String> fsGroupChangePolicy) {
+        public Builder fsGroupChangePolicy(@Nullable Output<String> fsGroupChangePolicy) {
             this.fsGroupChangePolicy = fsGroupChangePolicy;
             return this;
         }
 
         public Builder fsGroupChangePolicy(@Nullable String fsGroupChangePolicy) {
-            this.fsGroupChangePolicy = Input.ofNullable(fsGroupChangePolicy);
+            this.fsGroupChangePolicy = Output.ofNullable(fsGroupChangePolicy);
             return this;
         }
 
-        public Builder runAsGroup(@Nullable Input<Integer> runAsGroup) {
+        public Builder runAsGroup(@Nullable Output<Integer> runAsGroup) {
             this.runAsGroup = runAsGroup;
             return this;
         }
 
         public Builder runAsGroup(@Nullable Integer runAsGroup) {
-            this.runAsGroup = Input.ofNullable(runAsGroup);
+            this.runAsGroup = Output.ofNullable(runAsGroup);
             return this;
         }
 
-        public Builder runAsNonRoot(@Nullable Input<Boolean> runAsNonRoot) {
+        public Builder runAsNonRoot(@Nullable Output<Boolean> runAsNonRoot) {
             this.runAsNonRoot = runAsNonRoot;
             return this;
         }
 
         public Builder runAsNonRoot(@Nullable Boolean runAsNonRoot) {
-            this.runAsNonRoot = Input.ofNullable(runAsNonRoot);
+            this.runAsNonRoot = Output.ofNullable(runAsNonRoot);
             return this;
         }
 
-        public Builder runAsUser(@Nullable Input<Integer> runAsUser) {
+        public Builder runAsUser(@Nullable Output<Integer> runAsUser) {
             this.runAsUser = runAsUser;
             return this;
         }
 
         public Builder runAsUser(@Nullable Integer runAsUser) {
-            this.runAsUser = Input.ofNullable(runAsUser);
+            this.runAsUser = Output.ofNullable(runAsUser);
             return this;
         }
 
-        public Builder seLinuxOptions(@Nullable Input<SELinuxOptionsArgs> seLinuxOptions) {
+        public Builder seLinuxOptions(@Nullable Output<SELinuxOptionsArgs> seLinuxOptions) {
             this.seLinuxOptions = seLinuxOptions;
             return this;
         }
 
         public Builder seLinuxOptions(@Nullable SELinuxOptionsArgs seLinuxOptions) {
-            this.seLinuxOptions = Input.ofNullable(seLinuxOptions);
+            this.seLinuxOptions = Output.ofNullable(seLinuxOptions);
             return this;
         }
 
-        public Builder seccompProfile(@Nullable Input<SeccompProfileArgs> seccompProfile) {
+        public Builder seccompProfile(@Nullable Output<SeccompProfileArgs> seccompProfile) {
             this.seccompProfile = seccompProfile;
             return this;
         }
 
         public Builder seccompProfile(@Nullable SeccompProfileArgs seccompProfile) {
-            this.seccompProfile = Input.ofNullable(seccompProfile);
+            this.seccompProfile = Output.ofNullable(seccompProfile);
             return this;
         }
 
-        public Builder supplementalGroups(@Nullable Input<List<Integer>> supplementalGroups) {
+        public Builder supplementalGroups(@Nullable Output<List<Integer>> supplementalGroups) {
             this.supplementalGroups = supplementalGroups;
             return this;
         }
 
         public Builder supplementalGroups(@Nullable List<Integer> supplementalGroups) {
-            this.supplementalGroups = Input.ofNullable(supplementalGroups);
+            this.supplementalGroups = Output.ofNullable(supplementalGroups);
             return this;
         }
 
-        public Builder sysctls(@Nullable Input<List<SysctlArgs>> sysctls) {
+        public Builder sysctls(@Nullable Output<List<SysctlArgs>> sysctls) {
             this.sysctls = sysctls;
             return this;
         }
 
         public Builder sysctls(@Nullable List<SysctlArgs> sysctls) {
-            this.sysctls = Input.ofNullable(sysctls);
+            this.sysctls = Output.ofNullable(sysctls);
             return this;
         }
 
-        public Builder windowsOptions(@Nullable Input<WindowsSecurityContextOptionsArgs> windowsOptions) {
+        public Builder windowsOptions(@Nullable Output<WindowsSecurityContextOptionsArgs> windowsOptions) {
             this.windowsOptions = windowsOptions;
             return this;
         }
 
         public Builder windowsOptions(@Nullable WindowsSecurityContextOptionsArgs windowsOptions) {
-            this.windowsOptions = Input.ofNullable(windowsOptions);
+            this.windowsOptions = Output.ofNullable(windowsOptions);
             return this;
         }
         public PodSecurityContextArgs build() {

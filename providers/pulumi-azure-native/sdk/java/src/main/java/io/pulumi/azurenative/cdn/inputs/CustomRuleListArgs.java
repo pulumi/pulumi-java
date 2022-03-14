@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.cdn.inputs;
 
 import io.pulumi.azurenative.cdn.inputs.CustomRuleArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
@@ -24,18 +24,18 @@ public final class CustomRuleListArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="rules")
-      private final @Nullable Input<List<CustomRuleArgs>> rules;
+      private final @Nullable Output<List<CustomRuleArgs>> rules;
 
-    public Input<List<CustomRuleArgs>> getRules() {
-        return this.rules == null ? Input.empty() : this.rules;
+    public Output<List<CustomRuleArgs>> getRules() {
+        return this.rules == null ? Output.empty() : this.rules;
     }
 
-    public CustomRuleListArgs(@Nullable Input<List<CustomRuleArgs>> rules) {
+    public CustomRuleListArgs(@Nullable Output<List<CustomRuleArgs>> rules) {
         this.rules = rules;
     }
 
     private CustomRuleListArgs() {
-        this.rules = Input.empty();
+        this.rules = Output.empty();
     }
 
     public static Builder builder() {
@@ -47,7 +47,7 @@ public final class CustomRuleListArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<List<CustomRuleArgs>> rules;
+        private @Nullable Output<List<CustomRuleArgs>> rules;
 
         public Builder() {
     	      // Empty
@@ -58,13 +58,13 @@ public final class CustomRuleListArgs extends io.pulumi.resources.ResourceArgs {
     	      this.rules = defaults.rules;
         }
 
-        public Builder rules(@Nullable Input<List<CustomRuleArgs>> rules) {
+        public Builder rules(@Nullable Output<List<CustomRuleArgs>> rules) {
             this.rules = rules;
             return this;
         }
 
         public Builder rules(@Nullable List<CustomRuleArgs> rules) {
-            this.rules = Input.ofNullable(rules);
+            this.rules = Output.ofNullable(rules);
             return this;
         }
         public CustomRuleListArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.eventgrid.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -24,9 +24,9 @@ public final class ServiceBusTopicEventSubscriptionDestinationArgs extends io.pu
      * 
      */
     @InputImport(name="endpointType", required=true)
-      private final Input<String> endpointType;
+      private final Output<String> endpointType;
 
-    public Input<String> getEndpointType() {
+    public Output<String> getEndpointType() {
         return this.endpointType;
     }
 
@@ -35,22 +35,22 @@ public final class ServiceBusTopicEventSubscriptionDestinationArgs extends io.pu
      * 
      */
     @InputImport(name="resourceId")
-      private final @Nullable Input<String> resourceId;
+      private final @Nullable Output<String> resourceId;
 
-    public Input<String> getResourceId() {
-        return this.resourceId == null ? Input.empty() : this.resourceId;
+    public Output<String> getResourceId() {
+        return this.resourceId == null ? Output.empty() : this.resourceId;
     }
 
     public ServiceBusTopicEventSubscriptionDestinationArgs(
-        Input<String> endpointType,
-        @Nullable Input<String> resourceId) {
+        Output<String> endpointType,
+        @Nullable Output<String> resourceId) {
         this.endpointType = Objects.requireNonNull(endpointType, "expected parameter 'endpointType' to be non-null");
         this.resourceId = resourceId;
     }
 
     private ServiceBusTopicEventSubscriptionDestinationArgs() {
-        this.endpointType = Input.empty();
-        this.resourceId = Input.empty();
+        this.endpointType = Output.empty();
+        this.resourceId = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class ServiceBusTopicEventSubscriptionDestinationArgs extends io.pu
     }
 
     public static final class Builder {
-        private Input<String> endpointType;
-        private @Nullable Input<String> resourceId;
+        private Output<String> endpointType;
+        private @Nullable Output<String> resourceId;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class ServiceBusTopicEventSubscriptionDestinationArgs extends io.pu
     	      this.resourceId = defaults.resourceId;
         }
 
-        public Builder endpointType(Input<String> endpointType) {
+        public Builder endpointType(Output<String> endpointType) {
             this.endpointType = Objects.requireNonNull(endpointType);
             return this;
         }
 
         public Builder endpointType(String endpointType) {
-            this.endpointType = Input.of(Objects.requireNonNull(endpointType));
+            this.endpointType = Output.of(Objects.requireNonNull(endpointType));
             return this;
         }
 
-        public Builder resourceId(@Nullable Input<String> resourceId) {
+        public Builder resourceId(@Nullable Output<String> resourceId) {
             this.resourceId = resourceId;
             return this;
         }
 
         public Builder resourceId(@Nullable String resourceId) {
-            this.resourceId = Input.ofNullable(resourceId);
+            this.resourceId = Output.ofNullable(resourceId);
             return this;
         }
         public ServiceBusTopicEventSubscriptionDestinationArgs build() {

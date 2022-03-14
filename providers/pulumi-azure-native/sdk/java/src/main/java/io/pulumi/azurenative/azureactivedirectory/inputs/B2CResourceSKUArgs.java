@@ -5,7 +5,7 @@ package io.pulumi.azurenative.azureactivedirectory.inputs;
 
 import io.pulumi.azurenative.azureactivedirectory.enums.B2CResourceSKUName;
 import io.pulumi.azurenative.azureactivedirectory.enums.B2CResourceSKUTier;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,10 +24,10 @@ public final class B2CResourceSKUArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<B2CResourceSKUName> name;
+      private final @Nullable Output<B2CResourceSKUName> name;
 
-    public Input<B2CResourceSKUName> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<B2CResourceSKUName> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class B2CResourceSKUArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tier")
-      private final @Nullable Input<B2CResourceSKUTier> tier;
+      private final @Nullable Output<B2CResourceSKUTier> tier;
 
-    public Input<B2CResourceSKUTier> getTier() {
-        return this.tier == null ? Input.empty() : this.tier;
+    public Output<B2CResourceSKUTier> getTier() {
+        return this.tier == null ? Output.empty() : this.tier;
     }
 
     public B2CResourceSKUArgs(
-        @Nullable Input<B2CResourceSKUName> name,
-        @Nullable Input<B2CResourceSKUTier> tier) {
+        @Nullable Output<B2CResourceSKUName> name,
+        @Nullable Output<B2CResourceSKUTier> tier) {
         this.name = name;
         this.tier = tier;
     }
 
     private B2CResourceSKUArgs() {
-        this.name = Input.empty();
-        this.tier = Input.empty();
+        this.name = Output.empty();
+        this.tier = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class B2CResourceSKUArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<B2CResourceSKUName> name;
-        private @Nullable Input<B2CResourceSKUTier> tier;
+        private @Nullable Output<B2CResourceSKUName> name;
+        private @Nullable Output<B2CResourceSKUTier> tier;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class B2CResourceSKUArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tier = defaults.tier;
         }
 
-        public Builder name(@Nullable Input<B2CResourceSKUName> name) {
+        public Builder name(@Nullable Output<B2CResourceSKUName> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable B2CResourceSKUName name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder tier(@Nullable Input<B2CResourceSKUTier> tier) {
+        public Builder tier(@Nullable Output<B2CResourceSKUTier> tier) {
             this.tier = tier;
             return this;
         }
 
         public Builder tier(@Nullable B2CResourceSKUTier tier) {
-            this.tier = Input.ofNullable(tier);
+            this.tier = Output.ofNullable(tier);
             return this;
         }
         public B2CResourceSKUArgs build() {

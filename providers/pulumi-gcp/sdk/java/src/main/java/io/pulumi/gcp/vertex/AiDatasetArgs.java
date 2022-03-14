@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.vertex;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.vertex.inputs.AiDatasetEncryptionSpecArgs;
 import java.lang.String;
@@ -21,9 +21,9 @@ public final class AiDatasetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName", required=true)
-      private final Input<String> displayName;
+      private final Output<String> displayName;
 
-    public Input<String> getDisplayName() {
+    public Output<String> getDisplayName() {
         return this.displayName;
     }
 
@@ -33,10 +33,10 @@ public final class AiDatasetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="encryptionSpec")
-      private final @Nullable Input<AiDatasetEncryptionSpecArgs> encryptionSpec;
+      private final @Nullable Output<AiDatasetEncryptionSpecArgs> encryptionSpec;
 
-    public Input<AiDatasetEncryptionSpecArgs> getEncryptionSpec() {
-        return this.encryptionSpec == null ? Input.empty() : this.encryptionSpec;
+    public Output<AiDatasetEncryptionSpecArgs> getEncryptionSpec() {
+        return this.encryptionSpec == null ? Output.empty() : this.encryptionSpec;
     }
 
     /**
@@ -44,10 +44,10 @@ public final class AiDatasetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labels")
-      private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Output<Map<String,String>> labels;
 
-    public Input<Map<String,String>> getLabels() {
-        return this.labels == null ? Input.empty() : this.labels;
+    public Output<Map<String,String>> getLabels() {
+        return this.labels == null ? Output.empty() : this.labels;
     }
 
     /**
@@ -55,9 +55,9 @@ public final class AiDatasetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="metadataSchemaUri", required=true)
-      private final Input<String> metadataSchemaUri;
+      private final Output<String> metadataSchemaUri;
 
-    public Input<String> getMetadataSchemaUri() {
+    public Output<String> getMetadataSchemaUri() {
         return this.metadataSchemaUri;
     }
 
@@ -67,10 +67,10 @@ public final class AiDatasetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -78,19 +78,19 @@ public final class AiDatasetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="region")
-      private final @Nullable Input<String> region;
+      private final @Nullable Output<String> region;
 
-    public Input<String> getRegion() {
-        return this.region == null ? Input.empty() : this.region;
+    public Output<String> getRegion() {
+        return this.region == null ? Output.empty() : this.region;
     }
 
     public AiDatasetArgs(
-        Input<String> displayName,
-        @Nullable Input<AiDatasetEncryptionSpecArgs> encryptionSpec,
-        @Nullable Input<Map<String,String>> labels,
-        Input<String> metadataSchemaUri,
-        @Nullable Input<String> project,
-        @Nullable Input<String> region) {
+        Output<String> displayName,
+        @Nullable Output<AiDatasetEncryptionSpecArgs> encryptionSpec,
+        @Nullable Output<Map<String,String>> labels,
+        Output<String> metadataSchemaUri,
+        @Nullable Output<String> project,
+        @Nullable Output<String> region) {
         this.displayName = Objects.requireNonNull(displayName, "expected parameter 'displayName' to be non-null");
         this.encryptionSpec = encryptionSpec;
         this.labels = labels;
@@ -100,12 +100,12 @@ public final class AiDatasetArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private AiDatasetArgs() {
-        this.displayName = Input.empty();
-        this.encryptionSpec = Input.empty();
-        this.labels = Input.empty();
-        this.metadataSchemaUri = Input.empty();
-        this.project = Input.empty();
-        this.region = Input.empty();
+        this.displayName = Output.empty();
+        this.encryptionSpec = Output.empty();
+        this.labels = Output.empty();
+        this.metadataSchemaUri = Output.empty();
+        this.project = Output.empty();
+        this.region = Output.empty();
     }
 
     public static Builder builder() {
@@ -117,12 +117,12 @@ public final class AiDatasetArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> displayName;
-        private @Nullable Input<AiDatasetEncryptionSpecArgs> encryptionSpec;
-        private @Nullable Input<Map<String,String>> labels;
-        private Input<String> metadataSchemaUri;
-        private @Nullable Input<String> project;
-        private @Nullable Input<String> region;
+        private Output<String> displayName;
+        private @Nullable Output<AiDatasetEncryptionSpecArgs> encryptionSpec;
+        private @Nullable Output<Map<String,String>> labels;
+        private Output<String> metadataSchemaUri;
+        private @Nullable Output<String> project;
+        private @Nullable Output<String> region;
 
         public Builder() {
     	      // Empty
@@ -138,63 +138,63 @@ public final class AiDatasetArgs extends io.pulumi.resources.ResourceArgs {
     	      this.region = defaults.region;
         }
 
-        public Builder displayName(Input<String> displayName) {
+        public Builder displayName(Output<String> displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
         public Builder displayName(String displayName) {
-            this.displayName = Input.of(Objects.requireNonNull(displayName));
+            this.displayName = Output.of(Objects.requireNonNull(displayName));
             return this;
         }
 
-        public Builder encryptionSpec(@Nullable Input<AiDatasetEncryptionSpecArgs> encryptionSpec) {
+        public Builder encryptionSpec(@Nullable Output<AiDatasetEncryptionSpecArgs> encryptionSpec) {
             this.encryptionSpec = encryptionSpec;
             return this;
         }
 
         public Builder encryptionSpec(@Nullable AiDatasetEncryptionSpecArgs encryptionSpec) {
-            this.encryptionSpec = Input.ofNullable(encryptionSpec);
+            this.encryptionSpec = Output.ofNullable(encryptionSpec);
             return this;
         }
 
-        public Builder labels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
         public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Input.ofNullable(labels);
+            this.labels = Output.ofNullable(labels);
             return this;
         }
 
-        public Builder metadataSchemaUri(Input<String> metadataSchemaUri) {
+        public Builder metadataSchemaUri(Output<String> metadataSchemaUri) {
             this.metadataSchemaUri = Objects.requireNonNull(metadataSchemaUri);
             return this;
         }
 
         public Builder metadataSchemaUri(String metadataSchemaUri) {
-            this.metadataSchemaUri = Input.of(Objects.requireNonNull(metadataSchemaUri));
+            this.metadataSchemaUri = Output.of(Objects.requireNonNull(metadataSchemaUri));
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder region(@Nullable Input<String> region) {
+        public Builder region(@Nullable Output<String> region) {
             this.region = region;
             return this;
         }
 
         public Builder region(@Nullable String region) {
-            this.region = Input.ofNullable(region);
+            this.region = Output.ofNullable(region);
             return this;
         }
         public AiDatasetArgs build() {

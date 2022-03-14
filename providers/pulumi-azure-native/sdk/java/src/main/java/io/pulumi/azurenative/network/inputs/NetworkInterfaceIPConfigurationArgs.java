@@ -13,7 +13,7 @@ import io.pulumi.azurenative.network.inputs.PublicIPAddressArgs;
 import io.pulumi.azurenative.network.inputs.SubnetArgs;
 import io.pulumi.azurenative.network.inputs.VirtualNetworkTapArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -35,10 +35,10 @@ public final class NetworkInterfaceIPConfigurationArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="applicationGatewayBackendAddressPools")
-      private final @Nullable Input<List<ApplicationGatewayBackendAddressPoolArgs>> applicationGatewayBackendAddressPools;
+      private final @Nullable Output<List<ApplicationGatewayBackendAddressPoolArgs>> applicationGatewayBackendAddressPools;
 
-    public Input<List<ApplicationGatewayBackendAddressPoolArgs>> getApplicationGatewayBackendAddressPools() {
-        return this.applicationGatewayBackendAddressPools == null ? Input.empty() : this.applicationGatewayBackendAddressPools;
+    public Output<List<ApplicationGatewayBackendAddressPoolArgs>> getApplicationGatewayBackendAddressPools() {
+        return this.applicationGatewayBackendAddressPools == null ? Output.empty() : this.applicationGatewayBackendAddressPools;
     }
 
     /**
@@ -46,10 +46,10 @@ public final class NetworkInterfaceIPConfigurationArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="applicationSecurityGroups")
-      private final @Nullable Input<List<ApplicationSecurityGroupArgs>> applicationSecurityGroups;
+      private final @Nullable Output<List<ApplicationSecurityGroupArgs>> applicationSecurityGroups;
 
-    public Input<List<ApplicationSecurityGroupArgs>> getApplicationSecurityGroups() {
-        return this.applicationSecurityGroups == null ? Input.empty() : this.applicationSecurityGroups;
+    public Output<List<ApplicationSecurityGroupArgs>> getApplicationSecurityGroups() {
+        return this.applicationSecurityGroups == null ? Output.empty() : this.applicationSecurityGroups;
     }
 
     /**
@@ -57,10 +57,10 @@ public final class NetworkInterfaceIPConfigurationArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="id")
-      private final @Nullable Input<String> id;
+      private final @Nullable Output<String> id;
 
-    public Input<String> getId() {
-        return this.id == null ? Input.empty() : this.id;
+    public Output<String> getId() {
+        return this.id == null ? Output.empty() : this.id;
     }
 
     /**
@@ -68,10 +68,10 @@ public final class NetworkInterfaceIPConfigurationArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="loadBalancerBackendAddressPools")
-      private final @Nullable Input<List<BackendAddressPoolArgs>> loadBalancerBackendAddressPools;
+      private final @Nullable Output<List<BackendAddressPoolArgs>> loadBalancerBackendAddressPools;
 
-    public Input<List<BackendAddressPoolArgs>> getLoadBalancerBackendAddressPools() {
-        return this.loadBalancerBackendAddressPools == null ? Input.empty() : this.loadBalancerBackendAddressPools;
+    public Output<List<BackendAddressPoolArgs>> getLoadBalancerBackendAddressPools() {
+        return this.loadBalancerBackendAddressPools == null ? Output.empty() : this.loadBalancerBackendAddressPools;
     }
 
     /**
@@ -79,10 +79,10 @@ public final class NetworkInterfaceIPConfigurationArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="loadBalancerInboundNatRules")
-      private final @Nullable Input<List<InboundNatRuleArgs>> loadBalancerInboundNatRules;
+      private final @Nullable Output<List<InboundNatRuleArgs>> loadBalancerInboundNatRules;
 
-    public Input<List<InboundNatRuleArgs>> getLoadBalancerInboundNatRules() {
-        return this.loadBalancerInboundNatRules == null ? Input.empty() : this.loadBalancerInboundNatRules;
+    public Output<List<InboundNatRuleArgs>> getLoadBalancerInboundNatRules() {
+        return this.loadBalancerInboundNatRules == null ? Output.empty() : this.loadBalancerInboundNatRules;
     }
 
     /**
@@ -90,10 +90,10 @@ public final class NetworkInterfaceIPConfigurationArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -101,10 +101,10 @@ public final class NetworkInterfaceIPConfigurationArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="primary")
-      private final @Nullable Input<Boolean> primary;
+      private final @Nullable Output<Boolean> primary;
 
-    public Input<Boolean> getPrimary() {
-        return this.primary == null ? Input.empty() : this.primary;
+    public Output<Boolean> getPrimary() {
+        return this.primary == null ? Output.empty() : this.primary;
     }
 
     /**
@@ -112,10 +112,10 @@ public final class NetworkInterfaceIPConfigurationArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="privateIPAddress")
-      private final @Nullable Input<String> privateIPAddress;
+      private final @Nullable Output<String> privateIPAddress;
 
-    public Input<String> getPrivateIPAddress() {
-        return this.privateIPAddress == null ? Input.empty() : this.privateIPAddress;
+    public Output<String> getPrivateIPAddress() {
+        return this.privateIPAddress == null ? Output.empty() : this.privateIPAddress;
     }
 
     /**
@@ -123,10 +123,10 @@ public final class NetworkInterfaceIPConfigurationArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="privateIPAddressVersion")
-      private final @Nullable Input<Either<String,IPVersion>> privateIPAddressVersion;
+      private final @Nullable Output<Either<String,IPVersion>> privateIPAddressVersion;
 
-    public Input<Either<String,IPVersion>> getPrivateIPAddressVersion() {
-        return this.privateIPAddressVersion == null ? Input.empty() : this.privateIPAddressVersion;
+    public Output<Either<String,IPVersion>> getPrivateIPAddressVersion() {
+        return this.privateIPAddressVersion == null ? Output.empty() : this.privateIPAddressVersion;
     }
 
     /**
@@ -134,10 +134,10 @@ public final class NetworkInterfaceIPConfigurationArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="privateIPAllocationMethod")
-      private final @Nullable Input<Either<String,IPAllocationMethod>> privateIPAllocationMethod;
+      private final @Nullable Output<Either<String,IPAllocationMethod>> privateIPAllocationMethod;
 
-    public Input<Either<String,IPAllocationMethod>> getPrivateIPAllocationMethod() {
-        return this.privateIPAllocationMethod == null ? Input.empty() : this.privateIPAllocationMethod;
+    public Output<Either<String,IPAllocationMethod>> getPrivateIPAllocationMethod() {
+        return this.privateIPAllocationMethod == null ? Output.empty() : this.privateIPAllocationMethod;
     }
 
     /**
@@ -145,10 +145,10 @@ public final class NetworkInterfaceIPConfigurationArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="publicIPAddress")
-      private final @Nullable Input<PublicIPAddressArgs> publicIPAddress;
+      private final @Nullable Output<PublicIPAddressArgs> publicIPAddress;
 
-    public Input<PublicIPAddressArgs> getPublicIPAddress() {
-        return this.publicIPAddress == null ? Input.empty() : this.publicIPAddress;
+    public Output<PublicIPAddressArgs> getPublicIPAddress() {
+        return this.publicIPAddress == null ? Output.empty() : this.publicIPAddress;
     }
 
     /**
@@ -156,10 +156,10 @@ public final class NetworkInterfaceIPConfigurationArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="subnet")
-      private final @Nullable Input<SubnetArgs> subnet;
+      private final @Nullable Output<SubnetArgs> subnet;
 
-    public Input<SubnetArgs> getSubnet() {
-        return this.subnet == null ? Input.empty() : this.subnet;
+    public Output<SubnetArgs> getSubnet() {
+        return this.subnet == null ? Output.empty() : this.subnet;
     }
 
     /**
@@ -167,10 +167,10 @@ public final class NetworkInterfaceIPConfigurationArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="type")
-      private final @Nullable Input<String> type;
+      private final @Nullable Output<String> type;
 
-    public Input<String> getType() {
-        return this.type == null ? Input.empty() : this.type;
+    public Output<String> getType() {
+        return this.type == null ? Output.empty() : this.type;
     }
 
     /**
@@ -178,27 +178,27 @@ public final class NetworkInterfaceIPConfigurationArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="virtualNetworkTaps")
-      private final @Nullable Input<List<VirtualNetworkTapArgs>> virtualNetworkTaps;
+      private final @Nullable Output<List<VirtualNetworkTapArgs>> virtualNetworkTaps;
 
-    public Input<List<VirtualNetworkTapArgs>> getVirtualNetworkTaps() {
-        return this.virtualNetworkTaps == null ? Input.empty() : this.virtualNetworkTaps;
+    public Output<List<VirtualNetworkTapArgs>> getVirtualNetworkTaps() {
+        return this.virtualNetworkTaps == null ? Output.empty() : this.virtualNetworkTaps;
     }
 
     public NetworkInterfaceIPConfigurationArgs(
-        @Nullable Input<List<ApplicationGatewayBackendAddressPoolArgs>> applicationGatewayBackendAddressPools,
-        @Nullable Input<List<ApplicationSecurityGroupArgs>> applicationSecurityGroups,
-        @Nullable Input<String> id,
-        @Nullable Input<List<BackendAddressPoolArgs>> loadBalancerBackendAddressPools,
-        @Nullable Input<List<InboundNatRuleArgs>> loadBalancerInboundNatRules,
-        @Nullable Input<String> name,
-        @Nullable Input<Boolean> primary,
-        @Nullable Input<String> privateIPAddress,
-        @Nullable Input<Either<String,IPVersion>> privateIPAddressVersion,
-        @Nullable Input<Either<String,IPAllocationMethod>> privateIPAllocationMethod,
-        @Nullable Input<PublicIPAddressArgs> publicIPAddress,
-        @Nullable Input<SubnetArgs> subnet,
-        @Nullable Input<String> type,
-        @Nullable Input<List<VirtualNetworkTapArgs>> virtualNetworkTaps) {
+        @Nullable Output<List<ApplicationGatewayBackendAddressPoolArgs>> applicationGatewayBackendAddressPools,
+        @Nullable Output<List<ApplicationSecurityGroupArgs>> applicationSecurityGroups,
+        @Nullable Output<String> id,
+        @Nullable Output<List<BackendAddressPoolArgs>> loadBalancerBackendAddressPools,
+        @Nullable Output<List<InboundNatRuleArgs>> loadBalancerInboundNatRules,
+        @Nullable Output<String> name,
+        @Nullable Output<Boolean> primary,
+        @Nullable Output<String> privateIPAddress,
+        @Nullable Output<Either<String,IPVersion>> privateIPAddressVersion,
+        @Nullable Output<Either<String,IPAllocationMethod>> privateIPAllocationMethod,
+        @Nullable Output<PublicIPAddressArgs> publicIPAddress,
+        @Nullable Output<SubnetArgs> subnet,
+        @Nullable Output<String> type,
+        @Nullable Output<List<VirtualNetworkTapArgs>> virtualNetworkTaps) {
         this.applicationGatewayBackendAddressPools = applicationGatewayBackendAddressPools;
         this.applicationSecurityGroups = applicationSecurityGroups;
         this.id = id;
@@ -216,20 +216,20 @@ public final class NetworkInterfaceIPConfigurationArgs extends io.pulumi.resourc
     }
 
     private NetworkInterfaceIPConfigurationArgs() {
-        this.applicationGatewayBackendAddressPools = Input.empty();
-        this.applicationSecurityGroups = Input.empty();
-        this.id = Input.empty();
-        this.loadBalancerBackendAddressPools = Input.empty();
-        this.loadBalancerInboundNatRules = Input.empty();
-        this.name = Input.empty();
-        this.primary = Input.empty();
-        this.privateIPAddress = Input.empty();
-        this.privateIPAddressVersion = Input.empty();
-        this.privateIPAllocationMethod = Input.empty();
-        this.publicIPAddress = Input.empty();
-        this.subnet = Input.empty();
-        this.type = Input.empty();
-        this.virtualNetworkTaps = Input.empty();
+        this.applicationGatewayBackendAddressPools = Output.empty();
+        this.applicationSecurityGroups = Output.empty();
+        this.id = Output.empty();
+        this.loadBalancerBackendAddressPools = Output.empty();
+        this.loadBalancerInboundNatRules = Output.empty();
+        this.name = Output.empty();
+        this.primary = Output.empty();
+        this.privateIPAddress = Output.empty();
+        this.privateIPAddressVersion = Output.empty();
+        this.privateIPAllocationMethod = Output.empty();
+        this.publicIPAddress = Output.empty();
+        this.subnet = Output.empty();
+        this.type = Output.empty();
+        this.virtualNetworkTaps = Output.empty();
     }
 
     public static Builder builder() {
@@ -241,20 +241,20 @@ public final class NetworkInterfaceIPConfigurationArgs extends io.pulumi.resourc
     }
 
     public static final class Builder {
-        private @Nullable Input<List<ApplicationGatewayBackendAddressPoolArgs>> applicationGatewayBackendAddressPools;
-        private @Nullable Input<List<ApplicationSecurityGroupArgs>> applicationSecurityGroups;
-        private @Nullable Input<String> id;
-        private @Nullable Input<List<BackendAddressPoolArgs>> loadBalancerBackendAddressPools;
-        private @Nullable Input<List<InboundNatRuleArgs>> loadBalancerInboundNatRules;
-        private @Nullable Input<String> name;
-        private @Nullable Input<Boolean> primary;
-        private @Nullable Input<String> privateIPAddress;
-        private @Nullable Input<Either<String,IPVersion>> privateIPAddressVersion;
-        private @Nullable Input<Either<String,IPAllocationMethod>> privateIPAllocationMethod;
-        private @Nullable Input<PublicIPAddressArgs> publicIPAddress;
-        private @Nullable Input<SubnetArgs> subnet;
-        private @Nullable Input<String> type;
-        private @Nullable Input<List<VirtualNetworkTapArgs>> virtualNetworkTaps;
+        private @Nullable Output<List<ApplicationGatewayBackendAddressPoolArgs>> applicationGatewayBackendAddressPools;
+        private @Nullable Output<List<ApplicationSecurityGroupArgs>> applicationSecurityGroups;
+        private @Nullable Output<String> id;
+        private @Nullable Output<List<BackendAddressPoolArgs>> loadBalancerBackendAddressPools;
+        private @Nullable Output<List<InboundNatRuleArgs>> loadBalancerInboundNatRules;
+        private @Nullable Output<String> name;
+        private @Nullable Output<Boolean> primary;
+        private @Nullable Output<String> privateIPAddress;
+        private @Nullable Output<Either<String,IPVersion>> privateIPAddressVersion;
+        private @Nullable Output<Either<String,IPAllocationMethod>> privateIPAllocationMethod;
+        private @Nullable Output<PublicIPAddressArgs> publicIPAddress;
+        private @Nullable Output<SubnetArgs> subnet;
+        private @Nullable Output<String> type;
+        private @Nullable Output<List<VirtualNetworkTapArgs>> virtualNetworkTaps;
 
         public Builder() {
     	      // Empty
@@ -278,143 +278,143 @@ public final class NetworkInterfaceIPConfigurationArgs extends io.pulumi.resourc
     	      this.virtualNetworkTaps = defaults.virtualNetworkTaps;
         }
 
-        public Builder applicationGatewayBackendAddressPools(@Nullable Input<List<ApplicationGatewayBackendAddressPoolArgs>> applicationGatewayBackendAddressPools) {
+        public Builder applicationGatewayBackendAddressPools(@Nullable Output<List<ApplicationGatewayBackendAddressPoolArgs>> applicationGatewayBackendAddressPools) {
             this.applicationGatewayBackendAddressPools = applicationGatewayBackendAddressPools;
             return this;
         }
 
         public Builder applicationGatewayBackendAddressPools(@Nullable List<ApplicationGatewayBackendAddressPoolArgs> applicationGatewayBackendAddressPools) {
-            this.applicationGatewayBackendAddressPools = Input.ofNullable(applicationGatewayBackendAddressPools);
+            this.applicationGatewayBackendAddressPools = Output.ofNullable(applicationGatewayBackendAddressPools);
             return this;
         }
 
-        public Builder applicationSecurityGroups(@Nullable Input<List<ApplicationSecurityGroupArgs>> applicationSecurityGroups) {
+        public Builder applicationSecurityGroups(@Nullable Output<List<ApplicationSecurityGroupArgs>> applicationSecurityGroups) {
             this.applicationSecurityGroups = applicationSecurityGroups;
             return this;
         }
 
         public Builder applicationSecurityGroups(@Nullable List<ApplicationSecurityGroupArgs> applicationSecurityGroups) {
-            this.applicationSecurityGroups = Input.ofNullable(applicationSecurityGroups);
+            this.applicationSecurityGroups = Output.ofNullable(applicationSecurityGroups);
             return this;
         }
 
-        public Builder id(@Nullable Input<String> id) {
+        public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
 
         public Builder id(@Nullable String id) {
-            this.id = Input.ofNullable(id);
+            this.id = Output.ofNullable(id);
             return this;
         }
 
-        public Builder loadBalancerBackendAddressPools(@Nullable Input<List<BackendAddressPoolArgs>> loadBalancerBackendAddressPools) {
+        public Builder loadBalancerBackendAddressPools(@Nullable Output<List<BackendAddressPoolArgs>> loadBalancerBackendAddressPools) {
             this.loadBalancerBackendAddressPools = loadBalancerBackendAddressPools;
             return this;
         }
 
         public Builder loadBalancerBackendAddressPools(@Nullable List<BackendAddressPoolArgs> loadBalancerBackendAddressPools) {
-            this.loadBalancerBackendAddressPools = Input.ofNullable(loadBalancerBackendAddressPools);
+            this.loadBalancerBackendAddressPools = Output.ofNullable(loadBalancerBackendAddressPools);
             return this;
         }
 
-        public Builder loadBalancerInboundNatRules(@Nullable Input<List<InboundNatRuleArgs>> loadBalancerInboundNatRules) {
+        public Builder loadBalancerInboundNatRules(@Nullable Output<List<InboundNatRuleArgs>> loadBalancerInboundNatRules) {
             this.loadBalancerInboundNatRules = loadBalancerInboundNatRules;
             return this;
         }
 
         public Builder loadBalancerInboundNatRules(@Nullable List<InboundNatRuleArgs> loadBalancerInboundNatRules) {
-            this.loadBalancerInboundNatRules = Input.ofNullable(loadBalancerInboundNatRules);
+            this.loadBalancerInboundNatRules = Output.ofNullable(loadBalancerInboundNatRules);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder primary(@Nullable Input<Boolean> primary) {
+        public Builder primary(@Nullable Output<Boolean> primary) {
             this.primary = primary;
             return this;
         }
 
         public Builder primary(@Nullable Boolean primary) {
-            this.primary = Input.ofNullable(primary);
+            this.primary = Output.ofNullable(primary);
             return this;
         }
 
-        public Builder privateIPAddress(@Nullable Input<String> privateIPAddress) {
+        public Builder privateIPAddress(@Nullable Output<String> privateIPAddress) {
             this.privateIPAddress = privateIPAddress;
             return this;
         }
 
         public Builder privateIPAddress(@Nullable String privateIPAddress) {
-            this.privateIPAddress = Input.ofNullable(privateIPAddress);
+            this.privateIPAddress = Output.ofNullable(privateIPAddress);
             return this;
         }
 
-        public Builder privateIPAddressVersion(@Nullable Input<Either<String,IPVersion>> privateIPAddressVersion) {
+        public Builder privateIPAddressVersion(@Nullable Output<Either<String,IPVersion>> privateIPAddressVersion) {
             this.privateIPAddressVersion = privateIPAddressVersion;
             return this;
         }
 
         public Builder privateIPAddressVersion(@Nullable Either<String,IPVersion> privateIPAddressVersion) {
-            this.privateIPAddressVersion = Input.ofNullable(privateIPAddressVersion);
+            this.privateIPAddressVersion = Output.ofNullable(privateIPAddressVersion);
             return this;
         }
 
-        public Builder privateIPAllocationMethod(@Nullable Input<Either<String,IPAllocationMethod>> privateIPAllocationMethod) {
+        public Builder privateIPAllocationMethod(@Nullable Output<Either<String,IPAllocationMethod>> privateIPAllocationMethod) {
             this.privateIPAllocationMethod = privateIPAllocationMethod;
             return this;
         }
 
         public Builder privateIPAllocationMethod(@Nullable Either<String,IPAllocationMethod> privateIPAllocationMethod) {
-            this.privateIPAllocationMethod = Input.ofNullable(privateIPAllocationMethod);
+            this.privateIPAllocationMethod = Output.ofNullable(privateIPAllocationMethod);
             return this;
         }
 
-        public Builder publicIPAddress(@Nullable Input<PublicIPAddressArgs> publicIPAddress) {
+        public Builder publicIPAddress(@Nullable Output<PublicIPAddressArgs> publicIPAddress) {
             this.publicIPAddress = publicIPAddress;
             return this;
         }
 
         public Builder publicIPAddress(@Nullable PublicIPAddressArgs publicIPAddress) {
-            this.publicIPAddress = Input.ofNullable(publicIPAddress);
+            this.publicIPAddress = Output.ofNullable(publicIPAddress);
             return this;
         }
 
-        public Builder subnet(@Nullable Input<SubnetArgs> subnet) {
+        public Builder subnet(@Nullable Output<SubnetArgs> subnet) {
             this.subnet = subnet;
             return this;
         }
 
         public Builder subnet(@Nullable SubnetArgs subnet) {
-            this.subnet = Input.ofNullable(subnet);
+            this.subnet = Output.ofNullable(subnet);
             return this;
         }
 
-        public Builder type(@Nullable Input<String> type) {
+        public Builder type(@Nullable Output<String> type) {
             this.type = type;
             return this;
         }
 
         public Builder type(@Nullable String type) {
-            this.type = Input.ofNullable(type);
+            this.type = Output.ofNullable(type);
             return this;
         }
 
-        public Builder virtualNetworkTaps(@Nullable Input<List<VirtualNetworkTapArgs>> virtualNetworkTaps) {
+        public Builder virtualNetworkTaps(@Nullable Output<List<VirtualNetworkTapArgs>> virtualNetworkTaps) {
             this.virtualNetworkTaps = virtualNetworkTaps;
             return this;
         }
 
         public Builder virtualNetworkTaps(@Nullable List<VirtualNetworkTapArgs> virtualNetworkTaps) {
-            this.virtualNetworkTaps = Input.ofNullable(virtualNetworkTaps);
+            this.virtualNetworkTaps = Output.ofNullable(virtualNetworkTaps);
             return this;
         }
         public NetworkInterfaceIPConfigurationArgs build() {

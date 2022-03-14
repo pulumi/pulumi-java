@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.kms;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -20,10 +20,10 @@ public final class SecretCiphertextArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="additionalAuthenticatedData")
-      private final @Nullable Input<String> additionalAuthenticatedData;
+      private final @Nullable Output<String> additionalAuthenticatedData;
 
-    public Input<String> getAdditionalAuthenticatedData() {
-        return this.additionalAuthenticatedData == null ? Input.empty() : this.additionalAuthenticatedData;
+    public Output<String> getAdditionalAuthenticatedData() {
+        return this.additionalAuthenticatedData == null ? Output.empty() : this.additionalAuthenticatedData;
     }
 
     /**
@@ -32,9 +32,9 @@ public final class SecretCiphertextArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="cryptoKey", required=true)
-      private final Input<String> cryptoKey;
+      private final Output<String> cryptoKey;
 
-    public Input<String> getCryptoKey() {
+    public Output<String> getCryptoKey() {
         return this.cryptoKey;
     }
 
@@ -44,25 +44,25 @@ public final class SecretCiphertextArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="plaintext", required=true)
-      private final Input<String> plaintext;
+      private final Output<String> plaintext;
 
-    public Input<String> getPlaintext() {
+    public Output<String> getPlaintext() {
         return this.plaintext;
     }
 
     public SecretCiphertextArgs(
-        @Nullable Input<String> additionalAuthenticatedData,
-        Input<String> cryptoKey,
-        Input<String> plaintext) {
+        @Nullable Output<String> additionalAuthenticatedData,
+        Output<String> cryptoKey,
+        Output<String> plaintext) {
         this.additionalAuthenticatedData = additionalAuthenticatedData;
         this.cryptoKey = Objects.requireNonNull(cryptoKey, "expected parameter 'cryptoKey' to be non-null");
         this.plaintext = Objects.requireNonNull(plaintext, "expected parameter 'plaintext' to be non-null");
     }
 
     private SecretCiphertextArgs() {
-        this.additionalAuthenticatedData = Input.empty();
-        this.cryptoKey = Input.empty();
-        this.plaintext = Input.empty();
+        this.additionalAuthenticatedData = Output.empty();
+        this.cryptoKey = Output.empty();
+        this.plaintext = Output.empty();
     }
 
     public static Builder builder() {
@@ -74,9 +74,9 @@ public final class SecretCiphertextArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private @Nullable Input<String> additionalAuthenticatedData;
-        private Input<String> cryptoKey;
-        private Input<String> plaintext;
+        private @Nullable Output<String> additionalAuthenticatedData;
+        private Output<String> cryptoKey;
+        private Output<String> plaintext;
 
         public Builder() {
     	      // Empty
@@ -89,33 +89,33 @@ public final class SecretCiphertextArgs extends io.pulumi.resources.ResourceArgs
     	      this.plaintext = defaults.plaintext;
         }
 
-        public Builder additionalAuthenticatedData(@Nullable Input<String> additionalAuthenticatedData) {
+        public Builder additionalAuthenticatedData(@Nullable Output<String> additionalAuthenticatedData) {
             this.additionalAuthenticatedData = additionalAuthenticatedData;
             return this;
         }
 
         public Builder additionalAuthenticatedData(@Nullable String additionalAuthenticatedData) {
-            this.additionalAuthenticatedData = Input.ofNullable(additionalAuthenticatedData);
+            this.additionalAuthenticatedData = Output.ofNullable(additionalAuthenticatedData);
             return this;
         }
 
-        public Builder cryptoKey(Input<String> cryptoKey) {
+        public Builder cryptoKey(Output<String> cryptoKey) {
             this.cryptoKey = Objects.requireNonNull(cryptoKey);
             return this;
         }
 
         public Builder cryptoKey(String cryptoKey) {
-            this.cryptoKey = Input.of(Objects.requireNonNull(cryptoKey));
+            this.cryptoKey = Output.of(Objects.requireNonNull(cryptoKey));
             return this;
         }
 
-        public Builder plaintext(Input<String> plaintext) {
+        public Builder plaintext(Output<String> plaintext) {
             this.plaintext = Objects.requireNonNull(plaintext);
             return this;
         }
 
         public Builder plaintext(String plaintext) {
-            this.plaintext = Input.of(Objects.requireNonNull(plaintext));
+            this.plaintext = Output.of(Objects.requireNonNull(plaintext));
             return this;
         }
         public SecretCiphertextArgs build() {

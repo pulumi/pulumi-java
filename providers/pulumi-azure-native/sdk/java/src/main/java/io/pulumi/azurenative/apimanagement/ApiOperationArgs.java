@@ -6,7 +6,7 @@ package io.pulumi.azurenative.apimanagement;
 import io.pulumi.azurenative.apimanagement.inputs.ParameterContractArgs;
 import io.pulumi.azurenative.apimanagement.inputs.RequestContractArgs;
 import io.pulumi.azurenative.apimanagement.inputs.ResponseContractArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -23,9 +23,9 @@ public final class ApiOperationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="apiId", required=true)
-      private final Input<String> apiId;
+      private final Output<String> apiId;
 
-    public Input<String> getApiId() {
+    public Output<String> getApiId() {
         return this.apiId;
     }
 
@@ -34,10 +34,10 @@ public final class ApiOperationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -45,9 +45,9 @@ public final class ApiOperationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName", required=true)
-      private final Input<String> displayName;
+      private final Output<String> displayName;
 
-    public Input<String> getDisplayName() {
+    public Output<String> getDisplayName() {
         return this.displayName;
     }
 
@@ -56,9 +56,9 @@ public final class ApiOperationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="method", required=true)
-      private final Input<String> method;
+      private final Output<String> method;
 
-    public Input<String> getMethod() {
+    public Output<String> getMethod() {
         return this.method;
     }
 
@@ -67,10 +67,10 @@ public final class ApiOperationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="operationId")
-      private final @Nullable Input<String> operationId;
+      private final @Nullable Output<String> operationId;
 
-    public Input<String> getOperationId() {
-        return this.operationId == null ? Input.empty() : this.operationId;
+    public Output<String> getOperationId() {
+        return this.operationId == null ? Output.empty() : this.operationId;
     }
 
     /**
@@ -78,10 +78,10 @@ public final class ApiOperationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="policies")
-      private final @Nullable Input<String> policies;
+      private final @Nullable Output<String> policies;
 
-    public Input<String> getPolicies() {
-        return this.policies == null ? Input.empty() : this.policies;
+    public Output<String> getPolicies() {
+        return this.policies == null ? Output.empty() : this.policies;
     }
 
     /**
@@ -89,10 +89,10 @@ public final class ApiOperationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="request")
-      private final @Nullable Input<RequestContractArgs> request;
+      private final @Nullable Output<RequestContractArgs> request;
 
-    public Input<RequestContractArgs> getRequest() {
-        return this.request == null ? Input.empty() : this.request;
+    public Output<RequestContractArgs> getRequest() {
+        return this.request == null ? Output.empty() : this.request;
     }
 
     /**
@@ -100,9 +100,9 @@ public final class ApiOperationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -111,10 +111,10 @@ public final class ApiOperationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="responses")
-      private final @Nullable Input<List<ResponseContractArgs>> responses;
+      private final @Nullable Output<List<ResponseContractArgs>> responses;
 
-    public Input<List<ResponseContractArgs>> getResponses() {
-        return this.responses == null ? Input.empty() : this.responses;
+    public Output<List<ResponseContractArgs>> getResponses() {
+        return this.responses == null ? Output.empty() : this.responses;
     }
 
     /**
@@ -122,9 +122,9 @@ public final class ApiOperationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serviceName", required=true)
-      private final Input<String> serviceName;
+      private final Output<String> serviceName;
 
-    public Input<String> getServiceName() {
+    public Output<String> getServiceName() {
         return this.serviceName;
     }
 
@@ -133,10 +133,10 @@ public final class ApiOperationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="templateParameters")
-      private final @Nullable Input<List<ParameterContractArgs>> templateParameters;
+      private final @Nullable Output<List<ParameterContractArgs>> templateParameters;
 
-    public Input<List<ParameterContractArgs>> getTemplateParameters() {
-        return this.templateParameters == null ? Input.empty() : this.templateParameters;
+    public Output<List<ParameterContractArgs>> getTemplateParameters() {
+        return this.templateParameters == null ? Output.empty() : this.templateParameters;
     }
 
     /**
@@ -144,25 +144,25 @@ public final class ApiOperationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="urlTemplate", required=true)
-      private final Input<String> urlTemplate;
+      private final Output<String> urlTemplate;
 
-    public Input<String> getUrlTemplate() {
+    public Output<String> getUrlTemplate() {
         return this.urlTemplate;
     }
 
     public ApiOperationArgs(
-        Input<String> apiId,
-        @Nullable Input<String> description,
-        Input<String> displayName,
-        Input<String> method,
-        @Nullable Input<String> operationId,
-        @Nullable Input<String> policies,
-        @Nullable Input<RequestContractArgs> request,
-        Input<String> resourceGroupName,
-        @Nullable Input<List<ResponseContractArgs>> responses,
-        Input<String> serviceName,
-        @Nullable Input<List<ParameterContractArgs>> templateParameters,
-        Input<String> urlTemplate) {
+        Output<String> apiId,
+        @Nullable Output<String> description,
+        Output<String> displayName,
+        Output<String> method,
+        @Nullable Output<String> operationId,
+        @Nullable Output<String> policies,
+        @Nullable Output<RequestContractArgs> request,
+        Output<String> resourceGroupName,
+        @Nullable Output<List<ResponseContractArgs>> responses,
+        Output<String> serviceName,
+        @Nullable Output<List<ParameterContractArgs>> templateParameters,
+        Output<String> urlTemplate) {
         this.apiId = Objects.requireNonNull(apiId, "expected parameter 'apiId' to be non-null");
         this.description = description;
         this.displayName = Objects.requireNonNull(displayName, "expected parameter 'displayName' to be non-null");
@@ -178,18 +178,18 @@ public final class ApiOperationArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ApiOperationArgs() {
-        this.apiId = Input.empty();
-        this.description = Input.empty();
-        this.displayName = Input.empty();
-        this.method = Input.empty();
-        this.operationId = Input.empty();
-        this.policies = Input.empty();
-        this.request = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.responses = Input.empty();
-        this.serviceName = Input.empty();
-        this.templateParameters = Input.empty();
-        this.urlTemplate = Input.empty();
+        this.apiId = Output.empty();
+        this.description = Output.empty();
+        this.displayName = Output.empty();
+        this.method = Output.empty();
+        this.operationId = Output.empty();
+        this.policies = Output.empty();
+        this.request = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.responses = Output.empty();
+        this.serviceName = Output.empty();
+        this.templateParameters = Output.empty();
+        this.urlTemplate = Output.empty();
     }
 
     public static Builder builder() {
@@ -201,18 +201,18 @@ public final class ApiOperationArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> apiId;
-        private @Nullable Input<String> description;
-        private Input<String> displayName;
-        private Input<String> method;
-        private @Nullable Input<String> operationId;
-        private @Nullable Input<String> policies;
-        private @Nullable Input<RequestContractArgs> request;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<List<ResponseContractArgs>> responses;
-        private Input<String> serviceName;
-        private @Nullable Input<List<ParameterContractArgs>> templateParameters;
-        private Input<String> urlTemplate;
+        private Output<String> apiId;
+        private @Nullable Output<String> description;
+        private Output<String> displayName;
+        private Output<String> method;
+        private @Nullable Output<String> operationId;
+        private @Nullable Output<String> policies;
+        private @Nullable Output<RequestContractArgs> request;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<List<ResponseContractArgs>> responses;
+        private Output<String> serviceName;
+        private @Nullable Output<List<ParameterContractArgs>> templateParameters;
+        private Output<String> urlTemplate;
 
         public Builder() {
     	      // Empty
@@ -234,123 +234,123 @@ public final class ApiOperationArgs extends io.pulumi.resources.ResourceArgs {
     	      this.urlTemplate = defaults.urlTemplate;
         }
 
-        public Builder apiId(Input<String> apiId) {
+        public Builder apiId(Output<String> apiId) {
             this.apiId = Objects.requireNonNull(apiId);
             return this;
         }
 
         public Builder apiId(String apiId) {
-            this.apiId = Input.of(Objects.requireNonNull(apiId));
+            this.apiId = Output.of(Objects.requireNonNull(apiId));
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder displayName(Input<String> displayName) {
+        public Builder displayName(Output<String> displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
         public Builder displayName(String displayName) {
-            this.displayName = Input.of(Objects.requireNonNull(displayName));
+            this.displayName = Output.of(Objects.requireNonNull(displayName));
             return this;
         }
 
-        public Builder method(Input<String> method) {
+        public Builder method(Output<String> method) {
             this.method = Objects.requireNonNull(method);
             return this;
         }
 
         public Builder method(String method) {
-            this.method = Input.of(Objects.requireNonNull(method));
+            this.method = Output.of(Objects.requireNonNull(method));
             return this;
         }
 
-        public Builder operationId(@Nullable Input<String> operationId) {
+        public Builder operationId(@Nullable Output<String> operationId) {
             this.operationId = operationId;
             return this;
         }
 
         public Builder operationId(@Nullable String operationId) {
-            this.operationId = Input.ofNullable(operationId);
+            this.operationId = Output.ofNullable(operationId);
             return this;
         }
 
-        public Builder policies(@Nullable Input<String> policies) {
+        public Builder policies(@Nullable Output<String> policies) {
             this.policies = policies;
             return this;
         }
 
         public Builder policies(@Nullable String policies) {
-            this.policies = Input.ofNullable(policies);
+            this.policies = Output.ofNullable(policies);
             return this;
         }
 
-        public Builder request(@Nullable Input<RequestContractArgs> request) {
+        public Builder request(@Nullable Output<RequestContractArgs> request) {
             this.request = request;
             return this;
         }
 
         public Builder request(@Nullable RequestContractArgs request) {
-            this.request = Input.ofNullable(request);
+            this.request = Output.ofNullable(request);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder responses(@Nullable Input<List<ResponseContractArgs>> responses) {
+        public Builder responses(@Nullable Output<List<ResponseContractArgs>> responses) {
             this.responses = responses;
             return this;
         }
 
         public Builder responses(@Nullable List<ResponseContractArgs> responses) {
-            this.responses = Input.ofNullable(responses);
+            this.responses = Output.ofNullable(responses);
             return this;
         }
 
-        public Builder serviceName(Input<String> serviceName) {
+        public Builder serviceName(Output<String> serviceName) {
             this.serviceName = Objects.requireNonNull(serviceName);
             return this;
         }
 
         public Builder serviceName(String serviceName) {
-            this.serviceName = Input.of(Objects.requireNonNull(serviceName));
+            this.serviceName = Output.of(Objects.requireNonNull(serviceName));
             return this;
         }
 
-        public Builder templateParameters(@Nullable Input<List<ParameterContractArgs>> templateParameters) {
+        public Builder templateParameters(@Nullable Output<List<ParameterContractArgs>> templateParameters) {
             this.templateParameters = templateParameters;
             return this;
         }
 
         public Builder templateParameters(@Nullable List<ParameterContractArgs> templateParameters) {
-            this.templateParameters = Input.ofNullable(templateParameters);
+            this.templateParameters = Output.ofNullable(templateParameters);
             return this;
         }
 
-        public Builder urlTemplate(Input<String> urlTemplate) {
+        public Builder urlTemplate(Output<String> urlTemplate) {
             this.urlTemplate = Objects.requireNonNull(urlTemplate);
             return this;
         }
 
         public Builder urlTemplate(String urlTemplate) {
-            this.urlTemplate = Input.of(Objects.requireNonNull(urlTemplate));
+            this.urlTemplate = Output.of(Objects.requireNonNull(urlTemplate));
             return this;
         }
         public ApiOperationArgs build() {

@@ -4,7 +4,7 @@
 package io.pulumi.aws.cfg;
 
 import io.pulumi.aws.cfg.inputs.DeliveryChannelSnapshotDeliveryPropertiesArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -20,10 +20,10 @@ public final class DeliveryChannelArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -31,9 +31,9 @@ public final class DeliveryChannelArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="s3BucketName", required=true)
-      private final Input<String> s3BucketName;
+      private final Output<String> s3BucketName;
 
-    public Input<String> getS3BucketName() {
+    public Output<String> getS3BucketName() {
         return this.s3BucketName;
     }
 
@@ -42,10 +42,10 @@ public final class DeliveryChannelArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="s3KeyPrefix")
-      private final @Nullable Input<String> s3KeyPrefix;
+      private final @Nullable Output<String> s3KeyPrefix;
 
-    public Input<String> getS3KeyPrefix() {
-        return this.s3KeyPrefix == null ? Input.empty() : this.s3KeyPrefix;
+    public Output<String> getS3KeyPrefix() {
+        return this.s3KeyPrefix == null ? Output.empty() : this.s3KeyPrefix;
     }
 
     /**
@@ -53,10 +53,10 @@ public final class DeliveryChannelArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="s3KmsKeyArn")
-      private final @Nullable Input<String> s3KmsKeyArn;
+      private final @Nullable Output<String> s3KmsKeyArn;
 
-    public Input<String> getS3KmsKeyArn() {
-        return this.s3KmsKeyArn == null ? Input.empty() : this.s3KmsKeyArn;
+    public Output<String> getS3KmsKeyArn() {
+        return this.s3KmsKeyArn == null ? Output.empty() : this.s3KmsKeyArn;
     }
 
     /**
@@ -64,10 +64,10 @@ public final class DeliveryChannelArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="snapshotDeliveryProperties")
-      private final @Nullable Input<DeliveryChannelSnapshotDeliveryPropertiesArgs> snapshotDeliveryProperties;
+      private final @Nullable Output<DeliveryChannelSnapshotDeliveryPropertiesArgs> snapshotDeliveryProperties;
 
-    public Input<DeliveryChannelSnapshotDeliveryPropertiesArgs> getSnapshotDeliveryProperties() {
-        return this.snapshotDeliveryProperties == null ? Input.empty() : this.snapshotDeliveryProperties;
+    public Output<DeliveryChannelSnapshotDeliveryPropertiesArgs> getSnapshotDeliveryProperties() {
+        return this.snapshotDeliveryProperties == null ? Output.empty() : this.snapshotDeliveryProperties;
     }
 
     /**
@@ -75,19 +75,19 @@ public final class DeliveryChannelArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="snsTopicArn")
-      private final @Nullable Input<String> snsTopicArn;
+      private final @Nullable Output<String> snsTopicArn;
 
-    public Input<String> getSnsTopicArn() {
-        return this.snsTopicArn == null ? Input.empty() : this.snsTopicArn;
+    public Output<String> getSnsTopicArn() {
+        return this.snsTopicArn == null ? Output.empty() : this.snsTopicArn;
     }
 
     public DeliveryChannelArgs(
-        @Nullable Input<String> name,
-        Input<String> s3BucketName,
-        @Nullable Input<String> s3KeyPrefix,
-        @Nullable Input<String> s3KmsKeyArn,
-        @Nullable Input<DeliveryChannelSnapshotDeliveryPropertiesArgs> snapshotDeliveryProperties,
-        @Nullable Input<String> snsTopicArn) {
+        @Nullable Output<String> name,
+        Output<String> s3BucketName,
+        @Nullable Output<String> s3KeyPrefix,
+        @Nullable Output<String> s3KmsKeyArn,
+        @Nullable Output<DeliveryChannelSnapshotDeliveryPropertiesArgs> snapshotDeliveryProperties,
+        @Nullable Output<String> snsTopicArn) {
         this.name = name;
         this.s3BucketName = Objects.requireNonNull(s3BucketName, "expected parameter 's3BucketName' to be non-null");
         this.s3KeyPrefix = s3KeyPrefix;
@@ -97,12 +97,12 @@ public final class DeliveryChannelArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private DeliveryChannelArgs() {
-        this.name = Input.empty();
-        this.s3BucketName = Input.empty();
-        this.s3KeyPrefix = Input.empty();
-        this.s3KmsKeyArn = Input.empty();
-        this.snapshotDeliveryProperties = Input.empty();
-        this.snsTopicArn = Input.empty();
+        this.name = Output.empty();
+        this.s3BucketName = Output.empty();
+        this.s3KeyPrefix = Output.empty();
+        this.s3KmsKeyArn = Output.empty();
+        this.snapshotDeliveryProperties = Output.empty();
+        this.snsTopicArn = Output.empty();
     }
 
     public static Builder builder() {
@@ -114,12 +114,12 @@ public final class DeliveryChannelArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private @Nullable Input<String> name;
-        private Input<String> s3BucketName;
-        private @Nullable Input<String> s3KeyPrefix;
-        private @Nullable Input<String> s3KmsKeyArn;
-        private @Nullable Input<DeliveryChannelSnapshotDeliveryPropertiesArgs> snapshotDeliveryProperties;
-        private @Nullable Input<String> snsTopicArn;
+        private @Nullable Output<String> name;
+        private Output<String> s3BucketName;
+        private @Nullable Output<String> s3KeyPrefix;
+        private @Nullable Output<String> s3KmsKeyArn;
+        private @Nullable Output<DeliveryChannelSnapshotDeliveryPropertiesArgs> snapshotDeliveryProperties;
+        private @Nullable Output<String> snsTopicArn;
 
         public Builder() {
     	      // Empty
@@ -135,63 +135,63 @@ public final class DeliveryChannelArgs extends io.pulumi.resources.ResourceArgs 
     	      this.snsTopicArn = defaults.snsTopicArn;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder s3BucketName(Input<String> s3BucketName) {
+        public Builder s3BucketName(Output<String> s3BucketName) {
             this.s3BucketName = Objects.requireNonNull(s3BucketName);
             return this;
         }
 
         public Builder s3BucketName(String s3BucketName) {
-            this.s3BucketName = Input.of(Objects.requireNonNull(s3BucketName));
+            this.s3BucketName = Output.of(Objects.requireNonNull(s3BucketName));
             return this;
         }
 
-        public Builder s3KeyPrefix(@Nullable Input<String> s3KeyPrefix) {
+        public Builder s3KeyPrefix(@Nullable Output<String> s3KeyPrefix) {
             this.s3KeyPrefix = s3KeyPrefix;
             return this;
         }
 
         public Builder s3KeyPrefix(@Nullable String s3KeyPrefix) {
-            this.s3KeyPrefix = Input.ofNullable(s3KeyPrefix);
+            this.s3KeyPrefix = Output.ofNullable(s3KeyPrefix);
             return this;
         }
 
-        public Builder s3KmsKeyArn(@Nullable Input<String> s3KmsKeyArn) {
+        public Builder s3KmsKeyArn(@Nullable Output<String> s3KmsKeyArn) {
             this.s3KmsKeyArn = s3KmsKeyArn;
             return this;
         }
 
         public Builder s3KmsKeyArn(@Nullable String s3KmsKeyArn) {
-            this.s3KmsKeyArn = Input.ofNullable(s3KmsKeyArn);
+            this.s3KmsKeyArn = Output.ofNullable(s3KmsKeyArn);
             return this;
         }
 
-        public Builder snapshotDeliveryProperties(@Nullable Input<DeliveryChannelSnapshotDeliveryPropertiesArgs> snapshotDeliveryProperties) {
+        public Builder snapshotDeliveryProperties(@Nullable Output<DeliveryChannelSnapshotDeliveryPropertiesArgs> snapshotDeliveryProperties) {
             this.snapshotDeliveryProperties = snapshotDeliveryProperties;
             return this;
         }
 
         public Builder snapshotDeliveryProperties(@Nullable DeliveryChannelSnapshotDeliveryPropertiesArgs snapshotDeliveryProperties) {
-            this.snapshotDeliveryProperties = Input.ofNullable(snapshotDeliveryProperties);
+            this.snapshotDeliveryProperties = Output.ofNullable(snapshotDeliveryProperties);
             return this;
         }
 
-        public Builder snsTopicArn(@Nullable Input<String> snsTopicArn) {
+        public Builder snsTopicArn(@Nullable Output<String> snsTopicArn) {
             this.snsTopicArn = snsTopicArn;
             return this;
         }
 
         public Builder snsTopicArn(@Nullable String snsTopicArn) {
-            this.snsTopicArn = Input.ofNullable(snsTopicArn);
+            this.snsTopicArn = Output.ofNullable(snsTopicArn);
             return this;
         }
         public DeliveryChannelArgs build() {

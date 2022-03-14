@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.datafactory.inputs;
 
 import io.pulumi.azurenative.datafactory.inputs.SecureStringArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.util.Objects;
@@ -23,9 +23,9 @@ public final class SSISExecutionCredentialArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="domain", required=true)
-      private final Input<Object> domain;
+      private final Output<Object> domain;
 
-    public Input<Object> getDomain() {
+    public Output<Object> getDomain() {
         return this.domain;
     }
 
@@ -34,9 +34,9 @@ public final class SSISExecutionCredentialArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="password", required=true)
-      private final Input<SecureStringArgs> password;
+      private final Output<SecureStringArgs> password;
 
-    public Input<SecureStringArgs> getPassword() {
+    public Output<SecureStringArgs> getPassword() {
         return this.password;
     }
 
@@ -45,25 +45,25 @@ public final class SSISExecutionCredentialArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="userName", required=true)
-      private final Input<Object> userName;
+      private final Output<Object> userName;
 
-    public Input<Object> getUserName() {
+    public Output<Object> getUserName() {
         return this.userName;
     }
 
     public SSISExecutionCredentialArgs(
-        Input<Object> domain,
-        Input<SecureStringArgs> password,
-        Input<Object> userName) {
+        Output<Object> domain,
+        Output<SecureStringArgs> password,
+        Output<Object> userName) {
         this.domain = Objects.requireNonNull(domain, "expected parameter 'domain' to be non-null");
         this.password = Objects.requireNonNull(password, "expected parameter 'password' to be non-null");
         this.userName = Objects.requireNonNull(userName, "expected parameter 'userName' to be non-null");
     }
 
     private SSISExecutionCredentialArgs() {
-        this.domain = Input.empty();
-        this.password = Input.empty();
-        this.userName = Input.empty();
+        this.domain = Output.empty();
+        this.password = Output.empty();
+        this.userName = Output.empty();
     }
 
     public static Builder builder() {
@@ -75,9 +75,9 @@ public final class SSISExecutionCredentialArgs extends io.pulumi.resources.Resou
     }
 
     public static final class Builder {
-        private Input<Object> domain;
-        private Input<SecureStringArgs> password;
-        private Input<Object> userName;
+        private Output<Object> domain;
+        private Output<SecureStringArgs> password;
+        private Output<Object> userName;
 
         public Builder() {
     	      // Empty
@@ -90,33 +90,33 @@ public final class SSISExecutionCredentialArgs extends io.pulumi.resources.Resou
     	      this.userName = defaults.userName;
         }
 
-        public Builder domain(Input<Object> domain) {
+        public Builder domain(Output<Object> domain) {
             this.domain = Objects.requireNonNull(domain);
             return this;
         }
 
         public Builder domain(Object domain) {
-            this.domain = Input.of(Objects.requireNonNull(domain));
+            this.domain = Output.of(Objects.requireNonNull(domain));
             return this;
         }
 
-        public Builder password(Input<SecureStringArgs> password) {
+        public Builder password(Output<SecureStringArgs> password) {
             this.password = Objects.requireNonNull(password);
             return this;
         }
 
         public Builder password(SecureStringArgs password) {
-            this.password = Input.of(Objects.requireNonNull(password));
+            this.password = Output.of(Objects.requireNonNull(password));
             return this;
         }
 
-        public Builder userName(Input<Object> userName) {
+        public Builder userName(Output<Object> userName) {
             this.userName = Objects.requireNonNull(userName);
             return this;
         }
 
         public Builder userName(Object userName) {
-            this.userName = Input.of(Objects.requireNonNull(userName));
+            this.userName = Output.of(Objects.requireNonNull(userName));
             return this;
         }
         public SSISExecutionCredentialArgs build() {

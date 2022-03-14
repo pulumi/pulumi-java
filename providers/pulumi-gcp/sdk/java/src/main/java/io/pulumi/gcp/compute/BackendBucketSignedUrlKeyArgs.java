@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,9 +19,9 @@ public final class BackendBucketSignedUrlKeyArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="backendBucket", required=true)
-      private final Input<String> backendBucket;
+      private final Output<String> backendBucket;
 
-    public Input<String> getBackendBucket() {
+    public Output<String> getBackendBucket() {
         return this.backendBucket;
     }
 
@@ -32,9 +32,9 @@ public final class BackendBucketSignedUrlKeyArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="keyValue", required=true)
-      private final Input<String> keyValue;
+      private final Output<String> keyValue;
 
-    public Input<String> getKeyValue() {
+    public Output<String> getKeyValue() {
         return this.keyValue;
     }
 
@@ -43,10 +43,10 @@ public final class BackendBucketSignedUrlKeyArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -55,17 +55,17 @@ public final class BackendBucketSignedUrlKeyArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     public BackendBucketSignedUrlKeyArgs(
-        Input<String> backendBucket,
-        Input<String> keyValue,
-        @Nullable Input<String> name,
-        @Nullable Input<String> project) {
+        Output<String> backendBucket,
+        Output<String> keyValue,
+        @Nullable Output<String> name,
+        @Nullable Output<String> project) {
         this.backendBucket = Objects.requireNonNull(backendBucket, "expected parameter 'backendBucket' to be non-null");
         this.keyValue = Objects.requireNonNull(keyValue, "expected parameter 'keyValue' to be non-null");
         this.name = name;
@@ -73,10 +73,10 @@ public final class BackendBucketSignedUrlKeyArgs extends io.pulumi.resources.Res
     }
 
     private BackendBucketSignedUrlKeyArgs() {
-        this.backendBucket = Input.empty();
-        this.keyValue = Input.empty();
-        this.name = Input.empty();
-        this.project = Input.empty();
+        this.backendBucket = Output.empty();
+        this.keyValue = Output.empty();
+        this.name = Output.empty();
+        this.project = Output.empty();
     }
 
     public static Builder builder() {
@@ -88,10 +88,10 @@ public final class BackendBucketSignedUrlKeyArgs extends io.pulumi.resources.Res
     }
 
     public static final class Builder {
-        private Input<String> backendBucket;
-        private Input<String> keyValue;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> project;
+        private Output<String> backendBucket;
+        private Output<String> keyValue;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> project;
 
         public Builder() {
     	      // Empty
@@ -105,43 +105,43 @@ public final class BackendBucketSignedUrlKeyArgs extends io.pulumi.resources.Res
     	      this.project = defaults.project;
         }
 
-        public Builder backendBucket(Input<String> backendBucket) {
+        public Builder backendBucket(Output<String> backendBucket) {
             this.backendBucket = Objects.requireNonNull(backendBucket);
             return this;
         }
 
         public Builder backendBucket(String backendBucket) {
-            this.backendBucket = Input.of(Objects.requireNonNull(backendBucket));
+            this.backendBucket = Output.of(Objects.requireNonNull(backendBucket));
             return this;
         }
 
-        public Builder keyValue(Input<String> keyValue) {
+        public Builder keyValue(Output<String> keyValue) {
             this.keyValue = Objects.requireNonNull(keyValue);
             return this;
         }
 
         public Builder keyValue(String keyValue) {
-            this.keyValue = Input.of(Objects.requireNonNull(keyValue));
+            this.keyValue = Output.of(Objects.requireNonNull(keyValue));
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
         public BackendBucketSignedUrlKeyArgs build() {

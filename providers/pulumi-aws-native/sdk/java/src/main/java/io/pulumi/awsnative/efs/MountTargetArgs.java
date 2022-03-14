@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.efs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -16,38 +16,38 @@ public final class MountTargetArgs extends io.pulumi.resources.ResourceArgs {
     public static final MountTargetArgs Empty = new MountTargetArgs();
 
     @InputImport(name="fileSystemId", required=true)
-      private final Input<String> fileSystemId;
+      private final Output<String> fileSystemId;
 
-    public Input<String> getFileSystemId() {
+    public Output<String> getFileSystemId() {
         return this.fileSystemId;
     }
 
     @InputImport(name="ipAddress")
-      private final @Nullable Input<String> ipAddress;
+      private final @Nullable Output<String> ipAddress;
 
-    public Input<String> getIpAddress() {
-        return this.ipAddress == null ? Input.empty() : this.ipAddress;
+    public Output<String> getIpAddress() {
+        return this.ipAddress == null ? Output.empty() : this.ipAddress;
     }
 
     @InputImport(name="securityGroups", required=true)
-      private final Input<List<String>> securityGroups;
+      private final Output<List<String>> securityGroups;
 
-    public Input<List<String>> getSecurityGroups() {
+    public Output<List<String>> getSecurityGroups() {
         return this.securityGroups;
     }
 
     @InputImport(name="subnetId", required=true)
-      private final Input<String> subnetId;
+      private final Output<String> subnetId;
 
-    public Input<String> getSubnetId() {
+    public Output<String> getSubnetId() {
         return this.subnetId;
     }
 
     public MountTargetArgs(
-        Input<String> fileSystemId,
-        @Nullable Input<String> ipAddress,
-        Input<List<String>> securityGroups,
-        Input<String> subnetId) {
+        Output<String> fileSystemId,
+        @Nullable Output<String> ipAddress,
+        Output<List<String>> securityGroups,
+        Output<String> subnetId) {
         this.fileSystemId = Objects.requireNonNull(fileSystemId, "expected parameter 'fileSystemId' to be non-null");
         this.ipAddress = ipAddress;
         this.securityGroups = Objects.requireNonNull(securityGroups, "expected parameter 'securityGroups' to be non-null");
@@ -55,10 +55,10 @@ public final class MountTargetArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private MountTargetArgs() {
-        this.fileSystemId = Input.empty();
-        this.ipAddress = Input.empty();
-        this.securityGroups = Input.empty();
-        this.subnetId = Input.empty();
+        this.fileSystemId = Output.empty();
+        this.ipAddress = Output.empty();
+        this.securityGroups = Output.empty();
+        this.subnetId = Output.empty();
     }
 
     public static Builder builder() {
@@ -70,10 +70,10 @@ public final class MountTargetArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> fileSystemId;
-        private @Nullable Input<String> ipAddress;
-        private Input<List<String>> securityGroups;
-        private Input<String> subnetId;
+        private Output<String> fileSystemId;
+        private @Nullable Output<String> ipAddress;
+        private Output<List<String>> securityGroups;
+        private Output<String> subnetId;
 
         public Builder() {
     	      // Empty
@@ -87,43 +87,43 @@ public final class MountTargetArgs extends io.pulumi.resources.ResourceArgs {
     	      this.subnetId = defaults.subnetId;
         }
 
-        public Builder fileSystemId(Input<String> fileSystemId) {
+        public Builder fileSystemId(Output<String> fileSystemId) {
             this.fileSystemId = Objects.requireNonNull(fileSystemId);
             return this;
         }
 
         public Builder fileSystemId(String fileSystemId) {
-            this.fileSystemId = Input.of(Objects.requireNonNull(fileSystemId));
+            this.fileSystemId = Output.of(Objects.requireNonNull(fileSystemId));
             return this;
         }
 
-        public Builder ipAddress(@Nullable Input<String> ipAddress) {
+        public Builder ipAddress(@Nullable Output<String> ipAddress) {
             this.ipAddress = ipAddress;
             return this;
         }
 
         public Builder ipAddress(@Nullable String ipAddress) {
-            this.ipAddress = Input.ofNullable(ipAddress);
+            this.ipAddress = Output.ofNullable(ipAddress);
             return this;
         }
 
-        public Builder securityGroups(Input<List<String>> securityGroups) {
+        public Builder securityGroups(Output<List<String>> securityGroups) {
             this.securityGroups = Objects.requireNonNull(securityGroups);
             return this;
         }
 
         public Builder securityGroups(List<String> securityGroups) {
-            this.securityGroups = Input.of(Objects.requireNonNull(securityGroups));
+            this.securityGroups = Output.of(Objects.requireNonNull(securityGroups));
             return this;
         }
 
-        public Builder subnetId(Input<String> subnetId) {
+        public Builder subnetId(Output<String> subnetId) {
             this.subnetId = Objects.requireNonNull(subnetId);
             return this;
         }
 
         public Builder subnetId(String subnetId) {
-            this.subnetId = Input.of(Objects.requireNonNull(subnetId));
+            this.subnetId = Output.of(Objects.requireNonNull(subnetId));
             return this;
         }
         public MountTargetArgs build() {

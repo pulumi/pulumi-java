@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.healthcare.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.healthcare.inputs.Hl7StoreIamMemberConditionGetArgs;
 import java.lang.String;
@@ -16,10 +16,10 @@ public final class Hl7StoreIamMemberState extends io.pulumi.resources.ResourceAr
     public static final Hl7StoreIamMemberState Empty = new Hl7StoreIamMemberState();
 
     @InputImport(name="condition")
-      private final @Nullable Input<Hl7StoreIamMemberConditionGetArgs> condition;
+      private final @Nullable Output<Hl7StoreIamMemberConditionGetArgs> condition;
 
-    public Input<Hl7StoreIamMemberConditionGetArgs> getCondition() {
-        return this.condition == null ? Input.empty() : this.condition;
+    public Output<Hl7StoreIamMemberConditionGetArgs> getCondition() {
+        return this.condition == null ? Output.empty() : this.condition;
     }
 
     /**
@@ -27,10 +27,10 @@ public final class Hl7StoreIamMemberState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="etag")
-      private final @Nullable Input<String> etag;
+      private final @Nullable Output<String> etag;
 
-    public Input<String> getEtag() {
-        return this.etag == null ? Input.empty() : this.etag;
+    public Output<String> getEtag() {
+        return this.etag == null ? Output.empty() : this.etag;
     }
 
     /**
@@ -41,17 +41,17 @@ public final class Hl7StoreIamMemberState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="hl7V2StoreId")
-      private final @Nullable Input<String> hl7V2StoreId;
+      private final @Nullable Output<String> hl7V2StoreId;
 
-    public Input<String> getHl7V2StoreId() {
-        return this.hl7V2StoreId == null ? Input.empty() : this.hl7V2StoreId;
+    public Output<String> getHl7V2StoreId() {
+        return this.hl7V2StoreId == null ? Output.empty() : this.hl7V2StoreId;
     }
 
     @InputImport(name="member")
-      private final @Nullable Input<String> member;
+      private final @Nullable Output<String> member;
 
-    public Input<String> getMember() {
-        return this.member == null ? Input.empty() : this.member;
+    public Output<String> getMember() {
+        return this.member == null ? Output.empty() : this.member;
     }
 
     /**
@@ -61,18 +61,18 @@ public final class Hl7StoreIamMemberState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="role")
-      private final @Nullable Input<String> role;
+      private final @Nullable Output<String> role;
 
-    public Input<String> getRole() {
-        return this.role == null ? Input.empty() : this.role;
+    public Output<String> getRole() {
+        return this.role == null ? Output.empty() : this.role;
     }
 
     public Hl7StoreIamMemberState(
-        @Nullable Input<Hl7StoreIamMemberConditionGetArgs> condition,
-        @Nullable Input<String> etag,
-        @Nullable Input<String> hl7V2StoreId,
-        @Nullable Input<String> member,
-        @Nullable Input<String> role) {
+        @Nullable Output<Hl7StoreIamMemberConditionGetArgs> condition,
+        @Nullable Output<String> etag,
+        @Nullable Output<String> hl7V2StoreId,
+        @Nullable Output<String> member,
+        @Nullable Output<String> role) {
         this.condition = condition;
         this.etag = etag;
         this.hl7V2StoreId = hl7V2StoreId;
@@ -81,11 +81,11 @@ public final class Hl7StoreIamMemberState extends io.pulumi.resources.ResourceAr
     }
 
     private Hl7StoreIamMemberState() {
-        this.condition = Input.empty();
-        this.etag = Input.empty();
-        this.hl7V2StoreId = Input.empty();
-        this.member = Input.empty();
-        this.role = Input.empty();
+        this.condition = Output.empty();
+        this.etag = Output.empty();
+        this.hl7V2StoreId = Output.empty();
+        this.member = Output.empty();
+        this.role = Output.empty();
     }
 
     public static Builder builder() {
@@ -97,11 +97,11 @@ public final class Hl7StoreIamMemberState extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private @Nullable Input<Hl7StoreIamMemberConditionGetArgs> condition;
-        private @Nullable Input<String> etag;
-        private @Nullable Input<String> hl7V2StoreId;
-        private @Nullable Input<String> member;
-        private @Nullable Input<String> role;
+        private @Nullable Output<Hl7StoreIamMemberConditionGetArgs> condition;
+        private @Nullable Output<String> etag;
+        private @Nullable Output<String> hl7V2StoreId;
+        private @Nullable Output<String> member;
+        private @Nullable Output<String> role;
 
         public Builder() {
     	      // Empty
@@ -116,53 +116,53 @@ public final class Hl7StoreIamMemberState extends io.pulumi.resources.ResourceAr
     	      this.role = defaults.role;
         }
 
-        public Builder condition(@Nullable Input<Hl7StoreIamMemberConditionGetArgs> condition) {
+        public Builder condition(@Nullable Output<Hl7StoreIamMemberConditionGetArgs> condition) {
             this.condition = condition;
             return this;
         }
 
         public Builder condition(@Nullable Hl7StoreIamMemberConditionGetArgs condition) {
-            this.condition = Input.ofNullable(condition);
+            this.condition = Output.ofNullable(condition);
             return this;
         }
 
-        public Builder etag(@Nullable Input<String> etag) {
+        public Builder etag(@Nullable Output<String> etag) {
             this.etag = etag;
             return this;
         }
 
         public Builder etag(@Nullable String etag) {
-            this.etag = Input.ofNullable(etag);
+            this.etag = Output.ofNullable(etag);
             return this;
         }
 
-        public Builder hl7V2StoreId(@Nullable Input<String> hl7V2StoreId) {
+        public Builder hl7V2StoreId(@Nullable Output<String> hl7V2StoreId) {
             this.hl7V2StoreId = hl7V2StoreId;
             return this;
         }
 
         public Builder hl7V2StoreId(@Nullable String hl7V2StoreId) {
-            this.hl7V2StoreId = Input.ofNullable(hl7V2StoreId);
+            this.hl7V2StoreId = Output.ofNullable(hl7V2StoreId);
             return this;
         }
 
-        public Builder member(@Nullable Input<String> member) {
+        public Builder member(@Nullable Output<String> member) {
             this.member = member;
             return this;
         }
 
         public Builder member(@Nullable String member) {
-            this.member = Input.ofNullable(member);
+            this.member = Output.ofNullable(member);
             return this;
         }
 
-        public Builder role(@Nullable Input<String> role) {
+        public Builder role(@Nullable Output<String> role) {
             this.role = role;
             return this;
         }
 
         public Builder role(@Nullable String role) {
-            this.role = Input.ofNullable(role);
+            this.role = Output.ofNullable(role);
             return this;
         }
         public Hl7StoreIamMemberState build() {

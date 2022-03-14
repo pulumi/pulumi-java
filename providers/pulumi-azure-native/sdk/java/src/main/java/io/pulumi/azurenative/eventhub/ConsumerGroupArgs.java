@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.eventhub;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class ConsumerGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="consumerGroupName")
-      private final @Nullable Input<String> consumerGroupName;
+      private final @Nullable Output<String> consumerGroupName;
 
-    public Input<String> getConsumerGroupName() {
-        return this.consumerGroupName == null ? Input.empty() : this.consumerGroupName;
+    public Output<String> getConsumerGroupName() {
+        return this.consumerGroupName == null ? Output.empty() : this.consumerGroupName;
     }
 
     /**
@@ -30,9 +30,9 @@ public final class ConsumerGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="eventHubName", required=true)
-      private final Input<String> eventHubName;
+      private final Output<String> eventHubName;
 
-    public Input<String> getEventHubName() {
+    public Output<String> getEventHubName() {
         return this.eventHubName;
     }
 
@@ -41,9 +41,9 @@ public final class ConsumerGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="namespaceName", required=true)
-      private final Input<String> namespaceName;
+      private final Output<String> namespaceName;
 
-    public Input<String> getNamespaceName() {
+    public Output<String> getNamespaceName() {
         return this.namespaceName;
     }
 
@@ -52,9 +52,9 @@ public final class ConsumerGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -63,18 +63,18 @@ public final class ConsumerGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="userMetadata")
-      private final @Nullable Input<String> userMetadata;
+      private final @Nullable Output<String> userMetadata;
 
-    public Input<String> getUserMetadata() {
-        return this.userMetadata == null ? Input.empty() : this.userMetadata;
+    public Output<String> getUserMetadata() {
+        return this.userMetadata == null ? Output.empty() : this.userMetadata;
     }
 
     public ConsumerGroupArgs(
-        @Nullable Input<String> consumerGroupName,
-        Input<String> eventHubName,
-        Input<String> namespaceName,
-        Input<String> resourceGroupName,
-        @Nullable Input<String> userMetadata) {
+        @Nullable Output<String> consumerGroupName,
+        Output<String> eventHubName,
+        Output<String> namespaceName,
+        Output<String> resourceGroupName,
+        @Nullable Output<String> userMetadata) {
         this.consumerGroupName = consumerGroupName;
         this.eventHubName = Objects.requireNonNull(eventHubName, "expected parameter 'eventHubName' to be non-null");
         this.namespaceName = Objects.requireNonNull(namespaceName, "expected parameter 'namespaceName' to be non-null");
@@ -83,11 +83,11 @@ public final class ConsumerGroupArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ConsumerGroupArgs() {
-        this.consumerGroupName = Input.empty();
-        this.eventHubName = Input.empty();
-        this.namespaceName = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.userMetadata = Input.empty();
+        this.consumerGroupName = Output.empty();
+        this.eventHubName = Output.empty();
+        this.namespaceName = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.userMetadata = Output.empty();
     }
 
     public static Builder builder() {
@@ -99,11 +99,11 @@ public final class ConsumerGroupArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> consumerGroupName;
-        private Input<String> eventHubName;
-        private Input<String> namespaceName;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<String> userMetadata;
+        private @Nullable Output<String> consumerGroupName;
+        private Output<String> eventHubName;
+        private Output<String> namespaceName;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<String> userMetadata;
 
         public Builder() {
     	      // Empty
@@ -118,53 +118,53 @@ public final class ConsumerGroupArgs extends io.pulumi.resources.ResourceArgs {
     	      this.userMetadata = defaults.userMetadata;
         }
 
-        public Builder consumerGroupName(@Nullable Input<String> consumerGroupName) {
+        public Builder consumerGroupName(@Nullable Output<String> consumerGroupName) {
             this.consumerGroupName = consumerGroupName;
             return this;
         }
 
         public Builder consumerGroupName(@Nullable String consumerGroupName) {
-            this.consumerGroupName = Input.ofNullable(consumerGroupName);
+            this.consumerGroupName = Output.ofNullable(consumerGroupName);
             return this;
         }
 
-        public Builder eventHubName(Input<String> eventHubName) {
+        public Builder eventHubName(Output<String> eventHubName) {
             this.eventHubName = Objects.requireNonNull(eventHubName);
             return this;
         }
 
         public Builder eventHubName(String eventHubName) {
-            this.eventHubName = Input.of(Objects.requireNonNull(eventHubName));
+            this.eventHubName = Output.of(Objects.requireNonNull(eventHubName));
             return this;
         }
 
-        public Builder namespaceName(Input<String> namespaceName) {
+        public Builder namespaceName(Output<String> namespaceName) {
             this.namespaceName = Objects.requireNonNull(namespaceName);
             return this;
         }
 
         public Builder namespaceName(String namespaceName) {
-            this.namespaceName = Input.of(Objects.requireNonNull(namespaceName));
+            this.namespaceName = Output.of(Objects.requireNonNull(namespaceName));
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder userMetadata(@Nullable Input<String> userMetadata) {
+        public Builder userMetadata(@Nullable Output<String> userMetadata) {
             this.userMetadata = userMetadata;
             return this;
         }
 
         public Builder userMetadata(@Nullable String userMetadata) {
-            this.userMetadata = Input.ofNullable(userMetadata);
+            this.userMetadata = Output.ofNullable(userMetadata);
             return this;
         }
         public ConsumerGroupArgs build() {

@@ -9,7 +9,7 @@ import io.pulumi.azurenative.recoveryservices.inputs.InMageAzureV2EnableProtecti
 import io.pulumi.azurenative.recoveryservices.inputs.InMageEnableProtectionInputArgs;
 import io.pulumi.azurenative.recoveryservices.inputs.InMageRcmEnableProtectionInputArgs;
 import io.pulumi.azurenative.recoveryservices.inputs.SanEnableProtectionInputArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
@@ -30,10 +30,10 @@ public final class EnableProtectionInputPropertiesArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="policyId")
-      private final @Nullable Input<String> policyId;
+      private final @Nullable Output<String> policyId;
 
-    public Input<String> getPolicyId() {
-        return this.policyId == null ? Input.empty() : this.policyId;
+    public Output<String> getPolicyId() {
+        return this.policyId == null ? Output.empty() : this.policyId;
     }
 
     /**
@@ -41,10 +41,10 @@ public final class EnableProtectionInputPropertiesArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="protectableItemId")
-      private final @Nullable Input<String> protectableItemId;
+      private final @Nullable Output<String> protectableItemId;
 
-    public Input<String> getProtectableItemId() {
-        return this.protectableItemId == null ? Input.empty() : this.protectableItemId;
+    public Output<String> getProtectableItemId() {
+        return this.protectableItemId == null ? Output.empty() : this.protectableItemId;
     }
 
     /**
@@ -52,25 +52,25 @@ public final class EnableProtectionInputPropertiesArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="providerSpecificDetails")
-      private final @Nullable Input<Object> providerSpecificDetails;
+      private final @Nullable Output<Object> providerSpecificDetails;
 
-    public Input<Object> getProviderSpecificDetails() {
-        return this.providerSpecificDetails == null ? Input.empty() : this.providerSpecificDetails;
+    public Output<Object> getProviderSpecificDetails() {
+        return this.providerSpecificDetails == null ? Output.empty() : this.providerSpecificDetails;
     }
 
     public EnableProtectionInputPropertiesArgs(
-        @Nullable Input<String> policyId,
-        @Nullable Input<String> protectableItemId,
-        @Nullable Input<Object> providerSpecificDetails) {
+        @Nullable Output<String> policyId,
+        @Nullable Output<String> protectableItemId,
+        @Nullable Output<Object> providerSpecificDetails) {
         this.policyId = policyId;
         this.protectableItemId = protectableItemId;
         this.providerSpecificDetails = providerSpecificDetails;
     }
 
     private EnableProtectionInputPropertiesArgs() {
-        this.policyId = Input.empty();
-        this.protectableItemId = Input.empty();
-        this.providerSpecificDetails = Input.empty();
+        this.policyId = Output.empty();
+        this.protectableItemId = Output.empty();
+        this.providerSpecificDetails = Output.empty();
     }
 
     public static Builder builder() {
@@ -82,9 +82,9 @@ public final class EnableProtectionInputPropertiesArgs extends io.pulumi.resourc
     }
 
     public static final class Builder {
-        private @Nullable Input<String> policyId;
-        private @Nullable Input<String> protectableItemId;
-        private @Nullable Input<Object> providerSpecificDetails;
+        private @Nullable Output<String> policyId;
+        private @Nullable Output<String> protectableItemId;
+        private @Nullable Output<Object> providerSpecificDetails;
 
         public Builder() {
     	      // Empty
@@ -97,33 +97,33 @@ public final class EnableProtectionInputPropertiesArgs extends io.pulumi.resourc
     	      this.providerSpecificDetails = defaults.providerSpecificDetails;
         }
 
-        public Builder policyId(@Nullable Input<String> policyId) {
+        public Builder policyId(@Nullable Output<String> policyId) {
             this.policyId = policyId;
             return this;
         }
 
         public Builder policyId(@Nullable String policyId) {
-            this.policyId = Input.ofNullable(policyId);
+            this.policyId = Output.ofNullable(policyId);
             return this;
         }
 
-        public Builder protectableItemId(@Nullable Input<String> protectableItemId) {
+        public Builder protectableItemId(@Nullable Output<String> protectableItemId) {
             this.protectableItemId = protectableItemId;
             return this;
         }
 
         public Builder protectableItemId(@Nullable String protectableItemId) {
-            this.protectableItemId = Input.ofNullable(protectableItemId);
+            this.protectableItemId = Output.ofNullable(protectableItemId);
             return this;
         }
 
-        public Builder providerSpecificDetails(@Nullable Input<Object> providerSpecificDetails) {
+        public Builder providerSpecificDetails(@Nullable Output<Object> providerSpecificDetails) {
             this.providerSpecificDetails = providerSpecificDetails;
             return this;
         }
 
         public Builder providerSpecificDetails(@Nullable Object providerSpecificDetails) {
-            this.providerSpecificDetails = Input.ofNullable(providerSpecificDetails);
+            this.providerSpecificDetails = Output.ofNullable(providerSpecificDetails);
             return this;
         }
         public EnableProtectionInputPropertiesArgs build() {

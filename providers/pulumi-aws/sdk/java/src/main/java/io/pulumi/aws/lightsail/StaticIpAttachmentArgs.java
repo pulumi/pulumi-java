@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.lightsail;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -18,9 +18,9 @@ public final class StaticIpAttachmentArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="instanceName", required=true)
-      private final Input<String> instanceName;
+      private final Output<String> instanceName;
 
-    public Input<String> getInstanceName() {
+    public Output<String> getInstanceName() {
         return this.instanceName;
     }
 
@@ -29,22 +29,22 @@ public final class StaticIpAttachmentArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="staticIpName", required=true)
-      private final Input<String> staticIpName;
+      private final Output<String> staticIpName;
 
-    public Input<String> getStaticIpName() {
+    public Output<String> getStaticIpName() {
         return this.staticIpName;
     }
 
     public StaticIpAttachmentArgs(
-        Input<String> instanceName,
-        Input<String> staticIpName) {
+        Output<String> instanceName,
+        Output<String> staticIpName) {
         this.instanceName = Objects.requireNonNull(instanceName, "expected parameter 'instanceName' to be non-null");
         this.staticIpName = Objects.requireNonNull(staticIpName, "expected parameter 'staticIpName' to be non-null");
     }
 
     private StaticIpAttachmentArgs() {
-        this.instanceName = Input.empty();
-        this.staticIpName = Input.empty();
+        this.instanceName = Output.empty();
+        this.staticIpName = Output.empty();
     }
 
     public static Builder builder() {
@@ -56,8 +56,8 @@ public final class StaticIpAttachmentArgs extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private Input<String> instanceName;
-        private Input<String> staticIpName;
+        private Output<String> instanceName;
+        private Output<String> staticIpName;
 
         public Builder() {
     	      // Empty
@@ -69,23 +69,23 @@ public final class StaticIpAttachmentArgs extends io.pulumi.resources.ResourceAr
     	      this.staticIpName = defaults.staticIpName;
         }
 
-        public Builder instanceName(Input<String> instanceName) {
+        public Builder instanceName(Output<String> instanceName) {
             this.instanceName = Objects.requireNonNull(instanceName);
             return this;
         }
 
         public Builder instanceName(String instanceName) {
-            this.instanceName = Input.of(Objects.requireNonNull(instanceName));
+            this.instanceName = Output.of(Objects.requireNonNull(instanceName));
             return this;
         }
 
-        public Builder staticIpName(Input<String> staticIpName) {
+        public Builder staticIpName(Output<String> staticIpName) {
             this.staticIpName = Objects.requireNonNull(staticIpName);
             return this;
         }
 
         public Builder staticIpName(String staticIpName) {
-            this.staticIpName = Input.of(Objects.requireNonNull(staticIpName));
+            this.staticIpName = Output.of(Objects.requireNonNull(staticIpName));
             return this;
         }
         public StaticIpAttachmentArgs build() {

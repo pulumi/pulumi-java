@@ -5,7 +5,7 @@ package io.pulumi.azurenative.documentdb;
 
 import io.pulumi.azurenative.documentdb.inputs.CassandraTableResourceArgs;
 import io.pulumi.azurenative.documentdb.inputs.CreateUpdateOptionsArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -22,9 +22,9 @@ public final class CassandraResourceCassandraTableArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="accountName", required=true)
-      private final Input<String> accountName;
+      private final Output<String> accountName;
 
-    public Input<String> getAccountName() {
+    public Output<String> getAccountName() {
         return this.accountName;
     }
 
@@ -33,9 +33,9 @@ public final class CassandraResourceCassandraTableArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="keyspaceName", required=true)
-      private final Input<String> keyspaceName;
+      private final Output<String> keyspaceName;
 
-    public Input<String> getKeyspaceName() {
+    public Output<String> getKeyspaceName() {
         return this.keyspaceName;
     }
 
@@ -44,10 +44,10 @@ public final class CassandraResourceCassandraTableArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -55,10 +55,10 @@ public final class CassandraResourceCassandraTableArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="options")
-      private final @Nullable Input<CreateUpdateOptionsArgs> options;
+      private final @Nullable Output<CreateUpdateOptionsArgs> options;
 
-    public Input<CreateUpdateOptionsArgs> getOptions() {
-        return this.options == null ? Input.empty() : this.options;
+    public Output<CreateUpdateOptionsArgs> getOptions() {
+        return this.options == null ? Output.empty() : this.options;
     }
 
     /**
@@ -66,9 +66,9 @@ public final class CassandraResourceCassandraTableArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="resource", required=true)
-      private final Input<CassandraTableResourceArgs> resource;
+      private final Output<CassandraTableResourceArgs> resource;
 
-    public Input<CassandraTableResourceArgs> getResource() {
+    public Output<CassandraTableResourceArgs> getResource() {
         return this.resource;
     }
 
@@ -77,9 +77,9 @@ public final class CassandraResourceCassandraTableArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -88,10 +88,10 @@ public final class CassandraResourceCassandraTableArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="tableName")
-      private final @Nullable Input<String> tableName;
+      private final @Nullable Output<String> tableName;
 
-    public Input<String> getTableName() {
-        return this.tableName == null ? Input.empty() : this.tableName;
+    public Output<String> getTableName() {
+        return this.tableName == null ? Output.empty() : this.tableName;
     }
 
     /**
@@ -99,21 +99,21 @@ public final class CassandraResourceCassandraTableArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public CassandraResourceCassandraTableArgs(
-        Input<String> accountName,
-        Input<String> keyspaceName,
-        @Nullable Input<String> location,
-        @Nullable Input<CreateUpdateOptionsArgs> options,
-        Input<CassandraTableResourceArgs> resource,
-        Input<String> resourceGroupName,
-        @Nullable Input<String> tableName,
-        @Nullable Input<Map<String,String>> tags) {
+        Output<String> accountName,
+        Output<String> keyspaceName,
+        @Nullable Output<String> location,
+        @Nullable Output<CreateUpdateOptionsArgs> options,
+        Output<CassandraTableResourceArgs> resource,
+        Output<String> resourceGroupName,
+        @Nullable Output<String> tableName,
+        @Nullable Output<Map<String,String>> tags) {
         this.accountName = Objects.requireNonNull(accountName, "expected parameter 'accountName' to be non-null");
         this.keyspaceName = Objects.requireNonNull(keyspaceName, "expected parameter 'keyspaceName' to be non-null");
         this.location = location;
@@ -125,14 +125,14 @@ public final class CassandraResourceCassandraTableArgs extends io.pulumi.resourc
     }
 
     private CassandraResourceCassandraTableArgs() {
-        this.accountName = Input.empty();
-        this.keyspaceName = Input.empty();
-        this.location = Input.empty();
-        this.options = Input.empty();
-        this.resource = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.tableName = Input.empty();
-        this.tags = Input.empty();
+        this.accountName = Output.empty();
+        this.keyspaceName = Output.empty();
+        this.location = Output.empty();
+        this.options = Output.empty();
+        this.resource = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.tableName = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -144,14 +144,14 @@ public final class CassandraResourceCassandraTableArgs extends io.pulumi.resourc
     }
 
     public static final class Builder {
-        private Input<String> accountName;
-        private Input<String> keyspaceName;
-        private @Nullable Input<String> location;
-        private @Nullable Input<CreateUpdateOptionsArgs> options;
-        private Input<CassandraTableResourceArgs> resource;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<String> tableName;
-        private @Nullable Input<Map<String,String>> tags;
+        private Output<String> accountName;
+        private Output<String> keyspaceName;
+        private @Nullable Output<String> location;
+        private @Nullable Output<CreateUpdateOptionsArgs> options;
+        private Output<CassandraTableResourceArgs> resource;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<String> tableName;
+        private @Nullable Output<Map<String,String>> tags;
 
         public Builder() {
     	      // Empty
@@ -169,83 +169,83 @@ public final class CassandraResourceCassandraTableArgs extends io.pulumi.resourc
     	      this.tags = defaults.tags;
         }
 
-        public Builder accountName(Input<String> accountName) {
+        public Builder accountName(Output<String> accountName) {
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
 
         public Builder accountName(String accountName) {
-            this.accountName = Input.of(Objects.requireNonNull(accountName));
+            this.accountName = Output.of(Objects.requireNonNull(accountName));
             return this;
         }
 
-        public Builder keyspaceName(Input<String> keyspaceName) {
+        public Builder keyspaceName(Output<String> keyspaceName) {
             this.keyspaceName = Objects.requireNonNull(keyspaceName);
             return this;
         }
 
         public Builder keyspaceName(String keyspaceName) {
-            this.keyspaceName = Input.of(Objects.requireNonNull(keyspaceName));
+            this.keyspaceName = Output.of(Objects.requireNonNull(keyspaceName));
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder options(@Nullable Input<CreateUpdateOptionsArgs> options) {
+        public Builder options(@Nullable Output<CreateUpdateOptionsArgs> options) {
             this.options = options;
             return this;
         }
 
         public Builder options(@Nullable CreateUpdateOptionsArgs options) {
-            this.options = Input.ofNullable(options);
+            this.options = Output.ofNullable(options);
             return this;
         }
 
-        public Builder resource(Input<CassandraTableResourceArgs> resource) {
+        public Builder resource(Output<CassandraTableResourceArgs> resource) {
             this.resource = Objects.requireNonNull(resource);
             return this;
         }
 
         public Builder resource(CassandraTableResourceArgs resource) {
-            this.resource = Input.of(Objects.requireNonNull(resource));
+            this.resource = Output.of(Objects.requireNonNull(resource));
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder tableName(@Nullable Input<String> tableName) {
+        public Builder tableName(@Nullable Output<String> tableName) {
             this.tableName = tableName;
             return this;
         }
 
         public Builder tableName(@Nullable String tableName) {
-            this.tableName = Input.ofNullable(tableName);
+            this.tableName = Output.ofNullable(tableName);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public CassandraResourceCassandraTableArgs build() {

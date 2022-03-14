@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.compute.inputs;
 
 import io.pulumi.azurenative.compute.inputs.SourceVaultArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,9 +23,9 @@ public final class KeyVaultAndKeyReferenceArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="keyUrl", required=true)
-      private final Input<String> keyUrl;
+      private final Output<String> keyUrl;
 
-    public Input<String> getKeyUrl() {
+    public Output<String> getKeyUrl() {
         return this.keyUrl;
     }
 
@@ -34,22 +34,22 @@ public final class KeyVaultAndKeyReferenceArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="sourceVault", required=true)
-      private final Input<SourceVaultArgs> sourceVault;
+      private final Output<SourceVaultArgs> sourceVault;
 
-    public Input<SourceVaultArgs> getSourceVault() {
+    public Output<SourceVaultArgs> getSourceVault() {
         return this.sourceVault;
     }
 
     public KeyVaultAndKeyReferenceArgs(
-        Input<String> keyUrl,
-        Input<SourceVaultArgs> sourceVault) {
+        Output<String> keyUrl,
+        Output<SourceVaultArgs> sourceVault) {
         this.keyUrl = Objects.requireNonNull(keyUrl, "expected parameter 'keyUrl' to be non-null");
         this.sourceVault = Objects.requireNonNull(sourceVault, "expected parameter 'sourceVault' to be non-null");
     }
 
     private KeyVaultAndKeyReferenceArgs() {
-        this.keyUrl = Input.empty();
-        this.sourceVault = Input.empty();
+        this.keyUrl = Output.empty();
+        this.sourceVault = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class KeyVaultAndKeyReferenceArgs extends io.pulumi.resources.Resou
     }
 
     public static final class Builder {
-        private Input<String> keyUrl;
-        private Input<SourceVaultArgs> sourceVault;
+        private Output<String> keyUrl;
+        private Output<SourceVaultArgs> sourceVault;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class KeyVaultAndKeyReferenceArgs extends io.pulumi.resources.Resou
     	      this.sourceVault = defaults.sourceVault;
         }
 
-        public Builder keyUrl(Input<String> keyUrl) {
+        public Builder keyUrl(Output<String> keyUrl) {
             this.keyUrl = Objects.requireNonNull(keyUrl);
             return this;
         }
 
         public Builder keyUrl(String keyUrl) {
-            this.keyUrl = Input.of(Objects.requireNonNull(keyUrl));
+            this.keyUrl = Output.of(Objects.requireNonNull(keyUrl));
             return this;
         }
 
-        public Builder sourceVault(Input<SourceVaultArgs> sourceVault) {
+        public Builder sourceVault(Output<SourceVaultArgs> sourceVault) {
             this.sourceVault = Objects.requireNonNull(sourceVault);
             return this;
         }
 
         public Builder sourceVault(SourceVaultArgs sourceVault) {
-            this.sourceVault = Input.of(Objects.requireNonNull(sourceVault));
+            this.sourceVault = Output.of(Objects.requireNonNull(sourceVault));
             return this;
         }
         public KeyVaultAndKeyReferenceArgs build() {

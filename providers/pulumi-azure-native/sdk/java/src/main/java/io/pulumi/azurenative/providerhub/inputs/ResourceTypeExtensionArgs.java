@@ -5,7 +5,7 @@ package io.pulumi.azurenative.providerhub.inputs;
 
 import io.pulumi.azurenative.providerhub.enums.ExtensionCategory;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -18,39 +18,39 @@ public final class ResourceTypeExtensionArgs extends io.pulumi.resources.Resourc
     public static final ResourceTypeExtensionArgs Empty = new ResourceTypeExtensionArgs();
 
     @InputImport(name="endpointUri")
-      private final @Nullable Input<String> endpointUri;
+      private final @Nullable Output<String> endpointUri;
 
-    public Input<String> getEndpointUri() {
-        return this.endpointUri == null ? Input.empty() : this.endpointUri;
+    public Output<String> getEndpointUri() {
+        return this.endpointUri == null ? Output.empty() : this.endpointUri;
     }
 
     @InputImport(name="extensionCategories")
-      private final @Nullable Input<List<Either<String,ExtensionCategory>>> extensionCategories;
+      private final @Nullable Output<List<Either<String,ExtensionCategory>>> extensionCategories;
 
-    public Input<List<Either<String,ExtensionCategory>>> getExtensionCategories() {
-        return this.extensionCategories == null ? Input.empty() : this.extensionCategories;
+    public Output<List<Either<String,ExtensionCategory>>> getExtensionCategories() {
+        return this.extensionCategories == null ? Output.empty() : this.extensionCategories;
     }
 
     @InputImport(name="timeout")
-      private final @Nullable Input<String> timeout;
+      private final @Nullable Output<String> timeout;
 
-    public Input<String> getTimeout() {
-        return this.timeout == null ? Input.empty() : this.timeout;
+    public Output<String> getTimeout() {
+        return this.timeout == null ? Output.empty() : this.timeout;
     }
 
     public ResourceTypeExtensionArgs(
-        @Nullable Input<String> endpointUri,
-        @Nullable Input<List<Either<String,ExtensionCategory>>> extensionCategories,
-        @Nullable Input<String> timeout) {
+        @Nullable Output<String> endpointUri,
+        @Nullable Output<List<Either<String,ExtensionCategory>>> extensionCategories,
+        @Nullable Output<String> timeout) {
         this.endpointUri = endpointUri;
         this.extensionCategories = extensionCategories;
         this.timeout = timeout;
     }
 
     private ResourceTypeExtensionArgs() {
-        this.endpointUri = Input.empty();
-        this.extensionCategories = Input.empty();
-        this.timeout = Input.empty();
+        this.endpointUri = Output.empty();
+        this.extensionCategories = Output.empty();
+        this.timeout = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,9 +62,9 @@ public final class ResourceTypeExtensionArgs extends io.pulumi.resources.Resourc
     }
 
     public static final class Builder {
-        private @Nullable Input<String> endpointUri;
-        private @Nullable Input<List<Either<String,ExtensionCategory>>> extensionCategories;
-        private @Nullable Input<String> timeout;
+        private @Nullable Output<String> endpointUri;
+        private @Nullable Output<List<Either<String,ExtensionCategory>>> extensionCategories;
+        private @Nullable Output<String> timeout;
 
         public Builder() {
     	      // Empty
@@ -77,33 +77,33 @@ public final class ResourceTypeExtensionArgs extends io.pulumi.resources.Resourc
     	      this.timeout = defaults.timeout;
         }
 
-        public Builder endpointUri(@Nullable Input<String> endpointUri) {
+        public Builder endpointUri(@Nullable Output<String> endpointUri) {
             this.endpointUri = endpointUri;
             return this;
         }
 
         public Builder endpointUri(@Nullable String endpointUri) {
-            this.endpointUri = Input.ofNullable(endpointUri);
+            this.endpointUri = Output.ofNullable(endpointUri);
             return this;
         }
 
-        public Builder extensionCategories(@Nullable Input<List<Either<String,ExtensionCategory>>> extensionCategories) {
+        public Builder extensionCategories(@Nullable Output<List<Either<String,ExtensionCategory>>> extensionCategories) {
             this.extensionCategories = extensionCategories;
             return this;
         }
 
         public Builder extensionCategories(@Nullable List<Either<String,ExtensionCategory>> extensionCategories) {
-            this.extensionCategories = Input.ofNullable(extensionCategories);
+            this.extensionCategories = Output.ofNullable(extensionCategories);
             return this;
         }
 
-        public Builder timeout(@Nullable Input<String> timeout) {
+        public Builder timeout(@Nullable Output<String> timeout) {
             this.timeout = timeout;
             return this;
         }
 
         public Builder timeout(@Nullable String timeout) {
-            this.timeout = Input.ofNullable(timeout);
+            this.timeout = Output.ofNullable(timeout);
             return this;
         }
         public ResourceTypeExtensionArgs build() {

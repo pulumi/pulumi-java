@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.container_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.container_v1.inputs.MonitoringComponentConfigArgs;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class MonitoringConfigArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="componentConfig")
-      private final @Nullable Input<MonitoringComponentConfigArgs> componentConfig;
+      private final @Nullable Output<MonitoringComponentConfigArgs> componentConfig;
 
-    public Input<MonitoringComponentConfigArgs> getComponentConfig() {
-        return this.componentConfig == null ? Input.empty() : this.componentConfig;
+    public Output<MonitoringComponentConfigArgs> getComponentConfig() {
+        return this.componentConfig == null ? Output.empty() : this.componentConfig;
     }
 
-    public MonitoringConfigArgs(@Nullable Input<MonitoringComponentConfigArgs> componentConfig) {
+    public MonitoringConfigArgs(@Nullable Output<MonitoringComponentConfigArgs> componentConfig) {
         this.componentConfig = componentConfig;
     }
 
     private MonitoringConfigArgs() {
-        this.componentConfig = Input.empty();
+        this.componentConfig = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class MonitoringConfigArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private @Nullable Input<MonitoringComponentConfigArgs> componentConfig;
+        private @Nullable Output<MonitoringComponentConfigArgs> componentConfig;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class MonitoringConfigArgs extends io.pulumi.resources.ResourceArgs
     	      this.componentConfig = defaults.componentConfig;
         }
 
-        public Builder componentConfig(@Nullable Input<MonitoringComponentConfigArgs> componentConfig) {
+        public Builder componentConfig(@Nullable Output<MonitoringComponentConfigArgs> componentConfig) {
             this.componentConfig = componentConfig;
             return this;
         }
 
         public Builder componentConfig(@Nullable MonitoringComponentConfigArgs componentConfig) {
-            this.componentConfig = Input.ofNullable(componentConfig);
+            this.componentConfig = Output.ofNullable(componentConfig);
             return this;
         }
         public MonitoringConfigArgs build() {

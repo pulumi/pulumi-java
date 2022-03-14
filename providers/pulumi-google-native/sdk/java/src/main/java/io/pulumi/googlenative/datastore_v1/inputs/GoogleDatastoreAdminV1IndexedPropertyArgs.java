@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.datastore_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.datastore_v1.enums.GoogleDatastoreAdminV1IndexedPropertyDirection;
 import java.lang.String;
@@ -23,9 +23,9 @@ public final class GoogleDatastoreAdminV1IndexedPropertyArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="direction", required=true)
-      private final Input<GoogleDatastoreAdminV1IndexedPropertyDirection> direction;
+      private final Output<GoogleDatastoreAdminV1IndexedPropertyDirection> direction;
 
-    public Input<GoogleDatastoreAdminV1IndexedPropertyDirection> getDirection() {
+    public Output<GoogleDatastoreAdminV1IndexedPropertyDirection> getDirection() {
         return this.direction;
     }
 
@@ -34,22 +34,22 @@ public final class GoogleDatastoreAdminV1IndexedPropertyArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="name", required=true)
-      private final Input<String> name;
+      private final Output<String> name;
 
-    public Input<String> getName() {
+    public Output<String> getName() {
         return this.name;
     }
 
     public GoogleDatastoreAdminV1IndexedPropertyArgs(
-        Input<GoogleDatastoreAdminV1IndexedPropertyDirection> direction,
-        Input<String> name) {
+        Output<GoogleDatastoreAdminV1IndexedPropertyDirection> direction,
+        Output<String> name) {
         this.direction = Objects.requireNonNull(direction, "expected parameter 'direction' to be non-null");
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
     }
 
     private GoogleDatastoreAdminV1IndexedPropertyArgs() {
-        this.direction = Input.empty();
-        this.name = Input.empty();
+        this.direction = Output.empty();
+        this.name = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class GoogleDatastoreAdminV1IndexedPropertyArgs extends io.pulumi.r
     }
 
     public static final class Builder {
-        private Input<GoogleDatastoreAdminV1IndexedPropertyDirection> direction;
-        private Input<String> name;
+        private Output<GoogleDatastoreAdminV1IndexedPropertyDirection> direction;
+        private Output<String> name;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class GoogleDatastoreAdminV1IndexedPropertyArgs extends io.pulumi.r
     	      this.name = defaults.name;
         }
 
-        public Builder direction(Input<GoogleDatastoreAdminV1IndexedPropertyDirection> direction) {
+        public Builder direction(Output<GoogleDatastoreAdminV1IndexedPropertyDirection> direction) {
             this.direction = Objects.requireNonNull(direction);
             return this;
         }
 
         public Builder direction(GoogleDatastoreAdminV1IndexedPropertyDirection direction) {
-            this.direction = Input.of(Objects.requireNonNull(direction));
+            this.direction = Output.of(Objects.requireNonNull(direction));
             return this;
         }
 
-        public Builder name(Input<String> name) {
+        public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(String name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
         public GoogleDatastoreAdminV1IndexedPropertyArgs build() {

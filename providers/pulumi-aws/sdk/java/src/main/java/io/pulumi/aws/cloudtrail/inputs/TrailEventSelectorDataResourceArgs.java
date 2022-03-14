@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.cloudtrail.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -19,9 +19,9 @@ public final class TrailEventSelectorDataResourceArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<String> type;
+      private final Output<String> type;
 
-    public Input<String> getType() {
+    public Output<String> getType() {
         return this.type;
     }
 
@@ -30,22 +30,22 @@ public final class TrailEventSelectorDataResourceArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="values", required=true)
-      private final Input<List<String>> values;
+      private final Output<List<String>> values;
 
-    public Input<List<String>> getValues() {
+    public Output<List<String>> getValues() {
         return this.values;
     }
 
     public TrailEventSelectorDataResourceArgs(
-        Input<String> type,
-        Input<List<String>> values) {
+        Output<String> type,
+        Output<List<String>> values) {
         this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
         this.values = Objects.requireNonNull(values, "expected parameter 'values' to be non-null");
     }
 
     private TrailEventSelectorDataResourceArgs() {
-        this.type = Input.empty();
-        this.values = Input.empty();
+        this.type = Output.empty();
+        this.values = Output.empty();
     }
 
     public static Builder builder() {
@@ -57,8 +57,8 @@ public final class TrailEventSelectorDataResourceArgs extends io.pulumi.resource
     }
 
     public static final class Builder {
-        private Input<String> type;
-        private Input<List<String>> values;
+        private Output<String> type;
+        private Output<List<String>> values;
 
         public Builder() {
     	      // Empty
@@ -70,23 +70,23 @@ public final class TrailEventSelectorDataResourceArgs extends io.pulumi.resource
     	      this.values = defaults.values;
         }
 
-        public Builder type(Input<String> type) {
+        public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(String type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
 
-        public Builder values(Input<List<String>> values) {
+        public Builder values(Output<List<String>> values) {
             this.values = Objects.requireNonNull(values);
             return this;
         }
 
         public Builder values(List<String> values) {
-            this.values = Input.of(Objects.requireNonNull(values));
+            this.values = Output.of(Objects.requireNonNull(values));
             return this;
         }
         public TrailEventSelectorDataResourceArgs build() {

@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.iotanalytics.inputs;
 
 import io.pulumi.awsnative.iotanalytics.enums.DatasetResourceConfigurationComputeType;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
@@ -15,29 +15,29 @@ public final class DatasetResourceConfigurationArgs extends io.pulumi.resources.
     public static final DatasetResourceConfigurationArgs Empty = new DatasetResourceConfigurationArgs();
 
     @InputImport(name="computeType", required=true)
-      private final Input<DatasetResourceConfigurationComputeType> computeType;
+      private final Output<DatasetResourceConfigurationComputeType> computeType;
 
-    public Input<DatasetResourceConfigurationComputeType> getComputeType() {
+    public Output<DatasetResourceConfigurationComputeType> getComputeType() {
         return this.computeType;
     }
 
     @InputImport(name="volumeSizeInGB", required=true)
-      private final Input<Integer> volumeSizeInGB;
+      private final Output<Integer> volumeSizeInGB;
 
-    public Input<Integer> getVolumeSizeInGB() {
+    public Output<Integer> getVolumeSizeInGB() {
         return this.volumeSizeInGB;
     }
 
     public DatasetResourceConfigurationArgs(
-        Input<DatasetResourceConfigurationComputeType> computeType,
-        Input<Integer> volumeSizeInGB) {
+        Output<DatasetResourceConfigurationComputeType> computeType,
+        Output<Integer> volumeSizeInGB) {
         this.computeType = Objects.requireNonNull(computeType, "expected parameter 'computeType' to be non-null");
         this.volumeSizeInGB = Objects.requireNonNull(volumeSizeInGB, "expected parameter 'volumeSizeInGB' to be non-null");
     }
 
     private DatasetResourceConfigurationArgs() {
-        this.computeType = Input.empty();
-        this.volumeSizeInGB = Input.empty();
+        this.computeType = Output.empty();
+        this.volumeSizeInGB = Output.empty();
     }
 
     public static Builder builder() {
@@ -49,8 +49,8 @@ public final class DatasetResourceConfigurationArgs extends io.pulumi.resources.
     }
 
     public static final class Builder {
-        private Input<DatasetResourceConfigurationComputeType> computeType;
-        private Input<Integer> volumeSizeInGB;
+        private Output<DatasetResourceConfigurationComputeType> computeType;
+        private Output<Integer> volumeSizeInGB;
 
         public Builder() {
     	      // Empty
@@ -62,23 +62,23 @@ public final class DatasetResourceConfigurationArgs extends io.pulumi.resources.
     	      this.volumeSizeInGB = defaults.volumeSizeInGB;
         }
 
-        public Builder computeType(Input<DatasetResourceConfigurationComputeType> computeType) {
+        public Builder computeType(Output<DatasetResourceConfigurationComputeType> computeType) {
             this.computeType = Objects.requireNonNull(computeType);
             return this;
         }
 
         public Builder computeType(DatasetResourceConfigurationComputeType computeType) {
-            this.computeType = Input.of(Objects.requireNonNull(computeType));
+            this.computeType = Output.of(Objects.requireNonNull(computeType));
             return this;
         }
 
-        public Builder volumeSizeInGB(Input<Integer> volumeSizeInGB) {
+        public Builder volumeSizeInGB(Output<Integer> volumeSizeInGB) {
             this.volumeSizeInGB = Objects.requireNonNull(volumeSizeInGB);
             return this;
         }
 
         public Builder volumeSizeInGB(Integer volumeSizeInGB) {
-            this.volumeSizeInGB = Input.of(Objects.requireNonNull(volumeSizeInGB));
+            this.volumeSizeInGB = Output.of(Objects.requireNonNull(volumeSizeInGB));
             return this;
         }
         public DatasetResourceConfigurationArgs build() {

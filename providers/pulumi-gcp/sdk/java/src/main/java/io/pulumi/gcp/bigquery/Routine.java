@@ -3,7 +3,6 @@
 
 package io.pulumi.gcp.bigquery;
 
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -317,14 +316,14 @@ public class Routine extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Routine(String name, RoutineArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:bigquery/routine:Routine", name, args == null ? RoutineArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("gcp:bigquery/routine:Routine", name, args == null ? RoutineArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private Routine(String name, Input<String> id, @Nullable RoutineState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private Routine(String name, Output<String> id, @Nullable RoutineState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("gcp:bigquery/routine:Routine", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -340,7 +339,7 @@ public class Routine extends io.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static Routine get(String name, Input<String> id, @Nullable RoutineState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static Routine get(String name, Output<String> id, @Nullable RoutineState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Routine(name, id, state, options);
     }
 }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.azuredata;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -20,10 +20,10 @@ public final class SqlServerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="cores")
-      private final @Nullable Input<Integer> cores;
+      private final @Nullable Output<Integer> cores;
 
-    public Input<Integer> getCores() {
-        return this.cores == null ? Input.empty() : this.cores;
+    public Output<Integer> getCores() {
+        return this.cores == null ? Output.empty() : this.cores;
     }
 
     /**
@@ -31,10 +31,10 @@ public final class SqlServerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="edition")
-      private final @Nullable Input<String> edition;
+      private final @Nullable Output<String> edition;
 
-    public Input<String> getEdition() {
-        return this.edition == null ? Input.empty() : this.edition;
+    public Output<String> getEdition() {
+        return this.edition == null ? Output.empty() : this.edition;
     }
 
     /**
@@ -42,10 +42,10 @@ public final class SqlServerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="propertyBag")
-      private final @Nullable Input<String> propertyBag;
+      private final @Nullable Output<String> propertyBag;
 
-    public Input<String> getPropertyBag() {
-        return this.propertyBag == null ? Input.empty() : this.propertyBag;
+    public Output<String> getPropertyBag() {
+        return this.propertyBag == null ? Output.empty() : this.propertyBag;
     }
 
     /**
@@ -53,10 +53,10 @@ public final class SqlServerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="registrationID")
-      private final @Nullable Input<String> registrationID;
+      private final @Nullable Output<String> registrationID;
 
-    public Input<String> getRegistrationID() {
-        return this.registrationID == null ? Input.empty() : this.registrationID;
+    public Output<String> getRegistrationID() {
+        return this.registrationID == null ? Output.empty() : this.registrationID;
     }
 
     /**
@@ -64,9 +64,9 @@ public final class SqlServerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -75,10 +75,10 @@ public final class SqlServerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sqlServerName")
-      private final @Nullable Input<String> sqlServerName;
+      private final @Nullable Output<String> sqlServerName;
 
-    public Input<String> getSqlServerName() {
-        return this.sqlServerName == null ? Input.empty() : this.sqlServerName;
+    public Output<String> getSqlServerName() {
+        return this.sqlServerName == null ? Output.empty() : this.sqlServerName;
     }
 
     /**
@@ -86,9 +86,9 @@ public final class SqlServerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sqlServerRegistrationName", required=true)
-      private final Input<String> sqlServerRegistrationName;
+      private final Output<String> sqlServerRegistrationName;
 
-    public Input<String> getSqlServerRegistrationName() {
+    public Output<String> getSqlServerRegistrationName() {
         return this.sqlServerRegistrationName;
     }
 
@@ -97,21 +97,21 @@ public final class SqlServerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="version")
-      private final @Nullable Input<String> version;
+      private final @Nullable Output<String> version;
 
-    public Input<String> getVersion() {
-        return this.version == null ? Input.empty() : this.version;
+    public Output<String> getVersion() {
+        return this.version == null ? Output.empty() : this.version;
     }
 
     public SqlServerArgs(
-        @Nullable Input<Integer> cores,
-        @Nullable Input<String> edition,
-        @Nullable Input<String> propertyBag,
-        @Nullable Input<String> registrationID,
-        Input<String> resourceGroupName,
-        @Nullable Input<String> sqlServerName,
-        Input<String> sqlServerRegistrationName,
-        @Nullable Input<String> version) {
+        @Nullable Output<Integer> cores,
+        @Nullable Output<String> edition,
+        @Nullable Output<String> propertyBag,
+        @Nullable Output<String> registrationID,
+        Output<String> resourceGroupName,
+        @Nullable Output<String> sqlServerName,
+        Output<String> sqlServerRegistrationName,
+        @Nullable Output<String> version) {
         this.cores = cores;
         this.edition = edition;
         this.propertyBag = propertyBag;
@@ -123,14 +123,14 @@ public final class SqlServerArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private SqlServerArgs() {
-        this.cores = Input.empty();
-        this.edition = Input.empty();
-        this.propertyBag = Input.empty();
-        this.registrationID = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.sqlServerName = Input.empty();
-        this.sqlServerRegistrationName = Input.empty();
-        this.version = Input.empty();
+        this.cores = Output.empty();
+        this.edition = Output.empty();
+        this.propertyBag = Output.empty();
+        this.registrationID = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.sqlServerName = Output.empty();
+        this.sqlServerRegistrationName = Output.empty();
+        this.version = Output.empty();
     }
 
     public static Builder builder() {
@@ -142,14 +142,14 @@ public final class SqlServerArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> cores;
-        private @Nullable Input<String> edition;
-        private @Nullable Input<String> propertyBag;
-        private @Nullable Input<String> registrationID;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<String> sqlServerName;
-        private Input<String> sqlServerRegistrationName;
-        private @Nullable Input<String> version;
+        private @Nullable Output<Integer> cores;
+        private @Nullable Output<String> edition;
+        private @Nullable Output<String> propertyBag;
+        private @Nullable Output<String> registrationID;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<String> sqlServerName;
+        private Output<String> sqlServerRegistrationName;
+        private @Nullable Output<String> version;
 
         public Builder() {
     	      // Empty
@@ -167,83 +167,83 @@ public final class SqlServerArgs extends io.pulumi.resources.ResourceArgs {
     	      this.version = defaults.version;
         }
 
-        public Builder cores(@Nullable Input<Integer> cores) {
+        public Builder cores(@Nullable Output<Integer> cores) {
             this.cores = cores;
             return this;
         }
 
         public Builder cores(@Nullable Integer cores) {
-            this.cores = Input.ofNullable(cores);
+            this.cores = Output.ofNullable(cores);
             return this;
         }
 
-        public Builder edition(@Nullable Input<String> edition) {
+        public Builder edition(@Nullable Output<String> edition) {
             this.edition = edition;
             return this;
         }
 
         public Builder edition(@Nullable String edition) {
-            this.edition = Input.ofNullable(edition);
+            this.edition = Output.ofNullable(edition);
             return this;
         }
 
-        public Builder propertyBag(@Nullable Input<String> propertyBag) {
+        public Builder propertyBag(@Nullable Output<String> propertyBag) {
             this.propertyBag = propertyBag;
             return this;
         }
 
         public Builder propertyBag(@Nullable String propertyBag) {
-            this.propertyBag = Input.ofNullable(propertyBag);
+            this.propertyBag = Output.ofNullable(propertyBag);
             return this;
         }
 
-        public Builder registrationID(@Nullable Input<String> registrationID) {
+        public Builder registrationID(@Nullable Output<String> registrationID) {
             this.registrationID = registrationID;
             return this;
         }
 
         public Builder registrationID(@Nullable String registrationID) {
-            this.registrationID = Input.ofNullable(registrationID);
+            this.registrationID = Output.ofNullable(registrationID);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder sqlServerName(@Nullable Input<String> sqlServerName) {
+        public Builder sqlServerName(@Nullable Output<String> sqlServerName) {
             this.sqlServerName = sqlServerName;
             return this;
         }
 
         public Builder sqlServerName(@Nullable String sqlServerName) {
-            this.sqlServerName = Input.ofNullable(sqlServerName);
+            this.sqlServerName = Output.ofNullable(sqlServerName);
             return this;
         }
 
-        public Builder sqlServerRegistrationName(Input<String> sqlServerRegistrationName) {
+        public Builder sqlServerRegistrationName(Output<String> sqlServerRegistrationName) {
             this.sqlServerRegistrationName = Objects.requireNonNull(sqlServerRegistrationName);
             return this;
         }
 
         public Builder sqlServerRegistrationName(String sqlServerRegistrationName) {
-            this.sqlServerRegistrationName = Input.of(Objects.requireNonNull(sqlServerRegistrationName));
+            this.sqlServerRegistrationName = Output.of(Objects.requireNonNull(sqlServerRegistrationName));
             return this;
         }
 
-        public Builder version(@Nullable Input<String> version) {
+        public Builder version(@Nullable Output<String> version) {
             this.version = version;
             return this;
         }
 
         public Builder version(@Nullable String version) {
-            this.version = Input.ofNullable(version);
+            this.version = Output.ofNullable(version);
             return this;
         }
         public SqlServerArgs build() {

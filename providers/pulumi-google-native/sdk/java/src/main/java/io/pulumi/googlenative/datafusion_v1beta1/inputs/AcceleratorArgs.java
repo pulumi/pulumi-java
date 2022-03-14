@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.datafusion_v1beta1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.datafusion_v1beta1.enums.AcceleratorAcceleratorType;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class AcceleratorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="acceleratorType")
-      private final @Nullable Input<AcceleratorAcceleratorType> acceleratorType;
+      private final @Nullable Output<AcceleratorAcceleratorType> acceleratorType;
 
-    public Input<AcceleratorAcceleratorType> getAcceleratorType() {
-        return this.acceleratorType == null ? Input.empty() : this.acceleratorType;
+    public Output<AcceleratorAcceleratorType> getAcceleratorType() {
+        return this.acceleratorType == null ? Output.empty() : this.acceleratorType;
     }
 
-    public AcceleratorArgs(@Nullable Input<AcceleratorAcceleratorType> acceleratorType) {
+    public AcceleratorArgs(@Nullable Output<AcceleratorAcceleratorType> acceleratorType) {
         this.acceleratorType = acceleratorType;
     }
 
     private AcceleratorArgs() {
-        this.acceleratorType = Input.empty();
+        this.acceleratorType = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class AcceleratorArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<AcceleratorAcceleratorType> acceleratorType;
+        private @Nullable Output<AcceleratorAcceleratorType> acceleratorType;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class AcceleratorArgs extends io.pulumi.resources.ResourceArgs {
     	      this.acceleratorType = defaults.acceleratorType;
         }
 
-        public Builder acceleratorType(@Nullable Input<AcceleratorAcceleratorType> acceleratorType) {
+        public Builder acceleratorType(@Nullable Output<AcceleratorAcceleratorType> acceleratorType) {
             this.acceleratorType = acceleratorType;
             return this;
         }
 
         public Builder acceleratorType(@Nullable AcceleratorAcceleratorType acceleratorType) {
-            this.acceleratorType = Input.ofNullable(acceleratorType);
+            this.acceleratorType = Output.ofNullable(acceleratorType);
             return this;
         }
         public AcceleratorArgs build() {

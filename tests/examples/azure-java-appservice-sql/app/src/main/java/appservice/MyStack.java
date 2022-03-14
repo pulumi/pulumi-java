@@ -22,7 +22,6 @@ import io.pulumi.azurenative.web.inputs.SiteConfigArgs;
 import io.pulumi.azurenative.web.inputs.SkuDescriptionArgs;
 import io.pulumi.core.Archive;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.deployment.InvokeOptions;
@@ -36,28 +35,28 @@ public final class MyStack extends Stack {
         var resourceGroup = new ResourceGroup("resourceGroup");
 
         var storageAccount = new StorageAccount("sa",
-                $ -> $.resourceGroupName(resourceGroup.getName().toInput())
+                $ -> $.resourceGroupName(resourceGroup.getName())
                         .kind(Either.ofRight(Kind.StorageV2))
                         .sku(SkuArgs.builder().name(Either.ofRight(SkuName.Standard_LRS)).build())
                         .build());
 
         var storageContainer = new BlobContainer("container",
-                $ -> $.resourceGroupName(resourceGroup.getName().toInput())
-                        .accountName(storageAccount.getName().toInput())
+                $ -> $.resourceGroupName(resourceGroup.getName())
+                        .accountName(storageAccount.getName())
                         .publicAccess(PublicAccess.None)
                         .build());
 
         var blob = new Blob("blob",
-                $ -> $.resourceGroupName(resourceGroup.getName().toInput())
-                        .accountName(storageAccount.getName().toInput())
-                        .containerName(storageContainer.getName().toInput())
+                $ -> $.resourceGroupName(resourceGroup.getName())
+                        .accountName(storageAccount.getName())
+                        .containerName(storageContainer.getName())
                         .source(new Archive.FileArchive("wwwroot"))
                         .build());
 
         var codeBlobUrl = getSASToken(storageAccount.getName(), storageContainer.getName(), blob.getName(), resourceGroup.getName());
 
         var appInsights = new Component("ai",
-                $ -> $.resourceGroupName(resourceGroup.getName().toInput())
+                $ -> $.resourceGroupName(resourceGroup.getName())
                         .kind("web")
                         .applicationType(Either.ofRight(ApplicationType.Web))
                         .build());
@@ -69,36 +68,36 @@ public final class MyStack extends Stack {
         var pwd = config.require("sqlPassword");
 
         var sqlServer = new Server("sqlserver",
-                $ -> $.resourceGroupName(resourceGroup.getName().toInput())
+                $ -> $.resourceGroupName(resourceGroup.getName())
                         .administratorLogin(username)
                         .administratorLoginPassword(pwd)
                         .version("12.0")
                         .build());
 
         var database = new Database("db",
-                $ -> $.resourceGroupName(resourceGroup.getName().toInput())
-                        .serverName(sqlServer.getName().toInput())
+                $ -> $.resourceGroupName(resourceGroup.getName())
+                        .serverName(sqlServer.getName())
                         .sku(io.pulumi.azurenative.sql.inputs.SkuArgs.builder().name("S0").build())
                         .build());
 
         var appServicePlan = new AppServicePlan("asp",
-                $ -> $.resourceGroupName(resourceGroup.getName().toInput())
+                $ -> $.resourceGroupName(resourceGroup.getName())
                         .kind("App")
                         .sku(SkuDescriptionArgs.builder().name("B1").tier("Basic").build())
                         .build());
 
         var app = new WebApp("webapp",
-                $ -> $.resourceGroupName(resourceGroup.getName().toInput())
-                        .serverFarmId(appServicePlan.getId().toInput())
+                $ -> $.resourceGroupName(resourceGroup.getName())
+                        .serverFarmId(appServicePlan.getId())
                         .siteConfig(SiteConfigArgs.builder()
                                 .appSettings(List.of(
                                         NameValuePairArgs.builder()
                                             .name("APPINSIGHTS_INSTRUMENTATIONKEY")
-                                            .value(appInsights.getInstrumentationKey().toInput())
+                                            .value(appInsights.getInstrumentationKey())
                                             .build(),
                                         NameValuePairArgs.builder()
                                             .name("APPLICATIONINSIGHTS_CONNECTION_STRING")
-                                            .value(Output.format("InstrumentationKey=%s", appInsights.getInstrumentationKey()).toInput())
+                                            .value(Output.format("InstrumentationKey=%s", appInsights.getInstrumentationKey()))
                                             .build(),
                                         NameValuePairArgs.builder()
                                             .name("ApplicationInsightsAgent_EXTENSION_VERSION")
@@ -106,7 +105,7 @@ public final class MyStack extends Stack {
                                             .build(),
                                         NameValuePairArgs.builder()
                                             .name("WEBSITE_RUN_FROM_PACKAGE")
-                                            .value(codeBlobUrl.toInput())
+                                            .value(codeBlobUrl)
                                             .build()))
                                 .connectionStrings(List.of(
                                         ConnStringInfoArgs.builder()
@@ -114,7 +113,7 @@ public final class MyStack extends Stack {
                                             .connectionString(
                                                 Output.format(
                                     "Server=tcp:%s.database.windows.net;initial catalog=%s;user ID=%s;password=%s;Min Pool Size=0;Max Pool Size=30;Persist Security Info=true;",
-                                                   sqlServer.getName(), database.getName(), Input.of(username), Input.of(pwd)).toInput())
+                                                   sqlServer.getName(), database.getName(), Output.of(username), Output.of(pwd)))
                                             .type(ConnectionStringType.SQLAzure)
                                             .build()))
                                 .build())

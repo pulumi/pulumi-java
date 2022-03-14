@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.redshift;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -20,10 +20,10 @@ public final class EndpointAccessArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="clusterIdentifier")
-      private final @Nullable Input<String> clusterIdentifier;
+      private final @Nullable Output<String> clusterIdentifier;
 
-    public Input<String> getClusterIdentifier() {
-        return this.clusterIdentifier == null ? Input.empty() : this.clusterIdentifier;
+    public Output<String> getClusterIdentifier() {
+        return this.clusterIdentifier == null ? Output.empty() : this.clusterIdentifier;
     }
 
     /**
@@ -31,9 +31,9 @@ public final class EndpointAccessArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="endpointName", required=true)
-      private final Input<String> endpointName;
+      private final Output<String> endpointName;
 
-    public Input<String> getEndpointName() {
+    public Output<String> getEndpointName() {
         return this.endpointName;
     }
 
@@ -42,10 +42,10 @@ public final class EndpointAccessArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceOwner")
-      private final @Nullable Input<String> resourceOwner;
+      private final @Nullable Output<String> resourceOwner;
 
-    public Input<String> getResourceOwner() {
-        return this.resourceOwner == null ? Input.empty() : this.resourceOwner;
+    public Output<String> getResourceOwner() {
+        return this.resourceOwner == null ? Output.empty() : this.resourceOwner;
     }
 
     /**
@@ -53,10 +53,10 @@ public final class EndpointAccessArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="subnetGroupName")
-      private final @Nullable Input<String> subnetGroupName;
+      private final @Nullable Output<String> subnetGroupName;
 
-    public Input<String> getSubnetGroupName() {
-        return this.subnetGroupName == null ? Input.empty() : this.subnetGroupName;
+    public Output<String> getSubnetGroupName() {
+        return this.subnetGroupName == null ? Output.empty() : this.subnetGroupName;
     }
 
     /**
@@ -64,18 +64,18 @@ public final class EndpointAccessArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="vpcSecurityGroupIds", required=true)
-      private final Input<List<String>> vpcSecurityGroupIds;
+      private final Output<List<String>> vpcSecurityGroupIds;
 
-    public Input<List<String>> getVpcSecurityGroupIds() {
+    public Output<List<String>> getVpcSecurityGroupIds() {
         return this.vpcSecurityGroupIds;
     }
 
     public EndpointAccessArgs(
-        @Nullable Input<String> clusterIdentifier,
-        Input<String> endpointName,
-        @Nullable Input<String> resourceOwner,
-        @Nullable Input<String> subnetGroupName,
-        Input<List<String>> vpcSecurityGroupIds) {
+        @Nullable Output<String> clusterIdentifier,
+        Output<String> endpointName,
+        @Nullable Output<String> resourceOwner,
+        @Nullable Output<String> subnetGroupName,
+        Output<List<String>> vpcSecurityGroupIds) {
         this.clusterIdentifier = clusterIdentifier;
         this.endpointName = Objects.requireNonNull(endpointName, "expected parameter 'endpointName' to be non-null");
         this.resourceOwner = resourceOwner;
@@ -84,11 +84,11 @@ public final class EndpointAccessArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private EndpointAccessArgs() {
-        this.clusterIdentifier = Input.empty();
-        this.endpointName = Input.empty();
-        this.resourceOwner = Input.empty();
-        this.subnetGroupName = Input.empty();
-        this.vpcSecurityGroupIds = Input.empty();
+        this.clusterIdentifier = Output.empty();
+        this.endpointName = Output.empty();
+        this.resourceOwner = Output.empty();
+        this.subnetGroupName = Output.empty();
+        this.vpcSecurityGroupIds = Output.empty();
     }
 
     public static Builder builder() {
@@ -100,11 +100,11 @@ public final class EndpointAccessArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> clusterIdentifier;
-        private Input<String> endpointName;
-        private @Nullable Input<String> resourceOwner;
-        private @Nullable Input<String> subnetGroupName;
-        private Input<List<String>> vpcSecurityGroupIds;
+        private @Nullable Output<String> clusterIdentifier;
+        private Output<String> endpointName;
+        private @Nullable Output<String> resourceOwner;
+        private @Nullable Output<String> subnetGroupName;
+        private Output<List<String>> vpcSecurityGroupIds;
 
         public Builder() {
     	      // Empty
@@ -119,53 +119,53 @@ public final class EndpointAccessArgs extends io.pulumi.resources.ResourceArgs {
     	      this.vpcSecurityGroupIds = defaults.vpcSecurityGroupIds;
         }
 
-        public Builder clusterIdentifier(@Nullable Input<String> clusterIdentifier) {
+        public Builder clusterIdentifier(@Nullable Output<String> clusterIdentifier) {
             this.clusterIdentifier = clusterIdentifier;
             return this;
         }
 
         public Builder clusterIdentifier(@Nullable String clusterIdentifier) {
-            this.clusterIdentifier = Input.ofNullable(clusterIdentifier);
+            this.clusterIdentifier = Output.ofNullable(clusterIdentifier);
             return this;
         }
 
-        public Builder endpointName(Input<String> endpointName) {
+        public Builder endpointName(Output<String> endpointName) {
             this.endpointName = Objects.requireNonNull(endpointName);
             return this;
         }
 
         public Builder endpointName(String endpointName) {
-            this.endpointName = Input.of(Objects.requireNonNull(endpointName));
+            this.endpointName = Output.of(Objects.requireNonNull(endpointName));
             return this;
         }
 
-        public Builder resourceOwner(@Nullable Input<String> resourceOwner) {
+        public Builder resourceOwner(@Nullable Output<String> resourceOwner) {
             this.resourceOwner = resourceOwner;
             return this;
         }
 
         public Builder resourceOwner(@Nullable String resourceOwner) {
-            this.resourceOwner = Input.ofNullable(resourceOwner);
+            this.resourceOwner = Output.ofNullable(resourceOwner);
             return this;
         }
 
-        public Builder subnetGroupName(@Nullable Input<String> subnetGroupName) {
+        public Builder subnetGroupName(@Nullable Output<String> subnetGroupName) {
             this.subnetGroupName = subnetGroupName;
             return this;
         }
 
         public Builder subnetGroupName(@Nullable String subnetGroupName) {
-            this.subnetGroupName = Input.ofNullable(subnetGroupName);
+            this.subnetGroupName = Output.ofNullable(subnetGroupName);
             return this;
         }
 
-        public Builder vpcSecurityGroupIds(Input<List<String>> vpcSecurityGroupIds) {
+        public Builder vpcSecurityGroupIds(Output<List<String>> vpcSecurityGroupIds) {
             this.vpcSecurityGroupIds = Objects.requireNonNull(vpcSecurityGroupIds);
             return this;
         }
 
         public Builder vpcSecurityGroupIds(List<String> vpcSecurityGroupIds) {
-            this.vpcSecurityGroupIds = Input.of(Objects.requireNonNull(vpcSecurityGroupIds));
+            this.vpcSecurityGroupIds = Output.of(Objects.requireNonNull(vpcSecurityGroupIds));
             return this;
         }
         public EndpointAccessArgs build() {

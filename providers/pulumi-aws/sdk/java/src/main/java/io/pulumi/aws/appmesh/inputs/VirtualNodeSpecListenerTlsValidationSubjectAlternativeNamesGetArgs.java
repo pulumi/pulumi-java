@@ -4,7 +4,7 @@
 package io.pulumi.aws.appmesh.inputs;
 
 import io.pulumi.aws.appmesh.inputs.VirtualNodeSpecListenerTlsValidationSubjectAlternativeNamesMatchGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 
@@ -18,18 +18,18 @@ public final class VirtualNodeSpecListenerTlsValidationSubjectAlternativeNamesGe
      * 
      */
     @InputImport(name="match", required=true)
-      private final Input<VirtualNodeSpecListenerTlsValidationSubjectAlternativeNamesMatchGetArgs> match;
+      private final Output<VirtualNodeSpecListenerTlsValidationSubjectAlternativeNamesMatchGetArgs> match;
 
-    public Input<VirtualNodeSpecListenerTlsValidationSubjectAlternativeNamesMatchGetArgs> getMatch() {
+    public Output<VirtualNodeSpecListenerTlsValidationSubjectAlternativeNamesMatchGetArgs> getMatch() {
         return this.match;
     }
 
-    public VirtualNodeSpecListenerTlsValidationSubjectAlternativeNamesGetArgs(Input<VirtualNodeSpecListenerTlsValidationSubjectAlternativeNamesMatchGetArgs> match) {
+    public VirtualNodeSpecListenerTlsValidationSubjectAlternativeNamesGetArgs(Output<VirtualNodeSpecListenerTlsValidationSubjectAlternativeNamesMatchGetArgs> match) {
         this.match = Objects.requireNonNull(match, "expected parameter 'match' to be non-null");
     }
 
     private VirtualNodeSpecListenerTlsValidationSubjectAlternativeNamesGetArgs() {
-        this.match = Input.empty();
+        this.match = Output.empty();
     }
 
     public static Builder builder() {
@@ -41,7 +41,7 @@ public final class VirtualNodeSpecListenerTlsValidationSubjectAlternativeNamesGe
     }
 
     public static final class Builder {
-        private Input<VirtualNodeSpecListenerTlsValidationSubjectAlternativeNamesMatchGetArgs> match;
+        private Output<VirtualNodeSpecListenerTlsValidationSubjectAlternativeNamesMatchGetArgs> match;
 
         public Builder() {
     	      // Empty
@@ -52,13 +52,13 @@ public final class VirtualNodeSpecListenerTlsValidationSubjectAlternativeNamesGe
     	      this.match = defaults.match;
         }
 
-        public Builder match(Input<VirtualNodeSpecListenerTlsValidationSubjectAlternativeNamesMatchGetArgs> match) {
+        public Builder match(Output<VirtualNodeSpecListenerTlsValidationSubjectAlternativeNamesMatchGetArgs> match) {
             this.match = Objects.requireNonNull(match);
             return this;
         }
 
         public Builder match(VirtualNodeSpecListenerTlsValidationSubjectAlternativeNamesMatchGetArgs match) {
-            this.match = Input.of(Objects.requireNonNull(match));
+            this.match = Output.of(Objects.requireNonNull(match));
             return this;
         }
         public VirtualNodeSpecListenerTlsValidationSubjectAlternativeNamesGetArgs build() {

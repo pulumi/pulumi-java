@@ -4,7 +4,7 @@
 package io.pulumi.aws.guardduty.inputs;
 
 import io.pulumi.aws.guardduty.inputs.DetectorDatasourcesGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -22,10 +22,10 @@ public final class DetectorState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="accountId")
-      private final @Nullable Input<String> accountId;
+      private final @Nullable Output<String> accountId;
 
-    public Input<String> getAccountId() {
-        return this.accountId == null ? Input.empty() : this.accountId;
+    public Output<String> getAccountId() {
+        return this.accountId == null ? Output.empty() : this.accountId;
     }
 
     /**
@@ -33,10 +33,10 @@ public final class DetectorState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arn")
-      private final @Nullable Input<String> arn;
+      private final @Nullable Output<String> arn;
 
-    public Input<String> getArn() {
-        return this.arn == null ? Input.empty() : this.arn;
+    public Output<String> getArn() {
+        return this.arn == null ? Output.empty() : this.arn;
     }
 
     /**
@@ -44,10 +44,10 @@ public final class DetectorState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="datasources")
-      private final @Nullable Input<DetectorDatasourcesGetArgs> datasources;
+      private final @Nullable Output<DetectorDatasourcesGetArgs> datasources;
 
-    public Input<DetectorDatasourcesGetArgs> getDatasources() {
-        return this.datasources == null ? Input.empty() : this.datasources;
+    public Output<DetectorDatasourcesGetArgs> getDatasources() {
+        return this.datasources == null ? Output.empty() : this.datasources;
     }
 
     /**
@@ -55,10 +55,10 @@ public final class DetectorState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enable")
-      private final @Nullable Input<Boolean> enable;
+      private final @Nullable Output<Boolean> enable;
 
-    public Input<Boolean> getEnable() {
-        return this.enable == null ? Input.empty() : this.enable;
+    public Output<Boolean> getEnable() {
+        return this.enable == null ? Output.empty() : this.enable;
     }
 
     /**
@@ -66,10 +66,10 @@ public final class DetectorState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="findingPublishingFrequency")
-      private final @Nullable Input<String> findingPublishingFrequency;
+      private final @Nullable Output<String> findingPublishingFrequency;
 
-    public Input<String> getFindingPublishingFrequency() {
-        return this.findingPublishingFrequency == null ? Input.empty() : this.findingPublishingFrequency;
+    public Output<String> getFindingPublishingFrequency() {
+        return this.findingPublishingFrequency == null ? Output.empty() : this.findingPublishingFrequency;
     }
 
     /**
@@ -77,10 +77,10 @@ public final class DetectorState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -88,20 +88,20 @@ public final class DetectorState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tagsAll")
-      private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Input<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Input.empty() : this.tagsAll;
+    public Output<Map<String,String>> getTagsAll() {
+        return this.tagsAll == null ? Output.empty() : this.tagsAll;
     }
 
     public DetectorState(
-        @Nullable Input<String> accountId,
-        @Nullable Input<String> arn,
-        @Nullable Input<DetectorDatasourcesGetArgs> datasources,
-        @Nullable Input<Boolean> enable,
-        @Nullable Input<String> findingPublishingFrequency,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<Map<String,String>> tagsAll) {
+        @Nullable Output<String> accountId,
+        @Nullable Output<String> arn,
+        @Nullable Output<DetectorDatasourcesGetArgs> datasources,
+        @Nullable Output<Boolean> enable,
+        @Nullable Output<String> findingPublishingFrequency,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<Map<String,String>> tagsAll) {
         this.accountId = accountId;
         this.arn = arn;
         this.datasources = datasources;
@@ -112,13 +112,13 @@ public final class DetectorState extends io.pulumi.resources.ResourceArgs {
     }
 
     private DetectorState() {
-        this.accountId = Input.empty();
-        this.arn = Input.empty();
-        this.datasources = Input.empty();
-        this.enable = Input.empty();
-        this.findingPublishingFrequency = Input.empty();
-        this.tags = Input.empty();
-        this.tagsAll = Input.empty();
+        this.accountId = Output.empty();
+        this.arn = Output.empty();
+        this.datasources = Output.empty();
+        this.enable = Output.empty();
+        this.findingPublishingFrequency = Output.empty();
+        this.tags = Output.empty();
+        this.tagsAll = Output.empty();
     }
 
     public static Builder builder() {
@@ -130,13 +130,13 @@ public final class DetectorState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> accountId;
-        private @Nullable Input<String> arn;
-        private @Nullable Input<DetectorDatasourcesGetArgs> datasources;
-        private @Nullable Input<Boolean> enable;
-        private @Nullable Input<String> findingPublishingFrequency;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<Map<String,String>> tagsAll;
+        private @Nullable Output<String> accountId;
+        private @Nullable Output<String> arn;
+        private @Nullable Output<DetectorDatasourcesGetArgs> datasources;
+        private @Nullable Output<Boolean> enable;
+        private @Nullable Output<String> findingPublishingFrequency;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<Map<String,String>> tagsAll;
 
         public Builder() {
     	      // Empty
@@ -153,73 +153,73 @@ public final class DetectorState extends io.pulumi.resources.ResourceArgs {
     	      this.tagsAll = defaults.tagsAll;
         }
 
-        public Builder accountId(@Nullable Input<String> accountId) {
+        public Builder accountId(@Nullable Output<String> accountId) {
             this.accountId = accountId;
             return this;
         }
 
         public Builder accountId(@Nullable String accountId) {
-            this.accountId = Input.ofNullable(accountId);
+            this.accountId = Output.ofNullable(accountId);
             return this;
         }
 
-        public Builder arn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
 
         public Builder arn(@Nullable String arn) {
-            this.arn = Input.ofNullable(arn);
+            this.arn = Output.ofNullable(arn);
             return this;
         }
 
-        public Builder datasources(@Nullable Input<DetectorDatasourcesGetArgs> datasources) {
+        public Builder datasources(@Nullable Output<DetectorDatasourcesGetArgs> datasources) {
             this.datasources = datasources;
             return this;
         }
 
         public Builder datasources(@Nullable DetectorDatasourcesGetArgs datasources) {
-            this.datasources = Input.ofNullable(datasources);
+            this.datasources = Output.ofNullable(datasources);
             return this;
         }
 
-        public Builder enable(@Nullable Input<Boolean> enable) {
+        public Builder enable(@Nullable Output<Boolean> enable) {
             this.enable = enable;
             return this;
         }
 
         public Builder enable(@Nullable Boolean enable) {
-            this.enable = Input.ofNullable(enable);
+            this.enable = Output.ofNullable(enable);
             return this;
         }
 
-        public Builder findingPublishingFrequency(@Nullable Input<String> findingPublishingFrequency) {
+        public Builder findingPublishingFrequency(@Nullable Output<String> findingPublishingFrequency) {
             this.findingPublishingFrequency = findingPublishingFrequency;
             return this;
         }
 
         public Builder findingPublishingFrequency(@Nullable String findingPublishingFrequency) {
-            this.findingPublishingFrequency = Input.ofNullable(findingPublishingFrequency);
+            this.findingPublishingFrequency = Output.ofNullable(findingPublishingFrequency);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Input.ofNullable(tagsAll);
+            this.tagsAll = Output.ofNullable(tagsAll);
             return this;
         }
         public DetectorState build() {

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.machinelearningservices.inputs;
 
 import io.pulumi.azurenative.machinelearningservices.inputs.ScriptReferenceArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,10 +23,10 @@ public final class ScriptsToExecuteArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="creationScript")
-      private final @Nullable Input<ScriptReferenceArgs> creationScript;
+      private final @Nullable Output<ScriptReferenceArgs> creationScript;
 
-    public Input<ScriptReferenceArgs> getCreationScript() {
-        return this.creationScript == null ? Input.empty() : this.creationScript;
+    public Output<ScriptReferenceArgs> getCreationScript() {
+        return this.creationScript == null ? Output.empty() : this.creationScript;
     }
 
     /**
@@ -34,22 +34,22 @@ public final class ScriptsToExecuteArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="startupScript")
-      private final @Nullable Input<ScriptReferenceArgs> startupScript;
+      private final @Nullable Output<ScriptReferenceArgs> startupScript;
 
-    public Input<ScriptReferenceArgs> getStartupScript() {
-        return this.startupScript == null ? Input.empty() : this.startupScript;
+    public Output<ScriptReferenceArgs> getStartupScript() {
+        return this.startupScript == null ? Output.empty() : this.startupScript;
     }
 
     public ScriptsToExecuteArgs(
-        @Nullable Input<ScriptReferenceArgs> creationScript,
-        @Nullable Input<ScriptReferenceArgs> startupScript) {
+        @Nullable Output<ScriptReferenceArgs> creationScript,
+        @Nullable Output<ScriptReferenceArgs> startupScript) {
         this.creationScript = creationScript;
         this.startupScript = startupScript;
     }
 
     private ScriptsToExecuteArgs() {
-        this.creationScript = Input.empty();
-        this.startupScript = Input.empty();
+        this.creationScript = Output.empty();
+        this.startupScript = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class ScriptsToExecuteArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private @Nullable Input<ScriptReferenceArgs> creationScript;
-        private @Nullable Input<ScriptReferenceArgs> startupScript;
+        private @Nullable Output<ScriptReferenceArgs> creationScript;
+        private @Nullable Output<ScriptReferenceArgs> startupScript;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class ScriptsToExecuteArgs extends io.pulumi.resources.ResourceArgs
     	      this.startupScript = defaults.startupScript;
         }
 
-        public Builder creationScript(@Nullable Input<ScriptReferenceArgs> creationScript) {
+        public Builder creationScript(@Nullable Output<ScriptReferenceArgs> creationScript) {
             this.creationScript = creationScript;
             return this;
         }
 
         public Builder creationScript(@Nullable ScriptReferenceArgs creationScript) {
-            this.creationScript = Input.ofNullable(creationScript);
+            this.creationScript = Output.ofNullable(creationScript);
             return this;
         }
 
-        public Builder startupScript(@Nullable Input<ScriptReferenceArgs> startupScript) {
+        public Builder startupScript(@Nullable Output<ScriptReferenceArgs> startupScript) {
             this.startupScript = startupScript;
             return this;
         }
 
         public Builder startupScript(@Nullable ScriptReferenceArgs startupScript) {
-            this.startupScript = Input.ofNullable(startupScript);
+            this.startupScript = Output.ofNullable(startupScript);
             return this;
         }
         public ScriptsToExecuteArgs build() {

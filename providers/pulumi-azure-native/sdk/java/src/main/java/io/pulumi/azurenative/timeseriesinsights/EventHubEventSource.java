@@ -7,7 +7,6 @@ import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.timeseriesinsights.EventHubEventSourceArgs;
 import io.pulumi.azurenative.timeseriesinsights.outputs.LocalTimestampResponse;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -284,10 +283,10 @@ public class EventHubEventSource extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public EventHubEventSource(String name, EventHubEventSourceArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:timeseriesinsights:EventHubEventSource", name, makeArgs(args), makeResourceOptions(options, Input.empty()));
+        super("azure-native:timeseriesinsights:EventHubEventSource", name, makeArgs(args), makeResourceOptions(options, Output.empty()));
     }
 
-    private EventHubEventSource(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private EventHubEventSource(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:timeseriesinsights:EventHubEventSource", name, null, makeResourceOptions(options, id));
     }
 
@@ -298,16 +297,16 @@ public class EventHubEventSource extends io.pulumi.resources.CustomResource {
             .build();
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:timeseriesinsights/v20170228preview:EventHubEventSource").build()),
-                Input.of(Alias.builder().setType("azure-native:timeseriesinsights/v20171115:EventHubEventSource").build()),
-                Input.of(Alias.builder().setType("azure-native:timeseriesinsights/v20180815preview:EventHubEventSource").build()),
-                Input.of(Alias.builder().setType("azure-native:timeseriesinsights/v20200515:EventHubEventSource").build()),
-                Input.of(Alias.builder().setType("azure-native:timeseriesinsights/v20210331preview:EventHubEventSource").build()),
-                Input.of(Alias.builder().setType("azure-native:timeseriesinsights/v20210630preview:EventHubEventSource").build())
+                Output.of(Alias.builder().setType("azure-native:timeseriesinsights/v20170228preview:EventHubEventSource").build()),
+                Output.of(Alias.builder().setType("azure-native:timeseriesinsights/v20171115:EventHubEventSource").build()),
+                Output.of(Alias.builder().setType("azure-native:timeseriesinsights/v20180815preview:EventHubEventSource").build()),
+                Output.of(Alias.builder().setType("azure-native:timeseriesinsights/v20200515:EventHubEventSource").build()),
+                Output.of(Alias.builder().setType("azure-native:timeseriesinsights/v20210331preview:EventHubEventSource").build()),
+                Output.of(Alias.builder().setType("azure-native:timeseriesinsights/v20210630preview:EventHubEventSource").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -321,7 +320,7 @@ public class EventHubEventSource extends io.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static EventHubEventSource get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static EventHubEventSource get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new EventHubEventSource(name, id, options);
     }
 }

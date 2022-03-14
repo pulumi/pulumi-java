@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.cognitiveservices;
 
 import io.pulumi.azurenative.cognitiveservices.inputs.DeploymentPropertiesArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -20,9 +20,9 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="accountName", required=true)
-      private final Input<String> accountName;
+      private final Output<String> accountName;
 
-    public Input<String> getAccountName() {
+    public Output<String> getAccountName() {
         return this.accountName;
     }
 
@@ -31,10 +31,10 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="deploymentName")
-      private final @Nullable Input<String> deploymentName;
+      private final @Nullable Output<String> deploymentName;
 
-    public Input<String> getDeploymentName() {
-        return this.deploymentName == null ? Input.empty() : this.deploymentName;
+    public Output<String> getDeploymentName() {
+        return this.deploymentName == null ? Output.empty() : this.deploymentName;
     }
 
     /**
@@ -42,10 +42,10 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="properties")
-      private final @Nullable Input<DeploymentPropertiesArgs> properties;
+      private final @Nullable Output<DeploymentPropertiesArgs> properties;
 
-    public Input<DeploymentPropertiesArgs> getProperties() {
-        return this.properties == null ? Input.empty() : this.properties;
+    public Output<DeploymentPropertiesArgs> getProperties() {
+        return this.properties == null ? Output.empty() : this.properties;
     }
 
     /**
@@ -53,17 +53,17 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
     public DeploymentArgs(
-        Input<String> accountName,
-        @Nullable Input<String> deploymentName,
-        @Nullable Input<DeploymentPropertiesArgs> properties,
-        Input<String> resourceGroupName) {
+        Output<String> accountName,
+        @Nullable Output<String> deploymentName,
+        @Nullable Output<DeploymentPropertiesArgs> properties,
+        Output<String> resourceGroupName) {
         this.accountName = Objects.requireNonNull(accountName, "expected parameter 'accountName' to be non-null");
         this.deploymentName = deploymentName;
         this.properties = properties;
@@ -71,10 +71,10 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DeploymentArgs() {
-        this.accountName = Input.empty();
-        this.deploymentName = Input.empty();
-        this.properties = Input.empty();
-        this.resourceGroupName = Input.empty();
+        this.accountName = Output.empty();
+        this.deploymentName = Output.empty();
+        this.properties = Output.empty();
+        this.resourceGroupName = Output.empty();
     }
 
     public static Builder builder() {
@@ -86,10 +86,10 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> accountName;
-        private @Nullable Input<String> deploymentName;
-        private @Nullable Input<DeploymentPropertiesArgs> properties;
-        private Input<String> resourceGroupName;
+        private Output<String> accountName;
+        private @Nullable Output<String> deploymentName;
+        private @Nullable Output<DeploymentPropertiesArgs> properties;
+        private Output<String> resourceGroupName;
 
         public Builder() {
     	      // Empty
@@ -103,43 +103,43 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
     	      this.resourceGroupName = defaults.resourceGroupName;
         }
 
-        public Builder accountName(Input<String> accountName) {
+        public Builder accountName(Output<String> accountName) {
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
 
         public Builder accountName(String accountName) {
-            this.accountName = Input.of(Objects.requireNonNull(accountName));
+            this.accountName = Output.of(Objects.requireNonNull(accountName));
             return this;
         }
 
-        public Builder deploymentName(@Nullable Input<String> deploymentName) {
+        public Builder deploymentName(@Nullable Output<String> deploymentName) {
             this.deploymentName = deploymentName;
             return this;
         }
 
         public Builder deploymentName(@Nullable String deploymentName) {
-            this.deploymentName = Input.ofNullable(deploymentName);
+            this.deploymentName = Output.ofNullable(deploymentName);
             return this;
         }
 
-        public Builder properties(@Nullable Input<DeploymentPropertiesArgs> properties) {
+        public Builder properties(@Nullable Output<DeploymentPropertiesArgs> properties) {
             this.properties = properties;
             return this;
         }
 
         public Builder properties(@Nullable DeploymentPropertiesArgs properties) {
-            this.properties = Input.ofNullable(properties);
+            this.properties = Output.ofNullable(properties);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
         public DeploymentArgs build() {

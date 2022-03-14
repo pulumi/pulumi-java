@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.operationsmanagement.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -22,18 +22,18 @@ public final class ManagementAssociationPropertiesArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="applicationId", required=true)
-      private final Input<String> applicationId;
+      private final Output<String> applicationId;
 
-    public Input<String> getApplicationId() {
+    public Output<String> getApplicationId() {
         return this.applicationId;
     }
 
-    public ManagementAssociationPropertiesArgs(Input<String> applicationId) {
+    public ManagementAssociationPropertiesArgs(Output<String> applicationId) {
         this.applicationId = Objects.requireNonNull(applicationId, "expected parameter 'applicationId' to be non-null");
     }
 
     private ManagementAssociationPropertiesArgs() {
-        this.applicationId = Input.empty();
+        this.applicationId = Output.empty();
     }
 
     public static Builder builder() {
@@ -45,7 +45,7 @@ public final class ManagementAssociationPropertiesArgs extends io.pulumi.resourc
     }
 
     public static final class Builder {
-        private Input<String> applicationId;
+        private Output<String> applicationId;
 
         public Builder() {
     	      // Empty
@@ -56,13 +56,13 @@ public final class ManagementAssociationPropertiesArgs extends io.pulumi.resourc
     	      this.applicationId = defaults.applicationId;
         }
 
-        public Builder applicationId(Input<String> applicationId) {
+        public Builder applicationId(Output<String> applicationId) {
             this.applicationId = Objects.requireNonNull(applicationId);
             return this;
         }
 
         public Builder applicationId(String applicationId) {
-            this.applicationId = Input.of(Objects.requireNonNull(applicationId));
+            this.applicationId = Output.of(Objects.requireNonNull(applicationId));
             return this;
         }
         public ManagementAssociationPropertiesArgs build() {

@@ -3,7 +3,6 @@
 
 package io.pulumi.gcp.datacatalog;
 
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -178,14 +177,14 @@ public class EntryGroupIamBinding extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public EntryGroupIamBinding(String name, EntryGroupIamBindingArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:datacatalog/entryGroupIamBinding:EntryGroupIamBinding", name, args == null ? EntryGroupIamBindingArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("gcp:datacatalog/entryGroupIamBinding:EntryGroupIamBinding", name, args == null ? EntryGroupIamBindingArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private EntryGroupIamBinding(String name, Input<String> id, @Nullable EntryGroupIamBindingState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private EntryGroupIamBinding(String name, Output<String> id, @Nullable EntryGroupIamBindingState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("gcp:datacatalog/entryGroupIamBinding:EntryGroupIamBinding", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -201,7 +200,7 @@ public class EntryGroupIamBinding extends io.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static EntryGroupIamBinding get(String name, Input<String> id, @Nullable EntryGroupIamBindingState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static EntryGroupIamBinding get(String name, Output<String> id, @Nullable EntryGroupIamBindingState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new EntryGroupIamBinding(name, id, state, options);
     }
 }

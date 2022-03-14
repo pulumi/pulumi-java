@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dlp_v2.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2BucketingConfigArgs;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2CharacterMaskConfigArgs;
@@ -34,10 +34,10 @@ public final class GooglePrivacyDlpV2PrimitiveTransformationArgs extends io.pulu
      * 
      */
     @InputImport(name="bucketingConfig")
-      private final @Nullable Input<GooglePrivacyDlpV2BucketingConfigArgs> bucketingConfig;
+      private final @Nullable Output<GooglePrivacyDlpV2BucketingConfigArgs> bucketingConfig;
 
-    public Input<GooglePrivacyDlpV2BucketingConfigArgs> getBucketingConfig() {
-        return this.bucketingConfig == null ? Input.empty() : this.bucketingConfig;
+    public Output<GooglePrivacyDlpV2BucketingConfigArgs> getBucketingConfig() {
+        return this.bucketingConfig == null ? Output.empty() : this.bucketingConfig;
     }
 
     /**
@@ -45,10 +45,10 @@ public final class GooglePrivacyDlpV2PrimitiveTransformationArgs extends io.pulu
      * 
      */
     @InputImport(name="characterMaskConfig")
-      private final @Nullable Input<GooglePrivacyDlpV2CharacterMaskConfigArgs> characterMaskConfig;
+      private final @Nullable Output<GooglePrivacyDlpV2CharacterMaskConfigArgs> characterMaskConfig;
 
-    public Input<GooglePrivacyDlpV2CharacterMaskConfigArgs> getCharacterMaskConfig() {
-        return this.characterMaskConfig == null ? Input.empty() : this.characterMaskConfig;
+    public Output<GooglePrivacyDlpV2CharacterMaskConfigArgs> getCharacterMaskConfig() {
+        return this.characterMaskConfig == null ? Output.empty() : this.characterMaskConfig;
     }
 
     /**
@@ -56,10 +56,10 @@ public final class GooglePrivacyDlpV2PrimitiveTransformationArgs extends io.pulu
      * 
      */
     @InputImport(name="cryptoDeterministicConfig")
-      private final @Nullable Input<GooglePrivacyDlpV2CryptoDeterministicConfigArgs> cryptoDeterministicConfig;
+      private final @Nullable Output<GooglePrivacyDlpV2CryptoDeterministicConfigArgs> cryptoDeterministicConfig;
 
-    public Input<GooglePrivacyDlpV2CryptoDeterministicConfigArgs> getCryptoDeterministicConfig() {
-        return this.cryptoDeterministicConfig == null ? Input.empty() : this.cryptoDeterministicConfig;
+    public Output<GooglePrivacyDlpV2CryptoDeterministicConfigArgs> getCryptoDeterministicConfig() {
+        return this.cryptoDeterministicConfig == null ? Output.empty() : this.cryptoDeterministicConfig;
     }
 
     /**
@@ -67,10 +67,10 @@ public final class GooglePrivacyDlpV2PrimitiveTransformationArgs extends io.pulu
      * 
      */
     @InputImport(name="cryptoHashConfig")
-      private final @Nullable Input<GooglePrivacyDlpV2CryptoHashConfigArgs> cryptoHashConfig;
+      private final @Nullable Output<GooglePrivacyDlpV2CryptoHashConfigArgs> cryptoHashConfig;
 
-    public Input<GooglePrivacyDlpV2CryptoHashConfigArgs> getCryptoHashConfig() {
-        return this.cryptoHashConfig == null ? Input.empty() : this.cryptoHashConfig;
+    public Output<GooglePrivacyDlpV2CryptoHashConfigArgs> getCryptoHashConfig() {
+        return this.cryptoHashConfig == null ? Output.empty() : this.cryptoHashConfig;
     }
 
     /**
@@ -78,10 +78,10 @@ public final class GooglePrivacyDlpV2PrimitiveTransformationArgs extends io.pulu
      * 
      */
     @InputImport(name="cryptoReplaceFfxFpeConfig")
-      private final @Nullable Input<GooglePrivacyDlpV2CryptoReplaceFfxFpeConfigArgs> cryptoReplaceFfxFpeConfig;
+      private final @Nullable Output<GooglePrivacyDlpV2CryptoReplaceFfxFpeConfigArgs> cryptoReplaceFfxFpeConfig;
 
-    public Input<GooglePrivacyDlpV2CryptoReplaceFfxFpeConfigArgs> getCryptoReplaceFfxFpeConfig() {
-        return this.cryptoReplaceFfxFpeConfig == null ? Input.empty() : this.cryptoReplaceFfxFpeConfig;
+    public Output<GooglePrivacyDlpV2CryptoReplaceFfxFpeConfigArgs> getCryptoReplaceFfxFpeConfig() {
+        return this.cryptoReplaceFfxFpeConfig == null ? Output.empty() : this.cryptoReplaceFfxFpeConfig;
     }
 
     /**
@@ -89,10 +89,10 @@ public final class GooglePrivacyDlpV2PrimitiveTransformationArgs extends io.pulu
      * 
      */
     @InputImport(name="dateShiftConfig")
-      private final @Nullable Input<GooglePrivacyDlpV2DateShiftConfigArgs> dateShiftConfig;
+      private final @Nullable Output<GooglePrivacyDlpV2DateShiftConfigArgs> dateShiftConfig;
 
-    public Input<GooglePrivacyDlpV2DateShiftConfigArgs> getDateShiftConfig() {
-        return this.dateShiftConfig == null ? Input.empty() : this.dateShiftConfig;
+    public Output<GooglePrivacyDlpV2DateShiftConfigArgs> getDateShiftConfig() {
+        return this.dateShiftConfig == null ? Output.empty() : this.dateShiftConfig;
     }
 
     /**
@@ -100,10 +100,10 @@ public final class GooglePrivacyDlpV2PrimitiveTransformationArgs extends io.pulu
      * 
      */
     @InputImport(name="fixedSizeBucketingConfig")
-      private final @Nullable Input<GooglePrivacyDlpV2FixedSizeBucketingConfigArgs> fixedSizeBucketingConfig;
+      private final @Nullable Output<GooglePrivacyDlpV2FixedSizeBucketingConfigArgs> fixedSizeBucketingConfig;
 
-    public Input<GooglePrivacyDlpV2FixedSizeBucketingConfigArgs> getFixedSizeBucketingConfig() {
-        return this.fixedSizeBucketingConfig == null ? Input.empty() : this.fixedSizeBucketingConfig;
+    public Output<GooglePrivacyDlpV2FixedSizeBucketingConfigArgs> getFixedSizeBucketingConfig() {
+        return this.fixedSizeBucketingConfig == null ? Output.empty() : this.fixedSizeBucketingConfig;
     }
 
     /**
@@ -111,10 +111,10 @@ public final class GooglePrivacyDlpV2PrimitiveTransformationArgs extends io.pulu
      * 
      */
     @InputImport(name="redactConfig")
-      private final @Nullable Input<GooglePrivacyDlpV2RedactConfigArgs> redactConfig;
+      private final @Nullable Output<GooglePrivacyDlpV2RedactConfigArgs> redactConfig;
 
-    public Input<GooglePrivacyDlpV2RedactConfigArgs> getRedactConfig() {
-        return this.redactConfig == null ? Input.empty() : this.redactConfig;
+    public Output<GooglePrivacyDlpV2RedactConfigArgs> getRedactConfig() {
+        return this.redactConfig == null ? Output.empty() : this.redactConfig;
     }
 
     /**
@@ -122,10 +122,10 @@ public final class GooglePrivacyDlpV2PrimitiveTransformationArgs extends io.pulu
      * 
      */
     @InputImport(name="replaceConfig")
-      private final @Nullable Input<GooglePrivacyDlpV2ReplaceValueConfigArgs> replaceConfig;
+      private final @Nullable Output<GooglePrivacyDlpV2ReplaceValueConfigArgs> replaceConfig;
 
-    public Input<GooglePrivacyDlpV2ReplaceValueConfigArgs> getReplaceConfig() {
-        return this.replaceConfig == null ? Input.empty() : this.replaceConfig;
+    public Output<GooglePrivacyDlpV2ReplaceValueConfigArgs> getReplaceConfig() {
+        return this.replaceConfig == null ? Output.empty() : this.replaceConfig;
     }
 
     /**
@@ -133,10 +133,10 @@ public final class GooglePrivacyDlpV2PrimitiveTransformationArgs extends io.pulu
      * 
      */
     @InputImport(name="replaceDictionaryConfig")
-      private final @Nullable Input<GooglePrivacyDlpV2ReplaceDictionaryConfigArgs> replaceDictionaryConfig;
+      private final @Nullable Output<GooglePrivacyDlpV2ReplaceDictionaryConfigArgs> replaceDictionaryConfig;
 
-    public Input<GooglePrivacyDlpV2ReplaceDictionaryConfigArgs> getReplaceDictionaryConfig() {
-        return this.replaceDictionaryConfig == null ? Input.empty() : this.replaceDictionaryConfig;
+    public Output<GooglePrivacyDlpV2ReplaceDictionaryConfigArgs> getReplaceDictionaryConfig() {
+        return this.replaceDictionaryConfig == null ? Output.empty() : this.replaceDictionaryConfig;
     }
 
     /**
@@ -144,10 +144,10 @@ public final class GooglePrivacyDlpV2PrimitiveTransformationArgs extends io.pulu
      * 
      */
     @InputImport(name="replaceWithInfoTypeConfig")
-      private final @Nullable Input<GooglePrivacyDlpV2ReplaceWithInfoTypeConfigArgs> replaceWithInfoTypeConfig;
+      private final @Nullable Output<GooglePrivacyDlpV2ReplaceWithInfoTypeConfigArgs> replaceWithInfoTypeConfig;
 
-    public Input<GooglePrivacyDlpV2ReplaceWithInfoTypeConfigArgs> getReplaceWithInfoTypeConfig() {
-        return this.replaceWithInfoTypeConfig == null ? Input.empty() : this.replaceWithInfoTypeConfig;
+    public Output<GooglePrivacyDlpV2ReplaceWithInfoTypeConfigArgs> getReplaceWithInfoTypeConfig() {
+        return this.replaceWithInfoTypeConfig == null ? Output.empty() : this.replaceWithInfoTypeConfig;
     }
 
     /**
@@ -155,25 +155,25 @@ public final class GooglePrivacyDlpV2PrimitiveTransformationArgs extends io.pulu
      * 
      */
     @InputImport(name="timePartConfig")
-      private final @Nullable Input<GooglePrivacyDlpV2TimePartConfigArgs> timePartConfig;
+      private final @Nullable Output<GooglePrivacyDlpV2TimePartConfigArgs> timePartConfig;
 
-    public Input<GooglePrivacyDlpV2TimePartConfigArgs> getTimePartConfig() {
-        return this.timePartConfig == null ? Input.empty() : this.timePartConfig;
+    public Output<GooglePrivacyDlpV2TimePartConfigArgs> getTimePartConfig() {
+        return this.timePartConfig == null ? Output.empty() : this.timePartConfig;
     }
 
     public GooglePrivacyDlpV2PrimitiveTransformationArgs(
-        @Nullable Input<GooglePrivacyDlpV2BucketingConfigArgs> bucketingConfig,
-        @Nullable Input<GooglePrivacyDlpV2CharacterMaskConfigArgs> characterMaskConfig,
-        @Nullable Input<GooglePrivacyDlpV2CryptoDeterministicConfigArgs> cryptoDeterministicConfig,
-        @Nullable Input<GooglePrivacyDlpV2CryptoHashConfigArgs> cryptoHashConfig,
-        @Nullable Input<GooglePrivacyDlpV2CryptoReplaceFfxFpeConfigArgs> cryptoReplaceFfxFpeConfig,
-        @Nullable Input<GooglePrivacyDlpV2DateShiftConfigArgs> dateShiftConfig,
-        @Nullable Input<GooglePrivacyDlpV2FixedSizeBucketingConfigArgs> fixedSizeBucketingConfig,
-        @Nullable Input<GooglePrivacyDlpV2RedactConfigArgs> redactConfig,
-        @Nullable Input<GooglePrivacyDlpV2ReplaceValueConfigArgs> replaceConfig,
-        @Nullable Input<GooglePrivacyDlpV2ReplaceDictionaryConfigArgs> replaceDictionaryConfig,
-        @Nullable Input<GooglePrivacyDlpV2ReplaceWithInfoTypeConfigArgs> replaceWithInfoTypeConfig,
-        @Nullable Input<GooglePrivacyDlpV2TimePartConfigArgs> timePartConfig) {
+        @Nullable Output<GooglePrivacyDlpV2BucketingConfigArgs> bucketingConfig,
+        @Nullable Output<GooglePrivacyDlpV2CharacterMaskConfigArgs> characterMaskConfig,
+        @Nullable Output<GooglePrivacyDlpV2CryptoDeterministicConfigArgs> cryptoDeterministicConfig,
+        @Nullable Output<GooglePrivacyDlpV2CryptoHashConfigArgs> cryptoHashConfig,
+        @Nullable Output<GooglePrivacyDlpV2CryptoReplaceFfxFpeConfigArgs> cryptoReplaceFfxFpeConfig,
+        @Nullable Output<GooglePrivacyDlpV2DateShiftConfigArgs> dateShiftConfig,
+        @Nullable Output<GooglePrivacyDlpV2FixedSizeBucketingConfigArgs> fixedSizeBucketingConfig,
+        @Nullable Output<GooglePrivacyDlpV2RedactConfigArgs> redactConfig,
+        @Nullable Output<GooglePrivacyDlpV2ReplaceValueConfigArgs> replaceConfig,
+        @Nullable Output<GooglePrivacyDlpV2ReplaceDictionaryConfigArgs> replaceDictionaryConfig,
+        @Nullable Output<GooglePrivacyDlpV2ReplaceWithInfoTypeConfigArgs> replaceWithInfoTypeConfig,
+        @Nullable Output<GooglePrivacyDlpV2TimePartConfigArgs> timePartConfig) {
         this.bucketingConfig = bucketingConfig;
         this.characterMaskConfig = characterMaskConfig;
         this.cryptoDeterministicConfig = cryptoDeterministicConfig;
@@ -189,18 +189,18 @@ public final class GooglePrivacyDlpV2PrimitiveTransformationArgs extends io.pulu
     }
 
     private GooglePrivacyDlpV2PrimitiveTransformationArgs() {
-        this.bucketingConfig = Input.empty();
-        this.characterMaskConfig = Input.empty();
-        this.cryptoDeterministicConfig = Input.empty();
-        this.cryptoHashConfig = Input.empty();
-        this.cryptoReplaceFfxFpeConfig = Input.empty();
-        this.dateShiftConfig = Input.empty();
-        this.fixedSizeBucketingConfig = Input.empty();
-        this.redactConfig = Input.empty();
-        this.replaceConfig = Input.empty();
-        this.replaceDictionaryConfig = Input.empty();
-        this.replaceWithInfoTypeConfig = Input.empty();
-        this.timePartConfig = Input.empty();
+        this.bucketingConfig = Output.empty();
+        this.characterMaskConfig = Output.empty();
+        this.cryptoDeterministicConfig = Output.empty();
+        this.cryptoHashConfig = Output.empty();
+        this.cryptoReplaceFfxFpeConfig = Output.empty();
+        this.dateShiftConfig = Output.empty();
+        this.fixedSizeBucketingConfig = Output.empty();
+        this.redactConfig = Output.empty();
+        this.replaceConfig = Output.empty();
+        this.replaceDictionaryConfig = Output.empty();
+        this.replaceWithInfoTypeConfig = Output.empty();
+        this.timePartConfig = Output.empty();
     }
 
     public static Builder builder() {
@@ -212,18 +212,18 @@ public final class GooglePrivacyDlpV2PrimitiveTransformationArgs extends io.pulu
     }
 
     public static final class Builder {
-        private @Nullable Input<GooglePrivacyDlpV2BucketingConfigArgs> bucketingConfig;
-        private @Nullable Input<GooglePrivacyDlpV2CharacterMaskConfigArgs> characterMaskConfig;
-        private @Nullable Input<GooglePrivacyDlpV2CryptoDeterministicConfigArgs> cryptoDeterministicConfig;
-        private @Nullable Input<GooglePrivacyDlpV2CryptoHashConfigArgs> cryptoHashConfig;
-        private @Nullable Input<GooglePrivacyDlpV2CryptoReplaceFfxFpeConfigArgs> cryptoReplaceFfxFpeConfig;
-        private @Nullable Input<GooglePrivacyDlpV2DateShiftConfigArgs> dateShiftConfig;
-        private @Nullable Input<GooglePrivacyDlpV2FixedSizeBucketingConfigArgs> fixedSizeBucketingConfig;
-        private @Nullable Input<GooglePrivacyDlpV2RedactConfigArgs> redactConfig;
-        private @Nullable Input<GooglePrivacyDlpV2ReplaceValueConfigArgs> replaceConfig;
-        private @Nullable Input<GooglePrivacyDlpV2ReplaceDictionaryConfigArgs> replaceDictionaryConfig;
-        private @Nullable Input<GooglePrivacyDlpV2ReplaceWithInfoTypeConfigArgs> replaceWithInfoTypeConfig;
-        private @Nullable Input<GooglePrivacyDlpV2TimePartConfigArgs> timePartConfig;
+        private @Nullable Output<GooglePrivacyDlpV2BucketingConfigArgs> bucketingConfig;
+        private @Nullable Output<GooglePrivacyDlpV2CharacterMaskConfigArgs> characterMaskConfig;
+        private @Nullable Output<GooglePrivacyDlpV2CryptoDeterministicConfigArgs> cryptoDeterministicConfig;
+        private @Nullable Output<GooglePrivacyDlpV2CryptoHashConfigArgs> cryptoHashConfig;
+        private @Nullable Output<GooglePrivacyDlpV2CryptoReplaceFfxFpeConfigArgs> cryptoReplaceFfxFpeConfig;
+        private @Nullable Output<GooglePrivacyDlpV2DateShiftConfigArgs> dateShiftConfig;
+        private @Nullable Output<GooglePrivacyDlpV2FixedSizeBucketingConfigArgs> fixedSizeBucketingConfig;
+        private @Nullable Output<GooglePrivacyDlpV2RedactConfigArgs> redactConfig;
+        private @Nullable Output<GooglePrivacyDlpV2ReplaceValueConfigArgs> replaceConfig;
+        private @Nullable Output<GooglePrivacyDlpV2ReplaceDictionaryConfigArgs> replaceDictionaryConfig;
+        private @Nullable Output<GooglePrivacyDlpV2ReplaceWithInfoTypeConfigArgs> replaceWithInfoTypeConfig;
+        private @Nullable Output<GooglePrivacyDlpV2TimePartConfigArgs> timePartConfig;
 
         public Builder() {
     	      // Empty
@@ -245,123 +245,123 @@ public final class GooglePrivacyDlpV2PrimitiveTransformationArgs extends io.pulu
     	      this.timePartConfig = defaults.timePartConfig;
         }
 
-        public Builder bucketingConfig(@Nullable Input<GooglePrivacyDlpV2BucketingConfigArgs> bucketingConfig) {
+        public Builder bucketingConfig(@Nullable Output<GooglePrivacyDlpV2BucketingConfigArgs> bucketingConfig) {
             this.bucketingConfig = bucketingConfig;
             return this;
         }
 
         public Builder bucketingConfig(@Nullable GooglePrivacyDlpV2BucketingConfigArgs bucketingConfig) {
-            this.bucketingConfig = Input.ofNullable(bucketingConfig);
+            this.bucketingConfig = Output.ofNullable(bucketingConfig);
             return this;
         }
 
-        public Builder characterMaskConfig(@Nullable Input<GooglePrivacyDlpV2CharacterMaskConfigArgs> characterMaskConfig) {
+        public Builder characterMaskConfig(@Nullable Output<GooglePrivacyDlpV2CharacterMaskConfigArgs> characterMaskConfig) {
             this.characterMaskConfig = characterMaskConfig;
             return this;
         }
 
         public Builder characterMaskConfig(@Nullable GooglePrivacyDlpV2CharacterMaskConfigArgs characterMaskConfig) {
-            this.characterMaskConfig = Input.ofNullable(characterMaskConfig);
+            this.characterMaskConfig = Output.ofNullable(characterMaskConfig);
             return this;
         }
 
-        public Builder cryptoDeterministicConfig(@Nullable Input<GooglePrivacyDlpV2CryptoDeterministicConfigArgs> cryptoDeterministicConfig) {
+        public Builder cryptoDeterministicConfig(@Nullable Output<GooglePrivacyDlpV2CryptoDeterministicConfigArgs> cryptoDeterministicConfig) {
             this.cryptoDeterministicConfig = cryptoDeterministicConfig;
             return this;
         }
 
         public Builder cryptoDeterministicConfig(@Nullable GooglePrivacyDlpV2CryptoDeterministicConfigArgs cryptoDeterministicConfig) {
-            this.cryptoDeterministicConfig = Input.ofNullable(cryptoDeterministicConfig);
+            this.cryptoDeterministicConfig = Output.ofNullable(cryptoDeterministicConfig);
             return this;
         }
 
-        public Builder cryptoHashConfig(@Nullable Input<GooglePrivacyDlpV2CryptoHashConfigArgs> cryptoHashConfig) {
+        public Builder cryptoHashConfig(@Nullable Output<GooglePrivacyDlpV2CryptoHashConfigArgs> cryptoHashConfig) {
             this.cryptoHashConfig = cryptoHashConfig;
             return this;
         }
 
         public Builder cryptoHashConfig(@Nullable GooglePrivacyDlpV2CryptoHashConfigArgs cryptoHashConfig) {
-            this.cryptoHashConfig = Input.ofNullable(cryptoHashConfig);
+            this.cryptoHashConfig = Output.ofNullable(cryptoHashConfig);
             return this;
         }
 
-        public Builder cryptoReplaceFfxFpeConfig(@Nullable Input<GooglePrivacyDlpV2CryptoReplaceFfxFpeConfigArgs> cryptoReplaceFfxFpeConfig) {
+        public Builder cryptoReplaceFfxFpeConfig(@Nullable Output<GooglePrivacyDlpV2CryptoReplaceFfxFpeConfigArgs> cryptoReplaceFfxFpeConfig) {
             this.cryptoReplaceFfxFpeConfig = cryptoReplaceFfxFpeConfig;
             return this;
         }
 
         public Builder cryptoReplaceFfxFpeConfig(@Nullable GooglePrivacyDlpV2CryptoReplaceFfxFpeConfigArgs cryptoReplaceFfxFpeConfig) {
-            this.cryptoReplaceFfxFpeConfig = Input.ofNullable(cryptoReplaceFfxFpeConfig);
+            this.cryptoReplaceFfxFpeConfig = Output.ofNullable(cryptoReplaceFfxFpeConfig);
             return this;
         }
 
-        public Builder dateShiftConfig(@Nullable Input<GooglePrivacyDlpV2DateShiftConfigArgs> dateShiftConfig) {
+        public Builder dateShiftConfig(@Nullable Output<GooglePrivacyDlpV2DateShiftConfigArgs> dateShiftConfig) {
             this.dateShiftConfig = dateShiftConfig;
             return this;
         }
 
         public Builder dateShiftConfig(@Nullable GooglePrivacyDlpV2DateShiftConfigArgs dateShiftConfig) {
-            this.dateShiftConfig = Input.ofNullable(dateShiftConfig);
+            this.dateShiftConfig = Output.ofNullable(dateShiftConfig);
             return this;
         }
 
-        public Builder fixedSizeBucketingConfig(@Nullable Input<GooglePrivacyDlpV2FixedSizeBucketingConfigArgs> fixedSizeBucketingConfig) {
+        public Builder fixedSizeBucketingConfig(@Nullable Output<GooglePrivacyDlpV2FixedSizeBucketingConfigArgs> fixedSizeBucketingConfig) {
             this.fixedSizeBucketingConfig = fixedSizeBucketingConfig;
             return this;
         }
 
         public Builder fixedSizeBucketingConfig(@Nullable GooglePrivacyDlpV2FixedSizeBucketingConfigArgs fixedSizeBucketingConfig) {
-            this.fixedSizeBucketingConfig = Input.ofNullable(fixedSizeBucketingConfig);
+            this.fixedSizeBucketingConfig = Output.ofNullable(fixedSizeBucketingConfig);
             return this;
         }
 
-        public Builder redactConfig(@Nullable Input<GooglePrivacyDlpV2RedactConfigArgs> redactConfig) {
+        public Builder redactConfig(@Nullable Output<GooglePrivacyDlpV2RedactConfigArgs> redactConfig) {
             this.redactConfig = redactConfig;
             return this;
         }
 
         public Builder redactConfig(@Nullable GooglePrivacyDlpV2RedactConfigArgs redactConfig) {
-            this.redactConfig = Input.ofNullable(redactConfig);
+            this.redactConfig = Output.ofNullable(redactConfig);
             return this;
         }
 
-        public Builder replaceConfig(@Nullable Input<GooglePrivacyDlpV2ReplaceValueConfigArgs> replaceConfig) {
+        public Builder replaceConfig(@Nullable Output<GooglePrivacyDlpV2ReplaceValueConfigArgs> replaceConfig) {
             this.replaceConfig = replaceConfig;
             return this;
         }
 
         public Builder replaceConfig(@Nullable GooglePrivacyDlpV2ReplaceValueConfigArgs replaceConfig) {
-            this.replaceConfig = Input.ofNullable(replaceConfig);
+            this.replaceConfig = Output.ofNullable(replaceConfig);
             return this;
         }
 
-        public Builder replaceDictionaryConfig(@Nullable Input<GooglePrivacyDlpV2ReplaceDictionaryConfigArgs> replaceDictionaryConfig) {
+        public Builder replaceDictionaryConfig(@Nullable Output<GooglePrivacyDlpV2ReplaceDictionaryConfigArgs> replaceDictionaryConfig) {
             this.replaceDictionaryConfig = replaceDictionaryConfig;
             return this;
         }
 
         public Builder replaceDictionaryConfig(@Nullable GooglePrivacyDlpV2ReplaceDictionaryConfigArgs replaceDictionaryConfig) {
-            this.replaceDictionaryConfig = Input.ofNullable(replaceDictionaryConfig);
+            this.replaceDictionaryConfig = Output.ofNullable(replaceDictionaryConfig);
             return this;
         }
 
-        public Builder replaceWithInfoTypeConfig(@Nullable Input<GooglePrivacyDlpV2ReplaceWithInfoTypeConfigArgs> replaceWithInfoTypeConfig) {
+        public Builder replaceWithInfoTypeConfig(@Nullable Output<GooglePrivacyDlpV2ReplaceWithInfoTypeConfigArgs> replaceWithInfoTypeConfig) {
             this.replaceWithInfoTypeConfig = replaceWithInfoTypeConfig;
             return this;
         }
 
         public Builder replaceWithInfoTypeConfig(@Nullable GooglePrivacyDlpV2ReplaceWithInfoTypeConfigArgs replaceWithInfoTypeConfig) {
-            this.replaceWithInfoTypeConfig = Input.ofNullable(replaceWithInfoTypeConfig);
+            this.replaceWithInfoTypeConfig = Output.ofNullable(replaceWithInfoTypeConfig);
             return this;
         }
 
-        public Builder timePartConfig(@Nullable Input<GooglePrivacyDlpV2TimePartConfigArgs> timePartConfig) {
+        public Builder timePartConfig(@Nullable Output<GooglePrivacyDlpV2TimePartConfigArgs> timePartConfig) {
             this.timePartConfig = timePartConfig;
             return this;
         }
 
         public Builder timePartConfig(@Nullable GooglePrivacyDlpV2TimePartConfigArgs timePartConfig) {
-            this.timePartConfig = Input.ofNullable(timePartConfig);
+            this.timePartConfig = Output.ofNullable(timePartConfig);
             return this;
         }
         public GooglePrivacyDlpV2PrimitiveTransformationArgs build() {

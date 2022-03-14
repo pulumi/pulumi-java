@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.compute.inputs.SecurityScanConfigAuthenticationCustomAccountGetArgs;
 import io.pulumi.gcp.compute.inputs.SecurityScanConfigAuthenticationGoogleAccountGetArgs;
@@ -21,10 +21,10 @@ public final class SecurityScanConfigAuthenticationGetArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="customAccount")
-      private final @Nullable Input<SecurityScanConfigAuthenticationCustomAccountGetArgs> customAccount;
+      private final @Nullable Output<SecurityScanConfigAuthenticationCustomAccountGetArgs> customAccount;
 
-    public Input<SecurityScanConfigAuthenticationCustomAccountGetArgs> getCustomAccount() {
-        return this.customAccount == null ? Input.empty() : this.customAccount;
+    public Output<SecurityScanConfigAuthenticationCustomAccountGetArgs> getCustomAccount() {
+        return this.customAccount == null ? Output.empty() : this.customAccount;
     }
 
     /**
@@ -33,22 +33,22 @@ public final class SecurityScanConfigAuthenticationGetArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="googleAccount")
-      private final @Nullable Input<SecurityScanConfigAuthenticationGoogleAccountGetArgs> googleAccount;
+      private final @Nullable Output<SecurityScanConfigAuthenticationGoogleAccountGetArgs> googleAccount;
 
-    public Input<SecurityScanConfigAuthenticationGoogleAccountGetArgs> getGoogleAccount() {
-        return this.googleAccount == null ? Input.empty() : this.googleAccount;
+    public Output<SecurityScanConfigAuthenticationGoogleAccountGetArgs> getGoogleAccount() {
+        return this.googleAccount == null ? Output.empty() : this.googleAccount;
     }
 
     public SecurityScanConfigAuthenticationGetArgs(
-        @Nullable Input<SecurityScanConfigAuthenticationCustomAccountGetArgs> customAccount,
-        @Nullable Input<SecurityScanConfigAuthenticationGoogleAccountGetArgs> googleAccount) {
+        @Nullable Output<SecurityScanConfigAuthenticationCustomAccountGetArgs> customAccount,
+        @Nullable Output<SecurityScanConfigAuthenticationGoogleAccountGetArgs> googleAccount) {
         this.customAccount = customAccount;
         this.googleAccount = googleAccount;
     }
 
     private SecurityScanConfigAuthenticationGetArgs() {
-        this.customAccount = Input.empty();
-        this.googleAccount = Input.empty();
+        this.customAccount = Output.empty();
+        this.googleAccount = Output.empty();
     }
 
     public static Builder builder() {
@@ -60,8 +60,8 @@ public final class SecurityScanConfigAuthenticationGetArgs extends io.pulumi.res
     }
 
     public static final class Builder {
-        private @Nullable Input<SecurityScanConfigAuthenticationCustomAccountGetArgs> customAccount;
-        private @Nullable Input<SecurityScanConfigAuthenticationGoogleAccountGetArgs> googleAccount;
+        private @Nullable Output<SecurityScanConfigAuthenticationCustomAccountGetArgs> customAccount;
+        private @Nullable Output<SecurityScanConfigAuthenticationGoogleAccountGetArgs> googleAccount;
 
         public Builder() {
     	      // Empty
@@ -73,23 +73,23 @@ public final class SecurityScanConfigAuthenticationGetArgs extends io.pulumi.res
     	      this.googleAccount = defaults.googleAccount;
         }
 
-        public Builder customAccount(@Nullable Input<SecurityScanConfigAuthenticationCustomAccountGetArgs> customAccount) {
+        public Builder customAccount(@Nullable Output<SecurityScanConfigAuthenticationCustomAccountGetArgs> customAccount) {
             this.customAccount = customAccount;
             return this;
         }
 
         public Builder customAccount(@Nullable SecurityScanConfigAuthenticationCustomAccountGetArgs customAccount) {
-            this.customAccount = Input.ofNullable(customAccount);
+            this.customAccount = Output.ofNullable(customAccount);
             return this;
         }
 
-        public Builder googleAccount(@Nullable Input<SecurityScanConfigAuthenticationGoogleAccountGetArgs> googleAccount) {
+        public Builder googleAccount(@Nullable Output<SecurityScanConfigAuthenticationGoogleAccountGetArgs> googleAccount) {
             this.googleAccount = googleAccount;
             return this;
         }
 
         public Builder googleAccount(@Nullable SecurityScanConfigAuthenticationGoogleAccountGetArgs googleAccount) {
-            this.googleAccount = Input.ofNullable(googleAccount);
+            this.googleAccount = Output.ofNullable(googleAccount);
             return this;
         }
         public SecurityScanConfigAuthenticationGetArgs build() {

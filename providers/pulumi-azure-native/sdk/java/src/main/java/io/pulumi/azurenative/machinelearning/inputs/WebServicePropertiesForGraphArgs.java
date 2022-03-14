@@ -15,7 +15,7 @@ import io.pulumi.azurenative.machinelearning.inputs.ServiceInputOutputSpecificat
 import io.pulumi.azurenative.machinelearning.inputs.StorageAccountArgs;
 import io.pulumi.azurenative.machinelearning.inputs.WebServiceKeysArgs;
 import io.pulumi.azurenative.machinelearning.inputs.WebServiceParameterArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -37,10 +37,10 @@ public final class WebServicePropertiesForGraphArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="assets")
-      private final @Nullable Input<Map<String,AssetItemArgs>> assets;
+      private final @Nullable Output<Map<String,AssetItemArgs>> assets;
 
-    public Input<Map<String,AssetItemArgs>> getAssets() {
-        return this.assets == null ? Input.empty() : this.assets;
+    public Output<Map<String,AssetItemArgs>> getAssets() {
+        return this.assets == null ? Output.empty() : this.assets;
     }
 
     /**
@@ -48,10 +48,10 @@ public final class WebServicePropertiesForGraphArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="commitmentPlan")
-      private final @Nullable Input<CommitmentPlanArgs> commitmentPlan;
+      private final @Nullable Output<CommitmentPlanArgs> commitmentPlan;
 
-    public Input<CommitmentPlanArgs> getCommitmentPlan() {
-        return this.commitmentPlan == null ? Input.empty() : this.commitmentPlan;
+    public Output<CommitmentPlanArgs> getCommitmentPlan() {
+        return this.commitmentPlan == null ? Output.empty() : this.commitmentPlan;
     }
 
     /**
@@ -59,10 +59,10 @@ public final class WebServicePropertiesForGraphArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -70,10 +70,10 @@ public final class WebServicePropertiesForGraphArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="diagnostics")
-      private final @Nullable Input<DiagnosticsConfigurationArgs> diagnostics;
+      private final @Nullable Output<DiagnosticsConfigurationArgs> diagnostics;
 
-    public Input<DiagnosticsConfigurationArgs> getDiagnostics() {
-        return this.diagnostics == null ? Input.empty() : this.diagnostics;
+    public Output<DiagnosticsConfigurationArgs> getDiagnostics() {
+        return this.diagnostics == null ? Output.empty() : this.diagnostics;
     }
 
     /**
@@ -81,10 +81,10 @@ public final class WebServicePropertiesForGraphArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="exampleRequest")
-      private final @Nullable Input<ExampleRequestArgs> exampleRequest;
+      private final @Nullable Output<ExampleRequestArgs> exampleRequest;
 
-    public Input<ExampleRequestArgs> getExampleRequest() {
-        return this.exampleRequest == null ? Input.empty() : this.exampleRequest;
+    public Output<ExampleRequestArgs> getExampleRequest() {
+        return this.exampleRequest == null ? Output.empty() : this.exampleRequest;
     }
 
     /**
@@ -92,10 +92,10 @@ public final class WebServicePropertiesForGraphArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="exposeSampleData")
-      private final @Nullable Input<Boolean> exposeSampleData;
+      private final @Nullable Output<Boolean> exposeSampleData;
 
-    public Input<Boolean> getExposeSampleData() {
-        return this.exposeSampleData == null ? Input.empty() : this.exposeSampleData;
+    public Output<Boolean> getExposeSampleData() {
+        return this.exposeSampleData == null ? Output.empty() : this.exposeSampleData;
     }
 
     /**
@@ -103,10 +103,10 @@ public final class WebServicePropertiesForGraphArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="input")
-      private final @Nullable Input<ServiceInputOutputSpecificationArgs> input;
+      private final @Nullable Output<ServiceInputOutputSpecificationArgs> input;
 
-    public Input<ServiceInputOutputSpecificationArgs> getInput() {
-        return this.input == null ? Input.empty() : this.input;
+    public Output<ServiceInputOutputSpecificationArgs> getInput() {
+        return this.input == null ? Output.empty() : this.input;
     }
 
     /**
@@ -114,10 +114,10 @@ public final class WebServicePropertiesForGraphArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="keys")
-      private final @Nullable Input<WebServiceKeysArgs> keys;
+      private final @Nullable Output<WebServiceKeysArgs> keys;
 
-    public Input<WebServiceKeysArgs> getKeys() {
-        return this.keys == null ? Input.empty() : this.keys;
+    public Output<WebServiceKeysArgs> getKeys() {
+        return this.keys == null ? Output.empty() : this.keys;
     }
 
     /**
@@ -125,10 +125,10 @@ public final class WebServicePropertiesForGraphArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="machineLearningWorkspace")
-      private final @Nullable Input<MachineLearningWorkspaceArgs> machineLearningWorkspace;
+      private final @Nullable Output<MachineLearningWorkspaceArgs> machineLearningWorkspace;
 
-    public Input<MachineLearningWorkspaceArgs> getMachineLearningWorkspace() {
-        return this.machineLearningWorkspace == null ? Input.empty() : this.machineLearningWorkspace;
+    public Output<MachineLearningWorkspaceArgs> getMachineLearningWorkspace() {
+        return this.machineLearningWorkspace == null ? Output.empty() : this.machineLearningWorkspace;
     }
 
     /**
@@ -136,10 +136,10 @@ public final class WebServicePropertiesForGraphArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="output")
-      private final @Nullable Input<ServiceInputOutputSpecificationArgs> output;
+      private final @Nullable Output<ServiceInputOutputSpecificationArgs> output;
 
-    public Input<ServiceInputOutputSpecificationArgs> getOutput() {
-        return this.output == null ? Input.empty() : this.output;
+    public Output<ServiceInputOutputSpecificationArgs> getOutput() {
+        return this.output == null ? Output.empty() : this.output;
     }
 
     /**
@@ -147,10 +147,10 @@ public final class WebServicePropertiesForGraphArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="package")
-      private final @Nullable Input<GraphPackageArgs> $package;
+      private final @Nullable Output<GraphPackageArgs> $package;
 
-    public Input<GraphPackageArgs> get$package() {
-        return this.$package == null ? Input.empty() : this.$package;
+    public Output<GraphPackageArgs> get$package() {
+        return this.$package == null ? Output.empty() : this.$package;
     }
 
     /**
@@ -159,9 +159,9 @@ public final class WebServicePropertiesForGraphArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="packageType", required=true)
-      private final Input<String> packageType;
+      private final Output<String> packageType;
 
-    public Input<String> getPackageType() {
+    public Output<String> getPackageType() {
         return this.packageType;
     }
 
@@ -170,10 +170,10 @@ public final class WebServicePropertiesForGraphArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="parameters")
-      private final @Nullable Input<Map<String,WebServiceParameterArgs>> parameters;
+      private final @Nullable Output<Map<String,WebServiceParameterArgs>> parameters;
 
-    public Input<Map<String,WebServiceParameterArgs>> getParameters() {
-        return this.parameters == null ? Input.empty() : this.parameters;
+    public Output<Map<String,WebServiceParameterArgs>> getParameters() {
+        return this.parameters == null ? Output.empty() : this.parameters;
     }
 
     /**
@@ -181,10 +181,10 @@ public final class WebServicePropertiesForGraphArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="payloadsInBlobStorage")
-      private final @Nullable Input<Boolean> payloadsInBlobStorage;
+      private final @Nullable Output<Boolean> payloadsInBlobStorage;
 
-    public Input<Boolean> getPayloadsInBlobStorage() {
-        return this.payloadsInBlobStorage == null ? Input.empty() : this.payloadsInBlobStorage;
+    public Output<Boolean> getPayloadsInBlobStorage() {
+        return this.payloadsInBlobStorage == null ? Output.empty() : this.payloadsInBlobStorage;
     }
 
     /**
@@ -192,10 +192,10 @@ public final class WebServicePropertiesForGraphArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="payloadsLocation")
-      private final @Nullable Input<BlobLocationArgs> payloadsLocation;
+      private final @Nullable Output<BlobLocationArgs> payloadsLocation;
 
-    public Input<BlobLocationArgs> getPayloadsLocation() {
-        return this.payloadsLocation == null ? Input.empty() : this.payloadsLocation;
+    public Output<BlobLocationArgs> getPayloadsLocation() {
+        return this.payloadsLocation == null ? Output.empty() : this.payloadsLocation;
     }
 
     /**
@@ -203,10 +203,10 @@ public final class WebServicePropertiesForGraphArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="readOnly")
-      private final @Nullable Input<Boolean> readOnly;
+      private final @Nullable Output<Boolean> readOnly;
 
-    public Input<Boolean> getReadOnly() {
-        return this.readOnly == null ? Input.empty() : this.readOnly;
+    public Output<Boolean> getReadOnly() {
+        return this.readOnly == null ? Output.empty() : this.readOnly;
     }
 
     /**
@@ -214,10 +214,10 @@ public final class WebServicePropertiesForGraphArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="realtimeConfiguration")
-      private final @Nullable Input<RealtimeConfigurationArgs> realtimeConfiguration;
+      private final @Nullable Output<RealtimeConfigurationArgs> realtimeConfiguration;
 
-    public Input<RealtimeConfigurationArgs> getRealtimeConfiguration() {
-        return this.realtimeConfiguration == null ? Input.empty() : this.realtimeConfiguration;
+    public Output<RealtimeConfigurationArgs> getRealtimeConfiguration() {
+        return this.realtimeConfiguration == null ? Output.empty() : this.realtimeConfiguration;
     }
 
     /**
@@ -225,10 +225,10 @@ public final class WebServicePropertiesForGraphArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="storageAccount")
-      private final @Nullable Input<StorageAccountArgs> storageAccount;
+      private final @Nullable Output<StorageAccountArgs> storageAccount;
 
-    public Input<StorageAccountArgs> getStorageAccount() {
-        return this.storageAccount == null ? Input.empty() : this.storageAccount;
+    public Output<StorageAccountArgs> getStorageAccount() {
+        return this.storageAccount == null ? Output.empty() : this.storageAccount;
     }
 
     /**
@@ -236,32 +236,32 @@ public final class WebServicePropertiesForGraphArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="title")
-      private final @Nullable Input<String> title;
+      private final @Nullable Output<String> title;
 
-    public Input<String> getTitle() {
-        return this.title == null ? Input.empty() : this.title;
+    public Output<String> getTitle() {
+        return this.title == null ? Output.empty() : this.title;
     }
 
     public WebServicePropertiesForGraphArgs(
-        @Nullable Input<Map<String,AssetItemArgs>> assets,
-        @Nullable Input<CommitmentPlanArgs> commitmentPlan,
-        @Nullable Input<String> description,
-        @Nullable Input<DiagnosticsConfigurationArgs> diagnostics,
-        @Nullable Input<ExampleRequestArgs> exampleRequest,
-        @Nullable Input<Boolean> exposeSampleData,
-        @Nullable Input<ServiceInputOutputSpecificationArgs> input,
-        @Nullable Input<WebServiceKeysArgs> keys,
-        @Nullable Input<MachineLearningWorkspaceArgs> machineLearningWorkspace,
-        @Nullable Input<ServiceInputOutputSpecificationArgs> output,
-        @Nullable Input<GraphPackageArgs> $package,
-        Input<String> packageType,
-        @Nullable Input<Map<String,WebServiceParameterArgs>> parameters,
-        @Nullable Input<Boolean> payloadsInBlobStorage,
-        @Nullable Input<BlobLocationArgs> payloadsLocation,
-        @Nullable Input<Boolean> readOnly,
-        @Nullable Input<RealtimeConfigurationArgs> realtimeConfiguration,
-        @Nullable Input<StorageAccountArgs> storageAccount,
-        @Nullable Input<String> title) {
+        @Nullable Output<Map<String,AssetItemArgs>> assets,
+        @Nullable Output<CommitmentPlanArgs> commitmentPlan,
+        @Nullable Output<String> description,
+        @Nullable Output<DiagnosticsConfigurationArgs> diagnostics,
+        @Nullable Output<ExampleRequestArgs> exampleRequest,
+        @Nullable Output<Boolean> exposeSampleData,
+        @Nullable Output<ServiceInputOutputSpecificationArgs> input,
+        @Nullable Output<WebServiceKeysArgs> keys,
+        @Nullable Output<MachineLearningWorkspaceArgs> machineLearningWorkspace,
+        @Nullable Output<ServiceInputOutputSpecificationArgs> output,
+        @Nullable Output<GraphPackageArgs> $package,
+        Output<String> packageType,
+        @Nullable Output<Map<String,WebServiceParameterArgs>> parameters,
+        @Nullable Output<Boolean> payloadsInBlobStorage,
+        @Nullable Output<BlobLocationArgs> payloadsLocation,
+        @Nullable Output<Boolean> readOnly,
+        @Nullable Output<RealtimeConfigurationArgs> realtimeConfiguration,
+        @Nullable Output<StorageAccountArgs> storageAccount,
+        @Nullable Output<String> title) {
         this.assets = assets;
         this.commitmentPlan = commitmentPlan;
         this.description = description;
@@ -284,25 +284,25 @@ public final class WebServicePropertiesForGraphArgs extends io.pulumi.resources.
     }
 
     private WebServicePropertiesForGraphArgs() {
-        this.assets = Input.empty();
-        this.commitmentPlan = Input.empty();
-        this.description = Input.empty();
-        this.diagnostics = Input.empty();
-        this.exampleRequest = Input.empty();
-        this.exposeSampleData = Input.empty();
-        this.input = Input.empty();
-        this.keys = Input.empty();
-        this.machineLearningWorkspace = Input.empty();
-        this.output = Input.empty();
-        this.$package = Input.empty();
-        this.packageType = Input.empty();
-        this.parameters = Input.empty();
-        this.payloadsInBlobStorage = Input.empty();
-        this.payloadsLocation = Input.empty();
-        this.readOnly = Input.empty();
-        this.realtimeConfiguration = Input.empty();
-        this.storageAccount = Input.empty();
-        this.title = Input.empty();
+        this.assets = Output.empty();
+        this.commitmentPlan = Output.empty();
+        this.description = Output.empty();
+        this.diagnostics = Output.empty();
+        this.exampleRequest = Output.empty();
+        this.exposeSampleData = Output.empty();
+        this.input = Output.empty();
+        this.keys = Output.empty();
+        this.machineLearningWorkspace = Output.empty();
+        this.output = Output.empty();
+        this.$package = Output.empty();
+        this.packageType = Output.empty();
+        this.parameters = Output.empty();
+        this.payloadsInBlobStorage = Output.empty();
+        this.payloadsLocation = Output.empty();
+        this.readOnly = Output.empty();
+        this.realtimeConfiguration = Output.empty();
+        this.storageAccount = Output.empty();
+        this.title = Output.empty();
     }
 
     public static Builder builder() {
@@ -314,25 +314,25 @@ public final class WebServicePropertiesForGraphArgs extends io.pulumi.resources.
     }
 
     public static final class Builder {
-        private @Nullable Input<Map<String,AssetItemArgs>> assets;
-        private @Nullable Input<CommitmentPlanArgs> commitmentPlan;
-        private @Nullable Input<String> description;
-        private @Nullable Input<DiagnosticsConfigurationArgs> diagnostics;
-        private @Nullable Input<ExampleRequestArgs> exampleRequest;
-        private @Nullable Input<Boolean> exposeSampleData;
-        private @Nullable Input<ServiceInputOutputSpecificationArgs> input;
-        private @Nullable Input<WebServiceKeysArgs> keys;
-        private @Nullable Input<MachineLearningWorkspaceArgs> machineLearningWorkspace;
-        private @Nullable Input<ServiceInputOutputSpecificationArgs> output;
-        private @Nullable Input<GraphPackageArgs> $package;
-        private Input<String> packageType;
-        private @Nullable Input<Map<String,WebServiceParameterArgs>> parameters;
-        private @Nullable Input<Boolean> payloadsInBlobStorage;
-        private @Nullable Input<BlobLocationArgs> payloadsLocation;
-        private @Nullable Input<Boolean> readOnly;
-        private @Nullable Input<RealtimeConfigurationArgs> realtimeConfiguration;
-        private @Nullable Input<StorageAccountArgs> storageAccount;
-        private @Nullable Input<String> title;
+        private @Nullable Output<Map<String,AssetItemArgs>> assets;
+        private @Nullable Output<CommitmentPlanArgs> commitmentPlan;
+        private @Nullable Output<String> description;
+        private @Nullable Output<DiagnosticsConfigurationArgs> diagnostics;
+        private @Nullable Output<ExampleRequestArgs> exampleRequest;
+        private @Nullable Output<Boolean> exposeSampleData;
+        private @Nullable Output<ServiceInputOutputSpecificationArgs> input;
+        private @Nullable Output<WebServiceKeysArgs> keys;
+        private @Nullable Output<MachineLearningWorkspaceArgs> machineLearningWorkspace;
+        private @Nullable Output<ServiceInputOutputSpecificationArgs> output;
+        private @Nullable Output<GraphPackageArgs> $package;
+        private Output<String> packageType;
+        private @Nullable Output<Map<String,WebServiceParameterArgs>> parameters;
+        private @Nullable Output<Boolean> payloadsInBlobStorage;
+        private @Nullable Output<BlobLocationArgs> payloadsLocation;
+        private @Nullable Output<Boolean> readOnly;
+        private @Nullable Output<RealtimeConfigurationArgs> realtimeConfiguration;
+        private @Nullable Output<StorageAccountArgs> storageAccount;
+        private @Nullable Output<String> title;
 
         public Builder() {
     	      // Empty
@@ -361,193 +361,193 @@ public final class WebServicePropertiesForGraphArgs extends io.pulumi.resources.
     	      this.title = defaults.title;
         }
 
-        public Builder assets(@Nullable Input<Map<String,AssetItemArgs>> assets) {
+        public Builder assets(@Nullable Output<Map<String,AssetItemArgs>> assets) {
             this.assets = assets;
             return this;
         }
 
         public Builder assets(@Nullable Map<String,AssetItemArgs> assets) {
-            this.assets = Input.ofNullable(assets);
+            this.assets = Output.ofNullable(assets);
             return this;
         }
 
-        public Builder commitmentPlan(@Nullable Input<CommitmentPlanArgs> commitmentPlan) {
+        public Builder commitmentPlan(@Nullable Output<CommitmentPlanArgs> commitmentPlan) {
             this.commitmentPlan = commitmentPlan;
             return this;
         }
 
         public Builder commitmentPlan(@Nullable CommitmentPlanArgs commitmentPlan) {
-            this.commitmentPlan = Input.ofNullable(commitmentPlan);
+            this.commitmentPlan = Output.ofNullable(commitmentPlan);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder diagnostics(@Nullable Input<DiagnosticsConfigurationArgs> diagnostics) {
+        public Builder diagnostics(@Nullable Output<DiagnosticsConfigurationArgs> diagnostics) {
             this.diagnostics = diagnostics;
             return this;
         }
 
         public Builder diagnostics(@Nullable DiagnosticsConfigurationArgs diagnostics) {
-            this.diagnostics = Input.ofNullable(diagnostics);
+            this.diagnostics = Output.ofNullable(diagnostics);
             return this;
         }
 
-        public Builder exampleRequest(@Nullable Input<ExampleRequestArgs> exampleRequest) {
+        public Builder exampleRequest(@Nullable Output<ExampleRequestArgs> exampleRequest) {
             this.exampleRequest = exampleRequest;
             return this;
         }
 
         public Builder exampleRequest(@Nullable ExampleRequestArgs exampleRequest) {
-            this.exampleRequest = Input.ofNullable(exampleRequest);
+            this.exampleRequest = Output.ofNullable(exampleRequest);
             return this;
         }
 
-        public Builder exposeSampleData(@Nullable Input<Boolean> exposeSampleData) {
+        public Builder exposeSampleData(@Nullable Output<Boolean> exposeSampleData) {
             this.exposeSampleData = exposeSampleData;
             return this;
         }
 
         public Builder exposeSampleData(@Nullable Boolean exposeSampleData) {
-            this.exposeSampleData = Input.ofNullable(exposeSampleData);
+            this.exposeSampleData = Output.ofNullable(exposeSampleData);
             return this;
         }
 
-        public Builder input(@Nullable Input<ServiceInputOutputSpecificationArgs> input) {
+        public Builder input(@Nullable Output<ServiceInputOutputSpecificationArgs> input) {
             this.input = input;
             return this;
         }
 
         public Builder input(@Nullable ServiceInputOutputSpecificationArgs input) {
-            this.input = Input.ofNullable(input);
+            this.input = Output.ofNullable(input);
             return this;
         }
 
-        public Builder keys(@Nullable Input<WebServiceKeysArgs> keys) {
+        public Builder keys(@Nullable Output<WebServiceKeysArgs> keys) {
             this.keys = keys;
             return this;
         }
 
         public Builder keys(@Nullable WebServiceKeysArgs keys) {
-            this.keys = Input.ofNullable(keys);
+            this.keys = Output.ofNullable(keys);
             return this;
         }
 
-        public Builder machineLearningWorkspace(@Nullable Input<MachineLearningWorkspaceArgs> machineLearningWorkspace) {
+        public Builder machineLearningWorkspace(@Nullable Output<MachineLearningWorkspaceArgs> machineLearningWorkspace) {
             this.machineLearningWorkspace = machineLearningWorkspace;
             return this;
         }
 
         public Builder machineLearningWorkspace(@Nullable MachineLearningWorkspaceArgs machineLearningWorkspace) {
-            this.machineLearningWorkspace = Input.ofNullable(machineLearningWorkspace);
+            this.machineLearningWorkspace = Output.ofNullable(machineLearningWorkspace);
             return this;
         }
 
-        public Builder output(@Nullable Input<ServiceInputOutputSpecificationArgs> output) {
+        public Builder output(@Nullable Output<ServiceInputOutputSpecificationArgs> output) {
             this.output = output;
             return this;
         }
 
         public Builder output(@Nullable ServiceInputOutputSpecificationArgs output) {
-            this.output = Input.ofNullable(output);
+            this.output = Output.ofNullable(output);
             return this;
         }
 
-        public Builder $package(@Nullable Input<GraphPackageArgs> $package) {
+        public Builder $package(@Nullable Output<GraphPackageArgs> $package) {
             this.$package = $package;
             return this;
         }
 
         public Builder $package(@Nullable GraphPackageArgs $package) {
-            this.$package = Input.ofNullable($package);
+            this.$package = Output.ofNullable($package);
             return this;
         }
 
-        public Builder packageType(Input<String> packageType) {
+        public Builder packageType(Output<String> packageType) {
             this.packageType = Objects.requireNonNull(packageType);
             return this;
         }
 
         public Builder packageType(String packageType) {
-            this.packageType = Input.of(Objects.requireNonNull(packageType));
+            this.packageType = Output.of(Objects.requireNonNull(packageType));
             return this;
         }
 
-        public Builder parameters(@Nullable Input<Map<String,WebServiceParameterArgs>> parameters) {
+        public Builder parameters(@Nullable Output<Map<String,WebServiceParameterArgs>> parameters) {
             this.parameters = parameters;
             return this;
         }
 
         public Builder parameters(@Nullable Map<String,WebServiceParameterArgs> parameters) {
-            this.parameters = Input.ofNullable(parameters);
+            this.parameters = Output.ofNullable(parameters);
             return this;
         }
 
-        public Builder payloadsInBlobStorage(@Nullable Input<Boolean> payloadsInBlobStorage) {
+        public Builder payloadsInBlobStorage(@Nullable Output<Boolean> payloadsInBlobStorage) {
             this.payloadsInBlobStorage = payloadsInBlobStorage;
             return this;
         }
 
         public Builder payloadsInBlobStorage(@Nullable Boolean payloadsInBlobStorage) {
-            this.payloadsInBlobStorage = Input.ofNullable(payloadsInBlobStorage);
+            this.payloadsInBlobStorage = Output.ofNullable(payloadsInBlobStorage);
             return this;
         }
 
-        public Builder payloadsLocation(@Nullable Input<BlobLocationArgs> payloadsLocation) {
+        public Builder payloadsLocation(@Nullable Output<BlobLocationArgs> payloadsLocation) {
             this.payloadsLocation = payloadsLocation;
             return this;
         }
 
         public Builder payloadsLocation(@Nullable BlobLocationArgs payloadsLocation) {
-            this.payloadsLocation = Input.ofNullable(payloadsLocation);
+            this.payloadsLocation = Output.ofNullable(payloadsLocation);
             return this;
         }
 
-        public Builder readOnly(@Nullable Input<Boolean> readOnly) {
+        public Builder readOnly(@Nullable Output<Boolean> readOnly) {
             this.readOnly = readOnly;
             return this;
         }
 
         public Builder readOnly(@Nullable Boolean readOnly) {
-            this.readOnly = Input.ofNullable(readOnly);
+            this.readOnly = Output.ofNullable(readOnly);
             return this;
         }
 
-        public Builder realtimeConfiguration(@Nullable Input<RealtimeConfigurationArgs> realtimeConfiguration) {
+        public Builder realtimeConfiguration(@Nullable Output<RealtimeConfigurationArgs> realtimeConfiguration) {
             this.realtimeConfiguration = realtimeConfiguration;
             return this;
         }
 
         public Builder realtimeConfiguration(@Nullable RealtimeConfigurationArgs realtimeConfiguration) {
-            this.realtimeConfiguration = Input.ofNullable(realtimeConfiguration);
+            this.realtimeConfiguration = Output.ofNullable(realtimeConfiguration);
             return this;
         }
 
-        public Builder storageAccount(@Nullable Input<StorageAccountArgs> storageAccount) {
+        public Builder storageAccount(@Nullable Output<StorageAccountArgs> storageAccount) {
             this.storageAccount = storageAccount;
             return this;
         }
 
         public Builder storageAccount(@Nullable StorageAccountArgs storageAccount) {
-            this.storageAccount = Input.ofNullable(storageAccount);
+            this.storageAccount = Output.ofNullable(storageAccount);
             return this;
         }
 
-        public Builder title(@Nullable Input<String> title) {
+        public Builder title(@Nullable Output<String> title) {
             this.title = title;
             return this;
         }
 
         public Builder title(@Nullable String title) {
-            this.title = Input.ofNullable(title);
+            this.title = Output.ofNullable(title);
             return this;
         }
         public WebServicePropertiesForGraphArgs build() {

@@ -5,7 +5,7 @@ package io.pulumi.azurenative.storage.inputs;
 
 import io.pulumi.azurenative.storage.inputs.ManagementPolicyActionArgs;
 import io.pulumi.azurenative.storage.inputs.ManagementPolicyFilterArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,9 +24,9 @@ public final class ManagementPolicyDefinitionArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="actions", required=true)
-      private final Input<ManagementPolicyActionArgs> actions;
+      private final Output<ManagementPolicyActionArgs> actions;
 
-    public Input<ManagementPolicyActionArgs> getActions() {
+    public Output<ManagementPolicyActionArgs> getActions() {
         return this.actions;
     }
 
@@ -35,22 +35,22 @@ public final class ManagementPolicyDefinitionArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="filters")
-      private final @Nullable Input<ManagementPolicyFilterArgs> filters;
+      private final @Nullable Output<ManagementPolicyFilterArgs> filters;
 
-    public Input<ManagementPolicyFilterArgs> getFilters() {
-        return this.filters == null ? Input.empty() : this.filters;
+    public Output<ManagementPolicyFilterArgs> getFilters() {
+        return this.filters == null ? Output.empty() : this.filters;
     }
 
     public ManagementPolicyDefinitionArgs(
-        Input<ManagementPolicyActionArgs> actions,
-        @Nullable Input<ManagementPolicyFilterArgs> filters) {
+        Output<ManagementPolicyActionArgs> actions,
+        @Nullable Output<ManagementPolicyFilterArgs> filters) {
         this.actions = Objects.requireNonNull(actions, "expected parameter 'actions' to be non-null");
         this.filters = filters;
     }
 
     private ManagementPolicyDefinitionArgs() {
-        this.actions = Input.empty();
-        this.filters = Input.empty();
+        this.actions = Output.empty();
+        this.filters = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class ManagementPolicyDefinitionArgs extends io.pulumi.resources.Re
     }
 
     public static final class Builder {
-        private Input<ManagementPolicyActionArgs> actions;
-        private @Nullable Input<ManagementPolicyFilterArgs> filters;
+        private Output<ManagementPolicyActionArgs> actions;
+        private @Nullable Output<ManagementPolicyFilterArgs> filters;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class ManagementPolicyDefinitionArgs extends io.pulumi.resources.Re
     	      this.filters = defaults.filters;
         }
 
-        public Builder actions(Input<ManagementPolicyActionArgs> actions) {
+        public Builder actions(Output<ManagementPolicyActionArgs> actions) {
             this.actions = Objects.requireNonNull(actions);
             return this;
         }
 
         public Builder actions(ManagementPolicyActionArgs actions) {
-            this.actions = Input.of(Objects.requireNonNull(actions));
+            this.actions = Output.of(Objects.requireNonNull(actions));
             return this;
         }
 
-        public Builder filters(@Nullable Input<ManagementPolicyFilterArgs> filters) {
+        public Builder filters(@Nullable Output<ManagementPolicyFilterArgs> filters) {
             this.filters = filters;
             return this;
         }
 
         public Builder filters(@Nullable ManagementPolicyFilterArgs filters) {
-            this.filters = Input.ofNullable(filters);
+            this.filters = Output.ofNullable(filters);
             return this;
         }
         public ManagementPolicyDefinitionArgs build() {

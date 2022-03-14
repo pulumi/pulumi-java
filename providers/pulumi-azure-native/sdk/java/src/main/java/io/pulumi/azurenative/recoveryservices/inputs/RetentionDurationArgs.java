@@ -5,7 +5,7 @@ package io.pulumi.azurenative.recoveryservices.inputs;
 
 import io.pulumi.azurenative.recoveryservices.enums.RetentionDurationType;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -27,10 +27,10 @@ public final class RetentionDurationArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="count")
-      private final @Nullable Input<Integer> count;
+      private final @Nullable Output<Integer> count;
 
-    public Input<Integer> getCount() {
-        return this.count == null ? Input.empty() : this.count;
+    public Output<Integer> getCount() {
+        return this.count == null ? Output.empty() : this.count;
     }
 
     /**
@@ -38,22 +38,22 @@ public final class RetentionDurationArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="durationType")
-      private final @Nullable Input<Either<String,RetentionDurationType>> durationType;
+      private final @Nullable Output<Either<String,RetentionDurationType>> durationType;
 
-    public Input<Either<String,RetentionDurationType>> getDurationType() {
-        return this.durationType == null ? Input.empty() : this.durationType;
+    public Output<Either<String,RetentionDurationType>> getDurationType() {
+        return this.durationType == null ? Output.empty() : this.durationType;
     }
 
     public RetentionDurationArgs(
-        @Nullable Input<Integer> count,
-        @Nullable Input<Either<String,RetentionDurationType>> durationType) {
+        @Nullable Output<Integer> count,
+        @Nullable Output<Either<String,RetentionDurationType>> durationType) {
         this.count = count;
         this.durationType = durationType;
     }
 
     private RetentionDurationArgs() {
-        this.count = Input.empty();
-        this.durationType = Input.empty();
+        this.count = Output.empty();
+        this.durationType = Output.empty();
     }
 
     public static Builder builder() {
@@ -65,8 +65,8 @@ public final class RetentionDurationArgs extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> count;
-        private @Nullable Input<Either<String,RetentionDurationType>> durationType;
+        private @Nullable Output<Integer> count;
+        private @Nullable Output<Either<String,RetentionDurationType>> durationType;
 
         public Builder() {
     	      // Empty
@@ -78,23 +78,23 @@ public final class RetentionDurationArgs extends io.pulumi.resources.ResourceArg
     	      this.durationType = defaults.durationType;
         }
 
-        public Builder count(@Nullable Input<Integer> count) {
+        public Builder count(@Nullable Output<Integer> count) {
             this.count = count;
             return this;
         }
 
         public Builder count(@Nullable Integer count) {
-            this.count = Input.ofNullable(count);
+            this.count = Output.ofNullable(count);
             return this;
         }
 
-        public Builder durationType(@Nullable Input<Either<String,RetentionDurationType>> durationType) {
+        public Builder durationType(@Nullable Output<Either<String,RetentionDurationType>> durationType) {
             this.durationType = durationType;
             return this;
         }
 
         public Builder durationType(@Nullable Either<String,RetentionDurationType> durationType) {
-            this.durationType = Input.ofNullable(durationType);
+            this.durationType = Output.ofNullable(durationType);
             return this;
         }
         public RetentionDurationArgs build() {

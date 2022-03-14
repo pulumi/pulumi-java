@@ -3,7 +3,6 @@
 
 package io.pulumi.gcp.dataproc;
 
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -184,14 +183,14 @@ public class ClusterIAMBinding extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ClusterIAMBinding(String name, ClusterIAMBindingArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:dataproc/clusterIAMBinding:ClusterIAMBinding", name, args == null ? ClusterIAMBindingArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("gcp:dataproc/clusterIAMBinding:ClusterIAMBinding", name, args == null ? ClusterIAMBindingArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private ClusterIAMBinding(String name, Input<String> id, @Nullable ClusterIAMBindingState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private ClusterIAMBinding(String name, Output<String> id, @Nullable ClusterIAMBindingState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("gcp:dataproc/clusterIAMBinding:ClusterIAMBinding", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -207,7 +206,7 @@ public class ClusterIAMBinding extends io.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static ClusterIAMBinding get(String name, Input<String> id, @Nullable ClusterIAMBindingState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static ClusterIAMBinding get(String name, Output<String> id, @Nullable ClusterIAMBindingState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new ClusterIAMBinding(name, id, state, options);
     }
 }

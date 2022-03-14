@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.genomics_v1alpha2.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.genomics_v1alpha2.enums.DiskType;
 import java.lang.Boolean;
@@ -26,10 +26,10 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="mountPoint")
-      private final @Nullable Input<String> mountPoint;
+      private final @Nullable Output<String> mountPoint;
 
-    public Input<String> getMountPoint() {
-        return this.mountPoint == null ? Input.empty() : this.mountPoint;
+    public Output<String> getMountPoint() {
+        return this.mountPoint == null ? Output.empty() : this.mountPoint;
     }
 
     /**
@@ -37,9 +37,9 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name", required=true)
-      private final Input<String> name;
+      private final Output<String> name;
 
-    public Input<String> getName() {
+    public Output<String> getName() {
         return this.name;
     }
 
@@ -48,10 +48,10 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="readOnly")
-      private final @Nullable Input<Boolean> readOnly;
+      private final @Nullable Output<Boolean> readOnly;
 
-    public Input<Boolean> getReadOnly() {
-        return this.readOnly == null ? Input.empty() : this.readOnly;
+    public Output<Boolean> getReadOnly() {
+        return this.readOnly == null ? Output.empty() : this.readOnly;
     }
 
     /**
@@ -59,10 +59,10 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sizeGb")
-      private final @Nullable Input<Integer> sizeGb;
+      private final @Nullable Output<Integer> sizeGb;
 
-    public Input<Integer> getSizeGb() {
-        return this.sizeGb == null ? Input.empty() : this.sizeGb;
+    public Output<Integer> getSizeGb() {
+        return this.sizeGb == null ? Output.empty() : this.sizeGb;
     }
 
     /**
@@ -70,10 +70,10 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="source")
-      private final @Nullable Input<String> source;
+      private final @Nullable Output<String> source;
 
-    public Input<String> getSource() {
-        return this.source == null ? Input.empty() : this.source;
+    public Output<String> getSource() {
+        return this.source == null ? Output.empty() : this.source;
     }
 
     /**
@@ -81,19 +81,19 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<DiskType> type;
+      private final Output<DiskType> type;
 
-    public Input<DiskType> getType() {
+    public Output<DiskType> getType() {
         return this.type;
     }
 
     public DiskArgs(
-        @Nullable Input<String> mountPoint,
-        Input<String> name,
-        @Nullable Input<Boolean> readOnly,
-        @Nullable Input<Integer> sizeGb,
-        @Nullable Input<String> source,
-        Input<DiskType> type) {
+        @Nullable Output<String> mountPoint,
+        Output<String> name,
+        @Nullable Output<Boolean> readOnly,
+        @Nullable Output<Integer> sizeGb,
+        @Nullable Output<String> source,
+        Output<DiskType> type) {
         this.mountPoint = mountPoint;
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
         this.readOnly = readOnly;
@@ -103,12 +103,12 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DiskArgs() {
-        this.mountPoint = Input.empty();
-        this.name = Input.empty();
-        this.readOnly = Input.empty();
-        this.sizeGb = Input.empty();
-        this.source = Input.empty();
-        this.type = Input.empty();
+        this.mountPoint = Output.empty();
+        this.name = Output.empty();
+        this.readOnly = Output.empty();
+        this.sizeGb = Output.empty();
+        this.source = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -120,12 +120,12 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> mountPoint;
-        private Input<String> name;
-        private @Nullable Input<Boolean> readOnly;
-        private @Nullable Input<Integer> sizeGb;
-        private @Nullable Input<String> source;
-        private Input<DiskType> type;
+        private @Nullable Output<String> mountPoint;
+        private Output<String> name;
+        private @Nullable Output<Boolean> readOnly;
+        private @Nullable Output<Integer> sizeGb;
+        private @Nullable Output<String> source;
+        private Output<DiskType> type;
 
         public Builder() {
     	      // Empty
@@ -141,63 +141,63 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
     	      this.type = defaults.type;
         }
 
-        public Builder mountPoint(@Nullable Input<String> mountPoint) {
+        public Builder mountPoint(@Nullable Output<String> mountPoint) {
             this.mountPoint = mountPoint;
             return this;
         }
 
         public Builder mountPoint(@Nullable String mountPoint) {
-            this.mountPoint = Input.ofNullable(mountPoint);
+            this.mountPoint = Output.ofNullable(mountPoint);
             return this;
         }
 
-        public Builder name(Input<String> name) {
+        public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(String name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder readOnly(@Nullable Input<Boolean> readOnly) {
+        public Builder readOnly(@Nullable Output<Boolean> readOnly) {
             this.readOnly = readOnly;
             return this;
         }
 
         public Builder readOnly(@Nullable Boolean readOnly) {
-            this.readOnly = Input.ofNullable(readOnly);
+            this.readOnly = Output.ofNullable(readOnly);
             return this;
         }
 
-        public Builder sizeGb(@Nullable Input<Integer> sizeGb) {
+        public Builder sizeGb(@Nullable Output<Integer> sizeGb) {
             this.sizeGb = sizeGb;
             return this;
         }
 
         public Builder sizeGb(@Nullable Integer sizeGb) {
-            this.sizeGb = Input.ofNullable(sizeGb);
+            this.sizeGb = Output.ofNullable(sizeGb);
             return this;
         }
 
-        public Builder source(@Nullable Input<String> source) {
+        public Builder source(@Nullable Output<String> source) {
             this.source = source;
             return this;
         }
 
         public Builder source(@Nullable String source) {
-            this.source = Input.ofNullable(source);
+            this.source = Output.ofNullable(source);
             return this;
         }
 
-        public Builder type(Input<DiskType> type) {
+        public Builder type(Output<DiskType> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(DiskType type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
         public DiskArgs build() {

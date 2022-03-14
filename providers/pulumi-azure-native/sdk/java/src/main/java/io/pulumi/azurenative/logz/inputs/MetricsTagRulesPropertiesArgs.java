@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.logz.inputs;
 
 import io.pulumi.azurenative.logz.inputs.MetricRulesArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.List;
@@ -21,10 +21,10 @@ public final class MetricsTagRulesPropertiesArgs extends io.pulumi.resources.Res
     public static final MetricsTagRulesPropertiesArgs Empty = new MetricsTagRulesPropertiesArgs();
 
     @InputImport(name="metricRules")
-      private final @Nullable Input<List<MetricRulesArgs>> metricRules;
+      private final @Nullable Output<List<MetricRulesArgs>> metricRules;
 
-    public Input<List<MetricRulesArgs>> getMetricRules() {
-        return this.metricRules == null ? Input.empty() : this.metricRules;
+    public Output<List<MetricRulesArgs>> getMetricRules() {
+        return this.metricRules == null ? Output.empty() : this.metricRules;
     }
 
     /**
@@ -32,22 +32,22 @@ public final class MetricsTagRulesPropertiesArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="sendMetrics")
-      private final @Nullable Input<Boolean> sendMetrics;
+      private final @Nullable Output<Boolean> sendMetrics;
 
-    public Input<Boolean> getSendMetrics() {
-        return this.sendMetrics == null ? Input.empty() : this.sendMetrics;
+    public Output<Boolean> getSendMetrics() {
+        return this.sendMetrics == null ? Output.empty() : this.sendMetrics;
     }
 
     public MetricsTagRulesPropertiesArgs(
-        @Nullable Input<List<MetricRulesArgs>> metricRules,
-        @Nullable Input<Boolean> sendMetrics) {
+        @Nullable Output<List<MetricRulesArgs>> metricRules,
+        @Nullable Output<Boolean> sendMetrics) {
         this.metricRules = metricRules;
         this.sendMetrics = sendMetrics;
     }
 
     private MetricsTagRulesPropertiesArgs() {
-        this.metricRules = Input.empty();
-        this.sendMetrics = Input.empty();
+        this.metricRules = Output.empty();
+        this.sendMetrics = Output.empty();
     }
 
     public static Builder builder() {
@@ -59,8 +59,8 @@ public final class MetricsTagRulesPropertiesArgs extends io.pulumi.resources.Res
     }
 
     public static final class Builder {
-        private @Nullable Input<List<MetricRulesArgs>> metricRules;
-        private @Nullable Input<Boolean> sendMetrics;
+        private @Nullable Output<List<MetricRulesArgs>> metricRules;
+        private @Nullable Output<Boolean> sendMetrics;
 
         public Builder() {
     	      // Empty
@@ -72,23 +72,23 @@ public final class MetricsTagRulesPropertiesArgs extends io.pulumi.resources.Res
     	      this.sendMetrics = defaults.sendMetrics;
         }
 
-        public Builder metricRules(@Nullable Input<List<MetricRulesArgs>> metricRules) {
+        public Builder metricRules(@Nullable Output<List<MetricRulesArgs>> metricRules) {
             this.metricRules = metricRules;
             return this;
         }
 
         public Builder metricRules(@Nullable List<MetricRulesArgs> metricRules) {
-            this.metricRules = Input.ofNullable(metricRules);
+            this.metricRules = Output.ofNullable(metricRules);
             return this;
         }
 
-        public Builder sendMetrics(@Nullable Input<Boolean> sendMetrics) {
+        public Builder sendMetrics(@Nullable Output<Boolean> sendMetrics) {
             this.sendMetrics = sendMetrics;
             return this;
         }
 
         public Builder sendMetrics(@Nullable Boolean sendMetrics) {
-            this.sendMetrics = Input.ofNullable(sendMetrics);
+            this.sendMetrics = Output.ofNullable(sendMetrics);
             return this;
         }
         public MetricsTagRulesPropertiesArgs build() {

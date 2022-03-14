@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.ec2.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -18,10 +18,10 @@ public final class VpcIpamScopeState extends io.pulumi.resources.ResourceArgs {
     public static final VpcIpamScopeState Empty = new VpcIpamScopeState();
 
     @InputImport(name="arn")
-      private final @Nullable Input<String> arn;
+      private final @Nullable Output<String> arn;
 
-    public Input<String> getArn() {
-        return this.arn == null ? Input.empty() : this.arn;
+    public Output<String> getArn() {
+        return this.arn == null ? Output.empty() : this.arn;
     }
 
     /**
@@ -29,10 +29,10 @@ public final class VpcIpamScopeState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -40,10 +40,10 @@ public final class VpcIpamScopeState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ipamArn")
-      private final @Nullable Input<String> ipamArn;
+      private final @Nullable Output<String> ipamArn;
 
-    public Input<String> getIpamArn() {
-        return this.ipamArn == null ? Input.empty() : this.ipamArn;
+    public Output<String> getIpamArn() {
+        return this.ipamArn == null ? Output.empty() : this.ipamArn;
     }
 
     /**
@@ -51,17 +51,17 @@ public final class VpcIpamScopeState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ipamId")
-      private final @Nullable Input<String> ipamId;
+      private final @Nullable Output<String> ipamId;
 
-    public Input<String> getIpamId() {
-        return this.ipamId == null ? Input.empty() : this.ipamId;
+    public Output<String> getIpamId() {
+        return this.ipamId == null ? Output.empty() : this.ipamId;
     }
 
     @InputImport(name="ipamScopeType")
-      private final @Nullable Input<String> ipamScopeType;
+      private final @Nullable Output<String> ipamScopeType;
 
-    public Input<String> getIpamScopeType() {
-        return this.ipamScopeType == null ? Input.empty() : this.ipamScopeType;
+    public Output<String> getIpamScopeType() {
+        return this.ipamScopeType == null ? Output.empty() : this.ipamScopeType;
     }
 
     /**
@@ -69,10 +69,10 @@ public final class VpcIpamScopeState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="isDefault")
-      private final @Nullable Input<Boolean> isDefault;
+      private final @Nullable Output<Boolean> isDefault;
 
-    public Input<Boolean> getIsDefault() {
-        return this.isDefault == null ? Input.empty() : this.isDefault;
+    public Output<Boolean> getIsDefault() {
+        return this.isDefault == null ? Output.empty() : this.isDefault;
     }
 
     /**
@@ -80,36 +80,36 @@ public final class VpcIpamScopeState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="poolCount")
-      private final @Nullable Input<Integer> poolCount;
+      private final @Nullable Output<Integer> poolCount;
 
-    public Input<Integer> getPoolCount() {
-        return this.poolCount == null ? Input.empty() : this.poolCount;
+    public Output<Integer> getPoolCount() {
+        return this.poolCount == null ? Output.empty() : this.poolCount;
     }
 
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     @InputImport(name="tagsAll")
-      private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Input<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Input.empty() : this.tagsAll;
+    public Output<Map<String,String>> getTagsAll() {
+        return this.tagsAll == null ? Output.empty() : this.tagsAll;
     }
 
     public VpcIpamScopeState(
-        @Nullable Input<String> arn,
-        @Nullable Input<String> description,
-        @Nullable Input<String> ipamArn,
-        @Nullable Input<String> ipamId,
-        @Nullable Input<String> ipamScopeType,
-        @Nullable Input<Boolean> isDefault,
-        @Nullable Input<Integer> poolCount,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<Map<String,String>> tagsAll) {
+        @Nullable Output<String> arn,
+        @Nullable Output<String> description,
+        @Nullable Output<String> ipamArn,
+        @Nullable Output<String> ipamId,
+        @Nullable Output<String> ipamScopeType,
+        @Nullable Output<Boolean> isDefault,
+        @Nullable Output<Integer> poolCount,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<Map<String,String>> tagsAll) {
         this.arn = arn;
         this.description = description;
         this.ipamArn = ipamArn;
@@ -122,15 +122,15 @@ public final class VpcIpamScopeState extends io.pulumi.resources.ResourceArgs {
     }
 
     private VpcIpamScopeState() {
-        this.arn = Input.empty();
-        this.description = Input.empty();
-        this.ipamArn = Input.empty();
-        this.ipamId = Input.empty();
-        this.ipamScopeType = Input.empty();
-        this.isDefault = Input.empty();
-        this.poolCount = Input.empty();
-        this.tags = Input.empty();
-        this.tagsAll = Input.empty();
+        this.arn = Output.empty();
+        this.description = Output.empty();
+        this.ipamArn = Output.empty();
+        this.ipamId = Output.empty();
+        this.ipamScopeType = Output.empty();
+        this.isDefault = Output.empty();
+        this.poolCount = Output.empty();
+        this.tags = Output.empty();
+        this.tagsAll = Output.empty();
     }
 
     public static Builder builder() {
@@ -142,15 +142,15 @@ public final class VpcIpamScopeState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> arn;
-        private @Nullable Input<String> description;
-        private @Nullable Input<String> ipamArn;
-        private @Nullable Input<String> ipamId;
-        private @Nullable Input<String> ipamScopeType;
-        private @Nullable Input<Boolean> isDefault;
-        private @Nullable Input<Integer> poolCount;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<Map<String,String>> tagsAll;
+        private @Nullable Output<String> arn;
+        private @Nullable Output<String> description;
+        private @Nullable Output<String> ipamArn;
+        private @Nullable Output<String> ipamId;
+        private @Nullable Output<String> ipamScopeType;
+        private @Nullable Output<Boolean> isDefault;
+        private @Nullable Output<Integer> poolCount;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<Map<String,String>> tagsAll;
 
         public Builder() {
     	      // Empty
@@ -169,93 +169,93 @@ public final class VpcIpamScopeState extends io.pulumi.resources.ResourceArgs {
     	      this.tagsAll = defaults.tagsAll;
         }
 
-        public Builder arn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
 
         public Builder arn(@Nullable String arn) {
-            this.arn = Input.ofNullable(arn);
+            this.arn = Output.ofNullable(arn);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder ipamArn(@Nullable Input<String> ipamArn) {
+        public Builder ipamArn(@Nullable Output<String> ipamArn) {
             this.ipamArn = ipamArn;
             return this;
         }
 
         public Builder ipamArn(@Nullable String ipamArn) {
-            this.ipamArn = Input.ofNullable(ipamArn);
+            this.ipamArn = Output.ofNullable(ipamArn);
             return this;
         }
 
-        public Builder ipamId(@Nullable Input<String> ipamId) {
+        public Builder ipamId(@Nullable Output<String> ipamId) {
             this.ipamId = ipamId;
             return this;
         }
 
         public Builder ipamId(@Nullable String ipamId) {
-            this.ipamId = Input.ofNullable(ipamId);
+            this.ipamId = Output.ofNullable(ipamId);
             return this;
         }
 
-        public Builder ipamScopeType(@Nullable Input<String> ipamScopeType) {
+        public Builder ipamScopeType(@Nullable Output<String> ipamScopeType) {
             this.ipamScopeType = ipamScopeType;
             return this;
         }
 
         public Builder ipamScopeType(@Nullable String ipamScopeType) {
-            this.ipamScopeType = Input.ofNullable(ipamScopeType);
+            this.ipamScopeType = Output.ofNullable(ipamScopeType);
             return this;
         }
 
-        public Builder isDefault(@Nullable Input<Boolean> isDefault) {
+        public Builder isDefault(@Nullable Output<Boolean> isDefault) {
             this.isDefault = isDefault;
             return this;
         }
 
         public Builder isDefault(@Nullable Boolean isDefault) {
-            this.isDefault = Input.ofNullable(isDefault);
+            this.isDefault = Output.ofNullable(isDefault);
             return this;
         }
 
-        public Builder poolCount(@Nullable Input<Integer> poolCount) {
+        public Builder poolCount(@Nullable Output<Integer> poolCount) {
             this.poolCount = poolCount;
             return this;
         }
 
         public Builder poolCount(@Nullable Integer poolCount) {
-            this.poolCount = Input.ofNullable(poolCount);
+            this.poolCount = Output.ofNullable(poolCount);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Input.ofNullable(tagsAll);
+            this.tagsAll = Output.ofNullable(tagsAll);
             return this;
         }
         public VpcIpamScopeState build() {

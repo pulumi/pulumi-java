@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.monitoring.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class MonitoredProjectState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="createTime")
-      private final @Nullable Input<String> createTime;
+      private final @Nullable Output<String> createTime;
 
-    public Input<String> getCreateTime() {
-        return this.createTime == null ? Input.empty() : this.createTime;
+    public Output<String> getCreateTime() {
+        return this.createTime == null ? Output.empty() : this.createTime;
     }
 
     /**
@@ -30,10 +30,10 @@ public final class MonitoredProjectState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="metricsScope")
-      private final @Nullable Input<String> metricsScope;
+      private final @Nullable Output<String> metricsScope;
 
-    public Input<String> getMetricsScope() {
-        return this.metricsScope == null ? Input.empty() : this.metricsScope;
+    public Output<String> getMetricsScope() {
+        return this.metricsScope == null ? Output.empty() : this.metricsScope;
     }
 
     /**
@@ -41,25 +41,25 @@ public final class MonitoredProjectState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     public MonitoredProjectState(
-        @Nullable Input<String> createTime,
-        @Nullable Input<String> metricsScope,
-        @Nullable Input<String> name) {
+        @Nullable Output<String> createTime,
+        @Nullable Output<String> metricsScope,
+        @Nullable Output<String> name) {
         this.createTime = createTime;
         this.metricsScope = metricsScope;
         this.name = name;
     }
 
     private MonitoredProjectState() {
-        this.createTime = Input.empty();
-        this.metricsScope = Input.empty();
-        this.name = Input.empty();
+        this.createTime = Output.empty();
+        this.metricsScope = Output.empty();
+        this.name = Output.empty();
     }
 
     public static Builder builder() {
@@ -71,9 +71,9 @@ public final class MonitoredProjectState extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private @Nullable Input<String> createTime;
-        private @Nullable Input<String> metricsScope;
-        private @Nullable Input<String> name;
+        private @Nullable Output<String> createTime;
+        private @Nullable Output<String> metricsScope;
+        private @Nullable Output<String> name;
 
         public Builder() {
     	      // Empty
@@ -86,33 +86,33 @@ public final class MonitoredProjectState extends io.pulumi.resources.ResourceArg
     	      this.name = defaults.name;
         }
 
-        public Builder createTime(@Nullable Input<String> createTime) {
+        public Builder createTime(@Nullable Output<String> createTime) {
             this.createTime = createTime;
             return this;
         }
 
         public Builder createTime(@Nullable String createTime) {
-            this.createTime = Input.ofNullable(createTime);
+            this.createTime = Output.ofNullable(createTime);
             return this;
         }
 
-        public Builder metricsScope(@Nullable Input<String> metricsScope) {
+        public Builder metricsScope(@Nullable Output<String> metricsScope) {
             this.metricsScope = metricsScope;
             return this;
         }
 
         public Builder metricsScope(@Nullable String metricsScope) {
-            this.metricsScope = Input.ofNullable(metricsScope);
+            this.metricsScope = Output.ofNullable(metricsScope);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
         public MonitoredProjectState build() {

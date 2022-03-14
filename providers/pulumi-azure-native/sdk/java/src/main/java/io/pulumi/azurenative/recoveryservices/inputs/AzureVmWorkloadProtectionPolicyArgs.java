@@ -7,7 +7,7 @@ import io.pulumi.azurenative.recoveryservices.enums.WorkloadType;
 import io.pulumi.azurenative.recoveryservices.inputs.SettingsArgs;
 import io.pulumi.azurenative.recoveryservices.inputs.SubProtectionPolicyArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -31,9 +31,9 @@ public final class AzureVmWorkloadProtectionPolicyArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="backupManagementType", required=true)
-      private final Input<String> backupManagementType;
+      private final Output<String> backupManagementType;
 
-    public Input<String> getBackupManagementType() {
+    public Output<String> getBackupManagementType() {
         return this.backupManagementType;
     }
 
@@ -42,10 +42,10 @@ public final class AzureVmWorkloadProtectionPolicyArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="makePolicyConsistent")
-      private final @Nullable Input<Boolean> makePolicyConsistent;
+      private final @Nullable Output<Boolean> makePolicyConsistent;
 
-    public Input<Boolean> getMakePolicyConsistent() {
-        return this.makePolicyConsistent == null ? Input.empty() : this.makePolicyConsistent;
+    public Output<Boolean> getMakePolicyConsistent() {
+        return this.makePolicyConsistent == null ? Output.empty() : this.makePolicyConsistent;
     }
 
     /**
@@ -53,10 +53,10 @@ public final class AzureVmWorkloadProtectionPolicyArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="protectedItemsCount")
-      private final @Nullable Input<Integer> protectedItemsCount;
+      private final @Nullable Output<Integer> protectedItemsCount;
 
-    public Input<Integer> getProtectedItemsCount() {
-        return this.protectedItemsCount == null ? Input.empty() : this.protectedItemsCount;
+    public Output<Integer> getProtectedItemsCount() {
+        return this.protectedItemsCount == null ? Output.empty() : this.protectedItemsCount;
     }
 
     /**
@@ -64,10 +64,10 @@ public final class AzureVmWorkloadProtectionPolicyArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="settings")
-      private final @Nullable Input<SettingsArgs> settings;
+      private final @Nullable Output<SettingsArgs> settings;
 
-    public Input<SettingsArgs> getSettings() {
-        return this.settings == null ? Input.empty() : this.settings;
+    public Output<SettingsArgs> getSettings() {
+        return this.settings == null ? Output.empty() : this.settings;
     }
 
     /**
@@ -75,10 +75,10 @@ public final class AzureVmWorkloadProtectionPolicyArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="subProtectionPolicy")
-      private final @Nullable Input<List<SubProtectionPolicyArgs>> subProtectionPolicy;
+      private final @Nullable Output<List<SubProtectionPolicyArgs>> subProtectionPolicy;
 
-    public Input<List<SubProtectionPolicyArgs>> getSubProtectionPolicy() {
-        return this.subProtectionPolicy == null ? Input.empty() : this.subProtectionPolicy;
+    public Output<List<SubProtectionPolicyArgs>> getSubProtectionPolicy() {
+        return this.subProtectionPolicy == null ? Output.empty() : this.subProtectionPolicy;
     }
 
     /**
@@ -86,19 +86,19 @@ public final class AzureVmWorkloadProtectionPolicyArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="workLoadType")
-      private final @Nullable Input<Either<String,WorkloadType>> workLoadType;
+      private final @Nullable Output<Either<String,WorkloadType>> workLoadType;
 
-    public Input<Either<String,WorkloadType>> getWorkLoadType() {
-        return this.workLoadType == null ? Input.empty() : this.workLoadType;
+    public Output<Either<String,WorkloadType>> getWorkLoadType() {
+        return this.workLoadType == null ? Output.empty() : this.workLoadType;
     }
 
     public AzureVmWorkloadProtectionPolicyArgs(
-        Input<String> backupManagementType,
-        @Nullable Input<Boolean> makePolicyConsistent,
-        @Nullable Input<Integer> protectedItemsCount,
-        @Nullable Input<SettingsArgs> settings,
-        @Nullable Input<List<SubProtectionPolicyArgs>> subProtectionPolicy,
-        @Nullable Input<Either<String,WorkloadType>> workLoadType) {
+        Output<String> backupManagementType,
+        @Nullable Output<Boolean> makePolicyConsistent,
+        @Nullable Output<Integer> protectedItemsCount,
+        @Nullable Output<SettingsArgs> settings,
+        @Nullable Output<List<SubProtectionPolicyArgs>> subProtectionPolicy,
+        @Nullable Output<Either<String,WorkloadType>> workLoadType) {
         this.backupManagementType = Objects.requireNonNull(backupManagementType, "expected parameter 'backupManagementType' to be non-null");
         this.makePolicyConsistent = makePolicyConsistent;
         this.protectedItemsCount = protectedItemsCount;
@@ -108,12 +108,12 @@ public final class AzureVmWorkloadProtectionPolicyArgs extends io.pulumi.resourc
     }
 
     private AzureVmWorkloadProtectionPolicyArgs() {
-        this.backupManagementType = Input.empty();
-        this.makePolicyConsistent = Input.empty();
-        this.protectedItemsCount = Input.empty();
-        this.settings = Input.empty();
-        this.subProtectionPolicy = Input.empty();
-        this.workLoadType = Input.empty();
+        this.backupManagementType = Output.empty();
+        this.makePolicyConsistent = Output.empty();
+        this.protectedItemsCount = Output.empty();
+        this.settings = Output.empty();
+        this.subProtectionPolicy = Output.empty();
+        this.workLoadType = Output.empty();
     }
 
     public static Builder builder() {
@@ -125,12 +125,12 @@ public final class AzureVmWorkloadProtectionPolicyArgs extends io.pulumi.resourc
     }
 
     public static final class Builder {
-        private Input<String> backupManagementType;
-        private @Nullable Input<Boolean> makePolicyConsistent;
-        private @Nullable Input<Integer> protectedItemsCount;
-        private @Nullable Input<SettingsArgs> settings;
-        private @Nullable Input<List<SubProtectionPolicyArgs>> subProtectionPolicy;
-        private @Nullable Input<Either<String,WorkloadType>> workLoadType;
+        private Output<String> backupManagementType;
+        private @Nullable Output<Boolean> makePolicyConsistent;
+        private @Nullable Output<Integer> protectedItemsCount;
+        private @Nullable Output<SettingsArgs> settings;
+        private @Nullable Output<List<SubProtectionPolicyArgs>> subProtectionPolicy;
+        private @Nullable Output<Either<String,WorkloadType>> workLoadType;
 
         public Builder() {
     	      // Empty
@@ -146,63 +146,63 @@ public final class AzureVmWorkloadProtectionPolicyArgs extends io.pulumi.resourc
     	      this.workLoadType = defaults.workLoadType;
         }
 
-        public Builder backupManagementType(Input<String> backupManagementType) {
+        public Builder backupManagementType(Output<String> backupManagementType) {
             this.backupManagementType = Objects.requireNonNull(backupManagementType);
             return this;
         }
 
         public Builder backupManagementType(String backupManagementType) {
-            this.backupManagementType = Input.of(Objects.requireNonNull(backupManagementType));
+            this.backupManagementType = Output.of(Objects.requireNonNull(backupManagementType));
             return this;
         }
 
-        public Builder makePolicyConsistent(@Nullable Input<Boolean> makePolicyConsistent) {
+        public Builder makePolicyConsistent(@Nullable Output<Boolean> makePolicyConsistent) {
             this.makePolicyConsistent = makePolicyConsistent;
             return this;
         }
 
         public Builder makePolicyConsistent(@Nullable Boolean makePolicyConsistent) {
-            this.makePolicyConsistent = Input.ofNullable(makePolicyConsistent);
+            this.makePolicyConsistent = Output.ofNullable(makePolicyConsistent);
             return this;
         }
 
-        public Builder protectedItemsCount(@Nullable Input<Integer> protectedItemsCount) {
+        public Builder protectedItemsCount(@Nullable Output<Integer> protectedItemsCount) {
             this.protectedItemsCount = protectedItemsCount;
             return this;
         }
 
         public Builder protectedItemsCount(@Nullable Integer protectedItemsCount) {
-            this.protectedItemsCount = Input.ofNullable(protectedItemsCount);
+            this.protectedItemsCount = Output.ofNullable(protectedItemsCount);
             return this;
         }
 
-        public Builder settings(@Nullable Input<SettingsArgs> settings) {
+        public Builder settings(@Nullable Output<SettingsArgs> settings) {
             this.settings = settings;
             return this;
         }
 
         public Builder settings(@Nullable SettingsArgs settings) {
-            this.settings = Input.ofNullable(settings);
+            this.settings = Output.ofNullable(settings);
             return this;
         }
 
-        public Builder subProtectionPolicy(@Nullable Input<List<SubProtectionPolicyArgs>> subProtectionPolicy) {
+        public Builder subProtectionPolicy(@Nullable Output<List<SubProtectionPolicyArgs>> subProtectionPolicy) {
             this.subProtectionPolicy = subProtectionPolicy;
             return this;
         }
 
         public Builder subProtectionPolicy(@Nullable List<SubProtectionPolicyArgs> subProtectionPolicy) {
-            this.subProtectionPolicy = Input.ofNullable(subProtectionPolicy);
+            this.subProtectionPolicy = Output.ofNullable(subProtectionPolicy);
             return this;
         }
 
-        public Builder workLoadType(@Nullable Input<Either<String,WorkloadType>> workLoadType) {
+        public Builder workLoadType(@Nullable Output<Either<String,WorkloadType>> workLoadType) {
             this.workLoadType = workLoadType;
             return this;
         }
 
         public Builder workLoadType(@Nullable Either<String,WorkloadType> workLoadType) {
-            this.workLoadType = Input.ofNullable(workLoadType);
+            this.workLoadType = Output.ofNullable(workLoadType);
             return this;
         }
         public AzureVmWorkloadProtectionPolicyArgs build() {

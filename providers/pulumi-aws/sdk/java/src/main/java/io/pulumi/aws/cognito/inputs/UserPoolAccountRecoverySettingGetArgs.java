@@ -4,7 +4,7 @@
 package io.pulumi.aws.cognito.inputs;
 
 import io.pulumi.aws.cognito.inputs.UserPoolAccountRecoverySettingRecoveryMechanismGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
@@ -19,18 +19,18 @@ public final class UserPoolAccountRecoverySettingGetArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="recoveryMechanisms", required=true)
-      private final Input<List<UserPoolAccountRecoverySettingRecoveryMechanismGetArgs>> recoveryMechanisms;
+      private final Output<List<UserPoolAccountRecoverySettingRecoveryMechanismGetArgs>> recoveryMechanisms;
 
-    public Input<List<UserPoolAccountRecoverySettingRecoveryMechanismGetArgs>> getRecoveryMechanisms() {
+    public Output<List<UserPoolAccountRecoverySettingRecoveryMechanismGetArgs>> getRecoveryMechanisms() {
         return this.recoveryMechanisms;
     }
 
-    public UserPoolAccountRecoverySettingGetArgs(Input<List<UserPoolAccountRecoverySettingRecoveryMechanismGetArgs>> recoveryMechanisms) {
+    public UserPoolAccountRecoverySettingGetArgs(Output<List<UserPoolAccountRecoverySettingRecoveryMechanismGetArgs>> recoveryMechanisms) {
         this.recoveryMechanisms = Objects.requireNonNull(recoveryMechanisms, "expected parameter 'recoveryMechanisms' to be non-null");
     }
 
     private UserPoolAccountRecoverySettingGetArgs() {
-        this.recoveryMechanisms = Input.empty();
+        this.recoveryMechanisms = Output.empty();
     }
 
     public static Builder builder() {
@@ -42,7 +42,7 @@ public final class UserPoolAccountRecoverySettingGetArgs extends io.pulumi.resou
     }
 
     public static final class Builder {
-        private Input<List<UserPoolAccountRecoverySettingRecoveryMechanismGetArgs>> recoveryMechanisms;
+        private Output<List<UserPoolAccountRecoverySettingRecoveryMechanismGetArgs>> recoveryMechanisms;
 
         public Builder() {
     	      // Empty
@@ -53,13 +53,13 @@ public final class UserPoolAccountRecoverySettingGetArgs extends io.pulumi.resou
     	      this.recoveryMechanisms = defaults.recoveryMechanisms;
         }
 
-        public Builder recoveryMechanisms(Input<List<UserPoolAccountRecoverySettingRecoveryMechanismGetArgs>> recoveryMechanisms) {
+        public Builder recoveryMechanisms(Output<List<UserPoolAccountRecoverySettingRecoveryMechanismGetArgs>> recoveryMechanisms) {
             this.recoveryMechanisms = Objects.requireNonNull(recoveryMechanisms);
             return this;
         }
 
         public Builder recoveryMechanisms(List<UserPoolAccountRecoverySettingRecoveryMechanismGetArgs> recoveryMechanisms) {
-            this.recoveryMechanisms = Input.of(Objects.requireNonNull(recoveryMechanisms));
+            this.recoveryMechanisms = Output.of(Objects.requireNonNull(recoveryMechanisms));
             return this;
         }
         public UserPoolAccountRecoverySettingGetArgs build() {

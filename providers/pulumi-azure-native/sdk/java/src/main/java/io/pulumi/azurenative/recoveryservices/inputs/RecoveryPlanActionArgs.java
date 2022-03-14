@@ -6,7 +6,7 @@ package io.pulumi.azurenative.recoveryservices.inputs;
 import io.pulumi.azurenative.recoveryservices.enums.PossibleOperationsDirections;
 import io.pulumi.azurenative.recoveryservices.enums.ReplicationProtectedItemOperation;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -26,9 +26,9 @@ public final class RecoveryPlanActionArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="actionName", required=true)
-      private final Input<String> actionName;
+      private final Output<String> actionName;
 
-    public Input<String> getActionName() {
+    public Output<String> getActionName() {
         return this.actionName;
     }
 
@@ -37,9 +37,9 @@ public final class RecoveryPlanActionArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="failoverDirections", required=true)
-      private final Input<List<Either<String,PossibleOperationsDirections>>> failoverDirections;
+      private final Output<List<Either<String,PossibleOperationsDirections>>> failoverDirections;
 
-    public Input<List<Either<String,PossibleOperationsDirections>>> getFailoverDirections() {
+    public Output<List<Either<String,PossibleOperationsDirections>>> getFailoverDirections() {
         return this.failoverDirections;
     }
 
@@ -48,25 +48,25 @@ public final class RecoveryPlanActionArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="failoverTypes", required=true)
-      private final Input<List<Either<String,ReplicationProtectedItemOperation>>> failoverTypes;
+      private final Output<List<Either<String,ReplicationProtectedItemOperation>>> failoverTypes;
 
-    public Input<List<Either<String,ReplicationProtectedItemOperation>>> getFailoverTypes() {
+    public Output<List<Either<String,ReplicationProtectedItemOperation>>> getFailoverTypes() {
         return this.failoverTypes;
     }
 
     public RecoveryPlanActionArgs(
-        Input<String> actionName,
-        Input<List<Either<String,PossibleOperationsDirections>>> failoverDirections,
-        Input<List<Either<String,ReplicationProtectedItemOperation>>> failoverTypes) {
+        Output<String> actionName,
+        Output<List<Either<String,PossibleOperationsDirections>>> failoverDirections,
+        Output<List<Either<String,ReplicationProtectedItemOperation>>> failoverTypes) {
         this.actionName = Objects.requireNonNull(actionName, "expected parameter 'actionName' to be non-null");
         this.failoverDirections = Objects.requireNonNull(failoverDirections, "expected parameter 'failoverDirections' to be non-null");
         this.failoverTypes = Objects.requireNonNull(failoverTypes, "expected parameter 'failoverTypes' to be non-null");
     }
 
     private RecoveryPlanActionArgs() {
-        this.actionName = Input.empty();
-        this.failoverDirections = Input.empty();
-        this.failoverTypes = Input.empty();
+        this.actionName = Output.empty();
+        this.failoverDirections = Output.empty();
+        this.failoverTypes = Output.empty();
     }
 
     public static Builder builder() {
@@ -78,9 +78,9 @@ public final class RecoveryPlanActionArgs extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private Input<String> actionName;
-        private Input<List<Either<String,PossibleOperationsDirections>>> failoverDirections;
-        private Input<List<Either<String,ReplicationProtectedItemOperation>>> failoverTypes;
+        private Output<String> actionName;
+        private Output<List<Either<String,PossibleOperationsDirections>>> failoverDirections;
+        private Output<List<Either<String,ReplicationProtectedItemOperation>>> failoverTypes;
 
         public Builder() {
     	      // Empty
@@ -93,33 +93,33 @@ public final class RecoveryPlanActionArgs extends io.pulumi.resources.ResourceAr
     	      this.failoverTypes = defaults.failoverTypes;
         }
 
-        public Builder actionName(Input<String> actionName) {
+        public Builder actionName(Output<String> actionName) {
             this.actionName = Objects.requireNonNull(actionName);
             return this;
         }
 
         public Builder actionName(String actionName) {
-            this.actionName = Input.of(Objects.requireNonNull(actionName));
+            this.actionName = Output.of(Objects.requireNonNull(actionName));
             return this;
         }
 
-        public Builder failoverDirections(Input<List<Either<String,PossibleOperationsDirections>>> failoverDirections) {
+        public Builder failoverDirections(Output<List<Either<String,PossibleOperationsDirections>>> failoverDirections) {
             this.failoverDirections = Objects.requireNonNull(failoverDirections);
             return this;
         }
 
         public Builder failoverDirections(List<Either<String,PossibleOperationsDirections>> failoverDirections) {
-            this.failoverDirections = Input.of(Objects.requireNonNull(failoverDirections));
+            this.failoverDirections = Output.of(Objects.requireNonNull(failoverDirections));
             return this;
         }
 
-        public Builder failoverTypes(Input<List<Either<String,ReplicationProtectedItemOperation>>> failoverTypes) {
+        public Builder failoverTypes(Output<List<Either<String,ReplicationProtectedItemOperation>>> failoverTypes) {
             this.failoverTypes = Objects.requireNonNull(failoverTypes);
             return this;
         }
 
         public Builder failoverTypes(List<Either<String,ReplicationProtectedItemOperation>> failoverTypes) {
-            this.failoverTypes = Input.of(Objects.requireNonNull(failoverTypes));
+            this.failoverTypes = Output.of(Objects.requireNonNull(failoverTypes));
             return this;
         }
         public RecoveryPlanActionArgs build() {

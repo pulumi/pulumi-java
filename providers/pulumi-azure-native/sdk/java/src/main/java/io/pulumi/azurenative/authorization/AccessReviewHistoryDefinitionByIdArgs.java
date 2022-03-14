@@ -8,7 +8,7 @@ import io.pulumi.azurenative.authorization.enums.AccessReviewResult;
 import io.pulumi.azurenative.authorization.inputs.AccessReviewHistoryInstanceArgs;
 import io.pulumi.azurenative.authorization.inputs.AccessReviewScopeArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -26,10 +26,10 @@ public final class AccessReviewHistoryDefinitionByIdArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="decisions")
-      private final @Nullable Input<List<Either<String,AccessReviewResult>>> decisions;
+      private final @Nullable Output<List<Either<String,AccessReviewResult>>> decisions;
 
-    public Input<List<Either<String,AccessReviewResult>>> getDecisions() {
-        return this.decisions == null ? Input.empty() : this.decisions;
+    public Output<List<Either<String,AccessReviewResult>>> getDecisions() {
+        return this.decisions == null ? Output.empty() : this.decisions;
     }
 
     /**
@@ -37,10 +37,10 @@ public final class AccessReviewHistoryDefinitionByIdArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="displayName")
-      private final @Nullable Input<String> displayName;
+      private final @Nullable Output<String> displayName;
 
-    public Input<String> getDisplayName() {
-        return this.displayName == null ? Input.empty() : this.displayName;
+    public Output<String> getDisplayName() {
+        return this.displayName == null ? Output.empty() : this.displayName;
     }
 
     /**
@@ -48,10 +48,10 @@ public final class AccessReviewHistoryDefinitionByIdArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="endDate")
-      private final @Nullable Input<String> endDate;
+      private final @Nullable Output<String> endDate;
 
-    public Input<String> getEndDate() {
-        return this.endDate == null ? Input.empty() : this.endDate;
+    public Output<String> getEndDate() {
+        return this.endDate == null ? Output.empty() : this.endDate;
     }
 
     /**
@@ -59,10 +59,10 @@ public final class AccessReviewHistoryDefinitionByIdArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="historyDefinitionId")
-      private final @Nullable Input<String> historyDefinitionId;
+      private final @Nullable Output<String> historyDefinitionId;
 
-    public Input<String> getHistoryDefinitionId() {
-        return this.historyDefinitionId == null ? Input.empty() : this.historyDefinitionId;
+    public Output<String> getHistoryDefinitionId() {
+        return this.historyDefinitionId == null ? Output.empty() : this.historyDefinitionId;
     }
 
     /**
@@ -70,10 +70,10 @@ public final class AccessReviewHistoryDefinitionByIdArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="instances")
-      private final @Nullable Input<List<AccessReviewHistoryInstanceArgs>> instances;
+      private final @Nullable Output<List<AccessReviewHistoryInstanceArgs>> instances;
 
-    public Input<List<AccessReviewHistoryInstanceArgs>> getInstances() {
-        return this.instances == null ? Input.empty() : this.instances;
+    public Output<List<AccessReviewHistoryInstanceArgs>> getInstances() {
+        return this.instances == null ? Output.empty() : this.instances;
     }
 
     /**
@@ -81,10 +81,10 @@ public final class AccessReviewHistoryDefinitionByIdArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="interval")
-      private final @Nullable Input<Integer> interval;
+      private final @Nullable Output<Integer> interval;
 
-    public Input<Integer> getInterval() {
-        return this.interval == null ? Input.empty() : this.interval;
+    public Output<Integer> getInterval() {
+        return this.interval == null ? Output.empty() : this.interval;
     }
 
     /**
@@ -92,10 +92,10 @@ public final class AccessReviewHistoryDefinitionByIdArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="numberOfOccurrences")
-      private final @Nullable Input<Integer> numberOfOccurrences;
+      private final @Nullable Output<Integer> numberOfOccurrences;
 
-    public Input<Integer> getNumberOfOccurrences() {
-        return this.numberOfOccurrences == null ? Input.empty() : this.numberOfOccurrences;
+    public Output<Integer> getNumberOfOccurrences() {
+        return this.numberOfOccurrences == null ? Output.empty() : this.numberOfOccurrences;
     }
 
     /**
@@ -103,10 +103,10 @@ public final class AccessReviewHistoryDefinitionByIdArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="scopes")
-      private final @Nullable Input<List<AccessReviewScopeArgs>> scopes;
+      private final @Nullable Output<List<AccessReviewScopeArgs>> scopes;
 
-    public Input<List<AccessReviewScopeArgs>> getScopes() {
-        return this.scopes == null ? Input.empty() : this.scopes;
+    public Output<List<AccessReviewScopeArgs>> getScopes() {
+        return this.scopes == null ? Output.empty() : this.scopes;
     }
 
     /**
@@ -114,10 +114,10 @@ public final class AccessReviewHistoryDefinitionByIdArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="startDate")
-      private final @Nullable Input<String> startDate;
+      private final @Nullable Output<String> startDate;
 
-    public Input<String> getStartDate() {
-        return this.startDate == null ? Input.empty() : this.startDate;
+    public Output<String> getStartDate() {
+        return this.startDate == null ? Output.empty() : this.startDate;
     }
 
     /**
@@ -125,23 +125,23 @@ public final class AccessReviewHistoryDefinitionByIdArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="type")
-      private final @Nullable Input<Either<String,AccessReviewRecurrenceRangeType>> type;
+      private final @Nullable Output<Either<String,AccessReviewRecurrenceRangeType>> type;
 
-    public Input<Either<String,AccessReviewRecurrenceRangeType>> getType() {
-        return this.type == null ? Input.empty() : this.type;
+    public Output<Either<String,AccessReviewRecurrenceRangeType>> getType() {
+        return this.type == null ? Output.empty() : this.type;
     }
 
     public AccessReviewHistoryDefinitionByIdArgs(
-        @Nullable Input<List<Either<String,AccessReviewResult>>> decisions,
-        @Nullable Input<String> displayName,
-        @Nullable Input<String> endDate,
-        @Nullable Input<String> historyDefinitionId,
-        @Nullable Input<List<AccessReviewHistoryInstanceArgs>> instances,
-        @Nullable Input<Integer> interval,
-        @Nullable Input<Integer> numberOfOccurrences,
-        @Nullable Input<List<AccessReviewScopeArgs>> scopes,
-        @Nullable Input<String> startDate,
-        @Nullable Input<Either<String,AccessReviewRecurrenceRangeType>> type) {
+        @Nullable Output<List<Either<String,AccessReviewResult>>> decisions,
+        @Nullable Output<String> displayName,
+        @Nullable Output<String> endDate,
+        @Nullable Output<String> historyDefinitionId,
+        @Nullable Output<List<AccessReviewHistoryInstanceArgs>> instances,
+        @Nullable Output<Integer> interval,
+        @Nullable Output<Integer> numberOfOccurrences,
+        @Nullable Output<List<AccessReviewScopeArgs>> scopes,
+        @Nullable Output<String> startDate,
+        @Nullable Output<Either<String,AccessReviewRecurrenceRangeType>> type) {
         this.decisions = decisions;
         this.displayName = displayName;
         this.endDate = endDate;
@@ -155,16 +155,16 @@ public final class AccessReviewHistoryDefinitionByIdArgs extends io.pulumi.resou
     }
 
     private AccessReviewHistoryDefinitionByIdArgs() {
-        this.decisions = Input.empty();
-        this.displayName = Input.empty();
-        this.endDate = Input.empty();
-        this.historyDefinitionId = Input.empty();
-        this.instances = Input.empty();
-        this.interval = Input.empty();
-        this.numberOfOccurrences = Input.empty();
-        this.scopes = Input.empty();
-        this.startDate = Input.empty();
-        this.type = Input.empty();
+        this.decisions = Output.empty();
+        this.displayName = Output.empty();
+        this.endDate = Output.empty();
+        this.historyDefinitionId = Output.empty();
+        this.instances = Output.empty();
+        this.interval = Output.empty();
+        this.numberOfOccurrences = Output.empty();
+        this.scopes = Output.empty();
+        this.startDate = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -176,16 +176,16 @@ public final class AccessReviewHistoryDefinitionByIdArgs extends io.pulumi.resou
     }
 
     public static final class Builder {
-        private @Nullable Input<List<Either<String,AccessReviewResult>>> decisions;
-        private @Nullable Input<String> displayName;
-        private @Nullable Input<String> endDate;
-        private @Nullable Input<String> historyDefinitionId;
-        private @Nullable Input<List<AccessReviewHistoryInstanceArgs>> instances;
-        private @Nullable Input<Integer> interval;
-        private @Nullable Input<Integer> numberOfOccurrences;
-        private @Nullable Input<List<AccessReviewScopeArgs>> scopes;
-        private @Nullable Input<String> startDate;
-        private @Nullable Input<Either<String,AccessReviewRecurrenceRangeType>> type;
+        private @Nullable Output<List<Either<String,AccessReviewResult>>> decisions;
+        private @Nullable Output<String> displayName;
+        private @Nullable Output<String> endDate;
+        private @Nullable Output<String> historyDefinitionId;
+        private @Nullable Output<List<AccessReviewHistoryInstanceArgs>> instances;
+        private @Nullable Output<Integer> interval;
+        private @Nullable Output<Integer> numberOfOccurrences;
+        private @Nullable Output<List<AccessReviewScopeArgs>> scopes;
+        private @Nullable Output<String> startDate;
+        private @Nullable Output<Either<String,AccessReviewRecurrenceRangeType>> type;
 
         public Builder() {
     	      // Empty
@@ -205,103 +205,103 @@ public final class AccessReviewHistoryDefinitionByIdArgs extends io.pulumi.resou
     	      this.type = defaults.type;
         }
 
-        public Builder decisions(@Nullable Input<List<Either<String,AccessReviewResult>>> decisions) {
+        public Builder decisions(@Nullable Output<List<Either<String,AccessReviewResult>>> decisions) {
             this.decisions = decisions;
             return this;
         }
 
         public Builder decisions(@Nullable List<Either<String,AccessReviewResult>> decisions) {
-            this.decisions = Input.ofNullable(decisions);
+            this.decisions = Output.ofNullable(decisions);
             return this;
         }
 
-        public Builder displayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Input.ofNullable(displayName);
+            this.displayName = Output.ofNullable(displayName);
             return this;
         }
 
-        public Builder endDate(@Nullable Input<String> endDate) {
+        public Builder endDate(@Nullable Output<String> endDate) {
             this.endDate = endDate;
             return this;
         }
 
         public Builder endDate(@Nullable String endDate) {
-            this.endDate = Input.ofNullable(endDate);
+            this.endDate = Output.ofNullable(endDate);
             return this;
         }
 
-        public Builder historyDefinitionId(@Nullable Input<String> historyDefinitionId) {
+        public Builder historyDefinitionId(@Nullable Output<String> historyDefinitionId) {
             this.historyDefinitionId = historyDefinitionId;
             return this;
         }
 
         public Builder historyDefinitionId(@Nullable String historyDefinitionId) {
-            this.historyDefinitionId = Input.ofNullable(historyDefinitionId);
+            this.historyDefinitionId = Output.ofNullable(historyDefinitionId);
             return this;
         }
 
-        public Builder instances(@Nullable Input<List<AccessReviewHistoryInstanceArgs>> instances) {
+        public Builder instances(@Nullable Output<List<AccessReviewHistoryInstanceArgs>> instances) {
             this.instances = instances;
             return this;
         }
 
         public Builder instances(@Nullable List<AccessReviewHistoryInstanceArgs> instances) {
-            this.instances = Input.ofNullable(instances);
+            this.instances = Output.ofNullable(instances);
             return this;
         }
 
-        public Builder interval(@Nullable Input<Integer> interval) {
+        public Builder interval(@Nullable Output<Integer> interval) {
             this.interval = interval;
             return this;
         }
 
         public Builder interval(@Nullable Integer interval) {
-            this.interval = Input.ofNullable(interval);
+            this.interval = Output.ofNullable(interval);
             return this;
         }
 
-        public Builder numberOfOccurrences(@Nullable Input<Integer> numberOfOccurrences) {
+        public Builder numberOfOccurrences(@Nullable Output<Integer> numberOfOccurrences) {
             this.numberOfOccurrences = numberOfOccurrences;
             return this;
         }
 
         public Builder numberOfOccurrences(@Nullable Integer numberOfOccurrences) {
-            this.numberOfOccurrences = Input.ofNullable(numberOfOccurrences);
+            this.numberOfOccurrences = Output.ofNullable(numberOfOccurrences);
             return this;
         }
 
-        public Builder scopes(@Nullable Input<List<AccessReviewScopeArgs>> scopes) {
+        public Builder scopes(@Nullable Output<List<AccessReviewScopeArgs>> scopes) {
             this.scopes = scopes;
             return this;
         }
 
         public Builder scopes(@Nullable List<AccessReviewScopeArgs> scopes) {
-            this.scopes = Input.ofNullable(scopes);
+            this.scopes = Output.ofNullable(scopes);
             return this;
         }
 
-        public Builder startDate(@Nullable Input<String> startDate) {
+        public Builder startDate(@Nullable Output<String> startDate) {
             this.startDate = startDate;
             return this;
         }
 
         public Builder startDate(@Nullable String startDate) {
-            this.startDate = Input.ofNullable(startDate);
+            this.startDate = Output.ofNullable(startDate);
             return this;
         }
 
-        public Builder type(@Nullable Input<Either<String,AccessReviewRecurrenceRangeType>> type) {
+        public Builder type(@Nullable Output<Either<String,AccessReviewRecurrenceRangeType>> type) {
             this.type = type;
             return this;
         }
 
         public Builder type(@Nullable Either<String,AccessReviewRecurrenceRangeType> type) {
-            this.type = Input.ofNullable(type);
+            this.type = Output.ofNullable(type);
             return this;
         }
         public AccessReviewHistoryDefinitionByIdArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class ConnectionMonitorWorkspaceSettingsArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="workspaceResourceId")
-      private final @Nullable Input<String> workspaceResourceId;
+      private final @Nullable Output<String> workspaceResourceId;
 
-    public Input<String> getWorkspaceResourceId() {
-        return this.workspaceResourceId == null ? Input.empty() : this.workspaceResourceId;
+    public Output<String> getWorkspaceResourceId() {
+        return this.workspaceResourceId == null ? Output.empty() : this.workspaceResourceId;
     }
 
-    public ConnectionMonitorWorkspaceSettingsArgs(@Nullable Input<String> workspaceResourceId) {
+    public ConnectionMonitorWorkspaceSettingsArgs(@Nullable Output<String> workspaceResourceId) {
         this.workspaceResourceId = workspaceResourceId;
     }
 
     private ConnectionMonitorWorkspaceSettingsArgs() {
-        this.workspaceResourceId = Input.empty();
+        this.workspaceResourceId = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class ConnectionMonitorWorkspaceSettingsArgs extends io.pulumi.reso
     }
 
     public static final class Builder {
-        private @Nullable Input<String> workspaceResourceId;
+        private @Nullable Output<String> workspaceResourceId;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class ConnectionMonitorWorkspaceSettingsArgs extends io.pulumi.reso
     	      this.workspaceResourceId = defaults.workspaceResourceId;
         }
 
-        public Builder workspaceResourceId(@Nullable Input<String> workspaceResourceId) {
+        public Builder workspaceResourceId(@Nullable Output<String> workspaceResourceId) {
             this.workspaceResourceId = workspaceResourceId;
             return this;
         }
 
         public Builder workspaceResourceId(@Nullable String workspaceResourceId) {
-            this.workspaceResourceId = Input.ofNullable(workspaceResourceId);
+            this.workspaceResourceId = Output.ofNullable(workspaceResourceId);
             return this;
         }
         public ConnectionMonitorWorkspaceSettingsArgs build() {

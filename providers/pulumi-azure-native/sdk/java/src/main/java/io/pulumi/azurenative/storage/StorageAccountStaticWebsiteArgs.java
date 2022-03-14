@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.storage;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,9 +19,9 @@ public final class StorageAccountStaticWebsiteArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="accountName", required=true)
-      private final Input<String> accountName;
+      private final Output<String> accountName;
 
-    public Input<String> getAccountName() {
+    public Output<String> getAccountName() {
         return this.accountName;
     }
 
@@ -30,10 +30,10 @@ public final class StorageAccountStaticWebsiteArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="error404Document")
-      private final @Nullable Input<String> error404Document;
+      private final @Nullable Output<String> error404Document;
 
-    public Input<String> getError404Document() {
-        return this.error404Document == null ? Input.empty() : this.error404Document;
+    public Output<String> getError404Document() {
+        return this.error404Document == null ? Output.empty() : this.error404Document;
     }
 
     /**
@@ -41,10 +41,10 @@ public final class StorageAccountStaticWebsiteArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="indexDocument")
-      private final @Nullable Input<String> indexDocument;
+      private final @Nullable Output<String> indexDocument;
 
-    public Input<String> getIndexDocument() {
-        return this.indexDocument == null ? Input.empty() : this.indexDocument;
+    public Output<String> getIndexDocument() {
+        return this.indexDocument == null ? Output.empty() : this.indexDocument;
     }
 
     /**
@@ -52,17 +52,17 @@ public final class StorageAccountStaticWebsiteArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
     public StorageAccountStaticWebsiteArgs(
-        Input<String> accountName,
-        @Nullable Input<String> error404Document,
-        @Nullable Input<String> indexDocument,
-        Input<String> resourceGroupName) {
+        Output<String> accountName,
+        @Nullable Output<String> error404Document,
+        @Nullable Output<String> indexDocument,
+        Output<String> resourceGroupName) {
         this.accountName = Objects.requireNonNull(accountName, "expected parameter 'accountName' to be non-null");
         this.error404Document = error404Document;
         this.indexDocument = indexDocument;
@@ -70,10 +70,10 @@ public final class StorageAccountStaticWebsiteArgs extends io.pulumi.resources.R
     }
 
     private StorageAccountStaticWebsiteArgs() {
-        this.accountName = Input.empty();
-        this.error404Document = Input.empty();
-        this.indexDocument = Input.empty();
-        this.resourceGroupName = Input.empty();
+        this.accountName = Output.empty();
+        this.error404Document = Output.empty();
+        this.indexDocument = Output.empty();
+        this.resourceGroupName = Output.empty();
     }
 
     public static Builder builder() {
@@ -85,10 +85,10 @@ public final class StorageAccountStaticWebsiteArgs extends io.pulumi.resources.R
     }
 
     public static final class Builder {
-        private Input<String> accountName;
-        private @Nullable Input<String> error404Document;
-        private @Nullable Input<String> indexDocument;
-        private Input<String> resourceGroupName;
+        private Output<String> accountName;
+        private @Nullable Output<String> error404Document;
+        private @Nullable Output<String> indexDocument;
+        private Output<String> resourceGroupName;
 
         public Builder() {
     	      // Empty
@@ -102,43 +102,43 @@ public final class StorageAccountStaticWebsiteArgs extends io.pulumi.resources.R
     	      this.resourceGroupName = defaults.resourceGroupName;
         }
 
-        public Builder accountName(Input<String> accountName) {
+        public Builder accountName(Output<String> accountName) {
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
 
         public Builder accountName(String accountName) {
-            this.accountName = Input.of(Objects.requireNonNull(accountName));
+            this.accountName = Output.of(Objects.requireNonNull(accountName));
             return this;
         }
 
-        public Builder error404Document(@Nullable Input<String> error404Document) {
+        public Builder error404Document(@Nullable Output<String> error404Document) {
             this.error404Document = error404Document;
             return this;
         }
 
         public Builder error404Document(@Nullable String error404Document) {
-            this.error404Document = Input.ofNullable(error404Document);
+            this.error404Document = Output.ofNullable(error404Document);
             return this;
         }
 
-        public Builder indexDocument(@Nullable Input<String> indexDocument) {
+        public Builder indexDocument(@Nullable Output<String> indexDocument) {
             this.indexDocument = indexDocument;
             return this;
         }
 
         public Builder indexDocument(@Nullable String indexDocument) {
-            this.indexDocument = Input.ofNullable(indexDocument);
+            this.indexDocument = Output.ofNullable(indexDocument);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
         public StorageAccountStaticWebsiteArgs build() {

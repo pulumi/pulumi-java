@@ -4,7 +4,7 @@
 package io.pulumi.aws.msk.inputs;
 
 import io.pulumi.aws.msk.inputs.ClusterOpenMonitoringPrometheusArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 
@@ -18,18 +18,18 @@ public final class ClusterOpenMonitoringArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="prometheus", required=true)
-      private final Input<ClusterOpenMonitoringPrometheusArgs> prometheus;
+      private final Output<ClusterOpenMonitoringPrometheusArgs> prometheus;
 
-    public Input<ClusterOpenMonitoringPrometheusArgs> getPrometheus() {
+    public Output<ClusterOpenMonitoringPrometheusArgs> getPrometheus() {
         return this.prometheus;
     }
 
-    public ClusterOpenMonitoringArgs(Input<ClusterOpenMonitoringPrometheusArgs> prometheus) {
+    public ClusterOpenMonitoringArgs(Output<ClusterOpenMonitoringPrometheusArgs> prometheus) {
         this.prometheus = Objects.requireNonNull(prometheus, "expected parameter 'prometheus' to be non-null");
     }
 
     private ClusterOpenMonitoringArgs() {
-        this.prometheus = Input.empty();
+        this.prometheus = Output.empty();
     }
 
     public static Builder builder() {
@@ -41,7 +41,7 @@ public final class ClusterOpenMonitoringArgs extends io.pulumi.resources.Resourc
     }
 
     public static final class Builder {
-        private Input<ClusterOpenMonitoringPrometheusArgs> prometheus;
+        private Output<ClusterOpenMonitoringPrometheusArgs> prometheus;
 
         public Builder() {
     	      // Empty
@@ -52,13 +52,13 @@ public final class ClusterOpenMonitoringArgs extends io.pulumi.resources.Resourc
     	      this.prometheus = defaults.prometheus;
         }
 
-        public Builder prometheus(Input<ClusterOpenMonitoringPrometheusArgs> prometheus) {
+        public Builder prometheus(Output<ClusterOpenMonitoringPrometheusArgs> prometheus) {
             this.prometheus = Objects.requireNonNull(prometheus);
             return this;
         }
 
         public Builder prometheus(ClusterOpenMonitoringPrometheusArgs prometheus) {
-            this.prometheus = Input.of(Objects.requireNonNull(prometheus));
+            this.prometheus = Output.of(Objects.requireNonNull(prometheus));
             return this;
         }
         public ClusterOpenMonitoringArgs build() {

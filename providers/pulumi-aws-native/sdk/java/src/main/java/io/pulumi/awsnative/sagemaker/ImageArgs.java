@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.sagemaker;
 
 import io.pulumi.awsnative.sagemaker.inputs.ImageTagArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -17,30 +17,30 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
     public static final ImageArgs Empty = new ImageArgs();
 
     @InputImport(name="imageDescription")
-      private final @Nullable Input<String> imageDescription;
+      private final @Nullable Output<String> imageDescription;
 
-    public Input<String> getImageDescription() {
-        return this.imageDescription == null ? Input.empty() : this.imageDescription;
+    public Output<String> getImageDescription() {
+        return this.imageDescription == null ? Output.empty() : this.imageDescription;
     }
 
     @InputImport(name="imageDisplayName")
-      private final @Nullable Input<String> imageDisplayName;
+      private final @Nullable Output<String> imageDisplayName;
 
-    public Input<String> getImageDisplayName() {
-        return this.imageDisplayName == null ? Input.empty() : this.imageDisplayName;
+    public Output<String> getImageDisplayName() {
+        return this.imageDisplayName == null ? Output.empty() : this.imageDisplayName;
     }
 
     @InputImport(name="imageName")
-      private final @Nullable Input<String> imageName;
+      private final @Nullable Output<String> imageName;
 
-    public Input<String> getImageName() {
-        return this.imageName == null ? Input.empty() : this.imageName;
+    public Output<String> getImageName() {
+        return this.imageName == null ? Output.empty() : this.imageName;
     }
 
     @InputImport(name="imageRoleArn", required=true)
-      private final Input<String> imageRoleArn;
+      private final Output<String> imageRoleArn;
 
-    public Input<String> getImageRoleArn() {
+    public Output<String> getImageRoleArn() {
         return this.imageRoleArn;
     }
 
@@ -49,18 +49,18 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<List<ImageTagArgs>> tags;
+      private final @Nullable Output<List<ImageTagArgs>> tags;
 
-    public Input<List<ImageTagArgs>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<List<ImageTagArgs>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public ImageArgs(
-        @Nullable Input<String> imageDescription,
-        @Nullable Input<String> imageDisplayName,
-        @Nullable Input<String> imageName,
-        Input<String> imageRoleArn,
-        @Nullable Input<List<ImageTagArgs>> tags) {
+        @Nullable Output<String> imageDescription,
+        @Nullable Output<String> imageDisplayName,
+        @Nullable Output<String> imageName,
+        Output<String> imageRoleArn,
+        @Nullable Output<List<ImageTagArgs>> tags) {
         this.imageDescription = imageDescription;
         this.imageDisplayName = imageDisplayName;
         this.imageName = imageName;
@@ -69,11 +69,11 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ImageArgs() {
-        this.imageDescription = Input.empty();
-        this.imageDisplayName = Input.empty();
-        this.imageName = Input.empty();
-        this.imageRoleArn = Input.empty();
-        this.tags = Input.empty();
+        this.imageDescription = Output.empty();
+        this.imageDisplayName = Output.empty();
+        this.imageName = Output.empty();
+        this.imageRoleArn = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -85,11 +85,11 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> imageDescription;
-        private @Nullable Input<String> imageDisplayName;
-        private @Nullable Input<String> imageName;
-        private Input<String> imageRoleArn;
-        private @Nullable Input<List<ImageTagArgs>> tags;
+        private @Nullable Output<String> imageDescription;
+        private @Nullable Output<String> imageDisplayName;
+        private @Nullable Output<String> imageName;
+        private Output<String> imageRoleArn;
+        private @Nullable Output<List<ImageTagArgs>> tags;
 
         public Builder() {
     	      // Empty
@@ -104,53 +104,53 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder imageDescription(@Nullable Input<String> imageDescription) {
+        public Builder imageDescription(@Nullable Output<String> imageDescription) {
             this.imageDescription = imageDescription;
             return this;
         }
 
         public Builder imageDescription(@Nullable String imageDescription) {
-            this.imageDescription = Input.ofNullable(imageDescription);
+            this.imageDescription = Output.ofNullable(imageDescription);
             return this;
         }
 
-        public Builder imageDisplayName(@Nullable Input<String> imageDisplayName) {
+        public Builder imageDisplayName(@Nullable Output<String> imageDisplayName) {
             this.imageDisplayName = imageDisplayName;
             return this;
         }
 
         public Builder imageDisplayName(@Nullable String imageDisplayName) {
-            this.imageDisplayName = Input.ofNullable(imageDisplayName);
+            this.imageDisplayName = Output.ofNullable(imageDisplayName);
             return this;
         }
 
-        public Builder imageName(@Nullable Input<String> imageName) {
+        public Builder imageName(@Nullable Output<String> imageName) {
             this.imageName = imageName;
             return this;
         }
 
         public Builder imageName(@Nullable String imageName) {
-            this.imageName = Input.ofNullable(imageName);
+            this.imageName = Output.ofNullable(imageName);
             return this;
         }
 
-        public Builder imageRoleArn(Input<String> imageRoleArn) {
+        public Builder imageRoleArn(Output<String> imageRoleArn) {
             this.imageRoleArn = Objects.requireNonNull(imageRoleArn);
             return this;
         }
 
         public Builder imageRoleArn(String imageRoleArn) {
-            this.imageRoleArn = Input.of(Objects.requireNonNull(imageRoleArn));
+            this.imageRoleArn = Output.of(Objects.requireNonNull(imageRoleArn));
             return this;
         }
 
-        public Builder tags(@Nullable Input<List<ImageTagArgs>> tags) {
+        public Builder tags(@Nullable Output<List<ImageTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable List<ImageTagArgs> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public ImageArgs build() {

@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.wafv2.inputs;
 
 import io.pulumi.awsnative.wafv2.inputs.WebACLStatementArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 
@@ -14,18 +14,18 @@ public final class WebACLNotStatementArgs extends io.pulumi.resources.ResourceAr
     public static final WebACLNotStatementArgs Empty = new WebACLNotStatementArgs();
 
     @InputImport(name="statement", required=true)
-      private final Input<WebACLStatementArgs> statement;
+      private final Output<WebACLStatementArgs> statement;
 
-    public Input<WebACLStatementArgs> getStatement() {
+    public Output<WebACLStatementArgs> getStatement() {
         return this.statement;
     }
 
-    public WebACLNotStatementArgs(Input<WebACLStatementArgs> statement) {
+    public WebACLNotStatementArgs(Output<WebACLStatementArgs> statement) {
         this.statement = Objects.requireNonNull(statement, "expected parameter 'statement' to be non-null");
     }
 
     private WebACLNotStatementArgs() {
-        this.statement = Input.empty();
+        this.statement = Output.empty();
     }
 
     public static Builder builder() {
@@ -37,7 +37,7 @@ public final class WebACLNotStatementArgs extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private Input<WebACLStatementArgs> statement;
+        private Output<WebACLStatementArgs> statement;
 
         public Builder() {
     	      // Empty
@@ -48,13 +48,13 @@ public final class WebACLNotStatementArgs extends io.pulumi.resources.ResourceAr
     	      this.statement = defaults.statement;
         }
 
-        public Builder statement(Input<WebACLStatementArgs> statement) {
+        public Builder statement(Output<WebACLStatementArgs> statement) {
             this.statement = Objects.requireNonNull(statement);
             return this;
         }
 
         public Builder statement(WebACLStatementArgs statement) {
-            this.statement = Input.of(Objects.requireNonNull(statement));
+            this.statement = Output.of(Objects.requireNonNull(statement));
             return this;
         }
         public WebACLNotStatementArgs build() {

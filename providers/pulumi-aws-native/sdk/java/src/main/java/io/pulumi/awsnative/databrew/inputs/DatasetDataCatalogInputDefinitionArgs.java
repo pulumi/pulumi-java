@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.databrew.inputs;
 
 import io.pulumi.awsnative.databrew.inputs.DatasetS3LocationArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -20,10 +20,10 @@ public final class DatasetDataCatalogInputDefinitionArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="catalogId")
-      private final @Nullable Input<String> catalogId;
+      private final @Nullable Output<String> catalogId;
 
-    public Input<String> getCatalogId() {
-        return this.catalogId == null ? Input.empty() : this.catalogId;
+    public Output<String> getCatalogId() {
+        return this.catalogId == null ? Output.empty() : this.catalogId;
     }
 
     /**
@@ -31,10 +31,10 @@ public final class DatasetDataCatalogInputDefinitionArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="databaseName")
-      private final @Nullable Input<String> databaseName;
+      private final @Nullable Output<String> databaseName;
 
-    public Input<String> getDatabaseName() {
-        return this.databaseName == null ? Input.empty() : this.databaseName;
+    public Output<String> getDatabaseName() {
+        return this.databaseName == null ? Output.empty() : this.databaseName;
     }
 
     /**
@@ -42,24 +42,24 @@ public final class DatasetDataCatalogInputDefinitionArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="tableName")
-      private final @Nullable Input<String> tableName;
+      private final @Nullable Output<String> tableName;
 
-    public Input<String> getTableName() {
-        return this.tableName == null ? Input.empty() : this.tableName;
+    public Output<String> getTableName() {
+        return this.tableName == null ? Output.empty() : this.tableName;
     }
 
     @InputImport(name="tempDirectory")
-      private final @Nullable Input<DatasetS3LocationArgs> tempDirectory;
+      private final @Nullable Output<DatasetS3LocationArgs> tempDirectory;
 
-    public Input<DatasetS3LocationArgs> getTempDirectory() {
-        return this.tempDirectory == null ? Input.empty() : this.tempDirectory;
+    public Output<DatasetS3LocationArgs> getTempDirectory() {
+        return this.tempDirectory == null ? Output.empty() : this.tempDirectory;
     }
 
     public DatasetDataCatalogInputDefinitionArgs(
-        @Nullable Input<String> catalogId,
-        @Nullable Input<String> databaseName,
-        @Nullable Input<String> tableName,
-        @Nullable Input<DatasetS3LocationArgs> tempDirectory) {
+        @Nullable Output<String> catalogId,
+        @Nullable Output<String> databaseName,
+        @Nullable Output<String> tableName,
+        @Nullable Output<DatasetS3LocationArgs> tempDirectory) {
         this.catalogId = catalogId;
         this.databaseName = databaseName;
         this.tableName = tableName;
@@ -67,10 +67,10 @@ public final class DatasetDataCatalogInputDefinitionArgs extends io.pulumi.resou
     }
 
     private DatasetDataCatalogInputDefinitionArgs() {
-        this.catalogId = Input.empty();
-        this.databaseName = Input.empty();
-        this.tableName = Input.empty();
-        this.tempDirectory = Input.empty();
+        this.catalogId = Output.empty();
+        this.databaseName = Output.empty();
+        this.tableName = Output.empty();
+        this.tempDirectory = Output.empty();
     }
 
     public static Builder builder() {
@@ -82,10 +82,10 @@ public final class DatasetDataCatalogInputDefinitionArgs extends io.pulumi.resou
     }
 
     public static final class Builder {
-        private @Nullable Input<String> catalogId;
-        private @Nullable Input<String> databaseName;
-        private @Nullable Input<String> tableName;
-        private @Nullable Input<DatasetS3LocationArgs> tempDirectory;
+        private @Nullable Output<String> catalogId;
+        private @Nullable Output<String> databaseName;
+        private @Nullable Output<String> tableName;
+        private @Nullable Output<DatasetS3LocationArgs> tempDirectory;
 
         public Builder() {
     	      // Empty
@@ -99,43 +99,43 @@ public final class DatasetDataCatalogInputDefinitionArgs extends io.pulumi.resou
     	      this.tempDirectory = defaults.tempDirectory;
         }
 
-        public Builder catalogId(@Nullable Input<String> catalogId) {
+        public Builder catalogId(@Nullable Output<String> catalogId) {
             this.catalogId = catalogId;
             return this;
         }
 
         public Builder catalogId(@Nullable String catalogId) {
-            this.catalogId = Input.ofNullable(catalogId);
+            this.catalogId = Output.ofNullable(catalogId);
             return this;
         }
 
-        public Builder databaseName(@Nullable Input<String> databaseName) {
+        public Builder databaseName(@Nullable Output<String> databaseName) {
             this.databaseName = databaseName;
             return this;
         }
 
         public Builder databaseName(@Nullable String databaseName) {
-            this.databaseName = Input.ofNullable(databaseName);
+            this.databaseName = Output.ofNullable(databaseName);
             return this;
         }
 
-        public Builder tableName(@Nullable Input<String> tableName) {
+        public Builder tableName(@Nullable Output<String> tableName) {
             this.tableName = tableName;
             return this;
         }
 
         public Builder tableName(@Nullable String tableName) {
-            this.tableName = Input.ofNullable(tableName);
+            this.tableName = Output.ofNullable(tableName);
             return this;
         }
 
-        public Builder tempDirectory(@Nullable Input<DatasetS3LocationArgs> tempDirectory) {
+        public Builder tempDirectory(@Nullable Output<DatasetS3LocationArgs> tempDirectory) {
             this.tempDirectory = tempDirectory;
             return this;
         }
 
         public Builder tempDirectory(@Nullable DatasetS3LocationArgs tempDirectory) {
-            this.tempDirectory = Input.ofNullable(tempDirectory);
+            this.tempDirectory = Output.ofNullable(tempDirectory);
             return this;
         }
         public DatasetDataCatalogInputDefinitionArgs build() {

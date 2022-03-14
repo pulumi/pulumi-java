@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.monitoring.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.monitoring.inputs.SloRequestBasedSliDistributionCutRangeArgs;
 import java.lang.String;
@@ -22,9 +22,9 @@ public final class SloRequestBasedSliDistributionCutArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="distributionFilter", required=true)
-      private final Input<String> distributionFilter;
+      private final Output<String> distributionFilter;
 
-    public Input<String> getDistributionFilter() {
+    public Output<String> getDistributionFilter() {
         return this.distributionFilter;
     }
 
@@ -39,22 +39,22 @@ public final class SloRequestBasedSliDistributionCutArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="range", required=true)
-      private final Input<SloRequestBasedSliDistributionCutRangeArgs> range;
+      private final Output<SloRequestBasedSliDistributionCutRangeArgs> range;
 
-    public Input<SloRequestBasedSliDistributionCutRangeArgs> getRange() {
+    public Output<SloRequestBasedSliDistributionCutRangeArgs> getRange() {
         return this.range;
     }
 
     public SloRequestBasedSliDistributionCutArgs(
-        Input<String> distributionFilter,
-        Input<SloRequestBasedSliDistributionCutRangeArgs> range) {
+        Output<String> distributionFilter,
+        Output<SloRequestBasedSliDistributionCutRangeArgs> range) {
         this.distributionFilter = Objects.requireNonNull(distributionFilter, "expected parameter 'distributionFilter' to be non-null");
         this.range = Objects.requireNonNull(range, "expected parameter 'range' to be non-null");
     }
 
     private SloRequestBasedSliDistributionCutArgs() {
-        this.distributionFilter = Input.empty();
-        this.range = Input.empty();
+        this.distributionFilter = Output.empty();
+        this.range = Output.empty();
     }
 
     public static Builder builder() {
@@ -66,8 +66,8 @@ public final class SloRequestBasedSliDistributionCutArgs extends io.pulumi.resou
     }
 
     public static final class Builder {
-        private Input<String> distributionFilter;
-        private Input<SloRequestBasedSliDistributionCutRangeArgs> range;
+        private Output<String> distributionFilter;
+        private Output<SloRequestBasedSliDistributionCutRangeArgs> range;
 
         public Builder() {
     	      // Empty
@@ -79,23 +79,23 @@ public final class SloRequestBasedSliDistributionCutArgs extends io.pulumi.resou
     	      this.range = defaults.range;
         }
 
-        public Builder distributionFilter(Input<String> distributionFilter) {
+        public Builder distributionFilter(Output<String> distributionFilter) {
             this.distributionFilter = Objects.requireNonNull(distributionFilter);
             return this;
         }
 
         public Builder distributionFilter(String distributionFilter) {
-            this.distributionFilter = Input.of(Objects.requireNonNull(distributionFilter));
+            this.distributionFilter = Output.of(Objects.requireNonNull(distributionFilter));
             return this;
         }
 
-        public Builder range(Input<SloRequestBasedSliDistributionCutRangeArgs> range) {
+        public Builder range(Output<SloRequestBasedSliDistributionCutRangeArgs> range) {
             this.range = Objects.requireNonNull(range);
             return this;
         }
 
         public Builder range(SloRequestBasedSliDistributionCutRangeArgs range) {
-            this.range = Input.of(Objects.requireNonNull(range));
+            this.range = Output.of(Objects.requireNonNull(range));
             return this;
         }
         public SloRequestBasedSliDistributionCutArgs build() {

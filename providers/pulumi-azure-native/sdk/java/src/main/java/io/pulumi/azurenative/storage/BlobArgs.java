@@ -6,7 +6,7 @@ package io.pulumi.azurenative.storage;
 import io.pulumi.azurenative.storage.enums.BlobAccessTier;
 import io.pulumi.azurenative.storage.enums.BlobType;
 import io.pulumi.core.AssetOrArchive;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -23,10 +23,10 @@ public final class BlobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="accessTier")
-      private final @Nullable Input<BlobAccessTier> accessTier;
+      private final @Nullable Output<BlobAccessTier> accessTier;
 
-    public Input<BlobAccessTier> getAccessTier() {
-        return this.accessTier == null ? Input.empty() : this.accessTier;
+    public Output<BlobAccessTier> getAccessTier() {
+        return this.accessTier == null ? Output.empty() : this.accessTier;
     }
 
     /**
@@ -34,9 +34,9 @@ public final class BlobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="accountName", required=true)
-      private final Input<String> accountName;
+      private final Output<String> accountName;
 
-    public Input<String> getAccountName() {
+    public Output<String> getAccountName() {
         return this.accountName;
     }
 
@@ -45,10 +45,10 @@ public final class BlobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="blobName")
-      private final @Nullable Input<String> blobName;
+      private final @Nullable Output<String> blobName;
 
-    public Input<String> getBlobName() {
-        return this.blobName == null ? Input.empty() : this.blobName;
+    public Output<String> getBlobName() {
+        return this.blobName == null ? Output.empty() : this.blobName;
     }
 
     /**
@@ -56,9 +56,9 @@ public final class BlobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="containerName", required=true)
-      private final Input<String> containerName;
+      private final Output<String> containerName;
 
-    public Input<String> getContainerName() {
+    public Output<String> getContainerName() {
         return this.containerName;
     }
 
@@ -67,10 +67,10 @@ public final class BlobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="contentMd5")
-      private final @Nullable Input<String> contentMd5;
+      private final @Nullable Output<String> contentMd5;
 
-    public Input<String> getContentMd5() {
-        return this.contentMd5 == null ? Input.empty() : this.contentMd5;
+    public Output<String> getContentMd5() {
+        return this.contentMd5 == null ? Output.empty() : this.contentMd5;
     }
 
     /**
@@ -78,10 +78,10 @@ public final class BlobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="contentType")
-      private final @Nullable Input<String> contentType;
+      private final @Nullable Output<String> contentType;
 
-    public Input<String> getContentType() {
-        return this.contentType == null ? Input.empty() : this.contentType;
+    public Output<String> getContentType() {
+        return this.contentType == null ? Output.empty() : this.contentType;
     }
 
     /**
@@ -89,10 +89,10 @@ public final class BlobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="metadata")
-      private final @Nullable Input<Map<String,String>> metadata;
+      private final @Nullable Output<Map<String,String>> metadata;
 
-    public Input<Map<String,String>> getMetadata() {
-        return this.metadata == null ? Input.empty() : this.metadata;
+    public Output<Map<String,String>> getMetadata() {
+        return this.metadata == null ? Output.empty() : this.metadata;
     }
 
     /**
@@ -100,9 +100,9 @@ public final class BlobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -111,10 +111,10 @@ public final class BlobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="source")
-      private final @Nullable Input<AssetOrArchive> source;
+      private final @Nullable Output<AssetOrArchive> source;
 
-    public Input<AssetOrArchive> getSource() {
-        return this.source == null ? Input.empty() : this.source;
+    public Output<AssetOrArchive> getSource() {
+        return this.source == null ? Output.empty() : this.source;
     }
 
     /**
@@ -122,23 +122,23 @@ public final class BlobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type")
-      private final @Nullable Input<BlobType> type;
+      private final @Nullable Output<BlobType> type;
 
-    public Input<BlobType> getType() {
-        return this.type == null ? Input.empty() : this.type;
+    public Output<BlobType> getType() {
+        return this.type == null ? Output.empty() : this.type;
     }
 
     public BlobArgs(
-        @Nullable Input<BlobAccessTier> accessTier,
-        Input<String> accountName,
-        @Nullable Input<String> blobName,
-        Input<String> containerName,
-        @Nullable Input<String> contentMd5,
-        @Nullable Input<String> contentType,
-        @Nullable Input<Map<String,String>> metadata,
-        Input<String> resourceGroupName,
-        @Nullable Input<AssetOrArchive> source,
-        @Nullable Input<BlobType> type) {
+        @Nullable Output<BlobAccessTier> accessTier,
+        Output<String> accountName,
+        @Nullable Output<String> blobName,
+        Output<String> containerName,
+        @Nullable Output<String> contentMd5,
+        @Nullable Output<String> contentType,
+        @Nullable Output<Map<String,String>> metadata,
+        Output<String> resourceGroupName,
+        @Nullable Output<AssetOrArchive> source,
+        @Nullable Output<BlobType> type) {
         this.accessTier = accessTier;
         this.accountName = Objects.requireNonNull(accountName, "expected parameter 'accountName' to be non-null");
         this.blobName = blobName;
@@ -148,20 +148,20 @@ public final class BlobArgs extends io.pulumi.resources.ResourceArgs {
         this.metadata = metadata;
         this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
         this.source = source;
-        this.type = type == null ? Input.ofNullable(io.pulumi.azurenative.storage.enums.BlobType.Block) : type;
+        this.type = type == null ? Output.ofNullable(io.pulumi.azurenative.storage.enums.BlobType.Block) : type;
     }
 
     private BlobArgs() {
-        this.accessTier = Input.empty();
-        this.accountName = Input.empty();
-        this.blobName = Input.empty();
-        this.containerName = Input.empty();
-        this.contentMd5 = Input.empty();
-        this.contentType = Input.empty();
-        this.metadata = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.source = Input.empty();
-        this.type = Input.empty();
+        this.accessTier = Output.empty();
+        this.accountName = Output.empty();
+        this.blobName = Output.empty();
+        this.containerName = Output.empty();
+        this.contentMd5 = Output.empty();
+        this.contentType = Output.empty();
+        this.metadata = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.source = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -173,16 +173,16 @@ public final class BlobArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<BlobAccessTier> accessTier;
-        private Input<String> accountName;
-        private @Nullable Input<String> blobName;
-        private Input<String> containerName;
-        private @Nullable Input<String> contentMd5;
-        private @Nullable Input<String> contentType;
-        private @Nullable Input<Map<String,String>> metadata;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<AssetOrArchive> source;
-        private @Nullable Input<BlobType> type;
+        private @Nullable Output<BlobAccessTier> accessTier;
+        private Output<String> accountName;
+        private @Nullable Output<String> blobName;
+        private Output<String> containerName;
+        private @Nullable Output<String> contentMd5;
+        private @Nullable Output<String> contentType;
+        private @Nullable Output<Map<String,String>> metadata;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<AssetOrArchive> source;
+        private @Nullable Output<BlobType> type;
 
         public Builder() {
     	      // Empty
@@ -202,103 +202,103 @@ public final class BlobArgs extends io.pulumi.resources.ResourceArgs {
     	      this.type = defaults.type;
         }
 
-        public Builder accessTier(@Nullable Input<BlobAccessTier> accessTier) {
+        public Builder accessTier(@Nullable Output<BlobAccessTier> accessTier) {
             this.accessTier = accessTier;
             return this;
         }
 
         public Builder accessTier(@Nullable BlobAccessTier accessTier) {
-            this.accessTier = Input.ofNullable(accessTier);
+            this.accessTier = Output.ofNullable(accessTier);
             return this;
         }
 
-        public Builder accountName(Input<String> accountName) {
+        public Builder accountName(Output<String> accountName) {
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
 
         public Builder accountName(String accountName) {
-            this.accountName = Input.of(Objects.requireNonNull(accountName));
+            this.accountName = Output.of(Objects.requireNonNull(accountName));
             return this;
         }
 
-        public Builder blobName(@Nullable Input<String> blobName) {
+        public Builder blobName(@Nullable Output<String> blobName) {
             this.blobName = blobName;
             return this;
         }
 
         public Builder blobName(@Nullable String blobName) {
-            this.blobName = Input.ofNullable(blobName);
+            this.blobName = Output.ofNullable(blobName);
             return this;
         }
 
-        public Builder containerName(Input<String> containerName) {
+        public Builder containerName(Output<String> containerName) {
             this.containerName = Objects.requireNonNull(containerName);
             return this;
         }
 
         public Builder containerName(String containerName) {
-            this.containerName = Input.of(Objects.requireNonNull(containerName));
+            this.containerName = Output.of(Objects.requireNonNull(containerName));
             return this;
         }
 
-        public Builder contentMd5(@Nullable Input<String> contentMd5) {
+        public Builder contentMd5(@Nullable Output<String> contentMd5) {
             this.contentMd5 = contentMd5;
             return this;
         }
 
         public Builder contentMd5(@Nullable String contentMd5) {
-            this.contentMd5 = Input.ofNullable(contentMd5);
+            this.contentMd5 = Output.ofNullable(contentMd5);
             return this;
         }
 
-        public Builder contentType(@Nullable Input<String> contentType) {
+        public Builder contentType(@Nullable Output<String> contentType) {
             this.contentType = contentType;
             return this;
         }
 
         public Builder contentType(@Nullable String contentType) {
-            this.contentType = Input.ofNullable(contentType);
+            this.contentType = Output.ofNullable(contentType);
             return this;
         }
 
-        public Builder metadata(@Nullable Input<Map<String,String>> metadata) {
+        public Builder metadata(@Nullable Output<Map<String,String>> metadata) {
             this.metadata = metadata;
             return this;
         }
 
         public Builder metadata(@Nullable Map<String,String> metadata) {
-            this.metadata = Input.ofNullable(metadata);
+            this.metadata = Output.ofNullable(metadata);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder source(@Nullable Input<AssetOrArchive> source) {
+        public Builder source(@Nullable Output<AssetOrArchive> source) {
             this.source = source;
             return this;
         }
 
         public Builder source(@Nullable AssetOrArchive source) {
-            this.source = Input.ofNullable(source);
+            this.source = Output.ofNullable(source);
             return this;
         }
 
-        public Builder type(@Nullable Input<BlobType> type) {
+        public Builder type(@Nullable Output<BlobType> type) {
             this.type = type;
             return this;
         }
 
         public Builder type(@Nullable BlobType type) {
-            this.type = Input.ofNullable(type);
+            this.type = Output.ofNullable(type);
             return this;
         }
         public BlobArgs build() {

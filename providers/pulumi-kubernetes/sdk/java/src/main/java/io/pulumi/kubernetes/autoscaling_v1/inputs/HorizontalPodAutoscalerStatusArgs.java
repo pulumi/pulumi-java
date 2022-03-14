@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.autoscaling_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class HorizontalPodAutoscalerStatusArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="currentCPUUtilizationPercentage")
-      private final @Nullable Input<Integer> currentCPUUtilizationPercentage;
+      private final @Nullable Output<Integer> currentCPUUtilizationPercentage;
 
-    public Input<Integer> getCurrentCPUUtilizationPercentage() {
-        return this.currentCPUUtilizationPercentage == null ? Input.empty() : this.currentCPUUtilizationPercentage;
+    public Output<Integer> getCurrentCPUUtilizationPercentage() {
+        return this.currentCPUUtilizationPercentage == null ? Output.empty() : this.currentCPUUtilizationPercentage;
     }
 
     /**
@@ -35,9 +35,9 @@ public final class HorizontalPodAutoscalerStatusArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="currentReplicas", required=true)
-      private final Input<Integer> currentReplicas;
+      private final Output<Integer> currentReplicas;
 
-    public Input<Integer> getCurrentReplicas() {
+    public Output<Integer> getCurrentReplicas() {
         return this.currentReplicas;
     }
 
@@ -46,9 +46,9 @@ public final class HorizontalPodAutoscalerStatusArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="desiredReplicas", required=true)
-      private final Input<Integer> desiredReplicas;
+      private final Output<Integer> desiredReplicas;
 
-    public Input<Integer> getDesiredReplicas() {
+    public Output<Integer> getDesiredReplicas() {
         return this.desiredReplicas;
     }
 
@@ -57,10 +57,10 @@ public final class HorizontalPodAutoscalerStatusArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="lastScaleTime")
-      private final @Nullable Input<String> lastScaleTime;
+      private final @Nullable Output<String> lastScaleTime;
 
-    public Input<String> getLastScaleTime() {
-        return this.lastScaleTime == null ? Input.empty() : this.lastScaleTime;
+    public Output<String> getLastScaleTime() {
+        return this.lastScaleTime == null ? Output.empty() : this.lastScaleTime;
     }
 
     /**
@@ -68,18 +68,18 @@ public final class HorizontalPodAutoscalerStatusArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="observedGeneration")
-      private final @Nullable Input<Integer> observedGeneration;
+      private final @Nullable Output<Integer> observedGeneration;
 
-    public Input<Integer> getObservedGeneration() {
-        return this.observedGeneration == null ? Input.empty() : this.observedGeneration;
+    public Output<Integer> getObservedGeneration() {
+        return this.observedGeneration == null ? Output.empty() : this.observedGeneration;
     }
 
     public HorizontalPodAutoscalerStatusArgs(
-        @Nullable Input<Integer> currentCPUUtilizationPercentage,
-        Input<Integer> currentReplicas,
-        Input<Integer> desiredReplicas,
-        @Nullable Input<String> lastScaleTime,
-        @Nullable Input<Integer> observedGeneration) {
+        @Nullable Output<Integer> currentCPUUtilizationPercentage,
+        Output<Integer> currentReplicas,
+        Output<Integer> desiredReplicas,
+        @Nullable Output<String> lastScaleTime,
+        @Nullable Output<Integer> observedGeneration) {
         this.currentCPUUtilizationPercentage = currentCPUUtilizationPercentage;
         this.currentReplicas = Objects.requireNonNull(currentReplicas, "expected parameter 'currentReplicas' to be non-null");
         this.desiredReplicas = Objects.requireNonNull(desiredReplicas, "expected parameter 'desiredReplicas' to be non-null");
@@ -88,11 +88,11 @@ public final class HorizontalPodAutoscalerStatusArgs extends io.pulumi.resources
     }
 
     private HorizontalPodAutoscalerStatusArgs() {
-        this.currentCPUUtilizationPercentage = Input.empty();
-        this.currentReplicas = Input.empty();
-        this.desiredReplicas = Input.empty();
-        this.lastScaleTime = Input.empty();
-        this.observedGeneration = Input.empty();
+        this.currentCPUUtilizationPercentage = Output.empty();
+        this.currentReplicas = Output.empty();
+        this.desiredReplicas = Output.empty();
+        this.lastScaleTime = Output.empty();
+        this.observedGeneration = Output.empty();
     }
 
     public static Builder builder() {
@@ -104,11 +104,11 @@ public final class HorizontalPodAutoscalerStatusArgs extends io.pulumi.resources
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> currentCPUUtilizationPercentage;
-        private Input<Integer> currentReplicas;
-        private Input<Integer> desiredReplicas;
-        private @Nullable Input<String> lastScaleTime;
-        private @Nullable Input<Integer> observedGeneration;
+        private @Nullable Output<Integer> currentCPUUtilizationPercentage;
+        private Output<Integer> currentReplicas;
+        private Output<Integer> desiredReplicas;
+        private @Nullable Output<String> lastScaleTime;
+        private @Nullable Output<Integer> observedGeneration;
 
         public Builder() {
     	      // Empty
@@ -123,53 +123,53 @@ public final class HorizontalPodAutoscalerStatusArgs extends io.pulumi.resources
     	      this.observedGeneration = defaults.observedGeneration;
         }
 
-        public Builder currentCPUUtilizationPercentage(@Nullable Input<Integer> currentCPUUtilizationPercentage) {
+        public Builder currentCPUUtilizationPercentage(@Nullable Output<Integer> currentCPUUtilizationPercentage) {
             this.currentCPUUtilizationPercentage = currentCPUUtilizationPercentage;
             return this;
         }
 
         public Builder currentCPUUtilizationPercentage(@Nullable Integer currentCPUUtilizationPercentage) {
-            this.currentCPUUtilizationPercentage = Input.ofNullable(currentCPUUtilizationPercentage);
+            this.currentCPUUtilizationPercentage = Output.ofNullable(currentCPUUtilizationPercentage);
             return this;
         }
 
-        public Builder currentReplicas(Input<Integer> currentReplicas) {
+        public Builder currentReplicas(Output<Integer> currentReplicas) {
             this.currentReplicas = Objects.requireNonNull(currentReplicas);
             return this;
         }
 
         public Builder currentReplicas(Integer currentReplicas) {
-            this.currentReplicas = Input.of(Objects.requireNonNull(currentReplicas));
+            this.currentReplicas = Output.of(Objects.requireNonNull(currentReplicas));
             return this;
         }
 
-        public Builder desiredReplicas(Input<Integer> desiredReplicas) {
+        public Builder desiredReplicas(Output<Integer> desiredReplicas) {
             this.desiredReplicas = Objects.requireNonNull(desiredReplicas);
             return this;
         }
 
         public Builder desiredReplicas(Integer desiredReplicas) {
-            this.desiredReplicas = Input.of(Objects.requireNonNull(desiredReplicas));
+            this.desiredReplicas = Output.of(Objects.requireNonNull(desiredReplicas));
             return this;
         }
 
-        public Builder lastScaleTime(@Nullable Input<String> lastScaleTime) {
+        public Builder lastScaleTime(@Nullable Output<String> lastScaleTime) {
             this.lastScaleTime = lastScaleTime;
             return this;
         }
 
         public Builder lastScaleTime(@Nullable String lastScaleTime) {
-            this.lastScaleTime = Input.ofNullable(lastScaleTime);
+            this.lastScaleTime = Output.ofNullable(lastScaleTime);
             return this;
         }
 
-        public Builder observedGeneration(@Nullable Input<Integer> observedGeneration) {
+        public Builder observedGeneration(@Nullable Output<Integer> observedGeneration) {
             this.observedGeneration = observedGeneration;
             return this;
         }
 
         public Builder observedGeneration(@Nullable Integer observedGeneration) {
-            this.observedGeneration = Input.ofNullable(observedGeneration);
+            this.observedGeneration = Output.ofNullable(observedGeneration);
             return this;
         }
         public HorizontalPodAutoscalerStatusArgs build() {

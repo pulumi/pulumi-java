@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.lambda.inputs;
 
 import io.pulumi.awsnative.lambda.inputs.EventSourceMappingOnFailureArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,18 +23,18 @@ public final class EventSourceMappingDestinationConfigArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="onFailure")
-      private final @Nullable Input<EventSourceMappingOnFailureArgs> onFailure;
+      private final @Nullable Output<EventSourceMappingOnFailureArgs> onFailure;
 
-    public Input<EventSourceMappingOnFailureArgs> getOnFailure() {
-        return this.onFailure == null ? Input.empty() : this.onFailure;
+    public Output<EventSourceMappingOnFailureArgs> getOnFailure() {
+        return this.onFailure == null ? Output.empty() : this.onFailure;
     }
 
-    public EventSourceMappingDestinationConfigArgs(@Nullable Input<EventSourceMappingOnFailureArgs> onFailure) {
+    public EventSourceMappingDestinationConfigArgs(@Nullable Output<EventSourceMappingOnFailureArgs> onFailure) {
         this.onFailure = onFailure;
     }
 
     private EventSourceMappingDestinationConfigArgs() {
-        this.onFailure = Input.empty();
+        this.onFailure = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class EventSourceMappingDestinationConfigArgs extends io.pulumi.res
     }
 
     public static final class Builder {
-        private @Nullable Input<EventSourceMappingOnFailureArgs> onFailure;
+        private @Nullable Output<EventSourceMappingOnFailureArgs> onFailure;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class EventSourceMappingDestinationConfigArgs extends io.pulumi.res
     	      this.onFailure = defaults.onFailure;
         }
 
-        public Builder onFailure(@Nullable Input<EventSourceMappingOnFailureArgs> onFailure) {
+        public Builder onFailure(@Nullable Output<EventSourceMappingOnFailureArgs> onFailure) {
             this.onFailure = onFailure;
             return this;
         }
 
         public Builder onFailure(@Nullable EventSourceMappingOnFailureArgs onFailure) {
-            this.onFailure = Input.ofNullable(onFailure);
+            this.onFailure = Output.ofNullable(onFailure);
             return this;
         }
         public EventSourceMappingDestinationConfigArgs build() {

@@ -7,7 +7,6 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.elasticbeanstalk.ConfigurationTemplateArgs;
 import io.pulumi.aws.elasticbeanstalk.inputs.ConfigurationTemplateState;
 import io.pulumi.aws.elasticbeanstalk.outputs.ConfigurationTemplateSetting;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -162,14 +161,14 @@ public class ConfigurationTemplate extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ConfigurationTemplate(String name, ConfigurationTemplateArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:elasticbeanstalk/configurationTemplate:ConfigurationTemplate", name, args == null ? ConfigurationTemplateArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws:elasticbeanstalk/configurationTemplate:ConfigurationTemplate", name, args == null ? ConfigurationTemplateArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private ConfigurationTemplate(String name, Input<String> id, @Nullable ConfigurationTemplateState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private ConfigurationTemplate(String name, Output<String> id, @Nullable ConfigurationTemplateState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws:elasticbeanstalk/configurationTemplate:ConfigurationTemplate", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -185,7 +184,7 @@ public class ConfigurationTemplate extends io.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static ConfigurationTemplate get(String name, Input<String> id, @Nullable ConfigurationTemplateState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static ConfigurationTemplate get(String name, Output<String> id, @Nullable ConfigurationTemplateState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new ConfigurationTemplate(name, id, state, options);
     }
 }

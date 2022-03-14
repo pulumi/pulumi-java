@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.migrate.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -22,9 +22,9 @@ public final class MoveCollectionPropertiesArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="sourceRegion", required=true)
-      private final Input<String> sourceRegion;
+      private final Output<String> sourceRegion;
 
-    public Input<String> getSourceRegion() {
+    public Output<String> getSourceRegion() {
         return this.sourceRegion;
     }
 
@@ -33,22 +33,22 @@ public final class MoveCollectionPropertiesArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="targetRegion", required=true)
-      private final Input<String> targetRegion;
+      private final Output<String> targetRegion;
 
-    public Input<String> getTargetRegion() {
+    public Output<String> getTargetRegion() {
         return this.targetRegion;
     }
 
     public MoveCollectionPropertiesArgs(
-        Input<String> sourceRegion,
-        Input<String> targetRegion) {
+        Output<String> sourceRegion,
+        Output<String> targetRegion) {
         this.sourceRegion = Objects.requireNonNull(sourceRegion, "expected parameter 'sourceRegion' to be non-null");
         this.targetRegion = Objects.requireNonNull(targetRegion, "expected parameter 'targetRegion' to be non-null");
     }
 
     private MoveCollectionPropertiesArgs() {
-        this.sourceRegion = Input.empty();
-        this.targetRegion = Input.empty();
+        this.sourceRegion = Output.empty();
+        this.targetRegion = Output.empty();
     }
 
     public static Builder builder() {
@@ -60,8 +60,8 @@ public final class MoveCollectionPropertiesArgs extends io.pulumi.resources.Reso
     }
 
     public static final class Builder {
-        private Input<String> sourceRegion;
-        private Input<String> targetRegion;
+        private Output<String> sourceRegion;
+        private Output<String> targetRegion;
 
         public Builder() {
     	      // Empty
@@ -73,23 +73,23 @@ public final class MoveCollectionPropertiesArgs extends io.pulumi.resources.Reso
     	      this.targetRegion = defaults.targetRegion;
         }
 
-        public Builder sourceRegion(Input<String> sourceRegion) {
+        public Builder sourceRegion(Output<String> sourceRegion) {
             this.sourceRegion = Objects.requireNonNull(sourceRegion);
             return this;
         }
 
         public Builder sourceRegion(String sourceRegion) {
-            this.sourceRegion = Input.of(Objects.requireNonNull(sourceRegion));
+            this.sourceRegion = Output.of(Objects.requireNonNull(sourceRegion));
             return this;
         }
 
-        public Builder targetRegion(Input<String> targetRegion) {
+        public Builder targetRegion(Output<String> targetRegion) {
             this.targetRegion = Objects.requireNonNull(targetRegion);
             return this;
         }
 
         public Builder targetRegion(String targetRegion) {
-            this.targetRegion = Input.of(Objects.requireNonNull(targetRegion));
+            this.targetRegion = Output.of(Objects.requireNonNull(targetRegion));
             return this;
         }
         public MoveCollectionPropertiesArgs build() {

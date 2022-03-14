@@ -6,7 +6,6 @@ package io.pulumi.aws.route53;
 import io.pulumi.aws.Utilities;
 import io.pulumi.aws.route53.ResolverQueryLogConfigArgs;
 import io.pulumi.aws.route53.inputs.ResolverQueryLogConfigState;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -173,14 +172,14 @@ public class ResolverQueryLogConfig extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ResolverQueryLogConfig(String name, ResolverQueryLogConfigArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:route53/resolverQueryLogConfig:ResolverQueryLogConfig", name, args == null ? ResolverQueryLogConfigArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws:route53/resolverQueryLogConfig:ResolverQueryLogConfig", name, args == null ? ResolverQueryLogConfigArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private ResolverQueryLogConfig(String name, Input<String> id, @Nullable ResolverQueryLogConfigState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private ResolverQueryLogConfig(String name, Output<String> id, @Nullable ResolverQueryLogConfigState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws:route53/resolverQueryLogConfig:ResolverQueryLogConfig", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -196,7 +195,7 @@ public class ResolverQueryLogConfig extends io.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static ResolverQueryLogConfig get(String name, Input<String> id, @Nullable ResolverQueryLogConfigState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static ResolverQueryLogConfig get(String name, Output<String> id, @Nullable ResolverQueryLogConfigState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new ResolverQueryLogConfig(name, id, state, options);
     }
 }

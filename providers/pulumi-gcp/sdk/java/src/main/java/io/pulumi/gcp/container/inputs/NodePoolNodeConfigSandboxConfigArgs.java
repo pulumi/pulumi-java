@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.container.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -14,18 +14,18 @@ public final class NodePoolNodeConfigSandboxConfigArgs extends io.pulumi.resourc
     public static final NodePoolNodeConfigSandboxConfigArgs Empty = new NodePoolNodeConfigSandboxConfigArgs();
 
     @InputImport(name="sandboxType", required=true)
-      private final Input<String> sandboxType;
+      private final Output<String> sandboxType;
 
-    public Input<String> getSandboxType() {
+    public Output<String> getSandboxType() {
         return this.sandboxType;
     }
 
-    public NodePoolNodeConfigSandboxConfigArgs(Input<String> sandboxType) {
+    public NodePoolNodeConfigSandboxConfigArgs(Output<String> sandboxType) {
         this.sandboxType = Objects.requireNonNull(sandboxType, "expected parameter 'sandboxType' to be non-null");
     }
 
     private NodePoolNodeConfigSandboxConfigArgs() {
-        this.sandboxType = Input.empty();
+        this.sandboxType = Output.empty();
     }
 
     public static Builder builder() {
@@ -37,7 +37,7 @@ public final class NodePoolNodeConfigSandboxConfigArgs extends io.pulumi.resourc
     }
 
     public static final class Builder {
-        private Input<String> sandboxType;
+        private Output<String> sandboxType;
 
         public Builder() {
     	      // Empty
@@ -48,13 +48,13 @@ public final class NodePoolNodeConfigSandboxConfigArgs extends io.pulumi.resourc
     	      this.sandboxType = defaults.sandboxType;
         }
 
-        public Builder sandboxType(Input<String> sandboxType) {
+        public Builder sandboxType(Output<String> sandboxType) {
             this.sandboxType = Objects.requireNonNull(sandboxType);
             return this;
         }
 
         public Builder sandboxType(String sandboxType) {
-            this.sandboxType = Input.of(Objects.requireNonNull(sandboxType));
+            this.sandboxType = Output.of(Objects.requireNonNull(sandboxType));
             return this;
         }
         public NodePoolNodeConfigSandboxConfigArgs build() {
